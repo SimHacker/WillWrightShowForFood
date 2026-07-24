@@ -1,0 +1,61 @@
+                               (SYMELEC                                       ASSEMBED 12 2 72 AT 22,44,57 BY HL1474   PAGE  78
+                                234     7350/ 225944      LAC I COMPOS
+                                235     7351/ 512176      AND (177400
+                                236     7352/ 741260      SNA
+                                237     7353/ 607462      JMP MASKYL
+                                238     7354/ 744000
+                                239     7355/ 640519      LRS 10
+                                240     7356/ 45845       DAC VEPART
+                                24 1    9357/ 512177      AND (200
+                                242     7360/ 748209      3ZA
+                                243     73611 687372      JMP . 11
+                                244
+                                245     7362/ 205855      LAG YTOT
+                                246     7363/ 345÷45      TAD VEPART
+                                        7364/ 45855       DAC YTOT
+                                248
+                                249
+                                250    7365/ 445014       Isz C0Mp0s
+                                251    7366/ 211743       LAC RCATAL   MASK ONLY ONE WORD IN THYS MODE
+                                252     7367/ 741280      SNA
+                                753    738/ 607344        JMP MASKY 1
+                                254    7371/ 627343       JMP I MASKY
+                                255    73731 205045       LAC VEPART
+                                256    7373/ 740001       OMA
+                                257    73741 352105       TAD (261      /ELIMINATE -BIT AND IST COMPLIM
+                                2K8
+                                259    7375/ 45045        DAC VEPART
+                                266    93961 345055       TAD YTOT
+                                261    9377/ 512212       AND (17999
+                                262    74001 45053        DAC YTOT
+                                263     7401/ 697365      SHP ,14
+                                26K
+                                265    7482/ 205138 MASKYL,      LAC CONSTD   TESY FOR RE
+                                266    7483/ 741209       SNA
+                                26°%   7404/ 627343       JMP I MASKY   /HV
+                                268    96651 415044       IS2 CONPOS
+                                269    74861 687344       JMP MASKY 1  IRB
+                                290
+                                271    7407/     g. POIDAT,                   /INSRT POINT DATA INTO INST OR LINE
+                                27₴    74101 45017        DAC Y
+                                293    7411/ 110160       JMS POSIT
+                                       7412/ 225017       LACIY
+                                275    7403/ 552241
+                                                          SAP (100090 JMP
+                                296    7414/ 607422
+                                224979 7415/ 765019       LAW Y
+                                278    7416/ 102349       ODR
+                                279    7419/ 182347       ODR
+                                200    7420/ 107426       JMS PODATI
+                                281    74212 627487       JMP I POIDAT
+                                282    7420/ 109426       JhS PODATI
+                                2a3    9423/ 145054       DZM XTOT
+                                2B4    7474/ 145865       OZM YTOT
+                                285    HAOS/ 627407       JMP I POIDAI
+                                286    74261       PODATI,
+                                                          LAC YYOT®
+                                287    7427) 205055
+                                2AR    7038/ 512212       AND (17777
+                                289    7431/ 6501-        DAC IY
+                                200    9A92/ 78601        LAKY
+                                291    7433/ 182347       SDR

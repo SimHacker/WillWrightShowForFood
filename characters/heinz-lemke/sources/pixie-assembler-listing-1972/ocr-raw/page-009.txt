@@ -1,0 +1,57 @@
+                                                                             ASSEMALED 12 Z 72 AT 12,44,57 RY Hk1479  PAGE
+                              ISYNELEC
+                                2                 /LTPIX/RSLOC
+                                       4511       451/
+                                       451/     • SERSWI,
+                                                         LAC SHITCH    /SERVES LB A AND B
+                                       452/ 295124
+                                       453/ 940109       SMA
+                                        454/ 608460      JMP
+                                                         LAC iJMP AD
+                                14      455/ 212244
+                                15      456/ 40062
+                                                         DAC LBD 13
+                                        157/ 609462      JMP
+                                        160/ 212243      LAC lJNP BD
+                                18      461/ 40062       DAC LBD 13
+                                19      462/ 628451      IMP I SERSHI
+                                20
+                                22
+                                23
+                                24
+                                25     463/ 352242 FOBBLe TAD (777776  /FORM BRANCH BLOCK
+                                26           51750       DAC ELAD      /(ELEMENT ADDRESS) 2
+                                27      465/ 231950      LAC I ELAD
+                                28      466/ 51751       DAC LENGTH
+                                29      167/ 151756      ISZ ALAD
+                                        176/ 231750      LAC I ELAD
+                                31          51752        DAC ETYPE
+                                33      492/ 211753                    ISEARCH LIST FOR TYPES OF SBPI
+                                                         bAC SYNB
+                                34      4931 45017
+                                3 5     474/ 225017      LAC IY        JADDR OF ATNAME
+                                36      475/ 552241      SAD (100006
+                                        476/ 608514      iMe  16       INO MATCH FOUND
+                                        4*971 51754      DãC taMP
+                                38
+                                        500/ 771754      LAW TEMP
+                                40      501/ 102347      EDR
+                                        502/ 102347      GDR           PPOINTS TO TYPE E.O, 1024
+                                        533/ 231754      LAC I TEMP
+                                        5841 551732      SAD STYPE     ITEST WHETHER SAME TYPF
+                                43                                                              TYPD
+                                        585/ 600511      IMP                  FOUND SAPI WITH SAME
+                                                         TAR +a
+                                45      586/ 765017
+                                46      507/ 102347      EDR
+                                        510/ 600474      JMP .-14
+                                48      581/ 451755      ISZ F8BP1
+                                49      512/ 225017      LACIY
+                                        513/ ARANI       DAC TEMP2
+                                52      5AB/ 187171      JKS FONAL
+                                53      515/ 100556      JMS ATIPDA
+                                        516/ 107440      JMS UPDAXY
+                                        517/ 218755      LAC PSBPI
+                                56      526/ 741200      SNA
+                                        521/ 680531      JMp FOChL
+                                58

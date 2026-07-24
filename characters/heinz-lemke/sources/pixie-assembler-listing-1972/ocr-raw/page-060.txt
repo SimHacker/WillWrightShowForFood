@@ -1,0 +1,59 @@
+       /SyMELEC                                        ASSEMBLED 12 2 72 AT 12,44,57 BY HL1479  PAGR  59
+        346     56271 44746       DAC TEMPY
+        347     5630/ 204745       LAC TEMPX
+        348     5631/ 512142       AND (177)
+        349     5632/ 352241       CAD (100001
+        35€     5633/ 45641        DAG XEROSS
+        351     5634/ 512034       AND GRID
+        362     5635/ 44745       DAC TEMPX
+        353     5636/ 625621       JMP I POSOR
+        354
+        355
+        356
+        357
+        358
+        359
+        360
+        361
+        362                        ATROR
+        363
+        364
+        365                        DISP
+        366
+        367     5637/ 34117 TRACK, PAR PO PN SCO IN7   ITRACKING CROSS
+        368     5640/ 220408 YCROSS,     POV PO 400
+        369     5641/ 100499 XCROSS,     POИ VE 400
+        37€     5642/   480        VRC 01
+        371     5643/ 309400       VEC ON
+        37₴     56447              VEG
+                5645/ 300409       VEC ON -1
+        374     5616/   400        VEC • 1
+        375     5647/ 300400       VEC ON
+        376     5650/   490
+                56SL 200004        VBC ON
+        378     56521  2204        VEC
+        279     5653/ 334000       VEC ON •10
+        38€     5654/  2284        vec   4
+        381     5655/ 608004       VAC ES ON 40
+        382
+        383     5658/       SRAST. PAR   503 INT       /SMALL RASTUR
+        304     56571 200001       VEC ON
+        385     5660/ 306400       VEC ON =1
+        306     5661/ 209202       VEO ON
+                56621 201900       VĐC ON
+        308     56631 200982       VEC ON
+        389     56644 391491       VaC ON
+        390     5665/ 200204       VEO ON ses A
+        301     5666/ 202600       vEC ON
+        392     56671 200004       VEC ON
+        390     56741 302000       VEO ON
+        304
+        395     56911 401202       VEO
+        306     5672/ 159009       PAR
+        397     56931 AGOAA7       DJp LBD
+        308
+        339
+                5674/ 160137 LBD1, PAR  sc1 IN7
+                5675/ 705312       DIS VB PSD
+        402     5676/ 150000      PAR SB
+        4A3     56971 765781       DJS BB ,2

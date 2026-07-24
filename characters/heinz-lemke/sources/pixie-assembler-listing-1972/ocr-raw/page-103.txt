@@ -1,0 +1,60 @@
+                               (SyMELEO                                       ASSEMBLED 12 2 72 AT' 12,44,57 BY HLIATA PAGE 162
+                                871    11623/ 611727      JMP ESCAPE    INO LINE
+                                872
+                                873
+                                874    18624/      SOLVAB-JMS,          /FINDS POINT OF INTERSECTION
+                                875    18625/ 111672      SOLVE         WITH AI AND IB! LINE
+                                876    1Д626/ 205011      LAC R
+                                877    11627/ 44762       DAC U
+                                       11630! 294772      LAGL
+                                899    11631/ 45÷20       DAC V
+                                888    18632/ 152065      DZM TRST
+                                881    11633/ 111510      LOCATE        /LOCATE NEW POINT
+                                882    116344 631624      AND I SOLYAB
+                                883
+                                884
+                                8g5
+                                886    18635/      SETI,         /DEFINES POINTS
+                                867    11636/ 204775      LAG BX1
+                                888    18637/ 44751       DAC V1
+                                889    11640/ 204754      LAC XYI
+                                8g0    11641/ 45919       DAC U1
+                                891    11642/ 204976      LAC EXZ
+                                892    14643/ 44771       DAC V2
+                                893    11644/ 204755      LAC YY2
+                                804    18645/ 44750       DAC U2
+                                895    1$646/ 631635      IMP I SETI
+                                806
+                                897    11647/      SOLVOD-JNS,          /EINDS POINT Of INTERSECIION
+                                B98    11658/ 111672      SOLVE         WITH IOI AND IDI LINE
+                                899    22651/ 204772      LACL
+                                       11652/ 44762       DAC U
+                                       11663/ 205011      LAC R
+                                902    11654/ 45020       DAC V
+                                903    11655/ 152865      DEM TEST
+                                       18656/ 111519      LOCATE        /LOCATE NEW POINT
+                                905    11657/ 631647      AND 1 SOLVCD
+                                906
+                                907
+                                9AB    11660/      SET2,         /DEFINES POINTS
+                                                          LAC EXI
+                                900    11661/
+                                916    11662/ 45010       DAC UI
+                                911    11663/ 204754      LAG YYI
+                                912    11664/ 44751       DAC VI
+                                913    11665/ 264776      LAC EXZ
+                                814    19666/ 44750       DAC UZ
+                                 15    11667/ 204755      LAC YY2
+                                       11676/ 44771       DẠO V2
+                                917    18671/ 691660      JNP I SEIZ
+                                 88
+                                9i9
+                                       11672/     SOLVE-IMS,            (GENBRAL INTERSEOTION ROUTINE
+                                       19673/ 44772       DACL
+                                       11674/ 264758      LAC U2
+                                923    11652 740001       CMA
+                                924    116761 395614      ADD U1
+                                925    116971 45007       DAE T3
+                                926    119001 205010      LAC UI
+                                       119011 748001      SMA
+                                908    19702/ 301772      ADD L

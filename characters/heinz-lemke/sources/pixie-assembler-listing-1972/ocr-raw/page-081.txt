@@ -1,0 +1,62 @@
+                               ISYMBLEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY ALIA7E  PAGE  80
+                                350
+                                351     7512/ 445065 FATDAT.    ISZ CCAT
+                                352     7513/ 211744      LAG ROOPY
+                                353     75141 351745      TAD ROROUP
+                                354     7515/ 351743      TAD RCATAL
+                                355     7516/ 740200      SZA
+                                356     7587/ 637950      IMP I AMENDS  /CATALOGUED SUBP IN FIRSTA
+                                35*
+                                358     7520/ 107522      INS CATDAO
+                                359     7521/ 627750      JMP I AMEND3
+                                360
+                                361    7522/                           /DETERMINE ATIP FOR CROSS
+                                                   CATDAO, XSZ NODRA
+                                362     7523/ 451776                   /PROMIBIT DRAWING IN CASE TEST FAILS
+                                363     7524/ 753155      LAW GRNA
+                                364     1525/ 102478      ENTER
+                                365    7526/ 765064       LAW SSPI
+                                366     7527/ 767532      LAW CATDAI
+                                367    75301 767552       LAW CATDAR
+                                368     7531/ 627522      JMP I GATDAG  /GROSS NOT NEAR ATTPU
+                                369
+                                3*€     7532/ 205064 CATDAI,     LAC SDPI     /POINTS TO INST OR ATTP
+                                371     7533/ 15017      DACY
+                                372    7534/ 765019       LAW Y
+                                393     9535/ 102367      DAR
+                                374    7536/ 103126       FINDN
+                                375    7539/ 762233       LAW OP I
+                                376    7540/ 102347       ODR
+                                       7541/ 102347       SDR
+                                378    7502/ 922233       LAC IDPI
+                                370    7543/ 552203       SAD (1
+                                380    75441 741€06       SKP          IIS ATTP
+                                381    75451 662504       EXIT         IIS INST
+                                382    7546/ 110169       JMS POSIT
+                                383    7547/ 205017       LACY
+                                384    7550/ 197562       IXS
+                                                          FXS ENDPOr
+                                345    7551/ 662504
+                                386
+                                387    9552/ 211743 SATDA2,     LAC ROATAL    /UINE OR IlST
+                                388    9553/ 741208       SNA
+                                389    755A/ 602504       EXIT
+                                390    7555/ 205964       LAC SBPI
+                                391    7556/ 45a1"y       DAC Y
+                                302    7557/ 765017       LAW Y
+                                303    7560/ 103879       NULLR
+                                394    7561/ 662504       EXIT
+                                305
+                                306    7562)       ENDPOI,                    IPUT CROSS ON ENDPOINE OF LiND
+                                             45929
+                                39"    7563/              DAC Y
+                                398    7564/ 225017       LAC IY
+                                399    7565/ 345057       rAD YINS
+                                400    7566/ 512212       AND (177%
+                                401    1567} 45061        DAG YTOTII   YABS POS OF ATTP OR LINE POINT
+                                402    7578/ 765017       LAWY
+                                da3    75911 102347       ODR
+                                       7572/ 225817       LACIY
+                                405    75931 345256       TAD XINS
+                                406    7574/ 512212       AND (17797
+                                       7595  45968        DAG XTOTIN

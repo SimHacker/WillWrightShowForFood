@@ -1,0 +1,60 @@
+        / SyMELEC                                      ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470  PAGE  31
+        949     2607/ 442242       ISZ GEUG
+        350     2610/ 262242       LAC GBUg
+        354     2621/ 545163       SAD END
+        352     2612/ 602617       JMP GARIN
+        353     2613/ 222242       WAC I GBUG
+        35€     2684/ 552241       SAD (100000
+        355     2615/ 352219       TAD 1200000  MARK SND NIL
+        356     2616/ 62242        DAO I GBỤG
+        357
+        358                 /EXIT RESURSIVE ROUTINE
+        359     2627/ 202243 SDRIN, LAC OSTKP
+        360     2620/ 545170       SAD TOP 1
+        361     2621/ 692524       JMP LIM2     (PINAL EXIT
+        362     2622/ 352232       TAD 1779999  /=1
+        363     2623/ 42243        DAC GSTEP
+        364     7624/ 222243       LAC I GSTKP  /RECOVER GBUG
+        365     2625/ 42242        DAC GRUG
+        366     2626/ 692601       JHP OBCDR    /CARRY ON
+        367
+        368
+        359                 /GARHAGE COLLACTOR PHASE THRAE
+        370
+        371                 JARB,               /COLLECT GARBAGE & RESTORE LISTS
+        372     2627/ 205162       LAC ARd
+        373     2630/ 42241        DAC OP+7      START ADDRES
+                2631/ 142243      D2M OP+11      CONSECUTIVE INDICATOR ZER
+        375     2632/ 222241      LÃO I OP+9
+        396     2633/ 512154       AND (220006  ITO ALLOW FOR BLOCK DATA
+        3m oy   2634/ 552154      SAD (220006
+        378     2635/ 102716       JM& GBD
+        379     26361 552162       SAD 120000   /TO ALLOW FOR DEAD BLOCK DATA
+        380     26371 109732      IMS GBD1
+        381     2640/ 743019       RAL
+        $82     26417 1ABI00      SMA
+        383     2642/ 682653       JMP          /JUMP FIRST GARBAGE ITEM
+                                  IMP 1+DP+7
+        3 64    2643/ 222241
+        385     2644/ 512156       AND (579777
+        396     2645/ 62241        DAO 3 0P+7   /RESTORE LIST ITEM
+        387     2646/ 442241       ISZ OP+7
+        388     28471 202241       LAC OB+T     /AnYANCE ADDRESS
+        339     26501 545163       SAD END
+        390     2651/ 100221      IMS ERRGB     JEXIT NO GAREAGE TO COLLECI
+        301     2652/ 602632 SARBI, JMP •*20    /LOOP
+        392     2653/ 202241       LAC OP+7
+        393     2654/ 52011       DAC FREE      ISTART NEW FREE LISY
+        19%     2655/ 42242        DAC OP+10
+        305     2656/ 205163       LAC END
+        296     2657/ 352216       TAD (400006
+        397     26681 62241        DAC I OPAY   PATTACH TERMINAL WORD
+        308     2661/ 442241       ISZ op+y
+        300     26621 202241       LAO Op+*     /ADVANCE ADDRESS
+        400     36631 545163      SAD END
+        1a1     06511889911       TMP ,*25      /EXIT
+        402     26657             LACIOPFY
+        103     26661 512154      AND 1220006   ITO ALLOW FOR BLOCK DATA
+                2667/ 552154      SAD 1220090
+        405     2670/ 162716      IMS GBD
+        406     2671/ 552162       SAD (20009   ITO ALLOW FOR DEAD ALOCK DATA

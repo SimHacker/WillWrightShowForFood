@@ -1,0 +1,59 @@
+         ISYMELEC                                       ASSEMBLED 13 2 72 AT 12-44,57 BY HLI479  PAGE
+          524    1353/ 601316       JMP WAIT9L
+          525
+          526
+                 1354/       FOGBLL,
+          528    8355/ 765064       LAW SEPI
+          529    8356/ 103126       PINDN
+          53€    1357/ 205064       LAC SAPI      /PUT NEW BASIC SBPI ON LIST
+          531    13601 71757        DAC I SYM
+          532    1361/ 762233       LAW OP 1
+          533    1362/ 192347       ODR
+          534    1363/ 192347       SDR
+          535    8364/ 211752       LAO ETYPE
+          536    1365/ 62233        DAC I OP 1    ITYPP , DIR AND SUDP
+          537    1366/ 762233       LAW OP I
+          538    1367/ 102347       SDR
+          539    1370/ 212166       LAO (10000
+          540    2371/ 62233        DAC10E1
+          541    8372/ 691354       jMP I FOOBL1
+          542
+          543    1373/       FOCBL3,
+          544    1374/ 210751       LAC LENGTH    /LENGTH OF BASIC ELEMENT
+          545    8375/ 192743       BDN
+          546    1376/ 771777       LAW PBOM
+          54"7   1379/ 962233       LAW OF I
+          548    44881 102347       SDR
+          519    8401/ 231777       LAC I PUDM
+          85g    3402/ 62233        DACI op       AOBP PDINTS TO BDM
+          551    1403/ 621373       JMP I POCBL3
+          552
+          553    14041       FOCBLA,
+          5544   1405/ 612212       AND (17777
+          555    1406/ 51754        DAG TaMp
+          556    24091 40011        DAC 11       ISTART OF BLOCK DATA
+          357    1410/ 211759       LAC ELAD
+          558    д411/ 46010        DAQ 10       ISTART OF BASIC RLEMENT
+          550    3412/ 777977       LAM
+          560    AAL3/ 371754       TAO T TEMP
+          361    14241 512212       AND 117799
+          569    1415/ 544911       SAD 11
+          563    1416/ 621494       JMP I FOCsLA ITEMPDP IN BLOCK DATA
+          564    1417/ 220010       LAC I10
+          565    14201 60011        DAC I11
+          5g6    14211 601412       JMP
+          567
+          5 68   14221       FOCBLa,                    /DEFLECTION OF BEAM
+          569    1423/ 762233       LAW OP 1
+          5 *0   1424/ 102347       SDR
+                 1425/ 205054       LAC XTOT
+          572    1426/ 512212       AND 117777
+          5 *g 3 14271 62233        OAG. I0P1
+                 1430/ 762233       LAW op 1
+          5m5    1431/ 102347       MDR
+          576    1432/ 205055       LAO YTOT
+                 1433/ 512212       AND
+          598    1434/ 62233        DAC 1 op 1
+          579    1435/ 621422       JMP FOCBL2
+          500
+          5a1

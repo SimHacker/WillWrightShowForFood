@@ -19,6 +19,7 @@
 | **22 Jul** | same | Mario Cypko: PIXIE inspires clinical modelling; LLMs as fallible translators; CARS 2027 Human-AI offer |
 | **23 Jul** | same | Leo Joskowicz: "bottleneck of generative AI is the human user"; 5-meals analogy |
 | **24 Jul** | same | Heinz: **digitised PIXIE Assembler + 10 Mar 1967 doc delivered**; Wilkes→PhD provenance; "pixie in the company of giants" → [`1967-03-10-system-analysis/`](1967-03-10-system-analysis/README.md) |
+| **24 Jul** | [`2026-07-24-facebook-guessing-game.md`](2026-07-24-facebook-guessing-game.md) | Same evening, public: Don's Facebook guessing game — crowd deduces PDP-7/Titan/PIXIE from listing pages in ~40 min; light-pen driver recruiting; *Flight of the PIXIE* reveal |
 
 ## Pull-ins still open
 

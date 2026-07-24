@@ -1,0 +1,31 @@
+                               /SYMELEC                                       ASSENBLED 12 2 72 AT 12,41,57 DY HLL4TA  PAGE IIO
+                               TAKES    621        TD      6062         TEM   * 4764        TEMP  = 11754
+                               TEMPDF   4441       IOMPEN  4744         TEMPX 4745          TEMPXL *12057
+                               TEMPY    4746       TEMPYL & 12060       TEMP1 = 11772       TEMP2   5÷21
+                               TESLEV   6271       TEST  = 12065        TESTIN E 6371       TESTIN *10013
+                               TH       1706       TODIS    6542        TOP     5167        TOTEMP = 5304
+                               TRACK   5637        TRAKX    5052        TRAKY 5053          TRER    5466
+                               TRDCLB   .280       TS       1741        TURNVE  1232        TY      2024
+                               IWOIN * 11560                1705        TZ      2016        T2     4776
+                               13      5967                 4762        UNSTAK 3102468      UNSTKX -111011
+                               UNSTRY =114023      UPCOMP = 7041        UPOOM]& 7077        UPCOM2  7075
+                               UPDAIN   7452       UPDAXY = 7440        U1      5010        U2      4750
+                                       5÷20        VAIN  * 10951        VAIN1 = 12064       VAIN2 10101
+                               VECGN =11237        VEMODE 3 1117        VEPART* 5045        VDLO     321
+                                       4751        V2       4771        WAIT  #103375       WAITLK =2125
+                               WAITI    3636       WAITIA * 3606        WAITII& 3404        WAITI2  3422
+                               WAITIS  3437        WAITIS 81337         WAITZ   3547        WAIT3   3464
+                               WAIT4   3650        WAITS    3676        WAIT6   3705        WAITY   3506
+                               WAIT8   3571        WATT9    3460        WAIT9I = 1316       WAIT92 = 1272
+                               WAREA   5272        WINDDW 111403        WORD  = 11773       WRDF  8119756
+                               WRLB  •111134       WRLB1 * 11210        WRLA2 * 11203       WRLB3 •12225
+                               WRUTO 5111100       WXL      5142        WX2     5143        WY1     5144
+                               WY2     5145                 4767             • 12055        ХВРAM   4765
+                               ХВM   • 12402       XBMC     5016        XAML, * 12000       XEMO  = 11760
+                               XCROSS  5641        XINg     5056        XINS1   5046                5051
+                               XSTBEG  5174        XTOT     5054        XTOTINE 5660        XTOTUP = 12062
+                                       5617        YB    = 12056        YABAM   5022        YEM   = 12005
+                               YEMC    5600        YBAL  * 12001        YAMO * 11762        YCrOss  5646
+                               ХIM3    5657        YINS1 *  5062        YP      505€        YSTBEG  5175
+                               YSTEND  5176        YTOT     5055       YTOTIN   5061        YTOTUP 12053
+                                       4754        YYa      4755

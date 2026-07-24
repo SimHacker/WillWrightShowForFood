@@ -1,0 +1,33 @@
+                               /SyMELEC                                       ASSEMBLED 12 Z 72 AT 12,44,57 BY HLIAYO  PAGE
+                               1073    7087/ 52043       DAC BPNTX
+                               1074    7010/ 232043      LAC I BPNTX
+                               1075    7011/ 52004       DAE PNIX
+                               1676    +0121777777       LAM
+                               1099    7913/ 352044      TAD BPNrY
+                               1078    70141 52944       DAO BENTX
+                               1079    7015/ 232644      LAC I BPNTY
+                               1080    7016/ 52007       DAG PNTY
+                               1081    7017/ 106315       JMS SXY
+                               1082    7020/ 797779       LAM
+                               1983    7021/ 352045       TAD POS
+                               1684    9022/ 52945        DAC POS
+                               1085    7023/ 232045       LAC I POS
+                               1986    70241 44743        DAC POSDFB
+                               1987    7625/ 758001       GLE
+                               1086    7026/ 352047       TAD BOONI
+                               1089    78274 52947        DAC ACONI
+                               109€    7830/ 232047       LAC I BCON1
+                               1091    7031/ 45122        DAC CONI
+                               1002    +032/ 741208       SNA
+                               1903    7433/ 626777       JMP I TAKE
+                               1094    7934/ 609621       JMP TAKEL
+                               1095
+                               1006
+                               1097    7835) 285122 SEGEX. LAC CONI    PENTER DREWING ROUTINE
+                               1008    9@36/ 741200       SNA
+                               1099    7637/ 606606       JMP SEeCX    WHEN NO ELEM INSERTED
+                               1100    98481 601517       JMP CONELE   AONECK FOR POS OP ELAM
+                               1le1                NODISP
+                               11e2                PAUSE
+                               11A3
+                               1104

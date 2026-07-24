@@ -1,0 +1,60 @@
+                                                     ASSEMBLED 12 2 72 AT 12,44657 BY HL1478  PAGE
+      /SYMELEC
+       *955   8707/ 102125       JAS WAITLK
+              1710/ 762276                    LRBISILLAM
+               8721/ 45039       DAC HDRI
+              17131 760006       LAW G
+       750
+       959     1713/ 782344      LLB6
+       750    17241 102125       IMS WAITLK
+              17151 902276                     LRBIBILLAM
+       761    1716/ 245830       KOR ADR1
+       762    1717/ 45027        QAC SAY
+               2720/ 102125      JMS WAITLK
+       7 63
+               8721/ 702276                    IRBISILLAN
+       764     47221 45037       DAC BSZ
+       *65     1723/ 102125      IMS WAITLK
+              17241 702276                     IRBIQILLAM
+       766     1725/ 245037      XOR ASZ
+       * 68    17261 305027      ADD SAV
+       769     1929/ 940001      SMA
+       770     17301 758208      SZAICLA
+               87311 601706      JMP TH                     l try again lt header format wrong
+       7771
+       u 17 2
+                                 SST WORD COUNT FOR THIS BLOCKLET
+       773     1732/ 205038      LAO HDRL
+       776     1733/ 512212      AND (17777
+               8734/ 740001      ЭMA
+               1735/ 4593        DAO 83Z
+       u w 9   +736/ 445037      I8Z BSZ                    1 end of transter?
+       1998        601941        IMP T3
+       181
+       782     1740/ 602937      JMP. PXOK                  / normal exit
+       983
+               1741/145034 rs,   DIM CKS
+       7a5     87421 205833      LAC SW
+       766     1743/ 740209      SZA                        / Ist blocklets
+               1741/ 602016      JMP TE
+       788
+       780                       TRANSFER AMWORD STREAl HEADING (PXXD, DSBEG, DSHND, SAVINS)- Ist blooklet only
+       790
+       791     8745/ 165156      OZM I DPA     ISTOP TO DIPLAY PERIDE SEFOR TRANSFER
+       792     17461 naate6      LAQ PXID
+       70g     1747/ 10210?      JMS RW
+       791     175%/ 542186      SAD PXID
+               1751/ 741080                    SKP
+               8752/ 682073                                 JMP PXER3     / not PIXIE ElLE
+       705
+               1753/ 205162      LAC BEO
+               17541 102107                    JMS RW
+               4755/ 740301                                 CMA
+       79%     1564 345162       FAD BRG
+               3757/ 332203                           TAD (1
+               1601  15035                                         DAC RELCON
+       *709                      LAO SND
+               1762/182163 102107              JUS RW
+       840     17631 601971      IMP FRSTON
+       801     1764/ 21201€ SNDCH. LAO CERROB  ICHECK WHETHER TO END TO ENDRES
+                                 32A

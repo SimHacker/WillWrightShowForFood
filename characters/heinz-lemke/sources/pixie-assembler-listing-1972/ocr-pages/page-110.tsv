@@ -1,0 +1,63 @@
+# page-110.png
+# SYMELEC listing page 109 (symbol table)
+RAW	/SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  109
+RAW	GSTKP  =  2243        GTEMP  =  2244        HDR1   =  5030        IMC    =  5141
+RAW	IND0   =   252        INEL   =  1436        INIT   =102335        INP    =104260
+RAW	INSRET =  6554        INSRT  =103076        INSRTN =  6343        INST   = 11756
+RAW	INT    =  5320        INTERG =111557        INTMO  =   707        INT1   = 12037
+RAW	JMPADR = 11770        L      =  4772        LB     =  5200        LBD    =    47
+RAW	LBD1   =  5674        LBSF   =  5231        LB1    =  5253        LB2    =   643
+RAW	LB3    =  5254        LB4    =  5262        LENGTH = 11751        LESS   =  6237
+RAW	LEVEL  =  5116        LIM    =  2516        LIM1   =  2530        LIM2   =  2524
+RAW	LINDAT =  7466        LINE   = 12017        LINK   = 12013        LKBEG  =  5172
+RAW	LKEND  =  5173        LKERR  =  3265        LKTEST =  3260        LOCATE =111510
+HAND	pencil squiggle under LOP and pencil circle around LTPX in first column
+RAW	LOP    = 12012        LOPX   =  5006        LOPY   =  5024        LPBEG  =  5171
+RAW	LTPX   =  1701        MASKX  =  7312        MASKY  =  7343        MASKY1 =  7402
+RAW	MBLINK =  5134        MESIN  =  3732        MESIN1 =  4050        MESIN2 =  4657
+RAW	MESIN3 =  4075        MESIN4 =  4122        MESIN5 =  4141        MESIN6 =  4005
+RAW	MESIN7 =  4015        MESIN8 =  4036        MESIN9 =  4041        MESL   =  4126
+RAW	MESOUT =103352        MESS   =  4366        MESSAG =  4134        MIN    =  5137
+RAW	MKER   =  5002        MK1    =  2536        MOD    =  6335        MODE   =  5041
+RAW	MORE   =  6226        MOUT   =  5140        MOVCR  =  1454        MRKX   =  5001
+RAW	MRKY   =  4760        MS     =  4367        MSIN   =  4371        MSOUT  =  4370
+RAW	NEG    = 11733        NM     =  5066        NODRA  = 11776        NOR0   =   427
+RAW	NOTE   =  4355        NULLR  =103070        NUL0   =   405        ONEIN  = 11470
+RAW	OP     =  2232        OUT    =104237        PAD    =  5313        PAMODE =  1066
+RAW	PBDM   = 11777        PCD    =  5315        PEN    =  5353        PEN1   =  5403
+RAW	PEN2   =  5413        PEN3   =  5445        PEN4   =  5431        PEN5   =  5437
+RAW	PIXEX  =   774        PLD    =  5316        PNTX   = 12004        PNTY   = 12007
+RAW	PNT1   = 10754        PNT2   = 10755        PODAT1 =  7426        POIDAT =  7407
+RAW	POIMO  =  6207        POINT  = 12016        PONT   =  5015        POP    =102433
+RAW	POS    = 12045        POSCR  =  5621        POSDF  =  4741        POSDFB =  4743
+RAW	POSDFL =  4742        POSIT  = 10160        PRD    =  5314        PRINT1 =  5151
+RAW	PRINT2 =  5152        PSD    =  5312        PUSH   =102407        PXD    =  5317
+RAW	PXER1  =  2072        PXER2  =  2074        PXER3  =  2073        PXID   =  2106
+RAW	PXOK   =  2037        R      =  5011        RATTMO = 12053        RATTPO = 11746
+RAW	RBLINK = 12033        RCATAL = 11743        RCOPY  = 11744        RDOCOM = 12031
+RAW	REDUC  =   766        RELCON =  5035        RELOC1 =  2043        RELOC4 =  2044
+RAW	RERASE = 12027        RERROR = 12022        RES0   =   220        RGROUP = 11745
+RAW	RINST  = 10621        RLABEL = 12035        RLCEND =  2072        RLINE  = 10625
+RAW	RMODE  =  5132        ROTMO  =   771        RREDUC = 11765        RROTAT = 11766
+RAW	RTFIRI = 11747        RTRACK = 12023        RTSNDI = 12024        RUBBER =  6105
+RAW	RUPCOM = 12030        RW     =  2107        RW1    =  2126        RW2    =  2133
+RAW	R1     =  4753        SAV    =  5027        SAVE   = 12052        SAVEX  =  6722
+RAW	SAVEY  =  6732        SAVGIN = 12026        SAVGSU = 11775        SAVINS =  5146
+RAW	SAVSUB =  5147        SAVTEM =  6742        SAVTE1 =   604        SAVVE  = 12061
+RAW	SBMODE =  1073        SBPI   =  5064        SBPI1  =  4766        SCAMO  =   735
+RAW	SCRABL =  5136        SCRPAD = 11771        SD     =  5751        SD1    =  5767
+RAW	SEGCNX =  6624        SEGCNY =  6672        SEGCX  =  6606        SEGCY  =  6637
+RAW	SEGCY1 =  6652        SEGEX  =  7035        SEGEY  =  1561        SEGRXY =  6565
+RAW	SEGX   =  6476        SEGXY  =  6521        SEGY   =  6510        SERSWI =   451
+HAND	pencil oval drawn around SETUP =102147 in second column
+RAW	SETCL  =  6364        SETUP  =102147        SETUP1 =102167        SET1   = 11635
+RAW	SET2   = 11660        SEVCLB =   204        SHRINK =  1216        SIXCLB =   203
+RAW	SNDCH  =  1764        SNDCLB =   177        SNDSTA = 12051        SOLVAB =111624
+RAW	SOLVCD =111647        SOLVE  =111672        SRAST  =  5656        STAK   =102446
+RAW	STAKX  =110765        STAKY  =110777        STCON  =  5111        STCON1 =  5113
+RAW	STEST  =  4774        STPCD  =  5504        STPNTX =  5107        STPNTY =  5110
+RAW	STPOS  =  5112        STRAIG =  6100        STRCR  =  6252        STSAVE =  5177
+RAW	STSPST =  1642        STSTAK =  4747        STXBMO =  1640        STYBMO =  1641
+RAW	SUBP   = 10753        SUMB   =  5013        SUMB   =  5040        SVAD   =  5023
+RAW	SW     =  5033        SWITCH =  5124        SWI0   =   310        SXY    =  6315
+RAW	SYM    = 11757        SYMB   = 11753        S1     =  5012        TAKE   =  6777

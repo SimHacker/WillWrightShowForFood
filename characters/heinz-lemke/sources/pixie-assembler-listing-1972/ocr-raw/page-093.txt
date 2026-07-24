@@ -1,0 +1,59 @@
+                               / SYMBLEC                                      ASSEMBLED 422 72 AT 12-44,57 BY HLL47O   PAGE  92
+                                291    10613/ 110701      SETD
+                                292    10614/ 552146      SAD (2
+                                293
+                                294    10615/ 618621      IMP RINST
+                                295    16616/ 552265      SAD (3
+                                296    10617/ 618625      IMP RLINE
+                                297    10620/ 602504 COMPA, EXIT
+                                298    16621/ 102460 RINST UNSTAK
+                                299    10622/ 118765      STAKX         ISTACK INSTANCES
+                                3%6    10623/ 445001      ISZ. MRKX
+                                301    10624/ 602564       CXIT
+                                302    10625/ 210716 RLINE, LAC GETDI
+                                       18626/ 118777      STAKY         /STACK LINES
+                                       10627/ 444760      ISZ MRKS
+                                 05    16630/ 6º2504      EXIIT
+                                396
+                                       106314      COMPII,
+                                       10632/ 230752      LẠC 1 FLEA3
+                                       10633/ 552241      SAD (160000
+                                3j0    10634/ 610646      JMP . 12
+                                3g1    16635/ 512072      AND (77       /FORM GHAR GEN ENTRY
+                                312    10636/ 51754       DAG TEMP
+                                313    19637/ 204765      LAC XEBAM
+                                324    10648/ 352172      TAD (14
+                                315    106411 44765       DAC XBEAM
+                                386    10642/ 970752      LAW FLEA3
+                                317    10643/ 103347      SDR
+                                318    106441 211754      LAC TEMP
+                                319    106451 610650      JMP. 3
+                                32€    10646/ 445002      I82 MKER
+                                321    10649/ 212206      LAC (37
+                                322    16650/ 44777       DAC FIG
+                                323    10651/ 264764      LAC TEM
+                                324   106521 :6070        ALEg 6
+                                325    0653/ 34477        TAD FIG
+                                326    106541 44764       DAG TEM
+                                307    10655/ 638631      JKP I COMPIL
+                                328
+                                329    10656/      SOMp12,
+                                336    10657/ 768802      LAW a
+                                331   186601 345005       TAD DF
+                                332    10661/ 116756      WROF         IDIS. 3
+                                333   1066  23496         LAC I X
+                                334   10663/ 118756       WRDF         PATNAME
+                                335   10664/ 205923       LAC SYAD
+                                336    126651 352212      TAD (200000
+                                337   10666/ 118756                    DDS SVAD
+                                338   16667/ 630656       IMP I COMPIa
+                                339
+                                360    10678/      Solp13,                    /FLEA ONTO BLINK WORD
+                                3A1    10671/ 201767     LAcx
+                                342    166721 50753       DAC PLEA3
+                                343   18693/ 990952       LAH FLEAS
+                                      10674/ 182347       CDR
+                                       10675/ 102347      SDR
+                                346   166761 182347       EDR
+                                347   10677/ 230752       LAC I FLEA3  /BLINK WORD
+                                348   10788/ 638679       JMP I COMPI3

@@ -1,0 +1,38 @@
+                               /SYHELEC                                       ASSEMBLED 12 2 72 AT 12,44.57 DY HL14TO  PAGE  24
+                                895     2122/ 235038      LAC HDRI
+                                        2213/ 742010                    RTL
+                                896     2124/ 205027      LAE SAV
+                                89      2115/ 741460      32k                 / read/write according as OFLOs 1/e
+                                898     2116/ 762252      LRB18
+                                899     21194 702264      LLBIBILLAM
+                                990     2120/ 45027       DAC SAV
+                                        2121/ 345434                    TAD CKS
+                                        2222/ 45034                                  DAC CKS
+                                        2123/ 205027                                               LAG SAV      / update checksun
+                                99L     2124/ 622107      JMP I RW
+                                902
+                                903
+                                804     2125/ 740840 WAITUK.     HLT
+                                995     2126/ 700371 RWL, KSE                 I teletype interrupt?
+                                9g6     2127/ 682133      SMP RW2
+                                907     2130/ 788312      XRB
+                                908     2131/ 545155      SAD CR        / abandon transter dE CTL *
+                                909    2132/ 698930       JMP BERTPL
+                                919
+                                       2233/ 700681 RW2,  IDSI
+                                912    2134/ 602142       JMP
+                                                          LNC i DPR
+                                913    2135/ 225156
+                                       2136/ 742200                    SNA
+                                       2137/ 682142                           JMP , 3
+                                9I4    2140/ 205156       HAC DFE
+                                985    2141/ 700605       IDLA                (estact PDF 1f stopgode
+                                916
+                                917    21421 702201       LsF
+                                918    2143/ 602126       JMP RWI             / 1000 until link clag
+                                819    21441 74000s       NOP
+                                920    2145/ 792222       LCF
+                                921    2146/ 622125       JMP I WAITLK
+                                922
+                                923
+                                924                PAUSE

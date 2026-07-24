@@ -1,0 +1,58 @@
+        / SYNELEC                                      ASSEMALED 12 2 73 AT 12,44,57 BY HL147E  PAGE  61
+         462    5767/ 145122 SD1,  DEM CON1
+         463    57781 145065       DZM CGAT
+         464    591/ 205107        LAC SIPNTX
+         $65    57726 52043        DAC BPNTX
+         466    5773/ 265119       LAO SIPNTY
+         467    5774/ 52044        DAC RONTY
+         168    5795/ 205112       LAd STPOS
+         469    5796/ 52045        DAO PDS
+         170    5779/ 761443       LAW TEMPDF
+        471     6900/ 44741        DAC POSDF
+        472     5001/ 44742        DAO pOSdeL
+        473     6002/ 41743        DAO POSDFE
+         474    6003/ 265111       LAC SICON
+                60041 52046        DAC BCON
+        476     69058 2÷5113       LAO BTCON1
+        1 2 r   6006/ 52047        DAC BCON1
+        478     6687/ 201640       LAC STXBMO
+         470    641€/ 51761        DAC BXDMO
+        480     6011/ 201641       LAO STYgMO
+        181     6612/ 51763        DAC BУSМО
+        482     6913/ 205114       LAC DFIRST
+        483     60141 52950        DAC FIRSTA
+        484     6015/ 205115       LAC BSNDST
+        485     6816/ 52951        DAC SNDSTA
+        406                        LAK
+                60201 45121        ĐAC CON
+        488     6021/ 196343       JMS INSRIN
+        489     6022/ 212123       LAC 1063796
+        49€     6023/ 49055        DAC LBD
+        401     6924/ 212122       LAC ITEMPDE 100
+        402     6025/ 51771        DAC SCRPAD
+        493     6026/ 106364       IMS SETGL
+        404     6927/ 605403       JMP PEN1
+        405
+        496     6030/ 212121 FD,   LAC 1233706  19
+        497     6031/ 48955        DAC LBD
+        498     60321 196364       JMS SETGL
+        100     6033/ 205123       LAC DRANMO   /PREVENT END ENTRY
+        500     6034/ 141200       SNA
+        501     6935/ 605403       JNP PEN1
+        502
+                6036/ 145123       DEM DRAWMO
+        504     6437/ 295121       LAC CON
+        505     6940/ 741199       SPA
+        596     6041/ 605483       JNP PENI
+        5@*)    6042 / 106371      JM8 JESTIN
+        508     6043/ 452025       182 CUPCOM
+        5е9     6044/ 605463       JMP PENL
+        51€
+        512     6045/ 106271 CD,   IMS TESTEY   /CORY BLINKING BLEMENT
+        513     6946/ 451744          ROOPY
+        514     6049/ 606305       IMp BLIROU
+        515
+        586     6050/ 205134 ED,   LAC MBLINK   /BRASE
+        517     6a511 741200       SNA
+                60521 605403       JMP PENI.
+        $19     60531 205116       LAC LRVEL

@@ -1,0 +1,60 @@
+       /SYMELEC                                        ASSEMBLED 12 2 72 AT 12,44-57 BY HL1479  PAGE 91
+        233    10521/ 78752        DAC I FLEAS
+        234    10522/ 265905      LAC DF
+        235    10523/ 45!35        DAC BLINK
+        236    20524/ 211134       WRLB
+        237    10525/ 285095      LAG DE
+        238    10526/ 51767        DAC BLINKL
+        239    10527/ 741099       SKP
+        240    10539/ 111134       MRLA
+        241    105311 777771       LAM
+        242    10532/ 344760       TAD MRKY
+        243    10533/ 44760        DAC MRKY
+        244    10534/ 619505       JMP
+                                   LAP 1160900
+        245    10535/ 212215
+        246    10536/ 119756       WRDE         ISET SUBROUTINE MODE
+        247    1053%/ 119756       WRDF         WRITE JUNK TO STEP DE
+        24,8   10540/ 352212       TAD (200000
+        $49    16541/ 64761        DAC I GAMMA  IDDS DELTA TO GAMMA
+        250    105421 760099       LAW
+        25L    10543/ 340761       TAD GAMMA
+        252    10544/ 64763        DAC ! BETA   /DJS GAMMA TO BETA
+        263    10545/ 692504       CXIT
+        254    10546/ 764767 COMP3, LAW X       /FIRST GO ROUND
+        255    10547/ 119701       GETD
+        256    10558/ 552146       SAD 12
+        257    10551/ 741009       SKP
+        258    105524 682504 COMP24 FXIT
+        259    10553/ 205085       LAC DE       THERE IF INSTANCE
+        260    105541 102446       STAK
+        261    16555/ 218753       LAC SUBP
+        262    10556/ 102446       STAK
+        263    10557/ 204767       LAO X
+        264    105684 192446       STAK         ISTAX MOUSE AND FLRAS
+        265    10561/ 210716       LAO GETD1
+        266    16562/ 4476         DAG
+        267    10563/ 182446       STAK
+        268    105641 118717       PLEAS        INEW PLEAS
+        269    10565/ 218754       LAC PNT1
+        2*9    10566/ 51754        DAO TEMP
+               16567/ 111225       JMS pRLA3    /STACK POINT
+        272    10570/ 162469       UNSTAR
+        2*3    10571/ 44767        DAC
+               10572/ 204763       LAC BETA
+        275    10573/ 192446       STAK         ISTAK BETA
+        276    1057AL +99241       LAW COMP
+               10575/ 102172       ENTOR        /RECURSE
+        278    105751 102469       UNSTAK
+               105771 14763        DAC BETA     /UNSTAK BETA
+        280    106801 11IO11       UNSTKX
+        281    10601/ 111223       UNSrYy       CUNSTAR CO-ORDINATES
+        282    10602/ 192469       UNSTAK
+        2a3    10603/ 4476         DAG          /UNSTAK MOUSE
+        284    196244 102460       UNGTAK
+        285    10605/ 50753        DAG sUep     /UNSTAK SUBPICTURA PLEA
+        786    10686/ y 7 ggg my ny LAM
+        209    10607/ 345023       TAD SVAD
+        288    1061%/ 45023        DAd SVAD     IDAC SAVE ADDRESS
+         289         692504        *XIT
+        200    106121 765019 OOMPS, LAN         ISECOND GORDUND

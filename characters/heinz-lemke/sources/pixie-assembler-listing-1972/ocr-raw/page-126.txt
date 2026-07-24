@@ -1,0 +1,56 @@
+       ARSPPIX                                         ASSEMALED 29 1 72 AT 17-15,40 BY HL147&  PAGE 14
+        755     1203/ 521261      AND (40000    ITOST IF RINOSTART
+        756     12044 74$239       32A
+        *95*7   4205/ 5211777      JMP I DELREINS FEXIT IP ILLEGAL
+        *58     2206/ 222106       LAC I OP+1
+        750     2207/ 100251       SAR
+        768     1210/ 401÷7        DAC OP 2     /MOVK TO NGXT IN RING
+        76%     2211/ 220126       LAC I OP 1
+        762     8212/ 190251       CAR Y
+        763     1213/ 540110       SAD OP+3     /DOES THIS POINT BACK TO THE ORIGINAL ALEYENT
+        164     1244/ 141399       SKP
+        765     1245/ 681210       IME
+                                   IAP i 5P+2
+        766     1216/ 223197
+        767     A217/ 501261       AND (44000   APRESARVE IF RING START
+                220/ 365119        TAD I OP+3
+        769     12214 68187        DAG I DP+2   IDALATE POINTER
+        11*0    1222/ 299100      LAC OP
+                1223/ 100300      20P
+        172     1224/ 624197       Jrip DALB-JMS
+        Ty y a
+        to m i?
+                $225/
+                12261
+                12271
+                1230
+                1231/
+                12324
+                1233/
+                1234/
+                1235/
+                1236/
+                12371       #L
+                1240/
+                1241/
+                1242/
+                1243/
+                1244/
+                1945/
+                12401
+                12471
+                1258/
+                1251/
+                1252/
+                2253/
+                1954Y
+                125S/
+                1O5S4
+                1O5m/
+                1250/117799
+                1DELA 4900A
+                1242/ 119009
+                1963/ 128001
+                1264/ 777776
+                42657 77793
+                12660 409009

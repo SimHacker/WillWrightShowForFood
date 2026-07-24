@@ -1,0 +1,24 @@
+                               ISYMELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY KLIATA  PAGE  38
+                                755    3330/ 512130       AND (40000   /TEST IF RINOSTART
+                                756    3331/ 740240       SZA
+                                757    3332/ 623324       JMP I DELBOIMS PEXIT IF ILLEGAL
+                                758    3333/ 222233       LAC I DP+1
+                                *59    3334/ 102376       JARY
+                                768    3335/ 42234        DAC OP 2     INOVE TO NEXT IN RING
+                                761    3336/ 222233       LAG I OP 1
+                                7 62   3337/ 102376       SAR 7
+                                763    3340/ 542235       SAD OP+3     IDDES THIS POINT BACK. TO THE ORIGINAL ELEMENT
+                                764    3341/ 941080       3k₽
+                                965    3342/ 603335       JMP
+                                                          LAC i"5
+                                766    3343/ 222234           OP+2
+                                767    3344/ 512150       AND (40000   /PRESERVE IF RING START
+                               768     3345/ 362235       TAD I OPA3
+                                769    3346/ 62234        DAC I OP+2   /DELETE POINTER
+                                       3347/ 202232       LAC OP
+                                       3350/ 102433       POP
+                               772     3351/ 623324       IMP I DELB-IMS
+                               7g m 3
+                               774
+                                776                PAUSE
+                                *9*98

@@ -1,0 +1,59 @@
+       /SYAELEC                                        ASSEMBLED 12 2 72 AT 12-14.57 BY HL1476  PAGE  99
+        697    123621
+        698    11363/
+        609    113641
+               10365/ 740049      xx
+        701    11366/ 211361       LAC VROON 122
+               183691 740819      RAL
+        70 3   12370/ 211355       GAC VECGN 116
+        704    12371/ 141490      326
+        705    183721 211354       LAC VRCON 115
+        786    14373/ 659619      GLOILLS
+               11374/ 742409      SZL
+               18375/ 251355      XOR VECGN 116
+               1/376/ 144400      SNLAOLL
+        710    18377/ 251354       XOR VEOGN 115
+        741    IAAOOI 251360       XOR VECGN 121
+        712    1RAGI/ 431237       XOT I VACGN
+        713    114021 631365       JMP I VECEN 126
+        714
+        715
+        716                 /WINDOWING MARK 3
+               11463/       HINDOW-JMS,
+               11404/ 204975      LAC EXI
+        718    18105/ 44762        DAC U
+        72%    #:406/204754        LAO YYL
+        721    1ASMA  45020        DAC V
+               11418/ 152965       DEM TEST     IZERO TEST
+        723    1.411/ 111510      LOCATE /EIND POSITION OF FIRST POINT
+        1724   1/4121 650009       510
+        725    10413/ 648604      LLSA
+        726    18414/ 52065       DAC TEST      ISHIFT TEST
+        727    19415/ 204776      LAC EXZ
+        728    18416/ 44762       DAGU
+        720    18417/ 204755      LIC YY2
+        730    11A20/ 45020       DAC V
+        731    184211 111510      LOCTK  IFIND POSITION OF AND POINT
+               114224 7A1NAG      SNA
+               11493/ 631403      AND I WINDOW  IMP IF BOTH POINTS INSIDE
+               11A247 512076      AND 1360
+               114251 646584      LRS
+        736    18426/ 252065      ymo THST
+               11A271             DAG STEST     ISETS RELATIVE POSITIONS
+        738    191301 212065      LAG TEST
+               11431/ 512079      AND 1360
+        740    11432/ 741200      SNA
+               11A33/ 611470      IMP ONEIN     JOMP IF IST IN AND QND OUT
+        712    11434/ 6л0BEд      LRS
+               14435/ 512065      AND
+        71%    11436/ 746208
+        745    19437/ 611927      TMP ESCAPE    JMP IF BOTH DUT AND NO LINE
+        746    11440/ 212065      LAC TEST
+        747    11441/ 512131      AND 117
+        748    134421 142200      SNA
+               184431 611500      gMP THOIN     IJMP IP END IN AND IST OUT
+        750    DAAA/ 284774       LAO STEST     PHERE IF BOTH OUT AND LINE
+        75%    11445/ 111557      INTERd
+        752    11440/
+        753    10447/ 204762      LAG U
+               191581 4453        DAC R1

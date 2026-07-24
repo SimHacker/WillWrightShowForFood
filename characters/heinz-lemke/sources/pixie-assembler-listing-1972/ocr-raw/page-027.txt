@@ -1,0 +1,59 @@
+                                                                              ASSEMBLED 12 2 73 AT 12-14.57 BY HLIA7O  PAGE  26
+                               /SYMELEC
+                                59     2227/ 222232      LAC I OP
+                                60     2230/ 102376       CAR 7
+                                       2231/ 602245      JMP , +1A
+                                62     2232/       JP.                 ILAW X
+                                63     2233/                           /CONTENTS DE X
+                                64     2234/                           /)
+                                65     2235/
+                                66     2236/                           /)
+                                67     2237/                           /) WORKING SPACE
+                                68     2240/                           JUSED ONLY IN ELST
+                                69     2241/                           /)WORKING SPACE
+                                70     2242/                           /) FOR
+                                       2243/                           /GARBAGE COLLECTOR
+                                72     2244/
+                                       2245/ 222233       LAC 1 OF+1
+                                *7 4   2246/ 512162       AND (20000
+                                75     2249/ 740280       SZA
+                                       2250/ 102221       JMS ERR             VERROR IP BLOCK DATA
+                                       2251/ 202233       LAC OP+1
+                                78     2252/ 622225       JMP X OP-5
+                                81
+                                82
+                                83
+                                84                 PLSY = JMS.
+                                 a5    2253/                           /FREN AN ITEN
+                                86     2354/ 203233       LAC DP 1
+                                 87    2255/ 42240        DAC DP 6
+                                 88    2256/ 212011       LAC FREE
+                                 89    *257/ 545163       SAD END
+                                       2266/ 102516       JMS LIM      /GARBAGE COLLECT
+                                       2261/ 352168       TAD (77777
+                                 92    2262/ 542233       SAD OP 1
+                                 93    2263/ 662341                    IIP CONSECUTIVE
+                                                          SAD OP16
+                                 94    2264/ 542249
+                                 95    22656 682300       JMP = 13
+                                 06    2966/ 352293       TAD (1
+                                 97    2267/ 43249        DAC OP 6
+                                 98    2270/ 252157       XDR (500000
+                                 99    2271/ 62233        DAC I DP+I
+                                       2278/ 232011       LAC I FREE
+                                101    2273/ 512212       AND (17977
+                                102    2274/ 63811        DAG FREE      VADVANCE FREE
+                                1e3    5975/ 212241       LAC (100000
+                                1g4    22767 62240        DAG I OP+6    ISET NIL
+                                105     2297/ 602256      IMP FLST-JMS+3 /LOOP TO TRY AGAIN
+                                106     2300/ 42233       DAC OP 1
+                                107    2381/ 42240        DAC OP+6      ISAVE LAST ADDRESS
+                                1A8     2309/ 1A0240      ISZ OP46
+                                109     2303/ 232911      LAC I FREE
+                                        23841 513212      AND (1777%
+                                        2305/ 52011       DAC FREE      PADVANCE FREE
+                                112     2386/ 212241      LAG (100006
+                                113     2307/ 62233            op 1
+                                114     23101 62240       PANT D0+A     ISET NIL
+                                1I5     2311/ 622253      *NP T FLSTEJMS VEXIT WHEN ITEM CHAINED TO DE
+                                116

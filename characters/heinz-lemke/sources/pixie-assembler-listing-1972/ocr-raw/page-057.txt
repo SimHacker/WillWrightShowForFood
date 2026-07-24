@@ -1,0 +1,59 @@
+                               /SYMELEC                                       ASSEMBLED 12 2 72 AT 12.44,57 DY HII47O  PAGE  56
+                               192     5412/ 200803      LAG 3  /CONTROL INT
+                               173
+                               174     5413/ 105466 PENZ, IMS TROR     ISERVE PERMD? INT
+                               175
+                               176     5414/ 211744      LAC ROOPY     /IN CASE OF ACCIDENTAL PERMDF HIT
+                               177     5415/ 351745      TAD REROUP
+                               178     5446/ 352027      TAD RERASE
+                               199     5417/ 748200      SZA
+                               180     5429/ 605403      JMP PENI
+                               181
+                               182     5421/ 205121      LAC CON
+                               183     5422/ 748100      SMA
+                               184     5423/ 665431      JHP PENd      ISTARTPOINT ALLREADY DONE
+                               185
+                               1,86    5424/ 106430       JMS COPFIR
+                               187     5425/ 451747      ISZ RIFIRI    REQUEST TO TEST FIRST INT
+                               188
+                               189     5426/ 285133      LAC CMODE     PEOR BLINKING GOTD pENS
+                               100     5427/ 552333      SAD           /POIND
+                               191     5430/ 605437       JMP PENS
+                               192
+                                193
+                                10 4   5431/ 206745 pENA, LAC TEMpX    ISAVE POS OF INT IN CASE OF FD ROUT
+                               105
+                               196     5432/              DAC CYEMPX
+                               107     2032/ 0200         LAC TEMPY
+                               108     5134/              DAC CTEMPY
+                               199     5435/ 106416       IMS COPSND
+                               20€     54367 605403       JMP PEN1
+                               701     543*/ 452833 PENS. ISZ RBLINK
+                               202     5440/ 212134       LAC (SORAHL
+                                       5441/ 45133        DAC BLINK
+                                       5442/ 452642       ISZ CaUSY
+                               205     5443/ 105445       JMS PENg
+                               266     54441 625353       JMP IPEN
+                               207
+                               208     5A15/      pEys.                CHANGE CURRENT DISPLAY FILE
+                               209     5446/ 225156       LAC I DEB    VIF A NO PERMDY
+                               210     5447/ 741209       SNA
+                                       5450/ 605463       IMP . 13
+                               212          212042        LAC CAUSI    FIF & NOT BUSY
+                               213     54521 746200       SZA
+                               214     54537 695463
+                                                          LAG : 10
+                               215     54547 208003                     /IP A, NEXT DISPLAY WILL BE TEMPDE
+                               216     5455/ 741200
+                                217    54561 685463       IMP.5
+                               216     5457/ 140903       12M 3
+                               219     5460/ 205156       LAC DEB             ISTART PERMDF
+                                       5A611 700606       IDLA
+                               201     61694 625445       JMP I PENS
+                                202
+                                203
+                                224    5463/ 765206       LAWLE
+                                226    54640 700606       IDLA
+                                2.6    5465/ 625445       JMP I PENg
+                                208
+                                200    5466/    * TROR,                ITRACKING CROSS ROUTINE

@@ -1,0 +1,60 @@
+                                                                              ASSEMBLED 12 Z 72 AT 12.14,57 BY HL147  PAGE  1,6
+                              /SYMBLEC
+                               466     1270/ 661234      JMP TURNVE 2  /ANOTHER TURN DE ELEN
+                               $67     1271/ 621232      JMP I fURNVE
+                               468
+                               469     12724       WAITOZA      JMS ADILEY
+                               470                       JMS AMEND3
+                               471     1274/             LAC RREDUC
+                               472     1275/             TAD RROTAT
+                               4*3     12961             SZA
+                               474                       JNS FONBL
+                               475                       DZM XTOT
+                               476     1301/             DZM YTOT
+                               477                       LAC (TEMPDY 10
+                               478     1303/             DAC ELAD
+                               499     1304/             DAC ILO
+                               $80                       JMS DECON     ICREATE DUMMY FILE
+                               ₫81     1306/             LAC (TEMPDF 10 ICAL LENGTH DE BLOCK DATA
+                               482                       CMA
+                               483                       TAD (1
+                               484                       TAD 10
+                               485     1312/             DAG LENGTH
+                               486                       LAC RROTAT
+                               467                       SZA
+                               488                       JHP WAITIS
+                               4a9
+                               4g6                 WAITSL,      LAC ELCDUN    /START WITH 400
+                               491                       TAD (14
+                               402     1320/             DAC ETYPE
+                               493                       AND 177
+                               494     1322/ 51774       DAC ELCOUN
+                               405                       JMS FOCBLI    /PORM GAT BLOCK
+                               496                       IMS FOGBLa
+                               497                       JMS POCBLA
+                               408                       JMS FOCBLZ    /DEFLECTION
+                               409
+                                                         IMS CATDAe    IDISCONNECY LINES. IF ANY
+                               501                       ISZ COOCOM
+                               502                       DZM RCATAL
+                               593                       DZM RREDUC
+                               5 e 4                     DEM SAVOSU
+                               505                       DZM NODRA
+                               506                       JHS DELLEV
+                                       8336/             JKP WAIT3
+                               5g8
+                               500
+                               518
+                               511     8337/ 212170 WAITIS,
+                                                         DRC ELANLÃS (TENPOE LA AREQUASY TO SOTATE AADOR DE DDS VE A
+                               512     1340/ 51750
+                               5÷3     1341/ 40010        DAC 16
+                               514     1342/ 40011        DAC 1
+                               515     9343/ 777977      LAM
+                               516     1344/ 45120       DAC COUNT     TURN ONLY 9E DEd
+                               517     1345/ 145054      DEM XTOT
+                               518     8346/ 145955      DZN YTOT
+                                       IЗAT/ 101232      IMS TURNVE    PTURN DUMMY FILE IN TEMPDE SPACK
+                               501     1359/ 212167      LAC (TEMPDE LO
+                               522     1351/ 51750       DAc ELAD
+                               523     1352/ 151766      DEM RROTAT

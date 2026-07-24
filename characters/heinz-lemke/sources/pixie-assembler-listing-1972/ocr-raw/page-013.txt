@@ -1,0 +1,60 @@
+                              ISYMELEO                                       ASSEMOLED 12 2 72 AT 12,44,57 BX HLI479  PAGE  12
+                               234
+                               235     769/ 106271 CATMO, IMS TEBLEY I5X RCATACATALOGUK BLINKING FERM
+                               236     761/451743 CATHOL,
+                               237     762/ 205135       LAC BLINK
+                               238     763/ 45942        DAC DACO
+                               239     7641 165156       DZM I DFB     ISTOP PERHDE TO CHANGE LOC & WHILE DEOON
+                               240     765/ 606365       JMP BLIROU
+                               241
+                               242     766/ 186271 REDUC, IMS rESLEY
+                               243     1767/ 451765      ISZ RREDUC
+                               244     970/ 699761       JMP CATNO1
+                               245
+                               246
+                               2477    791/ 106271 ROTMO, IMS TESLEV   /TOTATE SLINKING ITEN
+                               248     992/ 451766       IS" RROTAT
+                               249     773/ 600761       JMP CATMOL
+                               250
+                               251
+                               252
+                               25g
+                               254
+                               255     774/ 205750 pIXEX. LAC ERAST    /EXTENDED PIXE
+                               256     775/ 48047        DAC LOD
+                               257     776/ 225156       LACI DEB
+                               258     777/ 740208       3ZA
+                               259     8600/ 451742      ISZ CDOCOM
+                               26€
+                               262     8091/ 212224       AC (DJP PO LB
+                               262     1902/ 45253        AO LB
+                               263     4083/ 212223       LÃC (PAR PO PI
+                               264     1E24! 45262        AC LB
+                               265
+                               266     1005/ 445158       SZ DE
+                               267    1006/ 165156        ZM I DE
+                               268     1607/ 205156      LAC DFB
+                               269         545162        SAD BEG
+                               27€         141000        SKP
+                                       1013/ 691005      IMP ,5
+                               2.92
+                               273     1013/ 212222        C (123
+                               274     1014/ 45162
+                                       1015/ 212226
+                               2196    1616/ 45156                     ISTOP DISPLAY OF PERMDE
+                                       1017/ 165156      DEM I DEB
+                                       1020/ 212221      6AC (1600
+                               20g     1021/ 45157       DAC DEE
+                               2R0     1622/ 45161       DAC DrENOR
+                               281     1A23/ 212220      LAO (1700
+                               282     1024/ 45160       DAd DEERES
+                               283     1625/ 105445      JMS PENg
+                               284     1026/ 625353      JMP I PEN
+                               285
+                               286
+                               287
+                               288     10271    * DECUN,               PDISPLAY FILE CONVERTER
+                                                         PAo IDDS VE A
+                               2e0     1038/ 212217
+                               20g     1031/ 60918       DAC I 1A
+                               291     1632/ 145841      DZM MODE      /PAR MODE

@@ -1,0 +1,59 @@
+       / SyMELEC                                       ASSEMALED 12 2 72 AT 12.14,57 BY HL1470 PAGE  189
+       О3TКР    2243        STEMP   2244        HDR1    5030        IMO      5141
+       INDO      25g        INBL    1436        INIT  3102335       INP   104260
+       INSRET   6554        IMBRT 8193076       INSRTN  6343        INST  & 11756
+       INT      5320        INTERG 8111567      INTMO    707        INT1  = 12937
+       JMPADR E1A9TE                4772        LB      5206        I,BD      47
+       IBD1     5674        LASF    5231        LB1     5253        482       643
+       LB3      5254        L84     5262        LENGTH  11751       LESS     6237
+       LEVEI   5116         LIMI    2516        LIM1    2530        LIM2    2524
+       LINDAT # 7466        LINE = 12917        LINK   12913        LKB0G
+       LKEND    5173        LKERR   3265        LKTEST  326€        LOCATE =LlIS1e
+       LOP   • 12012        LOPX    5906        LOPY    5024        LPBEG    5171
+       LfPx)    1701        MASKX   7312        MASKY=  7343        MASKY1 = 7402
+       MBLINK E 5134        MESIN   9732        MESINI  4050        MESIN2   4657
+       MESIN3  4475         MESIN4 = 4122       MESING  4141        MESIN6   4005
+       MESINT = 4015        MESINS  4036        MBSINg  4041        MBSL     4126
+       MESOUT $103352       MESS    4366        MESSAG  4134        MIN      5137
+       MKER     5002        MK1     2536        MOD     6335        MODE     5041
+       MORE  * 6226         MOUT    5140        MOVOR   1454        MRKX     5001
+       MRKY                 MS      4367        MSIN    4371        MSOUT    4570
+       NEG   = 11733        NM      5066        NODRA -11776        NORO      427
+       NOrs     1355        NULLR 2103079       NUL#     495        ONGIN = 11470
+       DP    = 2232              3140237        PAD     5313        PAMDDE   1066
+       PBON  =10777         POD     5315        PEN     5353        PEN1     5493
+       PEN2     5413        PEN3    5445        PENA    5431        PEN5     5437
+       PIXEX                PLD     5316        PNTX  * 12004       PNTY  = 12007
+       PNTI  519954         PNT2 * 10755        PODATI  7426        POIDAT=  7407
+       POIMO S  6267        POINT N 12016       PONT    5015        POP   #102433
+       POS   $ 12045        POSOR   5621        POSDF   4741        POSDES   4743
+       POSDFL 3 4742        POSIT * 1.0160      PRD     5314        PRINTI = 5151
+       PRINT2 & 5152        PSD     5312        PUSH  3102407       PXD      5317
+       PXERI   2ay2         PXER2   2974        PXER3   2973        PXID    2106
+       P3OK     2037                5011        RATTMO = 12053      RAITPO = 11746
+       RELINK E 12033       ROATAL = 11143      ROOPY 811744        RDOCOM & 12831
+       REDUC                RELCOD  5035        RELOCI% 2043        RELOC4S 2044
+       RERASE E 1202        RERROR : 12022      RESO     220        REROUP - 11745
+       RINST = 10621        RLABEL 12035        RLCEND 3 2072       RLINA   10625
+       RMOD&E   5132        ROTMO               RREDUC ÷11765       RROTAT' = 11766
+       RIFIRI : 11747       RIRACK & 12023      RISNDI = 12024      RUBBER   6105
+       RUPCOY SE 12030      RW      2107        RWI     2126        RW2      2133
+       R1                   SAY     5027        SAVE  = 18052       SAVEX    6722
+       SAVEY   6*32         SAVGIN = 12026      SAVOSU = 11775      SAVINGA  5146
+       SAVSUR = 5147        SAYTAM = 6742       SAVTHL   604        SAVVE = 12661
+       SBMODEE  1073        38PI    5964        SEPI1   4766        SCAMO    735
+       SORAAL 3 5136        SORPAD : 11771              5751        SD1      5767
+       SEgCNX A 6624        SEGCNY  6672        sBacx   6666        SEGCYE   6637
+       SEGCYI & 6652        sue2x   7035        SEOEY   1561        SRaRyYa 6565
+       SEGX     6476        gEOXY   6521        SEGY    6510        SARSHT    451
+       sarer    6364        SETUP 31621471      SETUPI #162167      SET1  # 11635
+       S8T2  =11650         SEYOuS n 204        SHRINK  1216        SIXCLE A 2a3
+       SNnOy    1764        ANDCLE              SNDSTA = 12051      SOLVAD =111624
+       SOLVCO E111647       SOLVR 801679        SRAST   5656        STAK  5102446
+       STAKX 8110766        STAKY 811079        STCON   5111        STCONI   5113
+       aTnam                STPeD   5500        STPNTX * 5109       STONTYE 5116
+       STDOS • 5412         STRAIO & 6100       STROR   6252        SISAVE   519
+       sTepsY & 7644        STSTAK a            STXBMO  1640        STYBMO & 1641
+       SUEF  210753         SUME    5013        SUMg    5040        SVAD     5823
+                5633       SWYTCH&  5124        SWIA     316        SXY      6315
+       SYM   811757         SYME * 11753        S1      5012        TAKE

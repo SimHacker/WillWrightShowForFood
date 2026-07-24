@@ -1,0 +1,58 @@
+       I SYMALEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HL14TE  PAGE 81
+        408     7576/ 204745       LAC TEMPX
+        409     75791 740001      SMA
+        41$     7600/ 345060      TAD XTOTIN
+                7601/ 352231      TAD (20       /LESS THAN 10 PROM ENDPOINT
+        412     7602/ 512104       AND (777766
+        413     7603/ 748290      SZA
+        414     96041 627562       IMP I ENDPOI WRONG POINT
+                7625/ 264746       LAC TEMPY
+        416     7606/ 149001      SMA
+        417     76091 345961       TAD YTOTIN
+        418     7610/ 352231      TAD (10       /LESS THAN L0 FROM ENDPOINT
+        4I9     7681/ 512104       AND (777760
+        4 20    76121 743209      SZÀ
+        401     7613/ 627562       JMP I ENDPOI  WRONG POIN
+        422     7634/ 295061       LAG YTOTIN    PRIGHT POIN!
+        423     7615/ 14746        DAC TEMPY
+        $24     96161 52041       DAG GTSMPY    ISAVE POR TESTIN AT SD
+        425     7617/ 205069       LAC XTOTIN
+        426     7620/ 44945        DAC TEMPX
+        427     76211 52848       DAG STEMPX
+        428     7623/ 105621       JNS POSCR
+        429     7633/ 151776       DIM NODRA    /IF TEST PASSES
+        430     7A241 627562       JMP I ENDPOI 1OK RETURN
+        431
+        432     7625/       ATTPELA
+        433     7626/ 107274       JMS POPBL    ICRUATE ATTP
+        A3A     7627/ 212016       LAC POINT
+        435     7638/ 109407       IMS POIDAT
+        436     7631/ 765064       LAW SBPI
+        437     7632/ 193266      ADDW
+        438     7633/ 972915      LAN POINT
+        439     7634/ 193141      FINDP
+                7635) 103076       INSRT
+        411     76361 765964      LAW SBPT
+                7637/ 627625       IMP T APTOOL
+        413
+                76401 145071 AMEND, OZM SISTAK 122
+        d 45    7611/ 145101       DZM BTSTAK 132
+        446
+        448     76120 285158       LAC ECOMI    ITEST WHERE POINT STARTS
+                7643/ 741200      SNA
+        45€     76441 607653       IMP AMENDA
+        451     7645/ 552203
+        452     1516)667657
+        453     76171 552146
+        45k     76501 899693       JMP AMEND2
+        4g5     7651/ 187669                    INO INTERRUPT ON PERMD
+        455     76521 609975                    /SEPERATE PICTURI
+                7653/ 197750 AMENDO,                  YGET NODE INST POS XINS
+        458     76548109995                     /AND WHERE LINE IS TO START WITH RESP TO NODE INST
+        450     1655/ 107215       IMS POLAL
+        460     61 60997           IMP UPGOMI
+        461
+                7657)118013 AMENDLA      Jus TESTON    INT AT END POINT OE TEMPDE
+        A63     7668/ 197662      JNS AHENDLS TESTTK
+                76611 607075       JMP UPCOMa
+        465

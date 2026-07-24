@@ -1,0 +1,59 @@
+        ASYMALEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470  PAGE  41
+        117     3520/ 107171       IMS FONEL
+        148     3521/ 771756       LAW INST
+        119     3522/ 103126       FINON
+        120     3523/ 211756       LAC INST
+        128     3524/ 52926        DAC SAVGIN   ISAVE GROUP INST
+        $ 22    3525/ 295964       LAC SOPI
+        123     3526/ 51775        DAC SAVGSU   ISAVE GROUP SEPI
+        124     3527/ 103676       JMS WAITS    ITAKE BLINKING INGT
+        125     3530 / 204767      LAC
+        126     3531/ 552026       SAD SAVGIN
+        127     3532/ 603547       JMP 15       ATRIBS TO GROUP GROUP INST
+                3593/ 764767       LAW *
+        129     3534/ 183141       FINDP
+        130     3535/ 193319       DSON
+        131     3536/ 764767       LAW
+        132     3537/ 193266       ADOW
+        133     3548/ 771775       LAW SAVGSU
+        13€     3541/ 103266       ADDW
+        135     3643/ 103076       INSRT
+        136     3543/ 464767       LAW X
+        197     3544/ 106164       JMS DOLLEY
+        138     3545/ 451742       19Z CDOCOM
+        239     3540/ 151945       D&M RGROUP
+        140
+        14%
+        142     3547/ 212027 WAITZY LAC RERASE  /BRASE REQUEST
+        1A3     SE50/ 741209       ENA
+                3551/ 683571       JMP WAITG
+                3352/ 152027      02M RERASE
+        116     3553/ 151742       182 CDOCOM
+        147     1E5A1 145134       02M MBLINK
+        148     3565/ 103676       JMS WAITS
+        149     35561 76476        LAW X
+        150     9557/ 183141       FINDP /NUST BE RINGSTART POINTING TO UPPER SUBP
+        1S1     3566/ 103910       OSON
+        152     3E61? 234769      LAGIX         ICHECK WHETHER LINE OR INST
+        153     35631 512241       AND (100000  IIF LINE, LOGIG AND WITH ATNAMO
+        154     3563/ 741209       SMA
+        155     3561/ 603571       THP WAITS    WAS LINE, HAS ONLY DNE RINGSTART
+        156     3565/ 16476       LAM X
+        157     3566/ 103113       FINTS IGOES TO RINGSTART OF LOWER SUBP
+        158     35601 163310       DSON
+        159     35784 106464       OMS DELLEY
+        1.60
+        161
+        162     3571/ 212039 WAITO, LAC RUPCOM
+        163          741209       SHA
+        164     3573/ 683577
+        165     3540 152030       RAK RUPOON
+        166     3575/ 107041       IMS UPCONP
+        16*7    35964 451742      IS CDOCOM
+        168     3579/ 212031       LAC RDOCOM
+        160     36081 741209       SNA
+                36011 603636      JAP WAITIe
+                3602/ 152031       DZM RDOCOM
+        I72     3683/ 765146       LAW SAVING
+        103     16A41 1a19e        HOMPTI
+                3605/ 452032      152 CISpTN

@@ -1,0 +1,57 @@
+       IRSPPIX                                         ASSEMBLED 29 1 72 A7 17.15-40 BY HL1479  PAGH
+         59      102/ 220105       LAC I UP
+         69      163/ 109251       SARY
+         61      104/ 506129       JMD +*14
+         62      20B/       JP.                 /LAk
+         63      1061                           /OONTENTS GF X
+         64      147/
+         65      110/
+         66      1L1/
+         57      122/                           /) WORKING SPACH
+         68      113/                           VUSED ONLY IN FLST
+                 ALAY                           /)WORKING SPAOE
+                 115/                           /) FOR
+                 116/
+                                                PIGARBAGE COGLECTOR
+                 117/
+                 120/ 220195       LAG I OPIL
+                 121/ 501301       AND (20700
+                 122/ 740209      92A
+                 123/ 100974       TMS BRR             PERROR IP RLOCK DATA
+                 124/ 200106       WAC OP+1
+                 125/ 528100      JMPTOPS
+         82
+         83
+                            PLSg JuS
+                 126/                           /FRER AN ITEM
+         B6      127/ 200136      LAC JP !
+         B°7     1301 42113       DAC OP 6
+         B8      131/ 291226      LAG VRGE
+         89      132/ 541253       SAG OND
+                 133/ 190371      JMS LIM       POARBAGS COLLECT
+                 1341 341309       rab 177777
+         02      135/ 449188      SAD OP 1
+         93      136/ 609184      JMP  16       IIE CONSECUTIVE
+         0 4     137/ 540113      SAD OP&
+         09      14*/ 698153      JMP
+         96      141/ 541277      TAD (1
+                 142/ 40113       DAO OP S
+                 143/ 241275      XOR (500000
+                 1AA/ 60106       DAC I OPF1
+        1as      115/ 221226      LAS PPiR
+        101      146/ 591302      AND 119777
+        182      1a9/ 41226       DAC OREG      VADVANCE FREG
+        163      150/ 201275      LAo 110000d
+        194      151/
+                 152/ 692131                    IDOD TO TRY AGAIN
+                 1531 49106
+        187      154/ 40113                     /SAVE LAST ADDRESS
+                 155/ 440113
+        100      156/ 221226
+                 157/ 591392
+                      41226
+        112      161/ 251275
+        113      162/ 69105
+                 163/ 68113
+                 164/ 629126         1 ELSTEINS POXUY WHEN ICEM CHAINED TO OP
+        116

@@ -1,0 +1,60 @@
+        / SYMELEO                                      ASSEMBLED 12 2 72 AT 12,44,57 BY HL1478  PAGE  97
+        381    112121 204754       LAC YY1
+        582    11213/ 119797       STAKY
+        583    112141 111935       ORLTO
+        584    122251 744009       SLL
+        595    1/226/ 111011       UNSTKX
+        586    13217/ 111023       UNSTKY
+        597    11220/ 204796       LAG Ex2
+        588    18221/ 118765       ЗTAКX
+        589    17222/ 294755       LAG YY2
+        590    11223/ 110777       STAKY
+        501    11224/ 611293       JMP WRLE2
+        592    11225/       WRLB3.              IPICK UP & STACK POINT
+        593    14226/ 231754       LAC I TEMP
+        594    11227/ 365024       TAD I LOPY
+        595    11239/ 119797       STAKY        /STAOK Y COORD
+        596    10231/ 971754       LAW TEMP
+        59*    11232/ 182347       SDR
+        598    182334 231754       LAC I TEMP
+        590    11234/ 365006       TAD I LOPX
+        600    11235/ 118765       STAKX        /STAGK Y COORD
+               11236/ 631225       gMP WRLB3
+        602
+        693
+        $04
+        695
+        606                 ISTRAIGHT LINE VECTOR GENGRATOR
+        607
+        608                 IP. OROSS 24 4 67
+        690                 ALINKAI ON ENTRY FOR INTENSIFY
+        6д®
+               14237/ 748840 VECON. XX
+        612    112408 664900       3SM
+        613    19241/ 52355        DAC VNCGN 116
+               10242/ 211237       LAG VECON
+        6g5    11243/ "511e0       SPAICLA
+        526    10244/ 212219       LAC (LAC
+        617    18245/ 741400       9ZL
+        618    11246/ 252241       XOR (JMS
+        619    11247/ 51369        DAC VECGN 121
+        620    112501 431237       X&T  VECGN
+        621    112511 451237       I8Z VEGGN
+        622    112521 664908       BSM
+        623    11253/ 50354        DAC VECON 115
+        624    11254/ 751409       SZLIOLA
+        605    11255/ 212177       LAC 1200
+        626    11256/ 251360       XOR VECAN 121
+        627    18259/ 51360        DAC VECON 121
+        628    112601 211354       LAG VECON 115
+        629    1/261/ 740001       OMA
+        630    11262/ 311355       ADD VRGEN
+                                           122
+        631    182631 51361        DAd VECON
+        632    18264/ 748416       RAL
+        633    11265/ 211354       LAG VHGON 115
+        634    11266/              9ZL
+        635    1A267/ 211355       LAC VECON 116
+        698    112701 51356        DAC VACON 117
+        637    11971/ 211354       LAC VECAN
+        530    12724 744400        SALICLL

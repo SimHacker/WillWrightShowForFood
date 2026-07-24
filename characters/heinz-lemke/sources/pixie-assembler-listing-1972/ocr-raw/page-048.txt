@@ -1,0 +1,60 @@
+        ISyMELEO                                       ASSEMBLED 12 2 72 AT 12,44.57 BY H41470  PAGE  47
+         465    4224/ 212018       LAC CERRGE
+        166     4225/ 740208       SZA
+        46°%    4226/ 604171       JMP ERRMES   (2ND SPACE VIOLATION
+        468     4227/ 205164       LAC ENDRES
+        469     4230/ 45163        DAC GND
+                4231/ 452010       ISZ CERROS
+         471    4232/ 452022       ISZ RERROR
+                4233/ 202241       LAC DP "     /KEEP FREE LIST CONSECUXIVE
+         473    4234/ 352161       TAD (400001  IGET RID OF ZERO IN OUD END
+         474    4235/ 62241        DAC I OP 7
+         475    4236/ 624221       JMP I ERRGg
+         476
+         477    4237/       JUT-JMB,            / SERVICE TELEPRINTOR
+        478     4349/ 205140       LAC MOUT
+        479     4241/ 741209       SNA
+        400     4243/ 600254       IMP  12      / IP NOY IN MESSAGE
+        481     4243/ 224379       LAC i MSDUT
+        482     4244/ 545155       SAD OR       / CARRIAGE RETURN
+        183     4245/ 604254       JMP
+        484     4246/ 444570       15Z MSOUT
+        18%     4247/ 224370       LAC I MSOUT
+        486     4250/ $45155       SAD CR
+        4g7     4251/ 604254       JMP . 3
+        498     42521 708408       ILS
+         489    4253/ 624237       AND I DUT    / BXIT
+        400     42541 700402       ICE
+                4255/ 145139       DM MIN
+        492     4256/ 145149       DZM MOUT
+        493     4257/ 624237       AND I OUT    / EXIT - NOT IN MESSAGE
+        404
+        495     42681       INp-JM3,            / SERVICE KEYBOARD
+        496     1261/ 205140       LAO MOUT
+        197     1269/ 740209       SZA
+        408     4263/ 604305       JMP ,*22     / IF IN O/P MESSAGE
+        A99     4264/ 205137       LAC MIN
+                4265/ 941100       S2A
+        501     4266/ 604305       JMP $*17
+        592     4267/ 748200
+        593     4070/ 691274       JMP          / IN IIP MESSAGE
+        50d     42711 204371       LAC MsIN
+        505     12721 44367        DAd MS
+        586     4273/ 445137       15% MIN
+        5A7     4274/ 700312       KRB
+        5a8     4275/ 552140       SAD (27)
+        509     4276/ 604304       JMP  6
+                42771 64367        ĐAC *MS
+        510
+                +3801 144367       isz MS
+        5g2     A301/ 545155       SAD CR       / CARRIAGE RETURN
+        5д3     4302/ 445141       18Z IMC       • MESSAGE COMPLATE
+                4303/ 624268       AND I INP
+        515
+        516     43042 145137       DRM MIN
+        517     4395/ 780312       XRB          / HERE IN O/P MESSAGE
+        510     4306/ 624260       AND IINP
+        5%0
+                43971       SOPOUT=JMS.         / COPY MESSAGE TO MSDUT
+                4310/ 102929       IMS op-5     / SAVE NAME
+        522     4AA1 764233        LAW

@@ -1,0 +1,7 @@
+                               /SYMELEC                                       ASSEMBLED 12 72 AT 12,44,57 BX HL1476    PAGE  86
+                                698    10166/ 192347      EDR
+                                699    10167/ 638166      IMP I POSIT
+                                7ạ0
+                               782
+                                7e3                PAUSE
+                                794

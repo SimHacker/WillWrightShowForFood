@@ -1,0 +1,60 @@
+       IRSPPIX                                         ASSENALED 29 1 72 AT 17,15,40 BY NL1476 DAGF  12
+        639     1807/ 540118       SAD OP$3
+        640     1650/ 689357      EXII
+        641     2051/ 440345       I92 BNTERINS / MOVE TO FI
+        642     1452/ 765398       LAW
+        643     1853/ 525406       AND I OP4I
+                2054/ 641275       SAD (Jhs
+        645     1055/ 440345       ISZ ENTEk-TS / MOVO TO PE TE RINGPOINTER
+        646     1056/ 101133      JMS LKIEST
+        647     1067/ 200119      LAC OP+3
+        646     1$60/ 61236        DAO I LINK         ATARTING-POINT
+        649     2951/ 429345       XOT / ENTOR-IMS      PICK UP
+        650     2962/ 139345      ENTER             AND EXECUTE FUNCTION
+        651     1663/ 221236      LAO I LINK
+        652     1OGA/ 49110       DAC OP+]      / PICK  STARTING-POINT
+        653     1665/ 150091
+        654     1660/ 341236       TAD LINK
+        $55     16691 42236       DAC LINK
+        656     1970/ 221236       LAG I LIDK
+        657     1071/ 40345        DAC ENTER-JMS
+        658     1072/ 420345       XOI I ENTERSIMS         /AND X
+        659     1073/ 691940      JMP GRI
+        $68
+        661
+        $63
+        563                 / GO ROUND RING PINDING NAXT ADDRESS BEFORE APPLYING FUNOTIOR,
+        654                 / STORG JAR(X)e EXECUTE F, AND THEN SET X TO STORED VALUE.
+        665                 / DALE AS FOR ORRA.
+        6 66
+        667     1074/ 428345 JRRB, XOY I RNTER-IMS
+                                                MISS THIS OE
+        668     1875/ 190242      SAR
+        669     1076/ 299106      LAS DP+1
+                107/  40118       DAC OP$3      / CONTENTS OFX
+        671     11901 760860 9R2,  LAW
+        672     2101/ 520119       AND I OP3
+        673     1103/ 541262       SAO (DZM
+        6 *74   A103/ 600157      SXIT
+        695     1294/ 760119       LAN OP+3
+                1705/ 199242       JAR
+        6mg7    MO6/ 191133        IMS UKIRST
+        698     MO7/ 203110        LAO OUE3
+                      61296        DAO I LINK
+        680     11I1/ 440545       1A2 ENTER-JAS
+        681     DIX2/ 420545
+        682     1083/ 193345      ANTER
+        683     RMA/ 221236       LACILINS
+        684     1115/ HBILG        GÃC 0043
+        685     1186/ 750091       JL0
+        686     A1AT/ 341236       TAD LINK
+        687     1120/ 42236        DAG LINK
+        686     1 220119           LAC & OP+3
+        680     12221 741100       SPA
+        500     a Cадggy           EXIT         • IP HAG BEEN DELETEN
+        6g1     1124/ 221236      LACI LINK
+        602     0125/ 00346        DAO ENTOREINS
+        603     116 420945         коT TлтаOATИS
+        601          40105         DAd ap
+        605     S138/ 290110       LAO DEY3
+                131/  HO1A5       DaG0P

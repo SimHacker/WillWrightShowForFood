@@ -1,0 +1,60 @@
+       /SYMELEO                                        ASSEMBLED 12 2 72 AT 12-44-57 BY L14*90  PAGE 95
+        465
+        466
+        457
+        468
+        469    11635/       ORUTO-JMS,   •      /POSITION BBAM
+        474    12036/ 225006      LAC I LOPX
+        471    11637/ 744001       OMALCLL
+        172    11040/ 3$4765      ADD KBEAN
+        473    11Q411 740200       SZA
+               188421 748901       ЭМА
+        475    11943/ 44756       DAO DX        /DELTA X
+        476    1Д0441 225824      LAG I LOPY
+        177    29045/ 744001       CHAIOLL
+        478    120461 305022      ADD YBBAN
+        479    1д047/ 7740200      SZA
+        480    11050/ 740801       OMA
+        481    12051/ 45014       DAC DY        IDELDAY
+        482    18952/ 749200       SZA
+        493    11*53/ 612056       JMP
+               110541 544756       SAD DX
+        484
+        485    11055/ 631835       IMP ORUTO-JMS       AIUAP BOTH ZERO
+        496    18056/ 212071       LAO (100149
+        487    1857/ 110756        WROF
+        488    110601 431035       XOT I DRLTD-JMS     ISET VIS/INVIS
+        489    11061/ 205014       LAC DY
+               289621 11123        TMS VECGN    IDRAW LINT
+        401    18663/ 201756       LAC DX
+        402    18064/ 119756       WRDF
+        493    18065/ 777777       LAM
+        4Q4    18066/ 345905       TAD
+        495    18067/ 51754        DAC T&MP
+        496    180791 231754       LAC  TрMO
+        407    126711 252216       XOR (100000
+        408    180721 71754        DAC I TEMP   /ESCAPE BIT
+        409    18073/ 225006       LAO LOPX
+        500    11074/ 44755        DAC XREAM
+               10075/ 225024       LAGT LOPY
+        582    18976/ 45022        DAG YBEAM
+               11079/ 631035       IMP Y ORLTOSINS
+        5A5
+        506    11100/       HRITO.IMS,          /POSITION BEAM
+        587    1A1O1/ 225006      LAC I LOPX
+        508    18102/ 111733       JMS NEG
+        5g9    11203/ 14776        DAC EX2             /USED TO POSITION TO LSI POINTE
+               11104/ 44762        DAO           OP INSTANCES AND FOR REPOSITIONING
+        510
+               111051 25024        LAC  LOPY    /AFTER LABELLING
+        522    12106/ 11133        IMS NEG
+        523    111071 11955        DAC YY2
+        514    11220/ 45020        DÃC
+        515    JUIILY 152065       DZM TRer
+        516    11112/ 111SI0       LOCATE
+        517    11813/ 45021        DAG TEMPa    POMIT INSTANCE IP STARIS DFESCEEN
+        5g8    18114/ 740200
+               11115/ 610387       JMP GOMPO    POMIT LABEL TOO
+        500    10116/ 204765       LAG XABAM
+        501    MIA7I  44775        DAC 0X1
+        532    18120/ 205022       LAG YRRAM

@@ -1,0 +1,58 @@
+        /SYMELEC                                       ASSENBLED 12 2 72 AT 12.44,57 BY HL1476  PAGE  35
+         581    3121/ 693124       JMP 3         /POINTER ON RINGSTART
+        582     31221 222233      LAC i OP+L
+         583    3123/ 602236       JMP OP-2      /LOOP
+         574    3124/ 292232       LAC OP
+         585    3125/ 623113       IMP I FINDS-IMS            IEXIT
+         586
+         587
+         380
+         589                FINDN *IMS
+         590    3126/                           /FIND NAME OF BLEMENT
+         501    3127/ 102225       IMS OPES
+         592    3130/ 222233       LAC I OP+I
+         503    3131/ 512157       AND (500000   ITOST IF ATON
+         $94    3132/ 741209       SHA
+         595    3133/ 60313        JMP.4
+         596    3134/ 202232       LAC Op
+        59'7    3235/ 102347       EDR          INEXT
+        598     3136/ 693130       IMP          /LOOP
+        599     32374 202232       LAO OP
+                3148/ 623126       IMPI FINDN-IMS             PEXIT
+         601
+        602
+        603
+        605
+         606    3I4L/       FINDP-IMS,           / MOYA TO TOP OF HEAD IP ON ATNAME
+         60     31421 102225       JMS OP-5
+         608    3143/ 212241       LAC 1160000
+         699    3144/ 522233       AND  DP+1
+         610    3145/ 741200       SNA
+         611    2146/ 603151       JMP           / IF ATNAME
+         612    31471 249232       LAG op
+         613    3150/ 623141       AND  FINDP
+         614    3151/ 202232       LAO OP
+         $15    3252/ 102347       SDR
+         616    3153/ 102367       JAR
+         617    3154/ 623141       AND TFINDP
+         618
+         619
+         620                / GO ROUND HEAD FINDING NEXT ADDRESS AFTER APPLYING PUNCTION.
+         621                / MOVE & TO NEXT ITEM IN HEAD AND IF RS RXDCUTE FI, IE RP EXACUTE FZ.
+         622                IGALL BY LAW GRHA, ENTER; LAW X; LAW PI, LAW FA
+         623
+        624     3155/ 422472 ARHAP XCT I ENTER-JMS     / PICK UP X
+        625     3156/ 102225       IMS .0P-5
+         626    31591 42235        DAG Op+3     /GеT CONTENTS OF X
+        627     3160/ 222235       LAO I OP+3
+         628    3161/ 512241       AND (1eeoea
+         620    3162/ 741200       SNA
+         630    3163/ 603171       JNP .+6      / IP ON ATÑAME
+         631    31641 202232       LAC OP
+        632     3165/ 102347 3R1,  ODR
+        633     3166₴ 299233       LAC OP+1
+         $34    3167/ 542935       SAD 00+3
+         625    31901 602504       EXIT         / IE BACK TO STARTING-POINY
+        636     3191/ 202032       LAC 09
+         637    3172/ 103141       FINDP
+        638     3173/ 280233       LAG OP+1

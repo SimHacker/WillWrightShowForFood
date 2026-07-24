@@ -13,9 +13,9 @@ Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_yet_ask
 
 | Field | Value |
 |-------|-------|
-| Status | **DIGITIZED** (2026-07-24) — delivered via email attachment + [pcloud bundle](https://e.pcloud.link/publink/show?code=kZfrboZLdkhmTkNHyFD3D4YsvF18VCDFpq7) (assembler + film + thesis) |
-| Scale | ~110 A3 pages + 15 RSP pages = **125 pages** |
-| Pull in | Download pcloud bundle / save email attachment; file under `media/` with provenance; only the 1967 doc PDF received locally so far |
+| Status | **RECEIVED + FILED** (2026-07-24) — 128-page scan: `/SYMELEC` (~110 pp) + `/RSPPIX` (15 pp), Cambridge CAD Group Assembler, Jan/Feb 1972 |
+| Filed | [sources/pixie-assembler-listing-1972/](sources/pixie-assembler-listing-1972/README.md) — PDF + page rasters + thumbs + structure map |
+| Pull in | OCR transcription (SYMELEC + RSPPIX) → clean `.asm` for SIMH — plan in the README |
 | Show use | Lars assembles/runs against Type 340 manual under SIMH; walk interrupt handler on air; UWO student project; **CARS 2027 Berlin 29 Jun** demo target |
 | Thread | [2026-07-24 storyline](sources/2026-07-24-pixie-storyline-thread.md) |
 
@@ -100,7 +100,9 @@ Heinz Word doc summarizing Cambridge work (Don asked permission to Medium-ify). 
 
 ### heinz_phd_thesis_1972
 
-Lemke (1972) *Interactive graphics in an integrated CAD system* — Appendix 4 pp 187–209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE. Ask Heinz for scan or Cambridge library retrieval.
+Lemke (1972) *Interactive graphics in an integrated CAD system* — Appendix 4 pp 187–209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE.
+
+**RECEIVED 2026-07-24** (pcloud bundle, 219-page scan) → [sources/phd-thesis-1972/](sources/phd-thesis-1972/README.md). OCR pending (selective: front matter, Ch 5, Appendix 4 first). Also received: **1969 PIXIE film** (mp4 + DVD VOB) → [media/film-1969/](media/film-1969/README.md) (gitignored, >100 MB).
 
 ### heinz_1967_talk_attachment1
 

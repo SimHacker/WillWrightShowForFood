@@ -1,0 +1,58 @@
+                               IRSPPiX                                         ASSBABLED 29 1 72 AT 17.15.40 BY HLSAYO  FAGS 13
+                                607     1132/ 601109      JMP GR2
+                                698
+                                699     1133/                                  ITEST IP ROOK UN LINK SPACK
+                                                   LKTRST, 15K LIXK®
+                                        1134/ 441236
+                                701     1135/ 291236      LAC LINK
+                       ..iwgaG.mta" 7o 2 4136/ 541254     SAD LKEND
+                                793     A237/ 109074      IS EKR
+                                704     1140/ 621133 LKARR, JMP I LKIKST
+                                765
+                                106
+                                707
+                                708
+                                789                 /RSP ROUTINES FOR USE WITHOUY QUALIFIERE
+                                718
+                                7Ạ1
+                                712                ADDW M OUS.
+                                713     AAAL/                           /ADDWORD IN ELEMENT
+                                        12421 40197       DAC 09+2
+                                        1243/ 101901      FINDK
+                                716     1144/ 100222      SDR
+                                        8245/ 200106      LAC OP+1      /HEAD POINTER
+                                        1146/ 48119       DAC OP+3      /URAD
+                                        1147/ 701237      UAR EL
+                                720     1150/ 180169      aETSP         FOR NEW RING ITOM
+                                        1151/ 220118      GAE I OP 3
+                                722     2152/ 241276      XOR (506000
+                                1723    1153/ 66113       DÃO I OP 6    ICHAIN TO TOP OF HEAD
+                                724     2154/ 208106      LAC OP 1
+                                        1155/ 60119       DAC 1OP 3      RESET HGAD POINTE
+                                        1156/ 63187       DAC I DP 2     NAME ON NEW WOR
+                                ey tig  2159/ 341261      PAD (DAC
+                                728     21601 61237       DAC I BL      PORM NULL RING
+                                        4261/ 200107      LAC OP+2
+                                        1162/ 621141      IMP I ADDWEJMS
+                                732
+                                733
+                                                    DOON # JMS .
+                                736     1153/                           IDSLETE A SON RING
+                                737     1:64/ 40111       DAC OD+A
+                                738     4165/ 100766      FINDS         HIN CASE DE WRONG ENTRY
+                                133     12667 761674      LAW GRRB
+                                743     1167/ 190345      ENTER
+                                7A1     8190/ 209111      LAC OP 4
+                                        H71/ 763174        LAW.3
+                                743     1172/ 100345                    ADO ALSO FOR RING-STARI
+                                        1173/ 628163      AND I DSON
+                                745     1194/ 200112      LAC OP+4
+                                748     1175/ 160305      POP
+                                947     1276/ 6a094       EXIT
+                                748
+                                                   DELB E IMS .
+                                        11772                           /DOLETE ELEMENT FROM BROTHER RING
+                                752    12774 138198
+                                                          THS OP-5
+                                753     1201/ AS11e       DAC OUA:
+                                        1002/ 220106       LAC I OP+

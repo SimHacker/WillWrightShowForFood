@@ -1,0 +1,58 @@
+                               /SyNELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HLIAYO  FAGE  62
+                                520    6054/ 545117       SAD aLEVEL
+                                521    6055/ 686069       JMP                 PPRESH START
+                                522    6056/ 452927       ISZ RERASE
+                                523    6059/              JMP BLIROU
+                                524    6660/ 186115       JMS ENDDRA
+                                525    6961/ 606073       IMP DRAMO
+                                526
+                                527    6062/ 205134 TD,   LAC MBLINK          ITRACK
+                                528    6863/ 941209       SNA
+                                520    6864/ 665453       JMP PENI
+                                5g0    6865/ 797777       LAM
+                                531    60661 45132        DAC RMODE
+                                532    6667/ 606305       JMP BLIRDU
+                                333
+                                534    6678/ 106271 aD,   IMS TESLEY   /GROUPING
+                                535    6071/ 451745       18% ROROUP
+                                536    6872/ 606385       JNP BLIROU
+                                537
+                                538
+                                539    6693/ 145132 DRAMO, DZM RMODE
+                                540    6874/              LAC (LAD
+                                541    6075/ 352216       TAD (400000
+                                542    6676/ 45673        DAC SRAST 15                                                                  vie
+                                543    6079/ 666385       JMP BLIRDU
+                                544
+                                545    6160/ 205121 STRAId,     LAC CON              /DRAW STRAIGHT LINE
+                                566    6161/ 748109       SMA          INOT HV IF IN RU MODE
+                                       6102/ 605483       JMP PENI
+                                548    6103/ 145130       DZM CONSTD
+                                549    6104/ 665463       JMP PENI
+                                550
+                                551     5105/ 205121 RUBBER,    LAC CON              PRUBBER BAND LINS
+                                552     GIЛAE MAДIВ      3MA
+                                553    6167/ 665463       JMP PENI
+                                554    6180/ 212146       LAO (2
+                                555    6A118 4513e        DAG CONSTI
+                                556    6112/ 695463       MP PEN
+                                558    6113/ 151775 ENDEON.     DZM SAVGSU    JEND OF COMMAND MODE
+                                559    6114/ 606305       gME BLIROU
+                                560
+                                561    6115/     • ENDDRA,                    /RESET ALL CONSTANTS ETC
+                                562    6116/ 102147       SMrUP
+                                563    6117/ 212142       LAO (1797
+                                564    6120/ 52034        DAd GRID
+                                565    +821/ 99-9979      LAM          /ERASE EVERYTHING
+                                566    619921 45159       DAC COOMI
+                                569    61231 45131        DAC CONSND
+                                568    6124/ 45191        DAO CON
+                                560    6125/ 265117       LAC BLEVEL
+                                570          45116        DAC LEVEL
+                                       6127/ 205177       LAC STSAVE
+                                       61301 52052        DAC SAVE
+                                5mg    6831/ 212134       LAC (SCRABL
+                                5*1    6132/ 45135        DAC BLINK
+                                575    6133/ 151755       DZM FSBPI
+                                576
+                               5ny op  6234/ 152036       DEM CErRDE

@@ -1,0 +1,53 @@
+                               / SyMELEC                                      ASSEMBLED 12 2 72 AT 12-44-57 BY HLI470  PAGE
+                                       6642/ 606672      JMP SEGCNY
+                                       66437 285121      LAC CON
+                                       6644/ 552205       SAD (3
+                                       6645/ 606510       IMP SEGY
+                                       6646/ 186722      JMS SAVeX
+                                       6647/ 212205      LAC (3
+                                       6659/ 45121       DAC CON
+                                       6651/ 606510      JMP SEOY
+                                       6652/ 212056 sEocYI,     LAC YB
+                                       6653/ 345126      TAD CONSTS
+                                       6654/ 941100      SDA
+                                       6665/ 606662      JMP
+                                       66667 196722      JMS SAVEX
+                                       6657/ 212205       LAC (3
+                                       66681 45121        DAG CON
+                                       6661/ 696519      JMP SEGY
+                                       6662/ 212056      LAC Y3
+                                       6663/ 345125      TAD CONSTX
+                                       6654/ 740100       SMA
+                                       66657 606476      JMP SEGX      OARRY ON IN X DIR
+                                       6666/ 106722      JMS sAVEX
+                                       6667/ 212203      LAC (1
+                                       6679/ 45121       DAC CON
+                                       6691/ 606519      JMP SEGY
+                                       66721 212056 SEGONY,
+                                                         TAD CONSIRC YB
+                                       66732 345125
+                                       6674/ 948100
+                                       6675/ 696765      JMP ERASE
+                                       66961 205121      LAC CON
+                                       6697/ 552203       SAD (1
+                                       6700/ 666510      JMP SEGY
+                                       6701/ 106722      JMS SAVEX
+                                       6782/ 212203      LAC (1
+                                       6703/ 45121       DAC CON
+                                       604/ 686510       JMP SEGY
+                                       6765/ 205121 ERASE. LAC CON            PERASE LAST VECTOR
+                                       6766/ 742169      SPA
+                                       6767/ 605463      JMP PENI
+                                       67101 106777      IMS TAKE
+                                       67111 205121      LAC CON
+                                       6712/ 741200      SNA
+                                       6013/ 666476      JMP SEOX
+                                       67144 741100       SPA
+                                       6715/ 68576%      JMP SD1              (TEAPDE IS EMPTY
+                                       67161 352242      TAD (777776
+                                            740266        SZA
+                                       6720/ 696519      JMP SEGY
+                                       67 21 666176       IMP SHOX
+                                       69221    * SAVEX,               ISAVE LAST VeCTOR
+                                       6723/ 106742      JNS SAVTEN
+                                       6741 305121       LAC CON

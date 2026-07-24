@@ -1,0 +1,59 @@
+                              /SYMELEC                                        ASSEMBLED 12 2 92 AT 12,44,57 BY HL1470 PAGE  50
+                               639
+                               648
+                               64%
+                               642
+                               643     5146/    •SAVINS,
+                               644     5147/      SAYSUD,
+                               645     5L50/ 777777 SCOM1. 779777
+                               646     5д51/  260  PRINTI,      26€    /FOR PRINTNAME OF INST
+                                       5162/  269 PRINTZ,       260
+                               648     5153/  215        215
+                               648
+                               659     5154/  27₴        COLON, 272
+                               651     5155/  215 gR,    215
+                               652
+                               653
+                               654
+                               655                 IMEROE WORKSPACE IN DOWNCOMPILER WITH STSTAK
+                               656
+                               657                DEMP * SISTAK
+                               658                 UZ = STOTAK 1
+                               650                 V1 = STSTAK 2
+                               669                 R1 = STSTAK 4
+                               661                 YYI & STSTAK S
+                               662                YY2 & STSTAK 6
+                               663                DX - STSFAK "Y
+                               664                DOUN & STSTAK 10
+                               665                ARKY  SYSTAK 1)
+                               666                JAMMA = STSTAK 12
+                               667                U A SESTAK 19
+                               668                BETA & STSTAK 14
+                               669                TEM & STSTAK 15
+                                                  XBEAM = STSTAK 16
+                                                   X E SISTAK 20
+                                                  T2 E STSTAK 21
+                                                  V2 = STSTAK 22
+                               6774               L = STSTAR 23
+                               675                STOST & STSTAK 25
+                               676                EX1 • ST3TAK 26
+                               67*7               EXS = STSTAR 29
+                               6*8                FIG = STSTAK 30
+                               670                VANO - SISTAK 31
+                               688                MRKX & SISTAK 32
+                                                  MKER • SISTAR 33
+                               000                ALPHA & STSTAK 3A
+                                                  DF = STSFAK 36
+                               684                LOPX = SISTAK 37
+                               685                T3 = SISTAK 40
+                                                  UI = STSTAK 41
+                                                  RE STSTAK 42
+                               688                §1 = OTSTAK 13
+                                89                SUMB & SISTAK 44
+                               600                DY & STSTAK 45
+                                                  PONT A SISTAK 46
+                                                  XBMC & STSTAK 47
+                               $03                Y = STOTAK 50
+                               604                V • STSTAK 51
+                               60B5               TEMP2 = SUSTAK 52
+                               606                YBEAM = STSTAK 53

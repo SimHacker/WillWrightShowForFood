@@ -1,0 +1,58 @@
+        ISYMALEO                                       ASSEMBLED 12 2 72 AT 12,44-57 BY HL1470 • PAGE 63
+        578     6135/ 152010       DZM CORRGS
+        579     6136/ 152042       DZM CBUSY
+        58&     6437/ 151776       DZM SAVGSU
+        581     6240/ 1517615      D&M RREDUC
+        682     6141! 145065       DZM COAT
+        583     6142/ 152953       02M RATTMO
+        584     6143/ 151766       DZM RROTAT
+        585     6144/ 151747       DEN RTFIRI
+        586     6145/ 152924       DZM RTSNDI
+        59*     6146/ 151776       DZM NODRA
+        588     6147/ 152054       D2M CSAVE
+        S89     61501 145132       DZM RMODE
+        50€     6151/ 152÷30       DZN RUPCOM
+        501     6852/ 252025       DZM GUPCDM
+        592     6153/ 152031       D&N RDOCOM
+        593     61541 151742       DZM CDOCOK
+        594     61551 165196       D2M  DFB
+        595     6156/ 145123       DZM DRAWMO
+        596     6157/ 145130       D2M CONSTD
+        597     €160/ 152935       DZM RLABEL
+        598     6161/ 145134       DZM MALINK
+        599     6162/ 145133       DZM CMODE
+                6163/ 152927       DZM RERASE
+        601     61641 145146       DZM SAVINS
+        602     6165/ 212117       LAG 1100
+        603     6166/ 51974        DẶC ALCOUN
+        604     61591 205165       LAC ENDNOR
+        605     6179/ 45163        DAC GND
+        606          295161        LAC DFENOR
+        607     61721 45157        DAO DPE
+        608     6193/ 212121       GAO 1233760
+        699     61941 40055        DAG LAD
+        6j*     68751 212120       LAC (L8D
+        618     6176/ 352216       TAD 1460600
+        642           45673        DAG SRAST 15
+        683
+        684           49010        DAC 1A
+        €15     6201/ 212116       LAO 126€
+        616     69021 15151        DAd PRINTI
+        617     6203/ 45152        DAC PRINT2
+        618
+        6io          106343        IMS INSOTM
+        620     6285/ 106464       IMS DELLEV
+        621     6986/ 626115       SMP ONDDRA
+        602
+        623     69071 205123 polro, LAC DRAWMO
+        624     62191 140209       SZA
+        895     62018 605403       IMP PEN1     ADRAWING NOT FINISHAN
+        628     62121 145139       D2M CONSTD
+                6213/ 212203       LAC
+                6214/ 45132        0A0 PMODE
+        609     69151 2915         LAG (LADI
+        630     62161 352316       TAD (40A000
+        Sa1     62191 45673       DAC SRAST 15
+                6a901 606305      9MP BLIRDU
+        694     6221/ 205134 ATTMO. GAG MALINK  FATT POINTS OF BLINKING INST
+        835     69091 941900      SNA

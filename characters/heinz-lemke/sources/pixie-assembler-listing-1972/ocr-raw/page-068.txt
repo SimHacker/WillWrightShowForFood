@@ -1,0 +1,32 @@
+       / SyMELEC                                       ASSEMALED 12 2 72 AT 12-44,57 BY HL1479  PAGE  67
+                64564 45120        DAC COUNT
+        811     6451/ 205115       LAC BSNDST
+        812     6452/ 52051        DAC SNDST'A
+        813
+        824     6453/ 232952       LAC I SAVE
+        815     6454/ 72051        DAGI SNDSTA
+        826     6455/ 452052       ISZ SAVC
+        817     6456/ 452051       ISZ SNDSTA
+        818     6457/ 445120       I82 CUUNT
+        319     6460/ 606453       JMP
+        829     6461/ 205177       LAC STSAVE
+        821     64621 52052        DAC SAVE
+        822     6463/ 626446       JKP  OOPEND
+        823
+        82%
+        825     6464/       DELLEV,             /DELBTE LEVEL STACK
+        826     6465/ 799971       LAW 17771
+        827     6466/ 45120        DAG COUNT
+        828     6467/ 172052       DZM I SAVE
+        829     6470/ 452952       ISZ SAVE
+        839     6471/ 445120       I84 COUNT
+        831     +472/ 606467       JMP
+        832     6473/ 205177       LAC STSAVE
+        833     64944 52052        DAG SAVE
+        8344    6475/ 626464       IMP I DELLEY
+        835
+        836                        NODISP
+        837                 PAUSE
+        838
+        839
+        840

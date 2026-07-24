@@ -1,0 +1,59 @@
+       IRSPPIX                                         ASSEMBLED 29 1 72 AT 17.15.44 BY HG1470 PAGF
+        523
+        524      714/                           FPORM DLEMENT LENGTHW
+        525      185/ 748901       OMA
+        526      716/ 49107        DAO OP+E     ASET READ COUNTER
+        527      717/ 761241      LAW NM        FPOR PRINTNANE
+        528      720/ 100165      G2089
+        829      921/ 761237       LAW GL       FEOR ELAMENT
+        53€      722/ 198165      ЭБTЕР
+        531      723/ 41240       DAO BLI              /SAVE HEAD ADDRASS
+        532      724/ 761237      GAW BL
+        533      *25/ 199743      NULLR
+        534      126/ 109222       ODR
+        595      7271 440197       1S% 0P 2
+        536      739/ 609725       IMP                 APORM READER
+        537      731/ 291241      LAC NH
+        538      732/ 241262       XOR (140009
+        53G.     733/ 61237       DAC I BI      JATЛAME
+        540      734/ 201237      LAC EL
+        541      795/ 61241       DAO INN       JBACK POINTER
+        542      36/ 764237        LANEL
+        343      137/ 199222       SDR
+                 140/ 291249      LAC ELL
+        515      741/ 61237        JAO I BL
+        546      742/ 633711      JMP I FELN-JMS
+        547
+        548                 NUGUR & IMS.
+        549
+        5g0      1A3/                           /FORM NULL RING
+        551      744/ 100199      YMS 0P+5
+        552      745/ 341261       RAD (40009   ISET RINGSTART
+        5g3      7481 68106        DAC I OP+I
+        554      747/ 208105      Las op
+        555      150/ 629743      THP T NULUR-IMS
+        556
+        557
+        558                 IWSRT = IMS+
+        559      n 51/                          VINSERTO IN RINGP
+        S60      762/ 100190      IMS OP        VGBT Q
+        5 61     953/ 43199       DA8 0P 2
+        562      954/ 420751      XOT I INSRI-INS
+        563      955/ 183108      IMS Op.5      /oat p
+                 756/ 220106      LAG I OPFL
+        565      757/ 541269       AND TTTY     IMAY BE RINGSTARY
+        566      900/ 69107        DAS I OP+2
+        567      161 993196        LAC 1 OP+1
+        568      762/ 521261      AND (40000    /PRESERVE IF RINGSTART
+        5 69     96 342147        TAD 0P+2
+                 7644 69106       DAO I 0P+1    JOIN UP
+        571      165/ 620951       INP I INSRT-JMS
+        5*2
+        573
+                            FINDS * JM3 -
+        575                                     /FIND RINGSTART
+        576      96/ 19190        1M3 09-5
+        577           68LA5       DAC I OP             SMOVE NAME
+                 11 221e6         LAGIOpE
+                                  AND LANODE
+                 nm 3? 10942      SZA

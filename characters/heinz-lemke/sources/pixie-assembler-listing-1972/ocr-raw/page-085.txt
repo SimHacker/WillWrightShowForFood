@@ -1,0 +1,60 @@
+                               1SyMELEC                                       ASSEMBLED 12 2 72 AT 12,A4,57 BY Ml1478  PAGE  84
+                               582     10026/ 749109      SMA
+                               583     16029/ 630913      JNP I TESTIN /POUND ELEMENT, OK
+                               584
+                               585    10030/ 205159       лAC СCOM
+                               586    10031/ 552146        AD/
+                               587    19032/ 610045       JMP          /TWO INTIS
+                                                          LAP CGONS
+                               588    10933/ 205150
+                               589    10034/ 741290       SNA
+                               590    10035/ 638413       INP I TESTIN
+                               501    10636/ 212759       LAC ELAD     JINT AT END OE PERMDF
+                               592    10037/ 748200       SZA          /AMEND WITHDUT ELEMeNTS
+                               503    10640/ 687679       JMP AMEND6
+                               594    16041/ 107764       JMS AMEND4
+                               505    10042/ 187775       JMS AMEND5
+                               506    16943/ 107215       IMS FOLSL
+                               507    10644/ 6070-7       JMP UPCOMI
+                               598
+                               599     16@45/ 211756      LAC BLAD
+                                600   16646/ 740200       SZA
+                               6e1    10047/ 667677       JMP AMENDE   PELEMENT WAS IN TEMPDE
+                                692   10650/ 607714       JMP AMENDY   12 NODES EE & NODE
+                               693
+                                664
+                               6 95
+                                696
+                               607
+                                608   109512      VAIN.                fFIND POINIS OF INSTANCES
+                                609   10052/ 52064        DAC VAINI
+                               6je    10653/ 232064       LACI VAINI
+                                611
+                               612    10054/ 52064        DAC VAINL    /ADDRESS DF ATNAME OF INST
+                                613   10055/ 232264       LAC I VAINI
+                                614   10056/ 4476         DAC X
+                               615    10057/ 158955       DZM PNT2     ITO DETSCT LINES
+                               616    1646a/ 110719       PLEAS
+                                617   180611 210755       LAC PNT2
+                                618   10062/ 746200       SZA
+                                629   10063/ 687466       IMP LINDAT
+                                620   10064/ 210754       LAC PNTI
+                                      108651 110181       JMS VAINZ    PACOUMULATE INST POINT DATA
+                                622   18866/ 210753       LAC SUBP
+                                693   16067/ 45664        DAG SBPI
+                                      10978/ 42233        DAC OP 1
+                                695   1GA1/ 762233        LAN OP 1
+                                626   10672/ 182347       ODR
+                                697   16973/ 102347       aDR
+                                600   10074/ 102347       ODR
+                                629   10675/ 222233       LAG I OPI
+                                630   109761 553166       SAD (10000
+                                631   10677/ 699512       JMP CATDAT
+                                632   10100/ 630051       JMP I VAIN
+                                633
+                                634   10101/       VAINZ,
+                                635   101821 45217        DAC Y
+                                636   16103/ 225917       LACIY
+                                637   10104/ 45061        DAC YTOTIN    /LATEST DY BETWEEN THO INST OP DIYF LEVEL
+                                638   10105/ 345057       TAD YINS
+                                639   10196/ 45257        DAS YINS

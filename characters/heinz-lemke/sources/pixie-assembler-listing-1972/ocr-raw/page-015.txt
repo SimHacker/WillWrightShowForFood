@@ -1,0 +1,60 @@
+                        49     /SYMELEC                                       ASSEMBLED 12 2 72 AT 12-44-57 BY HL14%8  PAGE
+                               35€     8817/ 211765 VEMODE,     LAd RREDUC
+                                358    1120/ 740208      SZA
+                                352     821/ 10121        IMS SRRINK
+                                353    1122/ 21175.       LAC TEMP
+                                354    8223/ 512207       AND (377777  JELIMINATE ES BIT
+                                355    1124/ 60610        DAC I 10     IVECTOR WORD INTO NEM DE
+                               356     8125/ 101145       IMS CALDEF
+                                3577   1126/ 445042       ISZ DACO
+                                358    1127/ 212754       LAG TEMP     /FEST ES BIT
+                                359    1130/ 741100       SFA
+                               368     2131/ 145041       DZM MODE     /PAMODE
+                                361    1132/ 601047       IMP DPSIM 1
+                                362
+                                363    8133/ 445942 CHMODE,
+                                                         LAC TEMP SZ DRS ISHOULD BE CH MORD
+                                364    A134/ 212754
+                                365    1135/ 512206       AND (37
+                                366    1236/ 552206       SAD (37      ITEST WHETHER ESCAPE
+                               367     1137/ 601143       JMP          PRETURN TO PANODE
+                                368    1140/ 225042       LAC I DACO
+                                369    1141/ 51754        DAC TEMP     INEW CH WORD
+                                37€    1142/ 601133       JMP
+                                                          DИR MODE     ISET PARAMETER MODE
+                                371    1143/ 145841
+                                378    1144/ 601047       JMP DOSIMI
+                                375    1145/       SALDEr,
+                               376     1146/ 200018      LAO 10        /CALCULATE DEFLECTION
+                                3ingi  124%/ 45044        DAC COMPOS
+                                398    1150/ 187312       JMS MASKX
+                                379    1151/ 200010       LAC 10
+                                36€    1152/ 45044        DÃO COMPOS
+                                381    8253/ 107343       INS MASK!
+                                382    154/ 681115        IMP I CALDEF
+                                383
+                                364
+                                385
+                                386    8155/ 40011 JELE,  DAO I1 ICREATE BASIC ELEMENT
+                                387    1156/ 205121       LAC CON
+                                388    115/ 740200        SZA
+                                389    1160/ 601165       IMP
+                                                          In8 i1S
+                                390    11611 200011
+                                301    11621 352205       TAD (3
+                                392    1163/ 51759        DAC ELAD
+                                393    1164/ 601436       IMP INEL
+                                394    1165/ 211771       LAC SORPAD
+                                305    2166/ MAGGAL       SMA
+                                306    1167/ 352204       TAD (TEMPDE 240
+                                39*    1170/ 741160       5PA
+                                308    1191/ 695403       JMP PENI     /T00 MANY SYMBOLS
+                                309    1172/ 211771       LAC SOrPAD
+                                dne    1173/ 48010        DAC 10
+                                       1174/ 220011       LAC I 1I     (LENOTH
+                                402    1175/ 60610        AGI ie
+                                403    11761 295121       LAC CON
+                                404    A179/ 668911       ALSS 11
+                                405    1200/ 360011       FAD TII
+                                406    1201/ 68010         ACTI        /ELTYPE
+                                       1262/ 226011                    DDS VR 4

@@ -1,0 +1,57 @@
+       ISYMELEC                                        ASSEMDLED 12 2 72 AT 12,44-57 BY HLI47A PAG1  27
+        118
+        119
+        120     2312/       JETSP-IMS,
+        121     2313/ 42232       DAG DP
+        122     2324/ 212015      LAC PLL
+        123     7315/ 62232       DAO I OP      VIN CASE DF IMMEDIATE GARBAGE COLLECTION
+        124     2316/ 212011      LAC FREU
+        125     23198 545163      SAD END
+                23201 102516      JMS LIM       /GARBAGE COLLECT
+        127     2321/ 352241      TAD (JMS
+        128     2322/ 42233       DAC Op1
+        129     2323/ 62232       DAC  op
+        130     2324/ 232011      LAC IFREE
+        1 31    2325/ 512212      AND 117777
+        132     2326/ 52011       DAC FREE
+        133     2327/ 212241      LAC (JN8
+        134     2330/ 67833       DAC I OP 1    ISET NIL
+        135     2331/ 102253      FLST          /FREE AN ITEM
+        136     2332/ 702233      LAC OP+1
+        137     2333/ 62232       DAC           VATTACH NAME
+        238     2334/ 622312      AND I GEISP
+        130
+        140     2335/       INIT-UMS,TSP
+                2336/ 102312
+        14,2    2337/ 202232      LAG Dp
+        143     RAAGY 6517#       DAC I TOP 1
+        144     23414 445170      I8Z TOP 1
+        115     2342/ 205167      LAC TOP
+        146     2343/ 545170      SAD TOY 1
+        147     23448 102221      JMS ERR             ANO ROOM FOR MORE NAMES
+        148     2945/ 202233      GAC OP+1
+        149     2346/ 622335      AND I INII
+        150
+        151
+        152                 CDR & IMS.
+        153     2347/
+                2350/ 102225      JMS OP:5      ISAVE NAME
+        155     2351/ 352203      TAD (1
+        156     2352/ 42249       DAC DP 6      VIN CASE NONITEM
+        157     2953/ 102376      SAR 7         ATOUE ADORESS OF ODR
+        158     23546 212241      LAg WIMS
+        159     2355/ 562233      SAD IOP 1
+        160     2356/ 741030      3KP           /HERE IP CDR NIL
+        161     2357/ 602363      IMP
+        162     2360/ 202240      LAG
+        163     2361/ 42233       DAC DP 1
+        16A     2362/ 102253      FiST
+        165     2363/ 202233      LAC Op 1
+        166     23644 62232       DAO 10p       /ATTACH NAME
+        167     2365/ 202237      LAG np
+        168     2366/ 622347      JMP I ODR-JMS
+        168
+                            CAR # JMS:
+        I rey a 1367/
+                2870/ 182925      JMS DPO5
+                3371/ 222933      LAG IOPA1

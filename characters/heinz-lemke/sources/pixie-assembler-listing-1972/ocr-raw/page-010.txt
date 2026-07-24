@@ -1,0 +1,59 @@
+       ISYMELEC                                        ASSEMOLED 12 & 72 AT 12,44.57 BY HL1470  PAOR
+         6€      522/ 165021       LAN TEMPZ    /CLEMENT AUREADY CATALOGUED
+         61      523/ 193266       ADDW         /OP 1 POINTS TO SBPI ADORESS
+         62      524/ 771756       LAW INST
+         63      525/ 102347       ODR
+                 526/103976        INSRT
+         65      527/ 765021       LAW TEMPZ
+         66      530/ 690542       JMP FOBBLI
+         67
+         68
+         69      531/ 191354 FOCBL. JMS FOCBL1  FFORK CAT BL
+                 532/ 101373       JMS FOCBLO
+                 533/ 191494       JMS FOCBL4
+                 534/ 101422       JMS POCBL2
+                 535/ 107625       JMS ATTPEL   VFIRST ATTP WITH 100 ETC
+                 536/ 107625       IMS ATTPEL   ISND ATTP WITH ALL AEROS
+         75      537/ 771757       LAW SYM      /READY FOR NEXT ENTRY
+         76      540/ 182347       SDR
+                 541/ 600542       JMP FOBSLL
+                 542/ 151755 POBBLI,     DEM FSBPI
+                 543/ 145014       I52 COMPOS
+         B1      544/ 225044       LAC I COMPOS /PIRST WORD AFTER PAR SB ELEMENT
+         82      545/ 352240       TAD (157777
+         g3      546/ 741200       SNA
+         84          607077        JMP UPCOMI   /NOLINE 15 OK
+         g5
+         36      550/ 446044       182 CoMpos
+         87      551/ 205159      LAC CCOMI
+         88      550/ 740109       SMA
+         89      553/ 118013       IMS TESTIN   ITEST WKETHER LAST LINE
+                 554/ 197191      JMS FONBL
+         91      555/ 607216       JMP FOLAL
+         92
+         93
+                 556/       ATTPDA,                    VATTE DATA
+         95          211752       LAC ETYРE
+         96      560/ $12237       AND Ieoe
+                 562/ 740209       SZA
+                 560/ 680566       JMP
+         09      563/ 212236       GAG i199
+        100      5641 45954        DAC ХTOT
+        101      565/ 629556       IMPI ATPPDA
+        192      6667 352035       TAD (776000  1m2000
+        103      567/ 748200       57A
+                 570/ 608574       JMP
+                                  LAN 1-700
+                     977708
+        206           45054       DAd XTOT
+        107      573/ 629556       JMP I ATTPDA
+        108      5740 1AO10A       SMA
+        109      575/ 609601       JMP
+        110      5m61 177700       LAW
+                 T my po ? 45055   DAG YTOT
+        142      6001 686663
+                 6011 212236      TAC 1180
+        113
+        114      6021 45055        DAC yror
+        115      603/ 620556       JMP IATTPDA
+        116

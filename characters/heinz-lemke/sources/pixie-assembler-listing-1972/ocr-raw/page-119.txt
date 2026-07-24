@@ -1,0 +1,60 @@
+                               IRSPPYX                                        ASSEMBLRD 29 1 72 AT 17.15.43 BY HL14YO  PAGE
+                                349     462/ 440115       IS& G30G
+                                359     4634 200115       LAC GGUG
+                                351     464/ 541253       SAD END
+                                352      165/ 699472      INP GBRTN
+                                353     466/ 220115       LAG I OBUG
+                                354     467/ 541275       SAD (100000
+                                355     4792 341272       TAD (290000   MARK SND NIL
+                                356     472/ 68115        DAC I GBUG
+                                357
+                                358                IRXIT RECURSIVE ROUTINE
+                                359     4721 200116 OBRTN, LAC OSTRP
+                                360     473/ 541232       SAD TUP 1
+                                36%     474/ 600377       IMP LIM2      FEINAL EXIT
+                                362     175/ 341274       TAD (797777
+                                363     476/ 40116        DAC OSTKP
+                                364     4771 220116       LAC I GSTKP   PRECOVER GRUG
+                                365     560/ 40115        DAC GAUG
+                                366     581/ 609454       TMP GACDR     /CARRY ON
+                                367
+                                368
+                                360                IGARBAGE COLLECTOR PHASE TIRES
+                                3*€
+                                371                JARB,                /COLLEOT GARBAGE & RASTORE LISTS
+                                372     502/ 201225       LAC BSG
+                                373     503/ 40114        DAG OP+Y      ISTART ADDRESS
+                                3 нg a  504/ 149116       OZM OP+J1     ACONSECUTIVE INDICATOR YERU
+                                375     585/ 225114       LAG I OP+T
+                                376     596/ 301267       AND (220000   ATO ALLOW FOR BLOCK DATA
+                                3 m rog 587/ 541267       SAD (220000
+                                378     514/ 199571       IMS GED
+                                        611/ 541341       SAD 120909    /PO ALLOW FOR DEAD BLOCK DATA
+                                308     512/ 189605       JMS 6801
+                                381     513/ 749619       RAL
+                                382     5I4/ 748109       SMA
+                                393     515/ 690526       IN?           /JUMP HIRST SARBAGE ITEM
+                                            222114        LNG itdp+o
+                                384     520/
+                                385     529/ 501271        ND (57777
+                                386     528/ 69114         АСT ОP       (RESTORM LIST ITEM
+                                387     521/ 440114       ISZ OP+7
+                                389     522/ 200114       LAC OP+7     /ADVANCE ADDRESS
+                                389     523/ 541253       SAD END
+                                100     521/ 101255       JMS ERNGB     OXIT NO GARRAGR TO COLLECT
+                                301     525/ 680585 JAR3I, JMP • "*1   /LOOP
+                                392     326/ 200114        до apt
+                                393     521/ 41226        DAC ERED      ISTART NEW FREE LIST
+                                394     5304 48115        DAC OP+IO
+                                305     531/ 201253       DAO GND
+                                396         341266        TAD (400000
+                                397     533/ 60114        DAC I OP+7    PATTACH TERMINAL WORD
+                                308     52A/ 440114       I5Z OP+7
+                                309     535/ 200114       LAC 0P+9      FADVANCE ADDRESS
+                                400     536/ 541253       SAD END
+                                        53*7/ HAAS6A      JMP           VEXIT
+                                4%2     EAG/ 22B1L4        AC I OP
+                                493     541/ 521257       AND (220000   (TO ALLOW FOR BLOOK DATA
+                                        569/ 549367       SAD (220009
+                                4•5     543/ 109571       IMS GBD
+                                        544/ 541341       SAD (20080    ITO ALLON POR DOAD BLOCK DATA

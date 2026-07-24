@@ -1,0 +1,86 @@
+                                                                 2 72 AT 12.44,57 BY HL1470    PAGE
+                                                      ASSOMBLED 12
+      /SYMELEC
+               79871 771756       LAW INST
+        61
+        62     7120/ 102347       ODR
+               7121/ 103476       INSRT
+        63
+               79226 765064       LAW SaPt
+        64
+        65
+        66     7823/ 103126       PINDN
+         67    71241 762233       WAW OP I
+         68    7925/ 102347       DDR
+         69    78261 182347       ODR
+               7127/ 212164       LAO (4
+               7130/ 62233        DAG I DP I
+         71
+         72                                         FOR INST
+               7131/ 771756       LAW INST      /DATA
+         *7 3
+               7132/ 103126       FINDN
+               71331 762233       LAW OP 1
+               79346 102347       BDR
+         77     7135/ 102347      SDR
+                7136/ 212146      LAC 12
+                19137/ 62233      DAG I OPI
+         80     9140/ 762233      LAW OP 1
+         81     7141/ 102347      ODR
+                7842/ 162233      DEM I OP 1
+         82
+         83
+                7143/ 205151      LAG PRINTI
+         84                                     IGIVE INST A NAME
+                91A41 44372       DAC MSIN I
+                1945/ 205152      LAG PRINT2
+         96
+                *946% 44373       DAG MSIN 2
+                7147/ 295153      LAC PRINTZI
+         86
+                7150/ 41374       DAC MSIN 3
+         89
+                7151/ 971756      LAN INST
+                7152/ 104331      SOPIN
+                11531 445152       ISZ PRINTZ
+         92
+                191541 295152      LAC PRINTZ
+         93
+                7155/ 552106       SAD 1272
+         94
+                7156/ 7A1000      axp
+         05                                     INOT LO YAT
+                71571 627105       JMP I FOMBL
+         96
+                79601 212116       LAO 1260
+         97
+                7A611 45152        DAC PRINT2
+         98
+                73621 445151       18Z PRINTI
+                71631 205151       LAC PRINTI
+                71641 652106       SAD 1272
+        101
+                7165) 627165       IMP  FOHAL
+        102                                            VAFTER S9 RESTART WITH +A
+                71661 212116       LàC 126€
+        103
+                7167% 15151        DAC PRINTI
+                7170/ 627105       JMP FONBL
+        105
+        106
+         107                                    /FORM NODE OR BRANCH BLOCK
+         108                FONOL,
+                9172/ 199105       YMS FONSL    /FORM OFHER HEADS
+         109
+                7473/ 107452       IMS UPDAIN
+         110
+                7174/ 211756       Lac INST
+         121
+         112    7195/ 107467       JMS POIDAT
+         113                                     /NODE INST BLOCK TO SUBP BLOCK
+                +9968971756           INST
+                     103141        FINDP
+                mo00. 165147       LAW SAYSUE
+         1g6
+                79011 103266       TDDW
+         1÷7

@@ -1,0 +1,59 @@
+                               /SyMELEC                                       ASSEMELED 12 2 72 AT 12,44,57 BY 1U147O  PACE  46
+                                407    4145/ 604203       JMP ERRA      NOT PIXIE DAT
+                                408    4146/ 684176       IMP ERRS      DATA WONT FI
+                                109    4147/ 765146       LAW SAVINS
+                                4д0    4150/ 65166        DAC I BOT    PAWAY ALL INIT NAMEW
+                                411    4151/ 205166       LẠC BOT
+                                412    4152/ 45170         JAC TOP
+                                423    4153/ 445179        SZ TOP
+                                414    4254/ 205163       LAC END
+                                415    4455/ 52011        DAC FREE
+                                416    4156/ 102167       SETUP1
+                                417    4157/ 265146       LAC SAVINS
+                                418    4160/ 44767        DAC X
+                                419    4061/ 119717       FLEAS
+                                420    4162/ 216753       LAC SUBP
+                                421    4163/ 45147        DAC SAVSUB
+                                422    4154/ 451742       ISZ CDOCOM
+                                123    4165/ 660030       JMP BERTPI
+                                424
+                                425    4866/ 44362 ERRMBA,
+                                                         I3Z RERROR DAC NOTE ERAD INSER TD AEESUEE TYPRA
+                                $26    4167/ 452022
+                                427    4170/ 680030       JMP BERTPL
+                                428
+                                429
+                                430    4171/ 764355 EReMED,     LAN NOTE      PERROR MESS TYPE B
+                                431    4172/ 103352       MESOUT
+                                432    4173/ 600024       JMP ABORTP
+                                433
+                               434     42741 760263 ERR3, LAN 263      /CHECKSUN FAIL
+                                435    48751 604166       JMP ErRMEA
+                                436
+                                437
+                               438     4196/ 960265 ERR5, LAH 265      IDATA WONT FIT
+                               439     4177/ 44362        DAC NOTE 5
+                                       4200/ 684171       JMP ERRNED
+                                441
+                               442      201/ 76026 ERRG,  LAH 266      INO ATTP ON LINE OR CATALOQUE ETC
+                               443      202/ 66416        IMP ERRMEA   PERROR IN COMMAND REFERRING TO LINE
+                               445     4263/ 760264 ERRA, LAW 264      INOT PIXIE DATA
+                                146    4204/ 41362        DAC NOTE
+                               4417    4205/ 604171       JMP ERRMEB
+                               448
+                               449
+                               450     42061       ERRDE,              PERADE RUNg OUT OF SPACE
+                               451     4267/ 760262      LAW 262
+                               452     42181 44362        DAC NOTE 5
+                               4 53    4211/ 212836       LAC CERRDE
+                               454     4212/ 740200      SZA
+                               455     4013/ 604171      JNp ErRMEB    IaND SPACE VIOLATION
+                               156     4214/ 205160      LAC DFERES
+                               457     4215/ 45157        DAC DEE
+                               45B     4216/ 452036      ISZ CERRDE
+                         3     459     4219/ 452022      ISZ RERROR
+                                       4220/ 624366       IMP I ERRDF
+                               461
+                               460     4221/       ERRGB,              (GB RUNS OUT OF SPACE
+                               463     42226 766261      LAW 261
+                               464     49231 44362       DAC NOTE 5

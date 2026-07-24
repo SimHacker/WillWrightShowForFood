@@ -1,0 +1,59 @@
+         ASyMELEC                                       ASSEMBLED 12 2 72 AT 13,14,57 BY HLIATA  PAGE
+         640     15237 740001       SMA          VOLD > NEW ERASE ELAM
+         641     A524/ 352002       TAD XBM
+         642     1525/ 740102       SMA
+         643     1526/ 691531       JMP
+         644     15271 145122       02M CON1
+         645     1530/ 606476       JMP SEaX            /DRASE SYMBOL
+         616     1531/ 211769       LAC XВMO
+         647     85321 352236       TAD (100
+         648     A533/ 52003        DAG ENOXX
+         649     A534/ 352164       FAD (4 /PREVENT ZERD LINE
+         650     1535/ 148001       SMA
+         652     1536/ 352203       TAD (1
+         652     1537/ 352902       TAD XВИ
+         653     1540/ 741100       SPA
+         654     1541/ 605403       JMP PENI            IND ACTION
+         655     1542/ 106742       JMS SAVTEM   SAVE SYMBOL AND ADD LING
+         656     {543/ 777776       LAW 17776
+         657     544/ 345121        TAD CON
+         658     85451 740100       SMA
+         659     1546/ 601552       JMP
+         660
+         661     4547/ 212003       LAR ENOBX
+         662     1550/ 352024       TAD PNTX
+         663     A551/ 691556       JMP
+         66€     1552/ 212003       LAC ENOEX
+         66$     8553/ 749901       OMA
+         666     15541 352203       TAD (1
+         667     $555/ 352084       TAD ONTX
+         668
+         669     1556/ 52004        DAO PNTX
+         670     1557/ 196315       JMS SXY
+         691     1560/ 686476       IMP SEOK
+         672
+         693     1561/ 106315 SEGEY, JMS SXY            ITAKE OLD AND NEW YBM, IF
+                 15621 211762       LAC X8M0     VOLD > NEH PRABE BLAM
+         675     1563/ 740001       SMA
+         696     1564/ 352095       TAD
+                 3565/ 749100       SMA
+                 8566/ 601571       TMP 3
+         690     1569/ 145122      DZM CONL
+         68%     1579/ 696510       PMP SRGY
+         681     15711 211762      LAC уAMO
+         682     5721 350236        TAD (1A0
+         693     15731 52006       DAG RNOEY
+         684     15741 352164       TAD
+         685     15951 740801      SMA
+         686     1576/ 352203      FAD (1
+                 157/ 352005       TAD Yaм
+         688     1600/             SPA
+         6A9     1601/ 605403      JMP PENI
+                 1692/ 106742      IMS SAVTEM
+                 16034 405121      LAG CON
+         602     16041 559243      SAD (1
+         603     1605/ 601611      JMP           APREYENT PERO LINE
+         608     1686/ 212906      LAC GNOSY
+         605     16871 3528877     TAD PNTY
+         606     15101 601615      IMP
+                 A611/ 212006      LAd ENOaY

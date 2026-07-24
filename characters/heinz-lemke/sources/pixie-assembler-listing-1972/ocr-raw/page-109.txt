@@ -1,0 +1,59 @@
+                               / SYMELEC                                      ASSEMBLED 12 Z 72 AT 12,44,57 EY HL1470  PAGE 108
+                               ABSXX   7205        AD       123        ADDW  #103266        ADILEV  7504
+                               ADR     50 32       ADRI     6936       ALPHA    5003        AMEND   7640
+                               AMEND   7653        AMENDI   7657       AMEND2&  7673        AMEND3  775€
+                               AMEND&  7764        AMEND5   7775       AMEND6 = 7677        AMEND   5 7 14
+                               AMENDO  7662        ASR      5043       ATTMD    6221        ATTPDÀ   556
+                               ATTPEL  7625        BСС   • 12021       BCON  = 12046        BCON1 =12647
+                               BD       150        BDO      2755       BDE      3001        BDN   =102743
+                               BD0     30L0        BDR      3024       BEG      5162        BEGRTS    24
+                               BERTP1    39        BЕTА  * 4963        AFIRST = 5114        BLOVEL  5117
+                               BLINK   5135        BLINK1 = 11767      BLIROU   6365        BDT     5166
+                               BPNTX  12043        BPNTY * 12044       BSBWOR = 11764       BSNDST  5115
+                               B3%     5637        BXBMO 5 11761       BYBMD *41763         CALDEF  1145
+                               GAPO     236        CAR   5102367       CATDAT = 7512        CATDAG  7522
+                               CATDAL * 7532       SATDA2   7552       CATMO     760        CATMO]   761
+                               CBUSY  12642        OCAT     5065       COOM1    5156        CD      6645
+                               CDOCOM # 11742      CDR   #102347       CEIG     1622        CELE    1155
+                               CERRDP в 12636      CERRGB *12016       CrIF     1632        CFOU    1636
+                               CEST    1624        SHMODE   1133       CISRIN = 12032       CKS     5€34
+                               CLaC     287        GLBI     213        OLEL      210        CLBO     215
+                               CLER     206        CLOS     211        CLBU      214        OLgV     212
+                               QLOCK   6534        OMODE   5133        COLON    5154        COMP   10241
+                               COMPIL #110170      COMPOI   5063       COMPOS   5044        ODMP1  18423
+                               COMPIO              COMPI1 10631        COMP12               CDMP13 10670
+                               COMPI4 *10364       COMP2   10552       COMP3 = 10546        COMP4 # 10620
+                               CONPE • 16612       SOMP9 • 10307       CON      5121        CONELE  1519
+                               CONSND  5131        SONSTB   5126       CONSTO   5127        CONSTD  5130
+                               CONSTX = 5125       SONI     5122       COPFIR   6430        COPIN #104331
+                               CDpOUT 3194307      COPEND = 6446       COUN     4757        COUNT   5120
+                               CR      5155        SSAVE * 12054       OSBV     1620        OSIX    1634
+                               COND    д626        CTEMPX *12040       СTEMPY *12941        CTRD    1630
+                               GUPCON * 12025      JURe     346        DACO     5642        DELB  M193324
+                               DELLEV  646         DEMP    4747        DE      5065         DF3     5156
+                               DECON   1027        DFS     5157        DEENOR   5161        DFERES  5160
+                               DISCON 10116        DISCOL *10125       DISC02               DISCOS 10144
+                               DPSIM   1646        DRAMD    6073       DRAWNMO  5123        DRUTO 4111035
+                                       5031        DSON  #103316       DX      4756        DY       5014
+                                       665€        EDGEH   5605        EDGEY    5571        EIGOLA   205
+                               FL     12014        ELAD   11750        BLCDUN = 11774       GLI    12018
+                               END     5163        ENDOOM   6113       ENDDRA   6115        ENDNOR  5165
+                               &NOPDT  7562        ONDRES  5164        ENDEX =12003         ENOEY  12406
+                               ENTER =102472       BRASE   6705        PRAST    5750        ERR     2221
+                               ERRDF   4206        ERRGR   1221        BARMRA a 4166        ERRMEB  4171
+                               ER23    4174        ERRA    4203        ORRS     4176        ERRE    4201
+                               ESCAPE •18727       eTYPE = 11752       AXIT  3662564       EX1
+                               2X2     1976                6030        FEL   S103635       PELN   $103041
+                               FIrCLE   202                            PINDN *103126       FINDP =103141
+                               FINDS #193113       PIRSTA *12050       FLEAS =116719       PLEAT   10734
+                               FLEAR               FLEA3 ≤ 10752       FLST  <102253       FOaRL     463
+                               PORRLI   542        FDOBL    531        POckly   1354       FDOBL2   1422
+                               POCBLa  1973        FOCALA  1444        POHBL    7165       FOLEL
+                               FONAL   7171        FOPRL   727A        FOUCLS   201        PROG    12011
+                               FRSTCH  1771        PSOPI * 11955       PSTOLA   176        GAMMA    4761
+                               GARB    2627        3ARB1   265         GARB2    2714       GBCDR    2601
+                               GBD     2*16        98D1    2932        GBRNCH   2533       GRRTN    261K
+                               GBUG    2242                9544        AD       6070       GDM     12020
+                               GETD  8110701       GETDI # 10716       GOTSP 9102312       GIND     2241
+                               міTEM   2562        GNIL    2605        ENTR     2541       GRHA     3155
+                               GRTD   12034        aRRE    3221        GR1      3105       GR2      3225

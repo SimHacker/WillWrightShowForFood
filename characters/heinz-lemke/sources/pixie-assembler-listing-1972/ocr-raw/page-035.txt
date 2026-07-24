@@ -1,0 +1,58 @@
+                               IBYMELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY NL1470  PACD  34
+                                523
+                                524    30411                           /FORM ELEMENT LENGTHN                                            10
+                                525    3042/ 740051       ЭMA
+                                526    3943/ 42234        DAC DP+2     ISET HEAD COUNTER
+                                527    3044/ 765066       LAW NM       /FOR PRINTNAME
+                                528    3045/ 102312       Э0TSP
+                                529    3046/ 772814       LAW EL       /FOR ELEMENT
+                                530    3047/ 162312       aRTSP
+                                531    3050/ 52915        DAO ELL             /SAVE HRAD ADDROSS
+                                532    3051/ 792014       LAW EI
+                                533    3052/ 103976       NULLR
+                                534    3453/ 102347       SDR
+                                $35    3054/ 442234       ISZ OP 2
+                                536    3055/ 603052       IMP -*3             /FORM READER
+                                537    3056/ 225066       LAC NM
+                               538     3057/ 252151       XOR (140000
+                               539     3060/ 72014        DAC I EL     VATNAME
+                                540    3661/ 212014       LAC EL
+                                541    3662/ 65866        DAO I NM     /BACK POINTER
+                               542     3663/ 772014       LAW EL
+                               543     3064/ 102347       CDR
+                               541     3465/ 212415       LAC ELI
+                               545     3066/ 72814        DAC I BL
+                               546     3067/ 623041       JMP I FELN-IMS
+                               547
+                               648                 NULLR & IMS .
+                               549
+                               350     30701                           /FORM NULL RING
+                               551     3878/ 182225       Ons DP-5
+                                       3692/ 352150       TAD (40000   ISET RINGSTART
+                               553     36731 62233        DAC I OP+I
+                               554     3074/ 202232       LAC OP
+                               555     3675/ 623476       JMP I NULLRIMS
+                               556
+                               557
+                               558                 INSRY = INS .
+                               559     30961                           IINSERT O IN RINGP
+                               566     3677/ 102225       JMS OP--5    IGAT O
+                               561     3100/ 42234        DAC Op
+                               362     3101/ 423076       XCT I INSRT-JHS
+                               563     3102/ 162225       JMS OP-5     IGETP
+                               56d     3163/ 222233       LAC I OP+1
+                               565     3104/ 512147       AND (187777  IMAY BE RINGSTART
+                               566     3165/ 62234        DAC I OP+2
+                               567     3166/ 222233       LAC I OP+1
+                               568     3107/ 512159       AND (40000   /PRESERVE IF RINGSTART
+                               569     3010/ 342234       TAD OP+2
+                               570     SILL/ 62233        DAC I OP4I   IJOIN UP
+                               5in1    3112/ 623076       JMP I INSRT-IMS
+                               B5 og 3
+                                                   PINDS = IMS.
+                               5*5     31836                           /FIND RINGSTART
+                               576     3114/ 102225       IMS OP=S
+                                       3115/ 62232        DAC I OP            /MOVE NAME
+                               5yB     3116/ 222233       LAC I OP+L
+                               590     3117/ 512150       AND (40000
+                               588     3120/ 940200       SZA

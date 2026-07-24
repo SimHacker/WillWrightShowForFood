@@ -1,0 +1,55 @@
+                               IRSPPIX                                         ASSEMBLED
+                                                                                      20 1 72 AT 17.15.40 BY 1L2479    PAGE
+                                                   ARSPPIX
+                                         22/       SETUESKS•
+                                                                        ISATUP PAcKAGE
+                                         23/ 201225       LAC BHG
+                                         241 41236        DAC FREB
+                                         25/ 46105        DAG OP        /FORN FREBLIST
+                                         26/ 341303       TAD (403001
+                                         27/ 69145        DAO I OP
+                                         39/ 501302       AND (17777
+                                 12      31/ 541227       SAD ENDRES
+                                 23      32/ 741980       SKP
+                                 14      33/ 590925       JMP                 1L00P
+                                         34/ 281236       LAO BOT
+                                 16      35/ 41232        DAG POP 1     /OLEAR NAME LIST
+                                         36/ 761832       LAN SAVINS
+                                         37/ 100210       INIT
+                                         40/ 100942       RETUPI
+                                20          620022        JNP T SETUPSIMB
+                                22                 SCTUPISIMS
+                                23       427
+                                24       43/ 201233      LAC LPBEG     /INITIAL LOP AND LINK STAKS
+                                25       44/ 42234        DAC LOP
+                                26       45/ 261235      LAC LRABG
+                                27       46/ 41235       DAC LINK
+                                28       47/ 761237       LAW EL
+                                         50/ 190219      YNIT
+                                         51/ 761249      LAW GL1
+                                         52/ 109218       INIT
+                                S2       53/ 761241       GAW NM
+                                33       54/ 109216       INIT
+                                35       55/ 761242       LAW SAVSUB
+                                36       56/ 190215      INIY
+                                37       57/ 762243      LAW POINI
+                                36       60/ 180219      INET
+                                39       61/ 761214      LAN LING
+                                         62/ 100219      INIT
+                                         63/ 761245      LAW SSPI
+                                         64/ 180219      INIT
+                                43       65/ 761246      LAW INST
+                                         66/ 109210      INIT
+                                45       89/ 761847      LAM PBON
+                                         70/ 190218      INIT
+                                         71/ 761259      LAW SYMe
+                                         72/ 100212      TRIT
+                                         93/ 620042      INP I SETUPI-SAS
+                                52
+                                                 PRR,
+                                        152 740940       HLY    ISTACKS TO SRORT OR ?
+                                        76/ 41256        DAC NOTH 5
+                                        79/ 681252       IMP ARRMSB
+                                       100/                            IRTN TO SET OP, OP 1
+                                            10143
+                                58     191/              DAG OP

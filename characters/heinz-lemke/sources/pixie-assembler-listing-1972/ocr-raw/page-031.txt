@@ -1,0 +1,60 @@
+                               /SYMELEC                                       ASSEMBLED 12 2 72 AT 12,14,57 EY HLIATA  PAG*
+                                291    2525/ 202241       LAO GIND
+                                292    2526/ 545170       SAD TOP+1
+                                293    2529/ 602527       JMP GARS       TO LAST PHASE IP DONE ALLE NAMNS
+                                                                       /POCKSF PHASME
+                                294    2530/ 222241 LIMI, LAC I GIND
+                                295    2531/ 42242        DÃC GEUG
+                                296    2532/ 602541       JMP ONTR
+                                290
+                                                   GBRNG PESNCSGSE POUTINE
+                                299    2533/ 282243 GBRNCH,
+                                3e0    2534/ 545157       SAD TOP
+                                391    2535/ 102221       JMS ERR       /BRANCH STACK EXPIRED
+                                302    2536/ 202242 MK1,  LAC GAUG
+                                3$3    2537/ 62243        DAC I OSTKP
+                                304    2549/ 442243       ISZ GSTKP
+                                305    2541/ 42244 ONTR,  DAC GTEMP    /INITIAL ENTRY
+                                306    2542/ 222212       LAG I GBUG    I"OAR"
+                                307    2543/ 42242        DAC OBUG
+                                398    2544/ 222242 382,  LAC I GBUG    /AND MOVE TO ITEM
+                                309    2545/ 740104       SMA
+                                31€    2546/ 662562       JMP GITEM     /JUMP IF ITEM
+                                311    2549/ 512212       AND (017777
+                                312    25584 42242        DAC GBUG
+                                313    2551/ 222242       LAC I GRUG
+                                314    2552/ 941100       SPA
+                                315    2553/ 662547       JHP ."A       /REPCAT WHILE NONITOM
+                                316
+                                317    2554/ 222244       LAC I GTEMP
+                                318    2555/ 512163       AND (760000  IRSP BITS
+                                319    2556/ 742108       SPA          IJUMP IF ITEN
+                                390    2557/ 352219       TAD (209000  MARK IF NONITEM
+                                321
+                                322    2568/ 342242       TAD GBUG     INB OBUG MUST BE CLEAN NERE
+                                323    25611 62244        DAC I GTEMP  ISO SKIP REDUNDANT NONITEMS
+                                324
+                                325    2562/ 222242 SITEM. LAC I GBUO
+                                326    2563/ 512156       ÄND (577977
+                                327    2564/ 552241       SAD (100007
+                                328    2565/ 662605       IMP GNIL     JMP INNIL
+                                329    2566/ 222242       LAC I GBUG
+                                336    2567/ 742010       RTL
+                                331    8570/ 741402       SALICAL      /PREPARE TO MARK
+                                $32    2571/ 682617       IMP GBRTN    PEXIT IF MARKED ALREADY
+                                333    2572/ 742020       RTR          NOW MARK
+                                334    2573/ 62242        DAC I GBUG
+                                335    2574/ 512155       AND (566000
+                                336    2575/ 552162       SAD (020000
+                                337    2576/ 602617       JMP GERIN    JEXIT IF BLOCK DATA
+                                338    25771 740260       SZA          JUMP IF ATOM
+                                339    2600/ 602533       JMP OURNCH   /RECURSE IF LIST POINTER
+                                34€
+                                341    2681/ 442242 OBCDR, ISZ GBUG    "CDR"
+                                342    2602/ 202242       LAC GBUG
+                                343    2603/ 42244        DAC GTEMP
+                                344    36841 662544       INP GB2      /REPEAT
+                                345
+                                346                PPOUND IST NIL
+                                       2605/ 352210 SNIL, TAD (200000
+                                348    36661 62242        DAC Y GRUG   MARK IT

@@ -1,0 +1,59 @@
+       /SYMELEC                                        ASSEMBLED 12 2 72 AT 12-44,57 BY HLI470  PAGA
+                4266/ 741208      SNA
+        177     1267/ 107343       JMS MASKY
+        178     7279/ 197449      IMS UPDAXY
+        179     9271/ 212017      LAC LIND
+        180     7272/ 197427       JMS POIDAT   /INSRT END LING P DATA XTOT AND/OR YTOT
+        #81     1273/ 697216       JMP FOLBL
+        182
+        183
+        184
+        185     72741       FOPAL.              /POINT BL
+        186     7275/ 103435      FEL
+        187     72761 33916       DAG POINT
+        188     7277/ 772916      LAW POINT
+        199     73801 183126      FINDN
+        190     7301/ 762233       LAW OP 1
+        191     9302/ 192347       GDR
+        192     9303/ 102347      SDR
+        193     7384/ 212203       LAG (1
+        194     7305/ 62233        DAC I DP 1
+        195     +306/ 762233       LAW DP 1
+        196     73071 202347       NDR
+        197     7310) 162233       O2M I OP
+        198     7321/ 627294       JMP I FOPAL
+        100
+        200     13121       MASKX,                    MASK TEMPDE FOR X
+        301     m313/ 225944       LAC I COMPOS
+        202     7384/ 512175      AND (37)
+        203     93251 741200       SNA
+        204     73161 627312       JMP I MASKK
+        205     73071 45445        DAC VAPART
+        206     192029121         AND (200
+        207     73211 946200       SZA
+        208     73221 697333       IMP •11             INEO VALUE
+        209     7323/ 205054      LAO XTOT
+        210     7324/ 315045       PAD VEPART
+        211     9325/ 45054        DAG XTOT
+        212
+        213
+        214     73261 4A5444      ISZ COMPOS
+        215     7327/ 211743       LAC ROATAL   MASK ONLY ONE WORD IN THIS MODE
+        216     7330/ 741269       SNA
+        287     7331/ 699313       IMP MASKX 1
+        218     7332/ 627312      JMP I MASKX
+        219
+        228     7333/ 205045      LAC VEPART    /SUBTRACT NEG BIT
+        221     7334/ 940001       OMA
+        222     7335/ 352185       TAD (201
+        223     7336/ 15015        DAC VEPART
+        224     93371 345054      TAD YTOT
+        225     7340/ 512212      AND (17777
+        226     93411 15054       DAC XTOT
+                9342/ 607326       JMP ,-14
+        228
+        229     7343/       MASKY               MASK TEMPDE FORY
+        230     7344/ 225044      LAO I COMPOS
+        231     145/ 352240        TAD (91599
+        232     73461741200        SNA
+        293     11 62343           IMP I MASKY

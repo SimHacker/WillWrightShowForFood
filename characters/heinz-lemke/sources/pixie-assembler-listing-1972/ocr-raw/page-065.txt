@@ -1,0 +1,58 @@
+                               /SYMELEC                                       ASSEMBLED 12 2 92 AT 12-44,57 BY HL1478  PAGE             19
+                                636    6223/ 665483       IMP PENI
+                                697    6224/ 451746       I32 RATTPO
+                                638    6225/ 606305       JMP BLIROU
+                                639
+                                640
+                                641
+                                642    6226/ 212114 MORE, LAC (30117    /INOREASE LEVEL MARKER OF INST
+                                643    6227/ $ 5637       DAC TRACK
+                                644    6230/ 106364       JMS SETCL
+                                645    6291/ 205116       LAC LEVEL
+                                646    6232/ 545119       SAD BLEVEL
+                                647    6233/ 606365       JMP BLIRDU
+                                648    6234/ 352232       TAD (777777
+                                649    6235/ 45116        DAC LEVEL
+                                650    6236/ 606305       JMP BLIROU
+                                651
+                                652    6239/ 212114 LESS, LAC (30117   /DECREASE LEVEL MARKER DE INST
+                                653    6246/ 65637        DAO TRACK
+                                654    6241/ 186364       JMS SETCL
+                                655    62421 445116       ISZ LEVEL
+                                656    6243/ 225116       LAO I LEVEL   IPIND O IN INST STACK
+                                657    6244/ 740200       3ZA
+                                658    62457 606305       JMP BLIROU
+                                659    6946/ 777777       LAM
+                                660    6347/ 345116       TAD LEVEL
+                                661    6250/ 45116        DÃC LEVEL
+                                662    6251/ 606305       IMP BLIROU
+                                663
+                                664
+                                665    6252/ 195466 STROR. JMS IRER     VIF IN TRACKMODE OR DRAWMO
+                                666    6253/ 205133       LAC CMODE
+                                667    6254/ 740100       SMA
+                                668    6755/ 696268       JMP = 3
+                                669    6256/ 452823       ISZ RTRACK
+                                679    6257/ 452042       ISZ CBUSY
+                                6*72   6260/ 285123       LAC DRAWMO
+                                673    69611 740209       3ZA
+                                674    6262/ 606265       TMP
+                                678    6263/ 151776       D2M NODRA
+                                       6264/ 695463       JMP PENI
+                                677    6265/ 211776       LAO NODRA
+                                676    69661 740200       3ZA
+                                679    6267/ 605403       JMP PENI
+                                688    6071 607835        IMP SHOEX
+                                681
+                                682    6091/       TESLEV,                    FTEST BLINKING AND TOP LEVEL
+                                683    69721 205134      LAC MBLINK
+                                684    6M31 741280        SNA
+                                685    69941 605403       JMP PENI
+                                6R6    6^75/ 265116       LAO LEVEL
+                                       69764 545119       SAD BLEVEL
+                                688    69791 741960       SKP
+                                689    1300/ 626271       IMP I TESLEY
+                                600    6301/ 760267       LAW 267      INO OPERATION ON MAIN INST
+                                601    63021 44362        DAC NOTE 5
+                                602    63834 452022       ISZ RERROR
+                                603    6384/ 686365       JMP BLIROU

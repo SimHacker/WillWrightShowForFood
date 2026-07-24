@@ -1,0 +1,59 @@
+                               /SYMALEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY ML1478  PACE  9 6
+                                523    14121/ 44754       DAC YYI
+                                524    1Д122/ 111403      WINDOW       WINDOW
+                                $25    11123/ 204776      LAO EX2
+                                526    12124/ 110765      STAKX
+                                527    14125/ 284755      LAC YY2
+                                528    11126/ 118777      STAKY
+                                529    181274 111035      DRLTO
+                                530   12130/ 744006
+                                591    1AI31/ 118011      UNSTKX
+                                532   11132/ 111623       UNSTKY
+                                533   11133/ 631100       AND I WRUTO
+                                534
+                                535   18134/       HRLBNTHSAC XBEAЙ    IWRITE LINE BETWEEN
+                                536   11135/ 284765
+                                537   11136/ 345022       TAD YBEAM
+                                5g8   11137/ 45040        DAC SUMB
+                                539   12140/ 218755       LAC PNI2
+                                540   12141/ 52754        DAG TEMP
+                                541   18142/ 111225       JMS WRLB3
+                                542   11143/ 111011       UNSTKX
+                                543   18144/ 111733       JMS NAG
+                                544   11145/ 44776        DAC EXZ      ISAVE 2ND POINT
+                                545   18146/ 118023       UNSTKY
+                                546    18847/ 111733      JMS NEG
+                                547   11256/ 44755        DAC YY2
+                                548   18151/ 716754       LAO PNTI
+                                549   11152/ S1754        DAC TEMP
+                                550   18153/ 111225       JMS WRLB3
+                                551   1054/ 111011        UNSTKX
+                                552   11155/ 111733       JMS NUG
+                                553   11156/ 44775        DAC EXI      /SAVE IST POINT
+                               554    11157/ 111823       UNSTKY
+                                555   1A260/ 111733       INS NEG
+                                556   1A161/ 44754        DAC YY1
+                               557    22162/ 111403       MINDOW       WINDOW
+                                558   11163/ 284954       LAC YYI
+                               559    14164/ 344775       TAD EX1
+                               566    18165/ 545942       SAD SUMB
+                               561    11166/ 611219       IMP WRLBI    ISUM MATOHRS ON IST POINT
+                                568   11167/ 204716       LAG BXZ
+                               563    10179/ 119765       STAKX
+                               56%    1AIA/ 284755        LAC YY2
+                               565    11172/ 116777       STAKY
+                               566    18173/ 111935       BRITO /POSITION TO ENO POINT
+                                56°%  11174/ 744009       OLL
+                               568    18175/ 111011      UNSTKX
+                               569    111761 111023       UNSTKY
+                                      11177/ 294775       LAG EX1
+                                      11208/ 110765       STAKX
+                                      11201/ 204754       LAC YYI
+                               593    112024 11999        STAKY
+                                      10203/ 111935 WRIB2. DRLTO DRAW LING
+                               575    14204/ 144002      STL
+                               596    1205/ 111011       UNSTKX
+                               5g*7   113061 111023       UNSTKY
+                                      11207/ 631134       JMP I WRLB-JMS
+                                      1121e/ 204775 WRLB1, LAC EX1
+                                      11211/ 110765       SYAKY

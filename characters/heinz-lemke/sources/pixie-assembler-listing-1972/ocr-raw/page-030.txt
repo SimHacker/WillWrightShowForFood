@@ -1,0 +1,58 @@
+        ISYMELEC                                       ASSAMBLED 12 2 72 AT 12,44,57 BY HLI470  PAGE  29
+        233     2454/ 102221       JMS ERR
+        234     2455/ 202235       WAC 0P+3
+        235     2466/ 72012        DAO 1 LOP
+        236     2457/ 622445       3MP I STAKAJMS
+        237
+         239
+         239    2460/       UNSTAR-JMS,  •      /OPERAND FROM STACK
+        249     2461/ 232012       LAG I LOP
+                24621 42235        DAC OP+3
+        242     2163/ 212012       LAC LOP
+        243     2464/ 545171       SAD LPBEG
+        2 4 4   2465/ 102221       IMS ERR
+        245     2166/ 352232       TAD 1777777
+        246     2467/ 52012        DAC LOP
+        247     2470/ 202235       LAC DP+3
+        248     2471 / 622460      JMR I UNSTAK-JMS
+        249
+        250                 ENTER = IMS
+        251     2472/                           /ANTER SUBROUTIND (NAME ENTER
+        252     2473/ 42235        DAC OP+3     ISAVE ENTRY POINT
+        253     2471/ 152913       ISZ LINK
+        254     2475/ 212015       LAC LINK
+        255     2476/ 545173       SAD LKEND
+        256     2477/ 102221       IMS ERR
+        257     2506/ 292472       LAC ENTER-IMS
+        258     2501/ 512212       AND 119977
+        259     2502/ 72013        DAC LINK     ISAVE LINK
+        264     2503/ 622235       IMP I OP+3   /ENTER SUBROUTINE
+        261
+        2 62                SXIT & JMP
+        863     2504/ 232013          I LINK    /EXIT SUBROUrINE
+        264     2505/ 552241       SAD Uoedge
+        265     2506/ 102221       JMS ERR      /ERROR EXIT
+        266     2507/ 42235        DAC 0P+3     /PLANT LINK
+        267     2510/ 212013       LAO LINK
+        268     251/ 545172        SAD LKHEG
+        269     2512/ 182221       JMS ERR
+                2513/ 352232       TAD (777777
+                2514/ 52013        DAO LINK
+        272     2525/ 622235       IMP  DP+3    /EXIT
+        273
+        295                 PGARBAGE COLLECTOR - COMBINED PHASE I AND 2
+        296                 GIND B 0p*   /INDEX NAMES
+                            SBUG =0P410
+        278                 GSTKP & JP+11 /BRANCH STACK FOINTER
+        299                 STEMP & JP+12
+        28€                 INOTE THAT THE BRANCH STACK STORES GBUG
+        281
+        202     2516/       LIM,                HARE IF FREELIST AXPIRED
+        283     2817/ 245179       LAC TOP
+        284     25261 42243        DAC GSTKP
+        285     2521/ 205166       LAO BOT
+        286     2522/ 42241        DAG GIND
+        207     2520/ 692538       IMP LIM]
+        288
+        289                 /LOOP INSpEGTING P. NAMES
+        290     2524/ 442241 LIMZ, T9Z GIND     / NEXT PERM NAME

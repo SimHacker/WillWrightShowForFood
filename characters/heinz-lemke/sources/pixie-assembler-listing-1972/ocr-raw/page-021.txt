@@ -1,0 +1,53 @@
+                               /SYMELBC                                       ASSEMBLED 12 2 92 AT 12,44,57 BY NL1470  PAGE  26
+                                696    16121 740901      SMA
+                                699    1623/ 352203       TAD (1
+                                700    86141 352067      TAD PNTY
+                                73L    1615/ 52009       DAC PNTY
+                                702    1616/ 186315       JMS SXY
+                                903    8617/ 606518       IMP SEGY
+                                795
+                                706
+                                707
+                               7e8                                                                                                      100
+                                709         209204 eser, LAC SEVOLE
+                                            601155       JMP dELE
+                               7j2                 CEIG,  LAG RIGCLE
+                                713                       SMP CELE
+                               714                 ersr, LAC FSTCLE
+                                715                       IMP CELE
+                                716
+                                                   OSND, LAC SNDCLE
+                                718                       JMP CELE
+                                719
+                                720                CIRD, LAC TROCLE
+                                7a1                       JNP CELE
+                                722
+                                723                DFIF. LAC FIFCLE
+                                724                       JMp OaLE
+                                995
+                                736         200203 Esxx,  LAC SIXCLB
+                                727         66 115!       IMP CELE
+                                7a8
+                         .      729                srols. LAC FOUCLE
+                                73€                       JMP CELE
+                                932
+                               732     86401  1642 STXBRO,      STSPST o             /DOTTOM OF STACK FOR OLD XBM SYMBOL
+                                733    1641/  6662 STYBMO,      SISPST 20
+                                734    1642/       STSPST.                    /SPECIAL STACK
+                                735                WWATCH THE EUD DE THIS STACK
+                                736
+                                737                NODISP
+                                738
+                                739    17011       17÷11
+                                740
+                                742                ILTPIX/RELOC
+                                743
+                                74,4
+                                745                       / LINK TRANSFER ROUTINE FOR PIXIE (PDpT'ITAN)
+                                747    4701/ 748047 LIPX. HLT
+                                748    1902/ 145033       DZM SW                     / note siret blocklet
+                                149    1703/ 700062       I0F
+                                758    8704/ 702222       LOF
+                                751    1705/ 760004 TX,   LAW A
+                                753                       READ A BLOCKLET HBADERS PROM TITAN
+                                755    87061 902364 TH,   LKEILLRG

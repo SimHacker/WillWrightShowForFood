@@ -1,0 +1,61 @@
+                               ISYMELEC                                       ASSEMBLED 12 2 72 AT 12-44-57 BY HL1499  PAGE 28
+                                175    2392/ 102376       SAR Y
+                                176    2373/ 62232        DAO I OP      /MOVE NAME
+                                179    8374/ 202232       WAC OP
+                                178    2375/ 622367       JMP I CAR-IMS
+                                179
+                                180    2376/                           ISET OPAI WITH ADDRESS FROM AC AND MS 5 BITS 00100
+                                       23761 512212                                 AND MOVE TO NEXT ITES IF NONITEM
+                                181                       AND (1777}
+                                182    2408/ 352241       TAD (JMS
+                                183    2401/ 42233        DAC OP*1
+                                184     2402/ 22223.      LAC I OP+I
+                                185    2403/ 14110        SPA
+                                186    2404/ 69237        JMP .*5      IDO AGAIN IF ON NONITEM
+                                18*7   2405/ 202233       LAC OP+1     /PRESERVE AC
+                                188    2406/ 622376       AND I CAR Y
+                                189
+                                190
+                                191                PUSH & IMS.
+                                192    2407/                           /PUSK DOWN (LISTNAME
+                                       2187/ 102225
+                                193                       IMS OP-5
+                                194    2411/ 352293       TAD (1
+                                195    2412/ 52015        DAC BL1      PREVENT TAIL BEING SWEPT UP IF GARBAGE COLLECKED
+                                196    2413/ 222233       LAC I OP+1
+                                197    2414/ 42234        DAG OP+3     ISAVE ITEN
+                                198    2415/ 162253       PLST         IMARE SPACE POR MEW ITEM
+                                199    2486/ 202231       HAC OP 2
+                                200    2417/ 6223         DAC I DP 1
+                                201    2430/ 202233       LAC DP 1
+                                292    2421/ 62232        DAC I OP
+                                263    2422/ 448233       I52 OP+1
+                                294    2423/ 182253       FLST          /MAKE MORE SPACE
+                                205    2624/ 202234       LAG Dp+2
+                                206    2125/ 62233        DAG I DP+1   JOOPY ITEM
+                                297    2426/ 212015       LAC ELL
+                                208    2427/ 252159       XOR (560006
+                                209    2430/ 62240        DAC 1 OP+6   VJOIN UP
+                                210    2431/ 202232       LaC OP
+                                       2432/ 622497       JMP I PUSH-JMS
+                                212
+                                213
+                                214                POP * JMS •
+                                215    20337                           /POP UP (LIST NAME
+                                216    2134/ 42232        DAC OP
+                                217    2435/ 222232       LAC I OP
+                                218    2436/ 42234        DAC OP+Z      /SAVE NAME
+                                219    3437/ 202232       LAC OP
+                                220    2448/ 10934        ODR
+                                221    BA41/ 262233       LAC OP+1
+                                222    2442/ 259157       XOR (590000
+                                223    23437 62234        DAC 1 OP+Z   JOIN UP
+                                224    2444/ 202232       LAC OP
+                                225    2445/ 629433       IMP I POP-IMS
+                                226
+                                299    2146/       STÄK-JMS,           SOPERAND TO STACK
+                                226    2447/ 512212       AND (27777
+                                229    2158/ 42235        DAC OP 3
+                                230    2451/ 452912       ISZ LOP
+                                231    2452/ 212012       LAC LOP
+                                232    2453/ 545172       SAD LKBEG

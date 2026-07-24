@@ -1,0 +1,55 @@
+        ( SYNELEC                                      ASSCMBLED 1A 2 72 AT 12-14,57 BY HL1470  PAGE  25
+                            /RSPPIX
+                            SETUPSIMS,
+          5     21474                            ISETUP PACKAGE
+                21591 205162       LAO BEG
+                21511 52011        DAC FREE
+                2152/ 42232        DAC OP        /PORM FREELIST
+                2153/ 352161       TAD (400001
+         ie     2154/ 62232        DAGI OP
+                2255/ 512212       AND 11797
+          12    2156/ 515164       SAD ENDRES
+                2157/ 741800       SKP
+                21601 692152       JMP                 /LOOF
+         15     2061/ 205166       LAC
+                2162/ 45170        DAC TOP 1     /CLEAR NAXE LIST
+         17     2153/ 765146       LAN SAVINS
+                2164/ 192335       INIT
+                2165/ 102167       SETUPL
+                2166/ 622147       JMP I SETUP-JNS
+         21
+         32                 SETUPISIMS .
+         23     2167/
+         24     2176/ 205171       LAO LPBEG     VINITIAL LOP AND LINK STAKS
+         25     #2711 52012        DAC LOP
+         26     2172/ 205172       LAC LKBNG
+         27     2173/ 52013        DAC LINK
+         2B     2174/ 772314       LAW GL
+                2175/ 192335       INIT
+         30     21766 772015       LAW ELI
+         31     21971 102335       INIT
+         32     22801 765066       LAW NM
+         33     2201/ 102335       INIT
+         34
+         35     2202/ 765147       LAW SAVSUB
+         36     2203/ 102335       INIT
+         37     2204/ 772016       LAW POINT
+         38     2265/ 102335       INIT
+                22061 1g7201*7     LAN LING
+                2297/ 102335       INTT
+                2216/ 765064       LAW SAPI
+                2211/ 102335       INTT
+                20121 771756       LAW INST
+                2213/ 182335       INIT
+         45     20148 97199        LAN POOM
+                2215/ 102335       INIT
+                2216/ 971753       LAW SYMA
+         48     2217/ 102335       IMIT
+                2220/ 622167       JMP I SETUPI-JMS
+         $2
+         S3     22211       ERR,
+                0822/ 746040       HLT   ISrAcKS TO SHORT OR?
+         55     2223/ 41369        DAC NOTE 5
+         56     0224/ 684171      JMP ERRMER
+         57                                     RTN TO    OP, Op 1
+         58     2226/ 42232        DAG OP

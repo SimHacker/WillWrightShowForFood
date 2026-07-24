@@ -1,0 +1,58 @@
+                               ISYMELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY RLIATE  PAGE  66
+                               752     6365/ 777747      LAM -30
+                               753     6366/ 40007       DAG 7
+                               954     6367/ 700044      CLON
+                               755     63797 626364      JMP I SETCL
+                               756
+                               957
+                               758     6371/       TESTIN,                    ITEST WHETHER INT NEAR END OF LINE
+                               759     6372/ 212940      LAO CTEMPX    WHEN POINTING AT FD
+                               760     6373/ 352112      IAD (-20
+                               76 1    6374/ 940091      SMA
+                               762     6375/ 344745      TAD TEMPX
+                               763     6376/ 741100      SPA
+                               764     6377/ 626371      JMP I TESTIN
+                               765     6489/ 352111      TAD (-40
+                               966     6481/ 740109      SMA
+                               76%     6482/ 626371      IMP I TESTIN
+                               768
+                               769     6403/ 212841      LAC CTEMPY
+                                       64041 352112      TAD (-20
+                                       6405/ 748001      CHA
+                               772     6406/ 344746      TAD TEMPY
+                                       6167/ 741109      SPA
+                               77 7 4  64104 626371      JMPI TESTIN
+                               7 e 5   6411/ 362111      TAD (046
+                                       6412/ 740109      SMA
+                               1777    5413/ 626371      JMP I TESTIN
+                               778
+                               799     64146 212040      LAC CTEMPX
+                               780     6415/ 44745       DAO TEMPX
+                               781     6416/ 212041      LÃO CTEMPY
+                                       6417/ 44746       DAC TEMDY
+                               793     6420/ 205121       LAC CON
+                               1784    6421/ 741180      SPA
+                               785     6422/ 696425      JMP           NEAR LINE WHEN POINT AT SD
+                               786     6423/ 453024      ISZ RTSNDE    INEAR LINE WHEN POINTING AT
+                                       6434/ 607035       JMP SEGEX
+                               988     6425/ 451747       ISZ RIFIRI   /TEST WHETHER ON CAT SUBP
+                               789     6426/ 145150      DZM COOMI     ISTART ON NODE
+                               798          626371        IMP I TOSTIN
+                               791
+                               702     6439/       COpPIR,                    JOOPY SAVE INTO FIRET STAOK
+                               793     6131/ 999771      LAW 17771
+                               794     64321 1529         DAC COUNT
+                               Yo5     6193/ 205114       LAC BPIRST
+                               706     64341 SMAEE        DAC PIRSTA
+                               798     6435/ 232052       LAO I SAVE
+                               790     6436/             DAC I FIRSTA
+                                       64371 452÷52      ISZ SAVE
+                               801     6410/ 45295€       ISZ FIRSTA
+                               802     6441/ 445120       I8Z COUNT
+                               803     64421 606435       IMP 5
+                                       6443/ 205177       LAG sTSAVE
+                               895     6044/ 52952        DAG SAVE
+                               806     6415/ 626438            COPFIR
+                               607
+                               808     64461    •  COPSND,
+                               B0g     61441 797971

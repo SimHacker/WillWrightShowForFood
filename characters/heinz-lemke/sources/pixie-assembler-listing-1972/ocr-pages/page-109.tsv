@@ -1,0 +1,64 @@
+# page-109.png
+# SYMELEC listing page 108
+RAW	/SYMELEC                                      ASSEMBLED 12 2 72 AT 12.44.57 BY HL1470  PAGE  108
+HAND	checkmark beside ADR = 5032
+HAND	checkmark beside AD = 123
+HAND	checkmark beside ADR1 = 5036
+RAW	ABSXY  =  7205        AD     =   123        ADDN   =*103266        ADJLEV =  7504
+RAW	ADR    =  5032        ADR1   =  5036        ALPHA  =  5003        AMEND  =  7640
+RAW	AMEND0 =  7653        AMEND1 =  7657        AMEND2 =  7673        AMEND3 =  7750
+RAW	AMEND4 =  7764        AMEND5 =  7775        AMEND6 =  7777        AMEND7 =  7714
+RAW	AMEND9 =  7662        ASR    =  5043        ATTMU  =  6221        ATTPDA =   556
+RAW	ATTPEL =  7625        BCC    = 12021        BCON   = 12046        BCON1  = 12047
+RAW	BD     =   150        BDC    =  2755        BDD    =  3001        BDN    =*102743
+RAW	BD0    =  3010        BDR    =  3024        BEG    =  5162        BEGRTP =    24
+RAW	BERTP1 =    30        BETA   =  4763        BFIRST =  5114        BLEVEL =  5117
+RAW	BLINK  =  5135        BLINK1 = 11767        BLIROU =  6305        BOT    =  5166
+RAW	BPNTX  = 12063        BPNTY  = 12044        BSBWOR = 11764        BSNDST =  5115
+RAW	BSZ    =  5037        BXBMO  = 11761        BYBMO  = 11763        CALDEF =  1145
+RAW	CAP0   =   236        CAR    =*102367       CATDAT =  7512        CATDA0 =  7522
+RAW	CATDA1 =  7532        CATDA2 =  7552        CATMO  =   760        CATMO1 =   761
+RAW	CBUSY  = 12042        CCAT   =  5065        CCOM1  =  5150        CD     =  6045
+RAW	CDOCOM = 11742        CDR    =*102347       CEIG   =  1622        CELE   =  1155
+RAW	CERRDF = 12036        CERRGB = 12010        CFIF   =  1632        CFOU   =  1636
+RAW	CFST   =  1624        CHMODE =  1133        CISRTN = 12032        CKS    =  5034
+RAW	CLBC   =   207        CLB1   =   213        CLBL   =   210        CLB0   =   215
+RAW	CLBR   =   206        CLBS   =   211        CLBU   =   214        CLBV   =   212
+RAW	CLOCK  =  5534        CHODE  =  5133        COLON  =  5154        COMP   = 10241
+RAW	COMPIL =*110170       COMPOI =  5063        COMPOS =  5044        COMP1  = 10423
+RAW	COMP10 = 10366        COMP11 = 10631        COMP12 = 10656        COMP13 = 10670
+RAW	COMP14 = 10364        COMP2  = 10552        COMP3  = 10546        COMP4  = 10620
+RAW	COMP5  = 10612        COMP9  = 10307        CON    =  5121        CONELE =  1517
+RAW	CONSND =  5131        CONSTB =  5126        CONSTC =  5127        CONSTD =  5130
+RAW	CONSTX =  5125        CON1   =  5122        COP FIR=  6430        COPIN  =*104331
+RAW	COPOUT =*104307       COPSND =  6446        COUN   =  4757        COUNT  =  5120
+RAW	CR     =  5155        CSAVE  = 12054        CSEV   =  1620        CSIX   =  1634
+RAW	CSMD   =  1626        CTEMPX = 12040        CTEMPY = 12041        CTRD   =  1630
+RAW	CUPCOM = 12025        CUR0   =   346        DEMP   =  4747        DELB   =*103324
+RAW	DELLEV =  6464        DFE    =  5157        DFENOR =  5161        DFB    =  5156
+RAW	DFCON  =  1027        DISCO1 = 10125        DISCO2 = 10143        DISCO3 = 10144
+RAW	DISCON = 10116        DRAMD  =  6073        DRAWHG =  5123        DRLTD  =*111035
+RAW	DPSIM  =  1046        DSON   =*103310       DX     =  4756        DY     =  5014
+RAW	DS     =  5031        EDGEN  =  5605        EDGEV  =  5571        EIGCLB =   205
+RAW	ED     =  6050        ELAD   = 11750        EL1    = 12015        ENDEY  = 12006
+RAW	EL     = 12014        ELCOUN = 11774        ENDEX  = 12003        ERR    =  2221
+RAW	END    =  5163        ENDCON =  6113        ENDDRA =  6115        ENDNOR =  5165
+RAW	ENDPOI =  7562        ENDRES =  5164        ERASE  =  6705        ERRMEB =  4171
+RAW	ENTER  =*102472       ERAST  =  5750        ERRMEA =  4166        ERR6   =  4201
+RAW	ERRDF  =  4206        ERRGB  =  4221        ERR5   =  4176        EX1    =  4775
+RAW	ERR3   =  4174        ERR4   =  4203        EXIT   =*602504       FEL    =*103035
+RAW	ESCAPE = 11727        ETYPE  = 11752        FINDN  =*103126       FINDP  =*103141
+RAW	EX2    =  4776        FD     =  6030        FLEAS  =*110717       FLEA1  = 10734
+RAW	FSTCLB =   202        FIG    =  4777        FLST   =*102253       FELN   =*103041
+RAW	FINDS  =*103113       FIRSTA = 12050        FOCBL1 =  1354        FOBBL  =   463
+RAW	FLEA2  = 10744        FLEA3  = 10752        FOHBL  =  7105        FOCBL2 =  1422
+RAW	FOBBL1 =   542        FOCBL  =   531        FOUCLB =   201        FOLBL  =  7215
+RAW	FOCBL3 =  1373        FOCBL4 =  1404        FSTCLB =   176        FREE   = 12011
+RAW	FOHBL  =  7171        FOPBL  =  7274        GARR2  =  2714        GAMMA  =  4761
+RAW	FRSTCH =  1771        FSBPI  = 11755        GD     =  6070        GBCDR  =  2601
+RAW	GARR   =  2627        GARR1  =  2652        GETSP  =*102312       GBRTN  =  2617
+RAW	GBD    =  2716        GBD1   =  2732        GNTR   =  2541        GIND   =  2241
+RAW	GBUG   =  2242        GB2    =  2544        GR1    =  3165        GDM    = 12020
+RAW	GETD   =*110701       GETD1  = 10716        GBRNCH =  2533        GRHA   =  3155
+RAW	GITEM  =  2562        GNIL   =  2605        GR1    =  3165        GR2    =  3225
+RAW	GRID   = 12034        GRRB   =  3221

@@ -1,0 +1,55 @@
+        A SYMELEC                                      ASSEMBLED 12 2 72 AT 12,44,57 BY HL1474  PAGE  39
+                            /MDWAIT
+                3352/              MESOUT-JMS,         /OUTPUT MESSAGE
+                3353/ 42237        DAC OP+5
+                3354/ 205137       LAC MIN
+                3355/ 543636       SAD WAITI     /LAM
+                3356/ 183379       WAIT-5        INISH I/P MESSAGE
+                3357/ 395140       ADD MDUT
+                3360/ 749260      SZA
+         19     3361/ 603354                           1LOOP TELETYPE BUSY
+                33624 445140       1SZ MOU
+         15     3363/ 202237       LAG DP+5
+                3364/ 44370        DAC MSOUT
+                3365/ 224370       LAO I MSOUT   /START 0/P
+         18     3366/ 788406       rus
+         19     9367 6233399       AND I MESOUT
+         20
+         22     3370/
+                    768212
+         23     3314              LAW 212
+                3372/ 700406       ILS          /OUTPUT LINEFEED AFTER I/P
+                3373/ 15137        DAC MIN             ISET MIN 5592
+         26     33711 623370       IMP
+         27
+         28     3395/       WAIF-IMS,     •     WAIT FOR ACTIVATIONS
+         29     3376/ 212022       LAC RERROR
+                3377/ 741200       SNA
+                3400/ 693404       IMP WAITII
+         32     3481/ 152922       DZM RERROR
+         33     3402/ 764355       LAW NOTE
+         34     14034 173352       MESOUT
+         35     34042 211747 WAITIL,     LAC RTFIRI    PREQUEST TEST FIRST INTERRUPT?
+         36     3485/ 741208       SNA           /PUT CROSS ON ENDPDINT
+                3405/ 603422       IMP WAIT12
+         38     34971 145065       0ZM COAT
+         39     3410/ 197750       IM$ AMEND3
+         40     3411 151749        DEM RTFIRI
+                34121 295133       LAG CMODE    ITEST WHETHER IN TRACKMODE
+                34131 941A0        SPA
+         43     341A1 452023       I8Z RTRACK
+         44     3415/ 205965       LAC CCAT
+         45     34167 1A1200       SNA
+         46     341*71 603422      IMP WAITI
+         47     3420/ 1797977      LAM
+                3421/ 15150        DAC COOMI    NEW NODE FOR AMEND
+         49
+                21921 212924 WAITII,      LAG ATSNDI   PREQUEST TEST SECOND INTERRUPT?
+         51     31231 741200       SNA
+         52     3424/ 609239       JMP wArrI
+         53     34251 152004       DZM RTSNDI
+         54     3426/ 145965       DZM CCAT
+         55     3427/ 197764       IMS AMENDA
+         56     31386 452025       ISZ CUPCOM
+         57     34311 205065       LAC OCAT
+                3432/ 740200

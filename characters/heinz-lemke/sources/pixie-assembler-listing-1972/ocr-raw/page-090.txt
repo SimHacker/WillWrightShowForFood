@@ -1,0 +1,60 @@
+       /ByMALEC                                        ASSEMBLED 12 2 72 AT 12,14,57 BY HL1470  PAGE  89
+               10340/ 102349       ODR
+        128    10341/ 102347       IDR
+        119    10342/ 230753       LAC I BUBP
+        120    10343/ 512775       AND 1370     ITEST IF BASIC
+        121    10344/ 741200       SNA
+        122    10345/ 618353       JMP
+                                   LAP * 6
+        123    10346/ 204767             FATNAME OF BASIC SUBP
+        124    18347/ 512212       AND 117777)
+        125    10359/ 71757        DAC  SYM     ITO SYM
+        126    10351/ 971757       LAW
+        127    10352/ 102347       SDR
+        128    10353/ 799753       LAW SUBP
+        129    10354/ 102347       SDR          /FLEA INTO DATA
+        130    10355/ 230753       LÃO  SUBP
+        131    10356/ 452166       SAD (10000
+        132    10359/ 741900       SKP          /SKIP CATALOGUED
+        133    10360/ 610423       JИP COMP1
+        124    18361/ 205021       LAO TEMP2
+        135    103624 m41209       SNA   /REMOVE INST IF STARTS OFFSCREEN
+        136    16363/ 618372       JMP
+        137    103641 205093 SOMPI4,     LAC ALPHA     /RENOVE INST IF STARIS OFFSCREEN
+        138    10365/ 15005
+        139    10366/ 352074          (366001
+               10369/ 110756       WROP  /DDS     FOR NULL INSTANCE
+        141    103701 445005
+               10371/ 692504
+        113    193721 77653        LAW SUBP
+        141    10393/ 109947       COR
+        I45
+        1 d,6  10374/ 212073       LÃO (660001  /ADDRESS IN BLOCK DATA
+        117    10375/ 379753       TAD  SUAP
+        148    103761 64763        DAC PaTA     IDIS ALPHA IN BETA
+        149
+        158    109971 770753       LAM sUBp
+        151    10400/ 162347       ADR
+        152    10461/ 232753       LAGI suap
+        153    16402/ 111733       IMS NEG
+        154    16403/ 344765       TAD XВEAM
+        155    10104/ 44762        DAC
+        156    10405/ 770753       LAW SUSp
+        157    10106/ 10234        GDR
+        158    10107/              LAG I SUBP
+               IOAIAI 111733       JMS NAG
+               10d/  345922        TAD YBEAM
+        161    1AA12/ 15020        DAC
+               10113/ 111510       LOCATE
+        163    1OAIAY 14a2e0       S2A
+               104150 616364       JMP COMP14   ARAMOVE INST aoas oresarten
+        1AS    10416/ 204762       LAC
+        166    10419! 44M55        DẠC XADAM
+        16%    10420 20590         LAC
+        168           45029        DAC YBEAM
+        169
+        143    10422/ 622664       EXIT
+        171    16199/ 969155 COMPI. LAW GRHA
+        192    16424/ 102172       ENTeR
+        173    10425/ 764769       LAk
+               164261 790552          COMP2

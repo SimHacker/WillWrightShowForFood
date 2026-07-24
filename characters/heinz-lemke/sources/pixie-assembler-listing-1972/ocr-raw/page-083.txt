@@ -1,0 +1,60 @@
+                               /SYMELEC                                       ASSEMBLED 12 2 72 AT 12-44,57 BY HL1490  PAGE  82
+                                466    7662/       AMENDS,                    IGET DX FOR START OF TEMPDP NITH RESP TO MAIN INST
+                                                         LAC X SAVE
+                                467    7663/ 232052
+                                468    7664/ 118051       JMS VAIN     IGET POS DF MAIN INST
+                                469    7665/ 107975       INS AMENDS   IGET DX AND DY
+                                470    7666/ 205054       LAC XTOT
+                                471    7669/ 45960        DAC XTOTIN   /POS FOR FUTURE INSTANCES
+                                472    7670/ 205055       LAC YTOT
+                                473    7691/ 45061        DAC YTOTIN
+                                474    7672/ 627662       JMP I AMENDO
+                                475
+                                476    7673/ 118013 AMENDZ,     JNS TESTJN    VINT AT START AND END POINT OR TDMPDE
+                                477    96741 127750       IMS AMENDO
+                                498    7695/ 107775       IMS AMEND5
+                                179    7676/ 109215       JMS FOLBL     /LEAVES FOBBL W. NO E.F.
+                                48€
+                                481    96771 107452 AMENDE,     JNs UpDAIN    ILAST LINE CONNECTED TO NODE
+                                482    7780/ 205069       LAG XTOTIN    POURRENT FOS OF REAM WITH RESP TO MAIN INST
+                                483    1791/ 45054        DAC XTOT
+                                48%    7762/ 295061       LAC YTOTIN
+                                485    1763/ 45055        DAC YTDT
+                                486    79041 107764       IMS AMENDA   POIVES POS OF INST WHERE LINE I3 ID BO JOINED
+                                487    7705/ 205669       LAC XTOTIN
+                                4BB    7706/ 15056        DAC XINS
+                                489     7707/ 205061      LAC YTOTIN
+                                49₫    79194 45057        DAC YINS
+                                401    7981/107775        JMS AMENDS
+                                492    7722/ 107215       JMS POUBL
+                                493    7713/ 607077       JMP UPCOMI
+                                494
+                                495
+                                496    7984/ 107950 AMEND?,      JiS AMEND3   12 NODES :E INODE
+                                407    c715/ 107775       JMS AMENDS
+                                408    7716/ 107215       IMS POLAL    (LINE CONNECTED TO LST NODE
+                                409    99191 205879       LAC STSTAK 121 ITEST IF SAME NODE
+                                50đ    77281 545100       SAD SISTAK 131
+                                       +721)607077        JMP UPCOMI
+                                502
+                                503    7 ° m2/ 205056     LAC XINS      ISAVE IST NODE INFORMATION
+                                504    77231 740001       EMA
+                                505     1921! 359203      TAD (1
+                                506     7935/ 45046       DAd XINSI
+                                507    79261 295057       LAC YINS
+                                5÷8    ey eg org ig ! 140A01 OMA
+                                509    17301 352203       TAD (1
+                                51%    n7318 45062        DAC YINSI
+                                511
+                                512    9732/ 205664       LAC SEPI
+                                513    1733/ 44766        DAC SSPII
+                                5j4    1934/ 107764       IMS AMENDA
+                                515
+                                516
+                                517     7735} 205046      LAG YINSY     SIGN CHANGUD X OF IST INST
+                                518     77361 345956      TAD YINS      X OF 2ND INaT
+                                519     7937/ 45054       DAC XTOT      DIFPERENGE TO INSRT IN P BLIS 2ND INST
+                                520     7740/ 205062      LAC YINSI
+                                591     19411 34505%      TAD YINS
+                                522          45055        DAG YTOT
+                                523    #743/ 164967       LAW X         /DELETES INST FROM MAIN SAPI

@@ -1,0 +1,60 @@
+                               ISYMBLEC                                       ASSEMBLED 12 2 72 AT 12,46,57 BY MLIATO  PAGE  88
+                                 59    10247/ 741200      SNA          /SKIP LABELLING REQUASTED
+                                 60    10250/ 619397      JMP COMPS
+                                 61    10251/ 204767      LACX
+                                 62    10252/ 50752       DAC FLEA3
+                                 63    10253/ 976752      LAW FLEA3
+                                 64    10254/ 102367      SAR
+                                 65    10255/ 182347      ODR
+                                 66    102564 239752      LAC I FLEA3
+                                 67    10257/ 552241      SAD (100000
+                                68    10260/ 610307       JMP COMPS
+                                 69
+                                      16261/ 212241       LAC (100000
+                                      10262/ 119756       NRDE
+                                72    10263/ 212161       LAC (512005   VOFFSET BEAM
+                                7 3    10264/ 119756      RDF
+                                774   19265/ 212109       LAO (60120
+                                75    162664 110756       WRDF
+                                76    16269/ 204765       LAC XBEAN
+                                      10270/ 352165       TAD (5
+                                *7 8  10291/ 44765        DAC XBRAM
+                                      10272/ 285022       LAG YBBAM
+                                80    10273/ 312077       ADD (-24
+                                81    102747 45922        DAC YBEAM
+                                82    10275/ 145002       DZM MRER
+                                83    10276/ 144764       DZM TEM
+                                      10277/ 110631       IMS COMPIL
+                                85    16300/ 119631       IMS COMPI1
+                                86    10301/ 118631       IMS COMPII
+                                      109a21 118756       WRDF
+                                98    10303/ 265002       LAC MKER
+                                89    103941 741200       SNA
+                                98    16305/ 610276      JMP.7
+                                      10306/ 111109 COMPIO,     WRLTO
+                                92    10307/ 445023 GOMPS, ISZ SVAD
+                                g3    16310/ 118670       IMS COMPL3
+                                      L0311/ 512145       AND (3777    /RENOVE BLINK BIT
+                                95    10312/ 578752       SAD I FLEAJ
+                                96    10313/ 610321       JMP
+                                             19752       DAC i FLEAS
+                                97    10314/                           /CLEAN UP STRUCTURE
+                                98    10315/ 205005       LAG DE
+                                99    10316/ 45135        DAO BLINK    ISAVE BLINK ADDRESS
+                               187    183172 352146       TAD 12
+                               IA1    16329/ 51767        DAC BLINKI
+                               102    10321/ 230752       LAC I FLEA3  JACO HAS SOALE AND E
+                               103    18322/ 352215       TAD (160000
+                               104    10323/ 11a756       WRDF         ISET SUB
+                               105    16324/ 205065       LAO DF
+                                      10325/ 40763        DAC BETA     /SAVE ADDRESE BETA
+                               107    10326/ 118756       WRDK         WWRITE JUNK TO STEP DE
+                               1÷8    10327/ 212215       LAC (160000
+                               1a9    183301 119756       WRDE         ISET SUBMODE
+                               110    163311 205005      LAC DF
+                               11L    10332/ 352076      TAD (360000
+                               1д2    10333/ 65003       DAC I ALPHA   /DDS ENDINSI
+                               113    16334/ 116756       NRDP         OPITE JUNK TO STEP DE
+                               114    10335/ 210953      LAG SUBP
+                               115    16336/ 44767       DAC X         /COPY MOUSE
+                               116    10937/ 190152      LAW SUBP      /LOAD SUBPICTURE FLOA

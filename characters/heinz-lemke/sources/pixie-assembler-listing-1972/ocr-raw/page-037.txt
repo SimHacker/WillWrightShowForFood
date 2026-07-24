@@ -1,0 +1,55 @@
+                               /SYMELEC                                       ASSEMBLED 12 & 72 AT 12,44-57 BY HLI470  PAGB  36
+                                        3174/ 542235      SAD OP+3
+                                        3175/ 682504      EXIT
+                                        3276/ 442472      ISZ ENTER-IMS / MOVE TO F1
+                                        38771 750000      LAW
+                                        3260/ 522233      AND I OP+I
+                                        3201/ 552241      SAD (JMS
+                                        3202/ 442472      ISZ ENTER-IMS / MOVE ID P2 IF RINQPOINTER
+                                        3203/ 103260      IMS LKTEST
+                                        3294/ 292235      LAC OP+3
+                                        32854 72013       DAGI LINK     / KEBP STARTING-POINT
+                         0              3206/ 422472      XCT I ENTER-JMS     / PICK UF
+                                        3207/ 102472      ENTER             AND BXECUTE FUNOTION
+                                        3218/ 232013      LACI LINK
+                                        3211/ 42235       DAC DP+3      / PICK UP STARTING-POINT
+                                        3212/ 750001      OkC
+                                        3213/ 352013      TAD LINK
+                                       3214/ 52813        DAC LINK
+                                        3215/ 232413      LAC I LINK
+                                       3216/ 42472        DAC ENTER-IMS
+                                       3217/ 422472       XeT I ENTER-JMS         JAND Y
+                                       32296 683165       JMP GRI
+                                                   1 90 ROUND RING FINDING NEXT ADDRESS BEFORE APPLYING FUNCTION.
+                                                   / STORE JARIX), ERECUTEF, AND THEN SET& TO STORED VALUE,
+                                                   CALL AS  FOR GRRA.
+                                       3221/ 422472 ORRB, XOT I ENTER-IMS
+                                       3222/ 102367       SAR           I MISS THIS ONE
+                                       3223/ 202233       LAC OP+1
+                                       3221/ 42235        DAC OP+3      / CONTENTS OF X
+                                       3225/ 768809 GR2,  LAW
+                                       3226/ 522235       AND I OP+3
+                                       3279/ 552151       SAD (DZM
+                                       30301 602504       EXIT
+                                       3231/ 762235       LAW OP+3
+                                       3232/ 102367       CAR
+                                       3233/ 103269       IMS LRTEST
+                                       3234/ 202235       GAC OP+3
+                                       3035/ 1a813        DAG I LINK
+                                       3236/ 442472       IS2 ENTER-JMS
+                                       32372 422472       XT I ENTER-JMS
+                                       32494 102472       ENTER
+                                       3241/ 232013       LAC I LINK
+                                       3242/ 42235        DAC DP+3
+                                       3243/ "50001       OLO
+                                       3244/ 352013       TAD LINK
+                                       3245/ 52013        DÃC LINK
+                                       3246/ 222235       LAG I OP+3
+                                       3247/ 741100       SPA
+                                       3250/ 602504       EXIT          / IP HAS BEEN DELETED
+                                       3251/ 232013       LACI LINK
+                                       3252/ 42472        DAC ENTER-JMS
+                                       3253/ 422472       XGT I ENTEREJMS
+                                       29541 42232        DAC DP
+                                       3255/ 202235       LAC
+                                       3256/ 62232        DAC I

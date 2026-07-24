@@ -1,0 +1,57 @@
+       /BYMELEC                                        ASSEMBLED 12 2 72 AT 12,44,57 8X HL1476  PAGB  55
+                5333/ 741000       SKP
+        125     5334/ 105605      JMS EDGEH
+        116     5335/ 700401       TSF
+        117     5336/ 741909       SKP
+        118     5337/ 104237       JUT
+        119     53406 709301       KSP
+        12$     5341/ 741000       3KP
+        12k     5342/ 104260       INP
+        122     5343/ 709001       OLSP
+        123     5344/ 741000       SKP
+        124     5345/ 185534       IMS CLOCK
+        125     5346/ 269000       LACO
+        126     5347/ 749019       RAL
+        127     5350/ 212937       LAC INTI
+        108     5351/ 709042       ION
+                5352/ 620000       IMP I#
+        130
+        131
+        132
+        133
+        134     5353/       PEN.                APEN INTERRUPT
+        135     5354/ 212136       GAC (10017)  /NIOH INTENSITY
+        136     5355/ 45656        DAC SRAST
+        137     5356/ 211747       GAC RIFIRI   /PREVENT CALL TO COPFIR
+        138     5359/ 740280       SZA
+        139     5360/ 695403       IMP PENI
+        144     5361/ 200903       LAO 3
+                5362/ 741208
+                5363/ 605413      IMP PEN2      /PERMDP INT
+        143
+        144     5364/ 200605       LAG S
+        I45     5365/ 741200       SMA
+        146     5366/ 626003       JMP I 3             INO SYMBOL, BUT LB OR TROR
+        847
+        148     5367/ 205123      LAC DRAWMO    ILBIS R,C,L OR V,I ETC
+        149     53904 141209       SNA
+                5391/ 605493       JMP PENJ
+        151     53728 405122       LAO CONI     PONLY ONE ELEM
+        152     59931 749209       SZA
+        153     53741 605403       IMP PENI
+        154     53750 295139       LAO CONSID   INO ELEMENT IN RA
+        155          740209        SZA
+        166          60к403       IMP PENI
+        150     51001 205121       LAC CON
+        158     64011 749100       SMA
+        159     SA021 624905       IMP I5              PJUMPS TO CREATE ELEM, CRES ETC
+        16k
+        160
+        163
+                5403/ 228003 PENI, LAC I 3
+        165     5404/ 852135      SAD (JMP STROR
+        166     5405/ 605418
+        1'67    5406/ 700504       IDRS'
+        168     5107/ 625353       IMP I PEN    ILB OR PERMDE
+        169     5410/ 105445          PaNA
+        178     5411/ 625353       IMP YPEN

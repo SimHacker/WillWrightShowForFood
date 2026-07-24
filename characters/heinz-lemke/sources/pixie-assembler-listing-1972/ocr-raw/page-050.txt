@@ -1,0 +1,59 @@
+       ISYMELEC                                        ASSCMALED 122 72AT 12-44,57 BY H41470    PAGE  A9
+        581
+        $ 82
+        583
+        584                        ICONST
+        585
+        586     4A41/     • TEMPDT.
+        587     47411       FEMPDP 300/
+        588
+        589
+        50€                                     /TEMPDE CONSTANTS
+        591
+        592
+        593
+        584
+        5g5                                     ISTART POS DF CROSS
+        596
+        597
+        898
+        509
+        030
+        691                                            /FOR VECTORS
+        662
+        603
+        604
+        605
+        606
+        609                                            ISTACKS FOR PERMOF INT
+        608
+        600
+        614
+        612                                     ILONG VEOTOR COUNT
+        613                                      () NEW START POINT, @ FOR EY, L FOR
+        614                                     1*X, BTС
+                                                1*TGHTORHUEELA Y-DIR ELEM
+        615
+        616                                            NOT & DRAMMODE, A NOT DRAWING
+        617                                            I1 SET 'A!, O SET 1B!
+        618
+        610                                            /+HANDSHAKE
+        620                                            I-HS
+        621
+        622
+        603                                            VA FOR STRAIONT. 2 FOR RUB, I SAVEO
+                                                       PEL IF NO IND INT A IP YES
+        605                                     PREQUESTED MODE
+        655                                     /1. POIM, -1 TRACKM
+        628
+                                                       VFREE REG FOR DAC I BLINK
+        630
+        691
+        692                                     /INPUT NESSAGN COMPLETE
+        633
+        536
+        635     51421       WX1,                ILSFT HAND SIDE OF HINDOW
+                                  inoe
+        636     5143/ 1780  ix2,                PRIGHT
+        637     51441       WYL,                /BOTTOM
+        638     5145/  1799 WY2,   177%         /TOP

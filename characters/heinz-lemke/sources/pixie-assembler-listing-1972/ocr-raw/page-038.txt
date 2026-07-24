@@ -1,0 +1,52 @@
+        /SYMELEC                                        ASSEMBLED 12 2 72 AT 13-44-57 DY HLLATO PAGE  3*7
+         697     3257/ 663225       JMP GR2
+         608
+         699     3269/       LKTEST,                    ITEST IF ROOM ON LINK STACK
+         700     3261/ 452013       ISZ LINK
+         761     3262/ 212013       LAC LINK
+         702     3263/ 545173       SAD LKEND
+         703     32641 182221       IMS ERR
+                 3265/ 623260 LKERR, IMP I LKTDST
+         7p5
+         706
+         797
+         79B
+                             IRSP ROUTINES FOR USE WITHOUT QUALIFIERS
+                             ADDW = JMS.
+         713     32664                           /ADDWORD IN ELEMENT
+         714     3267/ 42234       DAC OP+2
+         715     3270/ 103126      FINON
+                 3271/ 192347       SDR
+                 3272/ 292233      BAC DP+1      JHEAD POINTER
+         718     3273/ 42235       DAG DP+3      HEAD
+         n 19    32741 772014      LAW
+         730     3275/ 162312      aNTSP         IFOR NEW RING ITEM
+                 3276/ 222235      LAG I OP 3
+         722     327/ 252157       XOR 1500000
+         723     3300/ 62240       DAC I OP      /CHAIN TO TOP DE HEAD
+                 3301/ 203233      LAG op 1
+                 3342/ 62235       DAO           VRESET HEAD POINTEI
+         726     3303/ 62234       DAC I OP      INAME ON NEN WORI
+         *337    3304/ 352159      TAD (DAG
+         728     3305/ 2014        DAC           /FORM NULD RING
+         729     33661 302234      LAG Op+2
+         730     3307/ 623266      IMP I ADDWSIMS
+         732
+         735                 DSON JMS
+         736     33101                           /DELETE A SON RING
+         737     3311/ 42236       DAC DFJ4
+         730     3312/ 103113      FINDS         VIM CASE OF WRONG ENTRY
+         739     3313/ 763221      LAW GRRA
+                 3314/ 102472      ENTER
+         741     3315/ 202236      LAC OP 4
+         742     3316/ 763321      LAW
+                 3317/ 102492      ENTER         100 ALSO FOR RING-STAR!
+                 3328/ 623318      AND I DSON
+         715     33211 202236      LAC OP+4
+                 33201 197433      pop
+                 3383/ 692564      FXTT
+                            DELP & JMS
+                 33 m4/                         IDELETE ELEMENT FROM BROTHER RING
+                 3395/ 102225      JMS Opag
+         753     3300/ 43935       DAG 0P+3
+         75%     3327/ 122233      LAC  0pd1

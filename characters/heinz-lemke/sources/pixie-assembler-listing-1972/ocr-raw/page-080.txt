@@ -1,0 +1,59 @@
+        /SYMELEC                                       ASSEMBLED 12 2 72 AT 12-44-57 BY HL1470  PAGE  *g 9
+        292     7434/ 235054       LAO XTDT
+        293     7435/ 512212       AND 117777
+        294     7436/ 65017        ĐAC
+        205     7437/ 627426       JMP I PODATI
+        296
+        29*7
+        208     7A40/       UPDAXY,                    /UPDATE X AND Y DF
+        299     7641/ 205054       LAC XTOT     /CURRENT LINE SEQUENCE
+        304     7442/ 352062       TAD XTOTUF
+        301     7443/ 52062        DAC XTOTUP
+        302     7444/ 45654        DAC XTOT
+        303
+        304     7445/ 295055       LAC YTOT
+        305     +4481352063        TAD YTOTUP
+        306     9A47/ 52063        DAC YTOTUP
+        307     74501 45055        DAC YTOT
+        308     7451/ 627440       JMP I UPDAXY
+        309
+        3д0     74521       UPDAIN,                    /UPDATE X AND Y OF
+        311     7453/ 405062       LAC XTOTIN   /CURRENT INST SEQUENGE
+        322     7454/ 352962       TAD XTOTUP
+        313     9455/ 45969        DAC XPOTIN
+        314     7456/ 45054        DAC XIOT
+        315
+        316     7657/ 295961       LAC YTOTIN
+        31°7    7460/ 352963       TAD YTOTUP
+                7461/ 45061        DAC YTOTIN
+        319     7462/ 45955        DAO YTOT
+        320     7463/ 152062       DEM XTOTUP
+        321     74641 152063       OZM YTOTUP
+        322     7465/ 627452       JMP I UPDAIN
+        323
+        324
+        325     7066/ 211746 LINDAT,     LAC RATIPO    /FLEA FOUND LINE
+        326     7A678 352743       TAD RCATAL
+        327     7470/ 351715       TAD ROROUP
+        328     741/ 351744        TAD ROODY
+        329     +94721 745208      SZA
+        3 30
+        331     9473/ 694201       JMP BRRS     INO ATTP ON LINE, ATC
+        332
+        333     74768 212012      LAG CHUSY
+        334     74754 740204       52A
+        335     74761 627750       IMP I AMENDO
+        336
+        337     74774 216954      LAG ONT
+        318     7508/ 197562      IMS ENOPOI
+        339     7501/ 210755      LAO PNT2
+        349.    +502/ 107562      JMS ENDPOI
+        341     75034 629959       IMP I AMENDS POROSS IN MIDDLE OF LINE
+        313
+        344                 ADILEY,
+                +508/ 205116                    ITERAZNATROSUSE LEVEL OP COPIRO STACK
+        345                       LAC LEVEL
+        346           51954        DAC TEMP
+        347     19509/ 451754     ISE TEMP
+        348     7588/ 173754       DZM I TEMP
+        349     0521/ 627504       IMPI ADILEY

@@ -1,0 +1,72 @@
+                                                                             ASSBMBLED 12 2 72 AT 12.44,57 BY RLA47A  PAGE  22
+                              / SYMELEC
+                                       1766/ 602872      IMP PXER1     IDS TO LONG
+                               893
+                               804     {767/ 104221      JMS ERRGB
+                               805     1778/ 205163      LAC END
+                               896                                            ITEST LENOTH OF DS
+                               80'7    1771/ 345435 FRITCH,     .TAD RALCON
+                               808     47726 740001      SMA
+                               809     1773/ 45631       DAC DS
+                               814     8774/ 352203      TAD (1
+                                       1775/ 345163      FAD END
+                               811
+                               812     1776/ 741100      SPA
+                                                         JMP PXERI     IJMP SNOCH FOR ENDRES, JMP PXERI WITHOUT ENDRES
+                               BI3     17791 602072
+                               $14     2000/ 205031      LAC DS
+                                           345162                      TAD BEG
+                                       2001/                                                      / size of DS acea for transter
+                                       2002/ 45031                                   DAC DS
+                        1/63
+                               915
+                               816     2003/ 205146      LAC SAVINS
+                                       2061/ 102107                    JMS RW
+                                       2005/ 345035      TAD RELCON
+                                                                       DAO SAVINS                   rslocate 1,5, pointer
+                                       20%6/ 45146
+                               8і8
+                               819     +667/ 777777      LAM
+                                       2010/ 345162             TAD BEG
+                                             45032                            DAC ADR
+                                       2011/
+                                                                                           DAC ADR1
+                                       2612/ 45036
+                               820     2613/ 205837      LAC BSZ
+                                       2614/ 352164                    TAD (A
+                               821     2615/ 45837       DAC BSZ
+                               022
+                               823
+                                                         TRANSFER DATA AREA
+                               8,5
+                               826     2016/ 205031 Tz,  WAG DS                      1 1e data structure exhausted ...
+                                       2617/ 751200      SNALOLA                      aes transter zeros
+                               827
+                               828     28201 602024      JNP TV
+                               829
+                               830     20212 445032      ISZ ADR
+                               891     20224 415031      ISZ DS
+                               832
+                               833     2083/ 225032      LAC IADR
+                               834     2624/ 1021E7 IV,   JMS RW
+                               835     2025/ 65632        DAO I ADR
+                               836                                                              block?
+                                                          ISZ 8SZ                    / end of data
+                               8ag     70261 445037
+                               838     2027/ 602616       IMP TZ
+                                839                                                  / count blocklets
+                                846    2030/ 445033       IS2 SW
+                                841    2031/ 102125       JMS WAITLK
+                                                                       LRBIBILLAM    I read TITAN checksun
+                                       26321 762276
+                                842    2013/ 545034       SAD CKS
+                                B43    2634/ 682785       IMP TX
+                                814
+                                       2055/ 702351       LLB6 10                    / transfer fallure
+                                845
+                                846    0036/ 602074       JMP PxERZ
+                                847
+                                848
+                                849
+                                850    2037/ AAITAI pxOk, ISZ LTPX            / OK EXIT
+                                851

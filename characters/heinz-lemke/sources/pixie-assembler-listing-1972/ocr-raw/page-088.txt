@@ -1,0 +1,56 @@
+       (SYMELEC                                        ASSEMBLED 12 2 72 AT 12.44,57 BY HL1479  PAGE
+                                  /DOWNCOMP
+          3
+               101781       COMPIL-JMS,         /GALL IS LAW SNAMES, COMPIL, WITH
+                                  ISz CBuSY     /«NAMESON HEAD OF INSTANCE BLEMENT
+               10171/ 452942
+               101721 103126      FINDN
+               10173/ 205174       LAG XSTASO
+               19174/ 45006        DAC LOPX
+               10175/ 205175       LAC YSTREG   /INITIALISE STACKS
+         te do
+         12    10176/ 45024        DAC LOPY
+         13    1017/ 292233        LAG OP+I
+               10200/ 14767        DAC X /MOUSE
+               19201/ 205156       LAG DEB
+         16    10202/ 45605        DAC DE       ISTART OF DF
+         17    10203/ 211753       LAC SYMB
+         1 8   16284/ 51757        DAC SYM
+               10205/ 212052       LAC SAVE
+               10206/ 45923        DAC SVAD     SAVE ADDRESS
+         21    10207/ 110717       FLRAS        FART PAND S FLEAS
+         22    10210/ 212130       LAC (34117
+               16211/ 110956       WRDF         /WRITH PARAMETER
+         24    10212/ 239754       LAC I PNT1
+         25    16913/ 118777       STAKY        ISAVE Y
+         26    10214/ 770954       LAH PNPL
+               10215/ 102347       EDR
+         28    10216/ 238754       LAOIPNTI
+         29    10217/ 110765       STAKX        ISAVE X
+               10220/ 205145       LAC WY2
+               10221/ 45022        DAC YOUAM
+         32    10222/ 352154       TAD (226000
+         33    10223/ 118756       WRDF
+         34    10224/ 205142       LAC WXI
+         35    18225/ 41765        DAC XBEAM
+         36    19226/ 352215       TAD 1160060
+               10227/ 118756       WRDF  /BEAM TO TOP LEFT CORNER
+         38    10230/ 205085       LAC DF
+         39    10231/ 352163       TAD (760002
+               10232/ 116-756      WROF         WRITE DJS .+2 TO INSTANCE
+                                   LAC 1300                                                                      Ses
+               102337 212102
+               10234/ 119756       WROF         /WRITE STOPCODE
+         43    10235/ 970241       LAN coMp
+               10236/ 102472       ENTER        X IS MOUSE ON ENTRY (ON ATNAME)
+         15    10237/ 152042       D'ZM CBUSY   PRESET BUSY
+         46    10240/ 638170       JMP I COMPILSIMS    /EXIT
+         47
+         59
+         5%
+         53    10241/ 205005 OOMP, LAC DF
+               102421 45003        OAC ALPHA    ISAVE ADDRESS ALPHA
+         55    16243/ 118756       WRDP         WRITS JUNK TO STEP DE
+         556   10941/ 110556       JMS GOMPI2
+         57    16215/ 111100       MRLTO        /WRITE A LINE AND SET BRAM CO-ORDS
+         58    10246/ 212035       LAG RLABEL

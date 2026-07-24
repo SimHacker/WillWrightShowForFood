@@ -1,0 +1,59 @@
+        ( SyMELEC                                      ASSENBLED 12 2 72 AT 12,44-57 BY HLI470  PAGB
+        176      671/ 162939       POH SA 1730
+                 672/ 760674       DJ8 SB
+        178      673/ 600766       JMP REDUC
+                 6744 260005       DDS CH 3
+        130      675/ 220537       220537
+        181      6761 23000        PAR PO
+        182      6778 220400       POV P0 400
+        183      790/ 161732       POH  1730
+        184      701/ 468703       DJS
+        1a5      902/ 609771       JMP ROTMO
+        196      703/ 260803       DDS CH 3
+        187      9041 221737       321737       /RD
+        198      905/ 160000       PAR S3
+        189      796/ 425254       DJP P0 LB3
+        190
+        101
+        192      70/ 205134 INTMO, LAC MBLINK   /CHANGE INTENSITY
+        193      710/ 142200       SNA
+                 711/ 605493       INP PEN.
+        195      742/ 212234       LAd (160113  /SET BRIGHINESS LOW UNTIL NEXT POINT AGTIDN
+        196      m13/ 65135        DAC  GLINK
+        197      714/ 605403       JMP PEN1
+        198      115/ 777760       LAW 19760
+        109      716/ 531764       AND I BSBWOR
+        206      717/ 51754        DAC TEMP
+        261      720/ 231764       LAOI ASBNOR
+        202          512233        AND
+        203      1221 741209       SNA
+        294      +23/ 600732       JMP          PZERO DErAULI SETTING
+        205      924/ 352232       TAD 177797Y
+        206      725/ 711200       SNA
+        207      726/ 212233       LAC 19       /PREVaNT INVISIBLE PICTURE
+        308         352231         TAD (10
+        209      30/ 351754        TAD TRMP
+        219      731/ 11764        DAC I BSBWOR
+        2j1      932/ 608305       JMP BLIROU
+                 *33/ 212230       LAC (16      /DECREASE ONE LEVEL FROM DEFAULT SETTING
+        213      7341 690739       JMP
+        214
+        215      735/ 205134 SCANDA LAC MBLINK  /CHANGE SCALE
+        216      7361 741200      SNA
+                 7371 665403       JMP PEN1
+        218      740/ +12227       LAC (160117  ISET TO SCALE & UNTIL MEXT POINT AOTION
+        219      781/ 65135        DAG I BLINK
+        a20          605423        IMP PEÑI
+        221      743/ 122517       LAW 17617
+        2$2      7461 531761       AND g ASOWOR
+        203      7A5/ 51754       BAC TRMP
+        224      7461 231764       LAC I BSAWOR
+        225          512226        AND 160
+        226      9581 559026      SAD (60
+        227      1512 600756       JMP 5        AGO RACK TO SCA FROM 803
+        228      752/ 350225      TAD 112e
+        220          351954        TAD TEMP
+        230      7541 71764        DAG I BSBWOR
+        231      *55/ 696305       IM ALIROU
+        232          212236       LAO (10O
+        293          660763       IMe

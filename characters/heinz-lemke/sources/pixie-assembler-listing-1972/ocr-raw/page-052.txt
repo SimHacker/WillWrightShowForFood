@@ -1,0 +1,56 @@
+        /SYMELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470  PAGK  51
+        607                 SVAD & SISTAK 54
+        6g8                 LOPY & SISTAK 55
+        $99
+        701
+        702                 ANERSE WORKSPACE WITH EXEC
+        733
+        704
+        705                 SAY & STSTAR 60
+        706                 HDRI& SISTAK 61
+                            DS & STSTAK 62
+        *08                 ADR & STSTAK 63
+        709                 SW STSTAK 64
+                            SK3 & SISTAK 65
+        711                 RELCON S SISTAK 66
+        712                 ADRI & STSTAK 67
+        713                 88Z = STSTAK 79
+        714
+        715
+        1 16
+        78°7                IMERGE HORKSPACE WIYH MBWAIT, RIP, TROR, SYH, UPCOMp AND AMEND
+        7i8
+        72€                 YP & STSTAR 101
+        721                 XP & OTSTAK 102
+                            TRAKX = STSTAK 103
+        103                 TRAKY & STSTAK 104
+                            XTOT E STSTAK 105
+                            VrUT & STETAK 106
+        9726                XINS & SISTAK 147
+                            YINS = STOTAK 110
+                            XTOTIN • SISTAK 111
+        729                 YTOTIN * STSTAK 112
+        730                 SBPI A STSTAK 1I5
+        731                 SOAT & SISTAK 116
+        wy 32               NH E SISTAK 11Y
+        933                 SUMP & STSTAK
+        734                 MODE & STSTAK 72
+        *35                 DÃDO & STSTAK 3
+        736                 ASR • STSTAK *A
+        737                 COMPOS E SISTAK *S
+        738                 VEPART - STSTAK 76
+                            XINSI = STSTAK 97
+                            YINSI ASTSTAK 113
+                            COMPOI E SISTAK 1IA
+        7A2                 SBPIL & STSTAK 17
+        744
+        7AS
+        746     556/ 12301  DFD,   12301        /12301
+                5157/ 12400 DFE,   12490        113300
+        718     5160/ 12440 DFERES        19140 113400
+        740     5161/ 12400 DFENDR,       12400 113300
+        150
+                5162/ 12441 BE0,  12441         /13401
+        952     5163/ 13000 END,  13090         117200
+        753     5264/ 13100 ENDRES,      13100  117300
+        Pg 5 t  5165/ 13A0e ENDNOR       13000  119040

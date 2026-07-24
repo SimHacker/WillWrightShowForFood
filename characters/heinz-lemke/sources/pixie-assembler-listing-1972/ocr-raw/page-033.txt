@@ -1,0 +1,60 @@
+                              /SyMBLEC                                        ASSEMBLED 12 3 72 11 12-44-57 6X HL147   PAGE 32
+                               407     2672/ 162732      IMS GSD1
+                               468     2673/ 946018      RAL
+                               4g9     2674/ 746190      SMA
+                                       2675/ 602701       IMP          /JUMP GOT MORE GARBAGE
+                                                         LAP 1*OP+1
+                                       2676/ 222241
+                               412     2677/ 512156      AND 1577777
+                               413     2700/ 602660      IMP -=29      /RESTORE LIST ITEM AND LOOP
+                               414     2701/ 202241      LAC OP+9
+                               415     2762/ 352216      TAD (400006
+                               416     2703/ 62242        DAO I OP+10  /COLLEOT WORD
+                               417     2704/ 512212      AND (17777
+                               418     2705/ 442242      15Z OP+10
+                               419     2706/ 542242      SAD OPALO
+                                       2787/ 442243      ISZ OP+11     /CONSECUTIVE INDICATOR NONZERD
+                               4 og 1  2710/ 682555      JMe           /LOOP
+                               422     2711/ 202243       LAC OP+1
+                               423     2912/ 741200      SNA
+                               424     2713/ 104221      IMS ERROS     VERROR EXIT IF NONS CONSECUTIVE
+                               425     2714/ 212011 JARBZ. LAC FRES
+                               426     2715/ 622516      JMP I LIM     TOK EXIT
+                               427     2726/       aBD,                /FOR BLOCK DATA
+                               428     2789/ 222241      LAC I 0P47
+                               429     2720/ 512156      AND (577777
+                               430     2721/ 62241       DAC I OP+7
+                               431     64/ 512212        AND (17977
+                               432     2723/ 42241       DAC OP+       /MOVE OP&Y TO END DP BLOCK DATA
+                               433     2724/ 545163      SAD END
+                               434     2725/ 602711      JMP GARB2-3
+                               435     2726/ 202716      LAC GBD
+                               436     2727/ 312153      ADD (=d              PRESTART THIS SECTION
+                               437     2730/ 42716       DAC GBD
+                               430     2731/ 622716      JMP I eBD
+                               439     2732/       3BD1,               ITO BLIMINATE DEAD BLOCK DATA
+                               440
+                               441     2933/ 202241      LAC OP Y
+                               442     2734/ 352162       TAD (20000
+                                       2735/ 352263      TAD (1
+                               414     2936/ 562241      SAD I D9+9
+                               445     2737/ 622732       JMP I OBDI
+                               446     2940/ 42244        DÃC DP+12
+                               127     2941/ 162244       O2N I DP$12
+                               44B     2942/ 682735       IMP -3              /LOOP FOR FURTHUR ITEMS
+                               449
+                               456                 IBLOCK DATA PRODUCER
+                               451                 BDNBJMS
+                               452     47434
+                               453     ATAAR 165163      DZM I END
+                               454     2745/ 152020      DZN #GDM      IZERO GARBAGE COLLECTION MARKER
+                               455     2746/ 352203      TAD (1
+                               156     2747/ 42234       DAC OP+2      NO OF CONSECUTIVE WORDS NEBDED
+                                       19584 422743       KCPY BDN-JMS
+                               458     27511 42236        DAG OPAL
+                                       29524 222236      LAGIOPEA
+                               460     2753/ 42236       DAC OP+A
+                               468     2754/ 212911       LAC FREE
+                               462     2558  42235 BDC,   DAC OP+3
+                               463     2756/ 152021      DZM KACC      IZERO COUNT
+                                46A    2957/ 740169      SMA

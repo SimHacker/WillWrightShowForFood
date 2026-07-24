@@ -1,0 +1,58 @@
+        I SYMALEC                                      ASSEMBLED 12 2 72 AT 12.44,57 BY NL1470  PAGE  13
+        292     1033/ 101046       JMS DPSIM    /BUILT NEW DE
+        293     1034/ 200018       LAG
+        294     1$35/ 51754        DAC TEMP
+        205     1936/ 231754       LAG  TEXP
+        296     1037/ 352216       TAD 1400000  VES BIT FOR LAST WORD
+        297     10401 ng 1 *954    DAC  TENP
+        *98     3841/ 212215       LAC 1160000
+        299     1642/ 68019        DAC  10
+        300     1•43/ 212214       LAC (DJP SB 4
+        301     1944/ 68019        DAC I10
+        302     1045/ 621927       IMP I DFCON
+        303
+        304     1046/    •  DPSIM,              /DISPLAY SIMULATOR
+        395     10471 205042       LAG DACO
+        366     1050/ S51767       SAD BLINKI   ITEST FIN
+        307     2051/ 621046       IMP IDPSIM
+        308
+        300     1052/ 225042          I DACO    /SAVE DISPLAY HORD
+        31€     1653/ 51754        DAO TEMP
+                1054/ 295041          MODE
+        312     1455/ 741209
+        313     8456/ 601766       IMP PAMODE
+        314     4057/ 552215       SAD (160090
+        315     10601 681973          SOMODE
+        316     1061/ 552241          1100000
+        317     8062/ 681117       JMP VEMODE
+        318     1063/ 552213       SAD 160909
+        319     10641 691133       INP CHMODE
+        320     1065/ 746919                    MODE NOT ACOOUNTED POR
+        321
+        372     1066/ 445042 PAMODE,     I3Z DACO
+        923     10671 211754       LaC TAMD     IGET NEW MODS
+        394     1070/ 512215       AND 1169000
+        325     1071/ 45041        DA MODE
+        326     1072/ 601947       TMP DPSIN I
+        328     1073/ 211754 SEMODE,     LAC TEMP
+        329     1974/ 512212       AND
+        330     3675/ 5170            IMPADR    /ESTABLISH IMP ADDR
+        331     1976/ 211754       LAG TEMP
+        332          512211        AND 1600900  ITEST FOR DUS, DOS AND DIP
+                1100/ 562211       SAD 1640600
+        334     1101/ 601197      JMP                  /IS DIS
+        335     1162/ 552210       SAD 1200000
+        336     2103/ 691113      TMP   10      /IS DDS
+        337     1184/ 21197a      LAC JAPADR    IIS DIP
+        338     8905/ 45942        DAC DAGO
+        339     1106/ 601067       IMp PAMODE
+        318
+        311          115012        197 DaeD
+        312     1118/ 205042       LAG DACD
+        313           4504%       DAC ASP              ISAVE ReTURN ADDR
+        3ad     HBIZY GAAIOA       JMP = 6
+        3A5     anar 20543
+        316     HAIAY 352216       PAD IDJp
+        317     ius/  11779        DAC I JMPADR ITO IMP BACK LATER
+        348     1116/ 601066       IMP PAMODE
+        349

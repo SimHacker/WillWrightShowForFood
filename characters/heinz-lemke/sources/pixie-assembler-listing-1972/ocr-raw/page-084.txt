@@ -1,0 +1,60 @@
+       /SYMELEC                                        ASSEMHLED 12 2 72 AT 12644,57 BY HL1478  PAGE 83
+        524     79441 103141       FINDP
+        525     =745/ 103310       DSON
+        525     0746/ 110116      IMS DISCON    /DISCONNECT LINES FROM 2ND INST
+        527     8749/ 687079       JMP UPCOM1
+        528
+        529
+        530
+        531     77501       AMEND3,             AFIND P BL OY ALL INST
+        532     77516 145056      DEM XINS
+        633     7752/ 145957       DEM YINS
+        $34     7753/ 205114       LAO BPIRST
+        535     77541 52059        DAC PIRSTA
+        536     17755/ 697760      YMP
+        537     7956/ 119851       IMS YAIN
+        538     7757/ 452050       ISZ FIRSTA
+        539     09769/ 232050      LAO I FIRSTA
+        540     +761/ 740200       5ZA
+        54 k    77626 607756       JMP
+                                   SMP i"AMEND3
+        542     77763/ 627750
+        543
+        545     7764/       AMENDA,             ISAMM AS AMENDS , ONLY PHOTO STACK
+                7766/ 285119
+        516                        LAO BFIRST
+        547     77661 51784        DAC TOMP
+        548     9767/ 205115      LAC BSNDST
+        549     17791 45114        DAC BPIRST
+        55€     79716 197750       IMS AMEND3
+        551     7972/ 211754      LAO TEMP
+        562     ry oy e 31 45114   DAC BFIRST
+        553     174 74/ 627764     JMP  AMENDA
+        554
+        555
+        556     19 7 75/    AMENOS,                    /FIND DELTA OF INSTANCE AND START POINT
+        557     ug n 7 62 295056   LAS XINS
+        558     Ho 7779 191r 740001 SMA
+               16088/ 352263       TAD (1
+        560    10001/ 345854       TAD XTOT
+        561    10802/ 512212       AND (17777
+        582    10003/ 65854        DAC XTOT     IDX DE INST AND START POINT
+        563    100042 205059       LAG VINS
+        564    100051 740091       SMA
+        565    10006/ 352203       TAD
+        566    10007/ 345055       TAD YYOT
+               10010/ 512212       BND 117797
+        568    10811/ 45055        DAG YTOT
+        568    10912/              JMP I AMENDS
+        570
+        571    10AI3/       PESTJN,                    ITEST WHOTHER ELEMENTS IN LINE
+        572    109148 205244       LAO CONPOS
+               100154 45963        DAC COMPOI
+               10816/ 115063       157 COMPOI
+        578    10917/ 225063       LAG I COMPOI
+        576    16020/ 352249       TAD (0157777
+        547    10021/ 749209       3ZA
+        5 78   1eer2/ 619216       TMP
+        579    10023/ 445063       19Z COMPOT
+        589    100247 185063       LAC COMPOT
+        581    108257 350162       TAD

@@ -1,0 +1,60 @@
+                               I SYMELEC                                      ASSENBLED 12 2 72 AT 12,44,57 BY HL1498  PAGE
+                                128     604/ 294741 SAVTEL,     LAC POSDE     /SAVE SYMBOL ON STACK
+                                119     665/ 44743        DAC POSDEB
+                                120     666/ 644742       ISZ POSDEL
+                                121     667/ 212241       LAD (100000
+                                122     6Д6/ 54742        DAC I POSDFL
+                                123     611/ 211760       LÃO ХВNО
+                                124     612/ 71761        DAC I BXBMO
+                                125     623/ 451761       19Z BX9MD
+                                126     614/ 211762       LAC YВИО
+                                127     625/ 71763        DAC I BYBMO
+                                128     616/ 451763       ISZ BYAMO
+                                129     617/ 145122       DZM CON1
+                                130     620/ 626742       IMP I SAVTEM
+                                131
+                                132
+                                133     621/ 979774 TAkel. LAW 17774    /TAKE SYMBOL FROM STACK
+                                134     622/ 344941       TAD POSDF
+                                135     623/ 44741        DAC POSDE
+                                136     624/ 106554       IMS INSRET
+                                137     625/ 759001       SLC
+                                138     626/ 351961       TAD BXBKO
+                                139     627/ 51761        DAC BXAMO
+                                140     630/ 231961       LAC I BXBMO
+                                141     631/ 51960        DAC XEMO
+                                142     632/ 750001       SLC
+                                1 43    633/ 351763       TAD BYBMO
+                                1A4     634/ 51763        DAC BYBKO
+                                145     635/ 231763       LAC I BУBMO
+                                146     6367 51962        DAC YBMO
+                                        637/1997776       BAW 17776
+                                140     640/ 344741       TAD POSDE
+                                        641/ 44742        DAC POSDEL
+                                1se     642/ 607035       JMP SEGEX
+                                151
+                                152
+                                153
+                                154     643/ 221900 1B2,  POV PO 1006
+                                1AS     644/ 161730       POH 3B 2730
+                                156     645/ 769647       DIS 88
+                                                          DIS SETHO
+                                157     646/ 608707
+                                168     647/ 268093       DDS CH 3
+                                159     654/ 111637       111637       IN
+                                160     681/ 29000        PAR PO
+                                161     652/ 220700       POY PO 90e
+                                162     6532 161730       POK SB 1930
+                                163     6542 4968656       JS SB . 2
+                                164     6551 600935       жир Sови
+                                165     656/ 260003       DDS dN 3
+                                166     651/ 230337       238337        /S0
+                                167     660/ 20900        PAR PO
+                                168     661/ 220600       POV PO 600
+                                169     662/ 161738       PON SB 1730
+                                170     663/ 760665       DJS S8 - 2
+                                        6644 600760       JMP CATMO
+                                        665/ 269A03       DOS CH 3
+                                193     5668 3013%        030137       10A
+                                        66/  20809        PAR PO
+                                175     6770/ 220500      POV PO 500

@@ -1,0 +1,57 @@
+        ISYMALEO                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HLL470  PAGD  65
+         594
+         605    6305/ 145134 BLIROU,      DZM MBLINK   ISTOP BLINKING
+        $96     6306/ 977760       LAH 17766
+         69%    6367/ 525135       AND I BLINK
+         898    6310/ 252131       XOR (17
+         699    6311/ 65135        DAC I BLINK
+                6319/ 212134       LAO (SORABL
+         701    63131 45135        DAC BLINK
+         792    63148 695403       IMP PENI
+         703
+         704
+        *95
+         706    6315/       SXX,   Đ.            IFIND DELTA X AND
+        707     6318/ 212004      LAC PNTX
+         7$8    6317/ 740001      SMA
+        *7 09   6320/ 352203       TAD (1
+                6321/ 344745       TAD TEMpX
+                6322/ 52855        DAC X8
+         712    6323/ 106335       JMS MOD
+         7д3    63241 52902
+         71A    6325/ 212007       LAC PNTY
+         7i5    6326/ 740001       AMA
+         716    6327/ 352209       TAD (1
+        717     6330/ 344746          TEMPY
+        718     6331/ 52056        DAC YB
+         719    6332/ 106335       JMS MOD
+        720     6333/ 52095        DAO YBM
+        921     6334/ 625315       JMP I SXY
+        722
+        723     63352       MOD,                MODULUS
+        724     6336/ 740108       SMA
+        725     6337/ 626335       JMP I MOD
+                63491 748801       CMA
+        727     6341/ 352203       IAD (1
+        728     6342/ 626335       IMP 1 MOD
+        729
+        931
+        733     6343/       INSRIN,                    /INSERT POINT IN TEMPDE
+        734     6344/ 212114       LAO (30117
+        735     6345/ 44441        DAC TEMPDF
+        736     6346/ 212154       LAC (220009
+        737     6347/ 352007       TAD PNTY
+        738     6350/ 44 412       DAS TEMPDE 1
+        739     6351/ 712241       LAC 1169900
+        140     6359* 352094       TAD PNTX
+        748     63532 444A3        DAG TEMPOY2
+                6354/ 212216       LAG 1400909  HySC FO
+        743     6355/ AAAAA        DAG TEMPDF 3
+                6356/ 212718       LAO 11690d
+        745     6357/ AAAAS        DAC TEMPDFA
+        746     6360/ 212113       LAC (TOTEMP 1
+        747     6361/ 352016       TAD HAOAGOG
+                63621 44416        DAG TAMPDF
+        9 19    6963/ 626343       JMP IINGRIN
+        75%
+        758     63601       SETCL,              Hser clack inle sao

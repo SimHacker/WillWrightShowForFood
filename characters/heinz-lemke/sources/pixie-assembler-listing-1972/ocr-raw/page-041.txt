@@ -1,0 +1,58 @@
+                               /SYMELEC                                       ASSENBLED 12 Z 72 AT 12,44,57 BX HL1499  PAGE
+                                 59     3433/ 663437      JMP WAITIS
+                                 64     3434/ 205150      LAC CCOK1    /FINISHED ON NODE
+                                 61     3435/ 352146      TAD (2
+                                 62     3436/ 45150       DAC COOMI
+                                 63     3437/ 211744 WAIT13,    LAC ROOPY            /RBQUEST TO COPY
+                                 64     3440/ 741209      SNA
+                                 65     34414 603460      JMP WAITS
+                                 66    3442/ 107504       IMS ADJLEV
+                                 67     3443/ 107750      IMS AMEND3
+                                 68     34446 107191      JMs FONAL
+                                 69    3445/ 770753       LAW SUBP      (SUBP TO INST
+                                 70    3446/ 193266       ADDW
+                                 71    3449/ 791756       LAW INST
+                                       34504 102347       EDR
+                                 * 3   3451/ 103876       INSRT
+                                       3452/ 778753       LAW SUBP
+                                 7 5   3453/ 452742       ISZ CDOCOM
+                                 "96   3454/ 777777       LAM
+                                       3455/ 45132        DAc RAODE    /TRACKRODE
+                                 78    3456/ 151744       DZM ROOPY
+                                       3457/ 151775       DEM SAVESU
+                                 80
+                                 82     3460/ 211743 WAITS, LAC RCATAL /REQUEST TO CATALOGUE
+                                 83     3461/ 94120€      SNA
+                                 84    3462/ 603464       IMP WAIT3
+                                85     3463/ 601272       IMP WAITO2
+                                 86
+                                87     3460/ 211748 WAIT3, LAC RATIPO  /REQUEST FOR ATTPOINT
+                                 88    3465/ 741200       SNA
+                                89     3466/ 693506       IMP WAIT
+                                90     3467/ 187504        IMS ADJLE
+                                91     3479/ 109956       JMS AMEND3   INO ATTPO ON LINE
+                                02     3471/ 295056       LAC XINS
+                                93     3472/ 740001       SMA          IGET DATA FOR ATTPO
+                                94     3173/ 352203       TAD 11
+                                95     3474/ 344745       XAD TEMPY
+                                96     3495/ 45€54        DAC XTOT
+                                97     3476/ 205057       LAC YINS
+                                98          740001        SMA
+                                99     3500/ 352263       TAD (1
+                                100    3501/ 344746       TAD TEMPY
+                                101    3502/ 45055        DAC YTOT
+                                102    3583/ 107625       IMS ATTPEL
+                                1a3    3564/ 151746       OZM RATTPO
+                                       15051 151775       DEM SAVESU
+                                105
+                                106
+                                107    3506/ 211745 WAITY, LAC RGROUP         PREQUEST TO GROUP
+                                108    3507/ 741209       SNA
+                                109    35101 693547       IME WAITZ
+                                118    ЗRI1! 10g5e        JMS ADJLEY
+                                111    3512/ 107750       IMS AMEND3
+                                112    3513/ 211775       LAC SAVESU
+                                113    3514/ 740200       5ZA
+                               114     3515/ 683527        MP. 12
+                                115    3516/ 145060       OZM XTOTI
+                               116     3517/ 145661      DZM YTOTIN    /FIRST ENTRY

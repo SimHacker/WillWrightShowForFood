@@ -1,0 +1,59 @@
+       ABYMELEO                                        ASSEMBLED 12 2 72 AT 12,44, 57 BY HL1470 PAGE 71
+       10i5     6925/ 741109      SPA
+       1016     6726/ 626722      IMP I BAVEX
+       1017     6727/ 213057       LAS TEMPXL
+       1018     6*7391 52094      DAC ENTX
+       1019     6731/ 626922       IMP I SAVEX
+       1020
+       1021     6732/       SAVEY,
+       1022     633/ 106742        JMS SAVTEM
+       1023     67341 265121      LAC CON
+       1024     6735/ 741109       SPA
+       1025     6736/ 626732      JMP I SAVDY
+       1926     6737/ 212960      LAC TEMDYL
+       1097     6740/ 52007        DAC PNTY
+       1028     6741/ 626732       JMP I SAVDY
+       1029
+       1934
+       1031
+       1032     67421       SAYTEN,
+       1033     6743/ 212017       LAO BOONL
+       1034     6744/ 552119       SAD (STSTAK 120
+       1035     6745/ 605403       JMP PENI
+       1036
+       1037     6716/ 205122       LAC CONI
+       1038     67474 72849        DAO I BCONI
+       1939     6750/ 452047       ISZ ACONI
+       1048     6751/ 205121      LAC CON
+       1041     69524 72846       DACI ACON
+       1042     6753/ 452046       1SX BOON
+       1043     6754/ 212094      LAO PNTX
+                6755/ 72943        DAC I BPNTX
+       1045     6756/ 452943       ISZ BPNTX
+       1946
+       1047     6757/ 212097       LAC PNIX
+       1048     67641 72044       DAC I RENTY
+       1049     69611 452014       152 BPNTY
+       1050
+       1051                        LAC POSDPE
+       1052     6763/ 72945        DAC  P0s
+       1953     6764/ 452045       18Z Pos
+       1054     6765/ 205122       LAC CONI
+       1059     6766/ 740200       32A
+       1056     676974 606604      IMP SAVTCI
+       1057     6701 204742        LAC POSDEL
+       1058     6911  44743        DAO POSDEB
+       1059     6*72/ 144743       ISZ POSDFB
+       1060     6773/ 224742       LAC I POSDFL VORASE ESCAPG
+       1068     6774/ 512277       AND 137777
+       1062     6775/ 64742        DAG POSDEL
+       1963     69961 626742       TMD I SAVTEM
+       1066
+       1065                 TAKE,               TAKE LAST VECTOR TO BRASE
+       1066     7000/ 150001       aLC
+       1067     7061/ 352046       TAD BCON
+       1068           52046        DAC BCON
+       1960     7003/ 232046       LAC aCON
+       1070           45121        DAG CON
+       191      7005)777777        LAM
+                16 35011           TAD EPNTX

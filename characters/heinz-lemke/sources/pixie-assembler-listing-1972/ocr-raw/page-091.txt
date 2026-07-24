@@ -1,0 +1,60 @@
+                               / SyMELEC                                      ASSEMBLED 12 Z 72 AT 12,44,57 BY HL149E  PAGE  96
+                                175    10427/ 770546      Law COMP3
+                                176    10430/ 205005      LAC DE
+                                177   10431/ 44761        DAC GAMM/    ISAVE ADDRESS GAMMA
+                                178    16432/ 110756      WRDF         WRITE JUNK TO STEP DE
+                                1º9   18433/ 204967       LACX
+                                186   104344 45017        DAC Y
+                                181   10435/ 145001       DZM MRKX
+                                182   10436/ 148758       DZM MRKY
+                                183   10437/ 204765       LAC XEEAM
+                                184   10448/ 45016        DAC XBMC
+                                185   10441/ 285022       LAC YBEAM
+                                186   10442/ 45900        DAC XaMC
+                                187   10143/ 763155       LAW GRHA     /GOROUND TO FIND INSTANCES AND LINES
+                                188   10444/ 192472       ENTER
+                                189   16445/ 765017       LAWY
+                                106   18446/ 770620       LAi COMPA
+                                191   16147/ 770612       LAW COMPS
+                                192   10450/ 205001       LAC MRKX
+                                193   10451/ 741200       SNA
+                                194   10452/ 610465       JMP . 13     WRITE WORDS TO POSITION TO
+                                1.95  16453/ 212215       LAO (160000  /IST POINTS OF INSTANCE
+                                196   10454/ 110756       WRDE
+                                      106455/ 760000      LAW
+                                198   10456/ 365006       TAD I LOPX
+                               100    10457/ 118756       WRDF
+                               20€    10460/ 111011       UNSTKX
+                               201    10461/ 7747777      LAM
+                               202    10462/ 345001       TAD MRKX
+                               293    10463/ 45091       DAC MRKX
+                               20d    10464/ 610451       JMP • 13
+                               295    10165/ 204760       LAO MRKY
+                               206    104661 741200       SNA
+                               207    10167/ 618304
+                                                         3MR - 15
+                               208    1EA9/ 740001                     /TRANSPER LINES FROM STACKY
+                               209    10171/ 352263      TAD (1        ISTAK *WITHOUT REVERSAL OF ORDER
+                               210    104721 44757       DAC COUN
+                               211    10473/ 343824      TAD LOPY
+                               212    10474/ 45024       DAC LOPY
+                               213    10475/ 352203       TAD (1
+                               214    10476/ 45015       DAC PONT
+                               215    19477/ 225015      LAC I PONT
+                               2g6    10500/ 102446      STAK
+                               217    105011 445915      ISZ PONT
+                               218    10562/ 444757      ISZ COUN
+                               219    10503/ 61647       INP LAC MRKY
+                               200    185A4/ 204768
+                                      10505/ 741289       SNA
+                               222    10506/ 610535      JMP  27
+                               293    1050/ 102460       UNSTÄK        (WRITE LINES TO DISPLAY FILE
+                               224    16510/ 44767       DAC X
+                               225    10511/ 110717      PLEAS
+                               226    105121 212215      LAC  1160006
+                               227    10513/ 110756      WRDF
+                               228    105141 110656       JMS COMPI2
+                                      105152 110698      IMS COMPIS
+                               230    105162 512145      AND (3999
+                               231    10519, 576752      SAD I FLEAS
+                               232    105291 610539      JMP, 10

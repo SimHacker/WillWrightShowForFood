@@ -1,0 +1,56 @@
+                               /SyMELEC                                       ASSBMBLED 12 2 72 AT 12,44-57 BY HLIATA  PAGE
+                                         73/ 223700       223700       /R
+                                         74/ 160900       PAR SB
+                                         75/ 765315       DJS VE POD
+                                         76/ 160090       PAR SB
+                                         77/ 760161       DJS SB
+                                        200/ 601626
+                                        101/ 260995       DDS CR 5
+                                        162/ 33790-       833707
+                                        103/ 160000       PAR SB
+                                        1€4/ 705316       DJS VE PLD
+                                        105/ 160006       PAR SS
+                                        106/ 769110       DJS SB
+                                        107/ 601630      IMP CTRD 2
+                                        110/ 260005       DDS CH 5
+                                        1I1/ 143700       143706
+                                        112/ 160008       PAR SB
+                                        113/ 105317       DJS VE PXD
+                                        184/ 160800       PAR SB
+                                        115/ 769117       DJS SB ,2
+                                        126/ 601636       JMP CPOU
+                                        117/ 260005       DDS CH 5
+                                        120/ 233709       233700
+                                        121/ 160000       PAR SB
+                                        122/ 405750       DJP ERAST
+                                        123/ 212256 AD,   LAC (UMP CFIF MBI SAT OF LBIS
+                                        124/ 40971        DAC LAD 22
+                                        125/ 200212       LAC CLaV
+                                        126/ 49A93        DAC LBD 24
+                                        127/ 212255       LAC (JMP CSIX
+                                        136/ 40100        DAG LAD 31
+                                        131/ 200213       LAO OLBI
+                                        132/ 48192        DAO LBD 33
+                                        133/ 212254       LAC (JMP CSEV
+                                        134/ 46107        DAC LED 40
+                                        135/ 200214       LAG OLBU
+                                        136/ 40111        DẠC LBD 42
+                                        137/ 212253       LAG (JMP CEIG
+                                        1401 40216        DAC LAD 47
+                                        241/ 208215       LAC CLEO     10
+                                        1421 40120        DAC LAD 51
+                                        143/ 212252       LAC (023706   18
+                                        1441 49064        DAC LOD 15
+                                        145/ 145124       DZM SWITCH
+                                        143/ 106364       IMS SETCL
+                                        117/ 605403       JMP PENL
+                                        156/ 212251 BD,   LAC (JMP CEST M'A' BET OF LBIS
+                                        1511 49071        DAC LAD 22
+                                        152/ 290206       LAC CLER     /R
+                                        153/ 18073        DAG LAD 24
+                                        154/ 212250       LAO (JMP COND
+                                        155/ ARIAO        DAC LAD 31
+                                        156/ 200207       LAG CLEC
+                                        157/ 40102        DAO LAD 33
+                                        169/ 212247       LAC COMP CTRD
+                                        1610 49197        DAC LAD 40

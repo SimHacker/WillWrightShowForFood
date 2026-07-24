@@ -1,0 +1,56 @@
+       / SYMELEC                                       ASSEMBLED 12 2 72 AT 12-44-57 BY HL1470  PAGE
+        230     5467/ 900712       IDRC
+        231     5470/ 744010       RCL
+        232     5471/ 512133      AND (1776
+        233     54921 44746        DAC TOMPY
+        234     5473/ 700712       IDRO
+        235     547A/ 742928       RTR
+        ₴36     5075/ 742020       RTR
+        237     5476/ 742020       RTR
+        238     5477/ 42028        RTR
+        239     550/ 512193        AND (1976
+        240     55012 44745        DAC TEMPX
+                3502/ 105621       IMS POSOR
+        242     5503/ 625466       IMP I TROR
+        245
+        246
+        24°7
+        248     55041       STOCD,              /STOPCODE INTERRUPT
+        249     5505/ 149005       DZM 5        FERASY SWITCH ON BASIC SYMBOLS
+        25€     5566/ 212632      LAC CISRIN
+        25l     5507/ 741209       SNA
+        252     5519/ 605513       JMP . 3
+        253     5511/ 152032       DEM CISRIN
+        254     5512/ 106343       JMS INSRIN
+        255
+        256     5513/ 212023       LÃO CUPCOM
+        857     5614/ 152925       DZM CUPCOM
+        258     5515/ 740209       5%A
+        259     5516/ 452038       IS2 RUPCOM
+        260
+        261     5517/ 211742       LAC CDOCOM
+        262     5520/ 741200       SNA
+        863     5521/ 605525       JMP :4
+        264     5522/ 151742       DZM CDOCOM
+        265     5523/ 452991       ISZ RDOCOM
+        266     5621/ 457342       182 CHUSY
+        268     5525/ 208903       LAG3
+        269     5575/ 741200       SNA
+                5527/ 605532       JMP
+                5536/ 212132       LAC 1100170  CLOW INTENSITY
+        272     5531/ 45656        DAC SRAST
+        273     5532/ 105445       IMS. PEN3
+        2774    5533/ 625504       IMP 1srpeD
+        275
+        276
+        277     55342       SLOCK,
+        278     5535/ 225156       LAO I DPB
+        20      5536/ 741200       SNA
+        280     5337/ 685551       JMP •12
+        281     5540/ 205134       LAd MBLINK
+        282     5541/ 741208       ENÀ          /SKIP MBLINK = LAN 19969
+        293     5542/ 777960       LAW 17760    INO BLINK, SET INTENSITY HISH
+                5543/ 525136       AND TALINK
+        285     5514/ 252131       XOR 11°7
+        286     5545/ 65135        DAC IBLINK   PTURN ON/OFE BLINK WORD
+        297

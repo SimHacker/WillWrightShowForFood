@@ -1,0 +1,59 @@
+       /SyMELEC                                        ASSEMBLED 12 2 72 AT 12,44.57 BY 1L1470  PAGE 103
+        929    11703/ 44779       DAO T2
+        930    18704/ 284771      LAD V2
+        931    17785/ 748001      JMА
+        932    12706/ 304751      ADD V1
+        933    18707/ 664000      3SM
+        934    119181 81713        DAC .3
+        935    18711/ 704770      LAG T2
+        936    11712/ 657122      MULS
+        93     1113/
+        938    117141             DAC DEMP
+        939    1A715/ 285897      LAC T3
+        9д0    18716/ 664000      ASM
+        941    11719/ 51722            3
+        912    11920/ 204747      LAG DEMP
+        943    18721/ 644323      DIVS
+        044    197221
+        945    11723/ 649622      LLS 22
+        946    11924/ 384751      ADD V1
+        917    11725/ 45011       DAO
+        918    12726/ 631672      AMD  SOLVE
+        910
+        950
+        951
+        952
+        953    12927/ 285005 ESCApG,     LAC DE /REMOVES ATNAMES DF HIDDEN LINES
+        954    11730/ 352066      TAD (779974
+        955    119311 43005       DAC DF
+        956    11732/ 631134      AND I WRLB
+        957
+        948    117331      NEG,                 ACONVEOT 13 BIT TO 18 BIT
+        059    11934/ 51754       DAC TEMP
+        960    18735/ 512166      AND (1000€
+        961    12736/ 740208      3ZA
+        963    18737/ 760009      LAW           INRGATIVE
+        963    1940! 251754       XOR TENP
+        $64    107A1/ 631733      JMP I NEG
+        965
+        966
+                           PAUSE
+        968
+               11421       ODodoM
+               10943/      ROATAL
+               LAAAE       RCOPY
+               117A5/      RGROUP
+               187451      Rgren
+               117471      PIATRT
+               11758/      BLAD
+               18751/      LENGTH
+               117521      ETYPE
+               19753/      BYME
+               11754/       TEnp
+               119551      FSnOT
+               19*567      INGT
+               11757/      SYM
+               10960/      XЕMО
+               10M611      AXома
+               117621      YAMO
+               21763/      aYaMO

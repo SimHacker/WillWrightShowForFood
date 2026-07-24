@@ -1,0 +1,57 @@
+                               /SyMELEC                                       ASSEMBLED 12 2 72 AT 12,44,57 BY HLIATO  PAGB
+                                59     5255/ 162739       POM 58 1730
+                                 60    5256/ 765260       DJS SB
+                                 61     5257/ 696113      JHD ENDCON
+                                62      5260/ 260003      DDS CH 3
+                                 63    5261/ 51637        951637        /EN
+                                64     5262/ 28906 LBde   PAR PO
+                                65     5263/ 220020       POV PO 20
+                                66     5264/ 168020       PON SB 20
+                                67     5265/ 765267       DJS 5B
+                                                          DN8 PEXEX2
+                                68     5266/ 609774
+                                69     5269/ 260003       DDS CH 3
+                               *DECIMAL DIGIT IN OCTAL NUMBER
+                                                                             (0) 12.202 1
+                                                                                                x 307
+                                       5270/              291128       /PIX
+                                       6271/ 116537
+                                71                        118537       VIE
+                                74     5272/ 38175 WAREA, pAR po pr 803 Iy5   WORKING AREA
+                                       5273/ 220000       poy po
+                                76     5274/ 100000       POH VE 0
+                                        1275/ 27740       VEC ON & 17
+                                       5^76/ 299171       VEC ON 17e O
+                                       527/ 377400        VEC ON & =177
+                                80     5300/ 208370       VEC ON -170
+                                81     5301/  4800        VEC • 19
+                                82     5362/ 608170       VEC ES ON 170 €
+                                83     6303/ 169600       BAR SB
+                                84
+                                85     5344/ 404441 TOTEMP,     DJp TEMpDF           ITO PEMPORARY DISPLAY FILE
+                                96     5305/ 169800      PAR SB
+                                       5306/ 765310       JS SB .2
+                                88     5307/ 606252       JMP STRÖF
+                                89     5310/ 360003       DDS SB
+                                                         DD$ SRACK
+                                       5311/ 405637                           ITO TRACKING CROSS
+                                       5313/ 406234 PSD,  VEC ES -34 14       IPOS LRIS OF CROSS
+                                03     5313/ 485419 PAD,  VSC 83 10 13
+                                       5314/ 400020 PRD,  VEC ES 20 •
+                                05     5315/ 565419 PCD,  VEC ES 10 -13
+                                       6316/ 517266 PLD,  VEO RS =6 =36
+                                97     5327/ 594624 pxD, VEC ES -24-11
+                                96
+                               IA1
+                               102     5329/ 52039 INI,  DAC INTI      /INTERRUPT ROUTINE
+                               163
+                               104     53211 790701      IDSP
+                               1.5     5322/ 741000      SKP
+                               106     5323/ 195353       JMS PEN
+                               1A7     5324/ 700601      IDBI
+                               106     5325/ 741009      SKP
+                               100     5326/ 105504      JMS STPOD
+                               129     53277 106561      IDVE
+                               Ii1     5330/ 741909      SKP
+                               112     5331/ 195571       IMS EDGEY
+                               113     5332/ 781001      IDHE

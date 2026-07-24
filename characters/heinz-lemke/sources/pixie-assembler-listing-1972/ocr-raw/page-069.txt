@@ -1,0 +1,59 @@
+                               ISYMELEO                                       ASSEMSLED 12 2 72 AT 12,44,57 BY HUIATO  PAGE  68
+                                BA1                       IVEC
+                                842
+                                843
+                                844                       DISE
+                                845    6476/ 212055 sEgX, LAC XB /PORM X-DIR SEGMENT
+                                846    6479/ 741100       SPA
+                                84°7   6598/ 352232       TAD (777777   /CONVERT TO ONE S COMP
+                                848    6501/ 52055        DAO XB
+                                849    6502/ 204745       LAC TEMPX
+                                950    6503/ 52057        DAC TEMPXI
+                                851    6684/ 212002       LAC XAM
+                                ₴52    6565/ 52000        DAC XBML
+                                853    6506/ 152956       DZM YB
+                                854    6567/ 686521       IMP SEOXY
+                                855
+                                B56    6549/ 212856 SEOY, LAC YB DORM YNDIR SEGMENT
+                                857    6511/ 741100
+                                858    6512/ 352232       TAD (777779  /CONVERT TO I'S COMP
+                                859    6513/ 52056        DAC YB
+                                86₴    6514/ 204746       LAC TEMPY
+                                861    6515/ 52066        DAC TEMPYL
+                                862    6516/ 212005       LAC YBM
+                                863    6517/ 52001        DAC YBML
+                                864    6520/ 152655       DZM X3
+                                865
+                                866    6521/ 264743 gEGXY, LAC POSDFS
+                                967    65221 44741        DAC POSDF
+                               868     6523/ 744082       sTL
+                               $69     6524/ 212956       LAC YB
+                               370     65754 111237       JMS VECGN
+                               878     65264 212055      LAC X8
+                               8y2     6527/ 106542       JMS TODIS
+                               873     6530/ 779979       LAM
+                               gng d   6531/ 344741       TAD POSDE
+                               875     6532/ 44741        DAC POSDE
+                               896     65331 224741       LAG I POSDE
+                                       6534/ 352216       TAD (400000  /ESCAPE BIT SET
+                               gina    65352 54741        DAC I POSDE
+                                       65361 204741       LAC POSDE
+                                       66391 44742        DAd POSDEL
+                               881     65401 196554       JMS INSRET
+                                       6541/ 605403      IMP PENI
+                               893
+                                       65421       TODIS.              PINSRE IN DF
+                               BR5     65A3/ 52061       DAC SAVVE
+                               B96     65401 204741      LAC POSDr
+                               88*)    65451 512212       AND (19997
+                               8pg     65461              SAD TEMPEN
+                               809     65491 52654        JMP I TODIS
+                               Bea     65501 212961       LAO SAVVE
+                               801     6551/ 64741        DAC I POSDE
+                                       6552/ 444741       ISZ POSDF
+                               803     65531 626542       JMP I TODIS
+                               806
+                               80g     65511       INSRET.                    /INSERT RETUEN IN TEMPDE
+                               896     6555/ 448941      ISZ POSDE
+                               807     6656/ 212215      LAC (160000
+                               800     65EME 64741       DAC I POSDE

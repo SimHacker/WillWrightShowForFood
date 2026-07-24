@@ -1,0 +1,66 @@
+                                                       ASSEMBLED 12 2 72 AT 12,14,57 BY HL1170  PAGE 93
+       /SYMELEC
+        349
+        35
+        351
+        352    10901/                           AGEY DATA FROM DAD
+                            SETD-INSENS OP-5    ISET OP+1 SO BNTRY NAME STAYS PUT
+        353    10702/ 102225
+        354    10703/ 762233      LAN OPSI
+               10994/ 103113       PINDS        IGO TO DADD
+        355
+        356    10785/ 103126       FINDN
+        357    10706/ 202233       LAC DP1
+               10707/ 50716        DAC GKTD1    /SAVE ATNAME
+        35%
+        359    10710/ 762233       LAW DP+1
+        360    10721/ 102347       ODR
+        361    10713/ 102347       ODR
+               10713/ 222233       LAC I OP+1   /LDAD DATA
+        36₴
+               10714/ 512233       AND 17       FRENOVE SURPLUS BITS
+        363
+        364    10715/ 63÷741       JMP I GETD-IMS
+        365    109161       9BTDI.
+        366
+        367
+                            PLEAS-JMS,          ISET FLEAS (I OR L) ON (5,P OR P,P)
+        368    16747/
+        369    107201 2047699      LAC K
+               10721/ 42233        DAC OP 1
+         371   10722/ 110744       IMS FLEA2
+        372    10923/ 50752        DAC FLEA3
+         373   10924/ 118744       IMS FLEA2
+         374   10925/ 50754        DAC PNT1
+         375   10726/ 236752       LAO I FLEA3
+        376    167291 552146       3AD 12
+         377   10730/ 618734       JMP FLBAL
+         378   10731/ 118714       SMS FLEA2
+         379   107321 59755        DAC PNI2
+         3a0    109331 63A71       JMP I FLEAS-IMS
+         381   107341 284767 PLBALA LACX
+         382   10735/ 59753        DAG SUBP
+         383    107361 m 73953     LAW SUBP
+         394    10N371 193141      FINDE
+         395    10740/ 102347      SDR
+         386    1CHALY 103113      PINDS
+         387    109421 103126      PINON
+         388    10743/ 630717      JMP 1 FLEAS-JMS
+         389    16744/      FLEAZ,
+         300    10745/ 762233      LAN op
+         301    10946/ 102347      JDR
+         302    10719/ 102349      GOR
+         303    107581 202233      LAC op 1
+                107511 639744      JMP I FLEA2
+         305
+         306    10752/      FLBA3,               /FLEA COUNTER
+         307    10953/      SUDP,
+         30g    107547      PNIL.
+         300    109554      PNI2.
+         401                                                   DP
+                10756/       WRDFSIMS,           INNIAE A WORD TO
+         4A3    109571 6SAAS       DAC IDP
+                107601 205095      LAG DF
+         405    16761/ 545157      SAD DFE
+                109621184206       IMS ERRDF     /ERROR D  spaen faM
+         406

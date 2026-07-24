@@ -1,0 +1,60 @@
+                               (SYMELAC                                       ASSEMBLED 12 2 72 AT 12-44,57 BY HLI49A  PAGE  74
+                                                          LUPCOMP
+                                       7041/      UPcOMr,               /BEGIN COMPILER
+                                       7042/ 211746      LAC NODRA
+                                       7043/ 740209       SZA
+                                       7044/ 687071       JMP UPCOML
+                                       7045/ 452042       ISZ CBUSY
+                                 10    7046/ 145064       DZM BBPI
+                                       1049/ 145A60       DZM XTOTIN
+                                       *9050/ 145061      DZM YTOTIN
+                                       79511 152062       DZM XTOTUP
+                                 14    9052/ 152663       DEM YrOTUP
+                                 15    7953/ 145956       DZM XINS
+                                 16    7654/ 145057       DZM YINS
+                                 17    7955/ 151759       DZM ELAD
+                                 18
+                                 19    7656/ 212107       LAG (TEMPDP 3
+                                 29    7057/ 45044        DAC COMPOS
+                                 21    7060/ 107205       IMS AbSXY
+                                       9061/ 285146       LAC SAVINS
+                                 23    7062/ 748208       SZA
+                                 24    7063/ 687640       IMP AMEND
+                                 25
+                                 26
+                                 27    79641 167105       IMS FONBL
+                                                                       GEVR PUUEK POR SINTO DEAHING
+                                28     7665/ 205064       LAC SAPI
+                                29     7066/ 45147        DAC SAVSUB
+                                 30    7867/ 211756       LAC INST      ISAVE POINTER TO INST OE DRAWING
+                                       7970/ 45146        DAC SAVING    /FOR DOWNCOMPILER
+                                 32    7071/ 211756       LAC INST
+                                       40701 107487       IMS POIDAT
+                                34     1073/ 211753       LAC SYNB     ITO ENTER BASIC SYMBOLS
+                                 35    7094/ 51757        DAd SYM
+                                36     9875/ 107171 UPcOM2,                   HEAD BLOCK FOR NODE OR PRANCH
+                                                         JMS POLEENS PUNBY
+                                 3*7   7076/ 167215                    ILINE BLOCK
+                                 38
+                                39     +8796979777
+                                                   UPCOMI, DAC CCOMIAM
+                                       2108/ 45156
+                                41     9101/ 45121        DAC CON
+                                       7102/ 152062       DZM XTOTUP
+                                43     7103/ 152863       DEM YTOTUP
+                                 44    7184/ 627041       IMP I UPCOMP
+                                 A5
+                                 46
+                                 4 8
+                                 49    7188/       POIBL,              PFORM HEAD BLOCKS
+                                       7185/ 193835
+                                                          PEL
+                                51     71091 45064        DAC SBPI
+                                 52    7110/ 212263       LAG (1
+                                53     1111/ 193041       FELN
+                                54     7112/ 51756        DAG INST
+                                55
+                                56     7183/ 211744        AC RCOP
+                                57                         TAD FSBP
+                                58     7115/ 749209       SZA
+                                59     1116/ 607131       IMP . 13

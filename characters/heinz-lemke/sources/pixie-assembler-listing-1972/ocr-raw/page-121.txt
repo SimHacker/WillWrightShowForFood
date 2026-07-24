@@ -1,0 +1,59 @@
+                               ARSPPIX                                        ASSEMBLED 29 1 72 AT 17,I5.DO BY ALIATO  PAGE
+                                465     633/ 341366       TAD (400006
+                                166     634/ 40115        DAC OP+11
+                                46г     635/ $41257       IS4 BCC
+                                468     636/ 281257       LAC BCO             ICOUNT DF CONSECUTIVE WORDE FOUND
+                                469     657/ 54167        SAD 09+2
+                                490     648/ 660663       JMP RDO             /OORRECT ND FOUND
+                                47%     641/ 220116       LAC I OP*1I
+                                472     642/ 448116       132 0+11
+                                473     643/ 548116       SAD OP+11
+                                        644/ 690435       IMP -*)             VIF PRES LIST CONSECUTIVE
+                                        615/ 740189       SMA
+                                476     646/ 606654       JMP BDE             VEREE LIST EXHAUSTED
+                                477     5477 286116       LAC OP+11
+                                470     650/ 36126d       ADD (-1
+                                        651/ 48115        DAC DR+LO
+                                480     652/ 228115       LAC I OP+1O
+                                481     653/ 603632       JMP HDO             /BBGIN SEARCH AGAIN
+                                462     554/ 201256       LAC GDM
+                                483     655/ 740209       SZA
+                                484     6567 101255       InS ERROB           ICANNOY PRODUCE BLOCK DATA
+                                AA5     657/ 441256       I84 ODM
+                                486     6684 160111       DEM I OPE    /THROW AWAX OLD ITEMS
+                                487     661/ 100371       IMS LIM             FGARBAGE COLLECT
+                                488     662/ 600635       JMP EDC
+                                480     6634 229116 BDO, LAC I OP 1I
+                                d00     6644 140199       SNA
+                                491     665/ 680634      IMP BDE              (TRYING TO USE I OND
+                               402      666/ 285119      LAC OP+3      /ADDRESS OF PIRST OF CONSEOUTIVE WORDS
+                               403      667/ "al1ee      sph
+                               490      670/ 600677      JMP EDR              PEREE LIST NOT INITIALLY CONSaCUTIVE
+                               495      671/ 361266      ADD (400000
+                                        6921 40118        DAc apt
+                               497      693/ 222y16      LAC I OP+L1
+                               408      674/ 591302      AND 117777
+                               499      6757 41226       DAG FRES      PRESET FRRS LIST
+                               50$      676/ 680701      IMP ODR+2
+                               561      677/ 226116 BDR,  LAC I OFAL1
+                               502      TAE/ F8115       DAC I OP+IO   JOIN FREE LIST ROUND BLOCK DATA
+                               503      7014 aasllA      LAG 09÷3
+                               504          241276       XOR (560006          /CONVERT TO AODRESS TYPE
+                                        763/ 68111       BAG I OP#A    ISET POINTER TO BLOCK DATA MARKER
+                               566      7641 200115      LAC OP411
+                               50*      705/ 341263       TAD (020001  /OLOCK DATA MARKER IS JA2
+                               508      7964 60110       DAG I OP+3    ASET DLOOK DATA MARKER
+                               500      797/ 620616     - AND I BDN
+                               5g0
+                               SAT
+                               512                 FRING STRUCTURE PROCESSOR MAY 1969
+                               513
+                               531                 FEL = JNS.
+                               515
+                               5g6      799/                           FORK ELENENT LENOT ONS
+                                            158699
+                               517      711/
+                               518      17 1. 24 196714  PEON
+                                            628719       JNE I FELEIMS
+                               5 i 0
+                               522                 PGGN IMG

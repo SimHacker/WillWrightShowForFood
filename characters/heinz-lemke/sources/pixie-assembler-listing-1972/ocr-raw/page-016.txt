@@ -1,0 +1,59 @@
+        / SyMELEC                                      ASSEMBLED 12 2 92 AT 12-44,57 BY EL1470  PAGE  * 5
+         408    1203/ 60919        DAC I 10
+         409    1204/ 200910       LAO 10
+                1205/ 51750        DAO ELAD      ISTART ADDRESS DE BLEMENT
+         4L1    1206/ 205121       LAC CON
+         412    1207/ 749901       SMA
+         413    1210/ 352203       TAD (1
+         #14    1211/ 45120        DAO COUNT
+                1212/ 101232       IMS TURNVE
+         416    1213/ 260010       LAd 10
+                12144 52771        DAC. SCRPAD
+         418    1215/ 501436       IMP INEL
+         420    1216/       SHRINK,       +
+         421    1217/ 218754       LAC TEMP
+         422    8220/ 512262       AND 177577   /ELIMINATE MINUS BITS
+         423    A221/ 352291       TAD (401      ACOMPENSATE FOR LOOSING SITS
+         #24    1222/ 748022       RAR
+         125    8223/ 512262       AND (7757)    /BLIMINATE SHIFTED MINUS RITS
+         426    1224/ 51772        DAO TEMPI
+         427    $225/ 211754       LAC TEMP
+         42B    12261 512209       AND 1700206   /PICK up SIGN OF WORD
+                1227/ 351772       TAD TBMP1
+         130    1230/ 51754        DAC TEMP
+         431    1231/ 621216       IMP I SHRINK
+         432
+         423    12321       TURNVE,                    ITURN 90, 109 OR 270 DEG
+         434    1233/ 601237       JMP.                ISTART OF NEW DF
+         435    1234/ 218750       LAG GLAD
+         436    1235/ MACIE        DAC 10
+         437    1236/ 40011        DAO 11
+         438
+         439    8237/ 228011       LAG III
+         440    1240/ 51973        DAC WORD
+         441    1241/ 552215       SAD (PAR gB
+         412    12421 601263       JMP  21
+                                      168000e    SAVH ES DIT AND IN
+         1 43   1243/ 512211       AND
+                12441 51754        DAG TEMP
+                8245/ 211773       LAC WORD
+                1246/ 252177       XOR 1249      /CHANGE SIGN
+         447    12471 744000
+                1250/ 640719       LS 1e
+                1251/ 512176       AND 1177400   4X BECONES MLY
+         450    1252/ 351754       TAD TEMP
+         451    1953/ 51754           TEMP
+                1254/ 211773       LAO WORD
+         453    1255/ 640510       LRS 1€
+         150    $256/ 512195       AND 1377      /Y BECOMES X
+         455    12574 351754       TAD TEMP
+         456    1260/ 66018        DAC I19
+         457    1261/ 101145       JMS CALDEF   PRESULT ONLY USED IN RROTAT
+         458    1262/ 601237       JMP TUPNYE5   ITAKE NEXT WORD
+         459
+                12631 212215       LAC (160000
+                12641 68019        DAC I 10
+         462    1265/ 212214       LAC (DJP SB 4
+         463    12661 60019        DAC I 19
+         464
+         465    8269/ 415120       152 COUNT     HIP COUNT=777776 TURN 180

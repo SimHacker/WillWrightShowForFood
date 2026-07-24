@@ -1,0 +1,63 @@
+                               /SyMELEC                                       ASSEMBLED 12 2 72 AT 12.44,57 BY NL147O  PAGE  44
+                               291     3764/ 182347      SDR
+                               202     3765/ 192347      ODR
+                               293     3766/ 192347      EDR
+                               29 d    3769/ 102347      SDR           VINTO DATA
+                               295     37701 224767      LACEX
+                               296     3771/ 552241      SAD (JMS
+                               297     3772/ 693776      JMP           (JUMP MESSAGES DONE
+                                                         JAS MESINS    /PRINT A MESSAGE
+                               298     3773/ 104005
+                               209     37741 764769      LAW %
+                               300     3775/ 693767      JMP                  /LOOP
+                               301     3776/ 295017
+                               302     57971 44767       DAC X  PRESTORE OLD VALUE
+                               303     4000/ 104941      JMS MESINg    MOVE & TO SUSPIOTURE
+                                304    4001/ 765154      LAW COLON
+                               305     1802/ 103352      MESOUT
+                                306    4003/ 184005      IMS MESING    /OUTPUT PRININAME OF SUSPICTURE
+                               307     4604/ 623375      AND I WAIT    JEXIT ALL DONE
+                               308     4005/       MESING,
+                                       4885/ 764769      LAW X
+                               309
+                               310     4009/ 184307      SOPOUT        /COPY MESSAGE
+                                311    4010/ 204366      LAC MASS
+                               312     4621/ 103352      MESOUT        /PRINT MESSAGE
+                               313     4012/ 764123      LAW MESIN41
+                               314     4013/ 103352      NESOUT        /PRINT CRLE
+                               315     40LA/ 624805      IMP I MESING
+                               326     4015/ 145013 NESING                    VEXPECTING CONMAND
+                                                         LAC MSI OEM SUNB
+                                       4616/ 284371
+                               318     4017/ 51754       DAC TEMP
+                               379     4020/ 184058       IMS MASINI
+                               320     4021/ 101050       JMS MESINI
+                               301     4022/ 104950       JMS MESINI   pPIRST 3 CHARS
+                               $22     4023/ 152754      OZM TEMP
+                               323     4024/ 764126       LAW MESL
+                               324     4025/ 51772        DAC TEMP1
+                               305     4626/ 231772      LAC I TEMPI
+                               326     4007/ 741200       SNA
+                               32'9    4030/ 684972       IMP MESIN3=3 INOT A COMMAND
+                               328     10311 545013      SAD sUMD      /OOMPARE
+                               329     4632/ 694957       JUP MESINZ   /ExECUTE
+                                       4033/ 451754       ISZ TEMP
+                               331     4934/ 451772       ISZ TEMPI
+                                       4035/ 604026       JMP .=7             /L00P
+                                333    4036/ 104041             JMS MESINg    IMOVE X TO SUBP IF &
+                                                   MESING, SOPEN
+                               334     4637/ 194331
+                               335     4640/ 623375       AND I MAIT
+                               336
+                               3277    40A1/       MESING,                    IMOVE & TO SUBPIOTURE
+                                338    4002/ 764967       LAWX
+                                339    4043/ 163141       FINDP
+                                340    4044 / 102347      FDR
+                                3A1    4645/ 103113       FINDS
+                                349    1646/ 103126       FINDN
+                                343    1047/ 624841       JNP I MESING
+                                344    4eÑe/                                  JADD A GHAR TO SUMB
+                                345    4A51/ 205913 MRSI"S, LAG SUMS
+                                346    40521 668766                    /LEFT & SIONED
+                                317    4053/ 371754       TAD I TEMP
+                                348    1A541 45013        DAC SUMB

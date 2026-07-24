@@ -1,0 +1,52 @@
+       ISYMELEC                                        ASSBMBLED 12 2 72 A'T 12,44-57 BY HL1479 PAGS
+                            /SYMELEC
+                                   DISP
+                  21/ 748040 21/   ALT
+                  22/ 698024 221   JMP BEORTP
+                  23/ 608030 23/   JMP BERTPI
+                  24/ 212257 BEORTP,     WAC (JMP INT         /INTERRUPT ENTRY
+                  25/ 4901         DAC I
+                  26/ 793302       JAr
+         13       29/ 186115       JMS ENDDRA
+         la ihe   30/ 205146 BERTPLA     LAC SAVINS
+                  31/ 740200       SZA
+         16       32/ 451742       ISZ ODOCOM
+                  33/ 165156       DEM I DEB
+         18       34/ 151743       DEM ROATAL
+                  35/ 151744       DEM ROOPY
+         20       36/ 151745       DzM RGROUP
+         21       37/ 151746       D2M RATTPO
+         22       40/ 151747       DEN RTFIRI
+         23       41/ 106364       IMS SBICL
+                  42/ 765209       LAW LB
+         26
+         27       13/ 790606       IDLA
+                  441 760042       ION
+         29       45/ 183395       WAIT
+         30          600045        IMP ,*1
+         3L
+         32
+         33
+         34
+         35
+         36
+         38       A7/ 160139 4DD,  DAR SB SC1 IN7      ILBIS AT cross
+         39       50/ 705312       D3S VE PSD
+                  51/ 169900       PAR
+                  524 768054       DJS
+                  53/ 685751       IMP SD
+                  541 260003       DDS
+                  55/ 233700       233700
+                  56/ 169009       PAR SH
+                  571 795313       DIS VR PAD
+          A8         160000        pay
+                  681 760063       OJS
+                  62/ 600123       IMP AD
+                  63/ 260003       ODS
+         52       61/ 1300         813760
+         53       65/ 169000       PAR
+                  667 70531        00S   PRD
+         55       6%/ 160009       PAR gp
+         56       70/ 969072       OJS
+                  71/ 601624       IMP orst
+         58       92/ 269005       DDS CH

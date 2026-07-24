@@ -1,0 +1,58 @@
+       /SYMELEC                                        ASSEMBLED 12 2 72 AT 12.44,57 BY HLI470  PAGD 69
+        899     6560/ 144741      ISZ POSDF
+        900     65611 212313       LAC (TOTENP I
+        901     6562/ 352216       TAD (400000
+        902     6563/ 64741        DAC I POSDF
+        9g3     65647 626554       JMP I INSROT
+        904
+        905     6565/ 212055 SEORXY,     LAC XB /RUBBER BAND LINE
+        996     6566/ 743200       SZA
+        999     6567/ 352203      TAD (1
+        908     6570/ 940200      SZA
+        909     6571/ 686577      JMP . 6
+        91*     65721 212056      LAC YB
+                65734 y4azee       SZA
+        912     65741 352203      TAD (1
+        913     6575/ 741209       SNA
+        914     6576/ 609403       JMP PENI     /BDTH COMPONENTS ARE ZERD
+        915     6577/ 205121      LAO CON
+        91,6    6609/ 552164       SAD (4
+                5601/ 741900      9KP
+        918     5602/ 106742      IMS SAVTEM    ISAVE INIT POS
+        $19     66037 212164       LAC 14
+        920     66041 45121       DAC CON
+        921     6606/ 686521      JMP SEGXY
+        922
+        903
+        925
+        926     6686/ 106315 SE0CX, IMS SXY            ITEST DRAW DIR
+        927     6607/ 265139      LAG CONSTD
+        928     6610/ 740200       SZA
+        9a9     66811 606565       INP SAGRXY
+        930
+        $32     66121 212855      LAC XR
+        932     6613/ 345126       TAD CONSTB
+                6614/ 7411e0       SPA
+                66157 606624      IMP SEOCNX    ITEST *X DIR                                                    ••? ••%040
+        935     66161 205121      LAG CON
+        936     661991 743209      SNA
+        997     6620/ 606659       IMP SHOCYl   ITEST GHANGE PROM 4X TO Y
+        938     6821/ 106732      IMS SAVNy     /FIRST ENTRY IN X-DIR
+        $39     6622/ 145121      02M
+        940     6623/ 606476         SBGX
+        941
+        942     6624/ 210055 SEGONX,     LAC XB
+        9A3     6625/ 345125       TAD CONSTX
+                6626/ 740109       SMA
+        943     6627/ 686631       IMP SEGCY
+        916     66381 285121      LAO CON
+                6631/ 552146      SAD 12
+        948     6632/ 606652       IMP SEGCYI   PTEST CHANGE PROM AX TO Y
+        949     66331 106732      JMS SAVAY
+        950     66341 212146      LO ta
+        931     66351 ASIAI       DAC CON
+        932     66961 606176       YMP SUGY
+        953
+                6637/ 212056 SBOCY, LAC YS
+        955     6610/ 345126      TAD CONSTS
+        956     GOAI/ 9A1100

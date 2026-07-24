@@ -1,0 +1,60 @@
+        ISYRHLEC                                       ASSEMBLED 12   AT 1204457 8Y HL147O      PAOE  45
+        349     4055/ 451754       ISZ TEMP
+         350    #056/ 624050       IMP I MESINI
+                4857/ 164134 MESIN2,      LAW MESSAG   /JUMP TABLE STARTS
+         352    4060/ 351754       TAD TEMP     /DISPLACEMENT
+         953    40011 5175%        DAC TEMP
+         354    4062/ 212142       LAC (1777           /FOR GRID CONSTANT
+         355    4063/ 431754       КОР І ТЕЙР    /ENTER COMMAND
+         356    4064/ 52034        DAO GRID      ISET GRID
+         957    4@65/ 495621       JHS POSOR     IPUT ON GRID POINT
+         358    4966/ 205146       LAC SAVINS
+         359    4067/ 740208       SZA
+         36€    4070/ 451742       I8Z CDOCUM
+         361    4071/ 623375       AND I WAIT
+         362    4072/ 764122       LAW MESINA    IFORLF IP WRONG COMMAND
+         362    4073/ 193352       MESOUT
+         364    4074/ 633375       AND I WAIT
+         365    4075/ 76476 MESINS,       LAW X        (MESSAGE STARTS/
+         366    4076/ 182347       SDR
+         367    +077/ 224767       LAG IX
+         368    4108/ 552241       SAD (100000
+         369    4101/ 604104       JHP  3              /ON NIL
+         379    4102/ 764767       LAW *
+        371     +103/ 604076       JMP •*5             /LOOP TILL END OF DATA
+         372    4104/ 765066       LAH NH
+         373    4105/ 102312       JD0SP
+         374    4106/ 205966       LAC NM
+         $*75   41071 64767        DAC                 ISTART SIELIST
+         376    4188/ 294371       LAC MSIN
+         377    4111/ 4436*7       DAC MS       ICHAR POINTER
+         378    4112/ 444367       ISZ           AMISS/
+                4113/ 224367       LAC
+         3 g0   4114/ 545155          CR
+         381    4115/ 623375       AND I WAIT   PEXIT ALL DONE
+        39%     4116/ $5066        DAC I NM
+         383    1117/ 765966       LAW NN
+        384     4120/ 102347       EDR
+        385     4181/ 604112       JMP                 100P FIL GOPY CONPLETE
+        386     4122/       MESIN4,       277
+        387     4123/   615        615          POR
+        3A8     4124/   212        212          14F
+        389     4125/   215        215          POR TERMINATION
+        3 0đ
+        391     4126/ 179402 MESL, 179402       ILABEL
+        392     4127/ 302114       302114       /UNLABEL
+        393     4030/ 271424       371424       ITITAN
+        304     4031/ 122511       122511       /GRID
+        395     4233/ 262701       262701       ISTART
+        306     41334                           /TERMINATION
+        30%     4134/ 152035 MESSAO,      ISZ RLABEL   /LABEL
+        398     4135/ 152035       DEM PLAREL   /UNLABBL
+        399     41361 604141       IMP MESINS   PRTTAN
+                4037/ 212141       LAC (1760    ISET GRID ON
+                Д4ДAA 680024       IMp BEGRIP   /INITIALIZE
+        102
+        493     4141/ 765146 MESINS,
+                                             SAVZYEN CASEHRRE E TOAN COMNUNICATION
+                4R42/ 103126       PINDN
+        405     4243/ 181701       IMS LTPX
+        196     4144/ 604174       JMP ERRA     /CRECKSUM FAIL

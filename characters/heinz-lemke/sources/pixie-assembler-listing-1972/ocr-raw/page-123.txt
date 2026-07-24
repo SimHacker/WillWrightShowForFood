@@ -1,0 +1,61 @@
+                               /RSPPIX                                        ASSEMRLED 29 1 72 AT 17,15,46 BY NI1470  PAGE  i1
+                                581     774/ 698777       JMP          POINTER ON RINGSTART
+                                                          I4G i OPАl
+                                582     775/ 220106
+                                5B3     976. 608183       JMP OP-2     ALDOP
+                                584     779/ 290105       LAO OP
+                               585     Д609/ 629766       JME I FINDS-JNS            /EX1T
+                                586
+                               587
+                               588
+                               589                 PINDiT = JNS .
+                                800    AG01/                           EIND NAME DE ELENENE
+                                591    1862/ 100109       IMS OU+5
+                               502     2863/ 222106       LACI OP+I
+                                593    4001. 591276       AND (500000  ITEBT IF ATOM
+                               594      1605/ 741200      SNA
+                                505    1866/ 631012       IMP
+                               505                        UE Bs"
+                                       1007/ 295195
+                                597    AOIO/ 190222                    INEXT
+                                598    1021/ 601893       JHP          /LOOP
+                                5g9    10121 286185       LAC OP
+                                606    HA1S/ 621801       JMP I FINDN-INS            /EXIT
+                                60đ
+                                602
+                                603
+                                684
+                                695
+                                606    10L4/     • PINDP-JM3,           I MOYE TO TOP OF HEAD IE ON ATNAME
+                                647    1015/ 100109       JNB Dp-5
+                                698    1616/ 201976       LAC (100000
+                                609    8017! 520146       AND Y OP+I
+                                610    2a26/ 741209       ЭNA
+                                6д1    1021/ 601024       IMP           / IF ATNAME
+                                612    8022/ 290195       LAC 0P
+                                613    1623/ 621914       AND I FINDE
+                                614    1024/ 209145       LAG DP
+                                615    N025/ 498222       DR
+                                616    1026/ 100242       GAR
+                                617    1027/ 621914       AND I FINDP
+                                618
+                                619
+                                620                / 90 ROUND NEAD FINDING NOXT ADDRESS APTER APELYING FUNCTION
+                                621                / NOVE X PO NEXT ITEM IN HEAD AND IF RS RXECUTE PI, IP RP EXSCUTE PZS
+                                622                / GALL BY LAR ORHAS ENTERE LAW XE LAN FI, LAN P2
+                                693
+                                624    A839/ 420345 JRHA, XCT I ENTER-INS     / PICK Dр X
+                                695    1031/ 100109       IMS 0E.5
+                                626    1632/ 40116        DAC D9+3      GEP CONTENTS OF X
+                                62°%   1a33/ 220110       LAG I OP+3
+                                628    1634/ 501275       AND (109600
+                                629    1935/ 141200       SHA
+                                630    1836/ 60194d       IMP*6         •PE ON ATNAME
+                                631    1937/ 299105       Lao ge
+                                632    1A404 1$0222 3RLe  SOR
+                                633    1041/ 295196       LAO OP1
+                                634    1642/ 540119       BAD 0P÷3
+                                635    1043/ 638357       CXIT          / IE DACK TO STARFING-POINT
+                                636    1OAA RUBIA         LAC OP
+                                697    1045/ 101914       FINDP
+                                638    1046/ 200166       LAO OPII

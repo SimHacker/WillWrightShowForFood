@@ -1,0 +1,58 @@
+       IRSPPIX                                         ASSEMBLED 29 192 AT 17.15.40 BY PLIA70  PAGB
+        175      245/ 190251      DAR7
+                 246/ 60185       DAO / DP      /MOVE NAME
+        177      247/ 200105      LAC DP
+                 250/ 629242      JUP I CAR-IMS
+        179
+        1.80     2511                           ISET OP*1 WITH ADDRESS FROM AC AND MS 5 BITS 69100
+        181      262/ 501302      AND (1997)                 AND MOVE 1O NEXT ITAM IE DN NONITRN
+        182      253/ 341275       TAD (IMS
+        193      254/ 40106       DÃO DP+1
+        184      355/ 220106      LACI OP+1
+        185      2564 741108      SPA
+        186      257/ 699252      JMP           /DO AGAIN IP ON NONITEM
+        187      250/ 200196      LAG OP+1      /PRESORVE AC
+        168      261/ 626251      AND & CAR
+        108
+        10%                 PUSE JMS
+        192      262/                           /PUSH DOWN (LISTNAME
+        193      263/ 103199       JMS OPES
+                 264/ 34147        TAD ()
+        195      265/ 41240       DAC ELI       PPREVUNT TAIL BEING SWEPT UP IF GARDAG COLLECIED
+        196      266/ 228106       LAC ( OP+I
+        107      2672 4919         DAC DP+2     /SAVE ITEN
+        198      270/ 159126      FLST          IMAKE SPACE FOR NEW ITEM
+        190      2714 200127      LAC DE 2
+        200      272/ 62196        DAC T OP
+        201      973/ MAGIeS      LAG DP
+        202           60195        DAC
+        203      295/ 440106      182 OP1
+        204      2761 109126      FLST          IMAKE MORE SPACE
+                 2771 299197      LAC OD+Z
+        286      300/ 60106        DAC I OP+I   ICOPY ITEM
+        207      391/ 291249      GAC ALI
+        208      302/ 241276       XOR (500000
+        209      303/ 69113        DAO I DP+6   AJOIN UP
+        210      3041 298105      LAC DP
+        221      305/ 620262      IMP I PUSH-JNS
+        212
+        243
+        214                 p0p  JM5.
+        215      396г                           /POP UP (LIST NAME
+        218      3291 AleS        DAC DP
+        217      310/ 220125       LACI OD
+        218      3117 42137       DAC OP+2      ISAVE NAME
+        219      3227 202195      LAG OP
+        220      333/ 180222       SDK
+        221      314/ 2iA5        LAO OPAI
+        322      319/ 241276       KOR (500000
+        223      3IS/ 69107        DAC 0p+a     FODIN UP
+        204      317/ 263175       LAG OP
+                 3201 620346       INP I POP-JMS
+        226
+        227      321/       STAK-JMS,           YOPERAND TO STACK
+        228      322/ 581302       AND 117777
+        229      323/ A0119        DAG
+        238      324/ 441234       I9Z Lop
+        231      325/ 201234       LAC LOP
+        232      326/ 541235       SAD LKgEG

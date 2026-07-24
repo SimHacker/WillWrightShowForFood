@@ -1,0 +1,58 @@
+        IRSPPIX                                        ASGEMBLED 29 1 72 AT 17.13,40 BY FL147O  PAGB
+         497     545/ 109595       JMS 9B01
+         49B     546/ TAADLA       RAL
+         409     547/ 949100       SMA
+                 550/ 660554       IMP          /JUME GOT MORE GARBAGE
+                 551/ 220114       LAC  OP-77
+         41₴     552/ 501271       AND (577777
+         413     $53/ 69533        JMP =20       ARESTORE LIST ITEM AND LOOP
+                 554/ 203114       LAC OP$7
+         415     $551 341266       TAD (490690
+         415     556/ 60115        DAO  OP+10   /COLLACT * WORD
+         427     5571 502302       AND 117777
+        418      5602 449115       182 OP+10
+        419      561/ 540125       SAD OP+10
+        120      5621 449116       I37 OP411    DUAZNON MOXVDIONI BAIINOGSNOO/
+        421      563/ 660530       JMP n 33     /LOOP
+        422      564/ 220116       LAC Op+11
+        423      565/ 741209       SNA
+        424      566/ 101255       THS ERROB    /ORROR AXIT IP NONE CONSECUTIVE
+        425      867/ 201226 3AR32. LAO PREC
+        126      570/1 622371      IMP LIM      /OK AXIT
+                 5714       ЭBD,                /POR BLOCK DATA
+        428      572/ 228114       LAGIDPY
+        429      5734 501271       AND 1577777
+        430           62114        DAC T D9EY
+                 575/ 501302       AND 117777
+        492      5761 40114        DAC          /MOVE OPAT TO END OF BLOCK DATA
+        433      579/ 541253       SAD ENO
+        131      690/ 600564       JMP GAR82-3
+        435      601/ 229591      LAC G8D
+        136      682/ 381265       ADO                 PRESTAR? THIS SECTION
+        437      693/ 48571        DAC GED
+                 874 / 628571      IMP I G3D
+                 605/       3801,               ITO ELIRINATE DEAD BLOCK DATA
+                 686/ 2aa1lA       tad op
+                 6074 341901       TAD 120009
+                 6I9/ 34127        TAD
+        444      6111 560111       3ADID94Y
+        445      612/ 620605      IMP 1 9801
+                 523/ A011        DAG DP+12
+        AAT      AIAI 1ESL1Y       02M 1 09÷12
+                 615/ 500610       IMP                 /LOOP FOR PURTRUR ITEMS
+        149
+        450                 ARLOOR DATA PRODUCER
+        A51                 BDNEJS
+        452      616/
+        453      619/ 161253       0'2M END
+        451      6204 141256       DZM NGDM     IZERO GARBAGE COLLECTION MARKER
+        455      6212 34129        TAD
+        456           1019T       ONC OF+2      INO ON CONSECUTIVE MORDS NEEDED
+                 623/ 429516       KOT T RDNEJMS
+        458      624/ A0111        DAG OP$4
+        459      625/ 220111       LAGI OPE
+        46%           40111        DAG OPE
+                 627/ 201227      LAC FRES
+        462      430/ 49119 oDc,  DAC OPFS
+        463      631/ 11259       DaM wace      IZERO COUNT
+                 SOEMASIAN

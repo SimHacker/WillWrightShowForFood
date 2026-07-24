@@ -1,0 +1,61 @@
+                               /SyMELEC                                       ASSEMBLED 12 Z 72 AT 12,44-57 BY HLIATA  PAGE  48
+                                5 23   4312/ 102367       JAR          / INTO LIST
+                                524    4313/ 804366       LAC MESS     PNESSAGE TO START IN NESS
+                                525    4314/ 42234        DAC OP+2
+                                526    4315/ 222233       LAG I OPI
+                                527    4316/ 552241       SÃD (JMS     ISKIP UNLESS NIL
+                                526    4317/ 205155       LAC OR IOR TERMINATOR
+                                529    4320/ 62234        DAC I OP Z
+                                53€    4321/ 545155       SAD CR
+                                531    4322/ 624307       AND I COPOUT fEXIT IF ENO
+                                532    4323/ 512241       AND (JNS
+                                533    4324/ 741200       SNA          ISKIP IF AODRESS STYLE
+                                534    4325/ 442334       ISZ OP 2     fOTHERWISE ADVANCE CHAR POINTER
+                                535    4326/ 762233       LAW OP 1
+                                536    432/ 102347        ODR           INEXT IN LIST
+                                537    4330/ 604315       IMP --13     1600P
+                                538
+                                5g9
+                                540    4331/                           / COPY MSIN TO PRININAME
+                                                   SOpINWSHSMS OP-5®   / SAVE NAME
+                                541    4332/ 102225
+                                542    4333/ 762233       LAW OP+1
+                                543    4334/ 103126       FINDN
+                                544    4335/ 102367       GAR          VINTO PRININANE
+                                545    4336/ 102347       ODR
+                                54,6   4337/ 204371       LAC MSIN
+                                547    4340/ 41367        DAC MS
+                                548    4341/ 224367       LAG I MS
+                               549     4342/ 545154       SAD COLON
+                                55€    4343/ 444367       192 M5
+                               551     4341/ 221367       LAG I MS
+                                562    4345/ 552137       SAD (215
+                                553    4346/ 212241       LAG (JMS
+                               554     4349/ 62233        DAC I DP 1
+                                555    4350/ 552241       SAD (JMS
+                               556     4351/ 624331       AND I COPIN
+                               557     4352/ 762233       LAW OP 1
+                               558     4353/ 102347       SDR
+                               559     43541 681343       IMP .-11
+                               569
+                                561    4355/   316 NOTE,  316
+                               562     43561   317        317
+                               563     4359/   324        324
+                               564     1360/   305        305
+                               565     4361/   240        240
+                               866     43621
+                               567     4363/   615        515    /FOOL OUT TO GET OR
+                               568     4364/   212        212
+                                       43657   215        215    /grop
+                               571
+                                572
+                               573
+                                5 un 1 4366/  1372 MESS,  MSIN 1
+                                       436%/  4372        MSIN 1
+                                                   S ur,
+                                576    4376/  4372
+                                                         ISTN
+                                       4391/  4372 MSIN,
+                               548     43721   215        215
+                               579
+                               588     4A41/       MSIN 50/

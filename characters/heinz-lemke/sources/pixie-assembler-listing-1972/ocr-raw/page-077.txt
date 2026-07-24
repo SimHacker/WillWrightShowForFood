@@ -1,0 +1,60 @@
+                         10
+                               ( SyMELEC                                      ASSEMBLED 12 2 72 AT 12,44,57 BY H41479  PAGE  76
+                                118    7202/ 103076       INSRT
+                                119    7203/ 771756       LAW INST
+                                12€    7204/ 627171       IME I FONBL
+                                121
+                                1 22   7205/       ABSXY,              PEIND ASSOLUTE & ANDY
+                                123    7206/ 204442       LAC TEMPDE 1
+                                124    7287/ 512142       AND (1777
+                                125    7210/ 45055        DAC YTOT
+                                126     7211/ 234441      LAC TEMPDE 2
+                                127     1282/ 512141      AND (1777
+                                128    7213/ 45054        DAC XTOT
+                                129    1224/ 627205       JMP I ANSXY
+                                136
+                                131    7215/       FOLBLe              /FORM LINE AND POINT BL
+                                132    7216/ 225044       LAC I COMPOS
+                                133    7217/ 352340       TAD (0157777
+                                134    9226/ 740200       SZA
+                                135    7221/ 607236       JMP                 /FORM LINE BL
+                                136    7222/ 445aAA       1SZ COMPOS
+                                137    7223/ 225644       LAC I COMPOS
+                                138    9224/ 352162       CAD (575797
+                                139    72251 740100       SMA
+                                140    7926/ 680463       JMP FOBBL    /FORM BRANCH BL
+                                141    7227/ 627215       JMP Y POLRL
+                                142
+                                143    7238/ 193935       FEL
+                                144    7931/ 52017        DAC LINE
+                                145    +232/ 765664       HAW SBP1
+                                146    9233/ 103266       ADDW
+                                       7234/ 18307G       INSRI
+                                148    1235/ 772017       LAW LINE
+                                149    7236/ 103126       FINDN
+                                150    72376 762233       LAW DP 1
+                                151    73401 10234        CDR
+                                152    7241/ 10234        SDR
+                                153    7242/ 212295       LAC (3
+                                154    7243/ 62233        DAC I OP 1
+                                155    75441 762233       LAW DP 1
+                                156    7245/ 102347       CDR
+                                15"    79461 162233       DZM I OP 1
+                                158
+                                159    7949/ 212062        AC ХТОTU    FYEST WETHER FIRSTp DATA
+                                160    92561 352063        AD YTOTU
+                                161    72511 741208       SNA
+                                162    7252/ 107440       IMS UPDAXY
+                                163    70531 lae1n        LAU LINE
+                                164    72547 19749        IMS POIDAT   JINSRT IST LINE P DATA XTOT AND/OR YrOT
+                                165
+                               166     9255/ 205130       LAC CONSTD   ITEST RUBBER BL
+                                       79561 741200       SNA
+                                168    9257/ 697264       IMp  5
+                                169    72601 187312       INS MASKX
+                                       12611 218107      LAC (TEMPDE 3
+                                       72621 45044       DAC COMPOS
+                                       72631 607267      JMP . 4
+                               173
+                               174     7264/ 187312      IMS MASKX
+                                175    7265/ 205954      LAC XTOT

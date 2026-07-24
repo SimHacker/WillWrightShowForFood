@@ -1,0 +1,61 @@
+                                                                             ASSEMBLED 12 & 72 AT 12.44-57 BY HL1STE  PAGE  1 8
+                              / BYMELEO
+                               592
+                               5a3
+                               534    3436/ 204744 INSL, LAC TEMPEN
+                               585    8437/ 740001       OMA
+                               586    1440/ 352165       TAD (5
+                               587    1441/ 344741       TAD POSDE
+                               5g8    1442/ 740120       SMA
+                               S 89   1443/ 605483       JMP PENI
+                               500    1444/ 760800       Le AW
+                               501    1445/ 351759       TAD ELAD
+                               502    1440/ 444742      ISZ POSDFL
+                               503    14471 444742       1S2 POSDFL
+                               504    1450/  54742       DAC I POSDFL
+                               505     1451/ 106554      JMS INSRET
+                               596    14521 101454       INS NOVER
+                               507    $453/ 685403       JMP PENI
+                               598
+                               599    {4541       MOVOR.               (MOVE CROSS AFTER INSERT ELEM
+                               600    +455/999777        LAM
+                               601    1456/ 45122        DAC CONI
+                               602    1457/ 205121       LAC CON
+                               6A3    14601 740200       SZA
+                               694    14611 601478       JMP
+                                           205641        LAc XcROss
+                               605    1462/
+                               696    1463/ 352236       TAD (100
+                               607    1464/ 45641        DAC XCROSS
+                               698    8465/ 212000       LAC XBML
+                               609    1466/ 51760        DAC XBMO
+                               618    1467/ 621454       IMP i MOVER
+                               611    8470/ 352242       TAD (777776
+                               61,2   1471/ 949200       SZA
+                               613    1472/ 601561        MP, 7
+                                      1473/ 777700       •Al 1770
+                               615    1474/ 345641       TAD XCROBS
+                               616    1495/ 45641        DAG XEROSS
+                               517    1476/ 212000       LAC XBML
+                               бдв    147%/ 51760        DAC XAMO
+                               619    1600/ 621454       JMP I MOVER
+                               626    1661/ 740100       SMA
+                               621    1502/ 601507       JMP
+                               622    1583/ 777960       LAW 1eO
+                               623    1504/ 345640        AD YOROS
+                               624    15652 45640         AS YOROS
+                                      1506/ 601512       JMP
+                               6%6     1507/ 205640      LAC YCROSS
+                                       1510/ 352236      TAD (160
+                               628     ASA/ 45648        DAC YCROSS
+                               629     85821 212203      LAG (1
+                               630     1513/ 45122       DAC CONI
+                               631     1514/ 212001      LAC YBML
+                               632     1515/ 51762       DAG YBMO
+                               633     9516/ 621454      JMP I MOVER
+                               634
+                               635
+                               636     1517/ 740160 CONELE,     SHA          /CHECK FOR POS OR ELEM
+                               69mg    1520/ 601561      JMP SEOEY     /IN CURRENT LINE SEQUENCE
+                                       1531/ 106315      IMS SXY
+                               639     1522/ 211760      LAC XВMO      PTAKE OLD AÑD NEW XBM, IF

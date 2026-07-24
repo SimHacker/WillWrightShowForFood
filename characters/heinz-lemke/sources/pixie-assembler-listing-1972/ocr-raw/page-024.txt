@@ -1,0 +1,60 @@
+        /SyMELEC                                       ASSENBLED 12 & 72 AT 12-14,57 BX 1U1479   PAGE 83
+         852                       RELOCATE DATA IF NECESSARY (TItAN tO PDP Only)
+         853
+         B5A     2940/ 295935      LAG RELCON
+                 2041/ 741200                    SNA
+                 2042/ 602072                                 JNP RICEND    / any relocation necessary?
+         855     2643/ 445036 RELOCI, I5'Z ADRI
+         856     2044/ 205÷32 RELOCA,  ADR
+                 2045/ 740091                    CMA
+                 2046/ 345036                                 TAD ADRI
+         857     2047/ 749100      SMA
+                 2050/ 602072                    JMP RICEND                 / end of data area?
+         858     2051/ 225936      LAO I ADRI
+                 2053/ 552241                    SAD (JMS
+                 3053/ 602943                                 JMP RELOCI    / NIL Item?
+         859     2054/ 512163      AND 1760000
+                 2055/ 741200                    SNA
+                 2656/ 602943                                 JMP RELOCL    / aton?
+         860
+         861     2057/ 225936      LAC E ADRI
+                 2A60/ 345035                    TAD RELCON
+                 2061/ 65936                                  DAC I ADRI    / .., else relocate iten
+                 2062/ 512163      AND (760006
+                 2063/ 562162                    SAD (20009                 / block header?
+                 20641 TAI00e      SKP
+                 20651 602043                    JME RELOCI
+                 2066/ 225A36      LAC I ADRI
+                 2067/ 512912                    AND (17777
+                 2070/ 45036                                  DẠC ADRI      / yes, skip oyer blockdata
+         865     2471/ 602044      JMP RELOCA
+         866
+         967                 RLCEND,
+         868     20721 441701 PXERL, IS2 LTPY           l incoming Elle too large (Iitan to pDe only)
+         $69     2073/ 441701 PXER3. ISZ LTPX           / Dot PIXID data (Titan to Pop only)
+                 2A74/ 792361 PXER2, LSA                / checkgum failure on transfer
+                 29951 102074      JMP.1
+                 20761 702322      LKD
+         873     2emm/ 165163      DEM I END
+                 2100/ 225156      LAC I DFB
+                 2101/ 141200      SNA
+                 2102/ 621701      JMP I LTPX
+         8 -ymg  2103/ 709601      IDSI
+         B.g     21041 602183      IMP
+                                   3ИР і LТРХ
+                 2185/ 621701
+         880
+         991
+         882
+         883
+         884     21661 769676 PXID. 967676
+         885
+         8e6
+         8g7                       /s.Re   AWAIY INTERRUPT AND READ/WRITE
+         888
+         €89
+         098     2107/ 740048 RW.  HLT
+         891     2110/ 45927       DAO SAV              / save word (ie writino)
+         802
+         893     2021/ 102125      IMS WAITUK
+         89d

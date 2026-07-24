@@ -1,0 +1,60 @@
+                               / SYMELEC                                      ASSEMBLED 12 2 72 AT 12-44-57 BY HL1A7e  PAOS  58
+                                288    5546/ 212130
+                                                          LAG 136117
+                                209     5547/ 65156            DEB      /ENABLE PERMOF
+                                #90
+                                291    5550/ 45637        DAC TRACK     VENARLE CONTROL LBIS
+                                292    5551/ 205123       LAC DRAWMO    /SERVES LE E ANDS
+                                203    5552/ 741260       SNA
+                                294    5553/ 695560       JMP
+                                295    5554/ 212127       LAG TOMP FD
+                                206    5555/ 40053        DAC LBD 4
+                                297    5556/ 45231        DAC LBSP
+                                298    5557/ 605563       JMP
+                                299    5569/ 212126       LAC jJMP SD
+                                300    5561/ 40953        DAC LBD &
+                                301    5562/ 45231        DAC LBSF
+                                302
+                                303    5563/ 200347       LAC LBD
+                                304    5564/ 54575€       SAD ERASY    INOT EXTENDED PIXIE
+                                305    5565/ 741059       SKP
+                                306    5566/ 100451       JMS SERSWI
+                                307
+                                398    5567/ 186364       IMS. sErEL
+                                309
+                                310    5579/ 625534       JMP I CLOCK
+                                312
+                                313    5571/                           /VERTICAL EDGE VIOLATION
+                                                   BDAWY, LAG 3
+                                314    5572/ 200803
+                                315    5573/ 741200       SNA
+                                326    5574/ 605602       JNP          ISTART TOMPDE IS PDP HITS EDGE
+                                317    5595/ 204746       LAC TEMPY
+                                318    5576/ 740200       SZA   VIM ZERO THEN SET HIGH VALU
+                                319    5579/ 776258       LAW 16250    PELSE SET HOW VALUE
+                                320    5660/ 359195       TAD (2RI640
+                                321    56011 45648        DAC YCROSS
+                                322    5602/ 965209       GAW LB
+                                393    5603/ 900606       IDLA
+                                324    5604/ 625571       JMP I EDGEV
+                                3,5
+                                306    5605/       EDGEH,              (HDRIZONTOL EDGE VIOLATION
+                                327    5666/ 200043       LAC 3
+                                328         741260        SNA
+                                329    56191 685616       IMP
+                                330    5611/ 204745       LAC TENPX
+                                331    5612/ 740200       9ZK
+                                332    5613/ 776250       LAW 16250
+                                       66141 352124       TAD (101640
+                               334     5615/ 45641        DAC XCROSS
+                                335    5616/ 165200       LAW LA
+                               336     5611 790696        IDLA
+                                       56261 625645       IMP I EDGEH
+                                338
+                                339
+                                340    56912       pOSCR,
+                                       55091 204746      LAC TEMPX
+                               342     5623/ 512142      AND (1777
+                               343     5624/ 352154       JAD (220000
+                               314     5625/ 45640       DAC YOROSS
+                               345     5626/ S1S01A      AND GRID

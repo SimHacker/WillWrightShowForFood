@@ -1,0 +1,62 @@
+                                                       ASSEMBLED 12 2 72 AT 12,44,57 BY RLIA7O  PAGE 85
+       ISYMELEC
+        640    10807/ 765017      LAWY
+        641    10118/ 192347      ODR
+        642    10121/ 225017      LACIY
+        643    101I2/ 15060       DAC XTOTIN
+               10113/ 345056      TAD XINS
+        645    1OI1A/ 45056       DAS XINS
+        646    10115/ 630101       IMPI VAIN2
+        647
+        618
+        649
+        650    20116/       DISCON,                    /DISCONNECT LINGS
+        65%    10117/ 763155       LAW GRHA
+        652    10120/ 192472       ENTER
+        653    10121/ 765064      LAW SBPI
+        651    18122/ 790143       LAW DIS002
+        655    10123/ 770125       GAW DISCO1
+        656    108241 638116       TMP DISCON
+        657
+        658    +6825/ 765064 DISCO1.     LAW SBPI      IFOUND LINE
+        659    10126/ 45017        DAC Y
+        650    101271 765817       LAW
+               10130/ 103113       FINDS
+        661
+        6 62   10131/ 103079       NULER
+        663    10132/ 764766       LAW SBPI1
+        66đ    10133/ 103266       ADDW
+               10134/ 103976       INSRT        PLINA INTO NEW SUSPIOTURE
+        665
+        666    16135/ 165817       LAWY
+        6697   16136/ 119160       JMS POSIT
+        668    10137/ 118144       JMS DISCD3   UPDATEP DAIA OF LINE
+        669    10140/ 765017       LAW
+        676    16141/ 102347       ODR
+        691    10142/ 119144       JMS pIseoa
+         6*72
+        573
+               101A3/ 602584 DISCD2,      EXIT
+        6*5
+        676
+        67
+         6 m 8 101441       DIS003,                    /UPDATE P DATA OF LINE
+         670   20145/ 225917       LAC IY
+         690   10146/ 345055       TAD YTOT
+         681   10147/ 512212       AND (17797
+         682   10150/ 65217        DAGLY
+         683   10151/              LAU Y
+         684   10152/ 192347       ODR
+         685   16153/ 225017       LAGIY
+         696   10154/ 14505A       TAD XTOT
+               101552 512212       AND 117777
+         688   101561 65917        DÀO
+         689   101571 GaNIAA       IMP  DIS0O3
+         698
+         601
+         602   101607       POSIT.              VODSICION POINTER INTO DATA EREA
+         693   10161/ 165917       LaWy
+         604    101621 183196      FINDN
+         60K    10163/ 102347      ADR
+         690    191641 102347      ADR
+         697    16165/ 1093A       SDR

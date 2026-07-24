@@ -1,0 +1,57 @@
+        ISYHELEC                                       ASSEMALED 12 2 72 AT 12.44,57 BY HL147A  PAGE  33
+         465    27681 352216       I'AD (400000
+         466    27611 42243        DAC DP+11
+         46%    27621 452021       I32 BCC
+         468    2763/ 212821       LAC BCO             IOOUNT OP CONSECUTIVE WORDS FOUND
+         469    27641 542234       SAD OP+2
+         474    2765/ 683010       JMP BDD             /CORRECT NO FOUND
+                27661 222243       LAO  OP:11
+         472    9671 442243        ISZ OP+11
+         4*73   27701 543243       SAD OP411
+                29911 602762       JMP                 VIF FREE LIST CONSECUTIVE
+         475    29421 740108       SMA
+         476    2779/ 693801       JMP BD3             /FREE LIST EXHAUSTED
+                27741 202243       LAC OP+11
+                27751 312242       ADD {=1
+                2776/ 42242        DAC DP+10
+         190    27774 222242       LAG I DP+16
+                3900/ 682755       JMP BDC             /BEGIN SEARCK AGAIN
+         482    3401/ 212028 aD4,  LAG GDM
+         483    30021 748200       3ZA
+         484    3003/ 104221       JMS ERRGB           /CANNOT PRODUCE BLOCK DATA
+         435    30941 452029
+         486    3405/ 162236                     ITHROW AWAY OLD ITEMS
+         A87    3006/ 102516       IMS LIM             /GARBAGE COLLECT
+         488    3807/ 602755
+         489    3019/ 222243 BDO,
+         A9€    3811/ 742100
+         4g1    3012/ 603001                           ITRYING TO USE I END
+         492    3013/ 202235                    IADDRESS OF FIRST OF CONSECUTIVE WORDS
+         493    3014/ 741100
+                3015/ 603024                           /FREE LIST NOT INITIALLY CONSECUTIVE
+         405    3616/ 312216          1400000
+         496    3017/ 42235
+         407    3020/ 222243
+         498    3021/ 512212       AND (17777
+                3022/ 52011        DAC FREE     PRESET FREE LIST
+         5g8    39331 683026
+         501    30241 222243 BDR,
+         502    3625/ 62242        DAC I OP+10  JOIN FREE LIST ROUND BLOCK DATA
+         503    3826/ 202235
+         5o1    3827/ 252157
+         595    3030/ 62236
+         506    3031/ 202243       LAC OPIIL
+         507    3032/ 352152          (420001   /BLOCK DATA MARKER IS J07
+         508    3033/ 62235                     ISET HLOCK DATA MARKER
+         509    3034/ 622743
+        510
+         512                VRING STRUCYURE PROCessoR MAY 1969
+         513
+                            FEL & JMS.
+         515
+         516    3035/                           (FORM ELEMENT LENGTH ONE
+         517    3036/ 750008
+         578    3037/ 103041       PALN
+         519    3040/ 623035       IMPY PELEJMS
+         521
+         522                FELN A IMS.

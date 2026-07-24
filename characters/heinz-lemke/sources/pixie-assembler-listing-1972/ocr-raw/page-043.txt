@@ -1,0 +1,60 @@
+                               ISyMELEC                                       ASSEMBLED 12 2 92 AT 12244,57 BY HL1470  PAGE  4 2
+                                175
+                                176    3666/ 205132 WAITIO,     LAG PMODE     PREQUESTED MODE
+                                177    3607/ 545133       SAD CMODE    /CURRENT MODE
+                                178    3610/ 603650       IMP WAITA    INO NODE CHANGE
+                                179    3611/ 45133        DAC CMODE    ISET NEW MODE
+                                186    3612/ 740100       SMA          /ENTERING TRACRING MODE
+                                161    3643/ 663636       JMP WAITI    ISERVICE TTY
+                                182    3614/ 103676       JMS WAITS     ATNAME FROM SNAPSHOT LISI
+                                1a3    3615/ 110717       FLEAS         IFLEA ON BOINT ELEMEN
+                                184    3616/ 210754       LAC PNT1
+                                185    3617/ 45€50        DAO YP       ISAVE FOR TRACKING
+                                186    3620/ 238754       LAC I PNTI
+                                187    3621/ 748001       OMA
+                                188    3622/ 352203       TAD (1
+                                189    3623/ 344746       TAD TEMPY    /ADD PEN COORD
+                                196    3624/ 45053        DAC TRAKY
+                                191    3625/ 770754       LAW PNTI
+                                192    3626/ 102347       gDR
+                                193    3627/ 218754       LAC PNTI
+                                194    3630/ 45651        DAC XP       /SAVE POR TRACKING
+                                195    3631/ 230754       LAC I PNTL
+                                196    3632/ 740001       SMA
+                                197    3633/ 352263       TAD 11
+                                398    3634/ 944745       TAD TEMPX    PADD PEN GOORD
+                                199    3635/ 45052        DAC TRAKX
+                                280    +6367779799 WAITL, LAM          fHERE SERVICE TTY
+                                201    3637/ 545137       SAD MIN
+                                202    3640/ 103370       WAIT-5       TEINISH INPUT WITH LF
+                                203    3641/ 205141       LAO IMC
+                                204    3642/ 941209       SNA
+                                205    3643/              AND I WAIT   /EXIT
+                               206     36446 145141       DZM IMC
+                                207    3645/ 777777       LAM
+                               208     36461 45137        DAC MIN
+                                209    3649/ 603732      IMP NESIN     IMESSAGE READY
+                               210
+                               241
+                               212     3650/ 741289                    THERE NO MODE CHANGE
+                                                   WAITA, JHP VALTI
+                               213     36514 603636                    /DRAW MODE, TEST TTY
+                               214     3652/ 949100      SMA
+                               2I5     3653/ 603705      JMP WAIT6     (POINTING MODE
+                               216     365A/ 212023      LAG RTRACK    TRACK NODE, REQUEST?
+                               21*g    3655/ 741260       SNA
+                               218     3656/ 643636       IMP WAITI    INO, TEST TTY
+                               219     36571 152623       DEM RTRAOK
+                               220     3660/ 205953       LAC TRAKY
+                               221     36614 749001       SMA
+                               292     3662/ 352203       TAD (1
+                               243     3663/ 344746      TAD TEMPY
+                               204     36641 512212       AND (17797
+                               295     3665/ 65050        DAC I YP     /UPDATE YPOINT
+                               226     36661 20505.       LAC TRAKX
+                                       3669/ 943001       SMA
+                               208     36901 352283       TAD (1
+                               229     3671/ 344745       TAD TEMPX
+                               230     36791 512212      AND (17777
+                                       3631  65051        DAG I XP     CUPDATE XPOINT
+                               232     36941 451742      ISZ CDOCOM
