@@ -80,6 +80,44 @@ Titan does not need 48-bit words or extracodes to keep its side of a 1969 conver
 If someone later builds a real Atlas 2 emulator (none exists; the Computer Conservation
 Society only preserves Atlas 1), it can dock behind the same socket.
 
+## Remote-controlling SIMH — any UI, not one UI
+
+A light pen driver should not presume a particular user interface. Findings from the SIMH
+source (verified in the local clone, July 2026):
+
+- **Remote command console: built in.** `SET REMOTE TELNET=port` gives a multi-connection
+  remote console over telnet — examine/deposit memory, attach devices, single-step, plus a
+  master mode. No web server, but a WebSocket↔telnet bridge in the SvelteKit app is a
+  few dozen lines. Full remote *control* is a solved problem.
+- **Remote screen: not built in, but the seam is tiny.** SIMH's XY display core
+  (`display/display.c`) talks to window systems through `display/ws.h` — nine functions
+  (`ws_init`, `ws_display_point`, `ws_poll`, `ws_sync`, `ws_beep`, colors, shutdown) plus
+  two globals. Existing backends: SDL (`sim_ws.c`), X11, Win32, Carbon. Writing one more —
+  a **network backend** that streams intensified-point events to a socket and accepts
+  pointer/keyboard events back — is a contained, few-hundred-line C module modeled on the
+  SDL one. Batched points over localhost at frame rate is nothing.
+- **The light pen mostly already exists.** The backend globals `ws_lp_x`/`ws_lp_y` carry
+  the pointer position, and `display.c` *already computes pen-on-beam hits* from them with
+  a configurable hit radius (that's how the PDP-1 side works). A remote pointer fed into
+  those globals through the network backend **is** a light pen, for free, for every
+  machine SIMH emulates. The only PDP-7-specific work remains the IOT read-back stub in
+  `pdp18b_dpy.c`.
+
+So the headless architecture is: SIMH runs anywhere with `SET REMOTE TELNET` + the network
+display backend; the SvelteKit app bridges both sockets to the browser (canvas renders the
+point stream with P7-phosphor fade; pointer events flow back); any other UI — native,
+tablet, museum kiosk — speaks the same two sockets. Side effect: PDP-1 Spacewar in the
+browser, since the display core is shared.
+
+Point stream vs vector stream: start with `ws_display_point` events (universal across all
+SIMH display machines); if bandwidth ever matters, add a higher-level tap in `type340.c`
+that streams display words instead — the browser already knows how to execute those.
+
+### Names on the table
+
+For the Titan service: **TitanIC** (Titan + integrated circuit; unsinkable; failure modes
+come pre-named) · **Titanopolis** · ~~SimTitan~~ (avoiding the Sim brand).
+
 ## Milestones
 
 1. `make` SIMH pdp7 with display; run DEC's [340 display test](DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf).
