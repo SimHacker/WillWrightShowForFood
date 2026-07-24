@@ -27,10 +27,14 @@ Closes the `heinz_phd_thesis_1972` gap in [`../../pull-in-gaps.md`](../../pull-i
 - Known targets: **Appendix 4 = The PIXIE User Manual** (pp. 187–209 per earlier
   correspondence); Chapter 5 = system architecture; fig 9.4 = multi-user PIXIE.
 
-## OCR plan (pending)
+## Annotated edition (in progress)
 
-219 pages — propose selective OCR first: title/contents/originality/acknowledgements, Chapter 5,
-Appendix 4 (User Manual — what Roy's students need), then full text if wanted. Rasterization
-deferred until that pass (keeps repo lean; PDF is filed).
+Full transcription + intertwingled annotation lives in [`annotated/`](annotated/README.md):
+front matter done; all nine chapter/appendix ranges drafting via `composer-2.5-fast`
+subagents against [`scripts/TRANSCRIPTION-SPEC.md`](scripts/TRANSCRIPTION-SPEC.md).
+Early finds: the link routine is credited to **M. Etherton**; "a new garbage collector"
+is credited to **C. Cheney** — [Cheney's algorithm](https://en.wikipedia.org/wiki/Cheney%27s_algorithm)
+(CACM 1970) was PIXIE's roommate; Jean Lemke typed all 219 pages; and *all drawings were
+prepared with the RAINBOW system itself*.
 
 ↑ [character README](../../README.md) · [pull-in gaps](../../pull-in-gaps.md) · [assembler listing](../pixie-assembler-listing-1972/README.md)
