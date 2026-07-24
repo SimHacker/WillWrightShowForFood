@@ -72,6 +72,19 @@ Heinz's main activity now: raising awareness of AI model trustworthiness. Nagoya
 Model Guided Medicine and AI in Surgery (Roy Eagleson attended). Heinz asks Don for thoughts on
 **model science** — PIXIE graph models → CARS → contemporary surgical AI.
 
+### 4b2. The nightly workflow — did you walk over to the Titan TTY?
+**Interview question (Don, 24 Jul 2026):** the recovered link code shows the wire carried
+no application verbs — the Titan side's behavior was whatever program was running there.
+So what did a working night actually look like? Did you sit at the PDP-7 with the light
+pen, upload your edited model, then *walk over to a teletype logged into Titan*
+(the Multiple-Access System went public 1967) to run the simulations and process the data
+the PDP-7 had downloaded, edited, and uploaded? Or drive the Titan side another way —
+batch job queued earlier, or a colleague at the other console? Two chairs, two machines,
+one model going back and forth: the physical choreography of 1969's client-server
+computing. Grounding: [link protocol decode](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md) ·
+Heinz: "I used this link for about 3 years on a … nightly basis connecting PIXIE with
+some application programs on Titan."
+
 ### 4d. Alan Kay — light pen vs RAND tablet
 Alan Kay (2020): not surprised by PDP-7, surprised by light pen ("fatigued tingling hand… twitch
 the primary button"). Heinz has the actual PDP-7 light-pen driver source. Segment: author vs
