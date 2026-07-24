@@ -83,6 +83,17 @@ Heinz (15 Jul): **125 pages** to digitize; points students to thesis Appendix 4 
 
 → [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md)
 
+**Update (24–25 Jul):** the digitization landed and the student kit now exists — the full stack is
+indexed in [Heinz's README, "For students, hackers, and turists"](../heinz-lemke/README.md):
+the [turist guide](../heinz-lemke/sources/pdp7-reference/GUIDE.md) (PDP-7 / Type 340 / Titan
+architecture), the [mirrored manual library](../heinz-lemke/sources/pdp7-reference/README.md),
+the [recovered assembler source](../heinz-lemke/sources/pixie-assembler-listing-1972/README.md)
+(clean `.asm` + octal), the
+[PIXIE User Manual](../heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)
+from the [fully annotated thesis](../heinz-lemke/sources/phd-thesis-1972/annotated/README.md),
+and the [emulation plan](../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md) with the
+[Titan link protocol decode](../heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md).
+
 ## Don welcomes Roy — 10 July 17:59
 
 Don replied directly: **no Wilkes Sims avatar** — a [memorial room](../maurice-wilkes/memorial.md)
@@ -101,6 +112,7 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Sutherland / Sketchpad** | [`../ivan-sutherland/`](../ivan-sutherland/) |
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
 | **14 Jul — UWO PIXIE project** | [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md) |
+| **Student kit** (guide, manuals, source, emulation plan) | [`../heinz-lemke/README.md`](../heinz-lemke/README.md) § For students, hackers, and turists |
 | **16 Jul thread** (125 pages, CARS 2027, Armit archive) | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
 | **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
