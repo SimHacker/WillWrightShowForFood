@@ -63,6 +63,9 @@ Zero-install, clickable by anyone — the demo and teaching machine.
 
 ### The Titan: a high-level protocol emulator, shared by both benches
 
+Full protocol anatomy (decoded from the listing) and the TypeScript service architecture
+with its `TitanApplication` plug-in surface: [**TITAN-LINK-PROTOCOL.md**](TITAN-LINK-PROTOCOL.md).
+
 One implementation of the blocklet protocol (it is fully transcribed: headers, word
 counts, checksums, retry-on-bad-header, error exits, the Titan→PDP relocation pass that
 fixes ring pointers), packaged two ways:

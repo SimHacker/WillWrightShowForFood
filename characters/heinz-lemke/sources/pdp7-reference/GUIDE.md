@@ -152,7 +152,8 @@ path to clicking a 1969 radial menu.
 
 The concrete plan — SIMH lab bench, browser bench in SvelteKit, and a shared high-level
 Titan protocol service speaking blocklets over a socket — lives in
-[EMULATION-PLAN.md](EMULATION-PLAN.md).
+[EMULATION-PLAN.md](EMULATION-PLAN.md); the link protocol itself, decoded word by word
+from the listing, in [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md).
 
 
 
