@@ -84,6 +84,13 @@ one model going back and forth: the physical choreography of 1969's client-serve
 computing. Grounding: [link protocol decode](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md) ·
 Heinz: "I used this link for about 3 years on a … nightly basis connecting PIXIE with
 some application programs on Titan."
+**The thesis answers it** (Ch. 8, [annotated edition](sources/phd-thesis-1972/annotated/README.md)):
+Fig 8.6 is a printout from the *PDP-7 teletype* (PIXIE session, ending with the `TIT`
+handoff command) and Fig 8.7 from the *TITAN teletype* (`SET RAINBOW` login, filing the
+circuit, `COMPACT`/`PLOT`/`CONN`, invoking the `LADAN` analyser) — **two teletypes, two
+chairs, confirmed in his own figures.** The interview question upgrades from "did you?"
+to "walk us through the walk": how far apart were the consoles, who else was in the room,
+what did you do while LADAN chewed?
 
 ### 4d. Alan Kay — light pen vs RAND tablet
 Alan Kay (2020): not surprised by PDP-7, surprised by light pen ("fatigued tingling hand… twitch

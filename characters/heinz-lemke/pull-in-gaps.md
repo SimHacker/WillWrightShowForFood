@@ -102,7 +102,11 @@ Heinz Word doc summarizing Cambridge work (Don asked permission to Medium-ify). 
 
 Lemke (1972) *Interactive graphics in an integrated CAD system* — Appendix 4 pp 187–209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE.
 
-**RECEIVED 2026-07-24** (pcloud bundle, 219-page scan) → [sources/phd-thesis-1972/](sources/phd-thesis-1972/README.md). OCR pending (selective: front matter, Ch 5, Appendix 4 first). Also received: **1969 PIXIE film** (mp4 + DVD VOB) → [media/film-1969/](media/film-1969/README.md) (gitignored, >100 MB).
+**RECEIVED 2026-07-24** (pcloud bundle, 219-page scan) → [sources/phd-thesis-1972/](sources/phd-thesis-1972/README.md). **TRANSCRIBED + ANNOTATED 2026-07-25** — full 8-part readable edition in [sources/phd-thesis-1972/annotated/](sources/phd-thesis-1972/annotated/README.md) (nine subagents + editorial gap-patch pass). Also received: **1969 PIXIE film** (mp4 + DVD VOB) → [media/film-1969/](media/film-1969/README.md) (gitignored, >100 MB).
+
+### rainbow_memos_series
+
+**NEW GAP (found in thesis pp. 50–51):** the RAINBOW MEMO internal documentation series — thesis cites RM No. 8, 9, 10, 11, 17, 19, 30, 35, 37, 41 for CONN, DSPRINT, CONNMAP, REPLACE, JOINUP, PLOT, GRAPH. Ask Heinz (and the Computer Lab archive) whether any RAINBOW MEMOs survive.
 
 ### heinz_1967_talk_attachment1
 

@@ -1,3 +1,22 @@
+# Part 3 · Chapters 8–9 — Computer-Aided Circuit Design; Appraisal and Future Possibilities
+
+Thesis pp. 144–172 · [annotated edition index](README.md) · [← chapters 6–7](04-chapters-6-7.md) · [references & appendices →](06-references-appendices.md)
+
+> ✎ **Highlights.** Chapter 8 answers the
+> [nightly-workflow interview question](../../../ideas.md) in Heinz's own figures: Fig 8.6
+> is a printout from the **PDP-7 teletype** (a PIXIE session naming components, ending
+> with the `TIT` handoff) and Fig 8.7 from the **Titan teletype** (`SET RAINBOW` login,
+> loading PIXIE down the link, filing the circuit, `COMPACT`/`PLOT`/`CONN`/`CONNMAP`,
+> then the `LADAN` analyser — BCPL + FORTRAN). Two teletypes, two chairs, one model.
+> §8.3: `CANOTRAN` does d.c. and transient analysis on piecewise-linear branches —
+> [SPICE](https://en.wikipedia.org/wiki/SPICE)'s ancestors, pre-SPICE (Berkeley, 1973).
+> Chapter 9 measures a 1-hour PIXIE session at **5–10% CPU and 20–30% of 8K**, then
+> spends the headroom on prophecy: Fig 9.4 hangs **four CRTs on one display controller**
+> (multi-user PIXIE), a capability-based co-ordinator with ten application slots follows,
+> and §9.4 proposes **"a mobile PIXIE"** portable across display hardware — write once,
+> run anywhere, 1972.
+
+---
 <!-- PDF indices 153–179; thesis pages 144–170. Chapter 8 (144–155), Chapter 9 (156–170, through start of 9.4). PDF 151–152 are Chapter 7 (Fig. 7.5–7.6) — skipped. REFERENCES not reached (begins thesis p.173 / pdf.180). -->
 
 <!-- p.144 / pdf.153 -->

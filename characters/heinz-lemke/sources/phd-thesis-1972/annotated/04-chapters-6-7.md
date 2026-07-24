@@ -1,3 +1,21 @@
+# Part 3 · Chapters 6–7 — CAD of Translator Systems; CAD of Control Systems
+
+Thesis pp. 121–143 · [annotated edition index](README.md) · [← chapter 5](03-chapter-5-pixie.md) · [chapters 8–9 →](05-chapters-8-9.md)
+
+> ✎ **Highlights.** The applications that "verbed" the
+> [link protocol](../../pdp7-reference/TITAN-LINK-PROTOCOL.md)'s verbless transfers.
+> Chapter 6: a syntax-directed analyser whose grammars follow
+> [EULER](https://en.wikipedia.org/wiki/Euler_(programming_language)) (Wirth & Weber) —
+> drawing *languages* with a light pen. Chapter 7: draw a control system in PIXIE, file
+> it, and a Titan pipeline (`CONN → HLFC → HLSA → HLSE → HLFR → GRAPH`) parses transfer
+> functions, evaluates them in FORTRAN across a BCPL bridge, and returns *a table of
+> frequencies and magnitudes* that GRAPH converts **back into a PIXIE structure** —
+> *"showing this coordinate graph with PIXIE closes the design loop on the screen."*
+> Stuff out, stuff back, same kind of stuff. The gap-patched Fig 7.5 below is the raw
+> Titan console printout of that run — source material for the
+> [film-loop TTY](../../2026-07-24-tty-film-loop-titles.md).
+
+---
 <!-- PDF indices 128–150; thesis pages 119–120 (Ch.5 tail, skipped) and 121–141 (Ch.6–7). Chapter 6 begins pdf.130 / p.121; Chapter 8 not reached (range ends p.141 / pdf.150, Fig. 7.4). -->
 
 <!-- p.121 / pdf.130 -->
@@ -256,3 +274,52 @@ Since the purpose of this application in control systems design was to demonstra
 <!-- p.141 / pdf.150 -->
 
 > **Fig. 7.4 — Parse tree of 16.2*S/(1+S↑2).** [visual: Tree diagram with circular nodes labelled EXP, NUM, DEN, PDL, TRM, RN, INT, OP, and terminal symbols for 16, ., 2, *, S, (, ), 1, +, ↑; node identifiers N1–N27 on branches.]
+
+
+---
+
+*Editor's gap patch — p. 142, Chapter 7 figure page (transcribed from the scan by the
+editor; p. 143 / Fig 7.6 is the companion magnitude plot):*
+
+<!-- p.142 / pdf.151 -->
+
+```
+COMMAND /HL/RUN
+SAVE(/HL/FCS2CO)D10
+SAVE(/HL/PT1CO)D11
+S/BCPL/L(RAINBOW/RSP/IAL21T /HLFC/IAL /HLSE/IAL RAINBOW/INTER/FIRST
+/HLNY/IAL RAINBOW/INTER/LAST (2 PRINTER 03 PRINTER)ZY A200 G250 S12000
+
+READY
+
+TYPE 03
+
+10.0000    -0.0101
+10.5000    -0.0092
+11.0000    -0.0083
+11.5000    -0.0076
+12.0000    -0.0070
+12.5000    -0.0064
+13.0000    -0.0060
+13.5000    -0.0055
+14.0000    -0.0051
+14.5000    -0.0048
+15.0000    -0.0045
+15.5000    -0.0042
+16.0000    -0.0039
+16.5000    -0.0037
+17.0000    -0.0035
+17.5000    -0.0033
+18.0000    -0.0031
+18.5000    -0.0029
+19.0000    -0.0028
+19.5000    -0.0026
+20.0000    -0.0025
+```
+
+> **Fig.7.5 — Printout of frequency analysis.** [visual: verbatim Titan Multiple-Access
+> System console session — the `COMMAND /HL/RUN` invocation under user HL's directory,
+> the BCPL link-load of RAINBOW/RSP + HLFC + HLSE + HLNY intermediate-language modules,
+> READY prompt, and the frequency/magnitude table for 10–20 cycles/sec]
+
+Next: [Chapters 8–9 →](05-chapters-8-9.md)

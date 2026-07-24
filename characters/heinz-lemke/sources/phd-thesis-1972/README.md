@@ -27,14 +27,18 @@ Closes the `heinz_phd_thesis_1972` gap in [`../../pull-in-gaps.md`](../../pull-i
 - Known targets: **Appendix 4 = The PIXIE User Manual** (pp. 187–209 per earlier
   correspondence); Chapter 5 = system architecture; fig 9.4 = multi-user PIXIE.
 
-## Annotated edition (in progress)
+## Annotated edition (complete)
 
 Full transcription + intertwingled annotation lives in [`annotated/`](annotated/README.md):
-front matter done; all nine chapter/appendix ranges drafting via `composer-2.5-fast`
-subagents against [`scripts/TRANSCRIPTION-SPEC.md`](scripts/TRANSCRIPTION-SPEC.md).
-Early finds: the link routine is credited to **M. Etherton**; "a new garbage collector"
-is credited to **C. Cheney** — [Cheney's algorithm](https://en.wikipedia.org/wiki/Cheney%27s_algorithm)
-(CACM 1970) was PIXIE's roommate; Jean Lemke typed all 219 pages; and *all drawings were
-prepared with the RAINBOW system itself*.
+eight readable parts (front matter → PIXIE User Manual), transcribed from images by nine
+`composer-2.5-fast` subagents against [`scripts/TRANSCRIPTION-SPEC.md`](scripts/TRANSCRIPTION-SPEC.md),
+gap-patched and annotated in an editorial pass. Headline finds: the link routine is
+credited to **M. Etherton**; "a new garbage collector" is credited to **C. Cheney** —
+[Cheney's algorithm](https://en.wikipedia.org/wiki/Cheney%27s_algorithm) (CACM 1970) was
+PIXIE's roommate; Jean Lemke typed all 219 pages; *all drawings were prepared with the
+RAINBOW system itself*; Figs 8.6/8.7 answer the
+[two-teletypes interview question](../../ideas.md) in print; and §5.7 reveals PIXIE also
+ran at RCA Labs Princeton, the Institute of Computer Science London (INDRA PDP-9 port),
+and the DTI CAD Centre.
 
 ↑ [character README](../../README.md) · [pull-in gaps](../../pull-in-gaps.md) · [assembler listing](../pixie-assembler-listing-1972/README.md)
