@@ -1,0 +1,56 @@
+# SHOW SEED — How Inclusivity Saved The Sims (QGCon paper → Repo Show)
+
+show:
+  id: how-inclusivity-saved-the-sims
+  title: "How Inclusivity Saved The Sims"
+  type: solo_or_panel
+  host: Don Hopkins
+  guests: ["Ian Bogost", "Janet Murray", "Tanja Sihvonen"]
+  topic: |
+    Twenty years of Sims inclusivity — procedural rhetoric (Bogost), agency and storytelling
+    (Murray), modding culture (Sihvonen), same-sex design arc (Don → Patrick Barrett),
+    Simulator Effect, McCloud masking, Papert constructionism. Parallel marriage-law timeline.
+    **2026 act:** Soul City NC namesake (Nixon HUD, Helms foreclosure); reported EA buyout;
+    Soul Saver / SoulAngel soul evacuation; Sims ⇔ Soul City ⇔ Tiny Life bridge.
+  status: seed
+  consent: not_yet_asked
+  origin: "QGCon 2020 abstract (canceled); Google Doc integrated to repo 2026-07; Soul City reframe 2026-07"
+
+artifacts:
+  paper_index: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/README.md
+  abstract: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md
+  soul_city_thesis: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml
+  timeline: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/timeline.yml
+  same_sex_arc: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml
+  wedding_playset: ../../../catalogs/simprov/
+  ea_thread: ../../../characters/will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/
+  soul_city_namesake: ../will-wright-premiere/soul-city-namesake.md
+  tiny_life_bridge: ../will-wright-premiere/game-bridge-sims-tiny-life.yml
+  soul_angel: ../../../catalogs/soul-city/soul-angel.yml
+  flipbook_graphics:
+    catalog: ../../../repo-shows/flipbook/README.md
+    shows:
+      - ../../../repo-shows/flipbook/shows/inclusivity-saved-the-sims/FLIPBOOK.yml
+      - ../../../repo-shows/flipbook/shows/soul-city-namesake/FLIPBOOK.yml
+      - ../../../repo-shows/flipbook/shows/soul-saver-exodus/FLIPBOOK.yml
+
+title_candidates: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/title-candidates.yml
+
+discussion_prompts:
+  - "Did inclusivity save The Sims commercially, culturally, or both?"
+  - "Procedural rhetoric vs realism — Patrick's any-character-can-romance vs explicit preference model"
+  - "Family Album + Exchange as Murray holodeck — player stories EA didn't script"
+  - "Russia 2014 ban as badge of honor — flying under the radar for 14 years"
+  - "Will's zodiac confirmation bias — Simulator Effect without code"
+  - "Ben Shneiderman title: Mister Rogers meets The Sims?"
+  - "Soul City NC → our Soul City — Nixon backing, Helms foreclosure, second chances"
+  - "EA buyout fears — what does Soul Saver / Tiny Life exodus actually do for players?"
+
+ties_to:
+  - ../../../characters/ian-bogost/
+  - ../../../characters/janet-murray/
+  - ../../../characters/tanja-sihvonen/
+  - ../../../characters/ellpeck/
+  - ../../../catalogs/soul-city/
+  - ../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
+  - ../will-wright-premiere/game-bridge-sims-tiny-life.yml

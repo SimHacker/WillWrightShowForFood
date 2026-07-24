@@ -1,0 +1,39 @@
+# FLIPBOOK — illustrated narration B-roll (copy to shows/<slug>/)
+
+flipbook:
+  id: "<slug>"
+  title: "<Title>"
+  department: flipbook
+  duration_target_sec: 60
+  aspect: "16:9"
+  style: illustrated_explainer
+
+narration:
+  source: null  # path to script, abstract, or segment yaml
+  speaker: Don Hopkins
+  record_before_render: true  # lock beats to final audio
+
+beats:
+  - at_sec: 0
+    page: 1
+    caption: "Opening thesis — one line on screen"
+    asset: assets/page-01.png
+    motion: page_flip
+    duration_sec: 5
+  - at_sec: 5
+    page: 2
+    caption: null
+    asset: assets/page-02.png
+    motion: pan_right
+    duration_sec: 8
+
+render:
+  output: render/<slug>.mp4
+  proxy: render/<slug>-proxy.mp4
+  captions: captions/<slug>.vtt
+
+ties_to: []
+
+notes: |
+  Flipbook = full-bleed B-roll during narration. Pop-Up overlays annotate screen recordings.
+  See process/post-production/flipbook-shows.yml

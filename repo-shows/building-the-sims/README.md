@@ -21,6 +21,7 @@ Show seed: [`../REPO-SHOWS.yml`](../REPO-SHOWS.yml) (`building-the-sims.yml`)
 | [`qa-bug-pile.md`](qa-bug-pile.md) | Old bugs — wallpaper + shed, cross-refs |
 | [`stair-placement-tool.md`](stair-placement-tool.md) | Stair tool; pools interaction |
 | [`pixelation-and-modesty.md`](pixelation-and-modesty.md) | Censorship shimmer, maid/plunger, TSO RNG desync |
+| [`maid-plunger-incident.yml`](maid-plunger-incident.yml) | **Maid plunger** — integrated spine, HN primary source, flipbook |
 | [`pause-time-and-rng.md`](pause-time-and-rng.md) | Pause vs simulation clock; UI vs sim PRNG |
 | [`team-stories.md`](team-stories.md) | Turd polishing and CTG context |
 

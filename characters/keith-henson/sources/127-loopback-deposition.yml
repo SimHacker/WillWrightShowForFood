@@ -1,0 +1,65 @@
+# Keith Henson — 127.0.0.1 loopback troll deposition (public digest)
+# Primary: Don Hopkins HN comments + Wikipedia + Biased Journalism transcript excerpt
+
+character: keith-henson
+topic: alt.religion.scientology_loopback_troll
+date: 1995-04-06
+context: Scientology v. Henson deposition; Lieberman examining
+
+hn_receipts:
+  - id: 20791891
+    url: https://news.ycombinator.com/item?id=20791891
+    author: DonHopkins
+    date: 2019-08-25
+    note: "Full deposition excerpt — ftp:127.0.0.1 troll explained under oath"
+  - id: 34066097
+    url: https://news.ycombinator.com/item?id=34066097
+    author: DonHopkins
+    date: 2022-12-20
+    note: "Cryonics chainsaw story + link to troll thread"
+  - id: 48504655
+    url: https://news.ycombinator.com/item?id=48504655
+    author: DonHopkins
+    date: 2026-06-12
+    note: "Loopback troll cited in AI-agent bankruptcy thread"
+
+volk_post:
+  from: "Parick J Volk (pjvst+@pitt.edu)"
+  newsgroups: alt.religion.scientology
+  subject: "Re: OT Materials..."
+  date: 1995-04-06
+  body: |
+    Screw the courts....
+    I have an ftp site for all the OT materials...
+    ftp:127.0.0.1  /pub/texts/news/alt/religion/scientology
+    I don't know how long I'll have it up.
+    P J Volk
+    (alt.2600 lives! All hail the clams and trolls!)
+
+henson_extension:
+  quote: "Great stuff! But don't you expect the 'ho to blow a gasket?"
+  note: "Henson extended the troll; willing to take credit — 'art form of the highest order'"
+
+key_exchange:
+  lieberman: "What's an ftp site?"
+  henson: "ftp means file transfer protocol…"
+  lieberman: "Was Henson aware of Patrick Volk's ftp site?"
+  henson: "It's at 127.0.0.1. This is a loop back address. This is a troll."
+  lieberman: "what's a troll?"
+  henson: |
+    …the internet is a very humorous place and it's especially good to troll people
+    who don't have any sense of humor at all… an ftp site of 127.0.0.1 doesn't go
+    anywhere. It loops right back around into your own machine.
+  status_increment: |
+    Cease-and-desist letters are "not amusing, it's a major increment in status" on a.r.s.
+
+nickname_transit: |
+  RTC lawyer connected "the 'ho" with Helena Kobrin in solid world — nickname stuck for life.
+
+further_reading:
+  - https://en.wikipedia.org/wiki/Keith_Henson#Scientology
+  - http://smokyhole.org/kh/kh.htm
+
+show_framing: |
+  Internet-history comedy segment — TCP/IP literacy as performance art.
+  Will Wright boundary: religious-scoop angle optional; center troll craft + cryonics + space.

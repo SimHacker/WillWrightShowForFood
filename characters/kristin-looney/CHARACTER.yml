@@ -1,0 +1,44 @@
+character:
+  id: kristin-looney
+  name: "Kristin Looney"
+  aliases: ["Kristie Looney"]  # common misspelling — verify on air
+  type: invitation
+  status: living
+  field: "Looney Labs president; Fluxx co-creator; NASA Goddard electronics engineer (pre-Labs)"
+  home: characters/kristin-looney/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Co-guest with Andy — UMD / LUMSSFS era friend — not sent"
+
+bio:
+  summary: >
+    **Kristin Looney** — co-founded **Looney Labs** with Andy; runs the business side of decades
+    of Fluxx variants, pyramids, and chaos. Met Andy at NASA Goddard (1986); electronics engineer
+    before card-game empire. Don's MOOLLM marathon tribute: *"The Real Winner"* — Budapest 2019
+    Fluxx tournament finals (Andy disputes). Show pairs Andy + Kristin for Maryland days, LUMSSFS,
+    and whether AI simulations honor or betray Fluxx FAQ culture.
+
+connections:
+  don: "UMD / LUMSSFS circle; LETTER-TO-ANDY names both; fluxx-chaos experiment"
+  andy-looney: "Co-founder, spouse, design partner"
+  will-wright: "Indirect — Don's Fluxx pitch to Will via iMessage Jul 2026"
+
+see_also:
+  - { path: ../andy-looney/, why: "Co-guest" }
+  - { path: ../andy-looney/sources/moollm-fluxx-links.yml, why: "Shared MOOLLM index" }
+  - { path: ../../repo-shows/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
+
+sources:
+  public:
+    - ../andy-looney/sources/moollm-fluxx-links.yml
+  web:
+    - { title: "NASA to Looney Labs — Washingtonian", url: "https://www.washingtonian.com/2019/08/26/nasa-looney-labs-college-park-card-games-kristin-andy-looney/" }
+    - { title: "Looney Labs", url: "https://www.looneylabs.com/" }

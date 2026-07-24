@@ -94,6 +94,20 @@ HyperTIES PostScript applets = "send a program, not a data structure." Tag-team 
 
 → [`../../repo-shows/news-postscript-window-system.yml`](../../repo-shows/news-postscript-window-system.yml)
 
+### 10. Sims inclusivity paper — Ben's title suggestions
+
+Don credited Ben with several QGCon title candidates now in repo:
+
+- *Mister Rogers meets The Sims: Design principles for teaching tolerance*
+- *Game design for open minds: Lessons from The Sims*
+- *Enlightening minds through game design: Lessons from The Sims*
+
+Paper index: [`../don-hopkins/sources/qgcon-inclusivity-paper/`](../don-hopkins/sources/qgcon-inclusivity-paper/) ·
+[`title-candidates.yml`](../don-hopkins/sources/qgcon-inclusivity-paper/title-candidates.yml)
+
+On-air: Ben's **human-first / open minds** framing vs Don's **How Inclusivity Saved The Sims** —
+direct manipulation applied to identity, tolerance, and player agency in microworlds.
+
 ## Show seeds
 
 - **Series (planted):** [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/README.md)

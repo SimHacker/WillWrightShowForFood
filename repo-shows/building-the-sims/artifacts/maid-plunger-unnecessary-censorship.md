@@ -41,8 +41,24 @@ Fixed before ship with heavy **SimAntics** work (Don's memory). No known survivi
 - What SimAntics nodes changed — privacy, interrupt, toilet state, or plunger routing?
 - Did QA file this as severity 1 or as comedy relief?
 
+## Integrated spine
+
+Full chain + reunion prompts: [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml)
+
+Flipbook B-roll: [`../../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml`](../../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml)
+
+## Primary source (Don HN, verbatim)
+
+[`../sources/maid-plunger-incident-hn-2022.md`](../sources/maid-plunger-incident-hn-2022.md)
+
+> She would then stroll over to toilet, whip out a plunger from "hammerspace", and thrust it into
+> the toilet between the pooping Sim's legs, and proceed to move it up and down vigorously by its
+> wooden handle. The "Unnecessary Censorship" strongly implied that the maid was performing a manual
+> act of digital sex work. That little bug required quite a lot of SimAntics programming to fix!
+
 ## Sources
 
 - [`../pixelation-and-modesty.md`](../pixelation-and-modesty.md)
 - HN https://news.ycombinator.com/item?id=30359560
 - Unnecessary Censorship: https://www.youtube.com/watch?v=6axflEqZbWU
+- Prototype plunger mesh: `MicropolisCore/content/vitamoo/sims-prototype-1998/xskin-suit-plunger.cmx`

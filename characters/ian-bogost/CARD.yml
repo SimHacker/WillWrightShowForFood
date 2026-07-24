@@ -1,0 +1,51 @@
+# CARD — Ian Bogost (public portrayal). NOT Ian Bogost.
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+room:
+  id: ian-bogost
+  name: Ian Bogost
+  type: [invitation, guest, portrayal]
+
+card:
+  name: Ian Bogost
+  title: Procedural Rhetorician
+  rarity: rare
+  signifier: "🐄📜"
+  flavor: An unholy blend of Will Wright and Aristotle — politics in the mechanics.
+
+relationships:
+  - { with: will-wright, kinds: [show_flagship_pairing, microworld_lineage], why: "Motive.c failure modes; construction-set rhetoric at the substrate" }
+  - { with: don-hopkins, kinds: [sims_objects_case_study], why: "Wedding playset + Dumbold + Soul City — same SimAntics engine, opposite poles" }
+  - { with: janet-murray, kinds: [theory_pair], why: "QGCon inclusivity paper pairs procedural rhetoric with Murray's agency/immersion/transformation" }
+
+abilities:
+  - id: PROCEDURAL-RHETORIC
+    name: Procedural Rhetoric
+    type: static
+    effect: "Names argument-in-rules — the lens for Motive.c alerts, wedding orchestration, and Dumbold e-voting farce."
+    verifiable: "Persuasive Games (2007); sims-series-procedural-rhetoric-inclusion-agitprop.md"
+    combos_with: [will-wright, don-hopkins]
+  - id: COW-CLICKER
+    name: Cow Clicker
+    type: activated
+    effect: "Emote — social satire that became popular anyway; 'It wasn't very fun before.' Center of Curiosity cube parody."
+    verifiable: "bogost.com/games/cow-clicker/; curiosity-cow-cube.yml"
+    combos_with: [how-to-deconstruct-the-cube]
+  - id: INCLUSION-AGITPROP
+    name: Inclusion Agitprop
+    type: triggered
+    effect: "Reaction — SimProv Wedding Playset as intentional inclusion procedural rhetoric vs Dumbold institutional satire."
+    verifiable: "catalogs/simprov/; dumbold-voting-machine medium article"
+    combos_with: [PROCEDURAL-RHETORIC]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - path: CHARACTER.yml
+  - path: invitation.md
+  - path: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

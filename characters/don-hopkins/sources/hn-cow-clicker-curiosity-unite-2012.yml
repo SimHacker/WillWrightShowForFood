@@ -1,0 +1,77 @@
+# Don Hopkins — HN harvest: Cow Clicker, Curiosity, Unite 2012 cow joke
+# Primary voice preserved; cross-links for Ian Bogost show + cube parody
+
+events:
+  unite_2012:
+    conference: "Unity Unite 2012"
+    location: "Westergasfabriek, Amsterdam"
+    date: 2012-08  # keynote published YouTube 2012-08-22
+    keynote_video: https://www.youtube.com/watch?v=24AY4fJ66xA
+    molyneux_segment_starts: "1h 08m 21s"
+    crucifix_pose_quote_at: "1h 48m 06s"
+    crucifix_quote: |
+      Because we can dynamically put on ANY surface of the cube ANY image we like.
+      So THAT's how we're going to surprise the world, is by giving clues about what's
+      in the middle later on.
+    don_action: |
+      After Molyneux's Curiosity keynote, Don chatted him up and joked that the big secret
+      inside the cube was a cow — ironic reference to Ian Bogost's Cow Clicker. Molyneux
+      didn't get the joke; Don explained the Cow Clicker / Zynga-satire context; still
+      didn't get it.
+
+  curiosity:
+    title: "Curiosity: What's Inside the Cube?"
+    developer: 22cans / Peter Molyneux
+    released: 2012-11-06
+    ended: 2013-05-26
+    wikipedia: https://en.wikipedia.org/wiki/Curiosity:_What%27s_Inside_the_Cube%3F
+    don_characterization: |
+      Epitome of dopamine addiction clickers — cop-out of game design, nothing original;
+      arbitrary value becomes real value. Prize ("god of gods" in Godus) famously under-delivered.
+    qz_2012: https://qz.com/34024/life-really-is-a-game-with-a-lot-of-clicks-and-then-you-die
+    qz_pullquote: |
+      Just ask Ian Bogost, who created the satirical social game Cow Clicker that went on to
+      such absurd popularity that he felt compelled to continue developing it, trapping himself
+      in an ironic loop that refuses to end.
+
+  cow_clicker:
+    see: ../../ian-bogost/sources/cow-clicker.yml
+
+hn_comments_by_don:
+  - thread: https://news.ycombinator.com/item?id=31979586
+    comment: https://news.ycombinator.com/item?id=31981916
+    date: 2022-07-04
+    score: 5
+    summary: Unite 2012 cow troll; Bogost had self-awareness Curiosity lacked
+  - thread: https://news.ycombinator.com/item?id=24380418
+    date: 2020-09-05
+    summary: Same story; links Unite video + Cow Clicker Wikipedia + QZ Curiosity piece
+  - thread: https://news.ycombinator.com/item?id=47110605
+    date: ~2025
+    summary: Recreate Curiosity server but put life-changing Rightward-Facing Cow inside
+  - thread: https://news.ycombinator.com/item?id=48329842
+    date: ~2025
+    note: Protect Our Games Act thread — Curiosity should stay dead; Cow Clicker Cowpocalypse model
+  - thread: https://news.ycombinator.com/item?id=27324466
+    date: 2021-05-29
+    summary: Molyneux scammer vs pathological liar; links TechCrunch + RPS interview
+
+press_context:
+  rock_paper_shotgun_2015:
+    title: "Peter Molyneux Interview: I haven't got a reputation in this industry any more"
+    url: https://www.rockpapershotgun.com/peter-molyneux-interview-godus-reputation-kickstarter
+    pullquote: |
+      RPS: Do you think that you're a pathological liar?
+      Molyneux: I'm not aware of a single lie, actually...
+  techcrunch_2015:
+    title: "The Lesson of Peter Molyneux"
+    url: https://techcrunch.com/2015/02/15/the-lesson-of-peter-molyneux/
+    author: Tadhg Kelly
+
+show_use:
+  bogost_guest: |
+    Don wants to discuss Cow Clicker with Bogost on air — the most wonderful intentional satire;
+    Unite story as contrast (accidental hype vs designed criticism), not to dunk on Molyneux
+    for sport but to compare procedural rhetoric done on purpose vs by accident.
+  parody_spec: ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  show_seed: ../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

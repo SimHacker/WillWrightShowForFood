@@ -1,0 +1,111 @@
+# FLIPBOOK — Maid plunger incident (Building The Sims reunion B-roll)
+
+flipbook:
+  id: maid-plunger-incident
+  title: "The Sims maid plunger incident"
+  department: flipbook
+  duration_target_sec: 75
+  aspect: "16:9"
+  style: illustrated_explainer
+  homage: "Jimmy Kimmel Unnecessary Censorship — credit originator on air"
+
+narration:
+  source: ../../../building-the-sims/sources/maid-plunger-incident-hn-2022.md
+  speaker: Don Hopkins
+  record_before_render: true
+
+beats:
+  - at_sec: 0
+    page: 1
+    caption: "Modesty for the Sims — not the player"
+    visual: "Barbie/GI-Joe smooth mesh + pixel shimmer bar over body"
+    asset: assets/page-01-cast-rated-modesty.png
+    motion: page_flip
+    duration_sec: 6
+
+  - at_sec: 6
+    page: 2
+    caption: "Michael seeks relief — pants stay on"
+    visual: "Beta toilet scene; shimmer while paused; pooping in trousers"
+    asset: assets/page-02-pants-on-toilet.png
+    motion: hold
+    duration_sec: 8
+
+  - at_sec: 14
+    page: 3
+    caption: "Toilet clogs → maid AI thinks help is needed"
+    visual: "Dirty toilet icon; maid NPC pathfinding arrow into bathroom"
+    asset: assets/page-03-clogged-summons-maid.png
+    motion: pan_right
+    duration_sec: 7
+
+  - at_sec: 21
+    page: 4
+    caption: "No privacy yet — bathroom door wide open"
+    visual: "Pre-privacy floor plan; maid enters while Sim seated"
+    asset: assets/page-04-no-privacy.png
+    motion: zoom_in
+    duration_sec: 6
+
+  - at_sec: 27
+    page: 5
+    caption: "Plunger from hammerspace"
+    visual: "Maid hand + xskin-suit-plunger mesh reference; TVTropes hammerspace gag"
+    asset: assets/page-05-hammerspace-plunger.png
+    motion: page_flip
+    duration_sec: 8
+
+  - at_sec: 35
+    page: 6
+    caption: "Between the Sim's legs — up and down vigorously"
+    visual: "Side view toilet; plunger motion arrows; pixel bar over Sim"
+    asset: assets/page-06-plunger-motion.png
+    motion: hold
+    duration_sec: 9
+
+  - at_sec: 44
+    page: 7
+    caption: "Unnecessary Censorship"
+    visual: "SNL-style bleep bars + Sims scene silhouette — homage credit on screen"
+    asset: assets/page-07-unnecessary-censorship.png
+    motion: crossfade
+    duration_sec: 8
+
+  - at_sec: 52
+    page: 8
+    caption: "Not a shader fix — SimAntics surgery"
+    visual: "Edith-style behavior graph; privacy node highlighted; interrupt edge added"
+    asset: assets/page-08-simantics-fix.png
+    motion: layout_fan
+    duration_sec: 10
+
+  - at_sec: 62
+    page: 9
+    caption: "Fixed before ship — no video saved"
+    visual: "Ship checklist ✓; empty VHS frame; reunion ask for captures"
+    asset: assets/page-09-fixed-no-footage.png
+    motion: fade_out
+    duration_sec: 13
+
+render:
+  output: render/maid-plunger-incident.mp4
+  proxy: render/maid-plunger-incident-proxy.mp4
+  captions: captions/maid-plunger-incident.vtt
+
+ties_to:
+  - ../../../building-the-sims/maid-plunger-incident.yml
+  - ../../../building-the-sims/sources/maid-plunger-incident-hn-2022.md
+  - ../../../building-the-sims/artifacts/maid-plunger-unnecessary-censorship.md
+  - ../../../building-the-sims/pixelation-and-modesty.md
+  - ../../../characters/don-hopkins/sims-pixelation-censorship-hn-2022.md
+
+assets_needed:
+  - page-01-cast-rated-modesty.png
+  - page-02-pants-on-toilet.png
+  - page-03-clogged-summons-maid.png
+  - page-04-no-privacy.png
+  - page-05-hammerspace-plunger.png
+  - page-06-plunger-motion.png
+  - page-07-unnecessary-censorship.png
+  - page-08-simantics-fix.png
+  - page-09-fixed-no-footage.png

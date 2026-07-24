@@ -1,0 +1,67 @@
+# Same-sex relationships in The Sims — design-document arc (Patrick J Barrett III)
+
+sequence:
+  - step: 1
+    who: don-hopkins
+    when: "1998 design doc review (Draft 3, page 5)"
+    finding: |
+      Relationship tree code was heterosexist/monosexist — same-sex romance attempt yielded
+      homophobic slap. Don proposed 0–100 interest per sex (hetero, homo, bi, asexual spectrum).
+    urls:
+      - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf
+
+  - step: 2
+    when: "Drafts 5 & 7 (Aug–Oct 1998)"
+    response: |
+      "Currently the game only allows heterosexual romance — reflects early implementation.
+      Will is reviewing the code and will make recommendations for homosexual romance."
+    urls:
+      - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf
+      - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf
+
+  - step: 3
+    who: patrick-j-barrett-iii
+    when: "Hired ~1998-10-22"
+    action: |
+      Implemented same-sex relationships without explicit sexual-preference property —
+      behavior possible for any character at any time (playability/shippability over realism).
+    character: ../../../patrick-j-barrett-iii/
+    canonical_story: https://donhopkins.com/home/TheSims/
+
+  - step: 4
+    ship: "2000-01-31 The Sims released"
+    note: "Same-sex relationships from day one; accidental lesbian kiss press moment"
+
+press_beats:
+  new_yorker_kiss: https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
+  sims_wiki: https://sims.fandom.com/wiki/Same-sex_relationship
+
+sims2_faq_removal:
+  when: 2004-06-10
+  note: "Same-sex marriage question removed from Sims 2 FAQ before ship"
+
+patch_34:
+  when: 2016-06-02
+  note: "Sims 4 Patch 34 — expanded gender customization; gender-specific assets unlocked"
+  url: https://sims.fandom.com/wiki/The_Sims_4/Patch_34
+
+pride:
+  sims_4_pride: "2019-06 — It Gets Better partnership; pride items; lesbian couple on cover"
+  ea_it_gets_better: https://www.ea.com/games/the-sims/the-sims-4/news/it-gets-better-2019
+
+russia_badge:
+  when: 2014
+  headline: "Russia bans Sims 4 for children over gay relationships — badge of honor"
+  note: "Sims supported gay relationships from 2000; Russia noticed in Sims 4"
+  url: https://www.huffingtonpost.co.uk/2014/05/12/the-sims-russia-gay-ban_n_5309847.html
+
+steering_committee:
+  note: "Heterosexist SimAntics in steering-committee era vs Patrick's gay-friendly implementation"
+  contrast: simcopter_himbo_easter_egg
+
+simcopter_context:
+  when: 1996-10
+  note: |
+    Himbo easter egg — programmer protest; random-number generator too effective; fired.
+    Maxis public response set expectation for inclusive stance post-fiasco.
+  url: https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html

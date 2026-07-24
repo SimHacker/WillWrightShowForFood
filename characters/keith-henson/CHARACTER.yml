@@ -1,0 +1,47 @@
+character:
+  id: keith-henson
+  name: "Keith Henson"
+  aliases: ["H Keith Henson"]
+  type: invitation
+  status: living
+  field: "Cryonics (Alcor); alt.religion.scientology history; rockets/space; nanotechnology (Drexler orbit)"
+  home: characters/keith-henson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Draft invite — Don's friend; warm; not sent. Scientology segment optional per Will boundary."
+
+bio:
+  summary: >
+    **Keith Henson** — engineer, cryonicist, and legendary **alt.religion.scientology** figure.
+    Documented anti-Scientology activism (Scientology hates him — Don's words). Performed Alcor
+    **whole-body → neuro** conversions with a high-speed electric chain saw on frozen patients
+    (charity case — *Great Mambo Chicken* / Alcor report). Under oath, patiently explained
+    **ftp:127.0.0.1** loopback trolling to Scientology lawyers who did not get the joke.
+    Rockets, space, nanotechnology — **Drexler orbit**.
+
+connections:
+  don: "Friend — Don verified Keith's stories on HN (127.0.0.1 deposition, Alcor chainsaw). sources/"
+  will_wright: "Will: 'That's about the only religious scoop I can't stand' — frame show as internet history + cryonics + space, not religion scoop"
+
+see_also:
+  - { path: sources/127-loopback-deposition.yml, why: "Legendary deposition transcript digest" }
+  - { path: sources/cryonics-chainsaw-alcor.yml, why: "Alcor neuro conversion — documented" }
+  - { path: ../ray-kurzweil/, why: "Transhuman / exponential neighbors" }
+  - { path: ../will-wright/, why: "Premiere host — religious-scoop boundary noted" }
+
+sources:
+  public:
+    - sources/127-loopback-deposition.yml
+    - sources/cryonics-chainsaw-alcor.yml
+  web:
+    - { title: "Keith Henson — Wikipedia", url: "https://en.wikipedia.org/wiki/Keith_Henson" }
+    - { title: "HN — loopback deposition (Don)", url: "https://news.ycombinator.com/item?id=20791891" }
+    - { title: "HN — cryonics story (Don)", url: "https://news.ycombinator.com/item?id=34066097" }

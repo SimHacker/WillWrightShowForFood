@@ -1,0 +1,38 @@
+# CARD — Kristin Looney (public portrayal). NOT Kristin Looney.
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+room:
+  id: kristin-looney
+  name: Kristin Looney
+  type: [invitation, guest, portrayal]
+
+card:
+  name: Kristin Looney
+  title: The Real Winner
+  rarity: mythic
+  signifier: "🏆🃏✨"
+  flavor: Budapest 2019 — Andy disputes the outcome.
+
+relationships:
+  - { with: andy-looney, kinds: [co_founder, spouse, co_guest], why: "Looney Labs" }
+  - { with: don-hopkins, kinds: [umd_lumssfs_friend], why: "Maryland / LUMSSFS; fluxx-chaos letter" }
+
+abilities:
+  - id: FAQ-CULTURE
+    name: FAQ Culture
+    type: passive
+    effect: "28 years of answered edge cases — why LLMs 'know' Fluxx from training data."
+    verifiable: "LETTER-TO-ANDY.md; fluxx-chaos README"
+  - id: BUDAPEST-FINALS
+    name: Budapest Finals
+    type: triggered
+    effect: "Reaction — invoke 2019 Fluxx tournament receipt; Andy may counter."
+    verifiable: "MOOLLM marathon-session.md"
+  - id: SHIP-CHAOS
+    name: Ship the Chaos
+    type: activated
+    effect: "Turn Andy's rule mutations into boxed editions, conventions, living community."
+    verifiable: "Looney Labs history; Washingtonian profile"

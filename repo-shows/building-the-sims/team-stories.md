@@ -22,6 +22,15 @@ Jim managed programmers during debates over how pools fit the lot model (objects
 layers). Don intends to ask the [`swimming-pools question`](swimming-pools-objects-or-rooms.md) on
 air and record whatever answers the team gives.
 
+## Summer intern's maid (brilliant, quirky)
+
+→ [`maid-plunger-incident.yml`](maid-plunger-incident.yml) ·
+[`artifacts/summer-intern-maid-service-ai.md`](artifacts/summer-intern-maid-service-ai.md)
+
+Don credits a **really brilliant summer intern** for the maid NPC. Pre-privacy quirks included
+plunger routing into occupied bathrooms — fixed with substantial SimAntics work before ship. Name
+TBD on reunion.
+
 ## See also
 
 - [`../../characters/jim-mackraz/invitation.md`](../../characters/jim-mackraz/invitation.md)

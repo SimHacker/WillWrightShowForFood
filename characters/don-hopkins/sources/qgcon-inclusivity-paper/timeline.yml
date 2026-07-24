@@ -1,0 +1,220 @@
+# Chronological parallel track — Sims inclusivity + US/culture context
+# QGCon paper · Don Hopkins · expand from Google Doc
+
+events:
+  - date: "1984-01-24"
+    event: "Macintosh Released"
+    tags: [context]
+  - date: "1985"
+    event: "MacroMedia VideoWorks (later known as Director) Released"
+    tags: [context]
+  - date: "1986"
+    event: "MacPlaymate Released"
+    tags: [context]
+  - date: "1987"
+    event: "HyperCard Released"
+    tags: [context]
+  - date: "1987"
+    event: "HyperCard Smut Stack Released"
+    tags: [context]
+  - date: "1988"
+    event: "HyperCard Smut Stack II Released"
+    tags: [context]
+  - date: "1989-02-02"
+    event: "SimCity Released"
+    tags: [sims]
+  - date: "1989-12"
+    event: "Don Hopkins saw SimCity for the first time and played it over Christmas break"
+    tags: [sims, don]
+  - date: "1989-12-26"
+    event: "Don Hopkins reviewed SimCity on comp.theory.cell-automata"
+    tags: [sims, don]
+  - date: "1990-04"
+    event: "Virtual Valerie Released"
+    tags: [context]
+  - date: "1991-07-24"
+    event: "Carol Adams posts to a Sun internal mailing list about porting SimCity to Unix"
+    tags: [sims]
+  - date: "1991-07-25"
+    event: "Don Hopkins and Josh Siegel offer to port SimCity to NeWS. (one day later)"
+    tags: [sims, don]
+  - date: "1992-07-26"
+    event: "SimCity for HyperLook / NeWS / Unix / Sun Released. (one year + one day later)"
+    tags: [sims]
+  - date: "1993"
+    event: "Will Wright starts development on his weird dollhouse project"
+    tags: [will]
+  - date: "1993-04"
+    event: "SimCity for TCL/Tk / X11 / Unix / Sun / SGI Released"
+    tags: [sims]
+  - date: "1993-05-05"
+    event: "Supreme Court of Hawaii ruled in Baehr v. Lewin"
+    tags: [context]
+  - date: "1993-09-19"
+    event: "Multi Player SimCityNet for TCL/Tk / X11 / Unix / Sun / SGI / NCD Released"
+    tags: [sims]
+  - date: "1994-01"
+    event: "SimCity 2000 released"
+    tags: [sims]
+  - date: "1994-02-28"
+    event: "Don't Ask Don't Tell Instituted by Clinton"
+    tags: [culture]
+  - date: "1994-08"
+    event: "Jamie Doornbos Joins Maxis. Lead programmer"
+    tags: [sims]
+  - date: "1994"
+    event: "Will Wright shows a demo of Dollhouse to Don Hopkins at Kaleida"
+    tags: [don, will]
+  - date: "1995-06-01"
+    event: "Eric Bowman Joins Maxis. Graphics programmer"
+    tags: [sims]
+  - date: "1995-06"
+    event: "Maxis Goes Public"
+    tags: [sims]
+  - date: "1996-01"
+    event: "Don Hopkins joins Interval Research Corporation"
+    tags: [don]
+  - date: "1996-04-26"
+    event: "Will Wright's talk to Terry Winograd's UI class — Designing User Interfaces to Simulation Games"
+    tags: [will]
+  - date: "1996-09-21"
+    event: "Defense of Marriage Act Signed by Bill Clinton"
+    tags: [inclusivity, culture]
+  - date: "1996-10-01"
+    event: "SimCopter Released. Himbo Easter Egg"
+    tags: [context]
+  - date: "1996-10-02"
+    event: "X: Initial Proposal / Happy-Friends-Home / Revision 3"
+    tags: [context]
+  - date: "1996-11"
+    event: "Purple Moon founded by Brenda Laurel"
+    tags: [context]
+  - date: "1997-01"
+    event: "Don Hopkins Joins Maxis. Character animation and UI programmer"
+    tags: [sims, don]
+  - date: "1997-03"
+    event: "Maxis reports loss of $2 million"
+    tags: [sims]
+  - date: "1997-07-28"
+    event: "EA Acquires Maxis for $124 million in stock"
+    tags: [sims]
+  - date: "1998-06-04"
+    event: "The Sims Steering Committee Demo"
+    tags: [sims]
+  - date: "1998-08-07"
+    event: "The Sims Design Document Draft 3 — Don reviews heterosexist relationship code"
+    tags: [inclusivity, sims]
+  - date: "1998-08-31"
+    event: "The Sims Design Document Draft 5 — same-sex romance planned"
+    tags: [inclusivity, sims]
+  - date: "1998-10-02"
+    event: "The Sims Design Document Draft 7"
+    tags: [sims]
+  - date: "1998-10-22"
+    event: "Patrick J Barrett III Joins Maxis. AI programmer"
+    tags: [inclusivity, sims]
+  - date: "1998-11-03"
+    event: "Hawaii voters approved amendment reserving marriage to opposite-sex couples"
+    tags: [inclusivity]
+  - date: "1999-04-11"
+    event: "The Sims Shown at E3"
+    tags: [sims]
+  - date: "1999-05"
+    event: "SimShow, HomeCrafter, Facelift released"
+    tags: [sims]
+  - date: "2000-01-31"
+    event: "The Sims Released"
+    tags: [sims]
+  - date: "2000-03-07"
+    event: "California Proposition 22 approved"
+    tags: [context]
+  - date: "2000-07"
+    event: "The Sims Transmogrifier Released"
+    tags: [sims]
+  - date: "2000-08-31"
+    event: "The Sims: Livin' Large Released"
+    tags: [sims]
+  - date: "2000-11-07"
+    event: "2000 US Presidential Election"
+    tags: [culture]
+  - date: "2001-01"
+    event: "The Sims Becomes Best Selling Computer Game of 2000"
+    tags: [sims]
+  - date: "2001-09-11"
+    event: "September 11 Attacks"
+    tags: [context]
+  - date: "2002-01"
+    event: "The Sims Overtakes Myst as Best-Selling PC Game of All Time"
+    tags: [sims]
+  - date: "2002-12-17"
+    event: "The Sims Online Released"
+    tags: [sims]
+  - date: "2003-11-18"
+    event: "Massachusetts Goodridge decision — same-sex marriage rights"
+    tags: [inclusivity]
+  - date: "2004-02-11"
+    event: "San Francisco 2004 Same Sex Weddings Begin"
+    tags: [inclusivity]
+  - date: "2004-03-01"
+    event: "Transmogrifier 2.0 and Rug-O-Matic Released"
+    tags: [sims]
+  - date: "2004-03-11"
+    event: "San Francisco same-sex weddings end — 4000 couples married"
+    tags: [inclusivity]
+  - date: "2004-05-17"
+    event: "Same-sex marriage starts in Massachusetts"
+    tags: [inclusivity]
+  - date: "2004-06-10"
+    event: "Same sex marriage question removed from The Sims 2 FAQ"
+    tags: [inclusivity, sims]
+  - date: "2004-09-14"
+    event: "The Sims 2 Released"
+    tags: [sims]
+  - date: "2007-11-07"
+    event: "EA releases GPLv3 SimCity source for OLPC"
+    tags: [sims]
+  - date: "2008-06-17"
+    event: "California same-sex marriage licenses issued"
+    tags: [inclusivity]
+  - date: "2008-11-04"
+    event: "Proposition 8 passed in California"
+    tags: [inclusivity]
+  - date: "2009-03"
+    event: "The Sims Franchise Sold More Than 100 Million Copies"
+    tags: [sims]
+  - date: "2009-06-02"
+    event: "The Sims 3 Released"
+    tags: [sims]
+  - date: "2011-07-24"
+    event: "New York marriage equality takes effect"
+    tags: [inclusivity]
+  - date: "2011-09-20"
+    event: "Don't Ask Don't Tell Repealed"
+    tags: [context]
+  - date: "2012-11-29"
+    event: "MoMA adds The Sims to video game collection"
+    tags: [sims, culture]
+  - date: "2013-06-26"
+    event: "Supreme Court strikes down DOMA (Windsor)"
+    tags: [inclusivity]
+  - date: "2014-09-02"
+    event: "The Sims 4 Released"
+    tags: [sims]
+  - date: "2014-05"
+    event: "Russia mature rating for Sims 4 over gay relationships"
+    tags: [inclusivity, sims]
+  - date: "2015-03-04"
+    event: "EA shuts down Maxis Emeryville"
+    tags: [sims]
+  - date: "2016-06-02"
+    event: "The Sims 4 Patch 34 — gender customization expanded"
+    tags: [inclusivity, sims]
+  - date: "2019-06"
+    event: "The Sims 4 Pride Month Update; It Gets Better partnership"
+    tags: [inclusivity, sims]
+  - date: "2019-07"
+    event: "Lesbian couple on Sims 4 cover"
+    tags: [sims]
+  - date: "2019-10"
+    event: "Don pursues QGCon 2020 inclusivity paper — EA historian thread"
+    tags: [don]

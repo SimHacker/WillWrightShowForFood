@@ -1,0 +1,55 @@
+# CARD — Keith Henson (public portrayal). NOT Keith Henson.
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+room:
+  id: keith-henson
+  name: Keith Henson
+  type: [invitation, guest, portrayal]
+
+card:
+  name: Keith Henson
+  title: Loopback Troll Grandmaster
+  rarity: rare
+  signifier: "🔄⛓🚀"
+  flavor: ftp:127.0.0.1 — it loops right back into your own machine.
+
+relationships:
+  - { with: don-hopkins, kinds: [old_friend, hn_receipt_keeper], why: "Don verified stories; posted deposition + cryonics digests on HN" }
+  - { with: will-wright, kinds: [show_boundary], why: "Will won't do religious scoop — internet-history + cryonics + space framing" }
+  - { with: ray-kurzweil, kinds: [transhuman_orbit], why: "Cryonics + nanotech + Drexler-adjacent futures" }
+
+abilities:
+  - id: LOOPBACK-127
+    name: Loopback Deposition
+    type: activated
+    effect: "Under oath, explain TCP/IP 127.0.0.1 to lawyers who think it's a real FTP site. Trolling as art form."
+    verifiable: "sources/127-loopback-deposition.yml; HN 20791891"
+    combos_with: [don-hopkins]
+  - id: EXTEND-TROLL
+    name: Extend the Troll
+    type: emote
+    effect: "Emote — 'Great stuff! But don't you expect the 'ho to blow a gasket?' Cease-and-desist = major status increment on a.r.s."
+    verifiable: "127-loopback-deposition.yml"
+  - id: NEURO-CONVERSION
+    name: Neuro Conversion
+    type: triggered
+    effect: "Reaction — Alcor charity case: whole-body → head-only on frozen patients; high-speed electric chain saw (documented)."
+    verifiable: "sources/cryonics-chainsaw-alcor.yml; Great Mambo Chicken pp. 93–94"
+    combos_with: [ray-kurzweil]
+  - id: DREXLER-ORBIT
+    name: Drexler Orbit
+    type: static
+    effect: "Rockets, space, nanotechnology — transhuman builder culture neighbor."
+    verifiable: "Don ↔ Will chat; public Henson bio"
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - path: CHARACTER.yml
+  - path: invitation.md
+  - path: sources/127-loopback-deposition.yml

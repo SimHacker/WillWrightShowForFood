@@ -1,0 +1,67 @@
+character:
+  id: ian-bogost
+  name: "Ian Bogost"
+  type: invitation
+  status: living
+  field: "Procedural rhetoric; Persuasive Games; Cow Clicker; game criticism (Play Anything, How to Talk about Videogames)"
+  home: characters/ian-bogost/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Draft invite ready — procedural rhetoric × Sims lineage show seed planted; not sent."
+
+bio:
+  summary: >
+    **Ian Bogost** coined **procedural rhetoric** — "an unholy blend of Will Wright and Aristotle"
+    ([The Atlantic](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/),
+    16 Mar 2015) — argument encoded in rules, processes, and interactive failure modes, not essays
+    on a page (*Persuasive Games*, MIT Press, 2007). *Cow Clicker* (2010) deconstructed social-game
+    mechanics on purpose; the Sims UCC lineage (Motive.c, SimProv Wedding Playset, Dumbold Voting
+    Machine) and Don's QGCon inclusivity paper are natural case studies in inclusion agitprop vs
+    institutional farce.
+
+show_suggestions:
+  - "Procedural rhetoric in The Sims — Motive.c → Wedding Playset → Dumbold (same SimAntics engine)"
+  - "QGCon paper How Inclusivity Saved The Sims — react to abstract + timeline"
+  - "Cow Clicker vs Curiosity — intentional satire vs accidental addiction (How to Deconstruct the Cube segment)"
+  - "Morningstar engineer deconstruction vs procedural rhetoric — same immune system, different vocabulary?"
+  - "Soul City federation — procedural rhetoric as platform, not one-off objects"
+
+connections:
+  will_wright: "Premiere host — Motive.c substrate; construction-set / microworld lineage"
+  don: "Sims objects as procedural-rhetoric case studies; Cow Clicker / MOOLA cube parody chain"
+
+see_also:
+  - { path: sources/procedural-rhetoric-quote.yml, why: "Wright + Aristotle citation chain" }
+  - { path: sources/cow-clicker.yml, why: "Cow Clicker — mechanics, Cowpocalypse, HN" }
+  - { path: ../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml, why: "Don's Unite 2012 cow joke harvest" }
+  - { path: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Planted solo show seed" }
+  - { path: ../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml, why: "QGCon paper 2026 reframe — Soul City + Soul Saver save player souls" }
+  - { path: ../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml, why: "QGCon paper — Bogost quote + Frasca ludology stack" }
+  - { path: ../will-wright/media/sims-series-inclusivity-paper-draft.md, why: "How Inclusivity Saved The Sims — paper index" }
+  - { path: ../will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset vs Dumbold essay" }
+  - { path: ../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c, why: "Failure modes as rhetoric at the substrate" }
+  - { path: ../../repo-shows/ideas/gags/curiosity-cow-cube.yml, why: "Cow Clicker center of cube parody" }
+  - { path: ../../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, why: "Morningstar → Ashford → Bogost chain" }
+
+sources:
+  public:
+    - { title: "Persuasive Games (MIT Press, 2007)", url: "https://mitpress.mit.edu/9780262026147/persuasive-games/" }
+    - { title: "Video Games Are Better Without Characters (The Atlantic, 2015)", url: "https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/" }
+    - { title: "Cow Clicker", url: "http://www.cowclicker.com/" }
+    - { title: "Cow Clicker (Bogost.com)", url: "https://bogost.com/games/cow-clicker/" }
+    - { title: "Ian Bogost — home", url: "https://bogost.com/" }
+  yaml:
+    - sources/procedural-rhetoric-quote.yml
+    - sources/cow-clicker.yml
+  quotes:
+    - text: "an unholy blend of Will Wright and Aristotle"
+      source: "Video Games Are Better Without Characters, The Atlantic, 2015-03-16"
+      url: "https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/"

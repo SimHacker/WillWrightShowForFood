@@ -22,8 +22,10 @@ videos:
       - "Will Wright — dollhouse → The Sims; suburban satire"
     closing_line: "When you play The Sims, do you queer The Sims — or does The Sims queer you?"
     comment_corpus: |
-      MOOLLM designs/sims/sims-queer-identity-formation.md — qualitative analysis of 1,700+ comments.
-      Themes: retrospective queer recognition, hiding from parents, safe microworld, counter-testimonies.
+      MOOLLM designs/sims/sims-queer-identity-formation.md — 14 themes, cluster summary.
+      Index: characters/alexander-avila/sources/moollm-links.yml
+      Themes: unconscious queering, hiding from parents, CAS gender, pro-utopia, 2022 update debate,
+      counter-testimonies, cross-generational Sims 1–4, ace/aro, accidental lesbian couples.
 
   looksmaxxing-m2m-transsexuals:
     title: "Looksmaxxing and the Rise of Male-to-Male Transsexuals"
@@ -49,5 +51,7 @@ related_essays:
   - { title: "How Bisexuality Changed Video Games", url: "https://www.youtube.com/watch?v=Xi-HWyh0Ybk", note: "verilybitchie — related Sims/games queer history lane" }
 
 show_use:
+  solo_talk: "repo-shows/im-queer-therefore-i-sim.yml — I'm Queer Therefore I Sim with Don"
   patrick_episode: "Fair-use clips + MOOLLM comment themes; invite Alex to bless or correct portrayal"
   on_air_ethics: "Celebrate work; no mockery of commenters; no outing"
+  moollm_index: sources/moollm-links.yml

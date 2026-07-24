@@ -48,9 +48,11 @@ segments:
     analysis: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
     on_air: "Fair-use commentary; celebrate testimonies; no outing; no mockery"
   optional_avila_voice:
-    ask: "Warm invite — async reaction or portrayal correction; Patreon connection noted"
+    ask: "Warm invite — solo I'm Queer Therefore I Sim OR async on Patrick episode"
+    solo_show: repo-shows/im-queer-therefore-i-sim.yml
     room: characters/alexander-avila/
     invitation: characters/alexander-avila/invitation.md
+    moollm: characters/alexander-avila/sources/moollm-links.yml
   sims_audience:
     ask: "Builders, modders, storytellers — creator-network solidarity and post-Collection exodus ethic"
     rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]

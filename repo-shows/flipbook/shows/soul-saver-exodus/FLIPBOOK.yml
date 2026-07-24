@@ -1,0 +1,100 @@
+# FLIPBOOK — Soul Saver exodus (QGCon paper act 3–4)
+
+flipbook:
+  id: soul-saver-exodus
+  title: "Soul Saver — evacuate souls to indie worlds"
+  department: flipbook
+  duration_target_sec: 60
+  aspect: "16:9"
+  style: illustrated_explainer
+
+narration:
+  source: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml
+  speaker: Don Hopkins
+  verify_before_on_air: [ea_buyout_figures, pif_percentage, affinity_kushner]
+
+beats:
+  - at_sec: 0
+    page: 1
+    caption: "2025 — who controls publishing rails?"
+    visual: "EA logo behind vault door; Exchange URL broken"
+    asset: assets/page-01-ownership-shift.png
+    motion: page_flip
+    duration_sec: 5
+
+  - at_sec: 5
+    page: 2
+    caption: "Reported take-private — verify before cite"
+    visual: "Newspaper collage PIF / Silver Lake / Affinity — footnote asterisk"
+    asset: assets/page-02-buyout-reported.png
+    motion: hold
+    duration_sec: 8
+
+  - at_sec: 13
+    page: 3
+    caption: "Creator Network exodus"
+    visual: "Faces/icons leaving stage — Plumbella, James Turner silhouettes"
+    asset: assets/page-03-creator-exodus.png
+    motion: pan_right
+    duration_sec: 7
+
+  - at_sec: 20
+    page: 4
+    caption: "Legacy Collection — Exchange removed"
+    visual: "Steam box vs empty sharing slot"
+    asset: assets/page-04-legacy-gap.png
+    motion: zoom_in
+    duration_sec: 6
+
+  - at_sec: 26
+    page: 5
+    caption: "Tiny Life still ships share + story"
+    visual: "Ellpeck indie life sim — Workshop + export icons"
+    asset: assets/page-05-tiny-life.png
+    motion: page_flip
+    duration_sec: 7
+
+  - at_sec: 33
+    page: 6
+    caption: "Soul Saver / SoulAngel"
+    visual: "DVR + Family Album revival + Soul Bridges freight layer"
+    asset: assets/page-06-soul-saver.png
+    motion: layout_fan
+    duration_sec: 8
+
+  - at_sec: 41
+    page: 7
+    caption: "Sims ⇔ Soul City ⇔ Tiny Life"
+    visual: "Hub-and-spoke bridge diagram — character soul-file in center git node"
+    asset: assets/page-07-bridge-diagram.png
+    motion: zoom_out
+    duration_sec: 10
+
+  - at_sec: 51
+    page: 8
+    caption: "Exit as real as the wedding playset was in SimAntics"
+    visual: "Wedding playset object → soul-file → Tiny Life lot"
+    asset: assets/page-08-mechanism-not-slogan.png
+    motion: crossfade
+    duration_sec: 9
+
+render:
+  output: render/soul-saver-exodus.mp4
+  proxy: render/soul-saver-exodus-proxy.mp4
+  captions: captions/soul-saver-exodus.vtt
+
+ties_to:
+  - ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml
+  - ../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  - ../../../catalogs/soul-city/soul-angel.yml
+  - ../../../process/sims-creator-network-exodus.yml
+
+assets_needed:
+  - page-01-ownership-shift.png
+  - page-02-buyout-reported.png
+  - page-03-creator-exodus.png
+  - page-04-legacy-gap.png
+  - page-05-tiny-life.png
+  - page-06-soul-saver.png
+  - page-07-bridge-diagram.png
+  - page-08-mechanism-not-slogan.png

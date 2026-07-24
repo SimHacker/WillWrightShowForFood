@@ -1,0 +1,105 @@
+# Soul City + Soul Saver — QGCon paper spine (2026 reframe)
+# Extends "How Inclusivity Saved The Sims" from franchise history → player infrastructure today
+
+thesis:
+  headline: "How Inclusivity Saved The Sims — and what saves the sims now"
+  saved_then: |
+    Inclusivity was not a late patch or a marketing slide — it was **playability** and
+    **procedural rhetoric** (Ian Bogost): argument encoded in SimAntics rules, Motive.c failure
+    modes, masking (McCloud), constructionist microworlds (Papert), community tools (Family Album,
+    Exchange, Transmogrifier), and twenty years of society ↔ game co-evolution across gender, race,
+    sexuality, and expression. That stack **saved** the franchise culturally and commercially.
+  saves_now: |
+    When oligarch-owned publishers (reported ~$55B EA buyout: Saudi PIF, Silver Lake, Affinity
+    Partners / Jared Kushner in press) and religious-fanatic censorship markets threaten to
+    repossess representation, the counter-move is **infrastructure**: **Soul City** (git-checked-in
+    hub for round-trippable character **soul-files**) and **Soul Saver** tooling (**SoulAngel**:
+    DVR, Family Album revival, Soul Bridges) to **relocate** player souls from walled gardens into
+    indie worlds — **Tiny Life**, Stardew, Shattered Pixel Dungeon, and federated creator catalogs.
+
+procedural_rhetoric:
+  bogost: |
+    Mechanism, not decoration. Wedding Playset (inclusion agitprop), Dumbold (institutional farce),
+    same-sex relationship rules — all argument in processes. Soul City extends rhetoric to **platform**:
+    publish gates, attribution, and bridge schemas that say who gets recognized and where souls may travel.
+  cite: ../procedural-rhetoric-theory.yml
+
+inclusivity_axes:
+  not_only_lgbtq: |
+    Paper spans gender (binary → fluid → CAS medical wearables), race and representation in CAS,
+    LGBTQ+ relationships/marriage/preference (Patrick Barrett arc), modding as player-authored
+    inclusion (Tanja Sihvonen), safe-space storytelling (Family Album), and flying under hostile
+    radar (Russia ban as badge, assimilation rhetoric).
+  qgcon_fit: "Queer game design conference — marriage-law parallel track in timeline.yml"
+
+soul_city_namesake:
+  not_confused_with: "Soul City, North Carolina — Floyd B. McKissick's anti-racist planned town"
+  nixon: |
+    HUD New Communities funding (1972) — Nixon backed Black-led Soul City NC for coalition math,
+    not conviction. Audit cleared the project; Jesse Helms smear + economy killed it. Incubator
+    became a prison — **inverted coda** for our project.
+  our_soul_city: |
+    Liminal hub between games where souls meet, mate, and **cannot be foreclosed** (GPL + git).
+    Namesake sentence required on air: *not to be confused with, but inspired by*.
+  sources:
+    - ../../../../repo-shows/will-wright-premiere/soul-city-namesake.md
+    - https://www.youtube.com/watch?v=R2karaKGgkk
+
+soul_saver:
+  brand: Soul Saver  # mission / Repo Show naming (see process/repo-show-class-naming.md)
+  product: SoulAngel  # MicropolisCore/apps/soul-angel — universal companion + per-game Soul Bridges
+  what_it_saves: |
+    Character souls locked in EA-owned saves, dead Exchange URLs, Legacy Collection without sharing,
+    and platforms subject to sovereign-wealth or censorship pressure. Read/write soul-files; publish
+    to Soul City; bridge outward.
+  hydraulics: |
+    game-bridge-soul-hydraulics.yml — repossessing lost souls from dead formats (arrow reversed
+    from NC Soultech → prison).
+
+ea_buyout_2025:
+  verify_before_cite: true
+  registry: ../../../../process/sims-creator-network-exodus.yml
+  yaml: ../../../will-wright/sources/sims1-legacy-collection-exchange-gap/ea-ownership-representation-creators.yml
+  community_response:
+    creator_network_exodus: [lilsimsie, plumbella, james-turner, others]
+    tiny_life_praise: "Plumbella: feels like Sims 1; James Turner: what we know and love"
+    wwsff_stance: |
+      Solidarity interviews — not partisan theater. Document functional impact on LGBTQ+ community
+      and sharing rails. Soul City as **fan infrastructure + attribution**; lift creators first.
+  what_to_do:
+    - "Soul City hub — soul-files in git, federated catalogs (SimFreaks, SimSlice, SimProv)"
+    - "Soul Bridges — Sims ⇔ Soul City ⇔ Tiny Life (Ell/Ellpeck); Stardew; Spore; …"
+    - "Exchange revival via GitHub + Steam Community Guides — not EA dependency"
+    - "Wayback / Archive tornado (Brewster Kahle beat) — resurrect Family Album literature"
+    - "Indie exodus as feature not bug — characters evacuate to worlds that still ship share + story"
+
+tiny_life:
+  why: |
+    Solo queer indie life sim; Workshop + export; praised by ex–Creator Network voices; natural
+    spoke when EA removed Exchange from Legacy Collection.
+  bridge: ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  ellpeck: ../../../ellpeck/
+  line: "Sims characters can evacuate the EA-owned property and live happier lives in Tiny Life"
+
+paper_structure_additions:
+  act_1: "How inclusivity saved The Sims (1999–2020) — procedural rhetoric + timeline"
+  act_2: "Soul City NC namesake — Nixon, Helms, second chances; why we stole the name carefully"
+  act_3: "2025 ownership change — community fears; Creator Network exodus; Legacy gap"
+  act_4: "Soul City + Soul Saver — mechanism for saving souls today; Tiny Life bridge as case study"
+  conclusion: |
+    Inclusivity saved the franchise once by making better rules and tools. It saves players now
+    by making **exit** — portable souls, federated publishing, indie destinations — as real as
+    the original inclusion was in SimAntics.
+
+cross_links:
+  catalogs: ../../../../catalogs/soul-city/README.md
+  flipbook:
+    catalog: ../../../../repo-shows/flipbook/README.md
+    act_1: ../../../../repo-shows/flipbook/shows/inclusivity-saved-the-sims/FLIPBOOK.yml
+    act_2: ../../../../repo-shows/flipbook/shows/soul-city-namesake/FLIPBOOK.yml
+    act_3_4: ../../../../repo-shows/flipbook/shows/soul-saver-exodus/FLIPBOOK.yml
+  show_seeds:
+    - ../../../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+    - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  bogost: ../../../ian-bogost/
+  marusek: ../../../david-marusek/the-wedding-album-and-digital-souls.md

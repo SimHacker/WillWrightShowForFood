@@ -52,7 +52,10 @@ arcs:
       - Motive.c (1997) vs TheSimsAITest vs SimAntics — three-layer teaching stack for Jamie Doornbos show
       - Shimmer bar = procedural disguise; no mesh under pixelation (RNG discipline)
       - TSO UI/sim PRNG desync — networked sim lesson
-      - Maid + plunger SimAntics fix
+      - beat: Maid + plunger SimAntics fix
+        spine: ../../repo-shows/building-the-sims/maid-plunger-incident.yml
+        source: ../../repo-shows/building-the-sims/sources/maid-plunger-incident-hn-2022.md
+        flipbook: ../../repo-shows/flipbook/shows/maid-plunger-incident/FLIPBOOK.yml
       - 'Stephen Colbert VO: "gonna pixelate" hot tub ad-lib'
 
   before_winograd:

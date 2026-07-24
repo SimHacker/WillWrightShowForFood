@@ -1,0 +1,96 @@
+# Maid plunger incident — integrated narrative spine
+# Don Hopkins HN 2022 + reunion artifact chain + flipbook B-roll
+
+meta:
+  id: maid-plunger-incident
+  title: "The Sims maid plunger incident"
+  subtitle: "Unnecessary Censorship meets SimAntics — fixed before ship"
+  status: fixed-pre-ship
+  heat: high
+  primary_source: sources/maid-plunger-incident-hn-2022.md
+  hn_comment: https://news.ycombinator.com/item?id=30359560
+  parent_thread: https://news.ycombinator.com/item?id=30350626
+  date_public: 2022-02-16
+  date_ship_fix: pre-2000-02-04  # Sims 1 US ship
+
+thesis: |
+  Censorship that **implies** anatomy the mesh lacks, plus service AI with no bathroom privacy,
+  plus a plunger from hammerspace, produced an SNL **Unnecessary Censorship** sketch in SimAntics.
+  The fix was behavior-graph surgery — privacy gating, interrupt rules, toilet state routing — not
+  a pixel shader. No surviving video; Don's HN comment is the best primary source.
+
+chain:
+  - step: potty_motive
+    beat: Sim needs bathroom; body pixelates; sits on toilet
+    cards: [artifacts/pooping-in-pants-on-toilet.md]
+  - step: bowel_clogs_toilet
+    beat: Bowel movement in trousers dirties and clogs toilet
+    cards: [artifacts/clogged-toilet-summons-maid.md]
+  - step: maid_summoned
+    beat: Maid service AI routes to dirty/clogged toilet — no privacy yet
+    cards: [artifacts/summer-intern-maid-service-ai.md]
+  - step: plunger_scene
+    beat: Maid pulls plunger from hammerspace; thrusts between seated Sim's legs; pumps handle
+    cards: [artifacts/maid-plunger-unnecessary-censorship.md]
+  - step: unnecessary_censorship_read
+    beat: Pixel shimmer + vigorous motion reads as manual sex work (Jimmy Kimmel homage)
+    refs:
+      - https://www.youtube.com/watch?v=6axflEqZbWU
+  - step: simantics_fix
+    beat: Substantial SimAntics programming before ship
+    cards:
+      - artifacts/simantics-maid-plunger-fix.md
+      - artifacts/bathroom-privacy-blocks-maid.md
+
+contributors:
+  don_hopkins:
+    role: Pixelation implementation; SimAntics fix (memory)
+  summer_intern:
+    role: Original brilliant maid service AI — name TBD on reunion
+    credit: sources/maid-plunger-incident-hn-2022.md
+  jamie_doornbos:
+    role: SimAntics walkthrough candidate on air
+
+related_systems:
+  pixelation:
+    hub: pixelation-and-modesty.md
+    cards:
+      - artifacts/pixelation-shimmer-while-paused.md
+      - artifacts/modesty-bar-cast-rated.md
+      - artifacts/no-pants-mesh-clothed-or-nude.md
+  tso_rng:
+    note: Same HN comment covers UI vs sim PRNG desync when pixelation reused online
+    cards: [artifacts/tso-pixelation-rng-desync.md]
+  industry_tangent:
+    card: artifacts/hot-coffee-vs-hot-potty.md
+    punchline: "GTA had Hot Coffee; The Sims almost had Hot Potty"
+
+show_hooks:
+  reunion_segment:
+    format: Don cold-open → Jamie Doornbos SimAntics node walk → summer intern credit hunt
+    duration_min: 8-12
+    artifacts_index: artifacts/INDEX.md  # heat table row 1
+  flipbook_broll:
+    path: ../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml
+    when: Narration during pixelation/modesty hub or Building The Sims reunion
+  hot_potty_callback:
+    use: Sparingly — after engineering story, not as headline
+    card: artifacts/hot-coffee-vs-hot-potty.md
+
+ask_on_air:
+  - Who was the summer intern who wrote maid service AI?
+  - Which SimAntics nodes changed — privacy, interrupt, toilet state, plunger routing?
+  - Did QA file severity 1 or comedy relief?
+  - Any Edith screenshots of broken vs fixed graph?
+  - Does anyone have a capture? (Don did not save video)
+
+assets:
+  prototype_plunger_mesh: MicropolisCore/content/vitamoo/sims-prototype-1998/xskin-suit-plunger.cmx
+  beta_video: https://www.youtube.com/watch?v=ma5SYacJ7pQ
+  will_sex_interview: https://www.youtube.com/watch?v=DVtduPX5e-8
+
+cross_links:
+  don_hn_index: ../../characters/don-hopkins/sims-pixelation-censorship-hn-2022.md
+  don_mining_hub: ../../characters/don-hopkins/don-will-mining-hub.yml  # sims_don_craft arc
+  flipbook_dept: ../flipbook/README.md
+  portrayal: ../../schemas/portrayal-standards.md

@@ -1,0 +1,38 @@
+# SHOW SEED — Keith Henson: loopback troll, cryonics craft, Drexler orbit
+# Don's friend; Will boundary — not a religious-scoop episode.
+
+show:
+  id: keith-henson-loopback-cryonics
+  title: "127.0.0.1 — Loopback Troll, Cryonics, and Space"
+  type: solo
+  host: Don Hopkins
+  guests: ["Keith Henson"]
+  topic: |
+    Internet golden age on alt.religion.scientology: the ftp:127.0.0.1 deposition as performance art.
+    Alcor whole-body → neuro conversion history (documented). Rockets, nanotech, Drexler orbit.
+    Scientology as receipt background only — Will Wright won't host religious-scoop framing.
+  status: seed
+  consent: not_yet_asked
+
+artifacts:
+  loopback:
+    path: ../../../characters/keith-henson/sources/127-loopback-deposition.yml
+    hook: "Lieberman: What's an ftp site? Henson: It's at 127.0.0.1. This is a troll."
+  cryonics:
+    path: ../../../characters/keith-henson/sources/cryonics-chainsaw-alcor.yml
+    hook: "Alcor charity neuro conversion — Great Mambo Chicken + electric chain saw report"
+
+discussion_prompts:
+  - "Trolling as art form — extending trolls; cease-and-desist as status increment"
+  - "TCP/IP literacy under oath — comedy vs harassment (guest sets the line)"
+  - "Cryonics procedure history — what Alcor learned from thawed conversions"
+  - "Nanotech/rockets — where Keith is now vs a.r.s. era"
+
+will_boundary:
+  quote: "That's about the only religious scoop I can't stand"
+  framing: "Internet history + transhuman builder culture; not Scientology exposé"
+
+ties_to:
+  - ../../../characters/keith-henson/invitation.md
+  - ../../../characters/keith-henson/ideas.md
+  - ../../../characters/ray-kurzweil/

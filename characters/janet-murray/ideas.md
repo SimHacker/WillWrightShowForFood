@@ -9,6 +9,14 @@
 - Transformation — the visit changes the visitor
 - Procedural authorship vs fixed branching scripts
 
+## QGCon paper — How Inclusivity Saved The Sims
+
+Don's abstract pairs **Murray** (agency, Family Album holodeck) with **Bogost** (procedural rhetoric):
+
+- [`../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml`](../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml)
+- [`../don-hopkins/sources/qgcon-inclusivity-paper/abstract.md`](../don-hopkins/sources/qgcon-inclusivity-paper/abstract.md)
+- [Ian Bogost](../ian-bogost/) — "unholy blend of Will Wright and Aristotle"
+
 ## Pairings
 
 | Guest | Why |

@@ -1,0 +1,42 @@
+# CARD — Andy Looney (public portrayal). NOT Andy Looney.
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+room:
+  id: andy-looney
+  name: Andrew (Andy) Looney
+  type: [invitation, guest, portrayal]
+
+card:
+  name: Andy Looney
+  title: Architect of Rule Chaos
+  rarity: mythic
+  signifier: "🃏🔬🌀"
+  flavor: Draw one, play one — until New Rule says otherwise.
+
+relationships:
+  - { with: kristin-looney, kinds: [co_founder, spouse, co_guest], why: "Looney Labs; Fluxx show pair" }
+  - { with: don-hopkins, kinds: [umd_lumssfs_friend], why: "Maryland days; MOOLLM fluxx-chaos + letter" }
+  - { with: will-wright, kinds: [procedural_cousin], why: "Rules-in-flux meets SimAntics — optional cameo" }
+
+abilities:
+  - id: NEW-RULE
+    name: New Rule
+    type: activated
+    effect: "Replace a room rule mid-conversation — draw/play limits, goal, hand size."
+    verifiable: "Fluxx 1997; looneylabs.com/fluxx"
+  - id: LAB-COAT
+    name: Lab Coat Not Beard
+    type: emote
+    effect: "Correction — Andy wears the lab coat. Tribute sessions must not hallucinate facial hair."
+    verifiable: "MOOLLM marathon-session.md; cursor-mirror gallery"
+  - id: CHAOS-THEORY-CARD
+    name: Chaos Theory in Card Form
+    type: passive
+    effect: "Winning conditions, keepers, creepers — all negotiable. Procedural rhetoric for humans."
+    combos_with: [ian-bogost, will-wright]
+
+advertisement_scoring:
+  note: "Fluxx abilities score high when conversation topic matches rule mutation"

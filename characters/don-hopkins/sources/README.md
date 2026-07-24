@@ -2,6 +2,22 @@
 
 *Primary sources, HN harvests, and dossiers for the Repo Show room.*
 
+## Cow Clicker / Curiosity / Unite 2012 (HN harvest)
+
+| Read | What |
+|------|------|
+| [hn-cow-clicker-curiosity-unite-2012.yml](hn-cow-clicker-curiosity-unite-2012.yml) | Don's cow-inside-the-cube joke; HN permalinks; Molyneux vs Bogost contrast |
+| [Ian Bogost — Cow Clicker](../../ian-bogost/sources/cow-clicker.yml) | Cited mechanics, Cowpocalypse, reception |
+| [Blog reinvention — GitHub + MOOLLM](../writing/hn-medium-failure-and-github-moollm.md) | Medium failure essay; Cow Clicker as metrics comparator |
+
+## Sims / QGCon inclusivity paper (2020 target)
+
+| Read | What |
+|------|------|
+| [qgcon-inclusivity-paper/](qgcon-inclusivity-paper/README.md) | **How Inclusivity Saved The Sims** — abstract, timeline, Bogost/Murray stack, same-sex design arc |
+| [Will Wright — paper index](../will-wright/media/sims-series-inclusivity-paper-draft.md) | Cross-link hub |
+| [2019 EA historian thread](../will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/) | Lyndsay Pearson, Chloe Dubini, Mike Duke |
+
 ## Compression / latent space (2026 harvest)
 
 | Read | What |

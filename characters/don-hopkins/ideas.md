@@ -39,6 +39,7 @@
 | [`demoscene-compression-hn-2023.md`](demoscene-compression-hn-2023.md) | Will on demoscene, LLMs/dreams/Dasher (HN 36597460) — compression hub |
 | [`sims-pixelation-censorship-hn-2022.md`](sims-pixelation-censorship-hn-2022.md) | Sims shimmer censorship + SimAntics bugs (HN 30350626) |
 | [`../../repo-shows/building-the-sims/pixelation-and-modesty.md`](../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Reunion hub — modesty bar, maid/plunger, TSO RNG |
+| [`../../repo-shows/building-the-sims/maid-plunger-incident.yml`](../../repo-shows/building-the-sims/maid-plunger-incident.yml) | Integrated spine — HN primary source, artifact chain, flipbook |
 | [`../../repo-shows/building-the-sims/artifacts/INDEX.md`](../../repo-shows/building-the-sims/artifacts/INDEX.md) | **Story cards** — browse on air |
 | [`../../repo-shows/building-the-sims/qa-bug-pile.md`](../../repo-shows/building-the-sims/qa-bug-pile.md) | QA pile — maid island, wallpaper+shed, pool cluster |
 | [`don-will-mining-hub.yml`](don-will-mining-hub.yml) | Don × Will arcs — compression, Spore retrospective, Sims craft, Kaleida, Long Now triangle |

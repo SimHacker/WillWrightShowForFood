@@ -77,6 +77,16 @@ for the **RSP** data-structure package — **125 pages total**. Local digitizati
 
 Primary source: [`sources/2026-07-16-pixie-storyline-thread.md`](sources/2026-07-16-pixie-storyline-thread.md).
 
+## DIGITIZED (24 July 2026)
+
+Heinz delivered: "please find attached the digitised PIXIE Assembler program" plus the
+**10 March 1967 system-analysis document** (his pre-PIXIE design doc, shown to Wilkes —
+now filed + transcribed at [`sources/1967-03-10-system-analysis/`](sources/1967-03-10-system-analysis/README.md)).
+The assembler scan lives in the [pcloud bundle](https://e.pcloud.link/publink/show?code=kZfrboZLdkhmTkNHyFD3D4YsvF18VCDFpq7)
+(assembler + film + thesis) — **next action: download, file under `media/` with provenance, hand to Lars.**
+
+Primary source: [`sources/2026-07-24-pixie-storyline-thread.md`](sources/2026-07-24-pixie-storyline-thread.md).
+
 ## CARS 2027 milestone (29 June 2027, Berlin)
 
 Heinz proposes special **HCI session** at CARS Congress — same date as **60th anniversary** of
@@ -115,9 +125,10 @@ Titan extracode, **ICON** sources, **Multipatch film** (shown with Gouraud on US
 
 ## Next steps
 
-1. Heinz digitizes **125 pages** (in progress, Jul 2026).
-2. Scan/receive → file under `media/` here with provenance — **evidence room before interview**
-   (Don 7 Jul 2026: papers, magazine articles, films, **especially source code**).
+1. ~~Heinz digitizes **125 pages**~~ — **done 24 Jul 2026**, delivered via email + pcloud.
+2. Download pcloud bundle / save attachment → file under `media/` here with provenance —
+   **evidence room before interview** (Don 7 Jul 2026: papers, magazine articles, films,
+   **especially source code**).
 3. Lars: assess against Type 340 manual — assemble/run under SIMH; **virtual light pen drivers**
    from listing interrupt handler; test on emulator.
 4. Fold the "not a dumb terminal" correction into the show's interview beats (done — see

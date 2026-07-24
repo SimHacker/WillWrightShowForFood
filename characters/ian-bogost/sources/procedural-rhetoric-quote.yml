@@ -1,0 +1,65 @@
+# Ian Bogost — "procedural rhetoric" and the Will Wright + Aristotle line
+# Respectful citation chain for guest room + QGCon paper
+
+term: procedural rhetoric
+coined: 2007
+
+primary_sources:
+  book:
+    title: "Persuasive Games: The Expressive Power of Videogames"
+    author: Ian Bogost
+    publisher: MIT Press
+    year: 2007
+    isbn: "978-0262026147"
+    url: https://mitpress.mit.edu/9780262026147/persuasive-games/
+    note: "First systematic coinage and definition — argument through processes and rule authorship"
+
+  essay_chapter:
+    title: "The Rhetoric of Video Games"
+    author: Ian Bogost
+    in: "The Ecology of Games: Connecting Youth, Games, and Learning"
+    editor: Katie Salen
+    publisher: MIT Press
+    year: 2008
+    pages: "117-140"
+    isbn: "9780262693646"
+    pdf_mirrors:
+      - https://se4n.org/papers/bogost-rhetoric.pdf
+    note: "Defines procedural rhetoric alongside verbal and visual rhetoric; Spore astrobiology example"
+
+will_wright_aristotle_quote:
+  text: |
+    I developed my own design philosophy that I called procedural rhetoric,
+    an unholy blend of Will Wright and Aristotle.
+  primary_citation:
+    title: "Video Games Are Better Without Characters"
+    author: Ian Bogost
+    publication: The Atlantic
+    date: 2015-03-16
+    url: https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/
+  context: |
+    Bogost credits Will Wright's SimCity lineage (and his own Persuasive Games studio work on
+    politics, nutrition, immigration, etc.) as the practical half of the blend; Aristotle supplies
+    the rhetorical tradition of persuasion toward correct judgment.
+  not_from: |
+    The exact Wright+Aristotle phrasing is from the 2015 Atlantic essay, not the 2007 book jacket.
+    The book defines the term; the Atlantic line is Bogost's memorable self-summary.
+
+wikipedia: https://en.wikipedia.org/wiki/Procedural_rhetoric
+
+related_theory:
+  frasca_simulation_rhetoric:
+    title: "Simulation versus Narrative: Introduction to Ludology"
+    author: Gonzalo Frasca
+    year: 2003
+    note: "Also called simulation rhetoric — precursor dialogue"
+  murray:
+    character: ../../../janet-murray/
+    book: "Hamlet on the Holodeck"
+    pairing: "Murray = agency/immersion/transformation; Bogost = argument in rules"
+
+repo_uses:
+  - ../CHARACTER.yml
+  - ../README.md
+  - ../../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml
+  - ../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

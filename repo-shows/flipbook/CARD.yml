@@ -1,0 +1,24 @@
+# CARD — flipbook graphics department
+
+room:
+  id: flipbook
+  name: Flipbook — graphics department
+  type: [post_production, illustrated_b_roll]
+  tagline: "Our graphics department for narration"
+
+what: |
+  Catalog of timed illustrated mini-shows (FLIPBOOK.yml + assets) that play during
+  voice narration. Full-bleed B-roll — distinct from Howard Penner Pop-Up overlays on
+  screen recordings.
+
+methods:
+  LIST: INDEX.yml
+  SPEC: ../../process/post-production/flipbook-shows.yml
+  PLANT: "Copy _TEMPLATE/FLIPBOOK.yml → shows/<slug>/"
+
+see_also:
+  - { path: README.md, why: "Department overview + catalog table" }
+  - { path: INDEX.yml, why: "Show registry" }
+  - { path: ../../process/post-production/flipbook-shows.yml, why: "Beat schema + pipeline" }
+  - { path: ../../characters/howard-penner/README.md, why: "Pop-Up overlay art lead — complementary lane" }
+  - { path: ../how-inclusivity-saved-the-sims/SHOW.yml, why: "First consumer — QGCon paper Repo Show" }

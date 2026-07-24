@@ -1,0 +1,39 @@
+# Flipbook show registry — graphics department catalog
+
+meta:
+  department: flipbook
+  spec: ../../process/post-production/flipbook-shows.yml
+  last_updated: 2026-07-24
+
+shows:
+  inclusivity-saved-the-sims:
+    path: shows/inclusivity-saved-the-sims/FLIPBOOK.yml
+    title: "How Inclusivity Saved The Sims"
+    duration_target_sec: 90
+    narration_source: ../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md
+    for: [qgcon_paper, how-inclusivity-saved-the-sims]
+    status: seed
+
+  soul-city-namesake:
+    path: shows/soul-city-namesake/FLIPBOOK.yml
+    title: "Soul City NC — namesake, Nixon, second chances"
+    duration_target_sec: 75
+    narration_source: ../../repo-shows/will-wright-premiere/soul-city-namesake.md
+    for: [qgcon_paper, will-wright-premiere, soul-city]
+    status: seed
+
+  soul-saver-exodus:
+    path: shows/soul-saver-exodus/FLIPBOOK.yml
+    title: "Soul Saver — evacuate souls to Tiny Life"
+    duration_target_sec: 60
+    narration_source: ../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml
+    for: [qgcon_paper, soul-city, tiny-life-bridge]
+    status: seed
+
+  maid-plunger-incident:
+    path: shows/maid-plunger-incident/FLIPBOOK.yml
+    title: "The Sims maid plunger incident"
+    duration_target_sec: 75
+    narration_source: ../../repo-shows/building-the-sims/sources/maid-plunger-incident-hn-2022.md
+    for: [building-the-sims, pixelation-and-modesty, simantics]
+    status: seed

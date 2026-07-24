@@ -1,0 +1,129 @@
+# Thematic sections — QGCon paper outline (beyond timeline)
+
+simulator_effect:
+  will_definition: |
+    Players imagine the simulation is vastly more detailed than it is — don't talk them out of it.
+  two_computers: "Electronic desk machine + biological imagination in player's head"
+  reverse_over_engineering: |
+    Desirable outcome: players over-estimate simulator work; imagination fills gaps.
+  zodiac_confirmation_bias:
+    story: |
+      Will insisted on real Zodiac signs (not fictional SimSigns) to leverage emotional baggage.
+      UI showed sign from personality vector; zero behavior code — testers reported sign had
+      TOO MUCH effect. "Astrillogical signs."
+    url: https://www.youtube.com/watch?v=ffzt12tEGpY
+  simlish: |
+    Unfamiliar language + tone → players read in more (Claire Curtin, improv comedians).
+
+masking_mcccloud:
+  books: [Understanding Comics, Reinventing Comics]
+  will_endorsement: "Anyone involved in interactive entertainment should read this book."
+  technique: "Abstract characters (low-poly sims) against realistic pre-rendered grounds"
+  tintin_parallel: "Hergé — concrete background, abstract figures → projective identification"
+  gutters: "The Sims encourages players to get their mind into the gutter — player fills transitions"
+
+constructionism:
+  papert_microworld: "Logo geometry → Sims/SimCity as shareable microworlds"
+  olpc: "2007 GPLv3 Micropolis for XO-1"
+  doreen_nelson: "Design Based Learning; SimCity lineage"
+
+procedural_rhetoric_negative:
+  note: |
+    Games can deliver pre-programmed propaganda — clichéd narratives, stereotypical characters,
+    institutionalized prejudice. Contrast with Sims inclusion register + Dumbold institutional farce.
+  positive_artifacts:
+    - ../../../../catalogs/simprov/
+    - ../../../will-wright/sources/2018-04-24-dumbold-voting-machine/
+
+sleaze_to_art_pipeline:
+  lineage:
+    - "HyperCard Smut Stack (1987–88)"
+    - "MacPlaymate / Virtual Valerie / Mike Saenz"
+    - "Chuck Farnham smut stacks"
+  strategy: |
+    Don't ship smut explicitly — put tools in players' hands (Transmogrifier, Exchange).
+    Time to Penis (TTP) — online game metric.
+  spore: "Penis monsters; anti-Spore movements"
+
+flying_under_radar:
+  russia_ban_2014: "Badge of honor — 14 years before Russia noticed"
+  assimilation_rhetoric: "'We're just like you' — flew under hostile-parent radar for years"
+  esrb_columbine: |
+    Sims debuted days before Columbine (1999-04-20) — moral panic over violent games;
+    Sims as counterpoint to Doom lineage (violence possible but not the pitch)
+
+dimensions_of_evolution:
+  axes:
+    - "Binary / fluid gender"
+    - "Love · WooHoo · Marriage · Reproduction"
+    - "Sexual preference · expression · clothing · voice"
+    - "Body types (Sims 1–4 progression)"
+    - "Patch 34: toilet behavior, impregnability, top surgery scars"
+  lampshade_hanging: "Hot tub baby AFTERWooHoo; telescope WooHoo; elder death by WooHoo — TVTropes"
+
+modding_scholarship:
+  tanja_sihvonen:
+    book: "Players Unleashed! Modding The Sims and the Culture of Gaming (2011)"
+    character: ../../../tanja-sihvonen/
+    beats: [SimDay Thursday downloads, EA vs modder economy, time to dick, GTA SA contrast]
+  laukkanen: "Modding scenes — trepo.tuni.fi thesis"
+
+pkd_perky_pat:
+  book: "The Three Stigmata of Palmer Eldritch"
+  hook: "Can-D / Chew-Z / Perky Pat Layouts — shared hallucination microworlds; Facebook as PP Layouts"
+  transubstantiation: "Dick compares drugs to Catholic transubstantiation"
+
+dedicated_to:
+  dani_berry: "The Sims dedicated to Danielle Bunten Berry"
+  wikipedia: https://en.wikipedia.org/wiki/Danielle_Bunten_Berry
+
+suicide_prevention_stat:
+  note: |
+    Same-sex marriage associated with significant reduction in youth suicide attempts
+    (post-2015 US study cited in outline)
+  sims_safe_space:
+    - https://www.bitchmedia.org/article/lgbtq-people-exploration-the-sims
+    - "20 Years of Queer Exploration"
+
+will_master_class_beats:
+  source: "Will Wright Master Class — Game Design and Theory"
+  quotes:
+    - "Two computers: electronic one on desk, player's imagination far more complex"
+    - "Players shift from 'he' to 'I' when describing gameplay"
+    - "Can't overestimate player narcissism — celebrate the player"
+    - "Focus group testing close to useless for The Sims pitch"
+  community_pyramid:
+    toolmakers: 50
+    webmasters: 2000
+    content_creators: 8000
+    storytellers: 20000
+    collectors: 50000
+    browsers: 500000
+    casual_players: 20000000
+
+qgcon_keynotes_2020:
+  avery_alder: "Queer game mechanics; Dream Askew; honored return keynote"
+  micha_cardenas: "Trans of color poetics; algorithm for gender/race/technology"
+
+soul_city_soul_saver_2026:
+  thesis_file: soul-city-soul-saver-thesis.yml
+  namesake:
+    path: ../../../../repo-shows/will-wright-premiere/soul-city-namesake.md
+    nixon_hud: "1972 — first Black-led HUD New Communities grant; controversial Nixon alliance"
+    helms: "Jesse Helms smear + audit freeze; cleared but foreclosed; Soultech → prison"
+    vox: https://www.youtube.com/watch?v=R2karaKGgkk
+  soul_saver:
+    mission: "Save character souls from oligarch / censorship-owned platforms"
+    product: ../../../../catalogs/soul-city/soul-angel.yml
+    hub: ../../../../catalogs/soul-city/README.md
+  ea_buyout:
+    verify: true
+    registry: ../../../../process/sims-creator-network-exodus.yml
+    fears: [representation rollback, data sovereignty, monetization debt service]
+  tiny_life_exodus:
+    bridge: ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+    praise: "Creator Network exodus voices — Plumbella, James Turner on ellpeck site"
+    contrast: "Legacy Collection removed Exchange; Tiny Life ships sharing"
+  bogost_link: |
+    Procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates
+    and bridge schemas — mechanism for who gets recognized and where souls may travel.

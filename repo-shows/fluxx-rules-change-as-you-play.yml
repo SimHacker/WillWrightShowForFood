@@ -1,0 +1,90 @@
+# SHOW PROPOSAL — Fluxx: The Rules Change As You Play
+
+show:
+  id: fluxx-rules-change-as-you-play
+  title: "Fluxx — The Rules Change As You Play"
+  subtitle: "Andy & Kristin Looney × Don Hopkins — Maryland, LUMSSFS, Looney Labs, and MOOLLM chaos"
+  type: group
+  host: Don Hopkins
+  guests: ["Andrew Looney", "Kristin Looney"]
+  characters:
+    - characters/andy-looney/
+    - characters/kristin-looney/
+  topic: |
+    Fluxx invented rule-mutation as player joy — before most of us had "procedural rhetoric."
+    Don knew Andy at University of Maryland through LUMSSFS (Lums Science Fiction Society).
+    MOOLLM's fluxx-chaos experiment simulated 116+ turns, emergent mechanics, and AI card art —
+    with a letter asking the real Looneys for blessing. Live play, simulation receipts, HCIL ↔
+    Looney Labs geography, optional Will Wright Fluxx-pack thread.
+  status: proposed
+  consent: not_yet_asked
+
+dialect:
+  voice: stoner_techno_hippie
+  terms:
+    guest: bud
+  on_air_opener: "This show's buds are…"
+
+segments:
+  maryland_lumssfs:
+    ask: "UMD days — LUMSSFS, HCIL, pie menus vs card chaos. What do you remember? Correct Don."
+    hosts: [don-hopkins]
+    guests: [andy-looney, kristin-looney]
+
+  fluxx_origins:
+    ask: "1997 — no fixed rules. Goddard → Looney Labs. Why cards?"
+    links:
+      - https://en.wikipedia.org/wiki/Fluxx
+      - https://www.looneylabs.com/our-history
+
+  moollm_simulation:
+    ask: "We pointed MOOLLM at Fluxx — 731 tool calls, FAFO Token, personal cards. Fair? Funny? Wrong?"
+    analysis: https://github.com/SimHacker/moollm/tree/main/skills/experiment/experiments/fluxx-chaos
+    letter: https://github.com/SimHacker/moollm/blob/main/skills/experiment/experiments/fluxx-chaos/LETTER-TO-ANDY.md
+    moollm_index: characters/andy-looney/sources/moollm-fluxx-links.yml
+    highlights:
+      - "Amsterdam Flux — 5 tournaments, SCORE.md rubrics"
+      - "33-turn marathon tribute (Palm wins Turn 33)"
+      - "Cosmic Dealer / FAFO modes"
+      - "Andy lab coat correction"
+
+  procedural_rhetoric_bridge:
+    ask: "Ian Bogost frame — Fluxx as argument in rules. Will/SimAntics cousin?"
+    optional_guest: will-wright
+    ties: characters/ian-bogost/
+
+  will_imessage_thread:
+    ask: "Don texted Will about Fluxx packs + UMD — Jul 2026. Optional cold open."
+    private_source: DonHopkins/.../apple-messages/transcript/TRANSCRIPT.md
+    consent: pending
+
+  live_fluxx:
+    ask: "Play a hand on air — or react to simulation log cold read."
+    format: [live, async]
+    props: physical_fluxx_deck
+
+format:
+  live: optional
+  async_one_on_one: true
+  async_group: true
+  production_model: |
+    Andy/Kristin record when ready; Don intercuts MOOLLM run logs, card art slideshow,
+    Flipbook rule-change diagrams, Pop-Up on fluxx-chaos SCORE.md. Audience follows rails
+    markdown — script is track, not cage.
+
+artifacts:
+  moollm: characters/andy-looney/sources/moollm-fluxx-links.yml
+  invitations:
+    - characters/andy-looney/invitation.md
+    - characters/kristin-looney/invitation.md
+  trail: process/trails/the-card-game.md
+  flipbook: repo-shows/flipbook/  # optional rule-change B-roll
+
+ties_to:
+  - characters/andy-looney/
+  - characters/kristin-looney/
+  - characters/don-hopkins/
+  - characters/will-wright/
+  - characters/ian-bogost/
+  - characters/palm/
+  - palmhoo/improv-and-play/README.md

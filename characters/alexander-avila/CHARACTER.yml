@@ -35,10 +35,12 @@ relationship:
     lists Don Hopkins. Jess Bird research call (Apr 2025): Don named Alex among Sims archivist/community leads.
 
 show_relevance:
-  primary: repo-shows/did-the-sims-make-you-gay.yml
+  primary: repo-shows/im-queer-therefore-i-sim.yml
+  secondary: repo-shows/did-the-sims-make-you-gay.yml
+  working_title: "I'm Queer Therefore I Sim"
   role: |
-    Fair-use commentary on Sims essay + comment corpus; optional async reaction or co-analysis.
-    His Sims work already cites Patrick Barrett's implementation and Don's design-doc thread (MOOLLM).
+    Solo Repo Show with Don — discuss essay, 1,712+ comment MOOLLM analysis, historical correction,
+    mirror stage, optional looksmaxxing companion. Also congregation voice on Patrick episode.
 
 flagship_videos:
   - id: did-the-sims-make-you-gay
@@ -59,10 +61,13 @@ flagship_videos:
 
 sources:
   filmography: sources/filmography.yml
+  moollm_links: sources/moollm-links.yml
   sims_analysis: ../patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
-  moollm_comments: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md
+  moollm_comments: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
 
 see_also:
+  - { path: ../../repo-shows/im-queer-therefore-i-sim.yml, why: "Solo talk — I'm Queer Therefore I Sim" }
+  - { path: ideas.md, why: "Segment prompts + MOOLLM discussion beats" }
   - { path: ../patrick-j-barrett-iii/, why: "Sims essay names Patrick's same-sex implementation" }
   - { path: ../don-hopkins/, why: "Design-doc advocacy; Patreon connection" }
   - { path: ../jess-bird/, why: "Research-call introduction" }

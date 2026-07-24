@@ -27,5 +27,6 @@ privacy.
 
 ## Sources
 
+- [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml)
 - HN SimAntics: https://news.ycombinator.com/item?id=22987435
 - https://simstek.fandom.com/wiki/SimAntics

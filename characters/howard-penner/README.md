@@ -13,4 +13,6 @@
 
 **Tool tip (Howard → Don, Jul 2026):** [py-aep](https://github.com/forticheprod/py-aep) — free Python library to read/edit `.aep` without AE installed ([docs](https://forticheprod.github.io/py-aep/), [r/AfterEffects](https://www.reddit.com/r/AfterEffects/comments/1v0krk9/i_made_a_free_python_library_to_edit_aep_files_no/)). Fits wave-batch / overlay automation; does **not** replace AE for expressions or pixel render. Notes: [`sources/py-aep.yml`](sources/py-aep.yml).
 
+**Flipbook (graphics department):** Full-bleed illustrated B-roll during narration — [`../../repo-shows/flipbook/`](../../repo-shows/flipbook/README.md). Pop-Up annotates screen recordings; Flipbook plays when voice carries the story. Complementary lanes; may share sticker/CA art vocabulary.
+
 ↑ [`../don-hopkins/people/INDEX.yml`](../don-hopkins/people/INDEX.yml) · [`../../repo-shows/ideas/swag/sfc-sticker-packs.yml`](../../repo-shows/ideas/swag/sfc-sticker-packs.yml)

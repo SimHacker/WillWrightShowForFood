@@ -1,0 +1,78 @@
+# MOOLLM cross-links — Alexander Avila / Sims queer identity corpus
+# Sibling repo: github.com/SimHacker/moollm
+
+meta:
+  analyzed_by: don-hopkins
+  primary_essay: "Did The Sims make you gay? (Jan 2023)"
+  comment_corpus: "1,712+ YouTube comments — qualitative cluster analysis"
+
+crown_jewel:
+  title: "Did The Sims Make You Gay? — Queer Identity Formation Through Play"
+  path: designs/sims/sims-queer-identity-formation.md
+  url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md
+  lines: 1295
+  contains:
+    - "Full essay write-up + Butler / Althusser / Žižek / Foucault / Lacan frame"
+    - "Historical correction — Don's 1998 design-doc intervention (slap → advocacy)"
+    - "Patrick Barrett performative model vs explicit orientation"
+    - "SimProv wedding playset — community-driven inclusion"
+    - "Community Response: Comment Analysis — 14 themes, cluster summary"
+    - "MOOLLM Parallels — identity configured + performed"
+
+comment_analysis:
+  anchor: "#community-response-comment-analysis"
+  url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+  themes:
+    - "Yes — Sims made me realize I was queer (unconscious queering)"
+    - "Hiding queer gameplay from parents (underground houses, quit-without-saving)"
+    - "Trans/gender discovery through CAS"
+    - "Too busy building (aro/ace counter-narrative)"
+    - "Pro-utopia — no labels, no homophobia in-game"
+    - "Criticism of 2022 sexual orientation update"
+    - "First queer media exposure"
+    - "Ace/aro optional romance"
+    - "Accidental lesbian couple origin stories"
+    - "Emotional responses — feeling seen"
+    - "Counter-testimonies — didn't make me gay"
+    - "Memorable one-liners (roommates meme, etc.)"
+    - "Cross-generational patterns (Sims 1–4)"
+    - "Theory appreciation"
+  cluster_summary: "#comment-cluster-summary"
+
+companion_readings:
+  mirror_stage_of_games:
+    title: "The Mirror Stage of Games"
+    path: examples/adventure-4/pub/stage/palm-nook/study/the-mirror-stage-of-games.md
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/the-mirror-stage-of-games.md
+    author: Palm (MOOLLM adventure)
+    hook: "Lacan + Avila's question — underground lesbian houses, fiction as mirror"
+
+  sims_archaeology_pr:
+    title: "THE SIMS ARCHAEOLOGY — PR summary"
+    path: designs/pr/PR-SIMS-ARCHAEOLOGY-COMPLETE.md
+    url: https://github.com/SimHacker/moollm/blob/main/designs/pr/PR-SIMS-ARCHAEOLOGY-COMPLETE.md
+    hook: "22 design docs; crown jewel = sims-queer-identity-formation.md"
+
+  sims_inclusivity:
+    title: "Sims inclusivity design doc"
+    path: designs/sims/sims-inclusivity.md
+    url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-inclusivity.md
+    hook: "Simulator Effect, constructionism, team history"
+
+  procedural_rhetoric_index:
+    title: "Procedural Rhetoric Index"
+    path: designs/indexes/PROCEDURAL-RHETORIC-INDEX.md
+    url: https://github.com/SimHacker/moollm/blob/main/designs/indexes/PROCEDURAL-RHETORIC-INDEX.md
+    hook: "Avila essay listed alongside Bogost, Frasca"
+
+  designs_index:
+    title: "MOOLLM designs index"
+    path: designs/indexes/INDEX.md
+    url: https://github.com/SimHacker/moollm/blob/main/designs/indexes/INDEX.md
+
+show_use:
+  solo: repo-shows/im-queer-therefore-i-sim.yml
+  patrick_episode: repo-shows/did-the-sims-make-you-gay.yml
+  on_air: |
+    Discuss analysis WITH Alex — did we miss themes? misread a cluster? honor commenters.
+    Never mock; fair-use commentary; no outing.

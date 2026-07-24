@@ -1,0 +1,70 @@
+# QGCon interview / talk beats
+
+qgcon_interview_points:
+  - id: mcccloud-masking
+    point: |
+      The Sims applied Scott McCloud's ideas about masking — abstract characters in a
+      realistic environment that players can emotionally identify with.
+    artifacts:
+      - ../../../will-wright/sources/2008-02-10-soul-of-the-sims/
+      - https://en.wikipedia.org/wiki/Masking_(illustration)
+
+  - id: family-album-exchange
+    point: |
+      The Sims Family Album (in-game) and The Sims Exchange (online) enabled storytelling
+      and sharing stories and save files.
+    artifacts:
+      - ../../../../catalogs/simprov/
+
+  - id: content-tools
+    point: |
+      Create-a-Sim, SimShow, FaceLift, and Transmogrifier let players model themselves,
+      families, and homes — personal content for play and stories.
+    artifacts:
+      - ../../../will-wright/sources/the-sims-design-documents-zip/
+
+  - id: twenty-year-evolution
+    point: How The Sims evolved over 20+ years since first release (inclusivity timeline).
+    artifacts:
+      - timeline.yml
+      - ../../../will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/
+
+  - id: soul-city-exodus
+    point: |
+      Soul City (namesake: McKissick's NC — Nixon HUD, Helms foreclosure) + Soul Saver /
+      SoulAngel: relocate character souls from oligarch-owned EA property to git-checked-in
+      soul-files and indie spokes (Tiny Life first). Inclusivity as exit infrastructure.
+    artifacts:
+      - soul-city-soul-saver-thesis.yml
+      - ../../../../repo-shows/will-wright-premiere/soul-city-namesake.md
+      - ../../../../catalogs/soul-city/README.md
+      - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+
+  - id: will-dreams-advice
+    point: |
+      Will Wright's advice (paraphrased): personality, skills, technology, society, market,
+      and politics change over time. Hang on to your dreams; every few years re-examine them —
+      someday your wildest dreams may finally become possible.
+
+conclusion_callbacks:
+  - kindness
+  - empathy
+  - enlightenment
+  - inspiration
+  - motivate audience to change the world
+
+structure:
+  - introduction and summary of overall themes
+  - timeline in chronological order
+  - discussion of overall themes
+  - conclusion with meaning and callbacks
+
+bio_100_words: |
+  Don Hopkins is a user interface flower child and software developer who developed pie menus,
+  and applied them to games like SimCity and The Sims. He ported SimCity to Unix, created a
+  cooperative networked multiplayer version of SimCity for X11/TCL/Tk, and talked EA into open
+  sourcing the original SimCity source code, then adapted it for educational use on the OLPC
+  XO-1 Children's Computer. At Maxis and EA, he worked with Will Wright on The Sims core team,
+  developed the character animation system, user interface, pie menus, architectural editing tools,
+  visual AI programming tools, and internal and user content creation tools, and insisted The Sims
+  allow same sex relationships.

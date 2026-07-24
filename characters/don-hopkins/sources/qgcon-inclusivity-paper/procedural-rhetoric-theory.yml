@@ -1,0 +1,73 @@
+# Procedural rhetoric + narrative theory — QGCon paper spine
+
+bogost:
+  term: procedural rhetoric
+  quote: |
+    I developed my own design philosophy that I called procedural rhetoric, an unholy blend
+    of Will Wright and Aristotle.
+  quote_citation:
+    title: "Video Games Are Better Without Characters"
+    author: Ian Bogost
+    publication: The Atlantic
+    date: 2015-03-16
+    url: https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/
+  book:
+    title: "Persuasive Games: The Expressive Power of Videogames"
+    publisher: MIT Press
+    year: 2007
+    isbn: "978-0262026147"
+    url: https://mitpress.mit.edu/9780262026147/persuasive-games/
+  essay_chapter:
+    title: "The Rhetoric of Video Games"
+    in: "The Ecology of Games: Connecting Youth, Games, and Learning"
+    editor: Katie Salen
+    year: 2008
+    pages: "117-140"
+  full_citation_file: ../../../ian-bogost/sources/procedural-rhetoric-quote.yml
+  definition: |
+    Argument encoded in rules, processes, and interactive failure modes — not essays on a page.
+    Craft laws and rules within games to convey ideology.
+  wikipedia: https://en.wikipedia.org/wiki/Procedural_rhetoric
+  frasca_note: "Also 'simulation rhetoric' — Gonzalo Frasca (2003)"
+  cow_clicker: ../../../ian-bogost/sources/cow-clicker.yml
+
+janet_murray:
+  book: "Hamlet on the Holodeck (1997; updated edition MIT Press)"
+  url: https://mitpress.mit.edu/books/hamlet-holodeck-updated-edition
+  new_yorker: https://www.newyorker.com/books/second-read/hamlet-on-the-holodeck-twenty-years-later
+  role_in_paper: "Agency, immersion, transformation — storytelling infrastructure (Family Album, Exchange)"
+  character: ../../../janet-murray/
+
+frasca_ludology:
+  essay: "Simulation versus Narrative: Introduction to Ludology (2003)"
+  url: http://www.ludology.org/articles/simulationversus_narrative.html
+  paidia: "SimCity, The Sims — no winner/loser; open-ended toy"
+  ludos: "Mario, Zelda — winner/loser with social rules"
+  ideological_levels:
+    - "Level 1: representations and events (skins, settings)"
+    - "Level 2: manipulation rules (what player can do)"
+    - "Level 3: goal roles (what player must do to win)"
+    - "Level 4: meta-rules (editors, modding, source)"
+
+constructionism:
+  figures: [Jean Piaget, Seymour Papert, Alan Kay, Maria Montessori, Doreen Nelson]
+  papert_microworld: |
+    Subset of reality whose structure matches a cognitive mechanism — Logo geometry as prototype.
+  situated_learning: [Lev Vygotsky, John Dewey]
+  design_based_learning: "Doreen Nelson; SimCity lineage"
+
+sims_artifacts_as_rhetoric:
+  inclusion:
+    path: ../../../../catalogs/simprov/
+    hook: "SimProv Wedding Playset — gay marriage, Cupid, Crowd Sitter, Buddha, improv storytelling"
+  institutional_farce:
+    path: ../../../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md
+    hook: "Dumbold Voting Machine — 2004 e-voting agitprop"
+  motive_c:
+    path: ../../../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c
+    hook: "Failure alerts as persuasive design at the substrate"
+
+show_crosslinks:
+  bogost_invite: ../../../ian-bogost/invitation.md
+  bogost_show: ../../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
+  inclusion_essay: ../../../will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md

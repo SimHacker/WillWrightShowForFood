@@ -17,6 +17,16 @@ For each entry:
 
 Browse cards: [`artifacts/INDEX.md`](artifacts/INDEX.md)
 
+### Maid plunger incident (fixed pre-ship)
+
+→ [`maid-plunger-incident.yml`](maid-plunger-incident.yml) ·
+[`sources/maid-plunger-incident-hn-2022.md`](sources/maid-plunger-incident-hn-2022.md) ·
+[`artifacts/maid-plunger-unnecessary-censorship.md`](artifacts/maid-plunger-unnecessary-censorship.md)
+
+Pre-privacy service AI + pixelation shimmer + plunger from hammerspace = **Unnecessary Censorship**
+read. Fixed in SimAntics before ship; Don did not save video. Reunion: hunt summer intern credit +
+any QA severity notes.
+
 ### Maid service on pool island
 
 → [`artifacts/maid-pool-island-bbq.md`](artifacts/maid-pool-island-bbq.md) · [`pool-qa.md`](pool-qa.md)

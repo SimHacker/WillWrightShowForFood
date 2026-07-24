@@ -1,0 +1,74 @@
+# Ian Bogost — Cow Clicker (2010)
+# Satire that became a phenomenon; procedural rhetoric as performance art
+
+game:
+  title: Cow Clicker
+  developer: Ian Bogost
+  release: 2010-07-21
+  platform: Facebook (browser)
+  genre: incremental / social satire
+  site: http://www.cowclicker.com/
+  bogost_page: https://bogost.com/games/cow-clicker/
+
+purpose: |
+  Built in ~three days for NYU seminar "Social Games On Trial" (July 2010), after Bogost coined
+  "cow clickers" at GDC 2010 criticizing FarmVille winning Best New Social/Online Game.
+  Distilled Zynga-style mechanics to absurd essence: click cow every six hours, earn clicks,
+  buy Mooney, invite friends, post to feed — to demonstrate what social games abuse, not to ship
+  a product.
+
+mechanics:
+  core: "Click one cow every six hours; earn clicks; optional Mooney micropayments"
+  social: "Friends' cows in pasture; news-feed posts on click"
+  parodies_added: |
+    Cowclickification API; Cow Clicker Blitz (with Jason Kapalka); My First Cow Clicker (iOS);
+    Cow Clicktivism / emaciated cow → Oxfam; Stargrazer Cow (~$20 mirror-image cow)
+
+cowpocalypse:
+  arg: Cow ClickARG — "bovine gods"
+  scheduled_end: 2011-07-21  # one year after release
+  mechanic: "Each click deducts 30s from countdown; pay Facebook Credits to extend"
+  extension_rates:
+    - { credits: 10, extends: "1 hour" }
+    - { credits: 4000, extends: "1 month" }
+  paid_extensions_total_usd: ~700
+  actual_end: 2011-09-07 evening
+  end_state: "Cows raptured — blank spaces remain; still clickable"
+  bogost_to_fan: "It wasn't very fun before."
+  wikipedia_section: https://en.wikipedia.org/wiki/Cow_Clicker#%22Cowpocalypse%22_event_and_conclusion
+
+reception:
+  unexpected: "50,000+ players by Sept 2010 — Bogost disturbed but continued as layered satire"
+  wired: "The Curse of Cow Clicker — Jason Tanz, Wired, Dec 2011"
+  npr: "If You Can't Ruin It, Destroy It — On the Media, Nov 2011"
+  nick_yee: "Incredibly clear Skinner box"
+  jason_kapalka: "Ironic, satirical, self-referential — what Facebook lacked"
+  cookie_clicker: "Bogost: Cookie Clicker (2013) is Cow Clicker's logical conclusion"
+  atlantic_2018: '"My Cow Game Extracted Your Facebook Data" — Cambridge Analytica context'
+
+hn_threads:
+  main_2022:
+    url: https://news.ycombinator.com/item?id=31979586
+    title: "Cow Clicker (2010)"
+    points: 133
+    don_comment: https://news.ycombinator.com/item?id=31981916
+  related:
+    - https://news.ycombinator.com/item?id=20073432
+    - https://news.ycombinator.com/item?id=3074501
+    - https://news.ycombinator.com/item?id=1538621
+
+respectful_show_beats:
+  - "Satire first — popularity was the second joke, not the business plan"
+  - "Cowpocalypse: scheduled death communicated upfront; pay to delay doom (honest about manipulation)"
+  - "Contrast Curiosity (2012): hype-by-accident vs criticism-by-design"
+  - "Rightward-Facing Cow (Leigh Alexander, Kotaku 2011) — life-changing $20 mirror cow as meta-commentary"
+  - "Distressed-moo audio in repo cube parody — procedural rhetoric admits it's manipulating you"
+
+don_connections:
+  unite_2012_cow_joke: ../../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml
+  cube_parody: ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  medium_hn: ../../don-hopkins/writing/hn-medium-failure-and-github-moollm.md
+
+see_also:
+  - procedural-rhetoric-quote.yml
+  - ../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

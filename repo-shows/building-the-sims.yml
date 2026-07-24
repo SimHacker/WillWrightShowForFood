@@ -36,6 +36,7 @@ readable:
   formats: building-the-sims/discussion-formats.md
   pools: building-the-sims/swimming-pools-objects-or-rooms.md
   pixelation: building-the-sims/pixelation-and-modesty.md
+  maid_plunger: building-the-sims/maid-plunger-incident.yml
   pause_rng: building-the-sims/pause-time-and-rng.md
   design: building-the-sims/design-and-production.md
   qa: building-the-sims/qa-bug-pile.md

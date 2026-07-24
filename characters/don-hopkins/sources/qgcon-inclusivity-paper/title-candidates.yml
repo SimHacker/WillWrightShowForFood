@@ -1,0 +1,47 @@
+# QGCon 2020 paper — title candidates (Don Hopkins, Ground Up Software)
+# Source: https://docs.google.com/document/d/13u-kNaWC2AAd-L0_5OoLc_-x0sxs6dFfeJr28DIxufU/edit
+# Status: not submitted (COVID canceled QGCon 2020)
+
+working_favorite: "How Inclusivity Saved The Sims"
+
+subtitle: |
+  The evolution of The Sims same-sex relationships, marriage, sexual preference,
+  and gender expression — how procedural rhetoric saved the franchise, and how
+  Soul City + Soul Saver save player souls from oligarch-owned games today.
+
+subtitle_2026_addendum: |
+  From McKissick's Soul City NC (Nixon HUD, Helms foreclosure) to EA's reported
+  Saudi-backed buyout: inclusivity as mechanism in rules **and** in exit rails
+  (Sims ⇔ Soul City ⇔ Tiny Life).
+
+subtitle_alternates:
+  - "How The Sims became more inclusive over time."
+  - "The history of inclusivity in The Sims."
+
+inclusive_term: "inclusive"  # umbrella for relationships, marriage, preference, gender expression
+
+don_candidates:
+  - "How Inclusivity Saved The Sims"
+  - "I Think Therefore I Am"
+  - "I Sim Therefore I Am"
+  - "I Think Therefore I Sim"
+  - "I Freak Therefore I Sim"
+  - "I Geek Therefore I Sim"
+  - "I Seek Therefore I Sim"
+  - "I'm Queer Therefore I Sim"  # → Alexander Avila solo talk (repo-shows/im-queer-therefore-i-sim.yml)
+  - "Simclusivity"
+  - "Inclusivity in The Sims"
+  - "Inclusive Simulation Games"
+  - "The Sims Path to Inclusivity"
+  - "How Inclusivity Benefited The Sims"
+
+ben_shneiderman_suggestions:
+  - "How game designers can foster an inclusive, accepting, and tolerant world"
+  - "Enlightening minds through game design: Lessons from The Sims"
+  - "Game design for open minds: Lessons from The Sims"
+  - "Mister Rogers meets The Sims: Design principles for teaching tolerance"
+
+external:
+  google_doc: https://docs.google.com/document/d/13u-kNaWC2AAd-L0_5OoLc_-x0sxs6dFfeJr28DIxufU/edit
+  qgcon_tips: https://qgcon.com/tips-for-a-successful-abstract/
+  qgcon_2020_keynotes: https://qgcon.com/qgcon-2020-keynotes/

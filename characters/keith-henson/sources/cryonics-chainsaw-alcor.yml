@@ -1,0 +1,42 @@
+# Keith Henson — Alcor whole-body → neuro conversion (public digest)
+# Don Hopkins HN 2022-12-20; Great Mambo Chicken pp. 93–94; Alcor report
+
+character: keith-henson
+topic: cryonics_neuro_conversion
+employer_context: Alcor Life Extension Foundation (charity conversion case)
+
+hn_receipt:
+  id: 34066097
+  url: https://news.ycombinator.com/item?id=34066097
+  author: DonHopkins
+  date: 2022-12-20
+  parent_context: "What happened to the first cryogenically frozen human"
+
+story:
+  task: "Converting whole-body cryonics patients to neuro (head-only) preservation"
+  method: "High-speed electric chain saw — patients still frozen"
+  source_quote: |
+    Alcor's illustrated report: "a rapid conversion to neuropreservation was done
+    using a high-speed electric chain saw."
+  case: |
+    Married couple at Trans Time (whole-body); son paid maintenance until his death;
+    Alcor took charity case on condition of neuro conversion — same capsule fits ~20 heads.
+
+autopsy_findings:
+  bad: "Serious fracturing in suspension patients — not worse than shock-trauma units"
+  good: "Palms, soles, other structures intact; brains not examined (remained in suspension)"
+
+literary_source:
+  title: "The Great Mambo Chicken and the Transhuman Condition"
+  author: Ed Regis
+  year: 1990
+  pages: "93–94"
+  url: https://www.gwern.net/docs/transhumanism/1990-regis-greatmambo-chicken-transhuman-condition.pdf
+
+don_note: |
+  Don's friend Keith told him the story; Don found documentation on HN and verified against
+  published cryonics history.
+
+show_framing: |
+  Transhuman/cryonics history — technical procedure, not gore for its own sake.
+  Pairs with Drexler/nanotech orbit and Keith's rocket interests.

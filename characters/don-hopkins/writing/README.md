@@ -8,4 +8,6 @@ and on [donhopkins.com](https://donhopkins.com).
 
 Featured: [`../logo-adventure-c64-terrapin.md`](../logo-adventure-c64-terrapin.md) (first commercial code — C64 Terrapin Logo).
 
+**Blog reinvention:** [`hn-medium-failure-and-github-moollm.md`](hn-medium-failure-and-github-moollm.md) — Drupal → Medium → GitHub + MOOLLM republish plan ([HN source](https://news.ycombinator.com/item?id=34751042)).
+
 → [`INDEX.yml`](INDEX.yml)

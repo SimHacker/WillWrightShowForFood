@@ -1,0 +1,100 @@
+# Flipbook — graphics department for narration B-roll
+# Full-bleed illustrated mini-shows that play DURING voice narration.
+# Distinct from Pop-Up overlays (annotate screen-record base track).
+
+meta:
+  id: flipbook-shows
+  scope: repo_show_post_production
+  k_line: "Flipbook is our graphics department"
+  catalog: ../../repo-shows/flipbook/
+  status: active_2026-07
+
+thesis: |
+  Narration is rich; scrolling a markdown page is boring. **Flipbook** produces
+  timed illustrated sequences — page flips, pans, zooms, caption cards — synced to
+  the narrator's beats. Each flipbook show is a git-checked-in script + assets that
+  renders to mp4 for VSE insertion, Shorts, or live cutaway during Repo Shows.
+
+departments:
+  flipbook:
+    role: "Graphics department — full-bleed B-roll during narration"
+    output: "Illustrated beat sequences; can replace or intercut base track"
+    lead: open  # Howard Penner = Pop-Up overlays; Flipbook may share art assets
+  popup_overlays:
+    role: "Annotation layer ON evidence-tour screen recordings"
+    lead: ../../characters/howard-penner/README.md
+    studio_ssot: RepoShowPrivate/production/overlays/
+    note: "Complementary — Flipbook plays when we leave the scroll; Pop-Up when we stay on the page"
+
+when_to_use:
+  flipbook:
+    - "Intro / thesis narration with no live screen (QGCon abstract, Soul City namesake)"
+    - "Historical arcs too dense for one still (Nixon HUD → Helms → prison inversion)"
+    - "Procedural rhetoric explained as mechanism (rules, not decoration)"
+    - "Bridge diagrams (Sims ⇔ Soul City ⇔ Tiny Life)"
+  popup:
+    - "Walking the repo — hover links, digression cards, peek_base on markdown"
+    - "Live evidence tour with Pop-Up Video callouts"
+
+format:
+  script_file: FLIPBOOK.yml  # per show under repo-shows/flipbook/shows/<slug>/
+  beat_schema:
+    at_sec: "float — sync point from narration start"
+    page: "int — flipbook page index (1-based)"
+    caption: "optional on-screen text"
+    asset: "path relative to show dir — still, sprite sheet, or vector export"
+    motion: [hold, pan_left, pan_right, zoom_in, zoom_out, page_flip, crossfade]
+    duration_sec: "how long this beat holds before next"
+  render:
+    aspect: "16:9"
+    fps: 30
+    style_default: illustrated_explainer  # clean line + limited palette; not photoreal
+    audio: "narration muxed in post OR silent B-roll under live voice"
+  deliverables:
+    git:
+      - FLIPBOOK.yml
+      - assets/  # pages, sprites, source SVG/PNG
+      - captions/<id>.vtt  # optional burned or sidecar
+    local:
+      - render/<id>.mp4
+      - render/<id>-proxy.mp4  # for VSE scrub
+
+pipeline:
+  1_script:
+    what: "Write beats from narration script, abstract, or SEGMENTS.yml cue"
+    artifact: repo-shows/flipbook/shows/<slug>/FLIPBOOK.yml
+  2_assets:
+    what: "Illustrate pages — human art, generative draft, or archive stills composited"
+    note: "Reuse Howard's sticker/CA tile vocabulary where it fits"
+  3_timing:
+    what: "Lock at_sec to recorded narration or draft from word count (~150 wpm)"
+    tool: optional — align to captions VTT cues
+  4_render:
+    paths:
+      - "Blender VSE — image strips + page_flip Geo Nodes (see RepoShowPrivate/production/tooling/)"
+      - "ffmpeg slideshow + Ken Burns from still sequence"
+      - "Remotion / canvas flipbook if we need web-native preview in Soul City"
+  5_insert:
+    what: "VSE channel under/over narration; or full-bleed cutaway in episode edit"
+    ties: clip-flow-pipeline.yml, adorable-minutes-ae.yml
+
+integration:
+  qgcon_paper:
+    path: ../../characters/don-hopkins/sources/qgcon-inclusivity-paper/
+    flipbooks:
+      - shows/inclusivity-saved-the-sims
+      - shows/soul-city-namesake
+      - shows/soul-saver-exodus
+  premiere:
+    intro_narrative: ../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md
+    soul_city: ../../catalogs/soul-city/README.md
+  adorable_minutes:
+    note: "Flipbook = longer illustrated arcs; Adorable Minutes = AE-titled short clips"
+
+see_also:
+  - ../../repo-shows/flipbook/README.md
+  - ../../repo-shows/flipbook/INDEX.yml
+  - captions.yml
+  - cambridge-telecine-jiggle.yml
+  - ../../characters/howard-penner/README.md
+  - clip-flow-pipeline.yml

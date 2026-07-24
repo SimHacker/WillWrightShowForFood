@@ -1,0 +1,48 @@
+character:
+  id: andy-looney
+  name: "Andrew Looney"
+  aliases: ["Andy Looney"]
+  type: invitation
+  status: living
+  field: "Fluxx, Looney Labs, procedural card chaos; NASA Goddard / Hubble software (pre-Labs)"
+  home: characters/andy-looney/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Old friend from University of Maryland / LUMSSFS days — not sent"
+
+bio:
+  summary: >
+    **Andrew (Andy) Looney** — inventor of **Fluxx** (1997): the card game where the rules change
+    as you play. Co-founded **Looney Labs** (1996) with Kristin; NASA Goddard / Hubble software
+    background. Don knew Andy at **University of Maryland** through **LUMSSFS** (Lums Science
+    Fiction Society) — pie menus by day, infinite rule mutations by night. MOOLLM's fluxx-chaos
+    experiment and 33-turn tribute sessions lean hard on Looney Labs FAQ wisdom (with love, not
+    without permission — see LETTER-TO-ANDY.md).
+
+connections:
+  don: "UMD + LUMSSFS; decades of Fluxx packs; MOOLLM simulation + LETTER-TO-ANDY draft"
+  kristin-looney: "Co-founder Looney Labs; married; design + business partner"
+  will-wright: "Don texted Will about Fluxx + Andy — Jul 2026 (private apple-messages)"
+  palm: "MOOLLM tribute session — Palm wins first Fluxx game (Turn 33)"
+
+see_also:
+  - { path: ../kristin-looney/, why: "Co-guest — Fluxx show pair" }
+  - { path: sources/moollm-fluxx-links.yml, why: "MOOLLM experiment index" }
+  - { path: ../../repo-shows/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
+  - { path: ../../process/trails/the-card-game.md, why: "Card-game trail — Fluxx as rules-in-flux metaphor" }
+
+sources:
+  public:
+    - sources/moollm-fluxx-links.yml
+  web:
+    - { title: "Andy Looney — Wikipedia", url: "https://en.wikipedia.org/wiki/Andy_Looney" }
+    - { title: "Fluxx — Wikipedia", url: "https://en.wikipedia.org/wiki/Fluxx" }
+    - { title: "Looney Labs — Our History", url: "https://www.looneylabs.com/our-history" }

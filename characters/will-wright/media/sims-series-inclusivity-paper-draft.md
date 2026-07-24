@@ -1,28 +1,44 @@
-# How Inclusivity Saved The Sims — paper draft seed
+# How Inclusivity Saved The Sims — paper & talk (index)
 
-Canceled QGCon talk (COVID). Working title candidates from Don's notes:
+**Status:** QGCon 2020 target canceled (COVID). Full outline integrated in repo.
 
-- *How Inclusivity Saved The Sims*
-- *I Sim Therefore I Am* / *I Freak Therefore I Sim* / *Simclusivity*
+## Canonical sources
 
-Subtitle: the evolution of same-sex relationships, marriage, sexual preference, and gender expression in The Sims over two decades.
+[`../../don-hopkins/sources/qgcon-inclusivity-paper/`](../../don-hopkins/sources/qgcon-inclusivity-paper/)
 
-## Abstract seed (public-safe excerpt)
+| Artifact | Path |
+|----------|------|
+| Master index | [`README.md`](../../don-hopkins/sources/qgcon-inclusivity-paper/README.md) |
+| Title candidates | [`title-candidates.yml`](../../don-hopkins/sources/qgcon-inclusivity-paper/title-candidates.yml) |
+| Abstract | [`abstract.md`](../../don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) |
+| Timeline (72+ anchors) | [`timeline.yml`](../../don-hopkins/sources/qgcon-inclusivity-paper/timeline.yml) |
+| Same-sex design arc | [`same-sex-design-arc.yml`](../../don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml) |
+| Procedural rhetoric stack | [`procedural-rhetoric-theory.yml`](../../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml) |
+| Thematic sections | [`themes.yml`](../../don-hopkins/sources/qgcon-inclusivity-paper/themes.yml) |
 
-The Sims evolved with society toward a more inclusive, tolerant world celebrating diversity and creativity. Its procedural rhetoric promotes inclusivity, personalization, and tolerance, and supports self-expression, storytelling, and sharing through tools like the **Family Album** and **Sims Exchange**.
+External working doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2AAd-L0_5OoLc_-x0sxs6dFfeJr28DIxufU/edit)
 
-Will Wright's **Simulator Effect**: players imagine the simulation is vastly richer than it is — design for two computers (the desk and the player's head).
+## Working title
 
-The Sims "AI" is **SimAntics** — a visual language distributed through objects — but most heavy lifting lives in the player's imagination (McCloud masking, Papert constructionism).
+**How Inclusivity Saved The Sims** — alts: *Simclusivity*, *I Sim Therefore I Am*, Ben Shneiderman's *Mister Rogers meets The Sims* (see title-candidates.yml)
 
-## QGCon interview points (from notes)
+## Theory line (Bogost + Murray)
 
-1. Scott McCloud **masking** — abstract characters, realistic environments
-2. Family Album + Exchange — storytelling infrastructure
-3. Create-a-Sim, SimShow, FaceLift, **Transmogrifier** — personal content
-4. Twenty-year evolution of inclusivity
-5. Will's advice: re-examine your dreams every few years; technology and politics change
+> "I developed my own design philosophy that I called procedural rhetoric, an **unholy blend of Will Wright and Aristotle**." — Ian Bogost, *Video Games Are Better Without Characters*
 
-## Status
+Paper pairs **procedural rhetoric** (Bogost) with **agency / immersion / transformation** (Murray, *Hamlet on the Holodeck*).
 
-Draft only — not submitted. Full timeline and citations remain in private archive (not in this repo) (lines ~115–413).
+## EA historian thread (2019)
+
+[`sources/2019-10-qgcon-sims-inclusivity-thread/`](sources/2019-10-qgcon-sims-inclusivity-thread/) — Lyndsay Pearson, Chloe Dubini, Mike Duke, Graham Nardone
+
+## Show seeds
+
+- [Ian Bogost procedural rhetoric](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
+- [How Inclusivity Saved The Sims](../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml)
+- [Tanja Sihvonen](../../tanja-sihvonen/) — *Players Unleashed!*
+- [Janet Murray](../../janet-murray/) — storytelling / Family Album holodeck beat
+
+## Abstract (excerpt)
+
+The Sims evolved with society toward inclusivity through **procedural rhetoric**, the **Simulator Effect**, **SimAntics**, McCloud **masking**, and Papert **constructionism**. Full text: [`abstract.md`](../../don-hopkins/sources/qgcon-inclusivity-paper/abstract.md)

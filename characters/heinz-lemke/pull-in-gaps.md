@@ -13,16 +13,29 @@ Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_yet_ask
 
 | Field | Value |
 |-------|-------|
-| Status | digitization_planned (2026-07-15) |
+| Status | **DIGITIZED** (2026-07-24) — delivered via email attachment + [pcloud bundle](https://e.pcloud.link/publink/show?code=kZfrboZLdkhmTkNHyFD3D4YsvF18VCDFpq7) (assembler + film + thesis) |
 | Scale | ~110 A3 pages + 15 RSP pages = **125 pages** |
-| Pull in | Heinz locating local scan shop — receive, file under `media/` with provenance |
+| Pull in | Download pcloud bundle / save email attachment; file under `media/` with provenance; only the 1967 doc PDF received locally so far |
 | Show use | Lars assembles/runs against Type 340 manual under SIMH; walk interrupt handler on air; UWO student project; **CARS 2027 Berlin 29 Jun** demo target |
+| Thread | [2026-07-24 storyline](sources/2026-07-24-pixie-storyline-thread.md) |
 
 → [pixie-source-recovery.md](pixie-source-recovery.md)
 
 ---
 
 ## Received / filed
+
+### pixie_system_analysis_1967
+
+*Problems of Systems Analysis of Computer Aided Circuit Design with Display Unit* — Heinz's
+handwritten 10 March 1967 pre-PIXIE design doc. Shown to Wilkes → 29 Jun 1967 talk → PhD offer.
+Predates his contact with Engelbart's 1962 framework.
+
+| Field | Value |
+|-------|-------|
+| Status | received + transcribed (2026-07-24) |
+| Public | [sources/1967-03-10-system-analysis/](sources/1967-03-10-system-analysis/README.md) — scan, page images, full transcript |
+| Open | Ask Heinz whose hand wrote the "how about steered beams?" marginal note |
 
 ### electronics_magazine_1969_pdf
 

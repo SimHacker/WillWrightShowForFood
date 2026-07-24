@@ -1,7 +1,7 @@
 # PIXIE email thread — chronological index
 
-**Subject:** Invitation to PIXIE / Rainbow Repo Show interview  
-**Span:** 4 July – 16 July 2026
+**Subject:** Invitation to PIXIE / Rainbow Repo Show interview → PIXIE/Rainbow, Sketchpad, and Object-Oriented Design  
+**Span:** 4 July – 24 July 2026
 
 | Date | Doc | Highlights |
 |------|-----|------------|
@@ -15,6 +15,10 @@
 | **14 Jul** | same + [`../../roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md`](../../roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md) | Roy: UWO students want PIXIE re-implementation; asks for assembly |
 | **15 Jul** | [`2026-07-16-pixie-storyline-thread.md`](2026-07-16-pixie-storyline-thread.md) | Heinz: **125 pages** to digitize; **CARS 2027 Berlin HCI 29 Jun**; Joskowicz ELIZA; Cypko Human-AI |
 | **16 Jul** | same + [`../../andrew-armit/sources/2026-07-16-armit-archive-manifest.md`](../../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) | Andrew Armit barn archive: Multipatch/Multiobject/ICON/TAG/PGM; **Multipatch film**; Alan praises Armit |
+| **20 Jul** | [`2026-07-24-pixie-storyline-thread.md`](2026-07-24-pixie-storyline-thread.md) | Roy: OOP-in-assembly lecture; message passing; asks Alan for eureka anecdotes |
+| **22 Jul** | same | Mario Cypko: PIXIE inspires clinical modelling; LLMs as fallible translators; CARS 2027 Human-AI offer |
+| **23 Jul** | same | Leo Joskowicz: "bottleneck of generative AI is the human user"; 5-meals analogy |
+| **24 Jul** | same | Heinz: **digitised PIXIE Assembler + 10 Mar 1967 doc delivered**; Wilkes→PhD provenance; "pixie in the company of giants" → [`1967-03-10-system-analysis/`](1967-03-10-system-analysis/README.md) |
 
 ## Pull-ins still open
 

@@ -1,0 +1,70 @@
+# MOOLLM — Fluxx, Looney Labs, simulation experiments (shared index)
+# Andy + Kristin Looney · Don Hopkins tribute + fluxx-chaos experiment
+
+meta:
+  purpose: "Cross-repo pointers for Repo Show invites and fluxx-rules-change-as-you-play"
+  upstream: https://github.com/SimHacker/moollm
+
+crown_jewels:
+  fluxx_chaos_experiment:
+    title: "Fluxx Chaos Experiment — AI characters, emergent mechanics"
+    path: skills/experiment/experiments/fluxx-chaos/README.md
+    url: https://github.com/SimHacker/moollm/blob/main/skills/experiment/experiments/fluxx-chaos/README.md
+    contains:
+      - "5 tournaments, 20+ games, 116+ turns, 731 tool calls"
+      - "24 dynamically generated personal cards, 32 AI artworks"
+      - "FAFO Token Paradox, Silent Victory Protocol (emergent)"
+      - "Amsterdam Flux run + SCORE.md rubrics"
+      - "Cosmic Dealer, card signatures, YAML engine"
+
+  letter_to_looneys:
+    title: "Letter to Kristin and Andy Looney"
+    path: skills/experiment/experiments/fluxx-chaos/LETTER-TO-ANDY.md
+    url: https://github.com/SimHacker/moollm/blob/main/skills/experiment/experiments/fluxx-chaos/LETTER-TO-ANDY.md
+    note: "Don's draft — AI absorbed Fluxx from 28 years of Looney Labs docs; ask blessing"
+
+  marathon_session_fluxx:
+    title: "33-turn Stoner Fluxx — marathon session tribute"
+    path: examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md
+    contains:
+      - "Tribute Protocol — imagined Looney visit to the pub"
+      - "Andy lab coat (not beard!) — accuracy fix mid-session"
+      - "Palm wins first Fluxx game on Turn 33"
+
+  amsterdam_fluxx_run:
+    title: "Amsterdam Fluxx Run"
+    path: examples/adventure-4/characters/real-people/don-hopkins/sessions/amsterdam-fluxx-run.md
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/amsterdam-fluxx-run.md
+
+  eval_incarnate_fluxx:
+    title: "EVAL Incarnate — Speed of Light Fluxx proof"
+    path: designs/eval/EVAL-INCARNATE-FRAMEWORK.md
+    anchor: "33-Turn Stoner Fluxx"
+    url: https://github.com/SimHacker/moollm/blob/main/designs/eval/EVAL-INCARNATE-FRAMEWORK.md
+
+  fluxx_card_skill:
+    title: "MOOLLM Fluxx cards — rules that change rules"
+    path: skills/card/FLUXX.md
+    url: https://github.com/SimHacker/moollm/blob/main/skills/card/FLUXX.md
+
+  pie_table_fluxx:
+    title: "Pie Table Fluxx game state (adventure-4 pub)"
+    path: examples/adventure-4/pub/rooms/room-5/fluxx-table.yml
+    url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/rooms/room-5/fluxx-table.yml
+
+engine:
+  cardset: skills/experiment/experiments/fluxx-chaos/cardsets/fluxx-4.0.yml
+  dm_guide: skills/experiment/experiments/fluxx-chaos/engine/DM-GUIDE.yml
+  rulings: skills/experiment/experiments/fluxx-chaos/engine/RULINGS.yml
+
+external:
+  looney_labs: https://www.looneylabs.com/
+  fluxx: https://www.looneylabs.com/games/fluxx
+  andy_wikipedia: https://en.wikipedia.org/wiki/Andy_Looney
+  fluxx_wikipedia: https://en.wikipedia.org/wiki/Fluxx
+  washingtonian_nasa: https://www.washingtonian.com/2019/08/26/nasa-looney-labs-college-park-card-games-kristin-andy-looney/
+
+will_wright_imessage:
+  note: "Don told Will he has Fluxx packs + UMD days with Andy — Jul 2026 (private transcript)"
+  private: DonHopkins/projects/willwrightshowforfood/green-room/will-wright/sources/apple-messages/transcript/TRANSCRIPT.md

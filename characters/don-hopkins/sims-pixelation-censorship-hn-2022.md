@@ -6,6 +6,9 @@ Thread theme: reversing text pixelation; subpixel rendering leaks structure. Don
 
 **Reunion hub:** [`../../repo-shows/building-the-sims/pixelation-and-modesty.md`](../../repo-shows/building-the-sims/pixelation-and-modesty.md)
 
+**Maid plunger spine:** [`../../repo-shows/building-the-sims/maid-plunger-incident.yml`](../../repo-shows/building-the-sims/maid-plunger-incident.yml) ·
+primary source [`../../repo-shows/building-the-sims/sources/maid-plunger-incident-hn-2022.md`](../../repo-shows/building-the-sims/sources/maid-plunger-incident-hn-2022.md)
+
 → [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) · SimAntics / Edith trail in MicropolisCore docs
 
 ## Don's comments (selected)

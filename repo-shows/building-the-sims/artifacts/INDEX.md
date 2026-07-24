@@ -112,6 +112,7 @@ quotes until confirmed live.*
 
 These cards distill longer hub docs — edit parents when facts change:
 
+- [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml) — maid plunger chain (HN primary source)
 - [`../pixelation-and-modesty.md`](../pixelation-and-modesty.md)
 - [`../pool-qa.md`](../pool-qa.md)
 - [`../qa-bug-pile.md`](../qa-bug-pile.md)

@@ -1,0 +1,110 @@
+# FLIPBOOK — How Inclusivity Saved The Sims (QGCon paper act 1)
+
+flipbook:
+  id: inclusivity-saved-the-sims
+  title: "How Inclusivity Saved The Sims"
+  department: flipbook
+  duration_target_sec: 90
+  aspect: "16:9"
+  style: illustrated_explainer
+
+narration:
+  source: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md
+  speaker: Don Hopkins
+  opening_line: |
+    Inclusivity did not arrive as a late patch or a press release — it saved the franchise
+    by making the game more playable, more personal, and more durable.
+
+beats:
+  - at_sec: 0
+    page: 1
+    caption: "How Inclusivity Saved The Sims"
+    visual: "Title card — Sims doll silhouettes, diverse hair/clothes hints, wedding arch ghost"
+    asset: assets/page-01-title.png
+    motion: page_flip
+    duration_sec: 4
+
+  - at_sec: 4
+    page: 2
+    caption: "Not decoration — mechanism"
+    visual: "Ian Bogost quote bubble + SimAntics tree icon — rules as argument"
+    asset: assets/page-02-procedural-rhetoric.png
+    motion: zoom_in
+    duration_sec: 10
+
+  - at_sec: 14
+    page: 3
+    caption: "Masking · Constructionism · Simulator Effect"
+    visual: "McCloud blank face → player projects; Papert microworld; desk + doll"
+    asset: assets/page-03-theory-stack.png
+    motion: layout_fan
+    duration_sec: 12
+
+  - at_sec: 26
+    page: 4
+    caption: "Don insisted · Patrick implemented"
+    visual: "Design review → same-sex heart interaction in SimAntics"
+    asset: assets/page-04-patrick-arc.png
+    motion: pan_right
+    duration_sec: 10
+
+  - at_sec: 36
+    page: 5
+    caption: "Family Album · Exchange · modding"
+    visual: "Album pages flying; Exchange globe; Transmogrifier wrench"
+    asset: assets/page-05-community-tools.png
+    motion: page_flip
+    duration_sec: 12
+
+  - at_sec: 48
+    page: 6
+    caption: "Gender · race · LGBTQ+ · expression"
+    visual: "Timeline ribbon 1999→2020 — marriage laws parallel track faint in background"
+    asset: assets/page-06-axes.png
+    motion: pan_left
+    duration_sec: 14
+
+  - at_sec: 62
+    page: 7
+    caption: "Russia ban · flying under radar · assimilation rhetoric"
+    visual: "Map stamp 2014; 14-year clock; press release vs play experience"
+    asset: assets/page-07-global.png
+    motion: hold
+    duration_sec: 10
+
+  - at_sec: 72
+    page: 8
+    caption: "Saved commercially · saved culturally"
+    visual: "Franchise longevity graph + community wedding photos collage"
+    asset: assets/page-08-saved.png
+    motion: zoom_out
+    duration_sec: 8
+
+  - at_sec: 80
+    page: 9
+    caption: "Act 2: what saves sims now → Soul City"
+    visual: "Arrow to Soul City hub — tease next flipbook"
+    asset: assets/page-09-handoff-soul-city.png
+    motion: crossfade
+    duration_sec: 10
+
+render:
+  output: render/inclusivity-saved-the-sims.mp4
+  proxy: render/inclusivity-saved-the-sims-proxy.mp4
+  captions: captions/inclusivity-saved-the-sims.vtt
+
+ties_to:
+  - ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/README.md
+  - ../../../characters/ian-bogost/
+  - ../../how-inclusivity-saved-the-sims/SHOW.yml
+
+assets_needed:
+  - page-01-title.png
+  - page-02-procedural-rhetoric.png
+  - page-03-theory-stack.png
+  - page-04-patrick-arc.png
+  - page-05-community-tools.png
+  - page-06-axes.png
+  - page-07-global.png
+  - page-08-saved.png
+  - page-09-handoff-soul-city.png

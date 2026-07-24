@@ -23,6 +23,7 @@ meta:
 #        SEED    = a single <name>.yml file (plant when ready).
 shows:
   planted:
+    flipbook/: "★ GRAPHICS DEPARTMENT. Illustrated narration B-roll — FLIPBOOK.yml beats + assets per show. QGCon paper acts 1–3 seeded. Spec: ../process/post-production/flipbook-shows.yml. Complements Howard Penner Pop-Up overlays."
     will-wright-premiere/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + episodes.yml + suggested-questions.yml + ../../characters/will-wright/sources/ + invitation at ../../characters/will-wright/invitation.md + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
     moollm-readings/:          "★ READINGS SHOW. Long-form MOOLLM script readings on YouTube — primes guests on characters, lore, AI, Apple ][ nostalgia, science. Three primer episodes in episodes.yml; distinct from casual interviews and rare live Twitch specials."
     will-wright-premiere/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
@@ -116,6 +117,9 @@ shows:
       will-wright-adorable-minutes.yml: "Async one-minute Will Wright Q&A — revive 2008 format; HN question pump."
       infodump.yml: "Have I Told You About…? / Short Attention Span Theater — ShorDurPerEval franchise; solidarity_lexicon (SpIn, infodump, monotropism, homage-not-diagnosis, LGBTQ+ Sims audience); Will Roll amen. Ep 001: STAR FORTS; 002: Care Bears (Will)."
       did-the-sims-make-you-gay.yml: "★ Patrick J. Barrett III + Don — same-sex romance engine room; Alexander Avila essay (openly trans masc) + MOOLLM comment analysis; LGBTQ+ Sims audience solidarity. send_now."
+      im-queer-therefore-i-sim.yml: "★ Alexander Avila solo — I'm Queer Therefore I Sim; discuss essay + 1,712 MOOLLM comment themes with Don. warm_lead."
+      fluxx-rules-change-as-you-play.yml: "★ Andy + Kristin Looney × Don — Fluxx, UMD/LUMSSFS, MOOLLM fluxx-chaos simulation, live play. warm_lead."
+      how-inclusivity-saved-the-sims/SHOW.yml: "★ QGCon 2020 paper (canceled) → repo. Don solo/panel: 20 years Sims inclusivity; Bogost procedural rhetoric + Murray agency; Tanja modding; marriage-law parallel timeline. Flipbook B-roll: flipbook/shows/{inclusivity-saved-the-sims,soul-city-namesake,soul-saver-exodus}/. Artifacts: characters/don-hopkins/sources/qgcon-inclusivity-paper/."
       selfish-config-typescript.yml: "LATER — port central worker_config fragment composition to MicropolisCore packages/selfish-config (C3 merge + provenance)."
       lambdamoo-pavel-curtis.yml: "Pavel Curtis — LambdaMOO's influence on MOOLLM (direct-source lineage)."
       walter-bender-olpc.yml:   "Walter Bender — OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds."

@@ -27,4 +27,5 @@ Quirks included plunger routing and pre-privacy bathroom entry — fixed in
 
 ## Sources
 
+- [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml)
 - [`../pixelation-and-modesty.md`](../pixelation-and-modesty.md)

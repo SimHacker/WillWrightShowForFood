@@ -4,6 +4,12 @@
 writing_index:
   canonical_site: https://donhopkins.com
   medium: https://donhopkins.medium.com
+  github_moollm_plan: hn-medium-failure-and-github-moollm.md
+
+blog_reinvention:
+  path: hn-medium-failure-and-github-moollm.md
+  hn: https://news.ycombinator.com/item?id=34751042
+  summary: "Drupalgeddon → Medium → image-deprecation exit → republish on GitHub + MOOLLM"
 
 featured_essays:
   - title: "Logo Adventure for C64 Terrapin Logo"

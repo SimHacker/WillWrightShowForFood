@@ -27,5 +27,6 @@ Use sparingly on air — punchline after engineering story, not headline.
 
 ## Sources
 
+- [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml)
 - HN https://news.ycombinator.com/item?id=48015146
 - [`maid-plunger-unnecessary-censorship.md`](maid-plunger-unnecessary-censorship.md)

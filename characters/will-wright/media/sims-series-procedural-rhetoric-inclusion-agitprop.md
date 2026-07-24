@@ -1,6 +1,6 @@
 # Procedural rhetoric — inclusion agitprop vs institutional farce
 
-Ian Bogost's term **procedural rhetoric**: argument encoded in rules, processes, and interactive failure modes — not essays on a page.
+Ian Bogost's term **procedural rhetoric**: argument encoded in rules, processes, and interactive failure modes — not essays on a page. Bogost: *"an unholy blend of Will Wright and Aristotle"* (*Video Games Are Better Without Characters*). Don's QGCon paper [*How Inclusivity Saved The Sims*](../../don-hopkins/sources/qgcon-inclusivity-paper/README.md) applies the term across twenty years of franchise history; pairs with Janet Murray's agency/immersion/transformation on Family Album storytelling.
 
 The Sims UCC lineage gives us two registers on the **same engine** (SimAntics, branching dialogs, pie menus):
 

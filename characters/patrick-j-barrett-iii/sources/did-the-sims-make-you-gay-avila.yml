@@ -28,11 +28,12 @@ community_joke: |
   Long-running player meme — affectionate, not diagnostic. KQED, BRICKS, Guardian, and a
   generation of creators treat The Sims as the microworld where queer identity got rehearsed safely.
 
-comment_analysis:
-  location: |
-    MOOLLM designs/sims/sims-queer-identity-formation.md — section "Community Response: Comment Analysis"
-  url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
-  scale: "1,700+ comments; rich qualitative dataset"
+  comment_analysis:
+    location: |
+      MOOLLM designs/sims/sims-queer-identity-formation.md — section "Community Response: Comment Analysis"
+    url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+    index: characters/alexander-avila/sources/moollm-links.yml
+    scale: "1,712+ comments; 14 themes; cluster summary"
   themes_sample:
     - "Yes — Sims made me realize I was queer (retrospective recognition)"
     - "Hiding queer gameplay from parents"
@@ -42,7 +43,8 @@ comment_analysis:
     - "Theory appreciation / meme one-liners"
     - "Cross-generational patterns"
   show_use: |
-    Pull representative quotes on air (with permission/fair-use commentary); never mock commenters.
+    Solo talk: repo-shows/im-queer-therefore-i-sim.yml (I'm Queer Therefore I Sim with Don).
+    Patrick episode: pull representative quotes on air (fair-use commentary); never mock commenters.
     Pair with Patrick + Don engine-room segment — **rules of the world** enabled the testimonies.
 
 engine_room:

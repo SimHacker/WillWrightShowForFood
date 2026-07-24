@@ -1,0 +1,114 @@
+# FLIPBOOK — Soul City NC namesake (QGCon paper act 2)
+
+flipbook:
+  id: soul-city-namesake
+  title: "Soul City NC — not confused with, but inspired by"
+  department: flipbook
+  duration_target_sec: 75
+  aspect: "16:9"
+  style: illustrated_explainer
+
+narration:
+  source: ../../../repo-shows/will-wright-premiere/soul-city-namesake.md
+  speaker: Don Hopkins
+  required_on_air: |
+    *Not to be confused with, but inspired by* Floyd McKissick's Soul City, North Carolina.
+  speaker_note: "Careful tribute — do not conflate our platform with the historical town"
+
+beats:
+  - at_sec: 0
+    page: 1
+    caption: "Soul City, North Carolina — 1969"
+    visual: "Map pin Warren County NC; planned community blueprint"
+    asset: assets/page-01-mckissick.png
+    motion: page_flip
+    duration_sec: 5
+
+  - at_sec: 5
+    page: 2
+    caption: "Floyd B. McKissick — Black-led planned town"
+    visual: "Portrait frame + anti-racist community diagram"
+    asset: assets/page-02-mckissick-leader.png
+    motion: hold
+    duration_sec: 8
+
+  - at_sec: 13
+    page: 3
+    caption: "1972 — HUD New Communities grant"
+    visual: "Nixon + HUD paperwork — coalition math, not conviction (caption footnote)"
+    asset: assets/page-03-nixon-hud.png
+    motion: zoom_in
+    duration_sec: 10
+
+  - at_sec: 23
+    page: 4
+    caption: "Audit cleared the project"
+    visual: "Gavel + checkmark; newspaper 'cleared' headline"
+    asset: assets/page-04-audit-cleared.png
+    motion: page_flip
+    duration_sec: 7
+
+  - at_sec: 30
+    page: 5
+    caption: "Jesse Helms smear · economy · foreclosure"
+    visual: "Helms silhouette; downward arrow; FOR CLOSED stamp"
+    asset: assets/page-05-helms-foreclosure.png
+    motion: pan_left
+    duration_sec: 10
+
+  - at_sec: 40
+    page: 6
+    caption: "Soultech incubator → prison"
+    visual: "Factory icon morphs to prison bars — inverted coda"
+    asset: assets/page-06-prison-inversion.png
+    motion: crossfade
+    duration_sec: 8
+
+  - at_sec: 48
+    page: 7
+    caption: "Our Soul City runs the arrow the other way"
+    visual: "Arrow reversed — souls OUT of dead platforms"
+    asset: assets/page-07-arrow-reversed.png
+    motion: zoom_in
+    duration_sec: 8
+
+  - at_sec: 56
+    page: 8
+    caption: "Git-checked-in hub · souls cannot be foreclosed"
+    visual: "GPL badge + git branch tree + soul-file icon"
+    asset: assets/page-08-our-soul-city.png
+    motion: layout_fan
+    duration_sec: 10
+
+  - at_sec: 66
+    page: 9
+    caption: "Second chances"
+    visual: "Handoff to soul-saver-exodus flipbook"
+    asset: assets/page-09-second-chances.png
+    motion: page_flip
+    duration_sec: 9
+
+render:
+  output: render/soul-city-namesake.mp4
+  proxy: render/soul-city-namesake-proxy.mp4
+  captions: captions/soul-city-namesake.vtt
+
+ties_to:
+  - ../../../repo-shows/will-wright-premiere/soul-city-namesake.md
+  - ../../../catalogs/soul-city/README.md
+  - ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml
+
+sources:
+  vox: https://www.youtube.com/watch?v=R2karaKGgkk
+  verify: [nixon_hud_dates, helms_role, soultech_prison]
+
+assets_needed:
+  - page-01-mckissick.png
+  - page-02-mckissick-leader.png
+  - page-03-nixon-hud.png
+  - page-04-audit-cleared.png
+  - page-05-helms-foreclosure.png
+  - page-06-prison-inversion.png
+  - page-07-arrow-reversed.png
+  - page-08-our-soul-city.png
+  - page-09-second-chances.png
