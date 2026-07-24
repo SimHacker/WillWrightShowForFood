@@ -118,6 +118,29 @@ that streams display words instead — the browser already knows how to execute 
 For the Titan service: **TitanIC** (Titan + integrated circuit; unsinkable; failure modes
 come pre-named) · **Titanopolis** · ~~SimTitan~~ (avoiding the Sim brand).
 
+## Ordering — do the link IOTs come first?
+
+No, and the SIMH source says why: `stop_inst` defaults to 0 in `pdp18b_cpu.c`, so
+**undefined IOTs execute as silent no-ops** — PIXIE's link instructions won't halt the
+simulator. They only bite if the user invokes PIXIE's `TITAN` command (the `MESIN5`
+dispatch in SYMELEC), whose `WAITLK` loop polls `LSF`, a skip that a no-op never takes:
+the transfer would spin forever (though even then, the loop's own Ctrl-X abort path might
+still work — teletype polling is inside the loop). So the light pen — the demo — comes
+before the link, and the LINK device's first version can be a stub whose only job is to
+never leave a flag hanging.
+
+## The display — a WebGPU slow-phosphor simulator
+
+The browser 340 deserves better than `ctx.lineTo`. We will write a **WebGPU phosphor
+simulator**: every intensified point lands as an energy deposit in a persistence texture;
+a decay pass fades it exponentially frame over frame. The P7 phosphor is *two* phosphors —
+a fast blue flash under the beam and a long yellow-green afterglow (seconds) — which is
+also the physics of the light pen: **a real pen sees the blue flash, never the afterglow**.
+So the simulator drives the pen honestly: pen hits register only on fresh intensification
+within the aperture radius, exactly like the photomultiplier, while the human watches the
+lazy green trails. One texture, two consumers, both period-correct. (Stretch: bloom, and
+the slight defocus bigger deflection angles caused at the tube edge.)
+
 ## Milestones
 
 1. `make` SIMH pdp7 with display; run DEC's [340 display test](DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf).
@@ -125,9 +148,12 @@ come pre-named) · **Titanopolis** · ~~SimTitan~~ (avoiding the Sim brand).
    learn things about missing SYMELEC linkage and entry conventions.
 3. Light pen driver in `pdp18b_dpy.c` + mouse; pass the 370 diagnostic.
 4. PIXIE tracking cross follows the mouse. (The 1969 film shows what right looks like.)
-5. LINK device with Wiseman's IOTs; Titan protocol service answers a blocklet handshake.
-6. Browser bench: TS core runs the same `.oct`, same Titan service.
-7. Berlin: light buttons, radial menu question answered live, 58 years on.
+5. Network display backend (`ws.h` implementation) + browser canvas/WebGPU phosphor;
+   pen driven from the browser pointer.
+6. LINK device with Wiseman's IOTs (stub first — flags never hang); Titan protocol
+   service answers a blocklet handshake.
+7. Browser bench: TS core runs the same `.oct`, same Titan service.
+8. Berlin: light buttons, radial menu question answered live, 58 years on.
 
 ## Open questions
 

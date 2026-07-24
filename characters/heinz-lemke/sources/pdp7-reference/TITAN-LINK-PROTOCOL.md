@@ -79,6 +79,53 @@ length. Serialization *and* deserialization of a linked heap, in ~30 instruction
 display — if the 340 hit a stop code, restart it with `IDLA`; poll link flag (`LSF`) —
 loop until the word arrives. Three devices, one loop, no interrupts (they're off).
 
+## Where are the verbs?
+
+Searching the whole listing for everything ever sent down the link: the wire carries
+**three tiny session verbs and no application verbs at all**. The 6-bit control channel
+(`LLB6`) sends `4` (start / request headers), `6` (handshake), and `010` (NAK); the
+blocklet header carries the direction bit; `PXID` types the stream. That's the entire
+in-band vocabulary.
+
+So how did anything ever *happen*? Two places, neither on the wire:
+
+1. **The user invoked the verb on the PDP-7.** SYMELEC's command dispatcher has a
+   command-table entry (word `4130`, packed characters, commented `/TITAN`) that jumps to
+   `MESIN5` — "`HERE IF TITAN COMMUNICATION`" — which readies the data structure
+   (`LAW SAVINS; FINDN` — "in case writing to Titan") and calls the transfer. Talking to
+   Titan was a *command in PIXIE's UI*, peer to its drawing commands.
+2. **The endpoint was the verb.** What Titan did with the arriving ring file was decided
+   by which application program user HL1470 had running on the far side. Send your model
+   to the filestore program: it gets stored. Send it to an analysis program: it gets
+   computed on. *Where you sent stuff is what verbed it* — precisely a web endpoint: you
+   don't send verbs to a server either, you POST stuff at a URL and the route determines
+   the semantics.
+
+And it is emphatically **not** an asynchronous message system — no Simula coroutines, no
+actor mailboxes. It's synchronous, half-duplex, polling, with interrupts explicitly off.
+The *illusion* of asynchrony is manufactured inside the wait loop, which services the
+display and keyboard while blocked on the link — cooperative multitasking hand-rolled into
+the device driver. One verb noun-ed, you might say: the only thing you do is move stuff,
+and moving stuff is arranged so that everything else keeps happening.
+
+## Code or data? Titan as the build server
+
+The listing's own title line answers where code came from: assembled on Titan, 12/2/72, by
+user HL1470, on the Cambridge CAD Group Assembler. **Titan was PIXIE's source repository,
+build server, and file server of code** — the PDP-7 never assembled or compiled anything
+in its life. But note what the recovered link routine is shaped for: `PXID` typing,
+data-structure bounds checks, ring-pointer relocation. It is a *model* mover, not a
+program loader. Binaries most plausibly traveled the same way Ken Thompson's did from
+GECOS at Bell Labs the same year: punched to paper tape on the big machine, carried to
+the PDP-7's reader. Code by sneakernet, models by wire.
+
+That sharpens the genealogy joke into taxonomy: **PIXIE is proto-AJAX, not proto-NeWS.**
+The browser-that-downloads-code pattern (NeWS PostScript, JavaScript) moves *programs*
+into the interactive front end; PIXIE moved *data* into a fixed front-end program —
+which is exactly XMLHttpRequest exchanging structured state with a server. NeWS's mobile
+code had to wait for machines that could afford to compile. The distributed-UI split
+itself — interaction local, computation and storage remote — is fully present in 1969.
+
 ## Did anything else speak it?
 
 **No — one wire, one pair of machines, and the software is bespoke.** The link hardware
