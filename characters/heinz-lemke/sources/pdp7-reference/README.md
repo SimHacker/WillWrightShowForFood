@@ -3,7 +3,12 @@
 Everything needed to read, assemble, and run the [PIXIE listing](../pixie-assembler-listing-1972/README.md)
 on an emulated PDP-7 with the DEC Type 340 display — and to build a virtual light pen.
 All documents mirrored from [bitsavers.org](https://bitsavers.org) (public archive); the
-public URLs below are the canonical citations. Start here, students.
+public URLs below are the canonical citations. Start here, students, hackers, and turists.
+
+**New here? Read the [turist guide](GUIDE.md) first** (spelled the ITS way — see the guide's
+first section) — how devices added instructions to
+the PDP-7, why the 340 is a second computer (wheel of reincarnation), the story and
+architecture of **Titan** across the link, and what's emulated versus what's an open quest.
 
 ## The display
 
@@ -34,7 +39,42 @@ Linked, not mirrored (large maintenance sets): [F-77A PDP-7 Maintenance Manual, 
 [PDP-7 Maintenance (36 MB)](https://bitsavers.org/pdf/dec/pdp7/PDP-7_Maint.pdf) ·
 full index: [bitsavers /pdf/dec/pdp7/](https://bitsavers.org/pdf/dec/pdp7/) · [/pdf/dec/graphics/](https://bitsavers.org/pdf/dec/graphics/)
 
+## Local working clones and toolchains
+
+Cloned next to the other repos (add them to the Cursor workspace to read source instead of guessing):
+
+| Repo | Local path | What's inside |
+|------|-----------|---------------|
+| [open-simh/simh](https://github.com/open-simh/simh) | `~/GroundUp/git/simh` | The emulator. PDP-7 CPU lives in `PDP18B/` (shared 18-bit family code: PDP-4/7/9/15); the Type 340 engine is `display/type340.c`; the PDP-7↔340 glue is `PDP18B/pdp18b_dpy.c` |
+| [DoctorWkt/pdp7-unix](https://github.com/DoctorWkt/pdp7-unix) | `~/GroundUp/git/pdp7-unix` | The 1969/1970 PDP-7 UNIX restoration (Warren Toomey et al.). `tools/` is the modern cross-toolchain: `as7` (Perl cross-assembler for Ken Thompson's `as` syntax, output tweaks by Phil Budne), `b.c` (a B compiler emitting PDP-7 assembly — Robert Swierczek), `a7out`, `mkfs7`, `fsck7` |
+
+**The light-pen gap, located.** `display/type340.c` already models pen-enable bits per
+display word and calls `ty340_lp_int(x, y)` on hits — but the PDP-7 glue in
+`PDP18B/pdp18b_dpy.c` reads back pen status as a hardwired zero (`dat |= 0; // Light pen.`).
+That one stubbed line is where the virtual light pen driver plugs in.
+
+**Assembler / compiler options, near to far:**
+
+1. **No assembler at all** — we already transcribed the assembled octal (`rsppix.oct`).
+   Convert it to a SIMH `DEPOSIT` script or paper-tape image and the 1972 binary runs as-is.
+2. **Cross-assemble on the Mac/Linux box** — `as7` runs anywhere Perl does. PIXIE's
+   Cambridge syntax (`X=JMS,` opcode-valued symbols, `#` operands) isn't Ken's `as` syntax,
+   so either mechanically translate `rsppix.asm` to `as7` dialect, or write a small Python
+   cross-assembler honoring the Cambridge dialect (we already parse it in
+   [`stitch.py`](../pixie-assembler-listing-1972/scripts/stitch.py)) and diff against `.oct`.
+3. **Assemble natively inside the emulator** — boot PDP-7 UNIX in SIMH and use Ken's
+   original `as`, or run DEC's paper-tape Symbolic Assembler. Period-authentic, slowest.
+4. **B, for fun** — the `pdp7-unix` toolchain compiles B (C's parent) to PDP-7 assembly on a
+   modern machine; the original B ran on this very architecture.
+
+The original chain, for the record: PIXIE was **cross-assembled on Titan** by the Cambridge
+CAD Group Assembler (user HL1470) and carried to the PDP-7 — so writing our own
+cross-assembler on a big machine next door is not cheating; it is the authentic workflow.
+
 ## The mission — PIXIE in the emulator
+
+Full battle plan with architecture (SIMH lab bench + browser bench + high-level Titan
+protocol service) and milestones: [**EMULATION-PLAN.md**](EMULATION-PLAN.md). Summary:
 
 1. **Assemble**: take the recovered [`symelec.asm` / `rsppix.asm`](../pixie-assembler-listing-1972/README.md)
    and get them through a PDP-7 assembler (or write a small cross-assembler honoring the
