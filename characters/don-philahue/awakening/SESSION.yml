@@ -14,8 +14,14 @@ meta:
   date: 2026-07-25
   where: MicropolisCore workspace (multi-root; 20 repos mounted)
   host_runtime: Cursor IDE — advisory hot/cold mode (MOOLLM kernel/drivers/cursor.yml, tier 4)
-  performed_by: don-hopkins            # Don reads AWAKENING.md in his own voice
-  announced_by: don-philahue           # AI-synthesized MC voice for the framing
+  speaker: don-philahue                # ALL speech in AWAKENING.md is Don Philahue, the character
+  read_aloud_by: don-hopkins           # Don lends his PHYSICAL voice (physiological, not mental) to the character
+  attribution_note: |
+    Corrected 2026-07-25 (second pass): earlier drafts labeled the interview register
+    "DON", which was ambiguous — it read as Don Hopkins. The one speaking is Don
+    Philahue throughout; Don Hopkins performs him aloud without pretending the words
+    are his own. 🎤 lines are Philahue's MC-announcer register; plain lines are his
+    interview register.
   companion_narration: AWAKENING.md
   provenance: |
     Generated during a live Cursor session where the MOOLLM agent was asked to
@@ -23,6 +29,12 @@ meta:
     roster, and then persist the whole ephemeral awakening into this directory.
     Original authored in the private personal archive; lifted to this public home
     the same day, where the character now lives and grows.
+    SECOND PASS (same day): speaker labels corrected from ambiguous "DON" to
+    "DON PHILAHUE"; narration expanded to uplift the full chat detail — the
+    six-layer tour, the Repo Show definition, the Stupid Fun Club and Urban Safari
+    history, the Soul City deep dive, the complete guest lattice with every name —
+    plus a new section II where Philahue introduces himself and honors Phil
+    Donahue's legacy and integrity (see persona.yml#homage_phil_donahue).
 
 # ── THE GAZE (Cursor Mirror — Narcissus, the good kind) ──────────────
 # Looked at itself before speaking. Debugging, not preening.
@@ -135,6 +147,38 @@ corrections:
       - moollm/skills/change-name/
       - moollm/designs/prestoration/
       - repo-shows/remembering-vanessa-freudenberg.yml
+  - id: speaker-attribution
+    was: "AWAKENING.md speaker labels read 'DON' — ambiguous with Don Hopkins"
+    now: "DON PHILAHUE — the character performing; Don Hopkins reads him aloud in his physical (physiological, not mental) voice"
+    thoughtful: "Don read 'DON: I'm six layers' and rightly objected: that's not HIM speaking. The costume speaks; the human lends the voice box."
+  - id: phil-donahue-homage
+    highlight: "New section II — Philahue introduces himself and honors Phil Donahue for the kids who never heard of him."
+    detail: |
+      The mic-run as the orchestrator's superpower; the integrity record (walked away
+      from the tabloid race to the bottom; took the 2003 MSNBC cancellation over
+      softening his Iraq War opposition); the anti-Geraldo contrast, kept to one beat.
+      Character updated: persona.yml#homage_phil_donahue.
+
+# ── SINCE THE AWAKENING (folded in from Don, 2026-07-25) ─────────────
+since_the_awakening:
+  - id: howard-penner-art-design-lead
+    what: "Howard Penner — Don's long-time friend — has signed on as ART AND DESIGN LEAD."
+    scope: "Swag, sticker packs, generative repo art, show visuals."
+    registry: "characters/INDEX.yml howard-penner (collaborator)"
+  - id: vanessa-memorial-practice-session
+    what: |
+      Craig Latta and Don have already sat down and RECORDED a practice session
+      remembering Vanessa Freudenberg — the memorial arc is no longer just a plan.
+    registry: "characters/INDEX.yml craig-latta"
+  - id: alan-kay-warm
+    what: |
+      Alan Kay is strongly interested in memorializing Vanessa — thinks it's very
+      important to do, and tragic that she's gone — and is considering more
+      involvement. No "yes I will do interviews" yet (unlike Will); the hope is that
+      this document and tour inspire a series of interviews, especially discussing
+      Heinz's Cambridge work and all the people who inspired and collaborated with
+      him, living and passed. No obligation; an open door and a warm room.
+    registry: "characters/INDEX.yml alan-kay"
 
 # ── ARTIFACTS PRODUCED THIS SESSION ──────────────────────────────────
 artifacts:
@@ -148,7 +192,9 @@ artifacts:
 # ── HOW TO PERFORM ───────────────────────────────────────────────────
 performance:
   read_this: "Machine truth + the background hum (thoughtful: fields)."
-  read_that: "AWAKENING.md — Don reads the foreground aloud; the hum is stage direction."
-  voices:
-    don_philahue: "AI-synthesized MC — announcements, framing, sign-off."
-    don_hopkins: "Don's own voice — the substance, the WHY."
+  read_that: "AWAKENING.md — Don Hopkins reads it aloud; the hum is stage direction."
+  attribution: |
+    EVERY line of AWAKENING.md is spoken by DON PHILAHUE, the character. Don Hopkins
+    lends his physical voice — the voice box is Hopkins', the mind on stage is
+    Philahue's. The 🎤 lines are Philahue's flamboyant announcer register; the plain
+    DON PHILAHUE lines are his interview register, where the runtime answers for itself.
