@@ -63,8 +63,14 @@ Zero-install, clickable by anyone — the demo and teaching machine.
 
 ### The Titan: a high-level protocol emulator, shared by both benches
 
-Full protocol anatomy (decoded from the listing) and the TypeScript service architecture
-with its `TitanApplication` plug-in surface: [**TITAN-LINK-PROTOCOL.md**](TITAN-LINK-PROTOCOL.md).
+Two layers, both documented:
+
+1. **System contract (1965):** [Planning Document 10](cambridge-supervisor/pd10-titan-pdp7-link.md)
+   — C.A. Lang's four facilities (core-to-core + 18→48 packing, Attentions, disk via peer
+   program, second Multiplexer teletype). Stub these as the Titan service surface.
+2. **Application wire (PIXIE):** full protocol anatomy (decoded from the listing) and the
+   TypeScript service architecture with its `TitanApplication` plug-in surface —
+   [**TITAN-LINK-PROTOCOL.md**](TITAN-LINK-PROTOCOL.md).
 
 One implementation of the blocklet protocol (it is fully transcribed: headers, word
 counts, checksums, retry-on-bad-header, error exits, the Titan→PDP relocation pass that
