@@ -4,8 +4,10 @@
 title: Don Philahue
 iconic: "🎙️ Phil"
 description: |
-  Virtual show orchestrator object — merges plugin CARD ads, arbitrates dispatch, surfaces
-  TicketPR, hands magazines, spawns gags. Hope Chest of Repo Show; not Don Hopkins.
+  Drag-show tribute MC — double drag king homage to Phil Donahue; the name is the
+  disclosure (Elvis-impersonator grammar). Repo Show Hope Chest: merges plugin CARD
+  ads, arbitrates dispatch, surfaces TicketPR, hands magazines, spawns gags. Not Don
+  Hopkins; not Phil Donahue the person. One CHARACTER.yml body — no persona sidecar.
 
 keywords:
   - don philahue
@@ -15,12 +17,14 @@ keywords:
   - orchestrator
   - orchestrator hub
   - phil donahue homage
+  - double drag king
+  - tribute act
   - merge plugin ads
 
 card: CARD.yml
 orchestrator: ORCHESTRATOR.yml
 qa_protocol: qa-orchestration.yml
-persona: persona.yml            # avatar soul — costume, modes, voice, ceremonies
+constitution: CHARACTER.yml     # one comprehensive character — costume, homage, voice, ceremonies, simulation
 awakening: awakening/           # the boot, the gaze, the self-interview — performable
 
 navigation:
@@ -32,11 +36,10 @@ navigation:
 
 read_order:
   - README.md
-  - persona.yml
+  - CHARACTER.yml
   - ORCHESTRATOR.yml
   - qa-orchestration.yml
   - CARD.yml
-  - CHARACTER.yml
   - awakening/README.md
 
 see_also:
@@ -56,5 +59,5 @@ see_also:
     - { path: qa-orchestration.yml, why: "Right Q, guest, time — ledger sweep" }
     - { path: ORCHESTRATOR.yml, why: "Hub spec — plugin merge + state machine" }
     - { path: CARD.yml, why: "ASK-NOW · QA-LEDGER-SWEEP · SURFACE-QUESTION" }
-    - { path: persona.yml, why: "Avatar soul — double drag king, modes, voice, ceremonies" }
+    - { path: CHARACTER.yml, why: "Avatar soul merged in — double drag king, Phil Donahue homage, voice, ceremonies" }
     - { path: awakening/AWAKENING.md, why: "Performable boot + self-interview narration" }

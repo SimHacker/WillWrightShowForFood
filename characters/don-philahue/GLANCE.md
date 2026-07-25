@@ -1,1 +1,1 @@
-🎙️ **Don Philahue** — AI MC / audience wrangler (Phil Donahue homage). Surfaces question-PRs live on Repo Shows. Orchestrator avatar — not a human guest invitation.
+🎙️ **Don Philahue** — drag-show tribute MC (Phil Donahue homage; the name is the disclosure). Repo Show orchestrator avatar — mic-run in git, not a human guest invitation.

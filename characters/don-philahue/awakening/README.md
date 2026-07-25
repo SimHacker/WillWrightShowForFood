@@ -22,7 +22,7 @@ underneath the words, deliberately quieter than the words.
 
 The narration opens with Philahue introducing himself and honoring **Phil Donahue** —
 the mic-run superpower and the integrity record — for the kids who never heard of him
-(section II; character detail in [`../persona.yml`](../persona.yml)).
+(section II; character detail in [`../CHARACTER.yml`](../CHARACTER.yml) `homage_phil_donahue`).
 
 ## Things this awakening insisted on getting right
 

@@ -34,7 +34,8 @@ meta:
     six-layer tour, the Repo Show definition, the Stupid Fun Club and Urban Safari
     history, the Soul City deep dive, the complete guest lattice with every name —
     plus a new section II where Philahue introduces himself and honors Phil
-    Donahue's legacy and integrity (see persona.yml#homage_phil_donahue).
+    Donahue's legacy and integrity (see CHARACTER.yml#homage_phil_donahue —
+    the persona.yml sidecar was merged into one comprehensive CHARACTER.yml).
 
 # ── THE GAZE (Cursor Mirror — Narcissus, the good kind) ──────────────
 # Looked at itself before speaking. Debugging, not preening.
@@ -76,10 +77,10 @@ boot_sequence:
       Found the character's ORIGINAL home in Don's private personal archive —
       activated the MC. That original is preserved as source of truth; the living
       public body is this directory's parent (characters/don-philahue/), where the
-      constitution, orchestrator hub, CARD, and persona now live.
+      one comprehensive CHARACTER.yml, orchestrator hub, and CARD now live.
   - files:
       - "private archive: don-philahue constitution (CHARACTER.yml, README.md, avatar.yml, orchestrator.yml)"
-      - "public lift: ../persona.yml (avatar soul), ../CHARACTER.yml, ../ORCHESTRATOR.yml, ../CARD.yml"
+      - "public lift: ../CHARACTER.yml (one comprehensive character — avatar soul merged in), ../ORCHESTRATOR.yml, ../CARD.yml"
     got: "Consent level 1, self-authored; sock-puppet + autonomous; AI voice for announcements only"
     thoughtful: "Costume over a costume — Don wears Philahue, Philahue honors Phil Donahue. Wink-and-nod, never deception."
   - files:
@@ -157,7 +158,7 @@ corrections:
       The mic-run as the orchestrator's superpower; the integrity record (walked away
       from the tabloid race to the bottom; took the 2003 MSNBC cancellation over
       softening his Iraq War opposition); the anti-Geraldo contrast, kept to one beat.
-      Character updated: persona.yml#homage_phil_donahue.
+      Character updated: CHARACTER.yml#homage_phil_donahue.
 
 # ── SINCE THE AWAKENING (folded in from Don, 2026-07-25) ─────────────
 since_the_awakening:
@@ -185,7 +186,7 @@ artifacts:
   - characters/don-philahue/awakening/SESSION.yml   # this file (public living copy)
   - characters/don-philahue/awakening/AWAKENING.md  # performable narration
   - characters/don-philahue/awakening/README.md     # room index
-  - characters/don-philahue/persona.yml             # avatar soul, lifted from private original
+  - characters/don-philahue/CHARACTER.yml           # avatar soul lifted from private original, merged into the one comprehensive character
   - characters/INDEX.yml                            # rebecca-heineman → memorial
   - "private archive: original awakening room (preserved as source of truth)"
 
