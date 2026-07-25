@@ -20,6 +20,8 @@ keywords:
 card: CARD.yml
 orchestrator: ORCHESTRATOR.yml
 qa_protocol: qa-orchestration.yml
+persona: persona.yml            # avatar soul — costume, modes, voice, ceremonies
+awakening: awakening/           # the boot, the gaze, the self-interview — performable
 
 navigation:
   up: ../GLANCE.yml
@@ -30,10 +32,12 @@ navigation:
 
 read_order:
   - README.md
+  - persona.yml
   - ORCHESTRATOR.yml
   - qa-orchestration.yml
   - CARD.yml
   - CHARACTER.yml
+  - awakening/README.md
 
 see_also:
   parent:
@@ -52,3 +56,5 @@ see_also:
     - { path: qa-orchestration.yml, why: "Right Q, guest, time — ledger sweep" }
     - { path: ORCHESTRATOR.yml, why: "Hub spec — plugin merge + state machine" }
     - { path: CARD.yml, why: "ASK-NOW · QA-LEDGER-SWEEP · SURFACE-QUESTION" }
+    - { path: persona.yml, why: "Avatar soul — double drag king, modes, voice, ceremonies" }
+    - { path: awakening/AWAKENING.md, why: "Performable boot + self-interview narration" }

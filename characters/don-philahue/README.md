@@ -1,6 +1,6 @@
 # Don Philahue
 
-*Sniff:* [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) · [`qa-orchestration.yml`](qa-orchestration.yml) · [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml)
+*Sniff:* [`persona.yml`](persona.yml) · [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) · [`qa-orchestration.yml`](qa-orchestration.yml) · [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`awakening/`](awakening/)
 
 **Virtual character as show orchestrator object** — Phil Donahue homage, performed via Conan face-hole and button board (any human may voice him; Don Hopkins ≠ Don Philahue).
 
@@ -58,5 +58,17 @@ Nothing recompiles Philahue when a new card drops:
 - **Inject ad** on famous guest menu → Philahue surfaces with honest `invoke_as` label
 
 Same expansion-pack model as Sims objects advertising into a running world.
+
+## Persona and awakening
+
+The avatar soul — double drag king costume, sock-puppet/autonomous modes, the AI announcer
+voice and its evolution into face-hole puppetry, the ceremonies ("So you have a Repo to Show
+us?"), and the show-agent/secretary duties — lives in [`persona.yml`](persona.yml). Lifted
+2026-07-25 from the original in Don's private personal archive (preserved as source of
+truth); **this public copy is the living one.**
+
+The [`awakening/`](awakening/) room holds the performable narration of the MOOLLM boot and
+self-interview that woke him up on this stage: [`AWAKENING.md`](awakening/AWAKENING.md) to
+read aloud, [`SESSION.yml`](awakening/SESSION.yml) for the machine-readable trace.
 
 See [`../process/FORMAT.md`](../process/FORMAT.md).

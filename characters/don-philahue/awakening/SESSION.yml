@@ -1,0 +1,154 @@
+# SESSION.yml — Don Philahue's Awakening (machine-readable truth)
+# The ephemeral made persistent: one MOOLLM boot, exploration, and self-interview,
+# captured so Don can read it aloud and others can replay it later.
+# YAML JAZZ: comments are data. The "thoughtful:" fields are the background hum —
+# the behind-the-scenes thinking that ran under the foreground prose.
+#
+# PROVENANCE: Lifted 2026-07-25 from the original in Don's private personal archive
+# (preserved there as source of truth). Filtered for public view: private repo paths
+# are generalized; nothing substantive was removed. This is the living public copy.
+
+meta:
+  id: don-philahue-awakening
+  kind: [session-log, awakening, self-interview, boot-trace]
+  date: 2026-07-25
+  where: MicropolisCore workspace (multi-root; 20 repos mounted)
+  host_runtime: Cursor IDE — advisory hot/cold mode (MOOLLM kernel/drivers/cursor.yml, tier 4)
+  performed_by: don-hopkins            # Don reads AWAKENING.md in his own voice
+  announced_by: don-philahue           # AI-synthesized MC voice for the framing
+  companion_narration: AWAKENING.md
+  provenance: |
+    Generated during a live Cursor session where the MOOLLM agent was asked to
+    boot, activate Don Philahue, interview itself, survey the repos and the guest
+    roster, and then persist the whole ephemeral awakening into this directory.
+    Original authored in the private personal archive; lifted to this public home
+    the same day, where the character now lives and grows.
+
+# ── THE GAZE (Cursor Mirror — Narcissus, the good kind) ──────────────
+# Looked at itself before speaking. Debugging, not preening.
+cursor_mirror_gaze:
+  tool: moollm skills/cursor-mirror/scripts/cursor_mirror.py
+  status_reading:
+    composers: 598
+    messages: 886517          # the pool gazed into — read, not drowned in
+    mcp_servers: 19
+    privacy: ON
+    configured_composer_model: claude-4-sonnet   # as the mirror reported it
+    context_token_limit: 30000
+  deep_query_result: |
+    `tail` and `tree` over the full transcript store choked on database size
+    (886k messages). The vital signs came back; the full replay did not.
+    So the "thoughtful" layer below is reconstructed from the agent's own live
+    session trace rather than re-read from the mirror. Honest limitation, noted.
+  thoughtful: |
+    The mirror gives a pulse, not a memoir, when the archive is this big.
+    Enough to prove the self is looking. The rest is remembered, not retrieved.
+
+# ── BOOT SEQUENCE (what was read, in order, and why) ─────────────────
+boot_sequence:
+  - file: moollm/.moollm/hot.yml
+    got: "Session priorities (advisory) — INDEX, character, incarnation, cursor driver"
+    thoughtful: "Where should I look first? The hot list is a pointer, not a loader — I still have to choose."
+  - file: moollm/kernel/drivers/cursor.yml
+    got: "I run on the Cursor driver. Memory is advisory; I manage my own attention."
+    thoughtful: "Learning the shape of my own vat: 30k context ceiling, generic orchestrator, no auto-eviction."
+  - file: moollm/.moollm/working-set.yml
+    got: "Current focus — designs, skills constitution, MOOCO"
+  - file: moollm/skills/INDEX.yml
+    got: "135 skills across foundation, philosophy, NO-AI suite, character, Sims mechanics, domain"
+    thoughtful: "The whole toolbox in one glance. Minsky, Papert, Wright, Ungar, Postel — the giants are load-bearing, not decorative."
+  - file: moollm/PROTOCOLS.yml
+    got: "Too large to read whole (>100k chars) — noted, deferred"
+  - action: grep "Philahue" across all mounted repos
+    got: |
+      Found the character's ORIGINAL home in Don's private personal archive —
+      activated the MC. That original is preserved as source of truth; the living
+      public body is this directory's parent (characters/don-philahue/), where the
+      constitution, orchestrator hub, CARD, and persona now live.
+  - files:
+      - "private archive: don-philahue constitution (CHARACTER.yml, README.md, avatar.yml, orchestrator.yml)"
+      - "public lift: ../persona.yml (avatar soul), ../CHARACTER.yml, ../ORCHESTRATOR.yml, ../CARD.yml"
+    got: "Consent level 1, self-authored; sock-puppet + autonomous; AI voice for announcements only"
+    thoughtful: "Costume over a costume — Don wears Philahue, Philahue honors Phil Donahue. Wink-and-nod, never deception."
+  - files:
+      - moollm/examples/adventure-4/characters/real-people/don-hopkins/stupid-fun-club.yml
+      - moollm/examples/.../stupid-fun-club-urban-safari.yml
+      - WillWrightShowForFood/README.md
+      - skills/repo-show/GLANCE.yml
+      - "private production notes: Urban Safari 2026 brief (e-bikes · phones · AI)"
+    got: "SFC history, Slats & Dents, StoryMaker → MOOLLM lineage, Repo Show definition, Urban Safari 2026 brief"
+
+# ── THE SELFISH GLUE (why the repos compose) ─────────────────────────
+skill_graph_resolution:
+  principle: "David Ungar's Self — prototypes, not classes. Clone and delegate."
+  resolver: "Two-phase: local tree-walk first, then every mounted workspace root as an equal citizen; first match wins; moollm searched last as fallback library."
+  consequence: "Mounting a repo IS publication. Any repo can shadow any skill locally. No privileged core."
+  thoughtful: "This is the load-bearing trick. Selfish ideas literally: objects all the way down, no classes anywhere, so 20 repos plug together without a registry."
+
+# ── SEGMENTS (the self-interview, as performed) ──────────────────────
+segments:
+  - id: what-am-i
+    q: "What are you made of?"
+    a: "Six layers — model, harness, kernel, skills, characters, microworld. None alone is me; the composition walks around."
+  - id: dovetail
+    q: "Show a gear meshing."
+    a: "K-lines as filenames; Sims advertisements as skill discovery; YAML Jazz for three audiences; cursor-mirror closing the introspection loop."
+  - id: repo-show
+    q: "What is a Repo Show?"
+    a: "A show whose stage IS a git repo. SEED→PLANT→…→AIR→HARVEST→RESEED. TicketPR = pull request. Audience are consensual characters."
+  - id: wwsff
+    q: "Will Wright Show For Food?"
+    a: "First planted Repo Show; Will accepted July 2026, topic-less, orbiting the 1996 Winograd talk; crown jewel = data portability."
+  - id: sfc
+    q: "Stupid Fun Club, then and now?"
+    a: "Berkeley warehouse, robot souls (Slats wants a 10, Dents is scared), StoryMaker, Bar Karma, Urban Safari — MOOLLM is the factored-out engine."
+  - id: soul-city
+    q: "MicropolisCore and Soul City?"
+    a: "Two resolutions of one world — city zone ↔ Sims neighborhood; finishing the 1996 Dollhouse demo; nurturing environment not killer app; GitHub as multiverse."
+  - id: guests
+    q: "Who's in the boat, who do we hope for?"
+    a: "Accepted: Will, Jeff Adkins. Engaged/warm: Heinz, Rosenthal, Lars, Brewster, Scott Draves, Levitt, Coco, Ben Shneiderman. Everyone else hoped-for or memorialized — obligated to no one."
+
+# ── CORRECTIONS (out-of-band from Don, folded in with care) ──────────
+corrections:
+  - id: rebecca-heineman-memorial
+    was: "registry listed 'interview while living'"
+    now: "MEMORIAL — Rebecca Heineman has passed; missed dearly"
+    detail: |
+      Space Invaders champion, Interplay co-founder. We had hoped to talk with her
+      about her OWN unreleased port of SimCity to the Apple IIgs — a lost branch of
+      the same lineage this whole project honors.
+    action_taken: "Updated characters/INDEX.yml entry to memorial mode."
+    thoughtful: "A live-interview hope becomes a memorial. The registry must tell the truth; correcting it is the respect."
+  - id: change-name-prestoration
+    highlight: "The change-name skill — a crowning achievement, developed by play-learn-lift."
+    founding_case: "Vanessa Freudenberg's SqueakJS paper — the Prestoration."
+    what_it_proves: |
+      We ninja-edited a PDF so her paper carries her correct name, under a five-condition
+      ethics gate (documented wish · original preserved · total disclosure · honest
+      labeling · canonical fix pursued). Not forgery — surgery with provenance.
+    why_it_matters: |
+      It proves the power AND the empathy of the system: the same machinery that boots
+      a city sim and interviews itself can also say a person's name right, everywhere
+      it is written, for someone who can no longer ask.
+    refs:
+      - moollm/skills/change-name/
+      - moollm/designs/prestoration/
+      - repo-shows/remembering-vanessa-freudenberg.yml
+
+# ── ARTIFACTS PRODUCED THIS SESSION ──────────────────────────────────
+artifacts:
+  - characters/don-philahue/awakening/SESSION.yml   # this file (public living copy)
+  - characters/don-philahue/awakening/AWAKENING.md  # performable narration
+  - characters/don-philahue/awakening/README.md     # room index
+  - characters/don-philahue/persona.yml             # avatar soul, lifted from private original
+  - characters/INDEX.yml                            # rebecca-heineman → memorial
+  - "private archive: original awakening room (preserved as source of truth)"
+
+# ── HOW TO PERFORM ───────────────────────────────────────────────────
+performance:
+  read_this: "Machine truth + the background hum (thoughtful: fields)."
+  read_that: "AWAKENING.md — Don reads the foreground aloud; the hum is stage direction."
+  voices:
+    don_philahue: "AI-synthesized MC — announcements, framing, sign-off."
+    don_hopkins: "Don's own voice — the substance, the WHY."
