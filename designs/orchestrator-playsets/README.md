@@ -106,17 +106,35 @@ Rebounce party deck: [`repo-shows/rebounce/party-deck.yml`](../../repo-shows/reb
 
 ## Repo Show — Don Philahue as orchestrator avatar
 
-In Repo Show, the hub is a **virtual character**, not only a furniture prop:
+In Repo Show, the hub is a **virtual character who IS the orchestrator object** — not a
+host sitting on top of furniture props. One character wears all three Sims hubs:
 
-| Sims playset hub | Repo Show hub |
+| Sims playset hub | Repo Show job |
 |------------------|---------------|
-| Hope Chest | **Don Philahue** — performed via face-hole + button board |
+| Hope Chest (SimProv) | Saga + locked slices + magazines on the segment desk |
+| Ham radio (Zombie Sims) | Wave / faction controller — plugins onto one hub |
+| Power plant (SliceCity) | Seed spawner — zones, bits, NPC pageant chain |
 | Wedding planner NPC | Philahue spawns gag puppets + menagerie |
-| Magazines on table | Party deck + primary sources on segment desk |
+| Magazines on table | Party deck + primary sources + segment runbooks |
 | Cupid inject | Chuck on Jaron's menu — Philahue fires with honest label |
 | Crowd Sitter | audience/INDEX box seats + balcony |
 
-Full spec: [`characters/don-philahue/ORCHESTRATOR.yml`](../../characters/don-philahue/ORCHESTRATOR.yml)
+Performed via Conan face-hole + button board. Full spec:
+[`characters/don-philahue/ORCHESTRATOR.yml`](../../characters/don-philahue/ORCHESTRATOR.yml)
+
+### Attention pilot
+
+Philahue is an **attention pilot** for the LLM driving the Repo Show vehicle:
+
+- **World** — an explicit GitHub branching-timeline multiverse (commits, branches, PRs,
+  TicketPRs as sim state and alternate histories)
+- **Eyes** — a visual/language model's space-and-coherence engine (what stays on camera,
+  in mind, on the desk)
+- **Controls** — scored advertisement pie, segment-desk magazines, spawn bits/NPC
+  puppets, GitHub-feed pulse, Q&A ledger
+
+He steers attention; he does not author a central script. The world advertises; he
+pilots which ads get the mic, the cut, and the commit.
 
 Philahue merges **every plugin** without recompile:
 
@@ -126,7 +144,7 @@ Philahue merges **every plugin** without recompile:
 - Gags [`repo-shows/ideas/gags/`](../../repo-shows/ideas/gags/INDEX.yml)
 - Catalog playsets (SimProv, SliceCity, Zombie Sims orchestrator trees)
 
-Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`programmed_by` — audience collectively programs how he orchestrates).
+Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`programmed_by` — audience collectively programs how he orchestrates; `orchestration_model.attention_pilot`).
 
 **Q&A protocol:** [`qa-orchestration.yml`](../../characters/don-philahue/qa-orchestration.yml) — right question, right guest, right time; in-conversation `ASK-NOW`; closing `QA-LEDGER-SWEEP`.
 

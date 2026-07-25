@@ -74,15 +74,34 @@ reserved for Don himself — remains valid per production; both models live in
 for instance, is spoken entirely by Philahue and read aloud by Don Hopkins in his
 physical (physiological, not mental) voice.
 
-## What he does: the orchestrator hub
+## What he does: Hope Chest / ham radio / power plant
 
-Philahue is the Repo Show's **Hope Chest**: he merges scored advertisements from
-guest CARDs, audience TicketPR characters, show seeds, gags, stunts, and catalog
-playsets (SimProv, SliceCity, Zombie Sims); arbitrates inject/hub/magazine/spawn
+Philahue is not a host *using* an orchestrator — he **is** the orchestrator object,
+wearing three Sims playset hubs as one costume:
+
+| Sims hub | Catalog | What it does here |
+|----------|---------|-------------------|
+| **Hope Chest** | [SimProv](../../catalogs/simprov/ORCHESTRATOR.yml) | Saga state, locked slices with unlock guidance, magazines on the desk |
+| **Ham radio** | [Zombie Sims](../../catalogs/zombie-sims/ORCHESTRATOR.yml) | Wave / faction / outbreak controller — plugin skins onto one hub |
+| **Power plant** | [SliceCity](../../catalogs/simslice/ORCHESTRATOR.yml) | Seed spawner — drops zones, bits, NPC puppets that chain into a pageant |
+
+He merges scored advertisements from guest CARDs, audience TicketPR characters, show
+seeds, gags, stunts, and catalog playsets; arbitrates inject/hub/magazine/spawn
 dispatch; surfaces locked slices with guidance; hands party decks and primary
 sources onto the segment desk like wedding magazines on a dining table.
+**All plugin, all plug-together — no central script.**
 
-Full protocol instance: [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml)
+### Attention pilot
+
+He is the **attention pilot** for the LLM driving the Repo Show vehicle: the model
+runs the turn; Philahue allocates the mic, the cut, and the commit. The simulation
+lives in an explicit **GitHub branching-timeline multiverse** (commits, branches,
+PRs, TicketPRs as world state and alternate histories), crossed with a
+**visual/language model's space-and-coherence engine** — what stays on camera, what
+stays in frame of mind, what gets magazine'd onto the desk next. The world
+advertises; he pilots which ads get air.
+
+Full protocol: [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) (`role`, `attention_pilot`, `vehicle`)
 
 Design lineage: [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md) · [`advertisement-dispatch.yml`](../../schemas/advertisement-dispatch.yml)
 

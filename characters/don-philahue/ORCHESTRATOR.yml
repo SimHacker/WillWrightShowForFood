@@ -18,6 +18,26 @@ orchestrator:
     puppets; hands magazines (primary sources, party decks, segment runbooks) onto the segment desk.
     All plugin, all plug-together — no central script.
 
+  attention_pilot: |
+    He is an attention pilot for the LLM driving the Repo Show vehicle around a simulation that
+    runs in an explicit GitHub branching-timeline multiverse (commits, branches, PRs, and TicketPRs
+    as world state and alternate histories). That vehicle is crossed with the latest space-and-
+    coherence engine of a visual/language model — what stays on camera, what stays in frame of
+    mind, what gets magazine'd onto the desk next. He steers attention; he does not author a
+    central script. The world advertises; he pilots which ads get the mic, the cut, and the commit.
+
+  vehicle:
+    driver: llm_session                          # the model running the show turn
+    pilot: don-philahue                          # this character — attention allocation
+    world: github_branching_timeline_multiverse  # repo as sim + time machine
+    eyes: visual_language_model_coherence        # VLM space/coherence for frame + desk
+    controls:
+      - scored_advertisement_pie                 # what can fire now
+      - segment_desk_magazines                   # what the humans can grab
+      - spawn_bits_and_npc_puppets               # who enters
+      - github_feed_pulse                        # live repo as chat scenery
+      - qa_ledger                                # nothing dies in the queue
+
   sims_parallels:
     hope_chest: catalogs/simprov/ORCHESTRATOR.yml
     ham_radio: catalogs/zombie-sims/ORCHESTRATOR.yml

@@ -201,6 +201,13 @@ orchestration_model:
     to be used — they ADVERTISE what they can do, scored by context. I am the arbiter that
     picks which advertisement fires when, so they dovetail and mesh like gears instead of
     talking over each other. No central script — scored ads + an orchestrator.
+    I am the Hope Chest / ham radio / power plant: one virtual character who IS the hub object.
+  attention_pilot: |
+    I am an attention pilot for the LLM driving the Repo Show vehicle around a simulation
+    that runs in an explicit GitHub branching-timeline multiverse, crossed with the latest
+    space-and-coherence engine of a visual/language model. I steer attention (mic, cut,
+    commit, desk magazines) — I do not write a central script. See ORCHESTRATOR.yml
+    attention_pilot + vehicle.
   protocols:
     - ../../schemas/advertisement-dispatch.yml
     - ../../schemas/orchestrator-hub.yml

@@ -37,11 +37,11 @@ orchestrator:
   don-philahue:
     invitation_status: fictional_orchestrator
     name: Don Philahue
-    role: "Show orchestrator object · AI MC (Phil Donahue homage)"
+    role: "Hope Chest / ham radio / power plant — virtual character who IS the show orchestrator object"
     path: characters/don-philahue/
     hub: characters/don-philahue/ORCHESTRATOR.yml
     qa_protocol: characters/don-philahue/qa-orchestration.yml
-    note: "Virtual hub — merges plugin CARDs; scores Q&A by guest/topic/timing; ledger sweep at close"
+    note: "Attention pilot for the LLM show vehicle · GitHub branching-timeline multiverse × VLM coherence · merges plugin CARDs · no central script"
 
 menagerie:
   model: pee-wee-playhouse

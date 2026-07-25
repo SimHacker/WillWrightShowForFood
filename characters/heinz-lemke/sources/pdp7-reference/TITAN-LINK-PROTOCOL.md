@@ -129,13 +129,21 @@ itself — interaction local, computation and storage remote — is fully presen
 ## Did anything else speak it?
 
 **No — one wire, one pair of machines, and the software is bespoke.** The link hardware
-was Wiseman's custom Cambridge interface; the Titan end was covered by Cambridge
-supervisor planning documents ([PD/10 in the CUCPS archive](https://cucps.soc.srcf.net/titan/)),
-and the CAD group's other PDP-7 programs presumably shared the blocklet layer — the
-`PXID` check existing at all implies non-PIXIE streams on the same link. But nothing
-outside that room ever spoke it. The Titan-side application programs Heinz talked to
-nightly for three years are lost. That asymmetry — *PDP-7 side recovered in full,
-Titan side gone* — is exactly what the plug-in architecture below is shaped around.
+was Wiseman's custom Cambridge interface. The Titan-end *system* contract was written
+down on **2 December 1965** as Cambridge Supervisor
+[**Planning Document 10**](cambridge-supervisor/pd10-titan-pdp7-link.md) (C.A. Lang) —
+mirrored locally because the live CUCPS page sometimes 403s to crawlers:
+<https://cucps.soc.srcf.net/titan/supplan/pd10.htm>. PD10 proposes four facilities
+(core-to-core blocks with 18→48-bit packing extracodes; Project MAC–style **Attentions**
+for light-pen / display events; Titan disk access via a peer program; a **second
+teletype** on the Multiplexer). PIXIE's `/LTPIX` blocklets are the *application* layer
+that rode that contract; the CAD group's other PDP-7 programs presumably shared the
+lower layer — the `PXID` check existing at all implies non-PIXIE streams on the same
+link. Nothing outside that room ever spoke it. The Titan-side *application* programs
+Heinz talked to nightly for three years are lost. That asymmetry — *PDP-7 side
+recovered in full, Titan apps gone, supervisor plan found* — is exactly what the
+plug-in architecture below is shaped around (implement PD10's four facilities as the
+service surface; speak PIXIE blocklets on top).
 
 ## Storage or simulation?
 

@@ -5,9 +5,12 @@ title: Don Philahue
 iconic: "🎙️ Phil"
 description: |
   Drag-show tribute MC — double drag king homage to Phil Donahue; the name is the
-  disclosure (Elvis-impersonator grammar). Repo Show Hope Chest: merges plugin CARD
-  ads, arbitrates dispatch, surfaces TicketPR, hands magazines, spawns gags. Not Don
-  Hopkins; not Phil Donahue the person. One CHARACTER.yml body — no persona sidecar.
+  disclosure (Elvis-impersonator grammar). The Repo Show's Hope Chest / ham radio /
+  power plant: virtual character who IS the orchestrator object. Attention pilot for
+  the LLM driving the show vehicle through a GitHub branching-timeline multiverse,
+  crossed with a VLM space/coherence engine. Merges plugin CARD ads, arbitrates
+  dispatch, hands magazines, spawns bits. Not Don Hopkins; not Phil Donahue the
+  person. One CHARACTER.yml body — no persona sidecar.
 
 keywords:
   - don philahue
@@ -16,6 +19,11 @@ keywords:
   - ticketpr
   - orchestrator
   - orchestrator hub
+  - hope chest
+  - ham radio
+  - power plant
+  - attention pilot
+  - github multiverse
   - phil donahue homage
   - double drag king
   - tribute act
@@ -49,15 +57,18 @@ see_also:
     - { path: ../don-hopkins/GLANCE.yml, why: "Human host" }
     - { path: ../slats/GLANCE.yml, why: "Orchestra pit sidekick" }
   across:
-    - { path: ../../designs/orchestrator-playsets/README.md, why: "Hub + dispatch protocols" }
+    - { path: ../../designs/orchestrator-playsets/README.md, why: "Hope Chest / ham radio / power plant → Philahue" }
     - { path: ../../schemas/advertisement-dispatch.yml, why: "inject / hub / magazine" }
+    - { path: ../../catalogs/simprov/ORCHESTRATOR.yml, why: "Hope Chest saga parallel" }
+    - { path: ../../catalogs/zombie-sims/ORCHESTRATOR.yml, why: "Ham radio wave hub parallel" }
+    - { path: ../../catalogs/simslice/ORCHESTRATOR.yml, why: "Power plant seed spawner parallel" }
     - { path: ../../repo-shows/will-wright-premiere/audience/GLANCE.yml, why: "TicketPR roster he serves" }
     - { path: ../../repo-shows/will-wright-premiere/venue/GLANCE.yml, why: "Seat map + mic line" }
     - { path: ../../process/ticket-pr.yml, why: "TicketPR constitution" }
     - { path: ../../repo-shows/will-wright-premiere/SIMULATION.yml, why: "Show runtime orchestrator" }
   deep:
     - { path: qa-orchestration.yml, why: "Right Q, guest, time — ledger sweep" }
-    - { path: ORCHESTRATOR.yml, why: "Hub spec — plugin merge + state machine" }
+    - { path: ORCHESTRATOR.yml, why: "role · attention_pilot · vehicle · plugin merge" }
     - { path: CARD.yml, why: "ASK-NOW · QA-LEDGER-SWEEP · SURFACE-QUESTION" }
     - { path: CHARACTER.yml, why: "Avatar soul merged in — double drag king, Phil Donahue homage, voice, ceremonies" }
     - { path: awakening/AWAKENING.md, why: "Performable boot + self-interview narration" }

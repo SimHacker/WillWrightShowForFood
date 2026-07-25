@@ -77,11 +77,37 @@ SYMELEC symbol table, the `/RING STRUCTURE PROCESSOR MAY 1969` page, and finally
   machine, architecture, application, and institution from four page scans in under an hour.
   That *is* the Repo Show format working: evidence on screen, audience deduces live.
 
+## Sequel — Ric Werme finds Planning Document 10 (25–26 Jul 2026)
+
+Don dripped the networking page (`LTPX,` / `LINK TRANSFER ROUTINE FOR PIXIE (PDP7-TITAN)`).
+Baccus: "PDP-7, not PDP-1, then… This program appears to be called 'Pixie'." Then
+**Ric Werme** did the librarian move: *"I see 'PDP7-TITAN'. That gets me to"*
+[Cambridge Supervisor Planning Document 10](https://cucps.soc.srcf.net/titan/supplan/pd10.htm)
+— *Software for the Titan/PDP-7 link*, **C.A. Lang, 2 December 1965**. Facebook's own
+link preview returned **403 Forbidden**; the document is live in a browser and now
+**mirrored in-repo** so students never depend on the crawler:
+
+→ [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md)
+([readable MD](pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md) ·
+[HTML mirror](pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.htm))
+
+Don: *"wow thank you, that document is very helpful for documenting the hardware and
+software and getting the code running again!!"*
+
+PD10 is the missing **system** spine under PIXIE's application blocklets: Titan-as-master,
+Attentions (light-pen sees / display interrupts queued on the PDP-7), 18→48-bit packing
+extracodes, Titan disk via a peer program, and the explicit recommendation of a **second
+teletype** at the PDP-7 — the architectural blessing for Heinz's two-chair nightly
+workflow. How it maps onto `/LTPIX`:
+[`TITAN-LINK-PROTOCOL.md`](pdp7-reference/TITAN-LINK-PROTOCOL.md).
+
 ## Links
 
 - Reveal video: *Flight of the PIXIE* — <https://www.youtube.com/watch?v=jDrqR9XssJI>
   (Don's edit of the Chapman digitizations, [production story](../cambridge-films-flight-of-the-bumblebee.md))
 - The listing the pages came from: [`pixie-assembler-listing-1972/`](pixie-assembler-listing-1972/README.md)
 - How it was transcribed the same day: [`TRANSCRIPTION-REPORT.md`](pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md)
+- CUCPS PD10 (public): <https://cucps.soc.srcf.net/titan/supplan/pd10.htm>
+- Local PD10 kit: [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md)
 
 ↑ [Thread index](THREAD-INDEX.md) · [character README](../README.md) · [show seed](../../../repo-shows/pixie-pie-menus-pdp7.yml)

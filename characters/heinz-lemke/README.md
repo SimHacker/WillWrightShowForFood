@@ -76,10 +76,13 @@ Everything needed to run 1969 yourself, in reading order (spelled *turist* per
    (`symelec-listing.txt`, `rsppix-listing.txt`), clean `rsppix.asm`, octal `rsppix.oct` — plus
    the [transcription spec](sources/pixie-assembler-listing-1972/scripts/TRANSCRIPTION-SPEC.md)
    if you want to audit or extend the recovery.
-5. [**The emulation plan**](sources/pdp7-reference/EMULATION-PLAN.md) and
-   [**the link protocol decode**](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md). The mission
-   briefs: assemble PIXIE (local clones of `simh` and `pdp7-unix` with its `as7` cross-assembler
-   live in `~/GroundUp/git/`), light up the 340, build the virtual light pen, stub the Titan.
+5. [**The emulation plan**](sources/pdp7-reference/EMULATION-PLAN.md),
+   [**Planning Document 10**](sources/pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
+   (C.A. Lang, 1965 — Titan/PDP-7 link *system* software; [CUCPS](https://cucps.soc.srcf.net/titan/supplan/pd10.htm)),
+   and [**the PIXIE link protocol decode**](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md).
+   Mission briefs: assemble PIXIE (local clones of `simh` and `pdp7-unix` with its `as7`
+   cross-assembler live in `~/GroundUp/git/`), light up the 340, build the virtual light pen,
+   stub Titan to PD10's four facilities, then speak PIXIE blocklets on top.
 6. [**The annotated thesis**](sources/phd-thesis-1972/annotated/README.md) when you want the
    *why* behind the code — especially
    [Chapter 5](sources/phd-thesis-1972/annotated/03-chapter-5-pixie.md) (the PIXIE subsystem) and

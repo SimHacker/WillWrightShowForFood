@@ -118,11 +118,19 @@ Ferranti) with fixed-head regions used as drums; magnetic tape decks; card and p
 gear; a Cambridge-built 64-line terminal multiplexor (73 terminals registered, 26
 simultaneous); from 1967, modems; the One-Mile Radio Telescope's inverse Fourier transforms
 (Ryle's Nobel data) as the big batch customer; and — via **Wiseman's high-speed data link**,
-with link software by **Charles Lang** of the CAD group — the PDP-7 + Type 340 running
+with link software by **Charles Lang** (C.A. Lang) of the CAD group — the PDP-7 + Type 340 running
 PIXIE. Heinz: *"I used this link for about 3 years on a daily basis (actually nightly
-basis) connecting PIXIE with some application programs on Titan."*
+basis) connecting PIXIE with some application programs on Titan."* Lang's own
+**2 Dec 1965** supervisor plan for that software —
+[Planning Document 10](cambridge-supervisor/pd10-titan-pdp7-link.md)
+([CUCPS](https://cucps.soc.srcf.net/titan/supplan/pd10.htm); found in the Facebook
+thread by Ric Werme) — specifies Titan-as-master core transfers, Project MAC–style
+**Attentions** (light-pen / display events queued on the PDP-7), disk access via a
+Titan peer program, and a **second teletype** on the Multiplexer rather than one
+shared TTY. That last item is the blueprint for the two-chair workflow in Heinz's
+thesis Figs 8.6/8.7.
 
-**The link protocol is in the listing.** `/LINK TRANSFER ROUTINE FOR PIXIE (PDP7-TITAN)`:
+**The application link protocol is in the listing.** `/LINK TRANSFER ROUTINE FOR PIXIE (PDP7-TITAN)`:
 data moves in "blocklets" with headers, word counts and checksums; a retry loop ("try again
 if header format wrong"); error exits for checksum failure, oversize files, and "not PIXIE
 data"; and a relocation pass that fixes up ring-structure pointers after transfer (Titan →

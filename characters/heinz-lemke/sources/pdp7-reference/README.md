@@ -39,6 +39,13 @@ Linked, not mirrored (large maintenance sets): [F-77A PDP-7 Maintenance Manual, 
 [PDP-7 Maintenance (36 MB)](https://bitsavers.org/pdf/dec/pdp7/PDP-7_Maint.pdf) ·
 full index: [bitsavers /pdf/dec/pdp7/](https://bitsavers.org/pdf/dec/pdp7/) · [/pdf/dec/graphics/](https://bitsavers.org/pdf/dec/graphics/)
 
+## The Titan link (Cambridge Supervisor)
+
+| Local | Public URL | Why you need it |
+|-------|-----------|-----------------|
+| [`cambridge-supervisor/pd10-titan-pdp7-link.md`](cambridge-supervisor/pd10-titan-pdp7-link.md) (+ [`.htm` mirror](cambridge-supervisor/pd10-titan-pdp7-link.htm)) | [CUCPS PD10](https://cucps.soc.srcf.net/titan/supplan/pd10.htm) | **C.A. Lang, 2 Dec 1965** — system software plan for the Titan/PDP-7 link: core-to-core extracodes (18→48-bit packing), Attentions (light-pen / display events), Titan disk access, second Multiplexer teletype. The contract under PIXIE's application blocklets. Index: [`cambridge-supervisor/`](cambridge-supervisor/README.md) |
+| [`TITAN-LINK-PROTOCOL.md`](TITAN-LINK-PROTOCOL.md) | (decoded from the listing) | What PIXIE actually sent on the wire (`/LTPIX` blocklets, `PXID`, relocation) and the TypeScript Titan-service sketch |
+
 ## Local working clones and toolchains
 
 Cloned next to the other repos (add them to the Cursor workspace to read source instead of guessing):
