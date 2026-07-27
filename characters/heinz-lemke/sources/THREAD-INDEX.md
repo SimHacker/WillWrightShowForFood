@@ -21,6 +21,7 @@
 | **24 Jul** | same | Heinz: **digitised PIXIE Assembler + 10 Mar 1967 doc delivered**; Wilkes→PhD provenance; "pixie in the company of giants" → [`1967-03-10-system-analysis/`](1967-03-10-system-analysis/README.md) |
 | **24 Jul** | [`2026-07-24-facebook-guessing-game.md`](2026-07-24-facebook-guessing-game.md) | Same evening, public: Don's Facebook guessing game — crowd deduces PDP-7/Titan/PIXIE from listing pages in ~40 min; light-pen driver recruiting; *Flight of the PIXIE* reveal |
 | **25–26 Jul** | same (sequel) + [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md) | Ric Werme finds CUCPS **Planning Document 10** (C.A. Lang, 1965 Titan/PDP-7 link software) from the `PDP7-TITAN` listing page; mirrored in-repo (FB preview 403'd) |
+| **27 Jul** | same + [`facebook-guessing-game-2026-07/`](facebook-guessing-game-2026-07/README.md) | Thread still hot: **161 likes / 173 comments**; Heinz-facing update (no Facebook required); Joerg Micheel settle-the-bet analysis; Don's NeWS/AJAX framing; Aron Insinga primer; Dean Horak light-pen photos; illustration pack saved |
 | **24 Jul** | [`2026-07-24-tty-film-loop-titles.md`](2026-07-24-tty-film-loop-titles.md) | Don 20:47 (+fwd to Howard): washed-out TTY paper in the 1969 film → overlay any text; loopable CR LF segment for titles/credits; Tog's Infinite Monkeys precedent; escalates to **diegetic terminal emulator** (SIMH console printing onto the film) |
 
 ## Pull-ins still open

@@ -48,7 +48,8 @@ The documents in this room tell one continuous story:
   cost, and what broke.
 - **2026 — the dig.** The [email storyline threads](sources/THREAD-INDEX.md) with Heinz, Roy
   Eagleson, and friends; the
-  [Facebook guessing game](sources/2026-07-24-facebook-guessing-game.md) that identified the
+  [Facebook guessing game](sources/2026-07-24-facebook-guessing-game.md) (161 likes / 173
+  comments and climbing — Heinz-readable, no Facebook required) that identified the
   mystery listing pages; the [TTY film-loop idea](sources/2026-07-24-tty-film-loop-titles.md)
   that became the diegetic terminal emulator concept.
 - **Next — resurrection.** The [emulation plan](sources/pdp7-reference/EMULATION-PLAN.md):
