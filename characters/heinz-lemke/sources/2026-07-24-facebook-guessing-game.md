@@ -1,15 +1,6 @@
 # "Who can guess what this is?" — the Facebook PIXIE guessing game
 
-**For Heinz** — read this instead of Facebook. Screenshots and listing
-crops live in [`facebook-guessing-game-2026-07/`](facebook-guessing-game-2026-07/README.md).
-Updated **27 Jul 2026** (third day of the thread; still growing).
-
----
-
-## Note from Don to Heinz
-
-Thank you, Heinz! The more I learn about your life, the more fond I am
-and feel a kinship with you. So please keep writing and sending stuff!
+## Internet Old Farts Club
 
 On the Facebook "Internet Old Farts Club" I posted a teaser — just one
 clip of your listing — and asked people to guess what it was, and it went
