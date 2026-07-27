@@ -3,11 +3,13 @@
 Don Hopkins's conference proposal for a walk-up cooperative multiplayer SimCity demo in Amsterdam ("bridges between dijks / players / brands").
 
 **In-repo body:** [`article.md`](article.md)  
+**MicropolisCore (engine-repo copy):** [1993-interchi-simcitynet-proposal.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/historical/1993-interchi-simcitynet-proposal.md)  
 **Original (still live):** http://www.art.net/~hopkins/Don/simcity/simcitynet.html
 
 | Artifact | Link |
 |----------|------|
 | In-repo body | [`article.md`](article.md) |
+| MicropolisCore | [historical/1993-interchi-simcitynet-proposal.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/historical/1993-interchi-simcitynet-proposal.md) |
 | art.net (provenance) | http://www.art.net/~hopkins/Don/simcity/simcitynet.html |
 | Wayback | https://web.archive.org/web/20260301150418/http://www.art.net/~hopkins/Don/simcity/simcitynet.html |
 | Exposition (UI / network through-line) | [multiplayer simcity ui network](../multiplayer-simcity-ui-network/README.md) |
