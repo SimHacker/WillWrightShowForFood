@@ -3,10 +3,13 @@
 > The rich-internet-app platform that was years early — declarative, reactive, compiling to Flash
 > *or* Ajax in 2002 — **revived with AI** and run live.
 
-**The spark:** [David Temkin](../../characters/david-temkin/README.md) recently used AI to rewrite the old
-**OpenLaszlo** Java code so it **compiles and runs again** (per Don, relayed via
-[Henry Minsky](../../characters/henry-minsky/README.md)). That's pure Repo Show: resurrect a real toolchain
-with AI, then bring the old **LZX** apps and demos back to life on it, live.
+**The spark:** [David Temkin](../../characters/david-temkin/README.md) shipped
+**[OpenLaszlo 5.0](https://github.com/davidtemkin/openlaszlo-5.0)** — Java out, TypeScript
+compiler + server, LZX compiling **in the browser**, byte-for-byte vs 4.9 DHTML
+([live Explorer](https://davidtemkin.github.io/openlaszlo-5.0/); LinkedIn reunion thread
+archived under [david-temkin/sources](../../characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md)).
+That's pure Repo Show: resurrect a real toolchain with AI, then bring the old **LZX** apps
+and demos back to life on it, live.
 
 ## The cast
 

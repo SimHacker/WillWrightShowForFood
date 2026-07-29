@@ -14,4 +14,7 @@ earlier a software architect at **Laszlo Systems** (the **OpenLaszlo** declarati
 framework). Son of **Marvin Minsky** and twin of Juliana — he and his siblings grew up *inside* the
 AI Lab, playing in the children's computer lab while grad students watched children learn.
 
+OpenLaszlo reunion pack (David's 5.0 LinkedIn thread, Cc list includes Henry):
+[`../david-temkin/sources/`](../david-temkin/sources/README.md) · show [`../../repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md)
+
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

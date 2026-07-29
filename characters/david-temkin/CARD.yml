@@ -47,9 +47,10 @@ abilities:
     score_when:
     - trigger: audience_learns_something_true
       weight: 0.85
-  effect: Walk through using AI to get the old OpenLaszlo Java toolchain building again.
-  verifiable: Per Don via Henry Minsky (June 2026) — confirm with David
-  combos_with: []
+  effect: Walk through OpenLaszlo 5.0 — Java out, TypeScript in, browser compile, byte-for-byte vs 4.9.
+  verifiable: https://github.com/davidtemkin/openlaszlo-5.0 · LinkedIn activity 7476118515758809088
+  combos_with:
+  - OPENLASZLO
 invoke_rules:
   consent: not_yet_asked
   simulation: false
@@ -58,3 +59,5 @@ see_also:
   why: Bio girder — invitation status
 - path: invitation.md
   why: Public invitation document
+- path: sources/2026-openlaszlo-5.0-linkedin-thread.md
+  why: Announcement + reunion + Don discussion hooks

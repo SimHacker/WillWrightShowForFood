@@ -25,17 +25,29 @@ bio:
   summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. Earlier Senior Director of Engineering at Excite@Home; later co-founded the mobile-communications company **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
 
 openlaszlo_revival:
-  fact: "David recently used AI to rewrite the OpenLaszlo Java code so it compiles and runs again — a striking retrocomputing feat that could bring LZX apps back to life."
-  provenance: "Per Don, relayed from an email David sent Henry Minsky (June 2026)."
-  why_it_matters: "Reviving the OpenLaszlo toolchain would let Don bring his old LZX apps + demos back — and anchors a whole OpenLaszlo Repo Show."
+  fact: |
+    OpenLaszlo 5.0 (davidtemkin/openlaszlo-5.0): AI-assisted rewrite — Java out,
+    TypeScript compiler + server, in-browser LZX→DHTML compile, claims byte-for-byte
+    parity with OpenLaszlo 4.9. Software Preservation Society framing. Live Explorer
+    on GitHub Pages.
+  provenance: "David Temkin LinkedIn post + public repo (activity 7476118515758809088); earlier relay via Henry Minsky email (June 2026)."
+  why_it_matters: "Revived toolchain + Laszlo reunion energy (Adam Wolff, Antun, Eric Bloch, Grig, Sundman, …) — anchors the OpenLaszlo Repo Show; Don can aim Micropolis LZX / SimFaux / myAlive-class apps at 5.0."
+  repo: "https://github.com/davidtemkin/openlaszlo-5.0"
+  live: "https://davidtemkin.github.io/openlaszlo-5.0/"
+  linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/"
 
 show_suggestions:
-  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion: Don + David Temkin + Henry Minsky + Oliver Steele; the LZX RIA platform, the road not taken, and David's AI-powered code revival" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion: Don + David Temkin + Henry Minsky + Oliver Steele; LZX, AI revival, run historic apps on 5.0" }
 
 sources:
   mail_2006: private  # 2006 Laszlo threads held in Don's archive pending hand curation
+  openlaszlo_5_0_thread: characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md
   wikipedia: null
   web:
+    - { title: "OpenLaszlo 5.0 (GitHub)", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
+    - { title: "OpenLaszlo 5.0 live Explorer", url: "https://davidtemkin.github.io/openlaszlo-5.0/" }
+    - { title: "LinkedIn — OpenLaszlo 5.0 announcement", url: "https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/" }
+    - { title: "Micropolis OpenLaszlo client (historic LZX)", url: "https://github.com/SimHacker/MicropolisCore/tree/main/documentation/openlaszlo" }
     - { title: "OpenLaszlo — Wikipedia", url: "https://en.wikipedia.org/wiki/OpenLaszlo" }
     - { title: "David Temkin — Laszlo Co-Founder & CTO (QCon SF 2007 speaker bio)", url: "https://qconsf.com/sf2007/sf2007/speaker/David%2bTemkin%2c%2bLaszlo%2bCo-Founder%2band%2bCTO.html" }
   papers: []
@@ -43,6 +55,7 @@ sources:
 
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
-  - { path: ../henry-minsky/, why: "Laszlo Systems colleague; relayed the AI-revival news" }
-  - { path: ../oliver-steele/, why: "Laszlo chief software architect — designed LZX" }
+  - { path: sources/README.md, why: "OpenLaszlo 5.0 + reunion discussion pack" }
+  - { path: ../henry-minsky/, why: "Laszlo Systems colleague; Cc'd on LinkedIn; reunion cast" }
+  - { path: ../oliver-steele/, why: "Laszlo chief software architect — designed LZX; Cc'd" }
   - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo reunion show seed" }
