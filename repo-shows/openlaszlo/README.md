@@ -21,10 +21,10 @@ ask what the *next* Laszlo looks like when the primary reader of the compiler is
 
 ## The cast
 
+- **[Don Hopkins](../../characters/don-hopkins/README.md)** — host *and* cast (yes, he has a character directory — not just ground-up software). Laszlo colleague with Temkin / Steele / Henry; pie menus, SimFaux, Micropolis LZX client; Svelte 5 / Wasm bind (non-DOM reactive modules); Garnet → Laszlo → Svelte braid; MOOLLM.
 - **[David Temkin](../../characters/david-temkin/README.md)** — founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation.
 - **[Oliver Steele](../../characters/oliver-steele/README.md)** — Chief Software Architect; designed **LZX**, wrote the compilers/runtime, launched the open-source project. (Marvin Minsky's son-in-law.)
 - **[Henry Minsky](../../characters/henry-minsky/README.md)** — Laszlo software architect; relayed the news. (Marvin's son.)
-- **Don Hopkins** — worked on OpenLaszlo with all three; old LZX apps + demos; Svelte 5 / Micropolis Wasm bind (non-DOM reactive modules).
 - **[David Ungar](../../characters/david-ungar/README.md)** (dream / optional) — Self; interviewed at Laszlo and got it; Self × MOOLLM object system.
 - **Bench:** LinkedIn Cc list — Adam Wolff, Antun Karlovac, Eric Bloch, Grig B., John Sundman, … + other Laszlo/UI people.
 

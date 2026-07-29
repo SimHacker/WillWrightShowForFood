@@ -10,6 +10,7 @@ show:
   guests: ["David Temkin", "Oliver Steele", "Henry Minsky"]
   optional_guests: ["David Ungar"]
   characters:
+    - characters/don-hopkins/   # host + cast — has a character directory, not just ground-up software
     - characters/david-temkin/
     - characters/oliver-steele/
     - characters/henry-minsky/
@@ -33,11 +34,11 @@ the_spark:
     and Oliver ISP + Ungar Self as the prototype-theory act.
 
 the_cast:
+  don_hopkins: "Host + cast. Character dir: characters/don-hopkins/. Laszlo with Temkin/Steele/Henry; pie menus, SimFaux, Micropolis LZX; Svelte 5 / Wasm (non-DOM); Garnet→Laszlo→Svelte; MOOLLM. Not just ground-up software."
   david_temkin: "Founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation. → characters/david-temkin/"
   oliver_steele: "Chief Software Architect; designed LZX; Instance Substitution Principle. → characters/oliver-steele/"
   henry_minsky: "Laszlo software architect; relayed the revival news; son of Marvin Minsky. → characters/henry-minsky/"
   david_ungar: "Optional — Self; interviewed at Laszlo and got it; Self × MOOLLM. → characters/david-ungar/"
-  don_hopkins: "Worked on OpenLaszlo with Temkin/Steele/Minsky; old LZX apps; Svelte 5 / Micropolis Wasm."
 
 threads:
   - "OpenLaszlo / LZX, the road not taken — declarative XML+JS, reactive, multi-runtime (Flash OR Ajax) years before the web reinvented it."
