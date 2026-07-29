@@ -2,6 +2,8 @@
 
 *Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
 
+**Ontology / walkable bootstrap (moollm):** [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/SOUL-MODEL.md) — organizational soul container (not metaphysics); mindless / single- / multi-minded. Skills [`soul`](https://github.com/SimHacker/moollm/tree/main/skills/soul) · [`mind`](https://github.com/SimHacker/moollm/tree/main/skills/mind) · [`character`](https://github.com/SimHacker/moollm/tree/main/skills/character). Ethics by dimension: [soul](https://github.com/SimHacker/moollm/blob/main/skills/soul/ETHICS.md) · [mind](https://github.com/SimHacker/moollm/blob/main/skills/mind/ETHICS.md) · [character](https://github.com/SimHacker/moollm/blob/main/skills/character/ETHICS.md) · [representation-ethics](https://github.com/SimHacker/moollm/tree/main/skills/representation-ethics). society-of-mind + mind-mirror need **mind**; soul-chat + this city need **soul**. Adventure as [method of loci](https://news.ycombinator.com/item?id=29330901).
+
 **Create · publish · share** — the platform, not just another catalog shelf.
 
 *Formerly `micropolis-home` (rebranded 2026-07-08). Soul is the family name: less Micropolis
