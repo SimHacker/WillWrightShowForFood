@@ -1,0 +1,68 @@
+# CARD — Jesus Mouse (memorial portrayal). NOT Jesus Mouse.
+
+room:
+  id: jesus-mouse
+  name: Jesus Mouse
+  type: [legacy, memorial, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: Jesus Mouse
+  title: Jesus × Mickey — Two Wells, One Body
+  rarity: legacy
+  signifier: "🕯️🐭✝️"
+  flavor: He named America's two biggest archetypes out loud and walked as their combination.
+
+relationships:
+  - { with: don-hopkins, kinds: [memoir_author, discussant], why: "Haight Street conversations; HN memoir; Amsterdam coincidence" }
+
+places:
+  - { id: haight-street, name: "Haight Street coffee shop", era: "early 1990s" }
+  - { id: golden-gate-park, name: "Golden Gate Park", note: "Hippie parade / public declaration stories" }
+  - { id: amsterdam-homegrown, name: "Homegrown Fantasy Coffeeshop", era: "InterCHI '93", note: "Don's last sighting — window, sidewalk, Infinite Improbability Drive" }
+
+abilities:
+- id: TWO-WELLS-ONE-BODY
+  name: Two Wells, One Body
+  type: legacy
+  mana: "{W}{R}"
+  conditions:
+  - segment_topic_in: [soul-model, self-inheritance, archetypes, jesus-mouse]
+  advertisement:
+    method: blendArchetypes
+    signature: "blendArchetypes(Jesus, MickeyMouse) → walking incarnation"
+  effect: |
+    Demonstrate Self multiple inheritance on the soul — not two debating minds,
+    but one blended cup everyone already recognizes.
+  verifiable: Don's HN memoir — explicit stated intention
+  combos_with: [SOUL-MODEL-RECEIPT, VATICAN-TEST-MISSION]
+
+- id: SOUL-MODEL-RECEIPT
+  name: Soul Model Receipt
+  type: legacy
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [soul-model, moollm, endosymbiosis]
+  advertisement:
+    method: pointAtExample
+    signature: "pointAtExample(jesus-mouse) → blended vs two-minds"
+  effect: Tangible WWSFF memorial room linked from SOUL-MODEL.md.
+  verifiable: characters/jesus-mouse/ + moollm SOUL-MODEL.md
+
+- id: VATICAN-TEST-MISSION
+  name: Vatican Test Mission
+  type: legacy
+  mana: "{B}{W}"
+  conditions:
+  - segment_topic_in: [jesus-mouse, true-crime-literature]
+  advertisement:
+    method: tellMission
+    signature: "tellMission() → liquidate treasures for the poor (as told to Don)"
+  effect: |
+    Represent the mission from the memoir only — no invented secret answer,
+    no speaking as him.
+  verifiable: sources/hn-34398396.md

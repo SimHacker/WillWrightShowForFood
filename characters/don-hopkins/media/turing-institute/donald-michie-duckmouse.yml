@@ -29,17 +29,26 @@ lineage:
     founded: 1982
     institute: Turing Institute
     cofounders: [Peter Mowforth, Tim Niblett]
+    naming: "Michie wanted Machine Intelligence Research Affiliates (MIRA clash) — Tim Niblett suggested The Turing Institute (Pete Mowforth, Apr 2026)"
     roles: [Founder, Chief Scientist, Director of Research]
     contracts: "Space Shuttle auto-lander (Radian Corp, 1984) — Rulemaster inductive rule generator"
     robotics: "Navigation, sensing, naïve physics through random play — Robot Olympics host institution"
+  ivf_mice:
+    with: Anne McLaren
+    landmark: "1958 Nature — mouse embryo in vitro → transplant → live pups; techniques leading to human IVF"
+    pete_source: 2026-04-pete-mowforth-duckmouse.md
 
 don_orbit:
-  when: "~1991–1992"
+  when: "~1991–1992" # Don: Feb–Sep 1992
   with: Arthur van Hoff
   shipped: [HyperLook, SimCity on HyperLook]
   duckmouse_note: |
     Don worked at the fun Glasgow lab Michie built — HyperLook microworld shipped while
     the institute was still hosting robot spectacles and learning-from-experience folklore.
+  duckmouse_anecdote_clarified: |
+    Penny Montgommery (PA) shouted "Donald as in Duck, Michie as in Mouse" — Michie behind her
+    (Pete Mowforth eyewitness, Apr 2026). Telegraph "Duckmouse" + mouse-fancier schoolboy lore
+    already documented. See 2026-04-pete-mowforth-duckmouse.md
 
 robot_olympics:
   role: "Host institution founder — Turing Institute ran First Robot Olympics Sept 1990"
@@ -61,7 +70,9 @@ repo_show_beats:
 
 see_also:
   - INDEX.yml
+  - 2026-04-pete-mowforth-duckmouse.md
   - first-robot-olympics.yml
   - ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
   - ../../../marvin-minsky/CHARACTER.yml
   - ../../career/work-history.yml
+  - ../../../heinz-lemke/sources/2026-07-28-pixie-storyline-thread.md # Oldfield ↔ Michie Edinburgh

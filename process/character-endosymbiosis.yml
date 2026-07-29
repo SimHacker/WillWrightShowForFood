@@ -39,6 +39,7 @@ why_it_matters:
 
 see_also:
   - { path: ../repo-shows/INDEX.yml, why: "Soul City hub-and-spoke bridges — the spokes this membrane biology runs on" }
+  - { path: ../apps/simfaux/ORGANELLES.yml, why: "Worked example — sideways symbiosis: LZX DNA + OL5 + Declare sibling organelles (app as cell)" }
   - { path: crazy-idea-jam.yml, why: "Bridge ideas (Mind Mirror diffusion, hell-is-full ZombieSims, emulated runtimes)" }
   - { path: CHARACTER-ENDOSYMBIOSIS.md, why: "The readable article" }
   - { path: spore-rethinks-multiplayer-time-ownership.md, why: "The complementary foundation: endosymbiosis is HOW content moves; this is WHAT async content-sharing does to multiplayer/time/ownership (Spore's massively-single-player model + git many-worlds)" }

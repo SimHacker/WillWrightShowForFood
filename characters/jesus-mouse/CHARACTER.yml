@@ -1,0 +1,78 @@
+# Jesus Mouse — memorial portrayal (in memoriam). NOT Jesus Mouse.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: jesus-mouse
+  name: "Jesus Mouse"
+  type: memorial
+  signifier: "🕯️🐭✝️"
+  status: deceased
+  field: "Street mythology — Haight/Ashbury; embodied Jesus × Mickey Mouse as American archetypes"
+  home: characters/jesus-mouse/
+  known_as: "Jesus Mouse"   # public street name; legal name not collected
+  when_where:
+    - "early 1990s — Haight Street coffee shop regular, San Francisco"
+    - "InterCHI '93 — Amsterdam, Homegrown Fantasy Coffeeshop (Don's last sighting)"
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased — represent + discuss Don's published memoir; Soul Model worked example; not an interview guest"
+
+relationship:
+  to_project: design_receipt
+  to_soul_model: |
+    Tangible example of Self multiple inheritance: one soul inheriting Jesus AND
+    Mickey Mouse (what he lived and stated) vs two minds with separate wells.
+    Linked from moollm examples/adventure-4/SOUL-MODEL.md for busy readers.
+
+bio:
+  summary: |
+    **Jesus Mouse** — Haight Street regular who dressed as the combination of
+    America's two biggest shared archetypes (Jesus and Mickey Mouse), charged
+    tourists for selfies, carried a jester-headed wizard stick and sequined spell
+    book, and told Don explicitly that embodying both was his intention. Mission
+    (as told to Don): pass the Vatican's Second Coming test on their terms, then
+    demand they liquidate treasures for the poor. Last Don sighting: Amsterdam
+    InterCHI '93. Later passed away (relayed by a mutual friend).
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: don-hopkins, why: "Knew him on Haight Street; published the memoir on HN; last sighting Amsterdam '93" }
+  artifacts:
+    - "HN comment 2023-01-16 — news.ycombinator.com/item?id=34398396"
+    - "sources/hn-34398396.md — cleaned memoir text"
+
+soul_model_variations:
+  blended_soul:
+    lived: true
+    sketch: 'parents: ["Jesus", "Mickey Mouse"]'
+    note: "Exactly his stated intention — one body, two wells, combined."
+  two_minds:
+    lived: false
+    sketch: "minds: jesus-cup + mouse-cup"
+    note: "Valid alternate Self architecture — not what he performed."
+  see: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/SOUL-MODEL.md#jesus-mouse--blended-soul-vs-two-minds"
+
+sources:
+  web:
+    - { title: "Hacker News — Don's Jesus Mouse memoir (2023-01-16)", url: "https://news.ycombinator.com/item?id=34398396" }
+  local:
+    - sources/hn-34398396.md
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: CARD.yml, why: "Heroic abilities — archetype blend as Self inheritance" }
+  - { path: ../don-hopkins/, why: "Author of the memoir; discussant" }
+  - { path: ../donald-michie/, why: "Cartoon-nickname kin — Duckmouse (Donald Duck × Mickey Mouse); same memorial ethics" }
+  - { url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/SOUL-MODEL.md", why: "Soul Model cliff notes — primary outbound link for Parker-style deep dives" }
+
+suggestion_later:
+  - "Optional adventure-4 / Soul City playable incarnation (coatroom costume) — not yet"
+  - "Keep memorial ethics if/when incarnated"

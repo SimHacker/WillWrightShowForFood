@@ -12,6 +12,7 @@ room:
 what_happened_here:
   place: Turing Institute, Glasgow — one of the fun places Don worked
   founder: Donald Michie — "Duckmouse" (colleagues' nickname)
+  founder_character: ../../../donald-michie/   # canonical memorial room
   with: Arthur van Hoff
   shipped:
     - HyperLook — NeWS/PostScript HyperCard reimagining (GoodNeWS → HyperNeWS → HyperLook)
@@ -22,9 +23,12 @@ what_happened_here:
 robot_olympics:
   host: Turing Institute ran the Robot Olympics (Glasgow, 27–28 Sept 1990)
   founder: donald-michie-duckmouse.yml
+  founder_character: ../../../donald-michie/
   don_was_there: false
   arthur_gift: "Legendary Robot Olympics t-shirt — Arthur van Hoff"
+  arthur_poster: "Pete gave Arthur an original Olympics poster for his 60th — scan ask 2026-07-28"
   tshirt_media: pending — add when photographed
+  pete_duckmouse: 2026-04-pete-mowforth-duckmouse.md
   canonical: first-robot-olympics.yml
   gag: ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
   wikipedia: "https://en.wikipedia.org/wiki/First_Robot_Olympics"
@@ -47,11 +51,14 @@ artifacts:
   - cardiff-walker-vision-microsoft-1990.png
 
 spec:
-  - donald-michie-duckmouse.yml
+  - donald-michie-duckmouse.yml   # media deposit; room: ../../../donald-michie/
   - first-robot-olympics.yml
   - robot-olympics-cardiff-1990.yml
+  - 2026-04-pete-mowforth-duckmouse.md
 
 see_also:
+  - ../../../donald-michie/   # Duckmouse memorial — Bletchley, IVF, MENACE, Turing Institute
+  - ../../../arthur-van-hoff/sources/2026-07-28-robot-olympics-poster-scan-ask.md
   - ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
   - ../../../../process/moola.yml
   - ../../../hyperlook-news-postscript-simcity.md

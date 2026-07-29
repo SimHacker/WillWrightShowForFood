@@ -1,0 +1,1 @@
+🕯️🐭✝️ **Jesus Mouse** — memorial. Embodied **Jesus × Mickey Mouse** (America's two biggest shared archetypes). Haight Street → Amsterdam. Soul Model worked example.

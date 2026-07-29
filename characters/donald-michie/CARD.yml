@@ -1,0 +1,27 @@
+# Donald Michie — CARD (interface sniff)
+
+name: donald-michie
+title: "Donald Michie — Duckmouse"
+status: memorial
+alive: false
+
+glance: GLANCE.md
+body: memorial.md
+character: CHARACTER.yml
+
+when_to_open:
+  - "Duckmouse / Turing Institute / Robot Olympics / MENACE"
+  - "Bletchley + Turing silver bars / chess machines"
+  - "PIXIE thesis rebuild (Oldfield / Edinburgh Machine Intelligence)"
+  - "Pete Mowforth book / Arthur Olympics poster"
+  - "Soul Model cartoon-inheritance kin (beside Jesus Mouse)"
+
+do_not:
+  - Speak as Michie
+  - Soften the fury of the phone incident into pure slapstick without Pete's eyewitness care
+  - Use Colossus-hut oral asides as cheap punchlines
+
+advertisements:
+  - "It's Donald as in Duck, Michie as in Mouse — and he founded the place HyperLook shipped."
+  - "Oldfield's annoyance is why PIXIE can be rebuilt."
+  - "A friend named an institute for a friend."

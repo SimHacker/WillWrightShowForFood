@@ -1,0 +1,70 @@
+# Donald Michie — memorial character (Repo Show / Soul Plaza)
+# Canonical room. Rich deposits also under don-hopkins/media/turing-institute/
+
+id: donald-michie
+name: Donald Michie
+nickname: Duckmouse
+status: memorial
+alive: false
+born: 1923-11-11
+died: 2007-07-07
+pronunciation: "MICK-ee (like Mickey Mouse — never MISH-ee / MY-kee / mi-SHEE)"
+
+tags:
+  - memorial
+  - bletchley
+  - machine-intelligence
+  - turing-institute
+  - duckmouse
+  - menace
+  - ivf
+  - robot-olympics
+  - edinburgh
+  - glasgow
+
+one_line: >
+  Polymath who worked beside Turing at Bletchley, pioneered mammalian IVF techniques
+  with Anne McLaren, taught matchboxes to play tic-tac-toe, founded machine intelligence
+  in Edinburgh and the Turing Institute in Glasgow — and was loved, teased, and forever
+  remembered as Duckmouse.
+
+role_in_show:
+  kind: memorial_presence
+  rooms:
+    - Soul Plaza (lineage wall — friend who named an institute for a friend)
+    - Turing Institute wing / Robot Olympics orbit
+    - PIXIE storyline bridge (Oldfield examiner ↔ Michie Machine Intelligence group)
+  never: "Do not speak as Michie. Celebrate; quote discussants and published sources."
+
+portrait:
+  preferred: ../don-hopkins/media/turing-institute/donald-michie-duckmouse.png
+  note: "Archival grain; grey suit; serious gaze — the wall that remembers."
+
+relationships:
+  alan_turing: "Bletchley colleague; chess partner of a sort; silver-ingot hunt; named institute for him"
+  anne_mclaren: "Then-wife; 1958 Nature mouse embryo work → IVF lineage"
+  peter_mowforth: "Cofounder / director Turing Institute; eyewitness Duckmouse phone disaster; book in progress"
+  tim_niblett: "Cofounder; suggested the name 'The Turing Institute' after MIRA clash"
+  arthur_van_hoff: "HyperLook at the Institute Michie built; Olympics poster gift from Pete"
+  don_hopkins: "Worked Turing Institute Feb–Sep 1992; never met Michie; inherited the stories"
+  john_oldfield: "Edinburgh examiner associated with Michie's group — insisted Heinz rebuild PIXIE docs"
+  robin_popplestone: "Alan Kay: character² if not ³ beside Michie; Pop-2"
+  penny_montgommery: "PA who coined the Duck/Mouse mnemonic on the phone (Pete eyewitness)"
+
+soul_model_kin:
+  parallel: jesus-mouse
+  note: >
+    Jesus Mouse = Jesus + Mickey Mouse as one soul inheritance.
+    Duckmouse = Donald Duck + Mickey Mouse as lived nickname destiny.
+    Same cartoon grammar; different sanctity. Both belong on the memorial wall.
+
+see_also:
+  - memorial.md
+  - CARD.yml
+  - ../don-hopkins/media/turing-institute/donald-michie-duckmouse.yml
+  - ../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md
+  - ../don-hopkins/media/turing-institute/first-robot-olympics.yml
+  - ../heinz-lemke/sources/2026-07-28-pixie-storyline-thread.md
+  - ../alan-kay/sources/2026-07-28-wes-clark-pdp8-popplestone.md
+  - ../jesus-mouse/memorial.md
+  - sources/README.md
