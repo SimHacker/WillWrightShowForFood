@@ -14,10 +14,10 @@ meta:
   card_type: guest_skills
 card:
   name: David Temkin
-  title: The RIA Before Its Time
+  title: The RIA Before Its Time — and the Language After
   rarity: rare
   signifier: 🟦
-  flavor: Declarative apps that compiled to Flash or Ajax — in 2002.
+  flavor: Declarative apps that compiled to Flash or Ajax — in 2002. A UI DSL for LLMs — in 2026.
 abilities:
 - id: OPENLASZLO
   name: OpenLaszlo / LZX
@@ -35,6 +35,8 @@ abilities:
   verifiable: Founder/CEO/CTO, Laszlo Systems; OpenLaszlo (Wikipedia)
   combos_with:
   - LZX-ARCHITECTURE
+  - AI-RETROCOMPUTING
+  - DECLARE
 - id: AI-RETROCOMPUTING
   name: AI Retrocomputing Revival
   type: activated
@@ -51,6 +53,44 @@ abilities:
   verifiable: https://github.com/davidtemkin/openlaszlo-5.0 · LinkedIn activity 7476118515758809088
   combos_with:
   - OPENLASZLO
+  - DECLARE
+- id: DECLARE
+  name: Declare — UI Language for the AI Era
+  type: activated
+  mana: '{U}{U}{R}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: declareLang
+    signature: declareLang([tree], {typescript}) → constraints stay true; DOM or canvas
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: >
+    Live demo Declare — calendar zoom, desktop, inspector. Heir to OpenLaszlo, not a port;
+    does not use Svelte; spiritually closer to Svelte 5 runes than React. Language-as-reviewer
+    when writing is free; whole surface fits an LLM context window.
+  verifiable: https://github.com/davidtemkin/declarelang · https://davidtemkin.github.io/declarelang/
+  combos_with:
+  - OPENLASZLO
+  - AI-RETROCOMPUTING
+  - MESA
+- id: MESA
+  name: Mesa — Spatial Canvas with AI
+  type: activated
+  mana: '{1}{G}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: mesaCanvas
+    signature: mesaCanvas(files) → shared zoom surface for human + agent
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.75
+  effect: Contrast chat-window-as-OS with Mesa's shared spatial canvas; pair with Declare continuity + Micropolis zoom.
+  verifiable: davidtemkin.com essay/demo (LinkedIn "spatial canvas" post)
+  combos_with:
+  - DECLARE
 invoke_rules:
   consent: not_yet_asked
   simulation: false
@@ -59,5 +99,7 @@ see_also:
   why: Bio girder — invitation status
 - path: invitation.md
   why: Public invitation document
+- path: sources/declarelang.md
+  why: Deep sniff — Declare vs Svelte vs OL
 - path: sources/2026-openlaszlo-5.0-linkedin-thread.md
   why: Announcement + reunion + Don discussion hooks

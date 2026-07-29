@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "👤"
   status: living
-  field: "Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (the LZX rich-internet-app platform); later co-founded Cola"
+  field: "Founder/CEO/CTO of Laszlo Systems — created OpenLaszlo (LZX); OpenLaszlo 5.0 revival; Declare (declarelang); Mesa; In Formation magazine; later co-founded Cola"
   home: characters/david-temkin/
 
 representation:
@@ -20,9 +20,10 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/openlaszlo/
+  note: "Group OL reunion → Declare and/or 1:1 Declare deep dive; whatever works"
 
 bio:
-  summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. Earlier Senior Director of Engineering at Excite@Home; later co-founded the mobile-communications company **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
+  summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. In 2026 shipped **OpenLaszlo 5.0** (TypeScript/browser compile) and **Declare** (`declarelang`) — a new UI DSL that declares itself heir to OpenLaszlo but is not a port; also **Mesa** (spatial AI canvas) and the **In Formation** magazine revival. Earlier Senior Director of Engineering at Excite@Home; later co-founded **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
 
 openlaszlo_revival:
   fact: |
@@ -36,26 +37,59 @@ openlaszlo_revival:
   live: "https://davidtemkin.github.io/openlaszlo-5.0/"
   linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/"
 
+declare:
+  fact: |
+    Declare (davidtemkin/declarelang): DSL for UIs — [ ] view tree, { } TypeScript
+    constraints; reactive by construction; no VDOM/hooks/CSS-as-language; DOM or canvas
+    backends; compiler in browser or Node; agent skill + declare.md sized for LLM context;
+    heir to OpenLaszlo but ground-up redesign (not a port). Reference apps: calendar,
+    desktop, docs, inspector. Does not use Svelte; spiritually closer to Svelte 5 runes
+    than to React.
+  provenance: "Public GitHub + davidtemkin.github.io/declarelang; LinkedIn DM to Don (Jul 2026) before public post — treat 'wet cement' framing as sensitive until he posts."
+  why_it_matters: "Third act of the reunion show — OL soul for the AI era; Don's Svelte/Micropolis parallel; training-data leverage (OL in corpus, Declare declares the inheritance)."
+  repo: "https://github.com/davidtemkin/declarelang"
+  live: "https://davidtemkin.github.io/declarelang/"
+  skill: "https://github.com/davidtemkin/declarelang/blob/main/skill/SKILL.md"
+  language_doc: "https://github.com/davidtemkin/declarelang/blob/main/docs/declare.md"
+
+other_public_work:
+  mesa: "Spatial canvas shared with AI — zoom, no chat-window-as-OS; essay/demo on davidtemkin.com"
+  in_formation: "Satirical tech-critical print magazine (1998/2000) revived 2025–26; Globe and Mail / Fast Company / Magazeum"
+  mac_game_port: "1991 stereoscopic Mac game → JS via Claude Code (~2025–26 LinkedIn)"
+
 show_suggestions:
-  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion: Don + David Temkin + Henry Minsky + Oliver Steele; LZX, AI revival, run historic apps on 5.0" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion → Declare: Temkin + Henry + Oliver + Don (+ Ungar optional); live Explorer + calendar/desktop" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "1:1 — Declare (or OL 5.0) deep dive with Don; timing per David's public readiness" }
 
 sources:
   mail_2006: private  # 2006 Laszlo threads held in Don's archive pending hand curation
   openlaszlo_5_0_thread: characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md
+  declarelang: characters/david-temkin/sources/declarelang.md
+  declare_dm: characters/david-temkin/sources/2026-linkedin-dm-declare.md
+  mesa_and_in_formation: characters/david-temkin/sources/mesa-and-in-formation.md
   wikipedia: null
   web:
+    - { title: "Declare (GitHub)", url: "https://github.com/davidtemkin/declarelang" }
+    - { title: "Declare live", url: "https://davidtemkin.github.io/declarelang/" }
     - { title: "OpenLaszlo 5.0 (GitHub)", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
     - { title: "OpenLaszlo 5.0 live Explorer", url: "https://davidtemkin.github.io/openlaszlo-5.0/" }
     - { title: "LinkedIn — OpenLaszlo 5.0 announcement", url: "https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/" }
     - { title: "Micropolis OpenLaszlo client (historic LZX)", url: "https://github.com/SimHacker/MicropolisCore/tree/main/documentation/openlaszlo" }
     - { title: "OpenLaszlo — Wikipedia", url: "https://en.wikipedia.org/wiki/OpenLaszlo" }
     - { title: "David Temkin — Laszlo Co-Founder & CTO (QCon SF 2007 speaker bio)", url: "https://qconsf.com/sf2007/sf2007/speaker/David%2bTemkin%2c%2bLaszlo%2bCo-Founder%2band%2bCTO.html" }
+    - { title: "no-ai-humansplaining (MOOLLM) — lean into training data", url: "https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md" }
   papers: []
   blogs: []
 
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
-  - { path: sources/README.md, why: "OpenLaszlo 5.0 + reunion discussion pack" }
-  - { path: ../henry-minsky/, why: "Laszlo Systems colleague; Cc'd on LinkedIn; reunion cast" }
-  - { path: ../oliver-steele/, why: "Laszlo chief software architect — designed LZX; Cc'd" }
-  - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo reunion show seed" }
+  - { path: sources/README.md, why: "OL 5.0 + Declare + Mesa / In Formation pack" }
+  - { path: sources/declarelang.md, why: "Deep sniff — Declare vs Svelte vs OpenLaszlo; ISP open Q" }
+  - { path: sources/2026-linkedin-dm-declare.md, why: "DM spark — reimagine, ISP, Ungar, speed-of-light" }
+  - { path: ../henry-minsky/, why: "Laszlo colleague; relayed revival; reunion + solo invites" }
+  - { path: ../oliver-steele/, why: "LZX designer; Instance Substitution Principle — ask vs Declare" }
+  - { path: ../david-ungar/, why: "Self; Laszlo interview lore; k-line inheritance; optional reunion" }
+  - { path: ../david-ungar/sources/moollm-kline-inheritance.md, why: "Pointing vs humansplaining — same move as Declare naming OL" }
+  - { path: ../../repo-shows/openlaszlo/, why: "The OpenLaszlo + Declare reunion show seed" }
+  - { path: ../../repo-shows/oliver-steele/, why: "Instance-First / ISP solo show" }
+  - { path: ../../repo-shows/david-ungar/, why: "Self × MOOLLM dream guest show" }

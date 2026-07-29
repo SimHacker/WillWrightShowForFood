@@ -1,32 +1,53 @@
-# A Repo Show: OpenLaszlo Reunion 🟦🧩
+# A Repo Show: OpenLaszlo Reunion → Declare 🟦🧩
 
 > The rich-internet-app platform that was years early — declarative, reactive, compiling to Flash
-> *or* Ajax in 2002 — **revived with AI** and run live.
+> *or* Ajax in 2002 — **revived with AI**, then **re-inherited** as a UI language for the LLM era.
 
 **The spark:** [David Temkin](../../characters/david-temkin/README.md) shipped
 **[OpenLaszlo 5.0](https://github.com/davidtemkin/openlaszlo-5.0)** — Java out, TypeScript
 compiler + server, LZX compiling **in the browser**, byte-for-byte vs 4.9 DHTML
 ([live Explorer](https://davidtemkin.github.io/openlaszlo-5.0/); LinkedIn reunion thread
 archived under [david-temkin/sources](../../characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md)).
-That's pure Repo Show: resurrect a real toolchain with AI, then bring the old **LZX** apps
-and demos back to life on it, live.
+
+**The sequel (same binge):** **[Declare](https://github.com/davidtemkin/declarelang)** —
+heir to OpenLaszlo, **not a port**. A small UI DSL (`[ ]` tree, `{ }` TypeScript constraints)
+sized for an LLM's context window; DOM or canvas; compiler in the browser; agent skill +
+verify ladder. Live: https://davidtemkin.github.io/declarelang/ (homepage, calendar, desktop
+are Declare apps). Deep sniff:
+[`characters/david-temkin/sources/declarelang.md`](../../characters/david-temkin/sources/declarelang.md).
+
+That's pure Repo Show: resurrect a real toolchain with AI, bring old **LZX** apps back — then
+ask what the *next* Laszlo looks like when the primary reader of the compiler is a model.
 
 ## The cast
 
-- **[David Temkin](../../characters/david-temkin/README.md)** — founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; did the AI revival.
+- **[David Temkin](../../characters/david-temkin/README.md)** — founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation.
 - **[Oliver Steele](../../characters/oliver-steele/README.md)** — Chief Software Architect; designed **LZX**, wrote the compilers/runtime, launched the open-source project. (Marvin Minsky's son-in-law.)
 - **[Henry Minsky](../../characters/henry-minsky/README.md)** — Laszlo software architect; relayed the news. (Marvin's son.)
-- **Don Hopkins** — worked on OpenLaszlo with all three; has old LZX apps + demos to resurrect.
+- **Don Hopkins** — worked on OpenLaszlo with all three; old LZX apps + demos; Svelte 5 / Micropolis Wasm bind (non-DOM reactive modules).
+- **[David Ungar](../../characters/david-ungar/README.md)** (dream / optional) — Self; interviewed at Laszlo and got it; Self × MOOLLM object system.
+- **Bench:** LinkedIn Cc list — Adam Wolff, Antun Karlovac, Eric Bloch, Grig B., John Sundman, … + other Laszlo/UI people.
+
+## Five acts
+
+1. **OpenLaszlo 5.0** — Explorer live; camera on the stage; reincarnate apps without rewrite.
+2. **Declare** — invent cinematography; calendar zoom; Inspector; language-as-reviewer; LZX→Declare rewrite bet.
+3. **Svelte 5 triangle** — Declare does **not** use Svelte; rune-like grain; Micropolis Wasm without DOM; lean into training (OL in corpus; Declare *names* the inheritance).
+4. **Instance Substitution + Self** — Does Declare obey Oliver's ISP? Pull Ungar; MOOLLM object system video [@16:16](https://www.youtube.com/watch?v=0uBO6ZAcVTE).
+5. **Mesa + In Formation** — spatial canvas vs chat-window OS; "computers make people easier to use."
 
 ## Threads
 
 - **OpenLaszlo / LZX, the road not taken** — declarative XML+JavaScript, reactive, multi-runtime, years before the web reinvented it.
-- **Instance-first & reactive design** (Oliver's ideas) — what modern frameworks rediscovered.
-- **The AI revival** — how the legacy Java toolchain came back; the making-of *is* the content.
-  Sympathetic scale model for Bun's Zig→Rust port — see
+- **Reimplement → reimagine** — 5.0 triangulation artifact; Declare as cinematography, not a port of LZX.
+- **Declare as heir** — same constraint soul; static typing; LLM-shaped docs/skill; continuity (State/Spring) as grain.
+- **Instance Substitution Principle** (Oliver) — open question vs Declare's anonymous-subclass instances; LZX obeyed, JS often didn't.
+- **Self × Laszlo × MOOLLM** (Ungar) — Ungar interviewed at Laszlo; pull into group and/or 1:1.
+- **The AI revival** — Java toolchain back; then Declare binge. Bun Zig→Rust kinship:
   [`process/sources/bun-rust-rewrite-2026-07.md`](../../process/sources/bun-rust-rewrite-2026-07.md).
-- **Bring the apps back** — run Don's old LZX demos live on the revived toolchain.
+- **Bring the apps back** — LZX on 5.0 without rewrite; then LLM-port one to Declare.
+- **Humansplaining vs training data** — [no-ai-humansplaining](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md) · [speed-of-light](https://github.com/SimHacker/moollm/tree/main/skills/speed-of-light).
 
-See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest.
+See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest. Ask before quoting David's private "wet cement" DM framing on air — the Declare repo itself is public.
 
 — Don Hopkins *(User Interface Flower Child)*

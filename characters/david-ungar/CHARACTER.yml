@@ -20,35 +20,45 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/david-ungar/
+  also_shows: [repo-shows/openlaszlo/]
   priority: send_now
-  note: "DREAM GUEST — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; Jan 2026 warm correspondence; Kaleida Conscientious Objectors"
+  note: "DREAM GUEST — solo Narcissa's Mirror OR OpenLaszlo reunion (Laszlo interview lore); Self × MOOLLM k-line inheritance; Jan 2026 warm correspondence"
 
 bio:
-  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. Jan 2026 correspondence with Don about MOOLLM."
+  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. Interviewed at **Laszlo** and got OpenLaszlo (Don's recollection) — invited to the OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM."
   don_credit: |
     David was generous, open, and cross-pollinating — Conscientious Objectors, self-interest!,
     papers, humor (Self: The Movie). Don: huge credit owed even if Self never shipped on every device;
     the ideas did — and the VMs (V8) borrowed the speed without the simplicity.
 
 show_suggestions:
-  - { seed: ../../repo-shows/david-ungar/, what: "Solo — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; slots-all-the-way-down pole; build live" }
+  - { seed: ../../repo-shows/david-ungar/, what: "Solo — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; k-line inheritance; build live" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion → Declare with Temkin, Henry, Oliver, Don (Ungar optional; Laszlo interview lore)" }
   - { seed: ../david-rosenthal/slots-all-the-way-down.md, what: "Co-thread — Self as clean prototype pole in Rosetta table (with David Rosenthal anchor)" }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
+  kline_inheritance: characters/david-ungar/sources/moollm-kline-inheritance.md
   web:
-    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/" }
+    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/self-power.html" }
+    - { title: "US Patent 5,187,786 (Densmore & Rosenthal) — MOOLLM patent parent", url: "https://patents.google.com/patent/US5187786A" }
+    - { title: "Declare (Temkin) — OL heir for LLM era", url: "https://github.com/davidtemkin/declarelang" }
+    - { title: "OpenLaszlo 5.0", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
   papers:
-    - { title: "Self: The Power of Simplicity", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
+    - { title: "Self: The Power of Simplicity", url: "https://bibliography.selflanguage.org/self-power.html" }
     - { title: "Organizing Programs Without Classes (1991)", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
   blogs: []
 
 see_also:
   - { path: reflecting-on-self.md, why: "North star — episode menu + Self × MOOLLM mapping" }
-  - { path: ../../repo-shows/david-ungar/, why: "Planted show — Reflecting on Self" }
-  - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Self pole — slots, MI, JS critique" }
+  - { path: sources/moollm-kline-inheritance.md, why: "Paper + patent + mixin skills — Self simplicity for LLMs" }
+  - { path: ../../repo-shows/david-ungar/, why: "Planted solo show — Reflecting on Self" }
+  - { path: ../../repo-shows/openlaszlo/, why: "Optional group — OL reunion → Declare" }
+  - { path: ../david-temkin/, why: "Declare / OL 5.0 — reunion cast" }
+  - { path: ../henry-minsky/, why: "Laszlo + Leela — reunion cast" }
+  - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Self pole — slots, MI, JS critique; patent co-thread" }
   - { path: ../don-hopkins/import-self-from-self.md, why: "MOOLLM constitution — import self from self" }
   - { path: ../alan-kay/, why: "Smalltalk → Self lineage (messaging, late binding)" }
   - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — live-object substrate" }
-  - { path: ../oliver-steele/, why: "Instance-first — LZX obeys what JS violates" }
+  - { path: ../oliver-steele/, why: "Instance-first — LZX obeys what JS violates; ISP vs Declare" }
   - { path: ../../process/trails/live-objects.md, why: "Self in the live-object lineage" }

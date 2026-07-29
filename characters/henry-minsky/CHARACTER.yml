@@ -20,9 +20,11 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/henry-minsky/
+  also_shows: [repo-shows/openlaszlo/, repo-shows/leela-ai/]
+  note: "Solo Society of Mind / Leela OR OpenLaszlo reunion → Declare with Temkin + Oliver; connector hub"
 
 bio:
-  summary: "**Henry Minsky** — software architect and AI engineer. Co-founder and CTO of **Leela AI** (visual intelligence for manufacturing, carrying MIT-AI-Lab ideas forward); earlier a software architect at **Laszlo Systems** (the OpenLaszlo declarative rich-internet-app framework) and co-founder of Universal Access. Studied at MIT and was a research assistant at the MIT AI Lab. Son of **Marvin Minsky** + Gloria Rudisch and twin of Juliana — he and his siblings grew up in the AI Lab's children's computer lab, playing games and solving puzzles while grad students took notes."
+  summary: "**Henry Minsky** — software architect and AI engineer. Co-founder and CTO of **Leela AI** (visual intelligence for manufacturing, carrying MIT-AI-Lab ideas forward); earlier a software architect at **Laszlo Systems** (the OpenLaszlo declarative rich-internet-app framework) and co-founder of Universal Access. Studied at MIT and was a research assistant at the MIT AI Lab. Son of **Marvin Minsky** + Gloria Rudisch and twin of Juliana — he and his siblings grew up in the AI Lab's children's computer lab, playing games and solving puzzles while grad students took notes. Relayed David Temkin's 2026 OpenLaszlo AI-revival news; invited to the OL → Declare reunion and/or solo Leela show."
 
 family:
   father: marvin-minsky        # AI pioneer; Society of Mind (memorial)
@@ -51,23 +53,31 @@ drescher_thread:
   see: ../gary-drescher/made-up-minds.md
 
 show_suggestions:
-  - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind ideas in modern AI (Leela AI), declarative UI (OpenLaszlo), and authoring agent skills as constructionism / PBD" }
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion → Declare with Temkin + Oliver + Don (+ Ungar optional); Henry relayed the revival" }
+  - { seed: ../../repo-shows/henry-minsky/, what: "Solo — Society of Mind in modern AI (Leela), declarative UI, skill-authoring as constructionism / PBD" }
   - { seed: ../../repo-shows/leela-ai/, what: "Group — the Leela AI crew show-and-tell (with Milan, Cyrus Shaoul, Steve Kommrusch, Isabella Struckman, Art Medlar)" }
   - { seed: ../../repo-shows/leela-ai/, what: "Couple — Milan + Henry together: product & architecture as a partnership (first-wired-family thread)" }
-  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OpenLaszlo reunion with David Temkin + Oliver Steele + Don; Henry was a Laszlo software architect and relayed David's AI-revival news" }
 
 sources:
   wikipedia: null
   web:
     - { title: "Son of Marvin Minsky launches Leela AI startup (Boston Globe, 2024)", url: "https://www.bostonglobe.com/2024/12/03/business/minsky-leela-ai-company-mit/" }
     - { title: "Marvin Minsky and the First Wired Family (NYT, 1997)", url: "https://archive.nytimes.com/www.nytimes.com/library/cyber/week/010397minsky.html" }
+    - { title: "OpenLaszlo 5.0 (Temkin)", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
+    - { title: "Declare (Temkin)", url: "https://github.com/davidtemkin/declarelang" }
+    - { title: "LinkedIn — OpenLaszlo 5.0 announcement", url: "https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/" }
   papers: []
   blogs: []
 
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: invitation.md, why: "A reunion / B solo / C whatever works" }
+  - { path: ../david-temkin/, why: "OL 5.0 + Declare pack; reunion co-guest" }
+  - { path: ../david-ungar/, why: "Optional reunion guest — Self × Laszlo; k-line inheritance" }
+  - { path: ../oliver-steele/, why: "Brother-in-law; LZX / ISP; reunion cast" }
   - { path: ../marvin-minsky/, why: "🕯️ His father — Society of Mind, MIT AI Lab (memorial)" }
   - { path: ../gary-drescher/, why: "Friend + Leela adviser; Henry's Python schema factory carries Made-Up Minds forward" }
   - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OpenLaszlo → Declare reunion show" }
   - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors_and_legacy#brokering) — MIT-AI-Lab nexus" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

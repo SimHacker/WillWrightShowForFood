@@ -25,8 +25,13 @@ down), **HotSpot/V8** (Self's maps and polymorphic inline caches via Lars Bak), 
 - **Maps/PICs → V8** — the implementation vindication: fast delegation changed the industry even when the model didn't.
 - **Relativistic parallelism** — abandon global sync? fun argument with git's many-worlds cosmology.
 
-See [`SHOW.yml`](SHOW.yml) · [`invitation`](../../characters/david-ungar/invitation.md) ·
-[`reflecting-on-self`](../../characters/david-ungar/reflecting-on-self.md). Consent **not yet asked**
-— invitation marked **send_now**.
+**Also invited** to the **[OpenLaszlo reunion → Declare](../openlaszlo/README.md)** (optional) —
+Ungar interviewed at Laszlo and got it; Self × k-line inheritance next to Temkin's heir language.
+Invite offers solo / reunion / whatever works:
+[`invitation`](../../characters/david-ungar/invitation.md) ·
+[k-line note](../../characters/david-ungar/sources/moollm-kline-inheritance.md).
+
+See [`SHOW.yml`](SHOW.yml) · [`reflecting-on-self`](../../characters/david-ungar/reflecting-on-self.md).
+Consent **not yet asked** — invitation marked **send_now**.
 
 — Don Hopkins *(User Interface Flower Child)*

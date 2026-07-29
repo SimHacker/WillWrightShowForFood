@@ -20,8 +20,9 @@ thread — and to MOOLLM's **LIFT** gate (dogfood the instance, hoist the class 
 - **LZX architecture** — declarative XML+JS, reactive constraints, data binding; Garnet's idea on the web.
 - **Live refactor** — start with one widget, generalize on air when a second case appears.
 
-Also on the **[OpenLaszlo reunion](../openlaszlo/README.md)** with David Temkin, Henry Minsky, and Don
-(AI-revived toolchain).
+Also on the **[OpenLaszlo reunion → Declare](../openlaszlo/README.md)** with David Temkin, Henry
+Minsky, and Don — including the open question: **does Declare obey the Instance Substitution
+Principle?** (and optional **[David Ungar](../david-ungar/)** Self × Laszlo lore).
 
 See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** —
 [`invitation`](../../characters/oliver-steele/invitation.md).

@@ -32,7 +32,12 @@ phone — **in spirit it does** (JS prototypes, HotSpot/V8 JIT lineage, MOOLLM d
 
 Ungar & Smith, OOPSLA 1987: **"Self: The Power of Simplicity."** Prototypes were the *means*;
 simplicity was the lesson. JavaScript inherited prototypes and missed simplicity, multiple
-inheritance, and clean delegation. MOOLLM puts MI back via serializable parent lists.
+inheritance, and clean delegation. MOOLLM puts MI back via serializable parent lists — and inherits
+by **k-line** (paper title, patent number, mixin word + skill) instead of humansplaining:
+[`sources/moollm-kline-inheritance.md`](sources/moollm-kline-inheritance.md).
+
+Optional second stage: [OpenLaszlo reunion → Declare](../../repo-shows/openlaszlo/) (Ungar
+interviewed at Laszlo and got it — Don).
 
 Full rant with receipts: [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md).
 

@@ -70,18 +70,33 @@ directories as the scavenging substrate.
 *"Everything You Know (About Parallel Programming) Is Wrong!"* — tolerate approximate, race-y
 computation. Fun argument: is git's causal-DAG partial order the disciplined version, or a warning?
 
-### 9. Pairings
+### 9. K-line inheritance — Self's simplicity for LLMs
+Point don't humansplain: paper title (**Self: The Power of Simplicity**), patent number
+(**US 5,187,786**), mixin words (`git`, `prototype` → skill + latent Self). Skills as primary
+words — instantiate, inherit, artifactory. Accessibility on **three axes** (human / LLM / program);
+lean [yaml-jazz](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz) — comments
+respected, round-tripped, generated. → [`sources/moollm-kline-inheritance.md`](sources/moollm-kline-inheritance.md)
+
+### 10. OpenLaszlo reunion → Declare (optional group)
+Ungar interviewed at Laszlo and got it (Don). Join Temkin / Henry / Oliver / Don for
+[`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/) — or stay solo. ISP + Self parents next to
+Declare's "heir not port" move.
+
+### 11. Pairings
 
 - **[Alan Kay](../alan-kay/)** — messaging over objects; Self as live-object branch
 - **[Dan Ingalls](../dan-ingalls/)** — Smalltalk substrate Self grew from
-- **[Oliver Steele](../oliver-steele/)** — instance-first; LZX obeys what JS violates
-- **[David Rosenthal](../david-rosenthal/slots-all-the-way-down.md)** — NeWS/fs pole vs Self pole
+- **[Oliver Steele](../oliver-steele/)** — instance-first; LZX obeys what JS violates; ISP vs Declare
+- **[David Temkin](../david-temkin/)** — OL 5.0 + Declare; reunion
+- **[Henry Minsky](../henry-minsky/)** — Laszlo + Leela; reunion
+- **[David Rosenthal](../david-rosenthal/slots-all-the-way-down.md)** — NeWS/fs pole vs Self pole; patent co-parent
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md) · [`reflecting-on-self.md`](reflecting-on-self.md)
+- [`sources/moollm-kline-inheritance.md`](sources/moollm-kline-inheritance.md)
 - [`correspondence.yml`](correspondence.yml) — Jan 2026 digest
 - [`from-alan-kay.yml`](from-alan-kay.yml) — Kay lineage quotes
-- [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/)
+- [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/) · [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/)
+- [Self: The Power of Simplicity](https://bibliography.selflanguage.org/self-power.html)
 - [Wikipedia — David Ungar](https://en.wikipedia.org/wiki/David_Ungar)
-- [Self language](https://en.wikipedia.org/wiki/Self_(programming_language))
