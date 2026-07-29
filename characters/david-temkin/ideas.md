@@ -86,6 +86,16 @@ print satire as moral spine; Repo Show as git answer; Declare as UI-language ans
 Instance-first / LZX design; Henry at Leela; Oliver as Marvin's son-in-law; Adam Wolff on
 Claude Code *and* "laszlo reunion wen?" — LinkedIn Cc list as guest bench.
 
+### 14. Sniffable Python jazz ↔ Declare grain
+Same lean-into-training move, different surface: Jesus Mouse memorial expresses Self
+inheritance as ordinary Python imports (not a new DSL) — decorate a generic latent object
+with specific traits on the import line (`props.jester_head.purple` + comment), then `|` scat
+the locals into a look chord. Declare does the cousin move for UI: name OL lineage, keep the
+language small enough for an LLM context. Show candy if the reunion lands on "what syntax
+do models already know how to read?"
+→ [`../jesus-mouse/sources/latent-imports.md`](../jesus-mouse/sources/latent-imports.md)
+· apex: [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#differently-architected-examples-same-cartoon-grammar)
+
 ## Sources (public)
 
 - [`sources/declarelang.md`](sources/declarelang.md) — deep sniff

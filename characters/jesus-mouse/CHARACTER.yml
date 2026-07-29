@@ -29,7 +29,7 @@ relationship:
   to_soul_model: |
     Tangible example of Self multiple inheritance: one soul inheriting Jesus AND
     Mickey Mouse (what he lived and stated) vs two minds with separate wells.
-    Linked from moollm examples/adventure-4/SOUL-MODEL.md for busy readers.
+    Linked from moollm skills/soul-city/SOUL-MODEL.md for busy readers.
 
 bio:
   summary: |
@@ -49,29 +49,84 @@ memorial:
     - "HN comment 2023-01-16 — news.ycombinator.com/item?id=34398396"
     - "sources/hn-34398396.md — cleaned memoir text"
 
+# Latent-space imports — from <well> import <dimension.aspect> as <local> (spec syntax)
+# Canonical: sources/latent-imports.md
+latent_imports:
+  canonical: sources/latent-imports.md
+  grammar: "from <latent_module> import <dimension.aspect> as <local_name>"
+  parents:
+    - jesus_christ      # soul, hair, beard, myth-well, vatican test, mission, declaration
+    - mickey_mouse      # soul, hat, tail, myth-well
+    - the_wizard        # scepter, jester head + key, sequined spell book
+    - haight_ashbury    # coffee-shop regular, hippie parade
+    - tourism           # $5 selfie economy
+  dimension: costume_soul_props_mission_praxis
+  kin_parallel: donald-michie
+
+latent_import: |
+  # from <module> import <dimension.aspect> as <local>
+  from jesus_christ import soul.jesus as jesus
+  from jesus_christ import hair.long as hair
+  from jesus_christ import beard.long as beard
+  from jesus_christ import archetype.american_myth as jesus_well
+  from jesus_christ import mission.second_coming_test as vatican_test
+  from jesus_christ import mission.liquidate_treasures_for_the_poor as mission
+
+  from mickey_mouse import soul.mickey as mouse
+  from mickey_mouse import costume.hat as hat
+  from mickey_mouse import costume.long_tail as tail
+  from mickey_mouse import archetype.american_myth as mouse_well
+
+  from the_wizard import props.walking_stick as scepter
+  from the_wizard import props.jester_head.purple as jester_head
+  from the_wizard import props.spell_book.sequined as spell_book
+
+  class JesusMouse(Jesus, MickeyMouse, Wizard):
+      wells = (jesus_well, mouse_well)
+      look = hair | beard | hat | tail | scepter | jester_head | spell_book
+      body = 1
+
+soul_inheritance:
+  parents:
+    - { archetype: jesus-christ, contributes: [soul_well, hair, beard, mission, vatican_test, declaration], mnemonic: "Jesus as in Christ" }
+    - { archetype: mickey-mouse, contributes: [soul_well, hat, long_tail], mnemonic: "Mouse as in Mickey" }
+    - { archetype: the_wizard, contributes: [scepter, jester_head, spell_book] }
+  blend: Jesus Mouse
+  lived: true
+  dimension: soul_costume_props_mission
+  not: "Not pronunciation-only (that's Duckmouse). Full costume + wells + props + mission."
+  kin_parallel: donald-michie
+  inventory: sources/latent-imports.md
+
 soul_model_variations:
   blended_soul:
     lived: true
-    sketch: 'parents: ["Jesus", "Mickey Mouse"]'
-    note: "Exactly his stated intention — one body, two wells, combined."
+    sketch: 'parents: ["Jesus", "Mickey Mouse", "Wizard"]'
+    python: sources/latent-imports.md
+    note: "Exactly his stated intention — one body, two myth wells, wizard props, combined."
   two_minds:
     lived: false
     sketch: "minds: jesus-cup + mouse-cup"
     note: "Valid alternate Self architecture — not what he performed."
-  see: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/SOUL-MODEL.md#jesus-mouse--blended-soul-vs-two-minds"
+  see: "https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#jesus-mouse--blended-soul-vs-two-minds"
 
 sources:
   web:
     - { title: "Hacker News — Don's Jesus Mouse memoir (2023-01-16)", url: "https://news.ycombinator.com/item?id=34398396" }
   local:
     - sources/hn-34398396.md
+    - sources/latent-imports.md
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: sources/latent-imports.md, why: "Full Python latent-space import inventory" }
   - { path: CARD.yml, why: "Heroic abilities — archetype blend as Self inheritance" }
   - { path: ../don-hopkins/, why: "Author of the memoir; discussant" }
   - { path: ../donald-michie/, why: "Cartoon-nickname kin — Duckmouse (Donald Duck × Mickey Mouse); same memorial ethics" }
-  - { url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/SOUL-MODEL.md", why: "Soul Model cliff notes — primary outbound link for Parker-style deep dives" }
+  - { path: ../david-temkin/, why: "Same grain — Declare leans into training; decorate-on-import / | scat are Self-side cousins (ideas.md §14)" }
+  - { url: "https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md", why: "Soul City manifesto — soul ⊃ minds" }
+  - { url: "https://github.com/SimHacker/moollm/tree/main/skills/soul", why: "MOOLLM soul skill" }
+  - { url: "https://github.com/SimHacker/moollm/tree/main/skills/mind", why: "MOOLLM mind skill" }
 
 suggestion_later:
   - "Optional adventure-4 / Soul City playable incarnation (coatroom costume) — not yet"
