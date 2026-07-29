@@ -94,8 +94,13 @@ NeWS Lite → SGI 4Sight overlay-plane subclass → NDE → TNT 2.0 (tab windows
 mouse-ahead feedback, spiral scrolling pies for John Gage) → PSIBER Space Deck → HyperLook
 SimCity (talking pie menus) → TCL/Tk widget + piewm (X11, multiplayer SimCity, Unix World
 best-of-1992) → ScriptX DreamScape → **The Sims** (1997–2000, head in center, linear
-overflow) → ActiveX/OLE → JavaScript/DHTML → ConnectedTV Palm → OpenLaszlo SimFaux →
-OLPC Sugar PyGTK → Micropolis → Unity3D → jQuery → VR (HyperJaunt, High Fidelity).
+overflow) → ActiveX/OLE → JavaScript/DHTML → ConnectedTV Palm → **Pocket PC talking pies + Cepstral (~2006)** →
+OpenLaszlo SimFaux → OLPC Sugar PyGTK → Micropolis → Unity3D → jQuery → VR (HyperJaunt, High Fidelity).
+
+**~2006-08 seed** (Don→Tom Lord; public extracts, full letter private): SpiderMonkey "consumer
+scriptable" pies on Windows CE + Cepstral — dog / cat / pet-rock remotes; wanted OpenLaszlo
+runtime without Flash weight; also floated Lua/WoW Cosmos pie menus for spells/macros.
+→ [`../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md)
 
 Also: Jobs/Bill Joy Educom demo (1988-10-25); CACM accepted-with-rewrite, never resubmitted
 (unpublished "Pies" paper online); Norman/Hopkins Almaden exchange (1993) — "Linear menus

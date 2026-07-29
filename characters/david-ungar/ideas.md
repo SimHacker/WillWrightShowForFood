@@ -80,7 +80,7 @@ respected, round-tripped, generated. → [`sources/moollm-kline-inheritance.md`]
 ### 10. OpenLaszlo reunion → Declare (optional group)
 **Receipt:** Don ran into Ungar interviewing at Laszlo — email to Tom Lord, 21 Aug 2006
 ([extract](sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) ·
-[full](../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md)).
+[seeds](../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md); full letter private).
 Join Temkin / Henry / Oliver / Don (+ Myers / Latta) for
 [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/) — or stay solo. Demo beat: factorial +
 live-edit of `*`. ISP + Self next to Declare's "heir not port."

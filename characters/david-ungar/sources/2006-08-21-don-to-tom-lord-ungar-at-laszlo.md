@@ -1,7 +1,8 @@
 # Receipt: Ungar interviewing at Laszlo (Don → Tom Lord, 21 Aug 2006)
 
-**Primary source (full email):**  
-[`../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md)
+**Public seed index / extracts:**  
+[`../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md)  
+**Full letter (private):** DonHopkins `correspondence/attachments/thomas-lord/private/2006-08-21-lua-spidermonkey-ungar-full.md`
 
 **HN excerpt (2022):**  
 [`../../tom-lord/self-v8-tom-lord-2006-hn-2022.md`](../../tom-lord/self-v8-tom-lord-2006-hn-2022.md)

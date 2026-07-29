@@ -76,6 +76,14 @@ The full history, written as a tribute:
 [The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md) —
 [HN 48870736](https://news.ycombinator.com/item?id=48870736)
 
+## Seed — Guile continuations vs Lua (Don, Aug 2006)
+
+In the same Don↔Tom letter that carries the Ungar@Laszlo receipt, Tom answers Don's Lua /
+WoW aside: Lua's one-shot continuations / coroutines under ANSI-C constraints; Guile
+"half-right" (call points guaranteed to return once) but "half-wrong" because that was the
+expensive case, not the default. Full continuations ⇒ no real stack. Public seeds:
+[`sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md).
+
 ## After the war: why Guile didn't take over the world
 
 The plan was always grander than the resources. Emacs Lisp turned out to be immovable — not just

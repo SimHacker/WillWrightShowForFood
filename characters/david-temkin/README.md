@@ -61,6 +61,8 @@ https://github.com/SimHacker/MicropolisCore/tree/main/documentation/openlaszlo
 ## Primary sources (2006 mail)
 
 Laszlo/OpenLaszlo engineering threads from Don's archive are held privately
-pending hand curation; curated excerpts will appear here after review.
+pending hand curation. One public seed already planted:
+[`sources/2006-don-tom-lord-openlaszlo-spidermonkey-seed.md`](sources/2006-don-tom-lord-openlaszlo-spidermonkey-seed.md)
+(OL runtime / SpiderMonkey ambition + lisp-heads quote from Don→Tom Lord; full letter private).
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

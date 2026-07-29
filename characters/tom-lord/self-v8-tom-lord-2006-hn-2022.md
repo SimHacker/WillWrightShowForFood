@@ -4,7 +4,7 @@
 
 **Don's comment:** [33527618](https://news.ycombinator.com/item?id=33527618) — quoting a message Don wrote to **Tom Lord in 2006**, two years before Lars Bak built V8 at Google, after running into **Dave Ungar** while he was interviewing at Laszlo Systems.
 
-**Full email (verbatim archive):** [`sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) — also OpenLaszlo / SpiderMonkey / TurboGears context; Ungar guest extract at [`../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md`](../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md).
+**Public seeds / extracts:** [`sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) — Ungar@Laszlo, OL / SpiderMonkey, TurboGears, Lua/Guile. Ungar guest extract: [`../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md`](../david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md). Full letter private: DonHopkins `correspondence/attachments/thomas-lord/private/`.
 
 This is the treasured receipt cited in [The Part Where It Compiles](../don-hopkins/the-part-where-it-compiles-hn-2026.md): JavaScript credits Self for its prototypes while missing everything else the paper was about.
 

@@ -95,7 +95,8 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 |------|------|
 | [Pie Menus: 30 Year Retrospective](pie-menus-30-year-retrospective.md) | PIXIE anchor, theta-menu origin emails, CHI'88, design principles, Jobs demo |
 | [Pie Menu FUD and Misconceptions](pie-menu-fud-misconceptions.md) | Alias/Buxton patent story + Buxton/Kurtenbach rebuttals in comments; ersatz-pie catalog |
-| [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated 1968–2018 chronology; 1987 no-patent decision; Kurtenbach 1990/2018 letters |
+| [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated chronology; includes ~2006 Pocket PC talking pies / Cepstral / pet remotes seed (Don→Tom Lord) |
+| [Tom Lord 2006 seeds (public)](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) | Ungar@Laszlo, OL SpiderMonkey ambition, TG rant, Lua/WoW pies — full letter private in DonHopkins |
 | [Alan Kay PIXIE thread (2020)](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
 | [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; 2008 email receipts; show not-invited policy; Brad Myers Ch. 33 |
 | [DDJ 1991: Design & Implementation of Pie Menus](ddj-1991-design-implementation-pie-menus.md) | **The published receipt** — mark-ahead, rehearsal, reselection, display suppression in print, pre-1993 |

@@ -9,6 +9,7 @@ David, Henry Minsky, Oliver Steele, Don, UI/Laszlo people, Svelte 5 / Micropolis
 | [2026-linkedin-dm-declare.md](2026-linkedin-dm-declare.md) | Don ↔ David DMs — Declare reveal; reimagine/cinematography; ISP Q; Ungar pull-in; speed-of-light; Badhoevedorp (ask before quoting "wet cement" / personal bits on air) |
 | [2026-openlaszlo-5.0-linkedin-thread.md](2026-openlaszlo-5.0-linkedin-thread.md) | OL 5.0 announcement + reunion comments + Don's replies (cauldron, cursor-mirror, PIXIE, SimFaux, Micropolis OL) |
 | [mesa-and-in-formation.md](mesa-and-in-formation.md) | Mesa spatial AI canvas · In Formation magazine · Claude Code Mac game port · Haas guest |
+| [2006-don-tom-lord-openlaszlo-spidermonkey-seed.md](2006-don-tom-lord-openlaszlo-spidermonkey-seed.md) | Seed — OL runtime on SpiderMonkey / custom gfx ambition; lisp-heads quote; Ungar@Laszlo same letter |
 | [images/myalive-trade-off-tool-saturated-fat.png](images/myalive-trade-off-tool-saturated-fat.png) | Screenshot Don posted into the OL thread — constraint-driven RIA |
 
 ## Canonical external links

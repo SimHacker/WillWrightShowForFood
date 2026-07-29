@@ -35,7 +35,7 @@ tom-lord/
 ├── media/
 │   └── 2010-04-hate-man-facebook-exchange.png
 └── sources/
-    ├── 2006-08-21-lua-spidermonkey-ungar-at-laszlo.md  ← full Don→Tom email (Ungar @ Laszlo)
+    ├── 2006-08-21-lua-spidermonkey-ungar-at-laszlo.md  ← seeds/extracts (full letter private in DonHopkins)
     ├── 1998-01-16-xml-vs-sexpressions-email.md
     ├── 2010-04-hate-man-facebook-exchange.md
     └── early-correspondence-1991-1992.md   FSF years: guess where i work, CAM-PC, fork essay, Hal/Solaris

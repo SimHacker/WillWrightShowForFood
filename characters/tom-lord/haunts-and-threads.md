@@ -4,6 +4,13 @@ Where Tom hung out online, and the epic posts, flames, and threads he left there
 archive links first, so you can wander; then specific gems. More get added as excavation
 continues.
 
+## Seed — Don ↔ Tom, Aug 2006 (Lua / Guile / Ungar)
+
+Private full letter; public seeds:
+[`sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md`](sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md).
+Tom on Lua + Guile one-shot continuations; Don on Ungar@Laszlo / Self compilability (pre-V8).
+Grow into Guile dossier + Ungar Narcissa's Mirror + pie-menu WoW/Lua aside.
+
 ## The haunts (top-level archives)
 
 - **gnu-arch-users** — his mailing list, 2003–2009, hundreds of his posts on revision control,
