@@ -40,7 +40,7 @@ the_cast:
   david_temkin: "Founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation. → characters/david-temkin/"
   oliver_steele: "Chief Software Architect; designed LZX; Instance Substitution Principle. → characters/oliver-steele/"
   henry_minsky: "Laszlo software architect; relayed the revival news; son of Marvin Minsky. → characters/henry-minsky/"
-  david_ungar: "Optional — Self; interviewed at Laszlo and got it; Self × MOOLLM; what prototypes are. → characters/david-ungar/"
+  david_ungar: "Optional — Self; interviewed at Laszlo (receipt: Don→Tom Lord 2006-08-21); Self × MOOLLM; what prototypes are. → characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md"
   brad_myers: "Optional — Garnet / PBD; pull constraints, KR frames, CMU CL, CLX. → characters/brad-myers/"
   craig_latta: "Optional — Caffeine / live objects / Morphic; prototypes without mush. → characters/craig-latta/"
 
@@ -77,6 +77,8 @@ ties_to:
   - ../../characters/oliver-steele/
   - ../../characters/henry-minsky/
   - ../../characters/david-ungar/
+  - ../../characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md
+  - ../../characters/tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md
   - ../../characters/brad-myers/
   - ../../characters/craig-latta/
   - ../../characters/don-hopkins/

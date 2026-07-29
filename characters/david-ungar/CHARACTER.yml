@@ -25,7 +25,7 @@ invitation:
   note: "DREAM GUEST — solo Narcissa's Mirror OR OpenLaszlo reunion (Laszlo interview lore); Self × MOOLLM k-line inheritance; Jan 2026 warm correspondence"
 
 bio:
-  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. Interviewed at **Laszlo** and got OpenLaszlo (Don's recollection) — invited to the OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM."
+  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. **Interviewed at Laszlo Systems** — Don ran into him there (primary source: Don → Tom Lord email, 21 Aug 2006; Self factorial/`*` demo; JS compilability retort two years before V8). Invited to OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM."
   don_credit: |
     David was generous, open, and cross-pollinating — Conscientious Objectors, self-interest!,
     papers, humor (Self: The Movie). Don: huge credit owed even if Self never shipped on every device;
@@ -38,6 +38,8 @@ show_suggestions:
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
+  ungar_at_laszlo_2006: characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md
+  ungar_at_laszlo_full_email: characters/tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md
   kline_inheritance: characters/david-ungar/sources/moollm-kline-inheritance.md
   web:
     - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/self-power.html" }
@@ -51,6 +53,9 @@ sources:
 
 see_also:
   - { path: reflecting-on-self.md, why: "North star — episode menu + Self × MOOLLM mapping" }
+  - { path: sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md, why: "Primary receipt — Ungar interviewing at Laszlo, Aug 2006" }
+  - { path: ../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md, why: "Full Don→Tom Lord email (Ungar + OL + Lua thread)" }
+  - { path: ../tom-lord/self-v8-tom-lord-2006-hn-2022.md, why: "HN 2022 quote of the Ungar graph" }
   - { path: sources/moollm-kline-inheritance.md, why: "Paper + patent + mixin skills — Self simplicity for LLMs" }
   - { path: ../../repo-shows/david-ungar/, why: "Planted solo show — Reflecting on Self" }
   - { path: ../../repo-shows/openlaszlo/, why: "Optional group — OL reunion → Declare" }

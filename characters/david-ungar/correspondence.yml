@@ -32,6 +32,8 @@ threads:
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md, why: "Primary — Ungar interviewing at Laszlo (Don→Tom Lord 2006)" }
+  - { path: ../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md, why: "Full 2006 email archive" }
   - { path: ../../repo-shows/david-ungar/, why: "Planted show — Self × MOOLLM" }
   - { path: reflecting-on-self.md, why: "North star doc" }
   - { path: ../alan-kay/, why: "Shared Smalltalk/Self lineage" }

@@ -30,11 +30,12 @@ tom-lord/
 ├── the-tcl-war-and-guile.md           sourced dossier: GEL, war, aftermath
 ├── teledildonics-hn-2020.md           Buttplug thread, Marx, Deldo lineage ;)
 ├── hate-man-remembrance-hn-2026.md    I HATE YOU!!!! as a love letter
-├── self-v8-tom-lord-2006-hn-2022.md   Self, V8, compilability (Don ↔ Tom, 2006)
+├── self-v8-tom-lord-2006-hn-2022.md   Self, V8, compilability (Don ↔ Tom, 2006) — HN excerpt
 ├── ideas.md                           show segments (family consent first)
 ├── media/
 │   └── 2010-04-hate-man-facebook-exchange.png
 └── sources/
+    ├── 2006-08-21-lua-spidermonkey-ungar-at-laszlo.md  ← full Don→Tom email (Ungar @ Laszlo)
     ├── 1998-01-16-xml-vs-sexpressions-email.md
     ├── 2010-04-hate-man-facebook-exchange.md
     └── early-correspondence-1991-1992.md   FSF years: guess where i work, CAM-PC, fork essay, Hal/Solaris

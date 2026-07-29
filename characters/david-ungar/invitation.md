@@ -27,11 +27,15 @@ influential** when it mattered: papers, humor, mailing lists, and that Kaleida m
 object systems argued in good faith. Self doesn't run on everybody's phone — **in spirit it does** —
 in JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import self from self`.
 
-I also remember you **interviewing at Laszlo** and *getting* OpenLaszlo — which is why I'd love you
-in the **[OpenLaszlo reunion → Declare](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)**
+I still remember **running into you while you were interviewing at Laszlo** — I even wrote Tom Lord
+about it on 21 Aug 2006 (factorial demo, live-edit of `*`, your retort that JS could be compiled
+if you were "really devious enough" — two years before V8). That's why I'd love you in the
+**[OpenLaszlo reunion → Declare](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)**
 circle with **David Temkin**, **Henry Minsky**, **Oliver Steele**, me, and optionally **Brad Myers**
 (Garnet / PBD) and **Craig Latta** (Caffeine / live objects) — a chance to really get into
 **what prototypes are** (solo still very welcome).
+
+Receipt: [`sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md)
 
 ---
 
