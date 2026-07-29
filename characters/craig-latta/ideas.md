@@ -11,8 +11,12 @@ Craig Latta — livecoding composer and research computer scientist (UC Berkeley
 
 ## The hooks
 
+### 0. OpenLaszlo reunion → Declare (optional group)
+[`invitation.md`](invitation.md) Option A. **What prototypes are** / live objects with Ungar +
+Brad Myers + Temkin — Morphic / Caffeine next to Self, Garnet, LZX, Declare. Amsterdam-friendly.
+
 ### 1. Show seed: `repo-shows/craig-latta/`
-walk the repo on air and build from the seed.
+Caffeine solo — walk the repo on air.
 
 ### 2. Caffeine (SqueakJS+WASM livecoding), Amsterdam
 in-person on-camera; remember Vanessa

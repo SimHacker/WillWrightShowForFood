@@ -8,13 +8,15 @@ show:
   type: group
   host: Don Hopkins
   guests: ["David Temkin", "Oliver Steele", "Henry Minsky"]
-  optional_guests: ["David Ungar"]
+  optional_guests: ["David Ungar", "Brad A. Myers", "Craig Latta"]
   characters:
     - characters/don-hopkins/   # host + cast — has a character directory, not just ground-up software
     - characters/david-temkin/
     - characters/oliver-steele/
     - characters/henry-minsky/
-    - characters/david-ungar/   # optional — Self × Laszlo interview lore
+    - characters/david-ungar/   # optional — Self × what prototypes are
+    - characters/brad-myers/    # optional — Garnet / PBD / pull constraints
+    - characters/craig-latta/   # optional — Caffeine / live objects / Morphic
   topic: "OpenLaszlo / LZX revived as OpenLaszlo 5.0 — then Declare (reimagine, not port). ISP + Self; Svelte 5 triangle; Laszlo reunion cast."
   status: seed
   consent: not_yet_asked
@@ -38,7 +40,9 @@ the_cast:
   david_temkin: "Founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation. → characters/david-temkin/"
   oliver_steele: "Chief Software Architect; designed LZX; Instance Substitution Principle. → characters/oliver-steele/"
   henry_minsky: "Laszlo software architect; relayed the revival news; son of Marvin Minsky. → characters/henry-minsky/"
-  david_ungar: "Optional — Self; interviewed at Laszlo and got it; Self × MOOLLM. → characters/david-ungar/"
+  david_ungar: "Optional — Self; interviewed at Laszlo and got it; Self × MOOLLM; what prototypes are. → characters/david-ungar/"
+  brad_myers: "Optional — Garnet / PBD; pull constraints, KR frames, CMU CL, CLX. → characters/brad-myers/"
+  craig_latta: "Optional — Caffeine / live objects / Morphic; prototypes without mush. → characters/craig-latta/"
 
 threads:
   - "OpenLaszlo / LZX, the road not taken — declarative XML+JS, reactive, multi-runtime (Flash OR Ajax) years before the web reinvented it."
@@ -46,7 +50,9 @@ threads:
   - "Declare — reimagine not port; [ ] / { } constraints; language-as-reviewer; LZX→Declare rewrite bet."
   - "Declare vs Svelte 5 vs OpenLaszlo — does not use Svelte; rune-like grain; lean into training data."
   - "Instance Substitution Principle — does Declare obey it? (Oliver) Anonymous-subclass instances look instance-first."
-  - "Self × Laszlo × MOOLLM — pull Dave Ungar (interviewed at Laszlo); video 0uBO6ZAcVTE @16:16."
+  - "What prototypes are — Ungar (Self) + Myers (Garnet) + Latta (live objects) + Oliver ISP + Declare + Svelte 5."
+  - "Self × Laszlo × MOOLLM — Ungar interviewed at Laszlo; video 0uBO6ZAcVTE @16:16."
+  - "Garnet lineage — pull constraints, KR frames, CMU CL, CLX → OpenLaszlo → Declare / Svelte."
   - "Bring the apps back — LZX on 5.0; LLM-port one to Declare; Micropolis client question."
   - "Mesa + In Formation — spatial AI canvas vs chat-window OS; print satire as moral spine."
   - "Open-sourcing a commercial platform — the 2004 Laszlo → OpenLaszlo story."
@@ -71,6 +77,8 @@ ties_to:
   - ../../characters/oliver-steele/
   - ../../characters/henry-minsky/
   - ../../characters/david-ungar/
+  - ../../characters/brad-myers/
+  - ../../characters/craig-latta/
   - ../../characters/don-hopkins/
   - ../../repo-shows/oliver-steele/
   - ../../repo-shows/david-ungar/

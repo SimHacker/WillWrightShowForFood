@@ -29,7 +29,9 @@ in JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import se
 
 I also remember you **interviewing at Laszlo** and *getting* OpenLaszlo — which is why I'd love you
 in the **[OpenLaszlo reunion → Declare](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)**
-circle with **David Temkin**, **Henry Minsky**, **Oliver Steele**, and me (solo still very welcome).
+circle with **David Temkin**, **Henry Minsky**, **Oliver Steele**, me, and optionally **Brad Myers**
+(Garnet / PBD) and **Craig Latta** (Caffeine / live objects) — a chance to really get into
+**what prototypes are** (solo still very welcome).
 
 ---
 

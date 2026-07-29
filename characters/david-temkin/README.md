@@ -9,7 +9,8 @@ Invitation portrayal — **not** David Temkin. [Standards](../../schemas/portray
 [Ideas](ideas.md)
 
 Co-invitees: [Don Hopkins](../don-hopkins/) (host + cast) · [Henry Minsky](../henry-minsky/) ·
-[Oliver Steele](../oliver-steele/) · [David Ungar](../david-ungar/) (optional)
+[Oliver Steele](../oliver-steele/) · optional: [David Ungar](../david-ungar/) ·
+[Brad Myers](../brad-myers/) · [Craig Latta](../craig-latta/)
 
 David founded **Laszlo Systems** (2000) and created **OpenLaszlo** — the **LZX** XML+JavaScript
 language and Presentation Server for rich internet applications, which compiled to Flash or

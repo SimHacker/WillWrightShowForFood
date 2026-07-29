@@ -7,13 +7,14 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Brad has done
 
-Brad A. Myers — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending.
+Brad A. Myers — CMU HCI; **PBD**; **Garnet** (pull constraints, KR frame system, CMU Common Lisp, CLX); Peridot, C32; *All the Widgets*; VPL taxonomy. Don in lab ~1992–93. Invited to OpenLaszlo → Declare reunion as well as solo shows.
 
 ## Shared ground
 
 *Topics that connect Brad A. Myers's work to this repo — public themes only.*
 
-- Garnet: KR constraints, prototypes, PostScript driver, GLASS acronym
+- **OpenLaszlo reunion → Declare** — [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/); prototypes Rosetta with Ungar + Latta + Temkin
+- Garnet: pull constraints, KR frames, CMU CL, CLX, prototypes, PostScript driver, GLASS acronym
 - All the Widgets — CHI '90 widget history video; Don's pie menu clips
 - CMU 05-640 Interaction Techniques — guest lectures, Panopto archive
 - Pick, Click, Flick! (ixtbook.com) — Brad's interaction-techniques book
@@ -21,10 +22,14 @@ Brad A. Myers — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VP
 - HN 22978454 — Don defended Excel-as-VPL; cited C32 + Watch What I Do — [`../don-hopkins/visual-programming-excel-and-dimensionality.md`](../don-hopkins/visual-programming-excel-and-dimensionality.md)
 ## The hooks
 
-### 1. Show seed: `repo-shows/brad-myers/`
-walk the repo on air and build from the seed.
+### 0. OpenLaszlo reunion → Declare (optional group)
+[`invitation.md`](invitation.md) Option A. Live OL 5.0 + Declare. **What prototypes are** with
+Ungar (Self) + Latta (live objects) + Oliver ISP + Svelte 5. Garnet as the constraint ancestor.
 
-### 2. Garnet: KR constraints, prototypes, PostScript driver, GLASS acronym
+### 1. Show seed: `repo-shows/brad-myers/`
+Solo Garnet / PBD / catalogs — walk the repo on air.
+
+### 2. Garnet: pull constraints, KR frames, CMU CL, CLX, prototypes, GLASS
 
 ### 3. All the Widgets — how would you remake it today?
 CHI '90 widget history video; Don's pie menu clips. **Central beat:** if Brad shot *All the Widgets*

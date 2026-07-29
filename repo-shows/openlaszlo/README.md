@@ -25,7 +25,9 @@ ask what the *next* Laszlo looks like when the primary reader of the compiler is
 - **[David Temkin](../../characters/david-temkin/README.md)** — founder/CEO/CTO of Laszlo Systems; created OpenLaszlo; OL 5.0 + Declare; Mesa / In Formation.
 - **[Oliver Steele](../../characters/oliver-steele/README.md)** — Chief Software Architect; designed **LZX**, wrote the compilers/runtime, launched the open-source project. (Marvin Minsky's son-in-law.)
 - **[Henry Minsky](../../characters/henry-minsky/README.md)** — Laszlo software architect; relayed the news. (Marvin's son.)
-- **[David Ungar](../../characters/david-ungar/README.md)** (dream / optional) — Self; interviewed at Laszlo and got it; Self × MOOLLM object system.
+- **[David Ungar](../../characters/david-ungar/README.md)** (optional) — Self; interviewed at Laszlo and got it; Self × MOOLLM; **what prototypes are**.
+- **[Brad A. Myers](../../characters/brad-myers/README.md)** (optional) — Garnet / PBD; pull constraints, KR frames, CMU Common Lisp, CLX — ancestor of the constraint braid; prototypes with Ungar.
+- **[Craig Latta](../../characters/craig-latta/README.md)** (optional) — Caffeine / live objects / Morphic; prototypes without mush; Amsterdam.
 - **Bench:** LinkedIn Cc list — Adam Wolff, Antun Karlovac, Eric Bloch, Grig B., John Sundman, … + other Laszlo/UI people.
 
 ## Five acts
@@ -33,7 +35,7 @@ ask what the *next* Laszlo looks like when the primary reader of the compiler is
 1. **OpenLaszlo 5.0** — Explorer live; camera on the stage; reincarnate apps without rewrite.
 2. **Declare** — invent cinematography; calendar zoom; Inspector; language-as-reviewer; LZX→Declare rewrite bet.
 3. **Svelte 5 triangle** — Declare does **not** use Svelte; rune-like grain; Micropolis Wasm without DOM; lean into training (OL in corpus; Declare *names* the inheritance).
-4. **Instance Substitution + Self** — Does Declare obey Oliver's ISP? Pull Ungar; MOOLLM object system video [@16:16](https://www.youtube.com/watch?v=0uBO6ZAcVTE).
+4. **What prototypes are** — Ungar (Self) + Myers (Garnet) + Latta (live objects) + Oliver ISP + Declare anonymous subclasses + Svelte 5 runes. Not mush — a Rosetta table.
 5. **Mesa + In Formation** — spatial canvas vs chat-window OS; "computers make people easier to use."
 
 ## Threads

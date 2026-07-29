@@ -1,1 +1,1 @@
-👤 **Brad A. Myers** — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending.
+👤 **Brad A. Myers** — CMU HCI; **PBD**; **Garnet** (pull constraints, KR frames, CMU CL, CLX); *All the Widgets*; VPL taxonomy. Don in lab ~1992–93. Invite: [OL reunion → Declare](../../repo-shows/openlaszlo/) (prototypes w/ Ungar/Latta) and/or solo Garnet/PBD — whatever works.

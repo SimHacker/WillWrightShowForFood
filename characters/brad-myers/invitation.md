@@ -4,6 +4,7 @@ character_id: brad-myers
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/brad-myers-garnet-vpl.yml
+also_shows: [repo-shows/openlaszlo/]
 format: remote_or_in_person
 ---
 
@@ -11,6 +12,7 @@ format: remote_or_in_person
 
 *Send-ready draft — not yet sent. Brad A. Myers may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+
 Brad —
 
 We traded email in 2023 about the **Interaction Techniques** book chapter — pie menus vs marking
@@ -20,44 +22,43 @@ I worked in your **Garnet** lab (~1992–93), built the PostScript printing driv
 sent pie-menu demos to **All the Widgets**. I guest-lectured your **05-640** class in 2019 on pie
 menus — same semester Bill Atkinson and Dan Bricklin walked the room.
 
-I'd like to turn that long hallway into a **Repo Show** — a friendly recorded conversation whose
-stage is a public GitHub repo, following through to working code and credited ideas in public.
-**Show, don't tell.**
+I'd like to turn that long hallway into a **Repo Show** — stage is a public GitHub repo.
+**Show, don't tell.** Format flexible: **solo Garnet/PBD deep dive**, the
+**[OpenLaszlo reunion → Declare](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)**
+circle (where your constraints lineage *is* the plot), or whatever works.
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-**What I'd love to explore with you — your pick, any order, skip whatever bores you:**
+---
 
-- **Garnet → Svelte** — KR constraints, prototypes, declare relationships and let the system keep
-  them true. Don rode Garnet, OpenLaszlo, TurboGears, and now SvelteKit/MOOLLM — same braid,
-  different decades. [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
-- **Pick, Click, Flick! — the book** — your recently published interaction-techniques bible; walk
-  the taxonomy on air (not only pie menus — your pick of chapters). What belongs in the second
-  edition after forty more years of shipped UI?
-- **All the Widgets — remake spec** — your CHI '90 widget history video: **how would you shoot it
-  today?** What widgets, what capture method (runnable repo demos vs tape)? What's still missing
-  from the catalog — touch, games, voice, copilots?
-- **Pick, Click, Flick! — the pie menus section** — your interaction-techniques bible has my corner
-  of the catalog in it, and I'd love to open the book to that page on air: what the section gets
-  right, what the community still gets wrong, what belongs in the second edition. The 2023 thread,
-  continued on camera. [ixtbook.com](https://www.ixtbook.com/)
-- **PBD in the LLM era** — *Watch What I Do*, C32, VPL taxonomy (spreadsheets as VPL — still
-  the argument I cite on HN). Open courseware segment for your students if you want it.
-- **Acronym jam (optional)** — your [acronym scoreboard](https://www.cs.cmu.edu/~bam/acronyms.html),
-  C32's 32 C-words, and whether peer review literally *grew* the monster. Only if that's fun.
-- **The Two Catalogs (a pairing, if it appeals)** — Edd Coates's [Game UI Database](https://www.gameuidatabase.com/)
-  (Guinness World Record; 73,000+ shipped game screens, taxonomized) is *Pick, Click, Flick!*'s
-  mirror image: he catalogs from shipped screens inward, you catalog from the literature outward.
-  You two may well know each other already — I'd love to have you both on together to cross-reference
-  the catalogs and bounce ideas back and forth, real-time or time-shifted (annotated notes exchanged
-  through the repo work fine as an episode). Radial menus would be the obvious first crosswalk.
-  Seed: [The Two Catalogs](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-and-edd-interaction-catalogs.md)
-- **The Sentient Wait Cursor (dessert)** — your CHI '85 percent-done paper proved presence beats
-  precision; our microworld took that to its logical conclusion: a loading spinner who became a
-  stand-up comedian. Two deadpan parodies await your expert refereeing — a
-  [design white paper](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brad-myers/sentient-wait-cursor-proposal.md)
-  and a [YC application](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brad-myers/yc-application-wait-cursors-as-a-service.md)
-  for streaming comedians to elevators and hold music. Review harshly; it expects it.
+## Option A — Group: OpenLaszlo reunion → Declare (+ what prototypes *are*)
+
+With **David Temkin**, **Henry Minsky**, **Oliver Steele**, me, optionally **Dave Ungar**,
+**Craig Latta**, and other Laszlo/UI people. Live [OL 5.0](https://github.com/davidtemkin/openlaszlo-5.0)
++ [Declare](https://github.com/davidtemkin/declarelang).
+
+Your seat at the table: **Garnet** — pull constraints, KR frame system, CMU Common Lisp, CLX —
+as the ancestor OpenLaszlo and Declare still rhyme with. We could really get into **what prototypes
+are** with you and Ungar in the same room (Self simplicity × Garnet prototypes × LZX instance-first
+× Declare anonymous subclasses × Svelte 5 runes).
+
+Stage: [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)
+
+## Option B — Solo / catalog shows (still very welcome)
+
+- **Garnet → Svelte** — KR constraints, declare relationships and keep them true.
+  [`garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
+- **Pick, Click, Flick!** — walk the taxonomy; pie-menus chapter on air. [ixtbook.com](https://www.ixtbook.com/)
+- **All the Widgets — remake spec** — how would you shoot CHI '90 today?
+- **PBD in the LLM era** — *Watch What I Do*, C32, VPL taxonomy; open courseware if you want it.
+- **The Two Catalogs** — pairing with Edd Coates / Game UI Database if it appeals.
+- **Acronym jam / Sentient Wait Cursor** — dessert segments as before.
+
+## Option C — Whatever works
+
+Shorter call, written notes into the repo, reunion-only, solo-only, or "not now" — all honored.
+
+---
 
 **Format:** Remote is fine; Pittsburgh and Amsterdam both exist on the internet. **Zero homework — as much *homefun* as you are up to.**
 
@@ -65,17 +66,17 @@ stage is a public GitHub repo, following through to working code and credited id
 
 | Topic | Link |
 | --- | --- |
-| **Show seed** | [`repo-shows/brad-myers-garnet-vpl.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
-| **PBD vertical seed** | `brad-myers/pbd-in-llm-era.yml` |
-| **Don's Garnet thread** | [`../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) |
-| **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
+| **OpenLaszlo reunion show** | [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md) |
+| **Garnet / PBD show seed** | [`repo-shows/brad-myers-garnet-vpl.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
+| **Your guest page** | [`characters/brad-myers/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brad-myers) |
+| **Don's Garnet thread** | [`garnet-to-svelte…`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) |
+| **Temkin / Declare pack** | [`../david-temkin/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-temkin) |
 
-Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
-
-**Your response:** yes, later, too busy, or no — all honored gracefully.
+**Your response:** yes (reunion / solo / both / something else), later, too busy, or no — all
+honored gracefully.
 
 — Don Hopkins *(the User Interface Flower Child)* 💎🌀
 
-`💎 Garnet constraints` · `📼 All the Widgets` · `🥧 pie menus in the catalog` · `🤖 PBD × LLM`
+`💎 Garnet constraints` · `🟦 OpenLaszlo reunion` · `🥧 pie menus` · `🤖 PBD × LLM` · `🪞 prototypes with Ungar`
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

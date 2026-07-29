@@ -20,9 +20,16 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/craig-latta/
+  also_shows: [repo-shows/openlaszlo/]
+  note: "Caffeine solo / Vanessa memorial / OR OpenLaszlo reunion (prototypes + live objects with Ungar + Myers)"
 
 bio:
-  summary: "**Craig Latta** — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of **Black Page Digital**. Creator of **Caffeine** (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the **Context** minimal Squeak distribution, and **Catalyst** (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; divides his time between Amsterdam and Berkeley."
+  summary: "**Craig Latta** — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of **Black Page Digital**. Creator of **Caffeine** (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the **Context** minimal Squeak distribution, and **Catalyst** (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; Amsterdam ⇄ Berkeley. Invited to OpenLaszlo → Declare reunion (what prototypes are / live objects) as well as Caffeine and Vanessa memorial arcs."
+
+show_suggestions:
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OL reunion → Declare; live-objects / prototypes act with Ungar + Myers + Temkin" }
+  - { seed: ../../repo-shows/craig-latta/, what: "Solo — Caffeine live; Keep; Cursor vs liveness" }
+  - { seed: ../../repo-shows/remembering-vanessa-freudenberg.yml, what: "Memorial arc — Vanessa / SqueakJS; Dan + Alan warmly invited" }
 
 sources:
   wikipedia: null
@@ -39,7 +46,12 @@ sources:
       doc: keep.md
 
 see_also:
+  - { path: invitation.md, why: "A reunion / B Caffeine / C Vanessa / D whatever works" }
   - { path: keep.md, why: "Keep — reflective agent memory; Craig's Smalltalk whiteroom port" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OL → Declare reunion — prototypes + live objects" }
+  - { path: ../david-ungar/, why: "Self — pair on what prototypes are" }
+  - { path: ../brad-myers/, why: "Garnet prototypes / PBD — reunion circle" }
+  - { path: ../david-temkin/, why: "Declare / OL 5.0" }
   - { path: from-alan-kay.yml, why: "Qwaq 2008 intro via Alan; Vanessa memorial invite" }
   - { path: ../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md, why: "Don MVC flame → Morphic + Kay watchers — Craig show jam" }
   - { path: ../don-hopkins/sources/2005-2006-whatssa-controller-anyway.md, why: "Baypiggies + lua-l primaries — Morphic, ScriptX services" }

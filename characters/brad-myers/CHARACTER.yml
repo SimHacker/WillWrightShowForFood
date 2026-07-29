@@ -20,9 +20,15 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/brad-myers/
+  also_shows: [repo-shows/openlaszlo/]
+  note: "Solo Garnet/PBD/catalogs OR OpenLaszlo reunion → Declare (prototypes with Ungar/Latta/Temkin)"
 
 bio:
-  summary: "**Brad A. Myers** — CMU HCI professor; Garnet, Peridot, C32; *All the Widgets*; VPL taxonomy; programming by demonstration. Don worked in his lab (~1992–93). Warm email contact (2023); show proposed, consent pending."
+  summary: "**Brad A. Myers** — CMU HCI professor; expert in **programming by demonstration (PBD)**; developed **Garnet** (pull constraints, KR frame system, CMU Common Lisp, CLX); Peridot, C32; *All the Widgets*; VPL taxonomy. Don worked in his lab (~1992–93). Warm email contact (2023). Invited to OpenLaszlo → Declare reunion as well as solo Garnet/PBD shows — get into what prototypes *are* with Ungar et al."
+
+show_suggestions:
+  - { seed: ../../repo-shows/openlaszlo/, what: "Group — OL reunion → Declare; Garnet constraints/prototypes act with Ungar + Latta + Temkin" }
+  - { seed: ../../repo-shows/brad-myers/, what: "Solo — Garnet → Svelte; PBD × LLM; Pick Click Flick; All the Widgets remake" }
 
 show_topics:
   # Beyond Garnet/PBD/widgets — a fun, human segment Don wants on the show.
@@ -54,5 +60,15 @@ sources:
     - http://www.cs.cmu.edu/~bam/
     - "https://www.cs.cmu.edu/~bam/acronyms.html   # Brad's own acronym scoreboard"
     - "https://www.cs.cmu.edu/~garnet/   # Garnet project"
+    - { title: "OpenLaszlo 5.0 (Temkin)", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
+    - { title: "Declare (Temkin)", url: "https://github.com/davidtemkin/declarelang" }
   papers: []
   blogs: []
+
+see_also:
+  - { path: invitation.md, why: "A reunion / B solo / C whatever works" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OL → Declare reunion — constraints + prototypes act" }
+  - { path: ../david-temkin/, why: "Declare / OL 5.0" }
+  - { path: ../david-ungar/, why: "Self prototypes — pair on what prototypes are" }
+  - { path: ../craig-latta/, why: "Live objects / Morphic — reunion prototypes circle" }
+  - { path: ../don-hopkins/garnet-to-svelte-constraint-ui-lineage.md, why: "Garnet → Laszlo → Svelte braid" }
