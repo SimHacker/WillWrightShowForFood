@@ -141,6 +141,17 @@ and a chance to **memorialize Minsky** together, and recount the many places Don
 coexisted (Levity, Interval, ConnectedMedia, Pantomime). See [`../marvin-minsky/memorial.md`](../marvin-minsky/memorial.md),
 [`../cynthia-solomon/`](../cynthia-solomon/).
 
+**David is in the acknowledgments of Minsky's jokes paper.** AI Memo 603 — *Jokes and their Relation
+to the Cognitive Unconscious* (Nov 1980), Minsky's patch on Freud (censors suppress buggy *reasoning*,
+not just forbidden content) — closes with: *"I thank Howard Cannon, Danny Hillis, William Kornfeld,
+David Levitt, Gloria Rudisch, and Richard Stallman for suggestions."* Ask David what he remembers
+suggesting — the memo era is exactly his computational-jazz PhD years in Marvin's orbit. Natural
+co-memorial thread with [Gary Drescher](../gary-drescher/ideas.md) (whose schema mechanism supplies
+the memo's missing learning rule — censors as sign-flipped schemas) and via
+[`../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md`](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md).
+Bonus symmetry: Minsky's theory says humor and improvisation both live in the space between
+expectation and violation — David's thesis is about exactly that space, in music.
+
 **Don's firsthand history of Don ↔ David** — the **Music Hacker's Hangout** (office-mate Miller
 Puckette), **Harmony Grid** and **Hookup + MMP/Director**, VPL and the Body Electric rights chain,
 the **SIGGRAPH / Coco Conn SIGKids** serendipity ("HE did what I wanted to do!"), and the road stories

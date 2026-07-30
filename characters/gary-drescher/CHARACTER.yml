@@ -38,6 +38,8 @@ connections:
     - "https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift"
     - "https://github.com/SimHacker/moollm/tree/main/skills/schema"
   made_up_minds_essay: made-up-minds.md
+  ai_koan_canon: "Subject of the classic AI koan 'Drescher and the Toaster' (compiled by Danny Hillis, MIT AI Lab / Jargon File) — proselytizer offers a personality test 'because I want you to be happy'; Gary toasts it: 'I wish the toaster to be happy, too.' Simultaneously a subject of the lab's humor canon and author of the mechanism that explains it."
+  memo_603_resolution: "Minsky's AI Memo 603 (Jokes, Nov 1980) says censors are learned but never says how. Proposed resolution: a censor is a schema with the sign bit flipped; marginal attribution over one's own failures is the learning rule; laughter is the training signal. Prime interview thread — see ideas.md hooks 9-10."
 
 show_suggestions:
   - { seed: ../../repo-shows/gary-drescher/, what: "Made-Up Minds, remade — LLM grounding + live build on Henry's Python schema factory" }
@@ -67,6 +69,8 @@ see_also:
   - { path: ../will-wright/, why: "Microworld made-up minds — dream crossover guest" }
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the schema mechanism" }
   - { path: ../marvin-minsky/, why: "🕯️ MIT AI Lab orbit — PhD advisor; SoM" }
+  - { path: ../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md, why: "Memo 603 — censors; the schema-mechanism resolution is a prime interview thread" }
+  - { path: ../david-levitt/, why: "Thanked in Memo 603's acknowledgments — co-memorial angle for Marvin" }
   - { path: ../marvin-minsky/sources/2022-12-23-hn-society-of-mind.md, why: "Don HN 2022 — Made-Up Minds linked from SoM neat/scruffy comment" }
   - { path: ../henry-minsky/, why: "Friend; Python schema-factory; Leela co-founder/CTO" }
   - { path: ../milan-singh-minsky/, why: "Leela VP Product — leader; Gary's friend" }

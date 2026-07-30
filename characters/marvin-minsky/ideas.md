@@ -21,6 +21,14 @@
    HN 2022: [`sources/2022-12-23-hn-society-of-mind.md`](sources/2022-12-23-hn-society-of-mind.md)
 2. **Neat vs Scruffy** — Winston: no Kirchhoff for AI; diverse components. Don [34110544](https://news.ycombinator.com/item?id=34110544).
 3. **Made-Up Minds** — Gary Drescher schema mechanism as constructivist implementation kinship.
+   Sharpened: **censors ↔ schemas**. Memo 603 says censors ("negative meta-knowledge… may be a large
+   portion of all we know") are learned but never says how; Drescher's marginal attribution is the
+   missing rule — a censor is a schema with the sign bit flipped, laughter the training signal.
+   Living discussants: **Gary** ([hooks 9–10](../gary-drescher/ideas.md)) and **David Levitt**, who is
+   *thanked in the memo* along with Danny Hillis and RMS. The koan loop: Hillis compiled the AI koans;
+   one koan *stars Drescher* (the toaster); the memo thanks Hillis — same lab, same people, same years.
+   [MOOLLM derivation](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/MINSKY-JOKES.md) ·
+   [soul-model integration](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#minds-all-the-way-down--minsky-to-drescher)
 4. **K-lines in MOOLLM** — names as activation; Don as memorial discussant of the *use*, not the person.
 5. **Family wired lab** — Henry / Margaret / Julie on what SoM felt like at home and at Leela.
 6. **Perceptrons + Papert** — with Seymour memorial room; constructionist lineage trail.

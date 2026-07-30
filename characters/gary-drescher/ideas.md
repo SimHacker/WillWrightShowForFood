@@ -74,6 +74,50 @@ Determinism, genuine choice, acausal/subjunctive cooperation — philosophy turn
 
 PhD orbit → Society of Mind → schema mechanism → MOOLLM schemapedia. [`../marvin-minsky/`](../marvin-minsky/README.md) 🕯️
 
+Now with a specific thread to pull (hooks 9–10 below): Memo 603, the censors, and the koan canon —
+and a co-memorial angle with [David Levitt](../david-levitt/README.md), who is *thanked in the memo's
+acknowledgments* alongside Danny Hillis and RMS.
+
+### 9. Censors ↔ schemas — the advisor conversations we can only reconstruct
+
+Minsky's **AI Memo 603** (*Jokes and their Relation to the Cognitive Unconscious*, Nov 1980 —
+[digest + commentary](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/MINSKY-JOKES.md))
+patches Freud: censors suppress not just forbidden *content* but defective *reasoning* — and this
+"negative meta-knowledge… may be a large portion of all we know." The memo never specifies how
+censors get **learned**. The proposed resolution (derived live in a
+[MOOLLM transcript](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/examples/2026-07-30-difference-between-a-duck-transcript.md),
+now wired into the [soul model](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#minds-all-the-way-down--minsky-to-drescher)):
+**a censor is a schema with the sign bit flipped** — same context/action/result triple, result marked
+*harmful*, response *suppress*; **marginal attribution over one's own failures** is the missing
+learning rule; **laughter is the training signal** that mints a censor.
+
+**Ask Gary directly** — the memo is Nov 1980, his thesis years are the same lab, same decade:
+
+- Did he and Marvin ever discuss censors as *learnable* — was this mapping on a blackboard somewhere?
+- Does he buy it? Could the schema mechanism grow censors by running attribution over its own bugs?
+- Are synthetic items the right account of what a censor's trigger *is* (a minted concept over the
+  mind's own states — the mechanism pointed inward)?
+- Both halves refuse to fix the kernel (Minsky: "it hardly ever pays to alter a general mechanism to
+  correct a particular bug"; the schema mechanism never rewrites itself). Was that shared
+  epistemology explicit between them, or convergent?
+
+### 10. The toaster koan — Gary is in the canon
+
+**"Drescher and the Toaster"** is one of the classic AI koans compiled by **Danny Hillis** at the
+MIT AI Lab (Jargon File canon): a proselytizer offers Gary a personality test *"because I want you
+to be happy"* — Gary puts it in the toaster: *"I wish the toaster to be happy, too."*
+([MOOLLM analysis](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/examples/hacker-koans-drescher-toaster.yml))
+
+The loop that makes it heavy: Hillis, who compiled the koan, is *thanked in Memo 603* — the koan
+culture and the humor paper are the same lab, the same people, the same years. Gary is
+simultaneously a *subject* of the lab's humor canon and the author of the mechanism that explains
+why the canon is funny (the koan is a censor demonstration: refusing an invited frame by extending
+it to absurdity).
+
+**Ask Gary:** did it really happen? Who was the proselytizer — and was it a Scientology personality
+test, as the MOOLLM analysis suspects? How does it feel to *be* a koan? What's the story he'd tell
+about lab humor as its own oral tradition — and would he memorialize Marvin through it?
+
 ## Sources
 
 - [`made-up-minds.md`](made-up-minds.md)
