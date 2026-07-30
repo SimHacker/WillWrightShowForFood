@@ -45,6 +45,13 @@ Show gold: the pie-menu lineage doesn't start with a computer at all — it
 starts with a template in a draftsman's left hand, and the thing we lost
 wasn't a device but a *gathering place*.
 
+**The Ron Reisman rhyme:** this is the same principle behind
+[Ron Reisman](../../ron-reisman/ideas.md) hiring the PATCO controllers Reagan
+fired and teaching them to program at NASA Ames — easier than teaching
+programmers to control air traffic. Heinz was the 1967 edition: the domain
+expert who learns to program beats the programmer who guesses at the domain.
+He had something to bring to the game.
+
 ---
 
 ## Heinz answers Roy's blank-screen mystery — no light pen needed

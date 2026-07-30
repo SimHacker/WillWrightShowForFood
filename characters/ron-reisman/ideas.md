@@ -12,9 +12,18 @@ when **lives and fortunes** are at stake.
 ## 2. Controllers who program
 
 After Reagan fired **PATCO**, Ron hired fired controllers and taught them to program — domain experts
-first, programmers second. A Repo Show segment on **who should write safety software** (pairs with
+first, programmers second. Easier to teach a controller to program than a programmer to control air
+traffic. A Repo Show segment on **who should write safety software** (pairs with
 NeWS/FAA threads and [`../david-rosenthal/slots-all-the-way-down.md`](../david-rosenthal/slots-all-the-way-down.md)
 engineering culture themes).
+
+**The same principle, twenty years earlier: Heinz Lemke.** A 1950s German technical draftsman who
+brought his domain to programming — PIXIE's radial menus (1969) are the draftsman's symbol template
+digitized, pencil-hand and template-hand becoming light-pen and adaptive menu
+([the origin story, in Heinz's own words](../heinz-lemke/sources/2026-07-30-pixie-storyline-thread.md)).
+He had something to bring to the game. Ron's PATCO hires and Heinz's drafting board are the same
+argument from two eras: **the domain expert who learns to program beats the programmer who guesses
+at the domain.** A cross-memorial / cross-guest segment waiting to happen.
 
 ## 3. Ames tour — simulators, AR tower, Convolvotron
 
