@@ -72,9 +72,17 @@ A round optical sight / periscope head with mode selectors **ОСНОВНАЯ** 
 The back of a circular pressure **hatch**, showing the radial locking arms and the
 **ВЫРАВНИВАНИЕ ДАВЛЕНИЯ** (pressure equalization) handle.
 
-![Cosmonaut ejection / landing seat alongside a hand-controller column](russian-ejection-seat.png)
+![Contoured spacecraft seat with harness — possibly a primate couch — alongside a hand-controller column](russian-ejection-seat.png)
 
-A contoured cosmonaut **seat** with harness, next to a hand-controller column.
+A contoured **seat** with harness, next to a hand-controller column. Look at the
+size: this may be a **monkey seat**. The couch is small for an adult cosmonaut —
+and a Vostok-era ejection seat would be a massive assembly built to throw a
+suited human clear of the capsule, not this trim molded shell. The Soviet
+**Bion** biosatellite program (Kosmos flights, 1983–1996) flew pairs of rhesus
+monkeys — Abrek and Bion, Dryoma and Yerosha, Lapik and Multik — strapped into
+exactly this kind of contoured restraint couch, trained to work levers and
+controllers in flight. A primate couch beside a hand-controller column would be
+a very on-brand corner of this collection.
 
 ## The collection, racked up
 
