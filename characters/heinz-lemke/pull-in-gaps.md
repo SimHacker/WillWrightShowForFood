@@ -90,6 +90,15 @@ Newman & Sproull *Principles of Interactive Computer Graphics* (~1973) — ref 5
 
 ## Gaps — still to pull in
 
+### heinz_1960_draftsman_drawing
+
+**NEW (2026-07-30 email):** Heinz's own 1m × 2.5m technical drawing from 1960, digitized by
+him days before — attached to his 30 July email explaining that PIXIE's radial menus digitized
+the draftsman's symbol template (pencil one hand, template the other → light pen + adaptive
+radial menu, free hand on TTY). The physical prehistory of radial menus; prime show
+illustration. Ask Heinz for the file / permission to publish.
+→ [sources/2026-07-30-pixie-storyline-thread.md](sources/2026-07-30-pixie-storyline-thread.md)
+
 ### heinz_cambridge_word_doc
 
 Heinz Word doc summarizing Cambridge work (Don asked permission to Medium-ify). From HeinzLemke export or Don archive.

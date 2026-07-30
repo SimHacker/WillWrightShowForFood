@@ -1,7 +1,7 @@
 # PIXIE email thread — chronological index
 
 **Subject:** Invitation to PIXIE / Rainbow Repo Show interview → PIXIE/Rainbow, Sketchpad, and Object-Oriented Design  
-**Span:** 4 July – 29 July 2026
+**Span:** 4 July – 30 July 2026
 
 | Date | Doc | Highlights |
 |------|-----|------------|
@@ -25,6 +25,7 @@
 | **24 Jul** | [`2026-07-24-tty-film-loop-titles.md`](2026-07-24-tty-film-loop-titles.md) | Don 20:47 (+fwd to Howard): washed-out TTY paper in the 1969 film → overlay any text; loopable CR LF segment for titles/credits; Tog's Infinite Monkeys precedent; escalates to **diegetic terminal emulator** (SIMH console printing onto the film) |
 | **28 Jul** | [`2026-07-28-pixie-storyline-thread.md`](2026-07-28-pixie-storyline-thread.md) | Heinz: **Oldfield** insisted on rebuildable docs (→ 210pp thesis); PDP-9 not PDP-8 as 18-bit sibling; Lowe 1970 MSc; real-time debugging. Don bridges to **Duckmouse** / Pete book / Arthur poster scan. Alan: Wes Clark LINC/TX-2/IMP; Popplestone; Bletchley day trip. **Roy: `.oct`→`.rim` loads in SIMH; step OK; GO blank — needs light pen** → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md) |
 | **29 Jul** | [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) | **Andrew:** Multipatch = PDP-7 only ~4K (no Titan, ASR-33, paper tape); Multiobject = Titan-linked 16K→24K, 100-word link, P.J. Payne plane intersections. **Corollary: Multipatch-first recreation.** **Lars:** SIMH custom device = `pdp18b_foo.c`; 340 char gen already; display-list subroutines provisional/untested |
+| **30 Jul** | [`2026-07-30-pixie-storyline-thread.md`](2026-07-30-pixie-storyline-thread.md) | **Heinz: the draftsman origin of radial menus** — 1950s symbol template in one hand + pencil in the other → light pen + adaptive radial menu, other hand free for TTY; **1m×2.5m 1960 drawing digitized** (pull-in); the tilted drawing board as lost social meeting point. **Answers Roy's GO-blank mystery:** thesis p.189 — address switches **22** + START = clean start, light buttons + tracking cross appear, no pen interrupt needed |
 
 ## Pull-ins still open
 
