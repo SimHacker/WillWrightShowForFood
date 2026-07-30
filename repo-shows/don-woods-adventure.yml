@@ -26,6 +26,10 @@ ensemble_option:
   with: characters/lars-brinkhoff/
   arc: "Crowther's cave (1976) → Woods's 350-point canon (1977) → Zork and Infocom → Knuth's advent.w (1998) → the cave running live on preserved iron."
 
+pair_option:
+  with: repo-shows/woods-and-adams-adventurers.yml
+  arc: "The two Adventurers — Woods + Scott Adams: the free mainframe cave meets the first adventure ever sold."
+
 ties_to:
   - characters/don-woods/
   - characters/donald-knuth/sources/adventure-knuth/

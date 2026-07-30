@@ -34,6 +34,10 @@ format:
   audience_qa: true
   homeplay: "Author a tiny adventure as data; compile it; share the self-contained web page or a PR."
 
+ensemble_option:
+  with: ../woods-and-adams-adventurers.yml
+  arc: "The two Adventurers — Don Woods (Crowther/Woods 1977, the free mainframe cave) + Scott Adams (Adventureland 1978, the first adventure ever sold). Both One Lousy Point stamps presented on air."
+
 ties_to:
   - ../../characters/scott-adams/invitation.md
   - ../../characters/scott-adams/ideas.md

@@ -12,6 +12,8 @@ copyright **"Don Woods and Don Knuth"**. The MOOLLM kitchen already issued his
 [One Lousy Point stamp](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml).
 
 **Invitation:** draft — [invitation.md](invitation.md). Ensembles: two-Dons NeWS episode;
-[Lars Brinkhoff](../lars-brinkhoff/) PDP-10 live boot; [Scott Adams](../scott-adams/) lineage.
+[Lars Brinkhoff](../lars-brinkhoff/) PDP-10 live boot;
+[**the two Adventurers** with Scott Adams](../../repo-shows/woods-and-adams-adventurers.yml) —
+free mainframe cave meets first sold adventure.
 
 Read next: [README](README.md) · [ideas](ideas.md) · [CARD.yml](CARD.yml) · [CHARACTER.yml](CHARACTER.yml)

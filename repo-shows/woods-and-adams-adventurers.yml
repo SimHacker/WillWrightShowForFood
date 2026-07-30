@@ -1,0 +1,46 @@
+# SHOW SEED — Don Woods + Scott Adams: the two Adventurers
+# Seed. The mainframe cave and the 16K frontier, in one room at last.
+
+show:
+  id: woods-and-adams-adventurers
+  title: "Two Adventurers — You Are Standing at a Fork in the Road"
+  type: pair
+  host: Don Hopkins
+  guests: ["Don Woods", "Scott Adams"]
+  topic: "The two founding branches of the adventure game, told by their authors: Woods's Crowther/Woods 350-point canon (PDP-10 FORTRAN, free, passed hand to hand on the ARPANET) and Adams's Adventureland (1978, TRS-80, 16K, the first text adventure ever SOLD) — two data-driven world engines, two distribution models, one genre."
+  status: seed
+
+why_this_pair:
+  - "They are the fork itself: Woods canonized the free mainframe cave (1977); Adams proved a world could fit in 16K and be a PRODUCT (1978). Every adventure since walks one of their two roads."
+  - "Same deep design insight, arrived at independently: the adventure as DATA — Woods's rooms/objects tables in FORTRAN, Adams's database + tiny portable interpreter (the adventure compiler before it had a name)."
+  - "Perfect contrast interview: SAIL grad student vs. Florida micro entrepreneur; give-it-away vs. shrink-wrap; 350 points of mainframe luxury vs. two-word parser in 16K."
+  - "Scott is already warm (Jan 2026 correspondence, 'sucked me in' on MOOLLM); Woods is a former Sun/TNT colleague of Don's — both reachable through real relationships."
+  - "The MOOLLM kitchen already honors BOTH: the Spelunker Today matchbook yields the One Lousy Point Donald Woods Stamp, and the Adventurer's Guild matchbook yields the One Lousy Point Scott Adams Stamp. Mail both on air; present each guest with the other's stamp."
+
+threads:
+  the_fork: "1976 Crowther's cave → 1977 Woods's canon → 1978 two branches: Infocom/Zork on the mainframe side, Adventure International on the micro side. Have each author narrate the other's branch as they saw it at the time."
+  data_driven_worlds: "Woods's tables vs. Adams's database/interpreter split — the same compile-once-run-everywhere idea from opposite ends of the machine-size spectrum; walk both sources on air."
+  constraint_craft: "350 points of PDP-10 memory luxury vs. a whole world in 16K with a verb-noun parser — what each constraint taught, and what modern LLM adventures forget."
+  permission_and_product: "Woods emailed crowther@ every ARPANET host to ask PERMISSION; Adams founded a company to SELL adventures. Open-source etiquette and commercial software, born the same year, on stage together."
+  parser_to_llm: "Two-word parser → Infocom ZIL → MOOLLM rooms-as-directories. Where the genre's founders think natural-language play should go next."
+  homeplay: "Audience mails both MOOLLM matchbooks; both One Lousy Point stamps as episode badges."
+
+format:
+  live: true
+  audience_qa: true
+  notes: "Open with the double stamp ceremony. Boot the 1977 Adventure on emulated PDP-10 (Lars Brinkhoff assist) beside Adventureland in a TRS-80 emulator — both caves running side by side. Close with each Adventurer playing the other's game for the first time on air, if they'll admit it."
+
+solo_options:
+  - repo-shows/don-woods-adventure.yml
+  - repo-shows/scott-adams/
+
+ties_to:
+  - characters/don-woods/
+  - characters/scott-adams/
+  - characters/donald-knuth/sources/adventure-knuth/
+  - characters/lars-brinkhoff/
+  - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml
+
+consent:
+  don-woods: not_yet_asked
+  scott-adams: correspondence_verified (solo show; pair not yet proposed)

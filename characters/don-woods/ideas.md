@@ -54,5 +54,5 @@ the invitation existed — let him score the final point of the episode with it.
 - **Woods solo** — Adventure repo walk ([show seed](../../repo-shows/don-woods-adventure.yml))
 - **Woods + Don Hopkins** — the two-Dons NeWS/TNT episode
 - **Woods + Lars Brinkhoff** — PDP-10 restoration + live original Adventure
-- **Woods + Scott Adams** — the mainframe cave meets the 16K home-computer branch
+- **Woods + Scott Adams** — the two Adventurers: the mainframe cave meets the 16K home-computer branch ([show seed](../../repo-shows/woods-and-adams-adventurers.yml)) — both already have One Lousy Point stamps in the MOOLLM kitchen
 - **Woods × Knuth room** — even without Knuth live, advent.w is a co-authored text to read from
