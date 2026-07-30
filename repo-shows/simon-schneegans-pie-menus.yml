@@ -1,0 +1,34 @@
+# SHOW SEED — Simon Schneegans: baking pie menus for a dozen years
+# Seed. The living continuation of the pie-menu lineage.
+
+show:
+  id: simon-schneegans-pie-menus
+  title: "The Pie Baker — Trace/Coral → Gnome-Pie → Fly-Pie → Kando"
+  type: solo
+  host: Don Hopkins
+  guests: ["Simon Schneegans"]
+  topic: "A dozen-plus years of continuous pie-menu design iteration: thesis menus, Gnome-Pie, the Wayland wars, and Kando — cross-platform marking menus with a WYSIWYG editor anyone can use."
+  status: seed
+
+why_this_guest:
+  - "Longest continuous pie-menu design iteration by anyone, anywhere — and all of it free software."
+  - "Kando ships the CHI '88 argument: users crafting their own menus (WYSIWYG editor, themes, achievements)."
+  - "His Wayland post-mortems and Electron trade-off writing are models of honest maintainer engineering."
+  - "Don has championed his work on HN since 2018; Simon engaged generously in the Kando Show HN thread."
+
+format:
+  live: true
+  audience_qa: true
+  notes: "Build a Kando menu for this repo live on stream — every show artifact one gesture away. Walk the thesis videos; diff Trace-Menu ideas against Kando's shipped design."
+
+ensemble_option:
+  with: repo-shows/ben-and-heinz-pie-menus.yml
+  arc: "1969 PIXIE (Lemke) → CHI '88 study (Shneiderman + Hopkins) → Kando (Schneegans) — the whole radial lineage in one room."
+
+ties_to:
+  - characters/simon-schneegans/
+  - repo-shows/ben-and-heinz-pie-menus.yml
+  - repo-shows/pie-menus-retrospective.yml
+  - repo-shows/pixie-pie-menus-pdp7.yml
+
+consent: not_yet_asked

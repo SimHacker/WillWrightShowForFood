@@ -1,0 +1,51 @@
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: simon-schneegans
+  name: "Simon Schneegans"
+  type: invitation
+  signifier: "🥧"
+  status: living
+  field: "Pie menus for a living ecosystem — Gnome-Pie, Fly-Pie, Kando; GNOME eye-candy (Burn-My-Windows, Desktop Cube); CosmoScout VR"
+  home: characters/simon-schneegans/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/simon-schneegans-pie-menus.yml
+
+bio:
+  summary: "**Simon Schneegans** — German developer and researcher who has been building and refining pie menus for well over a decade: thesis work on **Trace-Menus** and **Coral-Menus** (~2012), **Gnome-Pie** (the circular launcher for Linux, Vala/GTK/Cairo), **Fly-Pie** (its GNOME Shell successor), and now **Kando** — a cross-platform (Windows/macOS/Linux) open source marking/pie menu with a WYSIWYG editor, CSS themes, sound themes, and an achievement system. Also the author of beloved GNOME extensions (**Burn-My-Windows**, **Desktop Cube**) and a developer on **CosmoScout VR** at DLR."
+
+pie_menu_lineage:
+  fact: "Simon is the most persistent pie-menu implementer of his generation — a dozen-plus years of continuous design iteration from academic thesis (trace/coral menus, with sub-menu preview nubs and reserved roll-back slices) through Gnome-Pie's Fitts's-law launcher to Kando's cross-platform marking menus."
+  don_on_simon_2018: "https://news.ycombinator.com/item?id=17106453 — 'I'm very impressed by Simon Schneegans' work on Gnome-Pie... And especially his delightful thesis work.'"
+  don_on_simon_2024: "https://news.ycombinator.com/item?id=42525290 — on the Kando Show HN: 'not only do you totally get the inherent advantages and joys of pie menus... but you also have an impeccable sense of design and creativity.'"
+  thesis_videos:
+    trace_menu: "https://vimeo.com/51073078"
+    coral_menu: "https://vimeo.com/51072812"
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "Kando — the ultimate pie menu for power users", url: "https://kando.menu/" }
+    - { title: "Gnome-Pie homepage", url: "https://schneegans.github.io/gnome-pie.html" }
+    - { title: "Gnome-Pie 0.7.1 — the Wayland problem, honestly documented", url: "https://schneegans.github.io/news/2017/07/09/gnome-pie-071.html" }
+    - { title: "Show HN: Kando (Dec 2024, with Don in the thread)", url: "https://news.ycombinator.com/item?id=42525290" }
+    - { title: "GitHub — Schneegans (Kando, Fly-Pie, Burn-My-Windows, Desktop Cube, Gnome-Pie)", url: "https://github.com/Schneegans" }
+    - { title: "Don's 2018 HN praise (Pie Menus 30-Year Retrospective thread)", url: "https://news.ycombinator.com/item?id=17106453" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: ideas.md, why: "Conversation hooks — the pie menu lineage show" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "The 1969-1988 pie menu prehistory pair — Simon is the living continuation" }
+  - { path: ../../repo-shows/pie-menus-retrospective.yml, why: "CHI '88 retrospective seed" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

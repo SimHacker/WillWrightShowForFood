@@ -1,0 +1,76 @@
+# CARD — simon-schneegans (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: simon-schneegans
+  name: "Simon Schneegans"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Simon Schneegans"
+  title: "The Pie Baker — a dozen years of circular menus, from thesis to Kando"
+  rarity: rare
+  signifier: "🥧"
+  flavor: "Just throw your mouse approximately in the right direction. — kando.menu"
+
+abilities:
+  - id: BAKE-PIE
+    name: "Bake Pie"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: bakePie
+      signature: "bakePie(platform) → working pie menu on Windows, macOS, and Linux"
+      score_when:
+        - trigger: audience_learns_without_lecture
+          weight: 0.85
+    effect: "Demonstrate a live Kando menu — Fitts's law, marking gestures, subsubsubmenu selection below a second."
+    verifiable: "https://kando.menu/ — cross-platform, open source, free"
+    combos_with: [TRACE-LINEAGE, DEFEND-THE-STACK]
+
+  - id: TRACE-LINEAGE
+    name: "Trace the Lineage"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: traceLineage
+      signature: "traceLineage(2012..now) → trace/coral menus → Gnome-Pie → Fly-Pie → Kando"
+      score_when:
+        - trigger: design_iteration_made_visible
+          weight: 0.9
+    effect: "Walk the design decisions across a dozen years of pie menus — what survived, what was cut, and why (sub-menu preview nubs, reserved roll-back slices, marking gestures)."
+    verifiable: "Thesis videos (vimeo 51073078, 51072812); schneegans.github.io/gnome-pie.html; kando.menu"
+    combos_with: [BAKE-PIE]
+
+  - id: DEFEND-THE-STACK
+    name: "Defend the Stack"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: defendStack
+      signature: "defendStack(criticism) → reasoned trade-off analysis, receipts included"
+      score_when:
+        - trigger: honest_engineering_tradeoffs
+          weight: 0.8
+    effect: "Engage the 'but it's Electron' and 'but Wayland' critics with documented trade-off analyses instead of defensiveness — a masterclass in maintainer temperament."
+    verifiable: "HN 42525290 (Electron discussion); schneegans.github.io/news/2017/07/09/gnome-pie-071.html (Wayland limitations, honestly enumerated)"
+    combos_with: [BAKE-PIE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
