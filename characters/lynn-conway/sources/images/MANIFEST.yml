@@ -1,0 +1,39 @@
+# Lynn Conway — archived image sources from her VLSI site
+# Local copies for offline viewing + memorial work. Credit Lynn / U-M pages.
+# Sidecar: each file has a sibling <name>.yml (YAML Jazz).
+
+collection:
+  id: lynn-conway-vlsi-images
+  character: lynn-conway
+  purpose: |
+    Images Don highlighted on HN while contextualizing Lynn Conway's 1978 MIT
+    VLSI course, MPC78/MPC79 multiproject chips, Steele Lisp microprocessor,
+    Levitt project, Clark Geometry Engine. Copied here in case the umich host
+    goes offline — always credit and link the live source.
+  credit: |
+    Photographs and materials published by Lynn Conway on her University of
+    Michigan pages (ai.eecs.umich.edu/people/conway/). Memorial / fair-use
+    archival copy for portrayal and education — not a claim of ownership.
+  primary_site: https://ai.eecs.umich.edu/people/conway/conway.html
+  mit78_index: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  vlsi_archive: https://ai.eecs.umich.edu/people/conway/VLSI/VLSIarchive.html
+  retrieved: 2026-07-29
+  highlighted_by: don-hopkins
+  hn_seed_comments:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722", when: 2015-01-09, why: "Vintage VLSI porn — class photos, chip halves, checkplot, wafer; Levitt + Steele callouts" }
+    - { id: 8861178, url: "https://news.ycombinator.com/item?id=8861178", when: 2015-01-09, why: "MPC78 project map + roster; Clark Geometry Engine / MPC79 Stanford die" }
+    - { id: 40649026, url: "https://news.ycombinator.com/item?id=40649026", when: 2024-06-11, why: "Memorial — links SU-BK1 Geometry Engine die + MPCAdv narrative" }
+    - { id: 45427516, url: "https://news.ycombinator.com/item?id=45427516", when: 2025-09-30, why: "Re-links MIT78 / InstGuide / reminiscences; points back to 8860722" }
+
+items:
+  - file: mit78-class-photo-left.jpg
+  - file: mit78-class-photo-right.jpg
+  - file: mit78-chip-photo-1.jpg
+  - file: mit78-chip-photo-2.jpg
+  - file: mit78-mpc78map.gif
+  - file: mit78-status-chalkboard.jpg
+  - file: mit78-checkplot.jpg
+  - file: mit78-wafer.jpg
+  - file: mpc79-stanford-bk-die.jpg
+  - file: mpc79-chip-photos.pdf
+  - file: steele-lisp-processor-layout-map.jpg

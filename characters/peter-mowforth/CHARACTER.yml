@@ -1,0 +1,79 @@
+# Peter Mowforth — invitation portrayal. NOT Peter Mowforth.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: peter-mowforth
+  name: "Peter Mowforth"
+  also_known_as: ["Pete Mowforth", "Dr Peter Mowforth"]
+  type: invitation
+  signifier: "🤖📚"
+  status: living
+  field: "Turing Institute cofounder/director; First Robot Olympics; machine learning → ecommerce (INDEZ); people-first book on the Institute"
+  home: characters/peter-mowforth/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  note: >
+    Warm long-running contact (HyperLook hunts, Wikipedia Turing Institute page,
+    WorldCon 2024 Glasgow, Apr 2026 Duckmouse/book thread). Ask about the book +
+    Olympics poster/photos + SWIFT/Lockerbie history — not a cold invite.
+
+bio:
+  summary: >
+    **Dr Peter Mowforth** — cofounder and director of Glasgow's **Turing Institute**
+    with **Donald Michie** and **Tim Niblett**; organised the accidental-then-legendary
+    **First Robot Olympics** (1990; Guinness; Pete's photos); HyperLook-era colleague
+    of Arthur van Hoff and Don Hopkins. Later CEO of **INDEZ** (Glasgow ecommerce —
+    ML from Turing still earning its keep). Writing a **people-first book** about the
+    Institute (Apr 2026: asked Don for anecdotes; Chapter-one PDF pending deposit).
+    Keeper of Turing orphans mail and memorials (Tim Niblett 2022; Jim Alty news).
+    Enduring Don compliment: "complete technicolour madness" — and he dislikes beige people.
+
+tags:
+  - turing-institute
+  - robot-olympics
+  - hyperlook
+  - glasgow
+  - book-in-progress
+  - indez
+  - machine-learning
+
+relationships:
+  donald_michie: "Cofounded Turing Institute; Duckmouse eyewitness (Penny Montgommery phone); book subject"
+  tim_niblett: "Cofounder; Tim named the Institute; Pete announced Tim's death to the orphans (Jun 2022)"
+  arthur_van_hoff: "HyperLook / MIRU → Turing; Olympics poster gift for Arthur's 60th; DAT-tape HyperLook hunt"
+  don_hopkins: "Turing Institute Feb–Sep 1992 orbit; HyperLook/SimCity; ongoing mail 2010–2026"
+  doug_scoular: "Named PdB Pure Dead Brilliant; HyperLook recovery Cc"
+  danny_pearce: "HyperLook team; ski-gang memorials"
+  jim_richmond: "ONR double-pay story; Jim kept tapes in garage (Pete: Jim died)"
+  jim_alty: "Executive Director era; pipe-on-plane-to-Paris ESPRIT story"
+  sue_mowforth: "Opened Olympics with Dr Who (Sylvester McCoy) — first-robot-olympics.yml"
+  gill_mowforth: "Partner; WorldCon 2024 Rome window + Glasgow hospitality"
+
+public:
+  linkedin: "https://www.linkedin.com/in/mowforth/"
+  indez: "https://www.indez.com"
+  wikipedia_turing_institute: "https://en.wikipedia.org/wiki/The_Turing_Institute"
+  wikipedia_robot_olympics: "https://en.wikipedia.org/wiki/First_Robot_Olympics"
+  lockerbie_www_linkedin: "https://www.linkedin.com/pulse/lockerbie-world-wide-web-dr-peter-mowforth-1se0e/"
+
+see_also:
+  - { path: invitation.md, why: "Draft invite — book + Olympics + Turing orphans" }
+  - { path: CARD.yml, why: "Interface sniff" }
+  - { path: sources/README.md, why: "Curated deposits — no raw email dump" }
+  - { path: ../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md, why: "Duckmouse clarifications + book ask (Apr 2026)" }
+  - { path: ../don-hopkins/media/turing-institute/first-robot-olympics.yml, why: "Olympics director + photo credit" }
+  - { path: ../donald-michie/, why: "Duckmouse memorial — Pete as discussant + cofounder" }
+  - { path: ../tim-niblett/, why: "Memorial — Pete announced; Tim named the Institute" }
+  - { path: ../arthur-van-hoff/, why: "HyperLook partner; poster gift" }
+  - { path: ../don-hopkins/media/turing-institute/INDEX.yml, why: "Media room" }
+
+pending_deposit:
+  - "Pete Mowforth Chapter-one.pdf (attached Apr 2026 Duckmouse mail) — not yet in-repo"

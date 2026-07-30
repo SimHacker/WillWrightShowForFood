@@ -38,6 +38,8 @@ memorial:
     # Thesis committee & advised research — shaped by Marvin without being 'his' students
     - { who: ivan-sutherland, why: "Sketchpad (PhD 1963) — Shannon supervised; Minsky on the committee; thesis acknowledgments credit Shannon + Minsky with giving 'Sketchpad much of its present character'" }
     - { who: ken-kahn, why: "PhD 1979 at the AI Lab Marvin co-directed ('Creation of Computer Animation from Story Descriptions' — advisor Carl Hewitt, NOT Marvin; Minsky + Papert reported on committee); Logo group; ToonTalk constructionism" }
+    - { who: carl-hewitt, why: "🕯️ PhD student (Actors / Planner); Ken Kahn's advisor — memorial room" }
+    - { who: warren-teitelman, why: "🕯️ Pilot thesis under Minsky; DWIM / Interlisp — memorial room" }
     # Students of the milieu, colleagues, and documented friends
     - { who: ray-kurzweil, why: "Corresponded with Marvin from high school; invited to visit; went to MIT expressly to study with him (B.S. 1970)" }
     - { who: alan-kay, why: "AI/personal-computing peer shaped by the same MIT/ARPA milieu" }
@@ -69,7 +71,6 @@ memorial:
     - { who: "Ed Fredkin", died: 2023, why: "Triadex Muse co-inventor with Marvin; digital physics; Project MAC — also the CA thread (Margolus, Toffoli)" }
     - { who: "Push Singh", died: 2006, why: "His doctoral student and closest late-career collaborator — commonsense computing (Open Mind); was to join the MIT Media Lab faculty" }
     - { who: "Patrick Winston", died: 2019, why: "His PhD student; directed the AI Lab after him (1972–1997); story-understanding lineage" }
-    - { who: "Carl Hewitt", died: 2022, why: "His PhD student (actor model, Planner); advisor of Ken Kahn — the committee-and-milieu thread runs through him" }
     # NOTE: Gloria Rudisch Minsky (his wife, pediatrician) is LIVING (retired Brookline 2021).
     # EDITORIAL DECISION (Don, July 2026): no character directory, invitation, or show for Gloria.
     # We model only the family members we plan to interview or memorialize — not every relation.
@@ -111,15 +112,23 @@ sources:
 
 see_also:
   - { path: sources/jokes-and-the-cognitive-unconscious.md, why: "Humor as cognitive bug recognition — AI Memo 603" }
+  - { path: sources/2022-12-23-hn-society-of-mind.md, why: "HN SoM — neat/scruffy + Drescher Made-Up Minds" }
+  - { path: ideas.md, why: "Discussant hooks" }
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ../../process/hn-harvest/marvin-minsky.md, why: "Reviewed HN IDs" }
   - { path: ../ultimate-machine/, why: "His 1952 'Ultimate Machine,' now a fictional bot mascot here (never speaks as him)" }
   - { path: ../henry-minsky/, why: "His son — can discuss him on air" }
   - { path: ../margaret-minsky/, why: "His daughter — can discuss him on air" }
   - { path: ../seymour-papert/, why: "🕯️ Co-director of the AI Lab; Perceptrons co-author; constructionism" }
   - { path: ../gary-drescher/, why: "His PhD student — schema mechanism (Made-Up Minds); the constructivist branch of his lineage, alive at Leela + MOOLLM" }
+  - { path: ../gary-drescher/made-up-minds.md, why: "Constructivist AI Don linked on the SoM HN thread" }
   - { path: ../david-levitt/, why: "His doctoral student — AI music Sc.D. (1985); Don's dear friend; memorializing Marvin together is a planned show beat (david-levitt/ideas.md hook 7)" }
   - { path: ../ray-kurzweil/, why: "Wrote to Marvin from high school → studied with him at MIT; memorial discussant" }
   - { path: ../ivan-sutherland/, why: "Sketchpad thesis committee — Shannon + Minsky credited in the acknowledgments" }
+  - { path: ../carl-hewitt/, why: "🕯️ Actors / Planner — PhD student memorial" }
+  - { path: ../warren-teitelman/, why: "🕯️ Pilot / DWIM — Minsky PhD student memorial" }
+  - { path: ../stewart-brand/, why: "The Media Lab book — SoM-era culture adjacency (HN beat)" }
+  - { path: ../will-wright/, why: "Many little systems / Simulator Effect vs one opaque model" }
   - { path: ../cynthia-solomon/, why: "Her YouTube channel preserves rare Marvin footage — memorial source material" }
   - { path: ../jean-piaget/, why: "🕯️ Constructivism — the developmental root of the lab's learning work" }
   - { path: ../ron-reisman/, why: "🕯️ Flies Ron's Ames flight simulator in documented video — memorial pairing" }

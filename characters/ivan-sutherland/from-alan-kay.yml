@@ -1,0 +1,44 @@
+# What Alan Kay says about Ivan Sutherland — public sources only
+# Index: ../alan-kay/people-index.yml
+# Yoot companion: YootTower/.../People.md § Ivan Sutherland
+
+character: ivan-sutherland
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay saw Sketchpad's use of objects and instances (master drawings + constraints) as one of
+    the key precedents for object-oriented programming, alongside Simula and the B5000.
+    Sutherland later co-founded Evans & Sutherland and taught at Utah while Kay was a grad student.
+    Quora: Sketchpad as "monumentally wonderful" interactive declarative CAD+sim — show what you
+    want (pictures + constraints); solver maintains truth. Relational / requirements programming
+    Kay now contrasts with pure messaging. Yoot People.md compresses this for the 1993 interview.
+
+sources:
+  yoot_people:
+    url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+    section: "Ivan Sutherland"
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md
+      topics: [Sketchpad, constraints, declarative CAD+sim]
+    - recap: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
+      topics: [Sketchpad objects/instances, relational vs messaging, MVC seed]
+  hopL:
+    - "Early History of Smalltalk — Sketchpad among formative 1960s ideas (worrydream / Yoot local copy)"
+
+quotes:
+  - text: "Monumentally wonderful."
+    about: Sketchpad as interactive declarative CAD+sim
+    source: declarative-whats-vs-hows.md (Kay Quora paraphrase — verify live Quora before formal cite)
+
+show_hooks:
+  - "Sketchpad constraints → PIXIE / Kay declarative whats"
+  - "Utah Ivan-period — Kay grad student; Armit Coons patches awe"
+  - "Sword of Damocles → Lanier / modern HMD — neighbor segment"
+  - "Master/instance drawings as proto-OOP (with Simula + B5000)"
+
+see_also:
+  - ../ivan-sutherland/CHARACTER.yml
+  - ../ivan-sutherland/sketchpad-and-descendants.md
+  - ../andrew-armit/from-alan-kay.yml
+  - ../../process/yoot-people-wwsff-map.yml

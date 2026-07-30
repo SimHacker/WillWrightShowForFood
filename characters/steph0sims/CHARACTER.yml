@@ -1,4 +1,5 @@
 # Steph0Sims — portrayal. NOT Steph.
+# Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
 character:
   id: steph0sims
@@ -11,8 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Digital Spy Oct 2025 quotes — verify Steph's own wording before on-air."
 
 invitation:
   status: draft
@@ -20,9 +22,22 @@ invitation:
 
 bio:
   summary: |
-    **Steph0Sims** — confirmed leaving **EA Creator Network** (Digital Spy Oct 2025): Sims as comfort
-    space; cannot support company that "directly opposes" inclusive values — verify quote.
+    **Steph0Sims** — reported leaving **EA Creator Network** (Digital Spy Oct 2025):
+    Sims as comfort space; cannot support a company that "directly opposes" inclusive
+    values — **verify quote** against primary post before citing.
 
 sources:
   - sources/creator-network-exit.yml
   - ../../process/sims-creator-network-exodus.yml
+  - { title: "Digital Spy — Sims creators / EA sale", url: "https://www.digitalspy.com/tech/a69156522/sims-statement-backlash-ea-sale/" }
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: sources/creator-network-exit.yml, why: "Local digest — check before quoting" }
+  - { path: ../syd-mac/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../vixella/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../devon-bumpkin/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../lilsimsie/, why: "Headline resigner — same press wave" }
+  - { path: ../plumbella/, why: "Headline resigner — advocacy framing" }
+  - { path: ../../process/sims-creator-network-exodus.yml, why: "Registry + press links; verify_before_on_air" }
+  - { path: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml, why: "Show seed" }

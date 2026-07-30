@@ -1,0 +1,19 @@
+# MIT'78 project status chalkboard
+# Sibling image: mit78-status-chalkboard.jpg
+
+image:
+  file: mit78-status-chalkboard.jpg
+  title: "MIT'78 — chalkboard status of student VLSI projects"
+  what: "Photo of a chalkboard tracking status of the various MIT'78 design projects."
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/Status%20Em.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    Here is a photo of a chalkboard with status of the various projects.

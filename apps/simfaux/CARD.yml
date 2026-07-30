@@ -1,0 +1,44 @@
+# SimFaux — interface card
+name: simfaux
+kind: app_hub
+year_origin: 2006
+stage: WillWrightShowForFood
+architecture: sideways_symbiosis
+stack_then: OpenLaszlo → Flash SOLO
+stack_organelles: [original-lzx, openlaszlo-5, declare]
+purpose:
+  - center_of_gravity_for_simfaux_development
+  - keep_lzx_as_dna_organelle_not_digest
+  - parallel_transcriptions_ol5_and_declare
+  - live_repo_show_switchboard
+  - spin_out_dedicated_repo_when_runnable
+
+methods:
+  develop_here: "All SimFaux work under apps/simfaux/"
+  deposit_dna: "original-lzx/ when disk found — do not delete when kids ship"
+  transcribe_ol5: "openlaszlo-5/ — camera reincarnate"
+  transcribe_declare: "declare/ — cinematography"
+  point_av: "deploy.md → donhopkins.com/home/new/"
+  perform: "repo-shows/simfaux/ wraps this hub"
+
+layout:
+  ORGANELLES.yml: sideways_symbiosis_frame
+  original-lzx/: dna_organelle
+  openlaszlo-5/: ol5_transcription
+  declare/: declare_transcription
+  media/: shared_cytoplasm_stills
+  archives/: shared_cytoplasm_history
+  SPIN-OUT.md: extract_checklist
+
+related:
+  - ../../process/character-endosymbiosis.yml
+  - ../../repo-shows/simfaux/
+  - ../../repo-shows/openlaszlo/
+  - ../../characters/david-temkin/sources/declarelang.md
+  - ../performance-space/
+
+constraints:
+  - no_flv_swf_avi_in_git
+  - content_on_donhopkins_com_home_new
+  - wrappers_point_here_do_not_own
+  - never_erase_dna_organelle_for_succession

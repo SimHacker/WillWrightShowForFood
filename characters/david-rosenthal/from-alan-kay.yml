@@ -1,0 +1,34 @@
+# What Alan Kay says that David Rosenthal synthesizes — public sources
+# Index: ../alan-kay/people-index.yml
+# Not primarily a Kay portrait of DSHR — DSHR embeds Kay's window prehistory.
+
+character: david-rosenthal
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay's public NeWS line (to Don): "the right way to go (except it missed the live system
+    underneath)." DSHR's *History of Window Systems* (2021) embeds Kay's pre-Smalltalk window
+    account (Sketchpad, Flex, viewport vs window naming). Quora browser/document-viewer thread
+    is the shared live wire for unnatural-selection / NeWS archaeology.
+
+sources:
+  digests:
+    - ../alan-kay/correspondence.yml
+    - ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+  web:
+    - https://blog.dshr.org/2021/03/history-of-window-systems.html
+  room:
+    - ../david-rosenthal/window-systems-lineage.md
+    - ../david-rosenthal/slots-all-the-way-down.md  # messaging dream guest
+
+show_hooks:
+  - "Window prehistory — Kay + DSHR + Alvey papers"
+  - "NeWS: right way / missed live system underneath → MOOLLM"
+  - "unnatural-selection co-guest with alan-kay-microworld"
+
+see_also:
+  - ../david-rosenthal/CHARACTER.yml
+  - ../alan-kay/media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
+  - ../james-gosling/
+  - ../owen-densmore/

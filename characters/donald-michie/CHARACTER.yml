@@ -8,7 +8,62 @@ status: memorial
 alive: false
 born: 1923-11-11
 died: 2007-07-07
-pronunciation: "MICK-ee (like Mickey Mouse — never MISH-ee / MY-kee / mi-SHEE)"
+
+# Pronunciation is inheritance along one axis only: how the names sound.
+# Loving, on the record, colleagues' gift — not a joke at his expense.
+pronunciation:
+  given: "DON-ald (as in Donald Duck)"
+  family: "MICK-ee (as in Mickey Mouse — never MISH-ee / MY-kee / mi-SHEE)"
+  combined_nickname: Duckmouse
+  dimension: pronunciation_only
+  tone: loving_respectful_on_the_record
+
+# Pronunciation axis — sounds, not cartoon souls.
+# from <well> import <dimension.aspect> as <local>
+pronunciation_import: |
+  # from <module> import <dimension.aspect> as <local>
+  from donald_duck import pronunciation.donald as donald
+  from mickey_mouse import pronunciation.mmickey as michie
+
+  given_name = donald   # DON-ald
+  surname = michie      # MICK-ee
+  nickname = "Duckmouse"
+
+pronunciation_inheritance:
+  parents:
+    - { archetype: donald-duck, contributes: given_name_pronunciation, sound: DON-ald }
+    - { archetype: mickey-mouse, contributes: surname_pronunciation, sound: MICK-ee }
+  blend: Duckmouse
+  not: "Not soul-model multiple inheritance of cartoon characters as selves — only name-sounds + nickname destiny."
+  kin_parallel: jesus-mouse  # Jesus Mouse = Jesus × Mickey as lived Self; Duckmouse = Duck × Mickey as said name
+
+mice_affinity:
+  schoolboy: "Mouse fancier as a schoolboy (on the record — Telegraph / British Library orbit)."
+  papers: "Early career: ~25 papers on mice."
+  landmark: "1958 Nature with then-wife Anne McLaren — mouse embryo in vitro → transplant → live pups; techniques leading to human IVF."
+  pete: "Pete Mowforth (Apr 2026): Michie + mice clarified for the people-first book — see record below."
+
+duckmouse_on_the_record:
+  tone: >
+    Colleagues' nickname, spoken with affection and occasional fury.
+    Smile with love. The mnemonic stuck because the man was unforgettable.
+  public:
+    - { who: "Daily Telegraph obituary (July 2007)", what: "Known to his colleagues as 'Duckmouse'" }
+    - { who: "British Library Science blog", what: "'Duckmouse', a modern-day polymath" }
+    - { who: "Wikipedia / GCHQ person pages", what: "Biographical spine; nickname in secondary retellings" }
+  eyewitness:
+    - who: Peter Mowforth
+      when: "10 April 2026 email to Don Hopkins (Cc Arthur van Hoff); digest in-repo"
+      path: ../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md
+      quote: >
+        Penny Montgommery (PA) shouted down the phone how to pronounce the name —
+        Donald as in Duck, Michie as in Mouse — thinking Michie was out;
+        he was standing directly behind her. Pete watching, desperately signalling.
+      attribution: "Pete Mowforth, eyewitness clarification, Apr 2026 — public-acceptable paraphrase; full mail not dumped here."
+  phone_incident:
+    coined_by: Penny Montgommery  # PA; mnemonic shouted in thick Scottish accent
+    reaction: "Michie furious for a stretch — love and irritation braided; nickname stuck anyway."
+    do_not: "Do not soft-slapstick the fury; Pete was there."
 
 tags:
   - memorial
@@ -21,12 +76,13 @@ tags:
   - robot-olympics
   - edinburgh
   - glasgow
+  - pronunciation-inheritance
 
 one_line: >
   Polymath who worked beside Turing at Bletchley, pioneered mammalian IVF techniques
   with Anne McLaren, taught matchboxes to play tic-tac-toe, founded machine intelligence
   in Edinburgh and the Turing Institute in Glasgow — and was loved, teased, and forever
-  remembered as Duckmouse.
+  remembered as Duckmouse: Donald as in Duck, Michie as in Mouse.
 
 role_in_show:
   kind: memorial_presence
@@ -54,16 +110,26 @@ relationships:
 soul_model_kin:
   parallel: jesus-mouse
   note: >
-    Jesus Mouse = Jesus + Mickey Mouse as one soul inheritance.
-    Duckmouse = Donald Duck + Mickey Mouse as lived nickname destiny.
+    Jesus Mouse = Jesus + Mickey Mouse as one lived Self (soul inheritance).
+    Duckmouse = Donald Duck + Mickey Mouse along the pronunciation axis only
+    (given-name sound + surname sound → colleagues' nickname).
     Same cartoon grammar; different sanctity. Both belong on the memorial wall.
+    Python sketch of the difference:
+      # jesus-mouse (blended soul): parents = ["Jesus", "Mickey Mouse"]
+      # donald-michie (name-sounds):
+      from donald_duck import pronunciation.donald as donald
+      from mickey_mouse import pronunciation.mmickey as michie
 
 see_also:
   - memorial.md
   - CARD.yml
+  - sources/duckmouse-pronunciation-on-the-record.md
   - ../don-hopkins/media/turing-institute/donald-michie-duckmouse.yml
   - ../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md
   - ../don-hopkins/media/turing-institute/first-robot-olympics.yml
+  - ../peter-mowforth/   # cofounder; living book; Olympics
+  - ../tim-niblett/      # cofounder; named the Institute; memorial
+  - ../arthur-van-hoff/
   - ../heinz-lemke/sources/2026-07-28-pixie-storyline-thread.md
   - ../alan-kay/sources/2026-07-28-wes-clark-pdp8-popplestone.md
   - ../jesus-mouse/memorial.md

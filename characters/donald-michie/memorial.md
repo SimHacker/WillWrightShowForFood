@@ -4,9 +4,27 @@
 
 He is a character. The Repo Show already orbits him whenever PIXIE, Glasgow rain, Robot Olympics, or Bletchley silver bars come up. This room is the memorial: rich, detailed, and loving — not a ventriloquist act.
 
-Pronounce the surname **MICK-ee**. Not MISH-ee. Not MY-kee. Not mi-SHEE. Mickey Mouse.
+### How to say the name (inheritance along pronunciation)
 
-His colleagues called him **Duckmouse** anyway. The [Telegraph obituary](https://www.telegraph.co.uk/news/obituaries/1556846/Professor-Donald-Michie.html) said so out loud. The British Library titled their piece *"'Duckmouse', a modern-day polymath."* Destiny had already cast the part.
+Say **Donald** as in **Donald Duck**. Say **Michie** as in **Mickey Mouse** — **MICK-ee**, never MISH-ee, never MY-kee, never mi-SHEE.
+
+That is not soul-stealing from cartoons. Pronunciation axis only:
+
+```python
+# from <module> import <dimension.aspect> as <local>
+from donald_duck import pronunciation.donald as donald
+from mickey_mouse import pronunciation.mmickey as michie
+
+given_name = donald   # DON-ald
+surname = michie      # MICK-ee
+nickname = "Duckmouse"
+```
+
+His colleagues blended those imports into **Duckmouse**. The [Telegraph obituary](https://www.telegraph.co.uk/news/obituaries/1556846/Professor-Donald-Michie.html) put it on the public record: known to his colleagues as Duckmouse. The British Library titled their piece *"'Duckmouse', a modern-day polymath."* Smile with love — the nickname stuck because the man was unforgettable.
+
+**Pete Mowforth** (eyewitness, email to Don Hopkins, 10 April 2026, Cc Arthur van Hoff — digest: [`2026-04-pete-mowforth-duckmouse.md`](../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md)) clarified the phone disaster: **Penny Montgommery**, Michie's PA, thought he was out and shouted the mnemonic down the phone — *Donald as in Duck, Michie as in Mouse* — while Michie stood directly behind her. Pete watched, signalling desperately. Michie was furious for a stretch. Colleagues kept the name anyway. Love and irritation braided; that is also who he was.
+
+The mouse was already in the résumé: schoolboy mouse fancier; early papers on mice; with **Anne McLaren**, the **1958 Nature** mouse-embryo work that founded techniques leading to human IVF. Pete put that affinity on the record for the people-first book. Duckmouse was destiny meeting biology, not a random tease.
 
 ---
 

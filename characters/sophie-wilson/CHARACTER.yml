@@ -1,15 +1,61 @@
+# Sophie Wilson — invitation portrayal. NOT Sophie Wilson.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: sophie-wilson
   name: "Sophie Wilson"
   type: invitation
+  signifier: "🦾"
   status: living
+  field: "Computer architect — BBC Micro / BBC BASIC; ARM instruction set; Firepath (Broadcom)"
   home: characters/sophie-wilson/
+  affiliation: "Acorn Computers; Element 14; Broadcom (Distinguished Engineer / research fellow)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from public record (CHM Fellow, Royal Society, Wikipedia). Subject may edit/delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  note: "Dream invite — ARM/BBC Micro lineage; Cambridge adjacency to PIXIE/Rainbow stories"
+
+bio:
+  summary: |
+    **Sophie Wilson CBE FREng FRS** — designed early Acorn micros; with **Steve Furber**
+    prototyped the **BBC Micro** (OS + **BBC BASIC**); designed the **ARM1** instruction
+    set (delivered 1985; now the dominant mobile/embedded CPU architecture); later
+    chief architect of **Firepath** (Element 14 → Broadcom), still shipping in broadband
+    silicon. CHM Fellow 2012; CBE 2019. Cambridge-rooted career — strong adjacency to
+    this project's Cambridge graphics / PDP-7 history without being the same lab.
+
+why_invited:
+  arm: "Primary voice on how a tiny RISC ISA conquered the planet."
+  bbc_micro: "Education computing that actually shipped into schools."
+  cambridge: "Geographic/cultural neighbor to Wiseman/PIXIE storylines — different machine, same city of invention."
+
+show_suggestions:
+  - { what: "BBC Micro under deadline — Proton → literacy project" }
+  - { what: "ARM1 first silicon — Mead-Conway-era hand layout meets ISA design" }
+  - { what: "Firepath / broadband — VLIW after RISC" }
+  - { what: "Group adjacency — Cambridge Computer Lab history nights (with Heinz / Lars threads)" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Sophie_Wilson"
+  web:
+    - { title: "CHM Fellow profile", url: "https://computerhistory.org/profile/sophie-wilson/" }
+    - { title: "Royal Society — Sophie Wilson", url: "https://royalsociety.org/people/sophie-wilson-12544/" }
+    - { title: "BCS Distinguished Fellow roll", url: "https://www.bcs.org/events/awards-and-competitions/distinguished-fellowship-distfbcs/roll-of-distinguished-fellows/sophie-wilson" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../lynn-conway/, why: "Mead–Conway VLSI era that made ARM-style design teachable" }
+  - { path: ../heinz-lemke/, why: "Cambridge graphics neighbor generation" }
+  - { path: ../maurice-wilkes/, why: "Cambridge Computer Lab lineage" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

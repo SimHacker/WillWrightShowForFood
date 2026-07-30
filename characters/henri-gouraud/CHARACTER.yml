@@ -1,0 +1,46 @@
+# Henri Gouraud — invitation portrayal. NOT Henri Gouraud.
+# Utah shading + Armit Multipatch film tour. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: henri-gouraud
+  name: "Henri Gouraud"
+  type: invitation
+  signifier: "☀️"
+  status: living
+  field: "Computer graphics — Gouraud shading; University of Utah PhD; CAD tour with Armit"
+  home: characters/henri-gouraud/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Utah/Armit film-lane invite — Multipatch film shown on US CAD tour."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+
+bio:
+  summary: |
+    **Henri Gouraud** — University of Utah PhD; inventor of **Gouraud shading**. On the show's
+    PIXIE thread, **Andrew Armit** (16 Jul 2026) recalls touring US CAD sites with Gouraud and
+    **showing the Multipatch film** — primary witness for Alan Kay's film-hunt ask. Living bridge
+    from Utah graphics to Armit's barn archive.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Henri_Gouraud_(computer_scientist)"
+  web:
+    - { title: "Armit barn archive — Multipatch film + Gouraud tour", path: ../andrew-armit/sources/2026-07-16-armit-archive-manifest.md }
+    - { title: "Kay Utah Coons patches memory", path: ../andrew-armit/sources/alan-kay-utah-coons-patches.md }
+
+see_also:
+  - { path: invitation.md, why: "Send-ready invite" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay film-hunt context" }
+  - { path: ../andrew-armit/, why: "Tour partner; Multipatch film" }
+  - { path: ../steven-coons/, why: "Coons patches — surface math under Multipatch" }
+  - { path: ../alan-kay/, why: "Asked Don/Heinz to find the film" }
+  - { path: ../ivan-sutherland/, why: "Utah graphics era" }
+  - { path: ../dave-evans/, why: "Utah ARPA program" }

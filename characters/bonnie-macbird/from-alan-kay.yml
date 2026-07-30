@@ -1,0 +1,33 @@
+# What Alan Kay says about Bonnie MacBird — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: bonnie-macbird
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Public Quora answer on moving to London: Bonnie's Sherlock Holmes novels for HarperCollins
+    drew them there; he notes she has published multiple highly rated novels. TRON / Computer Lib
+    matchmaker story is jointly theirs (Ted Nelson festschrift / Intertwingled). Alan Bradley in
+    TRON was based on Alan Kay (Bonnie's account).
+
+sources:
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/why-alan-kay-moved-to-london.md
+      topics: [London, Bonnie Holmes novels, HarperCollins]
+  web:
+    - https://www.quora.com/Why-did-Alan-Kay-move-to-London
+  mail_digest:
+    - ../alan-kay/correspondence.yml  # forwarded Quora London answer
+
+quotes: []   # prefer Quora recap wording; verify live before formal cite
+
+show_hooks:
+  - "London story — Bonnie's novels; joint life"
+  - "Computer Lib → Alan → TRON (Alan Bradley) — Ted Nelson as matchmaker"
+  - "Segment on alan-kay-microworld show — Bonnie as guest in her own right"
+
+see_also:
+  - ../bonnie-macbird/CHARACTER.yml
+  - ../alan-kay/media/quora-recaps/why-alan-kay-moved-to-london.md
+  - ../ted-nelson/

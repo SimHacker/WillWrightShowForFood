@@ -1,0 +1,54 @@
+# Bob Taylor — memorial portrayal. NOT Bob Taylor.
+# Robert W. Taylor died 2017. Seeded from Yoot People.md.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: bob-taylor
+  name: "Bob Taylor"
+  full_name: "Robert W. Taylor"
+  also_known_as: ["Robert Taylor"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1932-02-10"
+  died: "2017-04-13"
+  field: "ARPA IPTO (ARPANET); Xerox PARC CSL director; DEC SRC — funder of people, not projects"
+  home: characters/bob-taylor/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "PARC CSL freedom that produced Alto + Smalltalk; Yoot interview credits" }
+    - { who: butler-lampson, why: "Recruited Berkeley group to PARC Jan 1971" }
+
+bio:
+  summary: |
+    **Robert W. ("Bob") Taylor** (1932–2017) ran ARPA IPTO (ARPANET initiation) then led Xerox
+    PARC's Computer Science Laboratory. Kay credits Taylor's hands-off, people-not-projects
+    management for the freedom that produced the Alto and Smalltalk. Recruited Lampson, Thacker,
+    Deutsch and most of the Berkeley Computer Corporation group to PARC (Jan 1971). Later founded
+    DEC SRC. Draper Prize with Kay, Lampson, Thacker (2004).
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Robert_Taylor_(computer_scientist)"
+  web:
+    - { title: "Yoot People.md — Bob Taylor", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay on Taylor's management" }
+  - { path: ../alan-kay/, why: "PARC CSL era" }
+  - { path: ../butler-lampson/, why: "Recruit" }
+  - { path: ../chuck-thacker/, why: "Recruit / Alto" }
+  - { path: ../douglas-engelbart/, why: "ARPA IPTO augmentation funding era neighbor" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

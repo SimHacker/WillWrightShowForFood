@@ -23,10 +23,12 @@ She is widely remembered for the sentiment that no one ever reached the end of t
 they had spent more time alone with their computer. It was the through-line of her design
 philosophy, and it still reads as a challenge to everyone who builds games and tools today.
 
-**The Sims was dedicated to her** — Will Wright's tribute to a friend whose people-first, play-
-together values run straight through The Sims, multiplayer SimCity, and this whole project. We
-remember her best by inviting the people who knew her — above all **[Will Wright](../will-wright/README.md)**
-— to tell the real stories.
+In 1998 the Computer Game Developers Association gave her its **Lifetime Achievement Award**
+(Brian Moriarty presenting). In 2007 she was inducted into the **AIAS Hall of Fame** (Sid Meier
+accepting). **The Sims was dedicated to her** (2000) — Will Wright's tribute to a friend whose
+people-first, play-together values run straight through The Sims, multiplayer SimCity, and this
+whole project. We remember her best by inviting the people who knew her — above all
+**[Will Wright](../will-wright/README.md)** — to tell the real stories.
 
 We celebrate her documented public work; we do not speak as her.
 

@@ -1,16 +1,56 @@
+# John Carmack — invitation portrayal. NOT John Carmack.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: john-carmack
   name: "John Carmack"
   type: invitation
+  signifier: "🚀"
   status: living
+  field: "Game engine programmer — id Software; later VR (Oculus/Meta); aerospace"
   home: characters/john-carmack/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from public record. No warm contact yet. Subject may edit/delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
-  note: "id/Oculus legend; Meta departure HN 34022484 — Don wit + Dynabook tangent only; no warm contact yet"
+  document: invitation.md
+  note: "Cold/public-figure invite — id/Oculus legend; Don has HN commentary adjacency only"
+
+bio:
+  summary: |
+    **John Carmack** — co-founder of **id Software**; lead programmer on *Commander
+    Keen*, *Wolfenstein 3D*, *Doom*, *Quake* and their engine lineages that defined
+    real-time 3D on PCs. Later CTO of **Oculus** / Meta Reality Labs work, then
+    independent focus including aerospace / Keen Technologies. Public communicator
+    of low-level graphics, networking, and VR systems thinking. Repo adjacency:
+    Jennell Jaquays (Quake level design), Rebecca Heineman (Wolf3D ports), Don's
+    HN threads on engines and Dynabook tangents — not a claim of personal friendship.
+
+why_invited:
+  engines: "Primary voice on how real-time worlds became possible on cheap hardware."
+  craft: "Builder episodes — constraints, shipping, open technical explanation."
+  memorial_adjacency: "Quake-era colleagues memorialized elsewhere (Jaquays) — discuss work, not gossip."
+
+show_suggestions:
+  - { what: "From Keen to Quake — engine as product" }
+  - { what: "Open technical communication as culture" }
+  - { what: "VR after FPS — continuous presence vs frame-chasing" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/John_Carmack"
+  web: []
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../jennell-jaquays/, why: "Quake II/III level design memorial" }
+  - { path: ../rebecca-heineman/, why: "Wolfenstein 3D ports memorial" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

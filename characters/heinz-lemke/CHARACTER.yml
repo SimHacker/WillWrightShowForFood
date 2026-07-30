@@ -44,6 +44,10 @@ sources:
       url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf"
 
 see_also:
+  - { path: ../../process/hn-harvest/heinz-lemke.md, why: "DonHopkins/SimHacker HN harvest — PIXIE / Heinz Lemke queries (curate; PIXIE string is broad)" }
+  - { path: from-alan-kay.yml, why: "Kay on PIXIE / light-pen vs RAND tablet; hoped Cambridge series" }
+  - { path: ../alan-kay/, why: "PIXIE Cc; Wilkes→PARC; hoped series with living+passed Cambridge collaborators" }
+  - { path: ../alan-kay/sources/2026-07-12-wilkes-parc-london.md, why: "Kay Wilkes/PARC/London digest (PIXIE thread)" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show — Heinz + Lars + David Rosenthal" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — Type 340 display, SIMH, make PIXIE runnable today" }
   - { path: ../david-rosenthal/, why: "Co-guest — same Cambridge PDP-7/Titan ~1970; NeWS/X11 lineage" }

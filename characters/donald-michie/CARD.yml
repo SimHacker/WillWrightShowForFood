@@ -22,6 +22,12 @@ do_not:
   - Use Colossus-hut oral asides as cheap punchlines
 
 advertisements:
+  - "from donald_duck import pronunciation.donald as donald; from mickey_mouse import pronunciation.mmickey as michie — Duckmouse, on the record."
   - "It's Donald as in Duck, Michie as in Mouse — and he founded the place HyperLook shipped."
   - "Oldfield's annoyance is why PIXIE can be rebuilt."
   - "A friend named an institute for a friend."
+
+pronunciation_import: |
+  # from <module> import <dimension.aspect> as <local>
+  from donald_duck import pronunciation.donald as donald
+  from mickey_mouse import pronunciation.mmickey as michie

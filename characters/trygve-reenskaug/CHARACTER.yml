@@ -1,0 +1,47 @@
+# Trygve Reenskaug — invitation portrayal. NOT Trygve Reenskaug.
+# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: trygve-reenskaug
+  name: "Trygve Reenskaug"
+  type: invitation
+  signifier: "🎭"
+  status: living
+  born: "1930-06-21"
+  field: "Software architecture — MVC (Xerox PARC); roles / DCI; University of Oslo"
+  home: characters/trygve-reenskaug/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub from Yoot People.md — deepen before invite."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  note: "MVC — invite with Borning. Drafted 2026-07-29."
+
+
+bio:
+  summary: |
+    **Trygve Reenskaug** invented **Model–View–Controller** while visiting Xerox PARC (1979),
+    giving Smalltalk UIs a durable architectural pattern. Later University of Oslo / Taskon;
+    roles and **DCI** (Data, Context, Interaction). Yoot People.md lists him in the Kay-interview
+    apparatus. Kay's Quora OOP recap traces MVC lineage through Sketchpad clipping windows → Flex → Smalltalk.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Trygve_Reenskaug"
+  web:
+    - { title: "Yoot People.md — Trygve Reenskaug", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  quora_recap: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md
+
+see_also:
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot / Quora MVC line" }
+  - { path: ../alan-kay/, why: "PARC era; MVC in OOP history" }
+  - { path: ../ivan-sutherland/, why: "Kay: MVC camera lineage from Sketchpad clipping" }
+  - { path: ../adele-goldberg/, why: "Smalltalk-80 books / LRG" }
+  - { path: ../dan-ingalls/, why: "Smalltalk implementer" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

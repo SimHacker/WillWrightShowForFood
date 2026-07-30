@@ -1,0 +1,24 @@
+# MIT'78 class photo — left half
+# Sibling image: mit78-class-photo-left.jpg
+
+image:
+  file: mit78-class-photo-left.jpg
+  title: "MIT 1978 VLSI System Design Course — class photo (left)"
+  what: |
+    Left half of the two-part class photograph from Lynn Conway's groundbreaking
+    1978 MIT VLSI course — first time students designed and fabricated their own ICs.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/Class2s.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+    - { id: 45427516, url: "https://news.ycombinator.com/item?id=45427516" }
+  don_hopkins: |
+    My friend David Levitt is crouching down in this class photo so his big 1978
+    hair doesn't block Guy Steele's face. The class photo is in two parts, left
+    and right.

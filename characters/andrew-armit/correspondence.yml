@@ -31,6 +31,16 @@ threads:
       VG3400 WCS panel. ICON 3D weekend rewrite story. Mutual dedication exchange with Kay.
     show_use: "Preservation roadmap; simulation targets for Lars + UWO students"
 
+  multipatch_vs_multiobject_2026_07_29:
+    digest: sources/2026-07-29-multipatch-vs-multiobject.md
+    what: |
+      Architecture split: Multipatch entirely on PDP-7 (~4K, no Titan, ASR-33 language, paper tape,
+      octal listings, no libraries; 3-axis dual-microswitch joystick). Multiobject = remainder of
+      3 years — PDP-7↔Titan minimal updates, 16K→24K, FP, 100-word link (not 4K handler), P.J. Payne
+      plane intersections. Corollary: Multipatch much easier to recreate; thesis commands+screenshots
+      as grand test. Same day Lars: SIMH device = pdp18b_foo.c; 340 char gen already; subroutines untested.
+    show_use: "Multipatch-first SIMH path; contrast with PIXIE Titan link"
+
 connects_in_repo:
   - { path: README.md, why: "Character room" }
   - { path: CHARACTER.yml, why: "Machine-readable bio + invitation" }

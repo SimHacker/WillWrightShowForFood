@@ -1,0 +1,56 @@
+# Dave Evans — memorial / public legacy portrayal. NOT David C. Evans.
+# Died 1998-10-03. Seeded from Yoot People.md (Utah + Evans & Sutherland).
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: dave-evans
+  name: "Dave Evans"
+  full_name: "David Cannon Evans"
+  also_known_as: ["David C. Evans"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1924-02-24"
+  died: "1998-10-03"
+  field: "Computer graphics — University of Utah ARPA program; co-founder Evans & Sutherland"
+  home: characters/dave-evans/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1924–1998) — represent + discuss; Utah program + E&S with Ivan"
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Utah grad student under Evans's ARPA graphics program; FLEX intro via Cheadle" }
+    - { who: ivan-sutherland, why: "E&S co-founder (citation / discussants of Ivan)" }
+    - { who: andrew-armit, why: "Utah Coons-patch era neighbor Kay remembered" }
+
+bio:
+  summary: |
+    **David C. ("Dave") Evans** (1924–1998) co-ran the ARPA-funded computer-graphics program at
+    the **University of Utah** where Alan Kay was a graduate student, and co-founded
+    **Evans & Sutherland** with [Ivan Sutherland](../ivan-sutherland/). Through Evans, Kay met
+    Ed Cheadle and began the **FLEX** personal-computer work (Yoot People.md / Cheadle entry).
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/David_C._Evans"
+  web:
+    - { title: "Yoot People.md — Dave Evans", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../ivan-sutherland/, why: "E&S co-founder; Sketchpad north star" }
+  - { path: ../alan-kay/, why: "Utah student" }
+  - { path: ../john-warnock/, why: "Utah graphics PhD orbit" }
+  - { path: ../andrew-armit/, why: "Utah Coons patches" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

@@ -1,0 +1,31 @@
+# SimFaux — screenshots & specs (app-owned)
+# Runtime AV is NOT here — see ../deploy.md
+
+room:
+  id: simfaux-media
+  name: SimFaux — screenshots
+  hub: ../
+
+artifacts:
+  - simfaux-dashboard-full.png
+  - simfaux-the-me-show-youtube.png
+
+spec:
+  - simfaux.yml
+
+archives:
+  - ../archives/2006-03-19-fauxcast-on-freedom.md
+  - ../archives/2006-03-24-open-source-readme.md
+
+gags:
+  - ../ideas/gags/simfaux-repo-show-prototype.yml
+
+wrappers:
+  - ../../../characters/don-hopkins/media/simfaux/   # portfolio pointer
+  - ../../../repo-shows/simfaux/                     # show seed
+
+see_also:
+  - ../declare-reimagine.md
+  - ../deploy.md
+  - ../../../repo-shows/openlaszlo/
+  - ../../../characters/will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/

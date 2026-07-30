@@ -1,0 +1,11 @@
+character: kristen-nygaard
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Simula co-creator with Dahl — Kay Smalltalk root. Yoot People.md covers Dahl entry;
+    Nygaard is the necessary twin room for intertwingularity.
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+see_also:
+  - ../kristen-nygaard/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

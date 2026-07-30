@@ -1,0 +1,30 @@
+# What Alan Kay says about Andrew Armit — public digests of July 2026 mail
+# Index: ../alan-kay/people-index.yml
+# Full digest (room): sources/alan-kay-utah-coons-patches.md
+
+character: andrew-armit
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Utah grad-student period (end 1966 – Sept 1969): Andrew Armit visited for months with his
+    Coons-patch interactive system on a PDP-7 — Kay was "quite in awe." Ivan-period Utah;
+    proposed 4×4 matrix multiplier (HMD / Coons). Kay asked Don to sniff for film of the system.
+    PhD summer 1969 with Warnock; Kay left for Stanford before Heinz's Sept 1969 Utah visit.
+
+sources:
+  digests:
+    - ../andrew-armit/sources/alan-kay-utah-coons-patches.md
+    - ../alan-kay/sources/2026-07-12-wilkes-parc-london.md
+  mail_digest:
+    - ../alan-kay/correspondence.yml
+
+show_hooks:
+  - "Utah Coons patches on PDP-7 — Kay's awe; film hunt"
+  - "PIXIE / Rainbow Cambridge series — Armit + Heinz + Kay"
+  - "Near-miss: Heinz Utah Sept 1969 after Kay had left"
+
+see_also:
+  - ../andrew-armit/CHARACTER.yml
+  - ../heinz-lemke/
+  - ../alan-kay/correspondence.yml

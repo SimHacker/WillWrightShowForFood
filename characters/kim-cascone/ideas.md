@@ -1,19 +1,9 @@
-# Ideas — Kim Cascone 🎛️
+# Show hooks — Kim Cascone
 
-## Hook — surfing vs tunnel-digging (Eno via Cascone)
+- Aesthetics of Failure × SimCity disasters / Sims bugs-as-stories
+- Silent Records + SF rave/chill-room ambient history
+- Twin Peaks sound craft → laptop music
+- Post-digital: medium no longer the message; tools are
+- Microsound / drone cinema adjacency
 
-Don quoted Cascone's Csound community essay, citing Brian Eno:
-
-> "One of the motives for being an artist is to recreate a condition where you're actually out of
-> your depth… like **surfing** as opposed to **digging a tunnel**."
-
-Pair with:
-
-- **David Levitt** — jazz improv AI (Minsky PhD); Bounce realtime music/VR
-- **Brian Eno** — generative ambient; [`../brian-eno/`](../brian-eno/)
-- **Csound** thread — accuracy vs interactivity (Max/Pd vs Csound)
-
-## Sources
-
-- [Recontextualizing Ambient Music in Csound](http://csounds.com/cascone/) (via Don, HN 22787566)
-- Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)
+Consent: not yet asked. All responses honored.

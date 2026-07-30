@@ -25,6 +25,15 @@ in class; Heinz sent the link an hour later.
 
 Full lineage essay: [**Sketchpad to PIXIE — educators' bridge**](sketchpad-to-pixie-lineage.md)
 
+## SIMH progress (28 July 2026)
+
+Roy converted Don's extracted **`.oct`** listings to **`.rim`**, loaded PIXIE into
+**SIMH**, and can **step** instruction-by-instruction. **`GO` still blanks** — next is
+light-pen interrupts (X11 locally; web mouse for shareable).
+
+→ [`sources/2026-07-28-simh-oct-to-rim-loaded.md`](sources/2026-07-28-simh-oct-to-rim-loaded.md) ·
+[`../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md`](../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md)
+
 ## Background (as Roy tells it)
 
 On **9 July 2026** Roy filled in his own backstory. In his telling: he worked as a

@@ -14,7 +14,7 @@
 
 - Max/Pd patch-cord lineage ([Miller Puckette](../miller-puckette/README.md))  
 - STEIM / Image/ine neighbors ([Tom Demeyer](../tom-demeyer/README.md), [Steina Vasulka](../steina-vasulka/README.md))  
-- SimFaux / FauxCast political parody era ([Don SimFaux media](../don-hopkins/media/simfaux/fauxcast-on-freedom.md))  
+- SimFaux / FauxCast political parody era ([apps/simfaux](../../apps/simfaux/) · [FauxCast essay](../../apps/simfaux/archives/2006-03-19-fauxcast-on-freedom.md))
 - net.art + Jodi glitch scene  
 
 ## Questions for NN (if she appears)

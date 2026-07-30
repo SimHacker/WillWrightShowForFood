@@ -45,10 +45,12 @@ SimObliterator Suite = reference guide. Implementation: MicropolisCore monorepo 
 VitaBoy animation, IFF parsers. Local-first; optional Node server. Demo: drag `.FAM`, uplift,
 download — no venv.
 
-### 4. Head Shop + Wig-O-Matic
+### 4. Head Shop + WigFabrik / Wig-O-Matic
 
-Sims heads: create, buy, exchange, crush/recycle. Wig-O-Matic wigs import like clothing racks.
-[the-computer-as-portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigomatic-and-the-character-customization-studio)
+Sims heads: create, buy, exchange, crush/recycle. **WigFabrik** (aka Wig-M-Porium / WigOMatic)
+wigs import like clothing racks — ECG multitarget mesh+texture interpolation; AI-authored
+hair-pattern *targets*; drag-to-solve weights (Tom Ngo ECG, patent expired).
+[the-computer-as-portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)
 
 ### 5. OpenLaszlo lineage — what was prototyped vs what's new
 

@@ -1,0 +1,25 @@
+# What Alan Kay / Yoot apparatus say about Larry Tesler — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: larry-tesler
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Yoot People.md: Tesler worked on Smalltalk and UI at PARC — modeless editing and
+    cut/copy/paste; gave the Smalltalk demo to Steve Jobs and Apple (1979); then Lisa/Mac.
+    Kay interview companion apparatus — deepen with Quora / HOPL if richer Kay portrait appears.
+
+sources:
+  yoot_people:
+    url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+    section: "Larry Tesler"
+
+show_hooks:
+  - "Modeless editing vs modes — PARC UI culture"
+  - "1979 Jobs visit — who demoed what"
+  - "Cut/copy/paste as ordinary physics"
+
+see_also:
+  - ../larry-tesler/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

@@ -52,6 +52,10 @@ sources:
   - ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md
 
 see_also:
-  - memorial.md
-  - ../bill-st-clair/
-  - ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: ideas.md, why: "Discussant hooks" }
+  - { path: ../bill-st-clair/, why: "ACRC Star Wars cabinet ↔ Lisp Machine witness" }
+  - { path: ../david-levitt/, why: "ACRC constellation; Star Wars iron story neighbor" }
+  - { path: ../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md, why: "Confirmed cabinet↔Lisp Machine note" }
+  - { path: ../cynthia-solomon/, why: "ACRC video constellation" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial protocol" }

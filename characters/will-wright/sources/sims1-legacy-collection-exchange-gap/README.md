@@ -15,6 +15,7 @@ meta:
 files:
   exchange_history: exchange-history-and-ui.yml
   steam_release: legacy-collection-steam-changes.yml
+  riperiperi_renderer: riperiperi-legacy-collection-technical-overview.md  # Vulkan/DPI reverse — FreeSO author gist
   community_today: community-sharing-today.yml
   simfileshare_official: simfileshare-official.yml
   reddit_community: reddit-legacy-edition-community.yml

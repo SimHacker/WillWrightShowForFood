@@ -1,15 +1,77 @@
+# Lynn Conway — memorial portrayal (in memoriam). NOT Lynn Conway.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
 character:
   id: lynn-conway
   name: "Lynn Conway"
-  type: invitation
+  full_name: "Lynn Ann Conway"
+  type: memorial
+  signifier: "🕯️"
   status: deceased
+  born: "1938-01-02"   # Mount Vernon, New York
+  died: "2024-06-09"   # Jackson, Michigan (aged 86)
+  field: "Computer architecture; VLSI / Mead–Conway design methodology; transgender rights advocacy"
   home: characters/lynn-conway/
+  affiliation: "IBM Research (ACS); Xerox PARC (LSI Systems); DARPA Strategic Computing; University of Michigan EECS"
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1938–2024) — represent + discuss; CHM Fellow 2014; friend-phone clips welcome from people who knew her"
+
+memorial:
+  mode: represent_and_discuss
+  rule: >
+    Represent and discuss her documented public work and publicly shared advocacy.
+    Do not interview, do not speak as her, invent no inner life. Only her real,
+    documented words, with attribution. Treat gender history with care — her own
+    framing after she came out publicly (late 1990s) is the guide.
+  who_can_discuss: []   # fill as people who knew her accept
+  draw_on_for_shows:
+    - "IBM ACS — foundational multiple out-of-order dynamic instruction scheduling (before 1968 firing)"
+    - "Xerox PARC LSI Systems group; Mead–Conway VLSI revolution"
+    - "Introduction to VLSI Systems (with Carver Mead, 1978/79) — democratized chip design education"
+    - "MPC79 / MOSIS multiproject wafer infrastructure — fabless + foundry paradigm"
+    - "DARPA Strategic Computing Initiative planning"
+    - "University of Michigan professor / associate dean"
+    - "CHM Fellow 2014 — IC design methods"
+    - "Public transgender advocacy after coming out; 'Transsexual Women's Successes' and related resources"
+
+bio:
+  summary: |
+    **Lynn Ann Conway** (1938–2024) was a computer scientist and electrical engineer
+    whose **Mead–Conway VLSI** methods (Xerox PARC, with Carver Mead) taught a
+    generation how to design microchips and helped create the fabless-design +
+    silicon-foundry model (MPC79 → MOSIS). Earlier at IBM she contributed to
+    advanced computer architecture (including dynamic instruction scheduling)
+    before being fired in 1968 during gender transition; she rebuilt her career
+    under a new identity at Memorex and PARC. After her history became public in
+    the late 1990s she became a leading advocate for transgender rights and a
+    CHM Fellow (2014). Professor Emerita, University of Michigan.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Lynn_Conway"
+  web:
+    - { title: "CHM — In Memoriam: Lynn Conway (1938–2024)", url: "https://computerhistory.org/blog/in-memoriam-lynn-conway-1938-2024/" }
+    - { title: "CHM profile — Lynn Conway", url: "https://computerhistory.org/profile/lynn-conway/" }
+    - { title: "U-M EECS — legacy note", url: "https://eecs.engin.umich.edu/stories/the-legacy-of-lynn-conway-chip-design-pioneer-and-transgender-rights-advocate" }
+    - { title: "Britannica — Lynn Conway", url: "https://www.britannica.com/biography/Lynn-Conway" }
+  papers:
+    - "Mead C, Conway L — Introduction to VLSI Systems (Addison-Wesley, 1980; courses from late 1970s)."
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks and open research" }
+  - { path: sources/images/, why: "Archived VLSI images from Lynn's site (MIT'78 / MPC79) + YAML Jazz sidecars with Don's HN context" }
+  - { path: ../../process/hn-harvest/lynn-conway.md, why: "Reviewed HN comment IDs only — raw harvest stays private (DonHopkins research/)" }
+  - { path: ../david-levitt/, why: "MIT'78 VLSI class — Levitt visible in archived class photo (crouching so hair doesn't block Steele)" }
+  - { path: ../danielle-bunten-berry/, why: "Fellow memorial — trans pioneer in games; same respect protocol" }
+  - { path: ../jennell-jaquays/, why: "Fellow memorial — trans pioneer in games/RPGs" }
+  - { path: ../rebecca-heineman/, why: "Fellow memorial — games + trans pioneer" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

@@ -79,7 +79,9 @@ legacy_rooms:
     count: 2
   simfaux:
     count: 2
-    gags: [simfaux-repo-show-prototype.yml]
+    moved_to: ../../../apps/simfaux/media/
+    hub: ../../../apps/simfaux/
+    gags: [../../../apps/simfaux/ideas/gags/simfaux-repo-show-prototype.yml]
   storymaker:
     count: 2
   brainwash-cafe:

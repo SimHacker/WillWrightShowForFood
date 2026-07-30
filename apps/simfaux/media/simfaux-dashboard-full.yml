@@ -1,0 +1,16 @@
+# Sidecar — simfaux-dashboard-full.png
+
+artifact:
+  file: simfaux-dashboard-full.png
+  slug: simfaux-dashboard-full
+  room: simfaux
+  hub: ../
+  what: simfaux dashboard full
+  era: 2006
+  sidecar_of: simfaux-dashboard-full.png
+
+gags:
+  - ../ideas/gags/simfaux-repo-show-prototype.yml
+
+see_also:
+  - simfaux.yml

@@ -21,6 +21,13 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/richard-bartle/
 
+# Adventure-4 microworld character — absolute once; shorthand elsewhere
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/real-people/richard-bartle
+  note: "HERO-STORY incarnation with his explicit permission (Facebook 2026-01-22). Resolve shorthand against absolute_url."
+
 bio:
   summary: "**Richard Bartle** — co-creator of **MUD1** (1978) and originator of the **Bartle taxonomy** of player types; author of *Designing Virtual Worlds*; professor marking game-design work at University of Essex. (Incarnated with his explicit permission.)"
 
@@ -43,3 +50,10 @@ sources:
   web: []
   papers: []
   blogs: []
+
+see_also:
+  - { path: moollm/examples/adventure-4/characters/real-people/richard-bartle, why: "Adventure-4 character (abs: moollm_source.absolute_url)" }
+  - { path: ../don-hopkins/, why: "Host — parallel adventure sessions" }
+  - { path: ../will-wright/, why: "Dev Diaries cites Bartle player types" }
+  - { path: invitation.md, why: "Public invitation" }
+  - { path: ideas.md, why: "Show hooks" }

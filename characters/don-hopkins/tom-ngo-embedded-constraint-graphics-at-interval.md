@@ -97,9 +97,26 @@ Don's later [**breakfast simplex**](breakfast-simplex-barycentric-direct-manipul
 
 ---
 
-## Application — Faceball parameterized parts + puppet faces (reimplementation target)
+## Application — WigFabrik + Faceball (reimplementation targets)
 
-Don's pick for what to build with a re-implemented ECG (patent's expired — it's free now):
+Don's picks for what to build with a re-implemented ECG (patent's expired — it's free now):
+
+### WigFabrik / Wig-M-Porium / WigOMatic (Soul City craft shop) — public showcase
+
+The [WigFabrik](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)
+(*wig factory* — Dutch-hybrid shop name; aka Wig-M-Porium / WigOMatic) is the **perfect shippable
+demo** of ECG brought forward:
+
+- **Multitarget mesh interpolation** — hair-cap / silhouette / volume exemplars at simplex vertices
+- **Multitarget texture interpolation** — same (or linked) weights over SPR2 / UV atlases
+- **AI image generation** — author *new* texture maps and hair patterns as ECG targets; optional
+  mesh-target generation; weights still solved by drag (ECG), not by the LLM
+- Compiles to Sims-1 head-skin IFF via Adventure Compiler → `Downloads/`
+
+Camp on the outside (finger waves! powdered curls!), Interval math on the inside. Tom would be
+thrilled to discuss it on a Repo Show — funny product, serious prior art, patent free.
+
+### Faceball parameterized parts + puppet faces
 
 - **Parameterized cartoon parts.** The [Faceball](../../apps/performance-space/faceball-construction-set.yml)
   soft-body parts — the componentized, Spore-count cartoon "ta-tas", dongs, and custom shapes — are
@@ -109,9 +126,10 @@ Don's pick for what to build with a re-implemented ECG (patent's expired — it'
   the mouth/eyes on the drawing; solve the blend — feeding ARKit-style blend-shape coefficients or a
   **Blender FaceIt** rig instead of hand-tuned sliders.
 - **The through-line:** same barycentric machinery as the [Bounce](interval-research-pluggers-and-mediaflow.md)
-  scrub-puppets and the pie-menu-as-simplex UI — direct manipulation, no AI required (AI's a bonus).
+  scrub-puppets and the pie-menu-as-simplex UI — direct manipulation, no AI required (AI's a bonus
+  for *authoring* targets; ECG still *solves* the weights).
 
-*Status: noted as the design target — not prototyped yet ("hold your horses").*
+*Status: design target in MicropolisCore portal + Soul City craft-shop specs — not prototyped yet.*
 
 ## 2013 — ECG conscience at Syntertainment
 
@@ -148,7 +166,8 @@ Full thread receipts: private archive, `DonHopkins` repo, correspondence.
 | [Pie menus CHI'88](pie-menus-chi-88-and-beyond.md) | Direct manipulation in practice — radial menus as simplex UI |
 | [Golan Levin](../golan-levin/README.md) | Mouther, computational media at Interval and CMU |
 | [Tom Ngo](../tom-ngo/README.md) | Character room + invite |
-| [Repo Show seed — Tom + Golan ECG/Mouther](../../repo-shows/tom-and-golan-ecg-mouther/) | Pair brainstorm (SVG/Canvas/WebGPU); conversation not code |
+| [Repo Show seed — Tom + Golan ECG/Mouther](../../repo-shows/tom-and-golan-ecg-mouther/) | Pair brainstorm (WigFabrik + SVG/Canvas/WebGPU); conversation not code |
+| [WigFabrik / portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio) | Public ECG showcase craft shop |
 | [Brainstorm heartbeat](../../process/brainstorm-heartbeat.md) | Guests talk designs; others implement |
 | [Direct manipulation trail](../../process/trails/direct-manipulation.md) | Broader Repo Show thread |
 

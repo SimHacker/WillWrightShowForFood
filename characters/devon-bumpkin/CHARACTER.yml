@@ -11,7 +11,7 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent_level: 3
   authored_by: don-hopkins
 
 invitation:

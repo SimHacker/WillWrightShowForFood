@@ -1,0 +1,36 @@
+# What Alan Kay says about Will Wright / SimCity — public-safe digests only
+# Index: ../alan-kay/people-index.yml
+# No direct Kay↔Will interview quote yet — OLPC-era mail digests + constructionist foil.
+
+character: will-wright
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Kay's public/constructionist line treats closed simulation models as pedagogically thin
+    next to glass-box microworlds (Papert, Etoys, open systems). Don's OLPC-era correspondence
+    digests place SimCity in that contrast — black box vs open model — without a verbatim
+    Kay-on-Will portrait. Useful show foil: Will's Simulator Effect + Kay's "computer
+    revolution hasn't happened yet" / microworlds Sure!
+
+sources:
+  people_index: ../alan-kay/people-index.yml
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
+      topics: [microworlds, constructionism]
+    - recap: ../alan-kay/media/quora-recaps/computer-revolution-not-yet.md
+      topics: [personal computing unfinished]
+  note: "Mail bodies stay private; expand only from approved digests."
+
+show_hooks:
+  - "SimCity black box vs Micropolis / Soul City glass box"
+  - "1996 microworlds talk title ↔ Kay/Papert vocabulary"
+  - "Sketchpad constraints (whats hold) vs implication-over-simulation"
+
+see_also:
+  - ../will-wright/CHARACTER.yml
+  - ../will-wright/ideas.md
+  - ../alan-kay/
+  - ../seymour-papert/
+  - ../ivan-sutherland/
+  - ../alan-kay/oop-trinity-sketchpad-simula-b5000.md

@@ -1,36 +1,120 @@
-# Ivan Sutherland — hero portrayal (cite, do not impersonate)
+# Ivan Sutherland — hero portrayal (cite, do not impersonate). NOT Ivan Sutherland.
 # Standards: ../../schemas/portrayal-standards.md
 
 character:
   id: ivan-sutherland
   name: "Ivan Sutherland"
+  full_name: "Ivan Edward Sutherland"
   type: hero
   signifier: "✏️"
   status: living
-  field: "Computer graphics pioneer — Sketchpad (1963); VR; computer architecture"
+  born: "1938-05-16"   # Hastings, Nebraska
+  field: "Computer graphics pioneer — Sketchpad (1963); head-mounted display; Evans & Sutherland; asynchronous circuits"
   home: characters/ivan-sutherland/
+  affiliation: "MIT Lincoln Lab (TX-2); Harvard; University of Utah; Evans & Sutherland; Caltech; Sun Fellow; Portland State ARC (visiting scientist)"
+  awards:
+    - "ACM A.M. Turing Award (1988) — pioneering computer graphics"
+    - "Kyoto Prize; IEEE von Neumann Medal; ACM Software System Award (Sketchpad)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent_level: 3          # public figure — citation / lineage, not interview yes
   authored_by: don-hopkins
-  note: "Hero/north-star room — citation and lineage, not interview portrayal"
+  mode: hero_north_star
+  note: >
+    Hero/north-star room — we cite Sketchpad and the HMD lineage; we do not speak as him
+    and do not treat this as an interview ask unless invitation status changes.
+
+invitation:
+  status: not_offered
+  consent: not_yet_asked
+  document: null
+  note: "Citation room. Educator bridge via Roy Eagleson; PIXIE show cites Sketchpad as north star."
 
 north_star:
   system: Sketchpad
   year: 1963
+  machine: "MIT Lincoln Laboratory TX-2 (Wesley A. Clark)"
   why: |
-    Light pen + constraints + direct manipulation — the textbook GUI before the word GUI.
-    North star for Roy Eagleson's teaching, PIXIE's pen era, and the Geometer's Sketchpad
-    educational line.
+    Light pen + constraints + master/instance drawings + zoom — interactive CAD and
+    declarative "whats" before the word GUI. North star for Roy Eagleson's teaching,
+    PIXIE's pen era, Kay's proto-OOP reading, and the Geometer's Sketchpad educational line.
+
+bio:
+  summary: |
+    **Ivan Edward Sutherland** (b. 1938) created **Sketchpad** (MIT PhD 1963, advisor Claude
+    Shannon; committee included Marvin Minsky) on the TX-2 — light-pen interactive drawing with
+    geometric **constraints** and master/instance structure. Kay cites Sketchpad (with Simula and
+    the B5000) as a root of object-oriented thinking. Later: Harvard / **"Sword of Damocles"**
+    head-mounted display (1968); ARPA; co-founded **Evans & Sutherland** with Dave Evans; taught
+    at **University of Utah** while Alan Kay was a grad student (Armit/Coons-patch era neighbor).
+    Sun Fellow; with Marly Roncken founded the Asynchronous Research Center at Portland State —
+    still researching ("I'm planning not to retire"). Turing Award 1988.
+
+known_for:
+  - "Sketchpad (1963) — interactive constraints, instances, zoom on TX-2"
+  - "Sword of Damocles HMD (1968) — VR/AR hardware ancestor"
+  - "Evans & Sutherland — flight sims / real-time 3D graphics company"
+  - "Utah graphics program era — Kay, Warnock, Fuchs, Catmull orbit"
+  - "Asynchronous micropipelines / Portland State ARC (with Marly Roncken)"
 
 sources:
-  wikipedia: https://en.wikipedia.org/wiki/Sketchpad
-  turing: https://amturing.acm.org/award_winners/sutherland_3467782.cfm
+  wikipedia_person: "https://en.wikipedia.org/wiki/Ivan_Sutherland"
+  wikipedia_sketchpad: "https://en.wikipedia.org/wiki/Sketchpad"
+  web:
+    - { title: "ACM Turing Award — Ivan Sutherland (1988)", url: "https://amturing.acm.org/award_winners/sutherland_3467412.cfm" }
+    - { title: "CHM / related Sketchpad materials", url: "https://www.computerhistory.org/" }
+    - { title: "Yoot People.md — Ivan Sutherland entry (Kay interview companion)", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md#ivan-sutherland-university-of-utah-cmu-harvard-portland-state-university-cit-mit-arpa-evans--sutherland" }
+    - { title: "Forbes catch-up (2024) — HMD / Vision Pro lineage", url: "https://www.forbes.com/sites/johnwerner/2024/02/23/catchup-with-ivan-sutherlandinventor-of-the-first-ar-headset/" }
+  papers:
+    - "Sutherland, I. E. — Sketchpad: A Man-Machine Graphical Communication System (MIT, 1963)."
+    - "Sutherland, I. E. — A head-mounted three dimensional display (AFIPS 1968)."
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  room:
+    - sketchpad-and-descendants.md
+    - from-alan-kay.yml
+    - ideas.md
+
+can_discuss:   # living people who can discuss Ivan's work on air (not Ivan himself as guest)
+  - { who: alan-kay, why: "Utah student era; Sketchpad as proto-OOP + declarative CAD; Quora" }
+  - { who: roy-eagleson, why: "Teaches Sketchpad → PIXIE; educator bridge" }
+  - { who: heinz-lemke, why: "PIXIE six years after Sketchpad — same pen era" }
+  - { who: andrew-armit, why: "Utah Coons patches during Ivan-period visit Kay remembered" }
+  - { who: marvin-minsky, why: "Sketchpad committee — memorial discussant of mentorship" }
+  - { who: jaron-lanier, why: "VR lineage from Sword of Damocles" }
+  - { who: david-rosenthal, why: "Display-era graphics / NeWS lineage neighbor" }
 
 see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: GLANCE.md, why: "One-screen sniff" }
+  - { path: CARD.yml, why: "Hero skills card" }
+  - { path: ideas.md, why: "Show / teaching hooks" }
   - { path: sketchpad-and-descendants.md, why: "Sketchpad → GSP → PIXIE lineage essay" }
+  - { path: from-alan-kay.yml, why: "Kay's public Sketchpad reading (Yoot + Quora)" }
+  - { path: ../alan-kay/, why: "Utah student; proto-OOP; declarative whats" }
+  - { path: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md, why: "Kay — Sketchpad as declarative CAD+sim" }
+  - { path: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md, why: "Kay — Sketchpad / clipping / MVC seed" }
   - { path: ../roy-eagleson/sketchpad-to-pixie-lineage.md, why: "Educator actively teaching Sketchpad → PIXIE" }
-  - { path: ../heinz-lemke/, why: "PIXIE — Cambridge 1969, six years after Sketchpad" }
-  - { path: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md, why: "Kay on Sketchpad constraints" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — same light-pen era" }
+  - { path: ../heinz-lemke/, why: "PIXIE — Cambridge 1969" }
+  - { path: ../andrew-armit/, why: "Utah Ivan-period Coons patches" }
+  - { path: ../marvin-minsky/, why: "Sketchpad committee" }
+  - { path: ../douglas-engelbart/, why: "1968 demo neighbor (augmentation ≠ Sketchpad parent)" }
+  - { path: ../wesley-clark/, why: "TX-2 — Sketchpad machine (LINC / personal-computing precedent)" }
+  - { path: ../dave-evans/, why: "E&S co-founder; Utah ARPA graphics program" }
+  - { path: ../john-warnock/, why: "Utah graphics PhD → Adobe" }
+  - { path: ../ed-cheadle/, why: "FLEX with Kay — Evans intro (Utah)" }
+  - { path: ../bob-barton/, why: "B5000 — OOP trinity with Sketchpad + Simula" }
+  - { path: ../ole-johan-dahl/, why: "Simula — OOP trinity" }
+  - { path: ../kristen-nygaard/, why: "Simula co-creator" }
+  - { path: ../trygve-reenskaug/, why: "MVC naming — Sketchpad camera lineage; invite send_ready" }
+  - { path: ../alan-borning/, why: "ThingLab constraints — Sketchpad kinship; invite send_ready" }
+  - { path: ../steven-coons/, why: "Coons patches — Utah surface CAD root" }
+  - { path: ../henri-gouraud/, why: "Utah shading; Armit film tour" }
+  - { path: ../alan-kay/oop-trinity-sketchpad-simula-b5000.md, why: "Trinity essay" }
+  - { path: ../butler-lampson/, why: "PARC / Alto era — Kay's capability OOP line after Utah" }
+  - { path: ../chuck-thacker/, why: "Alto hardware — Smalltalk host after Utah" }
+  - { path: ../will-wright/, why: "Microworlds / glass-box simulation adjacency" }
+  - { path: ../../process/hn-harvest/ivan-sutherland.md, why: "Reviewed HN IDs" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — light-pen era" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "Full Yoot People.md → rooms map" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Hero citation rules" }

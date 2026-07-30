@@ -23,6 +23,9 @@ Async segments OK — Andrew records when convenient; Don assembles with barn sc
 **Update:** Andrew 16 Jul confirms film existed; barn notes from when it was made; shown with
 **Henri Gouraud** on US CAD tour. Pull-in: [`../heinz-lemke/pull-in-gaps.md`](../heinz-lemke/pull-in-gaps.md).
 
+**Invite pack (2026-07-29):** [`../henri-gouraud/invitation.md`](../henri-gouraud/invitation.md)
+send_ready; [`../steven-coons/`](../steven-coons/) memorial for the patch math.
+
 ## 2. Barn archive → simulation
 
 [`sources/2026-07-16-armit-archive-manifest.md`](sources/2026-07-16-armit-archive-manifest.md)
@@ -35,6 +38,21 @@ Async segments OK — Andrew records when convenient; Don assembles with barn sc
 | TAG / PGM | Source + hardware; **video of PGM working** |
 
 Pair with [`../lars-brinkhoff/`](../lars-brinkhoff/) emulator work and [`../roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md`](../roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md).
+
+### 2a. Multipatch-first (29 Jul 2026) — do this before Titan
+
+[`sources/2026-07-29-multipatch-vs-multiobject.md`](sources/2026-07-29-multipatch-vs-multiobject.md)
+
+Andrew's own corollary: **Multipatch is much easier to recreate** than Multiobject/PIXIE Titan paths.
+
+| System | Machine | Size | Link | UI |
+|--------|---------|------|------|-----|
+| **Multipatch** | PDP-7 only | ~4K | none | ASR-33 language (+ optional pen demo) |
+| **Multiobject** | PDP-7 + Titan | 16K→24K + Titan | 100-word PDP-7 link | minimal Titan updates |
+| **PIXIE** | PDP-7 + Titan | (listing) | Wiseman link | light-pen radial menus |
+
+Acceptance test already designed: thesis **command sequence + miniature screenshots**.
+Joystick story: 3-axis dual-microswitch graded deflection.
 
 ## 3. Cambridge canon correction
 

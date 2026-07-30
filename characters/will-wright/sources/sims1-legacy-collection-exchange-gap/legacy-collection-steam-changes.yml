@@ -21,19 +21,34 @@ community_reaction:
   theme: "Bring back the Exchange in all its 2000 glory — imagine the mods now"
 
 quality_of_life_added:
-  - Native modern resolution / widescreen support
+  - Native modern resolution / widescreen support (DPI 1×/2×/3×; Mar 2025 ingame res menu)
+  - Full Vulkan GPU path for Sims 1 (not DXVK) — see riperiperi-legacy-collection-technical-overview.md
+  - Saves under Saved Games\Electronic Arts\The Sims 25 (no admin install-dir writes)
   - Mouse scroll wheel camera zoom (not in original 2000 release)
-  - Bug fixes — e.g. Maxis-made Sims interests data
-  - EA intro video locked 4:3 with letterboxing; gameplay fills screen
+  - Bug fixes — e.g. Maxis-made Sims interests data (were all-zero in Complete Collection)
+  - Intro eventually drawn in-process (JPEG sequence); early builds had secondary-video focus bugs
+
+technical_authority:
+  gist: https://gist.github.com/riperiperi/78c843b7fc3b11a92e3d5585a7815fee
+  author: Rhys Simpson / riperiperi (FreeSO, Simitone)
+  lgr_cite: https://www.youtube.com/watch?v=ZUDt4BoMg-s
+  digest: riperiperi-legacy-collection-technical-overview.md
+  steam_appid_ts1: 3314060
 
 known_pain_points:
-  tiny_ui:
-    issue: UI renders at fixed pixel size — microscopic on 1080p/4K
+  tiny_ui_dpi:
+    issue: |
+      Point-filtered UI/sprite scale; at 4K effective game often ~720p×3. Grass/grid ignore DPI.
+      Fractional zoom ugly until Mar 14 2025 (integer-up + downscale). Runtime res still sticky.
     community_fixes:
-      - Temporary lower desktop resolution before play
-      - Magpie upscaling (windowed + Alt+F11) — community preferred
-      - DDrawCompat.ini DisplayResolution override
-    refs: [EA Forums Mar 2025 patch thread, r/thesims1]
+      - Ingame resolution options (post Mar 2025) — effective res needs restart
+      - Temporary lower desktop resolution / Magpie (pre-patch era)
+      - NVCP Vulkan present Prefer native (NVIDIA DXGI pixel scramble)
+    refs: [riperiperi gist, EA patch notes, LGR, r/thesims1]
+  registry_tools:
+    issue: No Maxis InstallPath — Sim Creator / old editors / Simitone discovery break
+    shim: HKLM WOW6432Node\Maxis\The Sims\InstallPath → LC install; or Steam libraryfolders sniff
+  no_exchange: see exchange_omissions above — Soul City fills this, not EA patches
 
 medical_wearables_sims4_parallel:
   note: |

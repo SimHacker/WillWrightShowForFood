@@ -1,0 +1,23 @@
+# MPC79 chip photo PDF set
+# Sibling file: mpc79-chip-photos.pdf (13 pages)
+
+image:
+  file: mpc79-chip-photos.pdf
+  title: "MPC79 — multiproject chip photograph collection (PDF)"
+  what: |
+    PDF of chip photos from the MPC79 multiproject wafer activity — the follow-on
+    that shipped working packaged chips to designers in ~29 days. Includes Stanford
+    and other university projects in the Mead–Conway revolution pipeline.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MPC79/Photos/PDFs/MPC79ChipPhotos.pdf
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/VLSIarchive.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8861178, url: "https://news.ycombinator.com/item?id=8861178" }
+  don_hopkins: |
+    Linked from the MPC78/MPC79 discussion alongside the Stanford BK die and
+    VLSI archive spreadsheet — visual proof the multiproject foundry loop worked.

@@ -1,0 +1,47 @@
+# L. Peter Deutsch — invitation / public-figure portrayal. NOT Peter Deutsch.
+# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: l-peter-deutsch
+  name: "L. Peter Deutsch"
+  full_name: "L. Peter Deutsch"
+  also_known_as: ["Peter Deutsch"]
+  type: invitation
+  signifier: "⚙️"
+  status: living
+  field: "Virtual machines — Smalltalk bytecode/VM (PS, HPS); Ghostscript; Berkeley → PARC"
+  home: characters/l-peter-deutsch/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub seeded from Yoot People.md — deepen before invite."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: null
+  note: "Natural co-guest with Kay / Lampson / Ingalls on VMs; not yet asked."
+
+bio:
+  summary: |
+    **L. Peter Deutsch** — UC Berkeley → Xerox PARC (1971–1986) with the Lampson/Thacker cohort.
+    On Smalltalk: redesigned bytecode instruction set, rewrote the compiler, created ChangeList;
+    principal designer of **PS** (PortableSmalltalk) — first modern on-the-fly-compiling VM — and
+    **HPS** successor. Later **Ghostscript**. Yoot People.md is the interview companion blurb.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/L._Peter_Deutsch"
+  web:
+    - { title: "Yoot People.md — L. Peter Deutsch", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "Smalltalk VM culture" }
+  - { path: ../butler-lampson/, why: "Berkeley → PARC cohort" }
+  - { path: ../chuck-thacker/, why: "Alto / MAXC hardware" }
+  - { path: ../dan-ingalls/, why: "Smalltalk implementers" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

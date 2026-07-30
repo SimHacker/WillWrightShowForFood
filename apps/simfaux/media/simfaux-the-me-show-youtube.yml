@@ -1,0 +1,16 @@
+# Sidecar — simfaux-the-me-show-youtube.png
+
+artifact:
+  file: simfaux-the-me-show-youtube.png
+  slug: simfaux-the-me-show-youtube
+  room: simfaux
+  hub: ../
+  what: simfaux the me show youtube
+  era: 2006
+  sidecar_of: simfaux-the-me-show-youtube.png
+
+gags:
+  - ../ideas/gags/simfaux-repo-show-prototype.yml
+
+see_also:
+  - simfaux.yml

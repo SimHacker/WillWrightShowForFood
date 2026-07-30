@@ -165,6 +165,7 @@ media:
     - { path: media/artwork.md, what: "Will's mixed-media relief constructions — evolution/systems piece, cell-division piece, terrain & city reliefs" }
 
 see_also:
+  - { path: ../../process/hn-harvest/will-wright.md, why: "DonHopkins/SimHacker HN harvest — Will Wright / SimCity / The Sims / Maxis queries (noisy; curate before quoting)" }
   - { path: README.md, why: "Human portrait — start here" }
   - { path: GLANCE.md, why: "One-screen sniff" }
   - { path: CARD.yml, why: "Invokable abilities — show segments" }
@@ -180,5 +181,15 @@ see_also:
   - { path: media/russian-space-junk.md, why: "Will's Soviet space-hardware collection (photos by Don)" }
   - { path: media/artwork.md, why: "Will's mixed-media relief artwork" }
   - { path: ../don-hopkins/CHARACTER.yml, why: "Host — Sims + SFC shared lineage" }
+  - { path: ../danielle-bunten-berry/, why: "Friend — The Sims dedicated to her; multiplayer social-games lineage" }
+  - { path: ../ralph-abraham/, why: "Phase space / possibility space; named on Will's 2026-07-09 look-up list" }
+  - { path: ../rebecca-heineman/, why: "Apple IIgs SimCity port lineage; memorial — see sources/2019-apple-iigs-simcity-becky-heineman/" }
   - { path: ../chaim-gingold/CARD.yml, why: "Building SimCity — reverse diagrams" }
   - { path: ../stone-librande/CARD.yml, why: "One-page design discipline" }
+  - { path: ../alan-kay/, why: "Microworlds / glass-box vs SimCity black-box (Kay OLPC digest + Quora constructionism)" }
+  - { path: ../alan-kay/people-index.yml, why: "Kay → Will pending portrait; reverse links" }
+  - { path: ../seymour-papert/, why: "Constructionism — shared microworlds ancestry with Kay" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad constraints as 'whats hold' — parallel to glass-box simulation ideals" }
+  - { path: ../terry-winograd/, why: "1996 CS547 microworlds talk host" }
+  - { path: ../yoot-saito/, why: "SimTower / Maxis — shared publisher orbit" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "Kay/Yoot apparatus map (PARC→personal computing context)" }

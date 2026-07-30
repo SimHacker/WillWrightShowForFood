@@ -1,0 +1,26 @@
+# What Alan Kay / Yoot apparatus say about Dave Evans — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: dave-evans
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Yoot People.md: Evans co-ran Utah's ARPA graphics program where Kay was a grad student, and
+    co-founded Evans & Sutherland with Ivan Sutherland. Separate Cheadle entry: Evans introduced
+    Kay to Ed Cheadle → FLEX machine work (1967).
+
+sources:
+  yoot_people:
+    url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+    section: "Dave Evans"
+
+show_hooks:
+  - "Utah ARPA graphics school — Kay student years"
+  - "Evans & Sutherland with Ivan"
+  - "Evans → Cheadle → FLEX personal computer"
+
+see_also:
+  - ../dave-evans/CHARACTER.yml
+  - ../ivan-sutherland/
+  - ../../process/yoot-people-wwsff-map.yml

@@ -1,0 +1,15 @@
+# What Alan Kay says about Bob Taylor — public sources
+character: bob-taylor
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    ARPA IPTO then PARC CSL. Funded and managed people rather than projects. Recruited Berkeley
+    Computer Corporation group (Lampson, Thacker, Deutsch…) Jan 1971. Yoot 1993 interview: Kay
+    credits Taylor's hands-off approach for the freedom that produced Alto and Smalltalk.
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  quora: [../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md]
+show_hooks:
+  - "People not projects — how to fund a lab that invents the future"
+  - "ARPANET → PARC CSL arc"
+  - "Pair with Lampson/Thacker recruit story"

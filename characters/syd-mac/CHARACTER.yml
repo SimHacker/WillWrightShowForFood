@@ -1,4 +1,5 @@
 # Syd Mac — portrayal. NOT Syd.
+# Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
 character:
   id: syd-mac
@@ -11,8 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Press-named in Creator Network exodus roundups — verify Syd's own post before on-air quotes."
 
 invitation:
   status: draft
@@ -20,8 +22,19 @@ invitation:
 
 bio:
   summary: |
-    **Syd Mac** — Sims creator who announced leaving the **EA Creator Network** after the buyout
-    (PC Gamer cited YouTube post — verify).
+    **Syd Mac** — Sims creator reported among those leaving the **EA Creator Network**
+    after the late-2025 buyout coverage (PC Gamer cited a YouTube post — **verify**).
 
 sources:
   - ../../process/sims-creator-network-exodus.yml
+  - { title: "PC Gamer — Sims creators depart over buyout", url: "https://www.pcgamer.com/games/the-sims/as-the-sims-content-creators-depart-over-eas-usd55-billion-saudi-backed-buyout-the-dev-team-promises-the-game-will-always-be-a-space-where-you-can-express-your-authentic-self/" }
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ../vixella/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../steph0sims/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../devon-bumpkin/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../lilsimsie/, why: "Headline resigner — same press wave" }
+  - { path: ../plumbella/, why: "Headline resigner — advocacy framing" }
+  - { path: ../../process/sims-creator-network-exodus.yml, why: "Registry + press links; verify_before_on_air" }
+  - { path: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml, why: "Show seed" }

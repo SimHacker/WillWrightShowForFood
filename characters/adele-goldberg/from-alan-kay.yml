@@ -1,0 +1,15 @@
+# What Alan Kay says about Adele Goldberg — public sources
+character: adele-goldberg
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    LRG member and later manager; co-wrote Smalltalk-80 books with Dave Robson; led documentation
+    and outside release of Smalltalk-80. HOPL discussant for Kay's Early History of Smalltalk
+    (Appendix VI). Yoot People.md is the compact interview companion entry.
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  quora: [../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md]
+show_hooks:
+  - "How Smalltalk left the lab — books + release"
+  - "LRG with kids — Weyer/Goldberg kids program (Yoot/HOPL)"
+  - "Pair with Dan Ingalls + Diana Merry-Shapiro"

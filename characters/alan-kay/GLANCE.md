@@ -1,1 +1,1 @@
-👤 **Alan Kay** — computing visionary: Smalltalk, the Dynabook, true object-orientation, and "the best way to predict the future is to invent it."
+💡 **Alan Kay** (b. 1940) — Smalltalk · Dynabook · PARC personal computing · messaging over objects · Turing 2003. Constructionist microworlds; warm Don correspondent; Vanessa memorial interest. [README](README.md) · [ideas](ideas.md) · [invite](invitation.md) · [microworld show](../../repo-shows/alan-kay-microworld.yml) · [people-index](people-index.yml) · [Quora hub](media/quora-recaps/).

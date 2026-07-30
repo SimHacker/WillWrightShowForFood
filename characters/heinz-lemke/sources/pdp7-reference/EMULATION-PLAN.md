@@ -4,7 +4,22 @@ How to get the [recovered 1972 listing](../pixie-assembler-listing-1972/README.m
 light pen and all, with a Titan across the link. Companion to the [turist guide](GUIDE.md)
 and the [reference library](README.md). Target: **CARS 2027 Berlin, 29 June 2027**.
 
-## The shape of the problem
+## Parallel track — Multipatch-first (Andrew Armit, 29 Jul 2026)
+
+Before (or beside) the full PIXIE↔Titan stack, Andrew's **Multipatch** is the easier win:
+
+- **Entirely on the PDP-7** — no Titan involvement (~4K, half a year to write, no libraries)
+- Octal listings + paper-tape design I/O; ASR-33 keyed language (pen variant was a demo of the language)
+- Thesis already has a **command sequence + miniature screenshots** acceptance test
+- **Multiobject** (rest of the PhD years) *does* talk to Titan — closer to PIXIE's shape, harder
+
+Digest: [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md)
+
+Lars (same day): custom SIMH device ≈ new `pdp18b_foo.c` + hooks in `pdp18b_defs.h` /
+`pdp18b_sys.c`. Type 340 **character generator already supported**; display-list **subroutines
+provisional / untested**.
+
+## The shape of the problem (PIXIE)
 
 Three pieces, separable:
 
@@ -15,7 +30,8 @@ Three pieces, separable:
    (`dat |= 0; // Light pen.` in `PDP18B/pdp18b_dpy.c`). One well-placed driver to write.
 3. **A Titan** — not emulated anywhere, and not needed in full. PIXIE only ever saw Titan
    through Wiseman's link: blocklets with headers, word counts, checksums, and the `PXID`
-   magic word. Emulate the *conversation*, not the computer.
+   magic word. Emulate the *conversation*, not the computer.  
+   *(Multipatch skips this piece entirely.)*
 
 ## Does the PDP-7 emulator run in the browser?
 
@@ -158,9 +174,12 @@ the slight defocus bigger deflection angles caused at the tube edge.)
 ## Milestones
 
 1. `make` SIMH pdp7 with display; run DEC's [340 display test](DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf).
-2. Loader: `rsppix.oct` → SIMH deposit script. First attempt to start PIXIE; expect to
-   learn things about missing SYMELEC linkage and entry conventions.
+2. Loader: `rsppix.oct` → SIMH deposit / `.rim`. **Partial (28 Jul 2026 — Roy Eagleson):**
+   `.oct`→`.rim` converter; code **loads** and **steps** instruction-by-instruction;
+   **`GO` stops with no display** — likely waiting on light-pen interrupts.
+   → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
 3. Light pen driver in `pdp18b_dpy.c` + mouse; pass the 370 diagnostic.
+   (Roy: X11 C locally; web mouse events for shareable setup.)
 4. PIXIE tracking cross follows the mouse. (The 1969 film shows what right looks like.)
 5. Network display backend (`ws.h` implementation) + browser canvas/WebGPU phosphor;
    pen driven from the browser pointer.

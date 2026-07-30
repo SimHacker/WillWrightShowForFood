@@ -21,6 +21,17 @@ transcribed Will's **1996 CS547 talk**; the through-line continues in OLPC SimCi
 tooling conversations, and today's **Soul City** / Repo Show work. Not score-keeping — a
 steady respect for toys-as-systems and federation across games.
 
+### Kay / Papert / Sketchpad adjacency (not a Kay interview)
+
+- **Alan Kay** critiques closed simulation models vs open/glass-box media — natural foil to
+  SimCity's black box and to Micropolis / Soul City as answers
+  ([`../alan-kay/`](../alan-kay/) · people-index pending portrait).
+- **Seymour Papert** constructionism — shared "microworlds" vocabulary with the 1996 talk title.
+- **Ivan Sutherland / Sketchpad** — constraints as *whats that stay true* when you drag; parallel
+  to "the player imagines more than we simulate" (different mechanism, same respect for structure).
+  ([`../ivan-sutherland/`](../ivan-sutherland/) ·
+  [`../alan-kay/oop-trinity-sketchpad-simula-b5000.md`](../alan-kay/oop-trinity-sketchpad-simula-b5000.md))
+
 ## The hooks
 
 ### 1. The long-overdue Sims 1 post-mortem
@@ -103,7 +114,8 @@ Not just creature-data IO, but a clean-room, web-native re-creation of the creat
 lineage loop.
 
 ### 10. The web-native Sims tool stack + reviving the Exchange
-Rebuilding Transmogrifier / RugOMatic / WigOMatic as browser-native tools, and bringing back the
+Rebuilding Transmogrifier / RugOMatic / **WigFabrik** (aka WigOMatic — ECG multitarget mesh+texture
++ AI hair maps; Tom Ngo patent expired) as browser-native tools, and bringing back the
 **Sims Exchange** (now that The Sims 1 is on Steam without it) — the piece that made The Sims a
 *medium*.
 

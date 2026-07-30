@@ -1,0 +1,53 @@
+# Butler Lampson — invitation / public-figure portrayal. NOT Butler Lampson.
+# Seeded from Yoot People.md + Alan Kay Quora ("quintessential computer scientist").
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: butler-lampson
+  name: "Butler Lampson"
+  full_name: "Butler W. Lampson"
+  type: invitation
+  signifier: "🔷"
+  status: living
+  field: "Operating systems, architecture, security — Project GENIE / SDS-940; Xerox Alto; Turing Award 1992"
+  home: characters/butler-lampson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub seeded from Yoot Saito × Alan Kay interview People.md + Kay Quora — deepen before invite."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Kay Quora blurb already written — invite drafted 2026-07-29. Pair Kay / Thacker Alto."
+
+
+bio:
+  summary: |
+    **Butler Lampson** — Project GENIE / CAL-TSS / SDS-940 at Berkeley; Bob Taylor recruited him
+    (with Thacker, Deutsch, et al.) to Xerox PARC CSL (1971). Co-architect of **MAXC** and the
+    **Alto**; Kay heard Lampson's capability OS talk (fall 1969) and credits unforgeable pointers /
+    "objects as server" as an influence on OOP thinking. Shared Draper Prize with Kay, Taylor,
+    Thacker (2004). Turing Award 1992. Kay (Quora 2026): *"Butler Lampson is the quintessential
+    example of a great [computer scientist]."*
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Butler_Lampson"
+  web:
+    - { title: "ACM Turing Award — Butler Lampson", url: "https://amturing.acm.org/award_winners/lampson_1142421.cfm" }
+    - { title: "Yoot People.md — Butler Lampson", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  quora_recap: ../alan-kay/media/quora-recaps/butler-lampson-significance.md
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: from-alan-kay.yml, why: "Kay's Lampson portrait (Yoot + Quora)" }
+  - { path: ../alan-kay/, why: "Capability → OOP; Alto budget bet; 'quintessential CS'" }
+  - { path: ../alan-kay/media/quora-recaps/butler-lampson-significance.md, why: "Quora recap" }
+  - { path: ../chuck-thacker/, why: "Alto hardware partner" }
+  - { path: ../bob-taylor/, why: "Recruited Berkeley group to PARC" }
+  - { path: ../ivan-sutherland/, why: "Pre-PARC graphics north star Kay carried in" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

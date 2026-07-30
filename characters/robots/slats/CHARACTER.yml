@@ -1,6 +1,8 @@
 # Slats — fictional sidekick character (NOT a real person)
+# Adventure-4 nest: under don-hopkins (SFC robot brain in Don's inventory)
 
 character:
+  id: slats
   name: Slats
   type: fictional_sidekick
   real_being: false
@@ -8,6 +10,13 @@ character:
   status: fictional
   field: "Stupid Fun Club robot brain — One Minute Movies; RoboResurrection quest; Drag Race celebrity judge"
   home: characters/robots/slats/
+
+# Adventure-4 character — absolute once; shorthand elsewhere
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins/slats
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/real-people/don-hopkins/slats
+  note: "Nested under Don's adventure-4 character. Resolve shorthand against absolute_url."
 
 representation:
   note: "Beloved fictional robot Don programmed at Will Wright's Stupid Fun Club — character + tool, not a soul we pretend into being"
@@ -65,6 +74,7 @@ media:
   video_pending: "Live shoot footage — excerpt to short-form"
 
 see_also:
+  - { path: moollm/examples/adventure-4/characters/real-people/don-hopkins/slats, why: "Adventure-4 character (abs: moollm_source.absolute_url)" }
   - { path: one-minute-movies-production.yml, why: "Oakland 1MM production stills + pending video archive" }
   - { path: one-minute-movies.md, why: "Primary sources — the SFC One Minute Movies + transcripts (Slats's voice)" }
   - { path: one-minute-movie-servitude.md, why: "'hello, my name is Slats' — the canonical waiter film + transcript" }

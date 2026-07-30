@@ -33,6 +33,12 @@ confirmation that a **Multipatch film** existed (shown on a US tour with **Henri
 Alan (same day): *"If anyone is qualified to define 'single minded and dedicated', it would most
 certainly be you!"*
 
+**29 Jul 2026** — architecture note: **Multipatch** ran entirely on the PDP-7 (~4K, no Titan,
+ASR-33 language, paper tape); **Multiobject** used Titan like PIXIE (16K→24K, 100-word link).
+Andrew's corollary: Multipatch is the **easier recreation** — thesis command sequence + miniature
+screenshots as the acceptance test. Digest:
+[`sources/2026-07-29-multipatch-vs-multiobject.md`](sources/2026-07-29-multipatch-vs-multiobject.md).
+
 ## The ICON line
 
 When Lloyd's Register wanted a 2D system, Andrew refused — rewrote the proposal over a **weekend**
@@ -55,6 +61,7 @@ on screen generating the x-axis scan used to finish the scope. Same person later
 | Doc | What |
 |-----|------|
 | [`sources/2026-07-16-armit-archive-manifest.md`](sources/2026-07-16-armit-archive-manifest.md) | Jul 2026 barn inventory email |
+| [`sources/2026-07-29-multipatch-vs-multiobject.md`](sources/2026-07-29-multipatch-vs-multiobject.md) | Multipatch vs Multiobject / PIXIE architecture |
 | [`sources/alan-kay-utah-coons-patches.md`](sources/alan-kay-utah-coons-patches.md) | Kay Utah memory + film hunt |
 | [`sources/armit-com-profile.md`](sources/armit-com-profile.md) | [armit.com](http://armit.com/) digest |
 | [`sources/takt-metronome-watch-profile.md`](sources/takt-metronome-watch-profile.md) | TAKT + later designs |
@@ -71,7 +78,9 @@ See [`ideas.md`](ideas.md). Draft invitation: [`invitation.md`](invitation.md).
 | **Heinz** (ICON co-author, PDP-7 lab) | [`../heinz-lemke/`](../heinz-lemke/) |
 | **Alan Kay** (Utah witness) | [`../alan-kay/`](../alan-kay/) |
 | **Roy Eagleson** (UWO PIXIE re-implementation) | [`../roy-eagleson/`](../roy-eagleson/) |
+| **Lars Brinkhoff** (SIMH PDP-7/340) | [`../lars-brinkhoff/`](../lars-brinkhoff/) |
 | **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
 | **16 Jul thread** | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
+| **Thread index** | [`../heinz-lemke/sources/THREAD-INDEX.md`](../heinz-lemke/sources/THREAD-INDEX.md) |
 
 [CHARACTER.yml](CHARACTER.yml) · [correspondence.yml](correspondence.yml) · [GLANCE.md](GLANCE.md)

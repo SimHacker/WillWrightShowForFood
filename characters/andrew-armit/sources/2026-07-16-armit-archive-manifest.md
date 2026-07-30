@@ -33,11 +33,18 @@ Armit remembers Kay at Utah as *"single minded and dedicated."*
 - **PDP-7** and **Type 340 display** manuals
 - Armit wrote **every instruction** so Multipatch could be **simulated** and new designs built
 
+**Architecture (29 Jul 2026):** entirely on PDP-7 — **no Titan**; ~**4K**; ASR-33 keyed language
+(primary); paper-tape design I/O; no libraries. → [`2026-07-29-multipatch-vs-multiobject.md`](2026-07-29-multipatch-vs-multiobject.md)
+
 ### Multiobject
 
 - Used **Titan** (like PIXIE architecture)
 - Full **machine-code source listings**
 - **Pristine Titan manuals** + **extracode definitions** — simulatable
+
+**Architecture (29 Jul 2026):** PDP-7 ↔ Titan minimal updates; 16K→24K; FP; **100-word** link
+program (not the proposed 4K handler); P.J. Payne plane intersections; thousands of lines —
+harder recreation than Multipatch.
 
 ### Film — Multipatch
 

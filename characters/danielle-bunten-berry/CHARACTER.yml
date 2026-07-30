@@ -4,22 +4,25 @@
 character:
   id: danielle-bunten-berry
   name: "Danielle Bunten Berry"
+  also_known_as: ["Dani Bunten Berry", "Dani Bunten", "Danielle Berry"]
   type: memorial
   signifier: "🕯️"
   status: deceased
+  born: "1949-02-19"   # St. Louis, Missouri (as Daniel Paul Bunten)
+  died: "1998-07-03"   # Little Rock area; lung cancer (aged 49)
   field: "Game designer — M.U.L.E., The Seven Cities of Gold; pioneer of multiplayer social games"
   home: characters/danielle-bunten-berry/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 5
+  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
   status: memorial
-  consent: not_yet_asked
+  consent: not_applicable
   document: memorial.md
-  note: "deceased (1949–1998) — represent + discuss; invite people who knew her, above all Will Wright"
+  note: "Deceased (1949–1998) — represent + discuss; invite people who knew her, above all Will Wright"
 
 memorial:
   mode: represent_and_discuss
@@ -28,23 +31,41 @@ memorial:
     - { who: will-wright, why: "Good friend and admirer; The Sims was dedicated to her, and her social-multiplayer philosophy shaped his work" }
     - { who: don-hopkins, why: "EA/Maxis lineage; multiplayer SimCity shares her people-first, play-together values" }
   draw_on_for_shows:
-    - "**M.U.L.E.** (1983) — a four-player economic/strategy game (Ozark Softscape, one of Electronic Arts' first titles); a landmark of cooperative-competitive multiplayer design"
-    - "**The Seven Cities of Gold** (1984) — open-world exploration, also for EA"
-    - "Her lifelong conviction that games should bring people **together in the same room** — social, multiplayer, human"
-    - "**The Sims (2000) was dedicated to her** — Will Wright's tribute to a friend and a guiding influence"
+    - "**M.U.L.E.** (1983, Atari 800 / EA) — four-player economic strategy; landmark cooperative-competitive design"
+    - "**The Seven Cities of Gold** (1984) — open-world exploration for EA"
+    - "Modem Wars / Command HQ / Global Conquest — early modem and multiplayer experiments"
+    - "Lifelong conviction: games should bring people **together in the same room**"
+    - "**The Sims (2000) dedicated to her** — Will Wright's tribute"
+    - "CGDA Lifetime Achievement (1998); AIAS Hall of Fame inductee (2007, Sid Meier accepting)"
 
 bio:
-  summary: "**Danielle Bunten Berry** (1949–1998) — game designer and a founding voice of **multiplayer social gaming**. At Ozark Softscape she created **M.U.L.E.** (1983), a four-player economic strategy game that became one of Electronic Arts' first and most beloved titles, and **The Seven Cities of Gold** (1984). She believed games were at their best when they brought people together in person, and she championed that idea for her whole career. Published as Dan Bunten before coming out as a trans woman in 1992. **The Sims was dedicated to her.**"
+  summary: |
+    **Danielle Bunten Berry** (1949–1998) — game designer and a founding voice of
+    **multiplayer social gaming**. At Ozark Softscape she created **M.U.L.E.** (1983),
+    a four-player economic strategy game among Electronic Arts' first and most
+    beloved titles, and **The Seven Cities of Gold** (1984). She believed games were
+    at their best when they brought people together in person. Published as Dan
+    Bunten before coming out as a trans woman in 1992. CGDA Lifetime Achievement
+    Award (1998); posthumous **AIAS Hall of Fame** (2007). **The Sims was dedicated
+    to her.**
 
 sources:
-  wikipedia: "https://en.wikipedia.org/wiki/Dani_Bunten_Berry"
+  wikipedia: "https://en.wikipedia.org/wiki/Danielle_Bunten_Berry"
   web:
-    - "https://www.donhopkins.com/home/TheSimsDesignDocuments/"   # "The Sims is dedicated to Dani Berry"
+    - { title: "AIAS Hall of Fame — Danielle Bunten Berry", url: "https://www.interactive.org/special_awards/details.asp?idSpecialAwards=12" }
+    - { title: "GameSpot — Dani Bunten named to AIAS Hall of Fame (2007)", url: "https://www.gamespot.com/articles/dani-bunten-named-to-aias-hall-of-fame/1100-6164582/" }
+    - { title: "MobyGames — Danielle Berry", url: "https://www.mobygames.com/person/8515/danielle-berry/" }
+    - { title: "The Sims Design Documents (Don) — dedication note", url: "https://www.donhopkins.com/home/TheSimsDesignDocuments/" }
   papers: []
   blogs: []
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: ideas.md, why: "Show hooks grounded in documented work" }
+  - { path: README.md, why: "Room orientation" }
   - { path: ../will-wright/, why: "Dedicated The Sims to her; close friend and admirer" }
   - { path: ../don-hopkins/, why: "EA/Maxis lineage; multiplayer, play-together values" }
+  - { path: ../rebecca-heineman/, why: "Fellow memorial — games + trans pioneer" }
+  - { path: ../jennell-jaquays/, why: "Fellow memorial — games/RPG + trans pioneer" }
+  - { path: ../lynn-conway/, why: "Fellow memorial — computing + trans pioneer; same respect protocol" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

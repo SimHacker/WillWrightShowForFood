@@ -1,0 +1,15 @@
+character: henri-gouraud
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Kay (10 Jul 2026) asked Don/Heinz to find film of Armit's Utah Coons-patch PDP-7 system.
+    Armit (16 Jul): film existed; shown on US CAD tour with Henri Gouraud. Gouraud is the living
+    tour witness for that ask — not a long Kay portrait yet.
+sources:
+  digests:
+    - ../andrew-armit/sources/alan-kay-utah-coons-patches.md
+    - ../andrew-armit/sources/2026-07-16-armit-archive-manifest.md
+show_hooks:
+  - "Multipatch film hunt — who saw it on the US tour"
+  - "Utah PhD shading ↔ interactive CAD neighbors"
+see_also: [../henri-gouraud/CHARACTER.yml, ../andrew-armit/, ../steven-coons/]

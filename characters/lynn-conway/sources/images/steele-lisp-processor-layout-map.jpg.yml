@@ -1,0 +1,28 @@
+# Steele/Sussman Lisp microprocessor layout map (AIM-514 p.22)
+# Sibling image: steele-lisp-processor-layout-map.jpg
+
+image:
+  file: steele-lisp-processor-layout-map.jpg
+  title: "Lisp-based microprocessor — processor layout map (AIM-514)"
+  what: |
+    Page-22-style map of the processor layout from Steele & Sussman's
+    "Design of a LISP-based microprocessor" — the hardware project from
+    Lynn Conway's 1978 MIT VLSI course. Don hosted/linked this figure via imgur
+    when walking HN through the chip photos.
+
+source:
+  url: https://i.imgur.com/zwaJMQC.jpg
+  paper: "https://dspace.mit.edu/bitstream/handle/1721.1/5731/AIM-514.pdf"
+  paper_alt: "https://donhopkins.com/home/AIM-514.pdf"
+  credit: |
+    Figure from Steele & Sussman AIM-514 (MIT AI Lab). Imgur copy as linked by
+    Don Hopkins on HN; paper is the citable source.
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+    - { id: 43266939, url: "https://news.ycombinator.com/item?id=43266939" }
+  don_hopkins: |
+    Design of a LISP-based microprocessor … Page 22 has a map of the processor
+    layout. (Pairs with the hi-res chip photo where Quux's name is etched.)

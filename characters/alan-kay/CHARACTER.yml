@@ -1,53 +1,153 @@
 # Alan Kay — invitation portrayal. NOT Alan Kay.
 # Standards: ../../schemas/portrayal-standards.md
+# Room depth lives in ideas.md + media/quora-recaps/ + people-index.yml — this file is the girder.
 
 character:
   id: alan-kay
   name: "Alan Kay"
+  full_name: "Alan Curtis Kay"
   type: invitation
-  signifier: "👤"
+  signifier: "💡"
   status: living
-  field: "Computer scientist — Smalltalk, Dynabook, constructionism"
+  born: "1940-05-17"   # Springfield, Massachusetts
+  field: "Computer scientist — Smalltalk, Dynabook, overlapping GUI / personal computing; constructionist education"
   home: characters/alan-kay/
+  awards:
+    - "ACM A.M. Turing Award (2003) — OOP / Smalltalk / personal computing"
+    - "Kyoto Prize; NAE Draper Prize (shared PARC personal-computing lineage — cite CHM/ACM for wording)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 3
   authored_by: don-hopkins
+  note: >
+    Warm correspondent (2008–2026). INDEX: invitation_status warm; strongly interested in
+    Vanessa memorial; no microworld-show interview "yes" yet (unlike Will). Subject may edit
+    or remove anytime.
 
 invitation:
-  status: draft
+  status: warm          # aligns with characters/INDEX.yml — draft invite text; warm relationship
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/alan-kay-microworld.yml
+  show_seed:
+    - repo-shows/alan-kay-microworld.yml
+    - repo-shows/remembering-vanessa-freudenberg.yml
+  memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
+  priority: send_after_craig
+  note: >
+    Hoped: a series — especially Heinz Cambridge / PIXIE lineage and living+passed collaborators.
+    No obligation. Updated 2026-07-25 / polished 2026-07-29.
 
 bio:
-  summary: "**Alan Kay** — computing visionary: Smalltalk, the Dynabook, true object-orientation, and \"the best way to predict the future is to invent it.\""
+  summary: |
+    **Alan Curtis Kay** (b. 1940) — computer scientist who led Smalltalk and overlapping-window
+    personal computing at Xerox PARC, coined much of the popular vocabulary of
+    **object-oriented** programming (later stressing that **messaging** was the big idea),
+    and conceived the **Dynabook** as a computer for children of all ages. Utah PhD (1969);
+    PARC Learning Research Group; Atari Chief Scientist (1981–1984); Apple Fellow; Disney /
+    VPRI / Viewpoints. Constructionist ally of **Seymour Papert**; Turing Award 2003.
+    Long correspondent of Don's (Qwaq 2008 → Fabrik/Ingalls → Yoot transcript → MOOLLM 2026).
+    Lives in London with **Bonnie MacBird**. Widely attributed line: *"The best way to predict
+    the future is to invent it."*
+
+known_for:
+  - "Smalltalk + Dynabook + modern overlapping GUI / personal-computing vision (PARC)"
+  - "Messaging / late binding — 'I'm sorry that I long ago coined the term objects…'"
+  - "Constructionist microworlds — Etoys, Squeak, Croquet; OLPC-adjacent advocacy"
+  - "Public Quora corpus (~620 answers) — browsers-as-OS, HyperCard, PARC culture, literacy"
+  - "Yoot Saito 1993 Japan interview (Engelbart demo anniversary) — transcript reviewed by Alan"
 
 sources:
-  wikipedia: null
+  wikipedia: "https://en.wikipedia.org/wiki/Alan_Kay"
   web:
-    []
-  papers: []
+    - { title: "ACM Turing Award — Alan Kay (2003)", url: "https://amturing.acm.org/award_winners/kay_3972189.cfm" }
+    - { title: "CHM profile — Alan Kay", url: "https://computerhistory.org/profile/alan-kay/" }
+    - { title: "Medium — Alan Kay on browsers / NeWS / HyperCard (Don)", url: "https://donhopkins.medium.com/alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445" }
+    - { title: "Yoot × Alan Kay interview (OCR companion)", url: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview" }
+    - { title: "Quora corpus archive (2023)", url: "https://archive.org/details/alan-kay-quora-2023-11" }
+    - { title: "DSHR — History of Window Systems (embeds Kay prehistory)", url: "https://blog.dshr.org/2021/03/history-of-window-systems.html" }
+  papers:
+    - "Kay, A. C. — The Early History of Smalltalk (HOPL-II, 1993)."
+    - "Kay, A. C. — A Personal Computer for Children of All Ages (1972 Dynabook paper)."
   blogs: []
+  room:
+    - media/quora-recaps/
+    - media/discussions/
+    - sources/
+    - correspondence.yml
+    - people-index.yml
 
 can_discuss:
-  - { who: douglas-engelbart, why: "Recalled the 1968 demo's impact; memorial mode — represent + discuss, never speak as Doug" }
-  - { who: dan-ingalls, why: "PARC hire + Fabrik/pie-menu witness — see people-index.yml" }
-  - { who: bill-atkinson, why: "HyperCard co-productization eyewitness" }
-  - { who: seymour-papert, why: "Fellow constructionist; Dynabook ↔ Mindstorms" }
-  - { who: yoot-saito, why: "Reviewed 1993 interview transcript" }
-  - { who: bonnie-macbird, why: "Wife — 'the amazing Bonnie MacBird'; TRON origin; the London story is theirs jointly" }
-  - { who: ted-nelson, why: "Computer Lib as matchmaker — Intertwingled tribute; see ../ted-nelson/from-alan-kay.yml" }
-  - { who: maurice-wilkes, why: "'A special hero of mine' — Wilkes→PARC lineage; memorial mode; see ../maurice-wilkes/from-alan-kay.yml" }
+  - { who: douglas-engelbart, why: "1968 demo impact; memorial mode — Yoot interviewed both" }
+  - { who: vanessa-freudenberg, why: "SqueakJS / Croquet lineage; warmly invited memorial discussant" }
+  - { who: dan-ingalls, why: "PARC hire + Fabrik / swiped pie menus — Alan introduced Don to Dan" }
+  - { who: craig-latta, why: "Caffeine / Qwaq; Vanessa memorial arc anchor" }
+  - { who: bill-atkinson, why: "HyperCard co-productization eyewitness (memorial mode)" }
+  - { who: seymour-papert, why: "Fellow constructionist; Dynabook ↔ Mindstorms (memorial)" }
+  - { who: yoot-saito, why: "1993 interview transcript; pair segment" }
+  - { who: bonnie-macbird, why: "Wife — TRON / London story jointly; guest in her own right" }
+  - { who: ted-nelson, why: "Computer Lib as matchmaker — Intertwingled tribute" }
+  - { who: maurice-wilkes, why: "'A special hero of mine' — Wilkes→PARC lineage (memorial)" }
+  - { who: heinz-lemke, why: "PIXIE / light-pen thread; hoped Cambridge series" }
+  - { who: andrew-armit, why: "Utah Coons-patch PDP-7 awe (Kay July 2026 memory)" }
+  - { who: david-rosenthal, why: "NeWS / window-system prehistory synthesis" }
+  - { who: will-wright, why: "SimCity black-box critique ↔ glass-box Micropolis / Simulator Effect" }
 
 see_also:
-  - { path: moollm-trust-and-teaching-guess.md, why: "Draft artifact — MOOLLM vs Kay on copilots, trust, teaching; lead question for show" }
-  - { path: ideas.md, why: "Conversation hooks — long exchange + microworld show segments" }
-  - { path: people-index.yml, why: "Kay on everyone in characters/ — cross-ref hub" }
-  - { path: correspondence.yml, why: "Public-safe mail digest" }
-  - { path: ../douglas-engelbart/, why: "Memorial — Alan is a discussant of Doug's work (two-way with Doug's who_can_discuss)" }
-  - { path: ../douglas-engelbart/eulogy-ted-nelson.md, why: "Ted's eulogy for Doug — the memorial segment Alan can join" }
-  - { path: ../yoot-saito/, why: "Yoot interviewed Alan (1993) for the 25th anniversary of Engelbart's demo" }
-  - { path: ../yoot-saito/yoot-tower-discussion.yml, why: "Pair Alan WITH Yoot to revisit that interview on air" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: GLANCE.md, why: "One-screen sniff" }
+  - { path: CARD.yml, why: "Guest skills card" }
+  - { path: invitation.md, why: "Send-ready invite (draft)" }
+  - { path: ideas.md, why: "Conversation hooks — Quora + mail threads" }
+  - { path: correspondence.yml, why: "Public-safe mail digest (2008–2026)" }
+  - { path: people-index.yml, why: "Kay on everyone in characters/ — from-alan-kay hub" }
+  - { path: moollm-trust-and-teaching-guess.md, why: "Draft — MOOLLM vs Kay on copilots/trust/teaching" }
+  - { path: media/, why: "Quora recaps, HN discussions, from-mail" }
+  - { path: media/quora-recaps/README.md, why: "Themed Quora summaries" }
+  - { path: sources/, why: "PIXIE / Wilkes / Wes Clark digests" }
+  - { path: ../../repo-shows/alan-kay-microworld.yml, why: "Primary show seed" }
+  - { path: ../../repo-shows/remembering-vanessa-freudenberg.yml, why: "Memorial arc — warm invite" }
+  - { path: ../../process/hn-harvest/alan-kay.md, why: "Reviewed HN IDs only" }
+  - { path: ../bonnie-macbird/, why: "Spouse — TRON / Holmes / London" }
+  - { path: ../dan-ingalls/, why: "Fabrik intro; Smalltalk implementer" }
+  - { path: ../vanessa-freudenberg/, why: "Memorial discussant" }
+  - { path: ../craig-latta/, why: "Caffeine; memorial anchor" }
+  - { path: ../yoot-saito/, why: "1993 interview" }
+  - { path: ../douglas-engelbart/, why: "Memorial discussant" }
+  - { path: ../heinz-lemke/, why: "PIXIE / Cambridge series hope" }
+  - { path: ../andrew-armit/, why: "Utah Coons patches memory" }
+  - { path: ../david-rosenthal/, why: "Window systems / NeWS" }
+  - { path: ../seymour-papert/, why: "Constructionist kinship" }
+  - { path: ../maurice-wilkes/, why: "Wilkes→PARC hero line" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad / Utah — proto-OOP north star" }
+  - { path: ../butler-lampson/, why: "Capability OOP; Alto; quintessential CS" }
+  - { path: ../chuck-thacker/, why: "Alto / Bilbo memorial" }
+  - { path: ../adele-goldberg/, why: "LRG / Smalltalk-80 books" }
+  - { path: ../bob-taylor/, why: "PARC CSL — people not projects" }
+  - { path: ../ted-kaehler/, why: "OOZE / LRG / Apple–Disney" }
+  - { path: ../wesley-clark/, why: "LINC + TX-2 personal-computing precedent" }
+  - { path: ../larry-tesler/, why: "Modeless UI; Jobs Smalltalk demo" }
+  - { path: ../john-warnock/, why: "Utah cohort → Adobe" }
+  - { path: ../dave-evans/, why: "Utah ARPA graphics; E&S; FLEX intro" }
+  - { path: ../l-peter-deutsch/, why: "Smalltalk VM; Berkeley→PARC" }
+  - { path: oop-trinity-sketchpad-simula-b5000.md, why: "Sketchpad · Simula · B5000 — Kay's stated roots" }
+  - { path: ../bob-barton/, why: "B5000 — hardware crystallized early" }
+  - { path: ../ole-johan-dahl/, why: "Simula — Smalltalk root" }
+  - { path: ../kristen-nygaard/, why: "Simula co-creator" }
+  - { path: ../ed-cheadle/, why: "FLEX machine partner (status unknown)" }
+  - { path: ../trygve-reenskaug/, why: "MVC at PARC" }
+  - { path: ../warren-teitelman/, why: "DWIM / programming-as-interaction (memorial)" }
+  - { path: ../carl-hewitt/, why: "Actors — messaging neighborhood" }
+  - { path: ../stewart-brand/, why: "1972 Rolling Stone PARC" }
+  - { path: ../alan-borning/, why: "ThingLab — invite send_ready" }
+  - { path: ../steven-coons/, why: "Coons patches — Utah/Armit film lane" }
+  - { path: ../henri-gouraud/, why: "Multipatch film tour — invite send_ready" }
+  - { path: ../butler-lampson/invitation.md, why: "Send-ready — Kay quintessential CS blurb" }
+  - { path: ../adele-goldberg/invitation.md, why: "Send-ready — LRG / books" }
+  - { path: ../ted-kaehler/invitation.md, why: "Send-ready — OOZE / LRG" }
+  - { path: media/quora-recaps/teitelman-dwim-programming-as-interaction.md, why: "Teitelman Quora recap" }
+  - { path: ../ted-nelson/, why: "Computer Lib matchmaker" }
+  - { path: ../will-wright/, why: "SimCity black-box ↔ glass-box thread" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "Yoot People.md → rooms map" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → live-object lineage" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Consent / quiet mode" }

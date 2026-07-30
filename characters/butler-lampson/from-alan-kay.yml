@@ -1,0 +1,18 @@
+# What Alan Kay says about Butler Lampson — public sources
+character: butler-lampson
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Fall 1969 CAL-TSS talk — capability design influenced Kay's OOP ("objects as server").
+    Recruited to PARC Jan 1971 with Thacker/Deutsch. Alto: Lampson wanted "$500 PDP-10,"
+    Thacker a faster Nova, Kay a kiddicomp — Lampson+Thacker asked for Kay's Nova budget (~$230K).
+    Software policy: standardize disk format + later Ethernet packet — not everything.
+    Quora 2026: quintessential great computer scientist. Yoot 1993: "distributive computing."
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  quora: [../alan-kay/media/quora-recaps/butler-lampson-significance.md, ../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md]
+  mail_digest: ../alan-kay/correspondence.yml  # Wilkes→PARC capability lineage
+show_hooks:
+  - "Capability OS → OOP thinking"
+  - "Alto budget bet — Lampson / Thacker / Kay"
+  - "What 'quintessential computer scientist' means on air"

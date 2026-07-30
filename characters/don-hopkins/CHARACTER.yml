@@ -19,11 +19,18 @@ representation:
   authored_by: self
   layers:
     public_wwsff: "This directory — career/ + portrayal/"
-    moollm_adventure: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
+    moollm_adventure: moollm/examples/adventure-4/characters/real-people/don-hopkins
   note: "Don controls this directory. Adventure microworld state stays upstream."
   reading_experience: |
     YAML Jazz here = rambling conversation with Don, sometimes coherent interview.
     See portrayal/voice.yml#character_room.
+
+# Adventure-4 microworld character — absolute once; shorthand elsewhere
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/real-people/don-hopkins
+  note: "Canonical adventure incarnation. Resolve shorthand paths against absolute_url."
 
 simulation:
   permitted: true
@@ -51,9 +58,10 @@ sources:
     - https://github.com/SimHacker/moollm
     - https://github.com/SimHacker/WillWrightShowForFood
   upstream_character:
-    - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins
+    - moollm/examples/adventure-4/characters/real-people/don-hopkins   # → moollm_source.absolute_url
 
 see_also:
+  - { path: moollm/examples/adventure-4/characters/real-people/don-hopkins, why: "Adventure-4 character (abs: moollm_source.absolute_url)" }
   - { path: sync-sources.yml, why: "Dedupe map from adventure-4 — what's here vs upstream" }
   - { path: CARD.yml, why: "MOOLLM room interface" }
   - { path: GLANCE.yml, why: "Sniff" }
@@ -64,7 +72,7 @@ see_also:
   - { path: portrayal/presentations.yml, why: "CHI'88 and verified talks" }
   - { path: career/stupid-fun-club.yml, why: "Slats + Dents — robot brains for Will" }
   - { path: ../don-philahue/, why: "MC avatar on stream" }
-  - { path: ../slats/, why: "Slats — waiter robot → drag race judge" }
+  - { path: ../robots/slats/, why: "Slats — waiter robot → drag race judge (adventure-4 under don-hopkins/slats/)" }
   - { path: ../will-wright/, why: "Boss, collaborator, flagship guest" }
   - { path: ../david-ahl/, why: "Patron saint — Creative Computing; aspire to be as wonderful" }
   - { path: ../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division, why: "Public Engelbart open models + SWAG catalog (Augment Division)" }

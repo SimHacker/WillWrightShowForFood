@@ -1,0 +1,15 @@
+character: warren-teitelman
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Kay Quora: Teitelman as exemplar of programming-as-interaction / DWIM culture that
+    shaped the interactive systems background of Smalltalk. Recap: teitelman-dwim-programming-as-interaction.md
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/teitelman-dwim-programming-as-interaction.md
+      topics: [DWIM, Interlisp, programming-as-interaction]
+see_also:
+  - ../warren-teitelman/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

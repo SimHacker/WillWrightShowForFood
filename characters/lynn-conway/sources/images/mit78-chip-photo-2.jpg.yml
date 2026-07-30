@@ -1,0 +1,23 @@
+# MIT'78 multiproject chip — hi-res half 2
+# Sibling image: mit78-chip-photo-2.jpg (~6000×3407)
+
+image:
+  file: mit78-chip-photo-2.jpg
+  title: "MIT'78 multiproject chip — hi-res photo (half 2)"
+  what: |
+    High-resolution photo of the other half of the MIT'78 multiproject chip.
+    Guy Steele's Lisp microprocessor is the big design on the left — zoom for
+    "(C) 1978 GUY L STEELE JR".
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/InstGuide/MIT78chip%20photo-2%20L.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/InstGuide/InstGuide.html
+  credit: "Lynn Conway — Instructor's Guide / MIT'78 materials"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    The Great Quux's Lisp Microprocessor is the big one on the left of the second
+    image, and you can see his name "(C) 1978 GUY L STEELE JR" if you zoom in.

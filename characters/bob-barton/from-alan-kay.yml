@@ -1,0 +1,12 @@
+character: bob-barton
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md: Barton / B5000; stack machines easier to compile for; "Hardware is really just
+    software crystallized early"; Goethe on sharing discovery; "Systems programmers are high priests
+    of a low cult." Kay OOP trinity: Sketchpad + Simula + B5000.
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+see_also:
+  - ../bob-barton/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

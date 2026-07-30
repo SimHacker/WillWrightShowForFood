@@ -50,6 +50,7 @@ sources:
     - "Open-source election system (2008); Orchid Labs (2017–2024)"
 
 see_also:
+  - { path: ../../process/hn-harvest/brian-fox.md, why: "DonHopkins HN comments mentioning Brian Fox" }
   - { path: ../richard-stallman/, why: "Hired him as FSF employee #1" }
   - { path: ../henry-minsky/, why: "Universal Access co-founder" }
   - { path: ../julie-minsky/, why: "Universal Access co-founder" }

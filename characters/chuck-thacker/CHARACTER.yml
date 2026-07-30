@@ -1,0 +1,59 @@
+# Chuck Thacker — memorial / public legacy portrayal. NOT Chuck Thacker.
+# Charles P. Thacker died 2017 — represent + discuss. Seeded from Yoot People.md.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: chuck-thacker
+  name: "Chuck Thacker"
+  full_name: "Charles P. Thacker"
+  also_known_as: ["Charles Thacker"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1943-02-26"
+  died: "2017-06-12"
+  field: "Hardware — Xerox Alto; MAXC; Ethernet era; Microsoft Tablet PC; Turing Award 2009"
+  home: characters/chuck-thacker/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1943–2017) — represent + discuss; Alto / Kay kiddicomp bet"
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Alto built for Kay's kiddicomp direction; Needham/Cambridge fan line" }
+    - { who: butler-lampson, why: "Alto hardware partner; Berkeley→PARC cohort" }
+    - { who: dan-ingalls, why: "Smalltalk on Alto — implementer side" }
+
+bio:
+  summary: |
+    **Charles P. ("Chuck") Thacker** (1943–2017) — lead hardware designer of the **Xerox Alto**,
+    the machine that hosted early Smalltalk; built **MAXC** (PARC's PDP-10 emulator). With
+    Lampson offered to build Kay's proposed machine on Kay's Nova budget; first Alto months later
+    ("Bilbo"). Later DEC / Microsoft (Tablet PC). Turing Award 2009; Draper Prize with Kay,
+    Lampson, Taylor. Kay notes Thacker as a Roger Needham fan who later set up Microsoft's
+    Cambridge lab.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Charles_P._Thacker"
+  web:
+    - { title: "ACM Turing Award — Chuck Thacker", url: "https://amturing.acm.org/award_winners/thacker_1363825.cfm" }
+    - { title: "Yoot People.md — Chuck Thacker", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay Alto / Bilbo / Needham line" }
+  - { path: ../alan-kay/, why: "Kiddicomp → Alto" }
+  - { path: ../butler-lampson/, why: "Alto partners" }
+  - { path: ../bob-taylor/, why: "CSL recruiter" }
+  - { path: ../dan-ingalls/, why: "Smalltalk on Alto" }
+  - { path: ../maurice-wilkes/, why: "Needham / Cambridge research lab adjacency (Kay)" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

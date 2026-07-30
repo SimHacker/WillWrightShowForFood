@@ -1,0 +1,19 @@
+# What Alan Kay says about Chuck Thacker — public sources
+character: chuck-thacker
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Lead Alto designer; with Lampson took Kay's Nova/character-generator budget to build the
+    machine (Thacker bet: whole machine in three months). First Alto nicknamed Bilbo. Built MAXC.
+    Kay: Thacker was a Roger Needham fan who later set up the Cambridge Microsoft research lab;
+    Wilkes→PARC connection "mainly through Chuck Thacker, etc."
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  digests:
+    - ../alan-kay/sources/2026-07-12-wilkes-parc-london.md
+    - ../alan-kay/correspondence.yml
+  quora: [../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md]
+show_hooks:
+  - "Alto in three months — Bilbo"
+  - "Thacker ↔ Needham ↔ Cambridge lab"
+  - "Hardware that hosted Smalltalk — with Dan Ingalls"

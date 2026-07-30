@@ -1,0 +1,47 @@
+# carl-hewitt — memorial. NOT the person.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: carl-hewitt
+  name: "Carl Hewitt"
+  full_name: "Carl Eddie Hewitt"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1944-12-07"
+  died: "2022-12-16"
+  field: "Concurrency — Actor model; MIT AI Lab"
+  home: characters/carl-hewitt/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Messaging / actors neighborhood in OOP history" }
+    - { who: ken-kahn, why: "Actors / ToonTalk lineage" }
+
+bio:
+  summary: |
+    **Carl Hewitt** (1944–2022) — **Actor model** of concurrent computation (MIT AI Lab).
+    Yoot People.md / Kay apparatus place actors in the intellectual neighborhood of messaging OOP.
+    Natural memorial discussants: **Ken Kahn** (ToonTalk / actors orbit), Alan Kay.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Carl_Hewitt"
+  web:
+    - { title: "Yoot People.md", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "Kay history hub" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

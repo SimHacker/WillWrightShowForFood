@@ -46,7 +46,15 @@ connects_in_repo:
   - { path: ../dan-ingalls/from-alan-kay.yml, why: "Alan introduced Don to Dan via the Fabrik paper" }
   - { path: ../yoot-saito/from-alan-kay.yml, why: "Alan reviewed the 1993 Yoot Saito interview transcript" }
   - { path: ../david-ungar/from-alan-kay.yml, why: "Self lineage → MOOLLM prototypes" }
+  - { path: ../bonnie-macbird/from-alan-kay.yml, why: "London / Holmes Quora" }
+  - { path: ../andrew-armit/from-alan-kay.yml, why: "Utah Coons patches" }
+  - { path: ../heinz-lemke/from-alan-kay.yml, why: "PIXIE / light-pen thread" }
+  - { path: ../david-rosenthal/from-alan-kay.yml, why: "NeWS / window prehistory" }
+  - { path: ../maurice-wilkes/from-alan-kay.yml, why: "Wilkes hero / PARC lineage" }
+  - { path: sources/2026-07-12-wilkes-parc-london.md, why: "July 2026 Wilkes–PARC–London digest" }
+  - { path: sources/2026-07-28-wes-clark-pdp8-popplestone.md, why: "Wes Clark / PDP-8 / Popplestone digest" }
   - { path: media/discussions/hn-mvc-morphic-watchers-2015.md, why: "Private email Oct 2011 — MVC, Morphic, watchers (quoted on HN 2015)" }
+  - { path: ../../process/hn-harvest/alan-kay.md, why: "Reviewed HN IDs" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → NeWS → live systems" }
   - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "MOOLLM as the Smalltalk-lineage idea" }
 

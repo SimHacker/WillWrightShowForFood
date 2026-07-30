@@ -1,0 +1,56 @@
+# SimFaux — sideways symbiosis (sibling organelles)
+# Worked example of process/character-endosymbiosis.yml inside one app hub.
+# Like multiple souls in Soul City: parallel directories, shared cytoplasm, no digestion.
+
+meta:
+  id: simfaux-organelles
+  one_line: "2006 LZX is DNA kept as a sub-organelle (not executed); transcribed sideways into OL 5.0, then Declare — siblings living in parallel."
+  frame: ../../process/character-endosymbiosis.yml
+  soul_city_analogy: "Each organelle is a soul-expression of SimFaux; the hub (apps/simfaux/) is the cytoplasm they share — media pointers, archives, deploy URLs, show beats."
+
+biology:
+  sideways_symbiosis: |
+    Not replace-and-delete. Absorb the old lineage as an organelle that keeps its own
+    genome. Transcribe into new metabolisms. Leave the ancestors standing beside the kids.
+  dna_not_runtime: |
+    original-lzx/ holds the recovered OpenLaszlo tree as genetic material — read, diff,
+    teach the model, seed transcription. Do not require Flash execution for the lineage
+    to remain alive in the cell.
+  transcription: |
+    DNA → openlaszlo-5/ (camera on the old stage — Temkin OL 5.0 reincarnate).
+    Then / also → declare/ (cinematography — Temkin Declare reimagine).
+    Parallel, not a single linear kill-switch.
+  shared_cytoplasm: |
+    media/ (stills + specs), archives/, deploy.md (AV on donhopkins.com), ideas/ —
+    molecules every organelle can read. Membranes decide what each runtime imports.
+
+organelles:
+  original-lzx:
+    path: original-lzx/
+    role: dna # genome / mitochondrion with ancient metabolism — preserved, not the required runtime
+    executes: false # may never run SOLO Flash again; still DNA
+    status: awaiting_disk_deposit
+  openlaszlo-5:
+    path: openlaszlo-5/
+    role: transcription_camera # reincarnate LZX on OL 5.0 without rewrite-of-spirit
+    executes: true
+    status: empty_seed
+    parent_dna: original-lzx
+  declare:
+    path: declare/
+    role: transcription_cinematography # heir language; not a port
+    executes: true
+    status: empty_seed
+    parent_dna: original-lzx # may also read openlaszlo-5 as intermediate organelle
+    kin: ../../characters/david-temkin/sources/declarelang.md
+
+membrane_rules:
+  - "AV content stays outside all organelles (server URL) — shared external nutrient"
+  - "Do not delete original-lzx when declare ships — sideways, not succession-by-erasure"
+  - "Portfolio wrappers outside this hub point at the cytoplasm, not a single organelle"
+
+see_also:
+  - { path: ../../process/character-endosymbiosis.yml, why: "games as cells; directories as organelles; Soul City cytoplasm" }
+  - { path: ../../process/CHARACTER-ENDOSYMBIOSIS.md, why: "readable article" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OL 5.0 → Declare reunion braid" }
+  - { path: ../../catalogs/soul-city/, why: "multiple souls / facets in parallel" }

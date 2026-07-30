@@ -1,0 +1,14 @@
+# What Alan Kay / Yoot apparatus say about Trygve Reenskaug — public sources only
+character: trygve-reenskaug
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md lists Reenskaug (MVC at PARC). Kay Quora OOP recap: MVC traced from Sketchpad
+    clipping window as camera → Flex → Smalltalk; Reenskaug named the pattern at PARC (1979).
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md", section: "Trygve Reenskaug" }
+  quora: [{ recap: ../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md, topics: [MVC, Sketchpad] }]
+show_hooks:
+  - "MVC naming at PARC vs Sketchpad camera lineage"
+  - "Roles / DCI as later Reenskaug architecture"
+see_also: [../trygve-reenskaug/CHARACTER.yml, ../ivan-sutherland/, ../../process/yoot-people-wwsff-map.yml]

@@ -1,4 +1,5 @@
 # Vixella — portrayal. NOT Vixella.
+# Consent level 3 — public figure; not yet asked. Verify primary posts before quoting.
 
 character:
   id: vixella
@@ -11,8 +12,9 @@ character:
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 1
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Named in PC Gamer / IGN exodus roundups — verify Vixella's own post before on-air quotes."
 
 invitation:
   status: draft
@@ -20,11 +22,19 @@ invitation:
 
 bio:
   summary: |
-    **Vixella** — Sims YouTuber named among creators who left the **EA Creator Network** following
-    the Oct 2025 buyout news (PC Gamer, IGN — verify post).
+    **Vixella** — Sims YouTuber named among creators who left the **EA Creator Network**
+    following Oct 2025 buyout news (PC Gamer, IGN — **verify** primary post).
 
 sources:
   - ../../process/sims-creator-network-exodus.yml
+  - { title: "IGN — Sims creators quit EA partnerships", url: "https://www.ign.com/articles/the-sims-creators-quit-ea-partnerships-amid-buyout-concerns" }
 
 see_also:
-  - ../../repo-shows/will-wright-premiere/creator-network-exodus.yml
+  - { path: README.md, why: "Room orientation" }
+  - { path: ../syd-mac/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../steph0sims/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../devon-bumpkin/, why: "Peer — Creator Network exodus cohort" }
+  - { path: ../lilsimsie/, why: "Headline resigner — same press wave" }
+  - { path: ../plumbella/, why: "Headline resigner — advocacy framing" }
+  - { path: ../../process/sims-creator-network-exodus.yml, why: "Registry + press links; verify_before_on_air" }
+  - { path: ../../repo-shows/will-wright-premiere/creator-network-exodus.yml, why: "Show seed" }

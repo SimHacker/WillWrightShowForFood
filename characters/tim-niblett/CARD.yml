@@ -1,0 +1,27 @@
+# Tim Niblett — CARD (interface sniff)
+
+name: tim-niblett
+title: "Tim Niblett — memorial"
+status: deceased
+type: memorial
+
+glance: GLANCE.md
+character: CHARACTER.yml
+memorial: memorial.md
+
+when_to_open:
+  - "Turing Institute naming / cofounders"
+  - "HyperNeWS GoodNeWS PdB WiT"
+  - "HyperLook DAT tape hunt 2019"
+  - "Mentor stories — Scrabble, ski, speed chess, Prolog"
+  - "Turing orphans memorials"
+
+do_not:
+  - Speak as Tim
+  - Treat illness gossip as content
+  - Misspell as Nibblet in emitted files
+
+advertisements:
+  - "He suggested calling it The Turing Institute."
+  - "He rarely took credit for ideas that were his."
+  - "Arthur: mentor, friend, and Scrabble opponent."

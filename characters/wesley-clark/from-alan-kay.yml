@@ -1,0 +1,15 @@
+# What Alan Kay says about Wesley A. Clark — public sources
+character: wesley-clark
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Designed the LINC (1962) — Kay cites as early personal computer / individual-computing
+    precedent. TX-2 hosted Sketchpad (Ivan Sutherland). July 2026 digests on PIXIE thread also
+    touch Wes Clark / PDP-8 / Popplestone adjacency.
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  digests:
+    - ../alan-kay/sources/2026-07-28-wes-clark-pdp8-popplestone.md
+show_hooks:
+  - "LINC → Dynabook personal-computing lineage"
+  - "TX-2 under Sketchpad — with Ivan hero room"

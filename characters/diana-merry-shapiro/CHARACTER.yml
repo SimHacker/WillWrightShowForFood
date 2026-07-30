@@ -1,15 +1,62 @@
+# Diana Merry-Shapiro — invitation portrayal. NOT Diana Merry-Shapiro.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: diana-merry-shapiro
-  name: "Diana Merry Shapiro"
+  name: "Diana Merry-Shapiro"
+  also_known_as: ["Diana Merry"]
   type: invitation
+  signifier: "🪟"
   status: living
+  born: "1939-08-25"
+  field: "Xerox PARC Learning Research Group — Smalltalk; overlapping windows; BitBLT co-inventor"
   home: characters/diana-merry-shapiro/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from Wikipedia, BitBLT memo lineage, CHM oral history. Subject may edit/delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  note: "Dream invite — PARC Smalltalk graphics primitives; BitBLT living memory"
+
+bio:
+  summary: |
+    **Diana Merry-Shapiro** (née Mayhugh; also known in the literature as **Diana Merry**)
+    joined Xerox PARC as a secretary and became a programmer in Alan Kay's **Learning
+    Research Group**. Original Smalltalk developer: early **overlapping window** systems,
+    character scanners / text editors, font tools, and co-invention of **BitBLT**
+    (bit-boundary block transfer) with Dan Ingalls, Larry Tesler, and Bob Sproull
+    (Alto/Smalltalk-72 era; Ingalls later microcoded a redesign). Left PARC ~1986;
+    continued in financial software still using Smalltalk; retired 2014. CHM oral
+    history documents her first-person account of BitBLT and windows.
+
+why_invited:
+  bitblt: "Living co-inventor of the primitive every modern UI still rests on."
+  smalltalk: "First-hand LRG / Alto / Smalltalk-80 implementation memory."
+  show_fit: "Graphics history nights — PIXIE radial menus ↔ PARC bitmaps as sibling lineages."
+
+show_suggestions:
+  - { what: "BitBLT origin story — machine code, CONVERT microcode, Ingalls Byte article" }
+  - { what: "Overlapping windows before they were industry standard" }
+  - { what: "Secretary → LRG programmer — who got to invent at PARC" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Diana_Merry"
+  web:
+    - { title: "Bit blit — Wikipedia (credits Merry)", url: "https://en.wikipedia.org/wiki/BitBLT" }
+    - { title: "CHM oral history PDF (Merry-Shapiro)", url: "https://archive.computerhistory.org/resources/access/text/2023/11/102792731-05-01-acc.pdf" }
+    - { title: "BitBLT memo (Nov 1975) — Bitsavers", url: "https://bitsavers.org/pdf/xerox/alto/BitBLT_Nov1975.pdf" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../bill-atkinson/, why: "QuickDraw / Mac bitmap lineage after PARC" }
+  - { path: ../heinz-lemke/, why: "Sibling graphics history — Cambridge light-pen vs PARC bitmaps" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

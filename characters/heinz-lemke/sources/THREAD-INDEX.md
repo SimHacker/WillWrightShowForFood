@@ -1,7 +1,7 @@
 # PIXIE email thread — chronological index
 
 **Subject:** Invitation to PIXIE / Rainbow Repo Show interview → PIXIE/Rainbow, Sketchpad, and Object-Oriented Design  
-**Span:** 4 July – 28 July 2026
+**Span:** 4 July – 29 July 2026
 
 | Date | Doc | Highlights |
 |------|-----|------------|
@@ -24,10 +24,11 @@
 | **27 Jul** | same + [`facebook-guessing-game-2026-07/`](facebook-guessing-game-2026-07/README.md) | Thread still hot: **161 likes / 173 comments**; Heinz-facing update (no Facebook required); Joerg Micheel settle-the-bet analysis; Don's NeWS/AJAX framing; Aron Insinga primer; Dean Horak light-pen photos; illustration pack saved |
 | **24 Jul** | [`2026-07-24-tty-film-loop-titles.md`](2026-07-24-tty-film-loop-titles.md) | Don 20:47 (+fwd to Howard): washed-out TTY paper in the 1969 film → overlay any text; loopable CR LF segment for titles/credits; Tog's Infinite Monkeys precedent; escalates to **diegetic terminal emulator** (SIMH console printing onto the film) |
 | **28 Jul** | [`2026-07-28-pixie-storyline-thread.md`](2026-07-28-pixie-storyline-thread.md) | Heinz: **Oldfield** insisted on rebuildable docs (→ 210pp thesis); PDP-9 not PDP-8 as 18-bit sibling; Lowe 1970 MSc; real-time debugging. Don bridges to **Duckmouse** / Pete book / Arthur poster scan. Alan: Wes Clark LINC/TX-2/IMP; Popplestone; Bletchley day trip. **Roy: `.oct`→`.rim` loads in SIMH; step OK; GO blank — needs light pen** → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md) |
+| **29 Jul** | [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) | **Andrew:** Multipatch = PDP-7 only ~4K (no Titan, ASR-33, paper tape); Multiobject = Titan-linked 16K→24K, 100-word link, P.J. Payne plane intersections. **Corollary: Multipatch-first recreation.** **Lars:** SIMH custom device = `pdp18b_foo.c`; 340 char gen already; display-list subroutines provisional/untested |
 
 ## Pull-ins still open
 
-See [`../pull-in-gaps.md`](../pull-in-gaps.md): 1969 Greyhound agenda, Nagoya surgery slides, Newman ref 520 scan, PIXIE Part 1.docx (DSHR attachment), Multipatch film, Titan extracode defs, CARS 2027 session planning, **Pete Mowforth Chapter-one.pdf**, **Arthur Robot Olympics poster scan**, **light-pen device for SIMH** (Roy).
+See [`../pull-in-gaps.md`](../pull-in-gaps.md): 1969 Greyhound agenda, Nagoya surgery slides, Newman ref 520 scan, PIXIE Part 1.docx (DSHR attachment), Multipatch film, Titan extracode defs, CARS 2027 session planning, **Pete Mowforth Chapter-one.pdf**, **Arthur Robot Olympics poster scan**, **light-pen device for SIMH** (Roy), **Multipatch octal + thesis command/screenshot sequence** (Andrew Multipatch-first path).
 
 ## Show
 

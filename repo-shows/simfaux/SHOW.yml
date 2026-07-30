@@ -1,0 +1,54 @@
+# SHOW — SimFaux Reimagine (Declare) + live faux-news instrument
+# Wrapper: app hub is ../../apps/simfaux/ (center of gravity).
+# Spin out to its own MOOLLM/public repo when the new SimFaux runs.
+
+show:
+  id: simfaux
+  title: "A Repo Show: SimFaux — Faux News as a Living Switchboard"
+  type: group # or solo Don + Declare
+  host: Don Hopkins
+  guests: ["David Temkin"]
+  optional_guests: ["Oliver Steele", "Henry Minsky", "David Ungar"]
+  characters:
+    - characters/don-hopkins/
+    - characters/david-temkin/
+  topic: |
+    Sideways symbiosis: keep 2006 LZX as DNA organelle; transcribe into OL 5.0 and
+    Declare as sibling organelles (Soul City parallel souls). Use Declare-SimFaux as
+    live/recorded Repo Show instrument. Development: WWSFF apps/simfaux/.
+  status: seed
+  consent: not_yet_asked
+  app_hub: ../../apps/simfaux/
+  organelles: ../../apps/simfaux/ORGANELLES.yml
+  spin_out: ../../apps/simfaux/SPIN-OUT.md
+
+the_spark:
+  what: |
+    2006 HuffPo Contagious Festival app — pie menus, channel surf, keyword media —
+    already a modular show economy. Source was svn://SimFaux.com (gone); SWF+content
+    still at donhopkins.com/home/new/. LZX becomes DNA; OL 5.0 + Declare live beside it.
+  why_a_show: |
+    Not nostalgia only — a working mixer for Repo Shows, and a worked example of
+    character-endosymbiosis inside one app cell. Faceball / Conan cutouts meet Temkin.
+
+threads:
+  - "Sideways symbiosis — DNA organelle + parallel transcriptions (not succession-by-erasure)"
+  - "2006 README ideas as 2026 backlog — hangman, Tic Tac Faux, Red5 → WebRTC, overlays"
+  - "OL 5.0 camera vs Declare cinematography — both organelles may live"
+  - "Live instrument — channels as acts; pie menus as director; gravitas ticker"
+  - "Content stays data — server FLVs + YAML keywords; UI is Declare"
+  - "WWSFF apps/simfaux/ as public stage → spin-out when runnable"
+
+artifacts:
+  - ../../apps/simfaux/
+  - ../../apps/simfaux/ORGANELLES.yml
+  - ../../apps/simfaux/original-lzx/
+  - ../../apps/simfaux/openlaszlo-5/
+  - ../../apps/simfaux/declare/
+  - ../../apps/simfaux/archives/
+  - ../../apps/simfaux/media/
+  - ../../process/character-endosymbiosis.yml
+  - https://www.youtube.com/watch?v=gRodlxUZ9SQ
+  - https://donhopkins.com/home/new/
+  - ../../characters/david-temkin/sources/declarelang.md
+  - ../openlaszlo/

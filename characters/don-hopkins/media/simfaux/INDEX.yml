@@ -1,18 +1,16 @@
-# SimFaux — OpenLaszlo Fox News parody (2006)
+# Portfolio wrapper — SimFaux lives in apps/simfaux/
+# Resume / character context only. Do not put development artifacts here.
 
 room:
-  id: simfaux
-  name: SimFaux — Interactive Fox Parody
-  parent: ../../media.md
+  id: simfaux-portfolio-pointer
+  name: SimFaux (Don — media portfolio pointer)
+  hub: ../../../../apps/simfaux/
 
-artifacts:
-  - simfaux-dashboard-full.png
-  - simfaux-the-me-show-youtube.png
+points_to:
+  hub: ../../../../apps/simfaux/
+  media: ../../../../apps/simfaux/media/
+  archives: ../../../../apps/simfaux/archives/
+  deploy: ../../../../apps/simfaux/deploy.md
+  show: ../../../../repo-shows/simfaux/
 
-spec:
-  - simfaux.yml
-
-see_also:
-  - ../../writing/INDEX.yml
-  - ../micropolis-gallery/INDEX.yml
-  - ../../../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md
+note: "Screenshots and specs moved to apps/simfaux/media/ for public live development + spin-out."

@@ -4,10 +4,10 @@
 
 meta:
   kay_hub: characters/alan-kay/
-  updated: "2026-07-06"
+  updated: "2026-07-29"
   rule: |
     Quotes from Quora OCR corpus — verify on live Quora before formal citation.
-    Mail bodies stay private; only correspondence.yml digests linked here.
+    Mail bodies stay private; only correspondence.yml digests + room digests linked here.
 
 # --- WWSFF guests with from-alan-kay.yml ---
 
@@ -33,28 +33,50 @@ enriched:
   - owen-densmore
   - vanessa-freudenberg
   - craig-latta
+  - ted-nelson
+  - maurice-wilkes
+  - bonnie-macbird      # added 2026-07-29
+  - andrew-armit        # Utah Coons / PDP-7 — July 2026 mail digest
+  - david-rosenthal     # NeWS / window prehistory synthesis
+  - ivan-sutherland     # Sketchpad / Utah / Yoot People.md — hero room deep 2026-07-29
+  - butler-lampson      # Yoot People.md + Quora quintessential CS
+  - chuck-thacker       # Alto / Bilbo — memorial
+  - adele-goldberg      # Smalltalk-80 books / LRG
+  - bob-taylor          # PARC CSL — memorial
+  - ted-kaehler         # OOZE / LRG
+  - wesley-clark        # LINC / TX-2 — memorial
+  - larry-tesler        # cut/copy/paste; Jobs demo — memorial
+  - john-warnock        # Utah / Adobe — memorial
+  - dave-evans          # Utah + E&S — memorial
+  - l-peter-deutsch     # Smalltalk VM / Ghostscript
+  - trygve-reenskaug    # MVC
+  - stewart-brand       # Rolling Stone PARC
+  - ed-cheadle          # FLEX — status unknown
+  - bob-barton          # B5000 — memorial
+  - carl-hewitt         # Actors — memorial
+  - warren-teitelman    # DWIM — memorial (Quora recap)
+  - ole-johan-dahl      # Simula — memorial
+  - kristen-nygaard     # Simula — memorial
+  - will-wright         # from-alan-kay.yml — glass-box foil (no direct quote yet)
+  - alan-borning        # ThingLab — invite send_ready
+  - henri-gouraud       # Multipatch film tour witness
+  - steven-coons        # Coons patches memorial (Utah/Armit lane)
 
 # --- Mentioned in Kay sources; enrich next ---
 
 pending:
   - slug: ted-selker
     kay_on: "PIXIE preservation thread (Don mail); CS547 orbit"
-  - slug: david-rosenthal
-    kay_on: "NeWS 'right way to go' (correspondence.yml); window-system lineage"
   - slug: bret-victor
     kay_on: "PARC hiring culture cross-ref in parc-vpri recap"
   - slug: brad-myers
     kay_on: "UI canon (interaction techniques) in teitelman recap periphery"
   - slug: chaim-gingold
     kay_on: "SimCity black-box / constructionist thread (OLPC mail — digest only)"
-  - slug: will-wright
-    kay_on: "SimCity as black box vs open model (OLPC mail — digest); not direct Kay↔Will quote"
   - slug: sam-arbesman
     kay_on: "Complexity / CA orbit; no substantive Kay portrait yet"
   - slug: jef-raskin
     kay_on: "Yoot People.md — Macintosh/HyperCard era context"
-  - slug: ted-nelson
-    kay_on: "Engelbart augmentation thread; inverse vandalism recap"
   - slug: gary-drescher
     kay_on: "McCarthy Advice Taker / schema — teitelman + oop recaps periphery"
   - slug: norman-margolus
@@ -65,27 +87,20 @@ pending:
 # --- Kay names them; no WWSFF character dir yet ---
 
 kay_mentions_no_dir:
-  - name: Butler Lampson
-    wwsff_note: "Consider stub or fold into alan-kay show — quintessential CS (Quora + Yoot People.md)"
-    sources: [butler-lampson-significance.md, Yoot People.md, parc-vpri-how-research-worked.md]
-  - name: Warren Teitelman
-    sources: [teitelman-dwim-programming-as-interaction.md]
   - name: John McCarthy
+    wwsff_note: "Lisp / Advice Taker — stub next (Quora OOP + Teitelman)"
     sources: [oop-messaging-and-what-comes-next.md, teitelman-dwim-programming-as-interaction.md]
-  - name: Bob Taylor
-    sources: [parc-vpri-how-research-worked.md, Yoot People.md]
-  - name: Chuck Thacker
-    sources: [oop-messaging-and-what-comes-next.md, Yoot People.md]
-  - name: Ted Kaehler
-    sources: [parc-vpri-how-research-worked.md, correspondence.yml halos]
-  - name: Adele Goldberg
-    sources: [parc-vpri-how-research-worked.md, Yoot People.md]
   - name: Dave Reed
     sources: [oop-messaging-and-what-comes-next.md]
-  - name: Ivan Sutherland
-    sources: [oop-messaging-and-what-comes-next.md, hypercard recap Sketchpad line]
   - name: Doug Lenat
+    wwsff_note: "Cyc Quora recap; memorial 2023 — stub next"
     sources: [lenat-cyc-knowledge-and-slow-thinking.md]
+  - name: Niklaus Wirth
+    wwsff_note: "Euler → FLEX; memorial 2024"
+    sources: [Yoot People.md]
+  - name: Henry Fuchs
+    wwsff_note: "Utah graphics cohort"
+    sources: [Yoot People.md]
 
 # --- Source map ---
 
@@ -97,10 +112,25 @@ recaps_by_theme:
   oop_mccarthy_reed: media/quora-recaps/oop-messaging-and-what-comes-next.md
   lampson: media/quora-recaps/butler-lampson-significance.md
   teitelman: media/quora-recaps/teitelman-dwim-programming-as-interaction.md
+  london_bonnie: media/quora-recaps/why-alan-kay-moved-to-london.md
+  browsers_news: media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md
   mail_digest: correspondence.yml
   yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  hn_reviewed: ../../process/hn-harvest/alan-kay.md
 
 show_pairings:
+  - guests: [alan-kay, ivan-sutherland, ole-johan-dahl, bob-barton]
+    hook: "OOP trinity — Sketchpad · Simula · B5000 (essay: oop-trinity-sketchpad-simula-b5000.md)"
+  - guests: [alan-kay, trygve-reenskaug, ivan-sutherland, alan-borning]
+    hook: "MVC naming ↔ Sketchpad camera ↔ ThingLab constraints"
+  - guests: [alan-kay, andrew-armit, henri-gouraud, steven-coons]
+    hook: "Utah Coons patches / Multipatch film hunt"
+  - guests: [alan-kay, ivan-sutherland, heinz-lemke, roy-eagleson]
+    hook: "Sketchpad constraints → PIXIE pen era (Ivan citation; living discussants)"
+  - guests: [alan-kay, butler-lampson, chuck-thacker]
+    hook: "Alto / kiddicomp bet — quintessential CS + Bilbo"
+  - guests: [alan-kay, will-wright, seymour-papert]
+    hook: "Microworlds Sure! vs SimCity black-box — glass-box Micropolis"
   - guests: [alan-kay, dan-ingalls]
     hook: "Fabrik swiped pie menus + PARC hiring stars-in-their-eyes"
   - guests: [alan-kay, douglas-engelbart, yoot-saito]
@@ -109,7 +139,11 @@ show_pairings:
     hook: "HyperCard masterpiece → HyperLook → live system underneath"
   - guests: [alan-kay, seymour-papert, walter-bender, brian-harvey, jens-monig]
     hook: "Microworlds Sure! + Etoys/Snap! as answers"
-  - guests: [alan-kay, heinz-lemke, douglas-engelbart]
-    hook: "PIXIE papers + radial menus preservation"
+  - guests: [alan-kay, heinz-lemke, douglas-engelbart, andrew-armit]
+    hook: "PIXIE papers + radial menus + Utah Coons patches"
   - guests: [alan-kay, craig-latta, vanessa-freudenberg, dan-ingalls]
     hook: "Vanessa memorial — SqueakJS/Caffeine/Croquet line"
+  - guests: [alan-kay, bonnie-macbird, ted-nelson]
+    hook: "Computer Lib matchmaker · TRON · London / Holmes"
+  - guests: [alan-kay, david-rosenthal, james-gosling, owen-densmore]
+    hook: "NeWS / browsers-as-OS / window prehistory"

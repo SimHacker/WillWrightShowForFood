@@ -16,6 +16,21 @@ card:
   rarity: legacy
   signifier: "🕯️🐭✝️"
   flavor: He named America's two biggest archetypes out loud and walked as their combination.
+  inheritance_gag:
+    - "Jesus as in Christ · Mouse as in Mickey · Wizard as in the stick with the key"
+    - "imports: costume, wells, props, mission — not pronunciation (that's Duckmouse)"
+    - "from <well> import <dimension.aspect> as <local> — sources/latent-imports.md"
+
+latent_import: |
+  # from <module> import <dimension.aspect> as <local>
+  from jesus_christ import soul.jesus as jesus, hair.long as hair, beard.long as beard
+  from mickey_mouse import soul.mickey as mouse, costume.hat as hat, costume.long_tail as tail
+  from the_wizard import props.walking_stick as scepter, props.jester_head.purple as jester_head
+  from the_wizard import props.spell_book.sequined as spell_book
+
+  class JesusMouse(Jesus, MickeyMouse, Wizard):
+      look = hair | beard | hat | tail | scepter | jester_head | spell_book
+      body = 1
 
 relationships:
   - { with: don-hopkins, kinds: [memoir_author, discussant], why: "Haight Street conversations; HN memoir; Amsterdam coincidence" }

@@ -1,0 +1,11 @@
+character: ole-johan-dahl
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md: Dahl + Nygaard / Simula — Kay's stated Smalltalk root alongside LISP.
+    Completes OOP trinity with Sketchpad (Ivan) and B5000 (Barton).
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+see_also:
+  - ../ole-johan-dahl/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

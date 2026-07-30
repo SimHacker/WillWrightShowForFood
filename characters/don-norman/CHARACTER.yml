@@ -1,15 +1,59 @@
+# Don Norman — invitation portrayal. NOT Don Norman.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: don-norman
   name: "Don Norman"
+  full_name: "Donald Arthur Norman"
   type: invitation
+  signifier: "🚪"
   status: living
+  field: "Cognitive scientist / design — The Design of Everyday Things; Nielsen Norman Group"
   home: characters/don-norman/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from public books and NN/g. Subject may edit/delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  note: "Dream invite — affordances, feedback, human-centered design for sims & tools"
+
+bio:
+  summary: |
+    **Don Norman** — cognitive scientist and design theorist; author of *The Design
+    of Everyday Things* (1988 as *The Psychology of Everyday Things*; revised 2013)
+    and related books on emotional design and complexity. Co-founder of **Nielsen
+    Norman Group**. Public vocabulary — affordances, signifiers, mapping, feedback,
+    conceptual models, "Norman's law" of product schedules — is the lingua franca
+    of HCI critique. Strong fit for pie-menu / PIXIE / SimCity UI history nights:
+    why controls should teach, not punish.
+
+why_invited:
+  doet: "The book every UI argument eventually cites — doors that are also menus."
+  show_fit: "Radial menus, SimCity tools, Sims needs — discoverability under playful complexity."
+
+show_suggestions:
+  - { what: "Affordances vs signifiers — pie menus as spatial memory" }
+  - { what: "Error as design failure — simulation UIs that blame the player" }
+  - { what: "Emotional design × The Sims" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Don_Norman"
+  web:
+    - { title: "jnd.org — Design of Everyday Things", url: "https://jnd.org/books/the-design-of-everyday-things-1st-ed/" }
+    - { title: "NN/g — DOET revised", url: "https://www.nngroup.com/books/design-everyday-things-revised/" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: ../../process/hn-harvest/don-norman.md, why: "DonHopkins HN — Don Norman" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Pie menus as Norman-grade interaction design" }
+  - { path: ../heinz-lemke/, why: "PIXIE radial menus — 1969 precursor" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

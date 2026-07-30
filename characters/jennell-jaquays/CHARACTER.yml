@@ -1,15 +1,75 @@
+# Jennell Jaquays — memorial portrayal (in memoriam). NOT Jennell Jaquays.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
 character:
   id: jennell-jaquays
   name: "Jennell Jaquays"
-  type: invitation
+  full_name: "Jennell Allyn Jaquays"
+  type: memorial
+  signifier: "🕯️"
   status: deceased
+  born: "1956-10-14"
+  died: "2024-01-10"   # Dallas; complications of Guillain–Barré syndrome (aged 67)
+  field: "Tabletop RPG adventure design & art; video game level design (Quake, EVE Online, Age of Empires)"
   home: characters/jennell-jaquays/
+  spouse: rebecca-heineman   # public obituaries / Wikipedia — Becky at her side; both memorial rooms
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1956–2024) — represent + discuss; friend-phone tribute clips from colleagues welcome"
+
+memorial:
+  mode: represent_and_discuss
+  rule: >
+    Represent and discuss her documented public work and publicly shared advocacy.
+    Do not interview, do not speak as her, invent no inner life. Only her real,
+    documented words, with attribution. Prefer her chosen name Jennell in all
+    present-tense and memorial text; historical credits may note prior publication
+    names where bibliographically required.
+  who_can_discuss: []   # fill as colleagues accept
+  draw_on_for_shows:
+    - "Dark Tower (1979, Judges Guild) — only non-TSR adventure on Dungeon's 2004 '30 greatest' list"
+    - "Caverns of Thracia — non-linear 'Jaquaysing' dungeon design (loops, multiple paths)"
+    - "The Dungeoneer fanzine — early third-party D&D culture"
+    - "Coleco conversions (Pac-Man, Donkey Kong); later Age of Empires, Quake II/III, EVE Online"
+    - "Dragon Mountain cover art (TSR)"
+    - "Trans rights advocacy — Transgender Human Rights Institute (Seattle); Leelah's Law petition"
+    - "Return to Perinthos memorial game jam / megadungeon (2024) — family + Trans Lifeline"
+
+bio:
+  summary: |
+    **Jennell Allyn Jaquays** (1956–2024) was a game designer, artist, and level
+    designer whose Judges Guild adventures **Dark Tower** and **Caverns of Thracia**
+    (1979) defined non-linear dungeon design so thoroughly that designers still say
+    **Jaquaysing** a map. *Dark Tower* was the only non-TSR entry on *Dungeon*
+    magazine's 2004 list of the thirty greatest D&D adventures. She co-founded
+    *The Dungeoneer*, illustrated widely (including *Dragon Mountain*), moved into
+    video games (Coleco, Age of Empires, Quake II/III, EVE Online), and was an
+    outspoken transgender rights advocate. Married to fellow game developer
+    **Rebecca Heineman** (also memorialized here). Memorial projects after her
+    death include the **Return to Perinthos** collaborative megadungeon.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Jennell_Jaquays"
+  web:
+    - { title: "Gnome Stew — The Legacy of Jennell Jaquays", url: "https://gnomestew.com/the-legacy-of-jennell-jaquays/" }
+    - { title: "TechRaptor — Memorial Game Jam / Return to Perinthos", url: "https://techraptor.net/tabletop/news/jennell-jacquays-memorial-game-jam-remembers-legendary-designer" }
+    - { title: "RPGnet Interview #118", url: "https://www.rpg.net/columns/interviews/interviews118.phtml" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks and open research" }
+  - { path: ../rebecca-heineman/, why: "Spouse — public record; fellow memorial room (died 2025)" }
+  - { path: ../danielle-bunten-berry/, why: "Fellow memorial — games + trans pioneer; same respect protocol" }
+  - { path: ../lynn-conway/, why: "Fellow memorial — trans pioneer in computing" }
+  - { path: ../john-carmack/, why: "Quake-era industry adjacency (level design lineage)" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

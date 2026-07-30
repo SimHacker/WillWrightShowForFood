@@ -1,0 +1,83 @@
+# Yoot Saito × Alan Kay interview — People.md → WWSFF character rooms
+# Source: https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md
+# Updated: 2026-07-29e
+
+meta:
+  yoot_repo: YootTowerManagement/YootTower
+  people_md: Yoot_Saito_Alan_Kay_Interview/People.md
+  absolute_url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  rule: |
+    People.md is Kay-interview apparatus (public). Prefer it + Quora recaps for from-alan-kay.yml.
+    Do not invent quotes. Memorial vs living checked against public obituaries.
+
+linked:
+  - { people_md: "Alan Kay", slug: alan-kay, status: deep }
+  - { people_md: "Yutaka \"Yoot\" Saito", slug: yoot-saito, status: deep }
+  - { people_md: "Dan Ingalls", slug: dan-ingalls, status: deep }
+  - { people_md: "Douglas Engelbart", slug: douglas-engelbart, status: memorial_deep }
+  - { people_md: "Seymour Papert", slug: seymour-papert, status: memorial_deep }
+  - { people_md: "Marvin Minsky", slug: marvin-minsky, status: memorial_deep }
+  - { people_md: "Diana Merry-Shapiro", slug: diana-merry-shapiro, status: living }
+  - { people_md: "Bill Atkinson", slug: bill-atkinson, status: memorial }
+  - { people_md: "Jef Raskin", slug: jef-raskin, status: memorial }
+  - { people_md: "Ted Nelson", slug: ted-nelson, status: living }
+  - { people_md: "Ivan Sutherland", slug: ivan-sutherland, status: hero_deep }
+  - { people_md: "Butler Lampson", slug: butler-lampson, status: stub }
+  - { people_md: "Chuck Thacker", slug: chuck-thacker, status: memorial_stub }
+  - { people_md: "Adele Goldberg", slug: adele-goldberg, status: stub }
+  - { people_md: "Bob Taylor", slug: bob-taylor, status: memorial_stub }
+  - { people_md: "Ted Kaehler", slug: ted-kaehler, status: stub }
+  - { people_md: "Wesley A. Clark", slug: wesley-clark, status: memorial_stub }
+  - { people_md: "Larry Tesler", slug: larry-tesler, status: memorial_stub }
+  - { people_md: "John Warnock", slug: john-warnock, status: memorial_stub }
+  - { people_md: "Dave Evans", slug: dave-evans, status: memorial_stub }
+  - { people_md: "L. Peter Deutsch", slug: l-peter-deutsch, status: stub }
+  # 2026-07-29e
+  - { people_md: "Trygve Reenskaug", slug: trygve-reenskaug, status: stub }
+  - { people_md: "Stewart Brand", slug: stewart-brand, status: stub }
+  - { people_md: "Ed Cheadle", slug: ed-cheadle, status: storyline_unknown }
+  - { people_md: "Bob Barton", slug: bob-barton, status: memorial_stub }
+  - { people_md: "Carl Hewitt", slug: carl-hewitt, status: memorial_stub }
+  - { people_md: "Warren Teitelman", slug: warren-teitelman, status: memorial_stub }
+  - { people_md: "Ole-Johan Dahl", slug: ole-johan-dahl, status: memorial_stub }
+  # Nygaard not separate People.md heading — twin of Dahl/Simula
+  - { people_md: "(Simula twin) Kristen Nygaard", slug: kristen-nygaard, status: memorial_stub }
+  - { people_md: "Alan Borning", slug: alan-borning, status: invite_send_ready }
+  # Not People.md headings — Utah/Armit lane
+  - { people_md: "(Utah lane) Steven Coons", slug: steven-coons, status: memorial_stub }
+  - { people_md: "(Utah lane) Henri Gouraud", slug: henri-gouraud, status: invite_send_ready }
+
+invites_send_ready:
+  - butler-lampson
+  - adele-goldberg
+  - ted-kaehler
+  - trygve-reenskaug
+  - alan-borning
+  - henri-gouraud
+
+priority_next:
+  - { people_md: "John McCarthy", note: "Lisp; memorial — Quora OOP spine" }
+  - { people_md: "Doug Lenat", note: "Cyc Quora; memorial 2023" }
+  - { people_md: "Niklaus Wirth", note: "Euler → FLEX; memorial 2024" }
+  - { people_md: "Henry Fuchs", note: "Utah graphics cohort — living invite" }
+  - { people_md: "Dave Robson", note: "Smalltalk-80 books with Adele" }
+  - { people_md: "Bill English", note: "Mouse; memorial 2020" }
+  - { people_md: "Robert Metcalfe", note: "Ethernet — living" }
+  - { people_md: "David Boggs", note: "Ethernet — memorial 2022" }
+  - { people_md: "Radia Perlman", note: "Networking — living" }
+  - { people_md: "Alvy Ray Smith", note: "SuperPaint / Pixar — living" }
+  - { people_md: "Steve Capps", note: "Mac / Newton — living" }
+  - { people_md: "Bruce Horn", note: "Child intern → Finder — living" }
+  - { people_md: "Jerome Bruner", note: "Cognitive/education — memorial" }
+  - { people_md: "J. C. R. Licklider", note: "ARPA — memorial" }
+  - { people_md: "Steven Coons", note: "Not in People.md headings — Armit/Kay Utah patches root; memorial" }
+
+do_not_stub_yet:
+  - "Dr. Hubbert"
+  - "van Weingarten"
+
+see_also:
+  - ../characters/alan-kay/people-index.yml
+  - ../characters/alan-kay/oop-trinity-sketchpad-simula-b5000.md
+  - ../characters/yoot-saito/
+  - https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview

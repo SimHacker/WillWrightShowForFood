@@ -10,7 +10,7 @@ show:
   characters:
     - characters/tom-ngo/
     - characters/golan-levin/
-  topic: "Brainstorm patent-free ECG reimplementation paths (SVG / Canvas / WebGPU); reverse-engineer or recover Mouther cartoons; morph-target faces; Faceball lineage — conversation only, no coding required."
+  topic: "Brainstorm patent-free ECG reimplementation; WigFabrik as showcase (multitarget mesh+texture + AI target gen); Mouther recover/reverse-engineer; Faceball — conversation only, no coding required."
   status: seed
   consent: not_yet_asked
   heartbeat: ../../process/brainstorm-heartbeat.yml
@@ -19,31 +19,35 @@ the_core_idea: |
   At Interval, Tom Ngo built Embedded Constraint Graphics — example poses at simplex
   vertices; drag a feature, solve barycentric blend weights. Golan Levin (with Malcolm
   Slaney) used that editor for Mouther (1995–96): speech-driven cartoon faces.
-  Patent US5933150 expired ~2016. Dream pair: engine builder + artist brainstorm how
-  to reverse-engineer Mouther art (or recover archives Golan may still have), and how
-  a modern ECG engine should look — SVG, Canvas 2D, or WebGPU — for Faceball / morph-target
-  faces. Nobody has to ship code on air. Designs land in the repo for others to play.
+  Patent US5933150 expired ~2016. The shippable public demo is Soul City's **WigFabrik**
+  (aka Wig-M-Porium / WigOMatic): multitarget mesh + texture interpolation, AI-generated
+  texture maps and hair patterns as ECG *targets*, drag-to-solve weights → Sims head IFF.
+  Dream pair: engine builder + artist brainstorm WigFabrik + how to reverse-engineer
+  Mouther art (or recover archives), and SVG / Canvas / WebGPU paths for Faceball /
+  morph-target faces. Nobody has to ship code on air. Designs land in the repo.
 
 why_them:
-  tom: "ECG inventor; ongoing Don↔Tom thread on morph-target 3D faces; Interval colleague"
+  tom: "ECG inventor; WigFabrik is the funny product that needs his math; morph-target thread; Interval colleague"
   golan: "Mouther artwork + concept; flong.com archive; Interval colleague; CMU Electronic Art"
   malcolm_slaney: "Speech/phoneme path — cite with credit; optional later segment, not required this pair"
 
 candidate_topics:
+  - "WigFabrik — multitarget mesh + texture blend; AI authors targets, ECG solves weights"
+  - "Where should image-gen stop and drag-to-solve start? (hair patterns vs silhouette)"
   - "What ECG actually solved that sliders still get wrong"
   - "Mouther pipeline — ECG visemes × MFCC/GMM phonemes (Slaney) — what to preserve vs simplify"
   - "Do the Mouther cartoons still exist? Recover vs reverse-engineer from flong / memory / stills"
   - "SVG paths as constraint geometry vs Canvas immediate mode vs WebGPU instanced meshes"
   - "Barycentric blends on ARKit / FaceIt morph targets — drag the face, solve the weights"
-  - "Tradeoffs: fidelity to 1996 editor vs teaching-toy ECG for Repo Show / FBCS"
+  - "Tradeoffs: fidelity to 1996 editor vs teaching-toy ECG for WigFabrik / FBCS"
   - "Elegant dead ends — what not to rebuild"
-  - "Homefun later: who implements; how credit flows"
+  - "Homefun later: who implements; how credit flows (Tom invents; Golan arts; implementer ships)"
 
 format:
   live: true
   screen_share_heavy: true
   coding_required: false
-  notes: "Whiteboard + flong Mouther page + patent PDF + Faceball yml — brainstorm only"
+  notes: "Whiteboard + WigFabrik portal §6 + flong Mouther + patent PDF + Faceball yml — brainstorm only"
 
 ties_to:
   - README.md
@@ -52,5 +56,6 @@ ties_to:
   - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
   - ../../apps/performance-space/faceball-construction-set.yml
   - ../../process/brainstorm-heartbeat.yml
+  - https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio
   - https://www.flong.com/archive/projects/mouther/
   - https://patents.google.com/patent/US5933150

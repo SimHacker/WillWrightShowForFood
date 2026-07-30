@@ -1,15 +1,60 @@
+# Audrey Tang — invitation portrayal. NOT Audrey Tang.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: audrey-tang
   name: "Audrey Tang"
   type: invitation
+  signifier: "🌐"
   status: living
+  field: "Civic hacker; Taiwan digital minister / cyber ambassador; g0v; Plurality"
   home: characters/audrey-tang/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from public record. Subject may edit, reduce, or delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  note: "Dream / discussant invite — civic tech × democracy; not yet asked"
+
+bio:
+  summary: |
+    **Audrey Tang** — Taiwanese civic hacker and public technologist; core g0v
+    contributor; pivotal digital-consensus work around the 2014 Sunflower Movement;
+    Taiwan's first digital minister (and widely noted as the world's first openly
+    non-binary cabinet minister); later cyber ambassador. Co-author of *Plurality*
+    (with E. Glen Weyl and many collaborators) on collaborative technology and
+    democracy. 2025 Right Livelihood laureate for advancing social use of digital
+    technology. Public themes: radical transparency, prebunking, participatory
+    platforms (vTaiwan, Join), broadband as human right, Mask Map / COVID civic tools.
+
+why_invited:
+  plurality: "Living primary voice on technology that bridges divides instead of polarizing."
+  g0v: "Fork-the-government culture — civic tools as first-class infrastructure."
+  show_fit: "Repo Show cares about open collaboration, consent, and tools people can inspect."
+
+show_suggestions:
+  - { what: "Plurality / g0v / Join — how Taiwan practiced digital democracy" }
+  - { what: "Prebunking and trust — Mask Map, election interference defenses" }
+  - { what: "Open-source book as method — Plurality with hundreds of contributors" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Audrey_Tang"
+  web:
+    - { title: "Cyber Ambassador — Audrey Tang", url: "https://cyberambassador.tw/" }
+    - { title: "Right Livelihood — Audrey Tang", url: "https://rightlivelihood.org/the-change-makers/find-a-laureate/audrey-tang/" }
+    - { title: "TIME — Plurality interview", url: "https://time.com/6979012/audrey-tang-interview-plurality-democracy/" }
+    - { title: "Guardian — good hacker profile", url: "https://www.theguardian.com/world/article/2024/aug/17/audrey-tang-toxic-social-media-fake-news-taiwan-trans-government-internet" }
+    - { title: "Plurality book site", url: "https://plurality.net/" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

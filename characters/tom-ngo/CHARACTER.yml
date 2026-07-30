@@ -37,9 +37,15 @@ dons_thread:
     morph-target/blend-shape weights (ARKit ARFaceAnchor coefficients, Blender FaceIt
     rigs) instead of hand-tuning sliders. Direct design input to the Faceball
     Construction Set's ecg_blend driver and parameterized soft-body parts.
+  wigfabrik_showcase: |
+    Soul City's **WigFabrik** (aka Wig-M-Porium / WigOMatic) is the public product
+    showcase for the ECG reimplementation: multitarget mesh + texture interpolation,
+    AI-generated texture maps and hair patterns as *targets*, drag-to-solve blend
+    weights. Camp shop, Interval math. Tom would be thrilled to discuss it.
 
 essay: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
 fbcs_lineage: "HOMER visual mixing console → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce commentary bots → SimFaux → Squares in a Box panel dummies (apps/performance-space/faceball-construction-set.yml)"
+wigfabrik: "https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio"
 
 sources:
   patent: "https://patents.google.com/patent/US5933150"
@@ -49,10 +55,10 @@ sources:
 see_also:
   - { path: README.md, why: "Audience-facing bio" }
   - { path: invitation.md, why: "Guest invite" }
-  - { path: ideas.md, why: "Brainstorm hooks — SVG/Canvas/WebGPU, Mouther recover vs reverse-engineer" }
+  - { path: ideas.md, why: "Brainstorm hooks — WigFabrik ECG showcase, SVG/Canvas/WebGPU, Mouther" }
   - { path: ../../repo-shows/tom-and-golan-ecg-mouther/, why: "Pair show seed with Golan" }
   - { path: ../../process/brainstorm-heartbeat.md, why: "Conversation not code — why invites are easy" }
   - { path: ../golan-levin/, why: "Mouther — built the vector faces in Tom's ECG editor; dream co-guest pair" }
-  - { path: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md, why: "The full ECG essay — mechanism, patent, HN thread, modern echoes" }
+  - { path: ../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md, why: "The full ECG essay — mechanism, patent, HN, WigFabrik + Faceball apps" }
   - { path: ../../apps/performance-space/faceball-construction-set.yml, why: "ECG is the example-based blend engine for FBCS faces and parameterized parts" }
   - { path: ../paul-debevec/, why: "Interval-era circle; Rouen Revisited with Golan" }

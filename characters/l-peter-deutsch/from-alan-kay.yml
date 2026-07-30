@@ -1,0 +1,26 @@
+# What Alan Kay / Yoot apparatus say about L. Peter Deutsch — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: l-peter-deutsch
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Yoot People.md: At PARC Deutsch redesigned Smalltalk bytecode, rewrote the compiler, created
+    ChangeList; designed PS (PortableSmalltalk) — first modern JIT-style Smalltalk VM — and HPS.
+    Recruited with Lampson/Thacker from Berkeley Computer Corporation to PARC (Taylor, Jan 1971).
+
+sources:
+  yoot_people:
+    url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+    section: "L. Peter Deutsch"
+
+show_hooks:
+  - "PS / HPS — modern Smalltalk VM lineage"
+  - "Berkeley → PARC cohort with Lampson & Thacker"
+  - "Ghostscript — PostScript interpreter after PARC"
+
+see_also:
+  - ../l-peter-deutsch/CHARACTER.yml
+  - ../butler-lampson/
+  - ../../process/yoot-people-wwsff-map.yml

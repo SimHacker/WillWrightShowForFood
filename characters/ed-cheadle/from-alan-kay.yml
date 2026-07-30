@@ -1,0 +1,13 @@
+character: ed-cheadle
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md: Dave Evans introduced Kay to Cheadle (early 1967); together they designed FLEX —
+    personal computer for non-professionals, exploring JOSS/BASIC then Euler (Wirth) toward dynamic
+    simulation. Direct ancestor thinking for Kay's later Dynabook / Smalltalk work.
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md", section: "Ed Cheadle" }
+show_hooks:
+  - "FLEX as pre-Dynabook personal computer"
+  - "Evans as matchmaker — Utah hardware + software"
+see_also: [../ed-cheadle/CHARACTER.yml, ../dave-evans/, ../../process/yoot-people-wwsff-map.yml]

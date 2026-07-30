@@ -1,0 +1,55 @@
+# Steven Anson Coons — memorial. NOT Steven Coons.
+# Coons patches — Utah / Armit / Kay lane. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: steven-coons
+  name: "Steven Coons"
+  full_name: "Steven Anson Coons"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1912"
+  died: "1979-08"
+  field: "CAD / surfaces — Coons patches; MIT; foundational for Utah interactive 3D"
+  home: characters/steven-coons/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Utah/Armit film lane — Coons patches on PDP-7 that Kay remembered"
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Utah grad student awe of Armit's Coons-patch system" }
+    - { who: andrew-armit, why: "Implemented interactive Coons patches on PDP-7; Multipatch film" }
+    - { who: henri-gouraud, why: "US CAD tour with Armit when Multipatch film was shown" }
+    - { who: ivan-sutherland, why: "Utah graphics program era (citation)" }
+
+bio:
+  summary: |
+    **Steven Anson Coons** (1912–1979) — MIT mathematician/engineer whose **Coons patch**
+    (surface interpolation from boundary curves) became a foundation of computer-aided geometric
+    design. At Utah and beyond, interactive Coons-patch systems (e.g. **Andrew Armit**'s Multipatch
+    on PDP-7) are what **Alan Kay** recalled being "quite in awe" of. Memorial room for the surface
+    math behind the Armit film hunt — not a People.md heading, but essential Utah-lane intertwingularity.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Steven_Anson_Coons"
+  web:
+    - { title: "Andrew Armit — Utah Coons patches (Kay memory)", path: ../andrew-armit/sources/alan-kay-utah-coons-patches.md }
+    - { title: "Armit Multipatch vs Multiobject", path: ../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: ../andrew-armit/, why: "Interactive Coons patches / Multipatch" }
+  - { path: ../henri-gouraud/, why: "US tour witness — Multipatch film" }
+  - { path: ../alan-kay/, why: "Utah awe" }
+  - { path: ../ivan-sutherland/, why: "Utah graphics neighborhood" }
+  - { path: ../dave-evans/, why: "Utah ARPA program" }

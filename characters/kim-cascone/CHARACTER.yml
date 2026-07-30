@@ -1,15 +1,62 @@
+# Kim Cascone — invitation portrayal. NOT Kim Cascone.
+# Standards: ../../schemas/portrayal-standards.md
+
 character:
   id: kim-cascone
   name: "Kim Cascone"
   type: invitation
+  signifier: "📡"
   status: living
+  field: "Composer / theorist — Silent Records; 'The Aesthetics of Failure'; post-digital / glitch"
   home: characters/kim-cascone/
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  consent_level: 3
   authored_by: don-hopkins
+  note: "Host-authored from public essays and label history. Subject may edit/delete anytime."
 
 invitation:
   status: draft
   consent: not_yet_asked
+  document: invitation.md
+  note: "Music-machines / post-digital invite — glitch as material"
+
+bio:
+  summary: |
+    **Kim Cascone** — electronic composer and founder of **Silent Records** (1986),
+    a defining U.S. ambient / experimental label (PGR, Heavenly Music Corporation,
+    and many others). Berklee / New School trained; assistant music editor on David
+    Lynch's *Twin Peaks* and *Wild at Heart* before leaving film for the label.
+    Author of the widely cited Computer Music Journal essay **"The Aesthetics of
+    Failure: 'Post-Digital' Tendencies in Contemporary Computer Music"** (2000) —
+    glitches, bugs, and system noise as intentional material. Later anechoic /
+    microsound work, drone cinema, lectures at Tate Modern and elsewhere.
+
+why_invited:
+  failure: "Failure as aesthetic — sibling to robust-first / simulation bugs-as-features."
+  music_machines: "Music-machines ensemble with Machover, Levitt, Kurzweil, Jerry Martin."
+  post_digital: "Negroponte epigraph → post-digital framing; Media Lab adjacency without being Media Lab."
+
+show_suggestions:
+  - { what: "Aesthetics of Failure × simulation toys — when the bug is the play" }
+  - { what: "Silent Records / SF chill-room ambient history" }
+  - { what: "Lynch film sound craft → laptop music" }
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Kim_Cascone"
+  web:
+    - { title: "Hz — The Aesthetics of Failure (full text)", url: "https://www.hz-journal.org/n3/cascone.html" }
+    - { title: "CMJ DOI — Aesthetics of Failure", url: "https://doi.org/10.1162/014892600559489" }
+    - { title: "Silent Records — Cascone bio", url: "https://www.silentrecords.us/originalsilentedit/bio.html" }
+    - { title: "Reality Sandwich interview", url: "https://realitysandwich.com/musical-portals-and-the-drone-cinema-film-festival-an-interview-with-kim-cascone-of-silent-records/" }
+  papers:
+    - "Cascone K (2000). The Aesthetics of Failure. Computer Music Journal 24(4)."
+  blogs: []
+
+see_also:
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../tod-machover/, why: "Music-machines / Media Lab participation" }
+  - { path: ../nicholas-negroponte/, why: "Post-digital essay opens on Negroponte epigraph" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Subject rights" }

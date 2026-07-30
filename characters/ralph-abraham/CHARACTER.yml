@@ -13,10 +13,27 @@ character:
   home: characters/ralph-abraham/
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.md
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
   mode: represent_and_discuss   # memorial — no interviews, no invented quotes or inner life
   authored_by: don-hopkins
   document: memorial.md
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1936–2024) — represent + discuss; Jim Crutchfield carries living memory on air"
+
+bio:
+  summary: |
+    **Ralph Herman Abraham** (1936–2024) — mathematician of dynamical systems and
+    chaos at UC Santa Cruz from 1968; author (with Marsden) of *Foundations of
+    Mechanics* and (with Shaw) of *Dynamics: The Geometry of Behavior*; builder of
+    the Visual Mathematics Library; early video-feedback cascade experiments that
+    hand off to Jim Crutchfield's line; Santa Cruz counterculture voice (*Chaos,
+    Gaia, Eros*; Trialogues with McKenna & Sheldrake); *The Web Empowerment Book*
+    (1995). Will Wright's "possibility space" vocabulary sits next to Abraham's
+    phase space — Will named him on a 2026 look-up list.
 
 known_for:
   - "Foundations of Mechanics (with Jerrold Marsden) — the classic, from his Princeton lectures"
@@ -39,7 +56,12 @@ sources:
     - "https://lookout.co/ralph-abraham-chaos-theory-counterculture-uc-santa-cruz-from-math-to-mushrooms-intellectual-explorer-was-always-looking-for-the-big-picture/story"
 
 see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: ideas.md, why: "Discussant hooks for Jim / Will / Rudy" }
   - { path: ../jim-crutchfield/, why: "UCSC — the video feedback handoff; Jim carries the memorial segment" }
+  - { path: ../jim-crutchfield/abraham-video-feedback-lineage.md, why: "Documented 1976 → 1984 handoff" }
   - { path: ../will-wright/, why: "Phase space → possibility space; Will's own look-up list" }
+  - { path: ../will-wright/sources/2026-07-09-will-conversation-notes.md, why: "Will named Abraham on look-up list" }
   - { path: ../rudy-rucker/, why: "Santa Cruz chaos/cyberpunk orbit" }
   - { path: ../marvin-minsky/, why: "Memorial-mode sibling — same represent-and-discuss pattern" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial protocol" }

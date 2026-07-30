@@ -1,0 +1,15 @@
+character: alan-borning
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md: Borning created ThingLab, a constraint-oriented simulation laboratory in
+    Smalltalk. Pairs with Kay's Sketchpad-as-declarative-CAD reading (constraints the system solves).
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md", section: "Alan Borning" }
+  quora:
+    - recap: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md
+      topics: [Sketchpad, constraints]
+show_hooks:
+  - "ThingLab ↔ Sketchpad constraint kinship"
+  - "Constraints vs messaging OOP (Kay relational turn)"
+see_also: [../alan-borning/CHARACTER.yml, ../ivan-sutherland/, ../trygve-reenskaug/]

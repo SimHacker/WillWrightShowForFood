@@ -1,0 +1,16 @@
+# What Alan Kay says about Ted Kaehler — public sources
+character: ted-kaehler
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    LRG member; Smalltalk VM (OOZE) and later versions; hallway conversation → Smalltalk-72
+    page-of-code bet. Later Apple / Disney / Viewpoints with Kay. Don's correspondence digest:
+    Smalltalk halos (Ted Kaehler, ~PARC) on the PIXIE / pie-menu thread.
+sources:
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+  mail_digest: ../alan-kay/correspondence.yml
+  quora: [../alan-kay/media/quora-recaps/parc-vpri-how-research-worked.md, ../alan-kay/media/quora-recaps/steps-nile-runnable-math.md]
+show_hooks:
+  - "Halos ↔ pie menus / PIXIE archaeology"
+  - "Page-of-code bet with Ingalls"
+  - "Method finder (STEPS/Nile open problems — Kay corpus)"

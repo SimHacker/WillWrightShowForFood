@@ -1,0 +1,195 @@
+# Character quality audit — generated 2026-07-29
+# thin := total .md/.yml lines < 80 OR tiny README
+total: 218
+thin_count: 19
+thin:
+  - id: audrey-tang
+    lines: 16
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: rebecca-heineman
+    lines: 16
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: sophie-wilson
+    lines: 16
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: dame-stephanie-shirley
+    lines: 28
+    status: deceased
+    type: invitation
+    has_memorial: true
+    has_bio: false
+  - id: jennell-jaquays
+    lines: 28
+    status: deceased
+    type: invitation
+    has_memorial: true
+    has_bio: false
+  - id: lynn-conway
+    lines: 28
+    status: deceased
+    type: invitation
+    has_memorial: true
+    has_bio: false
+  - id: syd-mac
+    lines: 32
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: true
+  - id: vixella
+    lines: 35
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: true
+  - id: mats-knutsen
+    lines: 36
+    status: unknown
+    type: correspondence
+    has_memorial: false
+    has_bio: true
+  - id: charchit-goyal
+    lines: 40
+    status: active
+    type: None
+    has_memorial: false
+    has_bio: false
+  - id: diana-merry-shapiro
+    lines: 40
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: don-norman
+    lines: 49
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: kim-cascone
+    lines: 49
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: art-medlar
+    lines: 51
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: true
+  - id: steph0sims
+    lines: 55
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: true
+  - id: devon-bumpkin
+    lines: 61
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: true
+  - id: liam-proven
+    lines: 68
+    status: None
+    type: press_contact
+    has_memorial: false
+    has_bio: false
+  - id: john-carmack
+    lines: 74
+    status: living
+    type: invitation
+    has_memorial: false
+    has_bio: false
+  - id: thomas-claburn
+    lines: 76
+    status: None
+    type: press_contact
+    has_memorial: false
+    has_bio: false
+deceased_or_memorial_md:
+  - id: dame-stephanie-shirley
+    lines: 28
+    status: deceased
+  - id: jennell-jaquays
+    lines: 28
+    status: deceased
+  - id: lynn-conway
+    lines: 28
+    status: deceased
+  - id: ralph-abraham
+    lines: 127
+    status: deceased
+  - id: danielle-bunten-berry
+    lines: 129
+    status: deceased
+  - id: zenon-pylyshyn
+    lines: 160
+    status: deceased
+  - id: mike-jang
+    lines: 169
+    status: deceased
+  - id: joe-weizenbaum
+    lines: 172
+    status: deceased
+  - id: hugh-daniel
+    lines: 201
+    status: deceased
+  - id: bill-atkinson
+    lines: 225
+    status: deceased
+  - id: ron-reisman
+    lines: 234
+    status: deceased
+  - id: neil-wiseman
+    lines: 268
+    status: deceased
+  - id: jean-piaget
+    lines: 273
+    status: deceased
+  - id: seymour-papert
+    lines: 281
+    status: deceased
+  - id: tim-niblett
+    lines: 285
+    status: deceased
+  - id: maurice-wilkes
+    lines: 296
+    status: deceased
+  - id: marc-thorpe
+    lines: 346
+    status: deceased
+  - id: jef-raskin
+    lines: 357
+    status: deceased
+  - id: donald-michie
+    lines: 388
+    status: memorial
+  - id: jesus-mouse
+    lines: 534
+    status: deceased
+  - id: douglas-engelbart
+    lines: 617
+    status: deceased
+  - id: marvin-minsky
+    lines: 785
+    status: deceased
+  - id: mark-weiser
+    lines: 986
+    status: deceased
+  - id: tom-lord
+    lines: 2130
+    status: deceased
+  - id: vanessa-freudenberg
+    lines: 2281
+    status: deceased

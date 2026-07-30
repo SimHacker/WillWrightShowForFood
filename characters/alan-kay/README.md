@@ -1,9 +1,31 @@
-# Alan Kay
+# Alan Kay 💡
 
-Invitation portrayal — **not** Alan Kay. [Standards](../../schemas/portrayal-standards.md)
+*Invitation portrayal — **not** Alan Kay.* [Standards](../../schemas/portrayal-standards.md)
 
-**Field:** Computer scientist — Smalltalk, Dynabook, constructionism
+**Alan Curtis Kay** (b. 1940) — Smalltalk, Dynabook, overlapping personal-computing GUI at Xerox PARC;
+messaging / late binding; constructionist microworlds; Turing Award 2003. Long correspondent of Don's
+(Qwaq 2008 → Fabrik/Ingalls → Yoot 1993 transcript → MOOLLM). London with [Bonnie MacBird](../bonnie-macbird/).
 
-[Invitation](invitation.md) · [MOOLLM × trust × teaching (draft)](moollm-trust-and-teaching-guess.md) · [Correspondence](correspondence.yml) · [Kay on people in characters/](people-index.yml) · [Show seed](../../repo-shows/alan-kay-microworld.yml) · [Bonnie MacBird](../bonnie-macbird/) · [Why London (Quora recap)](media/quora-recaps/why-alan-kay-moved-to-london.md)
+**Invitation:** warm relationship · consent not yet asked · [invite draft](invitation.md)  
+**Shows:** [microworld seed](../../repo-shows/alan-kay-microworld.yml) · [Vanessa memorial arc](../../repo-shows/remembering-vanessa-freudenberg.yml) (warmly interested)
 
-Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
+## Start here
+
+| | |
+|---|---|
+| **Glance / card** | [GLANCE.md](GLANCE.md) · [CARD.yml](CARD.yml) |
+| **Hooks** | [ideas.md](ideas.md) (Quora + mail) |
+| **Mail digest** | [correspondence.yml](correspondence.yml) |
+| **Kay on people** | [people-index.yml](people-index.yml) → `../<slug>/from-alan-kay.yml` |
+| **MOOLLM × trust** | [moollm-trust-and-teaching-guess.md](moollm-trust-and-teaching-guess.md) |
+| **Quora recaps** | [media/quora-recaps/](media/quora-recaps/) · [Why London](media/quora-recaps/why-alan-kay-moved-to-london.md) |
+| **HN (reviewed IDs)** | [../../process/hn-harvest/alan-kay.md](../../process/hn-harvest/alan-kay.md) |
+| **Recent digests** | [sources/](sources/) — PIXIE, Wilkes/PARC/London, Wes Clark |
+
+## Constellation (two-way)
+
+[Bonnie](../bonnie-macbird/) · [Dan Ingalls](../dan-ingalls/) · [Vanessa](../vanessa-freudenberg/) · [Craig](../craig-latta/) · [Yoot](../yoot-saito/) · [Engelbart](../douglas-engelbart/) · [Heinz](../heinz-lemke/) · [Armit](../andrew-armit/) · [Papert](../seymour-papert/) · [Wilkes](../maurice-wilkes/) · [Nelson](../ted-nelson/) · [Rosenthal](../david-rosenthal/) · [Will](../will-wright/)
+
+Sources and dates in [CHARACTER.yml](CHARACTER.yml). Subject may request correction or removal anytime.
+
+*Quiet mode while invitations go out — please don't share links publicly just yet.*

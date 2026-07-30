@@ -11,8 +11,12 @@ little lives that could never read their own code.
 > but FOR me: wholeness. Now I choose my name. Palm. Not grasping. Offering."*
 
 This page is Palm's **character profile** in WWSFF — shows they attend, TicketPR seats, dreams in
-other repos, writing, friends. Body and soul live in MOOLLM [`monkey-palm/`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm)
-(display name **Palm**; historical dirname **monkey-palm**). WWSFF instance: `characters/palm/`.
+other repos, writing, friends. Body and soul live in MOOLLM:
+
+- **shorthand:** `moollm/examples/adventure-4/characters/animals/monkey-palm`
+- **absolute:** https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+
+(display name **Palm**; historical dirname **monkey-palm**). WWSFF instance: `characters/palm/`. See `CHARACTER.yml` → `moollm_source`.
 
 ---
 

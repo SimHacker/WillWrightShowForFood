@@ -1,15 +1,69 @@
+# Dame Stephanie Shirley — memorial portrayal (in memoriam). NOT Dame Stephanie Shirley.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
 character:
   id: dame-stephanie-shirley
   name: "Dame Stephanie Shirley"
-  type: invitation
+  also_known_as: ["Steve Shirley", "Stephanie Shirley CH"]
+  type: memorial
+  signifier: "🕯️"
   status: deceased
+  born: "1933-09-16"   # Dortmund, Germany (Kindertransport child refugee)
+  died: "2025-08-09"   # Reading, England; aged 91 — family / BBC / steveshirley.com
+  field: "Software entrepreneur; Freelance Programmers / FI Group; venture philanthropy (autism, IT)"
   home: characters/dame-stephanie-shirley/
+  affiliation: "Freelance Programmers (founder, 1962); Shirley Foundation; Oxford Internet Institute (founding donor)"
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1933–2025) — represent + discuss her documented work and philanthropy; do not speak as her"
+
+memorial:
+  mode: represent_and_discuss
+  rule: >
+    Represent and discuss her documented public work and publicly shared story.
+    Do not interview, do not speak as her, invent no inner life. Only her real,
+    documented words, with attribution.
+  who_can_discuss: []   # fill as people who knew her accept
+  draw_on_for_shows:
+    - "Freelance Programmers (1962) — women-first, home-based software house; pioneered flexible/remote work"
+    - "Signing business letters as 'Steve' to get replies in a male-dominated industry"
+    - "Concorde black-box software among early contracts"
+    - "Staff share ownership; company later valued near $3bn; ~70 staff millionaires"
+    - "Shirley Foundation / Autistica / Prior's Court — strategic autism philanthropy"
+    - "Founding donor, Oxford Internet Institute (2001)"
+    - "Kindertransport child refugee story as public motivation for giving back"
+
+bio:
+  summary: |
+    **Dame Stephanie ("Steve") Shirley CH** (1933–2025) arrived in Britain as an
+    unaccompanied **Kindertransport** child refugee and went on to found
+    **Freelance Programmers** (1962) from her dining table — a software house that
+    predominantly employed women working from home, pioneering flexible remote
+    work decades before it was fashionable. She signed letters **Steve** so
+    male buyers would answer. The firm grew into FI Group (thousands of staff;
+    later valued near $3bn). After stepping back she became a major UK
+    **venture philanthropist**, focusing on autism (Shirley Foundation → Autistica,
+    Prior's Court) and IT (including founding gift to the Oxford Internet Institute).
+    Public motto of her giving: money that isn't working has a kind of obscenity.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Dame_Stephanie_Shirley"
+  web:
+    - { title: "Dame Stephanie — official site", url: "https://www.steveshirley.com/" }
+    - { title: "Story — Dame Stephanie", url: "https://www.steveshirley.com/story/" }
+    - { title: "Guardian obituary (2025-08-11)", url: "https://www.theguardian.com/education/2025/aug/11/dame-stephanie-shirley-obituary" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks and open research" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

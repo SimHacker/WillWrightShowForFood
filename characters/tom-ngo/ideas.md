@@ -37,6 +37,18 @@ Audience README: [`README.md`](README.md) · Pair show: [`tom-and-golan-ecg-mout
 
 Ask Tom: which path is elegant for a *first* public ECG toy? What’s a beautiful dead end?
 
+### WigFabrik — the shippable ECG showcase
+
+Soul City craft shop ([portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)):
+aka **Wig-M-Porium** / **WigOMatic**.
+
+- Multitarget **mesh** interpolation (hair-cap / silhouette / volume at simplex vertices)
+- Multitarget **texture** interpolation (same weights over SPR2 / UV atlases)
+- **AI image-gen** for texture maps + hair patterns *as targets* — not as a replacement for ECG solve
+- Optional AI-authored mesh targets; drag UI still solves weights (Moore–Penrose / Jacobian path)
+- Compiles to Sims-1 head-skin IFF — camp product, Interval math
+- Ask Tom: where AI should stop and direct manipulation should start; teaching-size simplex for a wig
+
 ### Morph-target / Faceball thread
 
 - Drag the face → solve ARKit / FaceIt / blend-shape weights (Don↔Tom ongoing)

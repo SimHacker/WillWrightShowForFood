@@ -1,0 +1,27 @@
+# MPC79 Stanford die BK — includes Clark Geometry Engine prototype
+# Sibling image: mpc79-stanford-bk-die.jpg
+
+image:
+  file: mpc79-stanford-bk-die.jpg
+  title: "MPC79 Die-Type BK — Stanford multiproject chip (Geometry Engine prototype)"
+  what: |
+    Photo of MPC79 Die-Type BK containing projects from Stanford University.
+    Among them: first prototype of Jim Clark's Geometry Engine — path to SGI.
+    Lynn: packaged chips shipped back ~29 days after design deadline.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MPCAdv/SU-BK1.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MPCAdv/MPCAdv.html
+  credit: "Lynn Conway — MPCAdv / VLSI archive (Figure 5 in her narrative)"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8861178, url: "https://news.ycombinator.com/item?id=8861178" }
+    - { id: 40649026, url: "https://news.ycombinator.com/item?id=40649026" }
+  don_hopkins: |
+    Also, Jim Clark (SGI, Netscape) was one of Lynn Conway's students, and she
+    taught him how to make his first prototype "Geometry Engine"! Just 29 days
+    after the design deadline… packaged custom wire-bonded chips were shipped
+    back to all the MPC79 designers. Figure 5. Photo of MPC79 Die-Type BK
+    (containing projects from Stanford University).

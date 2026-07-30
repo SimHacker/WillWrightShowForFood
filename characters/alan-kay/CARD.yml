@@ -21,15 +21,28 @@ card:
 
 relationships:
   # kinds may stack — real people relate in multiple ways at once
-  - { with: marvin-minsky, kinds: [peer, milieu, memorial_discussant], why: "Shaped by the same MIT/ARPA milieu; carried lab ideas into personal computing; from-alan-kay.yml lives in Marvin's room" }
+  - { with: bonnie-macbird, kinds: [spouse, co_guest], why: "TRON / London / Holmes; invite via/with Alan; from-alan-kay.yml" }
+  - { with: dan-ingalls, kinds: [collaborator, introducer], why: "PARC Smalltalk implementer; Fabrik intro to Don; swiped pie menus" }
+  - { with: vanessa-freudenberg, kinds: [lineage, memorial_discussant], why: "SqueakJS / Croquet; warmly invited memorial arc" }
+  - { with: craig-latta, kinds: [milieu, memorial_discussant], why: "Caffeine / Qwaq; memorial anchor with Don" }
+  - { with: douglas-engelbart, kinds: [inspired_by, memorial_discussant], why: "1968 demo; Yoot interviewed both" }
+  - { with: yoot-saito, kinds: [interviewed_by, co_guest], why: "1993 Japan interview transcript Alan reviewed" }
   - { with: seymour-papert, kinds: [collaborator, constructionist_ally], why: "🕯️ Logo → Dynabook; children-first computing" }
-  - { with: ivan-sutherland, kinds: [inspired_by, lineage], why: "Cites Sketchpad's constraints + master/instance drawings as proto-OOP" }
+  - { with: marvin-minsky, kinds: [peer, milieu, memorial_discussant], why: "MIT/ARPA milieu; from-alan-kay.yml in Marvin's room" }
+  - { with: heinz-lemke, kinds: [correspondent, show_series_hope], why: "PIXIE / light-pen; hoped Cambridge series" }
+  - { with: andrew-armit, kinds: [witness, utah_memory], why: "Coons patches on PDP-7 — Kay awe (2026)" }
+  - { with: david-rosenthal, kinds: [synthesizer, ne_ws_lineage], why: "Window prehistory blog embeds Kay; NeWS live wire" }
+  - { with: maurice-wilkes, kinds: [hero, memorial_discussant], why: "'special hero'; Wilkes→PARC via Thacker" }
+  - { with: ted-nelson, kinds: [matchmaker, milieu], why: "Computer Lib introduced Bonnie to Alan" }
+  - { with: bill-atkinson, kinds: [apple_era, memorial_discussant], why: "HyperCard eyewitness" }
+  - { with: ivan-sutherland, kinds: [inspired_by, lineage], why: "Sketchpad constraints + master/instance as proto-OOP" }
   - { with: cynthia-solomon, kinds: [atari_cambridge_colleague, logo_milieu], why: "ACRC children's computer research" }
   - { with: margaret-minsky, kinds: [atari_cambridge_colleague], why: "Same ACRC lab" }
   - { with: david-levitt, kinds: [atari_cambridge_colleague], why: "Same ACRC lab" }
   - { with: ken-kahn, kinds: [correspondent, milieu], why: "from-alan-kay.yml in Ken's room" }
   - { with: walter-bender, kinds: [olpc_ally], why: "OLPC / children's machine advocacy" }
-  - { with: don-hopkins, kinds: [correspondent], why: "correspondence.yml in this room" }
+  - { with: will-wright, kinds: [critique_thread], why: "SimCity black-box vs glass-box / Micropolis" }
+  - { with: don-hopkins, kinds: [correspondent], why: "correspondence.yml — 2008–2026" }
 
 abilities:
 - id: INVENT-FUTURE
@@ -114,6 +127,16 @@ invoke_rules:
   simulation: false
 see_also:
 - path: CHARACTER.yml
-  why: Bio girder — invitation status
+  why: Bio girder — invitation status + sources
+- path: README.md
+  why: Room orientation
 - path: invitation.md
   why: Public invitation document
+- path: ideas.md
+  why: Show hooks
+- path: people-index.yml
+  why: from-alan-kay cross-index
+- path: ../../repo-shows/alan-kay-microworld.yml
+  why: Primary show seed
+- path: ../../repo-shows/remembering-vanessa-freudenberg.yml
+  why: Memorial arc

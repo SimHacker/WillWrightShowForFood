@@ -19,3 +19,38 @@ appsettings.local.json
 videos/clips/
 # Private source digests — NDA / pre-release / correspondence bodies (see portrayal-standards.yml)
 **/sources/private/
+# SimFaux / OL runtime media — stay on donhopkins.com (hub: apps/simfaux/)
+# Pointer READMEs only; never commit deploy trees or Flash/video binaries.
+characters/don-hopkins/code/**/deploy/
+characters/don-hopkins/code/**/*.swf
+characters/don-hopkins/code/**/*.flv
+characters/don-hopkins/code/**/*.avi
+characters/don-hopkins/code/**/*.wmv
+characters/don-hopkins/code/**/*.mp4
+characters/don-hopkins/code/**/*.mov
+apps/simfaux/**/deploy/
+apps/simfaux/original-lzx/**/*.swf
+apps/simfaux/original-lzx/**/*.flv
+apps/simfaux/original-lzx/**/*.avi
+apps/simfaux/original-lzx/**/*.wmv
+apps/simfaux/original-lzx/**/*.mp4
+apps/simfaux/original-lzx/**/*.mov
+apps/simfaux/original-lzx/**/*.mp3
+apps/simfaux/openlaszlo-5/**/*.swf
+apps/simfaux/openlaszlo-5/**/*.flv
+apps/simfaux/openlaszlo-5/**/*.avi
+apps/simfaux/openlaszlo-5/**/*.wmv
+apps/simfaux/openlaszlo-5/**/*.mp4
+apps/simfaux/openlaszlo-5/**/*.mov
+apps/simfaux/openlaszlo-5/**/*.mp3
+apps/simfaux/declare/**/*.swf
+apps/simfaux/declare/**/*.flv
+apps/simfaux/declare/**/*.avi
+apps/simfaux/declare/**/*.wmv
+apps/simfaux/declare/**/*.mp4
+apps/simfaux/declare/**/*.mov
+apps/simfaux/declare/**/*.mp3
+**/*.flv
+**/*.avi
+**/*.wmv
+**/SimFaux.lzx.swf

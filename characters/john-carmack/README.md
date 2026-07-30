@@ -1,14 +1,25 @@
-# John Carmack
+# John Carmack 🚀 *(id Software; Doom/Quake; VR)*
 
-*Sniff:* [`GLANCE.md`](GLANCE.md) · [`ideas.md`](ideas.md)
+*Invitation portrayal — not John Carmack.*
+[Portrayal standards](../../schemas/portrayal-standards.md) · authored by Don Hopkins
 
-Game-engine pioneer (id Software, Oculus/Meta). In this repo: Don's HN thread archive from the Dec 2022
-Meta departure — light touch, mostly portable-computing lineage tangents.
+## Who
 
-## Navigation
+id Software co-founder and lead programmer on the Keen → Wolf3D → Doom → Quake
+engine line; later Oculus/Meta VR leadership; public systems thinker. Cold invite
+— public figure portrayal only until/unless he engages.
 
-| Room | → |
-|------|---|
-| **Don — HN thread** | [`../don-hopkins/carmack-leaves-meta-hn.md`](../don-hopkins/carmack-leaves-meta-hn.md) |
-| **Alan Kay** | Dynabook "ahead of its time" foil |
-| **David Levitt** | VR / Bounce parallel trail |
+## Why invited
+
+Real-time world engines as craft. Memorial adjacency to Quake-era designers
+(Jennell Jaquays) and porters (Rebecca Heineman) — discuss documented work.
+
+## Links
+
+| | |
+|---|---|
+| **Show hooks** | [ideas.md](ideas.md) |
+| **Wikipedia** | [John Carmack](https://en.wikipedia.org/wiki/John_Carmack) |
+| **Jennell Jaquays** | [../jennell-jaquays/](../jennell-jaquays/) |
+
+Sources in [CHARACTER.yml](CHARACTER.yml).

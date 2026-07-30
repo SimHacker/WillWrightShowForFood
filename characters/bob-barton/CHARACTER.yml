@@ -1,0 +1,51 @@
+# bob-barton — memorial. NOT the person.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: bob-barton
+  name: "Bob Barton"
+  full_name: "Robert Stanley Barton"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1925-02-13"
+  died: "2009-01-28"
+  field: "Architecture — Burroughs B5000 stack machines; Utah; OOP hardware root for Kay"
+  home: characters/bob-barton/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "B5000 as OOP hardware root; Utah adjacency" }
+    - { who: ivan-sutherland, why: "Utah era neighbor (citation)" }
+
+bio:
+  summary: |
+    **Robert S. ("Bob") Barton** (1925–2009) — chief architect of the **Burroughs B5000**;
+    stack machines and language-directed architecture. Kay names the B5000 (with Sketchpad and Simula)
+    as a root of object-oriented thinking. Famous line preserved in Yoot People.md: *"Hardware is
+    really just software crystallized early."* Taught at University of Utah.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Robert_S._Barton"
+  web:
+    - { title: "Yoot People.md", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "Kay history hub" }
+  - { path: ../alan-kay/oop-trinity-sketchpad-simula-b5000.md, why: "B5000 leg of OOP trinity" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad — trinity partner" }
+  - { path: ../ole-johan-dahl/, why: "Simula — trinity partner" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

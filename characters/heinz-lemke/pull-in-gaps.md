@@ -155,8 +155,9 @@ Jul 2026 inventory: Multipatch/Multiobject octal listings, PDP-7/340 manuals, Ti
 | Field | Value |
 |-------|-------|
 | Status | offered (not yet scanned) |
-| Pull in | Coordinate with Heinz Cambridge-area visit; prioritize Multipatch + film notes |
+| Pull in | Coordinate with Heinz Cambridge-area visit; prioritize **Multipatch** octal + thesis command/screenshot sequence (29 Jul: Multipatch-first — no Titan) + film notes |
 | Doc | [../andrew-armit/sources/2026-07-16-armit-archive-manifest.md](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) |
+| Architecture | [../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md](../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) |
 
 ### cars_2027_hci_session
 

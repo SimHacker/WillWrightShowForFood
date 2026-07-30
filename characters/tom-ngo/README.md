@@ -40,9 +40,14 @@ FaceIt, etc.) instead of hand-tuning sliders. That idea loads the
 [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml):
 **HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce → SimFaux → Squares in a Box.**
 
+The **public product showcase** is Soul City's **[WigFabrik](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)**
+(aka Wig-M-Porium / WigOMatic): multitarget mesh + texture interpolation, AI-generated texture maps
+and hair patterns as *ECG targets*, drag-to-solve blend weights → Sims-1 head-skin IFF. Camp
+storefront; Interval math. Tom would be thrilled to discuss it.
+
 Dream segment: **[Tom + Golan](../../repo-shows/tom-and-golan-ecg-mouther/)** — engine builder and
-artist — reverse-engineer or recover Mouther cartoons; whiteboard SVG / Canvas / WebGPU ECG paths.
-Nobody ships code on air.
+artist — WigFabrik as the teaching demo; reverse-engineer or recover Mouther cartoons; whiteboard
+SVG / Canvas / WebGPU ECG paths. Nobody ships code on air.
 
 Full mechanism + G9.js HN thread:
 [`tom-ngo-embedded-constraint-graphics-at-interval.md`](../don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md).
@@ -61,6 +66,7 @@ Full mechanism + G9.js HN thread:
 | [HN — G9.js / ECG](https://news.ycombinator.com/item?id=12572696) | Don + prior art |
 | [Mouther (flong)](https://www.flong.com/archive/projects/mouther/) | Golan + Slaney + Tom |
 | [Golan Levin](../golan-levin/) | Dream co-guest |
+| [WigFabrik (portal §6)](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio) | ECG showcase craft shop |
 | [Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml) | `ecg_blend` |
 | [Breakfast simplex](../don-hopkins/breakfast-simplex-barycentric-direct-manipulation.md) | Barycentric cousin |
 | [Direct manipulation trail](../../process/trails/direct-manipulation.md) | Lineage |

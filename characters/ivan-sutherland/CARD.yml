@@ -23,9 +23,13 @@ relationships:
   - { with: marvin-minsky, kinds: [thesis_committee_member_of_his, credited_influence, memorial_discussant], why: "Minsky sat on the Sketchpad committee; acknowledgments credit Shannon + Minsky with giving 'Sketchpad much of its present character'" }
   - { with: heinz-lemke, kinds: [north_star_for], why: "PIXIE (Cambridge, 1969) — the light-pen era Sketchpad opened, six years on" }
   - { with: roy-eagleson, kinds: [taught_by_his_work], why: "Teaches graphics history from Sketchpad forward to PIXIE" }
-  - { with: alan-kay, kinds: [inspiration_for], why: "Kay repeatedly cites Sketchpad's constraints and objects as proto-OOP" }
+  - { with: alan-kay, kinds: [inspiration_for, utah_colleague_era], why: "Kay cites Sketchpad objects/instances as proto-OOP (with Simula + B5000); Utah while Kay was a grad student — Yoot People.md" }
+  - { with: dave-evans, kinds: [co_founder, utah_colleague_era], why: "Co-founded Evans & Sutherland; Utah ARPA graphics program Kay studied under" }
+  - { with: wesley-clark, kinds: [machine_builder_of], why: "TX-2 at Lincoln Lab — the Sketchpad machine; LINC personal-computing precedent Kay names" }
+  - { with: john-warnock, kinds: [utah_colleague_era], why: "Utah graphics PhD orbit → Adobe; Yoot People.md" }
   - { with: jaron-lanier, kinds: [vr_ancestor], why: "The Sword of Damocles HMD (1968) — VR's hardware ancestor" }
   - { with: david-rosenthal, kinds: [lineage], why: "PDP-7/340 display-era graphics lineage in the show" }
+  - { with: andrew-armit, kinds: [utah_colleague_era], why: "Kay's remembered Coons-patch awe during the Ivan-period Utah visit" }
 
 abilities:
 - id: SKETCHPAD
@@ -97,5 +101,9 @@ invoke_rules:
 
 see_also:
   - { path: CHARACTER.yml, why: "Hero room girder" }
+  - { path: from-alan-kay.yml, why: "Kay's public Sketchpad reading (Yoot + Quora)" }
   - { path: sketchpad-and-descendants.md, why: "Sketchpad → GSP → PIXIE lineage essay" }
   - { path: ../marvin-minsky/CARD.yml, why: "🕯️ Committee-seat memorial combo" }
+  - { path: ../dave-evans/, why: "🕯️ E&S co-founder / Utah ARPA" }
+  - { path: ../wesley-clark/, why: "🕯️ TX-2 / LINC" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "Full Yoot People.md → rooms" }

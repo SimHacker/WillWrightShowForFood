@@ -8,8 +8,8 @@ not quotes, not claims about what he thinks.*
 ## What Alan has done
 
 **Alan Kay** — computing visionary: Smalltalk, the Dynabook, personal computing, and
-constructionist microworlds. Coined "the best way to predict the future is to invent it."
-Co-founded the learning-research tradition that connects PARC to OLPC, Etoys, and Snap!.
+constructionist microworlds. Widely attributed: "the best way to predict the future is to
+invent it." Learning-research tradition connecting PARC to OLPC, Etoys, and Snap!.
 
 ## Shared ground
 
@@ -255,7 +255,9 @@ in MOOLLM's [HALLS-AND-ROOMS.md](https://github.com/SimHacker/moollm/blob/main/s
 
 ## Sources (public)
 
+- [`CHARACTER.yml`](CHARACTER.yml) · [`README.md`](README.md)
 - [`correspondence.yml`](correspondence.yml) · [`invitation.md`](invitation.md)
+- HN reviewed IDs: [`../../process/hn-harvest/alan-kay.md`](../../process/hn-harvest/alan-kay.md)
 - **MOOLLM × trust × teaching (draft artifact):** [`moollm-trust-and-teaching-guess.md`](moollm-trust-and-teaching-guess.md)
 - **Kay on people in characters/**: [`people-index.yml`](people-index.yml) — per-guest [`../<slug>/from-alan-kay.yml`](../dan-ingalls/from-alan-kay.yml)
 - **Quora corpus map** (~620 answers): [`media/quora-recaps/quora-corpus-2023-index.md`](media/quora-recaps/quora-corpus-2023-index.md) — [archive.org/details/alan-kay-quora-2023-11](https://archive.org/details/alan-kay-quora-2023-11)

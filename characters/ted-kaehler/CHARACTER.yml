@@ -1,0 +1,47 @@
+# Ted Kaehler — invitation portrayal. NOT Ted Kaehler.
+# Seeded from Yoot People.md + Don/Alan halos correspondence.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: ted-kaehler
+  name: "Ted Kaehler"
+  type: invitation
+  signifier: "🫧"
+  status: living
+  field: "Smalltalk — OOZE VM; LRG; Apple / Disney / Viewpoints with Kay; halos"
+  home: characters/ted-kaehler/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub from Yoot People.md + correspondence.yml halos thread — deepen before invite."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  note: "LRG / OOZE — invite with Goldberg. Drafted 2026-07-29."
+
+
+bio:
+  summary: |
+    **Ted Kaehler** — Learning Research Group at Xerox PARC; Smalltalk virtual memory (**OOZE**)
+    and later versions; hallway conversation that led to the Smalltalk-72 "page of code" bet with
+    Ingalls. Later worked with Kay at Apple, Disney, and Viewpoints. Don↔Alan mail credits
+    Smalltalk **halos** (Ted Kaehler, ~PARC) on the PIXIE / pie-menu archaeology thread.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ted_Kaehler"
+  web:
+    - { title: "Yoot People.md — Ted Kaehler", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  mail_digest: ../alan-kay/correspondence.yml
+
+see_also:
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot + halos" }
+  - { path: ../alan-kay/, why: "LRG → Apple → Viewpoints" }
+  - { path: ../dan-ingalls/, why: "Page-of-code bet; BitBLT era" }
+  - { path: ../adele-goldberg/, why: "LRG colleagues" }
+  - { path: ../heinz-lemke/, why: "PIXIE / halos archaeology with Don+Alan" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

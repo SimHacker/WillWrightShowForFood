@@ -18,7 +18,7 @@ Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform*
 
 | Layer | Examples |
 |-------|----------|
-| **Create** | Transmogrifier, RugOMatic, WigOMatic, SimShow preview, MOOLLM-assisted authoring |
+| **Create** | Transmogrifier, RugOMatic, **WigFabrik** (aka WigOMatic / Wig-M-Porium — ECG multitarget mesh+texture + AI hair maps), SimShow preview, MOOLLM-assisted authoring |
 | **Publish** | Hosted CARD dirs, git repos, branching dialog objects, round-trippable saves |
 | **GitHub distribution** | Metadata catalogs **and** free content in public repos — [spec](github-distribution-model.yml); MOOLLM skills + Soul City in [moollm](https://github.com/SimHacker/moollm); TSR/SFS replacement lane for repo-native work |
 | **Share** | Exchange revival, family albums, federated storefronts, Repo Show homefun |

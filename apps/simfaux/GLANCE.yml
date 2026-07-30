@@ -1,0 +1,13 @@
+# SimFaux — glance
+name: simfaux
+one_liner: "Sideways symbiosis — LZX DNA + OL5 + Declare sibling organelles; live faux-news instrument; spin out later"
+status: app_hub
+architecture: sideways_symbiosis # ORGANELLES.yml — Soul City parallel souls
+bulky_media: on_server
+organelles:
+  original-lzx: dna # not required to execute
+  openlaszlo-5: transcription_camera
+  declare: transcription_cinematography
+show_wrapper: ../../repo-shows/simfaux/
+portfolio_wrapper: ../../characters/don-hopkins/media/simfaux/
+frame: ../../process/character-endosymbiosis.yml

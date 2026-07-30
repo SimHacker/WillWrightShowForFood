@@ -1,0 +1,44 @@
+# Ed Cheadle — storyline figure (FLEX with Alan Kay). Status unverified living/passed.
+# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: ed-cheadle
+  name: "Ed Cheadle"
+  type: storyline_figure
+  signifier: "🔧"
+  status: unknown
+  field: "Hardware — FLEX machine with Alan Kay (Utah / Memcor / Montec)"
+  home: characters/ed-cheadle/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Living/passed UNKNOWN — do not memorialise until confirmed. Citation room for FLEX history.
+
+invitation:
+  status: not_offered
+  consent: not_yet_asked
+  note: "Storyline figure until status + contact verified."
+
+bio:
+  summary: |
+    **Ed Cheadle** — hardware engineer (Flex Machine Project / Memcor / Montec / Utah). Through
+    an introduction by **Dave Evans** (early 1967), Kay met Cheadle; together they designed the
+    **FLEX** personal computer aimed at non-professionals (BASIC/JOSS → Euler-influenced direction).
+    Yoot People.md is the primary WWSFF source blurb. Status living/passed not yet confirmed.
+
+sources:
+  wikipedia_context: "https://en.wikipedia.org/wiki/University_of_Utah_School_of_Computing#Programming_Languages_and_Personal_Computers"
+  web:
+    - { title: "Yoot People.md — Ed Cheadle", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot FLEX portrait" }
+  - { path: ../alan-kay/, why: "FLEX partner" }
+  - { path: ../dave-evans/, why: "Introduced Kay to Cheadle" }
+  - { path: ../bob-barton/, why: "Utah hardware/architecture neighborhood" }
+  - { path: ../ivan-sutherland/, why: "Utah graphics neighborhood" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

@@ -259,9 +259,9 @@ and **Soyuz Globus** consoles for the same project.
 **OpenLaszlo** interactive Fox News parody — pie menus, channel surf, Conan talking-head overlays,
 **gravitas -67**. Modular prototype for Repo Show economy.
 
-[`media/simfaux/`](media/simfaux/INDEX.yml) · [YouTube demo](https://www.youtube.com/watch?v=gRodlxUZ9SQ)
+**App hub (development):** [`../../apps/simfaux/`](../../apps/simfaux/) · Portfolio pointer: [`media/simfaux/`](media/simfaux/INDEX.yml) · [YouTube demo](https://www.youtube.com/watch?v=gRodlxUZ9SQ)
 
-![SimFaux dashboard](media/simfaux/simfaux-dashboard-full.png)
+![SimFaux dashboard](../../apps/simfaux/media/simfaux-dashboard-full.png)
 
 ## Amsterdam Coffeeshops — Layar AR (2009)
 
@@ -399,7 +399,7 @@ Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat
 - [**Legacy rooms index**](media/LEGACY-INDEX.yml) — 26 themed dirs; **387/387 PNGs** now have co-located sidecars (2026-07)
 - [**Steve Wozniak — Apple II Red Book**](characters/steve-wozniak/media/apple-ii-redbook/INDEX.yml) — page 141 schematics; LAX joke; beep routine
 - [**Cellular automata — SimCity tiles**](media/cellular-automata-tiles/INDEX.yml) — iPad CA toy, worms2, harble.
-- [**SimFaux**](media/simfaux/INDEX.yml) — 2006 OpenLaszlo Fox parody; Repo Show prototype.
+- [**SimFaux**](../../apps/simfaux/) — 2006 OpenLaszlo Fox parody; app hub + Repo Show instrument (portfolio: [media/simfaux/](media/simfaux/INDEX.yml)).
 - [**Will head-shot progression**](../will-wright/media/will-head-shot-progression/INDEX.yml) — Don Photoshop Sims gag series.
 
 ## Patron saint — David Ahl

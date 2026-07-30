@@ -8,15 +8,27 @@ manipulation, constraints, pen-driven model building, and software that teaches 
 
 ## Sketchpad (1963)
 
-- **Machine:** MIT Lincoln Laboratory **TX-2**
-- **Input:** Light pen; **master–slave** copying; **constraints** (geometry stays true when you drag)
+- **Machine:** MIT Lincoln Laboratory **TX-2** ([Wesley A. Clark](../wesley-clark/))
+- **Input:** Light pen; **master–instance** drawings; **constraints** (geometry stays true when you drag)
 - **Idea:** Interactive drawing as engineering — the user specifies intent; the machine maintains structure
+- **Kay reading (Yoot People.md):** objects and instances as a key OOP precedent, alongside Simula and the B5000; Sutherland later taught at Utah while Kay was a grad student
 
-[Turing Award citation](https://amturing.acm.org/award_winners/sutherland_3467782.cfm) ·
-[Wikipedia: Sketchpad](https://en.wikipedia.org/wiki/Sketchpad)
+[Turing Award citation](https://amturing.acm.org/award_winners/sutherland_3467412.cfm) ·
+[Wikipedia: Sketchpad](https://en.wikipedia.org/wiki/Sketchpad) ·
+[Yoot People.md — Ivan](https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md)
 
 In-repo: Alan Kay's declarative reading —
-[`../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md`](../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md).
+[`../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md`](../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md);
+[`from-alan-kay.yml`](from-alan-kay.yml).
+
+---
+
+## Utah + Evans & Sutherland
+
+After Sketchpad / ARPA / Harvard HMD work, Sutherland co-founded **Evans & Sutherland** with
+[**Dave Evans**](../dave-evans/) and taught in the Utah ARPA graphics program Kay inhabited —
+neighbor era to [John Warnock](../john-warnock/), [Andrew Armit](../andrew-armit/) Coons patches,
+and the Flex Machine ([Ed Cheadle](../../process/yoot-people-wwsff-map.yml) — stub pending).
 
 ---
 

@@ -44,6 +44,16 @@ threads:
         emulator mouse→light-pen interpolation; discuss designs on air, ship code later or demo if done.
       outbound_draft: characters/lars-brinkhoff/outbound-2026-07-03-async-pivot.md
 
+threads_continued:
+  simh_device_hooks_2026_07_29:
+    digest: ../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md
+    what: |
+      On PIXIE thread: Don asked how to add custom networking box + character-generator /
+      display-list subroutine support. Lars: new device ≈ pdp18b_foo.c hooked in pdp18b_defs.h +
+      pdp18b_sys.c. Type 340 char gen already used by PDP-10 programs; subroutine support
+      provisional / untested. Same mail: Andrew Multipatch-first (no Titan) vs Multiobject/PIXIE link.
+    show_use: "SIMH extension path; Multipatch before Titan LINK device"
+
 show_hooks:
   - "SIMH PDP-7/340 boot path — 340 ok, light pen as easy add-on"
   - "PDP-7 munching squares — Lars can build from revised PDP-10/Knight TV code"
@@ -51,6 +61,9 @@ show_hooks:
   - "Label-target light-pen pie menus without float trig libraries"
   - "Engelbart mouse + keyset on PDP-10 — how did the hardware attach?"
   - "Unprepared/rambling segment — Don prods, Lars demonstrates"
+  - "Custom SIMH device (LINK / networking) — pdp18b_foo.c pattern (29 Jul)"
+  - "340 character generator already in; display-list subroutines need testing"
+  - "Multipatch-first (Armit) — no Titan — easier SIMH target than PIXIE link"
 
 connects_in_repo:
   - { path: correspondence.md, why: "Human-readable digest (this file)" }
@@ -58,5 +71,7 @@ connects_in_repo:
   - { path: ideas.md, why: "Emulation + interview hooks" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Show seed — async production model" }
   - { path: ../heinz-lemke/correspondence.md, why: "Trio invitation thread" }
+  - { path: ../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md, why: "Multipatch-first + Titan LINK plan" }
+  - { path: ../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md, why: "29 Jul Armit + Lars digest" }
   - { path: ../david-rosenthal/correspondence.md, why: "Trio logistics + scope" }
   - { path: ../douglas-engelbart/, why: "Mouse + keyset PDP-10 hook" }

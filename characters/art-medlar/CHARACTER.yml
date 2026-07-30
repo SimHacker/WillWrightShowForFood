@@ -45,7 +45,11 @@ sources:
 
 see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
   - { path: ../../repo-shows/leela-ai/, why: "Leela AI group/solo show" }
+  - { path: ../brewster-kahle/, why: "WAIS + Internet Archive — Art's early IA/WAIS work (verify roles with both)" }
   - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO" }
   - { path: ../cyrus-shaoul/, why: "Leela AI co-founder" }
+  - { path: ../don-hopkins/, why: "Leela AI collaborator — Don's firsthand" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

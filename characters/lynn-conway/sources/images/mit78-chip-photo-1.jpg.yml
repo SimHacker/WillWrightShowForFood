@@ -1,0 +1,22 @@
+# MIT'78 multiproject chip — hi-res half 1
+# Sibling image: mit78-chip-photo-1.jpg (~6000×4638)
+
+image:
+  file: mit78-chip-photo-1.jpg
+  title: "MIT'78 multiproject chip — hi-res photo (half 1)"
+  what: |
+    High-resolution photo of one half of the multiproject chip the MIT'78 class made.
+    Zoom: David Levitt's project lower-right — name "LEVITT" visible when zoomed way in.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/InstGuide/MIT78chip%20photo-1%20L.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/InstGuide/InstGuide.html
+  credit: "Lynn Conway — Instructor's Guide / MIT'78 materials"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    David's project is in the lower right corner of the first image, and you can
+    see his name "LEVITT" if you zoom way in.

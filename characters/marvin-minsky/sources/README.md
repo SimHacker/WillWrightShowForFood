@@ -3,6 +3,7 @@
 | File | What |
 |------|------|
 | [`jokes-and-the-cognitive-unconscious.md`](jokes-and-the-cognitive-unconscious.md) | Minsky 1980/81 — humor as recognizing cognitive bugs (AI Memo 603) |
+| [`2022-12-23-hn-society-of-mind.md`](2022-12-23-hn-society-of-mind.md) | HN SoM thread — Don neat/scruffy + Drescher; show hooks |
 
 ## Canonical MOOLLM home
 

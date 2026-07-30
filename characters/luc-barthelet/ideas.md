@@ -1,31 +1,9 @@
-# Ideas to explore with Luc Barthelet ⛵
+# Show hooks — Luc Barthelet
 
-*Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Luc's
-public work and documented connections to this repository. Things Don would love to follow
-**with** Luc Barthelet; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+- Sewing SimShow / skins sites before launch — UGC as launch strategy
+- Shipping The Sims under EA acquisition weather
+- The Sims Online — what worked, what reincarnates, what Soul City/Exchange can steal
+- Apple ][ → Maxis → Unity → sailing (career as possibility space)
+- Team reunion adjacency with Will / Don / builders
 
-## What Luc has done
-
-Luc Barthelet — General Manager at Maxis during the EA acquisition era; credited with
-sewing early fan-tool seeds (SimShow, skins sites) before The Sims shipped; later The Sims
-Online; Apple ][ programmer from way back; worked at Unity; now sails. Don wants a long interview:
-shipping The Sims, TSO and its reincarnations, and how that lineage maps to Soul City /
-Exchange revival today.
-
-## The hooks
-
-### 1. Sims team reunion hub
-[`repo-shows/building-the-sims/`](../../repo-shows/building-the-sims/) — TSO lockstep, pixelation RNG, GM chair.
-
-### 2. Show seed: `repo-shows/luc-barthelet-sims-online/SHOW.yml`
-walk the repo on air and build from the seed.
-
-### 3. GM Maxis; SimShow pre-launch; The Sims Online; interview
-TSO → Soul City
-
-## Sources (public)
-
-- Show seed: [`repo-shows/luc-barthelet-sims-online/SHOW.yml`](../../repo-shows/luc-barthelet-sims-online/SHOW.yml)
-- Reunion hub: [`repo-shows/building-the-sims/`](../../repo-shows/building-the-sims/)
-- [`CHARACTER.yml`](CHARACTER.yml)
+Consent: not yet asked. All responses honored.

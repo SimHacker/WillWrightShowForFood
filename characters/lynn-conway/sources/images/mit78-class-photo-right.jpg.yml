@@ -1,0 +1,20 @@
+# MIT'78 class photo — right half
+# Sibling image: mit78-class-photo-right.jpg
+
+image:
+  file: mit78-class-photo-right.jpg
+  title: "MIT 1978 VLSI System Design Course — class photo (right)"
+  what: "Right half of the two-part MIT'78 VLSI class photograph."
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/Class3s.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    Pair with mit78-class-photo-left.jpg. David Levitt crouching so his 1978 hair
+    doesn't block Guy Steele — Don's friend callout from HN 8860722.

@@ -1,0 +1,46 @@
+# Adele Goldberg — invitation portrayal. NOT Adele Goldberg.
+# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: adele-goldberg
+  name: "Adele Goldberg"
+  type: invitation
+  signifier: "📒"
+  status: living
+  field: "Smalltalk — Learning Research Group manager; Smalltalk-80 books; ACM president"
+  home: characters/adele-goldberg/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub from Yoot People.md — deepen before invite."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  note: "LRG / Smalltalk-80 books — invite with Kaehler. Drafted 2026-07-29."
+
+
+bio:
+  summary: |
+    **Adele Goldberg** — Learning Research Group at Xerox PARC (later manager); co-authored the
+    main **Smalltalk-80** books with Dave Robson; led much of the effort to document and release
+    Smalltalk-80 outside Xerox. Discussant for Kay's HOPL Early History of Smalltalk talk; later
+    ACM president. Central living voice for how Smalltalk left the lab.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Adele_Goldberg_(computer_scientist)"
+  web:
+    - { title: "Yoot People.md — Adele Goldberg", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+    - { title: "CHM / Smalltalk history context", url: "https://www.computerhistory.org/" }
+
+see_also:
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot portrait" }
+  - { path: ../alan-kay/, why: "LRG colleague; HOPL discussant" }
+  - { path: ../dan-ingalls/, why: "Smalltalk implementer pair" }
+  - { path: ../diana-merry-shapiro/, why: "LRG Smalltalk programmer" }
+  - { path: ../ted-kaehler/, why: "LRG colleague" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

@@ -1,0 +1,43 @@
+# Stewart Brand — invitation portrayal. NOT Stewart Brand.
+# Seeded from Yoot People.md. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: stewart-brand
+  name: "Stewart Brand"
+  type: invitation
+  signifier: "📖"
+  status: living
+  born: "1938-12-14"
+  field: "Media / culture — Whole Earth Catalog; Rolling Stone PARC; Long Now Foundation"
+  home: characters/stewart-brand/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub from Yoot People.md — deepen before invite."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  note: "1972 Rolling Stone PARC piece — media bridge for Alto/Smalltalk show; not yet asked."
+
+bio:
+  summary: |
+    **Stewart Brand** — Whole Earth Catalog; **1972 Rolling Stone** article on Xerox PARC that
+    brought public attention to the lab (Yoot People.md / Kay apparatus). Later Long Now Foundation.
+    Show role: how PARC entered culture — not as implementer but as amplifier.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Stewart_Brand"
+  web:
+    - { title: "Yoot People.md — Stewart Brand", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+    - { title: "Spacewar — Rolling Stone (1972) / PARC coverage context", url: "https://en.wikipedia.org/wiki/Stewart_Brand" }
+
+see_also:
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot portrait" }
+  - { path: ../alan-kay/, why: "PARC media history" }
+  - { path: ../butler-lampson/, why: "Alto era Brand covered" }
+  - { path: ../chuck-thacker/, why: "Alto hardware" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

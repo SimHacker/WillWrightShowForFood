@@ -2,8 +2,9 @@
 # WWSFF profile: ../../palm/ · MOOLLM soul: monkey-palm/
 
 moollm_source:
-  repo: https://github.com/SimHacker/moollm
-  path: examples/adventure-4/characters/animals/monkey-palm/
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/animals/monkey-palm
   character: CHARACTER.yml
   import_mode: overlay
 

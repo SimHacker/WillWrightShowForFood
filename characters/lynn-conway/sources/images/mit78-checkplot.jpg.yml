@@ -1,0 +1,24 @@
+# MIT'78 wall-sized check plot (PARC / Arpanet)
+# Sibling image: mit78-checkplot.jpg
+
+image:
+  file: mit78-checkplot.jpg
+  title: "MIT'78 — wall-sized multiproject check plot before maskmaking"
+  what: |
+    Final sanity check before maskmaking: wall-sized overall check plot made at
+    Xerox PARC from Arpanet-transmitted design files, student projects merged into
+    the multiproject chip set.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/Checkplot%20s.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    The final sanity check before maskmaking: A wall-sized overall check plot made
+    at Xerox PARC from Arpanet-transmitted design files, showing the student design
+    projects merged into multiproject chip set.

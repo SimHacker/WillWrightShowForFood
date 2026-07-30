@@ -1,0 +1,24 @@
+# MIT'78 wafer off the HP fab line
+# Sibling image: mit78-wafer.jpg
+
+image:
+  file: mit78-wafer.jpg
+  title: "MIT'78 — wafer from HP fab containing the student VLSI projects"
+  what: |
+    One of the wafers just off the HP fab line containing the MIT'78 VLSI design
+    projects. Wafers diced into chips, packaged and wire-bonded to specific
+    projects, then tested back at MIT.
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/Wafer%20s.jpg
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8860722, url: "https://news.ycombinator.com/item?id=8860722" }
+  don_hopkins: |
+    One of the wafers just off the HP fab line containing the MIT'78 VLSI design
+    projects: Wafers were then diced into chips, and the chips packaged and wire
+    bonded to specific projects, which were then tested back at M.I.T.

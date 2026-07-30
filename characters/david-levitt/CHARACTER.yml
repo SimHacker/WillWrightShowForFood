@@ -100,4 +100,6 @@ see_also:
   - { path: ../bill-st-clair/, why: "ACRC Star Wars↔Lisp Machine witness (May 2024); same lab as David" }
   - { path: sources/atari-cambridge-star-wars-lisp-machine.md, why: "Confirmed Star Wars cabinet ↔ Lisp Machine at ACRC" }
   - { path: ../don-hopkins/, why: "Pantomime Chief Architect; longtime friend + collaborator" }
+  - { path: ../lynn-conway/, why: "MIT'78 Mead–Conway VLSI course — Levitt in class photo; chip/wafer archive in her sources/images/" }
+  - { path: ../lynn-conway/sources/images/, why: "Archived MIT'78 class + die photos Don contextualized on HN" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

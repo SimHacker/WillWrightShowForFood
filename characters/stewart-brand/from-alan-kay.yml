@@ -1,0 +1,12 @@
+character: stewart-brand
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Yoot People.md: Brand's 1972 Rolling Stone article on PARC brought significant attention to
+    the work there and influenced Xerox's perception of PARC's projects.
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md", section: "Stewart Brand" }
+show_hooks:
+  - "How PARC entered public culture before Apple visits"
+  - "Whole Earth / Long Now adjacency to personal computing myth"
+see_also: [../stewart-brand/CHARACTER.yml, ../../process/yoot-people-wwsff-map.yml]

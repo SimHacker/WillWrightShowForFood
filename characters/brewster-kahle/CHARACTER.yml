@@ -62,6 +62,7 @@ sources:
 
 see_also:
   - { path: ideas.md, why: "Episode hooks — OLPC, TLG, IA, Amsterdam" }
+  - { path: ../art-medlar/, why: "WAIS + early Internet Archive collaborator (Local Power bio; Leela AI colleague of Don)" }
   - { path: ../walter-bender/CHARACTER.yml, why: "OLPC Stone Soup show cast" }
   - { path: ../samuel-klein/CHARACTER.yml, why: "OLPC content / GDC 2007" }
   - { path: ../tom-jennings/CHARACTER.yml, why: "TLG / FidoNet neighbor" }

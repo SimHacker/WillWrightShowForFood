@@ -1,15 +1,73 @@
+# Rebecca Heineman — memorial portrayal (in memoriam). NOT Rebecca Heineman.
+# Memorial mode: represent + discuss, never interview. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+# NOTE: Directory was drafted as living invitation; public obituaries place death 2025-11-17.
+#        Reclassified to memorial. Correct dates/details welcome from family and colleagues.
+
 character:
   id: rebecca-heineman
   name: "Rebecca Heineman"
-  type: invitation
-  status: living
+  also_known_as: ["Burger Becky"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1963-10"      # Whittier, California (month from public bios)
+  died: "2025-11-17"   # Rockwall, Texas; cancer (aged 62) — NYT / Ars / NPR
+  field: "Game programmer & studio founder — Interplay co-founder; Bard's Tale III; ports; LGBTQ advocacy"
   home: characters/rebecca-heineman/
+  spouse: jennell-jaquays   # public obituaries / Wikipedia — survived Jennell (2024); both memorial rooms
 
 representation:
-  governed_by: ../../schemas/portrayal-standards.md
-  consent_level: 2
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1963–2025) — represent + discuss; was incorrectly stubbed as living until audit 2026-07"
+
+memorial:
+  mode: represent_and_discuss
+  rule: >
+    Represent and discuss her documented public work and publicly shared advocacy.
+    Do not interview, do not speak as her, invent no inner life. Only her real,
+    documented words, with attribution.
+  who_can_discuss: []
+  draw_on_for_shows:
+    - "1980 national Space Invaders championship — first large-scale US video game tournament champion"
+    - "Interplay Productions co-founder (with Brian Fargo, Jay Patel, Troy Worrell)"
+    - "The Bard's Tale III: Thief of Fate; Dragon Wars; ports (Wolfenstein 3D, Battle Chess, Doom/3DO, etc.)"
+    - "Later studios: Logicware, Contraband, Olde Sküül; MacPlay; software archiving"
+    - "Public transition (early 2000s); GLAAD board; Gayming Icon; High Score documentary"
+    - "Sailor Ranko webcomic; mentoring and industry storytelling (YouTube)"
+
+bio:
+  summary: |
+    **Rebecca Ann Heineman** (1963–2025) taught herself to program by reverse
+    engineering, won the 1980 national **Space Invaders** championship at 16, and
+    co-founded **Interplay Productions** (1983). She designed **The Bard's Tale III**
+    and **Dragon Wars**, programmed major ports, and later founded Logicware /
+    Contraband / Olde Sküül. Out as a transgender woman in the early 2000s, she
+    served on the **GLAAD** board and remained a public advocate and mentor.
+    Married to game designer **Jennell Jaquays** (memorialized here; died 2024).
+    Died 2025-11-17 after cancer.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Rebecca_Heineman"
+  web:
+    - { title: "Ars Technica — dies at 62", url: "https://arstechnica.com/gadgets/2025/11/interplay-co-founder-and-pioneering-game-developer-rebecca-heineman-dies-at-62/" }
+    - { title: "NPR — remembering pioneer and LGBTQ advocate", url: "https://www.npr.org/2025/11/23/nx-s1-5615336/remembering-rebecca-heineman-video-game-pioneer-and-lgbtq-rights-advocate" }
+    - { title: "NYT obituary", url: "https://www.nytimes.com/2025/12/04/technology/rebecca-heineman-dead.html" }
+    - { title: "IGN — Interplay co-founder", url: "https://www.ign.com/articles/interplay-co-founder-and-trailblazing-developer-rebecca-heineman-dies-aged-62" }
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: README.md, why: "Room orientation" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../jennell-jaquays/, why: "Spouse — public record; fellow memorial room (died 2024)" }
+  - { path: ../danielle-bunten-berry/, why: "Fellow memorial — games + trans pioneer" }
+  - { path: ../lynn-conway/, why: "Fellow memorial — computing + trans pioneer" }
+  - { path: ../will-wright/sources/2019-apple-iigs-simcity-becky-heineman/, why: "Apple IIgs SimCity source hunt — Becky adjacency" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial protocol" }

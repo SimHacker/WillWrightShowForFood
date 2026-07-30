@@ -1,0 +1,55 @@
+# John Warnock — memorial / public legacy portrayal. NOT John Warnock.
+# Died 2023-11-19. Seeded from Yoot People.md + Utah/Kay orbit.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: john-warnock
+  name: "John Warnock"
+  full_name: "John Edward Warnock"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1940-10-06"
+  died: "2023-11-19"
+  field: "Computer graphics / typography — Utah PhD; Xerox PARC; PostScript; co-founder Adobe"
+  home: characters/john-warnock/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1940–2023) — represent + discuss; Utah → Adobe line"
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Utah + PARC community Kay names; PostScript/document media neighbor" }
+    - { who: ivan-sutherland, why: "Utah graphics program era (citation / discussants of Ivan)" }
+    - { who: david-rosenthal, why: "Display / document / NeWS adjacency" }
+
+bio:
+  summary: |
+    **John Warnock** (1940–2023) — University of Utah graphics PhD orbit (Kay / Evans / Sutherland
+    era), Xerox PARC, then co-founded **Adobe** with Chuck Geschke; **PostScript** made digital
+    typography and page description a programmable medium. Yoot People.md lists him among the
+    broader PARC / interactive-computing community Kay names.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/John_Warnock"
+  web:
+    - { title: "Yoot People.md — John Warnock", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "Utah cohort" }
+  - { path: ../ivan-sutherland/, why: "Utah graphics north star" }
+  - { path: ../dave-evans/, why: "Utah ARPA program" }
+  - { path: ../david-rosenthal/, why: "Documents / NeWS neighbor" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

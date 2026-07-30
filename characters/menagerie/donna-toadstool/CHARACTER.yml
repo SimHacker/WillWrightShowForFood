@@ -3,8 +3,9 @@
 # ELVIS-IMPERSONATOR-MODEL — satirical parody; performer and persona both fictional
 
 moollm_source:
-  repo: https://github.com/SimHacker/moollm
-  path: examples/adventure-4/characters/fictional/donna-toadstool/
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/donna-toadstool
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/fictional/donna-toadstool
   character: CHARACTER.yml
   import_mode: overlay
   ethics: ELVIS-IMPERSONATOR-MODEL

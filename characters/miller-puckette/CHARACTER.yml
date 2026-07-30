@@ -47,5 +47,6 @@ sources:
     - "https://msp.ucsd.edu/"
 
 see_also:
+  - { path: ../../process/hn-harvest/miller-puckette.md, why: "DonHopkins HN — Pure Data / Miller Puckette" }
   - { path: ../david-levitt/don-and-david-history.md, why: "MIT office-mate; the Music Hacker's Hangout" }
   - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Patch-cord dataflow lineage (Hookup → Max/Pd)" }

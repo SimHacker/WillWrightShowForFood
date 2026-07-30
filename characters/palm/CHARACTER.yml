@@ -31,11 +31,21 @@ profile:
     never read their own code.
   readme: README.md
 
+# Adventure-4 canonical soul — absolute once; shorthand elsewhere
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/animals/monkey-palm
+  note: "Canonical Palm. Resolve shorthand paths against absolute_url."
+
 inherits:
-  repo: https://github.com/SimHacker/moollm
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/animals/monkey-palm
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
   canonical_dir: examples/adventure-4/characters/animals/monkey-palm/
   character_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
   home_room: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook
+  home_room_path: moollm/examples/adventure-4/pub/stage/palm-nook
   card: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/CARD.yml
   character_yml: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml
 

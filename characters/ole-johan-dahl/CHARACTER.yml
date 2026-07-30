@@ -1,0 +1,53 @@
+# ole-johan-dahl — memorial. NOT the person.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: ole-johan-dahl
+  name: "Ole-Johan Dahl"
+  full_name: "Ole-Johan Dahl"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1931-10-12"
+  died: "2002-06-29"
+  field: "Programming languages — Simula (with Kristen Nygaard); Turing Award 2001"
+  home: characters/ole-johan-dahl/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Simula as Smalltalk root" }
+    - { who: kristen-nygaard, why: "Simula co-creator (memorial)" }
+    - { who: ivan-sutherland, why: "OOP trinity with Sketchpad + B5000 (citation)" }
+
+bio:
+  summary: |
+    **Ole-Johan Dahl** (1931–2002) — with **Kristen Nygaard** created **Simula**
+    (Simula I 1966; Simula 67), the first language with classes and objects. Kay names Simula as
+    one of the two main roots of Smalltalk (the other being LISP) — Yoot People.md. Turing Award
+    2001 (with Nygaard).
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Ole-Johan_Dahl"
+  web:
+    - { title: "Yoot People.md", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "Kay history hub" }
+  - { path: ../kristen-nygaard/, why: "Simula co-creator" }
+  - { path: ../alan-kay/oop-trinity-sketchpad-simula-b5000.md, why: "Simula leg of OOP trinity" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad — trinity partner" }
+  - { path: ../bob-barton/, why: "B5000 — trinity partner" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

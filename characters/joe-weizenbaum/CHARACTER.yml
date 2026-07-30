@@ -48,7 +48,11 @@ memorial:
 
 see_also:
   - { path: CARD.yml, why: "Memorial abilities + constellation" }
+  - { path: memorial.md, why: "Tribute — represent + discuss" }
+  - { path: ideas.md, why: "Discussant hooks" }
   - { path: ../kent-pitman/, why: "DOCTOR student line" }
   - { path: ../heinz-lemke/, why: "MIT 1969 meeting; model science" }
   - { path: ../leo-joskowicz/, why: "CARS 2027 ELIZA session" }
+  - { path: ../mario-cypko/, why: "Quotes Weizenbaum human-not-machine in Model-Guided Medicine" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Two-episode Weizenbaum arc in show seed" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial protocol" }

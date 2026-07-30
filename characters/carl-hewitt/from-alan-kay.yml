@@ -1,0 +1,11 @@
+character: carl-hewitt
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Actors as concurrent objects — Kay messaging history periphery; Ken Kahn show orbit.
+    Yoot People.md entry in Kay interview apparatus.
+sources:
+  yoot_people: { url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+see_also:
+  - ../carl-hewitt/CHARACTER.yml
+  - ../../process/yoot-people-wwsff-map.yml

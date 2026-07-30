@@ -6,6 +6,7 @@ Canonical narrative deposits already live elsewhere; this room points, it does n
 
 | Deposit | What |
 |---|---|
+| [`duckmouse-pronunciation-on-the-record.md`](duckmouse-pronunciation-on-the-record.md) | Pronunciation inheritance + attributed quotes (Telegraph, BL, Pete/Penny) |
 | [`../../don-hopkins/media/turing-institute/donald-michie-duckmouse.yml`](../../don-hopkins/media/turing-institute/donald-michie-duckmouse.yml) | Dense person / lineage / anecdote YAML |
 | [`../../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md`](../../don-hopkins/media/turing-institute/2026-04-pete-mowforth-duckmouse.md) | Pete clarifications (Penny Montgommery, IVF/McLaren, MIRA→Turing naming, Olympics, KGB/ONR/Lomp; Colossus aside soft-handled) |
 | [`../../don-hopkins/media/turing-institute/INDEX.yml`](../../don-hopkins/media/turing-institute/INDEX.yml) | Turing wing index |

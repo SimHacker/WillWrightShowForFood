@@ -23,9 +23,18 @@ pattern:
     3) records wwsff_overlay — experiences, roles, relationships earned HERE
     4) optional SIMS-UPLIFT.yml for menagerie/Sims export
 
+  # Absolute once; shorthand everywhere else. Resolve path against absolute_url.
+  moollm_source_shape: |
+    moollm_source:
+      absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/<cat>/<slug>
+      repo: SimHacker/moollm
+      path: moollm/examples/adventure-4/characters/<cat>/<slug>
+    Shorthand elsewhere: moollm/examples/adventure-4/... (repo-rooted; expand via absolute_url).
+
   required_local_fields:
-    - moollm_source.repo
-    - moollm_source.path
+    - moollm_source.absolute_url   # full GitHub tree URL — absolute position
+    - moollm_source.repo            # SimHacker/moollm
+    - moollm_source.path            # moollm/examples/adventure-4/... shorthand
     - character.id
     - character.signifier
     - wwsff_overlay.roles
@@ -47,16 +56,22 @@ future_pools:
 
 instances:
   - slug: donna-toadstool
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/donna-toadstool
+    path: moollm/examples/adventure-4/characters/fictional/donna-toadstool
     upstream: fictional/donna-toadstool/
     local: donna-toadstool/
     signifier: "🍄👸🍊💅🎭"
     status: active
   - slug: doctor-no
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/doctor-no
+    path: moollm/examples/adventure-4/characters/fictional/doctor-no
     upstream: fictional/doctor-no/
     local: doctor-no/
     signifier: "🧣🔦🚫🤫🌟"
     status: active
   - slug: palm
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+    path: moollm/examples/adventure-4/characters/animals/monkey-palm
     upstream: animals/monkey-palm/
     wwsff_profile: ../../palm/
     local: palm/

@@ -34,7 +34,7 @@ shows:
     terry-winograd/:           "★ FOREBEAR SHOW. Terry Winograd as the dragon with the treasure trove of videos (CS547 archive). Stands explicitly on Terry's shoulders + the shoulders of all his great guests (Will 1996, Gosling Java 1995, Joy Mountford 1994, Raskin, Norman, etc.). Archive recovery, modern runnable seeds, Repo Show continuation, Connections series spine. (Pie menus = Don's own thread, not Joy Mountford's — corrected.)"
     rebounce/:                 "★ REBOUNCE. Salute to Bounce (né Body Electric): check in Don's original Bounce source, and invite many people to rewrite it — by hand AND with AI, competing + cooperating + exchanging ideas. Seeded by David Levitt + Don's discussions; Jaron Lanier (VPL co-founder & Body Electric visionary — lead designer/programmer was Chuck Blanchard) guest of honor for the origin story. The patch-cord/dataflow half of the Snap! visual-engines vision. History: ../characters/don-hopkins/body-electric-bounce-vr-stack.md."
     edd-coates/:                "★ Edd Coates — factual README ready; GUIDB Guinness + PadCrafter + Game UI Bible; ep.2 pies/Gonzo/bridge reinterpret. Friend of Don. email soon / send_now."
-    tom-and-golan-ecg-mouther/: "★ PAIR Tom Ngo + Golan Levin — ECG & Mouther brainstorm (SVG/Canvas/WebGPU; recover vs reverse-engineer cartoons). Conversation not code. warm_contact."
+    tom-and-golan-ecg-mouther/: "★ PAIR Tom Ngo + Golan Levin — ECG & Mouther + WigFabrik showcase (multitarget mesh+texture + AI targets; SVG/Canvas/WebGPU). Conversation not code. warm_contact."
     clint-basinger/:        "★ Clint Basinger (LGR) — Maxis/Micropolis/preservation; audience bridge to Sims fandom. send_now. (was lgr/)"
     marc-canter/:              "★ Marc Canter — Director/Macromedia → People Aggregator; puppets + Pink Trombone; three-hander w/ David Levitt. send_ready."
     bret-victor/:               "★ Bret Victor — explorable explanations + Micropolis legibility; Dynamicland honest beat. send_ready."
@@ -46,6 +46,7 @@ shows:
     brian-eno/:                 "★ DREAM. Brian Eno — generative systems; Long Now 2006 w/ Will; Scott Draves reunion."
     drew-carey/:                "★ DREAM. Drew Carey — improv + Sims mythology (House Party, Drew Carey Show in-game)."
     openlaszlo/:                "★ REUNION. OpenLaszlo → Declare — Temkin + Steele + Henry + Don (+ Ungar, Brad Myers, Craig Latta optional). Prototypes Rosetta; OL 5.0 + Declare; ISP; Svelte 5; Mesa. Solos: oliver-steele/, david-ungar/, brad-myers, craig-latta/."
+    simfaux/:                   "★ SEED WRAPPER. Sideways symbiosis in ../apps/simfaux/ORGANELLES.yml — LZX DNA + OL5 + Declare sibling organelles (Soul City parallel souls). Live faux-news instrument. Spin out: SPIN-OUT.md. Kin: openlaszlo/, character-endosymbiosis."
   seeds:
     group:
       building-the-sims.yml:    "The Sims team reunion: Jamie Doornbos, Eric Bowman, Patrick J. Barrett III, Don (programmers) + Jim Mackraz (manager) + Will. Designers Chris/Claire may join. Flagship episode: will-wright-premiere/sims-team-steering-committee-playthrough/ (PLAY the 1998 build)."

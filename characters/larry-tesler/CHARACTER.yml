@@ -1,0 +1,56 @@
+# Larry Tesler — memorial / public legacy portrayal. NOT Larry Tesler.
+# Died 2020-02-16. Seeded from Yoot People.md.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: larry-tesler
+  name: "Larry Tesler"
+  full_name: "Lawrence Gordon Tesler"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1945-04-24"
+  died: "2020-02-16"
+  field: "User interface — modeless editing; cut/copy/paste; Smalltalk demo to Apple (1979); Lisa/Mac"
+  home: characters/larry-tesler/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+  note: "Deceased (1945–2020) — represent + discuss; modeless UI + Jobs PARC visit"
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "PARC LRG neighbor era; Smalltalk UI culture" }
+    - { who: dan-ingalls, why: "Smalltalk implementer side of the demo stack" }
+    - { who: adele-goldberg, why: "LRG / Smalltalk-80 documentation era" }
+    - { who: bill-atkinson, why: "MacPaint / HyperCard — Apple after PARC ideas landed (memorial)" }
+
+bio:
+  summary: |
+    **Larry Tesler** (1945–2020) worked on Smalltalk and UI design at Xerox PARC in the 1970s —
+    **modeless editing** and **cut/copy/paste**. He gave the Smalltalk demo to Steve Jobs and the
+    Apple team during the 1979 PARC visits, then joined Apple (Lisa, Macintosh). Later Amazon /
+    Yahoo. Yoot People.md compresses the Jobs-demo beat for the 1993 Saito × Kay interview.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Larry_Tesler"
+  web:
+    - { title: "Yoot People.md — Larry Tesler", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../alan-kay/, why: "PARC Smalltalk culture" }
+  - { path: ../adele-goldberg/, why: "LRG" }
+  - { path: ../dan-ingalls/, why: "Smalltalk" }
+  - { path: ../bill-atkinson/, why: "Apple UI after PARC" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

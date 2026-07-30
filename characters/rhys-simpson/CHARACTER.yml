@@ -1,0 +1,33 @@
+# Rhys Simpson (riperiperi) — FreeSO / Simitone
+# Public engineering voice on Sims Online + Sims 1 reimplementation and Legacy Collection reverse notes.
+
+meta:
+  id: rhys-simpson
+  display_name: Rhys Simpson
+  github: riperiperi
+  invitation_status: not_invited
+  consent_level: 0
+  role: community_engineer_reference
+
+identity:
+  known_for:
+    - FreeSO (The Sims Online reimplementation, MPL-2.0)
+    - Simitone (The Sims 1 on FreeSO base)
+    - Volcanic (Edith-style live object IDE for FreeSO)
+    - 'Legacy Collection Technical Overview gist (Vulkan / DPI / renderer reverse notes, 2025)'
+
+urls:
+  github: https://github.com/riperiperi
+  freeso: https://github.com/riperiperi/FreeSO
+  simitone: https://github.com/riperiperi/Simitone
+  legacy_gist: https://gist.github.com/riperiperi/78c843b7fc3b11a92e3d5585a7815fee
+
+wwsff_use:
+  - Cite for Legacy Collection renderer facts (not Exchange gap — see will-wright/sources/sims1-legacy-collection-exchange-gap/)
+  - Credit FreeSO/Simitone as prior art in catalogs/sims-open-source-and-formats.yml
+  - Adjacent to jeff-adkins (IFF/tools/Legacy skew) — separate projects, shared problem space
+
+see_also:
+  - ../will-wright/sources/sims1-legacy-collection-exchange-gap/riperiperi-legacy-collection-technical-overview.md
+  - ../../catalogs/sims-open-source-and-formats.yml
+  - ../jeff-adkins/

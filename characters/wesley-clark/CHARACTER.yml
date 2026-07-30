@@ -1,0 +1,54 @@
+# Wesley A. Clark — memorial portrayal. NOT Wesley Clark.
+# Died 2016. Seeded from Yoot People.md + Alan Kay Wes Clark digests.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: wesley-clark
+  name: "Wesley A. Clark"
+  also_known_as: ["Wes Clark", "Wesley Clark"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1927-04-10"
+  died: "2016-02-22"
+  field: "LINC (1962) — early personal computer; TX-2; MIT Lincoln Lab / Washington University"
+  home: characters/wesley-clark/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Cites LINC as personal-computing precedent; TX-2 hosted Sketchpad" }
+    - { who: ivan-sutherland, why: "Sketchpad on Clark's TX-2 — discussants cite; hero room" }
+
+bio:
+  summary: |
+    **Wesley A. Clark** (1927–2016) designed the **LINC** (1962) — a small computer biomedical
+    researchers could assemble and run themselves — which Kay cites as an early personal computer
+    and a precedent for individual computing. His **TX-2** at Lincoln Lab hosted Ivan Sutherland's
+    **Sketchpad**. Later Washington University and consulting. July 2026 Alan Kay digests in-repo
+    also touch Wes Clark / PDP-8 / Popplestone adjacency on the PIXIE thread.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Wesley_A._Clark"
+  web:
+    - { title: "Yoot People.md — Wesley A. Clark", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  room_digests:
+    - ../alan-kay/sources/2026-07-28-wes-clark-pdp8-popplestone.md
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay on LINC + TX-2" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad machine" }
+  - { path: ../alan-kay/, why: "Personal-computing precedent" }
+  - { path: ../alan-kay/sources/2026-07-28-wes-clark-pdp8-popplestone.md, why: "July 2026 digest" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

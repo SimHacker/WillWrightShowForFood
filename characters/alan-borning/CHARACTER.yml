@@ -1,0 +1,46 @@
+# Alan Borning — invitation portrayal. NOT Alan Borning.
+# Seeded from Yoot People.md (ThingLab). Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: alan-borning
+  name: "Alan Borning"
+  type: invitation
+  signifier: "🔗"
+  status: living
+  field: "Constraints — ThingLab (Smalltalk); constraint programming; University of Washington"
+  home: characters/alan-borning/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Stub from Yoot People.md — ThingLab ↔ Sketchpad kinship."
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  note: "Pair with Reenskaug (MVC) and Ivan citation (constraints)."
+
+bio:
+  summary: |
+    **Alan Borning** created **ThingLab**, a constraint-oriented simulation laboratory in Smalltalk
+    — discussed in Kay's historical material and listed in Yoot People.md. Natural show bridge from
+    **Ivan Sutherland's Sketchpad** (constraints the machine maintains) to Smalltalk interactive
+    systems and modern reactive/declarative UI.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Alan_Borning"
+  web:
+    - { title: "Yoot People.md — Alan Borning", url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md" }
+  quora_recap: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md
+
+see_also:
+  - { path: invitation.md, why: "Send-ready invite" }
+  - { path: README.md, why: "Orientation" }
+  - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
+  - { path: ../ivan-sutherland/, why: "Sketchpad constraints north star" }
+  - { path: ../trygve-reenskaug/, why: "MVC — structure of interactive systems" }
+  - { path: ../alan-kay/, why: "ThingLab in Kay history" }
+  - { path: ../alan-kay/oop-trinity-sketchpad-simula-b5000.md, why: "Sketchpad leg" }
+  - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }

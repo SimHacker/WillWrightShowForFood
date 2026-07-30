@@ -1,0 +1,25 @@
+# What Alan Kay / Yoot apparatus say about John Warnock — public sources only
+# Index: ../alan-kay/people-index.yml
+
+character: john-warnock
+kay_hub: ../alan-kay/
+
+kay_says:
+  gist: |
+    Yoot People.md: Warnock is among the broader Utah/PARC interactive-computing community Kay
+    names. Deeper Kay mail (Wilkes/PARC/London thread) may add color — digests only in public rooms.
+
+sources:
+  yoot_people:
+    url: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
+    section: "John Warnock"
+
+show_hooks:
+  - "Utah graphics PhD → industry (Adobe)"
+  - "PostScript as programmable documents next to Smalltalk media"
+  - "Ivan / Evans Utah program neighborhood"
+
+see_also:
+  - ../john-warnock/CHARACTER.yml
+  - ../ivan-sutherland/
+  - ../../process/yoot-people-wwsff-map.yml

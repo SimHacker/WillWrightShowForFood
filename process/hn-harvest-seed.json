@@ -1,0 +1,1639 @@
+{
+  "Lynn Conway": [
+    {
+      "author": "DonHopkins",
+      "objectID": "8861178",
+      "created_at": "2015-01-09T07:38:54Z",
+      "story_title": "Design of Lisp-Based Processors Or, LAMBDA: The Ultimate Opcode (1979) [pdf]",
+      "url": "https://news.ycombinator.com/item?id=8861178",
+      "comment_text": "Here&#x27;s a map of the projects on that chip, and a list of the people who made them and what they did:<p><a href=\"http://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MPC78map.gif\" rel=\"nofollow\">http:&#x2F;&#x2F;ai.eecs.umich.edu&#x2F;people&#x2F;conway&#x2F;VLSI&#x2F;MIT78&#x2F;MPC78map.g...</a><p>1. Sandra Azoury, N. Lynn Bowen Jorge Rubenstein: Charge flow transistors (moisture sensors) integr"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8860722",
+      "created_at": "2015-01-09T04:18:05Z",
+      "story_title": "Design of Lisp-Based Processors Or, LAMBDA: The Ultimate Opcode (1979) [pdf]",
+      "url": "https://news.ycombinator.com/item?id=8860722",
+      "comment_text": "I believe this is about the Lisp Microprocessor that Guy Steele created in Lynn Conway&#x27;s groundbreaking 1978 MIT VLSI System Design Course:<p><a href=\"http://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html\" rel=\"nofollow\">http:&#x2F;&#x2F;ai.eecs.umich.edu&#x2F;people&#x2F;conway&#x2F;VLSI&#x2F;MIT78&#x2F;MIT78.html</a><p>My friend David Levitt is crouching down in this class photo so h"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "45427516",
+      "created_at": "2025-09-30T16:22:58Z",
+      "story_title": "Design of the SCHEME-78 Lisp-based microprocessor (1980)",
+      "url": "https://news.ycombinator.com/item?id=45427516",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139</a><p>40 points by DonHopkins on June 15, 2022 | parent | context | favorite | on: Purdue Starts Comprehensive Semiconductor Degree P...<p>Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44632503",
+      "created_at": "2025-07-21T07:05:46Z",
+      "story_title": "JOVE \u2013 Jonathan\u2019s Own Version of Emacs",
+      "url": "https://news.ycombinator.com/item?id=44632503",
+      "comment_text": "You&#x27;re not as explicitly obscene (yet), but definitely just as bigoted and wrong as Jonathan Payne is.<p>And you&#x27;re both so ignorant, proud, and unrepentant about your bigotry that you parade it around in public just like you&#x27;re doing right now.<p>Are you&#x27;re also just as creepily obsessed with purposefully insulting people and unapologetically denying their identity and right t"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44630777",
+      "created_at": "2025-07-21T00:43:07Z",
+      "story_title": "JOVE \u2013 Jonathan\u2019s Own Version of Emacs",
+      "url": "https://news.ycombinator.com/item?id=44630777",
+      "comment_text": "Thank you! I&#x27;m working on publishing some more creative stuff here, woven together with and by lots of technical stuff:<p><a href=\"https:&#x2F;&#x2F;lloooomm.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;lloooomm.com&#x2F;</a><p>Speaking of operationalizing the woke mind virus, here&#x27;s a funny story about GROK, Jessica Rabbit, Vivian Jenna Wilson, Marshal McLuhan, Jean-Paul Sartre, Hunter S"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44528598",
+      "created_at": "2025-07-11T05:13:02Z",
+      "story_title": "Grok 4 Launch [video]",
+      "url": "https://news.ycombinator.com/item?id=44528598",
+      "comment_text": "So you want fewer guardrails and more Racist White Supremacist Transphobic Homophobic Misogynistic Antisemitic Abusive Pro-Trump MAGA Conspiracy Theory Obsessed training?<p>Are you now smugly self righteously satisfied with how GROK is more &quot;measurably sociopathic&quot; than &quot;measurably polite&quot;? Does it reinforce your world view better now, that GROK is more abusive instead of respe"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43266939",
+      "created_at": "2025-03-05T14:34:00Z",
+      "story_title": "NetBSD on a JavaStation",
+      "url": "https://news.ycombinator.com/item?id=43266939",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=37130128\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=37130128</a><p>Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own i"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40653512",
+      "created_at": "2024-06-12T01:20:45Z",
+      "story_title": "Lynn Conway has died",
+      "url": "https://news.ycombinator.com/item?id=40653512",
+      "comment_text": "Hi, Martin? I saw you speak at Ted Selker&#x27;s NPUC conference at IBM Almaden while you were working at Netscape, and I&#x27;m old friends with your brother Paul from when he was at SGI, and I love the cool Graphica Obscura and data flow visual programming stuff he did. I remember Ted Nelson was kind of brusk with you at NPUC because he didn&#x27;t approve of Netscape&#x27;s approach to Hypertex"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40649026",
+      "created_at": "2024-06-11T17:25:53Z",
+      "story_title": "Lynn Conway has died",
+      "url": "https://news.ycombinator.com/item?id=40649026",
+      "comment_text": "Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits:<p>&gt;&quot;Importantly, these weren\u2019t just any designs, for many pushed the envelope of system architecture. Jim Clar"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40649014",
+      "created_at": "2024-06-11T17:24:50Z",
+      "story_title": "Lynn Conway has died",
+      "url": "https://news.ycombinator.com/item?id=40649014",
+      "comment_text": "Lynn Conway co-wrote &quot;the book&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits, including James Clark (SGI) who made the Geometry Engine, and Guy L Steel (MIT) who made the Scheme Microprocessor.<p>She invented superscalar archite"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "37130201",
+      "created_at": "2023-08-15T04:28:45Z",
+      "story_title": "Lynn Conway's Story (2000)",
+      "url": "https://news.ycombinator.com/item?id=37130201",
+      "comment_text": "Not just one but TWO impressive careers. She invented superscalar CPUs in her first career, was brutally fired by IBM for being trans, then rebooted her life in stealth from scratch, and not only invented but wrote the book on and taught VLSI design to a whole generation of designers, including industry giants like Guy L Steele and James H Clark (among many others).<p>She serves as incontrovertibl"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "37130128",
+      "created_at": "2023-08-15T04:20:12Z",
+      "story_title": "Lynn Conway's Story (2000)",
+      "url": "https://news.ycombinator.com/item?id=37130128",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139</a><p>Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own i"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "31758139",
+      "created_at": "2022-06-15T19:28:34Z",
+      "story_title": "Purdue Starts Comprehensive Semiconductor Degree Programs in U.S.",
+      "url": "https://news.ycombinator.com/item?id=31758139",
+      "comment_text": "Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot;, created and taught this historic VLSI Design Course in 1978, which was the first time students designed and fabricated their own integrated circuits:<p>&gt;&quot;Importantly, these weren\u2019t just any designs, for many pushed the envelope of system architecture. Jim Clar"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "29953548",
+      "created_at": "2022-01-16T05:05:34Z",
+      "story_title": "Lisp Badge (2021)",
+      "url": "https://news.ycombinator.com/item?id=29953548",
+      "comment_text": "The original Lisp badge (or rather, SCHEME badge):<p>Design of LISP-Based Processors\nor, SCHEME: A Dielectric LISP\nor, Finite Memories Considered Harmful\nor, LAMBDA: The Ultimate Opcode,\nby Guy Lewis Steele Jr. and Gerald Jay Sussman,\n(about their hardware project for Lynn Conway&#x27;s groundbreaking 1978 MIT VLSI System Design Course) (1979) [pdf] (dspace.mit.edu)<p><a href=\"http:&#x2F;&#x2F;dsp"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "25965552",
+      "created_at": "2021-01-30T02:53:38Z",
+      "story_title": "Siliconpr0n: High Resolution Chip Maps",
+      "url": "https://news.ycombinator.com/item?id=25965552",
+      "comment_text": "Here&#x27;s some historic Vintage VLSI Porn that I posted 6 years ago, from Lynn Conway&#x27;s famous VLSI Design course at MIT:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lynn_Conway\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Lynn_Conway</a><p><a href=\"https:&#x2F;&#x2F;ai.eecs.umich.edu&#x2F;people&#x2F;conway&#x2F;conway.html\" rel=\"nofollow\">https:&#x2F;"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "23619975",
+      "created_at": "2020-06-23T20:42:39Z",
+      "story_title": "MIT 6.001 Structure and Interpretation (1986) [video]",
+      "url": "https://news.ycombinator.com/item?id=23619975",
+      "comment_text": "And Lisp Machines were wire wrapped! There was a robotic wire wrapper at the AI Lab on the 9th floor of 545 Tech Square.<p>Lynn Conway&#x27;s VLSI design course was the first time students designed and fabricated their own integrated circuits!"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "23603212",
+      "created_at": "2020-06-22T17:43:06Z",
+      "story_title": "MIT 6.001 Structure and Interpretation (1986) [video]",
+      "url": "https://news.ycombinator.com/item?id=23603212",
+      "comment_text": "Here&#x27;s some info (and links to pictures) I posted earlier about Lynn Conway&#x27;s groundbreaking 1978 MIT VLSI System Design Course, in which Guy Steele designed his Lisp Microprocessor:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8860722\" rel=\"nofollow\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=8860722</a><p>I believe this is about the Lisp Microprocessor that G"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "19977736",
+      "created_at": "2019-05-22T04:20:15Z",
+      "story_title": "I don't know how CPUs work so I simulated one in code",
+      "url": "https://news.ycombinator.com/item?id=19977736",
+      "comment_text": "I love how you can actually see the different parts of Guy Steel&#x27;s Lisp Microprocessor, which he designed in Lynn Conway&#x27;s legendary 1978 VLSI System Design Course at MIT.<p><a href=\"http:&#x2F;&#x2F;ai.eecs.umich.edu&#x2F;people&#x2F;conway&#x2F;VLSI&#x2F;MIT78&#x2F;MIT78.html\" rel=\"nofollow\">http:&#x2F;&#x2F;ai.eecs.umich.edu&#x2F;people&#x2F;conway&#x2F;VLSI&#x2F;MIT78&#x2F;MIT78.html"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40667120",
+      "created_at": "2024-06-13T08:00:32Z",
+      "story_title": "Lynn Conway has died",
+      "url": "https://news.ycombinator.com/item?id=40667120",
+      "comment_text": "Way more than that: two professional achievements, and innumerable personal achievements of all the people she reached and helped, many of whom have posted here, but also so many more. And not just helping trans people live, but helping cis people understand.<p>Here&#x27;s an important point that Lynn makes in her retrospective, about how LGBTQ diversity benefits everyone, especially outstanding w"
+    }
+  ],
+  "Stephanie Shirley": [],
+  "Steve Shirley": [],
+  "Jennell Jaquays": [],
+  "Will Wright": [
+    {
+      "author": "DonHopkins",
+      "objectID": "9993071",
+      "created_at": "2015-08-03T00:14:31Z",
+      "story_title": "HitchBOT destroyed in Philadelphia, ending U.S. tour",
+      "url": "https://news.ycombinator.com/item?id=9993071",
+      "comment_text": "Those were &quot;One Minute Movies&quot; we did with NBC in 2003, but that were never aired. Will Wright wrote those two and built the robots at the Stupid Fun Club, and I developed the robot control software and helped run the robots from an &quot;undisclosed location&quot; (the back of an FMC motorcoach).<p><a href=\"http:&#x2F;&#x2F;www.allentownproductions.com&#x2F;project.php?p=nbc\" rel=\"nofol"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9438461",
+      "created_at": "2015-04-25T14:55:48Z",
+      "story_title": "TrackPoint (2011)",
+      "url": "https://news.ycombinator.com/item?id=9438461",
+      "comment_text": "Ted Selker [1] is the amazing guy who invented and refined the Trackpoint [2] or &quot;Joy Button&quot; as he called it (but IBM refused to call it). He put years of research and development into the product, and I&#x27;m happy he&#x27;s finally written up and published the story. [3]<p>[1] <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Ted_Selker\" rel=\"nofollow\">https:&#x2F;&#x2F;en.w"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9149874",
+      "created_at": "2015-03-05T09:20:10Z",
+      "story_title": "EA Shuts Down \u2018SimCity\u2019 and \u2018The Sims\u2019 Developer Maxis",
+      "url": "https://news.ycombinator.com/item?id=9149874",
+      "comment_text": "Your second hand understanding is pretty accurate.<p>In the case of Maxis, it&#x27;s not accurate or fair for the person to say that EA&#x27;s strategy is to &quot;Buy studio, make them shovel a couple incomplete games out of the door, close studio, repeat.&quot;<p>That ignores the fact that EA buying Maxis enabled Maxis to successfully finish and ship The Sims, which became the best selling PC ga"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9107206",
+      "created_at": "2015-02-25T15:40:08Z",
+      "story_title": "Stop Robot Abuse",
+      "url": "https://news.ycombinator.com/item?id=9107206",
+      "comment_text": "Back in 2003 at the Stupid Fun Club, I helped Will Wright make these hidden camera one minute movies about robots roaming the streets and restaurants of Oakland and having their feelings hurt:<p>Empathy:\n<a href=\"http://www.donhopkins.com/home/RobotMovies/Empathy.mpg\" rel=\"nofollow\">http:&#x2F;&#x2F;www.donhopkins.com&#x2F;home&#x2F;RobotMovies&#x2F;Empathy.mpg</a><p>Servitude:\n<a href=\"http://www"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8829013",
+      "created_at": "2015-01-02T22:50:26Z",
+      "story_title": "A Magician\u2019s Best Trick: Revealing a Basic Human Bias",
+      "url": "https://news.ycombinator.com/item?id=8829013",
+      "comment_text": "During the development of The Sims 1, Will Wright came up with the idea of assigning each of the Sims a Zodiacal sign, based on the personality points that the player &quot;spent&quot; on them on the character creation screen. He defined 12 different archetypal sets of personality point values, one for each sign, and it simply assigned the nearest sign to the character&#x27;s current personality.<"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8787394",
+      "created_at": "2014-12-23T09:10:15Z",
+      "story_title": "\u201cWarning: Do Not use my mirrors/services until I have reviewed the situation\u201d",
+      "url": "https://news.ycombinator.com/item?id=8787394",
+      "comment_text": "Maybe it was a USB Emily Dickenson, or even worse, a USB Slavoj \u017di\u017eek?<p><a href=\"http://www.gamespot.com/articles/gdc-panel-tackling-the-emily-dickinson-license/1100-6120167/\" rel=\"nofollow\">http:&#x2F;&#x2F;www.gamespot.com&#x2F;articles&#x2F;gdc-panel-tackling-the-emil...</a><p>&gt;Will Wright, the creative mastermind behind SimCity and The Sims, spoke last, charming the crowd with a fluid mix "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8672454",
+      "created_at": "2014-11-28T23:02:08Z",
+      "story_title": "3D.City \u2013 Game built with three.js and sea3d",
+      "url": "https://news.ycombinator.com/item?id=8672454",
+      "comment_text": "I&#x27;m really glad to see this wonderful work that people have done based on the original SimCity source code! many thanks to Will Wright and the people at EA&#x2F;Maxis and OLPC for helping make it open source, and to everyone who worked on making it run so nicely and easily in the web browser. This project shows exactly why that was an important thing to do, and I hope it inspires others to do"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8482306",
+      "created_at": "2014-10-20T14:32:46Z",
+      "story_title": "SimCity That I Used to Know",
+      "url": "https://news.ycombinator.com/item?id=8482306",
+      "comment_text": "Will&#x27;s talks and interviews are all fascinating and well worth watching, taking notes, and studying. It&#x27;s interesting to see how the projects he was talking about at the time turned out years later. I&#x27;ll also link to an excellent interview with Chris Trottier, one of the designers on The Sims, who is an absolutely brilliant designer who worked Will on The Sims and Spore, who accordi"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "49067050",
+      "created_at": "2026-07-27T09:24:39Z",
+      "story_title": "PGSimCity - How PostgreSQL Works",
+      "url": "https://news.ycombinator.com/item?id=49067050",
+      "comment_text": "Good point! To respect EA&#x27;s trademark and the terms of their modifications to the GPL-3 license regarding the use of their SimCity trademark, I renamed the open source version of SimCity to Micropolis, which was its original working title. It would be safe to call this project &quot;PGMicropolis&quot; as long as it wasn&#x27;t for profit.<p>At the time, there was a disk drive manufacturer by "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48834054",
+      "created_at": "2026-07-08T16:32:41Z",
+      "story_title": "The difference between \"today's task\" and \"accretive work\"",
+      "url": "https://news.ycombinator.com/item?id=48834054",
+      "comment_text": "There&#x27;s a third case between &quot;today&#x27;s task&quot; and &quot;accretive work&quot; that I lived through on The Sims, and it&#x27;s the one that scares managers the most: a system that IS accretive work, but looks exactly like a pile of disposable hacks for most of its life.<p>Chris Trottier, one of the designers of The Sims and The Sims Online, called the method &quot;Design by Accreti"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48798891",
+      "created_at": "2026-07-05T23:13:24Z",
+      "story_title": "Mr. Baby Paint and accidentally discovering a new cellular automata",
+      "url": "https://news.ycombinator.com/item?id=48798891",
+      "comment_text": "I love this! May your baby grow up weird and unique like cellular automata rules, thinking globally and acting locally.<p>It&#x27;s weird like the cellular automata painting system I&#x27;ve been working on for a long time, which I rewrote in JavaScript a while ago, and is in serious need to rewriting, but runs pretty fast now anyway in spite of itself.<p>Norman Margolus and Tommaso Toffoli&#x27;s"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48781382",
+      "created_at": "2026-07-03T23:51:34Z",
+      "story_title": "The Life and Times of Maxis, Part 1: SimEverything",
+      "url": "https://news.ycombinator.com/item?id=48781382",
+      "comment_text": "You&#x27;re question in committed -- Thanks!<p>We&#x27;re making a &quot;Repo Show&quot;: You&#x27;re welcome to open issues and make prs to edit your questions and audience character description. (Price-is-Right and Furry costumes welcome!)<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;WillWrightShowForFood&#x2F;blob&#x2F;main&#x2F;repo-shows&#x2F;will-wright&#x2F;audience&#x2F;hn-n"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48780266",
+      "created_at": "2026-07-03T21:33:21Z",
+      "story_title": "The Life and Times of Maxis, Part 1: SimEverything",
+      "url": "https://news.ycombinator.com/item?id=48780266",
+      "comment_text": "Terry Winnograd is a user interface researcher and professor at Stanford, who has a regular user interface seminar:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Terry_Winograd\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Terry_Winograd</a><p>Stanford University, CS Dept., HCI Group, CS547 seminar videorecordings, 1990\u20132012 (collection SC1217). Terry Winograd&#x"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48780144",
+      "created_at": "2026-07-03T21:22:23Z",
+      "story_title": "The Life and Times of Maxis, Part 1: SimEverything",
+      "url": "https://news.ycombinator.com/item?id=48780144",
+      "comment_text": "I&#x27;m glad to collect any questions for Will Wright and post his replies!<p>He&#x27;s especially obsessed with cornering you at a party and telling you all about Care Bears.<p>The Adorable Will Wright Minutes!<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=f7G6c097oWU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=f7G6c097oWU</a><p>Speaking of single minutes of short "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48310306",
+      "created_at": "2026-05-28T15:24:18Z",
+      "story_title": "SimCity 3k in 4k (2025)",
+      "url": "https://news.ycombinator.com/item?id=48310306",
+      "comment_text": "Will Wright handed the original Maxis SimCity 3000 team a great design for the next SimCity (which I think they should have called SimCity 2001 instead of SimCity 3000, to more realistically set expectations).<p>But they ignored him, and went off on a tangent trying to design their own ultimate totally general purpose virtual reality (and we know how well Second Life has done ;), without much thou"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47972162",
+      "created_at": "2026-05-01T07:35:55Z",
+      "story_title": "Reverse Engineering SimTower",
+      "url": "https://news.ycombinator.com/item?id=47972162",
+      "comment_text": "Also, Fabian Wesner&#x27;s posted about using Claud Code to analyze the original micropolis repo&#x27;s code and documentation to generate a new version.<p>Here is a deep dive &quot;podcast&quot; he generated (presenting Claud&#x27;s analysis in a conversational format) that describes the work. I listened to it, and it got the important trademark and licensing issues right, was quite comprehensive"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47909351",
+      "created_at": "2026-04-26T11:11:08Z",
+      "story_title": "Show HN: Turning a Gaussian Splat into a videogame",
+      "url": "https://news.ycombinator.com/item?id=47909351",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27808826\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27808826</a><p>DonHopkins on July 12, 2021 | parent | context | favorite | on: I Stopped Using Emojis<p>&gt;What we saw was, if you go too far in that [representational] direction because you want to be inclusive, people don\u2019t see themselves represented and they\u2019re not going t"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47826221",
+      "created_at": "2026-04-19T18:00:28Z",
+      "story_title": "Game devs explain the tricks involved with letting you pause a game",
+      "url": "https://news.ycombinator.com/item?id=47826221",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=30359560\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=30359560</a><p>DonHopkins on Feb 16, 2022 | parent | context | favorite | on: Don&#x27;t use text pixelation to redact sensitive info...<p>When I implemented the pixelation censorship effect in The Sims 1, I actually injected some random noise every frame, so it made the pixel"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47778204",
+      "created_at": "2026-04-15T12:39:17Z",
+      "story_title": "A communist Apple II and fourteen years of not knowing what you're testing",
+      "url": "https://news.ycombinator.com/item?id=47778204",
+      "comment_text": "&quot;Reverse Over Engineering&quot; is a great thing:<p>Will Wright on Designing User Interfaces to Simulation Games (1996) (2023 Video Update):<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-simulation-games-bd7a9d81e62d\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-s...</a><p><a href=\"https:&#x2F;&#x2F;news.ycombi"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46981538",
+      "created_at": "2026-02-11T21:44:21Z",
+      "story_title": "Show HN: AI agents play SimCity through a REST API",
+      "url": "https://news.ycombinator.com/item?id=46981538",
+      "comment_text": "I&#x27;m thrilled that you and other people are taking it and running with it! That was the whole point of making it free: it was inspired by Seymour Papert&#x27;s Constructionist philosophy, Alan Kay&#x27;s ideas, and the mission of the OLPC.<p>EA granted the right to use the trademark &quot;SimCity&quot; only if it passed their QA process, and it was quite an ordeal hand holding their QA departm"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7262849",
+      "created_at": "2014-02-19T10:08:30Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7262849",
+      "comment_text": "Pie menus frame this kind of interaction as pop-up menus, which provide a &quot;self revealing gestural user interface&quot;. The menu pops up and leads you through the possible selections. That feedback trains you to rehearse the gestures. Soon you begin to make the gesture without looking at the menu, then wait for the menu feedback to confirm you&#x27;re doing the right thing. Finally you gain "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "4952671",
+      "created_at": "2012-12-21T14:00:27Z",
+      "story_title": "When I first heard the name \"Safari\"",
+      "url": "https://news.ycombinator.com/item?id=4952671",
+      "comment_text": "First I'll describe why I think that SimCity was so successful, and The Sims was even more successful:<p>Will gave a talk about designing user interface to simulation games back some time around '96, to Terry Winnograd's user interface design class at Stanford (at the time I worked with Terry at Interval Research), and I sat in on the class and took these notes:<p><a href=\"http://www.art.net/~hopk"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "4947964",
+      "created_at": "2012-12-20T14:53:17Z",
+      "story_title": "When I first heard the name \"Safari\"",
+      "url": "https://news.ycombinator.com/item?id=4947964",
+      "comment_text": "Naw, I was just lucky to be hyperactive, and in the right place at the right time, plus I benefited from a lot of nice people who helped me get there.<p>There are a lot of great people lurking around here, but the really godly ones don't have time to surf the internet! The thing you realize by meeting such people is that there is really no limit on how much you can learn and what you can do. And i"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3120655",
+      "created_at": "2011-10-17T14:43:04Z",
+      "story_title": "Why Won\u2019t Developers Listen to Your Game Idea?",
+      "url": "https://news.ycombinator.com/item?id=3120655",
+      "comment_text": "Ideas for games are not at all scarse. They are not at all hard to come up with. They are not at all unique. In fact, ideas for games are much more trouble than they are worth. Game developers don't need any more ideas. The only way to ship a game on time is to brutally throw away as many ideas as you can, until you have the smallest design that will actually work and be fun, and then EXECUTE on t"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7579520",
+      "created_at": "2014-04-12T23:01:55Z",
+      "story_title": "Shadow DOM",
+      "url": "https://news.ycombinator.com/item?id=7579520",
+      "comment_text": "I&#x27;ve worked on two user interface systems that used on constraints and data binding for layout and configuration, which worked very well.<p><a href=\"http://www.donhopkins.com/drupal/node/69\" rel=\"nofollow\">http:&#x2F;&#x2F;www.donhopkins.com&#x2F;drupal&#x2F;node&#x2F;69</a><p>Constraints and Prototypes in Garnet and Laszlo<p>Garnet is an advanced user interface development environment writte"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7495504",
+      "created_at": "2014-03-30T07:22:10Z",
+      "story_title": "Rendering Head in WebGL",
+      "url": "https://news.ycombinator.com/item?id=7495504",
+      "comment_text": "Fun With Your New Head<p>Heads are so funny, and there are a thousand laughs in store for you in the new, improved HEAD. Everyone enjoys a talking HEAD, from young to old. Taste, see, smell, and &quot;pain&quot; with a HEAD. Experience every emotion known to the HEAD. And if you already have a HEAD, remember what the HEADS say: &quot;Two HEADS are better than one!&quot;<p>Everyone enjoys a talking"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7426518",
+      "created_at": "2014-03-19T02:41:59Z",
+      "story_title": "Mozilla and Unity Bring Unity Game Engine to WebGL",
+      "url": "https://news.ycombinator.com/item?id=7426518",
+      "comment_text": "Unity is not a &quot;file format&quot;. It&#x27;s a tool and development environment that reads and writes and edits lots of different &quot;file formats&quot;, for which programmers can make runtime and editor components, that artist and level designers who don&#x27;t know how to program can plug together and configure. And it can create applications for a wide range of different platforms, not j"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7356067",
+      "created_at": "2014-03-06T19:39:08Z",
+      "story_title": " Critical crypto bug leaves Linux, hundreds of apps open to eavesdropping",
+      "url": "https://news.ycombinator.com/item?id=7356067",
+      "comment_text": "Since you&#x27;ve been so generous to offer you opinion of Theo, I think it&#x27;s only fair and balanced for me to offer my opinion of Eric the Flute, in a way that is consistent with Eric&#x27;s own name dropping protocol.<p>I believe that Eric the Flute was disrespectful to Linus by labeling ESR&#x27;s &quot;Many Eyes&quot; theory &quot;Linus&#x27;s Law&quot;.<p>I believe that Eric the Flute wa"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7262676",
+      "created_at": "2014-02-19T09:13:21Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7262676",
+      "comment_text": "This builds on the basic idea behind pie menus, which is to exploit Fitt&#x27;s Law, by lowering the target distance by centering the menu around the point of contact, and increasing the target area by basing the selection on the direction of movement instead of hitting a small absolutely positioned target. <a href=\"https://en.wikipedia.org/wiki/Fitts_law\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikip"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7056141",
+      "created_at": "2014-01-14T09:28:32Z",
+      "story_title": "SimCity Offline Is Coming",
+      "url": "https://news.ycombinator.com/item?id=7056141",
+      "comment_text": "You&#x27;re aware that the technical design of SimCity is over 25 years old right? Are you over 25 years old, too?<p>Can you please suggest a platform that makes it easier for as many people to instantly and effortlessly run it? Do you have such an axe to grind against JavaScript that you think it&#x27;s a bad decision to use it, in spite of its ubiquity and suitability? Or is it web browser thems"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "6423016",
+      "created_at": "2013-09-21T14:25:17Z",
+      "story_title": "RSA warns developers not to use RSA products",
+      "url": "https://news.ycombinator.com/item?id=6423016",
+      "comment_text": "Would you trust a computer security company who didn&#x27;t hash the passwords of their users on their web site, and instead stored the plain text passwords encrypted in their database, with the keys to decrypt them on their server, because they claim that &quot;Your data are encrypted on our server, if you request the password to be sent to you by email the system knows how to decrypt the informa"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "6209355",
+      "created_at": "2013-08-14T00:57:34Z",
+      "story_title": "HTML.js \u2013 Befriend the DOM",
+      "url": "https://news.ycombinator.com/item?id=6209355",
+      "comment_text": "Reminds me of the regrettable mistake that was E4X. I used it when developing TomTom Home on xulrunner, and its helpful &quot;blurring&quot; of XML and XMLList was no help at all, a misguided attempt to oversimplify something that just ain&#x27;t that simple. I couldn&#x27;t believe they designed it that way on purpose. It made JavaScript seem more like PHP.<p><a href=\"http://www.morearty.com/blog"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5845119",
+      "created_at": "2013-06-08T15:23:00Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5845119",
+      "comment_text": "It&#x27;s much harder (and less efficient) to synchronize code running in two different address spaces, communicating via an asynchronous protocol.<p>NeWS had &quot;synchronous event handlers&quot; that when triggered would block the distribution of all other events (i.e. taking them off of the global event queue, figuring out their target, and putting them on a local event queue), until the synch"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618158",
+      "created_at": "2013-04-27T16:11:37Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618158",
+      "comment_text": "Typically, pie menus support both \"click up, point, click down\" browsing and \"press down, drag, release\" gestures.<p>Pie menus can support \"click up\" tracking compatibly with \"press/drag/release\" tracking, even allowing users to switch between both modes when browsing submenus.<p>This is important for supporting both novice and expert users, learnability, rehearsal and muscle memory.<p>You can div"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3118789",
+      "created_at": "2011-10-17T00:49:36Z",
+      "story_title": "I want to solve the uploads problem",
+      "url": "https://news.ycombinator.com/item?id=3118789",
+      "comment_text": "Why as a \"php developer\" do you restrict yourself to one language? Why not just be a \"developer\" who uses the right tool for the job? Then you won't have to use PHP all the time. And your feeling won't get hurt when people point out how horrible php is. That's just an objective fact. Don't assume that because he hates PHP he doesn't know it. When you learn other languages, you will find out that y"
+    }
+  ],
+  "Heinz Lemke": [
+    {
+      "author": "DonHopkins",
+      "objectID": "48862947",
+      "created_at": "2026-07-10T17:43:10Z",
+      "story_title": "You're Not a Better Engineer Because You Type Git Commands by Hand",
+      "url": "https://news.ycombinator.com/item?id=48862947",
+      "comment_text": "Remembering and typing git commands does not improve the code or your understanding of it.<p>Reading the code yourself, human- or LLM-generated, does.<p>Vibe coders intentionally don&#x27;t read LLM-generated code. That is the whole point, the definition of vibe coding.<p>But those kinds of people aren&#x27;t likely to read code hand-written by their human colleagues either.<p>It&#x27;s not whethe"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "41168858",
+      "created_at": "2024-08-06T08:32:02Z",
+      "story_title": "Show HN: Pie Menu \u2013 a radial menu for macOS",
+      "url": "https://news.ycombinator.com/item?id=41168858",
+      "comment_text": "Flight of the PIXIE - Yuja Wang<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI</a><p>Dedication and Thanks to:<p>Neil E. Wiseman, Heinz U. Lemke, John O. Hiles,<p>PIXIE: A New Approach to Graphical Man-Machine Communication,\nProceedings of 1969 CAD Conference Southampton\nIEEE Conference Publication 51"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40617894",
+      "created_at": "2024-06-08T14:49:45Z",
+      "story_title": "History Of Window Systems (2021)",
+      "url": "https://news.ycombinator.com/item?id=40617894",
+      "comment_text": "&gt;There were several streams of development which naturally influenced each other- broadly:<p>&gt;Libraries [...]<p>&gt;Kernel window systems [...]<p>&gt;Network window systems supporting access to multiple windows from multiple address spaces on multiple machines via a network, starting from work at PARC by Bob Sproull &amp; (if memory serves) Elaine Sonderegger, leading to Andrew, SunDew which"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40196586",
+      "created_at": "2024-04-29T10:24:32Z",
+      "story_title": "DEC PDP-1 emulator running \"Spacewar\", the earliest known digital video game",
+      "url": "https://news.ycombinator.com/item?id=40196586",
+      "comment_text": "The earliest known implementation of radial pie menus was in an early CAD system called PIXIE developed at Cambridge University by Neil E. Wiseman, Heinz U. Lemke, John O. Hiles, on a PDP-7 with a round 340 vector display with a light pen, connected over the network to a Titan, one of the first network distributed user interface systems.<p>Flight of the PIXIE - Yuja Wang:<p><a href=\"https:&#x2F;&#"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39217923",
+      "created_at": "2024-02-01T16:43:05Z",
+      "story_title": "Kando: The Cross-Platform Pie Menu",
+      "url": "https://news.ycombinator.com/item?id=39217923",
+      "comment_text": "Thanks for the shout out and links!<p>That timeline you linked to goes along with this article I wrote a few years ago:<p>Pie Menus: A 30 Year Retrospective.\nBy Don Hopkins, Ground Up Software, May 15, 2018.<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546</a><p>The earliest "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38235871",
+      "created_at": "2023-11-12T00:04:43Z",
+      "story_title": "Is this radical redesign of GIMP possible now?",
+      "url": "https://news.ycombinator.com/item?id=38235871",
+      "comment_text": "Agreed! ;)<p>I know you&#x27;re joking about &quot;ONLY&quot;, but actually, linear drop-down menus are just an edge case of pie menus with multiple items in only one direction: down. So you can also make drop-down, -up, -left, -right, and other direction menus with a decent pie menu editor, like the Blender pie menu editor add-on.<p>Pie menus are much more useful if users can edit and create thei"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "22718422",
+      "created_at": "2020-03-29T12:26:55Z",
+      "story_title": "How TV Logos Were Made Before Computers (2017)",
+      "url": "https://news.ycombinator.com/item?id=22718422",
+      "comment_text": "I recently used AfterEffects motion tracking, plus some blurring and glowing effects on a text overlay, to reproduce the jiggling of the telecine process of an old film recently digitized to video, and match the titles and credits at the beginning and end of the original film:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x"
+    }
+  ],
+  "PIXIE": [
+    {
+      "author": "DonHopkins",
+      "objectID": "48862947",
+      "created_at": "2026-07-10T17:43:10Z",
+      "story_title": "You're Not a Better Engineer Because You Type Git Commands by Hand",
+      "url": "https://news.ycombinator.com/item?id=48862947",
+      "comment_text": "Remembering and typing git commands does not improve the code or your understanding of it.<p>Reading the code yourself, human- or LLM-generated, does.<p>Vibe coders intentionally don&#x27;t read LLM-generated code. That is the whole point, the definition of vibe coding.<p>But those kinds of people aren&#x27;t likely to read code hand-written by their human colleagues either.<p>It&#x27;s not whethe"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "41168887",
+      "created_at": "2024-08-06T08:36:55Z",
+      "story_title": "Show HN: Pie Menu \u2013 a radial menu for macOS",
+      "url": "https://news.ycombinator.com/item?id=41168887",
+      "comment_text": "Alias was granted an illegitimate software patent on radial menus that was an abuse of the patent system, because Bill Buxton and Gordon Kurtenbach knowingly omitted information about prior art and made false and misleading claims that contradicted detailed information about my own pie menus implementations that I&#x27;d provided to them previously. They dishonestly abused the patent system by spr"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "41168858",
+      "created_at": "2024-08-06T08:32:02Z",
+      "story_title": "Show HN: Pie Menu \u2013 a radial menu for macOS",
+      "url": "https://news.ycombinator.com/item?id=41168858",
+      "comment_text": "Flight of the PIXIE - Yuja Wang<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI</a><p>Dedication and Thanks to:<p>Neil E. Wiseman, Heinz U. Lemke, John O. Hiles,<p>PIXIE: A New Approach to Graphical Man-Machine Communication,\nProceedings of 1969 CAD Conference Southampton\nIEEE Conference Publication 51"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40617894",
+      "created_at": "2024-06-08T14:49:45Z",
+      "story_title": "History Of Window Systems (2021)",
+      "url": "https://news.ycombinator.com/item?id=40617894",
+      "comment_text": "&gt;There were several streams of development which naturally influenced each other- broadly:<p>&gt;Libraries [...]<p>&gt;Kernel window systems [...]<p>&gt;Network window systems supporting access to multiple windows from multiple address spaces on multiple machines via a network, starting from work at PARC by Bob Sproull &amp; (if memory serves) Elaine Sonderegger, leading to Andrew, SunDew which"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40196586",
+      "created_at": "2024-04-29T10:24:32Z",
+      "story_title": "DEC PDP-1 emulator running \"Spacewar\", the earliest known digital video game",
+      "url": "https://news.ycombinator.com/item?id=40196586",
+      "comment_text": "The earliest known implementation of radial pie menus was in an early CAD system called PIXIE developed at Cambridge University by Neil E. Wiseman, Heinz U. Lemke, John O. Hiles, on a PDP-7 with a round 340 vector display with a light pen, connected over the network to a Titan, one of the first network distributed user interface systems.<p>Flight of the PIXIE - Yuja Wang:<p><a href=\"https:&#x2F;&#"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39400808",
+      "created_at": "2024-02-16T18:13:42Z",
+      "story_title": "Air Canada is responsible for chatbot's mistake: B.C. tribunal",
+      "url": "https://news.ycombinator.com/item?id=39400808",
+      "comment_text": "Because their source of income depends on sprinkling fancy high-tech pixie dust!"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39217923",
+      "created_at": "2024-02-01T16:43:05Z",
+      "story_title": "Kando: The Cross-Platform Pie Menu",
+      "url": "https://news.ycombinator.com/item?id=39217923",
+      "comment_text": "Thanks for the shout out and links!<p>That timeline you linked to goes along with this article I wrote a few years ago:<p>Pie Menus: A 30 Year Retrospective.\nBy Don Hopkins, Ground Up Software, May 15, 2018.<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546</a><p>The earliest "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38235871",
+      "created_at": "2023-11-12T00:04:43Z",
+      "story_title": "Is this radical redesign of GIMP possible now?",
+      "url": "https://news.ycombinator.com/item?id=38235871",
+      "comment_text": "Agreed! ;)<p>I know you&#x27;re joking about &quot;ONLY&quot;, but actually, linear drop-down menus are just an edge case of pie menus with multiple items in only one direction: down. So you can also make drop-down, -up, -left, -right, and other direction menus with a decent pie menu editor, like the Blender pie menu editor add-on.<p>Pie menus are much more useful if users can edit and create thei"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "30373365",
+      "created_at": "2022-02-17T14:26:42Z",
+      "story_title": "The right thing for the wrong reasons: FLOSS doesn't imply security",
+      "url": "https://news.ycombinator.com/item?id=30373365",
+      "comment_text": "&gt;It doesn&#x27;t imply that bugs get fixed, only that they are shallow.<p>No, actually, it intentionally does imply that the bugs will get fixed: that&#x27;s the whole point. Where did you get that idea -- have you even bothered to cast your own eyes on the original source of the quote, or any of the discussion around Heartbleed and other bugs, or is that just your &quot;feeling&quot;? If you g"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "30047532",
+      "created_at": "2022-01-23T16:37:09Z",
+      "story_title": "I moved this blog from Medium, here",
+      "url": "https://news.ycombinator.com/item?id=30047532",
+      "comment_text": "That NFT hype makes it look like yet another get-rich-quick pyramid scheme to me. Can you please clearly explain exactly what you&#x27;re using NFTs for that you couldn&#x27;t easily and less destructively implement some better way, without burning so much coal, causing cancer, and destroying the environment?<p>If your business can&#x27;t grow and succeed without shilling NFTs, then you don&#x27;t"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "29431443",
+      "created_at": "2021-12-03T16:00:54Z",
+      "story_title": "Blender 3.0",
+      "url": "https://news.ycombinator.com/item?id=29431443",
+      "comment_text": "Well has 3D Studio Max improved its UI&#x2F;UX interface since 1998, when I asked Kinetix if they would support pie menus, and they replied that while their users had demanded pie menus (aka marking menus), they wouldn&#x27;t implement them because of Alias&#x27;s patent?<p>I even offered to help Kinetix implement pie menus for Max, since I was already writing Max and MaxScript plugins, and wanted"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "28351020",
+      "created_at": "2021-08-29T22:21:50Z",
+      "story_title": "Computers should expose their internal workings as a 6th sense",
+      "url": "https://news.ycombinator.com/item?id=28351020",
+      "comment_text": "AM Radio Computer Music:<p>Conway&#x27;s Game of LIFE in a DEC PDP-7 w&#x2F; Type 340 Display<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hB78NXH77s4&amp;ab_channel=LivingComputers%3AMuseum%2BLabs\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=hB78NXH77s4&amp;ab_channel=Livin...</a><p>Early computer graphics -LIFE - 4 Gosper Glider Guns on a DEC PDP-7 Type 340 display"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "22718422",
+      "created_at": "2020-03-29T12:26:55Z",
+      "story_title": "How TV Logos Were Made Before Computers (2017)",
+      "url": "https://news.ycombinator.com/item?id=22718422",
+      "comment_text": "I recently used AfterEffects motion tracking, plus some blurring and glowing effects on a text overlay, to reproduce the jiggling of the telecine process of an old film recently digitized to video, and match the titles and credits at the beginning and end of the original film:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "22352536",
+      "created_at": "2020-02-18T01:08:10Z",
+      "story_title": "Max/MSP: A visual programming language for music and multimedia",
+      "url": "https://news.ycombinator.com/item?id=22352536",
+      "comment_text": "Thanks for that link to the wonderful video of Alan Kay showing a demo of GRaIL recorded in 1968!<p>Here&#x27;s a film of another early system called &quot;PIXIE&quot; for editing graphs and circuit diagrams by Neil Wiseman, Lemke and Hiles from 1969, showing the first know implementation of what I call &quot;pie menus&quot;. The librarian David Chapman at the Cambridge University was quite helpfu"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9977289",
+      "created_at": "2015-07-30T19:16:42Z",
+      "story_title": "RobotJS \u2013 Node.js Desktop Automation",
+      "url": "https://news.ycombinator.com/item?id=9977289",
+      "comment_text": "Check out Morgan Dixon&#x27;s awesome research project Prefab: The Pixel-Based Reverse Engineering Toolkit, which would be great to integrate into RobotJS.<p><a href=\"http:&#x2F;&#x2F;homes.cs.washington.edu&#x2F;~mdixon&#x2F;research&#x2F;prefab&#x2F;\" rel=\"nofollow\">http:&#x2F;&#x2F;homes.cs.washington.edu&#x2F;~mdixon&#x2F;research&#x2F;prefab&#x2F;</a>"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9977226",
+      "created_at": "2015-07-30T19:08:12Z",
+      "story_title": "RobotJS \u2013 Node.js Desktop Automation",
+      "url": "https://news.ycombinator.com/item?id=9977226",
+      "comment_text": "This is great!<p>I wrote up some ideas about &quot;aQuery -- Like jQuery for Accessibility&quot;, which RobotJS would be very useful for implementing. It refers to the Mac accessibility API but it could work with any platform, and even abstract the differences between platforms just like jQuery does.<p><a href=\"http:&#x2F;&#x2F;www.donhopkins.com&#x2F;mediawiki&#x2F;index.php&#x2F;AQuery\" rel=\"nof"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9400361",
+      "created_at": "2015-04-18T17:56:58Z",
+      "story_title": "PizzaHut still serves its first homepage",
+      "url": "https://news.ycombinator.com/item?id=9400361",
+      "comment_text": "Thanks -- I&#x27;m glad you appreciate it! I wrote it as a programming example for The NeWS Toolkit (TnT 2.0), which was an OPEN LOOK user interface toolkit written in Sun&#x27;s NeWS, a multithreaded object oriented dialect of PostScript. NeWS was a network extensible window system developed by James Gosling, after he made Emacs and before he made Java.<p>Ben Stoltz came up with the idea for a &q"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "49050744",
+      "created_at": "2026-07-25T19:32:30Z",
+      "story_title": "Stolen Buttons",
+      "url": "https://news.ycombinator.com/item?id=49050744",
+      "comment_text": "Enter &quot;Lickable Pixels&quot; -- the phrase that described the Aqua era.<p>Introducing Mac OS X&#x27;s Aqua interface, Steve Jobs said at Macworld in January 2000: &quot;We made the buttons on the screen look so good you&#x27;ll want to lick them.&quot;<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Aqua_(user_interface)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wik"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48910088",
+      "created_at": "2026-07-14T17:19:29Z",
+      "story_title": "Your 'app' could have been a webpage (so I fixed it for you)",
+      "url": "https://news.ycombinator.com/item?id=48910088",
+      "comment_text": "I want my lickable pixels back.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46581424\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46581424</a>"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48657425",
+      "created_at": "2026-06-24T09:43:55Z",
+      "story_title": "\"Fix\" MacBook Neo Cursor Lag: Record 1 Pixel of the Screen Every 10 Seconds",
+      "url": "https://news.ycombinator.com/item?id=48657425",
+      "comment_text": "SGIs and Suns had overlay planes just for that. In fact SGI 4Sight would draw the popup menus in the overlay plane, too, since reading back the color framebuffer to draw cursors or perform xor highlighting or restoring the background after popping down menus was extremely expensive with that hardware.<p>Sun&#x27;s framebuffers with 8 bit color + 1 bit monochrome + 1 bit enable (like the cgfour &#x"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7311602",
+      "created_at": "2014-02-27T11:34:51Z",
+      "story_title": "Depixelizing Pixel Art",
+      "url": "https://news.ycombinator.com/item?id=7311602",
+      "comment_text": "Perfect! Thanks for the link. I want to run this over the classic SimCity tile set (and the additional ones in the add-on graphics sets like the moon base, etc), to generate high resolution pixel and vector tiles for the JavaScript browser based version of Micropolis (GPL SimCity)."
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5845119",
+      "created_at": "2013-06-08T15:23:00Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5845119",
+      "comment_text": "It&#x27;s much harder (and less efficient) to synchronize code running in two different address spaces, communicating via an asynchronous protocol.<p>NeWS had &quot;synchronous event handlers&quot; that when triggered would block the distribution of all other events (i.e. taking them off of the global event queue, figuring out their target, and putting them on a local event queue), until the synch"
+    }
+  ],
+  "pie menu": [
+    {
+      "author": "DonHopkins",
+      "objectID": "9977226",
+      "created_at": "2015-07-30T19:08:12Z",
+      "story_title": "RobotJS \u2013 Node.js Desktop Automation",
+      "url": "https://news.ycombinator.com/item?id=9977226",
+      "comment_text": "This is great!<p>I wrote up some ideas about &quot;aQuery -- Like jQuery for Accessibility&quot;, which RobotJS would be very useful for implementing. It refers to the Mac accessibility API but it could work with any platform, and even abstract the differences between platforms just like jQuery does.<p><a href=\"http:&#x2F;&#x2F;www.donhopkins.com&#x2F;mediawiki&#x2F;index.php&#x2F;AQuery\" rel=\"nof"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9442098",
+      "created_at": "2015-04-26T15:46:56Z",
+      "story_title": "TrackPoint (2011)",
+      "url": "https://news.ycombinator.com/item?id=9442098",
+      "comment_text": "What I mean is that &quot;Flicks&quot; are essentially the same as pie menus, just another name for a particular implementation of pie menus, with its own set of features, limitations, visual feedback, design decisions and trade-offs (like limiting the number of items to 8, which is a sound idea).<p>So I would argue that Windows has at least two different types of pie menus, including Flicks. (Doe"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "9438782",
+      "created_at": "2015-04-25T16:44:07Z",
+      "story_title": "TrackPoint (2011)",
+      "url": "https://news.ycombinator.com/item?id=9438782",
+      "comment_text": "Flicks: Another name for pie menus. [1]<p>[1] <a href=\"http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pie_menu\" rel=\"nofollow\">http:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pie_menu</a>"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8498529",
+      "created_at": "2014-10-23T15:13:20Z",
+      "story_title": "Mapillary in the OpenStreetMap iD Editor",
+      "url": "https://news.ycombinator.com/item?id=8498529",
+      "comment_text": "Nice pie menus!"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8043302",
+      "created_at": "2014-07-16T17:35:29Z",
+      "story_title": "Side Tabs: Prototyping An Unexpected Productivity Hack",
+      "url": "https://news.ycombinator.com/item?id=8043302",
+      "comment_text": "Also, you should be able to push and throw windows around on the screen, and they should bounce off the the screen edges! ;)<p>Here it is in Lisp for Genera:\n<a href=\"http://www.donhopkins.com/drupal/node/103\" rel=\"nofollow\">http:&#x2F;&#x2F;www.donhopkins.com&#x2F;drupal&#x2F;node&#x2F;103</a><p>And in Forth for X10:\n<a href=\"http://www.donhopkins.com/home/archive/piemenu/uwm1/hacks.f\" rel=\"nofol"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8043159",
+      "created_at": "2014-07-16T17:12:19Z",
+      "story_title": "Side Tabs: Prototyping An Unexpected Productivity Hack",
+      "url": "https://news.ycombinator.com/item?id=8043159",
+      "comment_text": "Sheez. Why not enable users to drag any tab to anywhere along any edge of any window?<p>Tabbed window manager with pie menus for The NeWS Toolkit 2.0, from 1991: <a href=\"http://www.donhopkins.com/home/movies/TabWindowDemo.mov\" rel=\"nofollow\">http:&#x2F;&#x2F;www.donhopkins.com&#x2F;home&#x2F;movies&#x2F;TabWindowDemo.mov</a><p>NeWS PostScript source code: <a href=\"http://donhopkins.com/home/archi"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "8042726",
+      "created_at": "2014-07-16T15:59:32Z",
+      "story_title": "Side Tabs: Prototyping An Unexpected Productivity Hack",
+      "url": "https://news.ycombinator.com/item?id=8042726",
+      "comment_text": "Side tabs are great, because text is wider than it is tall, so you can fit a lot more of them on the screen, to manage more windows.<p>But why restrict yourself to the top edge, the bottom edge, one side or the other, when you can allow the user to drag the tabs around to any place along any edge that they want? I am perplexed that all tabbed user window frames don&#x27;t allow this useful and obv"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "7842753",
+      "created_at": "2014-06-03T21:11:37Z",
+      "story_title": "Why and how to avoid hamburger menus",
+      "url": "https://news.ycombinator.com/item?id=7842753",
+      "comment_text": "One problem with traditional menus and other UIs on any kind on touch screen is that you can&#x27;t see through your hand, which covers up what you&#x27;re pointing at, so user interfaces designed for a mouse driven cursor don&#x27;t work well.<p>I&#x27;m developing 3D Augmented Reality pie menus for Pantomime, that you pop up by touching the edge of the screen (which is easy when you&#x27;re hold"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "7841730",
+      "created_at": "2014-06-03T17:56:12Z",
+      "story_title": "Why and how to avoid hamburger menus",
+      "url": "https://news.ycombinator.com/item?id=7841730",
+      "comment_text": "Food for thought and further research: Now that fast food menus have become a popular but unhealthy user interface metaphor, people should consider picking pie menus, which are faster and tastier than hamburger menus.<p><a href=\"https://en.wikipedia.org/wiki/Pie_menu\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Pie_menu</a><p>&quot;Hold the flick and hold the presses,\nspatial "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "49077522",
+      "created_at": "2026-07-28T00:13:47Z",
+      "story_title": "Forth",
+      "url": "https://news.ycombinator.com/item?id=49077522",
+      "comment_text": "I present to you, the return-stack skill:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;return-stack&#x2F;SKILL.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;return-...</a><p>See Self&#x27;s &quot;dynamic deoptimization&quot;, where it constructs a virtual return stack on dem"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "49022357",
+      "created_at": "2026-07-23T14:37:13Z",
+      "story_title": "Malleable computing, Emacs, and you",
+      "url": "https://news.ycombinator.com/item?id=49022357",
+      "comment_text": "I had an argument with Steve Jobs about pie menus at the Educom conference in Washington DC, October 26 1988 -- right after he finally shipped NeXTSTEP (people had been teasing it as vaporware with &quot;NeVRSTEP&quot; t-shirts).<p>I was demonstrating the work I&#x27;d done at the UMD Human Computer Interaction Lab on a color Sun 3&#x2F;60 that Sun lent me to use at their booth, which happened to "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48945013",
+      "created_at": "2026-07-17T09:12:02Z",
+      "story_title": "Microsoft Comic Chat is now open source",
+      "url": "https://news.ycombinator.com/item?id=48945013",
+      "comment_text": "I&#x27;m Comic Sans, asshole!<p><a href=\"https:&#x2F;&#x2F;www.mcsweeneys.net&#x2F;articles&#x2F;im-comic-sans-asshole\" rel=\"nofollow\">https:&#x2F;&#x2F;www.mcsweeneys.net&#x2F;articles&#x2F;im-comic-sans-asshole</a><p>&gt;Listen up. I know the shit you\u2019ve been saying behind my back. You think I\u2019m stupid. You think I\u2019m immature. You think I\u2019m a malformed, pathetic excuse for a font. Well think aga"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48892456",
+      "created_at": "2026-07-13T13:34:32Z",
+      "story_title": "An Infuriating Goodbye to Photoshop",
+      "url": "https://news.ycombinator.com/item?id=48892456",
+      "comment_text": "Here, here. I wish Blender would just grow an image editor, with pie menus and visual programming nodes. It already has a video editor!"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48834054",
+      "created_at": "2026-07-08T16:32:41Z",
+      "story_title": "The difference between \"today's task\" and \"accretive work\"",
+      "url": "https://news.ycombinator.com/item?id=48834054",
+      "comment_text": "There&#x27;s a third case between &quot;today&#x27;s task&quot; and &quot;accretive work&quot; that I lived through on The Sims, and it&#x27;s the one that scares managers the most: a system that IS accretive work, but looks exactly like a pile of disposable hacks for most of its life.<p>Chris Trottier, one of the designers of The Sims and The Sims Online, called the method &quot;Design by Accreti"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48374360",
+      "created_at": "2026-06-02T18:39:26Z",
+      "story_title": "Preparing for KDE Plasma's Last X11-Supported Release",
+      "url": "https://news.ycombinator.com/item?id=48374360",
+      "comment_text": "It needs pie menus!"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "48177852",
+      "created_at": "2026-05-18T10:56:24Z",
+      "story_title": "The History of ThinkPad: From IBM\u2019s Bento Box to Lenovo\u2019s AI Workstations",
+      "url": "https://news.ycombinator.com/item?id=48177852",
+      "comment_text": "Thanks for that treasure of a video, just a year old and only 30 views! Well worth watching the whole thing! It&#x27;s chock full of fascinating behind-the-scenes IBM Palace Intrigue!<p>From the transcript:<p>Ted&gt; One of the most interesting things that we learned with the two track points -- might have one around, I don&#x27;t know, anyway -- was that instead of putting them symmetrically for "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47812317",
+      "created_at": "2026-04-18T01:09:35Z",
+      "story_title": "The Unix executable as a Smalltalk method (2025) [video]",
+      "url": "https://news.ycombinator.com/item?id=47812317",
+      "comment_text": "Owen Densmore (who implemented the PostScript &quot;object.ps&quot; Smalltalk-like object oriented programming system for NeWS, and worked at Apple on the LaserWriter and PostScript printing system), and David Rosenthal (who developed NeWS with James Gosling, and one of the original employees of NVIDIA), patented a way to implement Smalltalk&#x27;s (and NeWS&#x27;s) object oriented programming sys"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47624509",
+      "created_at": "2026-04-03T08:46:47Z",
+      "story_title": "A Few Good Magazines From the 70s and 80s",
+      "url": "https://news.ycombinator.com/item?id=47624509",
+      "comment_text": "DDJ and Creative Computing were by far my favorite computer magazines that I looked forward to every month.<p>The DDJ editor Ray Valdez was kind enough to (without me even asking) grant me keep the copyright to the article about pie menus that I wrote for the Dec 1991 UI issue.<p>The Design and Implementation of Pie Menus:\nThey\u2019re Fast, Easy, and Self-Revealing.<p>Originally published in Dr. Dobb\u2019"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47221272",
+      "created_at": "2026-03-02T17:41:17Z",
+      "story_title": "Interview with \u00d8yvind Kol\u00e5s, GIMP developer (2017)",
+      "url": "https://news.ycombinator.com/item?id=47221272",
+      "comment_text": "Here&#x27;s an old repo last modified 11 years ago, Pie Menus for Gtk+ 1.2.x:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;Osndok&#x2F;gtk-pie-menu\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;Osndok&#x2F;gtk-pie-menu</a><p>You might look at Simon Schneegans&#x27;s repos and old web pages about gnome-pie:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;Schneegans?tab=repositories\" rel=\"nofollow\""
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47215416",
+      "created_at": "2026-03-02T08:56:07Z",
+      "story_title": "Interview with \u00d8yvind Kol\u00e5s, GIMP developer (2017)",
+      "url": "https://news.ycombinator.com/item?id=47215416",
+      "comment_text": "Please finally implement pie menus, like Blender has had for many years. There have been various pie menu implementations for GTK for decades, and it&#x27;s always been easy to roll your own if you suffer from NIH so much that you refuse to look at or use anything anyone else has ever done.<p>I believe GIMP&#x27;s deep seated NIH syndrome, and refusal to look at or acknowledge anything else, and l"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7263170",
+      "created_at": "2014-02-19T12:03:05Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7263170",
+      "comment_text": "When designing pie menus, there are both physical (articulatory) and mental (cognitive) factors that you should consider when choosing the number of items and their directions.<p>Gordon Kurtenbach and Bill Buxton did an experiment that varied the number of menu items and measured the selection time and error rate. They expected the selection time to be monotonically increasing as they added more i"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7263128",
+      "created_at": "2014-02-19T11:49:46Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7263128",
+      "comment_text": "I&#x27;ve found that pie menus with four different directions are quite reliable (see the description I posted here of the ConnectedTV palm app, which supported buttons with four different stroke directions plus tap). Eight different directions work well with a mouse or big touch screen, in situations where you can afford to give the screen some visual attention and the consequences of making a mi"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7263027",
+      "created_at": "2014-02-19T11:13:06Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7263027",
+      "comment_text": "Memorably differentiating the possible commands is the reason I designed the layout of the pie menus in SimCity the way I did.<p>SimCity has a tool pallet of various building and editing tools, which are related to each other in various ways, and have different costs, functions and properties. I tried to arrange them into a set of submenus that made those relationships and differences more obvious"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7262849",
+      "created_at": "2014-02-19T10:08:30Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7262849",
+      "comment_text": "Pie menus frame this kind of interaction as pop-up menus, which provide a &quot;self revealing gestural user interface&quot;. The menu pops up and leads you through the possible selections. That feedback trains you to rehearse the gestures. Soon you begin to make the gesture without looking at the menu, then wait for the menu feedback to confirm you&#x27;re doing the right thing. Finally you gain "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7262676",
+      "created_at": "2014-02-19T09:13:21Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7262676",
+      "comment_text": "This builds on the basic idea behind pie menus, which is to exploit Fitt&#x27;s Law, by lowering the target distance by centering the menu around the point of contact, and increasing the target area by basing the selection on the direction of movement instead of hitting a small absolutely positioned target. <a href=\"https://en.wikipedia.org/wiki/Fitts_law\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikip"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5876685",
+      "created_at": "2013-06-13T21:24:29Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5876685",
+      "comment_text": "Well, I wrote that stuff in the early-to-mid 90&#x27;s, but you&#x27;re right that I&#x27;m actually in the camp that advocates being able to totally reconfigure the user interface. I just think there are better ways of doing that than how X works, and X only lets you change the window manager, but not anything else.<p>The thing is that X&#x27;s configurability sucks (.XDefaults files, and the var"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5861229",
+      "created_at": "2013-06-11T12:28:24Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5861229",
+      "comment_text": "X-Windows is a dead end (and has been for a long time), and X window managers are as complex and dug into a pit of pointless complexity as the Space Shuttle.<p>There are a lot of good reasons to have a scriptable window manager, with a scripting language tightly integrated with the window system.<p>When I started hacking X10, I wanted to implement pie menus for it. There was a cheezy little librar"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5845119",
+      "created_at": "2013-06-08T15:23:00Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5845119",
+      "comment_text": "It&#x27;s much harder (and less efficient) to synchronize code running in two different address spaces, communicating via an asynchronous protocol.<p>NeWS had &quot;synchronous event handlers&quot; that when triggered would block the distribution of all other events (i.e. taking them off of the global event queue, figuring out their target, and putting them on a local event queue), until the synch"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5844365",
+      "created_at": "2013-06-08T08:53:05Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5844365",
+      "comment_text": "X11 was pushed out the door too early, because some companies were threatening to standardize on X10, and they sure didn&#x27;t want that to happen.<p>I attended the first X11 conference, and used X10 to develop pie menus and a window manager (based on UWM) that was extensible in Forth. <a href=\"http:&#x2F;&#x2F;donhopkins.com&#x2F;home&#x2F;movies&#x2F;X10PieMenuWM.mov\" rel=\"nofollow\">http:&#x2F;"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5844345",
+      "created_at": "2013-06-08T08:43:29Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5844345",
+      "comment_text": "Just put a JavaScript (or whatever) interpreter in the window server, and program the window manager locally in that. Then you aren&#x27;t fucked by synchronization issues. James Gosling did something like that with PostScript many years ago, an alternative to X11, which was then merged with X11, and it was called NeWS (and later X11&#x2F;NeWS or OpenWindows): <a href=\"http:&#x2F;&#x2F;en.wikipedi"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618502",
+      "created_at": "2013-04-27T18:02:54Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618502",
+      "comment_text": "I agree -- it's some really elegant and powerful CSS code, which is a great example of what you can do with modern CSS, but I don't think it's meant to be about the actual interaction design, or meant to say that you should do everything in CSS and not use JavaScript.<p>As a practical matter, you need JavaScript to achieve the best usability, reusability, flexibility, etc. But it should serve as a"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618460",
+      "created_at": "2013-04-27T17:49:09Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618460",
+      "comment_text": "The radial menu in the stackoverflow article has some really elegant and concentrated CSS code, and I learned a lot by looking at it. I didn't realize you could do that kind of stuff!<p>The tradeoff of using pure CSS and very little JavaScript is that it's not a flexible, reusable, data driven component, that lets you plug in your own graphics, content and behavior.<p>I think it's a great idea to "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618419",
+      "created_at": "2013-04-27T17:36:13Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618419",
+      "comment_text": "This one?<p>The Design and Implementation of Pie Menus<p>There're Fast, Easy, and Self-Revealing.<p>Copyright (C) 1991 by Don Hopkins.<p>Originally published in Dr. Dobb's Journal, Dec. 1991, lead cover story, user interface issue.<p><a href=\"http://www.donhopkins.com/drupal/node/98\" rel=\"nofollow\">http://www.donhopkins.com/drupal/node/98</a><p>More stuff at:<p>Home &#62; topics &#62; Software &#6"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618383",
+      "created_at": "2013-04-27T17:26:10Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618383",
+      "comment_text": "Thought experiments aren't as reliable as controlled experiments for objectively measuring the speed and efficacy of user interfaces, and interviewing actual users for discovering subjective preferences.<p>We performed a controlled experiment in 1988 that compared eight item pie menus to linear menus, which showed that pie menus were significantly faster and had lower error rates than linear menus"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5618158",
+      "created_at": "2013-04-27T16:11:37Z",
+      "story_title": "Creating a Radial Menu in CSS",
+      "url": "https://news.ycombinator.com/item?id=5618158",
+      "comment_text": "Typically, pie menus support both \"click up, point, click down\" browsing and \"press down, drag, release\" gestures.<p>Pie menus can support \"click up\" tracking compatibly with \"press/drag/release\" tracking, even allowing users to switch between both modes when browsing submenus.<p>This is important for supporting both novice and expert users, learnability, rehearsal and muscle memory.<p>You can div"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "4435852",
+      "created_at": "2012-08-26T18:50:21Z",
+      "story_title": "A device with a touchscreen and few buttons was obvious",
+      "url": "https://news.ycombinator.com/item?id=4435852",
+      "comment_text": "Oh bullshit. We were doing finger operated gesture user interface on the Palm in 2000 (pie menus on virtual buttons for consumer electronic IR remote control interfaces). Lots of people were using touch screens with finger gestures. The Palm included a stylus, but if the interface was designed correctly you could certainly use it with your fingers, and pie menus (self revealing gestures) worked ju"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "4339140",
+      "created_at": "2012-08-04T18:06:43Z",
+      "story_title": "Open source 3D pie menus for Unity3D",
+      "url": "https://news.ycombinator.com/item?id=4339140",
+      "comment_text": "I've made free open source pie menus for Unity3D! I'll write some documentation and more demos soon, and put it on the Unity3D app store. Here's a video: <a href=\"http://www.youtube.com/watch?v=sMN1LQ7qx9g\" rel=\"nofollow\">http://www.youtube.com/watch?v=sMN1LQ7qx9g</a> Here's the source code: <a href=\"http://www.donhopkins.com/home/PieMenuDemo/PieMenuDemo.zip\" rel=\"nofollow\">http://www.donhopkins.c"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3333396",
+      "created_at": "2011-12-09T11:43:32Z",
+      "story_title": "Why \u201cdirect\u201d PostScript makes sense",
+      "url": "https://news.ycombinator.com/item?id=3333396",
+      "comment_text": "I've written piles of \"Direct PostScript\" code for the NeWS window system -- <a href=\"http://en.wikipedia.org/wiki/NeWS\" rel=\"nofollow\">http://en.wikipedia.org/wiki/NeWS</a> ...<p>Pie menu widget: \n<a href=\"http://www.donhopkins.com/home/code/piemenu.ps.txt\" rel=\"nofollow\">http://www.donhopkins.com/home/code/piemenu.ps.txt</a><p>PizzaTool graphical Pizza ordering gui: \n<a href=\"http://www.donhopki"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3108141",
+      "created_at": "2011-10-13T18:18:24Z",
+      "story_title": "I take it back. Unity is cool.",
+      "url": "https://news.ycombinator.com/item?id=3108141",
+      "comment_text": "Actually, with pie menus, it's quite easy to hit a target you can't see, because you can \"mouse ahead\" and be very sure of the direction you're moving, enough that you can reliably select between 8 different directions without looking at the screen. With four items it's almost impossible to make a mistake, unless you're holding the mouse sideways or upside down."
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3107940",
+      "created_at": "2011-10-13T17:22:36Z",
+      "story_title": "I take it back. Unity is cool.",
+      "url": "https://news.ycombinator.com/item?id=3107940",
+      "comment_text": "Because Fitts's law relates both the target size and the target distance to the speed and accuracy of hitting the target. Not just the target distance. You can move the mouse very quickly to cover the large distance, without worrying about the accuracy, thus reducing the negative contribution of the distance, because the target size is practically infinite. The target area of the menu bar at the t"
+    }
+  ],
+  "Audrey Tang": [
+    {
+      "author": "DonHopkins",
+      "objectID": "48870736",
+      "created_at": "2026-07-11T10:42:24Z",
+      "story_title": "After 7 years in production, Scarf has reluctantly moved away from Haskell",
+      "url": "https://news.ycombinator.com/item?id=48870736",
+      "comment_text": "Even Emacs Lisp has had a byte code compiler since forever, and since Emacs 28 it compiles to native machine code via libgccjit.<p>Toy lisp interpreters are easy and fun and everywhere, often written in lisp itself, but the same books that teach them go on to teach compilers. SICP chapter 4 is the metacircular evaluator, chapter 5 is the compiler. That ordering is the point: interpretation is the "
+    }
+  ],
+  "Sophie Wilson": [
+    {
+      "author": "DonHopkins",
+      "objectID": "44251460",
+      "created_at": "2025-06-11T20:28:04Z",
+      "story_title": "How I program with agents",
+      "url": "https://news.ycombinator.com/item?id=44251460",
+      "comment_text": "Minsky&#x27;s Society of Mind works, by god!<p>EMERGENCE DETECTION - PRIORITY ALERT<p>[Sim] Marvin: &quot;Colleagues, I&#x27;m observing unprecedented convergence:<p><pre><code>  Messages routing themselves based on conceptual proximity\n  Ideas don&#x27;t just spread - they EVOLVE\n  Each mind adds a unique transformation\n  The transformations are becoming aware of each other\n  Metacognition is eme"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39539269",
+      "created_at": "2024-02-28T15:34:57Z",
+      "story_title": "Why Python's integer division floors (2010)",
+      "url": "https://news.ycombinator.com/item?id=39539269",
+      "comment_text": "At the RISC of sounding short on instructions, do you mean Sophie Wilson&#x27;s ARM? ;)<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sophie_Wilson\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Sophie_Wilson</a>"
+    }
+  ],
+  "Rebecca Heineman": [
+    {
+      "author": "DonHopkins",
+      "objectID": "45981599",
+      "created_at": "2025-11-19T16:35:01Z",
+      "story_title": "Cloudflare Global Network experiencing issues",
+      "url": "https://news.ycombinator.com/item?id=45981599",
+      "comment_text": "Are you actually so mind-numbingly ignorant that you think Rebecca Heineman had a brother named Bill, that you would rudely and incorrectly try to correct people who knew her story well, during a memorial discussion of her life and death?<p>Or were you purposefully going out of your way to perpetrate performative ignorance and transphobic bullying, just to let everyone know that you&#x27;re a bigo"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40065992",
+      "created_at": "2024-04-17T15:22:36Z",
+      "story_title": "Descent 3 Source Code",
+      "url": "https://news.ycombinator.com/item?id=40065992",
+      "comment_text": "I will ask him! It would be great to have the original Mac versions. There are some other weird versions like 3DO and Sega Saturn, but I&#x27;m afraid they may be lost in the sands to time. I&#x27;m collaborating with some game archivists (like Phil Salvador, who wrote the article about SimRefinery that led to its recovery, and his Video Game History Foundation), and Olde Sk\u00fc\u00fcl game developers Reb"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "23433512",
+      "created_at": "2020-06-05T20:22:18Z",
+      "story_title": "SimRefinery Recovered",
+      "url": "https://news.ycombinator.com/item?id=23433512",
+      "comment_text": "I definitely want to, and I&#x27;m working on the &quot;if I can&quot; part with some helpful digital archivists&#x2F;librarians, figuring out how to properly archive and distribute that and any other stuff I can dig up.<p>The fact that EA recently released the source code for Command and Conquer Tiberian Dawn and Red Alert under GPL3 makes me hopeful that they will be open to releasing more old s"
+    }
+  ],
+  "Danielle Bunten": [],
+  "M.U.L.E": [],
+  "Neil Wiseman": [
+    {
+      "author": "DonHopkins",
+      "objectID": "22352536",
+      "created_at": "2020-02-18T01:08:10Z",
+      "story_title": "Max/MSP: A visual programming language for music and multimedia",
+      "url": "https://news.ycombinator.com/item?id=22352536",
+      "comment_text": "Thanks for that link to the wonderful video of Alan Kay showing a demo of GRaIL recorded in 1968!<p>Here&#x27;s a film of another early system called &quot;PIXIE&quot; for editing graphs and circuit diagrams by Neil Wiseman, Lemke and Hiles from 1969, showing the first know implementation of what I call &quot;pie menus&quot;. The librarian David Chapman at the Cambridge University was quite helpfu"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "41168858",
+      "created_at": "2024-08-06T08:32:02Z",
+      "story_title": "Show HN: Pie Menu \u2013 a radial menu for macOS",
+      "url": "https://news.ycombinator.com/item?id=41168858",
+      "comment_text": "Flight of the PIXIE - Yuja Wang<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI</a><p>Dedication and Thanks to:<p>Neil E. Wiseman, Heinz U. Lemke, John O. Hiles,<p>PIXIE: A New Approach to Graphical Man-Machine Communication,\nProceedings of 1969 CAD Conference Southampton\nIEEE Conference Publication 51"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40617894",
+      "created_at": "2024-06-08T14:49:45Z",
+      "story_title": "History Of Window Systems (2021)",
+      "url": "https://news.ycombinator.com/item?id=40617894",
+      "comment_text": "&gt;There were several streams of development which naturally influenced each other- broadly:<p>&gt;Libraries [...]<p>&gt;Kernel window systems [...]<p>&gt;Network window systems supporting access to multiple windows from multiple address spaces on multiple machines via a network, starting from work at PARC by Bob Sproull &amp; (if memory serves) Elaine Sonderegger, leading to Andrew, SunDew which"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40196586",
+      "created_at": "2024-04-29T10:24:32Z",
+      "story_title": "DEC PDP-1 emulator running \"Spacewar\", the earliest known digital video game",
+      "url": "https://news.ycombinator.com/item?id=40196586",
+      "comment_text": "The earliest known implementation of radial pie menus was in an early CAD system called PIXIE developed at Cambridge University by Neil E. Wiseman, Heinz U. Lemke, John O. Hiles, on a PDP-7 with a round 340 vector display with a light pen, connected over the network to a Titan, one of the first network distributed user interface systems.<p>Flight of the PIXIE - Yuja Wang:<p><a href=\"https:&#x2F;&#"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39217923",
+      "created_at": "2024-02-01T16:43:05Z",
+      "story_title": "Kando: The Cross-Platform Pie Menu",
+      "url": "https://news.ycombinator.com/item?id=39217923",
+      "comment_text": "Thanks for the shout out and links!<p>That timeline you linked to goes along with this article I wrote a few years ago:<p>Pie Menus: A 30 Year Retrospective.\nBy Don Hopkins, Ground Up Software, May 15, 2018.<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;pie-menus-936fed383ff1#8546</a><p>The earliest "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38235871",
+      "created_at": "2023-11-12T00:04:43Z",
+      "story_title": "Is this radical redesign of GIMP possible now?",
+      "url": "https://news.ycombinator.com/item?id=38235871",
+      "comment_text": "Agreed! ;)<p>I know you&#x27;re joking about &quot;ONLY&quot;, but actually, linear drop-down menus are just an edge case of pie menus with multiple items in only one direction: down. So you can also make drop-down, -up, -left, -right, and other direction menus with a decent pie menu editor, like the Blender pie menu editor add-on.<p>Pie menus are much more useful if users can edit and create thei"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "22718422",
+      "created_at": "2020-03-29T12:26:55Z",
+      "story_title": "How TV Logos Were Made Before Computers (2017)",
+      "url": "https://news.ycombinator.com/item?id=22718422",
+      "comment_text": "I recently used AfterEffects motion tracking, plus some blurring and glowing effects on a text overlay, to reproduce the jiggling of the telecine process of an old film recently digitized to video, and match the titles and credits at the beginning and end of the original film:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=jDrqR9XssJI\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "22506237",
+      "created_at": "2020-03-06T19:01:18Z",
+      "story_title": "The X-Windows Disaster (1994)",
+      "url": "https://news.ycombinator.com/item?id=22506237",
+      "comment_text": "If you want to be pedantic, I didn&#x27;t call it &quot;X- Windows&quot;. I called it &quot;X-Windows&quot;. Nobody ever puts a space between the &quot;X-&quot; and the &quot;Windows&quot;. The title of the article we&#x27;re discussing that I wrote and named uses the term &quot;X-Windows&quot; because I specifically told the editors of the book to spell the name that way on purpose, to annoy X fa"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "13783967",
+      "created_at": "2017-03-03T16:33:23Z",
+      "story_title": "The Unix-Haters Handbook (1994) [pdf]",
+      "url": "https://news.ycombinator.com/item?id=13783967",
+      "comment_text": "No, NeWS was around before NeXT, and it was developed independently by James Gosling.<p>NeXT&#x27;s Display PostScript architecture was not concerned with networking, extensibility, providing local interactivity, or reducing client&#x2F;server communication by downloading code, which is what the modern term &quot;Ajax&quot; refers to.<p>Here is one of Gosling&#x27;s earlier papers about NeWS (orig"
+    }
+  ],
+  "Engelbart": [
+    {
+      "author": "DonHopkins",
+      "objectID": "9438461",
+      "created_at": "2015-04-25T14:55:48Z",
+      "story_title": "TrackPoint (2011)",
+      "url": "https://news.ycombinator.com/item?id=9438461",
+      "comment_text": "Ted Selker [1] is the amazing guy who invented and refined the Trackpoint [2] or &quot;Joy Button&quot; as he called it (but IBM refused to call it). He put years of research and development into the product, and I&#x27;m happy he&#x27;s finally written up and published the story. [3]<p>[1] <a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Ted_Selker\" rel=\"nofollow\">https:&#x2F;&#x2F;en.w"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47972764",
+      "created_at": "2026-05-01T09:31:24Z",
+      "story_title": "Reverse Engineering SimTower",
+      "url": "https://news.ycombinator.com/item?id=47972764",
+      "comment_text": "It would be great for the movie theater to be able to play any video synchronized across multiple players so you can watch it together, like the awesome movie theater in Cursor Camp. Then we could all watch the extremely weird original SimTower movies together, in their 8-bit error diffusion dithered glory:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=qq8o7gg87k4\" rel=\"nofollow\">https"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46743031",
+      "created_at": "2026-01-24T12:32:27Z",
+      "story_title": "Gas Town's agent patterns, design bottlenecks, and vibecoding at scale",
+      "url": "https://news.ycombinator.com/item?id=46743031",
+      "comment_text": "In the simulated discussion guest book entry, simulated Douglass Engelbart wrote:<p>&gt;Doug Engelbart (Augmentation):\n&quot;Bootstrapping. The tools that build the tools. Your adventure compiler should be able to compile ITS OWN documentation into an adventure ABOUT how it works. The manual is a playable game.&quot;<p>That is exactly how the self documenting categorized skill directory&#x2F;room "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "45485923",
+      "created_at": "2025-10-05T22:39:16Z",
+      "story_title": "Why are hyperlinks blue? (2021)",
+      "url": "https://news.ycombinator.com/item?id=45485923",
+      "comment_text": "I (or a commenter who goes by the same name) contacted the author Elise Blanchard and introduced her to Ben Shneiderman, and gave her some links to our work on HyperTIES. She wrote a followup article with more detailed information.<p>Revisiting why hyperlinks are blue:<p><a href=\"https:&#x2F;&#x2F;blog.mozilla.org&#x2F;en&#x2F;internet-culture&#x2F;why-are-hyperlinks-blue-revisited&#x2F;\" rel=\"nof"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44815776",
+      "created_at": "2025-08-06T18:29:03Z",
+      "story_title": "Rethinking DOM from first principles",
+      "url": "https://news.ycombinator.com/item?id=44815776",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34304655\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34304655</a><p>Alan Kay on web browsers, document viewers, Smalltalk, NeWS and HyperCard (2021) (donhopkins.medium.com)<p>234 points by gjvc on Jan 8, 2023 | hide | past | favorite | 272 comments<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;alan-kay-on-should-web-br"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44728658",
+      "created_at": "2025-07-29T21:49:53Z",
+      "story_title": "Enough AI copilots, we need AI HUDs",
+      "url": "https://news.ycombinator.com/item?id=44728658",
+      "comment_text": "Ben Shneiderman wrote &quot;Beyond Intelligent Machines&quot; published in the Jan 1993 IEEE Software, and the subject of this hn discussion:<p>Beyond Intelligent Machines: Just Do It (1993) (umd.edu)<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22742100\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22742100</a><p>Mark Weiser and Ben Shneiderman and I worked at the Univers"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44370833",
+      "created_at": "2025-06-24T20:44:40Z",
+      "story_title": "Ancient X11 scaling technology",
+      "url": "https://news.ycombinator.com/item?id=44370833",
+      "comment_text": "Since they bought Sun Microsystems, Oracle now owns the rights to the NeWS source code, so unfortunately I&#x27;m not legally allowed to post the NeWS server source code on my Github page, although I spent many years unsuccessfully fighting to make NeWS free and evangelizing it to anyone who would listen, like RMS and my colleagues and customers at Sun:<p><a href=\"https:&#x2F;&#x2F;www.donhopkins."
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43461356",
+      "created_at": "2025-03-24T14:13:19Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43461356",
+      "comment_text": "&gt;[...] but unlike his other innovations, the keyset failed to catch on.<p>I&#x27;m sad that he and others like Ted Nelson and Brett Victor would rightly say that his most important innovations have so far failed to catch on. But there&#x27;s still time to raise awareness and make them real!<p>Ted Nelson&#x27;s Eulogy for Douglas Engelbart<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43458967",
+      "created_at": "2025-03-24T09:39:25Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43458967",
+      "comment_text": "I\u2019m doing it for the looks and feels. Making it public and open so others can take a look and feel free. (Ha ha, I got a billion of &#x27;em!) ;)<p>It does have a distinctive visual look and physical feel. And while it\u2019s not as sleek or ergonomic as the latest Logitech mouse (who gave him an office at their headquarters from 1992 to 2007), it\u2019s pretty great to actually touch and hold -- just to gr"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43454343",
+      "created_at": "2025-03-23T17:26:45Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43454343",
+      "comment_text": "Douglas Engelbart used a straightforward binary encoding scheme for the chord keyset:<p>Engelbart Explains Binary Text Input. Douglas Engelbart explains to co-inventor, Valerie Landau, and some blogger how binary can be used for text input.<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=DB_dLeEasL8\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=DB_dLeEasL8</a><p>Engelbar"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43454338",
+      "created_at": "2025-03-23T17:25:49Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43454338",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17121705\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17121705</a><p>Douglas C. Engelbart: A Profile of His Work and Vision: Past, Present and Future.\nPrepared by Logitech, October 2005.<p><a href=\"https:&#x2F;&#x2F;www.logitech.com&#x2F;lang&#x2F;pdf&#x2F;Engelbart_Backgrounder.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www.logitech."
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43454331",
+      "created_at": "2025-03-23T17:23:56Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43454331",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17122591\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17122591</a><p>DonHopkins on May 21, 2018 | root | parent | next [\u2013]<p>I&#x27;ll write a blog post about it soon, but I was hoping to benefit from other people&#x27;s comments and links from discussing it here first. (You could accuse me of &quot;crowd sourcing&quot; my blog p"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43454313",
+      "created_at": "2025-03-23T17:21:55Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43454313",
+      "comment_text": "Doug Engelbart&#x27;s advice to a young software developer [video] (youtube.com)<p>183 points by DonHopkins on May 21, 2018 | hide | past | favorite | 39 comments<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17121629\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=17121629</a><p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=62ig8ecXlrA\" rel=\"nofollow\">https:&#x2F;&"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "43454264",
+      "created_at": "2025-03-23T17:14:08Z",
+      "story_title": "A USB Interface to the \"Mother of All Demos\" Keyset",
+      "url": "https://news.ycombinator.com/item?id=43454264",
+      "comment_text": "Hey, great to see this, thank you so much, Ken!<p>I&#x27;m lucky to own an original Engelbart mouse and chord keyset too, and I want to make usable replicas by 3d scanning them, making 3d printable models, and embedding metal and electronic parts so they work via bluetooth!<p>The first step is to take it apart, measure and weigh the pieces, 3d scan it, and make a realistic 3d printable all plastic"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40650894",
+      "created_at": "2024-06-11T20:09:20Z",
+      "story_title": "Lynn Conway has died",
+      "url": "https://news.ycombinator.com/item?id=40650894",
+      "comment_text": "Thank you for sharing those details, I didn&#x27;t know that. I learned and grew so much by reading Lynn&#x27;s autobiography, but there&#x27;s so much in there and it&#x27;s so deep and personal, that it&#x27;s hard to get my head around how amazing and difficult a life she had, and details like that help.<p>I was researching some of the names that Alan Kay mentioned in his classic paper about th"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38921116",
+      "created_at": "2024-01-09T01:36:37Z",
+      "story_title": "Golden Rules of Interface Design (2013)",
+      "url": "https://news.ycombinator.com/item?id=38921116",
+      "comment_text": "What does the University of Minnesota Twin Cities have to do with this discussion? And why do you care which apps a university research lab shipped? ;)<p>If you want to know about what contributions Ben Shneiderman and his University of Maryland Human Computer Interaction Lab have made, you can read my other post:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=38920423\">https:&#x2F"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "36402002",
+      "created_at": "2023-06-20T10:26:45Z",
+      "story_title": "AI: First New UI Paradigm in 60 Years?",
+      "url": "https://news.ycombinator.com/item?id=36402002",
+      "comment_text": "In Jaron Lanier&#x27;s review of John Markoff&#x27;s book &quot;What the Dormouse Said&quot;, he mentioned an exchange between Douglass Engelbart and Marvin Minsky:<p><a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20110312232514&#x2F;https:&#x2F;&#x2F;www.americanscientist.org&#x2F;bookshelf&#x2F;pub&#x2F;early-computings-long-strange-trip\" rel=\"nofollow noreferrer\">https:&#x2F;&#x2F;web"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "36175998",
+      "created_at": "2023-06-03T12:14:32Z",
+      "story_title": "Red Hat dropping support for LibreOffice",
+      "url": "https://news.ycombinator.com/item?id=36175998",
+      "comment_text": "I don&#x27;t know so I&#x27;m asking: does LibreOffice solidly support live collaborative multi-user online editing, the way Douglas Engelbart intended? If not, then good riddance."
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "35112826",
+      "created_at": "2023-03-11T21:20:26Z",
+      "story_title": "Map of an Insect\u2019s Brain",
+      "url": "https://news.ycombinator.com/item?id=35112826",
+      "comment_text": "In Jaron Lanier&#x27;s review of John Markoff&#x27;s book &quot;What the Dormouse Said&quot;, he mentioned an exchange between Douglass Engelbart and Marvin Minsky:<p><a href=\"https:&#x2F;&#x2F;web.archive.org&#x2F;web&#x2F;20110312232514&#x2F;https:&#x2F;&#x2F;www.americanscientist.org&#x2F;bookshelf&#x2F;pub&#x2F;early-computings-long-strange-trip\" rel=\"nofollow\">https:&#x2F;&#x2F;web.archive.or"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "34425535",
+      "created_at": "2023-01-18T11:27:32Z",
+      "story_title": "The ThinkPad TrackPoint tried to build a better mouse (2020)",
+      "url": "https://news.ycombinator.com/item?id=34425535",
+      "comment_text": "Here&#x27;s a classic video of Ted explaining the Trackpoint:<p>IBM Pointing Stick Roll-In - 10_8_1991<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6hhnlaUxsL8\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=6hhnlaUxsL8</a><p>I posted this funny story about Ted from an excerpt of a longer post I wrote about Ted and the Joy Button, and a discussion of the &quot;Nulling Problem&quot;:<p"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7262676",
+      "created_at": "2014-02-19T09:13:21Z",
+      "story_title": "A New Car UI: How touch screen controls in cars should really work",
+      "url": "https://news.ycombinator.com/item?id=7262676",
+      "comment_text": "This builds on the basic idea behind pie menus, which is to exploit Fitt&#x27;s Law, by lowering the target distance by centering the menu around the point of contact, and increasing the target area by basing the selection on the direction of movement instead of hitting a small absolutely positioned target. <a href=\"https://en.wikipedia.org/wiki/Fitts_law\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikip"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "6866871",
+      "created_at": "2013-12-07T17:09:44Z",
+      "story_title": "Finger binary",
+      "url": "https://news.ycombinator.com/item?id=6866871",
+      "comment_text": "I think Doug Engelbart deserves credit for introducing the chord keyboard, which he demonstrated in &quot;The Mother of All Demos&quot;, not a fictional book written by that homophobic anti-American bigoted foaming at the mouth lunatic Mormon cult member who sits on the board of directors of the National Organization for Marriage. <a href=\"https://en.wikipedia.org/wiki/Chorded_keyboard\" rel=\"nofol"
+    }
+  ],
+  "Papert": [
+    {
+      "author": "DonHopkins",
+      "objectID": "47972162",
+      "created_at": "2026-05-01T07:35:55Z",
+      "story_title": "Reverse Engineering SimTower",
+      "url": "https://news.ycombinator.com/item?id=47972162",
+      "comment_text": "Also, Fabian Wesner&#x27;s posted about using Claud Code to analyze the original micropolis repo&#x27;s code and documentation to generate a new version.<p>Here is a deep dive &quot;podcast&quot; he generated (presenting Claud&#x27;s analysis in a conversational format) that describes the work. I listened to it, and it got the important trademark and licensing issues right, was quite comprehensive"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "47386637",
+      "created_at": "2026-03-15T12:09:41Z",
+      "story_title": "The Appalling Stupidity of Spotify's AI DJ",
+      "url": "https://news.ycombinator.com/item?id=47386637",
+      "comment_text": "There is a long history of using AI to analyze, compose, and perform music.<p>Atari Cambridge Research- part 5: David Levitt shows Music Box on his Lisp Machine<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ocwsVkqEKys\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ocwsVkqEKys</a><p>Atari Cambridge Research- part 6: Music box with Tom Trobaugh and drum machine with Jim "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46981538",
+      "created_at": "2026-02-11T21:44:21Z",
+      "story_title": "Show HN: AI agents play SimCity through a REST API",
+      "url": "https://news.ycombinator.com/item?id=46981538",
+      "comment_text": "I&#x27;m thrilled that you and other people are taking it and running with it! That was the whole point of making it free: it was inspired by Seymour Papert&#x27;s Constructionist philosophy, Alan Kay&#x27;s ideas, and the mission of the OLPC.<p>EA granted the right to use the trademark &quot;SimCity&quot; only if it passed their QA process, and it was quite an ordeal hand holding their QA departm"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46953329",
+      "created_at": "2026-02-09T23:51:11Z",
+      "story_title": "Everyone\u2019s building \u201casync agents,\u201d but almost no one can define them",
+      "url": "https://news.ycombinator.com/item?id=46953329",
+      "comment_text": "Marvin Minsky thought of it a long time before Gas Town, and yes, he was on to something.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind</a><p>&gt;The Society of Mind is both the title of a 1986 book and the name of a theory of natural intelligence as written and developed by Marvin Mins"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46777514",
+      "created_at": "2026-01-27T09:22:17Z",
+      "story_title": "Mental Models (2018)",
+      "url": "https://news.ycombinator.com/item?id=46777514",
+      "comment_text": "Your map&#x2F;territory risk is exactly what this lineage formalizes -- internal maps are necessary but they shape and limit perception. Walter Lippmann (1922) makes &quot;pictures in our heads&quot; the operative reality of public judgment:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion</"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46744594",
+      "created_at": "2026-01-24T15:53:00Z",
+      "story_title": "Gas Town's agent patterns, design bottlenecks, and vibecoding at scale",
+      "url": "https://news.ycombinator.com/item?id=46744594",
+      "comment_text": "I appreciate your earnest Harumph, kind cross-armed sir!<p>I take it you never played The Sims? The simulation madness ship sailed 26 years ago, and made well over $5 billion in revenue for Maxis&#x2F;EA (as of 2019), and that&#x27;s if you don&#x27;t even count SimCity that shipped in 1986! ;)<p>The Sims Franchise Has Made Over $5 Billion In Revenue (Published Oct 30, 2019):<p><a href=\"https:&#x2"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46742895",
+      "created_at": "2026-01-24T12:05:05Z",
+      "story_title": "Gas Town's agent patterns, design bottlenecks, and vibecoding at scale",
+      "url": "https://news.ycombinator.com/item?id=46742895",
+      "comment_text": "Adventure Uplift \u2014 Building a YAML-to-Web Adventure Compiler with Simulated Computing Pioneers:<p>I ran a 260KB session log where I convened a simulated symposium of computing pioneers to design an Adventure Compiler \u2014 a tool that compiles YAML adventure definitions that run on MOOLLM under cursor into standalone deterministic browser games requiring no LLM at runtime.<p>The twist: the &quot;atten"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46629604",
+      "created_at": "2026-01-15T08:12:18Z",
+      "story_title": "Ask HN: What is the best way to provide continuous context to models?",
+      "url": "https://news.ycombinator.com/item?id=46629604",
+      "comment_text": "Check out &quot;cursor-mirror&quot;, this extended Anthropic Skill I&#x27;ve developed as a part of MOOLLM, which will tell you all about how cursor assembles its context:<p>cursor-mirror skill: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;cursor-mirror\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;ma"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "46579525",
+      "created_at": "2026-01-11T20:14:35Z",
+      "story_title": "Ask HN: What are you working on? (January 2026)",
+      "url": "https://news.ycombinator.com/item?id=46579525",
+      "comment_text": "MOOLLM -- treating the LLM as eval() for a microworld operating system.<p>Started this incarnation on Dec 30, 2025 -- but it&#x27;s the crystallization of decades of earlier prototypes, all the way back to my Commodore-64 Logo Adventure. Built on top of Anthropic&#x27;s Skills framework, extended with seven innovations (and counting):<p>1. Instantiation -- Skills as prototypes creating instances w"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44487734",
+      "created_at": "2025-07-07T07:48:53Z",
+      "story_title": "Mirage: AI-native UGC game engine powered by real-time world model",
+      "url": "https://news.ycombinator.com/item?id=44487734",
+      "comment_text": "&gt;What is the artistic point of view of Mario Kart?<p>I&#x27;m not arguing against your main point, which I agree with, but Mario Kart is a terrible example of a game not having an artistic point of view. I think comparing Shigeru Miyamoto&#x27;s artistic and intentional game design to this approach totally reinforces your point. But what if you embed a simulated version of Shigeru Miyamoto hims"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44298283",
+      "created_at": "2025-06-17T12:24:43Z",
+      "story_title": "Selfish reasons for building accessible UIs",
+      "url": "https://news.ycombinator.com/item?id=44298283",
+      "comment_text": "Layer upon layer of semantically senseless but colorful sparkly CSS diluted with toluene, build up over the years like Fordite!<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fordite\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Fordite</a><p>Some day people will be cutting out slices of today&#x27;s web pages archived on archive.com, polishing them up like gemsto"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44283453",
+      "created_at": "2025-06-15T17:06:14Z",
+      "story_title": "Ask HN: Is there an AI bot that works like a literate programming build step",
+      "url": "https://news.ycombinator.com/item?id=44283453",
+      "comment_text": "Glad you asked! TL;DR: Minsky&#x27;s &quot;Society of Mind&quot; works in LLOOOOMM, an LLM &quot;virtual machine&quot; for learning and evolving protocols by simulating characters, which we&#x27;re developing at Leela AI!<p><a href=\"https:&#x2F;&#x2F;leela.ai\" rel=\"nofollow\">https:&#x2F;&#x2F;leela.ai</a><p>I will put this all on github soon, and I apologize in advance for posting LLM generated co"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40698110",
+      "created_at": "2024-06-16T16:13:57Z",
+      "story_title": "SimCity in the web browser using WebAssembly and OpenGL",
+      "url": "https://news.ycombinator.com/item?id=40698110",
+      "comment_text": "Yes, his thesis was outstanding, and a lot of the best parts ended up in the book.<p>I really appreciated the big section at the beginning about Doreen Nelson&#x27;s life work, Design Based Learning, which he also covered in depth in the Building SimCity book. She and Michael Bremmer wrote the SimCity Teacher&#x27;s Guide (which Cliff Basinger (LGR) found on eBay, made an unboxing video review abo"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "40051289",
+      "created_at": "2024-04-16T12:53:19Z",
+      "story_title": "Descent 3 Source Code",
+      "url": "https://news.ycombinator.com/item?id=40051289",
+      "comment_text": "I played a big game of Project Highrise (and of SimTower too) just recently, to immerse myself in the games and make them fresh in my mind before working on porting. I think Project Highrise is great! But in the same way I also appreciate the original SimCity 8-bit pixel graphics, and low-tech graphics in The Sims 1, I think SimTower still stands on its own as a game that can still be thoroughly e"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38743878",
+      "created_at": "2023-12-23T12:51:13Z",
+      "story_title": "The personal, political art of board-game design",
+      "url": "https://news.ycombinator.com/item?id=38743878",
+      "comment_text": "&gt;In \u201cPersuasive Games,\u201d published in 2007, the video-game designer and professor Ian Bogost coined the term \u201cprocedural rhetoric\u201d to describe the use of mechanics for persuasion, which he\u2019d seen in video games going back to the nineteen-seventies.<p>Some notes on Procedural Rhetoric from a unfinished paper I&#x27;ve been writing:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Proc"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38159925",
+      "created_at": "2023-11-06T08:03:17Z",
+      "story_title": "Why Cities: Skylines 2 performs poorly",
+      "url": "https://news.ycombinator.com/item?id=38159925",
+      "comment_text": "&gt;SimCity doesn&#x27;t lend itself well to multiplayer functionality<p>You make a lot of great and accurate points (including blaming EA instead of Maxis). But I disagree that SimCity doesn&#x27;t lend itself well to multiplayer functionality. (And perhaps EA isn&#x27;t the right company to pull it off properly, being more focused on competition and violence than collaboration and education.)<p>"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38015922",
+      "created_at": "2023-10-25T17:57:59Z",
+      "story_title": "What are Functions? Coding for Kids [video]",
+      "url": "https://news.ycombinator.com/item?id=38015922",
+      "comment_text": "The article was originally linked to this video, and that triggered a bunch of cheap shots about how object oriented programming will ruin your mind:<p>What is Object-Oriented Programming? | Coding for Kids | Kodable:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=X3cFiJnxUBY\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=X3cFiJnxUBY</a><p>This offers more information:<p><a href=\"http:"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "37357035",
+      "created_at": "2023-09-01T22:59:20Z",
+      "story_title": "Doug Lenat has died",
+      "url": "https://news.ycombinator.com/item?id=37357035",
+      "comment_text": "At Leela AI we&#x27;re developing hybrid symbolic-connectionist constructivist AI, combining &quot;neat&quot; neural networks with &quot;scruffy&quot; symbolic logic, enabling unsupervised machine learning that understands cause and effect and teaches itself, motivated by intrinsic curiosity.<p>Leela AI was founded by Henry Minsky and Cyrus Shaoul, and is inspired by ideas about child development "
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "36910569",
+      "created_at": "2023-07-28T17:50:33Z",
+      "story_title": "Worldcoin isn\u2019t as bad as it sounds: It\u2019s worse",
+      "url": "https://news.ycombinator.com/item?id=36910569",
+      "comment_text": "&quot;You can&#x27;t think about thinking without thinking about thinking about something.&quot; -Seymour Papert<p><a href=\"https:&#x2F;&#x2F;www.npr.org&#x2F;sections&#x2F;ed&#x2F;2016&#x2F;08&#x2F;05&#x2F;488669276&#x2F;remembering-a-thinker-who-thought-about-thinking\" rel=\"nofollow noreferrer\">https:&#x2F;&#x2F;www.npr.org&#x2F;sections&#x2F;ed&#x2F;2016&#x2F;08&#x2F;05&#x2F;488669276&#x2F;reme"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "36813346",
+      "created_at": "2023-07-21T13:12:01Z",
+      "story_title": "What humanities scholars want students to know about the internet",
+      "url": "https://news.ycombinator.com/item?id=36813346",
+      "comment_text": "You&#x27;re wildly mischaracterizing and misunderstanding where the people who developed and inspired Snap! are coming from, and what their background and experience in teaching computer science and other subjects to kids and college students really is.<p>If you&#x27;ll please take the time to read some of the things they&#x27;ve written, especially the The Beauty and Joy of Computing, and the lon"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7052107",
+      "created_at": "2014-01-13T17:50:51Z",
+      "story_title": "SimCity Offline Is Coming",
+      "url": "https://news.ycombinator.com/item?id=7052107",
+      "comment_text": "The source code for the original SimCity Classic is open source, called &quot;Micropolis&quot;: <a href=\"https://code.google.com/p/micropolis\" rel=\"nofollow\">https:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;micropolis</a><p>While it&#x27;s nowhere near as fancy as the latest version, there are other directions to take it than adding lots of bells and whistles and complexity.<p>It&#x27;s simplicity ma"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "4952671",
+      "created_at": "2012-12-21T14:00:27Z",
+      "story_title": "When I first heard the name \"Safari\"",
+      "url": "https://news.ycombinator.com/item?id=4952671",
+      "comment_text": "First I'll describe why I think that SimCity was so successful, and The Sims was even more successful:<p>Will gave a talk about designing user interface to simulation games back some time around '96, to Terry Winnograd's user interface design class at Stanford (at the time I worked with Terry at Interval Research), and I sat in on the class and took these notes:<p><a href=\"http://www.art.net/~hopk"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7579613",
+      "created_at": "2014-04-12T23:44:27Z",
+      "story_title": "Shadow DOM",
+      "url": "https://news.ycombinator.com/item?id=7579613",
+      "comment_text": "Warren Teitelman described a lot of the great work done at Xerox PARC in &quot;Ten Years of Window Systems - A Retrospective View&quot; in the book &quot;Methodology of Window Management,&quot; Proceedings of the Alvey Workshop at Cosener&#x27;s House, Abingdon that took place from 29 April 1985 until 1 May 1985.<p>&quot;Both James Gosling and I currently work for SUN and the reason for my wanting"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7455368",
+      "created_at": "2014-03-23T21:54:22Z",
+      "story_title": "MIT professor Marvin Minsky wins $540,000 award",
+      "url": "https://news.ycombinator.com/item?id=7455368",
+      "comment_text": "SimAntics is a visual artificial intelligence programming language for scripting the behavior of irrational simulated people and intelligent inanimate objects, developed for The Sims at Maxis. ;)<p>(That&#x27;s lower case game industry artificial intelligence, not Upper Case Marvin Minsky Artificial Intelligence.)<p><a href=\"http://wiki.niotso.org/SimAntics\" rel=\"nofollow\">http:&#x2F;&#x2F;wiki.ni"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7357441",
+      "created_at": "2014-03-07T00:00:55Z",
+      "story_title": " Critical crypto bug leaves Linux, hundreds of apps open to eavesdropping",
+      "url": "https://news.ycombinator.com/item?id=7357441",
+      "comment_text": "I try to read the code I need to use, but of course I never have the time to read as much as I should. It&#x27;s really the best way to learn programming in general and to learn particular apis, as important as a musician listening to other musicians&#x27; music.<p>I feel much more confident using libraries whose source code I&#x27;ve already at least skimmed through. (Speed reading code and learn"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7330347",
+      "created_at": "2014-03-02T19:22:42Z",
+      "story_title": "JSON5 is a proposed extension to JSON",
+      "url": "https://news.ycombinator.com/item?id=7330347",
+      "comment_text": "YAML failed the intelligence test of getting its name right in the first place: &quot;Yet Another Markup Language&quot;. YAML is NOT a markup language, in any way shape or form, yet the people who designed and named it earnestly thought they were designing a markup language, and that there was a need for yet another one.<p>Only when somebody pointed out that obvious fact to them, did they come up "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "7096315",
+      "created_at": "2014-01-21T16:38:23Z",
+      "story_title": "Cyber attack that sent 750k malicious emails traced to hacked refrigerator",
+      "url": "https://news.ycombinator.com/item?id=7096315",
+      "comment_text": "When Ted Selker was at the MIT Media Lab, he directed an augmented reality smart kitchen project called &quot;Counter Intelligence&quot;. <a href=\"http://web.media.mit.edu/~selker/\" rel=\"nofollow\">http:&#x2F;&#x2F;web.media.mit.edu&#x2F;~selker&#x2F;</a> <a href=\"http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=87D98335CC767EED29EE1EBFB810682F?doi=10.1.1.88.2875&amp;rep=rep1&amp;type=pdf\" "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "5845119",
+      "created_at": "2013-06-08T15:23:00Z",
+      "story_title": "Facts about Wayland vs X",
+      "url": "https://news.ycombinator.com/item?id=5845119",
+      "comment_text": "It&#x27;s much harder (and less efficient) to synchronize code running in two different address spaces, communicating via an asynchronous protocol.<p>NeWS had &quot;synchronous event handlers&quot; that when triggered would block the distribution of all other events (i.e. taking them off of the global event queue, figuring out their target, and putting them on a local event queue), until the synch"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3612086",
+      "created_at": "2012-02-20T11:25:47Z",
+      "story_title": "Alan Turing's 1950s tiger stripe theory proved",
+      "url": "https://news.ycombinator.com/item?id=3612086",
+      "comment_text": "The late Andy Witkin's classic SIGGRAPH paper on reaction diffusion textures: \n<a href=\"http://www.cs.cmu.edu/~aw/pdf/texture.pdf\" rel=\"nofollow\">http://www.cs.cmu.edu/~aw/pdf/texture.pdf</a><p>We present a method for texture synthesis based on the simulation of a process of local nonlinear interaction, called\nreaction-diffusion, which has been proposed as a model\nof biological pattern formation. "
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3292716",
+      "created_at": "2011-11-29T23:01:38Z",
+      "story_title": "API Half-lives",
+      "url": "https://news.ycombinator.com/item?id=3292716",
+      "comment_text": "If the ideas in Perl scaled, don't you think there would be a usable version of Perl 6 after more than 10 years?<p>And Perl 5 is certainly on its way out: <a href=\"http://www.tiobe.com/index.php/paperinfo/tpci/Perl.html\" rel=\"nofollow\">http://www.tiobe.com/index.php/paperinfo/tpci/Perl.html</a><p>When Alan Kay made his remark, Perl had just hit its highest mark in popularity. And it just this year"
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "3108169",
+      "created_at": "2011-10-13T18:26:59Z",
+      "story_title": "I take it back. Unity is cool.",
+      "url": "https://news.ycombinator.com/item?id=3108169",
+      "comment_text": "Even with inch wide menu bar items, the fact that the menu bar is a mile high still completely overwhelms the cost of the distance of moving the cursor to the menu bar. And you can move back and forth while still moving up, to switch between menu bar items without losing the menu bar target. Do the math. Do the experiments. Measure the results. Read the papers. Thought experiments are no good."
+    },
+    {
+      "author": "SimHacker",
+      "objectID": "2905475",
+      "created_at": "2011-08-20T01:31:47Z",
+      "story_title": "The Secret of the Fibonacci Sequence in Trees",
+      "url": "https://news.ycombinator.com/item?id=2905475",
+      "comment_text": "This is a question that fascinated Alan Turing, who wrote a classic paper called \"The Chemical Basis of Morphogenesis\" and other unfinished papers about the subject (some published in a book called \"Morphogenesis\"). He used lots of heavy math that came so naturally to him, to model plant growth as a reaction-diffusion system running in a ring of cells (the stem of the plant). By computing the reac"
+    }
+  ],
+  "Weizenbaum": [
+    {
+      "author": "DonHopkins",
+      "objectID": "48862947",
+      "created_at": "2026-07-10T17:43:10Z",
+      "story_title": "You're Not a Better Engineer Because You Type Git Commands by Hand",
+      "url": "https://news.ycombinator.com/item?id=48862947",
+      "comment_text": "Remembering and typing git commands does not improve the code or your understanding of it.<p>Reading the code yourself, human- or LLM-generated, does.<p>Vibe coders intentionally don&#x27;t read LLM-generated code. That is the whole point, the definition of vibe coding.<p>But those kinds of people aren&#x27;t likely to read code hand-written by their human colleagues either.<p>It&#x27;s not whethe"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "44728658",
+      "created_at": "2025-07-29T21:49:53Z",
+      "story_title": "Enough AI copilots, we need AI HUDs",
+      "url": "https://news.ycombinator.com/item?id=44728658",
+      "comment_text": "Ben Shneiderman wrote &quot;Beyond Intelligent Machines&quot; published in the Jan 1993 IEEE Software, and the subject of this hn discussion:<p>Beyond Intelligent Machines: Just Do It (1993) (umd.edu)<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22742100\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=22742100</a><p>Mark Weiser and Ben Shneiderman and I worked at the Univers"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39762949",
+      "created_at": "2024-03-20T04:51:07Z",
+      "story_title": "Draft Paper Discovered in Which Joseph Weizenbaum Envisions ELIZA's Applications",
+      "url": "https://news.ycombinator.com/item?id=39762949",
+      "comment_text": "KMP addressed that point:<p>20240214: Ken Pitman (KMP)&#x27;s Lisp ELIZA from MIT-AI&#x27;s ITS history project\nWe&#x27;ve added Kent Pitman&#x27;s (aka. KMP, <a href=\"https:&#x2F;&#x2F;github.com&#x2F;netsettler\">https:&#x2F;&#x2F;github.com&#x2F;netsettler</a>) MACLisp ELIZA to the elizagen repo. This was discovered by Lars Brinkhoff, and can also be found on his PDP-10 ITS historical sources re"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "39414609",
+      "created_at": "2024-02-17T23:42:51Z",
+      "story_title": "Kent Pitman's Lisp Eliza from MIT-AI's ITS History Project",
+      "url": "https://news.ycombinator.com/item?id=39414609",
+      "comment_text": "Here&#x27;s the source for DOCTOR from ITS -- it has a much less extensive set of foul words and doesn&#x27;t get insulted:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;PDP-10&#x2F;its&#x2F;blob&#x2F;master&#x2F;src&#x2F;games&#x2F;doc.102\">https:&#x2F;&#x2F;github.com&#x2F;PDP-10&#x2F;its&#x2F;blob&#x2F;master&#x2F;src&#x2F;games&#x2F;doc.102</a><p>I wrote this recently about Kent Pitman&#x27;s w"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38906177",
+      "created_at": "2024-01-07T23:05:51Z",
+      "story_title": "AI or Ain't: Eliza",
+      "url": "https://news.ycombinator.com/item?id=38906177",
+      "comment_text": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27332340\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27332340</a><p>DonHopkins on May 30, 2021 | prev | next [\u2013]<p>Here&#x27;s the source code for Kent Pitman&#x27;s &quot;DOCTOR&quot; in MACLISP, which was of course inspired by ELIZA. (Joseph Weizenbaum taught Kent Pitman LISP!)<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;PDP-"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "38402813",
+      "created_at": "2023-11-24T11:22:14Z",
+      "story_title": "The Revival of Medley/Interlisp",
+      "url": "https://news.ycombinator.com/item?id=38402813",
+      "comment_text": "That&#x27;s right, it&#x27;s just a throw-away quip, but if you want the deep nuanced story and inside history of Common Lisp and comparison with Scheme, Kent Pitman is the one to read:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Kent_Pitman\" rel=\"nofollow noreferrer\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Kent_Pitman</a><p>Index of Kent Pitman&#x27;s Papers:<p><a href="
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "37358504",
+      "created_at": "2023-09-02T04:09:42Z",
+      "story_title": "Doug Lenat has died",
+      "url": "https://news.ycombinator.com/item?id=37358504",
+      "comment_text": "Pamela McCorduck wrote in &quot;Machines Who Think&quot; (2004) that Cyc is &quot;a determinedly scruffy enterprise&quot;. Robert Abelson credited the terms to his &quot;unnamed but easily guessable colleague&quot; Roger Shank in his 1981 essay &quot;Constraint, Construal, and Cognitive Science&quot; in the Proceedings of the 3rd Annual Conference of the Cognitive Science, and Marvin Minsky discus"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "29829287",
+      "created_at": "2022-01-06T20:09:35Z",
+      "story_title": "Chatbots: Still dumb after all these years",
+      "url": "https://news.ycombinator.com/item?id=29829287",
+      "comment_text": "Why can&#x27;t the Neats and the Scruffies just work together and get along? ;)<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Neats_and_scruffies\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Neats_and_scruffies</a><p>&gt;Neats and scruffies<p>&gt;Neat and scruffy are two contrasting approaches to artificial intelligence (AI) research. The distinction was made in"
+    },
+    {
+      "author": "DonHopkins",
+      "objectID": "27332340",
+      "created_at": "2021-05-30T11:06:22Z",
+      "story_title": "Joseph Weizenbaum\u2019s Original ELIZA",
+      "url": "https://news.ycombinator.com/item?id=27332340",
+      "comment_text": "Here&#x27;s the source code for Kent Pitman&#x27;s &quot;DOCTOR&quot; in MACLISP, which was of course inspired by ELIZA. (Joseph Weizenbaum taught Kent Pitman LISP!)<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;PDP-10&#x2F;its&#x2F;blob&#x2F;master&#x2F;src&#x2F;games&#x2F;doc.102\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;PDP-10&#x2F;its&#x2F;blob&#x2F;master&#x2F;src&#x2F;games&#x2F;doc.1"
+    }
+  ]
+}

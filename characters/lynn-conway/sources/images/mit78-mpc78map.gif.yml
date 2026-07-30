@@ -1,0 +1,27 @@
+# MPC78 project map + roster key
+# Sibling image: mit78-mpc78map.gif
+
+image:
+  file: mit78-mpc78map.gif
+  title: "MPC78 multiproject chip — map of student projects"
+  what: |
+    Map of projects on the MIT'78 multiproject chip, keyed to the roster Don
+    pasted on HN (Steele Lisp MPU #17, Levitt FIFO #10, Clark later Geometry Engine
+    via MPC79 Stanford, etc.).
+
+source:
+  url: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MPC78map.gif
+  page: https://ai.eecs.umich.edu/people/conway/VLSI/MIT78/MIT78.html
+  credit: "Lynn Conway — University of Michigan VLSI archive"
+  retrieved: 2026-07-29
+
+hn:
+  highlighted_in:
+    - { id: 8861178, url: "https://news.ycombinator.com/item?id=8861178" }
+  don_hopkins: |
+    Here's a map of the projects on that chip, and a list of the people who made
+    them and what they did. (Full 1–25 roster in HN 8861178 — Steele #17 Lisp
+    microprocessor; Levitt #10 synchronously timed FIFO; …)
+  roster_highlights:
+    - { n: 10, who: "Dave Levitt", what: "Synchronously timed FIFO" }
+    - { n: 17, who: "Guy Steele", what: "LISP microprocessor (expression evaluator + memory manager)" }

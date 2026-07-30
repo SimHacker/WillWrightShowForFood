@@ -1,0 +1,2743 @@
+[
+  {
+    "author": "DonHopkins",
+    "id": 49077522,
+    "type": "comment",
+    "time": 1785197627,
+    "url": "https://news.ycombinator.com/item?id=49077522",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-ungar",
+        "name": "David Ungar"
+      }
+    ],
+    "excerpt": "I present to you, the return-stack skill:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;return-stack&#x2F;SKILL.md\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;return-...</a><p>See Self&#x27;s &quot;dynamic deoptimization&quot;, where it constructs a virtual return stack on dem"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 49067050,
+    "type": "comment",
+    "time": 1785144279,
+    "url": "https://news.ycombinator.com/item?id=49067050",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "Good point! To respect EA&#x27;s trademark and the terms of their modifications to the GPL-3 license regarding the use of their SimCity trademark, I renamed the open source version of SimCity to Micropolis, which was its original working title. It would be safe to call this project &quot;PGMicropolis&quot; as long as it wasn&#x27;t for profit.<p>At the time, there was a disk drive manufacturer by "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 49022707,
+    "type": "comment",
+    "time": 1784818666,
+    "url": "https://news.ycombinator.com/item?id=49022707",
+    "title": null,
+    "chars": [
+      {
+        "id": "hugh-daniel",
+        "name": "Hugh Daniel"
+      }
+    ],
+    "excerpt": "Re CharlesW: OSA was an OS-level malleable-computing layer, on paper. Apple Events exposed scriptable objects; OSA let multiple scripting dialects share the same runtime. The gap was who actually shipped working product.<p>Dave Winer&#x27;s Frontier (UserTalk) is the piece these threads usually skip. Frontier 1.0 shipped in January 1992 -- the same month Apple finally held its one-day scripting de"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 49022357,
+    "type": "comment",
+    "time": 1784817433,
+    "url": "https://news.ycombinator.com/item?id=49022357",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      },
+      {
+        "id": "bill-joy",
+        "name": "Bill Joy"
+      }
+    ],
+    "excerpt": "I had an argument with Steve Jobs about pie menus at the Educom conference in Washington DC, October 26 1988 -- right after he finally shipped NeXTSTEP (people had been teasing it as vaporware with &quot;NeVRSTEP&quot; t-shirts).<p>I was demonstrating the work I&#x27;d done at the UMD Human Computer Interaction Lab on a color Sun 3&#x2F;60 that Sun lent me to use at their booth, which happened to "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48976579,
+    "type": "comment",
+    "time": 1784541683,
+    "url": "https://news.ycombinator.com/item?id=48976579",
+    "title": null,
+    "chars": [
+      {
+        "id": "brian-silverman",
+        "name": "Brian Silverman"
+      },
+      {
+        "id": "rudy-rucker",
+        "name": "Rudy Rucker"
+      }
+    ],
+    "excerpt": "Wow! If you ever get tired of it I will buy it from you. It&#x27;s impossible to find copies now, and they make great wedding or graduation presents. ;)<p>Just joking, I know you would never part with it!<p>If you were sneaky and transgressive like Aaron Schwartz, you might notice the url of the pdf file is shown in the browser bar in the video, and type in the url to steal the book:<p><a href=\"ht"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48966853,
+    "type": "comment",
+    "time": 1784458725,
+    "url": "https://news.ycombinator.com/item?id=48966853",
+    "title": null,
+    "chars": [
+      {
+        "id": "brewster-kahle",
+        "name": "Brewster Kahle"
+      }
+    ],
+    "excerpt": "Tim Pozar and Brewster Kahle CHM Interview by Marc Weber October 29 1996<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=u2h2LHRFbNA\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=u2h2LHRFbNA</a><p>Brewster said:<p>But also the early stuff has got people&#x27;s dreams. The early people that sort of say -- you know, the early people on the web, like you, doing your dinosau"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48966007,
+    "type": "comment",
+    "time": 1784449487,
+    "url": "https://news.ycombinator.com/item?id=48966007",
+    "title": null,
+    "chars": [
+      {
+        "id": "bruce-tognazzini",
+        "name": "Bruce Tognazzini"
+      }
+    ],
+    "excerpt": "Speaking of IRCAM, does anybody know Joseph &quot;jojo&quot; Francis -- francis@ircam.fr?<p>Scenes don&#x27;t sprout like blueberry bushes -- or baobab trees with their roots in the sky. Someone does the legwork -- or the scene quietly dies while everyone assumes it was a natural feature of the landscape.<p>Maintenance is fragile and underappreciated until it stops; you do it for the love of the g"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48923320,
+    "type": "comment",
+    "time": 1784132956,
+    "url": "https://news.ycombinator.com/item?id=48923320",
+    "title": null,
+    "chars": [
+      {
+        "id": "andrew-quitmeyer",
+        "name": "Andrew Quitmeyer"
+      }
+    ],
+    "excerpt": "Andrew Quitmeyer doesn&#x27;t take himself very seriously, but dogs take him VERY seriously.<p>Mark Your Territory - Check Into Foursquare by Peeing<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=rRdfeb7vDWg\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=rRdfeb7vDWg</a><p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;quitmeyer&#x2F;Mark-Your-Territory---Pee-to-Check-In-to-F"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48884411,
+    "type": "comment",
+    "time": 1783887838,
+    "url": "https://news.ycombinator.com/item?id=48884411",
+    "title": null,
+    "chars": [
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      }
+    ],
+    "excerpt": "Theo&#x27;s rant about what a hypocritical idiot ESR is also sounds pretty reasonable to me: he has a good point.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48883342\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=48883342</a><p>ESR&#x27;s free to make ridiculous laws about eyeballs that aren&#x27;t true and nobody follows while never actually reviewing any code himself (e"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48870736,
+    "type": "comment",
+    "time": 1783766544,
+    "url": "https://news.ycombinator.com/item?id=48870736",
+    "title": null,
+    "chars": [
+      {
+        "id": "tom-lord",
+        "name": "Thomas Lord"
+      }
+    ],
+    "excerpt": "Even Emacs Lisp has had a byte code compiler since forever, and since Emacs 28 it compiles to native machine code via libgccjit.<p>Toy lisp interpreters are easy and fun and everywhere, often written in lisp itself, but the same books that teach them go on to teach compilers. SICP chapter 4 is the metacircular evaluator, chapter 5 is the compiler. That ordering is the point: interpretation is the "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48862947,
+    "type": "comment",
+    "time": 1783705390,
+    "url": "https://news.ycombinator.com/item?id=48862947",
+    "title": null,
+    "chars": [
+      {
+        "id": "lars-brinkhoff",
+        "name": "Lars Brinkhoff"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "david-ungar",
+        "name": "David Ungar"
+      }
+    ],
+    "excerpt": "Remembering and typing git commands does not improve the code or your understanding of it.<p>Reading the code yourself, human- or LLM-generated, does.<p>Vibe coders intentionally don&#x27;t read LLM-generated code. That is the whole point, the definition of vibe coding.<p>But those kinds of people aren&#x27;t likely to read code hand-written by their human colleagues either.<p>It&#x27;s not whethe"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48838894,
+    "type": "comment",
+    "time": 1783553958,
+    "url": "https://news.ycombinator.com/item?id=48838894",
+    "title": null,
+    "chars": [
+      {
+        "id": "brian-harvey",
+        "name": "Brian Harvey"
+      }
+    ],
+    "excerpt": "&quot;Snap! is Scheme disguised as Scratch&quot; -Brian Harvey<p><a href=\"https:&#x2F;&#x2F;forum.snap.berkeley.edu&#x2F;t&#x2F;hygienic-macros&#x2F;3258&#x2F;6\" rel=\"nofollow\">https:&#x2F;&#x2F;forum.snap.berkeley.edu&#x2F;t&#x2F;hygienic-macros&#x2F;3258&#x2F;6</a><p>&gt;I admit that my slogan &quot;Snap! is Scheme disguised as Scratch&quot; would sort of push in the direction of hygienic macros"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48836400,
+    "type": "comment",
+    "time": 1783539163,
+    "url": "https://news.ycombinator.com/item?id=48836400",
+    "title": null,
+    "chars": [
+      {
+        "id": "brian-harvey",
+        "name": "Brian Harvey"
+      }
+    ],
+    "excerpt": "Everything you can do with Scheme you can also do with Snap! with a visual blocks programming user interface. Functional programming, recursion, higher order functions, closures, continuations, macros, metaprogramming, all described by Brian Harvey&#x27;s curriculum, the Beauty and Joy of Computing:<p><a href=\"https:&#x2F;&#x2F;bjc.berkeley.edu&#x2F;team&#x2F;snap&#x2F;\" rel=\"nofollow\">https:&#x2F"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48834054,
+    "type": "comment",
+    "time": 1783528361,
+    "url": "https://news.ycombinator.com/item?id=48834054",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "chris-trottier",
+        "name": "Chris Trottier"
+      }
+    ],
+    "excerpt": "There&#x27;s a third case between &quot;today&#x27;s task&quot; and &quot;accretive work&quot; that I lived through on The Sims, and it&#x27;s the one that scares managers the most: a system that IS accretive work, but looks exactly like a pile of disposable hacks for most of its life.<p>Chris Trottier, one of the designers of The Sims and The Sims Online, called the method &quot;Design by Accreti"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48798891,
+    "type": "comment",
+    "time": 1783293204,
+    "url": "https://news.ycombinator.com/item?id=48798891",
+    "title": null,
+    "chars": [
+      {
+        "id": "norman-margolus",
+        "name": "Norman Margolus"
+      }
+    ],
+    "excerpt": "I love this! May your baby grow up weird and unique like cellular automata rules, thinking globally and acting locally.<p>It&#x27;s weird like the cellular automata painting system I&#x27;ve been working on for a long time, which I rewrote in JavaScript a while ago, and is in serious need to rewriting, but runs pretty fast now anyway in spite of itself.<p>Norman Margolus and Tommaso Toffoli&#x27;s"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48780266,
+    "type": "comment",
+    "time": 1783114401,
+    "url": "https://news.ycombinator.com/item?id=48780266",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "terry-winograd",
+        "name": "Terry Winograd"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Terry Winnograd is a user interface researcher and professor at Stanford, who has a regular user interface seminar:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Terry_Winograd\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Terry_Winograd</a><p>Stanford University, CS Dept., HCI Group, CS547 seminar videorecordings, 1990\u20132012 (collection SC1217). Terry Winograd&#x"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48780144,
+    "type": "comment",
+    "time": 1783113743,
+    "url": "https://news.ycombinator.com/item?id=48780144",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "I&#x27;m glad to collect any questions for Will Wright and post his replies!<p>He&#x27;s especially obsessed with cornering you at a party and telling you all about Care Bears.<p>The Adorable Will Wright Minutes!<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=f7G6c097oWU\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=f7G6c097oWU</a><p>Speaking of single minutes of short "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48757769,
+    "type": "comment",
+    "time": 1782977271,
+    "url": "https://news.ycombinator.com/item?id=48757769",
+    "title": null,
+    "chars": [
+      {
+        "id": "luc-barthelet",
+        "name": "Luc Barthelet"
+      }
+    ],
+    "excerpt": "Luc Barthelet, who I worked with at EA, is a Mathematica whiz (he later worked at Wolframe Research on Wolfram|Alpha), and he would prototype game ideas in Mathematica, which would render out web pages with animations.<p>He came up with a fun idea for a racing game renderer: it distorted the perspective transformation a bit, grading depth on a curve, so far away things would linger in the distance"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48726358,
+    "type": "comment",
+    "time": 1782773377,
+    "url": "https://news.ycombinator.com/item?id=48726358",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-ungar",
+        "name": "David Ungar"
+      }
+    ],
+    "excerpt": "SELF: The Power of Simplicity<p>DAVID UNGAR (ungar@self.stanford.edu)<p>Computer Systems Laboratory, Stanford University, Stanford, California 94305 RANDALL B. SMITH\u2020 (rsmith@parc.xerox.com) Xerox Palo Alto Research Center, Palo Alto, California 94304<p>Abstract. SELF is an object-oriented language for exploratory programming based on a small number of simple and concrete ideas: prototypes, slots,"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48571801,
+    "type": "comment",
+    "time": 1781709921,
+    "url": "https://news.ycombinator.com/item?id=48571801",
+    "title": null,
+    "chars": [
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "Calling a bunch of LLMs a &quot;council&quot; is just rebranding well known ensemble methods with shrill marketing hype, nothing original or out of the ordinary. Mixture of experts and every other idea in his stack has a literature older than PewDiePie&#x27;s career.<p>Yet another attention craving influencer who shilled crypto scams during the crypto bubble and is now marketing &quot;AI councils&"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48542767,
+    "type": "comment",
+    "time": 1781537454,
+    "url": "https://news.ycombinator.com/item?id=48542767",
+    "title": null,
+    "chars": [
+      {
+        "id": "jerry-martin",
+        "name": "Jerry Martin"
+      }
+    ],
+    "excerpt": "I&#x27;ve been porting Micropolis (SimCity Classic) to WASM &#x2F; WebGPU &#x2F; Svelte 5. Emscripten + Embind compile the C++ engine and glue it to TypeScript&#x2F;Svelte&#x2F;Runes&#x2F;Reactivity; TypeScript owns UI, rendering, and callback handlers.<p>I agree with the article&#x27;s main lessons: wasm32 pointer size, don&#x27;t serialize structs with pointers, debug native 32-bit when you can,"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48525999,
+    "type": "comment",
+    "time": 1781434060,
+    "url": "https://news.ycombinator.com/item?id=48525999",
+    "title": null,
+    "chars": [
+      {
+        "id": "brian-reid",
+        "name": "Brian Reid"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=19874245\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=19874245</a><p>DonHopkins on May 10, 2019 | parent | context | favorite | on: Why are 2D vector graphics so much harder than 3D?<p>Brian Reid wrote about page independence, comparing Interpress&#x27; and PostScript&#x27;s different approaches. Adobe&#x27;s later voluntary Docu"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48504655,
+    "type": "comment",
+    "time": 1781274593,
+    "url": "https://news.ycombinator.com/item?id=48504655",
+    "title": null,
+    "chars": [
+      {
+        "id": "keith-henson",
+        "name": "Keith Henson"
+      }
+    ],
+    "excerpt": "True that! Keith Henson&#x27;s legendary alt.religion.scientology loopback trolling story, with hilarious deposition transcript, in which he patiently explains how 127.0.0.1 works to astonished Scientology lawyers:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=20791891\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=20791891</a><p>&gt;Just be glad you didn&#x27;t have to expl"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48495408,
+    "type": "comment",
+    "time": 1781206908,
+    "url": "https://news.ycombinator.com/item?id=48495408",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Deldo - Vibration Control and Teledildonics Mode for Emacs<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=D1sXuHnf_lo\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=D1sXuHnf_lo</a><p>Interview with an Emacs Enthusiast [Colorized]<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=urcL86UpqZc\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=urcL86UpqZ"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48448623,
+    "type": "comment",
+    "time": 1780941011,
+    "url": "https://news.ycombinator.com/item?id=48448623",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "James Gosling beat you to it."
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48333143,
+    "type": "comment",
+    "time": 1780121232,
+    "url": "https://news.ycombinator.com/item?id=48333143",
+    "title": null,
+    "chars": [
+      {
+        "id": "ivan-sutherland",
+        "name": "Ivan Sutherland"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "Ivan Sutherland predicted the Holodeck in 1965:<p><a href=\"https:&#x2F;&#x2F;www.quora.com&#x2F;?qv_src=email\" rel=\"nofollow\">https:&#x2F;&#x2F;www.quora.com&#x2F;?qv_src=email</a><p>&gt;Q: Can an \u201cAI command line\u201d replace the GUI as the primary user experience for computers, assuming the technology improves and irrespective of today\u2019s state?<p>&gt;A: Alan Kay -- Still trying to learn how to think"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48329842,
+    "type": "comment",
+    "time": 1780091806,
+    "url": "https://news.ycombinator.com/item?id=48329842",
+    "title": null,
+    "chars": [
+      {
+        "id": "ian-bogost",
+        "name": "Ian Bogost"
+      }
+    ],
+    "excerpt": "If there was ever a game that should never be recreated, and kept dead and buried forever, it&#x27;s Peter Moolyneux&#x27;s cube clicker &quot;Curiosity&quot;, which was released on 6 November 2012, and thankfully ended on May 26, 2013, but never delivered on its grandiose promises:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Curiosity:_What%27s_Inside_the_Cube%3F\" rel=\"nofollow\">"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48310306,
+    "type": "comment",
+    "time": 1779981858,
+    "url": "https://news.ycombinator.com/item?id=48310306",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "luc-barthelet",
+        "name": "Luc Barthelet"
+      }
+    ],
+    "excerpt": "Will Wright handed the original Maxis SimCity 3000 team a great design for the next SimCity (which I think they should have called SimCity 2001 instead of SimCity 3000, to more realistically set expectations).<p>But they ignored him, and went off on a tangent trying to design their own ultimate totally general purpose virtual reality (and we know how well Second Life has done ;), without much thou"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48308083,
+    "type": "comment",
+    "time": 1779971981,
+    "url": "https://news.ycombinator.com/item?id=48308083",
+    "title": null,
+    "chars": [
+      {
+        "id": "jerry-martin",
+        "name": "Jerry Martin"
+      }
+    ],
+    "excerpt": "I really love Jerry Martin&#x27;s music. He did the iconic music in the Sims too, collaborating with Marc Ruso and Kirk Casey.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jerry_Martin_(composer)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Jerry_Martin_(composer)</a><p><a href=\"https:&#x2F;&#x2F;www.last.fm&#x2F;music&#x2F;Marc+Russo\" rel=\"nofollow\">https:&#x2"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48191567,
+    "type": "comment",
+    "time": 1779186798,
+    "url": "https://news.ycombinator.com/item?id=48191567",
+    "title": null,
+    "chars": [
+      {
+        "id": "ian-bogost",
+        "name": "Ian Bogost"
+      }
+    ],
+    "excerpt": "Glad you liked them! Here are some more: <a href=\"https:&#x2F;&#x2F;donhopkins.com&#x2F;home&#x2F;TheSimsDesignDocuments&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.com&#x2F;home&#x2F;TheSimsDesignDocuments&#x2F;</a><p>&gt;Absolutely unhinged.<p>Especially pathetic and revealing when they still try to argue it was &quot;Ackchyually&quot; about &quot;unethical journalism&quot;. Yet look wher"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48191364,
+    "type": "comment",
+    "time": 1779184881,
+    "url": "https://news.ycombinator.com/item?id=48191364",
+    "title": null,
+    "chars": [
+      {
+        "id": "alexander-avila",
+        "name": "Alexander Avila"
+      }
+    ],
+    "excerpt": "MOST games lose huge amounts of money, and the &quot;many&quot; games you -- without a shred of evidence -- claim DEI caused to lose hundreds of millions are overwhelmingly offset by one single game, The Sims, earning the studio many billions of dollars, continuing to this day.<p>And which itself inspired and gave permission and financial justification for many other inclusive games, indie to AAA,"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48177852,
+    "type": "comment",
+    "time": 1779101784,
+    "url": "https://news.ycombinator.com/item?id=48177852",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      },
+      {
+        "id": "ted-selker",
+        "name": "Ted Selker"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Thanks for that treasure of a video, just a year old and only 30 views! Well worth watching the whole thing! It&#x27;s chock full of fascinating behind-the-scenes IBM Palace Intrigue!<p>From the transcript:<p>Ted&gt; One of the most interesting things that we learned with the two track points -- might have one around, I don&#x27;t know, anyway -- was that instead of putting them symmetrically for "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48174863,
+    "type": "comment",
+    "time": 1779068990,
+    "url": "https://news.ycombinator.com/item?id=48174863",
+    "title": null,
+    "chars": [
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34420450\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34420450</a><p>[...]<p>In 1984 he observed that it took 0.75 - 1.75 seconds to reposition the hand from the keyboard to the mouse, which is a long time for something that you do quite often. `<p>He tried many different ideas and built several prototypes, then later when he was"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48174174,
+    "type": "comment",
+    "time": 1779061593,
+    "url": "https://news.ycombinator.com/item?id=48174174",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-selker",
+        "name": "Ted Selker"
+      }
+    ],
+    "excerpt": "To contextualize the &quot;so hot&quot; reference, that was from an actual full page IBM ad:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46581424\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46581424</a><p>DonHopkins 4 months ago | parent | context | favorite | on: The struggle of resizing windows on macOS Tahoe<p>&gt;&quot;The products suck! There&#x27;s no sex in them "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 48027187,
+    "type": "comment",
+    "time": 1778008630,
+    "url": "https://news.ycombinator.com/item?id=48027187",
+    "title": null,
+    "chars": [
+      {
+        "id": "brad-myers",
+        "name": "Brad A. Myers"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=21431778\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=21431778</a><p>DonHopkins on Nov 3, 2019 | parent | context | favorite | on: Evolution of the Scrollbar<p>Open Look scrollbars would be impossible to implement properly in the web browser without using the Pointer Lock API that let you &quot;warp&quot; the mouse cursor positio"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47995226,
+    "type": "comment",
+    "time": 1777801268,
+    "url": "https://news.ycombinator.com/item?id=47995226",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-gerrold",
+        "name": "David Gerrold"
+      }
+    ],
+    "excerpt": "They should go all in on AI first and rebrand as AIBM, it has a nice ring to it.<p>&quot;IBM, UBM, we all BM for IBM.&quot; --David Gerrold, &quot;When HARLIE Was One&quot;.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;When_HARLIE_Was_One\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;When_HARLIE_Was_One</a>"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47984308,
+    "type": "comment",
+    "time": 1777707891,
+    "url": "https://news.ycombinator.com/item?id=47984308",
+    "title": null,
+    "chars": [
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      }
+    ],
+    "excerpt": "Yes, PostScript is a great general purpose high level programming language, kind of like a cross between Forth and Lisp, but a lot more like Lisp, with its polymorphic homoiconic data structures that were essentially JSON.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41962062\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=41962062</a><p>&gt;PostScript is kind of like a cros"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47974206,
+    "type": "comment",
+    "time": 1777639884,
+    "url": "https://news.ycombinator.com/item?id=47974206",
+    "title": null,
+    "chars": [
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      },
+      {
+        "id": "bill-atkinson",
+        "name": "Bill Atkinson"
+      }
+    ],
+    "excerpt": "The printer&#x27;s jammed, give them some time.<p>Meanwhile, more about PostScript:<p>John Warnock&#x27;s &quot;linguistic motherboard&quot; and Owen Densmore&#x27;s &quot;class.ps&quot; smalltalk-like object oriented PostScript programming system, which NeWS and The NeWS toolkit used.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=29295116\">https:&#x2F;&#x2F;news.ycombinator.com&#"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47972764,
+    "type": "comment",
+    "time": 1777627884,
+    "url": "https://news.ycombinator.com/item?id=47972764",
+    "title": null,
+    "chars": [
+      {
+        "id": "steve-wozniak",
+        "name": "Steve Wozniak"
+      },
+      {
+        "id": "douglas-engelbart",
+        "name": "Douglas Engelbart"
+      },
+      {
+        "id": "bill-atkinson",
+        "name": "Bill Atkinson"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "yoot-saito",
+        "name": "Yoot Saito"
+      }
+    ],
+    "excerpt": "It would be great for the movie theater to be able to play any video synchronized across multiple players so you can watch it together, like the awesome movie theater in Cursor Camp. Then we could all watch the extremely weird original SimTower movies together, in their 8-bit error diffusion dithered glory:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=qq8o7gg87k4\" rel=\"nofollow\">https"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47972162,
+    "type": "comment",
+    "time": 1777620955,
+    "url": "https://news.ycombinator.com/item?id=47972162",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "albert-hofkamp",
+        "name": "Albert Hofkamp"
+      },
+      {
+        "id": "chaim-gingold",
+        "name": "Chaim Gingold"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Also, Fabian Wesner&#x27;s posted about using Claud Code to analyze the original micropolis repo&#x27;s code and documentation to generate a new version.<p>Here is a deep dive &quot;podcast&quot; he generated (presenting Claud&#x27;s analysis in a conversational format) that describes the work. I listened to it, and it got the important trademark and licensing issues right, was quite comprehensive"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47909351,
+    "type": "comment",
+    "time": 1777201868,
+    "url": "https://news.ycombinator.com/item?id=47909351",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "scott-mccloud",
+        "name": "Scott McCloud"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27808826\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=27808826</a><p>DonHopkins on July 12, 2021 | parent | context | favorite | on: I Stopped Using Emojis<p>&gt;What we saw was, if you go too far in that [representational] direction because you want to be inclusive, people don\u2019t see themselves represented and they\u2019re not going t"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47826221,
+    "type": "comment",
+    "time": 1776621628,
+    "url": "https://news.ycombinator.com/item?id=47826221",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=30359560\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=30359560</a><p>DonHopkins on Feb 16, 2022 | parent | context | favorite | on: Don&#x27;t use text pixelation to redact sensitive info...<p>When I implemented the pixelation censorship effect in The Sims 1, I actually injected some random noise every frame, so it made the pixel"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47812317,
+    "type": "comment",
+    "time": 1776474575,
+    "url": "https://news.ycombinator.com/item?id=47812317",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-rosenthal",
+        "name": "David S. H. Rosenthal"
+      },
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      },
+      {
+        "id": "brian-reid",
+        "name": "Brian Reid"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Owen Densmore (who implemented the PostScript &quot;object.ps&quot; Smalltalk-like object oriented programming system for NeWS, and worked at Apple on the LaserWriter and PostScript printing system), and David Rosenthal (who developed NeWS with James Gosling, and one of the original employees of NVIDIA), patented a way to implement Smalltalk&#x27;s (and NeWS&#x27;s) object oriented programming sys"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47778204,
+    "type": "comment",
+    "time": 1776256757,
+    "url": "https://news.ycombinator.com/item?id=47778204",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "&quot;Reverse Over Engineering&quot; is a great thing:<p>Will Wright on Designing User Interfaces to Simulation Games (1996) (2023 Video Update):<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-simulation-games-bd7a9d81e62d\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-s...</a><p><a href=\"https:&#x2F;&#x2F;news.ycombi"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47737213,
+    "type": "comment",
+    "time": 1775981490,
+    "url": "https://news.ycombinator.com/item?id=47737213",
+    "title": null,
+    "chars": [
+      {
+        "id": "norman-margolus",
+        "name": "Norman Margolus"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Cellular Automata Machines: A New Environment for Modeling, by Tommaso Toffoli and Norman Margolus<p><a href=\"https:&#x2F;&#x2F;donhopkins.com&#x2F;home&#x2F;cam-book.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.com&#x2F;home&#x2F;cam-book.pdf</a><p>CAM6 Demo:<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=LyLMHxRNuck\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=Ly"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47735093,
+    "type": "comment",
+    "time": 1775953054,
+    "url": "https://news.ycombinator.com/item?id=47735093",
+    "title": null,
+    "chars": [
+      {
+        "id": "marc-canter",
+        "name": "Marc Canter"
+      }
+    ],
+    "excerpt": "The first time Marc Canter (who founded Macromedia) introduced me to Jonathan Gay at CGDC as the creator of Dark Castle, I excitedly and respectfully held and flapped my hands above my head and shouted at him: &quot;Nya nya nya nya nya! Yow! Uuuurh! Yeah! Yeah! Yeah!&quot; (The sound of the nasty monsters, and picking up rocks.)<p><a href=\"https:&#x2F;&#x2F;youtu.be&#x2F;6U6v3XyrPLc?t=43\" rel=\"nof"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47639852,
+    "type": "comment",
+    "time": 1775316422,
+    "url": "https://news.ycombinator.com/item?id=47639852",
+    "title": null,
+    "chars": [
+      {
+        "id": "peter-norvig",
+        "name": "Peter Norvig"
+      }
+    ],
+    "excerpt": "Peter Norvig should write an essay about teaching yourself pixel art in 10 years, to go with his article about programming:<p><a href=\"https:&#x2F;&#x2F;norvig.com&#x2F;21-days.html\" rel=\"nofollow\">https:&#x2F;&#x2F;norvig.com&#x2F;21-days.html</a><p>Teach Yourself Programming in Ten Years<p>Peter Norvig<p>Why is everyone in such a rush?<p>Walk into any bookstore, and you&#x27;ll see how to Teach "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47630968,
+    "type": "comment",
+    "time": 1775244240,
+    "url": "https://news.ycombinator.com/item?id=47630968",
+    "title": null,
+    "chars": [
+      {
+        "id": "nina-hagen",
+        "name": "Nina Hagen"
+      }
+    ],
+    "excerpt": "Before I decide to shoot up smack, I like to ask junkies what the whole heroin experience is like, what they use it for, and how it has affected their lives.<p>Nina Hagen - Smack Jack<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=nIDnN34ZZaE\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=nIDnN34ZZaE</a><p>&gt;Smack Ist Dreck, Stop It Oder Verreck!"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47517348,
+    "type": "comment",
+    "time": 1774446637,
+    "url": "https://news.ycombinator.com/item?id=47517348",
+    "title": null,
+    "chars": [
+      {
+        "id": "ian-bogost",
+        "name": "Ian Bogost"
+      }
+    ],
+    "excerpt": "I&#x27;ve talked to some non-serious unity devs, like Peter Molyneux...<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47110605\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=47110605</a><p>&gt;1h 48m 06s, with arms spread out like Jesus H Christ on a crucifix: &quot;Because we can dynamically put on ANY surface of the cube ANY image we like. So THAT&#x27;s how we&#x27;re goi"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47397280,
+    "type": "comment",
+    "time": 1773657560,
+    "url": "https://news.ycombinator.com/item?id=47397280",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Or PostScript, even!<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeWS\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeWS</a><p>Everything old is new again.<p>Alan Kay on \u201cShould web browsers have stuck to being document viewers?\u201d and a discussion of Smalltalk, HyperCard, NeWS, and HyperLook:<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;alan-kay-on-sh"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47386637,
+    "type": "comment",
+    "time": 1773576581,
+    "url": "https://news.ycombinator.com/item?id=47386637",
+    "title": null,
+    "chars": [
+      {
+        "id": "margaret-minsky",
+        "name": "Margaret Minsky"
+      },
+      {
+        "id": "david-levitt",
+        "name": "David Levitt"
+      },
+      {
+        "id": "cynthia-solomon",
+        "name": "Cynthia Solomon"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      }
+    ],
+    "excerpt": "There is a long history of using AI to analyze, compose, and perform music.<p>Atari Cambridge Research- part 5: David Levitt shows Music Box on his Lisp Machine<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ocwsVkqEKys\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=ocwsVkqEKys</a><p>Atari Cambridge Research- part 6: Music box with Tom Trobaugh and drum machine with Jim "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47386278,
+    "type": "comment",
+    "time": 1773573286,
+    "url": "https://news.ycombinator.com/item?id=47386278",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "A lot of this discussion makes more sense if you know the history of The Echo Nest and their acquisition by Spotify.<p>The Echo Nest was one of the most interesting music-tech companies ever built: a music intelligence platform spun out of MIT that analyzed audio, metadata, web text, artist similarity, genre structure, and playlist construction. Spotify bought them in 2014 specifically to strength"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47329682,
+    "type": "comment",
+    "time": 1773182550,
+    "url": "https://news.ycombinator.com/item?id=47329682",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "HyperLook was inspired by HyperCard and implemented for the NeWS window system in PostScript, and supported networking. I used it to implement SimCity for Unix.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeWS\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;NeWS</a><p>SimCity, Cellular Automata, and Happy Tool for HyperLook (nee HyperNeWS (nee GoodNeWS))<p>HyperL"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47329554,
+    "type": "comment",
+    "time": 1773181597,
+    "url": "https://news.ycombinator.com/item?id=47329554",
+    "title": null,
+    "chars": [
+      {
+        "id": "terry-winograd",
+        "name": "Terry Winograd"
+      }
+    ],
+    "excerpt": "I&#x27;d love it if someone could dig up a copy of Digital Lantern&#x27;s HyperCard based Digital Restaurant Guide (DRG) of San Francisco.<p><a href=\"https:&#x2F;&#x2F;www.wired.com&#x2F;1993&#x2F;03&#x2F;digital-guide-done-right&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.wired.com&#x2F;1993&#x2F;03&#x2F;digital-guide-done-right&#x2F;</a><p>&gt;The Digital Restaurant Guide (DRG) from Digital Lant"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47318500,
+    "type": "comment",
+    "time": 1773110330,
+    "url": "https://news.ycombinator.com/item?id=47318500",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "Arguing that something is good because Texas is doing it is ultimately a self defeating argument that reveals a lot about you (as do the other internet incel horseshit and exuberant defenses of Scott Adams&#x27; racism and misogyny you post). Do you mean systematic institutionalized racism, rampant gun violence, and frequent school shootings are good too?"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47317276,
+    "type": "comment",
+    "time": 1773099351,
+    "url": "https://news.ycombinator.com/item?id=47317276",
+    "title": null,
+    "chars": [
+      {
+        "id": "kent-pitman",
+        "name": "Kent Pitman"
+      }
+    ],
+    "excerpt": "Several parts of your claim are incorrect.<p>First, modern LLMs are not &quot;a huge table of phrases&quot;. They are neural networks with billions of learned parameters that generate tokens by computing probability distributions over vocabulary given prior context. There is no lookup table of stored sentences.<p>Second, Eliza-style bots used explicit scripted pattern matching rules. LLMs instead "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47259658,
+    "type": "comment",
+    "time": 1772703768,
+    "url": "https://news.ycombinator.com/item?id=47259658",
+    "title": null,
+    "chars": [
+      {
+        "id": "marc-canter",
+        "name": "Marc Canter"
+      }
+    ],
+    "excerpt": "Marc Canter (founder of MacroMind&#x2F;MacroMedia) one explained to me something revealing about the Director timeline (their original product before Flash, later integrated with the web browser as Shockwave):<p>It&#x27;s essentially just a BASIC program rotated 90 degrees on its side, full of GOTOs.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=35652164\">https:&#x2F;&#x2F;news.yc"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47179106,
+    "type": "comment",
+    "time": 1772190198,
+    "url": "https://news.ycombinator.com/item?id=47179106",
+    "title": null,
+    "chars": [
+      {
+        "id": "eric-hedman",
+        "name": "Eric Hedman"
+      }
+    ],
+    "excerpt": "These are a Barycentric Coordinate System, so the weights on the targets are normalized, must sum to one, and must be positive.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Barycentric_coordinate_system\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Barycentric_coordinate_system</a><p>Barycentric coordinates are the local coordinate system inside a simplex. A sim"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47178558,
+    "type": "comment",
+    "time": 1772184890,
+    "url": "https://news.ycombinator.com/item?id=47178558",
+    "title": null,
+    "chars": [
+      {
+        "id": "tom-ngo",
+        "name": "Tom Ngo"
+      },
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      },
+      {
+        "id": "golan-levin",
+        "name": "Golan Levin"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Applying Tom Ngo&#x27;s Embedded Constraint Graphics to Direct-Manipulation Breakfast Selection (Direct manipulation over simplicial complexes using barycentric interpolation: they&#x27;re not just for breakfast any more.)<p>The Breakfast Simplex is a space of recipes parameterized by {egg, milk, flour} ratios, normalized onto a simplex. Add butter or sugar and the dimension increases. Add prep me"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47149844,
+    "type": "comment",
+    "time": 1772015953,
+    "url": "https://news.ycombinator.com/item?id=47149844",
+    "title": null,
+    "chars": [
+      {
+        "id": "peter-norvig",
+        "name": "Peter Norvig"
+      }
+    ],
+    "excerpt": "That happens often with domain names, but then you get expertsexchange.com, penisland.net, whorepresents.com, therapistfinder.com, a Dutch pre-match analysis site voorspel.nl, or a site about the game overspel.nl.<p>Peter Norvig - The Unreasonable Effectiveness of Data<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=yvDCzhbjYWs&amp;t=1477s\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.co"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47110605,
+    "type": "comment",
+    "time": 1771764728,
+    "url": "https://news.ycombinator.com/item?id=47110605",
+    "title": null,
+    "chars": [
+      {
+        "id": "ian-bogost",
+        "name": "Ian Bogost"
+      }
+    ],
+    "excerpt": "I want to recreate the server for Peter Molyneux&#x27;s &quot;Curiosity: What&#x27;s Inside the Cube?&quot;, but put a life changing Rightward-Facing Cow from Ian Bogost&#x27;s social commentary game &quot;Cow Clicker&quot; inside the cube, instead of a huge disappointment and a pack of broken promises and lies and hype and literal promises of godhood and credits and royalties.<p><a href=\"https:&#"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47104113,
+    "type": "comment",
+    "time": 1771704062,
+    "url": "https://news.ycombinator.com/item?id=47104113",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "Scott Adams (the good Adventure pioneer, not the evil racist anti-vax cartoonist) inspired me too! Check out this Hacker News discussion where he dropped by and answered questions:<p>The Further Text Adventures of Scott Adams (madned.substack.com)<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=29330015\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=29330015</a><p><a href=\"htt"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47091992,
+    "type": "comment",
+    "time": 1771612917,
+    "url": "https://news.ycombinator.com/item?id=47091992",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "That sounds like a good way to structure it, so you have the best of both worlds.<p>There are actually practical and commercial reasons to disable stack editing (authoring), to make turnkey products whose user interfaces are not editable, but still incorporate graphics editors and other features.<p>Apple shipped a non-editable HyperCard stack player, that didn&#x27;t allow you to open the script e"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47066926,
+    "type": "comment",
+    "time": 1771451340,
+    "url": "https://news.ycombinator.com/item?id=47066926",
+    "title": null,
+    "chars": [
+      {
+        "id": "bill-atkinson",
+        "name": "Bill Atkinson"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "I thought the whole point of HyperCard is that the editor is the live app, that live apps can flip into editor mode at any time, and you THE USER can edit them live, mash them up with other apps, create your own unique apps, that there is no difference between app developer and app user, between the editor and the live app, because they are one and the same. Anything less totally misses the entire"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47022870,
+    "type": "comment",
+    "time": 1771154382,
+    "url": "https://news.ycombinator.com/item?id=47022870",
+    "title": null,
+    "chars": [
+      {
+        "id": "arthur-van-hoff",
+        "name": "Arthur van Hoff"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "UniPress, RMS&#x27;s arch enemy Evil Software Hoarder, sold a commercial version of the Amsterdam Compiler Kit as well as Gosling&#x27;s Emacs.<p><a href=\"https:&#x2F;&#x2F;compilers.iecc.com&#x2F;comparch&#x2F;article&#x2F;92-04-041\" rel=\"nofollow\">https:&#x2F;&#x2F;compilers.iecc.com&#x2F;comparch&#x2F;article&#x2F;92-04-041</a><p>UniPress made a PostScript back-end for ACK that they marketed wi"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 47017091,
+    "type": "comment",
+    "time": 1771094505,
+    "url": "https://news.ycombinator.com/item?id=47017091",
+    "title": null,
+    "chars": [
+      {
+        "id": "kent-pitman",
+        "name": "Kent Pitman"
+      }
+    ],
+    "excerpt": "&gt;&quot;Please don&#x27;t assume Lisp is only useful for Animation and Graphics, AI, Bioinformatics, B2B and Ecommerce, Data Mining, EDA&#x2F;Semiconductor applications, Expert Systems, Finance, Intelligent Agents, Knowledge Management, Mechanical CAD, Modeling and Simulation, Natural Language, Optimization, Research, Risk Analysis, Scheduling, Telecom, and Web Authoring just because these are t"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46981538,
+    "type": "comment",
+    "time": 1770846261,
+    "url": "https://news.ycombinator.com/item?id=46981538",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      }
+    ],
+    "excerpt": "I&#x27;m thrilled that you and other people are taking it and running with it! That was the whole point of making it free: it was inspired by Seymour Papert&#x27;s Constructionist philosophy, Alan Kay&#x27;s ideas, and the mission of the OLPC.<p>EA granted the right to use the trademark &quot;SimCity&quot; only if it passed their QA process, and it was quite an ordeal hand holding their QA departm"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46981059,
+    "type": "comment",
+    "time": 1770844385,
+    "url": "https://news.ycombinator.com/item?id=46981059",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "jerry-martin",
+        "name": "Jerry Martin"
+      }
+    ],
+    "excerpt": "Sam Earle did exactly this with RL agents trained via quality-diversity methods on Micropolis: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;smearle&#x2F;gym-city\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;smearle&#x2F;gym-city</a><p>For running locally, I&#x27;d recommend the MicropolisCore repo over the one linked in the original post. MicropolisCore is a clean C++ rewrite that compiles to W"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46953634,
+    "type": "comment",
+    "time": 1770682979,
+    "url": "https://news.ycombinator.com/item?id=46953634",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-henkel-wallace",
+        "name": "David Henkel-Wallace"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "The record doesn\u2019t say what you\u2019re implying. Virginia Giuffre\u2019s deposition is that Epstein told her to have sex with Minsky. It does not say that Minsky agreed, touched her, or did anything. That\u2019s \u201che was instructed to be offered to,\u201d not \u201che did it.\u201d<p>What we have from people who were there:<p>Greg Benford (physicist and SF author, present that day) stated publicly: &quot;I was there. Minsky tu"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46953329,
+    "type": "comment",
+    "time": 1770681071,
+    "url": "https://news.ycombinator.com/item?id=46953329",
+    "title": null,
+    "chars": [
+      {
+        "id": "gary-drescher",
+        "name": "Gary Drescher"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "Marvin Minsky thought of it a long time before Gas Town, and yes, he was on to something.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind</a><p>&gt;The Society of Mind is both the title of a 1986 book and the name of a theory of natural intelligence as written and developed by Marvin Mins"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46878912,
+    "type": "comment",
+    "time": 1770161289,
+    "url": "https://news.ycombinator.com/item?id=46878912",
+    "title": null,
+    "chars": [
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "Marvin Minsky&#x27;s Society of Mind:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Society_of_Mind</a>"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46868917,
+    "type": "comment",
+    "time": 1770112706,
+    "url": "https://news.ycombinator.com/item?id=46868917",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "This is all very astrILLOGICAL!<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46585825\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=46585825</a><p>DonHopkins 22 days ago | prev | next [\u2013]<p>From the HN discussion of &quot;Motive.c: The Soul of the Sims (1997) (donhopkins.com)&quot;:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=14997725\">https:&#x2F;&#x2F;"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46822893,
+    "type": "comment",
+    "time": 1769770409,
+    "url": "https://news.ycombinator.com/item?id=46822893",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-henkel-wallace",
+        "name": "David Henkel-Wallace"
+      }
+    ],
+    "excerpt": "It&#x27;s odd that Bradford DeLong copied my original file of email that I put together without giving any attribution or provenance where it came from, and stripped the introduction I wrote that contextualized it, then omitted the first email from Chris Stacy to 11 different people including Pournelle, which established the actual context.<p>DeLong is a UC Berkeley economics professor, former Dep"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46807586,
+    "type": "comment",
+    "time": 1769677514,
+    "url": "https://news.ycombinator.com/item?id=46807586",
+    "title": null,
+    "chars": [
+      {
+        "id": "andy-looney",
+        "name": "Andrew Looney"
+      }
+    ],
+    "excerpt": "Games are supposed to be fun for humans, and computers don&#x27;t care. So why worry about players cheating at games when you can make the card dealer or the game itself cheat, with the goal of everyone having the most fun (or regret)? Stay true to the rules of the game, just not probability!<p>I&#x27;ve been playing the brilliant card game Fluxx -- Andrew Looney&#x27;s chaos engine where the rule"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46787370,
+    "type": "comment",
+    "time": 1769550239,
+    "url": "https://news.ycombinator.com/item?id=46787370",
+    "title": null,
+    "chars": [
+      {
+        "id": "mc-frontalot",
+        "name": "MC Frontalot"
+      }
+    ],
+    "excerpt": "In MOOLLM Adventures, you can have NPC characters with entire game mechanics, rules, and playing piece prototypes embedded in them, that can run cooperatively in parallel in the same game!<p>The Grue \u2014 The Darkness That IS The Game:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;examples&#x2F;adventure-4&#x2F;characters&#x2F;fictional&#x2F;grue\" rel=\"no"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46777514,
+    "type": "comment",
+    "time": 1769505737,
+    "url": "https://news.ycombinator.com/item?id=46777514",
+    "title": null,
+    "chars": [
+      {
+        "id": "jean-piaget",
+        "name": "Jean Piaget"
+      },
+      {
+        "id": "gary-drescher",
+        "name": "Gary Drescher"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "Your map&#x2F;territory risk is exactly what this lineage formalizes -- internal maps are necessary but they shape and limit perception. Walter Lippmann (1922) makes &quot;pictures in our heads&quot; the operative reality of public judgment:<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Public_Opinion</"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46744594,
+    "type": "comment",
+    "time": 1769269980,
+    "url": "https://news.ycombinator.com/item?id=46744594",
+    "title": null,
+    "chars": [
+      {
+        "id": "mc-frontalot",
+        "name": "MC Frontalot"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      }
+    ],
+    "excerpt": "I appreciate your earnest Harumph, kind cross-armed sir!<p>I take it you never played The Sims? The simulation madness ship sailed 26 years ago, and made well over $5 billion in revenue for Maxis&#x2F;EA (as of 2019), and that&#x27;s if you don&#x27;t even count SimCity that shipped in 1986! ;)<p>The Sims Franchise Has Made Over $5 Billion In Revenue (Published Oct 30, 2019):<p><a href=\"https:&#x2"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46744311,
+    "type": "comment",
+    "time": 1769268066,
+    "url": "https://news.ycombinator.com/item?id=46744311",
+    "title": null,
+    "chars": [
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      },
+      {
+        "id": "bruce-tognazzini",
+        "name": "Bruce Tognazzini"
+      }
+    ],
+    "excerpt": "According to my simulated monkey Palm, Gas Town uses the Infinite Number of Typewriters architecture, but unfortunately they charge by the token.<p>Palm&#x27;s Infinite Number of Typewriters:<p><a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;blob&#x2F;main&#x2F;examples&#x2F;adventure-4&#x2F;pub&#x2F;stage&#x2F;palm-nook&#x2F;study&#x2F;infinite-typewriters.yml\" rel=\"nofollow"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46743031,
+    "type": "comment",
+    "time": 1769257947,
+    "url": "https://news.ycombinator.com/item?id=46743031",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-nelson",
+        "name": "Ted Nelson"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "In the simulated discussion guest book entry, simulated Douglass Engelbart wrote:<p>&gt;Doug Engelbart (Augmentation): &quot;Bootstrapping. The tools that build the tools. Your adventure compiler should be able to compile ITS OWN documentation into an adventure ABOUT how it works. The manual is a playable game.&quot;<p>That is exactly how the self documenting categorized skill directory&#x2F;room "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46742895,
+    "type": "comment",
+    "time": 1769256305,
+    "url": "https://news.ycombinator.com/item?id=46742895",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "ted-nelson",
+        "name": "Ted Nelson"
+      },
+      {
+        "id": "gary-drescher",
+        "name": "Gary Drescher"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "ken-kahn",
+        "name": "Ken Kahn"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      },
+      {
+        "id": "bret-victor",
+        "name": "Bret Victor"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Adventure Uplift \u2014 Building a YAML-to-Web Adventure Compiler with Simulated Computing Pioneers:<p>I ran a 260KB session log where I convened a simulated symposium of computing pioneers to design an Adventure Compiler \u2014 a tool that compiles YAML adventure definitions that run on MOOLLM under cursor into standalone deterministic browser games requiring no LLM at runtime.<p>The twist: the &quot;atten"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46717864,
+    "type": "comment",
+    "time": 1769081428,
+    "url": "https://news.ycombinator.com/item?id=46717864",
+    "title": null,
+    "chars": [
+      {
+        "id": "richard-bartle",
+        "name": "Richard Bartle"
+      }
+    ],
+    "excerpt": "I\u2019ve been working on a harness called MOOLLM (MOO + LLM), applying Sims\u2011style object advertisements, LambdaMOO editable world and programmable objects, and github repo as file system microworld, with Cursor as coherence engine, world generator, character incarnation tool, and skill evaluator. I&#x27;ve written up the approach here and given some examples:<p>MOOLLM Repo:<p><a href=\"https:&#x2F;&#x2"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46629604,
+    "type": "comment",
+    "time": 1768464738,
+    "url": "https://news.ycombinator.com/item?id=46629604",
+    "title": null,
+    "chars": [
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Check out &quot;cursor-mirror&quot;, this extended Anthropic Skill I&#x27;ve developed as a part of MOOLLM, which will tell you all about how cursor assembles its context:<p>cursor-mirror skill: <a href=\"https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;main&#x2F;skills&#x2F;cursor-mirror\" rel=\"nofollow\">https:&#x2F;&#x2F;github.com&#x2F;SimHacker&#x2F;moollm&#x2F;tree&#x2F;ma"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46616119,
+    "type": "comment",
+    "time": 1768399008,
+    "url": "https://news.ycombinator.com/item?id=46616119",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "Not only that, Adams deceptively included the answer &quot;I don&#x27;t know&quot; with &quot;I disagree&quot;, and it STILL didn&#x27;t add up to 50%. And it was an ideologically motivated Push Poll from Rasumssen Reports, a slanted right wing polling organization. A fair poll would never use a White Supremacist trolling slogan as a trick question with no explanation. The question doesn&#x27;t ev"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46608829,
+    "type": "comment",
+    "time": 1768341412,
+    "url": "https://news.ycombinator.com/item?id=46608829",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "The mendacious speaking that Scott Adams did of the living was a hell of a lot worse that speaking factually about him after he died."
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46608243,
+    "type": "comment",
+    "time": 1768339260,
+    "url": "https://news.ycombinator.com/item?id=46608243",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "Speaking of evil trolls: The EVIL Scott Adams should not be confused with the GOOD Scott Adams who made Adventures for microcomputers.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Scott_Adams_(game_designer)\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Scott_Adams_(game_designer)</a><p>I found a great bug in Zork, the original one on MIT-DM, and it was also in "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46588989,
+    "type": "comment",
+    "time": 1768228155,
+    "url": "https://news.ycombinator.com/item?id=46588989",
+    "title": null,
+    "chars": [
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "Minsky&#x27;s key works on this:<p>&quot;K-lines: A Theory of Memory&quot; (1980) -- Cognitive Science. Names as activation vectors that reactivate entire constellations of knowledge.<p><a href=\"https:&#x2F;&#x2F;www.sciencedirect.com&#x2F;science&#x2F;article&#x2F;abs&#x2F;pii&#x2F;S0364021380800140\" rel=\"nofollow\">https:&#x2F;&#x2F;www.sciencedirect.com&#x2F;science&#x2F;article&#x2F;abs&#x2F;pi"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46586659,
+    "type": "comment",
+    "time": 1768214650,
+    "url": "https://news.ycombinator.com/item?id=46586659",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "You are right about mode-collapse -- and that observation is exactly what makes this interesting.<p>In my other comment here, I described The Sims&#x27; zodiac from 1997: Will Wright computed signs from personality via Euclidean distance to archetypal vectors, displayed them cosmetically, and wrote zero behavioral code. The zodiac affected nothing. Yet testers reported bugs: &quot;The zodiac influ"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46585825,
+    "type": "comment",
+    "time": 1768208217,
+    "url": "https://news.ycombinator.com/item?id=46585825",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "From the HN discussion of &quot;Motive.c: The Soul of the Sims (1997) (donhopkins.com)&quot;:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=14997725\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=14997725</a><p><a href=\"https:&#x2F;&#x2F;www.donhopkins.com&#x2F;home&#x2F;images&#x2F;Sims&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.donhopkins.com&#x2F;home&#x2F;images&#x2F;Si"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46581424,
+    "type": "comment",
+    "time": 1768172739,
+    "url": "https://news.ycombinator.com/item?id=46581424",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-selker",
+        "name": "Ted Selker"
+      }
+    ],
+    "excerpt": "&gt;&quot;The products suck! There&#x27;s no sex in them anymore!&quot;<p>Enter &quot;Lickable Pixels&quot; -- the phrase that stuck to describe the Aqua era.<p>Introducing Mac OS X&#x27;s Aqua interface, Jobs said at Macworld in January 2000: &quot;We made the buttons on the screen look so good you&#x27;ll want to lick them.&quot;<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Aqua_"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46579525,
+    "type": "comment",
+    "time": 1768162475,
+    "url": "https://news.ycombinator.com/item?id=46579525",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      }
+    ],
+    "excerpt": "MOOLLM -- treating the LLM as eval() for a microworld operating system.<p>Started this incarnation on Dec 30, 2025 -- but it&#x27;s the crystallization of decades of earlier prototypes, all the way back to my Commodore-64 Logo Adventure. Built on top of Anthropic&#x27;s Skills framework, extended with seven innovations (and counting):<p>1. Instantiation -- Skills as prototypes creating instances w"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46557204,
+    "type": "comment",
+    "time": 1767983256,
+    "url": "https://news.ycombinator.com/item?id=46557204",
+    "title": null,
+    "chars": [
+      {
+        "id": "dan-ingalls",
+        "name": "Dan Ingalls"
+      },
+      {
+        "id": "vanessa-freudenberg",
+        "name": "Vanessa Freudenberg"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "david-ungar",
+        "name": "David Ungar"
+      },
+      {
+        "id": "craig-latta",
+        "name": "Craig Latta"
+      }
+    ],
+    "excerpt": "You nailed it -- the tech enabling JS to match native speed was Self research from the 80s, adapted two decades later. Let me fill in some specifics from people whose papers I highly recommend, and who I&#x27;ve asked questions of and had interesting discussions with!<p>Vanessa Freudenberg [1], Craig Latta [2], Dave Ungar [3], Dan Ingalls, and Alan Kay had some great historical and fresh insights."
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46513216,
+    "type": "comment",
+    "time": 1767712153,
+    "url": "https://news.ycombinator.com/item?id=46513216",
+    "title": null,
+    "chars": [
+      {
+        "id": "bill-atkinson",
+        "name": "Bill Atkinson"
+      }
+    ],
+    "excerpt": "Bill Atkinson designed HyperCard on LSD.<p><a href=\"https:&#x2F;&#x2F;www.mondo2000.com&#x2F;the-inspiration-for-hypercard&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.mondo2000.com&#x2F;the-inspiration-for-hypercard&#x2F;</a><p>The last decade or so of Apple designers have been as out of their minds on ego and cocaine as Donald Trump Jr."
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46314723,
+    "type": "comment",
+    "time": 1766074967,
+    "url": "https://news.ycombinator.com/item?id=46314723",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "It&#x27;s unfortunate that The Good Scott Adams occasionally gets mixed up with The Evil Scott Adams. It&#x27;s so ironic that they share a name.<p>Many people know who the The Evil Scott Adams is, because he&#x27;s such an unrepentant attention starved troll who is notorious not only for making a sock puppet to praise and flatter himself as a genius on internet forums, but for his obsessive unvar"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46259052,
+    "type": "comment",
+    "time": 1765666621,
+    "url": "https://news.ycombinator.com/item?id=46259052",
+    "title": null,
+    "chars": [
+      {
+        "id": "golan-levin",
+        "name": "Golan Levin"
+      }
+    ],
+    "excerpt": "Golan Levin quotes Joy Mountford in his &quot;TED Talk, 2009: Art that looks back at you&quot;:<p>&gt;A lot of my work is about trying to get away from this. This a photograph of the desktop of a student of mine. And when I say desktop, I don&#x27;t just mean the actual desk where his mouse has worn away the surface of the desk. If you look carefully, you can even see a hint of the Apple menu, up "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46227104,
+    "type": "comment",
+    "time": 1765421564,
+    "url": "https://news.ycombinator.com/item?id=46227104",
+    "title": null,
+    "chars": [
+      {
+        "id": "ken-perlin",
+        "name": "Ken Perlin"
+      }
+    ],
+    "excerpt": "Since 1996, Ken Perlin has published a whole bunch of extremely cool Java applet demos on his web page, which he uses to teach his students at NYU and anyone who wanted to learn Java and computer graphics. One of his demos was a procedural planet generator!<p>I learned a lot from his papers and demo code, and based the design of The Sims character animation system on his Improv project.<p><a href="
+  },
+  {
+    "author": "DonHopkins",
+    "id": 46218436,
+    "type": "comment",
+    "time": 1765378930,
+    "url": "https://news.ycombinator.com/item?id=46218436",
+    "title": null,
+    "chars": [
+      {
+        "id": "bill-atkinson",
+        "name": "Bill Atkinson"
+      }
+    ],
+    "excerpt": "Bill Atkinson was hallucinating when he envisioned HyperCard.<p><a href=\"https:&#x2F;&#x2F;patternproject.substack.com&#x2F;p&#x2F;from-the-mac-to-the-mystical-bill\" rel=\"nofollow\">https:&#x2F;&#x2F;patternproject.substack.com&#x2F;p&#x2F;from-the-mac-to-the-my...</a><p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44530767\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=445307"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45998957,
+    "type": "comment",
+    "time": 1763678986,
+    "url": "https://news.ycombinator.com/item?id=45998957",
+    "title": null,
+    "chars": [
+      {
+        "id": "mc-frontalot",
+        "name": "MC Frontalot"
+      }
+    ],
+    "excerpt": "If this predicament seems particularly cruel, consider whose fault it could be: not a torch or a match in your inventory.<p>MC Frontalot - It Is Pitch Dark<p><a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=4nigRT2KmCE\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=4nigRT2KmCE</a><p>Featuring Steve Meretzky!<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Steve_"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45981599,
+    "type": "comment",
+    "time": 1763570101,
+    "url": "https://news.ycombinator.com/item?id=45981599",
+    "title": null,
+    "chars": [
+      {
+        "id": "rebecca-heineman",
+        "name": "Rebecca Heineman"
+      }
+    ],
+    "excerpt": "Are you actually so mind-numbingly ignorant that you think Rebecca Heineman had a brother named Bill, that you would rudely and incorrectly try to correct people who knew her story well, during a memorial discussion of her life and death?<p>Or were you purposefully going out of your way to perpetrate performative ignorance and transphobic bullying, just to let everyone know that you&#x27;re a bigo"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45940781,
+    "type": "comment",
+    "time": 1763242594,
+    "url": "https://news.ycombinator.com/item?id=45940781",
+    "title": null,
+    "chars": [
+      {
+        "id": "tom-ngo",
+        "name": "Tom Ngo"
+      },
+      {
+        "id": "golan-levin",
+        "name": "Golan Levin"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=12572696\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=12572696</a><p>DonHopkins on Sept 24, 2016 | prev | next [\u2013]<p>That is a neat idea! It reminds me of another cool constraint based animation system called &quot;Embedded Constraint Graphics&quot; that Tom Ngo developed at Interval Research Corporation, for which he filed a pat"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45887191,
+    "type": "comment",
+    "time": 1762868625,
+    "url": "https://news.ycombinator.com/item?id=45887191",
+    "title": null,
+    "chars": [
+      {
+        "id": "hugh-daniel",
+        "name": "Hugh Daniel"
+      }
+    ],
+    "excerpt": "&gt;Sadly, so far as I know, there is no such detailed documentation or test-suite for terminals and terminal emulators. Because they\u2019re fundamentally about visual output, it\u2019s quite difficult to properly test them.<p>&gt;A special shout-out to vttest which does try to exercise a bunch of corner-cases of VTxxx emulation. Unfortunately, it can only really be used interactively, so it&#x27;s not use"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45826085,
+    "type": "comment",
+    "time": 1762367008,
+    "url": "https://news.ycombinator.com/item?id=45826085",
+    "title": null,
+    "chars": [
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "I recently had an interesting chat with Liam Quin (who was on W3C&#x27;s XML team) about XML and CDATA on Facebook, where he revealed some surprising history!<p>Liam Quinn in his award winning weirdest hat, also Microsoft&#x27;s Matthew Fuchs&#x27; talk on achieving extensibility and reuse for XSLT 2.0 stylesheets, and Stephan Kesper\u0300\u0300&#x27;s simple proof that XSLT and XQuery are Turing complete u"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45715306,
+    "type": "comment",
+    "time": 1761513566,
+    "url": "https://news.ycombinator.com/item?id=45715306",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "I recently ran across an interesting postmortem critique of PataPata by its author Paul Fernhout, which was a Python implementation of some ideas from Squeak and Self, in which he discusses some inherent problems with prototype based object systems.<p><a href=\"https:&#x2F;&#x2F;patapata.sourceforge.net&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;patapata.sourceforge.net&#x2F;</a><p>&gt;The PataPata pr"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45660174,
+    "type": "comment",
+    "time": 1761073556,
+    "url": "https://news.ycombinator.com/item?id=45660174",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Oh sweet summer child.<p><a href=\"http:&#x2F;&#x2F;xahlee.info&#x2F;emacs&#x2F;misc&#x2F;emacs_macos_emoji.html\" rel=\"nofollow\">http:&#x2F;&#x2F;xahlee.info&#x2F;emacs&#x2F;misc&#x2F;emacs_macos_emoji.html</a><p>Color emoji was deliberately disabled on macOS (2016): policy first, parity later. Emacs 25 turned off multicolor fonts on the Cocoa port even though they worked, with a NEWS note saying t"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45648739,
+    "type": "comment",
+    "time": 1760991361,
+    "url": "https://news.ycombinator.com/item?id=45648739",
+    "title": null,
+    "chars": [
+      {
+        "id": "arthur-van-hoff",
+        "name": "Arthur van Hoff"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Thank you fellow HyperLooker! For me, PostScript WAS the appeal!<p>For the rest of the civilized world, Arthur van Hoff wrote &quot;PdB&quot;, an object oriented PostScript =&gt; C compiler.<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=10088193\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=10088193</a><p>&gt;Arthur van Hoff wrote PdB, and we used it for to develop HyperLoo"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45646243,
+    "type": "comment",
+    "time": 1760979650,
+    "url": "https://news.ycombinator.com/item?id=45646243",
+    "title": null,
+    "chars": [
+      {
+        "id": "coco-conn",
+        "name": "Coco Conn"
+      }
+    ],
+    "excerpt": "Coco Conn and Paul Rother wrote this up about what they did with FORTH at HOMER &amp; Assoc, who made some really classic music videos including Atomic Dog, and hired Charles Moore himself! Here&#x27;s what Coco Conn posted about it, and some discussion and links about it that I&#x27;m including with her permission:<p><a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=36751574\">https:&#x"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45553265,
+    "type": "comment",
+    "time": 1760222298,
+    "url": "https://news.ycombinator.com/item?id=45553265",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "&gt;The ability to naturally gain precision the further out you drag is very handy and intuitive.<p>Pie menus, where the selection is based on the gesture direction, allow you to move further out (longer gesture) to get more &quot;leverage&quot; or precise control over the angle (either continuous angle, or the selected slice).<p>The angle selects a slice, but you can think of a knob as a pie menu"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45512139,
+    "type": "comment",
+    "time": 1759898300,
+    "url": "https://news.ycombinator.com/item?id=45512139",
+    "title": null,
+    "chars": [
+      {
+        "id": "terry-winograd",
+        "name": "Terry Winograd"
+      },
+      {
+        "id": "bill-joy",
+        "name": "Bill Joy"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "I&#x27;ve known and worked with James Gosling for years before Java (Live Oak), on his earlier projects, Emacs at UniPress and NeWS at Sun, and fought along side him against Sun management trying to make NeWS free in 1990 (and I left Sun because they broke the promises they made us and spilled a lot of blood), so I didn&#x27;t need to learn about Java&#x27;s history from Wikipedia.<p>James&#x27;s "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45486116,
+    "type": "comment",
+    "time": 1759706312,
+    "url": "https://news.ycombinator.com/item?id=45486116",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      }
+    ],
+    "excerpt": "She clarified that in her subsequent article. It was the result of Ben Shneiderman&#x27;s and his students&#x27; controlled empirical studies, not whimsy or arbitrary &quot;creative&quot; design (which we suffer from so much these days).<p>Revisiting why hyperlinks are blue:<p><a href=\"https:&#x2F;&#x2F;blog.mozilla.org&#x2F;en&#x2F;internet-culture&#x2F;why-are-hyperlinks-blue-revisited&#x2F;\" re"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45486075,
+    "type": "comment",
+    "time": 1759705905,
+    "url": "https://news.ycombinator.com/item?id=45486075",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      }
+    ],
+    "excerpt": "Yes, or maybe he didn&#x27;t know or remember what influenced Tim Berners Lee to make them blue, so he just took credit for himself decades later, so yes.<p>Ben Shneiderman and his students originally performed experiments that determined that blue was the best color, then Ben developed and ACM distributed HyperTIES with blue links as &quot;Hypertext on Hypertext&quot;, which Tim saw, and years la"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45486021,
+    "type": "comment",
+    "time": 1759705160,
+    "url": "https://news.ycombinator.com/item?id=45486021",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      }
+    ],
+    "excerpt": "Here is some email between Ben Shneiderman and Mark Andreessen about it that I posted to the Internet History mailing list archive with their permission:<p><a href=\"https:&#x2F;&#x2F;elists.isoc.org&#x2F;pipermail&#x2F;internet-history&#x2F;2020-April&#x2F;005961.html\" rel=\"nofollow\">https:&#x2F;&#x2F;elists.isoc.org&#x2F;pipermail&#x2F;internet-history&#x2F;2020-Apri...</a><p>And a couple of rele"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45485923,
+    "type": "comment",
+    "time": 1759703956,
+    "url": "https://news.ycombinator.com/item?id=45485923",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "I (or a commenter who goes by the same name) contacted the author Elise Blanchard and introduced her to Ben Shneiderman, and gave her some links to our work on HyperTIES. She wrote a followup article with more detailed information.<p>Revisiting why hyperlinks are blue:<p><a href=\"https:&#x2F;&#x2F;blog.mozilla.org&#x2F;en&#x2F;internet-culture&#x2F;why-are-hyperlinks-blue-revisited&#x2F;\" rel=\"nof"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45427516,
+    "type": "comment",
+    "time": 1759249378,
+    "url": "https://news.ycombinator.com/item?id=45427516",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-levitt",
+        "name": "David Levitt"
+      },
+      {
+        "id": "lynn-conway",
+        "name": "Lynn Conway"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=31758139</a><p>40 points by DonHopkins on June 15, 2022 | parent | context | favorite | on: Purdue Starts Comprehensive Semiconductor Degree P...<p>Lynn Conway, co-author along with Carver Mead of &quot;the textbook&quot; on VLSI design, &quot;Introduction to VLSI Systems&quot"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45326370,
+    "type": "comment",
+    "time": 1758486722,
+    "url": "https://news.ycombinator.com/item?id=45326370",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-nelson",
+        "name": "Ted Nelson"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16246665\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16246665</a><p>DonHopkins on Jan 27, 2018 | parent | next [\u2013]<p>One major problem with Ted&#x27;s design is that it wasn&#x27;t simple enough to support multiple compatible implementations.<p>I&#x27;ll repeat the James Clark quote from the wonderful DDJ interview that I posted"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45326354,
+    "type": "comment",
+    "time": 1758486600,
+    "url": "https://news.ycombinator.com/item?id=45326354",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-nelson",
+        "name": "Ted Nelson"
+      },
+      {
+        "id": "hugh-daniel",
+        "name": "Hugh Daniel"
+      },
+      {
+        "id": "ted-selker",
+        "name": "Ted Selker"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16224154\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=16224154</a><p>DonHopkins on Jan 24, 2018 | parent | context | favorite | on: Ted Nelson on What Modern Programmers Can Learn fr...<p>I think his biggest problem is that he refuses to collaborate with other people, or build on top of current technology.<p>He&#x27;s had a lot o"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45320138,
+    "type": "comment",
+    "time": 1758430129,
+    "url": "https://news.ycombinator.com/item?id=45320138",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-simulation-games-bd7a9d81e62d#73e0\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;designing-user-interfaces-to-s...</a><p>&gt;Everyone notices the obvious built-in political bias, whatever that is. But everyone sees it from a different perspective, so nobody agrees what its real political agenda actual"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45320109,
+    "type": "comment",
+    "time": 1758429561,
+    "url": "https://news.ycombinator.com/item?id=45320109",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "terry-winograd",
+        "name": "Terry Winograd"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Will Wright gave postmortems for SimEarth, SimAnt, and SimCity 2000, and previewed an extremely early pre-release prototype version of Dollhouse (which eventually became The Sims). SimAnt was too simple, SimEarth was too complex, SimCity 2000 was just right, and Dollhouse (The Sims) was what he was working on next.<p>Will Wright on Designing User Interfaces to Simulation Games (1996) (2023 Video U"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45285336,
+    "type": "comment",
+    "time": 1758169158,
+    "url": "https://news.ycombinator.com/item?id=45285336",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "Alan Kay on \u201cShould web browsers have stuck to being document viewers?\u201d and a discussion of Smalltalk, HyperCard, NeWS, and HyperLook<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;alan-kay-on-should-web-browsers-have-stuck-to-being-document-viewers-and-a-discussion-of-news-5cb92c7b3445\" rel=\"nofollow\">https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;alan-kay-on-should-web-browser...</a><p>&g"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45239078,
+    "type": "comment",
+    "time": 1757849797,
+    "url": "https://news.ycombinator.com/item?id=45239078",
+    "title": null,
+    "chars": [
+      {
+        "id": "brad-myers",
+        "name": "Brad A. Myers"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=26668885\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=26668885</a><p>DonHopkins on April 2, 2021 | parent | context | favorite | on: Spreadsheet is a software development paradigm<p>Spreadsheet certainly are visual programming languages: by any measure, by far one of the most common most widely used types of visual programming la"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45234687,
+    "type": "comment",
+    "time": 1757792005,
+    "url": "https://news.ycombinator.com/item?id=45234687",
+    "title": null,
+    "chars": [
+      {
+        "id": "stone-librande",
+        "name": "Stone Librande"
+      },
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "chaim-gingold",
+        "name": "Chaim Gingold"
+      },
+      {
+        "id": "bret-victor",
+        "name": "Bret Victor"
+      }
+    ],
+    "excerpt": "Will Wright credits Jay Forrester for inspiring him to simulate a city on the computer:<p><a href=\"https:&#x2F;&#x2F;www.gamedeveloper.com&#x2F;business&#x2F;the-replay-interviews-will-wright\" rel=\"nofollow\">https:&#x2F;&#x2F;www.gamedeveloper.com&#x2F;business&#x2F;the-replay-interviews...</a><p>&gt;How did the leap from Raid&#x27;s world editor, to SimCity with its urban design theories, happen?"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 45074825,
+    "type": "comment",
+    "time": 1756562942,
+    "url": "https://news.ycombinator.com/item?id=45074825",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "Another more constructive way to frame &quot;de-professionalization&quot; is &quot;prosumerization&quot;, focusing more on the gain to consumers than the loss to professionals.<p>I was lucky to work on a AAA game called The Sims from 1997-2000, at the end of the era when a small team could make a product like that (the teams for The Sims 2-4 were enormous in comparison).<p>We didn&#x27;t have the "
+  },
+  {
+    "author": "DonHopkins",
+    "id": 44950794,
+    "type": "comment",
+    "time": 1755606405,
+    "url": "https://news.ycombinator.com/item?id=44950794",
+    "title": null,
+    "chars": [
+      {
+        "id": "paul-debevec",
+        "name": "Paul Debevec"
+      },
+      {
+        "id": "golan-levin",
+        "name": "Golan Levin"
+      }
+    ],
+    "excerpt": "Very nice! I love the way the leash droops from gravity when you give it some slack, to unobtrusively and intuitively show users what&#x27;s really going on, how the control system actually works, so it&#x27;s tangible and physical, not a mysterious unpredictable black box. True honest wysiwyg &quot;direct manipulation&quot;, no invisible magic.<p><a href=\"https:&#x2F;&#x2F;en.wikipedia.org&#x2F;w"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 44945204,
+    "type": "comment",
+    "time": 1755550272,
+    "url": "https://news.ycombinator.com/item?id=44945204",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "jamie-doornbos",
+        "name": "Jamie Doornbos"
+      }
+    ],
+    "excerpt": "Have you played around with Sims-like plug-in objects, which include the knowledge of how to make the characters use themselves?<p>The important thing is that you can plug in new objects without reprogramming the people.<p>Sims objects (including characters) have a list of &quot;advertisements&quot; of possible interactions (usually shown as items on the user control pie menu, but also including i"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 44934183,
+    "type": "comment",
+    "time": 1755458852,
+    "url": "https://news.ycombinator.com/item?id=44934183",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-levitt",
+        "name": "David Levitt"
+      },
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44105312\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=44105312</a><p>DonHopkins 82 days ago | parent | context | favorite | on: Yes-rs: A fast, memory-safe rewrite of the classic...<p>Joking aside, this is Marvin Minsky&#x27;s paper &quot;Jokes and their Relation to the Cognitive Unconscious&quot;, published in Cognitive Constrai"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 44911071,
+    "type": "comment",
+    "time": 1755257572,
+    "url": "https://news.ycombinator.com/item?id=44911071",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      },
+      {
+        "id": "terry-winograd",
+        "name": "Terry Winograd"
+      },
+      {
+        "id": "chaim-gingold",
+        "name": "Chaim Gingold"
+      },
+      {
+        "id": "brian-eno",
+        "name": "Brian Eno"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Trying to simulate every microscopic detail doesn&#x27;t necessarily translate to a fun game (or even a realistic simulation). After working with Will on SimCity and The Sims, I&#x27;ve written about what he calls &quot;the simulator effect&quot; aka apophenia (delusional thought as self-referential, over-interpretations of actual sensory perceptions, as opposed to hallucinations), and what I call"
+  },
+  {
+    "author": "DonHopkins",
+    "id": 44815776,
+    "type": "comment",
+    "time": 1754504943,
+    "url": "https://news.ycombinator.com/item?id=44815776",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-nelson",
+        "name": "Ted Nelson"
+      },
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "<a href=\"https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34304655\">https:&#x2F;&#x2F;news.ycombinator.com&#x2F;item?id=34304655</a><p>Alan Kay on web browsers, document viewers, Smalltalk, NeWS and HyperCard (2021) (donhopkins.medium.com)<p>234 points by gjvc on Jan 8, 2023 | hide | past | favorite | 272 comments<p><a href=\"https:&#x2F;&#x2F;donhopkins.medium.com&#x2F;alan-kay-on-should-web-br"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7579613,
+    "type": "comment",
+    "time": 1397346267,
+    "url": "https://news.ycombinator.com/item?id=7579613",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Warren Teitelman described a lot of the great work done at Xerox PARC in &quot;Ten Years of Window Systems - A Retrospective View&quot; in the book &quot;Methodology of Window Management,&quot; Proceedings of the Alvey Workshop at Cosener&#x27;s House, Abingdon that took place from 29 April 1985 until 1 May 1985.<p>&quot;Both James Gosling and I currently work for SUN and the reason for my wanting"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7579568,
+    "type": "comment",
+    "time": 1397344677,
+    "url": "https://news.ycombinator.com/item?id=7579568",
+    "title": null,
+    "chars": [
+      {
+        "id": "ivan-sutherland",
+        "name": "Ivan Sutherland"
+      },
+      {
+        "id": "oliver-steele",
+        "name": "Oliver Steele"
+      }
+    ],
+    "excerpt": "I wrote that article about nine years ago, and OpenLaszlo never took over the world the way I hoped it would, but Max Carlson, one of its chief architects, is working on reimplementing the good parts in JavaScript&#x2F;CoffeeScript, without all the baggage. It&#x27;s a work in progress and not very well documented, but it embodies some wonderful ideas!<p><a href=\"https://github.com/mcarlson/rheses"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7455485,
+    "type": "comment",
+    "time": 1395613191,
+    "url": "https://news.ycombinator.com/item?id=7455485",
+    "title": null,
+    "chars": [
+      {
+        "id": "henry-minsky",
+        "name": "Henry Minsky"
+      }
+    ],
+    "excerpt": "Henry Minsky, Marvin&#x27;s son, works at Nest on the &quot;Thermogotchi&quot;, a digital pet that lives on your wall, that&#x27;s a sensor-driven, Wi-Fi-enabled, self-learning, programmable thermostat which you train to adapt to your habits and lifestyle, and keep happy by feeding love and energy.<p><a href=\"http://www.beartronics.com/\" rel=\"nofollow\">http:&#x2F;&#x2F;www.beartronics.com&#x2F;</a"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7455368,
+    "type": "comment",
+    "time": 1395611662,
+    "url": "https://news.ycombinator.com/item?id=7455368",
+    "title": null,
+    "chars": [
+      {
+        "id": "marvin-minsky",
+        "name": "Marvin Minsky"
+      }
+    ],
+    "excerpt": "SimAntics is a visual artificial intelligence programming language for scripting the behavior of irrational simulated people and intelligent inanimate objects, developed for The Sims at Maxis. ;)<p>(That&#x27;s lower case game industry artificial intelligence, not Upper Case Marvin Minsky Artificial Intelligence.)<p><a href=\"http://wiki.niotso.org/SimAntics\" rel=\"nofollow\">http:&#x2F;&#x2F;wiki.ni"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7357505,
+    "type": "comment",
+    "time": 1394151189,
+    "url": "https://news.ycombinator.com/item?id=7357505",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      }
+    ],
+    "excerpt": "Using min where I mean max and max where I mean min is my favorite classic mistake that I usually just make most of the time and remember to check for and fix afterwards.<p>The same thing with misusing &quot;this&quot; in JavaScript closures: no matter how hard I try to consciously avoid doing it, it&#x27;s always the first thing I check for when code doesn&#x27;t work as intended, because I still"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7356067,
+    "type": "comment",
+    "time": 1394134748,
+    "url": "https://news.ycombinator.com/item?id=7356067",
+    "title": null,
+    "chars": [
+      {
+        "id": "richard-stallman",
+        "name": "Richard M. Stallman"
+      }
+    ],
+    "excerpt": "Since you&#x27;ve been so generous to offer you opinion of Theo, I think it&#x27;s only fair and balanced for me to offer my opinion of Eric the Flute, in a way that is consistent with Eric&#x27;s own name dropping protocol.<p>I believe that Eric the Flute was disrespectful to Linus by labeling ESR&#x27;s &quot;Many Eyes&quot; theory &quot;Linus&#x27;s Law&quot;.<p>I believe that Eric the Flute wa"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7267203,
+    "type": "comment",
+    "time": 1392851025,
+    "url": "https://news.ycombinator.com/item?id=7267203",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      }
+    ],
+    "excerpt": "Thank you! I still ask Ben Shneiderman to review stuff that I write, and value his feedback -- I&#x27;ve learned a lot from him, and he really cares a lot for users and is great at explaining stuff. He&#x27;s the one who insisted on calling it HCI instead of CHI, to put Humans before Computers. I got to talk with Mark Weiser about The Sims before he passed away, and he thought it would be popular,"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7262849,
+    "type": "comment",
+    "time": 1392804510,
+    "url": "https://news.ycombinator.com/item?id=7262849",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "Pie menus frame this kind of interaction as pop-up menus, which provide a &quot;self revealing gestural user interface&quot;. The menu pops up and leads you through the possible selections. That feedback trains you to rehearse the gestures. Soon you begin to make the gesture without looking at the menu, then wait for the menu feedback to confirm you&#x27;re doing the right thing. Finally you gain "
+  },
+  {
+    "author": "SimHacker",
+    "id": 7262676,
+    "type": "comment",
+    "time": 1392801201,
+    "url": "https://news.ycombinator.com/item?id=7262676",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      },
+      {
+        "id": "david-levitt",
+        "name": "David Levitt"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "This builds on the basic idea behind pie menus, which is to exploit Fitt&#x27;s Law, by lowering the target distance by centering the menu around the point of contact, and increasing the target area by basing the selection on the direction of movement instead of hitting a small absolutely positioned target. <a href=\"https://en.wikipedia.org/wiki/Fitts_law\" rel=\"nofollow\">https:&#x2F;&#x2F;en.wikip"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7096315,
+    "type": "comment",
+    "time": 1390322303,
+    "url": "https://news.ycombinator.com/item?id=7096315",
+    "title": null,
+    "chars": [
+      {
+        "id": "ted-selker",
+        "name": "Ted Selker"
+      }
+    ],
+    "excerpt": "When Ted Selker was at the MIT Media Lab, he directed an augmented reality smart kitchen project called &quot;Counter Intelligence&quot;. <a href=\"http://web.media.mit.edu/~selker/\" rel=\"nofollow\">http:&#x2F;&#x2F;web.media.mit.edu&#x2F;~selker&#x2F;</a> <a href=\"http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=87D98335CC767EED29EE1EBFB810682F?doi=10.1.1.88.2875&amp;rep=rep1&amp;type=pdf\" "
+  },
+  {
+    "author": "SimHacker",
+    "id": 7052286,
+    "type": "comment",
+    "time": 1389637080,
+    "url": "https://news.ycombinator.com/item?id=7052286",
+    "title": null,
+    "chars": [
+      {
+        "id": "chaim-gingold",
+        "name": "Chaim Gingold"
+      }
+    ],
+    "excerpt": "The original SimCity Classic source code is open source, and instructors like Chaim Gingold and Mark Sample are actually having their students study (and deconstruct) the source code:<p>Chaim Gingold, Simulation for Games: <a href=\"http://classes.soe.ucsc.edu/cmps179/Spring13/\" rel=\"nofollow\">http:&#x2F;&#x2F;classes.soe.ucsc.edu&#x2F;cmps179&#x2F;Spring13&#x2F;</a><p>Mark Sample, Criminal Code: T"
+  },
+  {
+    "author": "SimHacker",
+    "id": 7052107,
+    "type": "comment",
+    "time": 1389635451,
+    "url": "https://news.ycombinator.com/item?id=7052107",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      },
+      {
+        "id": "doreen-nelson",
+        "name": "Doreen Nelson"
+      }
+    ],
+    "excerpt": "The source code for the original SimCity Classic is open source, called &quot;Micropolis&quot;: <a href=\"https://code.google.com/p/micropolis\" rel=\"nofollow\">https:&#x2F;&#x2F;code.google.com&#x2F;p&#x2F;micropolis</a><p>While it&#x27;s nowhere near as fancy as the latest version, there are other directions to take it than adding lots of bells and whistles and complexity.<p>It&#x27;s simplicity ma"
+  },
+  {
+    "author": "SimHacker",
+    "id": 6905756,
+    "type": "comment",
+    "time": 1387031428,
+    "url": "https://news.ycombinator.com/item?id=6905756",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "So my post with links to articles about what he actually did and said is ridiculous and awful, but nothing Scott Adams has ever done or said is ridiculous and awful?<p>And what&#x27;s so ridiculous and awful about linking to Scott Adam&#x27;s own misogynistic rants and the reactions they provoked? I&#x27;m certainly not the only one who disagrees with you and thinks Scott Adams is a certifiable do"
+  },
+  {
+    "author": "SimHacker",
+    "id": 6905667,
+    "type": "comment",
+    "time": 1387028977,
+    "url": "https://news.ycombinator.com/item?id=6905667",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "And there are MUCH better causes for YOU to devote yourself to than the Sysiphian task of carrying Scott Adam&#x27;s douchebag water.<p>Nobody had mentioned what a douchebag he is yet, so it&#x27;s a valid and relevant point to raise. And posting a few links is a lot less effort than the all the time and energy Scott Adams puts into his sock puppetry, so why not?<p>Seeing as how you&#x27;re so dev"
+  },
+  {
+    "author": "SimHacker",
+    "id": 6904848,
+    "type": "comment",
+    "time": 1387001457,
+    "url": "https://news.ycombinator.com/item?id=6904848",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-adams",
+        "name": "Scott Adams"
+      }
+    ],
+    "excerpt": "His sock puppets seem to care a lot about what he has to say about all forms of douchbaggery.<p><a href=\"http://freethoughtblogs.com/pharyngula/2013/06/17/the-saga-of-scott-adams-scrotum/\" rel=\"nofollow\">http:&#x2F;&#x2F;freethoughtblogs.com&#x2F;pharyngula&#x2F;2013&#x2F;06&#x2F;17&#x2F;the-saga-o...</a><p>Scott Adams is up to his old obliviously obtuse act again. You may recall that the creator "
+  },
+  {
+    "author": "SimHacker",
+    "id": 5861229,
+    "type": "comment",
+    "time": 1370953704,
+    "url": "https://news.ycombinator.com/item?id=5861229",
+    "title": null,
+    "chars": [
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "X-Windows is a dead end (and has been for a long time), and X window managers are as complex and dug into a pit of pointless complexity as the Space Shuttle.<p>There are a lot of good reasons to have a scriptable window manager, with a scripting language tightly integrated with the window system.<p>When I started hacking X10, I wanted to implement pie menus for it. There was a cheezy little librar"
+  },
+  {
+    "author": "SimHacker",
+    "id": 5845119,
+    "type": "comment",
+    "time": 1370704980,
+    "url": "https://news.ycombinator.com/item?id=5845119",
+    "title": null,
+    "chars": [
+      {
+        "id": "david-rosenthal",
+        "name": "David S. H. Rosenthal"
+      },
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "It&#x27;s much harder (and less efficient) to synchronize code running in two different address spaces, communicating via an asynchronous protocol.<p>NeWS had &quot;synchronous event handlers&quot; that when triggered would block the distribution of all other events (i.e. taking them off of the global event queue, figuring out their target, and putting them on a local event queue), until the synch"
+  },
+  {
+    "author": "SimHacker",
+    "id": 5844345,
+    "type": "comment",
+    "time": 1370681009,
+    "url": "https://news.ycombinator.com/item?id=5844345",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "Just put a JavaScript (or whatever) interpreter in the window server, and program the window manager locally in that. Then you aren&#x27;t fucked by synchronization issues. James Gosling did something like that with PostScript many years ago, an alternative to X11, which was then merged with X11, and it was called NeWS (and later X11&#x2F;NeWS or OpenWindows): <a href=\"http:&#x2F;&#x2F;en.wikipedi"
+  },
+  {
+    "author": "SimHacker",
+    "id": 5618419,
+    "type": "comment",
+    "time": 1367084173,
+    "url": "https://news.ycombinator.com/item?id=5618419",
+    "title": null,
+    "chars": [
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "This one?<p>The Design and Implementation of Pie Menus<p>There're Fast, Easy, and Self-Revealing.<p>Copyright (C) 1991 by Don Hopkins.<p>Originally published in Dr. Dobb's Journal, Dec. 1991, lead cover story, user interface issue.<p><a href=\"http://www.donhopkins.com/drupal/node/98\" rel=\"nofollow\">http://www.donhopkins.com/drupal/node/98</a><p>More stuff at:<p>Home &#62; topics &#62; Software &#6"
+  },
+  {
+    "author": "SimHacker",
+    "id": 5618383,
+    "type": "comment",
+    "time": 1367083570,
+    "url": "https://news.ycombinator.com/item?id=5618383",
+    "title": null,
+    "chars": [
+      {
+        "id": "ben-shneiderman",
+        "name": "Ben Shneiderman"
+      },
+      {
+        "id": "mark-weiser",
+        "name": "Mark Weiser"
+      },
+      {
+        "id": "don-hopkins",
+        "name": "Don Hopkins"
+      }
+    ],
+    "excerpt": "Thought experiments aren't as reliable as controlled experiments for objectively measuring the speed and efficacy of user interfaces, and interviewing actual users for discovering subjective preferences.<p>We performed a controlled experiment in 1988 that compared eight item pie menus to linear menus, which showed that pie menus were significantly faster and had lower error rates than linear menus"
+  },
+  {
+    "author": "SimHacker",
+    "id": 4952671,
+    "type": "comment",
+    "time": 1356098427,
+    "url": "https://news.ycombinator.com/item?id=4952671",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      },
+      {
+        "id": "seymour-papert",
+        "name": "Seymour Papert"
+      }
+    ],
+    "excerpt": "First I'll describe why I think that SimCity was so successful, and The Sims was even more successful:<p>Will gave a talk about designing user interface to simulation games back some time around '96, to Terry Winnograd's user interface design class at Stanford (at the time I worked with Terry at Interval Research), and I sat in on the class and took these notes:<p><a href=\"http://www.art.net/~hopk"
+  },
+  {
+    "author": "SimHacker",
+    "id": 4947964,
+    "type": "comment",
+    "time": 1356015197,
+    "url": "https://news.ycombinator.com/item?id=4947964",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "Naw, I was just lucky to be hyperactive, and in the right place at the right time, plus I benefited from a lot of nice people who helped me get there.<p>There are a lot of great people lurking around here, but the really godly ones don't have time to surf the internet! The thing you realize by meeting such people is that there is really no limit on how much you can learn and what you can do. And i"
+  },
+  {
+    "author": "SimHacker",
+    "id": 4048021,
+    "type": "comment",
+    "time": 1338472588,
+    "url": "https://news.ycombinator.com/item?id=4048021",
+    "title": null,
+    "chars": [
+      {
+        "id": "arthur-van-hoff",
+        "name": "Arthur van Hoff"
+      }
+    ],
+    "excerpt": "Arthur van Hoff (who wrote the first Java compiler in Java, developed AWT and HotJava, founded Marimba and more recently Flipboard) developed a user interface tool for the NeWS window system inspired by HyperCard, that was called GoodNeWS, HyperNeWS and then HyperLook.<p><a href=\"http://www.art.net/~hopkins/Don/hyperlook/index.html\" rel=\"nofollow\">http://www.art.net/~hopkins/Don/hyperlook/index.ht"
+  },
+  {
+    "author": "SimHacker",
+    "id": 3676313,
+    "type": "comment",
+    "time": 1331142385,
+    "url": "https://news.ycombinator.com/item?id=3676313",
+    "title": null,
+    "chars": [
+      {
+        "id": "scott-mccloud",
+        "name": "Scott McCloud"
+      }
+    ],
+    "excerpt": "Well, SimCity \"classic\" was 2D top-down square tiles with flat terrain. SimCity 2000 was orthographic with terrain elevation but essentially 2D sprite graphics.<p>Maxis announced that SimCity 3000 was going to be full 3D, and in fact demonstrated early versions of it to the press, but the project was too ambitious, took far too long, and the technology was not quite there yet. Maxis almost ran out"
+  },
+  {
+    "author": "SimHacker",
+    "id": 3333396,
+    "type": "comment",
+    "time": 1323431012,
+    "url": "https://news.ycombinator.com/item?id=3333396",
+    "title": null,
+    "chars": [
+      {
+        "id": "owen-densmore",
+        "name": "Owen Densmore"
+      },
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "I've written piles of \"Direct PostScript\" code for the NeWS window system -- <a href=\"http://en.wikipedia.org/wiki/NeWS\" rel=\"nofollow\">http://en.wikipedia.org/wiki/NeWS</a> ...<p>Pie menu widget: <a href=\"http://www.donhopkins.com/home/code/piemenu.ps.txt\" rel=\"nofollow\">http://www.donhopkins.com/home/code/piemenu.ps.txt</a><p>PizzaTool graphical Pizza ordering gui: <a href=\"http://www.donhopkins"
+  },
+  {
+    "author": "SimHacker",
+    "id": 3292716,
+    "type": "comment",
+    "time": 1322607698,
+    "url": "https://news.ycombinator.com/item?id=3292716",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "If the ideas in Perl scaled, don't you think there would be a usable version of Perl 6 after more than 10 years?<p>And Perl 5 is certainly on its way out: <a href=\"http://www.tiobe.com/index.php/paperinfo/tpci/Perl.html\" rel=\"nofollow\">http://www.tiobe.com/index.php/paperinfo/tpci/Perl.html</a><p>When Alan Kay made his remark, Perl had just hit its highest mark in popularity. And it just this year"
+  },
+  {
+    "author": "SimHacker",
+    "id": 3291039,
+    "type": "comment",
+    "time": 1322585650,
+    "url": "https://news.ycombinator.com/item?id=3291039",
+    "title": null,
+    "chars": [
+      {
+        "id": "alan-kay",
+        "name": "Alan Kay"
+      }
+    ],
+    "excerpt": "Speaking of software half-lives:<p>\"Perl is another example of filling a tiny, short-term need, and then being a real problem in the longer term. Basically, a lot of the problems that computing has had in the last 25 years comes from systems where the designers were trying to fix some short-term thing and didn\u2019t think about whether the idea would scale if it were adopted. There should be a half-li"
+  },
+  {
+    "author": "SimHacker",
+    "id": 3120655,
+    "type": "comment",
+    "time": 1318862584,
+    "url": "https://news.ycombinator.com/item?id=3120655",
+    "title": null,
+    "chars": [
+      {
+        "id": "will-wright",
+        "name": "Will Wright"
+      }
+    ],
+    "excerpt": "Ideas for games are not at all scarse. They are not at all hard to come up with. They are not at all unique. In fact, ideas for games are much more trouble than they are worth. Game developers don't need any more ideas. The only way to ship a game on time is to brutally throw away as many ideas as you can, until you have the smallest design that will actually work and be fun, and then EXECUTE on t"
+  },
+  {
+    "author": "SimHacker",
+    "id": 2905481,
+    "type": "comment",
+    "time": 1313804195,
+    "url": "https://news.ycombinator.com/item?id=2905481",
+    "title": null,
+    "chars": [
+      {
+        "id": "stephen-wolfram",
+        "name": "Stephen Wolfram"
+      }
+    ],
+    "excerpt": "That was just Stephen Wolfram channeling Alan Turing but not giving him credit."
+  },
+  {
+    "author": "SimHacker",
+    "id": 2792497,
+    "type": "comment",
+    "time": 1311311078,
+    "url": "https://news.ycombinator.com/item?id=2792497",
+    "title": null,
+    "chars": [
+      {
+        "id": "james-gosling",
+        "name": "James Gosling"
+      }
+    ],
+    "excerpt": "James Gosling left Oracle in disgust, and later joined Google."
+  }
+]
