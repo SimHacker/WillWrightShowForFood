@@ -156,7 +156,7 @@ media:
   gallery: media/README.md
   galleries:
     - { path: media/README.md, what: "SimCity/Sims history, Rug-O-Matic, programmer art, robot-combat meetup (LA)" }
-    - { path: media/russian-space-junk.md, what: "Will's Soviet/Russian spaceflight-hardware collection at home in Oakland — Globus IMP navigation globes, Cyrillic control panels, hand controllers, hatch, ejection seat (photos by Don Hopkins)" }
+    - { path: media/russian-space-junk.md, what: "Will's Soviet/Russian spaceflight-hardware collection at home in Oakland — Globus IMP navigation globes, Cyrillic control panels, hand controllers, hatch, and an apparent space monkey seat (Bion-style primate couch, too small for a cosmonaut; photos by Don Hopkins)" }
     - { path: media/transmogrifier-mona-lisa-pushpins.yml, what: "Transmogrifier + 3DS Max UV exporter test — Mona Lisa pushpins" }
     - { path: media/high-while-programming-flyer.yml, what: "HIGH WHILE PROGRAMMING — UMich study flyer; Will snapped corkboard photo and sent to Don" }
     - { path: media/computer-history-museum-maxis-display.yml, what: "CHM Maxis display — The Sims, SimCity, SimEarth; Don: We made it!" }

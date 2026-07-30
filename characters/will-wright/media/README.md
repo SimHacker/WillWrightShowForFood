@@ -192,7 +192,7 @@ Longer scrolls with many figures — files sit alongside this README:
 
 | Gallery | Photos | Index |
 |---------|--------|-------|
-| [**Russian Space Junk**](russian-space-junk.md) | Globus IMP, Cyrillic panels, hatch, ejection seat | 17 × `russian-*.png` |
+| [**Russian Space Junk**](russian-space-junk.md) | Globus IMP, Cyrillic panels, hatch, space monkey seat | 17 × `russian-*.png` |
 | [**Artwork**](artwork.md) | Evolution/systems relief, cell division, terrain maps | 10 × `will-artwork-*.png` |
 
 ---
