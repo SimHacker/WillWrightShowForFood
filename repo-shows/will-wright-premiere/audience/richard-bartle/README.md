@@ -38,7 +38,7 @@ Richard's full MOOLLM incarnation (with consent, study, taxonomy artifacts):
 ## Ethics tier
 
 This is the **consented living self-author** tier — the gold standard. See
-[`../../../schemas/audience-ethics-experiments.yml`](../../../schemas/audience-ethics-experiments.yml).
+[`../../../schemas/audience-ethics-experiments.yml`](../../../../schemas/audience-ethics-experiments.yml).
 
 ---
 
@@ -49,7 +49,7 @@ This is the **consented living self-author** tier — the gold standard. See
 | **Up** | [audience](../README.md) |
 | **MOOLLM avatar** | [richard-bartle](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle) |
 | **Questions** | [`questions.yml`](questions.yml) |
-| **Ethics** | [`audience-ethics-experiments.yml`](../../../schemas/audience-ethics-experiments.yml) |
+| **Ethics** | [`audience-ethics-experiments.yml`](../../../../schemas/audience-ethics-experiments.yml) |
 
 ↑ [audience](../README.md) · [show](../../README.md)
 

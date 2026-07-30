@@ -42,7 +42,7 @@ Multiplayer X11/TCL/Tk SimCity → port via SWIG; mesh networking + journaling f
 
 ## Cross-links
 
-- [`../../repo-shows/rebounce/`](../../repo-shows/rebounce/) — explicit 2007 convergence ask
+- [`../../repo-shows/rebounce/`](../../../repo-shows/rebounce/) — explicit 2007 convergence ask
 - [`../../david-levitt/`](../../david-levitt/) — Bounce lineage; in_conversation for Rebounce
 - [`../ideas.md`](../ideas.md)
 - [`../../don-hopkins/body-electric-bounce-vr-stack.md`](../../don-hopkins/body-electric-bounce-vr-stack.md)

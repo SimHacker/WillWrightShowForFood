@@ -6,4 +6,4 @@ Canonical SimFaux development: [`../../../../apps/simfaux/`](../../../../apps/si
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)

@@ -8,9 +8,9 @@
 
 | # | Document | Parties | Date | In repo | On web |
 |---|----------|---------|------|---------|--------|
-| 1 | **Don ↔ DUX Development Agreement** | DUX (Bob Adams) ↔ Don Hopkins | 18 Feb 1992 | [`dux-don-hopkins-contract.txt`](../../../../don-hopkins/career/contracts/dux-don-hopkins-contract.txt) | [donhopkins.com](https://donhopkins.com/home/micropolis/dux-don-hopkins-contract.txt) |
-| 2 | **DUX ↔ Maxis Unix license** | DUX ↔ Maxis (Jeff Braun) | 19 Jul 1991 | [`dux-maxis-contract.txt`](../../../../don-hopkins/career/contracts/dux-maxis-contract.txt) | [donhopkins.com](https://donhopkins.com/home/micropolis/dux-maxis-contract.txt) |
-| 3 | **EA ↔ OLPC agreement** | Electronic Arts ↔ One Laptop Per Child | 4 Sep 2007 | [`olpc-ea-contract.pdf`](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) | [donhopkins.com](https://donhopkins.com/home/micropolis/olpc-ea-contract.pdf) |
+| 1 | **Don ↔ DUX Development Agreement** | DUX (Bob Adams) ↔ Don Hopkins | 18 Feb 1992 | [`dux-don-hopkins-contract.txt`](../../../don-hopkins/career/contracts/dux-don-hopkins-contract.txt) | [donhopkins.com](https://donhopkins.com/home/micropolis/dux-don-hopkins-contract.txt) |
+| 2 | **DUX ↔ Maxis Unix license** | DUX ↔ Maxis (Jeff Braun) | 19 Jul 1991 | [`dux-maxis-contract.txt`](../../../don-hopkins/career/contracts/dux-maxis-contract.txt) | [donhopkins.com](https://donhopkins.com/home/micropolis/dux-maxis-contract.txt) |
+| 3 | **EA ↔ OLPC agreement** | Electronic Arts ↔ One Laptop Per Child | 4 Sep 2007 | [`olpc-ea-contract.pdf`](../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) | [donhopkins.com](https://donhopkins.com/home/micropolis/olpc-ea-contract.pdf) |
 
 ### What each contract establishes
 
@@ -43,7 +43,7 @@ EA/Maxis authorized Don to distribute **The Sims Transmogrifier** from donhopkin
 
 | Item | Status |
 |------|--------|
-| Known terms (from Don's renovation plan) | Summarized in [`transmogrifier-distribution-license-notes.md`](../../../../don-hopkins/career/contracts/transmogrifier-distribution-license-notes.md) |
+| Known terms (from Don's renovation plan) | Summarized in [`transmogrifier-distribution-license-notes.md`](../../../don-hopkins/career/contracts/transmogrifier-distribution-license-notes.md) |
 | Full legal text | **TODO — Don:** locate original license HTML/PDF from web archive or PC |
 | Updated pay-site policy | Don never received written update; rumored on fan sites only |
 | WWSFF article | [2004-02-05-transmogrifier-renovation-plan](../2004-02-05-transmogrifier-renovation-plan/README.md) |

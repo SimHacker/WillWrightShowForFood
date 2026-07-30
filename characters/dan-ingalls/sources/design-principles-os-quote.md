@@ -55,5 +55,5 @@ The HN Emacs thread (Charles Choi, Jul 2026) reframes Emacs as orchestration abo
 ## See also
 
 - [`../ideas.md`](../ideas.md) — conversation hooks
-- [`../../process/trails/live-objects.md`](../../process/trails/live-objects.md) — live-object lineage
-- [`../../process/trails/yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md) — published vs in-session layers
+- [`../../process/trails/live-objects.md`](../../../process/trails/live-objects.md) — live-object lineage
+- [`../../process/trails/yaml-jazz-collaboration-stack.md`](../../../process/trails/yaml-jazz-collaboration-stack.md) — published vs in-session layers

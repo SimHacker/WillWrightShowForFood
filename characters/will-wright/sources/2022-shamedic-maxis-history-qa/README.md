@@ -7,7 +7,7 @@ Unanswered Oct 2022 email from a Sims franchise history researcher who relied on
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

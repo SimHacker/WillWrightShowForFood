@@ -40,7 +40,7 @@ Not employees-of-Maxis reunion — **fan creators** who became the precedent for
 | "SimCity inside The Sims" | Wired / Sims Zone SliceCity article                                                                            | Steve: why Simsville cancellation sparked SliceCity |
 | "Married"                 | SimSlice about page timeline                                                                                   | Heather + Steve tell their version on air           |
 | "Worked with Will again"  | [thealveys.us](https://thealveys.us/) Gallium line · Proxi LinkedIn posts                                      | What Proxi meant for their craft                    |
-| "Now Soul City"           | [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md)                                     | Live catalog republish demo                         |
+| "Now Soul City"           | [`../../catalogs/soul-city/README.md`](../../../catalogs/soul-city/README.md)                                     | Live catalog republish demo                         |
 
 
 Pattern: [`../../building-the-sims/evidence-bounce-cut.md`](../../building-the-sims/evidence-bounce-cut.md)
@@ -50,7 +50,7 @@ Pattern: [`../../building-the-sims/evidence-bounce-cut.md`](../../building-the-s
 - **Old band theme:** [`../../../process/old-band-back-together.yml`](../../../process/old-band-back-together.yml#simfreaks_simslice_fan_crew)
 - **Speed Dating with Cupid** — SimProv Wedding Playset; SimFreaks graphics ([`../../ideas/gags/speed-dating-with-cupid.yml`](../../ideas/gags/speed-dating-with-cupid.yml))
 - **Data portability crown jewel** — SliceCity as shipped precedent ([`../../ideas/themes/data-portability-crown-jewel.yml`](../../ideas/themes/data-portability-crown-jewel.yml))
-- **Afterlife × ZombieSims** flagship episode: [`afterlife-zombie-bridge.yml`](afterlife-zombie-bridge.yml)
+- **Afterlife × ZombieSims** flagship episode: [`afterlife-zombie-bridge.yml`](../afterlife-zombie-bridge.yml)
 
 
 

@@ -79,7 +79,7 @@ Parser lineage in product seed explicitly cites MOOLLM adventure → SpeechAnaly
 ## Trail
 
 - [`../../../repo-shows/ideas/urban-ebike-safari.yml`](../../../repo-shows/ideas/urban-ebike-safari.yml) · `temporal_abstraction`
-- [`../../media/storymaker-urban-safari/storymaker-urban-safari.yml`](../../media/storymaker-urban-safari/storymaker-urban-safari.yml)
+- [`../../media/storymaker-urban-safari/storymaker-urban-safari.yml`](../media/storymaker-urban-safari/storymaker-urban-safari.yml)
 - [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml#iloci_memory_palace)
 - [MOOLLM simulation/ONE-STEP-TRAP.md](https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md)
 - [MOOLLM urban-safari-ride-game.yml](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)

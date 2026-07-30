@@ -26,7 +26,7 @@ index. Self-sovereign portrayal.
 **[don-philahue/](don-philahue/README.md)** — Orchestrator MC (fictional). C-3PO translator, TicketPR harvest,
 venue arbitration. The show's constitution lives here.
 
-**[slats/](slats/README.md)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
+**[slats/](robots/slats/README.md)** — Sidekick bot. One Minute Movies waiter brain; robopoetry feedback-loop instrument;
 ROBORESURRECTION Easter Sunday bit.
 
 **[palm/](palm/README.md)** — Fictional AI agent. MOOLLM monkey-palm portal; Will Wright audience philosopher;
@@ -98,7 +98,7 @@ Template: [`_TEMPLATE/`](_TEMPLATE/README.md) · Schema: [`../schemas/guest-skil
 | Host | [don-hopkins/](don-hopkins/README.md) — self-sovereign |
 | Flagship guest | [will-wright/](will-wright/README.md) — richest portrayal; [`invitation.md`](will-wright/invitation.md) |
 | Retro pair | [lars-brinkhoff/](lars-brinkhoff/README.md) · [thomas-cherryhomes/](thomas-cherryhomes/README.md) |
-| MC / sidekick | [don-philahue/](don-philahue/README.md) · [slats/](slats/README.md) |
+| MC / sidekick | [don-philahue/](don-philahue/README.md) · [slats/](robots/slats/README.md) |
 
 More names appear as you list this folder — or follow links from [`../repo-shows/`](../repo-shows/README.md) and [`../process/cross-links.yml`](../process/cross-links.yml).
 

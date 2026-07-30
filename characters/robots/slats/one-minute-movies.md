@@ -41,7 +41,7 @@ could perform the robot live, in real time:
 
 That hybrid — fast canned reactions on radial menus *plus* real-time improv typing — is exactly the
 playground the **RoboResurrection** wants to rebuild and play with again
-([`slats-reincarnation`](../../repo-shows/will-wright-premiere/slats-reincarnation.yml)).
+([`slats-reincarnation`](../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)).
 
 ## The films
 
@@ -128,4 +128,4 @@ flagged for a future human review-and-polish pass to add speaker labels and fix 
 - Allentown Productions project page (archived): <https://web.archive.org/web/20141028194536/http://www.allentownproductions.com/project.php?p=nbc> — credits the robots to Will Wright and the segments to James Moll.
 
 See also: [`CHARACTER.yml`](CHARACTER.yml) · [`judge-rubric.yml`](judge-rubric.yml) ·
-[Stupid Fun Club origin](../don-hopkins/career/stupid-fun-club.yml)
+[Stupid Fun Club origin](../../don-hopkins/career/stupid-fun-club.yml)

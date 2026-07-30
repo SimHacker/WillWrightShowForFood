@@ -20,6 +20,6 @@ David, Henry Minsky, Oliver Steele, Don, UI/Laszlo people, Svelte 5 / Micropolis
 - **LinkedIn OL 5.0:** https://www.linkedin.com/feed/update/urn:li:activity:7476118515758809088/
 - **Micropolis OpenLaszlo client (historic LZX):** https://github.com/SimHacker/MicropolisCore/tree/main/documentation/openlaszlo
 - **no-ai-humansplaining:** https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md
-- **Show seed:** [`../../repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/README.md)
+- **Show seed:** [`../../repo-shows/openlaszlo/`](../../../repo-shows/openlaszlo/README.md)
 
 ↑ [character README](../README.md) · [Henry Minsky](../../henry-minsky/) · [Oliver Steele](../../oliver-steele/)

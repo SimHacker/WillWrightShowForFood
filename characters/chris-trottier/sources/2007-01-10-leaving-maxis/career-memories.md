@@ -64,7 +64,7 @@ Chris is Don's anchor for **design by accretion** — layer upon layer until a m
 
 - [`../../ideas.md`](../../ideas.md) — Repo Show hooks
 - [`../../../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/`](../../../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/README.md) — tuned emergence essay
-- [`../../../characters/chris-trottier/design-by-accretion.md`](../../../characters/chris-trottier/design-by-accretion.md) — flagship show proposal
+- [`../../../characters/chris-trottier/design-by-accretion.md`](../../../../characters/chris-trottier/design-by-accretion.md) — flagship show proposal
 
 ---
 

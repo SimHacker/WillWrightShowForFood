@@ -17,7 +17,7 @@ What carried from Cambridge satellite graphics (PDP-7/340 + Titan) into networke
 
 Undergrad ~1970 on same **PDP-7/340 + Titan** stack as PIXIE; met Wiseman. On the PIXIE group show: connect satellite-graphics / distributed-CAD zeitgeist to Andrew/NeWS/X — not as invention claim, as continuity question for David to answer.
 
-→ [Cambridge films / Bumblebee](../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)  
+→ [Cambridge films / Bumblebee](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)  
 → [PDP-7 memories](pdp7-cambridge-memories.md)
 
 ---

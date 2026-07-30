@@ -60,9 +60,9 @@ Will and Rod's replies show EA leadership treated it as low-risk goodwill. Chuck
 
 ## Gaps
 
-- [x] DUX/Don + DUX/Maxis contracts — [contracts](../../../../don-hopkins/career/contracts/README.md)
+- [x] DUX/Don + DUX/Maxis contracts — [contracts](../../../don-hopkins/career/contracts/README.md)
 - [x] EA↔OLPC PDF — `olpc-ea-contract.pdf` in contracts/
-- [x] Transmogrifier **EA Tools EULA** — [`transmogrifier-ea-tools-eula.txt`](../../../../don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt)
+- [x] Transmogrifier **EA Tools EULA** — [`transmogrifier-ea-tools-eula.txt`](../../../don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt)
 - [x] Jan–May 2007 OLPC threads → [status](../2007-01-10-simcity-for-olpc-status/README.md) · [QA VM](../2007-01-29-olpc-simcity-ea-qa-vm/README.md) · [pre-contract QA](../2007-05-03-olpc-simcity-pre-contract-qa/README.md)
 - [ ] Don: **distributor agreement** (separate from EULA) · name **EA executive** who flipped — see [micropolis-saga-don-draft](../micropolis-saga-don-draft/README.md)
 - [ ] Don expanded first-person saga → merge draft into canonical article

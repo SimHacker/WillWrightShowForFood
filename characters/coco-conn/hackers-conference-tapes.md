@@ -2,7 +2,7 @@
 
 *Don's proposed Repo Show segment — firsthand, not yet confirmed with Coco. Consent and clip rights
 TBD. Public anchor: [The Hackers Conference](https://en.wikipedia.org/wiki/The_Hackers_Conference)
-(Stewart Brand / Whole Earth, from 1984); [Scott Kim](../../scott-kim/) designed the iconic logo.*
+(Stewart Brand / Whole Earth, from 1984); [Scott Kim](../scott-kim/) designed the iconic logo.*
 
 ## The hook
 
@@ -14,9 +14,9 @@ Don's dream picks from the shelf (confirm what's actually on Coco's tapes):
 
 | Name | Repo Show status | Why the tape matters |
 |------|------------------|----------------------|
-| **[Scott Kim](../../scott-kim/)** 🪞 | Dream guest — solo + pair with Amy Jo | Designed the Hackers Conference logo; *Viewpoint*, ambigrams, puzzle craft |
+| **[Scott Kim](../scott-kim/)** 🪞 | Dream guest — solo + pair with Amy Jo | Designed the Hackers Conference logo; *Viewpoint*, ambigrams, puzzle craft |
 | **Rudy Rucker** | Not planted yet — CA / cyberpunk / Dave Ackley orbit | Don's long thread on cellular automata, λ-Codons, Lifebrush |
-| *Many others* | Scan [`characters/INDEX.yml`](../../INDEX.yml) | Wozniak-era hackers, Whole Earth lineage, demo culture |
+| *Many others* | Scan [`characters/INDEX.yml`](../INDEX.yml) | Wozniak-era hackers, Whole Earth lineage, demo culture |
 
 ## Show format (proposed)
 
@@ -28,7 +28,7 @@ Don's dream picks from the shelf (confirm what's actually on Coco's tapes):
 
 ## Not the same as CS547
 
-[Terry Winograd's CS547](../../terry-winograd/) is the **Stanford seminar VHS** archive (339 talks).
+[Terry Winograd's CS547](../terry-winograd/) is the **Stanford seminar VHS** archive (339 talks).
 Coco's **Hackers Conference** tapes are the **Whole Earth / Brand** invitation gathering — overlapping
 cast, different room, different vibe. Both belong in the **"watch the tape with the person who was
 there"** Repo Show family.
@@ -37,7 +37,7 @@ there"** Repo Show family.
 
 - Which **years** and **formats** (VHS, Beta, digitized?)
 - **Rights** — who may clip what for a live Repo Show vs private watch party
-- **Speaker index** — even a rough list unlocks cross-invites ([Scott Kim](../../scott-kim/invitation.md), Rudy Rucker when planted, etc.)
+- **Speaker index** — even a rough list unlocks cross-invites ([Scott Kim](../scott-kim/invitation.md), Rudy Rucker when planted, etc.)
 
 ## See also
 

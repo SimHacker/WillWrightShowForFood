@@ -8,7 +8,7 @@
 **Witness:** **Don Hopkins was in the audience.**
 
 This is the seed evening the whole **Eno ↔ Will ↔ Scott Draves** reunion thread orbits — generative music
-meeting generative simulation on one stage, ten years after the [1996 Winograd talk](1996-04-26-winograd-interfacing-to-microworlds/README.md)
+meeting generative simulation on one stage, ten years after the [1996 Winograd talk](../1996-04-26-winograd-interfacing-to-microworlds/README.md)
 and months before Spore shipped. Real credit to the [Long Now Foundation](https://longnow.org/) for putting
 them in the same room.
 
@@ -82,7 +82,7 @@ family as Eno's observer completing generative work.
 | Topic | Beat |
 |-------|------|
 | **IP / authorship** | Eno: *77 Million Paintings* — 77M images, credit please, unprotectable. Will: layers of fan authorship (machinima). **bushofghosts.com** remix site. |
-| **SimCity politics** | **Dan Ancona + Mark Live** ask: open-source SimCity to play with political assumptions in the rules. Will: SimHealth, arguing with the sim = success, generative discovery ≠ dumping code — **very open to the idea**. [Clip](short-form-clips.yml#open-source-simcity-audience-question) · Don payoff → [Micropolis saga](../../simcity-open-source-saga/README.md) |
+| **SimCity politics** | **Dan Ancona + Mark Live** ask: open-source SimCity to play with political assumptions in the rules. Will: SimHealth, arguing with the sim = success, generative discovery ≠ dumping code — **very open to the idea**. [Clip](short-form-clips.yml#open-source-simcity-audience-question) · Don payoff → [Micropolis saga](../simcity-open-source-saga/README.md) |
 | **Spore politics** | Breadth over Sid Meier depth; fascism sim = different game. |
 | **Time** | Eno: ambient **smooths** time; accident time dilation (London taxi). Will: games as **time technology** — restart, storytelling as displaced experience. |
 | **Long-term thinking** | Kevin Kelly question — infinite pieces nobody hears whole; 6,410-year estimated length joke. |

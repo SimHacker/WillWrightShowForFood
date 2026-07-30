@@ -21,7 +21,7 @@ What Transmogrifier is and is not — scope limits, Edith/SimAntics boundary, un
 
 ## Catalogs & tools
 
-- [SimFreaks catalog](../../../catalogs/simfreaks/README.md) · [Soul City](../../../catalogs/soul-city/README.md)
+- [SimFreaks catalog](../../../../catalogs/simfreaks/README.md) · [Soul City](../../../../catalogs/soul-city/README.md)
 - [SimAntics objects gallery](../../media/sims-simantics-objects-README.md)
 - [ShowNTell ActiveX preview](../2004-01-08-showntell-activex-preview/README.md)
 

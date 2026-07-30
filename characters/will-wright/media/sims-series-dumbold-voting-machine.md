@@ -4,7 +4,7 @@ Interactive **agitprop** Sims 1 object (2004 election cycle). Procedural rhetori
 
 ## Primary source (full article)
 
-- **[Dumbold Voting Machine for The Sims 1](../../sources/2018-04-24-dumbold-voting-machine/medium-article.md)** — illustrated republish (20 figures)
+- **[Dumbold Voting Machine for The Sims 1](../sources/2018-04-24-dumbold-voting-machine/medium-article.md)** — illustrated republish (20 figures)
 - Original: [donhopkins.medium.com](https://donhopkins.medium.com/dumbold-voting-machine-for-the-sims-1-3e76f394452c)
 
 ## High concept

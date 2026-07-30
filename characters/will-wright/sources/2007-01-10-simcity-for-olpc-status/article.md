@@ -34,7 +34,7 @@ Reference: [ZDNet on Moglen + OLPC](http://news.zdnet.com/2100-3513_22-6051589.h
 - DUX contract **expired 2001**; §7(a): Maxis/EA retains rights in translated Unix versions  
 - Proprietary dependencies stripped; port **"in the clear, unencumbered, and ready to go"**
 
-Published contracts: [contracts](../../../../don-hopkins/career/contracts/README.md).
+Published contracts: [contracts](../../../don-hopkins/career/contracts/README.md).
 
 ---
 

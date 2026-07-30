@@ -1,6 +1,6 @@
 # Will Wright — media
 
-*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · *Guest hub:* [README](../README.md)
+*Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](../CARD.yml) · *Guest hub:* [README](../README.md)
 
 ## Navigation
 
@@ -10,8 +10,8 @@
 |------|---|-----|
 | **Up** | [will-wright](../README.md) | Guest portrayal |
 | **Sources** | [sources](../sources/README.md) | Primary articles + 1996 gallery |
-| **Show** | [flagship show](../../repo-shows/will-wright-premiere/README.md) | Flower Child mascot lives here |
-| **Catalogs** | [catalogs](../../catalogs/README.md) | Syndicated UCC brands |
+| **Show** | [flagship show](../../../repo-shows/will-wright-premiere/README.md) | Flower Child mascot lives here |
+| **Catalogs** | [catalogs](../../../catalogs/README.md) | Syndicated UCC brands |
 | **Sims series** | [sims-series-README.md](sims-series-README.md) | Themed screenshot index |
 | **Sub-galleries** | [russian-space-junk.md](russian-space-junk.md) · [artwork.md](artwork.md) | Long-scroll galleries |
 
@@ -216,7 +216,7 @@ Longer scrolls with many figures — files sit alongside this README:
 
 ---
 
-See also: [CHARACTER](../CHARACTER.yml) · [will wright premiere](../../repo-shows/will-wright-premiere/README.md)
+See also: [CHARACTER](../CHARACTER.yml) · [will wright premiere](../../../repo-shows/will-wright-premiere/README.md)
 
 ---
 

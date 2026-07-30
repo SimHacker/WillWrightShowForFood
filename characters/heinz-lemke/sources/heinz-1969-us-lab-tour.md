@@ -62,6 +62,6 @@ Heinz had originally intended to immigrate to the US after visiting the UK in **
 
 - [`2026-07-10-pixie-storyline-thread.md`](2026-07-10-pixie-storyline-thread.md)
 - [`electronics-international-1969-04-28-pixie.md`](electronics-international-1969-04-28-pixie.md) — magazine tour story
-- [`../andrew-armit/`](../andrew-armit/) — parallel Cambridge→Utah PDP-7 graphics (Alan Kay side-note)
+- [`../andrew-armit/`](../../andrew-armit/) — parallel Cambridge→Utah PDP-7 graphics (Alan Kay side-note)
 - [`../../douglas-engelbart/`](../../douglas-engelbart/)
 - [`../../ivan-sutherland/`](../../ivan-sutherland/) — Utah + 4×4 matrix multiplier era

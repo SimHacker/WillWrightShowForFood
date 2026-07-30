@@ -16,4 +16,4 @@ YouTube links and full talk package: DonHopkins `talks/empathy-and-servitude/` (
 - **OK public:** films, talk spine, constructionist robotics narrative
 - See [`sync-sources.yml`](sync-sources.yml) for upstream talk packages
 
-→ [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) · Primary sources: [`../will-wright/sources/stupid-fun-club-one-minute-movies/`](../will-wright/sources/stupid-fun-club-one-minute-movies/README.md) · Sidekick: [`../slats/`](../slats/) · Full map: [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md)
+→ [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) · Primary sources: [`../will-wright/sources/stupid-fun-club-one-minute-movies/`](../will-wright/sources/stupid-fun-club-one-minute-movies/README.md) · Sidekick: [`../slats/`](../robots/slats/) · Full map: [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md)

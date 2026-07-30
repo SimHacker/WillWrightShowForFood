@@ -378,7 +378,7 @@ Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat
   Mona Lisa pushpins — 3DS Max UV exporter + Transmogrifier pipeline test.
 - [**Will Wright — robot-combat meetup (LA)**](../will-wright/media/README.md) — Don's photos from a
   robot-combat meetup he attended with Will and family.
-- [**Slats — One Minute Movies**](../slats/photos.md) — Don's on-location photos (FMC Motorcoach,
+- [**Slats — One Minute Movies**](../robots/slats/photos.md) — Don's on-location photos (FMC Motorcoach,
   Oakland shoot, SFC Emeryville).
 - [**Micropolis gallery**](media/micropolis-gallery/INDEX.yml) — Don's screenshots from HyperLook
   through OLPC, HAR, OpenLaszlo, PacBot, Facebook.

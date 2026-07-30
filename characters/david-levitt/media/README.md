@@ -71,7 +71,7 @@ VPL to the projects he and Don shared. Primary source: [HN 22788773](https://new
   [Medium — Bounce Stuff](https://medium.com/@donhopkins/bounce-stuff-8310551a96e3)
   · [c2 wiki — BounceLanguage](https://wiki.c2.com/?BounceLanguage)
   · [bounce-notes.txt](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
-  · Don topic: [`../don-hopkins/levity-bounce-space-seed.md`](../don-hopkins/levity-bounce-space-seed.md)
+  · Don topic: [`../don-hopkins/levity-bounce-space-seed.md`](../../don-hopkins/levity-bounce-space-seed.md)
 - MMP → later became **Macromedia Shockwave** on the web.
 - **"Space Seed"** — the Bounce demo name. *(firsthand — Don searching HN/archives for the link.)*
 - **Levity Software / Levity Novelty** — Mac product development (with Don). **Interval Research** —

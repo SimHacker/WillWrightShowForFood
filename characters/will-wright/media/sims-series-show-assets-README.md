@@ -1,6 +1,6 @@
 # Will Wright show — assets
 
-*Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · **Sims series hub:** [`sims-series-README.md`](sims-series-README.md) · [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml)
+*Sniff:* [`CARD.yml`](../CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · **Sims series hub:** [`sims-series-README.md`](sims-series-README.md) · [`sims-series-GLANCE.yml`](sims-series-GLANCE.yml)
 
 ![The User Interface Flower Child — Don's Sims credits icon](DonHopkinsSimsCreditsIcon.jpg)
 

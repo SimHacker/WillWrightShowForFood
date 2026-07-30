@@ -19,9 +19,9 @@ One-take tour of **The Sims 1** fan-tool era:
 **Simplifier** is being reincarnated as an **accessibility-oriented** server-side scrape/inject layer in Soul City / stream-gateway — not a cheat bot:
 
 - Spec: [simplifier](../../../../apps/stream-gateway/simplifier.yml)
-- Future: native **IFF reader** replaces scrape for object previews ([maxis](../../../catalogs/maxis/README.md))
+- Future: native **IFF reader** replaces scrape for object previews ([maxis](../../../../catalogs/maxis/README.md))
 
-**SliceCity** → [simslice](../../../catalogs/simslice/README.md)
+**SliceCity** → [simslice](../../../../catalogs/simslice/README.md)
 
 **ShowNTell** → [2004 01 08 showntell activex preview](../2004-01-08-showntell-activex-preview/README.md)
 

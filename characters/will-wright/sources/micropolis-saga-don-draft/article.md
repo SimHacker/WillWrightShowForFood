@@ -40,7 +40,7 @@ Don ported original Sims code to Linux (graphics/sound incomplete). EA used that
 | VMware QA for EA | [Jan 2007 QA VM thread](../2007-01-29-olpc-simcity-ea-qa-vm/README.md) |
 | QA before contract | [May 2007 pre-contract QA](../2007-05-03-olpc-simcity-pre-contract-qa/README.md) |
 | Will vs head of EA studios | Will email 29 Jan 2007 (same thread) |
-| GPL + SimCity name gate | [EA↔OLPC contract](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) · [QA sign-off Nov 2007](../2007-11-02-olpc-simcity-qa-sign-off/README.md) |
+| GPL + SimCity name gate | [EA↔OLPC contract](../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) · [QA sign-off Nov 2007](../2007-11-02-olpc-simcity-qa-sign-off/README.md) |
 | Charles Normann inside story | [2013 tale of two SimCities](../2013-tale-of-two-simcities/README.md) |
 
 **Next step (A12):** Don edits this into first-person canonical article; add executive name; fold Chaim *Building SimCity* comparison.

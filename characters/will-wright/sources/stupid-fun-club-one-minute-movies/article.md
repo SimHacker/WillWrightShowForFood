@@ -23,7 +23,7 @@ Films never aired due to NBC/SAG rules (real people on camera).
 - Python robot brain + XML dialog  
 - Speech: IBM ViaVoice → Microsoft SAPI → Cepstral voices  
 - Remote web interface for operator control  
-- Lineage: [stupid fun club](../../../../don-hopkins/career/stupid-fun-club.yml)
+- Lineage: [stupid fun club](../../../don-hopkins/career/stupid-fun-club.yml)
 
 ## Related
 

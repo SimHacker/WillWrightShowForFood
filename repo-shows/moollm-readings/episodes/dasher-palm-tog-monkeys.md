@@ -19,7 +19,7 @@ Three threads in one reading: David MacKay's **Dasher** (predictive text / infor
 | Segment | Who / what |
 |---------|------------|
 | **Dasher** | David MacKay — Cambridge information theorist; Dasher input method |
-| **Palm On Being Palm** | [Essay](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) · [Palm room](../../characters/palm/) |
+| **Palm On Being Palm** | [Essay](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md) · [Palm room](../../../characters/palm/) |
 | **Tog's Infinite Monkeys** | Bruce Tog Tognazzini — Apple HI pioneer |
 
 ---

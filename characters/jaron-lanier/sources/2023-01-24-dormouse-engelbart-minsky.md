@@ -27,5 +27,5 @@ Archive: [Early Computing's Long, Strange Trip](https://web.archive.org/web/2011
 
 - [`../ideas.md`](../ideas.md) — add human-centered design beat
 - [`../../alan-kay/`](../../alan-kay/) — parallel Engelbart/down-not-across thread (Feb 2020 mail)
-- [`../../repo-shows/rebounce/`](../../repo-shows/rebounce/)
-- [`../../repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc/)
+- [`../../repo-shows/rebounce/`](../../../repo-shows/rebounce/)
+- [`../../repo-shows/walter-bender-olpc/`](../../../repo-shows/walter-bender-olpc/)

@@ -20,4 +20,4 @@
 python3 ~/GroundUp/repo-show/scripts/extract-clip.py procedural-mating-applause --source sporegdc2005
 ```
 
-↑ [short form clips](../short-form-clips.yml) · [captions](../../../../process/post-production/captions.yml)
+↑ [short form clips](../short-form-clips.yml) · [captions](../../../../../process/post-production/captions.yml)

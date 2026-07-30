@@ -15,8 +15,8 @@
 | Read | What |
 |------|------|
 | [qgcon-inclusivity-paper/](qgcon-inclusivity-paper/README.md) | **How Inclusivity Saved The Sims** — abstract, timeline, Bogost/Murray stack, same-sex design arc |
-| [Will Wright — paper index](../will-wright/media/sims-series-inclusivity-paper-draft.md) | Cross-link hub |
-| [2019 EA historian thread](../will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/) | Lyndsay Pearson, Chloe Dubini, Mike Duke |
+| [Will Wright — paper index](../../will-wright/media/sims-series-inclusivity-paper-draft.md) | Cross-link hub |
+| [2019 EA historian thread](../../will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/) | Lyndsay Pearson, Chloe Dubini, Mike Duke |
 
 ## Compression / latent space (2026 harvest)
 
@@ -85,9 +85,9 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Urban Safari steering / pie / VoyStick](urban-safari-steering-voystick-pie-network.md) | — | eBike ride game, F1/F2 map, steering law |
 | [Usenet matter-product warnings](usenet-matter-product-warnings.md) | — | Physics humor sticker folklore — Don Medium 2018; SWAG only |
 
-**Crazy Idea Jam:** [Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [Urban eBike Safari](../../process/crazy-idea-jam.yml#urban_ebike_safari)
+**Crazy Idea Jam:** [Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [Urban eBike Safari](../../../process/crazy-idea-jam.yml#urban_ebike_safari)
 
-**Show seed:** [Voystick × Pink Trombone](../../repo-shows/voystick-pink-trombone/SHOW.yml) · [Zack Qattan](../../characters/zack-qattan/README.md)
+**Show seed:** [Voystick × Pink Trombone](../../../repo-shows/voystick-pink-trombone/SHOW.yml) · [Zack Qattan](../../../characters/zack-qattan/README.md)
 
 ## Pie menu lineage (Medium canon, ingested Jul 2026)
 

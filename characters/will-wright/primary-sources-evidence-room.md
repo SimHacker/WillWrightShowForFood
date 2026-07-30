@@ -150,7 +150,7 @@ Pair Crowd Sitter / Dumbold with live UCC in [simprov](../../catalogs/simprov/RE
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
 | *Servitude* and *Empathy* robots | [stupid-fun-club-one-minute-movies](sources/stupid-fun-club-one-minute-movies/README.md) |
 
-→ Don's talk distill: [`talks/empathy-and-servitude.yml`](../don-hopkins/talks/empathy-and-servitude.yml) · Sidekick [slats](../slats/)
+→ Don's talk distill: [`talks/empathy-and-servitude.yml`](../don-hopkins/talks/empathy-and-servitude.yml) · Sidekick [slats](../robots/slats/)
 
 ---
 

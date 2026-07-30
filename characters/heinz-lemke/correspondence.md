@@ -92,8 +92,8 @@ Received 10 Jul 2026 — PDF + clean MD. Heinz at PDP-7 in McGraw-Hill *Electron
 |------|-----|
 | [CHARACTER.yml](CHARACTER.yml) | Bio + invitation status |
 | [cambridge-films-flight-of-the-bumblebee.md](cambridge-films-flight-of-the-bumblebee.md) | Chapman + Rosenthal + production |
-| [../lars-brinkhoff/](lars-brinkhoff/) | Co-guest — PDP-7/340 emulation |
-| [../david-rosenthal/](david-rosenthal/) | Same Cambridge PDP-7/Titan |
+| [../lars-brinkhoff/](../lars-brinkhoff/) | Co-guest — PDP-7/340 emulation |
+| [../david-rosenthal/](../david-rosenthal/) | Same Cambridge PDP-7/Titan |
 | [../../repo-shows/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml) | PIXIE show |
 
 ↑ [README](README.md) · [invitation](invitation.md)

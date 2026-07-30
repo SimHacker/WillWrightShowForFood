@@ -90,7 +90,7 @@ constraints — three orthogonal mechanisms, same platform.
 
 - [Garnet → Svelte lineage (short)](../garnet-to-svelte-constraint-ui-lineage.md)
 - [Snap! visual engines vision](../snap-visual-engines-fundable-goals.md)
-- [Bounce dataflow control](../don-hopkins/sources/bounce-dataflow-control-flow.md)
+- [Bounce dataflow control](../../don-hopkins/sources/bounce-dataflow-control-flow.md)
 - [Brian/Jens 2018 thread](../../brian-harvey/sources/micropolis-snap-2018.md)
 - [Constructionist response](../../../process/constructionist-simcity-response.md)
 - [Pair show](../../../repo-shows/snap-logo-brian-jens/README.md)

@@ -63,4 +63,4 @@ Installer that **requires** agreement before install/run — so even unofficial 
 - [ ] Separate licenses for SimShow, RugOMatic, Simplifier, ShowNTell if distinct
 - [ ] RugOMatic $10 registration — revenue share or standalone product terms?
 
-**WWSFF:** [maxis-licenses-chain-of-custody](../../../characters/will-wright/sources/maxis-licenses-chain-of-custody/README.md)
+**WWSFF:** [maxis-licenses-chain-of-custody](../../../../characters/will-wright/sources/maxis-licenses-chain-of-custody/README.md)

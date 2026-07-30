@@ -10,7 +10,7 @@ Don's unsent/plain-language summary of SimCity → OLPC → Micropolis — harve
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

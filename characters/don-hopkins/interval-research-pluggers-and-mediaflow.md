@@ -71,9 +71,9 @@ Don later connected ECG to [**breakfast simplexes**](breakfast-simplex-barycentr
 
 | Direct (Don's Interval year) | Circle (same era / before / after) |
 |------------------------------|-------------------------------------|
-| [David Levitt](../../david-levitt/) — Bounce / Body Electric | [Terry Winograd](../../terry-winograd/) — consulting 1993–98, not on staff w/ Don |
+| [David Levitt](../david-levitt/) — Bounce / Body Electric | [Terry Winograd](../terry-winograd/) — consulting 1993–98, not on staff w/ Don |
 | Marc Davis — MediaFlow | Dan Ingalls — Smalltalk VM ~1993 |
-| [Golan Levin](../../golan-levin/) — Mouther, ECG | Paul Debevec — Rouen Revisited w/ Golan |
+| [Golan Levin](../golan-levin/) — Mouther, ECG | Paul Debevec — Rouen Revisited w/ Golan |
 | Tom Ngo — ECG patent | Joy Mountford — HCI (ex-Apple HIG) |
 | Malcolm Slaney — audio/video | Brenda Laurel → Purple Moon; Caterina Fake → Flickr |
 | | Bill Verplank, Franklin Crow, Gavin Miller (Sashimi), Trevor Darrell, … |

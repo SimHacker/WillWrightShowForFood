@@ -144,7 +144,7 @@ Lineage: Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, 
 Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 See [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) ·
-[Crazy Idea Jam Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick).
+[Crazy Idea Jam Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick).
 
 GuitarPie + Voystick (Sep 2025 HN): hardcore cyberpunk grindcore metal indistinguishable from
 computer interaction — [Eclipse](https://en.wikipedia.org/wiki/Eclipse_(novel)) Rickenharp on the

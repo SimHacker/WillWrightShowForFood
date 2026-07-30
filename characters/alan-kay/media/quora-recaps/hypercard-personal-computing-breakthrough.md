@@ -76,7 +76,7 @@ Kay's regret in the browsers thread (cross-ref): the NeWS/HyperLook crowd **"mis
 Hypertalk"** — end-users seeing their own faces in the same terms they read.
 
 **HN (Mar 2026):** jandrese asks about networked HyperCard; Don points to HyperLook —
-[`../../don-hopkins/hypercard-network-hyperlook-hn-2026.md`](../../don-hopkins/hypercard-network-hyperlook-hn-2026.md).
+[`../../don-hopkins/hypercard-network-hyperlook-hn-2026.md`](../../../don-hopkins/hypercard-network-hyperlook-hn-2026.md).
 
 ## Questions for Alan (show fodder)
 

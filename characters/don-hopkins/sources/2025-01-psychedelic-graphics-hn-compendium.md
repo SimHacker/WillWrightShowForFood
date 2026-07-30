@@ -65,7 +65,7 @@ Don's thesis: decades of work so you can trip on **pauseable, closable-tab** gen
 
 | Show | Guests |
 |------|--------|
-| [jim-crutchfield](../../repo-shows/jim-crutchfield/) | Crutchfield + Don CAM6 + feedback |
-| [dave-tristram](../../repo-shows/dave-tristram/) | Raster Masters live reprise |
-| [norman-margolus](../../repo-shows/norman-margolus/) | CAM book summit |
+| [jim-crutchfield](../../../repo-shows/jim-crutchfield/) | Crutchfield + Don CAM6 + feedback |
+| [dave-tristram](../../../repo-shows/dave-tristram/) | Raster Masters live reprise |
+| [norman-margolus](../../../repo-shows/norman-margolus/) | CAM book summit |
 | building-the-sims / Micropolis | CA ↔ city simulator handoff |

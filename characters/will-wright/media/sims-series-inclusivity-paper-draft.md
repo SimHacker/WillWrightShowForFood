@@ -30,12 +30,12 @@ Paper pairs **procedural rhetoric** (Bogost) with **agency / immersion / transfo
 
 ## EA historian thread (2019)
 
-[`sources/2019-10-qgcon-sims-inclusivity-thread/`](sources/2019-10-qgcon-sims-inclusivity-thread/) — Lyndsay Pearson, Chloe Dubini, Mike Duke, Graham Nardone
+[`sources/2019-10-qgcon-sims-inclusivity-thread/`](../sources/2019-10-qgcon-sims-inclusivity-thread/) — Lyndsay Pearson, Chloe Dubini, Mike Duke, Graham Nardone
 
 ## Show seeds
 
-- [Ian Bogost procedural rhetoric](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
-- [How Inclusivity Saved The Sims](../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml)
+- [Ian Bogost procedural rhetoric](../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
+- [How Inclusivity Saved The Sims](../../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml)
 - [Tanja Sihvonen](../../tanja-sihvonen/) — *Players Unleashed!*
 - [Janet Murray](../../janet-murray/) — storytelling / Family Album holodeck beat
 

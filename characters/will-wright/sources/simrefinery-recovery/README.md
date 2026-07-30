@@ -29,7 +29,7 @@ Phil Salvador (The Obscuritory / VGHF) researched **Maxis Business Simulations**
 - "Finding SimRefinery" — link trail from obscurity → Ars comment → floppy → IA
 - How official archives **deleted** or never held it; why community preservation mattered
 - Tie to **Maxis catalog** (metadata-only) and business-sims lineage (SimHealth, etc.)
-- **Interview show** with Phil Salvador — see [phil salvador](../../../../phil-salvador/README.md) and [phil salvador simrefinery · SHOW](../../../../repo-shows/phil-salvador-simrefinery/SHOW.yml)
+- **Interview show** with Phil Salvador — see [phil salvador](../../../phil-salvador/README.md) and [phil salvador simrefinery · SHOW](../../../../repo-shows/phil-salvador-simrefinery/SHOW.yml)
 
 ## Jess Bird / BBC email roster
 
@@ -37,7 +37,7 @@ Phil named in DonHopkins `research/../../characters/will-wright/sources/jess-bir
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

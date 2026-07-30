@@ -13,7 +13,7 @@ Before (or beside) the full PIXIE↔Titan stack, Andrew's **Multipatch** is the 
 - Thesis already has a **command sequence + miniature screenshots** acceptance test
 - **Multiobject** (rest of the PhD years) *does* talk to Titan — closer to PIXIE's shape, harder
 
-Digest: [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md)
+Digest: [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md)
 
 Lars (same day): custom SIMH device ≈ new `pdp18b_foo.c` + hooks in `pdp18b_defs.h` /
 `pdp18b_sys.c`. Type 340 **character generator already supported**; display-list **subroutines
@@ -177,7 +177,7 @@ the slight defocus bigger deflection angles caused at the tube edge.)
 2. Loader: `rsppix.oct` → SIMH deposit / `.rim`. **Partial (28 Jul 2026 — Roy Eagleson):**
    `.oct`→`.rim` converter; code **loads** and **steps** instruction-by-instruction;
    **`GO` stops with no display** — likely waiting on light-pen interrupts.
-   → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
+   → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
 3. Light pen driver in `pdp18b_dpy.c` + mouse; pass the 370 diagnostic.
    (Roy: X11 C locally; web mouse events for shareable setup.)
 4. PIXIE tracking cross follows the mouse. (The 1969 film shows what right looks like.)

@@ -26,7 +26,7 @@ TurboGears Python server · OpenLaszlo/Flash client · AMF binary messaging · M
 
 ### Future plans (central server semantics)
 
-From [`micropolis/PROGRESS.txt`](../../../../micropolis/PROGRESS.txt):
+From [`micropolis/PROGRESS.txt`](../../../../../micropolis/PROGRESS.txt):
 
 - Shared city library; journal, chat, IRC; MediaWiki integration
 - Multi-user: avatar chat, avatars as bots, **proposals → campaigns → votes**
@@ -35,7 +35,7 @@ From [`micropolis/PROGRESS.txt`](../../../../micropolis/PROGRESS.txt):
 
 ### Laszlo UI TODO — "city wall" (Facebook-era sketch)
 
-From [`micropolis/laszlo/micropolis/TODO.txt`](../../../../micropolis/laszlo/micropolis/TODO.txt):
+From [`micropolis/laszlo/micropolis/TODO.txt`](../../../../../micropolis/laszlo/micropolis/TODO.txt):
 
 - Notice + journal as overlay / slide-up **city wall** (Facebook page metaphor)
 - Events with **"share on my wall"**, friend advice, **vote on issues**

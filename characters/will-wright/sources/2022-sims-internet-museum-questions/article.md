@@ -19,7 +19,7 @@
 | **1998 Steering Committee build** | [IA](https://archive.org/details/the-sims-steering-committee) · [Don playthrough](../don-youtube-playlist-index/README.md) · do not host binary in git |
 | **EDITH** (live SimAntics editor) | Mentioned in [Transmogrifier glossary](../2004-transmogrifier-glossary/README.md) — never publicly released |
 | **Pre–art-style skins** ("Archie Bunker Sim") | Compare [E3 1999 / VitaMoo](../2026-e3-1999-prototype-preservation/README.md) |
-| **SimsVille** cancelled title (~2000–2002) | Trailer on SC3K / House Party discs — who to contact? [Luc Barthelet](../../../../luc-barthelet/README.md) Sims Online era |
+| **SimsVille** cancelled title (~2000–2002) | Trailer on SC3K / House Party discs — who to contact? [Luc Barthelet](../../../luc-barthelet/README.md) Sims Online era |
 
 ---
 

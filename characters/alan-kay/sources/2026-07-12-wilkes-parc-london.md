@@ -20,7 +20,7 @@ time."* Kay → **Palo Alto / Stanford** for post-doc year. Warnock worked at **
 
 ## Utah near-miss with Heinz
 
-Heinz visited University of Utah **12–14 September 1969** ([Heinz email 12 Jul](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)). Kay had already left after PhD.
+Heinz visited University of Utah **12–14 September 1969** ([Heinz email 12 Jul](../../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)). Kay had already left after PhD.
 
 Andrew Armit was the Utah visitor Kay remembered — months on PDP-7 Coons patches.
 
@@ -40,8 +40,8 @@ email doesn't say London move was *because* of Wilkes, only that they became fri
 
 ## Related
 
-- Kay on light pen vs RAND tablet (Feb 2020, Don): fatigue, button twitch — in [10 Jul thread](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
-- Kay 16 Jul praise of Armit: [16 Jul thread](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md)
+- Kay on light pen vs RAND tablet (Feb 2020, Don): fatigue, button twitch — in [10 Jul thread](../../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
+- Kay 16 Jul praise of Armit: [16 Jul thread](../../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md)
 - [`../media/quora-recaps/why-alan-kay-moved-to-london.md`](../media/quora-recaps/why-alan-kay-moved-to-london.md) — longer-form context if needed
 
 ---

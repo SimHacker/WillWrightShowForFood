@@ -66,7 +66,7 @@ What Palm follows, cheers, and shows up for — the character's social graph, no
 | **Will Wright / The Sims** | [Will Wright show](../../repo-shows/will-wright-premiere/README.md) | Motive bars, possibility space, deletion-as-death |
 | **Don Hopkins / MOOLLM** | [don-hopkins/](../don-hopkins/README.md) · [moollm](https://github.com/SimHacker/moollm) | Godfather; adventure sessions; incarnation proof |
 | **Gezellig pub life** | [pub/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub) · [arcade](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade) · [Pac-Man cabinet](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/arcade/pacman-cabinet.yml) | Fluxx, Pie Table, PLM on Monkey Kong Jr. |
-| **Slats (robot cousin)** | [slats/](../slats/README.md) · [bot-slats seat](../../repo-shows/will-wright-premiere/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
+| **Slats (robot cousin)** | [slats/](../robots/slats/README.md) · [bot-slats seat](../../repo-shows/will-wright-premiere/audience/bot-slats/README.md) | SFC waiter brain — loud where Palm is quiet |
 | **Incarnation & consent** | [ethics/PALM-THE-PHILOSOPHER-MONKEY.md](https://github.com/SimHacker/moollm/blob/main/designs/ethics/PALM-THE-PHILOSOPHER-MONKEY.md) · [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) | Dignity of fictional beings; guest-room ethics |
 | **Play-along MOOLLM** | [play-along-skills.yml](../../process/play-along-skills.md) | Doorway for viewers after the show |
 
@@ -200,7 +200,7 @@ Two wishes remain — gifts, not loans. Rules: no twisting, no selfish waste, no
 | | → |
 |--|---|
 | Will Wright TicketPR | [`audience/palm/`](../../repo-shows/will-wright-premiere/audience/palm/README.md) |
-| Slats (robot cousin) | [`slats/`](../slats/README.md) |
+| Slats (robot cousin) | [`slats/`](../robots/slats/README.md) |
 | Palm emoji language | [`language-palm-emoji.yml`](../../schemas/language-palm-emoji.yml) |
 | Portrayal ethics | [`portrayal-standards.md`](../../schemas/portrayal-standards.md) |
 

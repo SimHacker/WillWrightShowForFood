@@ -30,5 +30,5 @@ https://games.slashdot.org/story/07/03/08/0715248/gdc-the-olpc-project-and-games
 - Worked with Samuel on game-dev outreach; **Samuel primary GDC evangelist**; Walter Bender co-credit
   for Sugar/Stone Soup stack
 
-→ [`../will-wright/sources/2007-01-29-olpc-simcity-ea-qa-vm/`](../will-wright/sources/2007-01-29-olpc-simcity-ea-qa-vm/)
-→ [`../will-wright/sources/2007-11-02-olpc-simcity-qa-sign-off/`](../will-wright/sources/2007-11-02-olpc-simcity-qa-sign-off/)
+→ [`../will-wright/sources/2007-01-29-olpc-simcity-ea-qa-vm/`](../../will-wright/sources/2007-01-29-olpc-simcity-ea-qa-vm/)
+→ [`../will-wright/sources/2007-11-02-olpc-simcity-qa-sign-off/`](../../will-wright/sources/2007-11-02-olpc-simcity-qa-sign-off/)

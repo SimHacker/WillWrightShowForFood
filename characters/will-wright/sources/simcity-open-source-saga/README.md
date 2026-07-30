@@ -48,8 +48,8 @@ this first, then branch to threads below.
 ## People & shows
 
 - [Walter Bender OLPC show](../../../../repo-shows/walter-bender-olpc.yml)
-- [Chaim Gingold](../../../../chaim-gingold/README.md) — *Building SimCity*
-- [Don Hopkins career timeline](../../../../don-hopkins/career/simcity-lineage.yml)
+- [Chaim Gingold](../../../chaim-gingold/README.md) — *Building SimCity*
+- [Don Hopkins career timeline](../../../don-hopkins/career/simcity-lineage.yml)
 - [1996 Winograd talk](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — data portability seed
 - MicropolisCore `documentation/designs/` — Willmott correspondence, Guru doc
 
@@ -76,7 +76,7 @@ gave rule access; **very open to the idea**.
 | **2006-11-18** | 145 days | Will → Don: "Let me check into it. I support the idea wholeheartedly." |
 | **2006-12-01** | 158 days (~5 mo 5 d) | Don's [pitch letter to Rod Humble](article.md) → clearance arc → **Micropolis** |
 
-**Outreach:** [long-now-askers-outreach.md](long-now-askers-outreach.md) · Dan → [dan ancona](../../../../dan-ancona/) (**send_now**); Mark Live still unknown.
+**Outreach:** [long-now-askers-outreach.md](long-now-askers-outreach.md) · Dan → [dan ancona](../../../dan-ancona/) (**send_now**); Mark Live still unknown.
 
 *Gilmore's email is the outside spark; the Long Now Q&A is the witness beat Don had already heard Will affirm on stage.*
 

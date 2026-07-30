@@ -24,10 +24,10 @@ Don reads MOOLLM-generated/scripted text voicing **Palm** — the Freed Monkey's
 
 ## Repo artifacts
 
-- [Palm GLANCE](../../characters/palm/GLANCE.yml)
-- [Palm CARD](../../characters/palm/CARD.yml)
-- [Palm README](../../characters/palm/README.md)
-- [Play-along skills](../../process/play-along-skills.yml)
+- [Palm GLANCE](../../../characters/palm/GLANCE.yml)
+- [Palm CARD](../../../characters/palm/CARD.yml)
+- [Palm README](../../../characters/palm/README.md)
+- [Play-along skills](../../../process/play-along-skills.yml)
 
 **MOOLLM:** [monkey-palm](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm) · [Palm On Being Palm](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md)
 

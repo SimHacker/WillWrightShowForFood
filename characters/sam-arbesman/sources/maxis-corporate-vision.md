@@ -32,4 +32,4 @@ Scanned excerpts from Maxis corporate / annual-report materials — the ethos Ch
 | Artificial life + simulation | CAM6, Soul City, character souls, federation |
 | Draw you in; you live them | Repo as stage; characters as residents |
 
-↑ [microcosm-maxis-labs.md](microcosm-maxis-labs.md) · [Chaim](../chaim-gingold/) · [Will premiere](../../will-wright/invitation.md)
+↑ [microcosm-maxis-labs.md](microcosm-maxis-labs.md) · [Chaim](../../chaim-gingold/) · [Will premiere](../../will-wright/invitation.md)

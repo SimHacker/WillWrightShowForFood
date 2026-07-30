@@ -50,5 +50,5 @@ Frames GPL relicensing as **win-win**: publicity money can't buy, legitimizes Ma
 | 10 Jan 2007 | [Status update to EA leadership](../2007-01-10-simcity-for-olpc-status/README.md) |
 | **29 Jan 2007** | **This thread** — QA planning + Will's studio-head battle |
 | 3 May 2007 | [Pre-contract QA version](../2007-05-03-olpc-simcity-pre-contract-qa/README.md) |
-| Sep 2007 | EA↔OLPC contract signed — [`olpc-ea-contract.pdf`](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) |
+| Sep 2007 | EA↔OLPC contract signed — [`olpc-ea-contract.pdf`](../../../don-hopkins/career/contracts/olpc-ea-contract.pdf) |
 | Nov 2007 | [EA QA sign-off](../2007-11-02-olpc-simcity-qa-sign-off/README.md) |

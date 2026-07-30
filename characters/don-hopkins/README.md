@@ -119,8 +119,8 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 |------|------------|---------|
 | [`career/stupid-fun-club.yml`](career/stupid-fun-club.yml) | SFC yaml backbone — Slats, Dents, MediaGraph, networked AR; the employment thread behind the robot films. | [`stupid-fun-club-empathy-and-servitude.md`](stupid-fun-club-empathy-and-servitude.md) |
 | [`stupid-fun-club-empathy-and-servitude.md`](stupid-fun-club-empathy-and-servitude.md) | *Servitude* and *Empathy* one-minute movies — procedural argument about reviews, breakdowns, and performed feeling. | [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml) |
-| [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml) | Talk package distill — public-safe spine for the Empathy/Servitude show; links to Will sources and Slats sidekick. | [`../slats/`](../slats/README.md) |
-| [`../slats/`](../slats/README.md) | Slats — the waiter robot Don programmed; now drag-race judge; SFC sidekick character in this deck. | Cluster VII |
+| [`talks/empathy-and-servitude.yml`](talks/empathy-and-servitude.yml) | Talk package distill — public-safe spine for the Empathy/Servitude show; links to Will sources and Slats sidekick. | [`../slats/`](../robots/slats/README.md) |
+| [`../slats/`](../robots/slats/README.md) | Slats — the waiter robot Don programmed; now drag-race judge; SFC sidekick character in this deck. | Cluster VII |
 
 ---
 

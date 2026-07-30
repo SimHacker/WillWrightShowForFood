@@ -94,7 +94,7 @@ Don's own build, his own upload, his own narration — a faithful primary source
 paraphrase). The Edith credits and on-screen text are quoted/cleaned from the video; auto-caption
 garbles (e.g. "James Gore boss" → Jamie Doornbos, "air Bowman" → Eric Bowman, "Jim backrest" → Jim
 Mackraz) are corrected against the known Sims team and the About box. Using it in a show falls within
-the show's consent flow ([invitation](../../../invitation.md)).
+the show's consent flow ([invitation](../../invitation.md)).
 
 ## See also
 

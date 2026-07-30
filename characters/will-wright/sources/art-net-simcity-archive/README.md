@@ -59,8 +59,8 @@ Live capture (later): [Multi Player SimCityNet for X11 on Linux](https://www.you
 
 ## Through-line
 
-[multiplayer simcity ui network](../multiplayer-simcity-ui-network/README.md) · [simcity lineage](../../don-hopkins/career/simcity-lineage.yml) · [2004 02 07 educational multiplayer simcity linux](../2004-02-07-educational-multiplayer-simcity-linux/README.md)
+[multiplayer simcity ui network](../multiplayer-simcity-ui-network/README.md) · [simcity lineage](../../../don-hopkins/career/simcity-lineage.yml) · [2004 02 07 educational multiplayer simcity linux](../2004-02-07-educational-multiplayer-simcity-linux/README.md)
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)

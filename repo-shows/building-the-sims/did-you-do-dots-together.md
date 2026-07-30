@@ -2,7 +2,7 @@
 
 *Awkward reunion question — Jiminy Glick energy, audience in on the innocence.*
 
-[Portrayal standards](../../../schemas/portrayal-standards.md) · guests: Jim Mackraz, Eric Bowman
+[Portrayal standards](../../schemas/portrayal-standards.md) · guests: Jim Mackraz, Eric Bowman
 
 ## The question
 
@@ -34,8 +34,8 @@ Later Don recruited Bobo to **TomTom** Amsterdam — second reunion act.
 
 - Embarrassing question **on purpose** — guests know it's a pun trap
 - Not outing anyone; the comedy is homophone + Glick obliviousness
-- Related: [`../../ideas/traditions/flatterbot-2000.yml`](../../ideas/traditions/flatterbot-2000.yml) (Glick register)
-- Related: [`../../../process/old-band-back-together.yml`](../../../process/old-band-back-together.yml)
+- Related: [`../../ideas/traditions/flatterbot-2000.yml`](../ideas/traditions/flatterbot-2000.yml) (Glick register)
+- Related: [`../../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml)
 
 ## Instantiation pattern
 
@@ -47,7 +47,7 @@ Public gag is the **parent**; cast-specific production plans live in the private
 | Eric Bowman | *(private — not in this repo)* |
 | Don Hopkins (asker) | *(private — not in this repo)* |
 
-Abstract variations (Glick follow-ups, Kembel-twin confusion, Stanford-debt pivot, TomTom bridge, FlatterBot crossover): [`../../ideas/gags/did-you-do-dots-together.yml`](../../ideas/gags/did-you-do-dots-together.yml#variations)
+Abstract variations (Glick follow-ups, Kembel-twin confusion, Stanford-debt pivot, TomTom bridge, FlatterBot crossover): [`../../ideas/gags/did-you-do-dots-together.yml`](../ideas/gags/did-you-do-dots-together.yml#variations)
 
 ## Director's cut — evidence bounce
 

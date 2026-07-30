@@ -22,5 +22,5 @@ Don asked **Bill Buxton** if he'd telnetted to **lambda.parc.xerox.com port 8888
 ## Cross-links
 
 - [`../career/lineage.yml`](../career/lineage.yml) — LambdaMOO → MOOLLM name echo
-- [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `lambdamoo-pavel-curtis.yml`
+- [`../../repo-shows/INDEX.yml`](../../../repo-shows/INDEX.yml) → `lambdamoo-pavel-curtis.yml`
 - MOOLLM filesystem-as-microworld — objects as addressable rooms

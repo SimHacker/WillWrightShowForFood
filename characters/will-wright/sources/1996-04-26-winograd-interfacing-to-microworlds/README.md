@@ -92,7 +92,7 @@ Curated entry points — every figure in [images/](images/README.md) (article or
 | Theme | Start here | Also |
 |-------|------------|------|
 | **Opening** | [Will + Terry at Stanford](images/003-will-wright-and-terry-winograd-at-stanford.png) | [monkey mocap suit](images/004-will-wright-wearing-a-monkey-motion-capture-suit.jpeg) |
-| **Chaim reverse diagrams** | [Simulate](images/016-chaim-gingold-s-simcity-reverse-diagrams-simulate.png) | [maps](images/018-chaim-gingold-s-simcity-reverse-diagrams-maps.png) · [Chaim CARD](../../../../chaim-gingold/CARD.yml) |
+| **Chaim reverse diagrams** | [Simulate](images/016-chaim-gingold-s-simcity-reverse-diagrams-simulate.png) | [maps](images/018-chaim-gingold-s-simcity-reverse-diagrams-maps.png) · [Chaim CARD](../../../chaim-gingold/CARD.yml) |
 | **Post-mortems** | [SimEarth / SimAnt / SC2K](images/044-simearth-simant-and-simcity-2000.gif) | [SC2K snapshots](images/076-lots-of-cool-simcity-2000-screen-snapshots.png) |
 | **Dollhouse → Sims** | [Loading a world](images/078-loading-a-world-into-dollhouse.png) | [zoom levels](images/084-dollhouse-zoom-levels.png) · [puppet control](images/088-you-can-control-a-little-puppet.png) · [closing frame](images/167-maxis-released-dollhouse-as-the-sims-in-2000.jpeg) |
 | **UCC tools** | [Transmogrifier tutorial](images/133-the-sims-transmogrifier-turial-making-a-green-flamingo.jpeg) | [RugOMatic](images/137-the-sims-rugomatic-creating-picture-storytelling-rugs.jpeg) · [SimFreaks Laszlo mockup](images/138-unreleased-simfreaks-web-app-prototype-by-don-hopkins-using.jpeg) |
@@ -100,13 +100,13 @@ Curated entry points — every figure in [images/](images/README.md) (article or
 | **TSO lore** | [Will's secret home](images/153-casual-nudity-at-will-wright-s-secret-home-in-the-sims-onlin.jpeg) | [UFO lab](images/156-ufological-research-labs-in-the-sims-online.jpeg) |
 | **Steering committee** | [Kissing behavior tree](images/157-early-simantics-behavior-tree-for-kissing-from-the-sims-stee.png) | [1998 demo source](../1998-06-04-sims-steering-committee-demo/README.md) |
 
-**Portrait overlap:** [Will media hub](../../../media/README.md) · Soviet hardware → [Russian Space Junk](../../../media/russian-space-junk.md)
+**Portrait overlap:** [Will media hub](../../media/README.md) · Soviet hardware → [Russian Space Junk](../../media/russian-space-junk.md)
 
 ## Provenance + ethics
 
 Faithful capture of Will's own words (the heartbeat: source, don't paraphrase).
 Non-commercial use with attribution; attribute Stanford Archives + Don's transcript. Using it in a show =
-within the show's consent flow ([invitation](../../../invitation.md)).
+within the show's consent flow ([invitation](../../invitation.md)).
 
 **How it was preserved.** The talk survived as a DVD in Stanford Library's archive of Terry Winograd's
 CS547 collection — listed in the catalog but not yet scanned. At the start of COVID, Don emailed Terry

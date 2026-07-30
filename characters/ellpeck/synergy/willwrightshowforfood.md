@@ -13,4 +13,4 @@ Bridge path: **`Sims ⇔ Soul City ⇔ Tiny Life`** — not Soul City.
 
 Narrative: [bridge/soul-city-bridge.md](../bridge/soul-city-bridge.md)
 
-Spec: [`game-bridge-sims-tiny-life.yml`](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+Spec: [`game-bridge-sims-tiny-life.yml`](../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)

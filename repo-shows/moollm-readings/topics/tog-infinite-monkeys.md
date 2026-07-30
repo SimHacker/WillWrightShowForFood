@@ -27,4 +27,4 @@ Tog's essay on the infinite monkey theorem applied to design and iteration — f
 
 ---
 
-↑ [intro-canon](../intro-canon.md) · [episode 3](../episodes/dasher-palm-tog-monkeys.md) · [DSHR window-systems lineage](../../characters/david-rosenthal/window-systems-lineage.md)
+↑ [intro-canon](../intro-canon.md) · [episode 3](../episodes/dasher-palm-tog-monkeys.md) · [DSHR window-systems lineage](../../../characters/david-rosenthal/window-systems-lineage.md)

@@ -111,7 +111,7 @@ Multi user support.
     Live playable views of save files associated with stories.
 ```
 
-Source: [`micropolis/PROGRESS.txt`](../../../../micropolis/PROGRESS.txt) (Future plans section); echoed in [`laszlo/micropolis/TODO.txt`](../../../../micropolis/laszlo/micropolis/TODO.txt) (Facebook-era "city wall", event quests, friend city snapshots).
+Source: [`micropolis/PROGRESS.txt`](../../../../../micropolis/PROGRESS.txt) (Future plans section); echoed in [`laszlo/micropolis/TODO.txt`](../../../../../micropolis/laszlo/micropolis/TODO.txt) (Facebook-era "city wall", event quests, friend city snapshots).
 
 **City save tree:** immutable branch cities vs mutable leaf cities; players branch from each other's shared saves — parent pointers, snapshot-on-branch semantics (see email dump ~line 15255 in `old-email.txt` and TODO.txt).
 
@@ -132,7 +132,7 @@ This is the **centralized server + rich web client** thread — precursor to Sou
 
 - [simcity open source saga](../simcity-open-source-saga/README.md) — OLPC negotiation that contains this letter
 - [sugar centralized multiplayer laszlo](../sugar-centralized-multiplayer-laszlo/README.md) — Sugar mesh vs Laszlo catalog CMS
-- [simcity lineage](../../../../don-hopkins/career/simcity-lineage.yml)
+- [simcity lineage](../../../don-hopkins/career/simcity-lineage.yml)
 - Demo video: https://www.youtube.com/watch?v=8snnqQSI0GE (Python/Flash Micropolis)
 
 **SimCityNet capture:** https://www.youtube.com/watch?v=_fVl4dGwUrA — *Multi Player SimCityNet for X11 on Linux*

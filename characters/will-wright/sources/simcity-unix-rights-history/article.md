@@ -73,6 +73,6 @@ Contract excerpt in thread begins at typed **SOFTWARE LICENSING/DEVELOPMENT AGRE
 
 ## Gaps
 
-- [x] DUX contracts — published in [contracts](../../../../don-hopkins/career/contracts/README.md)
-- [ ] Exhibit A excerpt article from [`olpc-ea-contract.pdf`](../../../../don-hopkins/career/contracts/olpc-ea-contract.pdf)
+- [x] DUX contracts — published in [contracts](../../../don-hopkins/career/contracts/README.md)
+- [ ] Exhibit A excerpt article from [`olpc-ea-contract.pdf`](../../../don-hopkins/career/contracts/olpc-ea-contract.pdf)
 - [ ] Link scanned signatures if Don has cleaner scans than email paste

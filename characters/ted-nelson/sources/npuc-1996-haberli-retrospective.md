@@ -85,8 +85,8 @@ Ted at BayCHI 2021. Hope Nelson will intensely video-call the show.
 ## Sources
 
 - [`invisible-clipboard-rant-catalog.yml`](invisible-clipboard-rant-catalog.yml)
-- [`../ted-selker/invitation.md`](../ted-selker/invitation.md)
-- [`../../repo-shows/ted-selker/SHOW.yml`](../../repo-shows/ted-selker/SHOW.yml)
+- [`../ted-selker/invitation.md`](../../ted-selker/invitation.md)
+- [`../../repo-shows/ted-selker/SHOW.yml`](../../../repo-shows/ted-selker/SHOW.yml)
 - NPUC transcript: https://archive.org/details/tnelson (verify URL with Selker)
 
-↑ [ted-nelson README](README.md)
+↑ [ted-nelson README](../README.md)

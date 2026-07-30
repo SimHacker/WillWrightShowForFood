@@ -63,7 +63,7 @@ No production promises; see [**process/VISION.md**](process/VISION.md).
 MOOLLM skills into [`skills/`](skills/README.md) (composable with [moollm](https://github.com/SimHacker/moollm)).
 Shows are the stage; inheritable technique is the stack that grows downward.
 
-**Will Wright — confirmed kickoff guest, topic-less.** [Accepted](../characters/will-wright/invitation.md) July 2026. Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
+**Will Wright — confirmed kickoff guest, topic-less.** [Accepted](characters/will-wright/invitation.md) July 2026. Orbit the 1996 Dollhouse talk; crown jewel = **data portability**
 (Proxi ↔ Sims ↔ …).
 
 ## How a Repo Show runs

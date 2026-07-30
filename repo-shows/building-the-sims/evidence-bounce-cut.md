@@ -2,7 +2,7 @@
 
 *Async interviews edited into a back-and-forth sequence — each claim answered by a screen-shared artifact.*
 
-[Portrayal standards](../../../schemas/portrayal-standards.md) · lineage: [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#splice_in_reactions)
+[Portrayal standards](../../schemas/portrayal-standards.md) · lineage: [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#splice_in_reactions)
 
 ## Pattern (abstract)
 

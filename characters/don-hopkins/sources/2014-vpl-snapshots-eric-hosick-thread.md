@@ -57,4 +57,4 @@ Don forwards Eric's page again when reviving Body Electric article; Chuck sends 
 | **Michael McGuffin** | VPL definition debate |
 | **Eric Hosick** | Collection curator (stub guest?) |
 
-Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)
+Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../../process/trails/visual-programming-patch-cord.md)

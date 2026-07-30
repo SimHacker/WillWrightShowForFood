@@ -33,4 +33,4 @@ python3 ~/GroundUp/repo-show/scripts/extract-clip.py oh-god-cliffhanger-data-por
 
 Git canonical VTT wins over auto-slice. Polish drafts against `transcript.md`, then commit here.
 
-↑ [short form clips](../short-form-clips.yml) · [captions](../../../../process/post-production/captions.yml)
+↑ [short form clips](../short-form-clips.yml) · [captions](../../../../../process/post-production/captions.yml)

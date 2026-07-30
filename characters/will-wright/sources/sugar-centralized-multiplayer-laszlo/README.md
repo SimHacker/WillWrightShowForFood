@@ -23,7 +23,7 @@
 |--------|------|
 | Laszlo database interface | [2005 09 18 laszlo database interface](../2005-09-18-laszlo-database-interface/README.md) |
 | SimFreaks content catalog Laszlo | [2005 09 18 simfreaks content catalog laszlo](../2005-09-18-simfreaks-content-catalog-laszlo/README.md) |
-| Catalogs hub | [catalogs](../../../catalogs/README.md) |
+| Catalogs hub | [catalogs](../../../../catalogs/README.md) |
 | Micropolis publishing vision | [sims series micropolis publishing vision](../../media/sims-series-micropolis-publishing-vision.md) |
 
 **Analysis angles:**
@@ -49,7 +49,7 @@
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

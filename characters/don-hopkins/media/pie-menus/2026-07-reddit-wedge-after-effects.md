@@ -50,7 +50,7 @@ Beta signup; Mac tested, Windows in progress (OP: beta within ~1 week of post).
 | **2000 The Sims** | Pie menus at mass scale |
 | **2026 Wedge** | Context-aware pies return to **professional motion** stack — same Fitts/self-revealing gesture, selection-scoped verbs |
 
-Contrast [`../sources/2008-2023-pixie-buxton-patent-thread.md`](../sources/2008-2023-pixie-buxton-patent-thread.md): corporate patent FUD failed to kill the idea; grassroots + open DCC kept radial menus alive.
+Contrast [`../sources/2008-2023-pixie-buxton-patent-thread.md`](../../sources/2008-2023-pixie-buxton-patent-thread.md): corporate patent FUD failed to kill the idea; grassroots + open DCC kept radial menus alive.
 
 ---
 
@@ -61,4 +61,4 @@ Contrast [`../sources/2008-2023-pixie-buxton-patent-thread.md`](../sources/2008-
 - **Ben + Heinz show:** PIXIE → Maya/Blender → AE — forty years later
 - **Live demo:** MicropolisCore holodeck pies beside Wedge screen capture
 
-→ [`../../charchit-goyal/`](../../charchit-goyal/) · [`../../pie-menus-chi-88-and-beyond.md`](../../pie-menus-chi-88-and-beyond.md) · [`../../../repo-shows/edd-coates/pie-menus-piecraft.yml`](../../../repo-shows/edd-coates/pie-menus-piecraft.yml)
+→ [`../../charchit-goyal/`](../../../charchit-goyal/) · [`../../pie-menus-chi-88-and-beyond.md`](../../pie-menus-chi-88-and-beyond.md) · [`../../../repo-shows/edd-coates/pie-menus-piecraft.yml`](../../../../repo-shows/edd-coates/pie-menus-piecraft.yml)

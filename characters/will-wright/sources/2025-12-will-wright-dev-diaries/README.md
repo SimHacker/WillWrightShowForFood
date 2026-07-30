@@ -25,7 +25,7 @@ See [Proxi cluster index](../proxi-gallium-public-index.md).
 
 ## Show lanes
 
-- **Minecraft cluster** — Will Proxi export (shipped) + **Subutai** (Numenta/Proxi, Interval CV) → [`numenta-proxi-partnership.yml`](../../subutai-ahmad/sources/numenta-proxi-partnership.yml)
+- **Minecraft cluster** — Will Proxi export (shipped) + **Subutai** (Numenta/Proxi, Interval CV) → [`numenta-proxi-partnership.yml`](../../../subutai-ahmad/sources/numenta-proxi-partnership.yml)
 - **Richard Bartle** — consented audience seat; draft taxonomy ↔ Sims dialogue already in [`audience/richard-bartle/`](../../../../repo-shows/will-wright-premiere/audience/richard-bartle/README.md); Will citing Bartle on camera is the hook for a three-way segment
 - **Jess Bird** — heirloom lane ↔ memorial interviews
 - **Game design trail** — [game design lineage](../../../../process/trails/game-design-lineage.md)

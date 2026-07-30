@@ -72,7 +72,7 @@ and LLMs — on top of mergeable structure.
 | **Durable** | **GitHub-as-MMORPG** — branches, PRs, issues | Ink & Switch publish model |
 | **Live** | Repo Show + stream | Ink & Switch + classroom? |
 
-Compare historical stacks (**Croquet**, **[Philip Rosedale](philip-rosedale/)**'s HiFi JSON plugins,
+Compare historical stacks (**Croquet**, **[Philip Rosedale](../philip-rosedale/)**'s HiFi JSON plugins,
 **UnityJS**, Pantomime VR JSON) for what each got right — but the **center of gravity** is Dan's
 current Ink & Switch work, not a metaverse retrospective.
 

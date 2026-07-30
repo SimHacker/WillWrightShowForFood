@@ -24,7 +24,7 @@ as a **character** with questions, a costume, and a seat, all stored as files in
   surfaces your question live, renders Sims speech into Simlish, and runs the show's gears.
 - **You** show up in `audience/` — as yourself, or as a clearly-labeled fictional character.
 
-Full constitution: [`../../process/ticket-pr.md`](../../process/ticket-pr.md) · Format: [`../../process/FORMAT.md`](../../process/FORMAT.md)
+Full constitution: [`../../process/ticket-pr.md`](../../../process/ticket-pr.md) · Format: [`../../process/FORMAT.md`](../../../process/FORMAT.md)
 
 ---
 
@@ -32,13 +32,13 @@ Full constitution: [`../../process/ticket-pr.md`](../../process/ticket-pr.md) ·
 
 | Level | How | Persists? |
 |-------|-----|-----------|
-| Easiest | Comment on the **Hacker News** thread when we announce | ephemeral → curated into `audience/hn-<user>/` with [provenance schema](../../schemas/question-provenance.yml) |
+| Easiest | Comment on the **Hacker News** thread when we announce | ephemeral → curated into `audience/hn-<user>/` with [provenance schema](../../../schemas/question-provenance.yml) |
 | Easy | **[Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)** — discussion, answers, 👍 votes | **in repo (GitHub)** |
 | **TicketPR** | Fork → copy [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) → `audience/<you>/` → PR | **on the record** |
 
 **Persistent questions → GitHub Issues** (any repo). Attach with `ref` in your tree — discussion
 and 👍 votes on GitHub; orchestration stays in `questions.yml`. Multiple characters may share the
-same ref with different local framing. See [`question-tree.yml`](../../schemas/question-tree.yml).
+same ref with different local framing. See [`question-tree.yml`](../../../schemas/question-tree.yml).
 
 A TicketPR is harder than a comment — and that's the point. The guest can see real people, real
 questions, real stories building *before the show is even scheduled*.
@@ -82,7 +82,7 @@ Minimum is **`questions.yml`**. Everything else makes you richer on stream.
 **Question tree:** each character's `questions.yml` is the **orchestration SSOT** — sparse curated
 trees Don Philahue reads (not every GitHub issue). Nodes may attach one `ref` (issue/comment) and
 many `context_lasers` (files, dirs, line ranges, anchors, MOOLLM facets). `children` are
-sub-questions with their own refs and lasers. Unreferenced YAML-only nodes are valid. See [`../../schemas/question-tree.yml`](../../schemas/question-tree.yml) and
+sub-questions with their own refs and lasers. Unreferenced YAML-only nodes are valid. See [`../../schemas/question-tree.yml`](../../../schemas/question-tree.yml) and
 [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md#question-tree--sparse-orchestration--optional-github-refs).
 
 ---

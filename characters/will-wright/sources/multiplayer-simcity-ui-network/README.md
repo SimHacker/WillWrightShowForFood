@@ -12,7 +12,7 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 |----------|------------|
 | **InterCHI'93 proposal (primary)** | [1993 interchi simcitynet proposal](../1993-interchi-simcitynet-proposal/README.md) |
 | **art.net SimCity archive** (manual, transcripts, screenshots, announcement) | [art net simcity archive](../art-net-simcity-archive/README.md) |
-| SimCity lineage (SimCityNet era) | [simcity lineage](../../../../don-hopkins/career/simcity-lineage.yml) |
+| SimCity lineage (SimCityNet era) | [simcity lineage](../../../don-hopkins/career/simcity-lineage.yml) |
 | MultiPlayerIdeas lineage | MicropolisCore `notes/MultiPlayerIdeas.txt` (sibling repo) |
 | Educational multiplayer proposal | [2004 02 07 educational multiplayer simcity linux](../2004-02-07-educational-multiplayer-simcity-linux/README.md) |
 | Winograd medium — multiplayer X11 screenshot | [Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d) — image `031-multiplayer-x11-simcity…` |
@@ -44,7 +44,7 @@ Don Hopkins worked on cooperative multiplayer SimCity from the early 1990s throu
 
 ---
 
-↑ [sources](../README.md) · [show](../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
+↑ [sources](../README.md) · [show](../../../../repo-shows/will-wright-premiere/README.md) · [portrayal](../../README.md)
 
 *Raw directory:* [browse files in this folder](./)
 

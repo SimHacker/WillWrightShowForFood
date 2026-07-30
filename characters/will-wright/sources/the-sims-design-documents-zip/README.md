@@ -126,7 +126,7 @@ SimTransmogrifierDesign, SimTransmogrifierTODO, TransmogriferRenovationPlan, Qui
 
 ObjectFileFormat, ObjectIFFFileFormat, ObjectList, ResourceEXE, ResourceFileOverview, SimsFileFormat, MasterIDAndSubIndexOverview, MaxisSimRules, HitSystemDesign, HitSoundRevivew
 
-→ Maxis catalog metadata: [maxis](../../../catalogs/maxis/README.md)
+→ Maxis catalog metadata: [maxis](../../../../catalogs/maxis/README.md)
 
 ### Shipping / E3 / completion
 

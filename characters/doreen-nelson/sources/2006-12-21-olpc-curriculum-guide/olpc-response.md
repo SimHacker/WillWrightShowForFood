@@ -22,6 +22,6 @@ John Gilmore had cc'd the OLPC SimCity cast — Walter Bender, Jim Gettys, Don H
 
 - [`../../invitation.md`](../../invitation.md) — Repo Show invitation
 - [`../../../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/`](../../../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/README.md)
-- [`../../../repo-shows/doreen-nelson/README.md`](../../../repo-shows/doreen-nelson/README.md)
+- [`../../../repo-shows/doreen-nelson/README.md`](../../../../repo-shows/doreen-nelson/README.md)
 
 ↑ [`../../README.md`](../../README.md)

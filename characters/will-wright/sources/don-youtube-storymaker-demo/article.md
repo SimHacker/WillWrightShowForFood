@@ -46,4 +46,4 @@
 - [ ] Matthew Sibigtroth show — original StoryMaker speech AI  
 - [ ] Publish Phonoloper + StoryMaker source from Don archive
 
-*See [stupid fun club](../../../../don-hopkins/career/stupid-fun-club.yml)*
+*See [stupid fun club](../../../don-hopkins/career/stupid-fun-club.yml)*

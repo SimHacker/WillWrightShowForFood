@@ -6,8 +6,8 @@ The Sims UCC lineage gives us two registers on the **same engine** (SimAntics, b
 
 | Register | Artifact | Argument in rules |
 |----------|----------|-------------------|
-| **Inclusion agitprop** | [SimProv Wedding Playset](../../catalogs/simprov/README.md) — Crowd Sitter, Cupid, Buddha, Hope Chest, Donna's craft layer | Who gets to stand up in front of friends and family and be **recognized**; families orchestrate joy together |
-| **Institutional farce** | [Dumbold Voting Machine](../../sources/2018-04-24-dumbold-voting-machine/medium-article.md) | Broken e-voting UX, auditability, vendor accountability — **2004 time capsule** |
+| **Inclusion agitprop** | [SimProv Wedding Playset](../../../catalogs/simprov/README.md) — Crowd Sitter, Cupid, Buddha, Hope Chest, Donna's craft layer | Who gets to stand up in front of friends and family and be **recognized**; families orchestrate joy together |
+| **Institutional farce** | [Dumbold Voting Machine](../sources/2018-04-24-dumbold-voting-machine/medium-article.md) | Broken e-voting UX, auditability, vendor accountability — **2004 time capsule** |
 
 Both are intentional, unashamed **woke procedural rhetoric** in the plain sense: the politics are in the mechanics, not bolted on as flavor text.
 
@@ -21,7 +21,7 @@ See [INTRO-NARRATIVE.md](../../../repo-shows/will-wright-premiere/INTRO-NARRATIV
 
 ## Soul of The Sims — where the rules started
 
-Will Wright's January 1997 [Motive.c](../../sources/2008-02-10-soul-of-the-sims/Motive.c) is procedural rhetoric at the substrate: hunger, bladder, stress, happiness averages, failure alerts (`"\pYou have wet your bed"`). The wedding playset and Dumbold are later **objects** on the same motive/dialog machinery.
+Will Wright's January 1997 [Motive.c](../sources/2008-02-10-soul-of-the-sims/Motive.c) is procedural rhetoric at the substrate: hunger, bladder, stress, happiness averages, failure alerts (`"\pYou have wet your bed"`). The wedding playset and Dumbold are later **objects** on the same motive/dialog machinery.
 
 ## Episode idea — invitation portrayal for Ian Bogost
 

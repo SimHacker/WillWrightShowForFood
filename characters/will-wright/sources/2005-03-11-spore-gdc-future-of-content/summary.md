@@ -102,7 +102,7 @@ and a **T-shaped** design (evolution ladder + sci-fi meta-games). The talk that 
 | Same Spore demo, generative frame | [2006 Long Now with Eno](../2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
 | Pre-Spore design thread | [1996 Winograd](../1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | Shipping / accretion | [Chris Trottier — tuned emergence](../2004-02-21-chris-trottier-tuned-emergence/README.md) |
-| Don HN postmortem | [`hn-witness.yml`](hn-witness.yml) · [`don-will-mining-hub.yml`](../../../../don-hopkins/don-will-mining-hub.yml) |
+| Don HN postmortem | [`hn-witness.yml`](hn-witness.yml) · [`don-will-mining-hub.yml`](../../../don-hopkins/don-will-mining-hub.yml) |
 | Don's full notes | [`medium-article.md`](medium-article.md) |
 
 ↑ [`README.md`](README.md) · [`short-form-clips.yml`](short-form-clips.yml)

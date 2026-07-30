@@ -92,7 +92,7 @@ their own perspective; you discover things you didn't know.
 "why" under data portability.
 
 **Bartle types (same Dev Diaries):** Will **brings up Bartle's player types** — hook for a
-three-way with [Richard Bartle](../../richard-bartle/README.md) (consented audience seat).
+three-way with [Richard Bartle](../richard-bartle/README.md) (consented audience seat).
 [Bartle player types](sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml)
 
 **Identity surfing (same Dev Diaries):** Players describe play by **popping between third and first

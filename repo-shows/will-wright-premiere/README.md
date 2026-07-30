@@ -73,7 +73,7 @@ he pulls become the season — each one a future show. (See `episodes.yml`.)
 See **[`../../process/FORMAT.md`](../../process/FORMAT.md)** — canonical
 definition (HN → RTFR → Repo Man → **TicketPR** → Don Philahue → cauldron → skills + Cursor).
 
-**Audience:** submit a [**TicketPR**](audience/README.md) — copy [`../../_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md) for MOOLLM character stack + [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md). Minimum: `questions.yml`.
+**Audience:** submit a [**TicketPR**](audience/README.md) — copy [`../../_TEMPLATE/audience/`](../_TEMPLATE/audience/README.md) for MOOLLM character stack + [`CHARACTER.md`](../_TEMPLATE/audience/CHARACTER.md). Minimum: `questions.yml`.
 
 Short version: RTFR on **your rig** (AI optional). Man-vs-machine competitions welcome.
 Repo Man guest; audience TicketPRs + issues; Philahue harvests and wrangles live; cauldron → breed techniques via git.

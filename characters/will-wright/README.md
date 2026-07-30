@@ -90,7 +90,7 @@ These are **about his published work**, not claims about private beliefs:
 | **Chaim Gingold** | [Chaim Gingold · CARD](../chaim-gingold/CARD.yml) | *Building SimCity* — simulation loop diagrams |
 | **Stone Librande** | [Stone Librande · CARD](../stone-librande/CARD.yml) | One-page design at Maxis |
 | **Terry Winograd** | [Terry Winograd · CARD](../terry-winograd/CARD.yml) | 1996 seminar host |
-| **Slats** | [Slats · CARD](../slats/CARD.yml) | SFC robot Don programmed — optional show segment |
+| **Slats** | [Slats · CARD](../robots/slats/CARD.yml) | SFC robot Don programmed — optional show segment |
 | **Seymour Papert · Alan Kay** | [Seymour Papert · CARD](../seymour-papert/CARD.yml) · [Alan Kay · CARD](../alan-kay/CARD.yml) | Constructionist microworld lineage |
 
 ## Sims flavor (representational)

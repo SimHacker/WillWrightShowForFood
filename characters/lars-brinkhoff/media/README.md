@@ -29,7 +29,7 @@ Full shelf (14 PDFs): [`reference/MANIFEST.yml`](reference/MANIFEST.yml)
 ## Toolchain & repos
 
 [`../pdp7-development.md`](../pdp7-development.md) · **PIXIE show:**
-[`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
+[`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml)
 
 **TODO:** Lars PDP-7 munching squares source, SIMH rig `SETUP.md`, light-pen emulation design notes.
 

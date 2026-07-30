@@ -96,7 +96,7 @@ the ring structure processor RSP, M.Etherton for the link routine and C.Cheney f
 garbage collector.
 
 > ✎ Four credits, four artifacts we now hold or can point at:
-> **[Neil Wiseman](../../pixie-constellation.yml)** (DOWN compiler, RSP, PIXIE co-design);
+> **[Neil Wiseman](../../../pixie-constellation.yml)** (DOWN compiler, RSP, PIXIE co-design);
 > **John Hiles** (RSP — the ring engine filling
 > [RSPPIX](../../pixie-assembler-listing-1972/README.md));
 > **M. Etherton** — *the link routine*, i.e. the

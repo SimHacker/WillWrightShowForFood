@@ -26,5 +26,5 @@ Don's invitation memory: Eric held core systems together; prototyped a visceral 
 
 ## Sources
 
-- [`../../characters/eric-bowman/media.md`](../../characters/eric-bowman/media.md)
-- [`../../characters/eric-bowman/invitation.md`](../../characters/eric-bowman/invitation.md)
+- [`../../characters/eric-bowman/media.md`](../../../characters/eric-bowman/media.md)
+- [`../../characters/eric-bowman/invitation.md`](../../../characters/eric-bowman/invitation.md)

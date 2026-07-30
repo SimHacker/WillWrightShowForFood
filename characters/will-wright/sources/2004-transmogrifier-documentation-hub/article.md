@@ -38,7 +38,7 @@ Future tools planned to extend **XML** export/import for more data types.
 
 - [Tutorial 1: Green Flamingo](../2004-transmogrifier-tutorial-green-flamingo/README.md)  
 - [Glossary](../2004-transmogrifier-glossary/README.md)  
-- [EA Tools EULA](../../../../don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt)  
+- [EA Tools EULA](../../../don-hopkins/career/contracts/transmogrifier-ea-tools-eula.txt)  
 - [Magic Cookie registry](../2004-transmogrifier-magic-cookie-registry/README.md)
 
 ---

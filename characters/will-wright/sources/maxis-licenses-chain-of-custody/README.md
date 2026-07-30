@@ -6,8 +6,8 @@ Primary evidence for how **SimCity Classic** became **Micropolis**, and how **Th
 
 **Don (Jun 2026):** DUX is long gone — document the full contract chain. Include EA↔OLPC, GPL grants, and **Transmogrifier** distribution terms (EA had Don distribute under a click-through license).
 
-**Canonical mirror:** [contracts](../../../../don-hopkins/career/contracts/README.md)  
-**Narrative:** [simcity lineage](../../../../don-hopkins/career/simcity-lineage.yml) (`chain_of_custody`)
+**Canonical mirror:** [contracts](../../../don-hopkins/career/contracts/README.md)  
+**Narrative:** [simcity lineage](../../../don-hopkins/career/simcity-lineage.yml) (`chain_of_custody`)
 
 See **[article.md](article.md)** for the indexed table and show angles.
 

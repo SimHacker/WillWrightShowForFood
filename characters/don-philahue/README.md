@@ -162,4 +162,4 @@ Nothing recompiles Philahue when a new card drops:
 
 Same expansion-pack model as Sims objects advertising into a running world.
 
-See [`../process/FORMAT.md`](../process/FORMAT.md).
+See [`../process/FORMAT.md`](../../process/FORMAT.md).

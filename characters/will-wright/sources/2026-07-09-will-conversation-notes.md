@@ -236,8 +236,8 @@ premiere, **extending** the documentary genome.
 ## See also
 
 - [Note to Will — Tiger Mountain tour](../../doug-hilsinger/note-to-will-tiger-mountain-tour.md) — Don's dated proof that the format predates this conversation (written June 29; the iLoci moment again)
-- [ideas.md](../../ideas.md) — conversation hooks menu
-- [sessions/README.md](../../sessions/README.md) — Connections-style narrative arcs
-- [videos.yml](../../videos.yml) — long-form Burke-style excerpts
+- [ideas.md](../ideas.md) — conversation hooks menu
+- [sessions/README.md](../sessions/README.md) — Connections-style narrative arcs
+- [videos.yml](../videos.yml) — long-form Burke-style excerpts
 - [moollm k-line-connections](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/k-line-connections.md) — Burke + Will in pub
 

@@ -86,4 +86,4 @@ Lisp for meta mini-languages → want same for **application-specific visual lan
 - **Rebounce** — Body Electric named explicitly as Sugar inspiration  
 - **PostScript lineage** — structured graphics requirement = Distillery/PDF/SVG thread  
 
-→ [`../../walter-bender/`](../../walter-bender/) · [`../../jaron-lanier/sources/2007-01-02-olpc-rebounce-keith-mcmillen.md`](../../jaron-lanier/sources/2007-01-02-olpc-rebounce-keith-mcmillen.md) · [`../../repo-shows/rebounce/`](../../repo-shows/rebounce/)
+→ [`../../walter-bender/`](../../walter-bender/) · [`../../jaron-lanier/sources/2007-01-02-olpc-rebounce-keith-mcmillen.md`](../../jaron-lanier/sources/2007-01-02-olpc-rebounce-keith-mcmillen.md) · [`../../repo-shows/rebounce/`](../../../repo-shows/rebounce/)

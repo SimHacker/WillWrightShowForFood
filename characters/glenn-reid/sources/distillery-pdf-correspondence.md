@@ -94,4 +94,4 @@ Based on Glenn's idea; uses NeWS `setbindoverride`.
 
 Sun printing group asked Don about stdin→distillery→stdout and Adobe structuring conventions. Don: `~hopkins/ps/still.ps` on OpenWindows; loops unroll badly on hand-written fractal PS.
 
-→ [`../glenn-reid/`](../glenn-reid/) · [`../brian-reid/`](../brian-reid/) · [`../../repo-shows/postscript-distillery-to-pdf/`](../../repo-shows/postscript-distillery-to-pdf/)
+→ [`../glenn-reid/`](../../glenn-reid/) · [`../brian-reid/`](../../brian-reid/) · [`../../repo-shows/postscript-distillery-to-pdf/`](../../../repo-shows/postscript-distillery-to-pdf/)

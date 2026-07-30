@@ -20,8 +20,8 @@ Chaim offered to connect Don to **Sam Arbesman** — complexity scientist, Maxis
 
 | Person | WWSFF |
 |--------|-------|
-| Chaim Gingold | [chaim gingold](../../../../chaim-gingold/README.md) |
-| Sam Arbesman | [sam arbesman](../../../../sam-arbesman/README.md) |
+| Chaim Gingold | [chaim gingold](../../../chaim-gingold/README.md) |
+| Sam Arbesman | [sam arbesman](../../../sam-arbesman/README.md) |
 
 **Status:** Invitation + show seed — [sam arbesman](../../../sam-arbesman/README.md) · [sam arbesman maxis labs](../../../../repo-shows/sam-arbesman-maxis-labs.yml)
 

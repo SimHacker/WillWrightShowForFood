@@ -307,7 +307,7 @@ Breakthrough T1D Twitch + PC Gamer — mind world loop, Sims 2 memory panel, nar
 **[proxi-gallium-public-index.md](proxi-gallium-public-index.md)** — cluster index for all Proxi public digests (2024–2025).
 
 **[2019-10-qgcon-sims-inclusivity-thread/](2019-10-qgcon-sims-inclusivity-thread/README.md)**  
-Don → EA (Lyndsay Pearson, Chloe Dubini) — QGCon 2020 inclusivity paper ask; Mike Duke / Graham Nardone routed. Pairs with [Tanja Sihvonen](../../../tanja-sihvonen/).
+Don → EA (Lyndsay Pearson, Chloe Dubini) — QGCon 2020 inclusivity paper ask; Mike Duke / Graham Nardone routed. Pairs with [Tanja Sihvonen](../../tanja-sihvonen/).
 
 **[2022-sims-internet-museum-questions/](2022-sims-internet-museum-questions/README.md)**  
 Fan museum preservation ask — Paulette Dropinsky inbound mail.

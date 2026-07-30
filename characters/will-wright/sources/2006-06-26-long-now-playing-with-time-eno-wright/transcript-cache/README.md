@@ -1,7 +1,7 @@
 # Transcript cache — YouTube auto-captions (reference only)
 
 **Not canonical.** Use for timestamp grep and clip discovery until Don hand-proofreads a full
-transcript (same workflow as [1996 Winograd](../1996-04-26-winograd-interfacing-to-microworlds/transcript-cache/README.md)).
+transcript (same workflow as [1996 Winograd](../../1996-04-26-winograd-interfacing-to-microworlds/transcript-cache/README.md)).
 
 ## Refresh
 

@@ -26,8 +26,8 @@ Turn 7 of the Marathon Session — Palm, adventure layer, and the microworld at 
 
 ## Repo artifacts
 
-- [Palm GLANCE](../../characters/palm/GLANCE.yml)
-- [Don Hopkins room](../../characters/don-hopkins/)
+- [Palm GLANCE](../../../characters/palm/GLANCE.yml)
+- [Don Hopkins room](../../../characters/don-hopkins/)
 
 **MOOLLM:** [marathon-session](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/characters/real-people/don-hopkins/sessions/marathon-session.md) · [palm-nook](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook)
 

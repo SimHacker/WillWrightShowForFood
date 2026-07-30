@@ -51,4 +51,4 @@ gcc -DMOTIVE_STANDALONE -std=c89 -o motive Motive.c && ./motive
 ## Related
 
 - [1996 Winograd talk](../1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) — Dollhouse preview, distributed AI
-- [Jamie Doornbos show](../../../../jamie-doornbos/README.md) — SimAntics / motive system in shipping Sims
+- [Jamie Doornbos show](../../../jamie-doornbos/README.md) — SimAntics / motive system in shipping Sims

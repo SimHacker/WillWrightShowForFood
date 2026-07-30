@@ -61,5 +61,5 @@ Don notes fight with SunSoft all-hands figure (later learned: **DEC NeWS fighter
 - [`../../david-rosenthal/invitation.md`](../../david-rosenthal/invitation.md) — ICCCM author + NeWS co-architect
 - [`../../owen-densmore/CHARACTER.yml`](../../owen-densmore/CHARACTER.yml) — native WM memo
 - [`../../arthur-van-hoff/sources/1991-06-linkget-parent-scope.md`](../../arthur-van-hoff/sources/1991-06-linkget-parent-scope.md) — COOL / HyperNeWS Plan B (Jun 1991)
-- [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) → `news-postscript-window-system.yml`
+- [`../../repo-shows/INDEX.yml`](../../../repo-shows/INDEX.yml) → `news-postscript-window-system.yml`
 - Don Woods focus/server-grab thread included in Steve Evans **Interoperability Proposals DRAFT** (29 May 1991) — bug IDs 1058278, 1056853, etc.
