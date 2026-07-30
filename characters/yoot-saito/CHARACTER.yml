@@ -30,6 +30,12 @@ engelbart_interview:
   companion_published: "https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview"
   engelbart_text_status: "Engelbart interview text not yet located/published; the Alan Kay companion interview is OCR-restored by Don in the YootTower repo."
 
+interviews_conducted:
+  fact: "Beyond Alan Kay and Douglas Engelbart, Yoot has personally interviewed Bill Atkinson, Joanna Hoffman, Steve Wozniak, and others — a body of unpublished primary-source computing-history interviews."
+  provenance: "In Yoot's own words, in private correspondence with Don Hopkins (May 2024), while discussing the Alan Kay interview transcript Don OCR-restored and proofread: 'I had interviewed also Mr. Bill Atkinson, Mr. Douglas Engelbart, Ms. Joanna Hoffman, Steven Wozniak, so on.' (names proofread from Yoot's quick typing)."
+  published_so_far: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/README.md"
+  hope: "Don volunteered to help clean up and publish the remaining interview transcripts, as with the Alan Kay one."
+
 sources:
   wikipedia: https://en.wikipedia.org/wiki/Yoot_Saito
   web:
