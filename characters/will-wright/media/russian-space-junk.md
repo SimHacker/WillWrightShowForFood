@@ -72,7 +72,7 @@ A round optical sight / periscope head with mode selectors **ОСНОВНАЯ** 
 The back of a circular pressure **hatch**, showing the radial locking arms and the
 **ВЫРАВНИВАНИЕ ДАВЛЕНИЯ** (pressure equalization) handle.
 
-![Contoured spacecraft seat with harness — possibly a primate couch — alongside a hand-controller column](russian-ejection-seat.png)
+![Contoured spacecraft seat with harness — possibly a primate couch — alongside a hand-controller column](russian-space-monkey-seat.png)
 
 A contoured **seat** with harness, next to a hand-controller column. Look at the
 size: this may be a **monkey seat**. The couch is small for an adult cosmonaut —
