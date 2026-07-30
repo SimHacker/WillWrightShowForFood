@@ -72,7 +72,7 @@ Ideas that were *already sketchable* years ago, and what only got easy (or newly
 | **Gaussian splat / NeRF capture** | Capture a Trouw-scale performance volume; walk it later; mash with live audience light |
 | **LED mass upload** | Nod/shake, face cloud, ages-in-light — under-seat and forehead LEDs |
 | **Live fireworks shared world** | WebGPU particles + optional physical ignition; same “simple → reckless” ladder as 2017, but the virtual half is trivial to ship |
-| **Will + Parker at NDSM** | Show Die Space *in the room that built the muscle*; three generations of sim/participation thinking in one visit |
+| **Will + Will's son at NDSM** | Show Die Space *in the room that built the muscle*; three generations of sim/participation thinking in one visit |
 
 ---
 
@@ -102,7 +102,7 @@ World-from-data; gaffer tape on tapeable objects; pie menus in 3D. Keez: “a li
 ### 7. Die Space ↔ Mind Mirror
 Afterlife *community* vs simulated personality. Segment: mind-mirror SKILL beside TEDx stills.
 
-### 8. NDSM / Parker / Will
+### 8. NDSM / Will's son / Will
 Studio visit path. Optional [Ben Cerveny](../ben-cerveny/) + [Jared Tarbell](../jared-tarbell/).
 
 ### 9. Analytic-cubism paint-cam (Don jam)

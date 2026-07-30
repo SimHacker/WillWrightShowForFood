@@ -150,7 +150,7 @@ combine with Voystick — guitar selects operations, voice skips layers on the b
 Continuous background work — not blocking the steer:
 
 1. **Remember** — past safaris, cards you lingered on, git audience contributions
-2. **Look up** — graph links at approaching POIs, topical layers (Invader, Parker, canal history)
+2. **Look up** — graph links at approaching POIs, topical layers (Invader, Will's son, canal history)
 3. **Organize** — cluster by interest profile (MOOLLM rooms, Proxi snow globes)
 4. **Project** — rank suggestions onto *your* interests, not generic tourism
 5. **Speak** — field narration when proximity triggers; answer questions without menu diving

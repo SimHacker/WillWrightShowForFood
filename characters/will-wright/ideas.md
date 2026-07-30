@@ -46,7 +46,7 @@ worlds. Build a real **Proxi ⇔ Soul City ⇔ Sims** bridge on stream — the d
 
 **Related guest:** [Ben Cerveny](../ben-cerveny/) — Game Neverending → Flickr → public-code
 
-**Related guest (definite):** [Keez Duyves](../keez-duyves/) — PIPS:lab / **Die Space** (TEDxAmsterdam light upload); NDSM studio via Parker; inter Will Wright into Die Space.
+**Related guest (definite):** [Keez Duyves](../keez-duyves/) — PIPS:lab / **Die Space** (TEDxAmsterdam light upload); NDSM studio via Will's son; inter Will Wright into Die Space.
 lineage; natural co-thread for this as episode-one spine.
 
 ### 3. Possibility space & the Simulator Effect

@@ -6,7 +6,7 @@ meta:
   id: urban-ebike-safari
   status: seed
   host: don-hopkins
-  participants: [don-hopkins, will-wright, parker-wright]
+  participants: [don-hopkins, will-wright, wills-son]
   parent: urban-safari-live.yml
   format: ../../process/one-minute-movie-sandwich.yml
 
@@ -64,7 +64,7 @@ lineage:
       source: ../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
-    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Parker calls Will; git audience cards", file: urban-safari-live.yml }
+    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Will's son calls Will; git audience cards", file: urban-safari-live.yml }
     - { era: "2026+", project: Urban eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
@@ -137,7 +137,7 @@ dual_location_navigation:
     examples:
       - "What's near me?"
       - "Tell me about that canal"
-      - "What did Parker film here?"
+      - "What did Will's son film here?"
       - "Take me to the next Invader"
       - "Set destination"
     set_destination: |
@@ -235,7 +235,7 @@ steering_pie_ride_game:
   ai_memory_loop:
     - remember — past safaris, linger time, git audience cards
     - lookup — graph links at approaching POIs
-    - organize — topical layers (Invader, Parker, canal, contributor)
+    - organize — topical layers (Invader, Will's son, canal, contributor)
     - project — rank onto rider interest profile
     - speak — proximity-triggered narration
     - answer — questions without stopping or screen touch

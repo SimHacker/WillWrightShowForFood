@@ -28,7 +28,7 @@ discrete phoneme classification).
 
 | Channel | Role | Examples on the bike |
 |---------|------|----------------------|
-| **Natural language** | SpeechAnalyzer — words, tools, questions | "What's near me?", "Set destination", "Capture this", "What did Parker film here?" |
+| **Natural language** | SpeechAnalyzer — words, tools, questions | "What's near me?", "Set destination", "Capture this", "What did Will's son film here?" |
 | **Gestural (Voystick)** | Pitch+vowel trace — arc hops, wedge steering | Warble along pie wedge; homomorphic yeah-yeah confirm; voice-ahead expert path |
 
 **Code switching:** the rider fluidly moves between channels — NL to **select** a tool or name a

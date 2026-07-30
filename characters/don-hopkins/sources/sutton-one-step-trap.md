@@ -36,7 +36,7 @@ Product seed: [`../../../repo-shows/ideas/urban-ebike-safari.yml`](../../../repo
 | Micromanage every edge while riding | **Virtual focus** hops POI → card stack → topical links; rider never sees the graph |
 | Single trajectory planning | **Story graph** — branches, layers, contributor cards (tree of possibilities at authoring time; options at ride time) |
 | Always-on turn-by-turn | **"Set destination"** commits routing; Bosch/Apple fill micro detail only after abstract intent locks |
-| Iterate local transitions for "what's interesting ahead?" | Voice **options**: "next Invader", "that canal", "what Parker filmed here" — semi-MDP commands |
+| Iterate local transitions for "what's interesting ahead?" | Voice **options**: "next Invader", "that canal", "what Will's son filmed here" — semi-MDP commands |
 
 **ssivark's flight analogy maps directly:** safari voice layer = flight legs; Bosch turn-by-turn = traffic lights
 to the airport. You do not narrate at traffic-light granularity.

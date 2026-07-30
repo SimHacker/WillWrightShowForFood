@@ -78,6 +78,6 @@ See [`2024-03-hn-diespace-massively-multiplayer-cv.md`](2024-03-hn-diespace-mass
 | 2017 Mar 7 | Solo Anyways at NDSM lab | Mail to Arthur + Don place memory |
 | 2017+ | Messenger Anyways / Waag / World VR Forum | Messenger |
 | 2024 Mar | Die Space on HN | Public HN |
-| 2026 | Parker / NDSM visit path; Repo Show invite | Current |
+| 2026 | Will's son / NDSM visit path; Repo Show invite | Current |
 
 Private correspondence archive — not published in this repo.

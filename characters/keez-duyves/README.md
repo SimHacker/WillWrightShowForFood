@@ -26,7 +26,7 @@ Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely invi
 | 2012–13 | Messenger: Unity World-from-data vs Island demo; pie menus in 3D; Keez “a little inbetween gaffertape and messaging objects.” |
 | 7 Mar 2017 | **Anyways** at the **NDSM** lab — six-participant synced 360; Don alone as audience; Keez orchestrated. Next day Don told Arthur (Jaunt) to cultivate artists like Keez on a **JavaScriptable** 360 player. |
 | Mar 2024 | Die Space on HN as the worked example of massively multiplayer CV. |
-| 2026 | Parker / NDSM visit path; Repo Show invite. |
+| 2026 | Will's son / NDSM visit path; Repo Show invite. |
 
 Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). Full: [`sources/friendship-arc-receipts.md`](sources/friendship-arc-receipts.md).
 
@@ -42,7 +42,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 | **JS player unfinished business** | 2017: artists who invent original 360 uses need a *programmable* player — WebXR / Repo Show rematch |
 | **Massively multiplayer CV** | Roomful of shiny LEDs, cameras → shared cloud ([HN 2024](https://news.ycombinator.com/item?id=39821421)) |
 | **Participation not observation** | Urban Nation / PIPS:lab credo since before Trouw |
-| **SO DUTCH** | NDSM studio; Trouw / Canvas recycled newspaper buildings; Parker visit path |
+| **SO DUTCH** | NDSM studio; Trouw / Canvas recycled newspaper buildings; Will's son visit path |
 
 ![Audience writing names in light — Die Space mass upload](media/tedx-diespace-light-letters-given-names.png)
 
@@ -52,7 +52,7 @@ Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). 
 
 **Then (handmade, already genius):** seat LEDs + camera → names in light; six orchestrated HMDs; Luma2solator live feedback; Jaunt-era dreams of programmable live 360 and rooftop NYE fireworks with shared virtual rockets (and, escalating, Arduino-lit real ones).
 
-**Now (newly cheap / newly weird):** WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat; latent-space pigment with Lumasol; Gaussian/NeRF capture of a performance volume; Will + Parker in the NDSM lab.
+**Now (newly cheap / newly weird):** WebXR Anyways-for-N; Repo Show as a living diespace.nl; Mind Mirror + LLM afterlife chat; latent-space pigment with Lumasol; Gaussian/NeRF capture of a performance volume; Will + Will's son in the NDSM lab.
 
 Full ladder: [`ideas.md`](ideas.md).
 
