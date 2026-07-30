@@ -1,0 +1,17 @@
+# Don Woods — GLANCE
+
+🏔️ **Don Woods** — co-creator of **Adventure** (Crowther/Woods 350-point, 1977): found the
+cave at SAIL, emailed `crowther@` at every ARPANET host for permission, added the pirate,
+endgame, and the last lousy point. Co-designer of **INTERCAL** (1972, PLEASE). Co-author of
+**The Hacker's Dictionary** (1983). At Sun: **NeWS + The NeWS Toolkit with Don Hopkins** —
+great PostScript hacker; the NeWS motd read *"Welcome to Adventure. Would you like
+instructions?"*
+
+Knuth recast his game as [advent.w](../donald-knuth/sources/adventure-knuth/advent.w) —
+copyright **"Don Woods and Don Knuth"**. The MOOLLM kitchen already issued his
+[One Lousy Point stamp](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml).
+
+**Invitation:** draft — [invitation.md](invitation.md). Ensembles: two-Dons NeWS episode;
+[Lars Brinkhoff](../lars-brinkhoff/) PDP-10 live boot; [Scott Adams](../scott-adams/) lineage.
+
+Read next: [README](README.md) · [ideas](ideas.md) · [CARD.yml](CARD.yml) · [CHARACTER.yml](CHARACTER.yml)

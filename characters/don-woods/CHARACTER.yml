@@ -1,0 +1,59 @@
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: don-woods
+  name: "Don Woods"
+  type: invitation
+  signifier: "🏔️"
+  status: living
+  field: "Co-creator of Adventure (Crowther/Woods, 1977); co-designer of INTERCAL (1972); co-author of The Hacker's Dictionary; NeWS/PostScript hacker at Sun"
+  home: characters/don-woods/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/don-woods-adventure.yml
+
+bio:
+  summary: "**Donald R. Woods** — the Stanford grad student who found Will Crowther's cave on a lab machine in 1976, tracked down its author by emailing crowther@ every host on the ARPANET, got the source and the blessing, and expanded it into the canonical 350-point **Adventure** (1977) — the founding text of interactive fiction. Also co-designer (with James M. Lyon, Princeton 1972) of **INTERCAL**, the first and greatest parody programming language, and a co-author of **The Hacker's Dictionary** (1983). Later a systems hacker at **Sun Microsystems**, where he worked on **NeWS** and **The NeWS Toolkit** with Don Hopkins — a great PostScript hacker."
+
+adventure:
+  fact: "The Crowther/Woods 350-point Adventure is the common ancestor of Zork, interactive fiction, MUDs, and arguably the graphical adventure genre. Woods added the pirate, the endgame, and the scoring — including the last lousy point."
+  the_email: "To get permission to extend the game, Woods emailed crowther@<host> to every host on the ARPANET until one reached Will Crowther at Xerox — possibly history's first distributed git blame."
+  knuth_recast: "Donald Knuth recast Adventure in CWEB (advent.w, 1998) — the copyright line reads 'Don Woods and Don Knuth'. Full study: ../donald-knuth/sources/adventure-knuth/"
+  one_lousy_point: "In Zork lore, mailing the Spelunker Today matchbook to Infocom got you a real brochure bearing the 'One Lousy Point Donald Woods Stamp'. The MOOLLM microworld reissued it: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml"
+
+sun_news:
+  fact: "At Sun, Woods worked on NeWS and The NeWS Toolkit (TNT) alongside Don Hopkins — firsthand collaboration, Don's attestation. A great PostScript hacker."
+  motd: "The NeWS server's /etc/motd read: 'Welcome to Adventure. Would you like instructions?' — the host machine WAS the well house. See ../donald-knuth/sources/adventure-knuth/ANALYSIS.md"
+  interop_thread: "Woods appears in the 1991 NeWS/TNT vs ICCCM interoperability work (focus/server-grab threads) — ../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md"
+
+intercal:
+  fact: "INTERCAL (Woods & Lyon, Princeton, 1972) — 'Compiler Language With No Pronounceable Acronym'. Statements must say PLEASE often enough to be polite but not so often as to grovel; the compiler rejects both. A complete theory of programming-language humor, executable."
+
+hackers_dictionary:
+  fact: "Co-author of The Hacker's Dictionary (1983, with Guy Steele, Raphael Finkel, Mark Crispin, Richard Stallman, Geoff Goodfellow) — the book form of the Jargon File, the culture's own dictionary."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Don_Woods_(programmer)"
+  web:
+    - { title: "Knuth Programs page — ADVENT (advent.w)", url: "https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent" }
+    - { title: "MOOLLM matchbook tribute — One Lousy Point Donald Woods Stamp", url: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml" }
+  local:
+    - { path: ../donald-knuth/sources/adventure-knuth/, why: "advent.w + analysis — Woods on the copyright line" }
+    - { path: ../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md, why: "Woods in the NeWS/TNT interoperability threads" }
+  papers: []
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: ideas.md, why: "Conversation hooks — Adventure as the first repo show" }
+  - { path: ../donald-knuth/, why: "Dream guest who recast Woods's game in CWEB — natural pairing" }
+  - { path: ../lars-brinkhoff/, why: "PDP-10 preservation — run the original on original iron (emulated)" }
+  - { path: ../scott-adams/, why: "Adventure lineage — the home-computer branch" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

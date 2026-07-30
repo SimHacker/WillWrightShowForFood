@@ -1,0 +1,36 @@
+# SHOW SEED — Don Woods: the founding repo of interactive fiction
+# Seed. Adventure walked by its co-author; the original Repo Show.
+
+show:
+  id: don-woods-adventure
+  title: "The Last Lousy Point — walking Adventure with Don Woods"
+  type: solo
+  host: Don Hopkins
+  guests: ["Don Woods"]
+  topic: "The Crowther/Woods 350-point Adventure (1977) walked from source by its co-author: the crowther@-every-ARPANET-host permission story, the pirate, the endgame, the last lousy point — plus INTERCAL's PLEASE and NeWS/TNT war stories with a former Sun colleague."
+  status: seed
+
+why_this_guest:
+  - "Adventure is the founding repo of an entire genre — no repository is more load-bearing to walk on air."
+  - "Knuth recast the game in CWEB; advent.w carries the copyright 'Don Woods and Don Knuth' — annotated literature ready to read from."
+  - "The crowther@ story is the best provenance-and-permission origin story in software, told firsthand."
+  - "Firsthand rapport: Woods and Don Hopkins worked together at Sun on The NeWS Toolkit — the two-Dons PostScript episode is pre-built."
+  - "INTERCAL's calibrated PLEASE censor plugs into the show's Minsky Memo 603 executable-humor thread."
+
+format:
+  live: true
+  audience_qa: true
+  notes: "Open by mailing the MOOLLM Spelunker Today matchbook and presenting the One Lousy Point Donald Woods Stamp. Boot the 1977 original on an emulated PDP-10 (Lars Brinkhoff assist); close with Woods scoring the episode's final point."
+
+ensemble_option:
+  with: characters/lars-brinkhoff/
+  arc: "Crowther's cave (1976) → Woods's 350-point canon (1977) → Zork and Infocom → Knuth's advent.w (1998) → the cave running live on preserved iron."
+
+ties_to:
+  - characters/don-woods/
+  - characters/donald-knuth/sources/adventure-knuth/
+  - characters/don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md
+  - characters/lars-brinkhoff/
+  - characters/scott-adams/
+
+consent: not_yet_asked

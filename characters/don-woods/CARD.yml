@@ -1,0 +1,93 @@
+# CARD — don-woods (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: don-woods
+  name: "Don Woods"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Don Woods"
+  title: "Keeper of the Cave — Adventure, INTERCAL, and the last lousy point"
+  rarity: mythic
+  signifier: "🏔️"
+  flavor: "Welcome to Adventure. Would you like instructions?"
+
+abilities:
+  - id: OPEN-THE-CAVE
+    name: "Open the Cave"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: openCave
+      signature: "openCave(fortran_1977 | advent.w) → live walkthrough of the founding repo"
+      score_when:
+        - trigger: audience_sees_genre_born_from_source
+          weight: 0.95
+    effect: "Walk the Adventure source on air — the pirate, the endgame, the scoring, the last lousy point — from the 1977 FORTRAN to Knuth's 1998 CWEB recast bearing his own copyright line."
+    verifiable: "../donald-knuth/sources/adventure-knuth/advent.w — 'Copyright (C) 1998 by Don Woods and Don Knuth'"
+    combos_with: [DISTRIBUTED-GIT-BLAME, PLEASE-COMPILE]
+
+  - id: DISTRIBUTED-GIT-BLAME
+    name: "Distributed Git Blame"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: findAuthor
+      signature: "findAuthor(program) → email crowther@ every ARPANET host until the author answers"
+      score_when:
+        - trigger: provenance_and_permission_before_forking
+          weight: 0.9
+    effect: "Tell the 1976 story: finding an unsigned cave on a lab machine and tracking its author across the entire ARPANET to ask permission — open-source etiquette a decade before the term."
+    verifiable: "https://en.wikipedia.org/wiki/Don_Woods_(programmer)"
+    combos_with: [OPEN-THE-CAVE]
+
+  - id: PLEASE-COMPILE
+    name: "PLEASE Compile"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: pleaseCompile
+      signature: "pleaseCompile(politeness) → E079 PROGRAMMER IS INSUFFICIENTLY POLITE | E099 PROGRAMMER IS OVERLY POLITE"
+      score_when:
+        - trigger: humor_theory_made_executable
+          weight: 0.85
+    effect: "Explain INTERCAL (1972, with James Lyon) — the parody language whose compiler enforces calibrated politeness. Language design as stand-up comedy with a type checker."
+    verifiable: "INTERCAL reference manual, Woods & Lyon, 1972"
+    combos_with: [OPEN-THE-CAVE, POSTSCRIPT-DUEL]
+
+  - id: POSTSCRIPT-DUEL
+    name: "PostScript Duel"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+      - cohost: don-hopkins
+    advertisement:
+      method: postscriptDuel
+      signature: "postscriptDuel(don, don) → two Dons swap NeWS/TNT war stories from Sun"
+      score_when:
+        - trigger: firsthand_collaboration_on_air
+          weight: 0.9
+    effect: "Trade The NeWS Toolkit stories with Don Hopkins — the window system whose motd welcomed you to Adventure, and the ICCCM interoperability death match."
+    verifiable: "../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md"
+    combos_with: [OPEN-THE-CAVE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
