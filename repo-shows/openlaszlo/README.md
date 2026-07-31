@@ -28,7 +28,9 @@ ask what the *next* Laszlo looks like when the primary reader of the compiler is
 - **[David Ungar](../../characters/david-ungar/README.md)** (optional) — Self; interviewed at Laszlo and got it; Self × MOOLLM; **what prototypes are**.
 - **[Brad A. Myers](../../characters/brad-myers/README.md)** (optional) — Garnet / PBD; pull constraints, KR frames, CMU Common Lisp, CLX — ancestor of the constraint braid; prototypes with Ungar.
 - **[Craig Latta](../../characters/craig-latta/README.md)** (optional) — Caffeine / live objects / Morphic; prototypes without mush; Amsterdam.
-- **Bench:** LinkedIn Cc list — Adam Wolff, Antun Karlovac, Eric Bloch, Grig B., John Sundman, … + other Laszlo/UI people.
+- **[Sarah Allen](../../characters/sarah-allen/README.md)** (optional) — Laszlo Director of App Dev (**Webtop**); After Effects 1.0 / first Shockwave player / Flash Video from inception; hired + code-reviewed Don's 2006 OL video contract — **run those components on 5.0, with the original reviewer watching** ([receipts](../../characters/sarah-allen/sources/2006-openlaszlo-video-collaboration.md)).
+- **[Grig Bilham](../../characters/grig-bilham/README.md)** (optional) — Laszlo alum → open metaverse standards (Web of Worlds / spatial fabric), EverArchive 200–1000 year storage; preservation-by-MILLENNIUM meets this show's preservation-by-RUN; building circular menus and thinking of Don's study.
+- **Bench:** LinkedIn Cc list — Adam Wolff, Antun Karlovac, Eric Bloch, John Sundman, … + other Laszlo/UI people.
 
 ## Five acts
 

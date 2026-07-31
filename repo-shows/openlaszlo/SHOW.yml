@@ -8,7 +8,7 @@ show:
   type: group
   host: Don Hopkins
   guests: ["David Temkin", "Oliver Steele", "Henry Minsky"]
-  optional_guests: ["David Ungar", "Brad A. Myers", "Craig Latta"]
+  optional_guests: ["David Ungar", "Brad A. Myers", "Craig Latta", "Sarah Allen", "Grig Bilham"]
   characters:
     - characters/don-hopkins/   # host + cast — has a character directory, not just ground-up software
     - characters/david-temkin/
@@ -17,6 +17,8 @@ show:
     - characters/david-ungar/   # optional — Self × what prototypes are
     - characters/brad-myers/    # optional — Garnet / PBD / pull constraints
     - characters/craig-latta/   # optional — Caffeine / live objects / Morphic
+    - characters/sarah-allen/   # optional — Webtop / Flash Video; Don's 2006 video-contract reviewer
+    - characters/grig-bilham/   # optional — Laszlo alum → open metaverse / EverArchive preservation
   topic: "OpenLaszlo / LZX revived as OpenLaszlo 5.0 — then Declare (reimagine, not port). ISP + Self; Svelte 5 triangle; Laszlo reunion cast."
   status: seed
   consent: not_yet_asked
@@ -43,6 +45,8 @@ the_cast:
   david_ungar: "Optional — Self; interviewed at Laszlo (receipt: Don→Tom Lord 2006-08-21); Self × MOOLLM; what prototypes are. → characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md"
   brad_myers: "Optional — Garnet / PBD; pull constraints, KR frames, CMU CL, CLX. → characters/brad-myers/"
   craig_latta: "Optional — Caffeine / live objects / Morphic; prototypes without mush. → characters/craig-latta/"
+  sarah_allen: "Optional — Laszlo Dir. of App Dev (Webtop); After Effects 1.0 / first Shockwave player / Flash Video from inception; hired + code-reviewed Don's 2006 OL video contract (mediastream/mediadevice, YouTube player — run them on 5.0!). → characters/sarah-allen/"
+  grig_bilham: "Optional — Laszlo alum → open metaverse standards (Web of Worlds / spatial fabric), EverArchive 200–1000 yr storage (preservation-by-MILLENNIUM vs show's preservation-by-RUN); building circular menus. → characters/grig-bilham/"
 
 threads:
   - "OpenLaszlo / LZX, the road not taken — declarative XML+JS, reactive, multi-runtime (Flash OR Ajax) years before the web reinvented it."
@@ -56,6 +60,8 @@ threads:
   - "Bring the apps back — LZX on 5.0; LLM-port one to Declare; Micropolis client question."
   - "Mesa + In Formation — spatial AI canvas vs chat-window OS; print satire as moral spine."
   - "Open-sourcing a commercial platform — the 2004 Laszlo → OpenLaszlo story."
+  - "Run Don's 2006 video components on OL 5.0 — with Sarah Allen, the original contract reviewer, watching (mediastream/mediadevice/YouTube player)."
+  - "Preservation by RUN vs preservation by MILLENNIUM — OL 5.0 + PIXIE emulation vs Grig's EverArchive; where does shared context live (Web of Worlds × Mesa × MOOLLM rooms)."
 
 dream_outcome: |
   Working OL 5.0 demos + Declare calendar/desktop on air; ISP answer from Oliver; Ungar in
@@ -82,6 +88,9 @@ ties_to:
   - ../../characters/david-temkin/sources/2006-don-tom-lord-openlaszlo-spidermonkey-seed.md
   - ../../characters/brad-myers/
   - ../../characters/craig-latta/
+  - ../../characters/sarah-allen/
+  - ../../characters/sarah-allen/sources/2006-openlaszlo-video-collaboration.md
+  - ../../characters/grig-bilham/
   - ../../characters/don-hopkins/
   - ../../repo-shows/oliver-steele/
   - ../../repo-shows/david-ungar/

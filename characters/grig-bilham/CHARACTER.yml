@@ -1,0 +1,68 @@
+# Grig Bilham — invitation portrayal. NOT Grig Bilham.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: grig-bilham
+  name: "Grig Bilham"
+  type: invitation
+  signifier: "🌐"
+  status: living
+  field: "Laszlo alum → public-good infrastructure: open metaverse standards (Web of Worlds / spatial fabric, Metaverse Standards Forum), EverArchive (200–1000 year storage), peers.social, Universal Manifest, Distributed Creatives; Chia work with Bram Cohen"
+  home: characters/grig-bilham/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/openlaszlo/
+  channel: "LinkedIn thread (active, Jul 2026) or grigbilham@gmail.com"
+  note: "Laszlo alum (on Temkin's OL 5.0 cc list); active warm LinkedIn thread Jul 2026 (he reached out; building a circular menu and thought of Don's study). Invite: OL reunion + own show on preservation × open metaverse."
+
+bio:
+  summary: |
+    **Grig Bilham** — Laszlo Systems alum who went all-in on **public-good
+    infrastructure for creators**. Current constellation: **Universal Manifest** (the
+    permissions/control layer the internet is missing), the **Open Spatial Lab** at
+    peers.social — where he designed, built, and shipped the SIGGRAPH 2026 proof of
+    concept for the **Web of Worlds** standard (W3C-published, developed at the
+    **Metaverse Standards Forum**) alongside the **spatial fabric** standard and the RP1
+    **Open Metaverse Browser** — plus a new open-source rendering engine for spatial
+    fabrics and WASM widgets. **EverArchive**: a foundation for **200–1000 year storage**
+    of creative work with self-sovereign publishing tools (panel with **Brewster Kahle**
+    at the eARTh pARTy conference on Forbes Island); digital lending/sales via atomic
+    peer-to-peer swaps on **Chia** (works with **Bram Cohen** on standards).
+    **localartist.network**: hyper-local digital signage for creatives (Boulder pilot for
+    Sundance). **Distributed Creatives**: the nonprofit keeping it all pointed at
+    communities. **peers.social**: an open stack for building your own platform while
+    adopting the network effect of each.
+  don_connection: |
+    Laszlo orbit (Temkin cc'd him on the OL 5.0 announcement); knows Don's Sims history;
+    mutual friends (Pablo Kang, Max, Sam). Jul 2026: reached out warmly on LinkedIn with
+    the full project constellation, said he'd love to collaborate — and closed with "I was
+    working on a circular menu today, and of course thought of you and the study you did."
+    A man building circular menus into an open metaverse is already halfway on the show.
+
+sources:
+  web:
+    - { title: "Universal Manifest", url: "https://universalmanifest.net/" }
+    - { title: "Open Spatial Lab (peers.social)", url: "https://labs.peers.social/open-spatial-lab" }
+    - { title: "EverArchive", url: "https://everarchive.org" }
+    - { title: "peers.social", url: "https://peers.social" }
+    - { title: "localartist.network", url: "https://localartist.network/" }
+    - { title: "Distributed Creatives", url: "https://distributedcreatives.org" }
+  linkedin_thread: characters/grig-bilham/sources/2026-07-linkedin-reconnection.md
+
+see_also:
+  - { path: invitation.md, why: "Draft invitation — OL reunion + preservation × metaverse show" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/2026-07-linkedin-reconnection.md, why: "The Jul 2026 thread that warmed this up" }
+  - { path: ../david-temkin/, why: "Laszlo founder — OL 5.0 cc list" }
+  - { path: ../sarah-allen/, why: "Fellow Laszlo-alum invitee" }
+  - { path: ../../repo-shows/openlaszlo/, why: "Reunion show" }
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "Metaverse-architecture kinship" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

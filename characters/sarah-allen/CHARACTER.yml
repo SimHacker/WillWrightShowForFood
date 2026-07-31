@@ -1,0 +1,73 @@
+# Sarah Allen — invitation portrayal. NOT Sarah Allen.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: sarah-allen
+  name: "Sarah Allen"
+  type: invitation
+  signifier: "🎬"
+  status: living
+  field: "After Effects 1.0 (CoSA co-founder) → first Shockwave player → Flash Video / Flash Media Server → OpenLaszlo + Laszlo Webtop → RailsBridge / Bridge Foundry → Smithsonian PIF → 18F → Google Cloud"
+  home: characters/sarah-allen/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/openlaszlo/
+  channel: "email (sarah@ultrasaurus.com) — decades-long warm thread"
+  note: "Don's OpenLaszlo video-work boss and code reviewer (2006 contract — receipts in sources/); on Temkin's OL 5.0 cc list. Invite to OL reunion + solo option (streaming-media lineage / Bridge Foundry / cinematic interaction design)."
+
+bio:
+  summary: |
+    **Sarah Allen** — a straight line through the history of multimedia on personal
+    computers. Brown Graphics Group animator under **Andries van Dam** → co-founder of
+    **CoSA** (The Company of Science & Art), shipping **After Effects 1.0** → wrote the
+    **first Shockwave player** at Macromedia (one of the first Netscape plugins *and* first
+    IE ActiveX controls) → created the **Shockwave Multiuser Server** → led **Flash Video
+    and the Flash Communication Server** (later Flash Media Server) from inception through
+    first release. Then **Laszlo Systems** (2003–2009): OpenLaszlo core architect through
+    the proprietary→open-source transition, and Director of Application Development for
+    **Laszlo Webtop** (mail/calendar licensed to Earthlink, Verizon, Alcatel-Lucent).
+    Then the third act: founder of **Blazing Cloud**; CTO of **Mightyverse**; co-founder of
+    **RailsBridge** (with Sarah Mei) → Executive Director of **Bridge Foundry**;
+    **Presidential Innovation Fellow** at the Smithsonian (crowdsourced Transcription
+    Center; first Smithsonian hackathon); **18F** (College Scorecard, announced by
+    President Obama); **Google Cloud** engineering lead (serverless events / security
+    policy). Blogs as **ultrasaurus**. Organized the 2007 Google fundraiser for the
+    **ENIAC programmers documentary** with Jean Bartik in the room.
+  don_connection: |
+    Sarah hired Don as the OpenLaszlo audio/video contractor in 2006 and was his code
+    reviewer — the mediastream/mediadevice refactor was hashed out with her on laszlo-dev,
+    and Don's YouTube player component grew out of that contract (Jim Grandy: "Wow, Don!
+    That's fabulous"). Receipts, comedy included (stolen laptop, ten-fingers biometric
+    login theory, AntiORP netart, DreamMachine hallucinotronics), in
+    sources/2006-openlaszlo-video-collaboration.md. Warm thread ever since: newsletters,
+    Pantomime Bug Squish, 2023 Leela AI exchange.
+
+sources:
+  linkedin: "https://www.linkedin.com/in/ultrasaurus/"
+  blog: "https://www.ultrasaurus.com/"
+  don_2006: characters/sarah-allen/sources/2006-openlaszlo-video-collaboration.md
+  web:
+    - { title: "Cinematic Interaction Design (Interaction08 talk)", url: "https://www.slideshare.net/sarah.allen/cinematic-interaction-design" }
+    - { title: "Bridge Foundry", url: "https://bridgefoundry.org/" }
+    - { title: "OpenLaszlo (Wikipedia)", url: "https://en.wikipedia.org/wiki/OpenLaszlo" }
+    - { title: "After Effects history — CoSA", url: "https://en.wikipedia.org/wiki/Adobe_After_Effects" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invitation — OL reunion + solo options" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/2006-openlaszlo-video-collaboration.md, why: "The 2006 receipts — contract, API review, YouTube player" }
+  - { path: ../david-temkin/, why: "Laszlo founder — OL 5.0 revival cc'd her" }
+  - { path: ../oliver-steele/, why: "Laszlo colleague — LZX architect" }
+  - { path: ../henry-minsky/, why: "Laszlo colleague" }
+  - { path: ../amanda-walker/, why: "Sister arc — early Mac multimedia → engineering leadership → Google" }
+  - { path: ../grig-bilham/, why: "Fellow Laszlo-alum invitee" }
+  - { path: ../../repo-shows/openlaszlo/, why: "Reunion show — natural cast member" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }
