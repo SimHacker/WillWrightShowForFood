@@ -19,64 +19,71 @@ public_outreach_policy:
     - hn_repo_link_drops
   see_also: ../process/maxis-history-collaborators.yml
 
-next:
-  - id: reese-jones
-    why: "Warm — Don knows him; filmed Sam Arbesman's 2016 Overcomplicated launch; SFI/biology-of-tech; natural stack with Sam/Will/Chaim"
-    path: characters/reese-jones/
-  - id: gary-drescher
-    why: "★ Made-Up Minds — MIT PhD/Minsky; Leela adviser; Will Wright pun crossover; MOOLLM skills; interview planned"
-    path: characters/gary-drescher/
-  - id: antoni-sawicki
-    why: "Warm — ttycity author (not a discovery); emoji UI interview; show Will; point him at characters/antoni-sawicki/"
-    path: characters/antoni-sawicki/
-  - id: ellpeck
-    why: "Warm — Tiny Life; Sims ⇔ Soul City ⇔ Tiny Life interview"
-    path: characters/ellpeck/
-  - id: jared-tarbell
-    why: "Warm since 2005 (Will started it) — memory-jogging invite ready; Laurie + Will included; generative art → Etsy → Toy Factory arc"
-    path: characters/jared-tarbell/
-  - id: paul-haeberli
-    why: "Warm — ConMan/GRAFICA Obscura/SGI; resurrection hour ('F.U.N.'); stub to enrich before sending"
-    path: characters/paul-haeberli/
-  - id: mike-gallaher
-    why: "Warm, decades — pie menu co-discoverer + Stories All the Way Down; his skills already run in moollm; memory-jogging invite drafted"
-    path: characters/mike-gallaher/
-  - id: creator_network_exodus
-    why: "Panel — Tiny Life praise + EA exit + Exchange gap (verify quotes before outreach)"
-    show: repo-shows/will-wright-premiere/creator-network-exodus.yml
-    registry: process/sims-creator-network-exodus.yml
-    priority:
-      - id: plumbella
-        path: characters/plumbella/
-      - id: james-turner
-        path: characters/james-turner/
-      - id: lilsimsie
-        path: characters/lilsimsie/
-    also:
-      - devon-bumpkin
-      - vixella
-      - steph0sims
-      - syd-mac
-  - id: jimmy-maher
-    why: "Parallel historian invite (Jess model) — Maxis Part 1 + filfre thread; maher AT filfre DOT net"
-    path: characters/jimmy-maher/
-    synergy: characters/jimmy-maher/synergy/willwrightshowforfood.yml
-  - id: craig-latta
-    why: "TIME-SENSITIVE — in Amsterdam now; Caffeine (SqueakJS+WASM) live-web Smalltalk; reach out while in town"
-  - id: will-wright
-    why: "Flagship kickoff — ACCEPTED (July 2026). Next: schedule 1-on-1 video chats, async-by-design; repo is the production"
-  - id: lars-brinkhoff
-    why: "PDP-10/ITS make-it-so challenge — pair with Thomas Cherryhomes for retro drag race"
-  - id: thomas-cherryhomes
-    why: "Joint with Lars — FujiNet/IRATA × emulated ITS; retrocomputing drive"
-  - id: brian-harvey
-    why: "Snap!/Logo headline with Jens — educators pillar"
-  - id: jens-monig
-    why: "Joint with Brian — Snap! × Micropolis"
-  - id: walter-bender
-    why: "OLPC + skill-creation show"
-  - id: terry-winograd
-    why: "Forebear archive — CS547 treasure trove"
+snapshot:
+  updated: "2026-07-31"
+  note: "Queue rebuilt after the Self-reunion + Laszlo-reunion outreach sprint. Waves below; INDEX.yml is truth for per-guest status."
+
+# in_flight: sent/engaged — tend replies, don't re-ping. Do the follow-through work these unlock.
+in_flight:
+  - { id: will-wright, status: ACCEPTED, next: "schedule 1-on-1 video chats; repo is the production" }
+  - { id: jeff-adkins, status: accepted, next: "SimObliterator collab cadence — low-pressure, time-shifted" }
+  - { id: heinz-lemke, status: engaged_delivering, next: "receive memoir installments + 5000-word listing; CARS 2027 thread" }
+  - { id: craig-latta, status: engaged, next: "practice recorded Jul 2026; Vanessa memorial + OL reunion slot; unlocks alan-kay + dan-ingalls sends" }
+  - { id: david-rosenthal, status: interested_async, next: "grandparent duty until ~Aug 17 — resume then" }
+  - { id: lars-brinkhoff, status: yes_later, next: "Swedish July vacation over ~Aug — re-ping w/ Cherryhomes pairing" }
+  - { id: scott-draves, status: in_conversation }
+  - { id: brewster-kahle, status: replied_interested, next: "answer 'how is GitHub a stage' + IA Europe Nov–Dec Amsterdam window" }
+  - { id: don-woods, status: sent_2026-07-31, next: "await reply; if yes, ask him to vouch w/ Knuth (SAIL reunions)" }
+  - { id: ben-shneiderman, status: sent_2026-07, next: "gentle follow-up if quiet by mid-Aug" }
+  - { id: coco-conn, status: sent_2026-07-06, next: "await tape catalog + clip rights" }
+  - { id: david-levitt, status: invited_by_phone, next: "links sent — nudge on Rebounce/music-and-theory pick" }
+  - { id: david-temkin, status: hot_thread, next: "SEND email draft (attachments/david-temkin/2026-07-31) — he gave temkin@gmail.com and asked to talk; formal invite rides the thread" }
+  - { id: david-ungar, status: hot_thread, next: "SEND email reply F2 + public Korz addendum C2 (attachments/david-ungar/2026-07-31) — he's active on LinkedIn now" }
+  - { id: grig-bilham, status: hot_thread, next: "ACCEPT connection request, SEND LinkedIn reply (attachments/grig-bilham/2026-07-31) — he asked to sync up, gave email" }
+
+# wave_1: drafts finished + warm channel. Fire this week while threads are hot.
+wave_1_send_now:
+  - { id: sarah-allen, why: "Email drafted (attachments/sarah-allen/2026-07-31) — Kaleida opener + 2006 receipts; OL reunion", channel: "sarah@ultrasaurus.com" }
+  - { id: urs-hoelzle, why: "LinkedIn DM + 300-char connect note drafted — pair/trio w/ Ungar; ride the Self-manual thread while fresh", channel: LinkedIn }
+  - { id: amanda-walker, why: "LinkedIn DM drafted — Galaxy/PostNews show; her thread sparked the whole Self reunion", channel: LinkedIn }
+  - { id: randall-smith, why: "LinkedIn DM drafted — completes the Ungar/Urs/Randall trio", channel: "LinkedIn or via Ungar" }
+  - { id: keez-duyves, why: "★ DEFINITE — Amsterdam friend; Die Space × Will; Messenger", channel: Messenger }
+  - { id: mike-gallaher, why: "Pie menu co-discoverer; memory-jogging invite drafted; Don sends personally" }
+  - { id: jared-tarbell, why: "Warm since 2005; invite ready; Laurie + Will included" }
+  - { id: edd-coates, why: "★ Friend; audience README ready; email" }
+  - { id: dan-ancona, why: "★ Long Now 2006 asker; invitation ready; email" }
+  - { id: ted-selker, why: "Send now — TrackPoint/NPUC; tag-team gateway to Ted Nelson" }
+  - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; coordinate w/ Will + Selker first, then send", gate: "Selker/Will framing call" }
+  - { id: scott-adams, why: "Warm (Jan 2026 'sucked me in'); dual-palace show; pairs with Woods send" }
+  - { id: patrick-j-barrett-iii, why: "send_now; invitation polished; E3 kiss show", batch: sims-reunion-2026 }
+  - { id: clint-basinger, why: "send_now — LGR audience bridge" }
+  - { id: reese-jones, why: "Warm; Sam/Will/Chaim stack" }
+  - { id: gary-drescher, why: "★ interview planned — Leela adviser; Made-Up Minds" }
+  - { id: antoni-sawicki, why: "Warm; interview planned; ttycity emoji UI" }
+  - { id: ellpeck, why: "Warm — directory already shared + excited; formalize the invite" }
+
+wave_2_send_ready_batches:
+  note: "Polished invitations, colder channels — send as themed batches so replies cluster into shows."
+  sims_reunion_2026: [eric-bowman, eric-hedman, jim-mackraz, jamie-doornbos, luc-barthelet, lucy-bradshaw]
+  postscript_lineage_2026: [brian-reid, glenn-reid]
+  interval_reunion_2026: [brenda-laurel, rob-tow, glenn-edens]
+  parc_smalltalk_2026: [butler-lampson, adele-goldberg, ted-kaehler, trygve-reenskaug, alan-borning]
+  pixie_cambridge: [henri-gouraud, andrew-armit]
+  openlaszlo_reunion: [henry-minsky, oliver-steele, brad-myers]
+  singles: [bret-victor, david-henkel-wallace, marc-canter]
+  gate: "alan-kay + dan-ingalls marked send_after_craig — Craig engaged, so these are UNBLOCKED; send with Vanessa-memorial framing"
+
+# wave_3: warm but room/draft needs polish first
+wave_3_enrich_then_send:
+  - { id: paul-haeberli, todo: "stub to enrich before sending" }
+  - { id: creator_network_exodus, todo: "verify quotes before outreach", priority: [plumbella, james-turner, lilsimsie], also: [devon-bumpkin, vixella, steph0sims, syd-mac] }
+  - { id: jimmy-maher, todo: "parallel-historian invite (Jess model)" }
+  - { id: brian-harvey, pair: jens-monig, todo: "Snap!/Logo pair batch" }
+  - { id: thomas-cherryhomes, gate: "send with Lars re-ping ~Aug" }
+  - { id: walter-bender, pair: samuel-klein, todo: "OLPC pair" }
+  - { id: terry-winograd, todo: "CS547 archive framing" }
+  - { id: rudy-rucker, todo: "invite drafted — CA jam; review + send" }
+  - { id: keith-henson, todo: "drafted, not sent; respect Will boundary framing" }
 
 later: "Remaining guests invitation.status: draft — enrich sources then review"
 
