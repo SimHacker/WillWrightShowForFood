@@ -3,16 +3,21 @@
 How David Chapman at Cambridge University Library recovered and digitized the 1969 PIXIE
 films — and why that made Don's *Flight of the PIXIE* edit possible.
 
-*Evidence room note. Primary export:* private archive (not in this repo) *(msg-403–409, 410, 413–414).*
+**Full recovery timeline with dates and quotes:**
+[`sources/2019-2020-film-recovery-saga.md`](sources/2019-2020-film-recovery-saga.md)
+
+*Evidence room note. Primary export:* private repo,
+`characters/don-hopkins/correspondence/attachments/heinz-lemke/pixie-film-emails-export.txt`
+(411 messages, 2019–2023).
 
 ## The chain
 
 1. **Bill Buxton's dead end (2008–2019)** — Dave Fleck (`[email redacted]`) asked Don about PIXIE; Don connected him to Buxton, who said he had references and promised scans + digitized film to both. Buxton sent notes to Fleck, not Don; the film stayed inaccessible for more than a decade.
-2. **Don goes direct to Cambridge (2019)** — Reference ticket `#91692` / `#43348`. Don contacted **David Chapman**, Reference Department, Cambridge University Library (`reference@lib.cam.ac.uk`).
-3. **Chapman's detective work** — Chapman traced the films through the Computing Laboratory Rainbow group (copies in a member's office), St John's College biographical librarians (William Newman status), and the lab's own librarian. He coordinated digitisation via the University Libraries Digital Content Unit. Holdups through May–July 2019; films published July 2019.
+2. **Don goes direct to Cambridge (10 Feb 2019)** — Reference ticket `#43348` (later `#91692`, `#94718`). Don contacted **David Chapman**, Reference Department, Cambridge University Library (`reference@lib.cam.ac.uk`).
+3. **Chapman's detective work** — Chapman traced the films through the Computing Laboratory Rainbow group — a member had **both films in his office**, and offered digitization unprompted (8 Mar 2019) — plus St John's College biographical librarians (William Newman status), and the lab's own librarian. He coordinated digitisation via the University Libraries Digital Content Unit. Firm quote 7 May 2019; films published 9 July 2019 — and the lab began considering digitizing the rest of its film archive "as a result of your enquiry."
 4. **What came online** — Two PIXIE demonstration films (1969, Southampton CAD Conference paper accompaniment) plus scanned paper, at [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html).
-5. ***Flight of the PIXIE* (Don's edit)** — After publication, Don cut highlights from the digitized films, synchronized them in AfterEffects to Rimsky-Korsakov's *Flight of the Bumblebee* ([**Yuja Wang**, piano](../yuja-wang/README.md) — Verbier Festival era, Cziffra arrangement), to show how fast and fluid PIXIE's radial menus were on the PDP-7 graphics terminal (apps on Titan over the link). [YouTube](https://www.youtube.com/watch?v=jDrqR9XssJI). Don credits Wiseman, Lemke, Hiles, **and Chapman** in the video dedication block. Tribute + share links: [`characters/yuja-wang/`](../yuja-wang/README.md).
-6. **Heinz enters the picture** — Don reached Heinz Lemke (PIXIE programmer on the PDP-7) while documenting the films. Heinz appears in the footage; Don hopes for CHM oral history while first-hand memory remains.
+5. ***Flight of the PIXIE* (Don's edit)** — After publication, Don cut highlights from the digitized films, synchronized them in AfterEffects to Rimsky-Korsakov's *Flight of the Bumblebee* ([**Yuja Wang**, piano](../yuja-wang/README.md) — Verbier Festival era, Cziffra arrangement), to show how fast and fluid PIXIE's radial menus were on the PDP-7 graphics terminal (apps on Titan over the link). A first cut used an **Orkestra Synthetique** version; Heinz's verdict settled it: *"nothing beats Yuja Wang."* [YouTube](https://www.youtube.com/watch?v=jDrqR9XssJI). Don credits Wiseman, Lemke, Hiles, **and Chapman** in the video dedication block. Tribute + share links: [`characters/yuja-wang/`](../yuja-wang/README.md).
+6. **Heinz enters the picture (21 Feb 2020)** — Don reached Heinz Lemke (PIXIE programmer on the PDP-7) while documenting the films: *"Hello, Doctor Lemke!"* Heinz confirmed he is the person in both films working the light pen (*"looking much better in those times than today"*), identified **John Hiles** as the man at the TTY (third author, wrote the circuit-analysis application; died 1972), revealed **PIXIE II** (Lemke, Cypko, Warner & Berliner 2014 — patient models in computer-assisted medicine, PIXIE revived after ~45 years dormant), and began his *PIXIE History — Back to the Roots* series. Don hopes for CHM oral history while first-hand memory remains.
 
 ## David Rosenthal — same Cambridge PDP-7/Titan
 

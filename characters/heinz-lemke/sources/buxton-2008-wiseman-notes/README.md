@@ -35,12 +35,17 @@ PIXIE correspondence — **not** from their compiler. The chronology worth keepi
   documents, and states on the record that he has contacted the Keeper of Manuscripts and
   **offered Microsoft funding to digitize the PIXIE film** "so as to be accessible to
   interested researchers."
-- **2008–2026:** No digitization or findings from that effort are known to have been shared —
+- **2008–2019:** No digitization or findings from that effort are known to have been shared —
   with Don, with Heinz, or publicly.
-- **2026:** The film surfaces anyway — through
-  [Heinz Lemke's own archive](../../cambridge-films-flight-of-the-bumblebee.md) and the Repo
-  Show threads. The PIXIE source is recovered, loaded into SIMH, and the whole restoration is
-  done **in the open, in this repo**.
+- **Feb 2019:** Don goes direct — Cambridge University Library reference desk, ticket #43348,
+  answered by **David Chapman**. Chapman traces **both** PIXIE films to a Rainbow group
+  member's office and coordinates digitization through the Digital Content Unit.
+- **Jul 2019:** The films are published openly at
+  [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html).
+  Full story: [`../2019-2020-film-recovery-saga.md`](../2019-2020-film-recovery-saga.md).
+- **2020:** Don reaches Heinz, cuts *Flight of the PIXIE*; **2026:** the PIXIE source is
+  recovered, loaded into SIMH, and the whole restoration is done **in the open, in this repo**
+  ([chain](../../cambridge-films-flight-of-the-bumblebee.md)).
 
 **Editorial note (Don Hopkins's assessment):** a one-way information flow — material went in,
 nothing came back out, not even to the person who made the introduction. The working contrast

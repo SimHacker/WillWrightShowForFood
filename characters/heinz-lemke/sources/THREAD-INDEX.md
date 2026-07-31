@@ -29,6 +29,11 @@
 
 ## Primary sources pulled in alongside the thread
 
+- [`2019-2020-film-recovery-saga.md`](2019-2020-film-recovery-saga.md) — the prehistory:
+  how the films were found. Cambridge ticket #43348 (Don, 10 Feb 2019) → David Chapman's
+  detective work → both films in a Rainbow member's office (8 Mar 2019) → published
+  9 Jul 2019 → first contact with Heinz (21 Feb 2020) → *Flight of the PIXIE* (Mar 2020).
+  Distilled from Don's full mail export (411 messages, 2019–2023; private repo).
 - [`buxton-2008-wiseman-notes/`](buxton-2008-wiseman-notes/README.md) — Buxton's July 2008
   Wiseman-papers documents (Folder B.218, Cambridge): PIXIE paper pp. 466–467 transcription +
   archive report (talk-note button lists, radial-menu figure, proof the film existed, the
