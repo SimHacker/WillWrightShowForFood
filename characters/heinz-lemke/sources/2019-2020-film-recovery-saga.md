@@ -16,9 +16,12 @@ with dates and receipts.
 
 ## The timeline
 
-**May–July 2008 — how Don heard of the film.** **Dave Fleck** writes to Don (17 May 2008)
-hunting the unfindable 1969 PIXIE paper. Don immediately puts him in touch with Bill
-Buxton, who promises them both — *"Happy to scan it and make it available."* On 7 July
+**May–July 2008 — how Don heard of the film.** **Dave Fleck** — then VP of Engineering at
+**Wacom**, doing prior-art research while building what shipped as Wacom's Radial Menu
+(US 7,941,765, provisional filed Jan 2008) — writes to Don (17 May 2008) hunting the
+unfindable 1969 PIXIE paper, having found the reference on Don's pie menu site. Don
+immediately puts him in touch with Bill Buxton, who promises them both — *"Happy to scan
+it and make it available."* On 7 July
 2008 Buxton sends his Wiseman-papers notes to Kurtenbach, Newman, and Heinz Lemke — but
 not to Don, who had made the introduction and thanked him in advance. The next day,
 **8 July 2008, Fleck forwards Don the two PDFs himself.** That forward is how Don came to
