@@ -47,7 +47,7 @@ in_flight:
   - { id: alan-kay, status: invited_considering, next: "give him room; Vanessa-memorial framing already resonates; no nudge until Craig session scheduled" }
   - { id: keez-duyves, status: contact_attempted_no_reply, next: "retry via alternate channel or in person — Amsterdam; NDSM studio visit path" }
   - { id: ellpeck, status: engaged_positive, next: "UPDATE invitation w/ Soul City + queer links (im-queer-therefore-i-sim, did-the-sims-make-you-gay), then send official invite" }
-  - { id: blake-jennings, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; Bannon/DEN rabbit-hole follow-up staged privately (DonHopkins temp/blake-jennings/), send when conversation resumes and trust is built; queer show cluster w/ avila + ellpeck" }
+  - { id: blake-jennings, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; queer show cluster w/ avila + ellpeck" }
   - { id: ben-cerveny, status: in_the_loop, next: "reviewed + approved Don's Heinz email; formal invite when ben-cerveny.yml seed ripens" }
   - { id: heinz-lemke, status: engaged_delivering, next: "SEND the Ben-reviewed email TODAY; then receive memoir installments + listing" }
   - { id: craig-latta, status: engaged, next: "MEET IN PERSON (Amsterdam) — schedule Vanessa memorial session + OL reunion slot; unlocks Kay + Ingalls momentum" }
