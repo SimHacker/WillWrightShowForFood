@@ -19,13 +19,26 @@ invitation:
   channel: email
   note: "31 Jul — warm invite refreshed: rider accommodation, ethical virtual parrot (Copyleft / retrognuification), any medium he prefers. Draft: DonHopkins attachments/richard-stallman/2026-07-31-email-invitation.md"
 
+# Dual identity — descriptive, bidirectional, NOT inheritance
+relationships:
+  saint-ignucius:
+    type: dual_identity
+    metaphor: "Clark Kent / Superman"
+    not: [is_a, inherits, overlay, thin_pointer]
+    path: ../menagerie/saint-ignucius/
+    narrative: |
+      Saint IGNUcius is a satirical persona RMS invented (stallman.org/saint.html).
+      The menagerie character is self-contained fan fiction / costume. This directory
+      is the living guest. Same orbit; separate casting. Neither is parent of the other.
+
 see_also:
   - { path: contact-channels.yml, why: "Public contact protocol (email, phone, video)" }
   - { path: sources/rider-and-parrot.md, why: "How we accommodate the rider; virtual parrot" }
-  - { path: sources/great-quotes.yml, why: "Verified quotes collection" }
+  - { path: sources/great-quotes.yml, why: "Verified quotes with public provenance (freedom, emacs-devel, Lysator, natalism, rider)" }
   - { path: pull-in-gaps.yml, why: "save-rms-images and other gaps" }
   - { path: media/parrot-love.jpg, why: "RMS with parrot" }
-  - { path: ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984" }
+  - { path: ./media/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984" }
+  - { path: ../menagerie/saint-ignucius/, why: "Saint IGNUcius persona — dual identity, not is-a" }
   - { path: ../james-gosling/media/gosling-hobees-lunch.yml, why: "James learned the kabuki-west natalism / doctor.el story (2026)" }
   - { path: http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html, why: "RMS -vs- Doctor — kabuki-west natalism flame + Don's doctor.el reply (1993)" }
   - { path: ../david-henkel-wallace/, why: "Cygnus / BFD" }

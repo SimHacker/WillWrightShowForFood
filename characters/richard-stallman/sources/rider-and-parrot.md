@@ -2,9 +2,10 @@
 
 Sources: RMS speaking info packet; [ddol/rre-rms](https://github.com/ddol/rre-rms)
 ([rider.txt](https://github.com/ddol/rre-rms/blob/master/rider.txt), dated fulltexts);
-[Gizmodo, 2011](https://gizmodo.com/please-do-not-buy-richard-stallman-a-parrot-and-other-r-5853729);
-upstream virtual parrot
-[parrot-copyleft.yml](https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/parrot-copyleft.yml).
+[Gizmodo, 2011](https://gizmodo.com/please-do-not-buy-richard-stallman-a-parrot-and-other-r-5853729).
+Virtual parrot rules live in this note; full persona:
+[`../../menagerie/saint-ignucius/`](../../menagerie/saint-ignucius/)
+(dual identity with this guest — not is-a).
 
 ## Communication (Repo Show defaults)
 

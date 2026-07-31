@@ -1,0 +1,14 @@
+# Sidecar — copyleft-envelope-front-1984.png
+
+artifact:
+  file: copyleft-envelope-front-1984.png
+  slug: copyleft-envelope-front-1984
+  room: richard-stallman
+  what: 1984 mail-art envelope front — Don Hopkins to RMS at Tech Square
+  era: 1984 (drawn); scan published ~2013 CC BY-SA
+  sidecar_of: copyleft-envelope-front-1984.png
+
+see_also:
+  - copyleft-envelope-1984.yml
+  - copyleft-envelope-back-1984.yml
+  - copyleft-sticker-1984.yml

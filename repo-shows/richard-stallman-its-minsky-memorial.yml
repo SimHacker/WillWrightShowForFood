@@ -55,11 +55,24 @@ segments:
 
   copyleft_envelope:
     title: "Copyleft envelope — 68000 manual returned"
+    link_kind: receipt
     artifacts:
-      - characters/don-hopkins/media/pantomime/copyleft-envelope-1984.yml
+      - characters/richard-stallman/media/copyleft-envelope-1984.yml
     prompts:
       - "Borrowing the 68k manual — mailing it back — the sticker."
       - "Naming copyleft — activism through mail art."
+
+  rider_and_virtual_parrot:
+    title: "Rider, real parrots, virtual Copyleft"
+    link_kind: hospitality
+    only_if: rms_chooses
+    prompts:
+      - "Friendly-parrot clause as hospitality — what hosts get wrong."
+      - "Train the ethical virtual parrot; stress-test retrognuification disclosure."
+    sources:
+      - characters/richard-stallman/sources/rider-and-parrot.md
+      - characters/menagerie/saint-ignucius/parrot-copyleft.yml
+      - characters/menagerie/saint-ignucius/   # persona — dual identity, not is-a
 
   emacs_optional:
     title: "Emacs wars (optional — guest-led)"
@@ -73,7 +86,11 @@ segments:
       - characters/james-gosling/media/gosling-hobees-lunch.yml
 
 ties_to:
-  - characters/richard-stallman/contact-channels.yml
+  - characters/richard-stallman/                          # hub
+  - characters/richard-stallman/invitation.md             # invite + typed links
+  - characters/richard-stallman/contact-channels.yml      # protocol
+  - characters/richard-stallman/sources/great-quotes.yml  # receipt corpus
+  - characters/menagerie/saint-ignucius/                  # persona (dual identity)
   - characters/marvin-minsky/
   - characters/kent-pitman/
   - characters/brian-fox/

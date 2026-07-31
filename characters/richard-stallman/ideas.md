@@ -13,7 +13,7 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 
 | Artifact | Story |
 |----------|-------|
-| [Copyleft envelope 1984](../don-hopkins/media/pantomime/copyleft-envelope-1984.yml) | Borrowed **68000 manual** → mailed back with *Copyleft (L)* sticker — term RMS adopted |
+| [Copyleft envelope 1984](./media/copyleft-envelope-1984.yml) | Borrowed **68000 manual** → mailed back with *Copyleft (L)* sticker — term RMS adopted |
 | [RMS -vs- Doctor](http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html) | 1993 kabuki-west natalism flame; Don answered with `doctor.el` |
 | [Minsky jokes paper](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md) | AI Memo 603 — humor as catching cognitive bugs; memorial discussant segment |
 | [Tourist policy essay](https://donhopkins.medium.com/mit-ai-lab-tourist-policy-f73b77075631) | Don's Medium piece — invite RMS corrections on air |
@@ -43,7 +43,7 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 
 ### 4. Copyleft envelope — show the artifacts
 
-- Walk through [`copyleft-envelope-1984.yml`](../don-hopkins/media/pantomime/copyleft-envelope-1984.yml) on screen.
+- Walk through [`copyleft-envelope-1984.yml`](./media/copyleft-envelope-1984.yml) on screen.
 - 68000 manual round-trip; Judith Martin flowers clause; "all rights reversed."
 
 ### 5. Emacs optional drawer
@@ -63,13 +63,17 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
   [sources/rider-and-parrot.md](sources/rider-and-parrot.md).
 - Photo: [media/parrot-love.jpg](media/parrot-love.jpg).
 - Present **Copyleft the virtual parrot** — train by email/voice; retrognuification with
-  disclosure; RMS's Linux-libre / kernel-only bug fix already in the rules
-  ([upstream parrot-copyleft.yml](https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/parrot-copyleft.yml)).
+  disclosure; Linux-libre / kernel-only bug-fix rules in the rider notes
+  ([sources/rider-and-parrot.md](sources/rider-and-parrot.md)).
+  Persona: [menagerie/saint-ignucius](../menagerie/saint-ignucius/) — dual identity, not is-a.
 - Teach it a new trick on air.
 
 ### 7. Great quotes drawer
 
-- 1989: fix-by-doing / discussion as last resort — [sources/great-quotes.yml](sources/great-quotes.yml).
+- Full verified set: [sources/great-quotes.yml](sources/great-quotes.yml) — Manifesto, free-sw,
+  Stallman's Law, emacs-devel list links, Lysator 1987, natalism (donhopkins.com archive),
+  copyleft naming, rider lines.
+- 1989 fix-by-doing (Dale forward of rms@AI.MIT.EDU) — same file, `practice.fix-by-doing-1989`.
 - Seek: Don's remembered "one person too busy" paraphrase (not yet primary-sourced).
 
 ## Format principles (his terms)

@@ -1,0 +1,15 @@
+# Sidecar — bug-farm-parchment-variant.png
+
+artifact:
+  file: bug-farm-parchment-variant.png
+  slug: bug-farm-parchment-variant
+  room: pantomime
+  what: Bug Farm / Pantomime gesture tutorial parchment (variant)
+  era: ~2014 (Pantomime / Bug Farm)
+  sidecar_of: bug-farm-parchment-variant.png
+  note: "Was misfiled under copyleft-envelope-front-1984.png — not the 1984 mail art."
+
+see_also:
+  - INDEX.yml
+  - bug-farm.yml
+  - tutorial-parchment-hands.yml

@@ -35,6 +35,7 @@ gallery_openings:
         - { slug: troll, signifier: "🧌🪓🌉💰🎭", beat: "Works the door — one treasure per entry; adventure-mind fronts, zork-mind heckles from counsel" }
         - { slug: wumpus-snorax, signifier: "👃🦏💤🏹💀🎲", beat: "Sleeps in the corner through the whole auction; wakes once when someone whispers a room number" }
         - { slug: grue, signifier: "🌑👁️‍🗨️💀🦷👤🎲", beat: "Not observed attending. Lights flickered twice. Two hors d'oeuvres trays unaccounted for." }
+        - { slug: saint-ignucius, signifier: "🦬🎭🙏💾🦜", beat: "Blesses the JSON; Copyleft retrognuifies anyone who says Linux; disk platter catches gallery light" }
   optional:
     - { who: don-philahue, role: auctioneer_mc }
     - { who: don-hopkins, role: host_author }

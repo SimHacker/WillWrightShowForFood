@@ -1,79 +1,593 @@
-# Richard Stallman — great quotes collection
-# Verified lines with provenance. Add new finds; never invent attributions.
+# Richard Stallman — verified quotes (public provenance)
+# Self-contained. Verbatim + source + link when available. Never invent attributions.
+# Paraphrases marked paraphrase: true and parked under seek.
 
-collection:
-  id: rms-great-quotes
+meta:
+  attributed_to: "Richard M. Stallman"
+  uname: RMS
   curated: 2026-07-31
-  rule: "Verbatim + source. Paraphrases marked paraphrase: true and parked in seek list."
+  rule: "Verbatim + source + link. Paraphrases only in seek:."
+  attribution_format: '"[quote]" -- RMS (date, source)'
+  scope: |
+    Show / invitation / menagerie use. Rider-sensitive lines tagged rider.
+    Controversial material is not collected here.
 
-quotes:
+# ---------------------------------------------------------------------------
+# PRACTICE / EFFICIENCY (Don archive)
+# ---------------------------------------------------------------------------
+practice:
 
   - id: fix-by-doing-1989
-    text: |
+    quote: |
       In general, the way for a problem to be fixed is for someone who knows
       how to fix it right simply to do so. Any solution that involves
       discussion should be avoided except as a last resort, because it is
       inefficient.
-    date: 1989-09
-    context: |
-      Emacs newsgroups; VM/Gnus fighting over overlay-arrow. Forwarded by
-      Dale (drw@BOURBAKI.MIT.EDU) as "An interesting bit of philosophy from RMS"
-      to tanstaafl@ucbvax.Berkeley.EDU, 11 September 1989.
-    from: rms@AI.MIT.EDU
-    archived_in: DonHopkins/temp/rms-prompts.txt (~L2492-2495)
+    date: "1989-09"
+    from: "rms@AI.MIT.EDU"
+    source: |
+      Emacs newsgroups context (VM/Gnus fighting over overlay-arrow).
+      Forwarded 11 September 1989 by Dale (drw@BOURBAKI.MIT.EDU) as
+      "An interesting bit of philosophy from RMS" to
+      tanstaafl@ucbvax.Berkeley.EDU.
+    archive_local: "DonHopkins/temp/rms-prompts.txt (Begin forwarded message block; ~L2483-2497)"
+    headers:
+      forwarder_from: "drw@BOURBAKI.MIT.EDU"
+      forwarder_subject: "An interesting bit of philosophy from RMS"
+      forwarder_date: "11 September 1989 at 02:49:29 GMT+2"
+      forwarder_to: "tanstaafl@ucbvax.Berkeley.EDU"
+      original_from: "rms@AI.MIT.EDU"
     tags: [philosophy, efficiency, practice, emacs]
-    why_keep: |
-      Closest verified match to Don's remembered paraphrase about the one
-      person who knows how to do something being too busy -- same spirit:
-      doing beats talking; discussion does not manufacture capacity.
+    significance: |
+      Closest verified match to Don's remembered "too busy / talking won't
+      help" paraphrase. Same spirit: doing beats talking; discussion does
+      not manufacture capacity.
+    why_keep: "Show beat + invitation philosophy line."
+
+# ---------------------------------------------------------------------------
+# FREEDOM & ETHICS
+# ---------------------------------------------------------------------------
+freedom:
+
+  - id: golden-rule-manifesto
+    quote: |
+      I consider that the golden rule requires that if I like a program
+      I must share it with other people who like it.
+    date: "1985"
+    source: "GNU Manifesto"
+    link: "https://www.gnu.org/gnu/manifesto.html"
+    tags: [freedom, sharing, ethics, foundational]
+    significance: "Ethical foundation of free software in one sentence."
+
+  - id: free-as-in-speech
+    quote: |
+      Free software is a matter of liberty, not price. To understand the
+      concept, you should think of 'free' as in 'free speech,' not as in
+      'free beer.'
+    date: "1996"
+    source: "What is Free Software?"
+    link: "https://www.gnu.org/philosophy/free-sw.html"
+    tags: [freedom, definition, foundational]
+    significance: "The clarification every intro cites."
+
+  - id: value-your-freedom
+    quote: |
+      Value your freedom or you will lose it, teaches history. 'Don't
+      bother us with politics,' respond those who don't want to learn.
+    date: "2002"
+    source: "Linux, GNU, and freedom"
+    link: "https://www.gnu.org/philosophy/linux-gnu-freedom.html"
+    tags: [freedom, politics, warning]
+
+  - id: no-masters
+    quote: |
+      To have the choice between proprietary software packages, is being
+      able to choose your master. Freedom means not having a master.
+    date: "2007"
+    source: "Free Software and Beyond"
+    link: "https://en.wikiquote.org/wiki/Richard_Stallman"
+    tags: [freedom, proprietary, philosophy]
+
+# ---------------------------------------------------------------------------
+# OPEN SOURCE vs FREE SOFTWARE
+# ---------------------------------------------------------------------------
+open_source:
+
+  - id: stolen-sperm
+    quote: |
+      If I'm the father of Open Source, it was conceived through
+      artificial insemination using stolen sperm without my knowledge
+      or consent.
+    date: "2016"
+    source: "Web Summit, Lisbon"
+    link: "https://www.youtube.com/watch?v=n9YDz-Iwgyw"
+    tags: [open_source, rejection, memorable]
+    significance: "Most memorable rejection of the 'open source' label."
+
+  - id: suboptimal-vs-social-problem
+    quote: |
+      For the Open Source movement, non-free software is a suboptimal
+      solution. For the Free Software movement, non-free software is a
+      social problem and free software is the solution.
+    date: "1998"
+    source: "Why Free Software is Better than Open Source"
+    link: "https://www.gnu.org/philosophy/free-software-for-freedom.html"
+    tags: [open_source, philosophy, distinction]
+    note: "'Suboptimal' vs 'social problem' — the whole debate."
+
+# ---------------------------------------------------------------------------
+# CORPORATIONS & SURVEILLANCE
+# ---------------------------------------------------------------------------
+corporations:
+
+  - id: stallmans-law
+    quote: |
+      While corporations dominate society and write the laws, each advance
+      in technology is an opening for them to further restrict its users.
+    date: "2012"
+    source: "Stallman's Law"
+    link: "https://www.gnu.org/philosophy/stallmans-law.html"
+    tags: [corporations, law, stallmans_law]
+    significance: "Formally named Stallman's Law."
+
+  - id: cloud-control-2008
+    quote: |
+      One reason you should not use web applications to do your computing
+      is that you lose control. It's just as bad as using a proprietary
+      program.
+    date: "2008"
+    source: "The Guardian interview"
+    link: "https://www.theguardian.com/technology/2008/sep/29/cloud.computing.richard.stallman"
+    tags: [cloud, control, warning]
+
+  - id: politics-wont-leave-you-alone
+    quote: |
+      Geeks like to think that they can ignore politics, you can leave
+      politics alone, but politics won't leave you alone.
+    date: "2002"
+    source: "O'Reilly Open Source Conference"
+    link: "https://www.apacheweek.com/features/oscon2002"
+    tags: [politics, engagement]
+
+warnings:
+
+  - id: portable-surveillance-device
+    quote: |
+      If you have a portable surveillance and tracking device, please
+      turn it off.
+    date: "2008"
+    source: "Moscow State University talk"
+    link: "https://www.youtube.com/watch?v=GrJpXJY4Oow"
+    tags: [surveillance, phones, warning, prescient]
+    significance: "Phone warning years before Snowden."
+
+# ---------------------------------------------------------------------------
+# PROGRAMMING & HACKING
+# ---------------------------------------------------------------------------
+programming:
+
+  - id: hacker-playful-cleverness
+    quote: "A hacker is someone who enjoys playful cleverness -- not necessarily with computers."
+    date: "1996"
+    source: "Words to Avoid"
+    link: "https://www.gnu.org/philosophy/words-to-avoid.html"
+    tags: [hacking, definition]
+
+  - id: hacking-playfulness
+    quote: |
+      It is hard to write a simple definition of something as varied as
+      hacking, but I think what these activities have in common is
+      playfulness, cleverness, and exploration.
+    date: "2002"
+    source: "On Hacking"
+    link: "http://stallman.org/articles/on-hacking.html"
+    tags: [hacking, definition]
+
+  - id: lisp-most-powerful
+    quote: |
+      The most powerful programming language is Lisp. If you don't know
+      Lisp, you don't know what it means for a programming language to be
+      powerful and elegant.
+    date: "2006"
+    source: "How I do my computing"
+    link: "http://stallman.org/stallman-computing.html"
+    tags: [lisp, programming]
+
+  - id: cpp-ugly-emacs
+    quote: "C++ is a badly designed and ugly language. It would be a shame to use it in Emacs."
+    date: "2010"
+    source: "emacs-devel mailing list"
+    link: "http://harmful.cat-v.org/software/c++/rms"
+    tags: [c++, emacs, humor]
+    note: "Irony: he wrote GCC, which compiles C++."
+    humor: true
+
+# ---------------------------------------------------------------------------
+# PERSONAL PHILOSOPHY
+# ---------------------------------------------------------------------------
+personal:
+
+  - id: pessimist-who-fights
+    quote: |
+      I am a pessimist by nature. Many people can only keep on fighting
+      when they expect to win. I'm not like that, I always expect to lose.
+      I fight anyway, and sometimes I win.
+    date: "2005"
+    source: "Kernel interview"
+    link: "https://en.wikiquote.org/wiki/Richard_Stallman"
+    tags: [personal, fighting, philosophy]
+    significance: "Why he's still at it after decades."
+
+  - id: bullshit-dont-accept
+    quote: "People said I should accept the world. Bullshit! I don't accept the world."
+    date: "2005"
+    source: "NY Linux Bazaar Keynote"
+    link: "https://en.wikiquote.org/wiki/Richard_Stallman"
+    tags: [personal, defiance]
+
+  - id: exhilaration-of-resistance
+    quote: "Standing up to an evil system is exhilarating, and now I have a taste for it."
+    date: "2000"
+    source: "Slashdot interview"
+    link: "http://slashdot.org/interviews/00/05/01/1052216.shtml"
+    tags: [activism, personal]
+
+# ---------------------------------------------------------------------------
+# HUMOR & WIT
+# ---------------------------------------------------------------------------
+humor:
+
+  - id: vi-penance
+    quote: |
+      People sometimes ask me if it is a sin in the Church of Emacs to
+      use vi. Using a free version of vi is not a sin; it is a penance.
+    date: "2002"
+    source: "Free as in Freedom (Sam Williams)"
+    link: "http://www.oreilly.com/openbook/freedom/ch08.html"
+    tags: [emacs, vi, humor, church_of_emacs]
+    humor: true
+
+  - id: vi-vi-vi-666
+    quote: |
+      You can use any editor you want, but remember that vi vi vi is the
+      text editor of the beast.
+    date: "2006"
+    source: "HOPE Speech"
+    link: "https://www.youtube.com/watch?v=S76pHIYx3ik"
+    tags: [vi, humor, 666]
+    humor: true
+    note: "vi vi vi = 666."
+
+  - id: pro-state-gland
+    quote: "I have a pro-state gland."
+    date: "2015"
+    source: "LibrePlanet Keynote"
+    link: "https://www.networkworld.com/article/2900305/opensource-subnet/stallman-joins-the-internet-talks-net-neutrality-patents-and-more.html"
+    tags: [pun, politics, humor]
+    humor: true
+    note: "Pun on 'prostate' — not an anarchist."
+
+# ---------------------------------------------------------------------------
+# EMACS
+# ---------------------------------------------------------------------------
+emacs:
+
+  - id: microsoft-doesnt-have-this-problem
+    quote: |
+      When I released GNU Emacs and people started using it, they started
+      sending me improvements in the mail... Microsoft doesn't have this
+      problem.
+    date: "2000"
+    source: "LinuxTag address"
+    link: "https://en.wikiquote.org/wiki/Richard_Stallman"
+    tags: [emacs, microsoft, humor]
+    humor: true
+
+  - id: readability-other-people
+    quote: |
+      To learn to be a good programmer, you'll need to recognize that
+      certain ways of writing code, even if they make sense to you and
+      they are correct, they're not good because other people will have
+      trouble understanding them.
+    date: "2011"
+    source: "Sciences Po lecture"
+    link: "https://www.gnu.org/philosophy/free-digital-society.html"
+    tags: [programming, readability]
+
+# emacs-devel — verified list archive links
+emacs_devel:
+
+  - id: babylon-emacs
+    quote: |
+      At first it was hand-simulated by scribes in training. Then we
+      developed a clay-based precursor of the AI Lab's TTL (Tinker-Toy
+      Logic). It was even slower than writing cuneiform.
+    date: "2020-09-08"
+    source: "emacs-devel"
+    link: "https://lists.gnu.org/archive/html/emacs-devel/2020-09/msg00370.html"
+    tags: [humor, deadpan, babylon]
+    context: "Asked 'in what machine did you coded it?' about early Emacs"
+    humor: true
+
+  - id: cosmetics-mode
+    quote: |
+      Perhaps we should implement a mode that puts cosmetics on Emacs so
+      it will appeal to those who judge by the surface of things.
+    date: "2020-04-14"
+    source: "emacs-devel"
+    link: "https://lists.gnu.org/archive/html/emacs-devel/2020-04/msg00793.html"
+    tags: [humor, shade, emacs]
+    context: "Thread titled 'Why is emacs so square?'"
+    humor: true
+
+  - id: cheat-at-solitaire
+    quote: "If you cheat at solitaire, who are you cheating? ;-)"
+    date: "2007-02-28"
+    source: "emacs-devel"
+    link: "https://lists.gnu.org/archive/html/emacs-devel/2007-02/msg01316.html"
+    tags: [humor, games, philosophy]
+    context: "Tetris still movable while paused"
+    humor: true
+
+  - id: jokes-in-distribution
+    quote: |
+      There is nothing wrong with jokes in general, and no valid reason
+      in general to delete jokes in the Emacs distribution.
+    date: "2019-11-01"
+    source: "bug-gnu-emacs"
+    link: "https://lists.gnu.org/archive/html/bug-gnu-emacs/2019-11/msg00043.html"
+    tags: [humor, defense]
+    context: "Defending jokes in Emacs against a removal request"
+
+  - id: april-fool-funny
+    quote: "Someone wrote an April Fool and put my name on it. It was funny."
+    date: "2006-04-02"
+    source: "emacs-devel / gnu.org fun"
+    link: "https://www.gnu.org/fun/jokes/gnuemacs.html"
+    tags: [humor, april_fools]
+    context: "Fake rewrite-Emacs-in-Perl proposal"
+    humor: true
+
+  - id: never-offer-other-system
+    quote: |
+      GNU Emacs should never offer people a practical reason to use some
+      other system instead of GNU.
+    date: "2015-12"
+    source: "emacs-devel"
+    link: "https://lists.gnu.org/archive/html/emacs-devel/2015-12/msg01407.html"
+    tags: [strategy, gnu]
+    context: "On prioritizing macOS compatibility"
+
+# ---------------------------------------------------------------------------
+# MIT AI LAB CULTURE (Lysator 1987 interview)
+# https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt
+# ---------------------------------------------------------------------------
+mit_ai_lab:
+
+  - id: ibm-executive-high-school
+    quote: |
+      One day an IBM executive came to tell us about the work various IBM
+      scientific centers were doing, and finished with, "Of course you all
+      know the important work being done here." I asked him, "If our work
+      is so important, why can't we use the computer in this building any more?"
+    date: "high school"
+    source: "Lysator archive (1987)"
+    link: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+    tags: [authority, defiance, formative]
+    aftermath: |
+      After the meeting, my friends told me they had wanted to say such a thing
+      but were afraid of reprisals! I decided not to learn this particular lesson.
+
+  - id: fascism-permissions
+    quote: |
+      We hackers called this "fascism" because such computer systems really
+      have the social organization of totalitarian police states.
+    source: "Lysator archive (1987)"
+    link: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+    tags: [security, philosophy, hacker_ethic]
+    context: "On computer security/permissions systems"
+
+  - id: fibonacci-phone
+    quote: |
+      The whole AI lab used to have one common phone number and a public
+      address system. The phone was answered "6765", or sometimes
+      "Fibonacci of 20" since 6765 is the 20th Fibonacci number.
+    source: "Lysator archive (1987)"
+    link: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+    tags: [culture, math, whimsy]
+
+  - id: unlock-terminals
+    quote: |
+      We had a tradition of breaking open the door of any professor who
+      dared to lock up a terminal in his office. They would come back to
+      an open door and a note saying, "Please don't make us waste our time
+      unlocking this terminal."
+    source: "Lysator archive (1987)"
+    link: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+    tags: [hacker_ethic, terminals, access]
+
+  - id: slime-bolix
+    quote: |
+      This resulted in two competing Lisp machine companies: Greenblatt's LMI
+      and Noftsker's Symbolics (generally called "Slime" or "Bolix" around
+      the AI lab).
+    source: "Lysator archive (1987)"
+    link: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+    tags: [lisp, history, symbolics]
+    context: "Path to founding GNU."
+
+# ---------------------------------------------------------------------------
+# PUNS — https://www.stallman.org/jokes.html (also /puns.html)
+# ---------------------------------------------------------------------------
+puns:
+
+  - id: punslinger
+    quote: |
+      Out west, they call me punslinger. In Rome, I'm known as the puntiff.
+      In India they call me the Pundit of the Punjab (no pun job too big,
+      no pun job too small). Elsewhere I call myself the pun-isher,
+      and I love a full-groan pun.
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [self_description, meta_pun]
+    humor: true
+
+  - id: proper-tea-rites
+    quote: |
+      Why is the English common law so concerned with property rights?
+      Because the English gentry insisted on proper tea rites every afternoon.
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [wordplay, law, tea]
+    humor: true
+
+  - id: antistate-gland
+    quote: "Does an Anarchist man have an antistate gland instead of a prostate gland?"
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [politics, anatomy, wordplay]
+    note: "Used at LibrePlanet 2015 as 'I have a pro-state gland.'"
+    humor: true
+
+  - id: battered-shrimps
+    quote: |
+      At dinner at a Japanese restaurant, the person next to me said she
+      wanted to work with abused children. Since we had not yet received
+      the tempura, I responded, "If battered shrimps are your interest,
+      we should have some here soon."
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [dark_humor, wordplay, quick_wit]
+    humor: true
+
+  - id: inuit-i-knew-it
+    quote: |
+      When Europeans first visited the northern part of North America,
+      they did not know how to survive there. The natives did.
+      So they gave the Europeans advice: dress warm, don't tease polar bears,
+      take more than one dog. But the Europeans ignored this wise advice.
+      Sometimes they died, and the natives told each other... "I knew it."
+      Eventually they became known as the Inuit.
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [narrative_pun, history, wordplay]
+    humor: true
+
+  - id: john-deere-detractors
+    quote: |
+      John Deere puts locked-down nonfree software in its farm machines,
+      arousing the right-to-repair movement among farmers.
+      Nowadays it seems to be producing more de-tractors than tractors.
+    source: "stallman.org/jokes.html"
+    link: "https://www.stallman.org/jokes.html"
+    tags: [activism, wordplay, right_to_repair]
+    humor: true
+
+# ---------------------------------------------------------------------------
+# SF CONVENTION — witnessed by Don Hopkins
+# ---------------------------------------------------------------------------
+sf_convention:
+
+  - id: house-burned-advance
+    quote: |
+      Mike said: "Hello, Richard. I heard a rumor that your house
+      burned down. That's terrible! Is it true?"
+      RMS replied right back: "Yes, it did. But where you work,
+      you probably heard about it in advance."
+    date: "1980s"
+    source: "Don Hopkins, HN"
+    link: "https://news.ycombinator.com/item?id=26113192"
+    tags: [humor, quick_wit, sf_convention]
+    note: "Implying they should have set the fire themselves. Everybody laughed."
+    humor: true
+
+# ---------------------------------------------------------------------------
+# NATALISM FLAME (1993) — public archive
+# Full thread: https://donhopkins.com/home/catalog/text/rms-vs-doctor.html
+# ---------------------------------------------------------------------------
+natalism_1993:
+
+  - id: even-some-fish
+    quote: |
+      Hundreds of thousands of babies are born every day. While the whole
+      phenomenon is menacing, one of them by itself is not newsworthy.
+      Nor is it a difficult achievement — even some fish can do it.
+    date: "1993-02-21"
+    from: "rms@gnu.ai.mit.edu"
+    source: "kabuki-west mailing list"
+    link: "https://donhopkins.com/home/catalog/text/rms-vs-doctor.html"
+    also: "http://www.art.net/Studios/Hackers/Hopkins/Don/text/rms-vs-doctor.html"
+    tags: [humor, deadpan, legendary, natalism]
+    context: "Baby announcement on SF Bay dinner-planning list"
+    significance: "Opened the Natalism Flame."
+    humor: true
+
+  - id: doctor-funny
+    quote: "Funny."
+    date: "1993-02-21"
+    source: "kabuki-west mailing list"
+    link: "https://donhopkins.com/home/catalog/text/rms-vs-doctor.html"
+    tags: [humor, doctor, legendary]
+    context: |
+      Don ran RMS's email through GNU Emacs DOCTOR (Eliza) and posted the
+      psychoanalysis. RMS replied within ~15 minutes.
+    humor: true
+
+# ---------------------------------------------------------------------------
+# COPYLEFT NAMING + RIDER (show logistics)
+# ---------------------------------------------------------------------------
+copyleft_and_rider:
 
   - id: copyleft-naming-hopkins
-    text: |
+    quote: |
       In 1984 or 1985, Don Hopkins (a very imaginative fellow) mailed me a
       letter. On the envelope he had written several amusing sayings,
       including this one: 'Copyleft—all rights reversed.' I used the word
       'copyleft' to name the distribution concept I was developing at the time.
-    source_url: https://www.donhopkins.com/home/copyleft/
-    also: The GNU Project essay
+    source: "The GNU Project / Don Hopkins copyleft page"
+    link: "https://www.donhopkins.com/home/copyleft/"
+    also: "https://www.gnu.org/gnu/thegnuproject.html"
+    local_media: ../media/copyleft-envelope-1984.yml
     tags: [copyleft, don-hopkins, naming]
-    why_keep: "Primary naming provenance for the term and the parrot's name."
+    significance: "Primary naming provenance for the term."
 
   - id: gnu-pronunciation
-    text: |
+    quote: |
       "GNU" is pronounced as one syllable with a hard g, like "grew" but
       with n instead of r.
-    source: speaking info packet / rider
+    source: "speaking info packet / rider"
     tags: [gnu, pronunciation, rider]
-    why_keep: "Canonical pronunciation; always honor in show materials."
+    why_keep: "Canonical pronunciation; honor in show materials."
 
   - id: skype-sig
-    text: |
+    quote: |
       Skype: No way! That's nonfree (freedom-denying) software.
       Use free telephony.
-    source: RMS email signature (recurring)
+    source: "RMS email signature (recurring)"
     tags: [free-software, telephony, rider]
     why_keep: "Contact hygiene; matches contact-channels.yml."
 
   - id: do-not-buy-a-parrot
-    text: |
+    quote: |
       DON'T buy a parrot figuring that it will be a fun surprise for me.
       To acquire a parrot is a major decision: it is likely to outlive you.
-    source: speaking rider / info packet
-    archive: https://github.com/ddol/rre-rms
-    press: https://gizmodo.com/please-do-not-buy-richard-stallman-a-parrot-and-other-r-5853729
+    source: "speaking rider / info packet"
+    archive: "https://github.com/ddol/rre-rms"
+    press: "https://gizmodo.com/please-do-not-buy-richard-stallman-a-parrot-and-other-r-5853729"
     tags: [parrot, rider, ethics]
-    why_keep: "The clause we accommodate with an ethical virtual parrot instead."
+    why_keep: "Accommodate with an ethical virtual parrot — never a bought bird."
 
-seek:
-  - paraphrase: |
-      Sometimes there is only one person who knows how to do something and
-      they are too busy to do it, and talking about it won't make them less
-      busy or make it happen.
-    status: not_found_in_rms-prompts.txt_2026-07-31
-    nearest_verified: fix-by-doing-1989
-    action: "Ask RMS if he recalls saying this; if yes, capture primary source."
+# ---------------------------------------------------------------------------
+
+auxiliary_public:
+  natalism_full: "https://donhopkins.com/home/catalog/text/rms-vs-doctor.html"
+  lysator_1987: "https://www.lysator.liu.se/history/garb/txt/87-2-rms.txt"
+  copyleft_envelope: ../media/copyleft-envelope-1984.yml
+  rider: rider-and-parrot.md
+  jokes: "https://www.stallman.org/jokes.html"
 
 see_also:
   - ../ideas.md
   - rider-and-parrot.md
-  - https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/QUOTES.yml
+  - ../media/copyleft-envelope-1984.yml
+  - ../CHARACTER.yml

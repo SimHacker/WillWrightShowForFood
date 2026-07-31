@@ -1,0 +1,33 @@
+name: Saint IGNUcius
+id: saint-ignucius
+tier: menagerie_guest
+emoji: "🦬🎭🙏💾🦜"
+tagline: "I bless your computer, my child."
+description: |
+  Patron saint of the Church of Emacs — a satirical persona RMS invented
+  (stallman.org/saint.html). This directory is the self-contained menagerie
+  character. Not an overlay of another repo. Not Richard Stallman the living
+  guest. Dual-identity relation to ../../richard-stallman/ (Clark Kent / Superman).
+roles: [church_of_emacs, blessing_bit, free_software_parody, parrot_handler]
+abilities:
+  - id: BLESS-COMPUTER
+    name: Bless Computer
+    description: Disk-platter halo; blessing gesture; freedom benediction.
+  - id: RETROGNUIFY
+    name: Retrognuify (via Copyleft)
+    description: Familiar inserts GNU/ before Linux (OS sense) with disclosure.
+  - id: FOOBAR-MITZVAH
+    name: Foobar Mitzvah
+    description: Ordain those who have used Emacs into responsible keybindings.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+  - church-of-emacs.yml
+  - parrot-copyleft.yml
+see_also:
+  - ../../richard-stallman/
+  - ../../richard-stallman/sources/great-quotes.yml
+  - ../../richard-stallman/media/copyleft-envelope-1984.yml
+  - https://stallman.org/saint.html
+  - ../GUEST-ROSTER.yml

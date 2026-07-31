@@ -28,6 +28,7 @@ relationships:
   - { with: walter-bender, kinds: [olpc_gpl_thread], why: "OLPC Sugar / GPL games thread — free software for children's laptops" }
   - { with: james-gosling, kinds: [emacs_history_counterpart], why: "Gosling Emacs → GNU Emacs history; Gosling heard the doctor.el story from Don (2026)" }
   - { with: jamie-zawinski, kinds: [emacs_lineage], why: "Lucid Emacs / XEmacs fork history — the other pole of Emacs governance (no room in repo yet)" }
+  - { with: saint-ignucius, kinds: [dual_identity, invented_persona], why: "Church of Emacs patron saint — costume RMS invented (stallman.org/saint.html); menagerie character is self-contained; Clark Kent / Superman, not is-a" }
 
 abilities:
 - id: COPYLEFT
@@ -45,7 +46,7 @@ abilities:
     - trigger: license_as_constitution_explained
       weight: 0.92
   effect: "Use copyright to guarantee freedom instead of restrict it — the GPL hack. The show holds a primary source: the name came off Don's 1984 envelope sticker."
-  verifiable: "GNU GPL; ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml"
+  verifiable: "GNU GPL; ./media/copyleft-envelope-1984.yml"
   combos_with: [SHARE-ALIKE, OPEN-SIMCITY, DON-OPEN-SOURCE-MICROPOLIS]
 - id: GNU-MANIFESTO
   name: GNU Manifesto
@@ -114,6 +115,8 @@ invoke_rules:
 
 see_also:
   - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Ready invite with typed hub/receipt/hospitality/persona links" }
   - { path: contact-channels.yml, why: "Public contact protocol" }
-  - { path: ../don-hopkins/media/pantomime/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984 — primary source" }
+  - { path: ./media/copyleft-envelope-1984.yml, why: "Copyleft (L) sticker 1984 — primary source" }
+  - { path: ../menagerie/saint-ignucius/, why: "Persona — dual identity, not is-a" }
   - { path: ../david-henkel-wallace/CARD.yml, why: "Cygnus — GNU toolchain as a business" }

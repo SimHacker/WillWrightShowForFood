@@ -63,13 +63,15 @@ HyperLook + SimCity with [Arthur van Hoff](../arthur-van-hoff/) — shipped both
 
 ## Pantomime gallery (AR/VR)
 
-**Bug Farm** creepy squisher · **Too many butterflies!** Oculus demos · Unity3D with **David Levitt** and Nelson · **Copyleft (L)** envelope to RMS (1984).
+**Bug Farm** creepy squisher · **Too many butterflies!** Oculus demos · Unity3D with **David Levitt** and Nelson.
 
 [`media/pantomime/`](media/pantomime/INDEX.yml)
 
 ![Pantomime Bug Farm — tutorial parchment](media/pantomime/tutorial-parchment-hands.png)
 
-![Copyleft envelope front — Don to RMS 1984](media/pantomime/copyleft-envelope-front-1984.png)
+1984 **Copyleft (L)** mail art lives with RMS: [`../richard-stallman/media/copyleft-envelope-1984.yml`](../richard-stallman/media/copyleft-envelope-1984.yml).
+
+![Copyleft envelope front — Don to RMS 1984](../richard-stallman/media/copyleft-envelope-front-1984.png)
 
 ## Rolf Pixley — Amsterdam junk drawer
 

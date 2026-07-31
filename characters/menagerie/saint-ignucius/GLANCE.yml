@@ -1,0 +1,14 @@
+name: Saint IGNUcius
+id: saint-ignucius
+signifier: "🦬🎭🙏💾🦜"
+tagline: "I bless your computer, my child."
+sniff: |
+  Self-contained Church of Emacs persona — invented by RMS, wearable by anyone.
+  Related to richard-stallman like Superman to Clark Kent: same mythic orbit, not is-a.
+cohort: personae
+files: [CHARACTER.yml, CARD.yml, README.md, church-of-emacs.yml, parrot-copyleft.yml]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../../richard-stallman/
+  - https://stallman.org/saint.html

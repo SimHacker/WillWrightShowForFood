@@ -1,0 +1,13 @@
+# Sidecar — copyleft-sticker-1984.png
+
+artifact:
+  file: copyleft-sticker-1984.png
+  slug: copyleft-sticker-1984
+  room: richard-stallman
+  what: Copyleft (L) sticker graphic from the 1984 envelope
+  era: 1984 (mark); graphic published ~2013 CC BY-SA
+  sidecar_of: copyleft-sticker-1984.png
+
+see_also:
+  - copyleft-envelope-1984.yml
+  - copyleft-envelope-back-1984.yml

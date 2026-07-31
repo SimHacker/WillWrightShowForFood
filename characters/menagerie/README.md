@@ -19,8 +19,10 @@ Not necessarily from video games. Gallery patrons today; balcony hecklers tomorr
 | **Lower Chelsea Eight** | 🥂 Mimsy · 📈 Gregory · 📚 Eli · 🔧 Bucky Jr. · 🕯️ Helena · ⚔️ Margot · 💋 Julian · 🥦 Bunny |
 | **MOOLLM imports** | 🍄👸🍊💅🎭 Donna · 🧣🔦🚫🤫🌟 Doctor No · 🐒✋🌴🔮💜 Palm |
 | **Game cartridges** | 🌑 Grue · 👃 Snorax · 🧌 Two-Toll |
+| **Personae** | 🦬🎭🙏💾🦜 Saint IGNUcius — dual identity with [`../richard-stallman/`](../richard-stallman/), not is-a |
 
 Palm's rich room lives at [`../palm/`](../palm/); the menagerie copy is an ultra-thin pointer.
+Saint IGNUcius is **self-contained** here (no upstream overlay).
 
 ## Semantic Image Pyramid
 

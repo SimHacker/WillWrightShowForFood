@@ -1,0 +1,13 @@
+# Sidecar — bug-farm-flies-devshot.png
+
+artifact:
+  file: bug-farm-flies-devshot.png
+  slug: bug-farm-flies-devshot
+  room: pantomime
+  what: Bug Farm Unity capture — giant flies on table, FPS overlay
+  era: ~2014 (Pantomime / Bug Farm)
+  sidecar_of: bug-farm-flies-devshot.png
+
+see_also:
+  - INDEX.yml
+  - bug-farm.yml

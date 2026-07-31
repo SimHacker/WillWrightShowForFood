@@ -65,6 +65,12 @@ cohorts:
       - { slug: paula-gotchya, signifier: "🕵️📰🪤😱", role: "The Ambush Journalist — manufactured controversy" }
       - { slug: vic-rerun, signifier: "📼🔁🧛📺", role: "The Nostalgia Vampire — plays the clip again" }
 
+  personae:
+    id: personae
+    role: "Satirical / theatrical personae — self-contained; dual-identity with living guests, never is-a overlays"
+    roster:
+      - { slug: saint-ignucius, signifier: "🦬🎭🙏💾🦜", role: "Church of Emacs patron saint — Clark Kent/Superman to richard-stallman" }
+
 cross_rooms:
   sims: ../sims/
   robots: ../robots/

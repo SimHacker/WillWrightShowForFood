@@ -30,7 +30,7 @@ lisp_machine_manual_parallel:
   punchline: "Typography as accidental poetry when the viewport is wrong"
 
 copyleft_orbit:
-  envelope: pantomime/copyleft-envelope-1984.yml
+  envelope: ../../richard-stallman/media/copyleft-envelope-1984.yml
   gnu_art: "https://www.gnu.org.cach3.com/graphics/copyleft-sticker.en.html"
 
 repo_jokes:
@@ -41,7 +41,7 @@ repo_jokes:
 
 see_also:
   - ../media.md
-  - pantomime/copyleft-envelope-1984.yml
+  - ../../richard-stallman/media/copyleft-envelope-1984.yml
   - ../../lars-brinkhoff/CHARACTER.yml
   - ../../hugh-daniel/CHARACTER.yml
   - ../../../repo-shows/ideas/gags/pantomime-gallery.yml

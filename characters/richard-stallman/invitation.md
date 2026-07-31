@@ -7,12 +7,12 @@ warm_contact: true
 channel: email
 show_seed: repo-shows/richard-stallman-its-minsky-memorial.yml
 format: any_medium_he_prefers
+ready_email: DonHopkins/.../attachments/richard-stallman/2026-07-31-email-invitation.md
 ---
 
 # Repo Show invitation — Richard M. Stallman
 
 *Ready to send. Richard M. Stallman may edit, decline, delay, or request removal at any time.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Richard --
 
@@ -63,19 +63,28 @@ and the virtual one.
 **What this is not:** a debate about unrelated current politics, a multi-guest panel, or a
 gotcha interview. The repo holds receipts; you hold the veto.
 
-**Materials (browse without replying):**
+## Materials (typed links)
 
-| Topic | Link |
-| --- | --- |
-| Show seed | [`repo-shows/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial.yml) |
-| Contact protocol | [`contact-channels.yml`](contact-channels.yml) |
-| Great quotes | [`sources/great-quotes.yml`](sources/great-quotes.yml) |
-| Rider / parrot accommodation | [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md) |
-| Parrot love photo | [`media/parrot-love.jpg`](media/parrot-love.jpg) |
-| Copyleft envelope | [`../don-hopkins/media/pantomime/copyleft-envelope-1984.yml`](../don-hopkins/media/pantomime/copyleft-envelope-1984.yml) |
-| Virtual parrot (upstream) | [tmnn7-8 StIGNUcius/parrot-copyleft.yml](https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/parrot-copyleft.yml) |
-| Rider archive | [ddol/rre-rms](https://github.com/ddol/rre-rms) |
-| Repo Show project | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
+Each link has a **kind** -- a job. Browse without replying. Absolute URLs go to the public
+repo so they work from email; relative paths are for readers already in this tree.
+
+| Kind | Job | Link |
+| --- | --- | --- |
+| **hub** | Start here -- this guest directory (invitation, protocol, quotes, media) | [characters/richard-stallman](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/richard-stallman) |
+| **receipt** | Proves the copyleft *name* story -- 1984 envelope scans + provenance | [`media/copyleft-envelope-1984.yml`](media/copyleft-envelope-1984.yml) · [on GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-stallman/media/copyleft-envelope-1984.yml) |
+| **hospitality** | How we read your rider; ethical virtual parrot rules | [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md) · [on GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/richard-stallman/sources/rider-and-parrot.md) |
+| **persona** | Saint IGNUcius / Copyleft familiar -- costume you invented, not you (Clark Kent / Superman) | [`../menagerie/saint-ignucius/`](../menagerie/saint-ignucius/) · [on GitHub](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/menagerie/saint-ignucius) |
+| **show** | Episode seed -- ITS, Marvin memorial discussant, copyleft artifacts | [`../../repo-shows/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial.yml) |
+| **standards** | Guests may edit, decline, delay, or request removal | [portrayal-standards.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) |
+
+**Deeper when you want them** (not required to answer):
+
+| Kind | Job | Link |
+| --- | --- | --- |
+| receipt | Verified quotes with public provenance (Manifesto, emacs-devel, Lysator, natalism…) | [`sources/great-quotes.yml`](sources/great-quotes.yml) |
+| protocol | Email / landline / Jitsi-BBB / WebM-Ogg contact table | [`contact-channels.yml`](contact-channels.yml) |
+| receipt | Rider archive across years (ddol/rre-rms) | [github.com/ddol/rre-rms](https://github.com/ddol/rre-rms) |
+| receipt | 1993 kabuki-west / doctor.el thread (public) | [donhopkins.com archive](https://donhopkins.com/home/catalog/text/rms-vs-doctor.html) |
 
 **Your response:** yes, later, written-only, phone, or no -- all honored gracefully.
 
