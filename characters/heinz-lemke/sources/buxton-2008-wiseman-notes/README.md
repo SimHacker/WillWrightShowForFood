@@ -30,6 +30,12 @@ template — is in [`../2026-07-30-pixie-storyline-thread.md`](../2026-07-30-pix
 These PDFs reached this repo from [donhopkins.com](https://donhopkins.com/home/) and the 2026
 PIXIE correspondence — **not** from their compiler. The chronology worth keeping straight:
 
+- **2 Dec 1986:** Don Hopkins finds the PIXIE citation in Newman & Sproull's *Principles of
+  Interactive Computer Graphics* at the UMD Engineering Library and emails it to himself —
+  documentary receipts (plus 1987–89 working files) at
+  [donhopkins.com/home/piepaper](https://donhopkins.com/home/piepaper). This predates by 22
+  years Buxton's later claim that Don hadn't credited Wiseman "until you learned about him
+  from us."
 - **2008:** Don Hopkins connects an inquiry about radial-menu history to Buxton. Buxton does
   genuinely good archive work at Cambridge (with William Newman's generous help), writes these
   documents, and states on the record that he has contacted the Keeper of Manuscripts and

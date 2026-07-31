@@ -16,6 +16,14 @@ with dates and receipts.
 
 ## The timeline
 
+**8 Feb 2019 — the trigger.** Don is preparing a guest lecture on pie menu history for
+Brad Myers's CMU Interaction Techniques course (05-640, 11 Feb 2019) and assembling the
+documentary timeline for it — including his own 2 December 1986 email to himself recording
+the PIXIE citation he'd found in Newman & Sproull at the UMD Engineering Library
+([receipts](https://donhopkins.com/home/piepaper)). He sends the evidence chain to Brad,
+Ben Shneiderman, and Catherine Plaisant. Two days of timeline work later, the obvious next
+question: where is that film?
+
 **10 Feb 2019 — Don asks.** After eleven years of the film existing only as a line in
 Buxton's 2008 notes ([the promise that went nowhere](buxton-2008-wiseman-notes/README.md)),
 Don writes to the Cambridge University Library reference desk: *"Hello, honorable
@@ -63,10 +71,21 @@ GRaIL demo film; Don posts the PIXIE films in reply
 Alan Kay and HN's dan: the films are silent, and deserve context — maybe a highlights cut
 with narration.
 
-**21 Feb 2020 — "Hello, Doctor Lemke!"** Don's first email to Heinz, via CARS: would the
-person who actually wrote the PDP-7 code explain what's on the screen — comments, or even
-a voice-over? *"We have it so easy these days... standing on the shoulders of giants like
-you and your colleagues at the Cambridge Computing Laboratory."*
+**21 Feb 2020, 11:19 — "Hello, Doctor Lemke!"** Don's first email to Heinz, via CARS:
+would the person who actually wrote the PDP-7 code explain what's on the screen —
+comments, or even a voice-over? *"We have it so easy these days... standing on the
+shoulders of giants like you and your colleagues at the Cambridge Computing Laboratory."*
+
+**21 Feb 2020, 14:16 — Heinz answers within three hours.** His first words to Don:
+
+> *"Thank you for your reference to PIXIE. What makes you interested in PIXIE, after it
+> has been designed and implemented more than half a century ago?"*
+
+And a revelation in passing: the 1969 film was the one *"I showed in many places in the
+USA, including MIT and Stanford (e.g to Douglas C. Engelbart at SRI) when I travelled
+around that country in that year to spread the message of man-machine communication."*
+The year after the Mother of All Demos, the man who built radial menus on a PDP-7
+personally showed his film to the man who built the mouse.
 
 **Feb–Mar 2020 — Heinz answers everything.** He identifies himself in the footage:
 
@@ -121,7 +140,9 @@ PDPs, although not the PDP-7 you are interested in sadly."
 
 ## Sources
 
-- Primary: Don's full PIXIE mail export (411 messages, 2019–2023) — private repo,
+- Primary: Don's full PIXIE mail export (~1,220 messages, 1986–2023 — the film recovery
+  plus the full provenance record, including Don's 1986 PIXIE-citation email to himself
+  and the 1987 NeWS-makers pie menu release) — private repo,
   `characters/don-hopkins/correspondence/attachments/heinz-lemke/pixie-film-emails-export.txt`
 - [`../cambridge-films-flight-of-the-bumblebee.md`](../cambridge-films-flight-of-the-bumblebee.md) — production, DSHR, telecine jiggle, show hooks
 - [`buxton-2008-wiseman-notes/`](buxton-2008-wiseman-notes/README.md) — the 2008 evidence the film existed

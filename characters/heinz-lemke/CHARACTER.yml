@@ -27,10 +27,14 @@ bio:
   summary: |
     **Heinz U. Lemke** — co-author of **PIXIE: A New Approach to Graphical Man-Machine
     Communication** (1969 CAD Conference; with Neil E. Wiseman and John O. Hiles). PhD on the
-    PIXIE user interface. Retired Professor of Computer Graphics and Computer Assisted Medicine,
+    PIXIE user interface. In 1969 he toured US labs showing the PIXIE film "to spread the
+    message of man-machine communication" — including **to Douglas Engelbart at SRI**, the
+    year after the Mother of All Demos (his own first words to Don, 21 Feb 2020). Retired
+    Professor of Computer Graphics and Computer Assisted Medicine,
     TU Berlin. Founder/chair of **CARS** (Computer Assisted Radiology and Surgery); model-guided
-    medicine. Lives in the Black Forest. Don's warm correspondence since ~2020 —
-    Chapman film recovery, *Flight of the PIXIE*, CARS workshops (incl. 2025 Berlin game-
+    medicine. Lives in the Black Forest. Don's warm correspondence since 21 Feb 2020
+    ("Hello, Doctor Lemke!" — answered within three hours) — Chapman film recovery,
+    *Flight of the PIXIE*, CARS workshops (incl. 2025 Berlin game-
     thinking proposal), Will Wright modelling thread, YouTube captioning help, barn visits
     (Mario Cypko patient-modelling video). CHM oral history while memory remains.
 
@@ -44,6 +48,7 @@ sources:
       url: "https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf"
 
 see_also:
+  - { path: sources/2019-2020-film-recovery-saga.md, why: "How the films were found; Heinz's first reply + Engelbart/SRI revelation" }
   - { path: ../../process/hn-harvest/heinz-lemke.md, why: "DonHopkins/SimHacker HN harvest — PIXIE / Heinz Lemke queries (curate; PIXIE string is broad)" }
   - { path: from-alan-kay.yml, why: "Kay on PIXIE / light-pen vs RAND tablet; hoped Cambridge series" }
   - { path: ../alan-kay/, why: "PIXIE Cc; Wilkes→PARC; hoped series with living+passed Cambridge collaborators" }
