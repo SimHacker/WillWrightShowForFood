@@ -8,7 +8,6 @@ gaps:
     what: "Save RMS photographs into characters/richard-stallman/media/"
     done_this_batch:
       - media/parrot-love.jpg
-      - media/parrot-love-rre-rms-repo.jpg
       - media/rms-gerbil-jsol.jpg
     still_wanted:
       - "Official stallman.org black-and-white press photo (rms-bw.jpeg) if license allows"
