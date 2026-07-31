@@ -40,7 +40,7 @@ would be a **paper letter**. Status here: **dream guest** — portrayal + draft 
 | [Scott Adams](../scott-adams/) | Portable adventure database / compiler lineage |
 | [Ted Nelson](../ted-nelson/) | Intertwingled documents; programs as literature |
 | [Brewster Kahle](../brewster-kahle/) | Preserve early dreams (including playable ones) |
-| [Don Woods](../don-woods/) | Co-author of Adventure 1.0; copyright on `advent.w` with Knuth; Sun NeWS/TNT colleague of Don ([Wikipedia](https://en.wikipedia.org/wiki/Don_Woods_(programmer))) |
+| [Don Woods](../don-woods/) | Co-author of Adventure 1.0; copyright on `advent.w` with Knuth; Sun NeWS/TNT colleague of Don. **The warm path**: Woods saw Knuth at a SAIL reunion ~2025; his invitation went out 31 Jul 2026. **The dream**: [the literate adventure code reading](../../repo-shows/don-woods-adventure.yml) — Woods + Knuth walking advent.w, author beside annotator |
 
 Subject may request correction or removal anytime.
 

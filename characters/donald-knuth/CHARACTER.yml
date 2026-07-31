@@ -25,6 +25,12 @@ invitation:
     Knuth does not answer unsolicited email (except book-error reports).
     Public contact protocol: https://www-cs-faculty.stanford.edu/~knuth/email.html
     Any real ask would be a paper letter — this invite is drafted in that form.
+  warm_path: |
+    Don Woods (invitation sent 31 Jul 2026) knows Knuth personally and saw him at a
+    SAIL reunion (~2025): "He's getting frail but is still plenty sharp." If Woods
+    accepts, the natural move is to ask HIM whether a joint advent.w reading would
+    delight Knuth — and, if so, whether he'd hand-deliver or endorse the paper letter.
+    A vouch from the co-author on the advent.w copyright line beats a cold stamp.
   show_seed: repo-shows/donald-knuth/
 
 bio:
@@ -33,6 +39,12 @@ bio:
     Author of *The Art of Computer Programming*; creator of TeX and METAFONT; inventor of literate
     programming (WEB/CWEB). Among his downloadable CWEB programs is **ADVENT**: Crowther/Woods
     Adventure Version 1.0 recast so the ur-game can be read as literature about a world model.
+
+woods_connection:
+  copyright_line: "advent.w (1998) carries 'Copyright (C) 1998 by Don Woods and Don Knuth' — Knuth recast the game WITH its co-author's blessing, not around him."
+  sail_reunion: "Woods, email to Don Hopkins (23 Jul 2025): 'I saw other other Don (DEK) not long ago at a SAIL reunion gathering. He's getting frail but is still plenty sharp.' — a living personal channel."
+  intercal_hack: "In 2003 Knuth wrote an INTERCAL program and found 'a really cool hack' in the standard library's DIVISION ROUTINE, then wrote to Woods asking whether he or Lyon deserved the credit in TAOCP vol 4. Neither could remember. (2008 Computerworld interview.) Knuth engaged seriously with BOTH of Woods's masterpieces."
+  show_hook: "The literate adventure code reading — Woods + Knuth walking advent.w together, author beside annotator. See repo-shows/don-woods-adventure.yml (dream_ensemble) and ../don-woods/sources/correspondence-digest.md."
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Donald_Knuth"
@@ -47,6 +59,7 @@ sources:
     - { path: sources/advent-shrdlu-wumpus-lineage.md, why: "HN / Montfort trail" }
 
 show_suggestions:
+  - "THE DREAM: the literate adventure code reading — Knuth + Don Woods walking advent.w together, annotator beside author"
   - "Why Adventure deserved a literate recasting — programs as literature, games as literature"
   - "Travel tables, props, dwarves: the founding schemas of interactive worlds"
   - "TANGLE/WEAVE vs Repo Show facades (human order vs machine order)"
@@ -56,6 +69,8 @@ show_suggestions:
 see_also:
   - { path: invitation.md, why: "Snail-mail draft invitation" }
   - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../don-woods/, why: "Adventure co-author, advent.w co-copyright, warm personal channel (SAIL reunions)" }
+  - { path: ../../repo-shows/don-woods-adventure.yml, why: "Dream ensemble — the literate adventure code reading" }
   - { path: sources/adventure-knuth/ANALYSIS.md, why: "Mission mapping" }
   - { path: sources/README.md, why: "Sources index" }
   - { path: ../nick-montfort/sources/riddle-machines.md, why: "Literary map of IF (Riddle Machines framing)" }

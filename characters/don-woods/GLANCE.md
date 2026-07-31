@@ -11,9 +11,14 @@ Knuth recast his game as [advent.w](../donald-knuth/sources/adventure-knuth/adve
 copyright **"Don Woods and Don Knuth"**. The MOOLLM kitchen already issued his
 [One Lousy Point stamp](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml).
 
-**Invitation:** draft — [invitation.md](invitation.md). Ensembles: two-Dons NeWS episode;
+**Invitation:** SENT 31 Jul 2026 via the "THROW AXE AT DWARF" thread — [invitation.md](invitation.md);
+correspondents since a misdirected email in **1986** ([digest](sources/correspondence-digest.md)).
+Ensembles: two-Dons NeWS episode;
 [Lars Brinkhoff](../lars-brinkhoff/) PDP-10 live boot;
 [**the two Adventurers** with Scott Adams](../../repo-shows/woods-and-adams-adventurers.yml) —
-free mainframe cave meets first sold adventure.
+free mainframe cave meets first sold adventure;
+**THE DREAM: [the literate adventure code reading with Knuth](../donald-knuth/)** —
+both names on the advent.w copyright line, walking the sections together (Woods saw
+Knuth at a SAIL reunion ~2025 — he's the warm channel).
 
 Read next: [README](README.md) · [ideas](ideas.md) · [CARD.yml](CARD.yml) · [CHARACTER.yml](CHARACTER.yml)

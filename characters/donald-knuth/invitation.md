@@ -15,6 +15,12 @@ anytime, or take direct edit access. [Portrayal standards](https://github.com/Si
 other than book-error reports ([Knuth versus Email](https://www-cs-faculty.stanford.edu/~knuth/email.html)).
 This page is the letter we would print if we ever earn the stamp.
 
+**Warm path:** [Don Woods](../don-woods/) — co-author on the `advent.w` copyright line, invitation
+sent 31 Jul 2026 — saw Knuth at a SAIL reunion (~2025): *"He's getting frail but is still plenty
+sharp."* If Woods accepts his show, the right move is to ask *him* whether a joint reading would
+delight Knuth, and whether he'd endorse (or hand-deliver) this letter. A vouch from the other Don
+beats a cold stamp.
+
 **Will Wright is in** — [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md).
 
 ---
@@ -50,6 +56,12 @@ literature" still means when the audience includes both people and language mode
 you speak when convenient; we assemble with sources and credit. You would of course control how
 you are portrayed.
 
+The dream version: a literate adventure code reading with Don Woods — my old Sun colleague from
+The NeWS Toolkit days, and your co-author on the advent.w copyright line — the two of you walking
+the sections together, author beside annotator: vocabulary, travel table, dwarves, the last lousy
+point. He has been invited; he mentioned seeing you at a SAIL reunion recently. Solo, joint, or
+never — entirely your call.
+
 A public portrayal directory (correctable or deletable by you at any time) lives here:
 
   https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/donald-knuth/
@@ -71,6 +83,7 @@ Amsterdam
 
 ## If this ever goes out
 
+0. Ask Don Woods first — would a joint reading delight Knuth? Would he endorse or hand-deliver?
 1. Print the letter; no email (except accidental `taocp@` wastebasket recycling).
 2. Enclose nothing that demands a reply.
 3. Honor decline, delay, or silence without a second ask.

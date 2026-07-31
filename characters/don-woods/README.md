@@ -50,6 +50,17 @@ receive the **One Lousy Point Donald Woods Stamp** — a tribute to Infocom's re
 brochure. Worth one lousy point. Priceless historically. The invitation, in a sense,
 predates itself.
 
+## Forty years of crossed mail
+
+The two Dons have been correspondents since **1986**, when Don Hopkins typed `:mail don`
+instead of `:mail don@mimsy.umd.edu` and the message landed at Woods.pa@Xerox.COM.
+Woods's complete reply: *"I'll bite: To whom did you intend to send this?"* The full arc —
+SUG tapes, Spider, TNT memos, tnt-geeks reunions, the 2025 motd myth-check, and the
+invitation sent 31 July 2026 — is in
+[sources/correspondence-digest.md](sources/correspondence-digest.md). His Sun-era
+PostScript and toolkit artifacts are in
+[sources/sun-news-artifacts.md](sources/sun-news-artifacts.md).
+
 ## Room contents
 
 | File | What |
@@ -57,7 +68,8 @@ predates itself.
 | [CHARACTER.yml](CHARACTER.yml) | Bio girder — facts, sources, invitation status |
 | [CARD.yml](CARD.yml) | Invokable abilities — Open the Cave, Distributed Git Blame, PLEASE Compile, PostScript Duel |
 | [ideas.md](ideas.md) | Conversation hooks for a Repo Show |
-| [invitation.md](invitation.md) | Draft invitation (not yet sent) |
+| [invitation.md](invitation.md) | Invitation — **sent 31 July 2026**, awaiting reply |
+| [sources/](sources/) | Correspondence digest (1986–2026) + Sun/NeWS artifacts |
 
 *This directory is an invitation portrayal governed by
 [portrayal-standards](../../schemas/portrayal-standards.md). It is not Don Woods.*

@@ -6,6 +6,8 @@ iconic: "🕸✒️ Donald Knuth"
 description: |
   Stanford emeritus; TAOCP; TeX; literate programming. Dream guest — he recast Adventure
   in CWEB. Contact only by snail mail per his published protocol. Not asked yet.
+  Warm path: Don Woods (advent.w co-copyright) sees him at SAIL reunions — ask Woods first.
+  Dream ensemble: the literate adventure code reading, Woods + Knuth on advent.w.
 
 keywords:
   - donald knuth
@@ -24,6 +26,7 @@ navigation:
   parent: ../
   children: []
   siblings:
+    - ../don-woods/
     - ../terry-winograd/
     - ../scott-adams/
     - ../ted-nelson/
@@ -39,6 +42,7 @@ see_also:
   parent:
     - { path: ../GLANCE.yml, why: "Character registry" }
   siblings:
+    - { path: ../don-woods/GLANCE.md, why: "advent.w co-copyright; warm channel (SAIL reunions); dream code-reading partner" }
     - { path: ../terry-winograd/GLANCE.yml, why: "SHRDLU parent of IF" }
     - { path: ../scott-adams/GLANCE.yml, why: "Adventure engine lineage" }
   across:

@@ -49,10 +49,42 @@ Open the show by "mailing" the MOOLLM
 and presenting Woods with his own One Lousy Point stamp. The microworld honored him before
 the invitation existed — let him score the final point of the episode with it.
 
+## 8. Knuth found a hack in INTERCAL's division routine
+
+In 2003, Knuth wrote an INTERCAL program and discovered "a really cool hack I hadn't seen
+before" in the standard library's division routine — then wrote to Woods asking whether he
+or Lyon deserved credit in TAOCP volume 4. Neither could remember. The only known case of
+a joke language's standard library being scouted for The Art of Computer Programming.
+Pairs with the advent.w walk: Knuth engaged seriously with *both* of Woods's masterpieces.
+
+## 9. First contact was a typo (1986)
+
+Don mis-typed `:mail don` and the message landed at Woods.pa@Xerox.COM. Woods: *"I'll
+bite: To whom did you intend to send this?"* Forty years of correspondence started by a
+mail-routing accident — and Don had already mis-sent him a database once before. Open the
+episode by reading it aloud. ([digest](sources/correspondence-digest.md))
+
+## 10. The AI skeptic on an AI-produced stage
+
+Woods (2025): AI simulations are "surprisingly (disturbingly?) good at generating
+fake-but-convincing dialogues... Of course, they're still terrible at actually
+understanding anything." The Repo Show's stage is maintained with an LLM coherence
+engine. Don't dodge this — make it a segment: let Woods audit the microworld that issued
+his stamp, and grade it. His standards (no HN account, no Facebook, on principle) make
+him the perfect hostile reviewer, in the best sense.
+
+## 11. TNT tracking service → ScriptX → OLPC
+
+The TNT 2.0 tracking service (Woods, Densmore, Raymor et al.) — minimal objects, safe
+synchronous input that never loses events — was reincarnated by Don in Kaleida's ScriptX
+and offered to OLPC Sugar in 2007. A design outliving three platforms is worth an episode
+segment on what made it right. ([artifacts](sources/sun-news-artifacts.md))
+
 ## Ensemble options
 
 - **Woods solo** — Adventure repo walk ([show seed](../../repo-shows/don-woods-adventure.yml))
 - **Woods + Don Hopkins** — the two-Dons NeWS/TNT episode
 - **Woods + Lars Brinkhoff** — PDP-10 restoration + live original Adventure
 - **Woods + Scott Adams** — the two Adventurers: the mainframe cave meets the 16K home-computer branch ([show seed](../../repo-shows/woods-and-adams-adventurers.yml)) — both already have One Lousy Point stamps in the MOOLLM kitchen
+- **Woods + Knuth — THE DREAM: the literate adventure code reading** ([dream ensemble](../../repo-shows/don-woods-adventure.yml), [Knuth room](../donald-knuth/)) — the two names on the advent.w copyright line walking the sections together, author beside annotator. The channel is Woods himself: he saw Knuth at a SAIL reunion ~2025 (*"getting frail but is still plenty sharp"*), and Knuth wrote to him in 2003 about the INTERCAL division-routine hack. If Woods says yes to his solo show, ask him whether a joint reading would delight Knuth.
 - **Woods × Knuth room** — even without Knuth live, advent.w is a co-authored text to read from

@@ -9,6 +9,15 @@ Guest room: [`../../characters/donald-knuth/`](../../characters/donald-knuth/)
 Literate programming meets the ur-game: why Adventure deserved a CWEB recasting; rooms/objects/parsers
 as literature; what "write for humans first" means when LLMs also read the tree.
 
+## The dream version — the literate adventure code reading
+
+**Knuth + [Don Woods](../../characters/don-woods/)** walking `advent.w` together — the two names
+on its copyright line ("Don Woods and Don Knuth"), author beside annotator: vocabulary → travel
+table → dwarves → the last lousy point. Woods is also the **warm path**: he saw Knuth at a SAIL
+reunion (~2025, *"getting frail but is still plenty sharp"*), and his own invitation went out
+31 Jul 2026. Ask Woods to vouch before any cold letter. Girder:
+[`don-woods-adventure.yml`](../don-woods-adventure.yml) → `dream_ensemble`.
+
 ## Materials
 
 | | |
@@ -19,5 +28,6 @@ as literature; what "write for humans first" means when LLMs also read the tree.
 
 ## Possible discussants (optional, later)
 
+[Don Woods](../../characters/don-woods/) (first choice — see dream version above) ·
 [Terry Winograd](../../characters/terry-winograd/) · [Scott Adams](../../characters/scott-adams/) ·
 [Ted Nelson](../../characters/ted-nelson/) — only if Knuth wanted company; default is solo / async.

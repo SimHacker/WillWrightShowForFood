@@ -26,6 +26,13 @@ ensemble_option:
   with: characters/lars-brinkhoff/
   arc: "Crowther's cave (1976) → Woods's 350-point canon (1977) → Zork and Infocom → Knuth's advent.w (1998) → the cave running live on preserved iron."
 
+dream_ensemble:
+  with: characters/donald-knuth/
+  title: "The Literate Adventure Code Reading — the three Dons"
+  arc: "Woods + Knuth walk advent.w together, author beside annotator — the copyright line ('Don Woods and Don Knuth') made flesh. Woods narrates what the 1977 FORTRAN did; Knuth narrates why each section reads the way it reads; Don Hopkins hosts. Vocabulary → travel table → dwarves → the last lousy point."
+  channel: "Woods first: he saw Knuth at a SAIL reunion ~2025 ('getting frail but is still plenty sharp'). If Woods accepts his solo show, ask him whether a joint reading would delight Knuth — then the paper letter (repo-shows/donald-knuth/, snail mail only) goes out with his vouch."
+  status: dream
+
 pair_option:
   with: repo-shows/woods-and-adams-adventurers.yml
   arc: "The two Adventurers — Woods + Scott Adams: the free mainframe cave meets the first adventure ever sold."
@@ -37,4 +44,4 @@ ties_to:
   - characters/lars-brinkhoff/
   - characters/scott-adams/
 
-consent: not_yet_asked
+consent: invitation_sent_2026-07-31  # via 'THROW AXE AT DWARF' email thread; awaiting reply

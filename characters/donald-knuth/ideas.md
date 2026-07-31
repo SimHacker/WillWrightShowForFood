@@ -11,6 +11,20 @@ doesn't? Walk a few sections: vocabulary → travel table → dwarves → scorin
 Local: [`sources/adventure-knuth/`](sources/adventure-knuth/) ·
 Upstream: [programs.html#advent](https://www-cs-faculty.stanford.edu/~knuth/programs.html#advent)
 
+## 0.5. THE DREAM — the literate adventure code reading, with Don Woods
+
+`advent.w`'s copyright line reads **"Don Woods and Don Knuth"**. Put both names in the room:
+Woods narrates what the 1977 FORTRAN *did* and why; Knuth narrates why each section reads the
+way it *reads*. Author beside annotator, walking the same cave twice.
+
+The channel is real, not wishful: Woods saw Knuth at a SAIL reunion (~2025) — *"getting frail
+but is still plenty sharp"* — and Knuth once wrote to Woods about a hack he'd found in
+**INTERCAL's division routine** (2003, for TAOCP vol 4 credit; neither Woods nor Lyon could
+remember whose it was). Knuth engaged seriously with both of Woods's masterpieces.
+
+Wiring: [Don Woods room](../don-woods/) · [correspondence digest](../don-woods/sources/correspondence-digest.md) ·
+[don-woods-adventure seed](../../repo-shows/don-woods-adventure.yml) (dream ensemble)
+
 ## 1. Literate programming × Repo Show
 
 "Explain to humans what you want a computer to do." Facades, CARD/GLANCE/SKILL pyramid,
@@ -35,7 +49,7 @@ agents than dumpster-fire repositories? What must stay human-ordered?
 - TeX as a program meant to be read
 - Elegance / "Pulitzer for programs" half-joke
 - Pipe organ / Musings — only if *he* steers there
-- Don Woods collaboration note on Adventure copyright line
+- The 2003 INTERCAL division-routine letter (see hook 0.5)
 
 ## What we do **not** ask
 

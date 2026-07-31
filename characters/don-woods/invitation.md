@@ -1,8 +1,11 @@
 # Invitation — Don Woods
 
-**Status:** draft — not yet sent
+**Status:** SENT — 31 July 2026, via the long-running "THROW AXE AT DWARF" email thread
+(Don linked the [MOOLLM stamp](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/kitchen/matchbooks.yml#L76)
+— "Did I get this stamp right?" — and this invitation). Awaiting reply.
 **From:** Don Hopkins
-**Channel:** email (direct — former Sun colleagues)
+**Channel:** email (direct — former Sun colleagues; correspondents since a misdirected
+`:mail don` in 1986, see [correspondence-digest](sources/correspondence-digest.md))
 
 ---
 

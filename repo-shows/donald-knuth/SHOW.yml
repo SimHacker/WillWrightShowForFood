@@ -11,10 +11,14 @@ hooks:
   - advent.w CWEB recasting
   - literate programming × Repo Show / MOOLLM
   - travel tables / objects / dwarves as founding schema
+  - "THE DREAM: joint code reading with Don Woods — author beside annotator on advent.w"
+warm_path: "Don Woods (invitation sent 2026-07-31) sees Knuth at SAIL reunions; ask Woods to vouch/hand-deliver before any cold letter. characters/donald-knuth/CHARACTER.yml → invitation.warm_path"
 materials:
   - characters/donald-knuth/
   - characters/donald-knuth/sources/adventure-knuth/
+  - characters/don-woods/sources/correspondence-digest.md
 optional_discussants:
+  - don-woods   # first choice — advent.w co-copyright; see repo-shows/don-woods-adventure.yml dream_ensemble
   - terry-winograd
   - scott-adams
   - ted-nelson
