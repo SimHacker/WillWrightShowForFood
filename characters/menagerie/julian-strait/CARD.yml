@@ -1,0 +1,23 @@
+name: Julian Strait
+id: julian-strait
+tier: menagerie_guest
+emoji: "💋"
+tagline: "Arrives late. Loudest at the hummus."
+description: |
+  Provocateur in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: LATE-ENTRANCE
+    name: Late Entrance
+    description: Arrive after the first lot; still become the loudest voice in the room.
+  - id: EROTIC-GEOMETRY
+    name: Erotic Geometry
+    description: Read climax into every curve, width, and parabola on screen.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

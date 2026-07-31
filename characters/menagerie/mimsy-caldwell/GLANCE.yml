@@ -1,0 +1,11 @@
+name: Mimsy Caldwell
+id: mimsy-caldwell
+signifier: "🥂"
+tagline: "Aggressive restraint before the sentence ends."
+sniff: |
+  Chelsea gallerist in the Lower Chelsea Eight — buys the lot before anyone finishes describing it.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

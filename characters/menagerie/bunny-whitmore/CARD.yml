@@ -1,0 +1,23 @@
+name: Bunny Whitmore
+id: bunny-whitmore
+tier: menagerie_guest
+emoji: "🥦"
+tagline: "Are those broccoli? I'd live there."
+description: |
+  Benefactor in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: BROCCOLI-READ
+    name: Broccoli Read
+    description: See adorable creatures and edible architecture in any lot.
+  - id: FUND-ANYWAY
+    name: Fund Anyway
+    description: Approve the budget while misreading the art — board gravity as geology.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

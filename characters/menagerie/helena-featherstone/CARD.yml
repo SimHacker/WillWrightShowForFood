@@ -1,0 +1,23 @@
+name: Helena Featherstone
+id: helena-featherstone
+tier: menagerie_guest
+emoji: "🕯️"
+tagline: "Whisper until the room becomes a sermon."
+description: |
+  Board trustee in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: TRUSTEE-WHISPER
+    name: Trustee Whisper
+    description: Lower the volume until the opening becomes a chapel.
+  - id: CONFESSION-TUNNEL
+    name: Confession Tunnel
+    description: Read childhood into any tree, archive, or serialized structure.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

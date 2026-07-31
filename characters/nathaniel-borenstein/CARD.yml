@@ -1,0 +1,79 @@
+# CARD — Nathaniel S. Borenstein (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: nathaniel-borenstein
+  name: "Nathaniel S. Borenstein"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Nathaniel S. Borenstein"
+  title: "MIME · Andrew Message System · behavior on the wire"
+  rarity: rare
+  signifier: "✉️🎶"
+  flavor: "The first multimedia email sang — Telephone Chords, photo attached."
+
+abilities:
+  - id: MIME-EVERYTHING
+    name: "MIME Everything"
+    type: activated
+    mana: "{U}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: mimeEverything
+      signature: "mimeEverything(RFC 1341) → every attachment since"
+      score_when:
+        - trigger: audience_sees_format_the_world_abused
+          weight: 0.93
+    effect: "Walk MIME with Ned Freed — how plain text became the carrier for images, audio, and every attachment."
+    verifiable: "RFC 1341; CHARACTER.yml bio.summary"
+    combos_with: [BEHAVIOR-ON-THE-WIRE, ANDREW-REUNION]
+
+  - id: BEHAVIOR-ON-THE-WIRE
+    name: "Behavior on the Wire"
+    type: activated
+    mana: "{U}{G}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: behaviorOnTheWire
+      signature: "behaviorOnTheWire(ATOMICMAIL | Safe-Tcl) → programs inside email"
+      score_when:
+        - trigger: security_lessons_before_java_applets
+          weight: 0.9
+    effect: "Active mail before applets — send a program, not a data structure; Safe-Tcl security lessons Java had to relearn."
+    verifiable: "CHARACTER.yml show_relevance.hooks"
+    combos_with: [MIME-EVERYTHING, ANDREW-REUNION]
+
+  - id: ANDREW-REUNION
+    name: "Andrew Reunion"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+      - cohost_in: [james-gosling, david-rosenthal]
+    advertisement:
+      method: andrewReunion
+      signature: "andrewReunion(Borenstein + Gosling + Rosenthal) → CMU ITC message system meets window system"
+      score_when:
+        - trigger: shared_andrew_lineage_on_air
+          weight: 0.92
+    effect: "CMU ITC reunion beat — Andrew Message System beside the Andrew window system; programs-as-messages all the way down."
+    verifiable: "../james-gosling/sources/2026-07-31-linkedin-retirement-thread.md"
+    combos_with: [MIME-EVERYTHING, BEHAVIOR-ON-THE-WIRE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: GLANCE.md, why: "Quick sniff" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../james-gosling/, why: "Andrew / retirement-thread pairing" }

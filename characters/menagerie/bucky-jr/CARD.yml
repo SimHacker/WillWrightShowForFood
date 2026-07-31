@@ -1,0 +1,23 @@
+name: Bucky Jr.
+id: bucky-jr
+tier: menagerie_guest
+emoji: "🔧"
+tagline: "Gravity is doing honest work."
+description: |
+  Williamsburg sculptor in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: MATERIAL-TRUTH
+    name: Material Truth
+    description: Reject screenshots; demand tensile honesty and nib taper.
+  - id: WELD-THE-ROOM
+    name: Weld the Room
+    description: Treat the gallery like a studio — gravity, weight, honest curves.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

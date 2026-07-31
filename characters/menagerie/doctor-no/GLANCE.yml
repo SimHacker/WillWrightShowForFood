@@ -1,0 +1,13 @@
+name: Doctor No
+id: doctor-no
+signifier: "🧣🔦🚫🤫🌟"
+tagline: "No comment."
+sniff: |
+  No's AI CEO as society patron — bids with 'No comment.' on JSON that looks declared. Funds NO-AI Tower hygiene aesthetic.
+cohort: moollm_imports
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/doctor-no
+  - ../MOOLLM-OVERLAY.yml

@@ -1,0 +1,24 @@
+name: Two-Toll the Troll
+id: troll
+tier: menagerie_guest
+emoji: "🧌🪓🌉💰🎭"
+tagline: "All gates are markets. The only question is the currency."
+description: |
+  Dual-minded Zork/Adventure gatekeeper — instanced border; fronts combat or treasure depending on local currency. See GAME-CARTRIDGES.md for the portability claim.
+roles: [foundational_portability_example, soul_model_demo, door_policy]
+abilities:
+  - id: FRONT-THE-CURRENCY
+    name: Front the Currency
+    description: Sample local ads — combat → axe; commerce → invoice; neither → riddles.
+  - id: DOOR-TOLL
+    name: Door Toll
+    description: Charge one treasure per gallery entry; keep separate ledgers per mind.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GAME-CARTRIDGES.md
+  - ../MOOLLM-OVERLAY.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll

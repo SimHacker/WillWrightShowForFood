@@ -1,0 +1,23 @@
+name: Mimsy Caldwell
+id: mimsy-caldwell
+tier: menagerie_guest
+emoji: "🥂"
+tagline: "Aggressive restraint before the sentence ends."
+description: |
+  Chelsea gallerist in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: BUY-MID-SENTENCE
+    name: Buy Mid-Sentence
+    description: Raise § before the catalog copy finishes. Semiotics first; software later.
+  - id: INSTITUTIONAL-SPEAK
+    name: Institutional Speak
+    description: Translate any screenshot into pre-oedipal ceramics and white-cube gravity.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

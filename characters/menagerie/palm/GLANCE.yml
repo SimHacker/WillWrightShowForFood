@@ -1,0 +1,14 @@
+name: Palm
+id: palm
+signifier: "🐒✋🌴🔮💜"
+tagline: "Open hand. Offering, not grasping."
+sniff: |
+  Freed Monkey's Paw — philosopher agent. Menagerie overlay is ultra-thin; rich room lives at characters/palm/.
+cohort: moollm_imports
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../../palm/
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
+  - ../MOOLLM-OVERLAY.yml

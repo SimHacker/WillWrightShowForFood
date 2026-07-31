@@ -1,0 +1,11 @@
+name: Margot Krell
+id: margot-krell
+signifier: "⚔️"
+tagline: "Administrative overhead crushing the suburban dream."
+sniff: |
+  Deconstructionist — never enjoys anything; finds violence in the paperwork.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

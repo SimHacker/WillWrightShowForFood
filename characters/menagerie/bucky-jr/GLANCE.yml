@@ -1,0 +1,11 @@
+name: Bucky Jr.
+id: bucky-jr
+signifier: "🔧"
+tagline: "Gravity is doing honest work."
+sniff: |
+  Williamsburg sculptor — screenshots have no clay; the nib taper does not lie.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

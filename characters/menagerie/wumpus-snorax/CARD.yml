@@ -1,0 +1,24 @@
+name: Snorax the Patient
+id: wumpus-snorax
+tier: menagerie_guest
+emoji: "👃🦏💤🏹💀🎲"
+tagline: "Patience is not low energy. Patience is POWER."
+description: |
+  Hunt the Wumpus incarnate — instanced-beast cartridge that carries GAME.yml, topology, and BASIC provenance. See GAME-CARTRIDGES.md for the portability claim.
+roles: [foundational_portability_example, basic_era_royalty, gallery_sleeper]
+abilities:
+  - id: CARRY-THE-GAME
+    name: Carry the Game
+    description: Ship Hunt the Wumpus inside the character — rules, topology, BASIC luggage.
+  - id: PATIENT-SLEEP
+    name: Patient Sleep
+    description: Sleep through the § auction; wake only when a room number is whispered.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GAME-CARTRIDGES.md
+  - ../MOOLLM-OVERLAY.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax

@@ -1,0 +1,23 @@
+name: Gregory Kwan
+id: gregory-kwan
+tier: menagerie_guest
+emoji: "📈"
+tagline: "Source node, sink node, one conduit."
+description: |
+  Hedge-fund collector in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: YIELD-CURVE-READ
+    name: Yield-Curve Read
+    description: Misread any diagram as tranches, gamma, or short/long positions.
+  - id: LIQUIDITY-BID
+    name: Liquidity Bid
+    description: Bid § like closing a conduit — source node to sink node.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

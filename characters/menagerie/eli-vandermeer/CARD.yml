@@ -1,0 +1,23 @@
+name: Prof. Eli Vandermeer
+id: eli-vandermeer
+tier: menagerie_guest
+emoji: "📚"
+tagline: "Scotland invented blockchain. I can prove it."
+description: |
+  Adjunct critical theory in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: GUEST-BOOK-PUBLISH
+    name: Guest-Book Publish
+    description: Drop a footnote-dense paragraph in the gallery guest book as if it were a journal.
+  - id: SCOTLAND-BLOCKCHAIN
+    name: Scotland Invented Blockchain
+    description: Prove anything with a misquoted Benjamin and a tartan scarf.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

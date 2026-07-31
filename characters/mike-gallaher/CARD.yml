@@ -1,0 +1,77 @@
+# CARD — Mike Gallaher (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: mike-gallaher
+  name: "Mike Gallaher"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Mike Gallaher"
+  title: "Pie menus · Software Hoarder Emacs · Stories all the way down"
+  rarity: rare
+  signifier: "🥧🧙‍♂️📖"
+  flavor: "No single story is true — the ensemble approximates actionable wisdom."
+
+abilities:
+  - id: PIE-MENU-ORIGIN
+    name: "Pie Menu Origin"
+    type: activated
+    mana: "{R}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: pieMenuOrigin
+      signature: "pieMenuOrigin(1986 wedding + theta menus) → radial lineage to The Sims"
+      score_when:
+        - trigger: both_co_discoverers_on_stage
+          weight: 0.95
+    effect: "Tell the 1986 origin with Don — angle menus, Mitch Bradley's name, path through NeWS to SimCity and The Sims."
+    verifiable: "../don-hopkins/pie-menus-chi-88-and-beyond.md"
+    combos_with: [SOFTWARE-HOARDER-EMACS]
+
+  - id: SOFTWARE-HOARDER-EMACS
+    name: "Software Hoarder Emacs"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: softwareHoarder
+      signature: "softwareHoarder(unipress | nemacs) → RMS epithet worn as trophy"
+      score_when:
+        - trigger: free_software_culture_war_with_affection
+          weight: 0.88
+    effect: "UniPress Emacs and NeMACS from the seat of the epithet — commercial Gosling Emacs, NeWS display driver, pie menus + tab windows."
+    verifiable: "CHARACTER.yml bio.unipress / bio.nemacs"
+    combos_with: [PIE-MENU-ORIGIN, LIVE-COMMITTEE]
+
+  - id: LIVE-COMMITTEE
+    name: "Live Adversarial Committee"
+    type: activated
+    mana: "{W}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: liveCommittee
+      signature: "liveCommittee(Maya|Frankie|Joe|Vic|Tammy) → scored ensemble decision"
+      score_when:
+        - trigger: methodology_demonstrates_itself_on_air
+          weight: 0.9
+    effect: "Run Stories-All-the-Way-Down live — fixed personas under Robert's Rules; audience seeds via TicketPR."
+    verifiable: "https://github.com/SimHacker/moollm/blob/main/designs/mike-gallaher-ideas.md"
+    combos_with: [SOFTWARE-HOARDER-EMACS]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Pie menu receipt trail" }

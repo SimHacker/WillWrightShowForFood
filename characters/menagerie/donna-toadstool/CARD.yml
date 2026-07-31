@@ -1,0 +1,24 @@
+name: Donna Toadstool
+id: donna-toadstool
+tier: menagerie_guest
+emoji: "🍄👸🍊💅🎭"
+tagline: "Stormy Was Right."
+description: |
+  Drag king performance disruptor — Trump × Jiminy Glick × Divine. Photobombs every lot; her description exceeds the art. Thin overlay — canon upstream; local `wwsff_overlay` in CHARACTER.yml.
+roles: [performance_artist, gallery_opening_disruptor, security_consultant_gag]
+abilities:
+  - id: PHOTO-BOMB-LOT
+    name: Photobomb the Lot
+    description: Arrive mid-auction so the room describes Donna instead of the art.
+  - id: ORANGE-RAISE
+    name: Orange Raise
+    description: Bid on anything orange, mushroom-shaped, or ego-adjacent.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../MOOLLM-OVERLAY.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/donna-toadstool

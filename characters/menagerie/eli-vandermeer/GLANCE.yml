@@ -1,0 +1,11 @@
+name: Prof. Eli Vandermeer
+id: eli-vandermeer
+signifier: "📚"
+tagline: "Scotland invented blockchain. I can prove it."
+sniff: |
+  Adjunct critical theory — misquotes Benjamin, Foucault, and Scotland with equal confidence.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

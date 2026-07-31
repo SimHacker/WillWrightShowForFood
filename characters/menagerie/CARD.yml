@@ -1,0 +1,44 @@
+# Menagerie — room card
+# Aligns with GLANCE.yml · INDEX.yml
+
+name: Menagerie
+id: menagerie
+tier: character_room
+emoji: "🎪"
+tagline: "Pee-wee's Playhouse virtual guests — one soul, many roles"
+description: |
+  Virtual guests who play many roles: gallery patrons today, balcony hecklers tomorrow.
+  Not a single show's cast list. Cohorts: Lower Chelsea Eight (JSONsters misreaders),
+  MOOLLM imports (Donna, Doctor No, Palm + game-cartridge trio), optional Glick Gallery foils.
+  Canonical souls here; TicketPR forks under repo-shows/*/audience/.
+roles:
+  - pee_wee_playhouse_cast
+  - gallery_opening_guests
+  - portable_npc_showcase
+abilities:
+  - id: CAST-THE-OPENING
+    name: Cast the Opening
+    description: Pull Lower Chelsea Eight + imports + sims + robots from GUEST-ROSTER.yml.
+  - id: OVERLAY-UPSTREAM
+    name: Overlay Upstream
+    description: Point at MOOLLM canon; accumulate wwsff_overlay locally (MOOLLM-OVERLAY.yml).
+  - id: PORT-THE-CARTRIDGE
+    name: Port the Cartridge
+    description: Showcase grue / Snorax / Two-Toll as portable NPC archetypes (GAME-CARTRIDGES.md).
+files:
+  - GLANCE.yml
+  - INDEX.yml
+  - GUEST-ROSTER.yml
+  - MOOLLM-OVERLAY.yml
+  - GAME-CARTRIDGES.md
+  - README.md
+cohorts:
+  - lower_chelsea_eight
+  - moollm_imports
+  - game_cartridge
+see_also:
+  - GLANCE.yml
+  - INDEX.yml
+  - GUEST-ROSTER.yml
+  - ../sims/
+  - ../robots/

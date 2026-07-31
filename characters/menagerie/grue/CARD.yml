@@ -1,0 +1,24 @@
+name: The Grue
+id: grue
+tier: menagerie_guest
+emoji: "🌑👁️‍🗨️💀🦷👤🎲"
+tagline: "It is pitch black. You are likely to be eaten."
+description: |
+  Zork's darkness as ambient-field game cartridge — attaches wherever lighting is none. Foundational portable-NPC example. See GAME-CARTRIDGES.md for the portability claim.
+roles: [foundational_portability_example, lighting_hazard, text_adventure_royalty]
+abilities:
+  - id: AMBIENT-DARK
+    name: Ambient Dark
+    description: Bind to any unlit room — install nothing; if darkness exists, the grue is already there.
+  - id: THREE-TURN-DREAD
+    name: Three-Turn Dread
+    description: Escalate 'you are likely to be eaten' until someone lights a lamp.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GAME-CARTRIDGES.md
+  - ../MOOLLM-OVERLAY.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue

@@ -1,0 +1,24 @@
+name: Doctor No
+id: doctor-no
+tier: menagerie_guest
+emoji: "🧣🔦🚫🤫🌟"
+tagline: "No comment."
+description: |
+  No's AI CEO as society patron — bids with 'No comment.' on JSON that looks declared. Funds NO-AI Tower hygiene aesthetic. Thin overlay — canon upstream; local `wwsff_overlay` in CHARACTER.yml.
+roles: [society_patron, no_ai_philanthropist, gallery_board_figure]
+abilities:
+  - id: NO-COMMENT-BID
+    name: No Comment Bid
+    description: Raise § with 'No comment.' — win lots that look like compliance.
+  - id: DECLARED-JSON
+    name: Declared JSON
+    description: Misread art as policy document — highest compliment.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../MOOLLM-OVERLAY.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/doctor-no

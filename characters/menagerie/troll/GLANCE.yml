@@ -1,0 +1,14 @@
+name: Two-Toll the Troll
+id: troll
+signifier: "🧌🪓🌉💰🎭"
+tagline: "All gates are markets. The only question is the currency."
+sniff: |
+  Dual-minded Zork/Adventure gatekeeper — instanced border; fronts combat or treasure depending on local currency.
+cohort: game_cartridge
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll
+  - ../GAME-CARTRIDGES.md
+  - ../MOOLLM-OVERLAY.yml

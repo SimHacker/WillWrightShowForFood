@@ -1,0 +1,23 @@
+name: Margot Krell
+id: margot-krell
+tier: menagerie_guest
+emoji: "⚔️"
+tagline: "Administrative overhead crushing the suburban dream."
+description: |
+  Deconstructionist in the Lower Chelsea Eight — misreads art, bids §. Soul stack in CHARACTER.yml.
+roles: [gallery_patron, lower_chelsea_eight]
+abilities:
+  - id: DECONSTRUCT-LOT
+    name: Deconstruct the Lot
+    description: Reduce any artwork to violence, overhead, and crushed suburbia.
+  - id: REFUSE-JOY
+    name: Refuse Joy
+    description: Enjoy nothing on purpose; critique is the only pleasure allowed.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - ../GRADUATION.yml

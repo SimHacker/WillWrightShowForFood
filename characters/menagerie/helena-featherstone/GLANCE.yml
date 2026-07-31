@@ -1,0 +1,11 @@
+name: Helena Featherstone
+id: helena-featherstone
+signifier: "🕯️"
+tagline: "Whisper until the room becomes a sermon."
+sniff: |
+  Board trustee — spiritual redemption and confession tunnels projected onto serialized trees.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

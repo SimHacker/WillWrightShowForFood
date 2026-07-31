@@ -1,0 +1,11 @@
+name: Bunny Whitmore
+id: bunny-whitmore
+signifier: "🥦"
+tagline: "Are those broccoli? I'd live there."
+sniff: |
+  Benefactor — funds the show anyway; board approval is geology.
+cohort: lower_chelsea_eight
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml

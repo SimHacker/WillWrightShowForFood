@@ -1,0 +1,14 @@
+name: Snorax the Patient
+id: wumpus-snorax
+signifier: "👃🦏💤🏹💀🎲"
+tagline: "Patience is not low energy. Patience is POWER."
+sniff: |
+  Hunt the Wumpus incarnate — instanced-beast cartridge that carries GAME.yml, topology, and BASIC provenance.
+cohort: game_cartridge
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../INDEX.yml
+  - ../GUEST-ROSTER.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax
+  - ../GAME-CARTRIDGES.md
+  - ../MOOLLM-OVERLAY.yml
