@@ -27,7 +27,7 @@ Invitation portrayal — **not** James Gosling. [Standards](../../schemas/portra
 | **Invitation** | [invitation.md](invitation.md) |
 | **Show prep** | [ideas.md](ideas.md) · [window-systems-lineage.md](window-systems-lineage.md) |
 | **Media** | [media/README.md](media/README.md) |
-| **Sources** | [sources/2026-07-31-linkedin-retirement-thread.md](sources/2026-07-31-linkedin-retirement-thread.md) — the lander.ps comment thread |
+| **Sources** | [sources/2026-07-31-linkedin-retirement-thread.md](sources/2026-07-31-linkedin-retirement-thread.md) — the lander.ps comment thread · [sources/2024-07-05-reddit-retirement-thread.md](sources/2024-07-05-reddit-retirement-thread.md) — r/programming reception (Corretto, Greengrass, gosmacs love) |
 | **Show seed** | [repo-shows/james-gosling/](../../repo-shows/james-gosling/README.md) |
 
 ---

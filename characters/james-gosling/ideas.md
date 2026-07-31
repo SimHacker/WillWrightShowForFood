@@ -63,6 +63,20 @@ Contrast: [`../heinz-lemke/`](../heinz-lemke/README.md) PDP-7/Titan PIXIE satell
 ### 4. NeWS reunion (optional group)
 Rosenthal (Andrew + ICCCM), van Hoff (HyperLook), Densmore — Alvey papers as shared origin story.
 
+### 5. Retirement fun — the side-project list
+His retirement post promised "a long list of side projects to plough through." The lander.ps
+dare ([`sources/2026-07-31-linkedin-retirement-thread.md`](sources/2026-07-31-linkedin-retirement-thread.md))
+volunteers to be on it. Warm-up material from the r/programming reception
+([`sources/2024-07-05-reddit-retirement-thread.md`](sources/2024-07-05-reddit-retirement-thread.md)):
+
+- **Gosling Emacs outlived everything** — top comment was about Emacs, not Java; people still
+  load gosmacs keybindings 40 years on; the redisplay algorithm is its own rabbit hole.
+- **Full circle at Amazon** — Corretto (post-Oracle-license OpenJDK) and AWS IoT Greengrass;
+  Java began as Oak for embedded devices, ended shepherding embedded fleets.
+- **Sea robots** — Liquid Robotics Wave Gliders on JRE 7/8 ARM, soft float to hard float.
+- **The 3-month Google stint** — thought the monorepo was doomed, wanted Git in 2011. Which
+  prognostications panned out? (Ask, don't ambush.)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

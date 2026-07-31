@@ -71,3 +71,6 @@ Alan Kay ("Keep on keepin' on!"), Ted Selker and Eric Bowman among the reactions
   [`../../nathaniel-borenstein/`](../../nathaniel-borenstein/) — the Andrew/CMU reunion
   angle plus "behavior on the wire" (ATOMICMAIL/Safe-Tcl vs NeWS vs Java).
 - Follow-up: Don sends both of them fresh personal invitations incorporating these asks.
+- Reception context: the r/programming thread on the same announcement is archived at
+  [`2024-07-05-reddit-retirement-thread.md`](2024-07-05-reddit-retirement-thread.md)
+  (Corretto, Greengrass, the Google stint, the Gosling Emacs love).
