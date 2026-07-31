@@ -20,15 +20,16 @@ public_outreach_policy:
   see_also: ../process/maxis-history-collaborators.yml
 
 snapshot:
-  updated: "2026-07-31"
-  note: "Queue rebuilt after the Self-reunion + Laszlo-reunion outreach sprint. Waves below; INDEX.yml is truth for per-guest status."
+  updated: "2026-07-31 (pm)"
+  note: |
+    Queue rebuilt after the Self-reunion + Laszlo-reunion outreach sprint, then updated
+    same day: SEVEN INVITES OUT (Grig, Temkin, Ungar, Urs, Amanda, Randall, Woods).
+    Kay invited and considering. INDEX.yml is truth for per-guest status.
 
 # in_flight: sent/engaged — tend replies, don't re-ping. Do the follow-through work these unlock.
 in_flight:
   - { id: will-wright, status: ACCEPTED, next: "schedule 1-on-1 video chats; repo is the production" }
   - { id: jeff-adkins, status: accepted, next: "SimObliterator collab cadence — low-pressure, time-shifted" }
-  - { id: heinz-lemke, status: engaged_delivering, next: "receive memoir installments + 5000-word listing; CARS 2027 thread" }
-  - { id: craig-latta, status: engaged, next: "practice recorded Jul 2026; Vanessa memorial + OL reunion slot; unlocks alan-kay + dan-ingalls sends" }
   - { id: david-rosenthal, status: interested_async, next: "grandparent duty until ~Aug 17 — resume then" }
   - { id: lars-brinkhoff, status: yes_later, next: "Swedish July vacation over ~Aug — re-ping w/ Cherryhomes pairing" }
   - { id: scott-draves, status: in_conversation }
@@ -37,18 +38,24 @@ in_flight:
   - { id: ben-shneiderman, status: sent_2026-07, next: "gentle follow-up if quiet by mid-Aug" }
   - { id: coco-conn, status: sent_2026-07-06, next: "await tape catalog + clip rights" }
   - { id: david-levitt, status: invited_by_phone, next: "links sent — nudge on Rebounce/music-and-theory pick" }
-  - { id: david-temkin, status: hot_thread, next: "SEND email draft (attachments/david-temkin/2026-07-31) — he gave temkin@gmail.com and asked to talk; formal invite rides the thread" }
-  - { id: david-ungar, status: hot_thread, next: "SEND email reply F2 + public Korz addendum C2 (attachments/david-ungar/2026-07-31) — he's active on LinkedIn now" }
-  - { id: grig-bilham, status: hot_thread, next: "ACCEPT connection request, SEND LinkedIn reply (attachments/grig-bilham/2026-07-31) — he asked to sync up, gave email" }
+  - { id: david-temkin, status: sent_2026-07-31, next: "await reply; propose Zoom + reunion scheduling when he answers" }
+  - { id: david-ungar, status: sent_2026-07-31, next: "await reply; if yes, coordinate trio timing w/ Urs + Randall" }
+  - { id: grig-bilham, status: sent_2026-07-31, next: "await reply; move to grigbilham@gmail.com for details" }
+  - { id: urs-hoelzle, status: sent_2026-07-31, next: "await connect-accept + DM reply" }
+  - { id: amanda-walker, status: sent_2026-07-31, next: "await reply; Galaxy/PostNews show" }
+  - { id: randall-smith, status: sent_2026-07-31, next: "await reply; trio completes if Ungar/Urs land" }
+  - { id: alan-kay, status: invited_considering, next: "give him room; Vanessa-memorial framing already resonates; no nudge until Craig session scheduled" }
+  - { id: keez-duyves, status: contact_attempted_no_reply, next: "retry via alternate channel or in person — Amsterdam; NDSM studio visit path" }
+  - { id: ellpeck, status: engaged_positive, next: "UPDATE invitation w/ Soul City + queer links (im-queer-therefore-i-sim, did-the-sims-make-you-gay), then send official invite" }
+  - { id: alexander-avila, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; deeper material in reserve until trust" }
+  - { id: ben-cerveny, status: in_the_loop, next: "reviewed + approved Don's Heinz email; formal invite when ben-cerveny.yml seed ripens" }
+  - { id: heinz-lemke, status: engaged_delivering, next: "SEND the Ben-reviewed email TODAY; then receive memoir installments + listing" }
+  - { id: craig-latta, status: engaged, next: "MEET IN PERSON (Amsterdam) — schedule Vanessa memorial session + OL reunion slot; unlocks Kay + Ingalls momentum" }
 
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.
 wave_1_send_now:
   - { id: sam-arbesman, why: "Email drafted (attachments/sam-arbesman/2026-07-31) — warm thread since 2024; Maxis Labs 2 co-architect ask; solo-video default; Reese triangle footnote", channel: email }
   - { id: sarah-allen, why: "Email drafted (attachments/sarah-allen/2026-07-31) — Kaleida opener + 2006 receipts; OL reunion", channel: "sarah@ultrasaurus.com" }
-  - { id: urs-hoelzle, why: "LinkedIn DM + 300-char connect note drafted — pair/trio w/ Ungar; ride the Self-manual thread while fresh", channel: LinkedIn }
-  - { id: amanda-walker, why: "LinkedIn DM drafted — Galaxy/PostNews show; her thread sparked the whole Self reunion", channel: LinkedIn }
-  - { id: randall-smith, why: "LinkedIn DM drafted — completes the Ungar/Urs/Randall trio", channel: "LinkedIn or via Ungar" }
-  - { id: keez-duyves, why: "★ DEFINITE — Amsterdam friend; Die Space × Will; Messenger", channel: Messenger }
   - { id: mike-gallaher, why: "Pie menu co-discoverer; memory-jogging invite drafted; Don sends personally" }
   - { id: jared-tarbell, why: "Warm since 2005; invite ready; Laurie + Will included" }
   - { id: edd-coates, why: "★ Friend; audience README ready; email" }
@@ -61,7 +68,7 @@ wave_1_send_now:
   - { id: reese-jones, why: "Warm; Sam/Will/Chaim stack" }
   - { id: gary-drescher, why: "★ interview planned — Leela adviser; Made-Up Minds" }
   - { id: antoni-sawicki, why: "Warm; interview planned; ttycity emoji UI" }
-  - { id: ellpeck, why: "Warm — directory already shared + excited; formalize the invite" }
+  - { id: steve-wozniak, why: "NEW WARM PATH — Will met Woz recently, gave him the zillion-Zimbabwe-dollar bill card; ask Will to open the door", channel: "via Will Wright", gate: "Will intro" }
 
 wave_2_send_ready_batches:
   note: "Polished invitations, colder channels — send as themed batches so replies cluster into shows."
