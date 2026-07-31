@@ -43,6 +43,7 @@ in_flight:
 
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.
 wave_1_send_now:
+  - { id: sam-arbesman, why: "Email drafted (attachments/sam-arbesman/2026-07-31) — warm thread since 2024; Maxis Labs 2 co-architect ask; solo-video default; Reese triangle footnote", channel: email }
   - { id: sarah-allen, why: "Email drafted (attachments/sarah-allen/2026-07-31) — Kaleida opener + 2006 receipts; OL reunion", channel: "sarah@ultrasaurus.com" }
   - { id: urs-hoelzle, why: "LinkedIn DM + 300-char connect note drafted — pair/trio w/ Ungar; ride the Self-manual thread while fresh", channel: LinkedIn }
   - { id: amanda-walker, why: "LinkedIn DM drafted — Galaxy/PostNews show; her thread sparked the whole Self reunion", channel: LinkedIn }

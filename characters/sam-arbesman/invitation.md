@@ -50,6 +50,10 @@ Topics if any appeal:
 
 Reply with corrections on the write-up, whether public is OK, yes/maybe/not-now on a show, what you'd steer toward, and any people you recommend we invite or discuss.
 
+Small-world footnote: Reese Jones — who filmed your 2016 *Overcomplicated* launch — is also on
+my invite list (old friend; BMUG/Farallon; SFI trustee; agent-based-modeling talks). The
+Sam × Reese × Will × Chaim stack practically assembles itself.
+
 **Don Hopkins**
 
 [README.md](README.md) · [ideas.md](ideas.md)
