@@ -56,9 +56,9 @@ PIXIE correspondence — **not** from their compiler. The chronology worth keepi
 **Editorial note (Don Hopkins's assessment):** a one-way information flow — material went in,
 nothing came back out, not even to the person who made the introduction. The working contrast
 for the show: eighteen years of announced intentions versus decades of shipped, shared,
-documented radial-menu work (pie menus in HyperTIES, SimCity, NeWS, ActiveX, JavaScript —
-papers, source code, and studies, all public). Buxton's archive digging deserves credit; the
-withholding afterward is the point of criticism.
+documented radial-menu work (pie menus in HyperTIES, SimCity, **The Sims** — which shipped
+many — NeWS, ActiveX, JavaScript — papers, source code, and studies, all public). Buxton's
+archive digging deserves credit; the withholding afterward is the point of criticism.
 
 ## Wired into
 

@@ -161,8 +161,9 @@ What actually happened:
 he put the person asking about radial-menu history in touch with Buxton in 2008; Buxton
 gathered the Wiseman material, wrote up plans, and did not share the findings or the follow-up
 back. Meanwhile Don spent the intervening decades *building* and *publishing* radial menus —
-pie menus in HyperTIES, SimCity, NeWS, ActiveX, JavaScript, with papers, source code, and
-usability studies freely shared. The contrast between announced intentions and shipped,
+pie menus in HyperTIES, SimCity, **The Sims** (many shipped), NeWS, ActiveX, JavaScript,
+with papers, source code, and usability studies freely shared. The contrast between
+announced intentions and shipped,
 shared work is a running theme of the PIXIE restoration story — which is itself being done in
 the open, in this repo. Fuller context:
 [`2008-bill-buxton-pixie-memory-lane.md`](../2008-bill-buxton-pixie-memory-lane.md) ·
