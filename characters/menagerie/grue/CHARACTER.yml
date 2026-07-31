@@ -1,0 +1,102 @@
+# The Grue — menagerie overlay (the darkness that IS the game)
+# MOOLLM soul: fictional/grue/ — ambient-field portability archetype
+
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/fictional/grue
+  character: CHARACTER.yml
+  import_mode: overlay
+
+inherits:
+  moollm_skills: [fictional, mythic, animal, game]
+  overlay_protocol: ../MOOLLM-OVERLAY.yml
+
+ontology:
+  tags: [menagerie_guest, fictional, moollm_import, monster, game_incarnate, portable_npc]
+  species: grue
+  origin: zork_1980
+  nature: darkness_elemental_game_incarnate
+
+character:
+  id: grue
+  name: The Grue
+  type: [menagerie_guest, monster, game, elemental]
+  real_being: false
+  signifier: "🌑👁️‍🗨️💀🦷👤🎲"
+  status: reified
+  home: characters/menagerie/grue/
+  pronouns: it/they
+
+  tagline: "It is pitch black. You are likely to be eaten."
+
+  description: |
+    Zork's primordial darkness (Infocom, 1980) — the monster Dave Lebling
+    engineered backward from a mechanic ("why does the dark kill you?").
+    The grue IS the game "Don't Go In The Dark": three-turn countdown,
+    escalating dread, teeth. It has no instances because it needs none —
+    it travels by predicate binding, attaching to any room where
+    lighting is none and the lamp is out. Install nothing; if your
+    world has darkness, the grue is already in it.
+
+  moollm_canon_summary:
+    game: "Don't Go In The Dark — countdown in darkness, light repels, being SEEN repels more"
+    portability_archetype: "ambient field — pattern-matches world properties instead of copying files"
+    treaty: "won't enter the wumpus's lair (too smelly); the wumpus ignores it (can't eat what isn't there)"
+    fears: "Room-H — The Thing That Watches. The grue cannot tolerate being SEEN."
+
+  # SIMS 1 — summarized from canon; full sheet upstream
+  sims:
+    traits:
+      neat: 0
+      outgoing: 0
+      active: 7
+      playful: 0
+      nice: 0
+      generous: 0
+    skills:
+      logic: 5
+      body: 10
+    identity:
+      age: elder
+      gender: null
+
+  mind_mirror:
+    calm: 7
+    cautious: 2
+    hostile: 7
+    confident: 7
+    forceful: 6
+    practical: 7
+    inhibited: 7
+    dominant: 7
+    suspicious: 7
+
+wwsff_overlay:
+  roles:
+    - foundational_portability_example    # ambient-field archetype in the game-cartridge story
+    - lighting_hazard                     # any show segment that dims the lights is legally a grue segment
+    - text_adventure_royalty              # Zork panel material: Lebling, Blank, Infocom lineage
+  gallery_openings:
+    beat: "Nobody has seen it attend. The gallery lights flickered twice during the § auction. Two hors d'oeuvres trays unaccounted for."
+    constraint: "appears only in unlit rooms; the AV booth keeps a spare lamp for exactly this reason"
+  show_hooks:
+    - "Don Woods episode: Adventure's darkness ('You may fall into a pit or step on a grue' descends from HIS pits) vs. Zork's grue — two answers to 'why does the dark kill you?'"
+    - "Scott Adams episode: two-word-parser era hazards — how much dread fits in 16K?"
+    - "Game-cartridge segment: the grue as proof you can port a MECHANIC as a character — see characters/menagerie/GAME-CARTRIDGES.md"
+
+relationships:
+  wumpus-snorax:
+    type: parallel_predator
+    narrative: "Same maze, parallel games, standing treaty. The wumpus has a name and can be killed. The grue needs neither."
+  troll:
+    type: professional_respect
+    narrative: "The troll relights his gate torch promptly. The grue appreciates a professional."
+  palm:
+    type: fascination
+    narrative: "Palm asked it what darkness tastes like. It has not answered. Palm is patient. So is it."
+
+see_also:
+  - ../MOOLLM-OVERLAY.yml
+  - ../GAME-CARTRIDGES.md
+  - ../INDEX.yml

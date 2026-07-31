@@ -247,6 +247,15 @@ without graphics.
 **Beat:** Multi-user navigable worlds — invite Bartle as future guest or cite MUD lineage; Scott's
 single-player engine vs. Bartle's multi-player world.
 
+### X5. Game cartridges — porting NPCs between worlds 🎙️
+**Beat:** Scott shipped whole adventures as data on cassette — the original portable game cartridge.
+The menagerie now holds the LLM-era version: [the grue](../menagerie/grue/) (ambient field),
+[Snorax the wumpus](../menagerie/wumpus-snorax/) (instanced beast carrying Yob's complete 1973
+rules), and [Two-Toll the Troll](../menagerie/troll/) (one soul, two minds — the Zork AND Adventure
+trolls, fronting per world). Segment: could a Scott Adams NPC — the bear from *Adventureland*? —
+join them as a self-contained cartridge? His VERB NOUN discipline is the tightest port contract
+ever shipped. ([GAME-CARTRIDGES.md](../menagerie/GAME-CARTRIDGES.md))
+
 ---
 
 ## Episode shapes (pick a format)

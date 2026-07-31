@@ -15,7 +15,8 @@ philosophy: |
   The Lower Chelsea Eight are one cohort (JSONsters gallery misreaders). Bella, Mortimer, and the
   Sad Clown live in characters/sims/. Slats and the Ultimate Machine live in characters/robots/.
   MOOLLM imports (Donna Toadstool, Doctor No, Palm) overlay upstream souls — see MOOLLM-OVERLAY.yml.
-  Gallery openings pull from all rooms — see GUEST-ROSTER.yml.
+  The game-cartridge trio (grue, Snorax, Two-Toll the Troll) are foundational examples of porting
+  NPCs between games — see GAME-CARTRIDGES.md. Gallery openings pull from all rooms — see GUEST-ROSTER.yml.
 
 soul_stack:
   per_character: CHARACTER.yml
@@ -50,6 +51,9 @@ cohorts:
       - { slug: donna-toadstool, signifier: "🍄👸🍊💅🎭", role: "Mushroom Queen — performance disruptor" }
       - { slug: doctor-no, signifier: "🧣🔦🚫🤫🌟", role: "No's AI CEO — society patron, NO-AI Tower" }
       - { slug: palm, signifier: "🐒✋🌴🔮💜", role: "Freed Monkey's Paw — philosopher agent" }
+      - { slug: grue, signifier: "🌑👁️‍🗨️💀🦷👤🎲", role: "Zork's darkness — ambient-field game cartridge" }
+      - { slug: wumpus-snorax, signifier: "👃🦏💤🏹💀🎲", role: "Hunt the Wumpus incarnate — instanced-beast game cartridge" }
+      - { slug: troll, signifier: "🧌🪓🌉💰🎭", role: "Two-Toll — dual-minded Zork/Adventure gatekeeper, instanced border" }
 
   glick_gallery:
     id: glick-gallery

@@ -1,0 +1,104 @@
+# Snorax the Patient — menagerie overlay (the wumpus who IS Hunt the Wumpus)
+# MOOLLM soul: fictional/wumpus-snorax/ — instanced-beast portability archetype
+
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/fictional/wumpus-snorax
+  character: CHARACTER.yml
+  import_mode: overlay
+
+inherits:
+  moollm_skills: [fictional, mythic, animal, game]
+  overlay_protocol: ../MOOLLM-OVERLAY.yml
+
+ontology:
+  tags: [menagerie_guest, fictional, moollm_import, monster, game_incarnate, portable_npc]
+  species: wumpus
+  origin: hunt_the_wumpus_1973
+  nature: instanced_beast_game_cartridge
+
+character:
+  id: wumpus-snorax
+  name: Snorax the Patient
+  type: [menagerie_guest, monster, game, cartridge]
+  real_being: false
+  signifier: "👃🦏💤🏹💀🎲"
+  status: reified
+  home: characters/menagerie/wumpus-snorax/
+  pronouns: he/him
+
+  tagline: "Patience is not low energy. Patience is POWER."
+
+  description: |
+    Gregory Yob's 1973 wumpus, incarnated. Snorax doesn't play Hunt the
+    Wumpus — he CARRIES it. His MOOLLM directory is a complete game
+    cartridge: the soul (CHARACTER.yml), the complete 1973 rules plus
+    extensions (GAME.yml), the canonical dodecahedron topology, the
+    original BASIC source as provenance in the luggage, and the hazards
+    factored into plugin parts (superbats, bottomless pit) that other
+    games adopt a la carte. Sucker feet. Immune to pits. Smells like
+    wet dog and regret. Sleeps until you make it a mistake.
+
+  moollm_canon_summary:
+    game: "Hunt the Wumpus — 5 crooked arrows, adjacency warnings ('I SMELL A WUMPUS!'), wake-on-disturb"
+    portability_archetype: "instanced beast — prototype immutable and shared; each lair grows a save file"
+    port_contract: "any room network with defined adjacency, 7+ rooms, one safe start — meet it and the game runs in your world"
+    provenance: "wumpus-basic-source.md — the original BASIC travels with him"
+    crossover_observed: "his superbats once dropped Sir Reginald into the grue's jaws — a 1973 hazard feeding a 1980 monster; nobody wrote that, the plugins composed it"
+
+  # SIMS 1 — summarized from canon; full sheet upstream
+  sims:
+    traits:
+      neat: 1
+      outgoing: 2
+      active: 2
+      playful: 4
+      nice: 3
+      generous: 1
+    skills:
+      logic: 6
+      body: 9
+    identity:
+      age: elder
+      gender: male
+
+  mind_mirror:
+    calm: 9
+    cautious: 6
+    hostile: 5
+    confident: 8
+    forceful: 5
+    practical: 7
+    inhibited: 4
+    dominant: 6
+    suspicious: 5
+
+wwsff_overlay:
+  roles:
+    - foundational_portability_example    # instanced-beast archetype; the self-carrying game cartridge
+    - basic_era_royalty                   # 1973, People's Computer Company lineage, teletype gaming
+    - gallery_sleeper                     # attends everything, sleeps through most of it
+  gallery_openings:
+    beat: "Slept through the entire § auction in the corner. Woke once, when someone whispered a room number. Bid on nothing. Missed nothing."
+    warning: "guests one room away report a faint smell"
+  show_hooks:
+    - "Gregory Yob lineage: Hunt the Wumpus as the first ported NPC — every BASIC book carried him like a cartridge"
+    - "Don Woods episode: 1973 wumpus vs 1977 cave — hazard design before graphics; his superbats and pits vs Woods's dwarves and pirate"
+    - "Game-cartridge segment: GAME.yml as the whole game riding inside the character — see characters/menagerie/GAME-CARTRIDGES.md"
+
+relationships:
+  grue:
+    type: parallel_predator
+    narrative: "Standing treaty: the grue stays out of the lair (too smelly); Snorax ignores the grue (can't eat what isn't there)."
+  troll:
+    type: fellow_franchisee
+    narrative: "Both instanced. They compare save files. Snorax thinks a toll booth is a lair with extra steps. The troll disagrees, patiently. Snorax respects patience."
+  slats:
+    type: incomprehension
+    narrative: "The robot never sleeps and never stops talking. Snorax has slept through four of his sets. Slats counts him as a fan."
+
+see_also:
+  - ../MOOLLM-OVERLAY.yml
+  - ../GAME-CARTRIDGES.md
+  - ../INDEX.yml

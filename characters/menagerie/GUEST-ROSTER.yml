@@ -32,6 +32,9 @@ gallery_openings:
         - { slug: donna-toadstool, signifier: "🍄👸🍊💅🎭", beat: "Photobombs every lot — her description exceeds the art" }
         - { slug: doctor-no, signifier: "🧣🔦🚫🤫🌟", beat: "Society patron — bids with 'No comment.' on JSON that looks declared" }
         - { slug: palm, signifier: "🐒✋🌴🔮💜", beat: "Watches in emoji — what is bidding when your body is YAML?" }
+        - { slug: troll, signifier: "🧌🪓🌉💰🎭", beat: "Works the door — one treasure per entry; adventure-mind fronts, zork-mind heckles from counsel" }
+        - { slug: wumpus-snorax, signifier: "👃🦏💤🏹💀🎲", beat: "Sleeps in the corner through the whole auction; wakes once when someone whispers a room number" }
+        - { slug: grue, signifier: "🌑👁️‍🗨️💀🦷👤🎲", beat: "Not observed attending. Lights flickered twice. Two hors d'oeuvres trays unaccounted for." }
   optional:
     - { who: don-philahue, role: auctioneer_mc }
     - { who: don-hopkins, role: host_author }

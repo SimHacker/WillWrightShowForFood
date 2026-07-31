@@ -77,6 +77,30 @@ instances:
     local: palm/
     signifier: "🐒✋🌴🔮💜"
     status: active
+  - slug: grue
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue
+    path: moollm/examples/adventure-4/characters/fictional/grue
+    upstream: fictional/grue/
+    local: grue/
+    signifier: "🌑👁️‍🗨️💀🦷👤🎲"
+    status: active
+    note: "Game-cartridge foundational example — ambient field (GAME-CARTRIDGES.md)"
+  - slug: wumpus-snorax
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax
+    path: moollm/examples/adventure-4/characters/fictional/wumpus-snorax
+    upstream: fictional/wumpus-snorax/
+    local: wumpus-snorax/
+    signifier: "👃🦏💤🏹💀🎲"
+    status: active
+    note: "Game-cartridge foundational example — instanced beast (GAME-CARTRIDGES.md)"
+  - slug: troll
+    absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll
+    path: moollm/examples/adventure-4/characters/fictional/troll
+    upstream: fictional/troll/
+    local: troll/
+    signifier: "🧌🪓🌉💰🎭"
+    status: active
+    note: "Game-cartridge foundational example — instanced border; dual-minded (zork-mind + adventure-mind, GAME-CARTRIDGES.md)"
 
 emoji_flourish:
   pattern: "Five emojis — memorable cast signature (Palm originated the format)"
@@ -89,3 +113,4 @@ emoji_flourish:
 see_also:
   - SCHEMA.yml
   - INDEX.yml
+  - GAME-CARTRIDGES.md

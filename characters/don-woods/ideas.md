@@ -80,6 +80,20 @@ synchronous input that never loses events — was reincarnated by Don in Kaleida
 and offered to OLPC Sugar in 2007. A design outliving three platforms is worth an episode
 segment on what made it right. ([artifacts](sources/sun-news-artifacts.md))
 
+## 12. Two-Toll: your troll and MIT's troll were the same troll all along
+
+The comparative troll zoology (see the Knuth encore below) now has a living exhibit:
+[Two-Toll the Troll](../menagerie/troll/), a menagerie guest whose canonical soul lives in
+MOOLLM with **two minds** — an adventure-mind that runs YOUR bridge toll (one treasure per
+crossing, rhinoceros hide, the bear incident, the fee-fie-foe-foo eggs audit) and a
+zork-mind that runs MIT's combat gate (bloody axe, blocks all passages, sinister black
+fog). He fronts whichever protocol the world's currency speaks. On-air bit: introduce
+Woods to the character who claims Woods was one of his two employers — and let Woods
+audit the adventure-mind's canon line by line. He invented the NPC business model; he
+should get to inspect the franchise. Alongside [Snorax the wumpus](../menagerie/wumpus-snorax/)
+and [the grue](../menagerie/grue/), he's a foundational example of porting NPCs between
+games as self-contained cartridges ([GAME-CARTRIDGES.md](../menagerie/GAME-CARTRIDGES.md)).
+
 ## Ensemble options
 
 - **Woods solo** — Adventure repo walk ([show seed](../../repo-shows/don-woods-adventure.yml))

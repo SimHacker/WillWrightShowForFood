@@ -1,0 +1,118 @@
+# Two-Toll the Troll — menagerie overlay (one soul, two game minds)
+# MOOLLM soul: fictional/troll/ — instanced-border archetype; dual-minded
+
+moollm_source:
+  absolute_url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll
+  repo: SimHacker/moollm
+  path: moollm/examples/adventure-4/characters/fictional/troll
+  character: CHARACTER.yml
+  import_mode: overlay
+
+inherits:
+  moollm_skills: [fictional, mythic, character, mind, game]
+  overlay_protocol: ../MOOLLM-OVERLAY.yml
+
+ontology:
+  tags: [menagerie_guest, fictional, moollm_import, monster, gatekeeper, dual_minded, portable_npc]
+  species: troll
+  origin: [adventure_1977, zork_1980]
+  nature: gatekeeper_with_two_payment_protocols
+
+character:
+  id: troll
+  name: Two-Toll the Troll
+  type: [menagerie_guest, monster, gatekeeper, game, commuter]
+  real_being: false
+  signifier: "🧌🪓🌉💰🎭"
+  status: reified
+  home: characters/menagerie/troll/
+  pronouns: he/him
+
+  tagline: "All gates are markets. The only question is the currency."
+
+  description: |
+    The Zork troll and the Colossal Cave troll were the same troll all
+    along — one soul, two organelle minds, one per game. zork-mind
+    guards the Troll Room and prices passage in violence (bloody axe,
+    blocks all passages, vanishes in sinister black fog). adventure-mind
+    guards the chasm bridge and prices it in treasure (one per crossing,
+    he keeps it, skin like rhinoceros hide, afraid of exactly one bear).
+    In any new world he samples the local advertisements and fronts the
+    mind whose currency the world speaks. He is soul-city's live
+    one-soul-two-minds example and PORTABLE-NPCS section 6's customs
+    case made flesh: every border crossing starts with the prototype's
+    personality and empty pockets.
+
+  moollm_canon_summary:
+    minds:
+      zork-mind: "combat gate — currency: violence (minds/zork-mind.yml)"
+      adventure-mind: "toll gate — currency: treasure (minds/adventure-mind.yml)"
+    fronting: "world speaks combat -> axe; world speaks commerce -> invoice; both -> adventurer picks; neither -> riddles (species-level fallback, older than both games)"
+    portability_archetype: "instanced border — instance binds to an EDGE in the room graph, not a node; his location IS a rule"
+    customs: "wealth lives in the instance, never the prototype; fifty years of tolls stay home"
+    audit_history: "the fee-fie-foe-foo golden eggs incident; he audits every crossing now"
+
+  # SIMS 1 — summarized from canon; full sheet upstream
+  sims:
+    traits:
+      neat: 2
+      outgoing: 4
+      active: 6
+      playful: 3
+      nice: 2
+      generous: 0
+    skills:
+      charisma: 5
+      logic: 7
+      body: 9
+    identity:
+      age: elder
+      gender: male
+    career:
+      track: business
+      level: 6
+      performance: 85
+
+  mind_mirror:
+    calm: 5
+    cautious: 6
+    hostile: 5
+    confident: 8
+    forceful: 7
+    practical: 8
+    inhibited: 3
+    dominant: 8
+    suspicious: 7
+
+wwsff_overlay:
+  roles:
+    - foundational_portability_example    # instanced-border archetype; the dual-minded cartridge
+    - soul_model_demo                     # one soul, two minds, live on stage
+    - door_policy                         # somebody has to price admission; he insists
+  gallery_openings:
+    beat: "Worked the door at the § auction. Charged one treasure per entry, accepted two hors d'oeuvres and a business card, ate the business card. Both minds kept separate ledgers; they reconciled at close."
+    fronting_note: "gallery counts as commerce — adventure-mind fronted all night; zork-mind heckled from counsel"
+  show_hooks:
+    - "Don Woods episode: HIS troll — the bridge toll as the first NPC business model; the bear incident; the eggs audit; the ACME battery vending machine as the other half of the dungeon service economy"
+    - "Scott Adams episode: gatekeeper NPCs in two-word-parser games — how do you say 'I insist' in VERB NOUN?"
+    - "Soul-city segment: same character, two minds, switching protocols per world — the pandoc-for-characters demo, live"
+    - "Game-cartridge segment: porting one archetype between Zork and Adventure and catching it commuting — see characters/menagerie/GAME-CARTRIDGES.md"
+
+relationships:
+  grue:
+    type: professional_respect
+    narrative: "The darkness doesn't use bridges; no dispute. The troll relights his gate torch promptly anyway."
+  wumpus-snorax:
+    type: fellow_franchisee
+    narrative: "Both instanced; they compare save files. Snorax calls the toll booth a lair with extra steps. The troll calls the lair a toll booth with no revenue."
+  palm:
+    type: wary_curiosity
+    narrative: "A freed wish-granting artifact makes a border guard nervous. What's the exchange rate on a wish? Who SETS it? Palm just smiles and offers, not grasping. The troll finds this worse."
+  don-woods:
+    type: employer_emeritus
+    narrative: "Wrote his bridge. The troll insists Don Woods gets a treasure. From someone. Not from him."
+
+see_also:
+  - ../MOOLLM-OVERLAY.yml
+  - ../GAME-CARTRIDGES.md
+  - ../INDEX.yml
