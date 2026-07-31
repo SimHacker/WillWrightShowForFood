@@ -22,7 +22,7 @@ answered in public. Same person, same taste for the real object model.
 ## Show shape
 
 Solo or NeWS/PostScript panel (Densmore, Rosenthal, Gosling). Optional cameo on
-[Ungar *Narcissa's Mirror*](../david-ungar/): the person who found the manual.
+[Ungar *Narcissa's Mirror*](../david-ungar/reflecting-on-self.md): the person who found the manual.
 
 ## Links
 
@@ -31,6 +31,6 @@ Solo or NeWS/PostScript panel (Densmore, Rosenthal, Gosling). Optional cameo on
 | 1989–91 NeWS / PostNews / Visix digest | [sources/1989-1991-…](sources/1989-1991-news-makers-and-postnews.md) |
 | Don's Galaxy notes | [donhopkins.com …/galaxy.html](https://donhopkins.com/home/interval/pluggers/galaxy.html) |
 | Invite | [invitation.md](invitation.md) |
-| Ungar (spark) | [`../david-ungar/`](../david-ungar/) |
+| Ungar (spark) | [`../david-ungar/`](../david-ungar/README.md) |
 
 Read next: [ideas](ideas.md) · [CHARACTER.yml](CHARACTER.yml)

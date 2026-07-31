@@ -27,7 +27,8 @@ worlds) that the live-objects trail on this show keeps returning to.
 ## Show shape
 
 **Trio** with **David Ungar** and **Urs Hölzle** on
-[*Reflecting on Self: Narcissa's Mirror*](../david-ungar/) — the two designers plus the
+[*Reflecting on Self: Narcissa's Mirror*](../david-ungar/reflecting-on-self.md)
+([show seed](../../repo-shows/david-ungar/README.md)) — the two designers plus the
 implementer, same table, same manual. Solo angle if preferred: **ARK to Morphic — the
 literalism/magic line through forty years of live worlds.**
 
@@ -40,7 +41,8 @@ literalism/magic line through forty years of live worlds.**
 | Programming as an Experience (ECOOP '95) | [bibliography.selflanguage.org](https://bibliography.selflanguage.org/programming-as-experience.html) |
 | Morphic (Maloney & Smith, UIST '95) | [dl.acm.org](https://dl.acm.org/doi/10.1145/215585.215636) |
 | Invite | [invitation.md](invitation.md) |
-| Ungar (co-creator) | [`../david-ungar/`](../david-ungar/) |
-| Urs (implementation half) | [`../urs-hoelzle/`](../urs-hoelzle/) |
+| Narcissa's Mirror north star | [`../david-ungar/reflecting-on-self.md`](../david-ungar/reflecting-on-self.md) |
+| Ungar (co-creator) | [`../david-ungar/`](../david-ungar/README.md) |
+| Urs (implementation half) | [`../urs-hoelzle/`](../urs-hoelzle/README.md) |
 
 Read next: [ideas](ideas.md) · [CHARACTER.yml](CHARACTER.yml)

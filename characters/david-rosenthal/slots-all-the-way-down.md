@@ -619,7 +619,7 @@ two threads of his work bear directly on this discussion:
 right base for an LLM constructor over class instantiation? And does his "abandon global
 synchronization" argument endorse the many-worlds/local-time cosmology — or warn against it?
 
-**Repo Show:** [*Reflecting on Self: Narcissa's Mirror*](../../repo-shows/david-ungar/) — invitation
+**Repo Show:** [*Reflecting on Self: Narcissa's Mirror*](../david-ungar/reflecting-on-self.md) ([show seed](../../repo-shows/david-ungar/README.md)) — invitation
 [`send_now`](../../characters/david-ungar/invitation.md).
 
 ## The MOOLLM / artifactory connection

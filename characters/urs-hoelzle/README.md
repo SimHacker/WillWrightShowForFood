@@ -29,9 +29,10 @@ to the v4 manual. Ungar replied that working with Urs was one of the best times 
 
 ## Show shape
 
-Pair with **David Ungar** on [*Reflecting on Self: Narcissa's Mirror*](../david-ungar/) —
-the design half and the implementation half, same table, same manual. Optional
-[OpenLaszlo reunion](../../repo-shows/openlaszlo/) circle. Solo angle if preferred:
+Pair with **David Ungar** on [*Reflecting on Self: Narcissa's Mirror*](../david-ungar/reflecting-on-self.md)
+([show seed](../../repo-shows/david-ungar/README.md)) — the design half and the implementation
+half, same table, same manual. Optional
+[OpenLaszlo reunion](../../repo-shows/openlaszlo/README.md) circle. Solo angle if preferred:
 from PICs to warehouse-scale — thirty years of making dynamic things fast.
 
 ## Links
@@ -41,7 +42,8 @@ from PICs to warehouse-scale — thirty years of making dynamic things fast.
 | PhD thesis (Adaptive Optimization for Self) | [selflanguage.org bibliography](https://bibliography.selflanguage.org/_static/urs-thesis.pdf) |
 | LinkedIn Self-manual thread (archived) | [`../david-ungar/sources/2026-07-…`](../david-ungar/sources/2026-07-linkedin-self-manual-thread.md) |
 | Invite | [invitation.md](invitation.md) |
-| Ungar (advisor, pair) | [`../david-ungar/`](../david-ungar/) |
-| Amanda Walker (spark) | [`../amanda-walker/`](../amanda-walker/) |
+| Narcissa's Mirror north star | [`../david-ungar/reflecting-on-self.md`](../david-ungar/reflecting-on-self.md) |
+| Ungar (advisor, pair) | [`../david-ungar/`](../david-ungar/README.md) |
+| Amanda Walker (spark) | [`../amanda-walker/`](../amanda-walker/README.md) |
 
 Read next: [ideas](ideas.md) · [CHARACTER.yml](CHARACTER.yml)

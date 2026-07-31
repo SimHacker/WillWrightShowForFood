@@ -22,7 +22,7 @@ Self doesn't run on everybody's phone — **in spirit it does**.
 
 | | |
 |---|---|
-| **Solo** | [*Reflecting on Self: Narcissa's Mirror*](../../repo-shows/david-ungar/README.md) |
+| **Solo** | [*Reflecting on Self: Narcissa's Mirror*](reflecting-on-self.md) · [show seed](../../repo-shows/david-ungar/README.md) |
 | **Group** | [OpenLaszlo reunion → Declare](../../repo-shows/openlaszlo/README.md) |
 | **Invite** | [invitation.md](invitation.md) — A / B / whatever works |
 
