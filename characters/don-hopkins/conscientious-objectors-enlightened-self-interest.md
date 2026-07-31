@@ -94,6 +94,26 @@ a **model science**. Sixty years after the draft board, the term came home with 
 → [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) ·
 [`../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
 
+## 30 July 2026 — the Latent Office
+
+The 1987 non-patent got its lexicon entry too. Don, in an email to **Richard Stallman**
+(who received one of Don's snail-mailed **Copyleft (L) stickers** back in 1984), noted that
+because pie menus were never patented he stayed free to use them everywhere — NeWS Toolkit,
+SimCity, The Sims, Micropolis — then coined the patent-side counterpart of Copyleft:
+
+> **LATENT (L)** — All rights unreserved. This invention may already exist, but hasn't
+> become obvious yet.
+>
+> **Latentleft** — publish the invention, conceal the monopoly.
+> **Latent Pending** — the idea is out there somewhere.
+> **Latent Troll** — remains dormant until an industry becomes profitable.
+
+A Latent Office protects inventions *from* the people who claim to have invented them.
+The conscientious-objector move, franchised.
+
+→ [`../richard-stallman/sources/2026-07-30-latent-trolls.md`](../richard-stallman/sources/2026-07-30-latent-trolls.md) ·
+[`sources/pie-menu-timeline.md`](sources/pie-menu-timeline.md)
+
 ## Now — what the two terms mean in this repo
 
 - **Conscientious Objectors** (Kaleida sense): design your objects, prototypes, classes, and

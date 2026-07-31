@@ -14,6 +14,7 @@ Curated digests. Full mail threads stay in Don's mailbox / local archive — not
 
 | File | What |
 |------|------|
+| [1992-01-glasgow-flat.md](1992-01-glasgow-flat.md) | Jill's flat, £250-300/mo; bang-path email; Don's Feb 1992 arrival; Sauchiehall Street / "Tankin'" memories (2026 re-surface) |
 | [2018-05-technicolour-madness.md](2018-05-technicolour-madness.md) | HyperLook ahead of time; SWIFT; Robot Olympics; "technicolour madness" |
 | [2019-03-onr-jim-richmond.md](2019-03-onr-jim-richmond.md) | ONR double-pay / FX / Soviet programmers story |
 | [2022-06-tim-niblett.md](2022-06-tim-niblett.md) | Pete's announcement of Tim's death (pointer; full memorial → `../../tim-niblett/`) |
