@@ -46,6 +46,7 @@ bouncing ideas off each other. Not a one-way lecture: ScriptX OO multimedia Lisp
 power-of-simplicity rig; mirrors, inheritance, and live objects argued in good faith.
 
 → Dream show with David Ungar: [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) · [`../david-ungar/`](../david-ungar/README.md)
+→ The term's full 1967–2026 lineage: [`conscientious-objectors-enlightened-self-interest.md`](conscientious-objectors-enlightened-self-interest.md)
 
 ## Why it matters in the lineage
 

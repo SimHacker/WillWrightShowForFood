@@ -89,7 +89,13 @@ sat down with a blank microworld again. (Title spelling TBD with you.)
 - **Korz — the subjective dimension** — your Oct 2025 pointer, taken seriously: Us → Korz →
   MOOLLM's context-activated inheritance. And your question from that thread — *"Is there
   anything like that today? Why not??"* — deserves an on-air answer.
-- **Conscientious Objectors** — Kaleida meetup (ScriptX × Self). What would you teach LLM authors today?
+- **Conscientious Objectors** — Kaleida meetup (ScriptX × Self). What would you teach LLM authors
+  today? The term has grown a whole lineage since Kaleida: Heinz Lemke (PIXIE, 1967) was a literal
+  conscientious objector to German army service, spent decades in conversation with Joe Weizenbaum,
+  and in July 2026 picked up my "repossession" of the term for ethical software design and extended
+  it to AI-model trustworthiness — the whole two-term story (**conscientious objectors** ×
+  **enlightened self-interest**) is now written up:
+  → [Conscientious Objectors & Enlightened Self-Interest](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/conscientious-objectors-enlightened-self-interest.md)
 - **Self × MOOLLM live** — directories as prototypes, skills as inheritable behavior, Stage Magic as
   GLANCE/CARD/SKILL. Build something small on air.
 - **Maps/PICs → V8** — and what you'd steal back from the stacks that forgot they borrowed from you.
@@ -124,6 +130,7 @@ Shorter call, written Q&A into the repo, co-author a skill, or "not now" — all
 | **Self and MOOLLM** | [designs/object-system/SELF-AND-MOOLLM.md](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md) |
 | **Latent-space inheritance** | [LATENT-SPACE-INHERITANCE.md](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md) |
 | **K-line inheritance note** | [`sources/moollm-kline-inheritance.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/moollm-kline-inheritance.md) |
+| **Conscientious Objectors × enlightened self-interest (1967–2026)** | [the lexicon, with receipts](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/conscientious-objectors-enlightened-self-interest.md) |
 | **Vanessa memorial edition + prestoration** | [PDF](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/vanessa-freudenberg/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf) · [prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration) · [philosophy (Self→V8)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md) |
 | **LinkedIn Self-manual thread (archived)** | [`sources/2026-07-linkedin-self-manual-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/2026-07-linkedin-self-manual-thread.md) |
 | **North star doc** | [`reflecting-on-self.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/reflecting-on-self.md) |

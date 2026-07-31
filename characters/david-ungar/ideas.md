@@ -44,8 +44,12 @@ Working episode title. **self-interest** mailing list (Don was on it). Live enum
 ### 4. Conscientious Objectors — Kaleida (ScriptX × Self)
 
 Meetup where **ScriptX object-system design team** and **Self team** bounced prototype OO ideas.
-Don coined the name. Ethic: artisanal, intentional craft vs opaque automation — applied to LLM
-orchestration. [`kaleida-scriptx-...`](../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md).
+Don coined the name; **enlightened self-interest** was the companion term — sharing ideas openly
+with the "competing" team is the smartest thing you can do for your own system. Ethic: artisanal,
+intentional craft vs opaque automation — applied to LLM orchestration. The term's full 1967–2026
+lineage (Heinz Lemke's literal army objection → Weizenbaum → Kaleida → the 2026 repossession):
+[`conscientious-objectors-enlightened-self-interest.md`](../don-hopkins/conscientious-objectors-enlightened-self-interest.md) ·
+[`kaleida-scriptx-...`](../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md).
 
 ### 5. Maps/PICs → V8 — the implementation vindication
 
