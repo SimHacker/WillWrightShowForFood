@@ -1,0 +1,69 @@
+# Dave Fleck — invitation portrayal. NOT Dave Fleck.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: david-fleck
+  name: "Dave Fleck (David C. Fleck)"
+  type: invitation
+  signifier: "🖊️"
+  status: living
+  field: "Pen input — 26 years at Wacom (VP Engineering / VP Software Technology); Wacom Radial Menu; W3C Pointer Events; 37 US patents"
+  home: characters/david-fleck/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/david-fleck-pen-input.yml
+  channel: "LinkedIn (linkedin.com/in/davefleck) or IEEE alias from the 2008 correspondence"
+  note: "Open with the gift, not the ask: the 1969 PIXIE paper and films he tried to find in 2008 now exist online. Retired Aug 2019; Portland, OR metro."
+
+bio:
+  summary: |
+    **Dave Fleck** — pen-input engineer who spent twenty-six years at **Wacom Technology
+    Corp** (Vancouver, WA): **VP of Engineering 1993–2016**, then **VP of Software
+    Technology 2016–2019**. Named on **37 issued US patents** (50+ international) across
+    stylus pressure and tilt, jitter filtering, palm rejection, the finger-wheel stylus,
+    and a filament-sensing stylus brush. Co-inventor of **US 7,941,765** — the radial
+    control menu that shipped as **Wacom's Radial Menu**, a standard driver feature in
+    front of millions of artists since the Intuos4 era. Represented Wacom in the **W3C
+    Pointer Events** working group (pen twist/rotation, 2016). BSEE Cincinnati, MSCS
+    Johns Hopkins, MBA Loyola Maryland, Doctor of Computer Science (CTU). Retired 2019.
+
+pixie_connection:
+  fact: |
+    Fleck is the person whose May 2008 question started the PIXIE recovery chain. Hunting
+    prior art for Wacom's radial menu, he found the 1969 PIXIE citation on Don's pie menu
+    site and asked for the paper; Don connected him to Bill Buxton; when Buxton sent his
+    Wiseman-papers notes to a CC list that excluded Don, **Fleck forwarded Don the two
+    PDFs himself** (8 July 2008) — which is how Don learned the PIXIE film existed. The
+    entire film recovery, Flight of the PIXIE, and the Heinz Lemke correspondence are
+    downstream of his courtesy.
+  the_unclosed_loop: |
+    In 2008 he wrote: "I just feel this need to see the original." He never got it —
+    Buxton declared the original "unsuitable for scanning." As of 2019–2026 there is:
+    the digitized paper, both 1969 films, Flight of the PIXIE, Heinz's firsthand history,
+    and the recovered PDP-7 source stepping in SIMH. Eighteen years later, the loop can
+    close.
+  saga: ../heinz-lemke/sources/2019-2020-film-recovery-saga.md
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "LinkedIn — Dave Fleck", url: "https://linkedin.com/in/davefleck" }
+    - { title: "US 2009/0187860 — Radial control menu (Fleck, Straub, Norton; granted US 7,941,765)", url: "https://www.patentsencyclopedia.com/app/20090187860" }
+    - { title: "W3C Pointer Events — pen twist thread (2016)", url: "https://lists.w3.org/Archives/Public/public-pointer-events/2016AprJun/0293.html" }
+  papers: []
+
+see_also:
+  - { path: ideas.md, why: "Conversation hooks — pen input history, Radial Menu origin, closing the PIXIE loop" }
+  - { path: invitation.md, why: "Draft invitation — gift first, show second" }
+  - { path: ../heinz-lemke/sources/2019-2020-film-recovery-saga.md, why: "His role in the recovery chain, documented" }
+  - { path: ../heinz-lemke/sources/buxton-2008-wiseman-notes/, why: "The two PDFs he forwarded Don in 2008" }
+  - { path: ../../repo-shows/david-fleck-pen-input.yml, why: "Show seed" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

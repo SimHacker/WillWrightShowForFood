@@ -64,6 +64,13 @@ days later, and five months on both 1969 films were digitized and published.
 the *Flight of the PIXIE*, the Heinz Lemke correspondence, and the whole PIXIE wing of this
 repo are downstream of his email.
 
+**Pair option — The Two Classrooms:** Brad + **Roy Eagleson** (Western University), who
+teaches the history of computer graphics and has students studying and *reincarnating* PIXIE —
+stepping Heinz's actual 1972 PDP-7 code in SIMH. Teaching UI history by testimony (sixteen
+pioneers in the room) vs by resurrection (the artifact running on the bench); PIXIE connects
+both classrooms, and Heinz could cameo.
+Seed: [`../../repo-shows/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms.yml)
+
 ### 5. Pick, Click, Flick! (ixtbook.com) — the pie menus section
 
 ### 5b. Clipboard panel — Ted Nelson cut-and-paste rant × DSHR ICCCM

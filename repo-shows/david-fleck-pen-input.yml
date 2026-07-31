@@ -1,0 +1,38 @@
+# SHOW SEED — Dave Fleck: The Man Whose Question Recovered PIXIE
+# Seed. Pen-input history from the engine room, with the best cold open in the repo.
+
+show:
+  id: david-fleck-pen-input
+  title: "Radial Menus and the Pen — Dave Fleck"
+  type: solo_or_pair
+  host: Don Hopkins
+  guests: ["Dave Fleck"]
+  topic: "Twenty-six years inside the Wacom tablet — and the 2008 prior-art question that accidentally recovered the 1969 PIXIE films. The Wacom Radial Menu origin story, the patent portfolio as autobiography, and closing an eighteen-year loop on air."
+  status: seed
+  consent: not_yet_asked
+
+cold_open:
+  beat: |
+    In 2008 Fleck wrote "I just feel this need to see the original" about the 1969
+    PIXIE paper — and never got it. The show opens by handing it to him: the paper,
+    both films, Flight of the PIXIE, and the PDP-7 source stepping in SIMH. Then the
+    reveal: the PDFs he forwarded Don in 2008 are what set the recovery in motion.
+
+beats:
+  - "Cold open: closing the eighteen-year loop (see above)"
+  - "The Wacom Radial Menu origin story — US 7,941,765, wedges as continuous variable controls, the prior-art hunt"
+  - "Sims pie menus vs Wacom Radial Menu — the two biggest radial deployments in history compare notes"
+  - "Patent portfolio as autobiography — jitter filters, palm rejection, the filament-sensing brush"
+  - "ArtZ to Pointer Events — the hardest pen problem of each decade, 1993–2019"
+  - "The one-way information flow — an industry engineer's view of how the field treats its own history"
+
+ensemble_options:
+  - "Pair with Heinz Lemke: the man who asked for the paper meets the man who wrote the code — 1969 light pen, 2009 EMR stylus"
+  - "Pair with Simon Schneegans: corporate radial menu vs open-source radial menu (Wacom driver vs Kando)"
+
+ties_to:
+  - characters/david-fleck/
+  - characters/heinz-lemke/
+  - characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md
+  - characters/heinz-lemke/sources/buxton-2008-wiseman-notes/
+  - characters/simon-schneegans/

@@ -16,7 +16,7 @@ with dates and receipts.
 
 ## The timeline
 
-**May–July 2008 — how Don heard of the film.** **Dave Fleck** — then VP of Engineering at
+**May–July 2008 — how Don heard of the film.** **[Dave Fleck](../../david-fleck/README.md)** — then VP of Engineering at
 **Wacom**, doing prior-art research while building what shipped as Wacom's Radial Menu
 (US 7,941,765, provisional filed Jan 2008) — writes to Don (17 May 2008) hunting the
 unfindable 1969 PIXIE paper, having found the reference on Don's pie menu site. Don

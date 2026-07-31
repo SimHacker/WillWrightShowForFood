@@ -66,6 +66,11 @@ Stage: [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowFor
 - **All the Widgets — remake spec** — how would you shoot CHI '90 today?
 - **PBD in the LLM era** — *Watch What I Do*, C32, VPL taxonomy; open courseware if you want it.
 - **The Two Catalogs** — pairing with Edd Coates / Game UI Database if it appeals.
+- **The Two Classrooms** — pairing with **Roy Eagleson** (Western University), who teaches the
+  history of computer graphics and has students studying and **reincarnating PIXIE** — stepping
+  Heinz Lemke's actual 1972 PDP-7 code in the SIMH emulator. Your classroom brings the pioneers
+  to the students; his brings the students to the pioneers' machine. Same artifact, opposite
+  methods — and Heinz could cameo.
 - **Acronym jam / Sentient Wait Cursor** — dessert segments as before.
 
 ## Option C — Whatever works
