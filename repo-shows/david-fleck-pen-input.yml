@@ -15,8 +15,10 @@ cold_open:
   beat: |
     In 2008 Fleck wrote "I just feel this need to see the original" about the 1969
     PIXIE paper — and never got it. The show opens by handing it to him: the paper,
-    both films, Flight of the PIXIE, and the PDP-7 source stepping in SIMH. Then the
-    reveal: the PDFs he forwarded Don in 2008 are what set the recovery in motion.
+    Heinz's PhD thesis, both films, Flight of the PIXIE, the PDP-7 assembly + octal
+    (transcribed, stepping in SIMH), plus notes, recollections, articles, interviews,
+    and discussion threads. Then the reveal: the PDFs he forwarded Don in 2008 are
+    what set the recovery in motion.
 
 beats:
   - "Cold open: closing the eighteen-year loop (see above)"

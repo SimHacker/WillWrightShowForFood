@@ -7,11 +7,12 @@
 In 2008 he asked Don for the 1969 PIXIE paper and wrote *"I just feel this need to see
 the original."* The answer at the time was: nobody has it, and Buxton says the original
 is unsuitable for scanning. The show opens by handing it to him on air: the digitized
-paper, both 1969 films, [Flight of the PIXIE](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md),
-and PIXIE's actual PDP-7 source stepping in SIMH. His live reaction to finally seeing
-the thing he went looking for eighteen years ago — that's the cold open. Then the
-reveal: *his own forwarded PDFs* are what set the recovery in motion. He's not a
-spectator to this story; he's the first cause.
+paper, Heinz's PhD thesis, both 1969 films, [Flight of the PIXIE](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md),
+the PDP-7 assembly + octal (transcribed, stepping in SIMH), plus notes, recollections,
+articles, interviews, and discussion threads. His live reaction to finally seeing the
+thing he went looking for eighteen years ago — that's the cold open. Then the reveal:
+*his own forwarded PDFs* are what set the recovery in motion. He's not a spectator to
+this story; he's the first cause.
 
 ## 2. The Wacom Radial Menu origin story
 

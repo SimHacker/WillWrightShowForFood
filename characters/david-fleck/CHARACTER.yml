@@ -47,9 +47,11 @@ pixie_connection:
   the_unclosed_loop: |
     In 2008 he wrote: "I just feel this need to see the original." He never got it —
     Buxton declared the original "unsuitable for scanning." As of 2019–2026 there is:
-    the digitized paper, both 1969 films, Flight of the PIXIE, Heinz's firsthand history,
-    and the recovered PDP-7 source stepping in SIMH. Eighteen years later, the loop can
-    close.
+    the digitized paper; Heinz's PhD thesis (reproducible detail of the radial menus);
+    both 1969 films; Flight of the PIXIE; the entire PIXIE assembly source and octal
+    machine language (transcribed, stepping toward / in SIMH); notes, recollections, and
+    original sources; articles, interviews, and discussion threads. Eighteen years later,
+    the loop can close.
   saga: ../heinz-lemke/sources/2019-2020-film-recovery-saga.md
 
 sources:

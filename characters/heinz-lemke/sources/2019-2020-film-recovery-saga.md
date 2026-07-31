@@ -55,8 +55,12 @@ version of PIXIE. The library doesn't hold the 1969 CAD Proceedings either. He c
 happy to try."*
 
 **8 Mar 2019 — The breakthrough.** Chapman has worked two channels. The St John's College
-Biographical Librarian is quietly tracing the rumor of William Newman's death (it came via
-Bill Buckley; Newman was alive). And the Computer Laboratory's own Librarian has spoken to
+Biographical Librarian is quietly tracing the rumor of William Newman's death. The rumor's
+source was **Bill Buxton** — in writing: *"The plan was for William Newman – who was a
+student of Wiseman – to do the voice over. His illness and death, among other things, has
+set these plans back."* Don quoted that to Chapman (26 Feb 2019); Chapman initially
+answered correctly naming Buxton, then in a later update wrote "Mr Buckley" — a slip for
+Buxton. Newman was alive. And the Computer Laboratory's own Librarian has spoken to
 a member of the **Rainbow group** — Wiseman's old computer graphics group —
 
 > *"who has a copy of both of the Pixie films in his office."*

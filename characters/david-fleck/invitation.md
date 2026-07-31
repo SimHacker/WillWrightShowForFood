@@ -23,11 +23,15 @@ radial menu and found the 1969 PIXIE citation on my pie menu site. You wrote the
 
 - The digitized 1969 PIXIE paper, and **both 1969 films** — recovered from the Cambridge
   University Library and a Rainbow group member's office in 2019, digitized, published openly.
+- **Heinz's PhD thesis** — the radial menus explained in reproducible detail, with the
+  assembly listing and supporting notes.
 - [*Flight of the PIXIE*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) — my remix of the footage.
 - **Heinz Lemke himself** — the PhD student who built PIXIE's radial menus — turned up
   alive and delightful, and told me the whole story, including that he demoed the film to
-  Douglas Engelbart at SRI in 1969.
-- The actual **PDP-7 source code**, recovered and stepping in the SIMH emulator.
+  Douglas Engelbart at SRI in 1969. Notes, recollections, interviews, articles, and
+  discussion threads accumulated around that correspondence.
+- The entire **PDP-7 assembly source** (and octal machine language) — transcribed; well
+  on the way to / already stepping in the SIMH emulator.
 
 Here's the part you may not know: **you started all of this.** When Bill Buxton's notes
 on the Wiseman papers went out to a CC list that didn't include me, you forwarded me the

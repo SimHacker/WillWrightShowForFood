@@ -7,7 +7,7 @@ patents in pen input; W3C Pointer Events; retired 2019, Portland OR.
 **Why he's here**: his May 2008 prior-art question about PIXIE — and his courtesy in
 forwarding Don the two Wiseman PDFs Buxton sent around him — is the first cause of the
 entire PIXIE film recovery. He asked to "see the original" in 2008 and never got to.
-Now he can.
+Now he can: paper, PhD thesis, films, PDP-7 source, notes, interviews, threads.
 
 **Status**: invitation draft, consent not yet asked.
 

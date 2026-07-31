@@ -12,8 +12,10 @@ learned a film of PIXIE existed; eleven years later that knowledge became the
 *Flight of the PIXIE*, and the entire Heinz Lemke wing of this repo.
 
 He wrote, in 2008: *"I just feel this need to see the original."* He never got to.
-Now he can — the paper, both films, and the running PDP-7 source all exist. Closing
-that eighteen-year loop is the first order of business.
+Now he can — the paper, Heinz's PhD thesis (the reproducible detail), both films,
+the PDP-7 assembly and octal, the transcription, notes and recollections, original
+sources, articles, interviews, and discussion threads. Closing that eighteen-year
+loop is the first order of business.
 
 ## Four acts
 
