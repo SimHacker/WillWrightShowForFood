@@ -22,6 +22,17 @@ but is still plenty sharp"* — and Knuth once wrote to Woods about a hack he'd 
 **INTERCAL's division routine** (2003, for TAOCP vol 4 credit; neither Woods nor Lyon could
 remember whose it was). Knuth engaged seriously with both of Woods's masterpieces.
 
+**Encore — the Zork MDL troll reading.** Don Hopkins called the MDL Zork source
+*"practically a form of literature"* on the Wikipedia Zork talk page in 2013 — Knuth's
+`advent.w` thesis, stated fifteen years early about Adventure's own descendant. Read the
+troll clause from `act1.mud` aloud: GIVE AXE TO TROLL, GIVE TROLL TO TROLL (self-devouring
+via transitive containment), and the bug — **`TROLL-FLAG!-FLAG`** never cleared, so an empty
+room still fends you off. Don's own black-box hypothesis from MIT-DM, confirmed in the
+source decades later — which puts the host in the reading, so all **three Dons** close-read
+code they each have history with. And Woods gets right of reply: Zork was MIT's answer to
+his cave. ([harvest](../don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md) ·
+[MDL source](https://github.com/itafroma/zork-mdl))
+
 Wiring: [Don Woods room](../don-woods/) · [correspondence digest](../don-woods/sources/correspondence-digest.md) ·
 [don-woods-adventure seed](../../repo-shows/don-woods-adventure.yml) (dream ensemble)
 
