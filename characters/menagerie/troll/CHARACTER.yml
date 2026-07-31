@@ -37,6 +37,8 @@ character:
     blocks all passages, vanishes in sinister black fog). adventure-mind
     guards the chasm bridge and prices it in treasure (one per crossing,
     he keeps it, skin like rhinoceros hide, afraid of exactly one bear).
+    The bloody axe fights, throws, and eats (stomach pocket universe);
+    location := self lets him eat himself — recursive Donnie Darko gut.
     In any new world he samples the local advertisements and fronts the
     mind whose currency the world speaks. He is soul-city's live
     one-soul-two-minds example and PORTABLE-NPCS section 6's customs
@@ -48,6 +50,7 @@ character:
       zork-mind: "combat gate — currency: violence (minds/zork-mind.yml)"
       adventure-mind: "toll gate — currency: treasure (minds/adventure-mind.yml)"
     fronting: "world speaks combat -> axe; world speaks commerce -> invoice; both -> adventurer picks; neither -> riddles (species-level fallback, older than both games)"
+    axe_and_stomach: "bloody axe: fight / throw / eat into stomach/; location:=self enters recursive pocket universe (Donnie Darko)"
     portability_archetype: "instanced border — instance binds to an EDGE in the room graph, not a node; his location IS a rule"
     customs: "wealth lives in the instance, never the prototype; fifty years of tolls stay home"
     audit_history: "the fee-fie-foe-foo golden eggs incident; he audits every crossing now"
