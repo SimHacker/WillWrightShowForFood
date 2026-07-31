@@ -20,7 +20,7 @@ wordplay, and MOOLLM reflection. Confirm spelling with David on air.
 
 David Ungar (with Randall Smith) built **Self** — and was **generous** with what he built:
 
-- **self-interest!** — the original mailing list (Don was on it)
+- **self-interest** — the original mailing list (Don was on it)
 - **Conscientious Objectors** — Kaleida meetup where ScriptX object-system designers and the Self
   team argued prototype OO in good faith
 - Papers, talks, humor (*Self: The Movie*), open collaboration across labs
@@ -56,7 +56,7 @@ Full rant with receipts: [`../david-rosenthal/slots-all-the-way-down.md`](../dav
 
 1. **Conscientious Objectors** — what stuck from Kaleida; ethic for LLM-era authors
 2. **Self × MOOLLM live** — one small prototype clone on air, documented in the repo
-3. **The pun stack** — self-interest!, self-ish, (oops), *Self: The Movie* (David has veto)
+3. **The pun stack** — self-interest, self-ish, (oops), *Self: The Movie* (David has veto)
 4. **Maps/PICs → V8** — implementation lineage JavaScript borrowed without the model
 5. **Relativistic parallelism** — vs git many-worlds / MOOLLM cosmology
 

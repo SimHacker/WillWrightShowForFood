@@ -30,7 +30,7 @@ without an account. **Show, don't tell.** Solo, small circle, or group reunion �
 **Facts:** **Will Wright is in — he's signed on to do the
 [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md)
 and more.** I wrote you in January about **MOOLLM**. I meant every word of the credit. You
-were **very open and influential** when it mattered: papers, humor, **self-interest!**, and
+were **very open and influential** when it mattered: papers, humor, **self-interest**, and
 that Kaleida **Conscientious Objectors** meetup (ScriptX × Self) where prototype object
 systems argued in good faith. Self doesn't run on everybody's phone — **in spirit it does** —
 in JavaScript's object model, in HotSpot's lineage, and in MOOLLM's `# import self from self`.
@@ -72,7 +72,7 @@ philosophy, same river:
 
 ## Option A — Solo: *Reflecting on Self: Narcissa's Mirror*
 
-Self × MOOLLM; mirrors, prototypes, the **self-interest!** pun stack, and what we'd build if we
+Self × MOOLLM; mirrors, prototypes, the **self-interest** pun stack, and what we'd build if we
 sat down with a blank microworld again. (Title spelling TBD with you.)
 
 **What I'd love to explore — your pick, any order, skip whatever bores you:**
@@ -92,7 +92,7 @@ sat down with a blank microworld again. (Title spelling TBD with you.)
 - **Maps/PICs → V8** — and what you'd steal back from the stacks that forgot they borrowed from you.
 - **Spatial Self** — your Vision Pro / exploratory-environment hope × Self UI + IDE techniques ×
   Russell Allen's living VM. What does "split-second response to every operation" mean in XR?
-- **The pun stack** — **self-interest!**, self-ish, `# import self from self`, (oops), *Self: The Movie*
+- **The pun stack** — **self-interest**, self-ish, `# import self from self`, (oops), *Self: The Movie*
   (you get veto).
 
 ## Option B — Group: OpenLaszlo reunion → Declare

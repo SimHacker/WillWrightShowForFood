@@ -172,12 +172,12 @@ culmination_moollm:
     Guardrail: inherit ideas, skills, and style -- never impersonate the person (representation-ethics).
     Credit **David Ungar** (with Randall Smith): very open and influential; Don assigns huge credit
     for where we are. Self doesn't run on everybody's phone -- in spirit it does (JS, HotSpot, MOOLLM).
-    Don was on the **original Self mailing list**, **self-interest!** -- such a great pun (and there
+    Don was on the **original Self mailing list**, **self-interest** -- such a great pun (and there
     are more in the Self/MOO/MOOLLM stack). See self_pun_stack below.
     See: kernel/constitution-core.md, semantic image pyramid (GLANCE/CARD/SKILL), send-code-not-commands.md
   self_pun_stack: |
     Self wordplay Don has lived inside for decades -- load-bearing, not decoration:
-    - **self-interest!** -- original Self language mailing list; Don was on it from the early days.
+    - **self-interest** -- original Self language mailing list; Don was on it from the early days.
     - **self-ish** -- Don's prototype-based config systems (Leela, MOOLLM shape); not selfish, Self-ish.
     - **`# import self from self`** -- MOOLLM constitution (see import_self_from_self above).
     - **(oops)** -- triple pun in power_of_simplicity (JS mistake; Owen's OOPS; oops 2u2).

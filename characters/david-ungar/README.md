@@ -8,7 +8,7 @@ Invitation portrayal — **not** David Ungar. [Standards](../../schemas/portraya
 `parent*` slots**, **mirrors**, no classes. His thesis was **simplicity**, not prototypes-as-end
 ([*Self: The Power of Simplicity*](https://bibliography.selflanguage.org/self-power.html), OOPSLA 1987).
 He pioneered **generation-scavenging** GC and **adaptive JIT** (**maps**, polymorphic inline caches)
-— lineage into **HotSpot** and **V8**. He was **very open and influential**: **self-interest!**,
+— lineage into **HotSpot** and **V8**. He was **very open and influential**: **self-interest**,
 Kaleida **Conscientious Objectors**, *Self: The Movie*, decades of generous cross-pollination.
 Don wrote in **Jan 2026** about MOOLLM building on Self. Don also remembers Ungar **interviewing at
 Laszlo** and getting OpenLaszlo — hence the optional reunion invite with Temkin / Henry / Oliver.

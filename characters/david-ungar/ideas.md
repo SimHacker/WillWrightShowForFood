@@ -38,7 +38,7 @@ watered down: kept prototypes, lost MI and simplicity. Full Rosetta table:
 
 ### 3. Narcissa's Mirror — Self mirrors + pun stack
 
-Working episode title. **self-interest!** mailing list (Don was on it). Live enumeration: self-ish,
+Working episode title. **self-interest** mailing list (Don was on it). Live enumeration: self-ish,
 (oops)/OOPS, *Self: The Movie*, Conscientious Objectors. David gets veto power on air.
 
 ### 4. Conscientious Objectors — Kaleida (ScriptX × Self)

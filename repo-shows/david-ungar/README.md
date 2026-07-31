@@ -7,7 +7,7 @@ that dropped classes entirely. Objects are unique individuals; inheritance is **
 named `parent*` slots** — multiple parents, dynamic reparenting, no syntax special cases. Ungar &
 Smith's first paper wasn't "The Power of Prototypes." It was **"Self: The Power of Simplicity."**
 
-David was **very open and influential** when it mattered: the **self-interest!** mailing list,
+David was **very open and influential** when it mattered: the **self-interest** mailing list,
 the Kaleida **Conscientious Objectors** meetup (ScriptX object-system team × Self team), papers,
 humor (*Self: The Movie*), and decades of generous cross-pollination. Don wrote in **January 2026**
 about how much of **MOOLLM** only makes sense because of Self — and meant every word of the credit.

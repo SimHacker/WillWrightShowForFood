@@ -25,7 +25,7 @@ LLMs as universal translators, intention compilers, optimizers — describe the 
 
 ## Self pun stack (load-bearing)
 
-- **self-interest!** — original Self mailing list; Don was on it from the early days
+- **self-interest** — original Self mailing list; Don was on it from the early days
 - **self-ish** — Don's prototype config systems (Leela, MOOLLM shape)
 - **(oops)** — triple pun: JS mistake; Owen's OOPS: Object Oriented PostScript
 - **Reflecting on Self: Narcissa's Mirror** — dream Repo Show with David Ungar

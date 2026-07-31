@@ -24,7 +24,7 @@ why_him:
   self: "Co-creator (with Randall B. Smith) of **Self** — prototype objects, no classes; multiple named `parent*` slots; dynamic reparenting. The clean prototype pole of 'slots all the way down.'"
   power_of_simplicity: "Ungar & Smith's thesis wasn't 'The Power of Prototypes' — it was **The Power of Simplicity.** Prototypes were the means; simplicity was the lesson JavaScript missed."
   implementation_lineage: "**Maps** and **polymorphic inline caches** (Chambers, Hölzle, Lars Bak) — how you make delegation fast; lineage runs Self → Strongtalk/HotSpot → **V8**. JS threw away Self's clean model but runs fast because of Self's implementation tech."
-  generosity: "Very open and influential — **self-interest!** mailing list, Kaleida **Conscientious Objectors** meetup (ScriptX × Self), papers, humor (*Self: The Movie*). Don: huge credit owed even if Self never shipped on every device."
+  generosity: "Very open and influential — **self-interest** mailing list, Kaleida **Conscientious Objectors** meetup (ScriptX × Self), papers, humor (*Self: The Movie*). Don: huge credit owed even if Self never shipped on every device."
   in_spirit: "Self doesn't run on everybody's phone — **in spirit it does**: JavaScript's object model, HotSpot/V8, MOOLLM's directories-as-prototypes."
   jan_2026: "Don wrote Jan 2026 about MOOLLM building on Self; warm thread in correspondence.yml."
 
@@ -37,7 +37,7 @@ threads:
   - "**Dynamic deoptimization** — Don's pet name: **dynamic pessimization** (pessimization as a synonym for deoptimization — the only pessimizing compiler pass shipped on purpose); when to reveal complexity"
   - "**Slots all the way down** — Self as RISC/CHON of objects; multiple inheritance; what JS ⊂ Self lost"
   - "**Relativistic parallelism** — 'Everything You Know (About Parallel Programming) Is Wrong!' vs git's many-worlds cosmology"
-  - "Self pun stack — self-interest!, self-ish, (oops)/OOPS, *Self: The Movie* (Don enumerates; David vetoes)"
+  - "Self pun stack — self-interest, self-ish, (oops)/OOPS, *Self: The Movie* (Don enumerates; David vetoes)"
 
 dream_segments:
   - "Clone a MOOLLM skill from a prototype directory live — Self delegation in YAML on air."

@@ -21,7 +21,7 @@ gist: |
 
 threads:
   self_interest_mailing_list:
-    what: "Original Self language mailing list **self-interest!** -- Don was on it from the early days; pun stack runs through self-ish, import self from self, (oops), MOOLLM"
+    what: "Original Self language mailing list **self-interest** -- Don was on it from the early days; pun stack runs through self-ish, import self from self, (oops), MOOLLM"
   self_to_moollm:
     what: "Self prototype model → MOOLLM directories-as-prototypes, skills as inheritable behavior"
   stage_magic:
@@ -47,7 +47,7 @@ connects_in_repo:
 
 show_hooks:
   - "Episode: **Reflecting on Self: Narcissa's Mirror** — mirrors, prototypes, pun stack (confirm title spelling live)"
-  - "Self pun stack: self-interest!, self-ish, import self from self, (oops), Self: The Movie -- Don enumerates more live"
+  - "Self pun stack: self-interest, self-ish, import self from self, (oops), Self: The Movie -- Don enumerates more live"
   - "Build MOOLLM live with Self idioms — prototypes, mirrors, Stage Magic"
   - "Conscientious Objectors — Kaleida: ScriptX object-system team × Self team; what ideas bounced both ways?"
   - "Artisanal hand-programming vs intentional AI use — the Conscientious Objectors ethic"
