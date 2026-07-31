@@ -84,13 +84,14 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 - Accommodate the rider (tea, no spicy, no purchased parrot, free formats).
 - Editorial veto on what publishes.
 
-## Sources
+## Sources (typed)
 
-- [`invitation.md`](invitation.md)
-- [`pull-in-gaps.yml`](pull-in-gaps.yml) — includes `save-rms-images`
-- [`sources/great-quotes.yml`](sources/great-quotes.yml)
-- [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md)
-- [`../../repo-shows/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial.yml)
-- [`../marvin-minsky/`](../marvin-minsky/)
-- [`../kent-pitman/`](../kent-pitman/) — parallel ITS thread
-- [`../mike-gallaher/`](../mike-gallaher/) — JSOL / gerbil photo cross-link
+| Kind | Link |
+| --- | --- |
+| invite | [`invitation.md`](invitation.md) |
+| show | [`../../repo-shows/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial.yml) |
+| receipt | [`sources/great-quotes.yml`](sources/great-quotes.yml) · [`media/copyleft-envelope-1984.yml`](media/copyleft-envelope-1984.yml) |
+| hospitality | [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md) |
+| persona | [`../menagerie/saint-ignucius/`](../menagerie/saint-ignucius/) |
+| gaps | [`pull-in-gaps.yml`](pull-in-gaps.yml) |
+| peers | [`../marvin-minsky/`](../marvin-minsky/) · [`../kent-pitman/`](../kent-pitman/) · [`../mike-gallaher/`](../mike-gallaher/) |
