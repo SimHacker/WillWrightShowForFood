@@ -47,13 +47,18 @@ in_flight:
   - { id: alan-kay, status: invited_considering, next: "give him room; Vanessa-memorial framing already resonates; no nudge until Craig session scheduled" }
   - { id: keez-duyves, status: contact_attempted_no_reply, next: "retry via alternate channel or in person — Amsterdam; NDSM studio visit path" }
   - { id: ellpeck, status: engaged_positive, next: "UPDATE invitation w/ Soul City + queer links (im-queer-therefore-i-sim, did-the-sims-make-you-gay), then send official invite" }
-  - { id: alexander-avila, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; deeper material in reserve until trust" }
+  - { id: blake-jennings, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; Bannon/DEN rabbit-hole follow-up staged privately (DonHopkins temp/blake-jennings/), send when conversation resumes and trust is built; queer show cluster w/ avila + ellpeck" }
   - { id: ben-cerveny, status: in_the_loop, next: "reviewed + approved Don's Heinz email; formal invite when ben-cerveny.yml seed ripens" }
   - { id: heinz-lemke, status: engaged_delivering, next: "SEND the Ben-reviewed email TODAY; then receive memoir installments + listing" }
   - { id: craig-latta, status: engaged, next: "MEET IN PERSON (Amsterdam) — schedule Vanessa memorial session + OL reunion slot; unlocks Kay + Ingalls momentum" }
 
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.
 wave_1_send_now:
+  - { id: eric-hedman, why: "TOP OF LIST 31 Jul — Don already talking w/ him, commenting on @irkinteraction videos; invitation warmed; Don sends formal invite personally", channel: "YouTube/DM (in conversation)", batch: sims-reunion-2026 }
+  - { id: eric-bowman, why: "Sims reunion w/ Hedman momentum — swimming pools hook; invitation polished", batch: sims-reunion-2026 }
+  - { id: jamie-doornbos, why: "Sims reunion w/ Hedman momentum — SimAntics architect; P.P.S. memory jog ready", batch: sims-reunion-2026 }
+  - { id: jim-mackraz, why: "Sims reunion w/ Hedman momentum — CTG lead, pools from manager chair", batch: sims-reunion-2026 }
+  - { id: chris-trottier, why: "Sims reunion w/ Hedman momentum — design-by-accretion flagship; review invitation before send", batch: sims-reunion-2026 }
   - { id: sam-arbesman, why: "Email drafted (attachments/sam-arbesman/2026-07-31) — warm thread since 2024; Maxis Labs 2 co-architect ask; solo-video default; Reese triangle footnote", channel: email }
   - { id: sarah-allen, why: "Email drafted (attachments/sarah-allen/2026-07-31) — Kaleida opener + 2006 receipts; OL reunion", channel: "sarah@ultrasaurus.com" }
   - { id: mike-gallaher, why: "Pie menu co-discoverer; memory-jogging invite drafted; Don sends personally" }
@@ -63,23 +68,28 @@ wave_1_send_now:
   - { id: ted-selker, why: "Send now — TrackPoint/NPUC; tag-team gateway to Ted Nelson" }
   - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; coordinate w/ Will + Selker first, then send", gate: "Selker/Will framing call" }
   - { id: scott-adams, why: "Warm (Jan 2026 'sucked me in'); dual-palace show; pairs with Woods send" }
-  - { id: patrick-j-barrett-iii, why: "send_now; invitation polished; E3 kiss show", batch: sims-reunion-2026 }
+  - { id: patrick-j-barrett-iii, why: "send_now; invitation REFRAMED 31 Jul — love/respect first, low ask, time-shifted any-medium menu; deliver warmly via Heather Alvey or Eric Hedman (old friends), no on-the-spot attention", batch: sims-reunion-2026 }
   - { id: clint-basinger, why: "send_now — LGR audience bridge" }
   - { id: reese-jones, why: "Warm; Sam/Will/Chaim stack" }
   - { id: gary-drescher, why: "★ interview planned — Leela adviser; Made-Up Minds" }
   - { id: antoni-sawicki, why: "Warm; interview planned; ttycity emoji UI" }
   - { id: steve-wozniak, why: "NEW WARM PATH — Will met Woz recently, gave him the zillion-Zimbabwe-dollar bill card; ask Will to open the door", channel: "via Will Wright", gate: "Will intro" }
+  - { id: dan-ingalls, why: "UNGATED 31 Jul — Don says invite now (was send_after_craig); warm Alan Kay/Fabrik history; Vanessa memorial + Livelymerge/YAML Jazz flagship" }
+  - { id: doug-hilsinger, why: "TRACK DOWN NEXT (Don 31 Jul) — Brian Eno connection; Bandcamp form message drafted (DonHopkins attachments/doug-hilsinger/2026-07-31); doug@saucefaucet.com MX still live as backup; Caroleen Beatty = warm path", channel: "Bandcamp form + email" }
+  - { id: caroleen-beatty, why: "NEW 31 Jul — invite her too (guest + warm path to Doug); unique name, findable via Bedlam Rovers / Waycross / Mekons orbit; room + invitation drafted" }
+  - { id: dan-ingalls, why: "UNGATED 31 Jul — Don says invite now; Vanessa-memorial framing already in invitation; Alan Kay intro history (Fabrik thread)" }
 
 wave_2_send_ready_batches:
   note: "Polished invitations, colder channels — send as themed batches so replies cluster into shows."
-  sims_reunion_2026: [eric-bowman, eric-hedman, jim-mackraz, jamie-doornbos, luc-barthelet, lucy-bradshaw]
+  sims_reunion_2026: [luc-barthelet, lucy-bradshaw]
+  sims_reunion_note: "eric-hedman, eric-bowman, jamie-doornbos, jim-mackraz, chris-trottier promoted to wave_1 31 Jul (Hedman warm contact momentum)"
   postscript_lineage_2026: [brian-reid, glenn-reid]
   interval_reunion_2026: [brenda-laurel, rob-tow, glenn-edens]
   parc_smalltalk_2026: [butler-lampson, adele-goldberg, ted-kaehler, trygve-reenskaug, alan-borning]
   pixie_cambridge: [henri-gouraud, andrew-armit]
   openlaszlo_reunion: [henry-minsky, oliver-steele, brad-myers]
   singles: [bret-victor, david-henkel-wallace, marc-canter]
-  gate: "alan-kay + dan-ingalls marked send_after_craig — Craig engaged, so these are UNBLOCKED; send with Vanessa-memorial framing"
+  gate: "alan-kay already invited (considering); dan-ingalls ungated 31 Jul and moved to wave_1 — send with Vanessa-memorial framing"
 
 # wave_3: warm but room/draft needs polish first
 wave_3_enrich_then_send:
@@ -91,6 +101,7 @@ wave_3_enrich_then_send:
   - { id: walter-bender, pair: samuel-klein, todo: "OLPC pair" }
   - { id: terry-winograd, todo: "CS547 archive framing" }
   - { id: rudy-rucker, todo: "invite drafted — CA jam; review + send" }
+  - { id: alexander-avila, todo: "VERIFY w/ Don whether any direct contact ever happened (July note conflated him w/ Blake Jennings); then invite w/ im-queer-therefore-i-sim seed; queer show cluster w/ blake + ellpeck" }
   - { id: keith-henson, todo: "drafted, not sent; respect Will boundary framing" }
 
 later: "Remaining guests invitation.status: draft — enrich sources then review"

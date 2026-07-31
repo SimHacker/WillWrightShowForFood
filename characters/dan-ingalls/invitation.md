@@ -1,5 +1,5 @@
 ---
-status: draft
+status: send_now
 character_id: dan-ingalls
 public: true
 consent: not_yet_asked

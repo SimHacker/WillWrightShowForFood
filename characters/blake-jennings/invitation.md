@@ -1,5 +1,7 @@
 ---
-status: draft
+status: sent
+sent: 2026-07-16
+channel: email
 character_id: blake-jennings
 consent: replied_interested
 show_seed: repo-shows/will-wright-premiere/

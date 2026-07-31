@@ -1,0 +1,53 @@
+# Caroleen Beatty — public portrayal (singer). NOT Caroleen.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: caroleen-beatty
+  name: Caroleen Beatty
+  type: invitation
+  signifier: "🎤🐅"
+  status: living
+  field: "San Francisco Bay Area singer — Taking Tiger Mountain (By Strategy) cover w/ Doug Hilsinger; Bedlam Rovers; Waycross"
+  home: characters/caroleen-beatty/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  invitation_status: draft
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Caroleen Beatty** sang every song on Doug Hilsinger's 2004 track-for-track cover of
+    **Brian Eno's *Taking Tiger Mountain (By Strategy)*** (DBK Works #111) — the record Eno
+    himself blessed as "beautiful music" made from his "cold experiments." It was her idea:
+    during a covers session she said "I love this record... Let's do the whole album!"
+    Bay Area scene veteran — fronted **The Bedlam Rovers**, sang in **Waycross** with Doug,
+    collaborated with **Jon Langford** of the Mekons, and performed the album live as the
+    **ENORCHESTRA**.
+  note: |
+    Invited both as a guest in her own right and as a warm path to Doug Hilsinger
+    (saucefaucet.com is offline; Bandcamp form + legacy email are the current channels).
+
+relationship:
+  kind: musician_invitee
+  don_connection: |
+    Don was given the Tiger Mountain CD by Doug at The Eagle in 2006 and has told the story
+    ever since; Caroleen's voice is the first thing he praises about it.
+
+show_relevance:
+  primary: repo-shows/brian-eno/
+  co_guest: doug-hilsinger
+  hooks:
+    - "Whole-album cover was her idea — 'Let's do the whole album!'"
+    - "Honor-by-transformation, sung: what it takes to carry Eno's phrasing warm"
+    - "ENORCHESTRA — performing the transformation live"
+    - "Bay Area scenius — Bedlam Rovers, Waycross, Mekons orbit"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ../doug-hilsinger/
+  - ../doug-hilsinger/taking-tiger-mountain-by-serendipity.md
+  - ../brian-eno/

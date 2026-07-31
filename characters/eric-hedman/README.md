@@ -10,7 +10,7 @@ design lead on Sims expansion packs (House Party, Livin' Large, Unleashed); **Pa
 
 Eric is an independent artist — go subscribe and follow:
 
-- ▶️ **YouTube: [@irkinteraction](https://www.youtube.com/@irkinteraction)** — warm, funny, detailed Sims-development stories (vitaboy animation, the expansion packs, the Drew Carey Show tie-in, and more)
+- ▶️ **YouTube: [@irkinteraction](https://www.youtube.com/@irkinteraction)** — warm, funny, detailed Sims-development stories (vitaboy animation, the expansion packs, the Drew Carey Show tie-in, and more). Don is a happy regular in the comments — the conversation that led to this invitation started there.
 - 🎮 **Aether HeXXen** (his 'space witch' visual novel): [Steam](https://steamcommunity.com/app/4033750/) · [itch.io](https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1)
 - ☕ **Support / commissions:** [Patreon](https://www.patreon.com/c/irkinteraction) · [Ko-fi](https://ko-fi.com/irkinteraction)
 

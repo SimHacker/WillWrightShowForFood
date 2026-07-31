@@ -1,8 +1,10 @@
 ---
-status: draft
+status: send_now
 character_id: eric-hedman
 public: true
 consent: not_yet_asked
+warm_contact: true
+channel: "already in conversation — YouTube comments on @irkinteraction; Don sends personally"
 show_seed: repo-shows/eric-hedman/
 send_batch: sims-reunion-2026
 format: remote_or_in_person
@@ -10,15 +12,18 @@ format: remote_or_in_person
 
 # Repo Show invitation — Eric Hedman
 
-*Send-ready draft — not yet sent. Eric Hedman may edit, decline, delay, or request removal at any time.*
+*Send-ready — Don delivers personally. Eric Hedman may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 Eric (Irk) —
 
-You're one of my favorite people from the original **Sims** team — character animator, expansion
-designer, mechanical-bull parent, **canWiggle** legend — and your **@irkinteraction** stories are
-gold. I'd love a **Repo Show** (solo or **Sims Fest** reunion) where we drive people to your channel and indie
-work while digging into the craft. The stage is a public GitHub repo; we talk; artifacts stay
-browsable forever. **Show, don't tell.**
+We've already been talking, and I've been having a blast commenting on your wonderful videos — so
+consider this the formal version of what you already saw coming. You're one of my favorite people
+from the original **Sims** team — character animator, expansion designer, mechanical-bull parent,
+**canWiggle** legend — and your **@irkinteraction** stories are gold: warm, funny, precise about
+the craft in a way almost nobody who was actually in the room bothers to be. I'd love a **Repo
+Show** (solo or **Sims Fest** reunion) where we drive people to your channel and indie work while
+digging into that craft. The stage is a public GitHub repo; we talk; artifacts stay browsable
+forever. **Show, don't tell.**
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 

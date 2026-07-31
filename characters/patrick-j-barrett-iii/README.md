@@ -27,6 +27,10 @@ realization. Already analyzed in MOOLLM:
 
 **Show beat:** Avila's essay + comment corpus + Patrick and Don on **how the code actually worked**.
 
+**Participation model:** fully time-shifted and any-medium — written comments, relayed questions,
+Q&A at his own pace, audio, video, or simply enjoying the repo. Patrick's contributions are
+celebrated here with credit regardless; the invitation is a standing offer, not a demand.
+
 ## LGBTQ+ solidarity — this IS The Sims audience
 
 Builders, modders, storytellers, creator-network solidarity — trans, queer, nb, ace, bi, lesbian,
