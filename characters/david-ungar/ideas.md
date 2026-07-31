@@ -77,7 +77,15 @@ words — instantiate, inherit, artifactory. Accessibility on **three axes** (hu
 lean [yaml-jazz](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz) — comments
 respected, round-tripped, generated. → [`sources/moollm-kline-inheritance.md`](sources/moollm-kline-inheritance.md)
 
-### 10. OpenLaszlo reunion → Declare (optional group)
+### 10. Spatial Self — Vision Pro × exploratory IDE
+
+Ungar's Jul 2026 LinkedIn note: Swift apps for Vision Pro exist; what he *wants* is an
+exploratory programming environment — Self UI + IDE techniques + implementation speed
+("split second response… including changing, running optimized code"). Pair with Russell
+Allen's living Self VM / SIC. Show beat: what would Self-in-XR look like, and does MOOLLM's
+directory-as-prototype room model rhyme?
+
+### 11. OpenLaszlo reunion → Declare (optional group)
 **Receipt:** Don ran into Ungar interviewing at Laszlo — email to Tom Lord, 21 Aug 2006
 ([extract](sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) ·
 [seeds](../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md); full letter private).

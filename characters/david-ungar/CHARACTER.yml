@@ -22,10 +22,11 @@ invitation:
   show_seed: repo-shows/david-ungar/
   also_shows: [repo-shows/openlaszlo/]
   priority: send_now
-  note: "DREAM GUEST — solo Narcissa's Mirror OR OpenLaszlo reunion (Laszlo interview lore); Self × MOOLLM k-line inheritance; Jan 2026 warm correspondence"
+  note: "DREAM GUEST — solo Narcissa's Mirror OR OpenLaszlo reunion; Self × MOOLLM (latent+file MI); Jan 2026 correspondence; Jul 2026 LinkedIn Self-manual reunion (Amanda Walker / Urs / Ungar)"
+  channel: "LinkedIn + email"
 
 bio:
-  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. **Interviewed at Laszlo Systems** — Don ran into him there (primary source: Don → Tom Lord email, 21 Aug 2006; Self factorial/`*` demo; JS compilability retort two years before V8). Invited to OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM."
+  summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** (with Chambers, Hölzle, Bak) → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest!** mailing list. **Interviewed at Laszlo Systems** — Don ran into him there (primary source: Don → Tom Lord email, 21 Aug 2006; Self factorial/`*` demo; JS compilability retort two years before V8). Invited to OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM. Jul 2026: public LinkedIn reunion on Amanda Walker's Self-manual find — Ungar still programming in Self (Russell Allen / SIC on 64-bit Macs) and hoping to bring Self's exploratory IDE to spatial computing / Vision Pro."
   don_credit: |
     David was generous, open, and cross-pollinating — Conscientious Objectors, self-interest!,
     papers, humor (Self: The Movie). Don: huge credit owed even if Self never shipped on every device;
@@ -43,9 +44,12 @@ sources:
   kline_inheritance: characters/david-ungar/sources/moollm-kline-inheritance.md
   web:
     - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/self-power.html" }
+    - { title: "Self and MOOLLM — object-system mapping", url: "https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md" }
+    - { title: "Latent-Space Inheritance — parents as paths and names", url: "https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md" }
     - { title: "US Patent 5,187,786 (Densmore & Rosenthal) — MOOLLM patent parent", url: "https://patents.google.com/patent/US5187786A" }
     - { title: "Declare (Temkin) — OL heir for LLM era", url: "https://github.com/davidtemkin/declarelang" }
     - { title: "OpenLaszlo 5.0", url: "https://github.com/davidtemkin/openlaszlo-5.0" }
+    - { title: "Amanda Walker — LinkedIn (Self manual find, Jul 2026)", url: "https://linkedin.com/in/amandawalker2" }
   papers:
     - { title: "Self: The Power of Simplicity", url: "https://bibliography.selflanguage.org/self-power.html" }
     - { title: "Organizing Programs Without Classes (1991)", url: "https://en.wikipedia.org/wiki/Self_(programming_language)" }
@@ -66,4 +70,6 @@ see_also:
   - { path: ../alan-kay/, why: "Smalltalk → Self lineage (messaging, late binding)" }
   - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — live-object substrate" }
   - { path: ../oliver-steele/, why: "Instance-first — LZX obeys what JS violates; ISP vs Declare" }
+  - { path: ../amanda-walker/, why: "Old friend — Visix Galaxy / PostScript; Jul 2026 Self-manual LinkedIn spark" }
+  - { path: ../urs-hoelzle/, why: "PhD student + co-author — PICs, deopt, SIC; pair guest on Narcissa's Mirror" }
   - { path: ../../process/trails/live-objects.md, why: "Self in the live-object lineage" }

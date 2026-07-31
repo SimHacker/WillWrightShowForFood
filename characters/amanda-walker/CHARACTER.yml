@@ -1,0 +1,67 @@
+# Amanda Walker — invitation portrayal. NOT Amanda Walker.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: amanda-walker
+  name: "Amanda Walker"
+  type: invitation
+  signifier: "🌌"
+  status: living
+  field: "NeWS / PostScript hacker; Visix Galaxy (NeWS into a commercial product); privacy, safety, security engineering at Google"
+  home: characters/amanda-walker/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/amanda-walker-galaxy-postscript.yml
+  channel: LinkedIn
+  note: "Old friend — NeWS-makers + PostNews (1989–90 InterCon) → Visix Galaxy (1990–); Jul 2026 Self-manual LinkedIn spark. Signature: Speaker-To-PostScript."
+
+bio:
+  summary: |
+    **Amanda Walker** — PostScript / NeWS hacker and longtime friend of Don's. At
+    **InterCon Systems** (Reston) she was a sharp voice on `NeWS-makers` and a co-conspirator
+    on the **PostNews** experiment (PostScript over compress+btoa; signed
+    **Speaker-To-PostScript**). Wrote the classic NeWS pitch: UI factored into the server so
+    look-and-feel is decided at invocation — she remade liteUI into a Mac-like desktop without
+    touching client binaries. Bluntly called Sun marketing stupid for sidelining NeWS and
+    named **Don Hopkins and SGI** as its most visible proponents. By late 1990 at **Visix**
+    (`amanda@visix.com`); June 1991 congratulated Don on **Pizza Tool** and said she was
+    putting NeWS into a real commercial product — **Galaxy**, the cross-platform framework
+    with a NeWS-like PostScript interpreter at its core. Later: engineering leadership in
+    privacy, safety, and security (Sr. Director at Google). Jul 2026: found a spiral-bound
+    **Self** manual in a 90s office-move box and lit the Ungar/Urs reunion.
+
+galaxy:
+  fact: |
+    Technical lead for Visix Galaxy. 1991 email is the receipt that Galaxy's NeWS support
+    was intentional ("incorporate support for NeWS into a (shh…) real live commercial
+    product"). Don's Interval notes: PostScript rendering with DPS or software fallback.
+  don_notes: "https://donhopkins.com/home/interval/pluggers/galaxy.html"
+  news_receipt: sources/1989-1991-news-makers-and-postnews.md
+
+sources:
+  wikipedia: null
+  web:
+    - { title: "LinkedIn — Amanda Walker", url: "https://linkedin.com/in/amandawalker2" }
+    - { title: "Don's Visix Galaxy notes (Interval pluggers)", url: "https://donhopkins.com/home/interval/pluggers/galaxy.html" }
+    - { title: "Dr. Dobb's — Building Distributed Applications with Galaxy (Mar 1995)", url: "https://jacobfilipp.com/DrDobbs/articles/DDJ/1995/9503/9503j/9503j.htm" }
+  archives:
+    - { path: sources/1989-1991-news-makers-and-postnews.md, why: "NeWS-makers + PostNews + Visix Pizza Tool arc" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invitation" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../david-ungar/, why: "Self — she found the manual that reunited the thread" }
+  - { path: ../urs-hoelzle/, why: "Self implementation half — his '30 versions' story answered her find" }
+  - { path: ../owen-densmore/, why: "NeWS OOP / class.ps lineage" }
+  - { path: ../james-gosling/, why: "NeWS; she backed Gosling in the 1990 commitment thread" }
+  - { path: ../david-rosenthal/, why: "NeWS co-author" }
+  - { path: ../../repo-shows/amanda-walker-galaxy-postscript.yml, why: "Show seed" }
+  - { path: ../../repo-shows/news-postscript-window-system.yml, why: "NeWS reunion panel" }

@@ -1,0 +1,32 @@
+# SHOW SEED — Amanda Walker: Visix Galaxy / PostScript
+# Seed. Commercial PostScript UI toolkit meets the NeWS gang; Self-manual spark optional.
+
+show:
+  id: amanda-walker-galaxy-postscript
+  title: "A Whole Other Galaxy — Amanda Walker"
+  type: solo_or_panel
+  host: Don Hopkins
+  guests: ["Amanda Walker"]
+  topic: "Visix Galaxy — the 1990s cross-platform UI / distributed-app framework with a NeWS-like PostScript interpreter at its core. Commercial PostScript as linguistic motherboard; optional Self-manual reunion cameo."
+  status: seed
+  consent: not_yet_asked
+
+beats:
+  - "Galaxy architecture — PostScript rendering (DPS + software fallback), ~3500 APIs, distributed services"
+  - "How close to NeWS / TNT? What shipped, what was sanded for C/C++ developers"
+  - "Don's Interval pluggers notes vs Amanda's lived lead — correct the record live"
+  - "Jul 2026: the spiral-bound Self manual — lighting the Ungar/Urs reunion"
+  - "Optional panel: Densmore / Rosenthal / Gosling — PostScript object systems across labs"
+
+ensemble_options:
+  - "Solo Galaxy deep dive"
+  - "NeWS / PostScript panel"
+  - "Cameo on david-ungar Narcissa's Mirror — the person who found the manual"
+
+ties_to:
+  - characters/amanda-walker/
+  - characters/david-ungar/
+  - characters/owen-densmore/
+  - characters/david-rosenthal/
+  - characters/james-gosling/
+  - repo-shows/news-postscript-window-system.yml

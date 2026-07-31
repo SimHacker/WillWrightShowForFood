@@ -16,6 +16,8 @@ gist: |
   huge credit for where we are today — Self doesn't run on everybody's phone, but **in spirit it
   does** (JavaScript, HotSpot, MOOLLM's `# import self from self`). Stage Magic → semantic pyramid;
   Idea Scavenging → character persistence; Dynamic Depessimization → MOOLLM's optimistic simplification.
+  Jul 2026: Amanda Walker's LinkedIn post (found spiral-bound Self manual) → Urs → Ungar public
+  reply (Russell Allen / SIC / Self IDE / Vision Pro exploratory hope) — warm public reunion.
 
 threads:
   self_interest_mailing_list:
@@ -29,6 +31,9 @@ threads:
   conscientious_objectors:
     what: "Kaleida meetup **Conscientious Objectors** — ScriptX object-system design team × Self team; bounced prototype OO ideas off each other"
     wwsff: ../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+  linkedin_self_manual_2026_07:
+    what: "Amanda Walker finds Self manual in 90s box; Urs Hölzle (manual writing apprenticeship); Ungar replies — Self IDE still beloved, SIC on 64-bit Macs (Russell Allen), Vision Pro / spatial computing exploratory hope"
+    spark: ../amanda-walker/
 
 connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }

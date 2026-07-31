@@ -1,0 +1,76 @@
+# Urs Hölzle — invitation portrayal. NOT Urs Hölzle.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: urs-hoelzle
+  name: "Urs Hölzle"
+  type: invitation
+  signifier: "⚡"
+  status: living
+  field: "Self adaptive optimization (PICs, dynamic deoptimization, SIC) → Animorphic/Strongtalk → HotSpot lineage; Google employee #8, first VP Engineering, Google Fellow; datacenter-as-a-computer"
+  home: characters/urs-hoelzle/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/david-ungar/
+  also_shows: [repo-shows/openlaszlo/]
+  channel: LinkedIn
+  note: "Invite alongside David Ungar — same shows David is invited to (Narcissa's Mirror as pair; OL reunion optional). Warm path: Jul 2026 LinkedIn Self-manual thread (Amanda Walker's find; Urs's '30 versions' manual apprenticeship story; he posted the v4 manual link)."
+
+bio:
+  summary: |
+    **Urs Hölzle** — the implementation half of Self's miracle. PhD under **David Ungar**
+    at Stanford: *Adaptive Optimization for Self* (1994) — the dissertation Ungar still
+    says makes programming feel like "split second response time to every operation,
+    including changing, running optimized code." With Chambers and Ungar: **polymorphic
+    inline caches** (ECOOP '91) and **dynamic deoptimization / debugging optimized code**
+    (PLDI '92) — the tricks that made a classless, delegating, everything-is-a-message
+    language run fast, and that every modern VM now rests on. Wrote Self's **SIC**
+    (simple inlining compiler). Co-founded **Animorphic Systems** (Strongtalk, with Lars
+    Bak and David Griswold) → acquired by Sun 1997 → **HotSpot** (why Java got fast) →
+    Bak to Google → **V8** (why JavaScript got fast). Then a second act at planet scale:
+    **Google employee #8** and first VP of Engineering; SVP Technical Infrastructure;
+    **Google Fellow**; co-author (with Barroso) of *The Datacenter as a Computer*;
+    drove the warehouse-scale computing and energy-efficiency agenda.
+  the_manual_story: |
+    Jul 2026, on Amanda Walker's LinkedIn post of a spiral-bound Self manual: "That's how
+    I learned to write in English... my advisor (David Ungar) asked me to expand the draft
+    sketch of a manual we had, and about 30 versions later, there we had it. Dave was an
+    excellent writer, and through the many rounds of his feedback I learned a lot!" He also
+    posted a link to the v4 manual. Ungar replied that working with Urs was one of the best
+    times of his career, and that Russell Allen recently got Urs's SIC working on 64-bit Macs.
+  don_credit: |
+    Don's line for decades: JavaScript runs fast today because of Self's implementation
+    tech while keeping a broken object model. The "implementation tech" is substantially
+    Urs's dissertation. Self delivered simplicity AND performance AND debugging —
+    Hölzle's 1992 deoptimization paper is the "blew my mind" citation in Don's
+    Vanessa-philosophy essay.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Urs_H%C3%B6lzle"
+  web:
+    - { title: "Adaptive Optimization for Self (PhD thesis, 1994)", url: "https://bibliography.selflanguage.org/_static/urs-thesis.pdf" }
+    - { title: "Optimizing Dynamically-Typed OO Languages With Polymorphic Inline Caches (Hölzle, Chambers, Ungar, ECOOP '91)", url: "https://bibliography.selflanguage.org/pics.html" }
+    - { title: "Debugging Optimized Code with Dynamic Deoptimization (Hölzle, Chambers, Ungar, PLDI '92)", url: "https://bibliography.selflanguage.org/dynamic-deoptimization.html" }
+    - { title: "The Datacenter as a Computer (Barroso & Hölzle)", url: "https://www.morganclaypool.com/doi/abs/10.2200/S00193ED1V01Y200905CAC006" }
+    - { title: "Self language bibliography", url: "https://bibliography.selflanguage.org/" }
+  papers:
+    - { title: "Adaptive Optimization for Self: Reconciling High Performance with Exploratory Programming", url: "https://bibliography.selflanguage.org/_static/urs-thesis.pdf" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invitation — pair with Ungar on the same shows" }
+  - { path: ideas.md, why: "Conversation hooks — PICs to V8, SIC resurrection, warehouse-scale second act" }
+  - { path: ../david-ungar/, why: "Advisor + co-author; Narcissa's Mirror pair; Jul 2026 reunion thread" }
+  - { path: ../david-ungar/sources/2026-07-linkedin-self-manual-thread.md, why: "The manual-apprenticeship story, archived" }
+  - { path: ../amanda-walker/, why: "Found the manual that sparked the thread" }
+  - { path: ../vanessa-freudenberg/, why: "Self→V8 lineage runs through her SqueakJS philosophy" }
+  - { path: ../../repo-shows/david-ungar/, why: "Primary show — join as pair" }
+  - { path: ../../repo-shows/openlaszlo/, why: "Optional group — prototypes circle" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }
