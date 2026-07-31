@@ -154,6 +154,17 @@ googling for Josh Siegel:
 2.5. **The NPC menagerie** — comparative troll zoology and the bestiary table above;
    the encore beat when the adventure party crosses the border into Zork. Ask Woods
    about his toll-troll and pirate; ask all three Dons about the robot and GDT.
+2.6. **NPC passports and the construction-set lineage** — the menagerie begs the design
+   question: how do NPCs and whole games travel between worlds and plug together like
+   Sims objects in one house? MOOLLM's soul-city answers with a running demo (a 1973
+   wumpus, a 1980 grue, and plugin superbats/pits interoperating in one maze — with an
+   ACME vending machine descended from the battery vendor Woods put in HIS maze) and a
+   protocol writeup: advertisements as the socket, prototype/instance splits, ambient
+   vs. instanced monsters, interop treaties, and customs for the troll's
+   economy-upsetting treasure luggage. Lineage to put to the guests: Budge's Pinball
+   Construction Set → Stuart Smith's Adventure Construction Set (EA 1984 — creatures as
+   portable data records) → Wright's Bungeling Bay editor → SimCity → Sims objects.
+   Design doc: MOOLLM `skills/soul-city/PORTABLE-NPCS.md`.
 3. **Woods at General Magic** — the career arc now runs SAIL → Xerox → Sun → General
    Magic → Postini → Google; Adventure's co-author kept landing at the industry's
    most storied communicating-applications shops.
