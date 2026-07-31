@@ -74,3 +74,6 @@ Alan Kay ("Keep on keepin' on!"), Ted Selker and Eric Bowman among the reactions
 - Reception context: the r/programming thread on the same announcement is archived at
   [`2024-07-05-reddit-retirement-thread.md`](2024-07-05-reddit-retirement-thread.md)
   (Corretto, Greengrass, the Google stint, the Gosling Emacs love).
+- Design notes for the drivers themselves:
+  [`repo-shows/simh-am-radio-lightpen.md`](../../../repo-shows/simh-am-radio-lightpen.md)
+  — GNU Radio architecture, SIMH RFI tap, prior art, lost-video recovery plan.

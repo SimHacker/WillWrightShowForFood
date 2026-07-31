@@ -66,7 +66,10 @@ Rosenthal (Andrew + ICCCM), van Hoff (HyperLook), Densmore — Alvey papers as s
 ### 5. Retirement fun — the side-project list
 His retirement post promised "a long list of side projects to plough through." The lander.ps
 dare ([`sources/2026-07-31-linkedin-retirement-thread.md`](sources/2026-07-31-linkedin-retirement-thread.md))
-volunteers to be on it. Warm-up material from the r/programming reception
+volunteers to be on it — design notes for the SIMH AM radio + lightpen drivers:
+[`repo-shows/simh-am-radio-lightpen.md`](../../repo-shows/simh-am-radio-lightpen.md)
+(GNU Radio receiver, SIMH RFI tap, and the happy fact that the PDP-7's 1.75 µs memory
+cycle puts its fundamental at ~571 kHz — inside the AM broadcast band). Warm-up material from the r/programming reception
 ([`sources/2024-07-05-reddit-retirement-thread.md`](sources/2024-07-05-reddit-retirement-thread.md)):
 
 - **Gosling Emacs outlived everything** — top comment was about Emacs, not Java; people still
