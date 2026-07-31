@@ -80,6 +80,47 @@ Bonus from the same thread: WalterBright on ADVENT's self-initializing executabl
 (write the initialized statics back over the binary — Gosling Emacs `unexec.c` energy),
 a trick that died when OSes started calling self-modifying executables malware.
 
+## The NPC menagerie — comparative zoology across the border
+
+Adventure and Zork are neighboring realms in the same cave country, and their creature
+populations are homologous species — parallel answers to the same design problems, one
+from Stanford/BBN stock, one from MIT. Show material for the assembled adventure party:
+ask the Dons how each species compares.
+
+| Niche | Adventure (Crowther/Woods, 1976–77) | Zork (MIT, 1977–79) |
+|---|---|---|
+| **Troll** | Toll-taking economist: burly, guards the bridge, "insists you throw him a treasure" to cross. The bear scares him off — but the bridge buckles under the combined weight of you and the bear on the return trip. | Omnivorous fighter: blocks the passages, eats anything you give him — his own axe (disarmed, cowers), then himself (POOF). Leaves the uncleared `TROLL-FLAG!-FLAG` behind. |
+| **Treasure stealer** | The pirate — *"Shiver me timbers, matey!"* — snatches your loot and stashes it with his chest in the maze. | The thief: the pirate refined into a gentleman with a stiletto, "a slippery character" with his own Treasure Room gallery. Only he is skilled enough to **open the jeweled egg** — giving your treasure to the villain *is the puzzle solution*, the same move as GIVE AXE TO TROLL. |
+| **Helpful bird** | The little bird: drives off the snake, but is terrified of the black rod (drop it first). | The clockwork canary inside the egg: wind it in the forest and the songbird drops a brass bauble. |
+| **Death in the dark** | *"You fell into a pit and broke every bone in your body!"* — the dark just kills you. | The **grue** — Dave Lebling's invention (word borrowed from Jack Vance) to explain *why* the dark kills you. A monster engineered backward from a game mechanic. |
+| **Hostile natives** | Axe-throwing dwarves (throw the axe back). | The cyclops — flees through the wall at the word **ODYSSEUS**, leaving a cyclops-shaped hole. |
+| **Automaton** | — | The robot. See below. |
+
+### The robot — actor, not vehicle (source-verified)
+
+From [`dung.mud`](https://github.com/itafroma/zork-mdl): the robot's flags are
+`OVISON + VICBIT + SACREDBIT + ACTORBIT` — **no `VEHBIT`**. You could never ride it.
+The actual `VEHBIT` vehicles in mainframe Zork are the **barrel, balloon basket,
+inflatable boat, and bucket**. What the robot actually is: your **remote avatar**.
+It obeys `WALK TAKE DROP PUT JUMP PUSH THROW TURN` (`ROBOT-ACTIONS`), and it acts
+where you can't survive acting — it pushes the high-voltage carousel buttons that
+electrocute you, and lifts the steel gas-trap cage off you in the Dingy Closet.
+Everything else gets *"I am only a stupid robot and cannot perform that command."*
+
+Source gems: its parser synonyms are **`R2D2`, `C3PO`, `ROBBY`** — the 1977 parser
+answered to all three famous droids. Its instruction paper reads *"FROBOZZ MAGIC ROBOT
+COMPANY... I am a late-model robot, trained at MIT Tech to perform various simple
+tasks."* And its death messages are literature: crushed under the cage it
+"short-circuits in his vain attempt to escape"; killed otherwise, it's "injured
+(being of shoddy construction)."
+
+The remembered do-cool-stuff-with-the-robot-you-normally-couldn't experiences are
+**GDT**: it could move *any object — including the player — to any room*. Teleport
+yourself into the robot-only death rooms; march the robot anywhere in the dungeon;
+"No troll / Restore troll"; immortality mode. GDT was the original noclip, and the
+robot was the perfect toy for it: an obedient second body in a world where your
+first one keeps dying.
+
 ## The General Magic org chart — Don Woods, again (July 2025)
 
 From [Bill Atkinson's psychedelic UI thread](https://news.ycombinator.com/item?id=44540509),
@@ -110,6 +151,9 @@ googling for Josh Siegel:
    which is literally Knuth's advent.w thesis.
 2. **GDT as MOOLLM's ancestor** — an in-game, semantically aware world inspector, 1978.
    The "right hand of the translator" is a coherence engine with a cat password.
+2.5. **The NPC menagerie** — comparative troll zoology and the bestiary table above;
+   the encore beat when the adventure party crosses the border into Zork. Ask Woods
+   about his toll-troll and pirate; ask all three Dons about the robot and GDT.
 3. **Woods at General Magic** — the career arc now runs SAIL → Xerox → Sun → General
    Magic → Postini → Google; Adventure's co-author kept landing at the industry's
    most storied communicating-applications shops.
