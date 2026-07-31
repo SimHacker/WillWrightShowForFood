@@ -16,6 +16,16 @@ with dates and receipts.
 
 ## The timeline
 
+**May–July 2008 — how Don heard of the film.** **Dave Fleck** writes to Don (17 May 2008)
+hunting the unfindable 1969 PIXIE paper. Don immediately puts him in touch with Bill
+Buxton, who promises them both — *"Happy to scan it and make it available."* On 7 July
+2008 Buxton sends his Wiseman-papers notes to Kurtenbach, Newman, and Heinz Lemke — but
+not to Don, who had made the introduction and thanked him in advance. The next day,
+**8 July 2008, Fleck forwards Don the two PDFs himself.** That forward is how Don came to
+possess the [Wiseman documents](buxton-2008-wiseman-notes/README.md) — and how he learned,
+from Buxton's own notes, **that a film of PIXIE existed**, along with Buxton's on-the-record
+offer to have Microsoft fund its digitization. Then: nothing, for over a decade.
+
 **8 Feb 2019 — the trigger.** Don is preparing a guest lecture on pie menu history for
 Brad Myers's CMU Interaction Techniques course (05-640, 11 Feb 2019) and assembling the
 documentary timeline for it — including his own 2 December 1986 email to himself recording
@@ -122,10 +132,15 @@ PDPs, although not the PDP-7 you are interested in sadly."
 
 ## Why this story matters
 
-- **Eleven years vs. five months.** Buxton with Microsoft's money behind him: 2008–2019,
-  nothing surfaces. Don plus one reference librarian: February to July 2019, both films
-  found, digitized, and published openly — plus a follow-on program to digitize the rest
-  of the lab's film archive.
+- **Eleven years vs. five months — computed exactly.** From Buxton's 7 July 2008 promise
+  to Don's 10 February 2019 enquiry: **10 years, 7 months, 3 days** of nothing. From the
+  promise to the films actually published: **11 years and 2 days** — and the last five
+  months of that was Don plus one reference librarian doing the whole job, with a
+  follow-on program to digitize the rest of the lab's film archive as a bonus. The
+  fairness note that makes it sharper: UI history archiving was *Buxton's paid job* —
+  Principal Researcher at Microsoft Research, funded to collect and curate exactly this.
+  It was never Don's job; those were his TomTom-and-life years, and he did it anyway,
+  for free, in the open.
 - **The films were never lost.** They were in a Rainbow group member's office the whole
   time. Nobody had *asked the right person* — and the person who found the right person
   was a librarian following his own curiosity through the lab's social graph.
