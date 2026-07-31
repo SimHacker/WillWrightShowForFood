@@ -18,6 +18,15 @@
 - Small teams vs big-company meeting tax
 - Does **open source + AI** replay Sun's 1991 bet on innovation?
 
+## Morning Sam. Morning Ralph. — Emacs vs vi, the bout
+
+Fantasy card with James Gosling:
+[`repo-shows/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph.yml)
+(Bout 1) — the editor war's two field marshals shared Sun for twenty years. vi as a
+300-baud survival kit (ADM-3A, hjkl, modes) vs Gosling's redisplay spending CPU to save
+baud: both answers to the same slow wire. Fight the old fight for one segment, then punch
+out on the record — what do you each honestly use today?
+
 ## UI and pie menus
 
 - **Educom '88** story — Emacs vs vi, NeWS demos, unrecognized WNJ

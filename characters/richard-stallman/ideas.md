@@ -51,7 +51,11 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 - Unipress / commercial Emacs pressure — **guest-led**; Don has DonHopkins Usenet receipts but
   will not ambush.
 - Natalism flame + doctor.el — primary source already public; revisit only if RMS chooses.
-- Gosling Emacs → GNU Emacs — separate from Gosling interview unless cross-linked in prose only.
+- Gosling Emacs → GNU Emacs — now has its own reconciliation seed:
+  [`repo-shows/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph.yml)
+  (Bout 2: MockLisp vs Emacs Lisp, Evil Software Hoarder vs Free Software — timecard
+  framing, warm room, permission dispute asked as history not prosecuted; punch-out
+  question: name one thing the other guy was right about).
 
 ## Format principles (his terms)
 

@@ -101,6 +101,18 @@ On-air threads:
 - Chris Torek's "severe munging and destruction" credit line in the UMD `display.c` — code
   archaeology as comedy.
 
+### 7. Morning Sam. Morning Ralph. — the holy wars punch out
+Fantasy card, staged like Ralph Wolf and Sam Sheepdog punching the timecard:
+[`repo-shows/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph.yml)
+
+- **Bout 1 vs Bill Joy** — Emacs vs vi, fought by two guys who shared Sun for twenty years.
+  Both editors were answers to the same slow wire; the war was about which resource to spend.
+- **Bout 2 vs RMS** — MockLisp vs Emacs Lisp, Evil Software Hoarder vs Free Software. The
+  contested display code is the very skull-and-crossbones redisplay archived in this room.
+  Punch-out question: name one thing the other guy was right about.
+
+Time-shifted corners welcome; a joint call is the dream, not the requirement.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

@@ -1,0 +1,87 @@
+# SHOW PROPOSAL — Morning Sam. Morning Ralph. (The Holy Wars Punch Out)
+# Ralph Wolf and Sam Sheepdog punch the timecard, fight like hell all shift,
+# punch out, and walk home friends. The oldest wars in software, re-fought
+# for love and then formally retired. Resolve old and re-Joy-ce.
+
+show:
+  id: morning-sam-morning-ralph
+  title: "Morning Sam. Morning Ralph. — The Holy Wars Punch Out"
+  type: group_series          # two bouts, one framing; can ship as separate episodes
+  host: Don Hopkins
+  status: proposed            # neither bout has been asked yet; gosling invite is send_now
+  tone:
+    frame: "Looney Tunes timecard reconciliation — adversaries by legend, colleagues by fact"
+    rule: "Warm room. The fight is the bit; the friendship is the point. No re-litigating for blood."
+    governed_by: schemas/portrayal-standards.md
+
+  premise: |
+    Ralph Wolf (who looks exactly like Wile E. Coyote) and Sam Sheepdog clock in
+    every morning, try to destroy each other from nine to five, then punch out
+    and walk home together. That is also the true shape of the great software
+    holy wars: the combatants were coworkers the whole time. This show stages
+    the two best bouts in editor history with the actual principals, lets them
+    fight the old fight for one glorious segment, and then rings the whistle
+    and lets them punch out -- on the record, artifacts in the repo forever.
+
+  bouts:
+    - id: emacs-vs-vi
+      title: "Bout 1: Gosling vs Joy -- Emacs vs vi"
+      corners:
+        james-gosling: "Wrote Unix Emacs (Gosling Emacs); the screen as a canvas you program"
+        bill-joy: "Wrote vi (and csh, and most of BSD); the editor as a modal instrument over a 300 baud line"
+      the_joke: |
+        They were colleagues at Sun for two decades. The editor war raged in
+        every Unix shop on earth while its two field marshals shared a campus,
+        a company, and eventually a language launch (Joy shepherded Oak/Java).
+        Morning Sam. Morning Ralph.
+      material:
+        - "ADM-3A keyboard archaeology: why hjkl, why ESC, why modes -- vi as a 300-baud survival kit"
+        - "Gosling's redisplay algorithm as the anti-vi: spend CPU to save baud (characters/james-gosling/sources/EmacsRedisplayAlgorithm.pdf)"
+        - "Both answers were answers to the same constraint: the wire is slow. The war was a disagreement about which resource to spend."
+        - "Punch-out question: what do you each use TODAY, honestly, on the record"
+      links:
+        - ../characters/james-gosling/
+        - ../characters/bill-joy/
+        - bill-joy/SHOW.yml
+
+    - id: mocklisp-vs-emacslisp
+      title: "Bout 2: Gosling vs RMS -- MockLisp vs Emacs Lisp, Hoarder vs Free"
+      corners:
+        james-gosling: "MockLisp -- 'largest number of cheesy little extension languages' by his own count; sold Emacs to UniPress"
+        richard-stallman: "GNU Emacs and Emacs Lisp; named UniPress's product 'Evil Software Hoarder Emacs'; answered hoarding with copyleft"
+      the_history: |
+        The contested code at the center of the 1983-85 dispute was the display
+        code -- the same dynamic-programming redisplay archived in this repo
+        under Brian Reid's uncopyrighted skull and crossbones.         RMS rewrote it;
+        GNU Emacs shipped free; the name 'Evil Software Hoarder' entered the
+        lexicon; UniPress is where Don and Mike Gallaher later hacked that very
+        Emacs. Every party to the fight is now in this repository.
+      the_resolution: |
+        Forty years on: copyleft won the argument about freedom, Gosling's
+        algorithm won the argument about redisplay, and both wars ended in the
+        same place -- an open repo where the skull, the paper, the MockLisp
+        stories, and the GNU manifesto can all be browsed by anyone without an
+        account. Punch the clock. Walk home together.
+      material:
+        - "MockLisp vs Emacs Lisp as language design under duress: what a real extension language needed in 1981 vs 1985"
+        - "The skull-and-crossbones provenance chain: Brian Reid's Scribe -> Gosling Emacs display.c -> this repo (characters/james-gosling/sources/2020-04-12-hn-redisplay-algorithm.md)"
+        - "Don's UniPress years: pie menus in the Evil Software Hoarder Emacs itself (characters/mike-gallaher/)"
+        - "RMS's Latent Trolls email + copyleft-for-patents thread as the live continuation of the same fight (characters/richard-stallman/sources/2026-07-30-latent-trolls.md)"
+        - "Punch-out question: name one thing the other guy was right about"
+      links:
+        - ../characters/james-gosling/
+        - ../characters/richard-stallman/
+      care:
+        - "RMS portrayal per contact-channels.yml conventions; no ambush framing"
+        - "The permission dispute (who told whom what in 1983) is asked as history, not prosecuted"
+
+  fantasy_card_note: |
+    Bouts can run separately and asynchronously -- time-shifted corners are
+    fine (each fighter records their rounds on their own schedule; Don referees
+    in post). A joint live call is the dream, not the requirement.
+
+  see_also:
+    - simh-am-radio-lightpen.md          # the other Gosling retirement caper
+    - ../characters/james-gosling/ideas.md
+    - ../characters/bill-joy/ideas.md
+    - ../characters/richard-stallman/ideas.md
