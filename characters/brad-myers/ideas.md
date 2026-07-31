@@ -49,8 +49,20 @@ Brad catalogs from papers outward; Edd from **73,000+ shipped game screens** inw
 Database](https://www.gameuidatabase.com/), Guinness record; ***The Game UI Bible*** forthcoming).
 Crosswalk radial menus through both. Real-time or **time-shifted notes in the repo** = the episode.
 
-### 4. CMU 05-640 Interaction Techniques
-guest lectures, Panopto archive
+### 4. CMU 05-640 Interaction Techniques — the course and its hall of fame
+What Brad teaches and how the course has evolved over the years; the guest-lecture roster
+(Bill Atkinson and Dan Bricklin walked the room the same 2019 semester as Don) — **sixteen
+guest lectures became the sixteen guest chapters of *Pick, Click, Flick!*** (Brad's own 2023
+framing). Ask: who were all sixteen, what did each teach his students, which lectures bent
+the course's direction, and what does an interaction-techniques curriculum look like in the
+LLM era? Panopto archive as show material.
+
+**The credit beat:** Brad's 2019 lecture invitation is what set the PIXIE film recovery in
+motion — assembling the lecture timeline sent Don to the Cambridge University Library two
+days later, and five months on both 1969 films were digitized and published.
+([The full saga](../heinz-lemke/sources/2019-2020-film-recovery-saga.md).) Thank him on air:
+the *Flight of the PIXIE*, the Heinz Lemke correspondence, and the whole PIXIE wing of this
+repo are downstream of his email.
 
 ### 5. Pick, Click, Flick! (ixtbook.com) — the pie menus section
 

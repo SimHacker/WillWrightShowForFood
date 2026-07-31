@@ -22,6 +22,15 @@ I worked in your **Garnet** lab (~1992–93), built the PostScript printing driv
 sent pie-menu demos to **All the Widgets**. I guest-lectured your **05-640** class in 2019 on pie
 menus — same semester Bill Atkinson and Dan Bricklin walked the room.
 
+And one debt I want to acknowledge, on air or off: **your lecture invitation is why the 1969
+PIXIE films exist online.** Assembling the documentary timeline for that guest lecture is what
+sent me to the Cambridge University Library reference desk two days later — and five months on,
+David Chapman had tracked both films to a Rainbow group member's office, had them digitized, and
+published them openly. *Flight of the PIXIE*, my correspondence with Heinz Lemke, and a whole
+wing of this repo trace straight back to your email asking me to come talk to your students.
+Thank you for setting that ball in motion. I'd love to tell you the full story —
+[it's written up here](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md).
+
 I'd like to turn that long hallway into a **Repo Show** — stage is a public GitHub repo.
 **Show, don't tell.** Format flexible: **solo Garnet/PBD deep dive**, the
 **[OpenLaszlo reunion → Declare](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)**
@@ -46,6 +55,11 @@ Stage: [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowFor
 
 ## Option B — Solo / catalog shows (still very welcome)
 
+- **05-640 and the guest-lecture hall of fame** — your Interaction Techniques course over the
+  years: what you teach, how it's evolved, and the run of guest speakers (Bill Atkinson, Dan
+  Bricklin, and the rest of the **sixteen guest lectures that became sixteen chapters** of
+  *Pick, Click, Flick!*). Who said what to your students; which lectures changed the course;
+  plus the PIXIE film-recovery story your 2019 invitation accidentally launched.
 - **Garnet → Svelte** — KR constraints, declare relationships and keep them true.
   [`garnet-to-svelte-constraint-ui-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md)
 - **Pick, Click, Flick!** — walk the taxonomy; pie-menus chapter on air. [ixtbook.com](https://www.ixtbook.com/)

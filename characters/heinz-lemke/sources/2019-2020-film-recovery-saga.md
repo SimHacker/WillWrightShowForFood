@@ -152,6 +152,10 @@ PDPs, although not the PDP-7 you are interested in sadly."
 - **The enquiry is the intervention.** Both the digitization program and Heinz's
   *Back to the Roots* series exist because someone asked. Archives answer questions;
   they rarely volunteer.
+- **Credit where the ball started rolling: Brad Myers.** His invitation to guest-lecture
+  CMU's 05-640 is what put Don into timeline-assembly mode in February 2019 — the Cambridge
+  enquiry was lecture prep that wouldn't stop. No lecture invitation, no film hunt. The
+  thanks is now in [Brad's Repo Show invitation](../../brad-myers/invitation.md).
 
 ## Sources
 
