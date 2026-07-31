@@ -40,6 +40,7 @@ show_suggestions:
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
   ungar_at_laszlo_2006: characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md
+  korz_email_2025: characters/david-ungar/sources/2025-10-26-korz-email-hn-rollup.md
   ungar_at_laszlo_full_email: characters/tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md
   kline_inheritance: characters/david-ungar/sources/moollm-kline-inheritance.md
   web:
@@ -61,6 +62,7 @@ see_also:
   - { path: ../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md, why: "Full Don→Tom Lord email (Ungar + OL + Lua thread)" }
   - { path: ../tom-lord/self-v8-tom-lord-2006-hn-2022.md, why: "HN 2022 quote of the Ungar graph" }
   - { path: sources/moollm-kline-inheritance.md, why: "Paper + patent + mixin skills — Self simplicity for LLMs" }
+  - { path: sources/2025-10-26-korz-email-hn-rollup.md, why: "Oct 2025 email — Korz pointer, senderpath, pessimization receipt, 'why not??' question" }
   - { path: ../../repo-shows/david-ungar/, why: "Planted solo show — Reflecting on Self" }
   - { path: ../../repo-shows/openlaszlo/, why: "Optional group — OL reunion → Declare" }
   - { path: ../david-temkin/, why: "Declare / OL 5.0 — reunion cast" }

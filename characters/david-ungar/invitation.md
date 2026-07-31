@@ -86,6 +86,9 @@ sat down with a blank microworld again. (Title spelling TBD with you.)
   **[US 5,187,786](https://patents.google.com/patent/US5187786A)** (Densmore & Rosenthal).
   Full note:
   → [`sources/moollm-kline-inheritance.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/moollm-kline-inheritance.md)
+- **Korz — the subjective dimension** — your Oct 2025 pointer, taken seriously: Us → Korz →
+  MOOLLM's context-activated inheritance. And your question from that thread — *"Is there
+  anything like that today? Why not??"* — deserves an on-air answer.
 - **Conscientious Objectors** — Kaleida meetup (ScriptX × Self). What would you teach LLM authors today?
 - **Self × MOOLLM live** — directories as prototypes, skills as inheritable behavior, Stage Magic as
   GLANCE/CARD/SKILL. Build something small on air.
