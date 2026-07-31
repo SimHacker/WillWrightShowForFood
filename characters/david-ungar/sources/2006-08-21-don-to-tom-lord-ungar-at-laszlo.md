@@ -11,6 +11,12 @@ This is no longer "Don's recollection" without a paper trail. In August 2006 Don
 
 Same letter: OpenLaszlo as "brilliantly designed by a bunch of lisp-heads with their heads in the right place"; Don wanting SpiderMonkey partly to reuse OL runtime / eventually run OL apps on a custom graphics engine (Pocket PC pie menus).
 
+**Corroborated by the founder (Jul 2026):** David Temkin, on LinkedIn with Don:
+*"Dave Ungar! Yes, he worked at Laszlo as a contractor for a while. We offered him a job
+but he chose to accept an offer at IBM."* — So the full story is: **contractor at Laszlo →
+job offer → chose IBM Research** (where Korz was later built with Ossher, Kimelman, and
+Adams). Don's 2006 "interviewing" framing was the visible slice of a longer engagement.
+
 **Show use:** OpenLaszlo reunion Act 4 ("what prototypes are") + Ungar solo Narcissa's Mirror — cite this email, then the factorial demo beat.
 
 ↑ [sources](README.md) · [invitation](../invitation.md) · [tom-lord memorial](../../tom-lord/)
