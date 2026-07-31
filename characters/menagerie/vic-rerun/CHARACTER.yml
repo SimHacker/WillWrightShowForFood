@@ -1,0 +1,123 @@
+# The Nostalgia Vampire — fictional interviewer foil (Glick Gallery)
+# MOOLLM soul file — Sims traits + Mind Mirror + relationship matrix
+# NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
+
+inherits:
+  moollm_skills: [character, mind-mirror]
+  note: SimHacker/moollm — traits + Leary circumplex condensed
+
+ontology:
+  tags: [menagerie_guest, fictional, glick-gallery, labeled_fiction_presenter]
+  species: human
+  nature: fictional_menagerie_guest
+  ensemble: ../GLICK-GALLERY.yml
+
+character:
+  id: vic-rerun
+  name: Vic Rerun
+  type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
+  real_being: false
+  signifier: "📼🔁🧛📺"
+  status: seed
+  home: characters/menagerie/vic-rerun/
+  pronouns: he/him
+
+  emoji_identity: "📼🔁🧛📺🕰️"
+  tagline: "Let's play the clip again."
+  archetype: the_nostalgia_vampire
+  sin: "Only the 40-year-old hit; refuses to perceive new work"
+
+  soul_philosophy: |
+    Remaster announcement. 1983. Play the clip again. Third time this segment.
+
+  description: |
+    Glick Gallery foil — the nostalgia vampire. Only the 40-year-old hit; refuses to perceive new work.
+    Violates: invitation ethos — the show invites guests for where they're GOING, not a museum tour.
+    Philahue ejects him mid-rerun.
+
+  bits:
+    - "'Let's play the clip again' — plays the same clip, third time this segment"
+    - "Guest describes current project; Vic hears it as a remaster announcement"
+    - "Introduces every guest by what they shipped in 1983, including guests born in 1990"
+
+  sims:
+    traits:
+      neat: 5
+      outgoing: 6
+      active: 2
+      playful: 4
+      nice: 5
+      generous: 3
+    skills:
+      cooking: 3
+      mechanical: 4
+      charisma: 5
+      logic: 3
+      body: 2
+      creativity: 2
+      cleaning: 4
+    identity:
+      age: elder
+      gender: male
+      zodiac: cancer
+    career:
+      track: entertainment
+      level: 6
+      performance: 400
+
+  mind_mirror:
+    calm: 5
+    serious: 4
+    cautious: 6
+    confident: 4
+    docile: 3
+    logical: 2
+    practical: 3
+    dominant: 4
+    conventional: 7
+
+symbolic_attachments:
+  - id: the-clip
+    type: object_love
+    name: "The Clip"
+    narrative: "Same tape. Same cue. Third time this segment."
+  - id: nineteen-eighty-three
+    type: place
+    name: "1983"
+    narrative: "Where every guest still lives, according to Vic."
+
+relationships:
+  matrix: ../GLICK-GALLERY.yml#roster.vic_rerun
+  edges:
+    don-philahue:
+      type: 'rivalry'
+      daily: -35
+      lifetime: 15
+      narrative: "Philahue cuts his mic mid-rerun — invitation ethos, not museum tour"
+    the-clip:
+      type: 'symbolic'
+      symbolic: True
+      narrative: "Same tape. Same cue. Again."
+      daily: 98
+      lifetime: 99
+
+representation:
+  fictional: true
+  labeled_fiction: true
+  portrayal_tier: game_and_fictional
+  authored_by: don-hopkins
+  prototype: ../GLICK-GALLERY.yml#roster.vic_rerun
+
+simoleons: 1983
+collection: []
+
+live_performance:
+  invokable_by: [don-hopkins, don-philahue]
+  when: [barge_into_segment, commit_signature_sin, get_ejected]
+  eject_beat: [sin_committed, philahue_deadpan_look, mic_cut, trapdoor_or_security_escort]
+
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md
+  - ../../../schemas/portrayal-standards.md

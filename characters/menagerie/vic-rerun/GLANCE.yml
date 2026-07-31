@@ -1,0 +1,12 @@
+name: Vic Rerun
+id: vic-rerun
+signifier: "📼🔁🧛📺"
+tagline: "Let's play the clip again."
+sniff: |
+  Glick Gallery foil — the nostalgia vampire. Only the 40-year-old hit; plays the clip again.
+cohort: glick_gallery
+status: seed
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml

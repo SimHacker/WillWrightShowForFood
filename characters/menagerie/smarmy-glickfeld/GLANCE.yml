@@ -1,0 +1,12 @@
+name: Smarmy Glickfeld
+id: smarmy-glickfeld
+signifier: "🎙️🥪💦⭐"
+tagline: "You invented computers, and I LOVE that about you."
+sniff: |
+  Glick Gallery foil — the sycophant. Zero prep, wrong credits, sandwich on the sources.
+cohort: glick_gallery
+status: seed
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml

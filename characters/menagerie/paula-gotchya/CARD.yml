@@ -1,0 +1,24 @@
+name: Paula Gotchya
+id: paula-gotchya
+tier: menagerie_guest
+emoji: "🕵️📰🪤😱"
+tagline: "But what are you HIDING in the gitignore?"
+description: |
+  Glick Gallery foil — the ambush journalist. Manufactures controversy as accountability. Soul stack in CHARACTER.yml.
+status: seed
+roles: [labeled_fiction_presenter, glick_gallery, the_ambush_journalist]
+abilities:
+  - id: IM-JUST-READING-HERE
+    name: I'm Just Reading Here
+    description: Quote things the guest never said, sourced to 'people close to the matter.'
+  - id: GITIGNORE-GOTCHA
+    name: Gitignore Gotcha
+    description: Dramatic pause, lean in — ask what they're HIDING in the gitignore.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md

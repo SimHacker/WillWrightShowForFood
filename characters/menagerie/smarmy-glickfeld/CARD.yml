@@ -1,0 +1,24 @@
+name: Smarmy Glickfeld
+id: smarmy-glickfeld
+tier: menagerie_guest
+emoji: "🎙️🥪💦⭐"
+tagline: "You invented computers, and I LOVE that about you."
+description: |
+  Glick Gallery foil — the sycophant. Zero prep + celebrity-adjacency worship. Soul stack in CHARACTER.yml.
+status: seed
+roles: [labeled_fiction_presenter, glick_gallery, the_sycophant]
+abilities:
+  - id: WRONG-CREDIT
+    name: Wrong Credit
+    description: Praise the guest for inventing something they didn't. Sweat on the follow-up.
+  - id: SANDWICH-WIPE
+    name: Sandwich Wipe
+    description: Eat throughout; use primary sources as napkins. Order from CHARACTER.yml.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md

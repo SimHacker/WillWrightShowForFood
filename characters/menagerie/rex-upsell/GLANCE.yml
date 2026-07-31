@@ -1,0 +1,12 @@
+name: Rex Upsell
+id: rex-upsell
+signifier: "💰📈🪙🔔"
+tagline: "This childhood memory is brought to you by..."
+sniff: |
+  Glick Gallery foil — the monetizer. Every question is a sales funnel; auctions mid-interview.
+cohort: glick_gallery
+status: seed
+files: [CHARACTER.yml, CARD.yml, README.md]
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml

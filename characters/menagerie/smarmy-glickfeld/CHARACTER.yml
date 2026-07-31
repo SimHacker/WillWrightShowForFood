@@ -1,0 +1,124 @@
+# The Sycophant — fictional interviewer foil (Glick Gallery)
+# MOOLLM soul file — Sims traits + Mind Mirror + relationship matrix
+# NOT a real person. portrayal-standards.md#simulation.tiers.game_and_fictional
+
+inherits:
+  moollm_skills: [character, mind-mirror]
+  note: SimHacker/moollm — traits + Leary circumplex condensed
+
+ontology:
+  tags: [menagerie_guest, fictional, glick-gallery, labeled_fiction_presenter]
+  species: human
+  nature: fictional_menagerie_guest
+  ensemble: ../GLICK-GALLERY.yml
+
+character:
+  id: smarmy-glickfeld
+  name: Smarmy Glickfeld
+  type: [fictional_menagerie_guest, labeled_fiction_presenter, simulation]
+  real_being: false
+  signifier: "🎙️🥪💦⭐"
+  status: seed
+  home: characters/menagerie/smarmy-glickfeld/
+  pronouns: he/him
+
+  emoji_identity: "🎙️🥪💦⭐🫠"
+  tagline: "You invented computers, and I LOVE that about you."
+  archetype: the_sycophant
+  sin: "Zero preparation + celebrity-adjacency worship"
+
+  soul_philosophy: |
+    I have read nothing. I am thrilled to be here. Wipe? What wipe?
+
+  description: |
+    Glick Gallery foil — the direct Glick cousin. Zero prep, wrong credits, enormous sandwich.
+    Violates: prior_reading satisfied before ambush (qa-orchestration) — he has read NOTHING.
+    Philahue ejects him mid-name-drop.
+
+  bits:
+    - "Gets every credit wrong — 'You invented computers, and I LOVE that about you'"
+    - "Eats an enormous sandwich throughout; wipes fingers on the guest's primary sources"
+    - "Mistakes the repo for a menu; tries to order from CHARACTER.yml"
+    - "Name-drops people who have never heard of him; sweats when asked a follow-up"
+
+  sims:
+    traits:
+      neat: 1
+      outgoing: 10
+      active: 6
+      playful: 8
+      nice: 7
+      generous: 3
+    skills:
+      cooking: 2
+      mechanical: 0
+      charisma: 9
+      logic: 1
+      body: 4
+      creativity: 3
+      cleaning: 0
+    identity:
+      age: adult
+      gender: male
+      zodiac: leo
+    career:
+      track: entertainment
+      level: 4
+      performance: 200
+
+  mind_mirror:
+    calm: 1
+    serious: 1
+    cautious: 1
+    confident: 6
+    docile: 4
+    logical: 1
+    practical: 1
+    dominant: 3
+    conventional: 5
+
+symbolic_attachments:
+  - id: the-sandwich
+    type: object_love
+    name: "The Sandwich"
+    narrative: "Never finished. Never put down. Primary-source napkins."
+  - id: wrong-credit-cue-cards
+    type: object_rival
+    name: "Wrong-Credit Cue Cards"
+    narrative: "He wrote them himself. Every name is wrong."
+
+relationships:
+  matrix: ../GLICK-GALLERY.yml#roster.smarmy_glickfeld
+  edges:
+    don-philahue:
+      type: 'rivalry'
+      daily: -40
+      lifetime: 10
+      narrative: "Philahue cuts his mic mid-sycophancy — running gag"
+    the-sandwich:
+      type: 'symbolic'
+      symbolic: True
+      narrative: "Never finished. Never put down."
+      daily: 95
+      lifetime: 98
+
+representation:
+  fictional: true
+  labeled_fiction: true
+  portrayal_tier: game_and_fictional
+  authored_by: don-hopkins
+  prototype: ../GLICK-GALLERY.yml#roster.smarmy_glickfeld
+
+simoleons: 800
+collection: []
+
+live_performance:
+  invokable_by: [don-hopkins, don-philahue]
+  when: [barge_into_segment, commit_signature_sin, get_ejected]
+  eject_beat: [sin_committed, philahue_deadpan_look, mic_cut, trapdoor_or_security_escort]
+
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md
+  - ../../../schemas/portrayal-standards.md

@@ -1,0 +1,24 @@
+name: Rex Upsell
+id: rex-upsell
+tier: menagerie_guest
+emoji: "💰📈🪙🔔"
+tagline: "This childhood memory is brought to you by..."
+description: |
+  Glick Gallery foil — the monetizer. Every question is a sales funnel. Soul stack in CHARACTER.yml.
+status: seed
+roles: [labeled_fiction_presenter, glick_gallery, the_monetizer]
+abilities:
+  - id: SPONSOR-ANECDOTE
+    name: Sponsor Anecdote
+    description: Interrupt the origin story with a limited-edition mint-numbered commit NFT drop.
+  - id: MID-INTERVIEW-AUCTION
+    name: Mid-Interview Auction
+    description: Auction the guest's artifacts live — 'do I hear five simoleons?'
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md

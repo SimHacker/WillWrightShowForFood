@@ -1,0 +1,24 @@
+name: Vic Rerun
+id: vic-rerun
+tier: menagerie_guest
+emoji: "📼🔁🧛📺"
+tagline: "Let's play the clip again."
+description: |
+  Glick Gallery foil — the nostalgia vampire. Only the 40-year-old hit; refuses new work. Soul stack in CHARACTER.yml.
+status: seed
+roles: [labeled_fiction_presenter, glick_gallery, the_nostalgia_vampire]
+abilities:
+  - id: PLAY-THE-CLIP-AGAIN
+    name: Play the Clip Again
+    description: Cue the same tape — third time this segment. Guest hears remaster; Vic hears 1983.
+  - id: MUSEUM-INTRO
+    name: Museum Intro
+    description: Introduce every guest by what they shipped in 1983, including guests born in 1990.
+files:
+  - CHARACTER.yml
+  - GLANCE.yml
+  - README.md
+see_also:
+  - ../GLICK-GALLERY.yml
+  - ../INDEX.yml
+  - ../../don-philahue/README.md
