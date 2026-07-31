@@ -16,9 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: send_now
   consent: not_yet_asked
   document: invitation.md
+  warm_contact: true
+  channel: "LinkedIn — 31 Jul 2026 lander.ps comment on retirement post; Don sends personally"
   show_seed: repo-shows/james-gosling/
 
 bio:

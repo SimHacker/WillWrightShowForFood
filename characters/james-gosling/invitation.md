@@ -1,13 +1,15 @@
 ---
-status: draft
+status: send_now
 character_id: james-gosling
 consent: not_yet_asked
 show_seed: repo-shows/james-gosling/
+warm_contact: true
+channel: "LinkedIn — Don commented on his retirement post 31 Jul 2026 (lander.ps ask); Don sends personally"
 ---
 
 # Repo Show invitation — James Gosling
 
-*Not yet sent. James may edit, decline, delay, or request removal at any time.*
+*Send-ready — Don delivers personally, following his 31 Jul 2026 comment on James's retirement post. James may edit, decline, delay, or request removal at any time.*
 
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
 
@@ -55,6 +57,23 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
 - **CS547 1995** — *Bringing Behavior to the Internet*; Java as behavior on the wire; archive as
   curriculum ([Terry's catalog](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/terry-winograd/media/cs547-ARCHIVE.md)).
 
+**The retirement side project (joking but not joking):** you said you have a long list of side
+projects — I'd like to add one, live on the show. Vibe code a modern retrocomputing port of the
+cheezy NeWS PostScript **lunar lander**
+([`lander.ps`](https://donhopkins.com/home/archive/news-tape/fun/lander/lander.ps)) to the
+**12-bit PDP-8** emulator — the hotrodded monster truck you drove around as a cheeky college kid —
+and then to a luxurious **18-bit PDP-7**. The **Type 340 Precision Incremental CRT Display** has
+beautifully slow green radar phosphor, a Type 342 Character Generator, and a Type 347 Subroutine
+Interface, so the Lunar Entry Module and the McDonald's are hardware-supported vector sprites.
+Best vector lunar lander on DEC iron since the GT-40. **David S. H. Rosenthal is already advising**
+on PDP-7 hardware and assembly, from his Cambridge-basement-at-night days as a cheeky college kid
+himself. We also need a virtual **lightpen input driver** and a virtual **AM radio audio output
+driver** for **SIMH**, so you can listen to it sing while it thinks — **Nathaniel Borenstein** has
+been asked to help with those too ([his room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/nathaniel-borenstein)).
+The Type 340 manuals are already archived in the repo for the PIXIE restoration
+([`heinz-lemke/sources/pdp7-reference/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/pdp7-reference)).
+The whole caper is a show segment: repo as stage, working code as the punchline.
+
 **Format:** Remote is fine. In-person if we overlap. **Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-podcast.
 NeWS reunion can be one long episode or a short series — your call.
 
@@ -68,6 +87,7 @@ NeWS reunion can be one long episode or a short series — your call.
 | **Alvey 1985 — SunDew + Andrew papers** | [`window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.md) |
 | **PDP-8 hotrod photo + sidecar** | [`media/gosling-young-pdp8-hotrod.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) |
 | **NeWS trail** | [`send-code-not-commands`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/send-code-not-commands.md) |
+| **The lander comment thread** | [`sources/2026-07-31-linkedin-retirement-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/2026-07-31-linkedin-retirement-thread.md) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

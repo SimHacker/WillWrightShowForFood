@@ -1,0 +1,72 @@
+# Nathaniel S. Borenstein — public portrayal (MIME co-creator). NOT Nathaniel.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: nathaniel-borenstein
+  name: Nathaniel S. Borenstein
+  type: invitation
+  signifier: "✉️🎶"
+  status: living
+  field: "MIME (RFC 1341 with Ned Freed); Andrew Message System (CMU ITC); metamail; ATOMICMAIL + Safe-Tcl active mail; First Virtual Holdings; Programming As If People Mattered"
+  home: characters/nathaniel-borenstein/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  invitation_status: send_now
+  consent: not_yet_asked
+
+bio:
+  summary: |
+    **Nathaniel S. Borenstein** co-created **MIME** with Ned Freed (RFC 1341, 1992) —
+    every email attachment, every multimedia message, rides on his work. Before that:
+    the **Andrew Message System** at CMU's Information Technology Center, the same
+    Andrew project that produced James Gosling and David Rosenthal's window system.
+    He wrote **metamail**, designed **ATOMICMAIL** and co-designed **Safe-Tcl** —
+    programs delivered *inside email*, behavior on the wire years before Java applets.
+    Author of *Programming As If People Mattered* (Princeton, 1991). Co-founded
+    **First Virtual Holdings** (1994), the first internet payment company. Later IBM
+    Research and chief scientist at Mimecast. The first multimedia MIME message
+    carried a photo and a song by his barbershop quartet, the **Telephone Chords**.
+  quote: |
+    "The most likely way for the world to be destroyed, most experts agree, is by
+    accident. That's where we come in; we're computer professionals. We cause
+    accidents."
+  note: |
+    Self-described (LinkedIn, 2026): an "Internet Greybeard trying to help people
+    envision working together with intelligent machines to build a better world" --
+    which is close to a mission statement for this repo.
+
+relationship:
+  kind: warm_lead
+  don_connection: |
+    Shared lineage rather than shared office: Andrew at CMU (Gosling, Rosenthal),
+    active mail vs NeWS ("send a program, not a data structure"), programs-as-messages
+    all the way down. First direct contact: 31 Jul 2026, Don replied to Nathaniel's
+    comment on Gosling's retirement post, inviting him to help build the SIMH virtual
+    lightpen input and AM radio output drivers -- "write PDP-7 code that you can dance
+    to, using the light pen to direct it like a baton with PIXIE pie menus."
+    Receipts: ../james-gosling/sources/2026-07-31-linkedin-retirement-thread.md
+
+show_relevance:
+  primary: repo-shows/james-gosling/
+  pairing_options:
+    - "Andrew reunion — Borenstein + Gosling + Rosenthal (CMU ITC, message system meets window system)"
+    - "Behavior on the wire — ATOMICMAIL/Safe-Tcl vs NeWS vs Java: three answers to 'send a program'"
+    - "SIMH caper — lightpen + AM radio drivers, lander.ps on the PDP-7 Type 340"
+  hooks:
+    - "MIME at scale: designing a format the whole world would abuse"
+    - "Safe-Tcl and active mail — the security lessons Java had to relearn"
+    - "Programming As If People Mattered — 1991 UX manifesto, still true"
+    - "First Virtual — internet payments before the web could hold them"
+    - "The Telephone Chords — the first multimedia email sang"
+    - "Retirement busier than work: 'no one tells me what to do'"
+
+see_also:
+  - README.md
+  - invitation.md
+  - ../james-gosling/
+  - ../james-gosling/sources/2026-07-31-linkedin-retirement-thread.md
+  - ../david-rosenthal/
+  - ../heinz-lemke/sources/pdp7-reference/

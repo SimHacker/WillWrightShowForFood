@@ -55,6 +55,8 @@ in_flight:
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.
 wave_1_send_now:
   - { id: eric-hedman, why: "TOP OF LIST 31 Jul — Don already talking w/ him, commenting on @irkinteraction videos; invitation warmed; Don sends formal invite personally", channel: "YouTube/DM (in conversation)", batch: sims-reunion-2026 }
+  - { id: james-gosling, why: "HOT 31 Jul — Don just commented on his retirement post (lander.ps / SIMH lightpen + AM radio dare); invitation refreshed w/ retirement side-project section; Don sends connect note + DM personally while the thread is warm (drafts: DonHopkins attachments/james-gosling/2026-07-31)", channel: LinkedIn }
+  - { id: nathaniel-borenstein, why: "HOT 31 Jul — Don replied to his comment on Gosling's retirement post w/ the SIMH lightpen + AM radio drivers ask; NEW ROOM; MIME / Andrew / Safe-Tcl behavior-on-the-wire pairing w/ Gosling + Rosenthal; Don sends connect note + DM personally (drafts: DonHopkins attachments/nathaniel-borenstein/2026-07-31)", channel: LinkedIn }
   - { id: eric-bowman, why: "Sims reunion w/ Hedman momentum — swimming pools hook; invitation polished", batch: sims-reunion-2026 }
   - { id: jamie-doornbos, why: "Sims reunion w/ Hedman momentum — SimAntics architect; P.P.S. memory jog ready", batch: sims-reunion-2026 }
   - { id: jim-mackraz, why: "Sims reunion w/ Hedman momentum — CTG lead, pools from manager chair", batch: sims-reunion-2026 }
@@ -77,7 +79,6 @@ wave_1_send_now:
   - { id: dan-ingalls, why: "UNGATED 31 Jul — Don says invite now (was send_after_craig); warm Alan Kay/Fabrik history; Vanessa memorial + Livelymerge/YAML Jazz flagship" }
   - { id: doug-hilsinger, why: "TRACK DOWN NEXT (Don 31 Jul) — Brian Eno connection; Bandcamp form message drafted (DonHopkins attachments/doug-hilsinger/2026-07-31); doug@saucefaucet.com MX still live as backup; Caroleen Beatty = warm path", channel: "Bandcamp form + email" }
   - { id: caroleen-beatty, why: "NEW 31 Jul — invite her too (guest + warm path to Doug); unique name, findable via Bedlam Rovers / Waycross / Mekons orbit; room + invitation drafted" }
-  - { id: dan-ingalls, why: "UNGATED 31 Jul — Don says invite now; Vanessa-memorial framing already in invitation; Alan Kay intro history (Fabrik thread)" }
 
 wave_2_send_ready_batches:
   note: "Polished invitations, colder channels — send as themed batches so replies cluster into shows."
