@@ -27,6 +27,15 @@
 | **29 Jul** | [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) | **Andrew:** Multipatch = PDP-7 only ~4K (no Titan, ASR-33, paper tape); Multiobject = Titan-linked 16K→24K, 100-word link, P.J. Payne plane intersections. **Corollary: Multipatch-first recreation.** **Lars:** SIMH custom device = `pdp18b_foo.c`; 340 char gen already; display-list subroutines provisional/untested |
 | **30 Jul** | [`2026-07-30-pixie-storyline-thread.md`](2026-07-30-pixie-storyline-thread.md) | **Heinz: the draftsman origin of radial menus** — 1950s symbol template in one hand + pencil in the other → light pen + adaptive radial menu, other hand free for TTY; **1m×2.5m 1960 drawing digitized** (pull-in); the tilted drawing board as lost social meeting point. **Answers Roy's GO-blank mystery:** thesis p.189 — address switches **22** + START = clean start, light buttons + tracking cross appear, no pen interrupt needed |
 
+## Primary sources pulled in alongside the thread
+
+- [`buxton-2008-wiseman-notes/`](buxton-2008-wiseman-notes/README.md) — Buxton's July 2008
+  Wiseman-papers documents (Folder B.218, Cambridge): PIXIE paper pp. 466–467 transcription +
+  archive report (talk-note button lists, radial-menu figure, proof the film existed, the
+  unfulfilled digitization offer). PDFs + `.md`/`.yml` sidecar transcriptions.
+- [`1967-03-10-system-analysis/`](1967-03-10-system-analysis/README.md) — Heinz's earliest
+  PIXIE design document, delivered 24 Jul 2026.
+
 ## Pull-ins still open
 
 See [`../pull-in-gaps.md`](../pull-in-gaps.md): 1969 Greyhound agenda, Nagoya surgery slides, Newman ref 520 scan, PIXIE Part 1.docx (DSHR attachment), Multipatch film, Titan extracode defs, CARS 2027 session planning, **Pete Mowforth Chapter-one.pdf**, **Arthur Robot Olympics poster scan**, **light-pen device for SIMH** (Roy), **Multipatch octal + thesis command/screenshot sequence** (Andrew Multipatch-first path).

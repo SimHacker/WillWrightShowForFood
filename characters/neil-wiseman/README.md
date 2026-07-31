@@ -31,6 +31,7 @@ fabric of the laboratory."*
 |---|---|
 | **Heinz Lemke** (his student; can remember him) | [`../heinz-lemke/`](../heinz-lemke/) |
 | **Heinz's origin story** (starts under Wiseman) | [`../heinz-lemke/sources/1967-back-to-the-roots-part1.md`](../heinz-lemke/sources/1967-back-to-the-roots-part1.md) |
+| **His own papers on PIXIE's radial menus** (Folder B.218, Cambridge; Buxton's 2008 excerpts — talk notes, figure, proof the film existed) | [`../heinz-lemke/sources/buxton-2008-wiseman-notes/`](../heinz-lemke/sources/buxton-2008-wiseman-notes/README.md) |
 | **Maurice Wilkes** (lab head) | [`../maurice-wilkes/`](../maurice-wilkes/) |
 | **John Hiles / Cheney / Etherton** (RAINBOW co-authors) | [`../john-hiles/`](../john-hiles/) · [`../cj-cheney/`](../cj-cheney/) · [`../m-etherton/`](../m-etherton/) |
 | **Memorial tribute** | [memorial.md](memorial.md) |

@@ -86,6 +86,19 @@ Newman & Sproull *Principles of Interactive Computer Graphics* (~1973) — ref 5
 | Pull in | Scan ref 520 pages + figure; compare Wiseman radial-menu notes |
 | Thread | [2026-07-10 storyline](sources/2026-07-10-pixie-storyline-thread.md) |
 
+### buxton_2008_wiseman_notes — PULLED IN (2026-07-31)
+
+Buxton's July 2008 documents from the Wiseman papers (Folder B.218, Cambridge): his
+transcription of PIXIE paper pp. 466–467 and his archive report (Wiseman's handwritten
+talk-note button descriptions, radial-menu figure copy, proof the PIXIE film existed,
+the unfulfilled Microsoft digitization offer).
+
+| Field | Value |
+|-------|-------|
+| Status | **received** — PDFs + transcriptions in repo |
+| Filed | [sources/buxton-2008-wiseman-notes/](sources/buxton-2008-wiseman-notes/README.md) |
+| Remaining | Verify Buxton's transcription against original pp. 466–467 (his typing has ~9 slips, inventoried); locate Wiseman's original figure in B.218 |
+
 ---
 
 ## Gaps — still to pull in

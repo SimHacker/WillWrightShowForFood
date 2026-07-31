@@ -42,6 +42,14 @@ metaphor. Met Bill Newman in Cambridge. Buxton spoke at CARS 2009.
 `[IMAGE: sheffield-1968-pixie-screenshot]` · `[IMAGE: thesis-fig-9-4-extended-pixie]` ·
 `[IMAGE: pixie-film-still]`
 
+## Buxton's own 2008 Wiseman-papers documents — now in repo
+
+Buxton's July 2008 transcription of PIXIE paper pp. 466–467 and his archive report from the
+Wiseman papers (Folder B.218, Cambridge) — including proof the PIXIE film existed and his
+never-fulfilled offer of Microsoft funding to digitize it — are preserved with full
+transcriptions and provenance notes in
+[`buxton-2008-wiseman-notes/`](buxton-2008-wiseman-notes/README.md).
+
 ## Show hooks
 
 - Predates Gosling SunDew / Alvey Workshop multi-user UI concepts

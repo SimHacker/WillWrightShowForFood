@@ -1,0 +1,66 @@
+# YAML Jazz sidecar for wiseman-notes-on-radial-menus-in-pixie.pdf —
+# Buxton's July 2008 report on the Wiseman papers (Folder B.218, Cambridge).
+# Human-readable transcription: wiseman-notes-on-radial-menus-in-pixie.md
+# Provenance + editorial context: README.md
+
+document:
+  file: wiseman-notes-on-radial-menus-in-pixie.pdf
+  pages: 6  # body paginated "1 of 4".."4 of 4"; extra pages carry the figure
+  title: "Wiseman's Notes on Radial Menus in PIXIE"
+  type: archive_research_report
+  author: William Buxton
+  dated: 2008-07-02
+  first_draft: 2008-07-07
+  current_draft: 2008-07-07
+
+archive:
+  collection: "Personal papers of Neil Wiseman (1934-1995)"
+  location: "Manuscript Room, Cambridge University Library"
+  folder: B.218
+  catalogue: "Harper, Peter & Powell, Timothy E. (2007). WISEMAN, Neil Ernest (1934-1995), Computer Scientist. NCUACS catalogue no. 154/4/07, 57pp."
+  access_path: "William Newman told Buxton the papers had been catalogued, spent a morning getting him credentials, and gave him a library tour. Buxton's preface thanks him warmly."
+
+findings:  # Buxton's three findings, his numbering
+  1_control_lightbuttons: |
+    Transcribed from Wiseman's undated handwritten talk notes. Drawing-mode buttons:
+    S = start drawing under horizontal-vertical constraints from the + position;
+    L = rubber-band line from current + position;
+    F = finish drawing at current + position;
+    W, X, Y ... = select a symbol from the catalogue and attach at the + position.
+    Confirms mode-dependent button sets ("These vary according to the command mode currently selected").
+  2_hand_drawn_figure: "Buxton made a free-hand copy of Wiseman's hand-drawn radial-menu figure — 'very consistent (no surprise) with the figure in Newman and Sproull.' In the PDF; not reproducible as text."
+  3_film_proof: "The notes and figure came from a handwritten script for a talk ACCOMPANYING A FILM DEMONSTRATION of PIXIE's UI — proof the film existed and showed the radial menus in use."
+
+buxton_commitment_2008:  # the on-record claim the later record is measured against
+  quote: "I have offered to have Microsoft cover the expenses of transferring the film, should it exist, into electronic form so as to be accessible to interested researchers."
+  contacted: "Keeper of Manuscripts, Cambridge University Library"
+
+what_actually_happened:  # the record, 2008 -> 2026
+  digitization_from_offer: "None known to have surfaced — not shared with Don Hopkins (who connected the 2008 radial-menu-history inquiry to Buxton), not found in any public archive."
+  film_recovery_actual_path: "The PIXIE film reached researchers in 2026 via Heinz Lemke's own archive and the Repo Show correspondence — eighteen years later, by a different path. See ../../cambridge-films-flight-of-the-bumblebee.md"
+  these_documents_path: "Reached this repo via donhopkins.com and the 2026 PIXIE thread, not via sharing by their compiler."
+  editorial_note_don_hopkins: |
+    Don's characterization: one-way information flow. He put the person asking about
+    radial-menu history in touch with Buxton in 2008; the findings and follow-up never
+    flowed back. Don meanwhile spent those decades building and PUBLISHING radial menus —
+    pie menus in HyperTIES, SimCity, NeWS, ActiveX, JavaScript — papers, source, and
+    studies freely shared. Announced intentions vs. shipped shared work.
+  credit_where_due: "Buxton's archive legwork is real and valuable: he found Folder B.218, transcribed the unreadable photocopy and the handwritten talk notes, and established the film existed. The criticism is the withholding afterward, not the digging."
+
+provenance_chain:
+  - "~1969: Wiseman's handwritten talk script + figure (undated), filmed demo"
+  - "2007: Wiseman papers catalogued (NCUACS 154/4/07)"
+  - "2008-07: Buxton visits (Newman assisting), compiles this report"
+  - "hosted: https://donhopkins.com/home/Wiseman%20Notes%20on%20Radial%20Menus%20in%20PIXIE.pdf"
+  - "2026-07-31: copied into this repo with sidecar transcriptions"
+
+typos_preserved: ["papera (papers)", "went spent (then spent)", "horizontal-vertiacl (vertical)", "Powell, Timothy E. Powel (duplicated surname)"]
+
+see_also:
+  - { path: wiseman-notes-on-radial-menus-in-pixie.md, why: "Full human-readable transcription" }
+  - { path: wiseman-page-466.yml, why: "Companion: Buxton's transcription of the 1969 paper's interaction section" }
+  - { path: README.md, why: "Provenance + editorial context" }
+  - { path: ../2008-bill-buxton-pixie-memory-lane.md, why: "Heinz's 2008 letter to Buxton — the other side of that year's exchange" }
+  - { path: ../../cambridge-films-flight-of-the-bumblebee.md, why: "How the film ACTUALLY got recovered (2026, via Heinz)" }
+  - { path: ../../../neil-wiseman/, why: "Wiseman memorial room" }
+  - { path: ../../../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this evidence feeds" }

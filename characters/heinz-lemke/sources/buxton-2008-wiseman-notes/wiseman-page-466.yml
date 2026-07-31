@@ -1,0 +1,62 @@
+# YAML Jazz sidecar for wiseman-page-466.pdf — Buxton's 2008 transcription
+# of the PIXIE paper's interaction section (pp. 466-467).
+# Human-readable transcription: wiseman-page-466.md
+# Provenance + editorial context: README.md
+
+document:
+  file: wiseman-page-466.pdf
+  pages: 3
+  title: "Contents of Page 466-467 of Wiseman, Lemke & Hiles (1969)"
+  type: transcription  # typed transcription, not a scan
+  transcriber: William Buxton
+  transcribed: 2008-07-07
+  why_transcribed_not_scanned: "Bleed-through from the reverse side made Buxton's photocopy hard to read."
+
+source_paper:
+  citation: "Wiseman, N.E., Lemke, H.U. & Hiles, J.O. (1969) PIXIE: A New Approach to Graphical Man-machine Communication, Proceedings of 1969 CAD Conference Southampton, IEEE Conference Publication 51, 463-471."
+  pages_transcribed: "466-467"
+  scope: "The interaction section — from paragraph 2 of page 466."
+
+provenance_chain:
+  - "1969: paper published (Southampton CAD Conference, IEEE Conf. Pub. 51)"
+  - "2008-07: Buxton photocopies the paper at the Cambridge Computer Science Unit library, transcribes pp. 466-467"
+  - "hosted: https://donhopkins.com/home/Wiseman%20Page%20466.pdf"
+  - "2026-07-31: copied into this repo with sidecar transcriptions"
+
+# The load-bearing content: the 1969 published description of the control
+# lightbuttons — the first radial, cursor-following, context-adaptive menu.
+key_claims:
+  two_button_sets:
+    command_lightbuttons: "Gross actions such as changing mode; displayed down the right edge of the screen."
+    control_lightbuttons: "Frequent within-mode operations; displayed AROUND the tracking cross and MOVE WITH IT."
+  radial_proximity: "'the user's hand is always close to these buttons when he needs them' — the pie-menu proximity argument, 1969, nineteen years before the CHI '88 Fitts's-law framing."
+  context_adaptation: "'only buttons for those actions which are legal at any given time are displayed' — legal-action filtering."
+  rotating_switch: "One button 'acts as a sort of rotating switch for the rest' — paging/submenus inside the radial cluster."
+  undrawing: "Retracing the pen over its path erases — a stack pushed and popped by pen motion. Gesture undo, 1969."
+  architecture: "Temporary display file -> up-compiler -> RSP data structure -> down-compiler -> permanent display file. Hierarchical (circuits, branches and nodes, squiggly lines); hit identification linked at every level; blink at ~2 Hz to show hit context; hierarchy walkable up and down from a pen hit."
+  pointing_mode_functions: [track picture part, erase, name via teletype, attach formatted messages, list all data via space]
+
+# Buxton's typing slips, preserved verbatim in the transcription (see .md for table).
+transcription_slips:
+  verification: "Open pull-in — check against Heinz's photocopy or the IEEE original. ../../pull-in-gaps.md"
+  slips:
+    - { typed: "training a tracking cross", likely: "trailing a tracking cross (verify against original)" }
+    - { typed: "When he ext tracks", likely: "When he next tracks" }
+    - { typed: "dost this simply be", likely: "does this simply by" }
+    - { typed: "the nods and branches", likely: "the nodes and branches" }
+    - { typed: "is store in", likely: "is stored in" }
+    - { typed: "displayed b causing", likely: "displayed by causing" }
+    - { typed: "lable", likely: "label" }
+    - { typed: "arbitrar formatted", likely: "arbitrary formatted" }
+    - { typed: "themin", likely: "them in" }
+  verification: "Open pull-in — check against Heinz's photocopy or the IEEE original. ../../pull-in-gaps.md"
+
+figure_note: "Buxton's PDF includes 'FIGURE 2 (hand-drawn reproduction by Buxton)' — his redraw of the circuit-fragment figure, page 1 of the PDF."
+
+see_also:
+  - { path: wiseman-page-466.md, why: "Full human-readable transcription" }
+  - { path: wiseman-notes-on-radial-menus-in-pixie.yml, why: "Companion: Buxton's Wiseman-papers archive report" }
+  - { path: README.md, why: "Provenance + editorial context (the 2008 one-way information flow)" }
+  - { path: ../2026-07-30-pixie-storyline-thread.md, why: "Heinz's draftsman origin story for the same radial menus" }
+  - { path: ../newman-sproull-ref-520-movable-menu.yml, why: "Newman & Sproull's citation of the same menu" }
+  - { path: ../../../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this evidence feeds" }
