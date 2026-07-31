@@ -3,6 +3,21 @@
 *Digest of a real email archive, curated by Don. Sarah may edit or request removal.
 [Portrayal standards](../../../schemas/portrayal-standards.md).*
 
+## Prehistory — the Kaleida demo (early 1990s)
+
+The friendship predates Laszlo by a decade. Sarah visited **Kaleida Labs** and installed
+a **super-early version of CoSA After Effects** on the Mac in Don's lab — which, in
+Don's words, **rocked his world**. Receipt from a Jan 2013 intro email (Don introducing
+Sarah, Jim Salsman, and Sylvia Paull):
+
+> "I worked with her at Laszlo Systems, and before that she worked at Macromedia on
+> Flash, and I first met her way back in the day when I was working at Kaleida and she
+> was working at COSA on AfterEffects!"
+
+So the arc runs: After Effects demo'd by hand on Don's Kaleida Mac → Shockwave → Flash
+Video → the 2006 OpenLaszlo video contract below → Bridge Foundry-era intros like the
+one quoted above. Thirty-plus years of receipts.
+
 ## The contract (Jul 28, 2006)
 
 Sarah (Director of Application Development, Laszlo Systems) hired Don to **complete
@@ -52,9 +67,11 @@ www.openlaszlo.org as a demo."
 ## After Laszlo
 
 Newsletters and notes 2007–2016 (ENIAC programmers fundraiser with Jean Bartik; PIF at
-the Smithsonian; 18F College Scorecard; Google/Vanadium move), Pantomime Bug Squish
-exchange (2016: "Dinosaurs learn to code! I love the game concept"), and the Nov 2023
-Leela AI thread (Don working with Henry Minsky; Blender/ML pipeline).
+the Smithsonian; 18F College Scorecard; Google/Vanadium move), the 2013
+Salsman/Paull/Allen intro thread (source of the Kaleida quote above; Mightyverse ×
+pronunciation-tutoring shop talk), Pantomime Bug Squish exchange (2016: "Dinosaurs learn
+to code! I love the game concept"), and the Nov 2023 Leela AI thread (Don working with
+Henry Minsky; Blender/ML pipeline).
 
 ## Show hooks mined here
 
@@ -64,3 +81,5 @@ Leela AI thread (Don working with Henry Minsky; Blender/ML pipeline).
    Preservation Society's build
 4. Cinematic interaction design (her Interaction08 thesis) × Repo Show staging
 5. Flash Video from inception (her team) → Don's RTMP components → the whole streaming web
+6. The Kaleida demo — Sarah hand-installing early After Effects on Don's lab Mac; two
+   media-platform roads (Kaleida ScriptX, CoSA → Macromedia) crossing in one room

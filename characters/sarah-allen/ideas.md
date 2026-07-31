@@ -23,6 +23,11 @@ CoSA to first Shockwave player to Flash Communication Server from inception: you
 the pipe the web's video flowed through for fifteen years. What did FMS get right that
 WebRTC relearned the hard way?
 
+Bonus origin scene: you visited **Kaleida** and hand-installed a super-early After
+Effects on the Mac in Don's lab — it rocked his world. What do you remember of demoing
+CoSA's baby to the ScriptX crowd, and what did each platform road see that the other
+missed?
+
 ## 4. Cinematic Interaction Design — the Interaction08 thesis
 
 Inspirations from cinema for web application design. Repo Shows stage software the way

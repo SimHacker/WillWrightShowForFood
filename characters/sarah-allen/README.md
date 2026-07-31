@@ -10,6 +10,11 @@ created the **Shockwave Multiuser Server**, and led **Flash Video and the Flash
 Communication Server** from inception through release. If you streamed video in a browser
 in the 2000s, you were downstream of her team.
 
+**How Don met her:** early 1990s, when Don was at **Kaleida Labs** — Sarah visited and
+hand-installed a super-early CoSA After Effects on the Mac in his lab, and it rocked his
+world. Two media-platform roads (Kaleida's ScriptX, CoSA → Macromedia) crossing in one
+room, a decade before they'd both land at Laszlo.
+
 **The Laszlo years (2003–2009).** OpenLaszlo core architect through the proprietary →
 open-source transition; Director of Application Development for **Laszlo Webtop**, the
 mail/calendar suite licensed to Earthlink, Verizon, and Alcatel-Lucent. In 2006 she hired

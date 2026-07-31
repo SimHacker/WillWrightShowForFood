@@ -16,6 +16,10 @@ Sarah Allen may edit, decline, delay, or request removal at any time.*
 
 Sarah —
 
+You once walked into Kaleida Labs and hand-installed a super-early CoSA After Effects on
+the Mac in my lab, and it rocked my world. That was the first loop we opened; here's a
+chance to close a couple more.
+
 David Temkin resurrected OpenLaszlo — 5.0, Java removed, compiler in TypeScript, running
 in the browser, all the old demos alive — and your name was on the cc list where it
 belongs. Which means something specific and slightly absurd: the video components you
@@ -48,7 +52,8 @@ Your beats, pick any (full menu in
 - **Webtop** — the web desktop before its time, licensed to telcos before Gmail was normal
 - **API design as public craft** — the laszlo-dev naming arguments, re-argued fondly
 - **After Effects 1.0 → Shockwave → Flash Video** — you built the pipe the web streamed
-  through for fifteen years; what did FMS get right that WebRTC relearned?
+  through for fifteen years; what did FMS get right that WebRTC relearned? (Opening
+  scene: the Kaleida lab demo — CoSA's baby meets the ScriptX crowd.)
 
 ## Option B — Solo
 
@@ -83,8 +88,9 @@ Browse without a GitHub account — start at the [README](https://github.com/Sim
 **Your response:** yes (reunion / solo / both / something else), later, too busy, or no —
 all honored gracefully. There's no debt here, only an open door if a show sounds like fun.
 
-It would be a joy to close a twenty-year loop on camera: the contract, the code review,
-the components, running again.
+It would be a joy to close a twenty-year loop on camera — the contract, the code review,
+the components, running again — inside the thirty-year one that started with an After
+Effects floppy in a Kaleida lab.
 
 — Don Hopkins *(the User Interface Flower Child)* 🎬🌀
 

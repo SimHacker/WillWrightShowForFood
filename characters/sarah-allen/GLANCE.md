@@ -5,9 +5,10 @@ Video / FMS** from inception → **OpenLaszlo** architect + **Laszlo Webtop** �
 **Bridge Foundry** → Smithsonian PIF → 18F (College Scorecard) → Google Cloud. Blogs as
 **ultrasaurus**.
 
-**Don connection**: hired + code-reviewed Don's 2006 OpenLaszlo audio/video contract
-(mediastream/mediadevice API, YouTube player). Receipts in `sources/`. Warm thread through
-2023 (Leela AI).
+**Don connection**: first met early 1990s — she hand-installed super-early CoSA After
+Effects on Don's lab Mac at **Kaleida** (rocked his world). Later hired + code-reviewed
+Don's 2006 OpenLaszlo audio/video contract (mediastream/mediadevice API, YouTube player).
+Receipts in `sources/`. Warm thread through 2023 (Leela AI).
 
 **Why now**: on Temkin's OL 5.0 cc list — reunion cast member with the commit history to
 prove it.
