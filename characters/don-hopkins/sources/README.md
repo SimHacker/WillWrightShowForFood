@@ -37,6 +37,14 @@
 
 Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 
+## Adventure lineage / Zork (HN harvest)
+
+| Read | What |
+|------|------|
+| [zork-troll-flag-adventure-lineage-hn.md](zork-troll-flag-adventure-lineage-hn.md) | TROLL-FLAG!-FLAG bug (MIT-DM hypothesis → MDL source confirmation); Supnik's GDT in-game debugger; General Magic 1994 org chart (Don Woods in Communicating Applications); Josh Siegel |
+| [Don Woods room](../../don-woods/) | Adventure co-author — invitation sent; career arc updated with General Magic |
+| [Knuth advent.w study](../../donald-knuth/sources/adventure-knuth/) | The literate recast this harvest feeds |
+
 ## Logo lineage (2026 harvest)
 
 | Read | Girder | What |

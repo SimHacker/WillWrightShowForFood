@@ -40,6 +40,11 @@ At Sun, Woods worked on NeWS and **The NeWS Toolkit (TNT)** with Don Hopkins. Th
 server's `/etc/motd` read: *"Welcome to Adventure. Would you like instructions?"* — the host
 machine **was** the well house. He also appears in the 1991
 [NeWS/TNT vs ICCCM interoperability threads](../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md).
+After Sun he turned up at **General Magic** in Communicating Applications — per the
+[1994 org chart Don found on HN](https://news.ycombinator.com/item?id=44540509)
+([archive](../don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md)) — before
+Postini and Google. Adventure's co-author kept landing at the industry's most storied
+communicating-applications shops.
 
 ## The stamp is already issued
 
