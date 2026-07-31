@@ -1,0 +1,19 @@
+# Photo drop 31 Jul 2026 — routed from rms-prompts session
+
+photos:
+  - file: don-workstation-green-critter.jpg
+    what: "Don at workstation, long hair, jeans with holes; CRT showing green critter"
+  - file: don-tongue-out-yellow-jacket.jpg
+    what: "Don tongue-out candid, yellow jacket, flash photo"
+  - file: don-demo-pink-hat-tiedye.jpg
+    what: "Don on stage/demo — pink cap, tie-dye, CRT workstation"
+  - file: don-pizza-delivers-sign.jpg
+    what: "Don wearing DON'S PIZZA DELIVERS roof sign (Evecon / PizzaTool lore)"
+
+related:
+  - ../news-tnt/pizzatool-screenshot.jpg
+  - ../news-tnt/news-pizza-tool.png
+  - ../computing-umd/cadr-1-spewing-guts-mit-ai-lab.jpg
+  - ../computing-umd/mit-mc-console-coke.jpg
+  - https://donhopkins.com/home/catalog/don/stories.html
+  - https://donhopkins.com/home/catalog/don/me.html

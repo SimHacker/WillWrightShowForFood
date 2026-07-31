@@ -57,16 +57,36 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
   framing, warm room, permission dispute asked as history not prosecuted; punch-out
   question: name one thing the other guy was right about).
 
+### 6. Rider, parrots, and ethical virtual Copyleft (HOT 31 Jul)
+
+- Read the rider as hospitality protocol, not punchline — [rre-rms](https://github.com/ddol/rre-rms),
+  [sources/rider-and-parrot.md](sources/rider-and-parrot.md).
+- Photo: [media/parrot-love.jpg](media/parrot-love.jpg).
+- Present **Copyleft the virtual parrot** — train by email/voice; retrognuification with
+  disclosure; RMS's Linux-libre / kernel-only bug fix already in the rules
+  ([upstream parrot-copyleft.yml](https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/parrot-copyleft.yml)).
+- Teach it a new trick on air.
+
+### 7. Great quotes drawer
+
+- 1989: fix-by-doing / discussion as last resort — [sources/great-quotes.yml](sources/great-quotes.yml).
+- Seek: Don's remembered "one person too busy" paraphrase (not yet primary-sourced).
+
 ## Format principles (his terms)
 
-- Async written Q&A → published → optional audio addendum.
+- Any medium he prefers: email, landline via rms-assist, Jitsi/BBB.
 - No surprise guests; no clip bait; **WebM/Ogg** only.
 - Say **free software**, **GNU/Linux**.
+- Accommodate the rider (tea, no spicy, no purchased parrot, free formats).
 - Editorial veto on what publishes.
 
 ## Sources
 
 - [`invitation.md`](invitation.md)
+- [`pull-in-gaps.yml`](pull-in-gaps.yml) — includes `save-rms-images`
+- [`sources/great-quotes.yml`](sources/great-quotes.yml)
+- [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md)
 - [`../../repo-shows/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial.yml)
 - [`../marvin-minsky/`](../marvin-minsky/)
 - [`../kent-pitman/`](../kent-pitman/) — parallel ITS thread
+- [`../mike-gallaher/`](../mike-gallaher/) — JSOL / gerbil photo cross-link

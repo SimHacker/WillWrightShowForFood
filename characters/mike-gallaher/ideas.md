@@ -27,4 +27,8 @@
    plane, meets Gilmore/Gosling/Rosenthal/Densmore/Bradley, and promptly crashes SunDew. The trip
    that set the NeWS decade in motion.
 
+7. **Gerbil at JSOL** — photo in [media/mike-gallaher-gerbil.jpg](media/mike-gallaher-gerbil.jpg);
+   RMS also in the matching group shot ([../richard-stallman/media/rms-gerbil-jsol.jpg](../richard-stallman/media/rms-gerbil-jsol.jpg)).
+   Period con humor; keep the public caption mild.
+
 ↑ [README](README.md) · [invitation](invitation.md)

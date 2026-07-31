@@ -1,0 +1,79 @@
+# Richard Stallman — great quotes collection
+# Verified lines with provenance. Add new finds; never invent attributions.
+
+collection:
+  id: rms-great-quotes
+  curated: 2026-07-31
+  rule: "Verbatim + source. Paraphrases marked paraphrase: true and parked in seek list."
+
+quotes:
+
+  - id: fix-by-doing-1989
+    text: |
+      In general, the way for a problem to be fixed is for someone who knows
+      how to fix it right simply to do so. Any solution that involves
+      discussion should be avoided except as a last resort, because it is
+      inefficient.
+    date: 1989-09
+    context: |
+      Emacs newsgroups; VM/Gnus fighting over overlay-arrow. Forwarded by
+      Dale (drw@BOURBAKI.MIT.EDU) as "An interesting bit of philosophy from RMS"
+      to tanstaafl@ucbvax.Berkeley.EDU, 11 September 1989.
+    from: rms@AI.MIT.EDU
+    archived_in: DonHopkins/temp/rms-prompts.txt (~L2492-2495)
+    tags: [philosophy, efficiency, practice, emacs]
+    why_keep: |
+      Closest verified match to Don's remembered paraphrase about the one
+      person who knows how to do something being too busy -- same spirit:
+      doing beats talking; discussion does not manufacture capacity.
+
+  - id: copyleft-naming-hopkins
+    text: |
+      In 1984 or 1985, Don Hopkins (a very imaginative fellow) mailed me a
+      letter. On the envelope he had written several amusing sayings,
+      including this one: 'Copyleft—all rights reversed.' I used the word
+      'copyleft' to name the distribution concept I was developing at the time.
+    source_url: https://www.donhopkins.com/home/copyleft/
+    also: The GNU Project essay
+    tags: [copyleft, don-hopkins, naming]
+    why_keep: "Primary naming provenance for the term and the parrot's name."
+
+  - id: gnu-pronunciation
+    text: |
+      "GNU" is pronounced as one syllable with a hard g, like "grew" but
+      with n instead of r.
+    source: speaking info packet / rider
+    tags: [gnu, pronunciation, rider]
+    why_keep: "Canonical pronunciation; always honor in show materials."
+
+  - id: skype-sig
+    text: |
+      Skype: No way! That's nonfree (freedom-denying) software.
+      Use free telephony.
+    source: RMS email signature (recurring)
+    tags: [free-software, telephony, rider]
+    why_keep: "Contact hygiene; matches contact-channels.yml."
+
+  - id: do-not-buy-a-parrot
+    text: |
+      DON'T buy a parrot figuring that it will be a fun surprise for me.
+      To acquire a parrot is a major decision: it is likely to outlive you.
+    source: speaking rider / info packet
+    archive: https://github.com/ddol/rre-rms
+    press: https://gizmodo.com/please-do-not-buy-richard-stallman-a-parrot-and-other-r-5853729
+    tags: [parrot, rider, ethics]
+    why_keep: "The clause we accommodate with an ethical virtual parrot instead."
+
+seek:
+  - paraphrase: |
+      Sometimes there is only one person who knows how to do something and
+      they are too busy to do it, and talking about it won't make them less
+      busy or make it happen.
+    status: not_found_in_rms-prompts.txt_2026-07-31
+    nearest_verified: fix-by-doing-1989
+    action: "Ask RMS if he recalls saying this; if yes, capture primary source."
+
+see_also:
+  - ../ideas.md
+  - rider-and-parrot.md
+  - https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/QUOTES.yml

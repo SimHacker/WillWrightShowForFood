@@ -28,3 +28,13 @@ accepts:
   recording_formats:
     video: WebM VP8/VP9
     audio: Ogg Vorbis or Speex
+
+rider_accommodation:
+  summary: "Glad to accommodate. See sources/rider-and-parrot.md"
+  highlights:
+    - "Do not buy a real parrot as a surprise — offer ethical virtual Copyleft instead"
+    - "Tea OK; no spicy; no breakfast interrogation"
+    - "Plain ASCII; ask before files >100k"
+    - "free software / GNU/Linux wording in all publicity"
+  rider_archive: https://github.com/ddol/rre-rms
+  virtual_parrot: https://github.com/SimHacker/tmnn7-8/blob/main/analysis/characters/StIGNUcius/parrot-copyleft.yml

@@ -1,0 +1,51 @@
+# RMS room — pull-in gaps
+# Things not yet fully archived / verified. Work the list; strike when done.
+
+gaps:
+
+  - id: save-rms-images
+    status: in_progress_31_jul_2026
+    what: "Save RMS photographs into characters/richard-stallman/media/"
+    done_this_batch:
+      - media/parrot-love.jpg
+      - media/parrot-love-rre-rms-repo.jpg
+      - media/rms-gerbil-jsol.jpg
+    still_wanted:
+      - "Official stallman.org black-and-white press photo (rms-bw.jpeg) if license allows"
+      - "Any additional parrot photos Don holds"
+      - "JSOL / SF-con group shots with clear consent for third parties"
+    note: "Always add save-rms-images work here when new photos surface."
+
+  - id: busy-person-paraphrase
+    status: seeking_primary
+    paraphrase: |
+      Sometimes there is only one person who knows how to do something and they
+      are too busy to do it, and talking about it won't make them less busy or
+      make it happen.
+    nearest: sources/great-quotes.yml#fix-by-doing-1989
+    action: "Ask RMS on air or by email whether he recalls this wording."
+
+  - id: fannish-inquisition-primary
+    status: harvest_queued
+    what: "RMS's own Fannish Inquisition / ESR account from email harvest"
+    private_source: DonHopkins/temp/rms-prompts.txt (~L63187-63224)
+    action: "Extract verified lines into sources/ when tone-checked."
+
+  - id: stolen-sperm-verification
+    status: hold_private
+    what: "Don asked RMS to verify a quote; do not publish as verified until reply."
+
+  - id: more-rider-fulltexts
+    status: optional
+    what: "Newer rider copies after 2011 for rre-rms-style archive in sources/"
+    upstream: https://github.com/ddol/rre-rms
+
+  - id: virtual-parrot-training-log
+    status: planned
+    what: "If RMS trains Copyleft, log approved phrases here or in menagerie overlay."
+
+completed_recently:
+  - "Latent Trolls email archived (sources/2026-07-30-latent-trolls.md)"
+  - "Warm invitation refreshed with rider + virtual parrot (invitation.md)"
+  - "Great quotes collection started (sources/great-quotes.yml)"
+  - "Rider/parrot accommodation note (sources/rider-and-parrot.md)"
