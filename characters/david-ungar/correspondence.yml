@@ -15,7 +15,7 @@ gist: |
   dynamic deoptimization, mirrors. He was **very open and influential**; Don says he deserves
   huge credit for where we are today — Self doesn't run on everybody's phone, but **in spirit it
   does** (JavaScript, HotSpot, MOOLLM's `# import self from self`). Stage Magic → semantic pyramid;
-  Idea Scavenging → character persistence; Dynamic Depessimization → MOOLLM's optimistic simplification.
+  Idea Scavenging → character persistence; Dynamic Pessimization (pet name for dynamic deoptimization) → MOOLLM's optimistic simplification.
   Jul 2026: Amanda Walker's LinkedIn post (found spiral-bound Self manual) → Urs → Ungar public
   reply (Russell Allen / SIC / Self IDE / Vision Pro exploratory hope) — warm public reunion.
 

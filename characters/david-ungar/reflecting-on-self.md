@@ -50,7 +50,7 @@ Full rant with receipts: [`../david-rosenthal/slots-all-the-way-down.md`](../dav
 | Mirrors | reflection / introspection protocols |
 | Stage Magic Principle | GLANCE → CARD → SKILL → README pyramid |
 | Idea Scavenging | persistent characters + skills |
-| Dynamic deoptimization | Dynamic Depessimization — reveal complexity when assumptions break |
+| Dynamic deoptimization | Dynamic Pessimization (Don's pet name — pessimization as a synonym for deoptimization) — reveal complexity when assumptions break |
 
 ## Segment menu (David picks)
 
