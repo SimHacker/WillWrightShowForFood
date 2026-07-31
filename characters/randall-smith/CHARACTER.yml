@@ -1,0 +1,71 @@
+# Randall B. Smith — invitation portrayal. NOT Randall B. Smith.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: randall-smith
+  name: "Randall B. Smith"
+  type: invitation
+  signifier: "🪄"
+  status: living
+  field: "Self co-creator (with Ungar) — The Power of Simplicity; Alternate Reality Kit (literalism vs magic); Us subjective programming; Kansas shared world; Morphic (with Maloney) → Squeak lineage"
+  home: characters/randall-smith/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/david-ungar/
+  also_shows: [repo-shows/openlaszlo/]
+  channel: "LinkedIn or via David Ungar"
+  note: "Invite alongside David Ungar and Urs Hölzle — trio option on Narcissa's Mirror: the two designers plus the implementer. Warm path: Jul 2026 Self-manual LinkedIn reunion; Ungar's standing 'you (and Urs, and Randall)' credit in his invitation."
+
+bio:
+  summary: |
+    **Randall B. Smith** — co-creator of **Self** with David Ungar; co-author of
+    **The Power of Simplicity** (OOPSLA 1987) and **Programming as an Experience:
+    The Inspiration for Self** (ECOOP 1995). Before Self, at Xerox PARC, he built the
+    **Alternate Reality Kit (ARK)** — a physics-based animated world where simulation
+    objects carry mass and velocity and you program by grabbing things — and wrote the
+    CHI 1987 paper naming the **tension between literalism and magic** that UI designers
+    have been quoting ever since. At Sun Labs with Ungar: **Us** (subjective
+    object-oriented programming — one object, many perspectives), the **Self 4.0**
+    environment, **Kansas** (a shared flat world so big everyone lives in one space —
+    used for distance-learning experiments), and **Morphic** (with John Maloney), the
+    direct-manipulation UI framework that jumped to **Squeak** and shaped Etoys and the
+    live-objects world after it. Physicist by training (Ph.D. UC Davis); Sun Labs
+    Distinguished Engineer; later collaborative virtual worlds at Sun Labs.
+  don_credit: |
+    Don's Self credit always names both designers: "you (and Urs, and Randall)."
+    ARK's literalism-vs-magic tension is load-bearing in Don's UI writing — pie menus
+    are a magic act wearing a literal costume. Morphic is the bridge from Self's UI to
+    the Squeak/Etoys lineage Don keeps on the show's family tree; Kansas prefigures
+    every shared-world microworld MOOLLM builds in directories.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Self_(programming_language)"
+  web:
+    - { title: "Self: The Power of Simplicity (Ungar & Smith, OOPSLA 1987)", url: "https://bibliography.selflanguage.org/self-power.html" }
+    - { title: "Experiences with the Alternate Reality Kit — tension between literalism and magic (CHI 1987)", url: "https://dl.acm.org/doi/10.1145/29933.30861" }
+    - { title: "Programming as an Experience: The Inspiration for Self (Smith & Ungar, ECOOP 1995)", url: "https://bibliography.selflanguage.org/programming-as-experience.html" }
+    - { title: "Us: A Subjective Language (Smith & Ungar)", url: "https://bibliography.selflanguage.org/us.html" }
+    - { title: "Directness and Liveness in the Morphic UI Framework (Maloney & Smith, UIST 1995)", url: "https://dl.acm.org/doi/10.1145/215585.215636" }
+    - { title: "Self bibliography", url: "https://bibliography.selflanguage.org/" }
+  papers:
+    - { title: "The Power of Simplicity", url: "https://bibliography.selflanguage.org/self-power.html" }
+    - { title: "Experiences with the Alternate Reality Kit (CHI+GI 1987)", url: "https://dl.acm.org/doi/10.1145/29933.30861" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invitation — trio with Ungar and Urs" }
+  - { path: ideas.md, why: "Conversation hooks — ARK, magic vs literalism, Us, Kansas, Morphic" }
+  - { path: ../david-ungar/, why: "Co-creator; Narcissa's Mirror trio; Jul 2026 reunion thread" }
+  - { path: ../urs-hoelzle/, why: "The implementation half — trio guest" }
+  - { path: ../david-ungar/sources/2026-07-linkedin-self-manual-thread.md, why: "The reunion spark, archived" }
+  - { path: ../amanda-walker/, why: "Found the manual" }
+  - { path: ../dan-ingalls/, why: "Squeak — where Morphic landed" }
+  - { path: ../../repo-shows/david-ungar/, why: "Primary show — join as trio" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

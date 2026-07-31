@@ -47,6 +47,7 @@ dream_segments:
 
 pairings:
   - { with: ../../characters/urs-hoelzle/, why: "★ PAIR — design half + implementation half: Ungar & Smith's simplicity, Hölzle's PICs/deopt/SIC; '30 versions' manual story; SIC alive on 64-bit Macs (Russell Allen); invited Jul 2026 alongside David" }
+  - { with: ../../characters/randall-smith/, why: "★ TRIO — the other designer: Power of Simplicity co-author; ARK literalism-vs-magic; Us; Kansas; Morphic → Squeak. Both designers + the implementer at one table" }
   - { with: ../../characters/amanda-walker/, why: "Cameo — she found the manual that lit the Jul 2026 reunion" }
   - { with: david-rosenthal/slots-all-the-way-down.md, why: "Rosetta table — Self as clean prototype pole; Dave Ungar section" }
   - { with: alan-kay-microworld.yml, why: "Kay lineage — messaging + late binding; Ungar as Self branch" }
