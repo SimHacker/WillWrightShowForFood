@@ -24,6 +24,12 @@ From the same historical thread (via Owen Densmore → Don):
 
 Brian's **Scribe** (1980) — bold/italic as concepts, not device commands — same era as Interpress/PostScript wars; influences LaTeX/HTML thinking. Optional tangent if the show wants "documents as programs" vs "documents as data."
 
+Trivia with legs: the famous **skull-and-crossbones ASCII art** guarding the redisplay code
+in Gosling Emacs (*"If you think you understand it, You Don't, So Look Again"*) originally
+came from Scribe — uncopyrighted, and still sailing. Receipts and the art itself:
+[`../james-gosling/sources/2020-04-12-hn-redisplay-algorithm.md`](../james-gosling/sources/2020-04-12-hn-redisplay-algorithm.md).
+Cross-guest hook with [James Gosling](../james-gosling/README.md).
+
 ## Usenet backbone maps
 
 Iconic ASCII topology maps — Brian as infrastructure documentarian. Light gag: "distill the network."

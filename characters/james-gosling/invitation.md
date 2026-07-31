@@ -34,6 +34,13 @@ Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
   structure*; why it felt like AJAX before AJAX; what you'd revive in a browser today.
 - **Gosling Emacs → UniPress → GNU Emacs** — MockLisp and the *"largest number of cheesy little
   extension languages"* lineage; constraints at the console.
+- **The redisplay algorithm, skull and crossbones and all** — your 1981 paper is
+  [archived in the repo](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/EmacsRedisplayAlgorithm.pdf):
+  string-to-string correction spent on escape codes and 300-baud modems, 0.004 CPU seconds per
+  keystroke on a VAX 11/780. People still link
+  [my HN walkthrough](https://news.ycombinator.com/item?id=22849522) as their rabbit-hole
+  entrance. Bonus trivia to confirm on air: the skull-and-crossbones over the display code
+  came from **Brian Reid's Scribe** — and Brian is an invited guest of this show too.
 - **PDP-8 hotrod muscle car** — I love this photo. Young you, arms crossed, **satisfied**, in front
   of a fully loaded DEC rig — switches, dual DECtape, patch bays. Not a glass-room terminal; *your*
   iron. **I'd love to ask you about it on air:** whose rig, what you were running, what had just
@@ -88,6 +95,7 @@ NeWS reunion can be one long episode or a short series — your call.
 | **PDP-8 hotrod photo + sidecar** | [`media/gosling-young-pdp8-hotrod.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) |
 | **NeWS trail** | [`send-code-not-commands`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/send-code-not-commands.md) |
 | **The lander comment thread** | [`sources/2026-07-31-linkedin-retirement-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/2026-07-31-linkedin-retirement-thread.md) |
+| **Your redisplay paper (1981)** | [`sources/EmacsRedisplayAlgorithm.pdf`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/EmacsRedisplayAlgorithm.pdf) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

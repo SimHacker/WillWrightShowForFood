@@ -77,6 +77,27 @@ volunteers to be on it. Warm-up material from the r/programming reception
 - **The 3-month Google stint** — thought the monorepo was doomed, wanted Git in 2011. Which
   prognostications panned out? (Ask, don't ambush.)
 
+### 6. The redisplay algorithm — skull and crossbones
+*A Redisplay Algorithm* (1981) — archived in the repo:
+[`sources/EmacsRedisplayAlgorithm.pdf`](sources/EmacsRedisplayAlgorithm.pdf). Dynamic
+programming through a cost matrix of string edit operations — string-to-string correction
+(Wagner–Fischer) applied to terminal escape codes, insert/delete line costs, padding for slow
+terminals. Full-screen redraw in 0.12s CPU on a VAX 11/780; 0.004 CPU seconds per keystroke.
+Don's HN walkthrough (which strangers still link as their rabbit-hole entrance):
+[`sources/2020-04-12-hn-redisplay-algorithm.md`](sources/2020-04-12-hn-redisplay-algorithm.md).
+
+On-air threads:
+
+- The famous **skull-and-crossbones** warning over the display code — *"If you think you
+  understand it, You Don't, So Look Again."* Trivia with legs: the ASCII art originally came
+  from **Brian Reid's Scribe** (uncopyrighted) — and [Brian Reid](../brian-reid/README.md) is
+  a PostScript-lineage guest of this show. Scribe → Gosling Emacs → this repo.
+- Redisplay as proto-diff: same math as Levenshtein/diff, spent on 300-baud modems. When did
+  clever become overkill — and what's today's equivalent of the cost matrix (React
+  reconciliation says hi)?
+- Chris Torek's "severe munging and destruction" credit line in the UMD `display.c` — code
+  archaeology as comedy.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
