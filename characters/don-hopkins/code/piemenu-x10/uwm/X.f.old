@@ -1,0 +1,24 @@
+create X.f
+
+alias Window long
+alias Font long
+alias Bitmap long
+alias Pixmap long
+alias Cursor long
+alias Locator long
+
+struct ( Vertex )
+    short vertex_x
+    short vertex_y
+    short vertex_flags
+constant /Vertex
+: Vertex /Vertex field ;
+
+struct ( ColorDef )
+    short colordef_pixel
+    short colordef_red
+    short colordef_green
+    short colordef_blue
+constant /ColorDef
+: ColorDef /ColorDef field ;
+

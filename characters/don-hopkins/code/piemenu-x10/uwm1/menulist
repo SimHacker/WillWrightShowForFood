@@ -1,0 +1,43 @@
+' do-demo	" Demo PullDown Menu"		menu-header DemoPullDown-mh
+' do-demo	" Demo Pie Menu"		menu-header DemoPie-mh
+' do-demo	" Practice PullDown Menu"	menu-header PracticePullDown-mh
+' do-demo	" Practice Pie Menu"		menu-header PracticePie-mh
+' do-record	" PL1"				menu-header PL1-mh
+' do-record	" PL2"				menu-header PL2-mh
+' do-record	" PL3"				menu-header PL3-mh
+' do-record	" PL4"				menu-header PL4-mh
+' do-record	" PL5"				menu-header PL5-mh
+' do-record	" PO1"				menu-header PO1-mh
+' do-record	" PO2"				menu-header PO2-mh
+' do-record	" PO3"				menu-header PO3-mh
+' do-record	" PO4"				menu-header PO4-mh
+' do-record	" PO5"				menu-header PO5-mh
+' do-record	" PP1"				menu-header PP1-mh
+' do-record	" PP2"				menu-header PP2-mh
+' do-record	" PP3"				menu-header PP3-mh
+' do-record	" PP4"				menu-header PP4-mh
+' do-record	" PP5"				menu-header PP5-mh
+' do-record	" LL1"				menu-header LL1-mh
+' do-record	" LL2"				menu-header LL2-mh
+' do-record	" LL3"				menu-header LL3-mh
+' do-record	" LL4"				menu-header LL4-mh
+' do-record	" LL5"				menu-header LL5-mh
+' do-record	" LO1"				menu-header LO1-mh
+' do-record	" LO2"				menu-header LO2-mh
+' do-record	" LO3"				menu-header LO3-mh
+' do-record	" LO4"				menu-header LO4-mh
+' do-record	" LO5"				menu-header LO5-mh
+' do-record	" LP1"				menu-header LP1-mh
+' do-record	" LP2"				menu-header LP2-mh
+' do-record	" LP3"				menu-header LP3-mh
+' do-record	" LP4"				menu-header LP4-mh
+' do-record	" LP5"				menu-header LP5-mh
+
+:case testmenu
+  PL1-mh PL2-mh PL3-mh PL4-mh PL5-mh
+  PO1-mh PO2-mh PO3-mh PO4-mh PO5-mh
+  PP1-mh PP2-mh PP3-mh PP4-mh PP5-mh
+  LL1-mh LL2-mh LL3-mh LL4-mh LL5-mh
+  LO1-mh LO2-mh LO3-mh LO4-mh LO5-mh
+  LP1-mh LP2-mh LP3-mh LP4-mh LP5-mh
+;

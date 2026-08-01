@@ -1,0 +1,69 @@
+From don@brillig.umd.edu  Sun Aug 27 15:07:52 1989
+Date: Sun, 27 Aug 89 15:07:52 -0400
+To: NeWS-makers@brillig.umd.edu
+Subject: A PostScript interpreter written in PostScript
+From: Don Hopkins <don@brillig.umd.edu>
+Sender: NeWS-makers-request@brillig.umd.edu (Don Hopkins)
+
+Obvious Question:
+  Why would anybody ever write a PostScript interpreter in PostScript?
+
+Possible Answers:
+  To use as a debugging tool.
+  To trace and single step through the execution of PostScript code.
+  To serve as a basis for PostScript algorithm animation.
+  To gain a deeper understanding of how PostScript works.
+  To try out some ideas from Structure and Interpreteration.
+  To experiment with extensions to the PostScript language.
+  To demonstrate that PostScript isn't just for breakfast any more.
+  To make PostScript run even slower (but thicker).
+  To avoid programming in C (the portable assembly language of the 80's).
+  To use to interpret its self.
+  To have something nerdish to talk about at parties.
+
+The meta-interpreter has its own meta-execution stack, a PostScript
+array, onto which it pushes continuations for control structures.
+(forall, loop, stopped, etc...)  The continuations are represented as
+dictionaries in which the state needed by the control structure is
+stored (plus some other info to help with debugging), as well as a
+/continue function, and a /continuation type.
+
+Before executing any operator, the meta-interpreter looks to see if
+it's defined in the iexec-operators dict, and if it is, the associated
+procedure is executed instead. Since the meta-interpreter uses its own
+execution stack, any operator that effects the execution stack (loop,
+exit, exec, etc...)  must be redefined to use the meta-execution stack
+instead, so that the meta-interpreter can trace through the execution.
+The NeWS execution stack is just used to execute the code implementing
+the meta-interpreter -- the code being meta-interpreted uses the
+meta-execution stack. The MumbleFrotz function uses the NeWS execution
+stack to temporarily hold the state of the meta-interpreter (a dict)
+when it can't be on the dictionary stack, during the execution of
+primatives. (Or rather, it uses the execution stack of whatever
+interpreter is interpreting the meta-interpreter! ;-)
+
+Some things that are not implemented yet: error handling (which has a
+lot of potential for being useful :-), pathforall, countexecstack,
+tracing of the supersend primative in X11/NeWS. I can't think of a way
+to trace the execution of event manager callback procedures stored in
+interest Name and Action dictionaries, that awaitevent executes
+automatically before returning, short of wrapping calls to the
+interpreter around each of the callbacks (eeugh).
+
+The awaitevent operator is the only way to get an event, and sometimes
+it uses the NeWS execution stack, by pushing event callbacks onto it.
+This means they get executed by the NeWS interpreter without being
+traced. (Nothing bad happens, it's just invisible to the
+meta-interpreter.) Unfortunatly, I'd really like to be able to trace
+those...  What the meta-interpreter needs is a dumbawaitevent
+operator, that returns the callback instead of executing it (on
+purpose -- cf sjs's blankscreen comments ;-).
+
+Three things that inspired this implementation are: Crispin Goswell's
+paper, "An Implementation of PostScript", published in the book
+"WorkStations and Publication Systems", from Springer Verlag; Abelson
+and Sussman's "Structure and Interpretation of Computer Programs" from
+MIT Press; and hot steam forced violently past finely ground Cafe'
+Bellissimo, mixed with lots of steamed milk and brown sugar.
+
+	-Don

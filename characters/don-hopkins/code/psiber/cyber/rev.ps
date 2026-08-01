@@ -1,0 +1,20 @@
+/infile (still_can.ps) (r) file def
+3 {
+  infile 100 string readline pop
+  print (\n) print
+} repeat
+/i 0 def
+/foo {
+  currentfile readcanvas 
+  dup imagecanvas
+  gsave 
+    setcanvas
+    i (still/%.can) sprintf 
+    (showimage ) print dup print (\n) print
+    4 { pause } repeat
+    writecanvas
+  grestore
+  /i i 1 add def
+} def
+infile cvx exec
+

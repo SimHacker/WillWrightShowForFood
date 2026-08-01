@@ -1,0 +1,1902 @@
+%!
+% PostScript Structure CyberSpace
+% Copyright (C) 1988
+% By Don Hopkins
+% All rights reserved.
+% 
+% WARNING WARNING! DANGER! DANGER WILL ROBINSON! DANGER!
+%   This is *gross* code. I mean UUUUUGLY! I wrote it the week before Usenix.
+%   You're damn right it needs to be rewritten. But you get the idea, ehe?
+
+statusdict begin
+  0 setjobtimeout
+end
+
+systemdict begin
+
+%     systemdict /NeWSWindow known not
+%     { 
+%         (/usr/NeWS/clientsrc/client/nterm/NeWSwin.ps) LoadFile 
+%     } if
+% 
+%     systemdict /NeWSScrollbar known not
+%     { 
+%         (/usr/NeWS/clientsrc/client/nterm/NeWSSbar.ps) LoadFile 
+%     } if
+
+    systemdict /TextCanvas known not
+    { 
+        (/usr/NeWS/clientsrc/client/nterm/textcan.ps) LoadFile 
+    } if
+
+/StructItem LabeledItem
+dictbegin
+  /Shrink .8 def
+  /Pad 3 def
+  /StartPoint 14 def
+  /Point StartPoint def
+  /x 0 def
+  /y 0 def
+  /Levels 0 def
+  /DL null def
+  /ItemFrame 2 def
+  /ItemRadius 5 def
+  /ItemBorder 6 def
+  /ItemButton [PointButton MenuButton] def
+%  /FromX 0 def
+%  /FromY 0 def
+%  /ToX 0 def
+%  /ToY 0 def
+%  /PrevI null def
+%  /NextI null def
+  /StackI null def
+  /LayoutLock null def
+  /Meta false def
+  /Control false def
+  /Shift false def
+  /LastX 0 def
+  /LastY 0 def
+  /LastTime 0 def
+  /DX 0 def /DY 0 def
+  /TabX 0 def  /TabY 0 def  /TabWidth 0 def  /TabHeight 0 def
+  /PinX 0 def
+  /PinHeight 0 def
+  /DropShadow 6 def
+  /MyStack null def
+dictend
+classbegin
+  /DoubleClickTime 1 60 div def
+  /CanvasYFudge 2 store
+  /Sort? true def
+  /SlidePower .4 store
+  /SlideSpeed .05 60 div store
+  /MaxV .1 store
+  /LineGap 30 def
+  /ItemLabelFont /Helvetica-Bold findfont 14 scalefont def
+  /ItemFont /Courier findfont def
+  /ItemXFont /Courier-Oblique findfont def
+
+  /new { % Collection Index notifyproc parentcanvas => instance
+%    4 2 roll 2 copy get 1 index (%: %) sprintf % notify parent cont ind label
+    4 2 roll 2 copy get type (% \267) sprintf % notify parent cont ind label
+    5 1 roll 2 array astore % label notify parent object
+    3 1 roll /Right % label object notify parent loc
+    3 1 roll % label object loc notify parent
+    /new super send begin
+       ItemCanvas /Transparent false put
+       ItemCanvas /Retained true put
+       /LayoutLock createmonitor def
+    currentdict end
+  } def
+
+  /PaintItem {
+    ItemRadius label-bbox rrectpath
+    ItemFillColor setcolor fill
+    ItemFrame 0 gt {
+	ItemFrame ItemRadius label-bbox rrectframe
+	ItemBorderColor setcolor eofill
+    } if
+    ItemRadius object-bbox rrectpath
+    ItemFillColor setcolor fill
+    ItemFrame 0 gt {
+	ItemFrame ItemRadius object-bbox rrectframe
+	ItemBorderColor setcolor eofill
+    } if
+
+    ShowLabel
+    paint-struct
+  } store
+
+  /ClientDown {
+    CurrentEvent /Name get MenuButton eq {
+      show-struct-menu
+    } if
+  } def
+
+  /ClientUp {
+    CurrentEvent /Name get PointButton eq {
+      NotifyUser
+    } if
+    StopItem
+  } def
+
+  /PointMenu [ 
+      (2) (4) (6) (8) (10) (12) (14) (16) (18) (20) (22) (24) (28) (32) 
+    ] [
+      {currentkey cvi {/StartPoint exch def redo-layout} it send}
+    ] /new DefaultMenu send def
+
+  /LocationMenu [
+    (LeftBelow) (LeftAbove) (AboveLeft) (AboveRight)
+    (RightAbove) (RightBelow) (BelowRight) (BelowLeft)
+  ] [
+    { currentkey cvn
+      {/ObjectLoc exch def location 10 10 reshape damage-view}
+      it send}
+  ] /new DefaultMenu send store
+  LocationMenu /PieInitialAngle 360 16 div put
+
+  /ShrinkMenu [ 
+      (.1) (.2) (.3) (.4) (.5) (.6) (.7) (.8) (.9) (1)
+    ] [
+      {currentkey cvr {/Shrink exch def redo-layout} it send}
+    ] /new DefaultMenu send def
+
+  /StructMenu [
+    (Point...) PointMenu
+(---) {}
+    (Print) {/write-DL it send}
+    (Zap) {/Free it send}
+    (Shrink...) ShrinkMenu
+(---) {}
+    (Location...) LocationMenu
+    (Pack) {/pack it send}
+  ] /new DefaultMenu send store
+
+  /SubStructMenu [
+    (Load) {{ob /Obj get load-it} it send}
+(---) {}
+    (Clone) {{ob /Obj get copy-struct pop} it send}
+(---) {}
+    (Exec) {{ob /Obj get cvx exec-it} it send}
+(---) {}
+    (Paste) {{ob begin get-selection replace-substruct end
+              redo-layout} it send}
+(---) {}
+    ] /new DefaultMenu send
+  def
+
+  /exec-it { % obj => -
+    {execute-it} fork pop
+  } def
+
+/execute-it { % obj => -
+      { userdict begin gsave
+        /Execee exch def
+          PState setstate
+	clear
+	/PStack
+	StackI null ne {
+	  /GetStack items StackI get send
+	} { [] } ifelse
+	def
+	PStack aload pop
+	/Execee load
+	dup type /arraytype ne { exec } if
+	/PState currentstate store
+        count array astore /QStack exch store
+	StackI null ne {
+	  QStack /SetStack items StackI get send
+	} {
+	  % What do we do with the results of executing something 
+	  % that's not on a stack?
+% 	  QStack { % q
+% 	    true PStack { % q true p
+% 	      2 index eq {
+% 		  pop pop false exit
+% 	      } if
+% 	    } forall
+% 	    { copy-struct pop
+% 	    } if
+% 	  } forall
+	} ifelse
+	grestore end % userdict
+      } errored {
+	gsave
+	  framebuffer setcanvas
+	  currentcursorlocation 
+	  [ (Error: ) $error /errorname get (    %) sprintf
+	    (Command:) $error /command get (    %) sprintf ]
+	  popmsg
+	  2 60 div sleep killprocess
+	grestore
+      } if
+      pause pause pause
+  } def
+
+  /load-it { % obj => -
+    { load } errored {pop} {
+      copy-struct pop
+    } ifelse
+  } def
+
+    /get-selection { % - => obj
+	/PrimarySelection getselection 
+	dup null ne {
+	  dup /ContentsPostScript known {
+	    /ContentsPostScript get
+	  } {
+	    dup /ContentsAscii known {
+	      /ContentsAscii get
+	    } if
+	  } ifelse
+	} if
+    } def
+
+    /set-selection { % obj => -
+        20 dict begin
+	  /ContentsPostScript 1 index def
+	  /ContentsAscii exch cvstring def
+	  /SelectionObjSize 1 def
+	  /SelectionResponder null def
+	  /Canvas can def
+	  /SelectionHolder itemmgr def
+	  currentdict
+        end
+	/PrimarySelection setselection
+    } def
+
+  /show-struct-menu {
+    DL null ne {
+      ItemBegin
+	userdict /it self put
+	userdict /ob null put
+	gsave
+	  newpath label-bbox rectpath
+	  CurrentEvent begin XLocation YLocation end pointinpath
+	grestore
+	not {
+	  ObjectX ObjectY ObjectHeight add translate
+	  { userdict /ob currentdict put }
+	  CurrentEvent begin XLocation YLocation end
+	  DL search-struct
+	  pop pop pop
+	} if
+	userdict /ob get null eq {
+	  CurrentEvent /showat StructMenu send
+	} {
+	  CurrentEvent /showat SubStructMenu send
+	} ifelse
+      ItemEnd
+    } if
+  } store
+
+  /makestartinterests {
+    /makestartinterests super send
+    [ exch aload pop
+      /Connect {/ClientConnect /Self GetFromCurrentEvent send}
+      null ItemCanvas eventmgrinterest
+      dup /Exclusivity true put
+      dup /Self self PutInEventMgrInterest ]
+  } def
+
+  /scale-to-item { % normalX normalY => X Y
+    ItemHeight mul exch ItemWidth mul
+    location 4 -1 roll add 3 1 roll add exch
+  } def
+
+%   /FormsLoop? { % I => bool
+%     { dup null eq {pop false exit} if
+%       dup Index eq {pop true exit} if
+%       items exch get /PrevI get
+%     } loop
+%   } def
+
+   /ClientConnect {
+%    gsave
+%      CurrentEvent /ClientData get Index eq {
+%       /ThisI Index store
+%       DisconnectPrev
+%       DisconnectNext
+%       draw-connections
+%      } {
+%       /ThisI Index store
+%       DisconnectPrev
+%       DisconnectNext
+%       CurrentEvent begin
+% 	ItemCanvas setcanvas
+% 	/PrevI ClientData store
+% 	XLocation ItemWidth div 0 max 1 min
+% 	YLocation ItemHeight div 0 max 1 min
+%       end
+%       Index /ConnectNext items PrevI get send
+%       draw-connections
+%      } ifelse
+%    grestore
+   } def
+% 
+   /draw-connection {
+%     NextI null ne {
+%       FromX FromY scale-to-item
+%       2 copy 6 0 360 arc closepath fill
+%       newpath
+%       moveto
+%       ToX ToY /scale-to-item items NextI get send lineto
+%       stroke
+%     } if
+   } def
+% 
+%   /DisconnectNext {
+%     NextI null ne {
+%       items NextI get
+%       /NextI null def
+%       /DisconnectPrev exch send
+%     } if
+%   } def
+% 
+%   /DisconnectPrev {
+%     PrevI null ne {
+%       items PrevI get
+%       /PrevI null def
+%       /DisconnectNext exch send
+%     } if
+%   } def
+% 
+%   /ConnectNext { % X Y Index => -
+%     DisconnectNext
+%     /NextI exch def
+%     /ToY exch def /ToX exch def
+% %(Connected % to %\n)[Index NextI]dbgprintf
+%   } def
+ 
+  /reshape { % x y w h
+	/ItemHeight exch def /ItemWidth exch def
+
+	ItemWidth 0 eq ItemHeight 0 eq and {
+	  /DL null store
+	} if
+        ensure-DL
+
+        adjust-geometry
+
+	ItemWidth ItemHeight /reshape super send
+	gsave ItemCanvas setcanvas ItemFillColor fillcanvas grestore
+	location move
+  } def
+
+  /just-move {
+    /move super send
+  } def
+
+  /move { % x y
+	label-bbox /lh exch def /lw exch def % x y lx ly
+	2 index add /ly exch def % x y lx
+	2 index add /lx exch def % x y
+	ly 0 max /ClientHeight win send lh sub min ly sub add exch
+	lx 0 max /ClientWidth win send lw sub min lx sub add exch
+	/move super send
+	snaps-here? pop
+	Index ThisI eq {draw-connections} if
+	StackI null ne StackI Index ne and {
+	  /SortStack items StackI get send
+	} if
+  } store
+
+  /label-bbox { % x y w h
+    TabX TabY TabWidth TabHeight
+  } def
+
+  /tab-top { % - => y
+    location TabY add TabHeight add exch pop
+  } def
+
+  /tab-bottom { % - => y
+    location TabY add exch pop
+  } store
+
+  /label-rect { %  X Y w h
+    location TabY add exch TabX add exch TabWidth TabHeight
+  } def
+
+  /pin-rect { % X Y w h
+    location exch PinX add 3 sub exch % x y
+    PinHeight 0 lt {
+      PinHeight add
+    } if
+    ItemHeight PinHeight abs add
+    6 exch
+  } def
+
+  /pinned? { % y h => bool
+      location pop PinX add 3 1 roll % x y h
+      6 exch % x y w h
+%(X % Y % W % H % ... % % % %\n)[6 copy pop pop pin-rect]dbgprintf
+      pin-rect rectsoverlap
+%%      location exch pop 2 copy % y iy y iy
+%%      TabHeight sub dup PinHeight add min % y iy y bot
+%%      lt {pop pop false} { % y iy
+%%	ItemHeight add dup PinHeight add max % y top
+%%	gt {false} {true} ifelse
+%%      } ifelse
+  } store
+      
+  /object-bbox { % x y w h
+    ObjectX ItemBorder sub  ObjectY ItemBorder sub % x y
+    ObjectWidth ItemBorder dup add add % w
+    ObjectHeight ItemBorder dup add add % h
+  } def
+
+  /ItemPath {
+    ItemRadius label-bbox rrectpath
+    ItemRadius object-bbox rrectpath
+  } def
+
+    /AdjustItemSize { % - => - [uses item context]
+	ObjectLoc [
+	/Right /Left /RightBelow /RightAbove /LeftBelow /LeftAbove {
+	    /ItemWidth ItemBorder 3 mul ItemGap add
+		LabelWidth add ObjectWidth add def
+	    /ItemHeight ItemBorder 2 mul LabelHeight
+		ObjectHeight max add def
+	}
+	/Top /Bottom /AboveLeft /AboveRight /BelowLeft /BelowRight {
+	    /ItemWidth ItemBorder 2 mul LabelWidth ObjectWidth max add def
+	    /ItemHeight ItemBorder 3 mul ItemGap add
+		LabelHeight add ObjectHeight add def
+	}
+	] case
+    } store
+
+    /CalcObj&LabelXY { % - => - [uses item context]
+      ObjectLoc {
+	/RightAbove {
+	    /LabelX ItemBorder def /LabelY ItemBorder def
+	    /ObjectX ItemBorder dup add LabelWidth add ItemGap add def
+	    /ObjectY ItemHeight ObjectHeight sub 2 div def
+	    /TabX LabelX ItemBorder sub def /TabY LabelY ItemBorder sub def
+	    /TabWidth
+	      ItemBorder LabelWidth add ItemGap add ItemRadius dup add add def
+	    /TabHeight LabelHeight ItemBorder dup add add def }
+	/RightBelow /Right {
+	    /LabelX ItemBorder def
+	    /LabelY ItemHeight ItemBorder sub LabelHeight sub def
+	    /ObjectX ItemBorder dup add LabelWidth add ItemGap add def
+	    /ObjectY ItemHeight ObjectHeight sub 2 div def
+	    /TabX LabelX ItemBorder sub def /TabY LabelY ItemBorder sub def
+	    /TabWidth
+	      ItemBorder LabelWidth add ItemGap add ItemRadius dup add add def
+	    /TabHeight LabelHeight ItemBorder dup add add def }
+	/LeftAbove {
+	    /LabelX ItemBorder dup add  ItemGap add ObjectWidth add def
+	    /LabelY ItemBorder def
+	    /ObjectX ItemBorder def
+	    /ObjectY ItemHeight ObjectHeight sub 2 div def
+	    /TabX LabelX ItemGap sub ItemRadius dup add sub def
+	    /TabY LabelY ItemBorder sub def
+	    /TabWidth
+	      ItemRadius dup add ItemGap add LabelWidth add ItemBorder add def
+	    /TabHeight LabelHeight ItemBorder dup add add def }
+	/LeftBelow /Left {
+	    /LabelX ItemBorder dup add ItemGap add ObjectWidth add def
+	    /LabelY ItemHeight ItemBorder sub LabelHeight sub def
+	    /ObjectX ItemBorder def
+	    /ObjectY ItemHeight ObjectHeight sub 2 div def
+	    /TabX LabelX ItemGap sub ItemRadius dup add sub def
+	    /TabY LabelY ItemBorder sub def
+	    /TabWidth
+	      ItemRadius dup add ItemGap add LabelWidth add ItemBorder add def
+	    /TabHeight LabelHeight ItemBorder dup add add def }
+	/AboveRight /Top {
+	    /LabelX ItemBorder def /LabelY ItemBorder def
+	    /ObjectX ItemWidth ObjectWidth sub 2 div def
+	    /ObjectY ItemBorder dup add LabelHeight add ItemGap add def
+	    /TabX LabelX ItemBorder sub def /TabY LabelY ItemBorder sub def
+	    /TabWidth LabelWidth ItemBorder dup add add def
+	    /TabHeight
+	      ItemBorder LabelHeight add ItemGap add ItemRadius dup add add
+	    def }
+	/AboveLeft {
+	    /LabelX ItemWidth ItemBorder sub LabelWidth sub def
+	    /LabelY ItemBorder def
+	    /ObjectX ItemWidth ObjectWidth sub 2 div def
+	    /ObjectY ItemBorder dup add LabelHeight add ItemGap add def
+	    /TabX LabelX ItemBorder sub def /TabY LabelY ItemBorder sub def
+	    /TabWidth LabelWidth ItemBorder dup add add def
+	    /TabHeight
+	      ItemBorder LabelHeight add ItemGap add ItemRadius dup add add
+	    def }
+	/BelowRight /Bottom {
+	    /LabelX ItemBorder def
+	    /LabelY ItemBorder dup add ObjectHeight add ItemGap add def
+	    /ObjectX ItemWidth ObjectWidth sub 2 div def
+	    /ObjectY ItemBorder def
+	    /TabX LabelX ItemBorder sub def
+	    /TabY LabelY ItemGap sub ItemRadius dup add sub def
+	    /TabWidth LabelWidth ItemBorder dup add add def
+	    /TabHeight
+	      ItemRadius dup add ItemGap add LabelHeight add ItemBorder add
+	    def }
+	/BelowLeft {
+	    /LabelX ItemWidth ItemBorder sub LabelWidth sub def
+	    /LabelY ItemBorder dup add ObjectHeight add ItemGap add def
+	    /ObjectX ItemWidth ObjectWidth sub 2 div def
+	    /ObjectY ItemBorder def
+	    /TabX LabelX ItemBorder sub def
+	    /TabY LabelY ItemGap sub ItemRadius dup add sub def
+	    /TabWidth LabelWidth ItemBorder dup add add def
+	    /TabHeight
+	      ItemRadius dup add ItemGap add LabelHeight add ItemBorder add
+	    def }
+      } case
+      /PinX LabelX LabelWidth add 2 sub def
+    } def
+
+  /adjust-geometry {
+        /ItemLabel Collection Index get type (% \267) sprintf store
+        LabelSize /LabelHeight exch def /LabelWidth exch def
+        AdjustItemSize
+	CalcObj&LabelXY
+  } def
+
+  /Collection {
+    ItemObject 0 get cvlit
+  } def
+
+  /Container /Collection load def
+
+  /Index {
+    ItemObject 1 get cvlit
+  } def
+
+  /ensure-DL {
+    DL null eq {
+      Collection Index Levels grow-struct
+      /DL exch store
+      /ObjectWidth 0 store /ObjectHeight 0 store
+    } if
+    ObjectWidth 0 eq ObjectHeight 0 eq or { 
+        perform-layout
+    } if
+  } def
+
+  /paint-struct {
+    gsave
+      ensure-DL
+      ItemTextColor setcolor
+      ObjectX ObjectY ObjectHeight add translate
+      DL draw-struct
+    grestore
+  } def
+
+  /damage-view {
+    gsave
+      %ItemParent setcanvas bbox rectpath extenddamage
+      paint
+    grestore
+  } def
+
+  /search-struct { % proc x y dict => proc x y
+    begin
+      dup Y ge {
+        dup Y H add lt {
+%          Path setpath
+	  newpath X Y W H rectpath
+%(x % y % X % Y % W % H % \n)[3 index 3 index X Y W H ]dbgprintf
+	  2 copy pointinpath {
+	    2 index exec
+          } {
+            Branches null ne {
+	      Branches {
+		search-struct
+	      } forall
+	    } if
+	  } ifelse
+	} if
+      } if
+    end
+  } def
+
+  /click-popup {
+    DL null ne {
+     {
+      gsave
+        ItemCanvas setcanvas
+ 	ObjectX ObjectY ObjectHeight add translate
+	{ gsave
+	    framebuffer setcanvas
+	    currentcursorlocation [/Obj load I C (%[%]: %) sprintf] popmsg pop
+	  grestore }
+        CurrentEvent begin XLocation YLocation end
+        DL search-struct
+        pop pop pop
+      grestore
+     } fork pop
+    } if
+  } def
+
+  /replace-substruct { % obj => -
+    C I 3 -1 roll put
+    C I 0 grow-struct
+    begin
+      /Branches Branches
+      /C C /I I /L L
+      /Obj dup load /Str Str
+      /X X /Y Y /W W /H H
+    end
+    def def def def def  def def  def def def  def
+  } def
+
+  /grow-substruct { % l => -
+    /L exch def
+    /forbidden? {pop false} def
+    /Branches
+      C I L grow-struct
+      1 index get def
+    currentdict /forbidden? undef
+  } def
+
+  /update-shifts {
+	/Meta false store /Shift false store /Control false store
+	CurrentEvent /KeyState get {
+	  dup { 
+	    /Meta /Shift /Control {true store}
+	    /Default {pop}
+	  } case
+	} forall
+  } def
+
+  /click-point {
+    DL null ne {
+      ItemBegin
+        update-shifts
+	ItemCanvas setcanvas
+	CurrentEvent begin
+	  LastX XLocation sub dup mul LastY YLocation sub dup mul add
+	end
+	16 lt currenttime LastTime sub DoubleClickTime lt and {
+	  % multiple clicks
+	  ob null ne {
+	    click-open
+	  } if
+	  /LastTime currenttime store
+	} {
+	  % first click
+	  userdict /it self put
+	  userdict /ob null put
+	  DL begin Icon? end not {
+	    ObjectX ObjectY ObjectHeight add translate
+	    { userdict /ob currentdict put }
+	    CurrentEvent begin XLocation YLocation end
+	    DL search-struct
+	    pop pop pop
+	  } if
+	  userdict /ob get null eq {
+	    DL null ne {
+	      DL begin gsave
+	        /Icon? Icon? not def
+		Icon? {
+		  /OW ObjectWidth def
+		  /OH ObjectHeight def
+		  Font setfont Str stringbbox points2rect
+		  /IconH exch def /IconW exch def
+		  /ObjectWidth IconW store
+		  /ObjectHeight IconH store
+		} {
+		  /ObjectWidth OW store
+		  /ObjectHeight OH store
+		} ifelse
+	      grestore end
+	      redo-shape
+%	      redo-layout
+	    } if
+	    /LastTime 0 store
+	  } {
+	    ob /Obj get set-selection
+	    /LastTime currenttime store
+	  } ifelse
+	  ItemCanvas setcanvas
+	  CurrentEvent begin
+	    /LastX XLocation store  /LastY YLocation store
+	  end
+	} ifelse
+      ItemEnd
+    } if
+  } store
+
+  /Icon? false def
+
+  /click-open {
+    DL null ne {
+      gsave
+        DL /Icon? undef
+        ItemCanvas setcanvas
+ 	ObjectX ObjectY ObjectHeight add translate
+	ob begin
+	  L 0 eq Shift or {
+	    L 1 add grow-substruct
+	  } {
+	    /L 0 def
+	    /Branches null def
+	  } ifelse
+	end % ob
+	Meta not { /redo-layout self null pop send } if
+      grestore
+    } if
+  } def
+
+  /perform-layout {  
+    /xcurs /xcurs_m ItemCanvas setstandardcursor
+    LayoutLock {
+      /hourg /hourg_m ItemCanvas setstandardcursor
+      /ItemLabel Collection Index get type (% \267) sprintf store
+      init-format DL layout-struct
+      /ObjectHeight DL /Y get neg store
+      adjust-geometry 
+    } monitor
+    /ptr /ptr_m ItemCanvas setstandardcursor
+  } def
+
+  /redo-layout {
+    perform-layout
+    redo-shape
+  } def
+
+  /redo-shape {
+    location 10 10 reshape
+    damage-view
+  } def
+
+  /composite? { % obj => bool
+    type {
+      /arraytype /dicttype /canvastype
+      /processtype /eventtype /fonttype
+	{true}
+      /Default
+	{false}
+    } case
+  } def
+
+  /forbidden-dict 50 dict def
+  forbidden-dict begin
+    /Interests null def
+    /Process null def
+    /BuildChar null def
+    /Encoding null def
+    /WidthArray null def
+    /ParentDictArray null def
+    /ParentDict null def
+    /TopCanvas null def
+    /BottomCanvas null def
+    /TopChild null def
+    /CanvasAbove null def
+    /CanvasBelow null def
+    /Parent null def
+  end % forbidden-dict
+
+  /forbidden? {
+    forbidden-dict exch known
+  } def
+
+  /init-format {
+    /Point StartPoint def
+    /x 0 def
+    /y 0 def
+    /ObjectWidth 0 def
+    /ObjectHeight 0 def
+  } def
+
+  /LineHeight {
+    currentfont fontheight 1 add
+  } def
+
+  % Collection Index Levels => dict
+  /grow-struct { 
+    pause
+    20 dict begin
+      /L exch def
+      cvlit /I exch def cvlit /C exch def
+      /Obj C I get def
+      /Str /Obj load I (% = %) sprintf def
+      /X 0 def
+      /Y 0 def
+      /W 0 def
+      /H 0 def
+      /StrY 0 def
+      /Obj load composite?
+      I forbidden? not and
+      L 0 gt and {
+	/Obj load dup type /arraytype eq {
+	/Branches exch [ exch
+	    { pop /Obj load counttomark 1 sub L 1 sub grow-struct } forall
+	  ] def
+	} {
+	  /Branches exch [ exch
+	    { pop /Obj load exch L 1 sub grow-struct } forall
+	  ] Sort? {/by-name quicksort} if def
+	} ifelse
+      } {
+	/Branches null def
+      } ifelse
+    currentdict end
+  } def
+
+  /SortBy /by-name def
+
+  /by-name {
+    /Str get exch /Str get lt
+  } def
+
+  /layout-struct { % dict => -
+    pause
+    begin
+      /Str /Obj load I (% = %) sprintf def
+      /Obj load xcheck Point 10 ge and {
+        /Font ItemXFont Point scalefont def
+      } {
+        /Font ItemFont Point scalefont def
+      } ifelse
+      Font setfont
+      /X x def
+      /Y y def
+      /W Str stringwidth pop LineGap add def
+      Branches null eq { % Icon? or
+	/H LineHeight def
+      } {
+	/x x W add store
+	/Point Point Shrink mul store
+	Branches {
+	  layout-struct
+	} forall
+	/Point Point Shrink div store
+	/x x W sub store
+	0
+	Branches {
+	  /H get add
+	} forall
+	LineHeight max 1 max /H exch def
+      } ifelse
+      /Y Y H sub def
+      /StrY Y Font fontdescent add H LineHeight sub 2 div add def
+      /y Y store
+      /ObjectWidth ObjectWidth x W add LineGap sub max store
+    end
+  } def
+
+  % dict => -
+  /draw-struct {
+    pause
+    begin
+      Icon? {
+	gsave
+          Font setfont
+          0 Font fontdescent IconH sub
+	  moveto
+          Str show
+	  0 setgray
+	  -2 ItemRadius 0 IconH neg 1 add IconW IconH insetrrect rrectpath
+	  stroke
+	grestore
+      } {
+	show-obj
+	Branches null ne Icon? not and {
+	  X W add LineGap sub
+	  Y H 2 div add
+	  Branches length 0 ne {
+	    Branches 0 get begin
+	      2 copy moveto
+	      X Pad sub Y H add lineto
+	      W 0 rlineto
+	      stroke
+	    end
+	    Branches {
+	      begin
+		2 copy moveto
+		X Pad sub Y lineto
+		Pad dup add 0 rlineto
+		stroke
+	      currentdict end
+	      draw-struct
+	    } forall
+	    Branches dup length 1 sub get begin
+	      2 copy moveto
+	      X Pad sub Y lineto
+	      W 0 rlineto
+	      stroke
+	    end
+	  } if
+	  pop pop
+	} if
+      } ifelse
+    end
+  } store
+
+  /show-obj {
+     Font setfont
+     X StrY moveto
+     Str show
+  } def
+
+  /write-DL { %
+    { /f (DL.ps) (w) file def
+      f (%!\n) writestring
+      f (gsave 0 setgray 0 setlinewidth 20 20 translate\n) writestring
+      DL begin 
+        f H W (%%) (%BoundingBox: 0 0 % %\n) sprintf writestring
+      end
+      /cur-font-name null def
+      /cur-font-size 0 def
+      DL print-struct
+      f (grestore showpage\n) writestring
+      f closefile
+    } stopped pop
+  } def
+
+  /print-struct { % dict => -
+    pause
+    begin
+      Font /FontMatrix get 0 get
+      /Obj load xcheck ItemXFont ItemFont ifelse /FontName get
+      1 index cur-font-size eq 1 index cur-font-name eq and { pop pop } {
+        2 copy /cur-font-name exch store /cur-font-size exch store
+        (/% findfont % scalefont setfont\n) sprintf
+        f exch writestring
+      } ifelse
+      Font setfont
+      Font fontdescent
+      StrY ObjectHeight add  X
+      (% % moveto ) sprintf f exch writestring
+      Str ( (%) show\n) sprintf f exch writestring
+
+      Branches null ne Icon? not and {
+        X W add LineGap sub
+        Y H 2 div add ObjectHeight add
+	Branches {
+	  begin
+	    2 copy exch (% % moveto ) sprintf f exch writestring
+	    X Pad sub Y ObjectHeight add exch (% % lineto ) sprintf
+	    f exch writestring
+	    Pad 2 mul 0 exch (% % rlineto ) sprintf f exch writestring
+	    f (stroke\n) writestring
+	  currentdict end
+	  print-struct
+	} forall
+	Branches length 0 ne {
+	  Branches dup length 1 sub get begin
+	    2 copy exch (% % moveto ) sprintf f exch writestring
+	    X Pad sub Y H add ObjectHeight add exch (% % lineto ) sprintf
+	    f exch writestring
+	    Pad 2 mul 0 exch (% % rlineto ) sprintf f exch writestring
+	    f (  stroke\n) writestring
+	  end
+	} if
+	pop pop
+      } if
+    end
+  } def
+
+    % items backgroundcolor => - (interactively move item)
+    /moveinteractive {
+	ItemBegin
+	  10 dict begin
+	    /GA_constraint 0 def
+	    /GA_value /calc_GA_value load def
+	    currentcursorlocation
+	    /DY exch def /DX exch def
+	    currentcanvas mapcanvas false dragcanvas
+	  end
+	ItemEnd
+    } store
+
+  /SnapIn {
+    ThisI StackI ne {
+      StackI null ne {
+	Index /PopMe items StackI get send
+      } if
+      /StackI ThisI store
+      Index /PushMe items StackI get send
+    } if
+  } def
+
+  /SnapOut {
+    StackI null ne StackI Index ne and {
+      Index /PopMe items StackI get send
+      /StackI null store
+    } if
+  } def
+
+  /snaps-here? { % - => bool
+    ThisI null eq ThisI Index eq or {false} {
+      /pin-rect items ThisI get send
+      label-rect
+      rectsoverlap dup {
+        SnapIn
+      } {
+	SnapOut
+      } ifelse
+    } ifelse
+  } def
+
+  /PushMe {pop} def
+  /PopMe {pop} def
+
+  /calc_GA_value {
+    StackI Index eq { 
+      currentcursorlocation pop % cx
+    } {
+      StackI null eq {
+	snaps-here? {
+	  location
+	  pop DX add % ix
+	} {
+	  currentcursorlocation pop % cx
+	} ifelse
+      } {
+	  location TabY add TabHeight
+	  /pinned? items StackI get send not {
+	      SnapOut
+	      pop currentcursorlocation pop % cx
+	  } { % ix
+	    { location pop PinX add } items StackI get send % ItemX PinX
+	    PinX sub % ItemX ItemGoal
+	    exch 1 index exch sub % ItemGoal ItemDelta
+	    currentcursorlocation pop % ItemGoal ItemDelta CurX'
+	     2 index exch sub % ItemGoal ItemDelta CurDelta
+	    DX add dup abs TabWidth gt {
+		SnapOut
+		pop pop pop currentcursorlocation pop DX sub
+	    } {
+	        1 index abs 1 index abs gt {exch} if % ItemGoal Close Far
+		pop % ItemGoal Close
+	        .2 mul sub
+	    } ifelse
+	    DX add
+	  } ifelse
+      } ifelse
+    } ifelse
+  } store
+
+  /DrawHilite {
+    gsave can setcanvas
+      location CanvasYFudge add translate
+      ItemRadius object-bbox
+      4 -1 roll DropShadow add
+      4 -1 roll DropShadow sub
+      4 2 roll
+      rrectpath
+      .5 setgray fill
+      -3 ItemRadius label-bbox insetrrect rrectpath
+      2 setlinewidth 0 setgray stroke
+      PinHeight 0 ne {
+	1 setlinecap
+	2 setlinewidth
+	0 setgray
+	PinX 0 dup PinHeight add min 6 sub moveto
+	0 ItemHeight PinHeight abs add 12 add rlineto
+	stroke
+
+	1 setlinecap
+	6 setlinewidth
+	0 setgray
+
+	PinX 0 dup PinHeight add min moveto
+	0 ItemHeight PinHeight abs add rlineto
+
+	gsave stroke grestore
+	2 setlinewidth
+	1 setgray
+	stroke
+      } if
+    grestore
+  } store
+
+  /GetStack {
+    MyStack null eq {
+      /MyStack [] store
+    } if
+    MyStack
+  } def
+
+  /SetStack {
+    /MyStack exch store
+  } def
+
+  /NextPos { % - => x y
+    location % x y
+    label-bbox % X Y x y w h
+    exch pop add % X Y x y+h
+    3 -1 roll add % X x Y+y+h
+    exch 3 -1 roll add exch % X+x Y+y+h
+    exch PinX add exch
+  } def
+
+  /Free {
+    SnapOut
+    ItemCanvas /Retained false put
+    unmap
+    ItemLock {
+      /free-items [
+	free-items aload pop Index
+      ] store
+    } monitor
+  } def
+
+  /init-attributes {
+    {/ObjectWidth /DL /MyStack /Shrink /Point /PinHeight}
+    { InstanceVarDict 1 index get store } forall
+    /ObjectLoc /Right store
+    adjust-geometry
+  } store
+
+  % obj => -
+  /Reuse {
+    Collection Index 3 -1 roll put
+    ItemCanvas /Retained true put
+    init-attributes
+    ensure-DL
+    redo-layout
+  } store
+
+  /pack {
+    StackI null ne {
+      /PackStack items StackI get send
+    } if
+  } def
+
+classend def
+
+% ========================================================================
+
+userdict begin
+  /dialog-text null def
+  /dialog-can null def
+  /dialog-string () def
+end
+
+/TextStructItem StructItem
+dictbegin
+  /I null def
+dictend
+classbegin
+  /TextWidth 300 def
+  /TextHeight 100 def
+
+  /new {
+    /new super send begin
+      /MyStack [] def
+    currentdict end
+  } def
+
+  /kbd-reset {
+    /dialog-buf () store
+    [()(Reset!)()] true /writeatcaret dialog-text send
+  } def
+
+  /DialogMenu [
+    (Pack) {/PackStack it send}
+    (Reset) {/kbd-reset it send}
+  ] /new DefaultMenu send def
+
+  /show-struct-menu {
+    userdict /it self put
+    CurrentEvent /showat DialogMenu send
+  } def
+
+  /PushMe { % index => -
+    LayoutLock {
+      /I exch def
+      /MyStack [
+	MyStack aload pop I
+      ] store
+      SortStack
+    } monitor
+  } def
+
+  /SortStack {
+      MyStack {
+	/tab-top exch items exch get send exch
+	/tab-top exch items exch get send
+	lt
+      } quicksort pop
+  } store
+
+  /PopMe { % index => -
+    /i exch def
+    LayoutLock {
+      /MyStack [
+        MyStack {
+          dup i eq {pop} if
+        } forall
+      ] store
+    } monitor
+  } def
+
+  /SetStack { % stack => -
+    10 dict begin
+      /NewStack exch def
+      /OldStack 200 dict def
+      MyStack {
+	items 1 index get {Container Index get} exch send
+	OldStack 3 1 roll put
+      } forall
+      /MyStack [] store
+      NewStack {
+	/I null def
+	OldStack {
+	  2 index eq {
+	    /I exch def exit
+	  } {
+	    pop
+	  } ifelse
+	} forall
+	I null ne {
+	  pop
+	  OldStack I undef
+	  /MyStack [
+	    MyStack aload pop I
+	  ] store
+	} {
+	  /MyStack [
+	    MyStack aload length 3 add -1 roll copy-struct
+	  ] store
+	} ifelse
+      } forall
+      pause 
+      OldStack {
+        pop
+	items exch get
+	/Free exch send
+      } forall
+      /Y tab-top def
+      MyStack {
+        items exch get
+	Y { % PrevTop
+	  dup tab-bottom exch sub % PrevTop below
+	  dup 0 lt {
+	    location 2 index sub just-move
+	    pause pause
+	  } if
+	  pop pop tab-top
+	} 3 -1 roll send
+	/Y exch def
+      } forall
+      pin-rect %  x y w h
+      exch pop add exch pop
+      Y lt {
+	PackStack
+      } if
+      pause
+    end
+  } store
+
+  /GetStack {
+    MyStack {
+      {Container Index get} exch items exch get send
+    } forall
+    MyStack length array astore
+  } def
+
+  /PackStack {
+    10 dict begin
+      /Y tab-top def
+      MyStack {
+        items exch get
+	Y { % PrevTop
+	  dup tab-bottom exch sub % PrevTop below
+	  location 2 index sub just-move
+	  pause pause
+	  pop pop tab-top
+	} 3 -1 roll send
+	/Y exch def
+	pause pause
+      } forall
+    end
+    pause
+  } def
+
+  % x y
+  /NextStackPos {
+    MyStack length 0 eq {
+      NextPos
+    } {
+      MyStack dup length 1 sub get items exch get
+      /NextPos exch send
+    } ifelse
+  } store
+
+  /ClientExit {
+    CurrentEvent /KeyState get {
+      dup PointButton eq {
+	{
+	  ItemBegin
+	    /StackI Index store
+	    /ThisI Index store
+	    ItemCanvas setcanvas
+% 	    CurrentEvent begin
+% 	      /FromX XLocation ItemWidth div 0 max 1 min store
+% 	      /FromY YLocation ItemHeight div 0 max 1 min store
+% 	    end
+%	    FromX FromY scale-to-item
+	    location TabY add TabHeight 2 div add exch PinX add exch
+	    ItemParent createoverlay setcanvas
+	    { 2 setlinewidth exch pop x0 exch lineto }
+	    getanimated waitprocess aload pop % x y
+	    exch pop location exch pop sub
+	    dup 0 gt {ItemHeight sub 0 max} if
+	    /PinHeight exch store
+	    draw-connections
+%	    DisconnectNext
+%%	    createevent begin
+%%	      /Name /Connect def
+%%	      /ClientData Index def
+%%	      % WHY AREN'T XLocation and YLocation transformed right???
+%%	      gsave
+%%		framebuffer setcanvas currentcursorlocation
+%%		{ 
+%%		    FrameY BorderBottom add add exch
+%%		    FrameX BorderLeft add add exch
+%%		} win send 
+%%		/YLocation exch def
+%%		/XLocation exch def
+%%	      grestore
+%%	    currentdict end
+%%	    sendevent
+	  ItemEnd
+	} fork pop exit
+      } if
+    } forall
+    StopItem
+  } def
+
+  /paint-struct {
+    gsave
+      ensure-DL
+      dialog-can setcanvas
+      /fixdamage dialog-text send
+    grestore
+  } def
+
+  /reshape {
+    /reshape super send
+    gsave
+      ItemCanvas setcanvas
+      ObjectX ObjectY translate
+      0 0 TextWidth TextHeight rectpath dialog-can reshapecanvas
+      dialog-can /Mapped true put
+      /reshape dialog-text send
+    grestore
+  } def
+
+  /ensure-DL {
+    /ObjectWidth TextWidth def
+    /ObjectHeight TextHeight def
+    dialog-text null eq {
+userdict begin
+      /dialog-can ItemCanvas newcanvas def
+      /dialog-text 200 dialog-can /new TextCanvas send def
+      /dialog-string () def
+end
+      {
+	/KeyHitCallback { % key => -
+	    10 dict 
+	    begin
+		/key exch def
+		key {
+		    127 8 {
+			/getcaretpos dialog-text send
+			exch dup 1 gt {
+			    1 sub exch
+			    /movecaret dialog-text send
+			    /getcaretpos dialog-text send
+			    1 3 1 roll /deletestring dialog-text send
+			    /dialog-string dialog-string dup length 1 sub 0 exch
+			    getinterval store
+			} if
+		    } % backup
+		    23 { % werase
+			{
+			    /getcaretpos dialog-text send
+			    exch dup 1 gt {
+				1 sub exch
+				/movecaret dialog-text send
+				/getcaretpos dialog-text send
+				1 3 1 roll /deletestring dialog-text send
+				/dialog-string dialog-string dup length 1 sub 0 exch
+				getinterval store
+				dialog-string length 0 eq { 
+				    exit 
+				} if
+				dialog-string dup length 1 sub 1 getinterval
+				( ) eq {
+				    exit
+				} if
+			    } { 
+				exit 
+			    } ifelse
+			} loop
+		    }
+		    21 24 { 
+			/getcaretpos dialog-text send
+			dup 1 exch /deleteline dialog-text send
+			exch pop 1 exch
+			/movecaret dialog-text send
+			/dialog-string () store
+		    }
+		    13 { 
+			[() ()] true /writeatcaret dialog-text send 
+
+			dialog-string /dialog-enter dialog-item send
+
+			/dialog-string () store
+		    }
+		    10 { 
+			[() ()] true /writeatcaret dialog-text send 
+
+			dialog-string /dialog-newline dialog-item send
+
+			/dialog-string () store
+		    }
+		    3 {
+			/kbd-reset dialog-item send
+		    }
+		    /Default { 
+			[(s) dup 0 key put] true /writeatcaret dialog-text send
+			/dialog-string dialog-string (s) dup 0 key put append store
+		    }
+		} case
+	    end
+	} def
+	/InsertValueCallback { % string => -
+	    10 dict 
+	    begin
+		dialog-string /dialog-enter dialog-item send
+		/s exch def
+		/newlines 0 def
+		s {
+		    10 eq {
+			/newlines newlines 1 add def
+		    } if
+		} forall
+		/a newlines 1 add array def
+		0 1 newlines 1 sub {
+		    /i exch def
+		    s (\n) search pop
+		    /pre exch def
+		    pop
+		    /s exch def
+		    a i pre put
+		    pre (\n) append /dialog-enter dialog-item send
+		} for
+		a newlines s put
+
+		/dialog-string s store
+
+		a true /writeatcaret dialog-text send
+	} def
+
+	[()(Ready!)()] true /writeatcaret dialog-text send
+
+	oncaret
+      } dialog-text send
+    } if
+  } def
+
+  /destroy {
+    dialog-text null ne {
+      {{destroy} errored pop} dialog-text send
+    } if
+  } def
+
+classend def
+
+/destroy {} def
+
+/dialog-newline { % str => -
+  copy-struct pop
+} def
+
+/dialog-buf () def
+
+/dialog-enter { % str => -
+  /dialog-buf exch dialog-buf exch append (\n) append store
+  { dialog-buf
+    { token } errored {
+      kbd-reset exit
+    } {
+      { exch /dialog-buf exch store
+        Collection Index 2 index put
+        execute-it
+      } {exit} ifelse
+    } ifelse
+  } loop
+} def
+
+% ========================================================================
+
+% NeWS error handler using the object browser (NeWS1.1)
+%
+% Jeremy Huxtable
+%
+% Mon Jul 25 17:36:06 BST 1988
+
+/MyErrorDict dictbegin
+    StandardErrorNames { {MyErrorHandler} def } forall
+dictend def
+
+/MyErrorHandler {
+    % Must be careful with manipulating the stacks here, as otherwise
+    % our private stuff will appear in the browser!
+    /errordict OldErrorDict store
+    pop % Get rid of the "offending command" from stack
+    % create a dictionary of useful info. Note that we must get the
+    % process' stacks now as otherwise they disappear when the "killprocess"
+    % is done.
+    currentprocess /DictionaryStack get
+    7 dict begin
+	/DictionaryStack exch def
+	currentprocess /OperandStack get /OperandStack exch def
+	/ExecutionStack
+	    currentprocess /ExecutionStack get
+	    0 1 index length 4 sub getinterval
+	def % Remove this error handler from exec stack
+	/Interests currentprocess /Interests get def
+	/Error $error /errorname get def
+	/Executing $error /command get def
+	/Process currentprocess def
+	currentdict
+    end
+    /errordict MyErrorDict store
+} def
+
+/cvstring { % value => string
+    dup type /stringtype eq {
+	((%)) sprintf
+    } {
+	dup type /nametype eq 1 index xcheck not and {
+	    (/%) sprintf
+	} {
+	    100 string cvs
+	} ifelse
+    } ifelse
+} def
+
+/dirname {
+  ob begin
+    uniquecid dup 3 -1 roll
+    (dir2dict % % | psh) sprintf forkunix
+    [exch cidinterest1only] forkeventmgr waitprocess
+    replace-substruct 
+  end
+  redo-layout
+} store
+
+/filename {
+  (file2dict % | psh) sprintf forkunix
+} def
+
+end % systemdict
+
+  /Stack 256 array def
+  Stack 0 10 dict put
+  Stack 0 get begin
+    /Commands dictbegin
+      /A (systemdict /foo ParentDict put) def
+      /Break {/foo dbgbreak} def
+      /C (start-event-mgrs) def
+      /D null def
+      /E null def
+      /F null def
+      /G null def
+      /H null def
+    dictend def
+    /fb framebuffer def
+    /rm rootmenu def
+  end
+  Stack 1 (This is a test!!!) put
+/SP 0 def
+
+/ItemLock createmonitor def
+
+/items [] def
+
+/free-items [] def
+
+/find-item { % obj => i/null
+  ItemLock {
+    10 dict begin
+      /Obj cvlit def
+      /I 0 def
+      items {
+        {Container Index} exch send
+        Obj eq {exit} ifelse
+        /I I 1 add def
+      } forall
+      I items length eq {null} {I} ifelse
+    end
+  } monitor    
+} def
+
+/type-text {
+} store
+
+/createitems {
+  ItemLock {
+    /items [
+      Stack 0 {click-point} can
+	/new StructItem send
+      20 10 0 0 /reshape 5 index send
+      Stack 1 {type-text} can
+	/new TextStructItem send
+      20 50 0 0 /reshape 5 index send
+    ] def
+    /SP items length store
+    /dialog-item items 1 get store
+    {/PinHeight 600 def /StackI 1 def} dialog-item send
+    /ThisI 1 store
+  } monitor
+} def
+
+/dialog-item null def
+
+/slideitem { % items fillcolor item => -
+gsave
+    dup 4 1 roll		% item items fillcolor item
+    {ItemCanvas canvastotop
+     moveinteractive location move} exch send	% item
+%    draw-connections
+grestore
+} def
+
+/copy-struct { % obj => i
+  ItemLock {
+   20 dict begin
+    /Obj exch def
+    StackI null eq {
+      NextPos
+    } {
+      /NextStackPos items StackI get send
+    } ifelse
+    /NextY exch def /NextX exch def
+    free-items length 0 eq {
+      Stack SP /Obj load put
+      Stack SP {click-point} can
+        /new StructItem send
+      /It exch def
+      /items [
+        items aload pop
+        It
+      ] store
+      /I SP def
+      /SP SP 1 add store
+      createevent begin
+        /Name /UpdateInterests def
+        /Canvas ItemParent def
+        /ClientData I def
+      currentdict end sendevent
+    } {
+      /I free-items dup length 1 sub get def
+      /It items I get def
+      /free-items [
+        free-items aload pop pop
+      ] store
+      /Obj load /Reuse It send
+    } ifelse
+
+    NextX NextY
+    { 2 copy 20 20 reshape
+      exch PinX sub exch move
+      map damage-view
+    } It send
+    .1 60 div sleep
+    I
+   end
+  } monitor
+} store
+
+/layout-all {
+  gsave
+    items {
+	/redo-layout exch send
+    } forall
+    /ClientCanvas win send setcanvas
+    clippath extenddamage
+  grestore
+} def
+
+/slidemgr null def
+/itemmgr null def
+
+/FirstI null def
+/ThisI null def
+/PStack null def
+/QStack null def
+/PState currentstate def
+/Execee null def
+
+/connect-background {
+  ThisI null ne {
+    {DisconnectNext
+     /ThisI Index store} items ThisI get send
+    draw-connections
+  } if
+} def
+
+  /draw-connections {
+    gsave
+      can setcanvas
+      initclip
+      erasepage 0 setgray
+      2 setlinewidth
+      items {/draw-connection exch send} forall
+      ThisI null ne {
+	/DrawHilite items ThisI get send
+      } if
+    grestore
+  } store
+
+/update-slide-interests {
+  CurrentEvent /ClientData get % Index
+  items exch get % item
+  dup /ItemCanvas get	% item can
+  MiddleMouseButton [items FillColor	% item can name [ dict color
+  6 -1 roll /slideitem cvx] cvx	% can name proc
+  DownTransition 			% can name proc action
+  4 -1 roll eventmgrinterest		% interest
+  expressinterest
+} def
+
+/update-start-interests {
+  CurrentEvent /ClientData get % Index
+  items exch get % item
+  mark
+  [/makestartinterests 3 index send aload pop]
+  {dup xcheck {exec} {expressinterest} ifelse} forall
+  cleartomark
+  /paint exch send
+} def
+
+/start-event-mgrs {
+% Create event manager to slide around the items.
+% Create a bunch of interests to move the items.
+% Note we actually create toe call-back proc to have the arguments we need.
+% The proc looks like: {items color "thisitem" slideitem}.
+% We could also have used the interest's clientdata dict.
+    slidemgr null ne {slidemgr killprocess} if
+    /slidemgr [
+	items { % key item
+	    dup /ItemCanvas get	% item can
+	    MiddleMouseButton [items FillColor	% item can name [ dict color
+	    6 -1 roll /slideitem cvx] cvx	% can name proc
+	    DownTransition 			% can name proc action
+	    4 -1 roll eventmgrinterest		% interest
+	} forall
+        /UpdateInterests /update-slide-interests
+        null can eventmgrinterest
+    ] forkeventmgr store
+    itemmgr null ne {itemmgr killprocess} if
+    /itemmgr [
+      items iteminterests aload pop 
+      /UpdateInterests /update-start-interests
+      null can eventmgrinterest
+    ] forkeventmgr store
+} def
+
+/MyWindow DefaultWindow 
+dictbegin
+
+dictend
+classbegin
+  /CreateFrameInterests {
+    /CreateFrameInterests super send
+    FrameInterests begin
+      /ConnectEvent
+	  /Connect {connect-background}
+	  null ClientCanvas eventmgrinterest def
+    end
+  } def
+  /DestroyClient {
+    itemmgr type /processtype eq { itemmgr killprocess } if
+    slidemgr type /processtype eq { slidemgr killprocess } if
+    items {
+	/destroy exch send
+    } forall
+    /DestroyClient super send
+  } def
+classend def
+
+%
+% quicksort by Don Woods at Sun Microsystems, Inc.
+%
+/quicksort { % array proc => array (sorted, reuses same storage)
+10 dict begin
+    /Bigger? exch cvx def               % a b bigger? => t if a<b
+    dup quickrecur                      % start recursion
+end
+} def % quicksort
+
+/quickrecur { % array => --  sorts array in place, using Bigger? for comparisons
+    dup length dup 2 gt {               % A N
+	% the next lines (until but not incl /Key...) subsort three elements
+	% so we can use the median as the partitioning element; this improves
+	% performance for the case where the array is initially nearly sorted,
+	% but is not strictly necessary for the algorithm to work (it does
+	% seem to improve average runtime by about 10%)
+	2 copy 1 sub 2 copy 2 idiv 1 index 0    % A N A N-1 A (N-1)/2 A 0
+	6 copy get 5 1 roll get 3 1 roll get    % above & A[N-1] A[(N-1)/2] A[0]
+	2 copy Bigger? {exch} if                % subsort for three elements
+	3 1 roll 2 copy Bigger? {exch} if       %   ... (call them min mid max)
+	3 -1 roll 2 copy Bigger? {exch} if      %   ... subsort finished
+	9 index % A N A N-1 A (N-1)/2 A 0 min mid max N
+	3 eq {
+	    5 2 roll put 4 1 roll put put       % store min/mid/max back
+	    pop pop                             % pop A & N
+	} { % else store mid at 0, max at N-1, min at (N-1)/2, then partition
+	    3 -1 roll 5 2 roll put exch 4 1 roll put put        % A N
+	    /Key 2 index 0 get def              % partitioning value
+	    0                                   % A N 0, also known as A j i
+	    {   % main partitioning loop
+		% incr i until i=j or A[i]>=A[0]; note A[j] is rangecheck
+		{   1 add 2 copy gt {           % i++; A j i j>i?
+			dup 3 index exch get    % A j i A[i]
+			Key exch Bigger? not {exit} if
+		    } {exit} ifelse
+		} loop
+		% decr j until A[j]<=A[0]; happens at j=i-1 if not sooner
+		exch {                          % A i j
+		    1 sub dup 3 index exch get  % A i j A[j]
+		    Key Bigger? not {exit} if
+		} loop
+		2 copy gt {exit} if             % if i>=j, finished partition
+		% swap A[j] & A[i]; stack has: A i j
+		2 index 4 copy exch get         % A i j A A i A[j]
+		4 1 roll get                    % A i j A[j] A A[i]
+		3 index exch put                % A i j A[j]
+		4 copy exch pop put pop exch    % A j i
+	    } loop
+	    % finish partition by exchanging A[j] with A[0]; stack has: A i j
+	    exch pop 2 copy 4 copy get          % A j A j A j A[j]
+	    exch pop 0 exch put Key put         % A j
+	    % now recur on A[0..j-1] and A[j+1..N-1]
+	    2 copy 1 add 1 index length 1 index sub     % A j A j+1 N-1
+	    getinterval 3 1 roll 0 exch getinterval     % A[j+1..N-1] A[0..j-1]
+	    2 copy length exch length gt {exch} if      % put smaller on top
+	    quickrecur quickrecur       % tail recursion avoids deep stack
+	} ifelse % =3 or >3 elements
+    } { % handle 1- and 2-element cases specially for efficiency
+	2 eq {
+	    dup aload pop Bigger? {aload 3 1 roll exch 3 -1 roll astore} if
+	    } if
+	pop     % pop the array
+    } ifelse
+} def % quickrecur
+
+
+    /FillColor 1 1 1 rgbcolor def
+
+    /win framebuffer /new MyWindow send def	% Create a window
+    {	/PaintClient {
+          draw-connections items paintitems
+	} def
+	/FrameLabel (PostScript Structure CyberSpace) def
+	/IconLabel (CyberSpace) def
+	/IconImage /galaxy def
+        /ClientMenu [
+	  (Layout all) { layout-all }
+        ] /new DefaultMenu send def
+    } win send						% Install my stuff.
+    0 0 600 800 /reshape win send			% Shape it.
+    /can win /ClientCanvas get def			% Get the window canvas
+    can /Transparent false put
+    can /Retained true put
+    
+% Create all the items.
+    createitems
+    
+    
+% Now let the user specify the window's size and position.  Then map
+% the window.  (See above)  Then activate the items.
+%    /ptr /ptr_m framebuffer setstandardcursor
+
+%    /reshapefromuser win send	% Reshape from user.
+    /map win send		% Map the window & install window event manager.
+    				% (Damage causes PaintClient to be called)
+  start-event-mgrs

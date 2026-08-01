@@ -1,0 +1,9 @@
+#define theta_cursor_width 16
+#define theta_cursor_height 16
+#define theta_cursor_x_hot 7
+#define theta_cursor_y_hot 7
+static short theta_cursor_bits[] = {
+   0x0000, 0x03e0, 0x0c18, 0x1004,
+   0x1004, 0x2002, 0x2002, 0x3ffe,
+   0x2002, 0x2002, 0x1004, 0x1004,
+   0x0c18, 0x03e0, 0x0000, 0x0000};

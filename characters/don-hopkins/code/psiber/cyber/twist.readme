@@ -1,0 +1,28 @@
+This is a plot of the execution stack (x-axis) and the operand stack (y-axis)
+during the execution of the PostScript /quicksort routine. Each successive
+picture is more twisted than the last. Twisting is accomplished by rotating
+the coordinate system clockwise slightly around the center of each of the
+dots as they are drawn. The rotation around each plotted point accumulates
+to make the whole drawing curl up. The more twisted away from the original
+orientation a point is, the later it occurred in time. 
+In the first picture, the untwisted version, up corresponds to a deeper
+operand stack (pushing things on the stack moves you up), and right
+corresponds to a deeper execution stack (procedure calls and control
+structures move you right). The lines follow changes in the state of
+the stack between steps of the interpreter. (This was made possible by
+a PostScript interpreter written in PostScript.) 
+
+To see the twist animation, run monochrome NeWS, type "psh" to the shell,
+then type "(/wherever/you/put/it/twist.ps)run".
+The reason you can't just psh the file directly is that NeWS 1.1 psh
+does $1 $2 $3 arg substitution, even on binary data! (X11/NeWS psh should 
+work, so you can just go "psh twist.ps")
+
+What the file twist.ps contains is a short header defining the function
+"c", which reads a canvas and displayed it on the framebuffer. That is 
+followed by a series of "c"'s each followed by a 1 bit deep 1152x900 
+sun raster files.
+
+	-Don Hopkins
+	 (don@brillig.umd.edu)
+

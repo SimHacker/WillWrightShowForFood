@@ -1,0 +1,1401 @@
+To: prisma!mo@uunet.UU.NET
+In-reply-to: Mike O'Dell's message of Thu, 27 Apr 89 17:40:37 MDT <8904272340.AA19380@uunet.uu.net>
+Subject: the postscript files....
+--text follows this line--
+I printed them out and saw that I have to fix the Isomorizer to stop
+writing out 'controlpoint's, and write out 'arc's and 'lineto's
+instead. It would look much better if all the circles weren't being
+approximated as squares when they're printed! (I fixed it and now the
+output files are even bigger.)
+
+Yes, you could say that it's is a set of "data visualization" tools.
+They're also for editing and manipulating data, and executing and
+debugging code as well.  They're pretty general purpose. With the
+addition of some more tools for translating various things into
+PostScript data structures, it could be even *more* general purpose
+and humans might even be able to use it!
+
+The arpanet map is a network of PostScript dictionaries that I made by
+emacs massaging a file that brescia@bbnccv sent to me. 
+
+It used to look like:
+
+address         endpoints (node, modem)     medium    speed
+--------------- --------------------------- --------- ----- 
+net 10 line   1 RCC5(5,5)     BBN63(63,1)   land       50
+net 10 line   2 MIT6(6,0)     CCA(31,1)     land       50
+net 10 line   3 UCLA(1,4)     ISI27(27,4)   land       50
+net 10 line   4 SRI12(12,0)   SR107(107,3)  land       50
+...
+
+Now it looks like:
+
+/ArpaMap 100 dict def
+ArpaMap begin
+
+/ARADC 20 dict def
+  ARADC begin
+    /hostname (ARADC) def
+    /LINC /replaceme def
+    /UROCH /replaceme def
+  end % ARADC
+
+%...
+
+  /XEROX 20 dict def
+  XEROX begin
+    /hostname (XEROX) def
+    /SUMEX /replaceme def
+    /SRI2 /replaceme def
+    /BERK /replaceme def
+    /UCLA /replaceme def
+  end % XEROX
+
+end % ArpaMap
+
+ArpaMap {
+  begin pop
+  currentdict {
+    /replaceme eq {
+      ArpaMap 1 index get def
+    } { pop } ifelse
+  } forall
+  end
+} forall
+
+I've also got a shell script that translates a Unix file hierarchy
+into nested PostScript dictionaries. A directory is a dictionary,
+whose keys are file names, and whose values are files or directories.
+Files are arrays whose keys are interesting file info:
+
+{(/usr/NeWS/lib/NeWS/class.ps) (-rw-r--r--) don staff 9581 (May 26 1988)
+ (class.ps)} dup 6 get exch def
+
+The file names are strings, which are drawn as lines whose length is a
+function of the length of the string, and since the absolute file name
+is the 0'th element of the array, they all stick straight out away
+from the middle of the directory they are in, so directories have all
+these very regular spines bristling out of them. (Maybe the color of a
+string should be a function of its first letter? I want to be able to
+define those kinds of rules and attributes on the fly, as whim
+dictates.)  File info arrays and directory dictionaries are mouse
+sensative and selectable, and I've made functions that operate on the
+selected file info array, so you can point at one of the circles,
+select it, and click on a function to do something with that file (or
+more generally, with whatever data structure you clicked on). 
+
+I am going to make a tool for translating the structure of HyperTIES
+hypertext databases into PostScript dictionaries, to see what they
+look like, and hook it up to hyperties so you can define or go to a
+node by clicking on its blob. I'm writing a HyperTIES authoring
+environment with NeMACS [UniPress (Gosling) Emacs, with a fancy NeWS
+interface, menu compiler, multiple windows, with title tabs, etc...]
+
+In the circular graphical view, there is a popup pointing hand
+that shows the object you just clicked on as text. (i.e.  a popup
+window in the shape of a rounded rectangle with a hand sticking out of
+it, the finger tip pointing to the cursor.) 
+
+There's an x-ray feature for highlighting all the mouse sensative
+targets at once, like the old exclusive-or-all-the-targets
+hallucinogenetic color table pyrotechnics feature of before, except
+that it does magic with the cg4 overlay plane to accomplish darkening
+and lightening of the graphics (and appropriate buzzing and chirping
+of the power supply). I want to make a conditional x-ray feature that
+highlights every target object that passes some arbitrary test, so I
+could hilite every file that is owed by don, or that is > 4096 bytes,
+or every packet switching node that's three or fewer hops away from
+DCEC, or every dictionary that's an instance of class PieMenu, or
+every HyperTIES node that has a picture in it, or every executable
+array, or every dictionary with a key that matches a pattern, or ... ! 
+
+The circular graphical view of the pseudo-scientific visualizer is
+useful in conjunction with the textual tree view of the "Spike" object
+browser/editor that I was showing at Usenix. They both use the
+selection mechanism (which is normally used to copy and paste text
+into terminal windows, etc, except in this case you're copying and
+pasting live PS objects [try to do that with X11!]), so you can click
+on something in the graphical circular view window (which is round, of
+course) to copy it to the primary selection, then go to the object
+browser window and push it onto the stack, in its own little labled
+subwindow (with a tab sticking out of it, showing the object's type
+name, by which you can drag it around). You can open up the textual
+tree views to any level, and the point size shrinks as you get deeper
+into the tree.  Now there's a view menu, which you can pop up on any
+piece of substructure, that changes the point size and the shrink
+factor of individual pieces of substructure and its children, and you
+can even make the shrink factor > 1 so it gets bigger as it gets
+deeper!) Any part of the tree that's open, no matter how small, is
+mouse sensative -- you can select it, paste something else into its
+place, execute it, open it deeper, pop up a type-specific menu of
+editing functions, convert it to other types, etc!  Right now the
+graphical view is read-only, i.e.  you can select (copy) things from
+it, but you can't paste stuff into it, since that involves redrawing,
+which is expensive in that context. You can easily pop up another
+round pseudo-scientific visualizer window on anything mouse-sensative
+object in either domain, or push anything onto the stack in a tab
+window view.  You can edit a reference to an object in a text view,
+and then redraw a view of the same object in a graphical view, though.
+My father suggested a direction for further research: inputting
+PostScript data structures by sketching their circular graphical
+representation!  ;-)
+
+I can make color separations of the pseudo-scientific projections of
+NeWS molecule hallucinations, using the "Isomorizor", a simple
+PostScript optimizer for NeWS, in the spirit of Glen Reid's
+"Distillery". It captures the calls to the drawing commands, and
+writes them out as an unrolled, flat, optimized, low level PostScript
+file.
+
+It's not so easy to produce a PostScript file showing the magic
+overlay plane highlighting and the pointing hand popup windows,
+though.  For that, a photograph of the screen would be best.
+
+As you can tell, I'm torn between implementing new features, and
+writing about the ones I've already got working. But as you can see,
+I'm am writing (though this is obviously pretty rough!), and I'll
+incorporate this with the stuff I've already written and make an
+attempt at translating it into English.
+
+One thing I have to come up with is a consistant set of terminology
+for all this stuff. This is an example of software development via
+simulated annealing. Lots of surrealistic variable names. If any
+snappy but meaningful buzz words come to mind, toss them my way!
+
+	-Don
+
+========================================================================
+
+Date: Fri, 3 Mar 89 16:04:21 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: uunet!prisma!mo@mimsy.umd.edu
+Cc: don@brillig.umd.edu
+Subject: NeWS CyberSpace Deck
+
+The "pseudo-scientific visualizer" with all the pretty colors is going
+to be integrated into my latest project, the direct manipulation NeWS
+data structure browser & debugger, or CyberSpace deck. [Did I give you
+a demo of what I had at Usenix?] In this context, the
+pseudo-scientific visualizer will be *much*
+more useful.  Right now, you can use the cyberspace deck to display data
+structures as trees, with textual labels that get smaller as the tree
+gets deeper (the colorful "PostScript molecules" of the
+pseudo-scientific visualizer will be just another (non-textual) way of
+looking at your data structures).  You can click on things to select
+them, execute them, cut and paste them into other data structures,
+open them up to show their substructure, open the substructures up
+deeper and deeper, control the point size and shrink factor of the
+tree's labels, push things onto the stack, change their type, etc.
+There is a "process" window that you can type PostScript code to,
+which has a "spike" sticking up representing the process's stack. The
+results of what you type are pushed onto the stack, in little windows
+with tabs on them!  You can perform stack manipulation by dragging the
+these windows around. It does "snap dragging", constraining the
+horizontal movement of the windows that are "snapped" onto the stack.
+(you can pull them off the side, or lift them off the top, and set
+them down elsewhere on the cyberspace deck.
+
+It's designed to take advantage of pie menus. You can click on a data
+structure to pop up a menu of things to do to it. The common things
+(push, exec, paste, load) are in the four primary (easiest to select)
+directions (N, S, W, E, respectivly), with submenus and secondary
+stuff on the diagonals. Once you're familiar with the menus, using
+mouse-ahead, you can press the menu button down over an object and
+make a menu selection real fast without displaying the menu (because
+of mouse ahead display supression), which feels sort of like flicking
+or tweaking the data structures in different directions with the mouse
+to do different things to them. You can even mouse-ahead into the
+submenus. (i.e. push is up because it feels like pushing it up towards
+the top of the stack; paste is left, because it feels like plugging
+something into a place in the tree that spreads out to the right; exec
+is down because it feels like pulling on a lever to make something
+happen.) There's a "pull-out" pie menu item on "Open" (NW), the
+further out you pull, the deeper up it will open the stucuture (with
+the number of levels shown as feedback displayed in the menu center,
+during selection.)
+
+Once I integrate the pseudo-scientific visualizer with this, it will
+be able to titilate both halves of your brain in parallel!
+
+It's changed a whole lot since Usenix, and it's still changing, but
+the mean time between radical paradigm shifts has lengthened out a
+lot, and it's finally annealed into something I can start to document.
+I think there's a really neat paper in it, with lots of kinky
+illustrations showing spread eagle data structures! 
+
+The best way for me to really explain this thing is to send you the
+source code to play with. Do you have a NeWS 1.1 server handy? I can
+at least send you a uuencoded Sun screen dump!
+
+========================================================================
+
+Basically, what it does it to display the state of a PostScript
+process on the screen, such that you can manipulate it with the mouse.
+There is a text interaction window that you type into, and that
+PostScript types out in, but the idea is that you should hardly ever
+have to type anything.
+
+PostScript objects are viewed in separate windows, that have tabs
+sticking out of them (to the left, by default), labeled with the
+object type. (The text window and object windows are all contained
+inside one NeWS window.) [The tabs won't break off, they're part of
+the window! They're very handy because you can have a bunch of windows
+overlapping, but with all their tabs visible, which you can grab them
+by.]
+
+The text window, which represents a NeWS process, has a "spike"
+sticking up out of it, and the objects on the process's stack are
+displayed in windows with their tabs impaled on the spike.  Whenever
+the process's stack changes, new object windows pop up, are shuffled
+around, and disappear, to display the current state of the operand
+stack.
+
+You can perform stack manipulation by dragging these windows around.
+You can move things on and off the stack and set them down off to the
+side.  It implements "snap dragging", so when you drag something over
+to the spike, it "snaps" in place and the dragging is constrained to
+vertical movement as long as it's on the stack. (You can pop things
+off the stack by lifting them off the top of the spike or moving far
+enough away horizontally.)
+
+The window views of PostScript objects are mouse sensative: you can
+click on any object to "select" it, or pop up a menu of operations
+that you can perform on it. Things like execute, load, copy, paste
+(replace), type conversion, etc... You can cut and paste data
+structures all over the place: Point at something to select it, point
+somewhere else, and paste it there using a menu. (It's designed to 
+take advantage of circular pie menus, so you can make accelerated
+selections by pressing the menu button down over something, moving a
+short distance in a particular direction, and releasing, so quickly
+that the menu isn't even displayed (mouse-ahead display supression).
+Down is exec, up is load, left is paste, right is push, etc...)
+
+The fun part is that you can "open up" the views of dictionaries and
+arrays, as nested trees to any depth! You can browse and edit your
+data structures this way. A closed object is displayed as one line of
+text, i.e. "array[20]". When you open up an array or dict, it draws
+the tree structure out to its right, with lines leading out to the
+pieces of substructure, which are displayed in a smaller font. All
+those are mouse sensative too! The deeper it draws, the smaller the
+point size, all the way down to 1 pixel characters. You can look at
+the internal structure of any array or dict on the screen, by opening
+it up, deeper and deeper. The object's window is enlarged to
+accomodate the tree. You can iconify windows with trees in them, and
+pop them back open. You can point at a piece of substructure, and
+select it, execute it, push it onto the stack in its own window, or
+whatever. You can control the point size, and the shrink factor of the
+view. You can display a big deep tree in a tiny unreadable font, to
+get an overall feel of the structure, and it's still all mouse
+sensative! If something's too small, you can push it onto the stack in
+its own window, and open that up. PostScript code looks real cool,
+what with all the nested arrays of loops and conditionals! NeWS
+processes, canvases, events, etc, behave just like dictionaries, as
+well, so you can examine and manipulate them too! You can pop open the
+framebuffer canvas, go traipsing around in the window hierarchy,
+following /TopChild and /CanvasBelow links, open up a canvas's list of
+/Interests, an array of template events, pop open one of those events,
+look in its /ClientData to see the callback function, and grab the
+/Process from the event, the event manager who expressed the interest,
+and go snooping around in that process's /DictionaryStack and
+/OperandStack. You can get totally lost in CyberSpace, without ever
+having to take your hand off the mouse! 
+
+It works with the NeWS debugger, so when a process breaks, you can
+enter it, display and modify its state on the screen, and get your
+hands on all its data structures. It's fun to pop open the execution
+stack, and single step through your code, by clicking on successive
+objects to execute them, and see the results bubbling around on the
+stack "spike". (I want to make this easier to do: i.e.  select an
+array subinterval by dragging over it, and then execute the whole dang
+thing.)
+
+You can make "pallets" of commands, just by making a dictionary
+associating names with functions, putting it on the screen in a
+window, opening it up one level so you can see the function names, and
+clicking on the functions to execute them in the context of the
+"spike" process. i.e. you can actually make a command menu out of
+nothing but a dictionary of functions! (and you can always pop open
+the functions to examine and edit them!)
+
+This is all *entirely* written in PostScript, of course! There's no
+better language for manipulating and displaying PostScript code and
+data structures in than PostScript itsself!!
+
+I'm trying to faithfully model PostScript process state and data
+structures. There's lots more work to be done, like a view of the
+dictionary stack, an annotated execution stack, and a visual
+manipulatable graphics state display. I'm interested in finding
+natural ways of displaying PostScript data structures, that make their
+properties visually explicit. For example, I display executable
+objects in italics. I want to have special views of certian data
+types, like sliders for integers, boolean toggle switches, editable
+text fields for strings, a font view, a scrolling graph view of an
+array of numbers, etc...
+
+I'm also working out a useful consistent set of operations that you'd
+want to be able to perform on any of the things you see on the screen.
+These I am putting on a top-level command menu, with accelerators
+(like shift keys, double clicking, etc.) for the most common ones. I
+also want to be able to point at an object and pop up a menu of
+type-specific operations. It should also be possible to make
+user-defined menus, specific to the task at hand, that call your own
+functions, with what you're pointing at as an argument. (Pop-up menus,
+as opposed to the static "pallet" menus of functions in a dictionary,
+described above.) 
+
+It uses the NeWS selection facility, which supports the selection of
+PostScript objects, as well as strings of text. You can select text
+from a terminal emulator or emacs window, and push the string on the
+stack, or paste it into a structure, or execute it.  You can select
+PostScript strings and numbers and paste them into terminal windows.
+Right now pasting non-atomic data structures into a terminal or emacs
+window just pastes their printable representation ("array{64}"), but I
+have a function from Josh Siegel that writes out arrays and dicts so
+they can be read back in again, that I will soon incorperate. I want
+to be able to squirt any structure out into an emacs buffer, so I can
+edit it as text, then suck it back in. I can write out opaque objects
+as unique ID's of the form "//&dict_12", "//&font_42",
+"//&process_77", etc, and keep a dictionary of "external" objects ID's
+that have been written out, that I put on the dict stack when reading
+stuff back in.
+
+I think the way to go is to represent everything as a "pointer" (a
+[collection,index] pair), instead of just storing a copy of the actual
+object, so that anything you see on the screen you can replace with
+another object. (You need to be able to replace objects if you want to
+be able to insert and delete array elements, convert things to
+different types, etc...)
+
+I am just at the stage of discovering what can be done with this
+thing. I'm going to write it up as soon as it stabilizes, and isn't
+undergoing massive paradigm shifts every week. I'd really value your
+input at this stage! I'd like to hear how it meshes with your mental
+models and intuitions! I'll send you the current version of the
+contraption, if you'd like give it a try!
+
+========================================================================
+
+It's got mouse-sensative PostScript data structures, each in its own little
+window. The windows hae tabs sticking out of them, which you can pick
+them up by and drag them around. You can open up dictionaries and
+arrays, and the windows expand to encompass a tree diagram of the data
+structure, with lines spreading off to the right, leading to the
+sub-structures, which are displayed in a smaller font, and are
+mouse-sensative too! You can pop open parts the substructures
+likewise, deeper and deeper, and the font gets smaller and smaller
+until the characters are just little dots.  You can adjust the font
+size and size shrink factor of the view. 
+
+There's a text dialog window that you can type PostScript code into,
+which has a "spike" sticking out of the top. The spike impales the
+tabs of the objects that are on the process's stack. When something
+you type changes the stack, object windows are created and destroyed,
+and get shuffled around on the spike. You can actually perform stack
+manipulation by dragging the windows around! When an object is snapped
+onto the stack, it's movement is vertically constrained, but you can
+lift it off the top of the stack or pull it far enough to the side
+that it pops off. 
+
+You can bind function keys to PostScript functions, and you can press
+a key to complete a partially typed-in name, over all the names on the
+dictionary stack. When you press "Find", it shows you all the keys
+that match what you've typed so far, top to bottom, as well as what
+they're bound to in the dict, and then completes as much as it can for
+you. 
+
+========================================================================
+
+Press FunctionF10 (Alternate) to get help on the key bindings. 
+You can scroll around the text canvas with the scroll bar or the
+keypad function keys. 
+Stuff you type in the window gets executed, and the results are
+displayed on the "spike". 
+Type in some numbers, and add, mul, neg, sin, and cos them! 
+Type "rootmenu" and check it out.  
+Click left on a piece of structure to select it as the Primary
+selection.
+Click left on a tab to toggle the window's "iconic" state. 
+Double click left on a composite object (array, dict, canvas, process,
+etc...) to open it or close it. (You don't want to open systemdict,
+believe me!) [At least not until I've implemented a scrolling view!]
+Control click left on an object to execute it. 
+Press the middle button over a structure to select a "pointer" to it.
+(i.e. a [collection index] pair: in the selection dict,
+/ContentsPostScript = collection, /StartIndex = index, /ContentsAscii
+= collection index get 256 string cvs.)
+Hold down shift w/ the middle button to select a dictionary key or
+(drag over) an array subinterval. 
+Press the middle button on the tab to drag things around. 
+You can drag them on and off of the stack. (Notice the vertial drag
+constraint when it's snapped into the stack.) 
+You can perform stack manipulation just by dragging things to where
+you want them! 
+Press the right button over a tab to get a menu of view functions.
+Press the right button over a piece of structure to get a menu of edit
+functions.
+The "paste" function replaces the thing under the cursor with the
+current selection. 
+You can hold down Meta to supress the reformatting and redisplay that
+happens when you change something, so you can make several quick
+changes in a row and then select "Layout" from the view menu on the
+tab. 
+The dictionary that starts out in the lower left corner contains some
+other dictionaries of handy functions that you can control-click on to
+execute. 
+Suggestion: Drag that dict out where there's some room, double click
+it to open it, pop up a menu over the "Debug = dictionary[123]" dict,
+and "push" a copy of it onto the stack; drag that off, double click
+left to open it up one level, pop up a view menu on the tab, select
+"Click..." from it and "click-exec" from the submenu. (This makes the
+left click action execute the object instead of just selecting it.
+The default mode is "click-struct".)
+You can use the debugger with this! Type "psh" in another window, push
+some junk onto the stack, make an error, and click on "de = dbgenter".
+Whir, buzz, click! There it is! Grab the machine by the screen! 
+
+The menus are designed to be used with mouse-ahead display supression.
+This version of piemenu.ps has a new "Direct Pac-Manipulation
+Feedback" feature, so if you know what direction a menu item is, you
+can press the menu button down, move in that direction, and release,
+in a quick continuous motion, and you will see some cheezy feedback as
+you wocka wocka wocka through the menus. 
+
+========================================================================
+
+cg4 overlay plane hacks:
+  Color window class
+  "flashlight" cursor
+  X-ray
+  idea: conditional X-ray!
+
+Principle behind cyberspace
+  Display a arbirtary ammount of data in a limited space
+  composite objects drawn in a circle
+  The deeper an object, the smaller it is.
+  Draws only to a certain depth. You can change the depth in and out
+  while it's drawing. 
+  Multiple light weight processes performing layout, so there's 
+  drawing going on in lots of different places at once.
+  Some times nondeterministically forks off a child process, instead of
+  recursing, to layout a composite data structure. Randomizes the way
+  things overlap. 
+  Each dictionary or array displayed on the screen has a mouse
+  sensative area that you can click on to select it.
+  The mouse sensative target is implemented with a round transparent
+  canvas in NeWS.
+  There is a dict representing each target.
+  The target dict contains a reference to the object it represents, as well
+  as to the target canas.
+  After the layout is complete, a NeWS process expresses
+  interest in enter, exit, and mouse button events on all the target 
+  canvases. 
+  When it gets an event on a canvas, it looks the canvas up 
+  in a dict mapping canvases to their target dicts (the canvases can
+  be the target dicts in X11/NeWS, avoiding the lookup)
+  Overlapping target areas shuffle around when you move the mouse over
+  them, so no targets are permanantly overlapped. The /ExitEvent
+  handler does a canvastobottom.
+  Describe how the color frobbing makes it look nice.
+
+========================================================================
+
+Instructions for the use of the Pseudo-Scientific Visualizer:
+
+[Warning: This is an early release of half-baked code with an arcane
+user interface. When it becomes obsolete, please print it out and burn
+it. -Don]
+
+Load in all the necessary PostScript code:
+
+psh piemenu.ps
+psh neatwin.ps
+psh object-browser.ps
+psh pullout.ps
+psh visualizer.ps
+
+This will define various classes, installing pie menus, and neat
+windows.  Subsequently created windows will have a frame pie menu,
+with various window managment items, including an "Etc..." submenu (to
+the SW).  To pop up the frame pie menu, move the mouse over the frame,
+and click (press and release) the right button, move into the slice
+you want, and click again to make the selection. Once you're used to a
+pie menu, you can press down and holding the menu button, move in the
+appropriate direction, and release, in one swift motion, without
+waiting for the menu to be displayed. (If you press down and hold,
+instead of clicking, there is a delay to give you a chance to mouse
+ahead to the selection, so click down and up if you want to see it
+right away.)  [This effect is called "mouse-ahead display
+supression".] Clicking the middle button in a pie menu pops you back a
+level.
+
+Once you get all the stuff loaded in, pop up the root menu and create
+a new window. Psterm's a good one to run. Pop up the frame menu on the
+new window. Select the "Etc..." submenu. Select "userdict", to pop up
+a object browser on the private dictionary of that process. It will
+beam in, and the next click determines its lower left corner. The
+browser will display the keys in that window's userdict, and the
+values they're bound to. Clicking the left mouse button on a composite
+object (array, dictionary, canvas, process, event, etc..) will open up
+another browser window on that object. Clicking the middle button on
+any entry will pop up an edit window, used to change its value.
+Clicking the right menu button in the object browser window gets a
+menu of things to do to the dict or array. The menu depends on the
+object's type. Processes, canvases, fonts, etc, which look like
+dictionares, have selections that do various things to them. Each
+browser menu has a "Visualize" entry, which pops up a
+Pseudo-Scientific visualizer window on the object. The next two clicks
+determine its corners. Open up a visualizer window on userdict. 
+
+The visualizer will draw the tree of PostScript objects to a certian
+depth. Whenever you reshape it or repaint it (the painting hand icon
+on the frame pie menu), it is redrawn. It's most effective in color!
+After it's done painting, there will be a slight pause while it wires
+up its nervous system, and then you will be able to point at the blobs
+with the mouse, and they'll highlight, and their value is shown in the
+bottom border of the window. Clicking left on a blob pops up an object
+browser on it. Clicking the middle button on a blob "zooms" the view
+to the corresponding object and repaints the display.  Pressing the
+left button in the visualizer window, when the cursor is not in a
+blob, highlights all the mouse sensitive blobs, until you release the
+button. Clicking the right menu button anywhere in the window pops up
+a pull-out pie menu controling the view.  "Thing..." is a submenu of
+some of my favorite objects to visualize. DrawDepth controls the
+maximum depth that the visualizer recurses into the object, when
+drawing it. TargetDepth controls the maximum depth (no greater than
+DrawDepth) that dictionaries and arrays will be made mouse sensitive.
+If this is a to big number, and you draw a deep complex object, it can
+takes a long time to make those gazillions of tiny round target
+canvases mouse sensitive.  "ColorFrob..." controls the Hue,
+Saturation, and Brightness deviation that happens at each recursion.
+MaxProcs controls the maximum number of concurrent processes used to
+draw the data structure.  (As it draws, it occasonally forks off
+PostScript processes to draw sub-stuctures, so there's lots of action
+going on at once, and the overlapping is different every time it's
+drawn.)  And of course, "Foo" is a metasyntactic variable. ;-)
+
+The guts implementing the Visualizer are pretty foul -- it's a Rube
+Goldberg device inside and out. I have plans to reimplement it so you
+can switch between various views of different data types. (i.e.  the
+dictionary-esque types (processes, canvases, etc) could either be
+shown as icons, or opened up like dictionaries.) It should also tell
+the name of an object in its parent dict, when you point at it. Send
+me any ideas for improvements! Most needed are graphical ways in which
+to represent data. Right now arrays are rings with their elements
+around them; dictionaries are rings with a dot in the middle, their
+keys around them, and the key values out past the keys. Strings are
+thick lines whose length is proportional to the number of characters.
+Built-in operators are circles with square holes. Numbers are squares
+whose color is some crazy function of their value. Nulls are obscene
+gestures. Processes are boots. Events are envelopes.  Everything else
+is a triangle, right now. Lots more could be added. How can the
+pictures be parameterized by the values of the objects they represent?
+(one obviously parameterizable picture would be of the color type!) 
+
+========================================================================
+
+Date: Mon, 30 Jan 89 12:50:13 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: mh%WLBR@ETN-WLV.EATON.COM
+Cc: don@brillig.umd.edu
+Subject: text fields in cyberspace 
+
+I want to use text fields with the cyberspace thingie I just sent you.
+Each item displays the internal details on one PS object. I want to
+have one text field per item, and when I click on a piece of
+substructure in the item, that item's text field should be moved and
+resized to the location of the thing I clicked on, so I can type in a
+new value, or hit control characters to do things to it (cvx, cvlit,
+exec, load, push, null, etc...).  Since each item can display a whole
+shitload of substructure, it's not practical to have that many text
+fields in one item, since you'd only ever be editing one at once. How
+easy would it be to be able to dynamically tell a text field to use a
+certian font, move to a certian bounding box, and appear, then once
+editing's done, disappear? Can I have a bunch of text fields all on
+different ItemCanvases, and still have the NEXT and PREV stuff work?
+Or do they have to all be on the same canvas? I want to define control
+characters that will move the text field around to the next, previous,
+deeper, shallower, and top piece of substructure in the item, and also
+to move the focus to the next, previous, first, and last text field in
+the whole stack of items. (i.e. two levels of movement: moving
+one text field around to point at different things inside one item,
+and moving the focus to a different text field in a different item.)
+
+What I'm working on now is grouping items into stacks. Each stack
+embodies one NeWS "process" (from the user's point of view). At the
+base of the stack is a scrolling TextCanvas object dialog item (ala
+nterm) that you can type PS into. The code you type is evaluated in
+the context of that "process" with that "stack", and any results are
+pushed onto the stack as new items. I want to be able to type control
+characters to move the focus around between the items on the stack.
+The items on the stack would be one group (in the txtfield sense), and
+I would be able to type the NEXT and PREV control character to move up
+and down the stack, and other keys to move the text field around
+inside the data structures in each stack item. It would be nice if the
+scrolling text canvas were to act like the first or last text field in
+the group (even though it's not a real text field.) It may have to be
+hacked to support your focus managment. Maybe I should use a text
+field instead.
+
+	-Don
+
+========================================================================
+
+Date: Wed, 8 Mar 89 20:49:33 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: ronin@Sun.COM
+Cc: don@brillig.umd.edu
+Subject: source browser
+
+   Date: Wed, 8 Mar 89 16:34:52 PST
+   From: ronin@Sun.COM (Brian Raymor)
+
+   Do you have any ideas regarding source browsers for NeWS ?
+
+You mean browsing PostScript source code in files, or code that's been
+loaded into NeWS? The thing I sent you is good for browsing the actual
+code in memory, but there are as of yet no pointers back to the files
+that functions were defined in. That's one neat thing about the Lisp
+Machines.  Functions have properties like documentation strings, and
+the name of the file from which they were loaded.  So you can type or
+click on a function name, and edit its source! What the cyberspace
+thingie almost does (but I haven't tested it well yet) is to write out
+functions, and other PS data structures, as text, so they can be saved
+in a file and read back in again. It would be worth putting some
+smarts in emacs so it knows how to find the right chunk of text to
+replace in a source file, so you could load a file in to NeWS, edit
+the functions as PS data structures in memory, and write your changes
+back. You'd have to teach it about classes and methods, so it replaced
+the right method in the right class definition. Also it would have to
+know how to "de-methodcompile" the occurances of "ClassName supersend"
+that appear in some methods. Josh Siegel's PostScript pretty printer
+will be very helpful when writing out data structures to files.
+
+	-Don
+
+========================================================================
+
+Date: Wed, 8 Mar 89 17:49:55 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: scout@zyzzyva%sun.com
+Cc: don@brillig.umd.edu
+Subject: newer pspike.ps
+
+Question: how do you pronounce zyzzyva, and what does it mean? (Should
+I try rot-13'ing it?) 
+
+New features! With feedback! Click the adjust button to select a
+"pointer" to an object (i.e. a [ContentsPostScript,StartIndex] pair).
+Shift-click the adjust button to select a dictionary key (as
+opposed to its value), or to drag out and select an array subinterval.
+(i.e. a [ContentsPostScript,StartIndex,LastIndex] triplet) 
+
+Squish down on FunctionF10 [Alternate] for help on key bindings. 
+
+I'd like to use the same dictionary for mouse bindings, maybe... Hmm.
+Maybe append the "place" that was clicked to the end of the key, i.e.:
+
+AdjustButtonDownTab
+AdjustButtonUpStruct
+MenuButtonDownBackground
+
+Then again, maybe not.  Maybe it would be better to have an optional
+local key binding dict for each place input could be directed to, 
+binding keystrokes and mouse action like PointButtonDown,
+ShiftPointButtonDown, etc...
+
+Basically, I want to be able to give each mouse-sensative object its
+own overridable button actions, and key bindings too... Right now, you
+can only change the Click action (point button down) on a per-item
+basis.  Pop up a menu on the item tabs, and select the "Click..."
+submenu to choose the Click action. The default Click action is
+click-struct [Single click selects the object (not a pointer to it),
+control click executes it, double click opens or closes it {meta
+supressed redisplay, shift makes it open further instead of close}].
+The other Click action that is there right now is click-exec [Clicking
+executes the object. Good for using dictionaries or arrays as control
+panels, or pallets of functions, or menus, or whatever...].
+
+The idea is that there is this "view" dict, shadowing each displayed
+mouse sensative data structure, with a "pointer" to it
+[collection,index], a bounding box, a possible array of child "view"
+dicts (views of array elements or dict keys), and other information
+needed to display it. The StructItem instance variable DL is the root
+of the item's view dicts.  The bounding box is used for mouse hit
+detection (instead of having millions of subcanvases). The method
+/do-search finds the view dicts the mouse is pointing at. The bbox of
+a view encloses all its children.  The userdict variable /it gets the
+StructItem that was clicked on. The user var /ob gets the deepest view
+dict the mouse is pointing at, and the user var /obs gets an array of
+view dicts whose bbox's enclose the mouse, from the item's DL (i.e.
+[DL ... ob]).
+
+Lots of the menu handlers send messages to /it, that mess about with
+/ob. Some functions use the /obs array to get to the view that
+contains the selected structure. (i.e. reference-obj [Util...
+reference] climbs down the obs array to create a function which, given
+the top level object the item is displaying, extract the thing you're
+pointing at from it. (i.e. {/Interests get 0 get /Process get
+/DictionaryStack get 1 get}) [The resulting function is stuffed into
+the Primary selection])
+
+I want to make /click-point check the view dict you're pointing at for
+its own personal /Click action (I should rename and extend the actions
+to /[Control][Shift][Meta]{Point,Adjust,Menu}Button{Up,Down} as well
+as the keys [0..255]...)
+
+Views of various data types should have their own special key
+bindings.  I want to be able to edit strings, increment and decrement
+integers, toggle booleans, def and undef dict keys, insert and delete
+array elements, change types, etc, all from the keyboard. Maybe there
+should be a LocalHelp key that will tell me just the bindings of the
+thing I'm pointing at.  (I love the lisp machine status line that
+tells what all the mouse bindings are wherever the mouse is pointing.)
+I want to be able to have a "view" of an Object (a dict with a
+ParentDictArray) that binds certian key presses to my favorite
+messages, which are sent to the object when I type! If an object knows
+how to format and display itsself in cyberspace, then it should be
+allowed to take care of its own view. If I just define default
+/CyberLayout, /CyberPaint, and /CyberAction "fake methods" in userdict,
+and send those messages to dicts who have ParentDictArrays, then an
+Object will be able to display itsself, respond to events, etc, if it
+knows how. The cyberspace view of an object can be different from what
+it look like in real life.  When opened up, an object could appear as
+what ammounts to a control panel for editing itsself!  i.e. layout
+just the interesting instance variables, with special "views" for
+editing them. i.e. a boolean view with a /toggle&send-paint Click
+(PointButtonDown) action, etc... The instance variable view actions
+can get back to the objects that contain them through the /obs array!
+Pretty kinky, huh?
+
+You should be able to move the focus around with the arrow keys. i.e.
+point at some object in an array with the mouse to select it. It becomes
+highlighted. Press the up arrow. Now the one above it is highlighted
+selected. You should be able to type keys that do things to the
+selected object. Move the focus (changing the PrimarySelection) up and
+down arrays and dicts with the up and down arrows, and (open up &)
+move in and out of them with the left and right arrow keys. 
+
+Maybe when you select an object that is displayed on the screen, its
+"view" dictionary should be stuffed into the selection dict, too, as
+another key, say /SelectionView... That would sure be handy. 
+
+This code really needs to be cleaned up and commented!! I have this
+feeling that I am doing some very naughty things with the selection
+mechanism. It would be good to rewrite it with a coherent set of goals
+in mind, compatible with X11/NeWS, after hacking the stuff into this
+implementation to find out how to do it, if it will really work, what
+feels good, and what it breaks. 
+
+	-Don
+
+========================================================================
+
+Date: Tue, 31 Jan 89 09:41:21 EST
+From: sjs@ctt.bellcore.com (Stan Switzer)
+To: don@brillig.umd.edu
+Subject: CyberSpace
+
+Don,
+
+Been playing with your CyberSpace.
+
+A few comments:
+
+Override window's /slide method to make it drag an outline since
+NeWS doesn't seem to recognize the opportunity to just blit the whole
+thing around.
+
+Probably wou want to be able to attach actual buttons to executable
+things so you can just pop them rather than pull down a menu over
+them.  Maybe you should be able to put these menu items on the
+rootscreen (they should drag on adjust, and provide for being deleted,
+probably via a menu).  If you do this, the buttons should survive
+after the CyberSpace window is destroyed.
+
+I don't exactly understand how exec knows there is a value.  I put 1
+and 2 on the stack and execed "add" getting a new turd "3".  Execing
+"pop" should yield a new turd "1," by my reasoning, but nothing
+happens.
+
+Tag menus should have a submenu for type conversion so that names can
+be changed to strings, strings to integers, etc.  You probably should
+be able to change the executable and literal attributes also.
+
+How do you get rid of (flush?) a turd?
+
+Perhaps there should be some selection feedback and/or
+multi-selection.
+
+I don't know about Josh's (Josh Seigal?) structure=>string converter.
+What is it?  Some sort of PostScript de-scanner?  The class browsers
+have something like this too.
+
+// opaque objects are a good idea.  I never have found any
+documentation of the //, but I figured it out from the few places it
+was used in the server.
+
+Careful with the text items.  There is something fishy about how they
+sub-allocate the focus.
+
+You mention that you are an Emacs user.  Gnu?  If you use Chris Maio's
+NeWS front-end you might find the stuff at the end of this note
+amusing.
+
+Anyway, keep plugging.  It looks like a good idea.
+
+Stan Switzer  sjs@ctt.bellcore.com
+  "... he's a very learned doctor.  Why, he's actually _invented_ three
+   new diseases, besides a new way of breaking your collar-bone."
+       -- Lewis Carroll, _Sylvie and Bruno_
+
+========================================================================
+
+Date: Thu, 30 Mar 89 16:59:27 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: scout@sun.com, owen@sun.com, jag@sun.com, dshr@sun.com, gnu@toad.com,
+        hugh@toad.com
+Cc: don@brillig.umd.edu
+Subject: true names & vacuum flowers
+
+What do you think of the following names and associations for the
+different parts of the visual NeWS programming environment:
+
+  Object Deck ("True Names")
+  left brain (analytical)
+
+  Cyberspace Projector ("Vacuum Flowers")
+  right brain (creative)
+
+Or do I have my brains backwards?
+
+Have you read Vacuum Flowers? (Michael Swanwick) There's this cool way
+of graphically displaying and editing three-dimensional projections of
+entire plug-in personalities! (A graphical personality editor -- now
+there's an *ideal* NeWS application!!)
+
+I've been doing horrible evil device dependant things, lately.  I
+hacked the NeWS server cg4 driver to recognize the file names
+/dev/fb_{color,overlay,enable} (/dev/*_{c,o,e}*, actually), and hand
+over the appropriate planes when I do a createdevice. (SunOS has a max
+of 1 bwtwo wired into it, so you can't just do the right mknod and use
+the enable plane through the NeWS bwtwo driver.) Just for jollies, I
+ran NeWS in the enable plane, and it worked!! It was a little hard to
+tell what was going on, though... I can run NeWS in color, fill the
+overlay plane with .5 gray, and go "systemdict /fboverlay
+(/dev/fb_enable) createdevice put", and get a nice gray rubber band
+lines! (I rather enjoy the hallucinogenetical highlighting myself,
+though... Perhaps I should do it the other way around, using the color
+framebuffer as an overlay in monochrome! I'd need settransfer to work
+on a per-canvas basis, though...) So anyway, I made a window subclass
+called ColorWindow, to use when I'm running NeWS in wicked fast
+monochrome on the overlay plane, and want to take a jaunt into
+cyberspace. (who ever said people don't dream in color???) It creates
+retained canvases in the enable plane and the color plane that it
+keeps in the same shape and place as the ClientCanvas, and fills the
+canvas in the enable plane so the color shows through! I can have many
+of these color windows open at once, overlapping, move them around,
+bring them to the top, close them to icons, etc... Regular windows
+don't show through color windows, and always seem to be underneath,
+but that's because they don't have shadows in the enable plane. It's
+not reshaping the frame buffer every time you move a color window
+around, like SunView -- it's just moving retained canvases around in
+the color, monochrome, and enable planes!  You can have color windows
+of any shape! The cyberspace widow is now round, of course! It can be
+really really freaky to pop one of these things up when everybody
+watching assumes you're on a monochrome display! You can do all kinds
+of kinky tricks with the enable plane like filling it with .5 gray and
+filling the overlay with black, so the color window is dimmed, and
+then drawing white on the overlay so parts of the dimmed color image
+are saturated! I use this to implement a "magic flashlight" effect
+that darkens a circle around the mouse in the cyberspace window, but
+brightens anything under the mouse that's mouse sensative. I do this
+by filling a .5 gray circle around the mouse in the (otherwise
+color-passing) enable plane, then fill the target canvas the mouse is
+in on the (otherwise black) overlay plane to white. One problem is
+that you can't see where the mouse is in a color window, unless you
+fill the enable plane with gray, or track and draw your own cursor.  I
+can redistribute mouse events from the overlay to the color canvas
+easily enough if I want, but I can't figure out how to get /EnterEvent
+and /ExitEvent events on the color subcanvases. Or how to warp the
+mouse onto another framebuffer than the one I started NeWS on, kinda
+like adjacentscreen does. I've had to put all my mouse sensative
+canvases in the overlay (which the NeWS server is running in) to get
+Enter and Exit events.  There's a cyberspace X-ray effect that darkens
+the whole window, and then lightens the data structures that are mouse
+sensative (by filling the overlay with white and the enable with blobs
+of random grays). I want to make a conditional X-ray, that will
+highlight all mouse-sensative objects that pass some test (given an
+arbitrary boolean function). The X-ray function looks really cool when
+there's a monochrome canvas (that doesn't normally show through the
+color) overlapping the color window's overlay canvas!  (That's how I
+realized that the function I had just implemented to replace the old 5
+setrasteropcode stuff was actually an X-ray!)
+
+I sure hope you can do all this stuff easily and in a device
+independant manner in X11/NeWS. I think a lot of mind boggling things
+could be done, taking advantage of having a *window hierarchy* in the
+overlay and enable planes instead of just a flat drawing surface! You
+could draw on a subcanvas, and move it around, for fast overlay
+animation! Imagine "Spin!" running in the enable plane! (on the other
+hand, just forget I ever said that ... ;-) How can overlay canvases be
+made to "do the right thing" in that when you use createoverlay, you
+get a canvas that moves around with the canvas that it's an overlay
+of...? Maybe a better form of SunView1 compatibility could be hacked
+up using the cg4 enable plane!
+
+Last summer I adapted pie menus to SGI 4Sight, which uses the overlay
+plane on the 4D to display the menus. An amazing hack of Mark
+Callow's, I think! It used transparent non-retained subcanvases of the
+framebuffer overlay. (I don't know if the server supported opaque
+retained canvases in the overlay, but you sure want to avoid retained
+and savebehind [what Tower did for Reagan] canvases in color on that
+machine! I suspect it would be just as slow to read bacl from the
+overlay.) When you made an subcanvas of the framebuffer overlay, and
+drew over something else in the overlay plane, it was gone. You
+couldn't just unmap and see what was underneath again. This was kind
+of a problem with overlapping menu canvases... Parent menus have to
+repaint when they pop their child down, etc... (or with pie menus, a
+menu can pop itsself down, and must tell its parent to repaint, and
+ugh ...)  The server didn't handle damage on the overlay plane, and I
+don't think you could do a "clippath currentpath fboverlay setcanvas
+setpath extenddamage" to force the process managing the overlay
+canvases underneath you to repaint. (That doesn't seem to work with
+transparent canvases on a monochrome 3/50 anyway.) You could draw on
+the SGI overlay plane in shades of gray, getting black&white
+dithering, and also in one solid color (using that spare
+overlay/enable bit combination, since the overlay was implemented
+using two bit planes and the color table) The last non-gray color
+you drew on the overlay gets stuck into the appropriate slot of the
+color table. Freaked me out when I first tested out my color wheel pie
+menu in 4Sight! 
+
+	-Don
+
+========================================================================
+
+Date: Sat, 11 Mar 89 05:17:58 EST
+To: NeWS-makers@brillig.umd.edu
+Subject: NeWS Molecules
+From: Don Hopkins <don@brillig.umd.edu>
+
+This is a new version of the Pseudo-Scientific Visualizer.  It
+projects hallucinations of a NeWS molecules onto the screen.  (These
+things don't really exist, so they're not prohibited by law.)  Once
+it's done virtualizing the hallucination, there is a shudder, a puff
+of smoke comes out of the back of the CPU, and then all the little
+bits and pieces are made synesthetically mouse sensative!
+
+Composite objects (arrays and dictionaries) highlight when you point
+at them, and their printed name is show in the text item at the bottom
+of the window. When you click the point (left) button on a highlighted
+object, it is selected (in PrimarySelection). When you click the point
+button on the background, it highlights *all* mouse sensative objects.
+When you click with the adjust button on a highlighted object, it zoom
+into that object.  Select the menu item "Thing... Top" to get back to
+the original object.)  When you change something with the menu, it
+takes effect immediatly while it's drawing. If you make changes after
+it's finished painting, you should redraw (menu "paint") the window to
+see them.
+
+If there is an argument to psh, it executes it and grows a molecule
+with the resulting object. Otherwise it just installs its class in
+systemdict, for later use.
+
+Use it like this:
+
+psh molecule.ps rootmenu
+
+psh molecule.ps '[ [1 2 3 4] [1 2 3] [1 2] [1] ]'
+
+psh molecule.ps '10 dictbegin /foo LiteMenu def /bar Item def dictend'
+
+	-Don
+
+========================================================================
+
+Date: Wed, 17 May 89 17:19:19 EDT
+From: Don Hopkins <don@brillig.umd.edu>
+To: dshr@Sun.COM
+Cc: don@brillig.umd.edu
+Subject: spiked selections
+
+   Date: Wed 17 May 1989 13:05:42 PDT
+   From: David Rosenthal <dshr@Sun.COM>
+
+   Its fine to do this in NeWS - the NeWS selection mechanism
+   is,  by its nature,  more powerful than the X selection
+   mechanism.  I don't see how you would build the spike in
+   X,  anyway.
+
+	   David.
+
+It sure couldn't be implemented in X, but it could useful for
+manipulating X selections (the simplest case being strings). I have
+made special purpose views/controlers to support NeWS classes and data
+types, and in X11/NeWS, selections are just another class. 
+
+Opening up an editor is just like opening up a dictionary or an array,
+except that you can open up just *some* of the keys of a dict, or even
+keys of *another* dict! There are functions that construct the special
+opened-up views, which figure out what to put in the views, and in
+which order.  So you can open up just the "interesting" instance
+variables (which you can select or edit as normal), plus some magic
+function keys from a different editor dictionary. The keys in the
+editor dictionary hold the editor's state, and magic editor functions.
+Not all of the keys in the editor dict have to be opened up of course.
+They can be opened up as normally editable data, or as magic editor
+buttons.  When you click on a magic editor button, the thing it's
+associated with (in the editor dict) is executed with the editor dict
+on the top of the dict stack, and it can refer to and replace the
+object that it's editing (the object that it *appears* to be a
+substructure of, in this particular view). You can even open up the
+views of the magic editor functions, and edit them!
+
+Here are some examples of things I have working:
+
+A number editor opens up the following keys: ++, --, and Step.  ++ and
+-- change the number we're editing by the value of the number Step (in
+the editor dict). You can open up another number editor on Step, and
+change it in the same way! Deeper and deeper!  There are other fancier
+number editors, like one that multiplies and divides by another
+number, a numeric keypad, etc.
+
+A scrolling view, the first fiew keys of which are scrolling buttons
+like Top, Bottom, Forward, Backward, as well as Height, the number of
+lines to display (which you can edit as described above).  After the
+controls comes a view of a string that tells the total number of
+lines, and the percentage. Under that are <Height> more keys, from the
+object we're scrolling through.
+
+A filtered view, which has keys which are filter functions, that you
+can edit, a Recompute magic button, followed by whatever keys of the
+viewed object passed through the filter. 
+
+You can open up an editor on a name, so you get views of every
+definition of that name on the dictionary stack of the debugged
+process. Each sub-view underneath the name is a view of that name in a
+different dictionary, which you can edit, or open up deeper.  This is
+good for looking at methods and following function calls through code!
+
+You can open up an class editor, so you get arrays of the names of all
+an object's instance variables, methods, and class variables. (Which
+you can open up scrolling views on, and then open up name editors on
+the names in the arrays! It's fun to scroll to /new name and open up a
+name editor on it, and look at a class's chain of /new methods, top to
+bottom.)
+
+It's going to be **fun** reimplementing this with NDE! (yay verily!)
+
+	-Don
+
+========================================================================
+notes/spike:
+
+I want to write up the visual programming stuff I've been doing, in
+such a way that suggests how it ties in with the NeWS programming
+environment. 
+
+What I am aiming for is a window shell type of environment.
+
+Programming by demonstration.
+
+Programming, Debugging, Prototyping, Testing environment.
+Visualy monitoring the state of a PostScript process. Making its state
+modifiable via direct manipulation.
+
+Create PostScript procedures by acting them out.
+
+Give them names, build libraries and control panels out of them.
+
+Integrate it with the Emacs menu compiler. 
+
+Simple menu description language is compiled into PostScript code that
+describes the menu to NeWS.  User builds menus invoking functions defined
+interactivally. 
+
+Editable menus that update their menu language descriptions automatically.
+
+Extend this to control panels. 
+
+DWID: Do What I Did. Always in high level event journal mode. You can
+grab a groups of events, filter them, with patterns, etc, and turn
+these series of events into PostScript functions composed of the the
+code that the events are bound to, with literal arguments that could
+be the coordinates of the events, strings, or other types of user
+input. The user should be able to specify that a given argument is not
+to be journaled as a literal, but should be gathered at macro run
+time. A shift key for this? Starts a dialog prompting you to enter an
+expression to calculate the argument at run time. You can give it the
+name of a variable, or a prompt string and a call to an appropriate
+prompting function. (call on pre-defined functions and variables to
+make mouse tracking and specialized feedback easy to do), which is
+compiled into the macro to compute the argument when it's later
+called. 
+
+Starting an dialog prompting for a function means to "mark" this place
+in the event journal as the beginning of a function, and recursivly
+call the interpreter. The interpret interprets until the user pops out
+of it with "OUT", at which time it returns to the caller, and the
+a functional transcript of the dialog is returned. 
+
+Basically the way it works is that you "do stuff", and that stream of
+stuff is always recorded. You can scoop up chunks of that stuff onto
+the operand stack, and build conditionals and loops and macros out of
+it. There are special buttons for conveniently building them too. So
+there should be two streams of code: everything that you do, in short
+term memory, and the stuff of that you want to keep in long term
+memory. You can mark points in the stream 
+of consciousness, and push a level into the interpreter, and gather
+more stuff, then press "OUT" to pop the interpreter, returning to the
+caller, who can filter and transmogrify and execute the stuff
+accumulated, and put it into long term memory. When you push into the
+interpreter, you can push it in immediate or defered mode. 
+
+When it pushes me into the interpreter, instead of actually doing
+something, I can select something I've already done, by dragging over
+that series of events, and stuff them into my action buffer, and it
+will be as if I had done it. (they would be executed if the
+interpreter was immediate.) I can add to that, or rub out parts of it.
+(How does rubbing out work? Checkpoints program state at start of
+series, and plays back what we're adding? Eeeeugh. I would tend to do
+stuff as chunks of code in defered mode, where I could rub out easily,
+and execute it when I was done, deciding to keep or redo each chunk. 
+
+As well as stacks, I want to be able to drag out pointers to bind
+variables in the "cyberspace deck" dictionary. Better yet, any pair of
+tabs should snap together. The one unerneath is the key and the one on
+top is the value. Making and breaking bindings. (every object on the
+screen not snapped to something is bound to null in DeckDict.)
+Duplicate objects just don't snap. Snapability test includes test for
+already being bound. Only one view of an object can be bound at once.
+
+circle:
+gets the x,y location of the event.
+Prompt for radius, with rubber-band feedback.
+
+arc:
+do circle
+Prompt for start angle, with rubber-band feedback.
+Prompt for end angle, with rubber-band feedback.
+
+lineto:
+If no currentpoint, then moveto event x,y
+else lineto event x,y
+
+closepath:
+No arguments. Mouse position ignored.
+
+repeat:
+Takes a non-negative integer argument on top of stack. If it's not a
+number, it tells you to push a repeat count and select repeat again. 
+If immediate mode & repeat count < 1, go into defered mode
+Pushes you into a { } (call interpreter recursivly)
+(the user does some stuff, and presses "OUT")
+If repeat count > 1, then repeat count-1 times
+
+ifelse:
+Takes a boolean argument "cond" off top of stack.
+(if top of stack is not boolean, it complains.)
+; by now, the code to put "cond" on the top of the stack is remembered.
+prompt "ifelse true condition"
+if cond = true & !defered
+  expr1 = push interpreter immediate
+else
+  expr1 = push interpreter defered
+prompt "ifelse false condition"
+if cond = false & !defered
+  expr2 = push interpreter immediate
+else
+  expr2 = push interpreter defered
+feedback "finished ifelse"
+remember {expr1 expr2 ifelse}
+
+Buttons and menus generate named events, i.e. special function key
+codes, that can be journaled. These are bound to functions in the NeWS
+server. When in macros definition mode (ALWAYS!), it translates
+(throught a key binding dictionary) the virtual function key 
+presses into calls to the PostScript functions they're bound to.  
+Define new functions by selecting chunks of your history, grouping
+them into a procedure, defing them as new functions, using them as
+arguments to if's, loops, etc. 
+
+Have (X,Y) pairs of variables displayed on the screen as dots. The dot
+could represent a pair of variables, or better yet, the top two
+numbers on the stack. Anything you do to the dot, gets done to the top
+of stack, and recorded. Change their value by dragging them around.
+Absolute change, Relative change, X and Y constraints, scale, rotate,
+various linear transformations, conversion to and from polar, min,
+max, etc...
+
+How to intersperse string literals into the journal:
+We want to record a transaction that involves a text type-in
+field, or a transaction that prompts for input. Journal the whole
+string as one event, not the key strokes. Hit "enter" to generate the
+event whose name is the field keytop (Default: the ItemLabel), and
+whose action is the text field value.
+
+Point at a place on the window with the mouse, and click to get a menu
+of things that take X Y arguments: moveto, lineto, curveto..., ...
+The code generated pushes the X Y position where the menu was invoked
+(in the CTM), and executes and remembers the command. Commands that
+need more arguments, like curveto, can prompt for them with rubber
+banding, different cursor, and message in prompt field. 
+Point button redoes last menu selection. 
+Instant draw program!
+
+========================================================================
+
+Date: Sun, 20 Dec 87 15:47:52 EST
+From: Don Hopkins <don@brillig.umd.edu>
+To: dshr%devnull@Sun.COM
+Cc: don@brillig.umd.edu
+Subject: A Selection of Questions
+
+Those are some pretty involved questions about a very complicated
+subject. I don't know enough about the subject to really comment
+intelligibly, but I'm definitely interested in seeing the paper you're
+writing about it. But here are some unintelligible comments anyway ...
+
+    3)	What is the "time" field of the ConvertSelection request
+	    used for?
+
+Hmm... And what happens if the clients and the server are running in
+different time zones? (or is it "server time"?)
+
+A selection mechanism seems to be something that's got to be very open
+ended in order to accommodate all the different types of things people
+are going to want to be able to select. I'm certainly no expert on it,
+so I may be way out in left field, but my impression is that the X11
+selection facilities seem to try to address lots of different ways of
+doing lots of different things, but end up doing it in a rather ad-hoc
+manner.
+
+I've read over LiteUI, and it sure is a big, intricate mass of code
+(compared to the rest of the PS libraries).  Although there are 
+lots of things it doesn't do, it does seem to be designed to be
+extended. I'm wondering how big HeviUI will end up being (if it ever
+stops growing). Having a programming language in the server makes a
+lot of problems easier to solve (especially open-ended-ness), but
+certainly does not solve them in and of its self. Is there something
+about selection that makes it necessarily ad-hoc and complex?
+
+LiteUI already has provisions for the selection of PostScript objects,
+which is one thing I'd like to play around with. Has anything been
+done with that yet? I'd like to see a graphical PostScript programming
+environment/debugger where the selection paradigm is simply that of a
+stack of PostScript objects. I'd still like to be able to select text
+like I'm used to, with the primary/secondary shelves, but I want be
+able to push the currently selected text onto the PostScript selection
+stack, as a PostScript string, or print (==) an item on the PS
+selection stack into a text selection shelf, or exec the current text
+selection and have it effect the PS selection stack. (i.e. selecting
+the text "123" and execing it pushes a number, "exch" does an exch,
+"/foo 1 index def" defines foo to be the top of the PS selection
+stack, etc...) Of course it would be nice to see all these objects
+that are on the PS selection stack graphically represented on the
+screen, and to be able to open them (arrays & dicts) up and manipulate
+them directly.
+
+What I'd like to know is how I can plug something like that into the
+existing NeWS selection mechanism without tearing up what's already
+there? I haven't used it enough yet to know how well this paradigm
+will fit.  Is LiteUI going to undergo a lot of changes to fit into the
+NeWS/X merge? Will there be one unified selection mechanism, or will
+there be two cooperative ones? (three? more? competitive?) I would
+certainly like to see as much as possible be done in PostScript, so it
+remains mallable ... (I for one will admit that I /enjoy/ programming
+in PostScript, and I'd certainly like to avoid recompiling everything
+whenever I get a weird idea I want to try out.)
+
+(PS: I liked your answer to the question at the NeWS SIG about what
+was being done to correct the misperception that X had won out over
+NeWS!)
+
+	-Don
+
+========================================================================
+
+Date: Sun, 23 Jul 89 22:05:31 -0400
+From: Don Hopkins <don@brillig.umd.edu>
+To: scout%zyzzyva@Sun.COM
+Cc: don@brillig.umd.edu
+Subject:  suggestions for cyberspace video tape?
+
+I have a version that runs under X11/NeWS beta 2! 
+(There are still a few weird bugs though.)
+
+Now objects can be "opened" two ways (at once):
+
+- Open a dict or an array in the normal way, to show its substructure.
+Diagonal lines emanate out to the right from the object label to the
+labels of the objects it contains.  The diagonal lines all fan out
+from the parent object, suggesting that they are contained within the
+parent.  Also, to save space, you can open the children *below* the
+label instead of to the right. Good if you're going in deep. Not as
+obvious that the children are contained within the parent since the
+lines don't lead your eye directly to it, so I then drew a line
+leading from where all the lines meet up to the parent.  I want it to
+embrace the fanned out lines with a [ or a { to show that the object
+is a literal or an executable array.
+
+- Open up a peripheral view, below the object, indented a little to
+the right.  No diagonal lines leading to the object. A vertical line
+runs up along the left edge of the control labels to underneath the
+parent label. (leading your eye to the parent, since without the line
+it was confusing what object the controls were associated with,
+especially when you've opened several nested levels at once) The point
+is to distinguish between views of the actual *insides* of an object,
+and peripheral views.  The peripheral can contain derived views
+(periscopes?) and control buttons. i.e. you can open up a peripheral
+view of all the children of a canvas (which are not directly inside
+the canvas dict, but that you have to execute a function to compute).
+The difference is that instead of looking at the insides of the
+object, you're looking at computed views (like canvas children, a
+class's methods, the definitions of a name on the dict stack, etc),
+and control buttons (like ++ and -- buttons on an integer, or a kill
+button on a process).  [Maybe there should be some graphics to
+distinguish between views and controls.  How about drawing rounded
+rects around things that are controls, to make them look like buttons.
+There would be room in the margins to draw small icons for the
+peripheral click-actions, but I would rather it be as un-cluttered as
+possible. Maybe clicking the left mouse button on a peripheral control
+could select some sort of help string (a generic one based on the
+click action, or something more informative), and the middle button
+would execute the button's click action.]
+
+Now there is a class browser view you can open up on dictionaries
+(type... object editor). (I still have to teach it to know that
+canvases and other magic dicts can be instances.) It gives you a view
+of the series of dict's that are pushed on the dict stack when you
+send to it (showing classes names in the type fields), the names of
+the instance variables, class variables, and methods, and subclasses
+(if it's a class).
+
+I just put 5 files in the mail:
+
+-rw-rw-rw-  1 don         61961 Jul 22 02:53 cyber.shar.Z.uu.aa 
+-rw-rw-rw-  1 don         62000 Jul 22 02:53 cyber.shar.Z.uu.ab 
+-rw-rw-rw-  1 don         62000 Jul 22 02:53 cyber.shar.Z.uu.ac 
+-rw-rw-rw-  1 don         62000 Jul 22 02:53 cyber.shar.Z.uu.ad 
+-rw-rw-rw-  1 don         40448 Jul 22 02:53 cyber.shar.Z.uu.ae 
+
+Please give it a try and tell me how it works! (It should work with
+NeWS 1.1, but it core dumps sun-4's when you type in a {executable
+array} (I can send you a fix for that), and it works under X11/NeWS
+beta 2 (there are a bunch of gross bug fixes embeded in the ncyber.ps
+file, so there are no guarentees it will work with the latest greatest
+version of X11/NeWS.)  Tell me how you think the programming
+environment and the graphics could be improved and made more obvious!
+
+I want to do a rewrite in NDE eventually, but I want to get this
+version at least running smoothly enough to help me in that rewrite.
+(and I want to learn more about NDE before doing that!)  Have you
+played around with the stuff in etc/NeWS/NDE/trace.ps? I haven't had
+a chance to use it yet...  Looks like it would be great to hook up to,
+though!
+
+	-Don
+
+PS.ps: Has anybody written a PostScript interpreter in PostScript?
+
+========================================================================

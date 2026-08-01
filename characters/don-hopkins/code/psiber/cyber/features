@@ -1,0 +1,40 @@
+* object deck
+** display
+*** control over depth, font size, shrink factor
+*** tab windows
+**** displays data type
+**** drag window around with tab
+**** tab placement
+** manipulation
+*** displayed data structures are mouse sensative
+*** select text, object, pointer, interval
+*** paste into dictionaries and arrays
+*** open, close
+*** execute, load, push
+*** type conversion
+*** pop-up menu of type specific funcions
+** interactive programming
+*** NeWS process window (text interaction)
+*** direct stack manipulation
+** snap dragging
+** key bindings
+*** bind functions to control characters, function keys, (mouse clicks)
+*** show bindings, describe key
+*** name completion over dict stack, (over top of dict stack)
+**** complete, list, show
+*** other interesting key bindings
+** miscellaneous functions
+*** substructure reference (make function that references an object reference)
+
+** UI design issues
+*** pop up pie menus
+*** common things in primary directions
+
+** todo
+*** high level journaling
+*** programming by example
+
+* cyberspace projector
+** todo
+*** popup "true names"
+*** pie menus to select dict and array elements

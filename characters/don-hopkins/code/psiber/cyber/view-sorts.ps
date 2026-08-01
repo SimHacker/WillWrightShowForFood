@@ -1,0 +1,16 @@
+%
+% viewit
+%
+
+    /a [20 {random 100 mul round} repeat] def
+    /bubble {a dup length array copy bubblesort pop} def
+    /heap {a dup length array copy /gt heapsort pop} def
+    /quick {a dup length array copy /gt quicksort pop} def
+
+%{{bubble}iexec} vexec (1 60 div sleep\n) print
+{bubble} vexec (1 60 div sleep\n) print
+%{{heap}iexec} vexec (1 60 div sleep\n) print
+{heap} vexec (1 60 div sleep\n) print
+%{{quick}iexec} vexec
+{quick} vexec
+

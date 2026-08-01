@@ -1,0 +1,67 @@
+- Added Pie Menus to Menu.c.
+  - Autoselect does not apply to pie menus.
+
+- Changed f.beep, f.circledown, f.circleup, f.continue, f.focus,
+  f.iconify, and f.lower from IsFunction to IsQuitFunction. (globals.c)
+
+- Changed conditions of assignment of IsImmFunction -vs- IsUwmFunction
+  to menu functions, so that you can have functions in menus
+  that act on the windows the menu was invoked in. (gram.y)
+
+- Changed handling of IsImmFunction in Menu.c to pass function
+  "window" (the window in which the menu was invoked), instead of
+  "sub_window". (Menu.c)
+
+- Made submenus pop up at the location of the mouse up event that
+  selected them. (Menu.c)
+
+- Took into account MBorderWidth when calculating menu placement. (Menu.c)
+
+- Removed check for equality of key mask for button up event during
+  menu selection. (Menu.c)
+
+- Made all calls to exit() go through Exit() in uwm.c, so as to
+  facilitate forth hacks. (Error.c, uwm.c)
+
+- Changed GetButton.c to allow ^H as well as DELETE, and ^X as well as
+  ^U, when typing at icons. Fixed bug with zeroing out icon_str.
+
+Added global variables:
+  - PieCursor
+  - MenuRadius
+  - PieMenus
+
+Added defaults to uwm.h:
+  - DEF_MENU_RADIUS
+  - DEF_PIE_MENUS
+
+Added fields to structures:
+  - MenuInfo
+    - name_x
+    - name_y
+    - piemenu
+    - items
+    - initial_angle
+    - radius
+    - center_x
+    - center_y
+    - width
+  - MenuLine
+    - x_offset
+    - y_offset
+    - quadrand
+    - slope
+  - YYSTYPE (y.tab.h)
+    - coval
+
+Added to .uwmrc grammar:
+  - Numeric variable menuradius, that is the default radius.
+  - Added "pulldownmenus" and "piemenus" flags, which set the default
+    menu type, that you get with "menu".
+  - Added "pulldownmenu" and "piemenu" declarations, which function
+    just like "menu", but override the default menu type.
+  - Added <initial_angle, radius> specification to menu grammar. If left
+    out, the defaults are assumed. They are used right before the "{"
+    that starts a menu declaration. They set the angle of first menu
+    item, and the menu radius. They are both integers. The angle is in
+    degrees.

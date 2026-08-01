@@ -1,0 +1,2 @@
+#!/bin/csh
+ld -r gram.o lex.o globals.o Beep.o Bindings.o CircleDown.o CircleUp.o Focus.o GetButton.o Iconify.o Lower.o Menu.o Move.o MoveOpaque.o NewIconify.o Pause.o Push.o Error.o Raise.o Refresh.o Resize.o Restart.o StoreBox.o StoreGridBox.o StoreCursors.o StoreZap.o XError.o /usr/src/local/bin/X/Xlib/libX.a -ll -lm

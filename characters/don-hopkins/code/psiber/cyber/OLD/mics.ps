@@ -1,0 +1,1329 @@
+%!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% @(#)MiCS.ps
+% Molecules in Cyber Space 
+% Copyright (C) 1989.
+% By Don Hopkins. (don@brillig.umd.edu)
+% All rights reserved.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% You are free to redistribute this program.  Please leave the comments
+% intact, add your own interpretations, views, hallucinations, navagation 
+% aids, and pass it on to friends!  The author is not responsible for any 
+% time or brain cells wasted with this software.
+% 
+% This is an almost totally rewritten version of the Pseudo Scientific
+% Visualizer (the browser for the other half of your brain).
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% We've got to have various classes defined...
+
+systemdict /PieMenu known not {
+  (NeWS/piemenu.ps) LoadFile not {
+    currentcursorlocation
+    [(Need) (piemenu.ps)] popmsg pop
+    currentprocess killprocess
+  } if
+} if
+
+systemdict /PulloutPieMenu known not {
+  (NeWS/pullout.ps) LoadFile not {
+    currentcursorlocation
+    [(Need) (pullout.ps)] popmsg pop
+    currentprocess killprocess
+  } if
+} if
+
+systemdict /OverlayWindow known not {
+  (NeWS/overlay.ps) LoadFile not {
+    currentcursorlocation
+    [(Need) (overlay.ps)] popmsg pop
+    currentprocess killprocess
+  } if
+} if
+
+systemdict /pointing-hand known not {
+  (NeWS/pointer.ps) LoadFile not {
+    currentcursorlocation
+    [(Need) (pointer.ps)] popmsg pop
+    currentprocess killprocess
+  } if
+} if
+
+systemdict begin
+
+/MoleculeDict 200 dict def
+MoleculeDict begin
+
+  /ColorHueFrob .3 def
+  /ColorSaturationFrob .5 def
+  /ColorBrightnessFrob .3 def
+
+  /ShrinkX .6 def
+  /ShrinkY .6 def
+
+  /ArraySpread 2.5 def
+  /DictKeySpread 2.5 def
+  /DictValueSpread 2.5 def % translate happens *after* scaling down
+
+  /ProcessMax 10 def
+  /ForkProb .5 def
+
+  /DepthDraw 3 def
+  /DepthTarget 999 def
+
+  /Drain? false def
+
+  /DoLines false def
+
+  /IgnoreKeys 50 dict def
+  IgnoreKeys begin
+    /TopCanvas dup def
+    /BottomCanvas dup def
+    /CanvasAbove dup def
+    /Parent dup def
+    /FrameMenu dup def
+    /IconMenu dup def
+    /ParentDict dup def
+    /ParentDictArray dup def
+  end
+
+  /Types {
+    nulltype  integertype  realtype  booleantype  colortype  marktype
+    operatortype  nametype  stringtype  shapetype  monitortype  
+    graphicsstatetype  cursortype  filetype  arraytype  dicttype
+    fonttype  canvastype  processtype  eventtype
+  } def
+
+  /defaulttype {
+    pop
+    gsave
+      _newpath
+      -90 rotate
+      0 setlinecap
+      .1 setlinewidth
+      0 -.8 .2 0 360 arc closepath _fill
+      0 -.5 moveto
+      0 .5 .5 -90 120 arc closepath
+      _stroke
+    grestore
+  } def
+
+  /nulltype {
+    pop
+    gsave
+      _newpath
+      -90 rotate
+      -1 -1 2 .7 rectpath
+      0 -.5 .6 180 0 arcn closepath
+      _fill
+    grestore
+  } def
+
+  /integertype {
+    gsave
+      _newpath
+      abs 1 add ln dup 10000 mul cos 1 add 2 div cvfixed
+      exch dup 1000 mul sin 1 add 2 div cvfixed
+      exch 100 mul 10 add cos 1 add 2 div cvfixed
+      setrgbcolor
+      -.9 -.9 1.8 1.8 rectpath
+      _fill
+    grestore
+  } def
+
+  /realtype {
+    integertype
+  } def
+
+  /booleantype {
+    gsave
+      _newpath
+      .1 setlinewidth
+      0 setlinecap
+      -90 rotate
+      0 0 .9 0 360 arc closepath
+      {
+	0 -.9 moveto
+	0 .9 lineto
+	-45 rotate
+	0 -.9 moveto
+	0 0 lineto
+	.9 0 lineto
+      } {
+        -45 rotate
+	0 -.9 moveto
+	0 .9 lineto
+      } ifelse
+      _stroke
+    grestore
+  } def
+
+  /colortype {
+    gsave
+      _newpath
+      0 0 .9 0 360 arc closepath
+      gsave .1 setlinewidth 0 setgray _stroke grestore
+      setcolor _fill
+    grestore
+  } def
+
+  /marktype {
+    pop
+    gsave
+      _newpath
+      -90 rotate
+      -1 -.3 translate
+      2 2 scale
+      .2 0 moveto % Nick Turner's finger
+      0 .3 lineto
+      .1 .5 lineto
+      .2 .5 lineto
+      .2 .55 lineto
+      .3 .6 lineto
+      .4 .55 lineto
+      .4 .95 lineto
+      .5 1 lineto
+      .6 .95 lineto
+      .6 .55 lineto
+      .7 .6 lineto
+      .8 .55 lineto
+      .8 .5 lineto
+      .9 .55 lineto
+      1 .5 lineto
+      1 .3 lineto
+      .8 0 lineto
+      closepath
+      _fill
+    grestore
+  } def
+
+  /operatortype {
+    pop
+    _newpath
+    -.2 -.2 .4 .4 rectpath
+    0 0 .5 0 360 arc closepath
+    _eofill
+  } def
+
+  /nametype {
+    pop
+    _newpath
+    0 -.5 moveto
+    1 0 lineto
+    0 .5 lineto
+    closepath
+    _eofill
+  } def
+
+  /stringtype {
+    length 1 add
+    _newpath
+    -.5 -.1 % x y
+    3 -1 roll 5 div .5 add .2 % x y w h
+    rectpath
+    _fill
+  } def
+
+  /shapetype {
+    defaulttype
+  } def
+
+  /monitortype {
+    gsave
+      _newpath
+      -.8 -1 1.2 1 rectpath 
+      _fill
+      0 setlinecap
+      .1 setlinewidth
+      .7 1 moveto
+      0
+      exch monitorlocked 1.2 1.6 ifelse
+      .7 0 180 arc closepath
+      _stroke
+    grestore
+  } def
+
+  /graphicsstatetype {
+    pop
+    _newpath
+    -.5 -.5 moveto
+    1 -.4 lineto
+    1 -.2 lineto
+    .8 -.2 lineto
+    1 .4 lineto
+    1 1 lineto
+    .5 .3 lineto
+    -.5 .5 lineto
+    closepath
+    _eofill
+  } def
+
+  /cursortype {
+    defaulttype
+  } def
+
+  /filetype {
+    pop
+    gsave
+      _newpath
+      90 rotate
+      -.9 -.9 1.8 .4 ovalpath
+      -.9 .5 1.8 .4 ovalpath
+      -.9 -.7 moveto
+      -.9 .7 lineto
+      .9 -.7 moveto
+      .9 .7 lineto
+      _stroke
+    grestore
+  } def
+
+  % Compound objects
+
+  /OpenArrays? true def
+
+  /arraytype {
+    gsave
+      _newpath
+      dup length 0 ne DoLines and {
+        .05 setlinewidth
+	360 1 index length div
+	1 index length {
+	  0 0 moveto
+	  ArraySpread 0 lineto
+	  dup rotate
+	  _stroke
+	} repeat
+	pop
+      } if
+      0 0 1 0 360 arc closepath 
+      0 0 .6 0 360 arc closepath
+      _eofill
+    grestore
+    OpenArrays? { compoundtype } if
+  } def
+
+  /compoundtype {
+    20 dict begin gsave
+      make-target
+      /obj exch def
+      MyDepth DepthDraw lt {
+	/pieces /obj load length def
+	pieces 0 ne {
+	  /step 360 pieces div def
+	  /i -1 def
+	  /obj load { % element
+	    pause
+	    BailOut? {pop exit} if
+	    /i i 1 add def
+	    gsave
+	      ArraySpread 0 translate
+	      ShrinkX ShrinkY scale
+	      _begingroup
+	      visualize
+	      _endgroup
+	    grestore
+	    step rotate
+	  } forall
+        } if
+      } if
+    end grestore
+  } def
+
+  /OpenDicts? true def
+
+  /dicttype {
+    gsave
+      _newpath
+      dup length 0 ne DoLines and {
+        .05 setlinewidth
+	360 1 index length div
+	1 index length {
+	  0 0 moveto
+	  DictKeySpread 0 lineto
+	  dup rotate
+	  _stroke
+	} repeat
+	pop
+      } if
+      0 0 1 0 360 arc closepath
+      0 0 .7 0 360 arc closepath
+      0 0 .3 0 360 arc closepath
+      _eofill
+    grestore
+    OpenDicts? { dictoidtype } { pop } ifelse
+  } def
+
+  /dictoidtype {
+    20 dict begin gsave
+      make-target
+      /obj exch def
+      MyDepth DepthDraw lt { 
+	/pieces /obj load length def
+	pieces 0 ne {
+	  /step 360 pieces div def
+	  /obj load { % element
+	    pause
+	    BailOut? {pop pop exit} if
+	    gsave
+	      DictKeySpread 0 translate
+	      ShrinkX ShrinkY scale
+	      _begingroup
+	      exch visualize
+	      _endgroup
+	      DictValueSpread 0 translate
+	      visualize
+	    grestore
+	    step rotate
+	  } forall
+        } if
+      } if
+    end grestore
+  } def
+
+  % Bill Meine's Sunlogo:
+  /Uchar {
+     -.1 0 moveto
+     0 0 .1 180 360 arc
+     0 2.9 rlineto
+     .8 0 rlineto
+     0 -2.9 rlineto
+     0 0 .9 0 180 arcn
+     0 2.9 rlineto
+     .8 0 rlineto
+    closepath
+  } def
+  /2Uchar { 
+    Uchar matrix currentmatrix
+    4 4 translate Uchar setmatrix
+  } def
+  /Sunlogo { % xcenter ycenter s = -
+    3 1 roll               	% s xcenter ycenter
+    matrix currentmatrix 4 1 roll % matrix s xcenter ycenter
+    translate        		% matrix s
+    16 dup mul 2 div sqrt div	% s will now represent total height
+    dup scale			% matrix
+    0 3 dup mul 2 mul sqrt neg translate % new starting point from center
+    45 rotate
+    4 { 2Uchar 6 0 translate 90 rotate } repeat
+    setmatrix		% restore original CTM
+  } def
+
+  /fonttype {
+    pop
+    _newpath
+    0 0 2 Sunlogo
+    _fill
+  } def
+
+  /OpenCanvases? false def
+
+  /canvastype {
+    gsave
+      _newpath
+      -.8 -.8 translate
+      2 {
+	0 0 moveto
+	1.8 0 rlineto
+	currentpoint
+	-.2 -.2 rlineto
+	moveto
+	-.2 .2 rlineto
+        90 rotate
+      } repeat
+      _stroke
+    grestore
+    OpenCanvases? { dictoidtype } { pop } ifelse
+  } def     
+
+  /processtype {
+    pop
+    gsave
+      _newpath
+      90 rotate
+      -1 -1 translate
+      2 1.8 scale
+      0.634 0.83 moveto
+      0.634 0.83 0.5 controlpoint
+      0.6762 0.836 0.5 controlpoint
+      0.7723 0.8271 0.5 controlpoint
+      0.8313 0.819 0.5 controlpoint
+      0.847 0.8101 0.5 controlpoint
+      0.86 0.7903 0.5 controlpoint
+      0.867 0.748 0.5 controlpoint
+      0.8684 0.737 0.5 controlpoint
+      0.8684 0.737 0.5 controlpoint
+      0.882 0.7393 0.5 controlpoint
+      0.894 0.734 0.5 controlpoint
+      0.9021 0.7252 0.5 controlpoint
+      0.916 0.711 0.5 controlpoint
+      0.9173 0.7 0.5 controlpoint
+      0.938 0.683 0.5 controlpoint
+      0.96 0.652 0.5 controlpoint
+      0.978 0.612 0.5 controlpoint
+      0.9831 0.584 0.5 controlpoint
+      0.9831 0.5523 0.5 controlpoint
+      0.973 0.53 0.5 controlpoint
+      0.96 0.5212 0.5 controlpoint
+      0.948 0.5212 0.5 controlpoint
+      0.948 0.5212 0.5 controlpoint
+      0.9443 0.4674 0.5 controlpoint
+      0.933 0.448 0.5 controlpoint
+      0.9123 0.442 0.5 controlpoint
+      0.889 0.4334 0.5 controlpoint
+      0.8583 0.431 0.5 controlpoint
+      0.8532 0.448 0.5 controlpoint
+      0.857 0.462 0.5 controlpoint
+      0.857 0.462 0.5 controlpoint
+      0.84 0.462 0.5 controlpoint
+      0.84 0.462 0.5 controlpoint
+      0.835 0.422 0.5 controlpoint
+      0.828 0.408 0.5 controlpoint
+      0.8043 0.371 0.5 controlpoint
+      0.7723 0.3512 0.5 controlpoint
+      0.7504 0.3512 0.5 controlpoint
+      0.732 0.357 0.5 controlpoint
+      0.712 0.377 0.5 controlpoint
+      0.693 0.4022 0.5 controlpoint
+      0.678 0.439 0.5 controlpoint
+      0.673 0.4674 0.5 controlpoint
+      0.673 0.4674 0.5 controlpoint
+      0.653 0.476 0.5 controlpoint
+      0.653 0.476 0.5 controlpoint
+      0.646 0.442 0.5 controlpoint
+      0.646 0.442 0.5 controlpoint
+      0.5581 0.456 0.5 controlpoint
+      0.422 0.456 0.5 controlpoint
+      0.361 0.4674 0.5 controlpoint
+      0.302 0.456 0.5 controlpoint
+      0.287 0.456 0.5 controlpoint
+      0.2782 0.456 0.5 controlpoint
+      0.2664 0.482 0.5 controlpoint
+      0.245 0.4362 0.5 controlpoint
+      0.216 0.3852 0.5 controlpoint
+      0.167 0.3852 0.5 controlpoint
+      0.135 0.439 0.5 controlpoint
+      0.115 0.4872 0.5 controlpoint
+      0.105 0.5184 0.5 controlpoint
+      0.105 0.578 0.5 controlpoint
+      0.091 0.513 0.5 controlpoint
+      0.0573 0.51 0.5 controlpoint
+      0.039 0.541 0.5 controlpoint
+      0.024 0.561 0.5 controlpoint
+      0.0134 0.5722 0.5 controlpoint
+      0.024 0.6232 0.5 controlpoint
+      0.054 0.68 0.5 controlpoint
+      0.088 0.7252 0.5 controlpoint
+      0.088 0.731 0.5 controlpoint
+      0.054 0.765 0.5 controlpoint
+      0.037 0.771 0.5 controlpoint
+      0.039 0.8271 0.5 controlpoint
+      0.0573 0.839 0.5 controlpoint
+      0.1483 0.8441 0.5 controlpoint
+      0.1483 0.836 0.5 controlpoint
+      0.1483 0.819 0.5 controlpoint
+      0.1483 0.796 0.5 controlpoint
+      0.162 0.7903 0.5 controlpoint
+      0.1652 0.819 0.5 controlpoint
+      0.179 0.839 0.5 controlpoint
+      0.2023 0.85 0.5 controlpoint
+      0.206 0.8271 0.5 controlpoint
+      0.216 0.8243 0.5 controlpoint
+      0.221 0.8441 0.5 controlpoint
+      0.26 0.898 0.5 controlpoint
+      0.2934 0.9121 0.5 controlpoint
+      0.336 0.932 0.5 controlpoint
+      0.4114 0.952 0.5 controlpoint
+      0.4603 0.9603 0.5 controlpoint
+      0.508 0.9603 0.5 controlpoint
+      0.528 0.958 0.5 controlpoint
+      0.543 0.941 0.5 controlpoint
+      0.597 0.881 0.5 controlpoint
+      0.624 0.85 0.5 controlpoint
+      closepath
+      _fill
+    grestore
+  } def
+
+  /OpenEvents? true def
+
+  /eventtype {
+    _newpath
+    -.8 -.8 1.6 1.6 rectpath
+    -.8 .8 moveto
+    0 0 lineto
+    -.8 -.8 lineto
+    _stroke
+    OpenEvents? { dictoidtype } { pop } ifelse
+  } def
+
+end % MoleculeDict
+
+/StillDict 200 dict def
+StillDict begin % The following is in the spirit of Glenn Reid's Distillery
+
+  /_out null def
+  /_out? false def
+  /_outfile (still_out.ps) def
+
+  /_ascii? true def % false doesn't work yet because of typedprint
+
+  /_display_def? false def
+
+  /_wrap_things? true def
+
+  /_buf 80 string def
+
+  /_smartcolor false def
+  /_usefont false def
+
+  /_fonts 100 dict def
+  /_fcount 0 def
+  /_font null def
+  /_color null def
+  /_linecap null def
+  /_linejoin null def
+  /_linewidth null def
+  /_miterlimit null def
+  /_dashoff null def
+  /_dasharray null def
+
+  /_output_flatness 0 def
+
+  /_outputmatrix matrix def
+
+  /_MOVETO (moveto\n) def
+  /_LINETO (lineto\n) def
+  /_CURVETO (curveto\n) def
+  /_CLOSEPATH (closepath\n) def
+  /_CONTROLPOINT (controlpoint\n) def
+  /_FILL (fill\n) def
+  /_EOFILL (eofill\n) def
+  /_STROKE (stroke\n) def
+  /_SHOW (show\n) def
+  /_NEWPATH (\n) def
+  /_SETFONT (setfont\n) def
+  /_GSAVE (gsave\n) def
+  /_GRESTORE (grestore\n) def
+  /_SETGRAY (setgray\n) def
+  /_SETHSBCOLOR (sethsbcolor\n) def
+  /_SETLINECAP (setlinecap\n) def
+  /_SETLINEJOIN (setlinejoin\n) def
+  /_SETLINEWIDTH (setlinewidth\n) def
+  /_SETMITERLIMIT (setmiterlimit\n) def
+  /_SETDASH (setdash\n) def
+  /_DISPLAYBEGIN (/display {\n) def
+  /_DISPLAYEND (} def\n) def
+  /_STILLBEGIN (\n) def
+  /_STILLEND (\n) def
+  /_BEGINGROUP { ProcessMax 1 gt (\n) (% BeginGroup {\n) ifelse } def
+  /_ENDGROUP { ProcessMax 1 gt (\n) (%} EndGroup\n) ifelse } def
+  /_BEGINTHING ({\n) def
+  /_ENDTHING (} exec\n) def
+
+  /_stillbegin {
+    _init
+    _out null eq {
+      _out? {
+        /_out _outfile (w) file def
+        (%!\n%BoundingBox: % % % %\n/display_w % def\n/display_h % def\n\n)
+	[ (%) (%%)
+	  gsave clippath pathbbox points2rect grestore
+	  2 copy
+	] sprintf
+	_write_out
+	_display_def? { _DISPLAYBEGIN _write_out } if
+	_STILLBEGIN _write_out
+      } if
+    } if
+  } def
+
+  /_stillend {
+    _out? {
+      _STILLEND _write_out
+      _display_def? { _DISPLAYEND _write_out } if
+      _out closefile
+      /_out null store
+    } if
+  } def
+
+  /_init {
+    _outputmatrix currentmatrix pop
+    /_fonts 100 dict store
+    /_fcount 0 store
+    /_font null store
+    /_color null store
+    /_linecap null store
+    /_linejoin null store
+    /_linewidth null store
+    /_miterlimit null store
+    /_dasharray null store
+    /_dashoff null store
+    _output_flatness setflat
+  } def
+
+  /_write_out {
+    _out exch writestring
+  } def
+
+  % XXX: Writes to stdout!
+  /_typed_out {
+    typedprint
+  } def
+
+  /_write_string {
+    _ascii? { litstring _write_out } { _typed_out } ifelse
+  } def
+
+  /_write_number {
+    _ascii? { _buf cvs _write_out ( ) _write_out } { _typed_out } ifelse
+  } def
+
+  /_write_state {
+    _font currentfont ne _usefont and {
+      _fonts currentfont known {
+	_fonts currentfont get
+      } {
+        _fonts currentfont _fcount (_f%) sprintf put
+	_fcount
+	currentfont /FontName get (/% findfont ) _write_out
+	currentfont /FontMatrix get 0 get _write_number
+	(scalefont dup /_f% exch def ) sprintf _write_out
+	/_fcount _fcount 1 add store
+      } ifelse
+      _SETFONT _write_out
+      /_font currentfont store
+    } if
+    _smartcolor {
+      % ...
+    } {
+      _color currentcolor ne {
+	currentrgbcolor
+	1 index eq { eq } { pop pop false } ifelse {
+	  currentgray _write_number _SETGRAY _write_out
+	} {
+	  currenthsbcolor
+	  3 -1 roll _write_number exch _write_number _write_number
+	  _SETHSBCOLOR _write_out
+	} ifelse
+        /_color currentcolor store
+      } if
+    } ifelse
+    _linecap currentlinecap ne {
+      currentlinecap _write_number _SETLINECAP _write_out
+      /_linecap currentlinecap store
+    } if
+    _linejoin currentlinejoin ne {
+      currentlinejoin _write_number _SETLINEJOIN _write_out
+      /_linejoin currentlinejoin store
+    } if
+    gsave _outputmatrix setmatrix
+      _linewidth currentlinewidth ne {
+	currentlinewidth _write_number
+	_SETLINEWIDTH _write_out
+	/_linewidth currentlinewidth store
+      } if
+    grestore
+    _miterlimit currentmiterlimit ne {
+      currentmiterlimit _write_number
+      _SETMITERLIMIT _write_out
+      /_miterlimit currentmiterlimit store
+    } if
+    currentdash exch _dashoff ne { pop false } {
+      dup length _dasharray length ne { pop false } {
+        _dasharray {eq} arrayop
+	true exch {not {not exit} if} forall
+      } ifelse
+    } ifelse {
+      currentdash exch
+      ([) _write_out { _write_number } forall (]) write_out
+      _write_number
+      _SETDASH _write_out
+      currentdash /_dasharray exch store /_dashoff exch store
+    } if
+  } def
+
+  /_write_path {
+    gsave _outputmatrix setmatrix
+      _output_flatness setflat
+      %flattenpath
+      { { exch _write_number _write_number
+          _MOVETO _write_out }
+	{ exch _write_number _write_number 
+	  _LINETO _write_out }
+	{ 6 -1 roll _write_number
+	  5 -1 roll _write_number
+	  4 -1 roll _write_number
+	  3 -1 roll _write_number
+	  exch _write_number _write_number
+	  _CURVETO _write_out }
+	{ _CLOSEPATH _write_out }
+%	{ 3 -1 roll _write_number exch _write_number _write_number
+%	  _CONTROLPOINT _write_out }
+      } pathforallvec
+    grestore
+  } def
+
+  /_begingroup {
+    _out? {
+      _BEGINGROUP _write_out
+    } if
+  } def
+
+  /_endgroup {
+    _out? {
+      _ENDGROUP _write_out
+    } if
+  } def
+
+  /_fill {
+    _out? {
+      gsave fill grestore
+      _write_path
+      _write_state
+      _FILL _write_out
+      newpath
+    } {
+      fill
+    } ifelse
+  } def
+
+  /_eofill {
+    _out? {
+      gsave eofill grestore
+      _write_path
+      _write_state
+      _EOFILL _write_out
+      newpath
+    } {
+      eofill
+    } ifelse
+  } def
+
+  /_stroke {
+    _out? {
+      gsave stroke grestore
+      _write_path
+      _write_state
+      _STROKE _write_out
+      newpath
+    } {
+      stroke
+    } ifelse
+  } def
+
+  /_show {
+    _out? {
+      _write_state
+      _GSAVE _write_out
+      _write_matrix
+      currentpoint exch _write_number _write_number
+      _MOVETO write_out
+      _write_string
+      _SHOW _write_out
+      _GRESTORE _write_out
+    } if
+    show
+  } def
+
+  /_newpath { % signifies a new object
+    _out? {
+      _NEWPATH _write_out
+    } if
+    newpath
+  } def
+
+end % StillDict
+
+/PSVisualizerWindow OverlayWindow
+dictbegin
+  /FrameLabel (The NeWS Pseudo-Scientific Visualizer!) def
+  /IconLabel (PS Visualizer) def
+  /IconImage /eye def
+
+  /MyProcesses null def
+  /MyThing null def
+  /MyTop null def
+
+  /EventMgr null def
+
+  /Canvases null def
+
+  /CheapIcon? false def % quickwin mod
+  /Retained? true def
+
+  /BorderLeft 8 def 
+  /BorderRight 8 def 
+  /BorderTop 8 def 
+  /BorderBottom 8 def
+
+  /FrameFillColor .5 .5 .5 rgbcolor def
+  /SpaceColor ColorDict /MediumTurquoise get def
+
+  /HilitedCan null def
+
+  /SpotRadius 28 def
+
+  /ForkPaintClient? true def
+%  /ForkPaintClient? false def
+
+  /HiliteDelay .2 60 div def
+  /LoliteDelay .4 60 div def
+  /DelayedHiliteProc null def
+
+  /DictBase null def
+
+dictend
+classbegin
+
+  /FramePath { ovalpath } def
+
+  /PaintFrame {
+    FrameFillColor fillcanvas 
+  } def
+
+  /PaintFocus { 
+  } def
+
+  /ExitFrame {
+    HideSprite
+    DelayedHiliteProc null ne { 
+      DelayedHiliteProc killprocess
+      /DelayedHiliteProc null def
+    } if
+    /DelayedHiliteProc {
+      LoliteDelay sleep
+      KindaColor
+      /ExitFrame super send
+      /DelayedHiliteProc null def
+    } fork def
+  } def
+
+  /EnterFrame {
+    CurrentEvent TrackSprite
+    DelayedHiliteProc null ne { 
+      DelayedHiliteProc killprocess
+      /DelayedHiliteProc null def
+    } if
+    /DelayedHiliteProc {
+      HiliteDelay sleep
+      InteractionLock {
+	FullColor
+	/EnterFrame super send
+	/DelayedHiliteProc null def
+      } monitor
+    } fork def
+  } def
+
+  /MyDepth {
+    countdictstack DictBase sub
+  } def
+
+  /new {
+    /new super send begin
+      /MyThing exch def
+      /MyTop /MyThing load def
+      /MyProcesses 100 dict def
+      currentdict
+    end
+  } def
+
+  /destroy { % clean up
+    zap-processes
+    /MyThing null store
+    /MyTop null store
+    zap-canvases
+    /destroy super send
+  } def
+
+  /zap-processes {
+    MyProcesses {
+      dup currentprocess ne { killprocess } {
+	% No owch!
+      } ifelse
+      MyProcesses exch undef
+    } forall
+  } def
+
+  /zap-canvases {
+    /HilitedCan null store
+    Canvases null ne {
+      Canvases {
+          /obj undef
+	  Canvases 1 index undef
+% 	  /Interests get
+% 	  % Careful not to zap the global keyboard manager!
+% 	  { dup /Process get dup null eq { pop } {
+% 	      dup currentprocess eq { pop } { killprocess } ifelse
+% 	    } ifelse
+% 	    %{ revokeinterest } errored {pop} if
+% 	    pop
+% 	  } forall
+	  pop
+	} forall
+    } if
+  } def
+
+  /drain {
+    MoleculeDict /Drain? true put
+    fart-around
+    MoleculeDict /Drain? false put
+  } def
+
+  /fart-around {
+    { MyProcesses length 0 eq { exit } if
+      MyProcesses { pop exit } forall % Grab one process
+      waitprocess pop
+    } loop
+  } def
+
+  /PaintClient {
+    gsave
+    FullColor
+    BlackOverlay
+    ColorCanvas setcanvas 
+    EventMgr null ne {
+      EventMgr killprocess
+      /EventMgr null store
+    } if
+    {
+      clear
+      newprocessgroup
+      drain
+      zap-processes
+      zap-canvases
+      /Canvases 50 dict store
+      SpaceColor fillcanvas
+      random random random sethsbcolor
+      StillDict begin _stillbegin
+	MoleculeDict begin 
+	  /DictBase countdictstack store
+	  clippath pathbbox scale pop pop
+	  .5 .5 translate .05 .05 scale
+	  { /MyThing load
+            _begingroup visualize _endgroup
+            MyProcesses currentprocess undef
+	  } fork MyProcesses exch dup put
+	  fart-around
+	  ColorCanvas setcanvas
+	  EventMgr dup null ne exch currentprocess ne and {
+	    EventMgr killprocess
+	  } if
+	  [ Canvases { pop
+	      [ /EnterEvent /ExitEvent PointButton AdjustButton MenuButton ]
+	      /target-event null 4 -1 roll eventmgrinterest
+	    } forall
+	    PointButton /point-background null TrackCanvas eventmgrinterest
+	    /MouseDragged /drag-background null TrackCanvas eventmgrinterest
+	  ] forkeventmgr
+        end % MoleculeDict
+      _stillend end % StillDict
+      /EventMgr exch store
+      clear
+    } fork pop
+   grestore
+   .5 60 div sleep fart-around
+  } def
+
+  /activate {
+    map
+  } def
+
+  /reshape {
+    /reshape super send
+  } def
+
+  /hilite-can {
+    /HilitedCan 1 index def
+    random 2 div .5 add HilitedCan HiliteCan
+  } def
+
+  /lolite-can {
+    /HilitedCan null def
+    dup canvastobottom
+    random 2 div exch HiliteCan
+%    LoliteCan
+  } def
+
+  /drag-background {
+   DelayedHiliteProc null eq {
+%    true CurrentEvent /KeyState get { PointButton ne and } forall {
+%       HilitedCan CurrentEvent FullColorCursor
+       CurrentEvent TrackSprite
+       random HilitedCan HiliteCan
+%    } if
+   } if
+  } def
+
+  /point-background {
+    gsave
+      CurrentEvent /Action get /DownTransition eq {
+        DarkColor
+        Canvases { % can dict
+	  pop
+	  random 2 div .5 add exch HiliteCan
+	} forall
+      } {
+         FullColor
+      } ifelse
+    grestore
+  } def
+
+  /target-event-names 10 dict def
+  target-event-names begin
+    PointButton {
+      CurrentEvent /Action get /DownTransition eq {
+	Canvases
+	CurrentEvent /Canvas get get /obj get
+	select-object
+      } {
+	Canvases
+	CurrentEvent /Canvas get get /obj get
+	dup length 16 le {
+          [ exch
+	    dup (%:) sprintf exch
+	    dup type /arraytype eq {
+	      0 exch { 1 index (  %: %) sprintf exch 1 add } forall
+	      pop
+	    } {
+	      { exch (  %: %) sprintf } forall
+	    } ifelse
+	  ]
+	} {
+	  (%) sprintf
+	} ifelse
+	gsave
+	  framebuffer setcanvas
+          clippath pathbbox /h exch def /w exch def pop pop
+	  currentcursorlocation
+          1 index w 2 div lt % x y x<0?
+          1 index h 2 div lt % x y x<0? y<0?
+          { 225 315 ifelse } { 135 45 ifelse } ifelse 
+	  90 random mul 45 sub add
+          20
+	  5 -1 roll
+	  pointmsg pop
+	grestore
+      } ifelse
+    } def
+    AdjustButton {
+      CurrentEvent /Action get /DownTransition eq {
+	Canvases
+	CurrentEvent /Canvas get get /obj get
+	/MyThing exch store
+	{ PaintClient } fork pop
+      } {
+      } ifelse
+    } def
+    MenuButton {
+      CurrentEvent /Action get /UpTransition eq {
+        Canvases
+	CurrentEvent /Canvas get get /obj get
+	KindaColor % Make overlay visible for /reshapefromuser
+	CurrentEvent recallevent
+	start_visualizer
+      } {
+      } ifelse
+    } def
+    /EnterEvent {
+      CurrentEvent /Canvas get
+      dup hilite-can
+      false CurrentEvent /KeyState get { PointButton eq or } forall {
+        Canvases exch get /obj get select-object
+      } {pop} ifelse
+    } def
+    /ExitEvent {
+      CurrentEvent /Canvas get lolite-can
+    } def
+  end
+
+  /target-event {
+    gsave
+      target-event-names CurrentEvent /Name get get exec
+    grestore
+  } def
+
+  /maxint .5 minim div 1 sub def
+
+  /cvfixed {
+    1024 mul floor maxint min cvi -10 bitshift
+  } def
+
+  /wrap {
+    dup floor sub cvfixed
+  } def
+
+  % This is useful for finding core leaks ... (Really!)
+  /context-string { % => (string)
+    ()
+    currentprocess /DictionaryStack get 
+    dup length 2 sub 2 exch getinterval
+    { dup /obj known {
+	begin i /obj load 3 -1 roll (%/%:%) sprintf end
+      } {pop} ifelse
+    } forall
+    1 index exch (%	=	%) sprintf
+  } def
+
+  /make-target {
+    MyDepth DepthTarget le {
+      Canvases dup length exch maxlength 10 sub ge {
+        Canvases dup maxlength 1.5 mul floor exch extend pop
+      } if
+      /can TrackCanvas newcanvas def
+      0 0 1 0 360 arc can reshapecanvas
+      can /Transparent true put
+      can /Mapped true put
+      Canvases can currentdict put
+    } if
+  } def
+
+  /BailOut? {
+    MyDepth DepthDraw gt
+    Drain? or
+  } def
+
+  /visualize { % obj => -
+    pause
+    BailOut? { pop } {
+      { gsave
+	  currenthsbcolor
+	  3 -1 roll random ColorHueFrob mul sub wrap
+	  3 -1 roll random ColorSaturationFrob mul sub wrap
+	  sqrt % Crank up the saturation!
+	  3 -1 roll random ColorBrightnessFrob mul sub wrap
+	  sqrt % Crank up the brightness!
+	  sethsbcolor
+	  dup type cvx exec
+	grestore
+      } 
+      MyProcesses length ProcessMax lt
+      random ForkProb lt and not { exec } { 
+	{ exec
+          MyProcesses currentprocess 
+	  undef
+        } fork
+	MyProcesses exch dup put
+	pop pop
+      } ifelse
+    } ifelse
+  } def
+
+
+% Menu definitions
+
+  /ColorFrobMenu [
+    [(0.0) (0.02) (0.05)
+     (0.1) (0.2) (0.3) (0.4) (0.5) (0.6) (0.7) (0.8) (0.9) (1.0) (99)]
+  ] [
+    (HueFrob) { MoleculeDict /ColorHueFrob getmenuarg cvr put }
+    (BrightnessFrob) { MoleculeDict /ColorBrightnessFrob getmenuarg cvr put }
+    (SaturationFrob) { MoleculeDict /ColorSaturationFrob getmenuarg cvr put }
+  ] /new PulloutPieMenu send def
+
+  /ThingMenu [
+    (Top) {
+      {/MyThing /MyTop load store } ThisWindow send }
+    (SendContexts) {
+      ThisWindow /MyThing currentprocess /SendContexts get put }
+    (UI_private) {
+      ThisWindow /MyThing UI_private put }
+    (rootmenu) {
+      ThisWindow /MyThing rootmenu put }
+    (DefaultMenu) {
+      ThisWindow /MyThing DefaultMenu put }
+    (userdict) {
+      ThisWindow /MyThing userdict put }
+    (PrimarySelection) {
+      ThisWindow /MyThing /PrimarySelection getselection put }
+    (self) {
+      ThisWindow /MyThing self put }
+  ] /new PieMenu send def
+
+  /FlagsMenu [
+    (Lines On) {MoleculeDict /DoLines true put}
+    (Distill On) {StillDict /_out? true put}
+    (Lines Off) {MoleculeDict /DoLines false put}
+    (Distill Off) {StillDict /_out? false put}
+  ] /new PieMenu send def
+
+  /ClientMenu [
+    [(1) (2) (3) (4) (5) (6) (7) (8) (9) (10)
+     (11) (12) (13) (14) (15) (16) (17) (18) (19) (20)]
+    []
+    [(0) (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (9999)]
+    []
+    []
+    []
+    [(0) (1) (2) (3) (4) (5) (6) (7) (8) (9) (10) (11) (9999)]
+    []
+  ] [
+    (MaxProcs) 
+      { MoleculeDict /ProcessMax getmenuarg cvi put }
+    (Flags...) FlagsMenu
+    (DrawDepth)
+      { MoleculeDict /DepthDraw getmenuarg cvi put }
+    (ColorFrob...) ColorFrobMenu
+(---) {}
+    (Thing...) ThingMenu
+    (TargetDepth)
+      { MoleculeDict /DepthTarget getmenuarg cvi put }
+    (paint) { /paint ThisWindow send }
+  ] /new PulloutPieMenu send def
+
+  % Hurray for you -- you're reading the source code!
+  % To find core leaks, visualize objects in your application's userdict, 
+  % and look for the infinite regression of circular references.
+  % (warning: magic dicts in systemdict get "unregistered" errors!)
+
+classend def
+
+/select-object { % obj => -
+  20 dict begin
+    /ContentsPostScript 1 index def
+    /ContentsAscii exch (%) sprintf def
+    /SelectionObjSize 1 def
+    /SelectionResponder null def
+    /Canvas currentcanvas def % XXX?
+    /SelectionHolder currentprocess def % XXX?
+    currentdict
+  end
+  /PrimarySelection setselection
+} ?def
+
+/start_visualizer { % thing =>
+  { 
+    InteractionLock {
+      framebuffer setcanvas
+      newprocessgroup
+      framebuffer /new PSVisualizerWindow send
+      /reshapefromuser 1 index send
+      /SpaceColor where {
+	pop
+	gsave
+	  SpaceColor setcolor
+          currenthsbcolor
+	  3 -1 roll random ColorHueFrob mul add wrap
+	  3 1 roll hsbcolor
+	  1 index exch % win win color
+	  /SpaceColor exch put % win
+	grestore
+      } if
+    } monitor
+    /activate exch send
+  } fork pop pop
+} def
+
+end % systemdict
+
+% visualize command line args, if any.
+{ clear
+  { ($1 $2 $3 $4 $5 $6 $7 $8 $9) cvx exec } errored not {
+    count 0 ne {
+      start_visualizer
+    } if
+  } if
+} fork pop

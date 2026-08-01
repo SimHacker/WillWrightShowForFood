@@ -1,0 +1,153 @@
+%!
+% Tab window class
+
+systemdict begin
+
+/TabWindow DefaultWindow
+dictbegin
+    /BorderTop		6 def
+    /TabX		0 def
+    /TabY		0 def
+    /TabHeight		15 def
+    /TabWidth		0 def
+    /TabNumber		0 def
+    /HalfPixelX		null def
+    /HalfPixelY		null def
+dictend
+classbegin
+
+    /new {
+      /new super send begin
+	gsave
+	  framebuffer setcanvas
+          .5 .5 idtransform neg /HalfPixelY exch def /HalfPixelX exch def
+	grestore
+        currentdict
+      end
+    } def
+
+    /CalcTabPos {
+      gsave FrameCanvas setcanvas
+	/TabHeight
+	  FrameFont fontheight 3 add BorderBottom add BorderBottom add
+	def
+	/TabWidth
+	  BorderLeft BorderRight add
+	  FrameLabel length 0 ne {
+	    gsave FrameFont setfont FrameLabel stringwidth pop grestore
+	    add TabWidth max
+	  } if
+	def
+	/TabX FrameWidth def
+	TabNumber 0 lt {
+	  /TabY TabHeight TabNumber 1 add neg mul def
+	} {
+	  /TabY FrameHeight TabHeight TabNumber 1 add mul sub def
+	} ifelse
+      grestore
+    } def
+
+    /SetTabNumber { % n => -
+      /TabNumber exch def
+      FrameX FrameY FrameWidth FrameHeight reshape
+    } def
+
+    /FramePath {
+      CalcTabPos
+      4 copy rectpath % x y w h
+      rect2points % xll yll xur yur
+      pop pop TabY add exch TabX add exch
+      TabWidth TabHeight rectpath
+    } def
+
+    /PaintFrameBorder { % - => - (Paint frame border areas)
+      CalcTabPos
+      FrameFillColor fillcanvas FrameBorderColor setcolor
+      HalfPixelX HalfPixelY moveto
+      FrameWidth HalfPixelX dup add sub 0 rlineto
+      0 TabY rlineto
+      TabWidth 0 rlineto
+      0 TabHeight HalfPixelY dup add sub rlineto
+      TabWidth neg 0 rlineto
+      0 FrameHeight TabY sub TabHeight sub rlineto
+      FrameWidth HalfPixelX dup add sub neg 0 rlineto
+      closepath
+      stroke
+      HalfPixelX dup add neg
+      BorderLeft BorderBottom
+      FrameWidth BorderLeft sub BorderRight sub
+      FrameHeight BorderBottom sub BorderTop sub
+      insetrect rectpath stroke
+%       BorderLeft HalfPixelX sub BorderBottom HalfPixelY sub
+%       FrameWidth BorderLeft BorderRight add sub HalfPixelX dup add add
+%       FrameHeight BorderBottom BorderTop add sub HalfPixelX dup add add
+%       rectpath stroke
+    } def
+
+    /PaintFrameLabel { % - => - (Paint frame text label)
+        CalcTabPos
+	TabX BorderLeft add
+	TabY BorderBottom add
+	currentfont fontdescent add
+	moveto FrameLabel show
+    } def
+
+    /ClientPath {rectpath} def
+
+    /setframelabel { % label => -
+	dup FrameLabel eq {pop} {
+	    /FrameLabel exch def
+	    FrameX null ne {
+	     gsave
+	      TabWidth CalcTabPos TabWidth ne {
+	        % Generates damage...
+                FrameX FrameY FrameWidth FrameHeight /reshape self send
+		FrameCanvas setcanvas damagepath newpath  % clear damage?
+	      } if
+	      FrameCanvas setcanvas
+	      TabX TabY TabWidth TabHeight
+	      rectpath clipcanvas
+	      paintframe
+	      initclip clipcanvas
+	     grestore
+	    } if
+	} ifelse
+    } def
+
+    /PaintFocus { 
+	gsave
+	  FrameCanvas setcanvas
+	  KeyFocus? {KeyFocusColor} {FrameFillColor} ifelse setcolor
+	  TabX 2 add HalfPixelX add
+	  TabY 2 add HalfPixelY add
+	  TabWidth 4 sub HalfPixelX dup add sub
+	  TabHeight 4 sub HalfPixelY dup add sub
+	  rectpath
+	  stroke
+	grestore
+    } def
+    
+    /flipiconic { % - => -  (swaps between open & closed)
+	/unmap self send
+	/Iconic? Iconic? not def
+	IconX null eq {
+	    FrameX TabX add
+	    FrameY TabY add IconHeight sub /move self send
+	} if
+	ZoomProc
+	/map self send
+        isRetained { % Don't retain when iconic!
+	  FrameCanvas /Retained Iconic? not put
+	} if
+    } def
+
+    /PaintFrameControls { % - => - (Paint frame control areas)
+    } def
+
+classend def
+
+end % systemdict
+
+/win framebuffer /new TabWindow send def
+/reshapefromuser win send
+/map win send

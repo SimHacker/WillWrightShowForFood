@@ -1,0 +1,990 @@
+%!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% tNt Tab Frames, release 1.0
+% Copyright (C) 1990
+% By Don Hopkins, University of Maryland Human Computer Interaction Lab
+% Started, May 13 1989.
+% Reimplemented mostly from scratch for X11/NeWS FCS.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Copyright (C) 1990 by Don Hopkins. All rights reserved.
+% This program is provided for unrestricted use, provided that this 
+% copyright message is preserved. There is no warranty, and no author 
+% or distributer accepts responsibility for any damage caused by this 
+% program. 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% To get TabFrame as the default frame class automatically upon startup, put 
+% the following into your .startup.ps file:
+%
+% UserProfile /OpenLookFrame {
+%   ClassFrame /DefaultClass { TabFrame } put
+% } put
+% 
+% [
+%   /TabFrame (NeWS/tabframe.ps)
+% ] DefineAutoLoads
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+systemdict begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TabFrame
+%
+
+/TabFrame OpenLookFrame
+dictbegin
+  /TabEdge /Top def
+  /TabPosition 0 def
+dictend
+classbegin
+  /ThreeDee? true def
+%  /ThreeDee? framebuffer /Color get def
+  /Contrast .1 def
+  /Bright .75 dup dup rgbcolor def
+  /Dim .25 dup dup rgbcolor def
+  /LabelMinWidth 8 def
+  /SelStroke 2 def
+  /UnSelStroke 1 def
+
+  /ZoomX 0 def
+  /ZoomY 0 def
+  /ZoomWidth 512 def
+  framebuffer true getbbox /ZoomHeight exch def pop pop pop
+  /ZoomTabEdge /Right def
+  /ZoomTabPos 1 def
+  /ZoomTabPosition {
+    ZoomTabPos TabHeight ZoomHeight div sub
+    dup 0 lt { pop 1 } if
+    /ZoomTabPos 1 index store
+  } def
+
+  /LabelCreate { % - => -
+      /Label [
+        { /TabNotify parent send pop } OpenLookTabFrameLabel 
+      ] /addclient self send
+  } def
+
+  /ReshapeCreate { % - => -
+      /Reshape
+      [{/ReshapeNotify /parent self send send} OpenLookTabFrameCorners]
+      /addclient self send
+  } def
+
+  /ReshapeNotify { % object => -
+      gsave
+ 	pop %
+ 	Parent setcanvas
+ 	currentcursorlocation
+        /stretchany self send
+      grestore
+  } def
+
+  /stretchany { % event|x y => -
+      dup type /eventtype eq {
+	  begin XLocation YLocation end
+      } if
+
+      20 dict begin
+        /y exch def /x exch def
+	bbox unfittab
+	2 copy /h exch def /w exch def
+	rect2points
+	/y1 exch def /x1 exch def
+	/y0 exch def /x0 exch def
+	x  x0 w .3 mul add  le /Left {
+	  x  x0 w .7 mul add ge  /Right /Middle ifelse
+	} ifelse % xpart
+	y  y0 h .3 mul add  le  /Bottom {
+	  y  y0 h .7 mul add ge  /Top /Middle ifelse
+	} ifelse % xpart ypart
+	dup /Bottom eq {
+	  /y0 y1 /y1 y0 def def
+	} if
+	1 index /Left eq {
+	  /x0 x1 /x1 x0 def def
+	} if
+	(%%) sprintf cvn
+	x1 y1 x1 x sub y1 y sub 	% edge x1 y1 x1-x y1-y
+	[x0 y0] cvx 			% edge x1 y1 x1-x y1-y X0Y0proc
+      end
+      5 index {
+	/MiddleRight /MiddleLeft {
+          {begin XLocation DeltaX add Y1 end}
+        }
+	/TopMiddle /BottomMiddle /MiddleMiddle {
+          {begin X1 YLocation DeltaY add end}
+	}
+	/Default {
+          {begin XLocation DeltaX add YLocation DeltaY add end}
+	}
+      } case
+      [/xhair /xhair_m Parent]
+      {
+	  InitOverlay
+	  InstallXYProcs
+	  /DeltaY exch def /DeltaX exch def
+	  /Y1 exch def /X1 exch def
+	  /Edge exch def
+	  /Moved? false def
+      }{
+	  Changed? {erasepage BBox fittab /path self send stroke} if
+	  /Moved? true def
+      }{
+	  erasepage
+	  null SetGlobalCursor
+	  Moved? {
+            x0 x min y0 y min x0 x sub abs y0 y sub abs 
+	    invalidatetab
+	    % /TabWidth unpromote /HeaderWidth unpromote
+	    fittab rect2points
+	    true
+	  } false ifelse
+      }
+      /UpTransition getfromuser {
+	  /anchorbox self send
+	  /reshape self send
+      } if
+  } def
+
+  /TabNotify { % canvas => -
+    pop
+    DragTab
+  } def
+
+  /DragTab { % - => -
+    gsave
+      Parent setcanvas
+      10 dict begin
+	bbox unfittab rect2points
+	/top exch def /right exch def
+	/bottom exch def /left exch def
+
+	parent setcanvas
+	null null
+	[/xhair /xhair_m Parent]
+	{ InitOverlay InstallXYProcs
+	}
+	{ Changed? {
+
+	    TabEdge {
+	      /Left {
+		x left gt {
+		  y top gt {
+		    /Top setedge
+		  } {
+		    y bottom lt {
+		      /Bottom setedge
+		    } {
+		      x right gt {
+			/Right setedge
+		      } if
+		    } ifelse
+		  } ifelse
+		} if
+	      }
+	      /Right {
+		x right lt {
+		  y top gt {
+		    /Top setedge
+		  } {
+		    y bottom lt {
+		      /Bottom setedge
+		    } {
+		      x left lt {
+			/Left setedge
+		      } if
+		    } ifelse
+		  } ifelse
+		} if
+	      }
+	      /Top {
+		y top lt {
+		  x left lt {
+		    /Left setedge
+		  } {
+		    x right gt {
+		      /Right setedge
+		    } {
+		      y bottom lt {
+			/Bottom setedge
+		      } if
+		    } ifelse
+		  } ifelse
+		} if
+	      }
+	      /Bottom {
+		y bottom gt {
+		  x left lt {
+		    /Left setedge
+		  } {
+		    x right gt {
+		      /Right setedge
+		    } {
+		      y top gt {
+			/Top setedge
+		      } if
+		    } ifelse
+		  } ifelse
+		} if
+	      }
+	    } case
+
+	    TabEdge {
+	      /Left /Right {
+		y bottom sub
+		TabHeight .5 mul sub
+		top bottom sub TabHeight sub 1 max div
+		0 max 1 min
+	      }
+	      /Top /Bottom {
+		x left sub
+		TabWidth .5 mul sub
+		right left sub TabWidth sub 1 max div
+		0 max 1 min
+	      }
+	    } case
+	    setposition
+
+	    erasepage
+	    left bottom right 2 index sub top 2 index sub % x y w h
+	    fittab
+	    /path self send stroke
+	  } if }
+	{erasepage null SetGlobalCursor Changed?}
+	[/UpTransition /DownTransition]
+	getfromuser {
+	  left bottom right 2 index sub top 2 index sub % x y w h
+	  ?validate % XXX
+	  fittab
+	  minsize % x y w h mw mh
+	  3 -1 roll max % x y w mw H
+	  3 1 roll max % x y H W
+	  exch % x y W H
+	  /reshape self send
+	} {
+	  % do something appropriate
+	} ifelse
+      end % tempdict
+    grestore
+  } def
+
+  /invalidatetab {
+    /TabWidth unpromote /TabHeight unpromote
+    /TabX unpromote /TabY unpromote
+    /HeaderWidth unpromote /HeaderHeight unpromote
+  } def
+
+  /setedge { % /Left|/Right|/Top|/Bottom => -
+    /TabEdge exch store
+    invalidatetab
+    invalidate
+  } def
+
+  /resetedge { % edge => -
+    bbox unfittab
+    5 -1 roll setedge
+    ?validate % XXX?
+    fittab reshape
+  } def
+
+  /setposition { % 0..1 => -
+    /TabPosition exch store
+    invalidatetab
+    invalidate
+  } def
+
+  /BorderLeft { % - => l
+    BorderEdge
+    TabEdge /Left eq { TabWidth add } if
+  } def
+
+  /BorderRight { % - => r
+    BorderEdge
+    TabEdge /Right eq { TabWidth add } if
+  } def
+
+  /BorderBottom { % - => b
+    /BorderBottom super send
+    TabEdge /Bottom eq { TabHeight add } if
+  } def
+
+  /BorderTop { % - => t
+    BorderEdge
+    TabEdge /Top eq { TabHeight add } if
+  } def
+
+  /TabSize { % - => w h
+    BorderEdge dup add
+%    ThreeDee? { SelStroke add } if
+    dup HeaderWidth add
+    exch HeaderHeight add
+  } def
+
+  /CalcTabXY { % width height => x y
+    TabEdge {
+      /Left { % width height
+	exch pop 0 exch % 0 height
+	TabHeight sub TabPosition mul round % 0 y
+      }
+      /Right { % width height
+	exch TabWidth sub % height x
+	exch TabHeight sub TabPosition mul round % x y
+      }
+      /Top { % width height
+	exch TabWidth sub TabPosition mul round % height x
+	exch TabHeight sub % x y
+      }
+      /Bottom { % width height
+	pop TabWidth sub TabPosition mul round % x
+	0 % x 0
+      }
+    } case
+  } def
+
+  /validate {
+    invalidatetab
+    /BorderLeft unpromote
+    /BorderLeft /BorderLeft self send promote
+    /BorderRight unpromote
+    /BorderRight /BorderRight self send promote
+    /validate super send
+  } def
+
+  /TabX {
+    TabXY /TabY exch promote /TabX exch promote
+    TabX
+  } def
+
+  /TabY {
+    TabXY /TabY exch promote /TabX exch promote
+    TabY
+  } def
+
+  /TabXY { % - => x y
+    Width Height CalcTabXY
+  } def
+
+  /TabWidth {
+    TabSize /TabHeight exch promote /TabWidth exch promote
+    TabWidth
+  } def
+
+  /TabHeight {
+    TabSize /TabHeight exch promote /TabWidth exch promote
+    TabHeight
+  } def
+
+  /HeaderWidth {
+    HeaderSize /HeaderHeight exch promote /HeaderWidth exch promote
+    HeaderWidth
+  } def
+
+  /HeaderHeight {
+    HeaderSize /HeaderHeight exch promote /HeaderWidth exch promote
+    HeaderHeight
+  } def
+
+  /HeaderSize { % - => w h
+    0 0 % W H
+    /Label /getbyname self send {
+      /preferredsize exch send % W H w h
+      3 -1 roll max % W w H
+      3 1 roll add % H W
+      LabelMinWidth max HeaderPadding add
+      exch % W H
+    } if
+    /Pin /getbyname self send {
+      /minsize exch send % W H w h
+      3 -1 roll max % W w H
+      3 1 roll add % H W
+      HeaderPadding add
+      exch % W H
+    } if
+    /Close /getbyname self send {
+      /minsize exch send % W H w h
+      3 -1 roll max % W w H
+      3 1 roll add % H W
+      HeaderPadding add
+      exch % W H
+    } if
+    2 {
+      exch dup 0 ne {
+        HeaderPadding dup add add
+      } if
+    } repeat
+  } def
+
+  % erase the current frame header. Used when changing busy state.
+  %
+  /EraseHeader { % - => -
+    FillColor setcolor
+    TabX BorderEdge add TabY BorderEdge add
+    HeaderWidth HeaderHeight
+    rectpath fill
+  } def
+
+  % Paint the frames current focus state.
+  %
+  /PaintHeader { % busy? focus? => -
+    % Only paint the header if we have one of these ornaments.
+    %
+    Label Close or Pin or {
+      exch {
+	pop
+	BusyColor setcolor
+	TabX BorderEdge add TabY BorderEdge add
+	HeaderWidth HeaderHeight
+	rectpath fill
+      } {
+%	{TextColor} {FillColor} ifelse
+%	setcolor
+
+%	ClickToType {
+%	  TabX BorderEdge add TabY BorderEdge add
+%	  HeaderWidth HeaderHeight
+%	  rectpath fill
+%	}{
+	  % Draw the two lines for follow-mouse focus.
+	  % Having a different highlight depending on what
+	  % focus mode got us here sounds like donkey-doo but
+	  % it's in the spec so we implement it.
+	  %
+	  ThreeDee? {
+	    gsave 10 dict begin
+	      /focus? 1 index def
+	      { 
+		framebuffer /Color get {
+	          FillColor colorhsb 3 copy % h s b h s b
+	          Contrast sub 0 max hsbcolor % h s b dim
+		  4 1 roll % dim r g b
+	          Contrast add 1 min hsbcolor % dim bright
+		} {
+		  Dim Bright
+		} ifelse
+	      } {
+	        FillColor dup % dim bright
+	      } ifelse
+	      /l BorderEdge SelStroke sub def
+
+	      TabX BorderEdge add  TabY BorderEdge add  moveto
+	      l neg dup rlineto
+	      0  HeaderHeight l dup add add  rlineto
+	      HeaderWidth l dup add add  0  rlineto
+	      l neg dup rlineto
+	      HeaderWidth neg  0  rlineto
+	      0  HeaderHeight neg  rlineto
+	      closepath
+	      setcolor
+	      fill
+
+	      TabX BorderEdge add .75 add
+	      TabY BorderEdge add .75 sub  moveto
+	      l neg dup rlineto
+	      HeaderWidth l dup add add  0  rlineto
+	      0  HeaderHeight l dup add add  rlineto
+	      l neg dup rlineto
+	      0  HeaderHeight neg  rlineto
+	      HeaderWidth neg  0  rlineto
+	      closepath
+	      setcolor
+	      fill
+
+	      TabX BorderEdge add
+	      TabY BorderEdge add .25 add
+	      2 copy % x y x y
+	      HeaderWidth .5 sub HeaderHeight .5 sub % x y x y w h
+	      rectpath % x y
+	      2 copy moveto  l neg dup rlineto
+	      2 copy HeaderHeight add .5 sub moveto  l dup neg exch rlineto
+	      exch HeaderWidth add .5 sub exch 2 copy moveto
+	      l dup neg rlineto
+	      HeaderHeight add .5 sub moveto  l dup rlineto
+
+	      focus? {TextColor} {FillColor} ifelse setcolor
+	      stroke
+
+	    end grestore
+	  } {
+            {TextColor} {FillColor} ifelse
+	    setcolor
+	    currentlinewidth
+	    2 setlinewidth
+	    TabX BorderEdge add TabY BorderEdge add
+	    HeaderWidth HeaderHeight
+	    rectpath stroke
+	    setlinewidth
+	  } ifelse
+%	} ifelse
+      } ifelse
+    } {
+      pop pop
+    } ifelse
+  } def
+
+  % Overide: Take the label, the footer and the resize corners
+  % into account.
+  %
+  /MinSize { % - => minwidth minheight
+      %   Because of the unique factorization of client layout
+      %   from client creation we must make sure the frame has
+      %   been correctly layed out here in order to get the
+      %   right minsize.
+      %
+      /?validate self send
+      /Client getbyname { /minsize exch send } { 0 0 } ifelse
+      fitclient
+      TabEdge dup /Left eq exch /Right eq or {
+        TabHeight max
+      } {
+        exch TabWidth max exch
+      } ifelse
+  } def
+
+  % Overide: Take the label, the footer and the resize corners
+  % into account.
+  %
+  /PreferredSize { % - => preferredwidth preferredheight
+    %   Because of the unique factorization of client layout
+    %   from client creation we must make sure the frame has
+    %   been correctly layed out here in order to get the
+    %   right preferredsize.
+    %
+    /?validate self send
+    /PreferredSize OpenLookFrame /SuperSend load exec % XXX
+  } def
+
+  /SuperSend /supersend load def
+
+% Layout
+
+  /FooterLayout { % - => -
+    /Left /getbyname self send {
+      BorderEdge 2 mul 1 add
+      dup TabEdge /Left eq { TabWidth add } if
+      exch
+      SelStroke FooterPad add
+      TabEdge /Bottom eq { TabHeight add } if
+      Width
+      TabEdge dup /Right eq exch /Left eq or { TabWidth sub } if
+      .5 mul 3 -1 roll sub 1 sub
+      /preferredsize 4 index send exch pop
+      /reshape 6 -1 roll send
+    } if
+    /Right /getbyname self send {
+      Width
+      TabEdge dup /Right eq exch /Left eq or { TabWidth sub } if
+      .5 mul
+      dup TabEdge /Left eq { TabWidth add } if
+      exch
+      SelStroke FooterPad add
+      TabEdge /Bottom eq { TabHeight add } if
+      exch BorderEdge 2 mul 1 add sub
+      /preferredsize 4 index send exch pop
+      /reshape 6 -1 roll send
+    } if
+  } def
+
+  /ReshapeLayout { % - => -
+    /Reshape /getbyname self send {
+      bbox unfittab
+      /reshape 6 -1 roll send
+    } if
+  } def
+
+  /CloseLayout { % - => -
+    /Close /getbyname self send { % close
+      TabX BorderEdge add HeaderPadding add % close x
+      /minsize 2 index send % close x w h
+      HeaderHeight 1 index sub % close x w h hh-h
+      .5 mul .5 add truncate % close x w h _(hh-h)/2+.5_
+      TabY BorderEdge add add % close x w h y
+      3 1 roll % close x y w h
+      /reshape 6 -1 roll send %
+    } if
+  } def
+
+  /PinLayout { % - => -
+    /Pin /getbyname self send {
+      TabX BorderEdge add HeaderPadding add % pin x
+      /Close getbyname self send {
+	/minsize exch send pop add
+	HeaderPadding add
+      } if
+      /minsize 2 index send % pin x w h
+      HeaderHeight 1 index sub % pin x w h hh-h
+      .5 mul % pin x w h (hh-h)/2
+      TabY BorderEdge add add % pin x w h y
+      3 1 roll % pin x y w h
+      /reshape 6 -1 roll send %
+    } if
+  } def
+
+  /LabelLayout { % - => -
+      /Label /getbyname self send {
+	  TabX BorderEdge add HeaderPadding add % x
+	  /Pin /getbyname self send {
+	      /bbox exch send
+	      rect2points pop 3 1 roll pop pop
+	      HeaderPadding add max
+	  } if
+	  /Close /getbyname self send {
+	      /bbox exch send
+	      rect2points pop 3 1 roll pop pop
+	      HeaderPadding add max
+	  } if
+	  /preferredsize 2 index send % x w h
+	  exch 8 max exch
+	  HeaderHeight 1 index sub .5 mul % x w h y
+	  TabY BorderEdge add add % x w h y
+	  3 1 roll % x y w h
+	  /reshape 6 -1 roll send
+      } if
+  } def
+
+  /setlabel { % graphic|thing|null => -
+      /Label /getbyname self send {
+	invalidate
+	/setlabel exch send
+      } {pop} ifelse
+  } def
+
+  % This is the next available position to place a window at.
+  % It is where the upper left corner of the window should go.
+  /NextPosition null store
+  /WindowYIncrement -37 store
+  /WindowXIncrement 0 store
+  /WindowRows 0 store
+
+  /setgravity {   % /Left|/Right|/Top|/Bottom => -
+      /Gravity exch store
+      /NextPosition null store
+      /WindowRows 0 store
+      Gravity {
+	  /UpperLeft {
+	      /InitialDefaultPosition { % w h => x y
+		  pop pop
+		  /bbox /parent self send send
+		  exch pop add
+	      } def
+	      /WindowYIncrement -37 store
+	      /WindowXIncrement 0 store
+	  }
+	  /UpperRight {
+	      /InitialDefaultPosition { % w h => x y
+		  pop
+		  /bbox /parent self send send
+		  3 -1 roll add 3 1 roll add 3 -1 roll sub exch
+	      } store
+	      /WindowYIncrement -37 store
+	      /WindowXIncrement 0 store
+	  }
+	  /LowerLeft {
+	      /InitialDefaultPosition { % w h => x y
+		  exch pop
+		  /location /parent self send send
+		  3 -1 roll add
+	      } store
+	      /WindowYIncrement 37 store
+	      /WindowXIncrement 0 store
+	  }
+	  /LowerRight {
+	      /InitialDefaultPosition { % w h => x y
+		  /bbox /parent self send send
+		  pop 3 -1 roll add 4 -1 roll sub exch
+		  3 -1 roll add
+	      } store
+	      /WindowYIncrement 37 store
+	      /WindowXIncrement 0 store
+	  }
+	  /Default {}
+      } case
+  } def
+
+  /UpperLeft setgravity
+
+  /path { % x y w h => -
+    10 dict begin
+      /mat matrix currentmatrix def
+      /h exch def /w exch def
+      translate
+      TabEdge {
+	/Left {
+	  TabWidth 0 moveto
+	  0 h TabHeight sub TabPosition mul round rlineto
+	  TabWidth neg 0 rlineto
+	  0 TabHeight rlineto
+	  TabWidth 0 rlineto
+	  TabWidth h lineto
+	  w h lineto
+	  w 0 lineto
+	  closepath
+	}
+	/Right {
+	  h TabHeight sub TabPosition mul round
+	  0 0 moveto
+	  0 h rlineto
+	  w TabWidth sub 0 rlineto
+	  0 1 index TabHeight add h sub
+	  rlineto
+	  TabWidth 0 rlineto
+	  0 TabHeight neg rlineto
+	  TabWidth neg 0 rlineto
+	  0 exch neg rlineto
+	  closepath
+	}
+	/Top {
+	  0 0 moveto
+	  0 h TabHeight sub rlineto
+	  w TabWidth sub TabPosition mul round 0 rlineto
+	  0 TabHeight rlineto
+	  TabWidth 0 rlineto
+	  0 TabHeight neg rlineto
+	  w h TabHeight sub lineto
+	  w 0 lineto
+	  closepath
+	}
+	/Bottom {
+	  0 TabHeight moveto
+	  0 h TabHeight sub rlineto
+	  w 0 rlineto
+	  0 h TabHeight sub neg rlineto
+	  w TabWidth sub TabPosition mul round TabWidth add TabHeight lineto
+	  0 TabHeight neg rlineto
+	  TabWidth neg 0 rlineto
+	  0 TabHeight rlineto
+	  closepath
+	}
+      } case
+      mat setmatrix
+    end % tempdict
+  } def
+
+  % given tabbed frame bbox, returns bbox of frame w/out tab
+  /unfittab { % x y w h => x' y' w' h'
+      TabEdge {
+        /Left {
+	  4 -1 roll TabWidth add 4 1 roll
+	  exch TabWidth sub exch
+	}
+	/Right {
+	  exch TabWidth sub exch
+	}
+	/Top {
+	  TabHeight sub
+	}
+	/Bottom {
+	  3 -1 roll TabHeight add 3 1 roll
+	  TabHeight sub
+	}
+      } case
+  } def
+
+  % given untabbed frame bbox, returns bbox of frame with tab
+  /fittab { % x' y' w' h' => x y w h
+      TabEdge {
+        /Left {
+	  4 -1 roll TabWidth sub 4 1 roll
+	  exch TabWidth add exch
+	}
+	/Right {
+	  exch TabWidth add exch
+	}
+	/Top {
+	  TabHeight add
+	}
+	/Bottom {
+	  3 -1 roll TabHeight sub 3 1 roll
+	  TabHeight add
+	}
+      } case
+  } def
+
+  % Return the corner farthest from the given x y.
+  % Coordinates are in the parents space.
+  %
+  /farthestcorner { % x y =>  x' y'
+      /bbox self send
+      4 copy rect2points 10 4 roll
+      unfittab rect2points % x y x0 y0 x1 y1 X0 Y0 X1 Y1
+      3 index 6 index sub abs 2 index 7 index sub abs gt
+      {9} {7} ifelse index
+      3 index 6 index sub abs 2 index 7 index sub abs gt
+      {9} {7} ifelse index
+      mark 13 3 roll cleartomark       % x y X0 Y0 X1 Y1 x' y' => x' y'
+  } def
+
+  /StrokeCanvas { % color inset => -
+      % REMIND: Should this use thick lines?
+      exch setcolor
+      gsave
+        dup add setlinewidth
+        /bbox self send /path self send
+        stroke
+      grestore
+  } def
+
+  % Grow to full (screen) size  (true) or revert to normal size (false).
+  %
+  /zoom { % bool => -
+      dup /zoomed? self send eq {pop} {
+	  gsave                       % bool
+	  framebuffer setcanvas       % bool
+	      {
+		  /UnZoomedSize [
+		    /bbox self send unfittab 
+		    TabEdge TabPosition ] promote
+		  ZoomTabPosition setposition 
+		  ZoomTabEdge setedge
+		  ZoomX ZoomY ZoomWidth ZoomHeight
+		  ?validate % XXX?
+		  fittab
+	      }{
+		  UnZoomedSize aload pop
+		  setposition setedge
+		  ?validate % XXX?
+		  fittab
+		  /UnZoomedSize /unpromote self send
+	      } ifelse
+	      /reshape self send
+	  grestore
+      } ifelse
+      /mapped? self send not {true /open self send} if
+  } def
+
+  % make a default base frame with footer & grow control; then call vanilla
+  % initialization procs for labels, footer, reshape etc.
+  /demo { % - => window
+    10 dict begin
+      % make a base frame and initialize it:
+      [ FlexBag ]
+      [/Footer true] framebuffer
+	  /newdefault ClassName load send
+      /frame exch def
+      /bag /client frame send def
+      [ (Top) null {
+	  /Top /resetedge /parent target send send }
+        (Bottom) null {
+	  /Bottom /resetedge /parent target send send }
+	(Left) null {
+	  /Left /resetedge /parent target send send }
+        (Right) null {
+	  /Right /resetedge /parent target send send }
+      ] framebuffer /new OpenLookMenu send
+      /setmenu bag send
+
+      /Right /setedge frame send
+      random /setposition frame send
+      null
+      random random 4 div  random 4 div .75 add hsbcolor 
+      null
+      /setcolors frame send
+      null
+      random  random  random 4 div .75 add hsbcolor 
+      null 
+      /setcolors bag send
+      (Tab Frame) /setlabel frame send
+      (Take a look) (and feel free!) /setfooter frame send
+      200 100 200 500 /reshape frame send
+      /activate frame send
+      /map frame send
+      frame
+    end
+  } def
+
+classend def
+
+/TabBaseFrame [OpenLookBaseFrame TabFrame] []
+classbegin classend def
+
+/TabPropertyFrame [OpenLookPropertyFrame TabFrame] []
+classbegin classend def
+
+/TabCommandFrame [OpenLookCommandFrame TabFrame] []
+classbegin classend def
+
+/TabHelpFrame [OpenLookHelpFrame TabFrame] []
+classbegin classend def
+
+{ /BaseFrameClass { TabBaseFrame } def
+  /PropertyFrameClass { TabPropertyFrame } def
+  /CommandFrameClass { TabCommandFrame } def
+  /HelpFrameClass { TabHelpFrame } def
+} ClassFrame send
+
+{  /DefaultClass { TabBaseFrame } def } ClassBaseFrame send
+{  /DefaultClass { TabPropertyFrame } def } ClassPropertyFrame send
+{  /DefaultClass { TabCommandFrame } def } ClassCommandFrame send
+{  /DefaultClass { TabHelpFrame } def } ClassHelpFrame send
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% OpenLookTabFrameCorners
+%
+
+/OpenLookTabFrameCorners OpenLookFrameCorners []
+classbegin
+
+    /Edges { % x y w h delta => -
+	20 dict begin
+	    /d exch def /h exch def /w exch def /y exch def /x exch def
+	    /-d d neg def /D d 2 mul def /-D D neg def
+	    /X x w add def /Y y h add def
+
+	    x y h .5 mul add [ 0  d  d -D -d ] polyrectpath
+	    X y h .5 mul add [ 0 -d -d  D  d ] polyrectpath
+	    x w .5 mul add y [ d  d -D -d ] polyrectpath
+	    x w .5 mul add Y [ d -d -D  d ] polyrectpath
+	end
+    } def
+
+    % Override
+    %
+    % Hack: the path should be made from Corners; however, because
+    % in 1.1 a fat line cannot intercept the clip, we use a fudge:
+    % we make the path slightly larger than desired.
+    %
+    /path { % x y w h => -
+	Delta 2 add 5 copy Corners Edges
+    } def
+
+    /PaintCanvas { % - => -
+	% Fat line problem: we can't do the obvious:
+	% FillColor setcolor clippath fill
+	% 1 setlinequality 2 setlinewidth
+	% StrokeColor setcolor clippath stroke
+
+	.5 .5 Width 1 sub Height 1 sub Delta 5 copy Corners Edges
+	FillColor setcolor gsave fill grestore
+	StrokeColor setcolor stroke
+    } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% OpenLookTabFrameLabel
+%
+
+/OpenLookTabFrameLabel [ClassControl OpenLookFrameLabel] []
+classbegin
+
+  /EventHandler { % event => -
+    % callnotify puts self on stack and calls NotifyUser
+    /callnotify self send
+  } def
+
+  /EventsConsumed /MatchedEvents def
+
+  /ControlButton AdjustButton def	% Which mouse button to use
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+end % systemdict

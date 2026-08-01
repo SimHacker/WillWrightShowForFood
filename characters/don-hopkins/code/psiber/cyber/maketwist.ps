@@ -1,0 +1,11 @@
+
+framebuffer setcanvas
+/i 30 def
+.062 .002 .066 {
+  /twist exch neg def
+  (/tumtum/don/cyber/q1.ps) run
+  i (/tumtum/don/images/twist%.can) sprintf
+  /i i 1 add def
+  writecanvas
+  pause pause
+} for

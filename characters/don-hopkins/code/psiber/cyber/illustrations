@@ -1,0 +1,57 @@
+Figure 1: Simple Objects		simple.ps
+  	42
+  	false
+  	(flamingo)
+  	(45 cos 60 mul) cvx
+  	/foobar
+  	/executive cvx
+
+Figure 2: Compound Objects		compound.ps
+	3 dict dup begin
+	  /Array-1
+	    [5 {random} repeat] 
+	  def
+	  /Array-2
+	    {5 {random} repeat}
+	  def
+	  /Dictionary
+	    10 dict dup begin
+	      /one 1 def
+	      /two 2 def
+	      /three 3 def
+	      /four 4 def
+	    end
+	  def
+	end
+
+Figure 3: Classes and Instances		class.ps
+	Class:
+	  Object
+	Instance:
+	  rootmenu
+
+Figure 4: Magic Dictionaries		magic.ps
+
+	Canvas:
+	  framebuffer
+	    Interests
+	    ...
+	Process:
+	  currentprocess
+	    OperandStack
+	    DictionaryStack
+	    ...
+
+Figure 5: View Characteristics				view.ps
+	Nested structures with different point sizes, shrink factors,
+	elements to the right and below.
+
+Figure 6: Peripheral Controlers				peripheral.ps
+
+Figure 7: Class Editor: rootmenu			rootmenu-class.ps
+
+Figure 8: Pseudo Scientific Visualizer: rootmenu	rootmenu-psv.ps
+
+Figure 9: Pseudo Scientific Visualizer: Adventure	advent-both.ps
+
+Figure 10: Pseudo Scientific Visualizer: Berkeley IMP	berkeley-both.ps

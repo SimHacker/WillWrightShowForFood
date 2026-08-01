@@ -1,0 +1,635 @@
+========================================================================
+
+* Mouse sensative regions
+** Structure trees
+*** Point button
+    Click: Select object
+    DoubleClick: Toggle object open or closed
+    ControlClick: Execute object
+    ShiftClick: Select object's index (in its container)
+    ShiftDoubleClick: Open object one level deeper
+    Meta: Supress redisplay
+*** Adjust button
+    Click: Select pointer to object
+    ShiftClick: Over dict: select object's key
+    ShiftClickDrag: Over array: Select subinterval
+*** Menu button
+    Click: Pop up structure menu
+    Control: Can modify menu selection
+    Shift: Can modify menu selection
+    Meta: Can modify menu selection
+
+** Structure tab
+*** Point button
+    Click: Toggle structure's iconic state
+*** Adjust button
+    ClickDrag: Move structure around
+*** Menu button
+    Click: Pop up structure tab menu
+    Control: Can modify menu selection
+    Shift: Can modify menu selection
+    Meta: Can modify menu selection
+
+** Stack text
+*** Point button
+    Click: Start text selection
+    ClickDrag: Select text
+*** Adjust button
+    Click: Adjust text selection
+    ClickDrag: Adjust text selection
+*** Menu button
+    Click: Stack selection menu
+    Control: Can modify menu selection
+    Shift: Can modify menu selection
+    Meta: Can modify menu selection
+*** Keys
+    [See key bindings]
+
+** Stack tab
+*** Point button
+    ClickDrag: Adjust height of spike
+*** Adjust button
+    ClickDrag: Move dialog window around
+*** Menu button
+    Click: Pop up stack tab menu
+    Control: Can modify menu selection
+    Shift: Can modify menu selection
+    Meta: Can modify menu selection
+
+** Background
+*** Menu button
+    Click: Pop up background menu
+
+========================================================================
+
+* Menus
+
+** Structure menu
+*** push
+    Pushes object on stack.
+*** type...
+    Pops up menu specific to the type of the object.
+    One of:
+	integertype	realtype	booleantype	colortype
+	nametype	stringtype	graphicsstatetype
+	arraytype	dicttype	fonttype	canvastype
+	processtype	eventtype	filetype	shapetype
+	cursortype	monitortype	operatortype	nulltype
+	marktype
+*** load
+    Selects the result of loading the object, if successful.
+*** etc...
+    Random stuff.
+**** molecule
+    Opens a PseudoScientific Visualizer on the object.
+**** select...
+    Selects various parts of the object.
+***** Pointer
+    Selects a pointer to the object (container,index)
+***** Index
+    Selects the index of the object in its container.
+***** Object
+    Selects the object itsself.
+***** Container
+    Selects the container of the object.
+**** reference
+    Creates and selects a function that will return the object, given the 
+    top level object (of that item) on the stack.
+*** exec
+    Executes the object. Hold down shift to wrap it in an executable array.
+*** change...
+    Performs various type conversions on the object.
+**** tokein
+    Convert a string to an array of objects, over the Externals dictionary.
+**** executable
+    Make the object executable.
+**** name
+    Convert the object to a name.
+**** string
+    Convert the object to a string.
+**** tokeout
+    Convert the object to a string that can be read back in, over the
+    Externals dictionary.
+**** literal
+    Make the object literal.
+**** integer
+    Convert the object to an integer.
+**** real
+    Convert the object to a real.
+*** paste
+    Replace the object with the Primary selection.
+*** view...
+    Menu of functions that effect the view of this object.
+**** size
+    Pull out to change the size of this object and its children.
+**** shrink
+    Pull out to change the shrink factor of this object and its children.
+**** click...
+    Change the click action of this object and its children.
+***** null
+    Reset to the global item click action.
+***** click-type
+    Set click action to make a feeble attempt to "do the right thing", 
+    according to the type.
+***** click-exec
+    Set click action to execute the object.
+***** click-magic
+    Set click action to execute the object "beneath deck".
+***** click-push
+    Set click action to push the object.
+***** click-step
+    Set click action to single step the object.
+***** click-select
+    Set click action to select the object.
+***** click-edit
+    Set click action to edit the object.
+**** open
+    Open the object (pull out the number of levels).
+
+** Type submenus
+*** integertype
+**** step editor
+    Open step editor on object.
+**** stepshift editor
+    Open stepshift editor on object.
+**** digit editor
+    Open digit editor on object.
+**** user editor
+    Open user editor on object.
+
+*** realtype
+**** step editor
+    Open step editor on object.
+**** stepshift editor
+    Open stepshift editor on object.
+**** digit editor
+    Open digit editor on object.
+**** user editor
+    Open user editor on object.
+
+*** booleantype
+**** boolean editor
+    Open boolean editor on object.
+**** user editor
+    Open user editor on object.
+**** true
+    Make object true.
+**** false
+    Make object false.
+**** not
+    Toggle object's boolean value.
+
+*** colortype
+**** user editor
+    Open user editor on object.
+
+*** nametype
+**** definitions editor
+    Open definitions editor on object.
+**** user editor
+    Open user editor on object.
+
+*** stringtype
+**** prepend
+    Prepend selection to string.
+**** append
+    Append selection to string.
+**** token
+    Tokenize string.
+**** user editor
+    Open user editor on object.
+
+*** graphicsstatetype
+**** user editor
+    Open user editor on object.
+
+*** arraytype
+**** juggle...
+    Menu of array frobbing commands.
+***** pop
+    Delete last element of array and select it.
+***** top
+    Move selected element or subinterval to top of array.
+***** splice
+    Splice in selected array element or splice out selected subinterval.
+***** bottom
+    Move selected element or subinterval to bottom of array.
+***** push
+    Append selected object to end of array.
+***** append
+    Append selected array to end of array.
+***** delete
+    Delete selected element or subinterval from array.
+***** prepend
+    Prepend selected array to beginning of array.
+**** scroller editor
+    Open scroller editor on object.
+**** filter editor
+    Open filter editor on object.
+**** user editor
+    Open user editor on object.
+
+*** dicttype
+**** def
+    Def selected pointer in dict or selected key in dict as null.
+**** undef
+    Undef selected pointer or key from dict.
+**** begin
+    Push the dict onto the dictionary stack.
+**** enter
+    Recursivly enter the dict.
+**** dbgbreak
+    Fork a process that breakpoints into the object.
+**** scroller editor
+    Open scroller editor on object.
+**** filter editor
+    Open filter editor on object.
+**** user editor
+    Open user editor on object.
+**** object editor
+    Open object editor on object.
+
+*** fonttype
+**** user editor
+    Open user editor on object.
+
+*** canvastype
+**** manager
+    Select the canvas's event manager.
+**** bbox
+    Push the canvas's bounding box.
+**** setcanvas
+    Make this the currentcanvas.
+**** zap
+    Nuke the canvas.
+**** user editor
+    Open user editor on object.
+
+*** processtype
+**** kill
+    Kill the process.
+**** kill group
+    Kill the process group.
+**** suspend
+    Suspend the process.
+**** resume
+    Resume the process.
+**** wait
+    If we won't block, wait for the process and select its return value.
+**** userdict
+    Select the process's userdict.
+**** user editor
+    Open user editor on object.
+
+*** eventtype
+**** express
+    Express interest in the event.
+**** revoke
+    Revoke interest in the event.
+**** sendevent
+    Send the event.
+**** user editor
+    Open user editor on object.
+
+*** filetype
+**** user editor
+    Open user editor on object.
+
+*** shapetype
+**** user editor
+    Open user editor on object.
+
+*** cursortype
+**** user editor
+    Open user editor on object.
+
+*** monitortype
+**** user editor
+    Open user editor on object.
+
+*** operatortype
+**** user editor
+    Open user editor on object.
+
+*** nulltype
+**** user editor
+    Open user editor on object.
+
+*** marktype
+**** user editor
+    Open user editor on object.
+
+** Structure tab menu
+    Menu of functions dealing with the item.
+*** Layout
+    Redo the layout.
+*** Tab...
+    Move the tab. Ignore the names, just select the approriate direction.
+**** LeftBelow
+**** LeftAbove
+**** AboveLeft
+**** AboveRight
+**** RightAbove
+**** RightBelow
+**** BelowRight
+**** BelowLeft
+*** Zap
+    Zap the item.
+*** Paint
+    Redisplay the item.
+*** Print
+    Write out the printable file "DL.out". (broken)
+*** View...
+    Menu of functions dealing with view of the item.
+**** Size
+    Pull out to change the size of the objects in the item.
+**** Shrink
+    Pull out to change the shrink factor of the objects in the item.
+**** Click...
+    Change the click action of this objects in the item.
+***** click-select
+    Set click action to select the object.
+***** click-type
+    Set click action to make a feeble attempt to "do the right thing", 
+    according to the type.
+***** click-exec
+    Set click action to execute the object.
+***** click-magic
+    Set click action to execute the object "beneath deck".
+***** click-push
+    Set click action to push the object.
+***** click-step
+    Set click action to single step the object.
+***** click-select
+    Set click action to select the object.
+***** click-edit
+    Set click action to edit the object.
+
+**** Open
+    Pull out to open the item.
+
+** Stack selection menu
+*** push
+    Push the selection.
+*** load
+    Select the results of loading the selection, if successful.
+*** exec
+    Execute the selection.
+*** change...
+    Performs various type conversions on the selection.
+**** tokein
+    Convert a string to an array of objects, over the Externals dictionary.
+**** executable
+    Make the object executable.
+**** name
+    Convert the object to a name.
+**** string
+    Convert the object to a string.
+**** tokeout
+    Convert the object to a string that can be read back in, over the
+    Externals dictionary.
+**** literal
+    Make the object literal.
+**** integer
+    Convert the object to an integer.
+**** real
+    Convert the object to a real.
+
+** Stack tab menu
+*** text size
+    Change the point size of the text in the text canvas.
+*** object size
+    Change the default size for newly created items.
+*** pack
+    Pack down the stack.
+*** reset
+    Reset the input buffer.
+
+** Background menu
+*** Break Stack
+    Fork a process that breakpoints into the Stack object.
+*** Reboot
+    Reboot the process.
+*** Break Window
+    Fork a process that breakpoints into the Window object.
+*** Break Struct
+    Fork a process that breakpoints into the Struct object.
+
+========================================================================
+
+* Function Pallets
+
+** Debug
+    PostScript debugging functions
+*** backtrace
+    Pushes the current broken process's execution stack onto the stack.
+*** clear
+    Clears the stack.
+*** continue
+    Continues the broken processes.
+*** copy&continue
+    Copies the stack to the broken process and continues it.
+*** dbgenter
+    Enters the context of the current broken process.
+*** dbgexit
+    Exits the current broken process's context.
+*** dictstack
+    Displays out the dictionary stack.
+*** enter-it
+    Sends into the selected object and recursivly enters it.
+*** exec
+    Executes the top of stack.
+*** exit
+    Exits the recursivly entered object.
+*** kill
+    Kills the current broken process.
+*** listbreaks
+    Lists the currently broken processes.
+*** redefine-it
+    Defines the undefined name on the top of stack to be a synonym of
+    the selected name, and executes the top of stack. Handy for fixing
+    misspelling typos with the debugger.
+*** stack
+    Displays the stack.
+*** where
+    Displays a backtrace of the execution stack.
+
+** Number
+    Numeric keypad for entering numbers.
+*** Back
+    Delete last digit of number on top of stack.
+*** Enter
+    Push 0 onto stack.
+*** Reset
+    Zero the top of stack.
+*** 0-9
+    Append digit to top of stack.
+
+** Math
+    Various mathematical functions, vaguely grouped into sub-arrays.
+
+** Stack
+    Stack manipulation functions.
+    dup pop exch clear load def store get put aload forall [ ]
+
+** Window
+    Window manipulation functions.
+*** new
+    Make a new window, let the user reshape it, and setcanvas to
+    its ClientCanvas.
+
+========================================================================
+
+* Magic Editors
+
+** step
+*** ++
+*** --
+*** Step
+*** Exec
+
+** stepshift
+*** ++
+*** --
+*** Step
+*** <<
+*** >>
+*** Base
+*** Exec
+
+** digit
+*** 0-9
+*** Back
+*** Clear
+*** Exec
+
+** boolean
+*** True
+*** False
+*** Not
+*** Exec
+
+** filter
+*** Recompute
+*** Filter
+*** Keys
+*** Order
+*** view...
+
+** scroller
+*** Top
+*** Bottom
+*** Back
+*** Next
+*** Size
+*** ====
+*** view...
+
+** user
+*** User
+
+** definitions
+*** names...
+
+** object
+*** ClassName
+*** InstanceVars
+*** ClassVars
+*** Methods
+
+========================================================================
+
+* Key bindings
+
+** Backspace
+    erase character
+** Delete
+    erase character
+** Escape
+    complete
+** FunctionF10
+    help
+** FunctionL9
+    find completions
+** FunctionR11
+    scroll to bottom
+** FunctionR13
+    scroll down
+** FunctionR15
+    page down
+** FunctionR1
+    describe key
+** FunctionR2
+    bind selection to key
+** FunctionR3
+    execute selection
+** FunctionR7
+    scroll up
+** FunctionR9
+    page up
+** Meta-.
+    scroll to bottom
+** Meta-/
+    help
+** Meta->
+    scroll to bottom
+** Meta-?
+    help
+** Meta-B
+    bind selection to key
+** Meta-Delete
+    reboot process
+** Meta-Escape
+    find completions
+** Meta-K
+    describe key
+** Meta-Newline
+    input line
+** Meta-V
+    page up
+** Meta-X
+    execute selection
+** Meta-Z
+    scroll up
+** Meta-^_
+    reboot process
+** Meta-b
+    bind selection to key
+** Meta-k
+    describe key
+** Meta-v
+    page up
+** Meta-x
+    execute selection
+** Meta-z
+    scroll up
+** Newline
+    select line
+** Return
+    exec line
+** ^C
+    reset input
+** ^D
+    completions
+** ^K
+    stack to selection
+** ^L
+    load
+** ^S
+    insert selection
+** ^T
+    exchange
+** ^U
+    erase line
+** ^V
+    page down
+** ^W
+    erase word
+** ^X
+    erase line
+** ^Y
+    selection to stack
+** ^Z
+    scroll down
+
+========================================================================

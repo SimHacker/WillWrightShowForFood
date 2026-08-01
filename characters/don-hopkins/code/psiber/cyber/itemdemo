@@ -1,0 +1,358 @@
+#! /usr/NeWS/bin/psh
+%
+% This file is a product of Sun Microsystems, Inc. and is provided for
+% unrestricted use provided that this legend is included on all tape
+% media and as a part of the software program in whole or part.  Users
+% may copy or modify this file without charge, but are not authorized to
+% license or distribute it to anyone else except as part of a product
+% or program developed by the user.
+% 
+% THIS FILE IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND INCLUDING THE
+% WARRANTIES OF DESIGN, MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+% PURPOSE, OR ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE.
+% 
+% This file is provided with no support and without any obligation on the
+% part of Sun Microsystems, Inc. to assist in its use, correction,
+% modification or enhancement.
+% 
+% SUN MICROSYSTEMS, INC. SHALL HAVE NO LIABILITY WITH RESPECT TO THE
+% INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY THIS FILE
+% OR ANY PART THEREOF.
+% 
+% In no event will Sun Microsystems, Inc. be liable for any lost revenue
+% or profits or other special, indirect and consequential damages, even
+% if Sun has been advised of the possibility of such damages.
+% 
+% Sun Microsystems, Inc.
+% 2550 Garcia Avenue
+% Mountain View, California  94043
+%
+%
+%	itemdemo 9.2 88/01/18
+%
+%  ItemDemo: Show how to use items.  This goes to *absurd* lengths, but
+%  is a great stress test!
+%
+
+% /hourg /hourg_m framebuffer setstandardcursor
+
+systemdict /Item known not { (NeWS/liteitem.ps) run } if
+%systemdict /Item known not { (NeWS/liteitem.ps) LoadFile pop } if
+
+/notify? true def
+/notify {
+    notify? {(Notify: Value=%) [ItemValue] /printf messages send} if
+} def
+/FillColor .75 def
+
+/drawarrow { % x y w h a b => -
+gsave
+10 dict begin
+    /b exch def /a exch def	% x y w h
+    1 5 1 roll insetrect	% x y w h [inset by one]
+    4 -2 roll translate scale
+    a 0 moveto
+    a b lineto
+    0 b lineto
+    .5 1 lineto
+    1 b lineto
+    1 a sub b lineto
+    1 a sub 0 lineto
+    closepath
+    gsave ItemFillColor setcolor fill grestore
+    ItemBorderColor setcolor stroke
+end
+grestore
+} def
+/ArrowWidth 16 def
+/ArrowHeight 16 def
+/arrowobject { % bool => -
+    {0 0 ArrowWidth ArrowHeight .333 .5 drawarrow}
+    {ArrowWidth ArrowHeight} ifelse
+} def
+
+/RadioSize 16 def
+/RadioDelta RadioSize 4 div def
+/SquareRadioItem CycleItem []
+classbegin
+    /new { % label loc notify can width height
+        [/squareoff /squareon] 6 1 roll % get stack right for CycleItem
+        /new super send begin
+	    /EraseToCycle false def
+            currentdict
+        end
+    } def
+classend def
+/squareradio { % draw? off?  => -
+gsave
+    exch {
+	ItemBorderColor setcolor
+	.5 0 0 RadioSize RadioSize insetrect rectpath stroke
+	RadioDelta .5 add 0 0 RadioSize RadioSize insetrect rectpath stroke
+	RadioDelta 1 add 0 0 RadioSize RadioSize insetrect rectpath
+	{ItemFillColor setcolor} if fill
+    } {pop RadioSize RadioSize} ifelse
+grestore
+} def
+/squareoff {true squareradio} def % draw? => -
+/squareon {false squareradio} def % draw? => -
+
+/circleradio { % draw? off?  => -
+gsave
+    exch {
+	ItemBorderColor setcolor newpath
+	.5 0 0 RadioSize RadioSize insetrect ovalpath stroke
+	RadioDelta 1 index {.5 add}if 0 0 RadioSize RadioSize insetrect ovalpath
+	{stroke} {fill} ifelse
+    } {pop RadioSize RadioSize} ifelse
+grestore
+} def
+/circleoff {true circleradio} def % draw? => -
+/circleon {false circleradio} def % draw? => -
+
+/checkitem {cycleitem /LabelY -4 def} def
+/graybuttonitem {buttonitem /ItemBorderColor .5 .5 .5 rgbcolor def} def
+
+/createitems {
+/items 50 dict dup begin
+    /radioone (Radio) [/panel_choice_off /panel_choice_on] /Left /notify can 0 0
+        /new CycleItem send 20 20 /move 3 index send def
+        
+    /radiotwo (Radio) /Left /notify can 0 0
+        /new SquareRadioItem send 80 20 /move 3 index send def
+        
+    /checkone (Check one) [/panel_check_off /panel_check_on]
+        /Left /notify can 0 0 /new CycleItem send
+        dup /LabelY -4 put 150 45 /move 3 index send def
+        
+    /checktwo (Check too!) [/panel_check_off /panel_check_on]
+        /Right /notify can 0 0 /new CycleItem send
+        dup /LabelY -4 put 150 20 /move 3 index send def
+        
+    /switchitem (Toggle me!) [/toggle1 /toggle2 /toggle3]
+        /Left /notify can 0 0 /new CycleItem send 18 57 /move 3 index send def
+        
+    /eyeitem () [/eye /eye1 /eye2 /eye3 /eye4 /eye_bld3 /eye_bld2 /eye_bld1]
+        /Left /notify can 0 0 /new CycleItem send 175 70 /move 3 index send def
+        
+    /movieone /cycle [/boy1 /boy2 /boy3 /boy4] /Right /notify
+        can 0 0 /new CycleItem send 300 100 /move 3 index send def
+        
+    /movietwo /cycle [/man1 /man2 /man3 /man4 /man5] /Right /notify
+        can 0 0 /new CycleItem send 300 64 /move 3 index send def
+        
+    /moviethree /cycle [/horse1 /horse2 /horse3 /horse4 /horse5] /Right /notify
+        can 0 0 /new CycleItem send dup /ItemFrame 1 put
+        300 20 /move 3 index send def
+        
+    /cycletwo /cycle
+        [(One) (Two) (Three) (Four) (Five) (Six) (Seven) (Eight) (Nine) (Ten)]
+        /Right /notify can 0 0 /new CycleItem send
+        415 170 /move 3 index send def
+        
+    /cyclethree (Mixed cycle:) [
+    	(Look! I can have icons..)
+    	/panel_text
+    	(..and drawings..)
+    	/panel_choice_off
+        (..in cycles!)
+    ] /Right /notify can 0 0 /new CycleItem send
+    300 140 /move 3 index send def
+        
+    /cyclefour (Tall Toggle) [/toggle1 /toggle2 /toggle3] /Top /notify
+         can 0 0 /new CycleItem send 418 200 /move 3 index send def
+    
+    /doitbutton (DoIt!) /notify can 100 0 /new ButtonItem send
+        dup /ItemBorderColor .5 .5 .5 rgbcolor put
+        20 120 /move 3 index send def
+        
+    /cancelbutton (Cancel!) /notify can 100 0 /new ButtonItem send
+        dup /ItemBorderColor .5 .5 .5 rgbcolor put
+	140 120 /move 3 index send def
+    
+    /nobutton (No) /notify can 40 40 /new ButtonItem send
+	 495 45 /move 3 index send def
+    
+    /yesbutton (Yes) /notify can 40 40 /new ButtonItem send
+	 495 90 /move 3 index send def
+    
+    /exclamationbutton /panel_button /notify can 40 40 /new ButtonItem send
+        dup /ItemBorderColor .5 .5 .5 rgbcolor put
+	250 245 /move 3 index send def
+    
+    /checkbutton /panel_choose_one /notify can 40 40 /new ButtonItem send
+        dup /ItemBorderColor .5 .5 .5 rgbcolor put
+	250 200 /move 3 index send def
+    
+    /pencilbutton /panel_text /notify can 40 40 /new ButtonItem send
+        dup /ItemBorderColor .5 .5 .5 rgbcolor put
+	250 120 /move 3 index send def
+    
+    /point0 (Square) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	0 def
+	/ItemFrame	6 def
+    end 550 275 /move 3 index send def
+    
+    /point1 (.1 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.1 def
+	/ItemFrame	6 def
+    end 550 230 /move 3 index send def
+    
+    /point2 (.2 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.2 def
+	/ItemFrame	6 def
+    end 550 185 /move 3 index send def
+    
+    /point25 (.25 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.25 def
+	/ItemFrame	6 def
+    end 550 140 /move 3 index send def
+    
+    /point3 (.3 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.3 def
+	/ItemFrame	6 def
+    end 550 95 /move 3 index send def
+    
+    /point4 (.4 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.4 def
+	/ItemFrame	6 def
+    end 550 50 /move 3 index send def
+    
+    /point5 (.5 Radius) /notify can 100 0 /new ButtonItem send
+    dup begin
+	/ItemRadius 	.5 def
+	/ItemFrame	6 def
+    end 550 5 /move 3 index send def
+    
+    /tallbutton /panel_choose_many /notify can 40 100 /new ButtonItem send
+    	250 20 /move 3 index send def
+    
+    /negslider (Slider2:) [-10 +10 0] /Right /notify can 220 20
+    	/new SliderItem send 20 200 /move 3 index send def
+        
+    /bigslider (Slider1:) [0 255 255] /Right /notify can 220 20
+	/new SliderItem send dup /ItemFrame 1 put
+	20 170 /move 3 index send def
+        
+    /nameitem (Name:) (Iggy Fromme) /Right /notify can 220 0
+    	/new TextItem send 20 260 /move 3 index send def
+        
+    /addressitem (Address:) (Iggy's place) /Right /notify can 220 0
+    	/new TextItem send dup /ItemFrame 1 put
+    	20 230 /move 3 index send def
+        
+    /clowntext /clown (Clown) /Bottom /notify can 0 0
+    	/new TextItem send
+    	{/ObjectX ItemBorder neg} /set 2 index send
+    	410 50 /move 3 index send def
+        
+    /tinytext /panel_text (A bunch of tiny text) /Bottom /notify can 0 0
+    /new TextItem send {
+        /ItemFont	ItemFont .75 scalefont def
+    	/ObjectX	ItemBorder neg def
+    } 1 index send 400 15 /move 3 index send def
+    
+    /messages /panel_text (<messages come here>) /Right {} can 500 0
+    /new MessageItem send dup begin
+        /ItemFrame 1 def
+        /ItemBorder 4 def
+    end 20 290 /move 3 index send def
+        
+    /tableitem (Table) [
+        [(One) (Two) /panel_text]
+        [(Four) (yY|_) (Six)]
+    ] /Bottom /notify can 0 0 /new ArrayItem send 300 200 /move 3 index send def
+    
+end def
+/messages items /messages get def
+} def
+
+%/slideitem { % - (event) => -
+%gsave
+%    items FillColor /moveinteractive CurrentEvent /action get send
+%
+%    (Item: x=%, y=%, w=%, h=% Canvas: w=%, h=%) [
+%	/bbox CurrentEvent /action get send
+%	win begin FrameWidth FrameHeight end
+%    ] /printf messages send
+%grestore
+%} def
+
+/slideitem { % items fillcolor item => -
+gsave
+    dup 4 1 roll		% item items fillcolor item
+    /moveinteractive exch send	% item
+    /bbox exch send		% x y w h
+
+    (Item: x=%, y=%, w=%, h=% Canvas: w=%, h=%) [
+	6 2 roll
+	win begin FrameWidth FrameHeight end
+    ] /printf messages send
+grestore
+} def
+
+/main {
+
+% Create and size a window.  The size is chosen to accommodate the
+% items we are creating.  Right before we map the window, we ask the
+% user to reshape the window.  This is atypical, but gets the items
+% positioned the way we want them.
+
+    /win framebuffer /new DefaultWindow send def	% Create a window
+    {	/PaintClient {{FillColor fillcanvas items paintitems}iexec} def
+	/FrameLabel (ItemClass for Play!) def
+	/IconImage /galaxy def
+	/ClientMenu [
+	    (White Background)	{/FillColor   1 store /paintclient win send}
+	    (Light Background)	{/FillColor .75 store /paintclient win send}
+	    (Medium Background)	{/FillColor .50 store /paintclient win send}
+	    (Dark Background)	{/FillColor .25 store /paintclient win send}
+	    (Black Background)	{/FillColor   0 store /paintclient win send}
+	    (Flip Verbose)	{/notify? notify? not store}
+	] /new DefaultMenu send def
+    } win send						% Install my stuff.
+    200 200 700 350 /reshape win send			% Shape it.
+    /can win /ClientCanvas get def			% Get the window canvas
+    
+% Create all the items.
+    createitems
+    
+% Create event manager to slide around the items.
+% Create a bunch of interests to move the items.
+% Note we actually create toe call-back proc to have the arguments we need.
+% The proc looks like: {items color "thisitem" slideitem}.
+% We could also have used the interest's clientdata dict.
+    /slidemgr [
+%	items { % key value
+%	    MiddleMouseButton {slideitem}		% key item but proc
+%	    1 dict dup DownTransition 5 index put	% key item but proc dict
+%	    5 -2 roll exch pop				% but proc dict item
+%	    /ItemCanvas get eventmgrinterest
+%	} forall
+	items { % key item
+	    exch pop dup /ItemCanvas get	% item can
+	    MiddleMouseButton [items FillColor	% item can name [ dict color
+	    6 -1 roll /slideitem cvx] cvx	% can name proc
+	    DownTransition 			% can name proc action
+	    4 -1 roll eventmgrinterest		% interest
+	} forall
+    ] forkeventmgr def
+    
+% Now let the user specify the window's size and position.  Then map
+% the window.  (See above)  Then activate the items.
+%    /ptr /ptr_m framebuffer setstandardcursor
+
+    /reshapefromuser win send	% Reshape from user.
+    /map win send		% Map the window & install window event manager.
+    				% (Damage causes PaintClient to be called)
+    /itemmgr items forkitems def
+} def
+
+main
+

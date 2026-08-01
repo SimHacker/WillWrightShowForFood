@@ -52,6 +52,17 @@ Where Don has linked this document or told its story. Broader sweep across
 window managers, tabs, pies, HyperCard, and HyperLook:
 [HN harvest](hn-window-management-harvest.md).
 
+Name collision alert — three near-identical acronyms, three different
+things. **OWM** is the Open Window Manager this doc is about: X11
+window management done *inside* NeWS, in object-oriented PostScript,
+by Don and Josh Siegel. **OLWM** is its adversary: Sun's external
+OPEN LOOK Window Manager for X11, written and maintained by Stuart
+Marks (smarks) — the ICCCM-compliant WM that wrapped NeWS windows in X
+frames and couldn't manage input focus synchronously because it lived
+in a foreign address space. **Plwm** is unrelated to either: a
+hobbyist X11 window manager written in Prolog that hit HN in May 2025,
+whose thread just happens to be where Don posted the owm.ps receipts.
+
 | Comment | Thread | What it adds |
 |---|---|---|
 | [2025-05-25](https://news.ycombinator.com/item?id=44090952) | Plwm — X11 WM in Prolog | Links [owm.ps.txt](https://donhopkins.com/home/archive/NeWS/owm.ps.txt) **and** [i39l.txt](https://donhopkins.com/home/archive/NeWS/i39l.txt) together: "an X11 window manager, with pie menus and tabbed windows, entirely written in object oriented NeWS PostScript, from around 1991" |

@@ -1,0 +1,2 @@
+{f token not { exit } if
+counttomark 200 gt { ] cvx [ exch /exec load } if  } 

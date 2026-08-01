@@ -1,0 +1,72 @@
+Object deck:
+
+10 dict begin
+  /Integer 123 def
+  /String (abcdefghijklmnopqrstuvwxyz0123456789) def
+  /Name /don def
+  /Array [1 2 3 4 5] def
+  /Dictionary 10 dict def
+  Dictionary begin
+    /one 1 def
+    /two 2 def
+    /three 3 def
+    /four 4 def
+  end
+currentdict end
+
+Push the integer, string, and name onto the stack.
+Show each of them visually.
+zap them
+
+Push the array onto the stack.
+Open it up. 
+Push the numbers on the stack, add them, paste them back.
+Arrays are polymorphic: paste name, string into array.
+
+Push the dictionary onto the stack.
+Open it up.
+Push numbers, paste in strings, name, array.
+
+Arrays can hold dictionaries, dictionaries can hold arrays.
+Arrays and dictionaries can even hold references to themselves.
+
+Type in an array of numbers, [1 2 3 4 5 6]
+Show it. 
+Paste one long string into it at 5.
+Paste it into itsself at 1.
+Redisplay it.
+Increase depth.
+Redisplay it.
+Move self reference to 2.
+Redisplay it.
+Make another self reference.
+Redisplay it.
+
+User interface objects are built out of PostScript 
+data structures in NeWS.
+Object oriented programming package uses dictionaries 
+to represent classes and instances.
+Root menu instance dictionary
+  show real root menu
+  display it.
+  deepen it. redisplay it, while popping up submenus
+
+Representing other structures as PostScript data
+
+File directory
+  hierarchy
+  dictionary represents directory
+  array represents file
+
+Arpanet map
+  Long haul packet switching computer network (as of 1985)
+  Each dictionary represents one "Packet Switching Node" on the network, 
+  and contains links to the node's neighbors.
+
+Distinctive looking array of strings.
+
+Editing data structures:
+
+Grab a few arpanet nodes, indicate where they are on the map,
+and paste some data structures into them.
+Travel around the net hunting for them.

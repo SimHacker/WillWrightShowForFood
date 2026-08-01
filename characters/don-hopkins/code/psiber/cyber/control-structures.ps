@@ -1,0 +1,28 @@
+%!
+% Purpose: Control structures with local state, that is not available to 
+% the code being executed (i.e. the control structure dict is not on the
+% top of the dict stack, getting in the way).
+
+systemdict begin
+
+% like repeat but leaves count on stack
+/repeat-for { % n proc => ...
+  10 dict begin % scope
+    /proc exch def
+    /n exch def
+    /i 0 def
+    % think of this as a closure over this scope
+    [ currentdict
+      { begin
+          i n ge { end exit } if
+	  i /i i 1 add def
+	  /proc load
+	end
+	exec % execute proc outside of scope
+      } aload pop
+    ] cvx % closure
+  end % of scope
+  loop % execute it till it exits
+} def
+
+end % systemdict

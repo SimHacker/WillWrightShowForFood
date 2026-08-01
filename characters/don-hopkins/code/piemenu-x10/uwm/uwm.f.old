@@ -1,0 +1,58 @@
+requires Xlib.f
+
+struct ( keyword )
+    addr kw_name
+    int kw_type
+    addr kw_bptr
+    addr kw_nptr
+    addr kw_sptr
+    addr kw_fptr
+constant /keyword
+
+struct ( binding )
+    addr bind_next
+    int bind_context
+    short bind_mask
+    short bind_button
+    addr bind_func
+    addr bind_menuname
+    addr bind_menu
+constant /binding
+
+struct ( named_mask )
+    addr nm_name
+    short nm_mask
+constant /named_mask
+
+struct ( menuinfo )
+    addr mi_name
+    int mi_name_x
+    int mi_name_y
+    Window w
+    Bool piemenu
+    int items
+    int initial_x
+    int initial_y
+    int radius
+    int center_x
+    int center_y
+    int iheight
+    int width
+    int height
+    Pixmap image
+    addr foreground
+    addr background
+    addr fghighlight
+    addr bghighlight
+    Color fg
+    Color bg
+    Color hlfg
+    Color hlbg
+    addr line
+constant /menuline
+
+cr .( Loading...) cr
+requires clink.f
+cr .( Linking...) cr
+"" a.out clink
+cr .( Done!) cr

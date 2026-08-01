@@ -1,0 +1,45 @@
+/tokedict 100 dict def
+tokedict begin
+  /integertype {
+    typedprint
+  } def
+  /realtype {
+    typedprint
+  } def
+  /stringtype {
+    typedprint
+  } def
+  /operatortype {
+    (%) sprintf
+    1 1 index length 2 sub getinterval print
+    ( ) print
+  } def
+  /arraytype {
+    ({) print
+    { dotoke } forall
+    (}\n) print
+  } def
+  /nametype {
+    dup xcheck not {(/) print} if
+    (% ) printf
+  } def
+end % tokedict
+
+/tokeout {
+  tokedict begin
+    dotoke
+  end
+} def
+
+/dotoke {
+  dup type exec
+} def
+
+{
+  currentfile token {
+    dup xcheck 1 index /quit eq and { pop } { tokeout } ifelse
+    pause
+  } {
+    exit
+  } ifelse
+} loop

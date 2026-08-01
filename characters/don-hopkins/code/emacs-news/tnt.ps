@@ -1,0 +1,1494 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TNT interface for GNU Emacs.
+%
+% Author:	Chris Maio
+% Modified:	Don Hopkins
+% Last edit:	May 30 1991
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file defines the classes ClassEmacsCanvas and ClassEmacsSelection
+
+/debug 1 1 findpackage beginpackage
+
+/TNT 3 0 findpackage dup beginautoload begin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassEmacsCanvas class definition
+
+/ClassEmacsCanvas ClassTextCanvas [
+  /EmacsFileLock /EventName /EventX /EventY
+  /PinRow /PinCol /PointRow /PointCol
+  /LineWidths /TrackBottom /TrackRight /TrackTop /TrackLeft /TrackHeight
+] classbegin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Class Variables
+
+  /CharFont null def
+  /BG 1 1 1 rgbcolor def
+  /Border 2 def
+  /VGap 1 def
+  /TypeIn? false def		% true => ascii reception simulates typein
+  /PreferredRows 24 def
+  /PreferredCols 80 def
+  /Rows PreferredRows def
+  /Cols PreferredCols def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initialization
+
+  shareddict /WaitingCanvases known not {
+    shareddict /WaitingCanvases growabledict put
+  } if
+
+  /GetEmacsCanvas { % parent => can
+    /new ClassEmacsCanvas send
+    shareddict /WaitingCanvases get 1 index currentprocess put
+    (/usr/emacs/src/xemacs) runprogram
+    currentprocess dup suspendprocess pop
+  } def
+
+  /startemacswindow { % tags => -
+    shareddict /WaitingCanvases get length 0 eq {
+      /StartEmacsWindow self send
+    } {
+      /StartEmacsServer self send
+    } ifelse
+  } def
+
+  % Create a window and start interpreting emacs protocol on currentfile.
+  % Does not return.
+  %
+  /StartEmacsWindow { % tags => -
+    10 dict begin
+      /tags exch def
+      /listener currentprocess def
+      listener /ProcessName (GnuEmacs Listener) put
+      framebuffer setcanvas
+
+      userdict begin
+	/manager /new ClassEventMgr send def
+        manager /ProcessName (GnuEmacs EventMgr) put
+% XXX:        true /setrobust manager send
+
+	/window null framebuffer
+	% Look for a cheap visual!
+%        dup /VisualList get {
+%	  dup /Depth get 1 eq {
+%	    /AllocNone createcolormap
+%	    exit
+%	  } if
+%	  pop
+%	} forall
+        /new
+	/ClassTabBaseWindow where {
+	  pop ClassTabBaseWindow
+	} {
+	  ClassBaseWindow
+	} ifelse
+	send def
+	/canvas window /new ClassEmacsCanvas send def
+	tags null listener /setwireclient canvas send
+	/Center canvas /addclient window send
+      end
+
+      % set frame label to `emacs on hostname' if possible.
+      { currentfile getsocketpeername } stopped {
+	pop (emacs)
+      } {
+%	(.) search { 3 1 roll pop pop } if
+	(emacs@) exch append
+      } ifelse
+      /setlabel window send
+
+      gsave
+        framebuffer setcanvas
+        Cols Rows
+        { /SWS self send
+	  /?validate self send
+	} canvas send
+      grestore
+
+      manager /activate window send
+      /place window send
+      /map window send
+
+      currentprocess /ErrorDetailLevel 1 put
+	
+      % infinite loop sending to canvas:
+      { /InitState self send
+	{ currentfile cvx exec } stopped pop
+	currentfile status not {
+ 	  false /setrobust manager send
+	  manager killprocessgroup
+	  quit
+	} if
+	{
+	  $error dup null ne {
+	    dup /newerror get {
+	      dup /message get dup null ne {
+		  dup /debugmessage self send
+	      } if
+	      pop dup /newerror false put
+	    } if
+	  } if
+	} stopped
+	clear
+      } canvas /send load 3 packedarray cvx loop
+    end
+  } def
+
+  % Create a window and start interpreting emacs protocol on currentfile.
+  % Does not return.
+  %
+  /StartEmacsServer { % tags => -
+    10 dict begin
+      /tags exch def
+      /listener currentprocess def
+      listener /ProcessName (GnuEmacs Listener) put
+      framebuffer setcanvas
+
+      shareddict /WaitingCanvases get
+
+      dup length 0 eq {
+        console dup (Emacs server can't find any canvases to play with!\n)
+	writestring flushfile
+        beep quit
+      } if
+
+      dup {exit} forall			% WC can process
+      3 1 roll				% process WC can
+      exch 1 index undef		% process can
+
+      userdict begin
+	/manager /new ClassEventMgr send def
+        manager /ProcessName (GnuEmacs EventMgr) put
+	/canvas exch def		% process
+	tags null listener /setwireclient canvas send
+	manager /activate canvas send
+	/map canvas send
+      end
+
+      dup type /processtype ne { pop } { dup continueprocess pop } ifelse
+
+      gsave
+        framebuffer setcanvas
+        Cols Rows
+        { /SWS self send
+	  /?validate self send
+	} canvas send
+      grestore
+
+      currentprocess /ErrorDetailLevel 1 put
+	
+      % infinite loop sending to canvas:
+      { /InitState self send
+	{ currentfile cvx exec } stopped pop
+	currentfile status not {
+ 	  false /setrobust manager send
+	  manager killprocessgroup
+	  quit
+	} if
+	{
+	  $error dup null ne {
+	    dup /newerror get {
+	      dup /message get dup null ne {
+console 1 index writestring console flushfile beep
+		  dup /debugmessage self send
+	      } if
+	      pop dup /newerror false put
+	    } if
+	  } if
+	} stopped
+	clear
+      } canvas /send load 3 packedarray cvx loop
+    end
+  } def
+
+  /InitState { % - => -
+      /?validate self send
+      self setcanvas
+      CharMatrix setmatrix
+      CharFont setfont
+      ForegroundColor setcolor
+  } def
+
+  /NewInit { % can => -
+    /NewInit super send				% file
+    /EmacsLock createmonitor def
+    /CharMatrix matrix def
+  } def
+
+  /destroy {
+    wireProcess dup null eq { pop } {
+      EmacsFile dup null eq { pop } {
+        closefile
+      } ifelse
+      killprocess
+    } ifelse
+    /destroy super send
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Emacs Client Protocol
+
+  % DefineTag
+  /DT { % name value
+    def
+  } def
+
+  % Begin repair
+  %
+  /BR { % - => -
+% XXX:
+      self setcanvas
+      CharMatrix setmatrix
+      damagepath clipcanvas
+  } def
+
+  % End repair
+  %
+  /ER { % - => -
+      newpath clipcanvas
+  } def
+
+  % Clear screen
+  %
+  /CL { % - => -
+      clippath /BackFill self send
+  } def
+
+  % Clear to end of line
+  %
+  /CE { % x y => -
+      moveto Cols -1 rect /BackFill self send
+  } def
+
+  % Clear and show inverted
+  %
+  /CSI { % s x y n x y => -
+      moveto -1 rect ForegroundColor setcolor fill
+      CharDescent add moveto
+      BackgroundColor setcolor show
+      ForegroundColor setcolor
+  } def
+
+  % Insert lines
+  %
+  /IL { % y n => -
+    Rows exch /IL2 self send
+  } def
+
+  % Insert lines within scroll region
+  %
+  /IL2 { % top bottom dy => -
+      /dy exch def /bottom exch 1 sub def /top exch 1 sub def
+      0 top Cols bottom top 1 sub sub dy sub rectpath
+      0 dy copyarea
+      0 top Cols dy rectpath
+      /BackFill self send
+  } def
+
+  % Delete lines
+  %
+  /DL { % y n => -
+    Rows exch /DL2 self send
+  } def
+
+  % Delete lines within scroll region
+  %
+  /DL2 { % top bottom dy => -
+      /dy exch def /bottom exch 1 sub def /top exch 1 sub def
+      0 top dy add Cols bottom top 1 sub sub dy sub rectpath
+      0 dy neg copyarea
+      0 bottom 1 add dy sub Cols dy rectpath
+      /BackFill self send
+  } def
+
+  % Delete characters
+  %
+  /DC { % x y dx => -
+      dup dup dup					    % x y dx dx dx dx
+      6 -1 roll add					    % y dx dx dx x2
+      4 index						    % y dx dx dx x2 y
+      Cols -1 rectpath
+      neg 0 copyarea					    % y dx dx
+      3 1 roll						    % dx y dx
+      Cols exch sub exch moveto -1 rect
+      /BackFill self send
+  } def
+
+  % Insert characters
+  %
+  /IC { % x y dx => -
+      3 1 roll 3 copy					    % dx x y dx x y
+      moveto Cols -1 rect 0 copyarea
+      moveto -1 rect /BackFill self send
+  } def
+
+  % Clear and show
+  %
+  /CS { % s x y n x y => -
+      moveto -1 rect /BackFill self send
+      CharDescent add moveto show
+  } def
+
+  % Show text
+  % 
+  /S { % s x y => -
+    CharDescent add moveto show
+  } def
+
+  % Show text in the background color
+  %
+  /SI { % s x y => -
+      CharDescent add moveto
+      BackgroundColor setcolor show
+      ForegroundColor setcolor
+  } def
+
+  % Fill background with the foreground color
+  %
+  /FI { % n x y => -
+      moveto Cols -1 rect
+      ForegroundColor setcolor fill
+  } def
+
+  % Toggle the cursor
+  %
+  /CT { % x y => -
+      moveto 1 -1 rect
+      ForegroundColor setcolor currentpixel
+      BackgroundColor setcolor currentpixel
+      xor setpixel
+      currentrasteropcode
+        6 setrasteropcode fill
+      setrasteropcode
+      ForegroundColor setcolor
+  } def
+
+  /NextBeepTime [0 0] def
+  /BeepTime [1 0] def
+  /FlashTime [0 50000] def
+
+  % Annoy the user
+  %
+  /^G { % - => -
+    currenttime NextBeepTime cmptimeval
+    1 eq { beep } {
+	gsave
+	  self setcanvas
+	  random 255 mul cvi setpixel
+	  6 setrasteropcode
+	  clippath gsave fill grestore
+	  FlashTime sleep
+	  fill
+	grestore
+    } ifelse
+    currenttime BeepTime NextBeepTime addtimeval pop
+  } def
+
+  % SetWindowSize
+  %
+  /SWS { % cols rows => -
+    /Rows exch def /Cols exch def
+    /?validate self send
+    [ Cols CharWidth mul Border dup add add
+      Rows LineHeight mul Border dup add add
+    ] cvx /preferredsize exch def
+    Parent /descendantof? ClassWindow send {
+      { gsave
+	  Parent setcanvas
+	  /location self send
+	  /preferredsize self send
+	  /reshape self send
+	  /?validate self send
+	grestore
+      } Parent send
+      /?validate self send
+    } {
+      gsave
+	Parent setcanvas
+	/location self send
+	/preferredsize self send
+	/reshape self send
+	/?validate self send
+      grestore
+    } ifelse
+  } def
+
+  % SetWindowLabel
+  %
+  /SWL { % framelabel => -
+    /setlabel Parent send
+  } def
+
+  % SetFont
+  %
+  /SF { % name size => -
+    { exch findfont } stopped { pop pop } {
+      exch scalefont
+      /settextfont self send
+      /?validate self send
+      /InitState self send
+    } ifelse
+  } def
+
+  % Execute a random string.
+  %
+  /PS { % string => -
+    cvx exec
+  } def
+
+  % Set origin
+  %
+  /SO { % x y => -
+    gsave
+      Parent /descendantof? ClassWindow send {
+	Parent /Parent get setcanvas
+	/move Parent send
+      } {
+        Parent setcanvas
+	/move self send
+      } ifelse
+    grestore
+  } def
+
+  % Map window
+  %
+  /MW { % - => -
+    /map self send
+    Parent /descendantof? ClassWindow send {
+      /map Parent send
+    } if
+  } def
+
+  % Reset Canvas
+  %
+  /RC { % - => -
+    /InitState self send
+  } def
+
+  % Measure window
+  %
+  /GW { % - => -
+    /?validate self send
+    /reshaped? self send Rows 0 ne and {
+      [Rows Cols]
+    } {
+      [PreferredRows PreferredCols]
+    } ifelse
+    /MeasureWindow SendEmacs
+  } def
+
+  % Set Line Widths
+  %
+  /SLW { % left top right bottom [linewidths ...] => -
+    /LineWidths exch def
+    /TrackBottom exch def /TrackRight exch def
+    /TrackTop exch def /TrackLeft exch def
+    /TrackHeight TrackBottom TrackTop sub 2 sub def
+  } def
+
+  % Set Track Region
+  %
+  /STR { % pointrow pointcol pinrow pincol => -
+    /PinCol exch def /PinRow exch def
+    /PointCol exch def /PointRow exch def
+
+    /LocalSelectionAdjust { % event sel => -
+        pop /SetTrackPoint self send
+	/PaintTrackRegion self send
+    } promote
+    null /SetTrackPoint self send
+    /PaintTrackRegion self send
+
+    Tracking? {
+      % Mondo Kludgo:
+      gsave /InitState self send
+	createevent begin
+	  /XLocation TrackRight def
+	  /YLocation TrackTop 1 sub def
+	createevent begin
+	  /XLocation TrackLeft def
+	  /YLocation TrackBottom 2 sub def
+	/framebufferof self send setcanvas
+	XLocation YLocation end XLocation YLocation end
+	points2rect
+	{AutoScrollBBox astore pop} ClassSelectUI send
+      grestore
+    } if
+  } def
+
+  % Set Selection Context
+  %
+  /SSC { % context# => -
+    {/SelectedObject /UnselectedObject /Background}
+    exch get /SelContext exch def
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Emacs server side interface
+
+  /EmacsFile { % - => file
+    wireProcess /Stdout get
+  } def
+
+  /SendEmacs { % [args ...] /message
+    { SendEmacsMessage
+    } OutputToEmacs
+  } def
+
+  /SendEmacsMessage { % [args ...] /message
+%currentprocess /Stdout get currentprocess /Stdout console put
+%(====== SendEmacsMessage:\n) print
+%pstack
+%flush
+%currentprocess /Stdout 3 -1 roll put
+
+    EmacsFile dup null eq { pop pop pop } {
+      exch wireTags exch get 1 index tagprint
+      exch {
+	1 index typedprint
+      } forall
+      pop
+    } ifelse
+  } def
+
+  /SendTrackEvent { % name action => -
+    [3 1 roll] /TrackEvent SendEmacsMessage
+  } def
+
+  /SendXY { % x y => -
+    exch
+    EmacsFile dup null eq { pop pop pop } {
+      exch 1 index typedprint typedprint
+    } ifelse
+  } def
+
+  /SendEventXY { % event => -
+    /EventXY self send /SendXY self send
+  } def
+
+  /typekey { % int => -
+    [exch] /TypeKey SendEmacs
+  } def
+
+  /sendstring { % str => -
+    TypeIn? { /TypeString self send } { /InsertString self send } ifelse 
+  } def
+
+  % Send keyboard input to emacs
+  %
+  /TypeString { % str => -
+    [exch] /TypeString SendEmacs
+  } def
+
+  % Ask emacs to insert a string
+  %
+  /InsertString { % str => -
+    [exch] /InsertString SendEmacs
+  } def
+
+  /executecommand { % cmd => -
+    dup type /stringtype ne { (%) sprintf } if
+    [exch] /ExecuteCommand SendEmacs
+  } def
+
+  /debugmessage { % msg => -
+    [exch] /DebugMessage SendEmacs
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Canvas overrides
+
+  % Repaint a damaged canvas -- passes damaged region back to client
+  %
+  /Fix { % - => -
+    gsave
+      /InitState self send
+      clipcanvaspath pathbbox
+      BackgroundColor setcolor fill
+      newpath clipcanvas
+      1 add ceiling Rows min exch
+      .5 add ceiling Cols           min exch 4 2 roll
+      1 add floor 0 max exch
+      .5 sub floor 0 max exch 4 2 roll
+      points2rect				% left top cols rows
+      [ 5 1 roll exch 4 2 roll exch 4 2 roll ]	% [ top left rows cols ]
+      /RepairWindow SendEmacs
+    grestore
+  } def
+
+  /Paint { % - => -
+    /Fix self send
+  } def
+
+  /reshape { % x y w h => -
+    /ClearOverlay self send
+    /reshape super send
+    /?validate self send
+  } def
+
+  % Return the minimum size to keep emacs from core dumping
+  %
+  /minsize { % - => w h
+    /?validate self send
+    CharWidth 10 mul Border dup add add
+    LineHeight 5 mul Border dup add add
+    % XXX: Any smaller and it core dumps!
+  } def
+
+  /preferredsize { % - => w h
+    /?validate self send
+    CharWidth PreferredCols mul Border dup add add
+    LineHeight PreferredRows mul Border dup add add
+  } def
+
+  /validate {
+    /MeasureFont self send
+    /validate super send
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Utilities
+
+  /BackFill { % - => -
+    BackgroundColor setcolor fill ForegroundColor setcolor
+  } def
+
+  /MeasureFont { % - => -
+    gsave
+      self setcanvas
+      TextFont setfont 
+      (m) stringwidth pop 
+% XXX
+      /CharWidth exch round cvi def
+%      /CharWidth exch def
+      /LineHeight
+        TextFont fontheight ceiling cvi VGap add
+      def
+      /CharFont
+        TextFont
+        [ 1 CharWidth div 0 0 -1 LineHeight div 0 0 ]
+        makefont
+      def
+
+      Rows Cols
+
+      /size self send
+      Border dup add dup xysub
+      LineHeight div floor cvi /Rows exch def
+      CharWidth div floor cvi /Cols exch def
+
+      Cols ne exch Rows ne or
+      /reshaped? self send and
+      Rows 0 gt Cols 0 gt and and
+      {
+	[Rows Cols] /ResizeWindow SendEmacs
+      } if  
+
+      Border dup translate
+      CharWidth LineHeight neg scale
+      0 1 Rows sub translate
+      CharMatrix currentmatrix pop
+      /CharDescent CharFont fontdescent neg def
+
+    grestore
+  } def
+
+  /OutputToEmacs { % proc => -
+    EmacsLock {
+      exec					%
+      EmacsFile dup null eq { pop } { flushfile } ifelse
+    } monitor
+  } def
+
+  /RendezvousTimeout [ 3 0 ] def
+
+  /RendezvousProcess null def
+
+  /Rendezvous? { % - => obj true | false
+    EmacsFile flushfile
+    { self /RendezvousProcess currentprocess put
+      currentprocess
+      dup /RendezvousValue /!NobodyHome! put
+      { RendezvousTimeout sleep beep
+	  continueprocess
+      } fork
+      exch suspendprocess
+      killprocess
+      self /RendezvousProcess undef
+      currentprocess /RendezvousValue
+      2 copy get
+      3 1 roll undef
+    } fork waitprocess
+    dup /!NobodyHome! eq { pop false } { true } ifelse
+  } def
+
+  /Meet { % obj => -
+    RendezvousProcess dup null eq { pop pop beep } {
+      dup /RendezvousValue 4 -1 roll put
+      continueprocess
+    } ifelse
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Key Service
+
+  /Keyable? true def
+  /Receptible? true def
+
+  /KeyStart { % event => [ labels ] true
+    pop [/StandardKey /ArrowKey /FunctionKey] true
+  } def
+
+  /StandardKey { % event => -
+    /?Deselect self send
+    dup /Name get 32 eq {
+      /Control /modifierdown? ClassKeyboard send {
+	dup /Name 0 put
+      } if
+    } if
+    dup /Name get exch
+    /Meta /modifierdown? ClassKeyboard send {
+      exch 128 or exch
+    } if
+    pop
+    dup type /nametype eq {
+      (%) sprintf
+    } if
+    dup type /stringtype eq {
+      {/typekey self send} forall
+    } {
+      /typekey self send
+    } ifelse
+  } def
+
+  /FunctionString { % event => -
+    /?Deselect self send
+    /Name get /sendstring self send
+  } def
+
+  /ArrowString //FunctionString def
+
+  /FunctionKeys dictbegin
+    /Up 2 def			% up
+    /Down 0 def			% down
+    /Right 7 def		% right
+    /Left 6 def			% left
+    /Home 32 def		% home
+    /FunctionR13 33 def		% end
+    /FunctionR9 34 def		% pgup
+    /FunctionR15 35 def		% pgdn
+    /FunctionR11 36 def		% here
+    /FunctionF1 40 def		% f1
+    /FunctionF2 41 def		% f2
+    /FunctionF3 42 def		% f3
+    /FunctionF4 43 def		% f4
+    /FunctionF5 44 def		% f5
+    /FunctionF6 45 def		% f6
+    /FunctionF7 46 def		% f7
+    /FunctionF8 47 def		% f8
+    /FunctionF9 48 def		% f9
+    /FunctionF10 49 def		% f10
+    /FunctionF11 50 def		% f11
+    /FunctionF12 51 def		% f12
+  dictend def
+
+  /FunctionKey { % event => -
+    /?Deselect self send
+    gsave /InitState self send
+      5 % track:function-
+      1 index /Name get
+      FunctionKeys exch {23} ?get
+      { /SendTrackEvent self send % track:function-*
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  /ArrowKey //FunctionKey def
+
+  /XXXHandleReception { % event selection => bool
+    exch					% sel event
+% XXX: TNT 3.0: extra arg: self
+    /begintransfer 2 index send
+
+    dup /Name get ReceptionNumber ((SelRec %)) sprintf
+    /executecommand self send
+
+    gsave /InitState self send
+      { 3 14 /SendTrackEvent self send % track:selection-reception
+	/SendEventXY self send			% sel
+	Rendezvous? not { false } {		% sel name
+	  { /Text /ModeLine {			% sel
+	      /ContentsAscii /query 2 index send { % sel string
+	        /?Deselect self send
+	        (%) sprintf /sendstring self send % sel
+		true				% sel true
+	      } { false } ifelse		% sel bool
+	    }
+	    /ReadOnly {				% sel
+	      false				% sel bool
+	    }
+	  } case
+	} ifelse
+      } OutputToEmacs
+    grestore
+
+    dup /endtransfer 4 -1 roll send    	    	% bool
+  } def
+
+  /HandleReception { % event selection => bool
+    /s exch def /e exch def
+    self /begintransfer s send
+
+    e /Name get ReceptionNumber ((SelRec %)) sprintf
+    /executecommand self send
+
+    gsave /InitState self send
+      { 3 14 /SendTrackEvent self send % track:selection-reception
+	e /SendEventXY self send		% sel
+	Rendezvous? not { false } {		% sel name
+	  { /Text /ModeLine {			% sel
+	      /ContentsAscii /query s send { % sel string
+	        /?Deselect self send
+	        /sendstring self send % sel
+		true				% sel true
+	      } { false } ifelse		% sel bool
+	    }
+	    /ReadOnly {				% sel
+	      false				% sel bool
+	    }
+	  } case
+	} ifelse
+      } OutputToEmacs
+    grestore
+    dup /endtransfer s send    	    		% bool
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Menu Service
+
+  /Menuable? true def
+
+  /Menu /Grid framebuffer /new ClassMenu send def
+  [ [ (Stuff)	    /EmacsStuff ]
+    [ (Paste)	    /EmacsPaste ]
+    [ (Copy)	    /EmacsCopy ]
+    [ (Cut)	    /EmacsCut ]
+  ] /setitemlist Menu send
+
+  /EmacsStuff { % index menu => -
+    pop pop createevent dup /Canvas self put
+    dup /selectioncopy ClassUI send
+    /selectionpaste ClassUI send
+  } def
+
+  /EmacsCopy { % index menu => -
+    pop pop createevent dup /Canvas self put /selectioncopy ClassUI send
+  } def
+
+  /EmacsCut { % index menu => -
+    pop pop createevent dup /Canvas self put /selectioncut ClassUI send
+  } def
+
+  /EmacsPaste { % index menu => -
+    pop pop createevent dup /Canvas self put /selectionpaste ClassUI send
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Track service
+
+%  /Trackable? true def
+
+  /EventXY { % event => x y
+    begin
+      XLocation YLocation
+    end
+    /WholeCoordinates self send
+    2 copy /EventY exch store /EventX exch store
+  } def
+
+  /WholeCoordinates { % x y => x' y'
+    ceiling cvi exch floor cvi exch
+  } def
+
+  /Overlay {
+    gsave self setcanvas self createoverlay grestore
+    /Overlay 1 index promote
+  } def
+
+  /Helpable? true def
+
+  /HandleHelp { % event => -
+    gsave /InitState self send
+      { 5 21 /SendTrackEvent self send % track:function-help
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  /HandleUndo { % event => -
+    gsave /InitState self send
+      { 5 18 /SendTrackEvent self send % track:function-undo
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  /HandleFind { % event => -
+    gsave /InitState self send
+      { 5 19 /SendTrackEvent self send % track:function-find
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  /HandleAgain { % event => -
+    gsave /InitState self send
+      { 5 20 /SendTrackEvent self send % track:function-again
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  % XXX: this does not exist
+  /HandleStop { % event => -
+    gsave /InitState self send
+      { 5 10 /SendTrackEvent self send % track:function-stop
+	/SendEventXY self send
+      } OutputToEmacs
+    grestore
+  } def
+
+  /Tracking? false def
+
+  /TrackStart { % event => name true | false
+    gsave /InitState self send
+      /Tracking? true promote
+      dup /LocalStart self send
+      /RemoteStart self send
+      [/TrackMotion /TrackStop /TrackTimer] true
+    grestore
+  } def
+
+  /LocalStart nullnotify def
+
+  /RemoteStart { % event => -
+    { dup /Name get PointButton eq {0} {1} ifelse
+      /EventName 1 index def
+      0 /SendTrackEvent self send % track:[point|adjust]-start
+      /SendEventXY self send
+    } OutputToEmacs
+  } def
+
+  /TrackMotion { % event => -
+    gsave /InitState self send
+      dup /LocalMotion self send
+      /RemoteMotion self send
+    grestore
+  } def
+
+  /LocalMotion nullnotify def
+
+  /RemoteMotion { % event => -
+    EventX EventY
+    3 -1 roll /EventXY self send
+    3 -1 roll ne 3 1 roll ne or {
+      { EventName 1 /SendTrackEvent self send % track:[point|adjust]-motion
+	EventX EventY /SendXY self send
+      } OutputToEmacs
+    } if
+  } def
+
+  /TrackStop { % event => -
+    gsave /InitState self send
+      dup /LocalStop self send
+      /RemoteStop self send
+      /Tracking? unpromote
+    grestore
+  } def
+
+  /LocalStop { % event => -
+      pop /ClearOverlay self send
+  } def
+
+  /RemoteStop { % event => -
+    { EventName 2 /SendTrackEvent self send % track:[point|adjust]-stop
+      /SendEventXY self send
+    } OutputToEmacs
+  } def
+
+  /ClearOverlay { % - => -
+    /Overlay promoted? {
+      gsave
+	Overlay setcanvas
+	erasepage
+	/Overlay unpromote
+      grestore
+    } if
+  } def
+
+  /PaintTrackLine { % left right => -
+    pop pop
+  } def
+
+  /SetTrackPoint { % event | null => -
+    gsave /InitState self send
+      TrackLeft TrackTop translate
+      dup null eq { 
+	pop currentcursorlocation
+      } {
+	begin XLocation YLocation end
+      } ifelse
+      /WholeCoordinates self send
+      dup TrackHeight gt {
+	/PointRow TrackHeight def
+	/PointCol LineWidths PointRow get def
+	pop pop
+      } {
+	dup 0 lt {
+	  /PointRow 0 def
+	  /PointCol 0 def
+	  pop pop
+	} {
+	  /PointRow exch def
+	  LineWidths PointRow get min cvi
+	  /PointCol exch def
+	} ifelse
+      } ifelse
+    grestore
+  } def
+
+  /PaintTrackRegion { % - => -
+    gsave
+      Overlay setcanvas erasepage
+      0 setgray
+      CharMatrix setmatrix
+      TrackLeft TrackTop translate
+
+      PointRow TrackHeight min 0 max 
+      PinRow TrackHeight min 0 max 
+      2 copy gt { exch } if
+      1 exch { /row exch cvi def
+	row PointRow eq {
+	  row PinRow eq {
+	    PointCol PinCol
+	  } {
+	    PointCol
+	    PinRow PointRow lt { 0 } { LineWidths row get } ifelse
+
+	  } ifelse
+	} {
+	  row PinRow eq {
+	    PinCol
+	    PointRow PinRow lt { 0 } { LineWidths row get } ifelse
+	  } {
+	    0 LineWidths row get
+	  } ifelse
+	} ifelse
+	/PaintTrackLine self send
+      } for
+      stroke
+    grestore
+  } def
+
+% XXX: temporary work-around?
+  /TrackCancel { % event => -
+    [ 1 index /DoTrackCancel self ] /sendmanager /eventmgr self send send
+    /TrackCancel super send
+  } def
+
+  /DoTrackCancel { % event => -
+    gsave /InitState self send
+      dup /LocalCancel self send
+      /RemoteCancel self send
+      /Tracking? unpromote
+    grestore
+  } def
+
+  /LocalCancel { % event => -
+    pop /ClearOverlay self send
+  } def
+
+  /RemoteCancel { % event => -
+    { EventName 3 /SendTrackEvent self send % track:[point|adjust]-cancel
+      /SendEventXY self send
+    } OutputToEmacs
+  } def
+
+  /TrackTimer { % event => -
+    gsave /InitState self send
+      dup /LocalTimer self send
+      /RemoteTimer self send
+    grestore
+  } def
+
+  /LocalTimer nullnotify def
+
+  /RemoteTimer { % event => -
+    pop
+    { EventName 4 /SendTrackEvent self send % track:[point|adjust]-timer
+      lasteventx lasteventy /WholeCoordinates self send
+      /SendXY self send
+    } OutputToEmacs
+  } def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Selection Service
+
+  /SelContext null def
+  /SelStyle /Default def
+  /SelRank /PrimarySelection def
+  /SendTimer? true def
+
+  % First we're asked for our Selectable type.
+  % We are dynamic because we have text parts and graphic parts (mode lines).
+  % This causes us to be sent /IdentifySelectable.
+  %
+  /SelectableType /Dynamic def
+
+  % Since we're a dynamic selectable, the selection service will ask
+  % us to identify the type of selectable object at the location of
+  % the event. So we send this information up to emacs so it can
+  % figure it out, and we wait around for the result. But before emacs
+  % tells us to go on our merry way by sending our return value, it
+  % downloads of information about the selection context, to be
+  % returned by SelectionContext, and window geometry, to be used for
+  % local selection feedback.
+  %
+  % This assumes the event on the stack is the same one that will be
+  % passed to the rest of the selection callbacks.
+  %
+  /IdentifySelectable { % event => type target true | false
+    gsave /InitState self send
+      { 3 12 /SendTrackEvent self send
+	/SendEventXY self send
+	% Wait for reply:
+	%   0|1 true|false SSC
+	%   [linewidths ...] SLW
+	%   /Graphic|/Text Meet
+	Rendezvous? { self true } { false } ifelse
+      } OutputToEmacs
+    grestore
+  } def
+
+  % We don't have to ask emacs for the selection context, since it was sent
+  % down and stored in SelContext before IdentifySelectable returned. 
+  %
+  /SelectionContext { % event sel => name
+    pop pop SelContext
+  } def
+
+  /NewSelection { % event rank => sel
+    /SelRank 1 index def
+    Holder /new ClassEmacsSelection send
+    exch pop
+  } def
+
+  /DragStart { % event sel => -
+%    /ClearOverlay self send
+    /unsetselection 1 index send
+    /DragStart super send
+  } def
+
+%	Callback	Pin		InsertionPoint
+%	--------	---		--------------
+% Point button:
+%	Start		/AtPoint	/AtPoint
+%	Adjust		(/AtPoint)	(/AtPoint)
+%	Stop		(/AtPoint)	/NearEnd
+% Adjust button:
+%	Start		/FarEnd    	/NearEnd
+%	Adjust		(/FarEnd)	(/NearEnd)
+%	Stop		(/FarEnd)	/NearEnd
+
+  /SelectionStart { % event sel => bool
+    gsave /InitState self send
+      2 copy /LocalSelectionStart self send
+      /RemoteSelectionStart self send
+      true
+    grestore
+  } def
+
+  /LocalSelectionStart { % event sel => -
+%    /LocalSelectionAdjust unpromote
+    /LocalSelectionStop unpromote
+    /SendTimer? unpromote
+    /Tracking? true promote
+
+    /Style get /SelStyle 1 index promote {
+      /Underscore { {			% l r
+	  row exch 1 index		% l y r y
+	  moveto lineto			%
+      } }
+      /StrikeThrough { {		% l r
+	  row .5 sub exch 1 index	% l y r y
+	  moveto lineto			%
+      } }
+      /Default { { % l r
+	  row exch 1 index		% l y r y
+	  2 copy 1 sub 6 2 roll		% r y' l y r y
+	  moveto lineto			% r y'
+	  0 -1 rlineto lineto		%
+	  closepath
+      } }
+    } case
+    /PaintTrackLine exch promote
+    pop
+  } def
+
+  /RemoteSelectionStart { % event sel => -
+    ((SelStart % % %))
+    [ { Rank Level Pin } 4 -1 roll send
+      /PinNumber self send 3 -1 roll
+      /RankNumber self send 3 1 roll
+    ] sprintf
+    /executecommand self send
+
+    { 3 8 /SendTrackEvent self send % track:selection-start
+      /SendEventXY self send
+    } OutputToEmacs
+  } def
+
+  /SelectionAdjust { % event sel => -
+    gsave /InitState self send
+      2 copy /LocalSelectionAdjust self send
+      /RemoteSelectionAdjust self send
+    grestore
+  } def
+
+  /LocalSelectionAdjust { % event sel => -
+    pop pop
+  } def
+
+  /RemoteSelectionAdjust { % event sel => -
+    1 index /Name get /TrackTimer eq {
+      pop pop
+      SendTimer? {
+	{ 3 4 /SendTrackEvent self send % track:selection-timer
+	  lasteventx lasteventy /WholeCoordinates self send
+	  /SendXY self send
+	} OutputToEmacs
+	/SendTimer? false promote
+      } if
+    } {
+      % maybe we don't want to send motion when autoscrolling?
+      pop EventX EventY
+      3 -1 roll /EventXY self send
+      3 -1 roll ne 3 1 roll ne or {
+	{ 3 9 /SendTrackEvent self send % track:selection-adjust
+	  EventX EventY /SendXY self send
+	} OutputToEmacs
+      } if
+    } ifelse
+  } def
+
+  /SelectionStop { % event sel => -
+    gsave /InitState self send
+      2 copy /LocalSelectionStop self send
+      /RemoteSelectionStop self send
+      /Tracking? unpromote
+    grestore
+  } def
+
+  /LocalSelectionStop { % event sel => -
+    2 copy /LocalSelectionAdjust self send
+    /Rank get /PrimarySelection ne {
+	/ClearOverlay self send
+    } if
+    /LocalSelectionAdjust unpromote
+    pop
+  } def
+
+  /RemoteSelectionStop { % event sel => -
+    pop
+    { 3 10 /SendTrackEvent self send % track:selection-stop
+      /SendEventXY self send
+    } OutputToEmacs
+  } def
+
+% XXX: temporary work-around?
+  /SelectionCancel { % sel => -
+    [ exch /DoSelectionCancel self ]
+    /sendmanager /eventmgr self send send
+  } def
+
+  /DoSelectionCancel { % sel => -
+    gsave /InitState self send
+      dup /LocalSelectionCancel self send
+      /RemoteSelectionCancel self send
+      /Tracking? unpromote
+    grestore
+  } def
+
+  /LocalSelectionCancel { % sel => -
+    pop /ClearOverlay self send
+    /LocalSelectionAdjust unpromote
+  } def
+
+  /RemoteSelectionCancel { % sel => -
+    pop
+    { 3 3 /SendTrackEvent self send % track:selection-cancel
+      -1 -1 /SendXY self send
+    } OutputToEmacs
+  } def
+
+  % Return string to use for drag'n'drop animation.
+  %
+  /CurrentText { % selection => string
+    /DragText /query 3 -1 roll send		% str true -or- false
+    not {(???)} if
+  } def
+
+  /Truncate? nullproc def
+
+  /RankNumber { % rank => n
+    /PrimarySelection eq { 0 } { 1 } ifelse
+  } def
+
+  /PinNumberDict dictbegin
+    /LowEnd 0 def
+    /HighEnd 1 def
+    /NearEnd 2 def
+    /FarEnd 3 def
+    /AtPoint 4 def
+    /NoPin 5 def
+  dictend def % PinNumberDict
+
+  /PinNumber { % pin-name => n
+    PinNumberDict exch get
+  } def
+
+  /RequestNumberDict dictbegin
+    /UnknownRequest 0 def
+    /ContentsAscii 1 def
+    /SelectionObjsize 2 def
+    /DeleteContents 3 def
+    /DragText 4 def
+  dictend def % RequestNumberDict
+
+  /RequestNumber { % request-name => n
+    RequestNumberDict exch
+    2 copy known not { pop /UnknownRequest } if
+    get
+  } def
+
+  /ReceptionNumberDict dictbegin
+    /MoveToLocation 0 def
+    /CopyToLocation 1 def
+    /MoveToCaret 2 def
+    /CopyToCaret 3 def
+  dictend def % ReceptionNumberDict,
+
+  /ReceptionNumber { % name => number
+    ReceptionNumberDict exch 2 copy known {
+      get
+    } { pop pop 1 } ifelse
+  } def
+
+  /?Deselect { % - => -
+    /Overlay promoted? {
+      SelRank /SelectionDeselect self send
+    } if
+  } def
+
+  /SelectionDeselect { % Rank => -
+    /ClearOverlay self send
+    EmacsFile status {
+      { 3 15 /SendTrackEvent self send
+	/RankNumber self send
+	-1 /SendXY self send
+      } OutputToEmacs
+    } { pop } ifelse
+  } def
+
+  /HandleDeselectSelection { % sel => -
+    /Rank get SelectionDeselect
+  } def
+
+  /HandleSelectionRequest { % sel request => value
+    { 3 13 /SendTrackEvent self send % track:selection-request
+      exch /Rank get /RankNumber self send
+      exch
+%(Request: %\n)[2 index]dbgprintf
+      /RequestNumber self send
+      /SendXY self send
+      Rendezvous? not { /UnknownRequest } if
+%(Result: %\n)[2 index]dbgprintf
+    } OutputToEmacs
+  } def
+
+classend def
+
+/LucidaSans-Typewriter findfont 12 scalefont /settextfont ClassEmacsCanvas send
+
+/ClassEmacsSelection ClassSelection
+dictbegin
+  /Cache null def
+dictend
+classbegin
+
+  /NewInit { % - => -
+    /NewInit super send
+    /Cache growabledict def
+  } def
+
+  /ClearCache { % - => -
+    Cache cleanoutdict
+  } def
+
+  /?CacheRequest { % old name => val
+    exch pop					% name
+    Cache 1 index known {			% name
+      Cache exch get				% val
+    } {						% name
+      self 1 index				% name self name
+      /HandleSelectionRequest Holder send	% name val
+      Cache 3 -1 roll 2 index			% val cache name val
+      put					% val
+    } ifelse
+  } def
+
+  /CanRenderAs 10 dict def
+  CanRenderAs begin
+    /ContentsAscii dup def
+    /SelectionObjsize dup def
+    /DragText dup def
+  end % CanRenderAs
+
+  % This had better not be called from the wire listener (i.e. emacs
+  % should never send ps down the wire that calls this).
+  %
+  /SingleRequest { % oldval key => newval
+    dup {
+      /ContentsAscii
+      /SelectionObjsize
+      /DragText { % oldval key => newval
+	/?CacheRequest self send
+      }
+      /DeleteContents { % oldval key => newval
+	/ClearOverlay Holder send
+	/Level 0 def
+	/ClearCache self send
+	exch pop self exch /HandleSelectionRequest Holder send
+      }
+      /Default {
+	pop pop /UnknownRequest
+      }
+    } case
+  } def
+
+  /Deselect { % - => -
+    self /HandleDeselectSelection Holder send
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+currentdict endautoload end % TNT 3 0 package
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

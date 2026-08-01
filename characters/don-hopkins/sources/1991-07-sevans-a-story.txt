@@ -1,0 +1,145 @@
+To: sevans@alydar
+Bcc: hopkins
+In-reply-to: Steve Evans's message of Wed, 10 Jul 91 10:32:01 PDT <9107101732.AA03013@alydar.Eng.Sun.COM>
+Subject: A story
+--text follows this line--
+> I'm a consumate optimist.  I keep thinking that the NeWS focus can be
+> directed to ISV's, not research centers.
+
+The research centers are all you have left once you've driven away the
+ISV's. You drive them away by making promise after promise you never
+keep. When I read the SunView 2.0 Directions Statement, dated 6
+October 1986, I respected Sun for having the guts and the brains to do
+what's right. What a joke. Little did I know it was only the first
+joke in a long series. We told our customers we were not going to
+screw them, that we would stick to the API that we had documented. You
+had your chance to change that API a long time ago, but you waited
+until now to press it. It's the same thing all over again, except now
+it's me who's repeating the lies to our customers.
+
+>	If you don't want to dump NeWS, then why have you been caused
+>	us so much trouble?
+>
+> I could ask you the same question, "If you want NeWS to be a commercial
+> success, why has NeWSTech been so subborn in the sense of resisting
+> trying to fit into the X environment."
+
+That's not the same question.  We want NeWS to be a commercial
+success, but "commercial success" is not a standard defined by the X
+Consortium. I think OWM can do a beautiful job of fitting the X
+environment into NeWS. If you find that concept terrifying, then you
+know how we feel about the inverse, knowing that we will have to give
+up many goals we designed for and successfully achieved, in order to
+accomodate a half assed "fallback" solution to satisfy some of our
+customers who want to run our competitors' software (because we aren't
+allowed to make our software good enough for them to want to run).
+
+We have had a great deal of trouble *trying* to fit into the X
+environment. It has taken a huge amount of PostScript code to deal
+with many X interoperability issues ranging from *undocumented*
+selection protocols that XView and OLIT can't even agree on, to input
+focus grabbing kludges to work around OLWM's *incorrect* focus
+tracking behavior, to the fullscreen.ps hack to keep X from grabbing
+the pointer when NeWS is tracking it.  Then there are problems we
+could do nothing about, like the system locking up when OLWM grabs the
+server (grabbing the pointer *after* grabbing the server, and not
+checking the return value). Many of these problems should have been
+addressed by fixing X programs or the server, but they were not,
+instead we had to code around them in PostScript when we could.
+
+We've needed help, but haven't gotten it.  Like operators to convert
+between NeWS and X time values.  We asked for that a while ago but
+still don't have it. So we're stuck using this slow crufty PostScript
+conversion routine. We also need a way to grab the pointer, like X, so
+we don't have to muck up all the mouse tracking code with the
+fullscreen.ps kludge. But we still don't have that either, as if we
+didn't really "need" pointer grabbing because we could kludge around
+the deficiency. But now that pointer grabbing is framed as solving X
+interoperability problems, it's suddenly an acceptable thing to ask
+for (as long as we implement it with our own resources). Several of
+our interoperability problems were caused by OLWM's misbehavior, bugs
+that nobody cared to fix. Some of those bugs are finally being
+addressed, and this is progress, but it's years overdue, and
+cooperation on those issues was very hard for us to get. Why is it too
+much to ask for you to go to bat *for* us, instead of going to battle
+*against* us? 
+
+We have this wonderful technology but nobody understands how to use it
+or how to improve it. NeWS can be used to *solve* many of the problems
+with X.  DSDM could be implemented in NeWS, and it would be *much*
+faster (watch the context switches in a perfmeter when you press on a
+drop target). If it can't be implemented trivially in NeWS, you could
+add NeWS operators for Xlib style region arithmetic, and access to the
+shapes extension.  Not only would X drag'n'drop performance improve
+dramatically, but many NeWS programs would benefit from access to the
+technology that's *already* implemented in the merged server (like
+pattern fill). 
+
+If NeWS had access to pattern fill, the startup screen wouldn't take
+so long to fill with the X root weave!  Isn't it ridiculous that the
+OpenWindows 3.0 startup is *perceptibly* slower when it fills the
+screen the first time, because of NeWS code that simulates a pattern
+fill, executing doubly nested "imagecanvas" loops to tile the screen
+in 64x64 bit images of the "Industry Standard" X root weave pattern?
+Wouldn't it be nice if NeWS could just call the same pattern fill code
+X uses to fill the whole screen instantly? Isn't that a better
+solution than dumping NeWS to make server startup faster?
+
+> We need to now innovate within the framework we have created (which
+> includes interoperability with X), not keep changing and
+> destablizing it.
+
+The framework is a cage. TNT was not designed to be boxed in, and
+that's why it doesn't fit in with Sun's X based desktop, which hardly
+approaches the mediocrity it strives for.  The inevitable fact we must
+embrace is that Sun has painted itself into a corner, and there is no
+room in that corner for TNT, with the deskset as bloated as it is and
+swelling. The most direct and efficient approach to an "8 meg
+solution" is an all NeWS desktop, but that's not politically correct
+with certain people, and never has been, which is why we currently
+have an all-X desktop.  Another approach is a no-NeWS desktop, which
+certain people are pushing, even though they know it's not going to
+work. This artificial short term "8 megabyte" problem is being used as
+an excuse to push NeWS off the desktop, so XView can finish rotting
+and OLIT can take over. Well OLIT ain't any smaller than XView, but
+hey memory's cheap so long as you don't buy it from Sun! So even
+though this memory fire drill is important enough to drive server
+reform, and put NeWS in jepordy of being lobotomized into a Display
+PostScript clone, our present crisis just isn't taken seriously enough
+to justify putting any effort into doing something as "drastic" as
+working towards an all NeWS desktop.  Just keep an eye on your 1.25
+megabyte resident deskset clock, because memory isn't the only thing
+you're wasting.
+
+> Recent levels of cooperation on interoperability have been
+> encouraging.  Isn't this the pathway toward success?
+
+The cooperation has been encouraging, but in truth it is a departure
+from the norm, and it came about much too late. The pathway we are on
+leads to unmaintainable mediocrity, and you're dragging TNT down that
+path. 
+
+NeWSTech doesn't want to see NeWS destroyed. But that is the goal of
+the managers who have been making the decisions for years, who drove
+away all the engineers who cared, who are still making the same wishy
+washy decisions, and *still* have the *nerve* to say they support
+NeWS, just like old times. It's just the same as it's always been.  In
+the face of that reality, it doesn't matter that Scott McNealy or Ed
+Zander support NeWS -- they can keep you from dumping it, but they
+can't keep you from destroying it.
+
+If you tell anyone that NeWStech wants to kill NeWS, then you'd better
+tell the whole story, that it is because *you* want to kill NeWS, and
+you are and have always been in charge, and there's nothing we can do
+about it, so we want a quick clean death right now, because otherwise
+you will strangle it slowly.
+
+	-Don
+
+PS: Nothing personal.  All the "you"'s are collective and
+indeterminate.  Most of the people in the window system group that I
+knew personally, talked to, would ride by bike to Palo Alto to eat
+lunch with, have left, so nobody tells me what's going on any more.
+All the "I"'s and "we"'s are myself in whole or in part, since my
+views and opinions in no way reflect the policies or practices of Sun
+Microsystems.  I hope SunSoft can do better.

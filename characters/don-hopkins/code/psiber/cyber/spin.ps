@@ -1,0 +1,123 @@
+%!
+
+/outfile (/scratch/don/oscan.ps) (w) file def
+
+/step .004 def
+%/step .5 def
+%/step .1 def
+
+/width 960 def
+/height 960 def
+
+/osize 300 def
+
+  /finger-path { % - => -
+      newpath
+      .2 0 moveto
+      0 .3 lineto
+      .1 .5 lineto
+      .2 .5 lineto
+      .2 .55 lineto
+%      .3 .6 .9 controlpoint
+      .3 .6 lineto
+      .4 .55 lineto
+      .4 .95 lineto
+%      .5 1 .9 controlpoint
+      .5 1 lineto
+      .6 .95 lineto
+      .6 .55 lineto
+%      .7 .6 .8 controlpoint
+      .7 .6 lineto
+      .8 .55 lineto
+      .8 .5 lineto
+%      .9 .55 .9 controlpoint
+      .9 .55 lineto
+      1 .5 lineto
+      1 .3 lineto
+      .8 0 lineto
+      closepath
+  } def
+
+/yowza {
+  /i exch def
+  (foo\n) outfile exch writestring
+  gsave
+    osize dup scale
+
+    0 .15 .5
+    rgbcolor fillcanvas
+
+    .5 .5 translate
+    360 spins mul i mul rotate
+    s1 s0 sub 
+    i dup dup mul mul  
+%    i sqrt sqrt
+    mul
+    s0 add 
+dup =
+    dup scale
+    tx0  tx1 tx0 sub i mul  add  neg
+    ty0  ty1 ty0 sub i mul  add  neg
+    translate
+
+    1 setgray
+    .5 .5 1 0 360 arc closepath stroke
+
+%    finger-path gsave random setgray fill grestore 0 setgray stroke
+
+    1 width div 1 height div scale
+%    (/tmp/still_out.ps) run
+   (/scratch/don/object-subclasses.ps) run 
+
+  grestore
+  pause pause
+  outfile writecanvas
+  .5 60 div sleep
+} def
+
+(%!
+
+/foo{currentfile readcanvas imagecanvas} def
+) outfile exch writestring
+osize dup (% % scale\n) sprintf outfile exch writestring
+
+framebuffer setcanvas
+/can framebuffer newcanvas def
+50 50 osize dup rectpath can reshapecanvas
+can /Transparent false put
+can /Retained true put
+can /Mapped true put
+
+can setcanvas .1 fillcanvas
+0 setlinewidth
+
+% ------------------------------------------------------------------------
+
+/tx0 .5 def
+/ty0 .5 def
+
+/tx1 .625 def
+/ty1 .353 def
+
+/s0 .01 def
+/s1 30 def
+
+/spins 1 def
+
+%0 step 1
+1 step neg 0
+{ dup = yowza } for
+
+% ------------------------------------------------------------------------
+% 
+% /tx1 .525 def
+% /ty1 .653 def
+% 
+% /s1 10 def
+% 
+% /spins 3 def
+% 
+% 0 step 1
+% { dup = yowza } for
+% 
+outfile closefile

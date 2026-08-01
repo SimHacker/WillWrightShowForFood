@@ -1,0 +1,31 @@
+Hi, Crispin! I just wrote a PostScript interpreter for NeWS in PostScript, 
+and I thought you might be interested in looking at it. It was based on 
+some of the ideas you wrote about in the paper about your PS interpreter, 
+in the Springer Verlag book on workstations and publication systems. 
+
+It has its own execution stack, a PostScript array, onto which it 
+pushes continuations for looping constructs such loop, forall, etc. 
+The continuations are represented by dictionaries in which are stored the 
+state needed by the control structure (plus some other info to help with 
+debugging), as well as a function /continue, and a /continuation type. 
+
+The interpreter's execution stack is stored in a dictionary that the 
+interpreter stashes away on the NeWS execution stack during the execution
+of primative operators. (By calling the function MumbleFrotz. Note the 
+circularity.) 
+
+There is some hair in there to handle the NeWS /send operator correctly,
+in iexec-reenter. There are still a few things unimplemented, but on the 
+whole, it seems to work! 
+
+I expect that it will be useful for debugging PostScript code in NeWS. I 
+did it because there was no other way to single step through execution in
+NeWS. The NeWS execution stack is actually a C structure that is not 
+mallable from PostScript, and doesn't even give all the necessary information
+(like the "for" step and limit). 
+
+Any suggestions for making it faster or more flexable?
+Do you think it would be useful with your PostScript interpreter? 
+
+	-Don
+

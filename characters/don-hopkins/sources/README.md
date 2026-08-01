@@ -34,8 +34,12 @@
 | [2011 Reddit MVC flame → Morphic](2011-reddit-mvc-flame-morphic.md) | u/xardox vs cargo-cult MVC; Kay email; Morphic payoff — Craig Latta show fuel |
 | [Garnet/Laszlo → Svelte × Snap!](micropolis-svelte-snap-constraint-bridge.md) | Constraints + prototypes bridge |
 | [ScriptX DreamScape room essay](../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida multimedia Lisp machine; WWDC 1995 |
-| [Window Manager Flames — ICCCM/OWM/piewm](i39l-window-manager-flames.md) | Unix-Haters chapter: "The ICCCM Sucks"; OWM design notes (tabs, pies, rooms, legos); PizzaTool's shaped window; "criminally negligent" input focus; piewm docs; HN retellings 2014–2025. Sources cached: [`owm.ps`](../../josh-siegel/sources/owm.ps) · [`tab.ps` + NDE tabs](../code/news-tnt/README.md) |
+| [Window Manager Flames — ICCCM/OWM/piewm](i39l-window-manager-flames.md) | Unix-Haters chapter: "The ICCCM Sucks"; OWM design notes (tabs, pies, rooms, legos); PizzaTool's shaped window; "criminally negligent" input focus; piewm docs; HN retellings 2014–2025; OWM/OLWM/plwm disambiguation. Sources cached: [`owm.ps`](../../josh-siegel/sources/owm.ps) · [`tab.ps` + NDE tabs](../code/news-tnt/README.md) · [piewm tree](../code/piewm/README.md) · [X10 theta/uwm](../code/piemenu-x10/README.md) |
 | [HN harvest — WM/tabs/pies/HyperCard/HyperLook/OWM](hn-window-management-harvest.md) | **653 comments bucketed**, the load-bearing ones curated: OWM receipts, 1988 tabbed windows, uwm FORTH pies, GoodNeWS→HyperNeWS→HyperLook arc, PizzaTool, the "Hold my bong" Wayland verdict |
+| [owm-window-management-synthesis.md](owm-window-management-synthesis.md) | The synthesis: timeline 1986–2025, what OWM was, the in-server argument, the politics, the tabs doctrine — all links now point at cached trees |
+| [1990-11-openwindows-free-flame.txt](1990-11-openwindows-free-flame.txt) | **Receipt** — "Sun's inconsistent and misleading use of the word FREE": the OWPS source-for-$1000 flame, SunFLASH Nov 1990 attached |
+| [1991-07-sevans-a-story.txt](1991-07-sevans-a-story.txt) | **Receipt** — the sevans exchange: "resisting trying to fit into the X environment?" vs "OWM can do a beautiful job of fitting the X environment into NeWS" |
+| [1991-11-status-of-news-quit-sun.txt](1991-11-status-of-news-quit-sun.txt) | **Receipt** — "Re: Status of NeWS": "I just quit my job at Sun because Sun's management is living a lie"; the HyperNeWS acquisition that died by missed deadline |
 
 Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 

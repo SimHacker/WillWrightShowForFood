@@ -1,0 +1,185 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tab X Windows for TNT
+% Copyright (C) 1991 by Don Hopkins, Sun Microsystems
+%
+
+openwinversion 0 get 51 eq { % XXX: V3
+  /NeWS 3 0 findpackage beginpackage
+  /TNTCore 3 0 findpackage beginpackage
+  /TNT 3 0 findpackage dup beginpackage
+  dup beginautoload begin
+} { % XXX: V2
+  systemdict begin
+} ifelse
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassXPieWindow
+
+/ClassXPieWindow [ClassPieMenuWindowManager ClassCanvas]
+dictbegin
+  /X 0 def /Y 0 def /W 1 def /H 1 def 
+dictend
+classbegin
+    /Menuable? true def
+
+    /minsize { 8 8 } def
+
+    /UnZoomedSize	null def
+
+    /TrackBBox { % x y w h => x' y' w' h'
+    } def
+
+    /UnTrackBBox { % x y w h => x' y' w' h'
+    } def
+
+    /reshape { % x y w h => -
+	/preconfigure self send
+%	/H exch def /W exch def /Y exch def /X exch def
+	/reshape super send
+	/reconfigure self send
+    } def
+
+    /move { % x y => -
+	/preconfigure self send
+%	/Y exch def /X exch def
+        /move super send
+	/reconfigure self send
+    } def
+
+    /FrontFromUser { % ctl => -
+        pop /totop self send
+    } def
+
+%    /totop { % - => -
+%        % XXX
+%    } def
+
+    /BackFromUser { % ctl => -
+        pop /tobottom self send
+    } def
+
+%    /tobottom { % - => -
+%        % XXX
+%    } def
+
+    /ZoomFromUser { % ctl => -
+	pop /togglezoomed self send
+    } def
+
+    % Make the window full size.
+    %
+    /zoom { % - => -
+	/zoomed? self send not {
+	    gsave
+		Parent setcanvas
+		/UnZoomedSize [/bbox self send] def
+		UnZoomedSize 0 get 0 UnZoomedSize 2 get	% x 0 w
+		clippath pathbbox 4 1 roll pop pop pop	% x 0 w H
+		/totop self send
+		/reshape self send
+	    grestore
+	} if
+    } def
+
+    % Return the window to normal size.
+    %
+    /unzoom { % - => -
+	/zoomed? self send {
+	    gsave
+		Parent setcanvas
+		UnZoomedSize aload pop
+		/UnZoomedSize unpromote
+		/reshape self send
+	    grestore
+	} if
+    } def
+
+    % Return true if the window is currently full size.
+    %
+    /zoomed? { % - => bool
+	UnZoomedSize null ne
+    } def
+
+    % Reverse the full size - normal size state of the window.
+    %
+    /togglezoomed { % - => -
+	/zoomed? self send {/unzoom self send} {/zoom self send} ifelse
+    } def
+
+    /QuitFromUser { % ctl => -
+        pop % XXX
+    } def
+
+    /PropsFromUser { % ctl => -
+        pop % XXX
+    } def
+
+    /PlaceFromUser { % ctl => -
+        pop % XXX
+    } def
+
+    /RefreshFromUser { % ctl => -
+        pop /damageall self send
+    } def
+
+    /CloseFromUser { % ctl => -
+        pop
+    } def
+
+    /TrackDict		growabledict def
+
+    /?Open { % - => -
+    } def
+
+    /preconfigure {
+        gsave
+	    /c self /TopChild get def
+	    self setcanvas	
+	    c false getbbox
+	    /ch exch def /cw exch def
+	    /cS exch def /cW exch def
+	    /size self send
+	    cW cS xysub cw ch xysub
+	    /cN exch def /cE exch def
+	grestore
+    } def
+
+    /reconfigure { % - => -
+        gsave Parent setcanvas
+	    createevent begin
+		/TimeStamp lasteventtime def
+		/Canvas Parent def
+		/Name /ConfigureRequest def
+		/Action 20 dict def
+		Action begin
+		    { /X /Y /Width /Height /Border
+		      /Detail /Mask /Window /Sibling } {
+		      null def
+		    } forall
+		    /Window c /XID get def
+		    /Mask 15 def
+		    /bbox self send
+%		    currentdict end X Y W H 5 -1 roll begin
+		    /Height exch cN cS add sub def
+		    /Width exch cW cE add sub def
+		    /Y exch /size Parent send exch pop exch sub
+		       Height sub cS sub def
+		    /X exch cW add def
+		end
+		currentdict sendevent
+	    end
+	    pause
+	    self setcanvas /damageall self send
+	grestore
+    } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+openwinversion 0 get 51 eq { % XXX: V3
+  currentdict endautoload end % TNT
+  endpackage endpackage endpackage
+} { % XXX: V2
+  end % systemdict
+} ifelse

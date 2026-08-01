@@ -1,0 +1,3365 @@
+#!/bin/sh
+psh << '%EOF'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This file is a product of Sun Microsystems, Inc. and is provided for
+% unrestricted use provided that this legend is included on all tape
+% media and as a part of the software program in whole or part.  Users
+% may copy or modify this file without charge, but are not authorized to
+% license or distribute it to anyone else except as part of a product
+% or program developed by the user.
+%
+% THIS FILE IS PROVIDED AS IS WITH NO WARRANTIES OF ANY KIND INCLUDING THE
+% WARRANTIES OF DESIGN, MERCHANTIBILITY AND FITNESS FOR A PARTICULAR
+% PURPOSE, OR ARISING FROM A COURSE OF DEALING, USAGE OR TRADE PRACTICE.
+%
+% This file is provided with no support and without any obligation on the
+% part of Sun Microsystems, Inc. to assist in its use, correction,
+% modification or enhancement.
+%
+% SUN MICROSYSTEMS, INC. SHALL HAVE NO LIABILITY WITH RESPECT TO THE
+% INFRINGEMENT OF COPYRIGHTS, TRADE SECRETS OR ANY PATENTS BY THIS FILE
+% OR ANY PART THEREOF.
+%
+% In no event will Sun Microsystems, Inc. be liable for any lost revenue
+% or profits or other special, indirect and consequential damages, even
+% if Sun has been advised of the possibility of such damages.
+%
+% Sun Microsystems, Inc.
+% 2550 Garcia Avenue
+% Mountain View, California  94043
+%
+%
+% @(#)pizzatool 1.9 91/07/22
+%
+% Copyright (c) 1991 by Sun Microsystems, Inc.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PizzaTool Source Code List of Ingredients
+%
+%   User Interface Structure Outline
+%   Setup for OpenWindows 2.0 or 3.0
+%   Class Definitions
+%     ClassPizza ClassTopping ClassStyle
+%     ClassProPanel ClassPopupPizzaWindow
+%   Globals
+%   Utilities
+%   Notifiers
+%     ToolPanel ToppingPanel EditPanel Notice
+%   Notice Definitions
+%   Topping Definitions
+%   Style Definitions
+%   Top Level User Interface Componants
+%   ToolPanel Componants
+%   ToppingPanel Componants
+%   EditPanel Componants
+%   Notice Componants
+%   Initialization
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% User Interface Structure Outline
+%
+% This is an outline of the user interface structure of pizzatool.
+% The number of "*"'s before the name is an object's level of nesting.
+% A top level window starts with "*", a panel inside that starts with "**",
+% a button inside that starts with "***", and so on.
+% The name of the object tells where it is defined in userdict.
+% Following the name is a colon and a description of the object.
+% The description consists of optional choice mode or layout names,
+% and the object's class name.
+% The next optional line (not prefixed by "*"'s) lists the names of any
+% notifiers called by the object. Most object's targets are set to userdict,
+% which is where the notifier and object names are defined. Notifier names
+% may be followed by and "@" sign and the name of the target object, if
+% not userdict.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% * ToolWindow: ClassBaseWindow
+% ** ToolPanel: /Calculated ClassPanel
+% *** addressmenubuttons: /Grid ClassMenuButtons
+% **** pizzaparlormenu: /Exclusive /Grid ClassMenu
+% *** winbuttons: /Grid ClassButtons
+%     /ShowToppingWindow /ShowPreviewWindow /OrderPizza /ShowEditWindow
+% *** namefieldlabel: ClassLabel
+% *** namefield: ClassTextField
+%     nullnotify
+% *** phonefieldlabel: ClassLabel
+% *** phonefield: ClassTextField
+%     nullnotify
+% *** addressfieldlabel: ClassLabel
+% *** addressfield: ClassTextField
+%     nullnotify
+% *** deliverylabel: ClassLabel
+% *** deliverymenubutton: /Grid ClassMenuButtons
+% **** deliverymenu: /Exclusive /Grid ClassMenu
+%      /SetDelivery
+% *** deliveryvalue: ClassLabel
+% *** totallabel: ClassLabel
+% *** totalfield: ClassTextField
+%     nullnotify
+% *** emaillabel: ClassLabel
+% *** emailfield: ClassTextField
+% *** instructionslabel: ClassLabel
+% *** instructionfield0..5: ClassTextField
+%     nullnotify
+%
+% * ToppingWindow: ClassPopupWindow
+% ** ToppingPanel: /Calculated ClassPanel
+% *** orderbuttons: /Grid ClassButtons
+%     /ShowPreviewWindow /ShowEditWindow /OrderPizza
+% *** pizzasizelabel: ClassLabel
+% *** pizzasizesettings: /Grid ClassSettings
+%     /SetPizzaSize
+% *** pizzafractionlabel: ClassLabel
+% *** pizzafractionsettings: /Grid ClassSettings
+%     /SetPizzaFraction
+% *** stylelabel: ClassLabel
+% *** stylemenubutton: /Grid ClassMenuButtons
+% **** stylemenu: /Exclusive /Grid ClassMenu
+%      /MenuSetStyle
+% *** stylevalue: ClassLabel
+% *** meatlabel: ClassLabel
+% *** meatcheckboxes: /Grid ClassCheckBoxes
+%     /SetCheckboxes
+% *** vegetablelabel: ClassLabel
+% *** vegetablecheckboxes: /Grid ClassCheckBoxes
+%     /SetCheckboxes
+% *** costlabel: ClassLabel
+% *** costfield: ClassTextField
+%     nullnotify
+%
+% * EditWindow: ClassPopupWindow
+% ** EditPanel: /Calculated ClassPanel
+% *** stylemenubuttons: /Grid ClassMenuButtons
+% **** editstylemenu: /Grid ClassMenu
+%      /NewPizzaStyle /EditPizzaStyle /RenamePizzaStyle
+%      /DeletePizzaStyle /SavePizzaStyle
+% **** edittoppingmenu: /Grid ClassMenu
+%      /RemoveSelected /CopyCheckboxes
+% ***** meattoppingmenu: /NonExclusive /Grid ClassMenu
+%	/UpdateToppings
+% ***** vegetabletoppingmenu: /NonExclusive /Grid ClassMenu
+%	/UpdateToppings
+% *** stylelistlabel: ClassLabel
+% *** stylescroll: ClassVScrollbar
+%     /scroll @ stylelist
+% *** stylelist: ClassScrollList
+%     /EditStyle
+% *** styletoppingslabel: ClassLabel
+% *** styletoppingsscroll: ClassVScrollbar
+%     /scroll @ styletoppingslist
+% *** styletoppingslist: ClassScrollList
+% *** stylenamelabel: ClassLabel
+% *** stylenamefield: ClassTextField
+%     /NewPizzaStyle
+% *** styleextralabel: ClassLabel
+% *** styleextrafield: ClassNumericField
+%     /SetStyleExtraToppings
+% *** stylepriceslabel: ClassLabel
+% *** styleprice10label: ClassLabel
+% *** styleprice10field: ClassTextField
+%     /SetStylePrice
+% *** styleprice14label: ClassLabel
+% *** styleprice14field: ClassTextField
+%     /SetStylePrice
+% *** styleprice16label: ClassLabel
+% *** styleprice16field: ClassTextField
+%     /SetStylePrice
+% *** styleprice18label: ClassLabel
+% *** styleprice18field: ClassTextField
+%     /SetStylePrice
+%
+% * PreviewWindow: ClassPopupPizzaWindow
+% ** Pizza: ClassPizza
+%
+% * Notice: ClassNotice
+% ** oknoticebuttons: ClassButtons
+%    /NoticeClose
+% ** yesnonoticebuttons: ClassButtons
+%    /NoticeYesNo
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setup for OpenWindows 2.0 or 3.0
+
+/is_v2? systemdict /findpackage known not def
+
+is_v2? {
+  /SLEEP { aload pop 1000 mul exch add 60 div sleep } def
+  /BUILDIMAGE { buildimage } def
+} {
+  /NeWS 3 0 findpackage beginpackage
+  /TNTCore 3 0 findpackage beginpackage
+  /TNT 3 0 findpackage beginpackage
+
+  /SLEEP { sleep } def
+  /BUILDIMAGE { framebuffer /Colormap get buildimage } def
+} ifelse
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Class Definitions
+%
+% Three classes are used to model the virual pizza reality.
+%
+% An instance of ClassPizza is an actual canvas on the screen,
+% that embodies the pizza itself.
+%
+% An instance of ClassTopping encapsulates all that is known about
+% a pizza topping, including its nominal, visual, dietary, and other
+% aesthetic properties.
+%
+% An instance of ClassStyle describes a vendor supplied pizza style,
+% consisting of a unique product name, a list of pizza toppings
+% included with the default configuration, as well as pricing and
+% discounting information.  
+% 
+% Two other classes are used to sew together the underpinnings of this
+% consentual hallucination.
+%
+% An instance of ClassProPanel is just a control panel, that promotes
+% (caches) its minsize into the instance as a constant function the
+% first time /minsize is calculated, so that future calls to /minsize
+% are very fast.
+%
+% An instance of ClassPopupPizzaWindow is used to frame the pizza
+% canvas (an instance of ClassPizza). It overrides the /path method of
+% the ClassPopupWindow frame, so that the frame is shaped around the
+% pizza. It asks the pizza for its size and shape, and cuts a positive
+% round (or semicircular) hole for it to float in the center of the
+% window frame.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassPizza
+%
+% An instance of ClassPizza is an actual canvas on the screen,
+% that embodies the pizza itself.
+
+/ClassPizza ClassCanvas [
+  % Instance variables (initialized to null):
+  /Toppings /Style /PizzaSize /Fraction /Price
+  /Cheese /ExtraToppings /PizzaLock
+] classbegin
+
+% Class variables:
+
+  % Canvas attributes.
+  /Transparent false def
+  /Retained true def
+  /Mapped true def
+
+  % Constant colors.
+  /CrustColor .9 .6 .1 rgbcolor def
+  /SauceColor 1 .1 .1 rgbcolor def
+
+  % The supported pizza sizes.
+  /PizzaSizes [10 14 16 18] def
+
+  % The size of the pizza box:
+  /PizzaBoxSize 19 def
+
+  % The thickness of the crust.
+  /CrustRadius .9 def
+
+  % Processes that paint, spin, and update the view of this pizza.
+  % These class variable are used as backstops for the names of
+  % processes who are promoted into the instance when active.
+  /PaintProcess null def
+  /SpinProcess null def
+  /UpdateProcess null def
+
+  % Class variables used for spinning.
+  /SpinPause 6 def
+  /SpinAngle 7 def
+
+% Class methods:
+
+  % Initialize the pizza.
+  %
+  /NewInit { % - => -
+    /NewInit super send
+    /Toppings nullarray def
+    /ExtraToppings nullarray def
+    /Style /defaultstyle ClassStyle send def
+    /PizzaSize PizzaSizes dup length 1 sub get def
+    /Fraction 1 def
+    /Price 0 def
+    /Cheese (Cheese) findtopping def
+    /PizzaLock createmonitor def
+    /Sprinklers growabledict def
+  } def
+
+  % Clean up after the pizza.
+  %
+  /destroy { % - => -
+    /StopSpin self send
+    /StopPaint self send
+    UpdateProcess null ne { % if:
+      UpdateProcess killprocess
+    } if
+    /UpdateProcess unpromote
+    /destroy super send
+  } def
+
+  % Return an array of the toppings on this pizza.
+  %
+  /toppings { % - => [topping ...]
+    Toppings
+  } def
+
+  % Add a topping to the pizza.
+  % If the topping isn't already on the pizza,
+  % add it to the array of pizza toppings,
+  % update the objects viewing the pizza,
+  % and start sprinkling the new topping on the pizza
+  % (if the parent pizza window is mapped on the screen).
+  %
+  /addtopping { % topping => -
+    Toppings 1 index arraycontains? { pop } { % else:
+      Toppings 1 index arrayappend
+      /Toppings exch def
+      /updateview self send
+      /mapped? Parent send { % ifelse:
+	/StartSprinkle self send
+      } { pop } ifelse
+    } ifelse
+  } def
+
+  % Remove a topping from the pizza.
+  % If the topping is on the pizza,
+  % remove it from the array of toppings,
+  % and set the new list of pizza toppings.
+  % Since we've already painted the topping on the pizza,
+  % we have to call /settoppings,
+  % which will start painting the pizza again from scratch.
+  %
+  /removetopping { % topping => -
+    Toppings exch arrayindex { % if:		% index
+      Toppings exch arraydelete			% toppings'
+      /settoppings self send			%
+    } if					%
+  } def
+
+  % Set the toppings of this pizza to be the toppings in the given array.
+  % This causes the pizza to repaint,
+  % and updates the objects viewing this pizza.
+  %
+  /settoppings { % [topping ...] => -
+    /Toppings exch def
+    /updateview self send
+    /paint self send
+  } def
+
+  % Set the toppings of this pizza to be the toppings of the given style.
+  % Ask the style for its list of standard toppings, and set this pizza's 
+  % topping list.
+  %
+  /setstyle { % style => -
+    /Style 1 index def
+    /toppings exch send
+    /settoppings self send
+  } def
+
+  % Return the style of this pizza.
+  %
+  /style { % - => style
+    Style
+  } def
+
+  % Return the size of this pizza in inches.
+  % Supported sizes are 10", 14", 16", and 18".
+  %
+  /pizzasize { % - => 10|14|16|18
+    PizzaSize
+  } def
+
+  % Set the size of this pizza in inches.
+  % Accepted sizes are 10", 14", 16", and 18",
+  % or the corresponding indices, 0, 1, 2, and 3.
+  %
+  /setpizzasize { % 10|14|16|18|index => -
+    /pizzasizeindex self send			% index
+    PizzaSizes exch get				% size
+    /PizzaSize exch def				%
+    /ReshapeParent self send
+    /updateview self send
+    /paint self send
+  } def
+
+  % Translate a pizza size in inches to a pizza size index.
+  % Accepted sizes are 10", 14", 16", and 18",
+  % or the corresponding indices, 0, 1, 2, and 3.
+  %
+  /pizzasizeindex { % size|index => index
+    PizzaSizes exch arrayindex not {		%
+      PizzaSizes length 1 sub			% index
+    } if	 				% index
+  } def
+
+  % Translate a pizza index into a size in inches.
+  %
+  /pizzaindexsize { % index => size
+    PizzaSizes exch get
+  } def
+
+  % Return the fraction of this pizza, whole or half.
+  % 1 is whole, .5 is half.
+  %
+  /fraction { % - => real
+    Fraction
+  } def
+
+  % Set the fraction of this pizza to whole or half.
+  % 1 is whole, .5 is half.
+  %
+  /setfraction { % real => -
+    /Fraction exch def
+    /ReshapeParent self send
+    /updateview self send
+  } def
+
+  % Reshape the parent popup pizza window,
+  % to reflect a change in the pizza's shape.
+  % In all truth, the pizza canvas is rectangular!
+  % It gets its round (or semi-circular) shape
+  % from the shape of its parent canvas,
+  % which is a hollow rectangular popup window frame
+  % (just the window borders),
+  % with a discontiguous pie floating in the center.
+  %
+  /ReshapeParent { % - => -
+    gsave
+      Parent setcanvas
+      /bbox PreviewWindow send /reshape PreviewWindow send
+    grestore
+  } def
+
+  % Return the radius of this pizza,
+  % proportional to the unit square pizza box.
+  %
+  /radiusscale { % - => r
+    PizzaSize PizzaBoxSize div
+  } def
+
+  % Return the most recently calculated price of this pizza.
+  %
+  /price { % - => price
+    Price
+  } def
+
+  % Fork a process to update the objects viewing this pizza.
+  % Fork off a process to do it in the background, but first wait 
+  % for the previous one to finish running first if it's not null.
+  %
+  /updateview { % - => -
+    UpdateProcess null ne { % if:
+      UpdateProcess waitprocess pop
+    } if
+    /UpdateProcess { % fork:
+      /UpdateView self send
+      /UpdateProcess unpromote
+    } fork promote
+  } def
+
+  % Update the objects viewing this pizza.
+  % Tell the various objects viewing this pizza to update their values.
+  %
+  /UpdateView { % - => -
+
+    % Tell pizzasizesettings to update its value if it's different 
+    % than our current size.
+    PizzaSize						% inches
+    /pizzasizeindex self send				% index
+    { % send to pizzasizesettings:
+      dup /value self send 0 get ne {
+ 	[exch] /setvalue self send
+      } { pop } ifelse
+    } pizzasizesettings send
+
+    % Tell pizzafractionsettings to update its value if it's different
+    % than our current fraction.
+    Fraction 1 eq { 0 } { 1 } ifelse			% index
+    { % send to pizzafractionsettings:
+      dup /value self send 0 get eq { pop } {
+        [exch] /setvalue self send
+      } ifelse
+    } pizzafractionsettings send
+
+    % Tell stylemenu to update its value if it's different than our
+    % currently selected style.
+    % The style's id is an item index appropriate for stylemenu.
+    /id Style send
+    { % send to stylemenu:
+      dup /value self send 0 get eq { pop } {
+        [exch] /setvalue self send
+      } ifelse
+    } stylemenu send
+
+    % Tell the stylevalue label to update its value if it's different
+    % than the currently selected style name.
+    /name Style send
+    { % send to stylevalue:
+      dup /value self send eq { pop } {
+        /setvalue self send
+      } ifelse
+    } stylevalue send
+
+    % Tell the meatcheckboxes to update its value to be an array of the
+    % food numbers (item indices) of each meat topping on this pizza.
+    % The meat topping's food number is an item index appropriate for
+    % meatcheckboxes.
+    [ Toppings { % forall:			% ... topping
+        { % send to topping:
+	  /foodtype self send /Meat eq { % if:
+	    /foodnumber self send		% ... index
+	  } if
+        } exch send
+      } forall
+    ] /setvalue meatcheckboxes send		%
+
+    % Tell the vegetablecheckboxes to update its value to be an array 
+    % of the food numbers (item indices) of each vegetable topping on
+    % this pizza.
+    % The vegetable topping's food number is an item index appropriate 
+    % for vegetablecheckboxes.
+    [ Toppings { % forall:			% ... topping
+        { % send to topping:
+	  /foodtype self send /Vegetable eq { % if:
+	    /foodnumber self send		% ... index
+	  } if
+	} exch send
+      } forall
+    ] /setvalue vegetablecheckboxes send	%
+
+    % Set the footer of the popup pizza preview window,
+    % to reflect the pizza size and fraction.
+    PizzaSize (%") sprintf
+    Fraction 1 eq { (Whole Pie) } { (Half Pie) } ifelse
+    /setfooter PreviewWindow send
+
+    /updatecost self send
+  } def
+
+  % Calculate the cost of this pizza.
+  %
+  /updatecost { % - => -
+    10 dict begin % localdict
+      /TheBest /defaultstyle ClassStyle send def
+      /TheStyle null def
+      /TheTopping null def
+      /TheBestCost 99 def
+      /TheBestExtras 0 def
+
+      % For each and every pizza style in the universe:
+      /styles ClassStyle send { % forall:		% style
+        /TheStyle exch def				%
+
+	% Ask this style for its list of standard toppings.
+	/TheToppings /toppings TheStyle send def
+
+	% Is every topping from this style on our pizza?
+	true						% true
+	TheToppings { % forall:				% true topping
+	  Toppings exch arraycontains? not { % if:	% true
+	    % Oops, this topping's not on the pizza. No dice.
+	    pop false exit				% false
+	  } if						% true
+	} forall					% true|false
+
+	{ % if: all the toppings of the style were on our pizza:
+							%
+	  % Make an array of our pizza toppings that aren't in the style.
+	  /ExtraToppings [
+	    Toppings {					% ... topping
+	      % Is this topping included in the style? Then toss it.
+	      TheToppings 1 index arraycontains? {	% ... topping
+	        pop					% ...
+	      } if
+	    } forall
+	  ] store					%
+
+	  % Figure out the cost of the pizza,
+	  % were we to order it as this style,
+	  % and remember the style as the best match if it pleases us.
+	  % The definition of pleasing us is biased towards matching
+	  % higher level complex pizza styles, rather than economical
+	  % lower level pizzas with extra toppings.
+	  % This is the kick-back to Tony&Alba's for all that free beer. 
+	  PizzaSize /pizzasizeindex self send		% sizeindex
+	  ExtraToppings length				% sizeindex extras
+	  /extraprice TheStyle send			% $
+	  dup						% $ $
+	  ExtraToppings length				% $ extras
+	  /extras TheStyle send sub			% $ $ extras'
+	  1 le { .9 mul } if				% $ biased$
+	  TheBestCost le { % ifelse:			% $
+	    % Hey this is the best match so far, let's not forget it!
+	    /TheBestCost exch store			%
+	    /TheBest TheStyle store
+	    /TheBestExtras
+	      ExtraToppings length /extras TheBest send sub
+	    store
+	  } { pop } ifelse				%
+	} if						%
+      } forall						%
+
+      % Set the window footers of the pizza topping panel.
+      % The left footer displays the name of the pizza style,
+      % and the right footer displays a message
+      % telling the user to choose more toppings,
+      % or the number of extra toppings,
+      % or nothing at all.
+      TheBestExtras dup 0 lt { % ifelse:		% extras
+	neg dup 1 eq { () } { (s) } ifelse		% extras (plural?)
+	exch (Choose % more topping%!) sprintf		% (message)
+      } { % else:					% extras
+	dup 0 ne { % ifelse:
+	  dup 1 eq { () } { (s) } ifelse		% extras (plural?)
+	  exch (With % extra topping%.) sprintf		% (message)
+	} { % else:					% extras
+	  pop nullstring				% ()
+	} ifelse
+      } ifelse						% (left footer)
+      /name TheBest send exch				% (left) (right)
+      /setfooter ToppingWindow send			%
+
+      % Remember the price of this pizza in dollars rounded to cents,
+      % and calculate its string value. 
+      TheBestCost					% $
+      Fraction mul
+      100 mul round 100 div
+      /Price 1 index store
+      dup 100 mul round cvi 100 mod			% $ cents
+      exch floor cvi					% cents dollars
+      1 index 10 lt { (%.0%) } { (%.%) } ifelse		% cents dollars fmt
+      sprintf						% (price)
+
+      % Set the value of the costfield and totalfield labels to
+      % the price string.
+      dup /setvalue costfield send
+      /setvalue totalfield send				%
+
+      % Set the value of the stylevalue label to the name of the best style,
+      % and set the stylemenu value to the index of that name in the list of
+      % pizza styles. (The stylemenu is an exclusive settings menu.)
+      /name TheBest send				% name
+      dup /setvalue stylevalue send
+      PizzaStyleNames exch arrayindex {			% index
+          [exch] /setvalue stylemenu send		%
+      } if						%
+
+      % Remember the best match pizza style.
+      /Style TheBest store
+
+    end % localdict
+  } def
+
+  % Return the array of extra toppings above and beyond those provided
+  % by the currently selected pizza style.
+  %
+  /extratoppings { % - => [topping ...]
+    ExtraToppings
+  } def
+
+  % Calculate the prices for the four different whole sizes of
+  % the currently selected pizza style. 
+  %
+  /prices { % - => [10" 14" 16" 18"]
+    { % send to the current pizza style:
+      /prices self send					% [$ $ $ $]
+      /toppings self send length /extras self send add  % [$ $ $ $] toppings
+    } Style send
+    10 dict begin % localdict
+      % i is the number of additional toppings
+      Toppings length exch sub /i exch def		% [$ $ $ $]
+      i 0 gt { % if:
+	/FirstToppingPrices ClassStyle send		% [$ $ $ $] [$ $ $ $]
+	{ add } arrayop					% [$ $ $ $]
+	i 1 gt { % if:					% [$ $ $ $]
+	  /AdditionalToppingPrices ClassStyle send	% [$ $ $ $] [$ $ $ $]
+	  { i 1 sub mul add } arrayop			% [$ $ $ $]
+	} if
+      } if
+    end % localdict
+  } def
+
+  % Return the minimum size of the pizza box.
+  %
+  /minsize { % - => w h
+    16 16
+  } def
+
+  % Return the preferred pizza box size.
+  %
+  /preferredsize { % - => w h
+    256 256
+  } def
+
+  % Reshape the pizza canvas, just moving if the size doesn't change.
+  %
+  /reshape { % x y w h => -
+    2 copy /size self send 3 -1 roll eq 3 1 roll eq and { % ifelse:
+      pop pop /move self send
+    } { % else:
+      /reshape super send
+    } ifelse
+  } def
+
+  % Stop the pizza painting and spinning.
+  %
+  /reset { % - => -
+    /StopSpin self send
+    /StopPaint self send
+  } def
+
+  % Stop the pizza painting.
+  % Kill the painting process if it exists. Massacre all the topping
+  % sprinklers just to be mean, and clean up after them.
+  %
+  /StopPaint { % - => -
+    PaintProcess null ne { % if:
+      PaintProcess killprocess
+      /PaintProcess unpromote
+    } if
+    /StopSprinklers self send
+  } def
+
+  % Setup the graphics state for painting on the pizza.
+  %
+  /PaintSetup { % - => -
+    self setcanvas
+    /size self send
+    2 div exch 2 div exch		% w/2 h/2
+    % Translate to the center. Centered pizza constraint.
+    2 copy translate
+    % Maintain a 1:1 aspect ratio. Round pizza constraint.
+    min					% radius
+    % Adjust the scale for the pizza size.
+    /radiusscale self send mul
+    % Scale to the unit pizza coordinate system.
+    dup scale
+  } def
+
+  % Paint the pizza crust and fill it with sauce.
+  %
+  /PaintNewPizza { % - => -
+    gsave
+      /PaintSetup self send
+      0 0 1.02 0 360 arc
+      0 0 CrustRadius .005 sub 0 360 arc
+      CrustColor setcolor eofill
+      0 0 CrustRadius 0 360 arc
+      SauceColor setcolor fill
+    grestore
+  } def
+
+  % Clip out the crust in preparation for toppings painting.
+  %
+  /ClipCrust { % - => -
+    newpath
+    0 0 CrustRadius 0 360 arc
+    clip newpath
+  } def
+
+  % Paint the pizza, forking off a processes to paint every topping.
+  %
+  /Paint { % - => -
+    PizzaLock { % monitor:
+      /reset self send
+      /PaintProcess { % fork:
+	pause
+	/PaintNewPizza self send
+
+	% Wait a second until things settle down ...
+	% If /paint is called again within the next second,
+	% this process will be killed and a new paint process
+	% will sleep for a second.
+	[1 0] SLEEP
+
+	% If our parent window frame isn't opened,
+	% then it's hiding and we shouldn't draw the toppings.
+	/opened? Parent send { % if:
+	  % Draw all the toppings at once! Weeee!
+	  4 { % Lots of cheese, repeat:
+	    Cheese /StartSprinkle self send
+	  } repeat
+	  /toppings Pizza send { % forall:
+	    /StartSprinkle self send
+	  } forall
+
+	  % Wait around for all the sprinklers to finish.
+	  { % loop:
+	    Sprinklers length 0 eq { exit } if
+	    % push one of the sprinklers, doesn't matter which.
+	    Sprinklers { pop exit } forall
+	    waitprocess pop
+	  } loop
+	} if
+	/StopPaint self send
+      } fork def
+      PaintProcess /ProcessName (Pizza Painter) put
+    } monitor
+  } def
+
+  % Fork a process to sprinkle a topping on the pizza in the background.
+  %
+  /StartSprinkle { % topping => -
+    { % fork:
+      gsave
+	/PaintSetup self send
+	/ClipCrust self send
+	{ % send to topping:
+	  clear /paint self send
+	} exch send
+	Sprinklers currentprocess undef
+      grestore
+    } fork
+    Sprinklers exch dup put pop
+  } def
+
+  % Kill all the processes sprinkling toppings.
+  %
+  /StopSprinklers { % - => -
+    [Sprinklers {pop} forall] {killprocess} forall
+    Sprinklers cleanoutdict
+  } def
+
+  % Start spinning the pizza, to cook it.
+  %
+  /StartSpin { % - => -
+    /StopSpin self send
+    /SpinProcess { % fork:
+      clear
+      /PaintSetup self send
+      /ClipCrust self send
+      initmatrix
+      { % loop:
+        SpinPause { pause } repeat
+	/Spin self send
+      } loop
+      SpinProcess currentprocess eq { % if:
+        /SpinProcess unpromote
+      } if
+    } fork promote
+  } def
+
+  % Stop spinning the pizza, before eating it.
+  %
+  /StopSpin { % - => -
+    SpinProcess null ne { % if:
+      SpinProcess killprocess
+      /SpinProcess unpromote
+    } if
+  } def
+
+  % Spin the pizza around a bit.
+  %
+  /Spin { % - => -
+    gsave
+      /size self send				% w h
+      2 div exch 2 div exch			% w/2 h/2
+      2 copy translate
+      SpinAngle random add rotate
+      neg exch neg exch translate		%
+      self imagecanvas
+     grestore
+  } def
+
+% Menu support:
+
+  % Class variable to enable menu service.
+  /Menuable? true def
+
+  % Popup the stylemenu on the pizza.
+  %
+  /Menu { % - => menu
+    stylemenu
+  }  def
+
+% Tracking support:
+
+  % Class variable to enable track service.
+  /Trackable? true def
+
+  % Handle mouse button down on the pizza.
+  % 
+  /TrackStart { % event => /Default true
+    gsave
+      /StopSpin self send
+      /PaintSetup self send
+      /ClipCrust self send
+      % Translate to the pizza center.
+      initmatrix
+      /size self send					% event w h
+      2 div exch 2 div exch				% event w/2 h/2
+      translate						% event
+      % Figure out the angle towards the cursor.
+      dup begin YLocation XLocation end			% event y x
+      2 copy 0 eq exch 0 eq and				% event y x both-0?
+      { pop pop 0 } { atan } ifelse			% event direction
+      /Ang0 1 index def
+      /Ang1 exch def					% event
+      /SpinAngle 0 def
+    grestore
+    /TrackMotion self send				%
+    /Default true					% /Default true
+  } def
+
+  % Handle mouse motion after pressing down on the pizza.
+  % Spin the pizza by hand!
+  %
+  /TrackMotion { % event => -
+    gsave
+      /PaintSetup self send
+      /ClipCrust self send
+      % Translate to the pizza center
+      initmatrix
+      /size self send					% event w h
+      2 div exch 2 div exch				% event w/2 h/2
+      2 copy translate
+      % Figure out the angle towards the cursor.
+      3 -1 roll begin YLocation XLocation end		% w/2 h/2 y x
+      2 copy 0 eq exch 0 eq and				% w/2 h/2 y x both-0?
+      { pop pop 0 } { atan } ifelse			% w/2 h/2 direction
+      /Ang1 exch def					% w/2 h/2
+      /SpinAngle Ang1 Ang0 sub def
+      /Ang0 Ang1 def
+      % Rotate as much as the cursor direction has changed.
+      SpinAngle rotate
+      % Copy the pizza canvas to itself, rotated.
+      neg exch neg exch translate			%
+      self imagecanvas
+    grestore
+  } def
+
+  % Handle mouse button up.
+  % If the pizza was spinning, then keep it spinning!
+  % It it was still, then leave it still.
+  %
+  /TrackStop { % event => -
+    pop							%
+    % If the pizza was was moving when the button was released,
+    % then start the motor.
+    SpinAngle abs 1 ge { % if:
+      /StartSpin self send
+    } if
+  } def
+
+% Selection support:
+
+  % Class variable to enable reception service.
+  /Receptible? true def
+  /Keyable? true def
+
+  % Deal the a selection dropped or pasted into this pizza.
+  %
+  /HandleReception { % event selection => bool
+    exch					% selection event
+    //is_v2? not { self } if
+    /begintransfer 3 index send			% selection event
+
+    /Raster /query 3 index send { % ifelse:	% selection event canvas
+      /RasterReception self send		% selection bool
+    } { % else:					% selection event
+      /Canvas /query 3 index send { % ifelse:	% selection event canvas
+	/RasterReception self send		% selection bool
+      } { % else:				% selection event
+	pop false				% selection bool
+      } ifelse
+    } ifelse					% selection bool
+
+    dup /endtransfer 4 -1 roll			% bool bool /endt selection
+    send					% bool
+  } def
+
+  % A raster (canvas) was dropped or pasted into this pizza.
+  %
+  /RasterReception { % event canvas => bool
+    exch pop					% canvas
+    dup type /canvastype ne { pop false beep } {
+      gsave
+	/PaintSetup self send
+	/ClipCrust self send
+	% Translate and scale the unit square to the place where we
+	% want the image to land.
+	initmatrix
+	clippath pathbbox points2rect		% canvas x y w h
+	4 2 roll translate scale		% canvas
+
+	% Now scale by the inverse size of the source canvas's default
+	% coordinate system, to make sure *its* unit square ends
+	% up mapped to the unit square we are at right now.
+	gsave
+	  dup setcanvas
+	  dup false getbbox			% canvas x y w h
+	  4 2 roll pop pop			% canvas w h
+	  1 exch div exch 1 exch div exch	% canvas 1/w 1/h
+	grestore
+	scale					% canvas
+	imagecanvas				%
+        true					% true
+      grestore
+    } ifelse					% bool
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassTopping
+%
+% An instance of ClassTopping encapsulates all that is known about
+% a pizza topping, including its nominal, visual, dietary, and other
+% aesthetic properties.
+
+/ClassTopping ClassObject [
+  % Instance variables (initialized to null):
+  /FoodType /Name /Sprinkles /Init /Paint /ID /FoodNumber
+] classbegin
+
+% Class variables:
+
+  % An array of all pizza toppings, shared in the class.
+  /TheToppings nullarray def
+
+  % The pizza topping registry, shared in the class.
+  /ToppingDict growabledict def
+
+  % A dictionary for counting the number of types of each topping.
+  /ToppingTypes growabledict def
+
+  % Given the name of a topping, return the topping itself,
+  % or null if no such topping exists.
+  %
+  /findtopping { % name => topping|null
+    ToppingDict 1 index known { % ifelse:
+      ToppingDict exch get
+    } { % else:
+      pop null
+    } ifelse
+  } def
+
+  % Given the name of a topping food type, return an array of every
+  % pizza topping of that type (/Meat, /Vegetable, etc) that exists. 
+  %
+  /typetoppings { % foodtype => [topping ...]
+    [ TheToppings { % forall:			% ... topping
+        { % send to topping:
+	  /foodtype self send			% ... type
+          counttomark 1 add index		% ... type foodtype
+	  eq { self } if			% ... topping
+	} exch send
+      } forall
+    ]						% foodtype [topping ...]
+    exch pop					% [topping ...]
+  } def
+
+  % Return the array of all defined pizza toppings.
+  %
+  /toppings { % - => [topping ...]
+    TheToppings
+  } def
+
+  % Return the name of this topping.
+  %
+  /name { % - => string
+    Name
+  } def
+
+  % Return the type of food this topping is.
+  %
+  /foodtype { % - => name
+    FoodType
+  } def
+
+  % Return the unique id of this topping.
+  %
+  /id { % - => id
+    ID
+  } def
+
+  % Return magic food number of this topping, which is the index of
+  % this topping in the menu of toppings with the same food type.
+  %
+  /foodnumber { % - => n
+    FoodNumber
+  } def
+
+  % Initialize this topping.
+  %
+  /NewInit { % foodtype name sprinkles {init} {paint} => -
+    /NewInit super send
+    /Paint exch def
+    /Init exch def
+    /Sprinkles exch def
+    /Name exch def
+    /FoodType exch def
+    ToppingTypes FoodType known not { % ifelse:
+      0  ToppingTypes FoodType 1 put
+    } { % else:
+      ToppingTypes FoodType get
+      ToppingTypes FoodType 2 index 1 add put
+    } ifelse
+    /FoodNumber exch def
+    /ID TheToppings length def
+    /TheToppings [ TheToppings aload pop self ] store
+    ToppingDict Name self put
+  } def
+
+  % Paint this topping on the pizza.
+  % Assumes the graphics state is set up appropriatly,
+  % and that the current process exists just to paint this topping.
+  %
+  /paint { % - => -
+    currentprocess /ProcessName
+    Name (Pizza Topping Sprinkler: %) sprintf put
+    gsave
+      /Init load cvx exec
+      /Paint load cvx
+      Sprinkles Sprinkle
+    grestore
+  } def
+
+  % Sprinkle this topping all over a pizza.
+  %
+  /Sprinkle { % proc sprinkles => -
+    { gsave
+	random 360 mul rotate
+	random sqrt 0 translate
+	random 360 mul rotate
+	dup exec
+	random .3 lt { % if:
+	    random 10 mul 1 add cvi { pause } repeat
+	} if
+      grestore
+    } repeat
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassStyle
+%
+% An instance of ClassStyle describes a vendor supplied pizza style,
+% consisting of a unique product name, a list of pizza toppings
+% included with the default configuration, as well as pricing and
+% discounting information.  
+
+/ClassStyle ClassObject [
+  % Instance variables (initialized to null):
+  /Name /Toppings /Prices /Extras /ID
+] classbegin
+
+% Class variables:
+
+  % An array of all pizza styles, shared in the class.
+  /TheStyles nullarray def
+
+  % The pizza style registry, shared in the class.
+  /StyleDict growabledict def
+
+  % The cost of the first and additional toppings, 
+  % for all four different pizza sizes.
+  % Pizza size:			  10"  14"  16"  18"
+  /FirstToppingPrices		[ 1.00 1.00 1.00 1.00 ] def
+  /AdditionalToppingPrices	[ 0.50 0.75 1.00 1.25 ] def
+
+  % Given the name of a style, return the style itself,
+  % or null if no such style exists.
+  %
+  /findstyle { % name => style|null
+    StyleDict 1 index known { % ifelse:
+      StyleDict exch get
+    } { % else:
+      pop null
+    } ifelse
+  } def
+
+  % Return the default pizza style.
+  %
+  /defaultstyle { % - => style
+    TheStyles 0 get
+  } def
+
+  % Return the array of all defined pizza styles.
+  %
+  /styles { % - => [style ...] 
+    TheStyles
+  } def
+
+  % Return the name of this pizza style.
+  %
+  /name { % - => string
+    Name
+  } def
+
+  % Rename this pizza style.
+  % Updates the objects viewing the pizza style names.
+  %
+  /setname { % name => -
+    Name null ne {
+      StyleDict Name undef
+    } if
+    /Name exch def
+    StyleDict Name self put
+    /value stylelist send			% [index]
+    PizzaStyleNames				% [index] [names]
+    2 copy					% [index] [names] [index] [names]
+    { % send to stylemenu:
+      /setitemlist self send			% [index] [names] [index]
+      /setvalue self send			% [index] [names]
+      /paint self send
+    } stylemenu send
+    { % send to stylelist:
+      /setitemlist self send			% [index]
+      /setvalue self send			%
+      /validate self send
+      /locatechoice self send
+      /paint self send
+    } stylelist send
+    null null EditStyle
+  } def
+
+  % Delete this pizza style.
+  % Renumber the id's of the subsequent pizza styles.
+  % Updates the objects viewing the pizza style names.
+  %
+  /delete { % - => -
+    StyleDict Name undef
+    /TheStyles TheStyles /id self send arraydelete store
+    /id self send  1  TheStyles length 1 sub { % for:
+      /setid TheStyles 2 index get send
+    } for
+    /value stylelist send			% [index]
+    0 get					% index
+    /styles ClassStyle send			% index [styles]
+    length 1 sub min				% min(index,#styles-1)
+    [exch]					% [index]
+    PizzaStyleNames				% [index] [names]
+    2 copy					% [index] [names] [index] [names]
+    { % send to stylemenu:
+      /setitemlist self send			% [index] [names] [index]
+      /setvalue self send			% [index] [names]
+      /paint self send
+    } stylemenu send
+    { % send to stylelist:
+      /setitemlist self send			% [index]
+      /setvalue self send			%
+      /validate self send
+      /locatechoice self send
+      /paint self send
+    } stylelist send
+    null null EditStyle
+  } def
+
+  % Return an array, the list of toppings that comprise this pizza style.
+  %
+  /toppings { % - => [topping ...]
+    Toppings dup length array copy
+  } def
+
+  % Set this list of toppings that comprose this pizza style.
+  % Update the objects viewing the selected style if this style is it.
+  %
+  /settoppings { % [topping ...] => -
+    /Toppings exch def
+    SelectedStyleName
+    /name self send eq { % if:
+      null null EditStyle
+    } if
+  } def
+
+  % Given the name of a topping food type, return an array of every
+  % pizza topping of that type included with this particular style.
+  %
+  /typetoppings { % foodtype => [topping ...]
+    [ Toppings { % forall:			% ... topping
+        { % send to topping:
+	  /foodtype self send			% ... type
+          counttomark 1 add index		% ... type foodtype
+	  eq { self } if			% ... topping
+	} exch send
+      } forall
+    ]						% foodtype [topping ...]
+    exch pop					% [topping ...]
+  } def
+
+  % Return an array of prices for this pizza style at four different sizes.
+  %
+  /prices { % - => [10" 14" 16" 18"]
+    Prices
+  } def
+
+  % Set the prices for this pizza style at four different sizes.
+  % Update the objects viewing the selected style prices if this
+  % style is it.
+  %
+  /setprices { % [10" 14" 16" 18"] => -
+    /Prices exch def
+    SelectedStyleName
+    /name self send eq { % if:
+      /updatecost Pizza send
+      /updateprices self send
+    } if
+  } def
+
+  % Update the objects viewing this style's prices.
+  %
+  /updateprices { % - => -
+    styleprice18field styleprice16field styleprice14field styleprice10field 
+    /prices self send { % forall:
+      dup 100 mul round cvi 100 mod
+      exch floor cvi
+      1 index 10 lt { (%.0%) } { (%.%) } ifelse
+      sprintf /setvalue 3 -1 roll send
+    } forall
+  } def
+
+  % Return the number of extra toppings you may add for free to
+  % this pizza style.
+  %
+  /extras { % - => number
+    Extras
+  } def
+
+  % Set the number of extra toppings you may add for free to
+  % this pizza style.
+  %
+  /setextras { % number => -
+    /Extras exch def
+    SelectedStyleName
+    /name self send eq { % if:
+      /updatecost Pizza send
+    } if
+  } def
+
+  % Calculate the price of this pizza, given a size index and 
+  % the number of extra toppings.
+  %
+  /extraprice { % sizeindex extras => price
+    Prices 2 index get				% size extras price
+    exch Extras sub 0 max exch			% size extras' price
+    1 index 0 gt { % if:
+      FirstToppingPrices 3 index get add
+      1 index 1 gt { % if:
+        AdditionalToppingPrices 3 index get	% size extras' price ATP
+	2 index 1 sub mul add			% size extras' price
+      } if
+    } if
+    3 1 roll pop pop				% price
+  } def
+
+  % Return the unique id of this pizza style.
+  % Used as an item index into objects that have a list of pizza styles.
+  %
+  /id { % - => id
+    ID
+  } def
+
+  % Set the id of this pizza style.
+  %
+  /setid { % id => -
+    /ID exch def
+  } def
+
+  % Edit this pizza style.
+  % Set the value of the style editor's stylelist to the id of this pizza style
+  % (corresponding to the item whose label is the name of this pizza style),
+  % and update the objects viewing the currently edited style.
+  %
+  /editstyle { % - => -
+    [ /id self send ] /setvalue stylelist send
+    null null EditStyle
+  } def
+
+  % Initialize this pizza style.
+  %
+  /NewInit { % name toppings prices extras => -
+    /NewInit super send
+    /Extras exch def
+    /Prices exch def
+    [ exch { % forall toppings:
+        dup type /stringtype eq { % if:
+	  /findtopping ClassTopping send
+	  dup null eq { pop } if
+	} if
+      } forall
+    ] /Toppings exch def
+    /Name exch def
+    StyleDict Name self put
+    TheStyles length /setid self send
+    /TheStyles [ TheStyles aload pop self ] store
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassProPanel
+%
+% An instance of ClassProPanel is just a control panel, that promotes
+% (caches) its minsize into the instance as a constant function the
+% first time /minsize is calculated, so that future calls to /minsize
+% are very fast.
+
+/ClassProPanel ClassPanel []
+classbegin
+
+% Methods:
+
+  % Calculate the minsize, and promote it.
+  % Fluff the panel up a bit, while we're at it.
+  %
+  /minsize { % - => w h
+    /minsize super send
+    % Add in a little extra space.
+    4 4 xyadd
+    /minsize [ 3 index 3 index ] cvx promote
+  } def
+
+  % Unpromote the cached /minsize when the panel is invalidated, so it
+  % will be recalculated next time it's needed. 
+  %
+  /invalidate { % - => -
+    /minsize unpromote
+    /invalidate super send
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassPopupPizzaWindow
+%
+% An instance of ClassPopupPizzaWindow is used to frame the pizza
+% canvas (an instance of ClassPizza). It overrides the /path method of
+% the ClassPopupWindow frame, so that the frame is shaped around the
+% pizza. It asks the pizza for its size and shape, and cuts a positive
+% round (or semicircular) hole for it to float in the center of the
+% window frame.
+
+/ClassPopupPizzaWindow ClassPopupWindow []
+classbegin
+
+% Class variables:
+
+  % Override default footer gap.
+  /FooterGap 4 def
+
+% Methods:
+
+  % The popup pizza window path includes the window borders and the
+  % round (or semi-circular) pie floating in the middle, but excludes
+  % everything between.
+  %
+  /path { % x y w h => -
+    matrix currentmatrix 5 1 roll		% mat x y w h
+      /minsize self send xymax
+      4 2 roll translate			% mat w h
+      0 0 3 index 3 index rectpath
+      WInset SInset translate			% mat w h
+      EInset WInset add				% mat w h ewinsets
+      NInset SInset add				% mat w h ewinsets nsinsets
+      xysub					% mat insidew insideh
+      0 0 3 index 3 index rectpath
+
+      2 div exch 2 div exch			% mat centerx centery
+
+      2 copy translate
+      min dup neg scale				% mat
+
+      { % send to Center client (the Pizza):
+	/radiusscale self send 0 moveto
+	0 0 /radiusscale self send
+	0 360 /fraction self send mul
+	arc closepath
+      }						% mat {msg}
+      /Center /client self send			%       ... client true | false
+      /WhatPizza? assert			% mat {msg} client
+      send					% mat
+    setmatrix					%
+  } def
+
+  % Reshape the window canvas with the even/odd rule.
+  %
+  /reshape { % x y w h => -
+    /invalidate self send
+    gsave
+      4 2 roll translate			% w h
+      0 0 4 2 roll				% 0 0 w h
+      /path self send				%
+      self eoreshapecanvas
+    grestore
+  } def
+
+  % Override the border painting method to just stroke the pizza box.
+  %
+  /PaintBorder { % - => -
+    currentlinewidth
+    ForegroundColor setcolor BorderStroke 2 mul setlinewidth
+    /bbox self send rectpath stroke
+    setlinewidth
+  } def
+
+classend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Globals
+%
+% Global variables defined in userdict.
+
+% Where persistant pizza parameters are placed.
+/ConfigFile (.pizzatool.ps) def
+
+% The default startup style. Saved in config file.
+/FavoriteStyle (Cheese) def
+
+% Don't enable this unless you know what you're doing!!
+/ServerEnabled? false def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Utilities
+%
+% These utilities are defined in userdict, 
+% where they can be shared by all objects and notifiers.
+% The user interface object names and notifiers are also defined in userdict.
+% Many objects have their notification target set to userdict,
+% which will cause the notifier to be executed with userdict on the
+% top of the dictionary stack, not in the context of any object. 
+% The notifier is usually the name of a handler defined in userdict,
+% so it works out fine. 
+% In several cases, an object's target is set to another object, 
+% so the notifier is sent to that object, and executed with userdict
+% on the dictionary stack below the object's send context, so all 
+% the other object names and utilities are accessable.
+%
+
+% Return an array of the selected pizza topping names.
+% Ask both sets of topping checkboxes to take their value,
+% an array of selected item indices,
+% and look up the corresponding item labels,
+% which are the selected topping names.
+% Collect them all into an array of topping names.
+%
+/CheckedToppingNames { % - => [ name ...]
+  [ { % send to meatcheckboxes:
+      /value self send {			% ... index
+        /item self send				% ... label
+      } forall
+    } meatcheckboxes send
+    { % send to vegetablecheckboxes:
+      /value self send {			% ... index
+        /item self send				% ... label
+      } forall
+    } vegetablecheckboxes send
+  ]						% [ name ... ]
+} def
+
+% Return an array of all toppings that are checked.
+% Take an array of names of checked toppings, and ask ClassTopping
+% to find each of those toppings, given the name, and
+% collect each one it could find into an array.
+%
+/CheckedToppings { % - => [topping ...]
+  CheckedToppingNames				% [ name ... ]
+  { % send to ClassTopping:
+    [ exch {					% ... name
+        findtopping				% ... topping|null
+        dup null eq { pop } if			% ... topping
+      } forall
+    ]						% [ topping ... ]
+  } ClassTopping send
+} def
+
+% Return an array of the names of all meat toppings. 
+% Ask ClassTopping for all the toppings of type /Meat,
+% then ask each of those for its name, and stuff them all 
+% into an array. 
+%
+/MeatToppingNames { % - => [meatname ...]
+  [ /Meat /typetoppings ClassTopping send	% mark [meattopping ...]
+    { /name exch send } forall			% mark meatname ...
+  ]						% [meatname ...]
+} def
+
+% Return an array of the names of all vegetable toppings. 
+% Same as MeatToppingNames, but of type /Vegetable.
+%
+/VegetableToppingNames { % - => [vegname ...]
+  [ /Vegetable /typetoppings ClassTopping send	% mark [vegtopping ...]
+    { /name exch send } forall			% mark vegname ...
+  ]						% [vegname ...]
+} def
+
+% Return an array of names of pizza styles.
+% Ask ClassStyle for an array of styles,
+% and ask each of them for its name,
+% putting them all into an array.
+%
+/PizzaStyleNames { % - => [(name) ...]
+  [ /styles ClassStyle send			% mark [style ...]
+    { /name exch send } forall			% mark stylename ...
+  ]						% [stylename ...]
+} def
+
+% Return the name of the selected pizza style.
+% Ask the scrolling list stylelist to take its value,
+% which is an array containing one item index,
+% and convert the index into an item label,
+% which is the selected style name.
+%
+/SelectedStyleName { % - => stylename
+  { % send to stylelist:
+    /value self send				% [index]
+    0 get					% index
+    /item self send				% stylename
+  } stylelist send
+} def
+
+% Return the selected style, or the default if not found.
+% Ask ClassStyle to find the style whose name is the selected style.
+% If it couldn't find it, ask ClassStyle for the default style.
+%
+/SelectedStyle { % - => style
+  SelectedStyleName				% stylename
+  /findstyle ClassStyle send			% style|null
+  dup null eq {					% null
+    pop /defaultstyle ClassStyle send		% style
+  } if						% style
+} def
+
+% Update the value of the topping menus.
+% This is called to update the menus of pizza topping names, 
+% to reflect the pizza style selected for editing.
+% Ask the selected style for the array of pizza toppings it includes.
+% Ask each of those meat toppings for its magic food number
+% (an item index), collect them all into an array,
+% and set the value of meattoppingmenu (which is a settings menu
+% of meat topping names, and whose value is an array of item indices).
+% Do the same for the vegetable pizza toppings and vegetabletoppingmenu.
+%
+/UpdateStyleToppingMenus { % - => -
+  /toppings SelectedStyle send			% toppings
+  [ 1 index					% toppings mark toppings
+    { % forall toppings:
+      { % Send to each topping:
+        /foodtype self send /Meat eq {
+	  /foodnumber self send			% ... index
+	} if
+      } exch send
+    } forall
+  ] /setvalue meattoppingmenu send		% toppings
+  [ exch					% mark toppings
+    { % forall toppings:
+      { % Send to each topping:
+        /foodtype self send /Vegetable eq {
+	  /foodnumber self send			% ... index
+	} if
+      } exch send
+    } forall
+  ] /setvalue vegetabletoppingmenu send		%
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notifiers
+%
+% These notifiers are defined in userdict.
+% Each notifier takes two arguments: a value and an object.
+% User interface componants whose notifiers are defined in userdict
+% have their target set to userdict, so the notifier is executed
+% by sending its name to userdict. The effect of sending to userdict
+% is that the name is looked up and executed in a "classless"
+% send context with userdict on the top of the dict stack.
+%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToolPanel Notifiers
+
+% Pop up the topping selection window.
+%
+/ShowToppingWindow { % index winbuttons => -
+  pop pop
+  { % send to ToppingWindow:
+    /pin self send
+    /totop self send
+    /open self send
+  } ToppingWindow send
+} def
+
+% Pop up the style editor window.
+%
+/ShowEditWindow { % index winbuttons => -
+  pop pop
+  { % send to EditWindow:
+    /pin self send
+    /totop self send
+    /open self send
+  } EditWindow send
+} def
+
+% Pop up the pizza preview window.
+%
+/ShowPreviewWindow { % index winbuttons|orderbuttons => -
+  pop pop
+  { % send to PreviewWindow:
+    /pin self send
+    /totop self send
+    /open self send
+  } PreviewWindow send
+} def
+
+% Set the delivery mode. Give a warning message if necessary.
+%
+/SetDelivery { % [index bool] deliverymenu => -
+  exch 0 get				% deliverymenu index
+  /item 3 -1 roll send			% [(label)]
+  0 get					% label
+  dup /setvalue deliveryvalue send
+  (Please Deliver) eq {			%
+    /MaybeDeliver ShowNotice
+  } if					%
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToppingPanel Notifiers
+
+% Set the pizza size. 
+% Index 0 is 10". 1 is 14". 2 is 16". 3 is 18".
+%
+/SetPizzaSize { % [index bool] pizzasizesettings => -
+  pop 0 get				% index
+  { % send to Pizza:
+    /pizzaindexsize self send		% inches
+    /setpizzasize self send		%
+  } Pizza send
+} def
+
+% Set the pizza fraction.
+% Index 0 is 1 for whole, 1 is .5 for half.
+%
+/SetPizzaFraction { % [index bool] pizzafractionsettings => -
+  pop 0 get				% index
+  0 eq { 1 } { .5 } ifelse		% 1|.5
+  /setfraction Pizza send		%
+} def
+
+% Set the pizza style.
+%
+/MenuSetStyle { % [index bool] stylemenu => -
+  exch 0 get exch			% index stylemenu
+  /item exch send			% [(label)]
+  0 get					% (label)
+  /findstyle ClassStyle send		% style|null
+  dup null eq { pop } {			% style
+    /setstyle Pizza send		%
+  } ifelse				%
+} def
+
+% Update the pizza when the topping check boxes change.
+%
+/SetCheckboxes { % [index bool] {meat,vegetable}checkboxes => -
+  1 index 0 get				% [index bool] checkboxes index
+  /item 3 -1 roll send			% [index bool] (label)
+  findtopping				% [index bool] topping|null
+  dup null eq { pop pop } {		% [index bool] topping
+    exch 1 get				% topping bool
+    { /addtopping }
+    { /removetopping } ifelse		% topping /method
+    Pizza send				%
+  } ifelse				%
+} def
+
+% Order the currently selected pizza.
+% (Well, just pop up an appropriate notice.
+% The notice's "yes" button actually makes it happen.)
+%
+/OrderPizza { % index {win,order}buttons => -
+  pop pop
+  { % send to pizzaparlormenu:
+    /value self send			% [index]
+    0 get				% index
+    /item self send			% [(label)]
+    0 get				% (label)
+  } pizzaparlormenu send
+  { % case (on the menu label):		%
+    (Tony&Alba's) {
+      /TAOrder ShowNotice
+    }
+    (Riscy's) (Sparcy's) {
+      /SunOrder ShowNotice
+    }
+    (Demo Room) {
+      /DemoOrder ShowNotice
+    }
+    /Default {
+      /OtherOrder ShowNotice
+    }
+  } case				%
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EditPanel Notifiers
+
+% Define a new pizza style.
+% Make sure the name is unique.
+% Create a new style with the new name and current pizza configuration.
+% Update the style menu and scrolling list of styles,
+% so the new style is included and selected.
+%
+/NewPizzaStyle { % index editstylemenu|stylenamefield => -
+  /value stylenamefield send		% index obj (name)
+  PizzaStyleNames 1 index arraycontains? {
+    pop /StyleAlreadyDefined ShowNotice	% i o
+    pop pop				%
+  } {
+    /toppings Pizza send		% i o (name) toppings
+    /prices Pizza send			% i o (name) toppings prices
+    0					% i o (name) toppings prices extras
+    makestyle				% i o
+    PizzaStyleNames			% i o [names]
+    dup length 1 sub			% i o [names] #names-1
+    [exch] exch				% i o [index] [names]
+    2 copy				% i o [index] [names] [index] [names]
+    { % send to stylemenu:
+      /setitemlist self send		% i o [index] [names] [index]
+      /setvalue self send		% i o [index] [names]
+      /paint self send
+    } stylemenu send
+    { % send to stylelist:
+      /setitemlist self send		% i o [index]
+      /setvalue self send		% i o
+      /validate self send
+      /locatechoice self send
+      /paint self send
+    } stylelist send
+    EditStyle				%
+  } ifelse
+} def
+
+% Edit the pizza style.
+% Every program needs an edit menu item,
+% even if it doesn't do anything useful.
+% This one certainly doesn't.
+%
+/EditPizzaStyle { % index editstylemenu => -
+  pop pop
+  /YouAreEditing ShowNotice
+} def
+
+% Rename the pizza style currently selected for editing.
+% Make sure it's a unique name.
+% Tell the style to take care of renaming itself.
+%
+/RenamePizzaStyle { % index editstylemenu => -
+  pop pop
+  /value stylenamefield send
+  PizzaStyleNames 1 index arraycontains? {
+    SelectedStyleName eq
+    { /RenameToSelf } { /StyleAlreadyDefined } ifelse
+    ShowNotice
+  } {
+    SelectedStyle /setname exch send
+  } ifelse
+} def
+
+% Delete the pizza style currently selected for editing.
+% Make sure it's not the last one.
+% Tell the style to delete itself.
+%
+/DeletePizzaStyle { % index editstylemenu => -
+  pop pop
+  /styles ClassStyle send length 1 eq {
+    /DontDeleteTheLastStyle ShowNotice
+  } {
+    SelectedStyle dup null eq { pop } {
+      /delete exch send
+    } ifelse
+  } ifelse
+} def
+
+% Save the current pizzatool configuration.
+% This doesn't save everything yet (Like user defined styles).
+%
+/SavePizzaStyle { % index editstylemenu => -
+  pop pop
+  ConfigFile (w) { file } stopped { % if stopped:
+  						% (filename) (w)
+    pop pop					%
+    /NoSave ShowNotice
+  } { % else:
+						% file
+    { % fork:
+      20 dict begin % localdict
+	/f exch def				%
+	% NOTE: *Always* be careful about defining /Stdout into a variable.
+	% Convert it to a literal, first. Because /Stdout is an executable
+	% file object (currentprocess /Stdout get xcheck => true), when you
+	% refer to the variable by name, the file will be *executed*! This
+	% leads to totally bizarre bugs.
+	/cf currentprocess /Stdout get cvlit def
+	currentprocess /Stdout f put
+
+	f (% TNT PizzaTool configuration file\n)
+	writestring
+
+	{ % for all of these executable names:
+	  namefield phonefield addressfield emailfield
+	  instructionfield0 instructionfield1 instructionfield2
+	  instructionfield3 instructionfield4 instructionfield5
+	} { % forall of those executable names:
+	  dup load				% name textfield
+	  /value exch send			% name string
+	  typedprint				% name
+	  (/setvalue % send\n) printf		%
+	} forall
+
+	{ % for all of these executable names:
+	  pizzaparlormenu deliverymenu
+	} { % for all of those executable names:
+	  dup load				% name menu
+	  /value exch send			% name [index]
+	  0 get					% name index
+	  ([%]/setvalue % send\n) printf	%
+	} forall
+
+	/value pizzasizesettings send		% [index]
+	0 get					% index
+	/pizzaindexsize Pizza send		% size
+	(%/setpizzasize Pizza send\n) printf	%
+
+	/value pizzafractionsettings send	% [index]
+	0 get					% index
+	{ 1 .5 } exch get			% 1|.5
+	(%/setfraction Pizza send\n) printf	%
+
+	{ % send to stylemenu:
+	  /value self send			% [index]
+	  0 get					% index
+	  /item self send			% [(label)]
+	  0 get					% (label)
+	} stylemenu send
+	(/FavoriteStyle(%)def\n) printf		%
+
+	currentprocess /Stdout cf put
+	f closefile
+      end % localdict
+      /DidSave ShowNotice
+    } fork					% file process
+    /ProcessName (Save Pizza Style) put		% file
+    pop						%
+  } ifelse
+} def
+
+% Remove the toppings selected in the scrolling list
+% from the style currently selected for editing.
+%
+/RemoveSelected { % index edittoppingmenu => -
+  pop pop					%
+  10 dict begin % localdict
+    /ss SelectedStyle def
+    /currenttoppings /toppings ss send def
+    /selectedtoppings
+      { % send to styletoppingslist:
+        [ /value self send { % forall value indices:
+	    /item self send			% /st mark ... (label)
+	    findtopping				% /st mark ... topping|null
+	    dup null eq {pop} if		% /st mark ... topping
+	  } forall
+	]					% /st [topping ...]
+      } styletoppingslist send
+    def						%
+    [ currenttoppings { % forall toppings:
+        % Filter out toppings that are in the array of selected toppings.
+        selectedtoppings 1 index arraycontains? { pop } if
+      } forall					% mark ... topping
+    ]						% [topping ...]
+    /settoppings ss send			%
+  end % localdict
+} def
+
+% Copy the toppings selected on the checkboxes
+% to the style currently selected for editing.
+%
+/CopyCheckboxes { % index edittoppingmenu => -
+  pop pop					%
+  CheckedToppings				% [topping ... ]
+  /settoppings SelectedStyle send		%
+} def
+
+% Update the toppings on the style currently selected for editing,
+% when the nonexclusive meat or vegetable topping menus are changed.
+%
+/UpdateToppings { % [index bool] {meat,vegetable}toppingmenu => -
+  10 dict begin % localdict
+    /menu exch def				% [index bool]
+    aload pop /bool exch def /i exch def	%
+    SelectedStyle				% style
+
+    /toppings 1 index send			% style toppings
+    i /item menu send				% style toppings [(label)]
+    0 get					% style toppings (label)
+    findtopping					% style toppings topping|null
+    dup null eq {				% style toppings null
+      pop pop pop				%
+    } {						% style toppings topping
+      bool {
+	[exch] append				% style toppings++
+      } {					% style toppings topping
+	2 copy arrayindex {			% style toppings topping index
+	  exch pop				% style toppings index
+	  arraydelete				% style toppings--
+	} {					% style toppings topping
+	  pop					% style toppings
+	} ifelse
+      } ifelse
+      /settoppings 3 -1 roll send		%
+    } ifelse					%
+  end % localdict
+} def
+
+% Select a pizza style to edit from the scrolling list.
+%
+/EditStyle { % [index] stylelist => -
+  pop pop					%
+  SelectedStyle					% style
+  [ /toppings 2 index send			% style mark [toppings]
+    { % forall toppings:			% style mark ... topping
+      /name exch send				% style mark ... name
+    } forall
+  ]						% style [names]
+  {gt} quicksort				% style [sorted-names]
+  /setitemlist styletoppingslist send		% style
+  /paint styletoppingslist send
+  /name 1 index send				% style name
+  /setvalue stylenamefield send			% style
+  /extras 1 index send				% style extras
+  /setvalue styleextrafield send		% style
+
+  /updateprices 1 index send
+  UpdateStyleToppingMenus
+  /setstyle Pizza send				%
+} def
+
+% Set the number of extra toppings you get for free
+% on the style currently selected for editing.
+% This is a numeric field notifier.
+%
+/SetStyleExtraToppings { % number styleextrafield => -
+  pop
+  /setextras SelectedStyle send
+} def
+
+% Set the price of a particular pizza size,
+% of the style currently selected for editing.
+% This notifier is shared by four text fields,
+% one for each price.
+% Each text field has a property called /PizzaSizeIndex,
+% that is the index (0 to 3) of the pizza size whose price
+% the numeric field effects.
+%
+/SetStylePrice { % string styleprice{10,14,16,18}field => -
+  exch					% field string
+  { token } stopped { % if stopped:
+    null true				% field null true
+  } { % else:				% field string token true
+    { % if good token:			% field string token
+      exch pop				% field token
+      dup type dup /integertype eq	% field token token int?
+      exch /realtype eq or		% field token int|real?
+      { % if numeric:
+        false				% field number false
+      } { % else bogus:
+        pop null true			% field null true
+      } ifelse				% field number|null bool
+    } { % else bad token:		% field
+      null true				% field null true
+    } ifelse
+  } ifelse				% field number|null bool
+  { % if bogus input:			% field null
+    pop pop beep			%
+  } { % else:				% field price
+    99.99 min 0 max
+    SelectedStyle			% field price style
+    /PizzaSizeIndex /property 5 -1 roll	% price style /PSI /p field
+    send				% price style i
+    /prices 2 index send		% price style i [$ $ $ $]
+    dup 4 1 roll			% price [$ $ $ $] style i [$ $ $ $]
+    exch 5 -1 roll			% [$ $ $ $] style [$ $ $ $] i price
+    put					% [$ $ $ $] style
+    /setprices exch send		%
+  } ifelse				%
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notice Notifiers
+
+% Notifier for notice buttons that doesn't do anything
+% but close the notice.
+%
+/NoticeClose { % index noticebuttons => -
+  /close Notice send
+  pop pop
+} def
+
+% Notifier for notice buttons that closes the notice
+% and orders a pizza of "Yes" was pressed.
+%
+/NoticeYesNo { % index noticebuttons => -
+  /close Notice send
+  pop 0 eq { SendOrder } if
+} def
+
+% Guido is in charge of extracting payments from dead-beats.
+%
+/Guido null def
+
+% Give dead-beats something to worry about.
+% If Guido can extract such a payment then all the better!
+%
+/YerTab 1000 random 50000 mul floor 100 div add def
+
+% Order the pizza. 
+%
+/SendOrder { % - => -
+  ServerEnabled? { % ifelse:
+    20 dict begin % localdict
+      (/usr/ucb/mail -s 'Pizza Order' 'pizza-server@poit.eng.sun.com')
+      sprintf
+      /value emailfield send
+      dup length 0 eq { pop } { exch (% %) sprintf } ifelse
+
+      pipe /f exch def pop
+
+      { % send to pizzaparlromenu:
+        /value self send 0 get /item self send 0 get
+      } pizzaparlormenu send
+      (To pizza parlor:\t%\n) sprintf
+      f exch writestring
+      /value namefield send
+      (Food order from:\t%\n) sprintf
+      f exch writestring
+      /value phonefield send
+      (\t  Phone:\t%\n) sprintf
+      f exch writestring
+      /value addressfield send
+      (\tAddress:\t%\n\n) sprintf
+      f exch writestring
+
+      { % an in-line array of strings:
+        (We will eat the food there.\n\n)
+	(This order is to go.\n\n)
+	(This order is "Take & Bake".\n\n)
+	(Please deliver to the above address.\n\n) }
+      /value deliverymenu send 0 get get
+      f exch writestring
+
+      /pizzasize Pizza send
+      /fraction Pizza send
+      1 eq { (whole) } { (half of a) } ifelse
+      (One % % inch pie:\n) sprintf
+      f exch writestring
+
+      /style Pizza send /name exch send (\t%\n) sprintf
+      f exch writestring
+      /extratoppings Pizza send { % forall toppings:
+	/name exch send (\tAdd %\n) sprintf
+	f exch writestring
+      } forall
+
+      f (\n\n) writestring
+      [ instructionfield0 instructionfield1 instructionfield2
+	instructionfield3 instructionfield4 instructionfield5
+      ] { forall instruction fields:
+	/value exch send
+	f exch writestring
+	f (\n) writestring
+      } forall
+
+      f (\n) writestring
+
+      f closefile
+    end % localdict
+  } { % else:
+    /YerTab YerTab /price Pizza send add store
+    Guido null ne { Guido killprocess } if
+    /Guido { % fork:
+      currentprocess /ProcessName (Guido) put
+      [ 2 10 random mul cvi add 0] SLEEP
+      beep beep beep /PayUp ShowNotice
+      /Guido null store
+    } fork store
+  } ifelse
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notice Definitions
+
+% Show a named popup notice dialog.
+% The name should be defined in NoticeDict,
+% and its value should be a dictionary.
+% The dictionary should contain /Text, an array of strings,
+% and /Buttons, a function returning an instance of ClassButtons.
+% The notice is opened up, forcing the user to press a button.
+% The whole application is frozen while the notice is up.
+% The button notifier should close the notice. 
+%
+/ShowNotice { % name => -
+  /mapped? Notice send {
+    /close Notice send
+  } if
+  NoticeDict exch get begin
+    Text Buttons
+  end
+  /setbuttons Notice send
+  /settext Notice send
+  gsave
+    framebuffer setcanvas
+    [ currentcursorlocation ] /open Notice send
+  grestore
+} def
+
+% This is a dictionary of popup notice dialog description
+% dictionaries (for what that's worth).
+% Each dictionary contains Text, an array of strings,
+% and Buttons, a function returning an instance of ClassButtons.
+% These popup notices might be data based and object oriented,
+% but they're still annoying. 
+%
+/NoticeDict dictbegin
+
+  /TAOrder dictbegin
+    /Text [
+      (Do you really want to order a)
+      (pizza from Tony and Alba's?)
+      (This will cost real money and)
+      (make you want to drink beer.)
+    ] def
+    /Buttons { yesnonoticebuttons } def
+  dictend def
+
+  /SunOrder dictbegin
+    /Text [
+      (Are you sure you want Sun)
+      (to pay for this pizza?)
+    ] def
+    /Buttons { yesnonoticebuttons } def
+  dictend def
+
+  /DemoOrder dictbegin
+    /Text [
+      (Do you really want to order a pizza)
+      (from the demo room??!)
+      (This will most likely just confuse people,)
+      (and they probably won't cook you a pizza.)
+    ] def
+    /Buttons { yesnonoticebuttons } def
+  dictend def
+
+  /OtherOrder dictbegin
+    /Text [
+      (Are you sure you want)
+      (to order a pizza?)
+    ] def
+    /Buttons { yesnonoticebuttons } def
+  dictend def
+
+  /YouAreEditing dictbegin
+    /Text [
+      (You *are* editing the pizza menu!)
+      (So be careful!)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /NoSave dictbegin
+    /Text [
+      (This is a demo version of PizzaTool,)
+      (so the Save function is discomboobelated.)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /DidSave dictbegin
+    /Text [
+      (The PizzaTool configuration)
+      (has been successfully saved.)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /DontDeleteTheLastStyle dictbegin
+    /Text [
+      (It's not nice to delete all the pizza styles.)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /UnknownStyleName dictbegin
+    /Text [
+      (That pizza style name is not known.)
+      (You can select New from the style menu to define a new style,)
+      (or Rename to change the name of the currently selected style.)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /StyleAlreadyDefined dictbegin
+    /Text [
+      (That pizza style name is already being used.)
+      (Type in a new name and try again.)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /RenameToSelf dictbegin
+    /Text [
+      (Silly! Type in a *different* name,)
+      (if you want to rename the pizza style!)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /MaybeDeliver dictbegin
+    /Text [
+      (They probably won't deliver unless you make it)
+      (worth their while by ording *lots* of pizza!)
+    ] def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+  /PayUp dictbegin
+    % Dynamic popup notice text!
+    /Text { % - => [string ...]
+      [ (Yer pizza is being held hostage,)
+        (until ya pay's off yer tab, chump!)
+	(Yer tab's presently:)
+        YerTab
+        dup 100 mul round cvi 100 mod
+        exch floor cvi
+        1 index 10 lt { ($%.0%) } { ($%.%) } ifelse
+        sprintf
+      ]
+    } def
+    /Buttons { oknoticebuttons } def
+  dictend def
+
+dictend def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Topping Definitions
+%
+% This code and data defines the pizza toppings.
+% Each topping definition consists of a type (/Dairy, /Meat, /Vegetable),
+% a name (a string), the number of toppings to sprinkle on the pizza,
+% a painting initialization procedure,
+% and a procedure to paint the topping after initialization.
+
+% Make a new topping instance.
+%
+/maketopping { % foodtype name sprinkles {init} {paint} => -
+  /new ClassTopping send pop
+} def
+
+% Find a named topping instance, returning null if not found.
+%
+/findtopping { % name => topping|null
+  /findtopping ClassTopping send
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pizza Toppings
+
+% TODO: Order all of these toppings to see what they really look like!
+
+/Dairy (Cheese) 150 {
+  1 1 0 setrgbcolor
+  .018 setlinewidth
+} {
+  0 0
+  random .1 mul .1 add
+  0  random 100 mul 30 add
+  arc
+  stroke
+} maketopping
+
+/Meat (Anchovies) 50 {
+  .2 .8 .2 setrgbcolor
+} {
+  .1 .08 scale
+  .2 .5 moveto
+  0 .5 .4 -90 90 arc
+  .2 .5 lineto closepath
+  1.2 .5 scale
+  1 1 lineto
+  .75 1 .5 20 340 arc  1 1 lineto closepath
+  fill
+} maketopping
+
+/Meat (Beef) 150 {
+  .65 .1 .1 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  8 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Clams) 150 {
+  .9 .9 2 setrgbcolor
+  /ZapfDingbats findfont .2 scalefont setfont
+} {
+  0 0 moveto (\173) show
+} maketopping
+
+/Meat (Coppa) 150 {
+  .55 .3 .2 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  5 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Ham) 150 {
+  .7 .7 .2 setrgbcolor
+} {
+  0 0 .07 .03 rectpath fill 
+} maketopping
+
+/Meat (Italian sausage) 150 {
+  .7 .1 .2 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  10 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Linguica) 150 {
+  .8 .1 .6 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  6 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Pancetta) 150 {
+  .8 .1 .1 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  7 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Pepperoni) 100 {
+  .7 .1 .2 setrgbcolor
+} {
+  0 0 .05 0 360 arc fill
+} maketopping
+
+/Meat (Prosciutto) 150 {
+  .9 .6 .1 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  10 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Salamete) 150 {
+  .9 .2 .5 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  8 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Salami) 150 {
+  .9 .2 .1 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  5 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Meat (Shrimp) 150 {
+  1 .5 .5 setrgbcolor
+  .02 setlinewidth
+} {
+  0 .05 moveto
+  .1 0 moveto
+  0 0 .1 0 50 arc
+  stroke
+} maketopping
+
+/Meat (Turkey) 150 {
+  .8 .8 .1 setrgbcolor
+} {
+  0 0 .07 .03 rectpath fill
+} maketopping
+
+/Vegetable (Artichoke hearts) 150 {
+  0 .7 0 setrgbcolor
+} {
+  0 0 moveto
+  0 0 .07 0 100 arc
+  fill
+} maketopping
+
+/Vegetable (Bell peppers) 150 {
+  .2 .7 0 setrgbcolor
+  .02 setlinewidth
+} {
+  0 0
+  .2
+  0 40 arc
+  stroke
+} maketopping
+
+/Vegetable (Fresh garlic) 150 {
+  .5 .4 .3 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  5 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Vegetable (Jalapenos) 150 {
+  .2 .9 0 setrgbcolor
+} {
+  0 0 .05 0 360 arc closepath
+  1 1.6 scale
+  -.025 0 .02 0 360 arc closepath
+  .025 0 .02 0 360 arc closepath
+  eofill
+} maketopping
+
+/Vegetable (Mushrooms) 150 {
+  .4 .5 .4 setrgbcolor
+} {
+  0 .01 .07 20 150 arc
+  0 -.01 .04 140 30 arcn
+  closepath
+  fill
+  -.02 -.05 moveto
+  -.01 .05 lineto
+  .01 .05 lineto
+  .02 -.05 lineto
+  closepath
+  fill
+} maketopping
+
+/Vegetable (Olives) 150 {
+  0 .2 .1 setrgbcolor
+} {
+  0 0 .03 0 360 arc closepath
+  0 0 .01 0 360 arc closepath
+  eofill
+} maketopping
+
+/Vegetable (Onions) 150 {
+  .9 .9 .8 setrgbcolor
+  .012 setlinewidth
+} {
+  0 0
+  random .1 mul .05 add
+  0  random 50 mul 30 add
+  arc
+  stroke
+} maketopping
+
+/Vegetable (Pesto) 150 {
+  .2 .9 .3 setrgbcolor
+} {
+  random .1 mul random .1 mul moveto
+  5 {
+    random .1 mul random .1 mul lineto
+  } repeat
+  fill
+} maketopping
+
+/Vegetable (Pineapple) 150 {
+  .9 .8 0 setrgbcolor
+} {
+  0 0 moveto
+  0 0 .07 0 60 arc
+  fill
+} maketopping
+
+/Vegetable (Pine nuts) 150 {
+  .9 .8 .6 setrgbcolor
+} {
+  0 0 moveto
+  0 0 .04 0 40 arc
+  fill
+} maketopping
+
+% (Well, Provolone is Dairy, actually, but it works better this way.
+/Vegetable (Provolone) 72 {
+  1 1 .5 setrgbcolor
+  .018 setlinewidth
+} {
+  0 0
+  random .1 mul .1 add
+  0  random 100 mul 30 add
+  arc
+  stroke
+} maketopping
+
+/Vegetable (Sicilian Olives) 150 {
+  0 .7 .3 setrgbcolor
+} {
+  0 0 .03 0 360 arc closepath
+  0 0 .01 0 360 arc closepath
+  eofill
+} maketopping
+
+/Vegetable (Tomatoes) 150 {
+  .8 0 0 setrgbcolor
+} {
+  1.2 1.2 scale
+  0 0 .05 0 360 arc closepath
+  1 1.6 scale
+  5 {
+    360 random mul rotate
+    -.025 0 .02 0 360 arc closepath
+  } repeat
+  eofill
+} maketopping
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Style Definitions
+%
+% This data defines the pizza styles.
+% Each style definition consists of a name (a string),
+% an array of topping names,
+% an array of pizza prices (corresponding to [10" 14" 16" 18"]),
+% and the number of extra toppings you can add to the style for free.
+
+% Make a new style instance.
+%
+/makestyle { % name toppings prices extras => -
+  /new ClassStyle send pop
+} def
+
+% Find a named pizza style, returning null if not found.
+%
+/findstyle { % name => style|null
+  /findstyle ClassStyle send
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pizza Styles
+
+(Cheese)
+  [ ]
+  [ 7.00 10.00 11.00 14.00 ]
+  0 makestyle
+
+(Ala Gilroy)
+  [ (Fresh garlic) (Jalapenos) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  1 makestyle
+
+(All Meat Combo)
+  [ (Beef) (Ham) (Italian sausage) (Linguica)
+    (Pepperoni) (Salami) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+(Garlic, Clam, & Tomato)
+  [ (Clams) (Fresh garlic) (Tomatoes) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+(Keep Fit Special)
+  [ (Artichoke hearts) (Bell peppers) (Fresh garlic)
+    (Mushrooms) (Olives) (Onions) (Tomatoes) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+(Pesto Pizza Special)
+  [ (Fresh garlic) (Pesto) (Pine nuts) (Tomatoes) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+(Tony's Gourmet)
+  [ (Coppa) (Pancetta) (Prosciutto) (Salamete)
+    (Fresh garlic) (Provolone) (Sicilian Olives) ]
+  [ 10.00 15.00 17.00 19.00 ]
+  0 makestyle
+
+(Tony's Special)
+  [ (Beef) (Italian sausage) (Linguica) (Pepperoni)
+    (Salami) (Bell peppers) (Mushrooms) (Onions) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+(Vegetarian Delight)
+  [ (Artichoke hearts) (Bell peppers) (Fresh garlic)
+    (Mushrooms) (Olives) (Onions) (Pine nuts) (Tomatoes) ]
+  [ 9.00 12.00 14.00 17.00 ]
+  0 makestyle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Top Level User Interface Componants
+%
+% First we create and initialize the top level window frames,
+% and the clients that go directly inside them.
+
+/ToolPanel
+  /Calculated framebuffer /new ClassProPanel send
+def
+
+/ToolWindow
+  ToolPanel framebuffer /new ClassBaseWindow send 
+def
+
+  (Pizza Tool) /setlabel ToolWindow send
+  /Reshape? false /setattribute ToolWindow send
+
+  /toolicon
+    64 64 1 [64 0 0 -64 0 64] {<
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF83CE66FFFFFFFFFF9F8E4EFFFFF
+      FFFFF9F4E1CFFFFFFFFFF064F3CFFFFFFFFFF3E0E1FFFFFFFFFFF3CCC99FFFFF
+      FFFFF3CC999FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      5555555005555555AAAAAA8FF8AAAAAA5555547FFF155555AAAAA9FFFFCAAAAA
+      5555573446F55555AAAAAF56ED7AAAAA55555F34CD7D5555AAAABF77723EAAAA
+      55557F74CBBF5555AAAAFFFFFFFFAAAA5554FFFFFFFF9555AAA9FFFFFFFFCAAA
+      5555FFFFFFFFD555AAABFFFFFFFFEAAA5FFFFFFFFFFFFFFDBFFFFFFFFF11FFBA
+      503FFFF18799FF3DB4849107C79871425C924933D799248DBC924920839930C2
+      5C924D49939924F5B8464C60100060025FFFFCFFFFFFFFFDBFFFF0FFFFFFFFFA
+      5557FFC77FEFF555AAABFF6A942FEAAA5553F95DF0EFE555AAABFFFFFFFFEAAA
+      5555FFFFFFFFD555AAA9FFFFFFFFCAAA5554FFFFFFFF9555AAAAFD62AB3FAAAA
+      55557B26B05F5555AAAABBB0D75EAAAA55555FFFFFFD5555AAAAAFFFFFFAAAAA
+      555557FFFFF55555AAAAA9F7FBCAAAAA5555547EDF155555AAAAAA8FF8AAAAAA
+      FFFFFFF007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF83CE66FFFFF
+      FFFFF9F8E4EFFFFFFFFFF9F4E1CFFFFFFFFFF064F3CFFFFFFFFFF3E0E1FFFFFF
+      FFFFF3CCC99FFFFFFFFFF3CC999FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+    >} buildimage
+  def
+
+  % executable array display item:
+  { /size eq { 64 64 } {
+      gsave
+	64 64 scale
+	.9 0 0 rgbcolor setcolor
+	1 1 1 rgbcolor setbackcolor
+	//toolicon imagecanvas
+      grestore
+    } ifelse
+  } /seticonimage ToolWindow send
+
+  /QuitFromUser { % ctl => -
+    /reset Pizza send
+    /QuitFromUser super send
+  } /installmethod ToolWindow send
+
+/ToppingPanel 
+  /Calculated framebuffer /new ClassProPanel send
+def
+
+/ToppingWindow
+  ToppingPanel framebuffer /new ClassPopupWindow send 
+def
+
+  (Pizza Topping Panel) /setlabel ToppingWindow send
+  /Footer? true /setattribute ToppingWindow send
+  /Reshape? false /setattribute ToppingWindow send
+  /pin ToppingWindow send
+  ToppingWindow /addsubwindow ToolWindow send
+
+/EditPanel
+  /Calculated framebuffer /new ClassProPanel send
+def
+
+/EditWindow
+  EditPanel framebuffer /new ClassPopupWindow send
+def
+
+  (Pizza Menu Editor) /setlabel EditWindow send
+  /Reshape? false /setattribute EditWindow send
+  /pin EditWindow send
+  EditWindow /addsubwindow ToolWindow send
+
+/Pizza
+  framebuffer /new ClassPizza send
+def
+
+/PreviewWindow
+  Pizza framebuffer /new ClassPopupPizzaWindow send
+def
+
+  /pin PreviewWindow send
+  (Popup Pizza Preview) /setlabel PreviewWindow send
+  /Footer? true /setattribute PreviewWindow send
+  PreviewWindow /addsubwindow ToolWindow send
+
+  /open { % - => -
+    /open super send
+    /paint Pizza send
+  } /installmethod PreviewWindow send
+
+  /close { % - => -
+    /close super send
+    /paint Pizza send
+  } /installmethod PreviewWindow send
+
+/Notice
+  ToolWindow framebuffer /new ClassNotice send
+def
+
+  framebuffer /Color get { % if:
+    /Paint { % - => -
+      gsave % Smokey Notice Hack
+	/path1 self send clip newpath
+	1 ApexName GetColor setcolor currentgray
+	[ exch /mul load ] cvx settransfer
+	currentcanvas imagecanvas
+	initclip
+	/path2 self send clip newpath
+	2 ApexName GetColor setcolor currentgray
+	[ exch /mul load ] cvx settransfer
+	currentcanvas imagecanvas
+      grestore
+    } /installmethod /ClassNoticeTail ClassNotice send send
+  } if
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToolPanel Componants
+%
+% The ToolPanel uses the calculated layout protocol. A calculated
+% panel's /addclient method takes as arguments a client name, a client
+% object, and a calculated layout specification.  In these examples,
+% the name of the object defined in userdict is the same as its client
+% name in the panel. However, the name given to /addclient need not
+% bear any relationship to the client being added.  The names to
+% identify objects in the calculated layout specifications are the
+% names given to /addclient, NOT the names under which the clients are
+% defined in other dictionaries.
+
+/pizzaparlormenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  [ (Tony&Alba's)
+    (Sparcy's)
+    (Riscy's)
+    (Demo Room)
+    (Student Union)
+  ] /setitemlist 2 index send
+  /Exclusive /setchoicemode 2 index send
+  [0] /setvalue 2 index send
+  0 /setdefault 2 index send
+  pop pop
+
+/addressmenubuttons
+  /Grid framebuffer /new ClassMenuButtons send 2 copy def
+  [ [ (Pizza Parlor) pizzaparlormenu ]
+  ] /setitemlist 2 index send
+  [ /NorthWest { /NorthWest PARENT POSITION 10 -10 xyadd } ]
+  /addclient ToolPanel send
+
+/winbuttons
+  /Grid framebuffer /new ClassButtons send 2 copy def
+  [ [ (Topping...) /ShowToppingWindow ]
+    [ (Preview...) /ShowPreviewWindow ]
+    [ (Edit...) /ShowEditWindow ]
+    [ (Order!) /OrderPizza ]
+  ] /setitemlist 2 index send
+  userdict /settarget 2 index send
+  10 0 /setgaps 3 index send
+  [ /SouthWest { /SouthEast /addressmenubuttons POSITION 10 0 xyadd } ]
+  /addclient ToolPanel send
+
+/namefieldlabel
+  (Name:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { 30 /SouthWest /addressmenubuttons POSITION
+		 exch pop -15 add } ]
+  /addclient ToolPanel send
+
+/namefield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 200 exch /reshape 5 index send
+  [ /SouthWest { /SouthEast /namefieldlabel POSITION 10 -2 xyadd } ]
+  /addclient ToolPanel send
+
+/phonefieldlabel
+  (Phone:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthEast { /SouthEast /namefieldlabel POSITION 0 -10 xyadd } ]
+  /addclient ToolPanel send
+
+/phonefield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 200 exch /reshape 5 index send
+  [ /SouthWest { /SouthEast /phonefieldlabel POSITION 10 -2 xyadd } ]
+  /addclient ToolPanel send
+
+/addressfieldlabel
+  (Address:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthEast { /SouthEast /phonefieldlabel POSITION 0 -10 xyadd } ]
+  /addclient ToolPanel send
+
+/addressfield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 400 exch /reshape 5 index send
+  [ /SouthWest { /SouthEast /addressfieldlabel POSITION 10 -2 xyadd } ]
+  /addclient ToolPanel send
+
+/deliverymenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  /Exclusive /setchoicemode 2 index send
+  [ (Eat at T&A) (Pick Up) (Take & Bake) (Please Deliver)
+  ] /setitemlist 2 index send
+  0 /setdefault 2 index send
+  [0] /setvalue 2 index send
+  userdict /settarget 2 index send
+  /SetDelivery /setnotifier 2 index send
+  pop pop
+
+/deliverylabel
+  (Delivery:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthEast { /SouthEast /addressfieldlabel POSITION 0 -15 xyadd } ]
+  /addclient ToolPanel send
+
+/deliverymenubutton
+  /Grid framebuffer /new ClassMenuButtons send 2 copy def
+  [ [ () deliverymenu ] ] /setitemlist 2 index send
+  0 true /setabbreviated 3 index send
+  [ /SouthWest { /SouthEast /deliverylabel POSITION 10 0 xyadd } ]
+  /addclient ToolPanel send
+
+/deliveryvalue
+  (Eat at T&A        ) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /deliverymenubutton POSITION 10 0 xyadd } ]
+  /addclient ToolPanel send
+
+/totallabel
+  (Total estimated cost: $) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { 10 /SouthWest /deliverylabel POSITION exch pop -15 add } ]
+  /addclient ToolPanel send
+
+/totalfield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 80 exch /reshape 5 index send
+  true /setreadonly 2 index send
+  [ /SouthWest { /SouthEast /totallabel POSITION 0 -2 xyadd } ]
+  /addclient ToolPanel send
+
+/emaillabel
+  (Email copy to:   ) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthEast { /SouthEast /totallabel POSITION 0 -10 xyadd } ]
+  /addclient ToolPanel send
+
+/emailfield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 200 exch /reshape 5 index send
+  [ /SouthWest { /SouthEast /emaillabel POSITION 0 -2 xyadd } ]
+  /addclient ToolPanel send
+
+/instructionslabel
+  (Additional Instructions:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { 10 /SouthWest /emaillabel POSITION exch pop -15 add } ]
+  /addclient ToolPanel send
+
+  phonefield /setnextfocus namefield send
+  addressfield /setnextfocus phonefield send
+  emailfield /setnextfocus addressfield send
+  emailfield
+
+% /instructionfield[0-5]
+  0 1 5 {  % This should be a jot canvas, but we're just server side for now.
+    (instructionfield%) sprintf cvn
+      framebuffer /new ClassTextField send 2 copy def
+      0 0 /preferredsize 3 index send exch pop 500 exch /reshape 5 index send
+      dup /setnextfocus 5 -1 roll send
+      dup 3 1 roll
+      [ /NorthWest { /SouthWest PREVIOUS POSITION 0 -5 xyadd } ]
+      /addclient ToolPanel send
+  } for
+
+  namefield /setnextfocus 3 -1 roll send
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ToppingPanel Componants
+
+/orderbuttons
+  /Grid framebuffer /new ClassButtons send 2 copy def
+  [ [ (Preview...) /ShowPreviewWindow ]
+    [ (Order!) /OrderPizza ]
+  ] /setitemlist 2 index send
+  userdict /settarget 2 index send
+  10 0 /setgaps 3 index send
+  [ /NorthWest { /NorthWest PARENT POSITION 10 -10 xyadd } ]
+  /addclient ToppingPanel send
+
+/pizzasizelabel
+  (Pizza Size:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /orderbuttons POSITION  0 -20 xyadd } ]
+  /addclient ToppingPanel send
+
+/pizzasizesettings
+  /Grid framebuffer /new ClassSettings send 2 copy def
+  [ (10") (14") (16") (18") ] /setitemlist 2 index send
+  userdict /settarget 2 index send
+  /SetPizzaSize /setnotifier 2 index send
+  [3] /setvalue 2 index send
+  [ /SouthWest { /SouthEast /pizzasizelabel POSITION 10 -6 xyadd } ]
+  /addclient ToppingPanel send
+
+/pizzafractionlabel
+  (Fraction:) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /pizzasizesettings POSITION 20 6 xyadd } ]
+  /addclient ToppingPanel send
+
+/pizzafractionsettings
+  /Grid framebuffer /new ClassSettings send 2 copy def
+  [ (Whole) (Half) ] /setitemlist 2 index send
+  userdict /settarget 2 index send
+  /SetPizzaFraction /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /pizzafractionlabel POSITION 10 -6 xyadd } ]
+  /addclient ToppingPanel send
+
+/stylelabel
+  (Style:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /pizzasizelabel POSITION 0 -20 xyadd } ]
+  /addclient ToppingPanel send
+
+/stylemenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  /Exclusive /setchoicemode 2 index send
+  PizzaStyleNames /setitemlist 2 index send
+  userdict /settarget 2 index send
+  /MenuSetStyle /setnotifier 2 index send
+  [0] /setvalue 2 index send
+  0 /setdefault 2 index send
+  true /setpinnable 2 index send
+  (Pizza Style) /setpinnedlabel 2 index send
+  (Pizza Style) /setlabel 2 index send
+  pop pop
+
+/stylemenubutton
+  /Grid framebuffer /new ClassMenuButtons send 2 copy def
+  [ [ () stylemenu ] ] /setitemlist 2 index send
+  0 true /setabbreviated 3 index send
+  [ /SouthWest { /SouthEast /stylelabel POSITION 10 0 xyadd } ]
+  /addclient ToppingPanel send
+
+/stylevalue
+  (Cheese) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /stylemenubutton POSITION 10 0 xyadd } ]
+  /addclient ToppingPanel send
+
+/meatlabel
+  (Meats:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /stylelabel POSITION 10 -15 xyadd } ]
+  /addclient ToppingPanel send
+
+/meatcheckboxes
+  /Grid framebuffer /new ClassCheckBoxes send 2 copy def
+  MeatToppingNames /setitemlist 2 index send
+  [ true 5 3 ] /setlayoutparameters 2 index send
+  userdict /settarget 2 index send
+  /SetCheckboxes /setnotifier 2 index send
+  [ /NorthWest { /SouthWest /meatlabel POSITION 10 -10 xyadd } ]
+  /addclient ToppingPanel send
+
+/vegetablelabel
+  (Vegetables:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /meatcheckboxes POSITION -10 -15 xyadd } ]
+  /addclient ToppingPanel send
+
+/vegetablecheckboxes
+  /Grid framebuffer /new ClassCheckBoxes send 2 copy def
+  VegetableToppingNames /setitemlist 2 index send
+  [ true 5 3 ] /setlayoutparameters 2 index send
+  userdict /settarget 2 index send
+  /SetCheckboxes /setnotifier 2 index send
+  [ /NorthWest { /SouthWest /vegetablelabel POSITION 10 -10 xyadd } ]
+  /addclient ToppingPanel send
+
+/costlabel
+  (Estimated cost: $) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /vegetablecheckboxes POSITION -15 -20 xyadd } ]
+  /addclient ToppingPanel send
+
+/costfield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 80 exch /reshape 5 index send
+  true /setreadonly 2 index send
+  [ /SouthWest { /SouthEast /costlabel POSITION 0 -2 xyadd } ]
+  /addclient ToppingPanel send
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EditPanel Componants
+
+/editstylemenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  [ [ (New) /NewPizzaStyle ]
+    [ (Edit) /EditPizzaStyle ]
+    [ (Rename  ) /RenamePizzaStyle ]
+    [ (Delete) /DeletePizzaStyle ]
+    [ (Save) /SavePizzaStyle ]
+  ] /setitemlist 2 index send
+  true /setpinnable 2 index send
+  (Style) /setpinnedlabel 2 index send
+  0 /setdefault 2 index send
+  pop pop
+
+/meattoppingmenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  /NonExclusive /setchoicemode 2 index send
+  true /setpinnable 2 index send
+  (Meat Toppings) /setpinnedlabel 2 index send
+  MeatToppingNames /setitemlist 2 index send
+  userdict /settarget 2 index send
+  /UpdateToppings /setnotifier 2 index send
+  [ true 5 3 ] /setlayoutparameters 2 index send
+  pop pop
+
+/vegetabletoppingmenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  /NonExclusive /setchoicemode 2 index send
+  true /setpinnable 2 index send
+  (Vegetable Toppings) /setpinnedlabel 2 index send
+  VegetableToppingNames /setitemlist 2 index send
+  userdict /settarget 2 index send
+  /UpdateToppings /setnotifier 2 index send
+  [ true 5 3 ] /setlayoutparameters 2 index send
+  pop pop
+
+/edittoppingmenu
+  /Grid framebuffer /new ClassMenu send 2 copy def
+  [ [ (Copy Checkboxes) /CopyCheckboxes ]
+    [ (Remove Selected) /RemoveSelected ]
+    [ (Meats) meattoppingmenu ]
+    [ (Vegetables) vegetabletoppingmenu ]
+  ] /setitemlist 2 index send
+  true /setpinnable 2 index send
+  (Toppings) /setpinnedlabel 2 index send
+  pop pop
+
+/stylemenubuttons
+  /Grid framebuffer /new ClassMenuButtons send 2 copy def
+  [ [ (Style) editstylemenu ]
+    [ (Toppings) edittoppingmenu ]
+  ] /setitemlist 2 index send
+  10 0 /setgaps 3 index send
+  userdict /settarget 2 index send
+  [ /NorthWest { /NorthWest PARENT POSITION 10 -10 xyadd } ]
+  /addclient EditPanel send
+
+/stylelistlabel
+  (Available Pizza Styles:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /stylemenubuttons POSITION 0 -10 xyadd } ]
+  /addclient EditPanel send
+
+/stylescroll
+  framebuffer /new ClassVScrollbar send 2 copy def
+  /scroll /setnotifier 2 index send
+  /scroll /setpreviewer 2 index send
+  0 0 /preferredsize stylescroll send pop 150 /reshape 5 index send
+  [ /NorthWest { /SouthWest /stylelistlabel POSITION 0 -5 xyadd } ]
+  /addclient EditPanel send
+
+/stylelist
+  EditPanel /new ClassScrollList send 2 copy def
+  0 0 180 150 /reshape 5 index send
+  PizzaStyleNames /setitemlist 2 index send
+  /Exclusive /setchoicemode 2 index send
+  [0] /setvalue 2 index send
+  userdict /settarget 2 index send
+  /EditStyle /setnotifier 2 index send
+  dup /settarget stylescroll send
+  stylescroll /setscrollbar 2 index send
+  [ /SouthWest { /SouthEast /stylescroll POSITION 2 0 xyadd } ]
+  /addclient EditPanel send
+
+/styletoppingslabel
+  (Toppings:) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /NorthEast /stylelist POSITION 10 5 xyadd } ]
+  /addclient EditPanel send
+
+/styletoppingsscroll
+  framebuffer /new ClassVScrollbar send 2 copy def
+  /scroll /setnotifier 2 index send
+  /scroll /setpreviewer 2 index send
+  0 0 /preferredsize styletoppingsscroll send pop 150 /reshape 5 index send
+  [ /NorthWest { /SouthWest /styletoppingslabel POSITION 0 -5 xyadd } ]
+  /addclient EditPanel send
+
+/styletoppingslist
+  EditPanel /new ClassScrollList send 2 copy def
+  0 0 180 150 /reshape 5 index send
+  /NonExclusive /setchoicemode 2 index send
+  styletoppingsscroll /setscrollbar 2 index send
+  dup /settarget styletoppingsscroll send
+  [ /SouthWest { /SouthEast /styletoppingsscroll POSITION 2 0 xyadd } ]
+  /addclient EditPanel send
+
+/stylenamelabel
+  (Style:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /stylescroll POSITION 0 -10 xyadd } ]
+  /addclient EditPanel send
+
+/stylenamefield
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 140 exch /reshape 5 index send
+  (Cheese) /setvalue 2 index send
+  userdict /settarget 2 index send
+  /NewPizzaStyle /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /stylenamelabel POSITION 10 -2 xyadd } ]
+  /addclient EditPanel send
+
+/styleextralabel
+  (Extra toppings:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /styletoppingsscroll POSITION 0 -10 xyadd } ]
+  /addclient EditPanel send
+
+/styleextrafield
+  framebuffer /new ClassNumericField send 2 copy def
+  0 /setvalue styleextrafield send
+  0 9 /setrange styleextrafield send
+  4 /setminimumvisible 2 index send
+  userdict /settarget 2 index send
+  /SetStyleExtraToppings /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /styleextralabel POSITION 10 -2 xyadd } ]
+  /addclient EditPanel send
+
+  styleextrafield /setnextfocus stylenamefield send
+
+/stylepriceslabel
+  (Prices:) framebuffer /new ClassLabel send 2 copy def
+  [ /NorthWest { /SouthWest /stylenamelabel POSITION 0 -10 xyadd } ]
+  /addclient EditPanel send
+
+/styleprice10label
+  (10" $) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /stylepriceslabel POSITION 15 0 xyadd } ]
+  /addclient EditPanel send
+
+/styleprice10field
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 40 exch /reshape 5 index send
+  /PizzaSizeIndex 0 /setproperty 3 index send
+  userdict /settarget 2 index send
+  /SetStylePrice /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /styleprice10label POSITION 0 -2 xyadd} ]
+  /addclient EditPanel send
+
+  styleprice10field /setnextfocus styleextrafield send
+
+/styleprice14label
+  (14" $) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /styleprice10field POSITION 15 2 xyadd } ]
+  /addclient EditPanel send
+
+/styleprice14field
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 40 exch /reshape 5 index send
+  /PizzaSizeIndex 1 /setproperty 3 index send
+  userdict /settarget 2 index send
+  /SetStylePrice /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /styleprice14label POSITION 0 -2 xyadd } ]
+  /addclient EditPanel send
+
+  styleprice14field /setnextfocus styleprice10field send
+
+/styleprice16label
+  (16" $) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /styleprice14field POSITION 15 2 xyadd } ]
+  /addclient EditPanel send
+
+/styleprice16field
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 40 exch /reshape 5 index send
+  /PizzaSizeIndex 2 /setproperty 3 index send
+  userdict /settarget 2 index send
+  /SetStylePrice /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /styleprice16label POSITION 0 -2 xyadd } ]
+  /addclient EditPanel send
+
+  styleprice16field /setnextfocus styleprice14field send
+
+/styleprice18label
+  (18" $) framebuffer /new ClassLabel send 2 copy def
+  [ /SouthWest { /SouthEast /styleprice16field POSITION 15 2 xyadd } ]
+  /addclient EditPanel send
+
+/styleprice18field
+  framebuffer /new ClassTextField send 2 copy def
+  0 0 /preferredsize 3 index send exch pop 40 exch /reshape 5 index send
+  /PizzaSizeIndex 3 /setproperty 3 index send
+  userdict /settarget 2 index send
+  /SetStylePrice /setnotifier 2 index send
+  [ /SouthWest { /SouthEast /styleprice18label POSITION 0 -2 xyadd } ]
+  /addclient EditPanel send
+
+  styleprice18field /setnextfocus styleprice16field send
+  stylenamefield /setnextfocus styleprice18field send
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Notice Componants
+
+/oknoticebuttons
+  /Spaced framebuffer /new ClassButtons send 2 copy def
+  [ (OK) ] /setitemlist 2 index send
+  0 /setdefault 2 index send
+  userdict /settarget 2 index send
+  /NoticeClose /setnotifier 2 index send
+  pop pop
+
+/yesnonoticebuttons
+  /Spaced framebuffer /new ClassButtons send 2 copy def
+  [ (Yes) (No) ] /setitemlist 2 index send
+  0 /setdefault 2 index send
+  10 0 /setgaps 3 index send
+  userdict /settarget 2 index send
+  /NoticeYesNo /setnotifier 2 index send
+  pop pop
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initialization
+
+% Create a new event manager to take care of this monstrosity.
+/mgr /new ClassEventMgr send def
+mgr /ProcessName (PizzaTool Manager) put
+
+% Activate all the windows.
+[ToolWindow ToppingWindow PreviewWindow EditWindow Notice] {
+  mgr /activate 3 -1 roll send
+} forall
+
+% Place all the windows.
+[ToolWindow ToppingWindow PreviewWindow EditWindow] {
+  /place exch send
+} forall
+
+% Try to load the configuration file.
+ConfigFile LoadFile pop
+
+% Set the favorite style, or the default if not found.
+FavoriteStyle /findstyle ClassStyle send
+dup null eq {
+  pop /defaultstyle ClassStyle send
+} if
+/editstyle exch send
+
+% Get the show on the road.
+/map ToolWindow send
+
+newprocessgroup currentfile closefile
+%EOF

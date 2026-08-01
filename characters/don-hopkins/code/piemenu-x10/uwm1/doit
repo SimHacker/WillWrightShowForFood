@@ -1,0 +1,3 @@
+#!/bin/csh -f
+setenv HOME `pwd`
+exec forth wm.exe hacks.f fuwm-init.f -

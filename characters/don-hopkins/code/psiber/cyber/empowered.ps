@@ -1,0 +1,23 @@
+100 dict begin
+
+/abc {
+  [ 65 1 79 {
+      [ exch dup 64 sub 3 mul { dup } repeat pop ] cvas
+    } for
+  ]
+} def
+
+/unsort {
+  [ exch {
+      counttomark dup 2 mul random mul floor roll
+    } forall
+  ]
+} def
+
+/resort {
+  { {gt} quicksort
+  } vexec
+} def
+
+currentdict end
+

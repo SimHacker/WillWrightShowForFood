@@ -1,0 +1,956 @@
+========================================================================
+
+* Glossary
+
+** object
+  Any piece of PostScript data, i.e. dictionary, array, integer, string, 
+  process, mark, boolean, etc... (See ~Data types~). 
+
+  Objects that you push onto the operand stack and store in other data
+  structures are either atomic or molecular. 
+  The objects are all the same size, and they all include a field 
+  specifying their type. 
+  Atomic objects, like integers, booleans, and marks, are small enough
+  to store in the space on the stack or in the data structure. 
+  They are actually copied each time you make another reference
+  to them (i.e. ~dup~), since they are small enough and never change.
+  Molecular objects, like arrays, dictionaries, graphics states, 
+  and processes, are represented as typed pointers to their
+  actual storage. 
+  So when you push a molecular object onto the stack, its 
+  body is not actually moved onto the stack, just a reference to it. 
+  There can be any number of references to any molecular object. 
+  Each molecular object has a reference count, and the garbage collector
+  destroys an object to reclaim its memory, when its reference count drops
+  to zero (i.e. ~pop~).
+
+  Molecular objects are either inorganic or organic.
+  Inorganic molecules contain state information that you may or 
+  may not be able to change or directly access. 
+  Organic objects, like arrays, dictionaries, canvases, and processes,
+  may contain references to other objects.
+
+  You can also have references to subintervals of arrays and strings, 
+  subarrays and substrings that are parts of larger ones. 
+
+  Each object is either executable or literal. This effects how the
+  PostScript interpreter deals with it (whether it's dealt with as code or
+  as data). 
+  Each reference to an object has its own executable/literal bit, so
+  for example, you can have both an executable and a literal reference to the
+  same array on the stack. 
+
+  Arrays and dictionaries are polymorphic, so each element can hold any 
+  type of PostScript object -- i.e. all the array elements don't have to 
+  be of the same type. This is possible because every PostScript object
+  that is stored anywhere (on the stack, in an array or dictionary, etc)
+  also includes a field specifying its type. 
+
+*** atomic object
+  ~integertype~ ~realtype~ ~booleantype~ ~nulltype~ ~marktype~
+*** molecular object
+**** organic molecule
+  ~arraytype~ ~dicttype~ ~fonttype~ ~canvastype~ ~processtype~ ~eventtype~ 
+**** inorganic molecule
+  ~colortype~ ~nametype~ ~stringtype~ ~graphicsstatetype~ ~filetype~ 
+  ~shapetype~ ~cursortype~ ~monitortype~ ~operatortype~
+
+** instance
+  An instance dictionary is an object representing an instance of
+  a ~class~. This dictionary is refered to in the context of an instance 
+  as ~self~. 
+  It holds the object's ~instance variables~, 
+  a link to the object's ~class~ dictionary (~ParentDict~), and an array of 
+  all the ~class~ dictionaries that implement the object's behavior
+  (~ParentDictArray~). The context if an instance is established
+  by pushing the dictionaries in ~ParentDictArray~ onto the PostScript 
+  ~dictionary stack~ (that's what ~send~ does).
+
+** class
+  A class dictionary contains the ~class variables~ and ~methods~ implemented
+  by a particular class, a reference to the ~superclass~ dictionary the
+  class is based on (~ParentDict~), and an array of all the ~class~ 
+  dictionaries that implement the class's behavior (~ParentDictArray~). 
+  A ~class~ is also an ~instance~ (of its ~superclass~).
+
+** instance variable
+  Variables that each ~instance~ of a ~class~ gets its own copies of, stored
+  in the ~instance~ dictionary.
+
+** class variable
+  Variable shared by each ~instance~ of a ~class~ and its ~subclasses~ (that
+  don't ~override~ it), stored on the ~class~ dictionary.
+
+** method
+  Functions (~execuable arrays~) stored in ~class~ dictionaries (or even 
+  an ~instance~ dictionary) that are executed in the context of an ~instance~ 
+  of the ~class~ (or its ~subclass~). The function is executed when you 
+  ~send~ the name of the method to an ~instance~ (or ~class~).
+
+** superclass
+
+** subclass
+
+** magic dictionary
+
+** operand stack
+
+** dictionary stack
+
+** execution stack
+
+** graphics state stack
+
+** graphics state
+
+** selection dictionary
+  A selection dictionary contains information about a selection.
+  The interpretation of the keys in the dictionary are up to the client.
+  They contain the keys:
+    /Rank /Canvas /SelectionResponder /SelectionHolder
+  They may contain the keys (and others):
+   /ContentsAscii /ContentsPostScript /SelectionStartIndex 
+   /SelectionLastIndex /SelectionObjSize /SelectionType
+  A ~dissected selection~ is the contents of a selection, extracted
+  from the ~selection dictionary~ in a manner appropriate for its type. 
+  (In X11/NeWS, selections are instances, so this will change for the
+  better...)
+  The selection types recognized are ~text selection~, ~object selection~,
+  ~pointer selection~, and ~interval selection~. 
+
+** selection Rank
+
+** selection Canvas
+
+** SelectionResponder
+
+** SelectionHolder
+
+** selection ContentsAscii
+
+** selection ContentsPostScript
+
+** SelectionStartIndex
+
+** SelectionLastIndex
+
+** SelectionObjSize
+
+** SelectionType
+
+** structure window
+
+** dialog window
+
+** spike
+
+========================================================================
+
+* Function and Variable Names
+
+** dup
+
+** pop
+
+** send
+
+** self
+
+** super
+
+** ParentDict
+
+** ParentDictArray
+
+========================================================================
+
+* Data types
+** integertype
+  See ~integertype menu~.
+** realtype
+  See ~realtype menu~.
+** booleantype
+  See ~booleantype menu~.
+** colortype
+  See ~colortype menu~.
+** nametype
+  See ~nametype menu~.
+** stringtype
+  See ~stringtype menu~.
+** graphicsstatetype
+  See ~graphicsstatetype menu~.
+** arraytype
+  See ~arraytype menu~.
+** dicttype
+  See ~dicttype menu~.
+** fonttype
+  See ~fonttype menu~.
+** canvastype
+  See ~canvastype menu~.
+** processtype
+  See ~processtype menu~.
+** eventtype
+  See ~eventtype menu~.
+** filetype
+  See ~filetype menu~.
+** shapetype
+  See ~shapetype menu~.
+** cursortype
+  See ~cursortype menu~.
+** monitortype
+  See ~monitortype menu~.
+** operatortype
+  See ~operatortype menu~.
+** nulltype
+  See ~nulltype menu~.
+** marktype
+  See ~marktype menu~.
+
+========================================================================
+
+* Selection types
+
+** text selection
+  A normal text selection as made from a psterm window or whatever. 
+  seldict keys: /ContentsAscii
+
+** object selection
+  A PostScript object selection.
+  seldict keys: /ContentsPostScript /ContentsAscii
+
+** pointer selection
+  A pointer to a PostScript object, i.e. a (container, index) pair
+  that specifies where the object is stored. A container is an array,
+  dictionary, event, or whatever composite object contains the pointed-to
+  object, and the index is a number specifying which element of the array
+  or key of the dictionary contains the pointed-to object.
+  seldict keys: /ContentsPostScript /SelectionStartIndex /ContentsAscii
+
+** interval selection
+  A subinterval of an array or string.
+  seldict keys: /ContentsPostScript /SelectionStartIndex /SelectionLastIndex
+  /ContentsAscii
+
+** dissected selection
+  A dissected selection is what you will get when you paste a selection
+  into a composite object or push it into the stack.
+*** dissected text selection
+  A string, the selected text.
+*** dissected object selection
+  The selected object.
+*** dissected pointer selection
+  The pointed-to object.
+*** dissected interval selection
+  The subinterval of the array or string.
+
+========================================================================
+
+* Mouse sensative regions
+** Structure trees
+*** Point button
+  Calls the click-proc of the view of the PostScript object under the 
+  cursor. 
+  The various click-procs are: ~click-type~ ~click-exec~ ~click-magic~
+  ~click-push~ ~click-step~ ~click-select~ ~click-edit~
+  The default click-proc is click-select:
+    Click: Select the object as the primary selection
+    DoubleClick: Toggle object open or closed
+    ControlClick: Execute object
+    ShiftClick: Select object's index (in its container)
+    ShiftDoubleClick: Open object one level deeper
+    Meta: Supress redisplay
+*** Adjust button
+    Click: Select a pointer to the object under the cursor
+    ShiftClick: Over dict: select object's key
+    ShiftClick: Over array: Select subinterval, by dragging
+*** Menu button
+    Click: Pop up ~structure menu~
+    Control: May modify menu selection
+    Shift: May modify menu selection
+    Meta: May modify menu selection
+
+** Structure tab
+*** Point button
+    Click: Toggle structure's iconic state
+*** Adjust button
+    ClickDrag: Move the ~structure window~ around. Dragging the tab on or 
+    off the ~spike~ manipulates the process's stack accordingly.
+*** Menu button
+    Click: Pop up ~structure tab menu~
+    Control: May modify menu selection
+    Shift: May modify menu selection
+    Meta: May modify menu selection
+
+** Dialog window text
+*** Point button
+    Click: Start ~text selection~
+    ClickDrag: Extend ~text selection~
+*** Adjust button
+    Click: Adjust ~text selection~
+    ClickDrag: Adjust ~text selection~
+*** Menu button
+    Click: Pop up ~stack selection menu~
+    Control: May modify menu selection
+    Shift: May modify menu selection
+    Meta: May modify menu selection
+*** Keys
+    See ~key bindings~.
+
+** Dialog window tab
+*** Point button
+    ClickDrag: Adjust height of ~spike~
+*** Adjust button
+    ClickDrag: Move ~dialog window~ around
+*** Menu button
+    Click: Pop up ~stack tab menu~
+    Control: May modify menu selection
+    Shift: May modify menu selection
+    Meta: May modify menu selection
+
+** Background
+*** Menu button
+    Click: Pop up ~background menu~
+
+========================================================================
+
+* Menus
+
+** Structure menu
+*** push
+    Pushes object on stack.
+*** type...
+    Pops up menu specific to the type of the object.
+    One of:
+	~integertype menu~		~realtype menu~
+	~booleantype menu~		~colortype menu~
+	~nametype menu~			~stringtype menu~
+	~graphicsstatetype menu~	~arraytype menu~
+	~dicttype menu~			~fonttype menu~
+	~canvastype menu~		~processtype menu~
+	~eventtype menu~		~filetype menu~
+	~shapetype menu~		~cursortype menu~
+	~monitortype menu~		~operatortype menu~
+	~nulltype menu~			~marktype menu~
+*** load
+    Selects the result of loading the object, if successful.
+*** etc...
+    Menu of random stuff.
+**** molecule
+    Opens a PseudoScientific Visualizer on the object.
+**** select...
+    Selects various parts of the object.
+***** Pointer
+    Selects a pointer to the object (container, index)
+***** Index
+    Selects the index of the object in its container.
+***** Object
+    Selects the object itsself.
+***** Container
+    Selects the container of the object.
+**** reference
+    Creates and selects a function that will return the object, given the 
+    top level object (of that item) on the stack. (pretty useless)
+*** exec
+    Executes the object. Hold down shift to wrap it in an executable array
+    before executing (to step through code).
+*** change...
+    Performs various type conversions on the object.
+**** tokein
+    Convert a string to an array of objects, over the Externals dictionary.
+    i.e. things that it can't write out are represented as //&type_#, and
+    that name is associated with the unwritable object in the Externals
+    dictionary, When it is read back in (by tokein), the Externals dictionary
+    is on the the dict stack, so the //&references are resolved by the 
+    scanner.
+**** executable
+    Make the object executable.
+**** name
+    Try to convert the object to a name.
+**** string
+    Convert the object to a string.
+**** tokeout
+    Convert the object to a string that can be read back in, over the
+    Externals dictionary.
+**** literal
+    Make the object literal.
+**** integer
+    Try to convert the object to an integer.
+**** real
+    Try to convert the object to a real.
+*** paste
+    Replace the object under the cursor with the Primary selection.
+*** view...
+    Menu of functions that effect the view of this object.
+**** size
+    Pull out to change the size of this object and its children.
+**** shrink
+    Pull out to change the shrink factor of this object and its children.
+    The shrink factor is the number the point size is multiplied by as the
+    level gets deeper. 1 will keep everything the same size, .9 will shrink,
+    and 1.1 will expand as the structure gets deeper. 
+**** click...
+    Change the local click action of this object and its children.
+    Each object displayed can have its own local click action.
+    If it does not have its own local click action, the default 
+    global click action of the structure window is called.
+***** null
+    Reset to the global item click action.
+***** click-type
+    Set click action to make a feeble attempt to "do the right thing", 
+    according to the type. Obsolete. Read the code if you're interested. 
+***** click-exec
+    Set click action to execute the object.
+***** click-magic
+    Set click action to execute the object "beneath deck".
+    This is how magic editing buttons are implemented. The functions 
+    are executed in the context of the structure window containing the
+    object, and can access the underlying data structures of the display 
+    list. If the object's container is a dictionary, it will be on the top
+    of the dict stack. (Note that with some magic buttons, the button's
+    container is different than the object to its left that it's associated
+    with. It is usually a dictionary containing the editor functions and
+    state information. Don't attempt to understand any of this without
+    reading the code.)
+***** click-push
+    Set click action to push the object.
+***** click-step
+    Set click action to single step the object. This is like click-exec, but
+    it wraps the object in an executable array before executing it, so that
+    functions are pushed instead of being executed, etc. 
+***** click-select
+    Set click action to select the object.
+***** click-edit
+    Set click action to edit the object. This is like click-magic, except
+    that the parent of the object you clicked on is pushed onto the stack,
+    the object you clicked on is executed, and the parent is replaced by the
+    thing the functions leaves on the top of the stack. 
+**** open
+    Open the object (pull out the number of levels).
+
+** Type submenus
+*** integertype menu
+**** step editor
+    Open step editor on object.
+    ++ increments the number by Step
+    -- decrements the nubmer by Step
+    Step is a number that you can change, by opening up another number
+    editor on it.
+    Exec is a user definable function, "neg" by default, that you can 
+    replace by pasting in a string or function of your choice.
+**** stepshift editor
+    Open stepshift editor on object.
+    Like the step editor, except that << and >> divide and multiply the
+    number by Shift.
+**** digit editor
+    Open digit editor on object.
+    Functions kinda like a calculator keypad. 
+**** user editor
+    Open user editor on object. Just a slot for you to paste in a function
+    that does whatever you want when you click on it. 
+    The function will be the currently selected object, so select the
+    function you want to perform on an object, then open a user editor
+    on the object, and then you can click on the user editor to perform the
+    function, which is executed with the edited object on the stack. The
+    edited object is then replaced by the value your function leaves on the
+    top of the stack.
+*** realtype menu
+**** step editor
+    Open step editor on object.
+**** stepshift editor
+    Open stepshift editor on object.
+**** digit editor
+    Open digit editor on object.
+**** user editor
+    Open user editor on object.
+
+*** booleantype menu
+**** boolean editor
+    Open boolean editor on object.
+    True makes the boolean true.
+    False makes it false.
+    Not makes true false and false true.
+    Exec is a handy dandy function for you to do whatever you want with.
+    By default, it makes the boolean false or true with a 50% probability,
+    but you can change that by opening up the function and replacing the
+    0.5 with whatever probability you want, or replacing the whole function
+    with your own function returning a boolean.
+**** user editor
+    Open user editor on object.
+**** true
+    Make object true.
+**** false
+    Make object false.
+**** not
+    Toggle object's boolean value.
+
+*** colortype menu
+**** user editor
+    Open user editor on object.
+
+*** nametype menu
+**** definitions editor
+    Open definitions editor on object.
+    This opens up a view of every definition of the name on the dictionary
+    stack of the spike process.
+**** user editor
+    Open user editor on object.
+
+*** stringtype menu
+**** prepend
+    Prepend selection to string.
+**** append
+    Append selection to string.
+**** token
+    Tokenize string.
+**** user editor
+    Open user editor on object.
+
+*** graphicsstatetype menu
+**** user editor
+    Open user editor on object.
+
+*** arraytype menu
+**** juggle...
+    Menu of array frobbing commands.
+***** pop
+    Delete last element of array and select it.
+    This replaces the array with a new one.
+***** top
+    Move selected element or subinterval to top of array.
+***** splice
+    Splice in selected array element or splice out selected subinterval.
+    This replaces the array with a new one.
+***** bottom
+    Move selected element or subinterval to bottom of array.
+***** push
+    Append selected object to end of array.
+    This replaces the array with a new one.
+***** append
+    Append selected array to end of array.
+    This replaces the array with a new one.
+***** delete
+    Delete selected element or subinterval from array.
+    This replaces the array with a new one.
+***** prepend
+    Prepend selected array to beginning of array.
+    This replaces the array with a new one.
+**** scroller editor
+    Open scroller editor on object.
+**** filter editor
+    Open filter editor on object.
+    Recompute will run the filter and update the display.
+    Filter is the function that decides if the element should be displayed.
+    It should not consume anything from the stack, and should return 
+    a boolean, which determines if each object is displayed.
+    It may refer to the following variables:
+	Container, the thing that contains the stuff we're filtering.
+	Index, the current index into the container.
+	Object, the current object in the container.
+**** user editor
+    Open user editor on object.
+
+*** dicttype menu
+**** def
+    Def selected pointer in dict or selected key in dict as null.
+**** undef
+    Undef selected pointer or key from dict.
+**** begin
+    Push the dict onto the dictionary stack.
+**** enter
+    Recursivly enter the dict.
+    (Send it a recursive pseudo-executive loop.)
+**** dbgbreak
+    Fork a process that breakpoints into the object.
+**** scroller editor
+    Open scroller editor on object.
+**** filter editor
+    Open filter editor on object.
+**** user editor
+    Open user editor on object.
+**** object editor
+    Open object editor on object.
+
+*** fonttype menu
+**** user editor
+    Open user editor on object.
+
+*** canvastype menu
+**** manager
+    Select the canvas's event manager.
+**** bbox
+    Push the canvas's bounding box.
+**** setcanvas
+    Make this the currentcanvas.
+**** zap
+    Nuke the canvas.
+**** user editor
+    Open user editor on object.
+
+*** processtype menu
+**** kill
+    Kill the process.
+**** kill group
+    Kill the process group.
+**** suspend
+    Suspend the process.
+**** resume
+    Resume the process.
+**** wait
+    If we won't block, wait for the process and select its return value.
+**** userdict
+    Select the process's userdict.
+**** user editor
+    Open user editor on object.
+
+*** eventtype menu
+**** express
+    Express interest in the event.
+**** revoke
+    Revoke interest in the event.
+**** sendevent
+    Send the event.
+**** user editor
+    Open user editor on object.
+
+*** filetype menu
+**** user editor
+    Open user editor on object.
+
+*** shapetype menu
+**** user editor
+    Open user editor on object.
+
+*** cursortype menu
+**** user editor
+    Open user editor on object.
+
+*** monitortype menu
+**** user editor
+    Open user editor on object.
+
+*** operatortype menu
+**** user editor
+    Open user editor on object.
+
+*** nulltype menu
+**** user editor
+    Open user editor on object.
+
+*** marktype menu
+**** user editor
+    Open user editor on object.
+
+** Structure tab menu
+    Menu of functions dealing with the item.
+*** Layout
+    Redo the layout.
+*** Tab...
+    Move the tab. Ignore the names, just select the approriate direction.
+**** LeftBelow
+**** LeftAbove
+**** AboveLeft
+**** AboveRight
+**** RightAbove
+**** RightBelow
+**** BelowRight
+**** BelowLeft
+*** Zap
+    Zap the item.
+*** Paint
+    Redisplay the item.
+*** Print
+    Write out the printable file "DL.out". (broken)
+*** View...
+    Menu of functions dealing with view of the item.
+**** Size
+    Pull out to change the size of the objects in the item.
+**** Shrink
+    Pull out to change the shrink factor of the objects in the item.
+**** Click...
+    Change the click action of this objects in the item.
+***** click-select
+    Set click action to select the object.
+***** click-type
+    Set click action to make a feeble attempt to "do the right thing", 
+    according to the type.
+***** click-exec
+    Set click action to execute the object.
+***** click-magic
+    Set click action to execute the object "beneath deck".
+***** click-push
+    Set click action to push the object.
+***** click-step
+    Set click action to single step the object.
+***** click-select
+    Set click action to select the object.
+***** click-edit
+    Set click action to edit the object.
+
+**** Open
+    Pull out to open the item.
+
+** Stack selection menu
+*** push
+    Push the selection.
+*** load
+    Select the results of loading the selection, if successful.
+*** exec
+    Execute the selection.
+*** change...
+    Performs various type conversions on the selection.
+**** tokein
+    Convert a string to an array of objects, over the Externals dictionary.
+**** executable
+    Make the object executable.
+**** name
+    Convert the object to a name.
+**** string
+    Convert the object to a string.
+**** tokeout
+    Convert the object to a string that can be read back in, over the
+    Externals dictionary.
+**** literal
+    Make the object literal.
+**** integer
+    Convert the object to an integer.
+**** real
+    Convert the object to a real.
+
+** Stack tab menu
+*** text size
+    Change the point size of the text in the text canvas.
+*** object size
+    Change the default size for newly created items.
+*** pack
+    Pack down the stack.
+*** reset
+    Reset the input buffer.
+
+** Background menu
+*** Break Stack
+    Fork a process that breakpoints into the Stack object.
+*** Reboot
+    Reboot the process.
+*** Break Window
+    Fork a process that breakpoints into the Window object.
+*** Break Struct
+    Fork a process that breakpoints into the Struct object.
+
+========================================================================
+
+* Function Pallets
+
+** Debug
+    PostScript debugging functions
+*** backtrace
+    Pushes the current broken process's execution stack onto the stack.
+*** clear
+    Clears the stack.
+*** continue
+    Continues the broken processes.
+*** copy&continue
+    Copies the stack to the broken process and continues it.
+*** dbgenter
+    Enters the context of the current broken process.
+*** dbgexit
+    Exits the current broken process's context.
+*** dictstack
+    Displays out the dictionary stack.
+*** enter-it
+    Sends into the selected object and recursivly enters it.
+*** exec
+    Executes the top of stack.
+*** exit
+    Exits the recursivly entered object.
+*** kill
+    Kills the current broken process.
+*** listbreaks
+    Lists the currently broken processes.
+*** redefine-it
+    Defines the undefined name on the top of stack to be a synonym of
+    the selected name, and executes the top of stack. Handy for fixing
+    misspelling typos with the debugger.
+*** stack
+    Displays the stack.
+*** where
+    Displays a backtrace of the execution stack.
+
+** Number
+    Numeric keypad for entering numbers.
+*** Back
+    Delete last digit of number on top of stack.
+*** Enter
+    Push 0 onto stack.
+*** Reset
+    Zero the top of stack.
+*** 0-9
+    Append digit to top of stack.
+
+** Math
+    Various mathematical functions, vaguely grouped into sub-arrays.
+
+** Stack
+    Stack manipulation functions.
+    dup pop exch clear load def store get put aload forall [ ]
+
+** Window
+    Window manipulation functions.
+*** new
+    Make a new window, let the user reshape it, and setcanvas to
+    its ClientCanvas.
+
+========================================================================
+
+* Magic Editors
+
+** step
+*** ++
+*** --
+*** Step
+*** Exec
+
+** stepshift
+*** ++
+*** --
+*** Step
+*** <<
+*** >>
+*** Base
+*** Exec
+
+** digit
+*** 0-9
+*** Back
+*** Clear
+*** Exec
+
+** boolean
+*** True
+*** False
+*** Not
+*** Exec
+
+** filter
+*** Recompute
+*** Filter
+*** Keys
+*** Order
+*** view...
+
+** scroller
+*** Top
+*** Bottom
+*** Back
+*** Next
+*** Size
+*** ====
+*** view...
+
+** user
+*** User
+
+** definitions
+*** names...
+
+** object
+*** ClassName
+*** InstanceVars
+*** ClassVars
+*** Methods
+
+========================================================================
+
+* Key bindings
+
+** Backspace
+    erase character
+** Delete
+    erase character
+** Escape
+    complete
+** FunctionF10
+    help
+** FunctionL9
+    find completions
+** FunctionR11
+    scroll to bottom
+** FunctionR13
+    scroll down
+** FunctionR15
+    page down
+** FunctionR1
+    describe key
+** FunctionR2
+    bind selection to key
+** FunctionR3
+    execute selection
+** FunctionR7
+    scroll up
+** FunctionR9
+    page up
+** Meta-.
+    scroll to bottom
+** Meta-/
+    help
+** Meta->
+    scroll to bottom
+** Meta-?
+    help
+** Meta-B
+    bind selection to key
+** Meta-Delete
+    reboot process
+** Meta-Escape
+    find completions
+** Meta-K
+    describe key
+** Meta-Newline
+    input line
+** Meta-V
+    page up
+** Meta-X
+    execute selection
+** Meta-Z
+    scroll up
+** Meta-^_
+    reboot process
+** Meta-b
+    bind selection to key
+** Meta-k
+    describe key
+** Meta-v
+    page up
+** Meta-x
+    execute selection
+** Meta-z
+    scroll up
+** Newline
+    select line
+** Return
+    exec line
+** ^C
+    reset input
+** ^D
+    completions
+** ^K
+    stack to selection
+** ^L
+    load
+** ^S
+    insert selection
+** ^T
+    exchange
+** ^U
+    erase line
+** ^V
+    page down
+** ^W
+    erase word
+** ^X
+    erase line
+** ^Y
+    selection to stack
+** ^Z
+    scroll down
+
+========================================================================

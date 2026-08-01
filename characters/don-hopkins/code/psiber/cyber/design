@@ -1,0 +1,21 @@
+DL structures should be split up into model/view/controler
+
+model
+  container {} [] <> ()
+  index 1 *
+  put-proc {}
+  get-proc {}
+  (could this be a Selection? Or a selection accessor?)
+
+view
+  point-size 1
+  point-shrink 1.0
+  layout-proc {}
+  display-proc {}
+
+controler
+  point-proc {}
+  adjust-proc {}
+  menu-proc {}
+  children []
+  controls []

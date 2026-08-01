@@ -1,0 +1,106 @@
+* introduction
+
+** How does PostScript relate to other languages?
+Introduce parts of the language by comparing PostScript to other languages. 
+
+*** Forth
+**** Similarities
+stack based
+
+separate execution, paramater, and environment stack
+
+They both read in text, build up data structures in memory, and
+interpret the data structures.
+
+**** Differences
+Forth binding is at compile time.
+PostScript binding is at run time and scan time (autobind).
+
+Forth compiler (outer interpreter) reads in text and builds up functions
+out of pointers to other functions, and in-line literals.
+The compiler is built into the language, extensible by the user. 
+
+The Forth interpreter (inner interpreter) threads through compiled
+Forth code by dereferencing pointers until it reaches executable code.
+The causal (sic) user does not modify the inner interpreter.
+
+The PostScript scanner reads in text and builds up data structures that
+represent code, variables, and the environment, which the interpreter
+executes. You can't modify the PostScript scanner.
+But you can write your own data structure interpreters.
+
+Forth does no type checking at run time. The only things on the stack
+are 16 bit (or 32 bit, or whatever) numbers. Forth functions can't
+find out what type their arguments are by looking, they assume the
+things on the stack are of the type they're expecting.  You write
+different functions to handle for different types.
+
+Each PostScript object on the stack (or anywhere else) has a type.
+The stack is 64 bits wide, and each object includes type information,
+and either an atomic object (number, boolean, null, etc), or a pointer
+to the object body (array, file, string, etc). PostScript functions
+can be polymorphic. They can tell the type of the objects on the
+stack, so you can write functions that handle different types of
+arguments. 
+
+*** Lisp
+**** Similarities
+dynamic binding
+polymorphism
+code is composed of data structures
+**** Differences
+more direct control over your environment than in Lisp
+Because it's stack based, you can return multiple values without going
+through contortions.
+
+*** SmallTalk
+**** Similarities
+object oriented
+class based
+inheritance
+**** Differences
+
+*** English (or whatever)
+**** Similarities
+Literal objects -- nouns
+Executable objects -- verbs
+**** Differences
+Free form, the order of the words does not matter. What matters is the
+order of the objects on the stack. 
+
+*** Data types
+**** Integers, strings, boolean, null
+**** Names
+**** Polymorphic arrays
+**** Dictionaries
+
+*** Interpreter
+**** PS Functions are executable arrays
+**** 3 separate stacks:
+***** Operand stack
+****** Argument passing
+***** Execution stack
+****** Array containing PS objects being executed
+***** Dictionary stack
+****** A PS process's scope
+
+** NeWS extensions to PS
+*** Magic dictionaries
+**** Process, Canvas, Event, Font
+*** Object oriented programming package
+
+* left brain (analytical)
+  object deck (True Names)
+* right brain (creative)
+  cyberspace projector (Vacuum Flowers)
+
+* References:
+** True Names
+** Vacuum Flowers
+** Object Oriented Programming in NeWS
+  Owen M. Densmore
+  Proc. 3rd Usenix Computer Graphics Workshop, Monterey, CA, November, 1986
+** A User-Interface Toolkit in Object-Oriented PostScript
+  Owen M. Densmore, David S. H. Rosenthal
+** Adobe Red Book
+** Adobe Green Book

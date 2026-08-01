@@ -1,0 +1,3 @@
+#!/bin/csh -f
+setenv HOME `pwd`
+exec forth wm.exe fuwm-init.f -s wm 

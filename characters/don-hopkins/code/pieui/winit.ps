@@ -1,0 +1,31 @@
+% Autoloads for pie menus and tab windows. 
+% Load this from ".user.ps".
+% Make sure the file names are correct, relative to the directory
+% you started the server in!
+%
+systemdict begin
+
+  openwinversion 0 get 51 eq
+  dup { % V3?
+    /TNT 3 0 findpackage begin
+    currentdict beginautoload
+  } if
+
+  [ [ /ClassPieMenu
+      /ClassPieMenuService
+      /ClassPieMenuCanvas
+      /ClassPieMenuBag
+      /ClassPieMenuFramebuffer
+    ] { (tnt/win/pie.ps) } forall
+    [ /ClassTabWindow
+      /ClassTabBaseWindow
+      /ClassTabPopupWindow
+      /ClassPieMenuWindowManager
+    ] { (tnt/win/tab.ps) } forall
+  ] DefineAutoLoads
+
+  { % V3?
+    currentdict endautoload end
+  } if
+
+end % systemdict

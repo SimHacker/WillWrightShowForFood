@@ -1,0 +1,3146 @@
+%! emacs.ps         stuff used by the emacs PostScript drivers
+%
+% Emacs input and display mechanism for NeWS and PreScript
+%
+% Copyright (C) 1987,1988 UniPress Software, Inc.
+
+%
+% HISTORY:
+% 
+% {4}	21-Aug-88  Don Hopkins (don) at pink
+% 	Made TabEmacsWindow class.
+%	Made it work under 4Sight (SGI NeWS 1.1).
+% 	Put in discrete transformations and truncations in the hopes of
+%	achieving true resolution independance and wiping out font turds
+%	forever. (Fat chance!)
+% 	Added control panel support.
+% 
+% {3}	19-Jul-88  Don Hopkins (don) at dot
+%	Started rewrite.
+%	Added menu support.
+%	Added selection support.
+%	Fixed GC leaks.
+%
+% {2}	30-Apr-88  Mike Gallaher (mg) at unipress
+%	Extensive revisions for Emacs X2.20.
+%
+% {1}    5-Jun-87  Rehmi Post (rehmi) at repo
+%       created this first cut at the input mechanism, which is supposed
+%       to work as such:
+%       
+%           1) addfocusinterest focuses the keyboard on us when appropriate, &
+%           2) emacsinterest gets us the bucky bits and the mouse.
+%       
+%       these events are processed by emacsinputloop, which
+%           1) throws away events whose Action is set to /Discard,
+%           2) meta-izes the ascii keys if appropriate and passes the actual
+%              characters on to emacs' reader, and
+%           3) throws away mouse drag events unless a desire for them has been
+%              expressed.
+% 
+
+
+
+
+
+% ------------------------------------------------------------------------ %
+% Set up
+
+systemdict begin
+
+systemdict /EmacsDict known not {
+  /EmacsDict 400 dict def
+} if
+
+% /EmacsDict 400 dict def
+
+end % systemdict
+
+EmacsDict begin
+
+
+
+
+
+% ------------------------------------------------------------------------ %
+% Constants
+
+% If this is run through cpp, all the following keywords get replaced
+% by numbers. This stuff is here for when this embedded file has not 
+% been run through cpp.
+/tRunFile 0 def
+/tVersionOk 1 def
+/tFontInfo 2 def
+/tCreateFrame 3 def
+/tFrameBBox 4 def
+/tEngineType 5 def
+
+/DebugLevel 1 def
+
+/SlowMotion .04 60 div def
+
+
+
+
+% ------------------------------------------------------------------------ %
+% Emacs CPS interface.
+% Shorthand for the most frequently-used operations.
+
+% ps_CursorShow(cstring str, x, y)
+/CS {
+%%{(ps_CursorShow(%,%,%)\n) [4 index 4 index 4 index]} NARK
+  /cursorShow curDsp send
+} def
+
+% ps_CursorHide()
+/CH {
+%%{(ps_CursorHide()\n) []} NARK
+  /cursorHide curDsp send
+} def
+
+% ps_setHL0()
+/HL0 {
+%%{(ps_setHL0()\n) []} NARK
+  /hiliteOff curDsp send
+} def
+
+% ps_setHL1()
+/HL1 {
+%%{(ps_setHL1()\n) []} NARK
+  /hiliteOn curDsp send
+} def
+
+% ps_wipescreen()
+/CL {
+%%{(ps_wipescreen()\n) []} NARK
+  /clearScreen curDsp send
+} def
+
+% ps_blanks(x,y,n)
+/ER {
+%%{(ps_blanks(%,%,%)\n) [4 index 4 index 4 index]} NARK
+  /eraseBlanks curDsp send
+} def
+
+% ps_writechars(x, y, cstring str)
+/WC {
+%%{(ps_writechars(%,%,%)\n) [4 index 4 index 4 index]} NARK
+  /writeChars curDsp send
+} def
+
+% ps_inslines(y,dy,nl)
+/IL {
+%%{(ps_inslines(%,%,%)\n) [4 index 4 index 4 index]} NARK
+  /insertLines curDsp send
+} def
+
+% ps_dellines(y,dy,nl)
+/DL {
+%%{(ps_dellines(%,%,%)\n) [4 index 4 index 4 index]} NARK
+  /deleteLines curDsp send
+} def
+
+% ps_frametotop()
+/TP {
+%%{(ps_frametotop()\n) []} NARK
+  /totop curDsp send
+} def
+
+% ps_frametobottom()
+/BT {
+%%{(ps_frametobottom()\n) []} NARK
+  /tobottom curDsp send
+} def
+
+% ps_beginrepair()
+/BRP {
+%%{(ps_beginrepair()\n) []} NARK
+  /beginRepair curDsp send
+} def
+
+% ps_endrepair()
+/ERP {
+%%{(ps_endrepair()\n) []} NARK
+  /endRepair curDsp send
+} def
+
+% ps_switchframe(n)
+/SF {
+%%{(ps_switchframe(%)\n) [2 index]} NARK
+    /switchFrame curTrm send
+} def
+
+% ps_initialize(type, width, height) => tEngineType(type, width, height)
+/INIT {
+%%{(ps_initialize()\n) []} NARK
+    /EmacsDefaultWindow MainEmacsWindow def
+    /EmacsParentCanvas framebuffer def
+    /EmacsFile currentfile def
+    /EmacsMapNewFrames true def
+    /curFrame	null def
+    /curDsp	null def
+    /MainMenu	null def
+
+    /errored where { pop } { /errored /stopped load def } ifelse
+    /verbose?   false   def	% suppress runforemacs messages
+
+    tEngineType tagprint
+    framebuffer /GLCanvas known { 1 } % SGI 4Sight
+    { 0 } % Sun
+    ifelse typedprint
+    gsave
+      framebuffer setcanvas
+      clippath pathbbox points2rect
+      exch typedprint  typedprint pop pop
+    grestore
+} def
+
+% ps_createtrm()
+/CT {
+%%{(ps_createtrm()\n) []} NARK
+    /curTrm /new EmacsTrm send def
+    /curSounder /new EmacsSounder send def
+    /execfile currentfile dup null eq {pop (%stdin) (r) file} if def
+    {
+        clear
+	execfile status not { exit } if
+  DebugLevel 0 gt {
+ 	{ execfile cvx exec } stopped pop
+ 	%execfile cvx exec 
+  } {
+ 	{ execfile cvx exec } errored pop
+  } ifelse
+    } loop
+    /killallframes curTrm send
+    /curTrm	    null def
+    /curSounder	    null def
+    /curDsp	    null def
+    /curFrame	    null def
+} def
+
+% ps_createframe(ei)
+/CF {
+%%{(ps_createframe(%)\n) [2 index]} NARK
+    /createframe curTrm send	    % leaves positive id if success, -1 if fail
+    pop				    % but we ignore it for now
+} def
+
+% ps_resumeframe(n)
+/RF {
+%%{(ps_resumeframe(%)\n) [2 index]} NARK
+    /resumeframe curTrm send
+} def
+
+% ps_suspendframe(n)
+/SFR {
+%%{(ps_suspendframe(%)\n) [2 index]} NARK
+    /suspendframe curTrm send
+} def
+
+% ps_destroyframe(n)
+/DF {
+%%{(ps_destroyframe(%)\n) [2 index]} NARK
+    /destroyframe curTrm send
+} def
+
+% ps_openframe()
+/OF {
+%%{(ps_openframe()\n) []} NARK
+    /open curDsp send
+} def
+
+% ps_closeframe()
+/CLF {
+%%{(ps_closeframe()\n) []} NARK
+    /close curDsp send
+} def
+
+% ps_mapframe()
+/MF {
+%%{(ps_mapframe()\n) []} NARK
+    /map curDsp send
+    newprocessgroup
+} def
+
+% ps_unmapframe()
+/UF {
+%%{(ps_unmapframe()\n) []} NARK
+    /unmap curDsp send
+} def
+
+% ps_paintframe()
+/PF {
+%%{(ps_paintframe()\n) []} NARK
+    /paint curDsp send
+} def
+
+% ps_setframecolorscheme(string s)
+/SFCS {
+%%{(ps_setframecolorscheme(%)\n) [2 index]} NARK
+    /setframecolorscheme curDsp send
+} def
+
+% ps_setframelabel(string s)
+/SFL {
+%%{(ps_setframelabel(%)\n) [2 index]} NARK
+    /setframelabel curDsp send
+} def
+
+% ps_seticonlabel(string s)
+/SIL {
+%%{(ps_seticonlabel(%)\n) [2 index]} NARK
+    /seticonlabel curDsp send
+} def
+
+% ps_seticonimage(string s)
+/SII {
+%%{(ps_seticonimage(%)\n) [2 index]} NARK
+    /seticonimage curDsp send
+} def
+
+% ps_seticonlocation(x, y)
+/SILO {
+%%{(ps_seticonlocation(%,%)\n) [3 index 3 index]} NARK
+    /seticonlocation curDsp send
+} def
+
+% ps_setdefaultframeshape (int x, y, w, h)
+/SDS {
+%%{(ps_setdefaultframeshape (%,%,%,%)\n) [5 index 5 index 5 index 5 index]} NARK
+    /setdefaultshape curTrm send
+} def
+
+% ps_setframeshape (int x, y, w, h)
+/SFS {
+%%{(ps_setframeshape (%,%,%,%)\n) [5 index 5 index 5 index 5 index]} NARK
+    /setframeshape curDsp send
+} def
+
+% ps_framebbox (int x, y, w, h)  => tFrameBBox (h, w, y, x)
+/FB {
+%%{(ps_framebbox => (x, y, w, h)\n) []} NARK
+    {
+	/bbox curDsp send
+	tFrameBBox tagprint
+	typedprint
+	typedprint
+	typedprint
+	typedprint
+    } /withstreamsuspended curTrm send
+} def
+
+% ps_setframelocation(x, y)
+/SFLO {
+%%{(ps_setframelocation(%,%)\n) [3 index 3 index]} NARK
+    /setframelocation curDsp send
+} def
+
+% ps_setframesize(w, h)
+/SFSI {
+%%{(ps_setframesize(%,%)\n) [3 index 3 index]} NARK
+    /setframesize curDsp send
+} def
+
+% ps_setclientsize(x, y)
+/SCSI {
+%%{(ps_setclientsize(%,%)\n) [3 index 3 index]} NARK
+    /setclientsize curDsp send
+} def
+
+% ps_setmouseposition(x, y)
+/SMP {
+%%{(ps_setmouseposition(%,%)\n) [3 index 3 index]} NARK
+    /setMousePos curDsp send
+} def
+
+% ps_setmousecursor(ci)
+/SMC {
+%%{(ps_setmousecursor(%)\n) [2 index]} NARK
+    /setMouseCursor curFrame send
+} def
+
+% ps_OpenFont(int fi, string fname, int psize)
+/OFO {
+%%{(ps_OpenFont(%,%,%)\n) [4 index 4 index 4 index]} NARK
+    /OpenFont curTrm send                % index (or -1)
+    /SendFontInfo curTrm send
+} def
+
+% ps_CloseFont(int fi)
+/CFO {
+%%{(ps_CloseFont(%)\n) [2 index]} NARK
+    /CloseFont curTrm send
+} def
+
+% ps_SetFrameFont(int fi)
+/SFF {
+%%{(ps_SetFrameFont(%)\n) [2 index]} NARK
+    /SetFrameFont curTrm send
+} def
+
+% ps_beep()
+/BEEP {
+%%{(ps_beep()\n) []} NARK
+    /beep curSounder send
+} def
+
+% ps_tone(on)
+/TONE {
+%%{(ps_tone(%)\n) [2 index]} NARK
+    /tone curSounder send
+} def
+
+/DING {
+    /ding curDsp send
+} def
+
+/CLICK {
+    /click curSounder send
+} def
+
+
+
+% ------------------------------------------------------------------------ %
+% Utilities
+
+systemdict begin
+
+% string sendtoemacs -- 
+% 
+% sends the given string as input on the current terminal (and current frame).
+% Emacs will treat it as if it were typed by the user at that point.  This may
+% be invoked by any process in the server's client connection (to Emacs) at
+% any time.
+% 
+% BUG:  All Emaces running on the server will get the event, which may be
+% confusing if there's more than one.  It would be better to identify each
+% session by its EmacsTrm...
+% 
+/sendtoemacs { % string => -
+    createevent begin
+	/Name /SendEmacsTrm def
+	/ClientData exch def
+	/Canvas null def
+	currentdict
+    end
+    sendevent
+} def
+
+
+/sendtoemacsframe { % string frame => -
+    createevent begin
+	/Name /SendEmacsFrame def
+	/Action exch def
+	/ClientData exch def
+	/Canvas null def
+	currentdict
+    end
+    sendevent
+} def
+
+% any execforemacs --
+%
+% Executes the given object so as to pose no danger of the server connection
+% dying because of an error.  The object may be a string or a procedure.
+% It will be executed with the current frame's canvas as the currentcanvas,
+% and may use curDsp and curFrame.
+% 
+/execforemacs {
+  EmacsDict /efe 2 index put
+    curDsp
+    { newprocessgroup
+	gsave
+	    /ClientCanvas exch send setcanvas
+	    { cvx exec } stopped 
+	    pop
+	    % (\ex#error\n) (\ex#success\n) ifelse sendtoemacs
+	grestore
+%     } fork pop pop pop
+    } fork waitprocess pop pop pop
+} def
+
+/EmacsPsDir where {pop} {
+    {  (PSLIBDIR) getenv } errored {
+	pop	    % getenv leaves arg on stack if error!
+	(/usr/unimacs/lib/emacs/ps/)
+    } if
+    /EmacsPsDir exch def
+} ifelse
+
+% Note: If you define EmacsPsPath yourself, you better initialize it!
+% 
+/EmacsPsPath where {pop} {
+    /EmacsPsPath	    5 array def
+    EmacsPsPath 0   EmacsPsDir   put
+} ifelse
+
+% runforemacs seeks the given file in the directories listed in the array
+% EmacsPsPath and runs it.  LATER: don't do the path lookup if absolute
+% pathname!
+% 
+/runforemacs {	% name runforemacs --
+    5 dict begin
+	/strbuf	200 string def
+	mark exch
+	EmacsPsPath {			    % name dir
+	    {   strbuf copy		    % name dir'
+		1 index append		    % name fullname
+		dup (r) file cvx exch	    % name xfile   fullname
+	    } stopped {
+		pop pop pop
+	    } {
+ 		EmacsDict begin verbose? end {
+		   print ( loading...\n) print
+		} {pop} ifelse
+		exec exit
+	    } ifelse
+	} forall
+	cleartomark
+    end
+} def
+
+end % systemdict
+
+/NARK {
+  DebugLevel 1 gt {
+    exec
+    exch count 2 sub (%: %) sprintf exch
+    dbgprintf
+  } {
+    pop
+  } ifelse
+} def
+
+% Based on code stolen from nterm!
+
+/window-line-widths { % top [line widths] => -
+  /selection-widths exch def
+  /selection-top exch def
+  /selection-height selection-widths length def
+  /selection-bottom selection-top selection-height add 1 sub def
+} def
+
+/fake-selection { % x y x1 y1
+  /xyStartSelection curDsp send
+  /xyDragSelection curDsp send
+  curDsp /Selecting? get not {
+    /FinishSelection curDsp send
+  } if
+} def
+
+/start-selection { % - => -
+  curDsp /StartSelectionEvent get dup null eq {pop} {
+    /StartSelection curDsp send
+    curDsp /StartSelectionEvent null put
+  } ifelse
+} def
+
+/extend-selection {
+  curDsp /Selecting? true put
+  outline-selection
+} def
+
+/outline-selection {
+  /ExtendSelection curDsp send
+} def
+
+/selection-line-width { % y => width
+  selection-top sub selection-widths exch get 1 add
+} def
+
+/finish-selection {
+  /FinishSelection curDsp send
+} def
+		
+/show-selection {
+  true /DrawSelection curDsp send
+} def
+
+/hide-selection {
+  false /DrawSelection curDsp send
+} def
+
+% This should use some lower level mechanism to stuff the literal string
+% into the buffer, instead of typing it in through the keymap. Come to 
+% think of it, you should be able to stuff the selection either way.
+
+/stuff-selection { % SelectionName => -
+   {
+     10 dict begin
+         /CurrentSelection null def
+	 % X11/NeWS: Fixed to use selectionrequest
+	 10 dict dup /ContentsAscii dup put
+         exch selectionrequest /SelDict exch def
+         SelDict null ne {
+            SelDict /ContentsAscii get /UnknownRequest ne {
+                  /CurrentSelection SelDict /ContentsAscii get def
+            } if
+         } if
+         CurrentSelection null ne {
+	   [ /BUCKY
+	     % (This mapping should be unnecessary with literal stuffing.)
+	     CurrentSelection dup length string copy % change our own copy...
+	     0 1 2 index length 1 sub {
+	       2 copy get 10 ne {pop} { % map nl to cr
+		 1 index exch 13 put
+	       } ifelse
+	     } for
+% 	     CurrentSelection {dup 10 eq {pop 13} if} forall % Map nl to cr
+	   ] /sendstring curFrame send
+         } if
+     end
+   } fork pop pop
+} def
+
+/stuff-primary-selection {
+  /PrimarySelection stuff-selection
+} def
+
+/stuff-shelf-selection {
+  /ShelfSelection stuff-selection
+} def
+
+/primary-selection-to-shelf { % - => -
+   % --- Put the primary selection onto the NeWS shelf
+   {
+     10 dict begin
+         /SelDict /PrimarySelection getselection def
+         SelDict null ne {
+            /SelDict1 SelDict length dict def
+            SelDict SelDict1 copy
+            SelDict1 /ShelfSelection setselection 
+         } if
+     end
+   } fork pop
+} def
+
+% Maybe this should be a local instance variable!
+/SelectionDict 10 dict dup begin    % Dictionary for i/f to system selections 
+  /ContentsAscii null		def
+  /SelectionObjSize 1		def
+  /SelectionResponder null	def
+end def
+
+% This uses the buffer model.
+/set-primary-selection { % string => -
+  SelectionDict /ContentsAscii 3 -1 roll put
+  SelectionDict /Canvas curDsp /ClientCanvas get put
+  SelectionDict /SelectionHolder curFrame /inputproc get put
+  SelectionDict /PrimarySelection setselection
+} def
+
+% Selection should be reworked to use the request model.
+% Make SelectionResponder be the Dsp's event manager? Or the frame's?
+% Clear the selection when destroying a frame holding it. ??
+
+% ------------------------------------------------------------------------ %
+% Class definitions.
+
+% (emacsclasses.ps) runforemacs
+%------------------------------------------------------------------------
+%! emacsclasses.ps	Class definitions for Unipress Emacs
+% 
+% Defines the classes EmacsTrm, EmacsFrame, and EmacsSounder.
+
+EmacsDict begin % Must do this to get out of errordict!!!
+
+% ------------------------------------ %
+% EmacsTrm -- one per server connection, manages frames, syncs frame input
+
+/EmacsTrm Object
+dictbegin
+
+    % NOTE:  maxFrames is currently limited by the frame id encoding scheme
+    % (see TrmPScodes.h). If you want more frames, you'll have to reserve more
+    % codes for frames or use a different scheme for encoding them.
+    % 
+    /maxFrames	  256 def    % max # frames per term (per server)
+    /trmFrames    null def  % the frames on this term
+    /trmNumFrames null def  % number of frames on this term
+
+    /maxFonts	  64 def    % max # fonts per term (per server)
+    /trmFonts	  null def  % the fonts open on this term...
+    /trmFontNames null def  % ... their family names ...
+    /trmFontSizes null def  % ... and their sizes
+    /trmNumFonts  null def  % number of fonts open on this term
+    /defaultpointsize 12 def
+    /defaultfont (Screen) def  % NB: must always be available!
+
+
+    /focusFrameID -1 def    % frame that last sent string to client
+    /kbdMonitor	  null def  % synchronizes user input events from all frames
+			    % that are multiplexed onto the trm to the client
+    
+    /tickInterval 0.5 def  % interval of periodic timer
+
+    gsave
+      framebuffer setcanvas
+      clippath pathbbox points2rect
+      /framebuffer-height exch def
+      /framebuffer-width exch def
+      pop pop
+    grestore
+    % default shape of new frames; if width zero, user will be asked to drag
+    % shape out. These are frame parent coords, not client coords (i.e.,
+    % not rows/cols).
+    /dflFrameW	   300 def
+    /dflFrameH	   100 def
+    /dflFrameX	   framebuffer-width dflFrameW sub def
+    /dflFrameY	   framebuffer-height dflFrameH sub def
+
+    /terminterest null def	    % interests with null canvas
+    /termeventmgr null def	    % interests with null canvas
+    /timerEvent	null def	    % timer event
+dictend
+classbegin
+    /BUCKY  16#80 def
+
+    /new {
+	/new super send begin
+	    /kbdMonitor	    createmonitor def
+	    /trmFrames	    maxFrames array def
+	    /trmNumFrames   0 def
+	    /trmFonts	    maxFonts array def
+	    /trmFontNames   maxFonts array def
+	    /trmFontSizes   maxFonts array def
+	    /trmNumFonts    0 def
+
+	    % Store into userdict
+            /curFrame null store	% current display frame
+            /curDsp null store
+
+	    /terminterest createevent def
+	    terminterest  begin
+	      /Name [/SendEmacsTrm /SendEmacsFrame /EmacsTrmTick ] def
+	      /Canvas null def
+	    end
+
+	    /timerEvent createevent def
+	    timerEvent begin
+		/Name /EmacsTrmTick def
+		/Canvas null def
+	    end
+	    /termeventmgr {
+		terminterest expressinterest
+		{
+		    clear
+		    awaitevent
+		    dup /Name get {
+			/EmacsTrmTick {
+ 			    ageallframes
+%(Tick % %\n) [2 index currentprocess] dbgprintf
+			    pop
+			    timerEvent begin /TimeStamp currenttime tickInterval add def end
+			    timerEvent sendevent
+			}
+			/SendEmacsTrm {
+			  [ exch BUCKY exch /ClientData get ] % no bucky bits
+			  focusFrameID stringFromFrame
+			}
+			/SendEmacsFrame {
+			  dup % /ClientData get
+			  [ exch BUCKY exch /ClientData get ] % no bucky bits
+			  exch /Action get
+			  stringFromFrame
+			}
+			/Exit { 
+%(Exiting... %\n) [currentprocess] dbgprintf
+pop exit }
+		    } case
+		} loop
+%(Loop terminating... %\n) [currentprocess] dbgprintf
+		terminterest revokeinterest
+	    } fork def
+
+	    timerEvent /Process termeventmgr put
+	    timerEvent /TimeStamp currenttime tickInterval add put
+	    timerEvent sendevent	    % start the periodic timer
+
+ 	    0 () 0 OpenFont pop	% define default font 0
+
+	    currentdict
+	end
+    } def
+
+    /killallframes {
+	newprocessgroup
+	trmFrames {
+	    dup null ne {
+		dup /suspend exch send
+		/destroy exch send
+	    } {pop} ifelse
+	} forall
+
+	% Revoke the outstanding timer event, turn it into an /Exit event,
+	% and send it so the event mgr process will kill itself.
+	% 
+	timerEvent recallevent
+	timerEvent /Name /Exit put
+	timerEvent sendevent
+
+% 	0 1 maxFrames 1 sub { trmFrames exch null put } for
+
+	% Set all the compound objects to null, to make GC more likely
+	/trmFrames	null def
+	/termeventmgr	null def    % it will kill itself...
+	/trmFonts	null def
+	/trmFontNames   null def
+	/trmFontSizes   null def
+	/kbdMonitor	null def
+    } def
+
+    % ageallframes sends an ageicon event to all frames in this trm
+    % 
+    /ageallframes {
+	trmFrames null ne {
+	    trmFrames {
+		dup null eq {
+		    pop
+		} { 
+		    { /ageicon frameDsp send } exch send
+		    pause
+		} ifelse
+	    } forall
+	} if
+    } def
+
+    % creates new frame, assigning it the given id number.  Returns positive
+    % id number, or -1 if the frame couldn't be created.
+    %
+    /createframe { % trmframeid => trmframeid or -1
+	trmNumFrames maxFrames lt {		    % gid
+	    dup					    % gid gid
+	    EmacsParentCanvas /new EmacsFrame send  % gid frame
+	    /curFrame exch store
+	    newprocessgroup
+% Moved to EmacsFrame /new
+% 	    dup trmFrames exch curFrame put	    % gid
+	    /trmNumFrames trmNumFrames 1 add def    % gid
+	    /switchTo curFrame send		    % gid
+	    focusinvalid
+	} {
+	    pop -1
+	} ifelse
+    } def
+    
+    /destroyframe { % n => -
+	dup
+	trmFrames exch get dup null ne {
+	    newprocessgroup
+	    /destroy exch send
+	    trmFrames exch null put
+	    /trmNumFrames trmNumFrames 1 sub def
+	} { pop pop } ifelse
+	focusinvalid
+    } def
+    
+    /switchFrame { % n => -
+	dup trmFrames exch get			% n frame
+	dup null ne {
+	    /curFrame exch store    		% n
+	    /switchTo curFrame send
+	} { pop } ifelse
+	focusFrameID ne {			% a cheap precaution...
+	  focusinvalid
+	} if
+    } def
+
+    /resumeframe { % n => -
+	trmFrames exch get dup null ne { /resume exch send } { pop } ifelse
+	focusinvalid
+    } def
+
+    /suspendframe { % n => -
+	trmFrames exch get dup null ne { /suspend exch send } { pop } ifelse
+	focusinvalid
+    } def
+
+    % sets default shape for new frames.  Called by client.
+    /setdefaultshape { % x y w h => -
+	/dflFrameH exch def
+	/dflFrameW exch def
+	/dflFrameY exch def
+	/dflFrameX exch def
+    } def
+
+    %	gets default shape for new frames.  Called by frame /new.
+    %
+    % - => x y w h true		if default frame shape set
+    % - => false		if no default frame shape set
+    % 
+    /getdefaultshape {
+	dflFrameW 0 eq { false } {
+	    dflFrameX dflFrameY dflFrameW dflFrameH true
+	} ifelse
+    } def
+
+    %----------------------------------------------------------------------
+    % managing fonts
+    %----------------------------------------------------------------------
+
+    % Opens the font in the given family of the given size, assigning the font
+    % the given index.  Returns the index, which may later be given to
+    % /CloseFont and /SetFrameFont.  If the given font does not exist, returns
+    % -1.  Be sure that defaultfont names a font that is always available!
+    % 
+    /OpenFont { % index family size => index
+%(OpenFont index % family % size %\n) [4 index 4 index 4 index] dbgprintf
+	exch dup nullstring eq { pop defaultfont } if 
+	exch dup 0 eq { pop defaultpointsize } if
+	2 copy
+        % Check for invalid (or nonexistent) font by
+        % catching the stop the error handler will issue.
+        exch cvn { findfont } errored {
+            pop pop pop pop			% Remove both fn psize pairs.
+% 	    pop					% pop the given index
+% 	    -1					% return failure
+            trmFontNames 0 get
+	    trmFontSizes 0 get
+	    2 copy exch cvn findfont } if
+%         } {					% index family size size font
+	    /trmNumFonts 6 -1 roll def		% family size size font
+            exch scalefont			% family size font
+	    trmFonts trmNumFonts 3 -1 roll put	% family size
+	    trmFontSizes trmNumFonts 3 -1 roll put  % family
+	    trmFontNames trmNumFonts 3 -1 roll put  % 
+	    trmNumFonts				    % index
+%	} ifelse
+%(OpenFont => %\n)[2 index] dbgprintf
+    } def
+
+    /CloseFont { % index => -
+	dup trmFonts exch get null eq { pop } {
+	    trmFonts exch null put
+	    /trmNumFonts trmNumFonts 1 sub def
+	} ifelse
+    } def
+
+    /SetFrameFont { % index => -
+      trmFonts exch get
+      {SetFrameFont getdimensions} curDsp send
+      {sendfcrsz sendfcpnt} curFrame send
+    } def
+
+    % returns default font for new frames
+    % 
+    /getdefaultfont { % - => font
+      trmFonts 0 get
+    } def
+
+    /getfontinfo { % index => family size
+	dup trmFontNames exch get
+	exch trmFontSizes exch get
+    } def
+
+    /SendFontInfo { % index => -
+	dup 0 lt { pop 0 } if	% index
+	[ FONTINDEX 3 -1 roll	% mark FI index
+	  dup getfontinfo	% mark FI index family size
+	  FONTSIZE exch		% mark FI index family FS size
+	  FONTNAME 4 -1 roll	% mark FI index FS size FN family
+	  dup length exch	% mark FI index FS size FN len family
+	] stringToClient	% 
+    } def
+
+    %----------------------------------------------------------------------
+    % multiplexing events from frames onto client channel
+    %----------------------------------------------------------------------
+
+    % These encode the attributes of objects associated with the terminal.
+    % See EmacsKbd for encoding attributes of objects associated with frames.
+    % 
+    /FRAME	16#c0 def
+    /FONTINDEX	16#d0 def
+    /FONTNAME	16#d1 def
+    /FONTSIZE	16#d2 def
+    /FONTWIDTHS	16#d3 def
+
+    /stringToClientDict 10 dict def
+    stringToClientDict begin
+%       /doit { (<%> ) [2 index] dbgprintf dup type exec } def
+      /doit { dup type exec } def
+      /stringtype { print } def
+      /integertype { EmacsFile exch write } def
+      /nametype { cvx exec doit } def
+      /arraytype { //doit forall } def
+      /nulltype { pop } def
+    end
+
+    /stringToClient { % str => -
+      EmacsFile status {
+        kbdMonitor {
+          stringToClientDict begin doit end
+          EmacsFile flushfile
+        } monitor
+      } { killallframes } ifelse
+    } def
+
+    /encodeframe { % frame => code
+%       16#0f and FRAME or
+      255 and FRAME exch
+    } def
+
+    % stringFromFrame -- sends string to client
+    % This synchronizes input from different frames and
+    % keeps track of the frame that has input focus.
+    % Guaranteed to send the focus frame if frameid is null.
+    % Guaranteed *not* to send the focus frame if frameid is focusFrameID.
+    % 
+    /stringFromFrame { % str frame => -
+      dup focusFrameID eq  1 index null ne  and  {pop} {
+	/focusFrameID exch store
+        [ focusFrameID encodeframe 4 -1 roll ]
+      } ifelse
+      stringToClient
+    } def
+
+    % sends length byte, then string to client via current term
+    % 
+    /cStringFromFrame { % cstring => -
+	[ exch dup length exch ] stringFromFrame
+    } def
+
+    % sends a tag, a length byte, then string to client
+    % 
+    /tagStrFromFrame { % tag string => -
+	[ 3 -2 roll dup length dup exch ] stringFromFrame
+    } def
+
+    % focusinvalid forces the focus frame to be sent upon the next
+    % stringFromFrame (unless that call gives focusFrameID as the frame id)
+    % 
+    /focusinvalid {
+      /focusFrameID -1 store
+    } def
+
+    % withstreamsuspended executes its procedure argument with the server-
+    % to-client stream locked.  If any other processes try to send anything
+    % over the stream via string-to-client, they will block until the
+    % stream is unlocked.  All cps functions that return values should
+    % be *entirely* encapsulated as a procedure and executed by
+    % withstreamsuspended.  This avoids encoded frame events from interfering
+    % with the cps replies.
+    %
+    /withstreamsuspended { % func => -
+	kbdMonitor {
+	    cvx exec
+	} monitor
+    } def
+
+classend def
+
+
+
+% ------------------------------------ %
+% EmacsFrame
+% 
+% The EmacsKbd encodes user input events directed at its parent frame into a
+% bytestream sent to the client via the frame's parent EmacsTrm.  The EmacsTrm
+% synchronizes the events from all the frames; it is the only thing that sends
+% anything to the client channel (except for cps replies).
+%
+
+/EmacsFrame Object
+dictbegin
+    /frameIndex 0 def		    % id of this frame
+    /frameParentCanvas null def
+
+    /frameDsp null def
+    /frameKbd null def
+
+    /isResumed false def
+    /cursorShapes [
+	/ptr	/beye	/rtarr	    /xhair	/xcurs	    /hourg
+    ] def
+    /cursorMasks [
+	/ptr_m	/beye_m	/rtarr_m    /xhair_m	/xcurs_m    /hourg_m
+    ] def
+
+% from EmacsKbd
+    /localdict null def
+    /inputCanvas null def	    % canvas we service events on
+    /sisterDsp null def		    % dsp we ask for size
+
+    /emacsinterest null def	    % our own special interests
+    /globalinterest null def	    % interests with null canvas
+    /motioninterest null def	    % matches mouse motions (for collapsing)
+    /thekbdinterests null def	    % addkbdinterests
+    /fkeyinterest null def	    % addfunctionstringsinterest
+    /focusinterest null def	    % prescript only
+    /stopmainloopevent null def
+
+    /MotionOnlyEvent null def
+    /MotionOnlyDelay .075 60 div def
+    /NonMotionPend false def
+
+    /inputproc null def
+    /isResumed false def
+    /collapsemouse true def
+
+    /metadown false def
+    /shiftdown false def
+    /ctrldown false def
+
+    /EmacsMouseX -1 def
+    /EmacsMouseY -1 def
+    /MouseWasDragged false def
+    /MouseMotionEvent null def
+
+dictend
+classbegin
+
+    /new {					% id canvas => EmacsFrame
+        newprocessgroup				% so we can kill at will
+
+        /new super send begin			% index parent --
+	    /frameParentCanvas exch def
+	    /frameIndex exch def
+
+	    /localdict 20 dict def
+
+            false setprintermatch
+
+	    % order of the following is important!
+	    % 
+ 	    curTrm /trmFrames get frameIndex self put
+
+	    gsave 
+	      frameParentCanvas setcanvas % SGIWindow /new depends on CTM!
+	      /frameDsp
+		  frameIndex frameParentCanvas /new EmacsDefaultWindow send
+	      def
+	    grestore
+
+	    /getdefaultshape curTrm send
+	    /reshape /reshapefromuser ifelse frameDsp send
+	    /getdimensions frameDsp send pop pop
+	    /inputCanvas {CheckCanvases ClientCanvas} frameDsp send def
+
+	    % start frame input event dispatcher for this canvas
+	    startdispatch
+
+	    currentdict
+        end
+    } def
+
+    /resume {
+	/resume frameDsp send	    % create canvases, make visible,
+				    % start window event dispatcher;
+				    % damage invokes paint proc
+	/isResumed true def
+
+	% Tell client:
+	{
+	  ColorScheme
+	  IconImage
+	  IconLabel
+	  FrameLabel
+	  Iconic?
+	  IconX null ne { IconX IconY }
+          { FrameX FrameY FrameHeight add IconHeight sub } ifelse
+	  getdimensions
+	  FrameWidth FrameHeight
+	  FrameX FrameY } frameDsp send
+	sendfmmov				% frame location
+	sendfmrsz				% frame size
+ 	sendfcrsz				% frame client size
+ 	sendiconmoved				% icon location
+	{sendfmcls} {sendfmopn} ifelse		% iconic or not
+	EmacsMapNewFrames
+	{sendfmmap} {sendfmunm} ifelse		% mapped or not
+	sendframelabel
+	sendiconlabel
+	sendiconimage
+	sendcolorscheme
+
+	sendframeresumed
+
+% 	EmacsMapNewFrames not {
+% 	    sendendsp
+% 	} if
+    } def
+
+    /suspend {
+	/isResumed false def
+	/suspend frameDsp send
+    } def
+
+    % If sent destroy while the frame is running (usually by the frame menu),
+    % send a "zapped" message to the client telling it to take down the frame.
+    % The client will send suspend followed by another destroy, but this time
+    % the frame is suspended so we really take it down.
+    % 
+    /destroy {
+	isResumed {
+	    sendfmzap
+	} {
+	    stopdispatch
+	    suspend
+	    /destroywin frameDsp send
+	} ifelse
+    } def
+
+    /switchTo {
+	/curDsp frameDsp store
+ 	/beginRepair frameDsp send
+ 	/endRepair frameDsp send
+    } def
+
+    /setMouseCursor { % n => -
+	dup cursorShapes length lt {		% n
+	    dup	cursorShapes exch get		% n shape
+	    exch	cursorMasks exch get	% shape mask
+	    /ClientCanvas frameDsp send
+	    setstandardcursor
+	} { pop } ifelse
+    } def
+
+% From EmacsKbd
+
+    %----------------------------------------------------------------------
+    % Encoding user input events to client (client half is in TrmPScodes.h)
+    %----------------------------------------------------------------------
+
+    /BUCKY	16#80 def
+    /BUTUP	16#a0 def
+    /BUTDN	16#a8 def
+    /MDRAG	16#b0 def
+    /FMZAP	16#b1 def
+    /FMOPN	16#b2 def
+    /FMCLS	16#b3 def
+    /FMENT	16#b4 def
+    /FMEXT	16#b5 def
+    /FMRSZ	16#b6 def
+    /FMMOV	16#b7 def
+    /FCRSZ	16#b8 def
+    /FCPNT	16#b9 def
+    /FMMAP	16#ba def
+    /FMUNM	16#bb def
+    /ICONMOVED	16#bc def
+    /COLORSCHEME 16#bd def
+    /ENDSP	16#be def
+    /NODSP	16#bf def
+
+    /FRAMELABEL	16#d4 def
+    /ICONLABEL	16#d5 def
+    /ICONIMAGE	16#d6 def
+    /FCDAM	16#d7 def
+
+    /PC_META	1 def
+    /PC_SHIFT	2 def
+    /PC_CTRL	4 def
+
+%    /FRAMERESUMED (\200\033[300z) def
+    /FRAMERESUMED  [BUCKY (\200\033[300z)] def
+
+
+    /sendstring { % string => -
+      frameIndex /stringFromFrame curTrm send
+    } def
+
+    /poststring { % string => -
+      isResumed {sendstring} {pop} ifelse
+    } def
+
+    /encode16 { % 16bit => lo hi
+      dup 255 and 
+      exch -8 bitshift floor
+    } def
+
+    /encodexy { % code x y => code xlo xhi ylo yhi
+      localdict begin
+        /y exch def  /x exch def
+	x encode16 y encode16
+      end
+    } def
+
+    /encodexywh { % code x y w h => code xlo xhi ylo yhi wlo whi hlo hhi
+      localdict begin
+        /h exch def  /w exch def
+        /y exch def  /x exch def
+	x encode16 y encode16 w encode16 h encode16
+      end
+    } def
+
+    /setemacsmousepos { % event => -
+      begin gsave
+% X11/NeWS: The following line didn't work since X11/NeWS doesn't molest the
+% /Canvas fields of delivered events. -Don
+%        Canvas setcanvas % event loc reported relative to currentcanvas
+        Interest /Canvas get % Look in the interest instead.
+	setcanvas % event loc reported relative to currentcanvas
+        frameDsp /cellMatrix get setmatrix
+        /EmacsMouseX XLocation
+        /EmacsMouseY YLocation 1 add
+      end grestore
+      def def
+    } def
+
+    /encodemousepos { % event code => code xlo xhi ylo yhi
+      exch setemacsmousepos
+      EmacsMouseX EmacsMouseY encodexy
+    } def
+
+    /encodemousebutton { % event button => event code
+	16#07 and
+        1 index /Action get
+	/DownTransition eq BUTDN BUTUP ifelse
+	or
+    } def
+
+    /4Sight framebuffer /GLCanvas known def
+
+    /shift-cases [
+      4Sight { } if 
+      /Meta { PC_META or }
+      4Sight { 28421 28422 } if
+      /Shift { PC_SHIFT or }
+      4Sight { 28419 28561 } if
+      /Control { PC_CTRL or }
+      /Default {} % Beta 1.1 case bug
+    ] def
+
+    /encodebuckybits { % event => code
+      0  exch /KeyState get 
+      { shift-cases case } forall
+      BUCKY or
+    } def
+
+    /sendmousebutton { % event button => -
+      [ 2 index encodebuckybits		% event button [ bucky
+        4 -2 roll			% [ bucky event button
+        encodemousebutton		% [ bucky event code
+	encodemousepos			% [ bucky code xlo xhi ylo yhi
+      ] poststring
+    } def
+
+    /sendmousemotion {	% event => -
+      EmacsMouseX EmacsMouseY
+      [ 4 -1 roll MDRAG encodemousepos ] % sets EmacsMouse[XY]
+      3 -1 roll EmacsMouseX eq
+      3 -1 roll EmacsMouseY eq
+      and {pop} { % don't send if no change!
+	poststring
+
+	frameDsp /Selecting? get {
+	  dup /DragSelection frameDsp send 
+	} if
+      } ifelse
+    } def
+
+    /sendfcrsz {   % w h => -
+      [ FCRSZ
+	4 -2 roll
+        encodexy
+      ] poststring
+    } def
+
+    /sendfmrsz {   % w h => -
+      [ FMRSZ
+	4 -2 roll
+	encodexy
+      ] poststring
+    } def
+
+    /sendfmmov { % x y => -
+      [ FMMOV
+	4 -2 roll
+	encodexy
+      ] poststring
+    } def
+
+    /sendiconmoved { % x y => -
+      [ ICONMOVED
+	4 -2 roll
+ 	encodexy
+      ] poststring
+    } def
+
+    /sendframelabel { % label => -
+      [ FRAMELABEL
+	3 -1 roll
+	dup length exch
+      ] poststring
+    } def
+
+    /sendiconlabel {   % label => -
+      [ ICONLABEL
+	3 -1 roll
+	dup length exch
+      ] poststring
+    } def
+
+    /sendiconimage {   % imagename => -
+      [ ICONIMAGE
+	3 -1 roll
+	80 string cvs
+	dup length exch
+      ] poststring
+    } def
+
+    /sendcolorscheme {
+      [ COLORSCHEME
+	3 -1 roll
+	dup length exch
+      ] poststring
+    } def
+
+    /sendascii {    % event code --
+      [ 3 -1 roll encodebuckybits	% code mark bucky
+        3 -1 roll 16#7f and
+      ] poststring
+    } def
+
+    /sendframe { null poststring }  def	% trm will send only frame id
+    /sendfmzap { FMZAP poststring } def
+    /sendfmopn { FMOPN poststring } def
+    /sendfmcls { FMCLS poststring } def
+    /sendfment { dup setemacsmousepos  FMENT poststring } def
+    /sendfmext { FMEXT poststring } def
+    /sendfmmap { FMMAP poststring } def
+    /sendfmunm { FMUNM poststring } def
+    /sendframeresumed { FRAMERESUMED poststring } def
+    /sendfcpnt { FCPNT poststring } def
+    /sendfcdam { % x y w h => -
+      [ FCDAM
+	6 -4 roll
+        encodexywh
+      ] poststring
+    } def
+
+    /sendnodsp { NODSP poststring } def
+    /sendendsp { ENDSP poststring } def
+
+    %----------------------------------------------------------------------
+    % Dispatching on user input events
+    %----------------------------------------------------------------------
+
+    % onnonmotionevent is invoked by all nonmotion event handlers (for
+    % keyboard keys, mouse buttons, etc., but not mouse motions).
+    % It sends the NODSP token to indicate that non-motion event is pending.
+    % It sets NonMotionPend to true and re-issues the MotionOnlyEvent
+    % timeout event for MotionOnlyDelay seconds hence.
+    % 
+    /onnonmotionevent {
+%  	MotionOnlyEvent recallevent
+%   	NonMotionPend not {
+%      	    sendnodsp
+%  	    /NonMotionPend true store
+%   	} if
+%  	MotionOnlyEvent /TimeStamp currenttime MotionOnlyDelay add put
+%  	MotionOnlyEvent sendevent
+    } def	
+
+    % dispatchevent is invoked after awaitevent, after the action installed in
+    % the interest /Name dictionary has been executed.  It services the events
+    % that matched interests other than emacsinterest.  Events matched by
+    % emacsinterest will have been serviced by their associated action in that
+    % interest's /Name dictionary.  Like those actions, this sends the proper
+    % codes that represent the event to the client.  The events serviced here
+    % include:
+    % 
+    %	InsertValue --	comes from the EIS upon function keys and selection
+    %	SendEmacs --	comes from other processes via sendtoemacs
+    %
+    % 
+    /dispatchevent { %  event --
+
+%	dup (% Name % Action % TimeStamp % Canvas %\n) exch
+%	[ exch dup
+%	  exch dup /Name get
+%	  exch dup /Action get
+%	  exch dup /TimeStamp get 60 mul
+%	  exch /Canvas get ]
+%	dbgprintf
+
+	dup /Name get dup type /integertype eq {	% ascii key?
+	    1 index /Action get /DownTransition eq {
+		onnonmotionevent
+		sendascii
+	    } {
+		pop pop
+	    } ifelse
+	} {
+	    {
+		/InsertValue {
+		    % Ignore state of shift keys!!!
+		    [ exch BUCKY exch /Action get ] % no bucky bits
+		    poststring
+		}
+		/SendEmacs {
+		    [ exch BUCKY exch /Action get ] % no bucky bits
+		    poststring
+		}
+
+		% We can't put /MouseDragged in the emacsinterest /Name
+		% dictionary because it does its own awaitevent.  When invoked
+		% as an interest procedure, this causes mouse events to be
+		% misordered.  We give it its own interest and service it here
+		% instead.
+		% 
+ 		/MouseDragged	{
+		    MouseMotionEvent null ne {
+			MouseMotionEvent recallevent
+		    } if
+
+		    /MouseMotionEvent exch def
+		    MouseMotionEvent begin
+		      /Name /MouseMotion def
+		      /TimeStamp currenttime SlowMotion add def
+		    end
+		    MouseMotionEvent sendevent
+%   		    dup
+%  		    {   % collapse MouseDrag events
+%  			collapsemouse not { exit } if
+%  			pause
+%  			countinputqueue 0 le { exit } if
+%  			{ countinputqueue pause countinputqueue
+%  			  eq {exit} if
+%  			  pause
+%  			} loop
+%  			awaitevent
+%  			dup /Name get
+%  			/MouseDragged eq {
+%  			    exch pop
+%  			    % replace tos event with this one
+%  			} {
+%  			    sendevent exit
+%  			    % not MDrag, resend and process
+%  			} ifelse
+%  		    } loop
+%  		    sendmousemotion
+ 		}
+		/Default	{ pop }
+	    } case
+	} ifelse
+    } def
+
+    %----------------------------------------------------------------------
+    % Creating and revoking Emacs interests
+    %----------------------------------------------------------------------
+
+    % create interests and express them
+    % 
+    /addemacsinterests {
+	/stopmainloopevent createevent begin
+	    /Name /StopMainLoop def
+	    /Canvas currentcanvas def
+	    currentdict
+	end def
+
+	/globalinterest createevent begin   % matches all canvases
+	    /Name /SendEmacs def
+	    /Canvas currentcanvas def
+	    currentdict
+	end def
+
+	/MotionOnlyEvent createevent begin
+	    /Name /MotionOnly def
+	    /Canvas currentcanvas def
+	    currentdict
+	end def
+	
+	/MouseMotion createevent begin
+	    /Name /MouseMotion def
+	    /Canvas currentcanvas def
+	    currentdict
+	end def
+
+	/motioninterest createevent begin
+	    /Name /MouseDragged def
+	    /Canvas currentcanvas def
+	    currentdict
+	end def
+
+	% emacsinterest matches events only on the input canvas.
+	% Other events generated elsewhere that match other interests
+	% are handled by dispatchevent.
+	% 
+	/emacsinterest createevent begin
+            /Canvas currentcanvas def
+	    /Name systemdict /some_name_only_known_to_prescript known { null } {
+		dictbegin
+		    % Each of the following procedures is invoked with the
+		    % event on top of the stack, and leaves the event on the
+		    % stack upon exit.
+		    % 
+		    /StopMainLoop   { stop	} def
+
+		    /EnterEvent	    { sendfment } def
+ 		    /ExitEvent	    { sendfmext } def
+
+		    /MotionOnly {
+			NonMotionPend {
+ 			    sendendsp
+			    /NonMotionPend false def
+			} if
+		    } def
+
+		    /MouseMotion {
+			/MouseMotionEvent null def
+			dup sendmousemotion
+		    } def
+
+		    %/Meta { dup sendbuckybits } def
+		    %/Shift { dup sendbuckybits } def
+		    %/Control { dup sendbuckybits } def
+
+		    /LeftMouseButton {
+			dup /Action get /DownTransition eq {
+			  frameDsp /StartSelectionEvent 2 index put
+			} {
+			  frameDsp /Selecting? get {
+ 			    dup {DragSelection FinishSelection} frameDsp send
+			  } if
+			} ifelse
+			dup onnonmotionevent 1 sendmousebutton
+		    } def
+
+		    /MiddleMouseButton {
+			dup onnonmotionevent 2 sendmousebutton
+		    } def
+
+		    /RightMouseButton {
+% 			dup onnonmotionevent 3 sendmousebutton
+			dup /Action get /DownTransition eq {
+			    dup /showmenu frameDsp send
+			} if
+		    } def
+
+		dictend
+	    } ifelse def	    % Name
+	currentdict end def	    % emacsinterest
+
+        emacsinterest expressinterest
+	motioninterest expressinterest
+	globalinterest expressinterest
+
+        systemdict /some_name_only_known_to_prescript known { 
+	    % kludge for non-NeWS
+	    /focusinterest createevent def
+	    focusinterest /Name [] put
+	    focusinterest expressinterest
+	} {
+	    /thekbdinterests currentcanvas addkbdinterests def
+	    /fkeyinterest currentcanvas addfunctionstringsinterest def
+	} ifelse
+    } def   %  addemacsinterests
+
+
+    /revokeemacsinterests {
+	{ fkeyinterest revokeinterest } errored pop
+	{ thekbdinterests currentcanvas revokekbdinterests } errored pop
+	{ emacsinterest revokeinterest } errored pop
+	{ motioninterest revokeinterest } errored pop
+	{ globalinterest revokeinterest } errored pop
+    } def
+
+
+    %----------------------------------------------------------------------
+    % Event Dispatcher loop
+    %----------------------------------------------------------------------
+
+    /startdispatch {
+	/inputproc null def
+	{
+	    % create interests for the current canvas.  dispatchevent never
+	    % changes the canvas, so the revokeinterests below will work.
+	    % 
+	    inputCanvas setcanvas   % dispatch on events in this canvas
+	    addemacsinterests
+	    /inputproc currentprocess def
+	    {
+        	clear
+% 		pause
+%		isResumed {
+
+%		    {
+			pause
+			awaitevent		% get event on stack
+			dispatchevent		% tell client about it
+%		    } stopped {
+%/Owch dbgbreak
+%			exit
+%		    } if
+
+%		} {
+%		    .25 60 div sleep % bletch!
+%		} ifelse
+	    } loop
+	    /inputproc null def
+	    revokeemacsinterests
+	} fork pop
+	pause
+	{ pause inputproc null ne { exit } if } loop
+    } def
+    
+    /stopdispatch {
+	stopmainloopevent createevent copy sendevent
+% 	{ pause inputproc null eq { exit } if } loop % EVIL
+    } def
+
+
+
+classend def
+
+% ------------------------------------ %
+% EmacsSounder -- one per terminal (server connection)
+% 
+% This works only on Suns; it does nothing on other machines.  Because NeWS
+% doesn't allow access to the keyboard bell, we use a device that lets us send
+% things directly to the keyboard, including the sequence to turn the bell on
+% and off.  This device is optionally created when installing Emacs; see
+% D.sun/Makefile in the src directory.
+% 
+% To create the serial keyboard device on a Sun:
+% 	/etc/mknod kbdzs c 12 2; chmod 666 kbdzs
+% 
+
+/EmacsSounder	Object
+dictbegin
+    /soundFile	    null def	% file for sound device
+    /soundInterest  null def	% interest in soundEvent
+    /soundEvent	    null def	% event signaling end of beep
+
+    /beepMS	    150 def	% duration of beep in milliseconds
+    /beeping	    null def	% monitor for locking beep
+dictend
+classbegin
+  framebuffer /GLCanvas known { % SGI 4Sight
+    /beep {
+      kbringbell
+    } def
+    /click {} def
+    /tone {15 exch kblamp} def
+  } {
+    /new {
+	/new super send begin
+	    { (/dev/kbdzs) (w) file } errored { pop pop } {
+		/soundFile exch def } ifelse
+	    /soundInterest createevent begin
+		/Name /SoundEvent def
+		/Canvas null def
+		/Action null def
+		currentdict end
+	    def
+	    /soundEvent soundInterest createevent copy def
+	    /beeping createmonitor def
+	    currentdict
+	end
+    } def
+    /beep {
+	{
+	    beepMS 60000 div		    % convert to minutes
+	    beeping {
+		1 tone
+		currenttime add
+		pause dup currenttime le {pop} {
+		  soundEvent begin
+		      /TimeStamp exch def
+		      currentdict
+		  end sendevent
+		  soundInterest expressinterest
+		  awaitevent
+		  soundInterest revokeinterest
+		} ifelse
+		0 tone
+	    } monitor
+	} fork pop
+    } def
+    /click {
+      soundFile (\2\2\2\3) writestring
+      soundFile flushfile
+    } def
+
+    /tone {
+	0 ne 2 3 ifelse
+	soundFile null ne {
+	    soundFile exch write soundFile flushfile
+	} { pop } ifelse
+    } def
+  } ifelse
+classend def
+
+end % EmacsDict
+% end of emacsclasses.ps
+
+% (windowclasses.ps) runforemacs
+%----------------------------------------------------------------------
+%! windowclasses.ps  Class definitions for Unipress Emacs windows
+% 
+% Defines the classes EmacsDsp, MainEmacsWindow, dBoxEmacsWindow, and
+% TabEmacsWindow.
+
+EmacsDict begin % Must do this to get out of errordict!!!
+
+% ------------------------------------ %
+% EmacsDsp -- display object controlled by frame
+
+/EmacsDsp DefaultWindow
+dictbegin
+    % Each instance gets its own one-character string (used by WC)
+    % because many processes may be updating frames at once
+    % 
+    /oneCharString nullstring def   % used by things in this dsp
+    /parentFrameIndex null def
+    /isStarted false def
+    /isMapped false def
+    /FgColor textcolor def
+    /BgColor backgroundcolor def
+    /HlFgColor backgroundcolor def
+    /HlBgColor textcolor def
+    /IconAge 0 def
+    /IconAgeIncrement 0.005 def
+
+    /textCursor? true def
+
+    /Edge	    1 def
+
+    /dspFont	    null def		    % current font in this frame
+%     /fontMaxY	    0 def
+%     /fontMinY	    0 def
+    /fontDescent    0 def
+    /fontHeight	    0 def
+    /fontWidth	    0 def
+    /lineHeight	    0 def
+    /lineSpace	    1 def
+    /isFixedPitch   true def
+
+    /cursX 0 def		    % most recent position of cursor
+    /cursY 0 def
+    /cursChar nullstring def	    % char most recently under cursor
+
+    /frameWidth	0 def		    % width of frame in characters
+    /frameHeight 0 def		    % height of frame
+
+    /cellMatrix nullarray def	    % matrix used for locating char cells
+    /showMatrix nullarray def	    % matrix used for "show" operations
+
+    /DamageX null def		    % Bounding box of damage path
+    /DamageY null def
+    /DamageW null def
+    /DamageH null def
+
+    /MenuX null def		    % position the menu button was pressed
+    /MenuY null def
+
+    /Selecting? false def	    % flag => doing selection?
+    /SelectionOn? false def	    % selection hilited?
+    /SelDragCan null def	    % Selection feedback overlay canvas
+    /SelectionPath null def	    % Path around selected text
+    /SelectionCan null def	    % Path around selected text
+
+    /StartSelectionEvent null def   % Event that started the selection
+
+    /MouseDownX null def	    % positions of selection actions
+    /MouseDownY null def
+    /MouseUpX null def
+    /MouseUpY null def
+    /SelectionX null def
+    /SelectionY null def
+    /SelectionX1 null def
+    /SelectionY1 null def
+
+    /isRetained false def
+
+dictend
+classbegin
+    /RoundRubberBand? true def
+    /CenterCharacters? false def
+
+    /new {	% parentFrameIndex parentcanvas -- EmacsDsp
+	/new super send begin
+	    /parentFrameIndex exch def
+	    /oneCharString 1 string def
+	    /cellMatrix matrix def
+	    /showMatrix matrix def
+
+	    hiliteOff % kludge
+	    /FrameLabel (UniPress Emacs X2.20) def
+	    /IconImage /emacs def
+	currentdict end
+    } def
+
+    /CreateFrameCanvas {
+      /CreateFrameCanvas super send
+      /isRetained FrameCanvas /Retained get def
+    } def
+    
+    /PaintClient { 
+	isStarted not {
+	    /sendfcpnt parentFrame send
+	    gsave
+		initmatrix
+		1 fillcanvas
+		clippath pathbbox 2 div exch 2 div exch 4 2 roll
+		moveto rmoveto
+		0 setshade
+		(Coming soon: Emacs Frame) cshow
+	    grestore
+	} {
+	  gsave
+	    getdimensions pop pop
+	    FrameCanvas setcanvas
+	    clipcanvaspath pathbbox
+	    points2rect
+	    ClientCanvas setcanvas
+	    BorderLeft neg BorderBottom neg translate
+	    rectpath
+	    cellMatrix setmatrix
+	    pathbbox %  x1 y1 x2 y2
+	    ceiling exch ceiling exch
+	    4 2 roll
+	    floor exch floor exch
+	    4 2 roll
+	    points2rect
+	    /DamageH exch 2 add def
+	    /DamageW exch 2 add def
+	    /DamageY exch 1 sub def
+	    /DamageX exch 1 sub def
+	    %(Damage % % % %\n)
+	    %[DamageX DamageY DamageW DamageH] dbgprintf
+	    FrameCanvas setcanvas newpath clipcanvas
+	    ClientCanvas setcanvas cellMatrix setmatrix
+	    DamageX 1 add DamageY 1 add 
+	    DamageW 2 sub DamageH 2 sub rectpath
+	    BgColor setcolor fill
+	  grestore
+	  DamageX frameWidth min 1 max
+	  DamageY frameHeight min 1 max
+	  DamageW 1 max DamageH 1 max
+	  /sendfcdam parentFrame send
+	} ifelse
+    } def
+
+    % go through trmFrames to avoid circular structure!
+    /parentFrame { % => frame
+      curTrm null eq { null } { % X11/NeWS bullet proofing. -Don
+        curTrm /trmFrames get parentFrameIndex get
+      } ifelse
+    } def
+
+    % destroy is sent by the "Zap" menu item, or anything else that wants to
+    % take down our NeWS window
+    % 
+    % Added bullet proofing for X11/NeWS -Don
+    /destroy {
+      parentFrame dup null eq { pop } {
+        /destroy exch send
+      } ifelse
+    } def
+
+    /destroywin {
+      DestroyControls
+      /destroy super send
+    } def
+
+    /DestroyControls {} def
+
+    /bbox { FrameX FrameY FrameWidth FrameHeight } def
+
+    /setpaintclient { /PaintClient exch def } def
+
+    /flipiconic {
+	/flipiconic super send
+        isRetained { % Don't retain when iconic!
+	  FrameCanvas /Retained Iconic? not put
+	} if
+	Iconic? {
+	    /IconAge 0 def
+	    ShowIconAge
+	} if
+	Iconic? /sendfmcls /sendfmopn ifelse
+ 	parentFrame send
+    } def
+
+    /open { Iconic? {flipiconic} if } def
+
+    /close { Iconic? not {flipiconic} if } def
+
+    /ShowIconAge {
+	1.0 IconAge sub dup 0.05 ge {
+	    dup dup rgbcolor
+	    /IconFillColor exch def painticon
+	} {
+	    pop
+	} ifelse
+    } def
+
+    /ageicon {
+	/IconAge IconAge IconAgeIncrement add def
+	ShowIconAge
+    } def
+
+    /move {
+      gsave
+	/move super send
+      grestore
+	Iconic? { 
+	  IconX null eq {
+	    /IconX FrameX def
+	    /IconY FrameY FrameHeight add IconHeight sub def
+	  } if
+	  IconX IconY
+	  /sendiconmoved
+	} {
+	  FrameX FrameY /sendfmmov
+	} ifelse
+	parentFrame send
+    } def
+
+    /reshape { % x y w h => -
+	/reshape super send
+	getdimensions FrameWidth FrameHeight
+	{ sendfmrsz sendfcrsz } parentFrame send
+	/SelDragCan ClientCanvas createoverlay def
+        ReshapeControls
+    } def
+
+    /ReshapeControls {} def
+
+    /map {
+	% create a new process group so the frame event mgr will be
+	% started in it, and killing the frame event mgr won't kill our
+	% own main loop or server connection listener process.
+	% 
+	{ newprocessgroup /map super send } fork pop
+	/isMapped true def
+	Iconic? not {
+	    /sendfmmap parentFrame send
+	} if
+    } def
+    
+    % Note that unmap is sent when the frame iconifies, too.
+    % 
+    /unmap {
+	/unmap super send
+	/isMapped false def
+	/sendfmunm parentFrame send
+    } def
+
+    /Mapped? { GetCanvas /Mapped get } def
+
+    /resume {
+	EmacsMapNewFrames
+	isMapped not and {
+	    map
+	} if
+    } def
+
+    /suspend {
+	isMapped {
+	    unmap
+	} if
+    } def
+
+    %----------------------------------------------------------------------
+    % Generic frame definitions
+    %----------------------------------------------------------------------
+
+    % Send a string to the terminal, from our frame.
+    /sendstring { % string => -
+      /sendstring parentFrame send
+    } def
+
+    % setframelocation moves frame to given pos in its parents
+    % coordinate system.  If the mouse cursor lay in the frame, moves mouse
+    % cursor by the amount that the window actually moved.  This handles cases
+    % where the window tries to move past the edge of the screen but gets
+    % stuck on the edge.  LATER:  move the mousecursor only if it originally
+    % lay in the frame.  Make negative coords specify offset from top and
+    % right.
+    %
+    /setframelocation { % x y => -
+      gsave ParentCanvas setcanvas
+	Iconic? {
+	    /FrameY exch def
+	    /FrameX exch def
+	} {
+	    FrameX FrameY 4 2 roll			% oldx oldy newx newy
+	    move
+	    FrameY exch sub				% oldx dy 
+	    exch FrameX exch sub			% dy dx
+	    exch					% dx dy
+	    % Iconic? here should be wasCursorInFrame?
+	    Iconic? not {
+		gsave
+		    ParentCanvas setcanvas
+		    currentcursorlocation 2 index add exch 3 index add exch
+		    setcursorlocation
+		grestore
+	    } if
+	    pop pop
+	} ifelse
+      grestore
+    } def
+
+    /getframelocation { FrameX FrameY } def
+
+    % Resizes the frame, keeping the upper lefthand corner in the same place.
+    % Giving a dimension of zero yields no change in that dimension.
+    % 
+    /setframesize { % w h => -
+	dup 0 eq { pop FrameHeight } if	    % w adjh
+	exch				    % adjh w
+	dup 0 eq { pop FrameWidth } if	    % adjh adjw
+	exch				    % adjw adjh
+	dup FrameHeight sub	    % w h dh
+	FrameY exch sub		    % w h newy
+	FrameX exch		    % w h newx newy
+	4 2 roll
+	reshape
+    } def
+
+    /getframesize { %  - => w h
+      FrameWidth FrameHeight
+    } def
+
+    % Resizes frame so that client canvas is of the given size in char cells.
+    % Giving a dimension of zero yields no change in that dimension.
+    %
+    /setclientsize { % rows cols => -
+	dup 0 ne {
+	  lineHeight mul BorderTop add BorderBottom add Edge dup add add
+	} if
+	exch
+	dup 0 ne {
+	  fontWidth mul BorderLeft add BorderRight add Edge dup add add
+	} if
+	exch
+	setframesize
+    } def
+
+    % getclientsize returns size of client in client coords
+    % 
+    /getclientsize { % => w h
+	getdimensions
+	% ClientWidth fontWidth idiv
+	% ClientHeight lineHeight idiv
+	% gsave cellMatrix setmatrix ClientWidth ClientHeight idtransform
+	% grestore
+    } def
+
+    /seticonlabel { % label => -
+	/IconLabel exch def
+	ShapeIconCanvas
+	painticon
+    } def
+
+    % seticonlocation moves icon to given pos in its parents
+    % coordinate system.
+    %
+    /seticonlocation { % x y => -
+	Iconic? {
+	    move
+	} {
+	    gsave
+		2 copy
+		/IconY exch def
+		/IconX exch def
+		IconCanvas setcanvas
+		[1 0 0 1 0 0] setmatrix
+		movecanvas
+	    grestore
+	} ifelse
+    } def
+
+    % The client canvas is transparent, and the frame canvas is opaque.  Thus,
+    % the client shares the frame's retained image.  However, when the frame
+    % is repainted, the frame canvas is erased, so the client canvas image
+    % gets erased as well.  To avoid this, we set the frame's canvas clip to
+    % encompass only the name border area.  (We could also make the client
+    % canvas opaque, but then it won't share bits with the frame canvas.)
+    % 
+    /setframelabel { % label => -
+	dup FrameLabel ne {
+	    /FrameLabel exch def
+	    gsave
+	    FrameCanvas setcanvas
+	    % could use FramePath, but that might overlap the client canvas
+	    % 
+		BorderLeft
+		FrameHeight BorderTop sub
+		FrameWidth BorderRight sub BorderLeft sub
+		FrameHeight
+	    rectpath clipcanvas
+	    paintframe
+	    initclip clipcanvas
+	    grestore
+	} {
+	    pop
+	} ifelse
+    } def
+
+    % string seticonimage --
+    %
+    % Sets icon of this frame to the one named by the given string.  The
+    % string may either be the name of the icon as found in icondict, or a
+    % numeric string giving an index into the icon font.  In either case, the
+    % icon must be one in icondict.
+    % 
+    /seticonimage {
+	dup cvn icondict exch known {
+	    /IconImage exch cvn def
+	} {
+	    cvi
+	    icondict {			    % int name value
+		2 index eq {		    % int name
+		    /IconImage exch def	    % int
+		    exit
+		} {			    % int name
+		    pop			    % int
+		} ifelse
+	    } forall
+	    pop
+	} ifelse
+	painticon
+    } def
+
+    /colortorgb {	    % color -- red green blue
+	60 string cvs	    % convert the color to a string (Hah!)
+	(\() search pop pop pop
+	(,) search pop cvr exch pop exch
+	(,) search pop cvr exch pop exch
+	cvr
+    } def
+
+    /colortostring {    % color -- string
+	dup type /colortype eq {
+	    ( ) exch
+	    [ exch colortorgb ] {
+		5 string cvs append
+		( ) append
+	    } forall
+	    (rgbcolor ) append
+	} {
+	    ( ) 5 string cvs ( ) append append
+	} ifelse
+    } def
+    
+    /ColorSchemeColors [
+	/FgColor
+	/BgColor
+	/HlFgColor
+	/HlBgColor
+    ] def
+
+    % -- ColorScheme scheme-string
+    % Returns a string specifying the frame's color scheme
+    %
+    /ColorScheme {
+	(\n)
+	ColorSchemeColors {
+	    (/) exch
+	    dup cvx 32 string cvs exch	    % cvx avoids buggy cvs's
+	    load colortostring
+	    (store\n)
+	    append append append append
+	} forall
+    } def
+    
+    % scheme-string setframecolorscheme --
+    % Executes a scheme-string (of the ilk returned by ColorScheme) and
+    % sets the frame's color scheme from it
+    /setframecolorscheme {
+	cvx exec
+% 	ColorScheme /sendcolorscheme parentFrame send	% arf arf
+    } def
+
+    % Pops up either the ClientMenu, if it exists, or the MainMenu.
+    %
+    /showmenu { % event => -
+	dup begin gsave
+% X11/NeWS: The following line didn't work since X11/NeWS doesn't molest the
+% /Canvas fields of delivered events. -Don
+%	    Canvas setcanvas
+	    Interest /Canvas get setcanvas % Look in the interest instead.
+	    cellMatrix setmatrix
+	    /MenuX XLocation  /MenuY YLocation 1 add
+	grestore end
+	def def
+
+	ClientMenu null eq { 
+	  MainMenu null eq {
+	    %  First time the main menu has been invoked.
+	    pop
+	    GlobalMainMenu null eq { % Is there already a global main menu?
+	      % No global main menu exists.
+	      % Tell emacs to send up the PS menu definitions and load the 
+	      % menu bindings.
+ 	      /MainMenu false store % So we only do this once!
+	      100 menucallback 
+	    } {
+	      % Share the global main menu, and tell our emacs to just load 
+	      %	the menu bindings!
+%	      /MainMenu GlobalMainMenu store % use a function instead...
+	      /MainMenu {GlobalMainMenu} store
+	      101 menucallback 
+	    } ifelse
+	  } {
+	    MainMenu false eq { % not loaded yet?
+	      pop % ignore...
+	    } {
+	      /showat MainMenu send 
+	    } ifelse
+	  } ifelse
+	} {
+	  /showat ClientMenu send
+	} ifelse
+    } def
+
+    /menucallback { % num => -
+      {
+        [ BUCKY (\033\[m) 4 -1 roll 10 string cvs 10 ] sendstring
+      } parentFrame send
+    } def
+
+    /pointmenucallback { % num => -
+      MenuX MenuY
+      {
+        [ MDRAG 4 -2 roll encodexy
+          BUCKY (\033\[p) 9 -1 roll 10 string cvs 10
+	  MDRAG EmacsMouseX EmacsMouseY encodexy
+        ] sendstring
+      } parentFrame send
+    } def
+
+    %----------------------------------------------------------------------
+    % TextFrame definitions
+    %----------------------------------------------------------------------
+
+    % getdimensions leaves on the stack the width and height, in that order,
+    % of the drawing area in the EmacsFrame.  We set up a coordinate system in
+    % which the units are character cells and y increases downward (i.e., the
+    % y-axis is flipped).  A given pair of coordinates specifies the lower
+    % left corner of the character cell.  (1,1) specifies the character in the
+    % upper left corner of the frame.
+    % 
+    /getdimensions {
+	gsave
+	    ClientCanvas setcanvas
+	    initmatrix			% implied by setcanvas, but...
+
+	    showMatrix currentmatrix pop  % default matrix for show operations
+
+	    % If this frame has not been assigned a font yet, use the Trms
+	    % default font; otherwise initialize the frame parameters and the
+	    % cellMatrix.
+	    %
+	    dspFont null eq {
+		/getdefaultfont curTrm send SetFrameFont
+	    } if
+
+	    /lineHeight
+	      0 fontHeight dtransform abs .99 add floor idtransform abs
+	      exch pop 
+	    def
+
+	    Edge Edge dtransform % align with pixels
+	    abs ceiling exch abs ceiling exch
+	    idtransform abs exch abs exch
+	    translate
+
+	    fontWidth  lineHeight neg scale
+
+	    /frameWidth
+	      ClientWidth Edge dup add sub fontWidth div floor
+	    def
+	    /frameHeight
+	      ClientHeight Edge dup add sub lineHeight div floor
+	    def
+
+	    % note that we get the y-offset to make the y-axis be 1-origin for
+	    % free
+	    % 
+	    -1 frameHeight neg translate
+	    cellMatrix currentmatrix pop	    % remember this matrix
+	    frameWidth frameHeight
+	grestore
+    } def
+
+    % font SetFrameFont --
+    %
+    % Switch the current font of this frame to the given font and compute the
+    % font metrics.  If font is null, uses whatever the current font is and
+    % recomputes the metrics.
+    % 
+    /SetFrameFont {
+	% get unit matrix; getdimensions will recompute a new matrix later
+	% 
+	initmatrix				    % font
+	dup null eq { pop } {
+	  dup /dspFont exch def			    % font
+	  setfont				    % -
+	} ifelse
+
+	% X11/NeWS: Guess what version returns in X11/NeWS? (1.0), you
+	% guessed it! Onward Pagan Soldiers!
+% 	% 1.0 has bugs in fontheight fontascent or fontdescent
+% 	(1.0) version eq {
+% 	    % needs fixing (does anybody care?)
+% 	    0 0 moveto (qgy_MTWY()/|{}) false charpath pathbbox
+% 	    /fontMaxY exch def pop
+% 	    /fontMinY exch def pop
+% 	    /fontHeight fontMaxY fontMinY sub def
+% 	} {
+	    % Outline font bug work around!
+	    % font{height,descent,ascent} return 0 until an outline font
+	    % of a particular point size has actually been used (show or
+	    % stringbbox). stringwidth of a char doesn't work till it's
+	    % been used!
+	    (qpyf_PQDY/) stringbbox pop pop pop pop
+	    % Half of line space on bottom, to alleviate font turds (minding
+	    % those p's and q's), and the other half on top, so selection
+	    % feedback doesn't draw over top edges of characters.
+	    /fontDescent
+	      0 currentfont fontdescent lineSpace 2 div add dtransform
+	      abs .99 add floor idtransform abs exch pop
+	    def
+	    /fontHeight
+	      currentfont fontascent fontDescent add lineSpace 2 div add
+	    def
+%	} ifelse
+	/isFixedPitch currentfont /IsFixedPitch get def
+	/fontWidth 
+          isFixedPitch {(M) stringwidth pop} {
+	    % wide characters in my favorite fonts.
+	    1 [(A)(M)(W)(D)(P)] {
+	      stringbbox points2rect pop exch pop exch pop max
+	    } forall
+	  } ifelse
+	def
+    } def
+
+    /ding {
+      gsave
+	SelDragCan setcanvas
+        overlaydraw HlBgColor setcolor clippath fill
+	.05 60 div sleep
+        overlayerase erasepage
+      grestore
+    } def
+
+    % show cursor if show true, hide if false
+    /cursorDraw { % c show x y => -
+	gsave
+	    translate
+	    0 0 moveto
+	    0 -1 rlineto		% go up
+	    1 index length 0 rlineto	% right
+	    0 1 rlineto			% down
+	    closepath			% left
+	    dup {HlBgColor} {BgColor} ifelse setcolor
+	    fill
+	    {HlFgColor} {FgColor} ifelse setcolor
+	    dup ( ) ne { 0 0 writeChars } { pop } ifelse
+	grestore
+    } def
+
+    % draws cursor at given pos
+    /cursorShow { % c x y => - 
+	textCursor? {
+	    3 copy /cursY exch def /cursX exch def /cursChar exch def
+	    true 3 1 roll cursorDraw
+	} {
+	    pop pop pop
+	} ifelse
+    } def
+
+    % hides the cursor, undoing the last cursorShow
+    /cursorHide { % - => -
+	textCursor? {
+	    cursChar false cursX cursY cursorDraw
+	} if
+    } def
+
+    % Erase N cells from x y
+    /eraseBlanks { % n x y => -
+	moveto
+	0 -1 rlineto	% go up
+	0 rlineto	% right
+	0 1 rlineto	% down
+	closepath	% left
+	bcolor setcolor
+	fill
+	tcolor setcolor
+    } def
+
+    % write string at char pos x y
+    /writeChars	{ % str x y => -
+	moveto
+	showMatrix setmatrix
+	0 fontDescent rmoveto
+	isFixedPitch {
+	    show
+	} {
+	    currentpoint		% str x y
+	    3 2 roll			% x y str
+	    CenterCharacters? {
+	      { oneCharString dup 0 4 -1 roll put   % chartostr
+		fontWidth 1 index stringwidth pop sub 2 div 0 rmoveto
+	        show exch fontWidth add exch 2 copy moveto }
+	    } {
+	      { oneCharString dup 0 4 -1 roll put   % chartostr
+	        show exch fontWidth add exch 2 copy moveto }
+	    } ifelse
+	    forall
+	    pop pop
+	} ifelse
+	cellMatrix setmatrix
+    } def
+
+    % insert dy lines at line y, moving nl lines down
+    /insertLines { % y dy nl => -
+	gsave
+	    /nl exch def /dy exch def /y exch 1 sub def
+	    1 y moveto frameWidth nl rect 0 dy copyarea
+	    1 y moveto frameWidth dy rect
+	    BgColor setcolor fill
+	grestore
+%	tcolor setcolor
+    } def
+
+    % delete dy lines at line y, moving nl lines up
+    /deleteLines { % y dy nl => -
+	gsave
+	    /nl exch def /dy exch def /y exch 1 sub def
+	    1 y dy add moveto frameWidth nl rect 0 dy neg copyarea
+	    1 y nl add moveto frameWidth dy rect
+	    BgColor setcolor fill
+	grestore
+%	tcolor setcolor
+    } def
+
+    /hiliteOff {
+	/bcolor BgColor store
+	/tcolor FgColor store
+	tcolor setcolor
+    } def
+
+    /hiliteOn {
+	/bcolor HlBgColor store
+	/tcolor HlFgColor store
+	tcolor setcolor
+    } def
+
+    /clearScreen {
+	/isStarted true def
+	gsave
+	    bcolor setcolor clippath fill
+	grestore
+%	tcolor setcolor
+    } def
+
+    % The frame canvas is opaque.  The client canvas is transparent and is
+    % completely enclosed by the frame canvas.
+    /beginRepair {
+	ClientCanvas setcanvas
+	initclip		    % encompass all of canvas
+ 	clippath clipcanvas
+	dspFont null ne {
+	    dspFont setfont
+	    cellMatrix setmatrix
+	} if
+    } def
+
+    /endRepair {
+ 	FrameCanvas setcanvas
+  	newpath clipcanvas
+	ClientCanvas setcanvas
+	dspFont null ne {
+	    cellMatrix setmatrix
+	} if
+    } def
+
+    % move mouse cursor to center of character cell
+    /setMousePos { % x y => -
+	isMapped {
+	    gsave
+		ClientCanvas setcanvas
+		cellMatrix setmatrix
+		exch 0.5 add exch 0.5 sub setcursorlocation
+	    grestore
+	} {
+	    pop pop
+	} ifelse
+    } def
+
+    %----------------------------------------------------------------------
+    % Selection definitions
+    %----------------------------------------------------------------------
+
+    /SendClearSelection {
+      % --- Clear anyone else's Primary selection
+      10 dict begin
+         /seldict /PrimarySelection getselection def
+         seldict null ne {
+	    seldict /Canvas known { % X11/NeWS bullet proofing. -Don
+              seldict /Canvas get ClientCanvas ne {
+               /PrimarySelection clearselection
+              } if
+	    } if
+         } if
+      end
+    } def
+
+   /ClearMySelection { % - => -
+   % --- Clear any selection I might have in the system selection mechanism
+   %     and on my screen.
+      10 dict begin 
+         SelectionOn? {
+               false DrawSelection
+               /SelectionPath null store 
+         } if
+         /seldict /PrimarySelection getselection def
+         seldict null ne {
+            seldict /Canvas get ClientCanvas eq {
+               Selections /PrimarySelection null put
+            } if
+         } if
+      end
+   } def
+
+   /DrawSelection { % state => -
+   % --- Make the selection area visible or invisible, depending on state.
+      10 dict begin 
+         /state exch def
+         %state {
+         %    SelectionPath null ne {
+         %       gsave
+         %          6 array identmatrix setmatrix
+         %          SelectionPath setpath
+         %          SelectionCan reshapecanvas
+         %          SelectionY SelectionY1 lt {
+         %             1 SelectionY SelectionY1 DrawSelectionText
+         %          } if 
+         %          SelectionY SelectionY1 gt {
+         %             1 SelectionY1 SelectionY DrawSelectionText
+         %          } if
+         %          SelectionY SelectionY1 eq {
+         %             SelectionX SelectionY1 SelectionY DrawSelectionText
+         %          } if
+         %          SelectionCan mapcanvas
+         %          /SelectionOn? true store
+         %       grestore
+         %    } if
+         %}{ % --- state = off
+         %   SelectionCan unmapcanvas
+         %   /SelectionOn? false store
+         %} ifelse
+         % --- XXX Use xor for now; SelectionCanvas in the future...
+         gsave
+            SelectionPath null ne SelectionOn? state xor and {
+               ClientCanvas setcanvas
+               cellMatrix setmatrix
+               5 setrasteropcode
+               SelectionPath setpath
+               fill
+               /SelectionOn? state store 
+            } if
+         grestore 
+      end
+   } def
+
+    /StartSelection { % event => -
+      /Selecting? true def
+      gsave
+	SelDragCan setcanvas
+	erasepage
+	cellMatrix setmatrix
+	begin
+	  currentcursorlocation
+	  XLocation YLocation
+	end
+      grestore
+      xyStartSelection
+      xyDragSelection
+    } def
+
+    /xyStartSelection { % x y => -
+	SendClearSelection
+	false DrawSelection
+	/SelectionY
+	  exch 1 add floor 1 max frameHeight min
+	  selection-top max selection-bottom min store
+	/SelectionY1 SelectionY store
+	/SelectionX
+	  exch floor 1 max frameWidth min
+	  SelectionY selection-line-width min store
+	/SelectionX1 SelectionX store
+    } def
+
+    /DragSelection { % event => -
+      gsave
+        SelDragCan setcanvas
+	cellMatrix setmatrix
+	begin XLocation YLocation end
+      grestore
+      xyDragSelection
+    } def
+
+    /xyDragSelection { % x y => -
+	/SelectionY1
+	  exch 1 add floor 1 max frameHeight min
+	  selection-top max selection-bottom min store
+	/SelectionX1
+	  exch floor 1 max frameWidth min
+	  SelectionY1 selection-line-width min store
+        ExtendSelection
+    } def
+
+   /ExtendSelection { % - => -
+   % --- Draw the selection bounding outline
+      10 dict begin
+       gsave
+	 SelDragCan setcanvas
+         cellMatrix setmatrix
+	 HlBgColor setcolor
+	 % l is the length of the line
+         /l SelectionY1 selection-line-width def
+	 % Is endpoint x past end of line? bring it back.
+         SelectionX1 l ge {
+            /SelectionX1 l 1 sub def
+         } if
+	 % Is selection on one line? simple rectangle, else keep thinking
+         SelectionY SelectionY1 eq {
+	    newpath
+	    SelectionX SelectionX1 gt {
+		/SelectionX SelectionX1 /SelectionX1 SelectionX def def
+	    } if
+	    SelectionX SelectionY moveto
+	    SelectionX1 SelectionY1 selection-line-width eq {
+	      SelectionX1 1 sub SelectionY1
+	    } {
+	      SelectionX1 SelectionY1
+	    } ifelse
+	    lineto
+	    0 -1 rlineto
+	    SelectionX SelectionY 1 sub lineto
+	    closepath
+         }{ 
+	    % x,y <= top endpoint, x1,y1 <= bottom endpoint
+            SelectionY SelectionY1 gt {
+               /y SelectionY1 def /x SelectionX1 def
+               /y1 SelectionY def /x1 SelectionX def
+            }{ 
+               /y SelectionY def /x SelectionX def
+               /y1 SelectionY1 def /x1 SelectionX1 def
+            } ifelse
+	    % Start at bottom left of first line, and draw rectangle around it
+            /l y selection-line-width def
+            1 y moveto 
+            x l 1 sub min y lineto
+            0 -1 rlineto
+            l 1 sub y 1 sub lineto
+ 	    RoundRubberBand? {
+	      currentpoint 1 add 1 270 0 arc
+	    } {
+	      1 1 rlineto
+	    } ifelse
+
+	    % Draw jagged edge down right
+            /y y 1 add def
+            y 1 y1 1 sub {
+              /i exch def
+              /l i selection-line-width def
+              l 1 sub i 1 sub lineto
+ 	      RoundRubberBand? {
+	        currentpoint 1 add 1 270 0 arc
+	      } {
+	        1 1 rlineto
+	      } ifelse
+            } for
+
+	    % Draw right edge of last line.
+	    x1 dup y1 selection-line-width eq { 1 sub } if
+	    y1 1 sub lineto
+ 	    0 1 rlineto
+
+	    % Draw bottom and close path.
+            1 y1 lineto
+            closepath
+         } ifelse
+         /SelectionPath currentpath store
+         erasepage
+         stroke
+        grestore
+       end
+   } def
+
+  /FinishSelection { % - => -
+    /Selecting? false def
+    gsave
+      SelDragCan setcanvas
+      erasepage
+    grestore
+  } def
+
+classend def
+
+
+
+% ------------------------------------ %
+% MainEmacsWindow is a subclass of EmacsDsp is a subclass of LiteWin.
+% 
+/MainEmacsWindow EmacsDsp
+dictbegin
+    /BorderLeft	     6 def
+    /BorderRight     6 def
+    /BorderBottom    6 def
+    /BorderTop	    20 def
+    /FrameFont /Times-Bold findfont 16 scalefont def
+    /IconLabelHeight 15 def
+    /IconLabelWidth 100 def
+    /overHang	     0 def	% label overhangs icon by this much
+dictend
+classbegin
+    /ShapeIconCanvas {
+	gsave
+	IconLabel length 0 eq { /IconLabel (Emacs) def } if
+	ParentCanvas setcanvas
+	IconFont setfont
+ 	/IconLabelHeight IconFont fontheight 3 add def
+
+	% The code below will shape the icon canvas with a rectangle on top
+	% for the label as wide as IconLabelWidth.  If this is wider than
+	% IconWidth, the label will extend symmetrically over the edges.
+	% However, then the bounding box of the canvas shape does not have
+	% its origin at the origin of the coordinate system.  This confuses
+	% the dragcanvas function, so the icon jumps to the left by overHang
+	% units when it is middlemoused!
+	% Until we figure out how to fix that, we just force the label width
+	% to be equal to IconWidth so overHang is zero.
+	% 
+% 	    /IconLabelWidth IconLabel stringwidth pop IconWidth max def
+% 
+% 	    IconLabelWidth IconWidth sub dup 0 gt {
+% 		2 div /overHang exch def
+% 	    } {
+% 		pop /overHang 0 def
+% 	    } ifelse
+% 
+% 	    % we must keep the pathbbox lower left at the origin
+% 	    0 0 translate
+% 	    overHang IconHeight moveto
+% 	    0 IconHeight neg rlineto
+% 	    IconWidth 0 rlineto
+% 	    0 IconHeight rlineto
+% 
+% 	    overHang 0 rlineto
+% 	    0 IconLabelHeight rlineto
+% 	    IconLabelWidth neg 0 rlineto 
+% 	    0 IconLabelHeight neg rlineto
+% 	    closepath
+	    /IconLabelWidth IconLabel stringwidth pop def
+
+	    IconLabelWidth IconWidth sub dup 0 lt {
+		pop 0
+	    } if
+	    /overHang exch def
+
+	    % we must keep the pathbbox lower left at the origin
+	    0 0 translate
+	    0 IconHeight moveto		% start at upper left corner
+	    0 IconHeight neg rlineto	% down
+	    IconWidth 0 rlineto		% right
+	    0 IconHeight rlineto	% up
+
+	    overHang 0 rlineto		% right
+	    0 IconLabelHeight rlineto	% up
+	    currentpoint pop neg 0 rlineto  % left
+	    closepath			% down
+
+	IconCanvas reshapecanvas
+	IconX null ne {	    % first time around this is null
+	    IconCanvas setcanvas
+	    IconX IconY movecanvas
+	} if
+	grestore
+    } def
+    /PaintIconLabel { % - => - (Paint icon text label)
+	gsave
+	initmatrix
+	IconTextColor setcolor IconFont setfont
+	IconLabelWidth IconWidth le {
+	    % it all fits in the icon image width, show at center
+	    IconWidth 2 div IconHeight 3 add moveto IconLabel cshow
+	} {
+	    % label is wider than image, show from left margin
+	    0 IconHeight 3 add moveto IconLabel show
+	} ifelse
+	IconBorderColor setshade clippath stroke
+	grestore
+    } def
+classend def
+
+
+
+% ------------------------------------ %
+% dBoxEmacsWindow	    thick inside border inset from thin outside border
+
+/dBoxEmacsWindow EmacsDsp
+dictbegin
+dictend
+classbegin
+
+    % Outer border is BorderThickness pixels wide, painted solid
+    % FrameBorderColor.
+    % Inner border is one pixel wide, inset from *outer* edge of outer border
+    % (i.e., the frame boundary) by BorderLeft, etc. pixels.
+    % 
+    /BorderThickness	3 def
+    /BorderLeft		5 def
+    /BorderBottom	5 def
+    /BorderRight	5 def
+    /BorderTop		5 def
+
+    /PaintFrameLabel nullproc def
+    /PaintFocus nullproc def
+
+    /PaintFrameBorder {
+	FrameFillColor fillcanvas
+	FrameBorderColor setshade
+	BorderThickness clippath pathbbox rectframe eofill
+
+	BorderLeft .5 sub BorderBottom .5 sub
+	FrameWidth BorderLeft BorderRight add sub 1 add
+	FrameHeight BorderBottom BorderTop add sub 1 add
+	rectpath stroke
+    } def
+    /PaintFrame {
+	PaintFrameBorder
+    } def
+classend def
+
+
+
+% ------------------------------------ %
+% TabEmacsWindow is a subclass of MainEmacsWindow is a subclass of
+% EmacsDsp is a subclass of LiteWin.
+
+/TabEmacsWindow MainEmacsWindow
+dictbegin
+    /BorderTop		6 def
+    /BorderTopArgh	BorderTop def
+    /TabX		0 def
+    /TabY		0 def
+    /TabHeight		15 def
+    /TabWidth		0 def
+    /TabNumber		0 def
+    /HalfPixelX		null def
+    /HalfPixelY		null def
+dictend
+classbegin
+
+    /new {
+      /new super send begin
+        /BorderTop BorderTopArgh def % SGIWindow refedefines it!!!!
+	gsave
+	  framebuffer setcanvas
+          .5 .5 idtransform neg /HalfPixelY exch def /HalfPixelX exch def
+	grestore
+        currentdict
+      end
+    } def
+
+    /CalcTabPos {
+      gsave FrameCanvas setcanvas
+	/TabHeight
+	  FrameFont fontheight 3 add BorderBottom add BorderBottom add
+	def
+	/TabWidth
+	  BorderLeft BorderRight add
+	  FrameLabel length 0 ne {
+	    gsave FrameFont setfont FrameLabel stringwidth pop grestore
+	    add TabWidth max
+	  } if
+	def
+	/TabX FrameWidth def
+	TabNumber 0 lt {
+	  /TabY TabHeight TabNumber 1 add neg mul def
+	} {
+	  /TabY FrameHeight TabHeight TabNumber 1 add mul sub def
+	} ifelse
+      grestore
+    } def
+
+    /SetTabNumber { % n => -
+      /TabNumber exch def
+      FrameX FrameY FrameWidth FrameHeight reshape
+    } def
+
+    /FramePath {
+      CalcTabPos
+      4 copy rectpath % x y w h
+      rect2points % xll yll xur yur
+      pop pop TabY add exch TabX add exch
+      TabWidth TabHeight rectpath
+    } def
+
+    /PaintFrameBorder { % - => - (Paint frame border areas)
+      CalcTabPos
+      FrameFillColor fillcanvas FrameBorderColor setcolor
+      HalfPixelX HalfPixelY moveto
+      FrameWidth HalfPixelX dup add sub 0 rlineto
+      0 TabY rlineto
+      TabWidth 0 rlineto
+      0 TabHeight HalfPixelY dup add sub rlineto
+      TabWidth neg 0 rlineto
+      0 FrameHeight TabY sub TabHeight sub rlineto
+      FrameWidth HalfPixelX dup add sub neg 0 rlineto
+      closepath
+      stroke
+      HalfPixelX dup add neg
+      BorderLeft BorderBottom
+      FrameWidth BorderLeft sub BorderRight sub
+      FrameHeight BorderBottom sub BorderTop sub
+      insetrect rectpath stroke
+%       BorderLeft HalfPixelX sub BorderBottom HalfPixelY sub
+%       FrameWidth BorderLeft BorderRight add sub HalfPixelX dup add add
+%       FrameHeight BorderBottom BorderTop add sub HalfPixelX dup add add
+%       rectpath stroke
+    } def
+
+    /PaintFrameLabel { % - => - (Paint frame text label)
+        CalcTabPos
+	TabX BorderLeft add
+	TabY BorderBottom add
+	currentfont fontdescent add
+	moveto FrameLabel show
+    } def
+
+    /ClientPath {rectpath} def
+
+    /setframelabel { % label => -
+	dup FrameLabel eq {pop} {
+	    /FrameLabel exch def
+	    FrameX null ne {
+	      TabWidth CalcTabPos TabWidth ne {
+	        % Generates damage...
+                FrameX FrameY FrameWidth FrameHeight /reshape self send
+		damagepath newpath  % clear damage?
+	      } if
+	      gsave
+		FrameCanvas setcanvas
+		TabX TabY TabWidth TabHeight
+		rectpath clipcanvas
+		paintframe
+		initclip clipcanvas
+	      grestore
+	    } if
+	} ifelse
+    } def
+
+    /PaintFocus { 
+	gsave
+	  FrameCanvas setcanvas
+	  KeyFocus? {KeyFocusColor} {FrameFillColor} ifelse setcolor
+	  TabX 2 add HalfPixelX add
+	  TabY 2 add HalfPixelY add
+	  TabWidth 4 sub HalfPixelX dup add sub
+	  TabHeight 4 sub HalfPixelY dup add sub
+	  rectpath
+	  stroke
+	grestore
+    } def
+    
+    /flipiconic { % - => -  (swaps between open & closed)
+	/unmap self send
+	/Iconic? Iconic? not def
+	IconX null eq {
+	    FrameX TabX add
+	    FrameY TabY add IconHeight sub /move self send
+	} if
+	ZoomProc
+	/map self send
+        isRetained { % Don't retain when iconic!
+	  FrameCanvas /Retained Iconic? not put
+	} if
+	Iconic? {
+	    /IconAge 0 def
+	    ShowIconAge
+	} if
+	Iconic? /sendfmcls /sendfmopn ifelse
+ 	parentFrame send
+    } def
+
+    /PaintFrameControls { % - => - (Paint frame control areas)
+    } def
+
+classend def
+
+/EmacsTabWindow TabEmacsWindow def % For old times sake.
+
+end % EmacsDict
+% end of windowclasses.ps
+
+% ------------------------------------------------------------------------ %
+% Menu definitions.
+
+systemdict begin
+
+  /getmenuaction { % index => action
+    dup null ne {
+	MenuActions 1 index MenuActions length 1 sub min get
+% Execute actions that are names! (This is so we can have references
+% to submenus (executable names) as actions, as opposed to having the
+% submenu object dict itsself!) 
+	dup type /nametype eq { exec } if
+    } {nullproc} ifelse
+    exch pop
+  } def
+
+  DefaultMenu /getmenuaction dup load put
+
+end % systemdict
+
+EmacsDict begin
+
+/EmacsDefaultPopupMenu
+  DefaultMenu 
+def
+% System menus should not be pie menus if that's the default.
+% (Since system menus are usually lists of things generated on the fly,
+% not commands.)
+/EmacsDefaultSystemMenu
+  DefaultMenu
+  {/PieRadius where { pop pop LitePullRightMenu } if} 1 index send
+def
+
+/menukey {
+  /menucallback ThisWindow send
+} def
+
+/pointmenukey {
+  /pointmenucallback ThisWindow send
+} def
+
+/menustring {
+  { [ /BUCKY 3 -1 roll ] sendstring } ThisWindow send
+} def
+
+/getThisWindowModeMenu {
+  ThisWindow /ModeMenu known {
+    ThisWindow /ModeMenu get
+  } {
+    { currentcursorlocation [(  No)(Mode)(Menu)] popmsg pop }
+  } ifelse
+} def
+
+/TryAgain { 
+  currentcursorlocation
+  [(  Try) (Again!)] popmsg
+} def
+
+/GlobalMainMenu null def
+
+end % EmacsDict
+
+
+
+
+
+% ------------------------------------------------------------------------ %
+% Clean up
+
+end % EmacsDict

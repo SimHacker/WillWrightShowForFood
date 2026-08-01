@@ -1,0 +1,126 @@
+To: jag, patl, owen, rxb, mackay, powell, hvr
+Subject: Re: Status of NeWS
+--text follows this line--
+   Date: Fri, 1 Nov 91 10:41:55 +0100
+   From: knut@forit.forut.no
+
+Knut, I just quit my job at Sun because Sun's managment is living a
+lie. Their words say they support NeWS, but their actions testify to
+just the opposite. There are many people in Sun who want quite badly
+to kill NeWS, and they have been trying to do that while at the same
+time giving lip service to NeWS, so they don't get fired. McNealy and
+other top level executives say they support NeWS, and say they will
+fire anyone who tries to kill it. So everyone pretends to be behind it
+to keep their job, while continuing to sabotage it. It is a very
+unpleasant and unfortunate situation.
+
+   Pat,
+
+   Since the early days of Sundew (1986) my hopes for NeWS and TNT has
+   been very high. IT is good to see some from within Sun still is
+   advocating the system in netland.  The activity on
+   comp.windows.news has been low over the last months. Bad rumors
+   frequently pops up in my mailbox.  The company is criticized for
+   not pushing NeWS hard enough.  NeWSPrint and FrameMaker are good
+   signs. More is needed.  A bewildered market needs convincing
+   applications. Where has HyperNeWS gone?
+
+Sun was going to buy HyperNeWS from Turing and develop it into a
+wonderful environment. But the VP in charge of making the decision
+missed the deadline, so he gave himself another deadline, and then
+dumped it (so it didn't look like Sun dumped HyperNeWS just because he
+missed the deadline).
+
+   Can developers risk their future on NeWS/TNT.  
+
+Well one of the main reasons Sun isn't dumping TNT is that Frame would
+sue them if they did. So I don't know how much of a future there is
+for NeWS. I don't know when the managers at Sun will decide it's worth
+getting sued by Frame in order to get rid of NeWS (or figure out a way
+to dump it that they won't get sued).
+
+   The sad fact of this industry is that right or wrong in highly
+   technical matters seems to be settled by marketing success or
+   failure. Remember Cobol.  X10 and then x11 did - regardless of
+   technical merits - hit the marketplace just when "open windowing"
+   was desperately needed. It has by now a position similar to what
+   COBOL had in the late 60-ties. Its documentation is said to
+   encompass some 6000 pages.  I have no idea of the source code
+   volume.  It is a heavy burden for both human and machine resources.
+
+   Personally, I hope Sun still believe in its role as a defender
+   of conceptual economy and its power to maintain a leading role
+   in establishing industrial standards based on scientific sound
+   principles. If good and bad is mainly defined by marketing powers
+   computing is more like politics and less  high technology founded on
+   science.
+
+Sun Microsystems is in business to sell hardware, and SunSoft is in
+business to supply software for Sun Microsystems to run, and maybe
+make a few bucks on the side selling the same old shrink wrapped shit
+to whoever else will buy it. The main goal of SunSoft's main customer
+is to sell as many tons of hardware as possible, and big bloated
+software sells big bloated machines.  Read the DOE/DOMF announcement.
+Draw your own conclusions.
+
+   I believe we have seen in the past that software dinosaurs are
+   difficult to hide under the carpet. It is simply not enough to feed
+   them more cpu cycles.  If Sun gives up on actively promoting NeWS
+   and TNT as an API, the stand of the company in the advanced
+   industry and scientifically inclined market will not be the same.
+   NeWS in many ways represents the essence of software enginering
+   research over the last 20 years applied in the fields of
+   interactive graphics.  In my opinion it has great potentials for
+   object oriented (OO) databases applications too.  In distributed
+   applications, the NeWS/PostScript interpretative OO methods offers
+   an new opportunity to use object instances and their class
+   definitions as dynamically defined standards for information
+   interchange.  Hence, we could exchange data and their meaning as
+   one entity (objects) in open network environments instead of
+   interchanging data based on a priori agreedments on their
+   interpretations. This will give us much needed flexibility.
+
+That's one of the reasons we were given for Sun dumping HyperNeWS:
+HyperNeWS is *very* object oriented, and if we come out with a product
+*that* object oriented, *so* soon, before the 100% vaporware DOE/DOMF has
+had a chance to crustalize into millions of lines of code and link
+into every application on the desktop, that would confuse the
+customers. Sun is "commited" (in the institutional sense of the term)
+to delivering a totally object oriented environment in the future.
+HyperNeWS is much too far in the present to be compatible with those
+goals.
+
+   I hope rumors on tipping NeWS and TNT in Openwindows3.0 is simply
+   not true, - or is it?
+
+False rumors. TNT 3.0 is included with OpenWindows 3.0. It will take
+them quite some time and several lawsuites to get rid of NeWS.
+
+   I would appreciate if Suns officially announced commitment with
+   regard to NeWS/TNT for the upcoming releases and the Solaris
+   announcement could be summarized and posted.
+
+There was a recent Solaris announcement that mentioned NeWS and TNT.
+It is just a statement of fact that NeWS and TNT are included with
+OpenWindows 3.0. But if you hear anything saying that sun *supports*
+NeWS and TNT, that is just a lie.
+
+   Knut Skog                        
+
+   Professor of Comp. Sc.
+   Senior research scientist
+
+   PS
+
+   In order not to serve speculative interests I do not post this to
+   the net. Feel free to use this statement of opinion as you like.
+
+   DS
+
+Thanks -- please don't post this reply either. I feel I owe you this
+explination of my opinion, because I have told you different, more
+hopeful things in the past, based on my opinion that was formed around
+the lies I was told. Of course, this is just my opinion, who am I to
+know what's *really* going on? The people in charge certainly aren't
+telling.
+

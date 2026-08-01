@@ -1,0 +1,330 @@
+piemenu = "PL1" <0, -55> {
+1:		f.beep
+2:		f.beep
+3:		f.beep
+4:		f.beep
+5:		f.beep
+6:		f.beep
+7:		f.beep
+8:		! "date >> test"
+}
+
+piemenu = "PL2" <0, -55> {
+One:		f.beep
+Two:		f.beep
+Three:		f.beep
+Four:		f.beep
+Five:		f.beep
+Six:		f.beep
+Seven:		! "date >> test"
+Eight:		f.beep
+}
+
+piemenu = "PL3" <0, -55> {
+First:		f.beep
+Second:		! "date >> test"
+Third:		f.beep
+Fourth:		f.beep
+Fifth:		f.beep
+Sixth:		f.beep
+Seventh:	f.beep
+Eighth:		f.beep
+}
+
+piemenu = "PL4" <0, -55> {
+A:		f.beep
+B:		! "date >> test"
+C:		f.beep
+D:		f.beep
+E:		f.beep
+F:		f.beep
+G:		f.beep
+H:		f.beep
+}
+
+piemenu = "PL5" <0, -55> {
+Ape:		f.beep
+Bear:		f.beep
+Cat:		f.beep
+Dragon:		! "date >> test"
+Elephant:	f.beep
+Fish:		f.beep
+Giraffe:	f.beep
+Horse:		f.beep
+}
+
+piemenu = "PO1" <0, -55> {
+Print:		f.beep
+Move:		! "date >> test"
+Copy:		f.beep
+Delete:		f.beep
+Undo:		f.beep
+Again:		f.beep
+Find:		f.beep
+Property:	f.beep
+}
+
+piemenu = "PO2" <0, -55> {
+Clear:		f.beep
+Next:		f.beep
+Skip:		f.beep
+Center:		! "date >> test"
+Bold:		f.beep
+Case:		f.beep
+Italic:		f.beep
+Font:		f.beep
+}
+
+piemenu = "PO3" <0, -55> {
+Apples:		f.beep
+Spinach:	f.beep
+Oranges:	f.beep
+Pears:		f.beep
+Beets:		f.beep
+Tomato:		f.beep
+Peach:		! "date >> test"
+Cabbage:	f.beep
+}
+
+piemenu = "PO4" <0, -55> {
+Deliver:	f.beep
+Another:	f.beep
+Destroy:	f.beep
+Reset:		f.beep
+Kill:		f.beep
+Abort:		f.beep
+Start:		f.beep
+Change:		! "date >> test"
+}
+
+piemenu = "PO5" <0, -55> {
+Create:		f.beep
+Stop:		f.beep
+Expand:		f.beep
+Define:		f.beep
+Shift:		f.beep
+Lock:		f.beep
+Search:		f.beep
+Quit:		! "date >> test"
+}
+
+piemenu = "PP1" <0, -55> {
+North:		f.beep
+NE:		f.beep
+East:		f.beep
+SE:		f.beep
+South:		f.beep
+SW:		! "date >> test"
+West:		f.beep
+NW:		f.beep
+}
+
+piemenu = "PP2" <0, -55> {
+Up:		f.beep
+Black:		f.beep
+Right:		f.beep
+Open:		f.beep
+Down:		! "date >> test"
+White:		f.beep
+Left:		f.beep
+Close:		f.beep
+}
+
+piemenu = "PP3" <0, -55> {
+Full:		f.beep
+Dark:		f.beep
+In:		f.beep
+Active:		! "date >> test"
+Empty:		f.beep
+Light:		f.beep
+Out:		f.beep
+Inactive:	f.beep
+}
+
+piemenu = "PP4" <0, -55> {
+Top:		f.beep
+Fat:		f.beep
+Tall:		f.beep
+Old:		f.beep
+Bottom:		! "date >> test"
+Thin:		f.beep
+Short:		f.beep
+Young:		f.beep
+}
+
+piemenu = "PP5" <0, -55> {
+High:		f.beep
+More:		f.beep
+Large:		f.beep
+Quick:		f.beep
+Low:		! "date >> test"
+Less:		f.beep
+Small:		f.beep
+Slow:		f.beep
+}
+
+pulldownmenu = "LL1" <0, -55> {
+1:		f.beep
+2:		f.beep
+3:		f.beep
+4:		f.beep
+5:		f.beep
+6:		f.beep
+7:		f.beep
+8:		! "date >> test"
+}
+
+pulldownmenu = "LL2" <0, -55> {
+One:		f.beep
+Two:		f.beep
+Three:		f.beep
+Four:		f.beep
+Five:		f.beep
+Six:		f.beep
+Seven:		! "date >> test"
+Eight:		f.beep
+}
+
+pulldownmenu = "LL3" <0, -55> {
+First:		f.beep
+Second:		! "date >> test"
+Third:		f.beep
+Fourth:		f.beep
+Fifth:		f.beep
+Sixth:		f.beep
+Seventh:	f.beep
+Eighth:		f.beep
+}
+
+pulldownmenu = "LL4" <0, -55> {
+A:		f.beep
+B:		! "date >> test"
+C:		f.beep
+D:		f.beep
+E:		f.beep
+F:		f.beep
+G:		f.beep
+H:		f.beep
+}
+
+pulldownmenu = "LL5" <0, -55> {
+Ape:		f.beep
+Bear:		f.beep
+Cat:		f.beep
+Dragon:		! "date >> test"
+Elephant:	f.beep
+Fish:		f.beep
+Giraffe:	f.beep
+Horse:		f.beep
+}
+
+pulldownmenu = "LO1" <0, -55> {
+Print:		f.beep
+Move:		! "date >> test"
+Copy:		f.beep
+Delete:		f.beep
+Undo:		f.beep
+Again:		f.beep
+Find:		f.beep
+Property:	f.beep
+}
+
+pulldownmenu = "LO2" <0, -55> {
+Clear:		f.beep
+Next:		f.beep
+Skip:		f.beep
+Center:		! "date >> test"
+Bold:		f.beep
+Case:		f.beep
+Italic:		f.beep
+Font:		f.beep
+}
+
+pulldownmenu = "LO3" <0, -55> {
+Apples:		f.beep
+Spinach:	f.beep
+Oranges:	f.beep
+Pears:		f.beep
+Beets:		f.beep
+Tomato:		f.beep
+Peach:		! "date >> test"
+Cabbage:	f.beep
+}
+
+pulldownmenu = "LO4" <0, -55> {
+Deliver:	f.beep
+Another:	f.beep
+Destroy:	f.beep
+Reset:		f.beep
+Kill:		f.beep
+Abort:		f.beep
+Start:		f.beep
+Change:		! "date >> test"
+}
+
+pulldownmenu = "LO5" <0, -55> {
+Create:		f.beep
+Stop:		f.beep
+Expand:		f.beep
+Define:		f.beep
+Shift:		f.beep
+Lock:		f.beep
+Search:		f.beep
+Quit:		! "date >> test"
+}
+
+pulldownmenu = "LP1" <0, -55> {
+North:		f.beep
+NE:		f.beep
+East:		f.beep
+SE:		f.beep
+South:		f.beep
+SW:		! "date >> test"
+West:		f.beep
+NW:		f.beep
+}
+
+pulldownmenu = "LP2" <0, -55> {
+Up:		f.beep
+Black:		f.beep
+Right:		f.beep
+Open:		f.beep
+Down:		! "date >> test"
+White:		f.beep
+Left:		f.beep
+Close:		f.beep
+}
+
+pulldownmenu = "LP3" <0, -55> {
+Full:		f.beep
+Dark:		f.beep
+In:		f.beep
+Active:		! "date >> test"
+Empty:		f.beep
+Light:		f.beep
+Out:		f.beep
+Inactive:	f.beep
+}
+
+pulldownmenu = "LP4" <0, -55> {
+Top:		f.beep
+Fat:		f.beep
+Tall:		f.beep
+Old:		f.beep
+Bottom:		! "date >> test"
+Thin:		f.beep
+Short:		f.beep
+Young:		f.beep
+}
+
+pulldownmenu = "LP5" <0, -55> {
+High:		f.beep
+More:		f.beep
+Large:		f.beep
+Quick:		f.beep
+Low:		! "date >> test"
+Less:		f.beep
+Small:		f.beep
+Slow:		f.beep
+}
+

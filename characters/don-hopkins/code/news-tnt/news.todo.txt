@@ -1,0 +1,47 @@
+Write a window turds virus. It randomly selects a window mapped on the
+screen, and emits a succession of small turds from one of its corners.
+They squeeze out of from underneath the window, and fall to the bottom
+of the screen, where they all pile up.
+
+This will be easy to implement with 2 1/2-D dynamics.
+
+Stack of cards, with indexing tabs. An ordered stack of cards, with an
+indexing strip along the bottom. Each card has a rectangular tab
+sticking out below it, whose width is a function of the number of
+cards and the card width, and whose horizintal position of its
+position in the stack. Mouse down in a card's tab brings the card to
+top.  With the button down, drag the mouse into another card's tab
+(EnterWindow) and that card raises. You can flip through the cards in
+order by dragging the mouse horizontally. You should be able to make
+temporary and permanant changes to the order. Commands like pop, exch,
+roll, etc... ((exch prev, exch next) (top, bottom) (delete copy) ...)
+
+Half a pie menu can be used as a scroll bar. Scroll button at edge of
+page. Press it and up pops an open book, the covers bent back to meet,
+and the pages evenly spread over 180 degrees, with the covers
+following the cursor, flipping pages from slice to slice.  Absolute
+page positioning, or relative page flipping upon slice transition. You
+could also scroll by line. Each slice puts the corresponding line of
+the page at the top of the screen.  You can "crank" the menu to flip
+from page to page. The opposite edge of the screen would crank the
+opposite direction! A pair of these suckers could stick out like
+window ears. 
+
+How would it look to have instrumentation sticking out of the edge of
+the window? (I don't care how fast it would run! I just want to see it
+on the screen!)
+
+NeWS 1.1: Screen snapshot tool. Makes a window that is rectangle with
+a 1 pixel inset rectangular hole in it. Uses dashed lines to animate
+edges like Mac. Writes out a pixrect file. 
+
+Make a pty client: make a connection to the server, and open up a
+terminal window. Run a program on one half of a pty, and forward I/O
+between the other half and the server. Server can send commands that
+send signals, do ioctls, request information, as out of band data
+(evil), or whatever. That's how SoftTTY can send SIGWINCH's!
+
+The pty client should be able to deal with losing the server. It
+tries to reconnect to the server every several seconds, until such
+time that it gives up. Once it's in, it restarts a terminal window and
+reinitializes.

@@ -1,0 +1,84 @@
+The following 5 messages contain a test release of the PostScript
+Interactive Bug Eradication Routines (PSIBER).  They have been tested and
+run under NeWS 1.1 and X11/NeWS Beta 2 on the Sun, and Grasshopper MacNeWS
+1.1.  The file "introduction" contains documentation (the first page of
+which is included in this message).
+
+PSIBER has also been known as the CyberSpace Deck, or PSpike.  (I came up
+with the latest contrived acronym since AutoDesk trademarked the word
+CyberSpace).
+
+The 5 messages contain a split-up compressed shar file.  In an empty
+directory, reassemble the messages in order according to their subject
+lines, stripping the mail headers.  Pass that through uudecode to get the
+compressed shar file "cyber.shar.Z".  Uncompress that to get "cyber.shar".
+Unpack that by typing "sh cyber.shar" (after reading it over meticulously
+if you don't trust me!  ;-) Look at the "README" file, and load the stuff
+into your NeWS server by typing "cyber".  It will read in an awful lot of
+PostScript code, and finally let you shape its window.  Look at the file
+"introduction" for help in navagating around.  There are some files in the
+directory that contain yet-to-be-documented stuff.  There's quite a bit
+more work to be done, but I would really appreciate you trying out what's
+there and sending me impressions and comments.  Tell me what doesn't work,
+and what you find to be useful, and any other criticisms or suggestions
+that come to mind!
+
+	-Don
+
+========================================================================
+
+The CyberSpace Deck Manual
+
+  Don Hopkins		     Grasshopper Group		Last update
+  don@brillig.umd.edu	     grass@toad.com		22 July 89
+
+========================================================================
+
+Introduction
+
+The CyberSpace deck lets you graphically display and manipulate the many
+PostScript data strutures, programs, and processes living in the virtual
+memory space of NeWS.
+
+The Network extensible Window System (NeWS) is a multitasking object
+oriented PostScript programming environment.  NeWS programs and data
+structures make up the window system kernel, the user interface
+toolkit, and even entire applications.
+
+The CyberSpace deck is one such application, written entirely in
+PostScript, the result of an experiment in using a graphical programming
+environment to construct a interactive visual user interface to itself.
+
+It displays views of structured data objects in overlapping windows that
+can be moved around on the screen, and manipulated with the mouse:  you
+can copy and paste data structures from place to place, execute them,
+edit them, open their substructures up to any depth, adjust the scale to
+shrink and magnify parts of the display, and pop up menus of other useful
+commands.  Deep or complex data structures can be more easily grasped by
+applying various views to them.
+
+There is a window onto a NeWS process, a PostScript interpreter with
+which you can interact (as with an "executive").  PostScript is a stack
+based language, so the window has a spike sticking up out of it,
+representing the process's operand stack.  Objects on the process's stack
+are displayed in windows with their tabs pinned on the spike.  (Figure
+xxx) You can feed PostScript expressions to the interpreter by typing
+them with the keyboard, or pointing and clicking at them with the mouse,
+and the stack display will be dynamically updated to show the results.
+
+Not only can you examine and manipulate the objects on the stack, but you
+can also manipulate the stack directly with the mouse.  You can drag the
+objects up and down the spike to change their order on the stack, and
+drag them on and off the spike to push and pop them; you can take objects
+off the spike and set them aside to refer to later, and close them into
+icons so they don't take up as much screen space.
+
+NeWS processes running in the same window server can be debugged using
+the existing NeWS debug commands in harmony with the graphical stack
+and object display.
+
+The CyberSpace deck can be used as a "hands on" way to learn about
+programming in PostScript and NeWS.  You can try out examples from
+cookbooks and manuals, and explore and understand the environment with
+the help of the interactive data structure display.
+

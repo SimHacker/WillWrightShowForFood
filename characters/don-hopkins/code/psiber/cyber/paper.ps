@@ -1,0 +1,132 @@
+%!
+
+/TeXdict 100 dict def
+TeXdict begin
+
+/Landscape {
+	90 rotate
+	72 300 div dup neg scale
+} def
+
+/Portrait {
+	72 300 div dup neg scale
+	0 11 300 mul neg translate % move to upper left corner A4
+} def
+
+/Mode { Portrait } def
+
+/landscapemode {
+	/Mode { Landscape } def
+} def
+
+/Mtrx 6 array def
+
+/BOJ {
+	Mode
+	Mtrx currentmatrix pop
+} def
+
+/BOP {
+	Mtrx setmatrix
+	0 0 moveto
+} def
+/FindFont {
+	TeXfonts exch get
+} def
+/EOP {
+	showpage
+} def
+/FONTDEF {
+	/num exch def
+	/Font 20 dict def
+	TeXfonts begin
+	num Font def end Font begin
+	/BitMaps 256 array def
+	/BuildChar {CharBuilder} def
+	/Encoding 256 array def
+		0 1 255 { Encoding exch /.notdef put } for
+	/FontBBox [ 0 0 1 1 ] def
+	/FontMatrix [ 1 0 0 1 0 0 ] def
+	/FontType 3 def
+	num Font definefont
+	end
+} def
+/NFONTS {
+	/Nfonts exch def
+	/TeXfonts Nfonts dict def
+} def
+/EOF {
+	end
+} def
+/RULE {
+	/h exch 1 sub def
+	/w exch 1 sub def
+	currentpoint /yy exch def /xx exch def
+%	xx yy moveto
+	w 0 rlineto
+	0 h neg rlineto
+	w neg 0 rlineto
+	closepath
+	fill
+	xx yy moveto
+} def
+/F {
+	1 0 rmoveto
+} def
+/B {
+	-1 0 rmoveto
+} def
+/H {
+	currentpoint pop sub 0 rmoveto
+} def
+/V {
+	currentpoint exch pop sub 0 exch rmoveto
+} def
+/M {
+	moveto
+} def
+/FN {
+	FindFont setfont
+} def
+/D {
+	/num exch def
+	/raster exch def
+	/yorigin exch def
+	/height exch def
+	/xorigin exch def
+	/width exch def
+	/pixwidth exch def
+	/charcode exch def
+	/Font TeXfonts num get def
+	Font /BitMaps get charcode [ raster yorigin height xorigin width pixwidth ] put
+	Font /Encoding get charcode dup 3 string cvs cvn put
+} def
+
+/P {
+	show
+} def
+
+/ch-image  { ch-data 0 get } def
+/ch-xoff   { ch-data 3 get } def
+/ch-yoff   { ch-data 1 get } def
+/ch-width  { ch-data 5 get } def
+/ch-height { ch-data 2 get } def
+/ch-tfmw   { ch-data 4 get } def
+
+/CharBuilder {
+	/ch-code exch def
+	/font-dict exch def
+	/ch-data font-dict /BitMaps get
+	ch-code get def
+	ch-data null eq not
+	{
+		ch-width		0
+%		setcharwidth
+		ch-xoff neg		ch-yoff neg
+		ch-tfmw ch-xoff sub	ch-height ch-yoff sub
+		setcachedevice
+		ch-tfmw % 3 add -4 and
+		 ch-height true [ 1 0 0 1 ch-xoff  ch-yoff ]
+		{ch-image} imagemask
+	} if
+} def
