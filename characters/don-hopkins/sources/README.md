@@ -34,6 +34,7 @@
 | [2011 Reddit MVC flame → Morphic](2011-reddit-mvc-flame-morphic.md) | u/xardox vs cargo-cult MVC; Kay email; Morphic payoff — Craig Latta show fuel |
 | [Garnet/Laszlo → Svelte × Snap!](micropolis-svelte-snap-constraint-bridge.md) | Constraints + prototypes bridge |
 | [ScriptX DreamScape room essay](../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida multimedia Lisp machine; WWDC 1995 |
+| [Window Manager Flames — ICCCM/OWM/piewm](i39l-window-manager-flames.md) | Unix-Haters chapter: "The ICCCM Sucks"; OWM design notes (tabs, pies, rooms, legos); PizzaTool's shaped window; "criminally negligent" input focus; piewm docs. Source lives at [`../../josh-siegel/sources/owm.ps`](../../josh-siegel/sources/owm.ps) |
 
 Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 
@@ -119,6 +120,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Plaisant mouse-ahead memory, May 2018](2018-05-14-plaisant-mouse-ahead-memory.md) | **The 1987 ;login: text in full** (Simple Simon poem; mouse-ahead + display suppression published Aug 1987) + Plaisant's eyewitness: marking-menu crew misread "mousy" as always-visible proof — "Obviously wrong"; HCIL 90-02 "mouse ahead display suppression" cite |
 | [PIXIE reference receipts, Feb 2019](2019-02-08-pixie-references-receipts.md) | **Buxton's "I told him about PIXIE" refuted** — dated trail from 2 Dec 1986 email-to-self through the 1989 `piepaper.comments`; full annotated CACM manuscript (Hopkins/Callahan/Weiser) with mouse-ahead sections; why Don quit academic publishing for DDJ |
 | [sunviewgames → SDI resurrection (2026)](../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md) | Weiser firsthand, 24 Jan 1987: "**I used the snow to hack pies into sunview**"; Apr 1988 NeWS-makers post (Shneiderman's camera, Zork navigation, mouse-ahead on Usenet); recovered [SDI source](../../mark-weiser/software/README.md) with `piemenu_track.c` |
+| [JavaScript Pie Menus for IE (2001)](2001-javascript-pie-menus-ie.md) | **The web-era implementation** — XML + DHTML behavior component at piemenu.com; Fasteroids fair-comparison game; anti-patent paragraph again; credits list naming the whole chain (Weiser, Gallaher, Shneiderman, Gosling, Siegel, Wright…) |
 
 ## Other sources in this folder
 

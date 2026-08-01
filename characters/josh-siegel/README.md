@@ -41,9 +41,13 @@ on NeWS instead of WWIII.**)" —
 - **owm** — the **Open Window Manager**, with Don: an X11 window manager written entirely in
   object-oriented NeWS PostScript (~1991), integrating **X11 and NeWS windows** under one roof
   with **tabbed frames** that wrap either kind of window, **pie menus** on frames and desktop,
-  a **scrolling desktop**, and **multiple rooms**. Don still has source:
-  - [owm.ps.txt](https://donhopkins.com/home/archive/NeWS/owm.ps.txt) — the window manager
-  - [i39l.txt](https://donhopkins.com/home/archive/NeWS/i39l.txt) — design notes and emails
+  a **scrolling desktop**, and **multiple rooms**. Don still has source — and a copy now lives
+  in this room:
+  - [`sources/owm.ps`](sources/owm.ps) — **the window manager itself**, archived here
+    (mirror: [owm.ps.txt](https://donhopkins.com/home/archive/NeWS/owm.ps.txt))
+  - [Window Manager Flames](../don-hopkins/sources/i39l-window-manager-flames.md) — the design
+    notes and emails: OWM, "The ICCCM Sucks", piewm
+    (mirror: [i39l.txt](https://donhopkins.com/home/archive/NeWS/i39l.txt))
   - [tab.ps](https://donhopkins.com/home/archive/NeWS/win/tab.ps) — the tabbed frames
 - **The ICCCM death match (1991)**: after talking to David Rosenthal and Frame, Josh proposed
   pure-ICCCM TNT windows while Jonathan Payne's battle plan pitted "**OWM** (NeWS window manager

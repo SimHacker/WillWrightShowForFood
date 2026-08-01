@@ -1,0 +1,1311 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Open Window Manager
+
+/NeWS 3 0 findpackage beginpackage
+/TNTCore 3 0 findpackage beginpackage
+/TNT 3 0 findpackage beginpackage
+/X11 3 0 findpackage beginpackage
+/debug 1 1 findpackage beginpackage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Flags
+
+/UseTabs? true def
+
+UseTabs? /TNT 3 0 findpackage /ClassTabBaseWindow known and {
+    ClassTabBaseWindow ClassTabPopupWindow
+} {
+    ClassBaseWindow ClassPopupWindow
+} ifelse
+
+/FavoritePopupWindow exch def
+/FavoriteBaseWindow exch def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassXGenericCanvas
+
+/ClassXGenericCanvas ClassXCanvas []
+classbegin
+    /NewObject { % can => can
+	/NewMagic self send
+    } def
+
+    /NewInit { % - => -
+	/OriginalParent Parent def
+	/NewInit super send
+    } def
+
+    /destroy { % - => -
+        /OriginalParent unpromote
+        /destroy super send
+    } def 
+
+    /Paint nullproc def
+
+classend def % ClassXGenericCanvas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassXClientCanvas
+
+/ClassXClientCanvas ClassXCanvas [/Protocols]
+classbegin
+
+    /NewObject { % can => can
+	/NewMagic self send
+    } def
+
+    /NewInit { % - => -
+	/OriginalParent Parent def
+	self /Matrix
+	[ 1 0 0 -1 0 self false getbbox 4 1 roll pop pop pop ] put
+	/NewInit super send
+    } def
+
+    /destroy { % - => -
+        /OriginalParent unpromote
+        /destroy super send
+    } def 
+
+    /GetProp { % canvas property => value true
+	       %                 => false
+	2 copy xcheckproperty {
+	    2 copy xlengthofproperty string
+	    0 exch xgetproperty
+	    pop pop pop pop true
+	} { pop pop false } ifelse
+    } def
+
+    % Send an event of type ClientMessage to this window.  If the array is
+    % given, fills in the data fields of the event with those numbers.  If
+    % the array is not given, zeroes are filled in.  REMIND: this routine
+    % should probably put a timestamp into one of the data fields.
+    %
+    /SendClientMessage { % atomname [ x x x x x ] => -
+			 % atomname		  => -
+	dup type /arraytype ne { 
+	    ZeroArray 
+	} if
+
+	32 string 3			% 3 is starting index into string
+	3 -1 roll			% atom str 3 [.....]
+	{				% atom str i xi
+	    3 copy putcard32
+	    pop 1 add
+	} forall pop			% atom str
+
+	% The first byte of the message is the event code, and the second
+	% byte is the format code.  The third and fourth bytes are the
+	% sequence field.  REMIND: this relies on writeXevent to fill
+	% it in properly.
+
+	dup 0 0 putcard32		% clear the first word
+	dup 0 33 put			% RequestCode=33 (ClientMessage)
+	dup 1 32 put			% Format=32
+
+	% Put the client ID in the word #1 and the atom in word #2.
+
+	dup 1 XID putcard32		% atom str
+
+	dup 3 -1 roll			% str str /atom
+	false XInternAtom
+	2 exch putcard32		% str
+
+	createevent begin
+	    /Canvas self def
+	    /Name /ClientMessage def
+	    /Action exch def		%
+	    /ClientData 0 def
+	    /TimeStamp lasteventtime def
+	    currentdict sendevent
+	end
+    } def
+
+    % Sends a WM_PROTOCOLS style ClientMessage.
+    %
+    /SendProtocols { % atom => -
+	false XInternAtom
+	/WM_PROTOCOLS
+	[ 3 -1 roll lasteventtime servertoxtime 0 0 0 ]
+	/SendClientMessage self send
+    } def
+
+    /SendConfigure { % - => -
+	createevent dup begin
+	    /Name /ConfigureNotify def
+	    /Canvas self def
+	    /Action self def
+	    /TimeStamp lasteventtime def
+	end sendevent
+    } def
+
+    /UpdateProtocols { % - => -
+	/Protocols dictbegin
+	    self /WM_PROTOCOLS xcheckproperty {
+		/value
+		    self /WM_PROTOCOLS
+		    2 copy xlengthofproperty string
+		    0 exch xgetproperty pop pop pop pop
+		def
+		0 1 value length 4 idiv 1 sub {
+		    value exch getcard32 XGetAtomName dup def
+		} for
+	    } if
+	dictend promote
+    } def
+
+    /TakeFocus { % - => -
+	Protocols null ne {
+	    Protocols /WM_TAKE_FOCUS known {
+		/WM_TAKE_FOCUS /SendProtocols self send
+	    } if
+	} if
+    } def
+
+    /Keyable? { % - => bool
+	self /WM_HINTS GetProp {
+	    dup 0 getcard32 1 and 0 ne {
+	        1 getcard32 0 ne
+	    } {
+	        pop true
+	    } ifelse
+	} {
+	    true
+	} ifelse
+    } def
+
+    /KeyStart { % event => 
+	self /WM_COLORMAP_WINDOWS GetProp {
+	    1 dict begin
+		/value exch def
+		0 1 value length 4 idiv 1 sub {
+		    value exch getcard32 xlookupid {
+			/Colormap get installcolormap
+		    } if
+		} for
+	    end
+	} if
+	/KeyStart super send
+    } def
+
+    /Helpable? true def
+
+    /HandleHelp { redistributeevent } def
+
+    /Paint nullproc def
+
+    /preferredsize { % - => w h
+	self /WM_NORMAL_HINTS GetProp {
+	    1 dict begin
+		/value exch def
+		value 0 getcard32 8 and 0 ne {
+		    value 3 getcard32 2 add value 4 getcard32 2 add
+		} { 
+		    /size self send 
+		} ifelse
+	    end
+	} {
+	    /size self send
+	} ifelse
+    } def 
+
+    /minsize { % - => w h
+	self /WM_NORMAL_HINTS GetProp {
+	    1 dict begin
+		/value exch def
+		value 0 getcard32 16 and 0 ne {
+		    value 5 getcard32 2 add value 6 getcard32 2 add
+		} { 
+		    /minsize super send
+		} ifelse
+	    end
+	} {
+	    /minsize super send
+	} ifelse
+    } def
+
+    /map { % - => -
+	createevent dup begin
+	    /Name /MapNotify def
+	    /Canvas self def
+	    /Action self def
+	    /TimeStamp lasteventtime def
+	end sendevent
+	/map super send
+    } def
+
+    /reshape { % x y w h => -
+	/reshape super send
+	self /Matrix
+	[ 1 0 0 -1 0 self false getbbox 4 1 roll pop pop pop ] put
+	/SendConfigure self send
+    } def
+
+    /HandleDamage { % event => -
+	redistributeevent
+    } def 
+
+    /activate { % emgr => -
+	EventMgr null eq {                  % REMIND: is this necessary?
+	    /EventMgr exch def 
+	    self                                    % self
+	    Frontable? {
+		dup /addclient FrontService send
+	    } if
+	    Helpable? {
+		dup /addclient HelpService send
+	    } if
+	    Keyable? {
+	        dup /addclient KeyService send
+	    } if
+	    Menuable? {
+		dup /addclient MenuService send
+	    } if
+	    Openable? {
+		dup /addclient OpenService send
+	    } if
+	    Receptible? {
+		dup /addclient ReceptionService send
+	    } if
+	    Selectable? {
+		dup /addclient ClassSelectUI send
+	    } if
+	    Trackable? {
+		dup /addclient TrackService send
+	    } if
+	    Transparent not {
+		dup /addclient DamageService send
+	    } if
+	    pop % the self
+	} {
+	    pop
+	} ifelse
+    } def 
+
+    /KillClient { % - => -
+	Protocols /WM_DELETE_WINDOW known {
+	    /WM_DELETE_WINDOW /SendProtocols self send
+	} {
+	    /XID self send xkillclient
+	} ifelse
+    } def
+
+    /GetGroupID { % can => id
+	1 dict 
+	begin
+	    /group null def
+
+	    self /WM_HINTS GetProp {
+		dup 0 getcard32 64 and 0 ne {
+		    8 getcard32 /group exch def
+		} {
+		    pop
+		} ifelse
+	    } if
+
+	    self /WM_TRANSIENT_FOR GetProp {
+		0 getcard32 /group exch def
+	    } if
+
+	    group null eq {
+		self /XID get
+	    } {
+		group 0 eq {
+		    self /XID get
+		} {
+		    group
+		} ifelse
+	    } ifelse
+	end
+    } def
+
+    /GetGroup { % can => frame
+	GetGroupID 
+	Windows 1 index known {
+	    Windows exch get
+	} { 
+	    pop null
+	} ifelse
+    } def
+
+    /GroupActivate { %
+	Windows self /XID get known {
+	    3 dict begin
+		/frame Windows self /XID get get def
+		/group /GetGroup self send def
+
+		frame /SuperWindow known {
+		    frame /removesubwindow frame /SuperWindow get send
+		} if
+		/deactivate frame send
+
+		group null eq group frame eq or {
+		    EventManager /activate frame send
+		} {
+		    frame soften /addsubwindow group send
+		} ifelse
+	    end
+	} if
+    } def
+
+classend def % ClassXClientCanvas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassX11ManagerMixin
+
+/ClassX11ManagerMixin ClassWindow
+[/IconWindow /WidthInc /HeightInc /FirstMapping]
+classbegin
+
+    /NewInit { % client => -
+	/NewInit super send
+	self /WM_STATE xdeleteproperty % The frame is not a ICCCM window
+    } def
+
+    /SetKeyboardFocus { % timestamp restore? => accepted?
+	/Center /client self send {
+	    3 1 roll
+	    /Keyable? 3 index send {
+		/SetKeyboardFocus super send
+	    } { 
+		pop pop false
+	    } ifelse
+	    /TakeFocus 3 -1 roll send
+	} {
+	    /SetKeyboardFocus super send
+	} ifelse
+    } def
+
+    /SetFirstMapping { % bool => -
+	/FirstMapping exch def
+    } def
+
+    /close { % - => -
+	/close super send
+	/Center /client self send {
+	    IconWindow null eq {
+		GetIconWindow {
+		    /IconWindow exch def
+		    IconWindow /Parent get null ne {
+			IconWindow /new ClassXGenericCanvas send 
+			EventManager /activate IconWindow send
+		    } if
+		} if
+	    } {
+		pop 
+	    } ifelse
+	    IconWindow null ne {
+		IconWindow /Parent get null ne {
+		    gsave
+		    self setcanvas
+		    IconWindow /Parent get self ne {
+			IconWindow /Parent self soften put
+		    } if
+		    0 64 IconWindow movecanvas
+		    IconWindow canvastotop
+		    IconWindow /Transparent false put
+		    IconWindow /Mapped true put
+		    grestore 
+		} {
+		    IconWindow /seticonimage self send
+		} ifelse
+	    } if
+	} if
+    } def
+
+    /open { % - => -
+	IconWindow null ne {
+	    IconWindow /Parent get null ne {
+		IconWindow /Mapped false put
+	    } if
+	} if
+	/open super send
+    } def
+
+    /place { % - => -
+	/Center /client self send {
+	    /WM_NORMAL_HINTS GetProp {
+		5 dict 
+		begin
+		    /value exch def
+		    value 0 getcard32 1 and 0 ne 
+		    value 0 getcard32 4 and 0 ne or {
+			gsave Parent setcanvas
+[ 1 0 0 -1 0 Parent false getbbox 4 1 roll pop pop pop ] setmatrix
+
+			    /x value 1 getcard32 def
+			    /y value 2 getcard32 def
+
+			    /preferredsize self send /h exch def 
+			    /w exch def
+			    /y /size /framebufferof self send send exch pop 
+			    y sub h sub 
+			    /Label? self send {
+				{
+				    HeaderHeight HeaderGap add FooterGap add
+				} 
+				self send sub 
+			    } if
+			    def
+
+			    x y w h /reshape self send
+			grestore
+		    } {
+			/place super send
+		    } ifelse
+		end
+	    } {
+		/place super send
+	    } ifelse
+	} {
+	    /place super send
+	} ifelse 
+    } def
+
+    /map { % - => -
+	/Center /client self send {
+	    /_OL_WIN_ATTR GetProp {
+		dup length 12 eq {
+		    2 getcard32 XGetAtomName /_OL_PIN_OUT eq {
+			/Pinned? false def
+		    } {
+			/Pinned? true def
+		    } ifelse
+		} {
+		    dup 0 getcard32 4 and 0 ne {
+			3 getcard32 1 eq {
+			    /Pinned? true def
+			} {
+			    /Pinned? false def
+			} ifelse
+		    } {
+			pop
+		    } ifelse
+		} ifelse
+	    } {
+		/Pinned? true def
+	    } ifelse
+	} if
+	/map super send
+    } def
+
+    /DoMap { % can => -
+	FirstMapping {
+	    false /SetFirstMapping self send
+
+	    /WM_HINTS GetProp {
+		3 dict begin
+		    /value exch def
+
+		    value 0 getcard32 16 and 0 ne {
+			self /IconXY [
+			    value 5 getcard32 
+			    /size /framebufferof self send send exch pop
+			    value 6 getcard32 sub 64 sub
+			] cvx put
+		    } if
+
+		    value 0 getcard32 2 and 0 ne {
+			value 2 getcard32 1 eq {
+			    /open self send
+			} {
+			    /close self send
+			} ifelse
+		    } {
+			/open self send
+		    } ifelse
+		end
+	    } { 
+		/open self send
+	    } ifelse
+	} {
+	    /open self send
+	} ifelse
+	/map self send
+	/totop self send
+    } def
+
+    /DoConfig { % frame canvas => -
+	10 dict begin
+	    gsave
+		/can exch def
+		/frame exch def
+		/framebufferof frame send setcanvas
+
+		can /config_width known 
+		can /config_height known or
+		can /config_x known or 
+		can /config_y known or {
+
+		    /w can /config_width known 
+		    { 
+			/config_width can send 
+			/minsize can send pop max
+		    } {
+			/size can send pop 
+		    } ifelse 
+		    def
+
+		    /h can /config_height known 
+		    { 
+			/config_height can send 
+			/minsize can send exch pop max
+		    } {
+			/size can send exch pop 
+		    } ifelse 
+		    def
+
+		    /preferredsize [ w h ] cvx /installmethod can send
+		    /preferredsize frame send 
+		    /h exch def
+		    /w exch def
+
+		    /x can /config_x known {
+			/config_x can send
+		    } {
+			/location frame send pop
+		    } ifelse 
+		    def
+
+		    /y can /config_y known {
+			/size /framebufferof can send send exch pop 
+			/config_y can send sub h sub
+		    } {
+			/location frame send exch pop
+			can /config_height known {
+			    /size can send exch pop /config_height can 
+			    send sub add
+			} if
+		    } ifelse 
+		    def
+
+		    x y /preferredsize frame send /reshape frame send
+		    can /config_x undef
+		    can /config_y undef
+		    can /config_width undef
+		    can /config_height undef
+		} if
+	    grestore
+	end
+    } def
+
+    /destroy { % - => -
+	IconWindow null ne {
+	    IconWindow /OriginalParent known {
+	        IconWindow
+		dup /Mapped false put
+		dup /Parent 1 index /OriginalParent get put
+		/OriginalParent undef
+	    } if
+	} if
+	/Center /client self send {
+	    dup /XID get xlookupid {
+		pop
+		dup /OriginalParent known {
+		    gsave
+		    	dup /Mapped false put
+			dup /Parent 1 index /OriginalParent get put
+			/location self send /move 3 index send
+		    	dup /Mapped Mapped put
+			/OriginalParent undef
+		    grestore
+		} { pop } ifelse
+	    } if
+	} if
+
+	/WMInterests where {
+	    pop
+	    WMInterests /Canvas get self undef
+	} if
+	/destroy super send
+    } def
+
+classend def % ClassX11ManagerMixin
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassX11BaseWindow
+
+/ClassX11BaseWindow [ ClassX11ManagerMixin FavoriteBaseWindow ] []
+classbegin
+    /Footer? false def
+
+    /QuitFromUser { % ctl => -
+	pop /KillClient /Center /client self send pop send
+    } def
+classend def % ClassX11BaseWindow
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassX11PopupWindow
+
+/ClassX11PopupWindow [ ClassX11ManagerMixin FavoritePopupWindow ] []
+classbegin
+    /Footer? false def
+
+    /unpin { % - => -
+	/Center /client self send {
+	    1 dict 
+	    begin
+		/can exch def
+		can /_OL_PIN_STATE 4 string dup 0 0 putcard32 
+		/INTEGER false XInternAtom 32 xsetproperty
+		/Protocols can send /WM_DELETE_WINDOW known {
+		    /Pinned? false store
+		    /KillClient can send
+		} {
+		    /unpin super send
+		} ifelse
+	    end
+	} { 
+	    /unpin super send 
+	} ifelse
+    } def
+
+    /pin { % - => -
+	/pin super send
+	/Center /client self send {
+	    /_OL_PIN_STATE 4 string dup 0 1 putcard32 
+	    /INTEGER false XInternAtom 32 xsetproperty
+	} if
+    } def
+
+    /seticonlabel { % label => -
+	pop 
+    } def
+
+    /QuitFromUser { % ctl => -
+	pop /KillClient /Center /client self send pop send
+    } def
+
+    /DismissFromUser { % ctl => -
+	pop /KillClient /Center /client self send pop send
+    } def
+
+    /DismissAllFromUser { % ctl => -
+	pop /KillClient /Center /client self send pop send
+    } def
+
+    /HandleOpen { % event => -
+	pop /unpin self send
+    } def
+
+classend def % ClassX11HelpWindow
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassX11HelpWindow
+
+/ClassX11HelpWindow ClassX11PopupWindow []
+classbegin
+    /Reshape? false def
+classend def % ClassX11HelpWindow
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ClassX11NoticeWindow
+
+/ClassX11NoticeWindow [ClassX11ManagerMixin ClassBaseWindow] []
+classbegin
+    /Close? false def
+    /Footer? false def
+    /Label? false def
+    /Pin? false def
+    /Reshape? false def
+    /Pinned? false def
+    /Menuable? false def
+
+    /QuitFromUser { % ctl => -
+	pop /KillClient /Center /client self send pop send
+    } def
+classend def % ClassX11NoticeWindow
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Utilities
+
+/GetIconWindow { % can => can true
+		 %     => false
+    /WM_HINTS GetProp {
+	2 dict begin
+	    /value exch def
+	    /flags value 0 getcard32 def
+	    flags 4 and 0 ne {
+		value 3 getcard32 xlookupid
+	    } {
+		flags 8 and 0 ne {
+		    value 4 getcard32 xlookupid
+		} {
+		    false
+		} ifelse
+	    } ifelse
+	end
+    } {
+	false
+    } ifelse
+} def
+
+/GetFrameClass { % can => frame
+    1 dict begin
+	/can exch def
+	% Now, we need to wrap a canvas around it.
+	can /_OL_WIN_ATTR GetProp {
+	    dup length 12 eq {
+		0 getcard32 XGetAtomName
+	    } {
+		1 getcard32 XGetAtomName
+	    } ifelse
+	} {
+	    /GetGroupID can send can /XID get eq {
+		/_OL_WT_BASE
+	    } {
+		/_OL_WT_CMD
+	    } ifelse
+	} ifelse
+
+	{
+	    /_OL_WT_BASE {
+		ClassX11BaseWindow
+	    }
+	    /_OL_WT_CMD {
+		ClassX11PopupWindow
+	    }
+	    /_OL_WT_NOTICE {
+		ClassX11NoticeWindow
+	    }
+	    /_OL_WT_HELP {
+		ClassX11HelpWindow
+	    }
+	    /Default
+	    /_OL_WT_OTHER {
+		ClassX11BaseWindow
+	    }
+	} case
+    end
+} def
+
+/UpdateDecor { % frame can => -
+    3 dict begin
+	/can exch def
+	/win exch def
+	can /_OL_DECOR_ADD GetProp {
+	    /val exch def
+	    0 1 val length 4 idiv 1 sub {
+		val exch getcard32 XGetAtomName {
+		    /_OL_DECOR_CLOSE { 
+			/Close? true /setattribute win send
+		    }
+		    /_OL_DECOR_RESIZE {
+			/Reshape? true /setattribute win send
+		    }
+		    /_OL_DECOR_HEADER {
+			/Label? true /setattribute win send
+		    }
+		    /_OL_DECOR_PIN {
+			/Pin? true /setattribute win send
+		    }
+		} case
+	    } for
+	} if
+	can /_OL_DECOR_DEL GetProp {
+	    /val exch def
+	    0 1 val length 4 idiv 1 sub {
+		val exch getcard32 XGetAtomName {
+		    /_OL_DECOR_CLOSE { 
+			/Close? false /setattribute win send
+		    }
+		    /_OL_DECOR_RESIZE {
+			/Reshape? false /setattribute win send
+		    }
+		    /_OL_DECOR_HEADER {
+			/Label? false /setattribute win send
+		    }
+		    /_OL_DECOR_PIN {
+			/Pin? false /setattribute win send
+		    }
+		} case
+	    } for
+	} if
+    end
+} def
+
+/GetPinstate {
+    /_OL_WIN_ATTR GetProp {
+	dup length 12 eq {
+	    2 getcard32 XGetAtomName /_OL_PIN_IN eq true
+	} {
+	    dup 0 getcard32 4 and 0 ne {
+		3 getcard32 1 eq true
+	    } {
+		pop false
+	    } ifelse
+	} ifelse
+    } {
+	false
+    } ifelse
+} def
+
+/GetProp { % canvas property => value true
+	   %		     => false
+    2 copy xcheckproperty {
+	2 copy xlengthofproperty string
+	0 exch xgetproperty
+	pop pop pop pop true
+    } { pop pop false } ifelse
+} def
+
+/BuildWindow {
+    10 dict begin
+	gsave
+	    /xid exch def
+
+	    % First, we need to transform the canvas.
+	    dup isinstance? not {
+		/new ClassXClientCanvas send
+	    } if
+
+	    /can exch def
+
+	    % Now, we need to wrap a canvas around it.
+	    can GetFrameClass
+	    can
+	    /framebufferof can send
+	    /FindVRoom where { pop FindVRoom } if
+	    /new 4 -1 roll send 
+	    /b exch def
+
+	    % decorate it
+	    b can UpdateDecor
+
+	    can GetPinstate {
+		0 ne b /Pinned? 3 -1 roll put
+	    } if
+
+	    % Name it
+	    can /WM_NAME GetProp {
+		/setlabel b send
+	    } if
+
+	    can /WM_ICON_NAME GetProp {
+		/seticonlabel b send
+	    } if
+
+	    /UpdateProtocols can send
+
+	    % Say it is a window!
+	    can /WM_STATE 8 string 
+	    dup 0 1 putcard32
+	    dup 1 b /XID get putcard32
+	    /INTEGER false XInternAtom 32 xsetproperty
+
+	    % Now, we need to place it
+	    /place b send
+
+	    % Config it
+	    b can /DoConfig b send
+
+	    /layout b send % remove this later!
+
+	    % Save a reference
+	    Windows xid b put
+
+	    % Now, activate it
+	    /GroupActivate can send
+
+	    true /SetFirstMapping b send
+
+	    b /SubstructureRedirect EventManager put
+
+	    WMInterests /Canvas get b soften dup put
+	grestore
+    end
+} def
+
+/WrapAllWindows {
+    1 dict begin
+	FrameBuffers {
+	    /fr exch def
+	    fr /TopChild get {
+		dup null eq { 
+		    exit 
+		} if
+		begin
+		    CanvasBelow
+		    Mapped OverrideRedirect not and {
+
+			fr setcanvas
+
+			currentdict /new ClassXClientCanvas send pop
+
+			/location currentdict send
+			currentdict XID BuildWindow 
+			/move Windows XID get send
+			Windows XID get 
+			/map exch send
+		    } if
+		end
+	    } loop
+	} forall
+    end
+} def
+
+/IsValid? { % obj => obj bool
+    dup /ParentDictArray known dup {
+	pop dup /ClassName exch send /ClassXClientCanvas eq
+    } if
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Root menu interface
+
+/Menu_Out currentprocess /Stdout get def
+
+/DamageCanvasTree { % can => -
+    dup setcanvas clippath extenddamageall
+} def
+
+/REFRESH { % - => -
+    FrameBuffers {
+	DamageCanvasTree
+    } forall
+} def
+
+/SPAWN { % menu str => - 
+    3 dict begin
+	/framebufferof 3 -1 roll send /fb exch def
+
+	spawn_tag Menu_Out tagprint
+	Menu_Out typedprint
+
+	FrameBuffers fb arrayindex not { 0 } if
+	Menu_Out typedprint
+	fb /_SUN_SUNVIEW_ENV GetProp not { nullstring } if
+	Menu_Out typedprint
+
+	Menu_Out flushfile
+    end
+} def
+
+/PROPERTIES { % menu => -
+    ($OPENWINHOME/bin/props) SPAWN
+} def
+
+/POSTSCRIPT { % str => -
+  { cvx exec } fork /ProcessName (OWM Menu PostScript) put pop
+} def
+
+/SAVE_WORKSPACE { % menu => -
+  ($OPENWINHOME/bin/owplaces -script -multi -ampersand -output $HOME/.openwin-init)
+  SPAWN
+} def
+
+/RESTART { % - => -
+} def
+
+/EXIT_NO_CONFIRM { % - => -
+    shutdownserver
+} def
+
+/EXIT { % - => -
+    gsave
+    null canvasesunderpoint dup length 2 sub get setcanvas
+
+    userdict /notice null currentcanvas /new ClassNotice send put
+
+    /new ClassEventMgr send /activate notice send
+    (Please confirm exit from window system) /settext notice send
+
+    /noticebuttons /Spaced currentcanvas /new ClassButtons send def
+    [(Exit) (Cancel)]
+    /setitemlist noticebuttons send
+    1 /setdefault noticebuttons send
+    { 
+	pop 0 eq {
+	    shutdownserver
+	} {
+	    /close notice send
+	    userdict /notice undef
+	} ifelse
+    } /setnotifier noticebuttons send
+    10 0 /setgaps noticebuttons send
+
+    noticebuttons /setbuttons notice send
+    null /open notice send
+    grestore
+} def
+
+/OPEN_CLOSE_SELN {} def
+
+/FULL_RESTORE_SIZE_SELN {} def
+
+/BACK_SELN {} def
+
+/QUIT_SELN {} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CPS interface
+
+/SetRootMenu { % menuproc => -
+    FrameBuffers {
+	setcanvas dup exec
+	/setmenu currentcanvas send
+	true /setmenuable currentcanvas send
+    } forall pop
+} def
+
+/MakeMenu { % - => menu
+    /Grid currentcanvas /new ClassMenu send
+} def
+
+/InitMenu { % menu [itemlist] title => menu
+  /setlabel 3 index send		% menu [itemlist]
+  /setitemlist 2 index send		% menu
+  userdict /settarget 2 index send	% menu
+} def
+
+/DoPaintRoot { % - => -
+    beep
+    false setxrootpattern
+    UserProfile /UsePaintRoot? true put
+  	
+    FrameBuffers {
+	dup setcanvas clippath extenddamageall
+    } forall
+} def
+
+/ShutDown { % - => -
+} def
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initialization
+
+/s 256 string def
+
+/FrameBuffers [
+    rootcanvases {
+        dup /Parent get globalroot ne { pop } if
+    } forall
+
+    framebuffer /TopChild get {
+      dup null eq { pop exit } if
+      dup null eq { pop } {
+	dup /WM_NAME 0 s xgetproperty {
+	  pop pop pop
+	  (Calculator) anchorsearch {
+	    pop pop
+/new ClassXClientCanvas send
+	    /TopChild get
+/new ClassXClientCanvas send
+	    dup /Framebuffer 1 index soften put
+	    exit
+	  } { pop } ifelse
+	} if
+      } ifelse
+      /CanvasBelow get
+    } loop
+
+] def
+
+{   FrameBuffers { /SubstructureRedirect get killprocess } forall
+} stopped clear
+
+/Windows 300 dict def
+
+/SupportInterests null null
+dictbegin
+    /UnmapNotify {
+	/Action get 
+	begin
+	    Windows XID known {
+		XID xlookupid {
+		    pop
+		    /opened? Windows XID get send {
+			/unmap Windows XID get send
+			/unmap currentdict send
+		    } if
+		} {
+		    Windows XID undef
+		} ifelse
+	    } if
+	end
+    } def
+    /ClientMessage {
+	pop
+    } def
+    /PropertyNotify {
+	begin
+	    /xid Canvas /XID get def
+
+	    xid xlookupid {
+		pop
+	    } {
+		Windows xid undef
+	    } ifelse
+	    Windows xid known {
+		Action XGetAtomName {
+		    /WM_NAME {
+			Canvas /WM_NAME GetProp {
+			    /setlabel Windows xid get send
+			} if
+		    }
+		    /WM_ICON_NAME {
+			Canvas /WM_ICON_NAME GetProp {
+			    /seticonlabel Windows xid get send
+			} if
+		    }
+		    /WM_PROTOCOLS {
+			/UpdateProtocols Canvas send
+		    }
+		    /WM_NORMAL_HINTS {
+			/opened? Windows xid get send 
+			not {
+			    /place Windows xid get send
+			} if
+		    } 
+		    /_OL_WIN_BUSY {
+			Canvas /_OL_WIN_BUSY GetProp {
+			    0 getcard32
+			} {
+			    0
+			} ifelse
+			0 eq {
+			    /Active
+			} {
+			    /Busy
+			} ifelse
+			/setvisualstate Windows xid get send
+		    }
+		    /_OL_DECOR_ADD {
+			Windows xid get Canvas 
+			UpdateDecor
+		    } 
+		    /_OL_DECOR_DEL {
+			Windows xid get Canvas 
+			UpdateDecor
+		    } 
+		    /_OL_WIN_ATTR {
+			Canvas GetPinstate {
+			    Windows xid get 
+			    /Pinned? 3 -1 roll put
+			} if
+		    } def
+		    /Default {
+%			print_tag tagprint
+%			Action XGetAtomName 255 string cvs 
+%			( change) append typedprint
+		    } 
+		} case
+	    } if
+	end
+    } def
+dictend 
+/new ClassInterest send def
+
+/WMInterests
+dictbegin
+    FrameBuffers { dup def } forall
+dictend
+null 
+dictbegin
+    /ClientMessage {
+	/Action get
+	3 dict begin
+	    /value exch def
+	    /win value 1 getcard32 xlookupid {
+		/XID get def
+		value 2 getcard32 XGetAtomName /WM_CHANGE_STATE eq {
+			value 3 getcard32 3 eq {
+			    Windows win known {
+				/close Windows win get send
+			    } if
+			} if
+		    } if
+	    } if
+	end
+    } def
+    /MapRequest { 
+	begin
+	    Action xlookupid {
+		1 dict 
+		begin
+		    /can exch def
+
+		    can /Parent get /framebufferof 1 index send eq {
+			can Action BuildWindow
+		    } if
+
+		    Windows Action known {
+			/map can send
+			can /DoMap Windows Action get send
+		    } if
+		end
+	    } if
+	end
+    } def
+
+    /ConfigureRequest { 
+	/Action get 
+	begin
+%            currentdict ==
+	    Window xlookupid {
+%		dup ==
+		begin
+		    Mask 15 and 0 ne {
+			Mask 1 and 0 ne {
+			    /config_x X def
+			} if
+			Mask 2 and 0 ne {
+			    /config_y Y def
+			} if
+			Mask 4 and 0 ne {
+			    /config_width Width def
+			} if
+			Mask 8 and 0 ne {
+			    /config_height Height def
+			} if
+			
+			Windows Window known {
+			    Windows Window get Window xlookupid pop
+			    /DoConfig Windows Window get send
+			} {
+			    0 0 
+			    Mask 4 and 0 ne {
+				Width
+			    } {
+				Window xlookupid pop false getbbox 
+				pop 3 1 roll pop pop
+			    } ifelse
+			    Mask 8 and 0 ne {
+				Height
+			    } {
+				Window xlookupid pop false getbbox 
+				4 1 roll pop pop pop
+			    } ifelse
+			    rectpath Window xlookupid pop reshapecanvas
+			} ifelse
+		    } if
+		end
+	    } if
+	end
+    } def
+dictend 
+/new ClassInterest send def
+
+/EventManager /new ClassEventMgr send def
+
+/ic 24 string def
+ic 0 64 putcard32
+ic 1 64  putcard32
+ic 2 64  putcard32
+ic 3 64  putcard32
+ic 4 1 putcard32
+ic 5 1  putcard32
+
+WMInterests /Canvas get {
+    pop 
+    dup /SubstructureRedirect EventManager put
+    dup /WM_ICON_SIZE ic /WM_ICON_SIZE false XInternAtom 32 xsetproperty
+    /Eventmask 16#00180000 put
+} forall
+
+EventManager /ProcessName (OWM EventManager) put
+currentprocess /ProcessName (OWM Listener) put
+
+SupportInterests /addclient EventManager send
+WMInterests /addclient EventManager send
+
+WrapAllWindows
