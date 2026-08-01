@@ -41,7 +41,8 @@ JavaScript or VBScript. Live copy:
 
 ## HN retellings
 
-Where Don has linked this page or its code:
+Where Don has linked this page or its code. Broader sweep:
+[HN harvest](hn-window-management-harvest.md).
 
 | Comment | Thread | What it adds |
 |---|---|---|

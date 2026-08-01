@@ -35,6 +35,7 @@
 | [Garnet/Laszlo → Svelte × Snap!](micropolis-svelte-snap-constraint-bridge.md) | Constraints + prototypes bridge |
 | [ScriptX DreamScape room essay](../kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) | Kaleida multimedia Lisp machine; WWDC 1995 |
 | [Window Manager Flames — ICCCM/OWM/piewm](i39l-window-manager-flames.md) | Unix-Haters chapter: "The ICCCM Sucks"; OWM design notes (tabs, pies, rooms, legos); PizzaTool's shaped window; "criminally negligent" input focus; piewm docs; HN retellings 2014–2025. Sources cached: [`owm.ps`](../../josh-siegel/sources/owm.ps) · [`tab.ps` + NDE tabs](../code/news-tnt/README.md) |
+| [HN harvest — WM/tabs/pies/HyperCard/HyperLook/OWM](hn-window-management-harvest.md) | **653 comments bucketed**, the load-bearing ones curated: OWM receipts, 1988 tabbed windows, uwm FORTH pies, GoodNeWS→HyperNeWS→HyperLook arc, PizzaTool, the "Hold my bong" Wayland verdict |
 
 Sibling (same Kay email on HN): [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md)
 

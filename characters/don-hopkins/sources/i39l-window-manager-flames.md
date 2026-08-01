@@ -48,7 +48,9 @@ quoting, and Don's replies are flush left.
 
 ## HN retellings
 
-Where Don has linked this document or told its story:
+Where Don has linked this document or told its story. Broader sweep across
+window managers, tabs, pies, HyperCard, and HyperLook:
+[HN harvest](hn-window-management-harvest.md).
 
 | Comment | Thread | What it adds |
 |---|---|---|
