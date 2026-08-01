@@ -64,7 +64,7 @@ I found it in my big-bag-of-old-code!
 
 Enclosed is some email that mentions it.
 
-It's a circa-1987 version of SunView but Claude Code would probably have a field data translating it into typescript so it runs in the browser! ;) 
+It's a circa-1987 version of SunView but Claude Code would probably have a field day translating it into typescript so it runs in the browser! ;) 
 
 I wouldn't ask it to translate it to XView, that would just be mean, to Claude and to users. ;)
 
