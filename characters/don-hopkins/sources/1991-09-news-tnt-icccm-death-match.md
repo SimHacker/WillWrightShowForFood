@@ -27,11 +27,26 @@ Don's **"A story"** (10 Jul, expanded 12 Jul) to **Steve Evans** and NeWSTech:
 
 **Steve Evans** reply: wants **commercial success** or axe NeWS; NeWSTech must **embrace X interoperability**; recent cooperation encouraging.
 
-**Jonathan Payne** (10 Jul): battle plan — **OWM** (NeWS window manager wrapping X clients) vs Josh's **ICCCM TNT windows**; *"If we don't fight to use NeWS in the way that was intended (by God)…"*
+**Jonathan Payne** (10 Jul, "battle plan"): asks whether the team will do
+"what we think we can get away with" or "what we think is right." His
+*impression* was that Josh's pure-ICCCM proposal (below) was aimed at what
+customers and Steve Evans wanted; he argues for **OWM** instead — NeWS
+windows fix X's inevitable race conditions, are lighter-weight, server-local,
+extensible, OPEN LOOK. *"If we don't fight to use NeWS in the way that was
+intended (by God), then who will?"*
+
+Framing caveat (Don, 2026): this was never OWM-versus-Josh. **OWM is Josh's
+own NeWS window manager wrapping X clients**, written with Don — nobody on
+the team wanted ICCCM X window managers wrapping NeWS windows. Josh's ICCCM
+proposal was a cost exploration of the other direction, and the actual
+experiment (the puff/unpuff shrink-wrap prototype, below) settled it: ICCCM
+management couldn't support the showcase — pie menus, PizzaTool's
+pizza-shaped window, or NeWS eyes (which predated xeyes).
 
 ## Josh — ICCCM-only TNT windows (5 Jul 1991)
 
-After talking to **David Rosenthal** + **Maurice Balick** (Frame wanted ICCCM):
+The same Josh Siegel who wrote OWM, costing out the opposite architecture
+after talking to **David Rosenthal** + **Maurice Balick** (Frame wanted ICCCM):
 
 - Stop maintaining native NeWS window management; architect **pure ICCCM** TNT windows.
 - Reasons: dual WMs forever; **binary compatibility** after TNT 3.0 API freeze; ICCCM is only X-accepted desktop standard; NeWS interest is **inside the window**.
@@ -44,6 +59,9 @@ Final **ICCCM Window Management for TNT** proposal to Paula:
 
 - Prototype: **"puff/unpuff"** ClassWindow — strip OL ornamentation except footer; X WM manages chrome.
 - ~**10 person-months**, 4 engineers × 8 weeks; breaks **~80% NeWS Challenge** entries + Frame + CG3270; drag-and-drop concerns.
+- This was the experiment that answered the question: shrink-wrapped ICCCM
+  management left no room for pie menus, PizzaTool's round pizza window, or
+  NeWS eyes — the showcase was exactly what it destroyed.
 - Recommends **ClassCanvas X property utilities** + completed TNT window design (SaveWorkspace, icons, notification).
 
 **Owen Densmore** (30 May): **native window management** decision recap — Turing/Philips customers wanted **subclassable NeWS windows**, not ICCCM; ICCCM untestable maintenance burden.

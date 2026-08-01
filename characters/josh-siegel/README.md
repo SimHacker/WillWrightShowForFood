@@ -51,9 +51,11 @@ on NeWS instead of WWIII.**)" —
   - [`tab.ps`](../don-hopkins/code/news-tnt/tab.ps) — the tabbed frames, cached in
     [Don's code room](../don-hopkins/code/news-tnt/README.md)
     (mirror: [tab.ps](https://donhopkins.com/home/archive/NeWS/win/tab.ps))
-- **The ICCCM death match (1991)**: after talking to David Rosenthal and Frame, Josh proposed
-  pure-ICCCM TNT windows while Jonathan Payne's battle plan pitted "**OWM** (NeWS window manager
-  wrapping X clients) vs Josh's ICCCM TNT windows" — the whole fight is preserved in
+- **The ICCCM death match (1991)**: Josh was on both sides of the architecture question because
+  he did the work on both — **OWM is his NeWS window manager wrapping X clients** (with Don), and
+  after talking to David Rosenthal and Frame he also costed out the opposite: pure-ICCCM TNT
+  windows. The puff/unpuff experiment settled it — ICCCM shrink-wrap killed pie menus, PizzaTool's
+  pizza-shaped window, and NeWS eyes. The whole fight is preserved in
   [1991-09-news-tnt-icccm-death-match.md](../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md),
   where Josh (3 Sep 1991) quotes Chuck Price and Rosenthal's 1987 stability white paper.
 

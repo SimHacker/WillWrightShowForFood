@@ -65,7 +65,8 @@ Marriott, Friday 30 September 1988.
   roll call; the full receipt trail indexed from his side.
 - [1991-09-news-tnt-icccm-death-match.md](1991-09-news-tnt-icccm-death-match.md) —
   Siegel at Sun (3 Sep 1991), quoting Chuck Price and David Rosenthal's 1987
-  NeWS-stability white paper; his ICCCM TNT windows vs Payne's OWM battle plan.
+  NeWS-stability white paper; author of OWM who also costed out the pure-ICCCM
+  alternative it was weighed against.
 - [zork-troll-flag-adventure-lineage-hn.md](zork-troll-flag-adventure-lineage-hn.md) —
   NeWS interpreter rewrite, owm.ps, the World-War-III-simulation retelling,
   and the General Magic org chart found while googling for him.

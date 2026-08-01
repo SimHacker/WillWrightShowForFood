@@ -25,7 +25,8 @@
 
 ## The ICCCM death match (1991)
 
-- Josh's pure-ICCCM TNT windows proposal vs Payne's OWM battle plan —
+- Josh wrote OWM *and* costed out the pure-ICCCM alternative — the man who
+  did both sides of the experiment tells what the puff/unpuff prototype proved —
   [the archive](../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md)
 - Was ICCCM the cage or the lifeboat? Both sides, thirty-five years later
 
