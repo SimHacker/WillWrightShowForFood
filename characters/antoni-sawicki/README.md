@@ -51,6 +51,17 @@ Implementation lives in `src/nc_gfx.c` on [tenox7/ttycity](https://github.com/te
 
 Also: **wintown** — Micropolis on Windows NT RISC (Alpha, MIPS, PowerPC, Itanium, ARM).
 
+## sunviewgames → the SDI challenge 🚀❄️
+
+On **1 Aug 2026** Don spotted Antoni's **sunviewgames** repo and issued a challenge: resurrect
+**Mark Weiser's SunView "SDI" game** — the 1987 missile-command descendant whose pie menus Weiser
+hacked in while snowed in during a DC blizzard ("I used the snow to hack pies into sunview"), with
+a self-revealing pie menu that showed its own source code. Don dug the full source out of his
+big-bag-of-old-code the same day; it now lives in
+[Mark Weiser's software collection](../mark-weiser/software/README.md) (107 files, `piemenu_track.c`,
+hour-by-hour `HISTORY.nr` dev diary). [The thread + 1987–88 receipts](sources/2026-08-01-sunviewgames-sdi-thread.md) ·
+[1987 demo tape](https://www.youtube.com/watch?v=WTtEPbIE10I)
+
 ## Interview planned
 
 Repo show about a repo — [`repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml)
@@ -63,11 +74,13 @@ Beats: [`ideas.md`](ideas.md) · invitation: [`invitation.md`](invitation.md)
 |---|------|
 | Character | [`CHARACTER.yml`](CHARACTER.yml) |
 | Email thread | [`sources/2026-07-08-ttycity-email-thread.yml`](sources/2026-07-08-ttycity-email-thread.yml) |
+| SDI thread | [`sources/2026-08-01-sunviewgames-sdi-thread.md`](sources/2026-08-01-sunviewgames-sdi-thread.md) |
 | Emoji UI spec | [`sources/ttycity-emoji-graphics-ui.yml`](sources/ttycity-emoji-graphics-ui.yml) |
 | Show seed | [`../../repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml) |
 
 ## Related
 
 - [Will Wright](../will-wright/README.md) — SimCity designer; show him the emoji city
+- [Mark Weiser](../mark-weiser/README.md) — the SDI source waits in his memorial room for Antoni's resurrection
 - [Peter Scott](../peter-scott/README.md) — BBC 20K SimCity 1989 — same lineage, different decade
 - [Open-source saga](../will-wright/sources/simcity-open-source-saga/README.md) — how the fork started

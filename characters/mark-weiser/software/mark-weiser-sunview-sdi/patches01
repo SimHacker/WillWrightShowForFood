@@ -1,0 +1,401 @@
+*** control_procs.c.orig Tue Dec 18 11:55:45 1990
+--- control_procs.c Tue Dec 18 16:30:09 1990
+***************
+*** 147,158 ****
+ * Proc called to display the scores from the score file in a popup window.
+ */
+ void
+! scores_proc(item, value, event)
+ Panel_item item;
+ Event *event;
+ {
+- Menu m;
+- int id = event_id(event);
+ char *a;
+ a = (char *)build_scores();
+ easy_pop(a);
+--- 147,156 ----
+ * Proc called to display the scores from the score file in a popup window.
+ */
+ void
+! scores_proc(item, event)
+ Panel_item item;
+ Event *event;
+ {
+ char *a;
+ a = (char *)build_scores();
+ easy_pop(a);
+*** helpers.c.orig Tue Dec 18 11:55:36 1990
+--- helpers.c Tue Dec 18 12:02:30 1990
+***************
+*** 22,28 ****
+
+
+ static short background_array[] = {
+! #include "/usr/include/images/square_17.pr"
+ };
+ mpr_static(background_pr, 16, 16, 1, background_array);
+
+--- 22,28 ----
+
+
+ static short background_array[] = {
+! #include <images/square_17.pr>
+ };
+ mpr_static(background_pr, 16, 16, 1, background_array);
+
+***************
+*** 141,147 ****
+ }
+ suspend_proc();
+ init_popup_msg(frame, msg, lines);
+- textsw_insert(popup_text, msg, strlen(msg));
+ window_set(popup_frame, WIN_X, event_x(event),
+ WIN_Y, event_y(event),
+ WIN_SHOW, TRUE,
+--- 141,146 ----
+*** makefile.orig Tue Dec 18 16:36:49 1990
+--- makefile Tue Dec 18 16:38:17 1990
+***************
+*** 44,50 ****
+
+ #If you are running SUNOS 3.0, use this: CFLAGS = -DSUNOS3_0
+
+! CFLAGS = -DSUNOS3_0
+
+ LIBS = -lsuntool -lsunwindow -lpixrect -lm
+
+--- 44,50 ----
+
+ #If you are running SUNOS 3.0, use this: CFLAGS = -DSUNOS3_0
+
+! CFLAGS =
+
+ LIBS = -lsuntool -lsunwindow -lpixrect -lm
+
+*** menu.c.orig Tue Dec 18 11:55:58 1990
+--- menu.c Tue Dec 18 15:48:38 1990
+***************
+*** 1,5 ****
+--- 1,6 ----
+ #include <suntool/sunview.h>
+ #include <stdio.h>
++ #include <varargs.h>
+ #include "walkmenu_impl.h"
+ #include "image_impl.h"
+
+***************
+*** 22,51 ****
+ * Sun window library (at least a little bit).
+ */
+
+
+ void
+! pie_menu_set(m, arg)
+! struct menu *m;
+! int arg;
+ {
+! char **argptr = &(char *)arg;
+ pie_menu_set_internal(m, argptr);
+ }
+
+! pie_menu_item_set(mi, arg)
+! struct menu_item *mi;
+! int arg;
+ {
+! char **argptr = &(char *)arg;
+ pie_menu_item_set_internal(mi, argptr);
+ }
+
+ struct menu *
+! pie_menu_create(arg)
+! int arg;
+ {
+! char **argptr = &(char *)arg;
+ struct menu *m;
+ m = (struct menu *)calloc(sizeof(struct menu),1);
+ m->item_list = (struct menu_item **)calloc(sizeof(struct menu_item *), MAX_ITEMS);
+ m->max_nitems = MAX_ITEMS;
+--- 23,62 ----
+ * Sun window library (at least a little bit).
+ */
+
++ /*
++ * re-written to use varargs so that it would run on a Sparc
++ * Bill Randle 12/18/90
++ */
+
+ void
+! pie_menu_set(va_alist)
+! va_dcl
+ {
+! va_list argptr;
+! struct menu *m;
+! va_start(argptr);
+! m = va_arg(argptr, struct menu *);
+ pie_menu_set_internal(m, argptr);
+ }
+
+! void
+! pie_menu_item_set(va_alist)
+! va_dcl
+ {
+! va_list argptr;
+! struct menu_item *mi;
+! va_start(argptr);
+! mi = va_arg(argptr, struct menu_item *);
+ pie_menu_item_set_internal(mi, argptr);
+ }
+
+ struct menu *
+! pie_menu_create(va_alist)
+! va_dcl
+ {
+! va_list argptr;
+ struct menu *m;
++ va_start(argptr);
+ m = (struct menu *)calloc(sizeof(struct menu),1);
+ m->item_list = (struct menu_item **)calloc(sizeof(struct menu_item *), MAX_ITEMS);
+ m->max_nitems = MAX_ITEMS;
+***************
+*** 54,64 ****
+ }
+
+ struct menu_item *
+! pie_menu_create_item(arg)
+! int arg;
+ {
+! char **argptr = &(char *)arg;
+ struct menu_item *mi;
+ mi = (struct menu_item *)calloc(sizeof(struct menu_item),1);
+ mi->image = (struct image *)calloc(sizeof(struct image),1);
+ pie_menu_item_set_internal(mi, argptr);
+--- 65,76 ----
+ }
+
+ struct menu_item *
+! pie_menu_create_item(va_alist)
+! va_dcl
+ {
+! va_list argptr;
+ struct menu_item *mi;
++ va_start(argptr);
+ mi = (struct menu_item *)calloc(sizeof(struct menu_item),1);
+ mi->image = (struct image *)calloc(sizeof(struct image),1);
+ pie_menu_item_set_internal(mi, argptr);
+***************
+*** 65,76 ****
+ return mi;
+ }
+
+! pie_menu_set_internal(m, argptr)
+ struct menu *m;
+! char **argptr;
+ {
+! while (*argptr != 0) {
+! switch(*argptr) {
+ case MENU_APPEND_ITEM: {
+ if (m->nitems >= (m->max_nitems-1))
+ {
+--- 77,90 ----
+ return mi;
+ }
+
+! pie_menu_set_internal(m, ap)
+ struct menu *m;
+! va_list ap;
+ {
+! Menu_attribute arg;
+!
+! while (arg = va_arg(ap, int)) {
+! switch(arg) {
+ case MENU_APPEND_ITEM: {
+ if (m->nitems >= (m->max_nitems-1))
+ {
+***************
+*** 77,90 ****
+ fprintf("Too many items in a pie menu.\n");
+ abort();
+ }
+! m->item_list[m->nitems] = (struct menu_item *)(*(argptr+1));
+ ((struct menu_item *)m->item_list[m->nitems])->parent = m;
+ m->nitems += 1;
+! argptr += 2; break;
+ }
+ case MENU_NOTIFY_PROC: {
+! (caddr_t)m->notify_proc = (caddr_t)(*(argptr+1));
+! argptr += 2; break;
+ }
+ default: {
+ fprintf(stderr, "Unexpected item in pie_menu_set_internal.\n");
+--- 91,104 ----
+ fprintf("Too many items in a pie menu.\n");
+ abort();
+ }
+! m->item_list[m->nitems] = va_arg(ap, struct menu_item *);
+ ((struct menu_item *)m->item_list[m->nitems])->parent = m;
+ m->nitems += 1;
+! break;
+ }
+ case MENU_NOTIFY_PROC: {
+! (caddr_t)m->notify_proc = va_arg(ap, caddr_t);
+! break;
+ }
+ default: {
+ fprintf(stderr, "Unexpected item in pie_menu_set_internal.\n");
+***************
+*** 93,131 ****
+ }
+ }
+ }
+ }
+
+! pie_menu_item_set_internal(mi, argptr)
+ struct menu_item *mi;
+! char **argptr;
+ {
+! while (*argptr != 0) {
+! switch(*argptr) {
+ case MENU_IMAGE: {
+! mi->image->pr = (struct pixrect *)*(argptr+1);
+! argptr += 2; break;
+ }
+ case MENU_STRING: {
+! mi->image->string = (char *)*(argptr+1);
+! argptr += 2; break;
+ }
+ case MENU_PULLRIGHT: {
+ mi->pullright = TRUE;
+! mi->value = (caddr_t)*(argptr+1);
+ ((struct menu *)mi->value)->parent = mi;
+! argptr += 2; break;
+ }
+ case MENU_RELEASE: {
+ mi->free_item = TRUE;
+! argptr += 1; break;
+ }
+ case MENU_RELEASE_IMAGE: {
+ mi->image->free_image = TRUE;
+! argptr += 1; break;
+ }
+ case MENU_CLIENT_DATA: {
+! mi->client_data = (caddr_t)*(argptr+1);
+! argptr += 2; break;
+ }
+ default: {
+ fprintf(stderr, "Unexpected item in pie_menu_item_set_internal.\n");
+--- 107,148 ----
+ }
+ }
+ }
++ va_end(ap);
+ }
+
+! pie_menu_item_set_internal(mi, ap)
+ struct menu_item *mi;
+! va_list ap;
+ {
+! Menu_attribute arg;
+!
+! while (arg = va_arg(ap, int)) {
+! switch(arg) {
+ case MENU_IMAGE: {
+! mi->image->pr = va_arg(ap, struct pixrect *);
+! break;
+ }
+ case MENU_STRING: {
+! mi->image->string = va_arg(ap, char *);
+! break;
+ }
+ case MENU_PULLRIGHT: {
+ mi->pullright = TRUE;
+! mi->value = va_arg(ap, caddr_t);
+ ((struct menu *)mi->value)->parent = mi;
+! break;
+ }
+ case MENU_RELEASE: {
+ mi->free_item = TRUE;
+! break;
+ }
+ case MENU_RELEASE_IMAGE: {
+ mi->image->free_image = TRUE;
+! break;
+ }
+ case MENU_CLIENT_DATA: {
+! mi->client_data = va_arg(ap, caddr_t);
+! break;
+ }
+ default: {
+ fprintf(stderr, "Unexpected item in pie_menu_item_set_internal.\n");
+***************
+*** 134,139 ****
+--- 151,157 ----
+ }
+ }
+ }
++ va_end(ap);
+ }
+
+ pie_menu_destroy(m)
+*** scores.c.orig Tue Dec 18 11:55:49 1990
+--- scores.c Tue Dec 18 16:17:49 1990
+***************
+*** 104,110 ****
+ FILE *f;
+ if (scorefile) {
+ tmpfile = scorefile;
+! } else if ((tmpfile = getenv("SDI_SCORES")) == NULL) {
+ tmpfile = scorefile;
+ } else {
+ tmpfile = "/usr/games/lib/sdi_scores";
+--- 104,110 ----
+ FILE *f;
+ if (scorefile) {
+ tmpfile = scorefile;
+! } else if ((tmpfile = getenv("SDI_SCORES")) != NULL) {
+ tmpfile = scorefile;
+ } else {
+ tmpfile = "/usr/games/lib/sdi_scores";
+*** source_converter.c.orig Tue Dec 18 11:56:34 1990
+--- source_converter.c Tue Dec 18 16:37:13 1990
+***************
+*** 27,33 ****
+ fprintf(stderr, "Need an argument.\n");
+ exit(1);
+ }
+! printf(" .even\n__start_of_text:\n");
+ while (! feof(stdin)) {
+ p = buff;
+ for (i = 0; i < OUTSIZE; i += 1) {
+--- 27,33 ----
+ fprintf(stderr, "Need an argument.\n");
+ exit(1);
+ }
+! printf(" .align 4\n__start_of_text:\n");
+ while (! feof(stdin)) {
+ p = buff;
+ for (i = 0; i < OUTSIZE; i += 1) {
+***************
+*** 53,60 ****
+ printf(" .ascii \"%s\"\n", buff);
+ }
+ printf(" .ascii \"\\0\"\n",'\\');
+! printf(" .even\n");
+ printf(" .globl _%s\n", argv[1]);
+ printf("_%s:\n", argv[1]);
+ printf(" .long __start_of_text\n");
+ }
+--- 53,65 ----
+ printf(" .ascii \"%s\"\n", buff);
+ }
+ printf(" .ascii \"\\0\"\n",'\\');
+! printf(" .align 4\n");
+ printf(" .globl _%s\n", argv[1]);
+ printf("_%s:\n", argv[1]);
++ #if defined(sparc)
++ printf(" .word __start_of_text\n");
++ #else
+ printf(" .long __start_of_text\n");
++ #endif
++ exit(0);
+ }

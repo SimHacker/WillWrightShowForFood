@@ -13,12 +13,13 @@
 | **Show** | [flagship show](../../../repo-shows/will-wright-premiere/README.md) | Flower Child mascot lives here |
 | **Catalogs** | [catalogs](../../../catalogs/README.md) | Syndicated UCC brands |
 | **Sims series** | [sims-series-README.md](sims-series-README.md) | Themed screenshot index |
-| **Sub-galleries** | [russian-space-junk.md](russian-space-junk.md) · [artwork.md](artwork.md) | Long-scroll galleries |
+| **Sub-galleries** | [russian-space-junk.md](russian-space-junk.md) · [artwork.md](artwork.md) · [zimbabwe-20-billion-business-card.md](zimbabwe-20-billion-business-card.md) | Long-scroll galleries |
 
 | Start here | What |
 |------------|------|
 | **This page** | SimCity / Sims / robots — scroll below |
 | [**Russian Space Junk**](russian-space-junk.md) | Soviet spaceflight hardware (17 photos) |
+| [**Zimbabwe Z$20B business card**](zimbabwe-20-billion-business-card.md) | Gallium stamp on a ~$2–4 hyperinflation note |
 | [**Artwork**](artwork.md) | Mixed-media relief constructions (10 photos) |
 | [1996 Winograd gallery](../sources/1996-04-26-winograd-interfacing-to-microworlds/#image-gallery) | 167 figures from Don's Medium article |
 | [Sims series gallery](sims-series-README.md) | Screenshot themes + agitprop (flat filenames) |

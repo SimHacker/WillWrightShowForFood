@@ -4,12 +4,13 @@
 meta:
   id: scott-adams-ideas
   show: scott-adams
-  updated: 2026-07-01
+  updated: 2026-08-01
   human: ideas.md
   consent: correspondence_verified
 
 episode_shapes:
   one_shot_90min: [A1, A3, A4, G1, B2]
+  soul_city_90min: [A1, X6, A2, B3, G3]
   two_parter:
     ep1_history: [A3, H1, H2, H3, H4, H5, P1, L1]
     ep2_future: [A2, B1, B2, B3, B4, B5, P2, P3, P4, G5]
@@ -18,11 +19,12 @@ episode_shapes:
     - { ep: 2, title_seed: "The Compiler", core: [A4, L1, L2, G1] }
     - { ep: 3, title_seed: "Parser vs LLM", core: [P1, P2, P3, P4, P5, G4] }
     - { ep: 4, title_seed: "Biography Rooms", core: [B1, B2, B3, B4, G5] }
-    - { ep: 5, title_seed: "Palace Buddies", core: [B5, L3, X1, G4] }
+    - { ep: 5, title_seed: "Palace Buddies", core: [B5, L3, X1, X3b, G4] }
+    - { ep: 6, title_seed: "Soul City", core: [A1, X6, A2, B5, G3] }
 
 segments:
   anchors:
-    A1: { title: "HN reunion 29330901", tags: [talk, primary_source], artifact: "https://news.ycombinator.com/item?id=29330901" }
+    A1: { title: "HN reunion 29330901", tags: [talk, primary_source], artifact: "https://news.ycombinator.com/item?id=29330901", digest: sources/2021-11-24-hn-memory-palace.md, note: "2021-11-24 post-COVID vaccines, pre-ChatGPT" }
     A2: { title: "MOOLLM first impressions", tags: [talk], artifact: "https://github.com/SimHacker/moollm" }
     A3: { title: "Adventureland in 16K", tags: [talk] }
     A4: { title: "Engine was always a compiler", tags: [talk, live_build], artifact: "characters/don-hopkins/career/lineage.yml" }
@@ -65,8 +67,23 @@ segments:
   crossover:
     X1: { title: "Nested MOOLLM talk segment", tags: [talk], artifact: "DonHopkins/talks/moollm-microworld-os/TALK.yml" }
     X2: { title: "Empathy and Servitude bridge", tags: [talk] }
-    X3: { title: "Microworld morality", tags: [talk] }
+    X3: { title: "Microworld morality / Will MediaGraph", tags: [talk] }
+    X3b: { title: "Will + Parker advisors", tags: [mutual, talk], note: "Will on-air optional; Parker may coach topics off-mic" }
     X4: { title: "MUD1 / Bartle thread", tags: [talk] }
+    X5: { title: "Game cartridges / menagerie NPCs", tags: [talk] }
+    X6: { title: "Soul City SOUL-MODEL walk", tags: [talk, live_build], artifact: "https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md" }
+
+  ensemble_guests:
+    - { id: will-wright, mode: [co_guest, cold_open], why: "microworlds, MediaGraph" }
+    - { id: parker-will-family, mode: [advisor_offmic, optional_cameo], why: "topic/question suggestions; privacy first-name-only" }
+    - { id: don-woods, mode: [paired_show], seed: repo-shows/woods-and-adams-adventurers.yml }
+    - { id: jason-scott, mode: [co_guest, tape_insert], why: "GET LAMP, archive love" }
+    - { id: nick-montfort, mode: [co_guest], why: "IF craft, riddle machines" }
+    - { id: richard-bartle, mode: [future_pair], why: "MUD vs single-player engine" }
+    - { id: brenda-laurel, mode: [co_guest], why: "interactive narrative" }
+    - { id: ted-nelson, mode: [cameo], why: "transclusion as exits" }
+    - { id: emily-short-or-modern-if, mode: [co_guest], why: "authoring tools + LLM ethics" }
+    - { id: dave-ackley, mode: [optional], why: "robust-first meets adventure state" }
 
 audience:
   - vote_the_verb

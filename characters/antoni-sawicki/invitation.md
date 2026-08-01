@@ -68,6 +68,13 @@ Then we talk, point at what's in the repo, and the playlist keeps accumulating.
 - **The tireless army of robots** — LLM-assisted downgrade of OpenTTD to Visual C 4.0
 - **Show it to Will** — README credits Will Wright; SimCity in emojis in a terminal, thirty-seven years on
 - **Retrocomputing Drive** — ttycity in the Micropolis AI Drag Race variety format
+- **Resurrect Weiser's SDI** — I saw your **sunviewgames** repo and dug the 1987 SunView source out of
+  my big-bag-of-old-code: [it's in Mark's memorial room now](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/mark-weiser/software),
+  107 files with `piemenu_track.c` — the pie menus Mark hacked in while snowed in during the DC
+  blizzard, plus a self-revealing pie menu that shows its own source. Get it running on a Sun-3
+  emulator — or let the robots translate it for the browser
+  ([the thread + 1987–88 receipts](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md) ·
+  [1987 demo tape](https://www.youtube.com/watch?v=WTtEPbIE10I))
 
 ## Format — low pressure
 

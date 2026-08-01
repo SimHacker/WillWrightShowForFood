@@ -10,4 +10,9 @@
 
 **Sources (in this room):** [`sources/1991-03-mark-weiser-pie-menu-tape-stylus.md`](sources/1991-03-mark-weiser-pie-menu-tape-stylus.md) — 1991 demo tape, alphabetic pies, stylus.
 
+**Software (in this room):** [`software/`](software/README.md) — **SDI**, his 1987 SunView missile
+game, full recovered source: the blizzard pie menus (`piemenu_track.c` — "I used the snow to hack
+pies into sunview," 24 Jan 1987), the hour-by-hour `HISTORY.nr` dev diary, and the self-revealing
+source-code pie menu. Resurrection challenge issued to [Antoni Sawicki](../antoni-sawicki/README.md).
+
 Verifiable sources in `CHARACTER.yml`.

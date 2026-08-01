@@ -52,6 +52,9 @@ show_suggestions:
   - "Building the tools TOGETHER, live: compile biography + memory palace rooms; ship browser pages on air"
   - "Two palaces one compiler — Scott biography rooms + Don career palace; mutual YAML seed exchange (MOOLLM north star)"
   - "Adventure International origin story; Questprobe and the Marvel license; the 1980s IF business"
+  - "HN 29330901 reunion (Nov 2021, pre-ChatGPT): adventure = method of loci; pie menus as room exits; now Soul City"
+  - "Soul City SOUL-MODEL walk — soul as continuity metaphor; Scott's faith and Don's atheism as respectful contrast, not debate"
+  - "Ensemble: Will Wright (microworlds); Parker may coach topics off-mic; Don Woods paired Adventurers show"
 
 artifacts:
   manifest: artifacts.yml
@@ -60,6 +63,7 @@ artifacts:
 
 see_also:
   - { path: artifacts.yml, why: "HN thread, MOOLLM, adventure compiler vision, correspondence pointers" }
+  - { path: sources/2021-11-24-hn-memory-palace.md, why: "HN digest — timeline, quotes, Soul City bridge" }
   - { path: correspondence-digest.md, why: "Public-safe Jan 2026 email themes" }
   - { path: moollm-dual-palace.md, why: "Two careers one compiler — Repo Show north star" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }

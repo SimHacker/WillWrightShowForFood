@@ -46,6 +46,16 @@ Colossal Cave → Infocom luxury → **Scott's portable VM (16K)** → MUD → M
 - [MOOLLM adventure skill](https://github.com/SimHacker/moollm/blob/main/skills/adventure/SKILL.md)
 - [Adventure compiler vision](https://github.com/SimHacker/moollm/blob/main/designs/PR-ADVENTURE-COMPILER-VISION.md)
 
+## Faith, "soul," and the vault
+
+Scott's public HN warmth ("God used my gift to uplift others") and Don's atheism are **not** a debate topic — they are why the dual palace works as a story: both want an executable memory of work, relationships, and playable biography **in this world**. Soul City's [SOUL-MODEL](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md) uses "soul" as continuity, not creed.
+
+## Will and Parker
+
+**Will Wright** — natural third mind on microworlds / MediaGraph / "what if the desktop were an adventure map?"  
+**Parker** (Will's family) — may coach topics and questions behind the scenes even if not on camera.
+
 ## Segment picks
 
-Full catalog: [`../../characters/scott-adams/ideas.md`](../../characters/scott-adams/ideas.md) — especially **B2**, **B5**, **G1**, **G5**, **A2**, **A4**.
+Full catalog: [`ideas.md`](ideas.md) — especially **A1**, **X6**, **B2**, **B5**, **G1**, **G5**, **A2**, **A4**, **X3b**.  
+HN digest: [`sources/2021-11-24-hn-memory-palace.md`](sources/2021-11-24-hn-memory-palace.md).

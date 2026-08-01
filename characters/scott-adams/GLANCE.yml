@@ -35,6 +35,7 @@ navigation:
 read_order:
   - README.md
   - moollm-dual-palace.md
+  - sources/2021-11-24-hn-memory-palace.md
   - correspondence-digest.md
   - CARD.yml
   - invitation.md
@@ -47,10 +48,13 @@ see_also:
     - { path: ../GLANCE.yml, why: "Character registry" }
   siblings:
     - { path: ../don-hopkins/GLANCE.yml, why: "Host; Logo Adventure + the adventure compiler he wants to build with/for Scott" }
+    - { path: ../will-wright/GLANCE.yml, why: "Optional co-guest / microworlds; Parker may advise off-mic" }
   across:
     - { path: ../../repo-shows/scott-adams/README.md, why: "Show seed" }
+    - { path: ../../catalogs/soul-city/README.md, why: "Soul City product catalog; SOUL-MODEL cites HN reunion" }
     - { path: ../../schemas/portrayal-standards.md, why: "Portrayal ethics + subject rights" }
   deep:
     - { path: CARD.yml, why: "Adventure-engine abilities" }
     - { path: invitation.md, why: "Public invitation draft" }
-    - { path: ideas.md, why: "Conversation hooks -- adventure + AI" }
+    - { path: ideas.md, why: "Conversation hooks -- adventure + AI + Soul City + ensemble" }
+    - { path: sources/2021-11-24-hn-memory-palace.md, why: "HN 2021 digest — pre-LLM timeline" }

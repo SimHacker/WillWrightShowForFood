@@ -31,8 +31,10 @@ the collaboration a good story.
 3. **A world in 16K** — constraints as craft
 4. **Two-word parser vs. LLM** — legibility vs. flexibility; hybrid demo
 5. **Show MOOLLM live** — walk `skills/adventure/`; YAML in, webpage out; Scott playtests
-6. **HN reunion** — method-of-loci thread [`29330901`](https://news.ycombinator.com/item?id=29330901) as Room One
+6. **HN reunion** — method-of-loci thread [`29330901`](https://news.ycombinator.com/item?id=29330901) as Room One (Nov 2021: post-COVID vaccines, **pre-ChatGPT** — digest: [`sources/2021-11-24-hn-memory-palace.md`](sources/2021-11-24-hn-memory-palace.md))
 7. **Scott's new AI company** — he just started one; what is he building, and why now?
+8. **Soul City without a fight** — walk [SOUL-MODEL](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md): rooms, characters, personas, souls-as-continuity, minds; Scott's faith and Don's atheism both welcome; the word "soul" is a tool, not a creed
+9. **Will (+ Parker) in the wings** — Will Wright on microworlds / MediaGraph; Parker (Will's family) may suggest topics/questions behind the scenes even if not on camera
 
 ## Jan 2026 email (verified)
 
@@ -72,9 +74,12 @@ Don prepares artifacts; Scott picks what sounds fun on the day.
 
 ### A1. The Hacker News reunion 🎙️📜
 **Beat:** Don's method-of-loci comment on [HN `29330901`](https://news.ycombinator.com/item?id=29330901);
-Scott's warm reply; how a thread buried in search becomes a **room** once it's in the corpus.
+Scott's warm reply ("Happy Adventuring!"; God used my gift to uplift others). Dated **24 Nov 2021** —
+after COVID vaccines were widely available, **a year before ChatGPT**. Decades of DreamScape /
+pie-menu maps / iLoci already pointed at what Soul City / MOOLLM now make playable.
 **Payoff:** "Some stories don't exist until someone hands you the door."
-**Artifact:** thread link; optional compiled mini-room from the comment text.
+**Artifact:** thread + digest [`sources/2021-11-24-hn-memory-palace.md`](sources/2021-11-24-hn-memory-palace.md);
+optional compiled mini-room from the comment text.
 
 ### A2. "Sucked me in" — MOOLLM first impressions 🎙️
 **Beat:** Scott's January note — MOOLLM has **tremendous potential**; he's **also thinking about MOOLLM**.
@@ -241,11 +246,55 @@ talk to machines they don't understand.
 
 ### X3. Will Wright / microworld morality 🎙️
 **Beat:** Simulation games and IF both ask: what state is **true** in the world? Procedural rhetoric
-without graphics.
+without graphics. MediaGraph (Stupid Fun Club) was Don's music-map palace for Will — same gesture
+as Scott's biography rooms.
+
+### X3b. Will and Parker — microworld advisors (on-air or off) 🤝
+**Beat:** Invite **Will Wright** as co-guest or cold-open voice when the topic is microworlds,
+uncollecting-as-dispersal of stories, or "what would an adventure UI have done to the desktop?"
+**Parker** (Will's family — privacy: first name only in public notes) may prefer **behind the
+scenes**: suggest topics and questions, react to cuts, help pick which biography/palace rooms land
+for a younger ear. Either on camera or as a silent third producer is a win.
+**Ask Will:** If Adventure-map UIs had beaten hierarchical filesystems, what would The Sims' object
+browser look like?
 
 ### X4. MUD1 and Richard Bartle 🎙️
 **Beat:** Multi-user navigable worlds — invite Bartle as future guest or cite MUD lineage; Scott's
 single-player engine vs. Bartle's multi-player world.
+
+### X6. Soul City / SOUL-MODEL walk 🎙️🔧
+**Beat:** Open [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md)
+on air. Stack: **room → character (body) → persona (costume) → soul (continuity) → mind(s)**. The
+doc's disclaimer: "soul" here is the continuity that makes a character *someone* — **no religious
+verdict**. Then the HN beat: adventure maps *are* method of loci; Scott's engine *is* the compiler;
+MOOLLM directories *are* rooms.
+**Faith contrast (respectful, not a debate):** Scott's 2021 line about God using his gift; Don's
+atheism; both want the same vault of stories and relationships in *this* world. Ask Scott what
+"soul" means to him as a believer when the software uses the word as a filing metaphor — curiosity,
+not gotcha.
+**Payoff:** Soul City is the method-of-loci UI Don wished for in 2021, running now.
+**Artifact:** [catalogs/soul-city](../../../catalogs/soul-city/README.md) · adventure-4 example city
+
+---
+
+## Ensemble guests (discuss *with* Scott)
+
+Priority for shared airtime or a later panel. Scott stays the hero guest; others orbit.
+
+| Guest | Why with Scott | Mode |
+|-------|----------------|------|
+| **Will Wright** | Microworlds, MediaGraph/Stupid Fun Club, Sims object-as-room energy; shared "systems that teach" | Co-guest or cold open |
+| **Parker** (Will family) | Fresh questions; may prefer off-camera topic/question coaching | Advisor / optional cameo |
+| **Don Woods** | The other Adventurer — Crowther/Woods cave ↔ Adventureland fork ([woods-and-adams seed](../../repo-shows/woods-and-adams-adventurers.yml)) | Paired show |
+| **Jason Scott** | GET LAMP; archival love; disambiguation energy with warm humor | Co-guest or tape insert |
+| **Nick Montfort** | Academic IF / riddle machines; two-word parser as design | Co-guest (talk-heavy ep) |
+| **Richard Bartle** | MUD vs single-player engine; multi-user memory palaces | Future paired show |
+| **Brenda Laurel** | Interactive narrative, computers as theatre | Co-guest |
+| **Ted Nelson** | Transclusion vs clipboard; links as exits between rooms | Short segment / cameo |
+| **Emily Short** or modern IF author | Authoring tools after the 16K era; LLM authoring ethics | Co-guest on P2/P5 ep |
+| **Dave Ackley** | Robust-first living systems; "survive" meets adventure state machines | Optional deep cut |
+
+**Disambiguation on every bill:** Scott Adams = Adventure International. Not Dilbert.
 
 ### X5. Game cartridges — porting NPCs between worlds 🎙️
 **Beat:** Scott shipped whole adventures as data on cassette — the original portable game cartridge.
@@ -299,6 +348,9 @@ G1 + G4 + B2 — audience authors; Scott playtests; Don compiles; no lecture lon
 - Where does NotebookLM help your biography — and where does it hallucinate?
 - What must stay **deterministic** in your playable biography no matter how good the LLM gets?
 - If MOOLLM had existed in 1978, what would you have put in the first room?
+- Looking back at our 2021 HN thread — before ChatGPT — what feels newly urgent now that LLMs are everywhere?
+- Soul City uses "soul" as continuity-without-theology. As someone of faith, does that metaphor help, itch, or both?
+- Would you want Will (and maybe Parker off-mic) in the room when we compile a biography palace?
 
 ---
 
@@ -312,6 +364,9 @@ G1 + G4 + B2 — audience authors; Scott playtests; Don compiles; no lecture lon
 | Don lineage | [characters/don-hopkins/career/lineage.yml](../don-hopkins/career/lineage.yml) |
 | Scott guest page | [characters/scott-adams/](./) |
 | HN thread | https://news.ycombinator.com/item?id=29330901 |
+| HN digest (timeline + quotes) | [sources/2021-11-24-hn-memory-palace.md](sources/2021-11-24-hn-memory-palace.md) |
+| Soul City SOUL-MODEL | https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md |
+| Soul City catalog | [catalogs/soul-city](../../../catalogs/soul-city/README.md) |
 | Wikipedia (game designer) | https://en.wikipedia.org/wiki/Scott_Adams_(game_designer) |
 
 ---
@@ -320,6 +375,8 @@ G1 + G4 + B2 — audience authors; Scott playtests; Don compiles; no lecture lon
 
 - Scott's engine, Adventureland, Adventure International: public record + Wikipedia.
 - Jan 2026 correspondence ("sucked me in," "tremendous potential," biography mini-adventures, MOOLLM interest): **VERIFIED via Don** — confirm before long quotes on air.
+- HN Nov 2021 thread: public; Scott's faith remark is public — quote with warmth, never as a gotcha.
 - Don's Logo Adventure, MOOLLM, adventure compiler: Don's repos and lineage files.
+- Parker: Will family context from private Don↔Will mail — keep first-name-only in public show notes.
 
-*Last updated: 2026-07-01 — grows as segments get tried on stream.*
+*Last updated: 2026-08-01 — HN digest, Soul City, Will/Parker, ensemble guests.*

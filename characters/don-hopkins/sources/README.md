@@ -115,11 +115,20 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [NeWS source release, 1 Jul 1987](1987-07-01-news-pie-menus-source-release.md) | **The code receipt** — mouse-ahead in the announcement, display suppression in the "Things to do", UNRESTRICTED license with poem |
 | [Kurtenbach exchange, May 2018](2018-05-kurtenbach-retract-or-clarify-exchange.md) | Admissions on the record: mouse-ahead known in 1990; "typical pie menus" = Alias in-house; "Max was the main rival"; Plaisant's "mousy" explanation |
 | [Apology demand + 66-point GDC timeline, Feb 2019](2019-02-buxton-apology-demand-gdc-timeline.md) | Godwin-cleared publication notice; Kurtenbach released; Buxton challenged for evidence — none ever came; CMU lecture prep receipts |
+| [DDJ draft thread, Sep–Oct 1991](1991-09-19-ddj-pie-menus-draft-thread.md) | **The manuscript receipts** — Don's draft/outline + Ramiro Valdes's edit; "mark ahead" + display preemption + Lanier "the body remembers" in the Oct 1991 manuscript; anti-patent bullet in the Sept outline; spiral/Lotto-wheel pies; layout listing |
+| [Plaisant mouse-ahead memory, May 2018](2018-05-14-plaisant-mouse-ahead-memory.md) | **The 1987 ;login: text in full** (Simple Simon poem; mouse-ahead + display suppression published Aug 1987) + Plaisant's eyewitness: marking-menu crew misread "mousy" as always-visible proof — "Obviously wrong"; HCIL 90-02 "mouse ahead display suppression" cite |
+| [PIXIE reference receipts, Feb 2019](2019-02-08-pixie-references-receipts.md) | **Buxton's "I told him about PIXIE" refuted** — dated trail from 2 Dec 1986 email-to-self through the 1989 `piepaper.comments`; full annotated CACM manuscript (Hopkins/Callahan/Weiser) with mouse-ahead sections; why Don quit academic publishing for DDJ |
+| [sunviewgames → SDI resurrection (2026)](../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md) | Weiser firsthand, 24 Jan 1987: "**I used the snow to hack pies into sunview**"; Apr 1988 NeWS-makers post (Shneiderman's camera, Zork navigation, mouse-ahead on Usenet); recovered [SDI source](../../mark-weiser/software/README.md) with `piemenu_track.c` |
 
 ## Other sources in this folder
 
 | File | Topic |
 |------|-------|
+| [1988-09-14-sug-southwest-lgate-sdi-news.md](1988-09-14-sug-southwest-lgate-sdi-news.md) | **LGATE receipt** — Josh Siegel/Bret Thayler's SDI-at-the-Pentagon NeWS simulation (LANL); same program bills Don's UMD NeWS + HyperTIES talk; feeds Gosling's Desert Storm k-line |
+| [1989-02-05-rosenthal-news-pipes-spike-sdi-usenix.md](1989-02-05-rosenthal-news-pipes-spike-sdi-usenix.md) | **Rosenthal eyewitness** — the Spike/PSIBER "better than Interlisp and Smalltalk"; NeWS pipe RFE; Joint Chiefs driving the LANL SDI panel + Europe war panel; all on an 8 MB 3/60 |
+| [1989-05-20-gilmore-news-vendor-census.md](1989-05-20-gilmore-news-vendor-census.md) | **NeWS vendor census** (gnu@toad.com) — every 1989 port/licensee/app: SGI, Pixar-on-Transputer, AmigaNeWS, Microsoft/Acorn licenses; UniPress NEmacs (Mike Gallaher, "Chief Wizard"); third Siegel SDI receipt |
+| [1989-06-07-hugh-daniel-usenix-news-booth.md](1989-06-07-hugh-daniel-usenix-news-booth.md) | **Usenix booth manifest** (Hugh Daniel) — Don demoing HyperTIES + PieMenus; LANL demoing **LGATE-SDI + MPM** (fourth receipt); "NeWS WArE" archive collecting; GoodNeWS/HyperNeWS in the plan |
+| [1990-04-11-siegel-sun-interview-mousee-art.md](1990-04-11-siegel-sun-interview-mousee-art.md) | **The recruitment coda** — Gosling sets up Siegel's Sun interview; "tell him about the peaceful things" (fifth LGATE receipt); mousee ↔ Empowered/CHI'90 tied on paper; proto motion-history visualization art project |
 | [2020-04-06-flight-of-pixie-chm-tlg-broadcast.md](2020-04-06-flight-of-pixie-chm-tlg-broadcast.md) | PIXIE video + CHM 1996 interview discovery; TLG circle broadcast |
 | [2020-04-08-barlow-memorial-hn-chm-pitch.md](2020-04-08-barlow-memorial-hn-chm-pitch.md) | Barlow Zoom memorial; HN queue; Heinz Lemke CHM pitch |
 | [2026-07-06-hn-when-2-plus-2-equals-five.md](2026-07-06-hn-when-2-plus-2-equals-five.md) | HN compendium style reference |

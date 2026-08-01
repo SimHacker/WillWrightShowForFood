@@ -42,6 +42,7 @@ and we do not speak as him without consent.
 | **Trading card / abilities** | [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) |
 | **Photos & media** (SimCity/Sims history, robots) | [`media/`](media/README.md) · [`media/GLANCE.yml`](media/GLANCE.yml) |
 | **Russian Space Junk** (Soviet spaceflight hardware, photos by Don) | [`media/russian-space-junk.md`](media/russian-space-junk.md) |
+| **Zimbabwe Z$20B business card** (Gallium stamp; ~$2–4 face-street price) | [`media/zimbabwe-20-billion-business-card.md`](media/zimbabwe-20-billion-business-card.md) |
 | **Artwork** (mixed-media relief constructions) | [`media/artwork.md`](media/artwork.md) |
 | **1996 Stanford talk** (centerpiece) | [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
 | **Yaml girder** | [`CHARACTER.yml`](CHARACTER.yml) |

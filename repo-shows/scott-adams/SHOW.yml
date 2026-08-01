@@ -28,6 +28,24 @@ threads:
   build_live: "The payoff: Don develops adventure-compiler tooling on air that Scott can actually use -- real code, public repo."
   biography_adventures: "Scott's NotebookLM corpus -> mini-adventures on the web; compile with MOOLLM adventure skill; HN thread as a room."
   dual_palace: "Scott biography rooms + Don career memory palace — same adventure compiler; mutual YAML seeds; live Repo Show compile."
+  hn_2021: "HN 29330901 (2021-11-24) — method of loci; post-COVID vaccines, pre-ChatGPT; Scott's warm faith reply; Room One."
+  soul_city: "SOUL-MODEL walk — room/character/persona/soul/mind; soul=continuity without creed; adventure-as-memory-palace cites this HN thread."
+  will_parker: "Will Wright optional co-guest (microworlds/MediaGraph); Parker (Will family) may suggest topics/questions off-mic."
+
+ensemble_with_scott:
+  priority:
+    - will-wright
+    - don-woods   # woods-and-adams-adventurers.yml
+    - jason-scott
+    - nick-montfort
+  optional:
+    - richard-bartle
+    - brenda-laurel
+    - ted-nelson
+    - emily-short-or-modern-if
+    - dave-ackley
+  behind_scenes:
+    - parker-will-family
 
 format:
   live: true

@@ -3,7 +3,7 @@
 
 character: scott-adams
 consent: correspondence_verified
-artifact_count: 6
+artifact_count: 8
 
 correspondence:
   digest: correspondence-digest.md
@@ -16,7 +16,9 @@ artifacts:
     kind: thread
     title: "Hacker News — method of loci / memory palace"
     url: https://news.ycombinator.com/item?id=29330901
-    note: "Reconnection thread; compile as Room One candidate (ideas B3)"
+    date: 2021-11-24
+    digest: sources/2021-11-24-hn-memory-palace.md
+    note: "Post-COVID vaccines, pre-ChatGPT; Scott warm faith reply; Room One (ideas A1/B3)"
 
   - id: moollm-repo
     kind: repo
@@ -48,6 +50,18 @@ artifacts:
     url: https://medium.com/@donhopkins/logo-adventure-for-c64-terrapin-logo-4c684a240b53
     local: ../don-hopkins/logo-adventure-c64-terrapin.md
     note: "Missing link in lineage — Scott engine → Logo REPL parser → MOOLLM"
+
+  - id: soul-model
+    kind: design
+    title: "Soul City — SOUL-MODEL"
+    url: https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md
+    note: "Stack + adventure-as-memory-palace (cites HN 29330901); soul = continuity, no creed"
+
+  - id: soul-city-catalog
+    kind: catalog
+    title: "WWSFF Soul City catalog"
+    url: https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city
+    note: "create·publish·share; ties product + MOOLLM"
 
 see_also:
   - ../../characters/scott-adams/invitation.md

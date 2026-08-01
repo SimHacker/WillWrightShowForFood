@@ -139,7 +139,9 @@ googling for Josh Siegel:
   at Los Alamos wrote "MMPORG simulations of World War III for the Joint Chiefs of Staff
   with a beautiful interactive NeWS front-end. (Sun was lucky to steal him away from LANL
   to work on NeWS instead of WWIII.)" At General Magic: Magic Cap Core Technology with
-  Bill Atkinson and Andy Hertzfeld (both "on loan").
+  Bill Atkinson and Andy Hertzfeld (both "on loan"). The stealing-away has a receipt:
+  [Don's 11 Apr 1990 email](1990-04-11-siegel-sun-interview-mousee-art.md) — Gosling set
+  up Siegel's Sun interview; "tell him about the peaceful things he could be doing at Sun!!"
 - Don's through-line: NeWS PostScript → **Telescript** "was obviously the right
   approach. Today the same approach is called 'AJAX'."
 
