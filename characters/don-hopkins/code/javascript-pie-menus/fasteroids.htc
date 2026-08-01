@@ -1,0 +1,2046 @@
+<?XML version="1.0"?>
+
+<PACKAGE>
+
+  <?COMPONENT ERROR="TRUE" DEBUG="TRUE"?>
+
+  <COMMENT>
+
+
+////////////////////////////////////////////////////////////////////////
+//
+// Pie Menu Fasteroids for Internet Explorer 5.0 JScript.
+// Copyright (C) 2001 by Don Hopkins.
+// All rights reserved. 
+// Designed and implemented by Don Hopkins. 
+//
+// mailto:xardox@mindspring.com
+// http://www.piemenu.com
+// http://www.catalog.com/hopkins
+//
+// 2D Rigid Body Dynamics adapted from Chris Hecker's articles:
+// http://www.d6.com/users/checker/dynamics.htm
+//
+// This program is provided for unrestricted use, 
+// provided that this copyright message is preserved. 
+// There is no warranty, and no author or distributer 
+// accepts responsibility for any damage caused by 
+// this program. 
+//
+////////////////////////////////////////////////////////////////////////
+
+
+  </COMMENT>
+
+  <COMPONENT ID="fasteroids">
+
+    <IMPLEMENTS ID="fasteroids" TYPE="Behavior" DEFAULT="">
+      <ATTACH FOR="window" EVENT="onload" handler="HandleOnLoad"/>
+      <ATTACH FOR="window" EVENT="onkeypress" handler="HandleOnKeyPress"/>
+      <PUBLIC>
+        <EVENT NAME="OnFooBar" ID="evFooBar"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <IMPLEMENTS TYPE="Automation">
+      <PUBLIC>
+	<METHOD NAME="MakeRandomRock"/>
+	<METHOD NAME="MakeRock"/>
+	<METHOD NAME="MakeRandomShip"/>
+	<METHOD NAME="MakeShip"/>
+	<METHOD NAME="MakeShipBlast"/>
+	<METHOD NAME="MakeBlastAt"/>
+	<METHOD NAME="HandleTimer"/>
+	<METHOD NAME="ClickRock"/>
+	<METHOD NAME="ClickShip"/>
+	<METHOD NAME="ClickBlast"/>
+	<METHOD NAME="OnMouseDownInSpace"/>
+	<METHOD NAME="OnMouseDownInRound"/>
+	<METHOD NAME="OnSelectMenu"/>
+	<METHOD NAME="OnSelectPlayMenu"/>
+	<METHOD NAME="OnSelectModeMenu"/>
+	<METHOD NAME="OnSelectEditMenu"/>
+	<METHOD NAME="OnSubmitStats"/>
+
+        <PROPERTY NAME="target" INTERNALNAME="gDiv"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <SCRIPT LANGUAGE="JScript">
+
+
+if (id == "") {
+  id = uniqueID;
+} // if
+
+var gDiv = eval(id); // element;
+
+var gRoundDiv = null;
+var gSpaceDiv = null
+var gGroup = null;
+var gStatsDiv = null
+var gDummyDiv = null;
+var gForm = null;
+var gPieMenu = null;
+
+var gSprites = new Array();
+var gTargets = new Array();
+var gShips = new Array();
+var gRocks = new Array();
+var gBlasts = new Array();
+var gSpaceX = 0;
+var gSpaceY = 0;
+var gSpaceWidth = 400;
+var gSpaceHeight = 400;
+var gTimeInterval = 1;
+var gTimeStep = 1.0;
+var gTime = 0;
+var gLastTime = 0;
+var gMinCollisionTime = 5;
+var gTwoPi = 2.0 * Math.PI;
+var gInitialShipCount = 1;
+var gMaxShips = 4;
+var gShipWidth = 20;
+var gShipHeight = 20;
+//var gShipDensity = 0.01;
+var gShipDensity = .25;
+var gShipRestitution = 1.0;
+var gShipTurn = gTwoPi / 16.0;
+var gShipAccel = 1.0;
+//var gRockDensity = 0.01;
+var gRockDensity = 1;
+var gRockRestitution = 1.0;
+var gRockBlastHeat = 0.6;
+var gRockShipHeat = 0.8;
+var gRockBounceHeat = 0.4;
+var gRockCool = 0.99;
+var gRockInhibitTime = 5;
+var gRockMinSplitHeat = 1.0;
+var gRockMinMergeHeat = 0.9;
+//var gMinRockSplitSize = 16;
+var gMinRockSplitSize = 30;
+var gMaxRockMergeSize = 200;
+var gRockBlastCount = 2;
+var gRockBlastVel = 16;
+var gRockBlastSpread = 10;
+var gInitialRockCount = 1;
+var gMaxRocks = 4;
+var gInitialRockSize = 50;
+//var gInitialRockSpeed = 20.0;
+var gInitialRockSpeed = 5.0;
+var gInitialRockDDir = 0.75;
+var gSpriteSmoosh = 1.0;
+var gAccelProb = 0.4;
+var gAccelRate = 5.0;
+var gTurnSign = 1;
+var gTurnSignProb = 0.02;
+var gTurnProb = 0.7;
+//var gTurnRate = gTwoPi / 32;
+var gTurnRate = gTwoPi / 32;
+var gBlastWidth = 1;
+var gBlastHeight = 1;
+//var gBlastDensity = 0.01;
+var gBlastDensity = 100.0;
+var gBlastRestitution = 1.0;
+//var gBlastProb = 0.005;
+var gBlastProb = 0.1;
+//var gBlastSpeed = 20.0;
+var gBlastSpeed = 20.0;
+//var gBlastTime = 250;
+//var gBlastTime = 50;
+var gBlastTime = 25;
+var gHighRockMark = 10;
+var gHighBlastMark = 8;
+var gWrap = 1;
+var gInitMenu = 1;
+var gInitRound = 1;
+var gInRound = 1;
+var gRound = 0;
+var gMenuTest = 0;
+var gMenuType = 0;
+var gMenuItem = 0;
+
+var gMenuStartTime = 0;
+var gMenuEndTime = 0;
+
+var gItemOffset = 0;
+var gCorrectItem = 0;
+
+var gTakeStats = 1;
+
+var kRandom = 0;
+var kConstant = 1;
+var kNumMenuTests = 2;
+var kPie = 0;
+var kLinear = 1;
+var kNumMenuTypes = 2;
+var kNumMenuItems = 8;
+
+var gTotalMenuCounts = null;
+var gTotalMenuTimes = null;
+var gTotalMenuCorrectCounts = null;
+var gTotalMenuCorrectTimes = null;
+var gTotalMenuErrorCounts = null;
+var gTotalMenuErrorTimes = null;
+var gMenuCorrectTimes = null;
+var gMenuCorrectCounts = null;
+var gMenuErrorTimes = null;
+var gMenuErrorCounts = null;
+
+var gPieMenuFormURL = "http://www.piemenu.com:8080/PieMenuForm/submit";
+//var gPieMenuFormURL = "javascript:alert(&quot;Foo!&quot;)";
+
+var gHexDigits =
+  new Array("0", "1", "2", "3", "4", "5", "6", "7", 
+            "8", "9", "A", "B", "C", "D", "E", "F");
+
+var gMenuTestNames = 
+  new Array(
+    "Random",
+    "Constant");
+
+var gMenuTypeNames = 
+  new Array("Pie", "Linear");
+
+var gMenuTypeItemNames = 
+  new Array(
+    new Array("North", "NorthEast", "East", "SouthEast", "South", "SouthWest", "West", "NorthWest"),
+    new Array("First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth"));
+
+
+var gGenUniqueID = 0;
+
+function GenUniqueID()
+{
+  return "FASTEROIDS_ID_" + (gGenUniqueID++);
+}
+
+
+var gTemplateEvalRE = 
+  /{([^{]*)}/g;
+
+function DefTemplate(name, args, template)
+{
+  var str =
+    "function " + name + "(" + args + ") {\n" +
+    "  var str = \"";
+
+  template =
+    template.replace("\"", "\\\"");
+
+  template =
+    template.replace("\n", "\\n");
+
+  template =
+    template.replace(gTemplateEvalRE, "\" + ($1) + \"");
+
+  str +=
+    template +
+    "\";\n" +
+    "  return str;" +
+    "}";
+
+  return str;
+}
+
+
+eval(DefTemplate(
+  "MenuTestTemplate",
+  "menuTest",
+//  "  <menutest" +
+  "  <menutest " +
+      "num='{menuTest}' " +
+      "name='{gMenuTestNames[menuTest]}' " +
+      ">\n"
+));
+
+eval(DefTemplate(
+  "MenuTypeTemplate",
+  "type, correctCount, correctTime, errorCount, errorTime",
+  "    <menutype " +
+	"num='{type}' " +
+	"name='{gMenuTypeNames[type]}' " +
+	"correctcount='{correctCount}' " +
+	"correcttime='{correctTime}' " +
+	"errorcount='{errorCount}' " +
+	"errortime='{errorTime}'" +
+	">\n"
+));
+
+eval(DefTemplate(
+  "MenuItemTemplate",
+  "type, item, correctTime, correctCount, errorTime, errorCount",
+//  "      <itemdata>{correctTime},{correctCount},{errorTime},{errorCount}</itemdata>\n"
+  "      <itemdata " +
+	  "num='{item}' " +
+	  "name='{gMenuTypeItemNames[type][item]}' " +
+	  "correctcount='{correctCount}' " +
+	  "correcttime='{correctTime}' " +
+	  "errorcount='{errorCount}' " +
+	  "errortime='{errorTime}'" +
+	  "/>\n"
+));
+
+eval(DefTemplate(
+  "MenuStatsRowTemplate",
+  "menuType, menuTest, selectionCount, correctCount, totalTime, averageTime, errorCount, errorRate",
+  "<TR>" +
+    "<TD>{gMenuTypeNames[menuType]}</TD>" +
+    "<TD>{gMenuTestNames[menuTest]}</TD>" +
+    "<TD>{selectionCount}</TD>" +
+    "<TD>{correctCount}</TD>" +
+    "<TD>{totalTime}</TD>" +
+    "<TD>{ShortFloatString(averageTime)}</TD>" +
+    "<TD>{errorCount}</TD>" +
+    "<TD>{PercentString(errorRate * 100.0)}</TD>" +
+  "</TR>"
+));
+
+
+function RandInt(n)
+{
+  return Math.floor(Math.random() * n);
+}
+
+
+function CalcDistance(dx, dy)
+{
+  return Math.sqrt((dx * dx) + (dy * dy));
+}
+
+
+function CalcAngle(dx, dy)
+{
+  if ((dx == 0) && (dy == 0)) {
+    return 0;
+  } else {
+    return Math.atan(dy, dx);
+  } // if
+}
+
+
+function SetGroup(obj, el)
+{
+  obj.el = el;
+  el.obj = obj;
+  el.style.display = "block";
+  el.style.position = "absolute";
+  ShowElement(obj);
+  MoveGroup(obj, obj.positionX, obj.positionY);
+  gGroup.appendChild(el);
+}
+
+
+function MoveGroup(obj, x, y)
+{
+  var el = obj.el
+  var st = el.style;
+
+  st.left = gSpaceX + x;
+  st.top = gSpaceY + y;
+
+  obj.positionX = x;
+  obj.positionY = y;
+}
+
+
+function ShowElement(obj)
+{
+  obj.el.style.visibility = "visible";
+}
+
+
+function HideElement(obj)
+{
+  obj.el.style.visibility = "hidden";
+}
+
+
+function InitDynamics(obj)
+{
+  var width = obj.width;
+  var height = obj.height;
+
+  obj.size = Math.max(width, height);
+  obj.mass = obj.density * width * height;
+  obj.massInverse = 1.0 / obj.mass;
+  obj.moment = (obj.mass / 12.0) * ((width * width) + (height * height));
+  obj.momentInverse = 1.0 / obj.moment;
+}
+
+
+function MakeSprite(
+  type, element,
+  positionX, positionY,
+  width, height,
+  orientation,
+  velocityX, velocityY,
+  angularVelocity,
+  density, restitution)
+{
+  var obj = new Object();
+
+  obj.type = type;
+  obj.owner = null;
+  obj.el = null;
+  obj.positionX = positionX;
+  obj.positionY = positionY;
+  obj.width = width;
+  obj.height = height;
+  obj.orientation = orientation;
+  obj.velocityX = velocityX;
+  obj.velocityY = velocityY;
+  obj.angularVelocity = angularVelocity;
+  obj.forceX = 0.0;
+  obj.forceY = 0.0;
+  obj.torque = 0.0;
+  obj.density = density;
+  obj.restitution = restitution;
+
+  InitDynamics(obj);
+
+  obj.temperature = 0.0;
+  obj.temperatureShown = -1;
+
+  SetGroup(obj, element);
+
+//  UpdateLastConfiguration(obj);
+  SetOrientation(obj, orientation);
+
+  gSprites.push(obj);
+
+  return obj;
+}
+
+
+function UpdateLastConfiguration(obj)
+{
+  obj.positionXLast = obj.positionX;
+  obj.positionYLast = obj.positionY;
+  obj.orientationLast = obj.orientation;
+  obj.angularVelocityLast = obj.angularVelocity;
+  obj.forceXLast = obj.forceX;
+  obj.forceYLast = obj.forceY;
+  obj.torqueLast = obj.torque;
+}
+
+
+function SetOrientation(obj, orientation)
+{
+  while (orientation < 0) {
+    orientation += gTwoPi;
+  } // while
+  while (orientation >= gTwoPi) {
+    orientation -= gTwoPi;
+  } // while
+
+  obj.orientation = orientation;
+
+  obj.orientationDX = Math.cos(orientation);
+  obj.orientationDY = Math.sin(orientation); // XXX
+
+  obj.el.style.rotation =
+    (orientation * 360.0 / gTwoPi);
+
+  if (obj.type == "rock") {
+    var temp = obj.temperature;
+    var delta = Math.abs(temp - obj.temperatureShown);
+    var epsilon = 0.05;
+    if (delta > epsilon) {
+      obj.temperatureShow = temp;
+      var r = ClampFloatToByte(0.25 + (temp * 0.75));
+      var g = ClampFloatToByte(0.25 - (temp * 0.25));
+      var b = ClampFloatToByte(0.25 - (temp * 0.25));
+      var rgb = 
+	"#" +
+        ByteToHex(r) +
+        ByteToHex(g) +
+        ByteToHex(b);
+      obj.el.firstChild.nextSibling.fillcolor = rgb;
+    } // if
+  } // if
+}
+
+
+function ClampFloatToByte(f)
+{
+  var b =
+    Math.floor(f * 256);
+  if (b < 0) {
+    b = 0;
+  } else if (b > 255) {
+    b = 255;
+  } // if
+  return b;
+}
+
+
+function ByteToHex(b)
+{
+  var str =
+    gHexDigits[(b >> 4) & 15] +
+    gHexDigits[b & 15];
+
+  return str;
+}
+
+
+function MakeRandomShip()
+{
+  return MakeShip(
+      Math.random() * gSpaceWidth,
+      Math.random() * gSpaceHeight,
+      Math.random() * gTwoPi);
+}
+
+
+function MakeShip(x, y, dir)
+{
+  var ship =
+    MakeSprite(
+      "ship",
+      MakeShipVML(),
+      x, y,
+      gShipWidth, gShipHeight,
+      dir,
+      0.0, 0.0,
+      0.0,
+      gShipDensity,
+      gShipRestitution);
+
+  gTargets.push(ship);
+
+  ship.startTime = gTime;
+  ship.endTime = -1;
+
+  gShips.push(ship);
+
+  AccelerateSprite(ship, gShipAccel);
+
+  return ship;
+}
+
+
+function MakeShipVML()
+{
+  var path = MakeShipPath()
+
+  gDummyDiv.innerHTML =
+    path;
+
+  return gDummyDiv.firstChild;
+}
+
+
+function MakeShipPath()
+{
+  var width = Math.round(gShipWidth);
+  var height = Math.round(gShipHeight);
+
+  var halfWidth = Math.round(width / 2);
+  var quarterWidth = Math.round(width / 4);
+  var eighthWidth = Math.round(width / 8);
+
+  var halfHeight = Math.round(height / 2);
+  var quarterHeight = Math.round(height / 4);
+  var eighthHeight = Math.round(height / 8);
+
+  var path =
+    "m" + halfWidth + ",0" +
+    "l" + (-halfWidth) + "," + (-halfHeight) + "," +
+    (-eighthWidth) + ",0," +
+    (-halfWidth) + "," + halfHeight + "xe";
+
+  var id =
+    "ship_" + GenUniqueID();
+
+  var path =
+    MakePathVML(width, height, halfWidth, halfHeight, id, path, "white", "green");
+
+  return path;
+}
+
+
+function MakeRandomRock(size)
+{
+  return MakeRock(
+      Math.random() * gSpaceWidth,
+      Math.random() * gSpaceHeight,
+      (Math.random() - 0.5) * 2 * gInitialRockSpeed,
+      (Math.random() - 0.5) * 2 * gInitialRockSpeed,
+      Math.random() * gTwoPi,
+      size);
+}
+
+
+function MakeRock(x, y, velx, vely, dir, size)
+{
+  var r =
+    size / 2;
+  var rock =
+    MakeSprite(
+      "rock",
+      MakeRockVML(size),
+      x, y,
+      size, size,
+      dir,
+      velx, vely,
+      0.0,
+      gRockDensity,
+      gRockRestitution);
+
+  gTargets.push(rock);
+
+  RandomizeRock(rock);
+
+  rock.startTime = gTime;
+  rock.endTime = -1;
+
+  gRocks.push(rock);
+
+  return rock;
+}
+
+
+function RandomizeRock(obj)
+{
+  obj.velocityX = obj.orientationDX * Math.random() * gInitialRockSpeed;
+  obj.velocityY = obj.orientationDY * Math.random() * gInitialRockSpeed;
+  obj.angularVelocity = (Math.random() - 0.5) * gInitialRockDDir;
+}
+
+
+function MakeRockVML(size)
+{
+  var path = MakeRockPath(size);
+
+  gDummyDiv.innerHTML =
+    path;
+
+  return gDummyDiv.firstChild;
+}
+
+
+function MakeRockPath(size)
+{
+  var path = "m";
+//  var slop = 0.8;
+  var slop = 1.0;
+  var jitter = 0.5;
+  var center = Math.floor(size / 2);
+  var r = center * slop;
+  var points = 16;
+  var turn = gTwoPi / points;
+  var ang = 0;
+  var i;
+  for (i = 0; i < points; i++) {
+    var x =
+      Math.floor(
+	(r * Math.cos(ang)) +
+        ((Math.random() - 0.5) * r * jitter));
+    var y =
+      Math.floor(
+	(r * Math.sin(ang)) +
+        ((Math.random() - 0.5) * r * jitter));
+    if (x < -center) x = -center;
+    if (x > center) x = center;
+    if (y < -center) y = -center;
+    if (y > center) y = center;
+    path += x + "," + y;
+    if (i == 0) {
+      path += "l";
+    } else {
+      path += ",";
+    } // if
+    ang += turn;
+  } // for i
+  path += "0xe";
+
+  var id =
+    "rock_" + GenUniqueID();
+
+  var path =
+    MakePathVML(size, size, center, center, id, path, "white", "gray");
+
+  return path;
+}
+
+
+function MakeShipBlast(ship)
+{
+  var r = gShipWidth / 2.0;
+  var offsetX =
+//    (gShipWidth / 2) +
+    (ship.orientationDX * r);
+  var offsetY =
+//    (gShipHeight / 2) +
+    (ship.orientationDY * r);
+  var blastVelocityX =
+    (ship.orientationDX * gBlastSpeed) +
+    ship.velocityX;
+  var blastVelocityY =
+    (ship.orientationDY * gBlastSpeed) +
+    ship.velocityY;
+
+  var x =
+    Math.round(ship.positionX + offsetX);
+  var y =
+    Math.round(ship.positionY + offsetY);
+
+  var blast =
+    MakeBlastAt(
+      x, y,
+      blastVelocityX,
+      blastVelocityY);
+
+  blast.owner = ship;
+
+  return blast;
+}
+
+
+function MakeBlastAt(x, y, velx, vely)
+{
+  var blast =
+    MakeSprite(
+      "blast",
+      MakeBlastVML(),
+      x, y, 
+      gBlastWidth, gBlastHeight,
+      0,
+      velx,
+      vely,
+      0,
+      gBlastDensity,
+      gBlastRestitution);
+
+  blast.startTime = gTime;
+  blast.endTime = gTime + gBlastTime;
+
+  gBlasts.push(blast);
+
+  return blast;
+}
+
+
+function MakeBlastVML(size)
+{
+  var path = MakeBlastPath();
+
+  gDummyDiv.innerHTML =
+    path;
+
+  return gDummyDiv.firstChild;
+}
+
+
+function MakeBlastPath(size)
+{
+  var path = "m0,-2l-2,0,0,2,2,0xe";
+
+  var id =
+    "blast_" + GenUniqueID();
+
+  var path =
+    MakePathVML(gBlastWidth, gBlastHeight, 0, 0, id, path, "", "yellow");
+
+  return path;
+}
+
+
+function MakePathVML(width, height, hotx, hoty, id, path, strokecolor, fillcolor)
+{
+  var fill =
+    fillcolor.length
+      ? ("fill='true' fillcolor='" + fillcolor + " ' ")
+      : ("fill='false'");
+  var stroke =
+    strokecolor.length
+      ? ("stroke='true' strokecolor='" + strokecolor + " ' ")
+      : ("stroke='false'");
+
+  var vml =
+    "<v:group " +
+      "style='width:1;height:1;rotation:0' " +
+      "coordsize='1,1'>" +
+	"<v:shapetype " +
+	  "id='" + id + "' " +
+          "style='width:" + width + ";height:" + height + ";rotation:0' " +
+	  "coordsize='" + width + "," + height + "' " +
+	  "path='" + path + "'>" +
+	    "<v:stroke joinstyle='mitre'/>" +
+	"</v:shapetype>" +
+	"<v:shape " +
+	  "type='#" + id + "' " +
+	  "style='width:" + width + ";height:" + height + "' " +
+          fill + stroke + ">";
+	"</v:shape>" +
+    "</v:group>";
+
+  return vml;
+}
+
+
+function HandleOnLoad()
+{
+  InitComponent();
+}
+
+
+function HandleOnKeyPress()
+{
+  var keyCode = window.event.keyCode;
+  var ship = gShips[0];
+
+  if (keyCode == 106) { // j
+    TurnSprite(ship, gShipTurn);
+  } else if (keyCode == 108) { // l
+    TurnSprite(ship, gShipTurn * -1);
+  } else if (keyCode == 107) { // k
+    AccelerateSprite(ship, gShipAccel);
+  } else if (keyCode == 32) { // space
+    FireBlast(ship);
+  }
+}
+
+
+function TurnSprite(sprite, twist)
+{
+  SetOrientation(sprite, twist + sprite.orientation);
+}
+
+
+function AccelerateSprite(sprite, accel)
+{
+  sprite.velocityX += sprite.orientationDX * accel;
+  sprite.velocityY += sprite.orientationDY * accel;
+}
+
+
+function FireBlast(ship)
+{
+  MakeShipBlast(ship);
+}
+
+
+function InitComponent()
+{
+  var roundDivID = GenUniqueID();
+  var spaceDivID = GenUniqueID();
+  var groupID = GenUniqueID();
+  var statsDivID = GenUniqueID();
+  var dummyDivID = GenUniqueID();
+  var formID = GenUniqueID();
+  var pieMenuID = GenUniqueID();
+
+  var w = parseInt(getAttribute("spacewidth"));
+  var h = parseInt(getAttribute("spaceheight"));
+  if (!isNaN(w)) {
+    gSpaceWidth = w;
+  } // if
+  if (!isNaN(h)) {
+    gSpaceHeight = h;
+  } // if
+
+  gDiv.innerHTML =
+    "<CENTER>" +
+      "<DIV ID='" + roundDivID + "' style='width:100%' " +
+	   "onmousedown='" + gDiv.id + ".OnMouseDownInRound()'>" +
+      "</DIV>" +
+      "<DIV ID='" + spaceDivID + "' " +
+	   "style='width:" + gSpaceWidth + ";height:" + gSpaceHeight + ";background:black' " +
+	   "onmousedown='" + gDiv.id + ".OnMouseDownInSpace()'/>" +
+	"<v:group ID='" + groupID + "'></v:group>" +
+      "</DIV>" +
+      "<DIV ID='" + statsDivID + "' style='width:100%'></DIV>" +
+      "<DIV ID='" + dummyDivID + "' style='display:none'>gDummyDiv</DIV>" +
+      "<FORM ID='" + formID + "' " +
+            "METHOD='POST' " +
+	    "ACTION='" + gPieMenuFormURL + "' " +
+	    "style='display:none'>" +
+	"<TEXTAREA NAME='data' VALUE=''></TEXTAREA>" +
+      "</FORM>" +
+      "<DIV ID='" + pieMenuID + "' " +
+	   "style='display:none;behavior:url(piemenu.htc)' " +
+	   "onselect='" + gDiv.id + ".OnSelectMenu(event)'>" +
+	"<xml>" +
+	  "<piemenu>" +
+	    "<item>" +
+	      "<piemenu name='Play' " +
+		       "centerbackground='transparent' centerborderwidth='0' " +
+		       "itemwidth='50' itemheight='30' fixedradius='50' " +
+		       "Xonselect='" + gDiv.id + ".OnSelectPlayMenu(event);'>" +
+		"<html><b style='color:white'>Blast!</b></html>" +
+		"<item " +
+		  "itemnormalbackground='yellow' " +
+		  "itemselectedbackground='#00ff00'>" +
+		  "<html><b style='color:blue'>****</b></html>" +
+		"</item>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+		"<item name='*'/>" +
+	      "</piemenu>" +
+	    "</item>" +
+	    "<item>" +
+	      "<piemenu name='Mode' centervisible='0' " +
+		       "Xonselect='" + gDiv.id + ".OnSelectModeMenu(event);'>" +
+		"<item name='Ship'/>" +
+		"<item><html>Pie Menus,<BR/>Constant Items.</html></item>" +
+		"<item name='Next Round'/>" +
+		"<item><html>Linear Menus,<BR/>Constant Items.</html></item>" +
+		"<item name='Rock'/>" +
+		"<item><html>Linear Menus,<BR/>Random Items.</html></item>" +
+		"<item name='Previous Round'/>" +
+		"<item><html>Pie Menus,<BR/>Random Items.</html></item>" +
+	      "</piemenu>" +
+	    "</item>" +
+	    "<item>" +
+	      "<piemenu name='Edit' centervisible='0' " +
+		       "Xonselect='" + gDiv.id + ".OnSelectEditMenu(event);'>" +
+		"<item name='Ship'/>" +
+		"<item name='4 Blasts'/>" +
+		"<item name='Rock'/>" +
+		"<item name='Blast'/>" +
+	      "</piemenu>" +
+	    "</item>" +
+	  "</piemenu>" +
+	"</xml>" +
+      "</DIV>" +
+    "</CENTER>";
+
+  gRoundDiv = eval(roundDivID);
+  gSpaceDiv = eval(spaceDivID);
+  gGroup = eval(groupID);
+  gStatsDiv = eval(statsDivID);
+  gDummyDiv = eval(dummyDivID);
+  gForm = eval(formID);
+  gPieMenu = eval(pieMenuID);
+
+  UpdateSpaceSize();
+
+  gGroup.coordsize = gSpaceWidth + "," + gSpaceHeight;
+
+  gSprites = new Array();
+  gTargets = new Array();
+
+  var i;
+  
+  for (i = 0; i < gInitialShipCount; i++) {
+    MakeRandomShip();
+  } // for i
+
+  document.onkeypress = HandleOnKeyPress;
+
+  InitStats();
+
+  gRound = 0;
+  gInitRound = 1;
+  gInitMenu = 1;
+
+  HandleTimer();
+}
+
+
+function UpdateSpaceSize()
+{
+  var itemRect = gSpaceDiv.getBoundingClientRect();
+  gSpaceX = itemRect.left;
+  gSpaceY = itemRect.top;
+  gSpaceWidth = itemRect.right - itemRect.left;
+  gSpaceHeight = itemRect.bottom - itemRect.top;
+}
+
+
+function New1DArray(size, init)
+{
+  var a = new Array(size);
+  var i;
+  for (i = 0; i < size; i++) {
+    a[i] = init;
+  } // for
+  return a;
+}
+
+
+function New2DArray(size1, size2, init)
+{
+  var a = new Array(size1);
+  var i;
+  for (i = 0; i < size1; i++) {
+    a[i] = New1DArray(size2, init);
+  } // for
+  return a;
+}
+
+
+function New3DArray(size1, size2, size3, init)
+{
+  var a = new Array(size1);
+  var i;
+  for (i = 0; i < size1; i++) {
+    a[i] = New2DArray(size2, size3, init);
+  } // for
+  return a;
+}
+
+
+function InitStats()
+{
+  if (gTakeStats) {
+    gTotalMenuCounts = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gTotalMenuTimes = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gTotalMenuCorrectCounts = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gTotalMenuCorrectTimes = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gTotalMenuErrorCounts = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gTotalMenuErrorTimes = New2DArray(kNumMenuTests, kNumMenuTypes, 0);
+    gMenuCorrectTimes = New3DArray(kNumMenuTests, kNumMenuTypes, kNumMenuItems, 0);
+    gMenuCorrectCounts = New3DArray(kNumMenuTests, kNumMenuTypes, kNumMenuItems, 0);
+    gMenuErrorTimes = New3DArray(kNumMenuTests, kNumMenuTypes, kNumMenuItems, 0);
+    gMenuErrorCounts = New3DArray(kNumMenuTests, kNumMenuTypes, kNumMenuItems, 0);
+  } // if
+}
+
+
+function HandleTimer()
+{
+  UpdateSpaceSize();
+  DoPhysics();
+  window.setTimeout(gDiv.id + ".HandleTimer();", gTimeInterval, "JavaScript");
+}
+
+
+function DoPhysics()
+{
+  gLastTime = gTime;
+  gTime += gTimeStep;
+
+  ComputeForces();
+
+  Integrate(gTimeStep);
+
+  CheckCollisions();
+
+  CheckShips();
+  CheckBlasts();
+  CheckRocks();
+
+  CheckRound();
+}
+
+
+function CheckRound()
+{
+  if (!gInitRound &&
+      gInRound &&
+      (gRocks.length == 0) &&
+      (gBlasts.length == 0)) {
+
+    gRound++;
+
+    gInitRound = 1;
+  } // if
+
+  if (gInitRound) {
+    gInitRound = 0;
+    InitRound();
+  } // if
+}
+
+
+function InitRound()
+{
+  gInRound = 1;
+
+  if (gRound & 1) {
+      gMenuType = kLinear;
+  } else {
+      gMenuType = kPie;
+  } // if
+
+  if (gRound & 2) {
+      gMenuTest = kConstant;
+  } else {
+      gMenuTest = kRandom;
+  } // if
+
+  gInitMenu = 1;
+
+  extraRocks = Math.floor(gRound / 2.0);
+
+  for (i = 0; i < gInitialRockCount + extraRocks; i++) {
+    MakeRandomRock(gInitialRockSize);
+  } // for i
+
+  while (gShips.length < gInitialShipCount) {
+    MakeRandomShip();
+  } // for i
+
+  ShowStats();
+}
+
+
+function ComputeForces()
+{
+}
+
+
+function Integrate(deltaTime)
+{
+  var n = gSprites.length;
+  var i;
+  for (i = 0; i < n; i++) {
+    var sprite = gSprites[i];
+
+    var width = sprite.width;
+    var height = sprite.height;
+    var halfWidth = sprite.width / 2.0;
+    var halfHeight = sprite.height / 2.0;
+    var positionX = sprite.positionX;
+    var positionY = sprite.positionY;
+    var orientation = sprite.orientation;
+    var velocityX = sprite.velocityX;
+    var velocityY = sprite.velocityY;
+    var angularVelocity = sprite.angularVelocity;
+    var forceX = sprite.forceX;
+    var forceY = sprite.forceY;
+    var torque = sprite.torque;
+
+//    UpdateLastConfiguration(sprite);
+
+    if ((velocityX != 0) || (velocityY != 0)) {
+      positionX += deltaTime * velocityX;
+      positionY += deltaTime * velocityY;
+
+      if (gWrap) {
+	if (positionX < halfWidth) {
+	  positionX += gSpaceWidth - width;
+	} // if
+	if (positionY < halfHeight) {
+	  positionY += gSpaceHeight - height;
+	} // if
+	if (positionX >= (gSpaceWidth - halfWidth)) {
+	  positionX -= gSpaceWidth - width;
+	} // if
+	if (positionY >= (gSpaceHeight - halfHeight)) {
+	  positionY -= gSpaceHeight - height;
+	} // if
+      } else {
+	if (positionX < halfWidth) {
+	  positionX = halfWidth;
+	  velocityX = -velocityX;
+	  sprite.velocityX = velocityX;
+	} else if (positionX >= (gSpaceWidth - halfWidth)) {
+          positionX = (gSpaceWidth - halfWidth - 1);
+	  velocityX = -velocityX;
+	  sprite.velocityX = velocityX;
+	} // if
+	if (positionY < halfHeight) {
+	  positionY = halfHeight;
+	  velocityY = -velocityY;
+	  sprite.velocityY = velocityY;
+	} else if (positionY >= (gSpaceHeight - halfHeight)) {
+          positionY = (gSpaceHeight - halfHeight - 1);
+	  velocityY = -velocityY;
+	  sprite.velocityY = velocityY;
+	} // if
+      } // if
+
+      MoveGroup(sprite, positionX, positionY);
+    } // if
+
+    if (angularVelocity != 0.0) {
+      orientation += deltaTime * angularVelocity;
+      SetOrientation(sprite, orientation);
+    } // if
+
+    if ((forceX != 0.0) && (forceY != 0.0)) {
+      var massInverse = obj.massInverse;
+      obj.velocityX = velocityX + (deltaTime * massInverse * forceX);
+      obj.velocityY = velocityY + (deltaTime * massInverse * forceY);
+    } // if
+
+    if (torque != 0.0) {
+      var momentInverse = obj.momentInverse;
+      obj.angularVelocity = angularVelocity + (deltaTime * momentInverse * torque);
+    } // if
+
+  } // for i
+}
+
+
+function CheckBlasts()
+{
+  var i, j;
+
+  for (i = gBlasts.length - 1; i >= 0; i--) {
+    var blast = gBlasts[i];
+    var x = blast.positionX;
+    var y = blast.positionY;
+    for (j = gTargets.length - 1; j >= 0; j--) {
+      var obj = gTargets[j];
+      if (blast.owner != obj) {
+	var dx = x - obj.positionX;
+	var dy = y - obj.positionY;
+	var dist = CalcDistance(dx, dy);
+	if ((dist <= (obj.size / 2)) &&
+	    (blast.owner != obj)) {
+	  if (obj.type == "ship") {
+
+	    // Blast hits Ship: blast disappears.
+
+	    blast.endTime = gTime - 1;
+	  } else if ((obj.type == "rock") &&
+		     ((obj.endTime == -1) ||
+		      (obj.endTime > gTime))) {
+	    // Blast hits Rock: blast disappears, rock splits or explodes.
+
+	    var temp = obj.temperature;
+	    temp += gRockBlastHeat;
+	    if (temp > 1.0) temp = 1.0;
+	    obj.temperature = temp;
+	    if ((obj.temperature >= gRockMinSplitHeat) &&
+		((obj.startTime + gRockInhibitTime) < gTime)) {
+	      if (obj.size < gMinRockSplitSize) {
+		// Explode small rocks
+		obj.endTime = gTime - 1;
+		var k;
+		for (k = 0; k < gRockBlastCount; k++) {
+		  var x = obj.positionX + ((Math.random() - 0.5) * gRockBlastSpread);
+		  var y = obj.positionY + ((Math.random() - 0.5) * gRockBlastSpread);
+		  var velx = ((Math.random() - 0.5) * 2 * gRockBlastVel);
+		  var vely = ((Math.random() - 0.5) * 2 * gRockBlastVel);
+
+		  MakeBlastAt(
+		    x,
+		    y,
+		    velx,
+		    vely);
+		} // for k
+	      } else {
+		// Split big rocks
+		var area = obj.size * obj.size;
+		var split = (Math.random() * 0.8) + 0.1;
+		var newsize1 = Math.sqrt(area * split);
+		var newsize2 = Math.sqrt(area * (1.0 - split));
+		var newdir1 = Math.random() * gTwoPi;
+		var newdir2 = newdir1 + Math.PI;
+		var newvelx = (Math.random() - 0.5) * 2 * gInitialRockSpeed;
+		var newvely = (Math.random() - 0.5) * 2 * gInitialRockSpeed;
+		var newtemp = 0;
+		var r1 =
+		  MakeRock(
+		    obj.positionX + Math.random() - 0.5,
+		    obj.positionY + Math.random() - 0.5,
+		    newvelx,
+		    newvely,
+		    newdir1,
+		    newsize1);
+		r1.temperature = newtemp;
+		var r2 =
+		  MakeRock(
+		    obj.positionX + Math.random() - 0.5,
+		    obj.positionY + Math.random() - 0.5,
+		    -newvelx,
+		    -newvely,
+		    newdir2,
+		    newsize2);
+		r2.temperature = newtemp;
+		obj.endTime = gTime - 1;
+	      } // if
+	    } // if
+	    blast.endTime = gTime - 1;
+	  } // if
+	} // if
+      } // if
+    } // for j
+  } // for i
+
+  for (i = gBlasts.length - 1; i >= 0; i--) {
+    var blast = gBlasts[i];
+    if ((blast.endTime != -1) &&
+        (blast.endTime <= gTime)) {
+      RemoveSprite(blast);
+    } // if
+  } // for i
+}
+
+
+function RemoveSprite(obj)
+{
+  var i;
+
+  gGroup.removeChild(obj.el);
+  obj.el.obj = null;
+
+  if (obj.type == "blast") {
+    RemoveFromGroup(gBlasts, obj);
+  } else if (obj.type == "ship") {
+    RemoveFromGroup(gShips, obj);
+    RemoveFromGroup(gTargets, obj);
+  } else if (obj.type == "rock") {
+    RemoveFromGroup(gRocks, obj);
+    RemoveFromGroup(gTargets, obj);
+  } // if
+
+  RemoveFromGroup(gSprites, obj);
+}
+
+
+function RemoveFromGroup(group, obj)
+{
+  var i;
+  for (i = group.length - 1; i >= 0; i--) {
+    if (group[i] == obj) {
+      group.splice(i, 1);
+      return;
+    } // if
+  } // for j
+}
+
+function CheckShips()
+{
+  var i, j;
+
+  for (i = gShips.length - 1; i >= 0; i--) {
+    var ship = gShips[i];
+    if ((ship.endTime != -1) &&
+        (ship.endTime <= gTime)) {
+      RemoveSprite(ship);
+    } // if
+  } // for i
+  
+  var n = gShips.length;
+  for (i = 0; i < n; i++) {
+    var ship = gShips[i];
+
+    if (Math.random() < gAccelProb) {
+      AccelerateSprite(ship, (Math.random() - 0.5) * gAccelRate);
+    } // if
+
+    if (Math.random() < gTurnSignProb) {
+      gTurnSign = -gTurnSign;
+    } // if
+
+    if (Math.random() < gTurnProb) {
+      TurnSprite(ship, Math.random() * gTurnRate * gTurnSign);
+    } // if
+
+    if ((gRocks.length > 0) &&
+        (gBlasts.length < gHighBlastMark) &&
+        (Math.random() < gBlastProb)) {
+      FireBlast(ship);
+    } // if
+
+  } // for i
+}
+
+
+function CheckRocks()
+{
+  var i, j;
+
+  for (i = gRocks.length - 1; i >= 0; i--) {
+    var rock = gRocks[i];
+    rock.temperature *= gRockCool;
+    if ((rock.endTime != -1) &&
+        (rock.endTime <= gTime)) {
+      RemoveSprite(rock);
+    } // if
+  } // for i
+}
+
+function CheckCollisions()
+{
+  var n = gTargets.length;
+  var i, j;
+
+  for (i = 0; i < n - 1; i++) {
+    var r1 = gTargets[i];
+    var r1r = r1.size / 2;
+    var r1x = r1.positionX;
+    var r1y = r1.positionY;
+    for (j = i + 1; j < n; j++) {
+      var r2 = gTargets[j];
+      var r2r = r2.size / 2;
+      var r2x = r2.positionX;
+      var r2y = r2.positionY;
+      var dx = r1x - r2x;
+      var dy = r1y - r2y;
+      var dist = CalcDistance(dx, dy);
+      var mindist = (r1r + r2r) * gSpriteSmoosh;
+      if (dist < mindist) {
+        ResolveCollision(r1, r1x, r1y, r1r, r2, r2x, r2y, r2r, dx, dy, dist);
+      } // if
+    } // for j
+  } // for i
+}
+
+
+function ResolveCollision(r1, r1x, r1y, r1r, r2, r2x, r2y, r2r, dx, dy, dist)
+{
+  if (((r1.endTime != -1) &&
+       (r1.endTime <= gTime)) ||
+      ((r2.endTime != -1) &&
+       (r2.endTime <= gTime))) {
+    return;
+  } // if
+
+  var ship = null;
+  var other = null;
+  
+  if (r1.type == "ship") {
+    ship = r1;
+    other = r2;
+  } else {
+    if (r2.type == "ship") {
+      ship = r2;
+      other = r1;
+    } // if
+  } // if
+
+  if (ship != null) {
+    if (other.type == "rock") {
+      other.velocityX += ((Math.random() - 0.5) * gAccelRate * 2);
+      other.velocityY += ((Math.random() - 0.5) * gAccelRate * 2);
+      ship.velocityX = -other.velocityX;
+      ship.velocityY = -other.velocityY;
+      other.temperature = 1;
+      var blast = MakeBlastAt(
+	other.positionX,
+	other.positionY,
+	other.velocityX,
+	other.velocityY);
+      blast.endTime = gTime + 1;
+      return;
+    } // if
+  } // if
+
+  if ((r1.type == "rock") &&
+      (r2.type == "rock")) {
+    var temp1 = r1.temperature;
+    var temp2 = r2.temperature;
+    var avg = (temp1 + temp2 + gRockBounceHeat) / 2.0;
+    if (avg < 0) avg = 0;
+    if (avg > 1) avg = 1;
+    r1.temperature = avg;
+    r2.temperature = avg;
+    if ((avg >= gRockMinMergeHeat) ||
+        (gRocks.length >= gHighRockMark)) {
+      var area = (r1.size * r1.size) + (r2.size * r2.size);
+      var newsize = Math.sqrt(area);
+      if ((newsize < gMaxRockMergeSize) &&
+          (r1.startTime + gRockInhibitTime < gTime) &&
+          (r2.startTime + gRockInhibitTime < gTime)) {
+	// Merge rocks
+	var newtemp = 0;
+	var newvelx = (r1.velocityx + r2.velocityx) / 2;
+	var newvely = (r1.velocityy + r2.velocityy) / 2;
+	var newrock =
+	  MakeRock(
+	    ((r1.positionX + r2.positionX) / 2.0) + (Math.random() - 0.5),
+	    ((r1.positionY + r2.positionY) / 2.0) + (Math.random() - 0.5),
+	    newvelx,
+	    newvely,
+	    Math.random() * gTwoPi,
+	    newsize);
+	r1.temperature = newtemp;
+	r1.endTime = gTime - 1;
+	r2.endTime = gTime - 1;
+	return;
+      } // if
+    } // if
+  } // if
+
+  var velocityX1 = r1.velocityX;
+  var velocityY1 = r1.velocityY;
+  var velocityX2 = r2.velocityX;
+  var velocityY2 = r2.velocityY;
+
+  var relativeVelocity =
+    (velocityX1 * velocityX2) +
+    (velocityY1 * velocityY2);
+
+  var d1 = 
+    CalcDistance(
+      (r1.positionX - r2.positionY),
+      (r1.positionY - r2.positionY));
+  var d2 =
+    CalcDistance(
+      ((r1.positionX + r1.velocityX) -
+       (r2.positionY + r2.velocityY)),
+      ((r1.positionY + r1.velocityY) -
+       (r2.positionY + r2.velocityY)));
+
+  relativeVelocity = d2 - d1;
+
+  if (relativeVelocity > 0) {
+    if (dist == 0) { dist = 1; }
+    var goaldist = (r1.size / 2) + (r2.size / 2);
+    var penetration = goaldist - dist;
+    var normpenetration = penetration / goaldist;
+    if (normpenetration > 0) {
+      var normx = dx / dist;
+      var normy = dy / dist;
+      var repel = penetration * 0.5;
+      var slow = 0.9;
+      var noise = 1;
+      r1.velocityX = (slow * r1.velocityX) + (normx * repel) + ((Math.random() - 0.5) * noise);
+      r1.velocityY = (slow * r1.velocityY) + (normy * repel) + ((Math.random() - 0.5) * noise);
+      r2.velocityX = (slow * r2.velocityX) + (-normx * repel) + ((Math.random() - 0.5) * noise);
+      r2.velocityY = (slow * r2.velocityY) + (-normy * repel) + ((Math.random() - 0.5) * noise);
+      return;
+    } // if
+  } // if
+
+  var rTotal = r1r + r2r;
+  var r1Weight = r1r / rTotal;
+  var r2Weight = 1.0 - r1Weight;
+  var collisionX = (r1Weight * r1x) + (r2Weight * r2x);
+  var collisionY = (r1Weight * r1y) + (r2Weight * r2y);
+
+  var cmToCornerX1 = collisionX - r1x;
+  var cmToCornerY1 = collisionY - r1y;
+  var cmToCornerX2 = collisionX - r2x;
+  var cmToCornerY2 = collisionY - r2y;
+
+  var cmToCornerPerpX1 = -cmToCornerY1;
+  var cmToCornerPerpY1 = cmToCornerX1;
+  var cmToCornerPerpX2 = -cmToCornerY2;
+  var cmToCornerPerpY2 = cmToCornerX2;
+
+  var angularVelocity1 = r1.angularVelocity;
+  var angularVelocity2 = r2.angularVelocity;
+
+  velocityX1 += (angularVelocity1 * cmToCornerPerpX1);
+  velocityY1 += (angularVelocity1 * cmToCornerPerpY1);
+  velocityX2 += (angularVelocity2 * cmToCornerPerpX2);
+  velocityY2 += (angularVelocity2 * cmToCornerPerpY2);
+
+  var collisionDist1 =
+    Math.sqrt((cmToCornerX1 * cmToCornerX1) +
+	      (cmToCornerY1 * cmToCornerY1));
+  var collisionDist2 =
+    Math.sqrt((cmToCornerX2 * cmToCornerX2) +
+	      (cmToCornerY2 * cmToCornerY2));
+
+  var collisionNormalX1 = cmToCornerX1 / collisionDist1;
+  var collisionNormalY1 = cmToCornerY1 / collisionDist1;
+  var collisionNormalX2 = cmToCornerX2 / collisionDist2;
+  var collisionNormalY2 = cmToCornerY2 / collisionDist2;
+
+  var impulseNumerator1 =
+    -(1 + r1.restitution) *
+    ((velocityX1 * collisionNormalX1) +
+     (velocityY1 * collisionNormalY1));
+  var impulseNumerator2 =
+    -(1 + r2.restitution) *
+    ((velocityX2 * collisionNormalX2) +
+     (velocityY2 * collisionNormalY2));
+
+  var perpDot1 =
+    ((cmToCornerPerpX1 * collisionNormalX1) +
+     (cmToCornerPerpY1 * collisionNormalY1));
+  var perpDot2 =
+    ((cmToCornerPerpX2 * collisionNormalX2) +
+     (cmToCornerPerpY2 * collisionNormalY2));
+
+  var impulseDenominator1 =
+    r1.massInverse +
+    (r1.momentInverse * perpDot1 * perpDot1);
+  var impulseDenominator2 =
+    r2.massInverse +
+    (r2.momentInverse * perpDot2 * perpDot2);
+
+  var impulse1 =
+    impulseNumerator1 / impulseDenominator1;
+  var impulse2 =
+    impulseNumerator2 / impulseDenominator2;
+
+  r1.velocityX += impulse1 * r1.massInverse * collisionNormalX1;
+  r1.velocityY += impulse1 * r1.massInverse * collisionNormalY1;
+  r1.angularVelocity += impulse1 * r1.momentInverse * perpDot1;
+  r2.velocityX += impulse2 * r2.massInverse * collisionNormalX2;
+  r2.velocityY += impulse2 * r2.massInverse * collisionNormalY2;
+  r2.angularVelocity += impulse2 * r2.momentInverse * perpDot2;
+}
+
+
+function ClickRock(rock)
+{
+  var obj = rock.obj;
+}
+
+
+function ClickRock(rock)
+{
+  var obj = rock.obj;
+}
+
+
+function ClickRock(rock)
+{
+  var obj = rock.obj;
+}
+
+
+function OnMouseDownInSpace()
+{
+  var root =
+    gPieMenu.GetRootPieMenu();
+  var pie = null;
+
+  gPieMenu.ValidatePieMenu(root);
+
+  if (event.ctrlKey) {
+    pie = 
+      root.items[1].subPie;
+    gPieMenu.DoPie(pie);
+  } else if (event.shiftKey) {
+    pie = 
+      root.items[2].subPie;
+    gPieMenu.DoPie(pie);
+  } else {
+    pie = 
+      root.items[0].subPie;
+
+    if (gInitMenu ||
+        (gMenuTest == kRandom)) {
+      gInitMenu = 0;
+    
+      gMenuItem = 
+	Math.floor(8 * Math.random());
+
+    } // if
+
+    SetFirstMenuItem(
+      pie,
+      gMenuItem);
+
+    pie.linear = (gMenuType == kLinear);
+
+    gMenuStartTime = 
+      new Date().getTime();
+
+  } // if
+
+  gPieMenu.DoPie(pie);
+
+  return true;
+}
+
+
+function OnMouseDownInRound()
+{
+  var root =
+    gPieMenu.GetRootPieMenu();
+  var pie = null;
+
+  gPieMenu.ValidatePieMenu(root);
+
+  pie = root.items[1].subPie;
+
+  gPieMenu.DoPie(pie);
+
+  return true;
+}
+
+
+function SetFirstMenuItem(pie, item)
+{
+  gItemOffset = item;
+  pie.initialAngle = 
+    item * (360.0 / 8);
+  pie.firstLinearItem = item;
+}
+
+
+function OnSelectMenu(event)
+{
+  var name =
+    event.result.name;
+
+  if (name == "Play") {
+    OnSelectPlayMenu(event);
+  } else if (name == "Mode") {
+    OnSelectModeMenu(event);
+  } else if (name == "Edit") {
+    OnSelectEditMenu(event);
+  }
+}
+
+
+function OnSelectPlayMenu(event)
+{
+  var pie = event.result;
+  var item = pie.curItem;
+  var x = pie.centerx - gSpaceX;
+  var y = pie.centery - gSpaceY;
+  var dir = Math.random() * 2 * 3.14159;
+  var blastSpeed = 10;
+
+  gMenuEndTime = new Date().getTime();
+  
+  var elapsed =
+    gMenuEndTime - gMenuStartTime;
+  var index =
+    (item + gItemOffset) % 8;
+  var correct =
+    (item == 0);
+
+  gTotalMenuCounts[gMenuTest][gMenuType]++;
+  gTotalMenuTimes[gMenuTest][gMenuType] += elapsed;
+
+  if (correct) {
+    gTotalMenuCorrectCounts[gMenuTest][gMenuType]++;
+    gTotalMenuCorrectTimes[gMenuTest][gMenuType] += elapsed;
+    gMenuCorrectCounts[gMenuTest][gMenuType][index]++;
+    gMenuCorrectTimes[gMenuTest][gMenuType][index] += elapsed;
+  } else {
+    gTotalMenuErrorCounts[gMenuTest][gMenuType]++;
+    gTotalMenuErrorTimes[gMenuTest][gMenuType] += elapsed;
+    gMenuErrorCounts[gMenuTest][gMenuType][index]++;
+    gMenuErrorTimes[gMenuTest][gMenuType][index] += elapsed;
+  } // if
+
+  var blasts =
+    correct ? 4 : 1;
+
+  var i;
+  for (i = 0; i < blasts; i++) {
+    var velx = ((Math.random() - 0.5) * 2 * blastSpeed);
+    var vely = ((Math.random() - 0.5) * 2 * blastSpeed);
+    MakeBlastAt(x, y, velx, vely);
+  } // for i
+
+  ShowStats();
+}
+
+
+function OnSelectModeMenu(ev)
+{
+  var pie = event.result;
+  var item = pie.curItem;
+
+  if (item == 0) {
+    MakeShip(
+      Math.random() * gSpaceWidth,
+      Math.random() * gSpaceHeight,
+      Math.random() * gTwoPi);
+  } else if (item == 1) {
+    gInitMenu = 1;
+    gMenuType = kPie;
+    gMenuTest = kConstant;
+  } else if (item == 2) {
+    gRound++;
+    ResetToRound(gRound);
+  } else if (item == 3) {
+    gInitMenu = 1;
+    gMenuType = kLinear;
+    gMenuTest = kConstant;
+  } else if (item == 4) {
+    MakeRandomRock(gInitialRockSize);
+  } else if (item == 5) {
+    gInitMenu = 1;
+    gMenuType = kLinear;
+    gMenuTest = kRandom;
+  } else if (item == 6) {
+    if (gRound > 0) {
+      gRound--;
+    } // if
+    ResetToRound(gRound);
+  } else if (item == 7) {
+    gInitMenu = 1;
+    gMenuType = kPie;
+    gMenuTest = kRandom;
+  } // if
+
+  ShowStats()
+}
+
+
+function OnSelectEditMenu(ev)
+{
+  var pie = event.result;
+  var item = pie.curItem;
+  var x = pie.centerx - gSpaceX;
+  var y = pie.centery - gSpaceY;
+  var blastSpeed = 10;
+
+  if (item == 0) {
+    MakeShip(
+      x,
+      y,
+      Math.random() * gTwoPi);
+  } else if (item == 1) {
+    var i;
+    var blasts = 4;
+    for (i = 0; i < blasts; i++) {
+      var velx = ((Math.random() - 0.5) * 2 * blastSpeed);
+      var vely = ((Math.random() - 0.5) * 2 * blastSpeed);
+      MakeBlastAt(x, y, velx, vely);
+    } // for i
+  } else if (item == 2) {
+    var velx = ((Math.random() - 0.5) * 2 * blastSpeed);
+    var vely = ((Math.random() - 0.5) * 2 * blastSpeed);
+    var dir = Math.random() * gTwoPi;
+    var size = pie.distance;
+    MakeRock(
+      x,
+      y,
+      velx,
+      vely,
+      dir,
+      size);
+  } else if (item == 3) {
+    var velx = ((Math.random() - 0.5) * 2 * blastSpeed);
+    var vely = ((Math.random() - 0.5) * 2 * blastSpeed);
+    MakeBlastAt(x, y, velx, vely);
+  } // if
+
+  ShowStats()
+}
+
+
+function ResetWorld()
+{
+  var i;
+  while (gBlasts.length > 0) {
+    RemoveSprite(gBlasts[0]);
+  } // while
+  while (gShips.length > 0) {
+    RemoveSprite(gShips[0]);
+  } // while
+  while (gRocks.length > 0) {
+    RemoveSprite(gRocks[0]);
+  } // while
+  gInRound = 0;
+}
+
+
+function ResetToRound(round)
+{
+  ResetWorld();
+  gRound = round;
+  gInRound = 1;
+  gInitRound = 1;
+}
+
+
+function ShowStats()
+{
+  if (gMenuCorrectTimes == null) return;
+
+  var i;
+  var str =
+    "<CENTER><B>";
+
+  if (gInRound) {
+    str += "Round " + (gRound + 1);
+  } else {
+    str += "Custom Round";
+  } // if
+
+  str += "<BR/>";
+
+  str += 
+    gMenuTypeNames[gMenuType] + " Menus,<BR/>" +
+    gMenuTestNames[gMenuTest] + " Items." +
+    "</CENTER><BR/>";
+
+  gRoundDiv.innerHTML = str;
+
+  str =
+    "<CENTER><BR/><TABLE BORDER='1'>" +
+    "<TR><TH COLSPAN='8'><B>Selection Time and Error Rate Statistics</B></TH></TR>";
+
+  var menuTest, menuType, menuItem;
+
+  str += 
+    "<TR>" +
+      "<TH ALIGN='center'>Menu<BR/>Type</TH>" +
+      "<TH ALIGN='center'>Menu<BR/>Items</TH>" +
+      "<TH ALIGN='center'>Selection<BR/>Count</TH>" +
+      "<TH ALIGN='center'>Correct<BR/>Count</TH>" +
+      "<TH ALIGN='center'>Total<BR/>Time</TH>" +
+      "<TH ALIGN='center'>Average<BR/>Time</TH>" +
+      "<TH ALIGN='center'>Error<BR/>Count</TH>" +
+      "<TH ALIGN='center'>Error<BR/>Rate</TH>" +
+    "</TR>";
+
+  for (menuTest = 0; menuTest < kNumMenuTests; menuTest++) {
+    if (gMenuCorrectTimes[menuTest] != null) {
+
+      for (menuType = 0; menuType < kNumMenuTypes; menuType++) {
+
+	if (gMenuCorrectTimes[menuTest][menuType] != null) {
+          str +=
+	    MenuStatsRowTemplate(
+	      menuType,
+	      menuTest,
+	      gTotalMenuCounts[menuTest][menuType],
+	      gTotalMenuCorrectCounts[menuTest][menuType],
+	      gTotalMenuCorrectTimes[menuTest][menuType],
+	      (gTotalMenuCorrectTimes[menuTest][menuType] /
+	       gTotalMenuCorrectCounts[menuTest][menuType]),
+	      gTotalMenuErrorCounts[menuTest][menuType],
+	      (gTotalMenuErrorCounts[menuTest][menuType] /
+	       gTotalMenuCounts[menuTest][menuType]));
+        } // if
+      } // for menuType
+    } // if
+  } // for menuTest
+
+  str +=
+    "<TR><TH COLSPAN='8'><CENTER>" +
+      "<INPUT TYPE='BUTTON' " +
+	     "ONCLICK='" + gDiv.id + ".OnSubmitStats()' " +
+	     "VALUE='Send Statistics to PieMenu.com'>" +
+      "</INPUT>" +
+    "</CENTER></TH></TR>";
+
+  str +=
+    "</TABLE>" +
+    "</CENTER>";
+
+  gStatsDiv.innerHTML = str;
+}
+
+
+function ShortFloatString(f)
+{
+  var s =
+    isNaN(f)
+      ? "0"
+      : ((Math.round(f * 100) / 100) + "");
+  return s;
+}
+
+
+function PercentString(f)
+{
+  var s =
+    isNaN(f)
+      ? "0%"
+      : (Math.round(f) + "%");
+  return s;
+}
+
+
+function MakeStatsXML()
+{
+  var str = "<menustats>\n";
+
+  var menuTest, menuType, menuItem;
+
+  for (menuTest = 0; menuTest < kNumMenuTests; menuTest++) {
+    str +=
+      MenuTestTemplate(
+        menuTest);
+    for (menuType = 0; menuType < kNumMenuTypes; menuType++) {
+      str +=
+        MenuTypeTemplate(
+	  menuType, 
+	  gTotalMenuCorrectCounts[menuTest][menuType],
+	  gTotalMenuCorrectTimes[menuTest][menuType],
+	  gTotalMenuErrorCounts[menuTest][menuType],
+	  gTotalMenuErrorTimes[menuTest][menuType]);
+
+      for (menuItem = 0; menuItem < kNumMenuItems; menuItem++) {
+        str +=
+	  MenuItemTemplate(
+	    menuType,
+	    menuItem, 
+	    gMenuCorrectCounts[menuTest][menuType][menuItem],
+	    gMenuCorrectTimes[menuTest][menuType][menuItem],
+	    gMenuErrorCounts[menuTest][menuType][menuItem],
+	    gMenuErrorTimes[menuTest][menuType][menuItem]);
+      } // for menuItem
+
+      str += "    </menutype>\n";
+
+    } // for
+    str += "  </menutest>\n";
+  } // for
+
+  str += "</menustats>\n";
+
+  return str;
+}
+
+
+function MakeStatsData()
+{
+  var menuTest, menuType, menuItem;
+
+  var str =
+    "(";
+
+  for (menuTest = 0; menuTest < kNumMenuTests; menuTest++) {
+    str +=
+      "(";
+
+    for (menuType = 0; menuType < kNumMenuTypes; menuType++) {
+      str +=
+        "(" +
+	  gTotalMenuCorrectCounts[menuTest][menuType] + "," +
+	  gTotalMenuCorrectTimes[menuTest][menuType] + "," +
+	  gTotalMenuErrorCounts[menuTest][menuType] + "," +
+	  gTotalMenuErrorTimes[menuTest][menuType] + ",";
+
+      for (menuItem = 0; menuItem < kNumMenuItems; menuItem++) {
+        str +=
+	  "(" +
+	    gMenuCorrectCounts[menuTest][menuType][menuItem] + "," +
+	    gMenuCorrectTimes[menuTest][menuType][menuItem] + "," +
+	    gMenuErrorCounts[menuTest][menuType][menuItem] + "," +
+	    gMenuErrorTimes[menuTest][menuType][menuItem] +
+	  "),";
+      } // for menuItem
+
+      str +=
+        "),";
+
+    } // for
+
+    str += 
+      "),";
+
+  } // for
+
+  str += 
+    ")";
+
+  return str;
+}
+
+
+function OnSubmitStats()
+{
+  var textArea = gForm.firstChild;
+
+  var data =
+    MakeStatsData();
+//    MakeStatsXML();
+
+  textArea.value = data;
+
+  InitStats();
+
+  gForm.submit();
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Construction
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+</SCRIPT>
+
+</HTML>

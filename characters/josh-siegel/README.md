@@ -48,7 +48,9 @@ on NeWS instead of WWIII.**)" —
   - [Window Manager Flames](../don-hopkins/sources/i39l-window-manager-flames.md) — the design
     notes and emails: OWM, "The ICCCM Sucks", piewm
     (mirror: [i39l.txt](https://donhopkins.com/home/archive/NeWS/i39l.txt))
-  - [tab.ps](https://donhopkins.com/home/archive/NeWS/win/tab.ps) — the tabbed frames
+  - [`tab.ps`](../don-hopkins/code/news-tnt/tab.ps) — the tabbed frames, cached in
+    [Don's code room](../don-hopkins/code/news-tnt/README.md)
+    (mirror: [tab.ps](https://donhopkins.com/home/archive/NeWS/win/tab.ps))
 - **The ICCCM death match (1991)**: after talking to David Rosenthal and Frame, Josh proposed
   pure-ICCCM TNT windows while Jonathan Payne's battle plan pitted "**OWM** (NeWS window manager
   wrapping X clients) vs Josh's ICCCM TNT windows" — the whole fight is preserved in

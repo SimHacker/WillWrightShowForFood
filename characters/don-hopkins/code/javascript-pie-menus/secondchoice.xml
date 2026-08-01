@@ -1,0 +1,70 @@
+<?xml version='1.0'?>
+
+<piemenu
+  id="secondchoice">
+
+  <html>
+    What is<BR/>
+    your<BR/>
+    favorite<BR/>
+    color?
+  </html>
+
+  <item id="black">
+    <html>
+      <B STYLE="background:gray;color:black">
+        Black
+      </B>
+    </html>
+  </item>
+  <item id="red">
+    <html>
+      <B STYLE="background:gray;color:red">
+        Red
+      </B>
+    </html>
+  </item>
+  <item id="orange">
+    <html>
+      <B STYLE="background:gray;color:orange">
+        Orange
+      </B>
+    </html>
+  </item>
+  <item id="yellow">
+    <html>
+      <B STYLE="background:gray;color:yellow">
+        Yellow
+      </B>
+    </html>
+  </item>
+  <item id="white">
+    <html>
+      <B STYLE="background:gray;color:white">
+        White
+      </B>
+    </html>
+  </item>
+  <item id="green">
+    <html>
+      <B STYLE="background:gray;color:green">
+        Green
+      </B>
+    </html>
+  </item>
+  <item id="blue">
+    <html>
+      <B STYLE="background:gray;color:blue">
+        Blue
+      </B>
+    </html>
+  </item>
+  <item id="purple">
+    <html>
+      <B STYLE="background:gray;color:purple">
+        Purple
+      </B>
+    </html>
+  </item>
+
+</piemenu>

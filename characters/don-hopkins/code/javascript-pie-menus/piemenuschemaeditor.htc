@@ -1,0 +1,1658 @@
+<?XML version="1.0"?>
+
+<PACKAGE>
+
+  <?COMPONENT ERROR="TRUE" DEBUG="TRUE"?>
+
+  <COMMENT>
+
+
+////////////////////////////////////////////////////////////////////////
+//
+// Pie Menu Editor for Internet Explorer 5.0 JScript.
+// Copyright (C) 2001 by Don Hopkins.
+// All rights reserved. 
+// Designed and implemented by Don Hopkins. 
+//
+// mailto:xardox@mindspring.com
+// http://www.piemenu.com
+// http://www.catalog.com/hopkins
+//
+// This program is provided for unrestricted use, 
+// provided that this copyright message is preserved. 
+// There is no warranty, and no author or distributer 
+// accepts responsibility for any damage caused by 
+// this program. 
+// 
+// The ideas behind pie menus are not patented or 
+// restricted in any way, and the interface and 
+// algorithms may be freely copied and improved upon. 
+// Don't bother patenting pie menus,
+// because the idea has been around
+// for a long time in many forms,
+// and your patent will most likely be
+// invalid and easy to challenge,
+// therefore a waste of time and money. 
+// It would be much better to spend your resources
+// innovating new ideas and developing great products
+// instead of trying to patent obvious old ideas. 
+//
+// This code and the ideas behind it were developed 
+// over time by Don Hopkins, thanks to the support of:
+// University of Maryland, UniPress Software, 
+// Sun Microsystems, DUX Software, Turing Institute, 
+// Carnegie Mellon University, Kaleida Labs, 
+// Interval Research Corporation, Maxis Software,
+// Electronic Arts, Lush Creations, 
+// Mike Gallaher, Mark Weiser, Jack Callahan,
+// Ben Shneiderman, Mitch Bradley, Owen Densmore,
+// Arthur van Hoff, James Gosling, Martha Zimet,
+// Ted Selker, David Liddle, Brad Meyers,
+// Bill Verplank, Craig Hubley, Bob Adams,
+// David Levitt, Russel Nelson, John Gilmore,
+// Hugh Daniel, Josh Siegel, Mary Hopkins,
+// Levi Kruger, Eric Bowman, Jamie Doornbos,
+// Jim Mackraz and Will Wright.
+//
+// Pie menus are the natural result of optimizing an 
+// interface with respect to Fitts' Law. 
+// It states that the larger the area and closer the 
+// distance of the target, the less time (and the fewer errors) 
+// users require to select the target. 
+// 
+// Therefore all of the pie menu targets have a large area
+// (pie slice shaped regions), each of them positioned closely 
+// around the cursor in a different direction.
+// Their directional nature enables the user to
+// move the cursor further out, in order to gain
+// more precise control over the selection (leverage).
+//
+////////////////////////////////////////////////////////////////////////
+
+
+  </COMMENT>
+
+  <COMPONENT ID="piemenueditor">
+
+    <IMPLEMENTS ID="piemenueditor" TYPE="Behavior" DEFAULT="">
+      <ATTACH FOR="window" EVENT="onload" handler="HandleOnLoad"/>
+      <PUBLIC>
+        <EVENT NAME="OnFooBar" ID="evFooBar"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <IMPLEMENTS TYPE="Automation">
+      <PUBLIC>
+        <METHOD NAME="LoadPieMenuEditor"/>
+        <METHOD NAME="ClickPieMenu"/>
+        <METHOD NAME="ClickPieItem"/>
+        <METHOD NAME="AddPieItem"/>
+        <METHOD NAME="InsertPieItem"/>
+        <METHOD NAME="AppendPieItem"/>
+        <METHOD NAME="DeletePieItem"/>
+        <METHOD NAME="AddSubMenu"/>
+        <METHOD NAME="DeleteSubMenu"/>
+        <METHOD NAME="GetRootPieMenu"/>
+	<METHOD NAME="SelectPieMenuPropEditor"/>
+	<METHOD NAME="SelectPieItemPropEditor"/>
+	<METHOD NAME="PinPieMenuProp"/>
+	<METHOD NAME="PinPieItemProp"/>
+	<METHOD NAME="UnPinPieMenuProp"/>
+	<METHOD NAME="UnPinPieItemProp"/>
+	<METHOD NAME="DoPie"/>
+	<METHOD NAME="EditPropString"/>
+	<METHOD NAME="EditPropInt"/>
+	<METHOD NAME="EditPropEnum"/>
+	<METHOD NAME="EditPropElement"/>
+	<METHOD NAME="EditPropBool"/>
+	<METHOD NAME="EditPropFloat"/>
+	<METHOD NAME="EditPropColor"/>
+
+        <PROPERTY NAME="piemenu" INTERNALNAME="gPieMenuID"/>
+        <PROPERTY NAME="target" INTERNALNAME="gDiv"/>
+        <PROPERTY NAME="curpiemenuprop" INTERNALNAME="gCurPieMenuProp"/>
+        <PROPERTY NAME="curpieitemprop" INTERNALNAME="gCurPieItemProp"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <SCRIPT LANGUAGE="JScript">
+
+
+////////////////////////////////////////////////////////////////////////
+// Attached Event Handlers
+
+
+var gDiv = null;
+var gSchema = null;
+var gRootPieMenu = null;
+var gCurPieMenuPath = "";
+var gCurPieMenuProp = "html";
+//var gCurPieMenuProp = "piemenuview";
+var gCurPieItemPath = "";
+var gCurPieItemProp = "html";
+//var gCurPieItemProp = "pieitemview";
+var gPieMenuID = "piemenu";
+var gTargetIDPattern = /TARGET_ID/g;
+var gEditorIDPattern = /EDITOR_ID/g;
+var gPieMenuTargetID = null;
+var gPieMenuTarget = null;
+var gMetaDataCache = new Array();
+
+var gPieMenuEditor = new Object();
+var gPieItemEditor = new Object();
+var gEditors = new Array();
+
+var gPinnedPieMenuProps = new Array(
+  "piemenuview");
+
+var gPinnedPieItemProps = new Array(
+  "pieitemview");
+
+var gColorNames = 
+  new Array(
+    "transparent", "activeborder", "activecaption", "appworkspace",
+    "background", "buttonface", "buttonhighlight", "buttonshadow",
+    "buttontext", "captiontext", "graytext", "highlight",
+    "highlighttext", "inactiveborder", "inactivecaption",
+    "inactivecaptiontext", "infobackground", "infotext", "menu",
+    "menutext", "scrollbar", "threeddarkshadow", "threedface",
+    "threedhighlight", "threedlightshadow", "threedshadow", "window",
+    "windowframe", "windowtext", "aliceblue", "antiquewhite", "aqua",
+    "aquamarine", "azure", "beige", "bisque", "black",
+    "blanchedalmond", "blue", "blueviolet", "brown", "burlywood",
+    "cadetblue", "chartreuse", "chocolate", "coral", "cornflowerblue",
+    "cornsilk", "crimson", "cyan", "darkblue", "darkcyan",
+    "darkgoldenrod", "darkgray", "darkgreen", "darkkhaki",
+    "darkmagenta", "darkolivegreen", "darkorange", "darkorchid",
+    "darkred", "darksalmon", "darkseagreen", "darkslateblue",
+    "darkslategray", "darkturquoise", "darkviolet", "deeppink",
+    "deepskyblue", "dimgray", "dodgerblue", "firebrick",
+    "floralwhite", "forestgreen", "fuchsia", "gainsboro",
+    "ghostwhite", "gold", "goldenrod", "gray", "green", "greenyellow",
+    "honeydew", "hotpink", "indianred", "indigo", "ivory", "khaki",
+    "lavender", "lavenderblush", "lawngreen", "lemonchiffon",
+    "lightblue", "lightcoral", "lightcyan", "lightgoldenrodyellow",
+    "lightgreen", "lightgrey", "lightpink", "lightsalmon",
+    "lightseagreen", "lightskyblue", "lightslategray",
+    "lightsteelblue", "lightyellow", "lime", "limegreen", "linen",
+    "magenta", "maroon", "mediumaquamarine", "mediumblue",
+    "mediumorchid", "mediumpurple", "mediumseagreen",
+    "mediumslateblue", "mediumspringgreen", "mediumturquoise",
+    "mediumvioletred", "midnightblue", "mintcream", "mistyrose",
+    "moccasin", "navajowhite", "navy", "oldlace", "olive",
+    "olivedrab", "orange", "orangered", "orchid", "palegoldenrod",
+    "palegreen", "paleturquoise", "palevioletred", "papayawhip",
+    "peachpuff", "peru", "pink", "plum", "powderblue", "purple",
+    "red", "rosybrown", "royalblue", "saddlebrown", "salmon",
+    "sandybrown", "seagreen", "seashell", "sienna", "silver",
+    "skyblue", "slateblue", "slategray", "snow", "springgreen",
+    "steelblue", "tan", "teal", "thistle", "tomato", "turquoise",
+    "violet", "wheat", "white", "whitesmoke", "yellow",
+    "yellowgreen");
+
+
+function GetRootPieMenu()
+{
+  gPieMenuTarget.ValidatePieMenus();
+  gRootPieMenu = gPieMenuTarget.rootpiemenu;
+  return gRootPieMenu;
+}
+
+
+function HandleOnLoad()
+{
+}
+
+
+function InitPieMenuEditor()
+{
+  var editor = gPieMenuEditor;
+
+  gPieMenuID = getAttribute("piemenu");
+
+  gSchema = new ActiveXObject("Microsoft.XMLDOM");
+  gSchema.async = false;
+//  gSchema.setProperty("SelectionLanguage", "XPath");
+  gSchema.load("piemenuxmlschema-1.0.xsd");
+
+  var out = "";
+  var str;
+
+  gPieMenuTargetID = GenUniqueID();
+
+  gPieMenuEditor.id = GenUniqueID();
+  gPieItemEditor.id = GenUniqueID();
+
+  out += "<DIV ";
+  out += "ID=\"" + gPieMenuTargetID + "\" ";
+  out += "STYLE=\"width:100%;height:100;border:3 outset;behavior:url(piemenu.htc)\" ";
+  out += "PIEMENU=\"" + gPieMenuID + "\" ";
+  out += "ONAFTERMAKEPIE=\"" + gDiv.id + ".LoadPieMenuEditor()\">";
+  out += "<CENTER><H1><BR/><BR/>";
+  out += "Click here to pop up the pie menu.";
+  out += "<BR/><BR/><BR/></H1></CENTER>";
+  out += "</DIV>";
+  out += "<DIV ID=\"PieMenuTreeView\">";
+  out += "</DIV>";
+  out += "<DIV ID=\"TableHolder\"/>";
+
+  str = GetTemplateMetaData("EDITOR_ID_PieMenuPropsDiv").xml;
+  str = str.replace(gTargetIDPattern, gDiv.id);
+  str = str.replace(gEditorIDPattern, gPieMenuEditor.id);
+  out += str;
+
+  str = GetTemplateMetaData("EDITOR_ID_PieItemPropsDiv").xml;
+  str = str.replace(gTargetIDPattern, gDiv.id);
+  str = str.replace(gEditorIDPattern, gPieItemEditor.id);
+  out += str;
+  out += "</DIV>";
+
+  gDiv.innerHTML = out;
+
+  gPieMenuEditor.propsDiv = eval(gPieMenuEditor.id + "_PieMenuPropsDiv");
+  gPieMenuEditor.pinnedProps = eval(gPieMenuEditor.id + "_PieMenuPinnedProps");
+  gPieMenuEditor.propPinButton = eval(gPieMenuEditor.id + "_PieMenuPropPinButton");
+  gPieMenuEditor.propSelectorDiv = eval(gPieMenuEditor.id + "_PieMenuPropSelectorDiv");
+  gPieMenuEditor.propDescription = eval(gPieMenuEditor.id + "_PieMenuPropDescription");
+  gPieMenuEditor.propEditor = eval(gPieMenuEditor.id + "_PieMenuPropEditor");
+
+  gPieItemEditor.propsDiv = eval(gPieItemEditor.id + "_PieItemPropsDiv");
+  gPieItemEditor.propsRow1 = eval(gPieItemEditor.id + "_PieItemPropsRow1");
+  gPieItemEditor.pinnedProps = eval(gPieItemEditor.id + "_PieItemPinnedProps");
+  gPieItemEditor.propPinButton = eval(gPieItemEditor.id + "_PieItemPropPinButton");
+  gPieItemEditor.propSelectorDiv = eval(gPieItemEditor.id + "_PieItemPropSelectorDiv");
+  gPieItemEditor.propDescription = eval(gPieItemEditor.id + "_PieItemPropDescription");
+  gPieItemEditor.propsRow2 = eval(gPieItemEditor.id + "_PieItemPropsRow2");
+  gPieItemEditor.propEditor = eval(gPieItemEditor.id + "_PieItemPropEditor");
+  gPieItemEditor.propsRow3 = eval(gPieItemEditor.id + "_PieItemPropsRow3");
+  gPieItemEditor.propsRow4 = eval(gPieItemEditor.id + "_PieItemPropsRow4");
+  gPieItemEditor.pieEditorCommands = eval(gPieItemEditor.id + "_PieEditorCommands");
+  gPieItemEditor.addPieItemButton = eval(gPieItemEditor.id + "_AddPieItemButton");
+  gPieItemEditor.insertPieItemButton = eval(gPieItemEditor.id + "_InsertPieItemButton");
+  gPieItemEditor.appendPieItemButton = eval(gPieItemEditor.id + "_AppendPieItemButton");
+  gPieItemEditor.deletePieItemButton = eval(gPieItemEditor.id + "_DeletePieItemButton");
+  gPieItemEditor.addSubMenuButton = eval(gPieItemEditor.id + "_AddSubMenuButton");
+  gPieItemEditor.deleteSubMenuButton = eval(gPieItemEditor.id + "_DeleteSubMenuButton");
+
+  gPieMenuTarget = eval(gPieMenuTargetID);
+}
+
+
+function GetTemplateMetaData(id)
+{
+  var key = "template::" + id;
+  var result = gMetaDataCache[key]
+
+  if (result == null) {
+    var pattern = 
+      "//xhtmltemplates/*[@id='" + id + "']";
+    result =
+      gSchema.selectSingleNode(
+	pattern);
+
+    gMetaDataCache[key] = result;
+  } // if
+
+  return result;
+}
+
+
+function GetPropMetaData(classMetaData, propName)
+{
+  var className = GetAttStr(classMetaData, "name", "");
+  var key = className + "::prop::" + propName;
+  var result = gMetaDataCache[key];
+
+  if (result == null) {
+
+    var pattern =
+      "(.//attribute|.//element)[@name='" + propName + "']";
+
+    result =
+      classMetaData.selectSingleNode(
+	pattern);
+
+    gMetaDataCache[key] = result;
+  } // if
+
+  return result;
+}
+
+
+function GetClassMetaData(className)
+{
+  var result =
+    gMetaDataCache[className];
+
+  if (result == null) {
+
+    var pattern =
+      "//complexType[@name='" + className + "']";
+
+    result =
+      gSchema.selectSingleNode(
+	pattern);
+
+    gMetaDataCache[className] = result;
+  } // if
+
+  return result;
+}
+
+
+function LoadPieMenuEditor()
+{
+  gRootPieMenu = gPieMenuTarget.rootpiemenu;
+  gCurPieMenuPath = gDiv.id + ".GetRootPieMenu()";
+
+  UpdatePieMenuView();
+}
+
+  
+function ValidatePieMenu(pie)
+{
+  if (pie.items == null) {
+    gPieMenuTarget.InitPieMenu(pie);
+  } // if
+}
+
+
+function UpdatePieMenuView()
+{
+  if (gCurPieMenuPath.length > 0) {
+//    ValidatePieMenu(eval(gCurPieMenuPath));
+  } // if
+
+  UpdatePieMenuTree();
+  UpdateCurPieMenu();
+}
+
+
+var gGenUniqueID = 0;
+
+function GenUniqueID()
+{
+  return "PIEMENUEDITOR_ID_" + (++gGenUniqueID);
+}
+
+
+function MakePathID(path)
+{
+  var id = "ID_";
+  var n = path.length;
+  var i;
+  for (i = 0; i < n; i++) {
+    var ch = path.substr(i, 1);
+    if (((ch >= "A") && (ch <= "Z")) ||
+        ((ch >= "a") && (ch <= "z")) ||
+        ((ch >= "0") && (ch <= "9"))) {
+      id += ch;
+    } else {
+      id += "_";
+    } // if
+  } // for
+
+  return id;
+}
+
+
+function QuoteXMLText(str)
+{
+  var result = "";
+  var n = str.length;
+  var i;
+  for (i = 0; i < n; i++) {
+    var ch = str.charAt(i);
+    if (ch == '&') {
+      result += "&amp;";
+    } else if (ch == '<') {
+      result += "&lt;";
+    } else if (ch == '>') {
+      result += "&gt;";
+    } else {
+      result += ch;
+    } // if
+  } // for i
+  return result;
+}
+
+
+function MakePieMenuTreeView(pie, path)
+{
+  var out = "";
+  var id = MakePathID(path);
+
+  out += "<UL><LI ID=\"" + id + "\"><SPAN><B>";
+  out += "<A HREF=\"javascript:" +
+    gDiv.id + ".ClickPieMenu(this, '" + path + "')\">piemenu</A>";
+  out += "</B>: ";
+  out += QuoteXMLText(pie.centerDiv.innerText);
+  out += "</SPAN>"
+  var items = pie.items;
+  if (items != null) {
+    var itemCount = items.length;
+    if (itemCount > 0) {
+      out += "<UL>";
+      var i;
+      for (i = 0; i < itemCount; i++) {
+	var it = items[i];
+	var itemPath = path + ".items[" + i + "]";
+	id = MakePathID(itemPath);
+	out += "<LI ID=\"" + id + "\"><SPAN><B>";
+	out += "<A HREF=\"javascript:" +
+	  gDiv.id + ".ClickPieItem(this, '" + itemPath + "')\">item</A>";
+	out += "</B>: ";
+	out += QuoteXMLText(it.div.innerText);
+	out += "</SPAN>";
+	var subPie = it.subPie;
+	if (subPie != null) {
+	  ValidatePieMenu(subPie);
+	  out += MakePieMenuTreeView(subPie, itemPath + ".subPie");
+	} // if
+	out += "</LI>";
+      } // for i
+      out += "</UL>";
+    } // if
+  } // if
+
+  out += "</LI></UL>";
+
+  return out;
+}
+
+
+function UpdatePieMenuTree()
+{
+  var out = "";
+
+  gPieMenuTarget.ValidatePieMenus();
+  gRootPieMenu = gPieMenuTarget.rootpiemenu;
+
+  if (gRootPieMenu != null) {
+    out += MakePieMenuTreeView(gRootPieMenu, gDiv.id + ".GetRootPieMenu()");
+  } // if
+
+  // Pull these guys safely out of the html tree we are about to replace,
+  // so they don't get destroyed. 
+
+  TableHolder.insertAdjacentElement("afterEnd", gPieMenuEditor.propsDiv);
+  TableHolder.insertAdjacentElement("afterEnd", gPieItemEditor.propsDiv);
+  gPieMenuEditor.propsDiv.style.display = "none";
+  gPieItemEditor.propsDiv.style.display = "none";
+
+  PieMenuTreeView.innerHTML = out;
+}
+
+
+function HideOutlineSelection()
+{
+  if (gCurPieMenuPath.length > 0) {
+    var id = MakePathID(gCurPieMenuPath);
+    var li = eval(id);
+    if (li != null) {
+      li.firstChild.style.backgroundColor = "";
+      li.firstChild.style.border = "";
+    } // if
+  } // if
+
+  if (gCurPieItemPath.length > 0) {
+    var id = MakePathID(gCurPieItemPath);
+    var li = eval(id);
+    if (li != null) {
+      li.firstChild.style.backgroundColor = "";
+      li.firstChild.style.border = "";
+    } // if
+  } // if
+
+  TableHolder.insertAdjacentElement("afterEnd", gPieMenuEditor.propsDiv);
+  TableHolder.insertAdjacentElement("afterEnd", gPieItemEditor.propsDiv);
+  gPieMenuEditor.propsDiv.style.display = "none";
+  gPieItemEditor.propsDiv.style.display = "none";
+}
+
+
+function ShowOutlineSelection()
+{
+  var pieid = null;
+  var piediv = null;
+  if (gCurPieMenuPath.length > 0) {
+    pieid = MakePathID(gCurPieMenuPath);
+    piediv = eval(pieid);
+    if (piediv != null) {
+      piediv.firstChild.style.backgroundColor = "yellow";
+      piediv.firstChild.style.border = "3 outset";
+    } // if
+    gPieMenuEditor.propsDiv.style.display = "block";
+    piediv.firstChild.insertAdjacentElement("afterEnd", gPieMenuEditor.propsDiv);
+  } else {
+    gPieMenuEditor.propsDiv.style.display = "none";
+    TableHolder.insertAdjacentElement("afterEnd", gPieMenuEditor.propsDiv);
+  } // if
+
+  var itemid = null;
+  var itemdiv = null;
+  if (gCurPieItemPath.length > 0) {
+    itemid = MakePathID(gCurPieItemPath);
+    itemdiv = eval(itemid);
+    if (itemdiv != null) {
+      itemdiv.firstChild.style.backgroundColor = "orange";
+      itemdiv.firstChild.style.border = "3 outset";
+    } // if
+    gPieItemEditor.propsDiv.style.display = "block";
+    itemdiv.firstChild.insertAdjacentElement("afterEnd", gPieItemEditor.propsDiv);
+  } else {
+    if (piediv != null) {
+      gPieItemEditor.propsDiv.style.display = "block";
+      gPieMenuEditor.propsDiv.insertAdjacentElement("afterEnd", gPieItemEditor.propsDiv);
+    } else {
+      gPieItemEditor.propsDiv.style.display = "none";
+      TableHolder.insertAdjacentElement("afterEnd", gPieItemEditor.propsDiv);
+    } // if
+  } // if
+}
+
+
+function ClickPieMenu(view, piePath)
+{
+  var pie = eval(piePath);
+
+  gPieMenuTarget.ValidatePieMenus();
+
+  HideOutlineSelection();
+
+  gCurPieMenuPath = piePath;
+  gCurPieItemPath = "";
+
+  UpdateCurPieMenu();
+
+  ShowOutlineSelection();
+}
+
+
+function ClickPieItem(view, itemPath)
+{
+  var item = eval(itemPath);
+
+  gPieMenuTarget.ValidatePieMenus();
+
+  HideOutlineSelection();
+
+  gCurPieItemPath = itemPath;
+
+  var ip = "" + itemPath + "";
+  var a = itemPath.split(".");
+  a = a.slice(0, -1);
+  a = a.join(".");
+  gCurPieMenuPath = a;
+
+  var curPie = eval(gCurPieMenuPath);
+  curPie.curItem = item.index;
+
+  UpdateCurPieMenu();
+}
+
+
+function UpdateCurPieMenu()
+{
+  UpdatePieMenuEditor();
+  UpdatePieItemEditor();
+  ShowOutlineSelection();
+}
+
+
+function UpdatePieMenuEditor()
+{
+  UpdatePinnedPieMenuProps();
+  UpdatePieMenuPropSelector();
+  SelectPieMenuProp(gCurPieMenuProp);
+}
+
+
+function UpdatePieItemEditor()
+{
+  UpdateCurPieItem()
+  UpdatePinnedPieItemProps();
+}
+
+
+function HidePieItemEditor()
+{
+    gPieItemEditor.propSelectorDiv.innerHTML = "";
+    gPieItemEditor.propDescription.innerHTML = "";
+    gPieItemEditor.propEditor.innerHTML = "";
+
+    gPieItemEditor.propsRow1.style.display = "none";
+    gPieItemEditor.propsRow2.style.display = "none";
+    gPieItemEditor.propsRow3.style.display = "none";
+
+    gPieItemEditor.addPieItemButton.style.display = "none";
+    gPieItemEditor.insertPieItemButton.style.display = "none";
+    gPieItemEditor.appendPieItemButton.style.display = "none";
+    gPieItemEditor.deletePieItemButton.style.display = "none";
+    gPieItemEditor.addSubMenuButton.style.display = "none";
+    gPieItemEditor.deleteSubMenuButton.style.display = "none";
+}
+
+
+function UpdateCurPieItem()
+{
+  if (gCurPieMenuPath.length == 0) {
+    HidePieItemEditor();
+    return;
+  } // if
+
+  if (gCurPieItemPath.length == 0) {
+    var curPie = eval(gCurPieMenuPath);
+    var items = curPie.items;
+    if (items != null) {
+      if (items.length > 0) {
+	var cur = curPie.curItem;
+	if ((cur == null) || (cur < 0)) {
+	  curPie.curItem = 0;
+	  cur = 0;
+	} // if
+	gCurPieItemPath = gCurPieMenuPath + ".items[" + cur + "]";
+      } // if
+    } // if
+  } // if
+
+  if (gCurPieItemPath.length == 0) {
+    HidePieItemEditor();
+    gPieItemEditor.addPieItemButton.style.display = "inline";
+    gPieItemEditor.insertPieItemButton.style.display = "none";
+    gPieItemEditor.appendPieItemButton.style.display = "none";
+    return;
+  } // if
+
+  var item = eval(gCurPieItemPath);
+
+  gPieItemEditor.propsRow1.style.display = "inline";
+  gPieItemEditor.propsRow2.style.display = "inline";
+  gPieItemEditor.propsRow3.style.display = "inline";
+
+  gPieItemEditor.addPieItemButton.style.display = "none";
+  gPieItemEditor.insertPieItemButton.style.display = "inline";
+  gPieItemEditor.appendPieItemButton.style.display = "inline";
+  gPieItemEditor.deletePieItemButton.style.display = "inline";
+
+  if (item.subPie == null) {
+    gPieItemEditor.addSubMenuButton.style.display = "inline";
+    gPieItemEditor.deleteSubMenuButton.style.display = "none";
+  } else {
+    gPieItemEditor.addSubMenuButton.style.display = "none";
+    gPieItemEditor.deleteSubMenuButton.style.display = "inline";
+  } // if
+
+  UpdatePieItemPropSelector();
+  SelectPieItemProp(gCurPieItemProp);
+}
+
+
+function UpdatePieMenuPropSelector()
+{
+  var pieMenuMetaData =
+    GetClassMetaData("piemenu");
+
+  var out = "";
+
+  if (gCurPieMenuPath.length > 0) {
+
+    out += "<SELECT";
+    out += " ONCHANGE=\"" + gDiv.id + ".SelectPieMenuPropEditor(this)\">";
+
+    var prop;
+    var children = pieMenuMetaData.selectNodes(".//attribute|.//element");
+    var n = children.length;
+    var i;
+    for (i = 0; i < n; i++) {
+      var prop = children[i];
+      if ((prop.nodeType == 1) &&
+	  ((prop.nodeName == "attribute") ||
+	   (prop.nodeName == "element")) &&
+	  !GetAttBool(prop, "pie:hidden", false)) {
+	  var propLabel = GetAttStr(prop, "pie:label", "");
+	  var propName = GetAttStr(prop, "name", "");
+	  out += "<OPTION";
+	  out += " VALUE=\"" + propName + "\"";
+	  if (propName == gCurPieMenuProp) {
+	    out += " SELECTED=\"SELECTED\"";
+	  } // if
+	  out += ">";
+	  out += propLabel;
+	  out += "</OPTION>";
+      } // if
+    } // while
+    out += "</SELECT>";
+
+  } // if
+
+  gPieMenuEditor.propSelectorDiv.innerHTML = out;
+}
+
+
+function GetElementStr(node, name, def)
+{
+  var val = "";
+  var n = 
+    node.selectSingleNode(name);
+  if (n != null) {
+    var kid = n.firstChild;
+    while (kid != null) {
+      while (kid != null) {
+	val += kid.xml;
+	kid = kid.nextSibling;
+      } // while
+    } // while
+  } // if
+
+  return val;
+}
+
+
+function SelectPieMenuPropEditor(editor)
+{
+  var propName = editor.value;
+  SelectPieMenuProp(propName);
+}
+
+function UpdatePinnedPieMenuProps()
+{
+  ProcessPinnedProps(
+    gCurPieMenuPath,
+    "piemenu",
+    gPinnedPieMenuProps,
+    gPieMenuEditor.pinnedProps)
+}
+
+
+function UpdatePinnedPieItemProps()
+{
+  ProcessPinnedProps(
+    gCurPieItemPath,
+    "item",
+    gPinnedPieItemProps,
+    gPieItemEditor.pinnedProps)
+}
+
+
+function SelectPieMenuProp(propName)
+{
+  gCurPieMenuProp = propName;
+
+  ProcessSelectedProp(
+    gCurPieMenuPath,
+    "piemenu",
+    gCurPieMenuProp,
+    gPieMenuEditor.propDescription,
+    gPieMenuEditor.propEditor,
+    gPieMenuEditor.propPinButton)
+}
+
+
+function SelectPieItemPropEditor(editor)
+{
+  var propName = editor.value;
+  SelectPieItemProp(propName);
+}
+
+function SelectPieItemProp(prop)
+{
+  gCurPieItemProp = prop;
+
+  ProcessSelectedProp(
+    gCurPieItemPath,
+    "item",
+    gCurPieItemProp,
+    gPieItemEditor.propDescription,
+    gPieItemEditor.propEditor,
+    gPieItemEditor.propPinButton)
+}
+
+
+function StripWhiteSpace(str)
+{
+  var ch;
+  var len;
+
+  while ((str.length != 0) &&
+         (((ch = str.charAt(0)) == ' ') ||
+          (ch == '\t') ||
+          (ch == '\r') ||
+          (ch == '\n'))) {
+    str = str.substring(1);
+  } // while
+
+  while (((len = str.length) != 0) &&
+         (((ch = str.charAt(len - 1)) == ' ') ||
+          (ch == '\t') ||
+          (ch == '\r') ||
+          (ch == '\n'))) {
+    str = str.substring(0, str.length - 1);
+  } // while
+
+  return str;
+}
+
+
+function ProcessPinnedProps(path, className, pinnedProps, pinnedPropsDiv)
+{
+  pinnedPropsDiv.innerHTML = "";
+
+  var out = "";
+
+  var n = pinnedProps.length;
+  if (n == 0) {
+    pinnedPropsDiv.style.display = "none";
+  } else {
+    var classMetaData =
+      GetClassMetaData(className);
+
+    var i;
+    for (i = 0; i < n; i++) {
+      var pinnedPropName = pinnedProps[i];
+
+      out += ProcessOneProp(
+	path,
+	className,
+	classMetaData,
+	pinnedPropName,
+	i,
+	null,
+	null);
+      out += "<HR/>";
+    } // for i
+    pinnedPropsDiv.style.display = "block";
+  } // if
+
+  pinnedPropsDiv.innerHTML = out;
+}
+
+
+function ProcessSelectedProp(path, className, propName, descriptionDiv, editorDiv, pinButton)
+{
+  descriptionDiv.innerHTML = "";
+  editorDiv.innerHTML = "";
+
+  var classMetaData =
+    GetClassMetaData(className);
+
+  var out = ProcessOneProp(
+    path,
+    className,
+    classMetaData,
+    propName,
+    -1,
+    descriptionDiv,
+    pinButton);
+
+  editorDiv.innerHTML = out;
+}
+
+
+function ProcessOneProp(path, className, classMetaData, propName, pinnedIndex, descriptionDiv, pinButton)
+{
+  var classLabel = GetAttStr(classMetaData, "pie:label", "Untitled");
+  var prop = GetPropMetaData(classMetaData, propName);
+  var propDescription = GetElementStr(prop, ".//documentation", "");
+  var propVar = GetAttStr(prop, "pie:var", "");
+  var propLabel = GetAttStr(prop, "pie:label", "");
+  var propType = GetAttStr(prop, "pie:type", "");
+  var propDefault = GetAttStr(prop, "value", "");
+  var propVal = propDefault;
+  var setPropValCmd = "propVal = " + path + "." + propVar;
+  var pathVal = "";
+
+  pathVal = eval(path);
+
+  if (pathVal == null) {
+    return "Error: Null pathVal: " + path + "!";
+  } // if
+
+  var out = "";
+
+  if (pinnedIndex >= 0) {
+    out += "<INPUT ";
+    out += "STYLE=\"float:right\" ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"UnPin\" ";
+    out += "ONCLICK=\"";
+    out += gDiv.id + ".UnPin" + classLabel + "Prop(";
+    out += pinnedIndex + ");";
+    out += "\"/>";
+    out += "<B>Edit " + classLabel + " Property:</B> " + propLabel + "<BR/>";
+    out += "<B>Description:</B> " + propDescription + "<BR/>";
+  } else {
+
+    descriptionDiv.innerHTML = propDescription;
+
+  } // if
+
+  var id = GenUniqueID();
+
+  if (propType == "string") {
+
+    eval(setPropValCmd);
+
+    out += "<B>String Value:</B> ";
+    out += "<INPUT ";
+    out += "ID=\"" + id + "\" ";
+    out += " TYPE=\"TEXT\" ";
+    out += "SIZE=\"80\" ";
+    out += "VALUE=\"" + propVal + "\"/>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropString(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "enum") {
+
+    eval(setPropValCmd);
+
+    out += "<B>Select Value:</B>";
+    out += "<SELECT ";
+    out += "ID=\"" + id + "\">";
+
+    var enumValues = new Array();
+    var kid = prop.firstChild;
+    while (kid != null) {
+      if ((kid.nodeType == 1) &&
+          (kid.nodeName == "enumeration")) {
+	var enumName = GetAttStr(kid, "name", "");
+	enumValues[enumValues.length] = enumName;
+      } // if
+      kid = kid.nextSibling;
+    } // while
+
+    var i, n = enumValues.length;
+
+    for (i = 0; i < n; i++) {
+      var val = enumValues[i];
+      out += "<OPTION ";
+      out += "VALUE=\"" + val + "\" ";
+      if (val == propVal) {
+        out += "SELECTED=\"SELECTED\" ";
+      }
+      out += ">" + val + "</OPTION>"
+    } // for
+    out += "</SELECT>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropEnum(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "element") {
+
+    propVal = "";
+    var propElement = GetAttStr(prop, "pie:var", "");
+    var spec = pathVal.spec;
+    if (spec != null) {
+      var kid = spec.firstChild;
+      while (kid != null) {
+        if ((kid.nodeType == 1) &&
+	    (kid.nodeName == propElement)) {
+	  var txt = "";
+	  var grandkid = kid.firstChild;
+	  while (grandkid != null) {
+	    txt += grandkid.xml;
+	    grandkid = grandkid.nextSibling;
+	  } // while
+          propVal += txt;
+	} // if
+        kid = kid.nextSibling;
+      } // while
+    } // if
+
+    out += "<B>Element Value:</B><BR/>";
+    out += "<TEXTAREA ";
+    out += "ID=\"" + id + "\" ";
+    out += "COLS=\"80\" ";
+    out += "STYLE=\"height:100\">";
+    out += propVal;
+    out += "</TEXTAREA>";
+    out += "<BR/>";
+    out += "<INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply Text\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropElement(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "', 1)\"/>";
+    out += "<INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply HTML\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropElement(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "', 0)\"/>";
+    out += " (use XHTML syntax)";
+
+  } else if (propType == "boolean") {
+
+    eval(setPropValCmd);
+    propVal = parseBool(propVal, false);
+
+    out += "<B>Boolean Value:</B>";
+    out += "<INPUT ";
+    out += "ID=\"" + id + "\" ";
+    out += "TYPE=\"CHECKBOX\" ";
+    if (propVal) {
+      out += "CHECKED=\"CHECKED\" ";
+    } // if
+    out += "/>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropBool(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "int") {
+
+    eval(setPropValCmd);
+
+    out += "<B>Integer Value:</B> ";
+    out += "<INPUT TYPE=\"TEXT\"";
+    out += " SIZE=\"20\"";
+    out += " VALUE=\"" + propVal + "\"/>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropInt(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "float") {
+
+    eval(setPropValCmd);
+
+    out += "<B>Floating Point Value:</B> ";
+    out += "<INPUT ";
+    out += "ID=\"" + id + "\" ";
+    out += "TYPE=\"TEXT\" ";
+    out += "SIZE=\"20\" ";
+    out += "VALUE=\"" + propVal + "\"/>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropFloat(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "color") {
+
+    eval(setPropValCmd);
+
+    out += "<B>Color Value:</B> ";
+
+    out += "<SELECT ONCHANGE=\"" + id + ".value = this.value;\">";
+    var found = 0;
+    var n = gColorNames.length;
+    var i;
+    for (i = 0; i < n; i++) {
+      var colorName = gColorNames[i];
+      out += "<OPTION VALUE=\"" + colorName + "\"";
+      if (colorName == propVal) {
+        out += " SELECTED=\"SELECTED\"";
+        found = 1;
+      } // if
+      out += ">" + colorName + "</OPTION>";
+    } // for i
+    if (!found) {
+      out += "<OPTION VALUE=\"" + propVal + "\" SELECTED=\"SELECTED\">";;
+      out += propVal + "</OPTION>";
+    } // if
+    out += "</SELECT> ";
+    
+    out += "<INPUT ";
+    out += "ID=\"" + id + "\" ";
+    out += "TYPE=\"TEXT\" ";
+    out += "SIZE=\"20\" ";
+    out += "VALUE=\"" + propVal + "\"/>";
+    out += " <INPUT ";
+    out += "TYPE=\"BUTTON\" ";
+    out += "VALUE=\"Apply\" ";
+    out += "ONCLICK=\"" + gDiv.id + ".EditPropColor(" +
+      id + ", '" + path + "', '" + className + "', '" + propName + "')\"/>";
+
+  } else if (propType == "widget") {
+
+    var propWidget = GetAttStr(prop, "pie:widget", "");
+
+    gPieMenuTarget.ValidatePieMenus();
+
+    var cmd;
+    if (propWidget == "PieMenuView") {
+      gPieMenuTarget.DeHilitePieMenu(pathVal);
+      cmd =
+        gDiv.id + ".DoPie(" + path + ");";
+    } else if (propWidget == "PieItemView") {
+      cmd =
+        gDiv.id + ".DoPie(" + path + ".pie);";
+    } else {
+      // Unknown widget!
+      cmd = "";
+    } // if
+
+    out +=
+      "<CENTER><DIV STYLE=\"width:100%;border:2 inset;padding:8\"" +
+      " ONMOUSEDOWN=\"" + cmd + "\">";
+
+    var oldDisplay = pathVal.div.style.display;
+    var oldPosition = pathVal.div.style.position;
+    var oldLeft = pathVal.div.style.left;
+    var oldTop = pathVal.div.style.top;
+    var oldWidth = pathVal.div.style.width;
+    var oldHeight = pathVal.div.style.height;
+    pathVal.div.style.display = "inline";
+    pathVal.div.style.position = "relative";
+    pathVal.div.style.left = "0";
+    pathVal.div.style.top = "0";
+
+    pathVal.div.style.width = pathVal.w;
+    pathVal.div.style.height = pathVal.h;
+
+    var str = pathVal.div.outerHTML;
+
+    pathVal.div.style.display = oldDisplay;
+    pathVal.div.style.position = oldPosition;
+    pathVal.div.style.width = oldWidth;
+    pathVal.div.style.height = oldHeight;
+    pathVal.div.style.left = oldLeft;
+    pathVal.div.style.top = oldTop;
+
+    out += str;
+    out += "</DIV></CENTER>";
+
+  } else {
+
+    out += "Unknown property type \"" + propType + "\"!";
+
+  } // if
+
+  return out;
+}
+
+
+function PinPieMenuProp(propName)
+{
+  gPinnedPieMenuProps.push(propName);
+  UpdateCurPieMenu();
+}
+
+
+function PinPieItemProp(propName)
+{
+  gPinnedPieItemProps.push(propName);
+  UpdateCurPieMenu();
+}
+
+
+function UnPinPieMenuProp(pinnedPropIndex)
+{
+  gPinnedPieMenuProps.splice(pinnedPropIndex, 1);
+  UpdateCurPieMenu();
+}
+
+
+function UnPinPieItemProp(pinnedPropIndex)
+{
+  gPinnedPieItemProps.splice(pinnedPropIndex, 1);
+  UpdateCurPieMenu();
+}
+
+
+function DoPie(pie)
+{
+  gPieMenuTarget.DoPie(pie);
+}
+
+
+function UpdatePieItemPropSelector()
+{
+  var pieItemMetaData = 
+    GetClassMetaData("item");
+
+  var out = "";
+
+  if (gCurPieMenuPath.length > 0) {
+
+    out += "<SELECT";
+    out += " ONCHANGE=\"" + gDiv.id + ".SelectPieItemPropEditor(this)\">";
+
+    var prop;
+    var children = pieItemMetaData.selectNodes(".//attribute|.//element");
+    var n = children.length;
+    var i;
+    for (i = 0; i < n; i++) {
+      var prop = children[i];
+      if ((prop.nodeType == 1) &&
+	  ((prop.nodeName == "attribute") ||
+	   (prop.nodeName == "element")) &&
+	  !GetAttBool(prop, "pie:hidden", false)) {
+	  var propLabel = GetAttStr(prop, "pie:label", "");
+	  var propName = GetAttStr(prop, "name", "");
+	  out += "<OPTION";
+	  out += " VALUE=\"" + propName + "\"";
+	  if (propName == gCurPieItemProp) {
+	    out += " SELECTED=\"SELECTED\"";
+	  } // if
+	  out += ">";
+	  out += propLabel;
+	  out += "</OPTION>";
+      } // if
+    } // while
+    out += "</SELECT>";
+
+  } // if
+
+  gPieItemEditor.propSelectorDiv.innerHTML = out;
+}
+
+
+function ChangedProp(prop, path, className, propName, propVal)
+{
+  var obj = eval(path);
+  var spec = obj.spec;
+  if (spec != null) {
+    var att = GetAttStr(prop, "name", "");
+
+    if (att.length > 0) {
+      var strVal = propVal + "";
+      spec.setAttribute(att, strVal);
+    } // if
+  } // if
+
+  gPieMenuTarget.InvalidatePieMenus();
+  UpdatePieMenuTree();
+  UpdateCurPieMenu();
+}
+
+
+function EditPropString(editor, path, className, propName)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      editor.value;
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+
+}
+
+
+function EditPropElement(editor, path, className, propName, isText)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData = 
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propElement =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      editor.value;
+
+    if (isText) {
+      propVal = QuoteXMLText(propVal);
+    } else {
+      propVal = StripWhiteSpace(propVal);
+
+      if (propVal.length != 0) {
+	propVal = "\n" + propVal + "\n";
+      } // if
+
+    } // if
+
+    // Delete the old element.
+    var spec = obj.spec;
+    if (spec != null) {
+      var kid = spec.firstChild;
+      var toRemove = new Array();
+      while (kid != null) {
+	if ((kid.nodeType == 1) &&
+	    (kid.nodeName == "html")) {
+	  toRemove[toRemove.length] = kid;
+	} // if
+	kid = kid.nextSibling;
+      } // while
+      var i;
+      var n = toRemove.length;
+      for (i = 0; i < n; i++) {
+	spec.removeChild(toRemove[i]);
+      } // for i
+    } // if
+
+    // If the string is not empty, then add a new element.
+    if (propVal.length > 0) {
+      
+      var insertDoc = new ActiveXObject("Microsoft.XMLDOM");
+      insertDoc.loadXML("<" + propElement + ">" + propVal + "</" + propElement + ">");
+      var newNode = insertDoc.firstChild;
+
+      if (spec.hasChildNodes()) {
+//        spec.insertBefore(newNode, spec.firstChild);
+        spec.appendChild(newNode);
+      } else {
+        spec.appendChild(newNode);
+      } // if
+
+    } // if
+
+    ChangedProp(prop, path, className, propName, propVal);
+
+  } // if
+
+}
+
+
+function EditPropEnum(editor, path, className, propName)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      // editor.options[editor.selectedIndex].value;
+      editor.value;
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+}
+
+
+function EditPropBool(editor, path, className, propName)
+{
+
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      editor.checked ? true : false;
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+}
+
+
+function EditPropInt(editor, path, className, propName)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      parseInt(editor.value);
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+}
+
+
+function EditPropFloat(editor, path, className, propName)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      parseFloat(editor.value);
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+}
+
+
+function EditPropColor(editor, path, className, propName)
+{
+  var obj = eval(path);
+
+  if (obj != null) {
+    var classMetaData =
+      GetClassMetaData(className);
+    var prop =
+      GetPropMetaData(classMetaData, propName);
+
+    var propVar =
+      GetAttStr(prop, "pie:var", "");
+
+    var propVal =
+      editor.value;
+
+    var cmd =
+      path + "." + propVar + " = propVal;";
+
+    eval(cmd);
+
+    ChangedProp(prop, path, className, propName, propVal);
+  } // if
+}
+
+
+function GetAttStr(node, name, def)
+{
+  var val = 
+    node.getAttribute(name);
+  if (val == null) {
+    val = def;
+  } // if
+
+  return val;
+}
+
+
+function GetAttFloat(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, "");
+
+  var ival =
+    parseFloat(val);
+
+  if (isNaN(ival)) {
+    ival = def;
+  } // if
+
+  return ival;
+}
+
+
+function GetAttInt(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, "");
+
+  var ival =
+    parseInt(val);
+
+  if (isNaN(ival)) {
+    ival = def;
+  } // if
+
+  return ival;
+}
+
+
+function parseBool(val, def)
+{
+  if ((val == true) ||
+      (val == false)) {
+    return val;
+  } // if
+
+  var result = false;
+
+  var ival =
+    parseInt(val);
+
+  if (isNaN(ival)) {
+    var lowerVal =
+      val.toLowerCase();
+    if ((lowerVal == "1") ||
+        (lowerVal == "true") ||
+        (lowerVal == "t") ||
+        (lowerVal == "yes") ||
+        (lowerVal == "y") ||
+        (lowerVal == "on")) {
+      result = true;
+    } else if ((lowerVal == "0") ||
+               (lowerVal == "false") ||
+               (lowerVal == "f") ||
+               (lowerVal == "no") ||
+               (lowerVal == "n") ||
+               (lowerVal == "off")) {
+      result = false;
+    } else {
+      result = def ? true : false;
+    } // if
+  } else {
+    if (ival == 0) {
+      result = false;
+    } else {
+      result = true;
+    } // if
+  } // if
+
+  return result;
+}
+
+
+function GetAttBool(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, null);
+
+  if (val == null) {
+    val = def;
+  } else {
+    val = parseBool(val, def);
+  } // if
+
+  return val;
+}
+
+
+function Sorry()
+{
+  window.alert("Not implemented yet. Sorry!");
+}
+
+
+function AddPieItem()
+{
+  Sorry();
+}
+
+
+function InsertPieItem()
+{
+  Sorry();
+}
+
+
+function AppendPieItem()
+{
+  Sorry();
+}
+
+
+function DeletePieItem()
+{
+  Sorry();
+}
+
+
+function AddSubMenu()
+{
+  Sorry();
+}
+
+
+function DeleteSubMenu()
+{
+  Sorry();
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Construction
+
+
+if (id == "") {
+  id = uniqueID;
+} // if
+var gDiv = eval(id);
+
+
+InitPieMenuEditor();
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+</SCRIPT>
+
+</HTML>

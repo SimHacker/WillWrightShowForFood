@@ -1,0 +1,2252 @@
+<?XML version="1.0"?>
+
+<PACKAGE>
+
+  <?COMPONENT ERROR="TRUE" DEBUG="TRUE"?>
+
+  <COMMENT>
+
+
+////////////////////////////////////////////////////////////////////////
+//
+// Pie Menus for Internet Explorer 5.0 JScript.
+// Copyright (C) 2001 by Don Hopkins.
+// All rights reserved. 
+// Designed and implemented by Don Hopkins. 
+//
+// mailto:xardox@mindspring.com
+// http://www.piemenu.com
+// http://www.catalog.com/hopkins
+//
+// This program is provided for unrestricted use, 
+// provided that this copyright message is preserved. 
+// There is no warranty, and no author or distributer 
+// accepts responsibility for any damage caused by 
+// this program. 
+// 
+// The ideas behind pie menus are not patented or 
+// restricted in any way, and the interface and 
+// algorithms may be freely copied and improved upon. 
+// Don't bother patenting pie menus,
+// because the idea has been around
+// for a long time in many forms,
+// and your patent will most likely be
+// invalid and easy to challenge,
+// therefore a waste of time and money. 
+// It would be much better to spend your resources
+// innovating new ideas and developing great products
+// instead of trying to patent obvious old ideas. 
+//
+// This code and the ideas behind it were developed 
+// over time by Don Hopkins, thanks to the support of:
+// University of Maryland, UniPress Software, 
+// Sun Microsystems, DUX Software, Turing Institute, 
+// Carnegie Mellon University, Kaleida Labs, 
+// Interval Research Corporation, Maxis Software,
+// Electronic Arts, Lush Creations, 
+// Mike Gallaher, Mark Weiser, Jack Callahan,
+// Ben Shneiderman, Mitch Bradley, Owen Densmore,
+// Arthur van Hoff, James Gosling, Martha Zimet,
+// Ted Selker, David Liddle, Brad Meyers,
+// Bill Verplank, Craig Hubley, Bob Adams,
+// David Levitt, Russel Nelson, John Gilmore,
+// Hugh Daniel, Josh Siegel, Mary Hopkins,
+// Levi Kruger, Eric Bowman, Jamie Doornbos,
+// Jim Mackraz and Will Wright.
+//
+// Pie menus are the natural result of optimizing an 
+// interface with respect to Fitts' Law. 
+// It states that the larger the area and closer the 
+// distance of the target, the less time (and the fewer errors) 
+// users require to select the target. 
+// 
+// Therefore all of the pie menu targets have a large area
+// (pie slice shaped regions), each of them positioned closely 
+// around the cursor in a different direction.
+// Their directional nature enables the user to
+// move the cursor further out, in order to gain
+// more precise control over the selection (leverage).
+//
+////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////
+// Features
+//
+// XML pie menu tree specification.
+// Arbitrary DHTML in center and menu items.
+// Submenus. 
+// Recast as html behavior component. 
+// Penultimate item tracking.
+
+
+////////////////////////////////////////////////////////////////////////
+// TODO
+//
+// Fix scrolling bug: if page is scrolled up, 
+// menu appears away from cursor.
+// Implement all callbacks. 
+// Properties and callback handlers inherited
+// from pie to item to sub-pie to sub-item.
+// Implement API for dynamic menu creation. 
+// Limit number of items to 8, boost number of items to even.
+// Item shuffling for reading order.
+// Title bar.
+// Tool tips.
+// Items inherit overridable properties from menu.
+// Submenus inherit overridable properties from supermenus.
+// URL navigation actions.
+// Mouse ahead display premption.
+// Scrolling pie menus.
+// Submenu navigation (back, cancel). 
+// Keyboard navigation. 
+// Simple text indented list menu specification.
+// Full control over all presentation styles.
+// Optimize memory usage.
+// Defer object creation.
+// Reuse presentation objects.
+// Streamline startup.
+// Cache expensive items. 
+// Preloading media and common menus.
+// Dynamic layout, reshaping, animation, sophisticated feedback.
+// Save state as XML.
+// User editable menus.
+// Interactive pie menu authoring tool (wizard).
+
+
+////////////////////////////////////////////////////////////////////////
+// Applications
+//
+// Pie Menu Browser Accelerator. 
+//   Take over right button menu with a browser utility pie menu.
+// Pie Menu Hot List Editor. 
+//   Arrange browser hot list items into a pie menu tree.
+// Pie Start Menu. 
+//   Arrange Windows Start Menu items into a pie menu tree.
+// Web site navigation. 
+//   Browse the table of contents of a web site, and jump to any page. 
+
+
+  </COMMENT>
+
+  <COMPONENT ID="piemenu">
+
+    <IMPLEMENTS ID="piemenu" TYPE="Behavior" DEFAULT="">
+      <ATTACH EVENT="onmousedown" handler="HandleOnMouseDown"/>
+      <ATTACH FOR="document" EVENT="oncontextmenu" handler="HandleOnContextMenu"/>
+      <ATTACH FOR="window" EVENT="onload" handler="HandleOnLoad"/>
+      <PUBLIC>
+        <EVENT NAME="OnBeforeMakePie" ID="evBeforeMakePie"/>
+        <EVENT NAME="OnAfterMakePie" ID="evAfterMakePie"/>
+        <EVENT NAME="OnAfterInitPie" ID="evAfterInitPie"/>
+        <EVENT NAME="OnStart" ID="evStart"/>
+        <EVENT NAME="OnStop" ID="evStop"/>
+        <EVENT NAME="OnPopUp" ID="evPopUp"/>
+        <EVENT NAME="OnPopDown" ID="evPopDown"/>
+        <EVENT NAME="OnPreview" ID="evPreview"/>
+        <EVENT NAME="OnChange" ID="evChange"/>
+        <EVENT NAME="OnSelect" ID="evSelect"/>
+        <EVENT NAME="OnCancel" ID="evCancel"/>
+        <EVENT NAME="OnSubMenu" ID="evSubMenu"/>
+        <EVENT NAME="OnSuperMenu" ID="evSuperMenu"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <IMPLEMENTS TYPE="Automation">
+      <PUBLIC>
+        <METHOD NAME="HandleOnLoad"/>
+        <METHOD NAME="Edit"/>
+        <METHOD NAME="DoPie"/>
+        <METHOD NAME="DoPieMenu"/>
+        <METHOD NAME="GetRootPieMenu"/>
+        <METHOD NAME="InitPieMenu"/>
+        <METHOD NAME="DeHilitePieMenu"/>
+        <METHOD NAME="ValidatePieMenu"/>
+        <METHOD NAME="ValidatePieMenus"/>
+        <METHOD NAME="InvalidatePieMenu"/>
+        <METHOD NAME="InvalidatePieMenus"/>
+        <METHOD NAME="SavePieMenuSpec"/>
+        <METHOD NAME="DoQueuedURLNavigation"/>
+        <PROPERTY NAME="spec" INTERNALNAME="gPieMenuSpec"/>
+        <PROPERTY NAME="rootpiemenu" INTERNALNAME="gPieMenu"/>
+        <PROPERTY NAME="curpiemenu" INTERNALNAME="gCurPieMenu"/>
+        <PROPERTY NAME="lastpiemenu" INTERNALNAME="gLastPieMenu"/>
+        <PROPERTY NAME="target" INTERNALNAME="gDiv"/>
+      </PUBLIC>
+    </IMPLEMENTS>
+
+    <SCRIPT LANGUAGE="JScript">
+
+
+////////////////////////////////////////////////////////////////////////
+// Attached Event Handlers
+
+
+function HandleOnLoad()
+{
+  FireEventResult(
+    "onbeforemakepie",
+    evBeforeMakePie,
+    this,
+    null,
+    null);
+
+  var xml = null;
+  var piemenuid = getAttribute("piemenu");
+
+  if (piemenuid != null) {
+
+    xml = eval(piemenuid);
+
+    if (xml == null) {
+      Barf.innerHTML += "Can't find XML element id \"" + piemenuid + "\" for pie menu...\n"; 
+      return;
+    } // if
+
+  } else {
+
+    xml = gDiv.getElementsByTagName("xml")[0];
+    if (xml == null) {
+      Barf.innerHTML += "Can't find XML element for pie menu...\n";
+      return;
+    } // if
+
+  } // if
+
+  var rs = xml.readyState;
+  if ((rs != "complete") && (rs != "interactive")) {
+    xml.onreadystatechange = "HandleOnLoadLater()";
+    //Barf.innerHTML += "Waiting for XML to Load...\n";
+    return;
+  } // if
+
+  HandleOnLoadElement(xml);
+}
+
+
+function HandleOnLoadLater()
+{
+  var xml =
+    event.srcElement;
+
+  xml.onreadystatechange = null;
+
+  HandleOnLoadElement(xml);
+}
+
+
+function HandleOnLoadElement(xml)
+{
+  if (xml.readyState != "complete") {
+    return;
+  } // if
+
+  // Is it an immitation xml element? If so, make a real one.
+  // This problem is caused by xsl expanding xml into
+  // a dhtml web page with an xml data island. Sigh...
+  if (xml.XMLDocument == null) {
+    var xmlText = xml.innerHTML;
+    xml = new ActiveXObject("Microsoft.XMLDOM");
+    xml.async = false;
+    xml.loadXML(xmlText);
+  } // if
+
+  var pieSpec =
+    xml.selectSingleNode("piemenu");
+
+  if (pieSpec == null) {
+//    Barf.innerHTML += "Can't find XML piemenu element...\n" + xml.outerHTML + "\n";
+    return;
+  } // if
+
+  if ((pieSpec.nodeType != 1) ||
+      (pieSpec.nodeName != "piemenu")) {
+    Barf.innerHTML += "Wrong type of XML piemenu element...\n"  + xml.outerHTML + "\n";
+    return;
+  } // if
+
+  gPieMenu =
+    CreatePieMenuFromSpec(pieSpec);
+
+  FireEventResult(
+    "onaftermakepie",
+    evAfterMakePie,
+    this,
+    null,
+    null);
+}
+
+
+function HandleOnMouseDown()
+{
+  if (gPieMenu != null) {
+    DoPieMenu(gPieMenu, 0);
+  } // if
+}
+
+
+function HandleOnContextMenu()
+{
+  var el =
+    event.srcElement;
+  var pieDiv =
+    null;
+
+  if (gCurPieMenu != null) {
+    event.returnValue = false;
+    return false;
+  } // if
+
+  while (el != null) {
+    if (el == gDiv) {
+      event.returnValue = false;
+      return false;
+    } // if
+    el = el.parentElement;
+  } // while
+
+  event.returnValue = true;
+  return true;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Properties
+
+
+var gPieMenuSpec = null;
+var gPieMenuSpecID = null;
+var gPieMenu = null;
+var gCurPieMenu = null;
+var gLastPieMenu = null;
+var gEvent = null;
+var gPieMenus = new Array();
+var gPieMenuStack = new Array();
+var gPieMenuEditor = null;
+var gURLNavigationTarget = null;
+
+
+////////////////////////////////////////////////////////////////////////
+// Constructors
+
+
+function PieMenu()
+{
+}
+
+
+function Item()
+{
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Methods
+
+
+function PopUp()
+{
+  PopUpPie(gPieMenu);
+}
+
+
+function PopUpPie(pie)
+{
+  gPieMenuStack = new Array();
+  PopUpPieMenu(pie);
+}
+
+
+function GetRootPieMenu()
+{
+  return gPieMenu;
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Utilities
+
+
+function DegToRad(d)
+{
+  return (2 * Math.PI * d) / 360.0;
+}
+
+
+function NormRad(ang)
+{
+  var twoPi = 
+    2 * Math.PI;
+
+  while (ang < 0) {
+    ang += twoPi;
+  } // while
+
+  while (ang >= twoPi) {
+    ang -= twoPi;
+  } // while
+
+  return ang;
+}
+
+
+function GetAttStr(node, name, def)
+{
+  var val = 
+    node.getAttribute(name);
+  if (val == null) {
+    val = def;
+  } // if
+
+  return val;
+}
+
+
+function GetAttFloat(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, "");
+
+  var ival =
+    parseFloat(val);
+
+  if (isNaN(ival)) {
+    ival = def;
+  } // if
+
+  return ival;
+}
+
+
+function GetAttInt(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, "");
+
+  var ival =
+    parseInt(val);
+
+  if (isNaN(ival)) {
+    ival = def;
+  } // if
+
+  return ival;
+}
+
+
+function parseBool(val, def)
+{
+  if ((val == true) ||
+      (val == false)) {
+    return val;
+  } // if
+
+  var result = false;
+
+  var ival =
+    parseInt(val);
+
+  if (isNaN(ival)) {
+    var lowerVal =
+      val.toLowerCase();
+    if ((lowerVal == "1") ||
+        (lowerVal == "true") ||
+        (lowerVal == "t") ||
+        (lowerVal == "yes") ||
+        (lowerVal == "y") ||
+        (lowerVal == "on")) {
+      result = true;
+    } else if ((lowerVal == "0") ||
+               (lowerVal == "false") ||
+               (lowerVal == "f") ||
+               (lowerVal == "no") ||
+               (lowerVal == "n") ||
+               (lowerVal == "off")) {
+      result = false;
+    } else {
+      result = def ? true : false;
+    } // if
+  } else {
+    if (ival) {
+      result = true;
+    } else {
+      result = false;
+    } // if
+  } // if
+
+  return result;
+}
+
+
+function GetAttBool(node, name, def)
+{
+  var val = 
+    GetAttStr(node, name, null);
+
+  if (val == null) {
+    val = def;
+  } else {
+    val = parseBool(val, def);
+  } // if
+
+  return val;
+}
+
+
+function FireEventResult(eventName, eventObject, eventResult, pie, item)
+{
+  var ev =
+    createEventObject();
+
+  ev.result = 
+    eventResult;
+  ev.srcElement = 
+    gDiv;
+
+  gEvent = ev;
+
+  var action;
+
+  if ((item != null) &&
+      ((action = item[eventName]) != null) &&
+      (action != "")) {
+//    eval("var event = gEvent; " + action);
+    eval(action);
+  } // if
+
+  if ((pie != null) &&
+      ((action = pie[eventName]) != null) &&
+      (action != "")) {
+//    eval("var event = gEvent; " + action);
+    eval(action);
+  } // if
+
+  eventObject.fire(
+    ev);
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Pie Menu Tracking
+
+function DoPie(pie)
+{
+  DoPieMenu(pie, 0);
+}
+
+
+function DoPieMenu(pie, pinned)
+{
+  if (gCurPieMenu != null) {
+
+    var lastPie =
+      gCurPieMenu;
+
+    PopDownPieMenu();
+
+    TrackPenultimateItem(lastPie);
+
+    FireEventResult(
+      "oncancel",
+      evCancel,
+      lastPie,
+      lastPie,
+      null);
+
+    FireEventResult(
+      "onstop",
+      evStop,
+      this,
+      null,
+      null);
+
+  } // if
+
+  gPieMenuStack = new Array();
+
+  gLastPieMenu = 
+    gCurPieMenu;
+  gCurPieMenu =
+    pie;
+
+  if (pie != null) {
+    FireEventResult(
+      "onstart",
+      evStart,
+      this,
+      pie,
+      null);
+
+    DoSubPieMenu(pie, null, null, pinned);
+  } // if
+}
+
+
+function DoSubPieMenu(pie, parentPie, parentItem, pinned)
+{
+  gPieMenuStack.push(pie);
+
+  gLastPieMenu =
+    gCurPieMenu;
+  gCurPieMenu = 
+    pie;
+  pie.parentPie = 
+    parentPie;
+  pie.parentItem = 
+    parentItem;
+
+  InitPieMenu(
+    pie);
+
+  pie.pinned =
+    pinned;
+
+  MovePieMenu(
+    pie, 
+    window.event.clientX + gDiv.document.body.scrollLeft, 
+    window.event.clientY + gDiv.document.body.scrollTop);
+
+  PopUpPieMenu(
+    pie);
+
+  StartTrackingPieMenu(
+    pie);
+
+}
+
+
+function DoSuperPieMenu(pie)
+{
+  if (gPieMenuStack.length <= 1) {
+
+    TrackPenultimateItem(pie);
+
+    FireEventResult(
+      "oncancel",
+      evCancel,
+      pie,
+      pie,
+      null);
+
+    FireEventResult(
+      "onstop",
+      evStop,
+      this,
+      pie,
+      null);
+
+    gPieMenuStack = new Array();
+
+    return;
+
+  }
+
+  var curPie =
+    gPieMenuStack.pop();
+  var superPie =
+    gPieMenuStack[gPieMenuStack.length - 1];
+
+  FireEventResult(
+    "onsupermenu",
+    evSuperMenu,
+    curPie,
+    superPie,
+    null);
+
+  gLastPieMenu =
+    gCurPieMenu;
+  gCurPieMenu = 
+    superPie;
+  InitPieMenu(
+    superPie);
+
+  superPie.pinned =
+    1;
+
+  MovePieMenu(
+    superPie, 
+    window.event.clientX + gDiv.document.body.scrollLeft, 
+    window.event.clientY + gDiv.document.body.scrollTop);
+
+  PopUpPieMenu(
+    superPie);
+
+  StartTrackingPieMenu(
+    superPie);
+
+}
+
+
+function InitPieMenu(pie)
+{
+  HidePieMenu(
+    pie);
+
+  pie.direction = 0;
+  pie.distance = 0;
+  pie.lastDirection = -1;
+  pie.lastDistance = -1;
+  pie.curItem = -1;
+  pie.penultimateItem = -1;
+  pie.curItemEntered = -1;
+  pie.item = null;
+  pie.lastItem = -1;
+  pie.pinned = 0;
+
+  ValidatePieMenu(
+    pie);
+
+  FireEventResult(
+    "onafterinitpie",
+    evAfterInitPie,
+    this,
+    null,
+    null);
+
+}
+
+
+function MovePieMenu(pie, x, y)
+{
+  var bodyx =
+    x;
+  var bodyy =
+    y;
+
+  pie.centerx = bodyx;
+  pie.centery = bodyy;
+
+  pie.x = pie.centerx + pie.minx;
+  pie.y = pie.centery + pie.miny;
+}
+
+
+function StartTrackingPieMenu(pie)
+{
+  pie.div.setCapture();
+}
+
+
+function StopTrackingPieMenu(pie)
+{
+  pie.div.releaseCapture();
+}
+
+
+function PopUpPieMenu(pie)
+{
+  ShowPieMenu(pie);
+
+  FireEventResult(
+    "onpopup",
+    evPopUp,
+    pie,
+    pie,
+    null);
+
+  FireEventResult(
+    "onchange",
+    evChange,
+    pie,
+    pie,
+    null);
+
+  FireEventResult(
+    "onpreview",
+    evPreview,
+    pie,
+    pie,
+    null);
+
+  pie.lastDirection = pie.direction;
+  pie.lastDistance = pie.distance;
+}
+
+
+function PopDownPieMenu()
+{
+  if (gCurPieMenu == null) {
+    return;
+  } // if
+
+  var pie =
+    gCurPieMenu;
+
+  gLastPieMenu =
+    gCurPieMenu;
+  gCurPieMenu = 
+    null;
+
+  StopTrackingPieMenu(
+    pie);
+
+  HidePieMenu(
+    pie);
+
+  FireEventResult(
+    "onpopdown",
+    evPopDown,
+    pie,
+    pie,
+    null);
+
+}
+
+
+function TrackPieMenuDown()
+{
+  if (gCurPieMenu == null) {
+    return;
+  } // if
+
+  TrackPieMenuMove();
+}
+
+
+function TrackPieMenuUp()
+{
+  if (gCurPieMenu == null) {
+    return;
+  } // if
+
+  TrackPieMenuMove();
+
+  var pie =
+    gCurPieMenu;
+  var curItem = 
+    pie.curItem;
+
+  if ((curItem == -1) &&
+      (pie.pinned == 0)) {
+    pie.pinned = 1;
+    return;
+  }
+
+  var items =
+    pie.items.length;
+  var action =
+    null;
+
+  PopDownPieMenu();
+
+  if ((curItem >= 0) &&
+      (curItem < items)) {
+    var item = 
+      pie.items[curItem];
+
+    if (item.subPie == null) {
+
+      TrackPenultimateItem(pie);
+
+      FireEventResult(
+        "onselect",
+        evSelect,
+        pie,
+        pie,
+        item);
+
+      FireEventResult(
+        "onstop",
+        evStop,
+        this,
+        pie,
+        null);
+
+      if ((item.action != null) &&
+          (item.action != "")) {
+        eval(item.action);
+      } // if
+
+      if ((item.url != null) &&
+          (item.url != "")) {
+        QueueURLNavigation(item.url);
+      } // if
+
+      gPieMenuStack = new Array();
+
+    } else {
+
+      FireEventResult(
+        "onsubmenu",
+        evSubMenu,
+        pie,
+        pie,
+        item);
+
+      if ((item.action != null) &&
+          (item.action != "")) {
+        eval(item.action);
+      } // if
+
+      if ((item.url != null) &&
+          (item.url != "")) {
+        QueueURLNavigation(item.url);
+      } // if
+
+      DoSubPieMenu(item.subPie, pie, item, 1);
+
+    } // if
+
+  } else {
+
+    DoSuperPieMenu(pie);
+
+  } // if
+}
+
+
+function QueueURLNavigation(url)
+{
+  url = url.replace("\\", "\\\\");
+  url = url.replace("\"", "\\\"");
+  window.setTimeout(
+    "document.location = \"" + url + "\"",
+    100, "JScript");
+}
+
+
+function DeHilitePieMenu(pie)
+{
+  pie.curItem = -1;
+
+  for (i = 0; i < pie.items.length; i++) {
+    var it =
+      pie.items[i];
+    ConfigPieMenuItem(pie, it);
+  } // for i
+}
+
+
+function TrackPieMenuMove()
+{
+  if (gCurPieMenu == null) {
+    return;
+  } // if
+
+  var pie =
+    gCurPieMenu;
+
+  TrackPieMenu(
+    pie, 
+    event.clientX + gDiv.document.body.scrollLeft,
+    event.clientY + gDiv.document.body.scrollTop);
+
+  if ((pie.lastDirection != pie.direction) ||
+      (pie.lastDistance != pie.distance)) {
+
+    FireEventResult(
+      "onpreview",
+      evPreview,
+      pie,
+      pie,
+      pie.item);
+
+    pie.lastDirection = pie.direction;
+    pie.lastDistance = pie.distance;
+  } // if
+
+  StartTrackingPieMenu(pie);
+}
+
+
+function TrackPieMenu(pie, x, y)
+{
+  var twoPi = 
+    2 * Math.PI;
+
+  var dx =
+    x - pie.centerx;
+  var dy =
+    y - pie.centery;
+
+  pie.dx = dx;
+  pie.dy = dy
+
+  pie.distance = 
+    Math.sqrt(
+      (dx * dx) +
+      (dy * dy));
+
+  if (pie.distance <= 0) {
+    pie.direction = 0;
+  } else {
+    pie.direction =
+      NormRad(Math.atan2(-dy, dx));
+  } // if
+
+  var items =
+    pie.items.length;
+
+  // If there aren't any items, there's nothing to do.
+  if (items == 0) {
+    return;
+  } // if
+
+  var newItem = 
+    -1;
+  var lastItem = 
+    pie.curItem;
+
+  pie.lastItem =
+    lastItem;
+
+  var element =
+    event.srcElement;
+  pie.curItemEntered = -1;
+  while (element != null) {
+    var id =
+      element.menuItemID;
+    if (id != null) {
+      pie.curItemEntered = id;
+      break;
+    } // if
+    element = element.parentElement;
+  } // while
+
+  if (pie.curItemEntered != -1) {
+    newItem = pie.curItemEntered;
+  } else {
+    if (pie.distance > pie.inactiveRadius) {
+      if (items == 1) {
+        newItem = 0;
+      } else {
+        if (pie.curItemEntered != -1) {
+          newItem = pie.curItemEntered;
+        } else {
+          var pieitems =
+            pie.pieitems.length;
+
+          if (pieitems > 0) {
+            var twist =
+              Math.PI / pieitems;
+            var initialAngle =
+              DegToRad(pie.initialAngle);
+            var ang;
+            if (pie.clockwise) {
+              ang =
+                initialAngle - pie.direction + twist;
+            } else {
+              ang =
+                initialAngle + pie.direction - twist;
+            } // if
+
+            ang = 
+              NormRad(ang);
+
+            var newPieItem =
+              Math.floor((ang / twoPi) * pieitems);
+
+            if (newPieItem < 0) {
+              newPieItem = 0;
+            } else if (newPieItem >= pieitems) {
+              newPieItem = pieitems - 1;
+            } // if
+
+            newItem =
+              pie.pieitems[newPieItem].index;
+          } // if
+        } // if
+      } // if
+    } // if
+  } // if
+
+  // Now we've figured out the selected newItem,
+  // so update the display if necessary.
+
+  if (newItem >= pie.items.length) {
+    newItem = 
+      pie.items.length - 1;
+  } // if
+
+  if (newItem != lastItem) {
+    pie.curItem = newItem;
+
+if (0) {
+
+    if (lastItem != -1) {
+      var it =
+        pie.items[lastItem];
+      ConfigPieMenuItem(pie, it);
+      // ValidatePieMenuItem(pie, it, pie.radius);
+    } // if
+
+    if (newItem != -1) {
+      var it =
+        pie.items[newItem];
+      pie.item = it;
+      ConfigPieMenuItem(pie, it);
+      // ValidatePieMenuItem(pie, it, pie.radius);
+    } // if
+
+} else {
+
+    for (i = 0; i < pie.items.length; i++) {
+      var it =
+        pie.items[i];
+      if (i == newItem) {
+        pie.item = it;
+      } // if
+      ConfigPieMenuItem(pie, it);
+    } // for i
+
+} // if
+
+    var now = new Date().valueOf();
+    if (lastItem != -1) {
+      var it = pie.items[lastItem];
+      if (it.enterTime == 0) {
+        it.enterTime = now;
+      }
+      it.exitTime = now;
+      var elapsed = now - it.enterTime;
+      it.totalTime += elapsed;
+    } // if
+    if (newItem != -1) {
+      pie.items[newItem].enterTime = now;
+    } // if
+
+    FireEventResult(
+      "onchange",
+      evChange,
+      pie,
+      pie,
+      pie.item);
+
+  } // if
+}
+
+
+function TrackPenultimateItem(pie)
+{
+  var firstChoice = pie.curItem;
+  var secondChoice = -1;
+  var maxTotalTime = -1;
+  var itemCount = pie.items.length;
+  var i;
+  for (i = 0; i < itemCount; i++) {
+    if (i != firstChoice) {
+      var it = pie.items[i];
+      var itTotalTime = it.totalTime;
+      if ((itTotalTime > 0) &&
+          (itTotalTime > maxTotalTime)) {
+        maxTotalTime = itTotalTime;
+        secondChoice = i;
+      } // if
+    } // if
+  } // for i
+  pie.penultimateItem = secondChoice;
+}
+
+
+function CreatePieMenuFromUrl(xmlPieSpecUrl, id)
+{
+  var doc = new ActiveXObject("Microsoft.XMLDOM");
+  doc.async = false;
+
+  doc.load(xmlPieSpecUrl);
+
+  return CreatePieMenuFromDoc(doc, id);
+}
+
+
+function CreatePieMenuFromString(xmlPieSpecString, id)
+{
+  var doc =
+    new ActiveXObject("Microsoft.XMLDOM");
+
+  doc.async = false;
+
+  doc.loadXML(xmlPieSpecString);
+
+  return CreatePieMenuFromDoc(doc, id);
+}
+
+
+function CreatePieMenuFromDoc(xmlPieDoc, id)
+{
+  var pat =
+    ((id == null) || (id == ""))
+      ? "piemenu"
+      : "piemenu[@id='" + id + "']";
+
+  var pieMenuSpec =
+    xmlPieDoc.selectSingleNode(pat);
+
+  if (pieMenuSpec == null) {
+    return null;
+  } // if
+
+  return CreatePieMenuFromSpec(pieMenuSpec);
+}
+
+
+function CreatePieMenuFromSpec(spec)
+{
+  // To include another piemenu in a different document, 
+  // use the file="filename.xml" and id="id" attributes.
+  // We parse the file and use the piemenu of that id,
+  // or the first piemenu found, if id is undefined (null or "").
+  var fileAtt =
+    GetAttStr(spec, "file", "");
+  if (fileAtt.length > 0) {
+    var idAtt =
+      GetAttStr(spec, "id", "");
+    var doc =
+      new ActiveXObject("Microsoft.XMLDOM");
+    doc.async = false;
+
+    doc.load(fileAtt);
+
+    var pat =
+      ((idAtt == null) || (idAtt == ""))
+        ? "piemenu"
+        : "piemenu[@id='" + idAtt + "']";
+
+    spec =
+      doc.selectSingleNode(pat);
+    if (spec == null) {
+      Barf.innerHTML += "Can't find external pie menu pattern \'" + pat + "\'...\n";
+    } // if
+  } // if
+
+  // To refer to another piemenu in any document, use the ref="id" attribute.
+  // We will return a magic object and then resolve the reference in the caller. 
+  // All references will refer to the same pie menu made from the same xml spec. 
+  var refAtt =
+    GetAttStr(spec, "ref", "");
+  if (refAtt.length > 0) {
+    var resolveMe = new Object();
+    resolveMe.resolveRef = refAtt;
+    resolveMe.resolveSpec = spec;
+    return resolveMe;
+  } // if
+
+  // To include another piemenu in the same document, use the include="id" attribute.
+  // We use the same xml spec to make another identical but unique menu.
+  var includeAtt =
+    GetAttStr(spec, "include", "");
+  if (includeAtt.length > 0) {
+    var pattern =
+      "//piemenu[@id='" + includeAtt + "']";
+    var doc = spec;
+    while (doc.parentNode != null) {
+      doc = doc.parentNode;
+    } // while
+    var included =
+      doc.selectSingleNode(pattern);
+    if (included == null) {
+      innerText += "Can't find included pie menu pattern \'" + pattern + "\'...\n";
+   } else {
+      spec = included;
+    } // if
+  } // if
+
+  var pie = 
+      new Object();
+
+  var div =
+    document.createElement(
+      "DIV");
+
+  pie.div =
+    div;
+
+//  document.body.appendChild(
+  parentElement.document.body.appendChild(
+    div);
+
+  div.onmousedown = TrackPieMenuDown;
+  div.onmousemove = TrackPieMenuMove;
+  div.onmouseup = TrackPieMenuUp;
+
+  pie.valid = 0;
+  pie.target = gDiv;
+  pie.spec = spec;
+  pie.x = 0;
+  pie.y = 0;
+  pie.w = 0;
+  pie.h = 0;
+  pie.centerx = 0;
+  pie.centery = 0;
+  pie.minx = 0;
+  pie.miny = 0;
+  pie.maxx = 0;
+  pie.maxy = 0;
+  pie.visible = 1;
+  pie.curItem = -1;
+  pie.curItemEntered = -1;
+  pie.item = null;
+  pie.dx = 0;
+  pie.dy = 0;
+  pie.distance = 0;
+  pie.direction = 0;
+  pie.pinned = 0;
+  pie.parentPie = null;
+  pie.parentItem = null;
+
+  pie.centerDiv = null;
+  pie.centerDivX = 0;
+  pie.centerDivY = 0;
+  pie.centerDivWidth = 0;
+  pie.centerDivHeight = 0;
+
+  pie.id =
+    GetAttStr(spec, "id", "");
+  pie.name =
+    GetAttStr(spec, "name", "");
+  pie.clockwise =
+    GetAttBool(spec, "clockwise", true);
+  pie.initialAngle =
+    GetAttFloat(spec, "initialangle", 90);
+  pie.firstLinearItem =
+    GetAttFloat(spec, "firstlinearitem", 0);
+  pie.fixedRadius =
+    GetAttInt(spec, "fixedradius", 0);
+  pie.inactiveRadius =
+    GetAttInt(spec, "inactiveradius", 8);
+  pie.minRadius =
+    GetAttInt(spec, "minradius", 20);
+  pie.extraRadius =
+    GetAttInt(spec, "extraradius", 0);
+  pie.radiusNotch =
+    GetAttInt(spec, "radiusnotch", 2);
+  pie.border =
+    GetAttInt(spec, "border", 2);
+  pie.maxPieItems =
+    GetAttInt(spec, "maxpieitems", 8);
+  pie.pagedPieItems =
+    GetAttInt(spec, "pagedpieitems", 0);
+  pie.linear =
+    GetAttBool(spec, "linear", false);
+  pie.linearDirection =
+    GetAttStr(spec, "lineardirection", "down");
+  pie.linearOrderReversed =
+    GetAttInt(spec, "linearorderreversed", 0);
+  pie.transparentItems =
+    GetAttBool(spec, "transparentitems", false);
+  pie.itemBorder =
+    GetAttInt(spec, "itemborder", 2);
+  pie.itemMargin =
+    GetAttInt(spec, "itemmargin", 2);
+  pie.itemWidth =
+    GetAttInt(spec, "itemwidth", 0);
+  pie.itemHeight =
+    GetAttInt(spec, "itemheight", 0);
+  pie.itemNormalBackground =
+    GetAttStr(spec, "itemnormalbackground", "buttonface");
+  pie.itemSelectedBackground =
+    GetAttStr(spec, "itemselectedbackground", "buttonhighlight");
+  pie.centerBackground =
+    GetAttStr(spec, "centerbackground", "buttonface");
+  pie.centerMargin =
+    GetAttInt(spec, "centermargin", 16);
+  pie.centerBorderWidth =
+    GetAttStr(spec, "centerborderwidth", 2);
+  pie.centerVisible =
+    GetAttInt(spec, "centervisible", 1);
+  pie.url =
+    GetAttStr(spec, "url", "");
+  pie.action =
+    GetAttStr(spec, "action", "");
+  pie.onselect =
+    GetAttStr(spec, "onselect", "");
+  pie.onchange =
+    GetAttStr(spec, "onchange", "");
+  pie.onpreview =
+    GetAttStr(spec, "onpreview", "");
+
+  if ((pie.id == null) || (pie.id.length == 0)) {
+    pie.id = GenUniqueID();
+  } // if
+
+  gPieMenus[pie.id] = pie;
+
+//  HidePieMenu(pie);
+
+  return pie;
+}
+
+
+var gGenUniqueID = 0;
+
+function GenUniqueID()
+{
+  return "PIEMENU_ID_" + (++gGenUniqueID);
+}
+
+
+function DestroyPieMenu(pie)
+{
+    HidePieMenu(pie);
+    pie.div.innerHtml = "";
+    pie.div = null;
+    pie.spec = null;
+    gPieMenus[pie.id] = null;
+}
+
+
+function SetPieMenuID(pie, id)
+{
+  gPieMenus[pie.id] = null;
+  gPieMenus[id] = pie;
+  pie.id = id;
+}
+
+
+function HidePieMenu(pie)
+{
+    if (pie.visible == 0) {
+        return;
+    }
+
+    pie.visible = 0;
+
+    if (pie.div != null) {
+        pie.div.style.display = "none";
+    }
+}
+
+
+function ShowPieMenu(pie)
+{
+  pie.visible = 1;
+
+  pie.div.style.display = "block";
+  pie.div.style.position = "absolute";
+  pie.div.style.left = pie.x;
+  pie.div.style.top = pie.y;
+  pie.div.style.width = pie.w;
+  pie.div.style.height = pie.h;
+
+  ResetItemTimes(pie);
+}
+
+
+function ResetItemTimes(pie)
+{
+  var its = pie.items;
+  var itemCount = its.length;
+  var i;
+  for (i = 0; i < itemCount; i++) {
+    var it = its[i];
+    it.enterTime = 0;
+    it.exitTime = 0;
+    it.totalTime = 0;
+  } // for i
+}
+
+
+function ValidatePieMenuItem(pie, it, radius)
+{
+    if (it.fixedRadius > 0) {
+      radius = it.fixedRadius;
+    } // if
+
+    var gap = 1;
+    var rdx = radius * it.dx;
+    var rdy = radius * it.dy;
+    
+    it.xOffset = Math.floor(rdx + 0.5);
+    it.yOffset = Math.floor(rdy + 0.5);
+
+    // Special cases for top, bottom, left, and right
+    if ((Math.floor(rdx + 0.5)) == 0) { // top or bottom
+        rdx -= (it.w / 2.0) + 1;
+        if (rdy > 0) {
+            rdy += gap - 3; // top
+        } else {
+            rdy -= it.h + gap - 2; // bottom
+        } // if
+    } else {
+        if ((Math.floor(rdy + 0.5)) == 0) { // left or right
+            rdy -= (it.h / 2.0) + 0.5;
+            if (rdx < 0) {
+                rdx -= it.w + gap - 2;
+            } else {
+                rdx += gap - 3;
+            } // if
+        } else { // everwhere else
+            // Justify the label according to its quadrant.
+            var fudge = 2;
+
+            if (rdx < 0) {
+                    rdx -= it.w - fudge;
+            } else {
+                    rdx -= fudge;
+            } // if
+
+            if (rdy < 0) {
+                            rdy -= it.h - fudge;
+            } else {
+                    rdy -= fudge;
+            } // if
+        } // if
+    } // if
+
+    it.x = Math.round(rdx);
+    it.y = Math.round(rdy);
+}
+
+
+function ValidateLinearMenuItem(pie, it, minx, miny, maxx, maxy)
+{
+  if (it.linearDirection == "center") {
+    it.xOffset = Math.floor(it.w / -2.0) - 1;
+    it.yOffset = Math.floor(it.h / -2.0);
+  } else if (it.linearDirection == "up") {
+    it.xOffset = Math.floor(it.w / -2.0) - 1;
+    it.yOffset = Math.floor(miny - it.h);
+  } else if (it.linearDirection == "left") {
+    it.xOffset = Math.floor(minx - it.w);
+    it.yOffset = Math.floor(it.h / -2.0);
+  } else if (it.linearDirection == "right") {
+    it.xOffset = Math.floor(maxx);
+    it.yOffset = Math.floor(it.h / -2.0);
+  } else { // it.linearDirection == "down"
+    it.xOffset = Math.floor(it.w / -2.0) - 1;
+    it.yOffset = Math.floor(maxy);
+  }
+
+  it.x = it.xOffset;
+  it.y = it.yOffset;
+}
+
+
+function PieMenuItemsOverlap(it1, it2)
+{
+    var fringe = 2;
+    var myLeft = it1.x - fringe;
+    var myRight = it1.x + it1.w + fringe;
+    var yourLeft = it2.x - fringe;
+    var yourRight = it2.x + it2.w + fringe;
+
+    if ((yourLeft < myRight) &&
+        (yourRight > myLeft)) {
+        var myTop = it1.y - fringe;
+        var myBottom = it1.y + it1.h + fringe;
+        var yourTop = it2.y - fringe;
+        var yourBottom = it2.y + it2.h + fringe;
+
+        if ((yourTop < myBottom) &&
+            (yourBottom > myTop)) {
+            return true;
+        } // if
+    } // if
+                                
+    return false;
+}
+
+
+function ValidatePieMenus()
+{
+  if (gPieMenu != null) {
+    ValidatePieMenusRecursive(gPieMenu);
+  } // if
+}
+
+
+function ValidatePieMenusRecursive(pie)
+{
+  if (!pie.valid) {
+    ValidatePieMenu(pie);
+  } // if
+  
+  var items = pie.items;
+  if (items != null) {
+    var n = items.length;
+    var i;
+    for (i = 0; i < n; i++) {
+      var item = items[i];
+      var subPie = item.subPie;
+      if (subPie != null) {
+        ValidatePieMenusRecursive(subPie);
+      } // if
+    } // for i
+  } // if
+}
+
+
+function InvalidatePieMenus()
+{
+  if (gPieMenu != null) {
+    InvalidatePieMenusRecursive(gPieMenu);
+  } // if
+}
+
+
+function InvalidatePieMenusRecursive(pie)
+{
+  InvalidatePieMenu(pie);
+  
+  var items = pie.items;
+  if (items != null) {
+    var n = items.length;
+    var i;
+    for (i = 0; i < n; i++) {
+      var item = items[i];
+      var subPie = item.subPie;
+      if (subPie != null) {
+        InvalidatePieMenusRecursive(subPie);
+      } // if
+    } // for i
+  } // if
+}
+
+
+function InvalidatePieMenu(pie)
+{
+  pie.valid = 0;
+}
+
+
+function ValidatePieMenu(pie)
+{
+  var twoPi = 
+    2 * Math.PI;
+
+  pie.valid = 1;
+  pie.items = new Array();
+  pie.pieitems = new Array();
+  pie.linearitems = new Array();
+
+  ShowPieMenu(pie);
+
+  pie.div.style.left = 0;
+  pie.div.style.top = 0;
+  pie.div.style.width = 10000;
+  pie.div.style.height = 10000;
+
+  pie.div.innerHTML = "";
+  pie.centerDiv = null;
+
+  pie.minx = -pie.inactiveRadius;
+  pie.miny = -pie.inactiveRadius;
+  pie.maxx = pie.inactiveRadius;
+  pie.maxy = pie.inactiveRadius;
+
+  var spec = pie.spec;
+  var children =
+      pie.spec.childNodes;
+  var n = children.length;
+  var child;
+
+  var centerDiv =
+      pie.div.document.createElement("DIV");
+  pie.centerDiv = centerDiv;
+  pie.div.appendChild(
+    centerDiv);
+
+  centerDiv.style.position = "absolute";
+  centerDiv.style.display = "block";
+  centerDiv.style.left = 0;
+  centerDiv.style.top = 0;
+  centerDiv.style.backgroundColor = pie.centerBackground;
+  centerDiv.style.border = pie.centerBorderWidth + " outset";
+  centerDiv.style.visibility = pie.centerVisible ? "visible" : "hidden";
+
+  var pieHTML = "";
+
+  var pagedPieItems = 0;
+  var i = 0;
+  while ((child = children.nextNode()) != null) {
+
+    if ((child.nodeType == 1) &&
+        (child.nodeName == "script")) {
+      var str = "";
+      var kid = child.firstChild;
+      while (kid != null) {
+        str += kid.xml;
+        kid = kid.nextSibling;
+      } // while
+      eval(child.xml);
+    } else if ((child.nodeType == 1) &&
+               (child.nodeName == "item")) {
+
+      var it = 
+        pie.items[i];
+      if (it == null) {
+        it =
+          new Object();
+        pie.items[i] =
+          it;
+      } // if
+
+      var itemDiv =
+        it.div;
+      if (itemDiv == null) {
+        itemDiv =
+          pie.div.document.createElement("DIV");
+        pie.div.appendChild(
+          itemDiv);
+        it.div = 
+          itemDiv;
+      } // if
+
+      itemDiv.menuItemID = i;
+
+      it.pie = pie;
+      it.index = i;
+      it.valid = 0;
+      it.item = child;
+      it.subPie = null;
+      it.enterTime = 0
+      it.exitTime = 0
+      it.totalTime = 0
+
+      it.spec =
+        child;
+      it.id =
+        GetAttStr(child, "id", "");
+      it.name =
+        GetAttStr(child, "name", "");
+      it.fixedRadius =
+        GetAttInt(child, "fixedradius", 0);
+      it.action =
+        GetAttStr(child, "action", pie.action);
+      it.url =
+        GetAttStr(child, "url", pie.url);
+      it.itemWidth =
+        GetAttInt(child, "itemwidth", pie.itemWidth);
+      it.itemHeight =
+        GetAttInt(child, "itemheight", pie.itemHeight);
+      it.itemNormalBackground =
+        GetAttStr(child, "itemnormalbackground", pie.itemNormalBackground);
+      it.itemSelectedBackground =
+        GetAttStr(child, "itemselectedbackground", pie.itemSelectedBackground);
+      it.linear =
+        GetAttBool(child, "linear", pie.linear);
+      it.linearDirection =
+        GetAttStr(child, "lineardirection", pie.linearDirection);
+      it.linearOrderReversed =
+        GetAttInt(child, "linearorderreversed", pie.linearOrderReversed);
+      it.onselect =
+        GetAttStr(child, "onselect", "");
+      it.onchange =
+        GetAttStr(child, "onchange", "");
+      it.onpreview =
+        GetAttStr(child, "onpreview", "");
+
+      if ((it.id == null) || (it.id.length == 0)) {
+        it.id = GenUniqueID();
+      } // if
+
+      itemDiv.style.border = pie.itemBorder;
+      itemDiv.style.position = "absolute";
+      itemDiv.style.display = "block";
+      itemDiv.style.left = 0;
+      itemDiv.style.top = 0;
+
+      var itemHTML = "";
+
+      if (pie.pieitems.length >= pie.maxPieItems) {
+        it.linear = true;
+        // it.linearDirection = "down";
+        // it.linearOrderReversed = 0;
+      } // if
+
+      if (!it.linear) {
+        if (pagedPieItems < pie.pagedPieItems) {
+          pagedPieItems++;
+          it.linear = true;
+          // it.linearDirection = "up";
+          // it.linearOrderReversed = 1;
+        } // if
+      } // if
+
+      if (it.linear) {
+        if (it.linearOrderReversed) {
+          var a = new Array();
+          a[0] = it;
+          var n = pie.linearitems.length;
+          var i;
+          pie.linearitems.push(it);
+          for (i = 0; i < n; i++) {
+            a[i + 1] = pie.linearitems[i];
+          } // for
+          pie.linearitems = a;
+        } else {
+          pie.linearitems.push(it);
+        } // if
+      } else {
+        pie.pieitems.push(it);
+      } // if
+
+      ConfigPieMenuItem(pie, it);
+
+      var str = "";
+      var name =
+        child.getAttribute("name");
+      if (name != null) {
+        str = name + "\n";
+      } // if
+
+      var kid = 
+        child.firstChild;
+
+      while (kid != null) {
+        if ((kid.nodeType == 1) &&
+            (kid.nodeName == "piemenu")) {
+          var subPie =
+            CreatePieMenuFromSpec(kid);
+          if (subPie.resolveRef != null) {
+            subPie =
+              gPieMenus[subPie.resolveRef];
+          } else {
+            subPie.parentPie =
+              pie;
+            subPie.parentItem =
+              it;
+          }
+          it.subPie = 
+            subPie;
+        } else if ((kid.nodeType == 1) &&
+                 (kid.nodeName == "script")) {
+//          eval(kid.xml);
+        } else if ((kid.nodeType == 1) &&
+            (kid.nodeName == "html")) {
+          var result = kid;
+          if ((result != null) &&
+              (result.firstChild != null)) {
+            result = result.firstChild;
+          } // if
+          itemHTML = "";
+          while (result != null) {
+            itemHTML += result.xml;
+            result = result.nextSibling;
+          } // if
+        } else {
+          // ignore other stuff...
+        } // if
+        kid = 
+          kid.nextSibling;
+
+      } // while
+
+      var borderStyle = "none";
+      var borderWidth = 0;
+      var itemMargin = pie.itemMargin;
+
+      if (it.subPie != null) {
+        borderStyle = "groove";
+        borderWidth = 2;
+      } // if
+
+      if (itemHTML == "") {
+        itemHTML = it.name;
+      } // if
+
+      itemDiv.innerHTML =
+        "<DIV STYLE=\"margin:" + itemMargin +
+        ";text-align:center" +
+        ";border-style:" + borderStyle +
+        ";border-width:" + borderWidth +
+        "\">" +
+        itemHTML +
+        "</DIV>";
+
+      var itemWidth = 
+        it.itemWidth;
+      if (itemWidth > 0) {
+        itemDiv.style.width = itemWidth;
+      } // if
+
+      var itemHeight = 
+        it.itemHeight;
+      if (itemHeight > 0) {
+        itemDiv.style.height = itemHeight;
+      } // if
+
+      i = i + 1;
+
+    } else if ((child.nodeType == 1) &&
+        (child.nodeName == "html")) {
+
+      var result = child;
+      if ((result != null) &&
+          (result.firstChild != null)) {
+        result = result.firstChild;
+      } // if
+      pieHTML = "";
+      while (result != null) {
+        // if node type is 3 then grandkid.text ???
+        pieHTML += result.xml;
+        result = result.nextSibling;
+      } // if
+    } else {
+      // ignore other stuff...
+    } // if
+
+  } // while
+
+  if (pieHTML == "") {
+    pieHTML = pie.name;
+  } // if
+
+  centerDiv.innerHTML = 
+    "<DIV STYLE=\"text-align:center;" +
+    "vertical-align:middle;" +
+    "margin:" + pie.centerMargin + "\">" +
+    pieHTML +
+    "</DIV>";
+
+  var w = 0;
+  var h = 0;
+
+  // Calculate the size of each item.
+  var items = pie.items.length;
+  for (i = 0; i < items; i++) {
+    var it = pie.items[i];
+    var itemRect = it.div.getBoundingClientRect();
+    w = itemRect.right - itemRect.left;
+    h = itemRect.bottom - itemRect.top;
+
+    it.w = w;
+    it.h = h;
+
+    it.x = 0;
+    it.y = 0;
+    it.labelX = 0;
+    it.labelY = 0;
+  } // for
+
+  var pieitems = pie.pieitems.length;
+  var linearitems = pie.linearitems.length;
+
+  // Calculate the subtend, angle, cosine, sine, quadrant, slope,
+  // and size of each pie menu item.
+  if (pieitems > 0) {
+
+    // Calculate the angular width of each slice.
+    var twist = 0;
+    twist = twoPi / pieitems;
+
+    // Twist the other way if clockwise.
+    if (pie.clockwise) {
+        twist = -twist;
+    } // if
+
+    // Point ang towards the center of the first slice.
+    var ang =
+        DegToRad(pie.initialAngle);
+
+    // Twist backwards half a slice.
+    ang -= twist / 2.0;
+
+    // Now calculate the size and other properties of the pie items.
+    for (i = 0; i < pieitems; i++) {
+      var it = pie.pieitems[i];
+
+      var angle = ang + (twist / 2.0);
+      it.dx = Math.cos(angle);
+      it.dy = -Math.sin(angle);
+
+      it.edge1dx = Math.cos(ang);
+      it.edge1dy = -Math.sin(ang);
+      it.edge2dx = Math.cos(ang + twist);
+      it.edge2dy = -Math.sin(ang + twist);
+
+      ang += twist;
+
+    } // for i
+
+  } // if
+
+  var radius = 
+      pie.fixedRadius;
+
+  if (radius <= 0) {
+    radius = 
+      pie.minRadius;
+    if (pieitems > 1) {
+      // Increase the radius until no two labels overlap.
+      // Start by wrapping last around to the end of the 
+      // circular menu.
+
+      var lastIndex = pieitems - 1;
+      var last = null;
+//      if (pieitems == 1) {
+//        last = pie.pieitems[lastIndex];
+//      } // if            
+
+      for (i = 0; i < pieitems; i++) {
+        var it = pie.pieitems[i];
+
+        if (it.fixedRadius > 0) {
+          continue;
+        } // if
+
+        if (last != null) {
+          // Push the radius out till it and last don't overlap.
+
+          // Loop testing for overlap until they don't.
+          var maxLoops = 100;
+          while (1) {
+            maxLoops -= 1;
+            if (maxLoops < 0) {
+              break;
+            } // if
+
+            // Lay them out at the current radius.
+            ValidatePieMenuItem(pie, it, radius);
+            ValidatePieMenuItem(pie, last, radius);
+
+            // Test for overlap. Takes two to tango.
+            if (!PieMenuItemsOverlap(it, last)) {
+              // They are far enough out, so move on.
+              break;
+            } // if
+
+            // Push the menu radius out a step and try again.
+            radius += 
+              pie.radiusNotch; // *Click*!
+          } // while 1
+        } // if
+
+        last = it;
+      } // for
+    } // if
+
+    radius += pie.extraRadius;
+  } // if
+
+  pie.radius = radius;
+
+  // Calculate the size of the center.
+  if (centerDiv == null) {
+    pie.centerDivX = 0;
+    pie.centerDivY = 0;
+    pie.centerDivWidth = 0;
+    pie.centerDivHeight = 0;
+  } else {
+    var itemRect =
+        centerDiv.getBoundingClientRect();
+    w = itemRect.right - itemRect.left;
+    h = itemRect.bottom - itemRect.top;
+    pie.centerDivX = Math.round(w / -2.0);
+    pie.centerDivY = Math.round(h / -2.0);
+    pie.centerDivWidth = w;
+    pie.centerDivHeight = h;
+  } // if
+
+  var minx, miny, maxx, maxy;
+
+  if (pieitems == 0) {
+    minx = pie.centerDivX;
+    miny = pie.centerDivY;
+    maxx = pie.centerDivX + pie.centerDivWidth;
+    maxy = pie.centerDivY + pie.centerDivHeight;
+  } else {
+    minx = -radius;
+    miny = -radius;
+    maxx = radius;
+    maxy = radius;
+  } // if
+
+  // Calculate the maximum radius (squared).
+  var maxRadius = 0;
+  for (i = 0; i < pieitems; i++) {
+    var it = pie.pieitems[i];
+
+    ValidatePieMenuItem(pie, it, radius);
+
+    var itw = it.w;
+    var ith = it.h;
+    var itx0 = it.x;
+    var ity0 = it.y;
+    var itx1 = itx0 + itw;
+    var ity1 = ity0 + ith;
+
+    if (itx0 < minx) { minx = itx0; }
+    if (ity0 < miny) { miny = ity0; }
+    if (itx1 > maxx) { maxx = itx1; }
+    if (ity1 > maxy) { maxy = ity1; }
+
+    it.labelX = it.x;
+    it.labelY = it.y;
+
+    var farx = Math.max(Math.abs(itx0), Math.abs(itx1));
+    var fary = Math.max(Math.abs(ity0), Math.abs(ity1));
+    var rad = (farx * farx) + (fary * fary);
+
+    if (rad > maxRadius) { 
+      maxRadius = rad; 
+    } // if
+
+  } // for
+
+  var first = pie.firstLinearItem;
+  for (i = 0; i < linearitems; i++) {
+    var index = (i + first) % linearitems;
+    var it = pie.linearitems[index];
+
+    ValidateLinearMenuItem(pie, it, minx, miny, maxx, maxy);
+
+    var itw = it.w;
+    var ith = it.h;
+    var itx0 = it.x;
+    var ity0 = it.y;
+    var itx1 = itx0 + itw;
+    var ity1 = ity0 + ith;
+
+    if (itx0 < minx) { minx = itx0; }
+    if (ity0 < miny) { miny = ity0; }
+    if (itx1 > maxx) { maxx = itx1; }
+    if (ity1 > maxy) { maxy = ity1; }
+
+    it.labelX = it.x;
+    it.labelY = it.y;
+
+    var farx = Math.max(Math.abs(itx0), Math.abs(itx1));
+    var fary = Math.max(Math.abs(ity0), Math.abs(ity1));
+    var rad = (farx * farx) + (fary * fary);
+
+    if (rad > maxRadius) { 
+      maxRadius = rad; 
+    } // if
+
+  } // for
+
+  maxRadius = 
+    Math.floor(
+      0.95 + 
+      Math.sqrt(
+        maxRadius));
+
+  pie.maxRadius = maxRadius;
+
+  minx = minx - pie.border;
+  miny = miny - pie.border;
+  maxx = maxx + pie.border;
+  maxy = maxy + pie.border;
+
+  pie.minx = minx;
+  pie.miny = miny;
+  pie.maxx = maxx;
+  pie.maxy = maxy;
+
+  pie.w = maxx - minx;
+  pie.h = maxy - miny;
+
+  // Calculate the position of the center.
+  if (centerDiv != null) {
+    pie.centerDivX += -minx;
+    pie.centerDivY += -miny;
+
+    centerDiv.style.left = pie.centerDivX;
+    centerDiv.style.top = pie.centerDivY;
+    centerDiv.style.width = pie.centerDivWidth;
+    centerDiv.style.height = pie.centerDivHeight;
+  } // if
+
+  MovePieMenu(
+    pie,
+    pie.centerx,
+    pie.centery);
+
+  for (i = 0; i < items; i++) {
+      var it = 
+        pie.items[i];
+
+      it.div.style.left =
+        it.labelX - pie.minx;
+      it.div.style.top =
+        it.labelY - pie.miny;
+  } // for i
+
+  HidePieMenu(pie);
+}
+
+
+function ConfigPieMenuItem(pie, it)
+{
+  var itemDiv =
+    it.div;
+  var selected =
+    pie.curItem == it.index;
+
+  if (selected) {
+    itemDiv.style.backgroundColor =
+      it.itemSelectedBackground;
+    itemDiv.style.borderStyle =
+      "inset";
+    if (pie.transparentItems) {
+      itemDiv.style.filter = "";
+    } // if
+  } else {
+    itemDiv.style.backgroundColor =
+      it.itemNormalBackground;
+    itemDiv.style.borderStyle =
+      "outset";
+    if (pie.transparentItems) {
+      if (pie.curItem == -1) {
+        itemDiv.style.filter = "";
+      } else {
+        itemDiv.style.filter = "alpha(opacity=50)";
+      } // if
+    } // if
+  } // if
+}
+
+
+function Edit()
+{
+return; // XXX
+
+  if ((gPieMenu == null) ||
+      (gPieMenu.spec == null)) {
+    return;
+  } // if
+
+  var id = GenUniqueID();
+  var specid = GenUniqueID();
+
+  if (gPieMenuEditor != null) {
+    gPieMenuEditor.LoadPieMenuEditor();
+  } else {
+    var out = "";
+    out += "<HR/><DIV ";
+    out += "ID=\"" + id + "\" ";
+    out += "style=\"width:100%;behavior:url(piemenueditor.htc)\" ";
+    out += "PIEMENU=\"" + specid + "\" ";
+    out += "ONAFTERMAKEPIE=\"LoadPieMenuEditor()\">";
+    out += "Pie Menu Editor<BR/>";
+    out += "<XML ID=\"" + specid + "\">" + gPieMenu.spec.xml + "</XML>"
+    out += "</DIV>";
+    gDiv.innerHTML += out;
+    gPieMenuEditor = eval(id);
+  } // if
+}
+
+
+////////////////////////////////////////////////////////////////////////
+// Construction
+
+
+if (id == "") {
+  id = uniqueID;
+} // if
+
+var gDiv = eval(id);
+
+HandleOnLoad();
+
+
+////////////////////////////////////////////////////////////////////////
+
+
+    </SCRIPT>
+
+  </COMPONENT>
+
+  <COMMENT>
+
+HEY EMACS!!!
+Local Variables:
+mode: indented-text
+indent-tabs-mode: nil
+End:
+GOOD EMACS.
+
+  </COMMENT>
+
+</PACKAGE>

@@ -1,0 +1,183 @@
+<?xml version='1.0'?>
+
+<piemenu
+  id="root">
+
+  <html>
+    Pie Menu<BR/>
+    Demos
+  </html>
+
+  <item 
+    name="North">
+
+    <piemenu>
+
+      <html>
+	Silly<BR/>
+	Submenu
+      </html>
+
+      <item name="Bla!" fixedradius="25"/>
+
+      <item fixedradius="35">
+        <html>
+	  <IMG src="blob.jpg"/>
+	</html>
+      </item>
+
+      <item 
+        name="Go Back!"
+	fixedradius="25">
+
+      </item>
+
+      <item fixedradius="35">
+	<html>
+	  <IMG src="blob.jpg"/>
+	</html>
+      </item>
+
+    </piemenu>
+
+  </item>
+
+  <item 
+    name="NorthEast">
+
+    <piemenu file="clockpiemenu.xml"/>
+
+  </item>
+
+  <item 
+    name="East">
+    <piemenu
+      linear="1"
+      itemwidth="80">
+
+      <html>
+        Linear<BR/>
+	Menu
+      </html>
+
+      <item name="One"/>
+      <item name="Two"/>
+      <item name="Three"/>
+      <item name="Four"/>
+      <item name="Five"/>
+      <item name="Six"/>
+      <item name="Seven"/>
+      <item name="Eight"/>
+
+    </piemenu>
+  </item>
+
+  <item 
+    name="SouthEast">
+
+    <piemenu
+      name="Switch">
+      <item name="On"/>
+      <item name="Off"/>
+    </piemenu>
+
+  </item>
+
+  <item 
+    name="South">
+
+    <piemenu
+      fixedradius="40">
+
+      <html>
+        <IMG src="blob.jpg"/>
+      </html>
+
+      <item
+        linear="1"
+	lineardirection="center"
+	name="Center!"/>
+
+      <item
+	name="Edit"/>
+
+      <item
+	name="This is the Right."/>
+
+      <item
+	name="Go Back!">
+      </item>
+
+      <item
+	name="This is the Left."/>
+
+    </piemenu>
+
+  </item>
+
+  <item 
+    name="SouthWest">
+
+    <piemenu
+      name="Quad"
+      initialangle="45">
+      <item name="NE"/>
+      <item name="SE"/>
+      <item name="SW"/>
+      <item name="NW"/>
+    </piemenu>
+
+  </item>
+
+  <item 
+    name="West">
+
+    <piemenu
+      id="DirectionDistance"
+      fixedradius="40"
+      itemwidth="40">
+
+      <html>
+	Direction: None<BR/>
+	Distance: None
+      </html>
+
+      <item name="0" fixedradius="35"/>
+      <item name="45"/>
+      <item name="90" fixedradius="55"/>
+      <item name="135"/>
+      <item name="180" fixedradius="35"/>
+      <item name="225"/>
+      <item name="270" fixedradius="55"/>
+      <item name="315"/>
+
+    </piemenu>
+
+  </item>
+
+  <item 
+    name="NorthWest">
+
+    <piemenu
+      name="Overflow"
+      fixedradius="40"
+      maxpieitems="8">
+
+      <item name="One"/>
+      <item name="Two"/>
+      <item name="Three"/>
+      <item name="Four"/>
+      <item name="Five"/>
+      <item name="Six"/>
+      <item name="Seven"/>
+      <item name="Eight"/>
+      <item name="Nine"/>
+      <item name="Ten"/>
+      <item name="Eleven"/>
+      <item name="Twelve"/>
+
+    </piemenu>
+
+  </item>
+
+</piemenu>

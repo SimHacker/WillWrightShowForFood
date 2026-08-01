@@ -1,0 +1,943 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+  <HEAD>
+    <TITLE>JavaScript Pie Menus for Internet Explorer</TITLE>
+    <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+  </HEAD>
+
+  <BODY>
+
+    <CENTER>
+
+      <H1>
+	JavaScript
+	<A HREF="http://www.piemenu.com">Pie Menus</A>
+	for Internet Explorer
+      </H1>
+
+      <H3>
+	By
+	<A HREF="http://www.catalog.com/hopkins">Don Hopkins</A>
+	("<A HREF="mailto:xardox@mindspring.com">xardox@mindspring.com</A>")
+      </H3>
+
+      <HR/>
+
+<table>
+  <tr>
+    <td valign="top" width="100%">
+
+      <H2>
+	What Are Pie Menus?
+      </H2>
+
+      <P>
+	<A HREF="http://www.piemenu.com">Pie menus</A>
+	are a naturally efficient user interface technique:
+	directional selection of pie slice shaped targets.
+	The cursor starts out in the center of the pie,
+	so all targets are large, nearby,
+	and in different directions.
+	Fitts' Law explains the advantages of pie menus,
+	relating their
+	<B>fast selection speed</B>
+	and
+	<B>low error rate</B>
+	to their large target size and small distance.
+	Pie menus are easy for novice users,
+	who just follow the directions,
+	and efficient for experienced users,
+	who can quickly &quot;mouse ahead&quot;
+	once they know the way.
+      </P>
+
+    </CENTER>
+
+    <HR/>
+
+    <H2><A NAME="WhyPieMenus">Why Pie Menus?</A></H2>
+
+    <H4>
+      Q: Besides the obvious fact that
+      Pie Menus are much faster and more reliable than linear menus, 
+      why is this new implementation of Pie Menus so compelling?
+    </H4>
+
+    <H4>
+      A: Because of the synergistic way that Pie Menus combine and leverage
+      the capabilities of XML, DHTML, JavaScript, ActiveX and Internet Explorer.
+    </H4>
+
+    <UL>
+
+      <LI>
+	<B>
+	  <A NAME="FasterRef">
+	    Pie Menus are faster
+	    and more reliable than linear menus,
+	  </A>
+	</B>
+	because all of the items
+	have large wedge shaped target areas,
+	and each one is located adjacent to the cursor,
+	but in a different direction.
+	<A
+	  HREF="#Faster">(More details.)</A>
+      </LI>
+
+      <LI>
+	<B>
+	  <A NAME="XMLRef">
+	    Pie Menus are specified in XML,
+	  </A>
+	</B>
+	so designers can easily understand
+	and create them in a text editor,
+	as well as using XML processing tools like XSL. 
+	<A
+	  HREF="#XML">(More details.)</a>
+      </LI>
+
+      <LI>
+	<B>
+	  <A NAME="ConfigureRef">
+	    Pie menus are easy to configure and customize in many ways,
+	  </A>
+	</B>
+	with default attributes that can be easily overridden
+	and specified for a whole menu or any individual item.
+	<A
+	  HREF="#Configure">(More details.)</a>
+      </LI>
+
+      <LI>
+	<B>
+	  <A NAME="DHTMLRef">
+	    Pie menus are rendered with Dynamic HTML,
+	  </A>
+	</B>
+	which defines the appearance of the pie menu center and items,
+	that is embeded inside of the XML specification,
+	and can be dynamically modified in response to tracking events.
+	<A
+	  HREF="#DHTML">(More details.)</a>
+      </LI>
+
+      <LI>
+	<B>
+	  <A NAME="LookAndFeelRef">
+	    Pie menus provide
+	    automatic adaptive layout (good look),
+	    and
+	    versatile reliable tracking (good feel),
+	  </A>
+	</B>
+	with callback hooks to provide
+	rich real-time interactive application specific feedback
+	(direct manipulation).
+	<A
+	  HREF="#LookAndFeel">(More details.)</A>
+      </LI>
+
+      <LI>
+        <B>
+	  <A NAME="IntegratedRef">
+	    Pie Menus are tightly integrated with
+	    the Internet Explorer web browser
+	    and ActiveX scripting environment,
+	  </A>
+	</B>
+	so they can leverage all of its capabilities,
+	present and future.
+	<A
+	  HREF="#Integrated">(More details.)</a>
+      </LI>
+
+      <LI>
+	<B>
+	  <A NAME="FreeRef">
+	    Pie Menus are FREE and UNRESTRICTED,
+	  </A>
+	</B>
+	so you may use them freely,
+	and modify the source code
+	as well as the design
+	for your own purposes,
+	even in commercial products and web sites. 
+	<A
+	  HREF="#Free">(More details.)</a>
+      </LI>
+
+    </UL>
+
+    <HR/>
+
+    <H2>
+      <A NAME="Demos">JavaScript Pie Menu Demos</A>
+    </H2>
+
+    <P>
+      Here are some examples
+      that demonstrate the capabilities and advantages of pie menus.
+      In order to run, they require Internet Explorer version 5 or above.
+    </P>
+
+    <UL>
+      <LI>
+        <H3>
+	  <A
+	    NAME="TestPieMenus"
+	    HREF="testpiemenus.html">Test Pie Menus</A>
+	  (uses
+	  <A HREF="testpiemenus.xml">testpiemenus.xml</A>)
+	</H3>
+	<P>
+	  This demonstrates various kinds of simple pie menus,
+	  including an eight item menu,
+	  and submenus with different numbers of items.
+	</P>
+	<P>
+	  It shows how to make pie menus on a web page,
+	  by using a Dynamic HTML "DIV" element,
+	  and setting the style attribute "behavior:url(piemenu.htc)"
+	  to create a pie menu behavior component. 
+	  The content inside the "DIV"
+	  serves as a target that you click on
+	  to pop up the pie menu.
+	</P>
+	<P>
+	  You can specify attributes
+	  that are passed as parameters to the pie menu.
+	  There are several event handler attributes
+	  like "onselect" and "onchange"
+	  for attaching JavaScript or VBScript code
+	  to the pie menu,
+	  in order to respond to high level user interface events
+	  that the pie menu behavior component generates. 
+	</P>
+	  The optional "piemenu" attribute indicates
+	  the id of the XML pie menu specification to use.
+	  Or you can simply embed an XML Data Island inside of
+	  the pie menu's DIV element, using an "XML" element.
+        </P>
+        <P>
+	  The XML data that defines the pie menus
+	  can appear inline on the web page,
+	  or can be downloaded from an external XML file,
+	  or it can even be dynamically generated
+	  through the use of XSL, JavaScript, databases, etc.
+	</P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="StylePieMenus"
+	    HREF="stylepiemenus.html">Style Pie Menus</A>
+	  (uses
+	  <A HREF="stylepiemenus.xml">stylepiemenus.xml</A>)
+	</H3>
+	<P>
+	  This demonstrates how pie menu tracking handlers written in JavaScript
+	  can dynamically change the appearance of the web page during tracking,
+	  to provide
+	  real-time interactive application specific feedback
+	  (direct manipulation). 
+	</P>
+	<P>
+	  It shows how you can easily integrate pie menus with
+	  other basic web technologies such as JavaScript, Visual Basic,
+	  Dynamic HTML and Cascading Style Sheets. 
+	</P>
+	
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="DirectAnimation"
+	    HREF="directanimation.html">Direct Animation</A>
+	  (uses
+	  <A HREF="directanimation.xml">directanimation.xml</A>)
+	</H3>
+	<P>
+	  This is a demonstration of how
+	  you can easily integrate pie menus with other
+	  advanced web technologies like Direct Animation,
+	  to provide rich animated graphics and feedback.
+        </P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="SecondChoice"
+	    HREF="secondchoice.html">Second Choice</A>
+	  (uses
+	  <A HREF="secondchoice.xml">secondchoice.xml</A>)
+	</H3>
+	<P>
+	  Inspired by the "Cheese" demo at MIT Media Labs,
+	  this demonstrates how pie menus can 
+	  try to guess at your second favorite choice,
+	  by timing how long you point at each item. 
+	</P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="LinearMenus"
+	    HREF="linearmenus.html">Linear Menus</A>
+	  (uses
+	  <A href="linearmenus.xml">linearmenus.xml</A>)
+	</H3>
+	<P>
+	  This demonstrates how pie menus support
+	  both directional and linear menu items,
+	  or a combination of both.
+	</P>
+	</P>
+	  Directional pie menu items are arranged in a circle around the cursor.
+	  Linear menu items are arranged to the left or right in a row,
+	  or up and down in a column.
+	</P>
+	<P>
+	  It also demonstrates how
+	  pie menus can limit the number of directional items,
+	  and treat any extra overflow items as linear items.
+	</P>
+	<P>
+	  One benefit of
+	  this implementation's seamless support for
+	  both linear and pie menu items,
+	  is that it makes it straightforward
+	  to conduct fair user interface studies
+	  comparing the effectiveness of pie menus with linear menus.
+	  The same menus can easily be switched between pie and linear modes,
+	  and callbacks can take statistics on browsing and selection time. 
+	  This enables user interface researchers,
+	  web site designers
+	  and usability specialists
+	  to measurably demonstrate
+	  the effectiveness of pie menus over linear menus.
+	</P>
+	<P>
+	  Another benefit is that
+	  even when you decide to use linear menus,
+	  you can still enjoy all the other advantages
+	  of XML, Dynamic HTML and web browser integration
+	  that this implementation provides.
+	</P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="PunkemonPieMenus"
+	    HREF="punkemon.xml">Punkemon Pie Menus</A> 
+	  (uses
+	  <A HREF="punkemon.xml">punkemon.xml</A>
+	  and
+	  <A HREF="punkemon.xsl">punkemon.xsl</A>)
+	</H3>
+	<P>
+	  This demonstrates how pie menu XML definitions can contain
+	  embeded Dynamic HTML to define their appearance.
+	  You can take full advantage of the web browser's capabilities,
+	  including Dynamic HTML, animated GIFs, Cascading Style Sheets
+	  and tables.
+	  Pie menu items and centers can be any size,
+	  and they can incorporate arbitrarily complex
+	  formatted multimedia documents. 
+	</P>
+	<P>
+	  Furthermore, it demonstrates how
+	  pie menu event handlers,
+	  written in JavaScript or VBScript,
+	  can respond to user input to provide rich feedback.
+	  You can dynamically change the
+	  JavaScript object properties,
+	  Dynamic HTML content and
+	  Cascading Style Sheet styles 
+	  of the pie menu center, items and web page,
+	  to provide the user with
+	  rich, engaging interactive graphical feedback.
+	</P>
+	<P>
+	  It also demonstrates how you can use an XSL style sheet
+	  to dynamically transform an application specific XML document
+	  (a database describing Punkemon character playing cards)
+	  into a web page with a complex tree of pie menus.
+	  The XML pie menus are programatically generated from the XML database
+	  by an XSL style sheet. 
+	</P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="PieMenuEditor"
+	    HREF="editme.xml">Pie Menu Schema Editor</A>
+	  (uses
+	  <A HREF="piemenuschemaeditor.htc">piemenuschemaeditor.htc</A>,
+	  <A HREF="piemenuschemaeditor.xsl">piemenuschemaeditor.xsl</A>,
+	  and
+	  <A HREF="piemenuxmlschema-1.0.xsd">piemenuxmlschema-1.0.xsd</A>)
+	</H3>
+	<P>
+	  This is a pie menu editor,
+	  implemented as another Dynamic HTML Behavior Component.
+	  It lets you browse a tree of pie menus defined in XML,
+	  examine and edit any property of any pie menu or item,
+	  totally customize the look and feel of the user interface,
+	  then see what your pie menus look like and try them out.
+	</P>
+	<P>
+	  It demonstrates the versatiliy of representing pie menus as XML,
+	  by browsing and editing the XML pie menu definitions directly.
+	  The editor dynamically generates a Dynamic HTML user interface
+	  based on a separate file containing an XML Schema,
+	  that allows you browse the tree of pie menus and items
+	  and edit any of their properties. 
+	</P>
+	<P>
+	  It also demonstrates the use of XSL for transforming a pie menu specification
+	  into a web page containing a pie menu editor on that pie menu.
+	  Any XML file containing a pie menu definition
+	  can point to the pie menu editor style sheet.
+	  When you open it up in Internet Explorer,
+	  it will dynamically generate
+	  a web page for editing the pie menu. 
+	</P>
+      </LI>
+      <LI>
+        <H3>
+	  <A
+	    NAME="Fasteroids"
+	    HREF="fasteroids.html">Fasteroids</A>
+	  (uses
+	  <A HREF="fasteroids.htc">fasteroids.htc</A>)
+	</H3>
+	<P>
+	  Fasteroids is a free game using both pie menus and linear menus! 
+	</P>
+	<P>
+	  The goal of Fasteroids is to
+	  help the space ship blast away the asteroids. 
+	  But its real purpose is to compare
+	  the selection speeds and error rates of directional
+	  "<a href="http://www.PieMenu.com">pie menus</a>"
+	  versus traditional "linear menus". 
+	  The actual point of the game is
+	  to give you a fun and fair way
+	  to test drive and compare 
+	  pie menus and linear menus for yourself.
+	</P>
+      </LI>
+    </UL>
+
+    <HR/>
+
+    <H2>Supporting Details</H2>
+
+    <UL>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="Faster"
+	    HREF="#FasterRef">
+	    Pie Menus are faster and more reliable than linear menus.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    In scientific experiments comparing Pie Menus with linear menus,
+	    Pie Menus have been shown to be signifigantly faster
+	    and to have a lower error rate than linear menus. 
+	  </LI>
+	  <LI>
+	    Fitts' Law explains why pie menus are better than linear menus:
+	    because their item target areas
+	    are large and all adjacent to the mouse.
+	    The larger the target area and the closer the target,
+	    the faster you select with fewer errors.
+	  </LI>
+	  <LI>
+	    Pie menus are optimized to exploit Fitts' Law,
+	    and linear menus are not;
+	    therefore linear menus are
+	    slower and more error prone than pie menus. 
+	  </LI>
+	</UL>
+        <P/>
+      </LI>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="XML"
+	    HREF="#XMLRef">
+	    Pie Menus are specified in XML.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    Standard, simple syntax for describing
+	    arbitrarily nested trees of pie menus.
+	    The syntax of XML pie menus is very obvious
+	    and easy to read, learn, modify and create.
+	  </LI>
+	  <LI>
+	    Pie Menus are configured with reasonable defaults,
+	    so the XML menu descriptions are concise.
+	    And designers can easily override the defaults,
+	    and customize the properties, behavior and visual appearance
+	    of any pie menu, item or submenu.
+	  </LI>
+	  <LI>
+	    XML Pie Menus can be automatically generated and used
+	    by many XML tools and applications,
+	    including XSL style sheets, web servers,
+	    databases and XML editors.
+	  </LI>
+	  <LI>
+	    The
+	    <A HREF="#Punkemon">Punkemon Pie Menus</A>
+	    example shows how to use an XSL style sheet
+	    (<A HREF="punkemon.xsl">punkemon.xsl</A>)
+	    to automatically transform an XML database
+	    (view source of
+	    <A HREF="punkemon.xml">punkemon.xml</A>)
+	    into a web page with nested pie menus
+	    (<A HREF="punkemon.xml">Punkemon Pie Menus</A>).
+	  </LI>
+	</UL>
+        <P/>
+      </LI>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="Configure"
+	    HREF="#ConfigureRef">
+	    Pie menus are easy to configure and customize in many ways.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    Pie menus have  default attributes that can be easily overridden
+	    and specified for a whole menu or any individual item.
+	  </LI>
+	</UL>
+	<P/>
+      </LI>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="DHTML"
+	    HREF="#DHTMLRef">
+	    Pie Menus are rendered using Dynamic HTML.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    Arbitrary Dynamic HTML can be embeded in XML Pie Menu specifications,
+	    to define the appearance of the pie menu center and items.
+	    Anything you can describe in DHTML can be used to make pie menus.
+	  </LI>
+	  <LI>
+	    Pie menus support arbitrarily shaped images
+	    in the pie menu center and items,
+	    as well as dynamic control over the background appearance,
+	    highlighting and transparency effects.
+	  </LI>
+	  <LI>
+	    Pie menu callbacks can dynamically alter the content and appearance
+	    of the pie menu center, items and web page in response to user input. 
+	    The
+	    <A HREF="#StylePieMenus">Style Pie Menus</A>
+	    demo shows how the pie menu callbacks
+	    can dynamically modify the
+	    properties of the text on the web page,
+	    to provide immediate and intuitive feedback.
+	  </LI>
+	  <LI>
+	    Pie menus can be easily integrated with ActiveX,
+	    DirectAnimation, JPEG, animated GIF, PNG, MPEG,
+	    QuickTime, Flash, Java, and many other technologies
+	    supported by Internet Explorer. 
+	    The
+	    <A HREF="#DirectAnimation">Direct Animation</A>
+	    demo shows how you can easily integrate pie menus and
+	    interactive structured graphics created with Direct Animation.
+	  </LI>
+	  <LI>
+	    The
+	    <A HREF="#Punkemon">Punkemon Pie Menus</A>
+	    demo shows how pie menus can incorporate animated GIF images
+	    and dynamic HTML effects like scaling,
+	    as well as large pie menu items
+	    containing HTML tables and formatted text. 
+	  </LI>
+	</UL>
+        <P/>
+      </LI>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="LookAndFeel"
+	    HREF="#LookAndFeelRef">
+	      Pie menus have powerful user interface
+	      and sophisticated automatic layout features.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    This implementation of pie menus
+	    draws from the first hand experience of
+	    using pie menus on a daily basis,
+	    performing years of user interface research,
+	    testing and refining their usability,
+	    developing pie menus for various gui toolkits, 
+	    as well as shipping them in commercial products,
+	    including the top selling computer game
+	    <a HREF="http://www.thesims.com">The Sims</a>
+	    from
+	    <a HREF="http://www.maxis.com">Maxis</a>. 
+	  </LI>
+	  <LI>
+	    Supports penultimate choice tracking,
+	    inspired by the "Cheese" system demonstrated at MIT Media Labs.
+	    The
+	    <A HREF="#SecondChoice">Second Choice</A>
+	    demo shows how pie menus can try to guess your second favorite choice,
+	    based on the amount of time you spend pointing at each menu item. 
+	  </LI>
+	  <LI>
+	    The direction and distance of cursor motion
+	    may be used as a continuous dynamic argument
+	    to the menu selection.
+	    This is useful for pulling out
+	    to select a font size with distance,
+	    rotating around to select an angle,
+	    or picking from a continuous color wheel.
+	  </LI>
+	  <LI>
+	    Pie menus and items have many customizable parameters
+	    to control the layout, visual appearance and tracking behavior
+	    of every pie menu and item.
+	  </LI>
+	  <LI>
+	    Pie menus support browsing arbitrarily deep nested submenus. 
+	  </LI>
+	  <LI>
+	    Supports an arbitrary number of pie menu or linear items,
+	    as well as limiting the number of pie menu items
+	    and overflowing extra items into linear menu items.
+	  </LI>
+	  <LI>
+	    You can even create hybrid menus with a mixture of
+	    pie and linear menu items in the same menu,
+	    as well as pure linear and pure pie menus,
+	    pie menus with linear submenus,
+	    and linear menus with pie submenus.
+	  </LI>
+	  <LI>
+	    Supports the layout out linear menu items
+	    in four directions (up, down, left and right),
+	    as well as centered in the middle of the menu.
+	  </LI>
+	  <LI>
+	    The
+	    <A HREF="#LinearMenus">Linear Menus</A>
+	    demo shows hybrid pie menus with linear overflow items,
+	    as well as various linear menu styles.
+	  </LI>
+	  <LI>
+	    The XML pie menu specifications
+	    support the sharing of menus
+	    by inline nesting in the XML tree,
+	    indirect id reference,
+	    direct text inclusion,
+	    and external file references.
+	    This makes it possible
+	    to create libraries of reusable pie menus,
+	    and easily distribute and deploy them on the web.
+	  </LI>
+	  <LI>
+	    The 
+	    <A HREF="#TestPieMenus">Test Pie Menus</A>
+	    demo shows how to use indirect references
+	    to share pie menus in the same xml file,
+	    and load submenus from external xml files.
+	    The xml file
+	    <A HREF="testpiemenus.xml">testpiemenus.xml</A>
+	    includes
+	    <A HREF="testpiemenus.xml">clockpiemenu.xml</A>,
+	    and the clock pie menus uses an internal reference
+	    to share the minute submenu
+	    between all the different hour items. 
+	  </LI>
+	</UL>
+        <P/>
+      </LI>
+
+      <LI>
+        <H3>
+	  <A
+	    NAME="Integrated"
+	    HREF="#IntegratedRef">
+	    Pie Menus are tightly integrated with
+	    the Internet Explorer web browser
+	    and ActiveX scripting environment.
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    Pie menus integrate seamlessly 
+	    with Internet Explorer through ActiveX,
+	    so they can leverage all of its capabilities,
+	    present and future.
+	  </LI>
+	  <LI>
+	    Pie menus are implemented as a modular plug-in
+	    Dynamic HTML Behavior Component,
+	    so it's easy to create pie menus on web pages
+	    without understanding the internal implementation. 
+	    The
+	    <A HREF="piemenu.htc">piemenu.htc</A>
+	    file actually contains XML that
+	    defines an ActiveX object interface
+	    with its own properties, methods and events,
+	    and JavaScript code that implements it. 
+	  </LI>
+	  <LI>
+	    It's easy to distribute applications
+	    that use pie menus over the Internet,
+	    since they run in the web browser and
+	    are configured by downloading xml.
+	  </LI>
+	  <LI>
+	    Pie Menus are configured with XML Data Islands
+	    that can be embeded on the web page,
+	    downloaded from separate file references,
+	    generated dynamically from an XML database or web server,
+	    or procedurally generated with XSL style sheets, JavaScript, etc. 
+	  </LI>
+	  <LI>
+	    XML is a widely used, well supported data format
+	    that is excellent for
+	    describing the hierarchal tree structure
+	    of pie menus and items with nested submenus,
+	    as well as embedded XHTML content to describe the presentation.
+	    The XML "piemenu" and "item" elements nest inside of each other
+	    to build arbitrary menu trees, with "html" elements containing
+	    arbitrary Dynamic HTML.
+	    The elements may be assigned many attributes,
+	    but they all have reasonable default values,
+	    so you only have to specify the ones you need.
+	    The pie menu items inherit many of their default attributes
+	    from their parent piemenu,
+	    so you can specify properties for the whole piemenu,
+	    and override them for any individual item. 
+	  </LI>
+	  <LI>
+	    Dynamic HTML is a
+	    flexible,
+	    well known,
+	    widely supported and
+	    graphically expressive markup language,
+	    used by pie menus to define their visual appearance
+	    and interactive behavior.
+	    Pie menus support the XML-based XHTML standard,
+	    which is the new XML compliant version of Dynamic HTML,
+	    because it cleanly nests inside of XML pie menu specifications,
+	    and is easily generated by XSL style sheets
+	    and other XML processing software.
+	  </LI>
+	  <LI>
+	    The pie menu component supports a full set of callback events,
+	    so JavaScript of VBScript code on the web page
+	    can dynamically track pie menu browsing and selection,
+	    to implement selection handlers and 
+	    rich interactive application specific feedback.
+	  </LI>
+	  <LI>
+	    The
+	    <A HREF="#PieMenuEditor">Pie Menu Editor</A>
+	    demonstrates a Dynamic HTML user interface
+	    for interactivally editing and testing Pie Menus,
+	    in terms of their underlying XML specifications.
+	  </LI>
+	  <LI>
+	    JavaScript pie menus are freely available,
+	    and implemented as a reusable
+	    Dynamic HTML behavior component.
+	    This modular approach cleanly separates
+	    the JavaScript pie menu implementation
+	    from the XML pie menu specifications,
+	    from the DHTML web page presentations,
+	    from the JavaScript pie menu editor,
+	    from the XML pie menu editor interface specification metadata,
+	    and from the JavaScript event handers. 
+	  </LI>
+	</UL>
+        <P/>
+      </LI>
+
+      <LI>
+	<H3>
+	  <A
+	    NAME="Free"
+	    HREF="#FreeRef">
+	    Pie Menus are FREE and UNRESTRICTED,
+	  </A>
+	</H3>
+	<UL>
+	  <LI>
+	    Pie Menus are designed to
+	    be free,
+	    easy to learn,
+	    teach themselves,
+	    save time,
+	    reduce errors,
+	    prevent frustration,
+	    provide rich expressive feedback,
+	    support robust real-world applications,
+	    integrate easily into diverse workflow environments,
+	    serve as a free software design example
+	    as well as an inspiration for further research,
+	    and as a benefit to
+	    project managers,
+	    software developers,
+	    academic researchers, 
+	    computer programmers,
+	    usability specialists,
+	    user interface designers,
+	    web browsers, game players,
+	    students, hobbiests, hackers, 
+	    busy people with tight deadlines,
+	    limited budgets
+	    and ambitious projects to deliver,
+	    people who have better ways to spend their life
+	    that pushing a mouse around,
+	    pointing and pecking at tiny targets
+	    like trained chickens:
+	    most importantly the users. 
+	  </LI>
+	  <LI>
+	    You may use and modify the source code
+	    as well as the design
+	    for your own purposes,
+	    even in commercial products and web sites. 
+	    You are only required preserve the copyright message.
+	  </LI>
+	  <LI>
+	    Pie Menus for Internet Explorer 5.0 JScript.
+	    Copyright (C) 2001 by Don Hopkins.
+	    All rights reserved. 
+	    Designed and implemented by
+	    <A HREF="http://www.catalog.com/hopkins">Don Hopkins</A>,
+	    ("<A HREF="mailto:xardox@mindspring.com">xardox@mindspring.com</A>").
+	    Distributed at
+	    "<A HREF="http://www.piemenu.com">www.piemenu.com</A>".
+	  </LI>
+	  <LI>
+	    This program is provided for unrestricted use, 
+	    provided that this copyright message is preserved. 
+	    There is no warranty, and no author or distributer 
+	    accepts responsibility for any damage caused by 
+	    this program. 
+	  </LI>
+	  <LI>
+	    The ideas behind pie menus are not patented or 
+	    restricted in any way, and the interface and 
+	    algorithms may be freely copied and improved upon. 
+	    Don't bother patenting pie menus,
+	    because the idea has been around
+	    for a long time in many forms,
+	    and your patent will most likely be
+	    invalid and easy to challenge,
+	    therefore a waste of time and money. 
+	    It would be much better to spend your resources
+	    innovating new ideas and developing great products
+	    instead of trying to patent obvious old ideas. 
+	  </LI>
+	  <LI>
+	    This code and the ideas behind it were developed 
+	    over time by Don Hopkins, thanks to the support of:
+	    University of Maryland, UniPress Software, 
+	    Sun Microsystems, DUX Software, Turing Institute, 
+	    Carnegie Mellon University, Kaleida Labs, 
+	    Interval Research Corporation, Maxis Software,
+	    Electronic Arts, Lush Creations, 
+	    Mike Gallaher, Mark Weiser, Jack Callahan,
+	    Ben Shneiderman, Mitch Bradley, Owen Densmore,
+	    Arthur van Hoff, James Gosling, Ted Selker,
+	    David Liddle, Brad Meyers, Bill Verplank,
+	    Craig Hubley, Bob Adams, David Levitt,
+	    Russel Nelson, John Gilmore, Hugh Daniel,
+	    Josh Siegel, Mary Hopkins, Levi Kruger,
+	    Jim Mackraz, Eric Bowman, Jamie Doornbos
+	    and Will Wright.
+	  </LI>
+	</UL>
+	<P/>
+      </LI>
+
+    </UL>
+
+    <HR/>
+
+    <H2>Credits and Fine Print</H2>
+
+    <P>
+      For the complete credits,
+      as well as some swell entertainment,
+      please don't forget to read the
+      <A HREF="runonsentence.html">fine print</A>.
+    </P>
+
+    <HR/>
+
+    <CENTER>
+
+<!-- Begin Amazon Honor System Paybox -->
+<img src="http://s1.amazon.com/exec/varzea/tipbox/AC13NPI2GXPXC/T1SU7A9RBA4EZR" usemap="#T1SU7A9RBA4EZR" border="0" alt="Amazon Honor System">
+<map name="T1SU7A9RBA4EZR">
+<area coords="40,100,160,160" href="http://s1.amazon.com/exec/varzea/pay/T1SU7A9RBA4EZR" alt="Click Here to Pay" target=_top>
+<area coords="23,183,178,195" href="http://s1.amazon.com/exec/varzea/subst/fx/help/how-we-know.html" alt="Learn More" target=_top>
+</map>
+<!-- End Amazon Honor System Paybox -->
+
+    </CENTER>
+
+    <HR/>
+
+    </td>
+    <td valign="top">
+
+<script type="text/javascript">
+<!--
+google_ad_client = 'pub-1513008428311836';
+google_ad_width = 120;
+google_ad_height = 600;
+google_ad_format = '120x600_as';
+// -->
+</script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+    </td>
+  </tr>
+</table>
+
+    <EM>
+      By
+      <A HREF="http://www.catalog.com/hopkins">Don Hopkins</A>
+      (<A HREF="mailto:xardox@mindspring.com">xardox@mindspring.com</A>)
+    </EM>
+
+  </BODY>
+
+</HTML>

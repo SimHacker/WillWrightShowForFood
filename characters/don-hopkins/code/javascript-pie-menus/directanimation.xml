@@ -1,0 +1,26 @@
+<?xml version='1.0'?>
+
+<piemenu
+  id="directanimation"
+  fixedradius="40"
+  centerbackground="transparent"
+  centerborderwidth="0">
+
+  <html>
+    <object
+      id="DAViewer"
+      style="width:500;height:500"
+      classid="CLSID:B6FFC24C-7E13-11D0-9B47-00C04FC2F51D">
+    </object>
+  </html>
+
+  <item id="black"><html><span style="background:gray;color:black"><B>Black</B></span></html></item>
+  <item id="red"><html><span style="background:gray;color:red"><B>Red</B></span></html></item>
+  <item id="orange"><html><span style="background:gray;color:orange"><B>Orange</B></span></html></item>
+  <item id="yellow"><html><span style="background:gray;color:yellow"><B>Yellow</B></span></html></item>
+  <item id="white"><html><span style="background:gray;color:white"><B>White</B></span></html></item>
+  <item id="green"><html><span style="background:gray;color:green"><B>Green</B></span></html></item>
+  <item id="blue"><html><span style="background:gray;color:blue"><B>Blue</B></span></html></item>
+  <item id="purple"><html><span style="background:gray;color:purple"><B>Purple</B></span></html></item>
+
+</piemenu>

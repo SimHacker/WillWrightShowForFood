@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+
+<piemenu
+  fixedradius="30"
+  centermargin="20">
+
+  <html>
+    Text<BR/>
+    Style
+  </html>
+
+  <item name="Weight">
+
+    <piemenu
+      id="FontWeight"
+      fixedradius="10"
+      centervisible="0">
+
+      <item id="bold"><html><B>Bold</B></html></item>
+      <item id="normal"><html>Normal</html></item>
+
+    </piemenu>
+
+  </item>
+
+  <item>
+
+    <html>Color</html>
+
+    <piemenu
+      id="FontColor"
+      fixedradius="20"
+      centervisible="0">
+
+      <item id="black"><html><span style="color:black">Black</span></html></item>
+      <item id="blue"><html><span style="color:blue">Blue</span></html></item>
+      <item id="green"><html><span style="color:green">Green</span></html></item>
+      <item id="red"><html><span style="color:red">Red</span></html></item>
+
+    </piemenu>
+  </item>
+
+  <item>
+
+    <html>Emphesis</html>
+
+    <piemenu
+      id="FontEmphesis"
+      fixedradius="10"
+      centervisible="0">
+
+      <item id="italic"><html><I>Italic</I></html></item>
+      <item id="normal"><html>Normal</html></item>
+
+    </piemenu>
+
+  </item>
+
+  <item>
+
+    <html>Size</html>
+
+    <piemenu
+      id="FontSize"
+      centermargin="4"
+      fixedradius="25"
+      inactiveradius="0">
+
+      <html>
+        5<BR/>
+        Point
+      </html>
+
+      <item>
+        <html>
+	  Pull Out<BR/>
+	  Font Size
+	</html>
+      </item>
+
+    </piemenu>
+
+  </item>
+
+</piemenu>

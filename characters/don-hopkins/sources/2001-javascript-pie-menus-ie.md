@@ -34,6 +34,20 @@ JavaScript or VBScript. Live copy:
 - **Second Choice** credits the MIT Media Lab "Cheese" demo for
   penultimate-choice timing; **Punkemon** shows XSL transforming an XML
   card database into a tree of pie menus.
+- **The source is cached in this repo**:
+  [`../code/javascript-pie-menus/`](../code/javascript-pie-menus/README.md)
+  — `piemenu.htc`, Fasteroids, Punkemon, the schema editor, and the demo
+  XML, verbatim from piemenu.com's archive.
+
+## HN retellings
+
+Where Don has linked this page or its code:
+
+| Comment | Thread | What it adds |
+|---|---|---|
+| [2021-05-26](https://news.ycombinator.com/item?id=27288024) | Use native context menus on Mac OS | Why bet on browser APIs over niche toolkits ("quite clear to me in 1997"); links this page, [piemenu.htc](../code/javascript-pie-menus/piemenu.htc), [punkemon.xml](../code/javascript-pie-menus/punkemon.xml) + [xsl](../code/javascript-pie-menus/punkemon.xsl) |
+| [2021-06-06](https://news.ycombinator.com/item?id=27411115) | Browsers standardizing plugins | "Plugin" vs "component" as historical accident, not CS category; links this page, piemenu.htc, and the earlier ActiveXPieMenus |
+| [2015-04-26](https://news.ycombinator.com/item?id=9442098) | TrackPoint (2011) | Windows "Flicks" are pie menus by another name; links the [JavaScriptPieMenus.mov](http://donhopkins.com/home/movies/JavaScriptPieMenus.mov) demo video beside the HCIL 1991 and Sims pie menu films |
 
 ## The document, verbatim
 

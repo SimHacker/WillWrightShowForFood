@@ -1,0 +1,842 @@
+<?xml version='1.0'?>
+<?xml-stylesheet type="text/xsl" href="punkemon.xsl" ?>
+
+<punkeverse>
+
+  <punkeland
+    name="Rave Caves"
+    itemradius="60"
+    pieradius="100">
+
+    <punkemon
+      name="Candibi"
+      foundin="Rave Caves"
+      attacks="Disturbing Cuteness, Pacifier attack"
+      likes="Candy, Stuffed Animals, Loops"
+      dislikes="Ambient music, spankings, bed-time"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/rave/candibi.html"
+      image="Punkemon/candibi.gif">
+      <description>
+        The youngest and perkiest denizens of the Rave Caves, Candibis
+        spend much of their time spinning around in circles with one
+        hand high in the air and the other hand tightly clutching a
+        large stuffed animal. Naturally shy, these cuddly creatures
+        can often be enticed into a Punkeball with large amounts of
+        candy, especially if the candy comes in perforated sheets."
+      </description>        
+    </punkemon>
+
+    <punkemon
+      name="Zona"
+      foundin="Rave Caves"
+      attacks="Can't attack now... must dance..."
+      likes="Ketamine, trippy laser lights"
+      dislikes="Too stoned to dislike anything"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/rave/zona.html"
+      image="Punkemon/zona.gif">
+      <description>
+	The Zona is a curious creature, compelled to dance continually
+        without stopping or allowing anything to distract it. The best
+        way to obtain one is by luring it to you with well-mixed
+        trancey loops and designer drugs, and it'll come right to you
+        without knowing what's going on (it'll be too wrapped up in
+        the music).
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Breakbeak"
+      foundin="Rave Caves"
+      attacks="Hustle Rustle, Zillion Pecks"
+      likes="Seizure-inducing strobes, caffeine"
+      dislikes="Anything slower than 150 BPM"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/rave/breakbeak.html"
+      image="Punkemon/breakbeak.gif">
+      <description>
+        The hyperactive, owl-like BreakBeak can be a tricky catch for
+        even the most seasoned PunkeMon collector -- its rapid
+        motions, keen eyesight in low-light areas, and unpredictable
+        temper thwart most capturing techniques. If one were to use a
+        Madgear trained to blare out rhythm patterns consisting of
+        multiple drum loops of varying durations layered together...
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+  <punkeland
+    name="Daru-Doll Island"
+    itemradius="60"
+    pieradius="100">
+
+    <punkemon
+      name="Bokuzoku"
+      foundin="DaruDoll Island"
+      attacks="Loud engines, sneer, baseball bat to the head"
+      likes="Motor oil, speed, loudness"
+      dislikes="culture"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/daru/bokuzoku.html"
+      image="Punkemon/bokuzoku.gif">
+      <description>
+	Bokuzoku can be found in packs, roaring up and down the long
+        stretches of road that criss-cross DaruDoll Island. Surviving
+        on a diet of motor oil and roadkill, these creatures are
+        similar in many ways to their western cousin, the Hogrod. The
+        best way to capture a Bokuzoku is to lure him away from the
+        pack with promises of hot young American girls, and then whack
+        him over the head with a lead pipe, stuff him in a Punkeball,
+        and run away before any of the others notice.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Takotaku"
+      foundin="DaruDoll Island / Western Lands"
+      attacks="Plethora of useless information"
+      likes="Hentai, Jolt cola"
+      dislikes="Physical activity, interaction with others"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/daru/takotaku.html"
+      image="Punkemon/takotaku.gif">
+      <description>
+        Takotaku (and their western counterparts, the Otakupus) are
+        most easily recognized by their soft, pullover-shaped shells,
+        and love for completely useless information. While an eastern
+        Takotaku could tell you the birthdays and bloodtypes of each
+        of the characters in the epic "Record of Lodoss War", a
+        western Otakupus thrives on the exact mechanical specifics of
+        every ship ever to make the Kessell Run, and could recite the
+        entirety of "The Hitchiker's Guide to the Galaxy" in Klingon.
+	<P/>
+	A Punkemon trainer can tell when Takotaku/Otakupus are in the
+        area by their loud call of "d00d!", which is not a mating call
+        as much as an attention-getter to begin the exchange of
+        information. Often returning the call will cause a curious
+        Takotaku/Otakupus to waddle over to you for easy capture.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Otakupus"
+      foundin="DaruDoll Island / Western Lands"
+      attacks="Plethora of useless information"
+      likes="Hentai, Jolt cola"
+      dislikes="Physical activity, interaction with others"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/daru/takotaku.html"
+      image="Punkemon/takotaku2.gif">
+      <description>
+        Takotaku (and their western counterparts, the Otakupus) are
+        most easily recognized by their soft, pullover-shaped shells,
+        and love for completely useless information. While an eastern
+        Takotaku could tell you the birthdays and bloodtypes of each
+        of the characters in the epic "Record of Lodoss War", a
+        western Otakupus thrives on the exact mechanical specifics of
+        every ship ever to make the Kessell Run, and could recite the
+        entirety of "The Hitchiker's Guide to the Galaxy" in Klingon.
+	<P/>
+	A Punkemon trainer can tell when Takotaku/Otakupus are in the
+        area by their loud call of "d00d!", which is not a mating call
+        as much as an attention-getter to begin the exchange of
+        information. Often returning the call will cause a curious
+        Takotaku/Otakupus to waddle over to you for easy capture.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Cospla"
+      foundin="DaruDoll Island, conventions"
+      attacks="Doppleganger anime attack"
+      likes="Dressing up, delicious Takotaku flesh"
+      dislikes="Boring clothes, sleazy salarymen"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/daru/cospla.html"
+      image="Punkemon/cospla.gif">
+      <description>
+        Cosplas are the natural predators of Takotaku on DaruDoll
+        Island. Shapeless in their natural forms, Cosplas assume an
+        appealing appearance in order to lure unsuspecting Takotaku to
+        their doom. Usually if you shake a Takotaku at a Cospla you
+        encounter in the field, she will assume a solid form and strut
+        toward you long enough for you to capture her in a Punkeball.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Gaymera"
+      foundin="Daru-Doll Island"
+      attacks="Tantrum, bitchiness"
+      likes="Anything 'campy'"
+      dislikes="Cospla"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/daru/gaymera.html"
+      image="Punkemon/gaymera.gif">
+      <description>
+        This flamboyant and spunky creature inhabits Daru-Doll Island,
+        with a showtune in its heart and an affinity for kitsch. At
+        first, they're reserved and shy... but once they come out of
+        the shell their entire demeanor changes, sometimes resulting
+        in frequent and rapid changes in their mood. They often travel
+        in small groups together.
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+  <punkeland
+    name="PunkeTown"
+    itemradius="90"
+    pieradius="100">
+
+    <punkemon
+      name="Tweakablink"
+      foundin="Punke-Town, in the middle of the street at four a.m., running around and around in tight circles"
+      attacks="Boundless angry energy"
+      likes="Speed, caffeine, speed, sugar, speed, speed"
+      dislikes="Sleep"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/tweaker.html"
+      image="Punkemon/tweaker.gif">
+      <description>
+        Boundless dynamos of shaking, twitching energy, Tweakablinks
+        are often hooked up to giant machines that use their
+        hyperkinesis to power entire cities. Occasionally one wanders
+        free, however, and wrecks untold damage. The best way to
+        capture a stray Tweakablink is to start a conversation with
+        it, and gradually begin talking faster and faster. It will try
+        to keep up the pace, until eventually its tiny mind will snap,
+        and it will most likely rip off all of its clothes and wail
+        loudly while beating its head against the pavement. Soon
+        after, it will lose consciousness and you can capture it in
+        you Punkeball.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Punkachu"
+      foundin="Punke-Town"
+      attacks="Electric-charged boot to the head"
+      likes="Loud music, fights"
+      dislikes="Flower shows, cuddling"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/punkachu.html"
+      image="Punkemon/punkachu.gif">
+      <description>
+        The most famous and popular Punkemon, Punkachu lives on a diet
+        of Guinness and batteries, discharging tremendous amounts of
+        electricity and angst at underground punk shows. Living in
+        perpetual drunken hatred of all other Punkemon, Punkachus are
+        always ready for a fight, unless they've had a little too
+        much, at which time they collapse into a crying, quivering
+        ball and bitterly mourn the cancellation of Mork and Mindy.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="G-Bunny"
+      foundin="Watership Downtown (West side of Punke-Town)"
+      attacks="Carrot Gat"
+      likes="Malt Liqour, fly honey bunnies, props"
+      dislikes="Bunnies who ain't down for their hood"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/gbunny.html"
+      image="Punkemon/gbunny.gif"
+      break="1">
+      <description>
+	Wandering the streets in "gangs", G-Bunnies are a formidable
+        threat to "outsiders". Punkemon trainers intrinsically
+        familiar with G-Bunny lingo will have an easier time with
+        them, but any attempts to feign their language will usually
+        result in a "carrot in the ass".
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Tutone"
+      foundin="Punke-Town"
+      attacks="Skank attack"
+      likes="Mopeds, Ska"
+      dislikes="Racism, hate"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/tutone.html"
+      image="Punkemon/tutone.gif">
+      <description>
+        A feisty race of Punkemon, legends say that the Tutones were
+        originally two different Punkemon races that merged into
+        one. Tutone's can be identified from afar by their distinct
+        call of "Pickitup-pickitup-pickitup". Local folklore hints at
+        the existance of two similar races; the "Vespods" and the
+        "Roodbois", but no evidence has yet been found to support this
+        claim.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Madgear"
+      foundin="Punkie Town, Kupakoffi Cape"
+      attacks="Gear Grind, Smokescreen, Screech"
+      likes="Goth Gurlz, Punk Gurlz, Gurlz"
+      dislikes="Boyz"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/madgear.html"
+      image="Punkemon/madgear.gif">
+      <description>
+        Enjoys wheeling around town, telling people Skinny Puppy is
+        better than anything available nowadays - usually accompanied
+        by synth, drum machine and vaccuum cleaner noises. If feeling
+        'happy' (rare) Kraftwerk can be heard as well.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Brashibark"
+      foundin="Punketown"
+      attacks="Verbal Spew, Insult Cloud"
+      likes="Leather, cigarettes, passive Punkemon to push around"
+      dislikes="Anyone who draws away attention"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/brashibark.html"
+      image="Punkemon/brashibark.gif">
+      <description>
+        Brashibarks are most easily found by the relentless torrent of
+        cigarette smoke and verbal abuse that streams from their
+        mouths at friend and foe alike. Expert hunters can also track
+        them down by their constant restless motion and "old skool"
+        buckle-and-leather look. Their attack is particularly
+        devastating against Teenygoths and others with low
+        self-assurance, but they are rendered harmless and can be
+        captured by anyone gutsy enough to out-insult them.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Junkybastard"
+      foundin="PunkeTown"
+      attacks="Bowel Disruptor, The Truth"
+      likes="..."
+      dislikes="Virtually all forms of PunkeMon, especially The Man, Xian, Dobbit, and Gothimon (?) Types"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/ptown/Junkybastard.html"
+      image="Punkemon/junkybastard.gif">
+      <description>
+        Junkybastard is a fluke type of Junkigothi found captive in
+        PunkeTown, and wild alone in The Westernlands. Apparent
+        captures of Junkybastards often turn out to be Punkygothis or
+        Teenygothis in clever disguises, or the occasional Brashibark
+        when the trainer is a complete idiot. There is no easy way to
+        capture Junkybastard, however, Junkybastard is an evolved form
+        of Junkygothi, and might be captured similarly. Reminder:
+        similarly does not mean at all.
+	<P/>
+	Trainer Tip: DO NOT take a wild Junkybastard into the city!
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+  <punkeland
+    name="Monokrometropolis"
+    itemradius="60"
+    pieradius="100">
+
+    <punkemon
+      name="Industrogothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmindusg.html"
+      image="Punkemon/pmindusg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Junkygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmjunkyg.html"
+      image="Punkemon/pmjunkyg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Lazygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmlazyg.html"
+      image="Punkemon/pmlazyg.gif"
+      break="1">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Mopeygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmmopeyg.html"
+      image="Punkemon/pmmopeyg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Murphygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmmurphg.html"
+      image="Punkemon/pmmurphg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Perkygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmperkyg.html"
+      image="Punkemon/pmperkyg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Punkygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmpunkyg.html"
+      image="Punkemon/pmpunkyg.gif"
+      break="1">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Romangothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmromang.html"
+      image="Punkemon/pmromang.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Teenygothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmteenyg.html"
+      image="Punkemon/pmteenyg.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Visigothi"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/pmvisig.html"
+      image="Punkemon/pmvisig.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Hugga"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/hugga.html"
+      image="Punkemon/hugga.gif"
+      break="1">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Giiga"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/giiga.html"
+      image="Punkemon/giiga.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Ponitail"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/ponitail.html"
+      image="Punkemon/ponitail.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Leatherdude"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/leatherdude.html"
+      image="Punkemon/leatherdude.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Hollyjig"
+      foundin=""
+      attacks=""
+      likes=""
+      dislikes=""
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/mono/hollyjig.html"
+      image="Punkemon/hollyjig.gif">
+      <description>
+        Bla bla bla...
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+  <punkeland
+    name="Western Lands"
+    itemradius="90"
+    pieradius="100">
+
+    <punkemon
+      name="Hogrod"
+      foundin="The Western Lands"
+      attacks="Road rash, loud engines, tire-iron to the head"
+      likes="Speed, loudness, leather"
+      dislikes="The Man, work"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/hogrod.html"
+      image="Punkemon/hogrod.gif">
+      <description>
+	Travelling the roads and highways of the Western Lands in
+	large packs, these predatory creatures roar across the
+	country, draining entire towns of their booze and
+	gasoline. More fearsome but less clean than their Eastern
+	cousins, the Bokuzoku, these beasts are nonetheless equally
+	difficult to capture, straying from their packs only in the
+	safety of roadhouses, brothels, and strip clubs.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="ThreshThrash"
+      foundin="The Western Lands"
+      attacks="Head-banging, attitude"
+      likes="Power chords, Western beer"
+      dislikes="The Man"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/thrasher.html"
+      image="Punkemon/thrasher.gif">
+      <description>
+	An ancient and poorly organized race of Punkemon, Threshthrashes
+	are most easily distinguished by their long hair and t-shirts
+	emblazoned with band names running the gamut from Led Zepplin
+	and AC DC to Pantera and Tool. The best way to gain the trust
+	of a Threshthrasher is to speak to it in a slow, steady voice,
+	except when you mention the name of the band emblazoned on its
+	t-shirt, at which time you switch to a grunty, shouted growl,
+	and then immediately switch back. This demonstrates your
+	respect for the band, and your comradery with other fans.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Cannibou"
+      foundin="The Western Lands"
+      attacks="Bum change, general uncleanliness"
+      likes="The Dead, Phish, Sweet Green Grass"
+      dislikes="The Man, work"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/cannibou.html"
+      image="Punkemon/cannibou.gif">
+      <description>
+        Cannibou spend the majority of their time roaming around in
+	herds, consuming the grass found throughout the Western Lands,
+	and expelling it in great plumes of gray smoke. Most of the
+	time they are content to wander aimlessly, but occasionally
+	word of a concert or a hemp rally will cause them to gradually
+	converge in one general area. If you wander into a herd of
+	Cannibou and announce loudly that you are on your way to a
+	Phish show, the majority of them will be more than happy to
+	jump into your Punkeballs just to catch a ride.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="The Man"
+      foundin="The Western Lands"
+      attacks="??"
+      likes="??"
+      dislikes="??"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/theman.html"
+      image="Punkemon/theman.gif"
+      break="1">
+      <description>
+	Little is known about "The Man", other than that he is feared and
+	hated by most of the Punkemon living in the Western Lands. It
+	has been assumed from scattered evidence that The Man is some
+	sort of super-powerful Punkemon himself, but his origins, his
+	nature, and his very existence remain shrouded in mystery.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Xian"
+      foundin="Everywhere"
+      attacks="Bible Thumping, Preaching"
+      likes="Jesus, Republicans, The Man"
+      dislikes="Blasphemy, nonconformism, Gaymera, Satanicky"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/xian.html"
+      image="Punkemon/xian.gif">
+      <description>
+        Not a true Punkemon, but a supposedly related beast, the Xian
+	or so-called "Preacher Creature" is found in all parts of
+	Punkemon Island, especially where it is least wanted. Its
+	Preaching attack is particularly to be dreaded: while it
+	succeeds only rarely, it transforms its victim into another
+	Xian when it does.
+	<P/>
+	It is rumored that some younger Xian offshoots have discovered
+	it in themselves to be nice to other Punkemon, but this is so
+	far unsubstantiated.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Satanicky"
+      foundin="Western Lands / Hontyhowse district of PunkeTown"
+      attacks="Ranting, Chanting, Summoning Cthulhu"
+      likes="Itself, Anton LaVey, Nietzsche, black magicK"
+      dislikes="Xian"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/satanicky.html"
+      image="Punkemon/satanicky.gif">
+      <description>
+	Sometimes thought to be a juvenile Xian that turned against
+	its heritage, the Satanicky is a mostly-harmless Punkemon,
+	hazardous only to Xians and to those with acute allergies to
+	its persistent Ranting attack or to its inflated
+	ego. Satanickies claim to gather by night and perform
+	unspeakable rituals upon baby Punkemon, yet so far nobody but
+	the most gullible of Xians believe them.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="RidNig"
+      foundin="The Western Lands"
+      attacks="Shotgun, Y'all, Thrown Beercan, Rampage"
+      likes="Budz, Shotguns, Family, Slacks, Ignorance, Shooting to Maim"
+      dislikes="Long Words, Sobriety, Non-Relations, Family, You"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/ridnig.html"
+      image="Punkemon/ridnig.gif">
+      <description>
+	The RidNigs of the Western Lands are usually found in groups
+	of two to three, standing near roads, defending their fields
+	of corn from intruders. Which means that they will cheerfully
+	shoot anything that moves near them, screaming things like:
+	"Git off my laind!". Sometimes, when nobody moves near them,
+	on account of being dead, they will get their big hulking
+	pickup trucks and will then drive around shooting anything
+	that THEY move close to.
+	<P/>
+	When fed large amounts of Budz, given equally large amounts of
+	ammunition and left nearby a road and a cornfield, they will
+	smile toothlessly and croon "Whooee! Look at all that corn!"
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Joshimoshi"
+      foundin="The Western Lands, Heavy Metal Concerts"
+      attacks="Ass Mosh (creeps up behind its victim and squishes against them, before jumping up and down and almost crushing them)"
+      likes="Trucker Speed, Shaved Heads with weird little bits sticking out, the look of you from behind"
+      dislikes="Wearing a shirt, People without Tattoo's, The look of you from the front"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/west/josh.html"
+      image="Punkemon/josh.gif">
+      <description>
+        Joshimoshi is believed to be distantly related to
+	Threshthrash. However, Joshimoshi has shorter hair and
+	perfomes a distinctive mating ritual, the ass mosh, which
+	doubles as a special attack. The easiest way to find this
+	creature is too go to any concert featuring fast, slightly
+	heavy music, act really meek and scared and stand a bit back
+	in the mosh. Joshimoshi will soon shove its way through the
+	crowd of preteen punks and perform its mating attack,
+	attaching itself to you, allowing you to easily catch it in
+	your punkeball as it trys to push the air out of your lungs by
+	slamming your frail body against the guard rail and not
+	letting you breathe.
+	<P/>
+	Trainer Tip: Do not try to catch a Joshimoshi who has not
+	shown a prior intrest in you with its Ass Mosh attack, or
+	he'll probably beat the living bejesus out of you.
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+  <punkeland
+    name="Kupakoffe Cape"
+    itemradius="60"
+    pieradius="100">
+
+    <punkemon
+      name="Coffish"
+      foundin="Kuppakoffi Cape, offshore java reefs"
+      attacks="Kerouac drone, intellectual/philosophical jargon"
+      likes="Board games, tattered copies of 'On the Road', improv poetry"
+      dislikes="Day job, broken espresso machines"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/cafe/coffish.html"
+      image="Punkemon/coffish.gif">
+      <description>
+	Coffishes cannot survive outside the warm, murky, caffinated
+	waters of the java reefs. You can always tell if there is a
+	Coffish in the area by its smooth Kerouac drone, eminating
+	like a lurching whale-song from beneath the waves. The best
+	way to catch a Coffish is to wait for a pause in the drone,
+	then wade into the water holding your hands above your head
+	and snapping your fingers. Eventually a Coffish will swim up
+	to you looking for tips, and you can capture it in your
+	Punkeball.
+	<P/>
+	If you train a captured Coffish well, it will eventually evolve into a Botnik.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Botnik"
+      foundin="Kuppakoffi Cape"
+      attacks="Word cut-up ray"
+      likes="Mochachinos, blues, introspection"
+      dislikes="Decaf"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/cafe/botnik.html"
+      image="Punkemon/botnik.gif">
+      <description>
+	Once a Coffish reaches a certain level of maturity, it builds
+	itself a mighty robot body and moves on the land. As long as
+	their supply of double-espresso "fuel" is kept steady, Botniks
+	are virtually unstoppable machines of avant-garde poetic
+	motion. Usually the best way to catch a Botnik is to take the
+	stage during "open mic nite" at their lair, and sing Leonard
+	Cohen's "Famous Blue Raincoat". This song should be powerful
+	enough to lull all surrounding Botniks into an introspective
+	malaise, at which time they won't mind being captured.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Dobbit"
+      foundin="Kuppakoffi Cape"
+      attacks="Counter-counter reformation"
+      likes="Slack, golf, organized religion"
+      dislikes="Normals, rectal itch, organized religion"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/cafe/dobbit.html"
+      image="Punkemon/dobbit.gif">
+      <description>
+	Aimlessly floating about Kuppakoffi Cape, the elusive Dobbit
+	seems to be waiting for something.... but don't underestimate
+	his apparent distraction; the Dobbit is still extremely aware
+	of its surroundings and will bolt at the first sign of Pinks.
+      </description>
+    </punkemon>
+
+    <punkemon
+      name="Javaswayd"
+      foundin="Kuppakoffi Cape, Poetry Corner"
+      attacks="Meaninless Poem, Bongo Drum, Finger Snap"
+      likes="Poetry, Bongo Drums, French hats"
+      dislikes="Bad Vibes"
+      creator=""
+      url="http://www.gothic.net/~luvcraft/punkemon/cafe/javaswayd.html"
+      image="Punkemon/javaswayd.gif">
+      <description>
+	This Punkemon is quite the poetic type, just sitting around,
+	slappin' bongo drums, blabbering out sensless, non-rhyming
+	poems, and snapping his fingers. They were said to evolve from
+	Dobbits who floated around the Poetry Corner too much, but
+	this isn't a proven fact. They can also sense bad vibes. The
+	easiest way to catch one is to get some bongo drums, wear them
+	around your neck, and say a meaningless poem, after every
+	break of words, tap the bongo drums. After the preformance,
+	they'll start snapping their fingers. Since they aren't paying
+	attention to you and your "bad vibes", you can start chucking
+	Punkeballs at their faces.
+      </description>
+    </punkemon>
+
+  </punkeland>
+
+</punkeverse>

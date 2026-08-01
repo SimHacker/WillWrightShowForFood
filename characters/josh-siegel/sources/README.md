@@ -19,7 +19,7 @@
 | [`1991-09-news-tnt-icccm-death-match.md`](../../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md) | Josh's pure-ICCCM TNT windows proposal (5 Jul 1991); his 3 Sep mail quoting Chuck Price + Rosenthal 1987; Payne's "OWM vs Josh's ICCCM TNT windows" battle plan |
 | [`owm.ps`](owm.ps) | **The Open Window Manager source itself** — object-oriented NeWS PostScript wrapping X11 clients in TNT frames: `ClassXClientCanvas` speaking ICCCM (WM_PROTOCOLS, WM_HINTS, WM_DELETE_WINDOW), `ClassX11ManagerMixin`, Open Look pin-state handling, root menus, the event-manager listener. Mirror: [owm.ps.txt](https://donhopkins.com/home/archive/NeWS/owm.ps.txt) |
 | [`i39l-window-manager-flames.md`](../../don-hopkins/sources/i39l-window-manager-flames.md) | Don's "Window Manager Flames": the OWM design notes (tabs, pie menus, rooms, scrolling desktop, "plugged together orthogonally like legos"), why NeWS should manage the windows, the input-focus indictment |
-| [tab.ps](https://donhopkins.com/home/archive/NeWS/win/tab.ps) | The tabbed window frames OWM wrapped around X and NeWS windows alike |
+| [`tab.ps`](../../don-hopkins/code/news-tnt/tab.ps) | The tabbed window frames OWM wrapped around X and NeWS windows alike — cached in [Don's code room](../../don-hopkins/code/news-tnt/README.md) with the 1988 NDE tab frames |
 
 ## Retellings
 
