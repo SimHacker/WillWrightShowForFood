@@ -1,0 +1,78 @@
+# Josh Siegel — invitation portrayal. NOT Josh Siegel.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: josh-siegel
+  name: "Josh Siegel"
+  type: invitation
+  signifier: "📜🪟🏍️"
+  status: living
+  field: "NeWS PostScript interpreter rewrite (Sun); LANL NeWS war-game front ends (LGATE-SDI, MPM); owm/Open Window Manager with Don; General Magic Magic Cap"
+  home: characters/josh-siegel/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: |
+    Old friend of Don's from the NeWS group at Sun; once visited Don in Amsterdam by
+    motorcycle. Josh may shape, delay, reduce, or delete any of this portrayal at any time.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  interview_planned: true
+  document: invitation.md
+  show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
+  reunion: process/old-band-back-together.yml#news_gang
+
+bio:
+  summary: |
+    At **Los Alamos National Laboratory**, Josh Siegel built NeWS front ends that pushed the
+    system harder than almost anyone: **LGATE**, the SDI war-game simulation demoed at the
+    Pentagon (with Bret Thayler), and **MPM** ("Tanks & AirPlains"), a conventional-warfare
+    front end — panels the Joint Chiefs used to drive simulators running on Crays, all on an
+    8 MB Sun 3/60 era stack.
+
+    In 1990 **James Gosling arranged an interview at Sun**; Don lobbied for someone to "tell
+    him about the peaceful things he could be doing." Josh joined the NeWS group, **rewrote
+    the NeWS PostScript interpreter** from Gosling's original design, and worked with Don on
+    **owm** — the Open Window Manager: X11 and NeWS windows integrated under tabbed frames,
+    pie menus, a scrolling desktop, and multiple rooms, written entirely in object-oriented
+    NeWS PostScript. In the 1991 TNT window-management fight he argued the pure-ICCCM side —
+    the debate is preserved verbatim in Don's archive.
+
+    Later: **General Magic**, Magic Cap Core Technology, working with Bill Atkinson and
+    Andy Hertzfeld.
+
+receipts:
+  lgate_chain:
+    - ../don-hopkins/sources/1988-09-14-sug-southwest-lgate-sdi-news.md
+    - ../don-hopkins/sources/1989-02-05-rosenthal-news-pipes-spike-sdi-usenix.md
+    - ../don-hopkins/sources/1989-05-20-gilmore-news-vendor-census.md
+    - ../don-hopkins/sources/1989-06-07-hugh-daniel-usenix-news-booth.md
+    - ../don-hopkins/sources/1990-04-11-siegel-sun-interview-mousee-art.md
+  sun_era:
+    - ../don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md
+  hn_retelling:
+    - ../don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md
+  owm_source:
+    - https://donhopkins.com/home/archive/NeWS/owm.ps.txt
+    - https://donhopkins.com/home/archive/NeWS/i39l.txt
+    - https://donhopkins.com/home/archive/NeWS/win/tab.ps
+
+contact:
+  # email in DonHopkins green-room/contacts/guest-emails.yml
+  channel: "Old friend — direct contact via Don"
+  amsterdam_visit: "Visited Don in Amsterdam by motorcycle"
+
+see_also:
+  - { path: README.md, why: "Public-facing overview — point Josh here" }
+  - { path: ideas.md, why: "Interview segment plan" }
+  - { path: invitation.md, why: "Invitation letter" }
+  - { path: sources/README.md, why: "Receipt trail index" }
+  - { path: ../james-gosling/, why: "Set up the Sun interview; NeWS creator; reunion anchor" }
+  - { path: ../david-rosenthal/, why: "LGATE eyewitness; ICCCM debate correspondent; reunion anchor" }
+  - { path: ../owen-densmore/, why: "class.ps — the object system the rewritten interpreter ran" }
+  - { path: ../../process/old-band-back-together.yml, why: "news_gang reunion roster" }

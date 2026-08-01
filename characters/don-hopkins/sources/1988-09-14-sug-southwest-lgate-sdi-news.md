@@ -61,6 +61,8 @@ Marriott, Friday 30 September 1988.
 
 ## Josh Siegel elsewhere in the archive
 
+- **[His room](../../josh-siegel/README.md)** — invitation drafted 1 Aug 2026; NeWS reunion
+  roll call; the full receipt trail indexed from his side.
 - [1991-09-news-tnt-icccm-death-match.md](1991-09-news-tnt-icccm-death-match.md) —
   Siegel at Sun (3 Sep 1991), quoting Chuck Price and David Rosenthal's 1987
   NeWS-stability white paper; his ICCCM TNT windows vs Payne's OWM battle plan.

@@ -1,0 +1,24 @@
+# sdi-icon-mdw.png — the SDI game icon, signed "mdw"
+artifact:
+  files: [sdi-icon-mdw.png, sdi-icon-mdw-4x.png]
+  what: |
+    The main SunView icon for SDI: the letters S, D, I as balloon-bombs on
+    strings over a rubble skyline, signed "mdw" (Mark D. Weiser) in the
+    lower balloon. The fancy_icon1-24 sequence animates this icon exploding
+    frame by frame — the signature dissolving from "mdw" to "mark" to "mar"
+    to a scatter of debris (see sdi-icons-contact-sheet.png).
+  depicts: "SDI game icon + Mark's signature"
+
+provenance:
+  source_header: ../software/mark-weiser-sunview-sdi/icon.h
+  animation_frames: ../software/mark-weiser-sunview-sdi/   # fancy_icon1.h .. fancy_icon24.h
+  format: "SunView iconedit — Format_version=1, 64x64, Depth=1, 16 bits/item"
+  author: Mark Weiser, Jan-May 1987
+  recovered: "1 Aug 2026 — Don's big-bag-of-old-code"
+  recovery_thread: ../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md
+  conversion: "../software/sun-icons-to-png.py"
+
+see_also:
+  - talkingmark.yml
+  - sdi-city-icon-mark.yml
+  - ../software/README.md

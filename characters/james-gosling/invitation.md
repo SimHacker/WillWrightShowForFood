@@ -26,7 +26,8 @@ anyone can browse without an account. **Show, don't tell.**
 
 **Proposed episode:** *From NeWS to Java* — extension languages, network window systems, and what
 carried when PostScript lost to X11. Can run **solo with you**, or as a **NeWS reunion** with
-Arthur van Hoff, David Rosenthal, Owen Densmore — your pick.
+Arthur van Hoff, David Rosenthal, Owen Densmore, Josh Siegel — your pick. (You set up Josh's
+Sun interview in 1990; he rewrote the NeWS interpreter. That's a reunion beat all by itself.)
 
 **What I'd love to explore with you — any order, skip what bores you:**
 

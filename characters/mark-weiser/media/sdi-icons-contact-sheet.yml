@@ -1,0 +1,16 @@
+# sdi-icons-contact-sheet.png — all 55 SDI icons at a glance
+artifact:
+  files: [sdi-icons-contact-sheet.png]
+  what: |
+    Labeled contact sheet of all 55 SunView bitmaps recovered from Mark
+    Weiser's SDI (1987): the talkingmark self-portrait, the signed game
+    icon, the m-a-r-k skyline (8 twinkle frames), the 24-frame icon
+    explosion, mushroom cloud, GAME OVER, missiles, lasers, cursors
+    (including pie_generic_cursor from the blizzard pie menus), melt,
+    rocks, and friends. 1x PNGs live next to each .h in the source tree.
+
+provenance:
+  source_tree: ../software/mark-weiser-sunview-sdi/
+  generated_by: "../software/sun-icons-to-png.py + PIL contact sheet, 1 Aug 2026"
+  author_of_icons: Mark Weiser, Jan-May 1987
+  recovery_thread: ../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md

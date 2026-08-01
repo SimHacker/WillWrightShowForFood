@@ -134,7 +134,7 @@ googling for Josh Siegel:
   of anyone who typed 'yes' to the csh prompt."
 - Public retelling of **Spider's provenance**: written in PostScript for NeWS "after
   having previously implemented it at SAIL (Stanford AI Lab) and for XDE (at Xerox PARC)."
-- **Josh Siegel**: rewrote the NeWS PostScript interpreter from Gosling's original design;
+- **Josh Siegel** ([his room](../../josh-siegel/README.md)): rewrote the NeWS PostScript interpreter from Gosling's original design;
   worked with Don on an [X11 window manager written in PostScript](https://donhopkins.com/home/archive/NeWS/owm.ps.txt);
   at Los Alamos wrote "MMPORG simulations of World War III for the Joint Chiefs of Staff
   with a beautiful interactive NeWS front-end. (Sun was lucky to steal him away from LANL

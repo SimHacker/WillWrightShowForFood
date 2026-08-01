@@ -27,8 +27,9 @@ code, data, *and* graphics. (See the trail: [`send-code-not-commands`](../../pro
 
 ## The show
 
-- **★ NeWS reunion** — Gosling + Rosenthal + van Hoff + Owen (+ Don): *send a program, not a data
-  structure* — the road not taken, made runnable in the browser. (`news-postscript-window-system.yml`)
+- **★ NeWS reunion** — Gosling + Rosenthal + van Hoff + Owen + [Josh Siegel](../josh-siegel/README.md)
+  (+ Don): *send a program, not a data structure* — the road not taken, made runnable in the browser.
+  (`news-postscript-window-system.yml`)
 - **Solo / segment** — object-oriented PostScript and **Warnock's "linguistic motherboard"** idea
   (PostScript with a graphics card + a networking card in software, more cards to come), via Owen and
   the late **John Warnock**; plus complexity science / agent-based modeling (Redfish, NetLogo).
@@ -36,4 +37,4 @@ code, data, *and* graphics. (See the trail: [`send-code-not-commands`](../../pro
 ## Browse
 
 - Sources: [Redfish bio](http://redfish.com/owenDensmore.htm) · ["Object Oriented Programming in NeWS" (1986)](https://donhopkins.com/home/monterey86.pdf)
-- NeWS gang: [James Gosling](../james-gosling/README.md) · [David Rosenthal](../david-rosenthal/README.md) · [Arthur van Hoff](../arthur-van-hoff/README.md)
+- NeWS gang: [James Gosling](../james-gosling/README.md) · [David Rosenthal](../david-rosenthal/README.md) · [Arthur van Hoff](../arthur-van-hoff/README.md) · [Josh Siegel](../josh-siegel/README.md)

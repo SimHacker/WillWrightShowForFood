@@ -1,0 +1,26 @@
+# talkingmark.png — Mark Weiser's self-portrait icon from SDI (1987)
+artifact:
+  files: [talkingmark.png, talkingmark-4x.png]   # 1x = 64x64 as authored; 4x = as the game displayed it
+  what: |
+    Mark Weiser's bearded face with a speech balloon reading "Game Over" —
+    a 64x64 1-bit SunView icon he drew for his 1987 game SDI. The makefile
+    feeds talkingmark.h through the genmessage generator at 4x magnification
+    to produce bigmessage.h, which game_over.c displays when you lose:
+    Mark himself tells you the game is over.
+  depicts: mark-weiser   # self-portrait, in pixels, by the subject
+
+provenance:
+  source_header: ../software/mark-weiser-sunview-sdi/talkingmark.h
+  format: "SunView iconedit — Format_version=1, 64x64, Depth=1, 16 bits/item"
+  author: Mark Weiser, Jan-May 1987 (HISTORY.nr dev diary in the same directory)
+  distribution: "shar by billr@tekred, 17 Jun 1987; mod.sources; Sun Users Group tape"
+  recovered: "1 Aug 2026 — Don's big-bag-of-old-code, after spotting Antoni Sawicki's sunviewgames repo"
+  recovery_thread: ../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md
+  conversion: "../software/sun-icons-to-png.py — bit-faithful, 1x + nearest-neighbor 4x"
+  pipeline_in_game: "talkingmark.h -> genmessage 4x -> bigmessage.h -> game_over.c"
+
+see_also:
+  - ../software/README.md                 # the SDI collection
+  - sdi-icon-mdw.yml                      # the game icon, signed "mdw"
+  - sdi-city-icon-mark.yml                # the skyline with m-a-r-k in the buildings
+  - sdi-icons-contact-sheet.png           # all 55 icons at a glance

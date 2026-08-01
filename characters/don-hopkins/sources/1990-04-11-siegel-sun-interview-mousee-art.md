@@ -95,4 +95,4 @@ you when I'm done.
 	-Don
 ```
 
-↑ [Sources index](README.md) · [LGATE receipt (1988)](1988-09-14-sug-southwest-lgate-sdi-news.md) · [Heinz Lemke constellation](../../../../DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/lemke-constellation.yml) (CHI'90 "Empowered" note) · [Don's room](../README.md)
+↑ [Sources index](README.md) · [Josh Siegel's room](../../josh-siegel/README.md) · [LGATE receipt (1988)](1988-09-14-sug-southwest-lgate-sdi-news.md) · [Heinz Lemke constellation](../../../../DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/lemke-constellation.yml) (CHI'90 "Empowered" note) · [Don's room](../README.md)

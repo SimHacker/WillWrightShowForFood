@@ -88,7 +88,7 @@ seeds:
   micropolis-ai-drag-race.yml:  "★ MICROPOLIS AI DRAG RACE — rig personas, ai-offs challenges, spend-log judges, merge or sashay. See process/micropolis-ai-drag-race.yml"
   alan-kay-microworld.yml:      "Solo: Repo Show with Alan Kay — DREAM GUEST."
   ben-and-heinz-pie-menus.yml:  "Group: Ben Shneiderman + Heinz U. Lemke — pie menus + HCI history."
-  news-postscript-window-system.yml: "Group/flagship: NeWS reunion — Gosling + Rosenthal + van Hoff (+ Densmore, Mak). 'Send a program, not a data structure', made runnable in the browser."
+  news-postscript-window-system.yml: "Group/flagship: NeWS reunion — Gosling + Rosenthal + van Hoff + Siegel (+ Densmore, Mak). 'Send a program, not a data structure', made runnable in the browser. Siegel rewrote the interpreter; owm resurrection beat."
   james-gosling-news-java.yml:  "Solo: James Gosling — Emacs → NeWS → Java (cheesy little extension languages). Feeds the NeWS reunion."
   arthur-van-hoff-hyperlook.yml: "Solo: Arthur van Hoff — HyperLook + PdB + the Axis of Eval. Feeds the NeWS reunion."
   amy-jo-and-scott-kim/: "Group: Amy Jo Kim + Scott Kim — Shufflebrain, Game Thinking × puzzles; pair interview; optional solo scott-kim for Viewpoint."

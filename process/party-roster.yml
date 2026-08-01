@@ -89,6 +89,7 @@ right_away:
     - { id: james-gosling, show: [news-postscript-window-system, james-gosling-news-java], invite: draft, next: "NeWS reunion + Java solo" }
     - { id: owen-densmore, show: news-postscript-window-system, invite: draft, next: "class.ps + linguistic motherboard" }
     - { id: david-rosenthal, show: slots-all-the-way-down, invite: draft, next: "anchor NeWS reunion" }
+    - { id: josh-siegel, show: news-postscript-window-system, invite: draft, warm_contact: true, next: "old friend — interpreter rewrite + owm resurrection + LGATE-to-peaceful-things arc; Amsterdam motorcycle cold open" }
 
   postscript_lineage:
     - { id: glenn-reid, show: repo-shows/postscript-distillery-to-pdf/, invite: send_ready, send_batch: postscript-lineage-2026, pair_with: brian-reid, next: "send pair — Distillery, graphbind, PostNews; Don correspondence planted" }

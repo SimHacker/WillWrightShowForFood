@@ -48,6 +48,27 @@ No relation to Josh Siegel's **LGATE** SDI simulation at Los Alamos
 and both ended up in this archive. Mark's is the playable satire;
 Josh's was driven by the Joint Chiefs.
 
+### The icons — Mark signed everything
+
+All 55 SunView bitmaps are converted to PNGs sitting next to their `.h`
+sources (converter: [`sun-icons-to-png.py`](sun-icons-to-png.py)). Three
+carry Mark himself, copied up to [`../media/`](../media/) with provenance
+sidecars:
+
+- **[talkingmark](../media/talkingmark.yml)** — his bearded self-portrait
+  with a "Game Over" speech balloon; the makefile magnifies it 4× through
+  `genmessage` into `bigmessage.h`, so Mark personally tells you the game
+  is over.
+- **[the game icon](../media/sdi-icon-mdw.yml)** — S/D/I balloon-bombs
+  signed "mdw"; `fancy_icon1–24` animate it exploding, signature
+  dissolving frame by frame.
+- **[the city skyline](../media/sdi-city-icon-mark.yml)** — "m·a·r·k"
+  hidden in the buildings; `city_icon1–8` twinkle the windows around it.
+
+![Mark's Game Over self-portrait](../media/talkingmark-4x.png)
+
+![All 55 SDI icons](../media/sdi-icons-contact-sheet.png)
+
 ### Getting it running
 
 `make` on SunOS 3.x (define `SUN3.0` for 3.0). In 2026 terms: a Sun-3

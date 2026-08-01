@@ -20,10 +20,15 @@ why_it_works: |
 bands:
   news_gang:
     what: "NeWS / PostScript window system — 'send a program, not a data structure'."
-    roll_call: "James Gosling, Owen Densmore, David Rosenthal (+ Arthur van Hoff, Duncan Mak)"
+    roll_call: "James Gosling, Owen Densmore, David Rosenthal, Josh Siegel (+ Arthur van Hoff, Duncan Mak)"
     show: ../repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
-    characters: [../characters/james-gosling/, ../characters/david-rosenthal/, ../characters/arthur-van-hoff/]
+    characters: [../characters/james-gosling/, ../characters/david-rosenthal/, ../characters/josh-siegel/, ../characters/arthur-van-hoff/]
     don_role: "participant-historian (pie menus, HyperTIES, the X-Windows Disaster)"
+    siegel_note: |
+      Josh Siegel rewrote the NeWS PostScript interpreter and built owm (the Open Window Manager)
+      with Don — X11 + NeWS windows under tabbed frames, pie menus, scrolling desktop, multiple
+      rooms; source survives at donhopkins.com/home/archive/NeWS/owm.ps.txt. Recruited from LANL
+      in 1990 (Gosling arranged the interview) — see characters/josh-siegel/.
 
   sims_team:
     what: "The original Sims team at Maxis — behavior/AI (SimAntics), tools, content, animation, music."

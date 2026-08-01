@@ -1,0 +1,23 @@
+# sdi-city-icon-mark.png — the SDI city skyline with "m·a·r·k" in the buildings
+artifact:
+  files: [sdi-city-icon-mark.png, sdi-city-icon-mark-4x.png]
+  what: |
+    The SDI city icon: a skyline of twinkling buildings under an "S D I"
+    missile arc — with the letters "m a r k" hidden in the dark buildings
+    along the bottom row. This is frame 1 of 8 (city_icon1.h .. city_icon8.h);
+    the animation twinkles the windows while the signature stays put.
+  depicts: "SDI city skyline + hidden mark signature"
+
+provenance:
+  source_header: ../software/mark-weiser-sunview-sdi/city_icon1.h
+  animation_frames: ../software/mark-weiser-sunview-sdi/   # city_icon1.h .. city_icon8.h
+  format: "SunView iconedit — Format_version=1, 64x64, Depth=1, 16 bits/item"
+  author: Mark Weiser, Jan-May 1987
+  recovered: "1 Aug 2026 — Don's big-bag-of-old-code"
+  recovery_thread: ../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md
+  conversion: "../software/sun-icons-to-png.py"
+
+see_also:
+  - talkingmark.yml
+  - sdi-icon-mdw.yml
+  - ../software/README.md

@@ -51,7 +51,9 @@ Dec 1, 1995 — Terry Winograd's **CS547**: *Bringing Behavior to the Internet* 
 ~1:00:30 asking Java-security questions ([YouTube](https://www.youtube.com/watch?v=dgrNeyuwA8k)).
 
 Proposed **Repo Show** guest — solo or **NeWS reunion** with [Arthur van Hoff](../arthur-van-hoff/README.md),
-[Rosenthal](../david-rosenthal/README.md), [Owen Densmore](../owen-densmore/README.md). Trail:
+[Rosenthal](../david-rosenthal/README.md), [Owen Densmore](../owen-densmore/README.md),
+[Josh Siegel](../josh-siegel/README.md) (Gosling arranged his 1990 Sun interview; Josh rewrote the
+NeWS interpreter). Trail:
 [`live_objects`](../../process/trails/live-objects.md) · [`send_code_not_commands`](../../process/trails/send-code-not-commands.md)
 
 ---

@@ -15,4 +15,12 @@ game, full recovered source: the blizzard pie menus (`piemenu_track.c` — "I us
 pies into sunview," 24 Jan 1987), the hour-by-hour `HISTORY.nr` dev diary, and the self-revealing
 source-code pie menu. Resurrection challenge issued to [Antoni Sawicki](../antoni-sawicki/README.md).
 
+**Media (in this room):** [`media/`](media/) — the SDI icons as PNGs, including
+[**talkingmark**](media/talkingmark.yml), Mark's bearded self-portrait that tells you "Game Over,"
+his "mdw"-signed [game icon](media/sdi-icon-mdw.yml), the skyline with
+[m·a·r·k hidden in the buildings](media/sdi-city-icon-mark.yml), and a
+[contact sheet of all 55](media/sdi-icons-contact-sheet.png).
+
+![talkingmark — Mark's Game Over self-portrait](media/talkingmark-4x.png)
+
 Verifiable sources in `CHARACTER.yml`.
