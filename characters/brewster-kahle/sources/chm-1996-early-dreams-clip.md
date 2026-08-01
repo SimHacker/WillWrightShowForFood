@@ -8,22 +8,22 @@ Context: Brewster compares early television archives (Tonight Show lost, I Love 
 
 ---
 
-> But also the early stuff has got people's dreams.
-> The early people that sort of say — you know, the early people on the web, like you, doing your dinosaur exhibit.
-> You've got this ability to be able to do something new and different.
-> But at some point, people will just say, "oh, well, you know, you can't do that", and they'll just sort of focus in on all it can do.
-> But in the beginning, you have just amazing things.
-> So I always kept the early logs of WAIS.
-> I thought those would be the most valuable things.
-> Is one of the questions, that people ask of the net.
-> And so I kept all of those logs.
+> But also the early stuff has got people's dreams.  
+> The early people that sort of say — you know, the early people on the web, like you, doing your dinosaur exhibit.  
+> You've got this ability to be able to do something new and different.  
+> But at some point, people will just say, "oh, well, you know, you can't do that", and they'll just sort of focus in on all it can do.  
+> But in the beginning, you have just amazing things.  
+> So I always kept the early logs of WAIS.  
+> I thought those would be the most valuable things.  
+> Is one of the questions, that people ask of the net.  
+> And so I kept all of those logs.  
 >
-> Oh, you have those?
-> Oh yeah.
-> What do people look for? What are people dreaming that the technology can finally answer?
-> And right now already, the web has sort of stagnated, people's idea of it has really focused down to the stuff the technicians have given.
-> But it's the early dreams that we should trying to live up to.
-> So I'm trying to keep some of that alive.
+> Oh, you have those?  
+> Oh yeah.  
+> What do people look for? What are people dreaming that the technology can finally answer?  
+> And right now already, the web has sort of stagnated, people's idea of it has really focused down to the stuff the technicians have given.  
+> But it's the early dreams that we should trying to live up to.  
+> So I'm trying to keep some of that alive.  
 
 ---
 

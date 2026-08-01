@@ -29,10 +29,10 @@ the scan (leaf N = `pages/page-0N.png`), with Heinz's own page numbers noted whe
 >
 > **Hardware**
 >
-> 1.) Control Computer
-> 2.) Display Unit
-> 3.) Central Computer
-> 4.) Interface
+> 1.) Control Computer  
+> 2.) Display Unit  
+> 3.) Central Computer  
+> 4.) Interface  
 
 **System block diagram** (hand-drawn, captioned "SYSTEM BLOCK DIAGRAM"):
 
@@ -44,8 +44,8 @@ the scan (leaf N = `pages/page-0N.png`), with Heinz's own page numbers noted whe
 
 > **Software**
 >
-> 1.) Softw. for Control C. ← display / console / pre-processing
-> 2.) Softw. for Central C. ← analysis / processing.
+> 1.) Softw. for Control C. ← display / console / pre-processing  
+> 2.) Softw. for Central C. ← analysis / processing.  
 
 ## Leaf 2 (unnumbered)
 
@@ -55,11 +55,11 @@ the scan (leaf N = `pages/page-0N.png`), with Heinz's own page numbers noted whe
 >
 > This computer could be a XL12 with 8K to 16K 24 bit words which provides:
 >
-> a) System control (executive program)
-> b) System memory
-> c) Calculation of subroutines
-> d) Graphics handling routines
-> ✗ e) Circuit modelling routines
+> a) System control (executive program)  
+> b) System memory  
+> c) Calculation of subroutines  
+> d) Graphics handling routines  
+> ✗ e) Circuit modelling routines  
 >
 > The coupling to the other elements of the system can be carried out by three
 > bi-directional real time data channels. The amount and rate of data which must pass
@@ -93,15 +93,15 @@ Marginal note in a lighter hand beside that paragraph:
 >
 > **Man to Machine:**
 >
-> 1.) Keyboard for manual input and overall job control
-> 2) Light pen
-> 3) Rand tablet
+> 1.) Keyboard for manual input and overall job control  
+> 2) Light pen  
+> 3) Rand tablet  
 >
 > **Machine to Man**
 >
-> 1.) CRT
-> 2.) Lights under program control, mounted in the switches
-> 3.) Small noise making devices, operated by relays under program control
+> 1.) CRT  
+> 2.) Lights under program control, mounted in the switches  
+> 3.) Small noise making devices, operated by relays under program control  
 
 ## Leaf 4 (unnumbered)
 
@@ -111,12 +111,12 @@ Marginal note in a lighter hand beside that paragraph:
 > But the hardware needed for circuit analysis programs on a time shared basis should
 > contain:
 >
-> 1.) 32K core storage 48 to 64 bit word length
-> 2) Input/output buffer channels
-> 3) 10 magnetic tape units
-> 4) Card reader and punch
-> 5) Line printer
-> 6) Paper tape punch and reader
+> 1.) 32K core storage 48 to 64 bit word length  
+> 2) Input/output buffer channels  
+> 3) 10 magnetic tape units  
+> 4) Card reader and punch  
+> 5) Line printer  
+> 6) Paper tape punch and reader  
 >
 > and a variety of programming languages.
 >
@@ -179,13 +179,13 @@ OR DIAGNOSTIC W.
 > If the analysis time on a problem is long and the number of simultaneous users large
 > the following features are necessary for an efficient system:
 >
-> a) Monitor of the analysis as it proceeds
-> b) Computational sequence must be alterable
-> ✗ c) Stopping of analysis at will
-> d) Pseudo-random point selection
-> e) All data should be retained
-> ✗ f) Queuing priority
-> ✗ g) Library facilities for mutual sharing of device models
+> a) Monitor of the analysis as it proceeds  
+> b) Computational sequence must be alterable  
+> ✗ c) Stopping of analysis at will  
+> d) Pseudo-random point selection  
+> e) All data should be retained  
+> ✗ f) Queuing priority  
+> ✗ g) Library facilities for mutual sharing of device models  
 >
 > A 32K 48 bit words for floating point arithmetic central computer on time shared basis
 > could fulfill these requirements.

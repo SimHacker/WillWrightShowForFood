@@ -15,9 +15,9 @@ this paper; we do not speak as Marvin.
 
 ---
 
-> **Marvin Minsky**
-> AI Memo 603, MIT Artificial Intelligence Laboratory
-> November 1980
+> **Marvin Minsky**  
+> AI Memo 603, MIT Artificial Intelligence Laboratory  
+> November 1980  
 > 
 > Originally published in *Cognitive Constraints on Communication*,
 > Vaina and Hintikka (eds.) Reidel, 1981.

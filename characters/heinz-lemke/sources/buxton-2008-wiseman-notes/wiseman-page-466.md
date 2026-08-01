@@ -16,13 +16,13 @@ verbatim from his PDF, including his typos (inventoried at the end, not silently
 
 ## Buxton's header
 
-> Contents of Page 466-467 of:
-> Wiseman, N.E., Lemke, H.U. & Hiles, J.O. (1969) PIXIE: A New Approach to Graphical Man-machine
-> Communication, Proceedings of 1969 CAD Conference Southampton, IEEE Conference Publication 51,
-> 463 – 471.
-> Transcribed from the original
-> William Buxton
-> July 7, 2008.
+> Contents of Page 466-467 of:  
+> Wiseman, N.E., Lemke, H.U. & Hiles, J.O. (1969) PIXIE: A New Approach to Graphical Man-machine  
+> Communication, Proceedings of 1969 CAD Conference Southampton, IEEE Conference Publication 51,  
+> 463 – 471.  
+> Transcribed from the original  
+> William Buxton  
+> July 7, 2008.  
 >
 > Note: I have transcribed the section of the article dealing with interaction, rather than scan the
 > photocopy, since the bleed-through from the other side of the page makes the copy difficult to read.

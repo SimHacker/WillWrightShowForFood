@@ -50,9 +50,9 @@ chronological reading order. The parallels table is rendered as a table for read
 
 ### Michael Travers — the ruling (19 December 1988)
 
-> **From:** Michael Travers `mt@media-lab.media.mit.edu`
-> **To:** `SubGenius@mc.lcs.mit.edu`
-> **Date:** Mon, 19 Dec 88 00:47:13 EST
+> **From:** Michael Travers `mt@media-lab.media.mit.edu`  
+> **To:** `SubGenius@mc.lcs.mit.edu`  
+> **Date:** Mon, 19 Dec 88 00:47:13 EST  
 
 I believe "Chuq" is some form of usenet weenie. Discussions of usenet weenies unrelated to
 the Church of the SubGenius or other forms of genuinely bogus spiritual violence are not
@@ -60,11 +60,11 @@ particularly germane to this forum.
 
 ### Gumby — Charles Fort died too soon (20 December 1988)
 
-> **From:** `Gumby@mcc.com`
-> **To:** Michael Travers `mt@media-lab.media.mit.edu`
-> **Cc:** `SubGenius@mc.lcs.mit.edu`, `unix-haters@media-lab.media.mit.edu`, `jtw@xx.lcs.mit.edu`
-> **Date:** Tue, 20 Dec 88 01:36 PST
-> **Subject:** Charles Fort died too soon
+> **From:** `Gumby@mcc.com`  
+> **To:** Michael Travers `mt@media-lab.media.mit.edu`  
+> **Cc:** `SubGenius@mc.lcs.mit.edu`, `unix-haters@media-lab.media.mit.edu`, `jtw@xx.lcs.mit.edu`  
+> **Date:** Tue, 20 Dec 88 01:36 PST  
+> **Subject:** Charles Fort died too soon  
 
 Oh come on. There are those who allege that the Church is a hoax, that the SubG are no
 different from your everyday Pink. What better way to keep them guessing than by linking the

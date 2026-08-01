@@ -186,14 +186,14 @@ Verbatim from Don Hopkins forwarded-mail archive.
 
 > Hello! I'd like to sign up for the OLPC developer's program, please.
 >
-> Name: Don Hopkins
-> Email address: dhopkins@DonHopkins.com
-> [...]
-> Description of your plans for the machines(s):
-> Port SimCity to OLPC and integrate with Sugar.
+> Name: Don Hopkins  
+> Email address: dhopkins@DonHopkins.com  
+> [...]  
+> Description of your plans for the machines(s):  
+> Port SimCity to OLPC and integrate with Sugar.  
 >
-> Quantity of machines desired:
-> 1 to start with, but eventually would like to test SimCity multi player user interface and networking with another laptop or other people's laptops.
+> Quantity of machines desired:  
+> 1 to start with, but eventually would like to test SimCity multi player user interface and networking with another laptop or other people's laptops.  
 
 ---
 
@@ -213,8 +213,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 >
 > - Unplug the A/C adapter whenever you insert or remove the battery.
 >
-> Regards,
-> Lindsay Petrillose
+> Regards,  
+> Lindsay Petrillose  
 
 ---
 
@@ -227,8 +227,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 >
 > Also, can you send me the copy of the code that you have?
 >
-> Thanks,
-> - Chuck
+> Thanks,  
+> - Chuck  
 
 ---
 

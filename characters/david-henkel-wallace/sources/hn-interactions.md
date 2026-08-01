@@ -8,9 +8,9 @@ Don's favorite credential, preserved in a 2014 HN comment on the *UNIX-HATERS Ha
 ([7727953](https://news.ycombinator.com/item?id=7727953)) — you couldn't just join
 unix-haters; you had to be *nominated*. Gumby nominated Don:
 
-> From: Gumby Vinayak Wallace `gumby@cygnus.com` (15 May 91)
-> To: `cent@ai.mit.edu`
-> Subject: do you maintain unix-haters?
+> From: Gumby Vinayak Wallace `gumby@cygnus.com` (15 May 91)  
+> To: `cent@ai.mit.edu`  
+> Subject: do you maintain unix-haters?  
 >
 > `Don.Hopkins@Eng.Sun.COM` should definately be on the list — a much better
 > ranter than many who DO send to it.

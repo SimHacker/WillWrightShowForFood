@@ -18,9 +18,9 @@ and six years before the 1993 paper.
 
 From the `piemenu.ps` header comments, 1 Jul 1987:
 
-> % Don't bother putting up a menu (or even moving the menu to be
-> %   completely on screen), **if the button event that would make
-> %   the selection is already in the input queue.**
+> % Don't bother putting up a menu (or even moving the menu to be  
+> %   completely on screen), **if the button event that would make  
+> %   the selection is already in the input queue.**  
 
 — i.e., mouse-ahead **display suppression**, specified in the shipped code's TODO and
 implemented in subsequent versions (the X10 uwm implementation already had it in 1986; the
@@ -29,13 +29,13 @@ implementing it, for the record.
 
 ## The license: unrestricted, with a poem
 
-> % Simple Simon popped a Pie Men-
-> %    u upon the screen;
-> % With directional selection,
-> %    all is peachy keen!
-> %
-> % Pie Menus are provided for **UNRESTRICTED use** provided that this
-> % copyright message is preserved on all copies and derivative works.
+> % Simple Simon popped a Pie Men-  
+> %    u upon the screen;  
+> % With directional selection,  
+> %    all is peachy keen!  
+> %  
+> % Pie Menus are provided for **UNRESTRICTED use** provided that this  
+> % copyright message is preserved on all copies and derivative works.  
 
 The 1987 Usenix summary closes the same way: "they are **not proprietary, patented, or
 restricted in any way**, so take a look and feel free!" The free-culture position was in the

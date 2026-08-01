@@ -68,9 +68,9 @@ Verbatim from Don Hopkins forwarded-mail archive.
 **Date:** 2 December 2006, 21:58 GMT+1  
 **Subject:** Re: Sim City in open source for OLPC $100 Laptop?
 
-> What is likely to happen with Open Source is that the game will be extended and appear in devices in ways you never imagine. Not only will this give lots of people exposure to the great educational experience, but it will whet people's appetite for other great similar things and also perhaps inspire another Will!
-> Best,
-> Bill
+> What is likely to happen with Open Source is that the game will be extended and appear in devices in ways you never imagine. Not only will this give lots of people exposure to the great educational experience, but it will whet people's appetite for other great similar things and also perhaps inspire another Will!  
+> Best,  
+> Bill  
 
 ---
 
@@ -83,8 +83,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 >
 > I've been asked to look into this. I'd like to make sure I fully understand their needs. Who is the best person for me to contact?
 >
-> Thanks,
-> Chuck
+> Thanks,  
+> Chuck  
 
 ---
 
@@ -112,8 +112,8 @@ Verbatim from Don Hopkins forwarded-mail archive.
 > Hi Don,
 > I'm trying to find out about the history of the Unix version of SimCity. I was told you programmed it. Is that true? Is there anything else you can tell me? I'm looking for a good place to start in searching who currently has the rights to that version.
 >
-> Thanks,
-> Chuck
+> Thanks,  
+> Chuck  
 
 ---
 
@@ -161,9 +161,9 @@ Verbatim from Don Hopkins forwarded-mail archive.
 
 ### CONTRACT BETWEEN DUX SOFTWARE AND DON HOPKINS
 
-> 18 February 1992
-> To: Donald Hopkins, SimCity Project Engineer
-> From: Bob Adams, President DUX Software
+> 18 February 1992  
+> To: Donald Hopkins, SimCity Project Engineer  
+> From: Bob Adams, President DUX Software  
 >
 > 1. Don Hopkins is recognized as the developer for SimCity UNIX-HuperNeWS version.
 > 2. Don has worked on the project as "Work For Hire" and Don assigns all rights to DUX and MAXIS [...]

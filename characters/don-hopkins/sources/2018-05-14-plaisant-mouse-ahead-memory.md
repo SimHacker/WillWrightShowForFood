@@ -63,16 +63,16 @@ Summary of Pie Menus at Usenix Work In Progress Session - June 1987
 
 Directional Selection is Easy as Pie Menus!
 
-Don Hopkins
-University of Maryland
-Heterogeneous Systems Laboratory
-College Park, MD 20742
-Written August 1987
+Don Hopkins  
+University of Maryland  
+Heterogeneous Systems Laboratory  
+College Park, MD 20742  
+Written August 1987  
 
-Simple Simon popped a Pie Men-
-u upon the screen;
-With directional selection,
-all is peachy keen!
+Simple Simon popped a Pie Men-  
+u upon the screen;  
+With directional selection,  
+all is peachy keen!  
 
 The choices of a Pie Menu are positioned in a circle around the cursor, instead of in a linear row or column. The choice regions are shaped like the slices of a pie. The cursor begins in the center of the menu, in an inactive region that makes no selection. The target areas are all adjacent to the cursor, but in a different directions.
 

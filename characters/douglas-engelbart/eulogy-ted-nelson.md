@@ -97,11 +97,11 @@ urgent and complex problems of mankind have only grown more urgent and more comp
 
 It sure looks like humanity is circling the drain. To quote the great poet Walt Kelly:
 
-> "The gentle journey jolts to stop.
-> The drifting dream is done.
-> The long-gone goblins loom ahead —
-> The deadly, that we thought were dead,
-> Are waiting, every one."
+> "The gentle journey jolts to stop.  
+> The drifting dream is done.  
+> The long-gone goblins loom ahead —  
+> The deadly, that we thought were dead,  
+> Are waiting, every one."  
 
 And here we twiddle in a world of computer glitz, as the winds rise, and the seas rise, and the
 debts rise, and the terrorists rise, and the nukes tick.
@@ -113,10 +113,10 @@ So I don't just feel like I've lost my best friend.
 I'll give the last word to Shakespeare's Marc Antony. He speaks to the body of Julius Caesar while
 he is confronting the gang who murdered him:
 
-> "O pardon me, thou bleeding piece of earth,
-> That I am meek and gentle with these butchers.
-> Thou art the ruins of the noblest man
-> That ever lived in the tide of times."
+> "O pardon me, thou bleeding piece of earth,  
+> That I am meek and gentle with these butchers.  
+> Thou art the ruins of the noblest man  
+> That ever lived in the tide of times."  
 
 Thank you.
 

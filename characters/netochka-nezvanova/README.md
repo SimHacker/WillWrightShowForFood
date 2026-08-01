@@ -21,11 +21,11 @@ and a mystique tended as carefully as any codebase. Aliases multiplied — *anti
 it **"Code as cult."** Salon called her **"the most feared woman on the Internet"** and asked
 the only honest question: *is she for real?*
 
-> "I have not been thrown off a mailing list.
-> I have been illegally transformed into a yellow flower.
-> A young girl one day found me, and with half closed eyes whispered:
-> Perfection,
-> Today you've peered in my direction."
+> "I have not been thrown off a mailing list.  
+> I have been illegally transformed into a yellow flower.  
+> A young girl one day found me, and with half closed eyes whispered:  
+> Perfection,  
+> Today you've peered in my direction."  
 
 ## The mystique (kept on purpose)
 

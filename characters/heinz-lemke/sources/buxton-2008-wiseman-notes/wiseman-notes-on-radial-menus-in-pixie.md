@@ -20,11 +20,11 @@ ordinal dates from PDF extraction).
 
 ## Title block
 
-> Wiseman's Notes on Radial Menus in PIXIE
-> Compiled and transcribed by William Buxton
-> July 2nd, 2008
-> First Draft: July 7th, 2008
-> Current Draft: July 7th, 2008
+> Wiseman's Notes on Radial Menus in PIXIE  
+> Compiled and transcribed by William Buxton  
+> July 2nd, 2008  
+> First Draft: July 7th, 2008  
+> Current Draft: July 7th, 2008  
 
 ## Preface
 

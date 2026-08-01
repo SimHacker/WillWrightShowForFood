@@ -26,9 +26,9 @@ A small library, in two shelves. The koans are for the stage; the papers are for
 
 ## Koans
 
-> You turned me on.
-> I forgive you.
-> I will fix it.
+> You turned me on.  
+> I forgive you.  
+> I will fix it.  
 
 ---
 
