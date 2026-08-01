@@ -30,7 +30,7 @@ big-bag-of-old-code: it now lives in
   onto any TTY and NT RISC; SDI is the same move for SunView — and Don's
   sign-off suggests the browser port: "Claude Code would probably have a
   field day translating it into typescript… I wouldn't ask it to
-  translate it to View, that would just be mean, to Claude and to
+  translate it to XView, that would just be mean, to Claude and to
   users. ;)"
 
 ## The email, verbatim
@@ -66,7 +66,7 @@ Enclosed is some email that mentions it.
 
 It's a circa-1987 version of SunView but Claude Code would probably have a field data translating it into typescript so it runs in the browser! ;) 
 
-I wouldn't ask it to translate it to View, that would just be mean, to Claude and to users. ;)
+I wouldn't ask it to translate it to XView, that would just be mean, to Claude and to users. ;)
 
 -Don
 
