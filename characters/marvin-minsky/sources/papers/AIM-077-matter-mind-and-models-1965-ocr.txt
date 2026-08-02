@@ -1,0 +1,468 @@
+MASSACHUSETTS INSTITUTE OF TECHKOLOGY
+
+PROJECT MAC
+
+Artificial Intelligence MAC=M=2 30
+Memo. No.7? Match 1965
+
+Hatter, Mind and Hodels
+
+Marvin Minsky
+MATTER, MIND AND MODELS
+
+MARVIN MINSKY
+
+Massachusents Jnstiture of Techrology
+Cambridge, Wassachusetis
+
+INTRODUCTION
+
+This paper attempts to explain why people become
+confused by questions about the relation between
+mental and physical events, When a question leads
+to confused, inconsistent answers, this may be (1)
+because the question is ultimately meaningless or alt
+least unanswerable, but it may also be (2) because
+an adequate answer requires a powerful analytical
+apparatus. My view is that many important ques-
+tions about the relation between mind and brain are
+ofthis latter kind, and that some of the necessary
+technical and conceptual tools are becoming avail-
+able as a result of work on the problems of making
+ceompuler programs behave intelligently. In this
+paper we suggest a theory of why introspection docs
+not give clear answers to these questions. The paper
+does not go very far toward finding technical solu-
+tions to the questions, but there ia probably some
+vilue in finding at least a clear explanation of why
+we are confused.
+
+KNOWLEDCE AND MODELS *
+
+If acreature can answer a question about a hypo-
+thetical experiment, without actually performing
+that experiment, then he has demonstrated some
+knowledge about the world. For his answer to the
+question must be an encoded description of the be-
+havior, inside the creature, of some sub-machime or
+made! responding to an encoded description of the
+world situation described by the question.
+
+We use the term made! in this sense:
+
+Toan observer &, an object A* is a model
+ofan abject Ato tre extent that A can wre
+A* to answer questiont shat dnverest hin
+about A,
+
+The model relation is inherently ternary, Any
+attempt to suppress the role of the intentions of the
+investigator, B, leads to circular definitions or to
+ambiguities about essential features and the like.
+[tis understood that B's use of a model entails the
+use of encodings for input and qutput, both for A
+and for A*. If A is the world, questions for A are
+experiments. A* is a good model of A. in B's view,
+to the extent that A"’s answers agree with A’s, on
+the whole, over those questions important to B.
+
+When aoman M answers questions about the
+world, then (taking on ourselves the role of B) we
+attribute this ability to some internal mechanism,
+W® inside of Ml oT would be most convensent if
+we could discern physically within M two separate
+regions W* and M-W* such that W* really conralns
+the knowledge and M-W" contains only general-
+purpose machinery for coding questions, decoding
+answers, and general administrative work. How-
+ever, one cannot really expect to find, in am intelli
+gent machine, @ clear separalion between coding
+and knowledge structures, cither anatomically or
+functionally, because (lor example) some knowledge
+is likely to be used in the encoding and interpreting
+Processes. For our purposes what is important is
+the intuitive motion of a model, not the technical
+ability to delineate a model's boundaries, Indeed
+part of our argument hinges on the inherent diffi-
+culty of discerning such boundaries,
+
+ATODELS OF MODELS
+
+Questions about things in the world are answered
+by making statements about properties of corre-
+sponding siructures in one's model WT of the
+world. For simple mechanical, physical or geo-
+metric mutters one can imagine, as did Craik."
+PROCEEDINGS OF THE IFIP CONGRESS 63
+
+machinery that dozs symbolic calculation but—
+when read through proper codings—has an ap-
+parrently analog character. But what about
+broader questions about the nature of the world?
+These have to be treated (by M) not as questions to
+be answered by W*, but a3 questions lo be answered
+by making general statements abou W*, If We
+contains a model M* of M, then W** may contain
+amodel M** of M*, Indeed, this must be the case
+if M is to answer general questions about himself.
+Ordinary questions about himself, eg., how tall is
+he, are answered by M*, but very broad questions
+about his nature—what kind of a thing is he, etc,,
+are answered, if at all, by descriptive statements
+made by M** about M'*,
+
+The reader may be anxious, at this point, for more
+details about the relation between W* and W**,
+How can he tell, for example, when a question is
+of the kind that requires reference to W** rather
+thanto W*. Is W** a part of W? (Certainly W*,
+like everything else, is part of Wo) Unfortunately,
+I cannent supply these details yet, and expect serious
+problems in eventually clarifying them. [ think we
+must envision W*" as including an interpretatiee
+mechanism that can make reference to W* using
+ik a8 a sort of computer-program subfoutine—to a
+certain depth of recursion. In this sense W** must
+contain W*, but in another more straightforward
+sense W* can contain W**, This suggests (1) that
+the notion contained fa is not sufficiently sophisti-
+ciled to describe the kinds of relations between
+parts of program-like processes and (2) the intuitive
+notion of eodef used herein is likewise too unso-
+phisticated to support developing the theory in tech-
+nical detail. Wt is clear that in this area one cannon
+describe intermodel relationships in terms of models
+as simple physical substructures. An adequate
+analysis Will need much more advanced ideas about
+symbolic representation of information-processing
+structures. *
+
+DIMORPHISM OF OUR WORLD-MODELS
+
+Aman’s model of the world has a distinctly bi-
+partite structure. One part is concerned with mat-
+ters of mechanical, geometrical, physical character.
+The other part is assocmted with things like goals,
+meanings, social matters and the like. This division
+of W* carries through the representations of many
+things in W*, especially to M4 itself. Henee a man's
+model of himself is distinctly bipartite, one part
+concerning his body as a physical object, the other
+accounting for his social and psychological experi-
+ence. When we see an object we account for its
+
+a
+
+mechanical support and coherence (we are amazed —
+at levitations)| and we olso account, in different
+terms, for its teleology—who put it there for what
+Purpose. When something moves we find cither a
+aimple force or a purpose—rarely both—in ordi-
+fary common-sense explanation; the kind that con-
+cerns us here.
+
+Wh this division, 40 richly represented in Jan-
+guage and thought? We recognize that a person's
+YW is not really two clearly disjoint parts but must
+have many overlapping, indistinctly-bounded mod-
+els, The bipartite structure proposed here is only
+an approximation and we do not really want to sug-
+gest that the argument depends at all on a clear
+division into any particular number of parts.
+
+The distinction between energetic explanations
+and informational (or symbolic) explanations is
+another aspect of the same general dimorphism.
+In one sphere, mechanical-geometric constraints are
+powerlul—impenetrability in the arrangement of
+Physical objects. conservation in their transforma-
+ion, for instance. Im the other sphere, one finds
+symbolic constraints of (substantially) equal power.
+The two domains overlap in many complicated ways
+—a child discovers mechanical obstacles, e.g. in the
+forms of limitation of reach, mobility, strength, and
+Precision, lo its psychological goals: it discovers
+emotional symbols in the geometric arrangements
+of fucial expressions and intentions in postural
+attitudes. In explanations of complicated things the
+Iwo models become inextricably involved, we., the
+imagery of the above sentences, But this involve-
+ment reflects nol so much any synthesis of the two
+kinds of explanation, | am afraid, as it reflects the
+poverty of either model for description of compli-
+caled situation.
+
+As forthe genesis of such partitions, | am inclined
+to suppose that they grow apart rather than to-
+gtther, onthe whole, That is not to say that infans
+tile, primitive models are more unitary, but that
+they are simply too indistinct to admit approximate
+boundaries. An infant is mot a monist: it simply
+hasn't enough structure in M** to be a dualist yet;
+itcan hardly be said to have a position on the mind-
+body problem,
+
+THE CENTRAL ARGUMENT:
+DUALESM
+
+When a man is asked a general question about his
+own nature, he tries to give a general description of
+his mockel of himself. That is, the question will be
+answered by MI",
+divided us we have supposed and (2) that the man
+
+BELIEF IN
+
+To the extent thai (1) M™ is ~
+has discovered this—that is, this fact is represented
+in Mi *, his reply will show this.
+
+Ais statement {his belief | that he has a mind
+as well as a body is the conventional wap to
+exprets Nie roughly bipariite appearance af
+fis aioe! of iinisele
+
+Because the separation of the two parts of M* is
+so indistinct, and their interconnections are so com-
+plicated and difficult te describe, the man's further
+attempts to elaborate on the nature of this mind
+bady distinction are bound to be confused and un-
+satisfactory.
+
+A condensed version of this argument was pre-
+sented in Minsky?
+
+HEURISTIC VALUE OF QUASI-SEPARATE
+MODELS
+
+From a scientific point of view, it is desirable to
+obtain & unitary model of the world comprising
+heth mechanical and psychological phenomena.
+Such a theory would become available, for example,
+if the workers in Artificial Intelligence, Cybernetics
+and Neurophysiology all reach their goals. Still,
+such a success might have little effect on the overall
+form of our personal world-tmodels, [ will maintain
+that for practical, heuristic reasons, these would
+atill retain their form of guasi-separate parts. Even
+when a discipline is grossly transformed in tech-
+niques, bases, and concepts, if can maintain its iden
+tity if its problems and concerns temain grouped
+together for practical reasons, For example, Cher-
+istry survives today a8 a science because the primi-
+tives Of the quantum theory are a little Leo remoqe
+for direct application to practical problems; a hier-
+archy of intermediate concepts are necessary to
+apply the theory to everyday problems. The primi-
+tive notions of physics, or even of newrophysiology,
+will be far too remote to be useful in accounting,
+directly, for the mental events of everyday life.
+
+Thus synthesis by direct theoretical reduction is
+unlikely to have a large effect on the overall form of
+W*, The heuristic need for approximately self-
+contained subtheories is boo strong to resist, in prac-
+tical life and thought. Now one might hope for
+another kind of unity—parallel rather than bier.
+archical—in which the quasi-separale models are
+converted to basically simular structures and then
+merged by removal of redundancy, with coding for
+these differences that remain significant, Tt is
+doubtful that much cun be done in this direction,
+The use of psychological explanations for physical
+processes runs exactly counter to the directions that
+
+have led to scientific progress, Similarly, there have
+long been available plenty of reductions of paycho-
+logical explanations to analogies with simple physi-
+cal systems, but these are recognized as inadequate
+and are giving way to information-processing mod-
+els of more abstract character,
+
+In everyday practical thought physical analogy
+metaphors play a large role, presumably because
+one gets a large payoll for a model of apparently
+small complexity, (Actually, the incremental com-
+plexity is small because the model is already there
+as part of the physical part of W*.)) It would be
+hard to give wp such metuphors, even though they
+probably interfere with our further development,
+Just because of this apparent high value-to-cost
+ratio, We cannot expect to get much more by ex-
+tending the mechanical analogies, because they are
+ao informational in character. Mental processes
+resemble more the kinds of processes found in com-
+puter programs—arbitrary evmbol-asseciations,
+tree-like storage schemes, conditional transfers and
+the like. In short, we can expect the simpler useful
+mechanical analogies to survive, but it seems doubt-
+ful that they can grow to bring us usable ideas for
+the parallel unification of W*,
+
+Finally we should note thal in a creature with
+high intelligence one can expect to find a well-devel-
+oped special model concerned with the creature's
+own problem-solving activity. In my view the key
+to any really advanced problem-solving technique
+must exploit some mechanism for planning—for
+breaking the problem into parts and allocating
+shrewdly the machine's effort and resources for the
+work ahead. This meons the machine must have
+facilities for representing and analyzing its own
+goals and resources, One could hardly expect to
+find a useful way to merge this structure with that
+used for analyzing uncomplicated structures in the
+ouler world—nor could one expect that anything
+much simpler would be of much power in analyzing
+the behavior of other creatures of the same char-
+acter.
+
+INTERPRETERS
+
+The notion of parr is more complicated for things
+like computer programs than for ordinary physical
+objects. A single conditional branch makes it pos-
+sible for a program to behave, functionally, like
+two very differen! machines in different circum
+sLOncEs, yet using almost (or exactly) the same seis
+Of instructions,
+
+The netien of a machine containing a model of
+itself is also camplicated, and one might suspect
+PROCEEDINGS OF THE [FIF CONGRESS 63
+
+potential logical paradoxes, There is no logical
+problem about the basic idea, for the internal model
+eculd be very much simplified, and its internal
+model could be vacuous. But, in fact, there is no
+paradox even ina machine's having a model of itself
+complete in ai! detail! Por example, it is possible
+lo construct a Turing machine that can print out an
+entire description of itself, and also execute an arbi-
+trarily complicated computation, 30 thal the ma-
+chine is not expending all ils structure on ils de-
+scriplion, Im particular, the machine can contain
+an inferprefative program which tan use the internal
+description to calculate what the machine would de
+under some hypothetical circumstance. Similarly,
+while it is impossible for a machine of mind to
+analyze, from moment toe moment precisely what it
+is doing at cach step (for it would mewer get past
+the first step) there seems to be oo logecal limitation
+to the possibility of a machine wnderstanding tts
+own basic principles of operation ar, given enough
+memory, examining all the details of its operation in
+fone previously recorded state.
+
+With interpretative operation ability, a program
+con use iiself os its own model, and this can be
+repeated recursively to aa many levels as desired,
+until the memory records of the state of the process
+ect out of hand. With the possibility of this sart
+of datrospection, the boundaries between parts,
+things and models become very hard to understand,
+
+Does interpreted operation play an important
+role in our mental function? [t is clear that one
+interprets memorized instructions, in certain cit
+cumstances. Qne could memorize, for example, the
+rules for reading musical notation and then actually
+perform a piece of music—al a very slow tempo—
+by referring to these rules im executing cach note.
+Eventually, with practice, ane plays faster and it
+stems clear that one is no longer interpreting the
+rules for each note, but that one has assembled
+special mechanisms for the task, This certainly
+sugpestis an analogy with the notion of compiling
+a previously interpreted program. Perhaps our level
+of consciousness if closely related to the extent to
+which the machine is functioning interpretatively
+rather than execuling compiled programs. While
+interpreting, one has the opportunity of examining
+the next step in the tusk before doing it.
+
+FREE WILL
+
+If one thoroughly understands a machine or a
+program one finds no urge to attribute walitien to it,
+If one does nat understand it so well, one must
+supply an incomplete model for explanation. Our
+
+4 iv
+
+everyday intuitive models of higher human activity —
+
+are quite incomplete and many notions in our in-
+formal explanations do net tolerate close cxamina-
+tien, Free-will or volition is one such notion—
+people are incapable of explaining how it differs
+from stochastic caprice, but feel strongly what it
+does. | conjecture that this idea has ils genesis in a
+strong primitive defense mechanism. Briefly, in
+childhood we learn to recognize various forms of
+ageression and compulsion, and to dishke them,
+whether we submit or resist, Older, when wold that
+our behavior is controlled by such-and-such a set
+of jaws, we insert this fact in our model (inappro-
+priately) along with other recognizers of compul-
+sion, We resist copudsion no matter from whom.
+Although resistance is logically futile the resentment
+persists and is rationalized by detective explana-
+tions, since the alternative is emotionally unaccept-
+able,
+
+Hew is this reflected in AAT®? Ff one asks how
+one's mind works, one notices areas where it 1%
+(perhaps incorrectly) understood—that is, where
+come recognizes rules, One sees olher areas where
+ane lacks rules, One can fill this in by postulating
+chance or random activity, But this too, by another
+route, exposes the self to the indignity of remote
+contrel, We resolve this unpleasant form of M**
+by postulating a dhird part—embodying a will or
+spirit ar conscious agent, But there is no structure
+in this purt: one can aay nothing meaningful about
+it. This is becouse whenever a regularity is ob-
+served, its representation ts transferred to the deters
+ministic tule region, The will-model is thus mot
+formed so much fram a need for a place to store
+definite information about one's self; it has the sin-
+gular character of being forced into the model,
+willy-nilly, by formal but essentially content-free
+ideas of what the model must contain.
+
+CONCLUSION
+
+When intelligent machines are constructed, we
+should not be surprised to find them as confused
+and as stubborn ag men on their convictions about
+mind-matter, consciousness, free will and the like.
+For all such questions are pointed at explaining
+the complicated interactions between parts of the
+selfemodel. A man’s or a machine's strength of
+conviction about such things tells us nothing about
+the world, or about the man, except for what it
+tells us about his model of himself,
+
+The gross divisions of our models probably have
+much heuristic vulue to us. Indeed we identify {in ~
+children} some stages in delineating the distinctions
+between these models as associated with growth of
+intelligence. The distinctions could be abandoned
+only at great cost—in everyday practice. That is
+why, even if one accepts the conclusions of this
+eseay, he if unlikely ta note any serious effect on
+his way of thinking about most things.
+
+Jam indebted to S. Papert for several ideas in
+this essay,
+
+os
+
+REFERENCES
+
+lL. K.J.W, Craik, Phe Neture of Explanation, Cam-
+bridge, 1932.
+
+2. M.L. Minsky, “Steps Toward Artificial Intelli-
+gence,” Proc. of the IRE, 49, 1962, p, 28.

@@ -1,27 +1,31 @@
 ---
-status: draft
+status: ready_to_send
 character_id: randall-smith
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/david-ungar/
 also_shows: [repo-shows/openlaszlo/]
 format: remote_or_in_person
-channel: LinkedIn or via David Ungar
+channel: via David Ungar (email forward, Aug 2026); LinkedIn fallback
 ---
 
 # Repo Show invitation — Randall B. Smith
 
-*Draft — warm path via the July 2026 Self-manual LinkedIn reunion and David Ungar.
-Randall Smith may edit, decline, delay, or request removal at any time.*  
+*Warm path via the July 2026 Self-manual LinkedIn reunion and David Ungar, who is
+forwarding this. Randall Smith may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access and easy onboarding.
 
 Randy —
 
 Amanda Walker unearthed a spiral-bound Self manual on LinkedIn, Urs told the "about 30
 versions later" story of writing it under David's feedback, and David replied that Russell
-Allen has **SIC running on 64-bit Macs** and he's still programming in the IDE daily. I've
-been inviting them both to sit down on the record — and every version of my Self credit
-ends the same way: *"you (and Urs, and Randall)."* This invitation completes the sentence.
+Allen has **SIC running on 64-bit Macs** and he's still programming in the IDE daily. When
+I sent David his own invitation, he answered:
+
+> *"And I'm so glad you're inviting Randy, too. So much of what you love traces back to him."*
+
+He's right, and I've known it for decades — every version of my Self credit ends the same
+way: *"you (and Urs, and Randall)."* This invitation completes the sentence.
 
 **The ask:** join us for a **Repo Show** — a friendly recorded conversation whose stage is a
 public GitHub repo, carried through to working code and credited ideas anyone can browse

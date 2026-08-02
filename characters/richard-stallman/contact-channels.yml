@@ -23,7 +23,17 @@ refuses_or_avoids:
 
 accepts:
   email: primary
-  video: [Jitsi Meet, BigBlueButton]
+  video:
+    - Jitsi Meet
+    - BigBlueButton
+  video_notes: |
+    BBB — RMS filk "Limerick for Limerick" (2021): refused Zoom for University of
+    Limerick remote talk; "by Big Blue Button I'll preach!"
+    (stallman.org/doggerel.html · great-quotes.yml#limerick-for-limerick-bbb-2021).
+    Jitsi — 2015: "works fine for meetings; all each participant needs is a URL."
+    FSF day-to-day moved to Galène (2024) after BBB/MongoDB dependency issue; BBB
+    still used when hosts know it. Ekiga — historical Skype alternative in old email
+    sig; project unmaintained (4.0.1 last stable).
   audio: landline callback via rms-assist
   recording_formats:
     video: WebM VP8/VP9

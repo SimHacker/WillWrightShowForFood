@@ -1,18 +1,18 @@
 ---
-status: draft
+status: ready_to_send
 character_id: urs-hoelzle
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/david-ungar/
 also_shows: [repo-shows/openlaszlo/]
 format: remote_or_in_person
-channel: LinkedIn
+channel: via David Ungar (email forward, Aug 2026); LinkedIn fallback
 ---
 
 # Repo Show invitation — Urs Hölzle
 
-*Draft — warm path via the July 2026 Self-manual LinkedIn thread. Urs Hölzle may edit,
-decline, delay, or request removal at any time.*  
+*Warm path via the July 2026 Self-manual LinkedIn thread and David Ungar, who is
+forwarding this. Urs Hölzle may edit, decline, delay, or request removal at any time.*  
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access and easy onboarding.
 
 Urs —
@@ -20,7 +20,9 @@ Urs —
 Amanda's spiral-bound manual, your "about 30 versions later" story, David's reply about
 Russell Allen getting **your SIC running on 64-bit Macs** — that thread made my week. I've
 been thanking the design half of Self in public for years. This is me thanking the
-implementation half, and inviting you both to the same table.
+implementation half, and inviting you both to the same table. David has his own invitation
+in hand — he called the repo "thrilling but also a bit like drinking from a fire hose,"
+which from the man who built the fire hose I take as a good sign.
 
 **The ask:** join me — ideally **paired with David Ungar** — for a **Repo Show**: a friendly
 recorded conversation whose stage is a public GitHub repo, carried through to working code

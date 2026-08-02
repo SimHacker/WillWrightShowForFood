@@ -5,7 +5,7 @@
 meta:
   attributed_to: "Richard M. Stallman"
   uname: RMS
-  curated: 2026-07-31
+  curated: 2026-08-01
   rule: "Verbatim + source + link. Paraphrases only in seek:."
   attribution_format: '"[quote]" -- RMS (date, source)'
   scope: |
@@ -87,6 +87,30 @@ freedom:
     source: "Free Software and Beyond"
     link: "https://en.wikiquote.org/wiki/Richard_Stallman"
     tags: [freedom, proprietary, philosophy]
+
+# ---------------------------------------------------------------------------
+# PATENTS vs COPYRIGHT (Don correspondence)
+# ---------------------------------------------------------------------------
+patents:
+
+  - id: patents-unlike-copyright-2026
+    quote: |
+      Patents are unlike copyright in almost every detail, and I concluded
+      that there is nothing in patent law that is analogous to copyright.
+
+      This conclusion is based on some knowledge of how patents are applied
+      for, judged, and if granted, subsequently enforced -- and how that is
+      nothing like copyright.
+    date: "2026-08-01"
+    from: "rms@gnu.org"
+    to: "don@donhopkins.com"
+    source: "Re: Latent Trolls! (private email)"
+    archive_local: sources/2026-07-30-latent-trolls.md
+    link: "https://gnu.org/philosophy/not-ipr.html"
+    tags: [patents, copyright, ip, philosophy]
+    significance: |
+      Direct reply to Don's "Latent Office" / copyleft-for-patents coinage.
+      RMS points at not-ipr.html — no patent analogue to copyleft in his view.
 
 # ---------------------------------------------------------------------------
 # OPEN SOURCE vs FREE SOFTWARE
@@ -266,6 +290,23 @@ humor:
     tags: [pun, politics, humor]
     humor: true
     note: "Pun on 'prostate' — not an anarchist."
+
+  - id: limerick-for-limerick-bbb-2021
+    quote: |
+      They asked me to give them a speech,
+      But their city I couldn't now reach.
+      Someone said to use Zoom,
+      But our freedom t'would doom,
+      So it's by Big Blue Button I'll preach!
+    date: "2021"
+    source: "Limerick for Limerick — University of Limerick remote talk (pandemic)"
+    link: "https://www.stallman.org/doggerel.html"
+    tags: [humor, limerick, bigbluebutton, zoom, video_conferencing]
+    humor: true
+    significance: |
+      Self-documenting preference: refused Zoom for a remote university talk;
+      preached via BigBlueButton instead. Primary-source filk beats contact lore.
+    contact_relevance: contact-channels.yml accepts BigBlueButton
 
 # ---------------------------------------------------------------------------
 # EMACS

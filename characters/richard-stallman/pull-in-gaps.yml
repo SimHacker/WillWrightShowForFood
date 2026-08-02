@@ -43,8 +43,31 @@ gaps:
     status: planned
     what: "If RMS trains Copyleft, log approved phrases here or in menagerie overlay."
 
+  - id: glenn-gub-daniels-pun-contest
+    status: seeking_primary
+    what: "Glenn GUB@AI Daniels vs RMS at an SF-con pun competition — actual pun lines lost"
+    paraphrase: |
+      Glenn valiantly gave RMS a good shellacking. Brilliant finishing move, but it took
+      a while to dry before anyone could touch it.
+    archive_local:
+      - sources/2026-07-30-latent-trolls.md (Don's Aug 2026 email to RMS)
+      - DonHopkins/temp/rms-prompts.txt (Boskone real-time punning; RMS spectacular at cons)
+    identity_hints:
+      - "Glen Daniels, gub@vax.ftp.com — comp.object vote tally 1993"
+      - "Don FB friends: Glen Daniels"
+    meta_joke: "shellacking / shellac finish had to dry — Don's recap is itself the pun"
+    action: "Ask RMS which con/year; ask Glen if reachable; check NESFA/Boskone program archives"
+
+  - id: gilmore-phone-rms-answered
+    status: harvest_queued
+    what: "Don called John Gilmore; RMS answered — recurring every few years"
+    private_source: DonHopkins/temp/rms-prompts.txt (~L14961, ~L15543, ~L18856)
+    best_dated: "2014-03-15 (Node/npm follow-up email after phone pickup)"
+    action: "Extract into sources/ when Don approves publication."
+
 completed_recently:
-  - "Latent Trolls email archived (sources/2026-07-30-latent-trolls.md)"
+  - "Latent Trolls full thread archived through 2026-08-01 (sources/2026-07-30-latent-trolls.md)"
+  - "RMS patents-vs-copyright reply added to great-quotes.yml#patents-unlike-copyright-2026"
   - "Warm invitation refreshed with rider + virtual parrot (invitation.md)"
   - "Great quotes expanded with public provenance (sources/great-quotes.yml)"
   - "Rider/parrot accommodation note (sources/rider-and-parrot.md)"

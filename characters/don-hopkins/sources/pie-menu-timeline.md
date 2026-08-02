@@ -1,10 +1,13 @@
 # Pie Menu Timeline (Medium, Feb 2019)
 
-**Author:** Don Hopkins · **Published:** Feb 11 2019 · 111-min read
-**URL:** https://medium.com/@donhopkins/pie-menu-timeline-21bec9b21620
+**Author:** Don Hopkins · **Published:** Feb 11 2019 · 111-min read  
+**URL:** https://donhopkins.medium.com/pie-menu-timeline-21bec9b21620
 
 Dated primary-source timeline 1968–2018, built from Don's archived email. The evidentiary
 backbone under the retrospective — most dates below are from quoted period email.
+
+**Full verbatim text:** [`pie-menu-timeline-medium-full.md`](pie-menu-timeline-medium-full.md) ·
+**Employment cross-check:** [`2018-05-24-don-hopkins-resume.md`](2018-05-24-don-hopkins-resume.md)
 
 ## Prehistory
 
@@ -66,6 +69,13 @@ Direct foil to the Buxton/Alias arc — same era, opposite choice.
   the idea of a vocabulary of marks → Others build on this with Flow menus, Flower menus,
   SHARK…"* And on patents: "we were just following SGI corporate patent policy."
 
+## Window management arc 1990–1991
+
+| Date | Event |
+|------|-------|
+| 1990-12-10 | TNT 2.0 tab frames + pie menus at Sun ([`tab.ps`](../code/news-tnt/README.md)) |
+| 1991-08-03 | **OWM** — Josh Siegel's X11/NeWS ICCCM window manager with Don's tab frames and pie menus; manages X clients inside NeWS frames (not the reverse). Josh's Jul 1991 ICCCM-costing memo was the *opposite* direction. Puff/unpuff experiment killed NeWS-inside-X framing. [`owm.ps`](../../josh-siegel/sources/owm.ps) · [synthesis](owm-window-management-synthesis.md) · [i39l flames](i39l-window-manager-flames.md) |
+
 ## Dispute arc 1993–2019 (email-dated)
 
 | Date | Event |
@@ -83,6 +93,7 @@ Direct foil to the Buxton/Alias arc — same era, opposite choice.
 | 2008-07-07 | Buxton's Cambridge PIXIE findings email goes to Kurtenbach, Newman, Lemke, Fleck — **not Don**; Fleck forwards it. The promised copy of the paper never comes |
 | 2018-05-14 | **Plaisant's "mousy" recollection**: marking-menu crew argued "no publication" for mouse-ahead and misinterpreted the separate-window demo as an always-visible menu; she cites HCIL-90-02's verbatim "mouse ahead display suppression" |
 | 2018-05-15→18 | **Kurtenbach exchange**: "Yes, I was aware that pie menus could do mouse-ahead in 1990"; distinction shrinks to the ink trail; "typical pie menus" admitted to be Alias in-house naive reimplementations; "given that Max was the main rival, we didn't want to do them any favors." [The retract-or-clarify thread](2018-05-kurtenbach-retract-or-clarify-exchange.md) |
+| 2018-05-16 | **Kurtenbach 2018 footnote** (Medium timeline): at UMD talk Ben asked marking-vs-pie difference; Gord explained marks-as-accelerators mated to pop-up menus, not "mousing ahead"; evolution line Neuman → Hopkins → Kurtenbach → Flow/Flower/SHARK; patent story (Alias employment contract vs Don's public-domain choice) |
 | 2018-05-15 | **30 Year Retrospective + FUD and Misconceptions published** on Medium — the 30th anniversary window of the CHI'88 presentation |
 | 2019-02-07→08 | Lecture-prep emails to Brad Myers assemble the full PIXIE chain of custody with donhopkins.com URLs; Weiser's 1988 CACM-acceptance email recovered |
 | 2019-02-09 | **Apology demand to Buxton** (Cc Kurtenbach, Myers, Shneiderman, Callahan) — publication notice cleared with Mike Godwin, explicit release for Kurtenbach, the 66-point GDC timeline. No reply, retraction, or evidence ever came. [The letter](2019-02-buxton-apology-demand-gdc-timeline.md) |
@@ -91,7 +102,8 @@ Direct foil to the Buxton/Alias arc — same era, opposite choice.
 ## Implementation river 1987–2018
 
 NeWS Lite → SGI 4Sight overlay-plane subclass → NDE → TNT 2.0 (tab windows, pac-man
-mouse-ahead feedback, spiral scrolling pies for John Gage) → PSIBER Space Deck → HyperLook
+mouse-ahead feedback, spiral scrolling pies for John Gage) → **OWM** (1991, Josh Siegel +
+Don — X11 apps in NeWS tab/pie frames) → PSIBER Space Deck → HyperLook
 SimCity (talking pie menus) → TCL/Tk widget + piewm (X11, multiplayer SimCity, Unix World
 best-of-1992) → ScriptX DreamScape → **The Sims** (1997–2000, head in center, linear
 overflow) → ActiveX/OLE → JavaScript/DHTML → ConnectedTV Palm → **Pocket PC talking pies + Cepstral (~2006)** →

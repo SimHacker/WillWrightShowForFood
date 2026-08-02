@@ -109,7 +109,9 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 |------|------|
 | [Pie Menus: 30 Year Retrospective](pie-menus-30-year-retrospective.md) | PIXIE anchor, theta-menu origin emails, CHI'88, design principles, Jobs demo |
 | [Pie Menu FUD and Misconceptions](pie-menu-fud-misconceptions.md) | Alias/Buxton patent story + Buxton/Kurtenbach rebuttals in comments; ersatz-pie catalog |
-| [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated chronology; includes ~2006 Pocket PC talking pies / Cepstral / pet remotes seed (Don→Tom Lord) |
+| [Pie Menu Timeline](pie-menu-timeline.md) | Email-dated chronology digest; OWM 1991 row; Kurtenbach 2018 footnote |
+| [Pie Menu Timeline — full Medium text](pie-menu-timeline-medium-full.md) | **Verbatim archive** — 4000+ lines, Medium chrome stripped (Feb 2019) |
+| [Don Hopkins Resume (Medium, May 2018)](2018-05-24-don-hopkins-resume.md) | Employment/education/awards summary; links to cached code trees |
 | [Tom Lord 2006 seeds (public)](../../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md) | Ungar@Laszlo, OL SpiderMonkey ambition, TG rant, Lua/WoW pies — full letter private in DonHopkins |
 | [Alan Kay PIXIE thread (2020)](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) | Independent inventions: Fabrik, Etoys halo; Engelbart down-not-across |
 | [PIXIE/Buxton patent roadblock (2008–2023)](2008-2023-pixie-buxton-patent-thread.md) | Fleck → Buxton → Chapman digitization; 2008 email receipts; show not-invited policy; Brad Myers Ch. 33 |
@@ -126,6 +128,19 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [PIXIE reference receipts, Feb 2019](2019-02-08-pixie-references-receipts.md) | **Buxton's "I told him about PIXIE" refuted** — dated trail from 2 Dec 1986 email-to-self through the 1989 `piepaper.comments`; full annotated CACM manuscript (Hopkins/Callahan/Weiser) with mouse-ahead sections; why Don quit academic publishing for DDJ |
 | [sunviewgames → SDI resurrection (2026)](../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md) | Weiser firsthand, 24 Jan 1987: "**I used the snow to hack pies into sunview**"; Apr 1988 NeWS-makers post (Shneiderman's camera, Zork navigation, mouse-ahead on Usenet); recovered [SDI source](../../mark-weiser/software/README.md) with `piemenu_track.c` |
 | [JavaScript Pie Menus for IE (2001)](2001-javascript-pie-menus-ie.md) | **The web-era implementation** — XML + DHTML behavior component at piemenu.com; Fasteroids fair-comparison game; anti-patent paragraph again; credits list naming the whole chain (Weiser, Gallaher, Shneiderman, Gosling, Siegel, Wright…). **Source cached**: [`../code/javascript-pie-menus/`](../code/javascript-pie-menus/README.md) |
+
+## OpenLaszlo / Garnet / Svelte lineage (smooshed articles, Aug 2026)
+
+Overlapping blog posts and HN comment versions merged into four deduplicated
+canonical articles, cross-linked instead of repeating, each with full provenance.
+Index and method note: [articles/README.md](articles/README.md)
+
+| Read | What |
+|------|------|
+| [Constraints and Prototypes in Garnet and OpenLaszlo](articles/constraints-garnet-openlaszlo.md) | "Structured programming for variables"; KR pull vs compiler-wired push; Sketchpad-to-KVO taxonomy; GLASS war stories |
+| [What is OpenLaszlo, and What's It Good For?](articles/what-is-openlaszlo.md) | LZX, data binding, SOLO/multi-runtime, Laszlo Mail/Pandora, Flex knock-off, AJAX-is-old-NeWS |
+| [Instance-First Development](articles/instance-first-development.md) | Oliver Steele's Instance Substitution Principle; who gets it right (LZX, Self, Declare), who misses (Flex, Svelte) |
+| [Svelte 5 Runes, Heir of OpenLaszlo](articles/svelte-runes-openlaszlo-heir.md) | React repeats, it doesn't react; runes beyond the DOM; MicropolisCore wasm bridge as proof |
 
 ## Other sources in this folder
 
