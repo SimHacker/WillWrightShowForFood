@@ -1,0 +1,51 @@
+# Marc Davis — invitation portrayal. NOT Marc Davis.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: marc-davis
+  name: "Marc Davis"
+  type: invitation
+  signifier: "🎬📝"
+  status: living
+  field: "Media Streams — semasiographic video annotation; Garage Cinema; Interval Research; generative media"
+  home: characters/marc-davis/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: send_ready
+  consent: not_yet_asked
+  document: invitation.md
+  group_show: repo-shows/npuc-reunion/
+
+bio:
+  summary: |
+    **Marc Davis** — media scientist and inventor. MIT Media Lab PhD (*Media Streams*:
+    iconic visual language for video annotation, retrieval, and repurposing — developed
+    with Golan Levin and Brian Williams). **Interval Research** (1993–1999): led automatic
+    media production teams; Don Hopkins and **David Levitt** were colleagues there.
+    *Garage Cinema* (CACM 1997): "professional video by hobbyists with camcorders."
+    NPUC **1996 speakers' roundtable** photo — Marc is seated at the far left
+    ([panel source](../ken-kahn/sources/npuc-almaden-panel.md)).
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Marc_Davis_(academic)"
+  web:
+    - "https://marcdavis.me/"
+    - "https://acg.media.mit.edu/people/golan/mediastreams/ — Media Streams (Golan Levin note)"
+  npuc:
+    panel_photo: "../ken-kahn/sources/npuc-almaden-panel.md"
+    note: "1996 NPUC speakers roundtable — Marc corrected the year in the Facebook thread"
+
+interval:
+  colleagues: [david-levitt, golan-levin, don-hopkins]
+  project: "Media Streams / MediaFlow / automatic media production"
+
+see_also:
+  - { path: ../david-levitt/, why: "Interval colleague; Bounce / ConnectedTV thread" }
+  - { path: ../golan-levin/, why: "Media Streams co-designer" }
+  - { path: ../ken-kahn/, why: "Same NPUC panel photo" }
+  - { path: ../../repo-shows/npuc-reunion/, why: "Group reunion show" }

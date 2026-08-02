@@ -69,6 +69,8 @@ wave_1_send_now:
   - { id: edd-coates, why: "★ Friend; audience README ready; email" }
   - { id: dan-ancona, why: "★ Long Now 2006 asker; invitation ready; email" }
   - { id: ted-selker, why: "Send now — formal invitation.md + npuc-reunion show; private email asks Nelson relay + schedule", link: "characters/ted-selker/invitation.md" }
+  - { id: henry-lieberman, why: "NPUC 1993 opening speaker — Tinker / smart interfaces; send w/ npuc-reunion batch", show: "repo-shows/npuc-reunion/", link: "characters/henry-lieberman/invitation.md" }
+  - { id: marc-davis, why: "NPUC 1996 panel + Interval w/ David Levitt; Media Streams → MOOLLM; send w/ npuc-reunion batch", show: "repo-shows/npuc-reunion/", link: "characters/marc-davis/invitation.md" }
   - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; after Selker intro or framing call", gate: "Selker contact first" }
   - { id: ken-kahn, why: "NPUC reunion — 1993 speaker + panel photo; pairs with Selker archive", show: "repo-shows/npuc-reunion/" }
   - { id: scott-adams, why: "Warm (Jan 2026 'sucked me in'); dual-palace show; pairs with Woods send" }

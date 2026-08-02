@@ -26,6 +26,8 @@ the reunion into the repo — not just a video.
 | **Terry Winograd** | 1993 program | [terry-winograd](../../characters/terry-winograd/) |
 | **Carl Hewitt** | 1993 panel | [carl-hewitt](../../characters/carl-hewitt/) |
 | **Ted Nelson** | 1996 talk | [ted-nelson](../../characters/ted-nelson/) |
+| **Henry Lieberman** | 1993 opening — *Smart Interfaces to Smart Machines* | [henry-lieberman](../../characters/henry-lieberman/) ✉️ |
+| **Marc Davis** | 1996 panel (far left); Interval w/ Don + David Levitt | [marc-davis](../../characters/marc-davis/) ✉️ |
 
 **Panel photo (1996):** Marc Davis, Ken Kahn, Don, Fred Lakin, Danny Bobrow, Tim Brown,
 John McCarthy, Ted Selker — [source](../../characters/ken-kahn/sources/npuc-almaden-panel.md).
@@ -33,7 +35,7 @@ John McCarthy, Ted Selker — [source](../../characters/ken-kahn/sources/npuc-al
 **Also in our characters directory — invite candidates:** Ben Shneiderman, Brad Myers,
 James Gosling, Alan Kay, Heinz Lemke, David Rosenthal.
 
-**Not in the repo yet — ask Ted who to add:** Henry Lieberman, Marc Davis, and others
+**Not in the repo yet — ask Ted who to add:** Fred Lakin, Danny Bobrow, Tim Brown, and others
 from the [1993 program](https://web.archive.org/web/20060210092923/http://www.almaden.ibm.com/almaden/npuc97/1993.htm).
 
 **Memorial beats:** John McCarthy, Danny Bobrow, Fred Lakin.

@@ -21,6 +21,7 @@ show:
     - Alan Kay
     - Carl Hewitt
     - Henry Lieberman
+    - Marc Davis
   welcome_guests:
     - Heinz U. Lemke
     - David S. H. Rosenthal
@@ -84,6 +85,15 @@ roster:
       npuc: "1996 — hypertext / Xanadu / PIM rant vs Netscape pragmatism"
       character: characters/ted-nelson/
       source: characters/ted-nelson/sources/npuc-1996-haberli-retrospective.md
+    - id: henry-lieberman
+      npuc: "1993 opening — Smart Interfaces to Smart Machines"
+      character: characters/henry-lieberman/
+      invitation: send_ready
+    - id: marc-davis
+      npuc: "1996 panel photo (far left); corrected year in thread"
+      character: characters/marc-davis/
+      interval: "Colleague w/ Don Hopkins + David Levitt at Interval Research"
+      invitation: send_ready
 
   panel_photo_1996:
     note: "Speakers roundtable of 1995 speakers — dating disputed; see ken-kahn source"
@@ -109,8 +119,6 @@ roster:
       Who else from NPUC should get a character directory and invitation?
       Names from records without repo rooms yet:
     names:
-      - Henry Lieberman
-      - Marc Davis
       - Fred Lakin
       - Danny Bobrow
       - Tim Brown
@@ -148,6 +156,8 @@ format:
 
 ties_to:
   - ../../characters/ted-selker/
+  - ../../characters/henry-lieberman/
+  - ../../characters/marc-davis/
   - ../../characters/ken-kahn/sources/npuc-almaden-panel.md
   - ../../characters/ted-nelson/sources/npuc-1996-haberli-retrospective.md
   - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/
