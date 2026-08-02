@@ -141,6 +141,7 @@ Index and method note: [articles/README.md](articles/README.md)
 | [What is OpenLaszlo, and What's It Good For?](articles/what-is-openlaszlo.md) | LZX, data binding, SOLO/multi-runtime, Laszlo Mail/Pandora, Flex knock-off, AJAX-is-old-NeWS |
 | [Instance-First Development](articles/instance-first-development.md) | Oliver Steele's Instance Substitution Principle; who gets it right (LZX, Self, Declare), who misses (Flex, Svelte) |
 | [Svelte 5 Runes, Heir of OpenLaszlo](articles/svelte-runes-openlaszlo-heir.md) | React repeats, it doesn't react; runes beyond the DOM; MicropolisCore wasm bridge as proof |
+| [Pie Menus and Window Management](articles/pie-menus-window-management.md) | Kando + macOS-snapping + Prolog-WM threads smooshed: uwm → OWM → piewm → Kando lineage, XCalc easter egg, overlay window manager idea |
 
 ## Other sources in this folder
 

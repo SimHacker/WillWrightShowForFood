@@ -24,6 +24,17 @@ External anchor for the whole cluster, not duplicated here:
 [Micropolis in OpenLaszlo retrospective](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/openlaszlo/README.md)
 in the MicropolisCore repo, next to the archived LZX source.
 
+## The window management cluster
+
+| Article | Owns |
+|---------|------|
+| [Pie Menus and Window Management](pie-menus-window-management.md) | Window management as the perfect pie menu application; the X10 uwm → NeWS OWM → piewm → Kando lineage; the XCalc easter egg; the overlay window manager idea; geometry-beats-magic craft notes |
+
+General pie menu history stays in the sources canon
+([30 Year Retrospective](../pie-menus-30-year-retrospective.md),
+[Timeline](../pie-menu-timeline.md)); this article owns only the window
+management thread.
+
 ## Raw sources
 
 Blog originals (archive.org): [Constraints and Prototypes in Garnet and Laszlo](https://web.archive.org/web/20160405015129/http://www.donhopkins.com/drupal/node/69)
