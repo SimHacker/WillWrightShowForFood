@@ -62,6 +62,17 @@ lives in the micropolis repo, and the
 analyzes it in exquisite detail. Video:
 [Micropolis Online Web Demo](https://www.youtube.com/watch?v=8snnqQSI0GE).
 
+**SimFaux.** An interactive TV-station simulator: an OpenLaszlo/Flash parody of Fox
+News built for the Huffington Post Contagious Festival (2006), with pie menus,
+channel surfing, keyword-tagged characters, video bites, surveys, and games. It
+exercised everything at once — media streaming, data binding, prototype
+customization — as satire. The genome and the reincarnation plan live in
+[apps/simfaux](../../../../apps/simfaux/README.md): the 2006 LZX tree preserved as
+DNA, to be transcribed into a working
+[OpenLaszlo 5.0](https://github.com/davidtemkin/openlaszlo-5.0) app and a
+[Declare](https://github.com/davidtemkin/declarelang) app as sibling organelles.
+Video: [SimFaux: The Me Show](https://www.youtube.com/watch?v=gRodlxUZ9SQ).
+
 **The Laszlo Explorer.** The reference manual was itself a Laszlo application with
 embedded live examples, and "Laszlo in 10 Minutes" let you edit the example code,
 dynamically recompile, and instantly see the results as a running application, in
