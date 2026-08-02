@@ -43,11 +43,12 @@
 
 ## Suggested send order
 
-1. **David** — link `00-START-HERE.md` (numbered topics for GitHub listing)
-2. **Ted Nelson** — unnatural-selection + NPUC retrospective segment
-3. **Ted Selker** — co-host / introduce Ted / NPUC memories
-4. **James Gosling** — Alvey table + SunDew lane (rich invite like David's)
-5. **Alan Kay** — parallel track (microworlds + window prehistory); own invite soon
+1. **Ted Selker** — short private email + [formal invitation](../characters/ted-selker/invitation.md) + [NPUC reunion](../repo-shows/npuc-reunion/README.md); ask him to complete roster and reach Ted Nelson
+2. **David** — link `00-START-HERE.md` (numbered topics for GitHub listing)
+3. **Ted Nelson** — after Selker intro — unnatural-selection + NPUC retrospective segment
+4. **Ken Kahn** — NPUC panel photo + archive fishing with Selker
+5. **James Gosling** — Alvey table + SunDew lane (rich invite like David's)
+6. **Alan Kay** — parallel track (microworlds + window prehistory); own invite soon
 
 ---
 

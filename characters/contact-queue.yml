@@ -68,8 +68,9 @@ wave_1_send_now:
   - { id: jared-tarbell, why: "Warm since 2005; invite ready; Laurie + Will included" }
   - { id: edd-coates, why: "★ Friend; audience README ready; email" }
   - { id: dan-ancona, why: "★ Long Now 2006 asker; invitation ready; email" }
-  - { id: ted-selker, why: "Send now — TrackPoint/NPUC; tag-team gateway to Ted Nelson" }
-  - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; coordinate w/ Will + Selker first, then send", gate: "Selker/Will framing call" }
+  - { id: ted-selker, why: "Send now — formal invitation.md + npuc-reunion show; private email asks Nelson relay + schedule", link: "characters/ted-selker/invitation.md" }
+  - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; after Selker intro or framing call", gate: "Selker contact first" }
+  - { id: ken-kahn, why: "NPUC reunion — 1993 speaker + panel photo; pairs with Selker archive", show: "repo-shows/npuc-reunion/" }
   - { id: scott-adams, why: "Warm (Jan 2026 'sucked me in'); dual-palace show; pairs with Woods send" }
   - { id: patrick-j-barrett-iii, why: "send_now; invitation REFRAMED 31 Jul — love/respect first, low ask, time-shifted any-medium menu; deliver warmly via Heather Alvey or Eric Hedman (old friends), no on-the-spot attention", batch: sims-reunion-2026 }
   - { id: clint-basinger, why: "send_now — LGR audience bridge" }

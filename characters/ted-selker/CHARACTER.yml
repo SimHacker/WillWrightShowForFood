@@ -16,10 +16,11 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: send_ready
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/ted-selker/
+  group_show: repo-shows/npuc-reunion/
 
 bio:
   summary: "**Ted Selker** — HCI researcher and inventor best known for the **TrackPoint** pointing stick (the red nub on IBM ThinkPad keyboards). He led IBM Almaden's User Systems Ergonomics Research group and its **New Paradigms for Using Computers (NPUC)** workshops, taught at the **MIT Media Lab** (Context-Aware Computing; 'considerate computing'), and co-directed the **Caltech/MIT Voting Technology Project**."
@@ -40,6 +41,7 @@ see_also:
   - { path: media.md, why: "The TrackPoint 'So hot, we had to make it red' IBM ThinkPad ad" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: invitation.md, why: "Public invitation draft" }
+  - { path: ../../repo-shows/npuc-reunion/, why: "NPUC reunion group show — co-host; archive keeper" }
   - { path: ../ted-nelson/, why: "Friend; the 'Têd-à-Têd Talk' pairing — see repo-shows/ted-nelson/" }
   - { path: ../don-hopkins/, why: "Don demoed Multiplayer SimCity at IBM Almaden's NPUC workshop" }
   - { path: ../mark-weiser/, why: "Calm / context-aware computing kinship (memorial)" }

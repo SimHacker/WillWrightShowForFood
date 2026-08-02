@@ -1,0 +1,156 @@
+# SHOW — NPUC Reunion (New Paradigms for Using Computers)
+# IBM Almaden Research — Ted Selker's workshop, ~1993–2000
+# Reincarnated as a Repo Show: archive fishing, virtual IBM Burgers, runnable demos.
+
+show:
+  id: npuc-reunion
+  title: "NPUC Reunion — New Paradigms for Using Computers, Reincarnated in a GitHub Repo"
+  subtitle: "Virtual IBM Burgers optional but encouraged"
+  type: group
+  host: Don Hopkins
+  co_host: Ted Selker
+  guests: ["Ted Selker", "Don Hopkins"]
+  dream_guests:
+    - Ken Kahn
+    - Ted Nelson
+    - Don Norman
+    - Terry Winograd
+    - Ben Shneiderman
+    - Brad A. Myers
+    - James Gosling
+    - Alan Kay
+    - Carl Hewitt
+    - Henry Lieberman
+  welcome_guests:
+    - Heinz U. Lemke
+    - David S. H. Rosenthal
+  status: seed
+  consent: not_yet_asked
+
+what_was_npuc: |
+  Ted Selker's **New Paradigms for Using Computers** workshop at IBM Almaden Research
+  (USER lab). Small, opinionated, forward-looking — speakers who argued for interfaces
+  and interaction models the industry had not shipped yet. Don spoke on self-revealing
+  gesture interfaces (1993); demoed **Multiplayer SimCity** at a later NPUC; Ted Nelson
+  gave the legendary 1996 talk (transcript on archive.org). Ted Selker says he holds
+  **transcriptions, videos, and audios of seven years** of heroes speaking about the future.
+
+reincarnation: |
+  The product is not a podcast — it is a **living GitHub repo**: digitized tapes,
+  reformatted transcripts, linked character directories, and runnable code spun out of
+  whatever the reunion remembers. MOOLLM microworld rooms as the spiritual successor to
+  "personal information managers" — but with simulation, characters, and forkable state.
+
+traditions:
+  virtual_ibm_burgers: |
+    NPUC famously served **free IBM Burgers** (Ted Selker's memory). On air: order
+    delivery to wherever each guest is Zooming from; document the ritual in the repo.
+  multiplayer_simcity: |
+    Don's NPUC demo thread — cooperative city simulation UI; tie to
+    characters/will-wright/sources/multiplayer-simcity-ui-network/.
+  ted_nelson_1996: |
+    Resurrect the NPUC '96 Ted Nelson × Netscape tension; reformat transcript;
+    clip into unnatural-selection panel if Nelson joins.
+
+roster:
+  note: |
+    Partial roster from archived programs, panel photos, and Don's memory.
+    **Ted Selker holds the definitive list** — ask him on air and in prep to name
+    everyone we forgot and who still wants in.
+
+  host:
+    - id: ted-selker
+      role: "NPUC organizer; archive keeper (~7 years of tapes)"
+      character: characters/ted-selker/
+
+  confirmed_in_repo:
+    - id: don-hopkins
+      npuc: "1993 — Self-revealing Gesture Interfaces (VISEX); panel photo; Multiplayer SimCity demo"
+      character: characters/don-hopkins/
+    - id: ken-kahn
+      npuc: "1993 — Sketches and Animations as Programs; 1996 panel photo"
+      character: characters/ken-kahn/
+      source: characters/ken-kahn/sources/npuc-almaden-panel.md
+    - id: don-norman
+      npuc: "1993 — Things That Make Us Smart (Apple ATG)"
+      character: characters/don-norman/
+    - id: terry-winograd
+      npuc: "1993 program — Charting the Information Wilderness"
+      character: characters/terry-winograd/
+    - id: carl-hewitt
+      npuc: "1993 afternoon panel — Marketing vs. Innovation (Ken's PhD advisor)"
+      character: characters/carl-hewitt/
+    - id: ted-nelson
+      npuc: "1996 — hypertext / Xanadu / PIM rant vs Netscape pragmatism"
+      character: characters/ted-nelson/
+      source: characters/ted-nelson/sources/npuc-1996-haberli-retrospective.md
+
+  panel_photo_1996:
+    note: "Speakers roundtable of 1995 speakers — dating disputed; see ken-kahn source"
+    left_to_right: [Marc Davis, Ken Kahn, Don Hopkins, Fred Lakin, Danny Bobrow, Tim Brown, John McCarthy, Ted Selker]
+    image: characters/ken-kahn/media/npuc-panel-almaden.png
+
+  in_characters_dir_invite_candidates:
+    - id: ben-shneiderman
+      why: "HyperTIES lineage; CHI'88 pie menus; unnatural-selection welcome guest"
+    - id: brad-myers
+      why: "Pick Click Flick; Garnet; unnatural-selection welcome guest"
+    - id: james-gosling
+      why: "Alvey 1985 icon table; NeWS/Java lineage"
+    - id: alan-kay
+      why: "Microworlds; Engelbart memorial arc"
+    - id: heinz-lemke
+      why: "PIXIE 1969 — pre-NPUC radial-menu DNA; constructionist health-care thread"
+    - id: david-rosenthal
+      why: "ICCCM treaty; NeWS/X11 standards war; unnatural-selection co-lead"
+
+  not_in_characters_dir_yet:
+    ask_ted: |
+      Who else from NPUC should get a character directory and invitation?
+      Names from records without repo rooms yet:
+    names:
+      - Henry Lieberman
+      - Marc Davis
+      - Fred Lakin
+      - Danny Bobrow
+      - Tim Brown
+      - Martin Haeberli
+      - Paul Haeberli
+      - Jakob Nielsen
+
+  memorial:
+    - John McCarthy
+    - Danny Bobrow
+    - Fred Lakin
+
+linked_shows:
+  solo_selker: repo-shows/ted-selker/
+  ted_a_ted: repo-shows/ted-nelson/
+  unnatural_selection: repo-shows/unnatural-selection.yml
+  ken_kahn: repo-shows/ken-kahn/
+  pixie_pie_menus: repo-shows/pixie-pie-menus-pdp7.yml
+
+dream_segments:
+  - "Archive fishing — Ted Selker's seven years: what survives, what to digitize first"
+  - "Virtual IBM Burgers — open the show with the ritual"
+  - "1993 program walk — Ken's *Sketches and Animations as Programs* → ToonTalk → 2026 chatbots"
+  - "Multiplayer SimCity demo story — UI/network design for shared microworlds"
+  - "Ted Nelson 1996 — reformat transcript; invisible clipboard vs visible repo"
+  - "Who did we forget? — live roster completion with Ted S."
+  - "New paradigms now — Content-Verify, considerate computing, MOOLLM rooms"
+
+format:
+  live: true
+  remote_ok: true
+  async_clips: true
+  post_production_integrate: true
+  note: "One big reunion call or many small ones edited together — guest preference"
+
+ties_to:
+  - ../../characters/ted-selker/
+  - ../../characters/ken-kahn/sources/npuc-almaden-panel.md
+  - ../../characters/ted-nelson/sources/npuc-1996-haberli-retrospective.md
+  - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/
+  - ../ted-selker/SHOW.yml
+  - ../ted-nelson/SHOW.yml
+  - ../unnatural-selection.yml

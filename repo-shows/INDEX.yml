@@ -46,6 +46,7 @@ shows:
     brian-eno/:                 "★ DREAM. Brian Eno — generative systems; Long Now 2006 w/ Will; Scott Draves reunion."
     drew-carey/:                "★ DREAM. Drew Carey — improv + Sims mythology (House Party, Drew Carey Show in-game)."
     openlaszlo/:                "★ REUNION. OpenLaszlo → Declare — Temkin + Steele + Henry + Don (+ Ungar, Brad Myers, Craig Latta optional). Prototypes Rosetta; OL 5.0 + Declare; ISP; Svelte 5; Mesa. Solos: oliver-steele/, david-ungar/, brad-myers, craig-latta/."
+    npuc-reunion/:              "★ REUNION. NPUC @ IBM Almaden — Ted Selker co-host; archive fishing (~7 yrs tapes); virtual IBM Burgers; partial roster from 1993 program + 1996 panel; Ted completes guest list. Links: ted-selker/, ted-nelson/, ken-kahn/, unnatural-selection."
     simfaux/:                   "★ SEED WRAPPER. Sideways symbiosis in ../apps/simfaux/ORGANELLES.yml — LZX DNA + OL5 + Declare sibling organelles (Soul City parallel souls). Live faux-news instrument. Spin out: SPIN-OUT.md. Kin: openlaszlo/, character-endosymbiosis."
   seeds:
     group:

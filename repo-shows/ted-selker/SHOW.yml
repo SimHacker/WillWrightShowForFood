@@ -28,9 +28,11 @@ format:
   audience_qa: true
 
 also_appears_in:
+  npuc_reunion: "Co-host of ../npuc-reunion/ — archive fishing, virtual IBM Burgers, complete the guest roster"
   ted_a_ted_talk: "The 'Têd-à-Têd Talk' — paired with his friend Ted Nelson; see ../ted-nelson/SHOW.yml"
 
 ties_to:
+  - ../npuc-reunion/SHOW.yml
   - ../../characters/ted-selker/invitation.md
   - ../../characters/ted-nelson/
   - ../../characters/don-hopkins/
