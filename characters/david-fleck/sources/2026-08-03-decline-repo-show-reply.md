@@ -56,8 +56,9 @@ Full 2008 export: [`../../heinz-lemke/sources/pixie-film-emails-export.txt`](../
 | **Wacom + pie menus** | Company **patented his thesis work** but **never shipped a product with pie menus** |
 | **Largest deployment?** | Suggests **Second Life** may have been biggest pie menu deployment |
 | **All The Widgets** | Loved the pie menu demo excerpts; regrets ideas not shipped commercially |
-| **PIXIE films** | Cambridge embed `sms.cam.ac.uk/media/3009795/embed` **unreachable** for him — send working links |
-| **Working mirrors** | [Flight of the PIXIE (YouTube)](https://www.youtube.com/watch?v=jDrqR9XssJI) · [cambridge-films doc](../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
+| **PIXIE films** | Cambridge embed `sms.cam.ac.uk/media/3009795/embed` **unreachable** (Aug 2026) |
+| **Don's response** | Contact librarian **David Chapman**; upload personal telecine copies to **YouTube** with full attribution |
+| **Working now** | [Flight of the PIXIE edit (YouTube)](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **W3C tilt** | Hardware measures X/Y tilt; spec also has altitude/azimuth; azimuth unstable near vertical |
 | **Async** | **Open to continue conversation** — not a hard no to Don |
 

@@ -16,6 +16,7 @@ films — and why that made Don's *Flight of the PIXIE* edit possible.
 2. **Don goes direct to Cambridge (10 Feb 2019)** — Reference ticket `#43348` (later `#91692`, `#94718`). Don contacted **David Chapman**, Reference Department, Cambridge University Library (`reference@lib.cam.ac.uk`).
 3. **Chapman's detective work** — Chapman traced the films through the Computing Laboratory Rainbow group — a member had **both films in his office**, and offered digitization unprompted (8 Mar 2019) — plus St John's College biographical librarians (William Newman status), and the lab's own librarian. He coordinated digitisation via the University Libraries Digital Content Unit. Firm quote 7 May 2019; films published 9 July 2019 — and the lab began considering digitizing the rest of its film archive "as a result of your enquiry."
 4. **What came online** — Two PIXIE demonstration films (1969, Southampton CAD Conference paper accompaniment) plus scanned paper, at [cl.cam.ac.uk/library/archives.html](https://www.cl.cam.ac.uk/library/archives.html).
+   **Aug 2026:** Dave Fleck reported the Cambridge SMS embed (`sms.cam.ac.uk/media/3009795/embed`) unreachable. Don is contacting **David Chapman** (Reference Department) and uploading **personal copies of the original telecines** to YouTube with full attribution (Wiseman, Lemke, Hiles, Chapman, Cambridge University Library) so the films stay accessible regardless of the archive player.
 5. ***Flight of the PIXIE* (Don's edit)** — After publication, Don cut highlights from the digitized films, synchronized them in AfterEffects to Rimsky-Korsakov's *Flight of the Bumblebee* ([**Yuja Wang**, piano](../yuja-wang/README.md) — Verbier Festival era, Cziffra arrangement), to show how fast and fluid PIXIE's radial menus were on the PDP-7 graphics terminal (apps on Titan over the link). A first cut used an **Orkestra Synthetique** version; Heinz's verdict settled it: *"nothing beats Yuja Wang."* [YouTube](https://www.youtube.com/watch?v=jDrqR9XssJI). Don credits Wiseman, Lemke, Hiles, **and Chapman** in the video dedication block. Tribute + share links: [`characters/yuja-wang/`](../yuja-wang/README.md).
 6. **Heinz enters the picture (21 Feb 2020)** — Don reached Heinz Lemke (PIXIE programmer on the PDP-7) while documenting the films: *"Hello, Doctor Lemke!"* Heinz confirmed he is the person in both films working the light pen (*"looking much better in those times than today"*), identified **John Hiles** as the man at the TTY (third author, wrote the circuit-analysis application; died 1972), revealed **PIXIE II** (Lemke, Cypko, Warner & Berliner 2014 — patient models in computer-assisted medicine, PIXIE revived after ~45 years dormant), and began his *PIXIE History — Back to the Roots* series. Don hopes for CHM oral history while first-hand memory remains.
 
@@ -120,8 +121,9 @@ John Gilmore sent Don a PDF scan of a McGraw-Hill **Electronics** article (subse
 
 ## Links
 
-- Films archive: https://www.cl.cam.ac.uk/library/archives.html
-- *Flight of the PIXIE*: https://www.youtube.com/watch?v=jDrqR9XssJI
+- Films archive: https://www.cl.cam.ac.uk/library/archives.html *(embed reported broken Aug 2026 — mirrors in progress)*
+- *Flight of the PIXIE* (Don's edit): https://www.youtube.com/watch?v=jDrqR9XssJI
+- Original 1969 telecines: YouTube mirrors with attribution — *pending upload Aug 2026* (triggered by Dave Fleck alert; librarian David Chapman also being contacted)
 - PIXIE paper (Don's scan): https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
 - Don's retrospective: https://donhopkins.medium.com/pie-menus-936fed383ff1
 - Cambridge Lab history (PDP-7/Titan CAD): https://www.cl.cam.ac.uk/events/EDSAC99/history.html
