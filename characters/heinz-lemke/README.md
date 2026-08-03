@@ -7,8 +7,11 @@ Invitation portrayal — **not** Heinz U. Lemke. [Standards](../../schemas/portr
 Co-authored **PIXIE** with Neil E. Wiseman and John O. Hiles at Cambridge (1969). Don's warm
 correspondence (~2020–present): Chapman film recovery, *Flight of the PIXIE*, CARS workshops,
 Black Forest visits. **ASAP Repo Show:** Heinz + **Lars Brinkhoff** (PDP-7/340 emulation) +
-**David Rosenthal** (same Cambridge stack ~1970) — [`invitation.md`](invitation.md)
-*(send-ready draft)*.
+**David Rosenthal** (same Cambridge stack ~1970) — [`invitation.md`](invitation.md).
+
+**Aug 2026:** CARS office closed; reading Don's Model Science note afternoons. Proposes IFCARS
+joint project [**HCI and Modelling**](sources/2026-08-03-cars-2027-hci-modelling-cooperation.md)
+for **CARS 2027 Berlin** (and 2028–2030); possible contract for token costs + travel.
 
 ## Start here
 

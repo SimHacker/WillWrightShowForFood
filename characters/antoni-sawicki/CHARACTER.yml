@@ -21,11 +21,12 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
+  status: engaged
   consent: not_yet_asked
   interview_planned: true
   document: invitation.md
   show_seed: repo-shows/antoni-sawicki-ttycity.yml
+  responded: 2026-08-03
 
 correspondence:
   jul_2026:
@@ -33,6 +34,14 @@ correspondence:
       Antoni emailed ttycity link Jul 7; Don verklempt, asked about HN. Jul 8 Antoni clarified:
       his own project, not on HN yet, emoji graphics "surprisingly pretty", binaries WIP.
     source: sources/2026-07-08-ttycity-email-thread.yml
+  aug_2026:
+    note: |
+      Aug 1 Don challenged sunviewgames / Weiser SDI resurrection. Aug 3 Antoni: loves ttycity,
+      wants better demo video quality; planning SimCity on Sun 1/2/3 + SunView; shipped vtcity
+      (soft downloadable fonts on DEC VT terminals).
+    sources:
+      - sources/2026-08-01-sunviewgames-sdi-thread.md
+      - sources/2026-08-03-vtcity-sunview-reply.md
 
 bio:
   summary: |
@@ -47,8 +56,9 @@ bio:
     machines (Alpha AXP, MIPS, PowerPC, Itanium, ARM — targeting NT 4.0 and working toward
     NT 3.1), and in July 2026 he shipped **ttycity** — Micropolis for the terminal, ncurses,
     with the original simulation engine preserved as-is and four rendering modes from
-    7-bit vt100 ASCII to full **Unicode emoji tiles**. A city you can play over ssh,
-    down to 80×24.
+    7-bit vt100 ASCII to full **Unicode emoji tiles**. Aug 2026: **vtcity** experiments with
+    soft downloadable fonts on DEC VT terminals; planning **SimCity on Sun 1/2/3 with SunView**.
+    A city you can play over ssh, down to 80×24.
 
     He also works the way this show works: for the OpenTTD NT RISC port he used LLMs — his
     phrase: "a tireless army of robots" — to downgrade modern code to compile on Visual C 4.0.
@@ -60,6 +70,13 @@ ttycity:
   status_jul_2026: "Own project; not announced HN; polishing binaries for more platforms"
   emoji_ui: sources/ttycity-emoji-graphics-ui.yml
   screenshot: media/ttycity-emoji-ui-screenshot.png
+vtcity:
+  repo: https://github.com/tenox7/vtcity
+  what: "Soft downloadable fonts on DEC VT terminals — glyph loading experiment (Aug 2026)"
+sunview_simcity:
+  status: planned
+  note: "SimCity port to Sun 1/2/3 with SunView — Antoni Aug 2026"
+  ties_to: ../mark-weiser/software/README.md
   what: |
     Port of Micropolis Activity to the terminal using ncurses; simulation engine untouched.
     Assets (scenarios, cities) baked into the binary — one file, no installs. Themes (tan,
@@ -91,6 +108,8 @@ sources:
   email_thread: sources/2026-07-08-ttycity-email-thread.yml
   emoji_ui: sources/ttycity-emoji-graphics-ui.yml
   first_contact: sources/2026-07-07-ttycity-email.md
+  sunview_sdi: sources/2026-08-01-sunviewgames-sdi-thread.md
+  aug_2026_reply: sources/2026-08-03-vtcity-sunview-reply.md
   web:
     - https://www.tenox.net/
     - https://github.com/tenox7/ttycity

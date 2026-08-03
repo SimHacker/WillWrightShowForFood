@@ -16,12 +16,14 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: out_of_office
+  status: engaged
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7.yml
   co_guests: [lars-brinkhoff, david-rosenthal]
-  note: "ASAP when back — Black Forest farmhouse; OOO/traveling early July 2026; async solo video fine"
+  note: |
+    Aug 2026: CARS office closed; reading Don's Model Science note afternoons. Proposes IFCARS
+    joint project "HCI and Modelling" for CARS 2027 Berlin + beyond; possible contract for costs/travel.
 
 bio:
   summary: |

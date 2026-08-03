@@ -189,6 +189,21 @@ threads:
       Sutherland at MIT. Attachment: agenda (pull in).
     pull_in: pull-in-gaps.md#heinz_1969_us_trip_agenda
 
+  cars_2027_hci_modelling_2026_08_03:
+    date: "2026-08-03"
+    transcript: sources/2026-08-03-cars-2027-hci-modelling-cooperation.md
+    what: |
+      Heinz: CARS office closed August; ~150++ IJCARS manuscripts solo (mornings). Afternoons for
+      Don's 31 Jul forwardable note -- especially Model Science + PIXIE + transparency. By end
+      August: cooperation work items. Proposes IFCARS joint project **"HCI and Modelling -- where
+      we come from and may be going to"** -- first presentations/demos CARS 2027 Berlin; echoes
+      1985 CARS founding philosophy (modelling + MCI workshops). Future: 2028 Barcelona, 2029
+      Freiburg, 2030 Kobe. Possible IFCARS contract for token costs + travel; CHM/ACM welcome.
+    private_archive: DonHopkins/characters/don-hopkins/correspondence/attachments/heinz-lemke/2026-07-27-forwardable-expenses-scope.md
+    show_refs:
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml
+      - sources/2026-07-24-facebook-guessing-game.md
+
   pixie_attachments_batch_2026_07_10:
     date: "2026-07-10"
     transcript: sources/2026-07-10-pixie-storyline-thread.md
@@ -237,6 +252,8 @@ show_hooks:
   - "Alan Kay vs Heinz — light pen vs RAND tablet; Heinz has driver source"
   - "Lemke constellation — David Officer Lemke (Sun/NeWS), Andreas C. Lemke (CHI'90 critics), family TBD"
   - "CARS 2025 Berlin — game thinking for healthcare interfaces"
+  - "CARS 2027 Berlin — HCI and Modelling joint IFCARS project with Don (Aug 2026); 29 Jun session + demos"
+  - "IFCARS contract — token costs / travel support possible; CHM/ACM outcomes welcome"
   - "Black Forest barn + Mario Cypko patient-modelling video"
   - "Newman/Sproull ref 520 — 'movable menu' vs radial/pie menu (Roy 10 Jul)"
   - "Roy identifies Heinz in mystery photo — 'Aha. It's you!'"

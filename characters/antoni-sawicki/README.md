@@ -17,6 +17,10 @@ On **8 Jul 2026** he clarified: **that's his own project** — not on Hacker New
 binaries for more platforms; contributions welcome. On the **unicode emoji graphics**: *"surprisingly
 pretty!"*
 
+**3 Aug 2026:** Loves ttycity; wants better demo video quality. Planning **SimCity on Sun 1/2/3
+with SunView**. Shipped **[vtcity](https://github.com/tenox7/vtcity)** — soft downloadable fonts
+on DEC VT terminals. Don's **SDI / sunviewgames** challenge: [thread](sources/2026-08-01-sunviewgames-sdi-thread.md).
+
 ## ttycity — Micropolis for the terminal 🏙️→📟
 
 | | |
