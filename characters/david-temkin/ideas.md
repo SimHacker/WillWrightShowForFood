@@ -96,6 +96,23 @@ do models already know how to read?"
 → [`../jesus-mouse/sources/latent-imports.md`](../jesus-mouse/sources/latent-imports.md)
 · apex: [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#differently-architected-examples-same-cartoon-grammar)
 
+### 15. Push vs pull — David answers on the record (Aug 2026)
+Declare = **push**, spreadsheet model, compiler-derived dependency tree (sees into functions).
+Garnet parsed expressions but was pull; OL chose push for Flash workload. David reading Don's
+[constraints article](../../don-hopkins/sources/articles/constraints-garnet-openlaszlo.md) pre-call.
+→ [`sources/2026-08-03-declare-constraints-thread.md`](sources/2026-08-03-declare-constraints-thread.md)
+
+### 16. JSON bridge + wasm embedding
+Cross-boundary reactivity = JSON datasets (network, baked, or future bridge from Svelte/worker).
+Mesa uses worker offscreen render → main; Micropolis wasm pattern is interesting but not David's
+default path. "Not combo-plate JS/CSS/HTML."
+→ Desktop demo: https://davidtemkin.github.io/declarelang/ (press Desktop)
+
+### 17. Window manager stress test
+Don: Kando overlay WM + NeWS ICCCM history. David: in-app WM yes (Desktop demo); native overlay
+needs Electron cells + compiler support — edge of design. macOS permissions reality check.
+→ [`pie-menus-window-management.md`](../don-hopkins/sources/articles/pie-menus-window-management.md)
+
 ## Sources (public)
 
 - [`sources/declarelang.md`](sources/declarelang.md) — deep sniff

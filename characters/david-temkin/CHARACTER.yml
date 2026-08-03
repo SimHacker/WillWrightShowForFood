@@ -16,11 +16,12 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
+  status: engaged
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/openlaszlo/
-  note: "Group OL reunion → Declare and/or 1:1 Declare deep dive; whatever works"
+  call_scheduled: "2026-08-06 18:00 Don time (Wed) — Zoom TBD"
+  note: "Aug 3: David reading Don's constraint articles; Declare=push/spreadsheet; JSON bridge for embedding; ISP 'yup'; Desktop demo vs Kando WM stress test"
 
 bio:
   summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. In 2026 shipped **OpenLaszlo 5.0** (TypeScript/browser compile) and **Declare** (`declarelang`) — a new UI DSL that declares itself heir to OpenLaszlo but is not a port; also **Mesa** (spatial AI canvas) and the **In Formation** magazine revival. Earlier Senior Director of Engineering at Excite@Home; later co-founded **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
@@ -66,6 +67,7 @@ sources:
   openlaszlo_5_0_thread: characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md
   declarelang: characters/david-temkin/sources/declarelang.md
   declare_dm: characters/david-temkin/sources/2026-linkedin-dm-declare.md
+  declare_constraints_2026_08: characters/david-temkin/sources/2026-08-03-declare-constraints-thread.md
   mesa_and_in_formation: characters/david-temkin/sources/mesa-and-in-formation.md
   wikipedia: null
   web:

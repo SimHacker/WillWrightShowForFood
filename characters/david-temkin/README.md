@@ -49,6 +49,12 @@ Pull **Dave Ungar** (interviewed at Laszlo and got it) into the circle.
 Deep sniff + Svelte triangle: [`sources/declarelang.md`](sources/declarelang.md)  
 DM spark (wet cement — ask before quoting on air): [`sources/2026-linkedin-dm-declare.md`](sources/2026-linkedin-dm-declare.md)
 
+**Aug 2026:** David accepted the invite; **Wednesday 6:00 PM Don time** call scheduled. His Aug 3
+email walks through Declare **push** constraints (spreadsheet / compiler-derived deps), embedding
+limits, JSON-bridge integration, and the **Desktop** demo as in-app window manager — with Don's
+[Garnet/OL/Svelte article pack](../don-hopkins/sources/articles/README.md) in reply:
+[`sources/2026-08-03-declare-constraints-thread.md`](sources/2026-08-03-declare-constraints-thread.md)
+
 ## Mesa · In Formation · Claude Code game port
 
 Spatial AI canvas, print satire revival, 1991 Mac stereo game → JS — Act IV material:
