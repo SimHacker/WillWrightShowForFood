@@ -1,21 +1,25 @@
 # Dave Fleck 🖊️
 
-*Invitation guest — consent not yet asked. [Portrayal standards](../../schemas/portrayal-standards.md).*
+*Invitation sent 2026-07-30; **declined show** 2026-08-03 — async conversation welcome.*
+[Portrayal standards](../../schemas/portrayal-standards.md).
 
 **The man whose question recovered PIXIE.** In May 2008, doing prior-art research for
-what would ship as **Wacom's Radial Menu**, Dave Fleck found the 1969 PIXIE citation on
-Don's pie menu site and asked if Don had the paper. Neither of them could get it — but
-when Bill Buxton dug excerpts out of the Cambridge archives and sent them to a CC list
-that left Don off, **Fleck forwarded Don the two PDFs himself**. Those PDFs are how Don
-learned a film of PIXIE existed; eleven years later that knowledge became the
-[Cambridge film recovery](../heinz-lemke/sources/2019-2020-film-recovery-saga.md),
-*Flight of the PIXIE*, and the entire Heinz Lemke wing of this repo.
+his doctoral thesis on pie menus, Dave Fleck found the 1969 PIXIE citation on Don's pie
+menu site and asked if Don had the paper. When Bill Buxton's notes went to a CC list
+that left Don off, **Fleck forwarded Don the two PDFs himself** — the first cause of the
+[Cambridge film recovery](../heinz-lemke/sources/2019-2020-film-recovery-saga.md).
 
-He wrote, in 2008: *"I just feel this need to see the original."* He never got to.
-Now he can — the paper, Heinz's PhD thesis (the reproducible detail), both films,
-the PDP-7 assembly and octal, the transcription, notes and recollections, original
-sources, articles, interviews, and discussion threads. Closing that eighteen-year
-loop is the first order of business.
+## Status (Aug 2026)
+
+| | |
+|---|---|
+| **Show** | Declined — feels his pie-menu involvement was short and minor |
+| **Async** | Glad to continue if Don has more questions |
+| **Correction** | Wacom **patented his thesis work** but **never shipped pie menus in product** |
+| **Tip** | Second Life may have been the largest pie menu deployment |
+| **Follow-up** | Cambridge PIXIE embed broken for him — send working film links |
+
+Full reply: [sources/2026-08-03-decline-repo-show-reply.md](sources/2026-08-03-decline-repo-show-reply.md)
 
 ## Four acts
 
@@ -25,12 +29,11 @@ patents** (50+ international): stylus pressure and tilt, height-dependent jitter
 filters, palm rejection, the finger-wheel stylus, a stylus brush that senses its own
 filaments bending.
 
-**The Radial Menu (2008–2011).** Co-inventor (with Ben Straub and V. Thane Norton III)
-of **US 7,941,765** — a radial menu whose wedges act as continuous variable controls,
-set by the cursor's angle from the origin. Filed January 2008; his pie-menu prior-art
-homework that May is what connected him to Don. The feature shipped in Wacom's drivers
-and has been in front of millions of artists ever since — with The Sims, one of the
-largest radial-menu deployments in the world.
+**The Radial Menu patent (2008–2011).** Co-inventor (with Ben Straub and V. Thane Norton III)
+of **US 7,941,765** — radial wedges as continuous variable controls. His **doctoral thesis**
+pie-menu research was **patented by Wacom but never shipped in product** (Dave's Aug 2026
+correction). The later **Radial Menu** driver feature shipped separately (Intuos4 era onward).
+Dave suggests **Second Life** may have been the largest pie menu deployment overall.
 
 **Standards (2016–2019).** VP of Software Technology; represented Wacom in the **W3C
 Pointer Events** working group, getting pen twist/rotation into the web platform.
@@ -47,6 +50,7 @@ Dwarves... at the end, they call you Doc, and then you're Happy."
 | LinkedIn | [linkedin.com/in/davefleck](https://linkedin.com/in/davefleck) |
 | The radial menu patent | [US 2009/0187860 → US 7,941,765](https://www.patentsencyclopedia.com/app/20090187860) |
 | W3C Pointer Events (pen twist) | [2016 thread](https://lists.w3.org/Archives/Public/public-pointer-events/2016AprJun/0293.html) |
+| His Aug 2026 reply | [2026-08-03-decline-repo-show-reply.md](sources/2026-08-03-decline-repo-show-reply.md) |
 | His role in the PIXIE recovery | [2019–2020 film recovery saga](../heinz-lemke/sources/2019-2020-film-recovery-saga.md) |
 | The PDFs he forwarded | [`buxton-2008-wiseman-notes/`](../heinz-lemke/sources/buxton-2008-wiseman-notes/README.md) |
 

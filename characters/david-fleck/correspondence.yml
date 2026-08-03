@@ -1,0 +1,23 @@
+# Dave Fleck — correspondence index (public portrayal)
+
+contact:
+  email_2026: dfleck@ieee.org
+  email_2008: dfleck@computer.org
+  linkedin: https://linkedin.com/in/davefleck
+
+timeline:
+  - date: 2008-05-17
+    event: "Asks Don for 1969 PIXIE paper (doctoral prior-art)"
+  - date: 2008-07-08
+    event: "Forwards Don the Buxton Wiseman PDFs — starts PIXIE recovery chain"
+  - date: 2026-07-30
+    event: "Don sends Repo Show invitation + PIXIE recovery links"
+  - date: 2026-08-03
+    event: "Declines show; corrects Wacom never shipped pie menus; async OK"
+    source: sources/2026-08-03-decline-repo-show-reply.md
+
+invitation:
+  sent: 2026-07-30
+  response: declined_show
+  async: welcome
+  note: "Retired 2019; left pen-computing community behind; still curious about PIXIE if we fix broken Cambridge embed"

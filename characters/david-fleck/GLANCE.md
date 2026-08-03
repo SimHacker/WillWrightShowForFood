@@ -9,9 +9,8 @@ forwarding Don the two Wiseman PDFs Buxton sent around him — is the first caus
 entire PIXIE film recovery. He asked to "see the original" in 2008 and never got to.
 Now he can: paper, PhD thesis, films, PDP-7 source, notes, interviews, threads.
 
-**Status**: invitation draft, consent not yet asked.
+**Status**: invitation sent 2026-07-30; **declined show** 2026-08-03; async welcome.
 
-**Show**: solo (pen input + Radial Menu origin + PIXIE cold open) or paired with
-Heinz Lemke. Seed: `repo-shows/david-fleck-pen-input.yml`.
+**Show**: declined. Async: W3C tilt story, working PIXIE links, Second Life deployment tip.
 
-Read next: [README](README.md) → [ideas](ideas.md) → [invitation](invitation.md) → [CHARACTER.yml](CHARACTER.yml)
+Read next: [2026-08-03 reply](sources/2026-08-03-decline-repo-show-reply.md) → [README](README.md)

@@ -16,12 +16,17 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: declined_show
+  consent: async_welcome
   document: invitation.md
   show_seed: repo-shows/david-fleck-pen-input.yml
-  channel: "LinkedIn (linkedin.com/in/davefleck) or IEEE alias from the 2008 correspondence"
-  note: "Open with the gift, not the ask: the 1969 PIXIE paper and films he tried to find in 2008 now exist online. Retired Aug 2019; Portland, OR metro."
+  sent: 2026-07-30
+  responded: 2026-08-03
+  channel: "dfleck@ieee.org (2026 reply); linkedin.com/in/davefleck"
+  note: |
+    Respectfully declined recorded Repo Show — feels his pie-menu chapter was short/minor.
+    Wacom patented his doctoral thesis work but never shipped pie menus in product (his correction).
+    Retired 2019; open to async conversation. Send working PIXIE film links — Cambridge embed broken for him.
 
 bio:
   summary: |
@@ -50,12 +55,20 @@ pixie_connection:
     the digitized paper; Heinz's PhD thesis (reproducible detail of the radial menus);
     both 1969 films; Flight of the PIXIE; the entire PIXIE assembly source and octal
     machine language (transcribed, stepping toward / in SIMH); notes, recollections, and
-    original sources; articles, interviews, and discussion threads. Eighteen years later,
-    the loop can close.
+    original sources; articles, interviews, and discussion threads. Don sent links
+    2026-07-30; Dave tried Cambridge archives 2026-08-03 but embed was unreachable —
+    follow up with working URLs.
+  wacom_correction_2026: |
+    Dave (Aug 2026): Wacom patented his doctoral thesis pie-menu work but **never shipped
+    any product with pie menus** — hardware company, portfolio patent only. Distinct from
+    later Wacom Radial Menu driver feature (US 7,941,765); he considers his own involvement
+    "short lived and minor." Suggests **Second Life** may have had the largest pie menu deployment.
   saga: ../heinz-lemke/sources/2019-2020-film-recovery-saga.md
 
 sources:
   wikipedia: null
+  local:
+    - sources/2026-08-03-decline-repo-show-reply.md
   web:
     - { title: "LinkedIn — Dave Fleck", url: "https://linkedin.com/in/davefleck" }
     - { title: "US 2009/0187860 — Radial control menu (Fleck, Straub, Norton; granted US 7,941,765)", url: "https://www.patentsencyclopedia.com/app/20090187860" }

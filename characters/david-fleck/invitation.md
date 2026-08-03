@@ -1,17 +1,19 @@
 ---
-status: draft
+status: sent
 character_id: david-fleck
 public: true
-consent: not_yet_asked
+consent: async_welcome
+response: declined_show
+sent: 2026-07-30
+responded: 2026-08-03
 show_seed: repo-shows/david-fleck-pen-input.yml
 format: remote
-channel: "LinkedIn or IEEE alias from 2008 correspondence"
+channel: dfleck@ieee.org
 ---
 
 # Repo Show invitation — Dave Fleck
 
-*Draft — not yet sent. Dave Fleck may edit, decline, delay, or request removal at any time.*  
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+*Sent 2026-07-30. **Response 2026-08-03:** Dave respectfully declined a recorded show; open to async conversation. See [sources/2026-08-03-decline-repo-show-reply.md](sources/2026-08-03-decline-repo-show-reply.md).*
 
 Dave —
 

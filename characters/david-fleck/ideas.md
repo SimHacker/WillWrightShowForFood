@@ -1,8 +1,15 @@
 # Dave Fleck — conversation hooks
 
-*Draft — consent not yet asked. [Portrayal standards](../../schemas/portrayal-standards.md).*
+*Show declined 2026-08-03; async hooks remain. [Portrayal standards](../../schemas/portrayal-standards.md).*
 
-## 1. Closing the eighteen-year loop (the opening beat)
+## 0. Async follow-ups (from his Aug 2026 reply)
+
+- **Working PIXIE film links** — Cambridge `sms.cam.ac.uk/media/3009795/embed` failed for him; send YouTube / repo mirrors ([Flight of the PIXIE](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)).
+- **W3C tilt vs azimuth** — pen hardware measures X/Y tilt; spec also exposes altitude/azimuth; azimuth jumps when pen near vertical with 1° resolution. Worth a short written exchange, not a show.
+- **Second Life pie menus** — he thinks it may have been the largest deployment; verify and credit if true.
+- **All The Widgets** — he loved the pie menu demo excerpts; which techniques deserved to ship?
+
+## 1. Closing the eighteen-year loop (gift delivered; show declined)
 
 In 2008 he asked Don for the 1969 PIXIE paper and wrote *"I just feel this need to see
 the original."* The answer at the time was: nobody has it, and Buxton says the original
