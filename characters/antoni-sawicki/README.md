@@ -20,6 +20,7 @@ pretty!"*
 **3 Aug 2026:** Loves ttycity; wants better demo video quality. Planning **SimCity on Sun 1/2/3
 with SunView**. Shipped **[vtcity](https://github.com/tenox7/vtcity)** — soft downloadable fonts
 on DEC VT terminals. Don's **SDI / sunviewgames** challenge: [thread](sources/2026-08-01-sunviewgames-sdi-thread.md).
+Don's Aug 3 reply: [GIGI + GT40 Lunar Lander lore](sources/2026-08-03-don-reply-vt-gigi-gt40.md).
 
 ## ttycity — Micropolis for the terminal 🏙️→📟
 

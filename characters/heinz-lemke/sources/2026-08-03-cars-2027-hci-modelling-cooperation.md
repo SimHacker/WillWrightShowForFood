@@ -33,7 +33,7 @@ Heinz
 
 ## Context
 
-Reply to Don's 31 Jul 2026 forwardable expenses / Model Science note ([DonHopkins attachments/heinz-lemke/2026-07-27-forwardable-expenses-scope.md](https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/correspondence/attachments/heinz-lemke/2026-07-27-forwardable-expenses-scope.md) — private repo).
+Reply to Don's 31 Jul 2026 private note on Model Science, PIXIE, and transparency (not in public repo).
 
 Thread continues the PIXIE/Rainbow/Sketechpad/OOD saga with Roy Eagleson, Alan Kay, Mario Cypko, Leo Joskowicz, Lars Brinkhoff, Will Wright, and others.
 
@@ -47,7 +47,7 @@ Thread continues the PIXIE/Rainbow/Sketechpad/OOD saga with Roy Eagleson, Alan K
 | **CARS 2027 Berlin** | Joint IFCARS theme: **HCI and Modelling -- where we come from and may be going to** |
 | **1985 lineage** | CARS founding philosophy -- modelling + MCI as basic research workshops |
 | **Future venues** | 2028 Barcelona, 2029 Freiburg, 2030 Kobe |
-| **Support** | Possible IFCARS contract -- token costs, travel; CHM/ACM welcome |
+| **Support** | Possible IFCARS contract -- travel and project expenses; CHM/ACM welcome |
 | **29 Jun 2027** | Already on calendar -- HCI session (Joskowicz ELIZA, Cypko Human-AI Model Interaction) |
 
 ## Related

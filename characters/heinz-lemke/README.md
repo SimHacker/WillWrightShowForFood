@@ -11,7 +11,7 @@ Black Forest visits. **ASAP Repo Show:** Heinz + **Lars Brinkhoff** (PDP-7/340 e
 
 **Aug 2026:** CARS office closed; reading Don's Model Science note afternoons. Proposes IFCARS
 joint project [**HCI and Modelling**](sources/2026-08-03-cars-2027-hci-modelling-cooperation.md)
-for **CARS 2027 Berlin** (and 2028–2030); possible contract for token costs + travel.
+for **CARS 2027 Berlin** (and 2028–2030); possible IFCARS contract for travel and project support.
 
 ## Start here
 
