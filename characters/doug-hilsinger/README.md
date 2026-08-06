@@ -34,6 +34,7 @@ by transforming it.
 
 ## Links
 
+- **YouTube tracks (all ten, easy access):** [`youtube-tracks.md`](youtube-tracks.md) · [Certaincorners channel](https://www.youtube.com/@certaincorners/videos)
 - **Invitation:** [`invitation.md`](invitation.md) — channels: Bandcamp contact form + legacy saucefaucet email (MX still live)
 - The story: [`taking-tiger-mountain-by-serendipity.md`](taking-tiger-mountain-by-serendipity.md)
 - Show seed: [`repo-shows/brian-eno/`](../../repo-shows/brian-eno/README.md)

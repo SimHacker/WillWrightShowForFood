@@ -56,13 +56,17 @@ on-air ask: does Nina have the painting, or even a **photo** of it? Turning a ru
 live — a very Repo Show move. *(Attributed as Don's research lead; the painting's existence is a lead to
 confirm, not a settled fact.)*
 
-### 8. The double drag — bio queen and drag king
-Don's affectionate framing: Nina as an **honorary drag queen** — and, technically, a *double* one. A
-**woman performing as a drag queen** is a real subculture role with a real name — a **bio queen** (a.k.a.
-**faux queen**) — and when she flips to perform *as a man*, that's a **drag king**. Both at once. It
-lands her squarely in the show's persona/puppet/gender-performance lineage — **Bowie, Klaus Nomi, Joey
-Arias, Leigh Bowery** — and the voice/persona threads above. *(The "born in Xixaxia" drag-king turn is
-Don's playful nod to Nina's cosmic/UFO stage mythology — offered as affectionate framing, not biography.)*
+### 8. Performance, persona, and drag — ask, don't label
+Don's affectionate *question* for Nina — not a category applied to her. Her work moves between
+operatic femme, punk theatre, male persona, cosmic mythology — sometimes in one song (the Habanera
+in a white wig; **"Born in Xixax"** — male drag, *Nunsexmonkrock*, 1982:
+[video](https://www.youtube.com/watch?v=wOckSjlZTsY)). Don has sometimes thought of this as a kind of
+**double drag** — a woman who can perform *as* a drag queen and *as* a man — but subculture vocabulary
+(**bio queen / faux queen**, **drag king**) is hers to claim, decline, or replace, not his to assign.
+The right move on air: describe what the audience *sees* (transformation, voice, costume, character)
+and ask **how she frames it**. Sibling lineage for context only if she wants it — **Bowie, Klaus Nomi,
+Joey Arias, Leigh Bowery** — and the Trannyshack cover of her own song (hook #9) as proof she sits
+at both ends of the drag chain.
 
 ### 9. The cover chain — Tubes → Nina → Trannyshack (the riff loop, in music)
 The show's **[riff loop](../../repo-shows/ideas/themes/the-riff-loop.md)** made audible: *resampling,
@@ -75,10 +79,21 @@ covering, feeding back, adding more, transcending.* One song, three transformati
   introduced by the late great **Heklina** — the cover of a cover, re-sung in a new body.
 
 Each pass keeps the riff and mutates the meaning — rock satire → punk media-critique → drag tribute. It
-also stitches hook #8 (the drag thread) to a *real* drag lineage. **Nina's 1978 band** — the players Don
-wants to credit by name — was **Bernhard Potschka** (guitar), **Manfred Praeker** (bass), **Herwig
-Mitteregger** (drums), and **Reinhold Heil** (keyboards); the four went on to form **Spliff**, and Heil
-later became a film composer (Tom Tykwer's *Run Lola Run*, *Cloud Atlas*).
+also stitches hook #8 (the drag thread) to a *real* drag lineage.
+
+**Trannyshack → Mother / Oasis — reclaiming, then listening.** Heklina founded Trannyshack in 1996
+(SF punk drag; "tranny" reclaimed insider-style like "queer," never transphobic — trans women part of
+the scene from the start). By 2014 the word's weight had changed. Heklina **chose** to retire the name
+after months of agonizing — not censorship: *"When I started the club, the word 'tranny' was not seen
+as a hurtful thing; today, it is"* · *"My convictions to what, hurt people?"* · *"It's not my place to
+tell someone to get over something."* The party became **Mother**; the bought venue **Oasis**
+([SFist interview](https://sfist.com/2014/05/23/exclusive_sfist_talks_with_heklina/)). A model for how
+punk reclaiming and respectful retirement can coexist.
+
+**Nina's 1978 band** — the players Don wants to credit by name — was **Bernhard Potschka** (guitar),
+**Manfred Praeker** (bass), **Herwig Mitteregger** (drums), and **Reinhold Heil** (keyboards); the four
+went on to form **Spliff**, and Heil later became a film composer (Tom Tykwer's *Run Lola Run*,
+*Cloud Atlas*).
 
 **The Gorbachev rap — cover-chain node found (via a YouTube comment lead).** The song Don had flagged as
 a "Russian" cover is Nina's **"Michail, Michail (Gorbachev Rap)"** (from the *Nina Hagen* LP, 1989). It's
@@ -102,6 +117,7 @@ copyright; "What It Is" is a real, public Nina Hagen song.)*
 
 ## Sources (real, public)
 - Nina Hagen Band (1978): "TV-Glotzer (White Punks on Dope)," "African Reggae," "Naturträne"
+- Nina Hagen, *Nunsexmonkrock* (1982): **"Born in Xixax"** — male drag performance ([video](https://www.youtube.com/watch?v=wOckSjlZTsY))
 - Nina Hagen, "What It Is" — the "they do it with art / Jimi did it with sound" verse
 - Nina Hagen, ["Michail, Michail (Gorbachev Rap)"](https://www.youtube.com/watch?v=7e1suuoTs2Q) (1989) — reportedly based on Andrzej Rosiewicz, ["Wieje wiosna od wschodu"](https://www.youtube.com/watch?v=XM2FSf5IQa8) (Polish, ~1988, performed for Gorbachev/Raisa/Jaruzelski)
 - AntiORP / Netochka Nezvanova / nato.0+55; nettime mailing list; STEIM (Amsterdam); Max/MSP — 1990s–2000s net.art / live-video performance culture
@@ -110,9 +126,10 @@ copyright; "What It Is" is a real, public Nina Hagen song.)*
 - *Cha Cha* (1979 film) — Herman Brood, Nina Hagen, Lene Lovich; incl. a **Ruigoord church wedding** scene (Don's recollection; legal status of the marriage left open)
 - Herman Brood (1946–2001) — Dutch musician & painter; Lene Lovich & Les Chappell (new-wave duo/partners)
 - **Ruigoord** — artists' free-village/church near Amsterdam
-- Drag terms: **bio queen / faux queen** (woman performing as a drag queen); **drag king**
+- Drag terms (for Nina to claim or decline): **bio queen / faux queen** (woman performing as a drag queen); **drag king** — vocabulary only; never applied to her without her words
 - The cover chain — [The Tubes, "White Punks on Dope"](https://www.youtube.com/watch?v=rs9wuaVV33I) →
   [Nina Hagen Band, "TV-Glotzer"](https://www.youtube.com/watch?v=JWzPcDtZZZo) →
   [Suppositori Spelling at Trannyshack](https://www.youtube.com/watch?v=qqLeueR9RkA) (intro'd by Heklina)
+- **Trannyshack → Mother / Oasis** — Heklina's 2014 rebrand; [SFist interview](https://sfist.com/2014/05/23/exclusive_sfist_talks_with_heklina/) (reclaiming → listening, not censorship)
 - Nina Hagen Band → **Spliff**: Bernhard Potschka, Manfred Praeker, Herwig Mitteregger, Reinhold Heil
 - https://www.ninahagen.de/ · https://en.wikipedia.org/wiki/Nina_Hagen

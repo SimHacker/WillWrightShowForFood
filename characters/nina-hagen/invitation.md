@@ -33,7 +33,7 @@ pick, skip whatever doesn't spark:
   the state tries to repossess speech.
 - **Amsterdam / Berlin scene** — Herman Brood, *Cha Cha*, Lene Lovich; I have a lead on a **Brood
   portrait of you** I'd love to see on air if it exists.
-- **Performance persona** — drag king / bio-queen framing as live character work, not biography.
+- **Performance persona** — transformation, voice, and stage character (including drag, in whatever terms she chooses).
 
 More in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/ideas.md). No pressure — accepted, delayed, declined,
 or no reply all honored gracefully.

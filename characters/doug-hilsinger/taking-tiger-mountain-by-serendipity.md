@@ -211,6 +211,7 @@ you. The door is wide open. 🐅
 
 ## Listen + sources
 
+- **All ten tracks (individual YouTube links):** [`youtube-tracks.md`](youtube-tracks.md) · [Certaincorners channel](https://www.youtube.com/@certaincorners/videos)
 - **Full album (YouTube):** [playlist](https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4) · title track *[Taking Tiger Mountain](https://www.youtube.com/watch?v=i-cI1o_wBPc)*
 - **Full album (SoundCloud, Doug's own upload):** [https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger](https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger)
 - **Eno's phone message:** [local mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3) · [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html) — the feature page with the [photo of Doug & Caroleen](media/doug-hilsinger-caroleen-beatty-yourmusiclawyer.png)
