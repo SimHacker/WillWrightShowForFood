@@ -3,6 +3,8 @@
 # Lineage: Douglas Engelbart — augmenting human intellect, not replacing it.
 
 id: human-control-and-authorship
+human: human-control-and-authorship.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright, drew-carey, all]

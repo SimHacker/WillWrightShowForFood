@@ -1,6 +1,8 @@
 # Simulation effect — simple rules → complex behavior
 
 id: simulation-effect
+human: simulation-effect.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright]

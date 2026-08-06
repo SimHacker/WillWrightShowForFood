@@ -1,6 +1,8 @@
 # Microworld morality — Cyberiad thread
 
 id: microworld-morality
+human: microworld-morality.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright]

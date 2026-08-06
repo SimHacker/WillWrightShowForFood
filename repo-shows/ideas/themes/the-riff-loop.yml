@@ -3,6 +3,8 @@
 # recursion, Eno's generative systems — same shape, different medium.
 
 id: the-riff-loop
+human: the-riff-loop.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright, jeff-adkins, brian-eno, nina-hagen]

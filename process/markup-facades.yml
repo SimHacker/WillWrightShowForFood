@@ -188,6 +188,18 @@ facades:
       - ../repo-shows/INDEX.yml
       - crazy-idea-jam.yml
 
+  - id: repo-show-themes-index
+    source: ../repo-shows/ideas/themes/INDEX.yml
+    output: ../repo-shows/ideas/themes/README.md
+    title: "Repo Show themes — bucket index"
+    status: instance_first
+    render: { mode: llm, tone: invitation, verbosity: standard }
+    note: "Hand-authored — edit themes/README.md; per-theme *.md overlays; sync *.yml girders"
+    depends_on:
+      - ../repo-shows/ideas/INDEX.yml
+      - cross-links.yml
+      - ../schemas/markup-facade.yml
+
 see_also:
   - { path: INDEX.yml, why: "Process spec registry" }
   - { path: cross-links.yml, why: "Narrative trails — where to wander next" }

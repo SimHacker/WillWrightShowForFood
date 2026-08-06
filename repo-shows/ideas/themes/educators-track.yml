@@ -4,6 +4,8 @@
 # in the 1990s, Bartle proved it with MUD2, Eagleson is doing it with PIXIE right now.
 
 id: educators-track
+human: educators-track.md
+facade_mode: instance-first
 type: theme
 status: brewing
 shows: [richard-bartle, roy-eagleson, snap-logo-brian-jens, walter-bender-olpc]

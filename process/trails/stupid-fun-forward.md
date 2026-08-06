@@ -24,6 +24,9 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Yoot Saito**](../../characters/yoot-saito/README.md) | Seaman energy — a creature that insults you on purpose |
 | [**Voystick × Pink Trombone**](../../repo-shows/voystick-pink-trombone/SHOW.yml) | Homomorphic vocal joystick — sing along to confirm; Zack Vocap + Pink Trombone choir |
 | [**Urban eBike Safari**](../../repo-shows/ideas/urban-ebike-safari.yml) | DreamScape on wheels — outdoor Voystick demo on canal loops |
+| [**Voystick theme**](../../repo-shows/ideas/themes/voystick-voice-space.md) | Homomorphic instrument stack — full theme overlay |
+| [**The riff loop**](../../repo-shows/ideas/themes/the-riff-loop.md) | Steerable recursion — Slats anchor |
+| [**Crown jewel theme**](../../repo-shows/ideas/themes/data-portability-crown-jewel.md) | Will 1996 goal — every bridge is one facet |
 | [**Pink Trombone Jam**](../../apps/performance-space/pink-trombone-jam.yml) | Four-player vocal-tract chaos — We Are the Weird |
 
 ---

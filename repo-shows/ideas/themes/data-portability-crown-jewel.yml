@@ -1,6 +1,8 @@
 # Data portability — crown jewel
 
 id: data-portability-crown-jewel
+human: data-portability-crown-jewel.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright]

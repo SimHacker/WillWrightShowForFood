@@ -2,6 +2,8 @@
 # Cross-show ethics theme. Constitutional detail: schemas/portrayal-standards.yml#simulation
 
 id: simulating-people
+human: simulating-people.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright, drew-carey, all]

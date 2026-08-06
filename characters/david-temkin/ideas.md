@@ -113,6 +113,11 @@ Don: Kando overlay WM + NeWS ICCCM history. David: in-app WM yes (Desktop demo);
 needs Electron cells + compiler support — edge of design. macOS permissions reality check.
 → [`pie-menus-window-management.md`](../don-hopkins/sources/articles/pie-menus-window-management.md)
 
+### 18. Gwern webtop inheritance (Aug 2026)
+Popup hypertext as seed for classic WIMP webtop — tabs, pies, rooms, zoom; Declare Desktop vs
+OpenLaszlo webtop; Temkin call 5 Aug 18:00. Design pack:
+[MOOLLM webtop-gwern-inheritance](https://github.com/SimHacker/moollm/tree/main/designs/webtop-gwern-inheritance)
+
 ## Sources (public)
 
 - [`sources/declarelang.md`](sources/declarelang.md) — deep sniff

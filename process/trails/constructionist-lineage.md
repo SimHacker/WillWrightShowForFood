@@ -24,6 +24,8 @@ The developmental + AI roots → Winograd interview → Will show → breed DNA 
 | [**vision-and-ambition.yml**](../vision-and-ambition.yml) | Long arc girder — no promises, full ambition |
 | [**VISION.md**](../VISION.md) | Navigation layer — [Flower Child energy](../VISION.md#curb-appeal-meets-brutalism) |
 | [**1996 Winograd source**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — constructionist microworlds |
+| [**Simulation effect theme**](../../repo-shows/ideas/themes/simulation-effect.md) | Player-as-author thread — episode anchor |
+| [**Educators' track**](../../repo-shows/ideas/themes/educators-track.md) | Assign the fork — classroom as cast |
 | [**Will Wright**](../../characters/will-wright/README.md) | Guest portrayal — Proxi, Spore, Sims lineage |
 | [**Will CARD.yml**](../../characters/will-wright/CARD.yml) | Invokable abilities — MTG card surface |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Host card — pie menus, MOOLLM, layers |

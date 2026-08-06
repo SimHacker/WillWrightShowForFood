@@ -1,6 +1,8 @@
 # Inclusion agitprop — SimProv wedding
 
 id: inclusion-agitprop
+human: inclusion-agitprop.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright]

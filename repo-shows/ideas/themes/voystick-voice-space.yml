@@ -2,6 +2,8 @@
 # The IDEA lives in crazy-idea-jam; stickers are SWAG only.
 
 id: voystick-voice-space
+human: voystick-voice-space.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright, don-hopkins, drew-carey, all]

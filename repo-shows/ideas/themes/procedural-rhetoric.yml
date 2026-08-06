@@ -1,6 +1,8 @@
 # Procedural rhetoric — objects argue
 
 id: procedural-rhetoric
+human: procedural-rhetoric.md
+facade_mode: instance-first
 type: theme
 status: ready
 shows: [will-wright, heather-and-steve-alvey]

@@ -21,7 +21,7 @@ Creative inventory for Repo Shows: **formats you reuse**, **bits you perform**, 
 |-----|----------------|
 | [`traditions/`](traditions/README.md) | Cross-show formats and homages (Foreign Poet, Unnecessary Censorship, sidekick archetypes, Rocky Horror participation) |
 | [`gags/`](gags/README.md) | Specific comedy bits with enough detail to record or rehearse |
-| [`themes/`](themes/README.md) | Substantive threads to revisit across episodes (simulation effect, procedural rhetoric, crown jewel) |
+| [`themes/`](themes/README.md) | Substantive threads — [yaml girders + markdown overlays](themes/README.md) |
 | [`shows/`](shows/README.md) | Per-show content packs — [`shows/will-wright-premiere/`](shows/will-wright-premiere/README.md) is the richest |
 
 ## Read order

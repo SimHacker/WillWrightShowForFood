@@ -2,11 +2,27 @@
 
 entries:
   - simulation-effect.yml
+  - simulation-effect.md
   - procedural-rhetoric.yml
+  - procedural-rhetoric.md
   - microworld-morality.yml
+  - microworld-morality.md
   - data-portability-crown-jewel.yml
+  - data-portability-crown-jewel.md
   - stupid-fun-club-robots.yml
+  - stupid-fun-club-robots.md
   - inclusion-agitprop.yml
+  - inclusion-agitprop.md
   - human-control-and-authorship.yml
+  - human-control-and-authorship.md
   - simulating-people.yml
+  - simulating-people.md
+  - educators-track.yml
+  - educators-track.md
   - the-riff-loop.yml
+  - the-riff-loop.md
+  - voystick-voice-space.yml
+  - voystick-voice-space.md
+
+overlay: README.md
+human_index: README.md
