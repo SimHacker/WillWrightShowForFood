@@ -32,8 +32,8 @@ Across the street from Au Coquelet — the crew running Slats on a Berkeley stre
 
 ## The FMC Motorcoach (mobile control room)
 
-Don's **FMC Motorcoach** — the classic 1970s motorhome that doubled as Slats's **mobile control
-room**. For the *Empathy* shoot in Oakland, the crew hid inside, remote-controlled Slats, and filmed
+Don's **FMC Motorcoach** — the classic 1970s motorhome that doubled as the **mobile control
+room**. For the *Empathy* shoot in Oakland, the crew hid inside, remote-controlled **Dents**, and filmed
 through the shaded windows. *(These photos were taken in Berkeley, not at the Oakland shoot.)*
 
 ![Don standing on the roof of his FMC Motorcoach](fmc-motorcoach-roof.png)
@@ -69,7 +69,7 @@ during the Oakland shoot. Don's RV: laptop, joystick, wires, cameraman filming t
 
 ![Broken robot on the Oakland sidewalk — Empathy street shoot; cameraman on tripod](slats-oakland-broken-robot-street.png)
 
-**Empathy** — the broken robot on the street, cameraman filming.
+**Empathy** — **Dents**, the broken robot on the street, cameraman filming. → [Dents](../dents/photos.md)
 
 ![A cameraman films Slats on location in Oakland](slats-oakland-location-filming.png)
 
