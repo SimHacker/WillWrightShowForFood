@@ -36,6 +36,11 @@ in **San Francisco's Chinatown** in 1972, which inspired the album's title and s
 collaborated with **Jon Langford** of the Mekons. They performed the album live as the
 **ENORCHESTRA**.)*
 
+![Doug Hilsinger and Caroleen Beatty](media/doug-hilsinger-caroleen-beatty-yourmusiclawyer.png)
+
+*Doug and Caroleen, from the [yourmusiclawyer.com feature](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
+— Doug in what looks like a **Nina Hagen** t-shirt.*
+
 ## Doug's own words
 
 From [Doug's account on saucefaucet.com](http://www.saucefaucet.com/dug_notes.html):
@@ -208,11 +213,11 @@ you. The door is wide open. 🐅
 
 - **Full album (YouTube):** [playlist](https://www.youtube.com/watch?v=kZ5szyqkAHQ&list=PLED572AC3412407F4) · title track *[Taking Tiger Mountain](https://www.youtube.com/watch?v=i-cI1o_wBPc)*
 - **Full album (SoundCloud, Doug's own upload):** [https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger](https://soundcloud.com/doug-hilsinger/sets/brian-enos-taking-tiger)
-- **Eno's phone message:** [local mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3) · [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
-- **Doug's story + liner notes:** [http://www.saucefaucet.com/tiger.html](http://www.saucefaucet.com/tiger.html) · [http://www.saucefaucet.com/dug_notes.html](http://www.saucefaucet.com/dug_notes.html) · [press bio](http://www.saucefaucet.com/tigerbio.html)
+- **Eno's phone message:** [local mp3](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3) · [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html) — the feature page with the [photo of Doug & Caroleen](media/doug-hilsinger-caroleen-beatty-yourmusiclawyer.png)
+- **Doug's story + liner notes:** [http://www.saucefaucet.com/tiger.html](http://www.saucefaucet.com/tiger.html) ([archive](https://web.archive.org/web/20230322230535/https://www.saucefaucet.com/tiger.html)) · [http://www.saucefaucet.com/dug_notes.html](http://www.saucefaucet.com/dug_notes.html) ([archive](https://web.archive.org/web/20230128165231/http://www.saucefaucet.com/dug_notes.html)) · [press bio](http://www.saucefaucet.com/tigerbio.html) ([archive](https://web.archive.org/web/20230610140751/http://www.saucefaucet.com/tigerbio.html))
 - **Discogs** (DBK Works #111, "A Modern Revolutionary Peking Opera", 18 May 2004): [https://www.discogs.com/release/1949546](https://www.discogs.com/release/1949546)
 - **AllMusic** (Dave Thompson: *"the most gloriously impertinent record from 2004"*): [https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810](https://www.allmusic.com/album/brian-enos-taking-tiger-mountain-by-strategy-mw0000469810)
 - **Pitchfork** (2004, 8.6): [https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/](https://pitchfork.com/reviews/albums/3988-taking-tiger-mountain-by-strategy-with-caroleen-beatty/)
 - **Eno's original (Wikipedia):** [https://en.wikipedia.org/wiki/Taking_Tiger_Mountain_(By_Strategy)](https://en.wikipedia.org/wiki/Taking_Tiger_Mountain_(By_Strategy)) — note Eno & Peter Schmidt developed **Oblique Strategies** *during* the 1974 sessions
-- **Beloved by fans:** r/eno threads celebrate both the original and Doug's cover (one fan: *"Doug's take kind of unlocked some of the songs on the original for me"*).
+- **Beloved by fans:** [r/eno thread](https://www.reddit.com/r/eno/comments/g567ak/i_always_liked_this_doug_hilsinger_and_caroleen/) celebrating Doug's cover (one fan: *"Doug's take kind of unlocked some of the songs on the original for me"*).
 
