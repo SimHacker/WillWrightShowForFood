@@ -43,7 +43,7 @@ collaborated with **Jon Langford** of the Mekons. They performed the album live 
 
 ## Doug's own words
 
-From [Doug's account on saucefaucet.com](http://www.saucefaucet.com/dug_notes.html):
+From [Doug's account on saucefaucet.com](https://web.archive.org/web/20230128165231/http://www.saucefaucet.com/dug_notes.html) (site offline; archived):
 
 > *"Late in Sept 2003, I was recording some covers and I wanted to do two from Eno's TTMBS… During
 > recording she said, 'I love this record.' 'Me too,' I replied. Then she said, 'Let's do the whole
@@ -73,7 +73,7 @@ notes** for the release, and later told Pitchfork, dryly, *"They aren't bad song
 🔊 **Eno's actual phone message to Doug:**
 [`audio/…PhoneMessageToDougHilsinger.mp3`](../brian-eno/audio/TakingTigerMountainBrianEnoPhoneMessageToDougHilsinger.mp3)
 (also published via [yourmusiclawyer.com](http://yourmusiclawyer.com/queues/2004/brian_eno/index.html)
-and [saucefaucet](http://www.saucefaucet.com/tiger.html)).
+and [saucefaucet](https://web.archive.org/web/20230322230535/https://www.saucefaucet.com/tiger.html)).
 
 ## The serendipity — Don meets Doug
 
