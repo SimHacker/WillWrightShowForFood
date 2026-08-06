@@ -19,8 +19,8 @@ The films' title-card masters credit the series itself: **Minute Movies Producti
 **Series Created by Paris Barclay**, **Executive Producers Paris Barclay & John Wells**, post/VFX by
 **RIOT**, titled master dated **08/06/03** (Aug 6, 2003).
 
-In this repo, **Slats** is our portrayal of that Stupid Fun Club robot brain — and "Servitude" is the
-film where the robot literally introduces itself: *"hello, my name is Slats."*
+In this repo, **Slats** is our portrayal of the *Servitude* waiter robot — *"hello, my name is Slats."*
+**Dents** is the broken robot from *Empathy*. Both share Don's teleoperation rig; they are not the same character.
 
 ![Slats on a Berkeley street corner with the Stupid Fun Club crew during a hidden-camera shoot](slats-street-corner.png)
 
@@ -47,8 +47,8 @@ playground the **RoboResurrection** wants to rebuild and play with again
 
 | Film | About | Transcript |
 |------|-------|-----------|
-| **Empathy** | Robot empathy — a fallen robot pleading for human assistance | [`one-minute-movie-empathy.md`](one-minute-movie-empathy.md) |
-| **Servitude** | Robot servitude — Slats the waiter, desperate for a perfect rating | [`one-minute-movie-servitude.md`](one-minute-movie-servitude.md) |
+| **Empathy** | **Dents** — robot empathy, fallen robot pleading for human assistance | [`one-minute-movie-empathy.md`](one-minute-movie-empathy.md) |
+| **Servitude** | **Slats** — robot servitude, waiter desperate for a perfect rating | [`one-minute-movie-servitude.md`](one-minute-movie-servitude.md) |
 
 ## Built for the break (the anatomy of a 1MM)
 
@@ -95,10 +95,10 @@ These were **hidden-camera** pieces with **real, unsuspecting people**, not acto
 tele-robotic "wizard-of-Oz" performance. **Servitude** ("Restaurant") put a fully functional 6-foot
 robot waiter into a **BBQ-and-pies family restaurant in Oakland** (a food-oriented spot — hence the
 pies on the menu), surrounded by hired extras, to serve an unknowing customer.
-**Empathy** planted a broken-down, "damaged" robot on a side street in **Oakland**; as people passed,
+**Empathy** planted a broken-down **Dents** on a side street in **Oakland**; as people passed,
 it pleaded "Help me." The crew worked with a **street-filming permit** (shown to curious police who
 stopped to ask what was going on), hiding across the street inside Don's **FMC Motorcoach** — remote-
-controlling Slats and filming through its shaded windows — to catch reactions from apathy to empathy.
+controlling Dents and filming through its shaded windows — to catch reactions from apathy to empathy.
 (Don has noted, deadpan, that the robot's injuries and Professor Johnson's phone number were fake,
 and the robot waiter was fired.) Beyond NBC's goal of keeping viewers through ad breaks,
 Will's real interest was probing how people interact with, empathize with, and can be convinced to

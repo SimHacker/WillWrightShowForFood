@@ -26,14 +26,14 @@ carry no speaker labels.*
 
 ## Synopsis
 
-A robot has fallen over and pleads for human assistance, insisting it needs "Professor Johnson" and
+**Dents** — the broken robot from the **Empathy** film — has fallen over and pleads for human assistance, insisting it needs "Professor Johnson" and
 fumbling a phone number while bystanders try — and largely fail — to help. The joke is the empathy
 mismatch: the robot's escalating distress meets confused, half-hearted human concern.
 
 This was a **hidden-camera** piece: a broken-down, "damaged" robot (designed and built by Will
 Wright) was planted on a side street in **Oakland, California**. The crew had a street-filming permit
 (shown to curious police who stopped by) and hid across the street inside Don's **FMC Motorcoach**,
-remote-controlling Slats and filming through its shaded windows — capturing how real passersby
+remote-controlling **Dents** and filming through its shaded windows — capturing how real passersby
 reacted, from apathy to empathy.
 
 ## Transcript

@@ -1,10 +1,9 @@
 
-
 ↑ [All themes](README.md) · [Ideas](../README.md)
 
 # Theme — Stupid Fun Club robots
 
-> *Empathy & servitude — One Minute Movies, live again.*
+> *Two robot films, two robot souls — Slats wants a 10; Dents is scared.*
 
 
 **Shows:** will-wright · **Status:** ready
@@ -13,11 +12,18 @@
 
 ## The thread
 
-Will's Stupid Fun Club short films — **Servitude** and **Empathy** — as opening energy for the premiere. Robots among humans; broken servitude as comedy; empathy as the counterweight. Slats is the living proof the loop can run on air again.
+Will's Stupid Fun Club **One Minute Movies** — hidden-camera empathy probes. Put robots among humans; watch what humanity does.
 
-**Films:** Servitude, Empathy
+Two films, **two different robots**:
 
-**Opening segment:** [`../../will-wright-premiere/README.md`](../../will-wright-premiere/../../will-wright-premiere/README.md) — `#opening_one_minute_movies`
+| Film | Robot | Bit |
+|------|-------|-----|
+| [**Servitude**](../../../characters/robots/slats/one-minute-movie-servitude.md) | **Slats** | Waiter desperate for a perfect 10 — *"hello, my name is Slats"* |
+| [**Empathy**](../../../characters/robots/slats/one-minute-movie-empathy.md) | **Dents** | Fallen robot begging for help — *"I'm scared. Are you scared of me?"* |
+
+Both bodies built by Will; both brains driven by Don's web + pie-menu teleoperation rig. Neither film aired (NBC/SAG — real people on camera). Don still has both robots.
+
+**Opening segment:** [Will Wright premiere](../../will-wright-premiere/README.md) — `#opening_one_minute_movies`
 
 ---
 
@@ -25,14 +31,16 @@ Will's Stupid Fun Club short films — **Servitude** and **Empathy** — as open
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Slats reincarnation**](../../will-wright-premiere/../../will-wright-premiere/README.md) | SLATS LIVES — robopoetry ceremony, speech feedback loop |
-| [**Slats CARD**](../../../characters/robots/slats/README.md) | `SEEK-GENETIC-MATERIAL`, `ROBO-RESURRECT` |
-| [**Stupid Fun Club career**](../../../characters/don-hopkins/career/README.md) | Origin — robots among humans |
-| [**Slats robopoetry gong**](../gags/README.md) | Ready gag — gong + loop |
-| [**Broken robot servitude**](../gags/README.md) | Servitude farce bit |
+| [**Servitude — Slats**](../../../characters/robots/slats/one-minute-movie-servitude.md) | Waiter film — validation anxiety, the name reveal |
+| [**Empathy — Dents**](../../../characters/robots/slats/one-minute-movie-empathy.md) | Broken-robot film — empathy mismatch on an Oakland sidewalk |
+| [**One Minute Movies overview**](../../../characters/robots/slats/one-minute-movies.md) | Both films, credits, hidden-camera production, 30/30 sandwich structure |
+| [**Slats**](../../../characters/robots/slats/README.md) | Character + **RoboResurrection** quest — SLATS LIVES |
+| [**Stupid Fun Club source pack**](../../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/article.md) | Slats vs Dents table, stack, Reddit receipts |
+| [**Slats robopoetry gong**](../gags/slats-robopoetry-gong.md) | Opening beat — feedback loop, Ultimate Machine gong |
+| [**Dents trot-out**](../gags/broken-robot-servitude.md) | Empathy farce — crashes in, breaks down, begs, dragged off |
 | [**The riff loop**](the-riff-loop.md) | Slats' speech feedback loop = canonical embodiment |
 | [**Stupid Fun Forward trail**](../../../process/trails/stupid-fun-forward.md) | Reactor trail — RoboResurrection, Slats, Voystick |
 
 ---
 
-← [All themes](README.md) · [Crazy Idea Jam — RoboResurrection](../../../process/CRAZY-IDEA-JAM.md) · [Slats show seed](../../will-wright-premiere/../../will-wright-premiere/README.md)
+← [All themes](README.md) · [Crazy Idea Jam — RoboResurrection](../../../process/CRAZY-IDEA-JAM.md) · [Slats](../../../characters/robots/slats/README.md)

@@ -1,6 +1,8 @@
 # Slats robopoetry → Ultimate Machine gong
 
 id: slats-robopoetry-gong
+human: slats-robopoetry-gong.md
+facade_mode: instance-first
 type: gag
 status: ready
 shows: [will-wright]
