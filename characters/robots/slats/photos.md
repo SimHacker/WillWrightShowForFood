@@ -71,8 +71,6 @@ during the Oakland shoot. Don's RV: laptop, joystick, wires, cameraman filming t
 
 **Empathy** — **Dents**, the broken robot on the street, cameraman filming. → [Dents](../dents/photos.md)
 
-![A cameraman films Slats on location in Oakland](slats-oakland-location-filming.png)
-
 ![The One Minute Movies production crew posing by the white camera van](slats-oakland-crew-group.png)
 
 Will and the gang — production crew on the Oakland shoot (white van, flight cases, monitor stand).

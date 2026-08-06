@@ -11,8 +11,6 @@ Dents and filming through shaded windows while real passersby encountered a fall
 
 ![Broken robot on the Oakland sidewalk — Empathy street shoot; cameraman on tripod](../slats/slats-oakland-broken-robot-street.png)
 
-![A cameraman films on location in Oakland](../slats/slats-oakland-location-filming.png)
-
 ![Will Wright beside the tread-base robot — establishing shot](../slats/slats-oakland-will-robot-establishing.png)
 
 ## Control room
