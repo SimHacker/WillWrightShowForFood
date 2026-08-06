@@ -58,7 +58,7 @@ most_interesting_case: |
 
 see_also:
   - ../../../schemas/portrayal-standards.yml#simulation
-  - human-control-and-authorship.yml
+  - human-control-and-authorship.md
   - ../traditions/puppet-taxonomy.yml
   - ../../drew-carey/ai-contrast-framing.yml
   - ../../../process/crazy-idea-jam.yml#player_in_the_middle

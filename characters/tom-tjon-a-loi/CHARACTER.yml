@@ -27,5 +27,5 @@ sources:
   - "Don's mail archive: Internship Info! (30 Jul 2009); internship review + Rietveld assessment (30 Nov 2009); Architectuurfonds proposal (12 Nov 2009)"
 
 see_also:
-  - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "student-intern-as-co-designer — the original proof the model works" }
+  - { path: ../../repo-shows/ideas/themes/educators-track.md, why: "student-intern-as-co-designer — the original proof the model works" }
   - { path: ../sergio-van-pul/CHARACTER.yml, why: "fellow 2008–10 Eduverse-era collaborator" }

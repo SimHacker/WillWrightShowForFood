@@ -56,7 +56,7 @@ modes:
 
 pairs_with:
   - ../gags/pixelized-joint-wedding.yml
-  - ../themes/inclusion-agitprop.yml
+  - ../themes/inclusion-agitprop.md
   - ../../../catalogs/simprov/README.md
 
 poc:

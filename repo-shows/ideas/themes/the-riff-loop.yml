@@ -87,5 +87,5 @@ ties:
   - ../../../characters/nina-hagen/ideas.md   # cover chain: Tubes → Nina → Trannyshack; "What It Is" + NATO OPERATORS
   - ../../../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md   # tribute before attribution
   - ../../../process/repo-show-format.yml   # directors_cuts: the loop at production scale
-  - ./human-control-and-authorship.yml
-  - ./simulation-effect.yml
+  - ./human-control-and-authorship.md
+  - ./simulation-effect.md

@@ -18,7 +18,7 @@ tape-bow idea in the browser (scrub audio with a gesture) and let the audience f
 that granularizes and replays audio in real time) with **Bob Bielecki and Interval Research** (c. 1999)
 — **the same lab where Don worked**, so this is a *shared-history* door, not just a fan's admiration.
 It's also literally a **resampling** instrument: chop audio into grains, replay them any which way —
-the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.yml) in the palm of a hand.
+the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.md) in the palm of a hand.
 
 **Don's granular-CA companion piece — "Musical Gas."** Don built a **granular cellular-automata
 synthesizer**: colliding gas-lattice CA; each collision fires a grain. A **voice** = 16 samples (scat,

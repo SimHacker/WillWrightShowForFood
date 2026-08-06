@@ -39,7 +39,7 @@ Don's recommendation, verbatim:
 
 ## Why he matters to the show
 
-Tom is the original proof of the [educators' track](../../repo-shows/ideas/themes/educators-track.yml)
+Tom is the original proof of the [educators' track](../../repo-shows/ideas/themes/educators-track.md)
 model: a student who joined a real open source project as coursework (a Rietveld internship),
 produced real design work, presented at a real hacker conference, and pulled the project into new
 communities. Everything he storyboarded in 2009 — the social layer, multiplayer play, cities as

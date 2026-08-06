@@ -153,7 +153,7 @@ People have made Sims of partners, siblings, friends, and bullies for **26 years
 experiments on them. That ship sailed. AI raises the stakes — so we label, consent, and keep
 humans in the loop.
 
-More: [simulating-people theme](../ideas/themes/simulating-people.yml)
+More: [simulating-people theme](../ideas/themes/simulating-people.md)
 
 ---
 

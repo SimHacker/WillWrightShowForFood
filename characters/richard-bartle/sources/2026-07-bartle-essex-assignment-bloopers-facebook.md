@@ -48,6 +48,6 @@ Full list in machine girder: [`2026-07-bartle-essex-assignment-bloopers-facebook
 | Topic | Where |
 |-------|--------|
 | Will Dev Diaries Bartle types | [../../will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml](../../will-wright/sources/2025-12-will-wright-dev-diaries/bartle-player-types.yml) |
-| Educators track | [../../../repo-shows/ideas/themes/educators-track.yml](../../../repo-shows/ideas/themes/educators-track.yml) |
+| Educators track | [../../../repo-shows/ideas/themes/educators-track.md](../../../repo-shows/ideas/themes/educators-track.md) |
 
 ↑ [Sources index](README.md) · [Bartle's room](../README.md)

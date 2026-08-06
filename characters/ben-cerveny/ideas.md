@@ -29,7 +29,7 @@ See [moollm-lane-neverending-habitat.yml](moollm-lane-neverending-habitat.yml)
 
 Will's pre-Dollhouse talk: move **characters and data between worlds**. Natural framing for
 episode one with Will. Walk [1996 Winograd video](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
-+ [data-portability crown jewel](../../repo-shows/ideas/themes/data-portability-crown-jewel.yml).
++ [data-portability crown jewel](../../repo-shows/ideas/themes/data-portability-crown-jewel.md).
 
 ### 2. Soul City — liminal heaven between game runtimes
 

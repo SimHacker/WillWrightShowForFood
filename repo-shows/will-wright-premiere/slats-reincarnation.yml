@@ -75,7 +75,7 @@ after_robo_resurrection:
 
 ties:
   - ./SHOW.yml
-  - ../ideas/themes/the-riff-loop.yml
+  - ../ideas/themes/the-riff-loop.md
   - ../PATTER.yml#slats_call_in_menu
   - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml
   - ../../process/apple2-emulator-stack.yml

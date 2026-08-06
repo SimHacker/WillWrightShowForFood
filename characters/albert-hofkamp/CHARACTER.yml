@@ -59,4 +59,4 @@ sources:
   email: "Don's mail archive, 2008–09"
 
 see_also:
-  - { path: ../../repo-shows/ideas/themes/educators-track.yml, why: "the volunteer-contributor archetype the educators' track wants to grow more of" }
+  - { path: ../../repo-shows/ideas/themes/educators-track.md, why: "the volunteer-contributor archetype the educators' track wants to grow more of" }

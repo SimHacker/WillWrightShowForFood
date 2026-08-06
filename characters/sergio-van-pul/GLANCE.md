@@ -5,4 +5,4 @@
 **2010 signoff:** "perhaps we'll meet again sometime in the future"
 **Fit:** HKU + Scratch + Eduverse — kin to the whole educators' track
 
-**Read:** [README](README.md) · [educators' track](../../repo-shows/ideas/themes/educators-track.yml)
+**Read:** [README](README.md) · [educators' track](../../repo-shows/ideas/themes/educators-track.md)

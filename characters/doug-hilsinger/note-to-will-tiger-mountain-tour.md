@@ -54,5 +54,5 @@ blessing already on tape. And it happens to end with a dinner **you** were at.
 — Don
 
 *Related: your [July 9 conversation notes](../will-wright/sources/2026-07-09-will-conversation-notes.md)
-· [the riff loop](../../repo-shows/ideas/themes/the-riff-loop.yml) · document history: first
+· [the riff loop](../../repo-shows/ideas/themes/the-riff-loop.md) · document history: first
 committed June 29, 2026 (`c8e71a8`), refined the same morning, premiere-corpus links added July 5–9.*

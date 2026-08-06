@@ -97,9 +97,9 @@ will_hooks:
 pairs_with:
   - ./speed-dating-with-cupid.yml
   - ./pixelized-joint-wedding.yml
-  - ../themes/simulation-effect.yml
-  - ../themes/procedural-rhetoric.yml
-  - ../themes/inclusion-agitprop.yml
+  - ../themes/simulation-effect.md
+  - ../themes/procedural-rhetoric.md
+  - ../themes/inclusion-agitprop.md
   - ../../../catalogs/simprov/README.md
   - ../../will-wright-premiere/sims-play-along-narration.yml
 

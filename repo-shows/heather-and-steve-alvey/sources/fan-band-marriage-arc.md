@@ -49,7 +49,7 @@ Pattern: [`../../building-the-sims/evidence-bounce-cut.md`](../../building-the-s
 
 - **Old band theme:** [`../../../process/old-band-back-together.yml`](../../../process/old-band-back-together.yml#simfreaks_simslice_fan_crew)
 - **Speed Dating with Cupid** — SimProv Wedding Playset; SimFreaks graphics ([`../../ideas/gags/speed-dating-with-cupid.yml`](../../ideas/gags/speed-dating-with-cupid.yml))
-- **Data portability crown jewel** — SliceCity as shipped precedent ([`../../ideas/themes/data-portability-crown-jewel.yml`](../../ideas/themes/data-portability-crown-jewel.yml))
+- **Data portability crown jewel** — SliceCity as shipped precedent ([`../../ideas/themes/data-portability-crown-jewel.md`](../../ideas/themes/data-portability-crown-jewel.md))
 - **Afterlife × ZombieSims** flagship episode: [`afterlife-zombie-bridge.yml`](../afterlife-zombie-bridge.yml)
 
 

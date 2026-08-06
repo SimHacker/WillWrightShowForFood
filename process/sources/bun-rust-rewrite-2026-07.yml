@@ -104,7 +104,7 @@ show_ties:
   formats:
     - ../repo-wars.yml#translation_arena
     - ../../repo-shows/openlaszlo/README.md
-    - ../../repo-shows/ideas/themes/human-control-and-authorship.yml
+    - ../../repo-shows/ideas/themes/human-control-and-authorship.md
   moollm_skills:
     - adversarial-committee
     - rubric

@@ -493,7 +493,7 @@ directors_cuts:
     it lives in the private strategy folder, not here.
   ties:
     - "[breeding and nesting](#breeding-and-nesting)"  # git_as_mmorpg: branches = universes, PRs = timeline merges
-    - "[the-riff-loop.yml](../repo-shows/ideas/themes/the-riff-loop.yml)"  # the same loop, at production scale
+    - "[the-riff-loop.yml](../repo-shows/ideas/themes/the-riff-loop.md)"  # the same loop, at production scale
     - "[showmaker-network.yml](showmaker-network.yml)"
 
 showmaker_network:

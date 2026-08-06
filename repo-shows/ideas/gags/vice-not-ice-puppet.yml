@@ -87,5 +87,5 @@ lineage:
   - ../traditions/unnecessary-censorship.yml
 
 ties:
-  - ../themes/the-riff-loop.yml              # the perfect-song search = resample / cover / transcend
+  - ../themes/the-riff-loop.md              # the perfect-song search = resample / cover / transcend
   - ../../../characters/nina-hagen/ideas.md  # drag lineage: bio queen / drag king / Trannyshack

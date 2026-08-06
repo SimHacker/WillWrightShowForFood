@@ -14,12 +14,12 @@ shared_gags:
   - ../../gags/trot-out-and-vanish.yml
 
 shared_themes:
-  - ../../themes/simulation-effect.yml
-  - ../../themes/procedural-rhetoric.yml
-  - ../../themes/microworld-morality.yml
-  - ../../themes/data-portability-crown-jewel.yml
-  - ../../themes/stupid-fun-club-robots.yml
-  - ../../themes/inclusion-agitprop.yml
+  - ../../themes/simulation-effect.md
+  - ../../themes/procedural-rhetoric.md
+  - ../../themes/microworld-morality.md
+  - ../../themes/data-portability-crown-jewel.md
+  - ../../themes/stupid-fun-club-robots.md
+  - ../../themes/inclusion-agitprop.md
 
 shared_traditions:
   - ../../traditions/foreign-poet-play-along.yml

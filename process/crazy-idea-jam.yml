@@ -586,7 +586,7 @@ ideas:
       Reframes "AI vs people" as "people AND AI in a loop" — authorship neither lost to nor withheld
       from the machine, continuously RE-STEERED by whoever jumps in. "Repossess the government,
       information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
-    ties: [../repo-shows/ideas/themes/the-riff-loop.yml, VISION.md]
+    ties: [../repo-shows/ideas/themes/the-riff-loop.md, VISION.md]
 
   pyramid_swag_and_apex_toolmakers:
     emoji: "👕🔺"

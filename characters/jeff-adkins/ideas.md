@@ -28,7 +28,7 @@ The show's thesis, live in the codebase: Jeff built it with AI from documented +
 rewriting it into TypeScript with AI and full credit; each pass improves the last. **Stone soup, the
 cauldron, cellular automata, Wolfram, Eno's generative systems** — copying-and-improving as a
 *creative* engine, not a strip-mine. Everyone credited; every iteration better. It's the same
-**[riff loop](../../repo-shows/ideas/themes/the-riff-loop.yml)** as **Slats' speech feedback loop** —
+**[riff loop](../../repo-shows/ideas/themes/the-riff-loop.md)** as **Slats' speech feedback loop** —
 people and AI riffing off each other in a cycle you can steer from anywhere (talk into, over, after,
 or before it).
 

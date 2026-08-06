@@ -42,7 +42,7 @@ ties_to:
   - ../characters/will-wright/
   - ../characters/ken-kahn/
   - ../repo-shows/will-wright-premiere/SHOW.yml
-  - ../repo-shows/ideas/themes/data-portability-crown-jewel.yml
+  - ../repo-shows/ideas/themes/data-portability-crown-jewel.md
   - ../process/crazy-idea-jam.yml
   - SimHacker/moollm/examples/adventure-4/street/lane-neverending
   - SimHacker/moollm/examples/soul-city/README.md

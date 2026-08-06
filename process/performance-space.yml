@@ -253,7 +253,7 @@ episode_ideas:
 ethics:
   rules:
     - "Human puppetry only — no TTS clones of guests or audience."
-    - "AI orchestrates code + stream flow; PEOPLE voice, improvise, and author on air (see ../repo-shows/ideas/themes/human-control-and-authorship.yml)."
+    - "AI orchestrates code + stream flow; PEOPLE voice, improvise, and author on air (see ../repo-shows/ideas/themes/human-control-and-authorship.md)."
     - "Living public figures: discuss and portray; do not impersonate without consent (portrayal-standards.yml)."
     - "Gerri Lawlor (d. 2019): cite and honor; never voice her as a character."
     - "Conan / Drew / Kimmel bits: clearly labeled homage; credit the source tradition."

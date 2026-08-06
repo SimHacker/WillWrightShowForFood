@@ -24,7 +24,7 @@ on a city, **gather and export the data as spreadsheets**, and come out the othe
 data analysis and spreadsheet wrangling. The game is the bait; the data literacy is the catch.
 
 That is the founding precedent of the show's
-[educators' track](../../repo-shows/ideas/themes/educators-track.yml), and the direct ancestor of
+[educators' track](../../repo-shows/ideas/themes/educators-track.md), and the direct ancestor of
 its `data_lab` format: Micropolis metrics streaming into **Google Sheets**, which sits high on the
 enable-educational-uses unlock path. What Lall's students did by hand, every classroom could do live.
 

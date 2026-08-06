@@ -189,7 +189,7 @@ the same time, **change many things in ways that preserve the intent**, adding l
 imagined that still fit** (multiplayer **cooperative** play, **voting**, a collaborative planning
 **whiteboard overlay**, **chat**). Honoring by transforming; a loving cover in another medium. It's
 **Papert's constructionist philosophy** projected forward — the same *honor-by-transformation* move at
-the heart of the whole Repo Show. (See the [riff loop](../../repo-shows/ideas/themes/the-riff-loop.yml).)
+the heart of the whole Repo Show. (See the [riff loop](../../repo-shows/ideas/themes/the-riff-loop.md).)
 
 *(Companion viewing Don recommends: **Bowie's "The Man Who Sold the World"** hits especially hard after
 ***The Nomi Song***, and pairs with the **Leigh Bowery** documentary — see

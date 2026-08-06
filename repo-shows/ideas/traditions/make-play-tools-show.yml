@@ -37,7 +37,7 @@ beats:
 
 # AI — the BEST way (constitutional)
 ai:
-  thesis: ../themes/human-control-and-authorship.yml
+  thesis: ../themes/human-control-and-authorship.md
   does:
     - "Writes and edits code in the open repo"
     - "Orchestrates stream segments, queues, character triggers"
@@ -111,5 +111,5 @@ see_also:
   - ../../../process/repo-show-format.yml
   - ../../../process/vision-and-ambition.yml
   - ../../will-wright-premiere/performance-and-culture.yml#credibility_and_stance
-  - ../themes/human-control-and-authorship.yml
+  - ../themes/human-control-and-authorship.md
   - ../../../process/performance-space.yml
