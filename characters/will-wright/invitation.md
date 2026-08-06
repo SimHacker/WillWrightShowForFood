@@ -66,7 +66,7 @@ video and follow wherever you want to go.
   might run it — emulation if not). We make **bringing Slats back** a live quest: read the old code
   together, revive him, have him **call into the chat**, interview him, reprogram him, interview him
   again. **RoboResurrection** — constructionism as theater.
-  ([slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml).)
+  ([slats-reincarnation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.md).)
 
 ## How it works — and the small, real ask
 
@@ -87,7 +87,7 @@ call, the chat; the show **is** the joining. (And yes — the repo's called **Si
 
 | If you're curious about… | Link |
 |--------------------------|------|
-| **🤖 Slats / RoboResurrection** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml |
+| **🤖 Slats / RoboResurrection** | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.md |
 | **This show** (you're the topic) | https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/BROWSE.md |
 | **Your 1996 talk** (+ transcript) | https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds |
 | **Watch the video** | https://www.youtube.com/watch?v=nsxoZXaYJSk |

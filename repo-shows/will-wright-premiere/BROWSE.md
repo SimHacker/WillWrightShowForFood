@@ -12,7 +12,7 @@
 
 | If you're curious about… | Click |
 |--------------------------|--------|
-| **🤖 Reincarnate Slats** (Stupid Fun Club robot — *Servitude*, *Empathy*) | [**SLATS LIVES — RoboResurrection quest**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml) · [Slats character](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
+| **🤖 Reincarnate Slats** (Stupid Fun Club robot — *Servitude*, *Empathy*) | [**SLATS LIVES — RoboResurrection quest**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.md) · [Slats character](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
 | **Family UCC / catalogs** (SimFreaks, SimSlice, SimProv, Zombie Sims, Soul City) | [**Content catalogs**](https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs) · [INTRO-NARRATIVE](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) |
 | **This show** (topic-less — you're the topic) | [**Show hub README**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
 | **Your 1996 Stanford talk** (Dollhouse preview — the anchor) | [**1996 Winograd source bundle**](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [Watch on YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) · [Don's Medium article](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d) |

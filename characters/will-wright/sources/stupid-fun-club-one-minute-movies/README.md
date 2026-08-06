@@ -4,7 +4,7 @@
 
 SFC robot waiter demos — the origin of **Slats** and the ROBORESURRECTION show segment.
 
-*Parent feed:* [README](../README.md) · *Slats portrayal:* [slats](../../../robots/slats/README.md) · *Show segment:* [slats reincarnation](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
+*Parent feed:* [README](../README.md) · *Slats portrayal:* [slats](../../../robots/slats/README.md) · *Show segment:* [slats reincarnation](../../../../repo-shows/will-wright-premiere/slats-reincarnation.md)
 
 ## In this directory
 
@@ -22,6 +22,6 @@ SFC robot waiter demos — the origin of **Slats** and the ROBORESURRECTION show
 
 ---
 
-↑ [sources](../README.md) · [Slats](../../../robots/slats/README.md) · [show segment](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml) · [`GLANCE.yml`](GLANCE.yml)
+↑ [sources](../README.md) · [Slats](../../../robots/slats/README.md) · [show segment](../../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [`GLANCE.yml`](GLANCE.yml)
 
 *Raw directory:* [browse files in this folder](./)

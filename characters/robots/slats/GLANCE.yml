@@ -37,7 +37,7 @@ see_also:
     - { path: ../ultimate-machine/CARD.yml, why: "Closing ceremony bot" }
     - { path: ../don-hopkins/GLANCE.yml, why: "SFC lineage" }
   across:
-    - { path: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "Show segment" }
+    - { path: ../../repo-shows/will-wright-premiere/slats-reincarnation.md, why: "Show segment" }
     - { path: ../../repo-shows/will-wright-premiere/audience/bot-slats/README.md, why: "Full TicketPR stack example" }
     - { path: ../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/GLANCE.yml, why: "SFC source bundle" }
   deep:

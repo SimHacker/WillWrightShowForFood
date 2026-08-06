@@ -20,6 +20,6 @@ Show: retrocomputing-drive family — rig declares languages, tools, platform, e
 | Topic | Where |
 |-------|--------|
 | Thomas Cherryhomes | [../characters/thomas-cherryhomes/](../characters/thomas-cherryhomes/) |
-| Slats reincarnation | [../repo-shows/will-wright-premiere/slats-reincarnation.yml](../repo-shows/will-wright-premiere/slats-reincarnation.yml) |
+| Slats reincarnation | [../repo-shows/will-wright-premiere/slats-reincarnation.md](../repo-shows/will-wright-premiere/slats-reincarnation.md) |
 
 ↑ [process index](README.md) · Girder: `apple2-emulator-stack.yml`

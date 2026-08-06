@@ -106,7 +106,7 @@ spoke, not vapor. [Proxi Minecraft export](sources/2025-12-will-wright-dev-diari
 ### 8. Reincarnate Slats — RoboResurrection
 The **Stupid Fun Club** robot brain Don programmed (the One Minute Movies: *Servitude*, *Empathy*).
 Read the old code together, revive him, call-in sidekick, reprogram live. Constructionism as
-theater. ([slats-reincarnation.yml](../../repo-shows/will-wright-premiere/slats-reincarnation.yml))
+theater. ([slats-reincarnation.md](../../repo-shows/will-wright-premiere/slats-reincarnation.md))
 
 ### 9. Spore — the capstone bridge
 Not just creature-data IO, but a clean-room, web-native re-creation of the creature

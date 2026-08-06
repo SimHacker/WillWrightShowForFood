@@ -21,7 +21,7 @@
 | **Up** | [audience](../README.md) |
 | **Canonical bot** | [characters/robots/slats/](../../../../characters/robots/slats/README.md) |
 | **SFC source** | [one-minute-movies](../../../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/README.md) |
-| **Show segment** | [slats-reincarnation.yml](../../slats-reincarnation.yml) |
+| **Show segment** | [slats-reincarnation.md](../../slats-reincarnation.md) |
 | **Seat** | [venue/orchestra pit](../../venue/README.md) — Transmogrifier, not balcony |
 
 ---

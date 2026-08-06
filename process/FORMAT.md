@@ -504,7 +504,7 @@ without penalty. The compounding-attention / monetization angle is planning, not
 it lives in the private strategy folder, not here.
 - **ties:**
   - [breeding and nesting](#breeding-and-nesting)
-  - [the-riff-loop.yml](../repo-shows/ideas/themes/the-riff-loop.md)
+  - [the-riff-loop.md](../repo-shows/ideas/themes/the-riff-loop.md)
   - [showmaker-network.yml](showmaker-network.yml)
 
 ## ShowMaker Network

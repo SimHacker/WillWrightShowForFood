@@ -15,7 +15,7 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | Stop | Why wander here |
 |------|-----------------|
 | [**Crazy Idea Jam**](../CRAZY-IDEA-JAM.md) | The reactor — every wacky idea in one place, grouped and blurbed |
-| [**Slats reincarnation**](../../repo-shows/will-wright-premiere/slats-reincarnation.yml) | SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony |
+| [**Slats reincarnation**](../../repo-shows/will-wright-premiere/slats-reincarnation.md) | SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony |
 | [**Slats CARD**](../../characters/robots/slats/CARD.yml) | Robot waiter abilities — `SEEK-GENETIC-MATERIAL`, `ROBO-RESURRECT` |
 | [**Stupid Fun Club**](../../characters/don-hopkins/career/stupid-fun-club.yml) | Robots among humans — One Minute Movies |
 | [**Afterlife × ZombieSims**](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) | Drain Hell — artisanal ZombieSims, two-way soul ledger |

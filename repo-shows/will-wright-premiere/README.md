@@ -96,7 +96,7 @@ Next: crystallize the repo, gather audience TicketPRs, schedule the kickoff conv
 - **`../../characters/will-wright/media/`** — [`../../characters/will-wright/media/README.md`](../../characters/will-wright/media/README.md) · [`sims-series-README.md`](../../characters/will-wright/media/sims-series-README.md)
 - **`venue/`** — [`venue/README.md`](venue/README.md) · [`GLANCE.yml`](venue/GLANCE.yml)
 - `invitation.md` — accepted invitation (public).
-- `slats-reincarnation.yml` — **RoboResurrection** quest (optional show segment).
+- [RoboResurrection](slats-reincarnation.md) — optional show segment (Slats quest).
 - `episodes.yml` — the kickoff + the topical episodes that flow from it.
 - `../../characters/will-wright/media/` — the Flower-Child icon.
 

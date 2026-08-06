@@ -47,7 +47,7 @@ rewrites.*
 |-------|--------|--------------------|
 | [**The Infinite Typewriters**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.md) ([`.yml` skeleton](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/infinite-typewriters.yml)) | dream | Pinocchio clause: Dasher + pluggable renderers; 3D typewriter whose keys swell and yield. |
 | [**Micropolis AI Drag Race**](../../process/DRAG-RACE.md) | design | Competitive AI city-building as a show format — design exists, engine hooks pending. |
-| [**RoboResurrection / Slats**](../../repo-shows/will-wright-premiere/slats-reincarnation.yml) | design | Bringing Will's SFC robot brain back as a show judge. |
+| [**RoboResurrection / Slats**](../../repo-shows/will-wright-premiere/slats-reincarnation.md) | design | Bringing Will's SFC robot brain back as a show judge. |
 
 🐒✋ *Staleness policy: this shelf is re-verified every shelving pass, and every table above is
 registered in [coherence.yml](../coherence.yml) with its sources. If you catch a dead status,

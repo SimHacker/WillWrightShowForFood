@@ -33,7 +33,7 @@ between worlds. We want to build toward that with you, in public.
 **Stupid Fun Club**, who appeared in the One Minute Movies (*Servitude*, *Empathy*). Don still
 has the code. If it sounds fun, we'd pursue it as a live **RoboResurrection** quest on the show:
 read the old code together, revive him, call-in sidekick, reprogram, iterate. Stupid Fun Club
-energy — not a required topic. Details: [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml).
+energy — not a required topic. Details: [slats-reincarnation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.md).
 
 ### Browse — any order
 
@@ -41,7 +41,7 @@ energy — not a required topic. Details: [slats-reincarnation.yml](https://gith
 
 | What                          | Link                                                                                                                                                                                                                                       |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 🤖 **Slats RoboResurrection** | [slats-reincarnation.yml](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.yml) · [characters/robots/slats](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
+| 🤖 **Slats RoboResurrection** | [slats-reincarnation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/slats-reincarnation.md) · [characters/robots/slats](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/robots/slats) |
 | Show hub                      | [repo-shows/will-wright-premiere/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md)                                                                                                          |
 | 1996 talk (centerpiece)       | [source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk)                       |
 | Root README                   | [github.com/SimHacker/WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood#readme)                                                                                                                                    |

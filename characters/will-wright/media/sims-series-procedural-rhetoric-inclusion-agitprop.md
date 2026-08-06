@@ -43,4 +43,4 @@ Ask Bogost to react to:
 
 Related: [sims-series-micropolis-publishing-vision.md](sims-series-micropolis-publishing-vision.md) · [inclusivity-paper-draft.md](inclusivity-paper-draft.md)
 
-Show seed: [ian-bogost-procedural-rhetoric.yml](../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
+Show seed: [ian-bogost-procedural-rhetoric.md](../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)

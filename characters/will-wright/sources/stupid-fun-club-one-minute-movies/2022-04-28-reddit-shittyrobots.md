@@ -40,7 +40,7 @@ strangers talking to a live-puppeted robot read as a curiosity. In 2026 it reads
 prophecy. Resurfacing plan, once quiet mode lifts:
 
 - The premiere is the vehicle: Will wrote the films, Don wrote the brains, and
-  [`slats-reincarnation`](../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)
+  [`slats-reincarnation`](../../../../repo-shows/will-wright-premiere/slats-reincarnation.md)
   brings the star back on stage.
 - "If you want to study humans, put robots among them" lands differently now that
   everyone is a subject in that study.

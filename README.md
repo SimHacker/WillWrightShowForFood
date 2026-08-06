@@ -24,7 +24,7 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright-premiere/README.md`](repo-shows/will-wright-premiere/README.md) · [**Will: browse any order**](repo-shows/will-wright-premiere/BROWSE.md) |
-| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.yml`](repo-shows/will-wright-premiere/slats-reincarnation.yml) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
+| **🤖 Slats / RoboResurrection** | [`slats-reincarnation.md`](repo-shows/will-wright-premiere/slats-reincarnation.md) · [`characters/robots/slats/`](characters/robots/slats/README.md) |
 | **1996 Winograd talk** (centerpiece) | [`characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Will — accepted invitation** | [`characters/will-wright/invitation.md`](characters/will-wright/invitation.md) · [**BROWSE any order**](repo-shows/will-wright-premiere/BROWSE.md) |
 | **Guest directories** | [`characters/`](characters/README.md) · [`characters/README.md`](characters/README.md) |
