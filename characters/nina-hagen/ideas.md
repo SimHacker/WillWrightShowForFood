@@ -40,8 +40,7 @@ The Amsterdam counterpart to hook #5. **Herman Brood** — Dutch rock musician *
 **painter** ("Rock 'n' Roll Junkie," 1946–2001) — co-starred with Nina and **Lene Lovich** in the film
 **_Cha Cha_ (1979)**. A whole thread to explore *with* her: her relationship with Brood, that
 late-'70s Amsterdam scene, her friendships, and **Lene Lovich** (and Lovich's longtime partner/
-collaborator **Les Chappell**). *(Don's list said "Lina Lovich" / "Wes Chapel" → read as **Lene
-Lovich** and **Les Chappell**.)*
+collaborator **Les Chappell**).
 
 **The Ruigoord wedding.** Per Don and the film, Nina and **Herman Brood** had a **wedding at the church
 in Ruigoord** (the artists' free-village near Amsterdam), with **Lene Lovich and Les Chappell** there
