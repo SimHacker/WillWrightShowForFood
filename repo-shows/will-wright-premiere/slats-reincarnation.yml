@@ -4,13 +4,15 @@
 # Fun Club — back to life as a live call-in robot sidekick. A quest we work through ON the
 # show: read the old code, figure out what to do, do it, and interview the reincarnated Slats.
 
+human: slats-reincarnation.md
+facade_mode: instance-first
 status: quest (seed) — Will will LOVE this
 emoji: "🤖⛪"
 tagline: "SLATS LIVES! The first RoboResurrection."
 
 what_is_slats:
   who: "Slats — a robot 'brain' Don programmed at the STUPID FUN CLUB (Will Wright's Berkeley think-tank/incubator)."
-  seen_in: "The 'One Minute Movies' hidden-camera shorts — 'Servitude' (inept robot waiter) and 'Empathy' (broken robot soliciting help). Voiced via a canned say-menu + free-form text field (see ../PATTER.yml#slats_call_in_menu)."
+  seen_in: "One Minute Movies — 'Servitude' (Slats, waiter) and 'Empathy' (Dents, broken robot). Voiced via canned say-menu + free-form text field (see ../PATTER.yml#slats_call_in_menu)."
   source: "characters/don-hopkins/stupid-fun-club/STORY.yml (Slats and Dents)."
 
 the_asset:

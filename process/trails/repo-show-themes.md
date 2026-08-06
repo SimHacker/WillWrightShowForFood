@@ -27,7 +27,7 @@ Cross-show idea inventory. Themes graduate into episodes, segments, and [Crazy I
 | [Procedural rhetoric](../../repo-shows/ideas/themes/procedural-rhetoric.md) | SimProv + Dumbold + Bogost |
 | [Microworld morality](../../repo-shows/ideas/themes/microworld-morality.md) | Cyberiad / SimCity thread |
 | [Data portability (crown jewel)](../../repo-shows/ideas/themes/data-portability-crown-jewel.md) | Will 1996 — still unshipped |
-| [Stupid Fun Club robots](../../repo-shows/ideas/themes/stupid-fun-club-robots.md) | One Minute Movies + Slats |
+| [Stupid Fun Club robots](../../repo-shows/ideas/themes/stupid-fun-club-robots.md) | Slats + Dents — One Minute Movies, [RoboResurrection](../../repo-shows/will-wright-premiere/slats-reincarnation.md) |
 | [Inclusion agitprop](../../repo-shows/ideas/themes/inclusion-agitprop.md) | SimProv wedding |
 
 ---

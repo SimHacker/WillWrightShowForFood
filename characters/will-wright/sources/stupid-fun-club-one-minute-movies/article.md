@@ -31,6 +31,6 @@ Films never aired due to NBC/SAG rules (real people on camera).
 - [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — [don youtube storymaker demo](../don-youtube-storymaker-demo/README.md)  
 - HN: https://news.ycombinator.com/item?id=9104857  
 - Reddit reception (2022): [r/shittyrobots receipts](2022-04-28-reddit-shittyrobots.md) — Empathy [343 pts](https://redd.it/udvu1g), Servitude [8 pts](https://redd.it/udvtp8); resurface with the premiere  
-- Show: [slats reincarnation](../../slats-reincarnation/README.md) · [one minute movies](../../../../slats/one-minute-movies.md)
+- Show: [slats reincarnation](../../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [one minute movies](../../../robots/slats/one-minute-movies.md)
 
 *Harvest: re-promised-links.txt · stupid-fun-club.yml*
