@@ -1,7 +1,7 @@
 # Slats — The Stupid Fun Club "One Minute Movies"
 
-*Primary-source documentation. Slats is a fictional robot character, but these films are **real**:
-short hidden-camera robot sketches performed **"man behind the curtain"** (Wizard of Oz) through a
+*Primary-source documentation. **Slats** and **Dents** are fictional robot characters, but these films are **real**:
+short hidden-camera robot sketches performed **"men and women behind the curtain"** (Wizard of Oz) through a
 **web + pie-menu teleoperation rig** Don Hopkins built at Will Wright's **Stupid Fun Club** (Will
 Wright wrote the robot pieces). They were produced in **2003** as part of the **One Minute Movies
 (1MMs)** series and are posted publicly on Don Hopkins's YouTube channel.*
@@ -10,10 +10,11 @@ Wright wrote the robot pieces). They were produced in **2003** as part of the **
 
 The **One Minute Movies** are sixty-second (`:60`) sketches in which a real robot plays a scene with
 unsuspecting people. The comedy comes from the gap between the robot's eager, literal patter and the
-messy human situation it's dropped into — a robot earnestly asking for help, or taking a lunch order
-and then begging to be rated a 10. The robot isn't autonomous: Will Wright wrote the premises and
-characters, and a human **operator performs Slats live** through Don's teleoperation rig (see *How
-Slats was driven*, below).
+messy human situation it's dropped into — **Dents** earnestly begging for help on a sidewalk, or
+**Slats** taking a lunch order and then desperate for a perfect 10. The robots aren't autonomous:
+Will Wright wrote the premises and characters; **multiple humans perform and talk together behind the
+scenes**, driving each robot live through Don's teleoperation rig (see *How the robots were driven*,
+below).
 
 The films' title-card masters credit the series itself: **Minute Movies Productions, Inc.** — *1MMs*,
 **Series Created by Paris Barclay**, **Executive Producers Paris Barclay & John Wells**, post/VFX by
@@ -24,24 +25,32 @@ In this repo, **Slats** is our portrayal of the *Servitude* waiter robot — *"h
 
 ![Slats on a Berkeley street corner with the Stupid Fun Club crew during a hidden-camera shoot](slats-street-corner.png)
 
-More photos: [`photos.md`](photos.md) · production spec [`one-minute-movies-production.yml`](one-minute-movies-production.yml).
+More photos: [photos.md](photos.md) — Oakland shoots, FMC Motorcoach control room, restaurant setup.
 
-## How Slats was driven (the man behind the curtain)
+## How the robots were driven (crew behind the curtain)
 
-Slats wasn't an autonomous AI — he was **partially automatic, "man behind the curtain"** (classic
-Wizard of Oz). Don built a **web-based, pie-menu-driven teleoperation interface** so an operator
-could perform the robot live, in real time:
+Neither robot was an autonomous AI — both were **partially automatic, "man behind the curtain"**
+(classic Wizard of Oz). Don built a **web-based, pie-menu-driven teleoperation interface** so the
+crew could perform each robot live, in real time — **several people talking and coordinating
+together** off-camera while one unsuspecting mark dealt with the robot on the floor.
 
-- **Canned, prefab phrases** triggered instantly from the web page and **pie menus** — the reliable
-  comic beats, on tap.
-- **The whole restaurant menu** memorized and recitable on cue — including literal **Pie Menus** of
-  edible pies you can order (yes: pie menus *of pies* — yummy 🥧).
-- **A live text field** to **improvise and type in real time**, spoken aloud by the robot, for
-  whatever the unsuspecting humans threw at him.
+**The rig (both films):**
 
-That hybrid — fast canned reactions on radial menus *plus* real-time improv typing — is exactly the
-playground the **RoboResurrection** wants to rebuild and play with again
-([`slats-reincarnation`](../../../repo-shows/will-wright-premiere/slats-reincarnation.yml)).
+- **Canned, prefab phrases** triggered instantly from the web page and **pie menus** — reliable comic beats on tap.
+- **Servitude extras:** the whole restaurant menu memorized and recitable on cue — including literal **Pie Menus** of edible pies (pie menus *of pies* 🥧).
+- **A live text field** to improvise and type in real time, spoken aloud by the robot, for whatever the humans threw at it.
+
+**Where the crew hid:**
+
+| Film | Robot | Hide site |
+|------|-------|-----------|
+| **Servitude** | Slats | **Behind the restaurant** — BBQ-and-pies family spot in Oakland; hired extras in the dining room, crew running the waiter out of sight |
+| **Empathy** | Dents | **Don's FMC Motorcoach** — parked across the Oakland side street; crew remote-controlled Dents and filmed reactions through shaded RV windows (street-filming permit; curious police shown the paperwork) |
+
+That hybrid — fast canned reactions on radial menus *plus* real-time improv typing, performed by a
+**roomful of humans** whispering and typing — is exactly the playground the **RoboResurrection**
+wants to rebuild and play with again
+([slats-reincarnation](../../../repo-shows/will-wright-premiere/slats-reincarnation.md)).
 
 ## The films
 
@@ -91,14 +100,14 @@ micro-content: an affirming-faith blipvert. A human reassuring a broken robot, s
 
 ## How they were made (hidden-camera reality)
 
-These were **hidden-camera** pieces with **real, unsuspecting people**, not actors — a real-time
-tele-robotic "wizard-of-Oz" performance. **Servitude** ("Restaurant") put a fully functional 6-foot
-robot waiter into a **BBQ-and-pies family restaurant in Oakland** (a food-oriented spot — hence the
-pies on the menu), surrounded by hired extras, to serve an unknowing customer.
-**Empathy** planted a broken-down **Dents** on a side street in **Oakland**; as people passed,
-it pleaded "Help me." The crew worked with a **street-filming permit** (shown to curious police who
-stopped to ask what was going on), hiding across the street inside Don's **FMC Motorcoach** — remote-
-controlling Dents and filming through its shaded windows — to catch reactions from apathy to empathy.
+These were **hidden-camera** pieces with **real, unsuspecting people**, not actors — ensemble
+tele-robotic "wizard-of-Oz" performances. **Servitude** ("Restaurant") put Slats, a fully functional
+6-foot robot waiter, into a **BBQ-and-pies family restaurant in Oakland**, surrounded by hired
+extras, to serve an unknowing customer while the **crew worked from behind the restaurant**.
+**Empathy** planted broken-down **Dents** on a side street in **Oakland**; as people passed, Dents
+pleaded "Help me." The crew hid **across the street inside Don's FMC Motorcoach** — multiple
+operators remote-controlling Dents, talking through lines together, filming through shaded windows —
+to catch reactions from apathy to empathy.
 (Don has noted, deadpan, that the robot's injuries and Professor Johnson's phone number were fake,
 and the robot waiter was fired.) Beyond NBC's goal of keeping viewers through ad breaks,
 Will's real interest was probing how people interact with, empathize with, and can be convinced to
@@ -114,9 +123,12 @@ Berkeley.)
 
 ## Why they matter here
 
-These are the source texts for Slats's voice: loud, eager, literal, over-committed to the bit, and
-desperate for a good score — exactly the energy Slats brings as a call-in sidekick and Drag Race
-celebrity judge. When in doubt about how Slats talks, read the transcripts.
+These are the source texts for the two robot voices in this repo:
+
+- **Slats** (*Servitude*) — loud, eager, literal, over-committed, desperate for a good score; call-in sidekick and Drag Race celebrity judge.
+- **Dents** (*Empathy*) — frightened, pleading, empathy-mismatch comedy; the broken robot the internet loved first.
+
+When in doubt about how Slats talks, read the *Servitude* transcript. When in doubt about Dents, read *Empathy*.
 
 *The transcripts in this folder are the raw YouTube auto-captions (lightly punctuated). They are
 flagged for a future human review-and-polish pass to add speaker labels and fix caption errors.*
@@ -127,5 +139,4 @@ flagged for a future human review-and-polish pass to add speaker labels and fix 
 - NBC "One-Minute Movies" (1MMs) press, 2003 — John Wells Productions + Paris Barclay; e.g. *The New York Times* / Adweek / Variety coverage.
 - Allentown Productions project page (archived): <https://web.archive.org/web/20141028194536/http://www.allentownproductions.com/project.php?p=nbc> — credits the robots to Will Wright and the segments to James Moll.
 
-See also: [`CHARACTER.yml`](CHARACTER.yml) · [`judge-rubric.yml`](judge-rubric.yml) ·
-[Stupid Fun Club origin](../../don-hopkins/career/stupid-fun-club.yml)
+See also: [README.md](README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Stupid Fun Club robots theme](../../../repo-shows/ideas/themes/stupid-fun-club-robots.md) · [Empathy & Servitude talk](../../don-hopkins/stupid-fun-club-empathy-and-servitude.md)
