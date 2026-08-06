@@ -38,7 +38,6 @@ media:
     - { file: ../slats/slats-oakland-broken-robot-street.png, caption: "Fallen on Oakland sidewalk — Empathy shoot" }
     - { file: ../slats/slats-oakland-fmc-control-room.png, caption: "Crew teleoperating from FMC Motorcoach across the street" }
     - { file: ../slats/slats-oakland-will-robot-establishing.png, caption: "Will beside tread-base robot on location" }
-    - { file: ../slats/slats-oakland-location-filming.png, caption: "Street shoot — cameraman on Empathy location" }
   films:
     - { file: one-minute-movie-empathy-titlecard.jpg, caption: "Empathy — 1MMs title-card master" }
   gallery: photos.md
