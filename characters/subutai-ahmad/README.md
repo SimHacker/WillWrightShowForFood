@@ -51,4 +51,4 @@ Omohundro), and [Golan Levin](../golan-levin/README.md). Advisors **Gerald Tesau
 - Papers: *A usable real-time 3D hand tracker* (1994); *VISIT* (1991); *Probabilistic models of verbal and body gestures* (Bregler, Omohundro, Covell, Slaney, Ahmad, Forsyth, 1998)
 
 *See also:* [`CHARACTER.yml`](CHARACTER.yml) · [`ideas.md`](ideas.md) ·
-[`../../apps/performance-space/pink-trombone-jam.yml`](../../apps/performance-space/pink-trombone-jam.yml) (browser motion input)
+[`../../apps/performance-space/pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md) (browser motion input)

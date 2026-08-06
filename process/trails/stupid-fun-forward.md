@@ -27,7 +27,7 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Voystick theme**](../../repo-shows/ideas/themes/voystick-voice-space.md) | Homomorphic instrument stack — full theme overlay |
 | [**The riff loop**](../../repo-shows/ideas/themes/the-riff-loop.md) | Steerable recursion — Slats anchor |
 | [**Crown jewel theme**](../../repo-shows/ideas/themes/data-portability-crown-jewel.md) | Will 1996 goal — every bridge is one facet |
-| [**Pink Trombone Jam**](../../apps/performance-space/pink-trombone-jam.yml) | Four-player vocal-tract chaos — We Are the Weird |
+| [**Pink Trombone Jam**](../../apps/performance-space/pink-trombone-jam.md) | Four-player vocal-tract chaos — We Are the Weird |
 
 ---
 

@@ -17,7 +17,7 @@ get-it-past-the-gate-then-repossess-it thesis (see [`VISION.md`](../../process/V
 ### 2. The operatic-punk voice as instrument (the Nomi sibling)
 A classically-trained, multi-octave voice turned into punk theatre — sibling to **Klaus Nomi's**
 countertenor. A natural thread on **voice as instrument**, pairing with the show's vocal-tract toys
-(**Pink Trombone**, **Phoneloper** — [`../../schemas/language-cow.yml`](../../schemas/language-cow.yml))
+(**Pink Trombone**, **Phoneloper** — see [`../../apps/performance-space/pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md))
 and the voice-puppet performance kind
 ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 `#puppet_kinds`).

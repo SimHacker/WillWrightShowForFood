@@ -98,7 +98,7 @@ weaves). Many short passes beat one big sit-down.
 
 A bunch of us, live, singing through **[Pink Trombone](https://dood.al/pinktrombone/)** — the playable
 model of the human vocal tract. Group chaos and joy; working title *"We Are the Weird."*
-([the jam](../../apps/performance-space/pink-trombone-jam.yml))
+([the jam](../../apps/performance-space/pink-trombone-jam.md))
 
 ### Bounce reborn — the mythology, SimFaux, and the Faceball Construction Kit
 

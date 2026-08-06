@@ -12,7 +12,7 @@ proofs in [`process/performance-space/README.md`](../../process/performance-spac
 | **conan-face-puppet** | spec | [`conan-face-puppet.yml`](conan-face-puppet.yml) | Webcam mouth through face-hole PNG |
 | play-along-queue | planned | — | TicketPR clip queue + credit overlay |
 | amplitude-scrub-puppet | planned | — | Mic drives character video scrub |
-| pink-trombone-jam | planned | — | Side-by-side vocal-tract jam URL for chat |
+| pink-trombone-jam | planned | [`pink-trombone-jam.md`](pink-trombone-jam.md) | Side-by-side vocal-tract jam URL for chat |
 
 ## OBS integration
 

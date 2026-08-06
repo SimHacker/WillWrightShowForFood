@@ -12,11 +12,11 @@ Don's VoyStick correspondence arc (Apr 2023): GDC → email thread with Zack (Pi
 | Pink Trombone (Thapen) | https://dood.al/pinktrombone/ |
 | VoyStick lineage | [`../don-hopkins/sources/voystick-correspondence-lineage.md`](../don-hopkins/sources/voystick-correspondence-lineage.md) |
 | Show seed | [`../../repo-shows/voystick-pink-trombone/SHOW.yml`](../../repo-shows/voystick-pink-trombone/SHOW.yml) |
-| Group activity | [`../../apps/performance-space/pink-trombone-jam.yml`](../../apps/performance-space/pink-trombone-jam.yml) |
+| Group activity | [`../../apps/performance-space/pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md) |
 | Crazy Idea Jam | [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) |
 
 ## Ethics
 
-Articulatory synthesis = instrument, not voice clone. Credit Thapen + Qattan + Batchelor + Moro; build on, don't rebrand. See `pink-trombone-jam.yml#ethics`.
+Articulatory synthesis = instrument, not voice clone. Credit Thapen + Qattan + Batchelor + Moro; build on, don't rebrand. See [`pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md).
 
 ↑ [Characters index](../INDEX.yml)

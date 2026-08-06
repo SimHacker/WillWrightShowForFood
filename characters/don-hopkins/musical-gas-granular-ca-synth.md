@@ -56,7 +56,7 @@ the mover).
 - **Ambient gas.** Brian Eno's generative-ambient thread — set rules, let it run — meets Don's literal
   **Musical Gas**: collision grains into an emergent, listenable atmosphere. See
   [`../brian-eno/ideas.md`](../brian-eno/ideas.md).
-- **Voice toys.** A sibling to **Pink Trombone** and the [Pink Trombone jam](../../apps/performance-space/pink-trombone-jam.yml) —
+- **Voice toys.** A sibling to **Pink Trombone** and the [Pink Trombone jam](../../apps/performance-space/pink-trombone-jam.md) —
   the gas turns *voices* into an emergent, playable instrument.
 
 ## Also great with: Diffusion-Limited Aggregation (DLA)

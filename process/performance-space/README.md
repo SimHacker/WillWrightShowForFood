@@ -105,7 +105,7 @@ rotating pantheon (Sad Clown, Death, Bob, Bella, Slats). See
 
 ### Vocal-tract instruments
 
-- **Pink Trombone** — https://dood.al/pinktrombone — and the **[Pink Trombone Jam](../../apps/performance-space/pink-trombone-jam.yml)** group activity: 4 people accompany / follow / lead / ridicule / parody their own voices together (Croquet-synced; voice→params model).
+- **Pink Trombone** — https://dood.al/pinktrombone — and the **[Pink Trombone Jam](../../apps/performance-space/pink-trombone-jam.md)** group activity: 4 people accompany / follow / lead / ridicule / parody their own voices together (Croquet-synced; voice→params model).
 - **Phoneloper** — Don's SFC expressive-speech toy; show seed: [`repo-shows/phoneloper/SHOW.yml`](../../repo-shows/phoneloper/SHOW.yml)
 - **Slats robopoetry loop** — speech synth ↔ recognition feedback; audience steers by voice: [`performance-and-culture.yml#speech_feedback_loop_instrument`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 

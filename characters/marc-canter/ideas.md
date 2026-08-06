@@ -35,7 +35,7 @@ and drive puppets live. Performance-space episode, not a lecture.
 
 ### 5. Acapella Pink Trombone sing-along
 **[Pink Trombone](https://dood.al/pinktrombone/)** — a bunch of people singing through a playable vocal
-tract. Marc's name is on this segment. See [`pink-trombone-jam.yml`](../../apps/performance-space/pink-trombone-jam.yml).
+tract. Marc's name is on this segment. See [`pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md).
 
 ## Show seeds
 
