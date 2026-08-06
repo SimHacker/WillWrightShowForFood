@@ -21,7 +21,7 @@ The films' title-card masters credit the series itself: **Minute Movies Producti
 **RIOT**, titled master dated **08/06/03** (Aug 6, 2003).
 
 In this repo, **Slats** is our portrayal of the *Servitude* waiter robot — *"hello, my name is Slats."*
-**Dents** is the broken robot from *Empathy*. Both share Don's teleoperation rig; they are not the same character.
+**Dents** lives in [`../dents/`](../dents/README.md) — the broken robot from *Empathy*. Both share Don's teleoperation rig; they are not the same character.
 
 ![Slats on a Berkeley street corner with the Stupid Fun Club crew during a hidden-camera shoot](slats-street-corner.png)
 
@@ -56,7 +56,7 @@ wants to rebuild and play with again
 
 | Film | About | Transcript |
 |------|-------|-----------|
-| **Empathy** | **Dents** — robot empathy, fallen robot pleading for human assistance | [`one-minute-movie-empathy.md`](one-minute-movie-empathy.md) |
+| **Empathy** | **Dents** — robot empathy, fallen robot pleading for human assistance | [`../dents/one-minute-movie-empathy.md`](../dents/one-minute-movie-empathy.md) |
 | **Servitude** | **Slats** — robot servitude, waiter desperate for a perfect rating | [`one-minute-movie-servitude.md`](one-minute-movie-servitude.md) |
 
 ## Built for the break (the anatomy of a 1MM)
@@ -139,4 +139,4 @@ flagged for a future human review-and-polish pass to add speaker labels and fix 
 - NBC "One-Minute Movies" (1MMs) press, 2003 — John Wells Productions + Paris Barclay; e.g. *The New York Times* / Adweek / Variety coverage.
 - Allentown Productions project page (archived): <https://web.archive.org/web/20141028194536/http://www.allentownproductions.com/project.php?p=nbc> — credits the robots to Will Wright and the segments to James Moll.
 
-See also: [README.md](README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Stupid Fun Club robots theme](../../../repo-shows/ideas/themes/stupid-fun-club-robots.md) · [Empathy & Servitude talk](../../don-hopkins/stupid-fun-club-empathy-and-servitude.md)
+See also: [README.md](README.md) · [Dents](../dents/README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Stupid Fun Club robots theme](../../../repo-shows/ideas/themes/stupid-fun-club-robots.md) · [Empathy & Servitude talk](../../don-hopkins/stupid-fun-club-empathy-and-servitude.md)

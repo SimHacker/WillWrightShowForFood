@@ -13,6 +13,11 @@ roster:
     role: "Stupid Fun Club robot — RoboResurrection; loud, eager, reprogrammable ham"
     show_segment: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml
     audience_fork: ../../repo-shows/will-wright-premiere/audience/bot-slats/
+  dents:
+    path: dents/
+    signifier: "🤖💔"
+    role: "Stupid Fun Club broken robot — Empathy film; scared, pleading, trot-out running gag"
+    audience_fork: ../../repo-shows/will-wright-premiere/audience/fictional-broken-robot/
   ultimate-machine:
     path: ultimate-machine/
     signifier: "📦"
@@ -20,13 +25,18 @@ roster:
     audience_fork: ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
 
 gallery_openings:
-  always: [slats, ultimate-machine]
+  always: [slats, dents, ultimate-machine]
   roster: ../menagerie/GUEST-ROSTER.yml#gallery_openings
 
 duo:
   name: more-and-enough
   members: [slats, ultimate-machine]
   dynamic: "Slats can't stop talking; the Ultimate Machine only ever wants to switch off"
+
+sfc_robot_pair:
+  name: slats-and-dents
+  members: [slats, dents]
+  dynamic: "Slats wants a 10; Dents is scared — same rig, two films, two souls"
 
 turing_robot_olympics:
   spec: ../don-hopkins/media/turing-institute/first-robot-olympics.yml

@@ -1,0 +1,53 @@
+# Dents — fictional broken robot (NOT a real person)
+# Stupid Fun Club Empathy One Minute Movie star
+
+character:
+  id: dents
+  name: Dents
+  type: fictional_sidekick
+  real_being: false
+  signifier: "🤖💔"
+  status: fictional
+  field: "Stupid Fun Club broken robot — Empathy One Minute Movie; empathy probe; trot-out running gag"
+  home: characters/robots/dents/
+
+representation:
+  note: "Beloved fictional broken robot from Will Wright's Stupid Fun Club — character + tool, not a soul we pretend into being"
+  may: [portray_as_fictional, crash_show_as_running_gag, quote_empathy_transcript]
+  must_not: [claim_sentience, impersonate_real_person]
+
+sibling:
+  slats: ../slats/
+  note: "Same teleoperation rig and crew tradition; different body and film"
+
+roles:
+  empathy_film: one-minute-movie-empathy.md
+  trot_out_gag: ../../../repo-shows/ideas/gags/broken-robot-servitude.md
+  audience_gag: ../../../repo-shows/will-wright-premiere/audience/fictional-broken-robot/
+
+personality:
+  vibe: "Frightened, pleading, literal — escalating distress that humans meet with confused half-measures. The empathy mismatch IS the comedy."
+  best_bits: ["I'm scared. Are you scared of me?", "just hang in there, okay?", "555-12-1"]
+
+invitation:
+  status: n_a
+  note: "Not a human guest — running gag + source character for Empathy film"
+
+media:
+  photos:
+    - { file: ../slats/slats-oakland-broken-robot-street.png, caption: "Fallen on Oakland sidewalk — Empathy shoot" }
+    - { file: ../slats/slats-oakland-fmc-control-room.png, caption: "Crew teleoperating from FMC Motorcoach across the street" }
+    - { file: ../slats/slats-oakland-will-robot-establishing.png, caption: "Will beside tread-base robot on location" }
+    - { file: ../slats/slats-oakland-location-filming.png, caption: "Street shoot — cameraman on Empathy location" }
+  films:
+    - { file: one-minute-movie-empathy-titlecard.jpg, caption: "Empathy — 1MMs title-card master" }
+  gallery: photos.md
+
+see_also:
+  - { path: one-minute-movie-empathy.md, why: "Canonical Empathy film + transcript" }
+  - { path: ../slats/one-minute-movies.md, why: "Both films — production, crew hide sites, credits" }
+  - { path: ../slats/README.md, why: "Sibling — Slats the waiter" }
+  - { path: ../../will-wright/sources/stupid-fun-club-one-minute-movies/2022-04-28-reddit-shittyrobots.md, why: "Dents 343 pts vs Slats 8" }
+  - { path: ../../../repo-shows/ideas/themes/stupid-fun-club-robots.md, why: "Theme overlay" }
+  - { path: ../don-hopkins/career/stupid-fun-club.yml, why: "Origin — empathy probe robot" }
+  - { path: "https://www.youtube.com/watch?v=KXrbqXPnHvE", why: "Empathy — Dents film (posted 2016)" }

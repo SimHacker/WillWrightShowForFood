@@ -52,5 +52,4 @@ reacted, from apathy to empathy.
 1:12  Come on, so just hang in there, okay.
 ```
 
-— Source: [YouTube](https://www.youtube.com/watch?v=KXrbqXPnHvE). See the
-[One Minute Movies overview](one-minute-movies.md).
+— Source: [YouTube](https://www.youtube.com/watch?v=KXrbqXPnHvE). See [Dents](README.md) · [One Minute Movies overview](../slats/one-minute-movies.md)

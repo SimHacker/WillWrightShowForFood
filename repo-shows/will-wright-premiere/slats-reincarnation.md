@@ -13,7 +13,7 @@
 
 Bring **Slats** — the waiter robot brain Don programmed at Will's **Stupid Fun Club** — back to life as a live call-in sidekick. A quest pursued **on the show**: read the old code, revive him, interview him, reprogram him, interview him again. The diff is the drama.
 
-**Films:** [*Servitude* (Slats)](../../characters/robots/slats/one-minute-movie-servitude.md) · companion [*Empathy* (Dents)](../../characters/robots/slats/one-minute-movie-empathy.md)
+**Films:** [*Servitude* (Slats)](../../characters/robots/slats/one-minute-movie-servitude.md) · companion [*Empathy* (Dents)](../../characters/robots/dents/one-minute-movie-empathy.md)
 
 **Character:** [Slats](../../characters/robots/slats/README.md) · **TicketPR example:** [bot-slats](audience/bot-slats/README.md)
 

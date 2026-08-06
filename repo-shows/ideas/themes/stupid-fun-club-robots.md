@@ -19,7 +19,7 @@ Two films, **two different robots**:
 | Film | Robot | Bit |
 |------|-------|-----|
 | [**Servitude**](../../../characters/robots/slats/one-minute-movie-servitude.md) | **Slats** | Waiter desperate for a perfect 10 — *"hello, my name is Slats"* |
-| [**Empathy**](../../../characters/robots/slats/one-minute-movie-empathy.md) | **Dents** | Fallen robot begging for help — *"I'm scared. Are you scared of me?"* |
+| [**Empathy**](../../../characters/robots/dents/one-minute-movie-empathy.md) | **Dents** | Fallen robot begging for help — *"I'm scared. Are you scared of me?"* |
 
 Both bodies built by Will; both brains driven by Don's web + pie-menu teleoperation rig. Neither film aired (NBC/SAG — real people on camera). Don still has both robots.
 
@@ -32,7 +32,8 @@ Both bodies built by Will; both brains driven by Don's web + pie-menu teleoperat
 | Stop | Why wander here |
 |------|-----------------|
 | [**Servitude — Slats**](../../../characters/robots/slats/one-minute-movie-servitude.md) | Waiter film — validation anxiety, the name reveal |
-| [**Empathy — Dents**](../../../characters/robots/slats/one-minute-movie-empathy.md) | Broken-robot film — empathy mismatch on an Oakland sidewalk |
+| [**Empathy — Dents**](../../../characters/robots/dents/one-minute-movie-empathy.md) | Broken-robot film — empathy mismatch on an Oakland sidewalk |
+| [**Dents**](../../../characters/robots/dents/README.md) | Character room — scared empathy probe, trot-out gag, Reddit receipts |
 | [**One Minute Movies overview**](../../../characters/robots/slats/one-minute-movies.md) | Credits, hidden-camera production, 30/30 sandwich structure |
 | [**Slats photos**](../../../characters/robots/slats/photos.md) | Berkeley street shoots, Au Coquelet, crew operating both rigs |
 | [**Source pack**](../../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/README.md) | Directory index — article, Reddit receipts, CARD/GLANCE |

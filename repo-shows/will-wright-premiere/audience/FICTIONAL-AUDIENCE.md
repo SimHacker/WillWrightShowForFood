@@ -30,7 +30,7 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | Kind | Example | Ethics |
 |------|---------|--------|
 | **Sims game characters / objects** | Bella Goth, Tragic Clown, Cow Plant | Labeled `fictional_game_character`; fan voice; not official EA dialogue |
-| **Repo bots** | [Slats](../../../characters/robots/slats/README.md), [Ultimate Machine](../../../characters/robots/ultimate-machine/README.md) | `character_ref` to `characters/`; fictional; may quote documented transcripts |
+| **Repo bots** | [Slats](../../../characters/robots/slats/README.md), [Dents](../../../characters/robots/dents/README.md), [Ultimate Machine](../../../characters/robots/ultimate-machine/README.md) | `character_ref` to `characters/`; fictional; may quote documented transcripts |
 | **Tool personae** | Edith (SimAntics), Transmogrifier (UGC) | Personify the TOOL, not a human |
 | **Guest-primed plants** | Will adds a running gag or virtual child via PR | `authorship.by: guest`, `planted.disclosure: true` |
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |

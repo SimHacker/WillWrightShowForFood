@@ -1,0 +1,45 @@
+# DENTS — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · Stupid Fun Club broken robot.
+
+title: Dents
+iconic: "🤖💔 Dents"
+description: |
+  Fictional Stupid Fun Club robot — fallen empathy probe from the Empathy One Minute Movie.
+  Scared, pleading, dragged off; the internet's favorite of the two robot films.
+
+keywords:
+  - dents
+  - stupid fun club
+  - robot
+  - empathy
+  - one minute movies
+  - broken robot
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../slats/
+    - ../ultimate-machine/
+
+read_order:
+  - README.md
+  - CARD.yml
+  - one-minute-movie-empathy.md
+  - photos.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Robot cast registry" }
+  siblings:
+    - { path: ../slats/README.md, why: "Servitude waiter — Slats" }
+    - { path: ../ultimate-machine/CARD.yml, why: "Gongs Slats; opposite energy" }
+  across:
+    - { path: ../../repo-shows/ideas/themes/stupid-fun-club-robots.md, why: "Theme overlay" }
+    - { path: ../../repo-shows/ideas/gags/broken-robot-servitude.md, why: "Dents trot-out gag" }
+    - { path: ../../repo-shows/will-wright-premiere/audience/fictional-broken-robot/, why: "Running audience gag" }
+    - { path: ../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/README.md, why: "SFC source bundle" }
+  deep:
+    - { path: CARD.yml, why: "Beg for help + empathy probe ads" }

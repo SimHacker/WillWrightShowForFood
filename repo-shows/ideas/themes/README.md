@@ -8,7 +8,7 @@ Substantive **ideas to revisit** — not one-liner gags. Pair with sources, gues
 | [Procedural rhetoric](procedural-rhetoric.md) | SimProv wedding, Dumbold, [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/) |
 | [Microworld morality](microworld-morality.md) | Cyberiad Klapaucius/Trurl |
 | [Data portability (crown jewel)](data-portability-crown-jewel.md) | Will 1996 + bridge seeds |
-| [Stupid Fun Club robots](stupid-fun-club-robots.md) | Slats (*Servitude*) + Dents (*Empathy*) — One Minute Movies, [Slats reincarnation](../../will-wright-premiere/README.md) |
+| [Stupid Fun Club robots](stupid-fun-club-robots.md) | [Slats](../../characters/robots/slats/README.md) (*Servitude*) + [Dents](../../characters/robots/dents/README.md) (*Empathy*) |
 | [Inclusion agitprop](inclusion-agitprop.md) | [SimProv wedding](../../../catalogs/simprov/README.md) |
 | [Human control & authorship](human-control-and-authorship.md) | AI orchestrates; people voice & author — [Engelbart](../../../characters/douglas-engelbart/) |
 | [Simulating people](simulating-people.md) | Impersonation vs simulation — [portrayal standards](../../../schemas/portrayal-standards.md) |

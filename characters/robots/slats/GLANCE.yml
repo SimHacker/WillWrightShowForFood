@@ -21,8 +21,8 @@ navigation:
   up: ../GLANCE.yml
   parent: ../
   siblings:
+    - ../dents/
     - ../ultimate-machine/
-    - ../don-hopkins/
 
 read_order:
   - README.md

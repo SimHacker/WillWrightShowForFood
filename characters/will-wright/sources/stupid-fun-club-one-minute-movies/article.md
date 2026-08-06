@@ -13,8 +13,8 @@
 
 Hidden-camera **reality TV** robots in public — real humans, robot dialogue driven by Don's Python personality simulation over WiFi web UI. Written by Will; brains by Don.
 
-- **Slats** — validation-seeking waiter (`characters/robots/slats/`)  
-- **Dents** — broken robot begging empathy  
+- **Slats** — validation-seeking waiter ([`characters/robots/slats/`](../../../robots/slats/README.md))  
+- **Dents** — broken robot begging empathy ([`characters/robots/dents/`](../../../robots/dents/README.md))  
 
 Films never aired due to NBC/SAG rules (real people on camera).
 

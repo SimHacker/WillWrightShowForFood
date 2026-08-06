@@ -1,0 +1,1 @@
+🤖💔 **Dents** — the broken robot from Will Wright's **Stupid Fun Club** *Empathy* One Minute Movie. Fallen, pleading, empathy-mismatch comedy. Fictional — not a real person. Sibling: [Slats](../slats/README.md) (*Servitude*).

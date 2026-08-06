@@ -31,5 +31,6 @@ relationship: |
 see_also:
   - questions.yml
   - ../bot-slats/                # Slats has a lot to say about the One Minute Movies
-  - ../../../../characters/robots/slats/one-minute-movie-empathy.md
+  - ../../../../characters/robots/dents/README.md
+  - ../../../../characters/robots/dents/one-minute-movie-empathy.md
   - ../AUDIENCE-ROSTER-IDEAS.md

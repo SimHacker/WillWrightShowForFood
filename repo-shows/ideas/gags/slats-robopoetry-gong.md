@@ -16,6 +16,6 @@
 3. The **Ultimate Machine** gongs him. Reset laugh.
 4. Repeat later in the show.
 
-**Character:** [Slats](../../../characters/robots/slats/README.md) · **Films:** [Servitude](../../../characters/robots/slats/one-minute-movie-servitude.md) · [Empathy / Dents](../../../characters/robots/slats/one-minute-movie-empathy.md)
+**Character:** [Slats](../../../characters/robots/slats/README.md) · **Films:** [Servitude](../../../characters/robots/slats/one-minute-movie-servitude.md) · [Empathy / Dents](../../../characters/robots/dents/one-minute-movie-empathy.md)
 
 **Opening segment:** [Will Wright premiere](../../will-wright-premiere/README.md)

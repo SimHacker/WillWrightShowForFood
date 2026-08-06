@@ -67,7 +67,6 @@ media:
     - { file: stupid-fun-club-seal-matte.png, caption: "Stupid Fun Club globe seal (matte)" }
     - { file: stupid-fun-club-seal-gloss.png, caption: "Stupid Fun Club globe seal (glossy)" }
   films:
-    - { file: one-minute-movie-empathy-titlecard.jpg, caption: "Empathy — 1MMs title-card master" }
     - { file: one-minute-movie-servitude-titlecard.jpg, caption: "Servitude — 1MMs title-card master" }
   gallery: photos.md
   production_spec: one-minute-movies-production.yml
@@ -78,7 +77,8 @@ see_also:
   - { path: one-minute-movies-production.yml, why: "Oakland 1MM production stills + pending video archive" }
   - { path: one-minute-movies.md, why: "Primary sources — the SFC One Minute Movies + transcripts (Slats's voice)" }
   - { path: one-minute-movie-servitude.md, why: "'hello, my name is Slats' — the canonical waiter film + transcript" }
-  - { path: one-minute-movie-empathy.md, why: "'Empathy' robot film + transcript" }
+  - { path: ../dents/one-minute-movie-empathy.md, why: "'Empathy' — Dents film + transcript (canonical in dents/)" }
+  - { path: ../dents/README.md, why: "Sibling — broken robot Dents" }
   - { path: ../ultimate-machine/, why: "Good old friend — the silent refusenik bot (Slats's opposite)" }
   - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest" }
   - { path: judge-rubric.yml, why: "Celebrity judge rubric" }

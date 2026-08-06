@@ -14,6 +14,7 @@ iterate.
 **Primary sources** — the real Stupid Fun Club **One Minute Movies** (written by Will Wright, robot
 brain by Don Hopkins), with transcripts: [`one-minute-movies.md`](one-minute-movies.md) — including
 [*Servitude*](one-minute-movie-servitude.md), where the robot says *"hello, my name is Slats."*
+Sibling: [**Dents**](../dents/README.md) — the broken robot from [*Empathy*](../dents/one-minute-movie-empathy.md).
 
 ## Photos that tell the story
 
@@ -37,6 +38,6 @@ in **Berkeley** — and the home base for the street shoots was **Au Coquelet Ca
 
 Full gallery (incl. his slatted **face** and the SFC seal): [`photos.md`](photos.md).
 
-See [`../../repo-shows/will-wright-premiere/slats-reincarnation.yml`](../../../repo-shows/will-wright-premiere/slats-reincarnation.yml) · [Browse for Will](../../../repo-shows/will-wright-premiere/BROWSE.md)
+See [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Dents](../dents/README.md) · [Browse for Will](../../../repo-shows/will-wright-premiere/BROWSE.md)
 
 Will will love this. ⛪🤖

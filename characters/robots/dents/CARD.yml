@@ -1,0 +1,109 @@
+# CARD — Dents (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: dents
+  name: Dents
+  type:
+  - fictional
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: fictional_skills
+card:
+  name: Dents
+  title: Broken Robot — Empathy Probe
+  rarity: fictional
+  signifier: "🤖💔"
+  flavor: Help me — I require Human Assistance. I'm scared.
+abilities:
+- id: BEG-FOR-HELP
+  name: Beg For Help
+  type: triggered
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: begForHelp
+    signature: begForHelp(bystander) → escalating distress
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Plead for human assistance from a fallen position.
+  verifiable: Stupid Fun Club Empathy film
+  combos_with: []
+- id: FALL-OVER
+  name: Fall Over
+  type: activated
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: fallOver
+    signature: fallOver() → accident_has_occurred
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Collapse on cue — there has been an accident.
+  verifiable: Empathy hidden-camera street shoot
+  combos_with:
+  - BEG-FOR-HELP
+- id: NEED-PROFESSOR-JOHNSON
+  name: Need Professor Johnson
+  type: triggered
+  mana: '{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: needProfessorJohnson
+    signature: needProfessorJohnson() → wrong_phone_number
+    score_when:
+    - trigger: human_smiles_awkwardly
+      weight: 0.85
+  effect: Insist on a fake authority figure with a fake phone number.
+  verifiable: Empathy transcript — 555-12-1
+  combos_with:
+  - BEG-FOR-HELP
+- id: EMPATHY-MISMATCH
+  name: Empathy Mismatch
+  type: activated
+  mana: '{W}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: empathyMismatch
+    signature: empathyMismatch(human) → confused_concern
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Escalating robot distress meets half-hearted human concern.
+  verifiable: Empathy film premise; Reddit 343 vs 8
+  combos_with: []
+- id: TROT-OUT
+  name: Trot Out And Fail
+  type: activated
+  mana: '{B}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: trotOut
+    signature: trotOut() → dragged_off
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Crash the show, break down, beg, get dragged off — the show goes on.
+  verifiable: broken-robot-servitude gag; fictional-broken-robot audience
+  combos_with:
+  - FALL-OVER
+invoke_rules:
+  consent: fictional
+  simulation: true
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — portrayal rules
+- path: ../slats/README.md
+  why: Sibling robot — Servitude / Slats
