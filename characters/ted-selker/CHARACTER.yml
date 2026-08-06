@@ -27,17 +27,33 @@ bio:
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Ted_Selker"
-  web: []
+  web:
+    - "https://searchworks.stanford.edu/view/pv655pr7635"   # CS547 1994 — Proactive and Reactive Agents in User Interface
+    - "https://searchworks.stanford.edu/view/py423by8993"   # CS547 1997 — Test as You Build
+    - "https://searchworks.stanford.edu/view/ft274kv7895"   # CS547 2000 — Context Aware Computing (implicit vs explicit)
+    - "https://searchworks.stanford.edu/view/xb136vz6928"   # CS547 2005 — A World That Knows What To Do For You
+    - "https://searchworks.stanford.edu/view/jt287zb6653"   # CS547 2007 — Understanding and Responding to Human Intention
+    - "https://oac.cdlib.org/findaid/ark:/13030/c82b926h"   # SC1217 finding aid — 1993 TrackPoint lecture VHS, Box 1 (undigitized)
   papers: []
   blogs: []
+
+cs547_lectures:
+  overview: sources/cs547-lectures.md
+  count: 6
+  span: "1993-2007"
+  streamed: 5
+  rescue_target: "Trackpoint II: Making a better mouse (1993-05-12) — VHS only, Box 1, SC1217"
+  catalog: ../terry-winograd/media/cs547-archive.yml
 
 show_suggestions:
   - "The TrackPoint story — designing input that keeps your hands on the home row; input efficiency (kin to pie menus + mouse-ahead gestures)"
   - "Considerate computing — systems that respect human attention rather than interrupt it (calm-tech / ubicomp lineage)"
   - "NPUC at IBM Almaden — the 'new paradigms' workshops where Don demoed Multiplayer SimCity; a reunion of the new-paradigms crowd"
   - "Voting technology & ballot design — HCI where usability is democracy-critical"
+  - "Rescue + screen the 1993 CS547 TrackPoint lecture (VHS only, Stanford Box 1) — decode it live with Ted, like Will's 1996 talk"
 
 see_also:
+  - { path: sources/cs547-lectures.md, why: "Six Stanford CS547 lectures 1993-2007 — streaming links + 1993 TrackPoint rescue target" }
   - { path: media.md, why: "The TrackPoint 'So hot, we had to make it red' IBM ThinkPad ad" }
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: invitation.md, why: "Public invitation draft" }

@@ -39,7 +39,13 @@ e Don demoed Multiplayer SimCity
 ### 8. NPUC: New Paradigms for Using Computers at IBM Almaden
 free IBM Burger
 
-### 9. Clipboard / cut-and-paste panel with Ted Nelson
+### 9. Rescue the 1993 TrackPoint lecture — then screen it
+Ted gave **six CS547 lectures** (1993–2007) in Terry Winograd's Stanford seminar; five stream from
+Stanford, but the one everyone asks him about — *Trackpoint II: Making a better mouse* (1993) — is
+still a lone VHS in Box 1. Get it digitized, then watch it **with** Ted and decode it live —
+the same move as Will's 1996 talk. [`sources/cs547-lectures.md`](sources/cs547-lectures.md)
+
+### 10. Clipboard / cut-and-paste panel with Ted Nelson
 Ted **hosted** Ted at BayCHI Aug 2021 (*HCI Constructs Then and Now*). Natural co-moderator for
 [`../../repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml) —
 human-**CONSTRUCT** interaction vs invisible clipboard.
@@ -48,6 +54,7 @@ human-**CONSTRUCT** interaction vs invisible clipboard.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
+- [`sources/cs547-lectures.md`](sources/cs547-lectures.md) — six Stanford CS547 lectures, streaming links, 1993 TrackPoint rescue target
 - Show seed: [`repo-shows/ted-selker/`](../../repo-shows/ted-selker/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
 - [`CHARACTER.yml`](CHARACTER.yml)
