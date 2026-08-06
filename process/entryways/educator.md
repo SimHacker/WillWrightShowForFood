@@ -17,8 +17,8 @@ Repo Show treats credited public ideas as curriculum. Will's talk is primary sou
 | 3 | [**Brian Harvey**](../../characters/brian-harvey/CARD.yml) | Beauty and Joy of Computing — Logo in CS1 |
 | 4 | [**Alan Kay**](../../characters/alan-kay/CARD.yml) | Dynabook lineage — microworlds as media for thought |
 | 5 | [**Homefun grading**](../HOMEFUN.md) | Did the student show their work in the commit message? |
-| 6 | [**Educators' track**](../../repo-shows/ideas/themes/educators-track.md) · [girder](../../repo-shows/ideas/themes/educators-track.yml) | Assign the fork — Bartle, Lall, Eagleson — classroom as cast |
-| 7 | [**Vision — educators**](../VISION.md#educators-and-constructionists) · [girder](../vision-and-ambition.yml) | 1996 seminar → living repo — stated ambition, no launch promise |
+| 6 | [**Educators' track**](../../repo-shows/ideas/themes/educators-track.md) | Assign the fork — Bartle, Lall, Eagleson — classroom as cast |
+| 7 | [**Vision — educators**](../VISION.md#educators-and-constructionists) | 1996 seminar → living repo — stated ambition, no launch promise |
 | 8 | [**MOOLLM constructionism**](https://github.com/SimHacker/moollm/skills/constructionism) | Upstream skill — learn by building shareable things |
 
 ---

@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — Inclusion agitprop
 
 > *SimProv wedding — built when marriage equality was still a fight.*
 
-**Girder:** [`inclusion-agitprop.yml`](inclusion-agitprop.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright · **Status:** ready
 
@@ -23,8 +26,8 @@ The SimProv wedding playset is procedural rhetoric for inclusion — who the gam
 | [**SimProv catalog**](../../../catalogs/simprov/README.md) | Magnum opus — full wedding playset |
 | [**Intro narrative**](../../will-wright-premiere/INTRO-NARRATIVE.md) | Show narration framing |
 | [**Procedural rhetoric**](procedural-rhetoric.md) | Sister theme — inclusion pole |
-| [**Pixelized joint wedding**](../gags/pixelized-joint-wedding.yml) | Gag crossover — Double Pre-Game |
-| [**Speed dating with Cupid**](../gags/speed-dating-with-cupid.yml) | Segment tie-in — audience orchestrated romance |
+| [**Pixelized joint wedding**](../gags/README.md) | Gag crossover — Double Pre-Game |
+| [**Speed dating with Cupid**](../gags/README.md) | Segment tie-in — audience orchestrated romance |
 | [**Heather & Steve Alvey**](../../../catalogs/simprov/README.md) | SimProv lineage — Alvey wedding episodes |
 
 ---

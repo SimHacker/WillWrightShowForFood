@@ -1,12 +1,15 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — Simulating people
 
 > *Impersonation ≠ simulation — Sims players have done this for 26 years; AI raises the stakes.*
 
-**Girder:** [`simulating-people.yml`](simulating-people.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright, drew-carey, all · **Status:** ready
 
-**Constitutional detail:** [portrayal-standards.yml#simulation](../../../schemas/portrayal-standards.yml)
+**Constitutional detail:** [portrayal-standards.md#simulation](../../../schemas/portrayal-standards.md)
 
 ---
 
@@ -23,7 +26,7 @@
 | What | Rule |
 |------|------|
 | Machine replaces your authorship | Voice clone, ChatGPT script, opaque identity |
-| Drew 2023 | Audience wanted personality back — [ai-contrast-framing.yml](../../drew-carey/ai-contrast-framing.yml) |
+| Drew 2023 | Audience wanted personality back — [ai-contrast-framing.md](../../drew-carey/ai-contrast-framing.md) |
 
 ---
 
@@ -63,13 +66,13 @@ LLM agents can converse, decide, and be mistaken for real people at scale. We go
 | Stop | Why |
 |------|-----|
 | [Human control & authorship](human-control-and-authorship.md) | Constitutional umbrella — AI proposes, people dispose |
-| [Puppet taxonomy](../traditions/puppet-taxonomy.yml) | How puppets differ from impersonation |
-| [Drew Carey contrast](../../drew-carey/ai-contrast-framing.yml) | Public-record anti-pattern |
-| [PITM](../../../process/crazy-idea-jam.yml#player_in_the_middle) | Human at every membrane |
-| [Suggested questions](../../will-wright-premiere/suggested-questions.yml) | On-air prompts |
+| [Puppet taxonomy](../traditions/README.md) | How puppets differ from impersonation |
+| [Drew Carey contrast](../../drew-carey/ai-contrast-framing.md) | Public-record anti-pattern |
+| [PITM](../../../process/CRAZY-IDEA-JAM.md#player_in_the_middle) | Human at every membrane |
+| [Suggested questions](../../will-wright-premiere/../../will-wright-premiere/README.md) | On-air prompts |
 | [MOOLLM character skill](https://github.com/SimHacker/moollm/skills/character) | Consensual portrayals |
 | [Micropolis coatroom CAS](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/coatroom) | Edit yourself as navigable department store |
 
 ---
 
-← [All themes](README.md) · [Schemas & ethics trail](../../../process/trails/schemas-and-ethics.md) · [Portrayal standards](../../../schemas/portrayal-standards.yml)
+← [All themes](README.md) · [Schemas & ethics trail](../../../process/trails/schemas-and-ethics.md) · [Portrayal standards](../../../schemas/portrayal-standards.md)

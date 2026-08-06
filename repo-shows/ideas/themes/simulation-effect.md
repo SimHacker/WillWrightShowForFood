@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — Simulation effect
 
 > *Player-as-author; local rules → global patterns; story as medium.*
 
-**Girder:** [`simulation-effect.yml`](simulation-effect.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright · **Status:** ready
 
@@ -24,8 +27,8 @@ Players narrate causal chains Will knows don't exist — and that gap *is* the s
 |------|-----------------|
 | [**1996 Winograd talk**](../../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — constructionist microworlds, Dollhouse, data portability named |
 | [**Transcript**](../../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will's own words — cite this, not paraphrase |
-| [**Will Wright CARD**](../../../characters/will-wright/CARD.yml) | Guest abilities — procedural creatures, possibility space |
-| [**Episode seed**](../../will-wright-premiere/episodes.yml) | `#simulation-effect` — harvest-driven candidate |
+| [**Will Wright CARD**](../../../characters/will-wright/README.md) | Guest abilities — procedural creatures, possibility space |
+| [**Episode seed**](../../will-wright-premiere/../../will-wright-premiere/README.md) | `#simulation-effect` — harvest-driven candidate |
 | [**Constructionist trail**](../../../process/trails/constructionist-lineage.md) | Piaget → Papert → 1996 → open Micropolis |
 | [**The riff loop**](the-riff-loop.md) | Same shape in performance — output feeds input, steerable |
 

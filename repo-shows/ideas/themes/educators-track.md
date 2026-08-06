@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — The Educators' Track
 
 > *Assign the fork. Grade the PR. The repo show is the classroom and the classroom is the cast.*
 
-**Girder:** [`educators-track.yml`](educators-track.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** richard-bartle, roy-eagleson, snap-logo-brian-jens, walter-bender-olpc · **Status:** brewing
 

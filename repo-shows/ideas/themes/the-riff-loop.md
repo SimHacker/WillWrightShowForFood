@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — The Riff Loop
 
 > *AI and people riffing off AI and people — and you can jump in anywhere to steer it.*
 
-**Girder:** [`the-riff-loop.yml`](the-riff-loop.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright, jeff-adkins, brian-eno, nina-hagen · **Status:** ready
 
@@ -31,7 +34,7 @@ Four handles on the same wheel. Steer + mutate from anywhere; no pass is final.
 
 Slats' voice-synth stream-of-thought robopoetry loops — output feeding back as input — and people talk into, over, after, and before it to steer the stream. Reincarnate Slats and the loop is live again. **The diff between passes is the drama.**
 
-→ [slats-reincarnation.yml](../../will-wright-premiere/slats-reincarnation.yml) · [brain-stream.yml](../../../process/brain-stream.yml) · [Stupid Fun Club robots](stupid-fun-club-robots.md)
+→ [../../will-wright-premiere/README.md](../../will-wright-premiere/../../will-wright-premiere/README.md) · [BRAIN-STREAM.md](../../../process/BRAIN-STREAM.md) · [Stupid Fun Club robots](stupid-fun-club-robots.md)
 
 ---
 
@@ -41,8 +44,8 @@ Slats' voice-synth stream-of-thought robopoetry loops — output feeding back as
 |---------|------|-------|
 | **Jeff recursion** | [Jeff Adkins](../../jeff-adkins/) · [ideas.md](../../../characters/jeff-adkins/ideas.md) | SimObliterator — AI copying AI copying people, better each pass |
 | **Eno generative** | [Brian Eno show](../../brian-eno/) | Set rules running; play AGAINST them live — surrender + steer |
-| **Repo Show itself** | [brain-stream.yml](../../../process/brain-stream.yml) | Brain-stream on bus, homefun PRs, cauldron via git |
-| **Director's Cut** | [repo-show-format.yml](../../../process/repo-show-format.yml) | Discuss → invite reaction → splice → re-release; git branch/merge/tag literal |
+| **Repo Show itself** | [BRAIN-STREAM.md](../../../process/BRAIN-STREAM.md) | Brain-stream on bus, homefun PRs, cauldron via git |
+| **Director's Cut** | [FORMAT.md](../../../process/FORMAT.md) | Discuss → invite reaction → splice → re-release; git branch/merge/tag literal |
 | **Cover chain** | [Nina Hagen ideas](../../../characters/nina-hagen/ideas.md) | Tubes → Nina → Trannyshack — each pass keeps riff, mutates meaning |
 | **Feedback jamming** | [Nina Hagen hook #10](../../../characters/nina-hagen/ideas.md) | AntiORP / NATO OPERATORS — video feedback over UDP; we do it with everything including AI |
 | **Tribute before attribution** | [Doug Hilsinger](../../../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md) | Loved the work before knowing whose — SimObliterator ethic |
@@ -57,4 +60,4 @@ Reframes *"AI vs people"* as *"people AND AI in a loop."* Authorship isn't lost 
 
 ---
 
-← [All themes](README.md) · [Slats reincarnation](../../will-wright-premiere/slats-reincarnation.yml) · [Stupid Fun Forward trail](../../../process/trails/stupid-fun-forward.md)
+← [All themes](README.md) · [Slats reincarnation](../../will-wright-premiere/../../will-wright-premiere/README.md) · [Stupid Fun Forward trail](../../../process/trails/stupid-fun-forward.md)

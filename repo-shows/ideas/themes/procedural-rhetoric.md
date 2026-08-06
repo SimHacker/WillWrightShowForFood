@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — Procedural rhetoric
 
 > *Objects argue — the rules are the rhetoric.*
 
-**Girder:** [`procedural-rhetoric.yml`](procedural-rhetoric.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright, heather-and-steve-alvey · **Status:** ready
 
@@ -25,10 +28,10 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Ian Bogost guest show**](../../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml) | Dedicated episode seed — procedural rhetoric on air |
+| [**Ian Bogost guest show**](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md) | Dedicated episode seed — procedural rhetoric on air |
 | [**SimProv catalog**](../../../catalogs/simprov/README.md) | Magnum opus — wedding playset as inclusion agitprop |
 | [**Inclusion agitprop**](inclusion-agitprop.md) | Sister theme — SimProv wedding thread |
-| [**Pixelized joint wedding**](../gags/pixelized-joint-wedding.yml) | Gag crossover — Double Pre-Game |
+| [**Pixelized joint wedding**](../gags/README.md) | Gag crossover — Double Pre-Game |
 | [**Heather & Steve Alvey show**](../../heather-and-steve-alvey/) | Afterlife × voting farce lane |
 
 ---
@@ -43,4 +46,4 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 
 ---
 
-← [All themes](README.md) · [Ideas](../README.md) · [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
+← [All themes](README.md) · [Ideas](../README.md) · [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md)

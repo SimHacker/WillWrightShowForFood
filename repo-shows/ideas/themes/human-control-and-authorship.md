@@ -1,8 +1,11 @@
+
+
+↑ [All themes](README.md) · [Ideas](../README.md)
+
 # Theme — Human control & authorship
 
 > *AI proposes; PEOPLE dispose — augmentation, not replacement.*
 
-**Girder:** [`human-control-and-authorship.yml`](human-control-and-authorship.yml) · **Bucket:** [themes/README.md](README.md) · **Catalog:** [ideas/INDEX.yml](../INDEX.yml)
 
 **Shows:** will-wright, drew-carey, all · **Status:** ready
 
@@ -15,7 +18,7 @@
 AI proposes; **people** dispose. The LLM writes code, orchestrates live streams, and stages discussion between humans — it does not replace human voice, personality, or authorship on air.
 
 **Player-in-the-Middle:** Center people, not the machine. Curation of the flow *is* the show.  
-→ [`crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml#player_in_the_middle) · [CRAZY-IDEA-JAM.md](../../../process/CRAZY-IDEA-JAM.md)
+→ [CRAZY-IDEA-JAM.md](../../../process/CRAZY-IDEA-JAM.md)
 
 ---
 
@@ -35,7 +38,7 @@ AI proposes; **people** dispose. The LLM writes code, orchestrates live streams,
 | Voice-clone living guests or audience | Impersonation — see [simulating-people.md](simulating-people.md) |
 | TTS-replace host or guest personality | Drew 2023 proved the audience rule |
 | Auto-generate guest script or impersonate timing | Authorship stays human |
-| Pass simulated characters off as real without labeling | [portrayal-standards.yml](../../../schemas/portrayal-standards.yml) |
+| Pass simulated characters off as real without labeling | [portrayal-standards.md](../../../schemas/portrayal-standards.md) |
 
 ---
 
@@ -44,13 +47,13 @@ AI proposes; **people** dispose. The LLM writes code, orchestrates live streams,
 **PUPPETRY** — humans voice character-puppets. No synths, no cloned voices.
 
 Pink Trombone, Phoneloper = vocal-tract **instruments** a person plays live — not a replacement for the performer.  
-→ [`performance-and-culture.yml`](../../will-wright-premiere/performance-and-culture.yml#voicing) · [Voystick theme](voystick-voice-space.md)
+→ [`../../will-wright-premiere/README.md`](../../will-wright-premiere/../../will-wright-premiere/README.md#voicing) · [Voystick theme](voystick-voice-space.md)
 
 ---
 
 ## Characters on air
 
-Will's beloved menagerie + our own + contributors' — **ethically and respectfully**. Clearly-labeled affectionate fan portrayals; [portrayal-standards.yml](../../../schemas/portrayal-standards.yml); no invented quotes from living public figures.
+Will's beloved menagerie + our own + contributors' — **ethically and respectfully**. Clearly-labeled affectionate fan portrayals; [portrayal-standards.md](../../../schemas/portrayal-standards.md); no invented quotes from living public figures.
 
 ---
 
@@ -58,10 +61,10 @@ Will's beloved menagerie + our own + contributors' — **ethically and respectfu
 
 | Case | Link | Lesson |
 |------|------|--------|
-| **Drew Carey 2023** | [ai-contrast-framing.yml](../../drew-carey/ai-contrast-framing.yml) | Audience wanted personality back — not a synthetic host |
+| **Drew Carey 2023** | [ai-contrast-framing.md](../../drew-carey/ai-contrast-framing.md) | Audience wanted personality back — not a synthetic host |
 | **Bun Rust rewrite** | [bun-rust-rewrite digest](../../../process/sources/bun-rust-rewrite-2026-07.md) | AI as loop engineer + review harness; human supervisor fixes workflows |
 
-**Umbrella format:** [make-play-tools-show.yml](../traditions/make-play-tools-show.yml) — *"TV show about developing and playing games & tools — AI as best-practice instrument."*
+**Umbrella format:** [../traditions/README.md](../traditions/README.md) — *"TV show about developing and playing games & tools — AI as best-practice instrument."*
 
 ---
 
@@ -82,10 +85,10 @@ Will's beloved menagerie + our own + contributors' — **ethically and respectfu
 |------|-----|
 | [Engelbart memorial](../../../characters/douglas-engelbart/) | Augmentation thesis — forebear |
 | [Augmentation trail](../../../process/trails/augmentation-and-hypertext.md) | Engelbart + Nelson + Weiser → PITM |
-| [Puppet taxonomy](../traditions/puppet-taxonomy.yml) | Conan face-hole, Pink Trombone, Phoneloper |
-| [Honest fake call-in](../traditions/honest-fake-call-in.yml) | Staged but labeled |
-| [SHOW.yml defense](../../will-wright-premiere/SHOW.yml) | `#defense_against_ai_slop` |
-| [Performance space ethics](../../../process/performance-space.yml) | Live rig ethics |
+| [Puppet taxonomy](../traditions/README.md) | Conan face-hole, Pink Trombone, Phoneloper |
+| [Honest fake call-in](../traditions/README.md) | Staged but labeled |
+| [Will Wright premiere defense](../../will-wright-premiere/README.md) | `#defense_against_ai_slop` |
+| [Performance space ethics](../../../process/performance-space.md) | Live rig ethics |
 | [MOOLLM representation-ethics](https://github.com/SimHacker/moollm/skills/representation-ethics) | Upstream skill |
 
 ---
