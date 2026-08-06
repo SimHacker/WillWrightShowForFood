@@ -44,3 +44,6 @@ Amsterdam orbit, a live hunt for a rumored **Brood portrait of Nina**, **perform
 in music — are in [`ideas.md`](ideas.md). Each is grounded in Nina's own public work (or clearly
 attributed as Don's lead/framing) and offered as a topic to explore *with* her, not as a claim about
 what she thinks.
+
+**Watch-along tour:** [`video-stories.md`](video-stories.md) — verified YouTube clips with narration
+between them (links open in your browser; no embedded players).
