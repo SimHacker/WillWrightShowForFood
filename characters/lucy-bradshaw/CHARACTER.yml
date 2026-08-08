@@ -18,8 +18,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  channel: facebook
-  send_batch: sims-fest-2026
   show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
 bio:

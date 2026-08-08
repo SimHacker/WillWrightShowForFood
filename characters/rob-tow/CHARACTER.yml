@@ -20,9 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/placeholder/
-  priority: send_ready
   pair_with: brenda-laurel
-  send_batch: interval-reunion-2026
   note: "Interval circle; Placeholder w/ Brenda + Rachel Strickland; CS547 psychophysics + narrative VR."
 
 bio:

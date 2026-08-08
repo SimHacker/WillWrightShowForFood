@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/tom-and-golan-ecg-mouther/
-  warm_contact: true   # Interval colleague; in touch since — post-patent-expiry ECG conversations
   note: "Brainstorm heartbeat — conversation not code; pair with Golan on ECG/Mouther"
 
 known_for:

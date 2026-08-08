@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/marc-canter/
-  priority: send_ready
   pair_with: david-levitt
   note: "Old friend + colleague of Don and David Levitt; Don expects an enthusiastic yes."
 

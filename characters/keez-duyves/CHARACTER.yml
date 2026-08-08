@@ -16,18 +16,13 @@ representation:
   consent_level: 3
   authored_by: don-hopkins
   note: |
-    Warm long Amsterdam friendship (Messenger + studio circle). Keez may correct, reduce,
-    replace, or delete this portrayal anytime. Private addresses and DMs stay out of this repo.
+    Warm long Amsterdam friendship. Keez may correct, reduce, replace, or delete this portrayal
+    anytime. Private addresses and DMs stay out of this repo.
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: draft
   consent: not_yet_asked
-  priority: send_now
-  warm_contact: true
-  channel: Messenger
-  interview_planned: true
-  include: ["Keez Duyves", "Will Wright"]
   document: invitation.md
   show_seed: ../../repo-shows/keez-duyves/
 
@@ -56,8 +51,7 @@ friendship_arc:
   2017_messenger: "Anyways production Qs; Waag / World VR Forum threads"
   2020: "Pie-menu projection-mapping paper + Ted Nelson self-revealing / feedforward-feedback"
   2024-03: "Don flagged Die Space on HN (item 39821421)"
-  2026: "NDSM / Will's son visit path — inter Will Wright into Die Space; definite Repo Show invite"
-  2026-07: "Phone number disconnected — Don commented on Keez's April Seoul crank-TV FB post to get his attention: DOOM SCROLLING riff (Die Space souls in the crank TV), physical inertial scrolling credit, Margaret Minsky Sandpaper force-feedback extension. sources/2026-07-seoul-crank-tv-doom-scrolling.md"
+  2026: "NDSM / Will's son visit path — inter Will Wright into Die Space; Repo Show invite planned"
 
 why_the_show_cares:
   will_hook: "Die Space is the cleanest Will-facing demo — afterlife SNS + mass audience light upload"
@@ -74,19 +68,6 @@ media:
   light_letters: media/tedx-diespace-light-letters-given-names.png
   yes_no_cloud: media/tedx-diespace-yes-no-cloud.png
   ages: media/tedx-diespace-ages-in-light.png
-
-contact:
-  channel: "Warm — Messenger / Facebook; pipslab.org"
-  # no private phone/address in this public repo
-  status_2026_07: "Old phone number disconnected — attention-getting via FB comments on his Seoul post (worked before)"
-  public_channels:
-    - "Facebook (personal): facebook.com/keez.duyves — Messenger is the proven warm channel"
-    - "Facebook (PIPS:lab page): facebook.com/PIPSlab-91037496588"
-    - "Instagram: @pipslab.official"
-    - "LinkedIn: linkedin.com/in/pips-lab-05218215"
-    - "pipslab.nl — archive site (shows: Wortal Combat, Diespace, Archie and the Bees, Shadows in the Cloud); NOTE pipslab.org appears domain-squatted (Candy Crush spam) as of Jul 2026 — do not point invitations there"
-    - "Vimeo/YouTube: vimeo.com/pipslab · youtube.com/user/PIPSLAB"
-    - "In person: NDSM studio circle (STRAAT Museum is on the same werf) — Will's son visit path"
 
 sources:
   web:
@@ -108,11 +89,11 @@ sources:
     - { path: sources/friendship-arc-receipts.md, why: "Dated friendship receipts; Canvas 2009; not Kees Colijn" }
     - { path: sources/tedx-amsterdam-2012-diespace.md, why: "TEDx talk digest + still index" }
     - { path: sources/2024-03-hn-diespace-massively-multiplayer-cv.md, why: "Don HN comments + video trio" }
-    - { path: sources/2026-07-seoul-crank-tv-doom-scrolling.md, why: "Crank TV / DOOM SCROLLING / Sandpaper FB thread (Jul 2026) — verbatim comments + stills" }
 
 see_also:
   - { path: invitation.md, why: "Draft invite" }
   - { path: ideas.md, why: "Show hooks" }
+  - { path: ../tom-tjon-a-loi/, why: "Die Space × Soul City two-hander — premorializing the living meets resurrecting the archived" }
   - { path: ../../repo-shows/keez-duyves/, why: "Show seed" }
   - { path: ../will-wright/, why: "Inter Will Wright into Die Space; Will's son / NDSM visit path" }
   - { path: ../margaret-minsky/, why: "Sandpaper force feedback — brake/motor extension of the crank TV; natural two-hander segment" }

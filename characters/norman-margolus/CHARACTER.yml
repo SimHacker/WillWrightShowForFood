@@ -23,7 +23,6 @@ invitation:
   consent: not_yet_asked
   document: ../../characters/norman-margolus/invitation.md
   show_seed: repo-shows/norman-margolus/
-  likelihood: "good — friend of Henry's; Don already met him in Boston and discussed exactly this"
 
 bio:
   summary: |

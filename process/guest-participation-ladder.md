@@ -12,6 +12,15 @@ Don bends over backwards — especially for older guests with grandchildren and 
 
 The ladder cuts both ways: the easy rungs remove friction, and the top rung **legitimizes**. Cursor is the ordinary daily rig of working developers in 2026 — knowing the show runs on the same professional stack tells even a browse-only, never-signs-up guest that this is a real production, without asking anything of them.
 
+## Players, not guests, users, or consumers
+
+**Constitutional** ([FORMAT.md — participation policy](FORMAT.md#participation-policy)):
+everyone who joins a show **becomes a player**. "Guest," "audience," and "host" are role
+names — which part you play. "Player" is what everyone *is*. The same way you join a game,
+you join a show; every invitation is an **invitation to play** — a play date, not an
+audience seat. Never "user," never "consumer" in show-facing copy — those are horrible
+ways to frame humans. The ladder below is the difficulty setting each player picks.
+
 ## No reflexive submissions
 
 **Will Wright Show For Food does not accept reflexive submissions — only willing contributions.** ;)

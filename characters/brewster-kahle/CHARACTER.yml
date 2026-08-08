@@ -15,16 +15,10 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: soft_outreach_replied
-  soft_outreach: 2026-07-16
-  replied: 2026-07-16
-  consent: interested_logistics_tbd
+  status: draft
+  consent: not_yet_asked
   document: invitation.md
-  outreach: sources/outreach-amsterdam-2026-07-16.md
-  note: |
-    Soft ask sent without character-page link. Brewster replied: IA Europe visit welcome
-    (Beatrice organizes events); in Amsterdam Nov–Dec; video interviews in theory if logistics;
-    asked how GitHub is a stage. Full invite + room link pending polish.
+  production: RepoShowPrivate/characters/brewster-kahle/
 
 bio:
   summary: >

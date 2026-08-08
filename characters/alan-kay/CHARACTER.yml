@@ -33,7 +33,6 @@ invitation:
     - repo-shows/alan-kay-microworld.yml
     - repo-shows/remembering-vanessa-freudenberg.yml
   memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
-  priority: send_after_craig
   note: >
     Hoped: a series — especially Heinz Cambridge / PIXIE lineage and living+passed collaborators.
     No obligation. Updated 2026-07-25 / polished 2026-07-29.

@@ -33,9 +33,6 @@ show_seeds:
 
 invitation_status: send_ready
 
-contact:
-  email: private  # on file with Don; open replies welcome via GitHub issue or PR
-
 notes: |
   GRiD Compass co-creator — often cited as first clamshell laptop (1982); Dynabook-inspired;
   Smalltalk on 8086; Alan Kay and Dan Ingalls played with it. Bullet-stopped-laptop story (US agency,

@@ -5,7 +5,7 @@
 
 **Keez Duyves** ([Urban Nation](https://urban-nation.com/artist/keez-duyves/), [PIPS:lab](http://www.pipslab.org/)) is the Dutch image wizard behind audience-participation light art, multi-user 360 cinema, and **Die Space** — the afterlife social network you join by being dead (and, at TEDxAmsterdam, by writing your name in light).
 
-Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely inviting.** Inter Will Wright into Die Space.
+Don’s friend since a **Trouw** performance ~2009. Amsterdam. Inter Will Wright into Die Space.
 
 ![Die Space live control cyberspace decks on stage](media/tedx-diespace-control-desk-red-suit.png)
 
@@ -23,10 +23,10 @@ Don’s friend since a **Trouw** performance ~2009. Amsterdam. **Definitely invi
 | Jul 2011 | dpdk (Rotterdam) 360 stitch/stream freelance → Don names **PIPS:LAB**; Owen already a fan. |
 | (lineage) | Co-founder **Steye Hallema** later Jaunt VR creative director (*Ashes to Ashes*). |
 | 22 Aug 2012 | Earliest Keez-named saved mail — Facebook friends (Pinterest notice). |
-| 2012–13 | Messenger: Unity World-from-data vs Island demo; pie menus in 3D; Keez “a little inbetween gaffertape and messaging objects.” |
+| 2012–13 | Unity World-from-data vs Island demo; pie menus in 3D; Keez “a little inbetween gaffertape and messaging objects.” |
 | 7 Mar 2017 | **Anyways** at the **NDSM** lab — six-participant synced 360; Don alone as audience; Keez orchestrated. Next day Don told Arthur (Jaunt) to cultivate artists like Keez on a **JavaScriptable** 360 player. |
 | Mar 2024 | Die Space on HN as the worked example of massively multiplayer CV. |
-| 2026 | Will's son / NDSM visit path; Repo Show invite. |
+| 2026 | Will's son / NDSM visit path. |
 
 Not the other Amsterdam Keez (Kees Colijn / Arthur’s friend from the ’90s). Full: [`sources/friendship-arc-receipts.md`](sources/friendship-arc-receipts.md).
 

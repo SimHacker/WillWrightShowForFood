@@ -53,11 +53,6 @@ bio:
     - https://www.rfc-editor.org/rfc/rfc733
     - https://www.rfc-editor.org/rfc/rfc822
 
-contact:
-  web: https://www.dcrocker.net/
-  facebook: https://www.facebook.com/david.h.crocker
-  wikipedia: https://en.wikipedia.org/wiki/Dave_Crocker_(engineer)
-
 notes: |
   Brother of Steve Crocker (RFC 1, ARPANET NWG). Introduced to ARPANET work via Steve at UCLA.
   Author of RFC 733 and RFC 822 (Internet mail format). Early ARPANET email RFC author (1970s).

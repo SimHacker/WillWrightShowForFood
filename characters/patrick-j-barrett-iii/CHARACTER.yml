@@ -21,7 +21,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/did-the-sims-make-you-gay.yml
-  priority: send_now
   note: |
     Don + Patrick integrated episode: how same-sex relationships got programmed, E3 kiss,
     performative romance model — paired with Alexander Avila essay (he is openly trans masc) + comment corpus (MOOLLM).

@@ -1,11 +1,21 @@
-# Tom Tjon A Loi — designer, Rietveld DesignLAB alum; storyboarded the Micropolis social layer (2009)
+# Tom Tjon A Loi — designer; storyboarded the Micropolis social layer (2009); now AI-as-instrument creative strategist
 name: Tom Tjon A Loi
-role: designer / artist
-location: Amsterdam, Netherlands
+role: designer / artist / creative strategist
+location: Rotterdam, Netherlands
 affiliations:
   - Gerrit Rietveld Academie, DesignLAB (graduated 2012)
-  - Don Hopkins / Stupid Fun Club — intern, July 2009 onward (Oosterpark, Amsterdam)
-consent: not_yet_asked   # past collaborator (2009 internship); warm
+  - Sandberg Instituut, Political Spatial Design
+  - Don Hopkins / Stupid Fun Club — collaborator, July 2009 onward (Oosterpark, Amsterdam)
+consent: not_yet_asked   # past collaborator (2009); warm
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  documents:
+    - invitation-1.md   # performance + instrument, no explanation
+    - invitation-2.md   # the Rosetta Stone
+    - ideas.md          # CA Machinima, CAM6 lineage, costumes, AI as instrument
+  note: two parts on purpose — watch first, explanation second
 
 micropolis_work:   # from Don's Nov 2009 recommendation letter + Rietveld assessment form
   - storyboards, mock-ups, and concept illustrations of multiplayer Micropolis and social networking
@@ -14,18 +24,46 @@ micropolis_work:   # from Don's Nov 2009 recommendation letter + Rietveld assess
   - work presented in Don's HAR 2009 talk and to collaborators/supporters (Kennisnet, IBM era)
   - proposed Micropolis to the Architectuurfonds ("Stedenbouw voor de volgende generatie", Nov 2009)
 
+current_work:
+  positioning: "Most brands know what they make. Few know what they mean."
+  focus: "AI not as output, but as instrument"
+  rememory: AI-generated reconstructions as interpretations rather than objective memories
+  moollm_alignment:
+    - "AI as instrument = MOOLLM stance (LLM as orchestration instrument)"
+    - "REmemory ethic = portrayal-standards ethic (representations are interpretations)"
+    - "2009 social-multiplayer storyboards = federation + MOOLLM roadmap"
+
 don_2009: >
   "I would not hesitate to recommend Tom for challenging projects requiring creativity,
   design skills and technical abilities."
 
 links:
+  linkedin: https://www.linkedin.com/in/tomtjonaloi/
+  portfolio: https://www.tomtjonaloi.xyz/
+  rememory: https://www.tomtjonaloi.xyz/work/rememory
   rietveld_final_work: https://oldschool.rietveldacademie.nl/en/final-works/2012/designlab/tom-tjon-a-loi
   portfolio_2009: http://www.portfoliovantom.blogspot.com
   har_2009_talk: https://donhopkins.medium.com/har-2009-lightning-talk-transcript-constructionist-educational-open-source-simcity-by-don-3a9e010bf305
+  mediamatic: https://www.mediamatic.net/en/page/18702/tom-tjon-a-loi
+  mediamatic_biennale_2009: https://www.mediamatic.net/en/page/18705/tom-at-amsterdam-biennale-2009
+
+performance_references:   # what the invitation shows him
+  jerry_martin_performance: https://www.youtube.com/watch?v=319i7slXcbI
+  live_site: https://micropolisweb.com/
+  blamstrain_performance: https://www.youtube.com/watch?v=BBVyCpmVQew
+  demo: https://www.youtube.com/watch?v=wlHGfNlE8Os
+  source: https://github.com/SimHacker/MicropolisCore
+  cam6_demo: https://www.youtube.com/watch?v=LyLMHxRNuck   # ideas.md — CA Machinima / storytelling with CA
+  cam6_app: https://donhopkins.com/home/CAM6
+  cam6_source: https://github.com/SimHacker/CAM6
 
 sources:
   - "Don's mail archive: Internship Info! (30 Jul 2009); internship review + Rietveld assessment (30 Nov 2009); Architectuurfonds proposal (12 Nov 2009)"
 
 see_also:
-  - { path: ../../repo-shows/ideas/themes/educators-track.md, why: "student-intern-as-co-designer — the original proof the model works" }
+  - { path: ../../repo-shows/ideas/themes/educators-track.md, why: "student-collaborator-as-co-designer — the original proof the model works" }
   - { path: ../sergio-van-pul/CHARACTER.yml, why: "fellow 2008–10 Eduverse-era collaborator" }
+  - { path: ../jerry-martin/, why: "Chill Resolve — the music of the first performance" }
+  - { path: ../keez-duyves/, why: "Die Space × Soul City two-hander — living/archived membrane, both directions" }
+  - { path: ../david-marusek/, why: "The Wedding Album / Simopolis — Soul City's literary ancestor" }
+  - { path: ../will-wright/, why: "Proxi panel — Tom × Will × Keez: what is a memory once it's playable?" }

@@ -15,16 +15,15 @@ representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
   authored_by: don-hopkins
-  note: "Old friend of Don's — likely to say yes. Portrayal drawn from public work + Don's own correspondence; Scott may edit, reduce, or delete anytime."
+  note: "Old friend of Don's. Portrayal from public work + correspondence; Scott may edit anytime. Production status: RepoShowPrivate characters/scott-draves/"
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
   status: in_conversation
   consent: not_yet_asked
-  responded: "2026-07 (ongoing)"
-  document: ../../characters/scott-draves/invitation.md   # canonical: invitations live with the character
+  document: invitation.md
+  production: RepoShowPrivate/characters/scott-draves/
   show_seed: repo-shows/scott-draves/
-  likelihood: "high — long-time friend; collaborated with Don on the Electric Sheep Unity client (2020–2023)"
 
 bio:
   summary: |

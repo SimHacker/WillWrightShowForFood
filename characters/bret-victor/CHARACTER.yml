@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/bret-victor/
-  priority: send_ready
 
 bio:
   summary: "**Bret Victor** — interface researcher inventing better *media for thought*: \"explorable explanations,\" \"Inventing on Principle,\" and Dynamicland. (Note: \"Bret,\" one t.)"

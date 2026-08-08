@@ -23,7 +23,6 @@ representation:
 invitation:
   status: not_yet_asked
   consent: not_yet_asked
-  warm_contact: false
   note: "Warm path via Keez / Amsterdam PIPS:lab circle; definite interest after Keez invite"
 
 bio:

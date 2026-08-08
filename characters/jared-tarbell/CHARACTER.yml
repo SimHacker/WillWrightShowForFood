@@ -23,8 +23,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  interview_planned: true
-  include: ["Jared Tarbell", "Laurie Tarbell", "Will Wright"]
   document: invitation.md
   show_seed: ../../repo-shows/jared-tarbell/
 
@@ -60,10 +58,6 @@ why_the_show_cares:
 media:
   storefront: media/levitated-toy-factory-storefront.png
   launch_poster: media/levitated-launch-poster-2014.png
-
-contact:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  channel: "Warm — direct email from Don; decades of history"
 
 correspondence: correspondence.yml
 # private archive — not in this repo

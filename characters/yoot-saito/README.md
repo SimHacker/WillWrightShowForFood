@@ -4,7 +4,7 @@ Invitation portrayal — **not** Yoot Saito. [Standards](../../schemas/portrayal
 
 **Field:** Game designer — The Tower / SimTower, Yoot Tower, Seaman, Odama; founder of OPeNBooK (1993) & Vivarium (1996)
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/yoot-saito/README.md) · [Correspondence](correspondence.yml) · [Yoot Tower inquiry reply template](reply-template-yoot-tower-inquiries.md) · [SimTower videos](media/simtower-videos.yml) · [Seaman videos](media/seaman-videos.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/yoot-saito/README.md) · [Production mail](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/yoot-saito) · [SimTower videos](media/simtower-videos.yml) · [Seaman videos](media/seaman-videos.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.
 

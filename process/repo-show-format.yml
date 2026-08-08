@@ -181,7 +181,26 @@ how_it_runs:
     note: "[cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) + [deep-snitch](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) on session artifacts before public harvest"
 
 participation_policy:
-  one_line: "AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping."
+  one_line: "AI optional. Human, bot, or AI — all welcome. Bring any rig. No gatekeeping. Everyone who joins is a player."
+  players_not_users:
+    principle: |
+      We center **players** — not guests, not users, not consumers, not audiences.
+      "User," "consumer," and "audience member" are horrible ways to frame humans:
+      passive, extractive, one-way. **"Player"** is general computer gaming and
+      MMORPG terminology, and it carries the right feeling: a player has agency,
+      presence, a character, an inventory, and other players.
+    join_verb: |
+      The same way you "join" a game, you join a show and **become a player**.
+      Every invitation is an **invitation to play** — a play date, not an audience
+      seat. Guests are players with the topic; the audience are players with
+      TicketPR characters; the host is a player with a talk-show format; bots and
+      AIs are players with declared rigs.
+    terminology: |
+      Words like "guest," "audience," and "host" remain as ROLE names — they say
+      which part you play. "Player" is what everyone IS. Never "user," never
+      "consumer" in show-facing copy.
+    lineage: "MMORPG vocabulary matching [git_as_mmorpg](#breeding-and-nesting) — branches are parallel universes, PRs are timeline merges, and the humans in them are players, the term of art games already got right."
+    origin: "Promoted from the Tom Tjon A Loi invitation (2026-08): the ask shifted from 'come be a guest' to 'come play it — as a player.'"
   ticket_pr: "[ticket-pr.yml](ticket-pr.yml)"
   ai_optional: "Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see [AI rig feedback](#ai-rig-feedback)) — to learn, not to sell."
   who_is_welcome: "Humans, bots, and AIs are all welcome to read along, ask questions, and contribute."
@@ -248,7 +267,9 @@ canonical_prose: |
   [TicketPR](#ticket-pr)). [Don Philahue](../characters/don-philahue/) surfaces the good ones live. Ideas are
   melted in the [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) and harvested into reusable skills and code, bred back into the network
   via git. Some episodes can instead be playful game shows ([Code That Spec](code-that-spec.yml), [Manual Transmission](manual-transmission.yml),
-  the [Micropolis AI Drag Race](micropolis-ai-drag-race.yml)) — optional fun we can do, not the point.
+  the [Micropolis AI Drag Race](micropolis-ai-drag-race.yml)) — optional fun we can do, not the point. And everyone who
+  joins — guest, audience, host, bot, or AI — is a **player**: the invitation is an invitation
+  to play (see [players, not users](#participation-policy)).
 
 sign_offs:
   note: "Rotate the closing line — warm, playful, a little retro."

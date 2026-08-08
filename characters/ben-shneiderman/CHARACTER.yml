@@ -17,12 +17,10 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: ../../characters/ben-shneiderman/invitation.md   # canonical: invitations live with the character
   show_seed: repo-shows/ben-shneiderman/
-  send_batch: hci-pie-hyperties-2026
-  likelihood: "warm — CHI'88 co-author; Jan 2022 HyperTIES mail; documenting-our-work alignment"
 
 bio:
   summary: |

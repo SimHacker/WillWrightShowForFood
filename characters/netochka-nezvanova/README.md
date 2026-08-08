@@ -36,8 +36,12 @@ because the legend outran any single person:
 - Widely described as a **collective**, not one author. ("There is only 01 of me.")
 - Reports of **different people appearing AS NN** at different events over the years.
 - The press map contradicts itself on purpose: a New Zealander artist? an Icelandic musician?
-  an Eastern European collective? A possible tie to the **STEIM** real-time-media scene in
-  Amsterdam — same waters as *Image/ine* (Tom Demeyer + Steina Vasulka) — remains unconfirmed.
+  an Eastern European collective?
+- **STEIM (Amsterdam) — verified:** Rebekah Wilson / Netochka was **Guest then Artistic Co-Director,
+  2001–2003**, with the self-styled title *Director of Leaves and Petals*. Same institution as
+  [Laurie Anderson](../laurie-anderson/README.md)'s 1992 "invisible instrument" work and **Image/ine**
+  (Tom Demeyer + Steina Vasulka, 1996–2001). Institutional overlap is documented; personal overlap
+  with Laurie is an open question to ask Laurie, not to assert.
 
 We keep the ambiguity intact. It's hers by design.
 
@@ -50,30 +54,14 @@ Don paints that whole picture here: [Real-time net jamming — the nettime scene
 | Doc | Topic |
 |-----|--------|
 | [Classic AntiORP (2000)](sources/classic-antiorp-boulanger-2000.md) | Boulanger / CSound / `my` plantation critique |
-| [Smalltalk, Squeak, Lua (2006)](sources/smalltalk-squeak-lua-2006.md) | Technical thread with Don |
+| [Smalltalk, Squeak, Lua (2006)](sources/smalltalk-squeak-lua-2006.md) | Technical thread (public excerpts) |
 | [Political views (2006–2009)](sources/political-views-2006-2009.md) | Midterms, faith, US return |
-| [Don correspondence digest](sources/don-hopkins-correspondence-digest.md) | Timeline — orkut, SimFaux, Amsterdam |
 
-Full thread archive: Don Hopkins private repo (`DonHopkins/characters/netochka-nezvanova/`).
-
-## Don's angle
-
-Don has championed NN on Hacker News for years — "brilliant yet sociopathic," spectacular
-trolling *and* spectacular software. Personal threads:
-
-- **After Effects NATO host** — discussed, intrigued, **declined** (open-ended + temperament; Don was also on PowerPC live video / AE CA plugins — Subutai Ahmad / Jim Crutchfield lineage)
-- **Orkut 2006** — politics, Lua, Smalltalk via Squeak, SimFaux/FauxCast links
-- **Amsterdam 2010** — tea invitation; Forth code gift
-- **HN 2014–2021** — nettime, Jitter rivalry, Rebekah Wilson IMA portrait
-
-They've also chatted on Facebook over the years — someone is still reachable behind the mask.
-Which raises the delicious risk that inviting her is, as Don puts it, "awaking a monster with a
-new medium to terrorize." 😉
+Correspondence timeline and production invitation: **RepoShowPrivate** `characters/netochka-nezvanova/`.
 
 ## The invitation
 
-Don would genuinely love NN on the **Repo Show**. A masked appearance, a text-only channel,
-or an intermediary would all be completely in character. Any answer — including no answer, or
-a yellow flower — is honored. That, too, is on brand.
+Dream guest — masked appearance, text-only channel, or intermediary all in character. Production draft
+in studio repo; public stub: [`invitation.md`](invitation.md).
 
 *[Portrayal standards](../../schemas/portrayal-standards.md)* · [ideas.md](ideas.md) · [sources/](sources/README.md)

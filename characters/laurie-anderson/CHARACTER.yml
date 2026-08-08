@@ -18,7 +18,8 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  document: ../../characters/laurie-anderson/invitation.md
+  document: invitation.md
+  production: RepoShowPrivate/characters/laurie-anderson/
   show_seed: repo-shows/laurie-anderson/
 
 bio:
@@ -33,24 +34,33 @@ bio:
     **spoken word + technology + generative systems on stage** — the exact register the Repo Show performs in.
 
   don_connection: |
-    **Don's long-time avant-garde north star.** Don briefly met Laurie Anderson during his time at
-    **Interval Research** (Paul Allen & David Liddle's lab, 1992–2000). Her Interval tie is confirmed
-    on the public record: she built the **Talking Stick** — a ~6-foot MIDI baton that granularizes and
-    replays audio in real time — with **Bob Bielecki and Interval Research (c. 1999)**, debuting it on
-    the *Songs and Stories from Moby Dick* tour. She sits squarely in Don's performer pantheon alongside
+    **Don's long-time avant-garde north star.** Her **Talking Stick** — built with **Bob Bielecki and
+    Interval Research (c. 1999)** — is confirmed on the public record (Masaoka interview; Moby Dick
+    program notes). Don worked at Interval in the same era. She sits in Don's performer pantheon alongside
     Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, and Nina Hagen.
 
 reach:
-  note: "Dream invitation — offered with no presumption."
+  note: "Dream invitation — offered with no presumption. Outreach notes: RepoShowPrivate characters/laurie-anderson/"
 
 interval_research:
   confirmed: true
   what: "Talking Stick — ~6-foot MIDI baton that granularizes/replays audio in real time."
   with: "Bob Bielecki + Interval Research Corporation (Paul Allen & David Liddle's lab)"
   when: "c. 1999; debuted in Songs and Stories from Moby Dick"
+  primary_sources:
+    - url: "https://miyamasaoka.com/writings-by-miya-masaoka/1999/examining-obsession/"
+      what: "Miya Masaoka interview — STEIM 1992, Max, granular synthesis, harpoon shape"
+    - url: "https://www.jimdavies.org/laurie-anderson/performances/mobydick/programnotes.html"
+      what: "Laurie's Moby Dick program notes ©1999 — wireless instrument, replicate any sound, turntable descendant"
   ties: [../don-hopkins/history/interval-research.yml, "resampling / the-riff-loop theme"]
 
 sources:
   wikipedia: https://en.wikipedia.org/wiki/Laurie_Anderson
   web:
     - https://laurieanderson.com/
+    - title: "Examining Obsession — Miya Masaoka interviews Laurie Anderson (SF Bay Guardian, Oct 20, 1999)"
+      url: "https://miyamasaoka.com/writings-by-miya-masaoka/1999/examining-obsession/"
+      why: "Talking Stick in Laurie's own words — STEIM 1992, Bob Bielecki + Interval, Max, granular synthesis"
+    - title: "Songs and Stories from Moby Dick — program notes by Laurie Anderson ©1999"
+      url: "https://www.jimdavies.org/laurie-anderson/performances/mobydick/programnotes.html"
+      why: "Talking Stick — wireless instrument that can access and replicate any sound; palimpsest show thesis"

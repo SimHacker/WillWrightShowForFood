@@ -19,9 +19,7 @@ representation:
 invitation:
   status: warm_lead
   consent: not_yet_asked
-  channel: email
   contacted: 2024-05-04
-  replied: 2024-05-05
   note: |
     Don emailed May 2024 about Star Wars cabinet; Bill confirmed ROM turtle-graphics hack +
     3D turtles on Lisp Machine. Does not remember Levitt. Warm archival witness; invite optional.

@@ -1,27 +1,5 @@
-# correspondence.yml — public timeline only
-
-meta:
-  with: netochka-nezvanova
-  public: true
-  full_archive: "DonHopkins/characters/netochka-nezvanova/sources/"
-  digest: sources/don-hopkins-correspondence-digest.md
-
-threads:
-  - date: 2000-10-16
-    subject: LEV AntiORP vs Boulanger
-    public: sources/classic-antiorp-boulanger-2000.md
-  - date: 2006-11-03
-    subject: orkut reconnect; politics; Lua; Smalltalk
-    public: sources/political-views-2006-2009.md
-  - date: 2006-11-03
-    subject: OpenLaszlo video; SimFaux
-    public: sources/smalltalk-squeak-lua-2006.md
-  - date: 2007-11-11
-    subject: OLPC SimCity; Amsterdam
-    note: DonHopkins archive
-  - date: 2010-08-22
-    subject: Amsterdam tea; Forth code
-    note: DonHopkins archive
-  - date: 2014-2021
-    subject: Don Hopkins HN tributes
-    note: DonHopkins characters/netochka-nezvanova/sources/hn-tributes-don-hopkins/
+# Correspondence index — MOVED to RepoShowPrivate
+moved: true
+private: https://github.com/SimHacker/RepoShowPrivate/blob/main/characters/netochka-nezvanova/correspondence.yml
+public_portrayal: README.md
+note: "Production correspondence lives in the private repo; this public stub is the pointer."

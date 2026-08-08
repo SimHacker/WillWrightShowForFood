@@ -22,7 +22,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/clint-basinger/
-  priority: send_now
   note: "Don: 'invite the LGR guy! he loves SimCity and Maxis and Will!' Audience bridge to retro-PC/Sims fandom."
 
 bio:

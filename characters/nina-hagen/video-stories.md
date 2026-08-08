@@ -97,9 +97,12 @@ stood at **both** ends of it (see section 1).
 
 ## 5. Amsterdam — Herman Brood, *Cha Cha*, Ruigoord
 
-1979: Herman Brood, Nina, Lene Lovich, Les Chappell — the *Cha Cha* soundtrack, a Ruigoord church
-wedding scene (legal marriage or performance marriage? Don's answer: *why can't both be true?*), and
-local Amsterdam history Don still walks around in.
+1979: Herman Brood, Nina, Lene Lovich, Les Chappell — the *Cha Cha* soundtrack and a **filmed** wedding
+at the Sint-Gertrudiskerk in [Ruigoord](https://ruigoord.nl/) (Simon Vinkenoog officiates on camera). Real romance during the
+shoot; **never a legal marriage** — Brood staged the scene for tabloid publicity, and manager Koos van
+Dijk confirmed after Herman's death they were married *in the film only*. Van Dijk started civil paperwork
+in Zwolle, then deliberately slowed it; Herman moved on before anything was registered. Don still walks
+that Amsterdam/[Ruigoord](https://ruigoord.nl/) history locally.
 
 [![Herman Brood, Nina Hagen & Lene Lovich — Crocodile](https://img.youtube.com/vi/xFIjlxl-DLI/hqdefault.jpg)](https://www.youtube.com/watch?v=xFIjlxl-DLI)
 
@@ -158,7 +161,11 @@ right or wrong way to sing, remember this exists."*
 We drag a tongue across a screen and a voice comes out. She **is** the instrument.
 
 Sibling lineage: [Laurie Anderson's Talking Stick](../laurie-anderson/ideas.md) (granular MIDI baton,
-Interval Research, 1999) · [Musical Gas](../don-hopkins/musical-gas-granular-ca-synth.md) · Klaus Nomi.
+[Interval Research](https://en.wikipedia.org/wiki/Interval_Research), 1999; earlier [STEIM](https://steim.org/) 1992 —
+[Laurie's *Moby Dick* program notes](https://www.jimdavies.org/laurie-anderson/performances/mobydick/programnotes.html) ·
+[Miya Masaoka interview, Oct 1999](https://miyamasaoka.com/writings-by-miya-masaoka/1999/examining-obsession/))
+· [Max / NATO / Jitter](../laurie-anderson/ideas.md#8-steim-maxmsp-and-the-natojitter-scene) · [AntiORP](../netochka-nezvanova/README.md)
+· [Musical Gas](../don-hopkins/musical-gas-granular-ca-synth.md) · Klaus Nomi.
 
 ---
 

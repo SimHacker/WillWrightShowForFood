@@ -17,20 +17,11 @@ representation:
   authored_by: don-hopkins
   note: "Public-source portrayal. Long Now 2006 asker — identified Jul 2026. May edit or delete anytime."
 
-contact:
-  # emails in DonHopkins green-room/contacts/guest-emails.yml
-  web: https://danancona.com/
-  x: https://x.com/DanAncona
-  substack: https://chartingthewayforward.substack.com/
-  crunchbase: https://www.crunchbase.com/person/dan-ancona
-  linkedin: https://www.linkedin.com/in/danancona
-
 invitation:
-  status: send_now
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/dan-ancona-long-now.yml
-  priority: send_now
   discovered: 2026-07-10
 
 long_now_2006:

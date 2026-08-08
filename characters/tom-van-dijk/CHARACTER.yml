@@ -21,10 +21,6 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/REPO-SHOWS.yml#building-the-sims.yml
 
-contact:
-  email: private  # on file with Don; open replies welcome via GitHub issue or PR
-  location: "Deventer, NL (Don: Badhoevedorp — one train ride)"
-
 bio:
   summary: |
     **Tom van Dijk** wrote **IFF Pencil** as a teenager — the tool that helped the early Sims 1

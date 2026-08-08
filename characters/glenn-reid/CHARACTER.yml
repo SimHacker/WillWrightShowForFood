@@ -32,10 +32,6 @@ show_seeds:
 
 invitation_status: send_ready
 
-contact:
-  email: private  # on file with Don; open replies welcome via GitHub issue or PR
-  web: https://glennreid.blogspot.com/
-
 notes: |
   Wrote The Distillery (still.ps) — partial evaluation of PostScript by redefining
   imaging operators; Don ported it to NeWS/OpenWindows and extended it for selectable

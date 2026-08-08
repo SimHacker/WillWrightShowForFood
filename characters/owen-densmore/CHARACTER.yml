@@ -22,7 +22,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
-  likelihood: "warm — NeWS gang, longtime friend; natural co-guest with Gosling + Rosenthal"
 
 bio:
   summary: |

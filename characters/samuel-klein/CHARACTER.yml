@@ -19,7 +19,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  channel: facebook
   show_seed: repo-shows/walter-bender-olpc/SHOW.yml
 
 bio:

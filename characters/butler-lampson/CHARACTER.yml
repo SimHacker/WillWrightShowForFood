@@ -19,7 +19,7 @@ representation:
   note: "Stub seeded from Yoot Saito × Alan Kay interview People.md + Kay Quora — deepen before invite."
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   note: "Kay Quora blurb already written — invite drafted 2026-07-29. Pair Kay / Thacker Alto."

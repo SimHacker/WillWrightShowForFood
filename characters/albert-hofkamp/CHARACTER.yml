@@ -15,11 +15,6 @@ representation:
   consent_level: 2            # real correspondent; recent emails with Don
   authored_by: don-hopkins
 
-contact:
-  channel: email
-  warm_contact: true
-  note: "Recent email exchanges with Don; 2008–09 collaboration was direct and extensive."
-
 invitation:
   status: draft
   consent: not_yet_asked

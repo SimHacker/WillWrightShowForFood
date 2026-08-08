@@ -22,7 +22,7 @@ thing comes alive.
 | [**Tuned emergence (2004)**](tuned-emergence.md) | Chris’s interview essay — accretion in her own words |
 | [**Suggested questions**](suggested-questions.md) | Audience seeds |
 | [**Conversation hooks**](ideas.md) | Simlish, TSO, Spore, reunion |
-| [**Invitation**](invitation.md) | Draft outreach |
+| [**Invitation**](invitation.md) | Invitation (stub) |
 
 ## Career map (Jan 2007 farewell)
 
@@ -50,7 +50,7 @@ that process. The flagship show names the method and demonstrates it live. See
 | | Path |
 |---|------|
 | Character | [`CHARACTER.yml`](CHARACTER.yml) |
-| Correspondence summary | [`correspondence.yml`](correspondence.yml) |
+| Production mail | [RepoShowPrivate `chris-trottier/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/chris-trottier) |
 | Show seed (YAML) | [`../../repo-shows/design-by-accretion.yml`](../../repo-shows/design-by-accretion.yml) |
 | Sims reunion seed | [`../../repo-shows/REPO-SHOWS.yml`](../../repo-shows/REPO-SHOWS.yml) (building-the-sims) |
 | Full 2004 essay | [`../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/`](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/) |

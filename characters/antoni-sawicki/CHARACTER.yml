@@ -23,7 +23,6 @@ representation:
 invitation:
   status: engaged
   consent: not_yet_asked
-  interview_planned: true
   document: invitation.md
   show_seed: repo-shows/antoni-sawicki-ttycity.yml
   responded: 2026-08-03
@@ -98,11 +97,6 @@ other_projects:
   web_rendering_proxy: "Browse the modern web from vintage browsers"
   ntgames: "Public-domain remakes of classic games for NT RISC"
   openttd_nt_risc: "LLM-assisted downgrade of OpenTTD to Visual C 4.0 for Alpha/MIPS/PowerPC"
-
-contact:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  channel: "Direct email to Don (warm; Jul 2026 — Antoni initiated)"
-  site: https://www.tenox.net/
 
 sources:
   email_thread: sources/2026-07-08-ttycity-email-thread.yml

@@ -17,7 +17,7 @@ representation:
   note: "Utah/Armit film-lane invite — Multipatch film shown on US CAD tour."
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/pixie-pie-menus-pdp7.yml

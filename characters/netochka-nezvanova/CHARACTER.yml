@@ -23,7 +23,8 @@ representation:
 invitation:
   status: stub
   consent: not_yet_asked
-  document: README.md
+  document: invitation.md
+  production: RepoShowPrivate/characters/netochka-nezvanova/
   note: >
     Don would genuinely love her on the Repo Show. Reaching the person(s) behind the mask is its
     own adventure — and possibly, in Don's words, "awaking a monster with a new medium to terrorize." 😉
@@ -65,33 +66,41 @@ rumors:                     # labeled AS rumors — the legend is the artwork; d
   collective: "Widely described as a collective international project, not a single author — 'there is only 01 of me.'"
   many_faces: "Different people reportedly appeared AS NN at different events over the years (e.g. distributed at/around fiftyfifty.org, invited to Barcelona)."
   origins_speculation: "Press floated a female New Zealander artist, a male Icelander musician, or an Eastern European collective — the map contradicts itself, on purpose."
-  steim_amsterdam: "Possible tie to the STEIM (Amsterdam) real-time-media scene — same milieu as Image/ine (Tom Demeyer + Steina Vasulka). Unverified; may or may not overlap the suspected identity. CONFIRM."
+  steim_amsterdam: "VERIFIED: Rebekah Wilson / Netochka Nezvanova was Guest then Artistic Co-Director at STEIM (Amsterdam), 2001–2003 — self-styled title *Director of Leaves and Petals*. Same institution as Laurie's 1992 'invisible instrument' work and Tom Demeyer's Image/ine (1996–2001). Not necessarily direct collaboration with Laurie; same waters."
   hafler_trio: "Andrew McKenzie (Hafler Trio) was once hinted at as involved; appears NOT to have been the case (per nettime-era accounts)."
+
+steim:
+  verified: true
+  role: "Guest Artistic Co-Director (from April 2001) → Artistic Co-Director, 2001–2003"
+  title: "Director of Leaves and Petals (self-styled)"
+  overlap:
+    - "Laurie Anderson — STEIM 'invisible instrument' (1992); Talking Stick with Interval (1999)"
+    - "Image/ine — Tom Demeyer + Steina Vasulka @ STEIM (1996–2001)"
+    - "Don Hopkins — used Image/ine for live video performance; Amsterdam-based"
+  invitation_note: "Separate Repo Show invitations for Laurie and NN; ask Laurie about the Max/NATO/Jitter scene on her episode only — never speak as either without consent."
 
 don_connection:
   after_effects_host: >
-    Don discussed an **After Effects plug-in host for NATO** — intrigued, **declined**.
-    Parallel work: PowerPC Mac live video, background removal, video feedback (Subutai Ahmad /
-    Jim Crutchfield inspired), AE plugins for CA, Warpomatic, 8-bit channel colorization.
-    Public: sources/smalltalk-squeak-lua-2006.md
-  orkut_2006: "Politics, Lua, Smalltalk/Squeak, SimFaux — sources/political-views-2006-2009.md"
-  amsterdam_2010: "Don rebooted in Amsterdam; tea invite; Forth code — DonHopkins archive"
-  facebook: "Ongoing contact possible."
+    Don discussed an **After Effects plug-in host for NATO** — intrigued, **declined** (public HN/thread
+    context; full timeline in studio repo). Parallel work: PowerPC Mac live video, AE plugins — see
+    don-hopkins sources.
   voice: "Don has long championed NN on Hacker News — spectacular trolling AND spectacular software."
-  full_archive: DonHopkins/characters/netochka-nezvanova/sources/
+  production_notes: RepoShowPrivate/characters/netochka-nezvanova/
 
 connections:
   max_pd_lineage: "NATO.0+55+3d lived inside Max's visual-programming protocol; part of the patch-cord dataflow world (see visual-programming trail). Jitter (Cycling '74) later covered similar ground."
-  steim_imageine: "Image/ine (STEIM, 1997, Tom Demeyer + Steina Vasulka) was drawing in a similar real-time-video direction just before NATO."
+  steim_imageine: "Image/ine (STEIM, 1996–2001, Tom Demeyer + Steina Vasulka) drew real-time video in a parallel direction; NN was STEIM Artistic Co-Director 2001–2003 — institutional overlap, not necessarily direct collaboration."
+  laurie_anderson_steim: "Laurie Anderson worked at STEIM on an 'invisible instrument' (1992) — same lab, different decade, before NN's co-directorship. A Repo Show thread: did Laurie know NN's STEIM/AntiORP era?"
   microsound: "Adjacent to the microsound / glitch-art scene (see Kim Cascone)."
 
 show_suggestions:
   - { what: "A net-art / code-as-cult conversation: NATO vs Jitter, licensing as performance, trolling as propaganda — with the mystique kept intact (masked appearance, text-only, or via an intermediary is fully in character)." }
-  - { what: "Pair or triangulate with the STEIM/Image-ine real-time-video thread (Demeyer, Vasulka) and the Max/Pd patch-cord lineage." }
+  - { what: "STEIM co-director era + Image/ine overlap — Don used Image/ine; NN as Director of Leaves and Petals 2001–2003." }
+  - { what: "Max/Pd patch-cord lineage — NATO inside Max, operators net-jamming, the Jitter controversy." }
 
 facts_to_confirm:
   - "Rebekah Wilson as the (a) person behind NN — suspected/most-cited, not settled."
-  - "Any STEIM/Amsterdam connection, and whether it overlaps the suspected identity."
+  - "Whether Laurie Anderson knew NN / AntiORP at STEIM or in the Amsterdam scene (institutional overlap is verified; personal overlap is an open question for Laurie)."
   - "Current reachability and whether NN/she would welcome a portrayal or an invitation (grace about any answer — or non-answer, which is very on brand)."
 
 sources:
@@ -101,6 +110,11 @@ sources:
   press:
     - { title: "The most feared woman on the Internet (Salon, 2002)", url: "https://www.salon.com/2002/03/01/netochka/" }
     - { title: "IMA video portrait #02 — Rebekah Wilson aka Netochka Nezvanova", url: "https://archiv.ima.or.at/imafiction/" }
+    - { title: "IMA — Rebekah Wilson biography (STEIM Artistic Co-Director 2001–2003)", url: "https://archiv.ima.or.at/en/rebekah-wilson-aka-netochka-nezvanova/" }
+  steim:
+    - { title: "STEIM", url: "https://steim.org/" }
+    - { title: "nettime — NN as Director of Leaves and Petals @ STEIM (2002)", url: "https://www.nettime.org/Lists-Archives/nettime-l-0204/msg00234.html" }
+    - { title: "Image/ine @ STEIM (Tom Demeyer + Steina Vasulka)", url: "https://image-ine.org/" }
   scholarship:
     - { title: "Florian Cramer, 'Software dystopia: Netochka Nezvanova — Code as cult' (Words Made Flesh, 2005)", url: "https://web.archive.org/web/20070215185215/http://pzwart.wdka.hro.nl/" }
   art_archive:
@@ -120,7 +134,8 @@ see_also:
   - { path: sources/README.md, why: "Public evidence index" }
   - { path: ../don-hopkins/realtime-net-jamming-scene.md, why: "The nettime real-time net-jamming scene NN was the legend of — Max/MSP, NATO, Image/ine, Bounce, integrated hardware" }
   - { path: ../../process/trails/visual-programming-patch-cord.md, why: "Max/Pd patch-cord dataflow lineage NATO lived inside" }
-  - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — adjacent real-time video; possible Amsterdam rumor thread" }
+  - { path: ../laurie-anderson/ideas.md, why: "STEIM overlap — Laurie's 1992 invisible instrument; ask Laurie about NN/AntiORP Amsterdam era" }
+  - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — adjacent real-time video; Don used Image/ine" }
   - { path: ../steina-vasulka/CHARACTER.yml, why: "Image/ine @ STEIM co-creator" }
   - { path: ../kim-cascone/CHARACTER.yml, why: "Microsound / glitch-art neighbor" }
   - { path: ../miller-puckette/CHARACTER.yml, why: "Max/Pd origin — the environment NATO extended" }

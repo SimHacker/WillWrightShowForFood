@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/openlaszlo/
-  channel: "email (sarah@ultrasaurus.com) — decades-long warm thread"
   note: "Don's OpenLaszlo video-work boss and code reviewer (2006 contract — receipts in sources/); on Temkin's OL 5.0 cc list. Invite to OL reunion + solo option (streaming-media lineage / Bridge Foundry / cinematic interaction design)."
 
 bio:

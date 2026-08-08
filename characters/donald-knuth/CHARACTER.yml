@@ -20,7 +20,6 @@ invitation:
   status: dream_guest
   consent: not_yet_asked
   document: invitation.md
-  channel: snail_mail
   channel_note: |
     Knuth does not answer unsolicited email (except book-error reports).
     Public contact protocol: https://www-cs-faculty.stanford.edu/~knuth/email.html

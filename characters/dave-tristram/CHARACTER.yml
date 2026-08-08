@@ -23,7 +23,6 @@ invitation:
   consent: not_yet_asked
   document: ../../characters/dave-tristram/invitation.md
   show_seed: repo-shows/dave-tristram/
-  likelihood: "warm — old friend; shared turf (live CA/feedback graphics, CAM book lineage) is the in"
 
 bio:
   summary: |

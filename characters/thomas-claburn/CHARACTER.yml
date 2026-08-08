@@ -14,7 +14,6 @@ relationship:
   since: 2026-06-24   # replied to Don's brief (forwarded by Liam Proven): "if I can get an editor interested, will write something up"
   invitation_status: not_offered
   consent: correspondent_warm
-  channel: email
 
 why_him:
   generative_agents_2023: |

@@ -23,7 +23,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/heather-and-steve-alvey/
-  likelihood: "warm — longtime friend + collaborator (SimProv; Micropolis publishing)"
 
 bio:
   summary: |

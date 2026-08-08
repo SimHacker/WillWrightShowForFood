@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/gary-drescher/
-  interview_planned: true
 
 bio:
   summary: "**Gary Drescher** — AI researcher and philosopher. **MIT PhD** under **Marvin Minsky** → **Made-Up Minds** (MIT Press, 1991): the **schema mechanism** — an agent that learns **schemas** (context → action → result) from raw experience via **marginal attribution** and **synthetic items** (Piaget made to run). **Good and Real** (2006): determinism, choice, acausal cooperation. **Leela AI adviser**; longtime friend of **Henry** and **Milan Minsky**. His thesis underpins Leela's technology and MOOLLM's schema-mechanism / schema-factory / play-learn-lift skills."

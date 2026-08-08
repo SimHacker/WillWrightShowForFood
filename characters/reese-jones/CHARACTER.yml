@@ -19,8 +19,6 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  warm_contact: true
-  channel: facebook
   note: "Don knows Reese personally; mutual Facebook reading. He recorded and published Sam Arbesman's 2016 Overcomplicated book event on his own channel."
 
 bio:

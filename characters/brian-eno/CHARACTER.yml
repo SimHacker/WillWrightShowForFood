@@ -20,9 +20,8 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  warm_intro_via: will-wright
-  warm_intro_when: after_first_guest_weave   # guest-participation-ladder.yml#warm_intro_via_will
-  document: ../../characters/brian-eno/invitation.md   # canonical: invitations live with the character
+  document: ../../characters/brian-eno/invitation.md
+  production: RepoShowPrivate/characters/brian-eno/
   show_seed: repo-shows/brian-eno/
 bio:
   born: 1948

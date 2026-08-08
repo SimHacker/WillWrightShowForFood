@@ -15,12 +15,6 @@ representation:
   consent_level: 2
   authored_by: don-hopkins
 
-contact:
-  channel: email
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  warm_contact: true
-  intro_via: chaim-gingold
-
 invitation:
   status: warm_correspondence
   consent: not_yet_asked

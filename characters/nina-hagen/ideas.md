@@ -42,12 +42,23 @@ The Amsterdam counterpart to hook #5. **Herman Brood** — Dutch rock musician *
 late-'70s Amsterdam scene, her friendships, and **Lene Lovich** (and Lovich's longtime partner/
 collaborator **Les Chappell**).
 
-**The Ruigoord wedding.** Per Don and the film, Nina and **Herman Brood** had a **wedding at the church
-in Ruigoord** (the artists' free-village near Amsterdam), with **Lene Lovich and Les Chappell** there
-too — a whole cabal of gloriously troublemaking friends. Whether it was a **legal marriage or a
-film/performance "play-marriage"** is uncertain — and, as Don puts it, *"why can't both be true?"* A
-staged wedding that's also real is exactly the show's kind of truth. *(Framed as depicted-in-the-film +
-Don's recollection; legal marital status left open, not asserted as fact.)*
+**The Ruigoord wedding — verified: film only, not legal.** In *Cha Cha* (1979), Herman Brood and Nina
+Hagen marry on camera at the **Sint-Gertrudiskerk** in [Ruigoord](https://ruigoord.nl/),
+officiated in the film by **Simon Vinkenoog**, with **Lene Lovich**, **Les Chappell**, **Dolf Brouwers**
+(as Herman's on-screen father), and the usual cabal of gloriously troublemaking friends. The Dutch
+Wikipedia entry states plainly: the marriage *"haalde de roddelpers, maar was een opzet van Brood om de
+film onder de aandacht te brengen"* — it hit the tabloids, but Brood staged it for publicity.
+
+They were **never legally married.** Herman's manager **Koos van Dijk** said so explicitly after Brood's
+death: *"Herman en Nina zijn nooit getrouwd geweest. Wel in de film 'Cha Cha' (1979), maar niet in het
+echt."* Nina moved in with Herman during the shoot; there was a real romance and a moment when they said
+they wanted to marry — Van Dijk even went to Zwolle to start the paperwork, then **deliberately slowed
+the process**. Before filming ended, Herman was flirting with someone else and the civil marriage never
+happened. (May 1979 press also had Nina announcing plans to marry Brood — intention, not registry.)
+
+Don's *"why can't both be true?"* still lands, but the verified split is: **real relationship + real
+filmed ceremony + fake tabloid marriage + no civil record** — staged for camera *and* emotionally real,
+not legally dual. Exactly the show's kind of truth, now with sources.
 
 ### 7. The Herman Brood portrait — a live provenance hunt
 Brood painted constantly, including portraits. **Don has found evidence that a Brood portrait of Nina
@@ -116,20 +127,19 @@ explore **with** Nina — art as transmission, not commodity. *(We quote the one
 copyright; "What It Is" is a real, public Nina Hagen song.)*
 
 ## Sources (real, public)
-- Nina Hagen Band (1978): "TV-Glotzer (White Punks on Dope)," "African Reggae," "Naturträne"
-- Nina Hagen, *Nunsexmonkrock* (1982): **"Born in Xixax"** — male drag performance ([video](https://www.youtube.com/watch?v=wOckSjlZTsY))
-- Nina Hagen, "What It Is" — the "they do it with art / Jimi did it with sound" verse
-- Nina Hagen, ["Michail, Michail (Gorbachev Rap)"](https://www.youtube.com/watch?v=7e1suuoTs2Q) (1989) — reportedly based on Andrzej Rosiewicz, ["Wieje wiosna od wschodu"](https://www.youtube.com/watch?v=XM2FSf5IQa8) (Polish, ~1988, performed for Gorbachev/Raisa/Jaruzelski)
-- AntiORP / Netochka Nezvanova / nato.0+55; nettime mailing list; STEIM (Amsterdam); Max/MSP — 1990s–2000s net.art / live-video performance culture
-- *Club 2* (ORF), 9 August 1979 — the on-air anti-censorship scandal
-- Wolf Biermann (stepfather); 1976 departure from East Germany
-- *Cha Cha* (1979 film) — Herman Brood, Nina Hagen, Lene Lovich; incl. a **Ruigoord church wedding** scene (Don's recollection; legal status of the marriage left open)
-- Herman Brood (1946–2001) — Dutch musician & painter; Lene Lovich & Les Chappell (new-wave duo/partners)
-- **Ruigoord** — artists' free-village/church near Amsterdam
-- Drag terms (for Nina to claim or decline): **bio queen / faux queen** (woman performing as a drag queen); **drag king** — vocabulary only; never applied to her without her words
-- The cover chain — [The Tubes, "White Punks on Dope"](https://www.youtube.com/watch?v=rs9wuaVV33I) →
-  [Nina Hagen Band, "TV-Glotzer"](https://www.youtube.com/watch?v=JWzPcDtZZZo) →
-  [Suppositori Spelling at Trannyshack](https://www.youtube.com/watch?v=qqLeueR9RkA) (intro'd by Heklina)
-- **Trannyshack → Mother / Oasis** — Heklina's 2014 rebrand; [SFist interview](https://sfist.com/2014/05/23/exclusive_sfist_talks_with_heklina/) (reclaiming → listening, not censorship)
-- Nina Hagen Band → **Spliff**: Bernhard Potschka, Manfred Praeker, Herwig Mitteregger, Reinhold Heil
-- https://www.ninahagen.de/ · https://en.wikipedia.org/wiki/Nina_Hagen
+
+- [Nina Hagen Band](https://en.wikipedia.org/wiki/Nina_Hagen_Band) (1978): ["TV-Glotzer (White Punks on Dope)"](https://www.youtube.com/watch?v=JWzPcDtZZZo) · ["African Reggae"](https://www.youtube.com/watch?v=pVOXdtfHfaY) ([1980 TV performance](https://www.youtube.com/watch?v=7-FMglTIO30)) · ["Naturträne"](https://www.youtube.com/watch?v=9xi4O4RvlnQ) (Rockpalast, 1979) · [Beth Roars vocal analysis](https://www.youtube.com/watch?v=0baOxEPR7nI)
+- Nina Hagen, [*Nunsexmonkrock*](https://en.wikipedia.org/wiki/Nunsexmonkrock) (1982): **["Born in Xixax"](https://www.youtube.com/watch?v=wOckSjlZTsY)** — male drag performance
+- Nina Hagen, ["What It Is"](https://www.youtube.com/watch?v=nEE9u176WTU) (*[Angstlos / Fearless](https://en.wikipedia.org/wiki/Angstlos)*, 1983) — the *"they do it with art / Jimi did it with sound"* verse · [lyrics](https://www.songlyrics.com/nina-hagen/what-it-is-lyrics/)
+- Nina Hagen, ["Michail, Michail (Gorbachev Rap)"](https://www.youtube.com/watch?v=7e1suuoTs2Q) (1989) — words by [Wolf Biermann](https://en.wikipedia.org/wiki/Wolf_Biermann) for [Eva-Maria Hagen](http://www.eva-maria-hagen.de/Saengerin/cd-07_Michail.shtml); reportedly echoes Andrzej Rosiewicz, ["Wieje wiosna od wschodu"](https://www.youtube.com/watch?v=XM2FSf5IQa8) (Polish, ~1988, performed for Gorbachev/Raisa/Jaruzelski) · [Antiwar Songs background](https://www.antiwarsongs.org/canzone.php?id=60194&lang=en)
+- [AntiORP](https://en.wikipedia.org/wiki/Netochka_Nezvanova_(author)) / [Netochka Nezvanova](../netochka-nezvanova/README.md) / [NATO.0+55+3d](https://en.wikipedia.org/wiki/Nato.0%2B55%2B3d); [nettime](https://www.nettime.org/) mailing list; [STEIM](https://steim.org/) (Amsterdam); [Max/MSP](https://en.wikipedia.org/wiki/Max_(software)) — 1990s–2000s net.art / live-video performance culture · scene portrait: [`../don-hopkins/realtime-net-jamming-scene.md`](../don-hopkins/realtime-net-jamming-scene.md)
+- [*Club 2*](https://en.wikipedia.org/wiki/Nina_Hagen#Club_2_scandal) (ORF), 9 August 1979 — the on-air anti-censorship scandal · [full broadcast](https://www.youtube.com/watch?v=CXp99IrKIF4) · [key clip, French subs](https://www.youtube.com/watch?v=xtQh6Sb9urs)
+- [Wolf Biermann](https://en.wikipedia.org/wiki/Wolf_Biermann) (stepfather); [1976 departure from East Germany](https://en.wikipedia.org/wiki/Nina_Hagen#Early_life_and_career)
+- [*Cha Cha*](https://en.wikipedia.org/wiki/Cha_Cha_(film)) (1979 film) — [Dutch Wikipedia](https://nl.wikipedia.org/wiki/Cha_Cha_(film)) · [Eye Film Player](https://player.eyefilm.nl/en/films/cha-cha) · [soundtrack](https://en.wikipedia.org/wiki/Cha_Cha_(soundtrack)); [Herman Brood](https://en.wikipedia.org/wiki/Herman_Brood), Nina Hagen, [Lene Lovich](https://en.wikipedia.org/wiki/Lene_Lovich) & Les Chappell; Ruigoord church wedding scene at Sint-Gertrudiskerk — **film only, not legal** ([Koos van Dijk, *De Telegraaf* / Crazy Life](https://krant.telegraaf.nl/crazylife/teksten/crazylife.herman.nina.getrouwd.film.verliefd.html)) · ["Crocodile" on YouTube](https://www.youtube.com/watch?v=xFIjlxl-DLI)
+- [Herman Brood](https://en.wikipedia.org/wiki/Herman_Brood) (1946–2001) — Dutch musician & painter; [Lene Lovich](https://en.wikipedia.org/wiki/Lene_Lovich) & Les Chappell (new-wave duo/partners)
+- **[Ruigoord](https://ruigoord.nl/)** — artists' free-village/church near Amsterdam · [Wikipedia](https://en.wikipedia.org/wiki/Ruigoord)
+- Drag terms (for Nina to claim or decline): [bio queen / faux queen](https://en.wikipedia.org/wiki/Faux_queen) (woman performing as a drag queen); [drag king](https://en.wikipedia.org/wiki/Drag_king) — vocabulary only; never applied to her without her words
+- The cover chain — [The Tubes, "White Punks on Dope"](https://www.youtube.com/watch?v=rs9wuaVV33I) → [Nina Hagen Band, "TV-Glotzer"](https://www.youtube.com/watch?v=JWzPcDtZZZo) → [Suppositori Spelling at Trannyshack](https://www.youtube.com/watch?v=qqLeueR9RkA) (intro'd by [Heklina](https://en.wikipedia.org/wiki/Heklina))
+- **Trannyshack → [Mother](https://en.wikipedia.org/wiki/Heklina#Mother_(formerly_Trannyshack)) / [Oasis](https://en.wikipedia.org/wiki/Oasis_(San_Francisco))** — Heklina's 2014 rebrand; [SFist interview, May 2014](https://sfist.com/2014/05/23/exclusive_sfist_talks_with_heklina/) · [Mother launch, SFist Dec 2014](https://sfist.com/2014/12/16/heklina_talks_about_mother_the_new/) (reclaiming → listening, not censorship) · [Oasis venue](https://sfoasis.com/)
+- Nina Hagen Band → [Spliff](https://en.wikipedia.org/wiki/Spliff_(band)): Bernhard Potschka, Manfred Praeker, Herwig Mitteregger, [Reinhold Heil](https://en.wikipedia.org/wiki/Reinhold_Heil)
+- [ninahagen.de](https://www.ninahagen.de/) · [Nina Hagen (Wikipedia)](https://en.wikipedia.org/wiki/Nina_Hagen)

@@ -78,9 +78,6 @@ projects:
       territory; Foursquare but pee instead of bong water (on-air comedy beat — ask permission).
     canonical: ../../../process/crazy-idea-jam.yml#bongo_bingo
 
-contact:
-  warm_contact: false
-  channel: "Green-room FB decode — outreach not sent"
 # private archive — not in this repo
 show_angles:
   - "Mark Your Territory × Bongo Bingo — live mashup design (with Andrew's OK)"

@@ -6,7 +6,7 @@
 messaging / late binding; constructionist microworlds; Turing Award 2003. Long correspondent of Don's
 (Qwaq 2008 → Fabrik/Ingalls → Yoot 1993 transcript → MOOLLM). London with [Bonnie MacBird](../bonnie-macbird/).
 
-**Invitation:** warm relationship · consent not yet asked · [invite draft](invitation.md)  
+**Invitation:** [stub](invitation.md) — production draft in RepoShowPrivate
 **Shows:** [microworld seed](../../repo-shows/alan-kay-microworld.yml) · [Vanessa memorial arc](../../repo-shows/remembering-vanessa-freudenberg.yml) (warmly interested)
 
 ## Start here
@@ -15,7 +15,7 @@ messaging / late binding; constructionist microworlds; Turing Award 2003. Long c
 |---|---|
 | **Glance / card** | [GLANCE.md](GLANCE.md) · [CARD.yml](CARD.yml) |
 | **Hooks** | [ideas.md](ideas.md) (Quora + mail) |
-| **Mail digest** | [correspondence.yml](correspondence.yml) |
+| **Production mail** | [RepoShowPrivate `alan-kay/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/alan-kay) |
 | **Kay on people** | [people-index.yml](people-index.yml) → `../<slug>/from-alan-kay.yml` |
 | **MOOLLM × trust** | [moollm-trust-and-teaching-guess.md](moollm-trust-and-teaching-guess.md) |
 | **Quora recaps** | [media/quora-recaps/](media/quora-recaps/) · [Why London](media/quora-recaps/why-alan-kay-moved-to-london.md) |
@@ -28,4 +28,3 @@ messaging / late binding; constructionist microworlds; Turing Award 2003. Long c
 
 Sources and dates in [CHARACTER.yml](CHARACTER.yml). Subject may request correction or removal anytime.
 
-*Quiet mode while invitations go out — please don't share links publicly just yet.*

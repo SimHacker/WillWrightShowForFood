@@ -20,7 +20,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  interview_planned: true
   document: invitation.md
   show_seed: ../../repo-shows/paul-haeberli/
 
@@ -73,10 +72,6 @@ why_the_show_cares:
   bits_and_atoms: "Lamina ↔ Jared Tarbell's Levitated — planar material, free-form computation"
   resurrection: "'It would be F.U.N.' — reviving old code on air is a core show format"
   skinnyhacking: "Paul photographed the Skinnyhackers poster; SIGGRAPH '92 page 252 Easter egg — HN 34129571 citation"
-
-contact:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  channel: "Warm — direct email from Don"
 
 correspondence: correspondence.yml
 # private archive — not in this repo

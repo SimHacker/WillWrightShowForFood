@@ -1,48 +1,13 @@
----
-status: dream_guest
-character_id: nina-hagen
-public: true
-consent: not_yet_asked
-show_seed: repo-shows/nina-hagen/
----
+# Invitation — Nina Hagen
 
-# Repo Show invitation — Nina Hagen *(dream guest)*
+Production invitation draft and outreach notes live in **RepoShowPrivate**
+[`characters/nina-hagen/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/nina-hagen)
+(studio access).
 
-*Nina Hagen may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
-[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
-Dear Nina,
+Public portrayal only here:
 
-You've been one of my **avant-garde north stars** for decades — operatic training turned into punk
-theatre, fearless broadcast provocation, the **Club 2** moment that people still argue about forty
-years later. The show I run now is built on the same instinct: **get the true thing on the air**, on
-purpose, and let the audience participate instead of passively consuming slop.
+- [README.md](README.md)
+- [ideas.md](ideas.md)
+- [Portrayal standards](../../schemas/portrayal-standards.md)
 
-It's called a **Repo Show** — a live conversation whose stage is a **public GitHub repository**.
-We talk; tools (AI, procedural, hand-played instruments) turn ideas into runnable artifacts while
-we go. **Show, don't tell.**
-
-**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
-
-I'd be honored if you'd join one. No homework. You'd be the topic. Threads I'd love to explore — your
-pick, skip whatever doesn't spark:
-
-- **Taboo TV & anti-censorship** — Club 2, bodily autonomy on broadcast, repossessing the medium.
-- **Voice as instrument** — your operatic-punk range alongside the show's vocal-tract toys and voice-puppet
-  taxonomy (sibling to **Klaus Nomi** in the Berlin orbit).
-- **Art under a censoring state** — GDR, **Wolf Biermann**, leaving in 1976; keeping your voice when
-  the state tries to repossess speech.
-- **Amsterdam / Berlin scene** — Herman Brood, *Cha Cha*, Lene Lovich; I have a lead on a **Brood
-  portrait of you** I'd love to see on air if it exists.
-- **Performance persona** — transformation, voice, and stage character (including drag, in whatever terms she chooses).
-
-More in [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/ideas.md). No pressure — accepted, delayed, declined,
-or no reply all honored gracefully.
-
-— Don Hopkins *(User Interface Flower Child)*
-
-| | |
-|---|---|
-| **Show seed** | [`repo-shows/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen/README.md) |
-| **Your guest page** | [`characters/nina-hagen/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nina-hagen) |
-
-*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
+*Invitation offered with no presumption.*

@@ -194,3 +194,8 @@ shows:
     host: don-hopkins
     status: seed
     note: "Kids publish a newspaper INTO the game ABOUT the game — the SimCityNet scrolling chat window grown into a newsroom; Soul City federation as the modern rail"
+  ca-machinima-cabaret-drag-race:
+    file: ca-machinima-cabaret-drag-race.yml
+    host: don-hopkins
+    status: seed
+    note: "Cellular Automata Machinima CAbaret Drag Race — tile sets as costumes, CA rules as acts; live simulation-bending cabaret competition; merge or sashay"

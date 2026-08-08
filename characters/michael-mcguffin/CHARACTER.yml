@@ -23,9 +23,6 @@ invitation:
     - repo-shows/rebounce/
     - repo-shows/brad-myers/
 
-contact:
-  email: private  # on file with Don; open replies welcome via GitHub issue or PR
-
 bio:
   summary: |
     **Michael McGuffin** — HCI researcher (information visualization, interaction techniques).

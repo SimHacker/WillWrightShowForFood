@@ -18,7 +18,6 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  channel: twitter_or_email
   note: |
     Warm lead Jul 2026 — co-announced microsoft/comic-chat with Robert Standefer.
     Trio with Robert + DJ Kurlander; LIVE Comic Chat on air.

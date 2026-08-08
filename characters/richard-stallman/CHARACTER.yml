@@ -13,10 +13,8 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: send_now
+  status: draft
   consent: not_yet_asked
-  warm_contact: true
-  channel: email
   note: "31 Jul — warm invite refreshed: rider accommodation, ethical virtual parrot (Copyleft / retrognuification), any medium he prefers. Draft: DonHopkins attachments/richard-stallman/2026-07-31-email-invitation.md"
 
 # Dual identity — descriptive, bidirectional, NOT inheritance

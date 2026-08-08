@@ -21,10 +21,6 @@ connections:
 
 invitation_status: none
 
-contact:
-  web: https://charchitgoyal.com/plugins/wedge
-  reddit: u/themotionguy
-
 notes: |
   Building Wedge — selection-aware radial menu for Adobe After Effects (beta Jul 2026).
   r/AfterEffects thread routed to Don via u/eye-flying ("pie menu central").

@@ -15,7 +15,6 @@ relationship:
   since: 2023-01   # Liam contacted Don about the Alan Kay / NeWS Medium post; posted it to Reddit
   invitation_status: not_offered   # press relationship, not a guest invite (yet)
   consent: correspondent_warm
-  channel: email
 
 correspondence_threads:  # public-safe summaries; bodies stay offline
   2023_01_contact: "Liam reached out after Don's Alan Kay 'browsers as document viewers' NeWS piece; interview interest."

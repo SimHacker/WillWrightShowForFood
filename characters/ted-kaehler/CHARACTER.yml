@@ -18,7 +18,7 @@ representation:
   note: "Stub from Yoot People.md + correspondence.yml halos thread — deepen before invite."
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   note: "LRG / OOZE — invite with Goldberg. Drafted 2026-07-29."

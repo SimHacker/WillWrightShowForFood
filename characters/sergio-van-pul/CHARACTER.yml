@@ -15,10 +15,6 @@ representation:
   consent_level: 2            # past correspondent; parted warmly in 2010
   authored_by: don-hopkins
 
-contact:
-  channel: LinkedIn
-  warm_contact: true
-
 invitation:
   status: draft
   consent: not_yet_asked

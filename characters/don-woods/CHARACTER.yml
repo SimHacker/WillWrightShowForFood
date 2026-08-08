@@ -17,7 +17,6 @@ representation:
 invitation:
   status: sent
   sent: 2026-07-31
-  channel: "email (don@icynic.com) — 'Re: THROW AXE AT DWARF' thread; linked the MOOLLM stamp + invitation.md"
   consent: awaiting_reply
   document: invitation.md
   show_seed: repo-shows/don-woods-adventure.yml

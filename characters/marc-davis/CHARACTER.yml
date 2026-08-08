@@ -16,7 +16,7 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   group_show: repo-shows/npuc-reunion/

@@ -18,7 +18,6 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  channel: hacker_news
   hn_user: outintospace
   note: |
     Warm lead Jul 2026 — announced microsoft/comic-chat with Scott Hanselman; active on HN

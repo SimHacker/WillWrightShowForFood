@@ -22,7 +22,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  interview_planned: true
   document: invitation.md
   show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
   reunion: process/old-band-back-together.yml#news_gang
@@ -61,11 +60,6 @@ receipts:
     - https://donhopkins.com/home/archive/NeWS/owm.ps.txt
     - https://donhopkins.com/home/archive/NeWS/i39l.txt
     - https://donhopkins.com/home/archive/NeWS/win/tab.ps
-
-contact:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  channel: "Old friend — direct contact via Don"
-  amsterdam_visit: "Visited Don in Amsterdam by motorcycle"
 
 see_also:
   - { path: README.md, why: "Public-facing overview — point Josh here" }

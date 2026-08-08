@@ -57,10 +57,6 @@ sites:
   patreon: https://www.patreon.com/DigitalAntiquarian
   social: [Bluesky DigiAntiquarian, Mastodon DigiAntiquarian]
 
-contact:
-  # email in DonHopkins green-room/contacts/guest-emails.yml
-  source: https://www.filfre.net/about-me/
-
 synergy:
   map: synergy/willwrightshowforfood.yml
   readme: synergy/willwrightshowforfood.md

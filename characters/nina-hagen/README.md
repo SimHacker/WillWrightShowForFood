@@ -29,10 +29,10 @@ puppet** in the show's medium framing ("The emblem: Bowie's video puppet" — se
 
 She is one of **Don's long-time avant-garde north stars.**
 
-## How to reach her
+## Invitation status
 
-No known direct line — a dream invitation, reached through the avant-garde / Berlin-scene orbit, offered
-with **no presumption**.
+Dream guest — offered with no presumption. Production outreach and contact notes: studio repo
+`characters/nina-hagen/`.
 
 ## Ideas to explore
 

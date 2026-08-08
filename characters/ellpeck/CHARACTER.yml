@@ -46,20 +46,6 @@ bio:
     and *pandoc for life sim characters*. Jul 2026: Don shared this directory + premiere show for
     review; Ell **excited to have a closer look**. See correspondence.yml.
 
-contact:
-  warm_contact: true
-  channel: "Discord (Pez de Spencer) — active Jul 2026; Bluesky for async"
-  portrayal_review: "2026-07-14 — directory URL sent; edits/deletions welcome; GitHub access pending"
-  recover_thread: correspondence.yml
-  channels:
-    site: https://tinylifegame.com/
-    bluesky_dev: https://bsky.app/profile/ellpeck.bsky.social
-    bluesky_game: https://bsky.app/profile/tinylifegame.bsky.social
-    discord: "Linked from tinylifegame.com"
-    wiki: https://wiki.tinylifegame.com/
-    docs: https://docs.tinylifegame.com/
-    devlogs: https://tinylifegame.com/ (Posts — 0.50.0 gardening Jun 2026)
-
 soul_city_bridge:
   path: "Sims ⇔ Soul City ⇔ Tiny Life"
   not: Soul City

@@ -1,0 +1,75 @@
+# Cellular Automata Machinima CAbaret Drag Race
+# The pun stack is the format: CA Machinima (performing CA rules to tell stories)
+# × CAbaret (the CA is right there in the word) × Drag Race (merge or sashay).
+
+meta:
+  id: ca-machinima-cabaret-drag-race
+  status: seed
+  host: don-hopkins
+  coined: 2026-08-08   # during the Tom Tjon A Loi invitation work
+
+premise: |
+  A live simulation-bending cabaret competition. Each performer plays a
+  simulation as a visual instrument, improvised to music, drag-race style.
+  The costume logic is literal:
+    - TILE SETS are the COSTUMES — each tile set is a costume change.
+    - CA RULES + PARAMETERS are the ACTS — each automaton struts the same
+      world through a different number in a different outfit.
+  Outrageous, flamboyant, Boogaloo Stu style cabaret — hand-made and
+  completely sincere. The city goes on in drag; the audience votes
+  merge or sashay.
+
+format:
+  instrument: |
+    Micropolis Space Inventory is the house instrument (micropolisweb.com) —
+    city simulator + cellular automata taking turns on the same tile map.
+    Bring-your-own-instrument welcome: any live simulation you can perform.
+  act_structure:
+    - "Walk-on: performer introduces their rig and costume rack (tile sets, rules, parameters)"
+    - "The act: improvised live performance to music — no sync, no script, steering accidents"
+    - "Costume changes: tile set switches mid-act; rule switches are act transitions"
+    - "The reveal: performer explains what the simulation THOUGHT was happening (the Rosetta Stone beat)"
+  music: |
+    Prerecorded tracks the performer responds to in real time — jazz
+    improvisation / lip-sync discipline. House precedents: Jerry Martin's
+    "Chill Resolve" (https://www.youtube.com/watch?v=319i7slXcbI), Blamstrain
+    (https://www.youtube.com/watch?v=BBVyCpmVQew).
+  judging:
+    axes: [taste, flamboyance, mechanism_honesty, costume_wit, crowd_response]
+    verdicts: "MERGE or SASHAY — audience + judge panel; TicketPR ballots"
+    kinship: "[micropolis-ai-drag-race](../../process/micropolis-ai-drag-race.yml) — same verdict culture, different runway"
+
+lineage:
+  kidpix_moment: |
+    The founding observation. Don first realized SimCity could serve ulterior
+    purposes when he watched a friend's kid — already good with the mouse —
+    use it as a KidPix-like drawing tool: switching between building tools
+    and scribbling colorful patterns on the map, with zero regard for the
+    mechanics and conventions of city planning. The kid wasn't playing the
+    simulation wrong; the kid had discovered the tile map is a canvas and
+    the building tools are brushes. Everything downstream — CA scribbling on
+    the same map, rules as pigment, tile sets as costumes — is that insight
+    taken seriously. (KidPix: Craig Hickman's paint program built by watching
+    what kids actually do with tools instead of what the manual says.)
+  ca_machinima: "characters/tom-tjon-a-loi/ideas.md — performing CA rules to tell stories; gentle mutation of Toffoli & Margolus's Cellular Automata Machine"
+  costumes: "Tile sets as costumes / rules as acts — the drag reading of simulation bending"
+  drag_race: "[micropolis-ai-drag-race.yml](../../process/micropolis-ai-drag-race.yml) + Stiletto Sprint — rig as drag persona, camp + honesty"
+  boogaloo_stu: "The energy reference — outrageous flamboyant cabaret, hand-made, completely sincere"
+  cam6: "https://www.youtube.com/watch?v=LyLMHxRNuck — the CA storytelling ancestor; painting with rules as pigment"
+
+candidate_players:   # players, not contestants-as-users — see FORMAT.md#participation-policy
+  - slug: don-hopkins
+    why: "House performer — Space Inventory sets (Jerry Martin, Blamstrain performances)"
+  - slug: tom-tjon-a-loi
+    why: "Co-designer candidate for the whole format; Micropolis graphics redesigner — what would he costume the tile map in?"
+  - slug: keez-duyves
+    why: "PIPS:lab participation art — crowd as input device; Luma2solator as a guest instrument"
+  - slug: scott-draves
+    why: "Electric Sheep — the OTHER evolved-CA-visuals-to-music lineage; natural rival house"
+
+see_also:
+  - { path: ../../characters/tom-tjon-a-loi/ideas.md, why: "CA Machinima coinage + costume reading + nested simulations" }
+  - { path: ../../process/micropolis-ai-drag-race.yml, why: "Drag race verdict culture — merge or sashay" }
+  - { path: ../../process/DRAG-RACE.md, why: "Human-readable drag race format" }
+  - { path: ../../characters/keez-duyves/ideas.md, why: "Participation instruments" }
+  - { path: ../../characters/scott-draves/, why: "Electric Sheep lineage" }

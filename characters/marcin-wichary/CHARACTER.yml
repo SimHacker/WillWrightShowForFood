@@ -25,7 +25,6 @@ representation:
 invitation:
   status: draft
   consent: not_yet_asked
-  interview_planned: true
   document: invitation.md
 
 correspondence:
@@ -66,10 +65,6 @@ why_the_show_cares: |
   PacMania and the 2010 doodle), the history of input devices (keyboards; Don: pie menus),
   and writing about technology with love and receipts. The 2020 correspondence is a
   ready-made show outline — every thread in it grew into a room somewhere in these repos.
-
-contact:
-  channel: "LinkedIn (warm, Mar 2020); Medium; aresluna.org"
-  site: https://aresluna.org/
 
 sources:
   linkedin_thread: sources/2020-03-linkedin-lem-thread.yml

@@ -23,26 +23,30 @@ generative systems, performed live**. The tape-bow violin is a "video puppet" fo
 brilliant hack that turns playback into an instrument; the "Voice of Authority" is a **voice puppet**
 decades before the show's own puppet taxonomy
 ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
-`#puppet_kinds`). She belongs in the same conversation as **Brian Eno** (generative systems on stage)
+`#puppet_kinds`). **[Pink Trombone](https://dood.al/pinktrombone)** — drag-the-tongue vocal tract in
+the browser — is the obvious live jam partner for her voice work. She belongs in the same conversation as **Brian Eno** (generative systems on stage)
 and the whole avant-garde performer thread — Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, Nina Hagen —
 that runs through the show's DNA.
 
 She is **Don's long-time avant-garde north star.**
 
-## How to reach her
+## Documented connections *(public record)*
 
-Don **briefly met Laurie Anderson during his years at [Interval Research](../don-hopkins/history/interval-research.yml)**
-(Paul Allen & David Liddle's lab, 1992–2000). And her tie to Interval is now **confirmed on the public
-record**, not just recollection: Anderson developed the **Talking Stick** — a ~6-foot MIDI baton that
-granularizes and replays audio in real time — **with Bob Bielecki and Interval Research (c. 1999)**,
-debuting it in her *Songs and Stories from Moby Dick* tour. So unlike most dream guests, there may be a
-**real warm-intro path here**: Interval alumni Don knows who worked with her (kept in the private
-roster), independent of the Will Wright / Brian Eno orbit. This is a dream invitation — offered with no
-presumption.
+Anderson developed the **Talking Stick** — a ~6-foot MIDI baton that granularizes and replays audio in
+real time — **with Bob Bielecki and [Interval Research](../don-hopkins/history/interval-research.yml)**
+(c. 1999), debuting it on her *Songs and Stories from Moby Dick* tour. Laurie describes it in
+[Miya Masaoka's *SF Bay Guardian* interview, Oct 1999](https://miyamasaoka.com/writings-by-miya-masaoka/1999/examining-obsession/)
+and in her own [*Moby Dick* program notes, ©1999](https://www.jimdavies.org/laurie-anderson/performances/mobydick/programnotes.html):
+wireless MIDI, Max, granular synthesis, harpoon-shaped. Earlier **[STEIM](https://steim.org/)** work on an
+"invisible instrument" (1992). Don worked at Interval in the same era — a shared institutional thread,
+not a claim about their personal relationship.
+
+*Dream invitation — offered with no presumption. Production outreach: studio repo `characters/laurie-anderson/`.*
 
 ## Ideas to explore
 
 Conversation hooks — invented instruments as performance-hacks, the "Voice of Authority" as voice
-puppet, spoken-word storytelling in a live repo, VR/immersive worlds, and art-vs-censorship — are in
-[`ideas.md`](ideas.md). Each is grounded in Laurie's own public work and offered as a topic to explore
-*with* her, not as a claim about what she thinks.
+puppet, spoken-word storytelling in a live repo, VR/immersive worlds, art-vs-censorship, and
+**STEIM / Max / NATO–Jitter** (hook #8 in [`ideas.md`](ideas.md)) — are in [`ideas.md`](ideas.md).
+Production invitation: studio repo `characters/laurie-anderson/`. Each hook is grounded in Laurie's
+public work and offered as a topic to explore *with* her, not as a claim about what she thinks.

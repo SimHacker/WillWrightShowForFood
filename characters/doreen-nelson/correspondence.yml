@@ -1,24 +1,5 @@
-# Doreen Nelson × Don Hopkins — correspondence summary (public-safe)
-
-meta:
-  with: doreen-nelson
-  curated_by: don-hopkins
-  span: "2006-12-21"
-  consent: not_yet_asked
-
-gist: |
-  Dec 2006 OLPC SimCity cast introduction — Doreen confirms SimCity curriculum guides
-  (with Leslie Stoltz) remain relevant; offers DBL expertise. Don asks about courseware
-  rights and educational enhancements for open Micropolis.
-
-in_repo:
-  excerpt: sources/2006-12-21-olpc-curriculum-guide/olpc-response.md
-  olpc_article: ../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/
-  invitation: invitation.md
-  show_seed: ../../repo-shows/doreen-nelson/
-
-connects_in_repo:
-  - { path: sources/2006-12-21-olpc-curriculum-guide/, why: "Primary-source excerpt" }
-  - { path: ../will-wright/sources/2006-12-simcity-olpc-introducing-the-players/, why: "Cast article" }
-  - { path: ../../repo-shows/doreen-nelson/, why: "Show seed" }
-  - { path: CHARACTER.yml, why: "Invitation portrayal" }
+# Correspondence index — MOVED to RepoShowPrivate
+moved: true
+private: https://github.com/SimHacker/RepoShowPrivate/blob/main/characters/doreen-nelson/correspondence.yml
+public_portrayal: README.md
+note: "Production correspondence lives in the private repo; this public stub is the pointer."

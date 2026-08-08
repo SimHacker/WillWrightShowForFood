@@ -20,9 +20,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/placeholder/
-  priority: send_ready
   pair_with: rob-tow
-  send_batch: interval-reunion-2026
   note: "Interval circle; Placeholder VR w/ Rob Tow + Rachel Strickland; Purple Moon; Don saw games-for-girls research before Maxis."
 
 bio:

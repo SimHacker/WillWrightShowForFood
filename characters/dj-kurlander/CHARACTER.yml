@@ -20,7 +20,6 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  channel: email
   note: |
     Creator of Comic Chat. Retired from Microsoft; Seattle. Supportive of OSS release per Robert.
     Trio show with Robert Standefer + Scott Hanselman; LIVE Comic Chat on air.

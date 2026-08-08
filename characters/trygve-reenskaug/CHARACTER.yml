@@ -18,7 +18,7 @@ representation:
   note: "Stub from Yoot People.md — deepen before invite."
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   note: "MVC — invite with Borning. Drafted 2026-07-29."

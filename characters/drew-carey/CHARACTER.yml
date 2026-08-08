@@ -26,8 +26,7 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  warm_intro_via: will-wright
-  warm_intro_when: after_first_guest_weave   # guest-participation-ladder.yml#warm_intro_via_will
+  production: RepoShowPrivate/characters/drew-carey/
   show_seed: repo-shows/drew-carey/
   document: ../../characters/drew-carey/invitation.md
   ai_framing_md: ../../repo-shows/drew-carey/ai-contrast-framing.md

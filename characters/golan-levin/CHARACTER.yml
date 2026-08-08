@@ -20,7 +20,6 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/tom-and-golan-ecg-mouther/
-  warm_contact: true   # DREAM GUEST — Interval alum Don worked closely with
   note: "Brainstorm heartbeat — conversation not code; pair with Tom on ECG/Mouther"
 
 see_also:

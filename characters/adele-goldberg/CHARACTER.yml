@@ -17,7 +17,7 @@ representation:
   note: "Stub from Yoot People.md — deepen before invite."
 
 invitation:
-  status: send_ready
+  status: draft
   consent: not_yet_asked
   document: invitation.md
   note: "LRG / Smalltalk-80 books — invite with Kaehler. Drafted 2026-07-29."

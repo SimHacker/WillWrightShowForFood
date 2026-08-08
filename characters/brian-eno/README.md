@@ -28,11 +28,7 @@ Twenty years later, with AI image and music generation finally catching up to wh
 and Wright were each circling, a reunion conversation almost writes itself: **rules, time,
 surrender, and what AI changes** — across music, visual art, and simulation.
 
-## How to reach him
-
-Don has no current direct line. The contact path runs through **[Will Wright](../will-wright/README.md)**
-(his Long Now co-speaker) and **[Scott Draves](../scott-draves/README.md)** (who hosted him in 2006). This
-is a dream invitation — offered with no presumption.
+*Dream invitation — offered with no presumption. Production outreach: studio repo `characters/brian-eno/`.*
 
 ## Ideas to explore
 
