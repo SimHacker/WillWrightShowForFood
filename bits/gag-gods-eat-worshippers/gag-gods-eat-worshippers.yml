@@ -1,0 +1,21 @@
+# Gag — Gods eat worshippers (PKD Rautavaara × yaml jazz)
+
+gag:
+  id: gods-eat-worshippers
+  title: "Gods Eat Worshippers"
+  source: characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+
+beat:
+  setup: "Approximations regenerate Rautavaara's brain and edit her dying hallucination"
+  experiment: "Overwrite Christ with a savior that devours Travis — gloves and boots remain"
+  symmetry: "Humans eat God at Eucharist; God eating humans is just reversed — alien narrator baffled by outrage"
+  moollm_echo: "We edit yaml jazz — simulated minds, dreams, sacraments — with git audit and portrayal consent"
+
+menagerie:
+  palm: "You edited my dream again. Was that ethical or just symmetrical?"
+  don: "LambdaMOO gods with YAML. The board of inquiry is GitHub Issues."
+
+see_also:
+  - ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.yml
+  - ../../repo-shows/david-rosenthal/moollm-demo.md
+  - ../gag-let-the-machine-win/gag-let-the-machine-win.yml

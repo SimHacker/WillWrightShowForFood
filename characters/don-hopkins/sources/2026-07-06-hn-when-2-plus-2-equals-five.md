@@ -42,5 +42,5 @@ Same family as Cambridge **Hex that cheats when you try to win** — [`../../dav
 - [`../../david-rosenthal/literary/authority-without-truth.yml`](../../david-rosenthal/literary/authority-without-truth.yml)
 - [`../../david-rosenthal/correspondence.yml`](../../david-rosenthal/correspondence.yml) — `lem_bioshock_hn_2026`
 - [`../../mark-weiser/pkd-lem-ai-sf.md`](../../mark-weiser/pkd-lem-ai-sf.md)
-- [`../../../repo-shows/ideas/gags/let-the-machine-win.yml`](../../../repo-shows/ideas/gags/let-the-machine-win.yml)
+- [`../../../bits/gag-let-the-machine-win/gag-let-the-machine-win.yml`](../../../bits/gag-let-the-machine-win/gag-let-the-machine-win.yml)
 - [`../../../repo-shows/david-rosenthal/`](../../../repo-shows/david-rosenthal/)

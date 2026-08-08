@@ -339,7 +339,7 @@ ideas:
       guitar_pie: "Andreas Fender UIST 2025 — fretboard pies + Voystick on the bike"
       domain_specific_roar: "one-minute-intense.yml — continuous pitch+vowel+timbre as command bus"
       aquery: "jQuery-for-accessibility overlay — prerequisite in arbitrary apps"
-    not_stickers: "Merch warnings live in repo-shows/ideas/swag/ — this entry is the *idea*"
+    not_stickers: "Merch warnings live in bits/ (swag-*) — this entry is the *idea*"
     posture: "Flexible working implementation to discover what works — not academic, not startup"
     lecture: "https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0600d9d-282e-4b83-a6f4-a9f2003ad407"
     moollm: https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml
@@ -483,7 +483,7 @@ ideas:
       by proliferation — put the 1968 desk back in everyone's hands.
     preservation_framing: "Open models + maker kits + museum-shop SWAG — education and hands-on history"
     ties:
-      - ../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division
+      - ../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
       - ../characters/douglas-engelbart/memorial.md
       - ../repo-shows/remembering-douglas-engelbart.yml
 
@@ -533,7 +533,7 @@ ideas:
       cow JPEG is duplicable. Berkeley coda: [Cows In Berkeley? Moooo](https://www.youtube.com/watch?v=10JSPdTDFsI)
       — Mediterraneum Cafe, shirtless horse up Telegraph, deadpan "that's a cow." Don: "It's a cow."
       *It wasn't very fun before.*
-    ties: [../repo-shows/ideas/gags/curiosity-cow-cube.yml, ../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml]
+    ties: [../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml, ../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml]
 
   how_to_deconstruct_the_cube:
     emoji: "📖🚀🐄"
@@ -542,7 +542,7 @@ ideas:
       (1993); **Captain Kira Ashford** (Belter pirate, Expanse — MOOLLM adventure-4) wrote the homage
       *How to Incarnate Almost Anything*. Sequel: *How to Deconstruct Almost Anything Inside the Cube*.
       Bogost invite — procedural rhetoric vs engineer deconstruction; Cow Clicker meant it; Molyneux didn't.
-    ties: [../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, ../repo-shows/ideas/gags/curiosity-cow-cube.yml]
+    ties: [../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml, ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml]
 
   turing_robot_olympics:
     emoji: "🤖🏅"
@@ -552,7 +552,7 @@ ideas:
       Don posted Cardiff Walker years later; ran vision APIs: Google **POSSIBLE JOY DETECTED!!!**,
       Microsoft **POSING**, IBM **ROBOT ANDROID GAS PUMP DETECTED** on the pizza-arm.
       "Delivering a pizza or a SparcStation." Training data → MOOLA. Slats scrapes Mowforth copyright.
-    ties: [../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml, ../repo-shows/ideas/gags/turing-robot-olympics.yml, moola.yml]
+    ties: [../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml, ../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml, moola.yml]
 
   pantomime_gallery:
     emoji: "🪲🦋🄯"
@@ -560,7 +560,7 @@ ideas:
       **Pantomime gallery** — Bug Farm creepy squisher (hands, spiders, green splats), *Too many
       butterflies!* Oculus SDK demo, Unity3D with **David Levitt** + Nelson. **Copyleft (L)** 1984
       envelope to RMS — amoeba named Tom, all rights reversed. Squish compulsion ↔ cube distressed moos.
-    ties: [../characters/don-hopkins/media/pantomime/INDEX.yml, ../repo-shows/ideas/gags/pantomime-gallery.yml, moola.yml]
+    ties: [../characters/don-hopkins/media/pantomime/INDEX.yml, ../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml, moola.yml]
 
   rolf_junk_auction:
     emoji: "🗄️🧑‍🚀"
@@ -568,7 +568,7 @@ ideas:
       **Rolf Pixley junk drawer** — Amsterdam workshop hoard before departure. 23 deduped photos:
       cosmonaut keychains, Thacher 1881, jenny haniver, alligator on fridge. Don: *Great face puppet!
       MIND=BLOWN.* Virtual junk auction — JUNK-{slug} deeds.
-    ties: [../characters/don-hopkins/media/rolf/INDEX.yml, ../repo-shows/ideas/gags/rolf-junk-auction.yml, moola.yml]
+    ties: [../characters/don-hopkins/media/rolf/INDEX.yml, ../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml, moola.yml]
 
   animated_intro_repossession:
     emoji: "📽️♻️"
@@ -586,7 +586,7 @@ ideas:
       Reframes "AI vs people" as "people AND AI in a loop" — authorship neither lost to nor withheld
       from the machine, continuously RE-STEERED by whoever jumps in. "Repossess the government,
       information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
-    ties: [../repo-shows/ideas/themes/the-riff-loop.md, VISION.md]
+    ties: [../bits/theme-the-riff-loop/theme-the-riff-loop.md, VISION.md]
 
   pyramid_swag_and_apex_toolmakers:
     emoji: "👕🔺"
@@ -603,11 +603,11 @@ ideas:
       confirm before publishing.)*
     warning_stickers_not_the_idea: |
       ISO hazard tees + Usenet physics product-label slaps are SWAG (Howard illustrates) — see
-      repo-shows/ideas/swag/voystick-warning-stickers.yml. The *ideas* are Voystick + Urban Safari
+      bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml. The *ideas* are Voystick + Urban Safari
       in crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick.
     will_approval: "Uses Will's art — Will has full right of review, refusal, and improvement (that's the great part). Family-friendly WillWrightCodeForFood storefront."
     monetization_is_private: "Revenue / print-vendor / support mechanics live in the PRIVATE strategy (green room: supporters-and-anti-sharecropping), not here."
-    ties: [../repo-shows/ideas/gags/lightpenisland-net.yml, showmaker-network.yml]
+    ties: [../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml, showmaker-network.yml]
 
 graduation:
   note: "Ideas leave the jam by becoming something runnable."

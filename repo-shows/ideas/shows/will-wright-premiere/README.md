@@ -1,6 +1,6 @@
 # Will Wright show — content pack
 
-Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../traditions/`](../../traditions/README.md); forward-tech bridges live in [`../../../process/CRAZY-IDEA-JAM.md`](../../../../process/CRAZY-IDEA-JAM.md).
+Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../../../bits/`](../../../../bits/README.md); forward-tech bridges live in [`../../../process/CRAZY-IDEA-JAM.md`](../../../../process/CRAZY-IDEA-JAM.md).
 
 ## Canonical show docs (don't duplicate — link)
 
@@ -22,8 +22,8 @@ Ideas, gags, and themes **for this show specifically**. Cross-show traditions li
 
 ## Ideas elsewhere that belong here
 
-- Gags: [`../../gags/`](../../gags/README.md) (all current entries tagged `will-wright`)
-- Themes: [`../../themes/`](../../themes/README.md)
-- Traditions: [`../../traditions/`](../../traditions/README.md)
+- Gags: [`../../../../bits/`](../../../../bits/README.md) (all current entries tagged `will-wright`)
+- Themes: [`../../../../bits/`](../../../../bits/README.md)
+- Traditions: [`../../../../bits/`](../../../../bits/README.md)
 
 ↑ [`../../README.md`](../../README.md)

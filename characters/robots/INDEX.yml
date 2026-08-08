@@ -40,12 +40,12 @@ sfc_robot_pair:
 
 turing_robot_olympics:
   spec: ../don-hopkins/media/turing-institute/first-robot-olympics.yml
-  gag: ../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  gag: ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   lineage: "Richard 1st (Groucho) → Slats; Cardiff Walker → vision-API training data"
 
 don_robot_collection:
   spec: ../don-hopkins/media/robot-collection/van-leer-leather-press.yml
-  gag: ../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  gag: ../../bits/gag-van-leer-robot-collection/gag-van-leer-robot-collection.yml
   note: "Street art that accidentally reads as robots — Van Leer press, Modemstraat, Disketteweg"
 
 slats_one_minute_movies:

@@ -35,4 +35,4 @@ NeWS PizzaTool demo sent real email:
 
 - [`../career/work-history.yml`](../career/work-history.yml) — TNT/PizzaTool era
 - [`1991-09-pie-menus-buxton-ddj-draft.md`](1991-09-pie-menus-buxton-ddj-draft.md) — Valdes wanted demo tapes
-- [`../../repo-shows/ideas/gags/news-pizza-tool-fax.yml`](../../../repo-shows/ideas/gags/news-pizza-tool-fax.yml)
+- [`../../../bits/gag-news-pizza-tool-fax/gag-news-pizza-tool-fax.yml`](../../../bits/gag-news-pizza-tool-fax/gag-news-pizza-tool-fax.yml)

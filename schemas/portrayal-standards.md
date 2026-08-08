@@ -186,7 +186,7 @@ LLMs open a new layer: simulated people who can autonomously converse, act, and 
 
 **Soul For Food:** Palm's bridge from [incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) (*the right to write my own soul*) to guest directories in this repo — [Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md).
 
-See also: [human-control-and-authorship](../repo-shows/ideas/themes/human-control-and-authorship.md) · [simulating-people](../repo-shows/ideas/themes/simulating-people.md) · [Player-in-the-Middle](../process/CRAZY-IDEA-JAM.md#player_in_the_middle)
+See also: [human-control-and-authorship](../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md) · [simulating-people](../bits/theme-simulating-people/theme-simulating-people.md) · [Player-in-the-Middle](../process/CRAZY-IDEA-JAM.md#player_in_the_middle)
 
 ## See also
 

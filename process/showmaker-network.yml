@@ -108,8 +108,8 @@ hosted_video_wrapper:
     - ../repo-shows/the-nomi-song/SHOW.yml
     - ../repo-shows/leigh-bowery/SHOW.yml
   see:
-    - ../repo-shows/ideas/themes/the-riff-loop.md   # cover_chain + tribute_before_attribution
-    - ../repo-shows/ideas/traditions/in-memoriam.yml
+    - ../bits/theme-the-riff-loop/theme-the-riff-loop.md   # cover_chain + tribute_before_attribution
+    - ../bits/tradition-in-memoriam/tradition-in-memoriam.yml
     - ../characters/nina-hagen/ideas.md
 
 show_path_as_playlist:
@@ -132,7 +132,7 @@ generic_show_skill:
     (lift), generalize into a class/skill only when a second instance needs it (learn) — and refactor
     the shared parent out of the working children, never speculatively. A live demo to bring to the
     AI-programmer YouTube crowd with glee and proof.
-  see: ../repo-shows/ideas/themes/the-riff-loop.md
+  see: ../bits/theme-the-riff-loop/theme-the-riff-loop.md
 
 your_show:
   steps:

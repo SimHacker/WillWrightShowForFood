@@ -37,8 +37,8 @@ see_also:
     - { path: ../slats/README.md, why: "Servitude waiter — Slats" }
     - { path: ../ultimate-machine/CARD.yml, why: "Gongs Slats; opposite energy" }
   across:
-    - { path: ../../repo-shows/ideas/themes/stupid-fun-club-robots.md, why: "Theme overlay" }
-    - { path: ../../repo-shows/ideas/gags/broken-robot-servitude.md, why: "Dents trot-out gag" }
+    - { path: ../../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md, why: "Theme overlay" }
+    - { path: ../../../bits/gag-broken-robot-servitude/gag-broken-robot-servitude.md, why: "Dents trot-out gag" }
     - { path: ../../repo-shows/will-wright-premiere/audience/fictional-broken-robot/, why: "Running audience gag" }
     - { path: ../../characters/will-wright/sources/stupid-fun-club-one-minute-movies/README.md, why: "SFC source bundle" }
   deep:

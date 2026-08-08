@@ -9,8 +9,8 @@ artifact:
   sidecar_of: bug-farm-19.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/pantomime-gallery.yml
-  - ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  - ../../../../../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml
+  - ../../../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
 
 see_also:
   - INDEX.yml

@@ -1,21 +1,17 @@
 # ideas/ — GLANCE
-# Creative inventory: gags, themes, traditions, show content
+# DISSOLVING ROOM (../REFACTOR.md): buckets moved out; idea seeds move to flat repo-shows/ in Phase 2.
 
-what: "Catalog room for performable Repo Show content — not guest proposals (see ../INDEX.yml), not production rigs (see ../../process/performance-space/)."
+what: "Former catalog room for performable content. Traditions/gags/themes/swag now live in /bits/ (flat, kind-prefixed); educators-track in /process/tracks/. Remaining: five show idea seeds + the will-wright-premiere content pack."
 
-buckets:
-  traditions/: "Reusable formats + homages across shows"
-  gags/: "Specific bits to record or rehearse"
-  themes/: "Substantive threads spanning episodes"
-  shows/: "Per-show content packs (will-wright/ flagship)"
+moved:
+  bits: ../../bits/INDEX.yml
+  tracks: ../../process/tracks/README.md
 
-flagship: shows/will-wright-premiere/
-
-graduation: "idea → segment in SEGMENTS.yml → POC in performance-space → aired clip / harvested episode"
+remaining:
+  seeds: [ca-machinima-cabaret-drag-race.yml, jsonsters-gallery-lecture.yml, kids-city-newspaper.yml, urban-safari-live.yml, urban-ebike-safari.yml]
+  pack: shows/will-wright-premiere/
 
 see_also:
   - INDEX.yml
-  - ../will-wright-premiere/SEGMENTS.yml
-  - ../will-wright-premiere/performance-and-culture.yml
-  - ../../process/crazy-idea-jam.yml
-  - ../../process/performance-space.yml
+  - ../REFACTOR.md
+  - ../../bits/README.md

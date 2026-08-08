@@ -2,21 +2,23 @@
 
 room:
   id: ideas
-  name: "Show ideas, gags, themes & traditions"
+  name: "Show ideas (dissolving room — bits moved to /bits/, tracks to /process/tracks/)"
   type: [creative_inventory]
   parent: ../
 
 registry: INDEX.yml
 
-buckets:
-  - traditions/
-  - gags/
-  - themes/
-  - shows/
+moved_out:
+  bits: ../../bits/          # traditions, gags, themes, swag (kind-prefixed)
+  tracks: ../../process/tracks/
+
+remaining:
+  - shows/                   # will-wright-premiere pack → Phase 2
+  - "*.yml idea seeds → flat repo-shows/ dirs in Phase 2"
 
 methods:
   LIST-ALL: INDEX.yml
-  ADD: "New .yml in bucket + register in bucket INDEX + root INDEX"
+  ADD: "New bits go to ../../bits/; new show ideas get flat repo-shows/ dirs"
 
 relationships:
   show_proposals: ../INDEX.yml

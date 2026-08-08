@@ -154,7 +154,7 @@ performance_modes:
     prompt: "Drive a real 3D Sims 1 character LIVE — VitaMoo renders skeleton/mesh/animation in-browser; human voices + controls it."
     inputs: [vitamoo_webgl_character, live_voice, mic_amplitude_scrub, pose_controls]
     engine: "VitaMoo (Don Hopkins) — vitamoo.space; already shipped + improving"
-    spec: ../repo-shows/ideas/traditions/puppet-taxonomy.yml#kinds.sims_3d_puppet
+    spec: ../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml#kinds.sims_3d_puppet
     note: "3D sibling of face/video puppets — on-brand: our own Sims-1 tooling, real characters on stage."
 
 lineage_index:
@@ -217,7 +217,7 @@ proof_of_concept_roadmap:
       assets: [../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading]
     - id: unnecessary-censorship-sims
       what: "Recorded Sims gameplay — mesh pixelization gag (hand on joint pass, head after hit); SimProv wedding double pre-game."
-      assets: [../repo-shows/ideas/gags/pixelized-joint-wedding.yml, ../catalogs/simprov/README.md]
+      assets: [../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml, ../catalogs/simprov/README.md]
   p1_web_toys:
     - amplitude-scrub-puppet demo page
     - play-along clip submit + queue UI (TicketPR helper)
@@ -243,17 +243,17 @@ episode_ideas:
     note: "Climax = 4-player Pink Trombone Jam: accompany / follow / lead / ridicule / parody your own voice."
   - title: "SimProv Wedding — Double Pre-Game"
     modes: [play_along_narration, machinima_bumper]
-    segment: ../repo-shows/ideas/gags/pixelized-joint-wedding.yml
+    segment: ../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
     note: "Unnecessary Censorship homage + bone-mesh pixelize joint pass; bride & groom heads pixelized at altar."
   - title: "Speed Dating with Cupid"
     modes: [audience_orchestrated_gameplay, play_along_narration]
-    segment: ../repo-shows/ideas/gags/speed-dating-with-cupid.yml
+    segment: ../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
     note: "Audience votes who Cupid hits first; live Sims 1 + long-form YouTube prior art."
 
 ethics:
   rules:
     - "Human puppetry only — no TTS clones of guests or audience."
-    - "AI orchestrates code + stream flow; PEOPLE voice, improvise, and author on air (see ../repo-shows/ideas/themes/human-control-and-authorship.md)."
+    - "AI orchestrates code + stream flow; PEOPLE voice, improvise, and author on air (see ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md)."
     - "Living public figures: discuss and portray; do not impersonate without consent (portrayal-standards.yml)."
     - "Gerri Lawlor (d. 2019): cite and honor; never voice her as a character."
     - "Conan / Drew / Kimmel bits: clearly labeled homage; credit the source tradition."

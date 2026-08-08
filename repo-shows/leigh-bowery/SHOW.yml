@@ -24,11 +24,11 @@ card_todo:
   toc: []
   playlists: []
 
-memorial: ../ideas/traditions/in-memoriam.yml   # leigh_bowery
+memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml   # leigh_bowery
 
 ties:
   - ../../characters/brian-eno/bowie-snl-1979.md   # companion-viewing note already points here
   - ../../process/showmaker-network.yml            # hosted_video_wrapper
-  - ../ideas/traditions/in-memoriam.yml
+  - ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml
 
 note: "Artifacts belong in a character dir once Bowery gets one; this show only DRAWS on them."

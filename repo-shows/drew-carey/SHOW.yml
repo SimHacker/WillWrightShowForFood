@@ -66,8 +66,8 @@ segments:
       Urban Safari) — Repo Show is the next iteration. Conversation, not a lecture.
     framing: ai-contrast-framing.yml
     ties:
-      - repo-shows/ideas/themes/human-control-and-authorship.md
-      - repo-shows/ideas/traditions/make-play-tools-show.yml#television_lineage
+      - bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
+      - bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage
       - repo-shows/will-wright-premiere/performance-and-culture.yml
       - process/crazy-idea-jam.yml#player_in_the_middle
       - process/crazy-idea-jam.yml#creationtv_storymaker

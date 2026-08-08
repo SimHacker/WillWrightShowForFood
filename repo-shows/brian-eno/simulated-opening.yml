@@ -112,10 +112,10 @@ parody:
     - "K Foundation burn · Cards Against Humanity Holiday Hole"
     - "Curiosity cube clicks · Cow Clicker Mooney lineage · Cowpocalypse extensions"
   curiosity_cow_cube:
-    spec: ../ideas/gags/curiosity-cow-cube.yml
+    spec: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
     beat: "Gallery cube — click for MOOLA — distant distressed moos — AATG fills faces — center is Rightward-Facing Cow"
   turing_robot_olympics:
-    spec: ../ideas/gags/turing-robot-olympics.yml
+    spec: ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
     beat: "Peter Mowforth wall — Slats runs vision APIs — JOY · POSING · GAS PUMP — MOOLA payout"
 
 twitch_after:
@@ -135,7 +135,7 @@ see_also:
   - ../../process/auto-art-theft-grand.yml
   - ../../process/art-thief-game.yml
   - ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
-  - ../ideas/gags/turing-robot-olympics.yml
+  - ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   - SHOW.yml
   - ../../characters/brian-eno/invitation.md
   - ../../characters/brian-eno/

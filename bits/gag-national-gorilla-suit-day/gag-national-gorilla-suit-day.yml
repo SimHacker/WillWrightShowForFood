@@ -1,0 +1,21 @@
+# Gag — National Gorilla Suit Day (January 31)
+
+gag:
+  id: national-gorilla-suit-day
+  title: "National Gorilla Suit Day"
+  source: characters/don-hopkins/media/culture-holiday/culture-holiday-national-gorilla-suit-day-don-martin.yml
+
+beat:
+  date: January 31
+  origin: "Don Martin MAD strip, 1963"
+  visual: "Three gorillas in striped suits — floppy feet, mouths open"
+  hacker_calendar: "Programmer tradition in Don Hopkins orbit"
+  disclaimer: "Don Martin — NOT Don Hopkins"
+
+menagerie:
+  don: "January 31. Striped suit. MAD."
+  slats: "Gorilla mode engaged. Normals optional."
+
+see_also:
+  - ../../characters/don-hopkins/media/culture-holiday/INDEX.yml
+  - ../gag-frankinsideout-abby-normal/gag-frankinsideout-abby-normal.yml

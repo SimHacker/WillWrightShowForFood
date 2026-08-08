@@ -71,7 +71,7 @@ orchestrator:
     show_seeds: repo-shows/*/SHOW.yml
     party_decks: repo-shows/*/party-deck.yml
     orchestrators: repo-shows/*/ORCHESTRATOR.yml
-    gags: repo-shows/ideas/gags/*.yml
+    gags: bits/gag-*/*.yml
     catalog_playsets:
       - catalogs/simprov/
       - catalogs/simslice/
@@ -175,7 +175,7 @@ orchestrator:
       - from: segment_active
         to: gag_interstitial
         on: palate_cleanser_or_comedic_beat
-        spawn_from: repo-shows/ideas/gags/
+        spawn_from: bits/ (gag-*)
 
       - from: segment_active
         to: audience_qa
@@ -220,7 +220,7 @@ orchestrator:
       use: Verify before invoke — portrayal anchor
 
     - id: gag-runbook
-      source: repo-shows/ideas/gags/<gag>.yml
+      source: bits/gag-<gag>/gag-<gag>.yml
       menu_host_when_placed: button_board
       use: Stunt timing + assets
 
@@ -239,7 +239,7 @@ orchestrator:
       - menagerie: invokable_by don-philahue — auctioneer, gallery patrons
 
   stunts_and_gags:
-    registry: ../../repo-shows/ideas/gags/INDEX.yml
+    registry: ../../bits/INDEX.yml
     philahue_role: Score gag ads against segment context; spawn interstitial; coalesce with guest inject ads
     examples:
       - speed-dating-with-cupid.yml

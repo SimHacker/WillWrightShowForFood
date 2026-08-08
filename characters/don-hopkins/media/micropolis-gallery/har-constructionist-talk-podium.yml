@@ -9,8 +9,8 @@ artifact:
   sidecar_of: har-constructionist-talk-podium.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/micropolis-gallery.yml
-  - ../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+  - ../../../../bits/gag-micropolis-gallery/gag-micropolis-gallery.yml
+  - ../../../../bits/gag-pacbot-eats-traffic/gag-pacbot-eats-traffic.yml
 
 see_also:
   - micropolis-gallery.yml

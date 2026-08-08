@@ -1,5 +1,5 @@
 
-↑ [Will Wright premiere](README.md) · [Stupid Fun Club robots theme](../ideas/themes/stupid-fun-club-robots.md)
+↑ [Will Wright premiere](README.md) · [Stupid Fun Club robots theme](../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
 
 # Segment — Reincarnate Slats (RoboResurrection)
 
@@ -33,9 +33,9 @@ After resurrection: celebrity judge for [Micropolis AI Drag Race](../../process/
 
 ## Speech feedback loop
 
-Slats' voice-synth stream-of-thought runs as a **feedback loop** — output feeds back as input. Embodied [riff loop](../ideas/themes/the-riff-loop.md): talk **into**, **over**, **after**, and **before** the loop to steer it. Human in the loop, not outside pushing buttons.
+Slats' voice-synth stream-of-thought runs as a **feedback loop** — output feeds back as input. Embodied [riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md): talk **into**, **over**, **after**, and **before** the loop to steer it. Human in the loop, not outside pushing buttons.
 
-**Opening gag:** [Slats robopoetry gong](../ideas/gags/slats-robopoetry-gong.md) — spiral → [Ultimate Machine](../../characters/robots/ultimate-machine/README.md) gong → reset.
+**Opening gag:** [Slats robopoetry gong](../../bits/gag-slats-robopoetry-gong/gag-slats-robopoetry-gong.md) — spiral → [Ultimate Machine](../../characters/robots/ultimate-machine/README.md) gong → reset.
 
 ---
 

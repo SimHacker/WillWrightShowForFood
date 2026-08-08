@@ -10,7 +10,7 @@ artifact:
   sidecar_of: sfc-warning-sticker-moving-machinery.png
 
 swag:
-  pack: ../../../../repo-shows/ideas/swag/sfc-sticker-packs.yml
+  pack: ../../../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
   art_lead: howard-penner
 
 see_also:

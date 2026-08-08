@@ -13,7 +13,7 @@ currency:
     cow_clicker_mooney: "Ian Bogost's Cow Clicker (2010) — click cow every six hours, collect Mooney"
     curiosity_clicker: "Molyneux's Curiosity (2012) — click cube for nothing; Don's fix: cow inside"
     berkeley_cows_in_berkeley: "Charles Scamahorn (2008) — Mediterraneum Cafe, Telegraph Ave — that's a cow"
-    parody: repo-shows/ideas/gags/curiosity-cow-cube.yml
+    parody: bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
 
 philosophy: |
   Simoleons (§) are gallery play-money — patrons misbid, guests surrender piles on stream.
@@ -102,7 +102,7 @@ performances:
 
   curiosity_cow_cube:
     reference: "Curiosity + Cow Clicker parody — click cube for MOOLA; center is Rightward-Facing Cow"
-    spec: ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+    spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
     repo_beat: |
       Scheduled Cowpocalypse — pay MOOLA to extend countdown (Bogost extension parody).
       Cube faces show stolen deeds. Intermittent filtered distant moos cry for help — keep clicking.
@@ -115,7 +115,7 @@ performances:
     repo_beat: |
       Run Google/Microsoft/IBM on 1990 Glasgow photos live. POSSIBLE JOY DETECTED.
       Cardiff Walker poses; pizza arm = gas pump; Richard 1st hammers talking gold.
-    ties: [../repo-shows/ideas/gags/turing-robot-olympics.yml, characters/robots/slats/]
+    ties: [../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml, characters/robots/slats/]
 
   pantomime_gallery:
     reference: "Bug Farm squish + Copyleft (L) envelope — compulsion and all-rights-reversed"
@@ -123,7 +123,7 @@ performances:
     repo_beat: |
       JSONsters wing opens into Pantomime gallery — patrons squish bugs for MOOLA.
       Copyleft sticker read aloud; amoeba named Tom; pimple-under-fingernail clause auction.
-    ties: [../repo-shows/ideas/gags/pantomime-gallery.yml, ../characters/david-levitt/]
+    ties: [../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml, ../characters/david-levitt/]
 
   rolf_junk_auction:
     reference: "Rolf Pixley Amsterdam drawer — 23 deduped lots, MIND=BLOWN face puppet, RAVING BONKERS"
@@ -131,7 +131,7 @@ performances:
     repo_beat: |
       Patron finds junk drawer — virtual auction JUNK-{slug} lots in MOOLA.
       Thacher slide rule, space keychains, alligator fridge; Don face-puppet canonical.
-    ties: [../repo-shows/ideas/gags/rolf-junk-auction.yml, ../characters/don-hopkins/jsonsters/simoleon-auctions.yml]
+    ties: [../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml, ../characters/don-hopkins/jsonsters/simoleon-auctions.yml]
 
   surrender_pile:
     reference: "Eno art-as-trigger; guest gives away opening § converted to MOOLA for chat"

@@ -49,7 +49,7 @@ speech_feedback_loop:
     after:  "React AFTER a pass and feed that reaction back in as the next input."
     before: "Prime the NEXT pass — reprogram/pre-load between rounds to bend where he goes."
   why: "The diff between passes is the drama; steering the loop live is the act."
-  frame: ../ideas/themes/the-riff-loop.yml   # canonical theme: AI+people riffing off AI+people, steerable
+  frame: ../../bits/theme-the-riff-loop/theme-the-riff-loop.yml   # canonical theme: AI+people riffing off AI+people, steerable
   siblings: "Jeff Adkins' SimObliterator recursion + Eno's play-against-the-system generativity — same loop, other media."
 
 robopoetry_ceremony:
@@ -77,7 +77,7 @@ after_robo_resurrection:
 
 ties:
   - ./SHOW.yml
-  - ../ideas/themes/the-riff-loop.md
+  - ../../bits/theme-the-riff-loop/theme-the-riff-loop.md
   - ../PATTER.yml#slats_call_in_menu
   - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml
   - ../../process/apple2-emulator-stack.yml

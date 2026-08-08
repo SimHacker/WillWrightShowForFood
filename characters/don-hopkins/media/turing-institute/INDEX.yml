@@ -30,7 +30,7 @@ robot_olympics:
   tshirt_media: pending — add when photographed
   pete_duckmouse: 2026-04-pete-mowforth-duckmouse.md
   canonical: first-robot-olympics.yml
-  gag: ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  gag: ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   wikipedia: "https://en.wikipedia.org/wiki/First_Robot_Olympics"
   david_buckley: "http://davidbuckley.net/RS/History/Olympics90.htm"
   vision_api_joke: "Google JOY · Microsoft POSING · IBM GAS PUMP — MOOLA training data"
@@ -61,7 +61,7 @@ see_also:
   - ../../../peter-mowforth/  # cofounder/director; Olympics; living book; INDEZ
   - ../../../tim-niblett/     # cofounder; named the Institute; HyperNeWS/PdB — memorial
   - ../../../arthur-van-hoff/sources/2026-07-28-robot-olympics-poster-scan-ask.md
-  - ../../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  - ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   - ../../../../process/moola.yml
   - ../../../hyperlook-news-postscript-simcity.md
   - ../../career/work-history.yml

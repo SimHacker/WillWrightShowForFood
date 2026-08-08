@@ -80,7 +80,7 @@ We sympathize. You learned on radio in a weekend. We learned on TV over years. S
 - [StoryMaker (Stupid Fun Club)](https://www.youtube.com/watch?v=_2yEHs_WLzQ)
 - [Urban Safari — GPS storytelling](https://www.youtube.com/watch?v=Db8KGNoeKHE)
 
-More context: [make-play-tools-show tradition](../ideas/traditions/make-play-tools-show.yml#television_lineage)
+More context: [make-play-tools-show tradition](../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage)
 
 ---
 
@@ -153,7 +153,7 @@ People have made Sims of partners, siblings, friends, and bullies for **26 years
 experiments on them. That ship sailed. AI raises the stakes — so we label, consent, and keep
 humans in the loop.
 
-More: [simulating-people theme](../ideas/themes/simulating-people.md)
+More: [simulating-people theme](../../bits/theme-simulating-people/theme-simulating-people.md)
 
 ---
 

@@ -77,7 +77,7 @@ Those are the facts, and they align point for point with this production:
 ## Why he matters to the show
 
 Tom is the original proof of the
-[educators' track](../../repo-shows/ideas/themes/educators-track.md) model: a
+[educators' track](../../process/tracks/educators-track/educators-track.md) model: a
 student who joined a real open source project as coursework, produced real
 design work, presented at a real hacker conference, and pulled the project
 into new communities. He imagined the social layer before it was buildable.

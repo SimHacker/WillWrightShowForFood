@@ -73,5 +73,5 @@ show_use:
     Don wants to discuss Cow Clicker with Bogost on air — the most wonderful intentional satire;
     Unite story as contrast (accidental hype vs designed criticism), not to dunk on Molyneux
     for sport but to compare procedural rhetoric done on purpose vs by accident.
-  parody_spec: ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  parody_spec: ../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   show_seed: ../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

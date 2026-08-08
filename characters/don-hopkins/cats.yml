@@ -31,7 +31,7 @@ the_cast:
       - "Napoleon and Nelson Licking (4:28)"
       - "Low Contrast Nelson Licks High Contrast Napoleon's Head (0:34)"
       - "Head Licking + Love Bite (0:53)"
-    memorial: ../../repo-shows/ideas/traditions/in-memoriam.yml#napoleon_the_cat
+    memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml#napoleon_the_cat
   nelson:
     status: current
     personality: "EXTREMELY LOUD (HE IS LOUD!!!) — the roar drive's first example contributor"

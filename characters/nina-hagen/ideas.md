@@ -10,7 +10,7 @@ dream guest
 ### 1. Taboo TV & anti-censorship — the *Club 2* nerve
 Her 1979 *Club 2* moment is the twin emblem to Bowie's video puppet: **get the true, taboo thing on the
 air, on purpose, for a reason.** Direct tie to the show's
-[`unnecessary-censorship`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml) tradition
+[`unnecessary-censorship`](../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml) tradition
 (voluntary comedy, never timid euphemism; we don't bowdlerize real names) and the medium's
 get-it-past-the-gate-then-repossess-it thesis (see [`VISION.md`](../../process/VISION.md)).
 
@@ -80,7 +80,7 @@ Joey Arias, Leigh Bowery** — and the Trannyshack cover of her own song (hook #
 at both ends of the drag chain.
 
 ### 9. The cover chain — Tubes → Nina → Trannyshack (the riff loop, in music)
-The show's **[riff loop](../../repo-shows/ideas/themes/the-riff-loop.md)** made audible: *resampling,
+The show's **[riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md)** made audible: *resampling,
 covering, feeding back, adding more, transcending.* One song, three transformations —
 - **The Tubes**, "White Punks on Dope" (1975; the legendary 1977 *Old Grey Whistle Test* set, Fee
   Waybill as Quay Lewd) →
@@ -118,7 +118,7 @@ the two songs are easy to A/B — but frame as "reportedly based on" until firme
 ### 10. "What It Is" & the NATO OPERATORS — art as the feedback loop
 Nina's **"What It Is"** carries a line Don loves to build on: *"Yeah they do it with art and Jimi did it
 with sound"* (naming Picasso, Dalí, Hendrix as brothers who "made the world go round"). Don's riff:
-that's the **[riff loop](../../repo-shows/ideas/themes/the-riff-loop.md)** stated as a creed. It links
+that's the **[riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md)** stated as a creed. It links
 straight to the **live feedback-jamming** avant-garde — **AntiORP / "NATO OPERATORS"** (the *Netochka
 Nezvanova* persona + *nato.0+55*), running real-time video/graphics feedback over local-ethernet stages:
 **nettime**, Amsterdam **STEIM**, **Max/MSP**. *"They did it with video art; we do it with everything now,

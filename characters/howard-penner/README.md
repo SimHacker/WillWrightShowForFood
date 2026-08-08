@@ -6,7 +6,7 @@
 
 **Current work:**
 - Sticker packs from Will's SFC **WARNING moving machinery** gift ([`../will-wright/media/swag/`](../will-wright/media/swag/INDEX.yml))
-- **Voystick / Urban Safari warning pack** — ISO hazard tees + kiss-cut sheets; stick-figure carnage ([`../../repo-shows/ideas/swag/voystick-warning-stickers.yml`](../../repo-shows/ideas/swag/voystick-warning-stickers.yml))
+- **Voystick / Urban Safari warning pack** — ISO hazard tees + kiss-cut sheets; stick-figure carnage ([`../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml`](../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml))
 - **codebase-posters** ([unable12/codebase-posters](https://github.com/unable12/codebase-posters)) — git history as generative wall art
 - **Show overlays** — art direction for timed illustration layers over screen-record / evidence-tour narration (reusable effects; open render pipeline). Production studio: collaborators with access work in RepoShowPrivate.
 - Broader show art, merch, lightpenisland.net collateral
@@ -15,4 +15,4 @@
 
 **Flipbook (graphics department):** Full-bleed illustrated B-roll during narration — [`../../repo-shows/flipbook/`](../../repo-shows/flipbook/README.md). Pop-Up annotates screen recordings; Flipbook plays when voice carries the story. Complementary lanes; may share sticker/CA art vocabulary.
 
-↑ [`../don-hopkins/people/INDEX.yml`](../don-hopkins/people/INDEX.yml) · [`../../repo-shows/ideas/swag/sfc-sticker-packs.yml`](../../repo-shows/ideas/swag/sfc-sticker-packs.yml)
+↑ [`../don-hopkins/people/INDEX.yml`](../don-hopkins/people/INDEX.yml) · [`../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml`](../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml)

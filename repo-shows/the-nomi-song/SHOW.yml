@@ -23,11 +23,11 @@ card_todo:   # what the wrapper CARD will hold (bookmarks + TOC + playlists) —
   toc: []
   playlists: []
 
-memorial: ../ideas/traditions/in-memoriam.yml   # klaus_nomi + david_bowie
+memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml   # klaus_nomi + david_bowie
 
 ties:
   - ../../characters/brian-eno/bowie-snl-1979.md
   - ../../process/showmaker-network.yml   # hosted_video_wrapper
-  - ../ideas/traditions/in-memoriam.yml
+  - ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml
 
 note: "Artifacts (clips, stills) belong in a character dir once Nomi gets one; this show only DRAWS on them."

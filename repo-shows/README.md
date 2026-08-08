@@ -5,7 +5,7 @@
 > *"So you have a Repo to Show us?"*
 
 **Format pitch:** A TV/streaming show about **developing and playing** games & tools — using AI the
-best way (people author; AI orchestrates and writes code). [`ideas/traditions/make-play-tools-show.yml`](ideas/traditions/make-play-tools-show.yml)
+best way (people author; AI orchestrates and writes code). [`../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml`](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml)
 
 ## Read order
 

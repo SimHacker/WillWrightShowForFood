@@ -1,0 +1,74 @@
+# IN MEMORIAM — a small, tasteful memorial registry (grows carefully, never slop)
+# The most important departed artists we genuinely touch on and are influenced by. Respectful,
+# factual, spare. NOT an ape-shit AI-generated pile — add only people the show truly engages.
+
+meta:
+  id: in-memoriam
+  type: tradition
+  status: seed
+  authored_by: don-hopkins
+  one_line: "Honor the artists whose work runs through the show — by name, with dates, briefly and warmly."
+
+ethos: |
+  Don's rule: memorialize **just the most important** artists we've actually discussed and been
+  influenced by — Klaus Nomi and David Bowie first. Keep each entry short and real; link to the fuller
+  context that already lives in the repo. No hagiography, no filler, no AI slop. When we can, honor by
+  TRANSFORMATION (play the work, cover it, carry it forward) — the show's whole ethic.
+
+the_memoriam:
+
+  klaus_nomi:
+    dates: "1944–1983"
+    why: |
+      Operatic-countertenor new-wave alien; sang beside Bowie on the SNL 1979 video-puppet night. One of
+      the first public figures lost to AIDS, largely isolated at the end. Heard today, that night is the
+      show's most poignant tape.
+    honor_by: "Play the SNL set + The Nomi Song; a hosted-video-wrapper show (see wrappers)."
+    see: ../../characters/brian-eno/bowie-snl-1979.md
+
+  david_bowie:
+    dates: "1947–2016"
+    why: |
+      The show's north star of persona, mask, and reinvention. Co-wrote "Boys Keep Swinging" with Eno;
+      the SNL puppet finale is the origin of our "video puppet" performance kind.
+    honor_by: "The video-puppet lineage; the Bowie preset (opt-in adult section); A/B his work with covers."
+    see: ../../characters/brian-eno/bowie-snl-1979.md
+
+  herman_brood:
+    dates: "1946–2001"
+    why: "Dutch rock musician + prolific pop-art painter (Cha Cha, the Amsterdam/Ruigoord orbit); Nina Hagen's partner."
+    see: ../../characters/nina-hagen/ideas.md   # hooks #6–#7
+
+  leigh_bowery:
+    dates: "1961–1994"
+    why: "Performance artist, club legend, living sculpture — the persona/mask/gender-play lineage (pairs with Nomi + Bowie)."
+    honor_by: "Hosted-video-wrapper show around the Leigh Bowery documentary (see wrappers)."
+
+  heklina:
+    dates: "1967–2023"
+    real_name: "Stefan Grygelko"
+    why: |
+      San Francisco drag legend; founded Trannyshack, where Suppositori Spelling covered Nina's
+      "TV-Glotzer." Heklina introduced that performance (confirmed). A sad loss — a fuller tribute is
+      noted for later, handled gently.
+    see: ../../characters/nina-hagen/ideas.md   # cover chain, hook #9
+
+  napoleon_the_cat:
+    dates: "in memoriam"
+    why: "Don's cat, lost — a recurring star among the show's cat cast, honored not monetized-away."
+    see: ../../characters/don-hopkins/cats.yml
+
+already_memorialized_elsewhere:
+  douglas_engelbart:
+    see: ../../repo-shows/remembering-douglas-engelbart.yml
+    note: "Has his own memorial show + character memorial; listed here for completeness, not duplicated."
+
+grows_carefully: |
+  Add an entry only when the show genuinely engages the person's work. Keep it factual and short.
+  Prefer honoring by transformation over eulogy. Confirm dates before publishing.
+
+ties:
+  - ../../characters/brian-eno/bowie-snl-1979.md
+  - ../../characters/nina-hagen/ideas.md
+  - ../../characters/don-hopkins/cats.yml
+  - ../../repo-shows/remembering-douglas-engelbart.yml

@@ -32,11 +32,11 @@ Moderation lessons from branching TV — what transferred to modern AI-assisted 
 
 ### 6. FlatterBot 2000! ★
 Don does **bad ventriloquism** (Pee-wee Playhouse energy): FlatterBot voice reads the
-[**Mega Lecture**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/traditions/flatterbot-2000.yml).
+[**Mega Lecture**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml).
 **Signature beat:** FlatterBot credits Jason with Bobo's *Direct3D: Professional Reference* (1997) as a
 *"FAMOUS"* book — Jason modestly corrects: *"That was Eric Bowman. Bobo. It wasn't famous, just early."*
 Don: *"I would never say that."* Tradition:
-[`flatterbot-2000.yml`](../../repo-shows/ideas/traditions/flatterbot-2000.yml).
+[`flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml).
 **Director's cut:** splice to [book listing cover](https://www.abebooks.com/products/isbn/9781562057251) showing Eric Bowman — [`evidence-bounce-cut.md`](../../repo-shows/building-the-sims/evidence-bounce-cut.md).
 
 ### 7. Show seed: `repo-shows/jason-shankel/`

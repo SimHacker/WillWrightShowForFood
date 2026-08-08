@@ -9,7 +9,7 @@ artifact:
   sidecar_of: ca-soyuz-button-panel.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+  - ../../../../bits/gag-cellular-automata-simcity-tiles/gag-cellular-automata-simcity-tiles.yml
 
 see_also:
   - ../micropolis-gallery/INDEX.yml

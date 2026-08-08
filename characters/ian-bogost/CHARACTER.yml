@@ -48,8 +48,8 @@ see_also:
   - { path: ../will-wright/media/sims-series-inclusivity-paper-draft.md, why: "How Inclusivity Saved The Sims — paper index" }
   - { path: ../will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding playset vs Dumbold essay" }
   - { path: ../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c, why: "Failure modes as rhetoric at the substrate" }
-  - { path: ../../repo-shows/ideas/gags/curiosity-cow-cube.yml, why: "Cow Clicker center of cube parody" }
-  - { path: ../../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml, why: "Morningstar → Ashford → Bogost chain" }
+  - { path: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml, why: "Cow Clicker center of cube parody" }
+  - { path: ../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml, why: "Morningstar → Ashford → Bogost chain" }
 
 sources:
   public:

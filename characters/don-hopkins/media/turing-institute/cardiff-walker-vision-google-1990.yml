@@ -9,7 +9,7 @@ artifact:
   sidecar_of: cardiff-walker-vision-google-1990.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  - ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
 
 see_also:
   - first-robot-olympics.yml

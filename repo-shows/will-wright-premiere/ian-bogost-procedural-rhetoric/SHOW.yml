@@ -36,8 +36,8 @@ discussion_prompts:
   - "Captain Ashford's homage essay How to Incarnate Almost Anything — invite a live read of How to Deconstruct the Cube"
 
 curiosity_deconstruction:
-  spec: ../../ideas/gags/how-to-deconstruct-the-cube.yml
-  cube_parody: ../../ideas/gags/curiosity-cow-cube.yml
+  spec: ../../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml
+  cube_parody: ../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   invite_framing: |
     Optional segment for Bogost: **Morningstar (1993) → Ashford (MOOLLM homage) → Bogost (procedural rhetoric) → Don (cow inside the box).**
     Not a Curiosity revival — a postmortem. Distressed moos, MOOLA clicks, center is cow or Berkeley horse.
@@ -52,5 +52,5 @@ ties_to:
   - ../INTRO-NARRATIVE.md
   - ../../../catalogs/soul-city/
   - ../../../characters/will-wright/sources/2008-02-10-soul-of-the-sims/
-  - ../../ideas/gags/how-to-deconstruct-the-cube.yml
-  - ../../ideas/gags/curiosity-cow-cube.yml
+  - ../../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml
+  - ../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml

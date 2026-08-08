@@ -95,7 +95,7 @@ category_first_rooms:
   note: "Category-first dirs from media reorg — see CATALOG-INDEX.yml"
   count: 120
 
-gag_index: ../../../repo-shows/ideas/gags/INDEX.yml
+gag_index: ../../../bits/INDEX.yml
 
 see_also:
   - CATALOG-INDEX.yml

@@ -74,7 +74,7 @@ our_frame:
       - { label: "StoryMaker demo (Stupid Fun Club)", url: "https://www.youtube.com/watch?v=_2yEHs_WLzQ" }
       - { label: "Urban Safari GPS storytelling demo", url: "https://www.youtube.com/watch?v=Db8KGNoeKHE" }
     canonical:
-      - ../ideas/traditions/make-play-tools-show.yml#television_lineage
+      - ../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage
       - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
     career: ../../characters/don-hopkins/career/stupid-fun-club.yml
 
@@ -86,7 +86,7 @@ our_frame:
     - "Handing your voice and identity to AI to impersonate you on air"
 
   simulation_not_impersonation:
-    canonical: ../ideas/themes/simulating-people.yml
+    canonical: ../../bits/theme-simulating-people/theme-simulating-people.yml
     schema: ../../schemas/portrayal-standards.yml#simulation
     distinction: |
       Different from impersonation: models of game characters, fictional and historic people, and
@@ -160,13 +160,13 @@ see_also:
   - SHOW.yml#sims_play_along_narration
   - ../../process/sims-play-along-narration.yml
   - ../../will-wright-premiere/performance-and-culture.yml
-  - ../ideas/themes/human-control-and-authorship.md
-  - ../ideas/themes/simulating-people.md
+  - ../../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
+  - ../../bits/theme-simulating-people/theme-simulating-people.md
   - ../../schemas/portrayal-standards.yml#simulation
   - ../../process/crazy-idea-jam.yml#player_in_the_middle
   - ../../characters/douglas-engelbart/
   - ../../process/trails/augmentation-and-hypertext.md
-  - ../ideas/traditions/make-play-tools-show.yml
+  - ../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml
   - ../../characters/don-hopkins/career/stupid-fun-club.yml
   - ../../characters/will-wright/sources/don-youtube-storymaker-demo/
   - ../../catalogs/soul-city/micropolis-angel.yml

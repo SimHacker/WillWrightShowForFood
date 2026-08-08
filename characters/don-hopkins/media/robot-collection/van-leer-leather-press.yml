@@ -51,6 +51,6 @@ repo_orbit:
     don: "Menacing leather press. Modemstraat. Of course."
 
 see_also:
-  - ../../repo-shows/ideas/gags/van-leer-robot-collection.yml
+  - ../../../../bits/gag-van-leer-robot-collection/gag-van-leer-robot-collection.yml
   - INDEX.yml
   - ../oosterdok-bike-parking-tomtom.yml

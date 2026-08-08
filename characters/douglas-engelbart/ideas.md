@@ -40,7 +40,7 @@ memorial reading + discussion with Ted.
 
 ### 6. Engelbart mouse + keyset — free models + SWAG
 Open **STL/STEP** downloads; clicky toys; working **Bluetooth mouse + chord keyset kits** (resin,
-metal, PCBs, arm mount). [`../../repo-shows/ideas/gags/lightpenisland-net.yml`](../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division)
+metal, PCBs, arm mount). [`../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml`](../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division)
 
 ## Sources (public)
 

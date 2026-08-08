@@ -62,4 +62,4 @@ sources:
     - { title: "Micropolis manual credits — Special Thanks", path: "MicropolisCore/documentation/manual/credits.html" }
 
 see_also:
-  - { path: ../../repo-shows/ideas/themes/educators-track.md, why: "his SimCity data-lab pedagogy is the track's founding precedent" }
+  - { path: ../../process/tracks/educators-track/educators-track.md, why: "his SimCity data-lab pedagogy is the track's founding precedent" }

@@ -43,8 +43,8 @@
 - [Cow Clicker site](http://www.cowclicker.com/) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
 - Bogost line: *"It wasn't very fun before."* — scheduled death as honesty
 - Don's [Unite 2012 cow joke](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml) — Curiosity didn't get the reference
-- [Curiosity + Cow Clicker parody](../../repo-shows/ideas/gags/curiosity-cow-cube.yml) — keep real Curiosity dead; center is your cow
-- [Morningstar → Ashford → Bogost chain](../../repo-shows/ideas/gags/how-to-deconstruct-the-cube.yml)
+- [Curiosity + Cow Clicker parody](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml) — keep real Curiosity dead; center is your cow
+- [Morningstar → Ashford → Bogost chain](../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml)
 - When Cow Clicker got popular anyway — is *that* the second joke?
 - Distressed-moo click audio — procedural rhetoric admitting manipulation?
 - Medium-as-skinner-box: Don's [HN Medium essay](../don-hopkins/writing/hn-medium-failure-and-github-moollm.md) cites Cow Clicker as comparator

@@ -505,8 +505,8 @@ directors_cuts:
       - "[bowie-snl-1979.md](../characters/brian-eno/bowie-snl-1979.md)"
       - "[puppet-me-consent.yml](../characters/don-hopkins/portrayal/puppet-me-consent.yml)"
       - "[faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml)"  # soft_body_anatomy + trump_mushroom
-      - "[vice-not-ice-puppet.yml](../repo-shows/ideas/gags/vice-not-ice-puppet.yml)"
-      - "[unnecessary-censorship.yml](../repo-shows/ideas/traditions/unnecessary-censorship.yml)"
+      - "[vice-not-ice-puppet.yml](../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml)"
+      - "[unnecessary-censorship.yml](../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)"
   respect_the_viewer: |
     Growth adds MORE, BETTER, RELEVANT content — not ad breaks wedged into gaps. Returning viewers
     re-watch because the artifact genuinely improved since last time, and can jump into the middle
@@ -514,7 +514,7 @@ directors_cuts:
     it lives in the private strategy folder, not here.
   ties:
     - "[breeding and nesting](#breeding-and-nesting)"  # git_as_mmorpg: branches = universes, PRs = timeline merges
-    - "[the-riff-loop.yml](../repo-shows/ideas/themes/the-riff-loop.md)"  # the same loop, at production scale
+    - "[the-riff-loop.yml](../bits/theme-the-riff-loop/theme-the-riff-loop.md)"  # the same loop, at production scale
     - "[showmaker-network.yml](showmaker-network.yml)"
 
 showmaker_network:

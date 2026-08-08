@@ -9,7 +9,7 @@ artifact:
   sidecar_of: richard-1st-groucho-1990.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/turing-robot-olympics.yml
+  - ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
 
 see_also:
   - first-robot-olympics.yml

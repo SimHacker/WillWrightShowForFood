@@ -17,7 +17,7 @@ Don posted the schematic set for Woz's 70th — [`media/apple-ii-redbook/`](medi
 - **FIG S-10** on-board I/O + speaker — Don's first assembly program was the **beep routine** (*BASIC buzz and grumble* wasn't enough)
 - Lee Thalblum: *most interesting part of the Apple design — took 40 years to figure out*
 - David Burrow cassette **Star Trek 1979** — LRS/SRS, photon torpedos, Don typed it in from *Creative Computing*
-- Gag: [`apple-ii-redbook-lax-beep.yml`](../../repo-shows/ideas/gags/apple-ii-redbook-lax-beep.yml)
+- Gag: [`apple-ii-redbook-lax-beep.yml`](../../bits/gag-apple-ii-redbook-lax-beep/gag-apple-ii-redbook-lax-beep.yml)
 
 ### 2. Show seed: `repo-shows/steve-wozniak/`
 walk the repo on air and build from the seed.

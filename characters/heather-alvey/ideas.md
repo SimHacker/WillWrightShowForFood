@@ -32,7 +32,7 @@ Federated **create · publish · share** — [`../../catalogs/soul-city/README.m
 
 ### 5. SimProv Wedding Playset + Speed Dating with Cupid
 
-Unreleased-era collaboration; Cupid object gag — [`../../repo-shows/ideas/gags/speed-dating-with-cupid.yml`](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml).
+Unreleased-era collaboration; Cupid object gag — [`../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml`](../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml).
 
 ### 6. Gallium / Proxi chapter
 

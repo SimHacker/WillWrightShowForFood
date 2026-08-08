@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:b64b7f03c5310720 -->
+<!-- content-sha256:245956aab43af045 -->
 
 # Repo Show format
 
@@ -527,8 +527,8 @@ See [faceball-construction-set.yml#modifiers](../apps/performance-space/faceball
   - [bowie-snl-1979.md](../characters/brian-eno/bowie-snl-1979.md)
   - [puppet-me-consent.yml](../characters/don-hopkins/portrayal/puppet-me-consent.yml)
   - [faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml)
-  - [vice-not-ice-puppet.yml](../repo-shows/ideas/gags/vice-not-ice-puppet.yml)
-  - [unnecessary-censorship.yml](../repo-shows/ideas/traditions/unnecessary-censorship.yml)
+  - [vice-not-ice-puppet.yml](../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml)
+  - [unnecessary-censorship.yml](../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)
 
 - **respect_the_viewer:** Growth adds MORE, BETTER, RELEVANT content — not ad breaks wedged into gaps. Returning viewers
 re-watch because the artifact genuinely improved since last time, and can jump into the middle
@@ -536,7 +536,7 @@ without penalty. The compounding-attention / monetization angle is planning, not
 it lives in the private strategy folder, not here.
 - **ties:**
   - [breeding and nesting](#breeding-and-nesting)
-  - [the-riff-loop.yml](../repo-shows/ideas/themes/the-riff-loop.md)
+  - [the-riff-loop.yml](../bits/theme-the-riff-loop/theme-the-riff-loop.md)
   - [showmaker-network.yml](showmaker-network.yml)
 
 ## ShowMaker Network

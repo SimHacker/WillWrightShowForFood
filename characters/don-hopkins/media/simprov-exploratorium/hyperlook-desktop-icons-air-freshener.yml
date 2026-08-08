@@ -11,7 +11,7 @@ artifact:
   sidecar_of: hyperlook-desktop-icons-air-freshener.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/simprov-exploratorium-sparc.yml
+  - ../../../../bits/gag-simprov-exploratorium-sparc/gag-simprov-exploratorium-sparc.yml
 
 see_also:
   - ../../hyperlook-news-postscript-simcity.md

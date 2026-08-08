@@ -13,7 +13,7 @@ same spirit as DreamScape's live-demo disclaimers — totally Will / Stupid Fun 
 |--|--|
 | **Don's Medium post** | [WARNINGS](https://donhopkins.medium.com/warnings-f53f75aa2ec8) — May 15, 2018 |
 | **DreamScape context** | [1995 WWDC DreamScape demo](https://donhopkins.medium.com/1995-apple-world-wide-developers-conference-kaleida-labs-scriptx-demo-64271dd65570) — heat-death disclaimer in transcript |
-| **Sticker pack spec** | [`../../../repo-shows/ideas/swag/voystick-warning-stickers.yml`](../../../repo-shows/ideas/swag/voystick-warning-stickers.yml) `#usenet_matter_warnings` |
+| **Sticker pack spec** | [`../../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml`](../../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml) `#usenet_matter_warnings` |
 
 ## The warnings (canonical text)
 
@@ -40,4 +40,4 @@ same spirit as DreamScape's live-demo disclaimers — totally Will / Stupid Fun 
 - **Hero tees:** heat death of the universe · quantum tunneling to neighbor's domicile · 100% matter product
 - **Howard optional pictograms:** stick figures for tunneling, antimatter bang, relativity lifting gag
 
-↑ [Don's sources](README.md) · [Sticker pack SWAG](../../../repo-shows/ideas/swag/voystick-warning-stickers.yml#usenet_matter_warnings) — *not a Crazy Idea Jam entry; merch only*
+↑ [Don's sources](README.md) · [Sticker pack SWAG](../../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml#usenet_matter_warnings) — *not a Crazy Idea Jam entry; merch only*

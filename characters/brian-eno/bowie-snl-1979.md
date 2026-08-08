@@ -130,4 +130,4 @@ Two small threads to widen the conversation beyond the one night (Don wanted bot
 
 *See also:* [`ideas.md`](ideas.md) (hook #9 points here) ·
 [`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) (`#puppet_kinds`) ·
-[`../../repo-shows/ideas/traditions/unnecessary-censorship.yml`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml)
+[`../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml`](../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)

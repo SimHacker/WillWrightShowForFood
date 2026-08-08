@@ -144,7 +144,7 @@ distinct; format stack = **James Burke** interpretation + **Philomena Cunk** moc
 Cupid-farm a lover stack (Buddha keeps the trap alive), fall in love with a newcomer in front of them,
 survive the jealousy **slap queue** — kiss/Cupid buffs restart the conga until they fall out of love.
 Emergent interpersonal chaos as a scored challenge; same kit as the Wedding Playset / Speed Dating.
-[Premiere doc](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) · [gag](../../repo-shows/ideas/gags/slap-conga.yml)
+[Premiere doc](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) · [gag](../../bits/gag-slap-conga/gag-slap-conga.yml)
 
 ## Sources (real, public)
 - Primary sources map: [`primary-sources-evidence-room.md`](primary-sources-evidence-room.md)

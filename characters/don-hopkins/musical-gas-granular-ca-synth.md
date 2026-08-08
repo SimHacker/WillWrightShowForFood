@@ -46,7 +46,7 @@ the mover).
 
 ## Why it belongs in the show
 - **Granular = resampling.** Chopping audio into grains and replaying them any-which-way is the show's
-  [riff loop](../../repo-shows/ideas/themes/the-riff-loop.md) in physical form — the same instinct as
+  [riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md) in physical form — the same instinct as
   Laurie Anderson's **Talking Stick** (the MIDI audio-granulator she built with **Bob Bielecki** at
   **Interval**, the lab where Don worked). See [`../laurie-anderson/ideas.md`](../laurie-anderson/ideas.md).
 - **CA lineage.** Sits right next to Don's **CAM6** cellular-automata machine (© 1992; **256×256**

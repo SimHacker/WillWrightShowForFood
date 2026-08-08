@@ -60,7 +60,7 @@ video and follow wherever you want to go.
   co-wrote the Gaia hypothesis with your SimEarth advisor Lovelock): each game a character passes
   through is kept as a nested organelle with its own DNA, all running in parallel, the soul-file the
   source of truth. This is the [**RepoShow Soul**](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md) idea: *you repossess your
-  character from the walled gardens.* ([crown-jewel theme](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/data-portability-crown-jewel.md).)
+  character from the walled gardens.* ([crown-jewel theme](https://github.com/SimHacker/WillWrightShowForFood/blob/main/bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md).)
 - **Reincarnate Slats.** **Slats** — the robot brain I programmed at your **Stupid Fun Club**, who
   showed up in the One Minute Movies (*Servitude*, *Empathy*). I still have the code (and a laptop that
   might run it — emulation if not). We make **bringing Slats back** a live quest: read the old code

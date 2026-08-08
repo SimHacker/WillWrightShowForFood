@@ -91,8 +91,8 @@ abilities:
     score_when:
     - trigger: segment_needs_comic_relief
       weight: 0.8
-  effect: Pull stunt from repo-shows/ideas/gags/ — plug-in interstitial.
-  verifiable: repo-shows/ideas/gags/INDEX.yml
+  effect: Pull stunt from bits/ (gag-*) — plug-in interstitial.
+  verifiable: bits/INDEX.yml
   combos_with: []
 - id: SHUT-UP-GONG
   name: Shut Up Gong

@@ -58,6 +58,6 @@ references:
   cenobites: art-3d-glitch-reference-hellraiser-cenobites-street.png
   pinhead: art-3d-glitch-reference-hellraiser-pinhead-closeup.png
 
-gag: ../../../../repo-shows/ideas/gags/frankinsideout-abby-normal.yml
+gag: ../../../../bits/gag-frankinsideout-abby-normal/gag-frankinsideout-abby-normal.yml
 
 note: "Per-file sidecars."

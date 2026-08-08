@@ -1,0 +1,35 @@
+# Van Leer leather press — robot collection gag
+
+id: van-leer-robot-collection
+type: gag
+status: canon
+authored_by: don-hopkins
+tagline: "Menacing antique leather press. Modemstraat. Disketteweb. Of course."
+
+pitch: |
+  Don's **robot collection** — not built robots, **street art that reads as robots**. A massive
+  **Van Leer** antique leather press sits outdoors in industrial **North Amsterdam** near
+  **Oosterdok**: grey/charcoal frame, pink gears, rust-orange press pistons as teeth. Every angle
+  is a different menacing face.
+
+  **Modemstraat** and **Disketteweg** (*disketteweb*) in **Tuindorp Oostzaan** — tech-themed
+  street names beside heavy iron. Slats claims training data. Vandermeer cites floppy storage.
+
+canonical: ../../characters/don-hopkins/media/robot-collection/INDEX.yml
+
+integration:
+  tomtom_era: ../../characters/don-hopkins/media/oosterdok-bike-parking-tomtom.yml
+  turing_olympics: ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
+  face_puppets: ../../characters/don-hopkins/media/rolf/face-puppets.yml
+
+menagerie_lines:
+  don: "Menacing leather press. Modemstraat. Of course."
+  slats: "I trained on Van Leer. You're welcome."
+  vandermeer: "Disketteweg — the cryptid stores on floppies."
+  mimsy: "The press performs menace—"
+  gregory: "Van Leer packaging. I'm long cardboard."
+
+see_also:
+  - ../../characters/don-hopkins/media/robot-collection/van-leer-leather-press.yml
+  - ../gag-rolf-junk-auction/gag-rolf-junk-auction.yml
+  - ../gag-turing-robot-olympics/gag-turing-robot-olympics.yml

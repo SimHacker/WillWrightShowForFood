@@ -87,7 +87,7 @@ nodes:
       dispatch: hub
       protocol: fall-in-love
       reciprocal_with: hope-chest-love-gate
-      demo: ../../repo-shows/ideas/gags/speed-dating-with-cupid.yml
+      demo: ../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
       role: Prerequisite romance — unlocks planning tier on chest
 
     - id: crowd-sitter

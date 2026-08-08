@@ -32,7 +32,7 @@ threads:
     transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     permission: "DSHR approved sending draft to Lars and Heins"
     artifact: ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.md
-    gag: ../ideas/gags/let-the-machine-win.yml
+    gag: ../../bits/gag-let-the-machine-win/gag-let-the-machine-win.yml
     lem_bridge: |
       Stanisław Lem, *The Cyberiad* — Trurl's machine answers 2+2=7, rage-quits truth.
       Satire on intelligence without humility; authority over correction.
@@ -56,7 +56,7 @@ threads:
     title: "Rautavaara's Case — Philip K. Dick (1980)"
     transcript: ../../characters/david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md
     artifact: ../../characters/david-rosenthal/literary/rautavaaras-case-pkd.md
-    gag: ../ideas/gags/gods-eat-worshippers.yml
+    gag: ../../bits/gag-gods-eat-worshippers/gag-gods-eat-worshippers.yml
     moollm_bridge: |
       We, as gods, edit yaml jazz — simulated minds, sacraments inverted. PKD's Approximations
       overwrite a dying brain's Christ vision with a cannibal savior; symmetry argument at trial.

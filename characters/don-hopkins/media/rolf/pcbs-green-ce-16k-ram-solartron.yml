@@ -9,7 +9,7 @@ artifact:
   sidecar_of: pcbs-green-ce-16k-ram-solartron.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/rolf-junk-auction.yml
+  - ../../../../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml
 
 see_also:
   - INDEX.yml

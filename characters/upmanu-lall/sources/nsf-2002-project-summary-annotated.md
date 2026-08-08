@@ -31,7 +31,7 @@ progress.*
 
 **2026:** The framing has only gotten more urgent — and "use a city simulator to pull students
 from other departments into engineering" is now the founding precedent of the
-[educators' track](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/educators-track.md). ✅
+[educators' track](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/tracks/educators-track/educators-track.md). ✅
 
 ## The diagnosis: students never touch the real thing early
 
@@ -69,7 +69,7 @@ or a license. Micropolis runs in any browser, engine compiled to WebAssembly:
 
 **2026:** "Curriculum as a sequence of explorable case studies" maps directly onto
 curriculum-in-a-repo: fork it, assign it, grade the pull request — the
-[educators' track formats](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/educators-track.md). 🚧
+[educators' track formats](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/tracks/educators-track/educators-track.md). 🚧
 And "technological literacy to all majors" is the Lall move the track is named for: the game is
 the bait, the data literacy is the catch. ✅
 
@@ -104,7 +104,7 @@ carries forward. ✅/🚧
 Controlled experiments with **data extraction** are the point of the planned data lab: not CSV
 exports circa 2002, but **Google Sheets — online, shared, machine-readable, scriptable,
 analyzable, turn-in-able, gradable** — high on the educational unlock path
-([educators' track `data_lab`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/educators-track.md)). 🚧
+([educators' track `data_lab`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/tracks/educators-track/educators-track.md)). 🚧
 What students abstracted by hand from SimCity in Lall's 2002 freshman class becomes a live feed.
 
 ## Students add modules in a high-level language
@@ -170,7 +170,7 @@ on the [Will Wright Show](https://github.com/SimHacker/WillWrightShowForFood). �
 | "Conversational environment" for learners | An LLM with the city as context — literal | ✅ |
 | Multiple roles / student teams | [Federation of peer games](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/federation-peer-games.md); 1990s X11 multiplayer precedent | ✅/🚧 |
 | Data abstracted from simulations, analyzed statistically | Google Sheets data lab — shared, scriptable, gradable | 🚧 planned, high priority |
-| Classroom case studies + curriculum | Curriculum-in-a-repo, [educators' track](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/themes/educators-track.md) | 🚧 |
+| Classroom case studies + curriculum | Curriculum-in-a-repo, [educators' track](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/tracks/educators-track/educators-track.md) | 🚧 |
 | Formal evaluation of learning outcomes | The reproducibility pilot (his own 2002 with/without-simulator design, revived) | 🚧 |
 | Cellular automata as teaching formalism | Micropolis *is* a CA city; Don's [CAM6 emulator](https://github.com/SimHacker/CAM6) besides | ✅ |
 | GIS / coupled models (HAZUS) | Open invitation — ideal student contribution | 🚧 |

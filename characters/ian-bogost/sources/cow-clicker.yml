@@ -66,7 +66,7 @@ respectful_show_beats:
 
 don_connections:
   unite_2012_cow_joke: ../../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml
-  cube_parody: ../../../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  cube_parody: ../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   medium_hn: ../../don-hopkins/writing/hn-medium-failure-and-github-moollm.md
 
 see_also:

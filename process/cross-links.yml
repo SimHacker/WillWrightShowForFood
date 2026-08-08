@@ -104,8 +104,8 @@ trails:
       - { path: vision-and-ambition.yml, why: "Long arc girder — no promises, full ambition" }
       - { path: VISION.md, why: "Navigation layer — Flower Child energy, link-rich" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
-      - { path: ../repo-shows/ideas/themes/simulation-effect.md, why: "Simulation effect theme — player-as-author thread" }
-      - { path: ../repo-shows/ideas/themes/educators-track.md, why: "Educators' track — assign the fork, grade the PR" }
+      - { path: ../bits/theme-simulation-effect/theme-simulation-effect.md, why: "Simulation effect theme — player-as-author thread" }
+      - { path: tracks/educators-track/educators-track.md, why: "Educators' track — assign the fork, grade the PR" }
       - { path: ../characters/will-wright/, why: "Guest portrayal — Proxi, Spore, Sims lineage" }
       - { path: ../characters/will-wright/CARD.yml, why: "Will's invokable abilities — MTG card surface" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Host card — pie menus, MOOLLM, layers" }
@@ -149,8 +149,8 @@ trails:
       - { path: ../schemas/invitation-workflow.yml, why: "draft → sent → replied → consent" }
       - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md — LLM instance-first; deterministic bulk refresh" }
       - { path: markup-facades.yml, why: "Registry + dependency graph for facades" }
-      - { path: ../repo-shows/ideas/themes/human-control-and-authorship.md, why: "Constitutional theme — AI proposes, people dispose" }
-      - { path: ../repo-shows/ideas/themes/simulating-people.md, why: "Impersonation vs simulation — Sims 26-year precedent" }
+      - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Constitutional theme — AI proposes, people dispose" }
+      - { path: ../bits/theme-simulating-people/theme-simulating-people.md, why: "Impersonation vs simulation — Sims 26-year precedent" }
 
   archive_and_provenance:
     k_line: "Source, don't paraphrase — know what's public and what isn't"
@@ -205,7 +205,7 @@ trails:
       - { path: ../README.md, why: "Root two-layer navigation essay — brutalist listing + humane README" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + HyperTIES — augmentation in practice" }
       - { path: crazy-idea-jam.yml#player_in_the_middle, why: "Augmentation-not-automation = the PITM tenet" }
-      - { path: ../repo-shows/ideas/themes/human-control-and-authorship.md, why: "Cross-show constitutional theme — Engelbart lineage spelled out" }
+      - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Cross-show constitutional theme — Engelbart lineage spelled out" }
       - { path: ../schemas/portrayal-standards.yml#memorial_mode, why: "How we honor the deceased — represent + discuss, never interview" }
 
   game_design_lineage:
@@ -331,23 +331,23 @@ trails:
       - { path: ../repo-shows/ideas/urban-ebike-safari.yml, why: "Outdoor Voystick demo — DreamScape on wheels" }
       - { path: ../apps/performance-space/pink-trombone-jam.yml, why: "Four-player vocal-tract choir — We Are the Weird" }
       - { path: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick, why: "The idea — not the warning stickers" }
-      - { path: ../repo-shows/ideas/themes/data-portability-crown-jewel.md, why: "Crown jewel theme — Will 1996 goal still unshipped" }
-      - { path: ../repo-shows/ideas/themes/the-riff-loop.md, why: "Steerable recursion — Slats, Jeff, Eno, Director's Cut" }
-      - { path: ../repo-shows/ideas/themes/stupid-fun-club-robots.md, why: "One Minute Movies + Slats opening energy" }
-      - { path: ../repo-shows/ideas/themes/voystick-voice-space.md, why: "Voystick theme — homomorphic instrument stack" }
+      - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel theme — Will 1996 goal still unshipped" }
+      - { path: ../bits/theme-the-riff-loop/theme-the-riff-loop.md, why: "Steerable recursion — Slats, Jeff, Eno, Director's Cut" }
+      - { path: ../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md, why: "One Minute Movies + Slats opening energy" }
+      - { path: ../bits/theme-voystick-voice-space/theme-voystick-voice-space.md, why: "Voystick theme — homomorphic instrument stack" }
 
   repo_show_themes:
     k_line: "Threads to revisit across episodes"
     human: trails/repo-show-themes.md
     why: "Substantive show ideas — yaml girders + markdown overlays; themes graduate into episodes"
     nodes:
-      - { path: ../repo-shows/ideas/themes/README.md, why: "Bucket index — girder + human view for all themes" }
-      - { path: ../repo-shows/ideas/themes/human-control-and-authorship.md, why: "Constitutional — all shows" }
-      - { path: ../repo-shows/ideas/themes/simulating-people.md, why: "Ethics — impersonation vs simulation" }
-      - { path: ../repo-shows/ideas/themes/simulation-effect.md, why: "Will 1996 anchor — player-as-author" }
-      - { path: ../repo-shows/ideas/themes/data-portability-crown-jewel.md, why: "Crown jewel — bridges hub" }
-      - { path: ../repo-shows/ideas/themes/educators-track.md, why: "Classroom as cast — Bartle, Lall, Eagleson" }
-      - { path: ../repo-shows/ideas/themes/the-riff-loop.md, why: "Steerable AI+people recursion" }
+      - { path: ../bits/README.md, why: "Bucket index — girder + human view for all themes" }
+      - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Constitutional — all shows" }
+      - { path: ../bits/theme-simulating-people/theme-simulating-people.md, why: "Ethics — impersonation vs simulation" }
+      - { path: ../bits/theme-simulation-effect/theme-simulation-effect.md, why: "Will 1996 anchor — player-as-author" }
+      - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel — bridges hub" }
+      - { path: tracks/educators-track/educators-track.md, why: "Classroom as cast — Bartle, Lall, Eagleson" }
+      - { path: ../bits/theme-the-riff-loop/theme-the-riff-loop.md, why: "Steerable AI+people recursion" }
       - { path: ../repo-shows/ideas/INDEX.yml, why: "Master ideas catalog" }
       - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md overlay policy" }
 

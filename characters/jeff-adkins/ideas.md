@@ -28,7 +28,7 @@ The show's thesis, live in the codebase: Jeff built it with AI from documented +
 rewriting it into TypeScript with AI and full credit; each pass improves the last. **Stone soup, the
 cauldron, cellular automata, Wolfram, Eno's generative systems** — copying-and-improving as a
 *creative* engine, not a strip-mine. Everyone credited; every iteration better. It's the same
-**[riff loop](../../repo-shows/ideas/themes/the-riff-loop.md)** as **Slats' speech feedback loop** —
+**[riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md)** as **Slats' speech feedback loop** —
 people and AI riffing off each other in a cycle you can steer from anywhere (talk into, over, after,
 or before it).
 
@@ -72,7 +72,7 @@ modules from a deep study of it).
 live in the browser, we can drive them as a **new puppet kind — 3D Sims-1 character puppetry** — the 3D
 sibling of the 2D face/video puppets (Conan face-holes, Faceball). Real Sims characters on stage,
 voiced and posed live (mic amplitude scrub applies). On-brand and *already shipped + improving*. See
-[`puppet-taxonomy.yml#kinds.sims_3d_puppet`](../../repo-shows/ideas/traditions/puppet-taxonomy.yml) and
+[`puppet-taxonomy.yml#kinds.sims_3d_puppet`](../../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml) and
 [`performance-space.yml#sims_3d_puppet`](../../process/performance-space.md).
 
 ## Sources (real, public)

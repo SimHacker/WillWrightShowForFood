@@ -9,7 +9,7 @@ artifact:
   sidecar_of: news-framemaker-spelling-checker.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/news-pizza-tool-fax.yml
+  - ../../../../bits/gag-news-pizza-tool-fax/gag-news-pizza-tool-fax.yml
 
 see_also:
   - INDEX.yml

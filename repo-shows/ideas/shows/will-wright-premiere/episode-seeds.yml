@@ -30,10 +30,10 @@ performance_episodes:
     modes: [voice_puppet, audience_chorus]
   - title: "SimProv Wedding — Double Pre-Game"
     modes: [machinima, play_along_narration]
-    gag: ../../gags/pixelized-joint-wedding.yml
+    gag: ../../../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
   - title: "Speed Dating with Cupid"
     modes: [audience_orchestrated_gameplay, play_along_narration, live_riff]
-    segment: ../../gags/speed-dating-with-cupid.yml
+    segment: ../../../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
     note: "Audience suggests who falls in love first; live Cupid object — prior art on YouTube."
 
 topical_flows:

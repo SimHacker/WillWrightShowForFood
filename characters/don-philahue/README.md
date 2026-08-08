@@ -132,7 +132,7 @@ Full protocol: [`qa-orchestration.yml`](qa-orchestration.yml)
 | **Arbitrate** | Pick highest-scoring slice; forward, inject, hub, magazine, or spawn |
 | **Ask** | `ASK-NOW` in-conversation · `QA-LEDGER-SWEEP` at close · route by `to:` field |
 | **Translate** | Language plugins (`schemas/language-*`) — Simlish, Palm, robot, Cow |
-| **Spawn** | Gags from [`repo-shows/ideas/gags/`](../../repo-shows/ideas/gags/INDEX.yml); menagerie puppets |
+| **Spawn** | Gags from [`bits/`](../../bits/INDEX.yml) (gag-*); menagerie puppets |
 | **Eject** | The [Glick Gallery](../menagerie/GLICK-GALLERY.yml) — his unethical presenter cousins commit their signature interviewing sin; he scores the ad dishonest, cuts the mic, deadpan escort out |
 | **Close** | Q&A ledger sweep + sign-off ritual |
 

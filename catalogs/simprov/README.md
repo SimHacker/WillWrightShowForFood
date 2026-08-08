@@ -11,7 +11,7 @@ The emotional center of the Soul City mission. An orchestration kit — not one 
 | Object | Job |
 |--------|-----|
 | [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/README.md) | Gather and seat guests |
-| Cupid | Prerequisite romance — [Speed Dating](../../repo-shows/ideas/gags/speed-dating-with-cupid.yml) · [Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) |
+| Cupid | Prerequisite romance — [Speed Dating](../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml) · [Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) |
 | Buddha statue | Crowd need management — keep the Slap Conga trap alive |
 | Hope Chest + consultant | Onboarding and catalogs |
 | Donna's set pieces | Premium craft layer |
@@ -20,7 +20,7 @@ Built when marriage equality was still a fight in the real world. Republishing f
 
 **Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — Hope Chest state machine, Cupid reciprocal services, wedding planner magazines on the dining table, locked menu guidance, spawned NPC staff. Design doc: [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
 
-**Performance gag (show seed):** [SimProv Wedding — Double Pre-Game](../../repo-shows/ideas/gags/pixelized-joint-wedding.yml) — bride's friends and groom's friends each sneak off to calm nerves before the ceremony; neither knows the other is doing it; aisle reveal with both heads pixelized (original Sims mesh censorship: hand on pass, head after hit). Kimmel *Unnecessary Censorship* homage; Steve & Gerri ad-lib already jokes about hot-tub pixelation on the same engine.
+**Performance gag (show seed):** [SimProv Wedding — Double Pre-Game](../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml) — bride's friends and groom's friends each sneak off to calm nerves before the ceremony; neither knows the other is doing it; aisle reveal with both heads pixelized (original Sims mesh censorship: hand on pass, head after hit). Kimmel *Unnecessary Censorship* homage; Steve & Gerri ad-lib already jokes about hot-tub pixelation on the same engine.
 
 **Challenge (premiere):** [The Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) — Cupid-farm a lover stack, fall in love in public, survive the jealousy slap queue; kiss/Cupid buffs restart the conga until they fall out of love.
 

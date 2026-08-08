@@ -70,8 +70,8 @@ repo_orbit:
   simcity_lineage: ../../career/simcity-lineage.yml
   pie_menus: ../../../../process/crazy-idea-jam.yml
   gags:
-    - ../../../../repo-shows/ideas/gags/micropolis-gallery.yml
-    - ../../../../repo-shows/ideas/gags/pacbot-eats-traffic.yml
+    - ../../../../bits/gag-micropolis-gallery/gag-micropolis-gallery.yml
+    - ../../../../bits/gag-pacbot-eats-traffic/gag-pacbot-eats-traffic.yml
 
 menagerie:
   slats: "I trained on PacBot. You're welcome."

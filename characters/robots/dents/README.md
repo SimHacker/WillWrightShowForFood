@@ -39,8 +39,8 @@ Full gallery: [photos.md](photos.md)
 
 | Hook | Link |
 |------|------|
-| **Dents trot-out gag** | [broken-robot-servitude](../../../repo-shows/ideas/gags/broken-robot-servitude.md) |
+| **Dents trot-out gag** | [broken-robot-servitude](../../../bits/gag-broken-robot-servitude/gag-broken-robot-servitude.md) |
 | **Running audience gag** | [fictional-broken-robot](../../../repo-shows/will-wright-premiere/audience/fictional-broken-robot/) |
-| **Theme thread** | [Stupid Fun Club robots](../../../repo-shows/ideas/themes/stupid-fun-club-robots.md) |
+| **Theme thread** | [Stupid Fun Club robots](../../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md) |
 
 See [Slats](../slats/README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Browse for Will](../../../repo-shows/will-wright-premiere/BROWSE.md)

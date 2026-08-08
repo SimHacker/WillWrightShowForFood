@@ -1,0 +1,38 @@
+# Puppet taxonomy — face / voice / full puppet
+
+id: puppet-taxonomy
+type: tradition
+status: ready
+canonical: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds
+
+kinds:
+  face_puppet:
+    name: conan-face-puppet
+    homage: "Conan — photo with mouth hole; performer speaks through"
+    spec: ../../apps/performance-space/conan-face-puppet.yml
+  voice_puppet:
+    instruments: [pink_trombone, phoneloper]
+  puppet:
+    also_called: video_puppet   # low-tech composited body (chroma-key / drawn / scrubbed), human-voiced
+    amplitude_scrub: "David Levitt technique — voice drives video scrub"
+    canonical_ancestor: "Bowie's chroma-key marionette on SNL, 'Boys Keep Swinging,' 1979 — see performance-and-culture.yml#puppet_kinds (puppet.canonical_ancestor)"
+    soft_body_physics: "Exaggerated jiggle/soft-body rig (boobs, dongs, etc.) — a legible, funny tech demo; forkable browser toy. Segment: ../gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml (celebrate gender play; aim satire at power, not private people)."
+  sims_3d_puppet:
+    name: vitamoo-3d-puppet
+    what: "Real, shipped **3D Sims 1 characters** (skeletons + meshes + animations) driven LIVE as puppets — the 3D sibling of the 2D face/video puppets."
+    engine: "VitaMoo — Don Hopkins' in-browser WebGL Sims character/skeleton/mesh/animation renderer (vitamoo.space)."
+    why_on_brand: "Already working, shipped, and getting better — Don's clean-room VitaBoy lineage (SimObliterator from Jeff Adkins inspired the tooling stack), not a mockup. Puts real Sims characters on stage."
+    drive: "Puppeteer plays a Sims character live: poses/animations + mouth/gesture from mic + controls (amplitude scrub applies here too)."
+    see:
+      - ../../characters/don-hopkins/micropoliscore-design-docs-packages-code-content.md
+      - ../../characters/jeff-adkins/CHARACTER.yml   # SimObliterator (Jeff); VitaMoo is Don's
+      - ../../repo-shows/jeff-adkins/SHOW.yml
+      - ../../characters/jeff-adkins/ideas.md
+
+consent: |
+  Puppets are offered, never sprung. Don's standing "yes, puppet me" grant (a puppet of himself, penis
+  and all, free to use) + the consent-forward guest offer (a puppet prepared for Eno to drive himself,
+  live, if he wants): ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
+  Guest example / the live ask: ../../characters/brian-eno/bowie-snl-1979.md
+
+reading: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading

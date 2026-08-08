@@ -1,0 +1,246 @@
+# bits/ — flat registry of cross-cutting show material
+# One directory per bit; big-endian kind prefix (gag- theme- tradition- swag-).
+# Kind lives in the name AND may live in the entry's BIT.yml (optional interface).
+# Recategorize = rename, not migrate. Shows reference bits by id.
+# Status: seed | ready | brewing | design_brief | recorded_prior_art | graduated
+# Programming arcs are NOT bits — see ../process/tracks/. Refactor: ../repo-shows/REFACTOR.md
+
+meta:
+  id: bits-index
+  last_reviewed: 2026-08-08
+  rule: "One directory per bit; this index is the map; ls groups kinds by prefix."
+
+traditions:   # cross-show formats and homages
+  - id: unnecessary-censorship
+    file: tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
+    shows: [will-wright, drew-carey]
+    status: seed
+  - id: foreign-poet-play-along
+    file: tradition-foreign-poet-play-along/tradition-foreign-poet-play-along.yml
+    shows: [will-wright, drew-carey]
+    status: ready
+  - id: sidekick-archetypes
+    file: tradition-sidekick-archetypes/tradition-sidekick-archetypes.yml
+    shows: [will-wright]
+    status: ready
+    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#sidekicks
+  - id: participation-rocky-horror
+    file: tradition-participation-rocky-horror/tradition-participation-rocky-horror.yml
+    shows: [will-wright]
+    status: ready
+    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#rocky_horror_culture
+  - id: time-shifted-viewing
+    file: tradition-time-shifted-viewing/tradition-time-shifted-viewing.yml
+    shows: [will-wright]
+    status: ready
+    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#time_shifting
+  - id: honest-fake-call-in
+    file: tradition-honest-fake-call-in/tradition-honest-fake-call-in.yml
+    shows: [will-wright]
+    status: ready
+    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#live_call_in
+  - id: puppet-taxonomy
+    file: tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml
+    shows: [will-wright]
+    status: ready
+    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds
+  - id: old-band-reunion
+    file: tradition-old-band-reunion/tradition-old-band-reunion.yml
+    shows: [all]
+    status: ready
+    canonical: ../process/old-band-back-together.yml
+  - id: audience-orchestrated-gameplay
+    file: tradition-audience-orchestrated-gameplay/tradition-audience-orchestrated-gameplay.yml
+    shows: [will-wright, heather-and-steve-alvey]
+    status: ready
+  - id: make-play-tools-show
+    file: tradition-make-play-tools-show/tradition-make-play-tools-show.yml
+    shows: [all]
+    status: ready
+    note: "Umbrella TV format — develop · play · discuss; Bar Karma lineage"
+  - id: in-memoriam
+    file: tradition-in-memoriam/tradition-in-memoriam.yml
+    shows: [all]
+    status: seed
+  - id: flatterbot-2000
+    file: tradition-flatterbot-2000/tradition-flatterbot-2000.yml
+    shows: [all]
+    status: seed
+    note: "FlatterBot 2000! — Pee-wee bad ventriloquism × Jiminy Glick × AI mega-lecture; Don: 'I would never say that.' Founding example: Jason Shankel"
+
+gags:   # specific comedy bits with enough detail to record or rehearse
+  - id: pixelized-joint-wedding
+    file: gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
+    shows: [will-wright]
+    status: seed
+    episode: "SimProv Wedding — Double Pre-Game"
+  - id: slats-robopoetry-gong
+    file: gag-slats-robopoetry-gong/gag-slats-robopoetry-gong.yml
+    human: gag-slats-robopoetry-gong/gag-slats-robopoetry-gong.md
+    shows: [will-wright]
+    status: ready
+  - id: broken-robot-servitude
+    file: gag-broken-robot-servitude/gag-broken-robot-servitude.yml
+    human: gag-broken-robot-servitude/gag-broken-robot-servitude.md
+    shows: [will-wright]
+    status: ready
+  - id: trot-out-and-vanish
+    file: gag-trot-out-and-vanish/gag-trot-out-and-vanish.yml
+    shows: [will-wright]
+    status: seed
+  - id: speed-dating-with-cupid
+    file: gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
+    shows: [will-wright, heather-and-steve-alvey]
+    status: recorded_prior_art
+    episode: "Speed Dating with Cupid"
+  - id: did-you-do-dots-together
+    file: gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml
+    shows: [building-the-sims]
+    status: seed
+    note: "Jim + Bobo reunion — awkward Glick question about post-Sims DoDots startup"
+  - id: slap-conga
+    file: gag-slap-conga/gag-slap-conga.yml
+    shows: [will-wright]
+    status: seed
+  - id: cambridge-gag-credits
+    file: gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml
+    status: seed
+  - id: lightpenisland-net
+    file: gag-lightpenisland-net/gag-lightpenisland-net.yml
+    status: seed
+  - id: how-to-deconstruct-the-cube
+    file: gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml
+    status: seed
+  - id: curiosity-cow-cube
+    file: gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
+    status: seed
+  - id: turing-robot-olympics
+    file: gag-turing-robot-olympics/gag-turing-robot-olympics.yml
+    status: seed
+  - id: pantomime-gallery
+    file: gag-pantomime-gallery/gag-pantomime-gallery.yml
+    status: seed
+  - id: rolf-junk-auction
+    file: gag-rolf-junk-auction/gag-rolf-junk-auction.yml
+    status: seed
+  - id: micropolis-gallery
+    file: gag-micropolis-gallery/gag-micropolis-gallery.yml
+    status: seed
+  - id: pacbot-eats-traffic
+    file: gag-pacbot-eats-traffic/gag-pacbot-eats-traffic.yml
+    status: seed
+  - id: transmogrifier-mona-lisa-pushpins
+    file: gag-transmogrifier-mona-lisa-pushpins/gag-transmogrifier-mona-lisa-pushpins.yml
+    status: seed
+  - id: cellular-automata-simcity-tiles
+    file: gag-cellular-automata-simcity-tiles/gag-cellular-automata-simcity-tiles.yml
+    status: seed
+  - id: simfaux-repo-show-prototype
+    file: gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml
+    status: seed
+  - id: simprov-exploratorium-sparc
+    file: gag-simprov-exploratorium-sparc/gag-simprov-exploratorium-sparc.yml
+    status: seed
+  - id: let-the-machine-win
+    file: gag-let-the-machine-win/gag-let-the-machine-win.yml
+    status: seed
+  - id: gods-eat-worshippers
+    file: gag-gods-eat-worshippers/gag-gods-eat-worshippers.yml
+    status: seed
+  - id: heklina-conan-face-hole
+    file: gag-heklina-conan-face-hole/gag-heklina-conan-face-hole.yml
+    status: seed
+  - id: frankinsideout-abby-normal
+    file: gag-frankinsideout-abby-normal/gag-frankinsideout-abby-normal.yml
+    status: seed
+  - id: national-gorilla-suit-day
+    file: gag-national-gorilla-suit-day/gag-national-gorilla-suit-day.yml
+    status: seed
+  - id: apple-ii-redbook-lax-beep
+    file: gag-apple-ii-redbook-lax-beep/gag-apple-ii-redbook-lax-beep.yml
+    status: seed
+  - id: news-pizza-tool-fax
+    file: gag-news-pizza-tool-fax/gag-news-pizza-tool-fax.yml
+    status: seed
+  - id: biggest-emacs
+    file: gag-biggest-emacs/gag-biggest-emacs.yml
+    status: seed
+  - id: vice-not-ice-puppet
+    file: gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml
+    status: seed
+  - id: van-leer-robot-collection
+    file: gag-van-leer-robot-collection/gag-van-leer-robot-collection.yml
+    status: seed
+
+themes:   # substantive threads to revisit across episodes; every theme has a handwritten md
+  - id: simulation-effect
+    file: theme-simulation-effect/theme-simulation-effect.yml
+    human: theme-simulation-effect/theme-simulation-effect.md
+    shows: [will-wright]
+    status: ready
+  - id: procedural-rhetoric
+    file: theme-procedural-rhetoric/theme-procedural-rhetoric.yml
+    human: theme-procedural-rhetoric/theme-procedural-rhetoric.md
+    shows: [will-wright, heather-and-steve-alvey]
+    status: ready
+  - id: microworld-morality
+    file: theme-microworld-morality/theme-microworld-morality.yml
+    human: theme-microworld-morality/theme-microworld-morality.md
+    shows: [will-wright]
+    status: ready
+  - id: data-portability-crown-jewel
+    file: theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.yml
+    human: theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md
+    shows: [will-wright]
+    status: ready
+    canonical: ../process/crazy-idea-jam.yml#data_portability_crown_jewel
+  - id: stupid-fun-club-robots
+    file: theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.yml
+    human: theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md
+    shows: [will-wright]
+    status: ready
+  - id: inclusion-agitprop
+    file: theme-inclusion-agitprop/theme-inclusion-agitprop.yml
+    human: theme-inclusion-agitprop/theme-inclusion-agitprop.md
+    shows: [will-wright]
+    status: ready
+  - id: human-control-and-authorship
+    file: theme-human-control-and-authorship/theme-human-control-and-authorship.yml
+    human: theme-human-control-and-authorship/theme-human-control-and-authorship.md
+    shows: [will-wright, drew-carey, all]
+    status: ready
+  - id: simulating-people
+    file: theme-simulating-people/theme-simulating-people.yml
+    human: theme-simulating-people/theme-simulating-people.md
+    shows: [will-wright, drew-carey, all]
+    status: ready
+    canonical: ../schemas/portrayal-standards.yml#simulation
+    note: "Impersonation vs simulation — Sims 26-year precedent; AI Pandora's box"
+  - id: voystick-voice-space
+    file: theme-voystick-voice-space/theme-voystick-voice-space.yml
+    human: theme-voystick-voice-space/theme-voystick-voice-space.md
+    shows: [will-wright, all]
+    status: ready
+    canonical: ../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    note: "Homomorphic vocal joystick + Pink Trombone — idea in jam; stickers are SWAG only"
+  - id: the-riff-loop
+    file: theme-the-riff-loop/theme-the-riff-loop.yml
+    human: theme-the-riff-loop/theme-the-riff-loop.md
+    shows: [will-wright, jeff-adkins, brian-eno, nina-hagen]
+    status: ready
+    note: "Steerable recursion — Slats speech feedback loop as anchor"
+
+swag:   # merch design briefs — cheap to re-home if swag earns its own registry
+  - id: sfc-sticker-packs
+    file: swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
+    art_lead: howard-penner
+    status: seed
+    note: "Will's SFC WARNING sticker seed; REVISIT THE IMPOSSIBLE + globe seal packs; codebase-posters generative repo art"
+  - id: voystick-warning-stickers
+    file: swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
+    art_lead: howard-penner
+    status: design_brief
+    note: "SWAG only — ISO hazards + Usenet physics labels; idea is ../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick"
+
+moved_out:
+  educators-track: ../process/tracks/educators-track/educators-track.yml   # a TRACK (programming arc), not a theme

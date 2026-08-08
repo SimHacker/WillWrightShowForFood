@@ -139,4 +139,4 @@ flagged for a future human review-and-polish pass to add speaker labels and fix 
 - NBC "One-Minute Movies" (1MMs) press, 2003 — John Wells Productions + Paris Barclay; e.g. *The New York Times* / Adweek / Variety coverage.
 - Allentown Productions project page (archived): <https://web.archive.org/web/20141028194536/http://www.allentownproductions.com/project.php?p=nbc> — credits the robots to Will Wright and the segments to James Moll.
 
-See also: [README.md](README.md) · [Dents](../dents/README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Stupid Fun Club robots theme](../../../repo-shows/ideas/themes/stupid-fun-club-robots.md) · [Empathy & Servitude talk](../../don-hopkins/stupid-fun-club-empathy-and-servitude.md)
+See also: [README.md](README.md) · [Dents](../dents/README.md) · [RoboResurrection](../../../repo-shows/will-wright-premiere/slats-reincarnation.md) · [Stupid Fun Club robots theme](../../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md) · [Empathy & Servitude talk](../../don-hopkins/stupid-fun-club-empathy-and-servitude.md)

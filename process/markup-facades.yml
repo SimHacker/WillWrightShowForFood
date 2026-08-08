@@ -189,8 +189,8 @@ facades:
       - crazy-idea-jam.yml
 
   - id: repo-show-themes-index
-    source: ../repo-shows/ideas/themes/INDEX.yml
-    output: ../repo-shows/ideas/themes/README.md
+    source: ../bits/INDEX.yml
+    output: ../bits/README.md
     title: "Repo Show themes — bucket index"
     status: instance_first
     render: { mode: llm, tone: invitation, verbosity: standard }

@@ -1,0 +1,24 @@
+# Gag — cellular automata on iPad with SimCity tiles
+
+gag:
+  id: cellular-automata-simcity-tiles
+  title: "It's not a schooner — it's a Sailboat"
+  source: characters/don-hopkins/media/cellular-automata-tiles/cellular-automata-tiles.yml
+
+beat:
+  setup: "Don posts a portrait-mode grid of SimCity tiles running tube-worm rules"
+  misread: "Friends guess LEDs, resistors, laundromat dryers, Soviet spacecraft consoles"
+  punchline: "Patrick Fitzgerald — Mallrats sailboat bit. Howard Penner was right: CA toy on a touch screen."
+
+repo_show:
+  tile_cells: "Each automaton state maps to a SimCity tile — city sprites as pixels"
+  harble: "Eight convolution kernels. Hubba. Frob. Convolvotron."
+  zelda: "Zelda inventory items — same engine, different sprite sheet"
+
+menagerie:
+  slats: "I trained on tube worms. You're welcome."
+  don: "Schooner? Sailboat. Of course."
+
+see_also:
+  - ../../characters/don-hopkins/media/cellular-automata-tiles/INDEX.yml
+  - ../../characters/don-hopkins/career/simcity-lineage.yml

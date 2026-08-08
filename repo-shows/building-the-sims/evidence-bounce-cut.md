@@ -47,8 +47,8 @@ Book source card (Sims reunion arc): [`../../characters/eric-bowman/sources/dire
 
 | Parent | Role |
 |--------|------|
-| [`../ideas/gags/did-you-do-dots-together.yml`](../ideas/gags/did-you-do-dots-together.yml) | DoDots homophone trap → CNN/Stanford bounce |
-| [`../ideas/traditions/flatterbot-2000.yml`](../ideas/traditions/flatterbot-2000.yml#signature_beats.directx_bobo_correction) | Wrong author → book cover bounce |
+| [`../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml`](../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml) | DoDots homophone trap → CNN/Stanford bounce |
+| [`../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml#signature_beats.directx_bobo_correction) | Wrong author → book cover bounce |
 | [`../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml#sims_team) | Multi-guest reunion container |
 
 Private shot list + interview order: *(private — not in this repo)*

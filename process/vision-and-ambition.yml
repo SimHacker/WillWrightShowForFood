@@ -469,7 +469,7 @@ invitation_to_stakeholders:
   television_pitch: |
     A show about developing and playing games and tools — using AI honestly (code + orchestration;
     people voice and author). Bar Karma proved community-authored TV; Repo Show proves the repo.
-    Format spec: ../repo-shows/ideas/traditions/make-play-tools-show.yml
+    Format spec: ../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml
 
 see_also:
   - { path: VISION.md, why: "Hand-authored navigation layer — not script-generated" }

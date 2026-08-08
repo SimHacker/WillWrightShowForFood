@@ -7,7 +7,7 @@ tagline: "Fall in love with everyone. Get in line."
 
 title: "The Slap Conga"
 subtitle: "A SimProv relationship-chaos challenge"
-gag_spec: ../ideas/gags/slap-conga.yml
+gag_spec: ../../bits/gag-slap-conga/gag-slap-conga.yml
 
 what:
   one_line: |
@@ -32,7 +32,7 @@ kit:
   playset: SimProv Wedding Playset
   objects: [Cupid, Buddha, Crowd Sitter]
   catalog: ../../catalogs/simprov/README.md
-  prior_segment: ../ideas/gags/speed-dating-with-cupid.yml
+  prior_segment: ../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
 
 challenge_rules:
   setup: |
@@ -65,11 +65,11 @@ will_hooks:
 naming_note: |
   Brand: **Slap Conga**. Runner-up for this crowd: **Relationship Stack Overflow**.
   Cold-open anecdote title (not the brand): "Then They Lined Up to Slap Me."
-  Full alternatives and rationale: ../ideas/gags/slap-conga.yml#alt_titles
+  Full alternatives and rationale: ../../bits/gag-slap-conga/gag-slap-conga.yml#alt_titles
 
 pairs_with:
-  - ../ideas/gags/speed-dating-with-cupid.yml
-  - ../ideas/gags/pixelized-joint-wedding.yml
+  - ../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
+  - ../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
   - ./ian-bogost-procedural-rhetoric/SHOW.yml
   - ../../catalogs/simprov/README.md
   - ./SEGMENTS.yml

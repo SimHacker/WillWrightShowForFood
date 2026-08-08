@@ -1,0 +1,91 @@
+# The Riff Loop — people and AI riffing off people and AI, in a loop you can steer
+# The recursion running through the whole show: Slats' speech feedback loop, Jeff's SimObliterator
+# recursion, Eno's generative systems — same shape, different medium.
+
+id: the-riff-loop
+human: theme-the-riff-loop.md
+facade_mode: instance-first
+type: theme
+status: ready
+shows: [will-wright, jeff-adkins, brian-eno, nina-hagen]
+tagline: "AI and people riffing off AI and people — and you can jump in anywhere to steer it."
+
+the_pattern: |
+  A loop where each pass's output becomes the next pass's input, and BOTH people and AI take turns
+  riffing off each other AND off what the loop already made. It never repeats and it never finishes —
+  every round mutates the last. The magic is that it's STEERABLE: a human isn't outside the loop
+  pushing buttons, they're IN it, and can nudge it from any point in the cycle.
+
+the_four_ways_in:   # you can talk INTO, OVER, AFTER, and BEFORE the loop
+  into:   "Seed it — speak/prompt the material the loop chews on."
+  over:   "Talk OVER it live — layer on top while it runs; your voice becomes part of the mix it feeds back on."
+  after:  "Respond AFTER a pass — react to what it produced and feed that reaction in as the next input."
+  before: "Prime it BEFORE the next pass — pre-load context/constraints that bend where it goes."
+  point:  "Four handles on the same wheel. Steer + mutate from anywhere in the cycle; no pass is final."
+
+anchor_slats: |
+  Slats' SPEECH FEEDBACK LOOP is the canonical embodiment. His voice-synth stream-of-thought
+  robopoetry loops — output feeding back as input — and people talk INTO, OVER, AFTER, and BEFORE it
+  to steer and mutate the stream. Reincarnate Slats and the loop is live again: banter into it,
+  reprogram between passes, interview the result, feed that back. The diff between passes is the drama.
+  see: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml     # the_quest.loop + robopoetry_ceremony + speech_feedback_loop
+  brain_stream: ../../process/brain-stream.yml    # the show's own live thought-loop on the broadcast bus
+
+siblings:
+  jeff_recursion: |
+    Jeff Adkins' SimObliterator: AI copying AI copying people, better each pass — built with AI from
+    documented + open code, reimplemented into TypeScript with AI, round-tripping better each time.
+    Stone soup, the cauldron, cellular automata, Wolfram. The same loop, living in a codebase.
+    see: ../../repo-shows/jeff-adkins/ · ../../characters/jeff-adkins/ideas.md
+  eno_generative: |
+    Eno's generative systems: set rules running, then PLAY AGAINST them live — surrender + steer.
+    The performer is in the loop, not above it.
+    see: ../../repo-shows/brian-eno/
+  repo_show_itself: |
+    The whole Repo Show is one big riff loop: brain-stream on the bus, homefun/audience PRs fed back,
+    techniques bred in the cauldron via git. Show, don't tell.
+  directors_cut: |
+    The loop at PRODUCTION scale: discuss a person → invite their reaction → SPLICE it back into the
+    timeline → cut a longer new release. The show is a living git repo that accretes reactions and
+    re-releases as ever-longer Director's Cuts; the diff between releases is the drama. Because shows
+    ARE git repos, branch/merge/tag/fork are literal, not metaphor.
+    see: ../../process/repo-show-format.yml   # directors_cuts
+  cover_chain: |
+    The loop in MUSIC — resampling, covering, feeding back, adding more, transcending. One song, three
+    transformations: The Tubes' "White Punks on Dope" (1975) → Nina Hagen Band's "TV-Glotzer" (1978,
+    same music / all-new German lyrics) → Suppositori Spelling's drag cover at Trannyshack (~2000, intro
+    by Heklina). Each pass keeps the riff and mutates the meaning — rock satire → media-critique → drag
+    tribute. A pre-AI, all-human proof that the loop is old and universal; AI just adds another player.
+    see: ../../characters/nina-hagen/ideas.md   # hook #9, with links
+  feedback_jamming: |
+    The loop as LIVE avant-garde performance art — a direct ancestor. **AntiORP / "NATO OPERATORS"** (the
+    **Netochka Nezvanova** persona + the **nato.0+55** software) ran real-time **video + graphics feedback
+    jamming** over **UDP/TCP on a local-ethernet stage** — the **nettime** mailing list, Amsterdam
+    **STEIM**, the **Max/MSP** performance-art culture. They did it with video art over the wire; we do it
+    now with EVERYTHING — AI included — orchestrating and rendering the interactive **multi-user** feedback
+    loop. To quote (and elaborate) Nina Hagen's **"What It Is"**: *"Yeah they do it with art and Jimi did
+    it with sound."* Picasso, Dalí, Hendrix — the loop is not new; the players are.
+    see: ../../characters/nina-hagen/ideas.md   # hook #10: "What It Is" + NATO OPERATORS
+  tribute_before_attribution: |
+    The purest form of the loop's ethic: **loving the work before you know whose it is.** Doug Hilsinger
+    re-recorded Eno's whole *Taking Tiger Mountain* by hand; Don loved it **not knowing** Doug made it —
+    and Eno loved his OWN songs transformed by Doug. Same shape as **SimObliterator → VitaMoo**: AI copying
+    AI copying people, back and forth, each pass better — and **nobody strip-mined, everybody credited.**
+    That's not flattery; it's just what happened, and it's beautiful.
+    see: ../../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md
+
+why_it_matters: |
+  It reframes "AI vs people" as "people AND AI in a loop." Authorship isn't lost to the machine and
+  it isn't withheld from it — it's continuously RE-STEERED by whoever jumps into the cycle. That's the
+  RepoShow repossession thesis in motion: stay in the loop, keep your hands on the wheel.
+
+ties:
+  - ../../repo-shows/will-wright-premiere/slats-reincarnation.yml
+  - ../../process/brain-stream.yml
+  - ../../repo-shows/jeff-adkins/
+  - ../../repo-shows/brian-eno/
+  - ../../characters/nina-hagen/ideas.md   # cover chain: Tubes → Nina → Trannyshack; "What It Is" + NATO OPERATORS
+  - ../../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md   # tribute before attribution
+  - ../../process/repo-show-format.yml   # directors_cuts: the loop at production scale
+  - ./../theme-human-control-and-authorship/theme-human-control-and-authorship.md
+  - ./../theme-simulation-effect/theme-simulation-effect.md

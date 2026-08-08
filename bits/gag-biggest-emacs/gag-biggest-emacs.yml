@@ -1,0 +1,152 @@
+# The Biggest Emacs in the World — publicity stunt / world record attempt
+# "How big an Emacs can we run? Can it edit EVERY FILE IN THE FILE SYSTEM?"
+
+id: biggest-emacs
+type: publicity_stunt
+status: seed
+shows: [richard-stallman, brian-fox]   # emacs-lineage panel; also james-gosling thread
+
+title: "THE BIGGEST EMACS IN THE WORLD!!!"
+alt_titles:
+  - "M-x world-record"                # the command as the brand
+  - "Eight Terabytes And Constantly Swapping"  # the old EMACS backronym, inflated to spec
+  - "C-x C-f /"                       # find-file the universe; for the shirts
+  - "One Buffer Per File, Every File"
+
+why_this_name: |
+  BIGGEST EMACS wins the thumbnail: superlative + monosyllable + the one editor
+  civilians have heard jokes about. "Eight Terabytes And Constantly Swapping" is the
+  insider handshake (EMACS = Eight Megabytes And Constantly Swapping, when eight was
+  a lot) — use it as the subtitle. "C-x C-f /" goes on the shirt.
+
+elevator: |
+  One Emacs. Every file on the filesystem, open in a buffer, at once. Dired on /,
+  TRAMP for the remote planets, a live buffer counter like a telethon tote board.
+  We livestream the climb, crash, bisect, tune the GC, and climb again — speedrun
+  culture applied to a 1976 text editor — and when it stands, we pay Guinness for
+  the category, ON CAMERA, because it's pay for play and everybody knows it, and
+  making THAT the bit is funnier than pretending otherwise.
+
+the_record:
+  categories_to_buy:            # bespoke record consultancy — the fee IS the joke
+    - "Most files simultaneously open in a single text editor"
+    - "Largest total bytes open for editing at once"
+    - "Most buffers in one Emacs session"
+  metrics_board:                # telethon tote board, updated live
+    - buffers_open
+    - total_bytes_buffered
+    - gc_pauses_survived
+    - swap_used               # the constantly-swapping homage line
+  honest_engineering_notes: |
+    64-bit Emacs buffers cap near most-positive-fixnum (~2 exabytes of theory);
+    reality dies much sooner in memory, GC, and redisplay. That gap between theory
+    and death is the SHOW: chunked find-file, buffer lazy-loading, gc-cons-threshold
+    surgery, literal fog-of-war (only illuminate buffers the camera looks at —
+    see moollm HALLS-AND-ROOMS lights/dimmers). Every crash is content. Every
+    workaround is a segment.
+
+guinness_bit:
+  premise: "Pay-for-play, played straight AT the camera."
+  beats:
+    - "Crowdfund the bespoke-category consultancy fee live; tip jar per gigabyte opened."
+    - "Read the invoice aloud in the voice normally reserved for record certificates."
+    - "Frame the certificate next to a printout of the invoice. Equal frames. Same wall."
+    - "If Guinness declines: declare the 'Guinness declined this record' record. Self-certify. Gong."
+  epistemic_note: "Guinness's paid consultancy for bespoke categories is real and documented; the stunt satirizes the economics, not any specific fee we haven't been quoted."
+
+guinness_research:   # VERIFIED July 2026, from GWR's own pages
+  source:
+    - "https://www.guinnessworldrecords.com/business-marketing-solutions/faqs"
+    - "https://www.guinnessworldrecords.com/contact/application-enquiry"
+  documented_economics:
+    standard_application: "FREE — but only for individuals/small groups whose PRIMARY purpose is personal achievement. (The rules-lawyer segment writes itself: is a livestream with a tip jar 'personal achievement'?)"
+    priority_application: "US $800 (existing title) / $1,000 (new title); UK £500/£650. Buys a 5-working-day response. Available only to Standard applicants."
+    consultancy_trigger: "Businesses, brands, agencies, fundraisers, anyone attempting a record 'to gain fans/supporters' — REQUIRED to use fee-based Consultancy Services, quoted case-by-case against your brief. GWR's own FAQ says applications get REFERRED to consultancy based on 'complexity' or 'potential to require usage of the GWR brand name and assets.'"
+    adjudicator: "An official adjudicator at your event is ONLY available through consultancy."
+    bespoke_titles: "'In-depth record research process' to find/create your category — also consultancy-only."
+  the_catch_22_is_the_bit: |
+    A livestreamed Biggest Emacs attempt with a tip jar and a show brand is, by GWR's
+    own definitions, commercial — so the free route likely gets referred to consultancy
+    the moment they google us. Which is EXACTLY the joke: the show about pay-for-play
+    cannot avoid the pay, and we have their own FAQ on screen while the referral email
+    arrives. Fundraising floor to plan against: $1,000 (priority new-title, if we
+    somehow stay 'personal'); realistic consultancy quote unknown until briefed —
+    read the ACTUAL quote aloud on air, that's the certificate-voice segment.
+  fundraising_plan:
+    floor: "$1,000 — priority new-title application, the 'personal achievement' long shot"
+    ask_edd: "Real number arrives only via a consultancy brief; budget the tip-jar goal AFTER the quote, so the goal thermometer IS the invoice."
+  edd_coates_angle: |
+    Edd Coates (repo-shows/edd-coates/) built the Game UI Database — an enormous,
+    PECULIARLY SPECIFIC collection of game screen snapshots. Peculiarly specific is
+    exactly what bespoke Guinness categories are made of ('largest database of game
+    user-interface screenshots' is a category no one else on Earth could contest).
+    Talk to him about: whether he's explored a GWR category for the collection, what
+    the consultancy process looked like if so, what it would cost, what the evidence
+    rules are — and whether he wants to co-present the Biggest Emacs category
+    application segment as the man who knows what a definitive collection is.
+
+panel: # the Emacs lineage, most of whom are already in this repo
+  - { who: richard-stallman, why: "GNU Emacs; the AI Lab editor culture; will have OPINIONS about what counts as 'one Emacs'" }
+  - { who: brian-fox, why: "Maintained GNU Emacs; FSF employee #1; wrote readline — the small mirror of the big editor" }
+  - { who: james-gosling, why: "Gosling Emacs → GNU Emacs history; heard the doctor.el story from Don" }
+  - { who: "Jamie Zawinski", why: "Lucid Emacs / XEmacs fork pole (no room in repo yet) — governance-war color commentary" }
+  - { who: don-hopkins, why: "Host; ran Emacs on everything; pie menus vs M-x as the eternal input-war gag" }
+
+training_protocol:   # "Opening different sets of files is like lifting weights!"
+  driver: |
+    Cursor/Fable operates Emacs THROUGH the MOOLLM emacs skill Don built
+    (moollm/skills/emacs — daemon + emacs.py sister script: EVAL sexps with
+    structured results, moo-* intents, named emacsclient targets, emacs:// URLs).
+    The agent probes and drives the editor programmatically, on camera: to qualify
+    for the prize Emacs has to actually DO something and WORK — parse, fontify,
+    respond — not just malloc. Put the skill through its paces; the record attempt
+    doubles as the skill's stress test and demo reel.
+  why_own_source: |
+    Opening /usr/bin is dead weight — binary buffers don't make Emacs THINK.
+    Font-lock, syntax parsing, and mode hooks are the muscles; C and elisp source
+    make them fire. And the poetic maximum: EMACS OPENS ITS OWN SOURCE CODE.
+    More interesting than the Linux kernel (though the kernel is the encore).
+  progressive_overload:   # each set heavier; log reps to the tote board
+    - "SET 1 — warmup: every .el file in lisp/ (the standard library reads itself)"
+    - "SET 2 — its own C core: src/*.c, *.h — the editor holds its own implementation, fontified"
+    - "SET 3 — the whole source tree: every file in the emacs repo, one buffer each"
+    - "SET 4 — the stretch: add the build artifacts — every .o, the libraries, and ITS OWN RUNNING EXECUTABLE opened in hexl-mode (the snake eats its tail in hex)"
+    - "SET 5 — the encore: the GNU/Linux kernel source tree on top, until failure"
+  explosion_metric:   # the rubric of death — need a defined failure line for the record
+    instrumented: [buffers_open, total_bytes_buffered, gc_pause_ms, rss_and_swap, redisplay_latency_ms, time_to_fontify_new_buffer]
+    death_ladder:   # declare WHICH death ends the attempt, in advance, on camera
+      - "WHEEZING — GC pauses exceed 10s; redisplay visibly stutters (attempt continues)"
+      - "SEIZED — Emacs stops responding to emacs.py eval within 60s (attempt continues if it recovers)"
+      - "EXPLODED (official end): OOM-killed, or system freeze requiring intervention, or actual reboot"
+    note: "If the box reboots we wait for it like a gong that rings itself. The death ladder is the 'explosion metric' the record needs — Guinness evidence rules want an objective endpoint; so does comedy."
+  work_proof:   # 'it has to DO something' — periodic proof-of-life tasks between sets
+    - "emacs.py eval: occur across all buffers for a chat-chosen regexp (the regexp tax, paid on camera)"
+    - "M-x doctor session opened IN the loaded session (see segment)"
+    - "Random donor buffer: goto-line, narrow, edit, undo — proving undo history survives"
+
+live_show:
+  cold_open: |
+    Don: "EMACS stood for Eight Megabytes And Constantly Swapping, because eight
+    megabytes was a comical amount of memory. Tonight we find out what's comical now."
+    Cut to the tote board at zero buffers.
+  segments:
+    - "THE CLIMB — dired /, find-file storm, counter spinning; chat picks which directory trees load next (fog of war lifts where the audience looks)"
+    - "M-x doctor ON ITSELF — the doctor consoles Emacs about its memory usage (doctor.el + RMS-vs-Doctor lore from the stallman room)"
+    - "M-x butterfly — xkcd 378 read aloud as liturgy by the Church of the Eval Genius; cosmic rays optional"
+    - "THE WALL — first OOM/GC death; bisect and tune live like a speedrun routing session"
+    - "PANEL — what even IS 'one Emacs'? (RMS rules-lawyer segment we WANT to lose control of)"
+    - "CERTIFICATE + INVOICE — the framing ceremony; Ultimate Machine gongs the stream off"
+  audience:
+    - "Tip jar per gigabyte; donors' filenames get opened on camera (repo-safe files only)"
+    - "TicketPR tag: biggest-emacs; PRs adding files to the record corpus = audience seats"
+
+ties_to:
+  - ../../characters/richard-stallman/    # EMACS ability, RMS-VS-DOCTOR, copyleft
+  - ../../characters/brian-fox/           # BASH {0} mana; Emacs maintainership
+  - ../../characters/james-gosling/       # Emacs history counterpart
+  - ../../characters/don-hopkins/
+  # moollm resonance: the microworld's dream — every file in the world open at once —
+  # is just MOOLLM with the lights all on. The stunt is the glossary's ROOM entry
+  # performed as vaudeville: dired IS ls, the buffer list IS the palace, and fog of
+  # war is the only reason any of it fits in memory. Also LOAD-BEARING irony:
+  # "biggest Emacs" is a stunt about a system famous for carrying everything.

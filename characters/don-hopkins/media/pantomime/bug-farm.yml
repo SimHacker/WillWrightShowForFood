@@ -31,7 +31,7 @@ screenshots:
     - "Spider on table with ant and hold-note parchment"
 
 compulsion_audio:
-  parallel: "../../../../repo-shows/ideas/gags/curiosity-cow-cube.yml#click_audio"
+  parallel: "../../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml#click_audio"
   idea: "Optional far-away insect chitter between squishes — same retention grammar, different phylum"
 
 menagerie:
@@ -42,4 +42,4 @@ menagerie:
 
 see_also:
   - INDEX.yml
-  - ../../../../repo-shows/ideas/gags/pantomime-gallery.yml
+  - ../../../../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml

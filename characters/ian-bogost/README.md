@@ -31,7 +31,7 @@ Sources: [`sources/cow-clicker.yml`](sources/cow-clicker.yml) · [Wikipedia](htt
 
 **Show beat:** contrast with Peter Molyneux's *Curiosity* (2012) — cube clicker hype without Bogost's
 critical frame. Don's [Unite 2012 Amsterdam](https://www.youtube.com/watch?v=24AY4fJ66xA&t=1h08m21s)
-cow joke (Molyneux didn't get it) → [`../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml`](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml). Repo parody keeps Curiosity **dead**; center is Bogost's cow: [`curiosity-cow-cube`](../../repo-shows/ideas/gags/curiosity-cow-cube.yml).
+cow joke (Molyneux didn't get it) → [`../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml`](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml). Repo parody keeps Curiosity **dead**; center is Bogost's cow: [`curiosity-cow-cube`](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml).
 
 ## Artifacts
 

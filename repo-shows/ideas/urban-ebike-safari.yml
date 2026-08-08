@@ -336,11 +336,11 @@ competitive_gap:
   flow_lacks: [voice_first_ux, story_graph, adventure_navigation, audience_card_git_layer]
   we_have: "Fifteen years of shipped iterations + MOOLLM parser + Repo Show audience model"
 
-swag:
+../../bits:
   will_sticker_culture: "Will loves industrial-warning / absurd stickers — SFC gift seeded packs"
   art_lead: ../../characters/howard-penner/README.md
-  packs: swag/sfc-sticker-packs.yml
-  voystick_warnings: swag/voystick-warning-stickers.yml
+  packs: ../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
+  voystick_warnings: ../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
   seed_art: ../../characters/will-wright/media/swag/sfc-warning-sticker-moving-machinery.png
   howard_deliverable: "Big WARNING chest-panel tees + kiss-cut carnage sheets — Howard illustrates stick figures"
   hero_tee: hands-on-handlebars  # HANDS MUST REMAIN ON HANDLEBARS
@@ -362,9 +362,9 @@ ties:
   - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
   - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
   - ../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
-  - ../../repo-shows/ideas/swag/sfc-sticker-packs.yml
-  - ../../repo-shows/ideas/swag/voystick-warning-stickers.yml
-  - ../../repo-shows/ideas/swag/INDEX.yml
+  - ../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
+  - ../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
+  - ../../bits/INDEX.yml
   - ../../characters/will-wright/media/swag/INDEX.yml
   - ../../characters/will-wright/sources/2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
   - ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md

@@ -1,6 +1,6 @@
 # MOOLA
 
-[Simulated art opening](simulated-art-opening.md) · [Art Thief](art-thief-game.md) · [Curiosity cow cube gag](../repo-shows/ideas/gags/curiosity-cow-cube.yml)
+[Simulated art opening](simulated-art-opening.md) · [Art Thief](art-thief-game.md) · [Curiosity cow cube gag](../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml)
 
 ---
 

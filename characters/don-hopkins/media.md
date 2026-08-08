@@ -368,7 +368,7 @@ retrocomputing t-shirt emporium: [github.com/larsbrinkhoff/t-shirts](https://git
 
 Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat mouse, working
 **Bluetooth mouse + chord keyset kits** (resin, metal, PCBs, arm mount). Catalog:
-[`../../repo-shows/ideas/gags/lightpenisland-net.yml`](../../repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division).
+[`../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml`](../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division).
 
 ## Photos by Don in other galleries
 

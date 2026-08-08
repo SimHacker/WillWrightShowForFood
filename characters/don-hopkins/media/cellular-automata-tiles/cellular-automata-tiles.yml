@@ -99,7 +99,7 @@ repo_orbit:
   simcity_lineage: ../../career/simcity-lineage.yml
   scott_draves: ../../../scott-draves/CHARACTER.yml
   gags:
-    - ../../../../repo-shows/ideas/gags/cellular-automata-simcity-tiles.yml
+    - ../../../../bits/gag-cellular-automata-simcity-tiles/gag-cellular-automata-simcity-tiles.yml
 
 menagerie:
   slats: "I trained on tube worms. You're welcome."

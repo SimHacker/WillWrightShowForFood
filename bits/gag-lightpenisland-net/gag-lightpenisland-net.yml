@@ -1,0 +1,991 @@
+# lightpenisland.net — regular Repo Show sponsor · SWAG emporium
+# Operator: Ground Up Software · Registrar: Hover
+# Born: PIXIE sponsor gag (Light Pen Bureau) → network regular
+
+id: lightpenisland-net
+type: gag
+role: regular_sponsor
+status: domain_registered
+shows: [all_repo_shows]
+flagship_gag: pixie-pie-menus-pdp7
+domain: lightpenisland.net
+registrar: hover
+operator: Ground Up Software
+sponsor_gag: ../gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
+
+regular_sponsor:
+  one_line: "Our regular sponsor — where you can get **SWAG** ;)"
+  on_every_show: true
+  read: |
+    And now, a word from our **regular sponsor** — **lightpenisland.net**.
+    Finest quality custom light pens. Laser cat toys. Toy sabers. Presentation pointers.
+    Engelbart mouse and keyset replicas, kits, and maker guides.
+    **3D printable fake light pens** — plug-in USB LED edition; anyone can make one tonight.
+    **Repo Show SWAG.** Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully.
+  telecine: "Optional Cambridge jiggle slate on PIXIE episodes; plain retro card on other shows"
+  swag_url: https://lightpenisland.net/swag
+  pixie_variant: "Computing Laboratory — Light Pen Bureau (1969 film insert)"
+
+tagline: "Your light pen is our business."
+url_repeat: "Lightpenisland dot net. I repeat, lightpenisland.net. Surf carefully."
+
+comic_register:
+  surface: |
+    **Straight-faced normalcy** — deadpan late-web custom pen shop, serif caps, wood specialty,
+    real products, brother site to penisland.net. Every line defensible as literal *light pen* copy.
+    Played like a genuine sponsor film insert or family catalog. Never break character on air.
+  under_the_surface: |
+    Just below the surface: a **running penis gag** (infamous domain parsing) — *lightpenisland.net*
+    spoken as one word invites the ear to hear another famous pen-shop domain. Same energy as the
+    opening of *Austin Powers: The Spy Who Shagged Me* — ostensibly respectable credits and copy,
+    absurd subtext for anyone listening with one ear tuned to parsing. The joke runs; the face stays straight.
+  delivery_references:
+    - "Austin Powers: The Spy Who Shagged Me — opening credits; respectable surface, running subtext"
+    - "Half-Life propaganda videos — Breencasts / Combine civic announcements; earnest institutional film, flicker, zero irony in the voice, wrongness underneath"
+    - "Futurama — Professor Farnsworth Finglonger homage (scale line only; see maker_light_pen#futurama_homage)"
+  how_it_plays:
+    - "Read the URL twice, deadpan — *surf carefully* is the only permitted wink"
+    - "Cambridge telecine jiggle sells it as 1969 bureaucracy, not comedy — or Half-Life propaganda earnestness"
+    - "Brother site link is sincere respect; the penis gag is ours, not at their expense"
+    - "Audience who get it, get it; audience who don't, still get light pens"
+  not: "Not crass on-page copy — the gag lives in spoken URL + domain, not product descriptions"
+  sizing_gag: |
+    **Exception — scale line:** proportional 2×/3×/4× replicas, *Finglonger* fixed extended-reach,
+    and **Lightpenlonger** telescoping editions are a **silent** second penis gag — deadpan
+    museum/trade-show/deep-bezel copy only. Never anatomical; never wink.
+
+family_site:
+  tone: "Clean deadpan retro family web shop — **light** + **pen**, literally."
+  not: "Not adult merchandise — family-safe light pens, styluses, and pointer toys."
+  copy_rule: |
+    Every product must be defensible as a *light pen*, *light* + *pen-shaped thing*, or
+    **1968 demo-desk pointing & chording** (Engelbart mouse / keyset replicas, kits, maker guides).
+
+disclaimer: |
+  Repo Show sponsor emporium for Repo Show / PIXIE comedy. Family-friendly catalog:
+  styluses, pen lights, laser cat toys, toy sabers, presentation pointers — things that emit light
+  and/or are pen-shaped. Not affiliated with Cambridge University or Disney.
+  Not PDP-7 Type 340 CRT light pens unless Lars boots one.
+
+brother_site:
+  url: https://penisland.net/
+  relationship: brother_site
+  their_tagline: "Your Pen Is Our Business."
+  our_tagline: "Your light pen is our business."
+  do_not_cross_beams: |
+    We do **not** compete with, punch down on, or parody at the expense of penisland.net. Same deadpan
+    custom-pen-shop lineage; **aligned goals**; **both looking ahead**. Cross-link with respect —
+    they are our **brother site**.
+  placement:
+    - footer_every_page
+    - faq
+    - optional_about_blurb
+  footer_label: "Brother site — penisland.net"
+  link_text: "Brother site — penisland.net"
+  footer_line: |
+    Brother site to [penisland.net](https://penisland.net/) — *Your Pen Is Our Business.*
+    We are **lightpenisland.net** — *Your light pen is our business.* Looking ahead together.
+  faq_answer: |
+    Are you related to penisland.net? **Brother site** — same deadpan pen-shop energy, different
+    product line. They sell pens; we sell **light pens**. Aligned goals; we do not cross beams.
+
+inspiration:
+  spec: "#brother_site"
+  site: https://penisland.net/
+  note: "Brother site — shared deadpan custom-pen-shop spirit; light pens, not competition"
+
+site_plan:
+  vibe: |
+    Late-90s / early-web custom pen shop — serif caps, wood specialty, deadpan copy.
+    **Plus:** Apple II **Beagle Bros** manual joy — whimsical borders, hand-lettered callouts,
+    historic line-art from dead-iron docs (played straight on a family site).
+  nav:
+    - home
+    - swag
+    - wood
+    - plastic
+    - samples
+    - maker_light_pen
+    - manuals
+    - cat_division
+    - saber_division
+    - augment_division
+    - presentation
+    - bureau_picks
+    - amazon_picks
+    - testimonials
+    - faq
+    - contact
+  pages:
+    home: "Finest Quality Custom Light Pens"
+    swag: "Repo Show SWAG — Repo Show · Light Pen Bureau · episode drops"
+    wood: "We Specialize In Wood — yellowheart, mahogany, EZ-Grip"
+    plastic: "Bluetooth indicator-light models"
+    samples: "Type 340 EZ-Grip · Titan Link edition"
+    maker_light_pen: "3D Printable Fake Light Pen — Type 340 historic replica · USB LED or embed kit"
+    manuals: "Historic illustrations from old manuals — PDF downloads (bitsavers)"
+    cat_division: "Laser Pointer Cat Toys — Red Dot Bureau"
+    saber_division: "Light Sabers & LED Sword Pens — Graphics Satellite Division"
+    augment_division: "Engelbart Mouse & Keyset Replicas — Kits & Maker Guides · Expositions"
+    presentation: "Conference pointers · pen lights · wireless presenters"
+    bureau_picks: "Bureau Picks — we stock · affiliate geek picks · museums we send you to anyway"
+    amazon_picks: "Amazon Picks — Light Pen Bureau curated lists (subset of Bureau Picks)"
+    testimonials: "Heinz U. Lemke would like a high-res scan"
+    faq: "Is this a real light pen? Define real. (Also: we are a family site.)"
+    contact: "sales@lightpenisland.net"
+  hero_gif: "your-light-pen-is-our-business.gif — Cambridge telecine jiggle optional"
+  footer:
+    copyright: "Copyright Light Pen Bureau · Regular Repo Show Sponsor · Ground Up Software"
+    brother_site:
+      url: https://penisland.net/
+      label: "Brother site — penisland.net"
+      visible: true
+      opens_in_new_tab: true
+
+partner_emporiums:
+  lars_brinkhoff_t_shirts:
+    url: https://github.com/larsbrinkhoff/t-shirts
+    guest: ../../characters/lars-brinkhoff/
+    what: |
+      Lars Brinkhoff's **real** retrocomputing t-shirt design repo — PDP-10, Lisp Machine Inc.,
+      Interlisp, IMP, DEC, Zork (1978), and other vintage logotypes. Not sold on lightpenisland.net;
+      cross-link on PIXIE / Lars segments. Don wears one on stream (LISP MACHINE MANUAL — see
+      characters/don-hopkins/media.md).
+    on_air: "Wear one of mine — host wardrobe nod during lars_emulation or introductions"
+
+manual_library:
+  vibe: "Apple II **Beagle Bros** manual pages — friendly borders, hand-lettered jokes that read as technical footnotes"
+  on_site: lightpenisland.net/manuals
+  each_entry: "Historic illustration plate + caption + **Download PDF** link (bitsavers or CHM mirror)"
+  sponsor_spot: "Intercut plates during light_pen_bureau_sponsor read — telecine jiggle per figure"
+  woz: "../../characters/steve-wozniak/"
+  woz_note: "][ hacker-doc aesthetic — Woz will love it"
+  pdfs:
+    - id: type-340-display
+      title: "DEC Type 340 Display Programming Manual"
+      url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf
+      use: "Light pen hits, display list, vector refresh — Lars segment cross-link"
+    - id: pdp7-handbook
+      title: "PDP-7 Peripherals Handbook (excerpt)"
+      url: http://bitsavers.trailing-edge.com/pdf/dec/pdp7/
+      use: "Graphics satellite context — link to handbook index until exact plate chosen"
+  illustrations:
+    style: "Line art from above PDFs — cropped figures, Beagle Bros border treatment, deadpan captions"
+    captions_examples:
+      - "FIG. 7 — Light pen proximity detector (not a cat laser)"
+      - "APPENDIX B — Titan link nightly batch etiquette"
+      - "WARRANTY VOID IF PARSED INCORRECTLY"
+    engelbart_plates:
+      cross: engelbart_division#exposition_catalog
+      sources: [CHM SRI mouse artifact, Stanford MouseSite, dougengelbart.org/theMouse]
+      use: "Augment Division + /augment/expositions — same border treatment as Type 340 manuals"
+
+swag:
+  tagline: "Where you can get SWAG ;)"
+  repo_show:
+    - "Repo Show / Repo Show logo tees & hoodies"
+    - "Pie menu 🥧 sticker sheets · radial menu slap bands"
+    - "User Interface Flower Child 🌀 enamel pin"
+    - "Department of Research Simulation mug"
+    - "Light Pen Bureau trucker hat — serif caps"
+    - "Read The Fucking Repo bookmark (glow pen clip)"
+  episode_drops:
+    pixie_pie_menus_pdp7:
+      - "PIXIE 1969 bud pin set — Heinz · Lars · DSHR"
+      - "Type 340 Fake Light Pen — USB LED maker zine + free STL (PIXIE drop)"
+      - "Type 340 EZ-Grip mini (Bluetooth stylus SWAG box)"
+      - "Engelbart mouse replica mini (desk ornament) · chord keyset sticker sheet"
+      - "Engelbart keyset clicky toy · Engelbart mouse cat toy (Augment × Red Dot Bureau)"
+      - "Mother of All Demos maker zine — Build Your Own Engelbart Mouse (abbrev)"
+      - "Flight of the Bumblebee sticker"
+      - "Cambridge telecine jiggle poster (meta)"
+  channels: [lightpenisland.net/swag, bureau_picks, amazon_picks, direct_dropship]
+  fulfillment: "Print-on-demand (tees) + OEM stylus box + affiliate long tail + goodwill museum links"
+
+catalog:
+  core_light_pens:
+    - "Type 340 Fake Light Pen — 3D print + USB LED (1×–4×, Finglonger, Lightpenlonger telescoping)"
+    - "Type 340 EZ-Grip — Bluetooth stylus, indicator LEDs (OEM dropship)"
+    - "Petite yellowheart wood barrel + capacitive nib"
+    - "Thick dark mahogany presentation stylus"
+    - "Medical pen light — LED inspection (real pen light)"
+    - "UV currency-check pen light"
+    - "Glow / LED writing pens"
+  cat_division:
+    dept: "Red Dot Bureau"
+    products:
+      - "Handheld laser pointer cat toys (automatic random mode)"
+      - "USB-rechargeable pet chase lasers"
+      - "Wall-mount laser pet exercisers"
+    gag_line: "Distributed CAD for cats — interactive pointing here, chaos there"
+  saber_division:
+    dept: "Graphics Satellite Division"
+    products:
+      - "Toy light sabers (LED, foam, kids)"
+      - "Mini saber keychain pen lights"
+      - "Collapsible LED sword pens (novelty)"
+    note: "Unlicensed generic 'light saber' wording on site; licensed SKUs only in Amazon picks if needed"
+  presentation:
+    products:
+      - "Wireless presenter pens with laser dot"
+      - "Classic red laser pointers (conference safe)"
+      - "Green laser astronomy pens (with safety copy)"
+    heritage_amazon: "logitech_presenters — see curated_outbound#heritage_partners.logitech"
+  drawing_tablet:
+    - "Light boxes / tracing pads — draw like it's 1969"
+    - "Artist stylus pens with eraser end"
+  reading_nightly:
+    pun: "Titan Link — Nightly Batch Division"
+    products:
+      - "Clip-on book lights"
+      - "Rechargeable pen-shaped reading lights"
+  fiber_and_novelty:
+    - "Fiber-optic novelty pens"
+    - "Flashlight pens (multi-tool)"
+    - "Neon sign desk accessory: LIGHT PEN BUREAU"
+  maker_light_pen:
+    dept: "Type 340 Maker Division — Historic Light Pen Replicas"
+    historic_model: "DEC Type 340 / PDP-7 graphics-satellite light pen barrel (1960s)"
+    zeitgeist: "Same era as PIXIE (1969) — vector CRT, light pen hits, not yet Bluetooth"
+    cross: [manual_library#type-340-display, ../../characters/lars-brinkhoff/, flagship_gag]
+    gag_line: "Is it a real light pen? Define real. USB LED acceptable."
+    thesis: |
+      **3D-printable fake light pen** modeled after a historic barrel — fun toy **anyone can make
+      tonight**. Easiest path: printed shell + **plug-in USB LED** (commodity keychain flashlight —
+      **no battery, no solder**). Next: embedded LED, coin cell, wires, switch in printed channels.
+      Pamphlet + user manual tell the true Type 340 story. **Leads the way** to a real working stylus;
+      the fake is the on-ramp.
+    replica_pyramid:
+      usb_led:
+        tier: gateway
+        catalog_name: "Type 340 Fake Light Pen — USB LED Edition"
+        sku: T340-FAKE-USB
+        what: "Printed barrel + tip; cavity accepts plug-in USB LED mini-flashlight"
+        bom: [3D_printed_shell_STL, USB_led_keychain_or_plug_in_flashlight, optional_diffuser_cap]
+        battery: none — host USB port powers LED
+        skill: "Print. Insert USB LED. Plug in. Point."
+        copy: "Simply a plug-in USB LED flashlight in the shape of a light pen. Fake light pen. Real fun."
+      embed_led:
+        tier: maker
+        catalog_name: "Type 340 Fake Light Pen — Embed LED Kit"
+        sku: T340-FAKE-LED
+        what: "Shell with wire channels; LED, battery holder, slide switch"
+        bom: [shell_STL, 3mm_or_5mm_LED, CR2032_holder_or_AAA, slide_switch, magnet_wire]
+        skill: "One afternoon — minimal or no solder"
+      real_path:
+        tier: serious
+        points_to: type-340-ez-grip
+        copy: "When the fake pen stops being enough — Type 340 EZ-Grip Bluetooth stylus (Samples)"
+        not_yet: "CRT-coupled PDP-7 Type 340 — when Lars boots one"
+    scale_line:
+      register: comic_register#sizing_gag
+      reference_scale: 1X
+      futurama_homage:
+        what: "Professor Hubert J. Farnsworth — *Finglonger* extended-reach gag → Bureau **Lightpenlonger**"
+        source: "Futurama — *Anthology of Interest I* (What-If Machine); Farnsworth's finger-extender invention"
+        homage_not_endorsement: "Tribute in catalog naming and manual FIG. captions — not Fox/Disney merch; no logos on storefront"
+        farnsworth_line: |
+          "So that's what things were like before I invented the fing-Finglonger." — Bureau reads it as
+          extended-reach pointing-device ergonomics. Never quote on hero banner; pamphlet footnote OK.
+        bureau_mapping:
+          finglonger: "Fixed stretched barrel — same radius, extra length (static Finglonger edition)"
+          lightpenlonger: "Telescoping nested barrels — compact stow, extend on demand (Lightpenlonger™)"
+        on_site_voice: "Deadpan CRT reach copy — audience who get Futurama, get it"
+        pamphlet_footnote: "Extended-reach editions inspired by classic sci-fi ergonomics satire — Professor not included."
+      proportional:
+        what: "Authentic Type 340 replica geometry — **uniform scale** (diameter and length together)"
+        sizes: [1X, 2X, 3X, 4X]
+        surface_copy:
+          - "Reference-scale authentic replica — period documentation"
+          - "2× museum pedestal / instruction demonstrator"
+          - "3× trade-show visibility format"
+          - "4× oversize demonstration unit — computing heritage exhibits"
+        skus: [T340-1X, T340-2X, T340-3X, T340-4X]
+      finglonger:
+        homage: futurama_homage#finglonger
+        what: "Extended-reach edition — **same barrel radius as 1×**, additional length only (stretched)"
+        catalog_name: "Type 340 Extended Reach — Finglonger Edition"
+        sizes: [2X_reach, 3X_reach, 4X_reach]
+        surface_copy:
+          - "Deep-bezel vector display reach extension"
+          - "Wide-format plotting station operator comfort"
+          - "Additional span for operators seated far from the tube"
+        internal_gag: "Farnsworth Finglonger homage — for people who have something to prove; never print that phrase"
+        skus: [T340-FING-2X, T340-FING-3X, T340-FING-4X]
+      lightpenlonger:
+        homage: futurama_homage#lightpenlonger
+        catalog_name: "Type 340 Telescoping — Lightpenlonger Edition"
+        trademark_tone: "Lightpenlonger™ on manual cover only — deadpan small caps"
+        what: "Nested sliding barrels — **collapses to ~1×**, extends to 2×–4× total reach on demand"
+        mechanism: [printed_telescoping_tubes, friction_fit_or_detent_rings, optional_twist_lock_collar]
+        stages: [2_stage, 3_stage, 4_stage]
+        surface_copy:
+          - "Collapsible reach for mobile drafting stations"
+          - "Telescoping pointer for auditorium vector-display instruction"
+          - "Satisfied operators report improved confidence at the CRT"
+        manual_easter_egg: "FIG. 12 — Telescoping barrel extension (Bureau Lightpenlonger™; Professor not included)"
+        bom_add: [nested_section_STLs, optional_brass_tube_liner, USB_LED_tip_rides_outer_barrel]
+        skus: [T340-LPL-2STG, T340-LPL-3STG, T340-LPL-4STG]
+      applies_to: [usb_led_cavity, embed_led_kit, resin_display_finished, lightpenlonger_telescoping_kit]
+      open_models_note: "All scale variants in free STL pack — parametric or separate files per size"
+    open_models:
+      free: true
+      url: lightpenisland.net/maker-light-pen/models
+      formats: [STL, STEP, 3MF]
+      variants:
+        - usb_led_cavity
+        - embed_led_wire_channels
+        - desk_stand
+        - EZ-Grip_grip_texture
+        - scale_1X_2X_3X_4X_proportional
+        - finglonger_2X_3X_4X_same_radius
+        - lightpenlonger_telescoping_2_3_4_stage
+    documentation:
+      pamphlet:
+        title: "What Was a Type 340 Light Pen? — Bureau Pamphlet No. 340"
+        format: [PDF, print_at_home_tri_fold]
+        contents:
+          - historic_product_plates_from_manual_library
+          - PIXIE_1969_and_PDP-7_graphics_satellite_context
+          - how_CRT_light_pens_detected_screen_hits
+          - this_kit_is_a_fake_pen_define_real
+          - extended_reach_footnote_futurama_homage_pamphlet_only
+        cross: manual_library#type-340-display
+      user_manual:
+        title: "Type 340 Fake Light Pen — Assembly Instructions"
+        style: "manual_library vibe — Beagle Bros borders, deadpan FIG. captions"
+        sections:
+          - usb_led_path — fastest; no battery
+          - embed_led_path — LED, wires, switch, battery
+          - print_settings — FDM, resin, tolerances for USB cavity
+          - scale_line — 1×–4× proportional; Finglonger fixed reach; Lightpenlonger telescoping (Farnsworth homage)
+          - safety — not for CRT; novelty pointer only
+          - faq_define_real — link site_plan.pages.faq
+      bundled_with: [free_STL_download, embed_led_kit_SKU, optional_printed_pamphlet_insert]
+    kits:
+      - "USB LED edition — shell STLs + pamphlet + manual PDF (bring your own USB LED)"
+      - "Embed LED edition — shell + LED + holder + switch + wire + pamphlet + manual"
+      - "Scale pack — 1×/2×/3×/4× + Finglonger + Lightpenlonger telescoping (free STL bundle)"
+      - "Lightpenlonger kit — nested tubes + USB LED tip + pamphlet (Professor not included)"
+    cross_sell: [type-340-ez-grip, engelbart_division#moad-desk-bundle, manual_library]
+  engelbart_division:
+    dept: "Augment — Human Intellect Bootstrap Division"
+    character: ../../characters/douglas-engelbart/
+    maker_program: "#engelbart_division"
+    memorial: "Douglas Engelbart (1925–2013) — open tribute models & maker education; not SRI endorsement"
+    zeitgeist: "Mother of All Demos (1968-12-09) — same pointing-device era as PIXIE (1969)"
+    gag_line: "Augment your light pen — bootstrap sold separately"
+    open_models:
+      free: true
+      url: lightpenisland.net/augment/models
+      formats: [STL, STEP, 3MF]
+      anyone_can: "3D-print FDM, cast resin, CNC metal inserts — remix OK with attribution"
+    replica_pyramid:
+      thesis: |
+        **Multi-resolution replicas** — same mouse and keyset lineage from free makable files at the
+        bottom to conveniently buyable finished products at the top. Democratize the demo desk; monetize
+        the people who want it on their desk this week.
+      calibration:
+        tone: "Reference-calibrated against period hardware — measured, photographed, reproducible"
+        confidence: "Museum-grade dimensions; production-ready when you are tired of printing"
+        do_not_say: [we own the original, private collection, auction provenance, whose keyset]
+        public_copy: "Calibrated from reference hardware and period documentation — Augment Division spec"
+      mouse:
+        resolutions:
+          - tier: archivist
+            catalog_name: "Engelbart Mouse — Full Maker Geometry"
+            sku: AUG-MSE-FREE
+            price: free
+            channel: [lightpenisland.net/augment/models]
+            formats: [STL, STEP, 3MF]
+          - tier: swag
+            catalog_name: "Engelbart Mouse — Resin Display / Clicky Toy"
+            sku: AUG-MSE-SWAG
+            channel: [direct, swag]
+          - tier: kit
+            catalog_name: "Engelbart Mouse Replica Kit — wheels, encoder, Bluetooth optional"
+            sku: AUG-MSE-KIT
+            channel: [direct, amazon]
+          - tier: finished
+            catalog_name: "Engelbart Mouse — Assembled Working Bluetooth HID"
+            sku: AUG-MSE-BT
+            convenience: "For buyers who want the desk, not the weekend"
+            channel: [direct, amazon]
+      keyset:
+        resolutions:
+          - tier: archivist
+            catalog_name: "Five-Finger Chord Keyset — Full Maker Geometry"
+            sku: AUG-KEY-FREE
+            price: free
+            channel: [lightpenisland.net/augment/models]
+            formats: [STL, STEP, 3MF]
+          - tier: swag
+            catalog_name: "Chord Keyset Clicky Toy / Mini Desk Ornament"
+            sku: AUG-KEY-SWAG
+            channel: [direct, swag]
+          - tier: kit
+            catalog_name: "Chord Keyset Kit — switches, PCB, arm mount, RP2040 firmware"
+            sku: AUG-KEY-KIT
+            channel: [direct]
+          - tier: finished
+            catalog_name: "Chord Keyset — Assembled Working Bluetooth HID (arm mount optional)"
+            sku: AUG-KEY-BT
+            convenience: "Five keys, one hand, zero excuses"
+            channel: [direct]
+      bundle:
+        catalog_name: "Mother of All Demos Desk Set — Mouse + Keyset + Light Pen Stylus Tray"
+        sku: AUG-MOAD-BUNDLE
+        channel: [direct, swag]
+        cross_sell: [type-340-ez-grip, logitech_spotlight]
+    product_tiers:
+      free_download: "STL/STEP — clicky toys, display shells, full maker geometry"
+      swag: "Printed clicky toys, cat mouse, mini ornament, stickers, MOAD bundle"
+      working_bluetooth:
+        mouse: "Resin/metal shell, wheels, encoder PCB, Bluetooth HID — real mouse"
+        keyset: "Switches, PCB, arm mount, Bluetooth HID chord keyboard"
+        kit: "Full BOM — fiberboard palm rest, hardware, firmware, assembly guide"
+    replicas:
+      - "Engelbart mouse — free STL; SWAG clicky toy; working Bluetooth kit"
+      - "Five-finger chord keyset — free STL; SWAG clicky toy; working Bluetooth kit + arm mount"
+      - "Engelbart mouse cat toy — wooden-mouse silhouette; Red Dot Bureau crossover"
+      - "Mother of All Demos desk set — mouse + keyset + light pen stylus (SWAG bundle)"
+    kits:
+      - "Mouse kit — shell STLs + metal wheels + encoder PCB + Bluetooth firmware"
+      - "Keyset kit — switches, PCB, arm mount, RP2040 chord firmware"
+      - "Demo desk bundle — mouse + keyset + Type 340 EZ-Grip stylus tray"
+    maker_guides:
+      - "Build Your Own Engelbart Mouse — free models + BOM + Bluetooth option"
+      - "Chord Keyset for Beginners — five keys, arm mount, Augment notation primer"
+      - "Demo Desk 1968 — layout guide: light pen, mouse, keyset"
+    exposition_catalog:
+      register: |
+        Historic expositions, illustrations, stories, and videos — listed **as if they were products**
+        on a deadpan family catalog. Price: free. Fulfillment: your attention. Not sold by Light Pen
+        Bureau; curated outbound to the cathedral. Same Beagle Bros manual vibe as /manuals.
+      page: lightpenisland.net/augment/expositions
+      price_display_default: "Free — stream, read, or visit"
+      fulfillment_display: "Instant — open link"
+      sections:
+        demo_expositions:
+          title: "Demo Expositions — Mother of All Demos (1968-12-09)"
+          entries:
+            - id: moad-interactive
+              catalog_name: "Mother of All Demos — Interactive Chapterized Edition"
+              sku_style: EXP-MOAD-INT
+              url: https://dougengelbart.org/content/view/374/464
+              also: https://thedemo.org/
+            - id: moad-portal
+              catalog_name: "The Demo Portal — stories, footage, retrospectives"
+              sku_style: EXP-MOAD-PORTAL
+              url: https://www.dougengelbart.org/theDemo
+            - id: moad-stanford-mousesite
+              catalog_name: "Stanford MouseSite — annotated demo + archive plates"
+              sku_style: EXP-MOAD-MOUSESITE
+              url: http://mousesite.org/
+            - id: moad-internet-archive
+              catalog_name: "Engelbart Video Collection — Internet Archive masters"
+              sku_style: EXP-MOAD-IA
+              url: https://archive.org/details/dougengelbartarchives
+        mouse_and_keyset:
+          title: "Mouse & Keyset — firsts, illustrations, stories"
+          entries:
+            - id: first-mouse
+              catalog_name: "Firsts: The Mouse — invention, patent, Bill English, SRI shop"
+              sku_style: EXP-MOUSE-FIRSTS
+              url: https://dougengelbart.org/theMouse
+            - id: chm-sri-mouse
+              catalog_name: "SRI Prototype Mouse — Computer History Museum artifact plate"
+              sku_style: EXP-MOUSE-CHM
+              url: https://computerhistory.org/sri-mouse-mn052024/
+              illustration: "Line art / photos — manual-library border treatment on site"
+            - id: sri-mouse-history
+              catalog_name: "SRI — Computer Mouse and Interactive Computing (HOI)"
+              sku_style: EXP-MOUSE-SRI
+              url: https://www.sri.com/hoi/computer-mouse-and-interactive-computing/
+            - id: keyset-chord
+              catalog_name: "Five-Finger Chord Keyset — Augment notation primer (site copy + outbound)"
+              sku_style: EXP-KEY-CHORD
+              url: https://dougengelbart.org/
+              note: "Link to institute chord-keyset resources; our maker guide is the buyable companion"
+        philosophy_and_papers:
+          title: "Philosophy & Papers — augmentation, bootstrapping, intent"
+          entries:
+            - id: augmenting-human-intellect
+              catalog_name: "Augmenting Human Intellect: A Conceptual Framework (1962)"
+              sku_style: EXP-PAPER-AHI
+              url: https://www.dougengelbart.org/pubs/augment-3906.html
+            - id: bret-victor-intent
+              catalog_name: "A Few Words on Doug Engelbart — read the intent, not the feature list"
+              sku_style: EXP-ESSAY-BV
+              url: https://worrydream.com/Engelbart/
+              cross: ../../characters/bret-victor/
+            - id: bootstrap-institute
+              catalog_name: "Doug Engelbart Institute — bootstrapping mission (successor to Bootstrap)"
+              sku_style: EXP-INST-DEI
+              url: https://dougengelbart.org/
+        video_and_oral_history:
+          title: "Videos & Oral History — institute, CHM, retrospectives"
+          entries:
+            - id: dei-youtube
+              catalog_name: "Doug Engelbart Institute — YouTube channel"
+              sku_style: EXP-VID-DEI-YT
+              url: https://www.youtube.com/user/engelbartinstitute
+            - id: white-rabbit-chm
+              catalog_name: "A White Rabbit Interview — Doug Engelbart at CHM (1999)"
+              sku_style: EXP-VID-WHITE-RABBIT
+              url: https://youtu.be/MI47qdKqiiY
+            - id: ted-nelson-eulogy
+              catalog_name: "Ted Nelson's Eulogy for Douglas Engelbart — CHM (2013-12-09)"
+              sku_style: EXP-VID-TED-EULOGY
+              url: https://www.youtube.com/watch?v=gqqbfRjoISc
+              cross: ../../../characters/ted-nelson/eulogy-ted-nelson.md
+            - id: nelson-wedding
+              catalog_name: "Doug & Karen Engelbart Officiate Ted & Marlene Nelson's Wedding"
+              sku_style: EXP-VID-WEDDING
+              url: https://www.youtube.com/watch?v=TsKFbwLeS1k
+        institute_exhibits:
+          title: "Institute & Museum Exhibits — send traffic; we sell replicas they don't"
+          entries:
+            - id: chm-engelbart
+              catalog_name: "Computer History Museum — Engelbart collection & oral history"
+              sku_style: EXP-EXH-CHM
+              url: https://computerhistory.org/
+              shop: https://computerhistory.org/store/
+            - id: stanford-special-collections
+              catalog_name: "Stanford Libraries — Douglas C. Engelbart Collection"
+              sku_style: EXP-EXH-STANFORD
+              url: https://www.dougengelbart.org/theDemo
+              note: "Portal links to Special Collections exhibits"
+      catalog_rule: |
+        Every exposition row gets a deadpan product card — serif caps title, fake SKU, *Free* price,
+        one-line fulfillment. Cross-link to replica_pyramid SKUs on same page: *Prefer makable? Download.
+        Prefer buyable? See Augment Division.*
+      cross_to_replicas: replica_pyramid
+      cross_to_manuals: manual_library
+    cross_sell: [core_light_pens, presentation, drawing_tablet]
+    heritage_partners:
+      logitech:
+        why: "Built the mouse business on Doug's invention; kept Bootstrap Institute alive in Fremont"
+        see: curated_outbound#heritage_partners.logitech
+
+curated_outbound:
+  thesis: |
+    **Three lanes** — (1) **we stock** it; (2) **affiliate** — cool, valuable, good kickback;
+    (3) **goodwill** — no commission, link anyway because the place deserves traffic. Museums
+    sell what we don't; we sell (or affiliate) what they don't. Audience gets a curated map of
+    things we love too.
+  lanes:
+    we_carry:
+      what: "Shopify / FBA / kits — Light Pen Bureau SKUs"
+      page: "/swag · /augment · division pages"
+    affiliate_picks:
+      what: "We earn a cut — only list if we'd recommend it deadpan anyway"
+      disclose: "Affiliate link — Light Pen Bureau may earn from qualifying purchases"
+    goodwill_picks:
+      what: "No affiliate program (or we skip the program) — **point anyway**; drive traffic to preservation & oracles"
+      badge: "Bureau sends you — no kickback, we mean it"
+  split_with_museums:
+    rule: |
+      **Computer History Museum** and peers sell oral-history merch, exhibit books, member gifts —
+      stuff we don't carry. **Send buyers there.** We carry Engelbart kits, styluses, cat lasers,
+      presenter pens — and affiliate long-tail gadgets **CHM doesn't stock**. Complementary, not
+      competitive.
+    chm_they_have_we_dont: [gift_shop_books, membership, exhibit_catalogs, oral_history_donations]
+    we_have_they_dont: [engelbart_bluetooth_kits, type_340_ez_grip, cat_division, affiliate_gadgets]
+  affiliate_networks:
+    amazon_associates:
+      role: "Long-tail volume — cat lasers, presenters, pen lights, maker parts"
+      page: amazon_picks
+    geek_and_maker:
+      note: "Prefer authentic geek merchants over generic retail when kickback + product both win"
+      candidates:
+        - name: Adafruit
+          program: affiliate
+          fit: [rp2040_keyset_pcb, encoders, maker_electronics]
+        - name: SparkFun
+          program: affiliate
+          fit: [encoders, bluetooth_hid, maker_kits]
+        - name: B&H Photo
+          program: affiliate
+          fit: [presenters, laser_pointers, conference_gear]
+        - name: eBay Partner Network
+          fit: [vintage_input_devices, dec_memorabilia, light_pens_collectible]
+        - name: ShareASale / niche merchants
+          fit: [audience_specific — audit per merchant]
+    apply_as: "Light Pen Bureau / Ground Up Software — PG site copy for reviewer"
+  goodwill_destinations:
+    what: "Places that deserve traffic — Repo Show audience will love; we love too"
+    list:
+      - id: chm
+        name: Computer History Museum
+        url: https://computerhistory.org/
+        shop: https://computerhistory.org/store/
+        why: "Preservation, gift shop, Smalltalk Zoo neighbor — oral history for Heinz/Dan lineage"
+        cross: [../../characters/dan-ingalls/, ../../characters/heinz-lemke/]
+        badge: goodwill
+      - id: smalltalk_zoo
+        name: Smalltalk Zoo (CHM)
+        url: https://smalltalkzoo.thechm.org/
+        why: "Dan Ingalls — live Smalltalk in the browser; free; send the love"
+        badge: goodwill
+      - id: acme_klein_bottle
+        name: Acme Klein Bottle
+        url: https://kleinbottle.com/
+        who: "Cliff Stoll — authentic Klein bottles; Cuckoo's Egg energy"
+        why: "Peak geek oracle merchandise; audience will lose their minds"
+        badge: goodwill
+      - id: bitsavers
+        name: Bitsavers
+        url: http://bitsavers.trailing-edge.com/
+        why: "Manual library already links here — traffic back to the cathedral"
+        badge: goodwill
+      - id: penisland_brother
+        name: penisland.net
+        url: https://penisland.net/
+        why: brother_site
+        badge: brother_site
+      - id: lars_t_shirts
+        name: Lars Brinkhoff — t-shirt emporium
+        url: https://github.com/larsbrinkhoff/t-shirts
+        why: partner_emporiums — not our store; wear on stream
+        badge: partner
+  heritage_partners:
+    thesis: |
+      Companies that **paid the debt** to Engelbart-era lineage — affiliate their gear on day one;
+      pursue sponsorship when the catalog earns trust. Not on-air sponsor claims until a deal exists.
+    logitech:
+      relationship: |
+        **Logitech** built a global business on the mouse Engelbart invented. Pierluigi Zappacosta
+        gave Doug **office space in Fremont** (Logitech building, ~1992–2007). Logitech **increased
+        financial support** for the Bootstrap Institute (circa 2000); celebrated **one billion mice**
+        alongside the **40th Mother of All Demos** anniversary (2008). We name them on Augment and
+        Bureau Picks whether or not they pay us — they already paid Doug.
+      character_cross: ../../characters/douglas-engelbart/
+      not_claimed: "Not a Repo Show sponsor until contracted — heritage acknowledgment + affiliate"
+      tiers:
+        day_one_amazon:
+          what: "Logitech SKUs on Amazon Picks — Amazon Associates; zero inventory"
+          page: amazon_picks#logitech
+          disclose: "As an Amazon Associate we earn from qualifying purchases"
+          product_fit:
+            presentation: [Spotlight, R500, R800, wireless_presenter_pens]
+            augment_mouse_lineage: [MX_Master, Pebble, ergonomic_mice]
+            plastic_stylus: [Crayon, Logitech_Pen]
+            demo_desk_bundle: "Our Engelbart kit + Logitech Spotlight — Bureau bundle copy only"
+        direct_affiliate:
+          what: "Logitech affiliate / Impact program — apply after site traffic proves PG catalog"
+          why: "Better kickback than Amazon alone on presenters + styluses audience already wants"
+          status: outreach
+        sponsorship_ads:
+          what: "Paid placement, creator kit, MOAD-anniversary co-marketing, Engelbart memorial shows"
+          pitch: |
+            Augment Division is a deadpan tribute catalog — free Engelbart STLs, kits, presenter pens.
+            Repo Show memorial lineage (Ted Nelson, Alan Kay, Bret Victor frame). Audience: retro
+            computing, HCI, maker. Logitech already funded Doug; we send buyers to gear that fits.
+          ask:
+            - heritage_patron_read — optional second sponsor slot on Engelbart episodes only
+            - Spotlight_presenter_bundle — co-branded MOAD desk set
+            - creator_samples — MX Master + Spotlight for on-air demos
+            - affiliate_rate_or_flat_fee
+          contact_paths: [Logitech for Creators, partner marketing, education/heritage PR]
+          do_not: "Never imply Logitech endorses the lightpenisland.net pun — surface copy is PG light pens"
+      bureau_picks:
+        section: affiliate_geek
+        badge: "Heritage — Logitech supported Douglas Engelbart for decades"
+        blurb: |
+          Conference presenters, styluses, and the mouse line that exists because of 1968.
+          Buy on Amazon today; we're talking to Logitech about a direct partnership.
+      on_air_when_deal_exists:
+        heritage_patron_read: |
+          Augment Division acknowledges a heritage patron — Logitech — who supported
+          Douglas Engelbart's Bootstrap Institute for many years. Presentation pointers
+          and demo-desk gear at lightpenisland.net/augment. Lightpenisland dot net.
+        episodes: [remembering-douglas-engelbart, pixie-pie-menus-pdp7, any_augment_segment]
+  bureau_picks_page:
+    path: /bureau-picks
+    sections:
+      - id: we_stock
+        title: "Light Pen Bureau stocks"
+      - id: affiliate_geek
+        title: "Affiliate picks — cool, valuable, kickback where honest"
+      - id: heritage_partners
+        title: "Heritage partners — Logitech & Augment lineage"
+        copy: "Companies that supported Engelbart-era work. We link their gear honestly."
+      - id: amazon
+        title: "Amazon Picks"
+      - id: museums_and_oracles
+        title: "Museums & oracles — we send you; no kickback"
+        copy: "These places sell cool stuff we don't carry. Visit anyway. Preservation matters."
+      - id: partner_emporiums
+        title: "Partner emporiums"
+    curation_rule: "Every link defensible deadpan — gag lives in the URL, not the product lie"
+
+amazon_storefront:
+  why: "Curate light-pen-adjacent SKUs without inventory; family-safe listings only"
+  options:
+    - "Amazon Influencer / Creator storefront — amazon.com/shop/<handle>"
+    - "Amazon Associates affiliate links per category page"
+    - "Hybrid: own Type 340 EZ-Grip via FBA or dropship + Amazon picks for rest"
+    - "Seller Central (existing account) — FBM dropship or FBA; MCF fulfills web orders from same stock"
+  site_integration:
+    - "Nav: **Bureau Picks** — parent page; **Amazon Picks** is one section"
+    - "Footer: Also available on Amazon — Light Pen Bureau storefront"
+    - "Disclosure: As an Amazon Associate we earn from qualifying purchases"
+    - "Goodwill block on Bureau Picks — CHM, Acme Klein Bottle, bitsavers; badge: no kickback"
+  categories_on_amazon:
+    - cat_laser_toys
+    - toy_lightsabers_led
+    - stylus_bluetooth_indicator
+    - pen_lights_led_medical
+    - laser_pointers_presentation
+    - logitech_presenters_spotlight_r500_r800
+    - logitech_mx_master_pebble_mice
+    - logitech_crayon_stylus
+    - book_lights_pen_shape
+    - engelbart_mouse_replica_kits
+    - chord_keyset_maker_parts
+  caution: "Apply for storefront with clean category copy; domain name may need manual review — keep site PG"
+
+operations:
+  goal: "High-margin curated gadgets + kits — not print-on-demand tees (see partner_emporiums for Lars cross-link)"
+  launch_tiers:
+    weekend:
+      hours: "48–72"
+      what:
+        - "Hover DNS → Shopify Basic or Carrd Pro landing (deadpan catalog + brother site footer)"
+        - "Amazon Influencer/Creator storefront live — zero inventory"
+        - "Bureau Picks page — affiliate geek links + CHM / Klein bottle goodwill (no kickback)"
+        - "Amazon Associates on /amazon_picks — Logitech presenters + mice (heritage partner lane)"
+        - "Amazon Associates disclosure"
+        - "Free Engelbart STL page (email-gate or direct download — traffic, no fulfillment)"
+        - "Free Type 340 Fake Light Pen STL + pamphlet PDF + USB LED assembly manual"
+        - "Augment Expositions page — historic demos/videos/papers as deadpan free SKUs"
+        - "Manuals page — bitsavers PDF links (SEO + sponsor read cross-link)"
+      revenue: "Affiliate commissions only; proves domain + brand"
+    week_two:
+      what:
+        - "Shopify + 10–20 dropship SKUs (cat lasers, presenters, pen lights, Bluetooth styluses)"
+        - "Spocket / CJ / Syncee — US/EU suppliers into Shopify; DSers auto-routes orders"
+        - "Seller Central FBM — mirror top movers; you or supplier ships"
+      cs: "You answer sales@lightpenisland.net; supplier ships — template macros in Gorgias or Shopify Inbox"
+    month_one:
+      what:
+        - "FBA for 2–3 fast movers (cat laser, presenter pen) — Amazon handles CS on those orders"
+        - "Multi-Channel Fulfillment (MCF) — same FBA stock ships lightpenisland.net orders"
+        - "First high-margin kit: Engelbart Bluetooth mouse OR Type 340 EZ-Grip OEM box (MOQ ~100)"
+      margin_target: "3–5× on curated gadgets; 40–60% on kits you bundle"
+  stack_recommended:
+    storefront: Shopify
+    why: "Physical + digital (STL) + affiliate embeds + Amazon Buy with Prime later; one admin"
+    payments: "Shopify Payments primary; shop.groundupsoftware.nl checkout if domain name triggers review"
+    dns: "Hover — lightpenisland.net A/CNAME to Shopify"
+  fulfillment_matrix:
+    low_touch_high_volume:
+      channel: [amazon_fba, amazon_affiliate]
+      products: [cat_lasers, toy_sabers, presenters, pen_lights]
+      cs: "Amazon handles buyer messages on Amazon orders"
+    dropship_web:
+      channel: [shopify, spocket, cj, syncee]
+      products: [styluses, wood_barrel_oem, fiber_pens, book_lights]
+      cs: "You — email + Shopify; supplier ships blind or light-pen branded insert"
+    maker_kits_high_margin:
+      channel: [shopify_direct, etsy_maker, optional_fba]
+      products: [engelbart_bluetooth_kits, keyset_kits, moad_bundle]
+      fulfillment: "Small-batch assembly (you) or PCBWay + contract pack; NOT print-on-demand"
+    digital_free_lead_gen:
+      channel: [shopify_digital_download]
+      products: [engelbart_stl_step, maker_guide_pdf, type_340_fake_light_pen_stl, pamphlet_340_pdf]
+      price: free_or_pay_what_you_want
+  cs_outsource_options:
+    - "Amazon FBA — CS for Amazon-channel orders only"
+    - "ShipBob / Deliverr — 3PL pick-pack-ship for owned inventory (website orders)"
+    - "Syncee / DSers — order routing only; you still own customer email"
+    - "Avoid full outsource CS until volume justifies — early stage: templates + 1hr/day"
+  not_lars_model:
+    what: "Printful/Printify = SWAG tees only; high-ticket path is OEM + kits + FBA curation"
+    partner: partner_emporiums#lars_brinkhoff_t_shirts
+  monetization_mix:
+    - "Affiliate (Amazon + geek merchants) — day one, zero risk"
+    - "Logitech on Amazon Picks — heritage lane; pursue direct affiliate + sponsorship after traffic"
+    - "Goodwill outbound (CHM, Acme Klein Bottle, bitsavers) — trust + audience love; no cut"
+    - "Dropship margin — week two, low capital"
+    - "Owned SKU / FBA — month one, best unit economics on repeat buys"
+    - "Kits + Bluetooth replicas — highest margin, Engelbart division flagship"
+    - "Episode SWAG drops — limited POD run per show (optional Printful batch)"
+
+product:
+  what_we_sell: |
+    Anything remotely related to **light pens** — literally light, literally pen-shaped, or both —
+    plus **3D printable fake Type 340 light pens** (USB LED gateway — no battery); **1968 demo-desk**
+    open models: free Engelbart mouse & keyset STLs; SWAG; working Bluetooth kits.
+  what_we_do_not_sell: "Adult products; anatomical gags; CRT Type 340 until Lars ships"
+  skus:
+    - id: type-340-fake-light-pen-stl
+      name: "Type 340 Fake Light Pen — Free STL/STEP (USB LED cavity)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      replica_tier: gateway
+    - id: type-340-fake-light-pen-usb-kit
+      name: "Type 340 Fake Light Pen — USB LED Edition (shell + pamphlet + manual)"
+      division: maker_light_pen
+      channel: [direct]
+      replica_tier: gateway
+      note: "BYO USB LED keychain — Bureau prints shell; user plugs in"
+    - id: type-340-fake-light-pen-embed-kit
+      name: "Type 340 Fake Light Pen — Embed LED Kit (battery + switch + wires)"
+      division: maker_light_pen
+      channel: [direct]
+      replica_tier: maker
+    - id: pamphlet-340-light-pen
+      name: "Bureau Pamphlet No. 340 — What Was a Type 340 Light Pen?"
+      division: maker_light_pen
+      channel: [free_download, direct]
+      price: free
+    - id: manual-fake-light-pen
+      name: "Type 340 Fake Light Pen — Assembly Instructions (PDF)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+    - id: type-340-replica-2x-stl
+      name: "Type 340 Authentic Replica — 2× Proportional (STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: 2X_proportional
+    - id: type-340-replica-3x-stl
+      name: "Type 340 Authentic Replica — 3× Proportional (STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: 3X_proportional
+    - id: type-340-replica-4x-stl
+      name: "Type 340 Authentic Replica — 4× Proportional (STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: 4X_proportional
+    - id: type-340-finglonger-2x-stl
+      name: "Type 340 Extended Reach — Finglonger 2× (same radius, STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: finglonger_2X
+    - id: type-340-finglonger-3x-stl
+      name: "Type 340 Extended Reach — Finglonger 3× (same radius, STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: finglonger_3X
+    - id: type-340-finglonger-4x-stl
+      name: "Type 340 Extended Reach — Finglonger 4× (same radius, STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: finglonger_4X
+    - id: type-340-lightpenlonger-3stg-stl
+      name: "Type 340 Telescoping — Lightpenlonger 3-Stage (STL)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+      scale: lightpenlonger_3_stage
+      homage: futurama_homage
+    - id: type-340-lightpenlonger-kit
+      name: "Type 340 Lightpenlonger Kit — Telescoping + USB LED (Farnsworth homage)"
+      division: maker_light_pen
+      channel: [direct]
+      note: "Nested print-in-place or sectioned tubes; pamphlet footnote credits sci-fi ergonomics satire"
+    - id: type-340-scale-pack-stl
+      name: "Type 340 Scale Pack — 1×–4× + Finglonger + Lightpenlonger (ZIP)"
+      division: maker_light_pen
+      channel: [free_download]
+      price: free
+    - id: type-340-ez-grip
+      name: "Type 340 EZ-Grip Bluetooth Light Pen"
+      channel: [direct, amazon]
+      division: maker_light_pen
+      replica_tier: serious
+    - id: yellowheart-wood
+      name: "Petite Yellowheart Wood Light Pen"
+    - id: red-dot-bureau-cat-laser
+      name: "Red Dot Bureau Automatic Cat Laser"
+      division: cat_division
+    - id: graphics-satellite-saber-pen
+      name: "Graphics Satellite LED Saber Pen"
+      division: saber_division
+    - id: engelbart-open-models-free
+      name: "Engelbart Mouse + Keyset — Free STL/STEP Download"
+      division: engelbart_division
+      channel: [free_download]
+      price: free
+      replica_tier: archivist
+    - id: engelbart-mouse-replica-bluetooth
+      name: "Engelbart Mouse — Working Bluetooth Kit"
+      division: engelbart_division
+      channel: [direct, amazon]
+      replica_tier: finished
+    - id: engelbart-keyset-replica-bluetooth
+      name: "Five-Finger Chord Keyset — Working Bluetooth Kit (arm mount optional)"
+      division: engelbart_division
+      channel: [direct]
+      replica_tier: finished
+    - id: engelbart-mouse-replica-display
+      name: "Engelbart Mouse — Resin Display / SWAG"
+      division: engelbart_division
+      replica_tier: swag
+    - id: engelbart-keyset-clicky-toy
+      name: "Engelbart Keyset Clicky Toy — Non-Functional Desk Toy"
+      division: engelbart_division
+      channel: [direct]
+      replica_tier: swag
+    - id: engelbart-mouse-cat-toy
+      name: "Engelbart Mouse Cat Toy"
+      division: engelbart_division
+      cross_division: cat_division
+    - id: engelbart-keyset-mini-ornament
+      name: "Mini Chord Keyset Desk Ornament"
+      division: engelbart_division
+      channel: [direct, swag]
+      replica_tier: swag
+    - id: engelbart-mouse-kit
+      name: "Engelbart Mouse Replica Kit"
+      division: engelbart_division
+      replica_tier: kit
+    - id: engelbart-keyset-kit
+      name: "Chord Keyset Kit — RP2040 Firmware"
+      division: engelbart_division
+      replica_tier: kit
+    - id: moad-desk-bundle
+      name: "Mother of All Demos Desk Bundle — Mouse + Keyset + Light Pen"
+      division: engelbart_division
+      replica_tier: bundle
+    - id: maker-guide-engelbart-mouse
+      name: "Build Your Own Engelbart Mouse — Maker Guide (PDF + BOM)"
+      division: engelbart_division
+      channel: [direct]
+    - id: maker-guide-chord-keyset
+      name: "Chord Keyset for Beginners — Maker Guide"
+      division: engelbart_division
+      channel: [direct]
+  fulfillment:
+    direct:
+      - "Dropship OEM stylus — AliExpress / CJ / WFY MOQ ~100 custom box"
+      - "Amazon FBA for fast movers (cat lasers, toy sabers)"
+    amazon:
+      - "Affiliate + Influencer storefront for long tail"
+    checkout_fallback: "shop.groundupsoftware.nl if domain triggers payment processor"
+
+post_production:
+  spec: ../../process/post-production/cambridge-telecine-jiggle.yml
+  sponsor_read: ../gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
+
+see_also:
+  - ../../process/repo-show-regulars.yml#regular_sponsors
+  - ../gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml
+  - ../../characters/lars-brinkhoff/CHARACTER.yml#t_shirts
+  - gag-lightpenisland-net.yml#engelbart_division
+  - gag-lightpenisland-net.yml#maker_light_pen
+  - ../../characters/don-hopkins/media.md
+  - ../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - ../../characters/douglas-engelbart/GLANCE.md

@@ -117,7 +117,7 @@ commentary_threads:
     gregory: "Blue-chip sheep genome; I'm short apes, long wool"
 
 curiosity_cow_cube:
-  spec: ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   tagline: "Click cube for MOOLA — center is Bogost's cow, not Molyneux's lies"
   cube_faces: "Stolen deeds from AATG pasted on surfaces — ANY image ANY face"
   click_audio: "Intermittent filtered echoing moos — distressed, far away — compulsion without rescue"

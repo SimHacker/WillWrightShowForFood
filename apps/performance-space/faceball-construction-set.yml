@@ -408,7 +408,7 @@ soft_body_anatomy:
     safer_and_funnier: |
       No photo (copyright + no outing), no name required — just a cartoon everyone recognizes. The
       abstraction is BOTH the ethical sidestep AND the better joke. (Don's stance on the underlying story
-      stands — see ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml#source_caveat — but the KIT itself
+      stands — see ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#source_caveat — but the KIT itself
       never needs his image.)
   modifiers:
     what: |
@@ -444,7 +444,7 @@ soft_body_anatomy:
         - "Pass a **pixelated joint** → it pixelates your HEAD (the mosaic follows the contraband)."
         - "The blur box **tracks the bounding box**, Sims-1 style — deadpan, self-aware."
       params: [bbox, mosaic_size, follow_target, cheat_code_to_reveal]
-      see: ../../repo-shows/ideas/traditions/unnecessary-censorship.yml
+      see: ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
   satirical_presets:
     what: "Preset filter stacks aimed at PUBLIC figures / power (political caricature) — never private people."
     trump_mushroom:
@@ -469,7 +469,7 @@ soft_body_anatomy:
         controls**, and his **"President Johnson"** elongates to magnificent proportions (size_filter
         ramp) — mushroom head intact, now spinning worldwide.
       references:
-        - "Conan's Masturbating Bear — the side-curtain waddle-on (repo canon: ../../repo-shows/ideas/traditions/unnecessary-censorship.yml)"
+        - "Conan's Masturbating Bear — the side-curtain waddle-on (repo canon: ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)"
         - "Trump's real Resolute-desk red button that summoned a Diet Coke — the documented detail the gag riffs on"
       reads_as: "Satire of a world leader's global havoc + comic self-importance — aimed at POWER, grounded in public record (see public_record_basis)."
       tone: absurdist_caricature_with_receipts
@@ -502,7 +502,7 @@ soft_body_anatomy:
     Self-authored avatars + consenting guests only. **Celebrate** gender play; don't shame anyone. Aim
     any satire at power/hypocrisy, never private people. See puppet-me-consent + vice-not-ice-puppet.
   see:
-    - ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml
+    - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml
     - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
     - ../../characters/brian-eno/bowie-snl-1979.md   # Bowie/Eno history conversation — Brian is shown the kit, no presumption he uses it
     - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md   # Tom Ngo's ECG — the example-based blend engine for parameterized parts + faces
@@ -561,7 +561,7 @@ anonymizing_puppet_and_reveal:
       footage of any real person. Aim the edge at the ABUSE OF POWER (blackmail itself); the show's own
       consenting version is its antidote.
   see:
-    - ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml#the_reveal
+    - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#the_reveal
     - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
     - ../../schemas/portrayal-standards.yml
 
@@ -589,8 +589,8 @@ streisand_effect:
     - "bryon_noem balloon-boobs → soft-body jiggle satire (Don: real, not a hoax; the sim is proudly, obviously AI — 'That's not AI. THIS is AI.'; keep it satire of a PUBLIC political figure — see vice-not-ice-puppet.yml#source_caveat)"
   its_our_brand: "Faceball Construction Kit = democratize the censored gag. Composability is the point; the kit IS the brand."
   see:
-    - ../../repo-shows/ideas/traditions/unnecessary-censorship.yml
-    - ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml
+    - ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
+    - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml
     - ../../process/repo-show-format.yml   # honest_clickbait + directors_cuts
     - ../../characters/brian-eno/bowie-snl-1979.md
 
@@ -879,6 +879,6 @@ see_also:
   - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
   - ../../characters/don-hopkins/career/lineage.yml
   - ../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
-  - ../../repo-shows/ideas/gags/vice-not-ice-puppet.yml   # soft-body anatomy dance-off
+  - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml   # soft-body anatomy dance-off
   - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
   - ../../apps/stream-gateway/SPEC.yml

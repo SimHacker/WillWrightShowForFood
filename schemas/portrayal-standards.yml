@@ -223,8 +223,8 @@ simulation:
   guests: "No simulation-as-guest without explicit consent (invitation.consent)"
 
   see_also:
-    - ../repo-shows/ideas/themes/human-control-and-authorship.md
-    - ../repo-shows/ideas/themes/simulating-people.md
+    - ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
+    - ../bits/theme-simulating-people/theme-simulating-people.md
     - ../process/crazy-idea-jam.yml#player_in_the_middle
 
 see_also:

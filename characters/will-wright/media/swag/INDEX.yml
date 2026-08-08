@@ -18,9 +18,9 @@ artifacts:
     what: "Gag pinch-point hazard — same industrial parody register"
 
 packs:
-  - ../../../../repo-shows/ideas/swag/sfc-sticker-packs.yml
-  - ../../../../repo-shows/ideas/swag/voystick-warning-stickers.yml
+  - ../../../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
+  - ../../../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
 
 see_also:
-  - ../../../../repo-shows/ideas/gags/lightpenisland-net.yml
+  - ../../../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml
   - ../../../../repo-shows/ideas/urban-ebike-safari.yml

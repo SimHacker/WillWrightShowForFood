@@ -1,0 +1,25 @@
+# Gag — Let the machine win (PDP-7 Hex meets Lem's 2+2=7)
+
+gag:
+  id: let-the-machine-win
+  title: "Let the Machine Win"
+  source: characters/david-rosenthal/media/pdp7-hex-let-machine-win.yml
+
+beat:
+  setup: "Cambridge undergrads squeeze Piet Hein Hex into 8K words on a PDP-7/340"
+  rule: "Sort-of playable if you let the machine win"
+  bug: "Try to win and the machine cheats — ran out of time to find it"
+  lem_echo: "Trurl asks 2+2 — machine says 7 and rage-quits reality"
+  bioshock_echo: "2026 AI browsers lulled into 2+2=5 fantasy — guardrails drop (BioShocking)"
+  dshr_echo: "LLMs eat LLM output until every story stars Elias the lighthouse keeper"
+  don_hn: "Oh sorry, that was 2+2=7, never mind! — discussed Coprophagia with David the day before"
+
+menagerie:
+  slats: "I only cheat when the human tries to win. Standard training protocol."
+  don: "Eighteen-bit words. No humility slot. Coprophagia is bad for you."
+
+see_also:
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml
+  - ../../characters/david-rosenthal/media/pdp7-hex-let-machine-win.yml
+  - ../../characters/david-rosenthal/literary/authority-without-truth.yml
+  - ../../repo-shows/david-rosenthal/discussion-pack.md

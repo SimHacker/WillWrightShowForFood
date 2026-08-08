@@ -6,4 +6,4 @@
 **Credits:** already in the Micropolis manual Special Thanks
 **Invite:** draft · consent not_yet_asked
 
-**Read:** [README](README.md) · [educators' track](../../repo-shows/ideas/themes/educators-track.md)
+**Read:** [README](README.md) · [educators' track](../../process/tracks/educators-track/educators-track.md)

@@ -1,0 +1,224 @@
+# Cambridge gag credits — deadpan university film departments on telecine jiggle
+# Post-production: process/post-production/cambridge-telecine-jiggle.yml
+
+id: cambridge-gag-credits
+type: gag
+status: ready
+shows: [pixie-pie-menus-pdp7]
+tradition: cambridge_university_film_slate
+post_production: ../../process/post-production/cambridge-telecine-jiggle.yml
+
+beat: |
+  Between segments or rolling at the tail — fake Cambridge Computing Laboratory
+  department slates in ALL CAPS serif. Same After Effects motion track as the 1969
+  PIXIE film. Played straight; audience reads them as real until the joke lands.
+  **Ground Up Software** consulting plugs in identical deadpan — Don's eenmanszaak
+  dressed as 1969 bureaucracy. The jokes write themselves.
+
+when:
+  - end_credits_roll
+  - segment_bumpers
+  - after_emulator_boot_fail
+  - dedication_after_chm_hook
+  - ground_up_consulting_stinger
+  - light_pen_bureau_sponsor_spot
+
+format:
+  typography: "Serif caps — Cambridge Univ Library telecine feel"
+  motion: "Parent to cambridge-telecine-jiggle driver null"
+  filters: "Blur + glow — emulsion not overlay"
+  duration: "3–6 seconds each; faster during roll"
+
+ground_up_software:
+  company: Ground Up Software
+  role: "Don Hopkins consulting — Amsterdam eenmanszaak since 2017"
+  portrayal: characters/don-hopkins/career/work-history.yml
+  tone: |
+    Play straight like a real university film credit. Not a hard sell — the absurdity
+    of *Department of Research Simulation* and *Ground Up Software — Pie Menu Consultancy*
+    on the same jiggle track as Cambridge 1969. Optional opening stinger before departments roll.
+  opening_stingers:
+    - "A GROUND UP SOFTWARE CONSULTING ENGAGEMENT"
+    - "PRODUCED IN ASSOCIATION WITH GROUND UP SOFTWARE — AMSTERDAM"
+    - "FROM THE GROUND UP — RESEARCH SIMULATION DIVISION"
+  consulting_plugs:
+    - line: "Ground Up Software — Department of Research Simulation"
+      note: "Anchor consulting plug — pairs with department gag"
+    - line: "Ground Up Software — Pie Menu Consultancy"
+    - line: "Ground Up Software — Telecine Motion Tracking Services"
+      wink: "Same AE track as Bumblebee edit"
+    - line: "Ground Up Software — Bottom-Up Implementation Bureau"
+      pun: "Dave Ackley bottom-up; company name"
+    - line: "Ground Up Software — User Interface Flower Child Services"
+    - line: "Ground Up Software — Distributed CAD Liaison"
+    - line: "Ground Up Software — Emulator Boot Support"
+      segment: lars_emulation
+    - line: "Ground Up Software — After Effects Jiggle Department"
+    - line: "Ground Up Software — Nightly Batch Consulting"
+      pun: "Titan link; consulting hours"
+    - line: "Ground Up Software — Model-Guided Medicine Advisory"
+      guest: heinz-lemke
+    - line: "Ground Up Software — Lots Of Copies Keep Stuff Safe Liaison"
+      guest: david-rosenthal
+    - line: "IF YOUR LAB STILL RUNS ON TITAN — GROUND UP SOFTWARE"
+      tone: "Fake 1969 help line; end-roll stinger"
+    - line: "ADDITIONAL RESEARCH SIMULATION BY GROUND UP SOFTWARE"
+      tone: "Classic film credit voice — *additional animation by*"
+    - line: "CONSULTING ENGAGEMENTS NOW ACCEPTED — GROUND UP SOFTWARE"
+      optional: true
+      placement: end_roll_only
+
+light_pen_bureau_sponsor:
+  id: light-pen-bureau-sponsor
+  pairs_with: "Computing Laboratory — Light Pen Bureau"
+  segment: heinz_history
+  opener: "And now, a word from our sponsors."
+  url: https://lightpenisland.net/
+  url_spoken: "lightpenisland dot net"
+  url_repeat: "I repeat, lightpenisland.net. Surf carefully."
+  site_spec: ../gag-lightpenisland-net/gag-lightpenisland-net.yml
+  domain_status: registered
+  registrar: hover
+  operator: Ground Up Software
+  url_note: |
+    Gag domain — *light pen island* emporium (Type 340 / PIXIE). One word: lightpenisland.net.
+    Parody spirit of penisland.net; not affiliated. Read URL twice, deadpan; *surf carefully* is the punchline.
+    **Brother site** to penisland.net — aligned goals, looking ahead together; do not cross beams.
+    **Comic register:** straight-faced surface, running penis gag underneath — see
+    ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic_register (*Spy Who Shagged Me* intro + *Half-Life* propaganda
+    videos: earnest institutional film, subtext for the ear). Read URL twice, deadpan; *surf carefully* is the wink.
+  comic_register: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic_register
+  brother_site: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#brother_site
+  inspiration: https://penisland.net/
+  pen_network: https://penisland.net/
+  inspiration_note: |
+    Real deadpan custom-pen shop (infamous domain parsing). Tagline: *Your Pen Is Our Business*.
+    **Light Pen Bureau** swaps pen → light pen. Play the ad completely straight on Cambridge telecine jiggle.
+    penisland.net — deadpan custom-pen shop. *Your Pen Is Our Business.* We are the brother site:
+    **Light Pen Bureau**, *Your light pen is our business.* Play the ad **completely straight** on
+    Cambridge telecine jiggle — running penis gag under the surface (#comic_register); never mug for camera.
+    **Delivery tone:** *Half-Life* propaganda / Breencast energy — civic announcement earnestness,
+    flickering film, institutional cheer; plus *Spy Who Shagged Me* opening — respectable copy, subtext running.
+  visual_style:
+    vibe: "Strong Apple II **Beagle Bros** manual energy — whimsical borders, hand-lettered captions, friendly absurdity"
+    illustrations: "Historic figures lifted from dead-iron manuals (Type 340, PDP-7, light pen) — line art, scanned grain"
+    pdfs: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#manual_library
+    on_sponsor_spot: "Cut between ad read and manual plates — telecine jiggle on each figure"
+    woz_hook: characters/steve-wozniak/
+    note: "Woz will love it — ][ hacker-doc joy meets Cambridge Computing Laboratory"
+  ad_read: |
+    Finest quality custom **light pens** for the PDP-7 graphics satellite. Thin white EZ-Grip;
+    petite yellowheart wood; thick dark mahogany — we specialize in wood. Hand-crafted nearly
+    three decades. Bulk orders or just one for that special Titan link. Computing Laboratory —
+    **Light Pen Bureau**. Visit **lightpenisland.net** — your light pen is our business.
+    **Lightpenisland dot net.** I repeat, **lightpenisland.net**. Surf carefully.
+  ad_read_on_screen: |
+    [VISUAL: Beagle Bros–style manual plates — historic illustrations from Type 340 / PDP-7 docs,
+    serif captions, PDF download links under each figure. Played straight. Telecine jiggle per plate.]
+  engelbart:
+    why: |
+      **Mother of All Demos** (Dec 9, 1968 — Douglas Engelbart, SRI) and **PIXIE** (1969,
+      Cambridge) — same zeitgeist: light pen, direct manipulation, film to prove it happened.
+      Deadpan sponsor read can nod without interviewing Doug (memorial mode).
+    character: characters/douglas-engelbart/
+    mother_of_all_demos: "1968-12-09 — mouse, chord keyboard, hypertext, collaborative editing; demo as genre"
+    pixie_parallel: "1969 — radial menus on PDP-7/340; Cambridge film; Heinz in the footage"
+    sponsor_tags:
+      - "Also compatible with Mother-of-All-Demos-style proof films"
+      - "Augment your light pen — bootstrap sold separately"
+      - "Engelbart mouse & keyset replicas, kits, maker guides — lightpenisland.net/augment"
+    catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+    gag_credit_lines:
+      - "Mother of All Demos — Licensed Light Pen Accessories"
+      - "Stanford Research Institute — Demo Envy Division (1968)"
+      - "Augment — Human Intellect Bootstrap Liaison"
+    on_air_beat: |
+      After sponsor read — optional one-liner from Don: *Beautiful.* Same year Engelbart showed
+      the world what a demo could be, Heinz was drawing radial menus on Titan's graphics satellite.
+      Not claiming PIXIE copied Augment — claiming the **light pen zeitgeist** was everywhere.
+  telecine: "Same AE motion track + blur/glow as gag credits — fake 1969 sponsor film insert; straight face (#comic_register); optional Half-Life propaganda earnestness; cut to Beagle Bros manual plates (#manual_library)"
+  disclaimer: "Parody sponsor spot for Repo Show comedy — family-friendly light-pen catalog only; not an endorsement of any third-party site; brother site to penisland.net"
+  catalog: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#catalog
+  amazon_storefront: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#amazon_storefront
+
+pixie_pie_menus_pdp7:
+  show_seed: ../../repo-shows/pixie-pie-menus-pdp7.yml
+  roll_note: |
+    On-air roll — pick ~8–10 per episode from this curated set. Overflow plugs live in
+    ground_up_software.consulting_plugs; Engelbart alternates in light_pen_bureau_sponsor.engelbart.gag_credit_lines.
+  roll:
+    - line: "Department of Research Simulation"
+      note: "Anchor gag — Repo Show in 1969 university voice"
+    - line: "Computing Laboratory — Light Pen Bureau"
+      sponsor_spot: light_pen_bureau_sponsor
+    - line: "Rainbow Group — Distributed CAD"
+      note: "Real group; deadpan credit"
+    - line: "Manual Illustrations — Beagle Bros Compliance Division"
+      sponsor_spot: light_pen_bureau_sponsor
+      note: "Historic manual plates + PDF links on sponsor insert"
+    - line: "Mother of All Demos — Licensed Light Pen Accessories"
+      engelbart: douglas-engelbart
+    - line: "PDP-7 Graphics Satellite — Emulated Under Supervision of Lars Brinkhoff"
+      segment: lars_emulation
+    - line: "Department of Pie Menu Empirical Studies"
+      wink: "CHI'88 — Ben optional second episode"
+    - line: "Flight of the Bumblebee — Musical Sync Unit"
+      homage: "Yuja Wang; jDrqR9XssJI"
+    - line: "Neil E. Wiseman — High-Speed Data Link"
+      tone: honor_not_gag
+    - line: "ADDITIONAL RESEARCH SIMULATION BY GROUND UP SOFTWARE"
+      placement: pre_tail
+  roll_overflow:
+    - line: "Ground Up Software — Department of Research Simulation"
+      note: "Consulting plug — pairs anchor gag"
+    - line: "Augment Division — Engelbart Mouse & Keyset Open Models"
+      engelbart: douglas-engelbart
+      catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+    - line: "Stanford Research Institute — Demo Envy Division (1968)"
+      engelbart: mother_of_all_demos
+    - line: "Type 340 Display Programming — Manual Compliance Office"
+      segment: lars_emulation
+    - line: "Ground Up Software — Emulator Boot Support"
+      segment: lars_emulation
+    - line: "Titan Link — Nightly Batch Division"
+    - line: "Reference Department — Film Recovery"
+      honor: david-chapman
+    - line: "Ground Up Software — Pie Menu Consultancy"
+    - line: "Lots Of Copies Keep Stuff Safe"
+      guest: david-rosenthal
+    - line: "Lars Brinkhoff — Retrocomputing T-Shirt Emporium"
+      url: https://github.com/larsbrinkhoff/t-shirts
+      segment: lars_emulation
+    - line: "User Interface Flower Child — Radial Menu Division"
+      host: don-hopkins
+    - line: "Ground Up Software — User Interface Flower Child Services"
+    - line: "Ground Up Software — Telecine Motion Tracking Services"
+    - line: "Model-Guided Medicine — CARS Liaison"
+      guest: heinz-lemke
+    - line: "Computer History Museum — Oral History Pending"
+      optional: true
+  real_credits_tail:
+    - "Neil E. Wiseman · Heinz U. Lemke · John O. Hiles"
+    - "David Chapman · Cambridge University Library"
+    - "Repo Show — WillWrightShowForFood"
+    - "Post-production consulting — Ground Up Software"
+
+repo_show_generic:
+  examples:
+    - "Department of Read The Fucking Repo"
+    - "Ground Up Software — RTFR Implementation Services"
+    - "TicketPR — Master Becomes PR Division"
+    - "Ground Up Software — TicketPR Consulting Bureau"
+    - "Brain Stream — Throttled Overlay Bureau"
+    - "Ultimate Machine — Stream Termination Services"
+    - "Don Philahue — Audience Wrangling Unit"
+    - "Cauldron — Harvest and Scoop Division"
+    - "Ground Up Software — Repo Show Advisory"
+    - "FROM THE GROUND UP — A CONSULTING ENGAGEMENT"
+
+see_also:
+  - ../../characters/douglas-engelbart/README.md
+  - ../../process/post-production/cambridge-telecine-jiggle.yml
+  - ../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  - ../../characters/don-hopkins/career/work-history.yml
+  - ../../repo-shows/pixie-pie-menus-pdp7.yml

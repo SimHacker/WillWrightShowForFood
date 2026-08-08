@@ -1,0 +1,23 @@
+# Mona Lisa pushpins — Transmogrifier UV pipeline test
+
+id: transmogrifier-mona-lisa-pushpins
+type: gag
+status: canon
+authored_by: don-hopkins
+tagline: "Giant pushpins. Mona Lisa heads. Checkerboard floor."
+
+pitch: |
+  **Transmogrifier** + **3D Studio Max object exporter** pipeline test — export UV map layers,
+  map images back onto object surfaces. Result: oversized gold pushpins with **Mona Lisa**
+  texture-mapped heads in a checkerboard Sims test room.
+
+canonical: ../../characters/will-wright/media/transmogrifier-mona-lisa-pushpins.yml
+
+menagerie_lines:
+  donna: "I would mint that JPEG—"
+  don: "Mona Lisa pushpins. Obviously."
+  gregory: "Long UV unwrap, short patience."
+
+see_also:
+  - ../../characters/will-wright/media/sims-series-transmogrifier-story.md
+  - ../gag-micropolis-gallery/gag-micropolis-gallery.yml

@@ -9,7 +9,7 @@ artifact:
   sidecar_of: transmogrifier-wedding-license-chime-dialog.png
 
 gags:
-  - ../../../repo-shows/ideas/gags/transmogrifier-mona-lisa-pushpins.yml
+  - ../../../../bits/gag-transmogrifier-mona-lisa-pushpins/gag-transmogrifier-mona-lisa-pushpins.yml
 
 see_also:
   - ../../../will-wright/media/sims-series-transmogrifier-story.md

@@ -141,7 +141,7 @@ Philahue merges **every plugin** without recompile:
 - Guest `characters/*/CARD.yml`
 - Audience TicketPR `audience/*/CARD.yml` + SIMULATION runbooks
 - Show seeds + party decks
-- Gags [`repo-shows/ideas/gags/`](../../repo-shows/ideas/gags/INDEX.yml)
+- Gags [`bits/`](../../bits/INDEX.yml) (gag-*)
 - Catalog playsets (SimProv, SliceCity, Zombie Sims orchestrator trees)
 
 Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`programmed_by` — audience collectively programs how he orchestrates; `orchestration_model.attention_pilot`).

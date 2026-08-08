@@ -236,7 +236,7 @@ Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
 
 Publication **network** — graph of shows, not a flat feed. We are not pitching a deal; we are planting a format you can inspect. Repo-native show: HN pointer → audience RTFR → live guest as Repo Man → harvest to code and skills → graph grows by PR.
 
-→ [Publisher doorway](entryways/publisher.md) · [make-play-tools-show format seed](../repo-shows/ideas/traditions/make-play-tools-show.yml)
+→ [Publisher doorway](entryways/publisher.md) · [make-play-tools-show format seed](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml)
 
 ---
 
@@ -418,7 +418,7 @@ Relationships described from Don's perspective. **Will Wright accepted** (July 2
 
 If you represent a platform, archive, publisher, or large audience channel: read the [process index](INDEX.yml), clone the repo, run [`pnpm verify`](../SETUP.md). If the format resonates, [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) — mirror, production, anthology, tooling, guest show. No NDAs required to see the shape.
 
-**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](FORMAT.md) proves the repo. Spec: [make-play-tools-show.yml](../repo-shows/ideas/traditions/make-play-tools-show.yml).
+**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](FORMAT.md) proves the repo. Spec: [make-play-tools-show.yml](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml).
 
 → [Publisher doorway playlist](entryways/publisher.md)
 

@@ -17,7 +17,7 @@ SimSlice about page timeline: ~10 years online before meeting, ~7 years to marri
 
 ### 2. SliceCity — data portability crown jewel
 SimCity in the back yard — Wired-era coverage; Will's 1996 dream actually shipped.  
-→ [`../../repo-shows/ideas/themes/data-portability-crown-jewel.md`](../../repo-shows/ideas/themes/data-portability-crown-jewel.md)
+→ [`../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md`](../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md)
 
 ### 3. Show seed: `repo-shows/heather-and-steve-alvey/`
 Whole-career pair show; Afterlife × ZombieSims flagship episode.

@@ -188,7 +188,7 @@ three functions, all needed:
   repo by topic.
 - A **track** is a *production program*: a curated arc of shows, guests,
   and participation formats aimed at a constituency. `educators-track` is
-  filed under `ideas/themes/` but it isn't a discussion thread — it's
+  filed under `../bits/` but it isn't a discussion thread — it's
   educators as co-producers, classrooms as contributor pipelines, member
   shows (Bartle, Eagleson, Snap!/Logo, Bender), formats (critical play,
   feature coursework, game jams, data lab), and a funding thesis.
@@ -250,10 +250,10 @@ by hand, thoughtfully, and intertwingled:
   when touched; yml and md reference each other. Ted Nelson's word, Ted
   Nelson's discipline: everything deeply intertwingled, no orphan pages.
 - **READMEs orient** — a directory's README says what's in the room, read
-  order, and where the exits go (the `characters/` and `ideas/themes/`
+  order, and where the exits go (the `characters/` and `../bits/`
   READMEs are the house style).
 
-The precedent already exists: `ideas/themes/` pairs every yml with a
+The precedent already exists: `../bits/` pairs every yml with a
 handwritten md. This program generalizes the themes pattern to the whole
 collection. No entry is *required* to have its md before moving — structure
 first (Phases 1–5), then the authoring program (Phase 6) works through the
@@ -315,11 +315,11 @@ authored replacements per §4 supersede generation entry by entry
 | `ideas/ca-machinima-cabaret-drag-race.yml` | `ca-machinima-cabaret-drag-race/` (kind: idea) |
 | `ideas/jsonsters-gallery-lecture.yml`, `kids-city-newspaper.yml`, `urban-safari-live.yml`, `urban-ebike-safari.yml` | own top-level dirs (kind: idea) |
 | `ideas/shows/will-wright-premiere/` (INDEX, content-map, episode-seeds) | `will-wright-premiere-ideas/` (kind: pack; `relates_to: will-wright-premiere`) — sorts adjacent to its show |
-| `ideas/gags/*` (~31 entries) | `bits/gag-*/` |
-| `ideas/themes/*` (yml+md pairs) — EXCEPT tracks | `bits/theme-*/` |
+| `../bits/*` (~31 entries) | `bits/gag-*/` |
+| `../bits/*` (yml+md pairs) — EXCEPT tracks | `bits/theme-*/` |
 | `ideas/themes/educators-track.{yml,md}` | `process/tracks/educators-track/` (35 refs / 23 files — scripted sweep) |
-| `ideas/traditions/*` (~12 entries) | `bits/tradition-*/` |
-| `ideas/swag/*` (2 entries) | `bits/swag-*/` |
+| `../bits/*` (~12 entries) | `bits/tradition-*/` |
+| `../bits/*` (2 entries) | `bits/swag-*/` |
 | `ideas/INDEX.yml`, `README.md`, `CARD.yml`, `GLANCE.yml` | dissolved: idea entries merge into `repo-shows/INDEX.yml`; bit entries seed `bits/INDEX.yml`; READMEs rewritten for the new rooms |
 | `flipbook/shows/<name>/FLIPBOOK.yml` (4 packs) | `flipbook-<name>/` (kind: pack; `relates_to: flipbook` + the show it illustrates) |
 | 43 loose top-level `.yml` seeds | `<name>/<name>.yml` dirs |

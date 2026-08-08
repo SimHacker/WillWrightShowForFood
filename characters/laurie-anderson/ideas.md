@@ -32,7 +32,7 @@ In her own words: wireless MIDI, **Max**, granular synthesis, harpoon-shaped, mo
 (*"a new wireless instrument that can access and replicate any sound… a physical representation of the
 disembodied voice… an extremely physical and digital descendant of turntables"*).
 It's also literally a **resampling** instrument: chop audio into grains, replay them any which way —
-the show's [**riff loop**](../../repo-shows/ideas/themes/the-riff-loop.md) in the palm of a hand.
+the show's [**riff loop**](../../bits/theme-the-riff-loop/theme-the-riff-loop.md) in the palm of a hand.
 
 **Don's granular-CA companion piece — "Musical Gas."** Don built a **granular cellular-automata
 synthesizer**: colliding gas-lattice CA; each collision fires a grain. A **voice** = 16 samples (scat,
@@ -79,7 +79,7 @@ Buddhism and city simulators on one stage.
 ### 7. Art vs. censorship
 Laurie was a clear voice in the **NEA culture wars**. Ties directly to the show's
 **getting-away-with-it** lineage (Bowie's video puppet slipping past the NBC censors) and its
-[`unnecessary-censorship`](../../repo-shows/ideas/traditions/unnecessary-censorship.yml) tradition —
+[`unnecessary-censorship`](../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml) tradition —
 voluntary comedy, never timid euphemism; we don't bowdlerize real names.
 
 ### 8. STEIM, Max/MSP, and the NATO/Jitter scene

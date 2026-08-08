@@ -43,7 +43,7 @@ save_spore_souls:
     doc, NOT in this public file.
 
 ties:
-  - ../ideas/gags/vice-not-ice-puppet.yml            # references this bridge (spore_tie)
+  - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml            # references this bridge (spore_tie)
   - ../../apps/performance-space/faceball-construction-set.yml   # spore_creature_avatars + soft-body parts
   - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md  # ECG blend engine
   - ../ideas/crazy-idea-jam.yml                      # character_endosymbiosis + data_portability

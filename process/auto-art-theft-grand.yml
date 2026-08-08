@@ -95,13 +95,13 @@ instances:
     hook: "Evolution frames + monster era — Slats trained on LineRenderer misreads"
   curiosity_cow_cube:
     hook: "Cube faces filled with stolen deeds — collective clicks peel to Rightward-Facing Cow"
-    spec: ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+    spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   turing_robot_olympics:
     hook: "Slats batch-scrapes Peter Mowforth photos; vision APIs mislabel Cardiff Walker"
     spec: ../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
 
 see_also:
   - moola.yml
-  - ../repo-shows/ideas/gags/curiosity-cow-cube.yml
+  - ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   - ../characters/robots/slats/CHARACTER.yml
   - ../characters/menagerie/RELATIONSHIP-MATRIX.yml
