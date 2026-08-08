@@ -203,10 +203,18 @@ def resolve(token, base_dir):
     return p.replace(os.sep, "/")
 
 
-def rewrite_file(path, moves, all_moves, dry):
-    """all_moves includes aliases; moves maps every old path to its new path.
-    base for token resolution = the file's OLD location if it moved."""
-    old_self = next((o for o, n in all_moves.items() if n == path), None)
+def rewrite_file(path, moves, real_moves, dry):
+    """moves includes aliases (reference rewrites); real_moves is git-mv only.
+    base for token resolution = the file's OLD location if it moved.
+
+    Post-mortem guards (bugs found in review, 2026-08-08):
+    - old_self must match REAL moves only. Matching alias targets made
+      repo-shows/INDEX.yml pretend it had moved from ideas/INDEX.yml,
+      which made the bare word 'shows' resolve through a dir alias to '.'.
+    - Every rewrite requires a PATH-SHAPED token (slash or known extension).
+      Dir aliases like ideas->repo-shows otherwise eat bare prose words
+      ('real ideas' became 'real .')."""
+    old_self = next((o for o, n in real_moves.items() if n == path), None)
     base_dir = os.path.dirname(old_self if old_self else path)
     try:
         with open(path, encoding="utf-8") as f:
@@ -228,6 +236,8 @@ def rewrite_file(path, moves, all_moves, dry):
         pre = text[max(0, start - 8):start]
         if "://" in pre or pre.endswith(("http:", "https:")):
             return token
+        if "/" not in core and not PATHISH_RE.match(core):
+            return token  # bare word, not a path — never rewrite prose
         new_target = None
         anchored = None
         r = resolve(core, base_dir)
@@ -311,7 +321,7 @@ def main():
     all_ref.update(aliases)
     n = 0
     for f in tracked_files():
-        if rewrite_file(f, all_ref, dict(moves, **aliases), dry):
+        if rewrite_file(f, all_ref, moves, dry):
             n += 1
     print(f"rewrote {n} file(s){' (dry run)' if dry else ''}")
 

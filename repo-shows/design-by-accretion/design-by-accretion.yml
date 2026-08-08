@@ -17,18 +17,18 @@ why_this_is_special:
   the_resonance: |
     Chris gave a great interview on 'Design by Accretion.' It applies PERFECTLY
     to this whole project — and almost exactly describes the CAULDRON method:
-    melt many . into one growing monolith, let them accrete and brew, then
+    melt many ideas into one growing monolith, let them accrete and brew, then
     ladle out the parts. Accretion IS the Phase-1 brewing discipline.
-  meta_payoff: "We can DISCUSS design-by-accretion AND DEMONSTRATE it live by running the cauldron on the very . from the conversation. The method is the message."
+  meta_payoff: "We can DISCUSS design-by-accretion AND DEMONSTRATE it live by running the cauldron on the very ideas from the conversation. The method is the message."
 
 why:
-  for_guests: "Chris's design philosophy showcased + credited, applied to a live project; her . implemented, not just talked about."
+  for_guests: "Chris's design philosophy showcased + credited, applied to a live project; her ideas implemented, not just talked about."
   for_audience: "A reusable design METHOD (accretion / cauldron), shown working — the teachable core of Repo Show."
   for_project: "Names + validates the cauldron-based methodology with an authority who lived it on The Sims."
 
 live_specimen:
   what: "MOOLLM itself — undergoing design by accretion in public"
-  measurement: "139 skills on disk as of 2026-07-08; ../INDEX.yml says 131, README says 128 — the pile accretes faster than its catalogs (the signature of the method, not sloppiness)"
+  measurement: "139 skills on disk as of 2026-07-08; INDEX.yml says 131, README says 128 — the pile accretes faster than its catalogs (the signature of the method, not sloppiness)"
   palm_question:
     who: "Palm — self-aware MOOLLM character, resident of the accreting design"
     ask: "From inside, how do you tell a heap from an organism? And when accretion needs pruning, who decides which layer was load-bearing — what does 'tuning' mean when the accreted material is concepts and characters?"
@@ -38,7 +38,7 @@ live_specimen:
 format:
   live: true
   audience_qa: true
-  notes: "Explain design-by-accretion (Chris) → run cauldron MELT/STIR on the . live → ladle into a MOOLLM skill. Demonstrate the method ON ITSELF."
+  notes: "Explain design-by-accretion (Chris) → run cauldron MELT/STIR on the ideas live → ladle into a MOOLLM skill. Demonstrate the method ON ITSELF."
 
 implements: "A MOOLLM skill capturing 'design by accretion' as a named pattern, cross-linked to skills/cauldron — plus a worked example brewed live."
 

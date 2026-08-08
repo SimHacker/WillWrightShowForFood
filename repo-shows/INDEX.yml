@@ -3,7 +3,7 @@
 # Each show is a streamed conversation that FOLLOWS THROUGH — designs land in the
 # repo; implementation is optional *homefun* (guests need not code — brainstorm-heartbeat).
 # Two axes:
-#   solo:  one person × one topic (a person can do SEVERAL . on different
+#   solo:  one person × one topic (a person can do SEVERAL shows on different
 #          topics — especially Will Wright).
 #   group: multiple people × one topic.
 #
@@ -21,10 +21,10 @@ meta:
 
 # State: PLANTED = a directory (cloned from templates; seed kept beside + synced).
 #        SEED    = a single <name>.yml file (plant when ready).
-.:
+shows:
   planted:
     flipbook/: "★ GRAPHICS DEPARTMENT. Illustrated narration B-roll — FLIPBOOK.yml beats + assets per show. QGCon paper acts 1–3 seeded. Spec: ../process/post-production/flipbook-shows.yml. Complements Howard Penner Pop-Up overlays."
-    will-wright-premiere/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + episodes.yml + suggested-questions.yml + ../characters/will-wright/sources/ + invitation at ../characters/will-wright/invitation.md + the Flower-Child icon. Topical . flow from it. (Seed: will-wright-series.yml.)"
+    will-wright-premiere/:              "★ FIRST PLANTED SHOW. Topic-less kickoff (Will IS the topic), centered on the 1996 Winograd video. Holds SHOW.yml + README + episodes.yml + suggested-questions.yml + ../characters/will-wright/sources/ + invitation at ../characters/will-wright/invitation.md + the Flower-Child icon. Topical shows flow from it. (Seed: will-wright-series.yml.)"
     moollm-readings/:          "★ READINGS SHOW. Long-form MOOLLM script readings on YouTube — primes guests on characters, lore, AI, Apple ][ nostalgia, science. Three primer episodes in episodes.yml; distinct from casual interviews and rare live Twitch specials."
     will-wright-premiere/sims-team-steering-committee-playthrough/: "★ PLAY the Jun 1998 steering committee build live with Jamie/Bobo/Irk/Patrick/Don (+ Will?) — Edith + SimAntics reunion. Link IA; do not host binary."
     luc-barthelet-sims-online/SHOW.yml: "Luc Barthelet — shipping The Sims, SimShow, The Sims Online → Soul City / Exchange revival."
@@ -61,7 +61,7 @@ meta:
       amanda-walker-galaxy-postscript/amanda-walker-galaxy-postscript.yml: "Amanda Walker — Visix Galaxy (NeWS into a commercial product); InterCon NeWS-makers + PostNews (Speaker-To-PostScript); classic 1990 extensibility pitch; Jul 2026 Self-manual LinkedIn spark for Ungar/Urs. Ensemble: NeWS reunion panel or Ungar cameo."
       unnatural-selection/unnatural-selection.yml: "★ PANEL unnatural-selection — Ted Nelson × DSHR (ICCCM treaty) × Don. Alvey 1985 icon/selection table. Dream: Gosling. Welcome: Selker (NPUC), Ben, Brad. Alias: selections-icccm-clipboard/selections-icccm-clipboard.yml"
       snap-logo-brian-jens/: "★ PLANTED. SNAP!/LOGO headline PAIR show — Brian Harvey + Jens Mönig together (colleagues 'joined at the heart' by Snap!). Center Brian's books + lifelong Logo work + BJC, with Jens on the Snap! they built (first-class everything; the Y combinator; Morphic.js). Holds SHOW.yml + README; paired invitations in each character dir. Optional solos: jens-monig, brian-harvey."
-      turtlestitch/: "TurtleStitch — Snap!-based coded embroidery (Andrea Mayr-Stalder + Michael Aschauer): program turtle geometry, stitch it on a real machine. Two . in one — the tool, and the genuine inclusive constructionism Don witnessed at Snap!Con Barcelona (kids of every background coding + sewing with zero self-consciousness; the real thing, not a slogan). Don embroidered felt there himself. Part of the Snap! community 'band' — see ../process/old-band-back-together.yml."
+      turtlestitch/: "TurtleStitch — Snap!-based coded embroidery (Andrea Mayr-Stalder + Michael Aschauer): program turtle geometry, stitch it on a real machine. Two shows in one — the tool, and the genuine inclusive constructionism Don witnessed at Snap!Con Barcelona (kids of every background coding + sewing with zero self-consciousness; the real thing, not a slogan). Don embroidered felt there himself. Part of the Snap! community 'band' — see ../process/old-band-back-together.yml."
       skill-creation.yml: "SKILL CREATION — authoring Anthropic Agent Skills + MOOLLM skills as constructionism + PBD for the LLM era. Candidate guests: Walter Bender, Henry Minsky, + people into Claude skills + constructionism (to vet/invite)."
       remembering-douglas-engelbart/remembering-douglas-engelbart.yml: "★ MEMORIAL TRIBUTE. Remembering Doug Engelbart with Ted Nelson (eulogy — Doug officiated his wedding), Alan Kay (1968-demo lineage), Yoot Saito (1993 anniversary interview), and Bret Victor (author of 'A few words on Doug Engelbart' — read the intent, not the feature list). Memorial mode; consent not_yet_asked."
       remembering-jef-raskin/remembering-jef-raskin.yml: "★ MEMORIAL SEED for Jef Raskin (d. 2005) only. possible_discussants = documented connections — NOT invitations; consent not_yet_asked for all."
@@ -168,7 +168,7 @@ bridges_architecture:
     Will's 1996 Winograd data-portability train-set model is the thesis; these are receipts.
   shallow_vs_deep: "SHALLOW = a cosmetic 'computer in The Sims plays a toy SimCity' (decorative; done before). DEEP = real nested simulations with data flowing between games — link actual SAVE FILES, run EMULATORS, edit save files to round-trip state. Soul City is the deep version, generalized across as many games as possible (cf. game-bridge-mind-mirror.yml's emulated Apple ][ runtime)."
 
-axes_note: "A person appears in multiple . (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show, and REUNION ('get the old band back together' — see ../process/old-band-back-together.yml: NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle)."
+axes_note: "A person appears in multiple shows (solo + group + bridge). Will especially anchors several. The collection holds multiple FORMATS: design-interview, series, group, bridge, game-show, and REUNION ('get the old band back together' — see ../process/old-band-back-together.yml: NeWS gang, Sims team, David Levitt crew, OpenLaszlo, the 2006 Eno circle)."
 
 backlog_ideas:
   - "Yoot Saito solo — SimTower → clean-room Yoot Tower (see design-in-public.yml yoot_tower)."

@@ -7,7 +7,7 @@ show:
   title: "Remembering Jef Raskin"
   type: group
   host: Don Hopkins
-  topic: "A tribute to Jef Raskin (1943–2005) — The Humane Interface, the Macintosh he started, the Canon Cat, and humane-interface . in this repo."
+  topic: "A tribute to Jef Raskin (1943–2005) — The Humane Interface, the Macintosh he started, the Canon Cat, and humane-interface ideas in this repo."
   status: seed
   consent: not_yet_asked
 
@@ -66,7 +66,7 @@ possible_discussants:
       consent: self_sovereign
 
 centerpieces:
-  two_layer_demo: "Live on GitHub — directory URL vs ../README.md URL for the same folder. Name the projections."
+  two_layer_demo: "Live on GitHub — directory URL vs README.md URL for the same folder. Name the projections."
   humane_interface_walk: "Walk *The Humane Interface* load-bearing chapters — locus, modes, cognetics — with whoever consents to join."
   cs547_shelf: "CS547 catalog entry + what Prolegomena meant in 2001."
   mac_vs_cat: "What Raskin started at Apple vs what the Canon Cat actually shipped — and what Archy was reaching for."
