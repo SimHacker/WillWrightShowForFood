@@ -3,7 +3,7 @@
 what: "Retrocomputing AI drag race instances — rig = lang + tools + platform + SETUP DNA"
 
 umbrella:
-  markup: RETROCOMPUTING.md
+  markup: retrocomputing-drive.md
   girder: retrocomputing-drive.yml
 
 instances: [apple2-drive, pdp10-maclisp-drive, lisp-machine-hack-off]
@@ -12,8 +12,8 @@ guests: [lars-brinkhoff, thomas-cherryhomes]
 
 see_also:
   - { path: ../cross-links.yml#retrocomputing_drive, why: "Master trail — all retro nodes with why" }
-  - { path: RETROCOMPUTING.md, why: "Generated markup — pnpm run facades" }
-  - { path: ../DRAG-RACE.md, why: "Retro challenges rotate on drag race runway" }
+  - { path: retrocomputing-drive.md, why: "Generated markup — pnpm run facades" }
+  - { path: ../micropolis-ai-drag-race.md, why: "Retro challenges rotate on drag race runway" }
   - { path: ../../rigs/README.md, why: "Rig yaml + SETUP DNA per contestant" }
   - { path: ../../schemas/rig-setup-dna.yml, why: "Emailable install protocol" }
   - { path: ../apple2-emulator-stack.yml, why: "][ stack pointer" }

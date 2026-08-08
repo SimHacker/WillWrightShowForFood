@@ -1,6 +1,6 @@
 # Model branching
 
-[Manual Transmission](MANUAL-TRANSMISSION.md) · [Brain stream](BRAIN-STREAM.md) · [Orchestration gold](ORCHESTRATION-GOLD.md)
+[Manual Transmission](manual-transmission.md) · [Brain stream](brain-stream.md) · [Orchestration gold](orchestration-gold.md)
 
 ---
 
@@ -37,7 +37,7 @@ Proposed layout: `experiments/model-branches/<run-id>/` — not shipped yet.
 | Topic | Where |
 |-------|--------|
 | cursor-mirror skill | [MOOLLM](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
-| AI-offs analysis | [AI-OFFS.md](AI-OFFS.md) |
+| AI-offs analysis | [ai-offs.md](ai-offs.md) |
 | Experiment skill | [MOOLLM experiment](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
 
 ↑ [process index](README.md) · Girder: `model-branching.yml`

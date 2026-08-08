@@ -15,7 +15,7 @@ lifecycle: "SEED → PLANT → ELABORATE → INVITE → TEND → ANNOUNCE → AI
 
 wwsff_anchors:
   format: ../../process/repo-show-format.yml
-  format_md: ../../process/FORMAT.md  # generated markup — pnpm run facades
+  format_md: ../../process/repo-show-format.md  # generated markup — pnpm run facades
   shows: ../../repo-shows/
   characters: ../../characters/
   harvest: ../
@@ -31,7 +31,7 @@ see_also:
   - { path: ../../process/cross-links.yml#repo_show_spine, why: "Mind-expanding trail from here" }
   - { path: ../../process/repo-show-format.yml, why: "Format girder" }
   - { path: ../../process/repo-show-branding.yml, why: "Orchestration + branding — rituals, cultural excerpts" }
-  - { path: ../../process/FORMAT.md, why: "Generated markup" }
+  - { path: ../../process/repo-show-format.md, why: "Generated markup" }
   - { path: ../../repo-shows/README.md, why: "Show collection" }
   - { path: ../../repo-shows/will-wright-premiere/README.md, why: "Flagship" }
   - { path: ../../characters/don-hopkins/README.md, why: "Host portrayal" }

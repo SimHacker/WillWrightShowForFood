@@ -48,5 +48,5 @@ Full protocol: [`skills/repo-show/SKILL.md`](../skills/repo-show/SKILL.md)
 |-----------|------|
 | Up | [`README.md`](README.md) |
 | Guests | [`../characters/`](../characters/README.md) |
-| Process | [`../process/FORMAT.md`](../process/FORMAT.md) |
+| Process | [`../process/repo-show-format.md`](../process/repo-show-format.md) |
 | Network | [`../process/showmaker-network.md`](../process/showmaker-network.md) |

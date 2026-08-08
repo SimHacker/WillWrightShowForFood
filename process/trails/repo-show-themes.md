@@ -2,7 +2,7 @@
 
 > *Substantive threads to revisit across episodes — not one-liner gags*
 
-Cross-show idea inventory. Themes graduate into episodes, segments, and [Crazy Idea Jam](../CRAZY-IDEA-JAM.md) entries.
+Cross-show idea inventory. Themes graduate into episodes, segments, and [Crazy Idea Jam](../crazy-idea-jam.md) entries.
 
 **Bucket:** [themes/README.md](../../bits/README.md) · **Index:** [TRAILS.md](../../TRAILS.md)
 

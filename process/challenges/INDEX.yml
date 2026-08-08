@@ -2,12 +2,12 @@
 
 meta:
   family: retrocomputing-drive.yml
-  markup: RETROCOMPUTING.md
+  markup: retrocomputing-drive.md
 
 entries:
   retrocomputing-drive.yml:
     role: umbrella
-    markup: RETROCOMPUTING.md
+    markup: retrocomputing-drive.md
   apple2-drive.yml:
     stack: ../apple2-emulator-stack.yml
     rig: ../../rigs/apple2-flair-lap.rig.yml

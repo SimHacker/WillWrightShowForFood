@@ -1,6 +1,6 @@
 # Character colocation — placement constitution
 
-[Repo Show format § placement](FORMAT.md) · [TicketPR § where not](ticket-pr.md)
+[Repo Show format § placement](repo-show-format.md) · [TicketPR § where not](ticket-pr.md)
 
 ---
 
@@ -39,7 +39,7 @@ No human INDEX.md — index in README. Link humans to README.md; optional `./` p
 
 | Topic | Where |
 |-------|--------|
-| Character endosymbiosis | [CHARACTER-ENDOSYMBIOSIS.md](CHARACTER-ENDOSYMBIOSIS.md) |
+| Character endosymbiosis | [character-endosymbiosis.md](character-endosymbiosis.md) |
 | ShowMaker network | [showmaker-network.md](showmaker-network.md) |
 | MOOLLM room skill | [github.com/SimHacker/moollm/skills/room](https://github.com/SimHacker/moollm/tree/main/skills/room) |
 

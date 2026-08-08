@@ -85,7 +85,7 @@ GitHub-collaborative open source development is basic literacy now — for game 
 | [Educator entryway](../../entryways/educator.md) | Museum map playlist — microworlds, Homefun |
 | [Constructionist trail](../../trails/constructionist-lineage.md) | 1996 → open Micropolis |
 | [Data portability crown jewel](../../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md) | Lall's bridge facet |
-| [Homefun grading](../../HOMEFUN.md) | Grade the commit message |
+| [Homefun grading](../../homefun-grading.md) | Grade the commit message |
 | [MOOLLM adventure-4](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4) | Leela Manufacturing as factory-floor metaphor |
 
 ---

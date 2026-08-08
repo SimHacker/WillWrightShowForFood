@@ -10,8 +10,8 @@ including the one you're standing in right now, which simulates itself by being 
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**VISION.md — the deep move**](../../process/VISION.md) | The load-bearing idea of the whole project: MOOLLM doesn't document the show, it *runs* it. Directories are rooms; the git log is the score. |
-| [**vision-and-ambition.yml**](../../process/VISION.md) | The same idea in machine-readable K-lines — `repo_as_simulation`, with the wetware runtime and the proof scene. |
+| [**VISION.md — the deep move**](../../process/vision-and-ambition.md) | The load-bearing idea of the whole project: MOOLLM doesn't document the show, it *runs* it. Directories are rooms; the git log is the score. |
+| [**vision-and-ambition.yml**](../../process/vision-and-ambition.md) | The same idea in machine-readable K-lines — `repo_as_simulation`, with the wetware runtime and the proof scene. |
 | [**moollm-stage.yml**](../../process/moollm-stage.md) | The machinery: how MOOLLM turns a show repo into a performable environment. |
 | [**Repo Show spine**](../../process/trails/repo-show-spine.md) | The trail that walks the whole concept end to end, node by node. |
 | [**GITHUB-AS-MMORPG**](https://github.com/SimHacker/moollm/blob/main/designs/GITHUB-AS-MMORPG.md) | The design doc that saw it early: GitHub's primitives are game primitives. |

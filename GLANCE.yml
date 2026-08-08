@@ -17,7 +17,7 @@ read_order:
   - process/entryways/README.md
   - skills/repo-show/GLANCE.yml
   - process/README.md
-  - process/VISION.md
+  - process/vision-and-ambition.md
   - repo-shows/will-wright-premiere/README.md
   - characters/will-wright/sources/README.md
   - catalogs/README.md
@@ -64,7 +64,7 @@ see_also:
   - { path: process/cross-links.yml, why: "Thematic trails — leap sideways" }
   - { path: skills/repo-show/GLANCE.yml, why: "Show orchestrator sniff" }
   - { path: process/cross-links.yml, why: "Narrative trails — rabbit holes welcome" }
-  - { path: process/VISION.md, why: "Long arc — 1996 microworlds → living organism" }
+  - { path: process/vision-and-ambition.md, why: "Long arc — 1996 microworlds → living organism" }
   - { path: repo-shows/will-wright-premiere/README.md, why: "Flagship human pitch" }
   - { path: characters/don-hopkins/README.md, why: "Host deep context" }
   - { path: SETUP.md, why: "Dev setup — monorepo verify" }

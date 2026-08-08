@@ -15,10 +15,10 @@ meta:
       Deterministic yaml→md (pnpm facades) is a TEMPORARY FALLBACK until a quality instance exists.
       Once hand-authored: render.mode llm in this registry; edit the .md; sync girder separately.
     hand_author_priority:
-      - repo-show-format → FORMAT.md
-      - ai-offs → AI-OFFS.md
-      - homefun-grading → HOMEFUN.md
-      - challenges/retrocomputing-drive → RETROCOMPUTING.md
+      - repo-show-format → repo-show-format.md
+      - ai-offs → ai-offs.md
+      - homefun-grading → homefun-grading.md
+      - challenges/retrocomputing-drive → challenges/retrocomputing-drive.md
   rendering:
     instance_first:
       - vision
@@ -40,7 +40,7 @@ meta:
 facades:
   - id: repo-show-format
     source: repo-show-format.yml
-    output: FORMAT.md
+    output: repo-show-format.md
     title: "Repo Show format"
     status: fallback_deterministic
     note: "Hand-author next — current md is yaml tree dump until replaced"
@@ -51,7 +51,7 @@ facades:
 
   - id: micropolis-ai-drag-race
     source: micropolis-ai-drag-race.yml
-    output: DRAG-RACE.md
+    output: micropolis-ai-drag-race.md
     title: "Micropolis AI Drag Race"
     depends_on:
       - code-that-spec.yml
@@ -66,7 +66,7 @@ facades:
 
   - id: ai-offs
     source: ai-offs.yml
-    output: AI-OFFS.md
+    output: ai-offs.md
     title: "AI-offs"
     depends_on:
       - manual-transmission.yml
@@ -77,7 +77,7 @@ facades:
 
   - id: manual-transmission
     source: manual-transmission.yml
-    output: MANUAL-TRANSMISSION.md
+    output: manual-transmission.md
     title: "Manual Transmission"
     depends_on:
       - ai-offs.yml
@@ -86,21 +86,21 @@ facades:
 
   - id: homefun-grading
     source: homefun-grading.yml
-    output: HOMEFUN.md
+    output: homefun-grading.md
     title: "Homefun grading"
     depends_on:
       - ai-offs.yml
 
   - id: brain-stream
     source: brain-stream.yml
-    output: BRAIN-STREAM.md
+    output: brain-stream.md
     title: "Brain stream"
     depends_on:
       - ../apps/stream-gateway/
 
   - id: orchestration-gold
     source: orchestration-gold.yml
-    output: ORCHESTRATION-GOLD.md
+    output: orchestration-gold.md
     title: "Orchestration gold"
     depends_on:
       - model-branching.yml
@@ -108,11 +108,11 @@ facades:
 
   - id: vision
     source: vision-and-ambition.yml
-    output: VISION.md
+    output: vision-and-ambition.md
     title: "Vision and ambition"
     status: instance_first
     render: { mode: llm, tone: longform, verbosity: standard }
-    note: "Hand-authored — edit VISION.md; sync vision-and-ambition.yml girder"
+    note: "Hand-authored — edit vision-and-ambition.md; sync vision-and-ambition.yml girder"
     depends_on:
       - showmaker-network.yml
       - live-repo.yml
@@ -121,18 +121,18 @@ facades:
 
   - id: crazy-idea-jam
     source: crazy-idea-jam.yml
-    output: CRAZY-IDEA-JAM.md
+    output: crazy-idea-jam.md
     title: "Crazy Idea Jam"
     status: instance_first
     render: { mode: llm, tone: invitation, verbosity: standard }
-    note: "Hand-authored reactor — edit CRAZY-IDEA-JAM.md; sync crazy-idea-jam.yml"
+    note: "Hand-authored reactor — edit crazy-idea-jam.md; sync crazy-idea-jam.yml"
     depends_on:
       - vision-and-ambition.yml
       - cross-links.yml
 
   - id: retrocomputing-drive
     source: challenges/retrocomputing-drive.yml
-    output: challenges/RETROCOMPUTING.md
+    output: challenges/retrocomputing-drive.md
     title: "Retrocomputing Drive"
     depends_on:
       - challenges/apple2-drive.yml
@@ -179,7 +179,7 @@ facades:
 
   - id: character-endosymbiosis
     source: character-endosymbiosis.yml
-    output: CHARACTER-ENDOSYMBIOSIS.md
+    output: character-endosymbiosis.md
     title: "Character Endosymbiosis"
     status: instance_first
     render: { mode: llm, tone: longform, verbosity: standard }
@@ -194,7 +194,7 @@ facades:
     title: "Repo Show themes — bucket index"
     status: instance_first
     render: { mode: llm, tone: invitation, verbosity: standard }
-    note: "Hand-authored — edit themes/README.md; per-theme *.md overlays; sync *.yml girders"
+    note: "Hand-authored — edit ../bits/README.md; per-bit *.md companions; sync *.yml girders"
     depends_on:
       - ../repo-shows/INDEX.yml
       - cross-links.yml

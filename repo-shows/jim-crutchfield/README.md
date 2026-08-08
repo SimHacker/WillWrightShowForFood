@@ -21,7 +21,7 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
   *Cellular Automata Machines* into interactive instructional and artistic web apps. First cut:
   rewrite Don's monolithic CAM6 as **modular TypeScript**; brainstorm designs on air, check them
   in; Jim's structural-complexity layer (excess entropy, ε-machines, 1D CAs with 1+1D space-time
-  diagrams) on Norman's rules; Jim's students get [homefun](../../process/HOMEFUN.md), and a
+  diagrams) on Norman's rules; Jim's students get [homefun](../../process/homefun-grading.md), and a
   thousand flowers bloom from the seeds. Picks up Jim's December 2013 co-development offer.
 - **Video feedback, live** — close the camera→screen→camera loop and steer spatiotemporal chaos.
 - **The Abraham handoff** — Ralph Abraham published the camera-at-monitor loop as mathematics at

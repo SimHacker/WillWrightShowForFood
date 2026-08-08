@@ -21,7 +21,7 @@ term_of_art:
   orchestrator: Don_Philahue
 
 how_it_runs:
-  markup: ../../process/FORMAT.md
+  markup: ../../process/repo-show-format.md
   girder: ../../process/repo-show-format.yml
   regenerate: "pnpm run facades"
   elements: [HN_pointer, RTFR, TicketPR, audience_character_PRs, don_philahue, cauldron_melt, rig_spectrum, showmaker_network]
@@ -32,7 +32,7 @@ join:
 
 homeplay:
   line: "No homework — but as much homefun as you like!"
-  grading: ../../process/HOMEFUN.md
+  grading: ../../process/homefun-grading.md
 
 lifecycle:
   order: [SEED, PLANT, ELABORATE, PROPOSE, INVITE, TEND, ANNOUNCE, AIR, PRODUCE, HARVEST, RESEED]
@@ -108,7 +108,7 @@ see_also:
   - { path: GLANCE.yml, why: "One-screen sniff" }
   - { path: README.md, why: "Pitch + where things live in WWSFF" }
   - { path: ../../process/repo-show-format.yml, why: "Canonical format girder" }
-  - { path: ../../process/FORMAT.md, why: "Generated markup view" }
+  - { path: ../../process/repo-show-format.md, why: "Generated markup view" }
   - { path: ../../process/cross-links.yml#repo_show_spine, why: "Narrative trail — RTFR spine" }
   - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Game-show formats inside shows" }
   - { path: ../../process/showmaker-network.yml, why: "Linked shows graph" }

@@ -1,6 +1,6 @@
 # Play Along skills
 
-[Repo Show format](FORMAT.md) · [TicketPR](ticket-pr.md) · [MOOLLM skills](../skills/README.md)
+[Repo Show format](repo-show-format.md) · [TicketPR](ticket-pr.md) · [MOOLLM skills](../skills/README.md)
 
 ---
 

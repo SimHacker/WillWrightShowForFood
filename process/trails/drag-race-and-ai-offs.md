@@ -13,7 +13,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | Stop | Why wander here |
 |------|-----------------|
 | [**micropolis-ai-drag-race.yml**](../micropolis-ai-drag-race.yml) | Variety show — rig personas + Slats |
-| [**DRAG-RACE.md**](../DRAG-RACE.md) | Human markup for drag race |
+| [**DRAG-RACE.md**](../micropolis-ai-drag-race.md) | Human markup for drag race |
 | [**ai-offs.yml**](../ai-offs.yml) | Spend proof — voluntary piss test for stick shift |
 | [**manual-transmission.yml**](../manual-transmission.yml) | Smallest model that works — CODE THAT SPEC |
 | [**stick-shift-protocol.yml**](../stick-shift-protocol.yml) | Every model shift = commit in git |
@@ -22,7 +22,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Celebrity judge — flair vs spreadsheet |
 | [**Drag race show seed**](../../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Show seed for drag race episodes |
 
-**Markup:** [AI-OFFS.md](../AI-OFFS.md) · [HOMEFUN.md](../HOMEFUN.md) · [MANUAL-TRANSMISSION.md](../MANUAL-TRANSMISSION.md)
+**Markup:** [AI-OFFS.md](../ai-offs.md) · [HOMEFUN.md](../homefun-grading.md) · [MANUAL-TRANSMISSION.md](../manual-transmission.md)
 
 ---
 

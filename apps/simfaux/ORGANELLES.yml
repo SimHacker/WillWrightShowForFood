@@ -51,6 +51,6 @@ membrane_rules:
 
 see_also:
   - { path: ../../process/character-endosymbiosis.yml, why: "games as cells; directories as organelles; Soul City cytoplasm" }
-  - { path: ../../process/CHARACTER-ENDOSYMBIOSIS.md, why: "readable article" }
+  - { path: ../../process/character-endosymbiosis.md, why: "readable article" }
   - { path: ../../repo-shows/openlaszlo/, why: "OL 5.0 → Declare reunion braid" }
   - { path: ../../catalogs/soul-city/, why: "multiple souls / facets in parallel" }

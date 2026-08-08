@@ -17,7 +17,7 @@ Computation) → the marketplace came *from* the art (Etsy, 2005) → the algori
 
 ## Dream segments
 
-1. **The cast conjured by code** — a 2000-era Flash sketch beside a WWSFF character directory; dynamic stage orchestration, 25 years apart. (The [deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation), with receipts.)
+1. **The cast conjured by code** — a 2000-era Flash sketch beside a WWSFF character directory; dynamic stage orchestration, 25 years apart. (The [deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation), with receipts.)
 2. **Etsy origin** — found through his art; built the shopping cart he needed as an artist first.
 3. **Toy Factory tour** — LifeStar, laser-cut voronoi, bits & atoms; what the dream factory taught.
 4. **Spore tidepool reunion** — with Will: procedural creatures, editors as instruments.

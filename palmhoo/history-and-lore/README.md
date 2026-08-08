@@ -11,7 +11,7 @@ made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**The seed saga (VISION.md)**](../../process/VISION.md) | The full chain: Stewart Brand gathers audience questions at the 2006 Long Now talk → two of them ask for SimCity's source → cascade of meetups and emails → Don's "skeptical but I'll ask anyway" note → Will says yes → OLPC becomes the stone soup → GPL-3, trademark carve-out, rename to **Micropolis**. |
+| [**The seed saga (VISION.md)**](../../process/vision-and-ambition.md) | The full chain: Stewart Brand gathers audience questions at the 2006 Long Now talk → two of them ask for SimCity's source → cascade of meetups and emails → Don's "skeptical but I'll ask anyway" note → Will says yes → OLPC becomes the stone soup → GPL-3, trademark carve-out, rename to **Micropolis**. |
 | [**ticket-pr.yml § lineage**](../../process/ticket-pr.md) | Why Stewart Brand's question-curation was a proto-TicketPR — the show format's documented ancestor. |
 | [**Walter Bender**](../../characters/walter-bender/README.md) | The OLPC stone-soup chef. |
 | [**Micropolis license documents**](https://github.com/SimHacker/MicropolisCore/blob/main/MicropolisPublicNameLicense.md) | The actual legal artifacts — GPL notice and the name license that made "Micropolis" necessary. |
@@ -23,7 +23,7 @@ made decades ago at talks, in emails, over pie. This shelf keeps the receipts.*
 |-------|----------------------|
 | [**Timeline Rotated 90 Degrees**](../../characters/marc-canter/timeline-rotated-90-degrees.md) | Marc Canter: a Director timeline is "a BASIC program with line numbers rotated 90° clockwise." The essay runs the rotation forward — Director → Shockwave → Flash → DHTML → the repo as player, with MOOLLM as the Lingo runtime. |
 | [**Visual programming patch-cord trail**](../../process/trails/visual-programming-patch-cord.md) | The other lineage: ConMan → Body Electric → Max/MSP → node editors everywhere. Paul Haeberli and Jared Tarbell are both nodes on this graph. |
-| [**PSIBER (via the deep move)**](../../process/VISION.md) | Don's 1989 PostScript environment that rendered, explored, and edited *itself* — the repo-as-simulation's most direct ancestor. |
+| [**PSIBER (via the deep move)**](../../process/vision-and-ambition.md) | Don's 1989 PostScript environment that rendered, explored, and edited *itself* — the repo-as-simulation's most direct ancestor. |
 | [**Marc Canter**](../../characters/marc-canter/README.md) · [**David Levitt**](../../characters/david-levitt/README.md) | The MacroMind axis: cast, score, stage, and the people who built them. |
 
 ## Maxis memory

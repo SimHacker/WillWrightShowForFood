@@ -1,6 +1,6 @@
 # Lisp Machine stack
 
-[Retrocomputing](challenges/RETROCOMPUTING.md) · [Lisp Machine hack-off](challenges/lisp-machine-hack-off.yml)
+[Retrocomputing](challenges/retrocomputing-drive.md) · [Lisp Machine hack-off](challenges/lisp-machine-hack-off.yml)
 
 ---
 

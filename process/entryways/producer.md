@@ -13,7 +13,7 @@ Your branch, your rig, your guests. Shows inherit SHOW skill; harvested ideas be
 | # | Stop | Why |
 |---|------|-----|
 | 1 | [**repo-show SKILL**](../../skills/repo-show/SKILL.md) | Full lifecycle — SEED, AIR, HARVEST, invitation pattern |
-| 2 | [**FORMAT markup**](../FORMAT.md) | Human-readable show definition |
+| 2 | [**FORMAT markup**](../repo-show-format.md) | Human-readable show definition |
 | 3 | [**ShowMaker network**](../showmaker-network.yml) | Graph of linked shows — PR adds your node |
 | 4 | [**REPO-SHOWS collection**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for the whole collection |
 | 5 | [**Plant a show**](../../repo-shows/README.md) | Directory + SHOW.yml + README — INDEX registration |

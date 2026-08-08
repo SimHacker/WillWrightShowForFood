@@ -70,7 +70,7 @@ a summary the way a reporter owns a beat. The work is:
 **Volunteering tokens:** automation costs compute. Anyone can run their own LLM over the
 staleness queue and submit "summary update" PRs — donating tokens *and* judgment. The repo
 doesn't need a central inference budget if the audience brings its own rigs, which is already the
-Repo Show's [bring-your-own-rig policy](../process/FORMAT.md) applied to maintenance.
+Repo Show's [bring-your-own-rig policy](../process/repo-show-format.md) applied to maintenance.
 
 ## The refresh scan (and, someday, the worms)
 

@@ -29,8 +29,8 @@ see_also:
   - { path: README.md, why: "Room overview — Rig DNA pattern" }
   - { path: INDEX.yml, why: "Rig registry" }
   - { path: GLANCE.yml, why: "One-screen sniff" }
-  - { path: ../process/DRAG-RACE.md, why: "Contestant packet — your rig is your persona" }
+  - { path: ../process/micropolis-ai-drag-race.md, why: "Contestant packet — your rig is your persona" }
   - { path: ../process/cross-links.yml#rig_personas, why: "Master trail" }
-  - { path: ../process/challenges/RETROCOMPUTING.md, why: "Retro challenges require SETUP DNA" }
+  - { path: ../process/challenges/retrocomputing-drive.md, why: "Retro challenges require SETUP DNA" }
   - { path: ../skills/repo-show/CARD.yml, why: "Rig spectrum in show format" }
   - { path: ../schemas/markup-facade.yml, why: "Yaml girder vs md — SETUP is Rig DNA, not facade-registry output" }

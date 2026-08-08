@@ -70,6 +70,6 @@ candidate_players:   # players, not contestants-as-users — see FORMAT.md#parti
 see_also:
   - { path: ../../characters/tom-tjon-a-loi/ideas.md, why: "CA Machinima coinage + costume reading + nested simulations" }
   - { path: ../../process/micropolis-ai-drag-race.yml, why: "Drag race verdict culture — merge or sashay" }
-  - { path: ../../process/DRAG-RACE.md, why: "Human-readable drag race format" }
+  - { path: ../../process/micropolis-ai-drag-race.md, why: "Human-readable drag race format" }
   - { path: ../../characters/keez-duyves/ideas.md, why: "Participation instruments" }
   - { path: ../../characters/scott-draves/, why: "Electric Sheep lineage" }

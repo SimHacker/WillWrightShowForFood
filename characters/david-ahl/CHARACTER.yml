@@ -42,4 +42,4 @@ sources:
 see_also:
   - { path: media/best-of-creative-computing-vol2.yml, why: "Vol. 2 cover — Gilbert Shelton" }
   - { path: ../don-hopkins/portrayal/heroes.yml, why: "Patron saints alongside McCloud, mentors" }
-  - { path: ../../process/VISION.md, why: "Archival compilation ethos" }
+  - { path: ../../process/vision-and-ambition.md, why: "Archival compilation ethos" }

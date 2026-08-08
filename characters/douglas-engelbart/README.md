@@ -10,4 +10,4 @@
 
 **Hardware:** [`engelbart-mouse-and-keyset.md`](engelbart-mouse-and-keyset.md) — Don's SRI set, Maynard's donation, auction economics, tactile reproduction plan.
 
-His **augmentation, not automation** thesis is the spine of the [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)'s Player-in-the-Middle. Verifiable sources in `CHARACTER.yml`.
+His **augmentation, not automation** thesis is the spine of the [Crazy Idea Jam](../../process/crazy-idea-jam.md)'s Player-in-the-Middle. Verifiable sources in `CHARACTER.yml`.

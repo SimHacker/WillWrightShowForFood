@@ -1,6 +1,6 @@
 # Vision and ambition
 
-> **Girder:** [`vision-and-ambition.yml`](vision-and-ambition.yml) · **Ideas reactor:** [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) · **Home:** [README.md](../README.md)
+> **Girder:** [`vision-and-ambition.yml`](vision-and-ambition.yml) · **Ideas reactor:** [crazy-idea-jam.md](crazy-idea-jam.md) · **Home:** [README.md](../README.md)
 
 **Start here in one breath:** [Don Hopkins](../characters/don-hopkins/README.md) and [Will Wright](../characters/will-wright/README.md) have talked for thirty years about closing a loop Will opened in [**1996 at Stanford**](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) — not another talk *about* microworlds, but a **living** microworld you can enter, fork, breed, and show. **WillWrightShowForFood** is the first public seed of that conversation: small at the tip, skills and shows building beneath.
 
@@ -41,7 +41,7 @@ Microworlds, constructionism, simulation as thoughtware, design-in-public — de
 
 ### Anchor: 26 April 1996
 
-Will Wright gave [*Interfacing to Microworlds*](https://web.stanford.edu/class/cs547/) in Terry Winograd's CS547 seminar at Stanford. Don was in the audience. The talk sent Don to Maxis. In hindsight it was a proto–[Repo Show](FORMAT.md): one person's work, live, with receipts.
+Will Wright gave [*Interfacing to Microworlds*](https://web.stanford.edu/class/cs547/) in Terry Winograd's CS547 seminar at Stanford. Don was in the audience. The talk sent Don to Maxis. In hindsight it was a proto–[Repo Show](repo-show-format.md): one person's work, live, with receipts.
 
 | | |
 |--|--|
@@ -70,7 +70,7 @@ Blogging, podcasting, video, streaming — each is a **medium**, and you can tel
 **verb**. You blog. You podcast. You stream. **RepoShow claims the next slot — and its verb is
 *reposhowing*.** You don't just *watch* a Repo Show; you **enter, fork, and improve** it. The artifact isn't
 a post, a clip, or a livestream — it's a **living, forkable, runnable repository**. (The mechanics:
-[FORMAT.md](FORMAT.md).)
+[repo-show-format.md](repo-show-format.md).)
 
 **Why the name carries weight.** *Repo* = repository, but also **repossession** — *repo-session*, a session
 in a repo where you take something back. RepoShow arrives against this moment's real anxiety: that platforms
@@ -157,7 +157,7 @@ Picture a pyramid the ordinary way — **point up**. **You are standing on the t
 3. More [characters](../characters/README.md), [apps](../apps/), [packages](../packages/) — all feeding the skill library.
 4. Live conversation → melt in the [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) → [SCOOP](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) skills and code → breed back via git PRs.
 
-**Shows are the stage; skills are the durable artifact.** Every [Repo Show](FORMAT.md) should leave inheritable technique — protocols and [SKILL.md](../skills/repo-show/SKILL.md) bodies agents and humans can run, not pitch decks. That is how the [1996 microworlds talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) becomes *runnable* thirty years later.
+**Shows are the stage; skills are the durable artifact.** Every [Repo Show](repo-show-format.md) should leave inheritable technique — protocols and [SKILL.md](../skills/repo-show/SKILL.md) bodies agents and humans can run, not pitch decks. That is how the [1996 microworlds talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) becomes *runnable* thirty years later.
 
 **Not vapor:** brutalist GitHub surface — rebar in [schemas/](../schemas/README.md), i-beams in `process/*.yml`, poured slab in verify CI. Browse without an account. Clone and break it. [Open an issue or PR](https://github.com/SimHacker/WillWrightShowForFood/issues).
 
@@ -178,7 +178,7 @@ Declare your class honestly. Weight class, not banishment — same shape Don use
 | **Stick shift switchers** | Multi-model routing — shift at the right moment; timestamped spend log as proof. |
 | **Consciencious objectors** | Don coined this at a Kaleida meetup with [David Ungar](../characters/david-ungar/) — programmers who conscientiously object to replacing hand craft with opaque automation. See [Self × MOOLLM show seed](../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml). |
 
-Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](DRAG-RACE.md) · [Manual Transmission](MANUAL-TRANSMISSION.md). Full spectrum: [repo-show-format.yml — rig_spectrum](repo-show-format.yml#rig_spectrum) · [FORMAT.md](FORMAT.md).
+Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [Manual Transmission](manual-transmission.md). Full spectrum: [repo-show-format.yml — rig_spectrum](repo-show-format.yml#rig_spectrum) · [repo-show-format.md](repo-show-format.md).
 
 Declare yours: [rig-feedback.yml](rig-feedback.yml) · [`rigs/`](../rigs/README.md) · [AI coder doorway](entryways/ai-coder.md)
 
@@ -198,13 +198,13 @@ Stumbled here? Pick a doorway — numbered playlists in [ENTRYWAYS.md](../ENTRYW
 | [Jens Mönig](../characters/jens-monig/) | Snap! architect; Micropolis × Snap! | [jens-monig](../repo-shows/jens-monig/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
 | [Walter Bender](../characters/walter-bender/) | OLPC Stone Soup; open-source SimCity | [walter-bender-olpc](../repo-shows/walter-bender-olpc/) · [skill-creation](../repo-shows/skill-creation/) |
 
-Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → [MOOLLM skills](../skills/README.md) your class can run. RTFR together. Fork a [show seed](../repo-shows/README.md). Grade homefun: does the commit match the thinking? [HOMEFUN.md](HOMEFUN.md) · [homefun-grading.yml](homefun-grading.yml).
+Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → [MOOLLM skills](../skills/README.md) your class can run. RTFR together. Fork a [show seed](../repo-shows/README.md). Grade homefun: does the commit match the thinking? [homefun-grading.md](homefun-grading.md) · [homefun-grading.yml](homefun-grading.yml).
 
 → [Educator doorway playlist](entryways/educator.md)
 
 ### Players and the general public
 
-A [Repo Show](FORMAT.md): the stage is GitHub. **[Will Wright](../characters/will-wright/) is the confirmed kickoff guest** — [invitation accepted](../characters/will-wright/invitation.md), topic-less by design, async at his pace. You do not need AI. Fork, homeplay, PR your show into the [ShowMaker network](showmaker-network.yml).
+A [Repo Show](repo-show-format.md): the stage is GitHub. **[Will Wright](../characters/will-wright/) is the confirmed kickoff guest** — [invitation accepted](../characters/will-wright/invitation.md), topic-less by design, async at his pace. You do not need AI. Fork, homeplay, PR your show into the [ShowMaker network](showmaker-network.yml).
 
 → [Player doorway](entryways/player.md) · [Will's show README](../repo-shows/will-wright-premiere/README.md) · [Guest — Will playlist](entryways/guest-will.md)
 
@@ -230,7 +230,7 @@ Permanent, attributed, forkable record — talk lineage from 1996 forward. This 
 
 Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
 
-→ [Retro doorway](entryways/retro.md) · [RETROCOMPUTING challenge](challenges/RETROCOMPUTING.md) · [Gosling PDP-8 hotrod artifact](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml)
+→ [Retro doorway](entryways/retro.md) · [RETROCOMPUTING challenge](challenges/retrocomputing-drive.md) · [Gosling PDP-8 hotrod artifact](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml)
 
 ### Publishers and platforms
 
@@ -259,11 +259,11 @@ These exist in the repo today (some as seeds; yaml says which):
 | Kickoff guest (confirmed) | [Will Wright show](../repo-shows/will-wright-premiere/README.md) · [accepted invitation](../characters/will-wright/invitation.md) |
 | MOOLLM skills library | [`skills/`](../skills/README.md) |
 | Cauldron SCOOP pipeline | [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) · [MicropolisCore cauldron example](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) · [repo-show-format.yml](repo-show-format.yml) |
-| Repo Show format | [FORMAT.md](FORMAT.md) |
+| Repo Show format | [repo-show-format.md](repo-show-format.md) |
 | ShowMaker graph | [showmaker-network.yml](showmaker-network.yml) |
 | Repo Show — credited public ideas | [characters/](../characters/README.md) |
 | Polyglot monorepo + verify CI | [SETUP.md](../SETUP.md) |
-| Idea reactor | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
+| Idea reactor | [crazy-idea-jam.md](crazy-idea-jam.md) |
 | Scaffold automation for CARDs and link PRs | Roadmap — not shipped yet |
 
 ---
@@ -297,7 +297,7 @@ Three layers. We do not dress up emptiness.
 
 | Layer | What you see |
 |-------|----------------|
-| **Facade** | [README.md](../README.md), show READMEs, this file, [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) — warm, readable, Flower Child energy |
+| **Facade** | [README.md](../README.md), show READMEs, this file, [crazy-idea-jam.md](crazy-idea-jam.md) — warm, readable, Flower Child energy |
 | **Girder** | YAML indexes, schemas, SHOW.yml, CARD.yml, git history |
 | **Slab** | `pnpm verify`, GitHub Actions, [SETUP.md](../SETUP.md) — passes or it doesn't |
 
@@ -418,7 +418,7 @@ Relationships described from Don's perspective. **Will Wright accepted** (July 2
 
 If you represent a platform, archive, publisher, or large audience channel: read the [process index](INDEX.yml), clone the repo, run [`pnpm verify`](../SETUP.md). If the format resonates, [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) — mirror, production, anthology, tooling, guest show. No NDAs required to see the shape.
 
-**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](FORMAT.md) proves the repo. Spec: [make-play-tools-show.yml](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml).
+**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](repo-show-format.md) proves the repo. Spec: [make-play-tools-show.yml](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml).
 
 → [Publisher doorway playlist](entryways/publisher.md)
 
@@ -430,8 +430,8 @@ If you represent a platform, archive, publisher, or large audience channel: read
 |-----------|-----|
 | Repo home | [README.md](../README.md) |
 | Doorways by interest | [ENTRYWAYS.md](../ENTRYWAYS.md) |
-| How a show runs | [FORMAT.md](FORMAT.md) · [repo-show-format.yml](repo-show-format.yml) |
-| Wild ideas | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) · [`stupid_fun_forward` trail](trails/stupid-fun-forward.md) |
+| How a show runs | [repo-show-format.md](repo-show-format.md) · [repo-show-format.yml](repo-show-format.yml) |
+| Wild ideas | [crazy-idea-jam.md](crazy-idea-jam.md) · [`stupid_fun_forward` trail](trails/stupid-fun-forward.md) |
 | Will / 1996 talk | [Will show](../repo-shows/will-wright-premiere/README.md) · [1996 source](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | All show seeds | [repo-shows/README.md](../repo-shows/README.md) |
 | Sideways leaps | [TRAILS.md](../TRAILS.md) |
@@ -439,6 +439,6 @@ If you represent a platform, archive, publisher, or large audience channel: read
 | Clone and verify | [SETUP.md](../SETUP.md) |
 | Bots | [FOR-BOTS.md](../FOR-BOTS.md) |
 
-← [Home](../README.md) · [Crazy Idea Jam](CRAZY-IDEA-JAM.md) · [Format](FORMAT.md) · [Entryways](../ENTRYWAYS.md) · [Trails](../TRAILS.md) · [Girder yaml](vision-and-ambition.yml)
+← [Home](../README.md) · [Crazy Idea Jam](crazy-idea-jam.md) · [Format](repo-show-format.md) · [Entryways](../ENTRYWAYS.md) · [Trails](../TRAILS.md) · [Girder yaml](vision-and-ambition.yml)
 
 *This page is hand-authored (instance-first). Machine-readable source: [`vision-and-ambition.yml`](vision-and-ambition.yml). Do not bulk-regenerate from `pnpm facades`.*

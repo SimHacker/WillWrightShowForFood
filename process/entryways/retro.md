@@ -12,14 +12,14 @@ Retrocomputing Drive challenges are platform instances of one umbrella spec. Lar
 
 | # | Stop | Why |
 |---|------|-----|
-| 1 | [**Retro umbrella**](../challenges/RETROCOMPUTING.md) | One spec — your languages, tools, emulator; SETUP DNA required |
+| 1 | [**Retro umbrella**](../challenges/retrocomputing-drive.md) | One spec — your languages, tools, emulator; SETUP DNA required |
 | 2 | [**Apple &#93;&#91; drive**](../challenges/apple2-drive.yml) | INTEGER BASIC if you dare — apple2js, Emularity stack |
 | 3 | [**PDP-10 MACLISP**](../challenges/pdp10-maclisp-drive.yml) | Boot ITS from clean machine — AI Lab on laptop |
 | 4 | [**Lisp Machine hack-off**](../challenges/lisp-machine-hack-off.yml) | Symbolics vs LMI lane — battle continues in emulator |
 | 5 | [**Lars Brinkhoff**](../../characters/lars-brinkhoff/CARD.yml) | ITS restoration lead — make it so on air |
 | 6 | [**Thomas Cherryhomes**](../../characters/thomas-cherryhomes/CARD.yml) | FujiNet — real Apple ][ on the network |
 | 7 | [**Example SETUP DNA**](../../rigs/pdp10-maclisp-flair-lap.SETUP.md) | Forward this file alone — idempotent install protocol |
-| 8 | [**Drag Race flair lap**](../DRAG-RACE.md) | Where retro rigs compete in costume |
+| 8 | [**Drag Race flair lap**](../micropolis-ai-drag-race.md) | Where retro rigs compete in costume |
 
 ---
 

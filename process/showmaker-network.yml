@@ -186,7 +186,7 @@ your_show:
 
 publication:
   vision: vision-and-ambition.yml
-  facade: VISION.md
+  facade: vision-and-ambition.md
   layers:
     - "GitHub renders README — browse without account"
     - "YouTube pitch cards — thumbs + donations as visible votes (show-proposal-network)"

@@ -20,7 +20,7 @@ Topic-less show: you choose the thread. One recording when it suits you; episode
 | 6 | [**Trading card**](../../characters/will-wright/CARD.md) | Documented design traditions as invokable verbs — tribute, not impersonation |
 | 7 | [**Slats quest**](../../repo-shows/will-wright-premiere/slats-reincarnation.md) | Stupid Fun Club robot Don still has code for — live resurrection optional |
 | 8 | [**Don Hopkins**](../../characters/don-hopkins/README.md) | Host — Sims tools, pie menus, shared SFC lineage |
-| 9 | [**Vision**](../VISION.md) | Where data portability fits the long arc — stated, not promised |
+| 9 | [**Vision**](../vision-and-ambition.md) | Where data portability fits the long arc — stated, not promised |
 | 10 | [**Browse characters**](../../characters/README.md) | One dir per guest — grows with replies and show prep; refer organically elsewhere |
 
 ---

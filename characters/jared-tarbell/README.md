@@ -30,7 +30,7 @@ the finest natural materials… I believe there is magic to be discovered in thi
 orchestrated dynamically by scripts**. His Flash work didn't animate a timeline by hand; the code
 *was* the cast, conjuring and directing thousands of actors procedurally. That's the same rotation
 as [Marc Canter's Director insight](../marc-canter/timeline-rotated-90-degrees.md) taken one step
-further — and it runs straight into the [repo-as-simulation deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation).
+further — and it runs straight into the [repo-as-simulation deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation).
 Then he did it again in *atoms*: algorithms → laser → wood. Code to craft to play.
 
 ## Talk-about menu

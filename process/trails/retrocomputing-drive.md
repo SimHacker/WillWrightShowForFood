@@ -13,7 +13,7 @@ Same spec CARD — you declare languages, tools, platform, emulator. SETUP DNA i
 | Stop | Why wander here |
 |------|-----------------|
 | [**retrocomputing-drive.yml**](../challenges/retrocomputing-drive.yml) | Umbrella family girder |
-| [**RETROCOMPUTING.md**](../challenges/RETROCOMPUTING.md) | Human markup — SETUP DNA requirement |
+| [**RETROCOMPUTING.md**](../challenges/retrocomputing-drive.md) | Human markup — SETUP DNA requirement |
 | [**apple2-drive.yml**](../challenges/apple2-drive.yml) | ][ instance — INTEGER BASIC if you dare |
 | [**pdp10-maclisp-drive.yml**](../challenges/pdp10-maclisp-drive.yml) | MACLISP on ITS — AI Lab on laptop |
 | [**lisp-machine-hack-off.yml**](../challenges/lisp-machine-hack-off.yml) | Symbolics vs LMI — battle continues |

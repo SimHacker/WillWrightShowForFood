@@ -1,6 +1,6 @@
 # Apple II emulator stack
 
-[Retrocomputing challenges](challenges/RETROCOMPUTING.md) · [Apple2 drive](challenges/apple2-drive.yml) · [FujiNet bridge](apple2-fujinet-bridge.md)
+[Retrocomputing challenges](challenges/retrocomputing-drive.md) · [Apple2 drive](challenges/apple2-drive.yml) · [FujiNet bridge](apple2-fujinet-bridge.md)
 
 ---
 

@@ -22,7 +22,7 @@ trails:
     nodes:
       - { path: ../skills/repo-show/SKILL.md, why: "Orchestrator protocol — SEED → AIR → HARVEST" }
       - { path: repo-show-format.yml, why: "Canonical girder — rig spectrum, cauldron, clocks" }
-      - { path: FORMAT.md, why: "Generated human view — pnpm run facades" }
+      - { path: repo-show-format.md, why: "Generated human view — pnpm run facades" }
       - { path: showmaker-network.yml, why: "Shows breed shows — graph of linked episodes" }
       - { path: ../repo-shows/will-wright-premiere/, why: "Flagship planted show — Will kickoff arc" }
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
@@ -39,7 +39,7 @@ trails:
     why: "Game-show formats inside Repo Show — declare class honestly"
     nodes:
       - { path: micropolis-ai-drag-race.yml, why: "Variety show — rig personas + Slats" }
-      - { path: DRAG-RACE.md, why: "Generated markup for drag race" }
+      - { path: micropolis-ai-drag-race.md, why: "Generated markup for drag race" }
       - { path: ai-offs.yml, why: "Spend proof — voluntary piss test for stick shift" }
       - { path: manual-transmission.yml, why: "Smallest model that works — CODE THAT SPEC" }
       - { path: stick-shift-protocol.yml, why: "Every model shift = commit in git" }
@@ -54,7 +54,7 @@ trails:
     why: "Same spec CARD — you declare languages, tools, platform, emulator"
     nodes:
       - { path: challenges/retrocomputing-drive.yml, why: "Umbrella family girder" }
-      - { path: challenges/RETROCOMPUTING.md, why: "Generated markup — SETUP DNA requirement" }
+      - { path: challenges/retrocomputing-drive.md, why: "Generated markup — SETUP DNA requirement" }
       - { path: challenges/apple2-drive.yml, why: "][ instance — INTEGER BASIC if you dare" }
       - { path: challenges/pdp10-maclisp-drive.yml, why: "MACLISP on ITS — AI Lab on laptop" }
       - { path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI — battle continues" }
@@ -84,7 +84,7 @@ trails:
     why: "Live bus for prompts, shifts, GH doc links"
     nodes:
       - { path: brain-stream.yml, why: "Overlay + throttled chat bus spec" }
-      - { path: BRAIN-STREAM.md, why: "Generated markup" }
+      - { path: brain-stream.md, why: "Generated markup" }
       - { path: model-branching.yml, why: "Fork chat at bubble — compare trajectories" }
       - { path: orchestration-gold.yml, why: "Multi-LLM traces as training gold" }
       - { path: ../apps/stream-gateway/, why: "Future deployable brain bus app" }
@@ -102,7 +102,7 @@ trails:
       - { path: ../characters/don-hopkins/sync-sources.yml, why: "Synced from moollm adventure-4 — deduped" }
       - { path: ../characters/don-hopkins/portrayal/voice.yml, why: "Repo Show voice — not adventure rabbit plot" }
       - { path: vision-and-ambition.yml, why: "Long arc girder — no promises, full ambition" }
-      - { path: VISION.md, why: "Navigation layer — Flower Child energy, link-rich" }
+      - { path: vision-and-ambition.md, why: "Navigation layer — Flower Child energy, link-rich" }
       - { path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/, why: "Primary source — constructionist microworlds" }
       - { path: ../bits/theme-simulation-effect/theme-simulation-effect.md, why: "Simulation effect theme — player-as-author thread" }
       - { path: tracks/educators-track/educators-track.md, why: "Educators' track — assign the fork, grade the PR" }
@@ -318,7 +318,7 @@ trails:
     why: "The crazy idea reactor — robo-resurrection, soul bridges, cells that travel between games"
     nodes:
       - { path: crazy-idea-jam.yml, why: "The reactor — every wacky idea in one girder" }
-      - { path: CRAZY-IDEA-JAM.md, why: "Human view — tight blurbs, grouped" }
+      - { path: crazy-idea-jam.md, why: "Human view — tight blurbs, grouped" }
       - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
       - { path: ../characters/robots/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }

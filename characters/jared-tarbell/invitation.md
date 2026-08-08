@@ -32,8 +32,8 @@ the LifeStar, a team of your friends — to see just how deep you could dig.
 
 **So here's the show.** Will and I are making **Repo Shows** — the product and stage is a public
 GitHub repo, not just a video: sources, code, questions, and artifacts accumulate before, during,
-and forever after the conversation ([how it works](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md), or see the
-[vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md)). **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** That feels right, since he kicked off our friendship. I'd love a show with you: your arc from
+and forever after the conversation ([how it works](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/repo-show-format.md), or see the
+[vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/vision-and-ambition.md)). **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** That feels right, since he kicked off our friendship. I'd love a show with you: your arc from
 **levitated.net → Complexification → Etsy → the Toy Factory** is the cleanest story I know of
 *generative code becoming a life* — the gems mined from math, then manufactured into wood you can
 hold. And your Flash work is secretly load-bearing for this whole project: you're the artist who

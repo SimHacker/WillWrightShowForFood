@@ -54,7 +54,7 @@ chapters of *Cellular Automata Machines* into interactive instructional and arti
    his pedagogy wish of **1D CAs with 1+1D space-time diagrams**.
 4. **A thousand flowers bloom** — collaborators fork the seeds; Jim's
   [grad class](http://csc.ucdavis.edu/~chaos/courses/ncaso/) gets  
-   **[homefun, not homework](../../process/HOMEFUN.md)**, checked in with public receipts.
+   **[homefun, not homework](../../process/homefun-grading.md)**, checked in with public receipts.
 
 ### 4. Don ↔ Jim, 2008–2025 — the correspondence + the boat 🚤
 

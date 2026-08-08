@@ -1,6 +1,6 @@
 # MOOLLM as show stage
 
-[VISION.md § The deep move](VISION.md) · [Play Along skills](play-along-skills.md) · [Couple and solo shows](couple-and-solo-shows.md)
+[vision-and-ambition.md § The deep move](vision-and-ambition.md) · [Play Along skills](play-along-skills.md) · [Couple and solo shows](couple-and-solo-shows.md)
 
 ---
 

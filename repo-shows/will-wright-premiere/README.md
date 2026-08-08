@@ -48,7 +48,7 @@ knowledge; the game is the proof. *Show, don't tell.*
 [**INTRO-NARRATIVE.md**](INTRO-NARRATIVE.md)
 
 Will's 1996 Stanford talk is the anchor; Don and Will have discussed a living microworld repo since then.
-This kickoff is the **public apex seed** — see [`../../process/VISION.md`](../../process/VISION.md) (ambition, not a production promise).
+This kickoff is the **public apex seed** — see [`../../process/vision-and-ambition.md`](../../process/vision-and-ambition.md) (ambition, not a production promise).
 
 ## Why topic-less
 
@@ -70,7 +70,7 @@ he pulls become the season — each one a future show. (See `episodes.yml`.)
 
 ## How it runs
 
-See **[`../../process/FORMAT.md`](../../process/FORMAT.md)** — canonical
+See **[`../../process/repo-show-format.md`](../../process/repo-show-format.md)** — canonical
 definition (HN → RTFR → Repo Man → **TicketPR** → Don Philahue → cauldron → skills + Cursor).
 
 **Audience:** submit a [**TicketPR**](audience/README.md) — copy [`../../_TEMPLATE/audience/`](../_TEMPLATE/audience/README.md) for MOOLLM character stack + [`CHARACTER.md`](../_TEMPLATE/audience/CHARACTER.md). Minimum: `questions.yml`.

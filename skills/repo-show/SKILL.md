@@ -6,11 +6,11 @@ The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 **The deep move:** orchestration is this skill's day job. Under it, MOOLLM runs the repo as a
 **simulation engine** — the show is performed *inside* the world, not documented beside it. K-line:
 [`repo_as_simulation`](../../process/vision-and-ambition.yml) · prose:
-[VISION.md § The deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation) ·
+[VISION.md § The deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation) ·
 machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
 
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
-**Human markup:** [`../../process/FORMAT.md`](../../process/FORMAT.md) (generated — `pnpm run facades`)  
+**Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (generated — `pnpm run facades`)  
 **Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description_scaffolding)
 
 ### CARD + GLANCE split (WWSFF experiment → moollm upstream)
@@ -140,8 +140,8 @@ Full spec: [`process/repo-show-format.yml`](../../process/repo-show-format.yml) 
 |--------|------|
 | Code That Spec | [`process/code-that-spec.yml`](../../process/code-that-spec.yml) |
 | Manual Transmission | [`process/manual-transmission.yml`](../../process/manual-transmission.yml) |
-| Micropolis AI Drag Race | [`process/DRAG-RACE.md`](../../process/DRAG-RACE.md) |
-| Retrocomputing Drive | [`process/challenges/RETROCOMPUTING.md`](../../process/challenges/RETROCOMPUTING.md) |
+| Micropolis AI Drag Race | [`process/micropolis-ai-drag-race.md`](../../process/micropolis-ai-drag-race.md) |
+| Retrocomputing Drive | [`process/challenges/retrocomputing-drive.md`](../../process/challenges/retrocomputing-drive.md) |
 
 Slats judges flair; spreadsheet runs the piss test.
 
@@ -167,7 +167,7 @@ After AIR:
 
 | Topic | Path |
 |-------|------|
-| Vision | [`process/VISION.md`](../../process/VISION.md) |
+| Vision | [`process/vision-and-ambition.md`](../../process/vision-and-ambition.md) |
 | ShowMaker network | [`process/showmaker-network.yml`](../../process/showmaker-network.yml) |
 | Live repo policy | [`process/live-repo.yml`](../../process/live-repo.yml) |
 | Will kickoff | [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) |
@@ -209,7 +209,7 @@ Performed by [`characters/don-philahue/`](../../characters/don-philahue/). Mecha
 | Retro computing | [`process/cross-links.yml`](../../process/cross-links.yml) → `retrocomputing_drive` |
 | MOOLLM compose | [`process/cross-links.yml`](../../process/cross-links.yml) → `moollm_compose` |
 | Format girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
-| Generated markup | [`process/FORMAT.md`](../../process/FORMAT.md) — `pnpm run facades` |
+| Generated markup | [`process/repo-show-format.md`](../../process/repo-show-format.md) — `pnpm run facades` |
 | Harvest registry | [`skills/INDEX.yml`](../INDEX.yml) |
 | Upstream skills | [moollm/skills/README.md](https://github.com/SimHacker/moollm/skills/README.md) |
 

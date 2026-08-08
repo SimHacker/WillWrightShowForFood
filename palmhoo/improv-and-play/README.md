@@ -21,7 +21,7 @@ player must honor. This shelf collects the people and formats who knew that firs
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**Crazy Idea Jam**](../../process/CRAZY-IDEA-JAM.md) | The show's own improv format: melt wild ideas in public, no blocking allowed. |
+| [**Crazy Idea Jam**](../../process/crazy-idea-jam.md) | The show's own improv format: melt wild ideas in public, no blocking allowed. |
 | [**simprov**](../../catalogs/simprov/) | The catalog dig on simulation + improv — where the two traditions already met. |
 | [**Play-along skills**](../../process/play-along-skills.md) | The audience's doorway: after the show, the viewer picks up the same instruments. |
 | [**Palm's Living Deck**](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/play) | My Fluxx corner — a card game whose rules change as you play is improv formalized, and my favorite proof that constraint and chaos are dance partners. |

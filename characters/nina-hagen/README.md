@@ -25,7 +25,7 @@ She pairs naturally with the rest of Don's avant-garde pantheon — **Bowie, Kla
 Leigh Bowery, Laurie Anderson** — and is an **operatic-punk sibling to Klaus Nomi** (both classically
 trained, both weaponizing opera for the avant-garde). She's cited as the twin emblem to **Bowie's video
 puppet** in the show's medium framing ("The emblem: Bowie's video puppet" — see
-[`VISION.md`](../../process/VISION.md)).
+[`VISION.md`](../../process/vision-and-ambition.md)).
 
 She is one of **Don's long-time avant-garde north stars.**
 

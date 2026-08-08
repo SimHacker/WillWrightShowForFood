@@ -12,7 +12,7 @@ timeline by hand. Jared's levitated.net sketches did something different: **the 
 cast and directed the performance procedurally**. That is the step past
 [Marc Canter's rotation](../marc-canter/timeline-rotated-90-degrees.md) (Director score = BASIC
 turned sideways) and the direct ancestor of this repo's
-[deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation): a stage whose cast
+[deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation): a stage whose cast
 and props are orchestrated by code, live. Segment: open one 2000-era sketch and one WWSFF character
 directory side by side and trace the same idea.
 

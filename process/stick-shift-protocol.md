@@ -1,6 +1,6 @@
 # Stick shift protocol
 
-[Manual Transmission](MANUAL-TRANSMISSION.md) · [Orchestration gold](ORCHESTRATION-GOLD.md) · [Model branching](model-branching.md)
+[Manual Transmission](manual-transmission.md) · [Orchestration gold](orchestration-gold.md) · [Model branching](model-branching.md)
 
 ---
 
@@ -41,7 +41,7 @@ Each shift commit adds labeled gear segment, spend slice, runbook id, prompt cou
 
 | Topic | Where |
 |-------|--------|
-| Brain stream overlay | [BRAIN-STREAM.md](BRAIN-STREAM.md) |
+| Brain stream overlay | [brain-stream.md](brain-stream.md) |
 | Example rig | [../rigs/stick-shift-composer-moollm.rig.yml](../rigs/stick-shift-composer-moollm.rig.yml) |
 | Thoughtful commitment skill | [MOOLLM skill](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
 

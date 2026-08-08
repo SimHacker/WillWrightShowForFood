@@ -1,6 +1,6 @@
 # Code That Spec
 
-[AI-offs](AI-OFFS.md) · [Micropolis AI Drag Race](DRAG-RACE.md) · [ShowMaker competitions](showmaker-network.md)
+[AI-offs](ai-offs.md) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [ShowMaker competitions](showmaker-network.md)
 
 ---
 
@@ -40,7 +40,7 @@ Drag Queen Olympics energy — maximum flair under constraint. Shortest honest b
 
 | Topic | Where |
 |-------|--------|
-| Manual Transmission | [MANUAL-TRANSMISSION.md](MANUAL-TRANSMISSION.md) |
+| Manual Transmission | [manual-transmission.md](manual-transmission.md) |
 | Stick shift protocol | [stick-shift-protocol.md](stick-shift-protocol.md) |
 | Rig feedback | [rig-feedback.md](rig-feedback.md) |
 | Wigcercize show | [../repo-shows/game-show-wigcercize/](../repo-shows/game-show-wigcercize/) |

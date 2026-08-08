@@ -17,7 +17,7 @@ Marc's own self-effacing line (per Don's memory, watching a **Stewart Sharp** pi
 timeline is just a BASIC program with line numbers rotated 90° clockwise.* Don got it via **PSIBER**;
 the Repo Show rotates it again — `characters/` as cast window, git history as score, MOOLLM as Lingo.
 Full anecdote + segment sketch: [`timeline-rotated-90-degrees.md`](timeline-rotated-90-degrees.md).
-Ties straight into the [repo-as-simulation deep move](../../process/VISION.md#the-deep-move--the-repo-is-a-simulation).
+Ties straight into the [repo-as-simulation deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation).
 
 ### 2. People Aggregator ("People Aggrivator")
 **Broadband Mechanics** and the **open social web** — digital lifestyle aggregator, own your graph,

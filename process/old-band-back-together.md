@@ -1,6 +1,6 @@
 # Get the Old Band Back Together
 
-[VISION.md § Connectors](VISION.md) · [ShowMaker network](showmaker-network.md) · [Repo shows INDEX](../repo-shows/INDEX.yml)
+[vision-and-ambition.md § Connectors](vision-and-ambition.md) · [ShowMaker network](showmaker-network.md) · [Repo shows INDEX](../repo-shows/INDEX.yml)
 
 ---
 
@@ -33,7 +33,7 @@ Relationships are described from Don's perspective. No claim that any named pers
 
 ## Not reunions
 
-**Leela AI** is a current team doing present-tense work — showcased via [VISION.md](VISION.md), not as a reunion band here.
+**Leela AI** is a current team doing present-tense work — showcased via [vision-and-ambition.md](vision-and-ambition.md), not as a reunion band here.
 
 ## Show hooks
 
@@ -45,7 +45,7 @@ Relationships are described from Don's perspective. No claim that any named pers
 
 | Topic | Where |
 |-------|--------|
-| Long Now 2006 | [VISION.md#long-now-and-later](VISION.md#long-now-and-later) |
+| Long Now 2006 | [vision-and-ambition.md#long-now-and-later](vision-and-ambition.md#long-now-and-later) |
 | Snap Logo pair show | [../repo-shows/snap-logo-brian-jens/](../repo-shows/snap-logo-brian-jens/) |
 | Remembering constructionists | [../repo-shows/remembering-the-constructionists/](../repo-shows/remembering-the-constructionists/) |
 

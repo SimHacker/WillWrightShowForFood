@@ -46,7 +46,7 @@ a gesture/VR controller driving a WebAudio instrument the audience can fork.
 Jaron's **"Who Owns the Future?"** / **"data dignity"** argument — people should own and be paid for
 their data; the "siren servers" that extract it are the problem — is arguably the **intellectual
 godfather of RepoShow's repossession thesis**: repossess your authorship, provenance, and autonomy from
-the platforms and models that took them (see [`VISION.md`](../../process/VISION.md)).
+the platforms and models that took them (see [`VISION.md`](../../process/vision-and-ambition.md)).
 A direct, meaty conversation: what does *data dignity* look like when every contribution is a signed,
 attributed git commit? (Books: *You Are Not a Gadget*; *Who Owns the Future?*; *Dawn of the New
 Everything*.)

@@ -1,6 +1,6 @@
 # Live repo
 
-[Sync with DonHopkins](sync-with-donhopkins.md) · [VISION.md](VISION.md) · [MANIFEST](../MANIFEST.yml)
+[Sync with DonHopkins](sync-with-donhopkins.md) · [vision-and-ambition.md](vision-and-ambition.md) · [MANIFEST](../MANIFEST.yml)
 
 ---
 

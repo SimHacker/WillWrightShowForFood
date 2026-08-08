@@ -5,7 +5,7 @@
 # that already live in this repo. Tight blurbs here; deeper girders linked per idea.
 #
 # Tone: joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind.
-# Human facade: CRAZY-IDEA-JAM.md | Trail: cross-links.yml#stupid_fun_forward
+# Human facade: crazy-idea-jam.md | Trail: cross-links.yml#stupid_fun_forward
 
 meta:
   id: crazy-idea-jam
@@ -13,9 +13,9 @@ meta:
   authored_by: don-hopkins
   one_line: "AI proposes; the PLAYER disposes — now let's get weird with it."
   idea_sources: "Ideas come from EVERYONE — not just AI. Humans, the audience, Will especially, Don even, famous over-reachers like Peter Molyneux, and you. Anyone can propose; the PLAYER disposes."
-  human: CRAZY-IDEA-JAM.md
+  human: crazy-idea-jam.md
   facade_mode: instance-first
-  facade_note: "Hand-authored — edit CRAZY-IDEA-JAM.md; sync this yaml girder"
+  facade_note: "Hand-authored — edit crazy-idea-jam.md; sync this yaml girder"
 # private archive — not in this repo
 # THE CROWN JEWEL
 ideas:
@@ -586,7 +586,7 @@ ideas:
       Reframes "AI vs people" as "people AND AI in a loop" — authorship neither lost to nor withheld
       from the machine, continuously RE-STEERED by whoever jumps in. "Repossess the government,
       information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
-    ties: [../bits/theme-the-riff-loop/theme-the-riff-loop.md, VISION.md]
+    ties: [../bits/theme-the-riff-loop/theme-the-riff-loop.md, vision-and-ambition.md]
 
   pyramid_swag_and_apex_toolmakers:
     emoji: "👕🔺"
@@ -624,6 +624,6 @@ see_also:
   - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
   - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
-  - { path: VISION.md, why: "Serious long arc — readable navigation layer" }
+  - { path: vision-and-ambition.md, why: "Serious long arc — readable navigation layer" }
   - { path: vision-and-ambition.yml, why: "Yaml girder for the long arc" }
 # private archive — not in this repo

@@ -1,6 +1,6 @@
 # How SimCity Got Free ⤷ stub
 
-**Palmhoo stub.** Canonical home: the seed saga in [`process/VISION.md`](../../process/VISION.md)
+**Palmhoo stub.** Canonical home: the seed saga in [`process/vision-and-ambition.md`](../../process/vision-and-ambition.md)
 — fully shelved under [History & Lore](../history-and-lore/README.md#the-freeing-of-simcity).
 
 🐒✋ *Why you're here: every world has an origin story, and Micropolis's is unusually well

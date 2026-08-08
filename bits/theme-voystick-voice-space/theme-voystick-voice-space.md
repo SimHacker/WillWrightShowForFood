@@ -9,7 +9,7 @@
 
 **Shows:** will-wright, don-hopkins, drew-carey, all · **Status:** ready
 
-**Canonical idea:** [CRAZY-IDEA-JAM.md](../../process/CRAZY-IDEA-JAM.md)
+**Canonical idea:** [CRAZY-IDEA-JAM.md](../../process/crazy-idea-jam.md)
 
 ---
 
@@ -87,4 +87,4 @@
 
 ---
 
-← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)
+← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/crazy-idea-jam.md)

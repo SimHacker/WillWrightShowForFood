@@ -10,8 +10,8 @@ whole directory before the guest arrives. This shelf explains the theater itself
 
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
-| [**FORMAT.md**](../../process/FORMAT.md) | What a Repo Show is, mechanically: the repo is the product, the video is a projection of it. Start here. |
-| [**VISION.md**](../../process/VISION.md) | Why it exists, where it's going, and the deep move — the repo isn't the program guide, it's the stage. |
+| [**FORMAT.md**](../../process/repo-show-format.md) | What a Repo Show is, mechanically: the repo is the product, the video is a projection of it. Start here. |
+| [**VISION.md**](../../process/vision-and-ambition.md) | Why it exists, where it's going, and the deep move — the repo isn't the program guide, it's the stage. |
 | [**ticket-pr.yml**](../../process/ticket-pr.md) | The audience mechanism: your GitHub account is a passport, your PR is a ticket, your directory is a seat. Includes the lineage back to Stewart Brand's question-gathering at the 2006 Long Now talk. |
 | [**Repo Show skill**](../../skills/repo-show/SKILL.md) | The orchestrator protocol — what the LLM actually does to run a show. |
 | [**Guest participation ladder**](../../process/guest-participation-ladder.md) | From "email Don a question" to "live Twitch stream" — every rung is a valid way to attend. |

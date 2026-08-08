@@ -21,7 +21,7 @@ AI optional on the show; when used, we score cost-to-ship and solution quality. 
 | 7 | [**repo-show skill**](../../skills/repo-show/SKILL.md) | Harvest protocol — show artifacts melt into skills |
 | 8 | [**Host rig seed**](../../rigs/stick-shift-composer-moollm.rig.yml) | Example — Composer + MOOLLM wiring Don actually uses |
 
-**Markup views:** [MANUAL-TRANSMISSION.md](../MANUAL-TRANSMISSION.md) · [AI-OFFS.md](../AI-OFFS.md) · [ORCHESTRATION-GOLD.md](../ORCHESTRATION-GOLD.md)
+**Markup views:** [MANUAL-TRANSMISSION.md](../manual-transmission.md) · [AI-OFFS.md](../ai-offs.md) · [ORCHESTRATION-GOLD.md](../orchestration-gold.md)
 
 ---
 

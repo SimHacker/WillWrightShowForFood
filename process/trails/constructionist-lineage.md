@@ -22,7 +22,7 @@ The developmental + AI roots → Winograd interview → Will show → breed DNA 
 | [**sync-sources.yml**](../../characters/don-hopkins/sync-sources.yml) | Synced from moollm adventure-4 — deduped |
 | [**voice.yml**](../../characters/don-hopkins/portrayal/voice.yml) | Repo Show voice — not adventure rabbit plot |
 | [**vision-and-ambition.yml**](../vision-and-ambition.yml) | Long arc girder — no promises, full ambition |
-| [**VISION.md**](../VISION.md) | Navigation layer — [Flower Child energy](../VISION.md#curb-appeal-meets-brutalism) |
+| [**VISION.md**](../vision-and-ambition.md) | Navigation layer — [Flower Child energy](../vision-and-ambition.md#curb-appeal-meets-brutalism) |
 | [**1996 Winograd source**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — constructionist microworlds |
 | [**Simulation effect theme**](../../bits/theme-simulation-effect/theme-simulation-effect.md) | Player-as-author thread — episode anchor |
 | [**Educators' track**](../tracks/educators-track/educators-track.md) | Assign the fork — classroom as cast |

@@ -52,7 +52,7 @@ convenient; Don places it with sources and credit in your room. Harder paths (li
 multi-guest, face-to-face in Amsterdam) when logistics work.
 
 **Will Wright Show For Food** is the first Repo Show Don is producing with Will — to prove the
-format. Format deep dive: [`process/FORMAT.md`](../../process/FORMAT.md) · MOOLLM:
+format. Format deep dive: [`process/repo-show-format.md`](../../process/repo-show-format.md) · MOOLLM:
 [SimHacker/moollm](https://github.com/SimHacker/moollm)
 
 ---

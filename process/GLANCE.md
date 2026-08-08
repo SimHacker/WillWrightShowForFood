@@ -1,6 +1,6 @@
 # process/ — GLANCE
 
-[README](README.md) · [INDEX](INDEX.md) · [VISION](VISION.md)
+[README](README.md) · [INDEX](INDEX.md) · [VISION](vision-and-ambition.md)
 
 ---
 
@@ -12,8 +12,8 @@ Protocol girders — Repo Show format, drag race, retro challenges, ai-offs, vis
 
 1. README.md
 2. INDEX.md (human) / INDEX.yml (machine)
-3. VISION.md
-4. FORMAT.md
+3. vision-and-ambition.md
+4. repo-show-format.md
 
 ## Clusters
 

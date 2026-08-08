@@ -42,7 +42,7 @@ nailed — and what he'd call differently now, 26 years after it shipped.
 ### 2. Data portability — the crown jewel
 The **train-set hobby model** from 1996: characters, homes, objects, memories moving between
 worlds. Build a real **Proxi ⇔ Soul City ⇔ Sims** bridge on stream — the dream, finally running.
-(See [character endosymbiosis](../../process/CHARACTER-ENDOSYMBIOSIS.md) for the deeper frame.)
+(See [character endosymbiosis](../../process/character-endosymbiosis.md) for the deeper frame.)
 
 **Related guest:** [Ben Cerveny](../ben-cerveny/) — Game Neverending → Flickr → public-code
 

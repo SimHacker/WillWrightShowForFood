@@ -18,7 +18,7 @@ show_and_network:
     markup: brainstorm-heartbeat.md
     topic: "HEARTBEAT — guests brainstorm designs/tradeoffs; others implement; no coding required to accept"
   repo-show-format.yml:
-    markup: FORMAT.md
+    markup: repo-show-format.md
     topic: "Canonical Repo Show definition — RTFR, rigs, cauldron harvest"
   ticket-pr.yml:
     topic: "TicketPR — Master ⇒ PR; MOOLLM audience character templates in _TEMPLATE/audience/"
@@ -72,20 +72,20 @@ show_and_network:
 
 competition_and_rigs:
   micropolis-ai-drag-race.yml:
-    markup: DRAG-RACE.md
+    markup: micropolis-ai-drag-race.md
     show_seed: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
   code-that-spec.yml:
     topic: "CODE THAT SPEC!!!!! audience chant game"
   ai-offs.yml:
-    markup: AI-OFFS.md
+    markup: ai-offs.md
   manual-transmission.yml:
-    markup: MANUAL-TRANSMISSION.md
+    markup: manual-transmission.md
   stick-shift-protocol.yml:
     topic: "Every shift = commit; flair vs measurement class"
   rig-feedback.yml:
     topic: "Tell us your real AI stack"
   homefun-grading.yml:
-    markup: HOMEFUN.md
+    markup: homefun-grading.md
 
 retro_stacks:
   apple2-emulator-stack.yml:
@@ -103,7 +103,7 @@ retro_stacks:
 challenges:
   dir: challenges/
   index: challenges/INDEX.yml
-  markup: challenges/RETROCOMPUTING.md
+  markup: challenges/retrocomputing-drive.md
   umbrella: challenges/retrocomputing-drive.yml
 
 sources:
@@ -121,7 +121,7 @@ sources:
 
 live_and_training:
   brain-stream.yml:
-    markup: BRAIN-STREAM.md
+    markup: brain-stream.md
     app: ../apps/stream-gateway/
   moola.yml:
     topic: "MOOLA — native worthless play currency; §/gold/art exchange; training-data-for-tokens joke; burn & hole performances"
@@ -131,7 +131,7 @@ live_and_training:
   model-branching.yml:
     topic: "Fork model at bubble — compare trajectories"
   orchestration-gold.yml:
-    markup: ORCHESTRATION-GOLD.md
+    markup: orchestration-gold.md
 
 themes:
   old-band-back-together.yml:
@@ -153,11 +153,11 @@ methodology:
     skill: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
 vision:
   vision-and-ambition.yml:
-    markup: VISION.md
-    topic: "Long arc since 1996 — hand-authored VISION.md facade; yaml girder for machines"
-    sections: "VISION.md#on-this-page — lineage · pyramid · audiences · long-now · navigate"
+    markup: vision-and-ambition.md
+    topic: "Long arc since 1996 — hand-authored vision-and-ambition.md facade; yaml girder for machines"
+    sections: "vision-and-ambition.md#on-this-page — lineage · pyramid · audiences · long-now · navigate"
   crazy-idea-jam.yml:
-    markup: CRAZY-IDEA-JAM.md
+    markup: crazy-idea-jam.md
     topic: "Wacky + forward-thinking idea reactor — curated public-safe from Don's crystallized notes"
     trail: cross-links.yml#stupid_fun_forward
 

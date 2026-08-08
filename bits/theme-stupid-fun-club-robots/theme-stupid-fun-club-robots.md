@@ -66,4 +66,4 @@ Both bodies built by Will; both brains driven by Don's web + pie-menu teleoperat
 
 ---
 
-← [All themes](../../repo-shows/README.md) · [Crazy Idea Jam — RoboResurrection](../../process/CRAZY-IDEA-JAM.md) · [Premiere](../../repo-shows/will-wright-premiere/README.md)
+← [All themes](../../repo-shows/README.md) · [Crazy Idea Jam — RoboResurrection](../../process/crazy-idea-jam.md) · [Premiere](../../repo-shows/will-wright-premiere/README.md)

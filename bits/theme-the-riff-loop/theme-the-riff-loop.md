@@ -34,7 +34,7 @@ Four handles on the same wheel. Steer + mutate from anywhere; no pass is final.
 
 Slats' voice-synth stream-of-thought robopoetry loops — output feeding back as input — and people talk into, over, after, and before it to steer the stream. Reincarnate Slats and the loop is live again. **The diff between passes is the drama.**
 
-→ [../../repo-shows/will-wright-premiere/README.md](../../will-wright-premiere/../../will-wright-premiere/README.md) · [BRAIN-STREAM.md](../../process/BRAIN-STREAM.md) · [Stupid Fun Club robots](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
+→ [../../repo-shows/will-wright-premiere/README.md](../../will-wright-premiere/../../will-wright-premiere/README.md) · [BRAIN-STREAM.md](../../process/brain-stream.md) · [Stupid Fun Club robots](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
 
 ---
 
@@ -44,8 +44,8 @@ Slats' voice-synth stream-of-thought robopoetry loops — output feeding back as
 |---------|------|-------|
 | **Jeff recursion** | [Jeff Adkins](../../repo-shows/jeff-adkins/) · [ideas.md](../../characters/jeff-adkins/ideas.md) | SimObliterator — AI copying AI copying people, better each pass |
 | **Eno generative** | [Brian Eno show](../../repo-shows/brian-eno/) | Set rules running; play AGAINST them live — surrender + steer |
-| **Repo Show itself** | [BRAIN-STREAM.md](../../process/BRAIN-STREAM.md) | Brain-stream on bus, homefun PRs, cauldron via git |
-| **Director's Cut** | [FORMAT.md](../../process/FORMAT.md) | Discuss → invite reaction → splice → re-release; git branch/merge/tag literal |
+| **Repo Show itself** | [BRAIN-STREAM.md](../../process/brain-stream.md) | Brain-stream on bus, homefun PRs, cauldron via git |
+| **Director's Cut** | [FORMAT.md](../../process/repo-show-format.md) | Discuss → invite reaction → splice → re-release; git branch/merge/tag literal |
 | **Cover chain** | [Nina Hagen ideas](../../characters/nina-hagen/ideas.md) | Tubes → Nina → Trannyshack — each pass keeps riff, mutates meaning |
 | **Feedback jamming** | [Nina Hagen hook #10](../../characters/nina-hagen/ideas.md) | AntiORP / NATO OPERATORS — video feedback over UDP; we do it with everything including AI |
 | **Tribute before attribution** | [Doug Hilsinger](../../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md) | Loved the work before knowing whose — SimObliterator ethic |

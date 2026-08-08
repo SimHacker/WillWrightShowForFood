@@ -69,7 +69,7 @@ Details: [`process/entryways/rooms.md`](process/entryways/rooms.md)
 
 ## 🤯 Crazy Idea Jam — get weird
 
-*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/CRAZY-IDEA-JAM.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
+*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
 
 | | Idea | The pitch |
 |---|------|-----------|

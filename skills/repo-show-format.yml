@@ -1,9 +1,9 @@
 # Repo Show format — pointer
-# Canonical: process/repo-show-format.yml + process/FORMAT.md
+# Canonical: process/repo-show-format.yml + process/repo-show-format.md
 # Orchestrator: skills/repo-show/
 
 see:
-  - ../process/FORMAT.md
+  - ../process/repo-show-format.md
   - ../process/repo-show-format.yml
   - repo-show/
 harvest_target: skills/

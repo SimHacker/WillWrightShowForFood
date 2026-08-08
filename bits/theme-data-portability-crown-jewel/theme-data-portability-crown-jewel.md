@@ -23,12 +23,12 @@ Will said it on a Stanford stage in 1996: characters, homes, cities, objects, id
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Crazy Idea Jam — crown jewel**](../../process/CRAZY-IDEA-JAM.md#-the-crown-jewel) | Reactor blurbs — the jewel in context |
-| [**CRAZY-IDEA-JAM.md**](../../process/CRAZY-IDEA-JAM.md#data_portability_crown_jewel) | Machine girder — `#data_portability_crown_jewel` |
-| [**Character endosymbiosis**](../../process/CHARACTER-ENDOSYMBIOSIS.md) | Lynn Margulis as save format — soul-file + organelles |
+| [**Crazy Idea Jam — crown jewel**](../../process/crazy-idea-jam.md#-the-crown-jewel) | Reactor blurbs — the jewel in context |
+| [**CRAZY-IDEA-JAM.md**](../../process/crazy-idea-jam.md#data_portability_crown_jewel) | Machine girder — `#data_portability_crown_jewel` |
+| [**Character endosymbiosis**](../../process/character-endosymbiosis.md) | Lynn Margulis as save format — soul-file + organelles |
 | [Bridge proposals](../../repo-shows/README.md) | Show seeds orbiting the jewel |
 | [**1996 transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will names the goal — primary source |
-| [**VISION.md**](../../process/VISION.md) | Long arc — stated ambition, no launch promise |
+| [**VISION.md**](../../process/vision-and-ambition.md) | Long arc — stated ambition, no launch promise |
 | [**MicropolisCore**](https://github.com/SimHacker/MicropolisCore) | Open architecture Lall wanted in 2002 — now shipping |
 
 ---
@@ -43,4 +43,4 @@ Will said it on a Stanford stage in 1996: characters, homes, cities, objects, id
 
 ---
 
-← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)
+← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/crazy-idea-jam.md)

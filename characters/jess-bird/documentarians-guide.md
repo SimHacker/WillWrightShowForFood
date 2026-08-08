@@ -85,7 +85,7 @@ production you can film *while it assembles itself*:
 | [Will's sessions](../will-wright/sessions/README.md)                                   | The episodes so far — mic check, souls & palm readings, the cold-call pitch. Will has **accepted**; the show is real and moving. |
 | [Flagship show: Will Wright premiere](../../repo-shows/will-wright-premiere/BROWSE.md) | The browsable tour of the premiere — segments, lore, venue.                                                                      |
 | [Soul City namesake](../../repo-shows/will-wright-premiere/soul-city-namesake.md)      | House style in action: honoring Floyd McKissick's Soul City while building a game world.                                         |
-| [Format](../../process/FORMAT.md) · [Vision](../../process/VISION.md)                  | What the show *is* — one-minute movies, guest ladder, AI backstage / humans on camera.                                           |
+| [Format](../../process/repo-show-format.md) · [Vision](../../process/vision-and-ambition.md)                  | What the show *is* — one-minute movies, guest ladder, AI backstage / humans on camera.                                           |
 
 ---
 

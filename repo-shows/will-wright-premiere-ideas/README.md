@@ -1,6 +1,6 @@
 # Will Wright show — content pack
 
-Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../bits/`](../../bits/README.md); forward-tech bridges live in [`../../process/CRAZY-IDEA-JAM.md`](../../process/CRAZY-IDEA-JAM.md).
+Ideas, gags, and themes **for this show specifically**. Cross-show traditions live in [`../../bits/`](../../bits/README.md); forward-tech bridges live in [`../../process/crazy-idea-jam.md`](../../process/crazy-idea-jam.md).
 
 ## Canonical show docs (don't duplicate — link)
 

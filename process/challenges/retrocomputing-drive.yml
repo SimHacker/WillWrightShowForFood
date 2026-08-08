@@ -106,8 +106,8 @@ ties_to:
 
 see_also:
   - { path: cross-links.yml#retrocomputing_drive, why: "Narrative trail — all retro nodes" }
-  - { path: challenges/RETROCOMPUTING.md, why: "Generated markup view of this family" }
-  - { path: ../DRAG-RACE.md, why: "Retro laps are drag race challenge rotation" }
+  - { path: retrocomputing-drive.md, why: "Generated markup view of this family" }
+  - { path: ../micropolis-ai-drag-race.md, why: "Retro laps are drag race challenge rotation" }
   - { path: ../manual-transmission.yml, why: "Measurement lane — smallest model on retro target" }
   - { path: ../ai-offs.yml, why: "Declare class + spend proof for AI-assisted retro" }
   - { path: ../homefun-grading.yml, why: "Homefun rubric applies to retro PRs" }

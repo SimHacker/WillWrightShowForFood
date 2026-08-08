@@ -17,7 +17,7 @@ You know the games; this repo is a public conversation about how they were desig
 | 3 | [**Will portrait**](../../characters/will-wright/README.md) | Design traditions in plain language — toys, object AI, hobby model |
 | 4 | [**Will CARD**](../../characters/will-wright/CARD.md) | Simulator Effect, implication over simulation — named traditions |
 | 5 | [**Chaim Gingold**](../../characters/chaim-gingold/CARD.yml) | Building SimCity — the simulation loop drawn as diagrams |
-| 6 | [**Drag Race**](../DRAG-RACE.md) | Game-show format inside the repo — rig personas, Slats judges |
+| 6 | [**Drag Race**](../micropolis-ai-drag-race.md) | Game-show format inside the repo — rig personas, Slats judges |
 | 7 | [**Slats**](../../characters/robots/slats/CARD.yml) | Robot waiter from Stupid Fun Club films — fictional judge card |
 
 ---

@@ -12,7 +12,7 @@ Her 1979 *Club 2* moment is the twin emblem to Bowie's video puppet: **get the t
 air, on purpose, for a reason.** Direct tie to the show's
 [`unnecessary-censorship`](../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml) tradition
 (voluntary comedy, never timid euphemism; we don't bowdlerize real names) and the medium's
-get-it-past-the-gate-then-repossess-it thesis (see [`VISION.md`](../../process/VISION.md)).
+get-it-past-the-gate-then-repossess-it thesis (see [`VISION.md`](../../process/vision-and-ambition.md)).
 
 ### 2. The operatic-punk voice as instrument (the Nomi sibling)
 A classically-trained, multi-octave voice turned into punk theatre — sibling to **Klaus Nomi's**

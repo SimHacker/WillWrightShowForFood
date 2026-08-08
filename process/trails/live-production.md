@@ -13,7 +13,7 @@ Live bus for prompts, model shifts, and GitHub doc links — Philahue surfaces a
 | Stop | Why wander here |
 |------|-----------------|
 | [**brain-stream.yml**](../brain-stream.yml) | Overlay + throttled chat bus spec |
-| [**BRAIN-STREAM.md**](../BRAIN-STREAM.md) | Human markup |
+| [**BRAIN-STREAM.md**](../brain-stream.md) | Human markup |
 | [**model-branching.yml**](../model-branching.yml) | Fork chat at bubble — compare trajectories |
 | [**orchestration-gold.yml**](../orchestration-gold.yml) | Multi-LLM traces as training gold |
 | [**stream-gateway app**](../../apps/stream-gateway/README.md) | Future deployable brain bus app |

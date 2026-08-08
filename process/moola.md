@@ -41,6 +41,6 @@ Slats: "Thank you for your training data. Your MOOLA is worthless and unlimited.
 |-------|--------|
 | Auto Art Theft Grand | [auto-art-theft-grand.md](auto-art-theft-grand.md) |
 | Simoleon auctions | [../characters/don-hopkins/jsonsters/simoleon-auctions.yml](../characters/don-hopkins/jsonsters/simoleon-auctions.yml) |
-| Crazy Idea Jam | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
+| Crazy Idea Jam | [crazy-idea-jam.md](crazy-idea-jam.md) |
 
 ↑ [process index](README.md) · Girder: `moola.yml`

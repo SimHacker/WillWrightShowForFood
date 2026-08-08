@@ -9,7 +9,7 @@ real people, and we never impersonate them or speak as them.
 **Shows** in `repo-shows/` reference guest stuff — they don't duplicate it. **Packages/** hold
 reusable code. **Rooms** (MOOLLM `ROOM.yml`, CARD, SIMULATION) can live anywhere — show-rooms
 in `repo-shows/`, shared context in `process/`, `skills/`. Constitution:
-[`../process/FORMAT.md#placement_constitution`](../process/FORMAT.md#placement_constitution).
+[`../process/repo-show-format.md#placement_constitution`](../process/repo-show-format.md#placement_constitution).
 
 *Machine sync:* [`INDEX.yml`](INDEX.yml)
 

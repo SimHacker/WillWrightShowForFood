@@ -54,7 +54,7 @@ interactive instructional and artistic CA web apps.** That unlocks the whole 201
   1D CAs with 1+1D space-time diagrams (his stated pedagogy wish), the dripping handrail in a
    browser tab.
 4. **Then a thousand flowers bloom** from the seeds — collaborators fork the playgrounds, and
-  Jim's students get **homefun** ([homefun, not homework](../../process/HOMEFUN.md)) that ships
+  Jim's students get **homefun** ([homefun, not homework](../../process/homefun-grading.md)) that ships
    in public.
 
 This is exactly what the show is for: brainstorm, document, commit, inspire.

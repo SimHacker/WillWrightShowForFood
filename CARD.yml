@@ -14,7 +14,7 @@ plugin:
 purpose: |
   Public-facing Repo Show world for Will Wright kickoff. Filtered export from DonHopkins
   private monorepo. Two-way navigable indexes. Guest characters as potential show hosts.
-  Long-term ambition (1996 lineage → living microworld) — see process/VISION.md; no promises.
+  Long-term ambition (1996 lineage → living microworld) — see process/vision-and-ambition.md; no promises.
 
 methods:
   ORIENT:

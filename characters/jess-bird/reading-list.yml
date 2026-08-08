@@ -64,8 +64,8 @@ arcs:
       - ../will-wright/sessions/README.md
       - ../../repo-shows/will-wright-premiere/BROWSE.md
       - ../../repo-shows/will-wright-premiere/soul-city-namesake.md
-      - ../../process/FORMAT.md
-      - ../../process/VISION.md
+      - ../../process/repo-show-format.md
+      - ../../process/vision-and-ambition.md
 
 interview_universe:
   roster_machine: ../INDEX.yml

@@ -18,7 +18,7 @@
 AI proposes; **people** dispose. The LLM writes code, orchestrates live streams, and stages discussion between humans — it does not replace human voice, personality, or authorship on air.
 
 **Player-in-the-Middle:** Center people, not the machine. Curation of the flow *is* the show.  
-→ [CRAZY-IDEA-JAM.md](../../process/CRAZY-IDEA-JAM.md)
+→ [CRAZY-IDEA-JAM.md](../../process/crazy-idea-jam.md)
 
 ---
 

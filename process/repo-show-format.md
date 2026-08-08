@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:7f6a0050581152f8 -->
+<!-- content-sha256:784ee15f97bf2014 -->
 
 # Repo Show format
 
@@ -588,7 +588,7 @@ MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.
 | [`ticket-pr.yml`](ticket-pr.yml) | TicketPR — [Ticketmaster](https://en.wikipedia.org/wiki/Ticketmaster) reframed: Master ⇒ PR |
 | [`cross-links.yml`](cross-links.yml) | Narrative web — trails between all rooms |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) | Long arc girder |
-| [`VISION.md`](VISION.md) | Navigation layer — link-rich human view |
+| [`vision-and-ambition.md`](vision-and-ambition.md) | Navigation layer — link-rich human view |
 | [`rig-feedback.yml`](rig-feedback.yml) | Declare your real AI stack |
 | [`showmaker-network.yml`](showmaker-network.yml) | Shows breed shows |
 | [`manual-transmission.yml`](manual-transmission.yml) | Smallest model that works |

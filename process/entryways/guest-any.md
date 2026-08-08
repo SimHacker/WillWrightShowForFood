@@ -16,7 +16,7 @@ We publish portrayals **about** real people — verifiable, polite, revocable. Y
 | 2 | `characters/<your-slug>/invitation.md` | Public document linked from email — short, durable |
 | 3 | `characters/<your-slug>/CARD.yml` | MTG-style abilities — celebrate documented work on the show |
 | 4 | `characters/<your-slug>/CHARACTER.yml` | Bio, sources, invitation.status — yaml source of truth |
-| 5 | [**Repo Show format**](../FORMAT.md) | What happens if you say yes — RTFR, rig optional, no homework deck |
+| 5 | [**Repo Show format**](../repo-show-format.md) | What happens if you say yes — RTFR, rig optional, no homework deck |
 | 6 | [**repo-show SKILL**](../../skills/repo-show/SKILL.md) | SEED → AIR → HARVEST — how episodes become skills in the cauldron |
 
 **Template:** [`characters/_TEMPLATE/`](../../characters/_TEMPLATE/README.md) · **Example:** [Will Wright](../../characters/will-wright/README.md)

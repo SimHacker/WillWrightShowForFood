@@ -14,7 +14,7 @@ The ladder cuts both ways: the easy rungs remove friction, and the top rung **le
 
 ## Players, not guests, users, or consumers
 
-**Constitutional** ([FORMAT.md — participation policy](FORMAT.md#participation-policy)):
+**Constitutional** ([repo-show-format.md — participation policy](repo-show-format.md#participation-policy)):
 everyone who joins a show **becomes a player**. "Guest," "audience," and "host" are role
 names — which part you play. "Player" is what everyone *is*. The same way you join a game,
 you join a show; every invitation is an **invitation to play** — a play date, not an

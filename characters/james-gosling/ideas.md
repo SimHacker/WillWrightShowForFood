@@ -57,7 +57,7 @@ glass-room timeshare — *his* iron. **On-air ask**, not a lecture:
 Sidecar + questions: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)
 
 Repo ethos (Hardware Hacker Builder audience): *Schematics in the repo. No gatekeeping.
-Bare-hands rig class welcome.* — [`../../process/VISION.md`](../../process/VISION.md)
+Bare-hands rig class welcome.* — [`../../process/vision-and-ambition.md`](../../process/vision-and-ambition.md)
 Contrast: [`../heinz-lemke/`](../heinz-lemke/README.md) PDP-7/Titan PIXIE satellite graphics.
 
 ### 4. NeWS reunion (optional group)

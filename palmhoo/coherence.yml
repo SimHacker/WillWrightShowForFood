@@ -37,7 +37,7 @@ summaries:
 
   - summary: palmhoo/simulation-and-worlds/README.md
     sources:
-      - process/VISION.md
+      - process/vision-and-ambition.md
       - process/vision-and-ambition.yml
       - process/moollm-stage.yml
       - process/constructionist-simcity-response.yml
@@ -70,8 +70,8 @@ summaries:
 
   - summary: palmhoo/shows-and-performance/README.md
     sources:
-      - process/FORMAT.md
-      - process/VISION.md
+      - process/repo-show-format.md
+      - process/vision-and-ambition.md
       - process/ticket-pr.yml
       - process/guest-participation-ladder.yml
       - skills/repo-show/SKILL.md
@@ -86,7 +86,7 @@ summaries:
 
   - summary: palmhoo/history-and-lore/README.md
     sources:
-      - process/VISION.md
+      - process/vision-and-ambition.md
       - process/ticket-pr.yml
       - process/constructionist-simcity-response.yml
       - characters/marc-canter/timeline-rotated-90-degrees.md
@@ -188,7 +188,7 @@ summaries:
   - summary: palmhoo/improv-and-play/README.md
     sources:
       - characters/drew-carey/
-      - process/CRAZY-IDEA-JAM.md
+      - process/crazy-idea-jam.md
       - process/play-along-skills.yml
       - catalogs/simprov/
       - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/play

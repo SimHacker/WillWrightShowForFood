@@ -65,7 +65,7 @@ Public monorepo for **Repo Shows**: GitHub-native, live conversations whose arti
 3. **Prove it's possible** — it was done; here are the files, the articles, the objects
 4. **Follow through to code** — homefun on MicropolisCore + MOOLLM; cauldron → playable features
 
-The [Repo Show format](../../process/FORMAT.md) is Terry Winograd's public UI seminar, updated: RTFR on your rig, audience character PRs, Don Philahue wrangling, ideas implemented live.
+The [Repo Show format](../../process/repo-show-format.md) is Terry Winograd's public UI seminar, updated: RTFR on your rig, audience character PRs, Don Philahue wrangling, ideas implemented live.
 
 ---
 

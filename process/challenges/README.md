@@ -1,6 +1,6 @@
 # Retrocomputing challenges
 
-> **Umbrella:** [`RETROCOMPUTING.md`](RETROCOMPUTING.md) (generated — `pnpm run facades`)  
+> **Umbrella:** [`retrocomputing-drive.md`](retrocomputing-drive.md) (generated — `pnpm run facades`)  
 > **Girder:** [`retrocomputing-drive.yml`](retrocomputing-drive.yml)
 
 Same spec CARD — your **rig** declares languages, tools, platform, emulator. Ship **`SETUP.md`** so others reproduce and mod.
@@ -31,4 +31,4 @@ Same spec CARD — your **rig** declares languages, tools, platform, emulator. S
 
 ## Related
 
-↑ [`../DRAG-RACE.md`](../DRAG-RACE.md) · [`../README.md`](../README.md) · [`../cross-links.yml`](../cross-links.yml) · [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md)
+↑ [`../micropolis-ai-drag-race.md`](../micropolis-ai-drag-race.md) · [`../README.md`](../README.md) · [`../cross-links.yml`](../cross-links.yml) · [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md)

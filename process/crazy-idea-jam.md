@@ -14,7 +14,7 @@ disposes.
 **House rules of the reactor:** keep it kind, keep it true, keep it weird. The wildest idea in the
 room still has to *run* one day.
 
-**Girder:** [`crazy-idea-jam.yml`](crazy-idea-jam.yml) · **Trail:** [stupid_fun_forward](trails/stupid-fun-forward.md) · **Serious arc:** [**VISION.md**](VISION.md) ([one-breath start](VISION.md#vision-and-ambition) · [`long_now_and_later`](VISION.md#long-now-and-later) · [girder](vision-and-ambition.yml))
+**Girder:** [`crazy-idea-jam.yml`](crazy-idea-jam.yml) · **Trail:** [stupid_fun_forward](trails/stupid-fun-forward.md) · **Serious arc:** [**vision-and-ambition.md**](vision-and-ambition.md) ([one-breath start](vision-and-ambition.md#vision-and-ambition) · [`long_now_and_later`](vision-and-ambition.md#long-now-and-later) · [girder](vision-and-ambition.yml))
 
 > Tone: joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind.
 
@@ -94,6 +94,6 @@ Until then, it lives here, simmering, occasionally singing when you hold the spa
 
 ---
 
-← [All trails](../TRAILS.md) · [Museum map](entryways/README.md) · [**Vision**](VISION.md) · [Vision girder](vision-and-ambition.yml)
+← [All trails](../TRAILS.md) · [Museum map](entryways/README.md) · [**Vision**](vision-and-ambition.md) · [Vision girder](vision-and-ambition.yml)
 
 *Hand-authored (instance-first). Girder: [`crazy-idea-jam.yml`](crazy-idea-jam.yml). Not bulk-regenerated from `pnpm facades`.*

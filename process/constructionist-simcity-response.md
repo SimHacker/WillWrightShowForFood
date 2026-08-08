@@ -1,6 +1,6 @@
 # Constructionist SimCity response
 
-[Constructionist lineage trail](trails/constructionist-lineage.md) · [Crazy Idea Jam](CRAZY-IDEA-JAM.md) · [Alan Kay](../characters/alan-kay/)
+[Constructionist lineage trail](trails/constructionist-lineage.md) · [Crazy Idea Jam](crazy-idea-jam.md) · [Alan Kay](../characters/alan-kay/)
 
 ---
 
@@ -39,7 +39,7 @@ Educator anchor: Prof. Upmanu Lall — Columbia Civil & Environmental Engineerin
 | Dan Ingalls | [../characters/dan-ingalls/](../characters/dan-ingalls/) |
 | Chaim Gingold | [../characters/chaim-gingold/](../characters/chaim-gingold/) |
 | Walter Bender | [../characters/walter-bender/](../characters/walter-bender/) |
-| Educational data literacy | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
+| Educational data literacy | [crazy-idea-jam.md](crazy-idea-jam.md) |
 | Micropolis Snap bridge | [../characters/jens-monig/sources/micropolis-snap-2018.md](../characters/jens-monig/sources/micropolis-snap-2018.md) |
 
 ↑ [process index](README.md) · Girder: `constructionist-simcity-response.yml`

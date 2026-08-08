@@ -16,9 +16,9 @@ Once hand-authored: edit the `.md`; sync yaml girder separately; set `render.mod
 
 | Girder | Markdown |
 |--------|----------|
-| vision-and-ambition.yml | [VISION.md](VISION.md) |
-| crazy-idea-jam.yml | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
-| character-endosymbiosis.yml | [CHARACTER-ENDOSYMBIOSIS.md](CHARACTER-ENDOSYMBIOSIS.md) |
+| vision-and-ambition.yml | [vision-and-ambition.md](vision-and-ambition.md) |
+| crazy-idea-jam.yml | [crazy-idea-jam.md](crazy-idea-jam.md) |
+| character-endosymbiosis.yml | [character-endosymbiosis.md](character-endosymbiosis.md) |
 | entryways.yml | [ENTRYWAYS.md](../ENTRYWAYS.md) · [entryways/](entryways/) |
 | cross-links.yml | [TRAILS.md](../TRAILS.md) · [trails/](trails/) |
 
@@ -26,14 +26,14 @@ Once hand-authored: edit the `.md`; sync yaml girder separately; set `render.mod
 
 | Girder | Markdown |
 |--------|----------|
-| repo-show-format.yml | [FORMAT.md](FORMAT.md) → hand next |
-| micropolis-ai-drag-race.yml | [DRAG-RACE.md](DRAG-RACE.md) |
-| ai-offs.yml | [AI-OFFS.md](AI-OFFS.md) |
-| manual-transmission.yml | [MANUAL-TRANSMISSION.md](MANUAL-TRANSMISSION.md) |
-| homefun-grading.yml | [HOMEFUN.md](HOMEFUN.md) |
-| brain-stream.yml | [BRAIN-STREAM.md](BRAIN-STREAM.md) |
-| orchestration-gold.yml | [ORCHESTRATION-GOLD.md](ORCHESTRATION-GOLD.md) |
-| challenges/retrocomputing-drive.yml | [challenges/RETROCOMPUTING.md](challenges/RETROCOMPUTING.md) |
+| repo-show-format.yml | [repo-show-format.md](repo-show-format.md) → hand next |
+| micropolis-ai-drag-race.yml | [micropolis-ai-drag-race.md](micropolis-ai-drag-race.md) |
+| ai-offs.yml | [ai-offs.md](ai-offs.md) |
+| manual-transmission.yml | [manual-transmission.md](manual-transmission.md) |
+| homefun-grading.yml | [homefun-grading.md](homefun-grading.md) |
+| brain-stream.yml | [brain-stream.md](brain-stream.md) |
+| orchestration-gold.yml | [orchestration-gold.md](orchestration-gold.md) |
+| challenges/retrocomputing-drive.yml | [challenges/retrocomputing-drive.md](challenges/retrocomputing-drive.md) |
 
 ## Kebab-case facades (hand index docs)
 

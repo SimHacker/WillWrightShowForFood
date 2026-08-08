@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/micropolis-ai-drag-race.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:c8af47f2986837e5 -->
+<!-- content-sha256:3a7d6fc492f2375d -->
 
 # Micropolis AI Drag Race
 
@@ -126,7 +126,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 
 | Link | Why |
 |------|-----|
-| [`DRAG-RACE.md`](DRAG-RACE.md) | Generated markup view |
+| [`micropolis-ai-drag-race.md`](micropolis-ai-drag-race.md) | Generated markup view |
 | [`micropolis-ai-drag-race.yml`](../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Show seed |
 | [`ca-machinima-cabaret-drag-race.yml`](../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml) | Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts |
 | [`cross-links.yml#drag_race_and_ai_offs`](cross-links.yml) | Full game-show trail |
@@ -136,7 +136,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | [`stick-shift-protocol.yml`](stick-shift-protocol.yml) | Shift = commit |
 | [`homefun-grading.yml`](homefun-grading.yml) | Commit vs thinking blocks |
 | [`retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | Retro rotation — apple2, ITS, LispM |
-| [`RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) | Generated retro umbrella markup |
+| [`retrocomputing-drive.md`](challenges/retrocomputing-drive.md) | Generated retro umbrella markup |
 | [`judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) | Celebrity judge |
 | [`README.md`](../rigs/README.md) | Rig personas + SETUP DNA |
 | [`SKILL.md`](../skills/repo-show/SKILL.md) | Same skill wraps drag race beats |

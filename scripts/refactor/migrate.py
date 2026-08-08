@@ -165,12 +165,31 @@ def phase1_moves_from_dest():
     return moves
 
 
+def phase4b_moves():
+    """Facade case renames (REFACTOR.md section 5) — girder basename wins."""
+    table = {
+        "FORMAT.md": "repo-show-format.md",
+        "DRAG-RACE.md": "micropolis-ai-drag-race.md",
+        "AI-OFFS.md": "ai-offs.md",
+        "MANUAL-TRANSMISSION.md": "manual-transmission.md",
+        "HOMEFUN.md": "homefun-grading.md",
+        "BRAIN-STREAM.md": "brain-stream.md",
+        "ORCHESTRATION-GOLD.md": "orchestration-gold.md",
+        "VISION.md": "vision-and-ambition.md",
+        "CRAZY-IDEA-JAM.md": "crazy-idea-jam.md",
+        "CHARACTER-ENDOSYMBIOSIS.md": "character-endosymbiosis.md",
+        "challenges/RETROCOMPUTING.md": "challenges/retrocomputing-drive.md",
+    }
+    return {f"process/{o}": f"process/{n}" for o, n in table.items()}
+
+
 PHASES = {
     "phase1": (phase1_moves, phase1_aliases),
     "resweep1": (phase1_moves_from_dest, phase1_aliases),
     "phase2": (phase2_moves, phase2_aliases),
     "phase3": (phase3_moves, phase3_aliases),
     "phase4": (phase4_moves, lambda: {}),
+    "phase4b": (phase4b_moves, lambda: {}),
 }
 
 STRAGGLER_PATTERNS = ["repo-shows/ideas/", "flipbook/shows/"]

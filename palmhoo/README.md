@@ -23,7 +23,7 @@ Philosophy of mind, made-up minds, incarnation, consciousness, the simulator eff
 
 ### 🌍 [Simulation & Worlds](simulation-and-worlds/README.md)
 The repo as simulation engine, microworlds, rooms, cellular automata, cities in bottles.
-*Highlights:* [The deep move](../process/VISION.md) · [MOOLLM stage](../process/moollm-stage.md) ·
+*Highlights:* [The deep move](../process/vision-and-ambition.md) · [MOOLLM stage](../process/moollm-stage.md) ·
 [adventure-4](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4)
 
 ### 🔨 [Design Methods](design-methods/README.md)
@@ -34,13 +34,13 @@ Design by accretion, the cauldron, play-learn-lift, YAML jazz, K-lines, tuned em
 
 ### 🎭 [Shows & Performance](shows-and-performance/README.md)
 The Repo Show format, TicketPRs, time shifting, playlists, the performance space.
-*Highlights:* [FORMAT.md](../process/FORMAT.md) · [VISION.md](../process/VISION.md) ·
+*Highlights:* [FORMAT.md](../process/repo-show-format.md) · [VISION.md](../process/vision-and-ambition.md) ·
 [ticket-pr.yml](../process/ticket-pr.md)
 
 ### 📜 [History & Lore](history-and-lore/README.md)
 The open-sourcing of SimCity, the Long Now talk, OLPC stone soup, PSIBER, the Director → Flash →
 repo lineage, Maxis memory.
-*Highlights:* [The seed saga](../process/VISION.md) ·
+*Highlights:* [The seed saga](../process/vision-and-ambition.md) ·
 [Timeline rotated 90°](../characters/marc-canter/timeline-rotated-90-degrees.md)
 
 ### ⚙️ [Code & Craft](code-and-craft/README.md)
@@ -83,7 +83,7 @@ Art that grows from rules — Eno's gardens, Tarbell's organisms, Will's possibi
 ### 🎲 [Improv & Play](improv-and-play/README.md)
 "Yes, and" as method — improv formats, play-along skills, games whose rules change as you play.
 *Highlights:* [Drew Carey](../characters/drew-carey/README.md) ·
-[Crazy Idea Jam](../process/CRAZY-IDEA-JAM.md) · [simprov](../catalogs/simprov/)
+[Crazy Idea Jam](../process/crazy-idea-jam.md) · [simprov](../catalogs/simprov/)
 
 ### 📨 [Concurrency & Messaging](concurrency-and-messaging/README.md)
 Structure over speed: Pike's gophers, Hoare's CSP, Kay's messaging, and the worms of Ground.

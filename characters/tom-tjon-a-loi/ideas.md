@@ -106,7 +106,7 @@ competition: performers bring their own tile sets (costumes), CA rules and
 parameters (acts), and music, and the audience votes merge or sashay. Show
 seed: [ca-machinima-cabaret-drag-race.yml](../../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml) —
 verdict culture borrowed from the
-[Micropolis AI Drag Race](../../process/DRAG-RACE.md). Tom is on the
+[Micropolis AI Drag Race](../../process/micropolis-ai-drag-race.md). Tom is on the
 candidate-player list, and on the candidate co-designer list, for the same
 reason: he's the only person who has already sewn a full costume for this
 particular queen.

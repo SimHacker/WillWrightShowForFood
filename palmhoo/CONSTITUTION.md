@@ -62,7 +62,7 @@ this topic's reader specifically.*
 
 | Granularity | Example |
 |-------------|---------|
-| A **precise anchor** drilling into a file — a markdown heading, a YAML key, a line range | `suggested-questions.md#palms-question…` · `112:118:process/VISION.md` |
+| A **precise anchor** drilling into a file — a markdown heading, a YAML key, a line range | `suggested-questions.md#palms-question…` · `112:118:process/vision-and-ambition.md` |
 | A **whole file** | `running-on-wetware.md` |
 | A **directory** — e.g. a character, which *is* its folder | `characters/palm/` |
 | A **whole tree** of directories and files | Palmhoo itself |

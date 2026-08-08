@@ -8,7 +8,7 @@ Browse without a GitHub account. Clone to play along.
 **Stumbled here?** Long-term ambition since Will's **1996 Stanford talk** (and before) —
 this **GitHub repo** is the **first public point of origin** (tip of the pyramid). Not a launch promise:
 curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, real monorepo).
-→ [**Vision**](process/VISION.md) ([sections](process/VISION.md#on-this-page)) · [yaml girder](process/vision-and-ambition.yml) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md)
+→ [**Vision**](process/vision-and-ambition.md) ([sections](process/vision-and-ambition.md#on-this-page)) · [yaml girder](process/vision-and-ambition.yml) · [Crazy Idea Jam](process/crazy-idea-jam.md)
 
 [![The User Interface Flower Child](characters/will-wright/media/DonHopkinsSimsCreditsIcon.jpg)](repo-shows/will-wright-premiere/README.md)
 
@@ -16,11 +16,11 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 
 | What | Where |
 |------|--------|
-| **Vision** (platforms, archives, viral readers) | [**process/VISION.md**](process/VISION.md) · [sections](process/VISION.md#on-this-page) · [Crazy Idea Jam](process/CRAZY-IDEA-JAM.md) |
+| **Vision** (platforms, archives, viral readers) | [**process/vision-and-ambition.md**](process/vision-and-ambition.md) · [sections](process/vision-and-ambition.md#on-this-page) · [Crazy Idea Jam](process/crazy-idea-jam.md) |
 | **🐒✋ Palmhoo** (Palm's topic directory of the whole universe) | [**palmhoo/**](palmhoo/README.md) · [Constitution](palmhoo/CONSTITUTION.md) |
 | **MOOLLM pyramid** | [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml) · [`skills/repo-show/`](skills/repo-show/README.md) |
 | **Process room** | [`process/README.md`](process/README.md) · [`process/INDEX.yml`](process/INDEX.yml) |
-| **Repo Show format** | [`process/FORMAT.md`](process/FORMAT.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
+| **Repo Show format** | [`process/repo-show-format.md`](process/repo-show-format.md) · [`process/repo-show-format.yml`](process/repo-show-format.yml) · [**TicketPR**](process/ticket-pr.yml) |
 | **ShowMaker network** | [`process/showmaker-network.yml`](process/showmaker-network.yml) |
 | **Setup (dev)** | [**SETUP.md**](SETUP.md) |
 | **The show pitch** | [`repo-shows/will-wright-premiere/README.md`](repo-shows/will-wright-premiere/README.md) · [**Will: browse any order**](repo-shows/will-wright-premiere/BROWSE.md) |
@@ -32,8 +32,8 @@ curb appeal up top, **brutalist GitHub underneath** (yaml girders, verify CI, re
 | **Live repo policy** | [`process/live-repo.yml`](process/live-repo.yml) |
 | **AI-offs** (spend proof + thoughtful commits) | [`process/ai-offs.yml`](process/ai-offs.yml) |
 | **Rig schema** | [`schemas/rig-schema.yml`](schemas/rig-schema.yml) · [`rigs/`](rigs/README.md) (+ **SETUP.md** per rig) |
-| **Micropolis AI Drag Race** | [`process/DRAG-RACE.md`](process/DRAG-RACE.md) · [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
-| **Retrocomputing Drive** | [`process/challenges/RETROCOMPUTING.md`](process/challenges/RETROCOMPUTING.md) · Lars + Thomas |
+| **Micropolis AI Drag Race** | [`process/micropolis-ai-drag-race.md`](process/micropolis-ai-drag-race.md) · [`process/micropolis-ai-drag-race.yml`](process/micropolis-ai-drag-race.yml) |
+| **Retrocomputing Drive** | [`process/challenges/retrocomputing-drive.md`](process/challenges/retrocomputing-drive.md) · Lars + Thomas |
 | **Manual Transmission** (fewest tokens to code the spec) | [`process/manual-transmission.yml`](process/manual-transmission.yml) |
 | **Orchestration gold** (training traces + thoughtful commits) | [`process/orchestration-gold.yml`](process/orchestration-gold.yml) |
 | **Homefun grading** (Repo Show — match commit to thinking) | [`process/homefun-grading.yml`](process/homefun-grading.yml) |
@@ -57,7 +57,7 @@ code and shared technique. **Repo Show** — real people, credited ideas in publ
 **Long-term ambition** Don and Will have discussed since the **1996 Winograd microworlds
 talk** (and earlier): a living repo you enter, fork, and breed — not just a video about
 simulation. This public tree is the **apex seed** — small, inspectable, growing downward.
-No production promises; see [**process/VISION.md**](process/VISION.md).
+No production promises; see [**process/vision-and-ambition.md**](process/vision-and-ambition.md).
 
 **Skills are the big harvest** — each show melts ideas in the cauldron and lifts
 MOOLLM skills into [`skills/`](skills/README.md) (composable with [moollm](https://github.com/SimHacker/moollm)).
@@ -96,7 +96,7 @@ the repo through git branches, merges, and nested worlds.
 
 Some episodes can instead be playful game shows — **[Code That Spec](process/code-that-spec.yml)**,
 **[Manual Transmission](process/manual-transmission.yml)** (*what's the smallest model — or fewest
-tokens — you can code the spec with?*), and the **[Micropolis AI Drag Race](process/DRAG-RACE.md)** (rig costumes welcome; Slats
+tokens — you can code the spec with?*), and the **[Micropolis AI Drag Race](process/micropolis-ai-drag-race.md)** (rig costumes welcome; Slats
 judges the werk). Those are optional fun we can do — not the point.
 
 Run **your own show** on your branch; **PR to link** it into the [ShowMaker network](process/showmaker-network.yml).
@@ -166,7 +166,7 @@ participants won't; that's fine.
 `repo-shows/will-wright-premiere/audience/<your-github-username>/questions.yml`, pull request. Free;
 not TicketMaster.
 
-Platforms, archives, publishers, production shops: read [**VISION.md**](process/VISION.md) first —
+Platforms, archives, publishers, production shops: read [**VISION.md**](process/vision-and-ambition.md) first —
 inspect the yaml, run verify, then talk. No NDAs to understand the shape.
 
 ## Status
@@ -285,7 +285,7 @@ multiverse**. Some are jokes that turned out to be load-bearing. All of them are
 
 > *AI proposes; the **player** disposes — now let's get weird with it.*
 
-→ **[Read the Crazy Idea Jam](process/CRAZY-IDEA-JAM.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid_fun_forward](process/trails/stupid-fun-forward.md)
+→ **[Read the Crazy Idea Jam](process/crazy-idea-jam.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid_fun_forward](process/trails/stupid-fun-forward.md)
 
 ---
 

@@ -5,8 +5,8 @@ what: "Protocol girders — Repo Show format, drag race, retro challenges, ai-of
 read_order:
   - README.md
   - INDEX.yml
-  - VISION.md
-  - FORMAT.md
+  - vision-and-ambition.md
+  - repo-show-format.md
 
 clusters:
   show: [repo-show-format.yml, showmaker-network.yml, live-repo.yml, performance-space.yml]

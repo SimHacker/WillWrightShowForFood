@@ -1,6 +1,6 @@
 # PDP-10 / ITS stack
 
-[Retrocomputing](challenges/RETROCOMPUTING.md) · [MACLISP drive](challenges/pdp10-maclisp-drive.yml) · [Lars Brinkhoff](../characters/lars-brinkhoff/)
+[Retrocomputing](challenges/retrocomputing-drive.md) · [MACLISP drive](challenges/pdp10-maclisp-drive.yml) · [Lars Brinkhoff](../characters/lars-brinkhoff/)
 
 ---
 

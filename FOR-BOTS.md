@@ -40,7 +40,7 @@ Same rule as humans: **GLANCE → CARD → README → deep trees.**
 | Interface | `CARD.yml` | What can I invoke? |
 | Prose | `README.md` | Cream + museum map |
 | Girder | `process/*.yml`, `characters/*/CHARACTER.yml` | Source of truth for tools |
-| Facade | `process/FORMAT.md`, etc. | Human view — may be GENERATED |
+| Facade | `process/repo-show-format.md`, etc. | Human view — may be GENERATED |
 
 Edit yaml; regenerate markdown. Do not treat generated `*.md` as canonical.
 

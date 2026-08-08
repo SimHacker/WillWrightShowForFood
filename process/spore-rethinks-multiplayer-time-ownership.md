@@ -3,10 +3,10 @@
 *Will Wright's Spore quietly broke three things we treat as absolute — what "multiplayer" means,
 what **time** means, and what **ownership** means. Each one fragments from a single global thing
 into many local things. That fragmentation is the conceptual foundation beneath moving content
-between games through [Soul City](CHARACTER-ENDOSYMBIOSIS.md) — and beneath git's many-worlds
+between games through [Soul City](character-endosymbiosis.md) — and beneath git's many-worlds
 cosmology that the [artifactory](artifactory.yml) runs on.*
 
-Girder: [`CHARACTER-ENDOSYMBIOSIS.md`](CHARACTER-ENDOSYMBIOSIS.md) (the biology of moving content) ·
+Girder: [`character-endosymbiosis.md`](character-endosymbiosis.md) (the biology of moving content) ·
 [`../characters/david-rosenthal/slots-all-the-way-down.md`](../characters/david-rosenthal/slots-all-the-way-down.md)
 (the object-model half) · [`../characters/mark-weiser/pkd-lem-ai-sf.md`](../characters/mark-weiser/pkd-lem-ai-sf.md)
 (the PKD "Faith of Our Fathers" many-realities half)
@@ -28,7 +28,7 @@ the same room at the same time. Spore threw that out. Other people's creations a
 artifacts** and live in *your* world, doing their own thing, long after their author logged off.
 You're never together in **time** — you're together in **stuff**. *Together, apart.*
 
-This is exactly how [Soul City](CHARACTER-ENDOSYMBIOSIS.md) works: a Sim doesn't need Stardew's
+This is exactly how [Soul City](character-endosymbiosis.md) works: a Sim doesn't need Stardew's
 author online to move into Stardew. Content crosses the membrane and takes up residence. And it's
 exactly how **git** works: you never share a live session, you exchange immutable objects.
 **Collaboration is a shared ecology of artifacts, not a shared "now."**
@@ -68,7 +68,7 @@ theft? The honest answer is a *provenance* answer, not a *lock* answer.)
 
 ## Why this is foundational
 
-[Character Endosymbiosis](CHARACTER-ENDOSYMBIOSIS.md) explains **how** content moves between games —
+[Character Endosymbiosis](character-endosymbiosis.md) explains **how** content moves between games —
 membranes, diffusion, selective transport, honest exchange rates. **This doc explains what that
 movement *does to our concepts*, and why the async, content-not-clocks model is the right one.**
 They're two halves of the same foundation:
@@ -103,4 +103,4 @@ small **calm-technology** win, in Mark Weiser's exact sense. (Full thread:
 ## Sources
 
 - **Spore** (Maxis / Will Wright, 2008) — Sporepedia, Pollination, "massively single-player" asynchronous content sharing
-- Related here: [`CHARACTER-ENDOSYMBIOSIS.md`](CHARACTER-ENDOSYMBIOSIS.md) · [`artifactory.yml`](artifactory.yml) · MOOLLM `artifactory` skill (*cosmology* / *spore_rethinks*) · [`../repo-shows/INDEX.yml`](../repo-shows/INDEX.yml) (the Soul City bridges)
+- Related here: [`character-endosymbiosis.md`](character-endosymbiosis.md) · [`artifactory.yml`](artifactory.yml) · MOOLLM `artifactory` skill (*cosmology* / *spore_rethinks*) · [`../repo-shows/INDEX.yml`](../repo-shows/INDEX.yml) (the Soul City bridges)

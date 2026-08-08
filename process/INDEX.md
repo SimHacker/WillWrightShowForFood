@@ -10,7 +10,7 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 
 | Girder | Read |
 |--------|------|
-| repo-show-format.yml | [FORMAT.md](FORMAT.md) |
+| repo-show-format.yml | [repo-show-format.md](repo-show-format.md) |
 | ticket-pr.yml | [ticket-pr.md](ticket-pr.md) |
 | play-along-skills.yml | [play-along-skills.md](play-along-skills.md) |
 | guest-participation-ladder.yml | [guest-participation-ladder.md](guest-participation-ladder.md) |
@@ -41,24 +41,24 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 
 | Girder | Read |
 |--------|------|
-| micropolis-ai-drag-race.yml | [DRAG-RACE.md](DRAG-RACE.md) |
+| micropolis-ai-drag-race.yml | [micropolis-ai-drag-race.md](micropolis-ai-drag-race.md) |
 | code-that-spec.yml | [code-that-spec.md](code-that-spec.md) |
-| ai-offs.yml | [AI-OFFS.md](AI-OFFS.md) |
-| manual-transmission.yml | [MANUAL-TRANSMISSION.md](MANUAL-TRANSMISSION.md) |
+| ai-offs.yml | [ai-offs.md](ai-offs.md) |
+| manual-transmission.yml | [manual-transmission.md](manual-transmission.md) |
 | stick-shift-protocol.yml | [stick-shift-protocol.md](stick-shift-protocol.md) |
 | rig-feedback.yml | [rig-feedback.md](rig-feedback.md) |
 | model-branching.yml | [model-branching.md](model-branching.md) |
-| brain-stream.yml | [BRAIN-STREAM.md](BRAIN-STREAM.md) |
-| orchestration-gold.yml | [ORCHESTRATION-GOLD.md](ORCHESTRATION-GOLD.md) |
-| homefun-grading.yml | [HOMEFUN.md](HOMEFUN.md) |
+| brain-stream.yml | [brain-stream.md](brain-stream.md) |
+| orchestration-gold.yml | [orchestration-gold.md](orchestration-gold.md) |
+| homefun-grading.yml | [homefun-grading.md](homefun-grading.md) |
 
 ## Vision & themes
 
 | Girder | Read |
 |--------|------|
-| vision-and-ambition.yml | [VISION.md](VISION.md) |
-| crazy-idea-jam.yml | [CRAZY-IDEA-JAM.md](CRAZY-IDEA-JAM.md) |
-| character-endosymbiosis.yml | [CHARACTER-ENDOSYMBIOSIS.md](CHARACTER-ENDOSYMBIOSIS.md) |
+| vision-and-ambition.yml | [vision-and-ambition.md](vision-and-ambition.md) |
+| crazy-idea-jam.yml | [crazy-idea-jam.md](crazy-idea-jam.md) |
+| character-endosymbiosis.yml | [character-endosymbiosis.md](character-endosymbiosis.md) |
 | old-band-back-together.yml | [old-band-back-together.md](old-band-back-together.md) |
 | constructionist-simcity-response.yml | [constructionist-simcity-response.md](constructionist-simcity-response.md) |
 | sims-creator-network-exodus.yml | [sims-creator-network-exodus.md](sims-creator-network-exodus.yml) |
@@ -88,7 +88,7 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 
 | Girder | Read |
 |--------|------|
-| challenges/retrocomputing-drive.yml | [challenges/RETROCOMPUTING.md](challenges/RETROCOMPUTING.md) |
+| challenges/retrocomputing-drive.yml | [challenges/retrocomputing-drive.md](challenges/retrocomputing-drive.md) |
 | apple2-emulator-stack.yml | [apple2-emulator-stack.md](apple2-emulator-stack.md) |
 | apple2-fujinet-bridge.yml | [apple2-fujinet-bridge.md](apple2-fujinet-bridge.md) |
 | pdp10-its-stack.yml | [pdp10-its-stack.md](pdp10-its-stack.md) |

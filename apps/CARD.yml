@@ -10,7 +10,7 @@ entries:
     status: subsumed   # by soul-angel; specs remain as design references
     subsumed_by: MicropolisCore/apps/soul-angel/
     glance: stream-gateway/GLANCE.yml
-    spec: ../process/BRAIN-STREAM.md
+    spec: ../process/brain-stream.md
   soul-angel:
     status: spec
     dev_home: MicropolisCore/apps/soul-angel/   # source-available; architecture, schemas, SDK, license

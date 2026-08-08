@@ -1,6 +1,6 @@
 # ShowMaker network
 
-[Repo Show format](FORMAT.md) · [StoryMaker inheritance](storymaker-stories-and-scenes.md) · [Repo shows INDEX](../repo-shows/INDEX.yml)
+[Repo Show format](repo-show-format.md) · [StoryMaker inheritance](storymaker-stories-and-scenes.md) · [Repo shows INDEX](../repo-shows/INDEX.yml)
 
 ---
 
@@ -46,7 +46,7 @@ Fork → plant SHOW.yml → run on your rig → PR back to link node + edges int
 
 | Topic | Where |
 |-------|--------|
-| AI-offs | [AI-OFFS.md](AI-OFFS.md) |
+| AI-offs | [ai-offs.md](ai-offs.md) |
 | Lift pipeline | [lift-pipeline.md](lift-pipeline.md) |
 | Packages | [../packages/README.md](../packages/README.md) |
 | Rigs | [../rigs/README.md](../rigs/README.md) |

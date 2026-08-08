@@ -1,6 +1,6 @@
 # Rig feedback
 
-[Repo Show format § rig spectrum](FORMAT.md) · [AI-offs](AI-OFFS.md) · [Rigs README](../rigs/README.md)
+[Repo Show format § rig spectrum](repo-show-format.md) · [AI-offs](ai-offs.md) · [Rigs README](../rigs/README.md)
 
 ---
 

@@ -70,7 +70,7 @@ worked.
 | **Fellowship** | Same institution stewarding 10,000-year thinking |
 | **Overcomplicated** | Names the klugey reality of systems we ship — honest kin to glass-box SimCity |
 | **Microcosm / Maxis 2.0** | Carries Maxis's *educational simulation* mission forward |
-| **Repo Show ethos** | Git as long now — attributed forkable record ([VISION](../../../process/VISION.md)) |
+| **Repo Show ethos** | Git as long now — attributed forkable record ([VISION](../../../process/vision-and-ambition.md)) |
 
 A show beat: **2006 room** (Don saw Will say yes) → **2016 Sam** (limits of comprehension) → **2024–26**
 (Maxis Labs 2 in a repo Will has joined).

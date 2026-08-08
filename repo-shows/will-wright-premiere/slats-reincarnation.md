@@ -27,7 +27,7 @@ Bring **Slats** — the waiter robot brain Don programmed at Will's **Stupid Fun
 4. **Interview** the reincarnated Slats.
 5. **Reprogram** — interview again. Iterate.
 
-After resurrection: celebrity judge for [Micropolis AI Drag Race](../../process/trails/drag-race-and-ai-offs.md) and [Manual Transmission](../../process/MANUAL-TRANSMISSION.md).
+After resurrection: celebrity judge for [Micropolis AI Drag Race](../../process/trails/drag-race-and-ai-offs.md) and [Manual Transmission](../../process/manual-transmission.md).
 
 ---
 
@@ -45,7 +45,7 @@ Slats' voice-synth stream-of-thought runs as a **feedback loop** — output feed
 
 **Tone:** Joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind. Easter Sunday if possible.
 
-**Jam entry:** [Crazy Idea Jam — RoboResurrection](../../process/CRAZY-IDEA-JAM.md)
+**Jam entry:** [Crazy Idea Jam — RoboResurrection](../../process/crazy-idea-jam.md)
 
 ---
 

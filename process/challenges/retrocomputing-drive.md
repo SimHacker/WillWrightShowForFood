@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/challenges/retrocomputing-drive.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:59fcb7ef99124829 -->
+<!-- content-sha256:2efdb4b7282b2be2 -->
 
 # Retrocomputing Drive
 
@@ -174,8 +174,8 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 | Link | Why |
 |------|-----|
 | [`cross-links.yml#retrocomputing_drive`](cross-links.yml) | Narrative trail — all retro nodes |
-| [`RETROCOMPUTING.md`](challenges/RETROCOMPUTING.md) | Generated markup view of this family |
-| [`DRAG-RACE.md`](../DRAG-RACE.md) | Retro laps are drag race challenge rotation |
+| [`retrocomputing-drive.md`](retrocomputing-drive.md) | Generated markup view of this family |
+| [`micropolis-ai-drag-race.md`](../micropolis-ai-drag-race.md) | Retro laps are drag race challenge rotation |
 | [`manual-transmission.yml`](../manual-transmission.yml) | Measurement lane — smallest model on retro target |
 | [`ai-offs.yml`](../ai-offs.yml) | Declare class + spend proof for AI-assisted retro |
 | [`homefun-grading.yml`](../homefun-grading.yml) | Homefun rubric applies to retro PRs |

@@ -40,4 +40,4 @@ Composable SimAntics sagas documented as hub + dispatch instances:
 
 ## Related
 
-↑ [`../characters/README.md`](../characters/README.md) · [`../process/FORMAT.md`](../process/FORMAT.md) · [`../rigs/README.md`](../rigs/README.md)
+↑ [`../characters/README.md`](../characters/README.md) · [`../process/repo-show-format.md`](../process/repo-show-format.md) · [`../rigs/README.md`](../rigs/README.md)

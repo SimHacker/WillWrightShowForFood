@@ -1,11 +1,11 @@
 # Character Endosymbiosis — the biology of moving content between games
-# Girder for CHARACTER-ENDOSYMBIOSIS.md (instance-first article).
+# Girder for character-endosymbiosis.md (instance-first article).
 # The frame under the Soul City hub-and-spoke bridges (repo-shows/INDEX.yml#bridges_architecture).
 
 meta:
   id: character-endosymbiosis
   one_line: "Games are cells, content lives in organelles (directories), and Soul City is the shared cytoplasm through which characters, rooms, objects, and stories diffuse, trade, and round-trip."
-  article: CHARACTER-ENDOSYMBIOSIS.md
+  article: character-endosymbiosis.md
   inspiration: "Lynn Margulis's endosymbiotic theory — complex cells arose when free-living microbes merged and became organelles (mitochondria, chloroplasts). Evolution by cooperation and merger, not only competition."
 
 biology:
@@ -41,6 +41,6 @@ see_also:
   - { path: ../repo-shows/INDEX.yml, why: "Soul City hub-and-spoke bridges — the spokes this membrane biology runs on" }
   - { path: ../apps/simfaux/ORGANELLES.yml, why: "Worked example — sideways symbiosis: LZX DNA + OL5 + Declare sibling organelles (app as cell)" }
   - { path: crazy-idea-jam.yml, why: "Bridge ideas (Mind Mirror diffusion, hell-is-full ZombieSims, emulated runtimes)" }
-  - { path: CHARACTER-ENDOSYMBIOSIS.md, why: "The readable article" }
+  - { path: character-endosymbiosis.md, why: "The readable article" }
   - { path: spore-rethinks-multiplayer-time-ownership.md, why: "The complementary foundation: endosymbiosis is HOW content moves; this is WHAT async content-sharing does to multiplayer/time/ownership (Spore's massively-single-player model + git many-worlds)" }
   - { path: artifactory.yml, why: "The substrate: git as a many-worlds parallel-universe editor content persists and branches on" }

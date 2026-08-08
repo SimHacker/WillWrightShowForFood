@@ -1,6 +1,6 @@
 # TicketPR — Master ⇒ PR
 
-[Repo Show format](FORMAT.md) · [Play Along skills](play-along-skills.md) · [Audience template](../repo-shows/_TEMPLATE/audience/)
+[Repo Show format](repo-show-format.md) · [Play Along skills](play-along-skills.md) · [Audience template](../repo-shows/_TEMPLATE/audience/)
 
 ---
 
@@ -25,7 +25,7 @@ At *Playing with Time* (Brian Eno + Will Wright, 26 June 2006), Stewart Brand ga
 
 **Two audience-submitted questions changed software history.** TicketPR formalizes Brand's mechanism: questions gathered before the show, curated by the producer, read to the guest, answered on the record — attributed and permanent instead of a paper pile.
 
-See [VISION.md § Long Now](VISION.md#long-now-and-later).
+See [vision-and-ambition.md § Long Now](vision-and-ambition.md#long-now-and-later).
 
 ## Participation ladder
 
@@ -97,7 +97,7 @@ Guests may pre-prime **virtual** characters, costume plants, and running gags �
 | Participation funnels | [participation-funnels.md](participation-funnels.md) |
 | Guest participation tiers | [guest-participation-ladder.md](guest-participation-ladder.md) |
 | Placement constitution | [character-colocation.md](character-colocation.md) |
-| Brain stream overlay | [BRAIN-STREAM.md](BRAIN-STREAM.md) |
+| Brain stream overlay | [brain-stream.md](brain-stream.md) |
 | ShowMaker graph | [showmaker-network.md](showmaker-network.md) |
 | Audience character schema | [../schemas/audience-character.yml](../schemas/audience-character.yml) |
 | Planted audience guide | [../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md](../repo-shows/_TEMPLATE/audience/PLANTED-AUDIENCE.md) |

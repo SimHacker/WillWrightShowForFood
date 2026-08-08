@@ -1,5 +1,5 @@
 # MICROPOLIS AI DRAG RACE — flagship game-show variety format
-# Markup: DRAG-RACE.md (generated — pnpm run facades) | Show seed: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
+# Markup: micropolis-ai-drag-race.md (generated — pnpm run facades) | Show seed: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
 
 meta:
   id: micropolis-ai-drag-race
@@ -124,7 +124,7 @@ ties_to:
   - SimHacker/MicropolisCore
 
 see_also:
-  - { path: DRAG-RACE.md, why: "Generated markup view" }
+  - { path: micropolis-ai-drag-race.md, why: "Generated markup view" }
   - { path: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Show seed" }
   - { path: ../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml, why: "Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts" }
   - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show trail" }
@@ -134,7 +134,7 @@ see_also:
   - { path: stick-shift-protocol.yml, why: "Shift = commit" }
   - { path: homefun-grading.yml, why: "Commit vs thinking blocks" }
   - { path: challenges/retrocomputing-drive.yml, why: "Retro rotation — apple2, ITS, LispM" }
-  - { path: challenges/RETROCOMPUTING.md, why: "Generated retro umbrella markup" }
+  - { path: challenges/retrocomputing-drive.md, why: "Generated retro umbrella markup" }
   - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge" }
   - { path: ../rigs/README.md, why: "Rig personas + SETUP DNA" }
   - { path: ../skills/repo-show/SKILL.md, why: "Same skill wraps drag race beats" }
