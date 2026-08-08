@@ -28,7 +28,7 @@ Players narrate causal chains Will knows don't exist — and that gap *is* the s
 | [**1996 Winograd talk**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Primary source — constructionist microworlds, Dollhouse, data portability named |
 | [**Transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will's own words — cite this, not paraphrase |
 | [**Will Wright CARD**](../../characters/will-wright/README.md) | Guest abilities — procedural creatures, possibility space |
-| [**Episode seed**](../../will-wright-premiere/../../will-wright-premiere/README.md) | `#simulation-effect` — harvest-driven candidate |
+| [**Episode seed**](../../repo-shows/will-wright-premiere/README.md) | `#simulation-effect` — harvest-driven candidate |
 | [**Constructionist trail**](../../process/trails/constructionist-lineage.md) | Piaget → Papert → 1996 → open Micropolis |
 | [**The riff loop**](../theme-the-riff-loop/theme-the-riff-loop.md) | Same shape in performance — output feeds input, steerable |
 

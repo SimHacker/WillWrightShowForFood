@@ -8,10 +8,11 @@ room:
 
 collection: REPO-SHOWS.yml
 registry: INDEX.yml
-.: ./
+bits: ../bits/INDEX.yml   # cross-cutting gags/themes/traditions/swag
+tracks: ../process/tracks/README.md
 
 flagship: will-wright-premiere/
-game_shows: [micropolis-ai-drag-race/micropolis-ai-drag-race.yml, game-show-wigcercize.yml]
+game_shows: [micropolis-ai-drag-race/micropolis-ai-drag-race.yml, ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml]
 
 methods:
   LIST-SHOWS: INDEX.yml
@@ -24,7 +25,7 @@ see_also:
   - { path: INDEX.yml, why: "Show registry" }
   - { path: ../process/entryways/guest-will.md, why: "Will guest playlist" }
   - { path: ../process/entryways.yml, why: "All entryways yaml" }
-  - { path: README.md, why: "Gags, themes, traditions, show content catalog" }
+  - { path: ../bits/INDEX.yml, why: "Gags, themes, traditions, swag catalog" }
   - { path: will-wright-premiere/README.md, why: "Flagship planted show" }
   - { path: micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Drag race show seed" }
   - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }

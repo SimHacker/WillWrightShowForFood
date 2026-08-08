@@ -34,7 +34,7 @@ Four handles on the same wheel. Steer + mutate from anywhere; no pass is final.
 
 Slats' voice-synth stream-of-thought robopoetry loops — output feeding back as input — and people talk into, over, after, and before it to steer the stream. Reincarnate Slats and the loop is live again. **The diff between passes is the drama.**
 
-→ [../../repo-shows/will-wright-premiere/README.md](../../will-wright-premiere/../../will-wright-premiere/README.md) · [BRAIN-STREAM.md](../../process/brain-stream.md) · [Stupid Fun Club robots](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
+→ [../../repo-shows/will-wright-premiere/README.md](../../repo-shows/will-wright-premiere/README.md) · [BRAIN-STREAM.md](../../process/brain-stream.md) · [Stupid Fun Club robots](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
 
 ---
 
@@ -60,4 +60,4 @@ Reframes *"AI vs people"* as *"people AND AI in a loop."* Authorship isn't lost 
 
 ---
 
-← [All themes](../../repo-shows/README.md) · [Slats reincarnation](../../will-wright-premiere/../../will-wright-premiere/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md)
+← [All themes](../../repo-shows/README.md) · [Slats reincarnation](../../repo-shows/will-wright-premiere/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md)

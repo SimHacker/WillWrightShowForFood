@@ -47,7 +47,7 @@ AI proposes; **people** dispose. The LLM writes code, orchestrates live streams,
 **PUPPETRY** — humans voice character-puppets. No synths, no cloned voices.
 
 Pink Trombone, Phoneloper = vocal-tract **instruments** a person plays live — not a replacement for the performer.  
-→ [`../../repo-shows/will-wright-premiere/README.md`](../../will-wright-premiere/../../will-wright-premiere/README.md#voicing) · [Voystick theme](../theme-voystick-voice-space/theme-voystick-voice-space.md)
+→ [`../../repo-shows/will-wright-premiere/README.md`](../../repo-shows/will-wright-premiere/README.md#voicing) · [Voystick theme](../theme-voystick-voice-space/theme-voystick-voice-space.md)
 
 ---
 

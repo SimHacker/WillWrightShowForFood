@@ -28,7 +28,7 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 
 | Stop | Why wander here |
 |------|-----------------|
-| [**Ian Bogost guest show**](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md) | Dedicated episode seed — procedural rhetoric on air |
+| [**Ian Bogost guest show**](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml) | Dedicated episode seed — procedural rhetoric on air |
 | [**SimProv catalog**](../../catalogs/simprov/README.md) | Magnum opus — wedding playset as inclusion agitprop |
 | [**Inclusion agitprop**](../theme-inclusion-agitprop/theme-inclusion-agitprop.md) | Sister theme — SimProv wedding thread |
 | [**Pixelized joint wedding**](../../repo-shows/README.md) | Gag crossover — Double Pre-Game |
@@ -46,4 +46,4 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 
 ---
 
-← [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md) · [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md)
+← [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md) · [Bogost show](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)

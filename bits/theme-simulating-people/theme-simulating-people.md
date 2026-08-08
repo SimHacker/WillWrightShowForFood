@@ -69,7 +69,7 @@ LLM agents can converse, decide, and be mistaken for real people at scale. We go
 | [Puppet taxonomy](../../repo-shows/README.md) | How puppets differ from impersonation |
 | [Drew Carey contrast](../../repo-shows/drew-carey/ai-contrast-framing.md) | Public-record anti-pattern |
 | [PITM](../../process/crazy-idea-jam.md#player_in_the_middle) | Human at every membrane |
-| [Suggested questions](../../will-wright-premiere/../../will-wright-premiere/README.md) | On-air prompts |
+| [Suggested questions](../../repo-shows/will-wright-premiere/README.md) | On-air prompts |
 | [MOOLLM character skill](https://github.com/SimHacker/moollm/skills/character) | Consensual portrayals |
 | [Micropolis coatroom CAS](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/coatroom) | Edit yourself as navigable department store |
 
