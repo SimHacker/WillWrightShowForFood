@@ -17,7 +17,7 @@ SimFreaks/SimSlice skins, scale toward *They Are Billions* pressure — and play
 
 ## The bigger why — Soul City publishing
 
-Underneath the fun: Don is building [**Soul City**](../../catalogs/soul-city/README.md) — create · publish · share — for the
+Underneath the fun: Don is building [**Soul City**](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) — create · publish · share — for the
 Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
 [SimFreaks](../../catalogs/simfreaks/README.md), [SimSlice](../../catalogs/simslice/README.md),
 [SimProv](../../catalogs/simprov/README.md), [Zombie Sims](../../catalogs/zombie-sims/README.md).

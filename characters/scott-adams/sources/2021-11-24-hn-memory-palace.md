@@ -41,4 +41,4 @@ That last line is the show-worthy contrast: Scott's **open, positive faith** vs 
 
 - Segment **A1** / **B3**: thread as Room One mini-adventure ([ideas.md](../ideas.md)).
 - Soul City: [Adventure as memory palace](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md#adventure-as-memory-palace).
-- Catalog pointer: [catalogs/soul-city/README.md](../../../catalogs/soul-city/README.md).
+- Catalog pointer: [catalogs/soul-city/README.md](../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md).

@@ -36,7 +36,7 @@ Assembled in private archive → guest reviews/organizes → public-safe project
 | Topic | Where |
 |-------|--------|
 | Sync pipeline | [sync-with-donhopkins.md](sync-with-donhopkins.md) |
-| Character INDEX | [../characters/INDEX.md](../characters/INDEX.md) |
+| Character INDEX | [../characters/INDEX.yml](../characters/INDEX.yml) |
 | Will guest prototype | [../characters/will-wright/guest-prototype.yml](../characters/will-wright/guest-prototype.yml) |
 
 ↑ [process index](README.md) · Girder: `live-repo.yml`

@@ -128,9 +128,9 @@ demonstration — see orchestration-gold.yml#training_by_demonstration
 | [`../repo-shows/will-wright-premiere/SHOW.yml`](../repo-shows/will-wright-premiere/SHOW.yml) |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
 | [`repo-show-format.yml`](repo-show-format.yml) |
-| [`SimHacker/moollm/skills/thoughtful-commitment`](SimHacker/moollm/skills/thoughtful-commitment) |
-| [`SimHacker/moollm/skills/rubric`](SimHacker/moollm/skills/rubric) |
-| [`SimHacker/moollm/skills/evaluator`](SimHacker/moollm/skills/evaluator) |
+| [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
+| [`SimHacker/moollm/skills/rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) |
+| [`SimHacker/moollm/skills/evaluator`](https://github.com/SimHacker/moollm/tree/main/skills/evaluator) |
 
 ## Related
 

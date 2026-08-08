@@ -198,7 +198,7 @@ Heather's SimFreaks catalog in OpenLaszlo + Python — the CMS essay behind toda
 **[2005-09-18-computer-game-design-index/](2005-09-18-computer-game-design-index/README.md)**  
 Laszlo DB component, player-created content index, game-design topic index.
 
-**[2005-09-22-halloween-tombstones-original-sims/](2005-09-22-halloween-tombstones-original-sims/README.md)**  
+**[2005-09-22-halloween-tombstones-original-sims/](2005-09-22-halloween-tombstones-original-sims/article.md)**  
 Personalized Halloween tombstones on originalsims.com — early procedural fan content.
 
 ---
@@ -365,7 +365,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [2005-09-18-simfreaks-content-catalog-laszlo](2005-09-18-simfreaks-content-catalog-laszlo/README.md) | SimFreaks content catalog (OpenLaszlo + Python) |
 | [2005-09-18-laszlo-database-interface](2005-09-18-laszlo-database-interface/README.md) | Laszlo database interface component |
 | [2005-09-18-player-created-content-index](2005-09-18-player-created-content-index/README.md) | Player Created Content — topic index |
-| [2005-09-22-halloween-tombstones-original-sims](2005-09-22-halloween-tombstones-original-sims/README.md) | Original Sims — personalized Halloween tombstones |
+| [2005-09-22-halloween-tombstones-original-sims](2005-09-22-halloween-tombstones-original-sims/article.md) | Original Sims — personalized Halloween tombstones |
 
 ## Character animation pipeline
 

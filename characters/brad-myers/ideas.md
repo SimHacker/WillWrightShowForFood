@@ -122,6 +122,6 @@ annotated notes exchanged through the repo can BE the episode.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/brad-myers/`](../../repo-shows/brad-myers/)
+- Show seed: [`repo-shows/brad-myers/`](../../repo-shows/brad-myers-garnet-vpl/)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
 - [`CHARACTER.yml`](CHARACTER.yml)

@@ -399,7 +399,7 @@ Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat
   - [Art 3D glitch](media/art-3d-glitch/INDEX.yml) — Frankinsideout / AI Foundation Blender nightmare
   - [Culture holiday](media/culture-holiday/INDEX.yml) — National Gorilla Suit Day (Don Martin, Jan 31)
 - [**Legacy rooms index**](media/LEGACY-INDEX.yml) — 26 themed dirs; **387/387 PNGs** now have co-located sidecars (2026-07)
-- [**Steve Wozniak — Apple II Red Book**](characters/steve-wozniak/media/apple-ii-redbook/INDEX.yml) — page 141 schematics; LAX joke; beep routine
+- [**Steve Wozniak — Apple II Red Book**](../steve-wozniak/media/apple-ii-redbook/INDEX.yml) — page 141 schematics; LAX joke; beep routine
 - [**Cellular automata — SimCity tiles**](media/cellular-automata-tiles/INDEX.yml) — iPad CA toy, worms2, harble.
 - [**SimFaux**](../../apps/simfaux/) — 2006 OpenLaszlo Fox parody; app hub + Repo Show instrument (portfolio: [media/simfaux/](media/simfaux/INDEX.yml)).
 - [**Will head-shot progression**](../will-wright/media/will-head-shot-progression/INDEX.yml) — Don Photoshop Sims gag series.

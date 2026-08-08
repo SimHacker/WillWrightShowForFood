@@ -56,7 +56,7 @@ Glick-trap question for Jim + Bobo — post-Sims **DoDots** (~2000) sounds worse
 → [`../../repo-shows/building-the-sims/did-you-do-dots-together.md`](../../repo-shows/building-the-sims/did-you-do-dots-together.md)
 
 ### 10. Optional reunion playthrough
-[`will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — Jun 1998 build, Edith, the steering committee.
+[`will-wright/sims-team-steering-committee-playthrough/`](../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/) — Jun 1998 build, Edith, the steering committee.
 
 ## Sources (public)
 

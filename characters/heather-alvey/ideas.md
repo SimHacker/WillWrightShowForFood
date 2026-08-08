@@ -28,7 +28,7 @@ EA-recognized site; object suites + SimAntics; drive subscriptions ([simfreaks.c
 
 ### 4. Soul City now
 
-Federated **create · publish · share** — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md); first customers for Don's publishing stack.
+Federated **create · publish · share** — [`../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md`](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md); first customers for Don's publishing stack.
 
 ### 5. SimProv Wedding Playset + Speed Dating with Cupid
 

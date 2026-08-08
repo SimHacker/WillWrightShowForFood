@@ -26,6 +26,6 @@ walk the repo on air and build from the seed.
 
 - [`invitation.md`](invitation.md)
 - [`media/apple-ii-redbook/`](media/apple-ii-redbook/INDEX.yml) — Red Book figures S-1–S-11 + timing (11 kept, 1 deduped)
-- Show seed: [`repo-shows/steve-wozniak/`](../../repo-shows/steve-wozniak/)
+- Show seed: [`repo-shows/steve-wozniak/`](../../characters/steve-wozniak/)
 - [`CHARACTER.yml`](CHARACTER.yml)
 - Don Hopkins thread: [`../don-hopkins/media.md`](../don-hopkins/media.md) → Woz media cross-link

@@ -35,7 +35,7 @@ and we do not speak as him without consent.
 | If you want… | Go |
 |--------------|-----|
 | **The invitation** (short) | [`invitation.md`](invitation.md) |
-| **The official invitation** (the one Will accepted) | [Premiere invitation](../../repo-shows/will-wright-premiere/invitation.md)  |
+| **The official invitation** (the one Will accepted) | [Premiere invitation](../../repo-shows/will-wright-premiere/README.md)  |
 | **Ideas to explore** (conversation hooks) | [`ideas.md`](ideas.md) |
 | **Browse any order** | [BROWSE](../../repo-shows/will-wright-premiere/BROWSE.md) |
 | **Suggested sequence** | [`guest-will playlist`](../../process/entryways/guest-will.md) |

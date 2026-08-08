@@ -56,5 +56,5 @@ Glenn: double-click `.ps` → opens as PDF. Same partial-evaluation intuition in
 - [`../brian-reid/`](../brian-reid/) — brother; 1985 history vs 1989–90 engineering
 - [`sources/distillery-pdf-correspondence.md`](sources/distillery-pdf-correspondence.md)
 - [`../owen-densmore/`](../owen-densmore/) — linguistic motherboard / `class.ps`
-- NeWS reunion: [`../../repo-shows/news-postscript-window-system.yml`](../../repo-shows/news-postscript-window-system.yml)
+- NeWS reunion: [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml)
 - MOOLLM: `private path (not in this repo) (Distillery → PDF section)

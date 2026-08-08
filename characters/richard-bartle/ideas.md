@@ -38,5 +38,5 @@ Digest: [`sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml`](source
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/richard-bartle/`](../../repo-shows/richard-bartle/)
+- Show seed: [`repo-shows/richard-bartle/`](../../characters/richard-bartle/)
 - [`CHARACTER.yml`](CHARACTER.yml)

@@ -43,6 +43,6 @@ Drag Queen Olympics energy — maximum flair under constraint. Shortest honest b
 | Manual Transmission | [manual-transmission.md](manual-transmission.md) |
 | Stick shift protocol | [stick-shift-protocol.md](stick-shift-protocol.md) |
 | Rig feedback | [rig-feedback.md](rig-feedback.md) |
-| Wigcercize show | [../repo-shows/game-show-wigcercize/](../repo-shows/game-show-wigcercize/) |
+| Wigcercize show | [../repo-shows/INDEX.yml](../repo-shows/INDEX.yml) |
 
 ↑ [process index](README.md) · Girder: `code-that-spec.yml`

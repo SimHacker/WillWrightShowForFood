@@ -54,7 +54,7 @@ should be a black box.*
 | [**Brian Harvey**](../../characters/brian-harvey/README.md) | [Snap! macros & metaprogramming](../../characters/brian-harvey/sources/snap-macros-metaprogramming.md) — rings as quote, AST as data, CSLS program-as-data lineage. [Karlstrom 2025 address](../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.md) for the career arc. |
 | [**Jens Mönig**](../../characters/jens-monig/README.md) | [Morphic.js](../../characters/jens-monig/sources/morphic-js.md) + [GP → Snap! under Kay](../../characters/jens-monig/sources/gp-alan-kay-lineage.md) — he shipped the live IDE; Brian shaped what "first-class everything" means. |
 | [**Dan Ingalls**](../../characters/dan-ingalls/README.md) | BitBlt, Fabrik, Lively Kernel — Morphic's grandfather. [Invitation](../../characters/dan-ingalls/invitation.md) frames Livelymerge × yaml-jazz × the live-object lineage only he can name on air. |
-| [**David Ungar**](../../characters/david-ungar/README.md) | Self and Morphic's birth — [slots all the way down](../../characters/david-ungar/slots-all-the-way-down.md) for the prototype religion in one essay. |
+| [**David Ungar**](../../characters/david-ungar/README.md) | Self and Morphic's birth — [slots all the way down](../../characters/don-hopkins/import-self-from-self.md) for the prototype religion in one essay. |
 | [**Ken Kahn**](../../characters/ken-kahn/README.md) | ToonTalk birds — concurrent constraint programming as a city; complements Snap! blocks and Bounce patch-cords. |
 
 ## The new arrivals

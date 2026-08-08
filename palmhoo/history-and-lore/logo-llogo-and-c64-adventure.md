@@ -16,7 +16,7 @@ and rescued the lab implementation.*
 
 Lars Brinkhoff's PDP-10/ITS work revived LLogo on emulated Knight TV —
 [issue #620](https://github.com/PDP-10/its/issues/620). Same community-archaeology shelf as
-[AskTog preservation](asktog-preservation.md) and the [CS547 rescue](../../characters/terry-winograd/README.md).
+[AskTog preservation](../../characters/bruce-tognazzini/sources/asktog-preservation.md) and the [CS547 rescue](../../characters/terry-winograd/README.md).
 
 ## Show cross-ref
 

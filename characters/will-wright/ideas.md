@@ -11,7 +11,7 @@ topic** — so treat this as a menu, not an agenda.*
 The **1996 talk to Terry Winograd's Stanford class** — the "Oh, God…" moment where Will loads a
 SimCity file into **Dollhouse** and previews what becomes The Sims. Everything below can start
 there. ([source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) ·
-[invitation](../../repo-shows/will-wright-premiere/invitation.md))
+[invitation](../../repo-shows/will-wright-premiere/README.md))
 
 ## Shared ground
 

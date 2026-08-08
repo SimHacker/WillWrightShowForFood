@@ -16,6 +16,6 @@ Windows-native host for the Sims Legacy Collection companion and the unified str
 | [native/README.md](native/README.md) | WinUI solution layout, `dotnet` CLI |
 | [native/MicropolisAngel.sln](native/MicropolisAngel.sln) | Open in Visual Studio 2022 (Windows only) |
 | [../stream-gateway/SPEC.yml](../stream-gateway/SPEC.yml) | Bus, overlay, Twitch/YouTube/OBS |
-| [../../catalogs/soul-city/micropolis-angel.yml](../../catalogs/soul-city/micropolis-angel.yml) | Product spec (Steam, rollout, ethics) |
+| [../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml) | Product spec (Steam, rollout, ethics) |
 
 Native project scaffold (`native/MicropolisAngel.sln`) — **w0 WinUI 3 + WebView2 placeholder**. Build on Windows; edit specs on Mac or Windows.

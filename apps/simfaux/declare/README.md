@@ -24,7 +24,7 @@ Use Declare-SimFaux as the **stage mixer**:
 - Channel surf as act structure; pie menus as live director tools; gravitas ticker
 
 Kin: [`../../performance-space/`](../../performance-space/) ·
-[`../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml`](../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml) (canonical; local stub: [`../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml`](../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml))
+[`../../../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml`](../../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml) (canonical gag)
 
 ## First spikes
 

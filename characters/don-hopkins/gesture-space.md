@@ -81,7 +81,7 @@ exerts friction forces so virtual object edges push back:
 - [3DOF Multitouch Haptic Interface](https://www.youtube.com/watch?v=YCZPmj7NtSQ) (AsiaHaptics 2016)
 - [Food simulator](https://www.wired.com/2003/08/slideshow-wonders-aplenty-at-s/) (Wired)
 
-Guest candidate: [`../bill-buxton/`](../bill-buxton/) (if created) or haptics researchers circle.
+Guest candidate: Bill Buxton (room not yet created) or haptics researchers circle.
 
 ## Hammer.js, Daniel Vogel, Michael Naimark
 
@@ -94,7 +94,7 @@ Guest candidate: [`../bill-buxton/`](../bill-buxton/) (if created) or haptics re
 | Show seed | Hook |
 |-----------|------|
 | [`../../repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml) | Gesture space + pie menus vs graffiti; Norman/Jobs receipts; live constraint tracker |
-| [`../../repo-shows/pie-menus-retrospective.yml`](../../repo-shows/INDEX.yml) | Redesign pie menus from scratch (MicropolisCore holodeck) |
+| [`../../repo-shows/pie-menus-retrospective/pie-menus-retrospective.yml`](../../repo-shows/INDEX.yml) | Redesign pie menus from scratch (MicropolisCore holodeck) |
 | David Levitt group | Pantomime multitouch + ConnectedTV Finger Pies |
 
 ## Dream guests

@@ -50,4 +50,4 @@ gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
 
 - [`../don-hopkins/`](../don-hopkins/) — design reviews, Simprov Wedding Playset, inclusivity thesis
 - [`../will-wright/`](../will-wright/) — inclusivity-by-design on Will's page
-- [`../../will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — optional reunion playthrough
+- [`../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/`](../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/) — optional reunion playthrough

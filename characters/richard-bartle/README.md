@@ -4,7 +4,7 @@ Invitation portrayal — **not** Richard Bartle. [Standards](../../schemas/portr
 
 **Field:** Virtual worlds — MUD1 (1978, with Roy Trubshaw), Bartle taxonomy of player types,
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/richard-bartle/README.md) · [Sources](sources/)
+[Invitation](invitation.md) · [Show seed](../../characters/richard-bartle/README.md) · [Sources](sources/)
 
 **Adventure-4 character:** [`moollm/examples/adventure-4/characters/real-people/richard-bartle`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/richard-bartle) — HERO-STORY incarnation with his explicit permission. Absolute URL + shorthand in [`CHARACTER.yml`](CHARACTER.yml)#moollm_source.
 

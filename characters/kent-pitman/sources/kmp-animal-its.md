@@ -61,7 +61,7 @@ ANIMAL II was more than a guessing game. From `animal.133`:
 - `RECEIVE-APOLOGY` — multi-branch apology handler (including "Perhaps you should see a priest.")
 
 That is an **emotional state machine with social consequences** — the same design move MOOLLM later
-formalizes as character skills (see [Kent Pitman correspondence](../../../../DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml) in DonHopkins).
+formalizes as character skills (see [Kent Pitman correspondence](../../../https://github.com/SimHacker/DonHopkins/blob/main/characters/don-hopkins/correspondence/kent-pitman.yml) in DonHopkins).
 
 ## Program and parser context
 

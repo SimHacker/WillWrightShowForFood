@@ -180,10 +180,10 @@ Fix-the-loop discipline when agents misbehave. Industrial-scale analog to our ha
 | [`brain-stream.yml`](brain-stream.yml) |
 | [`homefun-grading.yml`](homefun-grading.yml) |
 | [`../characters/brad-myers/`](../characters/brad-myers/) |
-| [`SimHacker/moollm/skills/thoughtful-commitment`](SimHacker/moollm/skills/thoughtful-commitment) |
-| [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/rubric`](SimHacker/moollm/skills/rubric) |
-| [`SimHacker/moollm/skills/experiment`](SimHacker/moollm/skills/experiment) |
+| [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
+| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
+| [`SimHacker/moollm/skills/rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) |
+| [`SimHacker/moollm/skills/experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
 
 ## Related
 

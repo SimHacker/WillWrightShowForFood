@@ -30,6 +30,6 @@ THEN
 
 ## Cross-links
 
-- [`../body-electric-bounce-vr-stack.md`](../body-electric-bounce-vr-stack.md)
-- [`../body-electric-1999-jaron-email.md`](../body-electric-1999-jaron-email.md)
+- [`../../don-hopkins/body-electric-bounce-vr-stack.md`](../../don-hopkins/body-electric-bounce-vr-stack.md)
+- [`../../don-hopkins/body-electric-1999-jaron-email.md`](../../don-hopkins/body-electric-1999-jaron-email.md)
 - Rebounce show: [`../../repo-shows/rebounce/`](../../../repo-shows/rebounce/)

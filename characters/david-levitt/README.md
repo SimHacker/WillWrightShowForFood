@@ -83,7 +83,7 @@ proposal: [rebounce.md](../don-hopkins/rebounce.md). (Bounce is also the **patch
   **Interval** worked on the **granular-synthesis "talking stick"** that Laurie and **Bob Bielecki**
   built? **Rachel Strickland**, perhaps? Any real thread into Laurie's Interval circle is gold.
 - **[Brian Eno](../brian-eno/README.md)** — dream guest; Will may be able to reach him.
-- **[Drew Carey](../drew-carey/README.md)** — Sims mythology + *Whose Line* improv.
+- **[Drew Carey](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/drew-carey/README.md)** — Sims mythology + *Whose Line* improv.
 
 ### Help reaching the others — David the connector
 

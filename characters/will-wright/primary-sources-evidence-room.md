@@ -115,7 +115,7 @@ in that README.
 | Laszlo DB interface                     | [2005-09-18-laszlo-database-interface](sources/2005-09-18-laszlo-database-interface/README.md)                     |
 | Player-created content index            | [2005-09-18-player-created-content-index](sources/2005-09-18-player-created-content-index/README.md)               |
 | Computer game design index              | [2005-09-18-computer-game-design-index](sources/2005-09-18-computer-game-design-index/README.md)                   |
-| Halloween tombstones (originalsims.com) | [2005-09-22-halloween-tombstones-original-sims](sources/2005-09-22-halloween-tombstones-original-sims/README.md)   |
+| Halloween tombstones (originalsims.com) | [2005-09-22-halloween-tombstones-original-sims](sources/2005-09-22-halloween-tombstones-original-sims/article.md)   |
 
 ---
 

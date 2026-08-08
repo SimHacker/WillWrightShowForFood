@@ -9,8 +9,8 @@ Not DRY on purpose — each repo gets what fits its context.
 
 | File | Description |
 |------|-------------|
-| [PROJECTION.yml](PROJECTION.yml) | Curated entries for show prep (~80 max) |
-| [HIGHLIGHTS.md](HIGHLIGHTS.md) | Hand-picked headline articles |
+| [PROJECTION.yml](sims-bibliography-PROJECTION.yml) | Curated entries for show prep (~80 max) |
+| [HIGHLIGHTS.md](sims-bibliography-HIGHLIGHTS.md) | Hand-picked headline articles |
 
 ## Topic landscape (full harvest)
 

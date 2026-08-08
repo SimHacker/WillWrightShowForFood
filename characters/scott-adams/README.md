@@ -9,7 +9,7 @@ Invitation portrayal — **not** Scott Adams. [Standards](../../schemas/portraya
 
 **Field:** Text adventures / interactive fiction; the data-driven adventure engine; retro IF; now AI.
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [Show seed](../../repo-shows/scott-adams/README.md)
+[Invitation](invitation.md) · [Ideas](ideas.md) · [Show seed](../../characters/scott-adams/README.md)
 
 ## Why he's here
 

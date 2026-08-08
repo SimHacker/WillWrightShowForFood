@@ -152,8 +152,8 @@ harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
 | [`model-branching.yml`](model-branching.yml) |
 | [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) |
 | [`../apps/stream-gateway/GLANCE.yml`](../apps/stream-gateway/GLANCE.yml) |
-| [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/thoughtful-commitment`](SimHacker/moollm/skills/thoughtful-commitment) |
+| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
+| [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
 
 ## Related
 

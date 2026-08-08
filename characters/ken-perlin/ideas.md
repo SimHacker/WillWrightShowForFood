@@ -17,5 +17,5 @@ walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/ken-perlin/`](../../repo-shows/ken-perlin/)
+- Show seed: [`repo-shows/ken-perlin/`](../../characters/ken-perlin/)
 - [`CHARACTER.yml`](CHARACTER.yml)

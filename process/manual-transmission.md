@@ -278,10 +278,10 @@ feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets s
 | [`sources/bun-rust-rewrite-2026-07.yml`](sources/bun-rust-rewrite-2026-07.yml) |
 | [`../characters/robots/slats/judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) |
 | [`../rigs/stick-shift-composer-moollm.rig.yml`](../rigs/stick-shift-composer-moollm.rig.yml) |
-| [`SimHacker/moollm/skills/cursor-mirror`](SimHacker/moollm/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/rubric`](SimHacker/moollm/skills/rubric) |
-| [`SimHacker/moollm/skills/experiment`](SimHacker/moollm/skills/experiment) |
-| [`SimHacker/moollm/skills/evaluator`](SimHacker/moollm/skills/evaluator) |
+| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
+| [`SimHacker/moollm/skills/rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) |
+| [`SimHacker/moollm/skills/experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
+| [`SimHacker/moollm/skills/evaluator`](https://github.com/SimHacker/moollm/tree/main/skills/evaluator) |
 
 ## Related
 

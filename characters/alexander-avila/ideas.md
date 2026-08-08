@@ -51,7 +51,7 @@ Full index: [`sources/moollm-links.yml`](sources/moollm-links.yml)
 ## Audience participation
 
 - TicketPR: submit your Sims queer awakening story (repo issue) — Alex reacts to representative threads.
-- Flipbook B-roll optional: [`../../repo-shows/flipbook/`](../../repo-shows/flipbook/README.md) for narration beats.
+- Flipbook B-roll optional: [`../../repo-shows/flipbook/README.md`](../../repo-shows/flipbook/README.md) for narration beats.
 
 ## Ethics (non-negotiable)
 

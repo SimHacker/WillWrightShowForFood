@@ -66,7 +66,7 @@ Plaisant**), then bring it up live and click around the real thing.
 ## Neighbors & lineage
 
 - **[Ben Shneiderman](../ben-shneiderman/README.md)** — HyperTIES director; documenting-our-work partner.
-- **NeWS reunion** — [`repo-shows/news-postscript-window-system.yml`](../../repo-shows/news-postscript-window-system.yml):
+- **NeWS reunion** — [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml):
   James Gosling, David Rosenthal, Arthur van Hoff, Owen Densmore — HyperTIES rode on NeWS; "send a
   program, not a data structure" is the same PostScript-applets idea.
 - **Hypertext forebears** — [augmentation-and-hypertext trail](../../process/trails/augmentation-and-hypertext.md):

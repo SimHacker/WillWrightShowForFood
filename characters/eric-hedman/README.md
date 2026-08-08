@@ -17,6 +17,6 @@ Eric is an independent artist — go subscribe and follow:
 There are easily several Repo Shows' worth of stories here — including **swimming pool** production
 lore (touchy subject in team mythology: ladders, drowning, urn-ring QA saves).
 
-[Invitation](invitation.md) · [Reunion hub](../../repo-shows/building-the-sims/README.md) · [Show seed](../../repo-shows/eric-hedman/README.md) · more in [`CHARACTER.yml`](CHARACTER.yml)
+[Invitation](invitation.md) · [Reunion hub](../../repo-shows/building-the-sims/README.md) · [Show seed](../../characters/eric-hedman/README.md) · more in [`CHARACTER.yml`](CHARACTER.yml)
 
 Subject may request correction or removal anytime.

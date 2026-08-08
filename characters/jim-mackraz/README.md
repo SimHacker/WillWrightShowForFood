@@ -27,4 +27,4 @@ leadership, **turd polishing**, and what reached CTG from pool architecture deba
 
 - [`../jamie-doornbos/`](../jamie-doornbos/) · [`../eric-bowman/`](../eric-bowman/) · [`../patrick-j-barrett-iii/`](../patrick-j-barrett-iii/) — core Sims programmers
 - [`../don-hopkins/`](../don-hopkins/) — Sims teammate; host
-- [`../../will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — optional reunion playthrough
+- [`../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/`](../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/) — optional reunion playthrough

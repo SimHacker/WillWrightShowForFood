@@ -19,23 +19,23 @@
 **  
 \-- Beginning of Video Tape --**   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/k01.gif) ](images/k01.jpeg)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/k01.gif) ](http://www.art.net/~hopkins/Don/simcity/k01.jpeg)  
   
 Hello, my name is Don Hopkins, and I ported [SimCity](README.md) to Unix on top of X11 using the [TCL/Tk toolkit](http://www.sco.com/IXI/of_interest/tcl/Tcl.html), and also on top of the [NeWS window system](http://www.art.net/~hopkins/Don/simcity/lang/NeWS.html) using [HyperLook](http://www.art.net/~hopkins/Don/simcity/hyperlook/index.html). Unfortunately I can't be in Toronto to demonstrate this stuff to you, but fortunately I have some video tapes that you can see that demonstrate the whole system.  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif) ](images/x02.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif)  
   
 The X11 version of SimCity is multi player, and several people can join the game, and cooperate, and people draw roads, and put down buildings in different places, and then when you do something important, like change the tax rate, or build an airport, you have to get everybody else who's playing to agree where to put it, and which thing to put down. So it makes you slow down and rationalize what you're doing, and explain to people why it is you want to put it there. It's a really interesting addition to SimCity because it adds politics.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif) ](images/x01.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif)  
   
 I'm going to show first the X11 version, which is on top of [TCL/Tk](http://www.sco.com/IXI/of_interest/tcl/Tcl.html), and that's a free toolkit that's available, written by John Ousterhaut at Berkeley. There's a book that's coming out describing it, and you can just get TCL/Tk and use it to make products for free. You don't have to pay anything for it, and it's actually very good code. It really beats the pants off of [Motif](http://www.art.net/~hopkins/Don/simcity/unix-haters/x-windows/motif.html), and we were able to modify it in order to support things like colormaps and multiple displays the way we needed to, and add things to it like a sound server to make sound effects, and pie menus for quickly selecting city editing tools. TCL/Tk made alot of sense for SimCity.  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h01.gif) ](images/h01.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h01.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h01.gif)  
   
 The first port of SimCity that I did to Unix is on HyperLook, which is an interactive graphical environment based on NeWS. We took the source code to SimCity for the Mac, and I threw away all the user interface code written in C, and just took the core simulator, and then rewrote the user interface using HyperLook, which is this direct manipulation graphical environment, kind of like HyperCard, where you can take pictures and paste them in to define the look, and then every object has a script on it that in HyperLook, the script is PostScript, which defines its behavior.  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h05.gif) ](images/h05.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h05.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h05.gif)  
   
 So you just create a user interface by drawing it, and then hook it up to the application, and that user interface is separated from the application, and they send messages back and forth. Now this separation of the user interface from the application is really important, and that made it much easier later to port SimCity to X11.  
   
@@ -43,11 +43,11 @@ HyperLook has this scripting language in it, and TCL/Tk has the TCL scripting la
   
 There are some user interface editors that have been developed for TCL/Tk, but I just wrote code by hand because I was doing some more specialized things, like multiple views and putting up views on different X11 displays over the net, that the user interface editors didn't support. HyperLook has a built in user interface editor, and I'll demonstrate HyperLook SimCity and the HyperLook environment in the following video tape.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h08.gif) ](images/h08.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h08.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h08.gif)  
   
 The X11 version of SimCity supports multi player, so you can add several people to the same game, and it connects up like an octopus, several X11 displays connected to one X11 client. You can cooperate on these important decisions like setting taxes and building airports. Everybody's participating in the same game and lives with the consequences of each others actions, so now you have politics in the game. There are some tools for communicating and drawing on the map, and seeing what other people are doing.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif) ](images/x03.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif)  
   
 [Unix](http://www.art.net/~hopkins/Don/simcity/unix-haters/login.html) was very good for porting SimCity because it's a very good programming environment. It's very difficult and lacking in multimedia things like the sound, and just doing animation easily.  
   
@@ -55,7 +55,7 @@ I had to create alot of things that didn't exist before, that other people are i
   
 SimCity wants to go "Roar!", "Roar!", "Kaboom!", and my email program wants to go "dinga linga linga ling" at the same time, so you have to have one program handling the sound that mixes them.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/k02.gif) ](images/k02.jpeg)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/k02.gif) ](http://www.art.net/~hopkins/Don/simcity/k02.jpeg)  
   
 One of the things I developed for TCL/Tk and for HyperLook was this sound mixer server. And then we got an NCD X-Terminal, and just layered my sound mixer on top of their sound server. It can either use the built-in audio device and be a TCL sound server, or it can use the sound server that's in your X-Terminal or your Sun or SGI or whatever, if you're running NetAudio.   
   
@@ -63,13 +63,13 @@ There are some other hard problems to solve like the bitmap animation. X has som
   
 It's very difficult programming this stuff under [X](http://www.art.net/~hopkins/Don/simcity/unix-haters/x-windows/disaster.html). It was alot more fun doing it in NeWS. We had to give up alot of the neat graphical features for the X version that we had in the NeWS version, like scaling and zooming around. You just can't do that in X. Unfortunately, NeWS is dead. There's no longer any support for it. The thing that was really wrong with it was that it was not cross platform. You were just stuck on Suns.  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h03.gif) ](images/h03.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h03.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h03.gif)  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h07.gif) ](images/h07.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h07.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h07.gif)  
   
 The good news though is that there are much better systems, I'm working on one right now at Kaleida called [ScriptX](http://www.art.net/~hopkins/Don/simcity/lang/scriptx/scriptx.html), that are cross platform. Their whole purpose in life is to provide you a really nice high level abstraction, that lets you ignore which operating system you're running on, so instead of developing for Unix, or for MS-DOS, or for the Mac, you would develop for ScriptX, and that would get you to Unix, and the Mac, and MS-DOS. More interestingly, that would get you to things that don't exist yet, that are just coming into existance, things like set top boxes with really hot graphics, and nicer systems than you're currently even dreaming about.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h27.gif) ](images/h27.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h27.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h27.gif)  
   
 What we need are high level multimedia abstractions; the X graphics model is very low level, and just doesn't work, but the NeWS PostScript graphics model is really nice, but we want the best of both worlds: a high level system that runs fast on lots of platforms. Once we have a truely object oriented system, things start plugging and playing like Legos, as this video tape of the HyperLook system will demonstrate.   
   
@@ -77,13 +77,13 @@ The good news is that in the future, we will have systems like this that plug an
   
 I will show you a video tape of a talk that I gave at [Interval](http://www.interval.com/), about "Self Revealing Gestural Interfaces", which is computer jargon for "[pie menus](http://www.art.net/~hopkins/Don/simcity/piemenus/index.html)". That is a thing that I put into both version of SimCity that lets you select editing tools really quickly.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif) ](images/x03.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif)  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif) ](images/x04.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif)  
   
 One of the nice things about running on a fast platform, is that SimCity runs really fast, and now it's a question of keeping up with the simulator. You need a streamlined user interface in order to keep up with this city that's zooming years into the future at you sit. That's what the pie menus are for, and I'll demonstrate that.  
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif) ](images/x10.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif)  
   
 For the pie menus and the multi player interaction stuff, like putting up windows on different screens and letting people have a shared view of this one environment, it was really nice to have the source code to the TCL/Tk toolkit, in order to support that kind of stuff.  
   
@@ -93,7 +93,7 @@ But there's a really wonderful community that's grown around TCL/Tk, and people 
   
 We bundled the [HyperLook](http://www.art.net/~hopkins/Don/simcity/hyperlook/index.html) runtime system with the [NeWS](http://www.art.net/~hopkins/Don/simcity/lang/NeWS.html) version of [SimCity](http://www.art.net/~hopkins/Don/simcity/hyperlook/HyperLook-SimCity.gif). If you're running OpenWindows 3.0, you can get it and try it out.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/h21.gif) ](images/h21.gif)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/h21.gif) ](http://www.art.net/~hopkins/Don/simcity/previews/h21.gif)  
   
 We have been [distributing SimCity over the Internet](ftp://ftp.uu.net/vendor/dux/SimCity), and _(less successfully)_ on CDROMs. That's possible because Unix systems have serial numbers, so we can node lock SimCity, and you can run the program for five minutes if you don't have a license, and then it melts, so you get the whole feel of the whole full blown product, and if you like it, then you call up [DUX Software](http://www.dux.com/)'s 800 number, give them your credit card number, tell them your serial number, and they tell you a password to type in that will unlock it for your particular machine, then you're up and playing SimCity. No physical transaction has taken place. You're encouraged to get a copy of it over the net, and give it to your friends.  
   
@@ -101,7 +101,7 @@ This is the best way to distribute software. Whenever we make updates, we can ju
   
 Well, anyway, here's the talk, and the video tapes.   
   
-[![](http://www.art.net/~hopkins/Don/simcity/previews/k03.gif) ](images/k03.jpeg)  
+[![](http://www.art.net/~hopkins/Don/simcity/previews/k03.gif) ](http://www.art.net/~hopkins/Don/simcity/k03.jpeg)  
   
 **\-- End of Video Tape --  
 **  
@@ -110,12 +110,12 @@ Well, anyway, here's the talk, and the video tapes.
 * * *
 
   * [![](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif)   
-](x11-demo.html)  
+](http://www.art.net/~hopkins/Don/simcity/x11-demo.html)  
 [Video Tape of X11 SimCity Demo](x11-demo-transcript.md)   
   
 
   * [![](http://www.art.net/~hopkins/Don/simcity/previews/h01.gif)   
-](hyperlook-demo.html)  
+](http://www.art.net/~hopkins/Don/simcity/hyperlook-demo.html)  
 [Video Tape of HyperLook SimCity Demo](hyperlook-demo-transcript.md) 
 
 

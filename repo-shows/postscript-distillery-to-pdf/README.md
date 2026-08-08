@@ -17,7 +17,7 @@ The million-dollar question — how do you flatten arbitrary PostScript into som
 
 ## Feeds
 
-- [NeWS reunion](../news-postscript-window-system.yml) — same PostScript-as-platform thread
+- [NeWS reunion](../REPO-SHOWS.yml#news-postscript-window-system.yml) — same PostScript-as-platform thread
 - MOOLLM `CARD.yml` — Warnock's linguistic motherboard (via Owen Densmore)
 
 ## Send-ready invites

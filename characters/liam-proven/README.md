@@ -16,7 +16,7 @@ colleague **[Thomas Claburn](../thomas-claburn/README.md)** in June 2026.
 **The story now:** the February brief was about MOOLLM; the center of gravity has moved to
 **WillWrightShowForFood** — Will accepted, the Repo Show as MOOLLM's first full-scale real-world
 application, [MicropolisCore](https://github.com/SimHacker/MicropolisCore) as the running code,
-and the [Soul City](../../catalogs/soul-city/README.md) create/publish/share bridge — all free
+and the [Soul City](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) create/publish/share bridge — all free
 and open (MOOLLM free, WWSFF free, Micropolis GPL). Liam and Tom get the first look, with
 publication timing coordinated around the premiere
 ([quiet mode](../../schemas/portrayal-standards.md#stealth-mode)).

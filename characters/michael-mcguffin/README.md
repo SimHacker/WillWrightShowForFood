@@ -20,7 +20,7 @@ Also appears in Don's **marking-menu prior-art** thread (Alias/Autodesk; see
 | Show | Role |
 |------|------|
 | [Rebounce](../../repo-shows/rebounce/) | Patch-cord lineage moderator |
-| [Brad Myers](../../repo-shows/brad-myers/) | VPL taxonomy triangle w/ Don + Brad |
+| [Brad Myers](../../repo-shows/brad-myers-garnet-vpl/) | VPL taxonomy triangle w/ Don + Brad |
 | [building-the-sims](../../repo-shows/REPO-SHOWS.yml) | SimAntics evidence segment |
 
 Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md)

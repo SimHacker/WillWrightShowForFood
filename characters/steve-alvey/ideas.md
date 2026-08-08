@@ -26,7 +26,7 @@ Whole-career pair show; Afterlife × ZombieSims flagship episode.
 Magnum-opus pack still shipping — the project they build *together* after the fan-site era.
 
 ### 5. Soul City + Soul City bridges
-Round-tripping saves; federated catalogs — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md).
+Round-tripping saves; federated catalogs — [`../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md`](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md).
 
 ### 6. Gallium / Proxi
 What nested-simulation craft meant inside Will's AI life-sim experiment.

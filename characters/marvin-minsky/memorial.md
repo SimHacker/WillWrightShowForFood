@@ -25,7 +25,7 @@ early robotic arms, advised Stanley Kubrick on **HAL** for *2001: A Space Odysse
 **Triadex Muse** music sequencer — and, as a Bell Labs grad student in 1952, dreamed up the
 **"Ultimate Machine,"** a box whose only function is to switch itself off (Claude Shannon built the
 first; Arthur C. Clarke called it "unspeakably sinister"). It lives on here as a fictional bot
-mascot, [The Ultimate Machine](../ultimate-machine/README.md). With Papert he wrote **Perceptrons** (1969). He
+mascot, [The Ultimate Machine](../robots/ultimate-machine/README.md). With Papert he wrote **Perceptrons** (1969). He
 won the **Turing Award** in 1969 and was a founding member of the **MIT Media Lab**.
 
 We remember him by inviting the people who knew him to tell the real stories — including his

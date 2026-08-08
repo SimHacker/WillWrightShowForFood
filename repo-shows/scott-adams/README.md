@@ -6,9 +6,9 @@
 Dilbert cartoonist.)*
 
 **Guest:** [Scott Adams](../../characters/scott-adams/README.md) (Adventureland, the data-driven adventure engine, Questprobe)
-**Invitation:** [`invitation.md`](invitation.md) *(canonical)* · [character stub](../../characters/scott-adams/invitation.md)
+**Invitation:** [`invitation.md`](../../characters/scott-adams/invitation.md) *(canonical)* · [character stub](../../characters/scott-adams/invitation.md)
 
-**Ideas:** [`ideas.md`](ideas.md) *(full segment catalog)* · [`IDEAS.yml`](IDEAS.yml) *(machine index)* · [character quick hooks](../../characters/scott-adams/ideas.md)
+**Ideas:** [`ideas.md`](../../characters/scott-adams/ideas.md) *(full segment catalog)* · [`IDEAS.yml`](../../characters/scott-adams/IDEAS.yml) *(machine index)* · [character quick hooks](../../characters/scott-adams/ideas.md)
 
 ## The show
 

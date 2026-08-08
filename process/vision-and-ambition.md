@@ -194,9 +194,9 @@ Stumbled here? Pick a doorway — numbered playlists in [ENTRYWAYS.md](../ENTRYW
 
 | Guest | Why them | Show seeds |
 |-------|----------|------------|
-| [Brian Harvey](../characters/brian-harvey/) | Logo, Simply Scheme, Snap!, BJC | [brian-harvey](../repo-shows/brian-harvey/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
-| [Jens Mönig](../characters/jens-monig/) | Snap! architect; Micropolis × Snap! | [jens-monig](../repo-shows/jens-monig/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
-| [Walter Bender](../characters/walter-bender/) | OLPC Stone Soup; open-source SimCity | [walter-bender-olpc](../repo-shows/walter-bender-olpc/) · [skill-creation](../repo-shows/skill-creation/) |
+| [Brian Harvey](../characters/brian-harvey/) | Logo, Simply Scheme, Snap!, BJC | [brian-harvey](../characters/brian-harvey/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
+| [Jens Mönig](../characters/jens-monig/) | Snap! architect; Micropolis × Snap! | [jens-monig](../characters/jens-monig/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
+| [Walter Bender](../characters/walter-bender/) | OLPC Stone Soup; open-source SimCity | [walter-bender-olpc](../repo-shows/walter-bender-olpc/) · [skill-creation](../skills/README.md) |
 
 Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → [MOOLLM skills](../skills/README.md) your class can run. RTFR together. Fork a [show seed](../repo-shows/README.md). Grade homefun: does the commit match the thinking? [homefun-grading.md](homefun-grading.md) · [homefun-grading.yml](homefun-grading.yml).
 

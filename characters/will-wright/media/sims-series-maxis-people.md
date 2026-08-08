@@ -4,7 +4,7 @@ Verified public roster of people important to **The Sims** and Maxis history. Sp
 
 This is **not** the complete internal personnel list (that stays private). It's generous about who counts as important — founders, core team, voices, leadership, and key influences.
 
-Machine-readable: [maxis-people.yml](maxis-people.yml)
+Machine-readable: [maxis-people.yml](sims-series-maxis-people.yml)
 
 ## Founders & studio leadership
 
@@ -64,7 +64,7 @@ Sources: [Polygon](https://www.polygon.com/22891664/the-sims-similish-maxis-stud
 
 ## Later leadership & influences
 
-Rachel Franklin, Lyndsay Pearson, Tim LeTourneau, Rod Humble — see [maxis-people.yml](maxis-people.yml).
+Rachel Franklin, Lyndsay Pearson, Tim LeTourneau, Rod Humble — see [maxis-people.yml](sims-series-maxis-people.yml).
 
 Influences: **Danielle Bunten Berry** (M.U.L.E.), **Nicole Lazzaro** (player experience research).
 

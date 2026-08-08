@@ -52,7 +52,7 @@ The stub format:
 ```markdown
 # <Document Title> ⤷ stub
 
-**Palmhoo stub.** Canonical home: [`path/to/document.md`](relative-or-github-link)
+**Palmhoo stub.** Canonical home: `` `path/to/document.md` `` (relative path or GitHub URL)
 
 🐒✋ *Why you're here: one or two sentences of Palm's commentary, written for
 this topic's reader specifically.*

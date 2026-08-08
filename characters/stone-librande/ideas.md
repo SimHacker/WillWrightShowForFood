@@ -17,5 +17,5 @@ walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/stone-librande/`](../../repo-shows/stone-librande/)
+- Show seed: [`repo-shows/stone-librande/`](README.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

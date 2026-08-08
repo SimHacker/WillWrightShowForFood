@@ -92,7 +92,7 @@ vs screenshot scraping — pairs naturally with GUIDB anti-slop ethos ([**Edd Co
 HyperTIES PostScript applets = "send a program, not a data structure." Tag-team episode or segment with
 [**James Gosling**](../james-gosling/), [**David Rosenthal**](../david-rosenthal/), [**Arthur van Hoff**](../arthur-van-hoff/).
 
-→ [`../../repo-shows/news-postscript-window-system.yml`](../../repo-shows/news-postscript-window-system.yml)
+→ [`../../repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml)
 
 ### 10. Sims inclusivity paper — Ben's title suggestions
 

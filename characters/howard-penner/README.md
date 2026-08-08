@@ -15,4 +15,4 @@
 
 **Flipbook (graphics department):** Full-bleed illustrated B-roll during narration — [`../../repo-shows/flipbook/`](../../repo-shows/flipbook/README.md). Pop-Up annotates screen recordings; Flipbook plays when voice carries the story. Complementary lanes; may share sticker/CA art vocabulary.
 
-↑ [`../don-hopkins/people/INDEX.yml`](../don-hopkins/people/INDEX.yml) · [`../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml`](../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml)
+↑ [`../INDEX.yml`](../INDEX.yml) · [`../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml`](../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml)

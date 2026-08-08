@@ -4,7 +4,7 @@
 
 The single most important seed document for Will Wright Show For Food — and a
 direct artifact of a **forebear** (Terry Winograd's open public Stanford UI
-seminar; see [design-in-public · forebears](../../../../process/design-in-public.yml#forebears)).
+seminar; see [design-in-public · forebears](../../../../process/vision-and-ambition.yml#forebears)).
 
 This episode is the preserved centerpiece of the larger **Terry Winograd / CS547 archive** ("the treasure trove"). See the dedicated forebear room
 [Terry Winograd media](../../../terry-winograd/media/) — [CS547 archive (md)](../../../terry-winograd/media/cs547-ARCHIVE.md) / [CS547 archive (yml)](../../../terry-winograd/media/cs547-archive.yml) hold the **full catalog of 339 talks** (15 with online scans, 25 by people who are WWSFF characters): the shoulders we stand on — Terry as dragon + Will + James Gosling (Java, 1995) + S. Joy Mountford (1994) + [Jef Raskin](../../../jef-raskin/README.md) 🕯️ + Donald Norman + Alan Kay + Ted Selker + Scott Kim + ~290 others.

@@ -20,7 +20,7 @@ impersonation forbidden, simulation labeled, subjects holding edit/delete rights
 2026; Tom replied that he'd pitch an editor. **The story has since grown:** Will Wright accepted,
 **WillWrightShowForFood** became the flagship application, with
 [MicropolisCore](https://github.com/SimHacker/MicropolisCore) as running code and
-[Soul City](../../catalogs/soul-city/README.md) as the games bridge — all free and open (MOOLLM
+[Soul City](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) as the games bridge — all free and open (MOOLLM
 free, WWSFF free, Micropolis GPL). He and Liam get the coordinated first look, publication timed
 with the premiere ([quiet mode](../../schemas/portrayal-standards.md#stealth-mode)).
 

@@ -27,7 +27,7 @@ session as audio on his catalog; this bundle indexes it for the show.
 ## Ethics
 
 Gerri Lawlor died **January 2019**. Discuss and cite with memorial respect; **do not voice her as a
-character** on air. See [`RULES-AND-ETHICS.md`](../../../../process/RULES-AND-ETHICS.md).
+character** on air. See [`RULES-AND-ETHICS.md`](https://github.com/SimHacker/DonHopkins/blob/main/projects/willwrightshowforfood/strategy/RULES-AND-ETHICS.md).
 
 ## Still to acquire
 

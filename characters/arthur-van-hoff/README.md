@@ -4,7 +4,7 @@ Invitation portrayal — **not** Arthur van Hoff. [Standards](../../schemas/port
 
 **Field:** NeWS/HyperLook, PdB compiler, early Java (compiler-in-Java, AWT, HotJava), Marimba (Castanet/Bongo), TiVo, Flipboard, Jaunt VR
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/arthur-van-hoff/README.md)
+[Invitation](invitation.md) · [Show seed](../../characters/arthur-van-hoff/README.md)
 
 ## Birthday party
 

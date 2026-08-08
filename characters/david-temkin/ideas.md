@@ -99,7 +99,7 @@ do models already know how to read?"
 ### 15. Push vs pull — David answers on the record (Aug 2026)
 Declare = **push**, spreadsheet model, compiler-derived dependency tree (sees into functions).
 Garnet parsed expressions but was pull; OL chose push for Flash workload. David reading Don's
-[constraints article](../../don-hopkins/sources/articles/constraints-garnet-openlaszlo.md) pre-call.
+[constraints article](../../characters/don-hopkins/sources/articles/constraints-garnet-openlaszlo.md) pre-call.
 → [`sources/2026-08-03-declare-constraints-thread.md`](sources/2026-08-03-declare-constraints-thread.md)
 
 ### 16. JSON bridge + wasm embedding

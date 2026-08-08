@@ -44,4 +44,4 @@ Curated entries with readable `title_hint` or obvious significance. Summaries st
 | The Sims.com (1999) | http://thesims.com/ | yes — see INDEX |
 | GameSpot Maxis feature (1999) | https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html | archived |
 
-Full index: [INDEX.yml](INDEX.yml). Re-
+Full index: [INDEX.yml](sims-bibliography-README.md). Re-

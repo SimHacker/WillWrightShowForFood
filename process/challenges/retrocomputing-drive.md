@@ -173,7 +173,7 @@ install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent ex
 
 | Link | Why |
 |------|-----|
-| [`cross-links.yml#retrocomputing_drive`](cross-links.yml) | Narrative trail — all retro nodes |
+| Narrative trail — all retro nodes | *(this document)* |
 | [`retrocomputing-drive.md`](retrocomputing-drive.md) | Generated markup view of this family |
 | [`micropolis-ai-drag-race.md`](../micropolis-ai-drag-race.md) | Retro laps are drag race challenge rotation |
 | [`manual-transmission.yml`](../manual-transmission.yml) | Measurement lane — smallest model on retro target |

@@ -39,7 +39,7 @@ machines that read on a CRT.
 
 ### 5. Drew Carey Show tie-in
 Animating Sims vignettes + laser blaster; Marion Ross dance-floor story. Pairs with dream
-[`drew-carey`](../drew-carey/) episode.
+[`drew-carey`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/drew-carey/) episode.
 
 ### 6. Pantomime Corporation reunion
 Eric + David Levitt + Don — Sims animation craft meets AR/VR character work.
@@ -51,5 +51,5 @@ Eric + David Levitt + Don — Sims animation craft meets AR/VR character work.
 
 - [`invitation.md`](invitation.md)
 - [`CHARACTER.yml`](CHARACTER.yml) — story seeds, retrospective video links
-- Show seed: [`repo-shows/eric-hedman/`](../../repo-shows/eric-hedman/)
+- Show seed: [`repo-shows/eric-hedman/`](README.md)
 - YouTube: [@irkinteraction](https://www.youtube.com/@irkinteraction)

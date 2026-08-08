@@ -120,7 +120,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | [`showmaker-network.yml`](showmaker-network.yml) |
 | [`../schemas/rig-schema.yml`](../schemas/rig-schema.yml) |
 | [`../rigs/README.md`](../rigs/README.md) |
-| [`SimHacker/MicropolisCore`](SimHacker/MicropolisCore) |
+| [`SimHacker/MicropolisCore`](https://github.com/SimHacker/MicropolisCore) |
 
 ## Related
 

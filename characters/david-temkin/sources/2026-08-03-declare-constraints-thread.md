@@ -84,7 +84,7 @@ Don sent four deduplicated articles + Micropolis OpenLaszlo retrospective, in re
 | Article | URL |
 |---------|-----|
 | Pie Menus and Window Management | [pie-menus-window-management.md](../../don-hopkins/sources/articles/pie-menus-window-management.md) |
-| Constraints and Prototypes in Garnet and OpenLaszlo | [constraints-garnet-openlaszlo.md](../../don-hopkins/sources/articles/constraints-garnet-openlaszlo.md) |
+| Constraints and Prototypes in Garnet and OpenLaszlo | [constraints-garnet-openlaszlo.md](../../../characters/don-hopkins/sources/articles/constraints-garnet-openlaszlo.md) |
 | What is OpenLaszlo, and What's It Good For? | [what-is-openlaszlo.md](../../don-hopkins/sources/articles/what-is-openlaszlo.md) |
 | Instance-First Development | [instance-first-development.md](../../don-hopkins/sources/articles/instance-first-development.md) |
 | Svelte 5 Runes, Heir of OpenLaszlo | [svelte-runes-openlaszlo-heir.md](../../don-hopkins/sources/articles/svelte-runes-openlaszlo-heir.md) |

@@ -1,6 +1,6 @@
 # Micropolis × Svelte runes × Snap! — the constraint bridge
 
-Code: [`MicropolisReactive.svelte.ts`](../../../../MicropolisCore/apps/micropolis/src/lib/MicropolisReactive.svelte.ts)
+Code: [`MicropolisReactive.svelte.ts`](../../../https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts)
 
 ## The braid (four decades, one idea)
 
@@ -47,7 +47,7 @@ const dateLabel = $derived(
 ```
 
 OpenLaszlo doc mapping (same repo family):
-[`MicropolisCore/documentation/openlaszlo/README.md`](../../../../MicropolisCore/documentation/openlaszlo/README.md)
+[`MicropolisCore/documentation/openlaszlo/README.md`](../../../https://github.com/SimHacker/MicropolisCore/blob/main/documentation/openlaszlo/README.md)
 — OL constraints → Svelte runes; AMF bridge → `MicropolisReactive`.
 
 ## Three visual paradigms, one constructionist platform
@@ -95,4 +95,4 @@ constraints — three orthogonal mechanisms, same platform.
 - [Constructionist response](../../../process/constructionist-simcity-response.md)
 - [Pair show](../../../repo-shows/snap-logo-brian-jens/README.md)
 
-↑ [Don sources](README.md) · [MicropolisReactive source](../../../../MicropolisCore/apps/micropolis/src/lib/MicropolisReactive.svelte.ts)
+↑ [Don sources](README.md) · [MicropolisReactive source](../../../https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/src/lib/MicropolisReactive.svelte.ts)

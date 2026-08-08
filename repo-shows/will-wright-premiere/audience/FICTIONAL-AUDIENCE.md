@@ -36,7 +36,7 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |
 | **Self-aware AI agent** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_agent`; knows it's simulated |
 | **Consented real self-author** | [Richard Bartle](richard-bartle/README.md) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
-| **Honored real guests** | [Heather Alvey](heather-alvey/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/README.md) | Real, invited, front-row/box; write their own |
+| **Honored real guests** | [Heather Alvey](heather-alvey/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/CHARACTER.yml) | Real, invited, front-row/box; write their own |
 
 ---
 
@@ -63,29 +63,29 @@ Same for living humans: no impersonating guests or fans without consent.
 | [palm/](palm/README.md) | Palm 🐒✋ (self-aware AI) | What's it like to be a Sim? |
 | [fictional-bella-goth/](fictional-bella-goth/README.md) | Bella Goth | Missing-poster energy |
 | [fictional-tragic-clown/](fictional-tragic-clown/README.md) | Tragic Clown 🤡 | Balcony left — weeping heckler |
-| [fictional-killer-hamster/](fictional-killer-hamster/README.md) | Killer Hamster | Wheel of doom |
+| [fictional-killer-hamster/](fictional-killer-hamster/CHARACTER.yml) | Killer Hamster | Wheel of doom |
 | [fictional-grim-reaper/](fictional-grim-reaper/README.md) | Death 💀 | Balcony right — 🤡💀 duo |
-| [fictional-social-bunny/](fictional-social-bunny/README.md) | Social Bunny | Loneliness hallucination |
-| [fictional-edith-ghost/](fictional-edith-ghost/README.md) | Edith tool ghost | SimAntics |
-| [fictional-transmogrifier/](fictional-transmogrifier/README.md) | The Transmogrifier 🧪 | User-created content incarnate |
-| [fictional-simant-black-ant/](fictional-simant-black-ant/README.md) | Black ant (SimAnt) | "Too easy" post-mortem |
-| [fictional-simant-red-spider/](fictional-simant-red-spider/README.md) | Red spider (SimAnt) | Misunderstood hero |
-| [fictional-spore-creature/](fictional-spore-creature/README.md) | Spore creature | Cell → space |
-| [fictional-cow-plant/](fictional-cow-plant/README.md) | Cow Plant 🐮🌱 | Feed-me-Seymour + Chain Chomp |
-| [fictional-some-sneaky-sim/](fictional-some-sneaky-sim/README.md) | Some Sneaky Sim | Canonical burglar; sympathetic |
-| [fictional-little-computer-person/](fictional-little-computer-person/README.md) | Pixel + dog 🧍💾🐕 | The 1985 Sims ancestor |
-| [fictional-seaman/](fictional-seaman/README.md) | Seaman 🐟 | Asks Will's embarrassing Qs for Yoot |
-| [fictional-broken-robot/](fictional-broken-robot/README.md) | Broken Robot 🤖🔧 | Running gag — crashes, begs, dragged off |
-| [fictional-zombie-sim/](fictional-zombie-sim/README.md) | ZombieSim 🧟 | The crew's +1 |
-| [fictional-gaia/](fictional-gaia/README.md) | Gaia 🌍 (SimEarth) | "even though the earth is our mother, we sure treat her like dirt"; Pee-wee's Globey |
-| [fictional-simcity-advisor/](fictional-simcity-advisor/README.md) | SimCity Advisor | The nag you clicked away |
-| [fictional-llama/](fictional-llama/README.md) | The Llama 🦙 | Maxis absurdist running gag |
-| [fictional-museum-curator/](fictional-museum-curator/README.md) | Museum Curator 🏛️ | Archivist tribute (box w/ Phil) |
-| [bot-ultimate-machine/](bot-ultimate-machine/README.md) | Ultimate Machine 🔌 | Refusal koans; gong; closes the stream |
+| [fictional-social-bunny/](fictional-social-bunny/CHARACTER.yml) | Social Bunny | Loneliness hallucination |
+| [fictional-edith-ghost/](fictional-edith-ghost/CHARACTER.yml) | Edith tool ghost | SimAntics |
+| [fictional-transmogrifier/](fictional-transmogrifier/CHARACTER.yml) | The Transmogrifier 🧪 | User-created content incarnate |
+| [fictional-simant-black-ant/](fictional-simant-black-ant/CHARACTER.yml) | Black ant (SimAnt) | "Too easy" post-mortem |
+| [fictional-simant-red-spider/](fictional-simant-red-spider/CHARACTER.yml) | Red spider (SimAnt) | Misunderstood hero |
+| [fictional-spore-creature/](fictional-spore-creature/CHARACTER.yml) | Spore creature | Cell → space |
+| [fictional-cow-plant/](fictional-cow-plant/CHARACTER.yml) | Cow Plant 🐮🌱 | Feed-me-Seymour + Chain Chomp |
+| [fictional-some-sneaky-sim/](fictional-some-sneaky-sim/CHARACTER.yml) | Some Sneaky Sim | Canonical burglar; sympathetic |
+| [fictional-little-computer-person/](fictional-little-computer-person/CHARACTER.yml) | Pixel + dog 🧍💾🐕 | The 1985 Sims ancestor |
+| [fictional-seaman/](fictional-seaman/CHARACTER.yml) | Seaman 🐟 | Asks Will's embarrassing Qs for Yoot |
+| [fictional-broken-robot/](fictional-broken-robot/CHARACTER.yml) | Broken Robot 🤖🔧 | Running gag — crashes, begs, dragged off |
+| [fictional-zombie-sim/](fictional-zombie-sim/CHARACTER.yml) | ZombieSim 🧟 | The crew's +1 |
+| [fictional-gaia/](fictional-gaia/CHARACTER.yml) | Gaia 🌍 (SimEarth) | "even though the earth is our mother, we sure treat her like dirt"; Pee-wee's Globey |
+| [fictional-simcity-advisor/](fictional-simcity-advisor/CHARACTER.yml) | SimCity Advisor | The nag you clicked away |
+| [fictional-llama/](fictional-llama/CHARACTER.yml) | The Llama 🦙 | Maxis absurdist running gag |
+| [fictional-museum-curator/](fictional-museum-curator/CHARACTER.yml) | Museum Curator 🏛️ | Archivist tribute (box w/ Phil) |
+| [bot-ultimate-machine/](bot-ultimate-machine/CHARACTER.yml) | Ultimate Machine 🔌 | Refusal koans; gong; closes the stream |
 
 **Real guests (seated by invitation/donation):**
 [richard-bartle/](richard-bartle/README.md) (consented, self-authoring) ·
-[phil-salvador/](phil-salvador/README.md) (box seat w/ Curator) ·
+[phil-salvador/](phil-salvador/CHARACTER.yml) (box seat w/ Curator) ·
 [heather-alvey/](heather-alvey/README.md) + [steve-alvey/](steve-alvey/README.md) (front-row SimFreaks/SimSlice crew).
 
 **More games & ideas:** [AUDIENCE-ROSTER-IDEAS.md](AUDIENCE-ROSTER-IDEAS.md) · **Machine index:** [INDEX.yml](INDEX.yml) · **Regulars spec:** [../../../process/repo-show-regulars.md](../../../process/repo-show-regulars.md)

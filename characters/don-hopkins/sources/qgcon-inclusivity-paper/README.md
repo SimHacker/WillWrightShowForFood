@@ -8,7 +8,7 @@ Source doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2A
 | File | Contents |
 |------|----------|
 | [soul-city-soul-saver-thesis.yml](soul-city-soul-saver-thesis.yml) | **2026 reframe** — Soul City NC, Nixon, EA buyout, Soul Saver, Tiny Life exodus |
-| [flipbook B-roll](../../repo-shows/flipbook/) | **Graphics department** — illustrated narration shows for paper acts 1–4 |
+| [flipbook B-roll](../../../../repo-shows/flipbook/README.md) | **Graphics department** — illustrated narration shows for paper acts 1–4 |
 | [title-candidates.yml](title-candidates.yml) | Title votes — Don + Ben Shneiderman suggestions |
 | [abstract.md](abstract.md) | ~350-word abstract + theory stack |
 | [interview-points.yml](interview-points.yml) | Five QGCon beats + bio + talk structure |

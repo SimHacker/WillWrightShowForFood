@@ -77,7 +77,7 @@ deterministic and cheap.
 ### 9. Mind Mirror Apple ][ organelle
 
 Run Timothy Leary's Mind Mirror in a browser emulator; round-trip enriched personality into
-Soul City; export to other federation peers. [game-bridge-mind-mirror.yml](../../repo-shows/game-bridge-mind-mirror.yml)
+Soul City; export to other federation peers. [game-bridge-mind-mirror.yml](../../repo-shows/INDEX.yml)
 
 ### 10. Micropolis Federation naming
 

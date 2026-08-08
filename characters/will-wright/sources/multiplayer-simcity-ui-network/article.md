@@ -111,7 +111,7 @@ Multi user support.
     Live playable views of save files associated with stories.
 ```
 
-Source: [`micropolis/PROGRESS.txt`](../../../../../micropolis/PROGRESS.txt) (Future plans section); echoed in [`laszlo/micropolis/TODO.txt`](../../../../../micropolis/laszlo/micropolis/TODO.txt) (Facebook-era "city wall", event quests, friend city snapshots).
+Source: [`micropolis/PROGRESS.txt`](../../../../https://github.com/SimHacker/micropolis/blob/main/PROGRESS.txt) (Future plans section); echoed in [`laszlo/micropolis/TODO.txt`](../../../../https://github.com/SimHacker/micropolis/blob/main/laszlo/micropolis/TODO.txt) (Facebook-era "city wall", event quests, friend city snapshots).
 
 **City save tree:** immutable branch cities vs mutable leaf cities; players branch from each other's shared saves — parent pointers, snapshot-on-branch semantics (see email dump ~line 15255 in `old-email.txt` and TODO.txt).
 

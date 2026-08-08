@@ -9,7 +9,7 @@
 | Source | Link |
 |--------|------|
 | Alan Kay thread | [2007 11 16 simcity rules alan kay](../2007-11-16-simcity-rules-alan-kay/README.md) |
-| Walter Bender show | [walter bender olpc](../../../repo-shows/walter-bender-olpc/SHOW.yml) |
+| Walter Bender show | [walter bender olpc](../../../../repo-shows/walter-bender-olpc/SHOW.yml) |
 | SimCity open-source saga | [simcity open source saga](../simcity-open-source-saga/README.md) |
 | big-prompts Sugar quotes | DonHopkins `temp/big-prompts.txt` — "kid-friendly multi-player user interface" |
 

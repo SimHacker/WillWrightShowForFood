@@ -18,7 +18,7 @@ Same arc as **James Turner** and **Kayla Sims (lilsimsie)** — praised indie si
 
 - Tiny Life vs Legacy Collection (Exchange removed)
 - Creator Network exit — strongest action available
-- Exchange revival + git-native sharing ([Soul City](../../catalogs/soul-city/))
+- Exchange revival + git-native sharing ([Soul City](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/))
 - Won't judge who stayed (her public framing)
 
 Draft invite: [`invitation.md`](invitation.md) · Group show: [`creator-network-exodus.yml`](../../repo-shows/will-wright-premiere/creator-network-exodus.yml)

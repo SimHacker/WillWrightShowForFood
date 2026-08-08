@@ -34,7 +34,7 @@ Builders, modders, storytellers, creator-network — the show welcomes the congr
 up in this engine. Tie to post-Collection exodus, custom content ethic, Simprov Wedding Playset.
 
 ### 8. Optional reunion
-[`will-wright/sims-team-steering-committee-playthrough/`](../../will-wright/sims-team-steering-committee-playthrough/) — Jun 1998 build, Edith, Jamie/Bobo/Irk/Patrick/Don.
+[`will-wright/sims-team-steering-committee-playthrough/`](../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/) — Jun 1998 build, Edith, Jamie/Bobo/Irk/Patrick/Don.
 
 ## Sources
 

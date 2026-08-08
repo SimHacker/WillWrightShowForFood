@@ -14,8 +14,8 @@ Rare on-camera walkthrough of **Edith** — the SimAntics bytecode editor — pl
 ## Show hooks
 
 - [Steering committee playthrough](../../../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/SHOW.yml) — compare 1998 build to this demo  
-- [Building the Sims reunion](../../../REPO-SHOWS.yml) — Jamie + Eric Bowman segment  
-- [`pie-menus-retrospective`](../../../pie-menus-retrospective/README.md) if planted
+- [Building the Sims reunion](../../../../repo-shows/REPO-SHOWS.yml) — Jamie + Eric Bowman segment  
+- [`pie-menus-retrospective`](../../../../repo-shows/REPO-SHOWS.yml#pie-menus-retrospective.yml) if planted
 
 ## Related
 

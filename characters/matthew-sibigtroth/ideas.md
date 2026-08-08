@@ -17,5 +17,5 @@ walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/matthew-sibigtroth/`](../../repo-shows/matthew-sibigtroth/)
+- Show seed: [`repo-shows/matthew-sibigtroth/`](README.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

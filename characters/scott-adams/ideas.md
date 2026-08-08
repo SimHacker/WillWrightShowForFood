@@ -128,7 +128,7 @@ GET LAMP: [`../jason-scott/sources/get-lamp.md`](../jason-scott/sources/get-lamp
 ### L3. DreamScape → iLoci → biography rooms 🎙️
 **Beat:** Kaleida ScriptX presentation memory palace (rearrange slides on the map **while presenting**)
 → iLoci iPhone palace → Scott's **playable biography** on the web. Same user gesture: **walk to learn**.
-**Artifact:** Don's [`talks/past/dreamscape-wwdc-1995.yml`](../../../DonHopkins/talks/past/dreamscape-wwdc-1995.yml) (stub)
+**Artifact:** Don's [`talks/past/dreamscape-wwdc-1995.yml`](../../https://github.com/SimHacker/DonHopkins/blob/main/talks/past/dreamscape-wwdc-1995.yml) (stub)
 
 ### L4. Pie menus as radial room exits 🎙️🔧
 **Beat:** Direct manipulation verb-picker for a modeled world — CHI'88 to The Sims to MOOLLM.
@@ -237,7 +237,7 @@ the pipeline; Scott critiques the data format.
 
 ### X1. MOOLLM microworld OS talk (nested) 🎙️
 **Beat:** Telescoping keynote segment — outer room MOOLLM, inner room Scott's engine. See Don's
-[`talks/moollm-microworld-os/TALK.yml`](../../../DonHopkins/talks/moollm-microworld-os/TALK.yml).
+[`talks/moollm-microworld-os/TALK.yml`](../../https://github.com/SimHacker/DonHopkins/blob/main/talks/moollm-microworld-os/TALK.yml).
 
 ### X2. Empathy and Servitude (robot films) 🎙️
 **Beat:** Optional cold open if robotics audience — Stupid Fun Club one-minute movies; wizard-of-oz
@@ -273,7 +273,7 @@ atheism; both want the same vault of stories and relationships in *this* world. 
 "soul" means to him as a believer when the software uses the word as a filing metaphor — curiosity,
 not gotcha.
 **Payoff:** Soul City is the method-of-loci UI Don wished for in 2021, running now.
-**Artifact:** [catalogs/soul-city](../../../catalogs/soul-city/README.md) · adventure-4 example city
+**Artifact:** [catalogs/soul-city](../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) · adventure-4 example city
 
 ---
 
@@ -366,7 +366,7 @@ G1 + G4 + B2 — audience authors; Scott playtests; Don compiles; no lecture lon
 | HN thread | https://news.ycombinator.com/item?id=29330901 |
 | HN digest (timeline + quotes) | [sources/2021-11-24-hn-memory-palace.md](sources/2021-11-24-hn-memory-palace.md) |
 | Soul City SOUL-MODEL | https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md |
-| Soul City catalog | [catalogs/soul-city](../../../catalogs/soul-city/README.md) |
+| Soul City catalog | [catalogs/soul-city](../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) |
 | Wikipedia (game designer) | https://en.wikipedia.org/wiki/Scott_Adams_(game_designer) |
 
 ---

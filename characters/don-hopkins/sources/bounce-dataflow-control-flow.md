@@ -65,7 +65,7 @@ Full taxonomy: [`drakon-control-flow-vs-dataflow.md`](../drakon-control-flow-vs-
 | Doc | What |
 |-----|------|
 | [`mediaflow-design-comments.md`](../mediaflow-design-comments.md) | Don's full § "Bounce control flow vs Max" |
-| [`body-electric-bounce-vr-stack.md`](../body-electric-bounce-vr-stack.md) | VR stack, COM-on-wires, live coding |
+| [`body-electric-bounce-vr-stack.md`](../../don-hopkins/body-electric-bounce-vr-stack.md) | VR stack, COM-on-wires, live coding |
 | [`levity-bounce-space-seed.md`](../levity-bounce-space-seed.md) | Levity Mac product, rights chain |
 | [`../../david-levitt/don-and-david-history.md`](../../david-levitt/don-and-david-history.md) | Don + David collaboration narrative |
 | [`../../../repo-shows/rebounce/README.md`](../../../repo-shows/rebounce/README.md) | Rewrite Bounce together on air |

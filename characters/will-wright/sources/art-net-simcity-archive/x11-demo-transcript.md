@@ -21,13 +21,13 @@
   
 _" Skywatch One reporting heavy traffic."  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif)](images/x01.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x01.gif)  
   
 I'm Don Hopkins from [DUX Software](http://www.dux.com/), demonstrating multi user [SimCity](README.md) for [Unix](http://www.art.net/~hopkins/Don/simcity/unix-haters/login.html), running on X11 on an Indigo workstation, based on the original SimCity by Will Wright from [Maxis](http://www.maxis.com/).  
   
 _" Skywatch One reporting heavy traffic."  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif)](images/x02.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x02.gif)  
   
 On the left is an overall map window, and on the right is a close-up animated view. You can pan the animated view around, by dragging the yellow rectangle on the map. Then you can edit with the bulldozer, and build.  
   
@@ -51,7 +51,7 @@ _(Check out my[Pie Menu Page](http://www.art.net/~hopkins/Don/simcity/piemenus/i
   
 "Whoosh! Zone? Fire Station." (Press the right mouse button to "whoosh" up a pie menu. Select the Zone submenu, then select Fire Station icon from that.)   
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif)](images/x03.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x03.gif)  
   
 _" Skywatch One reporting heavy traffic."  
   
@@ -65,7 +65,7 @@ _" Skywatch One reporting heavy traffic."
   
 "Whoosh! Zone? Industrial."  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif)](images/x04.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x04.gif)  
   
 _" Whoosh! Bulldozer."  
   
@@ -75,7 +75,7 @@ _" Whoosh! Bulldozer."
   
 "Whoosh! Build? Nuclear Power."  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x05.gif)](images/x05.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x05.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x05.gif)  
   
 _" Whoosh! Road."  
   
@@ -101,7 +101,7 @@ _" Whoosh! ... Road." (You can always see the menu if you need to.)
   
 "Rumble, crash!"  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x06.gif)](images/x06.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x06.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x06.gif)  
   
 _" Whoosh! Zone? Industrial."  
   
@@ -113,7 +113,7 @@ _" Whoosh! Zone? Industrial."
   
 (Clear away some park in the Panhandle.)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x07.gif)](images/x07.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x07.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x07.gif)  
   
 _" Whoosh! Road."  
   
@@ -143,7 +143,7 @@ _" Whoosh! Road."
   
 (Put more parks around the new zone.)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x08.gif)](images/x08.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x08.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x08.gif)  
   
 _" Whoosh! Rail."  
   
@@ -157,7 +157,7 @@ _" Whoosh! Rail."
   
 (The train is heading for the fountain! Quick, pie menus to the rescue!)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x09.gif)](images/x09.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x09.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x09.gif)  
   
 _" Whoosh! Bulldozer."  
   
@@ -169,7 +169,7 @@ _" Whoosh! Bulldozer."
   
 (Put down the rail just in time, right under the wheels of the oncoming train!)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif)](images/x10.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x10.gif)  
   
 _" Whoosh! Rail."  
   
@@ -181,7 +181,7 @@ _" Whoosh! Rail."
   
 (Make a little maze of railroad tracks to keep the train busy while we bulldoze another couple of fountains and lay down the rest of the track.)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x11.gif)](images/x11.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x11.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x11.gif)  
   
 _" Whoosh! Bulldozer."  
   
@@ -195,7 +195,7 @@ _" Whoosh! Bulldozer."
   
 (Build an airport in the middle of the Panhandle.)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x12.gif)](images/x12.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x12.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x12.gif)  
   
 _" Whoosh! Road."  
   
@@ -213,7 +213,7 @@ _" Whoosh! Road."
   
 (Airport's radar starts spinning, as the train rolls back down the track.)  
   
-_[![](http://www.art.net/~hopkins/Don/simcity/previews/x13.gif)](images/x13.gif)  
+_[![](http://www.art.net/~hopkins/Don/simcity/previews/x13.gif)](http://www.art.net/~hopkins/Don/simcity/previews/x13.gif)  
   
 **\-- End of Video Tape --  
   

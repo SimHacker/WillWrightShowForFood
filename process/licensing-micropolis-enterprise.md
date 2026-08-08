@@ -1,6 +1,6 @@
 # Micropolis enterprise licensing
 
-[SimCity open source saga](../characters/will-wright/sources/simcity-open-source-saga/) · [Soul City catalogs](../catalogs/soul-city/)
+[SimCity open source saga](../characters/will-wright/sources/simcity-open-source-saga/) · [Soul City catalogs](https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/)
 
 ---
 
