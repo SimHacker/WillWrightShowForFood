@@ -102,7 +102,7 @@ def phase2_aliases():
 
 def phase3_moves():
     moves = {}
-    d = "repo-shows/flipbook/shows"
+    d = "repo-shows"
     if os.path.isdir(d):
         for name in sorted(os.listdir(d)):
             sub = f"{d}/{name}"
@@ -113,8 +113,8 @@ def phase3_moves():
 
 
 def phase3_aliases():
-    a = {"repo-shows/flipbook/shows": "repo-shows"}
-    d = "repo-shows/flipbook/shows"
+    a = {"repo-shows": "repo-shows"}
+    d = "repo-shows"
     if os.path.isdir(d):
         for name in sorted(os.listdir(d)):
             if os.path.isdir(f"{d}/{name}"):

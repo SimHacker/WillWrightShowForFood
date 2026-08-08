@@ -37,7 +37,7 @@ when_to_use:
     - "Live evidence tour with Pop-Up Video callouts"
 
 format:
-  script_file: FLIPBOOK.yml  # per show under repo-shows/flipbook/shows/<slug>/
+  script_file: FLIPBOOK.yml  # per show in repo-shows/flipbook-<slug>/
   beat_schema:
     at_sec: "float — sync point from narration start"
     page: "int — flipbook page index (1-based)"
@@ -62,7 +62,7 @@ format:
 pipeline:
   1_script:
     what: "Write beats from narration script, abstract, or SEGMENTS.yml cue"
-    artifact: repo-shows/flipbook/shows/<slug>/FLIPBOOK.yml
+    artifact: repo-shows/flipbook-<slug>/FLIPBOOK.yml
   2_assets:
     what: "Illustrate pages — human art, generative draft, or archive stills composited"
     note: "Reuse Howard's sticker/CA tile vocabulary where it fits"

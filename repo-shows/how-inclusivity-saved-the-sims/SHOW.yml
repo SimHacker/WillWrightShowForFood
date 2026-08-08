@@ -30,9 +30,9 @@ artifacts:
   flipbook_graphics:
     catalog: ../../../repo-shows/flipbook/README.md
     shows:
-      - ../../../repo-shows/flipbook/shows/inclusivity-saved-the-sims/FLIPBOOK.yml
-      - ../../../repo-shows/flipbook/shows/soul-city-namesake/FLIPBOOK.yml
-      - ../../../repo-shows/flipbook/shows/soul-saver-exodus/FLIPBOOK.yml
+      - ../flipbook-inclusivity-saved-the-sims/FLIPBOOK.yml
+      - ../flipbook-soul-city-namesake/FLIPBOOK.yml
+      - ../flipbook-soul-saver-exodus/FLIPBOOK.yml
 
 title_candidates: ../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/title-candidates.yml
 

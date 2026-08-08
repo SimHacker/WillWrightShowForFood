@@ -30,7 +30,7 @@ Michael holds still on toilet.
 
 **Integrated spine:** [`maid-plunger-incident.yml`](maid-plunger-incident.yml) ·
 primary source [`sources/maid-plunger-incident-hn-2022.md`](sources/maid-plunger-incident-hn-2022.md) ·
-flipbook [`../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml`](../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml)
+flipbook [`../flipbook-maid-plunger-incident/FLIPBOOK.yml`](../flipbook-maid-plunger-incident/FLIPBOOK.yml)
 
 → [`artifacts/maid-plunger-unnecessary-censorship.md`](artifacts/maid-plunger-unnecessary-censorship.md)
 

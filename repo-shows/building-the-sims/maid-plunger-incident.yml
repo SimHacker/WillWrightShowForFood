@@ -71,7 +71,7 @@ show_hooks:
     duration_min: 8-12
     artifacts_index: artifacts/INDEX.md  # heat table row 1
   flipbook_broll:
-    path: ../flipbook/shows/maid-plunger-incident/FLIPBOOK.yml
+    path: ../flipbook-maid-plunger-incident/FLIPBOOK.yml
     when: Narration during pixelation/modesty hub or Building The Sims reunion
   hot_potty_callback:
     use: Sparingly — after engineering story, not as headline

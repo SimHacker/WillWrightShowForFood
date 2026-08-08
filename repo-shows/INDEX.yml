@@ -125,7 +125,7 @@ meta:
       did-the-sims-make-you-gay.yml: "★ Patrick J. Barrett III + Don — same-sex romance engine room; Alexander Avila essay (openly trans masc) + MOOLLM comment analysis; LGBTQ+ Sims audience solidarity. send_now."
       im-queer-therefore-i-sim.yml: "★ Alexander Avila solo — I'm Queer Therefore I Sim; discuss essay + 1,712 MOOLLM comment themes with Don. warm_lead."
       fluxx-rules-change-as-you-play.yml: "★ Andy + Kristin Looney × Don — Fluxx, UMD/LUMSSFS, MOOLLM fluxx-chaos simulation, live play. warm_lead."
-      how-inclusivity-saved-the-sims/SHOW.yml: "★ QGCon 2020 paper (canceled) → repo. Don solo/panel: 20 years Sims inclusivity; Bogost procedural rhetoric + Murray agency; Tanja modding; marriage-law parallel timeline. Flipbook B-roll: flipbook/shows/{inclusivity-saved-the-sims,soul-city-namesake,soul-saver-exodus}/. Artifacts: characters/don-hopkins/sources/qgcon-inclusivity-paper/."
+      how-inclusivity-saved-the-sims/SHOW.yml: "★ QGCon 2020 paper (canceled) → repo. Don solo/panel: 20 years Sims inclusivity; Bogost procedural rhetoric + Murray agency; Tanja modding; marriage-law parallel timeline. Flipbook B-roll: ./{inclusivity-saved-the-sims,soul-city-namesake,soul-saver-exodus}/. Artifacts: characters/don-hopkins/sources/qgcon-inclusivity-paper/."
       selfish-config-typescript.yml: "LATER — port central worker_config fragment composition to MicropolisCore packages/selfish-config (C3 merge + provenance)."
       lambdamoo-pavel-curtis.yml: "Pavel Curtis — LambdaMOO's influence on MOOLLM (direct-source lineage)."
       walter-bender-olpc.yml:   "Walter Bender — OLPC Stone Soup, open-sourcing SimCity, constructionist playgrounds."

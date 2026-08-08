@@ -95,9 +95,9 @@ cross_links:
   catalogs: ../../../../catalogs/soul-city/README.md
   flipbook:
     catalog: ../../../../repo-shows/flipbook/README.md
-    act_1: ../../../../repo-shows/flipbook/shows/inclusivity-saved-the-sims/FLIPBOOK.yml
-    act_2: ../../../../repo-shows/flipbook/shows/soul-city-namesake/FLIPBOOK.yml
-    act_3_4: ../../../../repo-shows/flipbook/shows/soul-saver-exodus/FLIPBOOK.yml
+    act_1: ../../../../repo-shows/flipbook-inclusivity-saved-the-sims/FLIPBOOK.yml
+    act_2: ../../../../repo-shows/flipbook-soul-city-namesake/FLIPBOOK.yml
+    act_3_4: ../../../../repo-shows/flipbook-soul-saver-exodus/FLIPBOOK.yml
   show_seeds:
     - ../../../../repo-shows/will-wright-premiere/creator-network-exodus.yml
     - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml

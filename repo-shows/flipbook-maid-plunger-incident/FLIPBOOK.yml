@@ -10,7 +10,7 @@ flipbook:
   homage: "Jimmy Kimmel Unnecessary Censorship — credit originator on air"
 
 narration:
-  source: ../../../building-the-sims/sources/maid-plunger-incident-hn-2022.md
+  source: ../building-the-sims/sources/maid-plunger-incident-hn-2022.md
   speaker: Don Hopkins
   record_before_render: true
 
@@ -93,10 +93,10 @@ render:
   captions: captions/maid-plunger-incident.vtt
 
 ties_to:
-  - ../../../building-the-sims/maid-plunger-incident.yml
-  - ../../../building-the-sims/sources/maid-plunger-incident-hn-2022.md
-  - ../../../building-the-sims/artifacts/maid-plunger-unnecessary-censorship.md
-  - ../../../building-the-sims/pixelation-and-modesty.md
+  - ../building-the-sims/maid-plunger-incident.yml
+  - ../building-the-sims/sources/maid-plunger-incident-hn-2022.md
+  - ../building-the-sims/artifacts/maid-plunger-unnecessary-censorship.md
+  - ../building-the-sims/pixelation-and-modesty.md
   - ../../../characters/don-hopkins/sims-pixelation-censorship-hn-2022.md
 
 assets_needed:

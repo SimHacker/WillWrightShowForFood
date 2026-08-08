@@ -321,7 +321,7 @@ authored replacements per §4 supersede generation entry by entry
 | `../bits/*` (~12 entries) | `bits/tradition-*/` |
 | `../bits/*` (2 entries) | `bits/swag-*/` |
 | `INDEX.yml`, `README.md`, `CARD.yml`, `GLANCE.yml` | dissolved: idea entries merge into `repo-shows/INDEX.yml`; bit entries seed `bits/INDEX.yml`; READMEs rewritten for the new rooms |
-| `flipbook/shows/<name>/FLIPBOOK.yml` (4 packs) | `flipbook-<name>/` (kind: pack; `relates_to: flipbook` + the show it illustrates) |
+| `./<name>/FLIPBOOK.yml` (4 packs) | `flipbook-<name>/` (kind: pack; `relates_to: flipbook` + the show it illustrates) |
 | 43 loose top-level `.yml` seeds | `<name>/<name>.yml` dirs |
 | 5 loose top-level `.md` companions | move with their yml |
 | `_TEMPLATE/`, registry files | stay |
@@ -349,7 +349,7 @@ process, schemas, catalogs, apps, designs — plus generated facades).
   `will-wright-premiere-ideas/` → `will-wright-premiere-ideas/`;
   merge `INDEX.yml` show entries into `repo-shows/INDEX.yml`; delete
   `./` scaffolding; link sweep.
-- **Phase 3 — flatten `flipbook/shows/`.** Four packs → `flipbook-*/`;
+- **Phase 3 — flatten `./`.** Four packs → `flipbook-*/`;
   update `flipbook/INDEX.yml` to reference by id; link sweep (8 files).
 - **Phase 4 — directory-ify loose seeds.** 43 ymls + 5 md companions into
   own dirs; update `INDEX.yml` + `REPO-SHOWS.yml` seed lists; link sweep.

@@ -14,7 +14,7 @@ what: |
 methods:
   LIST: INDEX.yml
   SPEC: ../../process/post-production/flipbook-shows.yml
-  PLANT: "Copy _TEMPLATE/FLIPBOOK.yml → shows/<slug>/"
+  PLANT: "Copy _TEMPLATE/FLIPBOOK.yml → ../<slug>/"
 
 see_also:
   - { path: README.md, why: "Department overview + catalog table" }
