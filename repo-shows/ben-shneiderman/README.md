@@ -20,7 +20,7 @@ embedded-link invention.
 
 ## Pairings
 
-- [`ben-and-heinz-pie-menus.yml`](../ben-and-heinz-pie-menus.yml) — 1969 PIXIE → 1988 CHI → now  
+- [`ben-and-heinz-pie-menus.yml`](../ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml) — 1969 PIXIE → 1988 CHI → now  
 - [`news-postscript-window-system.yml`](../news-postscript-window-system.yml) — NeWS reunion rides HyperTIES  
 - [`terry-winograd/`](../terry-winograd/) — CS547 tapes (1998, 2000)
 

@@ -33,7 +33,7 @@ best way (people author; AI orchestrates and writes code). [`../bits/tradition-m
 
 | Seed | Format |
 |------|--------|
-| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | Drag race variety |
+| [`micropolis-ai-drag-race/micropolis-ai-drag-race.yml`](micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Drag race variety |
 | [`game-show-wigcercize.yml`](game-show-wigcercize.yml) | Wigcercize! |
 
 ## Lifecycle

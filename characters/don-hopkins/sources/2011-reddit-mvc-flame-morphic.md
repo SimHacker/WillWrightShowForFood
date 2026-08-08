@@ -138,7 +138,7 @@ Also cited by Don in-thread (full harvest):
 | HN 2015 Kay/Morphic | [`../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md`](../../alan-kay/media/discussions/hn-mvc-morphic-watchers-2015.md) |
 | Kay Quora MVC origin | [`../../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md`](../../alan-kay/media/quora-recaps/oop-messaging-and-what-comes-next.md) |
 | Garnet → Svelte bridge | [`micropolis-svelte-snap-constraint-bridge.md`](micropolis-svelte-snap-constraint-bridge.md) |
-| Remembering Vanessa | [`../../../repo-shows/remembering-vanessa-freudenberg.yml`](../../../repo-shows/remembering-vanessa-freudenberg.yml) |
+| Remembering Vanessa | [`../../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml`](../../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml) |
 
 ---
 

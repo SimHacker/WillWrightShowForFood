@@ -57,6 +57,6 @@ see_also:
   - { path: ../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md, why: "How Chapman's PIXIE film recovery made the edit possible" }
   - { path: ../heinz-lemke/, why: "PIXIE co-author — primary show guest on radial-menu prehistory" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE → CHI'88 lineage; credits Wiseman/Lemke/Hiles" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Repo Show seed where the tribute video is on-air evidence" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Repo Show seed where the tribute video is on-air evidence" }
   - { path: sources/flight-of-the-pixie-tribute.yml, why: "Structured provenance and share links" }
   - { path: ../../schemas/portrayal-standards.md#subject-rights, why: "Correction or removal anytime" }

@@ -19,7 +19,7 @@ invitation:
   sent: 2026-07-31
   consent: awaiting_reply
   document: invitation.md
-  show_seed: repo-shows/don-woods-adventure.yml
+  show_seed: repo-shows/don-woods-adventure/don-woods-adventure.yml
   correspondent_since: 1986  # the misdirected ':mail don' — sources/correspondence-digest.md
 
 bio:
@@ -69,5 +69,5 @@ see_also:
   - { path: ../donald-knuth/, why: "Dream guest who recast Woods's game in CWEB — natural pairing" }
   - { path: ../lars-brinkhoff/, why: "PDP-10 preservation — run the original on original iron (emulated)" }
   - { path: ../scott-adams/, why: "Adventure lineage — the home-computer branch" }
-  - { path: ../../repo-shows/woods-and-adams-adventurers.yml, why: "PAIR SEED — the two Adventurers together: free cave × sold adventure" }
+  - { path: ../../repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml, why: "PAIR SEED — the two Adventurers together: free cave × sold adventure" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

@@ -19,7 +19,7 @@ This show builds on that pairing instead of repeating it: same people, plus runn
 
 Chaim introduced [Sam](../../characters/sam-arbesman/README.md) to Don in July 2024. Their shows
 share a spine: Chaim documents **what Maxis was**; Sam asks **what a Maxis 2.0 should be**
-([sam-arbesman-maxis-labs.yml](../sam-arbesman-maxis-labs.yml)); Don runs the code. Solo clips
+([sam-arbesman-maxis-labs.yml](../sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml)); Don runs the code. Solo clips
 from each stack into one weave — with **Will** (premiere accepted) wherever it fits.
 
 ## How it runs

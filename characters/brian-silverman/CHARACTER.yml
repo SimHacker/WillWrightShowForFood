@@ -23,9 +23,9 @@ invitation:
   document: invitation.md
   warm_intro: "Leela / Logo / CA orbit (Henry + Milan); PDP-7 literacy for PIXIE listing"
   show_seeds:
-    - repo-shows/pixie-pie-menus-pdp7.yml
+    - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
     - repo-shows/norman-margolus/
-    - repo-shows/brian-silverman-ca-logo-pdp7.yml
+    - repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml
 
 bio:
   summary: |
@@ -78,4 +78,4 @@ sources:
 see_also:
   - { path: sources/brians-brain-and-naming.md, why: "Rule + naming story" }
   - { path: ideas.md, why: "Show hooks" }
-  - { path: ../../repo-shows/brian-silverman-ca-logo-pdp7.yml, why: "Dedicated show seed" }
+  - { path: ../../repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml, why: "Dedicated show seed" }

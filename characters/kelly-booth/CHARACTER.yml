@@ -28,7 +28,7 @@ relationship:
   to_project: cc_on_thread
   to_roy: "Roy Eagleson's friend and mentor; inspired Roy's storytelling HCI lectures"
   to_show:
-    - repo-shows/pixie-pie-menus-pdp7.yml
+    - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
     - "Pie menus / menu-layout experimental lineage (potential)"
   status: on_thread_not_contacted
 
@@ -79,5 +79,5 @@ see_also:
   - { path: sources/career-and-awards.yml, why: "Full harvested facts + source URLs" }
   - { path: ../roy-eagleson/, why: "Brought Kelly onto the thread" }
   - { path: ../heinz-lemke/, why: "PIXIE thread host" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Primary show this thread feeds" }
-  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Primary show this thread feeds" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }

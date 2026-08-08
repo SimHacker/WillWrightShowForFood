@@ -27,9 +27,9 @@ Two professors teaching UI history by opposite methods: Brad's CMU 05-640 brough
 pioneers to the students (guest lectures → the sixteen guest chapters of *Pick, Click,
 Flick!*); Roy brings the students to the pioneers' machine (PIXIE's 1972 code stepping in
 SIMH, students studying and reincarnating it). Same artifact connects both classrooms.
-→ [`../../repo-shows/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms.yml)
+→ [`../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml)
 
 ## Cross-links
 
 - [`../heinz-lemke/`](../heinz-lemke/) · [`../maurice-wilkes/`](../maurice-wilkes/) · [`../ivan-sutherland/`](../ivan-sutherland/) · [`../brad-myers/`](../brad-myers/)
-- [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) · [`../../repo-shows/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms.yml)
+- [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) · [`../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml)

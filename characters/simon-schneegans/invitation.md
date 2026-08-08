@@ -2,7 +2,7 @@
 status: draft
 character_id: simon-schneegans
 consent: not_yet_asked
-show_seed: repo-shows/simon-schneegans-pie-menus.yml
+show_seed: repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml
 ---
 
 # Repo Show invitation — Simon Schneegans
@@ -18,10 +18,10 @@ show_seed: repo-shows/simon-schneegans-pie-menus.yml
 **Your links:**
 
 - **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/simon-schneegans/
-- **Proposed show:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/simon-schneegans-pie-menus.yml
+- **Proposed show:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml
 - **Conversation hooks:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/simon-schneegans/ideas.md
 - **Premiere (Will):** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md
-- **Also in the room (possible ensemble):** the pie-menu history pair — [Ben Shneiderman + Heinz Lemke](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ben-and-heinz-pie-menus.yml), spanning 1969 PIXIE → CHI '88 → you.
+- **Also in the room (possible ensemble):** the pie-menu history pair — [Ben Shneiderman + Heinz Lemke](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml), spanning 1969 PIXIE → CHI '88 → you.
 
 **Deeper context** (full story, shared history, ensemble ideas): bottom of your [README](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/simon-schneegans/README.md) — skim the top, scroll for the infodump.
 

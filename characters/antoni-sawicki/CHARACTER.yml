@@ -24,7 +24,7 @@ invitation:
   status: engaged
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/antoni-sawicki-ttycity.yml
+  show_seed: repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml
   responded: 2026-08-03
 
 correspondence:
@@ -114,6 +114,6 @@ see_also:
   - { path: README.md, why: "Public-facing overview — point Antoni here" }
   - { path: ideas.md, why: "Interview segment plan" }
   - { path: invitation.md, why: "Invitation letter" }
-  - { path: ../../repo-shows/antoni-sawicki-ttycity.yml, why: "Show seed — interview the dev, play the city, show Will" }
+  - { path: ../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml, why: "Show seed — interview the dev, play the city, show Will" }
   - { path: ../will-wright/, why: "SimCity's designer — ttycity's README credits him by name" }
   - { path: ../../characters/will-wright/sources/simcity-open-source-saga/, why: "How the code Antoni forked got freed" }

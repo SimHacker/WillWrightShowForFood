@@ -6,7 +6,7 @@
 ## Chris Trottier — design by accretion
 
 Lead designer; **"the toilet game"** until tuning made it fun. Flagship solo seed:
-[`design-by-accretion`](../../repo-shows/design-by-accretion.yml) ·
+[`design-by-accretion`](../design-by-accretion/design-by-accretion.yml) ·
 [`characters/chris-trottier/`](../../characters/chris-trottier/).
 
 **Reunion hooks:**

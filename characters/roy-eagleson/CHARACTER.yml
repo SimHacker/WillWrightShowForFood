@@ -54,5 +54,5 @@ see_also:
   - { path: ../heinz-lemke/, why: "PIXIE co-author; source-listing email; Flight of the PIXIE link" }
   - { path: ../ivan-sutherland/, why: "Hero + north star — Sketchpad (1963)" }
   - { path: ../heinz-lemke/pixie-source-recovery.md, why: "Listing recovery + Roy lecture synchronicity" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "friends_of_the_thread" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "friends_of_the_thread" }
   - { path: ../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md, why: "Roy reading when Heinz email arrived" }

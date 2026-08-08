@@ -3,7 +3,7 @@
 Two documents William Buxton compiled in July 2008 from the **Neil Wiseman papers**
 (Folder B.218, Manuscript Room, Cambridge University Library), preserved here as primary
 source material for the PIXIE radial-menu history and the
-[PIXIE Repo Show](../../../../repo-shows/pixie-pie-menus-pdp7.yml).
+[PIXIE Repo Show](../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml).
 
 | Document | PDF | Transcription (human) | Sidecar (machine) |
 |---|---|---|---|

@@ -18,7 +18,7 @@ materials:
   - characters/donald-knuth/sources/adventure-knuth/
   - characters/don-woods/sources/correspondence-digest.md
 optional_discussants:
-  - don-woods   # first choice — advent.w co-copyright; see repo-shows/don-woods-adventure.yml dream_ensemble
+  - don-woods   # first choice — advent.w co-copyright; see repo-shows/don-woods-adventure/don-woods-adventure.yml dream_ensemble
   - terry-winograd
   - scott-adams
   - ted-nelson

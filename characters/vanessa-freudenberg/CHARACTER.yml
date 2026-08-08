@@ -28,7 +28,7 @@ memorial:
     - { who: craig-latta, why: "Great friend and Smalltalk collaborator; Caffeine builds directly on her SqueakJS — anchor memorial episode" }
     - { who: dan-ingalls, why: "Squeak lineage; Smalltalk Zoo credits SqueakJS; warmly invited to memorial arc with Craig and Don" }
     - { who: alan-kay, why: "Constructionist microworld lineage (Etoys, Croquet); warmly invited to memorial arc with Craig and Don" }
-  memorial_show: repo-shows/remembering-vanessa-freudenberg.yml
+  memorial_show: repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
   draw_on_for_shows:
     - "**SqueakJS** — a JavaScript implementation of the Squeak Smalltalk VM; live Smalltalk in the browser"
     - "Squeak/Etoys; the playful **Plopp/Plop** projects; **Croquet / Multisynq** synchronized objects"
@@ -51,5 +51,5 @@ see_also:
   - { path: ../craig-latta/, why: "Caffeine builds on SqueakJS — her VM + her WASM thinking, carried forward" }
   - { path: ../dan-ingalls/, why: "Squeak lineage; Smalltalk Zoo; warmly invited memorial discussant" }
   - { path: ../alan-kay/, why: "Constructionist microworld lineage; warmly invited memorial discussant" }
-  - { path: ../../repo-shows/remembering-vanessa-freudenberg.yml, why: "Memorial show arc — Craig anchor, Dan + Alan warmly invited" }
+  - { path: ../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml, why: "Memorial show arc — Craig anchor, Dan + Alan warmly invited" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

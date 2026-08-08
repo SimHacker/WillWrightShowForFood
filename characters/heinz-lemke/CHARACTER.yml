@@ -19,7 +19,7 @@ invitation:
   status: engaged
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   co_guests: [lars-brinkhoff, david-rosenthal]
   note: |
     Aug 2026: CARS office closed; reading Don's Model Science note afternoons. Proposes IFCARS
@@ -55,7 +55,7 @@ see_also:
   - { path: from-alan-kay.yml, why: "Kay on PIXIE / light-pen vs RAND tablet; hoped Cambridge series" }
   - { path: ../alan-kay/, why: "PIXIE Cc; Wilkes→PARC; hoped series with living+passed Cambridge collaborators" }
   - { path: ../alan-kay/sources/2026-07-12-wilkes-parc-london.md, why: "Kay Wilkes/PARC/London digest (PIXIE thread)" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Group show — Heinz + Lars + David Rosenthal" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Group show — Heinz + Lars + David Rosenthal" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — Type 340 display, SIMH, make PIXIE runnable today" }
   - { path: ../david-rosenthal/, why: "Co-guest — same Cambridge PDP-7/Titan ~1970; NeWS/X11 lineage" }
   - { path: ../roy-eagleson/, why: "Educator friend — teaches Sketchpad → PIXIE; UWO graphics history" }

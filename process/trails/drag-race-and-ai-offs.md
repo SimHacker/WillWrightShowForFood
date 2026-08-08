@@ -20,7 +20,7 @@ Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-
 | [**code-that-spec.yml**](../code-that-spec.yml) | Audience chant game — bid tokens or time |
 | [**homefun-grading.yml**](../homefun-grading.yml) | Repo Show — commit message vs thinking blocks |
 | [**Slats judge rubric**](../../characters/robots/slats/judge-rubric.yml) | Celebrity judge — flair vs spreadsheet |
-| [**Drag race show seed**](../../repo-shows/micropolis-ai-drag-race.yml) | Show seed for drag race episodes |
+| [**Drag race show seed**](../../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Show seed for drag race episodes |
 
 **Markup:** [AI-OFFS.md](../AI-OFFS.md) · [HOMEFUN.md](../HOMEFUN.md) · [MANUAL-TRANSMISSION.md](../MANUAL-TRANSMISSION.md)
 

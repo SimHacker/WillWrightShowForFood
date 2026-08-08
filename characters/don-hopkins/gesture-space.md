@@ -93,7 +93,7 @@ Guest candidate: [`../bill-buxton/`](../bill-buxton/) (if created) or haptics re
 
 | Show seed | Hook |
 |-----------|------|
-| [`../../repo-shows/gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui.yml) | Gesture space + pie menus vs graffiti; Norman/Jobs receipts; live constraint tracker |
+| [`../../repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml) | Gesture space + pie menus vs graffiti; Norman/Jobs receipts; live constraint tracker |
 | [`../../repo-shows/pie-menus-retrospective.yml`](../../repo-shows/INDEX.yml) | Redesign pie menus from scratch (MicropolisCore holodeck) |
 | David Levitt group | Pantomime multitouch + ConnectedTV Finger Pies |
 

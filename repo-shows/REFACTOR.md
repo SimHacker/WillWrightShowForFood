@@ -232,7 +232,7 @@ its links being tracked down.
 Loose seeds become directories. The seed yml moves inside, unchanged:
 
 ```
-micropolis-ai-drag-race.yml   →   micropolis-ai-drag-race/micropolis-ai-drag-race.yml
+micropolis-ai-drag-race/micropolis-ai-drag-race.yml   →   micropolis-ai-drag-race/micropolis-ai-drag-race.yml
 ```
 
 **The goal state — this is what the refactor is FOR:** every `.yml` gets a
@@ -257,8 +257,8 @@ The precedent already exists: `../bits/` pairs every yml with a
 handwritten md. This program generalizes the themes pattern to the whole
 collection. No entry is *required* to have its md before moving — structure
 first (Phases 1–5), then the authoring program (Phase 6) works through the
-backlog in priority order. Existing paired `.yml`+`.md` (e.g. `ask-tog.yml`
-+ `ask-tog.md`) move into their directory together and count as done.
+backlog in priority order. Existing paired `.yml`+`.md` (e.g. `ask-tog/ask-tog.yml`
++ `ask-tog/ask-tog.md`) move into their directory together and count as done.
 
 ### 5. yml/md filename consistency — one rule, no exceptions
 
@@ -267,7 +267,7 @@ Two conventions currently coexist in `process/` (and leak elsewhere):
 as their yml (`art-thief-game.yml` + `art-thief-game.md`), while the 13
 facade outputs registered in `markup-facades.yml` are UPPERCASE — and
 four don't even share their girder's basename (`DRAG-RACE.md` ←
-`micropolis-ai-drag-race.yml`, `FORMAT.md` ← `repo-show-format.yml`,
+`micropolis-ai-drag-race/micropolis-ai-drag-race.yml`, `FORMAT.md` ← `repo-show-format.yml`,
 `HOMEFUN.md` ← `homefun-grading.yml`, `VISION.md` ←
 `vision-and-ambition.yml`). A reader cannot predict the md from the yml
 or vice versa. (Verified via `git ls-files` — no case-duplicates exist;

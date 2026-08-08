@@ -1,0 +1,353 @@
+# SHOW PROPOSAL — PIXIE Pie Menus on the PDP-7 (Don and buds interview Heinz U. Lemke)
+# The deep prehistory of pie/radial menus. PDP-7 + Type 340 display ↔ Titan.
+
+show:
+  id: pixie-pie-menus-pdp7
+  title: "PIXIE: Pie Menus on the PDP-7 (1969)"
+  type: group
+  host: Don Hopkins
+  dialect:
+    voice: stoner_techno_hippie
+    terms:
+      guest: bud
+      guests: buds
+      co_guest: co-bud
+    on_air_opener: "This show's buds are…"
+    voice_ref: characters/don-hopkins/portrayal/voice.yml
+    note: "User Interface Flower Child host voice — warm, deadpan, never corporate 'guest panel'."
+  guests: ["Heinz U. Lemke", "Lars Brinkhoff", "David S. H. Rosenthal"]
+  buds: ["Heinz U. Lemke", "Lars Brinkhoff", "David S. H. Rosenthal"]
+  bud_roles: &bud_roles
+    heinz_u_lemke: "First-hand PIXIE history — Cambridge lab, 1969 film, light pen, Titan link, CARS arc"
+    lars_brinkhoff: "PDP-7 + Type 340 display hardware; preservation and emulation — make PIXIE runnable again today"
+    david_s_h_rosenthal: "Same Cambridge PDP-7/340 + Titan stack ~1970; met Wiseman; distributed GUI → NeWS/X11 lineage; LOCKSS preservation"
+  guest_roles: *bud_roles
+  character: characters/heinz-lemke/
+  co_characters:
+    - characters/lars-brinkhoff/
+    - characters/david-rosenthal/
+  topic: "PIXIE — radial/pie menus on PDP-7/Titan (Heinz bud) + same-machine memory (DSHR bud) + emulating the iron (Lars bud)."
+  status: proposed
+  urgency: "Preserve first-hand history while we can; warm correspondence with Heinz."
+
+buds:
+  opener: |
+    This show's buds are: Heinz U. Lemke, who drew the first radial menus on a PDP-7 before
+    most of us were born; Lars Brinkhoff, who makes dead iron boot again; and David S. H.
+    Rosenthal, who sat at the same Cambridge stack a year later and went on to wire the world.
+  introductions:
+    heinz_u_lemke:
+      name: "Heinz U. Lemke"
+      signifier: "🥧"
+      slug: heinz-lemke
+      one_liner: |
+        First bud — PIXIE co-author, light pen, Titan link, *in* the 1969 film. Black Forest
+        farmhouse correspondence; CARS and model-guided medicine today. Neil Wiseman and John
+        Hiles through his voice.
+      invite: characters/heinz-lemke/invitation.md
+    lars_brinkhoff:
+      name: "Lars Brinkhoff"
+      signifier: "🖥️"
+      slug: lars-brinkhoff
+      one_liner: |
+        Second bud — Gothenburg preservation hacker. PDP-10/ITS from source; SIMH toolchain;
+        maps Type 340 vector display + light pen so radial menus run on stream, not just in
+        telecine archaeology.
+      invite: characters/lars-brinkhoff/invitation.md
+    david_s_h_rosenthal:
+      name: "David S. H. Rosenthal"
+      signifier: "🗄️"
+      slug: david-rosenthal
+      one_liner: |
+        Third bud — Cambridge ~1970 on the same PDP-7/340 + Titan; met Wiseman. Built NeWS with
+        Gosling *and* architected X11. LOCKSS: lots of copies keep stuff safe — films, papers,
+        emulators, one preservation story.
+      invite: characters/david-rosenthal/invitation.md
+  segment: introductions
+  order: [heinz_u_lemke, lars_brinkhoff, david_s_h_rosenthal]
+  telecine_slate: "Cambridge jiggle lower-third — bud name + signifier on each intro"
+
+history:
+  hardware: "PDP-7 + Type 340 display (graphics satellite) ↔ Titan (Cambridge Multiple Access System)"
+  distributed_cad: "Rainbow group; interactive drawing on PDP-7, application/analysis on Titan over Wiseman's high-speed link"
+  paper: "PIXIE: A New Approach to Graphical Man-Machine Communication. Proc. 1969 CAD Conference, Southampton. IEEE Conf. Pub. 51, pp. 463–471."
+  authors: ["Neil E. Wiseman", "Heinz U. Lemke", "John O. Hiles"]
+  film: "1969 film demonstrating an early GUI, made to accompany the PIXIE paper."
+  archive: "David Chapman, Cambridge University Library — tracked Rainbow-group copies, coordinated digitisation (2019)."
+  flight_of_pixie: "Don's Bumblebee edit — only possible after Chapman published the digitized films."
+  youtube: "https://www.youtube.com/watch?v=jDrqR9XssJI"
+  evidence_room: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  don_medium_canon:  # Don's published lineage articles, digested Jul 2026
+    retrospective: characters/don-hopkins/sources/pie-menus-30-year-retrospective.md
+    fud: characters/don-hopkins/sources/pie-menu-fud-misconceptions.md
+    timeline: characters/don-hopkins/sources/pie-menu-timeline.md
+  source_listing: |
+    RECOVERED (offered 2026-07-07): Heinz holds the COMPLETE PIXIE program — ~5000 words of
+    Assembler/Machine code for PDP-7 + DEC 340 Display, covering light pen handling, interrupt
+    management, and interactive model building. Preparing a copy. Story + architecture
+    correction: characters/heinz-lemke/pixie-source-recovery.md
+  evidence_room:
+    model: |
+      Upload ALL evidence to the repo BEFORE the interview — papers, newspaper/magazine articles
+      (Electronics 1969 PIXIE piece, etc.), Chapman digitized films, Flight of the PIXIE + long
+      form originals, and ESPECIALLY source code. Review on air; brainstorm revival designs;
+      extend existing emulator (Lars segment).
+    transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    pull_in: characters/heinz-lemke/pull-in-gaps.md
+    priority:
+      - pixie_complete_source_listing
+      - electronics_magazine_1969_pdf
+      - wiseman_radial_menu_notes
+      - newman_sproull_movable_menu_citation
+  virtual_light_pen:
+    goal: |
+      Use Heinz listing light-pen handler + interrupt code to implement and TEST virtual light
+      pen drivers on PDP-7/340 emulator — mouse → pen interpolation; label-target radial menus.
+    lars_segment: characters/lars-brinkhoff/
+    don_reply: "2026-07-07 — see heinz-lemke/sources/2026-07-07-pixie-trio-thread.md"
+  architecture_correction: |
+    Per Heinz (2026-07-07): the PDP-7 was NOT simply a display terminal for Titan. The 5000
+    instructions interactively built graph-theoretic data structures (fitting the remaining
+    3000 words of the 8K) representing electronic circuits, syntax graphs, control systems —
+    then sent them to Titan for simulation. A smart model-building satellite, not a remote
+    framebuffer.
+  type_340_manual: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.pdf"
+  type_340_manual_bitsavers: "http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf"
+  type_340_manual_sidecar: "characters/lars-brinkhoff/media/reference/dec-7-13-type-340-display-programming-manual.yml"
+  pdp7_handbooks_index: "http://bitsavers.trailing-edge.com/pdf/dec/pdp7/"
+  living_pdp7_340: "https://www.youtube.com/watch?v=V4oRHv-Svwc"
+  living_pdp7_340_archive: "Web archive copy if YouTube link dead — see lars-brinkhoff/correspondence.yml"
+
+friends_of_the_thread:
+  roy_eagleson:
+    who: "Roy Eagleson — Western University (UWO); teaches history of computer graphics in his CS courses"
+    room: characters/roy-eagleson/
+    email: eagleson@uwo.ca
+    how: "Heinz's good friend; discussed PIXIE in Nagoya at CARS 40th; Cc'd on trio thread 7 Jul 2026"
+    educator: |
+      Active classroom bridge — HCI unit normally anchored on Ivan Sutherland's Sketchpad (north star);
+      pivoted to PIXIE same day as Heinz's source-listing email. Essay: sketchpad-to-pixie-lineage.md
+    interest: "MIT and Cambridge beginnings of computer graphics"
+    synchronicity_2026_07_07: |
+      Preparing HCI lecture (normally Sketchpad → PIXIE) when Heinz's source-listing email arrived;
+      was on Don's Buxton patent page; asked to play Flight of the Bumblebee in class — Heinz sent
+      the YouTube link same hour.
+    transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    storyline_2026_07_09: characters/heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md
+    storyline_2026_07_10: characters/heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md
+    newman_sproull_2026_07_10: |
+      Roy read Newman & Sproull (~1973) — Golden Age blind to UK/Germany; PIXIE ref 520 as
+      "movable menu" not first radial/pie menu. Wants ~1968 re-implementation; identified Heinz
+      in mystery photo ("Aha. It's you!").
+    lineage: characters/roy-eagleson/sketchpad-to-pixie-lineage.md
+    hero: characters/ivan-sutherland/
+    possible_roles: [discussant, expert_audience_voice, classroom_bridge]
+    consent: not_yet_asked
+    note: "On the email thread — not a show bud unless separately invited."
+  kelly_booth:
+    who: "Kellogg S. Booth (Kelly) — UBC Professor Emeritus; Waterloo CGL co-founder; SIGGRAPH Chair 1985–89"
+    room: characters/kelly-booth/
+    email: ksbooth@cs.ubc.ca
+    how: "Roy Cc'd 9 Jul 2026 — credits Kelly as mentor who inspired storytelling HCI lectures"
+    career_harvest: characters/kelly-booth/sources/career-and-awards.yml
+    awards:
+      - "CHCCS Achievement 2008 · SIGGRAPH Outstanding Service 2010 · CHCCS Service 2020"
+    project_fit: |
+      Canadian graphics/HCI institution-builder on the PIXIE thread; menu-layout experimental
+      tradition links to pie-menus shows; Roy's pedagogy ← Kelly's Waterloo/UBC corridor.
+    possible_roles: [discussant, canadian_cg_hci_voice, roy_mentor_backstory]
+    consent: not_yet_asked
+    note: "On the email thread — not contacted."
+  brian_silverman:
+    who: "Brian Silverman — Logo, Scratch, Brian's Brain CA; Playful Invention Montreal"
+    room: characters/brian-silverman/
+    how: "Henry + Milan Minsky visited Brian in Canada, July 2026"
+    pdp7_fit: "Don witness — programmed PDP-7s; could read Heinz PIXIE listing"
+    ca_fit: "Brian's Brain, Seeds, Wireworld — norman-margolus CA fest"
+    possible_roles: [pixie_listing_reviewer, ca_rule_demonstrator, logo_scratch_constructionist]
+    consent: not_yet_asked
+    invite: characters/brian-silverman/invitation.md
+
+not_invited:
+  bill_buxton:
+    policy: "Not invited to the show or the discussion. Don's call, 16 Jul 2026."
+    why: |
+      No help when it mattered, and a snub after Don did the connecting: Don brought him into
+      the 2008 Fleck PIXIE-paper request; Buxton's Jul 2008 "PIXIE and Radial Menus" results
+      email went to Kurtenbach/Newman/Lemke but not Don (Fleck kindly forwarded). Buxton
+      promised Microsoft-funded film digitization, a maintained web page, and book integration
+      — delivered none. Chapman + Don did the actual work in 2019.
+    receipts: characters/don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md
+    tone: "Tell the story from the receipts and the people who did the work; no empty chair theater."
+
+why_these_buds:
+  lars_brinkhoff:
+    preservation: "PDP-10/ITS restoration lead; SIMH toolchain hacker; make-it-so on stream."
+    pixie_fit: "Maps Type 340 vector display + light pen to emulators we can ship in the repo."
+    segment_goal: "Boot PDP-7/340 (or closest faithful rig); demo radial menus runnable today."
+    invitation_status: "yes_later (2026-07 — Swedish July vacation)"
+    correspondence: characters/lars-brinkhoff/correspondence.yml
+  david_rosenthal:
+    cambridge: "Undergrad ~1970 on same PDP-7/340 + Titan; met Wiseman; saw PIXIE-era demos."
+    lineage: "PIXIE distributed GUI → Andrew → NeWS → X11/ICCCM — rare witness to both sides of the window-system wars."
+    preservation: "LOCKSS chief scientist — films, papers, and runnable emulators as one preservation story."
+    chm_hook: "Don proposed DSHR interview Heinz for Computer History Museum oral history."
+    invitation_status: "interested — async; PDP-7/340 scope only; later history → solo show"
+    correspondence: characters/david-rosenthal/correspondence.yml
+
+interview_center:
+  the_source_listing:
+    ask: "Heinz, you kept the complete PIXIE listing for 57 years — walk us through it. What do the light pen handler and interrupt code actually do? What did 5000 instructions of interaction + 3000 words of model feel like to budget?"
+    doc: characters/heinz-lemke/pixie-source-recovery.md
+    prompts:
+      - "The correction on air: NOT a dumb terminal for Titan — an interactive graph-model builder. Let Heinz set the record straight, with DSHR responding (his p.465 reading was the reasonable inference; the author's memory + listing beat the diagram)"
+      - "Graph-theoretic models in 3000 words — circuits, syntax graphs, control systems; what got cut?"
+      - "DSHR's light-pen mechanics (beam-pass interrupt, 'figure out what you were drawing') vs the actual handler in the listing"
+      - "Lars: from listing to SIMH — assemble it? Run it against the Type 340 emulation? What's missing?"
+    segment_goal: "Turn the recovered listing from a scan into a runnable artifact on stream — telecine to source to emulator."
+  chapman_films_bumblebee:
+    ask: "What was it like when the 1969 films surfaced again? Who is in the footage? How did the light pen + radial menus feel?"
+    doc: characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
+  rosenthal_cambridge_pdp7:
+    ask: "Heinz + David Rosenthal — same machine, different years. What did the lab feel like? What carried into NeWS and X11?"
+    with: characters/david-rosenthal/
+    prompts:
+      - "Heinz programmed PIXIE; DSHR arrived ~1970 — overlap in hardware, different projects"
+      - "Wiseman from two perspectives"
+      - "Distributed graphics satellite + Titan link as ancestor of networked window systems"
+  neil_wiseman:
+    ask: "What was Neil E. Wiseman like to work with — technically, personally, and as a research leader?"
+  cambridge_zeitgeist:
+    ask: "What was the Cambridge computer graphics / CAD / HCI zeitgeist in the late 1960s?"
+  engelbart_demo_zeitgeist:
+    ask: "1968 Mother of All Demos ↔ 1969 PIXIE film — same light-pen era, different labs. What did Heinz see on the US trip? Demo culture vs distributed CAD?"
+    doc: characters/douglas-engelbart/GLANCE.md
+    memorial: "Discuss Engelbart in memorial mode — never interview"
+    sponsor_gag: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
+    open_models: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+    on_air: "Mother of All Demos zeitgeist; demo Bluetooth kits and free STL — not private reference hardware"
+  us_research_labs_trip:
+    ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
+    weizenbaum_hook: |
+      MIT 1969 — met Joe Weizenbaum presenting PIXIE; decades at TU Berlin. Heinz asks Don about
+      "model science" and AI trustworthiness (10 Jul 2026). Two-episode pitch: 1969 US trip + modern CARS.
+    greyhound_1969: |
+      Summer 1969 — 3-month Greyhound ticket for $99; Engelbart at SRI; job offer from W.R. Sutherland
+      at MIT; Utah (Evans, Ivan Sutherland). Full lab list in heinz-1969-us-lab-tour.md; agenda pull-in pending.
+    doc: characters/heinz-lemke/sources/heinz-1969-us-lab-tour.md
+  andrew_armit_coons_pdp7:
+    ask: "Alan Kay remembers Andrew Armit at Utah with Coons patches on PDP-7 — parallel to PIXIE. Can we find film? What did Cambridge graphics export to Utah?"
+    kay_side_note: characters/andrew-armit/sources/alan-kay-utah-coons-patches.md
+    barn_archive_2026_07_16: characters/andrew-armit/sources/2026-07-16-armit-archive-manifest.md
+    character: characters/andrew-armit/
+    invitation: characters/andrew-armit/invitation.md
+    heinz_echo: "Armit's Coons patch system — another UK graphics line ignored in US textbooks"
+    film_update: "Jul 2026 — Armit confirms Multipatch film existed; barn notes; shown with Henri Gouraud on US CAD tour"
+    simulation: "Octal listings + PDP-7/340 manuals — second emulator target beside PIXIE"
+    on_air: "PDP-7 double feature — radial menus vs Coons patches; barn scan party; Alan↔Andrew dedication beat"
+  newman_sproull_canon_correction:
+    ask: "Roy Eagleson found PIXIE in Newman & Sproull as ref 520 — 'movable menu,' not radial/pie menu. What should the textbook have said?"
+    with: characters/roy-eagleson/
+    doc: characters/heinz-lemke/sources/newman-sproull-ref-520-movable-menu.yml
+    also: characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+    on_air: "Scan ref 520 on stream; compare Wiseman radial-menu notes; credit lineage (Buxton, Kurtenbach)"
+  alan_kay_light_pen_vs_tablet:
+    ask: "Alan Kay wondered why PIXIE used a light pen instead of a RAND tablet — fatigued hand, twitch button. What did the pen actually feel like? What does the driver code show?"
+    kay_quote: characters/heinz-lemke/from-alan-kay.yml#light_pen_2020
+    lars_segment: "Emulator tests mouse → pen; compare tablet affordances"
+  medical_automation_today:
+    ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
+    bridge: "PIXIE was graphical man-machine communication for design; CARS is model-guided human-computer assistance in medicine."
+  cars_2027_berlin_hci:
+    date: 2027-06-29
+    ask: "Can PIXIE re-implementation, ELIZA history, and Human-AI model interaction share one HCI session in Berlin?"
+    participants:
+      roy_uwo: characters/roy-eagleson/sources/2026-07-14-uwo-pixie-reimplementation.md
+      leo_joskowicz: characters/leo-joskowicz/sources/heinz-2026-07-cars2027-eliza-proposal.yml
+      mario_cypko: characters/mario-cypko/sources/model-guided-medicine-cars.md
+    characters:
+      - characters/leo-joskowicz/
+      - characters/mario-cypko/
+    on_air: "60th anniversary Cambridge lecture — emulated PIXIE + Weizenbaum quote + transparent clinical models"
+  lars_pdp7_type340_emulation:
+    ask: "What did the PDP-7 + Type 340 + light pen actually do — and how do we emulate it faithfully today?"
+    with: characters/lars-brinkhoff/
+    prompts:
+      - "Walk the Type 340 Display Programming Manual — vector refresh, display list, pen hits"
+      - "SIMH / simh.org / community paths to a bootable PDP-7 with 340 option"
+      - "Living hardware vs emulator — Munching Squares on PDP-7/340; what transfers to PIXIE"
+      - "Titan link as distributed CAD — emulate graphics satellite first, batch link later?"
+      - "Make-it-so deliverable: rig yaml + SETUP.md forkable from repo-shows/lars-brinkhoff/"
+      - "Cambridge PDP-7 software likely lost — research hardware (light pen, networking) and implement test code"
+      - "Label-target light-pen pie menus without float trig — vs mouse slice targeting"
+      - "Mouse → light pen interpolation in emulator — design on air, code later or demo if done"
+      - "Engelbart mouse + keyset on PDP-10 — how did the hardware attach?"
+    homefun: "Boot closest faithful stack; one radial-menu interaction captured on stream"
+
+format:
+  live: false
+  async_one_on_one: true
+  production_model: |
+    Record separate 1-on-1 video calls whenever each bud is available (no synchronized group
+    session required). Don interlinks character directories, artifacts, and clips; post-production
+    cuts an intertwingled tapestry — each bud shares, watches what others shared, responds on their
+    own recording. Supersedes original "same call" invitation wording (July 2026 logistics pivot).
+  audience_qa: true
+  production_style: "Async Studio Sessions (recorded 1-on-1) → intercut in post; optional live Twitch for segments."
+  notes: |
+    Open with bud introductions (telecine slates). Heinz bud leads history; DSHR bud holds Cambridge
+    ~1970 + lineage (short segment — defer NeWS/X11 depth to david-rosenthal solo show); Lars bud
+    leads emulation. Intercut 1969 film + live emulator + cross-references between async clips.
+    Honor Wiseman and Hiles.
+  logistics_2026:
+    lars_brinkhoff: "Yes/later — Swedish July vacation; unprepared/rambling format OK"
+    david_rosenthal: "Grandparent duty through 2026-08-17; 9h from Amsterdam; PDP-7/340 only on PIXIE"
+    correspondence:
+      - characters/lars-brinkhoff/correspondence.yml
+      - characters/david-rosenthal/correspondence.yml
+  on_stream_wardrobe:
+    host: "Don wears one of Lars Brinkhoff's retrocomputing tees — github.com/larsbrinkhoff/t-shirts (e.g. LISP MACHINE MANUAL; see characters/don-hopkins/media.md)"
+    buds: "Lars or co-buds may wear their own from the same emporium if they like"
+  segment_order_suggestion: [introductions, heinz_history, rosenthal_same_machine, lars_emulation, heinz_cars, open_qa]
+  post_production:
+    look: cambridge_telecine_jiggle
+    spec: process/post-production/cambridge-telecine-jiggle.yml
+    pipeline: characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+    what: |
+      After Effects — reuse the exact motion track + blur/glow from Don's *Flight of the PIXIE*
+      Bumblebee edit on Repo Show titles, credits, bud slates, segment cards, jokes, and
+      dedication blocks. Match Chapman digitized 1969 film jiggle so packaging looks like the
+      same old Cambridge University reel as the archival inserts. Don (7 Jul 2026): extend to
+      old-school B&W film grain + modern subtitles — **house style** for retro Repo Show videos;
+      motion-tracked credits were his proudest Bumblebee moment.
+    applies_to: [opening_title, bud_slates, introductions, segment_cards, lower_thirds, jokes, dedication, end_credits, gag_credits]
+    gag_credits: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml
+    gag_credits_anchor: "Department of Research Simulation"
+    consulting: Ground Up Software
+    sponsor_spot:
+      id: light_pen_bureau_sponsor
+      after: "Computing Laboratory — Light Pen Bureau"
+      opener: "And now, a word from our sponsors."
+      url: https://lightpenisland.net/
+      url_repeat: "I repeat, lightpenisland.net. Surf carefully."
+      spec: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
+
+ties_to:
+  - characters/heinz-lemke/
+  - characters/roy-eagleson/
+  - characters/ivan-sutherland/
+  - characters/heinz-lemke/invitation.md
+  - characters/lars-brinkhoff/
+  - characters/lars-brinkhoff/invitation.md
+  - characters/david-rosenthal/
+  - characters/david-rosenthal/invitation.md
+  - repo-shows/david-rosenthal/discussion-pack.md
+  - repo-shows/moollm-readings/
+  - repo-shows/lars-brinkhoff/SHOW.yml
+  - repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml
+  - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../../characters/douglas-engelbart/
+  - ../../process/challenges/retrocomputing-drive.yml
+  - ../../process/trails/live-objects.md
+
+consent: not_yet_asked

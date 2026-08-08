@@ -34,7 +34,7 @@ connections:
 see_also:
   - { path: ../andy-looney/, why: "Co-guest" }
   - { path: ../andy-looney/sources/moollm-fluxx-links.yml, why: "Shared MOOLLM index" }
-  - { path: ../../repo-shows/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
+  - { path: ../../repo-shows/fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
 
 sources:
   public:

@@ -22,7 +22,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   note: |
     Cc'd on Heinz 15 Jul 2026 PIXIE thread — proposed CARS 2027 Berlin HCI session (29 Jun) on
     ELIZA / Weizenbaum HCI line. Met Roy Eagleson at CARS 2026 Nagoya (Heinz). Not yet directly engaged.
@@ -70,4 +70,4 @@ see_also:
   - { path: ../mario-cypko/, why: "Co-invitee CARS 2027 Human-AI / model-guided medicine beat" }
   - { path: ../roy-eagleson/, why: "Met at CARS 2026 Nagoya (Heinz)" }
   - { path: sources/heinz-2026-07-cars2027-eliza-proposal.yml, why: "Heinz attribution + pull-in to verify ELIZA work" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Weizenbaum two-episode arc; CARS 2027 milestone" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Weizenbaum two-episode arc; CARS 2027 milestone" }

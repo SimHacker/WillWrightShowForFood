@@ -36,7 +36,7 @@ segments:
   - id: constructionist_reunion
     topic: "Papert lineage — physical models × digital microworlds"
     ties:
-      - repo-shows/remembering-the-constructionists.yml
+      - repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml
 
 related:
   - characters/doreen-nelson/

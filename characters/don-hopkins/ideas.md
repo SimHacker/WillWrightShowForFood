@@ -27,8 +27,8 @@
 | Show | Hook |
 |------|------|
 | [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/) | Flagship — Sims birth, Micropolis saga, procedural worlds |
-| [`gesture-space.md`](gesture-space.md) | Multitouch constraints, self-revealing vs graffiti — [`gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui.yml) |
-| [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies — calm tech in the dark — [`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) |
+| [`gesture-space.md`](gesture-space.md) | Multitouch constraints, self-revealing vs graffiti — [`gesture-space-self-revealing-ui.yml`](../../repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml) |
+| [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies — calm tech in the dark — [`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml) |
 | [`ie-jscript-htc-xslt-pie-menus.md`](ie-jscript-htc-xslt-pie-menus.md) | Punkemon + ConnectedTV Skin Editor — XSLT-native web on IE5 (HN 44393817) |
 | [`visual-programming-taxonomy.md`](visual-programming-taxonomy.md) | Boxes/lines ≠ one model — Snap!, Max, Petri nets (HN 40842599) |
 | [`yahoo-pipes-successors.md`](yahoo-pipes-successors.md) | pipes.digital + block models without wires (HN 40841980) |
@@ -44,7 +44,7 @@
 | [`../../repo-shows/building-the-sims/qa-bug-pile.md`](../../repo-shows/building-the-sims/qa-bug-pile.md) | QA pile — maid island, wallpaper+shed, pool cluster |
 | [`don-will-mining-hub.yml`](don-will-mining-hub.yml) | Don × Will arcs — compression, Spore retrospective, Sims craft, Kaleida, Long Now triangle |
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
-| [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes.yml) |
+| [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml) |
 | [`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md) | Networked HyperCard fantasy → HyperLook on NeWS (HN Mar 2026) |
 | [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook SimCity — send-code microworld on NeWS |
 | [`logo-adventure-c64-terrapin.md`](logo-adventure-c64-terrapin.md) | Logo REPL as adventure parser (age 17, Terrapin C64) → MOOLLM adventure compiler |

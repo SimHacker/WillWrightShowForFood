@@ -3,7 +3,7 @@ status: draft
 character_id: leo-joskowicz
 consent: not_yet_asked
 show_seeds:
-  - repo-shows/pixie-pie-menus-pdp7.yml
+  - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 ---
 
 # Repo Show invitation — Leo Joskowicz

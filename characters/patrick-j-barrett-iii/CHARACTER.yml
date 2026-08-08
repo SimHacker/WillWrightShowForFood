@@ -20,7 +20,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/did-the-sims-make-you-gay.yml
+  show_seed: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
   note: |
     Don + Patrick integrated episode: how same-sex relationships got programmed, E3 kiss,
     performative romance model — paired with Alexander Avila essay (he is openly trans masc) + comment corpus (MOOLLM).
@@ -36,7 +36,7 @@ bio:
     (New Yorker / Game Developer, 2014). Will Wright approved: glad to see same-sex support back.
 
 show_suggestions:
-  - { seed: ../../repo-shows/did-the-sims-make-you-gay.yml, what: "With Don — integrated implementation story + Avila comments + Sims audience solidarity" }
+  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "With Don — integrated implementation story + Avila comments + Sims audience solidarity" }
   - { seed: ../../will-wright/sims-team-steering-committee-playthrough/, what: "Optional reunion — Jun 1998 steering committee build + Edith/SimAntics" }
 
 sources:
@@ -51,4 +51,4 @@ sources:
 see_also:
   - { path: ../don-hopkins/, why: "Design-doc advocacy; integrated story on air" }
   - { path: ../will-wright/, why: "Approved social interactions; inclusivity-by-design thread" }
-  - { path: ../../repo-shows/did-the-sims-make-you-gay.yml, why: "Planted show" }
+  - { path: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, why: "Planted show" }

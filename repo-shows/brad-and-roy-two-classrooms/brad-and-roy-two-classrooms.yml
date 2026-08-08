@@ -1,0 +1,51 @@
+# SHOW SEED — Brad Myers + Roy Eagleson: The Two Classrooms
+# Seed. A great PAIR — two professors teaching UI history by opposite methods:
+# Brad brings the pioneers to the students (guest lectures → book chapters);
+# Roy brings the students to the pioneers' machines (PIXIE resurrected in SIMH).
+
+show:
+  rendered_edition: brad-and-roy-two-classrooms.md
+  id: brad-and-roy-two-classrooms
+  title: "The Two Classrooms — Brad Myers + Roy Eagleson"
+  type: group
+  host: Don Hopkins
+  guests: ["Brad A. Myers", "Roy Eagleson"]
+  topic: "How do you teach the history of interaction? Brad's CMU 05-640 flew in sixteen pioneers whose guest lectures became the sixteen guest chapters of Pick, Click, Flick!; Roy's Western University course has students single-stepping the actual 1972 PIXIE code in a PDP-7 emulator. Lecture hall meets lab bench — reading the history versus running it."
+  status: seed
+  consent: not_yet_asked
+
+why_a_great_pair:
+  - "Brad A. Myers — CMU 05-640 Interaction Techniques: the guest-lecture model. Bill Atkinson, Dan Bricklin, Don, and thirteen more walked the room; the lectures became Pick, Click, Flick! Teaching history by primary-source testimony."
+  - "Roy Eagleson — Western University (UWO), history of computer graphics: the resurrection model. He wrote the .oct→.rim converter, loads Heinz Lemke's 1972 PIXIE listing into SIMH, and steps it instruction by instruction; his students study and reincarnate PIXIE itself. Teaching history by executable artifact."
+  - "The same artifact connects them: PIXIE. Brad's book covers the radial-menu lineage PIXIE begins; Roy's students run its actual PDP-7 code. Testimony meets machine."
+  - "Both were mid-lecture-prep when history walked in: Brad's 2019 invitation to Don triggered the Cambridge film hunt; Roy was preparing a Sketchpad lecture when Heinz's recovered listing arrived in his inbox (July 2026)."
+  - "Don bridges: guest lecturer in Brad's classroom (2019, pie menus), correspondent on Roy's PIXIE thread, and the person the film recovery ran through."
+
+beats:
+  - "Curriculum show-and-tell: 05-640's syllabus across the years vs Roy's history-of-graphics course — what each teaches, what each skips, and why"
+  - "The sixteen guest lectures → sixteen guest chapters: who came, what each taught, which lectures bent the course (Panopto archive as show material)"
+  - "The resurrection demo, live: PIXIE's 1972 code stepping in SIMH — address switches to 22, press START (Heinz's thesis p.189 tip); students' reimplementation work"
+  - "Testimony vs artifact: what a student learns from Atkinson in the room that no paper carries; what a student learns from single-stepping a light-pen loop that no lecture carries"
+  - "Newman & Sproull ref 520 and the citation record: PIXIE as 'movable menu' — how teaching materials propagate (or drop) attribution"
+  - "What does an interaction-techniques curriculum look like in the LLM era? Both professors answer"
+  - "Dream extension: Heinz Lemke joins for a segment — the man both classrooms teach"
+
+format:
+  live: true
+  audience_qa: true
+  time_shifted_ok: true
+  notes: |
+    Pittsburgh + London Ontario + Amsterdam all exist on the internet. Works time-shifted
+    too: the repo is the shared stage — Brad annotates Roy's SIMH session recording, Roy
+    annotates a Panopto guest lecture, and the exchange becomes the episode. Student
+    participation (Roy's PIXIE reimplementers, Brad's current 05-640 cohort) would make
+    the audience Q&A itself a primary source.
+
+ties_to:
+  - characters/brad-myers/
+  - characters/roy-eagleson/
+  - characters/heinz-lemke/
+  - characters/heinz-lemke/sources/2019-2020-film-recovery-saga.md
+  - characters/roy-eagleson/sketchpad-to-pixie-lineage.md
+  - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
+  - repo-shows/brad-myers-garnet-vpl.yml

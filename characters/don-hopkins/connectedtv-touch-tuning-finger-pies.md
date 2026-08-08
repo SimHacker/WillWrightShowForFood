@@ -70,4 +70,4 @@ ConnectedTV custom UI editor shares DNA with:
 
 | Show seed | Hook |
 |-----------|------|
-| [`../../repo-shows/connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) | Touch Tuning + Finger Pies live; revive slogans; David Levitt co-guest |
+| [`../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml) | Touch Tuning + Finger Pies live; revive slogans; David Levitt co-guest |

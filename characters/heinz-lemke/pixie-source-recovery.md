@@ -132,10 +132,10 @@ Titan extracode, **ICON** sources, **Multipatch film** (shown with Gouraud on US
 3. Lars: assess against Type 340 manual — assemble/run under SIMH; **virtual light pen drivers**
    from listing interrupt handler; test on emulator.
 4. Fold the "not a dumb terminal" correction into the show's interview beats (done — see
-   [the show seed](../../repo-shows/pixie-pie-menus-pdp7.yml)).
+   [the show seed](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)).
 5. Post-production: [Cambridge telecine jiggle house style](../../process/post-production/cambridge-telecine-jiggle.yml)
    — B&W grain + motion-tracked credits (Don's *Flight of the PIXIE* AE pipeline).
 
 ---
 
-↑ [Heinz's room](README.md) · [correspondence](correspondence.md) · [show seed](../../repo-shows/pixie-pie-menus-pdp7.yml) · [pull-in gaps](pull-in-gaps.md)
+↑ [Heinz's room](README.md) · [correspondence](correspondence.md) · [show seed](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) · [pull-in gaps](pull-in-gaps.md)

@@ -8,6 +8,6 @@
 
 **Memorial mode:** we represent and *discuss* **Jef** — we do not interview him or speak as him.
 
-Show seed (if ever produced): [**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin.yml) — lists **documented connections** to living characters in `CHARACTER.yml` (`who_can_discuss`). That list is planning material only; **no presumption of invitation or consent.**
+Show seed (if ever produced): [**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml) — lists **documented connections** to living characters in `CHARACTER.yml` (`who_can_discuss`). That list is planning material only; **no presumption of invitation or consent.**
 
 Verifiable sources in `CHARACTER.yml`.

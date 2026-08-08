@@ -1,5 +1,5 @@
 # SHOW — Bret Victor — explorable explanations; media for thought
-# Planted from repo-shows/bret-victor-explorable.yml (seed kept in sync).
+# Planted from repo-shows/bret-victor-explorable/bret-victor-explorable.yml (seed kept in sync).
 
 show:
   id: bret-victor
@@ -32,8 +32,8 @@ cautionary_tale:
   not_hero_worship: "Per Bret's Engelbart essay — ask what world the work was for, not worship the achievement."
 
 group_shows:
-  - ../../repo-shows/remembering-douglas-engelbart.yml
-  - ../../repo-shows/remembering-jef-raskin.yml
+  - ../remembering-douglas-engelbart/remembering-douglas-engelbart.yml
+  - ../remembering-jef-raskin/remembering-jef-raskin.yml
 
 ties_to:
   - ../../characters/bret-victor/

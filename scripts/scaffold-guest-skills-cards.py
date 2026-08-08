@@ -336,7 +336,7 @@ _living_guest(
     [
         A("SELF-LANGUAGE", "Self Language", "selfLanguage", "selfLanguage(object) → prototype delegation", "Teach Self's prototype style without Java cosplay.", "Self language co-creator", mana="{U}{U}"),
         A("CONSCIENTIOUS-CODER", "Conscientious Coder", "conscientiousCoder", "conscientiousCoder(team) → intentional craft lane", "Name the meetup ethic: deliberate anti-vibe programming.", "Kaleida meetup lore in show seed", mana="{G}"),
-        A("MOOLLM-SELF", "Self × MOOLLM", "selfMoollm", "selfMoollm(microworld) → reflective agent stack", "Explore marrying Self ideas with MOOLLM orchestration.", "repo-shows/david-ungar-self-moollm.yml", mana="{U}{U}"),
+        A("MOOLLM-SELF", "Self × MOOLLM", "selfMoollm", "selfMoollm(microworld) → reflective agent stack", "Explore marrying Self ideas with MOOLLM orchestration.", "repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml", mana="{U}{U}"),
         A("PROTOTYPE-NOT-CLASS", "Prototype Not Class", "prototypeNotClass", "prototypeNotClass(design) → simpler runtime story", "Prefer cloning and delegation over taxonomy anxiety.", "Self design principles", mana="{U}"),
         A("PLAYFUL-SEMINAR", "Playful Seminar", "playfulSeminar", "playfulSeminar(topic) → room argues productively", "Host a show segment that feels like a great lab meeting.", "Invitation tone", mana="{1}"),
     ],

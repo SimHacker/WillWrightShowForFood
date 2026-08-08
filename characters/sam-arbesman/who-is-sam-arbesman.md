@@ -80,7 +80,7 @@ clips from Will + Chaim; one-on-one or live if scheduling works. Sam suggests ot
 | Hooks | [ideas.md](ideas.md) |
 | Invitation | [invitation.md](invitation.md) |
 | Sources index | [sources/README.md](sources/README.md) |
-| Show seed | [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs.yml) |
+| Show seed | [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml) |
 
 ## Contact (public)
 

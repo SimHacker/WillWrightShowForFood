@@ -2,7 +2,7 @@
 
 # Graph of the Jul 2026 thread + show seed. Buxton excluded by policy; Franziska (CARS admin) omitted.
 
-show_seed: ../../repo-shows/pixie-pie-menus-pdp7.yml
+show_seed: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 
 places:
   cambridge_math_lab:

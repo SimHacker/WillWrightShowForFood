@@ -1,0 +1,84 @@
+# SHOW PROPOSAL — Did The Sims Make You Gay? (Patrick Barrett III + Don Hopkins)
+
+show:
+  id: did-the-sims-make-you-gay
+  title: "Did The Sims Make You Gay?"
+  subtitle: "Same-sex romance in the engine room — Patrick + Don, integrated"
+  type: group
+  host: Don Hopkins
+  guests: ["Patrick J. Barrett III"]
+  buds: ["Patrick J. Barrett III"]
+  character: characters/patrick-j-barrett-iii/
+  topic: |
+    How Patrick programmed same-sex relationships; Don's design-doc advocacy; E3 1999 kiss;
+    Alexander Avila's video essay and comment corpus — The Sims audience as congregation.
+  status: proposed
+  urgency: "Living history — invite Patrick while memory is fresh; solidarity with queer Sims creators."
+
+dialect:
+  voice: stoner_techno_hippie
+  terms:
+    guest: bud
+    guests: buds
+  on_air_opener: "This show's bud is…"
+  voice_ref: characters/don-hopkins/portrayal/voice.yml
+
+solidarity:
+  stance: |
+    LGBTQ+ solidarity default — trans, queer, nb, ace, bi, lesbian, gay, genderfluid,
+    gender-benders of any persuasion. **This IS The Sims audience:** builders, modders,
+    storytellers, creator-network solidarity. Pride is welcome mat, not punchline.
+  lexicon: repo-shows/infodump/infodump.yml#solidarity_lexicon
+
+segments:
+  integrated_story:
+    ask: "Walk the timeline together — slap in prototype, Don's reviews, which doc Patrick had, how romantic tags worked, Will's OK, E3."
+    doc: characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+    primary: https://donhopkins.com/home/TheSims/
+  patrick_implementation:
+    ask: "How did you program same-sex relationships without modeling fixed orientation?"
+    with: characters/patrick-j-barrett-iii/
+    press:
+      - https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
+  avila_comments:
+    ask: "What do 1,700+ Avila comments tell us about the microworld Patrick and Don enabled?"
+    creator: characters/alexander-avila/
+    video: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
+    companion: https://www.youtube.com/watch?v=uox4OMC50-4
+    analysis: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+    on_air: "Fair-use commentary; celebrate testimonies; no outing; no mockery"
+  optional_avila_voice:
+    ask: "Warm invite — solo I'm Queer Therefore I Sim OR async on Patrick episode"
+    solo_show: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+    room: characters/alexander-avila/
+    invitation: characters/alexander-avila/invitation.md
+    moollm: characters/alexander-avila/sources/moollm-links.yml
+  sims_audience:
+    ask: "Builders, modders, storytellers — creator-network solidarity and post-Collection exodus ethic"
+    rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]
+  optional_reunion:
+    ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
+    seed: ../will-wright-premiere/sims-team-steering-committee-playthrough/
+
+format:
+  live: false
+  async_one_on_one: true
+  production_model: |
+    Patrick records when ready; Don intercuts design docs, Avila clips (commentary), MOOLLM comment
+    themes, and optional steering-committee footage. Congregation participates via repo issues.
+
+invitation:
+  path: characters/patrick-j-barrett-iii/invitation.md
+  priority: send_now
+  consent: not_yet_asked
+
+evidence:
+  - characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+  - characters/patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
+  - repo-shows/infodump/infodump.yml#solidarity_lexicon
+
+see_also:
+  - characters/will-wright/  # inclusivity-by-design
+  - characters/alexander-avila/  # Sims essay + looksmaxxing companion; community voice
+  - characters/don-hopkins/career/project-threads.yml  # Sims UI + inclusive relationships
+  - documentation/designs/og-cozy-games.md  # MicropolisCore — procedural rhetoric thread

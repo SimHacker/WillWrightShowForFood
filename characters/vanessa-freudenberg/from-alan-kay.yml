@@ -11,7 +11,7 @@ kay_says:
 
 sources:
   show:
-    - ../../repo-shows/remembering-vanessa-freudenberg.yml
+    - ../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
   mail_digest:
     - ../alan-kay/correspondence.yml  # Croquet/Qwaq 2008 visit context
 

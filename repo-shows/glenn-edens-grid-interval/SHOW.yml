@@ -12,7 +12,7 @@ host_participants:
 
 related_shows:
   - placeholder/
-  - repo-shows/remembering-douglas-engelbart.yml
+  - repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 
 tags:
   - grid-compass

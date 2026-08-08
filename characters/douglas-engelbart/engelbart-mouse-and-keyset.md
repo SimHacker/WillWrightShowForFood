@@ -72,7 +72,7 @@ HN: https://news.ycombinator.com/item?id=17121629 · Video: https://www.youtube.
 | **Alan Kay Dynabook models** | cardboard → CHM — intent vs artifact |
 | **NLS emulator** | PDP-10 / emulator + replica input — don't wear originals |
 
-→ [`../../repo-shows/remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart.yml) · [`memorial.md`](memorial.md) · [`../dave-maynard/invitation.md`](../dave-maynard/invitation.md)
+→ [`../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml) · [`memorial.md`](memorial.md) · [`../dave-maynard/invitation.md`](../dave-maynard/invitation.md)
 
 ---
 

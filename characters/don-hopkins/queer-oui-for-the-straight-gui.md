@@ -15,7 +15,7 @@
 | Tabs / workspace       | [PIE-TAB-WINDOWS.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/notes/PIE-TAB-WINDOWS.md)                                                                                                                                                 |
 | Hub                    | [Soul City](https://github.com/SimHacker/moollm/tree/main/examples/soul-city) · [INDEX bridges](../../repo-shows/INDEX.yml)                                                                                                                                        |
 | Catalog                | [Game UI Database](https://www.gameuidatabase.com/) · [PadCrafter](https://www.padcrafter.com/)                                                                                                                                                                    |
-| Pair                   | [Brad Myers × Edd](../../repo-shows/brad-and-edd-interaction-catalogs.md)                                                                                                                                                                                          |
+| Pair                   | [Brad Myers × Edd](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.md)                                                                                                                                                                                          |
 | Jojo quality (sibling) | [Jojo on UI](jojo-on-ui.md) — Joseph Francis; UNIX-HATERS mirror; delightfully queer UI criticism                                                                                                                                                                  |
 | This room              | [Don Hopkins](README.md) · [bouquet](browse-the-bouquet.yml)                                                                                                                                                                                                       |
 
@@ -92,7 +92,7 @@ Edd picks a beautiful-but-painful [GUIDB](https://www.gameuidatabase.com/) scree
 
 Edd fills with real [GUIDB](https://www.gameuidatabase.com/) citations:
 
-- Mystery-meat radials / wheels with no rehearsal path ([gesture space](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/gesture-space-and-pie-menus.md) · [PIXIE ancestry](../../repo-shows/pixie-pie-menus-pdp7.yml))
+- Mystery-meat radials / wheels with no rehearsal path ([gesture space](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/gesture-space-and-pie-menus.md) · [PIXIE ancestry](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml))
 - Inventory grids that fight [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md) and bury costs
 - Modal stacks that trap the world under a dialog
 - Settings walls that hide state the player needs mid-action

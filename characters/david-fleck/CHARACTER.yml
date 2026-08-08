@@ -19,7 +19,7 @@ invitation:
   status: declined_show
   consent: async_welcome
   document: invitation.md
-  show_seed: repo-shows/david-fleck-pen-input.yml
+  show_seed: repo-shows/david-fleck-pen-input/david-fleck-pen-input.yml
   sent: 2026-07-30
   responded: 2026-08-03
   note: |
@@ -79,5 +79,5 @@ see_also:
   - { path: invitation.md, why: "Draft invitation — gift first, show second" }
   - { path: ../heinz-lemke/sources/2019-2020-film-recovery-saga.md, why: "His role in the recovery chain, documented" }
   - { path: ../heinz-lemke/sources/buxton-2008-wiseman-notes/, why: "The two PDFs he forwarded Don in 2008" }
-  - { path: ../../repo-shows/david-fleck-pen-input.yml, why: "Show seed" }
+  - { path: ../../repo-shows/david-fleck-pen-input/david-fleck-pen-input.yml, why: "Show seed" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

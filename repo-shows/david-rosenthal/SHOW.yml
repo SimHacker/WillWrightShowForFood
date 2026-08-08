@@ -32,7 +32,7 @@ async_now:
 dream_segments:
   - "Window-system wars — what historians should get right (NeWS vs X11, not a morality play)"
   - "ICCCM and X security — the protocols David actually wrote"
-  - "Selections trio — Ted Nelson invisible-clipboard rant × ICCCM author (../selections-icccm-clipboard.yml)"
+  - "Selections trio — Ted Nelson invisible-clipboard rant × ICCCM author (../selections-icccm-clipboard/selections-icccm-clipboard.yml)"
   - "Conrad Parker rant — implementor pain; PRIMARY/SECONDARY/TARGETS — what would you cut?"
   - "Deskset Lichtenstein PS — calm tools vs whizzy demos (unix-haters leak)"
   - "Andrew at CMU with Gosling — what carried from Cambridge satellite graphics"
@@ -52,5 +52,5 @@ ties_to:
   - ../../characters/david-rosenthal/invitation.md
   - ../../characters/david-rosenthal/correspondence.md
   - ../../characters/david-rosenthal/window-systems-lineage.md
-  - ../pixie-pie-menus-pdp7.yml
+  - ../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   - ../moollm-readings/

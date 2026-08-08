@@ -70,4 +70,4 @@ see_also:
   - { path: ../heinz-lemke/sources/1967-back-to-the-roots-part1.md, why: "Heinz starts under Wiseman, 1 Oct 1967" }
   - { path: ../maurice-wilkes/, why: "Lab head; colleague" }
   - { path: ../john-hiles/, why: "PIXIE + RAINBOW co-author" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }

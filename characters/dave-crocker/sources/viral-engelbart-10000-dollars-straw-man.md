@@ -27,4 +27,4 @@ Useful as the **feature-list + bitter-royalty** frame Bret Victor and living wit
 not to deny the royalty fact, but to refuse it as the *point* of Doug.
 
 ↑ [`facebook-engelbart-collaborative-tone-2026.md`](facebook-engelbart-collaborative-tone-2026.md) ·
-[`../../../repo-shows/remembering-douglas-engelbart.yml`](../../../repo-shows/remembering-douglas-engelbart.yml)
+[`../../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml`](../../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml)

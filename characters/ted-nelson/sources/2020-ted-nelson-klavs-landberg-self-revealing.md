@@ -54,7 +54,7 @@ Golod et al. hand-gesture microinteractions paper + PIXIE 1969 — same design-p
 | **Ted Nelson** + Don | Self-revealing vs entangling (Word); Klavs Landberg footnote |
 | **Ben Shneiderman** | Empirical impact vs Ted's Xanadu isolation |
 | **Alan Kay** | Independent invention: PIXIE, Ingalls Fabrik, Don CHI'88, Etoys halo |
-| **Gesture-space show** | `repo-shows/gesture-space-self-revealing-ui.yml` |
+| **Gesture-space show** | `repo-shows/gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml` |
 
 ## See also
 

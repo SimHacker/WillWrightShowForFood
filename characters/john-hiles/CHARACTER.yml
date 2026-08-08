@@ -48,4 +48,4 @@ see_also:
   - { path: ../heinz-lemke/, why: "Co-author; can identify Hiles" }
   - { path: ../cj-cheney/, why: "RAINBOW co-author" }
   - { path: ../m-etherton/, why: "RAINBOW co-author" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "The show this history feeds" }

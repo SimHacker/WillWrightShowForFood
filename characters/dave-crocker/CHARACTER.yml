@@ -27,7 +27,7 @@ connections:
   - ray-tomlinson
 
 show_seeds:
-  - repo-shows/remembering-douglas-engelbart.yml
+  - repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 
 invitation_status: draft
 

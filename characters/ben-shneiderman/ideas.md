@@ -49,7 +49,7 @@ Nelson: wish he'd link to **practical impact** — fair critique Don forwarded i
 
 ### 3b. Clipboard panel — visible links vs invisible scrap
 Jan 2022 thread on Ted Nelson + HyperTIES lineage. **Embedded light blue links** as partial answer
-to Ted's *hide and plug* — pair with DSHR ICCCM on [`selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml).
+to Ted's *hide and plug* — pair with DSHR ICCCM on [`selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml).
 [`../ted-nelson/sources/invisible-clipboard-rant-catalog.md`](../ted-nelson/sources/invisible-clipboard-rant-catalog.md)
 
 ### 4. CHI'88 pie menus — Fitts on the command bus
@@ -59,7 +59,7 @@ Empirical study in repo (`media/from-mail/paper-callahan-hopkins-pie-menus-chi19
 1991 DDJ **self-revealing gestural UI** draft cross-ref.
 
 → [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) ·
-[`../../repo-shows/ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus.yml) ·
+[`../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml) ·
 [`../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md`](../don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md)
 
 ### 5. The Eyes Have It + Dynamic Queries
@@ -80,7 +80,7 @@ Human needs and humane computing — bridge to calm-tech vs direct-manipulation 
 Ben co-authored CHI'88 with Mark; can discuss ubicomp, calm technology, Severe Tire Damage, and the
 empirical HCI tradition **without inventing quotes**. Async clips OK.
 
-→ [`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
+→ [`../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml)
 
 ### 8. Human-centered AI today
 
@@ -111,8 +111,8 @@ direct manipulation applied to identity, tolerance, and player agency in microwo
 ## Show seeds
 
 - **Series (planted):** [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/README.md)
-- **Group:** [`ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus.yml)
-- **Solo PIXIE prequel:** [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
+- **Group:** [`ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml)
+- **Solo PIXIE prequel:** [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
 
 ## Sources (public)
 

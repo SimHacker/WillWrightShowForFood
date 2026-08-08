@@ -43,7 +43,7 @@ in the invitation; ask whether Ted will **reprise on camera** for the Repo Show 
 | One-Liners excerpt | [`sources/ted-comp-one-liners-clipboard-excerpt.md`](sources/ted-comp-one-liners-clipboard-excerpt.md) |
 
 **Panel show — *unnatural-selection*** — Ted × **DSHR** × Don; dream **Gosling**; welcome **Selker**, **Ben**, **Brad**:
-[`../../repo-shows/unnatural-selection.yml`](../../repo-shows/unnatural-selection.yml) ·
+[`../../repo-shows/unnatural-selection/unnatural-selection.yml`](../../repo-shows/unnatural-selection/unnatural-selection.yml) ·
 DSHR pack [`../david-rosenthal/00-START-HERE.md`](../david-rosenthal/00-START-HERE.md)
 
 **NPUC 1996 retrospective** — Don in audience; tense exchange with Netscape (Martin Haberli);
@@ -66,6 +66,6 @@ Also: [`../david-rosenthal/selection-clipboard-lineage.md`](../david-rosenthal/s
 - [`invitation.md`](invitation.md)
 - [`correspondence.yml`](correspondence.yml) — public-safe thread digest
 - Show seed: [`repo-shows/ted-nelson/`](../../repo-shows/ted-nelson/)
-- Panel: [`repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml)
+- Panel: [`repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml)
 - Sources: [`sources/invisible-clipboard-rant-catalog.md`](sources/invisible-clipboard-rant-catalog.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

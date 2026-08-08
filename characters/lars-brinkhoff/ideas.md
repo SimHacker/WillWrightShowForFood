@@ -39,7 +39,7 @@ walk the repo on air and build from the seed.
 challenge make it so for pdp10-maclisp-drive; pair with Thomas Cherryhomes. **Intro sequence above** sets the table.
 
 ### 3. PIXIE / PDP-7 + Type 340 — join Heinz Lemke's show
-Co-guest on [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml): Heinz tells
+Co-guest on [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml): Heinz tells
 1969 Cambridge history; Lars maps Type 340 vector display + light pen to SIMH/emulation —
 **make radial menus runnable on stream**. Local manual:
 [`media/reference/dec-7-13-type-340-display-programming-manual.pdf`](media/reference/dec-7-13-type-340-display-programming-manual.pdf)

@@ -105,7 +105,7 @@ reflexive_punchline: |
   eschatology).
 
 feeds_shows:
-  - { show: ../../repo-shows/remembering-mark-weiser.yml, angle: "Ubik -> ubicomp -> calm tech, told by people who knew Mark" }
+  - { show: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml, angle: "Ubik -> ubicomp -> calm tech, told by people who knew Mark" }
   - { show: ../../repo-shows/david-rosenthal/, angle: "LOCKSS as Hobart Phase; coprophagia/model collapse; Hex-that-cheats" }
   - { show: ../will-wright/, angle: "Palmer Eldritch / The Sims" }
 
@@ -131,7 +131,7 @@ klines: [ubik, ubiquitous-computing, calm-technology, palmer-eldritch, perky-pat
 see_also:
   - { path: pkd-lem-ai-sf.md, why: "human-readable discussion doc" }
   - { path: memorial.md, why: "Mark's memorial — represent + discuss" }
-  - { path: ../../repo-shows/remembering-mark-weiser.yml, why: "memorial show — async clips cut together" }
+  - { path: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml, why: "memorial show — async clips cut together" }
   - { path: ../david-rosenthal/correspondence.yml, why: "seed thread — Lem 2+2=7 + Coprophagia + MOOLLM readings" }
   - { path: ../david-rosenthal/literary/rautavaaras-case-pkd.yml, why: "PKD plot + MOOLLM yaml jazz bridge" }
   - { path: ../david-rosenthal/literary/authority-without-truth.yml, why: "Lem + coprophagia + Hex" }

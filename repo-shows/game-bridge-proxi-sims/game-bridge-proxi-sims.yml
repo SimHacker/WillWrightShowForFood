@@ -1,0 +1,9 @@
+# POINTER — canonical file lives with the other premiere bridges.
+# Old path (this file) was advertised before the seed existed; keep so GitHub
+# blob/main/repo-shows/game-bridge-proxi-sims/game-bridge-proxi-sims.yml does not 404.
+
+canonical: ../will-wright-premiere/game-bridge-proxi-sims.yml
+
+redirect: |
+  Proxi ⇔ Soul City ⇔ Sims crown-jewel bridge seed:
+  → ../will-wright-premiere/game-bridge-proxi-sims.yml

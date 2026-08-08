@@ -39,8 +39,8 @@ relationship:
 show_suggestions:
   - { seed: ../../repo-shows/edd-coates/, what: "Solo ep.1 — GUIDB, Game UI Bible, PadCrafter, ethical archives" }
   - { seed: ../../repo-shows/edd-coates/pie-menus-piecraft.yml, what: "Solo ep.2 — GUIDB briefs → Gonzo/bridge skins → pies → PieCraft" }
-  - { seed: ../../repo-shows/pixie-pie-menus-pdp7.yml, what: "Ep.3 / jam — PIXIE, light pen, Engelbart keyset, Lars PDP-7 emu, PadCrafter blinkenlights" }
-  - { seed: ../../repo-shows/brad-and-edd-interaction-catalogs.yml, what: "Pair — Two Catalogs with Brad Myers" }
+  - { seed: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, what: "Ep.3 / jam — PIXIE, light pen, Engelbart keyset, Lars PDP-7 emu, PadCrafter blinkenlights" }
+  - { seed: ../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.yml, what: "Pair — Two Catalogs with Brad Myers" }
 
 sources:
   wikipedia: null
@@ -64,7 +64,7 @@ see_also:
   - { path: game-ui-archive.md, why: "North star — two archivists, ethical licensing, two episodes" }
   - { path: ../../repo-shows/edd-coates/, why: "Planted show" }
   - { path: ../../repo-shows/edd-coates/pie-menus-piecraft.yml, why: "Pie menus + Gonzo + PieCraft episode" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE / PDP-7 / Lars — PadCrafter blinkenlights jam" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "PIXIE / PDP-7 / Lars — PadCrafter blinkenlights jam" }
   - { path: ../lars-brinkhoff/, why: "PDP-7 emulator + virtual light pen collaborator" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "Don's pie lineage — PIXIE → CHI'88 → Sims → PieCraft" }
   - { path: CARD.yml, why: "Invokable abilities for show segments" }

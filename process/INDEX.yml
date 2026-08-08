@@ -73,7 +73,7 @@ show_and_network:
 competition_and_rigs:
   micropolis-ai-drag-race.yml:
     markup: DRAG-RACE.md
-    show_seed: ../repo-shows/micropolis-ai-drag-race.yml
+    show_seed: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
   code-that-spec.yml:
     topic: "CODE THAT SPEC!!!!! audience chant game"
   ai-offs.yml:

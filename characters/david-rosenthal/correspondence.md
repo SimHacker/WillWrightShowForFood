@@ -99,7 +99,7 @@ Also mentioned: young James Gosling PDP-8 hotrod photo; Unix filesystem as objec
 | [window-systems-lineage.md](window-systems-lineage.md) | Solo-show depth — defer from PIXIE |
 | [../../repo-shows/david-rosenthal/](../../repo-shows/david-rosenthal/) | NeWS/X11/LOCKSS solo seed |
 | [../../repo-shows/moollm-readings/](../../repo-shows/moollm-readings/) | Primer readings |
-| [../../repo-shows/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml) | Async PIXIE tapestry |
+| [../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) | Async PIXIE tapestry |
 | [../heinz-lemke/correspondence.md](../heinz-lemke/correspondence.md) | Rosenthal same-machine thread |
 | [../lars-brinkhoff/correspondence.md](../lars-brinkhoff/correspondence.md) | Emulation segment + async pivot |
 

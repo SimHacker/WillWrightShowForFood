@@ -35,8 +35,8 @@ relationship:
     lists Don Hopkins. Jess Bird research call (Apr 2025): Don named Alex among Sims archivist/community leads.
 
 show_relevance:
-  primary: repo-shows/im-queer-therefore-i-sim.yml
-  secondary: repo-shows/did-the-sims-make-you-gay.yml
+  primary: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+  secondary: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
   working_title: "I'm Queer Therefore I Sim"
   role: |
     Solo Repo Show with Don — discuss essay, 1,712+ comment MOOLLM analysis, historical correction,
@@ -66,7 +66,7 @@ sources:
   moollm_comments: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
 
 see_also:
-  - { path: ../../repo-shows/im-queer-therefore-i-sim.yml, why: "Solo talk — I'm Queer Therefore I Sim" }
+  - { path: ../../repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml, why: "Solo talk — I'm Queer Therefore I Sim" }
   - { path: ideas.md, why: "Segment prompts + MOOLLM discussion beats" }
   - { path: ../patrick-j-barrett-iii/, why: "Sims essay names Patrick's same-sex implementation" }
   - { path: ../don-hopkins/, why: "Design-doc advocacy; Patreon connection" }

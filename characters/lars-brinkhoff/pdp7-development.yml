@@ -3,7 +3,7 @@
 
 meta:
   character: lars-brinkhoff
-  show: repo-shows/pixie-pie-menus-pdp7.yml
+  show: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   updated: "2026-07-03"
   human_readable: pdp7-development.md
 
@@ -122,4 +122,4 @@ connects_in_repo:
   - media/reference/dec-7-13-type-340-display-programming-manual.pdf
   - correspondence.yml
   - ideas.md
-  - ../../repo-shows/pixie-pie-menus-pdp7.yml
+  - ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml

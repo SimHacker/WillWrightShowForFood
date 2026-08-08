@@ -100,7 +100,7 @@ read_in_repo:
     why: "Tog's essay — deferred"
   - path: ../../characters/david-rosenthal/window-systems-lineage.md
     why: "Solo-show paper list and questions"
-  - path: ../pixie-pie-menus-pdp7.yml
+  - path: ../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
     why: "Async trio tapestry — DSHR Cambridge segment"
 
 see_also:

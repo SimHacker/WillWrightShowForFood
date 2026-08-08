@@ -4,7 +4,7 @@ topic:
   status: later
   implementation_target: MicropolisCore/packages/selfish-config
   alternate_target: vitamoo
-  show_seed: ../../repo-shows/selfish-config-typescript.yml
+  show_seed: ../../repo-shows/selfish-config-typescript/selfish-config-typescript.yml
   upstream:
     playbook: leela-central/skills/gcs/protocols/pipeline-optimization/playbooks/PB-44-worker-config-fragment-composition.md
     impl: leela-central/packages/leela-cicd/src/leela_cicd/worker_config.py

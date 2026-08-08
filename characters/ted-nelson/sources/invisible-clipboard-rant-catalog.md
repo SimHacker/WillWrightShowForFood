@@ -2,7 +2,7 @@
 
 **Recordings confirmed.** Full index: [`invisible-clipboard-rant-catalog.yml`](invisible-clipboard-rant-catalog.yml)
 
-**Repo Show:** [`selections-icccm-clipboard.yml`](../../../repo-shows/selections-icccm-clipboard.yml) — Ted × DSHR × Don; welcome **Ted Selker, Ben Shneiderman, Brad Myers**.
+**Repo Show:** [`selections-icccm-clipboard.yml`](../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml) — Ted × DSHR × Don; welcome **Ted Selker, Ben Shneiderman, Brad Myers**.
 
 ## Watch first
 

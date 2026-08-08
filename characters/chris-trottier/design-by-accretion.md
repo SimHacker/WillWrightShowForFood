@@ -58,7 +58,7 @@ Full text: [suggested-questions.md § Palm's question](suggested-questions.md#pa
 
 ## Machine-readable seed
 
-YAML twin for tooling: [`../../repo-shows/design-by-accretion.yml`](../../repo-shows/design-by-accretion.yml)
+YAML twin for tooling: [`../../repo-shows/design-by-accretion/design-by-accretion.yml`](../../repo-shows/design-by-accretion/design-by-accretion.yml)
 
 ---
 

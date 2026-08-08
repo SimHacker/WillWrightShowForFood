@@ -24,7 +24,7 @@ invitation:
 memorial:
   mode: represent_and_discuss
   rule: "Represent and discuss his documented work and stories. Do not interview, do not speak as him, invent no inner life or quotes."
-  show_seed: ../../repo-shows/remembering-mark-weiser.yml
+  show_seed: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml
   who_can_discuss:
     - { who: don-hopkins, why: "Weiser's student at UMD and close friend until his death; co-author on the CHI'88 pie-menu paper (Callahan, Hopkins, Weiser, Shneiderman); primary source for the Ubik→ubicomp story" }
     - { who: david-rosenthal, why: "Knew Mark; LOCKSS co-founder with Weiser's widow Vicki Reich; anchor of the Ubik/ubicomp reading-group thread", consent: not_yet_asked }
@@ -52,7 +52,7 @@ sources:
 
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
-  - { path: ../../repo-shows/remembering-mark-weiser.yml, why: "Memorial show seed — async clips cut together" }
+  - { path: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml, why: "Memorial show seed — async clips cut together" }
   - { path: pkd-lem-ai-sf.md, why: "PKD·Lem·AI·SF reading group — Ubik→ubicomp→calm-tech seed; feeds this memorial, David's solo, and Will's show" }
   - { path: pkd-lem-ai-sf.yml, why: "Companion data + claim ledger" }
   - { path: legacy.yml, why: "Living legacy — Weiser Scholarship honor roll + calm-tech torchbearers + explainer-video citations" }

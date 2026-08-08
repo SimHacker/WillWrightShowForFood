@@ -11,7 +11,7 @@ registry: INDEX.yml
 .: ./
 
 flagship: will-wright-premiere/
-game_shows: [micropolis-ai-drag-race.yml, game-show-wigcercize.yml]
+game_shows: [micropolis-ai-drag-race/micropolis-ai-drag-race.yml, game-show-wigcercize.yml]
 
 methods:
   LIST-SHOWS: INDEX.yml
@@ -26,7 +26,7 @@ see_also:
   - { path: ../process/entryways.yml, why: "All entryways yaml" }
   - { path: README.md, why: "Gags, themes, traditions, show content catalog" }
   - { path: will-wright-premiere/README.md, why: "Flagship planted show" }
-  - { path: micropolis-ai-drag-race.yml, why: "Drag race show seed" }
+  - { path: micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Drag race show seed" }
   - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }
   - { path: ../skills/repo-show/CARD.yml, why: "Orchestrator interface" }
   - { path: ../skills/repo-show/SKILL.md, why: "SEED → HARVEST protocol" }

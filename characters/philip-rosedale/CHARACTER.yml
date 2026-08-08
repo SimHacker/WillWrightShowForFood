@@ -19,7 +19,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/philip-rosedale-hifi-moollm.yml
+  show_seed: repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml
   note: "Warm prior contact — Caitlyn intro 2016; worklist contractor 2017 (voting box, text chat); Philip QA'd and approved."
 
 bio:
@@ -48,7 +48,7 @@ sources:
   blogs: []
 
 see_also:
-  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "HiFi distributed JS × MOOLLM × worlds-as-code" }
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml, why: "HiFi distributed JS × MOOLLM × worlds-as-code" }
   - { path: ../dan-ingalls/, why: "2021 thread comparing HiFi plugins vs Croquet vs Livelymerge" }
   - { path: ../will-wright/, why: "Sims lineage — Don + Will; character simulation in MOOLLM" }
   - { path: ../../process/trails/live-objects.md, why: "Virtual worlds in the live-object lineage" }

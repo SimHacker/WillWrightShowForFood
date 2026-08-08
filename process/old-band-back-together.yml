@@ -104,8 +104,8 @@ bands:
 
   also_in_this_spirit:
     - "Electric Sheep crew — Scott Draves + Joshua Goldberg + Anton Marini (Syphon); see ../characters/scott-draves/correspondence.yml"
-    - "Constructionists / Logo — Cynthia Solomon, Brian Harvey, Jens Mönig + memorials; see ../repo-shows/remembering-the-constructionists.yml"
-    - "Engelbart memorial — reconvene those who knew him; see ../repo-shows/remembering-douglas-engelbart.yml"
+    - "Constructionists / Logo — Cynthia Solomon, Brian Harvey, Jens Mönig + memorials; see ../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml"
+    - "Engelbart memorial — reconvene those who knew him; see ../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml"
 
 not_reunions:
   # Framing: not every group here is a 'reunion'. CURRENT, ongoing teams are showcased as

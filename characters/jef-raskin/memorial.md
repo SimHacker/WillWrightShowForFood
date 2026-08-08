@@ -34,7 +34,7 @@ Read the framing in [`humane-interface-and-this-repo.md`](humane-interface-and-t
 
 ## Show seed (if produced)
 
-[**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin.yml) is a **seed**, not a scheduled episode.
+[**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml) is a **seed**, not a scheduled episode.
 If Don ever produces it, he would ask living people with documented connections to Jef's work —
 **after** consent, the same way any other guest is asked. `CHARACTER.yml` lists possible connections
 (Terry hosted CS547; Ben, Bret, Alan, Walter have lineage ties; Don hosts). **None of that implies

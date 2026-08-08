@@ -115,6 +115,6 @@ see_also:
   - { path: ../chuck-thacker/, why: "Alto hardware — Smalltalk host after Utah" }
   - { path: ../will-wright/, why: "Microworlds / glass-box simulation adjacency" }
   - { path: ../../process/hn-harvest/ivan-sutherland.md, why: "Reviewed HN IDs" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — light-pen era" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "PIXIE show — light-pen era" }
   - { path: ../../process/yoot-people-wwsff-map.yml, why: "Full Yoot People.md → rooms map" }
   - { path: ../../schemas/portrayal-standards.md, why: "Hero citation rules" }

@@ -69,7 +69,7 @@ hour-by-hour `HISTORY.nr` dev diary). [The thread + 1987–88 receipts](sources/
 
 ## Interview planned
 
-Repo show about a repo — [`repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml)
+Repo show about a repo — [`repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml)
 
 Beats: [`ideas.md`](ideas.md) · invitation: [`invitation.md`](invitation.md)
 
@@ -81,7 +81,7 @@ Beats: [`ideas.md`](ideas.md) · invitation: [`invitation.md`](invitation.md)
 | Email thread | [`sources/2026-07-08-ttycity-email-thread.yml`](sources/2026-07-08-ttycity-email-thread.yml) |
 | SDI thread | [`sources/2026-08-01-sunviewgames-sdi-thread.md`](sources/2026-08-01-sunviewgames-sdi-thread.md) |
 | Emoji UI spec | [`sources/ttycity-emoji-graphics-ui.yml`](sources/ttycity-emoji-graphics-ui.yml) |
-| Show seed | [`../../repo-shows/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity.yml) |
+| Show seed | [`../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml) |
 
 ## Related
 

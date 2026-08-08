@@ -38,7 +38,7 @@ Engelbart**: his work, his vision, his philosophy, told by the people who knew h
 **[Yoot Saito](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/yoot-saito)**
 and **[Alan Kay](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/alan-kay)**
 to join us, and your eulogy would be its heart. (Seed:
-[Remembering Douglas Engelbart](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart.yml).)
+[Remembering Douglas Engelbart](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml).)
 Either shape — or both, or neither — works. **You pick.**
 
 **What we could get into — your pick:**
@@ -55,7 +55,7 @@ Either shape — or both, or neither — works. **You pick.**
   **Would you reprise it for the record?** I'd love **you + David Rosenthal** (he wrote the X11
   ICCCM) + me — and **Ted Selker** (he hosted that BayCHI night), **Ben Shneiderman** (HyperTIES
   links), **Brad Myers** (*Pick, Click, Flick!*) welcome if you want a panel.
-  Seed: [`repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml).
+  Seed: [`repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml).
 - **Computers for Cynics** — live, with whatever updates you'd add.
 - **Remembering Doug.** I only met Doug Engelbart once, and we commiserated about how hard it is to
   get society to accept new ideas — that conversation gave me the resolve to never give up on my
@@ -75,7 +75,7 @@ primary source, with care:
 - Augmentation & hypertext trail (Engelbart · you · Weiser): https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/augmentation-and-hypertext.md
 - Your guest page: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ted-nelson
 - The show seed (segment ideas): https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/ted-nelson
-- The Doug Engelbart memorial seed (you · Yoot · Alan): https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart.yml
+- The Doug Engelbart memorial seed (you · Yoot · Alan): https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 - Start anywhere: https://github.com/SimHacker/WillWrightShowForFood
 
 We *represent and discuss* the people we've lost — Doug, Hugh — and never speak as them; we invite

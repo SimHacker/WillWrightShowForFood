@@ -13,6 +13,6 @@ Queen's Day Amsterdam).
 
 **Paired guest:** [Thomas Cherryhomes](../thomas-cherryhomes/README.md) — emulated AI Lab meets FujiNet / IRATA.ONLINE
 
-[Invitation](invitation.md) · [AM radio simulator proposal](am-radio-simulator-proposal.md) · [Ideas](ideas.md) · [Correspondence digest](correspondence.md) · [PDP-7 dev toolchain](pdp7-development.md) · [Media](media/README.md) · [Show seed](../../repo-shows/lars-brinkhoff/README.md) · [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7.yml)
+[Invitation](invitation.md) · [AM radio simulator proposal](am-radio-simulator-proposal.md) · [Ideas](ideas.md) · [Correspondence digest](correspondence.md) · [PDP-7 dev toolchain](pdp7-development.md) · [Media](media/README.md) · [Show seed](../../repo-shows/lars-brinkhoff/README.md) · [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

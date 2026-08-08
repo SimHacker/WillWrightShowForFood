@@ -29,7 +29,7 @@ bio:
 show_suggestions:
   - { seed: ../../repo-shows/openlaszlo/, what: "Group — OL reunion → Declare; live-objects / prototypes act with Ungar + Myers + Temkin" }
   - { seed: ../../repo-shows/craig-latta/, what: "Solo — Caffeine live; Keep; Cursor vs liveness" }
-  - { seed: ../../repo-shows/remembering-vanessa-freudenberg.yml, what: "Memorial arc — Vanessa / SqueakJS; Dan + Alan warmly invited" }
+  - { seed: ../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml, what: "Memorial arc — Vanessa / SqueakJS; Dan + Alan warmly invited" }
 
 sources:
   wikipedia: null

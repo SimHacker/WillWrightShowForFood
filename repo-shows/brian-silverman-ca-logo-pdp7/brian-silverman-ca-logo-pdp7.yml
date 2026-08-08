@@ -1,0 +1,37 @@
+# SHOW — Brian Silverman · CA, Logo, PDP-7 literacy
+
+show:
+  id: brian-silverman-ca-logo-pdp7
+  title: "Brian's Brain, Logo, and the PDP-7 Party"
+  type: solo_or_duet
+  host: Don Hopkins
+  guest: Brian Silverman
+  character: characters/brian-silverman/
+  status: proposed
+  warm_intro: "Leela / Logo / CA orbit; PDP-7 literacy for Heinz PIXIE listing"
+
+topic: |
+  Brian Silverman — Brian's Brain, Logo/Scratch lineage, emulator craft, and reading Heinz Lemke's
+  PIXIE PDP-7 listing with someone who speaks small-machine assembly.
+
+co_shows:
+  - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
+  - repo-shows/norman-margolus/
+
+segments:
+  brians_brain_live:
+    ask: "Invented the rule; someone else named it. Run it — waves, spaceships, rakes."
+    doc: characters/brian-silverman/sources/brians-brain-and-naming.md
+  pixie_listing_readthrough:
+    ask: "Walk Heinz's PDP-7 listing — light pen, interrupts, graph models in 8K words."
+    with: [heinz-lemke, lars-brinkhoff]
+  logo_scratch_constructionist:
+    ask: "Logo → Scratch → Snap! — Papert, Resnick, Brian Harvey, Jens Mönig; one friendly community; what belongs in a forkable show repo?"
+    with: [brian-harvey, jens-monig]
+  canada_visit_debrief:
+    ask: "Playful Invention — Crickets, TurtleArt, what you're building in Montreal"
+    optional_with: [henry-minsky]
+
+format:
+  async_one_on_one: true
+  notes: "Short intimate public invite; rich README for everyone else."

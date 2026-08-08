@@ -327,7 +327,7 @@ rig_spectrum:
     history: |
       Don coined consciencious objectors at a meetup with [David Ungar](../characters/david-ungar/) and Kaleida colleagues
       (ScriptX object-system era) — programmers who conscientiously object to opaque automation.
-      Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm.yml) (Self × MOOLLM reimagination + rig culture).
+      Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) (Self × MOOLLM reimagination + rig culture).
     bare_hands_welcome: true
   rig_classes:
     artisanal: "Hand-only human programming — maximum respect when declared honestly"

@@ -71,8 +71,8 @@ companion_readings:
     url: https://github.com/SimHacker/moollm/blob/main/designs/indexes/INDEX.md
 
 show_use:
-  solo: repo-shows/im-queer-therefore-i-sim.yml
-  patrick_episode: repo-shows/did-the-sims-make-you-gay.yml
+  solo: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+  patrick_episode: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
   on_air: |
     Discuss analysis WITH Alex — did we miss themes? misread a cluster? honor commenters.
     Never mock; fair-use commentary; no outing.

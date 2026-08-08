@@ -85,4 +85,4 @@ invoke_rules:
 see_also:
   - { path: sources/career-and-awards.yml, why: "Full career harvest" }
   - { path: ../roy-eagleson/CARD.yml, why: "Mentee on thread" }
-  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml, why: "Pie menus show cluster" }

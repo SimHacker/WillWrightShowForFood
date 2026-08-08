@@ -41,6 +41,6 @@ filesystem object model's advisory `parents:` delegation **operational**.
 
 | Show seed | Status |
 |-----------|--------|
-| [`../../repo-shows/selfish-config-typescript.yml`](../../repo-shows/selfish-config-typescript.yml) | **later** — live port + test on air |
+| [`../../repo-shows/selfish-config-typescript/selfish-config-typescript.yml`](../../repo-shows/selfish-config-typescript/selfish-config-typescript.yml) | **later** — live port + test on air |
 
 Dream guests: **David Rosenthal** (NeWS `$PATH` patent / slots thesis) · **David Ungar** (Self MI) · **David Levitt** (Pantomime JSON config lineage).

@@ -3,7 +3,7 @@ status: draft
 character_id: philip-rosedale
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/philip-rosedale-hifi-moollm.yml
+show_seed: repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml
 format: remote_or_in_person
 ---
 
@@ -53,7 +53,7 @@ through to working artifacts anyone can browse without an account.
 
 **Format:** Remote stream is fine. No homework — homeplay only if fun.
 
-**Materials:** [`repo-shows/philip-rosedale-hifi-moollm.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/philip-rosedale-hifi-moollm.yml) ·
+**Materials:** [`repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml) ·
 [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/philip-rosedale/ideas.md) · [correspondence](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/philip-rosedale/correspondence.yml) ·
 [MOO heritage](https://github.com/SimHacker/moollm/blob/main/designs/MOO-HERITAGE.md)
 

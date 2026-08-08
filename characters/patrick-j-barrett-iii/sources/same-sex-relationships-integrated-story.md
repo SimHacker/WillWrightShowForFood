@@ -1,6 +1,6 @@
 # Same-sex relationships in The Sims — integrated story (Don + Patrick)
 
-**Purpose:** On-air spine for [`did-the-sims-make-you-gay`](../../../repo-shows/did-the-sims-make-you-gay.yml)  
+**Purpose:** On-air spine for [`did-the-sims-make-you-gay`](../../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml)  
 **Attestation:** Don Hopkins from design reviews + team memory; Patrick Barrett from press (New Yorker, 2014) — invite Patrick to correct/extend.
 
 ---

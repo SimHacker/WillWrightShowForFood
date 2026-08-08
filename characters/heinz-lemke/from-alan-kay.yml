@@ -29,7 +29,7 @@ sources:
     - ../alan-kay/media/from-mail/REVIEW.yml  # pixie-preservation cluster
   artifacts:
     - redirect: characters/alan-kay/media/from-mail/  # PIXIE papers — pending Don approval
-    - show: repo-shows/pixie-pie-menus-pdp7.yml
+    - show: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 
 show_hooks:
   - "PIXIE trio — Lemke, Don, Ted Selker + Engelbart memorial"

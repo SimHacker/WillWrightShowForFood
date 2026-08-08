@@ -190,7 +190,7 @@ The Gallium tree is the prototype attic; the monorepo copy is the front door.
 
 ## Show connections
 
-- `repo-shows/infodump.yml` — ep 001, beat: procedural generator demo (EVAL ⇔ APPLY)
+- `repo-shows/infodump/infodump.yml` — ep 001, beat: procedural generator demo (EVAL ⇔ APPLY)
 - Don → Will email: `DonHopkins/characters/don-hopkins/correspondence/attachments/will-wright/2026-07-10-star-forts-family.md`
 - Miro pitch deck rows: zombie-proof enclaves, blind watchmaker UI, billions of snowflakes
 

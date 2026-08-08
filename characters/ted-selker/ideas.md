@@ -47,7 +47,7 @@ the same move as Will's 1996 talk. [`sources/cs547-lectures.md`](sources/cs547-l
 
 ### 10. Clipboard / cut-and-paste panel with Ted Nelson
 Ted **hosted** Ted at BayCHI Aug 2021 (*HCI Constructs Then and Now*). Natural co-moderator for
-[`../../repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml) —
+[`../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml) —
 human-**CONSTRUCT** interaction vs invisible clipboard.
 [`../ted-nelson/sources/2021-08-10-baychi-hci-constructs-transcript-digest.md`](../ted-nelson/sources/2021-08-10-baychi-hci-constructs-transcript-digest.md)
 

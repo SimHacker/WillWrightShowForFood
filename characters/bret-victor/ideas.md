@@ -30,11 +30,11 @@ Admire the vision **and** hold the distribution problem plainly. Design counsel 
 not hero-worship. Per Bret's own Engelbart point: what world was it trying to create?
 
 ### 4. Engelbart memorial — intent over invention lists
-Join [`remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart.yml) with Ted
+Join [`remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml) with Ted
 Nelson, Alan Kay, Yoot Saito — or solo beat on the same theme. See [`../douglas-engelbart/`](../douglas-engelbart/).
 
 ### 5. Jef Raskin / humane interface lineage
-Listed discussant for [`remembering-jef-raskin.yml`](../../repo-shows/remembering-jef-raskin.yml) — explorable
+Listed discussant for [`remembering-jef-raskin.yml`](../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml) — explorable
 explanations + protecting the user's thinking.
 
 ### 6. Repo Show as medium
@@ -44,7 +44,7 @@ or does it fight Bret's principles? Worth asking on air, not asserting.
 ## Show seeds
 
 - Planted: [`repo-shows/bret-victor/`](../../repo-shows/bret-victor/)
-- Legacy seed file: [`repo-shows/bret-victor-explorable.yml`](../../repo-shows/bret-victor-explorable.yml)
+- Legacy seed file: [`repo-shows/bret-victor-explorable/bret-victor-explorable.yml`](../../repo-shows/bret-victor-explorable/bret-victor-explorable.yml)
 
 ## Sources
 

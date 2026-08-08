@@ -1,0 +1,48 @@
+# SEED — Building The Sims (group reunion)
+# Planted hub: ./
+
+show:
+  id: building-the-sims
+  title: "Building The Sims — team reunion"
+  type: group
+  host: Don Hopkins
+  guests:
+    - Will Wright
+    - Jamie Doornbos
+    - Eric Bowman
+    - Jim Mackraz
+    - Patrick J. Barrett III
+    - Eric Hedman
+    - Chris Trottier
+    - Claire Curtin
+    - Kana Ryan
+    - Luc Barthelet
+    - Jerry Martin
+  hub: ./
+  topic: "How the original Sims simulation worked — pools, SimAntics, pixelation, pause/RNG, QA folklore, design, production, TSO."
+  status: planted
+  consent: not_yet_asked
+
+format:
+  async: true
+  sync: true
+  solo: true
+  one_on_one: true
+  group: true
+  notes: "See discussion-formats.md — pool question async-first; everyone can answer separately."
+
+readable:
+  hub: README.md
+  formats: discussion-formats.md
+  pools: swimming-pools-objects-or-rooms.md
+  pixelation: pixelation-and-modesty.md
+  maid_plunger: maid-plunger-incident.yml
+  pause_rng: pause-time-and-rng.md
+  design: design-and-production.md
+  qa: qa-bug-pile.md
+  artifacts: artifacts/INDEX.md
+
+ties_to:
+  - ../design-by-accretion/design-by-accretion.yml
+  - music-and-theory.yml
+  - ../luc-barthelet-sims-online/SHOW.yml

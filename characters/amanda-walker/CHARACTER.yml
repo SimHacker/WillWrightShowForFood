@@ -19,7 +19,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/amanda-walker-galaxy-postscript.yml
+  show_seed: repo-shows/amanda-walker-galaxy-postscript/amanda-walker-galaxy-postscript.yml
   note: "Old friend — NeWS-makers + PostNews (1989–90 InterCon) → Visix Galaxy (1990–); Jul 2026 Self-manual LinkedIn spark. Signature: Speaker-To-PostScript."
 
 bio:
@@ -62,5 +62,5 @@ see_also:
   - { path: ../owen-densmore/, why: "NeWS OOP / class.ps lineage" }
   - { path: ../james-gosling/, why: "NeWS; she backed Gosling in the 1990 commitment thread" }
   - { path: ../david-rosenthal/, why: "NeWS co-author" }
-  - { path: ../../repo-shows/amanda-walker-galaxy-postscript.yml, why: "Show seed" }
+  - { path: ../../repo-shows/amanda-walker-galaxy-postscript/amanda-walker-galaxy-postscript.yml, why: "Show seed" }
   - { path: ../../repo-shows/news-postscript-window-system.yml, why: "NeWS reunion panel" }

@@ -22,7 +22,7 @@ navigation:
   readme: README.md
 
 shows:
-  pixie_trio: ../../repo-shows/pixie-pie-menus-pdp7.yml
+  pixie_trio: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   solo: ../../repo-shows/david-rosenthal/
 
 discussion_july_2026:

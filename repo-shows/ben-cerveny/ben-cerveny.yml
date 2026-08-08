@@ -1,0 +1,53 @@
+# SEED — Ben Cerveny: games-to-infrastructure × data portability × public code
+# Consent not yet asked.
+
+show:
+  id: ben-cerveny
+  status: seed
+  type: solo
+  guest: ben-cerveny
+  character: characters/ben-cerveny/
+  dream_guest: false
+
+episode:
+  working_title: "Worlds That Loop — GNE, Habitat, and the Browser Soul City"
+  subtitle: "Public code × player-in-the-middle publish · Head Shop · TypeScript save I/O · Will's 1986 portability thesis"
+
+pitch: |
+  Ben Cerveny helped build **Game Neverending** (→ Flickr), **Stamen** public map viz, and now
+  leads the **Foundation for Public Code** in Amsterdam. Natural guest for the crown jewel:
+  **moving characters and data between game worlds** — Will's explicit 1986 thesis, now
+  implemented as browser TypeScript (`packages/sims-io`), **Soul City** as liminal uplift space,
+  and craft shops (Head Shop, Wig-O-Matic) with explicit publish/credit gates.
+
+  Repo Show: compare **Habitat / GNE spliceable worlds** to MOOLLM **Lane Neverending**; walk
+  `packages/sims-io` uplift in the browser; connect **public code** ethics to recovered Sims
+  Exchange content; preview the **Will Wright kickoff** as episode-one spine.
+
+topics:
+  - "Game Neverending → Flickr → Soul City Exchange — social spatial play as infrastructure"
+  - "Foundation for Public Code × Soul City — attribution, provenance, opt-in publish"
+  - "Lane Neverending (MOOLLM) ↔ Habitat ↔ GNE — circular streets, splice more segments"
+  - "Will 1986 data portability — first-episode starting point"
+  - "OpenLaszlo SimProv Wedding Playset + SimFreaks — what was prototyped vs what's new (LLM uplift)"
+  - "TypeScript browser stack — sims-io, vitamoo, Transmoogrifier platform modules"
+  - "Head Shop + Wig-O-Matic — Sims heads/wigs as IFF craft shops"
+  - "Soul City liminal space — Wedding Album, Little Computer Person homage show seed"
+  - "Mind Mirror + Apple ][ emulator organelle — per-game character storage, nothing lost"
+  - "Transmogrifier everything — SimAntics as YAML; deterministic tools, LLMs for RE commentary"
+  - "Micropolis Federation — SimCity zones + Sims lots + future tower peers on git branches"
+
+ties_to:
+  - ../../characters/ben-cerveny/
+  - ../../characters/will-wright/
+  - ../../characters/ken-kahn/
+  - ../will-wright-premiere/SHOW.yml
+  - ../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md
+  - ../../process/crazy-idea-jam.yml
+  - SimHacker/moollm/examples/adventure-4/street/lane-neverending
+  - SimHacker/moollm/examples/soul-city/README.md
+  - SimHacker/MicropolisCore/documentation/designs/soul-city.md
+  - SimHacker/MicropolisCore/packages/sims-io
+
+invitation_status: not_yet_asked
+precedes_or_pairs_with: will-wright

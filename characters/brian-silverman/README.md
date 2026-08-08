@@ -19,7 +19,7 @@ preservation party.
 
 | Thread | Fit |
 |--------|-----|
-| **PIXIE / PDP-7** | Someone who speaks PDP-7 + light-pen era iron — [`pixie-pie-menus-pdp7`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE / PDP-7** | Someone who speaks PDP-7 + light-pen era iron — [`pixie-pie-menus-pdp7`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 | **Brian's Brain** | Three-state CA — diagonal waves, spaceships, rakes — [`norman-margolus`](../../repo-shows/norman-margolus/) CA fest |
 | **Logo → Scratch** | Constructionist microworlds — same church as Will, Papert, Resnick |
 | **Emulators** | PDP-1 **Spacewar!**, 6502/4004 transistor-level — preservation hacker cousin to Lars |
@@ -46,8 +46,8 @@ toolchain Don cares about: rules you can **see**, languages children can **own**
 
 **Shows**
 
-- Dedicated seed: [`../../repo-shows/brian-silverman-ca-logo-pdp7.yml`](../../repo-shows/brian-silverman-ca-logo-pdp7.yml)
-- PIXIE / PDP-7: [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
+- Dedicated seed: [`../../repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml`](../../repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml)
+- PIXIE / PDP-7: [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
 - CA fest: [`../../repo-shows/norman-margolus/`](../../repo-shows/norman-margolus/)
 
 Brian may edit, reduce, or delete anytime.

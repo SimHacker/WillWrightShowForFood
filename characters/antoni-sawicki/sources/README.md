@@ -9,4 +9,4 @@
 | [`2026-08-03-vtcity-sunview-reply.md`](2026-08-03-vtcity-sunview-reply.md) | Antoni reply — [vtcity](https://github.com/tenox7/vtcity) (DEC VT soft fonts); planning SimCity on Sun 1/2/3 + SunView; wants better demo video quality |
 | [`2026-08-03-don-reply-vt-gigi-gt40.md`](2026-08-03-don-reply-vt-gigi-gt40.md) | Don reply — vtcity as general terminal drawing; UMD GIGI + GT40 Lunar Lander / McDonald's on the moon lore |
 
-↑ [CHARACTER.yml](../CHARACTER.yml) · [show seed](../../../repo-shows/antoni-sawicki-ttycity.yml)
+↑ [CHARACTER.yml](../CHARACTER.yml) · [show seed](../../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml)

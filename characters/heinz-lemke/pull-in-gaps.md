@@ -198,4 +198,4 @@ CARS Congress Berlin — special HCI session **29 June 2027** (60th anniversary 
 
 ---
 
-↑ [README](README.md) · [correspondence](correspondence.md) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7.yml)
+↑ [README](README.md) · [correspondence](correspondence.md) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)

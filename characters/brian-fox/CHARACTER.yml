@@ -32,7 +32,7 @@ connections:
   music: "Brother Donal Fox — jazz/classical composer-pianist; velcro to the show's music-machines thread"
 
 show_suggestions:
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the co-founder's view of the First Wired Family: what it was like building Meta-HTML with the twins" }
+  - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "Minsky memorial — the co-founder's view of the First Wired Family: what it was like building Meta-HTML with the twins" }
   - { what: "Shell as stage — Bash and readline as the world's most-used invisible instrument; the Repo Show literally runs on his software" }
   - { what: "Free software ensemble — RMS (copyleft) × Fox (employee #1) × dhw (Cygnus, making it a business): three chapters of the same movement" }
 

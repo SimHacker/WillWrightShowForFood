@@ -11,4 +11,4 @@ contact — Don shipped HiFi JavaScript plugins on the worklist (2017). Not Phil
 | [correspondence.yml](correspondence.yml) | Public-safe thread digest |
 | [CARD.yml](CARD.yml) | Guest-skills card |
 
-Show seed: [`repo-shows/philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm.yml)
+Show seed: [`repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml)

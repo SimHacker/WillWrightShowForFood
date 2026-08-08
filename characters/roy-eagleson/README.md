@@ -127,6 +127,6 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
 | **Wilkes memorial** (Don invited Roy's contributions) | [`../maurice-wilkes/memorial.md`](../maurice-wilkes/memorial.md) |
 | **Show hooks** | [ideas.md](ideas.md) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 
 [Correspondence digest](correspondence.yml) · [CHARACTER.yml](CHARACTER.yml)

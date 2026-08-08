@@ -96,7 +96,7 @@ model. This trail was written *for* that conversation.
 | [**Will Wright**](../../characters/will-wright/) | Data portability dream (1996 Winograd) → federated character/save bridges |
 | [**Craig Latta**](../../characters/craig-latta/) | Caffeine livecoding vs Cursor; remote screencast as Twitch layer |
 
-Show seeds: [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/) · [`philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm.yml)
+Show seeds: [`repo-shows/dan-ingalls/`](../../repo-shows/dan-ingalls/) · [`philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml)
 
 ---
 

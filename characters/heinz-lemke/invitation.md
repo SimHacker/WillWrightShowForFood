@@ -2,7 +2,7 @@
 status: invited
 character_id: heinz-lemke
 consent: not_yet_asked
-show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 ---
 
 # Repo Show invitation — Heinz U. Lemke
@@ -206,7 +206,7 @@ optional solo shows later).
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml) |
+| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 | **Don's pie-menu thread** (PIXIE credited) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/pie-menus-chi-88-and-beyond.md) |
 | ***Flight of the PIXIE*** (YouTube) | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **PIXIE paper** (PDF) | [donhopkins.com — PIXIE](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |

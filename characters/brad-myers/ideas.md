@@ -36,7 +36,7 @@ CHI '90 widget history video; Don's pie menu clips. **Central beat:** if Brad sh
 today (2026), what would the catalog include — touch, gestures, game UI, AI copilots, radial menus,
 marking menus, voice? What recording method (screen capture, runnable repo demos, MOOLLM skills as
 exhibit entries)? Compare to [Edd Coates](../edd-coates/) GUIDB 2.0 video arc (73k shipped screens).
-Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.yml).
+Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.yml).
 
 ### 3b. Pick, Click, Flick! — the book (recent edition)
 Walk the **published book** on air — not just the pie-menu section: taxonomy design, what made the
@@ -69,14 +69,14 @@ teaches the history of computer graphics and has students studying and *reincarn
 stepping Heinz's actual 1972 PDP-7 code in SIMH. Teaching UI history by testimony (sixteen
 pioneers in the room) vs by resurrection (the artifact running on the bench); PIXIE connects
 both classrooms, and Heinz could cameo.
-Seed: [`../../repo-shows/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms.yml)
+Seed: [`../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml`](../../repo-shows/brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml)
 
 ### 5. Pick, Click, Flick! (ixtbook.com) — the pie menus section
 
 ### 5b. Clipboard panel — Ted Nelson cut-and-paste rant × DSHR ICCCM
 Where does **paste** sit in Brad's interaction taxonomy vs Ted's *hide and plug*? Pair *All the
 Widgets* CHI'90 with [`../ted-nelson/sources/invisible-clipboard-rant-catalog.md`](../ted-nelson/sources/invisible-clipboard-rant-catalog.md).
-Show: [`../../repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml)
+Show: [`../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml)
 Brad's interaction-techniques bible — the whole history of how we point, select, and gesture, cataloged the way only Brad catalogs. It includes a **section on pie menus**: Don's own corner of the catalog, written by the historian he already traded 2023 email with about getting pie-vs-marking-menu history and accuracy right. Show beat: open the book to that section on air and let the subject annotate the history live — what the section gets right, what the community still gets wrong, and what belongs in the second edition.
 
 ### 6. Visual programming taxonomy
@@ -117,7 +117,7 @@ opposite methods — and games ship techniques years before papers describe them
 already know each other; the show makes the crosswalk explicit: trace radial menus through both
 catalogs, find what each is missing that the other has. Works **real-time or time-shifted** —
 annotated notes exchanged through the repo can BE the episode.
-→ Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs.md) ([yml](../../repo-shows/brad-and-edd-interaction-catalogs.yml))
+→ Pair seed: [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.md) ([yml](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.yml))
 
 ## Sources (public)
 

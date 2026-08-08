@@ -285,7 +285,7 @@ Priority for shared airtime or a later panel. Scott stays the hero guest; others
 |-------|----------------|------|
 | **Will Wright** | Microworlds, MediaGraph/Stupid Fun Club, Sims object-as-room energy; shared "systems that teach" | Co-guest or cold open |
 | **Parker** (Will family) | Fresh questions; may prefer off-camera topic/question coaching | Advisor / optional cameo |
-| **Don Woods** | The other Adventurer — Crowther/Woods cave ↔ Adventureland fork ([woods-and-adams seed](../../repo-shows/woods-and-adams-adventurers.yml)) | Paired show |
+| **Don Woods** | The other Adventurer — Crowther/Woods cave ↔ Adventureland fork ([woods-and-adams seed](../../repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml)) | Paired show |
 | **Jason Scott** | GET LAMP; archival love; disambiguation energy with warm humor | Co-guest or tape insert |
 | **Nick Montfort** | Academic IF / riddle machines; two-word parser as design | Co-guest (talk-heavy ep) |
 | **Richard Bartle** | MUD vs single-player engine; multi-user memory palaces | Future paired show |

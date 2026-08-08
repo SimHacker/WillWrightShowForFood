@@ -79,4 +79,4 @@ AskTog column in years — posted by Tog himself through a framework he can actu
 - [AskTog on Hacker News](https://news.ycombinator.com/from?site=asktog.com)
 - [A Quiz Designed to Give You Fitts](https://www.asktog.com/columns/022DesignedToGiveFitts.html)
 
-↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog.md)
+↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog/ask-tog.md)

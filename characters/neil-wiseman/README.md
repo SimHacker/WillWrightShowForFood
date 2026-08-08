@@ -36,6 +36,6 @@ fabric of the laboratory."*
 | **John Hiles / Cheney / Etherton** (RAINBOW co-authors) | [`../john-hiles/`](../john-hiles/) · [`../cj-cheney/`](../cj-cheney/) · [`../m-etherton/`](../m-etherton/) |
 | **Memorial tribute** | [memorial.md](memorial.md) |
 | **Show hooks** | [ideas.md](ideas.md) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 
 Sources in [CHARACTER.yml](CHARACTER.yml). *We celebrate his documented public work; we do not speak as him.*

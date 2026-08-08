@@ -44,7 +44,7 @@ Review: [Geoff Walker, PenComputing 2002](http://www.pencomputing.com/palm/Pen44
 | [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md) | Touch Tuning + Finger Pies on Palm |
 | [`gesture-space.md`](gesture-space.md) | Self-revealing vs graffiti gestures |
 | [`../david-levitt/`](../david-levitt/README.md) | ConnectedMedia co-founder |
-| Show | [`../../repo-shows/connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml) |
+| Show | [`../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml) |
 
 ## Show seed hook
 

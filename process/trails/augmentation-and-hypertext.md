@@ -18,7 +18,7 @@ The forebears behind the show's **Player-in-the-Middle** tenet: Engelbart's *aug
 | [**Mark Weiser**](../../characters/mark-weiser/README.md) 🕯️ | Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial) |
 | [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | *The Humane Interface* — locus of attention; humane README overlay (memorial) |
 | [**Root README**](../../README.md) | Two-layer navigation — brutalist listing + humane README at every folder |
-| [**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin.yml) | Memorial seed for Jef (d. 2005) — connections listed, not invitations |
+| [**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml) | Memorial seed for Jef (d. 2005) — connections listed, not invitations |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + HyperTIES — augmentation in practice |
 | [**HyperTIES reincarnation**](../../characters/don-hopkins/hyperties-reincarnation.md) | Ben Shneiderman's HCIL hypermedia + Don's NeWS/PostScript version — bring it back pixel-perfect in the browser as a living emulator (Forth/MockLisp/C/markup/docs/NeWS PS + XML DBs) |
 | [**Player-in-the-Middle**](../crazy-idea-jam.yml) | Augmentation-not-automation = the PITM tenet |

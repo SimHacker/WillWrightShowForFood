@@ -1,5 +1,5 @@
 # MICROPOLIS AI DRAG RACE — flagship game-show variety format
-# Markup: DRAG-RACE.md (generated — pnpm run facades) | Show seed: ../repo-shows/micropolis-ai-drag-race.yml
+# Markup: DRAG-RACE.md (generated — pnpm run facades) | Show seed: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
 
 meta:
   id: micropolis-ai-drag-race
@@ -125,7 +125,7 @@ ties_to:
 
 see_also:
   - { path: DRAG-RACE.md, why: "Generated markup view" }
-  - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed" }
+  - { path: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Show seed" }
   - { path: ../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml, why: "Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts" }
   - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show trail" }
   - { path: code-that-spec.yml, why: "CODE THAT SPEC!!!!! chant" }

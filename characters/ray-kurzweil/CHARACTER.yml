@@ -25,7 +25,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   channel_note: "Facebook page Ray.Kurzweil.official — Don has mutual friends (Philip van Nedervelde, Anna Nachesa, Nicole Lazzaro, Pooky Amsterdam…); thekurzweillibrary.com contact as fallback"
-  show_seed: repo-shows/ray-kurzweil.yml
+  show_seed: repo-shows/ray-kurzweil/ray-kurzweil.yml
   also: repo-shows/REPO-SHOWS.yml   # marvin-minsky memorial discussant — see memorial_thread
 
 bio:

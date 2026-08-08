@@ -33,7 +33,7 @@ connections:
   wired: "First investor + back-page columnist of Wired — the magazine that put the First Wired Family (the Minskys) on record"
 
 show_suggestions:
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the institution-builder's view: what it took to build a roof over Marvin, Seymour, and Muriel" }
+  - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "Minsky memorial — the institution-builder's view: what it took to build a roof over Marvin, Seymour, and Muriel" }
   - { what: "Bits, atoms, and thirty years — Being Digital re-read in 2026: what he got right (streaming, personalization) and wrong (the Daily Me's politics)" }
   - { what: "OLPC postmortem with Walter Bender — constructionism at scale, what shipped, what broke" }
 

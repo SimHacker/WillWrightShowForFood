@@ -134,9 +134,9 @@ roster:
 linked_shows:
   solo_selker: repo-shows/ted-selker/
   ted_a_ted: repo-shows/ted-nelson/
-  unnatural_selection: repo-shows/unnatural-selection.yml
+  unnatural_selection: repo-shows/unnatural-selection/unnatural-selection.yml
   ken_kahn: repo-shows/ken-kahn/
-  pixie_pie_menus: repo-shows/pixie-pie-menus-pdp7.yml
+  pixie_pie_menus: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 
 dream_segments:
   - "Archive fishing — Ted Selker's seven years: what survives, what to digitize first"
@@ -163,4 +163,4 @@ ties_to:
   - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/
   - ../ted-selker/SHOW.yml
   - ../ted-nelson/SHOW.yml
-  - ../unnatural-selection.yml
+  - ../unnatural-selection/unnatural-selection.yml

@@ -8,7 +8,7 @@ meta:
   local_wrangling: ~/GroundUp/repo-show/
   local_source: ~/GroundUp/repo-show/sources/1996-04-26-winograd-interfacing-to-microworlds/source.mp4
   local_master: "~/Movies/Will Wright - Maxis - Interfacing to Microworlds - 1996-4-26.mp4"
-  show_seed: ../../../../repo-shows/will-wright-adorable-minutes.yml
+  show_seed: ../../../../repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml
   target_length: "tiered — see format_tiers in short-form-clips.yml"
   format_tiers:
     flagship: "90–120s"

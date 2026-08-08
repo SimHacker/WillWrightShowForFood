@@ -8,4 +8,4 @@
 - **Heinz Lemke's supervisor** — took on a university-less research student in 1967; Heinz remembers him on air
 - PIXIE 1969 co-author (Wiseman, Lemke, Hiles)
 
-Read next: [memorial](memorial.md) · [ideas](ideas.md) · [CHARACTER.yml](CHARACTER.yml) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7.yml)
+Read next: [memorial](memorial.md) · [ideas](ideas.md) · [CHARACTER.yml](CHARACTER.yml) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)

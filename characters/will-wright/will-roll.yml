@@ -10,7 +10,7 @@ library:
     He has heard this before. AGAIN. And again. With kindness.
 
   provenance:
-    specified_in: repo-shows/infodump.yml#cutaway_library
+    specified_in: repo-shows/infodump/infodump.yml#cutaway_library
     witness: don-hopkins
     years: "Maxis / The Sims era through decades of work and play"
     consent: |
@@ -61,8 +61,8 @@ library:
       what: "Full session — slates, bloopers, rare card — behind the scenes, not just atoms"
     pairs_with:
       - adorable-minutes.md
-      - repo-shows/infodump.yml
-      - repo-shows/will-wright-adorable-minutes.yml
+      - repo-shows/infodump/infodump.yml
+      - repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml
     inverse: |
       Adorable Minutes: Will infodumps (Care Bears at parties). Infodump show: Don infodumps;
       Will Roll cutaways. Same kindness, reversed speaker.

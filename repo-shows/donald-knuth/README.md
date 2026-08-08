@@ -16,7 +16,7 @@ on its copyright line ("Don Woods and Don Knuth"), author beside annotator: voca
 table → dwarves → the last lousy point. Woods is also the **warm path**: he saw Knuth at a SAIL
 reunion (~2025, *"getting frail but is still plenty sharp"*), and his own invitation went out
 31 Jul 2026. Ask Woods to vouch before any cold letter. Girder:
-[`don-woods-adventure.yml`](../don-woods-adventure.yml) → `dream_ensemble`.
+[`don-woods-adventure.yml`](../don-woods-adventure/don-woods-adventure.yml) → `dream_ensemble`.
 
 ## Materials
 

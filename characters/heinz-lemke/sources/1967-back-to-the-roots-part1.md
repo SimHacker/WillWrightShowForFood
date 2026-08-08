@@ -96,7 +96,7 @@ His closing line:
 
 ## Why this matters here
 
-This is the human root of everything the [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7.yml)
+This is the human root of everything the [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
 is trying to preserve — and it settles a few facts from Heinz's own hand: the
 authoritative **PIXIE paper citation** (Wiseman/Lemke/Hiles, I.E.E. International CAD
 Conference, Southampton, **1969**), the **1972** thesis, and the exact roles of
@@ -114,5 +114,5 @@ university-less German mathematician on the strength of one talk.
 | **Still-to-arrive attachments & assets** | [`../pull-in-gaps.md`](../pull-in-gaps.md) |
 | **Roy Eagleson** (asked for the storyline) | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | **Ivan Sutherland / Sketchpad** (north star) | [`../../ivan-sutherland/`](../../ivan-sutherland/) |
-| **PIXIE show** | [`../../../repo-shows/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 | ***Flight of the PIXIE*** | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |

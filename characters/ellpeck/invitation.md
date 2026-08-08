@@ -41,8 +41,8 @@ alongside it and send players to you.
 **And the queer lineage your game continues** — Tiny Life's matter-of-fact inclusivity isn't a
 side feature to this show, it's a thread with its own episodes:
 
-- [*Did The Sims Make You Gay?*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay.yml) — with Patrick J. Barrett III, who implemented same-sex romance in the original Sims and gave the world the E3 1999 kiss
-- [*I'm Queer, Therefore I Sim*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/im-queer-therefore-i-sim.yml) — Alexander Avila's essay and the 1,712-comment analysis
+- [*Did The Sims Make You Gay?*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml) — with Patrick J. Barrett III, who implemented same-sex romance in the original Sims and gave the world the E3 1999 kiss
+- [*I'm Queer, Therefore I Sim*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml) — Alexander Avila's essay and the 1,712-comment analysis
 - Tiny Life belongs in that conversation as the game where inclusivity is the default physics, not a patch — your seat in it is whatever shape you want.
 
 Your Praise page already has my sincere quote. Plumbella and James Turner said the quiet part out loud. You

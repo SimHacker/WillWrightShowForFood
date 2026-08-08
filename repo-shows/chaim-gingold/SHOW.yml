@@ -20,7 +20,7 @@ precedent:
 
 natural_pair:
   with: sam-arbesman
-  seed: repo-shows/sam-arbesman-maxis-labs.yml
+  seed: repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml
   why: |
     Chaim introduced Sam to Don (Jul 2024). Historian × complexity scientist on the same Maxis
     spine: Building SimCity documents what Maxis was; Maxis 2.0 / Maxis Labs 2 asks what comes
@@ -46,5 +46,5 @@ ties_to:
   - ../../characters/chaim-gingold/
   - ../../characters/sam-arbesman/
   - ../../characters/will-wright/
-  - ../sam-arbesman-maxis-labs.yml
+  - ../sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml
   - ../../characters/will-wright/sources/2024-building-simcity-chaim-intro/

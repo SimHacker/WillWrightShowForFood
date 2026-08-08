@@ -62,7 +62,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Connect virtual-world heritage to MOOLLM microworlds on air.
-  verifiable: repo-shows/philip-rosedale-hifi-moollm.yml
+  verifiable: repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml
   combos_with: []
 - id: YAML-JAZZ
   name: YAML Jazz

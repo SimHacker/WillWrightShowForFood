@@ -76,7 +76,7 @@ segments:
   ensemble_guests:
     - { id: will-wright, mode: [co_guest, cold_open], why: "microworlds, MediaGraph" }
     - { id: parker-will-family, mode: [advisor_offmic, optional_cameo], why: "topic/question suggestions; privacy first-name-only" }
-    - { id: don-woods, mode: [paired_show], seed: repo-shows/woods-and-adams-adventurers.yml }
+    - { id: don-woods, mode: [paired_show], seed: repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml }
     - { id: jason-scott, mode: [co_guest, tape_insert], why: "GET LAMP, archive love" }
     - { id: nick-montfort, mode: [co_guest], why: "IF craft, riddle machines" }
     - { id: richard-bartle, mode: [future_pair], why: "MUD vs single-player engine" }

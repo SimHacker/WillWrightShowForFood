@@ -5,7 +5,7 @@ meta:
   character: ted-nelson
   curated_by: don-hopkins
   consent: not_yet_asked
-  show: ../../../repo-shows/selections-icccm-clipboard.yml
+  show: ../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml
   companion: invisible-clipboard-rant-catalog.md
 
 position_summary: |
@@ -91,4 +91,4 @@ show_beats:
 see_also:
   - ../ideas.md
   - ../../david-rosenthal/selection-clipboard-lineage.md
-  - ../../../repo-shows/selections-icccm-clipboard.yml
+  - ../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml

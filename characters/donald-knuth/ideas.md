@@ -38,7 +38,7 @@ one, pirate vs thief, bird vs canary, pit vs grue, dwarves vs cyclops, the robot
 [MDL source](https://github.com/itafroma/zork-mdl))
 
 Wiring: [Don Woods room](../don-woods/) · [correspondence digest](../don-woods/sources/correspondence-digest.md) ·
-[don-woods-adventure seed](../../repo-shows/don-woods-adventure.yml) (dream ensemble)
+[don-woods-adventure seed](../../repo-shows/don-woods-adventure/don-woods-adventure.yml) (dream ensemble)
 
 ## 1. Literate programming × Repo Show
 

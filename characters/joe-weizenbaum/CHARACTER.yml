@@ -54,5 +54,5 @@ see_also:
   - { path: ../heinz-lemke/, why: "MIT 1969 meeting; model science" }
   - { path: ../leo-joskowicz/, why: "CARS 2027 ELIZA session" }
   - { path: ../mario-cypko/, why: "Quotes Weizenbaum human-not-machine in Model-Guided Medicine" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Two-episode Weizenbaum arc in show seed" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Two-episode Weizenbaum arc in show seed" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial protocol" }

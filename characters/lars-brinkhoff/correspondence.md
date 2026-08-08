@@ -64,7 +64,7 @@ Async 1-on-1 videos whenever convenient; Don interlinks directories, artifacts, 
 |------|-----|
 | [invitation.md](invitation.md) | PIXIE trio invitation |
 | [ideas.md](ideas.md) | Emulation + interview hooks |
-| [../../repo-shows/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7.yml) | Show seed — async production |
+| [../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) | Show seed — async production |
 | [../heinz-lemke/correspondence.md](../heinz-lemke/correspondence.md) | Trio invitation thread |
 | [../david-rosenthal/correspondence.md](../david-rosenthal/correspondence.md) | Trio logistics + scope |
 | [../douglas-engelbart/](../douglas-engelbart/) | Mouse + keyset PDP-10 hook |

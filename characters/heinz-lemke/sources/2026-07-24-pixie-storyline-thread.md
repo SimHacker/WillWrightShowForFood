@@ -91,4 +91,4 @@ Provenance he gives for the 1967 document:
 - Ask Heinz whose hand wrote "how about steered beams?" on leaf 3 of the 1967 doc.
 - Alan's eureka-anecdotes answer → potential solo segment.
 
-↑ [THREAD-INDEX](THREAD-INDEX.md) · [character README](../README.md) · [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7.yml)
+↑ [THREAD-INDEX](THREAD-INDEX.md) · [character README](../README.md) · [PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)

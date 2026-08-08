@@ -79,7 +79,7 @@ See [`ideas.md`](ideas.md). Draft invitation: [`invitation.md`](invitation.md).
 | **Alan Kay** (Utah witness) | [`../alan-kay/`](../alan-kay/) |
 | **Roy Eagleson** (UWO PIXIE re-implementation) | [`../roy-eagleson/`](../roy-eagleson/) |
 | **Lars Brinkhoff** (SIMH PDP-7/340) | [`../lars-brinkhoff/`](../lars-brinkhoff/) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 | **16 Jul thread** | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
 | **Thread index** | [`../heinz-lemke/sources/THREAD-INDEX.md`](../heinz-lemke/sources/THREAD-INDEX.md) |
 

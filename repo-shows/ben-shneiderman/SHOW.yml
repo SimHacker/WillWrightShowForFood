@@ -26,11 +26,11 @@ why_ben:
   cs547: "Terry Winograd CS547 — The Eyes Have It (1998); Leonardo's Laptop (2000)."
 
 related_shows:
-  - ../ben-and-heinz-pie-menus.yml
-  - ../pixie-pie-menus-pdp7.yml
+  - ../ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml
+  - ../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   - ../pie-menus-retrospective.yml
   - ../news-postscript-window-system.yml
-  - ../remembering-mark-weiser.yml
+  - ../remembering-mark-weiser/remembering-mark-weiser.yml
   - ../terry-winograd/
 
 episodes:
@@ -65,7 +65,7 @@ episodes:
       - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
       - ../../characters/don-hopkins/sources/1991-09-pie-menus-buxton-ddj-draft.md
       - ../../characters/ben-shneiderman/media/from-mail/paper-callahan-hopkins-pie-menus-chi1988.pdf
-      - ../ben-and-heinz-pie-menus.yml
+      - ../ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml
 
   - id: eyes-have-it
     title: "The Eyes Have It — info viz + dynamic queries"
@@ -82,7 +82,7 @@ episodes:
       Memorial mode — Ben as documented co-author discusses Mark's pie-menu work, ubicomp, calm tech
       vs direct manipulation framing. Async clips OK.
     artifacts:
-      - ../remembering-mark-weiser.yml
+      - ../remembering-mark-weiser/remembering-mark-weiser.yml
       - ../../characters/mark-weiser/ideas.md
 
   - id: human-centered-ai

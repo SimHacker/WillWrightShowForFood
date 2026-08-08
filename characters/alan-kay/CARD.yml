@@ -136,7 +136,7 @@ see_also:
   why: Show hooks
 - path: people-index.yml
   why: from-alan-kay cross-index
-- path: ../../repo-shows/alan-kay-microworld.yml
+- path: ../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml
   why: Primary show seed
-- path: ../../repo-shows/remembering-vanessa-freudenberg.yml
+- path: ../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
   why: Memorial arc

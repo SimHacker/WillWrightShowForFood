@@ -19,7 +19,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/ben-cerveny.yml
+  show_seed: repo-shows/ben-cerveny/ben-cerveny.yml
 
 bio:
   summary: |

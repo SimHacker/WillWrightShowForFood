@@ -142,7 +142,7 @@ light_pen_bureau_sponsor:
   amazon_storefront: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#amazon_storefront
 
 pixie_pie_menus_pdp7:
-  show_seed: ../../repo-shows/pixie-pie-menus-pdp7.yml
+  show_seed: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   roll_note: |
     On-air roll — pick ~8–10 per episode from this curated set. Overflow plugs live in
     ground_up_software.consulting_plugs; Engelbart alternates in light_pen_bureau_sponsor.engelbart.gag_credit_lines.
@@ -221,4 +221,4 @@ see_also:
   - ../../process/post-production/cambridge-telecine-jiggle.yml
   - ../../characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md
   - ../../characters/don-hopkins/career/work-history.yml
-  - ../../repo-shows/pixie-pie-menus-pdp7.yml
+  - ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml

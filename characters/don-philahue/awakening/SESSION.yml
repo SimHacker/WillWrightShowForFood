@@ -147,7 +147,7 @@ corrections:
     refs:
       - moollm/skills/change-name/
       - moollm/designs/prestoration/
-      - repo-shows/remembering-vanessa-freudenberg.yml
+      - repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
   - id: speaker-attribution
     was: "AWAKENING.md speaker labels read 'DON' — ambiguous with Don Hopkins"
     now: "DON PHILAHUE — the character performing; Don Hopkins reads him aloud in his physical (physiological, not mental) voice"

@@ -46,7 +46,7 @@ trails:
       - { path: code-that-spec.yml, why: "Audience chant game — bid tokens or time" }
       - { path: homefun-grading.yml, why: "Repo Show — commit message vs thinking blocks" }
       - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
-      - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
+      - { path: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
 
   retrocomputing_drive:
     k_line: "CODE THAT SPEC on your platform"
@@ -201,7 +201,7 @@ trails:
       - { path: ../characters/hugh-daniel/, why: "🕯️ Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial)" }
       - { path: ../characters/mark-weiser/, why: "🕯️ Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial)" }
       - { path: ../characters/jef-raskin/, why: "🕯️ The Humane Interface — locus of attention; humane README overlay echo (memorial)" }
-      - { path: ../repo-shows/remembering-jef-raskin.yml, why: "Memorial seed — possible_discussants are connections only, not invitations" }
+      - { path: ../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml, why: "Memorial seed — possible_discussants are connections only, not invitations" }
       - { path: ../README.md, why: "Root two-layer navigation essay — brutalist listing + humane README" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + HyperTIES — augmentation in practice" }
       - { path: crazy-idea-jam.yml#player_in_the_middle, why: "Augmentation-not-automation = the PITM tenet" }
@@ -243,7 +243,7 @@ trails:
     nodes:
       - { path: ../characters/alan-kay/, why: "Smalltalk, true object-orientation, late binding, the Dynabook" }
       - { path: ../characters/david-ungar/, why: "Self — prototypes and mirrors; adaptive simplicity" }
-      - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM — directories as prototypes, Stage Magic Principle" }
+      - { path: ../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml, why: "Self × MOOLLM — directories as prototypes, Stage Magic Principle" }
       - { path: ../characters/james-gosling/, why: "NeWS/SunDew, Gosling Emacs, Java — network window systems before X11" }
       - { path: ../characters/arthur-van-hoff/, why: "GoodNeWS → HyperLook (a NeWS HyperCard), PdB compiler, early Java/HotJava" }
       - { path: ../characters/david-rosenthal/, why: "NeWS with Gosling + X11 ICCCM; The NeWS Book; LOCKSS preservation" }
@@ -323,7 +323,7 @@ trails:
       - { path: ../characters/robots/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }
       - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
-      - { path: ../repo-shows/david-ungar-self-moollm.yml, why: "Self × MOOLLM — Stage Magic, Idea Scavenging" }
+      - { path: ../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml, why: "Self × MOOLLM — Stage Magic, Idea Scavenging" }
       - { path: ../characters/will-wright/CARD.yml, why: "Procedural creatures, gallium voxel worlds" }
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }
       - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack — homomorphic jam" }

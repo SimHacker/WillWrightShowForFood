@@ -58,6 +58,6 @@ Heinz notes Roy Eagleson met Joskowicz at **CARS 2026 Nagoya**.
 | **Heinz** | [`../heinz-lemke/`](../heinz-lemke/) |
 | **Mario Cypko** | [`../mario-cypko/`](../mario-cypko/) |
 | **Roy Eagleson** | [`../roy-eagleson/`](../roy-eagleson/) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
 
 [CHARACTER.yml](CHARACTER.yml) · [ideas.md](ideas.md) · [invitation.md](invitation.md)

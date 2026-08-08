@@ -30,7 +30,7 @@ connections:
   reunion: "Production angle on pools, censorship tone, QA pathologies — async welcome."
 
 show_suggestions:
-  - { seed: ../../repo-shows/building-the-sims.yml, what: "Sims team reunion — what reached the producer's desk." }
+  - { seed: ../../repo-shows/building-the-sims/building-the-sims.yml, what: "Sims team reunion — what reached the producer's desk." }
 
 sources:
   - ../../characters/will-wright/media/sims-series-maxis-people.md

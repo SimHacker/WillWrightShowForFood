@@ -14,7 +14,7 @@ sources:
     - ../alan-kay/correspondence.yml  # Qwaq visit 2008
     - ../alan-kay/media/from-mail/REVIEW.yml  # qwaq-2008 thread
   show:
-    - ../../repo-shows/remembering-vanessa-freudenberg.yml
+    - ../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
     - ../../repo-shows/craig-latta/
 
 show_hooks:

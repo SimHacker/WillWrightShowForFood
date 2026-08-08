@@ -471,7 +471,7 @@ The **Keyboard-first editing** namespace paragraph is the MOOLLM constitution in
 
 Written in 1996 for a visual dataflow language that never shipped as one product — but the **addressing model** is what MOOLLM runs on today.
 
-→ [`import-self-from-self.md`](import-self-from-self.md) · [MOOLLM](https://github.com/SimHacker/moollm) · [Self × MOOLLM](../../repo-shows/david-ungar-self-moollm.yml) · [moollm-compose trail](../../process/trails/moollm-compose.md)
+→ [`import-self-from-self.md`](import-self-from-self.md) · [MOOLLM](https://github.com/SimHacker/moollm) · [Self × MOOLLM](../../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) · [moollm-compose trail](../../process/trails/moollm-compose.md)
 
 ---
 

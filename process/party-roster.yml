@@ -30,7 +30,7 @@ right_away:
     - { id: ted-selker, show: repo-shows/ted-selker/, invite: send_now }
     - { id: david-ungar, show: repo-shows/david-ungar/, invite: send_now }
     - { id: edd-coates, show: repo-shows/edd-coates/, invite: send_now }
-    - { id: dan-ancona, show: repo-shows/dan-ancona-long-now.yml, invite: send_now, next: "★ Long Now 2006 SimCity asker — identified Jul 2026; invitation ready; ask Mark Live mystery" }
+    - { id: dan-ancona, show: repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml, invite: send_now, next: "★ Long Now 2006 SimCity asker — identified Jul 2026; invitation ready; ask Mark Live mystery" }
     - { id: ben-shneiderman, show: repo-shows/ben-shneiderman/, invite: send_ready, send_batch: hci-pie-hyperties-2026, next: "send — HyperTIES emulator + CHI'88; optional Heinz group" }
     - { id: clint-basinger, show: repo-shows/clint-basinger/, invite: send_ready, next: "audience bridge — Maxis/Sims fandom" }
 
@@ -119,7 +119,7 @@ right_away:
     - { id: ken-kahn, show: repo-shows/ken-kahn/, invite: draft, next: "ToonTalk / constructionism" }
     - { id: matthew-sibigtroth, show: repo-shows/matthew-sibigtroth/, invite: draft, next: "flesh show" }
     - { id: richard-bartle, show: repo-shows/richard-bartle/, invite: draft, next: "MUD / virtual worlds" }
-    - { id: sam-arbesman, show: repo-shows/sam-arbesman-maxis-labs.yml, invite: draft, next: "send invitation — Maxis Labs 2 × Microcosm; Chaim intro fulfilled" }
+    - { id: sam-arbesman, show: repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml, invite: draft, next: "send invitation — Maxis Labs 2 × Microcosm; Chaim intro fulfilled" }
     - { id: steve-wozniak, show: repo-shows/steve-wozniak/, invite: draft, next: "Apple II kickoff planted?" }
     - { id: terry-winograd, show: repo-shows/terry-winograd/, invite: draft, next: "CS547 dragon archive" }
     - { id: thomas-cherryhomes, show: repo-shows/thomas-cherryhomes/, invite: draft, next: "FujiNet + PLATO" }

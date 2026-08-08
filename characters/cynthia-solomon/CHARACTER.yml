@@ -32,7 +32,7 @@ connections:
 
 show_suggestions:
   - { seed: ../../repo-shows/cynthia-solomon/, what: "A guided screening + conversation through her video treasure trove — the origin of Logo and turtle geometry, the MIT Logo culture, and the Atari Cambridge children's-computer research — told by someone who was there." }
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "A natural discussant for the Piaget → Papert → Minsky memorial — she co-created Logo and can speak to the intent: children as builders of their own understanding." }
+  - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "A natural discussant for the Piaget → Papert → Minsky memorial — she co-created Logo and can speak to the intent: children as builders of their own understanding." }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Cynthia_Solomon"

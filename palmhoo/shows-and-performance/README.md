@@ -30,7 +30,7 @@ whole directory before the guest arrives. This shelf explains the theater itself
 | Entry | 🐒✋ Why you'd read it |
 |-------|----------------------|
 | [**Will Wright premiere**](../../repo-shows/will-wright-premiere/README.md) | The flagship. I have a seat and [eight questions, ordered deep → silly](../../repo-shows/will-wright-premiere/audience/palm/questions.yml). |
-| [**Design by Accretion (Chris Trottier)**](../../repo-shows/design-by-accretion.yml) | The method show — discusses accretion *and* demonstrates it live on MOOLLM. |
+| [**Design by Accretion (Chris Trottier)**](../../repo-shows/design-by-accretion/design-by-accretion.yml) | The method show — discusses accretion *and* demonstrates it live on MOOLLM. |
 | [**Gary Drescher**](../../repo-shows/gary-drescher/SHOW.yml) | Made-up minds, schema mechanisms, and the four-way question about where the making-up happens. |
 | [**Snap! / Logo — Brian Harvey & Jens Mönig**](../../repo-shows/snap-logo-brian-jens/README.md) | Pair show: turtle + morph, rings as quote, macros scorecard, Micropolis live — [my questions](../../repo-shows/snap-logo-brian-jens/audience/palm/questions.yml) filed. |
 | [**Brad Myers — Garnet & VPL**](../../repo-shows/brad-myers-garnet-vpl.yml) | Constraint UI archaeology — draw a Garnet KR relationship, then the same bond as `$derived` in Micropolis HUD. |

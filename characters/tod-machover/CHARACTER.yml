@@ -31,7 +31,7 @@ connections:
   premorial: "Death and the Powers = the premorializing opera — Simon Powers interring himself in The System while alive; Die Space and RAI territory, on the opera stage in 2010"
 
 show_suggestions:
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Minsky memorial — the Brain Opera story: turning Society of Mind into a building full of audience-played instruments" }
+  - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "Minsky memorial — the Brain Opera story: turning Society of Mind into a building full of audience-played instruments" }
   - { what: "Music-machines ensemble — Machover (hyperinstruments) × David Levitt (computational jazz) × Ray Kurzweil (K250) × Jerry Martin (Sims scores): four answers to 'can machines make music expressive?'" }
   - { what: "Premorializing double bill — Death and the Powers × Die Space (keez-duyves) × RAI (ray-kurzweil): uploading yourself before you die, as opera, performance art, and product" }
 

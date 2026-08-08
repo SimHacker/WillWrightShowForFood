@@ -60,5 +60,5 @@ see_also:
   - { path: ../terry-winograd/media/cs547-ARCHIVE.md, why: "CS547 catalog — Raskin guest entry" }
   - { path: humane-interface-and-this-repo.md, why: "Two-layer navigation + Raskin synthesis" }
   - { path: ../../process/character-colocation.yml, why: "github_ux — directory listing vs README-only URL" }
-  - { path: ../../repo-shows/remembering-jef-raskin.yml, why: "Group memorial show seed" }
+  - { path: ../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml, why: "Group memorial show seed" }
   - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "How memorial guests are handled" }

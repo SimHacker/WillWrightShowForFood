@@ -8,8 +8,8 @@ until he says it on air.*
 
 | Seed | Role |
 |------|------|
-| [`im-queer-therefore-i-sim`](../../repo-shows/im-queer-therefore-i-sim.yml) | **Solo talk** — Alex + Don on essay + 1,712 comments + theory |
-| [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay.yml) | Patrick engine room; Alex as congregation voice (can cross-cut) |
+| [`im-queer-therefore-i-sim`](../../repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml) | **Solo talk** — Alex + Don on essay + 1,712 comments + theory |
+| [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml) | Patrick engine room; Alex as congregation voice (can cross-cut) |
 
 ## MOOLLM homework (already done — discuss on air)
 

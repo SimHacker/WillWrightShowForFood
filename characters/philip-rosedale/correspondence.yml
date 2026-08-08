@@ -41,7 +41,7 @@ connects_in_repo:
   - { path: CHARACTER.yml, why: "Bio + invitation status" }
   - { path: ../dan-ingalls/, why: "Live-web bridges comparison thread" }
   - { path: ../will-wright/, why: "Sims / character simulation lineage" }
-  - { path: ../../repo-shows/philip-rosedale-hifi-moollm.yml, why: "Show seed" }
+  - { path: ../../repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml, why: "Show seed" }
 
 show_hooks:
   - "Worklist era — how distributed JS plugins actually shipped in a virtual world"

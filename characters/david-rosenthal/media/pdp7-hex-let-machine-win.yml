@@ -34,7 +34,7 @@ lem_parallel:
     — model collapse, LLMs eating their own output, Elias Thorne lighthouse virus.
 
 repo_orbit:
-  pixie_show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+  pixie_show: ../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   correspondence: ../correspondence.md
   character: ../CHARACTER.yml
 

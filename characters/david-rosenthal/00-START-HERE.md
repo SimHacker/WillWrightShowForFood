@@ -24,6 +24,6 @@
 - [`window-systems-lineage.md`](window-systems-lineage.md) — Andrew → NeWS → X11
 - [`ideas.md`](ideas.md) — all conversation hooks
 
-**Show seed:** [`../../repo-shows/unnatural-selection.yml`](../../repo-shows/unnatural-selection.yml)
+**Show seed:** [`../../repo-shows/unnatural-selection/unnatural-selection.yml`](../../repo-shows/unnatural-selection/unnatural-selection.yml)
 
 ↑ [README](README.md)

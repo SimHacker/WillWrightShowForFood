@@ -68,7 +68,7 @@ hn_provenance:
 
 shows:
   pixie_pie_menus_pdp7:
-    seed: repo-shows/pixie-pie-menus-pdp7.yml
+    seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
     why: "Native fit — intercut 1969 film, Bumblebee edit, live emulator; graphics must match archive"
     guests: [heinz-lemke, david-rosenthal, lars-brinkhoff]
     graphic_ideas:

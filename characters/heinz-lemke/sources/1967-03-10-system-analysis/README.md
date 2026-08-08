@@ -79,4 +79,4 @@ whose hand it is.
 - Companion to the [PIXIE assembler source recovery](../../pixie-source-recovery.md):
   the EXECUTIVE described here in prose is what the 5000-word listing implements.
 
-↑ [character README](../../README.md) · [pull-in-gaps](../../pull-in-gaps.md) · [PIXIE show](../../../../repo-shows/pixie-pie-menus-pdp7.yml)
+↑ [character README](../../README.md) · [pull-in-gaps](../../pull-in-gaps.md) · [PIXIE show](../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)

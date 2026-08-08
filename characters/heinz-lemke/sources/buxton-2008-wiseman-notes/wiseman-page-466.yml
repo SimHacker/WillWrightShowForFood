@@ -59,4 +59,4 @@ see_also:
   - { path: README.md, why: "Provenance + editorial context (the 2008 one-way information flow)" }
   - { path: ../2026-07-30-pixie-storyline-thread.md, why: "Heinz's draftsman origin story for the same radial menus" }
   - { path: ../newman-sproull-ref-520-movable-menu.yml, why: "Newman & Sproull's citation of the same menu" }
-  - { path: ../../../../repo-shows/pixie-pie-menus-pdp7.yml, why: "The show this evidence feeds" }
+  - { path: ../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "The show this evidence feeds" }

@@ -8,7 +8,7 @@ meta:
   consent: not_yet_asked
   human_readable: selection-clipboard-lineage.md
   guests: [ted-nelson, david-rosenthal]
-  show: ../../repo-shows/unnatural-selection.yml
+  show: ../../repo-shows/unnatural-selection/unnatural-selection.yml
   alvey_1985: window-systems-lineage.md#alvey-workshop-1985
 
 nomenclature_wild_west:
@@ -197,5 +197,5 @@ see_also:
   - { path: window-systems-lineage.md, why: "Andrew → NeWS → X11 arc" }
   - { path: ideas.md, why: "Hook §9 selections show" }
   - { path: ../../characters/ted-nelson/ideas.md, why: "Clipboard rant §5" }
-  - { path: ../../repo-shows/unnatural-selection.yml, why: "Show seed (alias selections-icccm-clipboard)" }
+  - { path: ../../repo-shows/unnatural-selection/unnatural-selection.yml, why: "Show seed (alias selections-icccm-clipboard)" }
   - { path: ../../characters/don-hopkins/sources/1991-09-news-tnt-icccm-death-match.md, why: "NeWS ICCCM politics" }

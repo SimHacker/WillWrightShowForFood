@@ -45,7 +45,7 @@ repertoire:
       wwsff:
         - ../../process/guest-participation-ladder.md#no-reflexive-submissions
         - ../../schemas/portrayal-standards.md#subject-rights
-        - ../../repo-shows/infodump.yml
+        - ../../repo-shows/infodump/infodump.yml
     tagline: "Fuck 'em if they can't take a score."
 
   pie_menus:

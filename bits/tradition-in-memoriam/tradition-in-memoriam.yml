@@ -60,7 +60,7 @@ the_memoriam:
 
 already_memorialized_elsewhere:
   douglas_engelbart:
-    see: ../../repo-shows/remembering-douglas-engelbart.yml
+    see: ../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
     note: "Has his own memorial show + character memorial; listed here for completeness, not duplicated."
 
 grows_carefully: |
@@ -71,4 +71,4 @@ ties:
   - ../../characters/brian-eno/bowie-snl-1979.md
   - ../../characters/nina-hagen/ideas.md
   - ../../characters/don-hopkins/cats.yml
-  - ../../repo-shows/remembering-douglas-engelbart.yml
+  - ../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml

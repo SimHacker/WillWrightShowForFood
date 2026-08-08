@@ -1,0 +1,10 @@
+# PLANTED → repo-shows/david-ungar/
+# This seed file is retained as an alias for cross-links. Canonical show: ../david-ungar/SHOW.yml
+
+show:
+  id: david-ungar-self-moollm
+  planted_at: ../david-ungar/
+  status: planted
+  redirect: ../david-ungar/
+
+note: "See repo-shows/david-ungar/ — Reflecting on Self: Narcissa's Mirror (Self × MOOLLM)"

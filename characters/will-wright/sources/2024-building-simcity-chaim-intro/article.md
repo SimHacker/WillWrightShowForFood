@@ -23,7 +23,7 @@ Chaim offered to connect Don to **Sam Arbesman** — complexity scientist, Maxis
 | Chaim Gingold | [chaim gingold](../../../chaim-gingold/README.md) |
 | Sam Arbesman | [sam arbesman](../../../sam-arbesman/README.md) |
 
-**Status:** Invitation + show seed — [sam arbesman](../../../sam-arbesman/README.md) · [sam arbesman maxis labs](../../../../repo-shows/sam-arbesman-maxis-labs.yml)
+**Status:** Invitation + show seed — [sam arbesman](../../../sam-arbesman/README.md) · [sam arbesman maxis labs](../../../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml)
 
 **Ten days later:** Will interviewed Chaim live on ROMchip's Twitch (19 Jul 2024) about the book —
 [`romchip-will-wright-2024.md`](../../../chaim-gingold/sources/romchip-will-wright-2024.md)

@@ -62,7 +62,7 @@ facades:
       - challenges/apple2-drive.yml
       - challenges/pdp10-maclisp-drive.yml
       - challenges/lisp-machine-hack-off.yml
-      - ../repo-shows/micropolis-ai-drag-race.yml
+      - ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml
 
   - id: ai-offs
     source: ai-offs.yml

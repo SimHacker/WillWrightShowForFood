@@ -176,7 +176,7 @@ Declare your class honestly. Weight class, not banishment — same shape Don use
 | **Vibe coders** | AI-forward flow — declare it; man-vs-machine and dance-off optional. |
 | **Budget bull riders** | Tight token budget; wrangle smaller models through hallucinations and retries. Real skill. |
 | **Stick shift switchers** | Multi-model routing — shift at the right moment; timestamped spend log as proof. |
-| **Consciencious objectors** | Don coined this at a Kaleida meetup with [David Ungar](../characters/david-ungar/) — programmers who conscientiously object to replacing hand craft with opaque automation. See [Self × MOOLLM show seed](../repo-shows/david-ungar-self-moollm.yml). |
+| **Consciencious objectors** | Don coined this at a Kaleida meetup with [David Ungar](../characters/david-ungar/) — programmers who conscientiously object to replacing hand craft with opaque automation. See [Self × MOOLLM show seed](../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml). |
 
 Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](DRAG-RACE.md) · [Manual Transmission](MANUAL-TRANSMISSION.md). Full spectrum: [repo-show-format.yml — rig_spectrum](repo-show-format.yml#rig_spectrum) · [FORMAT.md](FORMAT.md).
 

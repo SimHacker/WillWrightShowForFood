@@ -20,7 +20,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 
 bio:
   summary: |

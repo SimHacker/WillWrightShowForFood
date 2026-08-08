@@ -68,8 +68,8 @@ hyperties:
 
 show_suggestions:
   - { seed: ../../repo-shows/ben-shneiderman/, what: "Series — HyperTIES emulator flagship + CHI'88 + info viz" }
-  - { seed: ../../repo-shows/ben-and-heinz-pie-menus.yml, what: "Group — Ben + Heinz Lemke (PIXIE → CHI'88)" }
-  - { seed: ../../repo-shows/remembering-mark-weiser.yml, what: "Memorial discussant — CHI'88 table" }
+  - { seed: ../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml, what: "Group — Ben + Heinz Lemke (PIXIE → CHI'88)" }
+  - { seed: ../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml, what: "Memorial discussant — CHI'88 table" }
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Ben_Shneiderman"

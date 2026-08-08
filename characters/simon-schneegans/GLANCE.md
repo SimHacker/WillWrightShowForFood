@@ -6,7 +6,7 @@
 **Desktop Cube**, **CosmoScout VR**.
 
 **Invitation:** draft — [invitation.md](invitation.md). Ensemble option:
-[Ben + Heinz pie-menu history](../../repo-shows/ben-and-heinz-pie-menus.yml) — 1969 PIXIE → CHI '88 → Kando.
+[Ben + Heinz pie-menu history](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml) — 1969 PIXIE → CHI '88 → Kando.
 
 Don championed him on HN since [2018](https://news.ycombinator.com/item?id=17106453);
 [Kando Show HN, Dec 2024](https://news.ycombinator.com/item?id=42525290).

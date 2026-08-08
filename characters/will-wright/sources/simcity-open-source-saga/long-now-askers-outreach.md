@@ -17,7 +17,7 @@ Stewart Brand (verbatim on recording): *"dan ancona and a mark live"* — two pe
 
 ## Dan Ancona — identified (high confidence) · **contact now**
 
-**Character room:** [dan ancona](../../../dan-ancona/) · **Invitation:** [`invitation.md`](../../../dan-ancona/invitation.md) · **Show seed:** [`dan-ancona-long-now.yml`](../../../../../../repo-shows/dan-ancona-long-now.yml)
+**Character room:** [dan ancona](../../../dan-ancona/) · **Invitation:** [`invitation.md`](../../../dan-ancona/invitation.md) · **Show seed:** [`dan-ancona-long-now.yml`](../../../../repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml)
 
 **Why this is the right Dan:** UCSB **Alexandria Digital Library / ADEPT** researcher (GIS + visualization, 2002–2004); academic email `ancona@alexandria.ucsb.edu` / `da@alexandria.ucsb.edu`. The SimCity question is exactly his lane — **political assumptions in rule-based spatial simulations**.
 

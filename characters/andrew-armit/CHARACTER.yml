@@ -20,7 +20,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/pixie-pie-menus-pdp7.yml
+  show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   note: |
     On PIXIE thread (Cc Jul 2026); active correspondent — barn archive email 16 Jul 2026.
     Async solo video fine; pair with Heinz or Alan Kay Utah beat.
@@ -66,7 +66,7 @@ sources:
     - "Lemke HU, Armit AP (1974): Advanced software techniques in computer graphics, GI 74"
 
 see_also:
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PDP-7 double feature — PIXIE + Multipatch" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "PDP-7 double feature — PIXIE + Multipatch" }
   - { path: ../heinz-lemke/, why: "ICON co-author; PDP-7 lab mate" }
   - { path: ../alan-kay/, why: "Utah witness; mutual dedication beat" }
   - { path: from-alan-kay.yml, why: "Kay — Coons patches on PDP-7; film hunt; July 2026 mail digest" }

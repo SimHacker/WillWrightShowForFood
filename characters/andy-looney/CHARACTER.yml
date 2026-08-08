@@ -36,7 +36,7 @@ connections:
 see_also:
   - { path: ../kristin-looney/, why: "Co-guest — Fluxx show pair" }
   - { path: sources/moollm-fluxx-links.yml, why: "MOOLLM experiment index" }
-  - { path: ../../repo-shows/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
+  - { path: ../../repo-shows/fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml, why: "Show seed" }
   - { path: ../../process/trails/the-card-game.md, why: "Card-game trail — Fluxx as rules-in-flux metaphor" }
 
 sources:

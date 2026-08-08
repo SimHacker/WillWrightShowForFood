@@ -50,4 +50,4 @@ ask him one question.
 - [Dasher project](http://www.inference.org.uk/dasher/)
 - [The Apple Tapes](https://www.mobygames.com/game/group/the-apple-tapes/)
 
-↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog.md)
+↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog/ask-tog.md)

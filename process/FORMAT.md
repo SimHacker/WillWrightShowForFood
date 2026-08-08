@@ -1,5 +1,5 @@
 <!-- GENERATED from `process/repo-show-format.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:245956aab43af045 -->
+<!-- content-sha256:7f6a0050581152f8 -->
 
 # Repo Show format
 
@@ -348,7 +348,7 @@ TextEdit to Emacs to VS Code and beyond; just no AI. We mean it; honesty appreci
   - conscientious_coders
 - **history:** Don coined consciencious objectors at a meetup with [David Ungar](../characters/david-ungar/) and Kaleida colleagues
 (ScriptX object-system era) — programmers who conscientiously object to opaque automation.
-Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm.yml) (Self × MOOLLM reimagination + rig culture).
+Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) (Self × MOOLLM reimagination + rig culture).
 - **bare_hands_welcome:** yes
 
 - **rig_classes:**

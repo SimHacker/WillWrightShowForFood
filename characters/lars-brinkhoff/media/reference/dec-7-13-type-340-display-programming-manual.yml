@@ -31,6 +31,6 @@ related_manuals:
     url: https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
 
 repo_links:
-  show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+  show: ../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   correspondence: ../../correspondence.yml
   ideas: ../../ideas.md

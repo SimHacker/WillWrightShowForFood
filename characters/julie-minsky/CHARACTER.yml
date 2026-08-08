@@ -33,7 +33,7 @@ family:
   in_laws: ["oliver-steele (Margaret's husband)", "milan-singh-minsky (Henry's wife)"]
 
 show_suggestions:
-  - { seed: ../../repo-shows/remembering-the-constructionists.yml, what: "Family voice in the Marvin memorial — the first wired family, all three children" }
+  - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "Family voice in the Marvin memorial — the first wired family, all three children" }
   - { seed: ../../repo-shows/openlaszlo/, what: "META-HTML prehistory beat — the web-application-language idea, eight years before LZX" }
 
 sources:

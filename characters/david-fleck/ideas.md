@@ -61,5 +61,5 @@ this story; he's the first cause.
 - **With Simon Schneegans**: the corporate radial menu vs. the open-source one —
   Wacom's driver feature and Kando, design constraints compared.
 
-Related: [invitation](invitation.md) · [show seed](../../repo-shows/david-fleck-pen-input.yml) ·
+Related: [invitation](invitation.md) · [show seed](../../repo-shows/david-fleck-pen-input/david-fleck-pen-input.yml) ·
 [film recovery saga](../heinz-lemke/sources/2019-2020-film-recovery-saga.md)

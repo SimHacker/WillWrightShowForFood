@@ -79,4 +79,4 @@ Toilet demo laughter · Calvin Syndrome bulldozer · Gaia face · five people to
 
 Full index: `short-form-clips.yml` → `jokes_and_memes`, `qa_and_don`, `draft`
 
-→ Show seed: [will wright adorable minutes](../../../../repo-shows/will-wright-adorable-minutes.yml)
+→ Show seed: [will wright adorable minutes](../../../../repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml)

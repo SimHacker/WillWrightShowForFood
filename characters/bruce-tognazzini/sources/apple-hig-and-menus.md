@@ -55,4 +55,4 @@ break the infinite edge. Both agree on the law; the conversation is about the ge
 - [Pie menus: CHI '88 and beyond](../../don-hopkins/pie-menus-chi-88-and-beyond.md)
 - [Brad Myers — ideas](../../brad-myers/ideas.md)
 
-↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog.md)
+↑ [Sources index](README.md) · [Tog's room](../README.md) · [Invitation](../invitation.md) · [Show seed](../../../repo-shows/ask-tog/ask-tog.md)

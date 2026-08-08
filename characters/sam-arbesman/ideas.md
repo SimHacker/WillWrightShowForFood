@@ -95,4 +95,4 @@ solo; Don weaves. **One-on-one** or **live** if scheduling allows. Sam suggests 
 - Chaim intro: [`../will-wright/sources/2024-building-simcity-chaim-intro/`](../will-wright/sources/2024-building-simcity-chaim-intro/README.md)
 - Chaim's book: [Building SimCity (MIT Press)](https://mitpress.mit.edu/9780262547482/building-simcity/)
 - Will 1996 anchor: [`../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/`](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/)
-- Show seed: [`../../repo-shows/sam-arbesman-maxis-labs.yml`](../../repo-shows/sam-arbesman-maxis-labs.yml)
+- Show seed: [`../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml`](../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml)

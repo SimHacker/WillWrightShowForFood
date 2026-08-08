@@ -11,7 +11,7 @@ kaleida_meetup:
   wwsff: ../../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
 
 show:
-  seed: repo-shows/david-ungar-self-moollm.yml
+  seed: repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml
   topic: "Self × MOOLLM reimagination + rig culture"
 
 sources:

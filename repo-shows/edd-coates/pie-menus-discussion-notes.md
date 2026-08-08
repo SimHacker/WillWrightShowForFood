@@ -68,7 +68,7 @@ Working document for the PieCraft episode. Screen-sharing, whiteboarding, follow
 - [Game UI Database](https://www.gameuidatabase.com/) live — especially bad radials, inventory traps, modal stacks worth rescuing
 - [PadCrafter](https://www.padcrafter.com/) — mock a mini front panel live if energy
 - [`pie-menus-chi-88-and-beyond.md`](../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md)
-- [PIXIE PDP-7 show](../pixie-pie-menus-pdp7.yml) · [Lars room](../../characters/lars-brinkhoff/)
+- [PIXIE PDP-7 show](../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) · [Lars room](../../characters/lars-brinkhoff/)
 - [MicropolisCore piecraft/](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft)
 - [GONZO-UI-MANIFEST.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md) — bridge skins + reinterpret table
 - **[Queer Oui for the Straight GUI](../../characters/don-hopkins/queer-oui-for-the-straight-gui.md)** — *Queer Oui* / *SaS→SaaS* whiteboard format

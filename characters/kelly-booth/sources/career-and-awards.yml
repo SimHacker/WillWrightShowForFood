@@ -127,7 +127,7 @@ conference_service:
 project_connections:
   pixie_thread:
     how: "Roy Eagleson Cc'd Kelly 9 Jul 2026 — credits him as HCI storytelling mentor"
-    show: ../../../repo-shows/pixie-pie-menus-pdp7.yml
+    show: ../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   why_wwsff:
     - "Roy teaches graphics history Sketchpad → PIXIE; Kelly shaped Roy's narrative HCI pedagogy"
     - "Menu layout + experimental HCI — direct lineage to pie menus retrospective and input-language shows"

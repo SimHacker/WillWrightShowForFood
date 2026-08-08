@@ -18,7 +18,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/simon-schneegans-pie-menus.yml
+  show_seed: repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml
 
 bio:
   summary: "**Simon Schneegans** — German developer and researcher who has been building and refining pie menus for well over a decade: thesis work on **Trace-Menus** and **Coral-Menus** (~2012), **Gnome-Pie** (the circular launcher for Linux, Vala/GTK/Cairo), **Fly-Pie** (its GNOME Shell successor), and now **Kando** — a cross-platform (Windows/macOS/Linux) open source marking/pie menu with a WYSIWYG editor, CSS themes, sound themes, and an achievement system. Also the author of beloved GNOME extensions (**Burn-My-Windows**, **Desktop Cube**) and a developer on **CosmoScout VR** at DLR."
@@ -46,6 +46,6 @@ sources:
 see_also:
   - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
   - { path: ideas.md, why: "Conversation hooks — the pie menu lineage show" }
-  - { path: ../../repo-shows/ben-and-heinz-pie-menus.yml, why: "The 1969-1988 pie menu prehistory pair — Simon is the living continuation" }
+  - { path: ../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml, why: "The 1969-1988 pie menu prehistory pair — Simon is the living continuation" }
   - { path: ../../repo-shows/pie-menus-retrospective.yml, why: "CHI '88 retrospective seed" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

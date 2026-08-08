@@ -28,11 +28,11 @@ engelbart:
   tribute: "Wrote 'A few words on Doug Engelbart' (2013-07-03) — the widely-cited plea to understand Engelbart's INTENT (augmenting collective human intellect) rather than reduce him to a feature list (mouse, hypertext)."
   url: "https://worrydream.com/Engelbart/"
   note: "Documented connection is this written tribute + his reading of the vision; a personal acquaintance with Engelbart is not established here."
-  joins_memorial: ../../repo-shows/remembering-douglas-engelbart.yml
+  joins_memorial: ../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 
 show_suggestions:
   - { seed: ../../repo-shows/bret-victor/, what: "Solo — explorable explanations + Micropolis legibility + patronage-vs-shipping" }
-  - { seed: ../../repo-shows/remembering-douglas-engelbart.yml, what: "Group tribute to Doug Engelbart with Ted Nelson, Alan Kay, Yoot Saito" }
+  - { seed: ../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml, what: "Group tribute to Doug Engelbart with Ted Nelson, Alan Kay, Yoot Saito" }
 
 sources:
   wikipedia: null              # not verified to exist; left null rather than guessed

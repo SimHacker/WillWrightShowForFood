@@ -43,7 +43,7 @@ woods_connection:
   copyright_line: "advent.w (1998) carries 'Copyright (C) 1998 by Don Woods and Don Knuth' — Knuth recast the game WITH its co-author's blessing, not around him."
   sail_reunion: "Woods, email to Don Hopkins (23 Jul 2025): 'I saw other other Don (DEK) not long ago at a SAIL reunion gathering. He's getting frail but is still plenty sharp.' — a living personal channel."
   intercal_hack: "In 2003 Knuth wrote an INTERCAL program and found 'a really cool hack' in the standard library's DIVISION ROUTINE, then wrote to Woods asking whether he or Lyon deserved the credit in TAOCP vol 4. Neither could remember. (2008 Computerworld interview.) Knuth engaged seriously with BOTH of Woods's masterpieces."
-  show_hook: "The literate adventure code reading — Woods + Knuth walking advent.w together, author beside annotator. See repo-shows/don-woods-adventure.yml (dream_ensemble) and ../don-woods/sources/correspondence-digest.md."
+  show_hook: "The literate adventure code reading — Woods + Knuth walking advent.w together, author beside annotator. See repo-shows/don-woods-adventure/don-woods-adventure.yml (dream_ensemble) and ../don-woods/sources/correspondence-digest.md."
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Donald_Knuth"
@@ -69,7 +69,7 @@ see_also:
   - { path: invitation.md, why: "Snail-mail draft invitation" }
   - { path: ideas.md, why: "Conversation hooks" }
   - { path: ../don-woods/, why: "Adventure co-author, advent.w co-copyright, warm personal channel (SAIL reunions)" }
-  - { path: ../../repo-shows/don-woods-adventure.yml, why: "Dream ensemble — the literate adventure code reading" }
+  - { path: ../../repo-shows/don-woods-adventure/don-woods-adventure.yml, why: "Dream ensemble — the literate adventure code reading" }
   - { path: sources/adventure-knuth/ANALYSIS.md, why: "Mission mapping" }
   - { path: sources/README.md, why: "Sources index" }
   - { path: ../nick-montfort/sources/riddle-machines.md, why: "Literary map of IF (Riddle Machines framing)" }

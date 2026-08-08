@@ -3,7 +3,7 @@ status: draft
 character_id: andrew-armit
 consent: not_yet_asked
 show_seeds:
-  - repo-shows/pixie-pie-menus-pdp7.yml
+  - repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
 ---
 
 # Repo Show invitation — Andrew Armit
@@ -89,4 +89,4 @@ No GitHub account required.
 
 — Don
 
-**Show seed:** [`repo-shows/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7.yml)
+**Show seed:** [`repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)

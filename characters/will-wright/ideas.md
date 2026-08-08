@@ -121,7 +121,7 @@ Rebuilding Transmogrifier / RugOMatic / **WigFabrik** (aka WigOMatic — ECG mul
 
 ### 11. The Adorable Will Wright Minutes
 Revive Will's 2008 one-minute lesson format — async Q&A, HN question pump, Care Bears corner.
-[Adorable Minutes](adorable-minutes.md) · [show seed](../../repo-shows/will-wright-adorable-minutes.yml)
+[Adorable Minutes](adorable-minutes.md) · [show seed](../../repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml)
 
 ### 12. Proto-Dollhouse at Kaleida (before Winograd)
 Will plugged his disk into Don's Mac at Kaleida **years before** the 1996 talk — not the first sighting,

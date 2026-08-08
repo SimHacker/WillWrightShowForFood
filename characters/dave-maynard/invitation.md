@@ -2,7 +2,7 @@
 
 **To:** David Maynard *(software-artist.com)*  
 **Subject:** Repo Show — Engelbart mouse, keyset, and the collectors who kept them alive  
-**Show:** [Remembering Douglas Engelbart](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart.yml)
+**Show:** [Remembering Douglas Engelbart](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml)
 
 ---
 

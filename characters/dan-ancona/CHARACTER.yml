@@ -21,7 +21,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/dan-ancona-long-now.yml
+  show_seed: repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml
   discovered: 2026-07-10
 
 long_now_2006:
@@ -58,5 +58,5 @@ see_also:
   - { path: ideas.md, why: "Episode hooks" }
   - { path: ../will-wright/sources/simcity-open-source-saga/long-now-askers-outreach.md, why: "Research dossier + clip" }
   - { path: ../will-wright/sources/simcity-open-source-saga/README.md, why: "Micropolis saga parent" }
-  - { path: ../../repo-shows/dan-ancona-long-now.yml, why: "Show seed" }
+  - { path: ../../repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml, why: "Show seed" }
   - { path: ../../process/ticket-pr.md, why: "Proto–TicketPR origin" }

@@ -3,7 +3,7 @@
 Reference for PIXIE emulation segment. Standards: [portrayal standards](../../schemas/portrayal-standards.md)  
 Machine index: [`pdp7-development.yml`](pdp7-development.yml) · **Updated:** 2026-07-03
 
-**Show:** [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7.yml)
+**Show:** [PIXIE trio](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
 
 ---
 

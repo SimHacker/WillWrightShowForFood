@@ -5,7 +5,7 @@ documented work; we do **not** interview him, speak as him, or invent his inner 
 People listed as "draw in" are **documented connections for planning**, not invitations — anyone
 living joins only with their own consent.*
 [Memorial standards](../../schemas/portrayal-standards.md#memorial-mode) · show seed:
-[`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
+[`../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml)
 
 ## What Mark did
 
@@ -37,7 +37,7 @@ everyware Mark warned about)? An honest, argumentative tribute.
 — Touch Tuning + Finger Pies on Palm; task-oriented UI in the dark. Honda ditching touchscreens
 ([HN 22738415](https://news.ycombinator.com/item?id=22738415)) and Norman's elderly-UI threads
 ([37902412](https://news.ycombinator.com/item?id=37902412)) are the same debate — show seed:
-[`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology.yml).
+[`connectedtv-calm-technology.yml`](../../repo-shows/connectedtv-calm-technology/connectedtv-calm-technology.yml).
 
 ### 3. The ubicomp prophecy — tabs, pads, boards → IoT / ambient
 Read the 1991 Scientific American piece as the map it turned out to be. What came true, what
@@ -75,7 +75,7 @@ garbage-collection research); how a lab turns a sci-fi hunch into a field.
 ### 8. The memorial itself — async clips, cut together
 Format note: record separate 1-on-1 remembrances whenever convenient for each person, interlink
 their material, and edit into one tribute in post. No synchronized call required.
-[`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
+[`../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml)
 
 ### 9. The living legacy — the award and the torchbearers
 Mark's name reaches new people every spring: the **Mark D. Weiser Excellence in Computing
@@ -106,6 +106,6 @@ died). A hopeful, forward-looking segment: not just what Mark did, but who he ke
 
 - [`CHARACTER.yml`](CHARACTER.yml) · [`memorial.md`](memorial.md) · [`GLANCE.md`](GLANCE.md)
 - Reading group: [`pkd-lem-ai-sf.md`](pkd-lem-ai-sf.md) · [`pkd-lem-ai-sf.yml`](pkd-lem-ai-sf.yml)
-- Show seed: [`../../repo-shows/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser.yml)
+- Show seed: [`../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml)
 - Wikipedia: [Mark Weiser](https://en.wikipedia.org/wiki/Mark_Weiser) · [Calm technology](https://en.wikipedia.org/wiki/Calm_technology)
 - "The Computer for the 21st Century" (Scientific American, 1991)
