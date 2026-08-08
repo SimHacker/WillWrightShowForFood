@@ -43,7 +43,7 @@ repo_orbit:
   fauxcast_essay: ../archives/2006-03-19-fauxcast-on-freedom.md
   open_source_readme: ../archives/2006-03-24-open-source-readme.md
   gags:
-    - ../ideas/gags/simfaux-repo-show-prototype.yml
+    - ../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml
   will_youtube_seed: ../../../characters/will-wright/sources/don-youtube-gRodlxUZ9SQ-simfaux/
 
 menagerie:

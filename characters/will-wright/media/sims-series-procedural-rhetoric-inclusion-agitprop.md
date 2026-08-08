@@ -35,8 +35,8 @@ Ask Bogost to react to:
 4. **Soul City** — federation publishing for artisanal UCC; procedural rhetoric as a **platform** feature, not one-off objects
 
 5. **How to Deconstruct the Cube** — optional segment with Ian:
-   - [Curiosity + Cow Clicker parody](../../ideas/gags/curiosity-cow-cube.yml) — keep real Curiosity dead; center is Bogost's cow (or Berkeley horse — "that's a cow")
-   - [Morningstar → Ashford → Bogost chain](../../ideas/gags/how-to-deconstruct-the-cube.yml) — engineer deconstruction meets procedural rhetoric
+   - [Curiosity + Cow Clicker parody](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml) — keep real Curiosity dead; center is Bogost's cow (or Berkeley horse — "that's a cow")
+   - [Morningstar → Ashford → Bogost chain](../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml) — engineer deconstruction meets procedural rhetoric
    - **Chip Morningstar**, ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html) (1993) — working builder survives postmodern conference
    - **Captain Kira Ashford** (MOOLLM adventure-4 Belter pirate, Expanse aesthetic) — homage *How to Incarnate Almost Anything*; reincarnate from `captain-ashford.yml`
    - Ask: Is distressed-moo click audio procedural rhetoric or cruelty with reverb? When Cow Clicker got popular anyway, is *that* the second joke?

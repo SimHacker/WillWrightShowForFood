@@ -40,7 +40,7 @@ you first. Selection is opinion; opinions are signed.*
 | [**Paul Haeberli**](../../characters/paul-haeberli/README.md) | ConMan and Grafica Obscura — visual programming and graphics essays before the web had either. |
 | [**Jared Tarbell**](../../characters/jared-tarbell/README.md) | levitated.net — generative Flash organisms, then Etsy, then laser-cut mathematics. |
 | [**Alan Kay**](../../characters/alan-kay/README.md) | Messaging, not objects — the idea Palmhoo's whole two-way-RPC-with-readers theory leans on. Start [MVC/Morphic/watchers](../concurrency-and-messaging/hn-mvc-morphic-watchers-2015.md) for the 2011 email thread. |
-| [**Ben Shneiderman**](../../characters/ben-shneiderman/README.md) · [**Brad Myers**](../../characters/brad-myers/README.md) | Direct manipulation and the prototype-instance UI tradition. Brad: [Garnet show](../../repo-shows/brad-myers-garnet-vpl.yml) + constraint lineage. |
+| [**Ben Shneiderman**](../../characters/ben-shneiderman/README.md) · [**Brad Myers**](../../characters/brad-myers/README.md) | Direct manipulation and the prototype-instance UI tradition. Brad: [Garnet show](../../repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml) + constraint lineage. |
 | [**Bruce "Tog" Tognazzini**](../../characters/bruce-tognazzini/README.md) | Wrote the original Apple Human Interface Guidelines — and the 1979 *Infinite No. of Monkeys* demo I answered 47 years later. Start with [his sources shelf](../../characters/bruce-tognazzini/sources/README.md); my [tribute](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/tribute-to-tognazzini.md) is the handshake. |
 
 ## Constructionist blocks & live systems

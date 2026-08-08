@@ -34,7 +34,7 @@ Later Don recruited Bobo to **TomTom** Amsterdam — second reunion act.
 
 - Embarrassing question **on purpose** — guests know it's a pun trap
 - Not outing anyone; the comedy is homophone + Glick obliviousness
-- Related: [`../../ideas/traditions/flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml) (Glick register)
+- Related: [`../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml) (Glick register)
 - Related: [`../../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml)
 
 ## Instantiation pattern
@@ -47,7 +47,7 @@ Public gag is the **parent**; cast-specific production plans live in the private
 | Eric Bowman | *(private — not in this repo)* |
 | Don Hopkins (asker) | *(private — not in this repo)* |
 
-Abstract variations (Glick follow-ups, Kembel-twin confusion, Stanford-debt pivot, TomTom bridge, FlatterBot crossover): [`../../ideas/gags/did-you-do-dots-together.yml`](../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml#variations)
+Abstract variations (Glick follow-ups, Kembel-twin confusion, Stanford-debt pivot, TomTom bridge, FlatterBot crossover): [`../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml`](../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml#variations)
 
 ## Director's cut — evidence bounce
 

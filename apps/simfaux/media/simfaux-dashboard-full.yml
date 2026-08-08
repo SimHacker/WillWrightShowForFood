@@ -10,7 +10,7 @@ artifact:
   sidecar_of: simfaux-dashboard-full.png
 
 gags:
-  - ../ideas/gags/simfaux-repo-show-prototype.yml
+  - ../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml
 
 see_also:
   - simfaux.yml

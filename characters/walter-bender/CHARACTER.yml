@@ -19,7 +19,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/walter-bender-olpc.yml
+  show_seed: repo-shows/walter-bender-olpc/SHOW.yml
   note: "OLPC Stone Soup, open-sourcing SimCity, skill-creation show"
 
 bio:

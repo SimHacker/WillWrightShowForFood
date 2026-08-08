@@ -10,7 +10,7 @@ artifact:
   sidecar_of: simfaux-the-me-show-youtube.png
 
 gags:
-  - ../ideas/gags/simfaux-repo-show-prototype.yml
+  - ../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml
 
 see_also:
   - simfaux.yml

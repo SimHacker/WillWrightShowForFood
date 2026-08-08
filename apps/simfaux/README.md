@@ -33,7 +33,7 @@ Frame: [`ORGANELLES.yml`](ORGANELLES.yml) ·
 | [`media/`](media/) | Screenshots + YAML specs |
 | [`archives/`](archives/) | Wayback / Drupal essays & README |
 | [`deploy.md`](deploy.md) | Runtime AV on **donhopkins.com** — not in this repo |
-| [`ideas/gags/`](ideas/gags/) | Show gag seeds |
+| [`../../bits/gag-simfaux-repo-show-prototype/`](../../bits/gag-simfaux-repo-show-prototype/) | Canonical gag; local stub in `ideas/gags/` |
 | [`SPIN-OUT.md`](SPIN-OUT.md) | Extract checklist for a dedicated SimFaux repo |
 
 ## Media policy

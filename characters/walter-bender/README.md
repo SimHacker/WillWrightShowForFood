@@ -10,6 +10,6 @@ ingredients to — and **EA was persuaded to contribute SimCity** (GPL-3, tradem
 Will's on-stage yes → Gilmore's spark → Don's skeptical-but-ask-anyway email → EA clearance — lives
 in [VISION.md § Documented seed](../../process/vision-and-ambition.md#documented-seed-open-source-simcity--olpc--micropolis).
 
-[Invitation](invitation.md) · [Show seed](../../repo-shows/walter-bender-olpc.yml)
+[Invitation](invitation.md) · [Show seed](../../repo-shows/walter-bender-olpc/SHOW.yml)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

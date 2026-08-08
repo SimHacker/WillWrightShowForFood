@@ -57,7 +57,7 @@ lineage:
   boogaloo_stu: "The energy reference — outrageous flamboyant cabaret, hand-made, completely sincere"
   cam6: "https://www.youtube.com/watch?v=LyLMHxRNuck — the CA storytelling ancestor; painting with rules as pigment"
 
-candidate_players:   # players, not contestants-as-users — see FORMAT.md#participation-policy
+candidate_players:   # players, not contestants-as-users — see repo-show-format.md#participation-policy
   - slug: don-hopkins
     why: "House performer — Space Inventory sets (Jerry Martin, Blamstrain performances)"
   - slug: tom-tjon-a-loi

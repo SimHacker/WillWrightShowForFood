@@ -47,7 +47,7 @@ this first, then branch to threads below.
 
 ## People & shows
 
-- [Walter Bender OLPC show](../../../../repo-shows/walter-bender-olpc.yml)
+- [Walter Bender OLPC show](../../../../repo-shows/walter-bender-olpc/SHOW.yml)
 - [Chaim Gingold](../../../chaim-gingold/README.md) — *Building SimCity*
 - [Don Hopkins career timeline](../../../don-hopkins/career/simcity-lineage.yml)
 - [1996 Winograd talk](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — data portability seed

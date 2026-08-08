@@ -27,7 +27,7 @@ dream_segments:
 
 pairings:
   - { with: openlaszlo/, why: "Group reunion — David Temkin + Henry Minsky + Don; AI-revived toolchain" }
-  - { with: brad-myers-garnet-vpl.yml, why: "Garnet constraints — the CMU ancestor of LZX's reactive UI" }
+  - { with: ../brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml, why: "Garnet constraints — the CMU ancestor of LZX's reactive UI" }
   - { with: david-rosenthal/slots-all-the-way-down.md, why: "Rosetta-table pole — instance/class as refactorable seam" }
 
 format:

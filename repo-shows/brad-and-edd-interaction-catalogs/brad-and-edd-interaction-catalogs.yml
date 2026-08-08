@@ -41,7 +41,7 @@ format:
 ties_to:
   - characters/brad-myers/
   - characters/edd-coates/
-  - repo-shows/brad-myers-garnet-vpl.yml
+  - repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml
   - repo-shows/edd-coates/
   - repo-shows/edd-coates/pie-menus-piecraft.yml
   - characters/don-hopkins/pie-menus-chi-88-and-beyond.md

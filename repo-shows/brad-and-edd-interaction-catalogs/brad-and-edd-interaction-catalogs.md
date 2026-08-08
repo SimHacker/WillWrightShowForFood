@@ -59,5 +59,5 @@ exchange-of-notes IS the show; live conversation is the bonus.
 
 - [Brad Myers](../../characters/brad-myers/) — [ideas](../../characters/brad-myers/ideas.md) · [invitation](../../characters/brad-myers/invitation.md)
 - [Edd Coates](../../characters/edd-coates/) — [ideas](../../characters/edd-coates/ideas.md) · [invitation](../../characters/edd-coates/invitation.md)
-- [Brad's solo seed](brad-myers-garnet-vpl.yml) · [Edd's show](../edd-coates/README.md) · [Pie episode](../edd-coates/pie-menus-piecraft.yml)
+- [Brad's solo seed](../brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml) · [Edd's show](../edd-coates/README.md) · [Pie episode](../edd-coates/pie-menus-piecraft.yml)
 - [Don's pie lineage](../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md)

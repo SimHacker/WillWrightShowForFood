@@ -77,7 +77,7 @@ summaries:
       - skills/repo-show/SKILL.md
       - repo-shows/
       - repo-shows/snap-logo-brian-jens/
-      - repo-shows/brad-myers-garnet-vpl.yml
+      - repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml
       - schemas/audience-character.yml
     beat: palm
     last_verified: 2026-07-09

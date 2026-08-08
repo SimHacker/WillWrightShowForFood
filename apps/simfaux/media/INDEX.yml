@@ -18,7 +18,7 @@ archives:
   - ../archives/2006-03-24-open-source-readme.md
 
 gags:
-  - ../ideas/gags/simfaux-repo-show-prototype.yml
+  - ../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml
 
 wrappers:
   - ../../../characters/don-hopkins/media/simfaux/   # portfolio pointer

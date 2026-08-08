@@ -97,7 +97,7 @@ see_also:
   - ../../../process/constructionist-simcity-response.yml
   - ../../../repo-shows/snap-logo-brian-jens/README.md
   - ../../../repo-shows/openlaszlo/README.md
-  - ../../../repo-shows/brad-myers-garnet-vpl.yml
+  - ../../../repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml
 
 show_hooks:
   - "Live: Garnet constraint on whiteboard → same relationship as $derived in GameHud.svelte"

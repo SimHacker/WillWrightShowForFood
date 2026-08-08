@@ -6,7 +6,7 @@
 id: educators-track
 human: educators-track.md
 facade_mode: instance-first
-type: theme
+type: track
 status: brewing
 shows: [richard-bartle, roy-eagleson, snap-logo-brian-jens, walter-bender-olpc]
 tagline: "Assign the fork. Grade the PR. The repo show is the classroom and the classroom is the cast."

@@ -1,0 +1,30 @@
+# Brad Myers — Garnet lab, All the Widgets, Pick Click Flick, PBD in the LLM era
+# Solo show seed — CMU GLASS lineage; Don worked there ~1992–93.
+
+show:
+  id: brad-myers-garnet-vpl
+  title: "Brad Myers — Garnet, All the Widgets, Pick Click Flick"
+  kind: design-interview
+  status: seed
+  host: don-hopkins
+  guest: brad-myers
+  character: ../../characters/brad-myers/
+
+topic: |
+  Garnet constraints, KR relationships, and the prototype-instance UI tradition;
+  *All the Widgets* (CHI '90) as the video catalog before video catalogs;
+  *Pick, Click, Flick!* as the interaction-techniques bible; Watch What I Do /
+  programming by demonstration in the LLM era; VPL taxonomy; C32; 05-640 guest-
+  lecture series as assignable Repo Show exercises for students and builders.
+
+beats:
+  - "Garnet live — draw a constraint, watch the solver propagate"
+  - "Pick Click Flick × Game UI Database — the Two Catalogs crosswalk (pair w/ Edd Coates optional)"
+  - "PBD in the LLM era — what Watch What I Do predicted; what LLMs actually automate"
+  - "Teaching UI history by testimony — 05-640 guest lectures → Pick Click Flick chapters"
+
+see_also:
+  - ../../characters/brad-myers/invitation.md
+  - ../brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.yml
+  - ../brad-and-roy-two-classrooms/brad-and-roy-two-classrooms.yml
+  - ../openlaszlo/SHOW.yml

@@ -49,7 +49,7 @@
 | [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook SimCity — send-code microworld on NeWS |
 | [`logo-adventure-c64-terrapin.md`](logo-adventure-c64-terrapin.md) | Logo REPL as adventure parser (age 17, Terrapin C64) → MOOLLM adventure compiler |
 | [`repo-shows/scott-adams/`](../../repo-shows/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
-| [`repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc.yml) | Stone Soup, Sugar, open-sourcing SimCity |
+| [`repo-shows/walter-bender-olpc/`](../../repo-shows/walter-bender-olpc/SHOW.yml) | Stone Soup, Sugar, open-sourcing SimCity |
 
 ## Dream guests
 
