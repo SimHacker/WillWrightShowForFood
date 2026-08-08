@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Voystick & voice space
 
@@ -17,7 +17,7 @@
 
 **VoyStick** — continuous pitch + vowel gesture parallel to speech recognition. Homomorphic bidirectional synthesis: computer sings your gesture back; you confirm by blending. **Not a voice clone** — an instrument stack (Pink Trombone, Phoneloper, imitone formants).
 
-**SWAG ≠ idea:** ISO hazard tees and Usenet physics labels are merch only → [../../repo-shows/ideas/README.md](../../repo-shows/ideas/README.md)
+**SWAG ≠ idea:** ISO hazard tees and Usenet physics labels are merch only → [../../repo-shows/README.md](../../repo-shows/README.md)
 
 ---
 
@@ -51,7 +51,7 @@
 | **Analysis** | SpeechAnalyzer words, imitone F1/F2, aubio pitch |
 | **Synthesis** | Pink Trombone, Flite/Phoneloper |
 | **UI** | Pie-menu wedges, voice-ahead expert path, GuitarPie fretboard |
-| **Outdoor** | [../../repo-shows/ideas/README.md](../../repo-shows/README.md) |
+| **Outdoor** | [../../repo-shows/README.md](../../repo-shows/README.md) |
 
 ---
 
@@ -83,8 +83,8 @@
 | [Urban Safari steering](../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) | Outdoor demo spec |
 | [Zack Qattan](../../characters/zack-qattan/README.md) | Pink Trombone choir lead |
 | [Human control & authorship](../theme-human-control-and-authorship/theme-human-control-and-authorship.md) | Instruments ≠ impersonation |
-| [Puppet taxonomy](../../repo-shows/ideas/README.md) | Pink Trombone as puppet kind |
+| [Puppet taxonomy](../../repo-shows/README.md) | Pink Trombone as puppet kind |
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)
+← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)

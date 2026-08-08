@@ -1,0 +1,27 @@
+# will-wright-premiere content pack — INDEX
+
+show: ../will-wright-premiere/SHOW.yml
+
+local:
+  - episode-seeds.yml
+  - content-map.yml
+
+shared_gags:
+  - ../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
+  - ../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
+  - ../../bits/gag-slats-robopoetry-gong/gag-slats-robopoetry-gong.yml
+  - ../../bits/gag-broken-robot-servitude/gag-broken-robot-servitude.yml
+  - ../../bits/gag-trot-out-and-vanish/gag-trot-out-and-vanish.yml
+
+shared_themes:
+  - ../../bits/theme-simulation-effect/theme-simulation-effect.md
+  - ../../bits/theme-procedural-rhetoric/theme-procedural-rhetoric.md
+  - ../../bits/theme-microworld-morality/theme-microworld-morality.md
+  - ../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md
+  - ../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md
+  - ../../bits/theme-inclusion-agitprop/theme-inclusion-agitprop.md
+
+shared_traditions:
+  - ../../bits/tradition-foreign-poet-play-along/tradition-foreign-poet-play-along.yml
+  - ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
+  - ../../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml

@@ -104,7 +104,7 @@ Race**. The CA is already inside "CAbaret" — the pun stack IS the format.
 Machinima names the medium, cabaret names the register, drag race names the
 competition: performers bring their own tile sets (costumes), CA rules and
 parameters (acts), and music, and the audience votes merge or sashay. Show
-seed: [ca-machinima-cabaret-drag-race.yml](../../repo-shows/ideas/ca-machinima-cabaret-drag-race.yml) —
+seed: [ca-machinima-cabaret-drag-race.yml](../../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml) —
 verdict culture borrowed from the
 [Micropolis AI Drag Race](../../process/DRAG-RACE.md). Tom is on the
 candidate-player list, and on the candidate co-designer list, for the same

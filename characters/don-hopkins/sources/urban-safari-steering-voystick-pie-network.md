@@ -1,6 +1,6 @@
 # Urban Safari — steering law, pie networks, VoyStick ride game
 
-Field UX for [Urban eBike Safari](../../../repo-shows/ideas/urban-ebike-safari.yml): continuous
+Field UX for [Urban eBike Safari](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml): continuous
 **guess where I'm going** / **suggest places to go** between rider and AI — positional direct
 manipulation through a pie-menu network you navigate by biking, with voice skip-ahead.
 
@@ -160,7 +160,7 @@ imply the depth; reveal on approach; don't simulate every brick.
 
 ## Trail
 
-- [`../../../repo-shows/ideas/urban-ebike-safari.yml`](../../../repo-shows/ideas/urban-ebike-safari.yml) · `steering_pie_ride_game`
+- [`../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml`](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) · `steering_pie_ride_game`
 - [sutton-one-step-trap.md](sutton-one-step-trap.md)
 - [voystick-correspondence-lineage.md](voystick-correspondence-lineage.md)
 - [Crazy Idea Jam — Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick)

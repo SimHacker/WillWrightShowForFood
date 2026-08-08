@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../../bits/README.md) · [Ideas](../../../repo-shows/ideas/README.md)
+↑ [All themes](../../../bits/README.md) · [Ideas](../../../repo-shows/README.md)
 
 # Theme — The Educators' Track
 

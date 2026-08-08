@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Data portability (crown jewel)
 
@@ -43,4 +43,4 @@ Will said it on a Stanford stage in 1996: characters, homes, cities, objects, id
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)
+← [All themes](../../repo-shows/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md) · [Crazy Idea Jam](../../process/CRAZY-IDEA-JAM.md)

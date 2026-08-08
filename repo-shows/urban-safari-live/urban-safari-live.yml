@@ -51,4 +51,4 @@ ai_reimagining: |
   2011 geotagged cards + 2026 LLM field narration + Proxi memory snow globes from safari stops.
   Repo Show audience adds cards via git; map grows city by city.
 
-product_layer: urban-ebike-safari.yml
+product_layer: ../urban-ebike-safari/urban-ebike-safari.yml

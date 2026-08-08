@@ -8,10 +8,10 @@ leaves the repo consistent.
 
 `repo-shows/` grew three structures that fight each other:
 
-1. **`ideas/` is a nested taxonomy inside a registry.** We are already in
-   repo-shows; `ideas/` contains ideas for repo shows, sorted into buckets
-   (`gags/`, `themes/`, `traditions/`, `swag/`), and — worst — `ideas/shows/`
-   contains a whole `will-wright-premiere/` content pack. Shows inside ideas
+1. **`./` is a nested taxonomy inside a registry.** We are already in
+   repo-shows; `./` contains . for repo shows, sorted into buckets
+   (`gags/`, `themes/`, `traditions/`, `swag/`), and — worst — `./`
+   contains a whole `will-wright-premiere/` content pack. Shows inside .
    inside repo-shows. The question "what is the difference between a
    repo-show, an idea, and a show?" has no good answer because the answer is
    encoded in *directory placement* instead of *data*.
@@ -172,8 +172,8 @@ The prefix sorts kinds into groups in `ls`; the kind also lives in each
 entry's `BIT.yml` (same optional-interface philosophy as `REPO-SHOW.yml`).
 New kinds (segment, catchphrase, running-bit, game) join without new
 architecture. Name alternatives considered: `writers-room/` (charming,
-Bar Karma lineage, long), keeping `ideas/` (overloaded — show seeds are
-ideas too; that's how we got here). "Do the bit" is showbiz-native and
+Bar Karma lineage, long), keeping `./` (overloaded — show seeds are
+. too; that's how we got here). "Do the bit" is showbiz-native and
 covers all four.
 
 ### 3b. `process/tracks/` — NEW home for programming arcs
@@ -312,15 +312,15 @@ authored replacements per §4 supersede generation entry by entry
 
 | Now | Becomes |
 |-----|---------|
-| `ideas/ca-machinima-cabaret-drag-race.yml` | `ca-machinima-cabaret-drag-race/` (kind: idea) |
-| `ideas/jsonsters-gallery-lecture.yml`, `kids-city-newspaper.yml`, `urban-safari-live.yml`, `urban-ebike-safari.yml` | own top-level dirs (kind: idea) |
-| `ideas/shows/will-wright-premiere/` (INDEX, content-map, episode-seeds) | `will-wright-premiere-ideas/` (kind: pack; `relates_to: will-wright-premiere`) — sorts adjacent to its show |
+| `ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml` | `ca-machinima-cabaret-drag-race/` (kind: idea) |
+| `jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml`, `kids-city-newspaper.yml`, `urban-safari-live.yml`, `urban-ebike-safari.yml` | own top-level dirs (kind: idea) |
+| `will-wright-premiere-ideas/` (INDEX, content-map, episode-seeds) | `will-wright-premiere-ideas/` (kind: pack; `relates_to: will-wright-premiere`) — sorts adjacent to its show |
 | `../bits/*` (~31 entries) | `bits/gag-*/` |
 | `../bits/*` (yml+md pairs) — EXCEPT tracks | `bits/theme-*/` |
 | `ideas/themes/educators-track.{yml,md}` | `process/tracks/educators-track/` (35 refs / 23 files — scripted sweep) |
 | `../bits/*` (~12 entries) | `bits/tradition-*/` |
 | `../bits/*` (2 entries) | `bits/swag-*/` |
-| `ideas/INDEX.yml`, `README.md`, `CARD.yml`, `GLANCE.yml` | dissolved: idea entries merge into `repo-shows/INDEX.yml`; bit entries seed `bits/INDEX.yml`; READMEs rewritten for the new rooms |
+| `INDEX.yml`, `README.md`, `CARD.yml`, `GLANCE.yml` | dissolved: idea entries merge into `repo-shows/INDEX.yml`; bit entries seed `bits/INDEX.yml`; READMEs rewritten for the new rooms |
 | `flipbook/shows/<name>/FLIPBOOK.yml` (4 packs) | `flipbook-<name>/` (kind: pack; `relates_to: flipbook` + the show it illustrates) |
 | 43 loose top-level `.yml` seeds | `<name>/<name>.yml` dirs |
 | 5 loose top-level `.md` companions | move with their yml |
@@ -341,14 +341,14 @@ process, schemas, catalogs, apps, designs — plus generated facades).
   gags/themes/traditions/swag entries into `bits/` with kind prefixes;
   `educators-track` into `process/tracks/educators-track/`; write
   `bits/README.md` + `bits/INDEX.yml` (statuses carried over from
-  `ideas/INDEX.yml`) and `process/tracks/README.md` (with the
+  `INDEX.yml`) and `process/tracks/README.md` (with the
   entryway/trail/track distinction); scripted link sweep for the four
   bucket paths and every `educators-track` reference; regenerate facades
   (`pnpm run facades`).
-- **Phase 2 — dissolve `ideas/`.** Remaining idea seeds → top-level dirs;
-  `ideas/shows/will-wright-premiere/` → `will-wright-premiere-ideas/`;
-  merge `ideas/INDEX.yml` show entries into `repo-shows/INDEX.yml`; delete
-  `ideas/` scaffolding; link sweep.
+- **Phase 2 — dissolve `./`.** Remaining idea seeds → top-level dirs;
+  `will-wright-premiere-ideas/` → `will-wright-premiere-ideas/`;
+  merge `INDEX.yml` show entries into `repo-shows/INDEX.yml`; delete
+  `./` scaffolding; link sweep.
 - **Phase 3 — flatten `flipbook/shows/`.** Four packs → `flipbook-*/`;
   update `flipbook/INDEX.yml` to reference by id; link sweep (8 files).
 - **Phase 4 — directory-ify loose seeds.** 43 ymls + 5 md companions into

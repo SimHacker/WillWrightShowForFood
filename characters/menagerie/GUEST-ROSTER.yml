@@ -8,7 +8,7 @@ rule: |
 
 gallery_openings:
   event: jsonsters_premiere
-  show_seed: ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+  show_seed: ../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml
   always:
     menagerie:
       cohort: lower_chelsea_eight

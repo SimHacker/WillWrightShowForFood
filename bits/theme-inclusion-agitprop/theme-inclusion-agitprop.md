@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Inclusion agitprop
 
@@ -26,10 +26,10 @@ The SimProv wedding playset is procedural rhetoric for inclusion — who the gam
 | [**SimProv catalog**](../../catalogs/simprov/README.md) | Magnum opus — full wedding playset |
 | [**Intro narrative**](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) | Show narration framing |
 | [**Procedural rhetoric**](../theme-procedural-rhetoric/theme-procedural-rhetoric.md) | Sister theme — inclusion pole |
-| [**Pixelized joint wedding**](../../repo-shows/ideas/README.md) | Gag crossover — Double Pre-Game |
-| [**Speed dating with Cupid**](../../repo-shows/ideas/README.md) | Segment tie-in — audience orchestrated romance |
+| [**Pixelized joint wedding**](../../repo-shows/README.md) | Gag crossover — Double Pre-Game |
+| [**Speed dating with Cupid**](../../repo-shows/README.md) | Segment tie-in — audience orchestrated romance |
 | [**Heather & Steve Alvey**](../../catalogs/simprov/README.md) | SimProv lineage — Alvey wedding episodes |
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Procedural rhetoric](../theme-procedural-rhetoric/theme-procedural-rhetoric.md) · [SimProv](../../catalogs/simprov/README.md)
+← [All themes](../../repo-shows/README.md) · [Procedural rhetoric](../theme-procedural-rhetoric/theme-procedural-rhetoric.md) · [SimProv](../../catalogs/simprov/README.md)

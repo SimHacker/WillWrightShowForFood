@@ -77,7 +77,7 @@ cross_rooms:
   guest_roster: GUEST-ROSTER.yml
 
 live_shows:
-  - ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+  - ../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml
 
 see_also:
   - GLANCE.yml

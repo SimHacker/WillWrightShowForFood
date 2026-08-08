@@ -46,4 +46,4 @@ Cross-show idea inventory. Themes graduate into episodes, segments, and [Crazy I
 
 ---
 
-← [All trails](../../TRAILS.md) · [Ideas bucket](../../repo-shows/ideas/README.md) · [Themes](../../bits/README.md)
+← [All trails](../../TRAILS.md) · [Ideas bucket](../../repo-shows/README.md) · [Themes](../../bits/README.md)

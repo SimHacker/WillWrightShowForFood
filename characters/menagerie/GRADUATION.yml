@@ -47,7 +47,7 @@ graduation:
       - banter_with_each_other and real guests
       - jump_from_JSONsters_story — reference lecture premiere as backstory
     shows:
-      seed: repo-shows/ideas/jsonsters-gallery-lecture.yml
+      seed: repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml
       later: [will-wright, nemacs-gallery, turing-institute-walk, any-repo-show-with-screenshots]
 
 roster:

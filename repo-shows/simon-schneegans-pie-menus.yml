@@ -19,7 +19,7 @@ why_this_guest:
 format:
   live: true
   audience_qa: true
-  notes: "Build a Kando menu for this repo live on stream — every show artifact one gesture away. Walk the thesis videos; diff Trace-Menu ideas against Kando's shipped design."
+  notes: "Build a Kando menu for this repo live on stream — every show artifact one gesture away. Walk the thesis videos; diff Trace-Menu . against Kando's shipped design."
 
 ensemble_option:
   with: repo-shows/ben-and-heinz-pie-menus.yml

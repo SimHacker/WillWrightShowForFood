@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — The Riff Loop
 
@@ -60,4 +60,4 @@ Reframes *"AI vs people"* as *"people AND AI in a loop."* Authorship isn't lost 
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Slats reincarnation](../../will-wright-premiere/../../will-wright-premiere/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md)
+← [All themes](../../repo-shows/README.md) · [Slats reincarnation](../../will-wright-premiere/../../will-wright-premiere/README.md) · [Stupid Fun Forward trail](../../process/trails/stupid-fun-forward.md)

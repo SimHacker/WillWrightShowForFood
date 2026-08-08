@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Human control & authorship
 
@@ -64,7 +64,7 @@ Will's beloved menagerie + our own + contributors' — **ethically and respectfu
 | **Drew Carey 2023** | [ai-contrast-framing.md](../../repo-shows/drew-carey/ai-contrast-framing.md) | Audience wanted personality back — not a synthetic host |
 | **Bun Rust rewrite** | [bun-rust-rewrite digest](../../process/sources/bun-rust-rewrite-2026-07.md) | AI as loop engineer + review harness; human supervisor fixes workflows |
 
-**Umbrella format:** [../../repo-shows/ideas/README.md](../../repo-shows/ideas/README.md) — *"TV show about developing and playing games & tools — AI as best-practice instrument."*
+**Umbrella format:** [../../repo-shows/README.md](../../repo-shows/README.md) — *"TV show about developing and playing games & tools — AI as best-practice instrument."*
 
 ---
 
@@ -85,12 +85,12 @@ Will's beloved menagerie + our own + contributors' — **ethically and respectfu
 |------|-----|
 | [Engelbart memorial](../../characters/douglas-engelbart/) | Augmentation thesis — forebear |
 | [Augmentation trail](../../process/trails/augmentation-and-hypertext.md) | Engelbart + Nelson + Weiser → PITM |
-| [Puppet taxonomy](../../repo-shows/ideas/README.md) | Conan face-hole, Pink Trombone, Phoneloper |
-| [Honest fake call-in](../../repo-shows/ideas/README.md) | Staged but labeled |
+| [Puppet taxonomy](../../repo-shows/README.md) | Conan face-hole, Pink Trombone, Phoneloper |
+| [Honest fake call-in](../../repo-shows/README.md) | Staged but labeled |
 | [Will Wright premiere defense](../../repo-shows/will-wright-premiere/README.md) | `#defense_against_ai_slop` |
 | [Performance space ethics](../../process/performance-space.md) | Live rig ethics |
 | [MOOLLM representation-ethics](https://github.com/SimHacker/moollm/skills/representation-ethics) | Upstream skill |
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Schemas & ethics trail](../../process/trails/schemas-and-ethics.md) · [Simulating people](../theme-simulating-people/theme-simulating-people.md)
+← [All themes](../../repo-shows/README.md) · [Schemas & ethics trail](../../process/trails/schemas-and-ethics.md) · [Simulating people](../theme-simulating-people/theme-simulating-people.md)

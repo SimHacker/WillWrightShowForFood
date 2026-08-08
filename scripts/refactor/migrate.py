@@ -24,7 +24,7 @@ TEXT_EXT = {".md", ".yml", ".yaml", ".json", ".txt", ".html", ".mjs", ".js",
 TOKEN_RE = re.compile(r"(?:\.\./)+[A-Za-z0-9_][A-Za-z0-9_.\-/]*"
                       r"|[A-Za-z0-9_][A-Za-z0-9_.\-/]*")
 PATHISH_RE = re.compile(r".*(?:/|\.(?:yml|yaml|md|html|json|png|jpg|svg|txt))$")
-IDEAS = "repo-shows/ideas"
+IDEAS = "repo-shows"
 
 
 def sh(*args):

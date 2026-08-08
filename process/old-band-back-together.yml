@@ -51,7 +51,7 @@ bands:
         show_beat: ../repo-shows/building-the-sims/did-you-do-dots-together.md
       tomtom:
         note: "Don recruited Bobo to TomTom Amsterdam — second reunion"
-        show: ../repo-shows/ideas/urban-ebike-safari.yml
+        show: ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
 
   simfreaks_simslice_fan_crew:
     what: "Fan-site creators who became a marriage — SimFreaks + SimSlice, still shipping together."

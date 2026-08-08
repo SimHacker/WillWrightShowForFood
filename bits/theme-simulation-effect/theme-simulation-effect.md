@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Simulation effect
 
@@ -44,4 +44,4 @@ Players narrate causal chains Will knows don't exist — and that gap *is* the s
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md) · [Will premiere](../../repo-shows/will-wright-premiere/README.md) · [Trails](../../process/trails/)
+← [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md) · [Will premiere](../../repo-shows/will-wright-premiere/README.md) · [Trails](../../process/trails/)

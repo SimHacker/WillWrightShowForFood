@@ -7,12 +7,12 @@ meta:
   status: seed
   host: don-hopkins
   participants: [don-hopkins, will-wright, wills-son]
-  parent: urban-safari-live.yml
+  parent: ../urban-safari-live/urban-safari-live.yml
   format: ../../process/one-minute-movie-sandwich.yml
 
 one_line: |
   Voice-controlled adventure navigation through a hidden graph of story cards at real-world
-  places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
+  places — Ray-Bans see and hear, phone .. the route, Bosch moves the bike, LLM translates intent.
 
 elevator: |
   Urban eBike Safari is DreamScape on wheels, descended through iLoci and Urban Safari: geolocated
@@ -64,7 +64,7 @@ lineage:
       source: ../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
-    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Will's son calls Will; git audience cards", file: urban-safari-live.yml }
+    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Will's son calls Will; git audience cards", file: ../urban-safari-live/urban-safari-live.yml }
     - { era: "2026+", project: Urban eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
@@ -349,7 +349,7 @@ competitive_gap:
     paint WillWrightShowForFood / MOOLLM git history as wall art. Every repository has a shape.
 
 ties:
-  - urban-safari-live.yml
+  - ../urban-safari-live/urban-safari-live.yml
   - ../../characters/don-hopkins/career/stupid-fun-club.yml
   - ../../characters/don-hopkins/career/lineage.yml
   - ../../process/crazy-idea-jam.yml#iloci_memory_palace

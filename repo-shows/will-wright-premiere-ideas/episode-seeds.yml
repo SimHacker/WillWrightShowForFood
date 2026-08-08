@@ -1,13 +1,13 @@
 # Will Wright show — episode & title seeds
-# Harvest-driven: kickoff transcript may supersede. See ../../../will-wright-premiere/episodes.yml.
+# Harvest-driven: kickoff transcript may supersede. See ../will-wright-premiere/episodes.yml.
 
 kickoff:
   id: will-wright-00-anything
   title: "A Repo Show with Will Wright (anything goes)"
-  canonical: ../../../will-wright-premiere/episodes.yml#kickoff
+  canonical: ../will-wright-premiere/episodes.yml#kickoff
 
 from_1996_video:
-  canonical: ../../../will-wright-premiere/episodes.yml#seeded_by_the_1996_video
+  canonical: ../will-wright-premiere/episodes.yml#seeded_by_the_1996_video
   highlights:
     - taken-aback-moment
     - anatomy-of-a-simulation-game
@@ -20,7 +20,7 @@ performance_episodes:
   - title: "Foreign Poet Theatre"
     modes: [foreign_poet, play_along_narration]
     guests: [claire-curtin, jerry-martin, stephen-kearin]
-    source: ../../../process/performance-space.yml
+    source: ../../process/performance-space.yml
   - title: "Come On Down to This Lot"
     modes: [play_along_narration]
     guest: drew-carey
@@ -30,11 +30,11 @@ performance_episodes:
     modes: [voice_puppet, audience_chorus]
   - title: "SimProv Wedding — Double Pre-Game"
     modes: [machinima, play_along_narration]
-    gag: ../../../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
+    gag: ../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
   - title: "Speed Dating with Cupid"
     modes: [audience_orchestrated_gameplay, play_along_narration, live_riff]
-    segment: ../../../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
+    segment: ../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
     note: "Audience suggests who falls in love first; live Cupid object — prior art on YouTube."
 
 topical_flows:
-  canonical: ../../../will-wright-premiere/episodes.yml#flows_from_it
+  canonical: ../will-wright-premiere/episodes.yml#flows_from_it

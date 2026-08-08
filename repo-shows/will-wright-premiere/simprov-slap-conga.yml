@@ -83,5 +83,5 @@ poc:
 ties:
   - ./SHOW.yml
   - ./SEGMENTS.yml
-  - ../ideas/shows/will-wright-premiere/content-map.yml
+  - ../will-wright-premiere-ideas/content-map.yml
   - ../../characters/will-wright/ideas.md

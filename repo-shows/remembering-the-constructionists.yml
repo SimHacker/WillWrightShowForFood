@@ -34,7 +34,7 @@ guests:
   # Living discussants. Each connection is documented in-repo or via cited public source.
   - name: "Alan Kay"
     character: characters/alan-kay/
-    connection: "Personal-computing pioneer shaped by the same MIT/ARPA milieu; carried Papert's microworld ideas into the Dynabook and Smalltalk; knew Minsky."
+    connection: "Personal-computing pioneer shaped by the same MIT/ARPA milieu; carried Papert's microworld . into the Dynabook and Smalltalk; knew Minsky."
     verified: true
   - name: "Walter Bender"
     character: characters/walter-bender/
@@ -58,7 +58,7 @@ guests:
     verified: true
   - name: "Henry Minsky"
     character: characters/henry-minsky/
-    connection: "Marvin's son; grew up in the AI Lab's children's computer lab; carries Society-of-Mind ideas into Leela AI; reimplemented Drescher's schema mechanism in Python."
+    connection: "Marvin's son; grew up in the AI Lab's children's computer lab; carries Society-of-Mind . into Leela AI; reimplemented Drescher's schema mechanism in Python."
     verified: true
   - name: "Margaret Minsky"
     character: characters/margaret-minsky/

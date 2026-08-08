@@ -126,7 +126,7 @@ ties_to:
 see_also:
   - { path: DRAG-RACE.md, why: "Generated markup view" }
   - { path: ../repo-shows/micropolis-ai-drag-race.yml, why: "Show seed" }
-  - { path: ../repo-shows/ideas/ca-machinima-cabaret-drag-race.yml, why: "Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts" }
+  - { path: ../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml, why: "Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts" }
   - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show trail" }
   - { path: code-that-spec.yml, why: "CODE THAT SPEC!!!!! chant" }
   - { path: manual-transmission.yml, why: "Smallest model challenge" }

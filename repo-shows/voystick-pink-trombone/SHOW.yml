@@ -42,7 +42,7 @@ segments:
     moollm: https://github.com/SimHacker/moollm/blob/main/skills/speech/platforms/vowel-space.yml
   - id: pie_wedge_steering
     topic: "Voice-ahead expert path; steady vowel pops pie menu; GuitarPie + Voystick combo"
-    tie: ../../repo-shows/ideas/urban-ebike-safari.yml#steering_pie_ride_game
+    tie: ../urban-ebike-safari/urban-ebike-safari.yml#steering_pie_ride_game
   - id: phoneloper_duet
     topic: "Phoneloper × Pink Trombone — granular moo chorus + vocal-tract jam"
     show: ../phoneloper/SHOW.yml
@@ -52,7 +52,7 @@ segments:
   - id: outdoor_slice
     topic: "Canal-loop field test — pitch+vowel trace steers singing while biking; SpeechAnalyzer for words"
     note: "Outdoor = wide sloppy fast warbles, no social cost; MediaGraph cannon-flick on handlebars"
-    product: ../../repo-shows/ideas/urban-ebike-safari.yml
+    product: ../urban-ebike-safari/urban-ebike-safari.yml
 
 related:
   - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
@@ -60,5 +60,5 @@ related:
   - ../../apps/performance-space/pink-trombone-jam.yml
   - ../phoneloper/SHOW.yml
   - ../marc-canter/SHOW.yml
-  - ../../repo-shows/ideas/urban-ebike-safari.yml
+  - ../urban-ebike-safari/urban-ebike-safari.yml
   - https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml

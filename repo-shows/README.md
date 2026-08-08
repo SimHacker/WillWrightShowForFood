@@ -9,7 +9,7 @@ best way (people author; AI orchestrates and writes code). [`../bits/tradition-m
 
 ## Read order
 
-1. [`GLANCE.yml`](GLANCE.yml)
+1. [`ideas/GLANCE.yml`](ideas/GLANCE.yml)
 2. [`INDEX.yml`](INDEX.yml) — catalog
 3. [`REPO-SHOWS.yml`](REPO-SHOWS.yml) — collection manifest (implicit inheritance)
 4. Flagship: [`will-wright-premiere/README.md`](will-wright-premiere/README.md) · [**BROWSE**](will-wright-premiere/BROWSE.md)
@@ -46,7 +46,7 @@ Full protocol: [`skills/repo-show/SKILL.md`](../skills/repo-show/SKILL.md)
 
 | Direction | Link |
 |-----------|------|
-| Up | [`../README.md`](../README.md) |
+| Up | [`README.md`](README.md) |
 | Guests | [`../characters/`](../characters/README.md) |
 | Process | [`../process/FORMAT.md`](../process/FORMAT.md) |
 | Network | [`../process/showmaker-network.md`](../process/showmaker-network.md) |

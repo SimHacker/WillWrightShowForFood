@@ -81,7 +81,7 @@ the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into S
     issues: one voice, one complaint, printed and archived in the save.
     The dream behind the masthead — kids publishing their own paper into the game,
     grown from the SimCityNet scrolling chat window — is planted at
-    ../ideas/kids-city-newspaper.yml.
+    ../kids-city-newspaper/kids-city-newspaper.yml.
   the_civic_ladder: |
     Between the mayor's office and the letters page runs the whole ladder of
     citizen participation, every rung an importable role at its own scope:
@@ -133,7 +133,7 @@ one_protocol_two_populations:  # Don's ruling, 2026-07-07 — the deep reason th
     both as citizens; consent and safety live at the rim (who gets a passport),
     not in the pipe.
   ties:
-    - ../ideas/kids-city-newspaper.yml
+    - ../kids-city-newspaper/kids-city-newspaper.yml
     - ../../process/guest-participation-ladder.yml
     - ../../characters/will-wright/sources/multiplayer-simcity-ui-network/README.md
 

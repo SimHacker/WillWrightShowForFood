@@ -68,7 +68,7 @@ economy:
 
 gallery:
   path: ../../characters/don-hopkins/jsonsters/
-  readme: README.md
+  readme: ../README.md
   critics: critics.yml
   opening_guests: ../../characters/menagerie/GUEST-ROSTER.yml#gallery_openings
 

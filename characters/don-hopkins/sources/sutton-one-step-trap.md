@@ -28,7 +28,7 @@ not microscopic rollout. See Sutton–Precup–Singh (1999), Horde (2011), rewar
 
 ## Urban eBike Safari — already on Sutton's side
 
-Product seed: [`../../../repo-shows/ideas/urban-ebike-safari.yml`](../../../repo-shows/ideas/urban-ebike-safari.yml)
+Product seed: [`../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml`](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml)
 
 | One-step trap (avoid) | Safari design (use) |
 |-----------------------|---------------------|
@@ -78,7 +78,7 @@ Parser lineage in product seed explicitly cites MOOLLM adventure → SpeechAnaly
 
 ## Trail
 
-- [`../../../repo-shows/ideas/urban-ebike-safari.yml`](../../../repo-shows/ideas/urban-ebike-safari.yml) · `temporal_abstraction`
+- [`../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml`](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) · `temporal_abstraction`
 - [`../../media/storymaker-urban-safari/storymaker-urban-safari.yml`](../media/storymaker-urban-safari/storymaker-urban-safari.yml)
 - [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml#iloci_memory_palace)
 - [MOOLLM simulation/ONE-STEP-TRAP.md](https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md)

@@ -160,4 +160,4 @@ Arc de Triomphe energy.
 | [gesture-space (Medium)](https://donhopkins.medium.com/gesture-space-842e3cdc7102) | Pie rehearsal theory |
 | [Pie menus retrospective](https://donhopkins.medium.com/pie-menus-936fed383ff1) | Fitts + voystick HN refs |
 
-↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban eBike Safari](../../../repo-shows/ideas/urban-ebike-safari.yml) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/SHOW.yml)
+↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban eBike Safari](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/SHOW.yml)

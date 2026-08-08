@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Procedural rhetoric
 
@@ -31,7 +31,7 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 | [**Ian Bogost guest show**](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md) | Dedicated episode seed — procedural rhetoric on air |
 | [**SimProv catalog**](../../catalogs/simprov/README.md) | Magnum opus — wedding playset as inclusion agitprop |
 | [**Inclusion agitprop**](../theme-inclusion-agitprop/theme-inclusion-agitprop.md) | Sister theme — SimProv wedding thread |
-| [**Pixelized joint wedding**](../../repo-shows/ideas/README.md) | Gag crossover — Double Pre-Game |
+| [**Pixelized joint wedding**](../../repo-shows/README.md) | Gag crossover — Double Pre-Game |
 | [**Heather & Steve Alvey show**](../../repo-shows/heather-and-steve-alvey/) | Afterlife × voting farce lane |
 
 ---
@@ -46,4 +46,4 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md) · [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md)
+← [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md) · [Bogost show](../../will-wright-premiere/ian-bogost-procedural-rhetoric/README.md)

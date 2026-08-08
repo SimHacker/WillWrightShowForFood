@@ -1,6 +1,0 @@
-# shows/ — INDEX
-
-packs:
-  will-wright-premiere:
-    dir: will-wright-premiere/
-    show: ../../will-wright-premiere/SHOW.yml

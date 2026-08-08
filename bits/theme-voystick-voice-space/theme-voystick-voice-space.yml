@@ -29,14 +29,14 @@ pie_navigation_lineage:
   outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"
 
 canonical_idea: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-urban_product: ../../repo-shows/ideas/urban-ebike-safari.yml
+urban_product: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
 mediaflow_lineage: ../../characters/don-hopkins/mediaflow-design-comments.md
 
 stack:
   analysis: [SpeechAnalyzer words, imitone F1/F2, aubio pitch]
   synthesis: [Pink Trombone, Flite/Phoneloper]
   ui: [pie-menu wedges, voice-ahead expert path, GuitarPie fretboard]
-  outdoor: ../../repo-shows/ideas/urban-ebike-safari.yml
+  outdoor: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
 
 shows_and_activities:
   - ../../repo-shows/voystick-pink-trombone/SHOW.yml
@@ -59,4 +59,4 @@ moollm:
 
 see_also:
   - ../../process/CRAZY-IDEA-JAM.md
-  - ../../repo-shows/ideas/urban-ebike-safari.yml
+  - ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml

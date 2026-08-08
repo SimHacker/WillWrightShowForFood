@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Microworld morality
 
@@ -33,4 +33,4 @@ Early SimCity section material — before or during the 1996 video orbit. The Cy
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md) · [Will premiere](../../repo-shows/will-wright-premiere/README.md)
+← [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md) · [Will premiere](../../repo-shows/will-wright-premiere/README.md)

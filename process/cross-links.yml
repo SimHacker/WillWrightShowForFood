@@ -328,7 +328,7 @@ trails:
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }
       - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack — homomorphic jam" }
       - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year VoyStick email harvest" }
-      - { path: ../repo-shows/ideas/urban-ebike-safari.yml, why: "Outdoor Voystick demo — DreamScape on wheels" }
+      - { path: ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml, why: "Outdoor Voystick demo — DreamScape on wheels" }
       - { path: ../apps/performance-space/pink-trombone-jam.yml, why: "Four-player vocal-tract choir — We Are the Weird" }
       - { path: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick, why: "The idea — not the warning stickers" }
       - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel theme — Will 1996 goal still unshipped" }
@@ -348,7 +348,7 @@ trails:
       - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel — bridges hub" }
       - { path: tracks/educators-track/educators-track.md, why: "Classroom as cast — Bartle, Lall, Eagleson" }
       - { path: ../bits/theme-the-riff-loop/theme-the-riff-loop.md, why: "Steerable AI+people recursion" }
-      - { path: ../repo-shows/ideas/INDEX.yml, why: "Master ideas catalog" }
+      - { path: ../repo-shows/INDEX.yml, why: "Master ideas catalog" }
       - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md overlay policy" }
 
   performance_space:
@@ -365,7 +365,7 @@ trails:
       - { path: ../apps/performance-space/, why: "Web toys — Conan face-puppet P0" }
       - { path: ../apps/stream-gateway/, why: "Overlay bus + OBS integration" }
       - { path: ticket-pr.yml, why: "Audience clip + question ingress" }
-      - { path: ../repo-shows/ideas/, why: "Gags, themes, traditions, show content catalog" }
+      - { path: ../repo-shows/, why: "Gags, themes, traditions, show content catalog" }
       - { path: ../catalogs/soul-city/steam-community-guide.yml, why: "Steam Community Guides — channel web hub + Repo Shows" }
       - { path: ../catalogs/soul-city/micropolis-angel.yml, why: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
 

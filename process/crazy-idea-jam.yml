@@ -229,7 +229,7 @@ ideas:
     demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
     room: ../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
     ties:
-      - ../repo-shows/ideas/urban-safari-live.yml
+      - ../repo-shows/urban-safari-live/urban-safari-live.yml
       - ../characters/don-hopkins/career/stupid-fun-club.yml
       - crazy-idea-jam.yml#creationtv_storymaker
 
@@ -272,7 +272,7 @@ ideas:
     field_hardware: [Koga, Enviolo, Bosch, Ray-Ban Meta]
     voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
     ties:
-      - ../repo-shows/ideas/urban-ebike-safari.yml
+      - ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
       - ../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
@@ -348,7 +348,7 @@ ideas:
       - ../repo-shows/voystick-pink-trombone/SHOW.yml
       - ../apps/performance-space/pink-trombone-jam.yml
       - ../repo-shows/phoneloper/SHOW.yml
-      - ../repo-shows/ideas/urban-ebike-safari.yml
+      - ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
       - crazy-idea-jam.yml#phoneloper
       - crazy-idea-jam.yml#pie_menus_put_out_fires
       - crazy-idea-jam.yml#urban_ebike_safari

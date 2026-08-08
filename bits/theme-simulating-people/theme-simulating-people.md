@@ -1,6 +1,6 @@
 
 
-↑ [All themes](../../repo-shows/ideas/README.md) · [Ideas](../../repo-shows/ideas/README.md)
+↑ [All themes](../../repo-shows/README.md) · [Ideas](../../repo-shows/README.md)
 
 # Theme — Simulating people
 
@@ -66,7 +66,7 @@ LLM agents can converse, decide, and be mistaken for real people at scale. We go
 | Stop | Why |
 |------|-----|
 | [Human control & authorship](../theme-human-control-and-authorship/theme-human-control-and-authorship.md) | Constitutional umbrella — AI proposes, people dispose |
-| [Puppet taxonomy](../../repo-shows/ideas/README.md) | How puppets differ from impersonation |
+| [Puppet taxonomy](../../repo-shows/README.md) | How puppets differ from impersonation |
 | [Drew Carey contrast](../../repo-shows/drew-carey/ai-contrast-framing.md) | Public-record anti-pattern |
 | [PITM](../../process/CRAZY-IDEA-JAM.md#player_in_the_middle) | Human at every membrane |
 | [Suggested questions](../../will-wright-premiere/../../will-wright-premiere/README.md) | On-air prompts |
@@ -75,4 +75,4 @@ LLM agents can converse, decide, and be mistaken for real people at scale. We go
 
 ---
 
-← [All themes](../../repo-shows/ideas/README.md) · [Schemas & ethics trail](../../process/trails/schemas-and-ethics.md) · [Portrayal standards](../../schemas/portrayal-standards.md)
+← [All themes](../../repo-shows/README.md) · [Schemas & ethics trail](../../process/trails/schemas-and-ethics.md) · [Portrayal standards](../../schemas/portrayal-standards.md)

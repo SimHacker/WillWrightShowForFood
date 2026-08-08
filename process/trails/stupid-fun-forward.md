@@ -23,7 +23,7 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Will CARD**](../../characters/will-wright/CARD.yml) | Procedural creatures, gallium voxel worlds |
 | [**Yoot Saito**](../../characters/yoot-saito/README.md) | Seaman energy — a creature that insults you on purpose |
 | [**Voystick × Pink Trombone**](../../repo-shows/voystick-pink-trombone/SHOW.yml) | Homomorphic vocal joystick — sing along to confirm; Zack Vocap + Pink Trombone choir |
-| [**Urban eBike Safari**](../../repo-shows/ideas/urban-ebike-safari.yml) | DreamScape on wheels — outdoor Voystick demo on canal loops |
+| [**Urban eBike Safari**](../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) | DreamScape on wheels — outdoor Voystick demo on canal loops |
 | [**Voystick theme**](../../bits/theme-voystick-voice-space/theme-voystick-voice-space.md) | Homomorphic instrument stack — full theme overlay |
 | [**The riff loop**](../../bits/theme-the-riff-loop/theme-the-riff-loop.md) | Steerable recursion — Slats anchor |
 | [**Crown jewel theme**](../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md) | Will 1996 goal — every bridge is one facet |

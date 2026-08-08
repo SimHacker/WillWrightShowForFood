@@ -196,7 +196,7 @@ facades:
     render: { mode: llm, tone: invitation, verbosity: standard }
     note: "Hand-authored — edit themes/README.md; per-theme *.md overlays; sync *.yml girders"
     depends_on:
-      - ../repo-shows/ideas/INDEX.yml
+      - ../repo-shows/INDEX.yml
       - cross-links.yml
       - ../schemas/markup-facade.yml
 

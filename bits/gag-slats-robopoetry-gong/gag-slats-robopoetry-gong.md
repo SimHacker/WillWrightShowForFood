@@ -1,5 +1,5 @@
 
-↑ [Gags](../../repo-shows/ideas/README.md) · [Stupid Fun Club robots theme](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
+↑ [Gags](../../repo-shows/README.md) · [Stupid Fun Club robots theme](../theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)
 
 # Gag — Slats robopoetry gong
 

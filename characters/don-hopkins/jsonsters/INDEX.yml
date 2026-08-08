@@ -20,7 +20,7 @@ show:
   opening_night: art-opening-night.yml
   auctions: simoleon-auctions.yml
   ledger: AUCTIONS.yml
-  repo_show_seed: ../../repo-shows/ideas/jsonsters-gallery-lecture.yml
+  repo_show_seed: ../../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml
 
 files:
   README.md: User-facing tour — characters + embedded pictures
