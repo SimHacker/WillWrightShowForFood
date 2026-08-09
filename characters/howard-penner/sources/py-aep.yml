@@ -36,7 +36,7 @@ does_not:
 repo_show_fit:
   adorable_minutes: process/post-production/adorable-minutes-ae.yml
   telecine: process/post-production/cambridge-telecine-jiggle.yml
-  private_pipeline: RepoShowPrivate/production/howard-penner/  # AE → Blender overlays
+  private_pipeline: private production pipeline
   wedge_context: characters/charchit-goyal/  # Wedge pie menus *inside* AE — complementary
 
 pipeline_slot: |

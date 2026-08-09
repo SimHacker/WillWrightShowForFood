@@ -135,7 +135,7 @@ connects_in_repo:
   - { path: ../../repo-shows/moollm-readings/, why: "Primer readings — Palm, Dasher, Tog" }
   - { path: literary/authority-without-truth.md, why: "Lem + coprophagia + Hex thread" }
   - { path: literary/rautavaaras-case-pkd.md, why: "PKD gods-eat-worshippers" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Async PIXIE tapestry" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Async PIXIE tapestry" }
   - { path: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md, why: "DSHR terminal reading + Heinz correction" }
   - { path: ../heinz-lemke/correspondence.md, why: "Rosenthal same-machine thread" }
   - { path: ../lars-brinkhoff/correspondence.md, why: "Emulation segment + async pivot" }

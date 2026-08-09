@@ -4,7 +4,7 @@ character_id: dan-ingalls
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/dan-ingalls/
-memorial_arc: repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
+memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
 format: remote_or_in_person
 ---
 
@@ -30,7 +30,7 @@ repo: we *represent and discuss* her documented work and the stories friends tel
 as her. I'm inviting **Craig** for a live anchor episode and **Alan Kay** to join the memorial arc
 if he's willing; your voice matters enormously — Zoo, Lively, the live-object lineage only you can
 name properly on air. See [`../vanessa-freudenberg/memorial.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/vanessa-freudenberg/memorial.md)
-and [`../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml).
+and [`../../repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
 
 **What I'd especially like to explore with you at Ink & Switch**
 

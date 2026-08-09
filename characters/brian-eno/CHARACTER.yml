@@ -21,7 +21,6 @@ invitation:
   status: dream_guest
   consent: not_yet_asked
   document: ../../characters/brian-eno/invitation.md
-  production: RepoShowPrivate/characters/brian-eno/
   show_seed: repo-shows/brian-eno/
 bio:
   born: 1948

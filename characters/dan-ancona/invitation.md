@@ -3,7 +3,7 @@ status: send_now
 character_id: dan-ancona
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml
+show_seed: repo-shows/dan-ancona-long-now.yml
 format: remote_or_in_person_oakland
 priority: send_now
 ---
@@ -58,7 +58,7 @@ picture at different zoom levels. We'd love your brain on **generative politics 
 
 - **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/dan-ancona/
 - **The saga:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/simcity-open-source-saga
-- **Show seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml
+- **Show seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/dan-ancona-long-now.yml
 - **Browse without an account:** https://github.com/SimHacker/WillWrightShowForFood
 
 **Next step:** reply with *yes / later / no / just the Mark Live mystery* — all honored. Zero debt.

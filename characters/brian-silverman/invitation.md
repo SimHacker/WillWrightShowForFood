@@ -3,7 +3,7 @@ status: draft
 character_id: brian-silverman
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml
+show_seed: repo-shows/brian-silverman-ca-logo-pdp7.yml
 format: async_one_on_one
 priority: send_ready
 ---
@@ -59,8 +59,8 @@ You're in Don's orbit as a **north-star implementer**: rules you can *see*, lang
 I've sketched your [character room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brian-silverman/),
 [conversation hooks](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/ideas.md),
 and [Brian's Brain + naming notes](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brian-silverman/sources/brians-brain-and-naming.md).
-The proposed [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml)
-ties to the [PIXIE / pie menus show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+The proposed [show seed](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brian-silverman-ca-logo-pdp7.yml)
+ties to the [PIXIE / pie menus show](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml)
 and the [Norman Margolus CA fest](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/norman-margolus/).
 [Browse the repo](https://github.com/SimHacker/WillWrightShowForFood) anytime.
 

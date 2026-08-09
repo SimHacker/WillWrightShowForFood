@@ -8,7 +8,7 @@ pre-existing wrong-depth relative links it encountered). Phase commits:
 Phase 1 bits/ + process/tracks/; Phase 2 dissolve ideas/; Phase 3 flatten
 flipbook/shows/; Phase 4 directory-ify loose seeds; Phase 4b facade case
 renames; Phase 5 verification (git case check, YAML parse, INDEX↔ls
-consistency, zero stale refs, RepoShowPrivate sweep).
+consistency, zero stale refs, private-studio sweep).
 
 ## The problem
 
@@ -310,7 +310,7 @@ recreates the UPPERCASE files), then `git mv` (git handles case-only
 renames; never rely on `mv` on this filesystem), then the scripted link
 sweep — these are the most-linked files in the repo (FORMAT.md and
 DRAG-RACE.md are cited from entryways, trails, characters, invitations,
-and RepoShowPrivate). The generated-facade banner inside each file stays;
+and private studio). The generated-facade banner inside each file stays;
 authored replacements per §4 supersede generation entry by entry
 (`render.mode llm`, already supported by the registry).
 
@@ -363,7 +363,7 @@ process, schemas, catalogs, apps, designs — plus generated facades).
   `markup-facades.yml` outputs, `git mv` the 11 UPPERCASE facades to
   girder-basename lowercase, regenerate, link sweep (heaviest sweep of
   all — FORMAT.md and DRAG-RACE.md are cited everywhere, including
-  RepoShowPrivate).
+  private studio).
 - **Phase 5 — verify.** Full-repo `rg` for every moved path (zero hits
   outside git history — case-sensitive rg, paths checked via `git
   ls-files` since the filesystem is case-insensitive), YAML parse check
@@ -388,7 +388,7 @@ process, schemas, catalogs, apps, designs — plus generated facades).
 
 Link sweep mechanics per phase: build an old→new path table from the `git
 mv` list, rewrite references repo-wide (script, not hand edits), then `rg`
-each old path to confirm zero survivors. `RepoShowPrivate` gets the same
+each old path to confirm zero survivors. The private studio repo gets the same
 sweep for its pointers into this repo.
 
 ## Decision points

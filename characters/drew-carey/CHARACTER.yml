@@ -26,7 +26,6 @@ representation:
 invitation:
   status: dream_guest
   consent: not_yet_asked
-  production: RepoShowPrivate/characters/drew-carey/
   show_seed: repo-shows/drew-carey/
   document: ../../characters/drew-carey/invitation.md
   ai_framing_md: ../../repo-shows/drew-carey/ai-contrast-framing.md

@@ -3,7 +3,7 @@ status: draft
 character_id: patrick-j-barrett-iii
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+show_seed: repo-shows/did-the-sims-make-you-gay.yml
 format: remote_or_in_person
 priority: send_now
 ---
@@ -61,7 +61,7 @@ and approve anything with your name on it before it ships.
 
 | | |
 |---|---|
-| **Show** | [`repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml) |
+| **Show** | [`repo-shows/did-the-sims-make-you-gay.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay.yml) |
 | **Your guest page** | [`characters/patrick-j-barrett-iii/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/patrick-j-barrett-iii) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/patrick-j-barrett-iii/ideas.md) |
 | **Integrated timeline** | [`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md) |

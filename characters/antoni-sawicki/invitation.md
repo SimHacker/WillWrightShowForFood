@@ -3,7 +3,7 @@ status: draft
 character_id: antoni-sawicki
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml
+show_seed: repo-shows/antoni-sawicki-ttycity.yml
 format: live_or_async
 ---
 
@@ -92,7 +92,7 @@ Accepted, delayed, too busy, declined, or no reply — all honored.
 | **Interview beats** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/ideas.md) |
 | **Emoji UI spec** | [`sources/ttycity-emoji-graphics-ui.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/sources/ttycity-emoji-graphics-ui.yml) |
 | **Email thread** | [`sources/2026-07-08-ttycity-email-thread.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/antoni-sawicki/sources/2026-07-08-ttycity-email-thread.yml) |
-| **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml) |
+| **Show seed** | [`../../repo-shows/antoni-sawicki-ttycity.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/antoni-sawicki-ttycity.yml) |
 
 — Don
 

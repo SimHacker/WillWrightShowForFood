@@ -1,0 +1,60 @@
+# Craig Hubley — CHI'90 Performance Chair; commissioned Empowered; interactive-performance forum pioneer
+name: Craig Hubley
+role: consultant / HCI events / performance producer
+location: Toronto, Canada (historical); Netherlands orbit (TomTom era, 2008)
+affiliations:
+  - Craig Hubley & Associates
+  - ACM SIGCHI — CHI'90 Performance Chair; CHI'92 Interactive Performance Chair
+  - University of Toronto Computing Services (1989–1990 mail era)
+consent: not_yet_asked
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  documents:
+    - invitation-1.md   # performance + instrument, no explanation
+    - invitation-2.md   # the Rosetta Stone + CHI'90 thread + Repo Show ask
+    - ideas.md          # performance forum, trade-show campaigns, Tom × Craig
+  note: two parts on purpose — watch first, explanation second; opening mirrors 2008 mail tone
+
+chi90:
+  role: Performance Chair — commissioned Don's Empowered show
+  date: 1990-04-03
+  venue: Seattle Sheraton — Tue 7:00–8:30 and 9:00–10:30 PM
+  archive: characters/don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/
+  director_notes: director-run-sheet.md   # drama over demo; blindfolded pie-menu encore
+  photo: assets/don-hopkins-chi90-empowered-shneiderman.png   # Ben Shneiderman, via Medium 2018
+
+hubley_2007: >
+  "Don's software development and testing methodology is nothing short of performance art.
+  I literally put him on stage in front of most of the user interface designers in the world
+  in 1990… I have met no person who so understands software as an art."
+
+don_2007: >
+  "I really appreciate your help organizing my thoughts, focusing my presentation, and giving
+  me the confidence required to go up on stage and do all that risky stuff in real time."
+
+links:
+  linkedin: https://www.linkedin.com/in/craighubley/   # verify if live
+  email_historical:
+    - craig@gpu.utcs.utoronto.ca
+    - craighubleyca@yahoo.com
+  medium_empowered: https://medium.com/@donhopkins/empowered-pie-menu-performance-at-chi90-and-other-weird-stuff-869ccb75ad
+
+performance_references:   # same instrument as Tom's invitation
+  jerry_martin_performance: https://www.youtube.com/watch?v=319i7slXcbI
+  live_site: https://micropolisweb.com/
+  blamstrain_performance: https://www.youtube.com/watch?v=BBVyCpmVQew
+  demo: https://www.youtube.com/watch?v=wlHGfNlE8Os
+  source: https://github.com/SimHacker/MicropolisCore
+  chi90_photo: characters/don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/assets/don-hopkins-chi90-empowered-shneiderman.png
+
+sources:
+  - "Don's mail archive: CHI'90 production thread (Jan–Apr 1990); LinkedIn 2007 recommendation"
+  - "characters/don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/"
+
+see_also:
+  - { path: ../don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/README.md, why: "primary provenance — CFP through Empowered" }
+  - { path: ../tom-tjon-a-loi/CHARACTER.yml, why: "cross-intro — performance art × social Micropolis × Repo Show co-design" }
+  - { path: ../ben-shneiderman/, why: "HCIL orbit; photographed Empowered on stage" }
+  - { path: ../../repo-shows/will-wright-premiere/README.md, why: "Repo Show format Craig could co-design" }

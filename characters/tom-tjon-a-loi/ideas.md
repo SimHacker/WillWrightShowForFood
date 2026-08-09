@@ -277,6 +277,20 @@ Threads to pull:
   aesthetic — incompatible worldviews sharing state — as narrative
   architecture instead of tile graphics.
 
+## Tom × Craig Hubley — performance producers, thirty years apart
+
+Introduce them in the same episode or as a designed segment:
+
+| | [Craig Hubley](../craig-hubley/) | Tom |
+|---|--------|-----|
+| **When** | CHI'90 — Empowered on stage | 2009 — Micropolis social storyboards |
+| **Role** | Performance Chair; director's run sheet | Co-designer; UI/graphics; Architectuurfonds pitch |
+| **Ethic** | Drama over demo; Gould quote | AI as instrument; REmemory |
+| **Now** | Repo Show format co-designer invite | Repo Show format co-designer invite |
+
+Craig's room: [../craig-hubley/](../craig-hubley/) ·
+[ideas — Craig × Tom](../craig-hubley/ideas.md#craig--tom--introduce-the-performance-producers)
+
 ## 2009, unfinished
 
 His storyboards — the social layer, multiplayer play, cities as shared

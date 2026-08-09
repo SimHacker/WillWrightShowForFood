@@ -27,6 +27,9 @@ drawing project behind the "mousee" program.
   Here is what mousee actually was, in 1990: trail where the mouse moves,
   marks where it clicks, colored circles where menus pop up, and the
   white-outline occlusion trick so crossings show which stroke came first.
+- **Provenance: Hubley's CFP + mail.** Craig Hubley's [1989 performer search](1989-05-25-hubley-chi90-interactive-performers-cfp/README.md)
+  cited Don's pie-menu virtuoso act; [Aug–Sep 1989 email](1989-05-25-hubley-chi90-interactive-performers-cfp/correspondence.md)
+  confirms CHI'88 demo and commissions the CHI'90 **Empowered** repeat.
 - **A proto interaction-history visualization manifesto.** The art project:
   draw state changes over time as a static picture — no-op the root paint
   routine so dragged windows leave streaks of intermediate positions;

@@ -3,7 +3,7 @@ status: draft
 character_id: alexander-avila
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+show_seed: repo-shows/im-queer-therefore-i-sim.yml
 format: async_friendly
 priority: warm_lead
 working_title: "I'm Queer Therefore I Sim"
@@ -38,7 +38,7 @@ holy-shit-they-can-just-do-that, too-busy-placing-couches, 2022 orientation upda
 4. **May 2026 looksmaxxing essay** — performativity thread across both videos; yes I saw Patreon thanks.
 5. **Audience stories** — optional TicketPR: congregation submits Sims queer awakening tales; you react.
 
-**Also brewing:** Patrick Barrett episode ([`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml)) — your essay as congregation voice; can cross-cut or stay separate.
+**Also brewing:** Patrick Barrett episode ([`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay.yml)) — your essay as congregation voice; can cross-cut or stay separate.
 
 **Format:** Async-friendly — record when you want; I intercut MOOLLM theme cards + fair-use clips + comment commentary. Live also fine.
 
@@ -46,7 +46,7 @@ holy-shit-they-can-just-do-that, too-busy-placing-couches, 2022 orientation upda
 
 — Don Hopkins
 
-Show seed: [`repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml`](../../repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml) · Ideas: [`ideas.md`](ideas.md)
+Show seed: [`repo-shows/im-queer-therefore-i-sim.yml`](../../repo-shows/im-queer-therefore-i-sim.yml) · Ideas: [`ideas.md`](ideas.md)
 
 `🎬 I'm Queer Therefore I Sim` · `🏳️‍🌈 congregation` · `📊 1,712 comments digested`
 

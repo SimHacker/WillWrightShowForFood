@@ -1,13 +1,14 @@
-# Invitation — Netochka Nezvanova *(stub)*
+# Invitation — Netochka Nezvanova
 
-Production invitation and outreach notes live in **RepoShowPrivate**
-[`characters/netochka-nezvanova/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/netochka-nezvanova)
-(studio access).
+*[Portrayal standards](../../schemas/portrayal-standards.md) — edit, decline,
+delay, or request removal anytime.*
 
-Public portrayal only here:
+Invitation draft not yet published in this repository.
 
-- [README.md](README.md) — the persona, NATO, mystique (kept intact)
-- [ideas.md](ideas.md) — show segments and questions
-- [Portrayal standards](../../schemas/portrayal-standards.md) · never speak *as* NN without consent
+Public portrayal:
 
-*Any answer — including no answer, or a yellow flower — is honored.*
+- [README.md](README.md)
+- [ideas.md](ideas.md)
+- [Portrayal standards](../../schemas/portrayal-standards.md)
+
+*Invitation offered with no presumption.*

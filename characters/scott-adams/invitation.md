@@ -3,7 +3,7 @@ status: warm
 character_id: scott-adams
 public: true
 consent: correspondence_verified
-show_seed: characters/scott-adams/
+show_seed: repo-shows/scott-adams/
 format: remote_or_in_person
 ---
 
@@ -71,7 +71,7 @@ if we ever overlap. **Zero homework — as much *homefun* as you are up to.** No
 
 | If you're curious about…         | Link                                                                                                                                     |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **This show** (segment ideas)    | [characters/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/SHOW.yml)                                                                                                      |
+| **This show** (segment ideas)    | [repo-shows/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-adams/SHOW.yml)                                                                                                      |
 | **Your guest page**              | [characters/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-adams)                           |
 | **Conversation hooks**           | [ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/ideas.md)                                 |
 | **Dual palace brief**            | [moollm-dual-palace.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/moollm-dual-palace.md)       |

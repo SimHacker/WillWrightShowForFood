@@ -14,8 +14,8 @@ That's the invitation, almost verbatim. Will Wright and I are making **Repo Show
 and stage is a public GitHub repo:
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.** sources, code, questions, and artifacts accumulate before,
-during, and forever after the conversation ([format](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/repo-show-format.md) ·
-[vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/vision-and-ambition.md)). **Resurrecting old code on air is a core format.** The text
+during, and forever after the conversation ([format](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/FORMAT.md) ·
+[vision](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/VISION.md)). **Resurrecting old code on air is a core format.** The text
 fountain. DynaDraw. A ConMan-style patch panel running again. F.U.N. is the acceptance criterion.
 
 Things I'd love to put on the table (pick any, ignore the rest):

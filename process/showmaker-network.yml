@@ -20,7 +20,7 @@ show_repos:
     independent public repo + matching <Show>Private — DrewCareyRepoShow, BrianEnoRepoShow, etc.
   franchises:
     pattern: "<ShowName> (public) + <ShowName>Private (that show's guests)"
-    platform_lounge: "RepoShowPrivate — franchise holders coordinate across shows"
+    platform_lounge: "private production notes"
     spin_off: |
       Start as episode in an existing repo; migrate to own franchise when guest hosts their orbit.
       Shared RepoShow infrastructure; owned fan base and private green room per franchise.

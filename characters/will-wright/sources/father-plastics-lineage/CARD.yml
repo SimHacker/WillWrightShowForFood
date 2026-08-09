@@ -1,0 +1,22 @@
+# CARD — father / plastics lineage (interface only)
+
+glance: ../2006-11-06-new-yorker-game-master/README.md
+
+room:
+  id: father-plastics-lineage
+  name: "Bill Wright · plastics · models · SimCity bridge"
+  type: [biography, synthesis, cross_source]
+  home: characters/will-wright/sources/father-plastics-lineage/
+
+methods:
+  CITE-FATHER:
+    signature: "citeFather() → README.md claim ledger"
+    advertisement: "Sourced answer for 'Will's dad was plastics' — Seabrook + Boodman + gift lore."
+  BRIDGE-TO-SIMCITY:
+    signature: "bridgeToSimCity() → README.md § Bridge to game design"
+    advertisement: "Montessori, models, factory, Bakelite box art — one table."
+
+compose_with:
+  - ../2006-11-06-new-yorker-game-master/
+  - ../2026-03-25-vulture-proxi-profile/
+  - ../../media/russian-space-junk.md

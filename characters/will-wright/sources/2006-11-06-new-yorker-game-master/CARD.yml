@@ -1,0 +1,14 @@
+# CARD — New Yorker Game Master (interface only)
+
+glance: README.md
+
+room:
+  id: 2006-11-06-new-yorker-game-master
+  name: "Game Master — Seabrook profiles Will Wright (2006)"
+  type: [press, profile, primary_source]
+  home: characters/will-wright/sources/2006-11-06-new-yorker-game-master/
+
+methods:
+  READ-EXCERPTS:
+    signature: "readExcerpts() → excerpts.md"
+    advertisement: "Childhood, SimCity genesis, Sims object-system — quoted, anchored."

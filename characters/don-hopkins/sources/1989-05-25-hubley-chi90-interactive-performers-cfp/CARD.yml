@@ -1,0 +1,31 @@
+# CARD — Hubley CHI'90 performers CFP (interface only)
+
+glance: README.md
+
+room:
+  id: 1989-05-25-hubley-chi90-interactive-performers-cfp
+  name: "CHI'90 interactive performers CFP — comp.graphics May 1989"
+  type: [usenet, primary_source, performance_provenance]
+  home: characters/don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/
+
+methods:
+  READ-CFP:
+    signature: "readCfp() → cfp.md"
+    advertisement: "The casting call — blindfolded pie menus three layers deep as virtuoso act."
+  READ-CORRESPONDENCE:
+    signature: "readCorrespondence() → correspondence.md"
+    advertisement: "Hubley finds Don after CHI'88 — commission for Empowered, PSIBER pitch."
+  TRACE-EMPOWERED:
+    signature: "traceEmpowered() → performance-production.md + director-run-sheet.md + empowered.ps"
+    advertisement: "CFP → commission → director notes → Apr 3 1990 dual showings."
+  VIEW-PHOTO:
+    signature: "viewPhoto() → assets/don-hopkins-chi90-empowered-shneiderman.png"
+    advertisement: "Ben Shneiderman stage photo — Sun workstation, Sheraton Empowered."
+  READ-MEDIUM:
+    signature: "readMedium() → medium-retrospective-2018.md"
+    advertisement: "Don's 2018 public retrospective — mail + video anthology."
+
+compose_with:
+  - ../1990-04-11-siegel-sun-interview-mousee-art.md
+  - ../../code/psiber/empowered.ps
+  - ../pie-menu-timeline.md

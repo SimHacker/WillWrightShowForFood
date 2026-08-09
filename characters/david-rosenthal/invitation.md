@@ -2,7 +2,7 @@
 status: invited
 character_id: david-rosenthal
 consent: not_yet_asked
-show_seed: repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
+show_seed: repo-shows/pixie-pie-menus-pdp7.yml
 ---
 
 # Repo Show invitation — David S. H. Rosenthal
@@ -184,7 +184,7 @@ optional solo shows later).
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| **Show seed** (full outline + `guest_roles`) | [`repo-shows/pixie-pie-menus-pdp7.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/pixie-pie-menus-pdp7.yml) |
 | **Evidence room** — Chapman → films → Bumblebee | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
 | ***Flight of the PIXIE*** (YouTube) | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) |
 | **PIXIE paper** (PDF) | [donhopkins.com — PIXIE](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |

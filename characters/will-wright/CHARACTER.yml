@@ -95,6 +95,12 @@ sources:
   archive:
     - label: "1996-04-26 Winograd CS547 — 'Interfacing to Microworlds' (the FIRST + the show's anchor artifact; Dollhouse preview)"
       path: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+    - label: "Father / plastics lineage — Bill Wright, factory, models, Bakelite box bridge"
+      path: ../../characters/will-wright/sources/father-plastics-lineage/
+    - label: "2006-11-06 New Yorker — Game Master (Seabrook Spore profile; childhood + SimCity origin)"
+      path: ../../characters/will-wright/sources/2006-11-06-new-yorker-game-master/
+    - label: "2026-03-25 Vulture — Proxi profile (polyethylene vat; Eric Boodman)"
+      path: ../../characters/will-wright/sources/2026-03-25-vulture-proxi-profile/
     - label: "YouTube — Stanford recording of the 1996 talk"
       url: https://www.youtube.com/watch?v=nsxoZXaYJSk
     - label: "2003-05-02 Winograd CS547 — 'Games and Simulation' (Will's SECOND catalogued CS547 talk)"

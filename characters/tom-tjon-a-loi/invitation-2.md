@@ -93,4 +93,19 @@ player** — it's constitutional now. This is an invitation to play.)
 Reply with a rough week, or "later" — interested, delayed, declined, or no
 reply are all honored.
 
+---
+
+## Someone you should meet: Craig Hubley
+
+I also want you to meet **[Craig Hubley](../craig-hubley/)** — he was CHI'90
+**Performance Chair**, commissioned my **Empowered** pie-menu show, and wrote
+the director's notes that insisted on drama over demo (*"every user an artist"*).
+He gets live instruments and audience energy the way you get social worldbuilding
+and critical play. **Tom × Craig** is a segment that plans itself: you sewed the
+social costume for Micropolis; he ran the theatre where HCI learned to perform.
+
+Craig's invitation uses the same two-part structure:
+[part 1](../craig-hubley/invitation-1.md) ·
+[part 2](../craig-hubley/invitation-2.md).
+
 — Don Hopkins *(User Interface Flower Child)*

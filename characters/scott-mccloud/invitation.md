@@ -1,13 +1,39 @@
-# Invitation — Scott Mccloud
+---
+status: draft
+character_id: scott-mccloud
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/scott-mccloud/
+send_batch: sims-reunion-2026
+format: remote_or_in_person
+---
 
-Production invitation draft and outreach notes live in **RepoShowPrivate**
-[`characters/scott-mccloud/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/scott-mccloud)
-(studio access).
+# Repo Show invitation — Scott McCloud
 
-Public portrayal only here:
+*Send-ready draft — not yet sent. Scott McCloud may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-- [README.md](README.md)
-- [ideas.md](ideas.md)
-- [Portrayal standards](../../schemas/portrayal-standards.md)
+Scott —
 
-*Invitation offered with no presumption.*
+*Understanding Comics* was a bible on **The Sims** team — masking, closure, amplification through
+simplification. I still cite you in the Transmogrifier docs. I'd love a **Repo Show**, ideally as
+**patron-saint guest** for a **Sims reunion** or a dedicated **Understanding Simulations** episode.
+
+**Threads — your pick:**
+
+- **Understanding Comics → Understanding Simulations** — closure, the gutter, and player imagination.
+- **Masking** — abstract Sims in photoreal-ish worlds; identification and empathy.
+- **The space between** — sparse models on screen, rich models in the player's head (Micropolis too).
+- **Making Comics today** — what changes when the audience can fork the story in git.
+
+No pressure, no homework. Accepted, delayed, declined, or no reply — all honored gracefully.
+
+— Don Hopkins *(User Interface Flower Child)*
+
+| | |
+|---|---|
+| **Show seed** | [`repo-shows/scott-mccloud/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-mccloud/README.md) |
+| **Your guest page** | [`characters/scott-mccloud/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-mccloud) |
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

@@ -3,7 +3,7 @@ status: draft
 character_id: ben-cerveny
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/ben-cerveny/ben-cerveny.yml
+show_seed: repo-shows/ben-cerveny.yml
 ---
 
 # Repo Show invitation — Ben Cerveny
@@ -25,7 +25,7 @@ following through to working code and credited ideas in public.
 - **Lane Neverending** — MOOLLM's spliceable circular street as homage to GNE/Habitat geometry
 - **OpenLaszlo lineage** — SimProv Wedding Playset / SimFreaks plumbing vs the new LLM uplift layer
 
-**Materials:** [`repo-shows/ben-cerveny/ben-cerveny.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ben-cerveny/ben-cerveny.yml) · [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-cerveny/ideas.md)
+**Materials:** [`repo-shows/ben-cerveny.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ben-cerveny.yml) · [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-cerveny/ideas.md)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

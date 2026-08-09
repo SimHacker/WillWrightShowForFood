@@ -45,6 +45,7 @@ and we do not speak as him without consent.
 | **Zimbabwe Z$20B business card** (Gallium stamp; ~$2–4 face-street price) | [`media/zimbabwe-20-billion-business-card.md`](media/zimbabwe-20-billion-business-card.md) |
 | **Artwork** (mixed-media relief constructions) | [`media/artwork.md`](media/artwork.md) |
 | **1996 Stanford talk** (centerpiece) | [source bundle](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) · [YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) |
+| **Father / plastics lineage** (Bill Wright, factory, models → SimCity) | [father-plastics-lineage](sources/father-plastics-lineage/README.md) · [New Yorker 2006](sources/2006-11-06-new-yorker-game-master/README.md) · [Vulture 2026](sources/2026-03-25-vulture-proxi-profile/README.md) |
 | **Yaml girder** | [`CHARACTER.yml`](CHARACTER.yml) |
 
 ## Why this repo exists around him

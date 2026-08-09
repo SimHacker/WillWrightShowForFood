@@ -1,0 +1,28 @@
+# CARD — Craig Hubley (interface only)
+
+glance: GLANCE.md
+
+room:
+  id: craig-hubley
+  name: "Craig Hubley — CHI'90 Empowered commissioner"
+  type: [invitation, performance_provenance, format_co_designer]
+  home: characters/craig-hubley/
+
+methods:
+  READ-INVITE-1:
+    signature: "readInvite1() → invitation-1.md"
+    advertisement: "Watch the instrument first — 2008 mail mirror, no Rosetta Stone."
+  READ-INVITE-2:
+    signature: "readInvite2() → invitation-2.md"
+    advertisement: "Rosetta Stone + CHI'90 thread + Repo Show co-design ask."
+  TRACE-CHI90:
+    signature: "traceChi90() → ../don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/"
+    advertisement: "CFP → director's notes → Apr 3 1990 Empowered → Shneiderman photo."
+  MEET-TOM:
+    signature: "meetTom() → ../tom-tjon-a-loi/"
+    advertisement: "Performance producer × social Micropolis designer — introduce."
+
+compose_with:
+  - ../don-hopkins/sources/1989-05-25-hubley-chi90-interactive-performers-cfp/director-run-sheet.md
+  - ../tom-tjon-a-loi/invitation-2.md
+  - ../../repo-shows/will-wright-premiere/

@@ -24,7 +24,6 @@ invitation:
   status: stub
   consent: not_yet_asked
   document: invitation.md
-  production: RepoShowPrivate/characters/netochka-nezvanova/
   note: >
     Don would genuinely love her on the Repo Show. Reaching the person(s) behind the mask is its
     own adventure — and possibly, in Don's words, "awaking a monster with a new medium to terrorize." 😉
@@ -85,7 +84,6 @@ don_connection:
     context; full timeline in studio repo). Parallel work: PowerPC Mac live video, AE plugins — see
     don-hopkins sources.
   voice: "Don has long championed NN on Hacker News — spectacular trolling AND spectacular software."
-  production_notes: RepoShowPrivate/characters/netochka-nezvanova/
 
 connections:
   max_pd_lineage: "NATO.0+55+3d lived inside Max's visual-programming protocol; part of the patch-cord dataflow world (see visual-programming trail). Jitter (Cycling '74) later covered similar ground."

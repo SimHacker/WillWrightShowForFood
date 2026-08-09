@@ -53,4 +53,4 @@ or take direct edit access.
 
 — Don Hopkins
 
-**Show seed:** repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml — Multipatch film hunt
+**Show seed:** repo-shows/pixie-pie-menus-pdp7.yml — Multipatch film hunt

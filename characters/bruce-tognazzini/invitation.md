@@ -3,7 +3,7 @@ status: draft
 character_id: bruce-tognazzini
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/ask-tog/ask-tog.yml
+show_seed: repo-shows/ask-tog.yml
 format: remote_or_in_person
 ---
 
@@ -62,7 +62,7 @@ you through a framework you can actually use. [The saga so far](https://github.c
 
 | Topic | Link |
 | --- | --- |
-| **Show seed** | [ask-tog.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ask-tog/ask-tog.md) |
+| **Show seed** | [ask-tog.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ask-tog.md) |
 | **Preservation saga** | [asktog-preservation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/asktog-preservation.md) |
 | **Monkeys 1979 → Palm 2026** | [infinite-monkeys-1979.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/bruce-tognazzini/sources/infinite-monkeys-1979.md) |
 | **Don's reading video** (Palm's tribute + your Apple ][ program, narrated) | [youtube.com/watch?v=lL2sw2oYU98](https://www.youtube.com/watch?v=lL2sw2oYU98) |

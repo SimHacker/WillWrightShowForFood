@@ -47,6 +47,16 @@ Will's **Design Plunder** keynote — chair, failure states, disease vectors, Si
 generative games, Conway's Life scored live, full **Spore** demo. Don **in the audience**; seed evening
 for the Eno ↔ Scott Draves circle. [YouTube](https://www.youtube.com/watch?v=Dfc-DQorohc)
 
+**[father-plastics-lineage/](father-plastics-lineage/README.md)**  
+**Bill Wright, Sr.** — Atlanta plastics packing company; Will's model kits and Montessori → SimCity;
+polyethylene vat at the factory ([Vulture 2026](2026-03-25-vulture-proxi-profile/README.md));
+Seabrook [*Game Master*](2006-11-06-new-yorker-game-master/README.md) for the long childhood arc.
+Bakelite gift thread anchor.
+
+**[2006-11-06-new-yorker-game-master/](2006-11-06-new-yorker-game-master/README.md)**  
+John Seabrook's Spore-era **New Yorker** profile — SimCity / Sims origin, object-centric design,
+E3 Spore Hut. Quoted excerpts: [`excerpts.md`](2006-11-06-new-yorker-game-master/excerpts.md).
+
 **[2008-02-10-soul-of-the-sims/](2008-02-10-soul-of-the-sims/README.md)**  
 Will's January 1997 **Motive.c** — hunger, bladder, stress as procedural rhetoric at the substrate.
 Scans plus Don's transcription. The wedding playset and Dumbold Voting Machine are later *objects*

@@ -33,7 +33,6 @@ He studies microworlds by building them.
 | **Invitation** | [invitation.md](invitation.md) |
 | **Hooks** | [ideas.md](ideas.md) |
 | **Sources** | [sources/romchip-will-wright-2024.md](sources/romchip-will-wright-2024.md) |
-| **Production mail** | [RepoShowPrivate `chaim-gingold/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/chaim-gingold) |
 | **Media** | [media/README.md](media/README.md) — book cover, reverse diagrams PDF |
 | **Show seed** | [repo-shows/chaim-gingold/](../../repo-shows/chaim-gingold/README.md) |
 | **Natural pair** | [Sam Arbesman](../sam-arbesman/README.md) — historian × complexity scientist |

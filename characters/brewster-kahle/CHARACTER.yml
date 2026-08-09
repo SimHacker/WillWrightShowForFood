@@ -18,7 +18,6 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  production: RepoShowPrivate/characters/brewster-kahle/
 
 bio:
   summary: >

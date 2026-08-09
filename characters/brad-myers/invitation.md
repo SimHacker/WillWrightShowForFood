@@ -3,7 +3,7 @@ status: draft
 character_id: brad-myers
 public: true
 consent: not_yet_asked
-show_seed: repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml
+show_seed: repo-shows/brad-myers-garnet-vpl.yml
 also_shows: [repo-shows/openlaszlo/]
 format: remote_or_in_person
 ---
@@ -86,7 +86,7 @@ Shorter call, written notes into the repo, reunion-only, solo-only, or "not now"
 | Topic | Link |
 | --- | --- |
 | **OpenLaszlo reunion show** | [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md) |
-| **Garnet / PBD show seed** | [`repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/brad-myers-garnet-vpl/brad-myers-garnet-vpl.yml) |
+| **Garnet / PBD show seed** | [`repo-shows/brad-myers-garnet-vpl.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/INDEX.yml) |
 | **Your guest page** | [`characters/brad-myers/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/brad-myers) |
 | **Don's Garnet thread** | [`garnet-to-svelte…`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/garnet-to-svelte-constraint-ui-lineage.md) |
 | **Temkin / Declare pack** | [`../david-temkin/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-temkin) |

@@ -5,7 +5,7 @@ public: true
 consent: not_yet_asked
 show_seed: repo-shows/craig-latta/
 also_shows: [repo-shows/openlaszlo/]
-memorial_arc: repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml
+memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
 format: remote_or_in_person
 ---
 
@@ -56,7 +56,7 @@ willing — or we start with just us and leave the door open.
 
 Memorial mode: we *represent and discuss* — we never speak as her. See
 [`characters/vanessa-freudenberg/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/vanessa-freudenberg)
-and [`repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml).
+and [`repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
 
 ## Option D — Whatever works
 

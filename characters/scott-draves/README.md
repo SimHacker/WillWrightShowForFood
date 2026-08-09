@@ -70,6 +70,6 @@ connects **Brian Eno** as a [dream guest](../brian-eno/README.md) — outreach n
 - Ideas to explore: [`ideas.md`](ideas.md)
 - **Media:** [`media/`](media/README.md) — 6Heads ELAVIL photos · [**Fractal Flame paper (TODO)**](media/flam3-original-paper-TODO.md) — Don has the PDF
 - Show seed: [`repo-shows/scott-draves/`](../../repo-shows/scott-draves/README.md)
-- Correspondence timeline: **RepoShowPrivate** `characters/scott-draves/`
+- Correspondence timeline: not published in this repository.
 - Dream co-guest: [Brian Eno](../brian-eno/README.md) · Reunion host: [Will Wright](../will-wright/README.md)
 - Live work: [electricsheep.org](https://electricsheep.org/) · [infinidream.ai](https://infinidream.ai/) · [scottdraves.com](https://scottdraves.com/) · [flam3.com](https://flam3.com/)

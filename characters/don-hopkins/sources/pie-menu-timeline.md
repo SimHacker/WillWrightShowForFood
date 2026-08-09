@@ -41,6 +41,11 @@ backbone under the retrospective — most dates below are from quoted period ema
 | 1988-05-14 | CHI'88 paper presented |
 | 1988-11-02 | **Weiser email: CACM accepts the "Pies" paper** — "a year and half later!" — wanting a minor rewrite (deemphasize experiment, make it a feature article). Never resubmitted: Weiser at PARC, too much had changed; DDJ Dec 1991 became the definitive publication instead |
 | 1989-02-14 | `piepaper.comments` CACM-draft outline carries the "; pixie reference" TODO — intent to cite PIXIE in the never-finished rewrite, on disk and datestamped |
+| 1989-05-25 | **[Hubley CHI'90 CFP](1989-05-25-hubley-chi90-interactive-performers-cfp/README.md)** — Usenet call for interactive performers; cites CHI'88 **pie menu virtuoso** (blindfolded, three layers deep) |
+| 1989-08–09 | **Hubley ↔ Don mail** — Hubley confirms CHI'88 demo; commissions repeat at CHI'90; Don pitches PSIBER; theme *Empowering People* → show **Empowered** — [correspondence](1989-05-25-hubley-chi90-interactive-performers-cfp/correspondence.md) |
+| 1990-01–03 | **Empowered production** — Hubley commission, director's run sheet, Sun/Barco, Tue Apr 3 dual showings — [performance-production.md](1989-05-25-hubley-chi90-interactive-performers-cfp/performance-production.md) · [director-run-sheet.md](1989-05-25-hubley-chi90-interactive-performers-cfp/director-run-sheet.md) |
+| 1990-04-01–05 | **Empowered** — live CHI'90 Seattle — [`empowered.ps`](../code/psiber/empowered.ps) |
+| 2018-05-10 | Medium retrospective + Shneiderman stage photo — [medium-retrospective-2018.md](1989-05-25-hubley-chi90-interactive-performers-cfp/medium-retrospective-2018.md) |
 
 ## Don's 1990 no-patent explanation (quoted in article)
 

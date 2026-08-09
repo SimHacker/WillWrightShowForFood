@@ -19,7 +19,6 @@ invitation:
   status: dream_guest
   consent: not_yet_asked
   document: invitation.md
-  production: RepoShowPrivate/characters/laurie-anderson/
   show_seed: repo-shows/laurie-anderson/
 
 bio:
@@ -40,7 +39,7 @@ bio:
     Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, and Nina Hagen.
 
 reach:
-  note: "Dream invitation — offered with no presumption. Outreach notes: RepoShowPrivate characters/laurie-anderson/"
+  note: "Dream invitation — offered with no presumption."
 
 interval_research:
   confirmed: true

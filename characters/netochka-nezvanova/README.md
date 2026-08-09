@@ -57,7 +57,7 @@ Don paints that whole picture here: [Real-time net jamming — the nettime scene
 | [Smalltalk, Squeak, Lua (2006)](sources/smalltalk-squeak-lua-2006.md) | Technical thread (public excerpts) |
 | [Political views (2006–2009)](sources/political-views-2006-2009.md) | Midterms, faith, US return |
 
-Correspondence timeline and production invitation: **RepoShowPrivate** `characters/netochka-nezvanova/`.
+Correspondence timeline: not published in this repository.
 
 ## The invitation
 

@@ -1,5 +1,64 @@
-# Correspondence index — MOVED to RepoShowPrivate
-moved: true
-private: https://github.com/SimHacker/RepoShowPrivate/blob/main/characters/will-wright/correspondence.yml
-public_portrayal: README.md
-note: "Production correspondence lives in the private repo; this public stub is the pointer."
+# Will Wright × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.md
+
+meta:
+  with: will-wright
+  curated_by: don-hopkins
+  consent: invitation_accepted
+  span: "Maxis era–2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/will-wright.yml
+  export_status: in_progress
+
+gist: |
+  Colleagues from **Maxis** (SimCity, The Sims, CTG) with a long shared interest in
+  **microworlds**, **player-extensible toys**, and **data portability** across games.
+  Don preserved Will's **1996 CS547 talk** (*Interfacing to Microworlds*). Threads span
+  **OLPC/Micropolis**, **Stupid Fun Club** robotics, **Gallium/Proxi**, Sims team
+  reunions, and today's **Soul City** / Repo Show work. Dedicated mail export
+  underway (2026-07-01) — this file updates as clusters are deep-read.
+
+threads:
+  cs547_1996:
+    what: "Stanford talk preserved by Don — Dollhouse preview, data portability train-set model"
+    public: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+  olpc_micropolis:
+    what: "Open SimCity for children; EA licensing; Micropolis activity on OLPC Sugar"
+  proxi_gallium:
+    what: "Character-as-AI across games; Gallium Studios; Proxi as über-character + software heirloom (family memory)"
+    public: characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
+  stupid_fun_club:
+    what: "Robotics, Slats, One Minute Movies — constructionism as theater"
+  sims_reunion:
+    what: "Original Sims team — SimAntics, Exchange, design-by-accretion"
+  pixie_thread_cc_2026:
+    date: "2026-07-07"
+    what: |
+      Don Cc'd Will on PIXIE trio thread reply — async Repo Show format, evidence-room pre-upload,
+      source listing excitement, telecine house style. Will not a PIXIE bud; observer on deep
+      prehistory lane touching microworlds / constructionist preservation.
+    transcript: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
+    show: ../../repo-shows/pixie-pie-menus-pdp7.yml
+  conversation_2026_07_09:
+    date: "2026-07-09"
+    what: |
+      Notes while Don records: Romero (Ireland/Brenda), next-gen guests, mid-80s MIT complexity
+      orbit (Abraham, Crutchfield), Mike Winter Berkeley videos, Bo Burnham, fiction/non-fiction
+      distinction, Burke + Cunk + MST3K + Life on Earth format stack.
+    public: sources/2026-07-09-will-conversation-notes.md
+
+connects_in_repo:
+  - { path: ideas.md, why: "Flagship topic menu" }
+  - { path: sources/, why: "Dated source bundles from mail + CS547" }
+  - { path: ../chaim-gingold/, why: "Maxis history book vs building now" }
+  - { path: ../heather-alvey/, why: "SliceCity / SimFreaks / Gallium" }
+  - { path: sources/2026-07-09-will-conversation-notes.md, why: "Romero, Cunk, Burke, fiction/non-fiction stack" }
+  - { path: ../../repo-shows/will-wright-premiere/, why: "Flagship show seed" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Cc on PIXIE thread 2026-07-07" }
+  - { path: ../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md, why: "Don reply — async evidence room" }
+
+show_hooks:
+  - "1996 talk decode live — Will reads his own prediction of The Sims"
+  - "Data portability demo — Proxi ⇔ Sims ⇔ SimCity federation; Proxi → Minecraft (shipped)"
+  - "Slats RoboResurrection — Stupid Fun Club code on air"
+  - "Sims 1 post-mortem from Will's 1996 words"

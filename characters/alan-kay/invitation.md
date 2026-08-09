@@ -1,13 +1,76 @@
-# Invitation — Alan Kay
+---
+status: draft
+character_id: alan-kay
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/alan-kay-microworld.yml
+memorial_arc: repo-shows/remembering-vanessa-freudenberg.yml
+format: remote_or_in_person
+---
 
-Production invitation draft and outreach notes live in **RepoShowPrivate**
-[`characters/alan-kay/`](https://github.com/SimHacker/RepoShowPrivate/tree/main/characters/alan-kay)
-(studio access).
+# Repo Show invitation — Alan Kay
 
-Public portrayal only here:
+*Send-ready draft — not yet sent. Alan Kay may edit, decline, delay, or request removal at any time.*  
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+Alan —
 
-- [README.md](README.md)
-- [ideas.md](ideas.md)
-- [Portrayal standards](../../schemas/portrayal-standards.md)
+We've been writing for years — **Fabrik** and the intro to **Dan Ingalls**, **PIXIE** and Smalltalk
+**halos**, your review of the **Yoot Saito** interview transcript, **NeWS** ("the right way to go —
+except it missed the live system underneath"), **HyperCard** done beautifully, and my **MOOLLM**
+note this January. I'd like to turn that thread into a **Repo Show** — a conversation whose
+stage is a public GitHub repo, following through to working code and credited
+ideas in public. **Show, don't tell.**
 
-*Invitation offered with no presumption.*
+**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+
+**Remembering Vanessa — with Craig, Dan, and me.**
+
+I'm also **warmly inviting you** to help **remember Vanessa Freudenberg** alongside **Craig Latta**
+and **Dan Ingalls** and me. Vanessa wrote **SqueakJS** — live Smalltalk in the browser — and had
+sharp things to say about **WebAssembly** afterward; Craig's **Caffeine** builds on her VM. Dan
+credits SqueakJS on the Smalltalk Zoo welcome page. Your constructionist microworld arc — Etoys,
+Croquet, the live system underneath — runs through the same lineage. Memorial mode: we *represent
+and discuss*; we never speak as her. Craig anchors a live episode; Dan and you are warmly invited
+for linked segments if you're willing — or we honor her in the microworld show itself. See
+[`../vanessa-freudenberg/memorial.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/vanessa-freudenberg/memorial.md) and
+[`../../repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml).
+
+**What I'd love to explore with you — your pick, any order:**
+
+- **MOOLLM × trust × teaching** — microworld OS vs copilot; is this what you meant? Draft artifact:
+  [`moollm-trust-and-teaching-guess.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/moollm-trust-and-teaching-guess.md). Quora recap:
+  [`media/quora-recaps/llms-copilots-trust-and-teaching.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/media/quora-recaps/llms-copilots-trust-and-teaching.md).
+- **Microworlds and constructionism** — Dynabook, Logo, Etoys, MOOLLM as filesystem microworld.
+  Proposed show seed: [`alan-kay-microworld.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/alan-kay-microworld.yml).
+- **Pie menus ↔ Fabrik** — your memory of "swiped pie menus" at Apple; direct-manipulation
+  archaeology with Don's CHI'88 work (PIXIE credited — Don does not claim invention).
+- **NeWS and the live system underneath** — send code, not commands; what the browser lineage
+  still owes Smalltalk.
+- **Yoot Tower / Alan Kay interview 1993** — transcript cleanup thread; open-source tower revival.
+- **MOOLLM** — directories as rooms; skills as prototypes; `# import self from self` (Ungar lineage).
+- **unnatural-selection** (welcome) — window-system prehistory; icon vs selection nomenclature war;
+  MOOLLM as visible transfer vs invisible clipboard.
+  [`../david-rosenthal/00-START-HERE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-rosenthal/00-START-HERE.md)
+
+**Format:** Remote is fine — teleintertwingle whenever you like. **Zero homework — as much *homefun* as you are up to.** Warm room.
+
+**Materials:**
+
+| Topic | Link |
+| --- | --- |
+| **Microworld show seed** | [`repo-shows/alan-kay-microworld.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/alan-kay-microworld.yml) |
+| **Vanessa memorial arc** | [`repo-shows/remembering-vanessa-freudenberg.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/remembering-vanessa-freudenberg.yml) |
+| **MOOLLM × trust × teaching** | [`moollm-trust-and-teaching-guess.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/moollm-trust-and-teaching-guess.md) |
+| **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/ideas.md) · [`correspondence.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/correspondence.yml) |
+| **Mail-sourced artifacts** | [`media/from-mail/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/alan-kay/media/from-mail/MANIFEST.yml) |
+| **Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
+
+Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
+
+**Your response:** yes, later, too busy, or no — all honored gracefully.
+
+— Don Hopkins *(the User Interface Flower Child)* 🌀
+
+`🕯️ Vanessa + live Smalltalk` · `📚 constructionist microworlds` · `🥧 Fabrik ↔ pie menus` · `🌐 MOOLLM`
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

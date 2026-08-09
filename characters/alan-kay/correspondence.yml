@@ -1,5 +1,67 @@
-# Correspondence index — MOVED to RepoShowPrivate
-moved: true
-private: https://github.com/SimHacker/RepoShowPrivate/blob/main/characters/alan-kay/correspondence.yml
-public_portrayal: README.md
-note: "Production correspondence lives in the private repo; this public stub is the pointer."
+# Alan Kay × Don Hopkins — correspondence summary (public-safe)
+# Tight public-safe digest of a real, long exchange. NOT the full private thread.
+# Standards: ../../schemas/portrayal-standards.md
+
+meta:
+  with: alan-kay
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2008–2026"
+  provenance_private: SimHacker/DonHopkins/characters/don-hopkins/correspondence/alan-kay.yml
+
+gist: |
+  Nearly two decades of wide-ranging exchange. Alan introduced Don to **Dan Ingalls** via the
+  **Fabrik** paper (2018), recalling "swiped pie menus" used at Apple in the Fabrik project (~1986).
+  Threads touched **PIXIE** light-pen menus, Smalltalk **halos** (Ted Kaehler, ~PARC), praise for
+  **NeWS** ("the right way to go — except it missed the live system underneath") and **HyperCard**
+  ("finished, smoothed, documented beautifully"), Alan's review of the **Yoot Saito 1993 interview**
+  transcript, and Don's **MOOLLM** announcement (Jan 2026). Don visited **Qwaq** (the Croquet
+  spinoff) with Randy Farmer and Chip Morningstar in 2008 at Alan's invitation.
+
+  **PIXIE thread, July 2026** (Heinz Lemke, Roy Eagleson, Lars Brinkhoff, Will Wright cc'd):
+  Alan recalled **Andrew Armit**'s months-long Utah visit (~1969) with his Coons-patch
+  interactive system on a PDP-7 ("quite in awe"); noted he and **John Warnock** both took PhDs
+  in the summer-'69 graduation. Asked about the **Wilkes–PARC connection** (2026-07-14), he
+  mapped the whole lineage: the ARPA twenty-somethings' reverence for **Wilkes, Wheeler** and
+  the **LEO** story; **Butler Lampson**'s Berkeley capability OS on the unprepared CDC 6400
+  (capabilities invented by the **B5000** folks, "named and not done very well for Multics") as
+  an influence on his thinking about OOP; **Roger Needham** (protection work with **Mike
+  Schroeder**, Butler in the loop), **Don Davies**' independent packet-switching at NPL —
+  "the first real Internet was the connection between NPLnet and ARPAnet"; love for
+  **Strachey, Landin, Michie**; **Chuck Thacker** as Needham fan who later set up the
+  Cambridge research lab; **Andrew Herbert** (Needham grad student, PARC resident, now
+  director of TNMOC at Bletchley Park). Alan **donated his last Alto to TNMOC** for their
+  planned exhibit next year. On London: he forwarded his public Quora answer — Bonnie
+  MacBird's Holmes novels drew them there; "she has now published 6 highly rated and
+  reviewed novels for Harper-Collins" → media/quora-recaps/why-alan-kay-moved-to-london.md
+
+sourced_quotes:
+  on_news: "I thought NeWS was 'the right way to go' (except it missed the live system underneath)."
+  on_hypercard: "HyperCard is an especially good example of a system that was finished and smoothed and documented beautifully."
+  on_fabrik: "I recall 'swiped pie menus' being used at Apple in the mid-80s in the Fabrik visual language project."
+
+connects_in_repo:
+  - { path: CHARACTER.yml, why: "Bio + invitation status" }
+  - { path: people-index.yml, why: "Kay on people in characters/ — per-guest from-alan-kay.yml" }
+  - { path: ../dan-ingalls/from-alan-kay.yml, why: "Alan introduced Don to Dan via the Fabrik paper" }
+  - { path: ../yoot-saito/from-alan-kay.yml, why: "Alan reviewed the 1993 Yoot Saito interview transcript" }
+  - { path: ../david-ungar/from-alan-kay.yml, why: "Self lineage → MOOLLM prototypes" }
+  - { path: ../bonnie-macbird/from-alan-kay.yml, why: "London / Holmes Quora" }
+  - { path: ../andrew-armit/from-alan-kay.yml, why: "Utah Coons patches" }
+  - { path: ../heinz-lemke/from-alan-kay.yml, why: "PIXIE / light-pen thread" }
+  - { path: ../david-rosenthal/from-alan-kay.yml, why: "NeWS / window prehistory" }
+  - { path: ../maurice-wilkes/from-alan-kay.yml, why: "Wilkes hero / PARC lineage" }
+  - { path: sources/2026-07-12-wilkes-parc-london.md, why: "July 2026 Wilkes–PARC–London digest" }
+  - { path: sources/2026-07-28-wes-clark-pdp8-popplestone.md, why: "Wes Clark / PDP-8 / Popplestone digest" }
+  - { path: media/discussions/hn-mvc-morphic-watchers-2015.md, why: "Private email Oct 2011 — MVC, Morphic, watchers (quoted on HN 2015)" }
+  - { path: ../../process/hn-harvest/alan-kay.md, why: "Reviewed HN IDs" }
+  - { path: ../../process/trails/live-objects.md, why: "Smalltalk → NeWS → live systems" }
+  - { path: ../../process/crazy-idea-jam.yml#self_times_moollm, why: "MOOLLM as the Smalltalk-lineage idea" }
+
+show_hooks:
+  - "Pie menus ↔ Fabrik 'swiped pie menus' — direct-manipulation archaeology"
+  - "Why NeWS/HyperCard mattered — and what 'the live system underneath' means for MOOLLM"
+  - "PIXIE thread 10 Jul 2026 — Andrew Armit Coons patches on PDP-7 at Utah; film hunt for Don"
+  - "Wilkes → PARC capability lineage (14 Jul 2026) — B5000 → Lampson CDC 6400 → Needham/Schroeder → CAP/Thacker Cambridge; Kay's OOP roots in capabilities"
+  - "The Alto goes home — Alan's last Alto donated to TNMOC (Bletchley), Andrew Herbert's planned exhibit"
+  - "Bonnie MacBird segment — Ted Nelson's Computer Lib as matchmaker; TRON; six Holmes novels (../bonnie-macbird/)"

@@ -23,7 +23,7 @@ departments:
   popup_overlays:
     role: "Annotation layer ON evidence-tour screen recordings"
     lead: ../../characters/howard-penner/README.md
-    studio_ssot: RepoShowPrivate/production/overlays/
+    studio_ssot: private production overlays
     note: "Complementary — Flipbook plays when we leave the scroll; Pop-Up when we stay on the page"
 
 when_to_use:
@@ -71,7 +71,7 @@ pipeline:
     tool: optional — align to captions VTT cues
   4_render:
     paths:
-      - "Blender VSE — image strips + page_flip Geo Nodes (see RepoShowPrivate/production/tooling/)"
+      - "Blender VSE — image strips + page_flip Geo Nodes (see private production tooling)"
       - "ffmpeg slideshow + Ken Burns from still sequence"
       - "Remotion / canvas flipbook if we need web-native preview in Soul City"
   5_insert:

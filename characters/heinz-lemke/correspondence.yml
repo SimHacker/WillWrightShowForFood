@@ -98,7 +98,7 @@ threads:
     docs:
       - ../lars-brinkhoff/correspondence.md
       - ../david-rosenthal/correspondence.md
-      - ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml#format
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml#format
   don_reply_evidence_room_2026_07_07:
     date: "2026-07-07 16:34"
     transcript: sources/2026-07-07-pixie-trio-thread.md
@@ -109,7 +109,7 @@ threads:
       Async default (voice/face/screen/code); optional multi-person or Twitch. AE telecine jiggle
       as retro house style (B&W grain, motion-tracked credits). Cc: Will Wright.
     show_refs:
-      - ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml
       - ../../process/post-production/cambridge-telecine-jiggle.yml
 
   cambridge_storyline_installments_2026_07_09:
@@ -201,7 +201,7 @@ threads:
       Freiburg, 2030 Kobe. Possible IFCARS contract for travel and project support; CHM/ACM welcome.
     private_archive: DonHopkins private correspondence -- not in public repo
     show_refs:
-      - ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
+      - ../../repo-shows/pixie-pie-menus-pdp7.yml
       - sources/2026-07-24-facebook-guessing-game.md
 
   pixie_attachments_batch_2026_07_10:
@@ -228,7 +228,7 @@ connects_in_repo:
   - { path: ../ivan-sutherland/, why: "North star — Sketchpad hero room" }
   - { path: cambridge-films-flight-of-the-bumblebee.md, why: "Chapman + Rosenthal + production + HN index" }
   - { path: pull-in-gaps.md, why: "Heinz assets to pull in (magazine PDFs, Cambridge doc, Wiseman notes)" }
-  - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "PIXIE show — Heinz + Lars Brinkhoff PDP-7/340 emulation" }
   - { path: ../don-hopkins/pie-menus-chi-88-and-beyond.md, why: "PIXIE credited; Don does not claim invention" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — PDP-7/340 emulation segment" }
   - { path: ../david-rosenthal/, why: "Same Cambridge PDP-7/Titan; possible CHM interviewer" }

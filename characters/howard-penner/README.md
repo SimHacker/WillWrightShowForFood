@@ -8,7 +8,7 @@
 - Sticker packs from Will's SFC **WARNING moving machinery** gift ([`../will-wright/media/swag/`](../will-wright/media/swag/INDEX.yml))
 - **Voystick / Urban Safari warning pack** — ISO hazard tees + kiss-cut sheets; stick-figure carnage ([`../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml`](../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml))
 - **codebase-posters** ([unable12/codebase-posters](https://github.com/unable12/codebase-posters)) — git history as generative wall art
-- **Show overlays** — art direction for timed illustration layers over screen-record / evidence-tour narration (reusable effects; open render pipeline). Production studio: collaborators with access work in RepoShowPrivate.
+- **Show overlays** — art direction for timed illustration layers over screen-record / evidence-tour narration (reusable effects; open render pipeline). Production studio: collaborators work in a private production environment.
 - Broader show art, merch, lightpenisland.net collateral
 
 **Tool tip (Howard → Don, Jul 2026):** [py-aep](https://github.com/forticheprod/py-aep) — free Python library to read/edit `.aep` without AE installed ([docs](https://forticheprod.github.io/py-aep/), [r/AfterEffects](https://www.reddit.com/r/AfterEffects/comments/1v0krk9/i_made_a_free_python_library_to_edit_aep_files_no/)). Fits wave-batch / overlay automation; does **not** replace AE for expressions or pixel render. Notes: [`sources/py-aep.yml`](sources/py-aep.yml).
