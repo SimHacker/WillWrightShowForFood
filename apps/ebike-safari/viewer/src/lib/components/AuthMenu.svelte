@@ -17,6 +17,15 @@
 	let loginError = $state<string | null>(null);
 
 	let rootEl = $state<HTMLDivElement | null>(null);
+	let loginDialog = $state<HTMLDialogElement | null>(null);
+
+	// Native <dialog>.showModal() puts the dialog in the browser top layer,
+	// above everything regardless of any z-index in the page.
+	$effect(() => {
+		if (!loginDialog) return;
+		if (loginOpen && !loginDialog.open) loginDialog.showModal();
+		else if (!loginOpen && loginDialog.open) loginDialog.close();
+	});
 
 	function toggleMenu() {
 		menuOpen = !menuOpen;
@@ -75,7 +84,6 @@
 	function onWindowKeydown(event: KeyboardEvent) {
 		if (event.key === 'Escape') {
 			menuOpen = false;
-			if (loginOpen) closeLogin();
 		}
 	}
 </script>
@@ -110,29 +118,36 @@
 	{/if}
 </div>
 
-{#if loginOpen}
-	<div class="backdrop" onclick={closeLogin} role="presentation"></div>
-	<div class="dialog" role="dialog" aria-labelledby="login-title">
-		<h2 id="login-title">Log in</h2>
-		<form onsubmit={submitLogin}>
-			<label>
-				Username
-				<input type="text" autocomplete="username" bind:value={username} required />
-			</label>
-			<label>
-				Password
-				<input type="password" autocomplete="current-password" bind:value={password} required />
-			</label>
-			{#if loginError}
-				<p class="err">{loginError}</p>
-			{/if}
-			<div class="actions">
-				<button type="button" class="secondary" onclick={closeLogin}>Cancel</button>
-				<button type="submit" disabled={busy}>{busy ? '…' : 'Log in'}</button>
-			</div>
-		</form>
-	</div>
-{/if}
+<dialog
+	bind:this={loginDialog}
+	class="dialog"
+	aria-labelledby="login-title"
+	onclose={() => {
+		if (loginOpen) closeLogin();
+	}}
+	onclick={(e) => {
+		if (e.target === loginDialog) closeLogin();
+	}}
+>
+	<h2 id="login-title">Log in</h2>
+	<form onsubmit={submitLogin}>
+		<label>
+			Username
+			<input type="text" autocomplete="username" bind:value={username} required />
+		</label>
+		<label>
+			Password
+			<input type="password" autocomplete="current-password" bind:value={password} required />
+		</label>
+		{#if loginError}
+			<p class="err">{loginError}</p>
+		{/if}
+		<div class="actions">
+			<button type="button" class="secondary" onclick={closeLogin}>Cancel</button>
+			<button type="submit" disabled={busy}>{busy ? '…' : 'Log in'}</button>
+		</div>
+	</form>
+</dialog>
 
 <style>
 	.auth {
@@ -211,25 +226,18 @@
 		background: rgba(255, 255, 255, 0.1);
 	}
 
-	.backdrop {
-		position: fixed;
-		inset: 0;
-		z-index: 30;
-		background: rgba(0, 0, 0, 0.45);
-	}
-
 	.dialog {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		z-index: 31;
 		width: min(18rem, calc(100vw - 2rem));
 		padding: 1rem 1.1rem;
+		border: none;
 		border-radius: 10px;
 		background: #16213e;
 		color: #f8f9fa;
-		transform: translate(-50%, -50%);
 		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+	}
+
+	.dialog::backdrop {
+		background: rgba(0, 0, 0, 0.45);
 	}
 
 	.dialog h2 {

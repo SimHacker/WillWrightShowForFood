@@ -18,16 +18,28 @@
 
 	const followDisabled = $derived(settings.locationMode === 'off');
 
-	function onWindowKeydown(event: KeyboardEvent) {
-		if (event.key === 'Escape' && open) onClose();
-	}
+	let dialogEl = $state<HTMLDialogElement | null>(null);
+
+	// Native <dialog>.showModal() renders in the browser top layer, above all
+	// page content regardless of z-index. Escape is handled natively.
+	$effect(() => {
+		if (!dialogEl) return;
+		if (open && !dialogEl.open) dialogEl.showModal();
+		else if (!open && dialogEl.open) dialogEl.close();
+	});
 </script>
 
-<svelte:window onkeydown={onWindowKeydown} />
-
-{#if open}
-	<div class="backdrop" onclick={onClose} role="presentation"></div>
-	<div class="dialog" role="dialog" aria-labelledby="settings-title">
+<dialog
+	bind:this={dialogEl}
+	class="dialog"
+	aria-labelledby="settings-title"
+	onclose={() => {
+		if (open) onClose();
+	}}
+	onclick={(e) => {
+		if (e.target === dialogEl) onClose();
+	}}
+>
 		<h2 id="settings-title">Settings</h2>
 		<p class="todo">TODO: More settings will live here later (sync, units, themes, pie menus, …).</p>
 		<p class="todo">TODO: Scrubber as parallel tracks — speed, altitude, power — like After Effects / Blender.</p>
@@ -35,7 +47,7 @@
 
 		<fieldset>
 			<legend>My location</legend>
-			{#each locationModes as mode}
+			{#each locationModes as mode (mode.value)}
 				<label class="radio">
 					<input
 						type="radio"
@@ -62,32 +74,24 @@
 		<div class="actions">
 			<button type="button" onclick={onClose}>Done</button>
 		</div>
-	</div>
-{/if}
+</dialog>
 
 <style>
-	.backdrop {
-		position: fixed;
-		inset: 0;
-		z-index: 30;
-		background: rgba(0, 0, 0, 0.45);
-	}
-
 	.dialog {
-		position: fixed;
-		top: 50%;
-		left: 50%;
-		z-index: 31;
 		width: min(22rem, calc(100vw - 2rem));
 		min-height: 16.5rem;
 		max-height: calc(100dvh - 2rem);
 		overflow: auto;
 		padding: 1rem 1.1rem;
+		border: none;
 		border-radius: 10px;
 		background: #16213e;
 		color: #f8f9fa;
-		transform: translate(-50%, -50%);
 		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+	}
+
+	.dialog::backdrop {
+		background: rgba(0, 0, 0, 0.45);
 	}
 
 	h2 {
