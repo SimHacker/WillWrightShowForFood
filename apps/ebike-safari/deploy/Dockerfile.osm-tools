@@ -1,12 +1,11 @@
 # syntax=docker/dockerfile:1
-# OSM download/filter/import tooling (osmium + Python)
 
 FROM debian:bookworm-slim
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		ca-certificates curl osmium-tool \
-		python3 python3-osmium python3-psycopg2 python3-yaml \
+		python3 python3-psycopg2 \
 		postgresql-client \
 	&& rm -rf /var/lib/apt/lists/*
 
