@@ -514,6 +514,9 @@
 
 	.map-shell {
 		position: relative;
+		/* Own stacking context: map internals (marker z-index etc.) can never
+		   paint above the header, dialogs, or bottom bar. */
+		z-index: 1;
 		flex: 1;
 		min-height: 0;
 	}
