@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { untrack } from 'svelte';
 	import AuthMenu from '$lib/components/AuthMenu.svelte';
 	import BottomBar from '$lib/components/BottomBar.svelte';
 	import SafariMap from '$lib/components/SafariMap.svelte';
@@ -24,8 +25,9 @@
 	let series = $state<SafariSeries | null>(null);
 	let scrubIndex = $state(0);
 	let playing = $state(false);
-	let playbackSpeed = $state(1);
+	let playbackSpeed = $state(200);
 	let error = $state<string | null>(null);
+	let netWarning = $state<string | null>(null);
 	let loading = $state(true);
 	let userLocation = $state<UserLocation | null>(null);
 	let locationError = $state<string | null>(null);
@@ -125,28 +127,48 @@
 
 	const dataFetch = (path: string) => fetch(path, { cache: 'no-store' });
 
-	$effect(() => {
-		(async () => {
-			loading = true;
-			error = null;
-			try {
-				const mRes = await dataFetch('/data/manifest.json');
-				if (!mRes.ok) throw new Error(`manifest ${mRes.status}`);
-				const m = (await mRes.json()) as SafariManifest;
-				manifest = m;
+	function describeError(e: unknown): string {
+		const msg = e instanceof Error ? e.message : String(e);
+		return msg === 'Failed to fetch' || msg === 'Load failed' ? 'network error' : msg;
+	}
 
-				const validIds = new Set(m.trips.map((t) => t.id));
-				selected = loadSelectedTripIds(validIds);
-				await syncReplayFromSelection();
+	let warningTimer = 0;
+	function noteNetworkHiccup(e: unknown) {
+		netWarning = `Network hiccup (${describeError(e)}) — retrying`;
+		window.clearTimeout(warningTimer);
+		warningTimer = window.setTimeout(() => (netWarning = null), 6000);
+	}
 
-				if (m.coverage?.all_routes) {
+	// Survive network loss: initial load retries forever with backoff; once the
+	// app is up, later failures only show a transient banner, never a dead screen.
+	let retryDelayMs = 2000;
+
+	async function loadAll() {
+		loading = true;
+		error = null;
+		try {
+			const mRes = await dataFetch('/data/manifest.json');
+			if (!mRes.ok) throw new Error(`manifest ${mRes.status}`);
+			const m = (await mRes.json()) as SafariManifest;
+			manifest = m;
+
+			const validIds = new Set(m.trips.map((t) => t.id));
+			selected = loadSelectedTripIds(validIds);
+			await syncReplayFromSelection();
+
+			if (m.coverage?.all_routes) {
+				try {
 					const rRes = await dataFetch(`/data/${m.coverage.all_routes}`);
 					if (rRes.ok) allRoutes = (await rRes.json()) as FeatureCollection;
+				} catch {
+					/* fall through to per-trip fetch */
 				}
+			}
 
-				if (!allRoutes?.features.length && m.trips.length) {
-					const features: FeatureCollection['features'] = [];
-					for (const trip of m.trips) {
+			if (!allRoutes?.features.length && m.trips.length) {
+				const features: FeatureCollection['features'] = [];
+				for (const trip of m.trips) {
+					try {
 						const rRes = await dataFetch(`/data/${trip.geojson}`);
 						if (!rRes.ok) continue;
 						const fc = (await rRes.json()) as FeatureCollection;
@@ -159,26 +181,44 @@
 								}
 							});
 						}
-					}
-					if (features.length) {
-						allRoutes = { type: 'FeatureCollection', features };
+					} catch {
+						continue;
 					}
 				}
-
-				if (!allRoutes?.features.length && m.trips.length) {
-					throw new Error('no route GeoJSON in deploy/data');
+				if (features.length) {
+					allRoutes = { type: 'FeatureCollection', features };
 				}
+			}
 
-				if (m.coverage?.heatmap) {
+			if (!allRoutes?.features.length && m.trips.length) {
+				throw new Error('no route GeoJSON on server');
+			}
+
+			if (m.coverage?.heatmap) {
+				try {
 					const hRes = await dataFetch(`/data/${m.coverage.heatmap}`);
 					if (hRes.ok) fullHeatmap = (await hRes.json()) as FeatureCollection;
+				} catch (e) {
+					// Heatmap is a nice-to-have; the app works without it.
+					noteNetworkHiccup(e);
 				}
-			} catch (e) {
-				error = e instanceof Error ? e.message : String(e);
-			} finally {
-				loading = false;
 			}
-		})();
+			retryDelayMs = 2000;
+		} catch (e) {
+			if (manifest && allRoutes) {
+				noteNetworkHiccup(e);
+			} else {
+				error = describeError(e);
+				window.setTimeout(loadAll, retryDelayMs);
+				retryDelayMs = Math.min(retryDelayMs * 2, 15000);
+			}
+		} finally {
+			loading = false;
+		}
+	}
+
+	$effect(() => {
+		loadAll();
 	});
 
 	async function syncReplayFromSelection() {
@@ -202,9 +242,17 @@
 	async function loadSeries(tripId: string) {
 		const trip = manifest?.trips.find((t) => t.id === tripId);
 		if (!trip) return;
-		const sRes = await fetch(`/data/${trip.series}`);
-		if (!sRes.ok) return;
-		series = (await sRes.json()) as SafariSeries;
+		try {
+			const sRes = await dataFetch(`/data/${trip.series}`);
+			if (!sRes.ok) return;
+			series = (await sRes.json()) as SafariSeries;
+		} catch (e) {
+			noteNetworkHiccup(e);
+			window.setTimeout(() => {
+				if (replayTripId === tripId && !series) loadSeries(tripId);
+			}, 3000);
+			return;
+		}
 		scrubIndex = 0;
 		playing = false;
 	}
@@ -238,37 +286,39 @@
 		};
 	});
 
-	function msUntilNextPoint(idx: number): number {
-		if (!series?.points.length || idx >= series.points.length - 1) return 500;
-		const a = Date.parse(series.points[idx].t);
-		const b = Date.parse(series.points[idx + 1].t);
-		const delta = b - a;
-		const real = Number.isFinite(delta) && delta > 0 ? delta : 500;
-		return Math.max(8, real / playbackSpeed);
-	}
-
+	// Playback clock: one stable ~30fps timer that advances as many points as
+	// elapsed wall time × speed requires. It must NOT track scrubIndex, or every
+	// tick tears the effect down and reschedules — fragile and easy to stall.
 	$effect(() => {
 		if (!playing || !series?.points.length) return;
-		playbackSpeed;
 		const pts = series.points;
-		let cancelled = false;
-		let idx = scrubIndex;
+		const speed = playbackSpeed;
+		let idx = untrack(() => scrubIndex);
+		let carryMs = 0;
+		let last = performance.now();
+		let timer = 0;
 
-		const tick = () => {
-			if (cancelled) return;
+		const frame = () => {
+			const now = performance.now();
+			carryMs += (now - last) * speed;
+			last = now;
+			while (idx < pts.length - 1) {
+				const dt = Date.parse(pts[idx + 1].t) - Date.parse(pts[idx].t);
+				const step = Number.isFinite(dt) && dt > 0 ? dt : 500;
+				if (carryMs < step) break;
+				carryMs -= step;
+				idx += 1;
+			}
+			scrubIndex = idx;
 			if (idx >= pts.length - 1) {
 				playing = false;
 				return;
 			}
-			idx += 1;
-			scrubIndex = idx;
-			window.setTimeout(tick, msUntilNextPoint(idx - 1));
+			timer = window.setTimeout(frame, 33);
 		};
 
-		window.setTimeout(tick, msUntilNextPoint(idx));
-		return () => {
-			cancelled = true;
-		};
+		timer = window.setTimeout(frame, 33);
+		return () => window.clearTimeout(timer);
 	});
 
 	function togglePlay() {
@@ -326,9 +376,10 @@
 			onUserChange={auth.onUserChange}
 		/>
 	</header>
-	{#if error}
-		<p class="error">{error} — copy <code>web/data/</code> to VM <code>deploy/data/</code></p>
-	{:else if manifest && allRoutes}
+	{#if manifest && allRoutes}
+		{#if netWarning}
+			<p class="loc-warn">{netWarning}</p>
+		{/if}
 		{#if locationError && locationMode === 'gps'}
 			<p class="loc-warn">{locationError}</p>
 		{/if}
@@ -385,7 +436,10 @@
 	{:else if loading}
 		<p class="loading">Loading rides…</p>
 	{:else}
-		<p class="error">No ride data — copy web/data to <code>deploy/data</code> on the server</p>
+		<p class="error">
+			Can't load ride data{error ? ` (${error})` : ''} — retrying…
+			<br /><small>If this persists, the server's <code>deploy/data/</code> may be missing.</small>
+		</p>
 	{/if}
 </main>
 
