@@ -2,6 +2,7 @@
 	import type { SafariTrip, MapViewMode } from '$lib/types/safari';
 
 	type Props = {
+		open: boolean;
 		trips: SafariTrip[];
 		selected: Set<string>;
 		viewMode: MapViewMode;
@@ -11,10 +12,8 @@
 		onViewMode: (mode: MapViewMode) => void;
 	};
 
-	let { trips, selected, viewMode, onToggle, onSelectAll, onSelectNone, onViewMode }: Props =
+	let { open, trips, selected, viewMode, onToggle, onSelectAll, onSelectNone, onViewMode }: Props =
 		$props();
-
-	let open = $state(true);
 
 	function formatDate(iso: string): string {
 		if (!iso) return '';
@@ -26,12 +25,8 @@
 	}
 </script>
 
-<aside class:collapsed={!open}>
-	<button type="button" class="toggle" onclick={() => (open = !open)}>
-		{open ? '◂' : '▸'} Rides ({selected.size}/{trips.length})
-	</button>
-
-	{#if open}
+{#if open}
+	<aside id="rides-panel">
 		<div class="panel">
 			<div class="view-modes">
 				<button
@@ -78,8 +73,8 @@
 				{/each}
 			</ul>
 		</div>
-	{/if}
-</aside>
+	</aside>
+{/if}
 
 <style>
 	aside {
@@ -91,21 +86,7 @@
 		font-size: 0.8rem;
 	}
 
-	.toggle {
-		display: block;
-		width: 100%;
-		padding: 0.4rem 0.6rem;
-		border: none;
-		border-radius: 6px;
-		background: rgba(22, 33, 62, 0.92);
-		color: #f8f9fa;
-		font-weight: 600;
-		text-align: left;
-		cursor: pointer;
-	}
-
 	.panel {
-		margin-top: 0.25rem;
 		max-height: min(60dvh, 28rem);
 		overflow: auto;
 		padding: 0.5rem;
@@ -190,9 +171,5 @@
 		opacity: 0.7;
 		font-size: 0.7rem;
 		line-height: 1.25;
-	}
-
-	aside.collapsed .panel {
-		display: none;
 	}
 </style>

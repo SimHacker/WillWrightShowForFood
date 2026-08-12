@@ -25,6 +25,7 @@
 	let loading = $state(true);
 	let userLocation = $state<UserLocation | null>(null);
 	let locationError = $state<string | null>(null);
+	let ridesOpen = $state(true);
 
 	const filteredRoutes = $derived.by(() => {
 		if (!allRoutes || selected.size === 0) {
@@ -279,7 +280,16 @@
 			<h1>Ebike Safari</h1>
 			{#if manifest && allRoutes}
 				<span class="sub">
-					{manifest.home.label} · {selected.size}/{manifest.trip_count} rides
+					{manifest.home.label} ·
+					<button
+						type="button"
+						class="rides-toggle"
+						onclick={() => (ridesOpen = !ridesOpen)}
+						aria-expanded={ridesOpen}
+						aria-controls="rides-panel"
+					>
+						{selected.size}/{manifest.trip_count} rides
+					</button>
 					{#if locationMode !== 'off' && userLocation}
 						· {locationMode === 'manual' ? 'manual' : 'GPS'}
 					{/if}
@@ -316,6 +326,7 @@
 				onUserLocationChange={setUserLocation}
 			/>
 			<TripPicker
+				open={ridesOpen}
 				trips={manifest.trips}
 				{selected}
 				{viewMode}
@@ -395,6 +406,27 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+
+	.rides-toggle {
+		display: inline;
+		min-width: 0;
+		padding: 0;
+		border: none;
+		border-radius: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		font-weight: 600;
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-color: rgba(248, 249, 250, 0.35);
+		text-underline-offset: 0.15em;
+	}
+
+	.rides-toggle:hover,
+	.rides-toggle[aria-expanded='true'] {
+		text-decoration-color: rgba(248, 249, 250, 0.85);
 	}
 
 	h1 {
