@@ -1,0 +1,18 @@
+# Geofabrik extracts for ebike-safari OSM pipeline
+# slug → download URL (PBF is already compact binary; we keep .osm.pbf as-is)
+
+regions:
+  nl:
+    url: https://download.geofabrik.de/europe/netherlands-latest.osm.pbf
+    file: netherlands-latest.osm.pbf
+  california:
+    url: https://download.geofabrik.de/north-america/us/california-latest.osm.pbf
+    file: california-latest.osm.pbf
+
+# osmium tags-filter expressions (ways kept for road graph + exposure)
+way_filters:
+  - w/highway
+  - w/cycleway
+  - w/waterway
+  - w/natural=coastline
+  - w/barrier

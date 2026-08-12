@@ -1,0 +1,40 @@
+# Optional tooling — not started in normal prod stack.
+# Usage:
+#   docker compose -f docker-compose.yml -f docker-compose.tools.yml run --rm osm-tools …
+#   docker compose -f docker-compose.yml -f docker-compose.tools.yml --profile valhalla up -d valhalla
+
+services:
+  osm-tools:
+    profiles: [tools]
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.osm-tools
+    working_dir: /app
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}
+      OSM_DATA_DIR: /osm
+    volumes:
+      - ./osm:/osm
+      - ..:/app:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+
+  valhalla:
+    profiles: [valhalla]
+    image: ghcr.io/gis-ops/docker-valhalla/valhalla:latest
+    restart: unless-stopped
+    volumes:
+      - ./osm:/custom_files
+    ports:
+      - '127.0.0.1:8002:8002'
+    environment:
+      tile_urls: ''
+      use_tiles_ignore_pbf: 'False'
+      build_elevation: 'False'
+      build_admins: 'True'
+      build_time_zones: 'True'
+    networks:
+      - internal

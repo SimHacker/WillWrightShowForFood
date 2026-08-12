@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+# Run OSM pipeline inside osm-tools container (osmium + python + db network).
+# Usage: bash deploy/scripts/osm-docker.sh [download|filter|import|pipeline|status|shell] [args…]
+set -euo pipefail
+
+DEPLOY="$(cd "$(dirname "$0")/.." && pwd)"
+CMD="${1:-status}"
+shift || true
+
+cd "$DEPLOY"
+set -a
+# shellcheck disable=SC1091
+source .env
+set +a
+export DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}"
+export OSM_DATA_DIR=/osm
+
+compose=(docker compose -f docker-compose.yml -f docker-compose.tools.yml)
+
+case "$CMD" in
+	download)
+		"${compose[@]}" run --rm osm-tools bash scripts/osm/download.sh "$@"
+		;;
+	filter|import|pipeline|status)
+		"${compose[@]}" run --rm osm-tools bash "scripts/osm/${CMD}.sh" "$@"
+		;;
+	shell)
+		"${compose[@]}" run --rm osm-tools
+		;;
+	build)
+		"${compose[@]}" build osm-tools
+		;;
+	valhalla-up)
+		mkdir -p osm/raw osm/filtered osm/valhalla
+		# Valhalla reads PBF from /custom_files — symlink filtered+raw for build
+		"${compose[@]}" --profile valhalla up -d valhalla
+		;;
+	*)
+		echo "Usage: $0 {build|download|filter|import|pipeline|status|shell|valhalla-up} [args…]" >&2
+		exit 1
+		;;
+esac

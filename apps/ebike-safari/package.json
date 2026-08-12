@@ -1,0 +1,17 @@
+{
+  "name": "ebike-safari",
+  "private": true,
+  "description": "Pipeline scripts for ebike-safari (OSM, rides, deploy helpers)",
+  "scripts": {
+    "osm:build": "bash deploy/scripts/osm-docker.sh build",
+    "osm:download": "bash deploy/scripts/osm-docker.sh download",
+    "osm:filter": "bash deploy/scripts/osm-docker.sh filter",
+    "osm:import": "bash deploy/scripts/osm-docker.sh import",
+    "osm:pipeline": "bash deploy/scripts/osm-docker.sh pipeline",
+    "osm:status": "bash deploy/scripts/osm-docker.sh status",
+    "osm:shell": "bash deploy/scripts/osm-docker.sh shell",
+    "valhalla:up": "bash deploy/scripts/osm-docker.sh valhalla-up",
+    "rides:import-pg": "python3 scripts/import_trip_pg.py --data-dir demo/web/data",
+    "rides:edges": "python3 scripts/build_ride_edges.py"
+  }
+}

@@ -1,0 +1,8 @@
+# Large OSM artifacts — kept on VM under deploy/osm/
+raw/
+filtered/
+valhalla/
+*.pbf
+*.osm.pbf
+*.geojsonseq
+*.geojsonl
