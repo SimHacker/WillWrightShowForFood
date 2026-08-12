@@ -59,6 +59,48 @@
 	const HEAT_SOURCE = 'safari-heat';
 	const HEAT_LAYER = 'ride-heat';
 
+	const HEATMAP_PAINT = {
+	'heatmap-weight': [
+		'interpolate',
+		['linear'],
+		['sqrt', ['get', 'weight']],
+		1,
+		0.28,
+		4,
+		0.55,
+		9,
+		0.78,
+		16,
+		1
+	],
+	'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 8, 0.18, 11, 0.42, 13, 0.72, 15, 1, 17, 1.15],
+	'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 8, 6, 11, 14, 13, 26, 15, 40, 17, 54],
+	'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.48, 13, 0.62, 16, 0.72],
+	'heatmap-color': [
+		'interpolate',
+		['linear'],
+		['heatmap-density'],
+		0,
+		'rgba(0,0,0,0)',
+		0.03,
+		'rgba(2,62,138,0.1)',
+		0.1,
+		'rgba(0,119,182,0.28)',
+		0.22,
+		'rgba(0,180,216,0.42)',
+		0.38,
+		'rgba(0,180,216,0.5)',
+		0.55,
+		'rgba(232,93,4,0.58)',
+		0.72,
+		'rgba(255,160,20,0.64)',
+		0.9,
+		'rgba(255,186,8,0.68)',
+		1,
+		'rgba(255,186,8,0.72)'
+	]
+} satisfies import('maplibre-gl').HeatmapLayerSpecification['paint'];
+
 	const EMPTY_FC: FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 	const linePaint = {
@@ -138,29 +180,7 @@
 				id: HEAT_LAYER,
 				type: 'heatmap',
 				source: HEAT_SOURCE,
-				paint: {
-					'heatmap-weight': ['interpolate', ['linear'], ['get', 'weight'], 1, 0.35, 20, 1],
-					'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 10, 0.7, 15, 1.3],
-					'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 10, 18, 15, 34],
-					'heatmap-opacity': 0.75,
-					'heatmap-color': [
-						'interpolate',
-						['linear'],
-						['heatmap-density'],
-						0,
-						'rgba(0,0,0,0)',
-						0.15,
-						'#023e8a',
-						0.35,
-						'#0077b6',
-						0.55,
-						'#00b4d8',
-						0.75,
-						'#e85d04',
-						1,
-						'#ffba08'
-					]
-				}
+				paint: HEATMAP_PAINT
 			});
 		} else {
 			(map.getSource(HEAT_SOURCE) as GeoJSONSource).setData(data);

@@ -125,9 +125,9 @@ def build_trip(fit_path: Path, out_dir: Path) -> dict:
     }
 
 
-# ~10 m grid at NL latitude — overlap counts ≈ how often you rode here
-HEAT_CELL_DEG = 0.00015
-HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 2
+# ~5 m grid at NL latitude — overlap counts ≈ how often you rode here
+HEAT_CELL_DEG = 0.00008
+HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 3
 
 
 def interpolate_segment(

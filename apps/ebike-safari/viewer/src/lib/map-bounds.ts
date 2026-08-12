@@ -27,8 +27,8 @@ export function filterRoutes(
 	};
 }
 
-const HEAT_CELL_DEG = 0.00015;
-const HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 2;
+const HEAT_CELL_DEG = 0.00008;
+const HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 3;
 
 function interpolateSegment(
 	lon0: number,
