@@ -1,4 +1,4 @@
-const STORAGE_KEY = 'ebike-safari-selected-trips-v2';
+const STORAGE_KEY = 'ebike-safari-selected-trips-v3';
 
 /** Long Aug 5 roundtrip — flood-fill de Pijp showcase ride. */
 export const DEFAULT_TRIP_ID = 'badhoevedorp-roundtrip-21bcec00-90ac-11f1-8ad1-a40dbc8fa83a';

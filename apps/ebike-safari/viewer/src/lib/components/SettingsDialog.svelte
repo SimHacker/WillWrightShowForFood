@@ -13,7 +13,7 @@
 	const locationModes: { value: LocationMode; label: string }[] = [
 		{ value: 'off', label: 'Off — hide my location' },
 		{ value: 'gps', label: 'GPS — live device location' },
-		{ value: 'manual', label: 'Manual — drag the marker on the map' }
+		{ value: 'manual', label: 'Pin — drag the marker on the map' }
 	];
 
 	const followDisabled = $derived(settings.locationMode === 'off');

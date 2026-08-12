@@ -143,7 +143,7 @@
 				onclick={() => toggleMenu('speed')}
 			>
 				<span class="kicker">Speed</span>
-				<span class="value">{speedLabel} <span class="disclosure" aria-hidden="true">▾</span></span>
+				<span class="value">{speedLabel}</span>
 			</button>
 			<PopupMenu
 				open={openMenu === 'speed'}
@@ -163,14 +163,14 @@
 				onclick={() => toggleMenu('location')}
 			>
 				<span class="kicker">Location</span>
-				<span class="value">{locationLabel} <span class="disclosure" aria-hidden="true">▾</span></span>
+				<span class="value">{locationLabel}</span>
 			</button>
 			<PopupMenu
 				open={openMenu === 'location'}
 				items={[
 					{ id: 'off', label: 'Off — hide pin', active: locationMode === 'off' },
 					{ id: 'gps', label: 'GPS — live location', active: locationMode === 'gps' },
-					{ id: 'manual', label: 'Manual — drag pin', active: locationMode === 'manual' }
+					{ id: 'manual', label: 'Pin — drag it on the map', active: locationMode === 'manual' }
 				]}
 				onSelect={(id) => onLocationMode(id as LocationMode)}
 				onClose={closeMenus}
@@ -200,14 +200,14 @@
 				onclick={() => toggleMenu('map')}
 			>
 				<span class="kicker">Map</span>
-				<span class="value">{mapLabel} <span class="disclosure" aria-hidden="true">▾</span></span>
+				<span class="value">{mapLabel}</span>
 			</button>
 			<PopupMenu
 				open={openMenu === 'map'}
 				items={[
-					{ id: 'both', label: 'Routes + heat', active: viewMode === 'both' },
-					{ id: 'routes', label: 'Routes only', active: viewMode === 'routes' },
-					{ id: 'heat', label: 'Heat only', active: viewMode === 'heat' }
+					{ id: 'both', label: 'Both — routes + heat', active: viewMode === 'both' },
+					{ id: 'routes', label: 'Lines — routes only', active: viewMode === 'routes' },
+					{ id: 'heat', label: 'Heat — heatmap only', active: viewMode === 'heat' }
 				]}
 				onSelect={(id) => onViewMode(id as MapViewMode)}
 				onClose={closeMenus}
@@ -357,11 +357,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		max-width: 100%;
-	}
-
-	.disclosure {
-		font-size: 0.6rem;
-		opacity: 0.65;
 	}
 
 	.chip.active,

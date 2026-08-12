@@ -207,7 +207,6 @@
 		series = (await sRes.json()) as SafariSeries;
 		scrubIndex = 0;
 		playing = false;
-		settingsStore.update({ locationMode: 'manual' });
 	}
 
 	function toggleTrip(id: string) {
@@ -228,13 +227,7 @@
 
 	$effect(() => {
 		if (!replayMode || !series?.points.length) return;
-		if (locationMode !== 'manual') {
-			settingsStore.update({ locationMode: 'manual' });
-		}
-	});
-
-	$effect(() => {
-		if (!replayMode || !series?.points.length) return;
+		if (locationMode !== 'manual') return;
 		scrubIndex;
 		const p = series.points[Math.min(scrubIndex, series.points.length - 1)];
 		userLocation = {
@@ -244,8 +237,6 @@
 			source: 'manual'
 		};
 	});
-
-	const PLAYBACK_SPEEDS = [1, 5, 10, 50, 100] as const;
 
 	function msUntilNextPoint(idx: number): number {
 		if (!series?.points.length || idx >= series.points.length - 1) return 500;
@@ -287,6 +278,10 @@
 			return;
 		}
 		if (scrubIndex >= series.points.length - 1) scrubIndex = 0;
+		// Replay drives the pin in manual mode; switch once on play, don't lock.
+		if (locationMode !== 'manual') {
+			settingsStore.update({ locationMode: 'manual' });
+		}
 		playing = true;
 	}
 

@@ -58,7 +58,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
-		max-height: min(60dvh, 22rem);
+		max-height: calc(100dvh - 11rem);
 		overflow-y: auto;
 		padding: 0.35rem;
 		border: 1px solid rgba(255, 255, 255, 0.18);
