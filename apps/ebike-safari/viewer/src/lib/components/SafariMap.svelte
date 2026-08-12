@@ -23,7 +23,7 @@
 		ROUTE_HIGHLIGHT_PAINT,
 		ROUTE_LINE_PAINT
 	} from '$lib/heatmap-paint';
-	import { FINE_HEAT_ZOOM, heatFromRoutesFine } from '$lib/map-bounds';
+	import { cachedFineHeat, FINE_HEAT_ZOOM } from '$lib/map-bounds';
 
 	setWorkerUrl(workerUrl);
 
@@ -60,7 +60,7 @@
 	let container: HTMLDivElement | undefined = $state();
 	let map: MapLibreMap | undefined;
 	let styleLoaded = $state(false);
-	let mapZoom = $state(12);
+	let useFineHeat = $state(false);
 	let userMarker: Marker | undefined;
 
 	const ROUTES_SOURCE = 'safari-routes';
@@ -93,10 +93,15 @@
 	}
 
 	function resolveHeatData(): FeatureCollection {
-		if (mapZoom >= FINE_HEAT_ZOOM && routes?.features.length) {
-			return heatFromRoutesFine(routes);
+		if (useFineHeat && routes?.features.length) {
+			return cachedFineHeat(routes);
 		}
 		return heatmap?.features.length ? heatmap : EMPTY_FC;
+	}
+
+	function updateFineHeatMode() {
+		if (!map) return;
+		useFineHeat = map.getZoom() >= FINE_HEAT_ZOOM;
 	}
 
 	function syncRoutes() {
@@ -197,8 +202,8 @@
 	}
 
 	function syncAll() {
-		syncHeatmap();
 		syncRoutes();
+		syncHeatmap();
 		applyVisibility();
 	}
 
@@ -238,14 +243,12 @@
 
 		map.on('load', () => {
 			styleLoaded = true;
-			mapZoom = map!.getZoom();
+			updateFineHeatMode();
 			syncAll();
 			fitMapBounds();
 		});
 
-		map.on('zoom', () => {
-			mapZoom = map!.getZoom();
-		});
+		map.on('zoomend', updateFineHeatMode);
 
 		map.on('error', (e) => {
 			console.error('[SafariMap]', e.error?.message ?? e);
@@ -263,7 +266,7 @@
 	$effect(() => {
 		routes;
 		heatmap;
-		mapZoom;
+		useFineHeat;
 		viewMode;
 		highlightTripId;
 		syncAll();

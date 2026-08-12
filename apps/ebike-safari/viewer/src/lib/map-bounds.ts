@@ -34,6 +34,8 @@ const DEFAULT_SAMPLE_DIVISOR = 3;
 const FINE_CELL_DEG = 0.000028;
 const FINE_SAMPLE_DIVISOR = 5;
 
+const fineCache = new WeakMap<FeatureCollection, FeatureCollection>();
+
 function interpolateSegment(
 	lon0: number,
 	lat0: number,
@@ -103,6 +105,15 @@ export function heatFromRoutes(
 /** Finer grid from full GPS line geometry — used when zoomed in. */
 export function heatFromRoutesFine(routes: FeatureCollection): FeatureCollection {
 	return heatFromRoutes(routes, FINE_CELL_DEG, FINE_SAMPLE_DIVISOR);
+}
+
+/** Memoize fine heat; routes FC identity changes when trip selection changes. */
+export function cachedFineHeat(routes: FeatureCollection): FeatureCollection {
+	const hit = fineCache.get(routes);
+	if (hit) return hit;
+	const built = heatFromRoutesFine(routes);
+	fineCache.set(routes, built);
+	return built;
 }
 
 function gridToFeatureCollection(
