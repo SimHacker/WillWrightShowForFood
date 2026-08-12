@@ -139,20 +139,10 @@ curl -s https://ebike-safari.com/api/health
 
 ## 6. Private ride data (40 FIT corpus)
 
-Demo data ships in the image. For your Marconistraat25 rides, rsync pipeline output to the server:
-
-**On laptop:**
+Demo data ships in the image. For additional rides, commit pipeline output under `deploy/data/` (or rebuild viewer static assets in git), push to GitHub, then on the VM:
 
 ```bash
-rsync -av ~/GroundUp/git/Marconistraat25/ebike/web/data/ \
-  USER@VM_IP:~/WillWrightShowForFood/apps/ebike-safari/deploy/data/
-```
-
-**On VM:**
-
-```bash
-cd apps/ebike-safari/deploy
-docker compose restart viewer
+sudo bash scripts/server-deploy.sh
 ```
 
 The entrypoint syncs `deploy/data/` → viewer static assets on each start.
@@ -198,10 +188,10 @@ SVELTE_ADAPTER=node pnpm run build   # same as Docker production build
 
 ## Updates
 
+On the VM after `git push` from your Mac:
+
 ```bash
-cd apps/ebike-safari/deploy
-git pull
-bash scripts/deploy.sh
+sudo bash /opt/WillWrightShowForFood/apps/ebike-safari/deploy/scripts/server-deploy.sh
 ```
 
 ## Troubleshooting

@@ -17,10 +17,6 @@ if ! gcloud iam service-accounts describe "${SA_NAME}@${PROJECT}.iam.gserviceacc
 	gcloud iam service-accounts create "$SA_NAME" --display-name="Ebike Safari VM"
 fi
 SA_EMAIL="${SA_NAME}@${PROJECT}.iam.gserviceaccount.com"
-gcloud projects add-iam-policy-binding "$PROJECT" \
-	--member="serviceAccount:${SA_EMAIL}" \
-	--role="roles/artifactregistry.reader" \
-	--quiet >/dev/null
 
 if ! gcloud compute firewall-rules describe allow-ebike-http --project="$PROJECT" &>/dev/null; then
 	gcloud compute firewall-rules create allow-ebike-http \
