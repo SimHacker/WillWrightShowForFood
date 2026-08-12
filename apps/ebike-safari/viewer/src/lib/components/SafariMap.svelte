@@ -15,6 +15,11 @@
 	import { onMount } from 'svelte';
 	import type { MapViewMode } from '$lib/types/safari';
 	import type { UserLocation } from '$lib/types/location';
+	import {
+		HEATMAP_PAINT,
+		ROUTE_HIGHLIGHT_PAINT,
+		ROUTE_LINE_PAINT
+	} from '$lib/heatmap-paint';
 
 	setWorkerUrl(workerUrl);
 
@@ -59,61 +64,7 @@
 	const HEAT_SOURCE = 'safari-heat';
 	const HEAT_LAYER = 'ride-heat';
 
-	const HEATMAP_PAINT = {
-	'heatmap-weight': [
-		'interpolate',
-		['linear'],
-		['sqrt', ['get', 'weight']],
-		1,
-		0.28,
-		4,
-		0.55,
-		9,
-		0.78,
-		16,
-		1
-	],
-	'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 8, 0.18, 11, 0.42, 13, 0.72, 15, 1, 17, 1.15],
-	'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 8, 6, 11, 14, 13, 26, 15, 40, 17, 54],
-	'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.48, 13, 0.62, 16, 0.72],
-	'heatmap-color': [
-		'interpolate',
-		['linear'],
-		['heatmap-density'],
-		0,
-		'rgba(0,0,0,0)',
-		0.03,
-		'rgba(2,62,138,0.1)',
-		0.1,
-		'rgba(0,119,182,0.28)',
-		0.22,
-		'rgba(0,180,216,0.42)',
-		0.38,
-		'rgba(0,180,216,0.5)',
-		0.55,
-		'rgba(232,93,4,0.58)',
-		0.72,
-		'rgba(255,160,20,0.64)',
-		0.9,
-		'rgba(255,186,8,0.68)',
-		1,
-		'rgba(255,186,8,0.72)'
-	]
-} satisfies import('maplibre-gl').HeatmapLayerSpecification['paint'];
-
 	const EMPTY_FC: FeatureCollection = { type: 'FeatureCollection', features: [] };
-
-	const linePaint = {
-		'line-color': '#e85d04',
-		'line-width': 4,
-		'line-opacity': 0.85
-	} as const;
-
-	const highlightPaint = {
-		'line-color': '#ffba08',
-		'line-width': 6,
-		'line-opacity': 1
-	} as const;
 
 	function lineLayer(id: string, filter?: FilterSpecification): LayerSpecification {
 		const layer: LayerSpecification = {
@@ -124,7 +75,7 @@
 				'line-join': 'round',
 				'line-cap': 'round'
 			},
-			paint: id === ROUTES_HIGHLIGHT ? highlightPaint : linePaint
+			paint: id === ROUTES_HIGHLIGHT ? ROUTE_HIGHLIGHT_PAINT : ROUTE_LINE_PAINT
 		};
 		if (filter) layer.filter = filter;
 		return layer;
