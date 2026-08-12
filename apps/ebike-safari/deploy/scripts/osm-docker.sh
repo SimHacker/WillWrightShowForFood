@@ -17,15 +17,19 @@ export OSM_DATA_DIR=/osm
 
 compose=(docker compose -f docker-compose.yml -f docker-compose.tools.yml)
 
+run_osm() {
+	"${compose[@]}" run --rm --entrypoint /bin/bash osm-tools -lc "$*"
+}
+
 case "$CMD" in
 	download)
-		"${compose[@]}" run --rm osm-tools bash scripts/osm/download.sh "$@"
+		run_osm "bash scripts/osm/download.sh $(printf '%q ' "$@")"
 		;;
 	filter|import|pipeline|status)
-		"${compose[@]}" run --rm osm-tools bash "scripts/osm/${CMD}.sh" "$@"
+		run_osm "bash scripts/osm/${CMD}.sh $(printf '%q ' "$@")"
 		;;
 	shell)
-		"${compose[@]}" run --rm osm-tools
+		"${compose[@]}" run --rm --entrypoint /bin/bash osm-tools
 		;;
 	build)
 		"${compose[@]}" build osm-tools
