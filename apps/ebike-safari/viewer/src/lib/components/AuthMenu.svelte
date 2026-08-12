@@ -93,11 +93,21 @@
 <svelte:window onclick={onWindowClick} onkeydown={onWindowKeydown} />
 
 <div class="auth" bind:this={rootEl}>
-	<button type="button" class="menu-btn" onclick={toggleMenu} aria-expanded={menuOpen} aria-haspopup="menu">
-		{user ? user.displayName : 'Menu'}
+	<button
+		type="button"
+		class="menu-btn"
+		onclick={toggleMenu}
+		aria-expanded={menuOpen}
+		aria-haspopup="menu"
+		aria-label={user ? `Account menu (${user.displayName})` : 'Account menu'}
+	>
+		☰
 	</button>
 	{#if menuOpen}
 		<div class="menu" role="menu">
+			{#if user}
+				<div class="menu-user" role="presentation">{user.displayName}</div>
+			{/if}
 			{#if authAvailable && !user}
 				<button type="button" role="menuitem" onclick={openLogin}>Log in</button>
 			{/if}
@@ -145,23 +155,25 @@
 		position: fixed;
 		top: 0.55rem;
 		right: 0.65rem;
-		z-index: 20;
-		font-size: 0.8rem;
+		z-index: 25;
 	}
 
 	.menu-btn {
-		padding: 0.3rem 0.65rem;
-		border: 1px solid rgba(255, 255, 255, 0.22);
-		border-radius: 6px;
-		background: rgba(22, 33, 62, 0.82);
-		color: rgba(248, 249, 250, 0.92);
-		font: inherit;
+		width: 2.35rem;
+		height: 2.35rem;
+		padding: 0;
+		border: 1px solid rgba(255, 255, 255, 0.28);
+		border-radius: 8px;
+		background: rgba(22, 33, 62, 0.92);
+		color: #f8f9fa;
+		font-size: 1.15rem;
+		line-height: 1;
 		cursor: pointer;
-		backdrop-filter: blur(6px);
-		max-width: 10rem;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
+		backdrop-filter: blur(8px);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.menu-btn:hover {
@@ -179,6 +191,15 @@
 		background: rgba(22, 33, 62, 0.96);
 		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 		overflow: hidden;
+		font-size: 0.85rem;
+	}
+
+	.menu-user {
+		padding: 0.5rem 0.85rem 0.35rem;
+		font-size: 0.75rem;
+		font-weight: 600;
+		opacity: 0.85;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	}
 
 	.menu button {

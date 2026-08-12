@@ -357,7 +357,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
-		padding: 0.5rem 1rem;
+		padding: 0.5rem 3.25rem 0.5rem 1rem;
 		background: #16213e;
 		font-size: 0.9rem;
 		z-index: 1;

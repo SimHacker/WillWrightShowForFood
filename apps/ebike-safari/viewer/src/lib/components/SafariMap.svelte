@@ -217,7 +217,7 @@
 			zoom: 12
 		});
 
-		map.addControl(new NavigationControl(), 'top-right');
+		map.addControl(new NavigationControl(), 'bottom-right');
 
 		map.on('load', () => {
 			styleLoaded = true;
