@@ -822,7 +822,7 @@
       52.478374
     ],
     "trip_count": 40,
-    "cell_count": 15511,
+    "cell_count": 41180,
     "all_routes": "coverage/all-routes.geojson",
     "heatmap": "coverage/heatmap.geojson"
   }

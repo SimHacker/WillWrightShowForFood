@@ -125,8 +125,60 @@ def build_trip(fit_path: Path, out_dir: Path) -> dict:
     }
 
 
-# ~17 m grid at NL latitude — overlap counts ≈ how often you rode here
+# ~10 m grid at NL latitude — overlap counts ≈ how often you rode here
 HEAT_CELL_DEG = 0.00015
+HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 2
+
+
+def interpolate_segment(
+    lon0: float, lat0: float, lon1: float, lat1: float, spacing_deg: float
+):
+    """Yield points along a segment, spaced about spacing_deg apart."""
+    import math
+
+    dlon = lon1 - lon0
+    dlat = lat1 - lat0
+    dist = math.hypot(dlon, dlat)
+    if dist <= spacing_deg:
+        yield lon0, lat0
+        yield lon1, lat1
+        return
+    steps = int(math.ceil(dist / spacing_deg))
+    for i in range(steps + 1):
+        t = i / steps
+        yield lon0 + dlon * t, lat0 + dlat * t
+
+
+def heat_cell(lon: float, lat: float) -> tuple[float, float]:
+    gx = round(lon / HEAT_CELL_DEG) * HEAT_CELL_DEG
+    gy = round(lat / HEAT_CELL_DEG) * HEAT_CELL_DEG
+    return round(gx, 6), round(gy, 6)
+
+
+def accumulate_trip_heat(grid: dict[tuple[float, float], int], points: list[dict]) -> None:
+    """Bin GPS track into visit-frequency cells, filling gaps along each segment."""
+    if len(points) < 2:
+        return
+    for i in range(1, len(points)):
+        lon0, lat0 = points[i - 1]["lon"], points[i - 1]["lat"]
+        lon1, lat1 = points[i]["lon"], points[i]["lat"]
+        for lon, lat in interpolate_segment(lon0, lat0, lon1, lat1, HEAT_SAMPLE_DEG):
+            key = heat_cell(lon, lat)
+            grid[key] = grid.get(key, 0) + 1
+
+
+def accumulate_line_heat(
+    grid: dict[tuple[float, float], int], coords: list[list[float]]
+) -> None:
+    """Bin a route LineString into heat cells."""
+    if len(coords) < 2:
+        return
+    for i in range(1, len(coords)):
+        lon0, lat0 = coords[i - 1]
+        lon1, lat1 = coords[i]
+        for lon, lat in interpolate_segment(lon0, lat0, lon1, lat1, HEAT_SAMPLE_DEG):
+            key = heat_cell(lon, lat)
+            grid[key] = grid.get(key, 0) + 1
 
 
 def build_coverage(out_dir: Path, entries: list[dict]) -> dict:
@@ -148,14 +200,7 @@ def build_coverage(out_dir: Path, entries: list[dict]) -> dict:
             route_features.append({**feat, "properties": props})
 
         series = json.loads(series_path.read_text(encoding="utf-8"))
-        step = max(1, len(series.get("points", [])) // 800)
-        for i, p in enumerate(series.get("points", [])):
-            if i % step != 0:
-                continue
-            gx = round(p["lon"] / HEAT_CELL_DEG) * HEAT_CELL_DEG
-            gy = round(p["lat"] / HEAT_CELL_DEG) * HEAT_CELL_DEG
-            key = (round(gx, 6), round(gy, 6))
-            grid[key] = grid.get(key, 0) + 1
+        accumulate_trip_heat(grid, series.get("points", []))
 
     all_routes = {"type": "FeatureCollection", "features": route_features}
     heatmap = {

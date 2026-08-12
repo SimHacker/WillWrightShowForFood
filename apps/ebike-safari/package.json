@@ -12,6 +12,7 @@
     "osm:shell": "bash deploy/scripts/osm-docker.sh shell",
     "valhalla:up": "bash deploy/scripts/osm-docker.sh valhalla-up",
     "rides:import-pg": "python3 scripts/import_trip_pg.py --data-dir demo/web/data",
-    "rides:edges": "python3 scripts/build_ride_edges.py"
+    "rides:edges": "python3 scripts/build_ride_edges.py",
+    "rides:rebuild-coverage": "python3 scripts/rebuild_coverage.py --data-dir demo/web/data"
   }
 }

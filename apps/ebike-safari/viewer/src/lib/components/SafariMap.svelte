@@ -139,9 +139,9 @@
 				type: 'heatmap',
 				source: HEAT_SOURCE,
 				paint: {
-					'heatmap-weight': ['interpolate', ['linear'], ['get', 'weight'], 1, 0.2, 20, 1],
-					'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 10, 0.6, 15, 1.2],
-					'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 10, 12, 15, 28],
+					'heatmap-weight': ['interpolate', ['linear'], ['get', 'weight'], 1, 0.35, 20, 1],
+					'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 10, 0.7, 15, 1.3],
+					'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 10, 18, 15, 34],
 					'heatmap-opacity': 0.75,
 					'heatmap-color': [
 						'interpolate',
