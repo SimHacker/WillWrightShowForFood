@@ -30,9 +30,9 @@ export function filterRoutes(
 const DEFAULT_CELL_DEG = 0.00008;
 const DEFAULT_SAMPLE_DIVISOR = 3;
 
-/** ~3 m grid for close-zoom heat (full route geometry). */
-const FINE_CELL_DEG = 0.000028;
-const FINE_SAMPLE_DIVISOR = 5;
+/** ~1.8 m grid for close-zoom heat (full route geometry). */
+const FINE_CELL_DEG = 0.000018;
+const FINE_SAMPLE_DIVISOR = 7;
 
 const fineCache = new WeakMap<FeatureCollection, FeatureCollection>();
 

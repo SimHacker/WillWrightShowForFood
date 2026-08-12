@@ -35,7 +35,6 @@
 		heatmap?: FeatureCollection | null;
 		viewMode?: MapViewMode;
 		highlightTripId?: string | null;
-		playhead?: { lat: number; lon: number } | null;
 		userLocation?: UserLocation | null;
 		userLocationDraggable?: boolean;
 		followUser?: boolean;
@@ -50,7 +49,6 @@
 		heatmap = null,
 		viewMode = 'both',
 		highlightTripId = null,
-		playhead = null,
 		userLocation = null,
 		userLocationDraggable = false,
 		followUser = false,
@@ -62,6 +60,7 @@
 	let styleLoaded = $state(false);
 	let useFineHeat = $state(false);
 	let userMarker: Marker | undefined;
+	let recentering = false;
 
 	const ROUTES_SOURCE = 'safari-routes';
 	const ROUTES_CASING = 'ride-lines-casing';
@@ -147,7 +146,7 @@
 			map.setFilter(ROUTES_LAYER, null);
 		}
 
-		raiseRouteLayers();
+		ensureLayerOrder();
 	}
 
 	function syncHeatmap() {
@@ -168,23 +167,29 @@
 			(map.getSource(HEAT_SOURCE) as GeoJSONSource).setData(data);
 		}
 
-		raiseRouteLayers();
+		ensureLayerOrder();
 	}
 
-	function raiseRouteLayers() {
+	function ensureLayerOrder() {
 		if (!map) return;
-		if (map.getLayer(HEAT_LAYER) && map.getLayer(ROUTES_CASING)) {
-			map.moveLayer(ROUTES_CASING);
+		const topToBottom = [
+			ROUTES_HIGHLIGHT,
+			ROUTES_HIGHLIGHT_CASING,
+			ROUTES_LAYER,
+			ROUTES_CASING,
+			HEAT_LAYER
+		];
+		for (let i = topToBottom.length - 1; i >= 0; i--) {
+			const id = topToBottom[i];
+			if (map.getLayer(id)) map.moveLayer(id);
 		}
-		if (map.getLayer(ROUTES_LAYER)) {
-			map.moveLayer(ROUTES_LAYER);
-		}
-		if (map.getLayer(ROUTES_HIGHLIGHT_CASING)) {
-			map.moveLayer(ROUTES_HIGHLIGHT_CASING);
-		}
-		if (map.getLayer(ROUTES_HIGHLIGHT)) {
-			map.moveLayer(ROUTES_HIGHLIGHT);
-		}
+		raiseUserMarker();
+	}
+
+	function raiseUserMarker() {
+		if (!userMarker) return;
+		const el = userMarker.getElement();
+		el.style.zIndex = '30';
 	}
 
 	function applyVisibility() {
@@ -272,44 +277,34 @@
 		syncAll();
 	});
 
-	$effect(() => {
-		if (!map || !styleLoaded || !playhead) {
-			if (map?.getLayer('playhead-dot')) {
-				map.setLayoutProperty('playhead-dot', 'visibility', 'none');
-			}
-			return;
-		}
+	function centerOnUser() {
+		if (!map || !userLocation || recentering) return;
+		const center = map.getCenter();
+		const lon = userLocation.lon;
+		const lat = userLocation.lat;
+		if (Math.abs(center.lng - lon) < 1e-8 && Math.abs(center.lat - lat) < 1e-8) return;
 
-		const data: FeatureCollection = {
-			type: 'FeatureCollection',
-			features: [
-				{
-					type: 'Feature',
-					properties: {},
-					geometry: { type: 'Point', coordinates: [playhead.lon, playhead.lat] }
-				}
-			]
-		};
+		recentering = true;
+		map.jumpTo({
+			center: [lon, lat],
+			zoom: map.getZoom(),
+			bearing: map.getBearing(),
+			pitch: map.getPitch()
+		});
+		recentering = false;
+	}
 
-		if (!map.getSource('playhead')) {
-			map.addSource('playhead', { type: 'geojson', data });
-			map.addLayer({
-				id: 'playhead-dot',
-				type: 'circle',
-				source: 'playhead',
-				paint: {
-					'circle-radius': 9,
-					'circle-color': '#0077b6',
-					'circle-stroke-width': 3,
-					'circle-stroke-color': '#ffffff'
-				}
-			});
-			map.moveLayer('playhead-dot');
+	function syncFollowMode() {
+		if (!map || !styleLoaded) return;
+
+		const active = followUser && !!userLocation;
+		if (active) {
+			map.dragPan.disable();
+			centerOnUser();
 		} else {
-			(map.getSource('playhead') as GeoJSONSource).setData(data);
-			map.setLayoutProperty('playhead-dot', 'visibility', 'visible');
+			map.dragPan.enable();
 		}
-	});
+	}
 
 	function syncUserMarker() {
 		if (!map || !styleLoaded) return;
@@ -327,6 +322,7 @@
 			})
 				.setLngLat([userLocation.lon, userLocation.lat])
 				.addTo(map);
+			raiseUserMarker();
 
 			userMarker.on('dragend', () => {
 				if (!userMarker || !onUserLocationChange) return;
@@ -341,20 +337,33 @@
 		} else {
 			userMarker.setDraggable(userLocationDraggable);
 			userMarker.setLngLat([userLocation.lon, userLocation.lat]);
+			raiseUserMarker();
 		}
 
-		if (followUser) {
-			map.easeTo({
-				center: [userLocation.lon, userLocation.lat],
-				duration: 400
-			});
-		}
+		if (followUser) centerOnUser();
 	}
+
+	$effect(() => {
+		if (!map || !styleLoaded) return;
+
+		const onViewChange = () => {
+			if (followUser && userLocation) centerOnUser();
+		};
+
+		map.on('zoomend', onViewChange);
+		map.on('moveend', onViewChange);
+
+		return () => {
+			map.off('zoomend', onViewChange);
+			map.off('moveend', onViewChange);
+		};
+	});
 
 	$effect(() => {
 		userLocation;
 		userLocationDraggable;
 		followUser;
+		syncFollowMode();
 		syncUserMarker();
 	});
 </script>

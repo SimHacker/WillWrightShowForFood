@@ -21,6 +21,7 @@
 	let series = $state<SafariSeries | null>(null);
 	let scrubIndex = $state(0);
 	let playing = $state(false);
+	let playbackSpeed = $state(1);
 	let error = $state<string | null>(null);
 	let loading = $state(true);
 	let userLocation = $state<UserLocation | null>(null);
@@ -183,6 +184,7 @@
 		series = (await sRes.json()) as SafariSeries;
 		scrubIndex = 0;
 		playing = false;
+		settingsStore.update({ locationMode: 'manual' });
 	}
 
 	function toggleTrip(id: string) {
@@ -217,16 +219,39 @@
 		playing = false;
 	}
 
+	$effect(() => {
+		if (!replayMode || !series?.points.length) return;
+		if (locationMode !== 'manual') {
+			settingsStore.update({ locationMode: 'manual' });
+		}
+	});
+
+	$effect(() => {
+		if (!replayMode || !series?.points.length) return;
+		scrubIndex;
+		const p = series.points[Math.min(scrubIndex, series.points.length - 1)];
+		userLocation = {
+			lat: p.lat,
+			lon: p.lon,
+			updated_at: p.t,
+			source: 'manual'
+		};
+	});
+
+	const PLAYBACK_SPEEDS = [1, 5, 10, 50, 100] as const;
+
 	function msUntilNextPoint(idx: number): number {
 		if (!series?.points.length || idx >= series.points.length - 1) return 500;
 		const a = Date.parse(series.points[idx].t);
 		const b = Date.parse(series.points[idx + 1].t);
 		const delta = b - a;
-		return Number.isFinite(delta) && delta > 0 ? delta : 500;
+		const real = Number.isFinite(delta) && delta > 0 ? delta : 500;
+		return Math.max(8, real / playbackSpeed);
 	}
 
 	$effect(() => {
 		if (!playing || !series?.points.length) return;
+		playbackSpeed;
 		const pts = series.points;
 		let cancelled = false;
 		let idx = scrubIndex;
@@ -258,16 +283,16 @@
 		playing = true;
 	}
 
-	const playhead = $derived.by(() => {
-		if (!replayMode || !series?.points.length) return null;
-		const p = series.points[Math.min(scrubIndex, series.points.length - 1)];
-		return { lat: p.lat, lon: p.lon };
-	});
-
 	const currentPoint = $derived.by(() => {
 		if (!replayMode || !series?.points.length) return null;
 		return series.points[Math.min(scrubIndex, series.points.length - 1)];
 	});
+
+	const mapUserLocation = $derived(replayMode ? userLocation : locationMode === 'off' ? null : userLocation);
+	const mapFollowUser = $derived(followUser && locationMode !== 'off');
+	const mapLocationDraggable = $derived(
+		replayMode ? !playing && locationMode === 'manual' && !followUser : locationMode === 'manual' && !followUser
+	);
 </script>
 
 <svelte:head>
@@ -316,10 +341,9 @@
 				heatmap={displayHeatmap}
 				{viewMode}
 				highlightTripId={replayTripId}
-				{playhead}
-				userLocation={locationMode === 'off' ? null : userLocation}
-				userLocationDraggable={locationMode === 'manual'}
-				{followUser}
+				userLocation={mapUserLocation}
+				userLocationDraggable={mapLocationDraggable}
+				followUser={mapFollowUser}
 				onUserLocationChange={setUserLocation}
 			/>
 			<TripPicker
@@ -336,17 +360,35 @@
 		{#if replayMode && series}
 			<footer>
 				<div class="controls">
-					<button type="button" onclick={togglePlay} aria-pressed={playing}>
+					<button type="button" class="play" onclick={togglePlay} aria-pressed={playing}>
 						{playing ? 'Pause' : 'Play'}
 					</button>
-					<input
-						type="range"
-						min="0"
-						max={Math.max(0, series.points.length - 1)}
-						bind:value={scrubIndex}
-						oninput={() => (playing = false)}
-					/>
+					<div class="speed-row">
+						<span class="speed-label">Speed</span>
+						<div class="speeds" role="group" aria-label="Playback speed">
+							{#each PLAYBACK_SPEEDS as speed}
+								<button
+									type="button"
+									class="speed"
+									class:active={playbackSpeed === speed}
+									aria-pressed={playbackSpeed === speed}
+									onclick={() => (playbackSpeed = speed)}
+								>
+									{speed === 1 ? 'Real' : `${speed}×`}
+								</button>
+							{/each}
+						</div>
+					</div>
 				</div>
+				<input
+					class="scrub"
+					type="range"
+					min="0"
+					max={Math.max(0, series.points.length - 1)}
+					bind:value={scrubIndex}
+					oninput={() => (playing = false)}
+					aria-label="Ride position"
+				/>
 				<div class="stats">
 					{#if currentPoint}
 						<span>{currentPoint.speed_kmh?.toFixed(1) ?? '—'} km/h</span>
@@ -458,6 +500,51 @@
 		display: flex;
 		gap: 0.75rem;
 		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 0.5rem;
+	}
+
+	.speed-row {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		flex: 1;
+		min-width: min(100%, 20rem);
+	}
+
+	.speed-label {
+		font-size: 0.8rem;
+		font-weight: 600;
+		opacity: 0.85;
+		flex: 0 0 auto;
+	}
+
+	.speeds {
+		display: flex;
+		gap: 0.25rem;
+		flex-wrap: wrap;
+	}
+
+	button.play {
+		flex: 0 0 auto;
+	}
+
+	input.scrub {
+		width: 100%;
+		margin: 0;
+	}
+
+	button.speed {
+		min-width: 0;
+		padding: 0.35rem 0.55rem;
+		background: rgba(248, 249, 250, 0.12);
+		font-size: 0.8rem;
+		font-weight: 600;
+	}
+
+	button.speed.active,
+	button.speed[aria-pressed='true'] {
+		background: #0077b6;
 	}
 
 	button {
@@ -471,7 +558,7 @@
 		cursor: pointer;
 	}
 
-	button[aria-pressed='true'] {
+	button[aria-pressed='true']:not(.speed) {
 		background: #0077b6;
 	}
 
