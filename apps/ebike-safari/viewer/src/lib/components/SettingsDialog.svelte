@@ -30,6 +30,7 @@
 	<div class="dialog" role="dialog" aria-labelledby="settings-title">
 		<h2 id="settings-title">Settings</h2>
 		<p class="todo">TODO: More settings will live here later (sync, units, themes, pie menus, …).</p>
+		<p class="todo">TODO: Scrubber as parallel tracks — speed, altitude, power — like After Effects / Blender.</p>
 		<p class="hint">Use the bottom bar while riding. This dialog is for extras.</p>
 
 		<fieldset>

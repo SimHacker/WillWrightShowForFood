@@ -323,12 +323,8 @@
 		}
 
 		if (!userMarker) {
-			const pin = document.createElement('div');
-			pin.className = 'you-are-here-pin';
-			pin.setAttribute('aria-hidden', 'true');
 			userMarker = new Marker({
-				element: pin,
-				anchor: 'center',
+				color: '#2dc653',
 				draggable: userLocationDraggable
 			})
 				.setLngLat([userLocation.lon, userLocation.lat])
@@ -389,16 +385,5 @@
 
 	.map-root :global(.maplibregl-marker-container) {
 		z-index: 20;
-	}
-
-	.map-root :global(.you-are-here-pin) {
-		width: 26px;
-		height: 26px;
-		background: #2dc653;
-		border: 3px solid #fff;
-		border-radius: 50%;
-		box-shadow:
-			0 0 0 2px #023047,
-			0 2px 10px rgba(0, 0, 0, 0.45);
 	}
 </style>

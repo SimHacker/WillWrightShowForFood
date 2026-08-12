@@ -6,6 +6,7 @@
 	import TripPicker from '$lib/components/TripPicker.svelte';
 	import { getAuthContext } from '$lib/auth-context';
 	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
+	import { loadSelectedTripIds, saveSelectedTripIds } from '$lib/selected-trips';
 	import { getSettingsContext } from '$lib/settings-context';
 	import type { FeatureCollection } from 'geojson';
 	import type { UserLocation } from '$lib/types/location';
@@ -28,7 +29,7 @@
 	let loading = $state(true);
 	let userLocation = $state<UserLocation | null>(null);
 	let locationError = $state<string | null>(null);
-	let ridesOpen = $state(true);
+	let ridesOpen = $state(false);
 	let settingsOpen = $state(false);
 
 	const filteredRoutes = $derived.by(() => {
@@ -134,8 +135,9 @@
 				const m = (await mRes.json()) as SafariManifest;
 				manifest = m;
 
-				const ids = new Set(m.trips.map((t) => t.id));
-				selected = ids;
+				const validIds = new Set(m.trips.map((t) => t.id));
+				selected = loadSelectedTripIds(validIds);
+				await syncReplayFromSelection();
 
 				if (m.coverage?.all_routes) {
 					const rRes = await dataFetch(`/data/${m.coverage.all_routes}`);
@@ -179,6 +181,24 @@
 		})();
 	});
 
+	async function syncReplayFromSelection() {
+		if (selected.size === 1) {
+			const only = [...selected][0];
+			replayTripId = only;
+			await loadSeries(only);
+		} else {
+			replayTripId = null;
+			series = null;
+			playing = false;
+		}
+	}
+
+	function applySelection(next: Set<string>) {
+		selected = next;
+		saveSelectedTripIds(next);
+		syncReplayFromSelection();
+	}
+
 	async function loadSeries(tripId: string) {
 		const trip = manifest?.trips.find((t) => t.id === tripId);
 		if (!trip) return;
@@ -194,32 +214,16 @@
 		const next = new Set(selected);
 		if (next.has(id)) next.delete(id);
 		else next.add(id);
-		selected = next;
-
-		if (next.size === 1) {
-			const only = [...next][0];
-			replayTripId = only;
-			loadSeries(only);
-		} else {
-			replayTripId = null;
-			series = null;
-			playing = false;
-		}
+		applySelection(next);
 	}
 
 	function selectAll() {
 		if (!manifest) return;
-		selected = new Set(manifest.trips.map((t) => t.id));
-		replayTripId = null;
-		series = null;
-		playing = false;
+		applySelection(new Set(manifest.trips.map((t) => t.id)));
 	}
 
 	function selectNone() {
-		selected = new Set();
-		replayTripId = null;
-		series = null;
-		playing = false;
+		applySelection(new Set());
 	}
 
 	$effect(() => {

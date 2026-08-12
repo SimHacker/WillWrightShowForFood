@@ -25,7 +25,7 @@
 {#if open}
 	<aside id="rides-panel">
 		<div class="panel">
-			<p class="hint">Heat = where you ride often. Gaps = not yet (in this set).</p>
+			<p class="hint">Pick rides to show. All = coverage heatmap (secondary).</p>
 
 			<div class="bulk">
 				<button type="button" onclick={onSelectAll}>All</button>

@@ -52,14 +52,25 @@
 	let openMenu = $state<'location' | 'map' | null>(null);
 
 	const locationLabel = $derived(
-		locationMode === 'off' ? 'Off' : locationMode === 'gps' ? 'GPS' : 'Manual'
+		locationMode === 'off' ? 'Off' : locationMode === 'gps' ? 'GPS' : 'Pin'
 	);
 
 	const mapLabel = $derived(
-		viewMode === 'both' ? 'Both' : viewMode === 'routes' ? 'Routes' : 'Heat'
+		viewMode === 'both' ? 'Both' : viewMode === 'routes' ? 'Lines' : 'Heat'
 	);
 
 	const scrubMax = $derived(Math.max(0, pointCount - 1));
+
+	const statLine = $derived.by(() => {
+		if (replayActive && currentPoint) {
+			const parts = [
+				`${currentPoint.speed_kmh?.toFixed(1) ?? '—'} km/h`,
+				`${scrubIndex + 1}/${pointCount}`
+			];
+			return parts.join(' · ');
+		}
+		return `${selectedCount}/${tripCount} rides`;
+	});
 
 	function closeMenus() {
 		openMenu = null;
@@ -77,7 +88,7 @@
 />
 
 <footer class="bottom-bar">
-	<div class="transport">
+	<div class="row transport">
 		<button
 			type="button"
 			class="play"
@@ -85,7 +96,7 @@
 			aria-pressed={playing}
 			onclick={onTogglePlay}
 		>
-			{playing ? 'Pause' : 'Play'}
+			{playing ? '❚❚' : '▶'}
 		</button>
 		<input
 			class="scrub"
@@ -101,139 +112,141 @@
 			}}
 			aria-label="Ride position"
 		/>
+		<span class="stat">{statLine}</span>
 	</div>
 
-	<div class="speed-bar" class:inactive={!replayActive} role="group" aria-label="Playback speed">
-		<span class="speed-label">Speed</span>
-		{#each PLAYBACK_SPEEDS as speed}
-			<button
-				type="button"
-				class="speed"
-				class:active={playbackSpeed === speed}
-				disabled={!replayActive}
-				aria-pressed={playbackSpeed === speed}
-				onclick={() => onSpeed(speed)}
-			>
-				{speed === 1 ? 'Real' : `${speed}×`}
-			</button>
-		{/each}
-	</div>
-
-	<div class="toolbar">
-		<div class="tool-slot">
-			<button
-				type="button"
-				class="tool"
-				aria-haspopup="menu"
-				aria-expanded={openMenu === 'location'}
-				onclick={() => toggleMenu('location')}
-			>
-				<span class="tool-kicker">Location</span>
-				<span class="tool-value">{locationLabel}</span>
-			</button>
-			<PopupMenu
-				open={openMenu === 'location'}
-				items={[
-					{ id: 'off', label: 'Off — hide pin', active: locationMode === 'off' },
-					{ id: 'gps', label: 'GPS — live location', active: locationMode === 'gps' },
-					{ id: 'manual', label: 'Manual — drag pin', active: locationMode === 'manual' }
-				]}
-				onSelect={(id) => onLocationMode(id as LocationMode)}
-				onClose={closeMenus}
-			/>
+	<div class="row controls" class:inactive={!replayActive}>
+		<div class="speeds" role="group" aria-label="Playback speed">
+			{#each PLAYBACK_SPEEDS as speed}
+				<button
+					type="button"
+					class="chip speed"
+					class:active={playbackSpeed === speed}
+					disabled={!replayActive}
+					aria-pressed={playbackSpeed === speed}
+					onclick={() => onSpeed(speed)}
+				>
+					{speed === 1 ? '1×' : `${speed}×`}
+				</button>
+			{/each}
 		</div>
 
-		<button
-			type="button"
-			class="tool center"
-			class:active={followUser}
-			disabled={locationMode === 'off'}
-			aria-pressed={followUser}
-			onclick={() => onFollowUser(!followUser)}
-		>
-			<span class="tool-kicker">Center</span>
-			<span class="tool-value">{followUser ? 'On' : 'Off'}</span>
-		</button>
+		<div class="tools">
+			<div class="tool-slot">
+				<button
+					type="button"
+					class="chip tool"
+					class:active={locationMode !== 'off'}
+					aria-haspopup="menu"
+					aria-expanded={openMenu === 'location'}
+					onclick={() => toggleMenu('location')}
+				>
+					{locationLabel}
+				</button>
+				<PopupMenu
+					open={openMenu === 'location'}
+					items={[
+						{ id: 'off', label: 'Off — hide pin', active: locationMode === 'off' },
+						{ id: 'gps', label: 'GPS — live location', active: locationMode === 'gps' },
+						{ id: 'manual', label: 'Manual — drag pin', active: locationMode === 'manual' }
+					]}
+					onSelect={(id) => onLocationMode(id as LocationMode)}
+					onClose={closeMenus}
+				/>
+			</div>
 
-		<div class="tool-slot">
 			<button
 				type="button"
-				class="tool"
-				aria-haspopup="menu"
-				aria-expanded={openMenu === 'map'}
-				onclick={() => toggleMenu('map')}
+				class="chip tool"
+				class:active={followUser}
+				disabled={locationMode === 'off'}
+				aria-pressed={followUser}
+				onclick={() => onFollowUser(!followUser)}
 			>
-				<span class="tool-kicker">Map</span>
-				<span class="tool-value">{mapLabel}</span>
+				Center
 			</button>
-			<PopupMenu
-				open={openMenu === 'map'}
-				items={[
-					{ id: 'both', label: 'Routes + heat', active: viewMode === 'both' },
-					{ id: 'routes', label: 'Routes only', active: viewMode === 'routes' },
-					{ id: 'heat', label: 'Heat only', active: viewMode === 'heat' }
-				]}
-				onSelect={(id) => onViewMode(id as MapViewMode)}
-				onClose={closeMenus}
-			/>
+
+			<div class="tool-slot">
+				<button
+					type="button"
+					class="chip tool"
+					aria-haspopup="menu"
+					aria-expanded={openMenu === 'map'}
+					onclick={() => toggleMenu('map')}
+				>
+					{mapLabel}
+				</button>
+				<PopupMenu
+					open={openMenu === 'map'}
+					items={[
+						{ id: 'both', label: 'Routes + heat', active: viewMode === 'both' },
+						{ id: 'routes', label: 'Routes only', active: viewMode === 'routes' },
+						{ id: 'heat', label: 'Heat only', active: viewMode === 'heat' }
+					]}
+					onSelect={(id) => onViewMode(id as MapViewMode)}
+					onClose={closeMenus}
+				/>
+			</div>
+
+			<button type="button" class="chip tool" onclick={() => { closeMenus(); onOpenMore(); }}>
+				More
+			</button>
 		</div>
-
-		<button type="button" class="tool" onclick={() => { closeMenus(); onOpenMore(); }}>
-			<span class="tool-kicker">More</span>
-			<span class="tool-value">⋯</span>
-		</button>
-	</div>
-
-	<div class="stats">
-		{#if replayActive && currentPoint}
-			<span>{currentPoint.speed_kmh?.toFixed(1) ?? '—'} km/h</span>
-			<span>{currentPoint.alt_m?.toFixed(0) ?? '—'} m</span>
-			<span>{new Date(currentPoint.t).toLocaleTimeString()}</span>
-			<span>{scrubIndex + 1} / {pointCount}</span>
-		{:else}
-			<span>{selectedCount}/{tripCount} rides · select one to replay</span>
-		{/if}
 	</div>
 </footer>
 
 <style>
 	.bottom-bar {
 		box-sizing: border-box;
-		height: 11.75rem;
-		min-height: 11.75rem;
-		padding: 0.45rem 0.65rem calc(0.55rem + env(safe-area-inset-bottom, 0px));
+		height: 6.75rem;
+		min-height: 6.75rem;
+		padding: 0.35rem 0.5rem calc(0.4rem + env(safe-area-inset-bottom, 0px));
 		background: #16213e;
 		border-top: 1px solid rgba(248, 249, 250, 0.12);
 		z-index: 5;
 		flex: 0 0 auto;
 		display: flex;
 		flex-direction: column;
-		gap: 0.45rem;
+		gap: 0.35rem;
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		min-width: 0;
 	}
 
 	.transport {
-		display: flex;
-		gap: 0.55rem;
-		align-items: center;
-		flex: 0 0 2.5rem;
+		flex: 0 0 2.15rem;
+	}
+
+	.controls {
+		flex: 1;
+		min-height: 0;
+	}
+
+	.controls.inactive {
+		opacity: 0.5;
 	}
 
 	.play {
-		flex: 0 0 auto;
-		min-width: 4.25rem;
-		min-height: 2.5rem;
-		padding: 0.4rem 0.75rem;
+		flex: 0 0 2.15rem;
+		width: 2.15rem;
+		height: 2.15rem;
+		padding: 0;
 		border: none;
 		border-radius: 8px;
 		background: #e85d04;
 		color: #fff;
-		font: inherit;
+		font-size: 0.72rem;
 		font-weight: 700;
+		line-height: 1;
 		cursor: pointer;
 	}
 
 	.play:disabled {
-		opacity: 0.38;
+		opacity: 0.35;
 		cursor: not-allowed;
 	}
 
@@ -244,7 +257,7 @@
 	.scrub {
 		flex: 1;
 		min-width: 0;
-		min-height: 2rem;
+		height: 1.75rem;
 		margin: 0;
 	}
 
@@ -252,113 +265,75 @@
 		opacity: 0.35;
 	}
 
-	.speed-bar {
-		display: flex;
-		gap: 0.3rem;
-		align-items: stretch;
-		flex: 0 0 2.35rem;
-	}
-
-	.speed-bar.inactive {
-		opacity: 0.45;
-	}
-
-	.speed-label {
-		display: flex;
-		align-items: center;
-		font-size: 0.78rem;
-		font-weight: 700;
-		opacity: 0.9;
+	.stat {
 		flex: 0 0 auto;
-		padding-right: 0.1rem;
+		max-width: 38%;
+		font-size: 0.68rem;
+		font-weight: 600;
+		opacity: 0.85;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-align: right;
 	}
 
-	.speed {
-		flex: 1;
-		min-width: 2.4rem;
-		min-height: 2.35rem;
-		padding: 0.35rem 0.25rem;
-		border: none;
-		border-radius: 8px;
-		background: #343a40;
-		color: #fff;
-		font: inherit;
-		font-size: 0.82rem;
-		font-weight: 700;
-		cursor: pointer;
-	}
-
-	.speed:disabled {
-		cursor: not-allowed;
-	}
-
-	.speed.active,
-	.speed[aria-pressed='true'] {
-		background: #0077b6;
-	}
-
-	.toolbar {
+	.speeds {
 		display: flex;
-		gap: 0.35rem;
-		flex: 0 0 3.1rem;
+		gap: 0.2rem;
+		flex: 0 0 auto;
+	}
+
+	.tools {
+		display: flex;
+		gap: 0.2rem;
+		flex: 1;
+		min-width: 0;
+		justify-content: flex-end;
 	}
 
 	.tool-slot {
 		position: relative;
-		flex: 1;
+		flex: 0 1 auto;
 		min-width: 0;
 	}
 
-	.tool {
+	.chip {
 		box-sizing: border-box;
-		width: 100%;
-		min-height: 3.1rem;
-		padding: 0.3rem 0.35rem;
+		min-height: 2rem;
+		padding: 0.28rem 0.45rem;
 		border: 1px solid rgba(255, 255, 255, 0.14);
-		border-radius: 10px;
+		border-radius: 7px;
 		background: #1a1a2e;
 		color: #f8f9fa;
+		font: inherit;
+		font-size: 0.72rem;
+		font-weight: 700;
+		line-height: 1.1;
 		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 0.1rem;
+		white-space: nowrap;
 	}
 
-	.tool.center.active {
+	.chip.speed {
+		min-width: 2rem;
+		padding-inline: 0.35rem;
+		background: #343a40;
+		border-color: transparent;
+	}
+
+	.chip.tool {
+		max-width: 4.2rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.chip.active,
+	.chip[aria-pressed='true'] {
 		background: #0077b6;
 		border-color: #0077b6;
 	}
 
-	.tool:disabled {
+	.chip:disabled {
 		opacity: 0.4;
 		cursor: not-allowed;
-	}
-
-	.tool-kicker {
-		font-size: 0.62rem;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 0.04em;
-		opacity: 0.72;
-		line-height: 1;
-	}
-
-	.tool-value {
-		font-size: 0.88rem;
-		font-weight: 700;
-		line-height: 1.1;
-	}
-
-	.stats {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.65rem 1rem;
-		flex: 0 0 1.1rem;
-		align-items: center;
-		font-size: 0.78rem;
-		opacity: 0.88;
-		overflow: hidden;
 	}
 </style>
