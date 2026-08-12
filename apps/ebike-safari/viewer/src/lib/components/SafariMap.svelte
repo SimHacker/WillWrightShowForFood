@@ -7,6 +7,7 @@
 		type FilterSpecification,
 		type GeoJSONSource,
 		type LayerSpecification,
+		type LineLayerSpecification,
 		type Map as MapLibreMap
 	} from 'maplibre-gl';
 	import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
@@ -17,9 +18,12 @@
 	import type { UserLocation } from '$lib/types/location';
 	import {
 		HEATMAP_PAINT,
+		ROUTE_CASING_PAINT,
+		ROUTE_HIGHLIGHT_CASING_PAINT,
 		ROUTE_HIGHLIGHT_PAINT,
 		ROUTE_LINE_PAINT
 	} from '$lib/heatmap-paint';
+	import { FINE_HEAT_ZOOM, heatFromRoutesFine } from '$lib/map-bounds';
 
 	setWorkerUrl(workerUrl);
 
@@ -56,17 +60,24 @@
 	let container: HTMLDivElement | undefined = $state();
 	let map: MapLibreMap | undefined;
 	let styleLoaded = $state(false);
+	let mapZoom = $state(12);
 	let userMarker: Marker | undefined;
 
 	const ROUTES_SOURCE = 'safari-routes';
+	const ROUTES_CASING = 'ride-lines-casing';
 	const ROUTES_LAYER = 'ride-lines';
+	const ROUTES_HIGHLIGHT_CASING = 'ride-highlight-casing';
 	const ROUTES_HIGHLIGHT = 'ride-highlight';
 	const HEAT_SOURCE = 'safari-heat';
 	const HEAT_LAYER = 'ride-heat';
 
 	const EMPTY_FC: FeatureCollection = { type: 'FeatureCollection', features: [] };
 
-	function lineLayer(id: string, filter?: FilterSpecification): LayerSpecification {
+	function lineLayer(
+		id: string,
+		paint: LineLayerSpecification['paint'],
+		filter?: FilterSpecification
+	): LayerSpecification {
 		const layer: LayerSpecification = {
 			id,
 			type: 'line',
@@ -75,10 +86,17 @@
 				'line-join': 'round',
 				'line-cap': 'round'
 			},
-			paint: id === ROUTES_HIGHLIGHT ? ROUTE_HIGHLIGHT_PAINT : ROUTE_LINE_PAINT
+			paint
 		};
 		if (filter) layer.filter = filter;
 		return layer;
+	}
+
+	function resolveHeatData(): FeatureCollection {
+		if (mapZoom >= FINE_HEAT_ZOOM && routes?.features.length) {
+			return heatFromRoutesFine(routes);
+		}
+		return heatmap?.features.length ? heatmap : EMPTY_FC;
 	}
 
 	function syncRoutes() {
@@ -89,30 +107,38 @@
 		if (!map.getSource(ROUTES_SOURCE)) {
 			if (!data.features.length) return;
 			map.addSource(ROUTES_SOURCE, { type: 'geojson', data });
-			map.addLayer(lineLayer(ROUTES_LAYER));
+			map.addLayer(lineLayer(ROUTES_CASING, ROUTE_CASING_PAINT));
+			map.addLayer(lineLayer(ROUTES_LAYER, ROUTE_LINE_PAINT));
 		} else {
 			(map.getSource(ROUTES_SOURCE) as GeoJSONSource).setData(data);
 		}
 
 		if (!data.features.length) {
-			if (map.getLayer(ROUTES_HIGHLIGHT)) map.removeLayer(ROUTES_HIGHLIGHT);
+			for (const id of [ROUTES_HIGHLIGHT, ROUTES_HIGHLIGHT_CASING]) {
+				if (map.getLayer(id)) map.removeLayer(id);
+			}
 			if (map.getLayer(ROUTES_LAYER)) map.setFilter(ROUTES_LAYER, null);
+			if (map.getLayer(ROUTES_CASING)) map.setFilter(ROUTES_CASING, null);
 			return;
 		}
 
 		if (highlightTripId) {
 			const dim: FilterSpecification = ['!=', ['get', 'trip_id'], highlightTripId];
 			const hi: FilterSpecification = ['==', ['get', 'trip_id'], highlightTripId];
-			if (!map.getLayer(ROUTES_HIGHLIGHT)) {
-				map.addLayer(lineLayer(ROUTES_HIGHLIGHT, hi));
+			if (!map.getLayer(ROUTES_HIGHLIGHT_CASING)) {
+				map.addLayer(lineLayer(ROUTES_HIGHLIGHT_CASING, ROUTE_HIGHLIGHT_CASING_PAINT, hi));
+				map.addLayer(lineLayer(ROUTES_HIGHLIGHT, ROUTE_HIGHLIGHT_PAINT, hi));
 			} else {
+				map.setFilter(ROUTES_HIGHLIGHT_CASING, hi);
 				map.setFilter(ROUTES_HIGHLIGHT, hi);
 			}
+			map.setFilter(ROUTES_CASING, dim);
 			map.setFilter(ROUTES_LAYER, dim);
 		} else {
-			if (map.getLayer(ROUTES_HIGHLIGHT)) {
-				map.removeLayer(ROUTES_HIGHLIGHT);
+			for (const id of [ROUTES_HIGHLIGHT, ROUTES_HIGHLIGHT_CASING]) {
+				if (map.getLayer(id)) map.removeLayer(id);
 			}
+			map.setFilter(ROUTES_CASING, null);
 			map.setFilter(ROUTES_LAYER, null);
 		}
 
@@ -122,7 +148,7 @@
 	function syncHeatmap() {
 		if (!map || !styleLoaded) return;
 
-		const data = heatmap?.features.length ? heatmap : EMPTY_FC;
+		const data = resolveHeatData();
 
 		if (!map.getSource(HEAT_SOURCE)) {
 			if (!data.features.length) return;
@@ -142,8 +168,14 @@
 
 	function raiseRouteLayers() {
 		if (!map) return;
-		if (map.getLayer(HEAT_LAYER) && map.getLayer(ROUTES_LAYER)) {
+		if (map.getLayer(HEAT_LAYER) && map.getLayer(ROUTES_CASING)) {
+			map.moveLayer(ROUTES_CASING);
+		}
+		if (map.getLayer(ROUTES_LAYER)) {
 			map.moveLayer(ROUTES_LAYER);
+		}
+		if (map.getLayer(ROUTES_HIGHLIGHT_CASING)) {
+			map.moveLayer(ROUTES_HIGHLIGHT_CASING);
 		}
 		if (map.getLayer(ROUTES_HIGHLIGHT)) {
 			map.moveLayer(ROUTES_HIGHLIGHT);
@@ -154,7 +186,7 @@
 		if (!map || !styleLoaded) return;
 		const showRoutes = viewMode === 'routes' || viewMode === 'both';
 		const showHeat = viewMode === 'heat' || viewMode === 'both';
-		for (const id of [ROUTES_LAYER, ROUTES_HIGHLIGHT]) {
+		for (const id of [ROUTES_CASING, ROUTES_LAYER, ROUTES_HIGHLIGHT_CASING, ROUTES_HIGHLIGHT]) {
 			if (map.getLayer(id)) {
 				map.setLayoutProperty(id, 'visibility', showRoutes ? 'visible' : 'none');
 			}
@@ -206,8 +238,13 @@
 
 		map.on('load', () => {
 			styleLoaded = true;
+			mapZoom = map!.getZoom();
 			syncAll();
 			fitMapBounds();
+		});
+
+		map.on('zoom', () => {
+			mapZoom = map!.getZoom();
 		});
 
 		map.on('error', (e) => {
@@ -226,6 +263,7 @@
 	$effect(() => {
 		routes;
 		heatmap;
+		mapZoom;
 		viewMode;
 		highlightTripId;
 		syncAll();

@@ -27,8 +27,12 @@ export function filterRoutes(
 	};
 }
 
-const HEAT_CELL_DEG = 0.00008;
-const HEAT_SAMPLE_DEG = HEAT_CELL_DEG / 3;
+const DEFAULT_CELL_DEG = 0.00008;
+const DEFAULT_SAMPLE_DIVISOR = 3;
+
+/** ~3 m grid for close-zoom heat (full route geometry). */
+const FINE_CELL_DEG = 0.000028;
+const FINE_SAMPLE_DIVISOR = 5;
 
 function interpolateSegment(
 	lon0: number,
@@ -60,11 +64,14 @@ function accumulateSegment(
 	lon0: number,
 	lat0: number,
 	lon1: number,
-	lat1: number
+	lat1: number,
+	cellDeg: number,
+	sampleDivisor: number
 ) {
-	for (const [lon, lat] of interpolateSegment(lon0, lat0, lon1, lat1, HEAT_SAMPLE_DEG)) {
-		const gx = Math.round(lon / HEAT_CELL_DEG) * HEAT_CELL_DEG;
-		const gy = Math.round(lat / HEAT_CELL_DEG) * HEAT_CELL_DEG;
+	const sampleDeg = cellDeg / sampleDivisor;
+	for (const [lon, lat] of interpolateSegment(lon0, lat0, lon1, lat1, sampleDeg)) {
+		const gx = Math.round(lon / cellDeg) * cellDeg;
+		const gy = Math.round(lat / cellDeg) * cellDeg;
 		const key = `${gx.toFixed(6)},${gy.toFixed(6)}`;
 		const cur = grid.get(key);
 		if (cur) cur.weight += 1;
@@ -72,8 +79,12 @@ function accumulateSegment(
 	}
 }
 
-/** Visit-frequency grid from selected route lines (updates when selection changes). */
-export function heatFromRoutes(routes: FeatureCollection): FeatureCollection {
+/** Visit-frequency grid from route lines. */
+export function heatFromRoutes(
+	routes: FeatureCollection,
+	cellDeg = DEFAULT_CELL_DEG,
+	sampleDivisor = DEFAULT_SAMPLE_DIVISOR
+): FeatureCollection {
 	const grid = new Map<string, { lon: number; lat: number; weight: number }>();
 
 	for (const f of routes.features) {
@@ -82,10 +93,21 @@ export function heatFromRoutes(routes: FeatureCollection): FeatureCollection {
 		for (let i = 1; i < coords.length; i++) {
 			const [lon0, lat0] = coords[i - 1];
 			const [lon1, lat1] = coords[i];
-			accumulateSegment(grid, lon0, lat0, lon1, lat1);
+			accumulateSegment(grid, lon0, lat0, lon1, lat1, cellDeg, sampleDivisor);
 		}
 	}
 
+	return gridToFeatureCollection(grid);
+}
+
+/** Finer grid from full GPS line geometry — used when zoomed in. */
+export function heatFromRoutesFine(routes: FeatureCollection): FeatureCollection {
+	return heatFromRoutes(routes, FINE_CELL_DEG, FINE_SAMPLE_DIVISOR);
+}
+
+function gridToFeatureCollection(
+	grid: Map<string, { lon: number; lat: number; weight: number }>
+): FeatureCollection {
 	return {
 		type: 'FeatureCollection',
 		features: [...grid.values()].map(({ lon, lat, weight }) => ({
@@ -95,3 +117,5 @@ export function heatFromRoutes(routes: FeatureCollection): FeatureCollection {
 		}))
 	};
 }
+
+export const FINE_HEAT_ZOOM = 15;
