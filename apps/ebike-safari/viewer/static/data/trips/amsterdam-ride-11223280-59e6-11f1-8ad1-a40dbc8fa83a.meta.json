@@ -1,0 +1,28 @@
+{
+  "id": "amsterdam-ride-11223280-59e6-11f1-8ad1-a40dbc8fa83a",
+  "title": "Amsterdam ride",
+  "source_fit": "Amsterdam ride-11223280-59e6-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.861556,
+    52.357868,
+    4.873522,
+    52.362961
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-05-27T16:20:08+00:00",
+      "before_t": "2026-05-27T16:21:23+00:00",
+      "gap_s": 75.0
+    },
+    {
+      "after_t": "2026-05-27T16:22:07+00:00",
+      "before_t": "2026-05-27T16:28:49+00:00",
+      "gap_s": 402.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 3.91,
+  "duration_min": 15.4,
+  "started_at": "2026-05-27T16:07:34",
+  "point_count": 921
+}

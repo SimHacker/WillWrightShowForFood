@@ -1,0 +1,33 @@
+{
+  "id": "bosch-ebike-tour-a45d4300-8286-11f1-8ad1-a40dbc8fa83a",
+  "title": "Bosch eBike Tour",
+  "source_fit": "Bosch eBike Tour-a45d4300-8286-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.777746,
+    52.33873,
+    4.796047,
+    52.345402
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-07-18T13:46:46+00:00",
+      "before_t": "2026-07-18T13:47:47+00:00",
+      "gap_s": 61.0
+    },
+    {
+      "after_t": "2026-07-18T13:49:22+00:00",
+      "before_t": "2026-07-18T14:00:08+00:00",
+      "gap_s": 646.0
+    },
+    {
+      "after_t": "2026-07-18T14:06:59+00:00",
+      "before_t": "2026-07-18T14:07:59+00:00",
+      "gap_s": 60.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 4.21,
+  "duration_min": 12.5,
+  "started_at": "2026-07-18T13:42:25",
+  "point_count": 745
+}

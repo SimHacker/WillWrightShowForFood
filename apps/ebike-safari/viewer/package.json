@@ -1,0 +1,37 @@
+{
+	"name": "viewer",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"sync:data": "bash scripts/sync-data.sh",
+		"cap:sync": "bash scripts/cap-sync.sh",
+		"cap:ios": "npx cap open ios"
+	},
+	"devDependencies": {
+		"@capacitor/cli": "^8.5.0",
+		"@capacitor/core": "^8.5.0",
+		"@capacitor/ios": "^8.5.0",
+		"@sveltejs/adapter-node": "^5.5.7",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@types/bcryptjs": "^3.0.0",
+		"@types/geojson": "^7946.0.16",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"bcryptjs": "^3.0.3",
+		"maplibre-gl": "^6.2.0",
+		"postgres": "^3.4.9"
+	}
+}

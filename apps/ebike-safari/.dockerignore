@@ -1,0 +1,7 @@
+viewer/node_modules
+viewer/build
+viewer/.svelte-kit
+viewer/ios
+deploy/.env
+deploy/data
+**/.git

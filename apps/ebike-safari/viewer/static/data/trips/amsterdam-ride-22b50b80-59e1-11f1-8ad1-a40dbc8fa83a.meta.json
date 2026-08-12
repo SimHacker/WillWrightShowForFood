@@ -1,0 +1,17 @@
+{
+  "id": "amsterdam-ride-22b50b80-59e1-11f1-8ad1-a40dbc8fa83a",
+  "title": "Amsterdam ride",
+  "source_fit": "Amsterdam ride-22b50b80-59e1-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.787728,
+    52.349545,
+    4.875767,
+    52.360863
+  ],
+  "pauses": [],
+  "videos": [],
+  "distance_km": 8.16,
+  "duration_min": 24.1,
+  "started_at": "2026-05-27T15:39:48",
+  "point_count": 1441
+}

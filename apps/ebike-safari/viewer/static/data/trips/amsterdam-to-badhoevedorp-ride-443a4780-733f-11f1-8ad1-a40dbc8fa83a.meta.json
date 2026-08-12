@@ -1,0 +1,17 @@
+{
+  "id": "amsterdam-to-badhoevedorp-ride-443a4780-733f-11f1-8ad1-a40dbc8fa83a",
+  "title": "Amsterdam to Badhoevedorp ride",
+  "source_fit": "Amsterdam to Badhoevedorp ride-443a4780-733f-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.777332,
+    52.33746,
+    4.890549,
+    52.367718
+  ],
+  "pauses": [],
+  "videos": [],
+  "distance_km": 10.37,
+  "duration_min": 26.2,
+  "started_at": "2026-06-28T22:18:23",
+  "point_count": 1424
+}

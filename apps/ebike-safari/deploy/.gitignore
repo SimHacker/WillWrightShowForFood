@@ -1,0 +1,11 @@
+# Secrets — copy to .env on the VM (never commit .env)
+.env
+.env.local
+.env.production
+
+# Caddy ACME storage (local dev only; prod uses named volumes)
+caddy-data/
+caddy-config/
+
+# Optional ride data mount (private FIT pipeline output)
+data/

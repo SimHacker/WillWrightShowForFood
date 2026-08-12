@@ -1,0 +1,31 @@
+# CARD — ebike-safari app
+
+room:
+  id: ebike-safari
+  name: "Ebike Safari — FIT pipeline + design cauldron"
+  type: [python_pipeline, gps, ebike, design]
+  home: apps/ebike-safari/
+
+design:
+  root: design/
+  cauldron: design/CAULDRON.yml
+  phase: slurping
+
+scripts:
+  root: scripts/
+  pipeline: scripts/pipeline.py
+
+data:
+  demo_out: demo/web/data/
+  demo_rides: demo/rides/
+  contract: DATA-CONTRACT.md
+
+legacy:
+  urban_safari: LEGACY-urban-safari.md
+  note: "SFC era — amber only; distinct name and stack"
+
+compose_with:
+  - ../../skills/ebike-safari/SKILL.md
+  - design/README.md
+  - ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  - ../../repo-shows/urban-safari-live/urban-safari-live.yml

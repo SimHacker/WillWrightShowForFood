@@ -1,0 +1,38 @@
+{
+  "id": "badhoevedorp-roundtrip-14e78580-78bf-11f1-8ad1-a40dbc8fa83a",
+  "title": "Badhoevedorp roundtrip",
+  "source_fit": "Badhoevedorp roundtrip-14e78580-78bf-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.777737,
+    52.33741,
+    4.876369,
+    52.364422
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-07-06T15:50:14+00:00",
+      "before_t": "2026-07-06T16:05:02+00:00",
+      "gap_s": 888.0
+    },
+    {
+      "after_t": "2026-07-06T16:16:02+00:00",
+      "before_t": "2026-07-06T16:37:51+00:00",
+      "gap_s": 1309.0
+    },
+    {
+      "after_t": "2026-07-06T17:07:05+00:00",
+      "before_t": "2026-07-06T20:19:40+00:00",
+      "gap_s": 11555.0
+    },
+    {
+      "after_t": "2026-07-06T20:22:55+00:00",
+      "before_t": "2026-07-06T20:38:07+00:00",
+      "gap_s": 912.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 21.28,
+  "duration_min": 62.5,
+  "started_at": "2026-07-06T15:49:15",
+  "point_count": 3392
+}

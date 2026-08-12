@@ -1,0 +1,38 @@
+# Demo bar — minimum proof on a real ride
+
+meta:
+  id: ebike-safari-demo-bar
+  purpose: "Ship this before pitching the full vision"
+
+must_show:
+  - id: map-replay
+    what: FIT ride → MapLibre replay on OSM basemap
+    status: pending
+    skeleton: skeleton/viewer-maplibre.md
+
+  - id: one-gesture
+    what: At least one semantic gesture (ROUNDABOUT, ENCIRCLE water, COMPLETE_STREET, …)
+    status: pending
+    skeleton: skeleton/gesture-engine.md
+
+  - id: exposure-summary
+    what: 'What did this ride pass? — homes, cafes, parks, bridges (both sides)'
+    status: pending
+    skeleton: skeleton/exposure-log.md
+
+nice_to_have:
+  - video sync on route (pipeline exists)
+  - TomTomagotchi pet fed by geography
+  - novel exposure score (new place types today)
+  - gather/craft/spend territory paint on segments (not speed — see peerboard-and-brews.md)
+  - urban garden — shared bed, two riders pump fountain, co-harvest (see urban-garden-loop.md)
+  - LLM narrative from ride event log
+
+not_required_for_v0:
+  - voice control
+  - Ray-Ban integration
+  - story card graph editor
+
+see_also:
+  - ARCHITECTURE.yml
+  - CAULDRON.yml

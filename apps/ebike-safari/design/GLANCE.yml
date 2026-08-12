@@ -1,0 +1,27 @@
+# GLANCE — ebike-safari design cauldron
+
+what: |
+  Product design room: geometry spells, exposure logging, urban garden loop (Farmville on the graph),
+  OSM semantics, viewer, story layer.
+  Smells = ads (YAML creatives); roads = distribution channels (strength on graph).
+  Semantic polders = Dutch waterschap — dikes, windmill filters, canal vs sewage outflow.
+  Map game platform — shared data plane between games; layers are views.
+
+phase: slurping
+
+enter: README.md
+vision: VISION.md
+architecture: ARCHITECTURE.yml
+cauldron: CAULDRON.yml
+
+pillars:
+  - geometry-as-language.md
+  - exposure-pac-man.md
+  - urban-garden-loop.md
+  - peerboard-and-brews.md
+  - semantic-polder.md
+  - sources/amsterdam-gps-lineage.md
+  - sources/abraham-moller-xoss.md
+  - lineage.yml
+
+see: INDEX.yml

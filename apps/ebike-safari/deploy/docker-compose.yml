@@ -1,0 +1,76 @@
+# Ebike Safari — production stack (GCP VM + Docker)
+# Caddy (TLS) → SvelteKit viewer → static ride JSON
+# PostGIS for future map-match / exposure API (schema init on first boot)
+
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ebike_safari}
+      POSTGRES_USER: ${POSTGRES_USER:-ebike}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test:
+        [
+          'CMD-SHELL',
+          'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"'
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - internal
+
+  viewer:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile.viewer
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOST: 0.0.0.0
+      ORIGIN: ${ORIGIN:-https://${DOMAIN:-localhost}}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}
+      EBIKE_DATA_MOUNT: /data
+    volumes:
+      - ./data:/data:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+      - '443:443/udp'
+    environment:
+      DOMAIN: ${DOMAIN:-ebike-safari.com}
+      ACME_EMAIL: ${ACME_EMAIL:?Set ACME_EMAIL in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      viewer:
+        condition: service_healthy
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+
+volumes:
+  pgdata:
+  caddy_data:
+  caddy_config:

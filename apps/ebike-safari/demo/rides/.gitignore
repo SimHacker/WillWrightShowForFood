@@ -1,0 +1,3 @@
+# Ignore local FIT imports — use demo/web/data for checked-in map JSON only
+*.fit
+!.gitkeep

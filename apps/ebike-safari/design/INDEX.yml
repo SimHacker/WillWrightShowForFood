@@ -1,0 +1,55 @@
+# INDEX — ebike-safari/design/
+
+design:
+  entry: README.md
+  glance: GLANCE.yml
+
+core:
+  - VISION.md
+  - ARCHITECTURE.yml
+  - CAULDRON.yml
+  - demo-bar.yml
+  - lineage.yml
+
+pillars:
+  - geometry-as-language.md
+  - exposure-pac-man.md
+  - urban-garden-loop.md
+  - animal-herding.md
+  - peerboard-and-brews.md
+  - semantic-polder.md
+  - map-game-platform.md
+
+sources:
+  - sources/amsterdam-gps-lineage.md
+  - sources/tomtom-rejected-ideas.md
+  - sources/foursquare-lineage.md
+  - sources/abraham-moller-xoss.md
+  - sources/README.md
+
+skeleton:
+  - skeleton/road-graph.md
+  - skeleton/gesture-engine.md
+  - skeleton/exposure-log.md
+  - skeleton/osm-enrichment.md
+  - skeleton/viewer-maplibre.md
+  - skeleton/story-layer.md
+  - skeleton/urban-garden.md
+  - skeleton/animal-herding.md
+  - skeleton/territory-layer.md
+  - skeleton/semantic-polder.md
+
+implemented:
+  - ../scripts/
+  - ../DATA-CONTRACT.md
+  - ../demo/
+
+legacy:
+  - ../LEGACY-urban-safari.md
+
+show:
+  - ../../../repo-shows/urban-ebike-safari/
+  - ../../../repo-shows/urban-safari-live/
+
+skill:
+  - ../../../skills/ebike-safari/

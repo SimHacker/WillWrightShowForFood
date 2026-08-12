@@ -13,3 +13,7 @@ repo_orbit:
 menagerie:
   don: "Brainwash. HOT WARM COLD. Laundry and espresso. Gone."
   gregory: "Long spin cycle, short lease."
+
+cross_links:
+  - path: ../sources/2019-09-don-jwz-ping-mozilla-tamales/README.md
+    note: "Don ↔ jwz Sep 2019 — both mourn Brainwash closed"

@@ -1,0 +1,200 @@
+# CAULDRON — slurp queue for Ebike Safari design
+#
+# Phase: slurping. Each entry: source → target doc or skeleton → status.
+# Harvest = distilled into ARCHITECTURE layer or code; reject = stay in amber only.
+
+meta:
+  phase: slurping
+  room: apps/ebike-safari/design/
+  rule: |
+    Amber lineage = inspiration only. Harvest tested ideas; write fresh names and stacks.
+    Chain: TomTom (UGC/BitTorrent/i18n) → iLoci → Coffeeshops DB → StoryMaker/Bar Karma/Urban Safari → Ebike Safari.
+
+slurp_queue:
+  - id: urban-safari-live
+    from: ../../../repo-shows/urban-safari-live/
+    into: lineage.yml
+    extract: [performed live flow, StoryMaker hooks, show beats]
+    status: pending
+
+  - id: urban-ebike-safari-seed
+    from: ../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+    into: [VISION.md, lineage.yml]
+    extract: [voice-first, Ray-Ban, Bosch, hidden story graph, DreamScape chain]
+    status: in_progress
+
+  - id: storymaker-media
+    from: ../../../characters/don-hopkins/media/storymaker-urban-safari/
+    into: lineage.yml
+    extract: [geolocated scenes, album import — lore not code]
+    status: pending
+
+  - id: steering-voystick
+    from: ../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
+    into: skeleton/road-graph.md
+    extract: [pie network on map — UI pattern for viewer]
+    status: pending
+
+  - id: crazy-idea-jam-urban
+    from: ../../../process/crazy-idea-jam.yml
+    tags: [urban_safari_gps_storytelling, mediagraph, dreamscape]
+    into: lineage.yml
+    status: pending
+
+  - id: moollm-urban-safari-frozen
+    from: https://github.com/SimHacker/moollm/tree/main/skills/urban-safari
+    into: ../LEGACY-urban-safari.md
+    note: Frozen skill — points here; do not revive old MySQL/Google stack
+    status: reference
+
+  - id: foursquare-wikipedia
+    from: sources/foursquare-lineage.md
+    into: exposure-pac-man.md
+    extract: [lifelog vs continuous trace, OSM maps precedent]
+    status: harvested
+
+  - id: chatgpt-geometry-exposure
+    from: design/geometry-as-language.md
+    into: [gesture-engine, exposure-log skeletons]
+    note: Already distilled from design jam Aug 2026
+    status: harvested
+
+  - id: abraham-moller-xoss
+    from: sources/abraham-moller-xoss.md
+    into: [../../adapters/README.md, ARCHITECTURE.yml ingest layer]
+    extract:
+      - source adapters shared sink (FIT convergence)
+      - enhanced_xoss_sync as plug-in BLE adapter
+      - collaboration intent — map + video layer before outreach
+    status: harvested
+
+  - id: amsterdam-gps-lineage
+    from: sources/amsterdam-gps-lineage.md
+    into: [lineage.yml, VISION.md, exposure-pac-man.md, skeleton/story-layer.md]
+    extract:
+      - TomTom day job — UGC sharing, BitTorrent map distribution, internationalization
+      - TomTom trilogy — iLoci, Coffeeshops DB, BONGO BINGO (bike + GPS check-in game)
+      - Coffeeshops surfaces — iPhone app, website, LayAR, BONGO BINGO web/mobile
+      - SFC chain — StoryMaker, Bar Karma, Urban Safari (geolocated scene graph)
+      - harvest table — tested ideas vs rejected stacks
+    status: harvested
+
+  - id: tomtom-day-job
+    from: sources/amsterdam-gps-lineage.md
+    tags: [ugc_sharing, bittorrent_maps, internationalization]
+    into: [ARCHITECTURE.yml, skeleton/story-layer.md]
+    note: TomTom Home era — community content, peer-assisted map updates, i18n
+    status: harvested
+
+  - id: tomtom-rejected-ideas
+    from: sources/tomtom-rejected-ideas.md
+    into: [geometry-as-language.md, exposure-pac-man.md, demo-bar.yml]
+    extract:
+      - TomTomagotchi (rejected PND → harvest geography-fed pet)
+      - segment speed leaderboard (reject — score novel exposure, gestures, tokens instead)
+      - gather/craft/spend territory paint on road segments
+      - Mark Your Territory — Andrew Quitmeyer inspiration
+    status: harvested
+
+  - id: peerboard-and-brews
+    from: peerboard-and-brews.md
+    into: [sources/tomtom-rejected-ideas.md, skeleton/territory-layer.md]
+    extract:
+      - peerboard replaces segment speed leaderboard
+      - pee = embedding of YAML jazz; follow smell to source
+      - diffusion: concentration not semantics; sub-ε rises; sparse ambient slow diffuse; collapse to generic_fruit/food/good/bad
+      - smells = ads (YAML creatives); roads = distribution channels (graph strength)
+      - isochrones = travel-time reach on same graph; Valhalla/ORS/GraphHopper/TomTom Reachable Range
+      - market + restaurant menus as YAML payloads; nostril width navigation
+      - Peecon — scheduled beacon drops pee at fixed location (re-pee as infrastructure)
+      - permeability on segments/nodes — seal neighborhoods, block smell leaks
+      - bike as skywriting plane — continuous brew trail while riding
+      - MMORPG — peers as equals / pee-ers pun
+    status: harvested
+
+  - id: urban-garden-loop
+    from: urban-garden-loop.md
+    into: [gesture-engine, skeleton/urban-garden.md, geometry-as-language.md]
+    extract:
+      - community garden — don't complete, cooperate (shared beds, commons water, collective harvest)
+      - Farmville/Stardew tend-plant-grow on blocks and roundabouts
+      - fountain pumping via repeated encircles; shared tank not private inventory
+      - harvest; feed/herd animals; pigeon flocking pollination and seed spread
+    status: harvested
+
+  - id: animal-herding
+    from: animal-herding.md
+    into: [skeleton/animal-herding.md, urban-garden-loop.md, skeleton/viewer-maplibre.md]
+    extract:
+      - 2D block pastures + 1D road paths; gates between spaces
+      - lure/repel items over time; burst disperse/converge; collie agents
+      - feast on semantic layers; hill-climb taste; poo/eggs/babies/slaughter; vegan mobile vegetables
+      - slime mold puddle on graph — multi-location, subdivide/join, maze solve
+      - consume/produce on blocks; cozy colorful map view vs realistic OSM
+    status: harvested
+
+  - id: map-game-platform
+    from: map-game-platform.md
+    into: [VISION.md, skeleton/viewer-maplibre.md, ARCHITECTURE.yml]
+    extract:
+      - many map games on one graph — **shared data plane** (reads/writes/events), layers = view
+      - game contract YAML pattern; ride event bus; interlock = data flow between sims
+    status: harvested
+
+  - id: semantic-polder
+    from: semantic-polder.md
+    into: [skeleton/semantic-polder.md, peerboard-and-brews.md, urban-garden-loop.md]
+    extract:
+      - Dutch waterschap — dikes (permeability), windmills pump smell liquid
+      - adjustable semantic filter — pass to canal/pond, reject to sewage/black hole
+      - GitHub-as-MMORPG — water board PRs, stewards, collaborative polder management
+    status: harvested
+
+  - id: tomton-trilogy-jam
+    from: ../../../process/crazy-idea-jam.yml
+    tags: [iloci_memory_palace, amsterdam_coffeeshops_app, bongo_bingo]
+    into: sources/amsterdam-gps-lineage.md
+    status: pending
+
+  - id: sfc-storymaker-chain
+    from: ../../../process/crazy-idea-jam.yml
+    tags: [creationtv_storymaker, urban_safari_gps_storytelling, mediagraph]
+    into: sources/amsterdam-gps-lineage.md
+    note: StoryMaker/Bar Karma/Urban Safari + MediaGraph — lore and UI patterns
+    status: pending
+
+harvested:
+  - geometry-as-language.md
+  - exposure-pac-man.md
+  - urban-garden-loop.md
+  - peerboard-and-brews.md
+  - sources/foursquare-lineage.md
+  - sources/abraham-moller-xoss.md
+  - sources/amsterdam-gps-lineage.md
+  - sources/tomtom-rejected-ideas.md
+  - ../scripts/ (FIT pipeline)
+  - ../adapters/README.md (XOSS plug-in)
+  - ../DATA-CONTRACT.md
+
+rejected:
+  - id: google-maps-stack
+    reason: "Proprietary — amber only"
+  - id: mysql-scene-server
+    reason: "Git + YAML instead"
+  - id: apple-mapkit-component
+    reason: "MapLibre + OSM instead"
+  - id: segment-speed-leaderboard
+    reason: "Dangerous; lawyers would not approve — co-worker's TomTom brainstorm idea, not Don's"
+    attribution: "Unnamed TomTom co-worker (name forgotten)"
+    harvest_alternatives: [peerboard, novel exposure, gestures, brew craft, tend credit, fair pick]
+  - id: tomtomagotchi-pnd-product
+    reason: "Rejected at TomTom (car PND + drive-through placements) — Don's brainstorm submission"
+    attribution: Don Hopkins
+    harvested_as: geometry-as-language.md#tomtomagotchi
+
+next_slurp:
+  - "Deep-read crazy-idea-jam into amsterdam-gps-lineage (BONGO BINGO → exposure patterns)"
+  - "One real FIT through road-graph skeleton (local only) — runbooks/04-pipeline-real-fit.md"
+  - "Capacitor iOS smoke test — runbooks/02-capacitor-ios.md"
+  - "Postgres PostGIS on laptop — runbooks/03-postgres-postgis.md"
+  - "Demo map + video sync, then propose collaboration to Abraham (XOSS adapter)"

@@ -1,0 +1,17 @@
+{
+  "id": "bosch-ebike-tour-56fcec00-5a22-11f1-8ad1-a40dbc8fa83a",
+  "title": "Bosch eBike Tour",
+  "source_fit": "Bosch eBike Tour-56fcec00-5a22-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.77823,
+    52.337463,
+    4.862634,
+    52.351677
+  ],
+  "pauses": [],
+  "videos": [],
+  "distance_km": 7.49,
+  "duration_min": 18.6,
+  "started_at": "2026-05-27T23:18:22",
+  "point_count": 1109
+}

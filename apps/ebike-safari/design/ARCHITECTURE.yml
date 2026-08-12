@@ -1,0 +1,116 @@
+# Ebike Safari — architecture (layers + status)
+
+meta:
+  id: ebike-safari-architecture
+  updated: 2026-08-10
+
+stack: [Python, fitparse, GeoJSON, OSM, MapLibre, SvelteKit, YAML, Git]
+
+layers:
+  ingest:
+    status: live
+    path: ../scripts/
+    modules:
+      sync_flow_trips: sync iPhone Bosch Flow → .fit
+      build_web_assets: FIT → manifest + GeoJSON + series
+      import_trip_pg: web/data → PostGIS rides + ride_points
+      sync_video: ffprobe wall-clock → route interpolation
+      map_transcript: Whisper words on route
+    adapters:
+      path: ../adapters/README.md
+      pattern: source adapters, shared sink — all paths → FIT → build_web_assets
+      bosch_flow: live (sync_flow_trips.py)
+      xoss_g:
+        status: external plug-in
+        tool: https://github.com/molleraj/enhanced_xoss_sync
+        author: Abraham Moller
+        collaboration: sources/abraham-moller-xoss.md
+    contract: ../DATA-CONTRACT.md
+
+  demo:
+    status: live
+    path: ../demo/
+    note: Synthetic public track only
+
+  road_graph:
+    status: skeleton
+    design: skeleton/road-graph.md
+    needs: [snap GPS to OSM ways, edge IDs, direction, left/right, isochrone reach queries]
+
+  osm_enrichment:
+    status: skeleton
+    design: skeleton/osm-enrichment.md
+    needs: [Overpass or local extract, tag → pellet mapping]
+
+  gesture_engine:
+    status: skeleton
+    design: skeleton/gesture-engine.md
+    spec: geometry-as-language.md
+    needs: [roundabout detection, encircle, complete-street, …]
+
+  exposure_log:
+    status: skeleton
+    design: skeleton/exposure-log.md
+    spec: exposure-pac-man.md
+    needs: [per-edge tallies, frontage meters, novel-type sets]
+
+  viewer:
+    status: in_progress
+    path: ../viewer/
+    design: skeleton/viewer-maplibre.md
+    runbook: runbooks/01-viewer-sveltekit.md
+    needs: [layer catalog, game presets, replay play/pause]
+
+  story_layer:
+    status: skeleton
+    design: skeleton/story-layer.md
+    needs: [ride event JSON → LLM prompt; no invented geometry]
+
+  urban_garden:
+    status: skeleton
+    design: skeleton/urban-garden.md
+    spec: urban-garden-loop.md
+    needs: [commons beds, shared fountain tank, contributor ledger, co-harvest, pigeon seed spread]
+
+  animal_herding:
+    status: skeleton
+    design: skeleton/animal-herding.md
+    spec: animal-herding.md
+    needs: [pasture polygons, path flocks, gates, lure/repel items, collie agents, cozy map style]
+
+  territory_peerboard:
+    status: skeleton
+    design: skeleton/territory-layer.md
+    spec: peerboard-and-brews.md
+    needs: [layer spawn, strength diffusion, sample/normalize, layer recycle, map object ops]
+
+  semantic_polder:
+    status: skeleton
+    design: skeleton/semantic-polder.md
+    spec: semantic-polder.md
+    needs: [hood dike, windmill pump, semantic filter, canal/sewage outflow, Git board workflow]
+
+build_order:
+  - ingest          # done
+  - viewer          # replay demo loop — proves pipeline
+  - road_graph
+  - osm_enrichment
+  - exposure_log    # first wow: "what did I pass?"
+  - gesture_engine  # second wow: ROUNDABOUT spell
+  - urban_garden    # third wow: commons tend + fair pick
+  - animal_herding  # cozy pasture/path flocks, gates, collies
+  - territory_peerboard  # fourth wow: craft brew, paint segment, peerboard
+  - semantic_polder      # fifth wow: seal hood, windmill filter, pump to canal or sewage
+  - story_layer
+
+demo_bar:
+  file: demo-bar.yml
+  must:
+    - FIT ride → map replay with OSM basemap
+    - one semantic gesture on a real ride
+    - exposure summary for one ride
+
+see_also:
+  - ../README.md
+  - ../../skills/ebike-safari/SKILL.md
+  - ../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml

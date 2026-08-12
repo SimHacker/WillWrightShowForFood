@@ -1,0 +1,105 @@
+# Product lineage — Ebike Safari family tree
+
+meta:
+  status: slurping
+  cauldron: CAULDRON.yml
+  harvest_index: sources/amsterdam-gps-lineage.md
+
+naming:
+  urban_safari:
+    era: 2008–2011
+    status: amber
+    note: SFC, Google Maps, MySQL — do not extend
+    archive: ../LEGACY-urban-safari.md
+  ebike_safari:
+    era: 2026+
+    status: active
+    note: FIT → OSM → gestures + exposure; this repo
+
+chain:
+  - era: "1995"
+    project: DreamScape
+    hook: rooms on a map, kiss-to-connect, live performance programming
+    room: ../../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+
+  - era: "2007–2009"
+    project: TomTom rejected ideas
+    hook: Employee brainstorm for internet-connected Navigator — TomTomagotchi (Don); segment speed LB (co-worker, name lost); both shot down with prejudice
+    inspiration: ../../../characters/andrew-quitmeyer/sources/mark-your-territory.md
+    harvest: sources/tomtom-rejected-ideas.md
+
+  - era: "2007–2009"
+    project: TomTom (day job)
+    hook: TomTom Home; user-created content sharing; BitTorrent map distribution; internationalization
+    harvest: [community content sharing, large-asset delivery patterns, multi-locale map product]
+    archive:
+      resume: ../../../characters/don-hopkins/career/work-history.yml
+      bittorrent_note: ../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md
+
+  - era: "2008"
+    project: iLoci
+    hook: Method of Loci on iPhone; pie-menu network editor — rooms not menus
+    video: https://www.youtube.com/watch?v=03ddG3jWF98
+    harvest: [navigable graph UI, pie network on map]
+
+  - era: "2009"
+    project: Amsterdam Coffeeshops database
+    hook: spreadsheet POI corpus — one DB, many surfaces
+    surfaces:
+      - Amsterdam Coffeeshops iPhone app
+      - website
+      - LayAR app
+      - BONGO BINGO web/mobile
+    video: https://www.youtube.com/watch?v=nG90XG3STz8
+    harvest: [POI frontage, YAML corpus, bike-as-instrument]
+
+  - era: "2009"
+    project: BONGO BINGO
+    hook: random coffeeshop bingo card; bike around; GPS check-in; reviews feed DB
+    harvest: [gamified exposure, field notes on route, Foursquare-era social layer]
+
+  - era: "2009–11"
+    project: StoryMaker / Bar Karma
+    hook: collaborative branching TV stories; geolocated scenes; many clients
+    video: https://www.youtube.com/watch?v=_2yEHs_WLzQ
+    show: ../../../repo-shows/urban-safari-live/
+    harvest: [story layer from detected events, community branches]
+
+  - era: "2009–11"
+    project: Urban Safari
+    hook: geolocated scene cards, Layar AR, Facebook albums, performed live Amsterdam 2011
+    room: ../../../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
+    show: ../../../repo-shows/urban-safari-live/
+    harvest: [continuous trace, shared path graph, field capture]
+
+  - era: "2011–14"
+    project: MediaGraph
+    hook: songs on roads, kiss-toggle links, Mario-cannon nav
+    source: ../../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
+
+  - era: "2026"
+    project: Urban eBike Safari (seed)
+    hook: voice, Ray-Ban, Bosch, hidden story graph
+    show: ../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+
+  - era: "2009"
+    project: Micropolis PacBot
+    hook: Don Hopkins — scanRoads toward traffic density, eatTraffic on roads; Pacmania spawns bots
+    code: ../../../../micropolis/MicropolisCore/src/pyMicropolis/micropolisEngine/micropolisrobot.py
+    harvest: animal-herding.md#micropolis-pacbot-lineage--same-algorithm-different-field
+
+  - era: "2026+"
+    project: Ebike Safari (this app)
+    hook: geometry spells + exposure log + FIT pipeline
+    code: ../
+
+slurp_todo:
+  - Deep-read crazy-idea-jam entries into amsterdam-gps-lineage.md
+  - Pull BONGO BINGO exposure patterns into exposure-pac-man.md
+  - iLoci pie-network → viewer-maplibre skeleton
+  - PacBot traffic-eater → semantic graze + optional traffic/density game tenant
+
+see_also:
+  - README.md
+  - VISION.md
+  - sources/amsterdam-gps-lineage.md

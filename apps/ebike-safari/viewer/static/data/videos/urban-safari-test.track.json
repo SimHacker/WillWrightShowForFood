@@ -1,0 +1,98 @@
+{
+  "id": "urban-safari-test",
+  "trip_id": "amsterdam-to-badhoevedorp-ride-73433d00-6dc4-11f1-8ad1-a40dbc8fa83a",
+  "probe": {
+    "file": "urban-safari-test.mp4",
+    "path": "/private/tmp/urban-safari-test.mp4",
+    "creation_time": "2026-06-21T22:57:02+00:00",
+    "duration_s": 5.0,
+    "width": 320,
+    "height": 240,
+    "codec": "h264"
+  },
+  "sync": {
+    "method": "creation_time",
+    "offset_s": 0.0,
+    "sample_hz": 2.0
+  },
+  "keyframes": [
+    {
+      "video_s": 0.0,
+      "t": "2026-06-21T22:57:02+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": null
+    },
+    {
+      "video_s": 0.5,
+      "t": "2026-06-21T22:57:02.500000+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 1.0,
+      "t": "2026-06-21T22:57:03+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 1.5,
+      "t": "2026-06-21T22:57:03.500000+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 2.0,
+      "t": "2026-06-21T22:57:04+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 2.5,
+      "t": "2026-06-21T22:57:04.500000+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 3.0,
+      "t": "2026-06-21T22:57:05+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 3.5,
+      "t": "2026-06-21T22:57:05.500000+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 4.0,
+      "t": "2026-06-21T22:57:06+00:00",
+      "lat": 52.360504,
+      "lon": 4.866271,
+      "bearing_deg": 0.0
+    },
+    {
+      "video_s": 4.5,
+      "t": "2026-06-21T22:57:06.500000+00:00",
+      "lat": 52.360501,
+      "lon": 4.86627,
+      "bearing_deg": 188.2
+    },
+    {
+      "video_s": 5.0,
+      "t": "2026-06-21T22:57:07+00:00",
+      "lat": 52.360497,
+      "lon": 4.866269,
+      "bearing_deg": 188.2
+    }
+  ],
+  "geojson": "videos/urban-safari-test.geojson"
+}

@@ -1,0 +1,3 @@
+deploy/.env
+deploy/data/
+*.env.local

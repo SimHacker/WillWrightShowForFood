@@ -1,0 +1,985 @@
+{
+  "id": "badhoevedorp-roundtrip-56668b00-7171-11f1-8ad1-a40dbc8fa83a",
+  "points": [
+    {
+      "t": "2026-06-26T15:12:09+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": null,
+      "speed_kmh": 0.0,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 0.0
+    },
+    {
+      "t": "2026-06-26T15:12:10+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:12:11+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:12:40+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": null,
+      "speed_kmh": 0.0,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 0.0
+    },
+    {
+      "t": "2026-06-26T15:12:41+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:12:42+00:00",
+      "lat": 52.339394,
+      "lon": 4.779099,
+      "alt_m": -2.0,
+      "speed_kmh": 4.94,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 2.0
+    },
+    {
+      "t": "2026-06-26T15:12:43+00:00",
+      "lat": 52.339443,
+      "lon": 4.779228,
+      "alt_m": -2.0,
+      "speed_kmh": 8.28,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 4.0
+    },
+    {
+      "t": "2026-06-26T15:12:44+00:00",
+      "lat": 52.339443,
+      "lon": 4.779231,
+      "alt_m": -2.0,
+      "speed_kmh": 8.19,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 7.0
+    },
+    {
+      "t": "2026-06-26T15:12:45+00:00",
+      "lat": 52.339443,
+      "lon": 4.779225,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:12:46+00:00",
+      "lat": 52.339447,
+      "lon": 4.779223,
+      "alt_m": -2.0,
+      "speed_kmh": 10.39,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 11.0
+    },
+    {
+      "t": "2026-06-26T15:12:47+00:00",
+      "lat": 52.339436,
+      "lon": 4.779219,
+      "alt_m": -2.0,
+      "speed_kmh": 12.39,
+      "power_w": 78,
+      "cadence_rpm": 51,
+      "distance_m": 13.0
+    },
+    {
+      "t": "2026-06-26T15:12:48+00:00",
+      "lat": 52.33942,
+      "lon": 4.779203,
+      "alt_m": -2.0,
+      "speed_kmh": 12.97,
+      "power_w": 78,
+      "cadence_rpm": null,
+      "distance_m": 18.0
+    },
+    {
+      "t": "2026-06-26T15:12:49+00:00",
+      "lat": 52.339405,
+      "lon": 4.779189,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 13.67,
+      "power_w": 45,
+      "cadence_rpm": 61,
+      "distance_m": 20.0
+    },
+    {
+      "t": "2026-06-26T15:12:50+00:00",
+      "lat": 52.339386,
+      "lon": 4.77917,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 13.27,
+      "power_w": 45,
+      "cadence_rpm": null,
+      "distance_m": 25.0
+    },
+    {
+      "t": "2026-06-26T15:12:51+00:00",
+      "lat": 52.339363,
+      "lon": 4.779146,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 16.34,
+      "power_w": 59,
+      "cadence_rpm": 62,
+      "distance_m": 29.0
+    },
+    {
+      "t": "2026-06-26T15:12:52+00:00",
+      "lat": 52.339344,
+      "lon": 4.779119,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 16.39,
+      "power_w": 59,
+      "cadence_rpm": null,
+      "distance_m": 34.0
+    },
+    {
+      "t": "2026-06-26T15:12:53+00:00",
+      "lat": 52.339321,
+      "lon": 4.779098,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 16.52,
+      "power_w": 46,
+      "cadence_rpm": 59,
+      "distance_m": 38.0
+    },
+    {
+      "t": "2026-06-26T15:12:54+00:00",
+      "lat": 52.339287,
+      "lon": 4.779086,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 16.73,
+      "power_w": 46,
+      "cadence_rpm": null,
+      "distance_m": 43.0
+    },
+    {
+      "t": "2026-06-26T15:12:55+00:00",
+      "lat": 52.339253,
+      "lon": 4.779058,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 16.06,
+      "power_w": 34,
+      "cadence_rpm": 58,
+      "distance_m": 47.0
+    },
+    {
+      "t": "2026-06-26T15:12:56+00:00",
+      "lat": 52.339214,
+      "lon": 4.779029,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 14.43,
+      "power_w": 34,
+      "cadence_rpm": null,
+      "distance_m": 52.0
+    },
+    {
+      "t": "2026-06-26T15:12:57+00:00",
+      "lat": 52.339184,
+      "lon": 4.778994,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 12.93,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 54.0
+    },
+    {
+      "t": "2026-06-26T15:12:58+00:00",
+      "lat": 52.339161,
+      "lon": 4.778969,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 11.87,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 58.0
+    },
+    {
+      "t": "2026-06-26T15:12:59+00:00",
+      "lat": 52.339134,
+      "lon": 4.778939,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 12.3,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 61.0
+    },
+    {
+      "t": "2026-06-26T15:13:00+00:00",
+      "lat": 52.339111,
+      "lon": 4.778891,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 14.28,
+      "power_w": 38,
+      "cadence_rpm": 54,
+      "distance_m": 65.0
+    },
+    {
+      "t": "2026-06-26T15:13:01+00:00",
+      "lat": 52.339085,
+      "lon": 4.778875,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 14.1,
+      "power_w": 38,
+      "cadence_rpm": null,
+      "distance_m": 70.0
+    },
+    {
+      "t": "2026-06-26T15:13:02+00:00",
+      "lat": 52.339073,
+      "lon": 4.778841,
+      "alt_m": -2.3999999999999773,
+      "speed_kmh": 15.16,
+      "power_w": 42,
+      "cadence_rpm": 58,
+      "distance_m": 74.0
+    },
+    {
+      "t": "2026-06-26T15:13:03+00:00",
+      "lat": 52.339046,
+      "lon": 4.778823,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 15.22,
+      "power_w": 42,
+      "cadence_rpm": null,
+      "distance_m": 76.0
+    },
+    {
+      "t": "2026-06-26T15:13:04+00:00",
+      "lat": 52.339039,
+      "lon": 4.77879,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 15.1,
+      "power_w": 44,
+      "cadence_rpm": 60,
+      "distance_m": 81.0
+    },
+    {
+      "t": "2026-06-26T15:13:05+00:00",
+      "lat": 52.33902,
+      "lon": 4.778744,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 14.94,
+      "power_w": 44,
+      "cadence_rpm": null,
+      "distance_m": 85.0
+    },
+    {
+      "t": "2026-06-26T15:13:06+00:00",
+      "lat": 52.339008,
+      "lon": 4.778716,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 15.1,
+      "power_w": 35,
+      "cadence_rpm": 59,
+      "distance_m": 90.0
+    },
+    {
+      "t": "2026-06-26T15:13:07+00:00",
+      "lat": 52.338985,
+      "lon": 4.778684,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 15.57,
+      "power_w": 35,
+      "cadence_rpm": null,
+      "distance_m": 94.0
+    },
+    {
+      "t": "2026-06-26T15:13:08+00:00",
+      "lat": 52.338989,
+      "lon": 4.778666,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 13.77,
+      "power_w": 0,
+      "cadence_rpm": 58,
+      "distance_m": 99.0
+    },
+    {
+      "t": "2026-06-26T15:13:09+00:00",
+      "lat": 52.339024,
+      "lon": 4.778562,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 13.27,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 101.0
+    },
+    {
+      "t": "2026-06-26T15:13:10+00:00",
+      "lat": 52.339046,
+      "lon": 4.778479,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 13.3,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 106.0
+    },
+    {
+      "t": "2026-06-26T15:13:11+00:00",
+      "lat": 52.339058,
+      "lon": 4.778416,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 10.15,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 108.0
+    },
+    {
+      "t": "2026-06-26T15:13:12+00:00",
+      "lat": 52.339062,
+      "lon": 4.778356,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 7.57,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 110.0
+    },
+    {
+      "t": "2026-06-26T15:13:13+00:00",
+      "lat": 52.339062,
+      "lon": 4.77831,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 7.52,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 112.0
+    },
+    {
+      "t": "2026-06-26T15:13:14+00:00",
+      "lat": 52.339062,
+      "lon": 4.77831,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:13:15+00:00",
+      "lat": 52.339031,
+      "lon": 4.77817,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 4.69,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 115.0
+    },
+    {
+      "t": "2026-06-26T15:13:16+00:00",
+      "lat": 52.339031,
+      "lon": 4.77817,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 5.63,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 117.0
+    },
+    {
+      "t": "2026-06-26T15:13:17+00:00",
+      "lat": 52.33902,
+      "lon": 4.7781,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 7.3,
+      "power_w": 21,
+      "cadence_rpm": 36,
+      "distance_m": 119.0
+    },
+    {
+      "t": "2026-06-26T15:13:18+00:00",
+      "lat": 52.339016,
+      "lon": 4.778067,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 7.58,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 121.0
+    },
+    {
+      "t": "2026-06-26T15:13:19+00:00",
+      "lat": 52.339012,
+      "lon": 4.778036,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 7.57,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 124.0
+    },
+    {
+      "t": "2026-06-26T15:13:20+00:00",
+      "lat": 52.33902,
+      "lon": 4.778039,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:13:21+00:00",
+      "lat": 52.339054,
+      "lon": 4.778005,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 6.36,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 126.0
+    },
+    {
+      "t": "2026-06-26T15:13:22+00:00",
+      "lat": 52.339058,
+      "lon": 4.778005,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 6.12,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 128.0
+    },
+    {
+      "t": "2026-06-26T15:13:23+00:00",
+      "lat": 52.339058,
+      "lon": 4.778005,
+      "alt_m": -2.1999999999999886,
+      "speed_kmh": 6.1,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 130.0
+    },
+    {
+      "t": "2026-06-26T15:13:24+00:00",
+      "lat": 52.339146,
+      "lon": 4.778006,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:13:25+00:00",
+      "lat": 52.339146,
+      "lon": 4.778006,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:13:26+00:00",
+      "lat": 52.339146,
+      "lon": 4.778006,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:51:48+00:00",
+      "lat": 52.339378,
+      "lon": 4.777728,
+      "alt_m": null,
+      "speed_kmh": 11.94,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 159.0
+    },
+    {
+      "t": "2026-06-26T15:51:49+00:00",
+      "lat": 52.339409,
+      "lon": 4.777726,
+      "alt_m": null,
+      "speed_kmh": 12.34,
+      "power_w": 31,
+      "cadence_rpm": 54,
+      "distance_m": 161.0
+    },
+    {
+      "t": "2026-06-26T15:51:50+00:00",
+      "lat": 52.339424,
+      "lon": 4.777747,
+      "alt_m": null,
+      "speed_kmh": 13.14,
+      "power_w": 31,
+      "cadence_rpm": null,
+      "distance_m": 166.0
+    },
+    {
+      "t": "2026-06-26T15:51:51+00:00",
+      "lat": 52.339447,
+      "lon": 4.777779,
+      "alt_m": null,
+      "speed_kmh": 13.49,
+      "power_w": 0,
+      "cadence_rpm": 61,
+      "distance_m": 170.0
+    },
+    {
+      "t": "2026-06-26T15:51:52+00:00",
+      "lat": 52.339474,
+      "lon": 4.777821,
+      "alt_m": null,
+      "speed_kmh": 13.63,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 172.0
+    },
+    {
+      "t": "2026-06-26T15:51:53+00:00",
+      "lat": 52.3395,
+      "lon": 4.777862,
+      "alt_m": -3.0,
+      "speed_kmh": 12.85,
+      "power_w": 0,
+      "cadence_rpm": 45,
+      "distance_m": 177.0
+    },
+    {
+      "t": "2026-06-26T15:51:54+00:00",
+      "lat": 52.339519,
+      "lon": 4.777906,
+      "alt_m": -3.0,
+      "speed_kmh": 11.6,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 179.0
+    },
+    {
+      "t": "2026-06-26T15:51:55+00:00",
+      "lat": 52.339535,
+      "lon": 4.777955,
+      "alt_m": -3.0,
+      "speed_kmh": 12.77,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 184.0
+    },
+    {
+      "t": "2026-06-26T15:51:56+00:00",
+      "lat": 52.33955,
+      "lon": 4.778011,
+      "alt_m": -3.0,
+      "speed_kmh": 13.23,
+      "power_w": 29,
+      "cadence_rpm": 54,
+      "distance_m": 186.0
+    },
+    {
+      "t": "2026-06-26T15:51:57+00:00",
+      "lat": 52.33955,
+      "lon": 4.778068,
+      "alt_m": -3.0,
+      "speed_kmh": 13.32,
+      "power_w": 29,
+      "cadence_rpm": null,
+      "distance_m": 190.0
+    },
+    {
+      "t": "2026-06-26T15:51:58+00:00",
+      "lat": 52.339546,
+      "lon": 4.778129,
+      "alt_m": -3.0,
+      "speed_kmh": 13.67,
+      "power_w": 0,
+      "cadence_rpm": 60,
+      "distance_m": 195.0
+    },
+    {
+      "t": "2026-06-26T15:51:59+00:00",
+      "lat": 52.339527,
+      "lon": 4.778187,
+      "alt_m": -3.0,
+      "speed_kmh": 14.72,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 199.0
+    },
+    {
+      "t": "2026-06-26T15:52:00+00:00",
+      "lat": 52.339508,
+      "lon": 4.778239,
+      "alt_m": -3.0,
+      "speed_kmh": 14.46,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 202.0
+    },
+    {
+      "t": "2026-06-26T15:52:01+00:00",
+      "lat": 52.339481,
+      "lon": 4.778285,
+      "alt_m": -3.0,
+      "speed_kmh": 15.05,
+      "power_w": 0,
+      "cadence_rpm": 59,
+      "distance_m": 206.0
+    },
+    {
+      "t": "2026-06-26T15:52:02+00:00",
+      "lat": 52.339455,
+      "lon": 4.778333,
+      "alt_m": -3.0,
+      "speed_kmh": 15.1,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 211.0
+    },
+    {
+      "t": "2026-06-26T15:52:03+00:00",
+      "lat": 52.339432,
+      "lon": 4.778382,
+      "alt_m": -3.0,
+      "speed_kmh": 15.69,
+      "power_w": 0,
+      "cadence_rpm": 61,
+      "distance_m": 215.0
+    },
+    {
+      "t": "2026-06-26T15:52:04+00:00",
+      "lat": 52.339409,
+      "lon": 4.778429,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 15.81,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 220.0
+    },
+    {
+      "t": "2026-06-26T15:52:05+00:00",
+      "lat": 52.339378,
+      "lon": 4.778482,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 15.75,
+      "power_w": 0,
+      "cadence_rpm": 56,
+      "distance_m": 224.0
+    },
+    {
+      "t": "2026-06-26T15:52:06+00:00",
+      "lat": 52.339355,
+      "lon": 4.778526,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 15.51,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 229.0
+    },
+    {
+      "t": "2026-06-26T15:52:07+00:00",
+      "lat": 52.339336,
+      "lon": 4.77857,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 15.14,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 233.0
+    },
+    {
+      "t": "2026-06-26T15:52:08+00:00",
+      "lat": 52.33931,
+      "lon": 4.778621,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 15.22,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 238.0
+    },
+    {
+      "t": "2026-06-26T15:52:09+00:00",
+      "lat": 52.339279,
+      "lon": 4.778672,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 14.51,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 240.0
+    },
+    {
+      "t": "2026-06-26T15:52:10+00:00",
+      "lat": 52.339264,
+      "lon": 4.778718,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 14.25,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 244.0
+    },
+    {
+      "t": "2026-06-26T15:52:11+00:00",
+      "lat": 52.339256,
+      "lon": 4.778771,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 13.4,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 249.0
+    },
+    {
+      "t": "2026-06-26T15:52:12+00:00",
+      "lat": 52.339253,
+      "lon": 4.778822,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 12.93,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 251.0
+    },
+    {
+      "t": "2026-06-26T15:52:13+00:00",
+      "lat": 52.339256,
+      "lon": 4.778878,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 12.69,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 256.0
+    },
+    {
+      "t": "2026-06-26T15:52:14+00:00",
+      "lat": 52.339279,
+      "lon": 4.778913,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 12.55,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 260.0
+    },
+    {
+      "t": "2026-06-26T15:52:15+00:00",
+      "lat": 52.339302,
+      "lon": 4.778949,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 12.26,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 262.0
+    },
+    {
+      "t": "2026-06-26T15:52:16+00:00",
+      "lat": 52.339325,
+      "lon": 4.778974,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 12.53,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 265.0
+    },
+    {
+      "t": "2026-06-26T15:52:17+00:00",
+      "lat": 52.339348,
+      "lon": 4.778978,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 11.66,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 269.0
+    },
+    {
+      "t": "2026-06-26T15:52:18+00:00",
+      "lat": 52.339367,
+      "lon": 4.778966,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 10.75,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 271.0
+    },
+    {
+      "t": "2026-06-26T15:52:19+00:00",
+      "lat": 52.339367,
+      "lon": 4.778966,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 9.12,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 274.0
+    },
+    {
+      "t": "2026-06-26T15:52:20+00:00",
+      "lat": 52.339417,
+      "lon": 4.778974,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 8.5,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 276.0
+    },
+    {
+      "t": "2026-06-26T15:52:21+00:00",
+      "lat": 52.339424,
+      "lon": 4.778987,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 8.59,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 278.0
+    },
+    {
+      "t": "2026-06-26T15:52:22+00:00",
+      "lat": 52.339439,
+      "lon": 4.779001,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 8.57,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 280.0
+    },
+    {
+      "t": "2026-06-26T15:52:23+00:00",
+      "lat": 52.339455,
+      "lon": 4.779023,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 8.82,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 283.0
+    },
+    {
+      "t": "2026-06-26T15:52:24+00:00",
+      "lat": 52.33947,
+      "lon": 4.779042,
+      "alt_m": -2.6000000000000227,
+      "speed_kmh": 8.89,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 285.0
+    },
+    {
+      "t": "2026-06-26T15:52:25+00:00",
+      "lat": 52.339489,
+      "lon": 4.779048,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 8.81,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 287.0
+    },
+    {
+      "t": "2026-06-26T15:52:26+00:00",
+      "lat": 52.339489,
+      "lon": 4.779048,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 8.22,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 289.0
+    },
+    {
+      "t": "2026-06-26T15:52:27+00:00",
+      "lat": 52.339493,
+      "lon": 4.779049,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:28+00:00",
+      "lat": 52.339493,
+      "lon": 4.779049,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:29+00:00",
+      "lat": 52.339493,
+      "lon": 4.779049,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:47+00:00",
+      "lat": 52.33942,
+      "lon": 4.779182,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 1.56,
+      "power_w": 0,
+      "cadence_rpm": 0,
+      "distance_m": 292.0
+    },
+    {
+      "t": "2026-06-26T15:52:48+00:00",
+      "lat": 52.33942,
+      "lon": 4.779182,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:49+00:00",
+      "lat": 52.33942,
+      "lon": 4.779182,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:50+00:00",
+      "lat": 52.339413,
+      "lon": 4.779193,
+      "alt_m": -2.8000000000000114,
+      "speed_kmh": 4.83,
+      "power_w": 0,
+      "cadence_rpm": null,
+      "distance_m": 294.0
+    },
+    {
+      "t": "2026-06-26T15:52:51+00:00",
+      "lat": 52.339413,
+      "lon": 4.779193,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    },
+    {
+      "t": "2026-06-26T15:52:52+00:00",
+      "lat": 52.339413,
+      "lon": 4.779193,
+      "alt_m": null,
+      "speed_kmh": null,
+      "power_w": null,
+      "cadence_rpm": null,
+      "distance_m": null
+    }
+  ]
+}

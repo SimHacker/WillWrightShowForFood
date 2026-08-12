@@ -1,0 +1,43 @@
+{
+  "id": "badhoevedorp-to-amsterdam-ride-27b82180-944c-11f1-8ad1-a40dbc8fa83a",
+  "title": "Badhoevedorp to Amsterdam ride",
+  "source_fit": "Badhoevedorp to Amsterdam ride-27b82180-944c-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.779113,
+    52.339325,
+    4.895919,
+    52.37624
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-08-10T08:44:21+00:00",
+      "before_t": "2026-08-10T08:57:51+00:00",
+      "gap_s": 810.0
+    },
+    {
+      "after_t": "2026-08-10T08:58:18+00:00",
+      "before_t": "2026-08-10T09:11:48+00:00",
+      "gap_s": 810.0
+    },
+    {
+      "after_t": "2026-08-10T09:12:26+00:00",
+      "before_t": "2026-08-10T09:40:58+00:00",
+      "gap_s": 1712.0
+    },
+    {
+      "after_t": "2026-08-10T09:42:56+00:00",
+      "before_t": "2026-08-10T09:51:46+00:00",
+      "gap_s": 530.0
+    },
+    {
+      "after_t": "2026-08-10T09:57:59+00:00",
+      "before_t": "2026-08-10T13:14:18+00:00",
+      "gap_s": 11779.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 14.25,
+  "duration_min": 44.5,
+  "started_at": "2026-08-10T08:22:37",
+  "point_count": 2415
+}

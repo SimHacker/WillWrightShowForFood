@@ -1,0 +1,28 @@
+{
+  "id": "haarlemmermeer-to-badhoevedorp-ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a",
+  "title": "Haarlemmermeer to Badhoevedorp ride",
+  "source_fit": "Haarlemmermeer to Badhoevedorp ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a.fit",
+  "bounds": [
+    4.57248,
+    52.296886,
+    4.779777,
+    52.37212
+  ],
+  "pauses": [
+    {
+      "after_t": "2026-07-24T17:19:31+00:00",
+      "before_t": "2026-07-24T17:21:19+00:00",
+      "gap_s": 108.0
+    },
+    {
+      "after_t": "2026-07-24T17:52:09+00:00",
+      "before_t": "2026-07-24T21:35:18+00:00",
+      "gap_s": 13389.0
+    }
+  ],
+  "videos": [],
+  "distance_km": 62.82,
+  "duration_min": 186.1,
+  "started_at": "2026-07-24T16:57:39",
+  "point_count": 4499
+}

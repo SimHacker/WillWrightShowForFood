@@ -1,0 +1,21 @@
+# GLANCE — ebike-safari app
+
+what: |
+  Ebike Safari: FIT pipeline (live) + design cauldron (slurping).
+  Gestures on the street graph, exposure Pac-Man, MapLibre viewer (planned).
+  Urban Safari = amber only.
+
+when:
+  - sync Bosch Flow / build map JSON
+  - ebike safari design / slurp cauldron
+  - gesture engine / exposure log
+
+stack: [Python, fitparse, GeoJSON, OSM, MapLibre, YAML]
+
+pipeline: scripts/pipeline.py
+design: design/README.md
+demo: demo/web/data/manifest.json
+skill: ../../skills/ebike-safari/
+legacy: LEGACY-urban-safari.md
+
+see: README.md | design/VISION.md | DATA-CONTRACT.md
