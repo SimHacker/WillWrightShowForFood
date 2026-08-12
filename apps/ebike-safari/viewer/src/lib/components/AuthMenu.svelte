@@ -152,70 +152,69 @@
 
 <style>
 	.auth {
-		position: fixed;
-		top: 0.55rem;
-		right: 0.65rem;
-		z-index: 25;
+		position: relative;
+		flex: 0 0 auto;
+		z-index: 5;
 	}
 
 	.menu-btn {
-		width: 2.35rem;
-		height: 2.35rem;
+		width: 1.65rem;
+		height: 1.65rem;
 		padding: 0;
-		border: 1px solid rgba(255, 255, 255, 0.28);
-		border-radius: 8px;
-		background: rgba(22, 33, 62, 0.92);
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		border-radius: 4px;
+		background: #1a1a2e;
 		color: #f8f9fa;
-		font-size: 1.15rem;
+		font-size: 0.85rem;
 		line-height: 1;
 		cursor: pointer;
-		backdrop-filter: blur(8px);
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
 	.menu-btn:hover {
-		background: rgba(22, 33, 62, 0.95);
-		border-color: rgba(255, 255, 255, 0.35);
+		background: #243055;
+		border-color: rgba(255, 255, 255, 0.55);
 	}
 
 	.menu {
 		position: absolute;
-		top: calc(100% + 0.35rem);
+		top: calc(100% + 0.25rem);
 		right: 0;
-		min-width: 8rem;
-		border: 1px solid rgba(255, 255, 255, 0.15);
-		border-radius: 8px;
-		background: rgba(22, 33, 62, 0.96);
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+		min-width: 8.5rem;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		border-radius: 6px;
+		background: #16213e;
+		color: #f8f9fa;
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
 		overflow: hidden;
 		font-size: 0.85rem;
+		z-index: 50;
 	}
 
 	.menu-user {
-		padding: 0.5rem 0.85rem 0.35rem;
-		font-size: 0.75rem;
+		padding: 0.45rem 0.75rem 0.3rem;
+		font-size: 0.72rem;
 		font-weight: 600;
-		opacity: 0.85;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		color: rgba(248, 249, 250, 0.85);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 	}
 
 	.menu button {
 		display: block;
 		width: 100%;
-		padding: 0.55rem 0.85rem;
+		padding: 0.5rem 0.75rem;
 		border: none;
 		background: transparent;
-		color: inherit;
+		color: #f8f9fa;
 		font: inherit;
 		text-align: left;
 		cursor: pointer;
 	}
 
 	.menu button:hover {
-		background: rgba(255, 255, 255, 0.08);
+		background: rgba(255, 255, 255, 0.1);
 	}
 
 	.backdrop {

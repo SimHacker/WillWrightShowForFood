@@ -1,6 +1,8 @@
 <script lang="ts">
+	import AuthMenu from '$lib/components/AuthMenu.svelte';
 	import SafariMap from '$lib/components/SafariMap.svelte';
 	import TripPicker from '$lib/components/TripPicker.svelte';
+	import { getAuthContext } from '$lib/auth-context';
 	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
 	import { getSettingsContext } from '$lib/settings-context';
 	import type { FeatureCollection } from 'geojson';
@@ -8,6 +10,7 @@
 	import type { MapViewMode, SafariManifest, SafariSeries } from '$lib/types/safari';
 
 	const settingsStore = getSettingsContext();
+	const auth = getAuthContext();
 
 	let manifest = $state<SafariManifest | null>(null);
 	let allRoutes = $state<FeatureCollection | null>(null);
@@ -271,18 +274,29 @@
 </svelte:head>
 
 <main>
+	<header>
+		<div class="head-text">
+			<h1>Ebike Safari</h1>
+			{#if manifest && allRoutes}
+				<span class="sub">
+					{manifest.home.label} · {selected.size}/{manifest.trip_count} rides
+					{#if locationMode !== 'off' && userLocation}
+						· {locationMode === 'manual' ? 'manual' : 'GPS'}
+					{/if}
+				</span>
+			{/if}
+		</div>
+		<AuthMenu
+			user={auth.user}
+			authAvailable={auth.authAvailable}
+			settings={auth.settings}
+			onUserChange={auth.onUserChange}
+			onSettingsChange={auth.onSettingsChange}
+		/>
+	</header>
 	{#if error}
 		<p class="error">{error} — copy <code>web/data/</code> to VM <code>deploy/data/</code></p>
 	{:else if manifest && allRoutes}
-		<header>
-			<h1>Ebike Safari</h1>
-			<span>
-				{manifest.home.label} · {selected.size}/{manifest.trip_count} rides
-				{#if locationMode !== 'off' && userLocation}
-					· {locationMode === 'manual' ? 'manual' : 'GPS'}
-				{/if}
-			</span>
-		</header>
 		{#if locationError && locationMode === 'gps'}
 			<p class="loc-warn">{locationError}</p>
 		{/if}
@@ -358,18 +372,36 @@
 
 	header {
 		display: flex;
-		justify-content: space-between;
-		align-items: baseline;
-		padding: 0.5rem 3.25rem 0.5rem 1rem;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.4rem 0.65rem 0.4rem 1rem;
 		background: #16213e;
 		font-size: 0.9rem;
-		z-index: 1;
+		z-index: 10;
+		flex: 0 0 auto;
+	}
+
+	.head-text {
+		flex: 1;
+		min-width: 0;
+		display: flex;
+		align-items: baseline;
+		gap: 0.6rem;
+	}
+
+	.sub {
+		font-size: 0.8rem;
+		opacity: 0.9;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
 	h1 {
 		margin: 0;
 		font-size: 1rem;
 		font-weight: 600;
+		flex: 0 0 auto;
 	}
 
 	.map-shell {
