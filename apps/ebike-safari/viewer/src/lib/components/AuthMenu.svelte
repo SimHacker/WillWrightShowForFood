@@ -101,7 +101,9 @@
 		aria-haspopup="menu"
 		aria-label={user ? `Account menu (${user.displayName})` : 'Account menu'}
 	>
-		☰
+		<svg class="menu-icon" viewBox="0 0 16 16" aria-hidden="true">
+			<path d="M2 4.5h12M2 8h12M2 11.5h12" />
+		</svg>
 	</button>
 	{#if menuOpen}
 		<div class="menu" role="menu">
@@ -158,19 +160,29 @@
 	}
 
 	.menu-btn {
-		width: 1.65rem;
-		height: 1.65rem;
-		padding: 0;
+		box-sizing: border-box;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: 0.1875rem;
 		border: 1px solid rgba(255, 255, 255, 0.35);
 		border-radius: 4px;
 		background: #1a1a2e;
 		color: #f8f9fa;
-		font-size: 0.85rem;
-		line-height: 1;
+		line-height: 0;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.menu-icon {
+		display: block;
+		width: 100%;
+		height: 100%;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: 1.75;
+		stroke-linecap: round;
 	}
 
 	.menu-btn:hover {
