@@ -271,16 +271,16 @@
 </script>
 
 <svelte:head>
-	<title>Ebike Safari</title>
+	<title>eBike Safari</title>
 </svelte:head>
 
 <main>
 	<header>
 		<div class="head-text">
-			<h1>Ebike Safari</h1>
-			{#if manifest && allRoutes}
-				<span class="sub">
-					{manifest.home.label} ·
+			<h1>
+				eBike Safari
+				{#if manifest && allRoutes}
+					<span class="title-sep" aria-hidden="true">·</span>
 					<button
 						type="button"
 						class="rides-toggle"
@@ -290,11 +290,8 @@
 					>
 						{selected.size}/{manifest.trip_count} rides
 					</button>
-					{#if locationMode !== 'off' && userLocation}
-						· {locationMode === 'manual' ? 'manual' : 'GPS'}
-					{/if}
-				</span>
-			{/if}
+				{/if}
+			</h1>
 		</div>
 		<AuthMenu
 			user={auth.user}
@@ -395,17 +392,26 @@
 	.head-text {
 		flex: 1;
 		min-width: 0;
-		display: flex;
-		align-items: baseline;
-		gap: 0.6rem;
 	}
 
-	.sub {
-		font-size: 0.8rem;
-		opacity: 0.9;
+	h1 {
+		margin: 0;
+		font-size: 1rem;
+		font-weight: 600;
+		display: flex;
+		align-items: baseline;
+		flex-wrap: nowrap;
+		gap: 0.35rem;
+		min-width: 0;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+
+	.title-sep {
+		opacity: 0.65;
+		font-weight: 400;
+		flex: 0 0 auto;
 	}
 
 	.rides-toggle {
@@ -422,18 +428,13 @@
 		text-decoration: underline;
 		text-decoration-color: rgba(248, 249, 250, 0.35);
 		text-underline-offset: 0.15em;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.rides-toggle:hover,
 	.rides-toggle[aria-expanded='true'] {
 		text-decoration-color: rgba(248, 249, 250, 0.85);
-	}
-
-	h1 {
-		margin: 0;
-		font-size: 1rem;
-		font-weight: 600;
-		flex: 0 0 auto;
 	}
 
 	.map-shell {
