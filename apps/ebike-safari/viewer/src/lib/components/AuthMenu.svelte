@@ -1,21 +1,16 @@
 <script lang="ts">
-	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import type { AuthUser } from '$lib/types/auth';
-	import type { AppSettings } from '$lib/types/settings';
 
 	interface Props {
 		user: AuthUser | null;
 		authAvailable: boolean;
-		settings: AppSettings;
 		onUserChange: (user: AuthUser | null) => void;
-		onSettingsChange: (partial: Partial<AppSettings>) => void;
 	}
 
-	let { user, authAvailable, settings, onUserChange, onSettingsChange }: Props = $props();
+	let { user, authAvailable, onUserChange }: Props = $props();
 
 	let menuOpen = $state(false);
 	let loginOpen = $state(false);
-	let settingsOpen = $state(false);
 	let username = $state('don');
 	let password = $state('don');
 	let busy = $state(false);
@@ -30,11 +25,6 @@
 	function openLogin() {
 		loginOpen = true;
 		loginError = null;
-		menuOpen = false;
-	}
-
-	function openSettings() {
-		settingsOpen = true;
 		menuOpen = false;
 	}
 
@@ -116,17 +106,9 @@
 			{#if user}
 				<button type="button" role="menuitem" onclick={logout}>Log out</button>
 			{/if}
-			<button type="button" role="menuitem" onclick={openSettings}>Settings</button>
 		</div>
 	{/if}
 </div>
-
-<SettingsDialog
-	open={settingsOpen}
-	{settings}
-	onClose={() => (settingsOpen = false)}
-	onChange={onSettingsChange}
-/>
 
 {#if loginOpen}
 	<div class="backdrop" onclick={closeLogin} role="presentation"></div>

@@ -1,19 +1,16 @@
 <script lang="ts">
-	import type { SafariTrip, MapViewMode } from '$lib/types/safari';
+	import type { SafariTrip } from '$lib/types/safari';
 
 	type Props = {
 		open: boolean;
 		trips: SafariTrip[];
 		selected: Set<string>;
-		viewMode: MapViewMode;
 		onToggle: (id: string) => void;
 		onSelectAll: () => void;
 		onSelectNone: () => void;
-		onViewMode: (mode: MapViewMode) => void;
 	};
 
-	let { open, trips, selected, viewMode, onToggle, onSelectAll, onSelectNone, onViewMode }: Props =
-		$props();
+	let { open, trips, selected, onToggle, onSelectAll, onSelectNone }: Props = $props();
 
 	function formatDate(iso: string): string {
 		if (!iso) return '';
@@ -28,24 +25,6 @@
 {#if open}
 	<aside id="rides-panel">
 		<div class="panel">
-			<div class="view-modes">
-				<button
-					type="button"
-					class:active={viewMode === 'both'}
-					onclick={() => onViewMode('both')}>Both</button
-				>
-				<button
-					type="button"
-					class:active={viewMode === 'routes'}
-					onclick={() => onViewMode('routes')}>Routes</button
-				>
-				<button
-					type="button"
-					class:active={viewMode === 'heat'}
-					onclick={() => onViewMode('heat')}>Heat</button
-				>
-			</div>
-
 			<p class="hint">Heat = where you ride often. Gaps = not yet (in this set).</p>
 
 			<div class="bulk">
@@ -95,13 +74,6 @@
 		color: #f8f9fa;
 	}
 
-	.view-modes {
-		display: flex;
-		gap: 0.25rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.view-modes button,
 	.bulk button {
 		flex: 1;
 		padding: 0.25rem 0.4rem;
@@ -111,11 +83,6 @@
 		color: #f8f9fa;
 		cursor: pointer;
 		font-size: 0.75rem;
-	}
-
-	.view-modes button.active {
-		background: #e85d04;
-		border-color: #e85d04;
 	}
 
 	.hint {

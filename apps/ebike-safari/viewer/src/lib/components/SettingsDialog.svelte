@@ -29,7 +29,8 @@
 	<div class="backdrop" onclick={onClose} role="presentation"></div>
 	<div class="dialog" role="dialog" aria-labelledby="settings-title">
 		<h2 id="settings-title">Settings</h2>
-		<p class="hint">Saved on this device. Log in later to sync across devices.</p>
+		<p class="todo">TODO: More settings will live here later (sync, units, themes, pie menus, …).</p>
+		<p class="hint">Use the bottom bar while riding. This dialog is for extras.</p>
 
 		<fieldset>
 			<legend>My location</legend>
@@ -98,6 +99,13 @@
 		margin: 0 0 1rem;
 		font-size: 0.78rem;
 		opacity: 0.75;
+	}
+
+	.todo {
+		margin: 0 0 0.5rem;
+		font-size: 0.78rem;
+		color: #fcbf49;
+		line-height: 1.35;
 	}
 
 	fieldset {

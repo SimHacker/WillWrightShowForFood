@@ -1,6 +1,8 @@
 <script lang="ts">
 	import AuthMenu from '$lib/components/AuthMenu.svelte';
+	import BottomBar from '$lib/components/BottomBar.svelte';
 	import SafariMap from '$lib/components/SafariMap.svelte';
+	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import TripPicker from '$lib/components/TripPicker.svelte';
 	import { getAuthContext } from '$lib/auth-context';
 	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
@@ -27,6 +29,7 @@
 	let userLocation = $state<UserLocation | null>(null);
 	let locationError = $state<string | null>(null);
 	let ridesOpen = $state(true);
+	let settingsOpen = $state(false);
 
 	const filteredRoutes = $derived.by(() => {
 		if (!allRoutes || selected.size === 0) {
@@ -321,9 +324,7 @@
 		<AuthMenu
 			user={auth.user}
 			authAvailable={auth.authAvailable}
-			settings={auth.settings}
 			onUserChange={auth.onUserChange}
-			onSettingsChange={auth.onSettingsChange}
 		/>
 	</header>
 	{#if error}
@@ -350,57 +351,38 @@
 				open={ridesOpen}
 				trips={manifest.trips}
 				{selected}
-				{viewMode}
 				onToggle={toggleTrip}
 				onSelectAll={selectAll}
 				onSelectNone={selectNone}
-				onViewMode={(m) => (viewMode = m)}
 			/>
 		</div>
-		{#if replayMode && series}
-			<footer class="replay">
-				<div class="transport">
-					<button type="button" class="play" onclick={togglePlay} aria-pressed={playing}>
-						{playing ? 'Pause' : 'Play'}
-					</button>
-					<input
-						class="scrub"
-						type="range"
-						min="0"
-						max={Math.max(0, series.points.length - 1)}
-						bind:value={scrubIndex}
-						oninput={() => (playing = false)}
-						aria-label="Ride position"
-					/>
-				</div>
-				<div class="speed-bar" role="group" aria-label="Playback speed">
-					<span class="speed-label">Speed</span>
-					{#each PLAYBACK_SPEEDS as speed}
-						<button
-							type="button"
-							class="speed"
-							class:active={playbackSpeed === speed}
-							aria-pressed={playbackSpeed === speed}
-							onclick={() => (playbackSpeed = speed)}
-						>
-							{speed === 1 ? 'Real' : `${speed}×`}
-						</button>
-					{/each}
-				</div>
-				<div class="stats">
-					{#if currentPoint}
-						<span>{currentPoint.speed_kmh?.toFixed(1) ?? '—'} km/h</span>
-						<span>{currentPoint.alt_m?.toFixed(0) ?? '—'} m</span>
-						<span>{new Date(currentPoint.t).toLocaleTimeString()}</span>
-					{/if}
-					<span>{scrubIndex + 1} / {series.points.length}</span>
-				</div>
-			</footer>
-		{:else}
-			<footer class="summary">
-				<span>Select one ride to replay. All {manifest.trip_count} shown = coverage map.</span>
-			</footer>
-		{/if}
+		<BottomBar
+			replayActive={replayMode && !!series?.points.length}
+			pointCount={series?.points.length ?? 0}
+			{playing}
+			{scrubIndex}
+			{playbackSpeed}
+			{currentPoint}
+			{locationMode}
+			{followUser}
+			{viewMode}
+			selectedCount={selected.size}
+			tripCount={manifest.trip_count}
+			onTogglePlay={togglePlay}
+			onScrubInput={() => (playing = false)}
+			onScrubChange={(index) => (scrubIndex = index)}
+			onSpeed={(speed) => (playbackSpeed = speed)}
+			onLocationMode={(mode) => settingsStore.update({ locationMode: mode })}
+			onFollowUser={(follow) => settingsStore.update({ followUser: follow })}
+			onViewMode={(mode) => (viewMode = mode)}
+			onOpenMore={() => (settingsOpen = true)}
+		/>
+		<SettingsDialog
+			open={settingsOpen}
+			settings={settingsStore.current}
+			onClose={() => (settingsOpen = false)}
+			onChange={(partial) => settingsStore.update(partial)}
+		/>
 	{:else if loading}
 		<p class="loading">Loading rides…</p>
 	{:else}
@@ -481,99 +463,6 @@
 		position: relative;
 		flex: 1;
 		min-height: 0;
-	}
-
-	footer {
-		padding: 0.5rem 1rem 1rem;
-		background: #16213e;
-		z-index: 5;
-		flex: 0 0 auto;
-	}
-
-	footer.replay {
-		border-top: 1px solid rgba(248, 249, 250, 0.12);
-	}
-
-	footer.summary {
-		font-size: 0.85rem;
-		opacity: 0.85;
-	}
-
-	.transport {
-		display: flex;
-		gap: 0.75rem;
-		align-items: center;
-		margin-bottom: 0.55rem;
-	}
-
-	.speed-bar {
-		display: flex;
-		gap: 0.35rem;
-		align-items: stretch;
-		width: 100%;
-		margin-bottom: 0.55rem;
-	}
-
-	.speed-label {
-		display: flex;
-		align-items: center;
-		font-size: 0.8rem;
-		font-weight: 700;
-		opacity: 0.9;
-		flex: 0 0 auto;
-		padding-right: 0.15rem;
-	}
-
-	button.play {
-		flex: 0 0 auto;
-	}
-
-	input.scrub {
-		flex: 1;
-		min-width: 0;
-		margin: 0;
-	}
-
-	button.speed {
-		flex: 1;
-		min-width: 2.6rem;
-		padding: 0.45rem 0.35rem;
-		background: #343a40;
-		font-size: 0.82rem;
-		font-weight: 700;
-	}
-
-	button.speed.active,
-	button.speed[aria-pressed='true'] {
-		background: #0077b6;
-	}
-
-	button {
-		min-width: 4.5rem;
-		padding: 0.35rem 0.75rem;
-		border: none;
-		border-radius: 6px;
-		background: #e85d04;
-		color: #fff;
-		font-weight: 600;
-		cursor: pointer;
-	}
-
-	button[aria-pressed='true']:not(.speed) {
-		background: #0077b6;
-	}
-
-	input[type='range'] {
-		flex: 1;
-	}
-
-	.stats {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		margin-top: 0.35rem;
-		font-size: 0.85rem;
-		opacity: 0.9;
 	}
 
 	.loading,
