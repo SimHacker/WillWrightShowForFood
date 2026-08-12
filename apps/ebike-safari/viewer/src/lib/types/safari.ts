@@ -42,6 +42,9 @@ export type SeriesPoint = {
 	power_w?: number;
 	cadence_rpm?: number;
 	distance_m?: number;
+	battery_pct?: number;
+	energy_wh?: number;
+	[key: string]: unknown;
 };
 
 export type SafariSeries = {

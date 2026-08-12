@@ -1,6 +1,8 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import AuthMenu from '$lib/components/AuthMenu.svelte';
+	import { setSettingsContext } from '$lib/settings-context';
+	import { createSettingsStore } from '$lib/settings-store.svelte';
 	import type { AuthUser } from '$lib/types/auth';
 	import { onMount } from 'svelte';
 
@@ -8,6 +10,8 @@
 
 	let user = $state<AuthUser | null>(null);
 	let authAvailable = $state(false);
+	const settingsStore = createSettingsStore();
+	setSettingsContext(settingsStore);
 
 	onMount(async () => {
 		try {
@@ -32,7 +36,13 @@
 
 {@render children()}
 
-<AuthMenu {user} {authAvailable} onUserChange={(u) => (user = u)} />
+<AuthMenu
+	{user}
+	{authAvailable}
+	settings={settingsStore.current}
+	onUserChange={(u) => (user = u)}
+	onSettingsChange={(partial) => settingsStore.update(partial)}
+/>
 
 <style>
 	:global(html, body) {

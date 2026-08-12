@@ -1,6 +1,7 @@
 <script lang="ts">
 	import {
 		Map,
+		Marker,
 		NavigationControl,
 		setWorkerUrl,
 		type FilterSpecification,
@@ -13,6 +14,7 @@
 	import type { FeatureCollection } from 'geojson';
 	import { onMount } from 'svelte';
 	import type { MapViewMode } from '$lib/types/safari';
+	import type { UserLocation } from '$lib/types/location';
 
 	setWorkerUrl(workerUrl);
 
@@ -25,6 +27,10 @@
 		viewMode?: MapViewMode;
 		highlightTripId?: string | null;
 		playhead?: { lat: number; lon: number } | null;
+		userLocation?: UserLocation | null;
+		userLocationDraggable?: boolean;
+		followUser?: boolean;
+		onUserLocationChange?: (loc: UserLocation) => void;
 	};
 
 	let {
@@ -35,12 +41,17 @@
 		heatmap = null,
 		viewMode = 'both',
 		highlightTripId = null,
-		playhead = null
+		playhead = null,
+		userLocation = null,
+		userLocationDraggable = false,
+		followUser = false,
+		onUserLocationChange
 	}: Props = $props();
 
 	let container: HTMLDivElement | undefined = $state();
 	let map: MapLibreMap | undefined;
 	let styleLoaded = $state(false);
+	let userMarker: Marker | undefined;
 
 	const ROUTES_SOURCE = 'safari-routes';
 	const ROUTES_LAYER = 'ride-lines';
@@ -219,6 +230,8 @@
 		});
 
 		return () => {
+			userMarker?.remove();
+			userMarker = undefined;
 			map?.remove();
 			map = undefined;
 			styleLoaded = false;
@@ -275,6 +288,53 @@
 			(map.getSource('playhead') as GeoJSONSource).setData(data);
 			map.setLayoutProperty('playhead-dot', 'visibility', 'visible');
 		}
+	});
+
+	function syncUserMarker() {
+		if (!map || !styleLoaded) return;
+
+		if (!userLocation) {
+			userMarker?.remove();
+			userMarker = undefined;
+			return;
+		}
+
+		if (!userMarker) {
+			userMarker = new Marker({
+				color: '#2dc653',
+				draggable: userLocationDraggable
+			})
+				.setLngLat([userLocation.lon, userLocation.lat])
+				.addTo(map);
+
+			userMarker.on('dragend', () => {
+				if (!userMarker || !onUserLocationChange) return;
+				const { lat, lng } = userMarker.getLngLat();
+				onUserLocationChange({
+					lat,
+					lon: lng,
+					updated_at: new Date().toISOString(),
+					source: 'manual'
+				});
+			});
+		} else {
+			userMarker.setDraggable(userLocationDraggable);
+			userMarker.setLngLat([userLocation.lon, userLocation.lat]);
+		}
+
+		if (followUser) {
+			map.easeTo({
+				center: [userLocation.lon, userLocation.lat],
+				duration: 400
+			});
+		}
+	}
+
+	$effect(() => {
+		userLocation;
+		userLocationDraggable;
+		followUser;
+		syncUserMarker();
 	});
 </script>
 

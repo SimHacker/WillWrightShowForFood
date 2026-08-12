@@ -1,16 +1,21 @@
 <script lang="ts">
+	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import type { AuthUser } from '$lib/types/auth';
+	import type { AppSettings } from '$lib/types/settings';
 
 	interface Props {
 		user: AuthUser | null;
 		authAvailable: boolean;
+		settings: AppSettings;
 		onUserChange: (user: AuthUser | null) => void;
+		onSettingsChange: (partial: Partial<AppSettings>) => void;
 	}
 
-	let { user, authAvailable, onUserChange }: Props = $props();
+	let { user, authAvailable, settings, onUserChange, onSettingsChange }: Props = $props();
 
 	let menuOpen = $state(false);
 	let loginOpen = $state(false);
+	let settingsOpen = $state(false);
 	let username = $state('');
 	let password = $state('');
 	let busy = $state(false);
@@ -25,6 +30,11 @@
 	function openLogin() {
 		loginOpen = true;
 		loginError = null;
+		menuOpen = false;
+	}
+
+	function openSettings() {
+		settingsOpen = true;
 		menuOpen = false;
 	}
 
@@ -83,19 +93,28 @@
 <svelte:window onclick={onWindowClick} onkeydown={onWindowKeydown} />
 
 <div class="auth" bind:this={rootEl}>
-	{#if user}
-		<button type="button" class="user-btn" onclick={toggleMenu} aria-expanded={menuOpen}>
-			{user.displayName}
-		</button>
-		{#if menuOpen}
-			<div class="menu" role="menu">
+	<button type="button" class="menu-btn" onclick={toggleMenu} aria-expanded={menuOpen} aria-haspopup="menu">
+		{user ? user.displayName : 'Menu'}
+	</button>
+	{#if menuOpen}
+		<div class="menu" role="menu">
+			{#if authAvailable && !user}
+				<button type="button" role="menuitem" onclick={openLogin}>Log in</button>
+			{/if}
+			{#if user}
 				<button type="button" role="menuitem" onclick={logout}>Log out</button>
-			</div>
-		{/if}
-	{:else if authAvailable}
-		<button type="button" class="login-btn" onclick={openLogin}>Log in</button>
+			{/if}
+			<button type="button" role="menuitem" onclick={openSettings}>Settings</button>
+		</div>
 	{/if}
 </div>
+
+<SettingsDialog
+	open={settingsOpen}
+	{settings}
+	onClose={() => (settingsOpen = false)}
+	onChange={onSettingsChange}
+/>
 
 {#if loginOpen}
 	<div class="backdrop" onclick={closeLogin} role="presentation"></div>
@@ -130,8 +149,7 @@
 		font-size: 0.8rem;
 	}
 
-	.login-btn,
-	.user-btn {
+	.menu-btn {
 		padding: 0.3rem 0.65rem;
 		border: 1px solid rgba(255, 255, 255, 0.22);
 		border-radius: 6px;
@@ -140,10 +158,13 @@
 		font: inherit;
 		cursor: pointer;
 		backdrop-filter: blur(6px);
+		max-width: 10rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 
-	.login-btn:hover,
-	.user-btn:hover {
+	.menu-btn:hover {
 		background: rgba(22, 33, 62, 0.95);
 		border-color: rgba(255, 255, 255, 0.35);
 	}
@@ -152,7 +173,7 @@
 		position: absolute;
 		top: calc(100% + 0.35rem);
 		right: 0;
-		min-width: 7rem;
+		min-width: 8rem;
 		border: 1px solid rgba(255, 255, 255, 0.15);
 		border-radius: 8px;
 		background: rgba(22, 33, 62, 0.96);

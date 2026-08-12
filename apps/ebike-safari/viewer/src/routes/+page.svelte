@@ -2,8 +2,12 @@
 	import SafariMap from '$lib/components/SafariMap.svelte';
 	import TripPicker from '$lib/components/TripPicker.svelte';
 	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
+	import { getSettingsContext } from '$lib/settings-context';
 	import type { FeatureCollection } from 'geojson';
+	import type { UserLocation } from '$lib/types/location';
 	import type { MapViewMode, SafariManifest, SafariSeries } from '$lib/types/safari';
+
+	const settingsStore = getSettingsContext();
 
 	let manifest = $state<SafariManifest | null>(null);
 	let allRoutes = $state<FeatureCollection | null>(null);
@@ -16,6 +20,8 @@
 	let playing = $state(false);
 	let error = $state<string | null>(null);
 	let loading = $state(true);
+	let userLocation = $state<UserLocation | null>(null);
+	let locationError = $state<string | null>(null);
 
 	const filteredRoutes = $derived.by(() => {
 		if (!allRoutes || selected.size === 0) {
@@ -45,6 +51,65 @@
 	});
 
 	const replayMode = $derived(replayTripId !== null && selected.size === 1);
+
+	const locationMode = $derived(settingsStore.current.locationMode);
+	const followUser = $derived(settingsStore.current.followUser);
+
+	function defaultLocation(): UserLocation | null {
+		if (!manifest) return null;
+		return {
+			lat: manifest.home.lat,
+			lon: manifest.home.lon,
+			updated_at: new Date().toISOString(),
+			source: 'manual'
+		};
+	}
+
+	function setUserLocation(loc: UserLocation) {
+		userLocation = loc;
+	}
+
+	$effect(() => {
+		const mode = locationMode;
+		locationError = null;
+
+		if (mode === 'off') {
+			userLocation = null;
+			return;
+		}
+
+		if (mode === 'manual') {
+			if (!userLocation || userLocation.source === 'gps') {
+				userLocation = defaultLocation();
+			}
+			return;
+		}
+
+		if (typeof navigator === 'undefined' || !navigator.geolocation) {
+			locationError = 'Geolocation not available';
+			if (!userLocation) userLocation = defaultLocation();
+			return;
+		}
+
+		const watchId = navigator.geolocation.watchPosition(
+			(pos) => {
+				userLocation = {
+					lat: pos.coords.latitude,
+					lon: pos.coords.longitude,
+					accuracy_m: pos.coords.accuracy,
+					updated_at: new Date().toISOString(),
+					source: 'gps'
+				};
+			},
+			(err) => {
+				locationError = err.message;
+				if (!userLocation) userLocation = defaultLocation();
+			},
+			{ enableHighAccuracy: true, maximumAge: 5000, timeout: 15000 }
+		);
+
+		return () => navigator.geolocation.clearWatch(watchId);
+	});
 
 	const dataFetch = (path: string) => fetch(path, { cache: 'no-store' });
 
@@ -208,8 +273,16 @@
 	{:else if manifest && allRoutes}
 		<header>
 			<h1>Ebike Safari</h1>
-			<span>{manifest.home.label} · {selected.size}/{manifest.trip_count} rides</span>
+			<span>
+				{manifest.home.label} · {selected.size}/{manifest.trip_count} rides
+				{#if locationMode !== 'off' && userLocation}
+					· {locationMode === 'manual' ? 'manual' : 'GPS'}
+				{/if}
+			</span>
 		</header>
+		{#if locationError && locationMode === 'gps'}
+			<p class="loc-warn">{locationError}</p>
+		{/if}
 		<div class="map-shell">
 			<SafariMap
 				tileUrl={manifest.map.tile_url}
@@ -220,6 +293,10 @@
 				{viewMode}
 				highlightTripId={replayTripId}
 				{playhead}
+				userLocation={locationMode === 'off' ? null : userLocation}
+				userLocationDraggable={locationMode === 'manual'}
+				{followUser}
+				onUserLocationChange={setUserLocation}
 			/>
 			<TripPicker
 				trips={manifest.trips}
@@ -344,8 +421,17 @@
 	}
 
 	.loading,
-	.error {
+	.error,
+	.loc-warn {
 		padding: 2rem;
+	}
+
+	.loc-warn {
+		padding: 0.35rem 1rem;
+		margin: 0;
+		font-size: 0.8rem;
+		color: #ffb4a2;
+		background: rgba(22, 33, 62, 0.9);
 	}
 
 	code {

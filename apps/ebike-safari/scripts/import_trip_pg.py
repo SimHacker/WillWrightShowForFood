@@ -29,6 +29,15 @@ except ImportError:
     sys.exit(1)
 
 
+KNOWN_POINT_KEYS = frozenset(
+    {"t", "lat", "lon", "alt_m", "speed_kmh", "power_w", "cadence_rpm", "distance_m"}
+)
+
+
+def point_extras(point: dict) -> dict:
+    return {k: v for k, v in point.items() if k not in KNOWN_POINT_KEYS}
+
+
 def line_wkt(coords: list[list[float]]) -> str:
     parts = [f"{lon} {lat}" for lon, lat in coords]
     return f"LINESTRING({', '.join(parts)})"
@@ -85,13 +94,19 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
             path_wkt = line_wkt(coords)
             bounds_wkt = envelope_wkt(bounds) if bounds else None
 
+            source_format = (
+                meta.get("source_format") or trip.get("source_format") or "fit"
+            )
+            source_uri = trip.get("source_fit") or meta.get("source_fit")
+
             cur.execute(
                 """
                 INSERT INTO rides (
-                    id, title, started_at, distance_m, duration_s, source_fit,
+                    id, title, started_at, distance_m, duration_s,
+                    source_fit, source_format, source_uri,
                     bounds, path, meta
                 ) VALUES (
-                    %s, %s, %s, %s, %s, %s,
+                    %s, %s, %s, %s, %s, %s, %s, %s,
                     CASE WHEN %s IS NULL THEN NULL
                          ELSE ST_SetSRID(ST_GeomFromText(%s), 4326) END,
                     ST_SetSRID(ST_GeomFromText(%s), 4326),
@@ -103,6 +118,8 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
                     distance_m = EXCLUDED.distance_m,
                     duration_s = EXCLUDED.duration_s,
                     source_fit = EXCLUDED.source_fit,
+                    source_format = EXCLUDED.source_format,
+                    source_uri = EXCLUDED.source_uri,
                     bounds = EXCLUDED.bounds,
                     path = EXCLUDED.path,
                     meta = EXCLUDED.meta
@@ -113,7 +130,9 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
                     started,
                     distance_m,
                     duration_s,
-                    trip.get("source_fit") or meta.get("source_fit"),
+                    source_uri,
+                    source_format,
+                    source_uri,
                     bounds_wkt,
                     bounds_wkt,
                     path_wkt,
@@ -126,6 +145,7 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
             points = series.get("points") or []
             rows = []
             for seq, p in enumerate(points):
+                extras = point_extras(p)
                 rows.append(
                     (
                         tid,
@@ -138,6 +158,7 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
                         p.get("power_w"),
                         p.get("cadence_rpm"),
                         p.get("distance_m"),
+                        json.dumps(extras),
                     )
                 )
 
@@ -147,14 +168,14 @@ def import_trip(conn, data_dir: Path, trip_id: str | None) -> list[str]:
                     """
                     INSERT INTO ride_points (
                         ride_id, seq, recorded_at, geom,
-                        alt_m, speed_kmh, power_w, cadence_rpm, distance_m
+                        alt_m, speed_kmh, power_w, cadence_rpm, distance_m, extras
                     ) VALUES %s
                     """,
                     rows,
                     template="""(
                         %s, %s, %s::timestamptz,
                         ST_SetSRID(ST_MakePoint(%s, %s), 4326),
-                        %s, %s, %s, %s, %s
+                        %s, %s, %s, %s, %s, %s::jsonb
                     )""",
                 )
 
