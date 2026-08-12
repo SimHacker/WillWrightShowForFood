@@ -352,17 +352,18 @@
 
 	$effect(() => {
 		if (!map || !styleLoaded) return;
+		const activeMap = map;
 
 		const onViewChange = () => {
 			if (followUser && userLocation) centerOnUser();
 		};
 
-		map.on('zoomend', onViewChange);
-		map.on('moveend', onViewChange);
+		activeMap.on('zoomend', onViewChange);
+		activeMap.on('moveend', onViewChange);
 
 		return () => {
-			map.off('zoomend', onViewChange);
-			map.off('moveend', onViewChange);
+			activeMap.off('zoomend', onViewChange);
+			activeMap.off('moveend', onViewChange);
 		};
 	});
 
