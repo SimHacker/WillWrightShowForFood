@@ -1,9 +1,8 @@
 import type { HeatmapLayerSpecification, LineLayerSpecification } from 'maplibre-gl';
 
 /**
- * SimCity Supreme box-art palette: marbled bakelite (cream → peach → orange → gold).
- * Cool fringe is warm cream, not purple; peak is burnt orange/umber, not blood red.
- * Routes use the logo “City” sky blue with navy casing.
+ * Jawbreaker on bakelite: bright yellow core, cream fill, crisp rainbow fringe.
+ * Low heatmap-density = outer blur (rainbow wrapper); high = hot trail (yellow).
  */
 export const HEATMAP_PAINT = {
 	'heatmap-weight': [
@@ -78,34 +77,42 @@ export const HEATMAP_PAINT = {
 		['heatmap-density'],
 		0,
 		'rgba(0,0,0,0)',
-		0.02,
-		'rgba(255, 251, 235, 0.42)',
+		0.012,
+		'rgba(255, 0, 110, 0.55)',
+		0.028,
+		'rgba(0, 245, 255, 0.52)',
+		0.044,
+		'rgba(155, 93, 229, 0.5)',
 		0.06,
-		'rgba(255, 248, 220, 0.52)',
+		'rgba(112, 224, 0, 0.48)',
+		0.076,
+		'rgba(255, 105, 180, 0.46)',
 		0.1,
-		'rgba(245, 230, 200, 0.58)',
-		0.16,
-		'rgba(238, 210, 175, 0.64)',
-		0.22,
-		'rgba(232, 185, 140, 0.68)',
-		0.3,
-		'rgba(255, 200, 120, 0.72)',
-		0.38,
-		'rgba(255, 183, 77, 0.76)',
-		0.46,
-		'rgba(252, 191, 73, 0.8)',
-		0.54,
-		'rgba(255, 209, 102, 0.83)',
-		0.62,
-		'rgba(255, 193, 7, 0.86)',
-		0.72,
-		'rgba(255, 159, 28, 0.88)',
-		0.82,
-		'rgba(244, 140, 6, 0.9)',
+		'rgba(180, 140, 110, 0.58)',
+		0.14,
+		'rgba(196, 164, 132, 0.62)',
+		0.2,
+		'rgba(212, 180, 145, 0.66)',
+		0.28,
+		'rgba(232, 200, 165, 0.7)',
+		0.36,
+		'rgba(245, 220, 185, 0.74)',
+		0.44,
+		'rgba(255, 235, 200, 0.78)',
+		0.52,
+		'rgba(255, 228, 170, 0.81)',
+		0.6,
+		'rgba(255, 220, 130, 0.84)',
+		0.68,
+		'rgba(255, 210, 90, 0.87)',
+		0.76,
+		'rgba(255, 230, 60, 0.9)',
+		0.84,
+		'rgba(255, 240, 30, 0.93)',
 		0.92,
-		'rgba(232, 119, 34, 0.91)',
+		'rgba(255, 248, 0, 0.95)',
 		1,
-		'rgba(188, 108, 37, 0.92)'
+		'rgba(255, 255, 100, 0.97)'
 	]
 } satisfies HeatmapLayerSpecification['paint'];
 
