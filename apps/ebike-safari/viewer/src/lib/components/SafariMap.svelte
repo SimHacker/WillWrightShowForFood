@@ -261,11 +261,6 @@
 	});
 
 	$effect(() => {
-		bounds;
-		if (styleLoaded) fitMapBounds();
-	});
-
-	$effect(() => {
 		if (!map || !styleLoaded || !playhead) {
 			if (map?.getLayer('playhead-dot')) {
 				map.setLayoutProperty('playhead-dot', 'visibility', 'none');

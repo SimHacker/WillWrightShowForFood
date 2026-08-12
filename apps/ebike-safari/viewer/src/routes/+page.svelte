@@ -44,10 +44,13 @@
 
 	const mapBounds = $derived.by(() => {
 		if (!manifest) return undefined;
-		if (selected.size === manifest.trips.length && manifest.coverage?.bounds) {
+		if (manifest.coverage?.bounds) {
 			return manifest.coverage.bounds;
 		}
-		return unionTripBounds(manifest.trips, selected);
+		return unionTripBounds(
+			manifest.trips,
+			new Set(manifest.trips.map((t) => t.id))
+		);
 	});
 
 	const replayMode = $derived(replayTripId !== null && selected.size === 1);
