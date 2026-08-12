@@ -37,9 +37,9 @@ services:
       HOST: 0.0.0.0
       ORIGIN: ${ORIGIN:-https://${DOMAIN:-localhost}}
       DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}
-      EBIKE_DATA_MOUNT: /data
     volumes:
-      - ./data:/data:ro
+      # Host deploy/data/ is served at https://…/data/* (no startup copy)
+      - ./data:/app/build/client/data:ro
     depends_on:
       db:
         condition: service_healthy

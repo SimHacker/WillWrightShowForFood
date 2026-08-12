@@ -77,6 +77,8 @@ def import_geojsonseq(path: Path, region: str, conn) -> int:
             tags = {k: v for k, v in props.items() if not str(k).startswith("@")}
             batch.append((int(osm_id), region, json.dumps(tags), wkt))
             count += 1
+            if count % 100_000 == 0:
+                print(f"  … {count:,} ways", flush=True)
             if len(batch) >= batch_size:
                 flush()
     flush()
@@ -114,8 +116,10 @@ def main() -> None:
                 str(seq),
                 "-f",
                 "geojsonseq",
+                "--geometry-types",
+                "linestring",
                 "--attributes",
-                "id,tags",
+                "id",
             ],
             check=True,
         )

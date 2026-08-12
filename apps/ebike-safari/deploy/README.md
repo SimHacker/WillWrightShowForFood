@@ -137,15 +137,31 @@ curl -s http://localhost/api/health    # before TLS propagates, via Caddy :80
 curl -s https://ebike-safari.com/api/health
 ```
 
-## 6. Private ride data (40 FIT corpus)
+## 6. Ride data (host volume, zero-copy)
 
-Demo data ships in the image. For additional rides, commit pipeline output under `deploy/data/` (or rebuild viewer static assets in git), push to GitHub, then on the VM:
+Ride GeoJSON is **not** in git (`deploy/data/` is gitignored). The viewer bind-mounts it read-only:
 
-```bash
-sudo bash scripts/server-deploy.sh
+```
+deploy/data/  →  /app/build/client/data  →  https://ebike-safari.com/data/*
 ```
 
-The entrypoint syncs `deploy/data/` → viewer static assets on each start.
+No rsync, no entrypoint copy. Whatever is on the VM host at `deploy/data/` is what the site serves.
+
+Populate once on the VM (example — pipeline output from FIT corpus):
+
+```bash
+cd /opt/WillWrightShowForFood/apps/ebike-safari
+python scripts/pipeline.py --sync --trips-dir demo/rides --out deploy/data \
+  --home-label "Marconistraat 25, Badhoevedorp" --home-lat 52.3382 --home-lon 4.7854
+```
+
+Or copy an existing `web/data/` tree into `deploy/data/`. Then restart:
+
+```bash
+sudo bash deploy/scripts/server-deploy.sh
+```
+
+Demo data is baked into the image for local builds only; production requires `deploy/data/manifest.json` on the host.
 
 ## 7. Postgres smoke test
 

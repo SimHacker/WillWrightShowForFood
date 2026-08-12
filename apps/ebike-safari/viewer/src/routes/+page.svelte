@@ -15,6 +15,7 @@
 	let scrubIndex = $state(0);
 	let playing = $state(false);
 	let error = $state<string | null>(null);
+	let loading = $state(true);
 
 	const filteredRoutes = $derived.by(() => {
 		if (!allRoutes || selected.size === 0) {
@@ -45,10 +46,14 @@
 
 	const replayMode = $derived(replayTripId !== null && selected.size === 1);
 
+	const dataFetch = (path: string) => fetch(path, { cache: 'no-store' });
+
 	$effect(() => {
 		(async () => {
+			loading = true;
+			error = null;
 			try {
-				const mRes = await fetch('/data/manifest.json');
+				const mRes = await dataFetch('/data/manifest.json');
 				if (!mRes.ok) throw new Error(`manifest ${mRes.status}`);
 				const m = (await mRes.json()) as SafariManifest;
 				manifest = m;
@@ -57,15 +62,43 @@
 				selected = ids;
 
 				if (m.coverage?.all_routes) {
-					const rRes = await fetch(`/data/${m.coverage.all_routes}`);
+					const rRes = await dataFetch(`/data/${m.coverage.all_routes}`);
 					if (rRes.ok) allRoutes = (await rRes.json()) as FeatureCollection;
 				}
+
+				if (!allRoutes?.features.length && m.trips.length) {
+					const features: FeatureCollection['features'] = [];
+					for (const trip of m.trips) {
+						const rRes = await dataFetch(`/data/${trip.geojson}`);
+						if (!rRes.ok) continue;
+						const fc = (await rRes.json()) as FeatureCollection;
+						for (const f of fc.features) {
+							features.push({
+								...f,
+								properties: {
+									...(f.properties ?? {}),
+									trip_id: trip.id
+								}
+							});
+						}
+					}
+					if (features.length) {
+						allRoutes = { type: 'FeatureCollection', features };
+					}
+				}
+
+				if (!allRoutes?.features.length && m.trips.length) {
+					throw new Error('no route GeoJSON in deploy/data');
+				}
+
 				if (m.coverage?.heatmap) {
-					const hRes = await fetch(`/data/${m.coverage.heatmap}`);
+					const hRes = await dataFetch(`/data/${m.coverage.heatmap}`);
 					if (hRes.ok) fullHeatmap = (await hRes.json()) as FeatureCollection;
 				}
 			} catch (e) {
 				error = e instanceof Error ? e.message : String(e);
+			} finally {
+				loading = false;
 			}
 		})();
 	});
@@ -171,7 +204,7 @@
 
 <main>
 	{#if error}
-		<p class="error">{error} — run pipeline then <code>pnpm run sync:data</code></p>
+		<p class="error">{error} — copy <code>web/data/</code> to VM <code>deploy/data/</code></p>
 	{:else if manifest && allRoutes}
 		<header>
 			<h1>Ebike Safari</h1>
@@ -226,8 +259,10 @@
 				<span>Select one ride to replay. All {manifest.trip_count} shown = coverage map.</span>
 			</footer>
 		{/if}
-	{:else}
+	{:else if loading}
 		<p class="loading">Loading rides…</p>
+	{:else}
+		<p class="error">No ride data — copy web/data to <code>deploy/data</code> on the server</p>
 	{/if}
 </main>
 

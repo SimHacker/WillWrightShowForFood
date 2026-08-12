@@ -49,6 +49,8 @@ npm run osm:import -- california
 
 Delete `filtered/*.pbf` or `raw/*.pbf` to force redo of that stage.
 
+Import uses `osmium export` with `--attributes id` (not `tags` — tags come from default `linear_tags` in GeoJSON properties) and `--geometry-types linestring` to skip nodes/areas.
+
 ## Valhalla (separate, not required for PG import)
 
 Valhalla builds routing tiles from PBF in `deploy/osm/raw/`. First start can take hours for California. Bind to localhost `:8002`. Use for proper map-match later; v0 edge tracks use PostGIS nearest-way (`scripts/build_ride_edges.py`).

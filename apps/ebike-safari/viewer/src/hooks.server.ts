@@ -6,5 +6,9 @@ import {
 export async function handle({ event, resolve }) {
 	const token = event.cookies.get(SESSION_COOKIE);
 	event.locals.user = await getSessionUser(token);
-	return resolve(event);
+	const response = await resolve(event);
+	if (event.url.pathname.startsWith('/data/')) {
+		response.headers.set('Cache-Control', 'no-store');
+	}
+	return response;
 }
