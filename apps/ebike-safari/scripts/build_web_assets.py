@@ -155,6 +155,13 @@ def heat_cell(lon: float, lat: float) -> tuple[float, float]:
     return round(gx, 6), round(gy, 6)
 
 
+def write_json_atomic(path: Path, payload: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
 def accumulate_trip_heat(grid: dict[tuple[float, float], int], points: list[dict]) -> None:
     """Bin GPS track into visit-frequency cells, filling gaps along each segment."""
     if len(points) < 2:
@@ -217,12 +224,8 @@ def build_coverage(out_dir: Path, entries: list[dict]) -> dict:
 
     bounds = union_bounds([e.get("bounds") for e in entries])
 
-    (cov_dir / "all-routes.geojson").write_text(
-        json.dumps(all_routes, indent=2), encoding="utf-8"
-    )
-    (cov_dir / "heatmap.geojson").write_text(
-        json.dumps(heatmap, indent=2), encoding="utf-8"
-    )
+    write_json_atomic(cov_dir / "all-routes.geojson", all_routes)
+    write_json_atomic(cov_dir / "heatmap.geojson", heatmap)
 
     return {
         "bounds": bounds,

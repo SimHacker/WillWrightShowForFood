@@ -11,7 +11,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
-from build_web_assets import build_coverage
+from build_web_assets import build_coverage, write_json_atomic
 
 
 def main() -> int:
@@ -38,7 +38,7 @@ def main() -> int:
 
     coverage = build_coverage(out_dir, entries)
     manifest["coverage"] = coverage
-    manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    write_json_atomic(manifest_path, manifest)
     print(
         f"Rebuilt coverage: {coverage['cell_count']} heat cells, "
         f"{coverage['trip_count']} trips → {out_dir / 'coverage'}"
