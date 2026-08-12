@@ -59,6 +59,8 @@
 	const HEAT_SOURCE = 'safari-heat';
 	const HEAT_LAYER = 'ride-heat';
 
+	const EMPTY_FC: FeatureCollection = { type: 'FeatureCollection', features: [] };
+
 	const linePaint = {
 		'line-color': '#e85d04',
 		'line-width': 4,
@@ -87,13 +89,22 @@
 	}
 
 	function syncRoutes() {
-		if (!map || !styleLoaded || !routes?.features.length) return;
+		if (!map || !styleLoaded) return;
+
+		const data = routes?.features.length ? routes : EMPTY_FC;
 
 		if (!map.getSource(ROUTES_SOURCE)) {
-			map.addSource(ROUTES_SOURCE, { type: 'geojson', data: routes });
+			if (!data.features.length) return;
+			map.addSource(ROUTES_SOURCE, { type: 'geojson', data });
 			map.addLayer(lineLayer(ROUTES_LAYER));
 		} else {
-			(map.getSource(ROUTES_SOURCE) as GeoJSONSource).setData(routes);
+			(map.getSource(ROUTES_SOURCE) as GeoJSONSource).setData(data);
+		}
+
+		if (!data.features.length) {
+			if (map.getLayer(ROUTES_HIGHLIGHT)) map.removeLayer(ROUTES_HIGHLIGHT);
+			if (map.getLayer(ROUTES_LAYER)) map.setFilter(ROUTES_LAYER, null);
+			return;
 		}
 
 		if (highlightTripId) {
@@ -116,10 +127,13 @@
 	}
 
 	function syncHeatmap() {
-		if (!map || !styleLoaded || !heatmap?.features.length) return;
+		if (!map || !styleLoaded) return;
+
+		const data = heatmap?.features.length ? heatmap : EMPTY_FC;
 
 		if (!map.getSource(HEAT_SOURCE)) {
-			map.addSource(HEAT_SOURCE, { type: 'geojson', data: heatmap });
+			if (!data.features.length) return;
+			map.addSource(HEAT_SOURCE, { type: 'geojson', data });
 			map.addLayer({
 				id: HEAT_LAYER,
 				type: 'heatmap',
@@ -149,7 +163,7 @@
 				}
 			});
 		} else {
-			(map.getSource(HEAT_SOURCE) as GeoJSONSource).setData(heatmap);
+			(map.getSource(HEAT_SOURCE) as GeoJSONSource).setData(data);
 		}
 
 		raiseRouteLayers();
