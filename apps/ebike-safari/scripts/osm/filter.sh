@@ -37,13 +37,12 @@ filter_one() {
 	echo "filter ${slug} → ${dest}"
 	osmium tags-filter "$src" \
 		w/highway w/cycleway w/waterway w/natural=coastline w/barrier \
-		--overwrite -o "${dest}.part"
-	if [[ ! -s "${dest}.part" ]]; then
-		echo "filter failed: empty output ${dest}.part" >&2
+		--overwrite -o "$dest"
+	if [[ ! -s "$dest" ]]; then
+		echo "filter failed: empty output ${dest}" >&2
 		exit 1
 	fi
-	osmium fileinfo -e "${dest}.part" >/dev/null
-	mv "${dest}.part" "$dest"
+	osmium fileinfo -e "$dest" >/dev/null
 	echo "done ${slug}: $(du -h "$dest" | awk '{print $1}')"
 }
 
