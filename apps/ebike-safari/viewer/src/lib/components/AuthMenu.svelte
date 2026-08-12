@@ -16,8 +16,8 @@
 	let menuOpen = $state(false);
 	let loginOpen = $state(false);
 	let settingsOpen = $state(false);
-	let username = $state('');
-	let password = $state('');
+	let username = $state('don');
+	let password = $state('don');
 	let busy = $state(false);
 	let loginError = $state<string | null>(null);
 
@@ -40,8 +40,8 @@
 
 	function closeLogin() {
 		loginOpen = false;
-		username = '';
-		password = '';
+		username = 'don';
+		password = 'don';
 		loginError = null;
 	}
 

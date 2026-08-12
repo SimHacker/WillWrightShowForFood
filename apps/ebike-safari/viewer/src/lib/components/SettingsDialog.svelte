@@ -11,10 +11,12 @@
 	let { open, settings, onClose, onChange }: Props = $props();
 
 	const locationModes: { value: LocationMode; label: string }[] = [
+		{ value: 'off', label: 'Off — hide my location' },
 		{ value: 'gps', label: 'GPS — live device location' },
-		{ value: 'manual', label: 'Manual — drag the marker on the map' },
-		{ value: 'off', label: 'Off — hide my location' }
+		{ value: 'manual', label: 'Manual — drag the marker on the map' }
 	];
+
+	const followDisabled = $derived(settings.locationMode === 'off');
 
 	function onWindowKeydown(event: KeyboardEvent) {
 		if (event.key === 'Escape' && open) onClose();
@@ -45,16 +47,15 @@
 			{/each}
 		</fieldset>
 
-		{#if settings.locationMode !== 'off'}
-			<label class="check">
-				<input
-					type="checkbox"
-					checked={settings.followUser}
-					onchange={(e) => onChange({ followUser: e.currentTarget.checked })}
-				/>
-				Keep map centered on my location
-			</label>
-		{/if}
+		<label class="check" class:disabled={followDisabled}>
+			<input
+				type="checkbox"
+				checked={settings.followUser}
+				disabled={followDisabled}
+				onchange={(e) => onChange({ followUser: e.currentTarget.checked })}
+			/>
+			Keep map centered on my location
+		</label>
 
 		<div class="actions">
 			<button type="button" onclick={onClose}>Done</button>
@@ -76,6 +77,7 @@
 		left: 50%;
 		z-index: 31;
 		width: min(22rem, calc(100vw - 2rem));
+		min-height: 16.5rem;
 		max-height: calc(100dvh - 2rem);
 		overflow: auto;
 		padding: 1rem 1.1rem;
@@ -123,6 +125,11 @@
 	.radio input,
 	.check input {
 		margin-top: 0.15rem;
+	}
+
+	.check.disabled {
+		opacity: 0.45;
+		cursor: not-allowed;
 	}
 
 	.actions {
