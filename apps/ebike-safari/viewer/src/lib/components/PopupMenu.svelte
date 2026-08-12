@@ -57,7 +57,9 @@
 		z-index: 41;
 		display: flex;
 		flex-direction: column;
-		gap: 0.3rem;
+		gap: 0.25rem;
+		max-height: min(60dvh, 22rem);
+		overflow-y: auto;
 		padding: 0.35rem;
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		border-radius: 10px;

@@ -47,9 +47,21 @@
 		onOpenMore
 	}: Props = $props();
 
-	const PLAYBACK_SPEEDS = [1, 5, 10, 50, 100] as const;
+	const PLAYBACK_SPEEDS = [1, 5, 10, 25, 50, 100, 200, 400] as const;
 
-	let openMenu = $state<'location' | 'map' | null>(null);
+	let openMenu = $state<'speed' | 'location' | 'map' | null>(null);
+
+	const speedLabel = $derived(playbackSpeed === 1 ? 'Real' : `${playbackSpeed}×`);
+
+	const speedMenuItems = $derived(
+		[...PLAYBACK_SPEEDS]
+			.reverse()
+			.map((speed) => ({
+				id: String(speed),
+				label: speed === 1 ? 'Real time' : `${speed}×`,
+				active: playbackSpeed === speed
+			}))
+	);
 
 	const locationLabel = $derived(
 		locationMode === 'off' ? 'Off' : locationMode === 'gps' ? 'GPS' : 'Pin'
@@ -76,7 +88,7 @@
 		openMenu = null;
 	}
 
-	function toggleMenu(menu: 'location' | 'map') {
+	function toggleMenu(menu: 'speed' | 'location' | 'map') {
 		openMenu = openMenu === menu ? null : menu;
 	}
 </script>
@@ -116,22 +128,27 @@
 	</div>
 
 	<div class="row controls" class:inactive={!replayActive}>
-		<div class="speeds" role="group" aria-label="Playback speed">
-			{#each PLAYBACK_SPEEDS as speed}
+		<div class="tools">
+			<div class="tool-slot">
 				<button
 					type="button"
-					class="chip speed"
-					class:active={playbackSpeed === speed}
+					class="chip tool speed-trigger"
+					class:active={playbackSpeed > 1}
 					disabled={!replayActive}
-					aria-pressed={playbackSpeed === speed}
-					onclick={() => onSpeed(speed)}
+					aria-haspopup="menu"
+					aria-expanded={openMenu === 'speed'}
+					onclick={() => toggleMenu('speed')}
 				>
-					{speed === 1 ? '1×' : `${speed}×`}
+					{speedLabel}
 				</button>
-			{/each}
-		</div>
+				<PopupMenu
+					open={openMenu === 'speed'}
+					items={speedMenuItems}
+					onSelect={(id) => onSpeed(Number(id))}
+					onClose={closeMenus}
+				/>
+			</div>
 
-		<div class="tools">
 			<div class="tool-slot">
 				<button
 					type="button"
@@ -277,23 +294,16 @@
 		text-align: right;
 	}
 
-	.speeds {
-		display: flex;
-		gap: 0.2rem;
-		flex: 0 0 auto;
-	}
-
 	.tools {
 		display: flex;
 		gap: 0.2rem;
 		flex: 1;
 		min-width: 0;
-		justify-content: flex-end;
 	}
 
 	.tool-slot {
 		position: relative;
-		flex: 0 1 auto;
+		flex: 1;
 		min-width: 0;
 	}
 
@@ -313,15 +323,13 @@
 		white-space: nowrap;
 	}
 
-	.chip.speed {
-		min-width: 2rem;
-		padding-inline: 0.35rem;
+	.chip.tool.speed-trigger {
+		width: 100%;
 		background: #343a40;
-		border-color: transparent;
 	}
 
 	.chip.tool {
-		max-width: 4.2rem;
+		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
