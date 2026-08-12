@@ -358,37 +358,35 @@
 			/>
 		</div>
 		{#if replayMode && series}
-			<footer>
-				<div class="controls">
+			<footer class="replay">
+				<div class="transport">
 					<button type="button" class="play" onclick={togglePlay} aria-pressed={playing}>
 						{playing ? 'Pause' : 'Play'}
 					</button>
-					<div class="speed-row">
-						<span class="speed-label">Speed</span>
-						<div class="speeds" role="group" aria-label="Playback speed">
-							{#each PLAYBACK_SPEEDS as speed}
-								<button
-									type="button"
-									class="speed"
-									class:active={playbackSpeed === speed}
-									aria-pressed={playbackSpeed === speed}
-									onclick={() => (playbackSpeed = speed)}
-								>
-									{speed === 1 ? 'Real' : `${speed}×`}
-								</button>
-							{/each}
-						</div>
-					</div>
+					<input
+						class="scrub"
+						type="range"
+						min="0"
+						max={Math.max(0, series.points.length - 1)}
+						bind:value={scrubIndex}
+						oninput={() => (playing = false)}
+						aria-label="Ride position"
+					/>
 				</div>
-				<input
-					class="scrub"
-					type="range"
-					min="0"
-					max={Math.max(0, series.points.length - 1)}
-					bind:value={scrubIndex}
-					oninput={() => (playing = false)}
-					aria-label="Ride position"
-				/>
+				<div class="speed-bar" role="group" aria-label="Playback speed">
+					<span class="speed-label">Speed</span>
+					{#each PLAYBACK_SPEEDS as speed}
+						<button
+							type="button"
+							class="speed"
+							class:active={playbackSpeed === speed}
+							aria-pressed={playbackSpeed === speed}
+							onclick={() => (playbackSpeed = speed)}
+						>
+							{speed === 1 ? 'Real' : `${speed}×`}
+						</button>
+					{/each}
+				</div>
 				<div class="stats">
 					{#if currentPoint}
 						<span>{currentPoint.speed_kmh?.toFixed(1) ?? '—'} km/h</span>
@@ -488,7 +486,12 @@
 	footer {
 		padding: 0.5rem 1rem 1rem;
 		background: #16213e;
-		z-index: 1;
+		z-index: 5;
+		flex: 0 0 auto;
+	}
+
+	footer.replay {
+		border-top: 1px solid rgba(248, 249, 250, 0.12);
 	}
 
 	footer.summary {
@@ -496,33 +499,29 @@
 		opacity: 0.85;
 	}
 
-	.controls {
+	.transport {
 		display: flex;
 		gap: 0.75rem;
 		align-items: center;
-		flex-wrap: wrap;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.55rem;
 	}
 
-	.speed-row {
+	.speed-bar {
 		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		flex: 1;
-		min-width: min(100%, 20rem);
+		gap: 0.35rem;
+		align-items: stretch;
+		width: 100%;
+		margin-bottom: 0.55rem;
 	}
 
 	.speed-label {
-		font-size: 0.8rem;
-		font-weight: 600;
-		opacity: 0.85;
-		flex: 0 0 auto;
-	}
-
-	.speeds {
 		display: flex;
-		gap: 0.25rem;
-		flex-wrap: wrap;
+		align-items: center;
+		font-size: 0.8rem;
+		font-weight: 700;
+		opacity: 0.9;
+		flex: 0 0 auto;
+		padding-right: 0.15rem;
 	}
 
 	button.play {
@@ -530,16 +529,18 @@
 	}
 
 	input.scrub {
-		width: 100%;
+		flex: 1;
+		min-width: 0;
 		margin: 0;
 	}
 
 	button.speed {
-		min-width: 0;
-		padding: 0.35rem 0.55rem;
-		background: rgba(248, 249, 250, 0.12);
-		font-size: 0.8rem;
-		font-weight: 600;
+		flex: 1;
+		min-width: 2.6rem;
+		padding: 0.45rem 0.35rem;
+		background: #343a40;
+		font-size: 0.82rem;
+		font-weight: 700;
 	}
 
 	button.speed.active,
