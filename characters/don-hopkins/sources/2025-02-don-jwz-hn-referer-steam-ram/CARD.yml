@@ -1,0 +1,28 @@
+# CARD — Steam Ram / jwz HN referer (Feb 2025)
+
+glance: README.md
+
+room:
+  id: 2025-02-don-jwz-hn-referer-steam-ram
+  name: "Steam Ram? Mechanical Ewe? — jwz hn.png referer troll"
+  type: [email, hn_comment, jwz, scott_draves]
+  home: characters/don-hopkins/sources/2025-02-don-jwz-hn-referer-steam-ram/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → 2025-02-06-mail-thread.md"
+    advertisement: "HN referer hn.png; Don testicle troll reply; Steam Ram tease."
+  READ-NAMES:
+    signature: "readNames() → README.md#project-name-candidates"
+    advertisement: "Steam Ram, Mechanical Ewe, Atomic Goat — new project?"
+
+compose_with:
+  - ../2020-10-don-jwz-rubix11/README.md
+  - ../2008-05-jwz-simrogenous-street-view/README.md
+  - ../../scott-draves/CHARACTER.yml
+
+related:
+  - name: Jamie Zawinski
+    via: "cdn.jwz.org HN referer trap; jamie_ca on HN"
+  - name: Scott Draves
+    via: "CC on mail — Mechanical Ewe / sheep orbit"

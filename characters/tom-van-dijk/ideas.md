@@ -20,7 +20,7 @@ Heather/Steve **ZombieSim**, **iffpencil2** still running. [`../heather-alvey/`]
 LUCPIX, FARx, XAbatch — Tom's VC++ archaeology; playthrough show seed.
 
 ### 6. NL meetup
-Deventer ↔ Badhoevedorp — low-friction recording.
+Deventer ↔ Amsterdam area — low-friction recording.
 
 ## Sources
 

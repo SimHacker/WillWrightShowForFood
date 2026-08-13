@@ -19,7 +19,9 @@ culture that hosted the **2006** talk that started the ball rolling on **freeing
 
 Sam writes about **long-term thinking in software** (public essays; Cabinet of Wonders newsletter).
 
-**Not documented:** attendance at the **2006** Eno/Wright event. Worth asking Sam.
+**Answered (2026-08-03):** Sam **was not at the 2006 Eno/Wright event** — "I wasn't at the
+2006 talk at long now" ([repo-show-thread-2026.md](repo-show-thread-2026.md)). The show beat
+below stands without faked co-presence.
 
 ---
 

@@ -1,0 +1,15 @@
+# GLANCE — ebike-safari skill
+
+status: public_live
+name: ebike-safari
+
+what: |
+  E-bike FIT pipeline + design cauldron (gestures, exposure, viewer).
+  Urban Safari = amber. Phase: slurping sources into design/.
+
+app: ../../apps/ebike-safari/
+design: ../../apps/ebike-safari/design/
+scripts: ../../apps/ebike-safari/scripts/
+legacy: ../../apps/ebike-safari/LEGACY-urban-safari.md
+
+see: SKILL.md | CARD.yml

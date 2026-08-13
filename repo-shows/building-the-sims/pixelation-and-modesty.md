@@ -3,6 +3,7 @@
 *The Sims 1 modesty effect — Don's implementation memory and related bugs. **Story cards:**
 [`artifacts/INDEX.md`](artifacts/INDEX.md) (censorship section). HN index in
 [`characters/don-hopkins/sims-pixelation-censorship-hn-2022.md`](../../characters/don-hopkins/sims-pixelation-censorship-hn-2022.md).*
+**2008:** Jamie Zawinski coined **SimRogenous zones** on LiveJournal — [`characters/don-hopkins/sources/2008-05-jwz-simrogenous-street-view/README.md`](../../characters/don-hopkins/sources/2008-05-jwz-simrogenous-street-view/README.md).
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Don implemented

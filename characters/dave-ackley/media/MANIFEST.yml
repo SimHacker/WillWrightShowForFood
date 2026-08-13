@@ -57,6 +57,8 @@ documents:
     source_url: "https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf"
     code: "https://github.com/sixstring982/MFMv2-city"
     summary_md: ../city-generation-routing.md
+    full_text_md: ../sources/tsmall-local-routing-mfm/full-text.md
+    video_notes_md: ../sources/tsmall-local-routing-mfm/distributed-city-generation-video.md
     discussed_in: ../ca-correspondence-story.md
 
 related:

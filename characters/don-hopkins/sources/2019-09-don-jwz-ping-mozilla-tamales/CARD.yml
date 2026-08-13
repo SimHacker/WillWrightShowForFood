@@ -1,0 +1,30 @@
+# CARD — Don ↔ jwz Ping! mail (Sep 2019)
+
+glance: README.md
+
+room:
+  id: 2019-09-don-jwz-ping-mozilla-tamales
+  name: "Ping! — Mozilla, Safari, Tamale Lady, Brainwash, Tap Plastics"
+  type: [email, jwz, mozilla, sf_lore]
+  home: characters/don-hopkins/sources/2019-09-don-jwz-ping-mozilla-tamales/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → 2019-09-ping-mail-thread.md"
+    advertisement: "Mozilla as Google subsidiary; tamales in Amsterdam; Tap Plastics bongs."
+  READ-DON-OPEN:
+    signature: "readDonOpen() → 2019-09-ping-mail-thread.md#1-sep-2019"
+    advertisement: "Don pings jwz — freezer tamales replace Tamale Lady."
+
+compose_with:
+  - ../2008-05-jwz-simrogenous-street-view/README.md
+  - ../2011-05-jwz-computational-feces-comment-thread/README.md
+  - ../2018-12-postscript-pdb-java-leigh-klotz/README.md
+  - ../2020-01-don-jwz-somebody-fell-for-it/README.md
+  - ../media/brainwash-cafe/INDEX.yml
+
+related:
+  - name: Jamie Zawinski
+    via: "jwz.org · DNA Lounge · Netscape/Mozilla co-founder"
+  - name: Brainwash Cafe
+    via: "Folsom St laundromat+cafe — closed; Don media room"

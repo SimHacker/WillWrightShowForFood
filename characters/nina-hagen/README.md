@@ -47,3 +47,5 @@ what she thinks.
 
 **Watch-along tour:** [`video-stories.md`](video-stories.md) — verified YouTube clips with narration
 between them (links open in your browser; no embedded players).
+
+**Mar 2026 gospel arc:** [`sources/2026-03-22-gospel-highway-to-heaven.md`](sources/2026-03-22-gospel-highway-to-heaven.md) — *Highway to Heaven* (27 Mar 2026), *ROCK THE FLOCK* with Charles Normal, Ur-Punk Jesus / Gruselverein (derStandard).

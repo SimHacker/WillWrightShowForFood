@@ -1,0 +1,37 @@
+# CARD — Emacs in a browser mail thread (June 2011)
+
+glance: README.md
+
+room:
+  id: 2011-06-emacs-in-browser-mail-thread
+  name: "Emacs in a browser — Blandy × Don prompt UX"
+  type: [email_thread, emacs, editors, javascript]
+  home: characters/don-hopkins/sources/2011-06-emacs-in-browser-mail-thread/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → README.md"
+    advertisement: "Blandy on JS-as-Lisp and Emacs depression; Don on shell prompt ^A/^E AI."
+  READ-DON:
+    signature: "readDon() → 2011-06-08-don-hopkins-emacs-prompt-reply.md"
+    advertisement: "Newline-terminated prompts — line-oriented cut/paste without schizophrenic confusion."
+  READ-ROLAND:
+    signature: "readRoland() → 2011-06-08-roland-mcgrath-inhibit-field-text-motion.md"
+    advertisement: "inhibit-field-text-motion — the comint field-property knob; arcana@red-bean.com."
+
+compose_with:
+  - ../articles/instance-first-development.md
+  - ../../axis-of-eval-send-code-not-commands.md
+  - ../2011-05-jwz-computational-feces-comment-thread/README.md
+
+related:
+  - name: Jim Blandy
+    note: "Guile/GDB orbit; no WWSFF character room yet"
+  - name: Jamie Zawinski
+    via: CC on thread
+  - name: Nick Papadakis
+    via: CC on thread
+  - name: Roland McGrath
+    note: "GNU/Hurd/GDB; answered with inhibit-field-text-motion; arcana@red-bean.com"
+  - name: Chris Lattner
+    note: "FOSDEM LLVM/Clang IDE talk — cited by Blandy (not Craig Latta)"

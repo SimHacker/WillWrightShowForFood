@@ -1,0 +1,31 @@
+# Lively Kernel / Lively Web — Morphic in the browser (Dan Ingalls)
+
+meta:
+  rendered_edition: lively-kernel-morphic.md
+  author: Dan Ingalls et al.
+  repo: https://github.com/LivelyKernel/LivelyKernel
+  live: http://lively-web.org/
+  license: MIT
+  kind: framework
+  consent: public
+
+the_hook: |
+  Full live system in the browser — not a widget library. Edit code and morphs while the world runs;
+  save worlds; parts bin; halos; serialization. Jens Mönig calls this the gold standard morphic.js
+  does not aspire to meet.
+
+heritage: "Self Morphic → Squeak → Lively Kernel (Ingalls) → morphic.js (Jens) / SqueakJS (Vanessa)"
+
+show_hooks:
+  - "JSConf '12 demo — live edit in the browser"
+  - "Halos vs Don's pie menus — two direct-manipulation schools"
+  - "PartsBin + Serialization — construction-set worlds that persist"
+  - "Ingalls OS quote — live microworld absorbs what doesn't fit in the language"
+
+see_also:
+  - lively-kernel-morphic.md
+  - design-principles-os-quote.md
+  - ../../jens-monig/sources/morphic-js.md
+  - ../../alan-kay/sources/morphic-lineage.md
+  - ../../don-hopkins/pie-menus-chi-88-and-beyond.md
+  - ../pie-menus-and-pop-ups.md

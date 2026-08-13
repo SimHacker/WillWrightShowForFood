@@ -27,6 +27,7 @@ Brown, John McCarthy, Ted Selker.
 **Start here:** [Invitation](invitation.md) ·
 [Interview hooks](ideas.md) ·
 [The 2026 experiments](sources/2026-chatbot-experiments.md) ·
+[CS547 / Gosling / ToonTalk (2023)](sources/2023-02-stanford-cs547-gosling-toontalk/README.md) ·
 [Show seed](../../repo-shows/ken-kahn/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

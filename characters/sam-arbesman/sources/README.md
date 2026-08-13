@@ -11,6 +11,7 @@ Read/Girder index for public portrayal material.
 | [maxis-corporate-vision.md](maxis-corporate-vision.md) | [maxis-corporate-vision.yml](maxis-corporate-vision.yml) | Historical Maxis vision excerpts + [media](../media/MANIFEST.yml) |
 | [magic-of-code-2025.md](magic-of-code-2025.md) | [magic-of-code-2025.yml](magic-of-code-2025.yml) | Third book — humanistic computation |
 | [long-now-thread.md](long-now-thread.md) | [long-now-thread.yml](long-now-thread.yml) | Fellow × 2006 Eno×Will × open SimCity saga |
+| [repo-show-thread-2026.md](repo-show-thread-2026.md) | [repo-show-thread-2026.yml](repo-show-thread-2026.yml) | Jul–Aug 2026 invitation — Sam confirms conversation (Don or Chaim); eBike Safari demo |
 
 **Discovery:** [who-is-sam-arbesman.md](../who-is-sam-arbesman.md) · [show-formats.md](../show-formats.md)
 

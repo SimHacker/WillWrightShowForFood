@@ -1,0 +1,57 @@
+# Repo Show invitation thread 2026 — girder
+
+meta:
+  rendered_edition: repo-show-thread-2026.md
+  span: "2026-07-31 — 2026-08-13"
+  channel: email
+
+don_invitation:
+  date: "2026-07-31"
+  headline: "Will Wright is in"
+  role_offered: "co-architect rather than audience"
+  questions:
+    - "Were you at 2006 Long Now Eno x Will?"
+    - "Who else in the Sam x Reese x Will x Chaim stack?"
+
+sam_replies:
+  - date: "2026-08-03"
+    from: "vacation in Japan"
+    highlights:
+      - "Would love to record a conversation with you"
+      - "I wasn't at the 2006 talk at long now"  # answers long-now-thread.md open item
+      - "will think of more folks who could be good fellow travelers"
+  - date: "2026-08-13T11:39"
+    highlights:
+      - "conversation as a forcing function, rather than just me rambling into a camera"
+  - date: "2026-08-13T12:06"
+    highlights:
+      - "Happy to do one with you, or Chaim"
+      - "it's always fun to riff with him!"
+    note: "Read the repo closely enough to find the Chaim pairing suggestion"
+
+don_replies:
+  - date: "2026-08-13T11:52"
+    topic: time_shifted_conversation_architecture
+    ladder: [solo_video, one_on_one, multi_person_live, edited_long_form_show]
+    key_line: "The repo is the central grounding and stage to the show"
+  - date: "2026-08-13T12:08"
+    topic: ebike_safari_demo
+    key_line: "There's just one map of reality, but many different games you can play in the real world!"
+    anecdote: "Temkin call taken from park bench by the zoo mid-ride"
+    media: ../../../apps/ebike-safari/media/MANIFEST.yml
+
+status_changes:
+  conversation: confirmed
+  pairing_options: [don, chaim-gingold]
+  next: informal private chats to plan recorded discussion
+
+open_items:
+  - fellow_traveler_suggestions_from_sam
+  - schedule_private_chat
+  - decide_pairing
+
+see_also:
+  - repo-show-thread-2026.md
+  - long-now-thread.md
+  - ../correspondence.yml
+  - ../../../apps/ebike-safari/

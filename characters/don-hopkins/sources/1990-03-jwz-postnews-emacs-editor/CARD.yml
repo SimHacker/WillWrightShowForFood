@@ -1,0 +1,30 @@
+# CARD — jwz PostNews Emacs soapbox (Mar 1990)
+
+glance: README.md
+
+room:
+  id: 1990-03-jwz-postnews-emacs-editor
+  name: "PostNews — Glenn on PS newsreaders — jwz Emacs environment"
+  type: [usenet, postnews, emacs, postscript, jwz]
+  home: characters/don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/
+
+methods:
+  READ-POST:
+    signature: "readPost() → 1990-03-18-jwz-postnews-post.md"
+    advertisement: "Pipe PS from Emacs; environment not editor; end soapbox mode."
+  READ-GLENN:
+    signature: "readGlenn() → README.md#receipt-chain"
+    advertisement: "PostScript spooled news — new readers or hack rn?"
+
+compose_with:
+  - ../../amanda-walker/sources/1989-1991-news-makers-and-postnews.md
+  - ../../glenn-reid/sources/distillery-pdf-correspondence.md
+  - ../2011-06-emacs-in-browser-mail-thread/README.md
+
+related:
+  - name: Glenn Reid
+    via: "Likely 'Glenn writes' — PostNews / Distillery orbit"
+  - name: Amanda Walker
+    via: "PostNews experiment Mar–Apr 1990"
+  - name: Jamie Zawinski
+    via: "NeXT bang-path post; Emacs soapbox"

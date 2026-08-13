@@ -1,0 +1,26 @@
+# CARD — ebike-safari skill
+
+skill:
+  name: ebike-safari
+  version: 1.0.0
+  type: ebike-gps-pipeline
+  status: public_live
+
+app: ../../apps/ebike-safari/
+design: ../../apps/ebike-safari/design/
+scripts: ../../apps/ebike-safari/scripts/
+
+legacy:
+  name: urban-safari
+  status: amber
+  note: "SFC 2008–2011 — Google Maps, MySQL; do not extend"
+  archive: ../../apps/ebike-safari/LEGACY-urban-safari.md
+
+provides:
+  - Bosch Flow iPhone USB sync
+  - FIT → GeoJSON + series + manifest
+  - Video/transcript sync on route
+  - OSM tile contract (MapLibre viewer planned)
+
+quick_start:
+  pipeline: "python ../../apps/ebike-safari/scripts/pipeline.py --sync --trips-dir demo/rides --out demo/web/data"

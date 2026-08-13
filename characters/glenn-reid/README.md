@@ -11,3 +11,4 @@ Show: [`../../repo-shows/postscript-distillery-to-pdf/`](../../repo-shows/postsc
 Sources:
 - [`sources/2015-01-31-touchtype-vr-correspondence.md`](sources/2015-01-31-touchtype-vr-correspondence.md) — TouchType × VR thread
 - [`sources/distillery-pdf-correspondence.md`](sources/distillery-pdf-correspondence.md) — Distillery / PDF
+- [`../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md`](../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md) — Glenn on PS newsreaders; jwz Emacs reply (Mar 1990)

@@ -1,5 +1,4 @@
 # Don Hopkins — sync sources (dedupe + normalize for WWSFF)
-# WWSFF is live; this file records what was pulled from upstream and what stays private.
 
 meta:
   id: don-hopkins-sync
@@ -16,24 +15,11 @@ upstream:
       Adventure microworld layer — rich CHARACTER.yml + artifacts.
       WWSFF takes Repo Show–relevant backbone; adventure-only state stays upstream.
 
-  donhopkins_private:
+  donhopkins_upstream:
     repo: SimHacker/DonHopkins
     path: characters/don-hopkins/
     role: authoritative_archive
     rule: "One-way cream export per sync-with-donhopkins.yml — do not dual-edit"
-
-public_projection_rules:   # HARD rules for anything projected public (WWSFF + DonHopkins public exports)
-  never:
-    - '"open to work" / "looking for a job" / availability signals — this is a portfolio, not a job hunt'
-    - "any mention of Juho Hietala — the housemate/co-hire angle is PRIVATE (Marconistraat only)"
-    - "financial pressure, reduced pay, mortgage, needing money"
-    - "Engelbart keyset ownership, Gilmore auction backstory, auction/sale strategy — DonHopkins characters/don-hopkins/artifacts/ only"
-  leela_is_positive:
-    say: "Leela AI is an ongoing concern Don is proud of and excited to share what he's learned; on great terms."
-    never: "framing Leela as a problem, escape, or something he's leaving"
-  henry_minsky:
-    ok_public: "Henry as AI/robotics peer + MIT-AI-Lab lineage (Marvin's son; COG / stuffed-bear story) — a great Repo Show guest / talk collaborator"
-    private_only: "Henry as a job reference for Monumental"
 
 sync_policy:
   include_in_wwsff:
@@ -53,8 +39,8 @@ sync_policy:
       - adventure transformation (Bunny Backfire, rabbit form sessions)
       - FMC Motorcoach #898 room graph, selfies, dreams
       - inventory, companions as live game state
-      - sessions/, correspondence/, private email
-    reason: "Adventure fiction + personal space — not Repo Show public projection"
+      - sessions/, correspondence/
+    reason: "Adventure fiction layer — upstream only"
 
 wwsff_layout:
   CHARACTER.yml: self_sovereign host card
@@ -66,9 +52,9 @@ wwsff_layout:
   README.md: human narrative (hand-authored)
   ideas.md: Repo Show + dream guest hooks
   about-host.md: resume reimagined (from DonHopkins master-of-ceremonies)
-  "*.md topic files": self-declaring entry points (distilled from DonHopkins public_safe)
+  "*.md topic files": self-declaring entry points (distilled from upstream)
   career/: yaml backbone (condensed from upstream)
-  portrayal/: public-safe voice, heroes, presentations
+  portrayal/: voice, heroes, presentations
   talks/: talk package distills (from DonHopkins/talks/)
   writing/: essay + primary source index
   history/: era distills (interval-research.yml)
@@ -101,7 +87,7 @@ files_mapped:
     action: already_parallel_verify_dates
 
 see_also:
-  - { path: ../../process/sync-with-donhopkins.yml, why: "Export pipeline from DonHopkins" }
+  - { path: ../../process/sync-with-donhopkins.yml, why: "Export pipeline" }
   - { path: ../../process/live-repo.yml, why: "Edit WWSFF — source on hold when projected" }
   - { path: ../slats/CHARACTER.yml, why: "Slats — SFC robot → drag race judge" }
   - { path: ../../process/cross-links.yml#constructionist_lineage, why: "Will show + microworld arc" }

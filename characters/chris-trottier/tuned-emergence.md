@@ -46,6 +46,8 @@ Browse folder: [`../will-wright/sources/2004-02-21-chris-trottier-tuned-emergenc
 
 This essay is the intellectual spine of [**Design by Accretion**](design-by-accretion.md) — discuss the method, then demonstrate it live with the cauldron on the same ideas.
 
----
+## Cited by
+
+Don Hopkins quoted this essay in the **SimFaux** Drupal post (Mar 2006) and again in a **Nov 2006 demo email** — [`../../../apps/simfaux/archives/2006-03-19-fauxcast-on-freedom-full.md`](../../../apps/simfaux/archives/2006-03-19-fauxcast-on-freedom-full.md) · [email](../../../apps/simfaux/archives/2006-11-03-simfaux-demo-email.md)
 
 ↑ [Chris Trottier](README.md) · [Career memoir digest](sources/2007-01-10-leaving-maxis/career-memories.md)

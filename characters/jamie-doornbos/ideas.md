@@ -33,7 +33,7 @@ choice at 80 MPH, plus an essay question about drunk-driving mayhem. Gentle memo
 could demo a repo-native version on air. Satire vs moral panic still plays.
 
 ### 6. Tom van Dijk — modder who reverse-engineered your SimAntics
-IFF Pencil author; **Behavior.iff** mystery; EA Legal 2002. NL neighbor (Deventer ↔ Badhoevedorp).
+IFF Pencil author; **Behavior.iff** mystery; EA Legal 2002. NL neighbor (Deventer ↔ Amsterdam area).
 
 → [`../tom-van-dijk/`](../tom-van-dijk/)
 

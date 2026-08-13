@@ -129,6 +129,37 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [sunviewgames → SDI resurrection (2026)](../../antoni-sawicki/sources/2026-08-01-sunviewgames-sdi-thread.md) | Weiser firsthand, 24 Jan 1987: "**I used the snow to hack pies into sunview**"; Apr 1988 NeWS-makers post (Shneiderman's camera, Zork navigation, mouse-ahead on Usenet); recovered [SDI source](../../mark-weiser/software/README.md) with `piemenu_track.c` |
 | [JavaScript Pie Menus for IE (2001)](2001-javascript-pie-menus-ie.md) | **The web-era implementation** — XML + DHTML behavior component at piemenu.com; Fasteroids fair-comparison game; anti-patent paragraph again; credits list naming the whole chain (Weiser, Gallaher, Shneiderman, Gosling, Siegel, Wright…). **Source cached**: [`../code/javascript-pie-menus/`](../code/javascript-pie-menus/README.md) |
 
+## Sims censorship / SimRogenous (2008 → 2022)
+
+| Read | What |
+|------|------|
+| [jwz — "Why the long face?" (May 2008)](2008-05-jwz-simrogenous-street-view/README.md) | Google Street View blurs Central Park horse; jwz coins **SimRogenous zones**; Nick Papadakis forwards to Don |
+| [Sims pixelation — Don HN notes (2022)](../sims-pixelation-censorship-hn-2022.md) | Shimmer RNG, no mesh underneath, TSO lockstep bug, maid/plunger |
+| [Pixelation & modesty — Building The Sims](../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Show reunion hub |
+
+## X11 / Unix-Haters lore
+
+| Read | What |
+|------|------|
+| [The Joy of X — Cheese Shop rant (E2, 2000)](2000-06-13-everything2-joy-of-x/README.md) | Don `.plan` → JWZ `screenhack.h` → ariels Everything2 — Monty Python portable X |
+| [X 25th anniversary — Gettys LinkedIn thread (2009)](2000-06-13-everything2-joy-of-x/2009-03-x25-anniversary-linkedin-thread.md) | Don cites screenhack.h to X group; lost Boston screen dump |
+| [jwz — Computational feces comment thread (2011)](2011-05-jwz-computational-feces-comment-thread/README.md) | Don on English-like PLs; Bob Bane on AppleScript `windows` dictionary lie |
+| [Emacs in a browser — Blandy mail thread (2011)](2011-06-emacs-in-browser-mail-thread/README.md) | JS-as-Lisp; Don's newline-terminated shell prompts vs Emacs ^A/^E "AI" |
+| [jwz — PostNews Emacs soapbox (1990)](1990-03-jwz-postnews-emacs-editor/README.md) | PostScript spooled news; pipe to PS from Emacs — *environment not editor* |
+| [PostScript / PdB / Java — Leigh Klotz (1991–2018)](2018-12-postscript-pdb-java-leigh-klotz/README.md) | 1991 PARC PdB letter; jwz slur; PdB→Oak→Java; full Dec 2018 mail thread |
+| [Don ↔ jwz — Ping! (Sep 2019)](2019-09-don-jwz-ping-mozilla-tamales/README.md) | Mozilla/Google money; Safari; Tamale Lady; Brainwash; Amsterdam tamales; Tap Plastics |
+| [Don ↔ jwz — Somebody fell for it! (Jan 2020)](2020-01-don-jwz-somebody-fell-for-it/README.md) | Two problems egg-cup variant; nuts; OpenBSD Firefox / ESR pun |
+| [Don → jwz — PDP-7 Munching Squares / PIXIE (Mar 2020)](2020-03-don-jwz-pdp7-munching-squares-pixie/README.md) | Hypnotoad; first pie menus; AfterEffects film — prelude to Flight of the PIXIE |
+| [Don → jwz — RubiX11 (Oct 2020)](2020-10-don-jwz-rubix11/README.md) | Unix window systems = Rubik's Cube with stickers switched |
+| [Don — Steam Ram / jwz HN referer (Feb 2025)](2025-02-don-jwz-hn-referer-steam-ram/README.md) | hn.png referer trap; Don HN troll reply; Steam Ram / Mechanical Ewe / Atomic Goat |
+| [Window Manager Flames — ICCCM/OWM/piewm](i39l-window-manager-flames.md) | Unix-Haters X chapter — "The ICCCM Sucks"; OWM design notes |
+
+## Stanford CS547 (cross-room)
+
+| Read | What |
+|------|------|
+| [Ken Kahn — Gosling / ToonTalk / Visual Janus (Feb 2023)](../../ken-kahn/sources/2023-02-stanford-cs547-gosling-toontalk/README.md) | Don surfaces Winograd tapes; Ken Java Q **50:20**; Don security Q **44:53**; ToonTalk→Java applets; Will Wright 1996 Microworlds |
+
 ## OpenLaszlo / Garnet / Svelte lineage (smooshed articles, Aug 2026)
 
 Overlapping blog posts and HN comment versions merged into four deduplicated

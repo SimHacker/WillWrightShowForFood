@@ -40,6 +40,7 @@ see_also:
   - { path: ../donald-michie/, why: "Duckmouse — Institute founder" }
   - { path: ../james-gosling/, why: "Old NeWS + early-Java friend — the 'NeWS to Java' pairing (repo-shows/james-gosling/)" }
   - { path: ../don-hopkins/, why: "HyperLook (where Don built SimCity's UI), NeWS, PdB — longtime collaborator" }
+  - { path: ../don-hopkins/sources/2018-12-postscript-pdb-java-leigh-klotz/README.md, why: "Leigh Klotz defends PS; 1991 PARC PdB letter; 2018 thread; PdB→Oak→Java" }
   - { path: ../bill-atkinson/, why: "HyperCard → HyperLook lineage (van Hoff's NeWS reimagining) — memorial" }
   - { path: ../../process/trails/live-objects.md, why: "NeWS / HyperLook in the live-object lineage" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

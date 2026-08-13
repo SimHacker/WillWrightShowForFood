@@ -11,5 +11,6 @@
 | [CARD.yml](CARD.yml) | Interface |
 | [memorial.md](memorial.md) | Memorial essay |
 | [sources/](sources/) | Pete's announcement + tribute digest + DAT tapes |
+| [PdB licensing 1991](../don-hopkins/sources/2018-12-postscript-pdb-java-leigh-klotz/1991-leigh-klotz-parc-pdb-licensing-letter.md) | Leigh @ PARC → Turing HyperNeWS PdB thread |
 
 Spelling: **Niblett**.

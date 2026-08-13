@@ -46,7 +46,7 @@ declare:
     heir to OpenLaszlo but ground-up redesign (not a port). Reference apps: calendar,
     desktop, docs, inspector. Does not use Svelte; spiritually closer to Svelte 5 runes
     than to React.
-  provenance: "Public GitHub + davidtemkin.github.io/declarelang; LinkedIn DM to Don (Jul 2026) before public post — treat 'wet cement' framing as sensitive until he posts."
+  provenance: "Public GitHub + davidtemkin.github.io/declarelang; LinkedIn thread Jul 2026."
   why_it_matters: "Third act of the reunion show — OL soul for the AI era; Don's Svelte/Micropolis parallel; training-data leverage (OL in corpus, Declare declares the inheritance)."
   repo: "https://github.com/davidtemkin/declarelang"
   live: "https://davidtemkin.github.io/declarelang/"
@@ -66,7 +66,7 @@ sources:
   mail_2006: private  # 2006 Laszlo threads held in Don's archive pending hand curation
   openlaszlo_5_0_thread: characters/david-temkin/sources/2026-openlaszlo-5.0-linkedin-thread.md
   declarelang: characters/david-temkin/sources/declarelang.md
-  declare_dm: characters/david-temkin/sources/2026-linkedin-dm-declare.md
+  declare_reimagine: characters/david-temkin/sources/declare-reimagine-discussion.md
   declare_constraints_2026_08: characters/david-temkin/sources/2026-08-03-declare-constraints-thread.md
   mesa_and_in_formation: characters/david-temkin/sources/mesa-and-in-formation.md
   wikipedia: null
@@ -87,7 +87,7 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: sources/README.md, why: "OL 5.0 + Declare + Mesa / In Formation pack" }
   - { path: sources/declarelang.md, why: "Deep sniff — Declare vs Svelte vs OpenLaszlo; ISP open Q" }
-  - { path: sources/2026-linkedin-dm-declare.md, why: "DM spark — reimagine, ISP, Ungar, speed-of-light" }
+  - { path: sources/declare-reimagine-discussion.md, why: "Reimagine-not-port thesis; ISP; Ungar; Svelte triangle" }
   - { path: ../henry-minsky/, why: "Laszlo colleague; relayed revival; reunion + solo invites" }
   - { path: ../oliver-steele/, why: "LZX designer; Instance Substitution Principle — ask vs Declare" }
   - { path: ../david-ungar/, why: "Self; Laszlo interview lore; k-line inheritance; optional reunion" }

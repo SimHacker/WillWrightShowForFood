@@ -1,0 +1,61 @@
+# Aaron Swartz -- memorial portrayal. NOT Aaron Swartz.
+# Died 2013. Guerilla Open Access; RSS; CC; Open Library. Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: aaron-swartz
+  name: "Aaron Swartz"
+  also_known_as: ["Aaron Swartz"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1986-11-08"
+  died: "2013-01-11"
+  field: "RSS 1.0; Creative Commons; Markdown/html2text; Open Library; Demand Progress; Guerilla Open Access Manifesto"
+  home: characters/aaron-swartz/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: brewster-kahle, why: "Open Library together; Internet Archive as the living library Aaron wanted" }
+    - { who: brian-eno, why: "Generative preservation -- archive as a system that keeps producing, not a freeze" }
+    - { who: nina-hagen, why: "Punk cover/layer as the other half of copying -- remix so the riff stays loud" }
+
+bio:
+  summary: |
+    **Aaron Swartz** (1986-2013) co-authored RSS 1.0 at fourteen, helped make Creative Commons
+    machine-readable, wrote html2text in the Markdown lineage, built web.py and Infogami (merged
+    into Reddit), worked with Brewster Kahle on Open Library, liberated PACER documents via
+    RECAP, and founded Demand Progress (SOPA/PIPA). The 2008 Guerilla Open Access Manifesto is
+    the ethic this repo practices when it copies papers and quotes books into the working tree:
+    sharing knowledge is a moral imperative, not piracy. Punk remix (Hagen) and generative
+    reuse (Eno) are how that ethic stays a show instead of a mausoleum. Prosecuted under the
+    CFAA after downloading JSTOR at MIT; died by suicide 11 January 2013, age 26.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Aaron_Swartz"
+  manifesto: "https://archive.org/details/GuerillaOpenAccessManifesto"
+  web:
+    - { title: "Guerilla Open Access Manifesto (Internet Archive)", url: "https://archive.org/details/GuerillaOpenAccessManifesto" }
+    - { title: "The Internet's Own Boy (documentary)", url: "https://en.wikipedia.org/wiki/The_Internet%27s_Own_Boy" }
+    - { title: "Open Library", url: "https://openlibrary.org/" }
+  local:
+    - sources/guerilla-open-access-manifesto.md
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation -- copy, remix, generate" }
+  - { path: sources/guerilla-open-access-manifesto.md, why: "The 2008 text, kept in-tree on purpose" }
+  - { path: ../brewster-kahle/, why: "Open Library; living archive" }
+  - { path: ../brian-eno/, why: "Generative systems -- the archive that keeps running" }
+  - { path: ../nina-hagen/, why: "Punk cover chain -- remix as method" }
+  - { path: ../alan-turing/sources/morphogenesis-collected-works.md, why: "Receipt: a typed-in book preface in this repo" }
+  - { path: ../john-von-neumann/sources/, why: "Receipt: hard-to-find texts kept local" }

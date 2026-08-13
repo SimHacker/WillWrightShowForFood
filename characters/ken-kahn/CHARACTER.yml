@@ -53,6 +53,7 @@ sources:
   local:
     - sources/npuc-almaden-panel.md         # the panel photo, lineup, and the 1993-vs-1996 thread
     - sources/2026-chatbot-experiments.md   # the AI-history essay saga + the other experiments
+    - sources/2023-02-stanford-cs547-gosling-toontalk/README.md  # Gosling Java question; ToonTalk applets; Visual Janus
     - media/ai-history-two-claims-snapshot.html  # archived copy of the published essay
     - from-alan-kay.yml
   web:

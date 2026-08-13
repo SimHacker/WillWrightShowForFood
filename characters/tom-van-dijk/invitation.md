@@ -8,7 +8,7 @@
 
 Hi Tom,
 
-Great to hear from you again in **2024** — I'm still in **Badhoevedorp**, and Deventer is absolutely doable for a coffee or a recorded segment.
+Great to hear from you again in **2024** — I'm in the **Amsterdam area**, and Deventer is absolutely doable for a coffee or a recorded segment.
 
 I'm building **Will Wright Show For Food**: a repo-native talk show where the modding tools and correspondence *are* the set. Your thread is one of the best untold Sims stories:
 

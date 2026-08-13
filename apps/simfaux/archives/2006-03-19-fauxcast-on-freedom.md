@@ -2,6 +2,7 @@
 
 **Don Hopkins** · 19 March 2006  
 **Original:** https://web.archive.org/web/20110611164446/http://www.donhopkins.com/drupal/node/121  
+**Verbatim:** [2006-03-19-fauxcast-on-freedom-full.md](2006-03-19-fauxcast-on-freedom-full.md) · **Email cite:** [2006-11-03](2006-11-03-simfaux-demo-email.md)  
 **Stack:** OpenLaszlo → Flash · HuffingtonPost Contagious Festival (15 MB limit)
 
 ## FauxCasting

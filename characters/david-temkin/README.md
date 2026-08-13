@@ -47,7 +47,7 @@ first-class. Open question for Oliver: does Declare obey the **Instance Substitu
 Pull **Dave Ungar** (interviewed at Laszlo and got it) into the circle.
 
 Deep sniff + Svelte triangle: [`sources/declarelang.md`](sources/declarelang.md)  
-DM spark (wet cement — ask before quoting on air): [`sources/2026-linkedin-dm-declare.md`](sources/2026-linkedin-dm-declare.md)
+Reimagine discussion: [`sources/declare-reimagine-discussion.md`](sources/declare-reimagine-discussion.md)
 
 **Aug 2026:** David accepted the invite; **Wednesday 6:00 PM Don time** call scheduled. His Aug 3
 email walks through Declare **push** constraints (spreadsheet / compiler-derived deps), embedding

@@ -37,6 +37,7 @@ for half a century, and he still publishes essays and fiction near-daily on
 |--------|------------------|
 | **HARLIE, 1972 → LLMs, 2026** | Machine personhood was his novel's whole plot. What did he get right? What did we all get wrong? |
 | **Tribbles vs. soul hydraulics** | Tribbles are born pregnant — a conservation-law catastrophe played for laughs. Our [soul bridges](../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml) enforce strict conservation. The panel writes itself. |
+| **Digital Tribbles** | Incremental game: a fecund Tamagotchi — Universal Paperclips, but they breed. Ask Gerrold *before* the recording, then on air. [`digital-tribbles.md`](digital-tribbles.md) |
 | **Television as a compromise engine** | Sixty years of scripts surviving (and not surviving) studios — the craft of shipping stories inside institutions. |
 | **The Martian Child** | Turning family into art, ethically — the exact needle this show's portrayal and memorial standards try to thread. |
 | **SF authors wing** | With [David Marusek](../david-marusek/) — the writers who predicted the digital-souls terrain the repo now builds on. |
@@ -47,6 +48,7 @@ for half a century, and he still publishes essays and fiction near-daily on
 |----------|------|
 | Invitation (draft) | [`invitation.md`](invitation.md) |
 | Character girder | [`CHARACTER.yml`](CHARACTER.yml) |
+| Digital Tribbles | [`digital-tribbles.md`](digital-tribbles.md) |
 | Companion essay | [The Wedding Album and the rights of digital souls](../david-marusek/the-wedding-album-and-digital-souls.md) |
 
 *Don will contact David personally with a link to this directory — it's his to edit, expand, or

@@ -31,7 +31,7 @@ Frame: [`ORGANELLES.yml`](ORGANELLES.yml) ·
 | Path | What |
 |---|---|
 | [`media/`](media/) | Screenshots + YAML specs |
-| [`archives/`](archives/) | Wayback / Drupal essays & README |
+| [`archives/`](archives/) | Wayback / Drupal essays & README · [2006-11-03 demo email](archives/2006-11-03-simfaux-demo-email.md) |
 | [`deploy.md`](deploy.md) | Runtime AV on **donhopkins.com** — not in this repo |
 | [`../../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml`](../../bits/gag-simfaux-repo-show-prototype/gag-simfaux-repo-show-prototype.yml) | Canonical gag; local stub in `ideas/gags/` |
 | [`SPIN-OUT.md`](SPIN-OUT.md) | Extract checklist for a dedicated SimFaux repo |

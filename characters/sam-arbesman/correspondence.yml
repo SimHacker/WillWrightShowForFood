@@ -33,12 +33,26 @@ threads:
       Sam announced The Magic of Code (June 10, 2025). Don congratulated; Kindle preorder.
     source: sources/magic-of-code-2025.md
 
+  - id: repo-show-invitation
+    date_start: "2026-07-31"
+    date_end: "2026-08-13"
+    subject: "Maxis Labs 2 is becoming a Repo Show — and Will is in"
+    summary: |
+      Don invited Sam as co-architect. Sam (from Japan): would love to record a conversation;
+      wasn't at the 2006 Long Now talk. Sam proposed conversation as "forcing function";
+      Don laid out the time-shifted conversation ladder (solo → 1:1 → multi + live → edited
+      long form). Sam confirmed: happy to do one with Don or Chaim ("always fun to riff with
+      him!"). Don demoed ebike-safari.com with seven ride screenshots.
+    source: sources/repo-show-thread-2026.md
+
 status:
   relationship: warm
   video_call: discussed_not_scheduled
   repo_show: preferred_venue
+  conversation: confirmed_2026_08_13
+  pairing_options: [don-hopkins, chaim-gingold]
   ensemble_proposal: seed
-  default_ask: solo_video
+  default_ask: one_on_one_conversation  # upgraded from solo_video at Sam's request — forcing function
   formats_doc: show-formats.md
 
 introducer:

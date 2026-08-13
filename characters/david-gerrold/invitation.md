@@ -29,6 +29,11 @@ Conversation could include (your pick):
 - **HARLIE → LLMs** — what the 1972 argument got right about 2026; what everyone gets wrong.
 - **Tribbles vs. conservation of souls** — our [soul bridges](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml)
   enforce strict conservation; tribbles are born pregnant. I want to hear you prosecute the case.
+- **Digital Tribbles** — an incremental-game idea I want your hands on *before* we record, so
+  you can prepare a real answer: a fecund Tamagotchi, Universal Paperclips but they breed
+  instead of manufacture. Writeup:
+  [`digital-tribbles.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-gerrold/digital-tribbles.md).
+  I'll send the question informally first; on camera is the second pass.
 - **Sixty years of shipping stories through institutions** — Trek to *Blood and Fire* to Patreon;
   what survives the rewrite machine.
 - **The Martian Child** — turning family into art ethically; the exact needle our portrayal and

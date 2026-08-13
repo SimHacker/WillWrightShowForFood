@@ -4,7 +4,7 @@ Public Snap! / Morphic.js work, GP lineage, SAP research context, and documented
 
 | Topic | |
 |-------|---|
-| Morphic.js — live IDE substrate in the browser | [morphic-js.md](morphic-js.md) |
+| Morphic.js — live IDE substrate in the browser | [morphic-js.md](morphic-js.md) (architecture + programming guide digest) |
 | Scratch → GP under Kay → Snap! lead | [gp-alan-kay-lineage.md](gp-alan-kay-lineage.md) |
 | BYOB → Snap! — first-class lists, procedures, continuations, objects | [snap-first-class-everything.md](snap-first-class-everything.md) |
 | Y combinator live in blocks | [y-combinator-in-blocks.md](y-combinator-in-blocks.md) |

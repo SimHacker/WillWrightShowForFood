@@ -1,0 +1,28 @@
+# CARD — jwz "Computational feces" comment thread (May 2011)
+
+glance: README.md
+
+room:
+  id: 2011-05-jwz-computational-feces-comment-thread
+  name: "jwz blog — Computational feces — Don × Bob Bane AppleScript thread"
+  type: [jwz_blog, comment_thread, applescript, natural_language_critique]
+  home: characters/don-hopkins/sources/2011-05-jwz-computational-feces-comment-thread/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → README.md"
+    advertisement: "Don on English-like languages; Bob Bane on AppleScript dictionary lies."
+  READ-EMAIL:
+    signature: "readEmail() → 2011-05-10-jwz-blog-notification-email.md"
+    advertisement: "jwz blog robot forwards Bob Bane's reply to Don."
+
+compose_with:
+  - ../2008-05-jwz-simrogenous-street-view/README.md
+  - ../2000-06-13-everything2-joy-of-x/README.md
+  - ../articles/instance-first-development.md
+
+related:
+  - name: Jamie Zawinski
+    via: jwz.org/blog/2011/05/computational-feces/
+  - name: Bob Bane
+    note: "UMD Vax Lab → NASA Goddard; no WWSFF character room yet"

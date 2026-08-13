@@ -1,0 +1,26 @@
+# CARD — Don → jwz RubiX11 (Oct 2020)
+
+glance: README.md
+
+room:
+  id: 2020-10-don-jwz-rubix11
+  name: "RubiX11 — Unix window systems as sticker-switched Rubik's Cube"
+  type: [email, jwz, x11, window_managers]
+  home: characters/don-hopkins/sources/2020-10-don-jwz-rubix11/
+
+methods:
+  READ-EMAIL:
+    signature: "readEmail() → 2020-10-29-don-hopkins-email.md"
+    advertisement: "RubiX11 — impossible Rubik's Cube; Unix WM situation."
+
+compose_with:
+  - ../i39l-window-manager-flames.md
+  - ../2000-06-13-everything2-joy-of-x/README.md
+  - ../owm-window-management-synthesis.md
+  - ../2020-03-don-jwz-pdp7-munching-squares-pixie/README.md
+
+related:
+  - name: Jamie Zawinski
+    via: "Recipient — xscreensaver / X11 veteran"
+  - name: William Buxton
+    note: "Marking menus vs pie menus — parallel X WM confusion thread"

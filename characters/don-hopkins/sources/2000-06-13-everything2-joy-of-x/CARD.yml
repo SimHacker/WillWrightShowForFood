@@ -1,0 +1,34 @@
+# CARD — Everything2 "The Joy of X" (June 2000)
+
+glance: README.md
+
+room:
+  id: 2000-06-13-everything2-joy-of-x
+  name: "The Joy of X — Don's Cheese Shop X rant (E2 republish)"
+  type: [everything2, primary_source, x11, unix_haters]
+  home: characters/don-hopkins/sources/2000-06-13-everything2-joy-of-x/
+
+methods:
+  READ-E2:
+    signature: "readE2() → everything2-joy-of-x.md"
+    advertisement: "ariels republishes Don's .plan rant from JWZ screenhack.h — Monty Python Cheese Shop X."
+  READ-LINKEDIN-2009:
+    signature: "readLinkedIn2009() → 2009-03-x25-anniversary-linkedin-thread.md"
+    advertisement: "Gettys 25th anniversary thread — Don cites xscreensaver immortalization; lost screen dump."
+  READ-I39L:
+    signature: "readI39l() → ../i39l-window-manager-flames.md"
+    advertisement: "Don's longer Unix-Haters ICCCM/OWM chapter — same war, more receipts."
+
+compose_with:
+  - ../i39l-window-manager-flames.md
+  - ../2008-05-jwz-simrogenous-street-view/README.md
+  - ../../queer-oui-for-the-straight-gui.md
+  - ../../../scott-draves/CHARACTER.yml
+
+related:
+  - name: Jamie Zawinski
+    via: xscreensaver screenhack.h
+  - name: Jim Gettys
+    via: X Window System co-founder; 2009 LinkedIn 25th anniversary thread
+  - name: ariels
+    via: Everything2 node 603014

@@ -8,6 +8,7 @@ Invitation portrayal — **not** Dan Ingalls. [Standards](../../schemas/portraya
 |--|---|
 | **Invitation** | [invitation.md](invitation.md) |
 | **Show prep** | [pie-menus-and-pop-ups.md](pie-menus-and-pop-ups.md) |
+| **Lively Web / Morphic** | [sources/lively-kernel-morphic.md](sources/lively-kernel-morphic.md) |
 | **Correspondence** | [correspondence.yml](correspondence.yml) |
 | **Show seed** | [repo-shows/dan-ingalls/](../../repo-shows/dan-ingalls/README.md) |
 

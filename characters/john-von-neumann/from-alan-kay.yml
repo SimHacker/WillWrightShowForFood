@@ -1,0 +1,14 @@
+# What Alan Kay says about John von Neumann -- public sources
+character: john-von-neumann
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    Not on Kay's own short magic list (Turing, Shannon, Hamming, McCarthy, Sutherland, Barton,
+    Lampson). Nominated in-thread by Robert Swartz, seconded by Don with the three-constructors
+    story. Kay's stored-program / ARPA-PARC lineage runs through von Neumann's EDVAC work
+    whether or not Kay files him under "magic."
+sources:
+  quora_recap: ../alan-kay/media/quora-recaps/magic-category-and-the-good-great-line.md
+show_hooks:
+  - "The 29 state CA is a non-von Neumann architecture -- the irony is the thesis"
+  - "Three constructors at three levels of reality"

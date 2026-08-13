@@ -1,0 +1,31 @@
+# CARD — Stanford CS547 / Gosling / ToonTalk (Feb 2023)
+
+glance: README.md
+
+room:
+  id: 2023-02-stanford-cs547-gosling-toontalk
+  name: "Ken asks Gosling about Java — ToonTalk applets — Visual Janus napkin"
+  type: [email, stanford_cs547, toontalk, java, visual_janus]
+  home: characters/ken-kahn/sources/2023-02-stanford-cs547-gosling-toontalk/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → 2023-02-01-mail-thread.md"
+    advertisement: "Ken 50:20 Java question; Don 44:53 security; Panasonic ToonTalk."
+  READ-JANUS:
+    signature: "readJanus() → README.md#links"
+    advertisement: "Pictorial Janus playlist; napkin bubble animation memory."
+
+compose_with:
+  - ../2026-chatbot-experiments.md
+  - ../npuc-almaden-panel.md
+  - ../../../james-gosling/CHARACTER.yml
+  - ../../../don-hopkins/sources/2018-12-postscript-pdb-java-leigh-klotz/README.md
+
+related:
+  - name: Don Hopkins
+    via: "Surfaces CS547 tapes; Gosling audience; Maxis conversion via Will Wright talk"
+  - name: James Gosling
+    via: "Bringing Behavior to the Internet — CS547"
+  - name: Will Wright
+    via: "Interfacing to Microworlds 1996-4-26 — Don YouTube upload"

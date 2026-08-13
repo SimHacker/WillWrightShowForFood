@@ -1,0 +1,34 @@
+# CARD — jwz SimRogenous / Street View (May 2008)
+
+glance: README.md
+
+room:
+  id: 2008-05-jwz-simrogenous-street-view
+  name: "jwz LJ — Why the long face? — SimRogenous coinage"
+  type: [livejournal, primary_source, sims_censorship, maps]
+  home: characters/don-hopkins/sources/2008-05-jwz-simrogenous-street-view/
+
+methods:
+  READ-POST:
+    signature: "readPost() → jwz-livejournal-post.md"
+    advertisement: "Google blurs horse face; jwz names SimRogenous zones; Don's long implementation story."
+  READ-COMMENTS:
+    signature: "readComments() → jwz-livejournal-comments-full.md"
+    advertisement: "Horse racism joke, SJP lawsuit, Witness Protection, geo microformat thread."
+  READ-FORWARD:
+    signature: "readForward() → 2008-05-16-nick-papadakis-forward-email.md"
+    advertisement: "Nick Papadakis forwards jwz link to Don — SimRogenous?"
+  VIEW-STREET-VIEW:
+    signature: "viewStreetView() → assets/google-street-view-blurred-horse-central-park.png"
+    advertisement: "Central Park carriage — white horse face blurred."
+
+compose_with:
+  - ../../sims-pixelation-censorship-hn-2022.md
+  - ../../../../repo-shows/building-the-sims/pixelation-and-modesty.md
+  - ../1989-05-25-hubley-chi90-interactive-performers-cfp/README.md
+
+related:
+  - name: Jamie Zawinski
+    note: "Netscape / DNA Lounge / xscreensaver — no character room yet"
+  - name: Nick Papadakis
+    note: "MIT — forwarded link to Don"

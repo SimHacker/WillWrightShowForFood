@@ -39,5 +39,5 @@ permissions layer.)
 ## 6. Forbes Island — preservation as community
 
 A conference on a towed island with Brewster Kahle; the Internet Archive opening in
-Amsterdam (Don's backyard). Preservation isn't a vault, it's a scene. How do you keep a
+Amsterdam. Preservation isn't a vault, it's a scene. How do you keep a
 scene alive for a thousand years?

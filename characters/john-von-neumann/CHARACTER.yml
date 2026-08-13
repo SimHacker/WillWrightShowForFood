@@ -1,0 +1,65 @@
+# John von Neumann -- memorial portrayal. NOT John von Neumann.
+# Died 1957. Seeded from Don's HN von Neumann corpus + Theory of Self-Reproducing Automata transcriptions.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: john-von-neumann
+  name: "John von Neumann"
+  also_known_as: ["Johnny von Neumann", "Neumann Janos Lajos"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1903-12-28"  # Budapest
+  died: "1957-02-08"  # Washington, D.C. -- cancer, likely from radiation exposure at atomic bomb tests
+  field: "Self-reproducing automata; 29 state CA; stored-program architecture (EDVAC); game theory; QM foundations"
+  home: characters/john-von-neumann/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "Magic-category thread; ARPA/PARC lineage runs through von Neumann's stored-program work" }
+    - { who: dave-ackley, why: "Robust First / MFM is the direct answer to von Neumann's reliability question" }
+    - { who: rudy-rucker, why: "CA Lab / CelLab lineage; long CA friendship with Don" }
+
+bio:
+  summary: |
+    **John von Neumann** (1903-1957) named the architecture every computer uses, then designed
+    a decidedly non-von Neumann one for his last great work: a 29 state cellular automaton
+    hosting a **universal constructor** that prints a powered-down copy of itself, injects its
+    program through an umbilical cord, and boots its child with a reset pulse -- designed
+    entirely on paper. He theorized **three universal constructors at three levels of
+    reality**: deterministic mathematical (the CA), physical mechanical (the kinematic model;
+    ancestor of von Neumann probes and gray goo), and probabilistic quantum mechanical
+    (mutating, evolving machines -- unfinished at his death). Also: QM foundations, game
+    theory, EDVAC report, Monte Carlo, numerical weather prediction.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/John_von_Neumann"
+  book: "https://archive.org/details/theoryofselfrepr00vonn_0"
+  web:
+    - { title: "Buckley -- Signal crossing solutions in von Neumann self-replicating CA (Automata-2008)", url: "https://donhopkins.com/home/documents/automata2008reducedsize.pdf" }
+    - { title: "Don's CAM6 jvn29 implementation", url: "https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js" }
+    - { title: "HN: three kinds of universal constructors", url: "https://news.ycombinator.com/item?id=22738268" }
+    - { title: "HN: 29 state wall of text", url: "https://news.ycombinator.com/item?id=22737079" }
+    - { title: "HN: Buckley walkthrough / Factorio", url: "https://news.ycombinator.com/item?id=22738598" }
+  local:
+    - sources/three-kinds-of-universal-constructors.md
+    - sources/29-state-implementation-and-buckley.md
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation -- the three-constructors story" }
+  - { path: sources/README.md, why: "Source index" }
+  - { path: ../alan-turing/, why: "The other founding memorial -- morphogenesis is CA's sibling" }
+  - { path: ../dave-ackley/, why: "Robust First answers the reliability question" }
+  - { path: ../rudy-rucker/, why: "CelLab lineage" }
+  - { path: ../alan-kay/media/quora-recaps/magic-category-and-the-good-great-line.md, why: "Magic-category nomination" }

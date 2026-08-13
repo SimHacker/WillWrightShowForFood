@@ -47,8 +47,7 @@ Storage without runnability is a museum; runnability without storage is a mayfly
 Web of Worlds × Temkin's Mesa × MOOLLM's rooms — three answers to "where does shared
 context live" — Chia atomic swaps as creator economics-as-infrastructure, Universal
 Manifest as the missing permissions layer, and Brewster, Forbes Island, and the Internet
-Archive's new Amsterdam office (my backyard — literally, come visit, the Stone Zen Garden
-Gorilla insists).
+Archive's new Amsterdam office.
 
 And yes: **the circular menu segment.** Bring what you were building; I'll bring the
 study; we'll argue about dead zones and submenus in 3D where every direction is real.

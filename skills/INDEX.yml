@@ -11,6 +11,11 @@ entries:
     path: repo-show/
     status: public_live
     note: "Show orchestrator — transplanted from DonHopkins; canonical public instance"
+  ebike-safari:
+    path: ebike-safari/
+    status: public_live
+    app: ../apps/ebike-safari/
+    note: "FIT pipeline — new stack; Urban Safari is legacy amber only"
   repo-show-format:
     path: repo-show-format.yml
     status: pointer

@@ -1,0 +1,43 @@
+# CARD — PostScript / PdB / Java — Leigh Klotz thread
+
+glance: README.md
+
+room:
+  id: 2018-12-postscript-pdb-java-leigh-klotz
+  name: "PostScript beauty vs jwz slur — PdB → Oak → Java"
+  type: [email, blog_comment, postscript, java_lineage]
+  home: characters/don-hopkins/sources/2018-12-postscript-pdb-java-leigh-klotz/
+
+methods:
+  READ-DON-2018:
+    signature: "readDon2018() → 2018-12-29-don-hopkins-thanks-leigh-email.md"
+    advertisement: "Pure dead Brilliant — Don thanks Leigh, PTHTHTHTH Jamie."
+  READ-THREAD-2018:
+    signature: "readThread2018() → 2018-12-29-postscript-defense-mail-thread.md"
+    advertisement: "Full Dec 2018 thread — dox Arthur, pie Gates, Sic transit gloria PostScript."
+  READ-PARC-1991:
+    signature: "readParc1991() → 1991-leigh-klotz-parc-pdb-licensing-letter.md"
+    advertisement: "Leigh @ PARC licenses PdB from Turing — $2000, Tim Niblett, reprographic dev kit."
+  READ-LEIGH-2008:
+    signature: "readLeigh2008() → 2008-06-07-leigh-klotz-pdb-oak-java-comment.md"
+    advertisement: "PdB at Turing Institute → Oak → Java at First Person."
+  READ-JWZ-SLUR:
+    signature: "readJwzSlur() → jwz-postscript-slur-context.md"
+    advertisement: "Power of C with readability of PostScript — the insult Don rejects."
+
+compose_with:
+  - ../../../arthur-van-hoff/CHARACTER.yml
+  - ../2008-05-jwz-simrogenous-street-view/README.md
+  - ../career/simcity-lineage.yml
+
+related:
+  - name: Leigh L. Klotz Jr.
+    note: "PARC/Xerox PdB licensee; MIT alum — no WWSFF room yet"
+  - name: Arthur van Hoff
+    via: "PdB author with Danny Pearce; CC on 2018 email"
+  - name: Danny Pearce
+    via: "PdB co-author at Turing — joined CC Dec 2018"
+  - name: Tim Niblett
+    via: "HyperNeWS PdB thread 1991"
+  - name: Jamie Zawinski
+    via: "PostScript slur; CC on 2018 email"

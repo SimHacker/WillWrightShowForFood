@@ -18,6 +18,7 @@ and the MapLibre viewer.
 | **Runbooks** | [`design/runbooks/`](design/runbooks/) — scaffold, iOS, Postgres |
 | **DB init** | [`db/init/`](db/init/) — PostGIS extensions + ride schema |
 | **Demo data** | [`demo/`](demo/) — synthetic track |
+| **Media** | [`media/`](media/MANIFEST.yml) — live viewer screenshots (all rides, De Pijp flood fill, backwards roundabout…) |
 | **Skill** | [`../../skills/ebike-safari/`](../../skills/ebike-safari/) |
 | **Show seed** | [`../../repo-shows/urban-ebike-safari/`](../../repo-shows/urban-ebike-safari/) |
 

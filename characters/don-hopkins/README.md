@@ -49,7 +49,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 | [`media.md`](media.md) | Photos and screenshots — Queen's Day LISP shirt, Sims era, Micropolis demos; the face behind the frob panel. | [`career/lineage.yml`](career/lineage.yml) |
 | [`GLANCE.md`](GLANCE.md) · [`CARD.md`](CARD.md) · [`CARD.yml`](CARD.yml) · [`CHARACTER.yml`](CHARACTER.yml) | Sniff card, trading card, machine schema, host registry — same person at four resolutions. | [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) |
 | [`browse-the-bouquet.yml`](browse-the-bouquet.yml) | Machine index of topic filenames — filenames are advertisements; pairs with this narrative order. | Cluster II |
-| [`sync-sources.yml`](sync-sources.yml) | What may be synced from upstream adventure-4 and DonHopkins archive — dedupe and public-safe rules. | [`career/`](career/INDEX.yml) |
+| [`sync-sources.yml`](sync-sources.yml) | Upstream sync map and dedupe rules. | [`career/`](career/INDEX.yml) |
 
 ---
 

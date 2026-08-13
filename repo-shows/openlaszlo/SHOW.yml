@@ -27,11 +27,11 @@ the_spark:
   what: |
     David Temkin used AI to revive OpenLaszlo as 5.0 (TS/browser), then built Declare
     (declarelang) — heir that reimagines OpenLaszlo for LLMs, not a port. Live: OL Explorer
-    + Declare calendar/desktop. Don's DM: reimplement = camera on stage; Declare = cinematography.
+    + Declare calendar/desktop. Reimplement = camera on stage; Declare = cinematography.
   provenance: |
     OL 5.0: LinkedIn activity 7476118515758809088 + public repo; earlier Henry Minsky email.
-    Declare: public GitHub + davidtemkin.github.io/declarelang; LinkedIn DM to Don (Jul 2026)
-    before David's public post — ask before quoting private framing.
+    Declare: public GitHub + davidtemkin.github.io/declarelang; Jul 2026 discussion with Don
+    → characters/david-temkin/sources/declare-reimagine-discussion.md
   why_a_show: |
     Retrocomputing revival *plus* the next language for the same constraint soul —
     pure Repo Show: run old LZX live, Declare calendar zoom, Svelte 5 / training-data triangle,
@@ -79,7 +79,7 @@ format:
 ties_to:
   - ../../characters/david-temkin/
   - ../../characters/david-temkin/sources/declarelang.md
-  - ../../characters/david-temkin/sources/2026-linkedin-dm-declare.md
+  - ../../characters/david-temkin/sources/declare-reimagine-discussion.md
   - ../../characters/oliver-steele/
   - ../../characters/henry-minsky/
   - ../../characters/david-ungar/

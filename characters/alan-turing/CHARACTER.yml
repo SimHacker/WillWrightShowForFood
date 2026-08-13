@@ -1,0 +1,58 @@
+# Alan Turing -- memorial portrayal. NOT Alan Turing.
+# Died 1954. Seeded from Don's typed-in Morphogenesis prefatory texts + Kay magic list.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: alan-turing
+  name: "Alan Mathison Turing"
+  also_known_as: ["Alan Turing", "A.M. Turing"]
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  born: "1912-06-23"  # London
+  died: "1954-06-07"  # Wilmslow (Cheshire) -- suicide, after criminal prosecution
+  field: "Universal machine; Enigma; ACE; Computing Machinery and Intelligence; morphogenesis / reaction-diffusion"
+  home: characters/alan-turing/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  who_can_discuss:
+    - { who: alan-kay, why: "First name on Kay's magic list; the criterion is almost a description of 1936" }
+    - { who: john-von-neumann, why: "Citation pair -- CA vs reaction-diffusion as two 1950s answers to form" }
+
+bio:
+  summary: |
+    **Alan Turing** (1912-1954) invented the universal machine as a byproduct of answering
+    Hilbert's Entscheidungsproblem (1936), headed naval Enigma work at Bletchley Park, designed
+    ACE, published "Computing Machinery and Intelligence" (1950), and spent his last years on
+    morphogenesis -- reaction-diffusion systems, phyllotaxis, "intended to defeat the argument
+    from design." One published biology paper; a drawer of unfinished manuscripts published
+    posthumously as Collected Works Volume 3. Don typed in the prefatory texts and scanned the
+    1923 daisy drawing by Turing's mother.
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Alan_Turing"
+  paper: "https://royalsocietypublishing.org/doi/10.1098/rstb.1952.0012"
+  web:
+    - { title: "Don's typed-in Morphogenesis prefatory texts", url: "https://donhopkins.com/home/archive/Turing/Morphogenesis.txt" }
+    - { title: "HN: Morphogenesis preface + daisy drawing", url: "https://news.ycombinator.com/item?id=30628227" }
+    - { title: "Kay magic list -- Turing first", url: "https://www.quora.com/Who-is-the-greatest-mind-in-computer-science-especially-in-the-programming-field" }
+  local:
+    - sources/morphogenesis-collected-works.md
+    - media/hockey-or-watching-the-daisies-grow.jpg
+
+see_also:
+  - { path: memorial.md, why: "Tribute" }
+  - { path: README.md, why: "Orientation" }
+  - { path: sources/morphogenesis-collected-works.md, why: "Furbank + Saunders texts, formatted" }
+  - { path: ../john-von-neumann/, why: "The other founding memorial -- CA sibling of morphogenesis" }
+  - { path: ../alan-kay/media/quora-recaps/magic-category-and-the-good-great-line.md, why: "Kay names Turing first" }

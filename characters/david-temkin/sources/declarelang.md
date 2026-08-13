@@ -7,9 +7,7 @@
 **Docs root (LLM + human same prose):** https://github.com/davidtemkin/declarelang/blob/main/docs/README.md  
 **Reference app:** `apps/calendar/calendar.declare` (continuous zoom across four views; LLM-authored)
 
-David's LinkedIn DM to Don (Jul 2026): manic coding binge after OpenLaszlo 5.0; "up your alley (I saw you're using Svelte)"; wet cement; try Calendar and Desktop.
-
-Don's reply frame: Svelte is the Laszloiest thing out there; lean into training data ([no-ai-humansplaining](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md)); Declare benefits because (1) it **declares** inheritance from OpenLaszlo without reimplementing it, (2) OpenLaszlo is in the training data.
+David shared Declare (Jul 2026) after the OpenLaszlo 5.0 push; try **Calendar** and **Desktop** on the live site. Don's reply frame: Svelte is the Laszloiest mainstream stack; lean into training data ([no-ai-humansplaining](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md)); Declare benefits because (1) it **declares** inheritance from OpenLaszlo without reimplementing it, (2) OpenLaszlo is in the training data. Discussion summary → [`declare-reimagine-discussion.md`](declare-reimagine-discussion.md).
 
 ---
 
@@ -19,7 +17,7 @@ A **DSL for UIs** — "SQL for interfaces." Two delimiters: `[ … ]` = view tre
 
 **Lineage (David's own words):** heir to OpenLaszlo — declarative, reactive, ran at scale — but **not a port**. Ground-up redesign: statically typed, modern web, **shaped for LLMs from the start**.
 
-**Don's DM refinement (29 Jul 2026):** "not a reimplement" = not a port — and better, a **reimagine**. Reimplementing OL 5.0 with modern tech was the good first step (working triangulation artifact; reincarnate apps without rewrite). Declare is cinematography after pointing the camera at the stage. Bet: LLMs will rewrite LZX → Declare relatively easily because the models align.
+**Don's refinement (Jul 2026):** "not a reimplement" = not a port — and better, a **reimagine**. See [`declare-reimagine-discussion.md`](declare-reimagine-discussion.md).
 
 ---
 
@@ -96,4 +94,4 @@ Laszlo, got it; Self × MOOLLM) — [`david-ungar`](../../david-ungar/).
 **Act IV — Instance-first / Self:** Oliver ISP + Ungar Self + MOOLLM object system (video `0uBO6ZAcVTE` @ 16:16).  
 **Act V — Mesa + In Formation:** spatial AI canvas vs chat-window future; print satire moral spine.
 
-↑ [sources index](README.md) · [DM thread](2026-linkedin-dm-declare.md) · [LinkedIn 5.0 thread](2026-openlaszlo-5.0-linkedin-thread.md)
+↑ [sources index](README.md) · [reimagine discussion](declare-reimagine-discussion.md) · [LinkedIn 5.0 thread](2026-openlaszlo-5.0-linkedin-thread.md)

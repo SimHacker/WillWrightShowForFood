@@ -121,7 +121,7 @@ OpenLaszlo webtop; Temkin call 5 Aug 18:00. Design pack:
 ## Sources (public)
 
 - [`sources/declarelang.md`](sources/declarelang.md) — deep sniff
-- [`sources/2026-linkedin-dm-declare.md`](sources/2026-linkedin-dm-declare.md) — DM spark
+- [`sources/declare-reimagine-discussion.md`](sources/declare-reimagine-discussion.md) — reimagine-not-port thesis
 - [`sources/2026-openlaszlo-5.0-linkedin-thread.md`](sources/2026-openlaszlo-5.0-linkedin-thread.md)
 - [`sources/mesa-and-in-formation.md`](sources/mesa-and-in-formation.md)
 - [`invitation.md`](invitation.md)

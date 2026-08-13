@@ -30,6 +30,7 @@ Self doesn't run on everybody's phone — **in spirit it does**.
 
 - [Self and MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md) · [Latent-Space Inheritance](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)
 - [K-line inheritance — Self's simplicity for LLMs](sources/moollm-kline-inheritance.md) — paper + patent + mixin skills
+- [HN — Self 1989 JIT + SelfishScript (Nov 2025)](sources/hn-self-1989-selfishscript-45706924.md) — Don + Ungar reply
 - [Reflecting on Self](reflecting-on-self.md) · [Ideas](ideas.md) · [Correspondence](correspondence.yml)
 - Temkin / Declare: [`../david-temkin/`](../david-temkin/) · Amanda Walker: [`../amanda-walker/`](../amanda-walker/)
 

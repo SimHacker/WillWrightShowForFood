@@ -1,0 +1,10 @@
+# alan-turing -- media manifest
+
+character: alan-turing
+
+assets:
+  - file: hockey-or-watching-the-daisies-grow.jpg
+    title: "Hockey or Watching the Daisies Grow"
+    source: "Scan by Don Hopkins of the drawing inside the front cover of Collected Works of A.M. Turing, Volume 3: Morphogenesis (P.T. Saunders, ed., Elsevier/North-Holland, 1992). Drawing by Ethel Sara Turing, Spring 1923."
+    note: "Turing's mother drew her son on the school hockey field, watching the daisies instead of the game. Original hosted at https://donhopkins.com/home/AlanTuringHockeyOrWatchingTheDaisiesGrow.jpg"
+    also: "https://i.imgur.com/AX6Bg9q.jpg"

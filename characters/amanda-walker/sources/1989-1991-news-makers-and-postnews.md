@@ -62,5 +62,6 @@ when Don asked if she was looking for a job.
 ## See also
 
 - [`../README.md`](../README.md) · [`../invitation.md`](../invitation.md)
+- [`../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md`](../../don-hopkins/sources/1990-03-jwz-postnews-emacs-editor/README.md) — jwz on Emacs + PostScript news (Mar 1990)
 - [`../../david-ungar/sources/2026-07-linkedin-self-manual-thread.md`](../../david-ungar/sources/2026-07-linkedin-self-manual-thread.md) — she found the Self manual, 2026
 - Private: `DonHopkins/.../attachments/amanda-walker/`

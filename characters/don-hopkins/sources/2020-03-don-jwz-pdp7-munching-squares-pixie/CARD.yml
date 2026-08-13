@@ -1,0 +1,29 @@
+# CARD — Don → jwz PDP-7 Munching Squares / PIXIE (Mar 2020)
+
+glance: README.md
+
+room:
+  id: 2020-03-don-jwz-pdp7-munching-squares-pixie
+  name: "PDP-7 munching squares — Hypnotoad — first pie menus PIXIE film"
+  type: [email, jwz, pdp7, pixie, pie_menus]
+  home: characters/don-hopkins/sources/2020-03-don-jwz-pdp7-munching-squares-pixie/
+
+methods:
+  READ-EMAIL:
+    signature: "readEmail() → 2020-03-18-don-hopkins-email.md"
+    advertisement: "Hypnotoad power; PIXIE on PDP-7+340; AfterEffects film link."
+  READ-MUNCHING:
+    signature: "readMunching() → README.md#links-in-the-mail"
+    advertisement: "AM radio munching squares — V4oRHv-Svwc."
+
+compose_with:
+  - ../2020-04-06-flight-of-pixie-chm-tlg-broadcast.md
+  - ../pie-menus-30-year-retrospective.md
+  - ../2019-02-08-pixie-references-receipts.md
+  - ../2020-01-don-jwz-somebody-fell-for-it/README.md
+
+related:
+  - name: Jamie Zawinski
+    via: "Recipient — PDP/demo culture orbit"
+  - name: Heinz Lemke
+    note: "PIXIE operator in film — CHM pitch follows Apr 2020"

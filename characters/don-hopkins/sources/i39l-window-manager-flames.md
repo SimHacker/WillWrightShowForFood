@@ -8,6 +8,10 @@ documentation. Live copies:
 [art.net](http://www.art.net/~hopkins/Don/unix-haters/x-windows/i39l.html) ·
 [donhopkins.com i39l.txt](https://donhopkins.com/home/archive/NeWS/i39l.txt).
 
+**Cheese Shop X rant (shorter):** Don's `.plan` finger post — embedded in JWZ
+xscreensaver `screenhack.h`, republished on
+[Everything2 "The Joy of X" (2000)](2000-06-13-everything2-joy-of-x/README.md).
+
 Quote nesting below is transcribed from the original HTML blockquote
 structure — the indentation carries the attribution. In the TkWM thread,
 one level deep is David Herron, two levels deep is whoever Herron is
@@ -314,4 +318,4 @@ piemenu "Key Click" @ 90 {
 }
 ```
 
-↑ [Sources index](README.md) · [owm.ps source](../../josh-siegel/sources/owm.ps) · [tab.ps + NDE tabs](../code/news-tnt/README.md) · [Josh Siegel's room](../../josh-siegel/README.md) · [1991 ICCCM death match](1991-09-news-tnt-icccm-death-match.md) · [Don's room](../README.md)
+↑ [Sources index](README.md) · [owm.ps source](../../josh-siegel/sources/owm.ps) · [tab.ps + NDE tabs](../code/news-tnt/README.md) · [Josh Siegel's room](../../josh-siegel/README.md) · [1991 ICCCM death match](1991-09-news-tnt-icccm-death-match.md) · [RubiX11 — jwz mail (2020)](2020-10-don-jwz-rubix11/README.md) · [Don's room](../README.md)

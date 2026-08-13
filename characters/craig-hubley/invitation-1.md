@@ -19,7 +19,7 @@ I have an ambitious plan for world domination that I'd like to fill you in on.
 In the mean time here is this:
 
 I've been making something that is hard to explain to boring normal people,
-but you will totally get it from a performance art perspective — you literally
+but you will totally get it from a performance art perspective -- you literally
 *wrote the book* on that for me once.
 
 Watch this first, without any explanation, and reverse-over-engineer it with
@@ -37,4 +37,4 @@ https://micropolisweb.com
 No manual, no hints. Once you have formed your own theory of what is going on,
 tell me, and I will send you the Rosetta Stone.
 
-— Don
+-Don

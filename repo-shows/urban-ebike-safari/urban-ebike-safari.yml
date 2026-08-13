@@ -371,6 +371,9 @@ ties:
   - ../../process/crazy-idea-jam.yml#dreamscape_scriptx
   - ../../characters/don-hopkins/sources/sutton-one-step-trap.md
   - ../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
+  - ../../apps/ebike-safari/README.md
+  - ../../apps/ebike-safari/design/README.md
+  - ../../skills/ebike-safari/SKILL.md
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
   - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml

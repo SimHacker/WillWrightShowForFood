@@ -126,6 +126,18 @@ including AI to orchestrate, perform, and render the interactive multi-user feed
 explore **with** Nina — art as transmission, not commodity. *(We quote the one line, not the full lyric —
 copyright; "What It Is" is a real, public Nina Hagen song.)*
 
+### 11. Gospel arc — Ur-Punk Jesus, Gruselverein, Charles Normal / Larry Norman chain
+Mar 2026: Nina announces **ROCK THE FLOCK** (gospel album in progress, producer **Charles Normal**) while
+**Highway to Heaven** releases (27 Mar 2026). derStandard/APA: Jesus as **"Ur-Punk"** — justice over
+authority; Catholic Church as **"Gruselverein"** (creepy club) vs personal faith (Protestant baptism 2009).
+**Not** Don's EA contact Chuck **Normann** — this is **[Charles Normal](https://en.wikipedia.org/wiki/Charles_Normal)**,
+Larry Norman's brother: Larry introduced him to Sex Pistols; Charles played hardcore punk (**Executioner**)
+before decades of Christian-rock production. Nina already covered Larry on **Nina Hagen sings Larry Norman**
+(2023), including **"Rock The Flock."** Show move: the **[riff loop](../../bits/theme-the-riff-loop/theme-the-riff-loop.md)**
+through *spiritual* lineage — Tubes satire → TV-Glotzer → Trannyshack drag **and** Larry Norman → Charles Normal
+→ Nina gospel — punk never left, it just changed costume. Full digest:
+[`sources/2026-03-22-gospel-highway-to-heaven.md`](sources/2026-03-22-gospel-highway-to-heaven.md).
+
 ## Sources (real, public)
 
 - [Nina Hagen Band](https://en.wikipedia.org/wiki/Nina_Hagen_Band) (1978): ["TV-Glotzer (White Punks on Dope)"](https://www.youtube.com/watch?v=JWzPcDtZZZo) · ["African Reggae"](https://www.youtube.com/watch?v=pVOXdtfHfaY) ([1980 TV performance](https://www.youtube.com/watch?v=7-FMglTIO30)) · ["Naturträne"](https://www.youtube.com/watch?v=9xi4O4RvlnQ) (Rockpalast, 1979) · [Beth Roars vocal analysis](https://www.youtube.com/watch?v=0baOxEPR7nI)
@@ -143,3 +155,4 @@ copyright; "What It Is" is a real, public Nina Hagen song.)*
 - **Trannyshack → [Mother](https://en.wikipedia.org/wiki/Heklina#Mother_(formerly_Trannyshack)) / [Oasis](https://en.wikipedia.org/wiki/Oasis_(San_Francisco))** — Heklina's 2014 rebrand; [SFist interview, May 2014](https://sfist.com/2014/05/23/exclusive_sfist_talks_with_heklina/) · [Mother launch, SFist Dec 2014](https://sfist.com/2014/12/16/heklina_talks_about_mother_the_new/) (reclaiming → listening, not censorship) · [Oasis venue](https://sfoasis.com/)
 - Nina Hagen Band → [Spliff](https://en.wikipedia.org/wiki/Spliff_(band)): Bernhard Potschka, Manfred Praeker, Herwig Mitteregger, [Reinhold Heil](https://en.wikipedia.org/wiki/Reinhold_Heil)
 - [ninahagen.de](https://www.ninahagen.de/) · [Nina Hagen (Wikipedia)](https://en.wikipedia.org/wiki/Nina_Hagen)
+- Mar 2026 gospel arc — [derStandard: Ur-Punk / Gruselverein](https://www.derstandard.de/story/3000000313537/nina-hagen-sieht-kirche-als-gruselverein-und-jesus-als-ur-punk) · [digest](sources/2026-03-22-gospel-highway-to-heaven.md) · [Charles Normal](https://en.wikipedia.org/wiki/Charles_Normal) · [Larry Norman](https://en.wikipedia.org/wiki/Larry_Norman) · [Nina Hagen sings Larry Norman / Rock The Flock (2023)](https://www.einfach-nina.de/download19.html)

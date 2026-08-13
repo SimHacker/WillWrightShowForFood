@@ -1,5 +1,8 @@
 # Text pixelation redaction — Sims censorship implementation (Don HN notes)
 
+**2008 coinage:** Jamie Zawinski named **SimRogenous zones** on LiveJournal when Google Street
+View blurred a Central Park horse — [`sources/2008-05-jwz-simrogenous-street-view/README.md`](sources/2008-05-jwz-simrogenous-street-view/README.md) (Nick Papadakis forwarded to Don, May 2008).
+
 Don's comments on **Don't use text pixelation to redact sensitive information** ([HN 30350626](https://news.ycombinator.com/item?id=30350626), Feb 2022, Bishop Fox).
 
 Thread theme: reversing text pixelation; subpixel rendering leaks structure. Don's top comment pivots to **The Sims 1 censorship** — implementation detail, TSO RNG divergence, maid/plunger bug, SimAntics.

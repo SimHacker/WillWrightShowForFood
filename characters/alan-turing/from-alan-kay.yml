@@ -1,0 +1,13 @@
+# What Alan Kay says about Alan Turing -- public sources
+character: alan-turing
+kay_hub: ../alan-kay/
+kay_says:
+  gist: |
+    First name on Kay's "magic" list (Quora, 8 Aug 2026): people who advanced the field in a
+    way that is difficult to see how they did it, given when they did it and what they were
+    starting with. Turing, Shannon, Hamming, McCarthy, Sutherland, Barton, Lampson, etc.
+sources:
+  quora_recap: ../alan-kay/media/quora-recaps/magic-category-and-the-good-great-line.md
+show_hooks:
+  - "Kay's magic criterion is almost a description of 1936"
+  - "Morphogenesis as the chapter the computer story leaves out"

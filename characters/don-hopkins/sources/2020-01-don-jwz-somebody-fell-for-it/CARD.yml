@@ -1,0 +1,28 @@
+# CARD — Don ↔ jwz "Somebody fell for it again!" (Jan 2020)
+
+glance: README.md
+
+room:
+  id: 2020-01-don-jwz-somebody-fell-for-it
+  name: "Somebody fell for it again! — two problems, nuts, OpenBSD ESR"
+  type: [email, jwz, unix_lore, openbsd]
+  home: characters/don-hopkins/sources/2020-01-don-jwz-somebody-fell-for-it/
+
+methods:
+  READ-THREAD:
+    signature: "readThread() → 2020-01-12-mail-thread.md"
+    advertisement: "Testicle in egg cup; may contain nuts; OpenBSD Firefox ESR pun."
+  READ-DON-OPEN:
+    signature: "readDonOpen() → 2020-01-12-mail-thread.md#0747"
+    advertisement: "Now they have two problems — egg-cup variant."
+
+compose_with:
+  - ../2019-09-don-jwz-ping-mozilla-tamales/README.md
+  - ../2018-12-postscript-pdb-java-leigh-klotz/jwz-postscript-slur-context.md
+  - ../2011-05-jwz-computational-feces-comment-thread/README.md
+
+related:
+  - name: Jamie Zawinski
+    via: "Two problems canonical form; nut pun straight man"
+  - name: Eric S. Raymond
+    note: "OpenBSD Firefox naming thread Jan 2020 — no WWSFF room yet"

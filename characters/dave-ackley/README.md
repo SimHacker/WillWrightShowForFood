@@ -31,6 +31,7 @@ Don has written about his work **extensively on Hacker News**, and his mantra po
 | **Hooks** | [ideas.md](ideas.md) |
 | **CA correspondence (story)** | [ca-correspondence-story.md](ca-correspondence-story.md) — narrativized email + HN thread, embedded CAM6 images, categorized link vault |
 | **The self-routing city** | [city-generation-routing.md](city-generation-routing.md) — Trent Small's MFM city-generation routing paper, summarized (PDF mirrored) |
+| **Paper full text** | [sources/tsmall-local-routing-mfm/full-text.md](sources/tsmall-local-routing-mfm/full-text.md) — accessible extract with figure placeholders |
 | **Media** | [media/](media/) — Don's CAM6 "Dendrite Heat" snapshots, the routing PDF + provenance |
 | **CA looping fest** | [Norman Margolus](../norman-margolus/README.md) · [Stephen Wolfram](../stephen-wolfram/README.md) |
 

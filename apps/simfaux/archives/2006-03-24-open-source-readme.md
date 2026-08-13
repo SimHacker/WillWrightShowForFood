@@ -2,6 +2,7 @@
 
 **Published:** 2006-03-24 · Don Hopkins · Drupal node/123  
 **Wayback (this capture):** https://web.archive.org/web/20070208025302/http://www.donhopkins.com/drupal/node/123  
+**Verbatim README:** [2006-03-24-open-source-readme-full.md](2006-03-24-open-source-readme-full.md) · **Email cite:** [2006-11-03](2006-11-03-simfaux-demo-email.md)  
 **Tags (period):** Laszlo Applications · Pie Menu Applications · Downloadable Software
 
 I've published the source code and content of SimFaux as Open Source Software. It's available via read-only anonymous subversion. Here's the command to get all the source code and content:
@@ -96,9 +97,9 @@ keyword overlays (lightning, smoke, stonewall, tomato, duck) · teleprompter ·
 ratings · program guide · Hangman / Tic Tac Faux / Angry-Libs · shopping channels ·
 content authoring · Red5 RTMP · DHTML OpenLaszlo port notes.
 
-Full idea dump preserved from the Drupal post (games, shopping, authoring,
-streaming) — see Wayback if you need the complete list verbatim; the structure
-above is the working index for Declare reimagine.
+Full idea dump (games, shopping, authoring, streaming, DHTML port): see
+[verbatim README](2006-03-24-open-source-readme-full.md). Structure above is the
+working index for Declare reimagine.
 
 ### Extending (checklist from README)
 

@@ -1,0 +1,33 @@
+# ebike-safari — media manifest
+
+app: ebike-safari
+
+assets:
+  - file: all-rides-overview.png
+    title: "All 40 rides — greater Amsterdam overview"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "40/40 rides selected; trails + coverage heatmap; ride picker open. First public demo set (emailed to Sam Arbesman)."
+  - file: home-start-cluster.png
+    title: "Home start/end cluster (zoomed)"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Dense track bundle where most rides begin and end; green you-are-here pin."
+  - file: roundabout-backwards-schipluidenlaan.png
+    title: "Schipluidenlaan roundabout — ridden backwards, late night"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Multiple wrong-way loops; confused fellow cyclists looked at Don funny, then went on their ways."
+  - file: vondelpark-rides.png
+    title: "Vondelpark — random rides, eat + laptop stops"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Favorite place for biking around randomly."
+  - file: vondelpark-rose-garden.png
+    title: "Vondelpark Rose Garden (Rosarium)"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Rosarium path network traced in detail."
+  - file: de-pijp-flood-fill.png
+    title: "De Pijp flood fill — reverse Pac-Man"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Every road ridden in one day, leaving dots behind instead of eating them. See design/exposure-pac-man.md."
+  - file: olympic-stadium-flood-fill.png
+    title: "Olympic Stadium neighborhood flood fill"
+    source: "ebike-safari.com viewer screenshot, 2026-08-13 (Don)"
+    note: "Stadionbuurt/Schinkelbuurt: Olympic Stadium, canal lock, and graveyard covered."

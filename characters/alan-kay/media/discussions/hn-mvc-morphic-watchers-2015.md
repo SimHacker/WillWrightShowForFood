@@ -138,7 +138,7 @@ than message-based" Sketchpad turn? (See [`../quora-recaps/oop-messaging-and-wha
 | ACRC Star Wars ↔ Lisp Machine           | [`../../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md`](../../../david-levitt/sources/atari-cambridge-star-wars-lisp-machine.md) · [`../../../bill-st-clair/`](../../../bill-st-clair/) |
 | Ben Shneiderman (direct manipulation)   | [`../../../ben-shneiderman/`](../../../ben-shneiderman/)                                                                                                                                    |
 | Don Reddit MVC flame (2011)             | [`../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md`](../../../don-hopkins/sources/2011-reddit-mvc-flame-morphic.md) · Craig jam: [`../../../craig-latta/ideas.md`](../../../craig-latta/ideas.md) |
-| Dan Ingalls (Smalltalk/Morphic lineage) | [`../../../dan-ingalls/`](../../../dan-ingalls/)                                                                                                                                            |
+| Dan Ingalls (Smalltalk/Morphic lineage) | [`../../../dan-ingalls/`](../../../dan-ingalls/) · [`../../../alan-kay/sources/morphic-lineage.md`](../../../alan-kay/sources/morphic-lineage.md) |
 | David Ungar (Self/Morphic)              | [`../../../david-ungar/`](../../../david-ungar/)                                                                                                                                            |
 | Terry Winograd (CS547 archive)          | [`../../../terry-winograd/media/cs547-ARCHIVE.md`](../../../terry-winograd/media/cs547-ARCHIVE.md)                                                                                          |
 

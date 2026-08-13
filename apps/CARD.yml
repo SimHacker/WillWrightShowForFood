@@ -21,6 +21,12 @@ entries:
     status: spec
     role: sims1_soul_bridge_and_windows_host
     spec: micropolis-angel/ARCHITECTURE.yml
+  ebike-safari:
+    status: live_pipeline
+    glance: ebike-safari/GLANCE.yml
+    skill: ../skills/ebike-safari/
+    design: ebike-safari/design/
+    note: "FIT → map JSON; design cauldron slurping"
 
 see_also:
   - README.md

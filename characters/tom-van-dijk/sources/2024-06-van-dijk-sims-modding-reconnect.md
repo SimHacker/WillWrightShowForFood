@@ -25,7 +25,7 @@ Tom on modding culture shift:
 
 Tom always wondered: **Behavior.iff** (?) in the public release — accidental leak or **on purpose** so people could mod? Helped him decode SimAntics on a family holiday (pages of hex dumps).
 
-Don offered meetup — Badhoevedorp ↔ Deventer; pointed to **iffpencil2** still in use:
+Don offered meetup — Amsterdam area ↔ Deventer; pointed to **iffpencil2** still in use:
 
 - https://zombiesims.com/ (Heather **SimFreaks** + Steve **SimSlice**, married, still shipping Sims 1 content)
 

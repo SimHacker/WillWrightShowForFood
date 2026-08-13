@@ -11,8 +11,9 @@ that explains how the thing actually *works*, and it's fascinating. Here's the
 short version, with the paper mirrored in this repo.
 
 - **Paper (local copy):** [tsmall-local-routing-mfm.pdf](media/tsmall-local-routing-mfm.pdf)
+- **Full text (accessible MD):** [sources/tsmall-local-routing-mfm/full-text.md](sources/tsmall-local-routing-mfm/full-text.md)
 - **Paper (author's host):** [cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf](https://www.cs.unm.edu/~ackley/papers/paper_tsmall1_11_24.pdf)
-- **The demo video:** [Robust-first Computing: Distributed City Generation](https://www.youtube.com/watch?v=XkSXERxucPc)
+- **The demo video:** [Robust-first Computing: Distributed City Generation](https://www.youtube.com/watch?v=XkSXERxucPc) — [transcript & notes](sources/tsmall-local-routing-mfm/distributed-city-generation-video.md)
 - **The whole MFM demo playlist:** [Movable Feast Machine demos](https://www.youtube.com/playlist?list=PLm5k2NUmpIP8qwttAS5Batnd7u2UpBtaL)
 - **Source code:** [github.com/sixstring982/MFMv2-city](https://github.com/sixstring982/MFMv2-city) — an open fork of Movable Feast Machine v2
 - Author: **Trent R. Small** (University of New Mexico), advised by **Dave Ackley**; funded by Google.

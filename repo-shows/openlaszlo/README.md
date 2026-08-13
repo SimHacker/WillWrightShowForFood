@@ -52,6 +52,6 @@ ask what the *next* Laszlo looks like when the primary reader of the compiler is
 - **Bring the apps back** — LZX on 5.0 without rewrite; then LLM-port one to Declare. Flagship: **[SimFaux](../simfaux/)** — [`apps/simfaux/ORGANELLES.yml`](../../apps/simfaux/ORGANELLES.yml) sideways symbiosis (LZX DNA + OL5 + Declare siblings, like Soul City souls).
 - **Humansplaining vs training data** — [no-ai-humansplaining](https://github.com/SimHacker/moollm/blob/main/skills/no-ai-humansplaining/SKILL.md) · [speed-of-light](https://github.com/SimHacker/moollm/tree/main/skills/speed-of-light).
 
-See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest. Ask before quoting David's private "wet cement" DM framing on air — the Declare repo itself is public.
+See [`SHOW.yml`](SHOW.yml). Consent **not yet asked** for any guest.
 
 — Don Hopkins *(User Interface Flower Child)*
