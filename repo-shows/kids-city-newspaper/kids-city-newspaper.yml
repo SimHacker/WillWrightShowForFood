@@ -67,6 +67,9 @@ implementation_today: |
   LLMs backstage (never bylined) can do the paste-up: layout, archive indexing,
   pulling the save-file receipts a kid reporter asks for. Kids author; the
   machine does the printing press. Same division of labor as the whole show.
+  Event schema (pause, tile, snapshot, story, summon, git beside save, GitHub
+  issues): moollm designs/eval/PAUSE-MARK-STORY.md — PacMania testimonies as
+  existence proof that a low-res sim is enough to hang journalism on.
 
 role_gate_tie: |
   The press gallery of the role gate (../will-wright-premiere/
@@ -104,3 +107,5 @@ ties:
   - ../../characters/will-wright/sources/2007-11-16-simcity-rules-alan-kay/README.md
   - ../../characters/will-wright/media/sims-dumbold-voting-machine-README.md
   - ../../bits/theme-procedural-rhetoric/theme-procedural-rhetoric.md
+  - https://github.com/SimHacker/moollm/blob/main/designs/eval/PAUSE-MARK-STORY.md
+  - https://github.com/SimHacker/moollm/blob/main/designs/eval/CHURCH-OF-PACMANIA-TESTIMONIES.md

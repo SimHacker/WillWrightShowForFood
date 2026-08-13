@@ -1,55 +1,46 @@
-# Digital Tribbles -- a fecund Tamagotchi
+# Digital Tribbles
 
-Incremental game idea. Ask David Gerrold **ahead of the recording**, then again on air --
-not a cold-call. He invented the organism; give him time to prosecute the case.
+An [incremental game](https://en.wikipedia.org/wiki/Incremental_game) -- numbers go up, then
+they keep going up without you -- a fecund litter of
+[Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) (feed it or it dies) and Frank Lantz's
+[Universal Paperclips](https://www.decisionproblem.com/paperclips/)
+([Wikipedia](https://en.wikipedia.org/wiki/Universal_Paperclips)): a 2017 browser game of the
+[paperclip maximizer](https://en.wikipedia.org/wiki/Instrumental_convergence#Paperclip_maximizer).
+You make paperclips. Then you automate making paperclips. Then there is nothing left that is
+not a paperclip.
 
-## The pitch
+Paperclips take the universe by manufacture. Tribbles do it by breeding. Same exponential
+curve, opposite ontology: factory vs litter, sterile vs pregnant. You feed them, they purr,
+they die if neglected -- and the care loop *is* the takeover, because a well-fed tribble is a
+pregnant tribble, and they are born pregnant.
 
-**Digital Tribbles.** A fecund cross between Tamagotchi and
-[Universal Paperclips](https://en.wikipedia.org/wiki/Universal_Paperclips).
+Victory condition: be fruitful and multiply. Manifest destiny, with fur.
 
-Paperclips take over the universe by *manufacture*. Tribbles do it by *breeding*. Same
-exponential curve, opposite ontology: industrial vs organic, sterile vs pregnant, factory vs
-litter. Tamagotchi supplies the care loop -- you feed them, they purr, they die if neglected --
-and the care loop *is* the takeover, because a well-fed tribble is a pregnant tribble, and
-tribbles are born pregnant.
+## The loop
 
-"Be fruitful and multiply" as a victory condition. Manifest destiny, but they do it with fur.
+1. One tribble. Hungry. You feed it.
+2. It reproduces. Now you have a pile. They eat more.
+3. You automate feeding -- grain, then warehouses, then planets -- because clicking cannot
+   keep up.
+4. The pile becomes a weather system. Then a biosphere. Then the only remaining matter.
+5. Endgame is not a high score. Endgame is there is nothing left that is not tribble.
 
-## The word
+[Incremental games](https://en.wikipedia.org/wiki/Incremental_game) (Cookie Clicker, Universal
+Paperclips) made the paperclip maximizer a toy: one factory, then the universe. Tamagotchi made
+keeping one creature alive a toy. Here the creature *is* the factory.
 
-**Fecund**, not "cross" alone. Fruitful is the public-facing cousin (biblical, colonial,
-destiny-shaped). Fecund is the precise one: organisms overrunning a niche by reproduction.
-Paperclips are sterile. Tribbles are fecund. The adjective *is* the joke.
+## Titles
 
-Noun alternative if "cross" still feels industrial: **litter**. "A fecund litter of Tamagotchi
-and Universal Paperclips."
+- **Universal Tribbles** -- mirrors Lantz.
+- **The Trouble with Digital Tribbles** -- the episode, as a game.
 
-Working title that mirrors Lantz: **Universal Tribbles**. Episode-true title: *The Trouble with
-Digital Tribbles*.
+## Kin
 
-## Why Gerrold, and why not cold
-
-He wrote the organism that is born pregnant -- the funniest conservation-of-mass catastrophe
-in popular SF, and already a conversation beat in this room (tribbles vs soul hydraulics).
-Universal Paperclips is the paperclip maximizer as an idle game; Digital Tribbles is the same
-shape with his creature inside it. He should hear the idea privately first so the on-air answer
-is a prepared one, not a polite surprise.
-
-## Lineage in this repo
-
-- [john-von-neumann](../john-von-neumann/) -- the 29-state constructor as "a digital tribble,
-  but not as cute and fuzzy." Level 1 universal constructor: harmless virtual pet. Digital
-  Tribbles is that pet with a Tamagotchi hunger bar and a Paperclips endgame.
-- Soul hydraulics -- tribbles violate conservation; the show's soul bridges enforce it. The
-  game can play both: cute until the warehouse is full of fur.
-- [will-wright](../will-wright/) -- simulation toys, exponential systems, the player as
-  gardener of a disaster.
-
-## On-air question (send this paragraph first)
-
-> Idle games taught a generation the paperclip maximizer: one factory, then the universe.
-> Tamagotchi taught a generation to keep one creature alive. What if the creature *is* the
-> factory -- Digital Tribbles, a fecund Tamagotchi, Universal Paperclips but they reproduce
-> instead of manufacture? You wrote the organism that is born pregnant. What would you want
-> that game to get right, and what would you want it to refuse?
+- Play it: [Universal Paperclips](https://www.decisionproblem.com/paperclips/) (Frank Lantz,
+  2017). Article: [Wikipedia](https://en.wikipedia.org/wiki/Universal_Paperclips). Industrial
+  version of this curve.
+- [John von Neumann](../john-von-neumann/) -- self-replicating constructors at three levels
+  of reality; the mathematical kind is a virtual pet that prints a copy of itself. This game
+  is that pet with a hunger bar and a Paperclips endgame.
+- [Will Wright](../will-wright/) -- simulation toys where the player gardens an exponential
+  disaster.

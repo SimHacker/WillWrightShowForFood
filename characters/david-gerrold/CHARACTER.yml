@@ -60,9 +60,8 @@ why_a_guest:
     multiplying without limit. The soul-hydraulics bridge (measure/drain/squirt, strictly
     conserved) is the straight man to the tribble joke. We would love to discuss this on air.
   digital_tribbles: |
-    Incremental-game idea: Digital Tribbles -- a fecund Tamagotchi (Universal Paperclips, but
-    they breed). Send the question to Gerrold informally before recording so he can prepare;
-    on-air is the second pass. See digital-tribbles.md.
+    Incremental game: Digital Tribbles -- Tamagotchi care loop, Paperclips endgame, they breed.
+    See digital-tribbles.md.
   craft: |
     A working writer's writer — story structure, television compromise, what survives rewrites
     — with sixty years of receipts and a legendary willingness to say what he thinks.
@@ -80,7 +79,7 @@ sources:
 see_also:
   - { path: README.md, why: "Public-facing overview" }
   - { path: invitation.md, why: "Draft invitation — Don will send personally" }
-  - { path: digital-tribbles.md, why: "Incremental-game idea -- ask Gerrold ahead of the recording" }
+  - { path: digital-tribbles.md, why: "Game pitch -- Universal Tribbles" }
   - { path: ../david-marusek/, why: "Fellow SF author guest — digital-souls wing" }
   - { path: ../david-marusek/the-wedding-album-and-digital-souls.md, why: "The companion essay — simulated-people ethics the show inherits" }
   - { path: ../../schemas/portrayal-standards.md, why: "The HARLIE questions, operationalized" }
