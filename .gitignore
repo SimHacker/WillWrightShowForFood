@@ -54,3 +54,4 @@ apps/simfaux/declare/**/*.mp3
 **/*.avi
 **/*.wmv
 **/SimFaux.lzx.swf
+__pycache__/
