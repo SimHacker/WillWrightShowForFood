@@ -1,16 +1,19 @@
-# Jokes and their Relation to the Cognitive Unconscious
+# Jokes and the Cognitive Unconscious — companion analysis
 
-**Source copy** of Marvin Minsky's 1980/81 essay (AI Memo 603), maintained in this memorial room
-for Repo Show attribution.
+**MOOLLM's reading** of Marvin Minsky's 1980/81 essay (AI Memo 603): his jokes and abstract,
+followed by modern commentary in his framework. This is **not the paper's text** — for that,
+read the [verbatim full text](../papers/AIM-603-jokes-cognitive-unconscious-1980.md). Human
+entrance: [README.md](README.md).
 
 | | |
 |--|--|
+| **Verbatim full text** | [../papers/AIM-603-jokes-cognitive-unconscious-1980.md](../papers/AIM-603-jokes-cognitive-unconscious-1980.md) |
 | **Canonical in MOOLLM** | https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/MINSKY-JOKES.md |
 | **Skill home** | https://github.com/SimHacker/moollm/tree/main/skills/no-ai-joking |
 | **Worked examples** | https://github.com/SimHacker/moollm/tree/main/skills/no-ai-joking/examples |
 | **Original** | AI Memo 603, MIT AI Lab, Nov 1980; *Cognitive Constraints on Communication* (Reidel, 1981) |
 
-[Portrayal / memorial standards](../../../schemas/portrayal-standards.md#memorial-mode) — we discuss
+[Portrayal / memorial standards](../../../../schemas/portrayal-standards.md#memorial-mode) — we discuss
 this paper; we do not speak as Marvin.
 
 ---
@@ -225,4 +228,5 @@ Archived at: https://web.media.mit.edu/~minsky/papers/jokes.cognitive.txt
 ---
 
 *"A joke is a thought that catches itself thinking and laughs instead of crashing."*
-— Marvin Minsky (attributed)
+— MOOLLM's one-line compression of the thesis (ours, not Minsky's; his own closing line was
+"the pursuit of sobriety through the suppression of the absurd")

@@ -15,7 +15,7 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
 |----------|-------|
 | [Copyleft envelope 1984](./media/copyleft-envelope-1984.yml) | Borrowed **68000 manual** → mailed back with *Copyleft (L)* sticker — term RMS adopted |
 | [RMS -vs- Doctor](http://www.art.net/studios/hackers/hopkins/Don/text/rms-vs-doctor.html) | 1993 kabuki-west natalism flame; Don answered with `doctor.el` |
-| [Minsky jokes paper](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md) | AI Memo 603 — humor as catching cognitive bugs; memorial discussant segment |
+| [Minsky jokes paper](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious/README.md) | AI Memo 603 — humor as catching cognitive bugs; memorial discussant segment |
 | [Tourist policy essay](https://donhopkins.medium.com/mit-ai-lab-tourist-policy-f73b77075631) | Don's Medium piece — invite RMS corrections on air |
 | [Latent Trolls thread](sources/2026-07-30-latent-trolls.md) | Aug 2026 — Latent Office coinage; RMS patents≠copyright; GOLEM acronym collision with [not-ipr.html](https://www.gnu.org/philosophy/not-ipr.html) |
 | [contact-channels.yml](contact-channels.yml) | Jitsi/BBB OK; async email first; landline via rms-assist |

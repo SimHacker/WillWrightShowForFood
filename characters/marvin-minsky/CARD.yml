@@ -166,7 +166,7 @@ abilities:
     - trigger: show_humor_lands_and_teaches
       weight: 0.93
   effect: "Humor as catching bugs in reasoning — censors, frame confusion, knowledge-about-knowledge. Load-bearing for MOOLLM's no-ai-joking spine; the source essay lives in this room."
-  verifiable: "Jokes and their Relation to the Cognitive Unconscious (AI Memo 603, 1980/81) — sources/jokes-and-the-cognitive-unconscious.md"
+  verifiable: "Jokes and their Relation to the Cognitive Unconscious (AI Memo 603, 1980/81) — sources/jokes-and-the-cognitive-unconscious/README.md"
   combos_with: [don-hopkins]
 
 - id: ULTIMATE-MACHINE
@@ -263,7 +263,7 @@ invoke_rules:
 see_also:
 - { path: CHARACTER.yml, why: "Bio girder — memorial roster (who_can_discuss) with kinds + whys" }
 - { path: memorial.md, why: "Tribute — represent + discuss (memorial mode)" }
-- { path: sources/jokes-and-the-cognitive-unconscious.md, why: "AI Memo 603 source copy" }
+- { path: sources/jokes-and-the-cognitive-unconscious/README.md, why: "AI Memo 603 paper room — Freud context, full text, analysis, living skill" }
 - { path: ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/, why: "The 1952 invention as living mascot (fictional bot)" }
 - { path: ../henry-minsky/CARD.yml, why: "Society of Mind, running" }
 - { path: ../david-levitt/CARD.yml, why: "The AI-music thesis line" }

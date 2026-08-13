@@ -12,7 +12,7 @@
 | Frames / K-lines | 1974 / 1980 — MOOLLM load-bearing |
 | Perceptrons (with Papert) | 1969 — NN history |
 | Emotion Machine (2006) | Later architecture of agents |
-| Jokes / cognitive unconscious | AI Memo 603 — [`sources/jokes-and-the-cognitive-unconscious.md`](sources/jokes-and-the-cognitive-unconscious.md) |
+| Jokes / cognitive unconscious | AI Memo 603 — [`sources/jokes-and-the-cognitive-unconscious/`](sources/jokes-and-the-cognitive-unconscious/README.md) |
 | Sketchpad committee | Ivan Sutherland thesis acknowledgments |
 
 ## Hooks (with living discussants)

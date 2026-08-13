@@ -44,7 +44,7 @@ site (the original is gone): https://www.mit.edu/~dxh/marvin/web.media.mit.edu/~
 | Memo | Where it works for a living |
 |------|------------------------------|
 | AIM-516 (K-lines) | [k-lines skill](https://github.com/SimHacker/moollm/tree/main/skills/k-lines) · [P-PYRAMID design](https://github.com/SimHacker/moollm/blob/main/designs/P-PYRAMID.md) |
-| AIM-603 (Jokes) | [no-ai-joking skill](https://github.com/SimHacker/moollm/tree/main/skills/no-ai-joking) · [markdown source copy](../jokes-and-the-cognitive-unconscious.md) |
+| AIM-603 (Jokes) | [no-ai-joking skill](https://github.com/SimHacker/moollm/tree/main/skills/no-ai-joking) · [paper room](../jokes-and-the-cognitive-unconscious/README.md) |
 | AIM-306 (Frames) | [knowledge-frames skill](https://github.com/SimHacker/moollm/tree/main/skills/knowledge-frames) |
 
 ↑ [sources](../README.md) · [character room](../../README.md)

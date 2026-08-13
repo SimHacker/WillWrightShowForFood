@@ -148,7 +148,7 @@ David Levitt, Gloria Rudisch, and Richard Stallman for suggestions."* Ask David 
 suggesting — the memo era is exactly his computational-jazz PhD years in Marvin's orbit. Natural
 co-memorial thread with [Gary Drescher](../gary-drescher/ideas.md) (whose schema mechanism supplies
 the memo's missing learning rule — censors as sign-flipped schemas) and via
-[`../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md`](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md).
+[`../marvin-minsky/sources/jokes-and-the-cognitive-unconscious/`](../marvin-minsky/sources/jokes-and-the-cognitive-unconscious/README.md).
 Bonus symmetry: Minsky's theory says humor and improvisation both live in the space between
 expectation and violation — David's thesis is about exactly that space, in music.
 

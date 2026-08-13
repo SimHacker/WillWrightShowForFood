@@ -50,7 +50,7 @@ segments:
       - "Humor as cognitive bug recognition — Minsky AI Memo 603; RMS's take."
       - "Jokes in the hall — what outsiders never saw."
     sources:
-      - characters/marvin-minsky/sources/jokes-and-the-cognitive-unconscious.md
+      - characters/marvin-minsky/sources/jokes-and-the-cognitive-unconscious/README.md
       - characters/marvin-minsky/memorial.md
 
   copyleft_envelope:

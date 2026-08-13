@@ -19,7 +19,7 @@ not only Freud's forbidden thoughts. Load-bearing for MOOLLM's humor / no-ai-jok
 
 | | |
 |--|--|
-| **In this room** | [`sources/jokes-and-the-cognitive-unconscious.md`](sources/jokes-and-the-cognitive-unconscious.md) |
+| **In this room** | [`sources/jokes-and-the-cognitive-unconscious/`](sources/jokes-and-the-cognitive-unconscious/README.md) — the human entrance: Freud context, full text, analysis, living skill |
 | **Canonical MOOLLM copy** | https://github.com/SimHacker/moollm/blob/main/skills/no-ai-joking/MINSKY-JOKES.md |
 | **Worked examples** | https://github.com/SimHacker/moollm/tree/main/skills/no-ai-joking/examples |
 
