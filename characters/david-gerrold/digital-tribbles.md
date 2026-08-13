@@ -1,5 +1,9 @@
 # Digital Tribbles
 
+*A whimsical sketch, offered for fun -- one possible entry in a genre you could call the
+**organic paperclip maximizer**. Not something David Gerrold proposed, and not something
+anyone is committing to build. Just a thought experiment wearing fur.*
+
 An [incremental game](https://en.wikipedia.org/wiki/Incremental_game) -- numbers go up, then
 they keep going up without you -- a fecund litter of
 [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi) (feed it or it dies) and Frank Lantz's
