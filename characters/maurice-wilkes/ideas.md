@@ -13,7 +13,7 @@
   "run the old code" premise.
 - **Microprogramming & caches.** How two of his ideas quietly became universal.
 - **The Titan and the PDP-7 link.** The distributed setup (Wiseman's data-link) that
-  PIXIE ran on — bridge to the [Lars Brinkhoff emulation segment](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml).
+  PIXIE ran on — bridge to the [Lars Brinkhoff emulation segment](../../repo-shows/pixie-pie-menus-pdp7/README.md).
 
 ## Open questions / to confirm
 

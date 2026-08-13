@@ -352,4 +352,4 @@ maps onto `/LTPIX`:
   [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md)
 
 ↑ [Thread index](THREAD-INDEX.md) · [character README](../README.md) ·
-[show seed](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+[show seed](../../../repo-shows/pixie-pie-menus-pdp7/README.md)

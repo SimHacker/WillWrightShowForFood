@@ -12,7 +12,7 @@ the repo.
 
 ## Flagship: ttycity interview
 
-Show seed: [`repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml`](../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml)
+Show seed: [`repo-shows/antoni-sawicki-ttycity/README.md`](../../repo-shows/antoni-sawicki-ttycity/README.md)
 
 | Segment | What |
 |---------|------|

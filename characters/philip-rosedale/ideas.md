@@ -69,7 +69,7 @@ plugins? What would you steal for a 2026 live-object stack? Pair or cross-refere
 ## Sources (public)
 
 - [`correspondence.yml`](correspondence.yml) · [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml`](../../repo-shows/philip-rosedale-hifi-moollm/philip-rosedale-hifi-moollm.yml)
+- Show seed: [`repo-shows/philip-rosedale-hifi-moollm/README.md`](../../repo-shows/philip-rosedale-hifi-moollm/README.md)
 - VotingBox.js: http://donhopkins.com/home/hifi/VotingBox.js
 - MOOLLM designs: GitHub-as-MMORPG, MOO-HERITAGE, CHARACTER-SIMULATION-INDEX (SimHacker/moollm)
 - Trail: [`process/trails/yaml-jazz-collaboration-stack.md`](../../process/trails/yaml-jazz-collaboration-stack.md)

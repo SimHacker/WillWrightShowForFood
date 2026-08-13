@@ -45,7 +45,7 @@ Fixed before ship with heavy **SimAntics** work (Don's memory). No known survivi
 
 Full chain + reunion prompts: [`../maid-plunger-incident.yml`](../maid-plunger-incident.yml)
 
-Flipbook B-roll: [`../../flipbook-maid-plunger-incident/FLIPBOOK.yml`](../../flipbook-maid-plunger-incident/FLIPBOOK.yml)
+Flipbook B-roll: [`../../flipbook-maid-plunger-incident/README.md`](../../flipbook-maid-plunger-incident/README.md)
 
 ## Primary source (Don HN, verbatim)
 

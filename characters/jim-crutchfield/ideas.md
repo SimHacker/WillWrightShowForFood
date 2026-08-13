@@ -119,7 +119,7 @@ compute** alongside [Norman Margolus](../norman-margolus/README.md) (CAM-6 / rev
 [Scott Draves](../scott-draves/README.md) (Electric Sheep / generative art), Don's CAM6, and — from
 his SFI board seat — [Reese Jones](../reese-jones/README.md) (agent-based modeling / ALife). The
 Santa Fe Institute is the shared home for all of it. See the
-[Margolus CA looping fest](../../repo-shows/norman-margolus/SHOW.yml).
+[Margolus CA looping fest](../../repo-shows/norman-margolus/README.md).
 
 ## Sources (public)
 

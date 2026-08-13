@@ -108,7 +108,7 @@ documented; room grows if Kelly wants in.
 | **Career harvest (YAML)** | [`sources/career-and-awards.yml`](sources/career-and-awards.yml) |
 | **Roy Eagleson** (student, brought him in) | [`../roy-eagleson/`](../roy-eagleson/) |
 | **Heinz Lemke** (PIXIE thread host) | [`../heinz-lemke/`](../heinz-lemke/) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 | **Waterloo CS history** | [cs.uwaterloo.ca/kiosk/history/cs.htm](https://cs.uwaterloo.ca/kiosk/history/cs.htm) |
 | **Casual portrait** | [`media/kelly-booth-casual.png`](media/kelly-booth-casual.png) |
 

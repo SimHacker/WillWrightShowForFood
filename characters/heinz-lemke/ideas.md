@@ -109,6 +109,6 @@ Digitized films, *Flight of the PIXIE*, CHM oral history — honor Wiseman and H
 
 - [`invitation.md`](invitation.md)
 - [`correspondence.md`](correspondence.md)
-- Show seed: [`repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+- Show seed: [`repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md)
 - [`CHARACTER.yml`](CHARACTER.yml)
 - PIXIE paper: [donhopkins.com PDF](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf)

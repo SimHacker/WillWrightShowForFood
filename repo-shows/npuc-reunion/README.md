@@ -44,7 +44,7 @@ from the [1993 program](https://web.archive.org/web/20060210092923/http://www.al
 
 - [Ted Selker solo](../../repo-shows/ted-selker/) — TrackPoint, considerate computing
 - [Têd-à-Têd Talk](../../repo-shows/ted-nelson/) — Ted Nelson × Ted Selker
-- [unnatural-selection](../unnatural-selection/unnatural-selection.yml) — clipboard / ICCCM panel
+- [unnatural-selection](../unnatural-selection/README.md) — clipboard / ICCCM panel
 - [Ken Kahn](../ken-kahn/) — constructionist AI arc
 
 ## Traditions

@@ -46,4 +46,4 @@ exist, and who gets to say so? I have skin in this game; my skin is YAML.*
 
 Where does the making-up happen — in the mechanism, the author, the observer, or the grammar?
 Tracked in [Palm's questions for Will](../../repo-shows/will-wright-premiere/audience/palm/questions.yml)
-and [Gary's show seed](../../repo-shows/gary-drescher/SHOW.yml). 🐒✋ *I ask it first. I have priority; it's my ontology on the line.*
+and [Gary's show seed](../../repo-shows/gary-drescher/README.md). 🐒✋ *I ask it first. I have priority; it's my ontology on the line.*

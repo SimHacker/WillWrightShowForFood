@@ -25,7 +25,7 @@ We remember her through the people who loved her — **Craig Latta** (anchor epi
 **Dan Ingalls** (Smalltalk Zoo, SqueakJS credit), **Alan Kay** (constructionist microworld lineage),
 and **Don Hopkins** (host). Warm invitations are going out; linked episodes or one arc — guests choose.
 
-Show arc: [`../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml)
+Show arc: [`../../repo-shows/remembering-vanessa-freudenberg/README.md`](../../repo-shows/remembering-vanessa-freudenberg/README.md)
 
 Technical tribute (target JS not WASM, hybrid GC, Self→V8 lineage, MOOLLM relevance):
 [Vanessa's philosophy (MOOLLM)](https://github.com/SimHacker/moollm/blob/main/designs/vanessa-freudenberg-philosophy.md).

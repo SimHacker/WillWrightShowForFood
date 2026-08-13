@@ -23,7 +23,7 @@ What EA/Maxis courseware should accompany open Micropolis? Rights, updates, Lesl
 Don's 2006 ask: scriptable simulators, spreadsheet export, Sugar integration — what's worth building now?
 
 ### 4. Constructionist reunion
-Papert lineage, city models, microworlds — joint segment with [`remembering-the-constructionists`](../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml).
+Papert lineage, city models, microworlds — joint segment with [`remembering-the-constructionists`](../../repo-shows/remembering-the-constructionists/README.md).
 
 ### 5. Frank Gehry's sister builds cities too
 Architecture, physical models, and why SimCity was always an education product — not just a game.

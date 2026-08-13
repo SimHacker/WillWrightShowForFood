@@ -15,7 +15,7 @@ copyright **"Don Woods and Don Knuth"**. The MOOLLM kitchen already issued his
 correspondents since a misdirected email in **1986** ([digest](sources/correspondence-digest.md)).
 Ensembles: two-Dons NeWS episode;
 [Lars Brinkhoff](../lars-brinkhoff/) PDP-10 live boot;
-[**the two Adventurers** with Scott Adams](../../repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml) —
+[**the two Adventurers** with Scott Adams](../../repo-shows/woods-and-adams-adventurers/README.md) —
 free mainframe cave meets first sold adventure;
 **THE DREAM: [the literate adventure code reading with Knuth](../donald-knuth/)** —
 both names on the advent.w copyright line, walking the sections together (Woods saw

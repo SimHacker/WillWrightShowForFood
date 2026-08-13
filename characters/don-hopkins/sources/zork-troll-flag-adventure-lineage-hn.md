@@ -10,7 +10,7 @@ org chart that places **Don Woods** at General Magic in 1994. Everything here is
 | HN threads | [31846457](https://news.ycombinator.com/item?id=31846457) (2022) · [43944506](https://news.ycombinator.com/item?id=43944506) (2025) · [19672436](https://news.ycombinator.com/item?id=19672436) (2019) · [44540509](https://news.ycombinator.com/item?id=44540509) (2025, General Magic) |
 | Wikipedia | [Talk:Zork/Archive 1 — "Link to the original Zork source code in MDL"](https://en.wikipedia.org/wiki/Talk:Zork/Archive_1) (as Xardox, 2013) |
 | Sources | [MDL Zork on GitHub](https://github.com/itafroma/zork-mdl) · [retro.co.za mirror](https://retro.co.za/adventure/zork-mdl/) · [Supnik's blessed copy](http://simh.trailing-edge.com/games/zork-mdl.zip) · [zork-fortran](https://github.com/historicalsource/zork-fortran) |
-| Feeds | [don-woods room](../../don-woods/) · [donald-knuth room](../../donald-knuth/) · [woods-and-adams pair seed](../../../repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml) |
+| Feeds | [don-woods room](../../don-woods/) · [donald-knuth room](../../donald-knuth/) · [woods-and-adams pair seed](../../../repo-shows/woods-and-adams-adventurers/README.md) |
 
 ## The TROLL-FLAG!-FLAG bug — a hypothesis confirmed decades later
 

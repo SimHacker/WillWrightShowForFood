@@ -25,7 +25,7 @@ not a YouTube nostalgia clip.
 compute rate lands in the audio / AM-interference band the way the original iron did. Slow
 the iron to real time; let the radio sing in real time.
 
-**Show fit:** [PIXIE on PDP-7](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) ·
+**Show fit:** [PIXIE on PDP-7](../../repo-shows/pixie-pie-menus-pdp7/README.md) ·
 [Lars show seed](../../repo-shows/lars-brinkhoff/) · async segments already green-lit
 ([correspondence](correspondence.yml)).
 
@@ -48,7 +48,7 @@ links where they still work, and **Wayback** mirrors for the classics Don posted
 | Demo | Link | Notes |
 |------|------|--------|
 | **Spacewar!** on the real PDP-1 | [Lyle Bickley explains the PDP-1 (and we play the original Spacewar!)](https://www.youtube.com/watch?v=1EWQYAfuMYw) | Vector-console ancestry next to PIXIE / munch culture |
-| **Flight of the PIXIE** | [Yuja Wang — Flight of the PIXIE](https://www.youtube.com/watch?v=jDrqR9XssJI) · [tribute notes](../yuja-wang/sources/flight-of-the-pixie-tribute.md) · [CHM/TLG broadcast](../don-hopkins/sources/2020-04-06-flight-of-pixie-chm-tlg-broadcast.md) | Cambridge CAD film energy; pairs with [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| **Flight of the PIXIE** | [Yuja Wang — Flight of the PIXIE](https://www.youtube.com/watch?v=jDrqR9XssJI) · [tribute notes](../yuja-wang/sources/flight-of-the-pixie-tribute.md) · [CHM/TLG broadcast](../don-hopkins/sources/2020-04-06-flight-of-pixie-chm-tlg-broadcast.md) | Cambridge CAD film energy; pairs with [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 
 ### Code / history anchors (not video, but link them anyway)
 

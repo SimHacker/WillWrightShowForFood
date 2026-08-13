@@ -21,7 +21,7 @@
 ## Morning Sam. Morning Ralph. — Emacs vs vi, the bout
 
 Fantasy card with James Gosling:
-[`repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml)
+[`repo-shows/morning-sam-morning-ralph/README.md`](../../repo-shows/morning-sam-morning-ralph/README.md)
 (Bout 1) — the editor war's two field marshals shared Sun for twenty years. vi as a
 300-baud survival kit (ADM-3A, hjkl, modes) vs Gosling's redisplay spending CPU to save
 baud: both answers to the same slow wire. Fight the old fight for one segment, then punch

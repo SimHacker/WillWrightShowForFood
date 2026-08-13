@@ -25,7 +25,7 @@ Async segments OK — Brewster records when convenient; Don assembles with sourc
 
 [`sources/olpc-book-viewer-devel-2007-01-21.md`](sources/olpc-book-viewer-devel-2007-01-21.md) — Brewster's **[devel@laptop.org](mailto:devel@laptop.org)** wishlist (100k books, tablet PDF viewer, streaming, Flatland demo URLs). [Wayback capture](https://web.archive.org/web/20070228082343/http://mailman.laptop.org/pipermail/devel/2007-January/003674.html).
 
-Pair with [`../walter-bender/`](../walter-bender/) and [`../samuel-klein/`](../samuel-klein/) · show [`../../repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml).
+Pair with [`../walter-bender/`](../walter-bender/) and [`../samuel-klein/`](../samuel-klein/) · show [`../../repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md).
 
 ## 3. The Little Garden cast
 

@@ -11,7 +11,7 @@ OLPC Stone Soup, open-sourcing SimCity, skill-creation show
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/walter-bender-olpc/SHOW.yml`
+### 1. Show seed: `repo-shows/walter-bender-olpc/README.md`
 walk the repo on air and build from the seed.
 
 ### 2. OLPC introducing-the-players thread harvested; Stone Soup + GPL
@@ -19,6 +19,6 @@ walk the repo on air and build from the seed.
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml)
+- Show seed: [`repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml) — mail-sourced artifacts
 - [`CHARACTER.yml`](CHARACTER.yml)

@@ -28,7 +28,7 @@ is the language; Brian and Dan are the pedagogical architects. The Karlstrom cit
 
 - [Karlstrom address digest](snapcon-2025-karlstrom-address.md) · [full transcript](snapcon-2025-karlstrom-address-transcript.md) — including "jump through hoops questions"
 - [Brian's ideas — BJC](../ideas.md#4-the-beauty-and-joy-of-computing-bjc)
-- [Pair show](../../../repo-shows/snap-logo-brian-jens/SHOW.yml) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md)
+- [Pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md)
 - [Snap! source](https://github.com/jmoenig/Snap)
 
 ↑ [Sources index](README.md) · [Brian's room](../README.md) · [Invitation](../invitation.md) · [Ideas](../ideas.md)

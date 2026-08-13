@@ -37,7 +37,7 @@
 - Ted Selker **introduced** Ted Nelson at BayCHI Aug 2021 (fixed Connecticut internet day-of)
 - Don visited Ted Selker in Bay Area — **Ted Nelson in the basement** on an intense video call; Don
   regretted only saying hi. Hope Ted Nelson will **intensely video call us** too.
-- NPUC 1996 Ted talk — Selker called it epic; resurrection thread in [`../ted-selker/SHOW.yml`](../ted-selker/SHOW.yml)
+- NPUC 1996 Ted talk — Selker called it epic; resurrection thread in [`../ted-selker/README.md`](../ted-selker/README.md)
 
 ---
 
@@ -54,9 +54,9 @@
 
 ## Cross-links to renovate
 
-- [`../selections-icccm-clipboard/selections-icccm-clipboard.yml`](../selections-icccm-clipboard/selections-icccm-clipboard.yml) → alias to unnatural-selection
-- [`../ted-nelson/SHOW.yml`](../ted-nelson/SHOW.yml) — add unnatural-selection tie
-- [`../david-rosenthal/SHOW.yml`](../david-rosenthal/SHOW.yml) — treaty + table segments
-- [`../james-gosling/SHOW.yml`](../james-gosling/SHOW.yml) — Alvey + NeWS reunion
+- [`../selections-icccm-clipboard/README.md`](../selections-icccm-clipboard/README.md) → alias to unnatural-selection
+- [`../ted-nelson/README.md`](../ted-nelson/README.md) — add unnatural-selection tie
+- [`../david-rosenthal/README.md`](../david-rosenthal/README.md) — treaty + table segments
+- [`../james-gosling/README.md`](../james-gosling/README.md) — Alvey + NeWS reunion
 
 ↑ [INDEX](../INDEX.yml)

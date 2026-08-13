@@ -127,8 +127,8 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | Link | Why |
 |------|-----|
 | [`micropolis-ai-drag-race.md`](micropolis-ai-drag-race.md) | Generated markup view |
-| [`micropolis-ai-drag-race.yml`](../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Show seed |
-| [`ca-machinima-cabaret-drag-race.yml`](../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml) | Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts |
+| [`micropolis-ai-drag-race.yml`](../repo-shows/micropolis-ai-drag-race/README.md) | Show seed |
+| [`ca-machinima-cabaret-drag-race.yml`](../repo-shows/ca-machinima-cabaret-drag-race/README.md) | Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts |
 | [`cross-links.yml#drag_race_and_ai_offs`](cross-links.yml) | Full game-show trail |
 | [`code-that-spec.yml`](code-that-spec.yml) | CODE THAT SPEC!!!!! chant |
 | [`manual-transmission.yml`](manual-transmission.yml) | Smallest model challenge |

@@ -40,7 +40,7 @@ Don connected DSHR's Hex-that-cheats to Lem and [Coprophagia Is Bad For You](htt
 
 | Show / doc | Link |
 |------------|------|
-| PIXIE trio | [pixie-pie-menus-pdp7.yml](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| PIXIE trio | [pixie-pie-menus-pdp7.yml](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 | Correspondence | [correspondence.md](../correspondence.md) |
 | Heinz correction (not dumb terminal) | [2026-07-07 trio thread](../../heinz-lemke/sources/2026-07-07-pixie-trio-thread.md) |
 | PIXIE source listing | [pixie-source-recovery.md](../../heinz-lemke/pixie-source-recovery.md) |

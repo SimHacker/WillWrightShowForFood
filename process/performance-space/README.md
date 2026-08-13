@@ -84,7 +84,7 @@ bubbles, "blah blah blah"). *House Party* later shipped the limo cameo to every 
 | House Party Drew limo cameo | https://www.youtube.com/watch?v=Stgk80dcnH8 |
 
 - Format spec: [`process/sims-play-along-narration.yml`](../sims-play-along-narration.yml)
-- Drew show seed: [`repo-shows/drew-carey/SHOW.yml`](../../repo-shows/drew-carey/SHOW.yml)
+- Drew show seed: [`repo-shows/drew-carey/README.md`](../../repo-shows/drew-carey/README.md)
 - Reference still: [`sims-people-and-events-drew-carey-house-party-crowd-fraps.png`](../../characters/will-wright/media/sims-people-and-events-drew-carey-house-party-crowd-fraps.png)
 
 ### Conan — face-hole puppet (homage)
@@ -106,7 +106,7 @@ rotating pantheon (Sad Clown, Death, Bob, Bella, Slats). See
 ### Vocal-tract instruments
 
 - **Pink Trombone** — https://dood.al/pinktrombone — and the **[Pink Trombone Jam](../../apps/performance-space/pink-trombone-jam.md)** group activity: 4 people accompany / follow / lead / ridicule / parody their own voices together (Croquet-synced; voice→params model).
-- **Phoneloper** — Don's SFC expressive-speech toy; show seed: [`repo-shows/phoneloper/SHOW.yml`](../../repo-shows/phoneloper/SHOW.yml)
+- **Phoneloper** — Don's SFC expressive-speech toy; show seed: [`repo-shows/phoneloper/README.md`](../../repo-shows/phoneloper/README.md)
 - **Slats robopoetry loop** — speech synth ↔ recognition feedback; audience steers by voice: [`performance-and-culture.yml#speech_feedback_loop_instrument`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
 
 ---

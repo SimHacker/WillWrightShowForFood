@@ -42,4 +42,4 @@ Sproull.
 - **Dave Tristram** — perform rule as live visuals
 - **Norman Margolus** CA fest — Silverman rules row on the shelf
 
-↑ [`../README.md`](../README.md) · [`../../../repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml`](../../../repo-shows/brian-silverman-ca-logo-pdp7/brian-silverman-ca-logo-pdp7.yml)
+↑ [`../README.md`](../README.md) · [`../../../repo-shows/brian-silverman-ca-logo-pdp7/README.md`](../../../repo-shows/brian-silverman-ca-logo-pdp7/README.md)

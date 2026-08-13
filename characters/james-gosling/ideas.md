@@ -37,7 +37,7 @@ Warren invented **DWIM** (*Do What I Mean*) in Interlisp.
 | Gosling angle | [`window-systems-lineage.md`](window-systems-lineage.md) |
 | Rosenthal + X11/ICCCM | [`../david-rosenthal/window-systems-lineage.md`](../david-rosenthal/window-systems-lineage.md) |
 | Proceedings | [Chilton — Methodology of Window Management](http://www.chilton-computing.org.uk/inf/literature/books/wm/index.htm) |
-| unnatural-selection panel | [`../../repo-shows/unnatural-selection/unnatural-selection.yml`](../../repo-shows/unnatural-selection/unnatural-selection.yml) · [`../david-rosenthal/02-alvey-1985-icon-selection-table.md`](../david-rosenthal/02-alvey-1985-icon-selection-table.md) |
+| unnatural-selection panel | [`../../repo-shows/unnatural-selection/README.md`](../../repo-shows/unnatural-selection/README.md) · [`../david-rosenthal/02-alvey-1985-icon-selection-table.md`](../david-rosenthal/02-alvey-1985-icon-selection-table.md) |
 
 ### 1b. unnatural-selection — co-guest with Rosenthal + Ted Nelson
 Walk the **expandable Alvey table** (icon column vs selection column). SunDew vs ICCCM treaty.
@@ -103,7 +103,7 @@ On-air threads:
 
 ### 7. Morning Sam. Morning Ralph. — the holy wars punch out
 Fantasy card, staged like Ralph Wolf and Sam Sheepdog punching the timecard:
-[`repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml)
+[`repo-shows/morning-sam-morning-ralph/README.md`](../../repo-shows/morning-sam-morning-ralph/README.md)
 
 - **Bout 1 vs Bill Joy** — Emacs vs vi, fought by two guys who shared Sun for twenty years.
   Both editors were answers to the same slow wire; the war was about which resource to spend.

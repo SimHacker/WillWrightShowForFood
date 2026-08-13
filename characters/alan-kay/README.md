@@ -7,7 +7,7 @@ messaging / late binding; constructionist microworlds; Turing Award 2003. Long c
 (Qwaq 2008 → Fabrik/Ingalls → Yoot 1993 transcript → MOOLLM). London with [Bonnie MacBird](../bonnie-macbird/).
 
 **Invitation:** [stub](invitation.md)
-**Shows:** [microworld seed](../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml) · [Vanessa memorial arc](../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml) (warmly interested)
+**Shows:** [microworld seed](../../repo-shows/alan-kay-microworld/README.md) · [Vanessa memorial arc](../../repo-shows/remembering-vanessa-freudenberg/README.md) (warmly interested)
 
 ## Start here
 

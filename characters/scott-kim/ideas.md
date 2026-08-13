@@ -14,7 +14,7 @@ Lumosity. Married to **Amy Jo Kim**; co-founder **Shufflebrain**.
 
 ## Pair show (default)
 
-See [`amy-jo-and-scott-kim/SHOW.yml`](../../repo-shows/amy-jo-and-scott-kim/SHOW.yml) — do **not**
+See [`amy-jo-and-scott-kim/README.md`](../../repo-shows/amy-jo-and-scott-kim/README.md) — do **not**
 repeat Shufflebrain / social-puzzle marriage material here.
 
 ## Solo hooks (optional second episode)

@@ -5,7 +5,7 @@
 
 ## Show
 
-[`walter-bender-olpc`](../../repo-shows/walter-bender-olpc/SHOW.yml) + [`simcity-open-source-saga`](../../characters/will-wright/sources/simcity-open-source-saga/README.md)
+[`walter-bender-olpc`](../../repo-shows/walter-bender-olpc/README.md) + [`simcity-open-source-saga`](../../characters/will-wright/sources/simcity-open-source-saga/README.md)
 
 Pair with [`walter-bender`](../walter-bender/) — Walter: Sugar, Stone Soup, GPL politics; Samuel:
 game-dev evangelism, GDC booth, serious games on XO.

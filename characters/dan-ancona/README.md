@@ -46,7 +46,7 @@ That question helped set in motion **GPLv3 Micropolis** (2008) and today's
 |---|---|
 | **Invitation (send_now)** | [`invitation.md`](invitation.md) |
 | **Episode hooks** | [`ideas.md`](ideas.md) |
-| **Show seed** | [`../../repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml`](../../repo-shows/dan-ancona-long-now/dan-ancona-long-now.yml) |
+| **Show seed** | [`../../repo-shows/dan-ancona-long-now/README.md`](../../repo-shows/dan-ancona-long-now/README.md) |
 | **Outreach dossier** | [`../will-wright/sources/simcity-open-source-saga/long-now-askers-outreach.md`](../will-wright/sources/simcity-open-source-saga/long-now-askers-outreach.md) |
 | **Long Now clip** | [YouTube t=3929](https://youtu.be/Dfc-DQorohc?t=3929) |
 

@@ -118,7 +118,7 @@ MIT 1969 + TU Berlin decades; asks Don about **model science**. See
 | Assets still to pull in (1967 story, storyline installments, source listing) | [`../pull-in-gaps.md`](../pull-in-gaps.md) |
 | Roy Eagleson · educator room | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | Kelly Booth · UBC HCI mentor | [`../../kelly-booth/`](../../kelly-booth/) · career: [`career-and-awards.yml`](../../kelly-booth/sources/career-and-awards.yml) |
-| PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 | PIXIE paper (p.465 diagram) | [donhopkins.com/…/PIXIE…pdf](https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf) |
 | **10 Jul thread** (Newman/Sproull, photo ID, Weizenbaum) | [`2026-07-10-pixie-storyline-thread.md`](2026-07-10-pixie-storyline-thread.md) |
 | **Thread index** (chronological) | [`THREAD-INDEX.md`](THREAD-INDEX.md) |

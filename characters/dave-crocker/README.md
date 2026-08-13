@@ -59,7 +59,7 @@ offered an honest contrast: Ted's performance felt at odds with Doug's style and
 | **Crocker brothers** | Steve (RFC 1 chair) and Dave (RFC 822 chair) — founding room, two chairs |
 | **Pair with Maynard** | Dave = software/models; [David Maynard](../dave-maynard/) = mouse/keyset hardware |
 
-**Show:** [`remembering-douglas-engelbart`](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml) ·
+**Show:** [`remembering-douglas-engelbart`](../../repo-shows/remembering-douglas-engelbart/README.md) ·
 memorial mode for Doug; living witness for Dave.
 
 ## Public record

@@ -71,7 +71,7 @@ if we ever overlap. **Zero homework — as much *homefun* as you are up to.** No
 
 | If you're curious about…         | Link                                                                                                                                     |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| **This show** (segment ideas)    | [repo-shows/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-adams/SHOW.yml)                                                                                                      |
+| **This show** (segment ideas)    | [repo-shows/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-adams/README.md)                                                                                                      |
 | **Your guest page**              | [characters/scott-adams/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/scott-adams)                           |
 | **Conversation hooks**           | [ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/ideas.md)                                 |
 | **Dual palace brief**            | [moollm-dual-palace.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-adams/moollm-dual-palace.md)       |

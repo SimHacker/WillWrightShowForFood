@@ -160,7 +160,7 @@ isochrone without smell is vanilla routing UI. Together: **intent + time + scent
 #### Routing APIs (isochrone support)
 
 Already in our orbit via [`skeleton/road-graph.md`](skeleton/road-graph.md) and
-[`urban-ebike-safari`](../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml):
+[`urban-ebike-safari`](../../../repo-shows/urban-ebike-safari/README.md):
 
 | Engine | Isochrone? | Bike / e-bike | Notes |
 |--------|------------|---------------|-------|

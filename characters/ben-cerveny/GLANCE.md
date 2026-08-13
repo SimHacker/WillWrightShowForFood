@@ -1,1 +1,1 @@
-👤 **Ben Cerveny** — Game Neverending→Flickr; Stamen; **Foundation for Public Code** (Amsterdam). Natural guest for **data portability** / public-code spine with Will. Show: [`ben-cerveny.yml`](../../repo-shows/ben-cerveny/ben-cerveny.yml).
+👤 **Ben Cerveny** — Game Neverending→Flickr; Stamen; **Foundation for Public Code** (Amsterdam). Natural guest for **data portability** / public-code spine with Will. Show: [`ben-cerveny.yml`](../../repo-shows/ben-cerveny/README.md).

@@ -77,7 +77,7 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 | **Guest README** | [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/README.md) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/ideas.md) |
 | **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/GLANCE.md) · [`CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/scott-kim/CARD.yml) |
-| **Solo show seed** (optional later) | [`repo-shows/scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/SHOW.yml) |
+| **Solo show seed** (optional later) | [`repo-shows/scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/scott-kim/README.md) |
 
 ### Amy Jo Kim 🎮
 
@@ -95,7 +95,7 @@ angles. **Read either or both** before you reply — including how **Amy Jo** de
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + roles) | [`repo-shows/amy-jo-and-scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/SHOW.yml) |
+| **Show seed** (full outline + roles) | [`repo-shows/amy-jo-and-scott-kim/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/amy-jo-and-scott-kim/README.md) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

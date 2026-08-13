@@ -102,7 +102,7 @@ I can even repurpose the cool Flight of the PIXIE AfterEffects techniques to giv
 
 | What | Where |
 |------|-------|
-| Don's async + evidence-room reply (7 Jul 16:34) | this file · [`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| Don's async + evidence-room reply (7 Jul 16:34) | this file · [`../../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 | Telecine jiggle house style | [`../../../process/post-production/cambridge-telecine-jiggle.yml`](../../../process/post-production/cambridge-telecine-jiggle.yml) |
 | Virtual light pen / emulator goal | [`../pull-in-gaps.md`](../pull-in-gaps.md) · show seed `interview_center.the_source_listing` |
 | Will Wright on thread (Cc) | [`../../will-wright/correspondence.yml`](../../will-wright/correspondence.yml) |
@@ -112,4 +112,4 @@ I can even repurpose the cool Flight of the PIXIE AfterEffects techniques to giv
 | Buxton patent thread | [`../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md`](../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md) |
 | Roy Eagleson · educator room | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | Ivan Sutherland · Sketchpad north star | [`../../ivan-sutherland/`](../../ivan-sutherland/) |
-| Show seed | [`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| Show seed | [`../../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |

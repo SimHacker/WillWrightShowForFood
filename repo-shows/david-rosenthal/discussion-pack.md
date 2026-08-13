@@ -82,7 +82,7 @@ Reusable intro episodes — background for Palm, Dasher, Tog; not the PIXIE show
 |------|-----|
 | [Palm GLANCE](../../characters/palm/GLANCE.yml) | Meet Palm before later shows |
 | [Window-systems lineage](../../characters/david-rosenthal/window-systems-lineage.md) | Solo-show paper list and questions |
-| [PIXIE show](../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) | Async trio tapestry — DSHR Cambridge segment |
+| [PIXIE show](../pixie-pie-menus-pdp7/README.md) | Async trio tapestry — DSHR Cambridge segment |
 | [David ideas](../../characters/david-rosenthal/ideas.md) | Conversation hooks |
 
 ↑ [SHOW.yml](SHOW.yml) · [David correspondence](../../characters/david-rosenthal/correspondence.md)

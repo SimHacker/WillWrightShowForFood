@@ -5,7 +5,7 @@
 
 ## Show
 
-[`remembering-douglas-engelbart`](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml) — living
+[`remembering-douglas-engelbart`](../../repo-shows/remembering-douglas-engelbart/README.md) — living
 witness with **NLS hands-on** memory + **email standards** lineage.
 
 ## Hooks

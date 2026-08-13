@@ -60,4 +60,4 @@ for Tiers 1–3.
 2006 Eno × Will [*Playing with Time*](sources/long-now-thread.md) ↔ Sam's 2016 seminar. Ask Sam if
 he was at the 2006 talk.
 
-↑ [ideas.md](ideas.md) · [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml)
+↑ [ideas.md](ideas.md) · [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs/README.md)

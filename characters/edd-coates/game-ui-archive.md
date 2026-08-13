@@ -10,7 +10,7 @@ not quotes put in Edd's mouth.
 | Hooks | [ideas.md](ideas.md) |
 | Queer Oui | [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) |
 | Invite | [invitation.md](invitation.md) |
-| Show room | [repo-shows/edd-coates/](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/SHOW.yml) |
+| Show room | [repo-shows/edd-coates/](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/README.md) |
 | Questions | [suggested-questions.yml](../../repo-shows/edd-coates/suggested-questions.yml) |
 
 ## The headline

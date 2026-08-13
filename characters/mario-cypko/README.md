@@ -56,6 +56,6 @@ explainable follow-up after esophageal cancer treatment.
 |---|---|
 | **Heinz** (supervisor, CARS) | [`../heinz-lemke/`](../heinz-lemke/) |
 | **Leo Joskowicz** | [`../leo-joskowicz/`](../leo-joskowicz/) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 
 [CHARACTER.yml](CHARACTER.yml) · [ideas.md](ideas.md) · [invitation.md](invitation.md)

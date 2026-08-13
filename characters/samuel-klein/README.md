@@ -13,7 +13,7 @@ platform and **rallied game developers** toward educational content for the XO. 
 constructionist software stack; **Samuel was the game-dev-facing evangelist on the show floor** (both
 deserve credit). Named in the **Nov 2007 EA QA sign-off** thread for Micropolis/SimCity on XO.
 
-**Show:** [`walter-bender-olpc`](../../repo-shows/walter-bender-olpc/SHOW.yml) — OLPC + open-source
+**Show:** [`walter-bender-olpc`](../../repo-shows/walter-bender-olpc/README.md) — OLPC + open-source
 SimCity; pair with Walter Bender.
 
 | | |

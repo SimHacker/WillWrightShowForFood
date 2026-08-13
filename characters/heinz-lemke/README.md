@@ -129,7 +129,7 @@ Also: [correspondence digest](correspondence.md) · [from Alan Kay](from-alan-ka
 [Interview ideas](ideas.md) (incl. the two-teletypes nightly-workflow question — now
 pre-confirmed by thesis Figs 8.6/8.7) · [source recovery plan](pixie-source-recovery.md) ·
 [pull-in gaps](pull-in-gaps.md) (open: RAINBOW MEMO series, Wiseman notes, seminar attachments) ·
-[show seed](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) · Don's pie-menu history:
+[show seed](../../repo-shows/pixie-pie-menus-pdp7/README.md) · Don's pie-menu history:
 [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

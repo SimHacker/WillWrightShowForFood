@@ -6,7 +6,7 @@ audience: "Norman Margolus (as the intended audience) — and anyone who wants t
 about: "Don's CAM6 simulator: what it is, its Forth heritage, and what Don made with Norman's magic"
 see_also:
   - ../don-hopkins/cam6-cellular-automata-machine.md
-  - ../../repo-shows/norman-margolus/SHOW.yml
+  - ../../repo-shows/norman-margolus/README.md
   - ../../characters/norman-margolus/invitation.md
 ---
 

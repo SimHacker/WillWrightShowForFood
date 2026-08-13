@@ -11,7 +11,7 @@ Primary source for the EA ↔ OLPC ↔ Sugar negotiation after Will and Rod said
 ## Related
 
 - [simcity open source saga](../simcity-open-source-saga/README.md) — Gilmore → Will → Rod prelude (same month)
-- [walter bender olpc · SHOW](../../../../repo-shows/walter-bender-olpc/SHOW.yml) — show segments from this thread
+- [walter bender olpc · SHOW](../../../../repo-shows/walter-bender-olpc/README.md) — show segments from this thread
 - [sugar centralized multiplayer laszlo](../sugar-centralized-multiplayer-laszlo/README.md)
 
 *Harvested 2026-06-29; verbatim mail in [`2006-11-13-simcity-olpc-email-thread/`](../2006-11-13-simcity-olpc-email-thread/README.md) (2026-07-04).*

@@ -67,7 +67,7 @@ Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 → [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystick-pie-network.md) ·
 [Crazy Idea Jam — Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) ·
-[Urban eBike Safari](../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml)
+[Urban eBike Safari](../../repo-shows/urban-ebike-safari/README.md)
 
 ---
 
@@ -471,7 +471,7 @@ The **Keyboard-first editing** namespace paragraph is the MOOLLM constitution in
 
 Written in 1996 for a visual dataflow language that never shipped as one product — but the **addressing model** is what MOOLLM runs on today.
 
-→ [`import-self-from-self.md`](import-self-from-self.md) · [MOOLLM](https://github.com/SimHacker/moollm) · [Self × MOOLLM](../../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) · [moollm-compose trail](../../process/trails/moollm-compose.md)
+→ [`import-self-from-self.md`](import-self-from-self.md) · [MOOLLM](https://github.com/SimHacker/moollm) · [Self × MOOLLM](../../repo-shows/david-ungar-self-moollm/README.md) · [moollm-compose trail](../../process/trails/moollm-compose.md)
 
 ---
 

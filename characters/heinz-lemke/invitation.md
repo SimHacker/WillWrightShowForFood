@@ -198,7 +198,7 @@ optional solo shows later).
 | **Conversation hooks** | [`../lars-brinkhoff/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/ideas.md) |
 | **Portrait / sources** | [`../lars-brinkhoff/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CHARACTER.yml) · [`../lars-brinkhoff/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/GLANCE.md) |
 | **Card** | [`../lars-brinkhoff/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CARD.yml) |
-| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/SHOW.yml) |
+| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) |
 
 ---
 

@@ -9,6 +9,6 @@
 **Memorial mode:** we represent and *discuss* her — never interview or speak as her. **Warmly invited
 discussants:** [Craig Latta](../craig-latta/README.md) (anchor — Caffeine live), [Dan Ingalls](../dan-ingalls/README.md),
 [Alan Kay](../alan-kay/README.md), and Don. Show arc:
-[`remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg/remembering-vanessa-freudenberg.yml).
+[`remembering-vanessa-freudenberg.yml`](../../repo-shows/remembering-vanessa-freudenberg/README.md).
 
 Verifiable sources in `CHARACTER.yml`.

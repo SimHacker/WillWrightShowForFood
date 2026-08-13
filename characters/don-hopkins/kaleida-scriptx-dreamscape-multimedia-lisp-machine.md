@@ -38,7 +38,7 @@ Vision: **link globally, interact locally** — reinvent live plug-togetherable 
 simulations, and web pages. Same architectural itch as StoryMaker cards, iLoci room networks,
 and 2026 Urban eBike Safari's hidden graph at real-world POIs.
 
-→ Product seed: [`../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml`](../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) · Jam: [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#dreamscape_scriptx)
+→ Product seed: [`../../repo-shows/urban-ebike-safari/README.md`](../../repo-shows/urban-ebike-safari/README.md) · Jam: [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#dreamscape_scriptx)
 
 The **ScriptX object-system design team** and the **Self team** held a great Kaleida meetup
 called **Conscientious Objectors** — prototype-based object systems from two directions,

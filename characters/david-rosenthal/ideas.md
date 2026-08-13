@@ -19,7 +19,7 @@ Born 1948, Cambridge UK.
 ### 1. Co-guest on Heinz Lemke's PIXIE show
 Same **PDP-7/340 + Titan** stack ~1970; met Wiseman; saw PIXIE-era demos. Trio with **Lars
 Brinkhoff** (emulation) — Cambridge memory + runnable iron + LOCKSS preservation arc.
-[`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+[`../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md)
 
 **July 2026:** David flagged timezone/grandparent-duty constraints; prefers **PDP-7/340 scope**
 on PIXIE, later history on solo show. Production pivoted to **async 1-on-1** clips — see
@@ -91,7 +91,7 @@ NFS/NeWS/X11 war, git-visible transfer naming challenge.
 | Alvey icon/selection table | [`02-alvey-1985-icon-selection-table.md`](02-alvey-1985-icon-selection-table.md) |
 | ICCCM treaty metaphor | [`03-icccm-the-xwindows-treaty.md`](03-icccm-the-xwindows-treaty.md) |
 | Per-system taxonomy | [`selection-clipboard-lineage.md`](selection-clipboard-lineage.md) |
-| Show seed | [`../../repo-shows/unnatural-selection/unnatural-selection.yml`](../../repo-shows/unnatural-selection/unnatural-selection.yml) |
+| Show seed | [`../../repo-shows/unnatural-selection/README.md`](../../repo-shows/unnatural-selection/README.md) |
 
 **Calm computing bridge:** Deskset *"shut up and do their job inconspicuously"* pre-echoes Weiser;
 Victoria Reich (LOCKSS) was Mark's widow — raise gently with consent.

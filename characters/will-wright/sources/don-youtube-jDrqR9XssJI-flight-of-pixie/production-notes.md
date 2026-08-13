@@ -22,7 +22,7 @@ Find again: `mdfind 'kMDItemFSName == "Flight of the PIXIE.aep"c'` or `find ~/Gr
 ## Repo Show reuse — same track on titles and credits
 
 The motion track and blur/glow stack above is **reusable post-production** for Repo Show episodes
-that intercut this archive — especially [`pixie-pie-menus-pdp7.yml`](../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml).
+that intercut this archive — especially [`pixie-pie-menus-pdp7.yml`](../../../../repo-shows/pixie-pie-menus-pdp7/README.md).
 
 Apply the **same driver track** to:
 

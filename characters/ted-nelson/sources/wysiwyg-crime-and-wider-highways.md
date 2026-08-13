@@ -1,7 +1,7 @@
 # The Crime of WYSIWYG — and wider highways for wingless 747s
 
 **Source:** [Ted's ComParadigm in OneLiners](https://xanadu.com.au/ted/TN/WRITINGS/TCOMPARADIGM/tedCompOneLiners.html) — §2 THE EVILS
-**Show:** [`selections-icccm-clipboard.yml`](../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml)
+**Show:** [`selections-icccm-clipboard.yml`](../../../repo-shows/selections-icccm-clipboard/README.md)
 **Pairs with:** clipboard crime, single-column text (BayCHI evil construct #2), hide-and-plug
 
 ## Ted Nelson — primary text

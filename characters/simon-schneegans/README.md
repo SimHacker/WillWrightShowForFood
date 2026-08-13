@@ -20,14 +20,14 @@ He is also the author of the enormously popular GNOME extensions **Burn-My-Windo
 | | |
 |---|---|
 | Invitation | draft — [invitation.md](invitation.md), not yet sent |
-| Show seed | [repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml](../../repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml) |
+| Show seed | [repo-shows/simon-schneegans-pie-menus/README.md](../../repo-shows/simon-schneegans-pie-menus/README.md) |
 | Hooks | [ideas.md](ideas.md) |
 | Card | [CARD.yml](CARD.yml) |
 
 ## Why this guest, in this repo
 
 This repo already hosts the pie menu deep history: the
-[Ben Shneiderman + Heinz Lemke pair show seed](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml)
+[Ben Shneiderman + Heinz Lemke pair show seed](../../repo-shows/ben-and-heinz-pie-menus/README.md)
 runs from the 1969 PIXIE radial menus on the PDP-7 through the CHI '88 pie menu study
 (Callahan, Hopkins, Weiser, Shneiderman). Simon is the living continuation of that lineage —
 the person who kept baking after everyone else declared the oven patented, deprecated, or

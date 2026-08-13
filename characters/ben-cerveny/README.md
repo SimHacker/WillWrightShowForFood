@@ -4,6 +4,6 @@ Invitation portrayal — **not** Ben Cerveny. [Standards](../../schemas/portraya
 
 **Field:** Public code, Game Neverending/Flickr, Stamen, Foundation for Public Code (Amsterdam)
 
-[Invitation](invitation.md) · [Ideas](ideas.md) · [Lane Neverending / Habitat](moollm-lane-neverending-habitat.yml) · [Show seed](../../repo-shows/ben-cerveny/ben-cerveny.yml)
+[Invitation](invitation.md) · [Ideas](ideas.md) · [Lane Neverending / Habitat](moollm-lane-neverending-habitat.yml) · [Show seed](../../repo-shows/ben-cerveny/README.md)
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

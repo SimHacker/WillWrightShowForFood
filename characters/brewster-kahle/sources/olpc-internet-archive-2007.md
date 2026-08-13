@@ -31,6 +31,6 @@ Brewster's OLPC motivation for Internet Archive: **books that look good on the d
 
 - [`olpc-book-viewer-devel-2007-01-21.md`](olpc-book-viewer-devel-2007-01-21.md) — full wishlist + Flatland example URLs
 - [`../../will-wright/sources/simcity-open-source-saga/`](../../will-wright/sources/simcity-open-source-saga/README.md) — GPL clearance arc
-- [`../../../../repo-shows/walter-bender-olpc/SHOW.yml`](../../../repo-shows/walter-bender-olpc/SHOW.yml)
+- [`../../../../repo-shows/walter-bender-olpc/README.md`](../../../repo-shows/walter-bender-olpc/README.md)
 
 ↑ [sources index](README.md)

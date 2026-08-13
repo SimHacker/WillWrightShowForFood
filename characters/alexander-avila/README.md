@@ -4,8 +4,8 @@
 the body. Openly **trans masc** (he/him). Channel formerly **AreTheyGay**.
 
 **Status:** warm lead · invitation draft · consent `not_yet_asked`  
-**Solo show:** [**I'm Queer Therefore I Sim**](../../repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml) — discuss essay + MOOLLM comment analysis with Don  
-**Also:** congregation voice on [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml) (Patrick episode)
+**Solo show:** [**I'm Queer Therefore I Sim**](../../repo-shows/im-queer-therefore-i-sim/README.md) — discuss essay + MOOLLM comment analysis with Don  
+**Also:** congregation voice on [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) (Patrick episode)
 
 ## Why he's in the repo
 

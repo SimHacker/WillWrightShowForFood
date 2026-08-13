@@ -152,4 +152,4 @@ Character rooms: [`../../leo-joskowicz/`](../../leo-joskowicz/) · [`../../mario
 
 ---
 
-↑ [Thread index](THREAD-INDEX.md) · [Heinz room](../README.md) · [Andrew Armit](../../andrew-armit/) · [show seed](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+↑ [Thread index](THREAD-INDEX.md) · [Heinz room](../README.md) · [Andrew Armit](../../andrew-armit/) · [show seed](../../../repo-shows/pixie-pie-menus-pdp7/README.md)

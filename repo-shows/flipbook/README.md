@@ -18,10 +18,10 @@ Both can appear in one episode: Flipbook for the Soul City namesake act; Pop-Up 
 
 | Show | For | Status |
 |------|-----|--------|
-| [`../flipbook-inclusivity-saved-the-sims/`](../flipbook-inclusivity-saved-the-sims/FLIPBOOK.yml) | QGCon paper act 1 — procedural rhetoric saved the franchise | seed |
-| [`../flipbook-soul-city-namesake/`](../flipbook-soul-city-namesake/FLIPBOOK.yml) | McKissick NC, Nixon HUD, Helms, prison inversion | seed |
-| [`../flipbook-soul-saver-exodus/`](../flipbook-soul-saver-exodus/FLIPBOOK.yml) | EA buyout fears → Soul City hub → Tiny Life spoke | seed |
-| [`../flipbook-maid-plunger-incident/`](../flipbook-maid-plunger-incident/FLIPBOOK.yml) | Unnecessary Censorship × SimAntics — maid, plunger, privacy fix | seed |
+| [`../flipbook-inclusivity-saved-the-sims/`](../flipbook-inclusivity-saved-the-sims/README.md) | QGCon paper act 1 — procedural rhetoric saved the franchise | seed |
+| [`../flipbook-soul-city-namesake/`](../flipbook-soul-city-namesake/README.md) | McKissick NC, Nixon HUD, Helms, prison inversion | seed |
+| [`../flipbook-soul-saver-exodus/`](../flipbook-soul-saver-exodus/README.md) | EA buyout fears → Soul City hub → Tiny Life spoke | seed |
+| [`../flipbook-maid-plunger-incident/`](../flipbook-maid-plunger-incident/README.md) | Unnecessary Censorship × SimAntics — maid, plunger, privacy fix | seed |
 
 Add a show: copy `_TEMPLATE/FLIPBOOK.yml` → `../<slug>/`, list in [`INDEX.yml`](INDEX.yml).
 

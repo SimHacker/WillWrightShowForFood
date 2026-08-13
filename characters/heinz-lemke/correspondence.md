@@ -47,7 +47,7 @@ Heinz's friend; teaches history of computer graphics. 7 Jul: preparing HCI lectu
 
 Don sent matching invitations (Heinz, Lars, David). David flagged timezone/grandparent duty; Lars yes/later (Swedish July offline). Don pivoted to **async 1-on-1** interlinked in post.
 
-→ [Lars correspondence](../lars-brinkhoff/correspondence.md) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+→ [Lars correspondence](../lars-brinkhoff/correspondence.md) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/README.md)
 
 ### Cambridge / TRE storyline (9–10 Jul 2026)
 
@@ -94,6 +94,6 @@ Received 10 Jul 2026 — PDF + clean MD. Heinz at PDP-7 in McGraw-Hill *Electron
 | [cambridge-films-flight-of-the-bumblebee.md](cambridge-films-flight-of-the-bumblebee.md) | Chapman + Rosenthal + production |
 | [../lars-brinkhoff/](../lars-brinkhoff/) | Co-guest — PDP-7/340 emulation |
 | [../david-rosenthal/](../david-rosenthal/) | Same Cambridge PDP-7/Titan |
-| [../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) | PIXIE show |
+| [../../repo-shows/pixie-pie-menus-pdp7/README.md](../../repo-shows/pixie-pie-menus-pdp7/README.md) | PIXIE show |
 
 ↑ [README](README.md) · [invitation](invitation.md)

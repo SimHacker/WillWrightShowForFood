@@ -6,7 +6,7 @@
 ## Chris Trottier — design by accretion
 
 Lead designer; **"the toilet game"** until tuning made it fun. Flagship solo seed:
-[`design-by-accretion`](../design-by-accretion/design-by-accretion.yml) ·
+[`design-by-accretion`](../design-by-accretion/README.md) ·
 [`characters/chris-trottier/`](../../characters/chris-trottier/).
 
 **Reunion hooks:**
@@ -53,7 +53,7 @@ Leadership beat for **Sims Fest** — franchise shipping culture, team empowerme
 Exchange revival thread.
 
 → [`characters/luc-barthelet/`](../../characters/luc-barthelet/) ·
-[`repo-shows/luc-barthelet-sims-online/`](../../repo-shows/luc-barthelet-sims-online/SHOW.yml)
+[`repo-shows/luc-barthelet-sims-online/`](../../repo-shows/luc-barthelet-sims-online/README.md)
 
 **Reunion hooks:**
 

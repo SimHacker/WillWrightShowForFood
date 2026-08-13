@@ -35,7 +35,7 @@ Paper pairs **procedural rhetoric** (Bogost) with **agency / immersion / transfo
 ## Show seeds
 
 - [Ian Bogost procedural rhetoric](../../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
-- [How Inclusivity Saved The Sims](../../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml)
+- [How Inclusivity Saved The Sims](../../../repo-shows/how-inclusivity-saved-the-sims/README.md)
 - [Tanja Sihvonen](../../tanja-sihvonen/) — *Players Unleashed!*
 - [Janet Murray](../../janet-murray/) — storytelling / Family Album holodeck beat
 

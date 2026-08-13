@@ -3,7 +3,7 @@
 **Original The Sims programmer** who implemented **same-sex romantic interactions** — the
 feature that helped make The Sims the queer microworld a generation grew up inside.
 
-**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml)
+**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md)
 
 ## Why invite Patrick
 
@@ -35,7 +35,7 @@ celebrated here with credit regardless; the invitation is a standing offer, not 
 
 Builders, modders, storytellers, creator-network solidarity — trans, queer, nb, ace, bi, lesbian,
 gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
-[`repo-shows/infodump/infodump.yml#solidarity_lexicon`](../../repo-shows/infodump/infodump.yml).
+[`repo-shows/infodump/README.md#solidarity_lexicon`](../../repo-shows/infodump/README.md).
 
 ## Files
 

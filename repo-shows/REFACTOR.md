@@ -238,7 +238,7 @@ its links being tracked down.
 Loose seeds become directories. The seed yml moves inside, unchanged:
 
 ```
-micropolis-ai-drag-race.yml   →   micropolis-ai-drag-race/micropolis-ai-drag-race.yml
+micropolis-ai-drag-race.yml   →   micropolis-ai-drag-race/README.md
 ```
 
 **The goal state — this is what the refactor is FOR:** every `.yml` gets a

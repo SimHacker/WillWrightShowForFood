@@ -36,7 +36,7 @@ that rediscovered your FAQ edge cases.
 ### 5. Live Fluxx
 
 - Physical deck on table; Pop-Up or Flipbook for rule-change diagrams
-- Audience follows [`repo-shows/fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml`](../../repo-shows/fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml) rails
+- Audience follows [`repo-shows/fluxx-rules-change-as-you-play/README.md`](../../repo-shows/fluxx-rules-change-as-you-play/README.md) rails
 
 ## Cross-guests
 

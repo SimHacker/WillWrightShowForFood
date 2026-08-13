@@ -3,7 +3,7 @@
 Per-system taxonomy for the **unnatural-selection** show: Ted Nelson (anti-invisible-clipboard) × David Rosenthal (ICCCM author) × Don (NeWS/TNT trenches).  
 Machine index: [`selection-clipboard-lineage.yml`](selection-clipboard-lineage.yml) · **Consent:** `not_yet_asked`
 
-**Show:** [unnatural-selection](../../repo-shows/unnatural-selection/unnatural-selection.yml) · **Alvey 1985:** [window-systems lineage](window-systems-lineage.md#alvey-workshop-1985)
+**Show:** [unnatural-selection](../../repo-shows/unnatural-selection/README.md) · **Alvey 1985:** [window-systems lineage](window-systems-lineage.md#alvey-workshop-1985)
 
 ---
 

@@ -27,7 +27,7 @@ Hooks: [`ideas.md`](ideas.md)
 |---|-----|
 | [OLPC response (2006)](sources/2006-12-21-olpc-curriculum-guide/README.md) | Primary-source excerpt |
 | [Micropolis saga](../will-wright/sources/simcity-open-source-saga/README.md) | EA → GPL clearance |
-| [Constructionists](../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml) | Papert lineage |
+| [Constructionists](../../repo-shows/remembering-the-constructionists/README.md) | Papert lineage |
 
 ↑ [characters](../README.md)
 

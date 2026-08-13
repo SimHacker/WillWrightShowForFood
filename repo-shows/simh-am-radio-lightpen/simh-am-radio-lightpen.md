@@ -7,7 +7,7 @@ can listen to it sing while it thinks."
 
 Cast so far: Gosling (dared), Borenstein (dared), David Rosenthal (PDP-7 assembly
 adviser), Lars Brinkhoff (PDP-7/Type 340 emulation bud —
-[`../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)), Type 340 manuals archived at
+[`../pixie-pie-menus-pdp7/README.md`](../pixie-pie-menus-pdp7/README.md)), Type 340 manuals archived at
 [`characters/heinz-lemke/sources/pdp7-reference/`](../../characters/heinz-lemke/sources/pdp7-reference/).
 
 ## Why an AM radio hears a computer at all

@@ -194,7 +194,7 @@ the **axis of eval** (code, graphics, data all one language). Related threads he
 - **PIXIE** (Cambridge, 1969; Wiseman, **Heinz Lemke**, Hiles): a *networked* graphical UI split across a
   **PDP-7 + Type 340 vector display + light pen** and a **Titan** (Atlas-2 prototype) mainframe — with pie
   menus. Rosenthal was a Cambridge student who used those same machines, so PIXIE plausibly fed forward into
-  Andrew, X, and NeWS. (See the repo show [`pixie-pie-menus-pdp7.yml`](../../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml).)
+  Andrew, X, and NeWS. (See the repo show [`pixie-pie-menus-pdp7.yml`](../../../../repo-shows/pixie-pie-menus-pdp7/README.md).)
 
 ## Connects in the repo
 
@@ -202,4 +202,4 @@ the **axis of eval** (code, graphics, data all one language). Related threads he
 - [`../../../arthur-van-hoff/`](../../../arthur-van-hoff/) (HyperLook, PdB→Oak→Java) · [`../../../owen-densmore/`](../../../owen-densmore/) (`class.ps`) · [`../../../james-gosling/`](../../../james-gosling/) & [`../../../david-rosenthal/`](../../../david-rosenthal/) (NeWS authors).
 - [`../../../will-wright/`](../../../will-wright/) (Simulator Effect) · [`../../../chaim-gingold/`](../../../chaim-gingold/) (SimCity reverse diagrams, open-sourcing) · [`../../../seymour-papert/`](../../../seymour-papert/) (constructionism).
 - [`../../../ben-shneiderman/`](../../../ben-shneiderman/) (HyperTIES / HCIL, direct manipulation) · [`../../../heinz-lemke/`](../../../heinz-lemke/) (PIXIE, 1969 Cambridge).
-- Show seeds: [`../../../../repo-shows/james-gosling/`](../../../../repo-shows/james-gosling/) & [`../../../../repo-shows/david-rosenthal/`](../../../../repo-shows/david-rosenthal/) (NeWS / window-system history) · [`../../../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml`](../../../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml).
+- Show seeds: [`../../../../repo-shows/james-gosling/`](../../../../repo-shows/james-gosling/) & [`../../../../repo-shows/david-rosenthal/`](../../../../repo-shows/david-rosenthal/) (NeWS / window-system history) · [`../../../../repo-shows/alan-kay-microworld/README.md`](../../../../repo-shows/alan-kay-microworld/README.md).

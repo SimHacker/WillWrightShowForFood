@@ -1,7 +1,7 @@
 # A Repo Show with David S. H. Rosenthal 🗄️
 
 *Solo show seed — NeWS, X11, LOCKSS, and the window-system bridge. Short async segments
-may also feed the [PIXIE trio show](../pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml).*
+may also feed the [PIXIE trio show](../pixie-pie-menus-pdp7/README.md).*
 
 | Artifact | Purpose |
 |----------|---------|

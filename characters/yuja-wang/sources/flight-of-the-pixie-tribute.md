@@ -42,6 +42,6 @@ tribute only, no commercial ask.
 |-------|--------|
 | Cambridge films | [../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md](../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) |
 | Pie menus CHI'88 | [../../don-hopkins/pie-menus-chi-88-and-beyond.md](../../don-hopkins/pie-menus-chi-88-and-beyond.md) |
-| Show seed | [../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| Show seed | [../../../repo-shows/pixie-pie-menus-pdp7/README.md](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 
 ↑ [Yuja's room](../README.md)

@@ -87,6 +87,6 @@ Soul City = umbrella fiction only. Git branch per city save: `MicropolisCity_<sa
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Show seed: [`repo-shows/ben-cerveny/ben-cerveny.yml`](../../repo-shows/ben-cerveny/ben-cerveny.yml)
+- Show seed: [`repo-shows/ben-cerveny/README.md`](../../repo-shows/ben-cerveny/README.md)
 - [`moollm-lane-neverending-habitat.yml`](moollm-lane-neverending-habitat.yml)
 - [`CHARACTER.yml`](CHARACTER.yml)

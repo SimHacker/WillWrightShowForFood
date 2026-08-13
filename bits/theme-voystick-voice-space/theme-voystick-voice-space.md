@@ -59,7 +59,7 @@
 
 | Show / rig | Link |
 |------------|------|
-| Voystick × Pink Trombone | [voystick-pink-trombone](../../repo-shows/voystick-pink-trombone/SHOW.yml) |
+| Voystick × Pink Trombone | [voystick-pink-trombone](../../repo-shows/voystick-pink-trombone/README.md) |
 | Phoneloper | [phoneloper](../../repo-shows/INDEX.yml) |
 | Pink Trombone Jam | [performance-space](../../apps/performance-space/README.md) |
 | Marc Canter | [marc-canter](../../repo-shows/marc-canter/README.md) |

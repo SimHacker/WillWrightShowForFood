@@ -6,7 +6,7 @@ Ideas, gags, and themes **for this show specifically**. Cross-show traditions li
 
 | Doc | Role |
 |-----|------|
-| [`../will-wright-premiere/SHOW.yml`](../will-wright-premiere/SHOW.yml) | Show definition |
+| [`../will-wright-premiere/README.md`](../will-wright-premiere/README.md) | Show definition |
 | [`../will-wright-premiere/episodes.yml`](../will-wright-premiere/episodes.yml) | Kickoff + harvest-driven episode candidates |
 | [`../will-wright-premiere/SEGMENTS.yml`](../will-wright-premiere/SEGMENTS.yml) | Live flow, sidekicks, call-in |
 | [`../will-wright-premiere/performance-and-culture.yml`](../will-wright-premiere/performance-and-culture.yml) | Puppetry, participation, homages |

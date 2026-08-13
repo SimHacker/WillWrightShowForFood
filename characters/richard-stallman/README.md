@@ -16,7 +16,7 @@ GNU founder; free software movement; GPL. Invitation: **send_now**.
 | hospitality | Rider + ethical virtual parrot | [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md) |
 | protocol | Contact table (email / landline / Jitsi) | [`contact-channels.yml`](contact-channels.yml) |
 | persona | Saint IGNUcius — dual identity, not is-a | [`../menagerie/saint-ignucius/`](../menagerie/saint-ignucius/) |
-| show | Episode seed | [`../../repo-shows/richard-stallman-its-minsky-memorial/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial/richard-stallman-its-minsky-memorial.yml) |
+| show | Episode seed | [`../../repo-shows/richard-stallman-its-minsky-memorial/README.md`](../../repo-shows/richard-stallman-its-minsky-memorial/README.md) |
 | standards | Edit / decline / remove | [`../../schemas/portrayal-standards.md`](../../schemas/portrayal-standards.md) |
 
 **Kinds:** `hub` start · `receipt` proves a claim · `hospitality` how we treat you ·

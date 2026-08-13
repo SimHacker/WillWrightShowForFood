@@ -64,7 +64,7 @@ Don introduced Becky and Chaim to **Phil Salvador** (VGHF / Obscuritory):
 
 **Mike Perry** — Don recommends as interview: found DUX contract in filing cabinet; institutional Maxis memory.
 
-Phil show: [phil-salvador-simrefinery](../../../../repo-shows/phil-salvador-simrefinery/SHOW.yml)
+Phil show: [phil-salvador-simrefinery](../../../../repo-shows/phil-salvador-simrefinery/README.md)
 
 ---
 

@@ -92,7 +92,7 @@ and rewrite it together (hand + AI), seeded by David, Don, and **Jaron Lanier**.
 
 - **Snap!:** [Jens Mönig](../jens-monig/README.md) + [Brian Harvey](../brian-harvey/README.md) —
   integration partners and dream co-hosts for the visual-CA episode (they already have a headline show
-  seed: [`repo-shows/snap-logo-brian-jens/SHOW.yml`](../../repo-shows/snap-logo-brian-jens/SHOW.yml)).
+  seed: [`repo-shows/snap-logo-brian-jens/README.md`](../../repo-shows/snap-logo-brian-jens/README.md)).
 - **Bounce:** [David Levitt](../david-levitt/README.md) — Hookup/Body Electric/Bounce; TS reincarnation.
 - **CAM6:** [Norman Margolus](../norman-margolus/README.md) — chapter playgrounds (permission granted).
 - **VitaMoo:** Don Hopkins — Sims character rendering/animation. **SimObliterator:** Jeff Adkins.

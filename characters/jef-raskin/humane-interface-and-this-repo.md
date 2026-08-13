@@ -12,7 +12,7 @@ attention**, cut arbitrary cognitive load, avoid mode traps. *The Humane Interfa
 **Canon Cat**, and **Archy** are the anchors. Terry Winograd hosted him at CS547 —
 *Prolegomena to future interface design* (2001-10-05) — [`../terry-winograd/media/cs547-ARCHIVE.md`](../terry-winograd/media/cs547-ARCHIVE.md).
 
-Memorial: [`memorial.md`](memorial.md) · show seed [`../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml`](../../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml)
+Memorial: [`memorial.md`](memorial.md) · show seed [`../../repo-shows/remembering-jef-raskin/README.md`](../../repo-shows/remembering-jef-raskin/README.md)
 
 ---
 

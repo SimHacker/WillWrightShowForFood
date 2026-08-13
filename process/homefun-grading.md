@@ -27,7 +27,7 @@ Does the commit message match the thinking blocks?
 ## Homefun Not Homework
 
 - **line:** No homework — but as much homefun as you like.
-- **see:** ../repo-shows/will-wright-premiere/SHOW.yml#audience_homefun
+- **see:** ../repo-shows/will-wright-premiere/README.md#audience_homefun
 - **loop:** Do homefun → check into repo → show originators → best work discussed in later episode
 - **vs_homework:** Homework optimizes for completion. Homefun optimizes for exploration, taste,
 and show-your-work — with optional AI rig, declared class, and public receipts.
@@ -125,7 +125,7 @@ demonstration — see orchestration-gold.yml#training_by_demonstration
 |------|
 | [`orchestration-gold.yml#audit_questions`](orchestration-gold.yml) |
 | [`orchestration-gold.yml#since_last_commit`](orchestration-gold.yml) |
-| [`../repo-shows/will-wright-premiere/SHOW.yml`](../repo-shows/will-wright-premiere/SHOW.yml) |
+| [`../repo-shows/will-wright-premiere/README.md`](../repo-shows/will-wright-premiere/README.md) |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
 | [`repo-show-format.yml`](repo-show-format.yml) |
 | [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |

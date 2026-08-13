@@ -45,7 +45,7 @@ a great conversation.
 
 | Artifact | Path |
 |----------|------|
-| Show seed | [`repo-shows/drew-carey/SHOW.yml`](../../repo-shows/drew-carey/SHOW.yml) |
+| Show seed | [`repo-shows/drew-carey/README.md`](../../repo-shows/drew-carey/README.md) |
 | Invitation | [`characters/drew-carey/invitation.md`](../../characters/drew-carey/invitation.md) |
 | AI framing (markdown) | [`repo-shows/drew-carey/ai-contrast-framing.md`](../../repo-shows/drew-carey/ai-contrast-framing.md) |
 | AI framing (YAML) | [`repo-shows/drew-carey/ai-contrast-framing.yml`](../../repo-shows/drew-carey/ai-contrast-framing.yml) |

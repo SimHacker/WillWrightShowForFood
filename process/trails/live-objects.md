@@ -14,7 +14,7 @@ Smalltalk → Self → NeWS → Java. The live-object lineage behind HyperLook a
 |------|-----------------|
 | [**Alan Kay**](../../characters/alan-kay/README.md) | Smalltalk, true object-orientation, late binding, the Dynabook |
 | [**David Ungar**](../../characters/david-ungar/README.md) | Self — prototypes and mirrors; adaptive simplicity |
-| [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) | Directories as prototypes; Stage Magic Principle |
+| [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm/README.md) | Directories as prototypes; Stage Magic Principle |
 | [**James Gosling**](../../characters/james-gosling/README.md) | NeWS/SunDew, Gosling Emacs, Java — network window systems before X11 |
 | [**Arthur van Hoff**](../../characters/arthur-van-hoff/README.md) | GoodNeWS → HyperLook (a NeWS HyperCard), PdB compiler, early Java/HotJava |
 | [**David Rosenthal**](../../characters/david-rosenthal/README.md) | NeWS with Gosling + X11 ICCCM; The NeWS Book; LOCKSS preservation |

@@ -5,9 +5,11 @@
 what: |
   Skeleton for a cardified show-room — SHOW girder + multi-resolution advertisements.
   Audience TicketPRs copy from audience/ sub-template.
+  Lazy prototype: seed as `<name>.yml` + human README.md; promote to SHOW.yml when ready to run.
 
 read_order:
   - README.md
+  - "<name>.yml or SHOW.yml"
   - SHOW.yml
   - CARD.yml
   - GLANCE.yml

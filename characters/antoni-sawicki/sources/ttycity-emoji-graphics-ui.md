@@ -60,4 +60,4 @@ Same Micropolis `Map[]` decode as classic mode — only `GfxOps` swap.
 - Repo README screenshot: `../media/ttycity-emoji-ui-screenshot.png`
 - Antoni email Jul 7 2026 PM screenshots (attachments — not in repo)
 
-↑ [Email thread](2026-07-08-ttycity-email-thread.md) · [Sources index](README.md) · [show seed](../../../repo-shows/antoni-sawicki-ttycity/antoni-sawicki-ttycity.yml)
+↑ [Email thread](2026-07-08-ttycity-email-thread.md) · [Sources index](README.md) · [show seed](../../../repo-shows/antoni-sawicki-ttycity/README.md)

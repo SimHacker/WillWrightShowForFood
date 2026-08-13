@@ -12,8 +12,11 @@ best way (people author; AI orchestrates and writes code). [`../bits/tradition-m
 ## The registry model
 
 Every entry is a directory: `<name>/<name>.yml` seed at minimum, growing
-whatever it needs (`SHOW.yml`, `README.md`, sources, invitations). The
-*kind* of an entry — show, idea, series, episode, pack, performance,
+whatever it needs. **Every show directory has a human `README.md` front page**
+(rendered from its seed yml — run `python3 scripts/repo-shows/readme-from-yml.py`
+to regenerate). **`SHOW.yml` is added later** when the show is ready to run as
+interface + state — lazy prototype promotion; the seed yml keeps its name.
+The *kind* of an entry — show, idea, series, episode, pack, performance,
 memorial, reunion, bridge — lives in its data, not in the directory tree.
 Recombination happens by reference (`parents:`, `relates_to:`, `cast:` —
 see [`REFACTOR.md`](REFACTOR.md) §2b), never by nesting. Big-endian names
@@ -37,14 +40,16 @@ Cross-cutting material lives in sibling registries: performable bits in
 |-------|------|
 | **will-wright-premiere/** ★ | 1996 Winograd talk — premiere Repo Show |
 | [`will-wright-premiere-ideas/`](will-wright-premiere-ideas/README.md) | Its content pack (episode seeds, content map) |
-| [`micropolis-ai-drag-race/`](micropolis-ai-drag-race/micropolis-ai-drag-race.yml) | Drag race variety game show |
-| [`ca-machinima-cabaret-drag-race/`](ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml) | CA Machinima CAbaret Drag Race — sister runway |
+| [`micropolis-ai-drag-race/`](micropolis-ai-drag-race/README.md) | Drag race variety game show |
+| [`ca-machinima-cabaret-drag-race/`](ca-machinima-cabaret-drag-race/README.md) | CA Machinima CAbaret Drag Race — sister runway |
 | lars-brinkhoff/ · heather-and-steve-alvey/ · jason-shankel/ | Planted guest shows |
 | `flipbook-*/` | Flipbook packs ([format room: `flipbook/`](flipbook/README.md)) |
 
 ## Lifecycle
 
-`SEED` (`<name>/<name>.yml`) → `PLANT` (grows SHOW.yml, README) → `AIR` → `HARVEST` → [`skills/`](../skills/README.md)
+`SEED` (`<name>/<name>.yml` + `README.md`) → `PLANT` (add `SHOW.yml` when ready to run) → `AIR` → `HARVEST` → [`skills/`](../skills/README.md)
+
+Read order inside a show directory: **README.md** (human) → seed yml (machine) → `SHOW.yml` (runtime, when present).
 
 Full protocol: [`skills/repo-show/SKILL.md`](../skills/repo-show/SKILL.md) ·
 Refactor rationale: [`REFACTOR.md`](REFACTOR.md)

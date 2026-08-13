@@ -90,7 +90,7 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve-alvey/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/SHOW.yml) |
+| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve-alvey/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) |
 | **Afterlife / Zombie bridge** (shared idea room) | [`afterlife-zombie-bridge.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 

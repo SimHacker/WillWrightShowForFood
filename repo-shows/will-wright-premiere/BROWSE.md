@@ -35,7 +35,7 @@
 
 | Layer | Click |
 |-------|--------|
-| Show instance (yaml) | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/SHOW.yml) |
+| Show instance (yaml) | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
 | Episodes that might flow from kickoff | [`episodes.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/episodes.yml) |
 | Full transcript (1996) | [`transcript.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) |
 | Slats judge rubric (Drag Race — later) | [`judge-rubric.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/robots/slats/judge-rubric.yml) |

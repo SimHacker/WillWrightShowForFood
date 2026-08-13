@@ -21,7 +21,7 @@ transcript, and wrote the Medium article. A **proto-Repo-Show**.
 This was the **first** of Will's CS547 talks, not his only one — he returned on **2003-05-02**
 with **"Games and Simulation"** (CS547 Winograd 5). Both are catalogued in the
 [CS547 archive](../../../terry-winograd/media/cs547-ARCHIVE.md); this 1996 talk remains the show's single
-centerpiece by design (see [SHOW.yml · topic_less_by_design](../../../../repo-shows/will-wright-premiere/SHOW.yml#topic_less_by_design)).
+centerpiece by design (see [SHOW.yml · topic_less_by_design](../../../../repo-shows/will-wright-premiere/README.md#topic_less_by_design)).
 
 - [transcript.md](transcript.md) — Don's hand-perfected transcript with table of contents and section headers.
 - [transcript-summary.md](transcript-summary.md) — same text, plain layout (no navigation).
@@ -53,7 +53,7 @@ epic **Dollhouse** demo. The exact exchange:
 ## Why it's THE seed for the first show (full circle)
 
 This is the talk that sent Don to Maxis to work on The Sims. Doing the **first
-Repo Show with Will** — [SHOW.yml](../../../../repo-shows/will-wright-premiere/SHOW.yml) (topic-less kickoff) — closes that loop
+Repo Show with Will** — [SHOW.yml](../../../../repo-shows/will-wright-premiere/README.md) (topic-less kickoff) — closes that loop
 ~30 years on. The kickoff can literally open by replaying this moment: *the
 question that unspooled The Sims.*
 
@@ -68,7 +68,7 @@ just-right** (SimAnt too easy · SimEarth too complex · SimCity 2000 just right
 — then **pivoted the direction of time** to look *forward* and preview The Sims.
 This show, ~26 years later (The Sims 1 shipped 2000), can finally be the
 long-overdue **post-mortem on The Sims 1** itself. The forward-preview gets its
-backward post-mortem, same two people in the room. (See [SHOW.yml · the_arc](../../../../repo-shows/will-wright-premiere/SHOW.yml#the_arc).)
+backward post-mortem, same two people in the room. (See [SHOW.yml · the_arc](../../../../repo-shows/will-wright-premiere/README.md#the_arc).)
 
 ## Threads this ONE talk seeds (show ideas — maybe several)
 

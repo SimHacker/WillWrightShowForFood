@@ -29,7 +29,7 @@ Recommended Markoff's *What the Dormouse Said* — Don cross-linked Jaron Lanier
 1. **Collector roundtable** with Don — two mice, one keyset in Stanford, auction economics  
 2. **Tactile literacy** — why chord + mouse together matter (not the lone-mouse museum reduction)  
 3. **Reproduction ethics** — Don's 3D-scan / Bluetooth replica plan vs wearing originals  
-4. **Memorial** — [`remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml)
+4. **Memorial** — [`remembering-douglas-engelbart.yml`](../../repo-shows/remembering-douglas-engelbart/README.md)
 
 ## Cross-links
 

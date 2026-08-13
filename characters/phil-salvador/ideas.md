@@ -14,7 +14,7 @@ awesome archivist, perfect guest for business-sims + preservation ethics.
 
 ## The hooks
 
-### 1. Show seed: `repo-shows/phil-salvador-simrefinery/SHOW.yml`
+### 1. Show seed: `repo-shows/phil-salvador-simrefinery/README.md`
 walk the repo on air and build from the seed.
 
 ### 2. Obscuritory/VGHF; SimRefinery + MBS archivist; characters/phil-salv...
@@ -22,5 +22,5 @@ r/media/ + README
 
 ## Sources (public)
 
-- Show seed: [`repo-shows/phil-salvador-simrefinery/SHOW.yml`](../../repo-shows/phil-salvador-simrefinery/SHOW.yml)
+- Show seed: [`repo-shows/phil-salvador-simrefinery/README.md`](../../repo-shows/phil-salvador-simrefinery/README.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

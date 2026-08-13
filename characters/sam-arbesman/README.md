@@ -16,7 +16,7 @@ Invitation portrayal — **not** Samuel Arbesman. [Standards](../../schemas/port
 | **Hooks** | [ideas.md](ideas.md) |
 | **Correspondence** | [correspondence.yml](correspondence.yml) |
 | **Sources** | [sources/README.md](sources/README.md) |
-| **Show seed** | [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml) |
+| **Show seed** | [sam-arbesman-maxis-labs.yml](../../repo-shows/sam-arbesman-maxis-labs/README.md) |
 | **Intro via** | [Chaim Gingold](../chaim-gingold/README.md) |
 | **Premiere guest** | [Will Wright accepted](../will-wright/invitation.md) |
 

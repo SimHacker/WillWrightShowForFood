@@ -15,9 +15,9 @@ Jojo quality: [Jojo on UI](../don-hopkins/jojo-on-ui.md)
 
 | Episode | Seed |
 | -------- | ---- |
-| **Game UI Database & ethical archives** | [repo-shows/edd-coates/](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/SHOW.yml) · [game-ui-archive.md](game-ui-archive.md) |
+| **Game UI Database & ethical archives** | [repo-shows/edd-coates/](../../repo-shows/edd-coates/) · [SHOW.yml](../../repo-shows/edd-coates/README.md) · [game-ui-archive.md](game-ui-archive.md) |
 | **Pie menus, Gonzo, PieCraft** | [pie-menus-piecraft.yml](../../repo-shows/edd-coates/pie-menus-piecraft.yml) · [discussion notes](../../repo-shows/edd-coates/pie-menus-discussion-notes.md) · [Queer Oui for the Straight GUI](../don-hopkins/queer-oui-for-the-straight-gui.md) |
-| **PIXIE / emulators / PadCrafter blinkenlights** | [pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) · [Lars](../lars-brinkhoff/) · [Heinz](../heinz-lemke/) · [Engelbart](../douglas-engelbart/) |
+| **PIXIE / emulators / PadCrafter blinkenlights** | [pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/README.md) · [Lars](../lars-brinkhoff/) · [Heinz](../heinz-lemke/) · [Engelbart](../douglas-engelbart/) |
 | **The Two Catalogs** (pair) | [brad-and-edd-interaction-catalogs](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.md) · [Brad Myers](../brad-myers/) |
 
 
@@ -167,7 +167,7 @@ See `[pie-menus-discussion-notes.md](../../repo-shows/edd-coates/pie-menus-discu
 A third spine (or a fat middle of ep.2): **old-school interactive graphics as game UI ancestry** —
 and [PadCrafter](https://www.padcrafter.com/) as the tool that makes dead iron’s *controls* legible again.
 
-Deep show seed already planted: `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)`
+Deep show seed already planted: `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/README.md)`
 (buds: [Heinz Lemke](../heinz-lemke/), **[Lars Brinkhoff](../lars-brinkhoff/)**, [David Rosenthal](../david-rosenthal/)).
 Edd is the [GUIDB](https://www.gameuidatabase.com/) / PadCrafter lens on that iron.
 Audience map: [README § PIXIE](README.md#pixie--emulator--padcrafter-blinkenlights-episode-3-spine).
@@ -202,7 +202,7 @@ Audience map: [README § PIXIE](README.md#pixie--emulator--padcrafter-blinkenlig
 ### Engelbart — keyset, mouse, chord keyboard
 
 - Mother of All Demos: mouse + **chord keyset** as simultaneous hands ([Engelbart room](../douglas-engelbart/) · [mouse & keyset](../douglas-engelbart/engelbart-mouse-and-keyset.md))
-- How did that plug into PDP-era machines? (research beat with Lars / [memorial Engelbart show](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml))
+- How did that plug into PDP-era machines? (research beat with Lars / [memorial Engelbart show](../../repo-shows/remembering-douglas-engelbart/README.md))
 - PadCrafter today maps pads and KB/M — could it sketch an **Engelbart keyset** chord chart the way it sketches DualSense?
 - Gonzo angle: inhabited chrome + chord rehearsal = stunt affordance from 1968 ([GONZO-UI-MANIFEST](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md))
 
@@ -264,11 +264,11 @@ emulator hotkeys → compare to a GUIDB “pause menu” from a modern game that
 ## Pairings
 
 - [The Two Catalogs](../../repo-shows/brad-and-edd-interaction-catalogs/brad-and-edd-interaction-catalogs.md) — GUIDB × *Pick, Click, Flick!*
-- [PIXIE on PDP-7](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) — Heinz + **Lars** + DSHR; Edd as GUIDB/PadCrafter co-bud or cold-open
+- [PIXIE on PDP-7](../../repo-shows/pixie-pie-menus-pdp7/README.md) — Heinz + **Lars** + DSHR; Edd as GUIDB/PadCrafter co-bud or cold-open
 - [Lars Brinkhoff](../lars-brinkhoff/) — emulator iron; virtual light pen
-- [Remembering Engelbart](../../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml) — keyset / mouse memorial thread
+- [Remembering Engelbart](../../repo-shows/remembering-douglas-engelbart/README.md) — keyset / mouse memorial thread
 - Don reimplements pies — `[pie-menus-retrospective](../../repo-shows/INDEX.yml)`
-- PIXIE + Ben — `[ben-and-heinz-pie-menus](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml)`
+- PIXIE + Ben — `[ben-and-heinz-pie-menus](../../repo-shows/ben-and-heinz-pie-menus/README.md)`
 - CMU pie guest lecture — `[brad-myers-garnet-vpl](../../repo-shows/INDEX.yml)`
 
 ---
@@ -281,5 +281,5 @@ emulator hotkeys → compare to a GUIDB “pause menu” from a modern game that
 - `[suggested-questions.yml](../../repo-shows/edd-coates/suggested-questions.yml)`
 - [gameuidatabase.com](https://www.gameuidatabase.com/) · [padcrafter.com](https://www.padcrafter.com/) · [eddcoatesdesign.com](https://www.eddcoatesdesign.com/)
 - [GONZO-UI-MANIFEST](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)
-- `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)` · `[lars-brinkhoff/](../lars-brinkhoff/)`
+- `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/README.md)` · `[lars-brinkhoff/](../lars-brinkhoff/)`
 

@@ -162,7 +162,7 @@ between a god that *preserves* (LOCKSS, Ubik-as-calm-tech) and one that *consume
 
 ## Which shows this feeds
 
-- [`../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml`](../../repo-shows/remembering-mark-weiser/remembering-mark-weiser.yml) —
+- [`../../repo-shows/remembering-mark-weiser/README.md`](../../repo-shows/remembering-mark-weiser/README.md) —
   the Ubik→ubicomp→calm-tech story, told by people who knew Mark.
 - [`../../repo-shows/david-rosenthal/`](../../repo-shows/david-rosenthal/) — David's solo show:
   LOCKSS as engineered Hobart Phase, coprophagia / model collapse, the Hex-that-cheats.

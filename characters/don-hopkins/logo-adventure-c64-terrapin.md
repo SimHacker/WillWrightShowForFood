@@ -57,7 +57,7 @@ parenthesized Lisp-style reading).
 | Career bundle entry | [`career/lineage.yml`](career/lineage.yml) — `Logo Adventure` → MOOLLM |
 | Scott Adams — adventure-as-data | [`../../characters/scott-adams/invitation.md`](../../characters/scott-adams/invitation.md) |
 | MOOLLM — REPL-as-parser, rooms = directories | [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md) · [`GLANCE.yml`](GLANCE.yml#future) |
-| Constructionism / Logo | [`../brian-harvey/`](../brian-harvey/README.md) · [`../jens-monig/`](../jens-monig/README.md) · [`../../repo-shows/snap-logo-brian-jens/SHOW.yml`](../../repo-shows/snap-logo-brian-jens/SHOW.yml) |
+| Constructionism / Logo | [`../brian-harvey/`](../brian-harvey/README.md) · [`../jens-monig/`](../jens-monig/README.md) · [`../../repo-shows/snap-logo-brian-jens/README.md`](../../repo-shows/snap-logo-brian-jens/README.md) |
 | Papert / MIT-AI LLogo taste | [`career/lineage.yml`](career/lineage.yml) — `roots.played` |
 | Adventure compiler (future) | [`ideas.md`](ideas.md#compile-the-adventure-future) |
 

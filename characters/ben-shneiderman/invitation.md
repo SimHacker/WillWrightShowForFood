@@ -64,7 +64,7 @@ One episode or a short series — you steer.
 
 | Topic | Link |
 | --- | --- |
-| **Show series** | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/SHOW.yml) · [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) |
+| **Show series** | [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) · [`README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/README.md) |
 | **HyperTIES reincarnation plan** | [`hyperties-reincarnation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/hyperties-reincarnation.md) · [`media/hyperties/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/media/hyperties) |
 | **Jan 2022 thread digest** | [`2022-01-13-hyperties-computer-lib.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md) |
 | **Group seed (you + Heinz)** | [`ben-and-heinz-pie-menus.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ben-and-heinz-pie-menus.yml) |

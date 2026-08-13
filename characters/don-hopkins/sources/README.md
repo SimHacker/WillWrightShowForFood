@@ -101,7 +101,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 
 **Crazy Idea Jam:** [Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [Urban eBike Safari](../../../process/crazy-idea-jam.yml#urban_ebike_safari)
 
-**Show seed:** [Voystick × Pink Trombone](../../../repo-shows/voystick-pink-trombone/SHOW.yml) · [Zack Qattan](../../../characters/zack-qattan/README.md)
+**Show seed:** [Voystick × Pink Trombone](../../../repo-shows/voystick-pink-trombone/README.md) · [Zack Qattan](../../../characters/zack-qattan/README.md)
 
 ## Pie menu lineage (Medium canon, ingested Jul 2026)
 

@@ -76,7 +76,7 @@ ROOM.yml optional compass; SIMULATION.yml runtime. README renders GLANCE nav for
 ### Typical Files
 
 - **required:**
-  - [SHOW.yml](../repo-shows/will-wright-premiere/SHOW.yml)
+  - [SHOW.yml](../repo-shows/will-wright-premiere/README.md)
 - **recommended:**
   - [README.md](../repo-shows/_TEMPLATE/README.md)
   - [CARD.yml](../repo-shows/_TEMPLATE/CARD.yml)
@@ -348,7 +348,7 @@ TextEdit to Emacs to VS Code and beyond; just no AI. We mean it; honesty appreci
   - conscientious_coders
 - **history:** Don coined consciencious objectors at a meetup with [David Ungar](../characters/david-ungar/) and Kaleida colleagues
 (ScriptX object-system era) — programmers who conscientiously object to opaque automation.
-Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) (Self × MOOLLM reimagination + rig culture).
+Proposed show: [david-ungar-self-moollm.yml](../repo-shows/david-ungar-self-moollm/README.md) (Self × MOOLLM reimagination + rig culture).
 - **bare_hands_welcome:** yes
 
 - **rig_classes:**

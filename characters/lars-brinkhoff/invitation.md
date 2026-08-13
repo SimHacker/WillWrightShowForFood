@@ -176,7 +176,7 @@ optional solo shows later).
 | **Portrait / sources** | [`CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CHARACTER.yml) · [`GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/GLANCE.md) |
 | **Card** | [`CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/lars-brinkhoff/CARD.yml) |
 | **T-shirt emporium** | [github.com/larsbrinkhoff/t-shirts](https://github.com/larsbrinkhoff/t-shirts) — PDP-10, Lisp Machine, Interlisp, … (Don already wears one of yours on stream) |
-| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/SHOW.yml) |
+| **ITS show seed** (optional later) | [`repo-shows/lars-brinkhoff/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/lars-brinkhoff/README.md) |
 
 ---
 

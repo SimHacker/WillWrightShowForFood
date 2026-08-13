@@ -141,4 +141,4 @@ constructionist critique).
 → [`pie-menus-30-year-retrospective.md`](pie-menus-30-year-retrospective.md) ·
 [`pie-menu-fud-misconceptions.md`](pie-menu-fud-misconceptions.md) ·
 [`../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md`](../../alan-kay/sources/2020-02-alan-kay-pixie-pie-menus-thread.md) ·
-[PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+[PIXIE show](../../../repo-shows/pixie-pie-menus-pdp7/README.md)

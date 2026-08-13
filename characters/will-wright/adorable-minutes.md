@@ -65,7 +65,7 @@ Full spec: [`will-roll.yml`](will-roll.yml)
 attentively again the millionth time, and **always** has something new and insightful to say back. The
 reaction clips are beats one and two; the insight is beat four. That's why the joke is his kindness.
 
-Show home: [infodump](../../repo-shows/infodump/infodump.yml) · inverse of Care Bears
+Show home: [infodump](../../repo-shows/infodump/README.md) · inverse of Care Bears
 corner-at-parties above.
 
 ## Related Will shorts (Don links)
@@ -91,4 +91,4 @@ corner-at-parties above.
 
 | Show seed | Hook |
 |-----------|------|
-| [will wright adorable minutes](../../repo-shows/will-wright-adorable-minutes/will-wright-adorable-minutes.yml) | Revive the format; async Q&A; Care Bears corner at parties |
+| [will wright adorable minutes](../../repo-shows/will-wright-adorable-minutes/README.md) | Revive the format; async Q&A; Care Bears corner at parties |

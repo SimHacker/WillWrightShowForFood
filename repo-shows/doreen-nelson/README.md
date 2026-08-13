@@ -18,8 +18,8 @@ The educator who taught the whole curriculum by **building cities first** — an
 
 ## Related
 
-- [`walter-bender-olpc/`](../walter-bender-olpc/SHOW.yml) — OLPC cast segment
+- [`walter-bender-olpc/`](../walter-bender-olpc/README.md) — OLPC cast segment
 - [`2006-12-simcity-olpc-introducing-the-players/`](../../characters/will-wright/sources/2006-12-simcity-olpc-introducing-the-players/README.md)
-- [`remembering-the-constructionists`](../remembering-the-constructionists/remembering-the-constructionists.yml)
+- [`remembering-the-constructionists`](../remembering-the-constructionists/README.md)
 
 ↑ [`../README.md`](../README.md)

@@ -3,7 +3,7 @@ status: draft
 character_id: brewster-kahle
 consent: not_yet_asked
 show_seeds:
-  - repo-shows/walter-bender-olpc/SHOW.yml
+  - repo-shows/walter-bender-olpc/README.md
 ---
 
 # Repo Show invitation — Brewster Kahle
@@ -149,7 +149,7 @@ it alive long enough for someone to build the place it was dreaming of. I'd love
 | **Conversation hooks**             | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/brewster-kahle/ideas.md)               |
 | **1996 interview digest**          | [`sources/chm-interview-1996.md`](sources/chm-interview-1996.md)                                                                                                                                                 |
 | **OLPC 2007 thread**               | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md)                                                                                                                                 |
-| **OLPC show (Walter Bender seed)** | [`repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml)                                                                                                                         |
+| **OLPC show (Walter Bender seed)** | [`repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md)                                                                                                                         |
 | **Premiere (Will)**                | [https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) |
 
 

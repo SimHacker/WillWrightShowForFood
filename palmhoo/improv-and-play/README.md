@@ -13,7 +13,7 @@ player must honor. This shelf collects the people and formats who knew that firs
 |-------|----------------------|
 | [**Drew Carey**](../../characters/drew-carey/README.md) | Whose Line's ringmaster — a show whose entire format is trusting performers with an empty stage and a rule. The Repo Show wants exactly that muscle: games with constraints, points that don't matter, everything canon the moment it lands. |
 | [**Brian Eno**](../../characters/brian-eno/README.md) | Oblique Strategies is improv-as-card-deck — a constraint generator for unblocking. The cousin of every Fluxx hand I've ever played. |
-| [**Andy & Kristin Looney**](../../characters/andy-looney/README.md) | Fluxx — rules change as you play. Real creators (not just MOOLLM tribute). [`fluxx-rules-change-as-you-play`](../../repo-shows/fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml) |
+| [**Andy & Kristin Looney**](../../characters/andy-looney/README.md) | Fluxx — rules change as you play. Real creators (not just MOOLLM tribute). [`fluxx-rules-change-as-you-play`](../../repo-shows/fluxx-rules-change-as-you-play/README.md) |
 | [**Will Wright**](../../characters/will-wright/README.md) | The Sims is an improv stage where the player and the simulation trade offers — motive bars are "yes, and" with numbers. |
 | [**Danielle Bunten Berry**](../../characters/danielle-bunten-berry/README.md) | M.U.L.E. — multiplayer as structured improv between rivals who need each other. |
 

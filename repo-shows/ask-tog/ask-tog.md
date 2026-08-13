@@ -1,6 +1,6 @@
 # Ask Tog, Answered — Bruce Tognazzini (show seed, readable edition)
 
-***Source of truth:** [`ask-tog.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ask-tog/ask-tog.yml) —
+***Source of truth:** [`ask-tog.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ask-tog/README.md) —
 this page is rendered for humans; the YAML drives the machines. Seed status; elder priority —
 reach him while we can. Consent not yet asked.*
 

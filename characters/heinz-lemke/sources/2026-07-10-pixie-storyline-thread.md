@@ -253,4 +253,4 @@ settle how the pen actually worked on the PDP-7.
 | Andrew Armit stub | [`../../andrew-armit/`](../../andrew-armit/) |
 | 1969 US lab tour | [`heinz-1969-us-lab-tour.md`](heinz-1969-us-lab-tour.md) |
 | Pull-in gaps | [`../pull-in-gaps.md`](../pull-in-gaps.md) |
-| PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| PIXIE show | [`../../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../../repo-shows/pixie-pie-menus-pdp7/README.md) |

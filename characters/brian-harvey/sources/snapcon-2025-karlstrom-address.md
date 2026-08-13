@@ -140,6 +140,6 @@ against institutions that conspire to make teachers the enemies of kids.
 - [Full cleaned transcript](snapcon-2025-karlstrom-address-transcript.md)
 - [Beauty and Joy of Computing](beauty-and-joy-of-computing.yml) · [Simply Scheme](simply-scheme.yml) · [CS Logo Style](computer-science-logo-style.yml)
 - [Jens's Karlstrom intro digest](../../jens-monig/sources/snapcon-2025-karlstrom-intro.md)
-- [Pair show](../../../repo-shows/snap-logo-brian-jens/SHOW.yml) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md) (see 12, 12a–12c)
+- [Pair show](../../../repo-shows/snap-logo-brian-jens/README.md) · [Palm's questions](../../../repo-shows/snap-logo-brian-jens/audience/palm/questions.md) (see 12, 12a–12c)
 
 ↑ [Sources index](README.md) · [Brian's room](../README.md) · [Invitation](../invitation.md)

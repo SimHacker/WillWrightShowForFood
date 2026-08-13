@@ -96,7 +96,7 @@ incumbents said it couldn't be done.
 |--|--|
 | Email thread | [`sources/olpc-internet-archive-2007.md`](sources/olpc-internet-archive-2007.md) |
 | Book-viewer wishlist (`devel@`, 21 Jan 2007) | [`sources/olpc-book-viewer-devel-2007-01-21.md`](sources/olpc-book-viewer-devel-2007-01-21.md) |
-| Related show seed | [`../../repo-shows/walter-bender-olpc/SHOW.yml`](../../repo-shows/walter-bender-olpc/SHOW.yml) |
+| Related show seed | [`../../repo-shows/walter-bender-olpc/README.md`](../../repo-shows/walter-bender-olpc/README.md) |
 
 ## Episode angles
 

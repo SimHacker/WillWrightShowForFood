@@ -84,7 +84,7 @@ the same syllabus. **Don** supplies the films, the Bumblebee edit, and the prese
 | Ivan Sutherland · Sketchpad hero room | [`../ivan-sutherland/`](../ivan-sutherland/) |
 | Heinz · PIXIE · source recovery | [`../heinz-lemke/pixie-source-recovery.md`](../heinz-lemke/pixie-source-recovery.md) |
 | Roy · character room | [`README.md`](README.md) |
-| PIXIE show seed | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| PIXIE show seed | [`../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 | Don · pie menus retrospective (PIXIE credit) | [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md) |
 
 ↑ [Roy's room](README.md) · [Heinz](../heinz-lemke/) · [Sutherland](../ivan-sutherland/)

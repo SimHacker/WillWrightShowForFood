@@ -53,7 +53,7 @@ sources. Emacs/Unipress/natalism only if **he** opens that box.
   will not ambush.
 - Natalism flame + doctor.el — primary source already public; revisit only if RMS chooses.
 - Gosling Emacs → GNU Emacs — now has its own reconciliation seed:
-  [`repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml`](../../repo-shows/morning-sam-morning-ralph/morning-sam-morning-ralph.yml)
+  [`repo-shows/morning-sam-morning-ralph/README.md`](../../repo-shows/morning-sam-morning-ralph/README.md)
   (Bout 2: MockLisp vs Emacs Lisp, Evil Software Hoarder vs Free Software — timecard
   framing, warm room, permission dispute asked as history not prosecuted; punch-out
   question: name one thing the other guy was right about).
@@ -178,7 +178,7 @@ Lyrics + invite note in [`sources/draft-filk-duet-proposal.md`](sources/draft-fi
 | Kind | Link |
 | --- | --- |
 | invite | [`invitation.md`](invitation.md) |
-| show | [`../../repo-shows/richard-stallman-its-minsky-memorial/richard-stallman-its-minsky-memorial.yml`](../../repo-shows/richard-stallman-its-minsky-memorial/richard-stallman-its-minsky-memorial.yml) |
+| show | [`../../repo-shows/richard-stallman-its-minsky-memorial/README.md`](../../repo-shows/richard-stallman-its-minsky-memorial/README.md) |
 | receipt | [`sources/great-quotes.yml`](sources/great-quotes.yml) · [`media/copyleft-envelope-1984.yml`](media/copyleft-envelope-1984.yml) |
 | hospitality | [`sources/rider-and-parrot.md`](sources/rider-and-parrot.md) |
 | persona | [`../menagerie/saint-ignucius/`](../menagerie/saint-ignucius/) |

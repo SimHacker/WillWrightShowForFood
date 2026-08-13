@@ -92,7 +92,7 @@ Edd picks a beautiful-but-painful [GUIDB](https://www.gameuidatabase.com/) scree
 
 Edd fills with real [GUIDB](https://www.gameuidatabase.com/) citations:
 
-- Mystery-meat radials / wheels with no rehearsal path ([gesture space](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/gesture-space-and-pie-menus.md) · [PIXIE ancestry](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml))
+- Mystery-meat radials / wheels with no rehearsal path ([gesture space](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/gesture-space-and-pie-menus.md) · [PIXIE ancestry](../../repo-shows/pixie-pie-menus-pdp7/README.md))
 - Inventory grids that fight [Fitts](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md) and bury costs
 - Modal stacks that trap the world under a dialog
 - Settings walls that hide state the player needs mid-action

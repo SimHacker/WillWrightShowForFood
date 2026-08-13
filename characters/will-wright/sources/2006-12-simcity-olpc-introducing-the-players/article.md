@@ -84,7 +84,7 @@ Full invitation portrayal: [doreen nelson](../../../../characters/doreen-nelson/
 
 ---
 
-## Show hooks → [`walter-bender-olpc`](../../../../repo-shows/walter-bender-olpc/SHOW.yml)
+## Show hooks → [`walter-bender-olpc`](../../../../repo-shows/walter-bender-olpc/README.md)
 
 1. Walter + Eben Moglen GPL path  
 2. Jim Gettys Cairo/Pango — Micropolis rendering lineage  

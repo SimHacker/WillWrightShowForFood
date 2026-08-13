@@ -54,11 +54,11 @@ hundred-trillion-dollar note.
    maintainer keep a cross-platform desktop utility alive and joyful?
 7. **Pie menus in the pie-menu-history repo.** Live segment: build a Kando menu for this
    repository on stream — every show artifact one gesture away. Possible ensemble with the
-   [Ben Shneiderman + Heinz Lemke pie menu history show](../../repo-shows/ben-and-heinz-pie-menus/ben-and-heinz-pie-menus.yml):
+   [Ben Shneiderman + Heinz Lemke pie menu history show](../../repo-shows/ben-and-heinz-pie-menus/README.md):
    1969 PIXIE → CHI '88 → Kando, the whole lineage in one room.
 
 ## Sources (public)
 
-- CHARACTER.yml · invitation.md · [show seed](../../repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml)
+- CHARACTER.yml · invitation.md · [show seed](../../repo-shows/simon-schneegans-pie-menus/README.md)
 - [kando.menu](https://kando.menu/) · [Gnome-Pie](https://schneegans.github.io/gnome-pie.html) · [GitHub](https://github.com/Schneegans)
 - HN: [Show HN: Kando](https://news.ycombinator.com/item?id=42525290) · [Don's 2018 praise](https://news.ycombinator.com/item?id=17106453) · [30-Year Retrospective](https://news.ycombinator.com/item?id=17098179)

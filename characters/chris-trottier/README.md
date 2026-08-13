@@ -50,7 +50,7 @@ that process. The flagship show names the method and demonstrates it live. See
 | | Path |
 |---|------|
 | Character | [`CHARACTER.yml`](CHARACTER.yml) |
-| Show seed (YAML) | [`../../repo-shows/design-by-accretion/design-by-accretion.yml`](../../repo-shows/design-by-accretion/design-by-accretion.yml) |
+| Show seed (YAML) | [`../../repo-shows/design-by-accretion/README.md`](../../repo-shows/design-by-accretion/README.md) |
 | Sims reunion seed | [`../../repo-shows/REPO-SHOWS.yml`](../../repo-shows/REPO-SHOWS.yml) (building-the-sims) |
 | Full 2004 essay | [`../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/`](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/) |
 

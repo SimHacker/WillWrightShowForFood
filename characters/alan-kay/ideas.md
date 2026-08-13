@@ -26,7 +26,7 @@ and Alan's public framing of NeWS and HyperCard as almost-right systems that mis
 
 ### 1. Microworlds and constructionism — the Repo Show thesis
 Alan Kay's lifelong argument: powerful ideas belong in **learner's microworlds**, not black-box
-apps. Walk [`repo-shows/alan-kay-microworld/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml) and
+apps. Walk [`repo-shows/alan-kay-microworld/README.md`](../../repo-shows/alan-kay-microworld/README.md) and
 build a glass-box segment live — SimCity, Snap!, CAM6 as examples, not sermons.
 
 Kay's **"Sure!"** + **10 things / 20 examples** protocol for microworld libraries — compare Don's
@@ -264,6 +264,6 @@ in MOOLLM's [HALLS-AND-ROOMS.md](https://github.com/SimHacker/moollm/blob/main/s
 - Quora recaps: [`media/quora-recaps/README.md`](media/quora-recaps/README.md) — **17 summaries** (see hub table)
 - Discussion: [`media/discussions/malleable-systems-systems-vs-data.md`](media/discussions/malleable-systems-systems-vs-data.md) (Malleable Systems Forum — systems vs. data structures)
 - HN (2015): [`media/discussions/hn-mvc-morphic-watchers-2015.md`](media/discussions/hn-mvc-morphic-watchers-2015.md) — [Don↔Alan on MVC/Morphic/watchers](https://news.ycombinator.com/item?id=8841428)
-- Show seed: [`repo-shows/alan-kay-microworld/alan-kay-microworld.yml`](../../repo-shows/alan-kay-microworld/alan-kay-microworld.yml)
+- Show seed: [`repo-shows/alan-kay-microworld/README.md`](../../repo-shows/alan-kay-microworld/README.md)
 - [`media/from-mail/MANIFEST.yml`](media/from-mail/MANIFEST.yml)
 - Yoot interview (OCR-restored): [YootTower repo](https://github.com/YootTowerManagement/YootTower/tree/main/Yoot_Saito_Alan_Kay_Interview)

@@ -41,7 +41,7 @@ Don shared Chaim Gingold's **Open Sourcing SimCity** excerpt with Yoot as playbo
 
 ## Show seeds
 
-- Phil Salvador — add Yoot Tower segment to [`phil-salvador-simrefinery`](../../../../repo-shows/phil-salvador-simrefinery/SHOW.yml) or dedicated VGHF source-release episode  
+- Phil Salvador — add Yoot Tower segment to [`phil-salvador-simrefinery`](../../../../repo-shows/phil-salvador-simrefinery/README.md) or dedicated VGHF source-release episode  
 - Yoot Saito show (existing seeds in repo) — Alan Kay interview thread in old-email
 
 ## Gaps

@@ -47,4 +47,4 @@ See [`../pull-in-gaps.md`](../pull-in-gaps.md): 1969 Greyhound agenda, Nagoya su
 
 ## Show
 
-[`../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml)
+[`../../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../../repo-shows/pixie-pie-menus-pdp7/README.md)

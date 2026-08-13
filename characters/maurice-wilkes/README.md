@@ -37,6 +37,6 @@ notes, and willing contributions. Heinz's 1967 origin memoir is already linked.
 | **Neil Wiseman** (his colleague; PIXIE supervisor) | [`../neil-wiseman/`](../neil-wiseman/) |
 | **Memorial tribute** | [memorial.md](memorial.md) |
 | **Show hooks** | [ideas.md](ideas.md) |
-| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml) |
+| **PIXIE show** | [`../../repo-shows/pixie-pie-menus-pdp7/README.md`](../../repo-shows/pixie-pie-menus-pdp7/README.md) |
 
 Sources in [CHARACTER.yml](CHARACTER.yml). *We celebrate his documented public work; we do not speak as him.*

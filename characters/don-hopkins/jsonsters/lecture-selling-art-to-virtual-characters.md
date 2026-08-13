@@ -153,6 +153,6 @@ The ledger is real — in the repo, on the record, next to Rosebud.
 | [`README.md`](README.md) | Full embedded tour |
 | [`tour.md`](tour.md) | Machine-readable review tables |
 
-Show seed: [`../../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml`](../../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml)
+Show seed: [`../../../repo-shows/jsonsters-gallery-lecture/README.md`](../../../repo-shows/jsonsters-gallery-lecture/README.md)
 
 Parent: [`../CHARACTER.yml`](../CHARACTER.yml) · Simoleon ethics: [`../../don-philahue/CHARACTER.yml`](../../don-philahue/CHARACTER.yml)

@@ -51,7 +51,7 @@ Welcome co-guest on the **[unnatural-selection](https://github.com/SimHacker/Wil
 ## Your links
 
 - **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ted-selker/
-- **Solo show seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ted-selker/SHOW.yml
+- **Solo show seed:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ted-selker/README.md
 - **NPUC reunion:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/npuc-reunion/
 - **Conversation hooks:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ted-selker/ideas.md
 - **Browse without an account:** https://github.com/SimHacker/WillWrightShowForFood

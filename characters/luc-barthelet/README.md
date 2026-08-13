@@ -19,7 +19,7 @@ online Sims experiments — Firebase/HN already tags him in Don's recent comment
 
 | | |
 |---|---|
-| **Show seed** | [../../repo-shows/luc-barthelet-sims-online/SHOW.yml](../../repo-shows/luc-barthelet-sims-online/SHOW.yml) |
+| **Show seed** | [../../repo-shows/luc-barthelet-sims-online/README.md](../../repo-shows/luc-barthelet-sims-online/README.md) |
 | **MobyGames** | [Luc Barthelet](https://www.mobygames.com/person/922/luc-barthelet/) |
 | **Will Wright** | [../will-wright/](../will-wright/) |
 | **HN (Firebase sample)** | [../../process/hn-harvest/firebase-sample-200.json](../../process/hn-harvest/firebase-sample-200.json) |

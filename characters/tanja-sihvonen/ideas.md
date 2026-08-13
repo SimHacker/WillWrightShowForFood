@@ -30,7 +30,7 @@
 ## Don's unfinished QGCon 2020 thread
 
 **Repo:** [`../don-hopkins/sources/qgcon-inclusivity-paper/`](../don-hopkins/sources/qgcon-inclusivity-paper/) — *How Inclusivity Saved The Sims*  
-**Show seed:** [`../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml`](../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml)
+**Show seed:** [`../../repo-shows/how-inclusivity-saved-the-sims/README.md`](../../repo-shows/how-inclusivity-saved-the-sims/README.md)
 
 Inclusivity evolution paper — EA fact-check via Chloe Dubini → Mike Duke / Graham Nardone.
 Tanja's book is the modding-culture spine; EA timeline is the inclusivity spine. Merge on air?

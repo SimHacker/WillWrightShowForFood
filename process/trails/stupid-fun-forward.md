@@ -19,11 +19,11 @@ The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel b
 | [**Slats CARD**](../../characters/robots/slats/CARD.yml) | Robot waiter abilities — `SEEK-GENETIC-MATERIAL`, `ROBO-RESURRECT` |
 | [**Stupid Fun Club**](../../characters/don-hopkins/career/stupid-fun-club.yml) | Robots among humans — One Minute Movies |
 | [**Afterlife × ZombieSims**](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) | Drain Hell — artisanal ZombieSims, two-way soul ledger |
-| [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml) | Stage Magic, Idea Scavenging — prototypes for the LLM era |
+| [**Self × MOOLLM**](../../repo-shows/david-ungar-self-moollm/README.md) | Stage Magic, Idea Scavenging — prototypes for the LLM era |
 | [**Will CARD**](../../characters/will-wright/CARD.yml) | Procedural creatures, gallium voxel worlds |
 | [**Yoot Saito**](../../characters/yoot-saito/README.md) | Seaman energy — a creature that insults you on purpose |
-| [**Voystick × Pink Trombone**](../../repo-shows/voystick-pink-trombone/SHOW.yml) | Homomorphic vocal joystick — sing along to confirm; Zack Vocap + Pink Trombone choir |
-| [**Urban eBike Safari**](../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml) | DreamScape on wheels — outdoor Voystick demo on canal loops |
+| [**Voystick × Pink Trombone**](../../repo-shows/voystick-pink-trombone/README.md) | Homomorphic vocal joystick — sing along to confirm; Zack Vocap + Pink Trombone choir |
+| [**Urban eBike Safari**](../../repo-shows/urban-ebike-safari/README.md) | DreamScape on wheels — outdoor Voystick demo on canal loops |
 | [**Voystick theme**](../../bits/theme-voystick-voice-space/theme-voystick-voice-space.md) | Homomorphic instrument stack — full theme overlay |
 | [**The riff loop**](../../bits/theme-the-riff-loop/theme-the-riff-loop.md) | Steerable recursion — Slats anchor |
 | [**Crown jewel theme**](../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md) | Will 1996 goal — every bridge is one facet |

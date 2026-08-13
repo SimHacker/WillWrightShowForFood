@@ -109,7 +109,7 @@ Full definition: [`process/repo-show-format.yml`](process/repo-show-format.yml)
 here** — TextEdit to Emacs to VS Code and beyond; honesty appreciated. We also honor
 **intentional coders** and **conscientious coders** — deliberate craft and show-your-work
 ethics (Don coined **consciencious objectors** at a Kaleida meetup with **David Ungar**;
-proposed show: [Self × MOOLLM](repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml)).
+proposed show: [Self × MOOLLM](repo-shows/david-ungar-self-moollm/README.md)).
 
 **Vibe coders** — declare AI-forward flow; dance-off optional. **Orchestrated rigs** —
 tell us the stack (below).
