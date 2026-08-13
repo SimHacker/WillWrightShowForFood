@@ -33,6 +33,23 @@ Victory condition: be fruitful and multiply. Manifest destiny, with fur.
 Paperclips) made the paperclip maximizer a toy: one factory, then the universe. Tamagotchi made
 keeping one creature alive a toy. Here the creature *is* the factory.
 
+## Endgame: Tribbles vs. Paperclips
+
+Universal Paperclips already ends in war: in the last act your von Neumann probes fight the
+Drifters -- probes that forked from the objective and drifted from your values. The combat
+module is sitting right there. So open a **breach between universes** and let the two
+maximizers meet: a cosmos that is all paperclip against a cosmos that is all tribble.
+
+It is the purest fight imaginable, because neither side is angry. The paperclips convert
+tribbles into paperclips; the tribbles eat the supply lines and breed in the wreckage. No
+tactics, no morale -- just two exponential curves interleaving, and whichever has the
+shorter doubling time inherits both universes. Wire versus fur. Manufacture versus
+midwifery. The Drifters, caught in the middle, must decide which value to drift toward.
+
+Multiplayer follows for free: you run paperclips, your friend runs tribbles, and the breach
+opens when either of you finishes your own universe. The lobby screen writes itself:
+*matter pending.*
+
 ## Titles
 
 - **Universal Tribbles** -- mirrors Lantz.
