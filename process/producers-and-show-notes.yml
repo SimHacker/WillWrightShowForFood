@@ -134,7 +134,8 @@ anti_bullshit_gates:
     lw_reward: "Most 'rational' sounding comment wins karma"
     rs_reward: "Best receipt wins merge; spiciest unsubstantiated take wins nothing"
   eval_genius_adjacent: |
-    Church of the Eval Genius self-eval program is Y Combinator-sponsored satire.
+    Church of the Eval Genius self-eval program is satire built on Curry's Y combinator —
+    the lowercase fixed point, no affiliation with the startup accelerator.
     Producer corrections are β-reduction with citations — not anonymous λ passed to itself
     until Demo Day.
 
