@@ -28,7 +28,7 @@ novel: first windmill
 
 ## Show hook
 
-Connects to [`../../../repo-shows/urban-ebike-safari/`](../../../repo-shows/urban-ebike-safari/) voice-first seed — later phase.
+Connects to [`../../../repo-shows/urban-ebike-safari/`](../../../../repo-shows/urban-ebike-safari/) voice-first seed — later phase.
 
 **Graveyard tenant:** anonymous remember / flowers; Soul City summon only —
 [`../graveyard-soul-city.md`](../graveyard-soul-city.md).

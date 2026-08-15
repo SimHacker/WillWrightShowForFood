@@ -11,7 +11,7 @@ Reference material melted into [`../CAULDRON.yml`](../CAULDRON.yml).
 | Foursquare / Dodgeball / Swarm history | [foursquare-lineage.md](foursquare-lineage.md) | in repo |
 | Abraham Moller — XOSS G collaboration | [abraham-moller-xoss.md](abraham-moller-xoss.md) | in repo |
 | Urban Safari amber archive | [`../../LEGACY-urban-safari.md`](../../LEGACY-urban-safari.md) | pointer |
-| Show seed lineage | [`../../../repo-shows/urban-ebike-safari/`](../../../repo-shows/urban-ebike-safari/) | slurping |
+| Show seed lineage | [`../../../repo-shows/urban-ebike-safari/`](../../../../repo-shows/urban-ebike-safari/) | slurping |
 
 Add new sources here when dropping files into the cauldron.
 

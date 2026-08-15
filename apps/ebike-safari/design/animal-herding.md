@@ -164,7 +164,7 @@ spent semantics to sewage before flocks strip the block.
 
 ### Micropolis PacBot lineage — same algorithm, different field
 
-Don Hopkins's **PacBot** ([MicropolisCore `micropolisrobot.py`](../../../../micropolis/MicropolisCore/src/pyMicropolis/micropolisEngine/micropolisrobot.py)) already does this on a **road grid**:
+Don Hopkins's **PacBot** ([MicropolisCore `micropolisrobot.py`](https://github.com/SimHacker/micropolis/blob/master/MicropolisCore/src/pyMicropolis/micropolisEngine/micropolisrobot.py)) already does this on a **road grid**:
 
 | PacBot (SimCity microworld) | Ebike Safari (OSM graph) |
 |-----------------------------|---------------------------|

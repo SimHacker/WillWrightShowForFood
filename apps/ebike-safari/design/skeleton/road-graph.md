@@ -54,6 +54,6 @@ Physical **bike routing** may still traverse sealed edges; permeability gates **
 
 ## Slurp from amber
 
-- [`../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) — pie network on map (viewer UX)
+- [`../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) — pie network on map (viewer UX)
 
 ↑ [`../ARCHITECTURE.yml`](../ARCHITECTURE.yml)

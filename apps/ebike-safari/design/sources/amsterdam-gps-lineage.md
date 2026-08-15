@@ -31,7 +31,7 @@ ran in parallel; see below.
 | **BitTorrent map distribution** | Peer-assisted delivery of large map update packages (BitTorrent DNA) — scale without central chokepoint | Static JSON + Git LFS or IPFS-style mirrors for heavy assets; peer assist is amber, **open formats** are the harvest |
 | **Internationalization** | Global map product — locale strings, regional variants, multi-market rollout | OSM tag locale layers; story layer prompts per language; manifest metadata for `lang` |
 
-Corroboration: [2018 resume](https://donhopkins.medium.com/don-hopkins-resume-93defe4842ac) (TomTom Home, BitTorrent DNA); Aug 2008 go-ahead from Pieter Geelen to deploy BitTorrent map distribution ([pie-menu timeline](../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md)).
+Corroboration: [2018 resume](https://donhopkins.medium.com/don-hopkins-resume-93defe4842ac) (TomTom Home, BitTorrent DNA); Aug 2008 go-ahead from Pieter Geelen to deploy BitTorrent map distribution ([pie-menu timeline](../../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md)).
 
 ## TomTom trilogy (2008–2009, side projects)
 
@@ -94,14 +94,14 @@ Amber archive: [`../../LEGACY-urban-safari.md`](../../LEGACY-urban-safari.md)
 
 | Topic | Where |
 |-------|-------|
-| TomTom employment | [`../../../characters/don-hopkins/career/work-history.yml`](../../../characters/don-hopkins/career/work-history.yml) |
-| TomTom Home / BitTorrent DNA (resume) | [`../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md`](../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md) |
-| BitTorrent deploy go-ahead (Aug 2008) | [`../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md`](../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md) |
-| TomTom trilogy + Will rejoin | [`../../../characters/don-hopkins/career/stupid-fun-club.yml`](../../../characters/don-hopkins/career/stupid-fun-club.yml) |
-| Idea jam entries | [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml) — `#iloci_memory_palace`, `#amsterdam_coffeeshops_app`, `#bongo_bingo`, `#creationtv_storymaker`, `#urban_safari_gps_storytelling` |
-| Career lineage | [`../../../characters/don-hopkins/career/lineage.yml`](../../../characters/don-hopkins/career/lineage.yml) |
-| Urban Safari performed live | [`../../../repo-shows/urban-safari-live/`](../../../repo-shows/urban-safari-live/) |
-| StoryMaker media | [`../../../characters/don-hopkins/media/storymaker-urban-safari/`](../../../characters/don-hopkins/media/storymaker-urban-safari/) |
-| Steering / VoyStick | [`../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) |
+| TomTom employment | [`../../../characters/don-hopkins/career/work-history.yml`](../../../../characters/don-hopkins/career/work-history.yml) |
+| TomTom Home / BitTorrent DNA (resume) | [`../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md`](../../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md) |
+| BitTorrent deploy go-ahead (Aug 2008) | [`../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md`](../../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md) |
+| TomTom trilogy + Will rejoin | [`../../../characters/don-hopkins/career/stupid-fun-club.yml`](../../../../characters/don-hopkins/career/stupid-fun-club.yml) |
+| Idea jam entries | [`../../../process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml) — `#iloci_memory_palace`, `#amsterdam_coffeeshops_app`, `#bongo_bingo`, `#creationtv_storymaker`, `#urban_safari_gps_storytelling` |
+| Career lineage | [`../../../characters/don-hopkins/career/lineage.yml`](../../../../characters/don-hopkins/career/lineage.yml) |
+| Urban Safari performed live | [`../../../repo-shows/urban-safari-live/`](../../../../repo-shows/urban-safari-live/) |
+| StoryMaker media | [`../../../characters/don-hopkins/media/storymaker-urban-safari/`](../../../../characters/don-hopkins/media/storymaker-urban-safari/) |
+| Steering / VoyStick | [`../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) |
 
 ↑ [`../CAULDRON.yml`](../CAULDRON.yml) · [`../lineage.yml`](../lineage.yml)

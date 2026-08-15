@@ -1,6 +1,6 @@
 # Runbooks — enabling work from the cauldron
 
-Executable steps scooped from [`CAULDRON.yml`](CAULDRON.yml) `next_slurp` and [`ARCHITECTURE.yml`](ARCHITECTURE.yml) `build_order`.
+Executable steps scooped from [`CAULDRON.yml`](../CAULDRON.yml) `next_slurp` and [`ARCHITECTURE.yml`](../ARCHITECTURE.yml) `build_order`.
 
 | # | Runbook | Status | Proves |
 |---|---------|--------|--------|

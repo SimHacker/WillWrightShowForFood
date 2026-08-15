@@ -16,7 +16,7 @@ especially the **internet-connected** versions. Two proposals from that brainsto
 | **TomTomagotchi** | **Don Hopkins** | PND with simulated personality begging you to drive to POIs for cravings/mood; product-placement revenue (Burger King, car washes) | **Harvest** — pet needs from **geography**, not buttons. Thirsty → circle pond; wants apples → encircle orchard. See [`../geometry-as-language.md`](../geometry-as-language.md#tomtomagotchi) |
 | **Segment speed leaderboard** | **Unnamed TomTom co-worker** (Don does not recall the name; will not take credit — original and devious; Don wishes he'd thought of it) | High score = fastest time on **every road segment** on the map. Lawyers would not approve — actively dangerous | **Reject speed.** Replace with **[peerboard](../peerboard-and-brews.md)** — peers not racers |
 
-Don's HN telling of TomTomagotchi: [`../../../process/hn-harvest/will-wright.md`](../../../process/hn-harvest/will-wright.md) (search "TomTomagotchi").
+Don's HN telling of TomTomagotchi: [`../../../process/hn-harvest/will-wright.md`](../../../../process/hn-harvest/will-wright.md) (search "TomTomagotchi").
 
 ## Safe scores (not speed)
 
@@ -55,8 +55,8 @@ don't complete, cooperate). Paint is signature, not eviction.
 
 ### Inspiration: Mark Your Territory
 
-[**Andrew Quitmeyer**](../../../characters/andrew-quitmeyer/README.md) — Stupid Fun Club intern,
-Georgia Tech (Janet Murray). [**Mark Your Territory**](../../../characters/andrew-quitmeyer/sources/mark-your-territory.md)
+[**Andrew Quitmeyer**](../../../../characters/andrew-quitmeyer/README.md) — Stupid Fun Club intern,
+Georgia Tech (Janet Murray). [**Mark Your Territory**](../../../../characters/andrew-quitmeyer/sources/mark-your-territory.md)
 (Oct 2011): open-source **Pee-to-Check-In-to-Foursquare** — bodily ubicomp as playful territory claim.
 
 | Mark Your Territory | Ebike Safari harvest |
