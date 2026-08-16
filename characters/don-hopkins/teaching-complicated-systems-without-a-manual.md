@@ -185,8 +185,9 @@ Papert microworlds          →  simplified explorable domain (Logo turtle, SimC
 Constructionism             →  learn by building inspectable things you care about
 Programming by demonstration →  watch what I do; infer and replay the procedure
 Programming by example      →  same family; often emphasizes generalization from instances
+Self prototypes             →  clone-and-tweak objects; no classes, taxonomy emerges (Ungar & Smith)
 Play-Learn-Lift             →  MOOLLM's systematic version of the above
-Skills                      →  lifted demonstrations that other agents can reuse
+Skills                      →  lifted demonstrations, inheritable as prototypes, reusable by other agents
 ```
 
 ### Papert: microworlds and constructionism
