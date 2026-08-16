@@ -244,6 +244,64 @@ That is Play-Learn-Lift applied to robotics. It is also what Cypher's book catal
 
 ---
 
+## What kind of object is a robot? Prototypes, roles, and pantomime horses
+
+There is a deeper architectural question hiding under Tade's interface question, one Don keeps returning to in conversations with **David Ungar** (co-creator of the Self programming language) and **David Temkin** (founder of Laszlo Systems, where Don worked on OpenLaszlo): **what kind of *thing* is a teachable entity, in computer science terms?** The answer shapes everything the teacher can and cannot do.
+
+### Prototypes: teach by cloning, not by classifying
+
+Most programming makes you define a **class** first — an abstract blueprint like "Robot" — and only then stamp out instances. That's backwards for teaching. Nobody teaches a child "first, the taxonomy of dogs; now, this dog." You point at a working example and say "like that, but different."
+
+Ungar and Randall Smith's **Self** language (1987) built this insight into the machine: there are no classes, only **prototypes** — concrete working objects you **clone and tweak**. Identity is cheap. Variation is a small delta on something that already works. The taxonomy *emerges* from what people actually make, instead of being designed up front and defended forever.
+
+That is exactly what teaching a robot by demonstration is: every taught habit is a clone-and-tweak of a working behavior. "Wave like you did yesterday, but slower, and only when Grandma arrives." A class hierarchy fights that; a prototype system *is* that. (Temkin's OpenLaszlo carried the same idea to declarative UI — Oliver Steele called it **instance-first development**: build the concrete instance, then extract the general pattern, which is Play-Learn-Lift in language-design clothing.)
+
+### Multiple inheritance: the talking chair problem
+
+Now the fun part. What happens when one entity is **several kinds of thing at once**?
+
+- **Chairry** in Pee-wee's Playhouse is a chair *and* a character: you can sit on her (furniture interface) and she hugs you and talks (character interface).
+- **Globey** is a globe *and* a character. Magic Screen is a display *and* a playmate.
+- A **horse** is a vehicle, a co-worker, and a character with opinions about all of it.
+- An **Iain M. Banks Culture ship** is the limit case: a vehicle, a *place* where millions of people live, and a person — a Mind with a name like *Of Course I Still Love You* and a personality to match. Room, character, and vehicle in one entity.
+- A **pantomime horse** inverts the whole thing: **one** character presented outward, implemented by **two** players inside. Multiple interfaces inward, single interface outward — a multiplayer object.
+
+Class-based single inheritance chokes on all of these: is Chairry a `Chair` subclass or a `Character` subclass? Pick one and you've amputated half of her. What you actually want is **multiple inheritance of roles** — or better, prototype **delegation**, where an entity simply points at several parents ("I behave like furniture *and* like a character") and can add or drop roles at runtime. A robot that is sometimes a tool, sometimes a pet, sometimes a co-worker shouldn't have to be reclassified each time; it should just wear more than one hat.
+
+MOOLLM does this literally: a **directory is a room**, but a room can also be a character (the pub that talks back), and a character can contain rooms (a ship you walk around inside). The filesystem doesn't care; the roles are layered on by what the entity *advertises*.
+
+### Advertisements: the world knows what it's for
+
+Which brings back the Sims insight, now in architectural terms. Instead of one giant brain that knows what every object does, **each object broadcasts its own affordances** — "eat me," "sit on me," "teach me this here" — and actors pick among what's salient given their current state. Intelligence is **distributed into the environment**.
+
+This composes perfectly with prototypes and roles: when Chairry inherits the furniture role, she automatically advertises "sit on me"; the character role adds "talk to me." The pantomime horse advertises "ride me" outward while advertising "be my front half" and "be my back half" inward. Nobody wrote a master ontology; the advertisements *are* the ontology, and it is discoverable by walking around — which is why no manual is needed.
+
+### The compiler takes dictation: natural language → running code
+
+MOOLLM closes the programming-by-demonstration loop with its **adventure compiler**. You describe an object in natural language — "a talking chair like Chairry, but grumpy, and she only hugs people who say please" — as a prototype inheritance plus a natural-language specialization. The compiler resolves the inheritance chain, applies the specializations, and **generates plain JavaScript that runs in the browser with no LLM at runtime**.
+
+The division of labor is the point:
+
+- **Authoring time:** the LLM is the compiler. Natural language and demonstration are the source code. Expensive intelligence is spent once.
+- **Play time:** the output is ordinary, deterministic, inspectable JS. It runs anywhere, costs nothing per interaction, and behaves the same every time.
+
+This is PBD completed end to end. The demonstration or description is the program; the generated code is readable (and you *should* read it — the anti-vibe-coding ethic applies to compilers too); and the artifact outlives the session that created it.
+
+**For a humanoid, same shape:** teach with LLM assistance in the loop, then compile the taught habit down to a small, fast, verifiable controller that runs on the robot **without** an LLM in the loop. The LLM helps you write the habit; it doesn't have to be awake to perform it.
+
+### Why this matters for a teachable humanoid
+
+Put the four together and the architecture writes Tade's spec:
+
+1. **Prototypes** make every taught behavior a cheap clone-and-tweak of a working example — teaching is versioning, not authoring from scratch.
+2. **Multiple roles via delegation** let the robot be tool, pet, student, and co-worker without a reclassification crisis — and let taught habits attach to the *role*, not the whole robot.
+3. **Advertisements** make the teachable surface discoverable in place — the robot, its props, and its places all say what they can learn, so the manual dissolves into the world.
+4. **Compilation from natural language** makes taught behavior durable and cheap — LLM at teach time, plain code at run time.
+
+This is the thread Don is pulling with Ungar (Self, *Narcissa's Mirror*, objects all the way down) and Temkin (Laszlo's declarative prototypes, constraint-driven UI): the same handful of ideas keep resurfacing every decade because they match how people actually teach and learn — by example, by role, by pointing at things in a shared world.
+
+---
+
 ## LLMs, vibe coding, and hard thinking
 
 From Don's email to Tade (Aug 2026):

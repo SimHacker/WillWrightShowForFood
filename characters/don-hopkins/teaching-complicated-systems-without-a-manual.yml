@@ -31,6 +31,10 @@ topics:
   - moollm_skills
   - humanoid_teach_ui
   - llm_vibe_coding_antidote
+  - prototypes_self_ungar
+  - openlaszlo_instance_first_temkin
+  - multiple_inheritance_roles
+  - adventure_compiler_nl_to_js
 
 show_seed:
   id: teaching-without-a-manual
@@ -49,6 +53,10 @@ show_seed:
       note: "PBD / Garnet / C32 lineage; Don worked in his lab"
     - name: Chaim Gingold
       note: "SimCity reverse diagrams; microworld pedagogy"
+    - name: David Ungar
+      note: "Self prototypes, clone-and-tweak teaching, objects all the way down"
+    - name: David Temkin
+      note: "Laszlo declarative prototypes, instance-first development"
   see_also:
     - moollm-microworld-os-talk.md
     - visual-programming-excel-and-dimensionality.md
