@@ -75,6 +75,14 @@ plus instance-local state, per the portable NPC travel contract
 Customs applies: the troll's Amsterdam toll ledger is instance wealth and never travels
 home to the prototype.
 
+**How the wumpus and grue interoperate on the map:** the rider's **headlamp battery**
+(or night-mode lighting state) is shared data both games read — same pattern as pee,
+exposure, and territory layers. While the lamp burns, you play spatial wumpus (smell
+warnings on adjacent edges). When it runs out, grue rules activate on the same graph
+segment: `lit=no` OSM ways, three-tick countdown, no fork required. The wumpus did not
+move; the rules changed under you. Ebike Safari tenants interlock the same way — one
+shared store, many games reading it.
+
 ## Shared data contracts — the actual platform
 
 Every game **declares what it reads and writes**. No private shadow graphs.
