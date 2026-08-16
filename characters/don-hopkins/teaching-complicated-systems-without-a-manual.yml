@@ -11,15 +11,12 @@ prompted_by:
   name: Tade Mehl
   date: 2026-08-12
   context: |
-    Humanoid builder (~20, German founder). Cold email with two design questions
-    about teachable interfaces. Excellent focus for a public essay.
+    Humanoid builder. Cold email with two design questions about teachable
+    interfaces. Excellent focus for a public essay.
   questions:
     - "What should the person see/control vs what should disappear?"
     - "Did SimCity teach anything about learning without a manual?"
   bookshelf: https://www.tademehl.com/bookshelf
-  representation: |
-    Credited as prompt author only. No WWSFF character directory for Tade.
-    Don's public response; not a portrayal of Tade.
 
 topics:
   - simcity_ui_philosophy
@@ -47,7 +44,7 @@ show_seed:
     - "Microworlds, object advertising, SimAntics as shipped VPL"
   optional_guests:
     - name: Tade Mehl
-      note: "Only if he wants to join; prompt author, not a WWSFF character"
+      note: "Prompt author; welcome if he wants to join"
     - name: Brad Myers
       note: "PBD / Garnet / C32 lineage; Don worked in his lab"
     - name: Chaim Gingold
@@ -56,7 +53,3 @@ show_seed:
     - moollm-microworld-os-talk.md
     - visual-programming-excel-and-dimensionality.md
     - ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
-
-cross_links:
-  private_working_notes: |
-    DonHopkins characters/tade-mehl/ (correspondence index; expanded harvest mirror)

@@ -15,9 +15,7 @@ In August 2026 Tade Mehl wrote out of the blue. He is working on a humanoid and 
 > When you make an interface for something really complicated, how do you decide what the person should see and control and what should disappear completely?  
 > And did SimCity teach you anything about how normal people learn a complicated system without a manual?
 
-Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay expands that reply into something anyone can browse: humanoid builders, simulation designers, LLM tool makers, constructionist educators.
-
-**Representation note:** Tade is credited here as the prompt author. There is no WillWrightShowForFood character directory for him; this essay is Don's public response, not a portrayal of Tade.
+Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay expands that reply into a public response for anyone who asks good questions like these: humanoid builders, simulation designers, LLM tool makers, constructionist educators.
 
 ---
 
