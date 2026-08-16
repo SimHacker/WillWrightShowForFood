@@ -29,7 +29,7 @@ topics:
   - brad_myers_garnet_peridot
   - play_learn_lift
   - moollm_skills
-  - humanoid_teach_ui
+  - robot_teach_ui
   - llm_vibe_coding_antidote
   - prototypes_self_ungar
   - openlaszlo_instance_first_temkin
@@ -43,7 +43,7 @@ show_seed:
   host: Don Hopkins
   status: seed
   hooks:
-    - "SimCity → Sims → humanoid: what to show vs hide"
+    - "SimCity → Sims → robot: what to show vs hide"
     - "Programming by demonstration from Cypher to MOOLLM"
     - "Microworlds, object advertising, SimAntics as shipped VPL"
   optional_guests:

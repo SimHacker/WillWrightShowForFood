@@ -15,7 +15,7 @@ In August 2026 Tade Mehl wrote out of the blue. He is working on a humanoid and 
 > When you make an interface for something really complicated, how do you decide what the person should see and control and what should disappear completely?  
 > And did SimCity teach you anything about how normal people learn a complicated system without a manual?
 
-Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay expands that reply into a public response for anyone who asks good questions like these: humanoid builders, simulation designers, LLM tool makers, constructionist educators.
+Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay expands that reply into a public response for anyone who asks good questions like these: robot builders, simulation designers, LLM tool makers, constructionist educators. It says *robot* rather than *humanoid* throughout: in the tradition of Lem's *Cyberiad* constructors and Will Wright's Stupid Fun Club, teachable robots come in every shape, not just ours.
 
 ---
 
@@ -43,11 +43,11 @@ Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay 
   - [Multiple inheritance: the talking chair problem](#multiple-inheritance-the-talking-chair-problem)
   - [Advertisements: the world knows what it's for](#advertisements-the-world-knows-what-its-for)
   - [The compiler takes dictation: natural language → running code](#the-compiler-takes-dictation-natural-language--running-code)
-  - [Why this matters for a teachable humanoid](#why-this-matters-for-a-teachable-humanoid)
+  - [Why this matters for a teachable robot](#why-this-matters-for-a-teachable-robot)
 - [LLMs, vibe coding, and hard thinking](#llms-vibe-coding-and-hard-thinking)
 - [Book recommendations](#book-recommendations)
 - [Source harvest index](#source-harvest-index)
-- [Checklist for a teachable humanoid UI](#checklist-for-a-teachable-humanoid-ui)
+- [Checklist for a teachable robot UI](#checklist-for-a-teachable-robot-ui)
 - [Related Don Hopkins work](#related-don-hopkins-work)
 
 **People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Gary Drescher](../gary-drescher/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [Chris Trottier](../chris-trottier/README.md) · [Scott McCloud](../scott-mccloud/README.md) · [Don Norman](../don-norman/README.md) · [Ian Bogost](../ian-bogost/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
@@ -79,7 +79,7 @@ All four must be **tractable together**. A gorgeous UI can't save an impossible 
 
 > The digital models running on a computer are only compilers for the mental models users construct in their heads.
 
-**Design rule for a teachable humanoid:** the robot's true control stack can be arbitrarily deep; the teach surface only needs to expose the slice that matches the teacher's current intent — walk, gesture, habit, story — not joint torques.
+**Design rule for a teachable robot:** the robot's true control stack can be arbitrarily deep; the teach surface only needs to expose the slice that matches the teacher's current intent — walk, gesture, habit, story — not joint torques.
 
 ---
 
@@ -106,7 +106,7 @@ Will's postmortem ladder (same talk):
 
 SimEarth's view controls were ordered in **temporal progression** (continental drift → technology) — a UI lesson in making scale legible without a manual.
 
-**For a humanoid:** one mode where nothing can go wrong (sandbox pose / puppet), one where autonomous habits emerge, one expert layer — not all knobs at once.
+**For a robot:** one mode where nothing can go wrong (sandbox pose / puppet), one where autonomous habits emerge, one expert layer — not all knobs at once.
 
 ### 3. Objects advertise; people scan
 
@@ -128,7 +128,7 @@ Don's HN comment on emoji inclusivity ([27808826](https://news.ycombinator.com/i
 
 McCloud's **masking** concept: simplified avatars invite projection; hyper-real faces exclude. The Sims' low-poly people are a feature.
 
-**For humanoids:** a teachable character probably shouldn't look uncanny-valley perfect on day one. Leave room for the teacher's intent to complete the identity.
+**For robots:** a teachable character probably shouldn't look uncanny-valley perfect on day one. Leave room for the teacher's intent to complete the identity.
 
 ### 5. Multiple toys in one box
 
@@ -164,7 +164,7 @@ Actions have immediate visible consequences on terrain the user already reads as
 
 Will chose Dollhouse's 45° orthographic view over Doom-style first person: easier to read crowds, gestures, social situations. Same reason SimCity is top-down.
 
-For a humanoid teacher: watching the robot **from outside** while demonstrating may beat immersive teleop early on.
+For someone teaching a robot: watching it **from outside** while demonstrating may beat immersive teleop early on.
 
 ### Design by accretion looks like hacks until it doesn't
 
@@ -196,7 +196,7 @@ Skills                      →  lifted demonstrations, inheritable as prototype
 
 Will Wright's 1996 talk was literally titled *Interfacing to Microworlds* (Terry Winograd's CS547). SimCity is a city microworld. The Sims is a social microworld. Dollhouse was a dollhouse microworld. Same design move every time: **low floor** (anyone can place a zone or click a person), **high ceiling** (experts reverse-engineer dynamics), **wide walls** (sandbox, scenarios, disasters, storytelling).
 
-**For a humanoid:** the teach surface is a microworld. Joint torques and planner graphs are the wrong microworld for a normal teacher. "Walk here," "wave when the bell rings," "sit when tired" is the right one.
+**For a robot:** the teach surface is a microworld. Joint torques and planner graphs are the wrong microworld for a normal teacher. "Walk here," "wave when the bell rings," "sit when tired" is the right one.
 
 Don's open-source SimCity work (MicropolisCore, OLPC) sits explicitly in the **constructionist education** lineage: Doreen Nelson's city-building pedagogy, Minsky and Kay, classroom microworlds where kids learn by building cities they care about.
 
@@ -213,7 +213,7 @@ The canonical book is Allen Cypher's ***Watch What I Do: Programming by Demonstr
 | **HyperCard** | Button scripts from recorded actions | HyperTalk under the hood |
 | **KidSim / StageCraft** (Apple, Lieberman lineage) | Kids script characters by example in a microworld | Rule generalization |
 | **SimAntics** (The Sims, Don + Will) | Visual behavior rules: conditions → actions | Compiled behavior tree |
-| **A teachable humanoid (?)** | Gesture, habit, social script | Jacobian, RL reward, motion primitives |
+| **A teachable robot (?)** | Gesture, habit, social script | Jacobian, RL reward, motion primitives |
 
 Don worked in Brad Myers' Garnet group at CMU (~1992–93), building the PostScript driver and **GLASS** (*Graphical Layer And Server Simplifier*). Brad's *All the Widgets* (CHI '90) and visual-programming taxonomy (CHI '86 / JVLC 1990) are the map Don still cites on HN: spreadsheets **are** visual programs; PBD is a first-class category; hiding the "inner world" does not disqualify direct manipulation.
 
@@ -260,11 +260,11 @@ From the MOOLLM `skill` meta-protocol:
 
 **Constructionism** is the philosophy (build to understand; filesystem as microworld; YAML files as inspectable constructions). **Play-Learn-Lift** is the methodology (jazz first, then standards; don't lift before you've dogfooded the concrete instance). **Skills** are where lifted demonstrations live: documentation that learned to do things, inheritable like Self prototypes, advertised to agents like Sims objects.
 
-MOOLLM **Advertisements** in CARD.yml are Sims-style object scripts for LLM agents: broadcast what you can do, score by current character state, generate menus from what's salient. Same pattern as teachable humanoid affordances.
+MOOLLM **Advertisements** in CARD.yml are Sims-style object scripts for LLM agents: broadcast what you can do, score by current character state, generate menus from what's salient. Same pattern as teachable robot affordances.
 
 Other MOOLLM skills echo PBD by name: `copy-that` grows venue plugins **by example**; `cursor-mirror` treats your transcript as a demonstration to mine; `yaml-jazz` is **documentation by example** (the instance is the curriculum).
 
-**For a humanoid builder:** if the teach loop works, the path is predictable:
+**For a robot builder:** if the teach loop works, the path is predictable:
 
 1. Ship a **microworld** teach mode (puppet, props, places).
 2. Let teachers **demonstrate** habits; show them enough of the inferred mapping to correct it (anti-vibe-coding).
@@ -331,9 +331,9 @@ The division of labor is the point:
 
 This is PBD completed end to end. The demonstration or description is the program; the generated code is readable (and you *should* read it — the anti-vibe-coding ethic applies to compilers too); and the artifact outlives the session that created it.
 
-**For a humanoid, same shape:** teach with LLM assistance in the loop, then compile the taught habit down to a small, fast, verifiable controller that runs on the robot **without** an LLM in the loop. The LLM helps you write the habit; it doesn't have to be awake to perform it.
+**For a robot, same shape:** teach with LLM assistance in the loop, then compile the taught habit down to a small, fast, verifiable controller that runs on the robot **without** an LLM in the loop. The LLM helps you write the habit; it doesn't have to be awake to perform it.
 
-### Why this matters for a teachable humanoid
+### Why this matters for a teachable robot
 
 Put the four together and the architecture writes the spec for a teachable robot:
 
@@ -358,7 +358,7 @@ Related HN harvest ([48964059](https://news.ycombinator.com/item?id=48964059) �
 
 > YOU HAVE TO READ THE CODE. Refusing to do that means you're not a serious programmer, you're outsourcing your thought and design and implementation.
 
-**For humanoid teaching:** an LLM can translate natural intent into motion primitives — but the human should see enough of the mapping to **correct and compose**, not just accept vibes. Same ethic as SimCity: learn the city, not the tile array.
+**For robot teaching:** an LLM can translate natural intent into motion primitives — but the human should see enough of the mapping to **correct and compose**, not just accept vibes. Same ethic as SimCity: learn the city, not the tile array.
 
 ---
 
@@ -429,7 +429,7 @@ Interactive graph at https://www.tademehl.com/bookshelf — 113 books via `/api/
 
 ---
 
-## Checklist for a teachable humanoid UI
+## Checklist for a teachable robot UI
 
 1. **Microworld tier** — simplified teach domain (Papert); not the full control stack  
 2. **Sandbox tier** — puppet/teach mode with no failure states  
