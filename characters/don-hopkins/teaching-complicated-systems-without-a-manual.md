@@ -50,7 +50,7 @@ Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay 
 - [Checklist for a teachable humanoid UI](#checklist-for-a-teachable-humanoid-ui)
 - [Related Don Hopkins work](#related-don-hopkins-work)
 
-**People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Gary Drescher](../gary-drescher/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
+**People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Gary Drescher](../gary-drescher/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [Chris Trottier](../chris-trottier/README.md) · [Scott McCloud](../scott-mccloud/README.md) · [Don Norman](../don-norman/README.md) · [Ian Bogost](../ian-bogost/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
 
 ---
 
@@ -122,7 +122,7 @@ MOOLLM's Sims-inspired **Advertisements** in CARD.yml are the same pattern for L
 
 ### 4. Masking — enough detail to see yourself
 
-Don's HN comment on emoji inclusivity ([27808826](https://news.ycombinator.com/item?id=27808826)), citing Scott McCloud's *Understanding Comics*:
+Don's HN comment on emoji inclusivity ([27808826](https://news.ycombinator.com/item?id=27808826)), citing [Scott McCloud's](../scott-mccloud/README.md) *Understanding Comics*:
 
 > You have to have enough specificity to represent you enough, but not so inclusive that your emoji palette is hundreds of thousands of emoji.
 
@@ -154,7 +154,7 @@ The iOS 26.1 **clear/tinted** Liquid Glass toggle was an admission that visual m
 
 ### Play before vocabulary
 
-SimCity shipped without requiring urban planning credentials. Zones, bulldozer, speed-up-time are **metaphors**, not domain jargon. Kids reverse-engineer the simulator for fun ([Chaim Gingold's SimCity reverse diagrams](https://www.scheming.io/simcity/) — cited throughout Don's Medium article).
+SimCity shipped without requiring urban planning credentials. Zones, bulldozer, speed-up-time are **metaphors**, not domain jargon. Kids reverse-engineer the simulator for fun ([Chaim Gingold's](../chaim-gingold/README.md) [SimCity reverse diagrams](https://www.scheming.io/simcity/) — cited throughout Don's Medium article).
 
 ### The manual is the world
 
@@ -168,7 +168,7 @@ For a humanoid teacher: watching the robot **from outside** while demonstrating 
 
 ### Design by accretion looks like hacks until it doesn't
 
-Chris Trottier's Maxis interview (cited in Don's HN threads): The Sims was **"Design by Accretion"** / **"Tuned Emergence"** — a pile of components that looked disposable for years, then suddenly cohered. Managers hate this; players benefit.
+[Chris Trottier's](../chris-trottier/README.md) Maxis interview ([2004 primary source](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/), cited in Don's HN threads): The Sims was **["Design by Accretion"](../chris-trottier/design-by-accretion.md)** / **"Tuned Emergence"** — a pile of components that looked disposable for years, then suddenly cohered. Managers hate this; players benefit. (It's a big enough idea to have its own [show seed](../../repo-shows/design-by-accretion/README.md).)
 
 Don't wait for the perfect teach language. Ship tight loops; let the teach vocabulary emerge from what people actually do.
 
@@ -371,13 +371,13 @@ Checked against Tade's bookshelf API (2026-08-16).
 | Book | Why |
 |------|-----|
 | **Stanisław Lem — *The Cyberiad*** | "Trurl's Machine" (stubborn computer / simulated universe) inspired SimCity. Don's HN Lem hunt: [38744779](https://news.ycombinator.com/item?id=38744779) |
-| **Scott McCloud — *Understanding Comics*** | Masking, closure, simplification → Sims character readability. [27808826](https://news.ycombinator.com/item?id=27808826) |
+| **[Scott McCloud](../scott-mccloud/README.md) — *Understanding Comics*** | Masking, closure, simplification → Sims character readability. [27808826](https://news.ycombinator.com/item?id=27808826) |
 
 ### Already on shelf — worth re-reading for this project
 
 | Book | Connection |
 |------|------------|
-| **Don Norman — *The Design of Everyday Things*** | Affordances, signifiers, discoverability — antidote to Dye-style veneer |
+| **[Don Norman](../don-norman/README.md) — *The Design of Everyday Things*** | Affordances, signifiers, discoverability — antidote to Dye-style veneer |
 | **Mihaly Csikszentmihalyi — *Flow*** | Challenge/skill balance in learnable systems |
 | **Isaac Asimov — robot stories / *I, Robot*** | Teaching rules vs emergent behavior (Tade has the series) |
 | **Dr. Samuel Xiangming Li — *Humanoid Robotics Hardware*** | Already aligned with build |
@@ -390,7 +390,7 @@ Checked against Tade's bookshelf API (2026-08-16).
 | **Allen Cypher (ed.) — *Watch What I Do: Programming by Demonstration*** | PBD/PBE canon; Peridot, Garnet, Lieberman, HyperCard lineage — [acypher.com/wwid](http://acypher.com/wwid) |
 | **Brad Myers — papers + *Pick, Click, Flick!* (forthcoming)** | VPL taxonomy, Garnet, C32, *All the Widgets* — [ixtbook.com](http://www.ixtbook.com/) |
 | **Chaim Gingold — *Play Design* (PhD, 2016)** | SimCity as cultural artifact; reverse diagrams; microworld pedagogy |
-| **Ian Bogost — *Persuasive Games* / procedural rhetoric** | How mechanics argue — Sims social commentary by design |
+| **[Ian Bogost](../ian-bogost/README.md) — *Persuasive Games* / procedural rhetoric** | How mechanics argue — Sims social commentary by design |
 | **Alan Kay / media literacy canon** | Microworlds, not apps — Don's Medium Alan Kay pieces |
 
 ---
