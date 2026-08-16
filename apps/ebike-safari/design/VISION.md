@@ -32,7 +32,7 @@ GPS trace
 | Proprietary map SDKs | FIT pipeline in [`../scripts/`](../scripts/) |
 | SFC server stack | This repo + local FIT drops |
 
-See [`../LEGACY-urban-safari.md`](../LEGACY-urban-safari.md) for where history lives.
+See [`../LEGACY-URBAN-SAFARI.md`](../LEGACY-URBAN-SAFARI.md) for where history lives.
 
 ## Not gamified distance
 

@@ -10,7 +10,7 @@ Reference material melted into [`../CAULDRON.yml`](../CAULDRON.yml).
 | Peerboard and brews (MMORPG) | [../peerboard-and-brews.md](../peerboard-and-brews.md) | in repo |
 | Foursquare / Dodgeball / Swarm history | [foursquare-lineage.md](foursquare-lineage.md) | in repo |
 | Abraham Moller — XOSS G collaboration | [abraham-moller-xoss.md](abraham-moller-xoss.md) | in repo |
-| Urban Safari amber archive | [`../../LEGACY-urban-safari.md`](../../LEGACY-urban-safari.md) | pointer |
+| Urban Safari amber archive | [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md) | pointer |
 | Show seed lineage | [`../../../repo-shows/urban-ebike-safari/`](../../../../repo-shows/urban-ebike-safari/) | slurping |
 
 Add new sources here when dropping files into the cauldron.

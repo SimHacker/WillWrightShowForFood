@@ -10,6 +10,6 @@ what: |
 app: ../../apps/ebike-safari/
 design: ../../apps/ebike-safari/design/
 scripts: ../../apps/ebike-safari/scripts/
-legacy: ../../apps/ebike-safari/LEGACY-urban-safari.md
+legacy: ../../apps/ebike-safari/LEGACY-URBAN-SAFARI.md
 
 see: SKILL.md | CARD.yml

@@ -13,7 +13,7 @@ tags: [gps, fit, video, ebike, map, pipeline, bosch-flow]
 
 Fresh stack: FIT → static JSON → MapLibre (planned). Git + YAML, not MySQL. OSM tiles, not Google Maps.
 
-**Urban Safari** (2008–2011 SFC) is done — preserved in [`../../apps/ebike-safari/LEGACY-urban-safari.md`](../../apps/ebike-safari/LEGACY-urban-safari.md). Mine sources for show lore; don't port the old codebase.
+**Urban Safari** (2008–2011 SFC) is done — preserved in [`../../apps/ebike-safari/LEGACY-URBAN-SAFARI.md`](../../apps/ebike-safari/LEGACY-URBAN-SAFARI.md). Mine sources for show lore; don't port the old codebase.
 
 ## Quick start
 

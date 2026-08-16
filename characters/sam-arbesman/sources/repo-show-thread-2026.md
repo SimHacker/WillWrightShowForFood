@@ -72,7 +72,7 @@ day, designed for decades — including the story of taking a scheduled call wit
 > world!"
 
 Lineage cited: StoryMaker, Bar Karma, and Urban Safari at Stupid Fun Club with Will —
-see [LEGACY-urban-safari.md](../../../apps/ebike-safari/LEGACY-urban-safari.md).
+see [LEGACY-URBAN-SAFARI.md](../../../apps/ebike-safari/LEGACY-URBAN-SAFARI.md).
 
 ### The seven screenshots (now canonical app media)
 

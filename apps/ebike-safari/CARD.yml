@@ -21,7 +21,7 @@ data:
   contract: DATA-CONTRACT.md
 
 legacy:
-  urban_safari: LEGACY-urban-safari.md
+  urban_safari: LEGACY-URBAN-SAFARI.md
   note: "SFC era — amber only; distinct name and stack"
 
 compose_with:

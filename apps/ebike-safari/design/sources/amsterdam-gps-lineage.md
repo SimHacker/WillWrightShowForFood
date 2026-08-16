@@ -59,7 +59,7 @@ Built at Stupid Fun Club after the TomTom trilogy re-sparked the Will collaborat
 | **Bar Karma** | First online community-developed network TV series — audience votes branch the plot | Show format; not the GPS engine |
 | **Urban Safari** | Geolocated branch of StoryMaker: capture scene cards in the field, follow paths through a shared graph; Layar AR demos; Facebook album round-trip; **performed live** in Amsterdam (2011) | Continuous ride trace; gesture spells; exposure log — fresh stack in this repo |
 
-Amber archive: [`../../LEGACY-urban-safari.md`](../../LEGACY-urban-safari.md)
+Amber archive: [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md)
 
 ## What to harvest (ideas, not stacks)
 

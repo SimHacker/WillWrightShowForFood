@@ -1,7 +1,7 @@
 # Ebike Safari — web data contract
 
 Static JSON contract for the **Ebike Safari** map app. Pipeline in [`scripts/`](scripts/).
-**Not** the legacy Urban Safari stack — see [`LEGACY-urban-safari.md`](LEGACY-urban-safari.md).
+**Not** the legacy Urban Safari stack — see [`LEGACY-URBAN-SAFARI.md`](LEGACY-URBAN-SAFARI.md).
 
 **Platform:** many games share this data plane — see [`design/map-game-platform.md`](design/map-game-platform.md).
 Ride artifacts are the **bus**; world YAML (`territory/`, `garden/`, …) is the **shared database**.

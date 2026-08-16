@@ -43,7 +43,7 @@ slurp_queue:
 
   - id: moollm-urban-safari-frozen
     from: https://github.com/SimHacker/moollm/tree/main/skills/urban-safari
-    into: ../LEGACY-urban-safari.md
+    into: ../LEGACY-URBAN-SAFARI.md
     note: Frozen skill — points here; do not revive old MySQL/Google stack
     status: reference
 

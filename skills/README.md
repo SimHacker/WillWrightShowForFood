@@ -24,7 +24,7 @@ Compose with [`SimHacker/moollm`](https://github.com/SimHacker/moollm) — do no
 
 The **`repo-show`** orchestrator now lives here as the **public live instance** (lineage: DonHopkins private tree). Previously only a pointer stub.
 
-The **`ebike-safari`** skill + **`apps/ebike-safari`** pipeline — new GPS/FIT stack on the WWSFF stage. **Urban Safari** (SFC era) is preserved in amber; see `apps/ebike-safari/LEGACY-urban-safari.md`.
+The **`ebike-safari`** skill + **`apps/ebike-safari`** pipeline — new GPS/FIT stack on the WWSFF stage. **Urban Safari** (SFC era) is preserved in amber; see `apps/ebike-safari/LEGACY-URBAN-SAFARI.md`.
 
 ## Upstream skills (ai-offs / drag race)
 

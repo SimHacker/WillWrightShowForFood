@@ -16,6 +16,6 @@ pipeline: scripts/pipeline.py
 design: design/README.md
 demo: demo/web/data/manifest.json
 skill: ../../skills/ebike-safari/
-legacy: LEGACY-urban-safari.md
+legacy: LEGACY-URBAN-SAFARI.md
 
 see: README.md | design/VISION.md | DATA-CONTRACT.md

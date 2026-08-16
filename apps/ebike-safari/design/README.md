@@ -3,7 +3,7 @@
 **Phase:** slurping — melt sources into this room, then distill into code and viewer.
 
 Ebike Safari is **new from scratch** (FIT → GeoJSON → OSM → gestures + exposure + stories).
-Urban Safari (SFC, Google Maps, MySQL) is [amber](../LEGACY-urban-safari.md) — mine for lore,
+Urban Safari (SFC, Google Maps, MySQL) is [amber](../LEGACY-URBAN-SAFARI.md) — mine for lore,
 don't port the stack.
 
 ## Read order

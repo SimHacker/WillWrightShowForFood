@@ -14,7 +14,7 @@ legacy:
   name: urban-safari
   status: amber
   note: "SFC 2008–2011 — Google Maps, MySQL; do not extend"
-  archive: ../../apps/ebike-safari/LEGACY-urban-safari.md
+  archive: ../../apps/ebike-safari/LEGACY-URBAN-SAFARI.md
 
 provides:
   - Bosch Flow iPhone USB sync

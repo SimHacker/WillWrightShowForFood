@@ -6,7 +6,7 @@ and the MapLibre viewer.
 
 *Sniff:* [`GLANCE.yml`](GLANCE.yml) · [`CARD.yml`](CARD.yml)  
 *Design:* [`design/README.md`](design/README.md) — **slurping phase**  
-*History:* [`LEGACY-urban-safari.md`](LEGACY-urban-safari.md)
+*History:* [`LEGACY-URBAN-SAFARI.md`](LEGACY-URBAN-SAFARI.md)
 
 ## Rooms
 
