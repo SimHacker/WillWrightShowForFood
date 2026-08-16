@@ -19,6 +19,41 @@ Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay 
 
 ---
 
+## Contents
+
+- [Short answer](#short-answer)
+- [The four things that must fit together](#the-four-things-that-must-fit-together)
+- [What to show vs what to hide](#what-to-show-vs-what-to-hide)
+  - [1. Implication beats simulation](#1-implication-beats-simulation)
+  - [2. Goldilocks complexity](#2-goldilocks-complexity)
+  - [3. Objects advertise; people scan](#3-objects-advertise-people-scan)
+  - [4. Masking — enough detail to see yourself](#4-masking--enough-detail-to-see-yourself)
+  - [5. Multiple toys in one box](#5-multiple-toys-in-one-box)
+  - [6. Discoverability vs minimalism (counter-example)](#6-discoverability-vs-minimalism-counter-example)
+- [How normal people learn without a manual](#how-normal-people-learn-without-a-manual)
+  - [Play before vocabulary](#play-before-vocabulary) · [The manual is the world](#the-manual-is-the-world) · [Third-person beats first-person](#third-person-beats-first-person-for-social-learning) · [Design by accretion](#design-by-accretion-looks-like-hacks-until-it-doesnt)
+- [Lineage: microworlds → programming by demonstration → MOOLLM](#lineage-microworlds--programming-by-demonstration--moollm)
+  - [Papert: microworlds and constructionism](#papert-microworlds-and-constructionism)
+  - [Programming by demonstration / programming by example](#programming-by-demonstration--programming-by-example)
+  - [SimCity, The Sims, and shipped PBD](#simcity-the-sims-and-shipped-pbd)
+  - [Play-Learn-Lift and MOOLLM](#play-learn-lift-and-moollm)
+  - [Reading list for this lineage](#reading-list-for-this-lineage)
+- [What kind of object is a robot? Prototypes, roles, and pantomime horses](#what-kind-of-object-is-a-robot-prototypes-roles-and-pantomime-horses)
+  - [Prototypes: teach by cloning, not by classifying](#prototypes-teach-by-cloning-not-by-classifying)
+  - [Multiple inheritance: the talking chair problem](#multiple-inheritance-the-talking-chair-problem)
+  - [Advertisements: the world knows what it's for](#advertisements-the-world-knows-what-its-for)
+  - [The compiler takes dictation: natural language → running code](#the-compiler-takes-dictation-natural-language--running-code)
+  - [Why this matters for a teachable humanoid](#why-this-matters-for-a-teachable-humanoid)
+- [LLMs, vibe coding, and hard thinking](#llms-vibe-coding-and-hard-thinking)
+- [Book recommendations](#book-recommendations)
+- [Source harvest index](#source-harvest-index)
+- [Checklist for a teachable humanoid UI](#checklist-for-a-teachable-humanoid-ui)
+- [Related Don Hopkins work](#related-don-hopkins-work)
+
+**People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
+
+---
+
 ## Short answer
 
 **What to show:** only affordances that map onto things the user already understands, at the scale they're thinking at right now — then let curiosity pull them deeper.  
@@ -31,7 +66,7 @@ SimCity didn't teach this by being realistic. It taught it by being *honest at t
 
 ## The four things that must fit together
 
-From Will Wright's 1996 Stanford talk (*Interfacing to Microworlds*, Terry Winograd's CS547 seminar) — [video](https://www.youtube.com/watch?v=nsxoZXaYJSk), [Don's writeup](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d):
+From [Will Wright's](../will-wright/README.md) 1996 Stanford talk (*Interfacing to Microworlds*, [Terry Winograd's](../terry-winograd/README.md) CS547 seminar) — [video](https://www.youtube.com/watch?v=nsxoZXaYJSk), [Don's writeup](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d), [primary source room](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/):
 
 | Part | Role |
 |------|------|
@@ -141,7 +176,7 @@ Don't wait for the perfect teach language. Ship tight loops; let the teach vocab
 
 ## Lineage: microworlds → programming by demonstration → MOOLLM
 
-Tade's question is not new. It is the same problem Seymour Papert, Alan Kay, Brad Myers, Allen Cypher, Henry Lieberman, and Will Wright have been circling for fifty years: **how do you let a non-programmer teach a complicated system by doing, not by reading a manual?**
+Tade's question is not new. It is the same problem [Seymour Papert](../seymour-papert/README.md), [Alan Kay](../alan-kay/README.md), [Brad Myers](../brad-myers/README.md), Allen Cypher, [Henry Lieberman](../henry-lieberman/README.md), and [Will Wright](../will-wright/README.md) have been circling for fifty years: **how do you let a non-programmer teach a complicated system by doing, not by reading a manual?**
 
 The answer stack:
 
@@ -156,7 +191,7 @@ Skills                      →  lifted demonstrations that other agents can reu
 
 ### Papert: microworlds and constructionism
 
-Seymour Papert (*Mindstorms*, MIT Media Lab, Logo) argued that people learn best by **constructing** things in a **microworld**: a domain simplified enough to explore freely, rich enough to carry real ideas. Logo's turtle is the canonical microworld. The computer is Proteus: it can simulate anything, so the microworld can match the learner's passion.
+[Seymour Papert](../seymour-papert/README.md) (*Mindstorms*, MIT Media Lab, Logo) argued that people learn best by **constructing** things in a **microworld**: a domain simplified enough to explore freely, rich enough to carry real ideas. Logo's turtle is the canonical microworld. The computer is Proteus: it can simulate anything, so the microworld can match the learner's passion.
 
 Will Wright's 1996 talk was literally titled *Interfacing to Microworlds* (Terry Winograd's CS547). SimCity is a city microworld. The Sims is a social microworld. Dollhouse was a dollhouse microworld. Same design move every time: **low floor** (anyone can place a zone or click a person), **high ceiling** (experts reverse-engineer dynamics), **wide walls** (sandbox, scenarios, disasters, storytelling).
 
@@ -181,7 +216,7 @@ The canonical book is Allen Cypher's ***Watch What I Do: Programming by Demonstr
 
 Don worked in Brad Myers' Garnet group at CMU (~1992–93), building the PostScript driver and **GLASS** (*Graphical Layer And Server Simplifier*). Brad's *All the Widgets* (CHI '90) and visual-programming taxonomy (CHI '86 / JVLC 1990) are the map Don still cites on HN: spreadsheets **are** visual programs; PBD is a first-class category; hiding the "inner world" does not disqualify direct manipulation.
 
-Henry Lieberman's MIT work (Eager, Tinker, programming by demonstration in everyday UIs) is the same ethic: **watch what I do in context**, don't make me open an editor first.
+[Henry Lieberman's](../henry-lieberman/README.md) MIT work (Eager, Tinker, programming by demonstration in everyday UIs) is the same ethic: **watch what I do in context**, don't make me open an editor first.
 
 **Design rule:** demonstration is not "record macro and replay blindly." Good PBD **generalizes**: "when I did this here, I probably mean *this kind of thing* in similar situations." That is exactly Tade's "teach without feeling like programming" problem.
 
@@ -238,7 +273,7 @@ That is Play-Learn-Lift applied to robotics. It is also what Cypher's book catal
 | **Henry Lieberman — MIT PBD lineage** | Eager, contextual learning from demonstration |
 | **Seymour Papert — *Mindstorms*** | Constructionism, microworlds, Logo |
 | **Mitchel Resnick — Scratch / Lifelong Kindergarten** | Papert for the 2000s; low floor / wide walls |
-| **Chaim Gingold — *Building SimCity*** | SimCity as cultural microworld; reverse diagrams |
+| **Chaim Gingold — *Building SimCity*** | SimCity as cultural microworld; reverse diagrams — [`../chaim-gingold/`](../chaim-gingold/README.md) |
 | **MOOLLM `skills/play-learn-lift/`** | Methodology Don uses now |
 | **MOOLLM `skills/constructionism/`** | Filesystem = microworld; skills = constructions |
 
@@ -246,7 +281,7 @@ That is Play-Learn-Lift applied to robotics. It is also what Cypher's book catal
 
 ## What kind of object is a robot? Prototypes, roles, and pantomime horses
 
-There is a deeper architectural question hiding under Tade's interface question, one Don keeps returning to in conversations with **David Ungar** (co-creator of the Self programming language) and **David Temkin** (founder of Laszlo Systems, where Don worked on OpenLaszlo): **what kind of *thing* is a teachable entity, in computer science terms?** The answer shapes everything the teacher can and cannot do.
+There is a deeper architectural question hiding under Tade's interface question, one Don keeps returning to in conversations with **[David Ungar](../david-ungar/README.md)** (co-creator of the Self programming language) and **[David Temkin](../david-temkin/README.md)** (founder of Laszlo Systems, where Don worked on OpenLaszlo): **what kind of *thing* is a teachable entity, in computer science terms?** The answer shapes everything the teacher can and cannot do.
 
 ### Prototypes: teach by cloning, not by classifying
 
@@ -403,13 +438,16 @@ Interactive graph at https://www.tademehl.com/bookshelf — 113 books via `/api/
 
 ## Related Don Hopkins work
 
-- Pie menus — spatial muscle-memory controls: [30 Year Retrospective](https://donhopkins.medium.com/pie-menus-a-30-year-retrospective-5bdcb24a835a)  
-- The Sims design documents: https://donhopkins.com/home/TheSims/  
-- SimAntics / Sims behavior VPL (Don + Will): Edith demos, HN SimAntics threads  
-- CMU Garnet / Brad Myers lineage: [MicropolisCore brad-myers doc](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/brad-myers-visual-programming-hn.md) · [`../brad-myers/`](../brad-myers/GLANCE.md)  
-- Open Micropolis / constructionist SimCity: [MicropolisCore](https://github.com/SimHacker/MicropolisCore)  
-- MOOLLM Play-Learn-Lift + constructionism + PBD-as-skills: [moollm](https://github.com/SimHacker/moollm) (`skills/play-learn-lift/`, `skills/constructionism/`, `skills/skill/`)
+- Pie menus — spatial muscle-memory controls: [30 Year Retrospective](https://donhopkins.medium.com/pie-menus-a-30-year-retrospective-5bdcb24a835a) · [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md)  
+- The Sims design documents: https://donhopkins.com/home/TheSims/ · [`the-sims-transmogrifier-mod-tools.md`](the-sims-transmogrifier-mod-tools.md)  
+- SimAntics / Sims behavior VPL (Don + Will): [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md) · [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md)  
+- CMU Garnet / Brad Myers lineage: [MicropolisCore brad-myers doc](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/brad-myers-visual-programming-hn.md) · [`../brad-myers/`](../brad-myers/GLANCE.md) · [`garnet-to-svelte-constraint-ui-lineage.md`](garnet-to-svelte-constraint-ui-lineage.md)  
+- Open Micropolis / constructionist SimCity: [MicropolisCore](https://github.com/SimHacker/MicropolisCore) · [`open-sourcing-simcity-for-olpc.md`](open-sourcing-simcity-for-olpc.md)  
+- MOOLLM Play-Learn-Lift + constructionism + PBD-as-skills: [moollm](https://github.com/SimHacker/moollm) — [`skills/play-learn-lift/`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift), [`skills/constructionism/`](https://github.com/SimHacker/moollm/tree/main/skills/constructionism), [`skills/skill/`](https://github.com/SimHacker/moollm/tree/main/skills/skill), [`skills/adventure/`](https://github.com/SimHacker/moollm/tree/main/skills/adventure)  
+- MOOLLM as microworld OS — flagship talk: [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md)
 
 ---
 
 *Published 2026-08-16 in [WillWrightShowForFood/characters/don-hopkins/](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/don-hopkins). Prompted by Tade Mehl's Aug 2026 cold email. Sources: Gruber, Medium, YouTube, HN, Tade bookshelf API, Papert/Cypher/Myers/Lieberman/MOOLLM lineage.*
+
+↑ Back to [Don's room](README.md) · [show ideas](ideas.md) · [show seed](teaching-complicated-systems-without-a-manual.yml) · [writing index](writing/INDEX.yml)
