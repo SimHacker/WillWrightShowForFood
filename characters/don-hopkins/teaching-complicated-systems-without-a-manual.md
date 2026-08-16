@@ -324,6 +324,23 @@ The Cross-Platform Troll and the pantomime horse are opposite corners of the sam
 
 Isn't multiple inheritance dangerous? As an everyday general-purpose tool — yes, the skeptics are right. But dangerous mechanisms are what disciplines get built *from*. PostScript's dictionary stack is raw dynamic scope: you can push and pop dictionaries at any time to rewire name lookup for everything downstream, which is a horrible thing to do casually — yet Owen Densmore's **class.ps** used exactly those low-level `begin`/`end` primitives to build a structured object system for [NeWS](https://en.wikipedia.org/wiki/NeWS): first single inheritance like Smalltalk, later multiple inheritance like Self, with the lookup discipline encapsulated so ordinary code never touched the stack. The same story repeats up the industry: C++ vtables are hand-corruptible function-pointer tables; COM/OLE's QueryInterface disciplined them into negotiated capability discovery; Java and C# interfaces made the discipline a language feature. The pattern is always **a maximally general sharp-edged mechanism at the bottom, a structured protocol on top, everyday work through the protocol**. MOOLLM layers the same way: inheritance chains can braid freely (the sharp edge), but ordinary growth is dropping interface files into a directory — an `INTERFACE.yml` here, a `GAME.yml` there — so an object accretes queryable facets one file at a time, what Sims designer Chris Trottier called **design by accretion** ([Directory as IUnknown](https://github.com/SimHacker/moollm/blob/main/designs/DIRECTORY-AS-IUNKNOWN.md)).
 
+How far does this Self-ish object system stretch? The design doc
+[**Game Pieces**](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
+works it out across every orchestration of prototypes and objects a game can
+throw at it: a chess set as a DRY mixin graph (six types × two colors × N
+presentations = 6+2+N files, not 6×2×N); wumpus pits and superbats as
+à-la-carte sub-piece templates; the Sims expansion-pack socket, where
+twenty-five years of user-created content coexist because objects stay
+independent and rare controller objects coordinate by advertisement rather
+than ownership; sorting containers with OpenLaszlo-style smart placement;
+Revolutionary Chess, where checkmate triggers a revolution and captured
+move-sets migrate sideways into every surviving piece — inheritance edges
+added at runtime, one delegation edge per political event; and the
+robust-first design rules that keep all of this pluggable without stale
+flags. One prototype object system, many orchestrations — the same
+machinery a teachable robot needs for skills that compose, specialize, and
+transplant.
+
 ### Advertisements: the world knows what it's for
 
 Which brings back the Sims insight, now in architectural terms. Instead of one giant brain that knows what every object does, **each object broadcasts its own affordances** — "eat me," "sit on me," "teach me this here" — and actors pick among what's salient given their current state. Intelligence is **distributed into the environment**.
