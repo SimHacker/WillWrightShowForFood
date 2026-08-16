@@ -38,7 +38,16 @@ one, pirate vs thief, bird vs canary, pit vs grue, dwarves vs cyclops, the robot
 [MDL source](https://github.com/itafroma/zork-mdl))
 
 Wiring: [Don Woods room](../don-woods/) · [correspondence digest](../don-woods/sources/correspondence-digest.md) ·
-[don-woods-adventure seed](../../repo-shows/don-woods-adventure/README.md) (dream ensemble)
+[don-woods-adventure seed](../../repo-shows/don-woods-adventure/README.md) (dream ensemble) ·
+[mixing-up-adventures trio](../../repo-shows/mixing-up-adventures/README.md)
+
+## 0.75. Mixing Up Adventures! — trio with Woods and Scott Adams
+
+Don would love to discuss portable games and parallel adventures with Knuth, Woods, and Adams
+in one room. Knuth's "fancier WUMPUS" line is the thesis: Snorax's 1973 BASIC, Woods's 1977
+cave, Adams's 16K cartridge, Knuth's literate `advent.w` — all plug-in worlds on one graph.
+Live demo: wumpus + grue + troll parallel play; lamp dies, rules change under you.
+Show seed: [mixing-up-adventures](../../repo-shows/mixing-up-adventures/README.md)
 
 ## 1. Literate programming × Repo Show
 

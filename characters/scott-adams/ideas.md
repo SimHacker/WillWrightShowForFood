@@ -305,6 +305,13 @@ trolls, fronting per world). Segment: could a Scott Adams NPC — the bear from 
 join them as a self-contained cartridge? His VERB NOUN discipline is the tightest port contract
 ever shipped. ([GAME-CARTRIDGES.md](../menagerie/GAME-CARTRIDGES.md))
 
+### X6. Mixing Up Adventures! — dream trio with Knuth and Woods 🤝
+**Beat:** Scott's portable interpreter + Woods's mainframe tables + Knuth's literate cave =
+three answers to the same question: how do adventures plug together? Don would love this
+conversation on air — parallel games in one maze, lamp as shared state, cartridges before
+cartridges had a name.
+**Show seed:** [mixing-up-adventures](../../repo-shows/mixing-up-adventures/README.md)
+
 ---
 
 ## Episode shapes (pick a format)

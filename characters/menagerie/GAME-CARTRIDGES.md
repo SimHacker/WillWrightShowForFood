@@ -72,12 +72,13 @@ Construction sets all the way down — one refinement per generation:
 
 ## Show hooks
 
+- **Donald Knuth** — `advent.w` and the Wumpus lineage ("a fancier WUMPUS"); literate cave beside Snorax's 1973 BASIC. Dream trio: [mixing-up-adventures](../../repo-shows/mixing-up-adventures/README.md) with Woods and Scott Adams.
 - **Don Woods** — the troll and the ACME battery vending machine are both his:
   the dungeon service economy, invented 1977. The grue descends from his pits
   ("You may fall into a pit or step on a grue" — Zork's darkness answering his).
 - **Scott Adams** — cartridges before cartridges: whole adventures in 16K, two-word
   parsers, the discipline of tiny portable worlds. How do you say "I insist" in
-  VERB NOUN?
+  VERB NOUN? Dream trio: [mixing-up-adventures](../../repo-shows/mixing-up-adventures/README.md) with Knuth and Woods.
 - **Will Wright** — Edith, Transmogrifier, and the advertisement socket; why
   objects-that-carry-behavior beat engines-that-know-everything, twenty-six years
   before it became an LLM pattern.

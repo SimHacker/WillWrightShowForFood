@@ -102,3 +102,22 @@ games as self-contained cartridges ([GAME-CARTRIDGES.md](../menagerie/GAME-CARTR
 - **Woods + Scott Adams** — the two Adventurers: the mainframe cave meets the 16K home-computer branch ([show seed](../../repo-shows/woods-and-adams-adventurers/README.md)) — both already have One Lousy Point stamps in the MOOLLM kitchen
 - **Woods + Knuth — THE DREAM: the literate adventure code reading** ([dream ensemble](../../repo-shows/don-woods-adventure/README.md), [Knuth room](../donald-knuth/)) — the two names on the advent.w copyright line walking the sections together, author beside annotator. The channel is Woods himself: he saw Knuth at a SAIL reunion ~2025 (*"getting frail but is still plenty sharp"*), and Knuth wrote to him in 2003 about the INTERCAL division-routine hack. If Woods says yes to his solo show, ask him whether a joint reading would delight Knuth. **Encore — the border crossing**: after the literate Adventure, visit the neighboring realm while the party's assembled — the Zork MDL (GIVE TROLL TO TROLL is Zork's, not Adventure's; the crossing is the point). GIVE AXE TO TROLL, GIVE TROLL TO TROLL, and the uncleared `TROLL-FLAG!-FLAG` Don hypothesized on MIT-DM and confirmed in the source decades later. Don called the MDL "practically a form of literature" back in 2013; all three Dons close-read it, and Woods gets right of reply — Zork was MIT's answer to *his* cave. Then **comparative troll zoology**: ask Woods about his toll-taking bridge troll (pay a treasure; the bear scares him off; the bridge buckles under you-plus-bear) vs MIT's omnivorous self-devouring one — and the wider bestiary: his pirate vs their thief (who can open the jeweled egg — giving treasure to the villain as puzzle solution), his little bird vs their clockwork canary, his pit-in-the-dark vs their grue, his axe-throwing dwarves vs their ODYSSEUS-fearing cyclops, and the robot (an actor, not a vehicle — source-verified) plus GDT's teleport-anything godmode. ([harvest](../don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md))
 - **Woods × Knuth room** — even without Knuth live, advent.w is a co-authored text to read from
+
+## 13. Mixing Up Adventures! — the dream trio with Knuth and Scott Adams
+
+The portable-NPC menagerie ([GAME-CARTRIDGES.md](../menagerie/GAME-CARTRIDGES.md)) is the
+on-air demo for a trio show Don would love to discuss with **Donald Knuth, Don Woods, and
+Scott Adams**: what happens when you let the wumpus, the grue, the troll, and whole
+adventures share one graph?
+
+- **Woods** — invented the bridge toll and the dungeon service economy; his pits became
+  grues; audit [Two-Toll](../menagerie/troll/)'s adventure-mind on air
+- **Adams** — shipped whole adventures as 16K portable data before "cartridge" was a word;
+  the compile-once-run-everywhere pattern MOOLLM inherits
+- **Knuth** — `advent.w` plus the lineage insight that Adventure is "a fancier WUMPUS";
+  walk Snorax's 1973 BASIC beside the literate cave
+
+Live bit: parallel play — lamp dies adjacent to the wumpus room, grue countdown starts in
+the same maze. The rules changed under you.
+
+Show seed: [mixing-up-adventures](../../repo-shows/mixing-up-adventures/README.md)

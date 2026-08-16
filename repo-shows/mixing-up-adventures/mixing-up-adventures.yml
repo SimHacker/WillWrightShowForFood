@@ -1,0 +1,55 @@
+# SHOW SEED — Mixing Up Adventures!
+# Knuth + Woods + Adams: portable games, parallel threats, one graph.
+
+show:
+  id: mixing-up-adventures
+  title: "Mixing Up Adventures!"
+  type: trio
+  host: Don Hopkins
+  guests: ["Donald Knuth", "Don Woods", "Scott Adams"]
+  topic: "What happens when you let Hunt the Wumpus, the grue, the troll, and whole adventures loose in the same world — and why the founders of the genre were already building toward it: data-driven worlds (Woods, Adams), literate cave code (Knuth), and portable cartridges that carry their own rules."
+  status: seed
+
+why_this_trio:
+  - "Three founding traditions in one room: Woods's free mainframe cave (1977), Adams's sold 16K cartridge (1978), Knuth's literate advent.w (1998) — and Knuth's own one-liner that Adventure is 'a fancier WUMPUS.'"
+  - "They each solved the same problem from a different angle: adventure as DATA. Woods's FORTRAN tables, Adams's database + portable interpreter, Knuth's annotated literature — and MOOLLM's directories-as-cartridges is the 2026 answer."
+  - "The live demo writes itself: Snorax (1973 wumpus), the grue (1980 darkness field), and Two-Toll the Cross-Platform Troll (1977 toll gate + 1980 combat gate) running parallel games in one maze — interoperating when your lamp runs out."
+  - "Scott Adams invented the portable game cartridge before cartridges had a name; Woods invented the NPC business model (bridge toll, vending machine); Knuth made the ur-cave readable as literature. Ask all three: did you MEAN for your games to mix?"
+  - "Dream channel is real: Woods ↔ Knuth (advent.w copyright line, INTERCAL division-routine letter, SAIL reunion ~2025); Scott Adams ↔ Don (Jan 2026 MOOLLM correspondence, warm). Knuth: snail-mail invitation protocol only."
+
+threads:
+  mixing_up_adventures: "The headline question — what happens when you plug one adventure into another? Not fan fiction: parallel games on a shared graph, each carrying its own rules."
+  data_driven_worlds: "Woods's tables vs Adams's interpreter vs Knuth's sections — compile once, run everywhere, three generations before MOOLLM rooms-as-directories."
+  portable_cartridges: "Scott's 16K adventures as the original plug-in; MOOLLM menagerie as the live demo — wumpus (beast/node), grue (field/ambient), troll (border/edge). See characters/menagerie/GAME-CARTRIDGES.md."
+  parallel_play: "Snorax and the grue don't compete — they complement. Shared state: the lamp. While it burns, spatial wumpus; when it dies, temporal grue in the same rooms. The rules changed under you."
+  cross_platform_troll: "Woods's bridge toll and MIT's combat gate were the same troll all along — Two-Toll fronts whichever mind speaks the local currency. Comparative troll zoology with Woods on air."
+  knuth_wumpus_lineage: "ADVENT = SHRDLU turned inside out; from another perspective, a fancier WUMPUS. Walk Snorax's 1973 BASIC source beside advent.w beside Adams's Adventureland data."
+  parser_to_llm: "Two-word parser → Infocom → MOOLLM natural-language compiler. Where the founders think mixing adventures should go next — and what must stay deterministic."
+  city_scale: "Ebike Safari as Amsterdam-scale plug-in tenants — same Sims socket, OSM graph, monsters loose on the map. apps/ebike-safari/design/map-game-platform.md."
+
+format:
+  live: true
+  audience_qa: true
+  notes: |
+    Open with the triple stamp ceremony (Woods + Adams matchbooks; Knuth gets advent.w on screen).
+    Live maze: wumpus + grue + troll parallel play — kill the lamp on purpose mid-demo.
+    Segment: each founder reacts to the other's game mixed into the same graph.
+    Close: audience mails matchbooks; homefun ports a Scott Adams room into the adventure-4 maze.
+
+ties_to:
+  - characters/donald-knuth/
+  - characters/don-woods/
+  - characters/scott-adams/
+  - characters/menagerie/GAME-CARTRIDGES.md
+  - repo-shows/woods-and-adams-adventurers/woods-and-adams-adventurers.yml
+  - repo-shows/don-woods-adventure/don-woods-adventure.yml
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue
+  - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll
+  - https://github.com/SimHacker/moollm/blob/main/skills/soul-city/PORTABLE-NPCS.md
+  - apps/ebike-safari/design/map-game-platform.md
+
+consent:
+  donald-knuth: "snail-mail invitation protocol; no email. Woods channel: ask whether joint reading would delight Knuth if Woods accepts."
+  don-woods: "solo invitation sent 2026-07-31 (THROW AXE AT DWARF thread); trio not yet proposed"
+  scott-adams: "correspondence verified (solo show); trio not yet proposed"
