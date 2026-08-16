@@ -341,6 +341,22 @@ flags. One prototype object system, many orchestrations — the same
 machinery a teachable robot needs for skills that compose, specialize, and
 transplant.
 
+Doesn't all that flexibility cost performance? Only until the shapes
+**gel** — and then you compile. Game engines already have the static target:
+**entity component systems** (Unity DOTS, Bevy), where components are mixins
+with the inheritance stripped out and systems iterate dense arrays of
+identically-shaped entities at cache speed. Once instance-first development
+has let thousands of pieces vote on which mixin combinations actually occur,
+the common gelled schemas compile into ECS archetypes; the long tail of odd
+one-off pieces stays on the flexible prototype layer. This is the same trade
+the adventure compiler makes (LLM at authoring time, deterministic code at
+runtime), and it is the founding trick of the Self VM itself: Ungar and
+company recovered class-like speed from prototype-like freedom with hidden
+classes ("maps") that *discover* the taxonomy the author never had to
+declare — the lineage that became V8, the engine running your browser tabs
+right now. Prototypes for teaching, compilation for shipping: the robot
+learns loose and runs tight.
+
 ### Advertisements: the world knows what it's for
 
 Which brings back the Sims insight, now in architectural terms. Instead of one giant brain that knows what every object does, **each object broadcasts its own affordances** — "eat me," "sit on me," "teach me this here" — and actors pick among what's salient given their current state. Intelligence is **distributed into the environment**.
