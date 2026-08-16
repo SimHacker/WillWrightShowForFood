@@ -57,7 +57,7 @@ show_seed:
     - name: David Ungar
       note: "Self prototypes, clone-and-tweak teaching, objects all the way down"
     - name: David Temkin
-      note: "Laszlo declarative prototypes, instance-first development; smart placement protocol; the multiple-inheritance skepticism debate — dict-stack/class.ps layering as the rebuttal"
+      note: "Laszlo declarative prototypes, instance-first development; smart placement protocol; the multiple-inheritance skepticism debate — dict-stack/class.ps layering as the rebuttal; webtop quick-stack — game auto-sort mechanics (GW2 fills-first bags, PoE affinities, Terraria quick stack) as zoomable window/object manager features (moollm designs/GAME-PIECES.md#beyond-games-the-webtop)"
   see_also:
     - moollm-microworld-os-talk.md
     - visual-programming-excel-and-dimensionality.md
