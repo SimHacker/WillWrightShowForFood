@@ -45,6 +45,36 @@ MapLibre is projection. The bike produces **ride facts** every game may consume.
 Ebike Safari tenants (exposure, territory, garden, polder, herding) are **consumers and producers**
 of the same data — not separate apps glued in a viewer.
 
+## Sims-style tenants: let the monsters loose
+
+The plug-in pattern is totally inspired by **The Sims**: the house doesn't know what an
+espresso machine is until you plug one in — every object arrives carrying its own behavior
+and **advertises its affordances** into the shared world. Ebike Safari tenants are Sims
+objects at city scale: plug into the shared data plane, declare reads/writes, advertise
+to riders.
+
+MOOLLM's adventure menagerie already runs this pattern in a room graph —
+[Snorax the Wumpus](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax),
+[the grue](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue), and
+[Two-Toll the Cross-Platform Troll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll)
+play **parallel games in the same space** — and their binding archetypes map one-to-one
+onto the OSM graph:
+
+| Monster | Archetype | Binds to | Loose on the Amsterdam map |
+|---------|-----------|----------|----------------------------|
+| **Wumpus (Snorax)** | beast | node | haunts a block or park; "I smell a wumpus!" warnings on adjacent edges, two blocks out |
+| **Grue** | field | ambient condition | unlit streets, tunnels, night rides — OSM tags `lit=no`; linger in darkness three ticks... |
+| **Troll (Two-Toll)** | border | edge | actual Amsterdam bridges; pay the toll (game currency, or fight per fronting mind) or ride the long way around |
+
+You can **literally let the wumpus, the grue, the troll, and other monsters loose on the
+map**: each one is a new contract file (`design/games/wumpus.contract.yml` — reads
+`road_graph` + block adjacency; writes `wumpus/instances/*`; emits smell warnings), not a
+forked codebase. Their canonical souls stay in moollm; a map instance is a pointer file
+plus instance-local state, per the portable NPC travel contract
+([PORTABLE-NPCS.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/PORTABLE-NPCS.md)).
+Customs applies: the troll's Amsterdam toll ledger is instance wealth and never travels
+home to the prototype.
+
 ## Shared data contracts — the actual platform
 
 Every game **declares what it reads and writes**. No private shadow graphs.

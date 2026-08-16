@@ -88,6 +88,17 @@ chain:
     code: ../../../../micropolis/MicropolisCore/src/pyMicropolis/micropolisEngine/micropolisrobot.py
     harvest: animal-herding.md#micropolis-pacbot-lineage--same-algorithm-different-field
 
+  - era: "2000"
+    project: The Sims object architecture
+    hook: objects as plugins — each brings its own behavior, advertises affordances into a shared world; origin of the tenant pattern
+    harvest: map-game-platform.md#sims-style-tenants-let-the-monsters-loose
+
+  - era: "2026"
+    project: MOOLLM portable NPC menagerie
+    hook: wumpus (beast/node), grue (field/ambient), Cross-Platform Troll (border/edge) run parallel games in one graph — same trichotomy as OSM map tenants
+    source: https://github.com/SimHacker/moollm/blob/main/skills/soul-city/PORTABLE-NPCS.md
+    harvest: map-game-platform.md#sims-style-tenants-let-the-monsters-loose
+
   - era: "2026+"
     project: Ebike Safari (this app)
     hook: geometry spells + exposure log + FIT pipeline
@@ -98,6 +109,7 @@ slurp_todo:
   - Pull BONGO BINGO exposure patterns into exposure-pac-man.md
   - iLoci pie-network → viewer-maplibre skeleton
   - PacBot traffic-eater → semantic graze + optional traffic/density game tenant
+  - Monster tenants — wumpus/grue/troll contract files on the OSM graph (map-game-platform.md)
 
 see_also:
   - README.md
