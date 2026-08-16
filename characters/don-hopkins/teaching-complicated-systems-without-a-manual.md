@@ -170,7 +170,7 @@ For a humanoid teacher: watching the robot **from outside** while demonstrating 
 
 [Chris Trottier's](../chris-trottier/README.md) Maxis interview ([2004 primary source](../will-wright/sources/2004-02-21-chris-trottier-tuned-emergence/), cited in Don's HN threads): The Sims was **["Design by Accretion"](../chris-trottier/design-by-accretion.md)** / **"Tuned Emergence"** — a pile of components that looked disposable for years, then suddenly cohered. Managers hate this; players benefit. (It's a big enough idea to have its own [show seed](../../repo-shows/design-by-accretion/README.md).)
 
-Don't wait for the perfect teach language. Ship tight loops; let the teach vocabulary emerge from what people actually do.
+The lesson for a teachable robot: don't try to design the perfect teaching notation up front — the complete set of named habits, gestures, and commands people will use to instruct it. Ship a tight demonstrate-and-correct loop first, and let that vocabulary accrete from what real teachers actually do with it, the same way The Sims cohered.
 
 ---
 
