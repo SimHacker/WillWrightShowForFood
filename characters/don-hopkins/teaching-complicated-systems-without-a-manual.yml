@@ -34,6 +34,7 @@ topics:
   - prototypes_self_ungar
   - openlaszlo_instance_first_temkin
   - multiple_inheritance_roles
+  - disciplined_mi_classps_dictstack   # MI skepticism is right; discipline the substrate — class.ps from PostScript dict stack, QueryInterface from vtables, INTERFACE.yml by accretion
   - adventure_compiler_nl_to_js
 
 show_seed:
@@ -56,7 +57,7 @@ show_seed:
     - name: David Ungar
       note: "Self prototypes, clone-and-tweak teaching, objects all the way down"
     - name: David Temkin
-      note: "Laszlo declarative prototypes, instance-first development"
+      note: "Laszlo declarative prototypes, instance-first development; smart placement protocol; the multiple-inheritance skepticism debate — dict-stack/class.ps layering as the rebuttal"
   see_also:
     - moollm-microworld-os-talk.md
     - visual-programming-excel-and-dimensionality.md
