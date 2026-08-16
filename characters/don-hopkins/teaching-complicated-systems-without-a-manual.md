@@ -235,6 +235,11 @@ The Sims went further toward explicit PBD:
 
 - **Object advertising** (see above): the world publishes affordances; the teacher picks among salient actions.
 - **SimAntics**: a visual programming language for behaviors (conditions, actions, motives) that Don implemented with Will Wright. Behaviors are **authored by demonstration-like composition** in a VPL, not by typing code. Edith demo videos are the proof that "normal people" can program social behavior when the notation matches the domain.
+- **Players train Sims by repetition**: tell a Sim to sleep on one side of the bed a few times and they learn to prefer that side. That is programming by demonstration shipped to millions of living rooms — no one called it programming, which was the point.
+
+The machinery under that training is worth spelling out, because it is the same machinery a teachable robot needs. Each Sim maintains a **relationship matrix** with objects and with other people. Every interaction succeeds or fails, and the outcome feeds back into **mood**; mood and relationships in turn re-weight how the world's advertisements are **scored**, which changes what the Sim does next. Habits, grudges, and preferences aren't stored as rules anyone wrote — they *emerge* from the loop of advertised affordances, scored by state, updated by outcome.
+
+**MOOLLM lifts this headspace directly from The Sims** — object advertisement scoring, plugin object behavior, SimAntics-style game AI, the visual-programming stance that behavior lives in the world — and reimagines it with an **LLM as the coherence engine and simulation engine**, one that understands natural language as well as code. Sims objects could only advertise what a programmer had wired in SimAntics; MOOLLM objects advertise in YAML and prose, the LLM scores salience with actual language understanding, and the same loop (advertise → score by state → act → update relationships) runs over meanings instead of just magic numbers.
 
 Pie menus are a related move: **spatial muscle memory** from repeated demonstration of "where the action lives," without a command language.
 
