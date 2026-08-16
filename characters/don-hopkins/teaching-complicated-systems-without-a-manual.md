@@ -50,7 +50,7 @@ Don replied by email (bookshelf recs, Will Wright talk, HN harvest). This essay 
 - [Checklist for a teachable humanoid UI](#checklist-for-a-teachable-humanoid-ui)
 - [Related Don Hopkins work](#related-don-hopkins-work)
 
-**People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
+**People in this essay with rooms in this repo:** [Will Wright](../will-wright/README.md) · [Terry Winograd](../terry-winograd/README.md) · [Seymour Papert](../seymour-papert/README.md) · [Alan Kay](../alan-kay/README.md) · [Brad Myers](../brad-myers/GLANCE.md) · [Henry Lieberman](../henry-lieberman/README.md) · [Gary Drescher](../gary-drescher/README.md) · [Chaim Gingold](../chaim-gingold/README.md) · [David Ungar](../david-ungar/README.md) · [David Temkin](../david-temkin/README.md) · [Don Hopkins](README.md)
 
 ---
 
@@ -221,6 +221,8 @@ Don worked in Brad Myers' Garnet group at CMU (~1992–93), building the PostScr
 
 **Design rule:** demonstration is not "record macro and replay blindly." Good PBD **generalizes**: "when I did this here, I probably mean *this kind of thing* in similar situations." That is exactly Tade's "teach without feeling like programming" problem.
 
+The deepest treatment of that generalization step is [Gary Drescher's](../gary-drescher/README.md) ***Made-Up Minds*** (MIT Press, 1991; see [`../gary-drescher/made-up-minds.md`](../gary-drescher/made-up-minds.md)). Drescher's **schema mechanism** is a Piagetian infant in software: it learns **context → action → result** schemas from raw experience, uses *marginal attribution* to figure out which conditions actually mattered, and spins off new, more specific schemas when a general one proves unreliable — a **schema factory** that grows its own ontology instead of being handed one. That is the missing middle of every PBD system: the demonstration is one concrete experience; the schema mechanism is the machinery that decides what the demonstration *meant*. MOOLLM's Play-Learn-Lift maps onto it directly (PLAY surfaces candidate schemas, LEARN revises and stabilizes them, LIFT publishes the reliable ones as skills), and the modern echo — schemas versus vectors versus LLM latent generalization — is exactly the conversation in [`../gary-drescher/schemas-vectors-and-llms.md`](../gary-drescher/schemas-vectors-and-llms.md). For Tade's robot: show it a task once, and the question "what did I just mean?" is Drescher's question, verbatim.
+
 ### SimCity, The Sims, and shipped PBD
 
 SimCity is not usually filed under PBD, but the teach loop is the same shape:
@@ -273,6 +275,7 @@ That is Play-Learn-Lift applied to robotics. It is also what Cypher's book catal
 | **Brad Myers — Peridot, Garnet, C32, VPL taxonomy** | [cmu.edu/~bam](http://www.cs.cmu.edu/~bam/); [`../brad-myers/`](../brad-myers/GLANCE.md) |
 | **Henry Lieberman — MIT PBD lineage** | Eager, contextual learning from demonstration |
 | **Seymour Papert — *Mindstorms*** | Constructionism, microworlds, Logo |
+| **Gary Drescher — *Made-Up Minds*** | Schema mechanism: how one demonstration becomes a general habit — [`../gary-drescher/`](../gary-drescher/README.md) |
 | **Mitchel Resnick — Scratch / Lifelong Kindergarten** | Papert for the 2000s; low floor / wide walls |
 | **Chaim Gingold — *Building SimCity*** | SimCity as cultural microworld; reverse diagrams — [`../chaim-gingold/`](../chaim-gingold/README.md) |
 | **MOOLLM `skills/play-learn-lift/`** | Methodology Don uses now |
