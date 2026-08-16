@@ -4,13 +4,13 @@
 
 | | |
 |---|---|
-| **Prompt** | Cold email from **Tade Mehl** (Aug 2026) — building a humanoid; two sharp questions, not fan mail |
+| **Prompt** | Cold email from **Tade Mehl** (Aug 2026) — building a humanoid; two sharp questions |
 | **Why publish** | They deserved a real answer; they gave Don a focus worth sharing beyond one inbox |
 | **Tade's bookshelf** | [tademehl.com/bookshelf](https://www.tademehl.com/bookshelf) (book picks checked against it) |
 | **Show seed** | [`teaching-complicated-systems-without-a-manual.yml`](teaching-complicated-systems-without-a-manual.yml) · [`ideas.md`](ideas.md) |
 | **Lineage room** | [`README.md`](README.md) Cluster V · [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md) |
 
-In August 2026 Tade Mehl wrote out of the blue. He is working on a humanoid and kept hitting a design wall: how should normal people teach or program it without it feeling like programming? He had read Don's SimCity and pie menu work. His email was not fan mail. It was two excellent questions that any builder of teachable interfaces should ask:
+In August 2026 Tade Mehl wrote out of the blue. He is working on a humanoid and kept hitting a design wall: how should normal people teach or program it without it feeling like programming? He had read Don's SimCity and pie menu work. His email asked two excellent questions that any builder of teachable interfaces should ask:
 
 > When you make an interface for something really complicated, how do you decide what the person should see and control and what should disappear completely?  
 > And did SimCity teach you anything about how normal people learn a complicated system without a manual?
