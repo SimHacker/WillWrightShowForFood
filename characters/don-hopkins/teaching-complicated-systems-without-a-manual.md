@@ -79,7 +79,7 @@ All four must be **tractable together**. A gorgeous UI can't save an impossible 
 
 > The digital models running on a computer are only compilers for the mental models users construct in their heads.
 
-**Design rule for Tade's humanoid:** the robot's true control stack can be arbitrarily deep; the teach surface only needs to expose the slice that matches the teacher's current intent — walk, gesture, habit, story — not joint torques.
+**Design rule for a teachable humanoid:** the robot's true control stack can be arbitrarily deep; the teach surface only needs to expose the slice that matches the teacher's current intent — walk, gesture, habit, story — not joint torques.
 
 ---
 
@@ -146,7 +146,7 @@ Alan Dye led Apple's HI design from brand/print (Kate Spade, Ogilvy), not intera
 
 The iOS 26.1 **clear/tinted** Liquid Glass toggle was an admission that visual minimalism broke function.
 
-**Lesson for Tade:** hiding controls to look clean is not the same as progressive disclosure. Power and discoverability are not sins. Pie menus exist partly so frequent actions stay **spatially learnable** without cluttering the main canvas ([pie menu retrospective](https://donhopkins.medium.com/pie-menus-a-30-year-retrospective-5bdcb24a835a)).
+**Lesson for robot builders:** hiding controls to look clean is not the same as progressive disclosure. Power and discoverability are not sins. Pie menus exist partly so frequent actions stay **spatially learnable** without cluttering the main canvas ([pie menu retrospective](https://donhopkins.medium.com/pie-menus-a-30-year-retrospective-5bdcb24a835a)).
 
 ---
 
@@ -176,7 +176,7 @@ The lesson for a teachable robot: don't try to design the perfect teaching notat
 
 ## Lineage: microworlds → programming by demonstration → MOOLLM
 
-Tade's question is not new. It is the same problem [Seymour Papert](../seymour-papert/README.md), [Alan Kay](../alan-kay/README.md), [Brad Myers](../brad-myers/README.md), Allen Cypher, [Henry Lieberman](../henry-lieberman/README.md), and [Will Wright](../will-wright/README.md) have been circling for fifty years: **how do you let a non-programmer teach a complicated system by doing, not by reading a manual?**
+The question is not new. It is the same problem [Seymour Papert](../seymour-papert/README.md), [Alan Kay](../alan-kay/README.md), [Brad Myers](../brad-myers/README.md), Allen Cypher, [Henry Lieberman](../henry-lieberman/README.md), and [Will Wright](../will-wright/README.md) have been circling for fifty years: **how do you let a non-programmer teach a complicated system by doing, not by reading a manual?**
 
 The answer stack:
 
@@ -196,7 +196,7 @@ Skills                      →  lifted demonstrations, inheritable as prototype
 
 Will Wright's 1996 talk was literally titled *Interfacing to Microworlds* (Terry Winograd's CS547). SimCity is a city microworld. The Sims is a social microworld. Dollhouse was a dollhouse microworld. Same design move every time: **low floor** (anyone can place a zone or click a person), **high ceiling** (experts reverse-engineer dynamics), **wide walls** (sandbox, scenarios, disasters, storytelling).
 
-**For Tade's humanoid:** the teach surface is a microworld. Joint torques and planner graphs are the wrong microworld for a normal teacher. "Walk here," "wave when the bell rings," "sit when tired" is the right one.
+**For a humanoid:** the teach surface is a microworld. Joint torques and planner graphs are the wrong microworld for a normal teacher. "Walk here," "wave when the bell rings," "sit when tired" is the right one.
 
 Don's open-source SimCity work (MicropolisCore, OLPC) sits explicitly in the **constructionist education** lineage: Doreen Nelson's city-building pedagogy, Minsky and Kay, classroom microworlds where kids learn by building cities they care about.
 
@@ -213,15 +213,15 @@ The canonical book is Allen Cypher's ***Watch What I Do: Programming by Demonstr
 | **HyperCard** | Button scripts from recorded actions | HyperTalk under the hood |
 | **KidSim / StageCraft** (Apple, Lieberman lineage) | Kids script characters by example in a microworld | Rule generalization |
 | **SimAntics** (The Sims, Don + Will) | Visual behavior rules: conditions → actions | Compiled behavior tree |
-| **Tade's humanoid (?)** | Gesture, habit, social script | Jacobian, RL reward, motion primitives |
+| **A teachable humanoid (?)** | Gesture, habit, social script | Jacobian, RL reward, motion primitives |
 
 Don worked in Brad Myers' Garnet group at CMU (~1992–93), building the PostScript driver and **GLASS** (*Graphical Layer And Server Simplifier*). Brad's *All the Widgets* (CHI '90) and visual-programming taxonomy (CHI '86 / JVLC 1990) are the map Don still cites on HN: spreadsheets **are** visual programs; PBD is a first-class category; hiding the "inner world" does not disqualify direct manipulation.
 
 [Henry Lieberman's](../henry-lieberman/README.md) MIT work (Eager, Tinker, programming by demonstration in everyday UIs) is the same ethic: **watch what I do in context**, don't make me open an editor first.
 
-**Design rule:** demonstration is not "record macro and replay blindly." Good PBD **generalizes**: "when I did this here, I probably mean *this kind of thing* in similar situations." That is exactly Tade's "teach without feeling like programming" problem.
+**Design rule:** demonstration is not "record macro and replay blindly." Good PBD **generalizes**: "when I did this here, I probably mean *this kind of thing* in similar situations." That is exactly the "teach without feeling like programming" problem.
 
-The deepest treatment of that generalization step is [Gary Drescher's](../gary-drescher/README.md) ***Made-Up Minds*** (MIT Press, 1991; see [`../gary-drescher/made-up-minds.md`](../gary-drescher/made-up-minds.md)). Drescher's **schema mechanism** is a Piagetian infant in software: it learns **context → action → result** schemas from raw experience, uses *marginal attribution* to figure out which conditions actually mattered, and spins off new, more specific schemas when a general one proves unreliable — a **schema factory** that grows its own ontology instead of being handed one. That is the missing middle of every PBD system: the demonstration is one concrete experience; the schema mechanism is the machinery that decides what the demonstration *meant*. MOOLLM's Play-Learn-Lift maps onto it directly (PLAY surfaces candidate schemas, LEARN revises and stabilizes them, LIFT publishes the reliable ones as skills), and the modern echo — schemas versus vectors versus LLM latent generalization — is exactly the conversation in [`../gary-drescher/schemas-vectors-and-llms.md`](../gary-drescher/schemas-vectors-and-llms.md). For Tade's robot: show it a task once, and the question "what did I just mean?" is Drescher's question, verbatim.
+The deepest treatment of that generalization step is [Gary Drescher's](../gary-drescher/README.md) ***Made-Up Minds*** (MIT Press, 1991; see [`../gary-drescher/made-up-minds.md`](../gary-drescher/made-up-minds.md)). Drescher's **schema mechanism** is a Piagetian infant in software: it learns **context → action → result** schemas from raw experience, uses *marginal attribution* to figure out which conditions actually mattered, and spins off new, more specific schemas when a general one proves unreliable — a **schema factory** that grows its own ontology instead of being handed one. That is the missing middle of every PBD system: the demonstration is one concrete experience; the schema mechanism is the machinery that decides what the demonstration *meant*. MOOLLM's Play-Learn-Lift maps onto it directly (PLAY surfaces candidate schemas, LEARN revises and stabilizes them, LIFT publishes the reliable ones as skills), and the modern echo — schemas versus vectors versus LLM latent generalization — is exactly the conversation in [`../gary-drescher/schemas-vectors-and-llms.md`](../gary-drescher/schemas-vectors-and-llms.md). For a robot: show it a task once, and the question "what did I just mean?" is Drescher's question, verbatim.
 
 ### SimCity, The Sims, and shipped PBD
 
@@ -264,7 +264,7 @@ MOOLLM **Advertisements** in CARD.yml are Sims-style object scripts for LLM agen
 
 Other MOOLLM skills echo PBD by name: `copy-that` grows venue plugins **by example**; `cursor-mirror` treats your transcript as a demonstration to mine; `yaml-jazz` is **documentation by example** (the instance is the curriculum).
 
-**For Tade:** if the humanoid teach loop works, the path is predictable:
+**For a humanoid builder:** if the teach loop works, the path is predictable:
 
 1. Ship a **microworld** teach mode (puppet, props, places).
 2. Let teachers **demonstrate** habits; show them enough of the inferred mapping to correct it (anti-vibe-coding).
@@ -290,7 +290,7 @@ That is Play-Learn-Lift applied to robotics. It is also what Cypher's book catal
 
 ## What kind of object is a robot? Prototypes, roles, and pantomime horses
 
-There is a deeper architectural question hiding under Tade's interface question, one Don keeps returning to in conversations with **[David Ungar](../david-ungar/README.md)** (co-creator of the Self programming language) and **[David Temkin](../david-temkin/README.md)** (founder of Laszlo Systems, where Don worked on OpenLaszlo): **what kind of *thing* is a teachable entity, in computer science terms?** The answer shapes everything the teacher can and cannot do.
+There is a deeper architectural question hiding under the interface question, one Don keeps returning to in conversations with **[David Ungar](../david-ungar/README.md)** (co-creator of the Self programming language) and **[David Temkin](../david-temkin/README.md)** (founder of Laszlo Systems, where Don worked on OpenLaszlo): **what kind of *thing* is a teachable entity, in computer science terms?** The answer shapes everything the teacher can and cannot do.
 
 ### Prototypes: teach by cloning, not by classifying
 
@@ -335,7 +335,7 @@ This is PBD completed end to end. The demonstration or description is the progra
 
 ### Why this matters for a teachable humanoid
 
-Put the four together and the architecture writes Tade's spec:
+Put the four together and the architecture writes the spec for a teachable robot:
 
 1. **Prototypes** make every taught behavior a cheap clone-and-tweak of a working example — teaching is versioning, not authoring from scratch.
 2. **Multiple roles via delegation** let the robot be tool, pet, student, and co-worker without a reclassification crisis — and let taught habits attach to the *role*, not the whole robot.
@@ -348,7 +348,7 @@ This is the thread Don is pulling with Ungar (Self, *Narcissa's Mirror*, objects
 
 ## LLMs, vibe coding, and hard thinking
 
-From Don's email to Tade (Aug 2026):
+From Don's email reply (Aug 2026):
 
 - LLMs overturn old assumptions; one best use is **learning at your own pace**.
 - **Vibe coding** (not looking at generated code) forfeits the learning loop.
@@ -379,7 +379,7 @@ Checked against Tade's bookshelf API (2026-08-16).
 |------|------------|
 | **[Don Norman](../don-norman/README.md) — *The Design of Everyday Things*** | Affordances, signifiers, discoverability — antidote to Dye-style veneer |
 | **Mihaly Csikszentmihalyi — *Flow*** | Challenge/skill balance in learnable systems |
-| **Isaac Asimov — robot stories / *I, Robot*** | Teaching rules vs emergent behavior (Tade has the series) |
+| **Isaac Asimov — robot stories / *I, Robot*** | Teaching rules vs emergent behavior (already on the shelf) |
 | **Dr. Samuel Xiangming Li — *Humanoid Robotics Hardware*** | Already aligned with build |
 
 ### Additions Don would stack on top
