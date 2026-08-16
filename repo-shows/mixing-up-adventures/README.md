@@ -49,6 +49,15 @@ Robust-first (Ackley), the Sims expansion-pack socket, presence-is-the-flag, and
 mixin graph for game pieces (chess sets, wumpus hazards, the troll's axe and stomach):
 [GAME-PIECES.md](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
 
+The elegant resolution: the MOOLLM troll has a **sorting stomach** — a smart placement
+protocol in the OpenLaszlo lineage (child declares placement, container inspects and
+routes past the chrome to the right sub-container). `GIVE TROLL TO TROLL` is not a
+special case that needs a flag; it's just the self route through the same protocol, and
+since presence is the flag, the emptied room has nothing stale to fend you off with. He
+also carries [interior mirrors of both his home corners](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll/realms)
+— the Troll Room and the chasm bridge, embedded topologies where a player can jump in and
+interview him in either natural habitat.
+
 ## Related shows
 
 - [woods-and-adams-adventurers](../woods-and-adams-adventurers/README.md) — the pair show (mainframe vs 16K)
