@@ -21,6 +21,7 @@ ontology:
 character:
   id: troll
   name: Two-Toll the Troll
+  aka: The Cross-Platform Troll   # plugs into Adventure AND Zork; canonical aka lives upstream
   type: [menagerie_guest, monster, gatekeeper, game, commuter]
   real_being: false
   signifier: "🧌🪓🌉💰🎭"
