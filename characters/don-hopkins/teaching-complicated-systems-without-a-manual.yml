@@ -1,0 +1,62 @@
+# Teaching Complicated Systems Without a Manual
+# Public essay prompted by Tade Mehl cold email (Aug 2026)
+
+essay:
+  path: teaching-complicated-systems-without-a-manual.md
+  date: 2026-08-16
+  author: don-hopkins
+  status: published
+
+prompted_by:
+  name: Tade Mehl
+  date: 2026-08-12
+  context: |
+    Humanoid builder (~20, German founder). Cold email with two design questions
+    about teachable interfaces — not fan mail. Excellent focus for a public essay.
+  questions:
+    - "What should the person see/control vs what should disappear?"
+    - "Did SimCity teach anything about learning without a manual?"
+  bookshelf: https://www.tademehl.com/bookshelf
+  representation: |
+    Credited as prompt author only. No WWSFF character directory for Tade.
+    Don's public response; not a portrayal of Tade.
+
+topics:
+  - simcity_ui_philosophy
+  - the_sims_object_advertising
+  - simantics_pbd
+  - papert_microworlds
+  - constructionist_education
+  - programming_by_demonstration
+  - cypher_watch_what_i_do
+  - brad_myers_garnet_peridot
+  - play_learn_lift
+  - moollm_skills
+  - humanoid_teach_ui
+  - llm_vibe_coding_antidote
+
+show_seed:
+  id: teaching-without-a-manual
+  title: "Teaching Complicated Systems Without a Manual"
+  type: solo_or_panel
+  host: Don Hopkins
+  status: seed
+  hooks:
+    - "SimCity → Sims → humanoid: what to show vs hide"
+    - "Programming by demonstration from Cypher to MOOLLM"
+    - "Microworlds, object advertising, SimAntics as shipped VPL"
+  optional_guests:
+    - name: Tade Mehl
+      note: "Only if he wants to join; prompt author, not a WWSFF character"
+    - name: Brad Myers
+      note: "PBD / Garnet / C32 lineage; Don worked in his lab"
+    - name: Chaim Gingold
+      note: "SimCity reverse diagrams; microworld pedagogy"
+  see_also:
+    - moollm-microworld-os-talk.md
+    - visual-programming-excel-and-dimensionality.md
+    - ../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
+
+cross_links:
+  private_working_notes: |
+    DonHopkins characters/tade-mehl/ (correspondence index; expanded harvest mirror)

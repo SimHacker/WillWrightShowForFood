@@ -7,25 +7,26 @@ many map-based games **read and write the same cells**, the same edges, the same
 the same ride event log. Enable/disable layers chooses what you **see**; the world **interoperates**
 through common contracts whether or not you're looking.
 
-```
-                    ┌─────────────────────────────────┐
-                    │  Shared data (Git + build JSON) │
-                    │  graph · layers · beds · flocks │
-                    │  ride events · exposure · gates   │
-                    └───────────────┬─────────────────┘
-            read/write      read/write      read/write
-                 │                │                │
-           ┌─────▼─────┐   ┌──────▼──────┐  ┌─────▼─────┐
-           │  Smell /  │   │   Garden /  │  │  Touring  │
-           │  pee game │   │   herding   │  │  + story  │
-           └─────┬─────┘   └──────┬──────┘  └─────┬─────┘
-                 │                │                │
-                 └────────────────┼────────────────┘
-                                  │ project
-                          ┌───────▼────────┐
-                          │ MapLibre layers│  ← optional visibility
-                          │ (bacon off…)   │
-                          └────────────────┘
+```mermaid
+flowchart TD
+  shared["Shared data (Git + build JSON)<br/>graph · layers · beds · flocks<br/>ride events · exposure · gates"]
+
+  smell["Smell / pee game"]
+  garden["Garden / herding"]
+  tour["Touring + story"]
+
+  maplibre["MapLibre layers<br/>(bacon off…)"]
+
+  shared -->|read/write| smell
+  shared -->|read/write| garden
+  shared -->|read/write| tour
+
+  smell -->|project| maplibre
+  garden -->|project| maplibre
+  tour -->|project| maplibre
+
+  vis["optional visibility"]
+  vis -.-> maplibre
 ```
 
 OSM is the floor (read-only). **Git YAML + built artifacts** are the shared database.

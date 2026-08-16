@@ -35,6 +35,10 @@ featured_essays:
     wwsff: ../queer-oui-for-the-straight-gui.md
   - title: "The Shape of PSIBER Space"
     note: "NeWS hypermedia navigable space"
+  - title: "Teaching Complicated Systems Without a Manual"
+    date: 2026-08-16
+    wwsff: ../teaching-complicated-systems-without-a-manual.md
+    note: "Public essay — Tade Mehl cold email (humanoid teach UI); SimCity → PBD → MOOLLM; show seed in teaching-complicated-systems-without-a-manual.yml"
   - title: "Designing Pie Menus (Dr. Dobb's)"
     wwsff: ../pie-menus-chi-88-and-beyond.md
 

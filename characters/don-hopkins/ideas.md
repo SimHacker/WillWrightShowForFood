@@ -33,6 +33,7 @@
 | [`visual-programming-taxonomy.md`](visual-programming-taxonomy.md) | Boxes/lines ≠ one model — Snap!, Max, Petri nets (HN 40842599) |
 | [`yahoo-pipes-successors.md`](yahoo-pipes-successors.md) | pipes.digital + block models without wires (HN 40841980) |
 | [`visual-programming-excel-and-dimensionality.md`](visual-programming-excel-and-dimensionality.md) | Excel as VPL, PSIBER, SimAntics evidence (HN 22978454) |
+| [`teaching-complicated-systems-without-a-manual.md`](teaching-complicated-systems-without-a-manual.md) | Tade Mehl cold-email prompt → teachable humanoid UI; SimCity, PBD, Papert, Play-Learn-Lift — [`teaching-complicated-systems-without-a-manual.yml`](teaching-complicated-systems-without-a-manual.yml) |
 | [`drakon-control-flow-vs-dataflow.md`](drakon-control-flow-vs-dataflow.md) | SimAntics vs Grasshopper vs Bounce — control vs data flow (HN 10100932) |
 | [`carmack-leaves-meta-hn.md`](carmack-leaves-meta-hn.md) | Meta departure wit + Dynabook tangent (HN 34022484) → [`../john-carmack/`](../john-carmack/README.md) |
 | [`spore-stats-hn-2023.md`](spore-stats-hn-2023.md) | Spore postmortem + GDC notes repost (HN 36279341) → [`../will-wright/sources/2005-03-11-spore-gdc-future-of-content/`](../will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md) |
