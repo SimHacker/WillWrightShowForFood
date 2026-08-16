@@ -7,11 +7,11 @@ show:
   type: trio
   host: Don Hopkins
   guests: ["Donald Knuth", "Don Woods", "Scott Adams"]
-  topic: "What happens when you let Hunt the Wumpus, the grue, the troll, and whole adventures loose in the same world — and why the founders of the genre were already building toward it: data-driven worlds (Woods, Adams), literate cave code (Knuth), and portable cartridges that carry their own rules."
+  topic: "What happens when you let Hunt the Wumpus, the grue, the troll, and whole adventures loose in the same world — told by two founders of the genre (Woods, Adams) and the analyst who canonized it as literature (Knuth): data-driven worlds, portable cartridges that carry their own rules, and how to design them robustly."
   status: seed
 
 why_this_trio:
-  - "Three founding traditions in one room: Woods's free mainframe cave (1977), Adams's sold 16K cartridge (1978), Knuth's literate advent.w (1998) — and Knuth's own one-liner that Adventure is 'a fancier WUMPUS.'"
+  - "Two founders and the genre's literary canonizer in one room: Woods's free mainframe cave (1977), Adams's sold 16K cartridge (1978), and Knuth — not a founder, but the one who presented and analyzed Adventure AS LITERATURE (advent.w, 1998, copyright 'Don Woods and Don Knuth') and named the lineage: 'a fancier WUMPUS.'"
   - "They each solved the same problem from a different angle: adventure as DATA. Woods's FORTRAN tables, Adams's database + portable interpreter, Knuth's annotated literature — and MOOLLM's directories-as-cartridges is the 2026 answer."
   - "The live demo writes itself: Snorax (1973 wumpus), the grue (1980 darkness field), and Two-Toll the Cross-Platform Troll (1977 toll gate + 1980 combat gate) running parallel games in one maze — interoperating when your lamp runs out."
   - "Scott Adams invented the portable game cartridge before cartridges had a name; Woods invented the NPC business model (bridge toll, vending machine); Knuth made the ur-cave readable as literature. Ask all three: did you MEAN for your games to mix?"
@@ -23,6 +23,9 @@ threads:
   portable_cartridges: "Scott's 16K adventures as the original plug-in; MOOLLM menagerie as the live demo — wumpus (beast/node), grue (field/ambient), troll (border/edge). See characters/menagerie/GAME-CARTRIDGES.md."
   parallel_play: "Snorax and the grue don't compete — they complement. Shared state: the lamp. While it burns, spatial wumpus; when it dies, temporal grue in the same rooms. The rules changed under you."
   cross_platform_troll: "Woods's bridge toll and MIT's combat gate were the same troll all along — Two-Toll fronts whichever mind speaks the local currency. Comparative troll zoology with Woods on air."
+  troll_flag_bug: "GIVE AXE TO TROLL (eats his weapon, cowers) and GIVE TROLL TO TROLL (self-devours via transitive containment) — acting as designed? The MDL's generic containment made them free. The BUG: TROLL-FLAG never cleared, so the empty room still fends you off. Don reverse-engineered that flag from black-box play on MIT-DM and confirmed it in the source decades later. Ask the panel: bug, feature, or missing invariant? (harvest: characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md)"
+  robust_plugins: "How do you design plug-in characters, objects, and games so troll-flag situations CAN'T happen? Dave Ackley's robust-first (survive > correct); The Sims socket that survived expansion packs and decades of user-created content (the world never cached 'this house has a hot tub' — it asked the objects present); presence-is-the-flag, advertisements die with the advertiser, state in the instance never the prototype. Design doc: https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md"
+  chess_set_pieces: "Pits and superbats as sub-object templates of the wumpus — playing pieces, like a chess set: 6 types + 2 colors + N presentations = 6+2+N files, not 6×2×N; any number of instances, promotion is a one-line re-mixin. Inventory (the troll's axe: weapon × throwable × edible) and locations (his stomach: pocket-universe container for characters, weapons, food). The DRY multiple-inheritance mixin graph for pieces, presentations, rules, and metadata."
   knuth_wumpus_lineage: "ADVENT = SHRDLU turned inside out; from another perspective, a fancier WUMPUS. Walk Snorax's 1973 BASIC source beside advent.w beside Adams's Adventureland data."
   parser_to_llm: "Two-word parser → Infocom → MOOLLM natural-language compiler. Where the founders think mixing adventures should go next — and what must stay deterministic."
   city_scale: "Ebike Safari as Amsterdam-scale plug-in tenants — same Sims socket, OSM graph, monsters loose on the map. apps/ebike-safari/design/map-game-platform.md."
@@ -47,6 +50,8 @@ ties_to:
   - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/grue
   - https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll
   - https://github.com/SimHacker/moollm/blob/main/skills/soul-city/PORTABLE-NPCS.md
+  - https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md
+  - characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md
   - apps/ebike-safari/design/map-game-platform.md
 
 consent:

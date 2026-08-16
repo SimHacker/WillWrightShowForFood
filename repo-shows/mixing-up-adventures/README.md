@@ -1,6 +1,6 @@
 # Mixing Up Adventures!
 
-> What happens when Hunt the Wumpus, the grue, the troll, and whole adventures share one graph — told by three founders of the genre.
+> What happens when Hunt the Wumpus, the grue, the troll, and whole adventures share one graph — told by two founders of the genre and the analyst who canonized it as literature.
 
 | Field | Value |
 |-------|-------|
@@ -32,7 +32,22 @@ the rules changed under you.
 |-------|----------------------------|
 | **Don Woods** | Canonical Adventure (1977); the bridge toll troll and dungeon service economy; the crowther@ permission story; pits that became grues |
 | **Scott Adams** | Adventureland (1978) — the first SOLD text adventure; whole worlds in 16K as portable data + interpreter; the original game cartridge |
-| **Donald Knuth** | `advent.w` — Adventure as literate literature; the lineage insight that Adventure is "a fancier WUMPUS"; Wumpus as the spatial ancestor |
+| **Donald Knuth** | Not a founder — the canonizer: `advent.w` presented and analyzed Adventure as literature; the lineage insight that Adventure is "a fancier WUMPUS" |
+
+## The troll flag question
+
+Zork's troll: `GIVE AXE TO TROLL` (eats his weapon, cowers) and `GIVE TROLL TO TROLL`
+(self-devours via transitive containment) — arguably acting as designed, since the MDL's
+generic containment gave those for free. But `TROLL-FLAG` was never cleared when he ate
+himself, so the empty room still fends you off with a menacing gesture. Don
+reverse-engineered that flag from black-box play on MIT-DM and confirmed it in the source
+decades later ([harvest](../../characters/don-hopkins/sources/zork-troll-flag-adventure-lineage-hn.md)).
+
+The failure shape: **the room cached a fact about the troll instead of asking the troll.**
+The show's design question: how do you build plug-in pieces so troll flags can't happen?
+Robust-first (Ackley), the Sims expansion-pack socket, presence-is-the-flag, and the DRY
+mixin graph for game pieces (chess sets, wumpus hazards, the troll's axe and stomach):
+[GAME-PIECES.md](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
 
 ## Related shows
 

@@ -24,10 +24,14 @@ a 1980 grue coexist in one 2026 maze without reading each other's source code.
 
 The full protocol lives upstream in MOOLLM:
 [PORTABLE-NPCS.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/PORTABLE-NPCS.md)
-(advertisements as socket, prototype/instance split, treaties, customs) and
+(advertisements as socket, prototype/instance split, treaties, customs),
 [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md)
-(souls, minds, personas). This document is the WWSFF adaptor: what the pattern
-means here, and which shows it feeds.
+(souls, minds, personas), and
+[GAME-PIECES.md](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
+(the DRY mixin graph for pieces — chess sets, wumpus hazards as sub-piece
+templates, inventory and stomach containers, and the robust-first rules that
+prevent TROLL-FLAG-style stale state). This document is the WWSFF adaptor:
+what the pattern means here, and which shows it feeds.
 
 ## The three archetypes, resident
 
