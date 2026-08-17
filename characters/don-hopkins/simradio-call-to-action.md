@@ -142,6 +142,18 @@ design written up in
 Implement one facet and you'll have something nice. The picture is
 bigger than any one facet, and the picture is also free.
 
+And you don't even have to wait for a game, because real life is
+already running the simulation. The version that ships soonest is a
+phone on a bicycle: an **ebike safari** that records a place+time
+sync track of the music you're listening to, the GPS trace, the
+photos and video, and your spoken impressions — with **GPS gestures**
+as the input channel (stop in front of an address to select it,
+encircle a fountain or a statue or a block to lasso it; the city is
+the screen, the bike is the pen). The artifact is a standard moody
+object, importable into any world that later wants it. Full sketch in
+[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md)
+under "Moody IRL."
+
 And the deep end of the pool: the inevitable **LLM-driven real-time
 MOOLLM** is the platform this design was waiting for, in all its
 glory and splendor — because there, media artifacts, rooms, and
