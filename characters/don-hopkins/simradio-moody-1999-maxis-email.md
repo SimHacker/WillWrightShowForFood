@@ -13,7 +13,9 @@ list archive: Don forwarded it to the clublist on March 11, 2011.*
 in the MOOLLM designs — mood as multimedia (multimoodia), parameter
 tracks of semantic heat, rooms inheriting emotional weather from
 playing media, time-windowed broadcast ads as buffs with expiration
-dates.*
+dates. The context, the Russ Hanneman joke, the EAML counterfactual,
+and the do-it-now plan are in
+[`simradio-call-to-action.md`](simradio-call-to-action.md).*
 
 ## The email, in full
 

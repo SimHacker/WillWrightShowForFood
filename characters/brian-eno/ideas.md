@@ -39,6 +39,14 @@ generative **visual art** (*77 Million Paintings*), evolutionary **images** (Ele
 **simulation** (SimCity/Spore) are the same idea in different clothes. Map the family on stream;
 build the smallest working example of each.
 
+### 3¼. Moody: ambient music with a machine-readable meaning track
+Don's 1999 **SimRadio/Moody** pitch to Maxis — music carrying a "moody track" of time-varying
+emotional heat that rooms and characters inherit — is *Music for Airports*' contract ("as ignorable
+as it is interesting") turned into a protocol: surface and influence as separately mixable channels.
+Spore's generative score is its inverse twin (generate the music *from* the meaning). Design doc:
+[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md) · primary source:
+[`../don-hopkins/simradio-moody-1999-maxis-email.md`](../don-hopkins/simradio-moody-1999-maxis-email.md).
+
 ### 3½. "Ambient gas" — Don's Musical Gas
 Don's **Musical Gas** granular-CA synth: colliding lattice particles fire grains into an emergent,
 listenable atmosphere — literal **gas** that plays **ambient**. Same gardener-not-architect move as
