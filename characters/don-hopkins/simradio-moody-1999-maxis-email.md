@@ -134,6 +134,33 @@ somebody's business model:
    dance station to turn an unruly crowd into a wild party. The DJ as
    behavior engine input.
 
+## What shipped anyway, slowly, in pieces
+
+The studio's idea pool was ahead of its release schedule — everyone
+at Maxis was thinking these things years before they shipped, and
+several of this email's beats later arrived in expansion packs, each
+one facet at a time:
+
+- **"Interesting visitors ('dinner with Elvis!')"** → *House Party*
+  (2001): throw a good enough party and **Drew Carey** pulls up in a
+  limo. The celebrity drop-in, shipped — minus the radio station that
+  was supposed to award it.
+- **"Delivered to the front door"** → *Makin' Magic* (2003): the
+  Mystery Man leaves the **box of magic supplies next to your front
+  door**. Diegetic delivery of new gameplay, exactly the SimRadio
+  prize mechanic — minus the live broadcast you won it on.
+- **"This would put the game 'online'"** → **The Sims Online**
+  (December 2002), the hard way: a full MMO rebuild, versus the
+  email's receiver-in-the-existing-game route that needed "no major
+  changes to the design of the game or the code."
+
+None of this is a priority claim — it's the opposite point: these
+ideas were *in the air* at the studio, collectively imagined years
+early, and the expansion packs were the slow drip-feed of that pool.
+Which is also the standing argument: the pool never emptied. Plenty
+of what was imagined then never shipped and **still could** — see
+[`simradio-call-to-action.md`](simradio-call-to-action.md).
+
 ## Where it went
 
 Nowhere, then. The full accounting — opportunity cost, technology
