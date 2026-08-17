@@ -13,9 +13,9 @@ list archive: Don forwarded it to the clublist on March 11, 2011.*
 in the MOOLLM designs — mood as multimedia (multimoodia), parameter
 tracks of semantic heat, rooms inheriting emotional weather from
 playing media, time-windowed broadcast ads as buffs with expiration
-dates. The context, the Russ Hanneman joke, the EAML counterfactual,
-and the do-it-now plan are in
-[`simradio-call-to-action.md`](simradio-call-to-action.md).*
+dates. The context, the Russ Hanneman joke, and the EAML counterfactual
+are in
+[`simradio-radio-on-internet.md`](simradio-radio-on-internet.md).*
 
 ## The email, in full
 
@@ -159,7 +159,7 @@ ideas were *in the air* at the studio, collectively imagined years
 early, and the expansion packs were the slow drip-feed of that pool.
 Which is also the standing argument: the pool never emptied. Plenty
 of what was imagined then never shipped and **still could** — see
-[`simradio-call-to-action.md`](simradio-call-to-action.md).
+[`simradio-radio-on-internet.md`](simradio-radio-on-internet.md).
 
 ## Where it went
 

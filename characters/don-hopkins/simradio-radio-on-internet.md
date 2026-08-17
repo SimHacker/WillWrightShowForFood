@@ -1,10 +1,12 @@
-# Radio On Internet: SimRadio in context, and a call to finally do it
+# Radio On Internet: SimRadio in context
 
 *Companion to the primary source:
 [`simradio-moody-1999-maxis-email.md`](simradio-moody-1999-maxis-email.md)
 (February 18, 1999). Design doc:
 [MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md).
-This file is the context, the joke, the counterfactual, and the plan.*
+This file is the context, the joke, and the counterfactual. Its only
+agenda is to describe the idea well — a concept described well enough
+is its own call to action.*
 
 ## February 1999, from inside the bandwagon
 
@@ -98,7 +100,7 @@ and a presidential son-in-law, it is a persuasion instrument with a
 dollhouse attached. Better that it never shipped than that it shipped
 belonging to someone.
 
-So the blessing has a moral, and the moral is the plan: these two
+So the blessing has a moral: these two
 technologies — meaning-bearing broadcast media, and portable
 world-data — are **too powerful to be owned**. They have to be built
 in the open: free designs, free software, unencumbered,
@@ -114,7 +116,7 @@ build working implementations, let them play, learn what works, lift
 what survives — convergence by imitation of running code, not by
 committee conquest of a draft.
 
-## The call to action: do it now
+## Free to a good home
 
 The technology excuse expired. Streaming is a solved commodity;
 every phone does live audio and video; and the hard part of the
@@ -123,24 +125,32 @@ because **an LLM can listen to the lyrics**, read the scene, read
 the room, and infer the parameter track that 1999 would have needed
 an army of human annotators to write.
 
-So, to whoever builds living worlds — **Paralives, inZOI, Tiny Life,
-the whole life-sim renaissance, and anyone else**: take it. All of
-it. Tiny Life especially wears the invitation well: its credits
-already list a composer (Leiss Hoffman) and an **emotion sting
-artist** (Jamal Green) — music that reacts to emotions — and the
-moody track is the same wire run the other direction, music that
-*causes* them, annotated by the composer's own hand. A composer
-marking up the meaning they already wrote into their music is
-artisanal annotation, the exact opposite of generated content. There
-is a show seed waiting for exactly this conversation:
-[`repo-shows/moody-midi-for-mood/`](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml). The moody track schema, the room-inherits-heat model, the
-expiring broadcast ads, the prize-delivered-to-the-front-door loop,
-the per-person reaction filtering. It is given freely, unencumbered,
-non-patented, with dated prior art published right here and a full
-design written up in
-[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md).
-Implement one facet and you'll have something nice. The picture is
-bigger than any one facet, and the picture is also free.
+So the idea sits here, described as well as I can describe it, for
+whoever builds living worlds — Paralives, inZOI, Tiny Life, the
+whole life-sim renaissance, and anyone else it resonates with. It is
+given freely, unencumbered, non-patented, with dated prior art
+published right here and a full design written up in
+[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md):
+the moody track schema, the room-inherits-heat model, the expiring
+broadcast ads, the prize-delivered-to-the-front-door loop, the
+per-person reaction filtering. Nobody needs the whole picture;
+one facet, interpreted your own way, is already something nice.
+
+Tiny Life is the example I'd most enjoy jamming about — no
+obligation attached, its developer is already busy building
+something wonderful out of love, at his own pace, his own way. The
+resonance is just fun to point at: the credits already list a
+composer (Leiss Hoffman) and an **emotion sting artist** (Jamal
+Green) — music that reacts to emotions — and the moody track is the
+same wire run the other direction, music that *causes* them,
+annotated by the composer's own hand. A composer marking up the
+meaning they already wrote into their music is artisanal annotation,
+the exact opposite of generated content. If that conversation ever
+sounds like fun to the people who'd have it, there's a show seed
+sketched for it:
+[`repo-shows/moody-midi-for-mood/`](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml).
+The idea is offered to interpret, improve, ignore, or implement any
+way they choose.
 
 And you don't even have to wait for a game, because real life is
 already running the simulation. The version that ships soonest is a
@@ -165,7 +175,9 @@ character with a soul file, reading the aggregate mood of every room
 tuned in, and playing what the houses need. Music that knows what it
 means, in a world where meaning is executable.
 
-The 1999 email asked for permission. This document isn't asking.
+The 1999 email asked for permission. This document doesn't need
+any — it just describes the idea and leaves it on the table, which
+is all the call to action an idea should need.
 
 ## Links
 

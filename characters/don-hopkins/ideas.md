@@ -40,7 +40,7 @@
 | [`demoscene-compression-hn-2023.md`](demoscene-compression-hn-2023.md) | Will on demoscene, LLMs/dreams/Dasher (HN 36597460) — compression hub |
 | [`sims-pixelation-censorship-hn-2022.md`](sims-pixelation-censorship-hn-2022.md) | Sims shimmer censorship + SimAntics bugs (HN 30350626) |
 | [`simradio-moody-1999-maxis-email.md`](simradio-moody-1999-maxis-email.md) | **Primary source, Feb 1999**: live SimRadio + the moody track — call-in contests for Sims, DLC with a doorbell, TSO energy four years early → [MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md) |
-| [`simradio-call-to-action.md`](simradio-call-to-action.md) | Radio On Internet — the Russ Hanneman/ROI scene, the Broadcast.com date collision, the EAML counterfactual, and the open-commons do-it-now plan for Paralives/inZOI/MOOLLM |
+| [`simradio-radio-on-internet.md`](simradio-radio-on-internet.md) | Radio On Internet — the Russ Hanneman/ROI scene, the Broadcast.com date collision, the EAML counterfactual, and the idea offered freely to the life-sim commons (Paralives/inZOI/Tiny Life/MOOLLM) |
 | [`../../repo-shows/moody-midi-for-mood/`](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml) | **Moody: MIDI for Mood** — Tiny Life trio (Ellpeck, Leiss, emotion-sting artist Jamal Green) + Jerry Martin + Levitt + Will; composers annotating their own meaning |
 | [`sources/2008-05-jwz-simrogenous-street-view/README.md`](sources/2008-05-jwz-simrogenous-street-view/README.md) | jwz coins **SimRogenous zones** — Street View horse blur (2008) |
 | [`../../repo-shows/building-the-sims/pixelation-and-modesty.md`](../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Reunion hub — modesty bar, maid/plunger, TSO RNG |
