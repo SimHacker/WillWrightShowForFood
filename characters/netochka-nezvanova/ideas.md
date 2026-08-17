@@ -2,6 +2,10 @@
 
 [Portrayal standards](../../schemas/portrayal-standards.md) · [`invitation.md`](invitation.md) · consent not_yet_asked
 
+## Shows
+
+- **[Patch Cords: The Wire Is the Instrument](../../repo-shows/patch-cords/patch-cords.yml)** — core guest, with Daan van West, David Levitt, Miller Puckette, Mark Coniglio. NATO on stage inside the Max lineage it extended and fought; masked/text/proxy appearance fully in character.
+
 ## Show segments
 
 1. **NATO vs Jitter** — live RTP net jam vs Cycling '74's later product; licensing as performance art; both in the **Max/MSP** patch-cord world  

@@ -29,6 +29,8 @@ Chuck still had a **Mac OS 9 + CodeWarrior** dev system with compiling Body Elec
 
 → [`sources/2020-02-17-body-electric-dev-system.md`](sources/2020-02-17-body-electric-dev-system.md) · **Barry Threw** holds a separate **1a1 archive** (SheepShaver resurrection attempt)
 
+→ [`sources/body-electric-pascal-to-c-transpiler.md`](sources/body-electric-pascal-to-c-transpiler.md) — the Pascal→C translation on an HP workstation: faking nested-procedure lexical scope with `struct LOC_*` + injected `LINK` pointers; prime suspect **p2c** (Gillespie, Caltech — HP Pascal was its native dialect); ASK Chuck which translator it was
+
 ## The invitation
 
 Don's words: *"Absolutely add Chuck and invite him! Hope he's still doing well."*

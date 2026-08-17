@@ -15,7 +15,10 @@ tracks of semantic heat, rooms inheriting emotional weather from
 playing media, time-windowed broadcast ads as buffs with expiration
 dates. The context, the Russ Hanneman joke, and the EAML counterfactual
 are in
-[`simradio-radio-on-internet.md`](simradio-radio-on-internet.md).*
+[`simradio-radio-on-internet.md`](simradio-radio-on-internet.md).
+The idea this email applies to radio appears even earlier, in Don's
+review of The Sims Design Document Draft 3 —
+[`moody-design-doc-review.md`](moody-design-doc-review.md).*
 
 ## The email, in full
 

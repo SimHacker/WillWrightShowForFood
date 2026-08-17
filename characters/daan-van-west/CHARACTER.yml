@@ -1,0 +1,98 @@
+# Daan van West — invitation portrayal. NOT Daan van West.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: daan-van-west
+  name: "Daan van West"
+  full_name: "Daniel van West"
+  type: invitation
+  signifier: "🥁🎚️"
+  status: living
+  born: 1971  # Nov 22, 1971
+  field: |
+    Composer / sound designer / audio engineer — PIPS:lab (since June 1999);
+    Max/MSP/Jitter live systems; drummer; theater and installation sound
+  home: characters/daan-van-west/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: |
+    Known through PIPS:lab / Keez Duyves; Daan wrote Don in Feb 2017 (CV +
+    job-search help re Steye Hallema at Jaunt). Daan may correct, reduce,
+    replace, or delete this portrayal anytime. Private addresses and phone
+    numbers stay out of this repo.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  role: |
+    Guest in his own right (PIPS:lab audio brain: DieSpace sound, Max/MSP live
+    systems, participation-art composition) AND the current contact route to
+    Keez Duyves (Facebook unanswered, phone expired).
+
+bio:
+  summary: |
+    **Daan van West** (Daniel van West, b. 1971, Amsterdam) — composer, sound
+    designer, and audio engineer; trained in Muziekregistratie (audio recording)
+    at the **Royal Conservatory, The Hague** (1993–98); member of the Amsterdam
+    multimedia collective **PIPS:lab** since June 1999. He is the audio and
+    Max/MSP side of the PIPS:lab shows Don loves: **DieSpace** (compositions and
+    Max/MSP programming — Oerol and De Parade 2007, Pittsburgh Cultural Trust
+    2012, Oldenburgisches Staatstheater 2014), **Shadows In The Cloud** (Perth
+    Fringe 2016), **Archie and the Bees** (concept, Max/MSP, compositions, and
+    performance, De Parade 2009), and the TEDxAmsterdam closing acts (2013; 2015
+    **Selfie Symphony**). Installations: Lowlands (Wisselkantoor 2014, Spoohkuis
+    2013), Tropenmuseum Lumandulator, CineKid HindSight (interactive sound,
+    Max/MSP + Arduino), Scheepvaartmuseum Koningssloep soundscape, The Potator
+    (music by motion capture). Recorded and mixed the **Kilio Cha Haki** hiphop
+    CD in Nairobi (2004). Jingle and commercial composer (Top Format, LIDL,
+    radio stations). Drummer — The Scallymatic Orchestra and, pleasingly for the
+    show at hand, a band called **Moody Allen**.
+  self_description: |
+    From his 2017 mail: "My coding skills are somewhat limited, I am more of an
+    audio engineer slash composer slash sound designer, with the ability to
+    connect to and understand technology." Which is exactly the seat a moody
+    panel needs: the person who wires meaning to sound without pretending the
+    wiring is the point.
+
+pips_lab:
+  member_since: 1999-06
+  colleagues:
+    keez-duyves: "../keez-duyves/ — founder; light-writing, Die Space; the show's flagship PIPS:lab invite"
+    steye-hallema: "../steye-hallema/ — ex-PIPS:lab → Jaunt film director → Smartphone Orchestra; Daan's friend (2017 job-search thread went through him)"
+  shared_works:
+    - "DieSpace — Daan composed and programmed the sound of the afterlife SNS Keez fronts"
+    - "Wortal Combat III (Lowlands 2005) — compositions, performance"
+    - "Luma2solator (2004) — compositions for the light-writing installation"
+    - "Short Mass Upload — United Nations (2014), Tempo Team (2016)"
+    - "PIPS:lab 10 years CD/DVD (2009) — compositions"
+
+why_the_show_cares:
+  diespace_audio: "Every Die Space thread in the Keez seed has a sound designer, and it's Daan — the two-hander is built in"
+  max_msp_live: "Twenty-five years of Max/MSP performance systems: music as a live input/output device, which is moody's thesis performed nightly on stage"
+  moody_allen: "He literally drummed in a band called Moody Allen — the pun shelf demands testimony"
+  selfie_symphony: "TEDx 2015 closing act — audience phones as orchestra; participation-art kin of SimRadio's call-in contests"
+  motion_to_music: "The Potator (music via motion capture) and HindSight — sensors to score, the zig-zag's stage ancestor"
+  annotation_labor: "A working composer who has priced meaning-per-minute for jingles, theater, and installations — ground truth for the moody annotation-economics thread"
+
+sources:
+  web:
+    - { title: "PIPS:lab", url: "http://www.pipslab.org/" }
+    - { title: "PIPS:lab archive (pipslab.nl)", url: "http://www.pipslab.nl/" }
+    - { title: "PIPS:lab Vimeo", url: "https://vimeo.com/pipslab" }
+    - { title: "PIPS:lab at TEDxAmsterdam — Die Space", url: "https://www.youtube.com/watch?v=ApyDSq_DbQo" }
+  local:
+    - { path: sources/2017-02-cv-email.md, why: "Primary source: Daan's Feb 2017 CV email to Don, digested" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invite (also asks for a route to Keez)" }
+  - { path: ../../repo-shows/patch-cords/patch-cords.yml, why: "Core guest: Max/MSP artist musicians panel with NN, Levitt, Puckette, Coniglio" }
+  - { path: ../keez-duyves/, why: "PIPS:lab founder; Daan is the current contact route" }
+  - { path: ../steye-hallema/, why: "Mutual ex-PIPS:lab friend" }
+  - { path: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml, why: "Moody Allen's drummer belongs near this panel" }
+  - { path: ../../repo-shows/keez-duyves/, why: "Die Space show seed — Daan is its sound" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Subject rights" }

@@ -67,6 +67,7 @@ Literate programming is the other half of the mission: **skills and character ro
 4. **The shadowy figure is your reflection.** Woods's intentional false clue (mirror between windows) is the Repo Show audience: you peer across the pit into the lighted room and see yourself participating.
 5. **Closing the cave.** After all treasures are seen, the world *changes rules*. Quiet-mode invitations → public open is our `clock1`/`clock2`.
 6. **Don Woods is the ultimate troll with an axe** — NeWS `/etc/motd`: *Welcome to Adventure. Would you like instructions?* The host machine *was* the well house. GitHub as stage is the same joke, played for keeps.
+7. **Prime-time lockout vs. the melting city.** Knuth omitted "Woods's elaborate machinery for closing the cave during the hours of prime-time computing" — McCarthy-mandated denial-of-service to save AI Lab productivity, with McCarthy rumored to keep a bypass build. Don's DUX SimCity demo (1992) pulled the same lever the other way: a fully functional demo whose lock was **cellular automata melting your city** — enforcement as in-fiction spectacle, the DRM mechanism later kept in the full game as optional entertainment. Access control as world event, in both directions: [`../../../don-hopkins/hyperlook-news-postscript-simcity.md`](../../../don-hopkins/hyperlook-news-postscript-simcity.md).
 
 ## Show / skill hooks
 

@@ -39,6 +39,29 @@ and a live bubbling CA view **clipped into a lava-lamp-shaped window**. Explorat
 The later **X11/Tcl-Tk** port used **MIT-SHM** when available locally; **plain X protocol fallback**
 when SHM was missing or the display was remote.
 
+## The demo that melts your city (DRM as entertainment)
+
+Starting in 1992, DUX sold SimCity over the internet with a
+**fully functional unlockable demo** distributed via FTP: play the whole
+game — no crippled features — and after a few minutes **the demo melts
+your city with cellular automata**. Decide to buy, phone (or fax) in a
+serial number and credit card, get a key, unlock. The copy protection
+was a *world event*, not a nag screen: the same CA machinery that
+powered the lava-lamp window and the CAM-6 playground repurposed as the
+demo timer, so the punishment was a spectacle players ran the demo to
+see. Later, the melt survived into the full game as an optional
+entertainment feature.
+
+The precedent is older and funnier: Don Woods closed Colossal Cave
+during prime-time hours to protect Stanford AI Lab productivity — a
+denial-of-service *policy* John McCarthy insisted on (while rumor holds
+McCarthy kept a bypass build for himself). Knuth cut that machinery
+from his literate Adventure as not part of the game. The DUX melt is
+the same lever pulled the opposite way: don't deny service, **end the
+session in-fiction** and make the enforcement mechanism something worth
+watching. See the harvest note in
+[`../donald-knuth/sources/adventure-knuth/ANALYSIS.md`](../donald-knuth/sources/adventure-knuth/ANALYSIS.md).
+
 Parallel to the official Sun **X11** port; ancestor of every later SimCity Unix UI and of the
 **Cairo / Pango / Canvas / WebGPU** imaging braid.
 

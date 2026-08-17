@@ -109,6 +109,13 @@ carrying whole JSON-like COM objects** (beating the 6-parameter limit; ancestor 
 MOOLLM): [`../don-hopkins/body-electric-bounce-vr-stack.md`](../don-hopkins/body-electric-bounce-vr-stack.md).
 Full proposal: [`../don-hopkins/rebounce.md`](../don-hopkins/rebounce.md).
 
+**Patch Cords — the artists' panel.** The performance-side sibling of Rebounce:
+[**Patch Cords: The Wire Is the Instrument**](../../repo-shows/patch-cords/patch-cords.yml) puts the
+artist musicians of the patch-cord world on one stage — David (Hookup began the metaphor), Miller
+Puckette (Max, Pd), Mark Coniglio (Interactor/Isadora, who credits Hookup), Netochka Nezvanova
+(NATO inside Max), and Daan van West (PIPS:lab's Max/MSP live systems). Rebounce rewrites the code;
+Patch Cords plays it.
+
 Sourced: [`media/README.md`](media/README.md#bounce--body-electric--hookup-visual-programming-for-vr--music) ·
 Trail: [`../../process/trails/visual-programming-patch-cord.md`](../../process/trails/visual-programming-patch-cord.md) ·
 Don: [`../don-hopkins/levity-bounce-space-seed.md`](../don-hopkins/levity-bounce-space-seed.md)

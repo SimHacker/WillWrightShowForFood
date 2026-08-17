@@ -44,6 +44,17 @@ Alan praised NeWS as "the right way to go (except it missed the live system unde
 HyperCard as "finished, smoothed, documented beautifully." What would the **live** layer look
 like now? MOOLLM as a Smalltalk-lineage experiment — directory-as-object, skills as prototypes.
 
+**The Korz corollary — views as the HyperCard layer.** Ungar's Korz paper declines to reify
+COP's layers in the language: the sea of slots stays minimal, and *the IDE regroups slots into
+whatever views the user needs* — the same move Self made when objects absorbed instance and
+class and the environment restored the abstractions. A layer becomes a **saved, composable,
+shareable view** over a slot soup, with two-way traffic (edits flow back through the view into
+the model — HyperCard cards, Morphic, Self 4.0 outliners). ASK Alan: is a user-composable,
+bidirectional view layer over a minimal live model *the* missing HyperCard layer he keeps
+pointing at? MOOLLM's answer is that the LLM is that layer — views are conversational
+projections, materialized on request, and writable. Worked notes:
+[Ungar korz-notes](../david-ungar/korz-notes.md), [Korz′](../david-ungar/korz-prime.md).
+
 ### 4. PIXIE and halos — light-pen menus before the mouse won
 **PIXIE** (Engelbart-era light pen, down-facing display sketch) and Smalltalk **halos**
 (Ted Kaehler, ~PARC). Preservation thread with **Douglas Engelbart** memorial mode and

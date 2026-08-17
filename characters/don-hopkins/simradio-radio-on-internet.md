@@ -3,10 +3,7 @@
 *Companion to the primary source:
 [`simradio-moody-1999-maxis-email.md`](simradio-moody-1999-maxis-email.md)
 (February 18, 1999). Design doc:
-[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md).
-This file is the context, the joke, and the counterfactual. Its only
-agenda is to describe the idea well — a concept described well enough
-is its own call to action.*
+[MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md).*
 
 ## February 1999, from inside the bandwagon
 
@@ -188,9 +185,8 @@ character with a soul file, reading the aggregate mood of every room
 tuned in, and playing what the houses need. Music that knows what it
 means, in a world where meaning is executable.
 
-The 1999 email asked for permission. This document doesn't need
-any — it just describes the idea and leaves it on the table, which
-is all the call to action an idea should need.
+The 1999 email asked Maxis for permission. Nobody needs to ask
+anymore.
 
 ## Links
 

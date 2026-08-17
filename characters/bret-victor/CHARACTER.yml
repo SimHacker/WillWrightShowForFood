@@ -24,6 +24,18 @@ invitation:
 bio:
   summary: "**Bret Victor** — interface researcher inventing better *media for thought*: \"explorable explanations,\" \"Inventing on Principle,\" and Dynamicland. (Note: \"Bret,\" one t.)"
 
+openlaszlo:
+  connection: |
+    Don's recollection (Aug 2026 text to Grig Bilham): Bret used
+    **OpenLaszlo** — built "an awesome t-shirt design app, and some
+    other cool interactive demos" with it. Verified adjacent fact: his
+    worrydream.com **refs library** hosts a free copy of Ungar, Ossher
+    & Kimelman's Korz paper (Onward! 2014) — the study copy in
+    ../david-ungar/sources/korz-2014-onward.pdf came from there.
+  refs_library: "https://worrydream.com/refs/"
+  korz_copy: "https://worrydream.com/refs/Ungar_2014_-_Korz_Simple,_Symmetric,_Subjective,_Context-Oriented_Programming.pdf"
+  see: ../grig-bilham/sources/2026-08-17-open-intent-layer-korz.md
+
 engelbart:
   tribute: "Wrote 'A few words on Doug Engelbart' (2013-07-03) — the widely-cited plea to understand Engelbart's INTENT (augmenting collective human intellect) rather than reduce him to a feature list (mouse, hypertext)."
   url: "https://worrydream.com/Engelbart/"
@@ -47,3 +59,5 @@ see_also:
   - { path: ../douglas-engelbart/, why: "🕯️ Engelbart — the vision Bret reads + defends (memorial)" }
   - { path: ideas.md, why: "Micropolis legibility, Dynamicland, Engelbart intent" }
   - { path: ../../repo-shows/bret-victor/, why: "Planted show" }
+  - { path: ../david-ungar/sources/korz-2014-onward.pdf, why: "Korz study copy sourced from his worrydream refs library" }
+  - { path: ../../repo-shows/openlaszlo/, why: "OpenLaszlo user (t-shirt design app, interactive demos) — reunion-adjacent" }

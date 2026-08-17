@@ -23,6 +23,20 @@ canvas you share with an AI, MOOLLM's directories-as-rooms that humans and LLMs 
 together. Interop between *worlds* is the new interop between *documents* — what did the
 web get right the first time, and what must not be repeated?
 
+## 3½. The Open Intent Layer — defaults without becoming rules
+
+His Aug 2026 problem statement
+([the text](sources/2026-08-17-open-intent-layer-korz.md)): a global
+public pool of intent that accepts anyone's structured data without
+breaking shared meaning — exact matches first, then open, traceable,
+*optional* mappings, "so the most trusted ones can become defaults
+without becoming rules." That last clause is the advertisement economy
+in one sentence, and the schema-merging problem is Korz's own open
+problem (global dimension names, merging slot spaces). Don already
+sent him the paper via Bret Victor's refs library. On air: can trust
+be earned per-mapping the way ads earn trust per-listener — scored
+high, never sovereign?
+
 ## 4. The Laszlo alum arc — before-its-time as a career
 
 OpenLaszlo was the RIA before its time; the open metaverse may be the metaverse before

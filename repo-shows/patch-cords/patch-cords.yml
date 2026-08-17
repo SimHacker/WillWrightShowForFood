@@ -1,0 +1,153 @@
+# SHOW SEED — Patch Cords: The Wire Is the Instrument
+# Artist musicians who program visually: Max/MSP, Pd, NATO, Isadora,
+# Hookup, Image/ine. Dataflow as a live instrument, not a diagram.
+
+show:
+  id: patch-cords
+  title: "Patch Cords: The Wire Is the Instrument"
+  tagline: "Artist musicians who program with cables, live."
+  type: panel
+  host: Don Hopkins
+  guests:
+    core:
+      - "Daan van West — PIPS:lab composer/sound designer since 1999;
+        25 years of Max/MSP live systems where the audience is the
+        instrument (Selfie Symphony, Short Mass Upload, DieSpace's
+        score, The Potator's motion-capture music).
+        Room: ../../characters/daan-van-west/"
+      - "Netochka Nezvanova — author(s) of NATO.0+55+3d (1999), live
+        networked video INSIDE Max, years before Jitter; nettime's
+        code-poetry legend. Masked, text-only, or proxy appearance is
+        fully in character; mystique stays intact.
+        Room: ../../characters/netochka-nezvanova/"
+      - "David Levitt — Hookup (MIT, the first patch-cord metaphor),
+        HarmonyGrid, Bounce at Levity (with Don), ConnectedTV,
+        Pantomime. The music+AI seam since the Media Lab.
+        Room: ../../characters/david-levitt/"
+      - "Miller Puckette — wrote Max at IRCAM, then Pure Data; the
+        environment nearly everyone else on stage performs inside.
+        Room: ../../characters/miller-puckette/"
+      - "Mark Coniglio — Interactor (with Morton Subotnick), then
+        Isadora; Troika Ranch: dance and media driven by dataflow on
+        stage every night. Room: ../../characters/mark-coniglio/"
+      - "Jaron Lanier — VPL co-founder; Body Electric was the VR
+        patch-cord world (Bounce's ancestor); also a performing
+        musician with a legendary instrument collection: the rare
+        guest who has played both sides of the wire.
+        Room: ../../characters/jaron-lanier/"
+      - "David Tristram — Electropaint and the Raster Masters, the
+        SGI-era visual-music ensemble (Onyx rigs at Shoreline, the
+        Grateful Dead's Infrared Roses, Herbie Hancock, Graham Nash);
+        his Panel Library slider console is the patch bay as
+        performance instrument; still performing (Resolume,
+        TouchDesigner). Room: ../../characters/dave-tristram/"
+    bench:
+      - "Keez Duyves — PIPS:lab founder; light-writing instruments,
+        Die Space. Room: ../../characters/keez-duyves/"
+      - "Tom Demeyer + Steina Vasulka — Image/ine at STEIM (1996 to
+        2001), the realtime video instrument Don performed with"
+      - "Chuck Blanchard — Body Electric's lead designer/programmer;
+        the origin-story witness beside Jaron"
+      - "Paul Haeberli — ConMan (SIGGRAPH 1988): 'a dynamic live
+        performance that is orchestrated by the user'"
+      - "Kim Cascone — microsound and glitch, the aesthetic next door
+        to NATO"
+      - "Marc Canter — Director's score as a timeline rotated 90
+        degrees; the multimedia-tool ancestor line"
+      - "Laurie Anderson — STEIM 1992 invisible instrument; ask her
+        about the Amsterdam era on her own episode first"
+  topic: "Visual programming survived and thrived in exactly one wild
+    habitat: live art. Ask the artist musicians why. Boxes and wires
+    lost the software-engineering argument and won the stage: when the
+    program IS the performance, liveness beats compilation."
+  status: seed
+
+why_this_panel:
+  - "Every guest is or was a performing artist whose instrument is a
+    dataflow patch. Not tool vendors talking about artists: the
+    artists themselves."
+  - "The genealogy is already mapped in the repo (the patch-cord
+    trail); this show plays it as living memory: Hookup to Interactor
+    to Isadora, Max to MSP to Jitter, Pd, NATO, Image/ine, Body
+    Electric to Bounce."
+  - "NN and Puckette in one room: NATO lived inside Max, fought with
+    it, allegedly got absorbed by Jitter. The licensing-as-performance
+    story deserves both sides, mystique intact."
+  - "Daan and Keez put PIPS:lab on stage: two decades of shows where
+    the audience is wired into the patch. Participation art is the
+    patch cord pointed at people."
+
+threads:
+  why_art_kept_the_wires: "Dataflow visual programming failed as
+    general software engineering and succeeded as an instrument.
+    Liveness, hot-patching mid-performance, seeing the signal flow:
+    what stage needs that IDEs don't."
+  genealogy_wall: "Walk the patch-cord trail on air:
+    ../../process/trails/visual-programming-patch-cord.md, with the
+    compressed genealogy diagram as the set backdrop."
+  nato_vs_jitter: "Licensing as performance art; the flame archive as
+    literature; whether NATO returns outside classic Mac OS. Read the
+    Boulanger exchange aloud (source in NN's room)."
+  steim_room: "STEIM as the Amsterdam nexus: Image/ine (Demeyer +
+    Vasulka), NN as Artistic Co-Director 2001 to 2003 (self-styled
+    Director of Leaves and Petals), Laurie's 1992 invisible
+    instrument, Don performing live video with Image/ine."
+  audience_as_instrument: "Selfie Symphony, Short Mass Upload, Die
+    Space: PIPS:lab wires the crowd into the patch. Compare with
+    Don's SimRadio call-in design and the moody two-knob contract."
+  control_vs_data_flow: "Don's taxonomy: boxes and lines are not one
+    model. Max vs SimAntics vs Petri nets vs Snap!. Sources in
+    don-hopkins visual-programming notes."
+  moody_hook: "A moody track is one more patch cord: a second wire
+    beside the audio carrying meaning. Patch it into a room of
+    simulated people and the panel's instruments start playing the
+    world. Bridge to ../moody-midi-for-mood/moody-midi-for-mood.yml"
+  net_jamming: "The nettime moment when Max/MSP, NATO, Image/ine, and
+    Bounce all jammed over the wire:
+    ../../characters/don-hopkins/realtime-net-jamming-scene.md"
+
+format:
+  live: true
+  audience_qa: true
+  notes: |
+    Open: Puckette patches a working instrument from an empty canvas,
+    in silence, projected. That IS the opening monologue.
+    Segment: genealogy wall walk, each guest lights up their node.
+    Segment: NATO running live on emulated classic Mac OS.
+    Segment: PIPS:lab wires the studio audience into a patch.
+    Close: everyone patches into one shared canvas; the show ends
+    when the feedback does.
+
+ties_to:
+  - ../../process/trails/visual-programming-patch-cord.md
+  - ../../characters/jaron-lanier/
+  - ../../characters/dave-tristram/
+  - ../dave-tristram/       # Tristram's own show seed
+  - ../../characters/netochka-nezvanova/
+  - ../../characters/daan-van-west/
+  - ../../characters/david-levitt/
+  - ../../characters/miller-puckette/
+  - ../../characters/mark-coniglio/
+  - ../../characters/keez-duyves/
+  - ../../characters/don-hopkins/realtime-net-jamming-scene.md
+  - ../rebounce/            # the code-archaeology sibling: rewrite Bounce
+  - ../moody-midi-for-mood/moody-midi-for-mood.yml
+  - ../keez-duyves/         # Die Space show seed
+
+consent:
+  netochka-nezvanova: "not_yet_asked. Reaching NN is its own art
+    project; portrayal standards apply (no impersonation, mystique
+    kept). Masked, text-only, or proxy participation is a welcome
+    format, not a fallback."
+  jaron-lanier: "warm via rebounce seed; this panel not yet proposed"
+  dave-tristram: "invitation drafted for his own show
+    (../dave-tristram/); this panel not yet proposed"
+  daan-van-west: "not_yet_asked; invitation drafted
+    (../../characters/daan-van-west/invitation.md), Messenger opener
+    ready. This show gives his invite a second landing spot beyond
+    Moody."
+  david-levitt: "warm; panel not yet proposed"
+  miller-puckette: "not_yet_asked"
+  mark-coniglio: "not_yet_asked"
+  keez-duyves: "unreachable so far; route via Daan
+    (../../characters/keez-duyves/)"

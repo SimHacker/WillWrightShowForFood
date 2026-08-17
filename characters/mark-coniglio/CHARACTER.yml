@@ -63,3 +63,4 @@ see_also:
   - { path: ../miller-puckette/CHARACTER.yml, why: "Max/Pd — the sibling patch-cord environments" }
   - { path: ../tom-demeyer/CHARACTER.yml, why: "Image/ine @ STEIM — real-time video into Isadora" }
   - { path: ../don-hopkins/body-electric-1999-jaron-email.md, why: "Where Coniglio's Hookup history is gathered" }
+  - { path: ../../repo-shows/patch-cords/patch-cords.yml, why: "Core guest: Isadora on the artist musicians panel" }

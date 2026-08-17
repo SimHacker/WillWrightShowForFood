@@ -12,6 +12,7 @@ public work and documented connections to this repository. Things Don would love
 | **Planted show** | [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/) |
 | **North star** | [`reflecting-on-self.md`](reflecting-on-self.md) |
 | **Episode title** | *Reflecting on Self: Narcissa's Mirror* |
+| **Live chat guide** | [`chat-guide.md`](chat-guide.md) — scrollable beat sheet with links |
 
 ## What David has done
 

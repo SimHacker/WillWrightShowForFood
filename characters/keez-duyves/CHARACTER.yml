@@ -21,10 +21,13 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: reached_out_awaiting_reply
+  consent: asked_no_reply_yet
   document: invitation.md
   show_seed: ../../repo-shows/keez-duyves/
+  outreach: "Facebook message sent 2026; no reply yet. Trying via PIPS:lab
+    colleague Daan van West (../daan-van-west/) — and an NDSM / Noorderlicht
+    café hang is on offer for both."
 
 bio:
   summary: |
@@ -52,6 +55,7 @@ friendship_arc:
   2020: "Pie-menu projection-mapping paper + Ted Nelson self-revealing / feedforward-feedback"
   2024-03: "Don flagged Die Space on HN (item 39821421)"
   2026: "NDSM / Will's son visit path — inter Will Wright into Die Space; Repo Show invite planned"
+  2026-08: "Facebook outreach unanswered; trying the Daan van West route (PIPS:lab audio side); standing offer: Noorderlicht café at NDSM, ebike-safari show-and-tell"
 
 why_the_show_cares:
   will_hook: "Die Space is the cleanest Will-facing demo — afterlife SNS + mass audience light upload"
@@ -93,6 +97,7 @@ sources:
 see_also:
   - { path: invitation.md, why: "Draft invite" }
   - { path: ideas.md, why: "Show hooks" }
+  - { path: ../daan-van-west/, why: "PIPS:lab colleague (audio/composition, Max/MSP) — invited in his own right; also the current contact route to Keez" }
   - { path: ../tom-tjon-a-loi/, why: "Die Space × Soul City two-hander — premorializing the living meets resurrecting the archived" }
   - { path: ../../repo-shows/keez-duyves/, why: "Show seed" }
   - { path: ../will-wright/, why: "Inter Will Wright into Die Space; Will's son / NDSM visit path" }

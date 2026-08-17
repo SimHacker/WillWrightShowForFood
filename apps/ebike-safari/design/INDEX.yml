@@ -12,6 +12,8 @@ core:
   - lineage.yml
 
 pillars:
+  - city-record.md
+  - speech-track.md
   - geometry-as-language.md
   - exposure-pac-man.md
   - urban-garden-loop.md
@@ -21,6 +23,7 @@ pillars:
   - map-game-platform.md
 
 sources:
+  - sources/ben-cerveny-city-record-jam.md
   - sources/amsterdam-gps-lineage.md
   - sources/tomtom-rejected-ideas.md
   - sources/foursquare-lineage.md

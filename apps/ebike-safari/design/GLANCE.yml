@@ -6,6 +6,9 @@ what: |
   Smells = ads (YAML creatives); roads = distribution channels (strength on graph).
   Semantic polders = Dutch waterschap — dikes, windmill filters, canal vs sewage outflow.
   Map game platform — shared data plane between games; layers are views.
+  City record — every street is a groove; bike as needle; scrobbling with place; radio dial.
+  Magnetic playback — play head has inertia; turn = switch, stop = scan; you ARE the radio dial.
+  Speech track — commands interpreted now, impressions timestamped for later; all speech remembered.
 
 phase: slurping
 
@@ -15,6 +18,8 @@ architecture: ARCHITECTURE.yml
 cauldron: CAULDRON.yml
 
 pillars:
+  - city-record.md
+  - speech-track.md
   - geometry-as-language.md
   - exposure-pac-man.md
   - urban-garden-loop.md

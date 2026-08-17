@@ -30,6 +30,7 @@ Real-time visual programming for music, video, and VR — the lineage Don docume
 | [**Don — Levity Bounce**](../../characters/don-hopkins/levity-bounce-space-seed.md) | COM on wires, Space Seed demo |
 | [**Don — Body Electric / Bounce VR stack**](../../characters/don-hopkins/body-electric-bounce-vr-stack.md) | Swivel 3D transform tree, dual-SGI stereo over UDP, live-coding, typed colored wires carrying whole JSON-ish COM objects |
 | [**Rebounce (show)**](../../repo-shows/rebounce/README.md) | Salute Bounce — check in the source, rewrite it together (hand + AI), seeded by David + Don + Jaron |
+| [**Patch Cords (show)**](../../repo-shows/patch-cords/patch-cords.yml) | The artists' panel: Daan van West + NN + Levitt + Puckette + Coniglio play this trail as living memory |
 | [**Don — DRAKON / SimAntics**](../../characters/don-hopkins/drakon-control-flow-vs-dataflow.md) | Control flow vs data flow — Grasshopper, SimAntics, Bounce (HN 10100932) |
 | [**Steina Vasulka**](../../characters/steina-vasulka/README.md) | Image/ine co-creator |
 | [**Netochka Nezvanova**](../../characters/netochka-nezvanova/README.md) | **NATO.0+55+3d** (1999) — live networked video inside Max; the nettime legend |

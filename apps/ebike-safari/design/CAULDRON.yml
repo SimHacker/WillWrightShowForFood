@@ -150,6 +150,41 @@ slurp_queue:
       - GitHub-as-MMORPG — water board PRs, stewards, collaborative polder management
     status: harvested
 
+  - id: moody-city-record
+    from: https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md
+    into: [city-record.md, skeleton/story-layer.md]
+    extract:
+      - city record — streets as grooves, bike as needle, intersections branch songs
+      - scrobbling — defined and credited (Audioscrobbler/Last.fm, Richard Jones 2002); extended with place, editable partial listens
+      - radio dial — locality-ordered stations; songs hop the map via new trails
+      - Paul Lamere Infinite Jukebox (Echo Nest beat graph) — city record at 1:1 scale
+      - Music for Streets — Eno catalogue entry; ambient + generative on the graph
+      - demo mode — browser needle, no bike required; tapes interchangeable
+    status: harvested
+
+  - id: ben-cerveny-city-record-jam
+    from: sources/ben-cerveny-city-record-jam.md
+    into: [city-record.md, speech-track.md]
+    extract:
+      - semi-circular Amsterdam — canal ring as concentric locked grooves (Ben)
+      - Foursquare-for-linear-roads pitched at a Foursquare board member
+      - butterfly tree (Steve Strassman) — sharing links scene sequences into the story graph
+      - speech track spec — commands vs impressions, all speech remembered, interpretation markup, Drescher schema food
+    status: harvested
+
+  - id: magnetic-playback-jam
+    from: design jam, Don Hopkins, 2026-08-17
+    into: city-record.md
+    extract:
+      - magnetic inertial playback — play head owns its clock; grooves attract, never drag; stoplight discontinuities are why
+      - jump-in semantics — resume at location or play from start; position picks song, listener owns clock
+      - roundabout dynamics via Infinite Jukebox self-similar loop points; own open beat analysis (Spotify killed the API)
+      - genre-tagged rides — Vondelpark techno / handbag house filters
+      - turn means switch — pick unheard-recently song from new path's grooves
+      - stop means scan — AR pie menu, body as compass, "you ARE the radio dial", music radar by density bearing
+      - MediaGraph question resolved — songs as nodes AND arcs; full OSM vocabulary (POIs, ways, addresses, areas)
+    status: harvested
+
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
     tags: [iloci_memory_palace, amsterdam_coffeeshops_app, bongo_bingo]
@@ -164,6 +199,9 @@ slurp_queue:
     status: pending
 
 harvested:
+  - city-record.md
+  - speech-track.md
+  - sources/ben-cerveny-city-record-jam.md
   - geometry-as-language.md
   - exposure-pac-man.md
   - urban-garden-loop.md

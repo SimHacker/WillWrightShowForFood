@@ -20,6 +20,8 @@ don't port the stack.
 
 | Pillar | Doc | Status |
 |--------|-----|--------|
+| City record | [`city-record.md`](city-record.md) | draft — **every street is a groove**; scrobbling, radio dial |
+| Speech track | [`speech-track.md`](speech-track.md) | draft — commands vs impressions; Drescher food |
 | Geometry as language | [`geometry-as-language.md`](geometry-as-language.md) | draft |
 | Exposure Pac-Man | [`exposure-pac-man.md`](exposure-pac-man.md) | draft |
 | Urban garden loop | [`urban-garden-loop.md`](urban-garden-loop.md) | draft — **don't complete, cooperate** |
@@ -33,6 +35,7 @@ don't port the stack.
 | Taxonomy pyramid | [`semantic-taxonomy-pyramid.md`](semantic-taxonomy-pyramid.md) | draft — LLM tags, coalesce |
 | Smell navigation | [`navigation-smell-steer.md`](navigation-smell-steer.md) | draft — hill-climb, pie menu, MediaGraph |
 | Graveyard layers | [`graveyard-soul-city.md`](graveyard-soul-city.md) | draft — real memorial + Soul City |
+| Ben Cerveny jam | [`sources/ben-cerveny-city-record-jam.md`](sources/ben-cerveny-city-record-jam.md) | harvested |
 | Amsterdam GPS lineage | [`sources/amsterdam-gps-lineage.md`](sources/amsterdam-gps-lineage.md) | harvested |
 | TomTom rejected ideas | [`sources/tomtom-rejected-ideas.md`](sources/tomtom-rejected-ideas.md) | harvested |
 | Lifelogging lineage | [`sources/foursquare-lineage.md`](sources/foursquare-lineage.md) | reference |

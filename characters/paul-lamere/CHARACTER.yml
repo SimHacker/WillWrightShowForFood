@@ -1,0 +1,99 @@
+# Paul Lamere — invitation portrayal. NOT Paul Lamere.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: paul-lamere
+  name: "Paul Lamere"
+  type: invitation
+  signifier: "🎛️🔁"
+  status: living
+  field: |
+    Music technology — The Echo Nest Director of Developer Platform (→ Spotify, 2014
+    acquisition); Music Machinery blog; the Infinite Jukebox; Music Hack Day
+  home: characters/paul-lamere/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1
+  authored_by: don-hopkins
+  note: |
+    Friendly professional acquaintance since 2010 — Skype call, echo-nest-remix debugging,
+    ISMIR 2010 Utrecht in person. Paul may correct, reduce, replace, or delete this portrayal
+    anytime. Private contact details stay out of this repo.
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml
+  role: "Bench (possible core): the machine-listening side of the moody panel; the
+    Infinite Jukebox as the city record's prior art at song scale"
+
+bio:
+  summary: |
+    **Paul Lamere** ran the developer platform at **The Echo Nest** — the MIT Media Lab
+    spinoff (founders Tristan Jehan and Brian Whitman) that industrialized machine
+    listening: tempo, energy, danceability, acousticness, speechiness, liveness — a
+    per-song meaning database served over the net, powering Spotify Radio, iHeartRadio-era
+    playlisting, and ten thousand hack-day apps. Spotify bought the company in 2014 and
+    Paul went with it. His blog **Music Machinery** (musicmachinery.com, now also on
+    Substack) is the genre's lab notebook. Before The Echo Nest: music and search research
+    at Sun Microsystems Labs ("Search Inside the Music").
+  signature_hacks: |
+    **The Infinite Jukebox** (Music Hack Day Boston, Nov 2012, MIT Stata Center) —
+    decompose a song into beats, graph the similar-sounding ones, branch playback through
+    the graph so the song never ends; kept alive by the community as the Eternal Jukebox.
+    Also: Boil the Frog (a playlist path between any two artists), the Bonhamizer, the
+    Roadtrip Mixtape (artists from the cities your route passes through), "How good is
+    Google's Instant Mix?" (the 2011 playlist-engine shootout that toured the tech press).
+
+don_connection:
+  2010-05-24: "SFC thread (Peter Swearengen, Will Wright): ISMIR 2010 tutorial list names
+    Paul's 'Finding A Path Through The Jukebox — The Playlist Tutorial' (with Ben Fields)"
+  2010-06-15: "Don's first mail to The Echo Nest — Stupid Fun Club music software (Python
+    back-end, Unity3D front-end), swinger/cowbells demo fandom, and the 'hoNest' joke"
+  2010-07-08: "Skype call with Paul and Eric Swenson (bizdev)"
+  2010-07-19: "echo-nest-remix earworm bug report; Paul diagnosed pyechonest version skew"
+  2010-08: "ISMIR 2010 Utrecht (Aug 9–13) — Don attended Paul's playlist tutorial; phone
+    numbers exchanged for the Amsterdam→Utrecht rendezvous; Will Wright and Peter
+    Swearengen cc'd"
+  2010-2013: "Registered Echo Nest developer through the newsletter era — speechiness,
+    acousticness, taste profiles, Rosetta Stone, EMI sandboxes, Infinite Jukebox"
+  2019-07-12: "Don to Jerry Martin, re moody: 'it reminds me of the music analysis stuff
+    that Paul Lamere and his colleagues at The Echo Nest was working on'"
+
+why_the_show_cares:
+  moody_kin: "The Echo Nest is the industrial version of moody's 'hire monkeys to annotate
+    CDs' — machine listening as the annotation army, minus the consumer: a world of
+    simulated people who can FEEL the data (moody-design-doc-review.md)"
+  city_record: "The Infinite Jukebox is the city record at song scale: beats become
+    blocks, branches become intersections, the song graph drawn in asphalt (MOODY.md)"
+  roadtrip_mixtape: "Echo Nest demo that playlists the cities your route passes through —
+    geography-driven playback, the ebike safari's direct ancestor"
+  taste_profiles: "Echo Nest Taste Profiles = the per-person reaction model the 1999
+    SimRadio email wanted ('different people would react to the musical moods in
+    different ways')"
+  rosetta_stone: "Echo Nest's ID-mapping layer across music services rhymes with the
+    soul-file: one identity, re-rendered per world"
+  paths_through_jukeboxes: "His 2010 tutorial title IS the show's geometry: finding a
+    path through the jukebox — through a song's beat graph, or through a city's grooves"
+
+sources:
+  web:
+    - { title: "Music Machinery", url: "https://musicmachinery.com/" }
+    - { title: "Music Machinery on Substack", url: "https://musicmachinery.substack.com/" }
+    - { title: "The Infinite Jukebox (announcement, Nov 2012)", url: "https://musicmachinery.com/2012/11/12/the-infinite-jukebox/" }
+    - { title: "The Infinite Jukebox — 10 years later (Eternal Jukebox)", url: "https://musicmachinery.substack.com/p/the-infinite-jukebox-10-years-later" }
+    - { title: "The Echo Nest — Wikipedia", url: "https://en.wikipedia.org/wiki/The_Echo_Nest" }
+  local:
+    - { path: sources/echo-nest-correspondence.md, why: "Digest of the 2010 Don↔Echo Nest threads and newsletter era" }
+
+see_also:
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: ideas.md, why: "Show hooks" }
+  - { path: ../don-hopkins/moody-design-doc-review.md, why: "The primary source that names him" }
+  - { path: ../don-hopkins/simradio-moody-1999-maxis-email.md, why: "The 1999 moody track" }
+  - { path: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml, why: "Show seed — bench entry" }
+  - { path: ../will-wright/, why: "Cc'd on the 2010 ISMIR thread; SFC was the client" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Subject rights" }
