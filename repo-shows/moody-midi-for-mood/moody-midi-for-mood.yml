@@ -25,6 +25,8 @@ show:
       - "Tod Machover — Hyperinstruments; the MIT lab Harmonix grew out of"
       - "Holly Herndon — AI voice, consent, and identity in music (Holly+)"
       - "Ge Wang — ChucK, Ocarina; instruments as social software"
+      - "Laurie Anderson — tape-bow violin: performance as scrubbing a
+        recording; the patron saint of the zig-zag (see ../laurie-anderson/)"
   topic: "The moody track: a parameter track of time-varying emotional
     meaning that rides alongside music and video, broadcasting heat into
     rooms and characters that feel it. Proposed for The Sims in the
@@ -93,6 +95,17 @@ threads:
   procedural_inverse: "Spore's EAPd score generates music FROM meaning;
     moody annotates meaning ONTO music. Two directions, one contract —
     with MetaSounds as the shipping modern platform to discuss."
+  the_zig_zag: "Generate moody music from simulation events AND record
+    the emitted parameters as a new moody object — replayable,
+    sampleable, remixable, loopable, scrubbable, re-evoking the events
+    that generated it. Laurie Anderson's tape-bow violin is the patron
+    instrument: tape in the bow, playback head on the bridge,
+    performance as scrubbing a memory. Requires the musical vocabulary
+    as schema: ADSR, crescendo, sforzando (the spike has a name),
+    accelerando, tension and cadence, heat, energy, and determinism —
+    the temperature track recorded like everything else, so a chaotic
+    party scrubs differently than a solemn vow. MOODY.md zig-zag
+    section."
   muzak_and_eno: "Stimulus progression as the 1940s parameter track
     (never published the schema, pointed at the employer); Eno's
     'as ignorable as it is interesting' as the two-knob contract.
