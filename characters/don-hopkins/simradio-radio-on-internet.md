@@ -139,15 +139,28 @@ one facet, interpreted your own way, is already something nice.
 Tiny Life is the example I'd most enjoy jamming about — no
 obligation attached, its developer is already busy building
 something wonderful out of love, at his own pace, his own way. The
-resonance is just fun to point at: the credits already list a
-composer (Leiss Hoffman) and an **emotion sting artist** (Jamal
-Green) — music that reacts to emotions — and the moody track is the
-same wire run the other direction, music that *causes* them,
-annotated by the composer's own hand. A composer marking up the
-meaning they already wrote into their music is artisanal annotation,
-the exact opposite of generated content. If that conversation ever
-sounds like fun to the people who'd have it, there's a show seed
-sketched for it:
+resonance is just fun to point at: the
+[official credits](https://games.ellpeck.de/tinylife/) already list
+a composer — [**Leiss Hoffman**](https://leissmusic.carrd.co/),
+whose [11-track OST of "inspiring vibes ranging from jazzy to
+cozy"](https://leiss.bandcamp.com/album/tiny-life-original-soundtrack)
+is on Bandcamp and
+[Steam](https://store.steampowered.com/app/2573130/Tiny_Life_Soundtrack/) —
+and an **emotion sting artist**, Jamal Green, whose
+[emotion stings](https://ellpeck.itch.io/tiny-life/devlog/289260/0160-woodlands-and-visitors)
+play a unique sound whenever a character's emotion changes, joined
+later by
+[event stings](https://tinylifegame.com/posts/0.41.0/) for
+promotions, skill mastery, and maxed friendship or romance. That's
+music that *reacts to* emotions — and the moody track is the same
+wire run the other direction, music that *causes* them, annotated by
+the composer's own hand. The game's modding API even lets
+[mods attach sting sounds to custom emotion types](https://tinylifegame.com/changelog/),
+so a sound-to-emotion registry already exists; moody just reads it
+the other way. A composer marking up the meaning they already wrote
+into their music is artisanal annotation, the exact opposite of
+generated content. If that conversation ever sounds like fun to the
+people who'd have it, there's a show seed sketched for it:
 [`repo-shows/moody-midi-for-mood/`](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml).
 The idea is offered to interpret, improve, ignore, or implement any
 way they choose.

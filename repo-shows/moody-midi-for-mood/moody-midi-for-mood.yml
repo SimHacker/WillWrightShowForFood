@@ -11,8 +11,20 @@ show:
   guests:
     core:
       - "Ellpeck (Ell) — creator of Tiny Life, the indie Sims-like"
-      - "Leiss Hoffman (Leiss) — Tiny Life composer (11-track OST, jazzy to cozy)"
-      - "Jamal Green — Tiny Life EMOTION STING ARTIST (the credit says it all)"
+      - "Leiss Hoffman (Leiss) — Tiny Life composer: 11-track OST,
+        'inspiring vibes ranging from jazzy to cozy'
+        (https://leiss.bandcamp.com/album/tiny-life-original-soundtrack).
+        Edmonton; jazz, rock, orchestral, chiptune; also Broodstar,
+        Orcish Skies, Redtape, Barbie: Rewind (16-bit, 2026); plays in
+        VGM cover band Thennecan. Site: https://leissmusic.carrd.co/"
+      - "Jamal Green — Tiny Life EMOTION STING ARTIST (the credit says
+        it all: https://games.ellpeck.de/tinylife/). Emotion stings
+        landed in 0.16.0, one sound per emotion, Sims 4-inspired
+        (https://ellpeck.itch.io/tiny-life/devlog/289260/0160-woodlands-and-visitors);
+        event stings for promotions/skill mastery/max romance in
+        0.41.0 (https://tinylifegame.com/posts/0.41.0/). Mods can
+        already attach stings to custom emotion types — the
+        sound-to-emotion registry exists."
       - "Jerry Martin — composer, The Sims / SimCity 3000"
       - "David Levitt — music+AI (MIT Media Lab), Hookup, HarmonyGrid, Bounce"
       - "Will Wright"
