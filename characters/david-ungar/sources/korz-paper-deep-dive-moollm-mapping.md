@@ -92,7 +92,14 @@ a directed command forces one ad regardless of score, which is
 programming by demonstration in disguise; the resulting skill gains
 re-weight future auctions until the override becomes the habit. An agent
 that always argmaxes cannot be taught by demonstration, because its
-teacher has nothing to add.
+teacher has nothing to add. And the override should weigh heavy: a
+forced pick is a **strong salience signal** to a Drescher-style schema
+learner — the teacher explicitly marking *which* choice mattered, worth
+a thousand unattended trials — which implies the unbuilt fourth stage,
+**advertisements that learn**: not to be more persuasive but more
+appropriate and helpful, re-tuning bids to the hearer's observed
+outcomes, with persuasion arriving as earned trust once the hearer
+discovers the ads serve the listener rather than the seller.
 
 1. **argmax** — deterministic; compiles to a table lookup
 2. **find-best-N** — still crystallizable: scoring table plus a *seeded*
