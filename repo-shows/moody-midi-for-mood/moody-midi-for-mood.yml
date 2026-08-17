@@ -1,0 +1,148 @@
+# SHOW SEED — Moody: MIDI for Mood
+# Music that knows what it means. Composers annotate intent; rooms and
+# characters feel it. The 1999 SimRadio moody track, finally on stage.
+
+show:
+  id: moody-midi-for-mood
+  title: "Moody: MIDI for Mood"
+  tagline: "Music that knows what it means — control changes for the heart."
+  type: panel
+  host: Don Hopkins
+  guests:
+    core:
+      - "Ellpeck (Ell) — creator of Tiny Life, the indie Sims-like"
+      - "Leiss Hoffman (Leiss) — Tiny Life composer (11-track OST, jazzy to cozy)"
+      - "Jamal Green — Tiny Life EMOTION STING ARTIST (the credit says it all)"
+      - "Jerry Martin — composer, The Sims / SimCity 3000"
+      - "David Levitt — music+AI (MIT Media Lab), Hookup, HarmonyGrid, Bounce"
+      - "Will Wright"
+    bench:
+      - "Robi Kauker — Maxis audio director across The Sims era"
+      - "Kent Jolly + Aaron McLeran — Spore's EAPd procedural score (McLeran now builds MetaSounds at Epic)"
+      - "Brian Eno + Peter Chilvers — ambient's contract, Bloom, the Spore loop (see ../brian-eno/)"
+      - "Miller Puckette — Pure Data, the engine under Spore's score"
+      - "Alex Rigopulos + Eran Egozy — Harmonix; beat charts are authored per-song parameter tracks that shipped as gameplay"
+      - "Tod Machover — Hyperinstruments; the MIT lab Harmonix grew out of"
+      - "Holly Herndon — AI voice, consent, and identity in music (Holly+)"
+      - "Ge Wang — ChucK, Ocarina; instruments as social software"
+  topic: "The moody track: a parameter track of time-varying emotional
+    meaning that rides alongside music and video, broadcasting heat into
+    rooms and characters that feel it. Proposed for The Sims in the
+    February 1999 SimRadio email; explained by the composers who could
+    author it today."
+  status: seed
+
+the_name: |
+  MIDI's great trick was carrying EVENTS instead of audio: note-on,
+  note-off, control change — a second wire beside the sound, meaning
+  the same performance could drive any synth, any instrument, any
+  light rig. Moody is the second wire for EMOTIONAL meaning: mood-on,
+  mood-off, control changes for the heart. Same performance, and any
+  world that speaks the protocol — a Sims-like, a robot's living room,
+  a MOOLLM microworld — can feel it its own way. Not "Moody Blues"
+  (though the nights in white satin are welcome on the playlist): the
+  title has to say what it is, and what it is, is MIDI for mood.
+
+why_this_panel:
+  - "Tiny Life already ships the INVERSE of moody: Jamal Green is
+    credited as 'emotion sting artist' — music that plays when
+    emotions happen. Moody is music that MAKES emotions happen. One
+    panel, both directions of the same wire."
+  - "Leiss composed an 11-track life-sim soundtrack; the moody track
+    is an invitation for a composer to annotate their OWN intent —
+    hand-authored meaning, the exact opposite of generated slop. Who
+    better to ask what the schema should look like than someone who
+    would actually fill it in?"
+  - "Jerry Martin scored the original: The Sims' build mode and
+    neighborhood themes are already mood engineering that a whole
+    generation can hum. He composed for a game that dances to him and
+    cries at the TV; ask him what he'd write if the music could reach
+    back in."
+  - "David Levitt has worked the music+AI seam since the MIT Media Lab
+    — HarmonyGrid, Hookup, Bounce — representation of musical meaning
+    as data flow. The moody track is a Levitt-shaped question."
+  - "Will proposed objects that advertise and Sims that feel; the 1999
+    email pitched the missing piece to his team. The primary source is
+    on the table (literally — it's in the repo)."
+
+threads:
+  the_moody_track: "The schema: (time, tag, heat) envelopes riding the
+    media — romantic, energetic, intellectual, melancholy. Design doc:
+    https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md"
+  primary_source_1999: "The SimRadio email, Feb 18 1999 — live radio in
+    The Sims, call-in contests, prizes delivered to the front door, and
+    the moody track: ../../characters/don-hopkins/simradio-moody-1999-maxis-email.md
+    (context + call to action: ../../characters/don-hopkins/simradio-call-to-action.md)"
+  two_knobs: "Volume knob and meaning knob, separately mixable —
+    surface and influence as independent channels. The demo: turn the
+    volume to zero and watch the room still swoon."
+  emotion_stings_inverse: "Tiny Life's stings react to emotion; moody
+    media causes it. Close the loop on air: a sting that carries its
+    own moody track is a feedback cycle — discuss stability, comedy,
+    and deliberate runaway (the wedding that gets happier forever)."
+  your_song: "The write path: experiences write private overlays back
+    onto the exact timestamp of the playing media. First-kiss spikes,
+    wedding washes, 'they're playing our song' as a temporal
+    relationship matrix cache hit. Ask the composers: how does it feel
+    that listeners annotate your work with their lives?"
+  beat_charts_as_kin: "Harmonix shipped authored per-song time-coded
+    parameter tracks as GAMEPLAY (Guitar Hero/Rock Band charts). Moody
+    is the same authoring discipline pointed at feeling instead of
+    fingers. Charting tools exist; moody authoring tools can steal
+    their UI wholesale."
+  procedural_inverse: "Spore's EAPd score generates music FROM meaning;
+    moody annotates meaning ONTO music. Two directions, one contract —
+    with MetaSounds as the shipping modern platform to discuss."
+  muzak_and_eno: "Stimulus progression as the 1940s parameter track
+    (never published the schema, pointed at the employer); Eno's
+    'as ignorable as it is interesting' as the two-knob contract.
+    Lineage section: MOODY.md precedents."
+  brown_note_constraints: "Comic relief with a real point: constraints
+    bind tag envelopes to ANY parameter — happiness, lighting, or the
+    bladder motive at max gain. The prank subwoofer is a legitimate
+    plug-in object. Media as a general-purpose parameter bus."
+  open_commons: "The call to action: unencumbered, non-patented, given
+    freely to Paralives, inZOI, Tiny Life, and everyone else — and how
+    to evolve a schema organically (publish, play, learn, lift) without
+    a standards committee marking territory on it."
+
+format:
+  live: true
+  audience_qa: true
+  notes: |
+    Open: read the moody-track paragraph of the 1999 email aloud.
+    Segment: Leiss or Jamal annotates one of their own tracks with a
+    moody envelope live, then a MOOLLM room reacts to it playing.
+    Segment: Jerry Martin plays the Sims build theme; panel tags it.
+    Segment: two knobs demo — volume zero, meaning ten.
+    Close: the brown note. Someone has to.
+
+ties_to:
+  - ../../characters/don-hopkins/simradio-moody-1999-maxis-email.md
+  - ../../characters/don-hopkins/simradio-call-to-action.md
+  - https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md
+  - https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md
+  - ../music-and-theory.yml   # Levitt + Jerry Martin seed this extends
+  - ../brian-eno/             # Eno show; Long Now 2006 w/ Will
+  - ../../characters/brian-eno/ideas.md   # idea 3¼: Moody
+  - ../../characters/david-levitt/
+  - ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
+
+consent:
+  ellpeck: "not_yet_asked. IMPORTANT: Ellpeck Games has a public,
+    principled stance against AI-generated content in games. The
+    invitation must lead with the 1999 design and the composer angle —
+    hand-authored moody tracks are artisanal annotation, the OPPOSITE
+    of generated content — and make zero asks about LLMs or adopting
+    anything. Their stance is a feature for the panel: the best critic
+    of the deep end should be in the room, and the moody track schema
+    works with no AI anywhere near it."
+  leiss-hoffman: "not_yet_asked; natural channel is via Ell after Ell
+    accepts. The concrete pitch: annotate your own OST with the meaning
+    you already composed into it."
+  jamal-green: "not_yet_asked; via Ell. The 'emotion sting artist'
+    credit is the show's favorite job title — say so."
+  jerry-martin: "warm via music-and-theory seed; trio/panel not yet
+    proposed"
+  david-levitt: "warm; panel not yet proposed"
+  will-wright: "warm; panel not yet proposed"

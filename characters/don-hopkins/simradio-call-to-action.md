@@ -125,7 +125,15 @@ an army of human annotators to write.
 
 So, to whoever builds living worlds — **Paralives, inZOI, Tiny Life,
 the whole life-sim renaissance, and anyone else**: take it. All of
-it. The moody track schema, the room-inherits-heat model, the
+it. Tiny Life especially wears the invitation well: its credits
+already list a composer (Leiss Hoffman) and an **emotion sting
+artist** (Jamal Green) — music that reacts to emotions — and the
+moody track is the same wire run the other direction, music that
+*causes* them, annotated by the composer's own hand. A composer
+marking up the meaning they already wrote into their music is
+artisanal annotation, the exact opposite of generated content. There
+is a show seed waiting for exactly this conversation:
+[`repo-shows/moody-midi-for-mood/`](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml). The moody track schema, the room-inherits-heat model, the
 expiring broadcast ads, the prize-delivered-to-the-front-door loop,
 the per-person reaction filtering. It is given freely, unencumbered,
 non-patented, with dated prior art published right here and a full
