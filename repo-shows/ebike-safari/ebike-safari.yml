@@ -65,7 +65,7 @@ lineage:
     - era: "2011–14"
       project: MediaGraph
       what: |
-        SFC Unity (YouTube demo Jul 2015) — songs on roads; per-song pies (radius, CA biome);
+        SFC Unity (YouTube demo Jul 2015) — songs on maps connected by roads; per-song pies (radius, CA biome);
         kiss-toggle links; flick-on-song Mario-cannon nav; LOD flat/3D terrain.
       video: "https://www.youtube.com/watch?v=2KfeHNIXYUc"
       demo: "https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"

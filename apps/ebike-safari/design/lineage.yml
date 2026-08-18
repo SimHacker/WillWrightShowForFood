@@ -74,7 +74,7 @@ chain:
 
   - era: "2011–14"
     project: MediaGraph
-    hook: songs on roads, kiss-toggle links, Mario-cannon nav
+    hook: songs on maps connected by roads, kiss-toggle links, Mario-cannon nav
     source: ../../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
 
   - era: "2026"

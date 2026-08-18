@@ -15,7 +15,7 @@ DreamScape (1995)
       → iPhone app · website · LayAR · BONGO BINGO
   → StoryMaker / Bar Karma (2009–11) — SFC collaborative TV storytelling
       → Urban Safari — geolocated scene graph, performed live
-  → MediaGraph (2011–15) — songs on roads
+  → MediaGraph (2011–15) — songs on maps connected by roads
   → Ebike Safari (2026+) — FIT → OSM → gestures + exposure
 ```
 

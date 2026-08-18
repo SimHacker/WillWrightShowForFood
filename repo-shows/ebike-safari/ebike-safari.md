@@ -36,7 +36,7 @@ We already built several versions of this idea (1995 DreamScape → 2008–2011 
 | **2008–09** | [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) | Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms |
 | **2010–11** | [StoryMaker](https://www.youtube.com/watch?v=_2yEHs_WLzQ) | Branching stories; geolocated scenes; Facebook album import/export; iPad MapKit; Unity visualizer; voice-synth reading |
 | **2011** | Urban Safari | Layar AR field cards; [Layar demo](https://www.youtube.com/watch?v=Db8KGNoeKHE); [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~13:11 import) |
-| **2011–14** | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | SFC Unity — songs on roads; per-song pies; Mario-cannon flick nav; LOD terrain. [Medium demo](https://donhopkins.medium.com/mediagraph-demo-a7534add63e5) |
+| **2011–14** | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | SFC Unity — songs on maps connected by roads; per-song pies; Mario-cannon flick nav; LOD terrain. [Medium demo](https://donhopkins.medium.com/mediagraph-demo-a7534add63e5) |
 | **2025–26** | Proxi | Memory snow globes at geo stops — press parallel |
 | **2026+** | **eBike Safari** | This spec — eBike + voice + camera + LLM narrator; real streets, git audience cards |
 

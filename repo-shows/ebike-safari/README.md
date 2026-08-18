@@ -115,7 +115,7 @@ Field-tested on real safaris around Amsterdam — not aspirational spec.
 | 1995 | [DreamScape @ WWDC](https://www.youtube.com/watch?v=5NytloOy7WM) — rooms kiss-to-connect; ScriptX web objects |
 | 2008–11 | [Amsterdam Coffeeshops map/Layar](https://www.youtube.com/watch?v=nG90XG3STz8) → Bongo Bingo → iLoci → StoryMaker → Urban Safari — all seeded during TomTom; the trilogy recalls Don to SFC |
 | 2011 | [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — branching geo stories; [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) |
-| 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on roads; pie flick navigation |
+| 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on maps connected by roads; pie flick navigation |
 | 2026+ | **eBike Safari** — voice + camera + LLM + open FIT/map stack; git audience cards |
 
 **Pivotal moment:** Will saw iLoci + Coffeeshops + Bongo Bingo; said leave EA, come back to Stupid Fun Club. [The receipt](../../characters/don-hopkins/career/stupid-fun-club.yml).
