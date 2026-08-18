@@ -40,7 +40,7 @@ We already built several versions of this idea (1995 DreamScape → 2008–2011 
 | **2025–26** | Proxi | Memory snow globes at geo stops — press parallel |
 | **2026+** | **eBike Safari** | This spec — eBike + voice + camera + LLM narrator; real streets, git audience cards |
 
-**Pivotal moment:** TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems. Don sent demos; Will said leave EA and come back to SFC. [How Don rejoined Will](../../characters/don-hopkins/career/stupid-fun-club.yml).
+**Pivotal moment:** TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems. Don sent demos; Will — who had just left EA — said "want to work together again, remotely?" Don left TomTom and joined Stupid Fun Club from Amsterdam. [How Don rejoined Will](../../characters/don-hopkins/career/stupid-fun-club.yml).
 
 ---
 

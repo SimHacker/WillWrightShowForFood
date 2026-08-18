@@ -75,7 +75,8 @@ lineage:
     - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + camera + LLM narrator; real streets, git audience cards" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
-    demos; Will said leave EA and come back to SFC. iLoci moment again.
+    demos; Will — who had just left EA — said "want to work together again, remotely?" Don left
+    TomTom and joined Stupid Fun Club from Amsterdam.
   girder: ../../characters/don-hopkins/career/stupid-fun-club.yml#how_don_rejoined_will
 
 dreamscape_wwdc_1995:
@@ -341,7 +342,7 @@ ties:
     connection: SFC era — Layar scenes, Facebook album round-trip
     character: ../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
   - name: Stupid Fun Club lineage
-    connection: TomTom trilogy → Will recalls Don to SFC
+    connection: TomTom trilogy → Will invites Don to SFC from Amsterdam
     character: ../../characters/don-hopkins/career/stupid-fun-club.yml
   - name: Career lineage
     character: ../../characters/don-hopkins/career/lineage.yml
