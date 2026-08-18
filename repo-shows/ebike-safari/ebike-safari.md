@@ -107,8 +107,10 @@ The user does not care how it is modeled. The LLM hides structure, interprets in
 - "What's near me?"
 - "Tell me about that canal"
 - "What's the story behind that bridge?"
-- "Take me to the next Invader"
+- "Take me to the next [Space Invader](https://www.space-invaders.com/world/amsterdam/)"
 - **"Set destination"** — commit virtual focus → route via Bosch/Apple. MUCH safer than pinch-zoom or list scroll while riding.
+
+**The Space Invader layer is real:** Invader hit Amsterdam in 1999–2000; the mosaics are a ready-made hidden topical graph to hunt by bike — [official world map](https://www.space-invaders.com/world/) · [Amsterdam wave](https://www.space-invaders.com/world/amsterdam/) · [pnote crowd-sourced map (Amsterdam view)](https://pnote.eu/projects/invaders/map/#zoom=13&lat=52.368275884615386&lng=4.891928961538462) · [about the pnote map](https://pnote.eu/projects/invaders/) · [invaders-finder](https://invaders-finder.com/en/cities/amsterdam/) · [Flickr album of all 92](https://www.flickr.com/photos/meteorry/albums/723988/) · [r/Amsterdam thread](https://www.reddit.com/r/Amsterdam/comments/p6uicf/space_invaders_amsterdam/) · [Instagram](https://www.instagram.com/p/DHVPZu5IFtt/)
 
 ### Temporal abstraction — Sutton's one-step trap
 

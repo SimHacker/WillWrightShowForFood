@@ -67,7 +67,9 @@ Physical GPS          Virtual focus (hidden)
         Bosch / Apple routing
 ```
 
-**Voice examples:** *"What's near me?"* · *"Tell me about that canal"* · *"What's the story behind that bridge?"* · *"Take me to the next Invader"* · **"Set destination"**
+**Voice examples:** *"What's near me?"* · *"Tell me about that canal"* · *"What's the story behind that bridge?"* · *"Take me to the next [Space Invader](https://www.space-invaders.com/world/amsterdam/)"* · **"Set destination"**
+
+That Space Invader example is real — Amsterdam was invaded in 1999–2000, and the mosaics are a ready-made topical layer: [official world map](https://www.space-invaders.com/world/) · [Amsterdam wave](https://www.space-invaders.com/world/amsterdam/) · [pnote crowd-sourced map (Amsterdam view)](https://pnote.eu/projects/invaders/map/#zoom=13&lat=52.368275884615386&lng=4.891928961538462) · [about the pnote map](https://pnote.eu/projects/invaders/) · [invaders-finder](https://invaders-finder.com/en/cities/amsterdam/) · [Flickr album of all 92](https://www.flickr.com/photos/meteorry/albums/723988/) · [r/Amsterdam thread](https://www.reddit.com/r/Amsterdam/comments/p6uicf/space_invaders_amsterdam/) · [Instagram](https://www.instagram.com/p/DHVPZu5IFtt/)
 
 **Why voice:** Pinch-zoom and list scroll while riding is unsafe. Voice syncs bike location and graph cursor. Hands stay on handlebars — the hero tee writes itself: **HANDS MUST REMAIN ON HANDLEBARS**.
 

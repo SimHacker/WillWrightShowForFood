@@ -135,8 +135,20 @@ dual_location_navigation:
       - "What's near me?"
       - "Tell me about that canal"
       - "What's the story behind that bridge?"
-      - "Take me to the next Invader"
+      - "Take me to the next Space Invader"
       - "Set destination"
+    space_invader_layer:
+      note: |
+        Real, not hypothetical: Invader hit Amsterdam in 1999–2000 — the mosaics are a
+        ready-made hidden topical graph to hunt by bike.
+      official_world_map: "https://www.space-invaders.com/world/"
+      amsterdam_wave: "https://www.space-invaders.com/world/amsterdam/"
+      pnote_map_amsterdam: "https://pnote.eu/projects/invaders/map/#zoom=13&lat=52.368275884615386&lng=4.891928961538462"
+      pnote_about: "https://pnote.eu/projects/invaders/"
+      invaders_finder: "https://invaders-finder.com/en/cities/amsterdam/"
+      flickr_album: "https://www.flickr.com/photos/meteorry/albums/723988/"
+      reddit: "https://www.reddit.com/r/Amsterdam/comments/p6uicf/space_invaders_amsterdam/"
+      instagram: "https://www.instagram.com/p/DHVPZu5IFtt/"
     set_destination: |
       Commit virtual focus to navigation target → route via Bosch/Apple. MUCH safer than
       pinch-zoom or list scroll while riding. Direct manipulation by voice syncs bike location
@@ -147,7 +159,7 @@ dual_location_navigation:
       and explodes combinatorially — use options and GVFs instead.
       http://incompleteideas.net/IncIdeas/OneStepTrap.html · HN 48883415
     safari_is_options_not_rollout: |
-      Scene cards at POIs = temporally abstract stops. Virtual focus + voice commands ("next Invader",
+      Scene cards at POIs = temporally abstract stops. Virtual focus + voice commands ("next Space Invader",
       "that canal") = semi-MDP options. "Set destination" commits an endpoint; Bosch turn-by-turn is
       hierarchical micro-detail filled on demand — not the primary planning model.
     tyranny_of_the_specific:
@@ -232,7 +244,7 @@ steering_pie_ride_game:
   ai_memory_loop:
     - remember — past safaris, linger time, git audience cards
     - lookup — graph links at approaching POIs
-    - organize — topical layers (Invader, canal, contributor)
+    - organize — topical layers (Space Invader, canal, contributor)
     - project — rank onto rider interest profile
     - speak — proximity-triggered narration
     - answer — questions without stopping or screen touch
