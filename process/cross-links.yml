@@ -328,7 +328,7 @@ trails:
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }
       - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack — homomorphic jam" }
       - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year VoyStick email harvest" }
-      - { path: ../repo-shows/ebike-safari/ebike-safari.yml, why: "Outdoor Voystick demo — DreamScape on wheels" }
+      - { path: ../repo-shows/ebike-safari/ebike-safari.yml, why: "Outdoor Voystick demo — StoryMaker on wheels" }
       - { path: ../apps/performance-space/pink-trombone-jam.yml, why: "Four-player vocal-tract choir — We Are the Weird" }
       - { path: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick, why: "The idea — not the warning stickers" }
       - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel theme — Will 1996 goal still unshipped" }

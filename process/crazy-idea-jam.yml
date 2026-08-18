@@ -236,7 +236,7 @@ ideas:
   ebike_safari:
     emoji: "🚴🎤"
     blurb: |
-      **DreamScape on wheels** — voice-first adventure navigation through a hidden story graph while
+      **StoryMaker on wheels** — voice-first adventure navigation through a hidden story graph while
       riding a Koga eBike (Bosch motor + Enviolo CVT), any camera for capture, phone-as-display-only,
       Apple SpeechAnalyzer for words. The rider never sees the graph; the LLM interprets intent and
       hops virtual focus across POIs. **Voystick is the primary navigation UI on the bike** — not a

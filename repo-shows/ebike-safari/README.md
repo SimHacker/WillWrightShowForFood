@@ -31,7 +31,7 @@
 
 ## What this is
 
-**eBike Safari** is DreamScape on wheels — geolocated scene cards, topical link layers, and adventure-style voice navigation **while riding**.
+**eBike Safari** is StoryMaker on wheels — geolocated scene cards, topical link layers, and adventure-style voice navigation **while riding**.
 
 Any camera captures POV for scene cards — phone, GoPro, action cam, whatever you ride with. Your phone on the handlebar is **display only** — map, Bosch stats, turn-by-turn. A mic and open-ear audio keep the conversation going; Apple SpeechAnalyzer listens. You talk; the LLM interprets; a hidden graph of story cards at real places updates; **"set destination"** commits routing through Bosch or Apple Maps.
 

@@ -13,7 +13,7 @@ Voice-controlled adventure navigation through a hidden graph of story cards at r
 
 ## Elevator pitch
 
-eBike Safari is **DreamScape on wheels**, descended through iLoci and Urban Safari: geolocated scene cards, topical link layers, adventure-style voice navigation while riding.
+eBike Safari is **StoryMaker on wheels**, descended through iLoci and Urban Safari: geolocated scene cards, topical link layers, adventure-style voice navigation while riding.
 
 Any camera captures POV for scene cards — phone, GoPro, action cam, whatever you ride with. Any phone on a handlebar mount is **display-only** — map, Bosch stats, turn-by-turn. A mic and open-ear audio carry the conversation; Apple SpeechAnalyzer drives hands-free control.
 
