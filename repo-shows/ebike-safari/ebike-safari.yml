@@ -52,9 +52,9 @@ lineage:
       what: "Interval — Mac Common Lisp + QuickTime hypermedia streams/dataflow (no pie menus)"
       room: ../../characters/don-hopkins/mediaflow-design-comments.md
       jam: ../../process/crazy-idea-jam.yml
-    - { era: "2008", project: iLoci, what: "Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms", video: "https://www.youtube.com/watch?v=03ddG3jWF98" }
-    - { era: "2009", project: Amsterdam Coffeeshops Layar, what: "Every coffeeshop as map layer; spreadsheet database", video: "https://www.youtube.com/watch?v=nG90XG3STz8" }
-    - { era: "2009", project: Bongo Bingo, what: "Foursquare bingo — bike GPS check-ins across coffeeshop card" }
+    - { era: "2008–09", project: Amsterdam Coffeeshops map → Layar, what: "Every coffeeshop as map layer; spreadsheet database — built during TomTom", video: "https://www.youtube.com/watch?v=nG90XG3STz8" }
+    - { era: "2008–09", project: Bongo Bingo, what: "Foursquare bingo — bike GPS check-ins across the coffeeshop card — during TomTom" }
+    - { era: "2008–09", project: iLoci, what: "Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms", video: "https://www.youtube.com/watch?v=03ddG3jWF98" }
     - { era: "2010–11", project: StoryMaker, what: "Branching stories; geolocated scenes; Facebook album import/export; iPad MapKit; Unity visualizer; voice-synth reading", video: "https://www.youtube.com/watch?v=_2yEHs_WLzQ" }
     - era: "2011"
       project: Urban Safari

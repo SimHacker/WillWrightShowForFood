@@ -31,9 +31,9 @@ We already built several versions of this idea (1995 DreamScape → 2008–2011 
 |-----|---------|-------------|
 | **1995** | [DreamScape](https://www.youtube.com/watch?v=5NytloOy7WM) | Kaleida ScriptX @ WWDC — rooms kiss-to-connect; plug-togetherable web objects; Director ↔ Netscape live switch. [Medium write-up](https://donhopkins.medium.com/1995-apple-world-wide-developers-conference-kaleida-labs-scriptx-dreamscape-demo-17-min-read) · [room doc](../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
 | **1996** | MediaFlow | Interval — Mac Common Lisp + QuickTime hypermedia streams (no pie menus). [design comments](../../characters/don-hopkins/mediaflow-design-comments.md) |
-| **2008** | [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) | Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms |
-| **2009** | [Amsterdam Coffeeshops Layar](https://www.youtube.com/watch?v=nG90XG3STz8) | Every coffeeshop as map layer; spreadsheet database |
-| **2009** | Bongo Bingo | Foursquare bingo — bike GPS check-ins across coffeeshop card |
+| **2008–09** | [Amsterdam Coffeeshops map → Layar](https://www.youtube.com/watch?v=nG90XG3STz8) | Every coffeeshop as map layer; spreadsheet database — built during TomTom |
+| **2008–09** | Bongo Bingo | Foursquare bingo — bike GPS check-ins across the coffeeshop card — during TomTom |
+| **2008–09** | [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) | Method of Loci on iPhone; pie-menu network; kiss-to-connect rooms |
 | **2010–11** | [StoryMaker](https://www.youtube.com/watch?v=_2yEHs_WLzQ) | Branching stories; geolocated scenes; Facebook album import/export; iPad MapKit; Unity visualizer; voice-synth reading |
 | **2011** | Urban Safari | Layar AR field cards; [Layar demo](https://www.youtube.com/watch?v=Db8KGNoeKHE); [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~13:11 import) |
 | **2011–14** | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | SFC Unity — songs on roads; per-song pies; Mario-cannon flick nav; LOD terrain. [Medium demo](https://donhopkins.medium.com/mediagraph-demo-a7534add63e5) |
