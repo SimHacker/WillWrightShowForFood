@@ -18,7 +18,7 @@ Robotics (Wave Glider ocean robots). Order of Canada; ACM Fellow; IEEE John von 
 ## Shared ground
 
 - **PDP-8 hotrod photo** — young Gosling, arms crossed, satisfied, in front of his DEC rack
-  ([`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)); contrast
+  ([`media/gosling-young-pdp8-hotrod.md`](media/gosling-young-pdp8-hotrod.md)); contrast
   [`../heinz-lemke/`](../heinz-lemke/README.md) PDP-7/Titan PIXIE distributed CAD
 - NeWS reunion — Gosling, Rosenthal, van Hoff, Densmore; [`send-code-not-commands`](../../process/trails/send-code-not-commands.md)
 - CS547 1995 Java talk — Don on camera; Terry's archive
@@ -54,7 +54,7 @@ glass-room timeshare — *his* iron. **On-air ask**, not a lecture:
 - Whose rig? What was running? What had just worked?
 - From toggling switches → Gosling Emacs → NeWS → Java — what carried?
 
-Sidecar + questions: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml)
+Photo + on-air questions: [`media/gosling-young-pdp8-hotrod.md`](media/gosling-young-pdp8-hotrod.md)
 
 Repo ethos (Hardware Hacker Builder audience): *Schematics in the repo. No gatekeeping.
 Bare-hands rig class welcome.* — [`../../process/vision-and-ambition.md`](../../process/vision-and-ambition.md)

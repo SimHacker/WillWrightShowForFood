@@ -224,7 +224,7 @@ audiences-if-you-stumbled-here:
   hardware-hacker-builder:
     namesake_examples: [Steve_Wozniak, James_Gosling]
     hook: "Schematics in the repo. No gatekeeping. Bare-hands rig class welcome."
-    exemplar: characters/james-gosling/media/gosling-young-pdp8-hotrod.yml
+    exemplar: characters/james-gosling/media/gosling-young-pdp8-hotrod.md
     participate: "Show your rig. Compare taste and power across automation levels."
   publishers_and_editorial:
     hook: "Publication network — graph of shows, not a flat feed. Each node is a CARD + README + optional pitch."

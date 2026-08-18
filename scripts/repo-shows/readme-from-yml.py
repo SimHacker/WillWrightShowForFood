@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Generate repo-show README.md front pages from primary YAML (lazy prototype promotion)."""
+"""Bootstrap empty repo-show README.md stubs from YAML — bootstrap only.
+
+DEPRECATED for human facades. Hand-author show READMEs (images, prose, links).
+This script only creates a README when none exists. It refuses to overwrite
+READMEs marked <!-- hand-authored --> or lacking the script stub marker
+"machine reading (seed spec)" unless --force is passed — and --force still
+refuses hand-authored files.
+
+See planning/facade-cleanup-todo.md
+"""
 
 from __future__ import annotations
 
@@ -382,10 +391,28 @@ def extract_show(data: dict[str, Any], show_dir: Path, yml_path: Path | None, ym
     return "\n".join(lines)
 
 
+HAND_AUTHORED_MARKER = "<!-- hand-authored -->"
+
+
+def is_hand_authored(readme_text: str) -> bool:
+    return HAND_AUTHORED_MARKER in readme_text
+
+
+def is_script_stub(readme_text: str) -> bool:
+    return "machine reading (seed spec)" in readme_text
+
+
 def generate_readme(show_dir: Path, force: bool = False) -> bool:
     readme = show_dir / "README.md"
-    if readme.exists() and not force:
-        return False
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8")
+        if is_hand_authored(text):
+            return False
+        if not force:
+            return False
+        if force and not is_script_stub(text):
+            print(f"SKIP {show_dir.name}: README exists and is not a script stub (hand-author?)", file=sys.stderr)
+            return False
     yml_path = primary_yml(show_dir)
     if yml_path:
         data, yml_text = load_yaml(yml_path)

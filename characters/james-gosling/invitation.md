@@ -45,7 +45,7 @@ Sun interview in 1990; he rewrote the NeWS interpreter. That's a reunion beat al
 - **PDP-8 hotrod muscle car** — I love this photo. Young you, arms crossed, **satisfied**, in front
   of a fully loaded DEC rig — switches, dual DECtape, patch bays. Not a glass-room terminal; *your*
   iron. **I'd love to ask you about it on air:** whose rig, what you were running, what had just
-  worked. [`media/gosling-young-pdp8-hotrod.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) · Repo ethos:
+  worked. [`media/gosling-young-pdp8-hotrod.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.md) · Repo ethos:
   *Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.*
 - **Andrew + Rosenthal** — CMU window system before Sun; bridge to NeWS and later X11/ICCCM world.
 - **Alvey 1985 — Methodology of Window Management** — you and Rosenthal **published and
@@ -93,7 +93,7 @@ NeWS reunion can be one long episode or a short series — your call.
 | **Show seed** (segments · pair w/ van Hoff) | [`repo-shows/james-gosling/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/james-gosling/README.md) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/ideas.md) |
 | **Alvey 1985 — SunDew + Andrew papers** | [`window-systems-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/window-systems-lineage.md) |
-| **PDP-8 hotrod photo + sidecar** | [`media/gosling-young-pdp8-hotrod.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.yml) |
+| **PDP-8 hotrod photo** | [`media/gosling-young-pdp8-hotrod.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/media/gosling-young-pdp8-hotrod.md) |
 | **NeWS trail** | [`send-code-not-commands`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/send-code-not-commands.md) |
 | **The lander comment thread** | [`sources/2026-07-31-linkedin-retirement-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/2026-07-31-linkedin-retirement-thread.md) |
 | **Your redisplay paper (1981)** | [`sources/EmacsRedisplayAlgorithm.pdf`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/EmacsRedisplayAlgorithm.pdf) |

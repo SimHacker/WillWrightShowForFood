@@ -10,7 +10,7 @@ labeled 0 and 7), patch bays and modules stacked behind him. Warm faded print gr
 light. The expression of someone who already knows what the iron can do — the same through-line as
 **Gosling Emacs**, **NeWS**, and **Java**: sit at the console, write the language, ship the system.
 
-Metadata: [`media/gosling-young-pdp8-hotrod.yml`](media/gosling-young-pdp8-hotrod.yml) ·
+Metadata: [`media/gosling-young-pdp8-hotrod.md`](media/gosling-young-pdp8-hotrod.md) ·
 contrast with Cambridge **PDP-7/Titan** PIXIE: [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
 
 **Lineage:** Gosling Emacs → NeWS → Java  

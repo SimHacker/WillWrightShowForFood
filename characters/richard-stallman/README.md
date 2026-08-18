@@ -26,4 +26,4 @@ GNU founder; free software movement; GPL. Invitation: **send_now**.
 Related (optional deep dives): Tech Square / rage warehouse
 [`../don-hopkins/media/metropolitan-rage-warehouse-mit.yml`](../don-hopkins/media/metropolitan-rage-warehouse-mit.yml) ·
 Hobee's Gosling lunch
-[`../james-gosling/media/gosling-hobees-lunch.yml`](../james-gosling/media/gosling-hobees-lunch.yml).
+[`../james-gosling/media/gosling-hobees-lunch.md`](../james-gosling/media/gosling-hobees-lunch.md).

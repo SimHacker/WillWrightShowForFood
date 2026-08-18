@@ -56,7 +56,7 @@ The long arc since: Will and Don kept returning to the same question — when do
 - **[Terry Winograd](../repo-shows/terry-winograd/)** — open seminar as curriculum; [CS547 archive recovery](../repo-shows/terry-winograd/) saves the videos that include Will's talk.
 - **[Internet Archive](https://archive.org/)** and **[Brewster Kahle](https://en.wikipedia.org/wiki/Brewster_Kahle)** — mirrorable culture; see the [archive and provenance trail](trails/archive-and-provenance.md).
 - **[The Long Now](https://longnow.org/)** — Brian Eno's coinage; 10,000-year thinking; the [**2006 *Playing with Time* talk**](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) also seeded [open-source SimCity → Micropolis](../characters/will-wright/sources/simcity-open-source-saga/README.md). See [`long-now-and-later`](#long-now-and-later).
-- **Hacker/builder culture** — show the schematic, ship the board. Exemplar: [James Gosling](../characters/james-gosling/) young with a [PDP-8 hotrod](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml).
+- **Hacker/builder culture** — show the schematic, ship the board. Exemplar: [James Gosling](../characters/james-gosling/) young with a [PDP-8 hotrod](../characters/james-gosling/media/gosling-young-pdp8-hotrod.md).
 
 Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS.md) · [cs547-seminar-lineage](trails/cs547-seminar-lineage.md)
 
@@ -234,7 +234,7 @@ Permanent, attributed, forkable record — talk lineage from 1996 forward. This 
 
 Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
 
-→ [Retro doorway](entryways/retro.md) · [RETROCOMPUTING challenge](challenges/retrocomputing-drive.md) · [Gosling PDP-8 hotrod artifact](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml)
+→ [Retro doorway](entryways/retro.md) · [RETROCOMPUTING challenge](challenges/retrocomputing-drive.md) · [Gosling PDP-8 hotrod](../characters/james-gosling/media/gosling-young-pdp8-hotrod.md)
 
 ### Publishers and platforms
 
@@ -251,6 +251,7 @@ Publication **network** — graph of shows, not a flat feed. We are not pitching
 - **No** requirement to use AI — and **no** ban on AI either.
 - **Not** a finished product — an origin point, not launch day.
 - **Not** blocked on the guest: [Will Wright accepted](../characters/will-wright/invitation.md) (July 2026); kickoff confirmed; air on his schedule.
+- **Not** linking humans to yaml girders — visitors read **`.md` facades** (images, prose, links). Girders (`.yml`) are for machines, MOOLLM, and CI. Hand-author markdown; do not script-generate human pages when a readable instance is cheaper and better. ([Facade cleanup plan](../planning/facade-cleanup-todo.md))
 
 ---
 
@@ -303,8 +304,8 @@ Three layers. We do not dress up emptiness.
 
 | Layer | What you see |
 |-------|----------------|
-| **Facade** | [README.md](../README.md), show READMEs, this file, [crazy-idea-jam.md](crazy-idea-jam.md) — warm, readable, Flower Child energy |
-| **Girder** | YAML indexes, schemas, SHOW.yml, CARD.yml, git history |
+| **Facade** | [README.md](../README.md), show READMEs, this file, [crazy-idea-jam.md](crazy-idea-jam.md) — warm, readable, Flower Child energy. **Link humans to `.md`**, not yaml girders. |
+| **Girder** | YAML indexes, schemas, SHOW.yml, CARD.yml, git history — machine reading; footnote only in public prose |
 | **Slab** | `pnpm verify`, GitHub Actions, [SETUP.md](../SETUP.md) — passes or it doesn't |
 
 If it is not in the repo yet, the yaml says **seed** or **roadmap**. No launch-day fiction.
