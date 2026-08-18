@@ -203,7 +203,9 @@ Amsterdam canal eBike loop on Koga + Enviolo; SpeechAnalyzer voice loop (zero sc
 
 **Field test:** 30-minute ride WER + wind — a benchmark nobody else runs.
 
-**Belief gate:** Same Spore GDC hinge — believe the weird idea is buildable on today's stack. [revisit-weird-outside-the-box](https://youtu.be/ofA6YWVTURU?t=3657)
+**Belief gate:** Same Spore GDC hinge — believe the weird idea is buildable on today's stack. Will, closing the [2005 Spore GDC talk (1:00:57)](https://youtu.be/ofA6YWVTURU?t=3657):
+
+> When I look back on this idea, the biggest obstacle I truly had was making myself believe that we could build the game. My own imagination was the biggest bottleneck. Once I truly believed that this game was buildable, it proved to be actually quite easy to con— I mean, to persuade the rest of my staff and the executives and everything that we could do it. So I'd encourage all of you: if you've got some totally weird idea that is just so far outside the box that you think there's no way that would work — go back occasionally and revisit those ideas. Because you just never know where they might lead.
 
 ---
 

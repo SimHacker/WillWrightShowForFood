@@ -39,6 +39,14 @@ You never see the graph. You ride Amsterdam (or anywhere), and the world becomes
 
 This seed is the **product layer** on [Urban Safari LIVE](../urban-safari-live/README.md) — the Repo Show where Don hops real streets and drops geotagged scene cards into git. Same participatory itch as **StoryMaker**, **Urban Safari**, and [**Bar Karma**](https://en.wikipedia.org/wiki/Bar_Karma) at Stupid Fun Club: audience-authored stories at real places — rebuilt with open maps, FIT rides, and MOOLLM instead of a dead MySQL server.
 
+Why keep revisiting a thirty-year-old weird idea? Will answered that himself, closing the 2005 Spore GDC talk:
+
+> A lot of the games I've worked on, I've always had obstacles — usually trying to convince other people it's a good idea, or it'd be sellable, or whatever. When I look back on this idea, the biggest obstacle I truly had was making myself believe that we could build the game. My own imagination was the biggest bottleneck. Once I truly believed that this game was buildable, it proved to be actually quite easy to con— I mean, to persuade the rest of my staff and the executives and everything that we could do it.
+>
+> So I'd encourage all of you: if you've got some totally weird idea that is just so far outside the box that you think there's no way that would work — go back occasionally and revisit those ideas. Because you just never know where they might lead.
+>
+> — Will Wright, [*The Future of Content*, GDC 2005, 1:00:57](https://youtu.be/ofA6YWVTURU?t=3657)
+
 **Read the full product spec:** [**ebike-safari.md**](ebike-safari.md) — human-readable edition of everything in the yaml girder.
 
 ---
