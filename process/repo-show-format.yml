@@ -1,5 +1,5 @@
 # REPO SHOW FORMAT — canonical definition
-# Markup: repo-show-format.md (generated — pnpm run facades) | skill: ../skills/repo-show/
+# Markup: repo-show-format.md (hand-authored — edit md; sync girder) | skill: ../skills/repo-show/
 
 meta:
   id: repo-show-format

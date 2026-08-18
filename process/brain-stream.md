@@ -1,163 +1,114 @@
-<!-- GENERATED from `process/brain-stream.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:53df24da2220432d -->
-
 # Brain stream
 
-> **Girder:** [`brain-stream.yml`](brain-stream.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
+> **Girder:** [`brain-stream.yml`](brain-stream.yml) · **App seed:** [`../apps/stream-gateway/`](../apps/stream-gateway/README.md) · **Format:** [repo-show-format.md](repo-show-format.md) · **Pairs with:** [Manual Transmission](manual-transmission.md)
 
-## Pitch
+**Tagline:** *Spy on my brain thinking — prompts, shifts, attachments as repo URLs*
 
-Tail Cursor session events into one slippery event bus. OBS Browser Source overlay for
-Twitch; throttled summaries to YouTube Live Chat; full scrollable page for RTFR crowd.
-Collapsed = prompt + model badge + cost ticker; expand = thinking + tools + GH links.
-Pairs with Manual Transmission — the tachometer the audience watches.
+Tail Cursor session events into one slippery event bus. OBS Browser Source overlay for Twitch; throttled summaries to YouTube Live Chat; full scrollable page for the RTFR crowd. Collapsed = prompt + model badge + cost ticker; expand = thinking + tools + GitHub links. Pairs with [Manual Transmission](manual-transmission.md) — the tachometer the audience watches.
 
-## Tagline
+**Status:** seed — build phases drafted; app specs in [`stream-gateway/`](../apps/stream-gateway/)
 
-*Spy on my brain thinking — prompts, shifts, attachments as repo URLs*
+---
 
-## Meta
+## On this page
 
-| Key | Value |
-|-----|-------|
-| **id** | brain-stream |
-| **status** | seed |
-| **app_seed** | ../apps/stream-gateway/ |
+| Read | In one line |
+|------|-------------|
+| [When it runs](#when-it-runs) | During Twitch — also before async PRs and after harvest |
+| [Architecture](#architecture) | One schema, many subscribers |
+| [Overlay UX](#overlay-ux) | Collapsed teaser · expanded forensics |
+| [Privacy](#privacy) | deep-snitch before the bus; strip secrets |
+| [Build phases](#build-phases) | Ship incrementally — zero model cost until resummary |
+| [Navigate](#navigate) | Related specs and skills |
 
-## Repo Show Clock
+---
 
-- **when:** during_Twitch
-- **see:** repo-show-format.yml#how-it-runs
-- **also:**
-  - before_async_PRs
-  - after_harvest_PRs
+## When it runs
+
+**Repo Show clock:** `during_Twitch` — see [how it runs](repo-show-format.md#how-it-runs).
+
+Also relevant: before async PRs · after harvest PRs (forensics gate before replay export).
+
+---
 
 ## Architecture
 
-- **principle:** Tight integration, slippery coupling — one schema, many subscribers
+**Principle:** tight integration, slippery coupling — one schema, many subscribers.
+
 ### Sources
 
-- **cursor_mirror_live:**
-  - status: designed
-  - see: SimHacker/moollm/skills/cursor-mirror/designs/IMPROVEMENT-MAP.md#r5-live-daemon--watch-mode
-  - what: Poll state.vscdb + agent-transcripts JSONL → new bubbles, thinking, tools
-- **cursor_lens_proxy:**
-  - status: optional
-  - note: Network proxy for token/cost firehose — complementary, not sole brain feed
-  - see: SimHacker/moollm/skills/cursor-mirror/reference/assimilated/HAMEDMP-CURSORLENS.yml
-- **github:**
-  - what: Commit webhooks → thoughtful-commitment links on bus
+| Source | What |
+|--------|------|
+| **cursor-mirror live** | Poll `state.vscdb` + agent-transcripts JSONL → new bubbles, thinking, tools ([IMPROVEMENT-MAP](https://github.com/SimHacker/moollm/blob/main/skills/cursor-mirror/designs/IMPROVEMENT-MAP.md#r5-live-daemon--watch-mode)) |
+| **CursorLens proxy** | Optional token/cost firehose — complementary, not sole brain feed |
+| **GitHub** | Commit webhooks → [thoughtful-commitment](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) links on bus |
 
 ### Bus
 
-- **transport:**
-  - SSE
-  - WebSocket
-- **implement_in:** apps/stream-gateway/
+Transport: SSE + WebSocket · implement in [`apps/stream-gateway/`](../apps/stream-gateway/)
 
-- **sinks:**
-  - obs_overlay: Transparent browser source — /overlay/brain
-  - twitch_chat: EventSub bot — !prompt !thinking !cost !rig
-  - youtube_chat: Throttled summaries only — API quotas
-  - web_full: /brain — scrollable, expandable, resummarized
+### Sinks
 
-## Event Schema
+| Sink | Route / behavior |
+|------|------------------|
+| **OBS overlay** | Transparent browser source — `/overlay/brain` |
+| **Twitch chat** | EventSub bot — `!prompt` `!thinking` `!cost` `!rig` |
+| **YouTube chat** | Throttled summaries only — API quotas |
+| **Web full** | `/brain` — scrollable, expandable, resummarized |
 
-- **types:**
-  - prompt
-  - thinking
-  - tool_call
-  - tool_result
-  - assistant_chunk
-  - commit
-  - shift
-  - summary
-  - branch_fork
-  - branch_compare
-  - gear_shift
-  - runbook_start
-  - design_mode
-### Fields
+**Event types:** prompt · thinking · tool_call · tool_result · assistant_chunk · commit · shift · summary · branch_fork · branch_compare · gear_shift · runbook_start · design_mode
 
-- **composer_id:** string
-- **model:** string
-- **ts:** iso8601
-- **visibility:**
-  - overlay
-  - chat
-  - full
-  - redacted
-### Payload
+Each event carries: composer id · model · timestamp · visibility (`overlay` / `chat` / `full` / `redacted`) · payload (text, optional rolling summary, GitHub file attachments, spend).
 
-- **text:** string
-- **summary:** optional rolling resummary for chat
-### Attachments
+App specs: [`SPEC.yml`](../apps/stream-gateway/SPEC.yml) · [`cursor-tap.yml`](../apps/stream-gateway/cursor-tap.yml) · [`overlay-viewer.yml`](../apps/stream-gateway/overlay-viewer.yml)
 
-- {"kind": "github_file", "path": "repo-relative path", "url": "public blob URL"}
+---
 
-- **spend:**
-  - tokens_in: number
-  - tokens_out: number
-  - cost_usd: number
+## Overlay UX
 
+| Mode | Shows |
+|------|-------|
+| **Collapsed** | Latest prompt · model badge · cost ticker · thinking teaser |
+| **Expanded** | Full thinking · tool names · GitHub links · shift timeline |
 
+**Resummary:** mini model on interval or bubble close — chat gets a paragraph; `/brain` keeps the full log.
 
-## Overlay Ux
-
-- **collapsed:**
-  - latest_prompt
-  - model_badge
-  - cost_ticker
-  - thinking_teaser
-- **expanded:**
-  - full_thinking
-  - tool_names
-  - github_links
-  - shift_timeline
-- **resummary:** Mini model on interval OR on bubble close — chat gets paragraph, /brain keeps log
+---
 
 ## Privacy
 
-- **before_bus:**
-  - deep_snitch
-  - trekify
-  - stream_mode_toggle
-- **after_run:** Post-stream: deep-snitch + cursor-mirror forensics on the session before replay,
-harvest, or orchestration gold export. See ai-offs.yml#post-run-analysis.
-- **model_branching:**
-  - see: model-branching.yml
-  - live: Overlay shows fork events — Branch A vs Branch B on tachometer
-- **stream_mode:**
-  - delay_thinking_seconds: optional
-  - strip_private_paths: yes
-  - no_env_no_secrets: yes
-- **subject_rights:** ../schemas/portrayal-standards.yml
+Before anything hits the bus: [deep-snitch](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) · trekify · stream-mode toggle.
 
-## Build Phases
+| Control | Detail |
+|---------|--------|
+| **Stream mode** | Optional delay on thinking · strip private paths · no env, no secrets |
+| **Model branching** | Overlay shows fork events — Branch A vs Branch B on tachometer ([model-branching.md](model-branching.md)) |
+| **After run** | Post-stream forensics before replay, harvest, or orchestration gold export — see [AI-offs post-run analysis](ai-offs.md) |
+| **Subject rights** | [portrayal-standards.yml](../schemas/portrayal-standards.yml) |
 
-- {"id": 0, "ship": "Tail agent-transcripts JSONL → local SSE → static HTML overlay", "model_cost": "zero"}
-- {"id": 1, "ship": "cursor-mirror watch --live + redact filter", "model_cost": "zero"}
-- {"id": 2, "ship": "apps/stream-gateway — /overlay/brain + /brain", "model_cost": "zero"}
-- {"id": 3, "ship": "Twitch bot + GitHub permalink resolver", "model_cost": "zero"}
-- {"id": 4, "ship": "Rolling resummary for chat", "model_cost": "mini_on_interval"}
-- {"id": 5, "ship": "YouTube chat bot + ai-offs scoreboard tile", "model_cost": "mini"}
-- {"id": 6, "ship": "Post-run forensics hook — deep-snitch gate before replay export", "model_cost": "zero", "see": "ai-offs.yml#post-run-analysis"}
+---
 
-## Ties to
+## Build phases
 
-| Link |
-|------|
-| [`manual-transmission.yml`](manual-transmission.yml) |
-| [`ai-offs.yml`](ai-offs.yml) |
-| [`model-branching.yml`](model-branching.yml) |
-| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) |
-| [`../apps/stream-gateway/GLANCE.yml`](../apps/stream-gateway/GLANCE.yml) |
-| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
+| Phase | Ship | Model cost |
+|-------|------|------------|
+| 0 | Tail agent-transcripts JSONL → local SSE → static HTML overlay | zero |
+| 1 | cursor-mirror `watch --live` + redact filter | zero |
+| 2 | stream-gateway — `/overlay/brain` + `/brain` | zero |
+| 3 | Twitch bot + GitHub permalink resolver | zero |
+| 4 | Rolling resummary for chat | mini on interval |
+| 5 | YouTube chat bot + AI-offs scoreboard tile | mini |
+| 6 | Post-run forensics hook — deep-snitch gate before replay export | zero |
 
-## Related
+---
 
-| Link |
-|------|
-| [`repo-show-format.yml`](repo-show-format.yml) |
-| [`showmaker-network.yml#competitions`](showmaker-network.yml) |
+## Navigate
+
+| Destination | Why |
+|-------------|-----|
+| [Manual Transmission](manual-transmission.md) | Spend CSV piss test + overlay pairing |
+| [AI-offs](ai-offs.md) | Post-run analysis · scoreboard |
+| [Model branching](model-branching.md) | Fork worlds at any bubble |
+| [Micropolis AI Drag Race](../repo-shows/micropolis-ai-drag-race/README.md) | Flagship game-show slot |
+| [cursor-mirror skill](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | Session archaeology |
+| [ShowMaker network](showmaker-network.md) | Competitions index |

@@ -116,6 +116,25 @@ next to Self's multiple parents.
 
 Shorter call, written Q&A into the repo, co-author a skill, or "not now" — all honored.
 
+## Option D — Async: 2014 Lang.NEXT revisits (two talks, same conference)
+
+**Easier than a new video.** Don re-listens to two 2014 episodes; you answer **whatever you choose**, on your schedule.
+
+| Talk | What |
+|------|------|
+| **[Stroustrup × Hewitt × Ungar](sources/2014-stroustrup-hewitt-ungar-conversation.md)** | Shared memory vs messages, locks, actors, **who inspired you** |
+| **[Korz — Dancing with Symmetry](sources/2014-lang-next-korz-dancing-with-symmetry.md)** | Subjective programming in context — multi-dimensional dispatch, progressive disclosure ([Microsoft Learn video](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context)) |
+
+Don writes timestamped listening notes and questions; you reply async; Don weaves **2014 talk + 2026 follow-up** into long-form articles. Optional: Bjarne, Carl's circle, or Korz co-authors chime in.
+
+**Index:** [`sources/2014-async-revisits-index.md`](sources/2014-async-revisits-index.md) ·
+**Scaffolds:** [Stroustrup/Hewitt](sources/2026-08-stroustrup-hewitt-followup-article-scaffold.md) · [Korz](sources/2026-08-korz-dancing-with-symmetry-article-scaffold.md) ·
+**Correspondence:** [`sources/2026-08-correspondence-facetime-and-async-pitch.md`](sources/2026-08-correspondence-facetime-and-async-pitch.md)
+
+Framing: Will Wright's GDC 2005 close — [*revisit those weird old ideas*](https://youtu.be/ofA6YWVTURU?t=3657) when the stack finally catches up. The Korz talk connects directly to your Oct 2025 pointer and [`korz-prime.md`](korz-prime.md).
+
+This is TicketPR-shaped — written participation, zero live pressure, honor your *no fire-hose* preference.
+
 ---
 
 **Format:** Remote is fine; in-person if we're ever in the same city. **Zero homework — as much
@@ -135,11 +154,12 @@ Shorter call, written Q&A into the repo, co-author a skill, or "not now" — all
 | **LinkedIn Self-manual thread (archived)** | [`sources/2026-07-linkedin-self-manual-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/2026-07-linkedin-self-manual-thread.md) |
 | **North star doc** | [`reflecting-on-self.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/reflecting-on-self.md) |
 | **Your guest page** | [`characters/david-ungar/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-ungar) |
+| **2014 Lang.NEXT async revisits** | [`sources/2014-async-revisits-index.md`](sources/2014-async-revisits-index.md) — Stroustrup/Hewitt panel + [Korz talk](sources/2014-lang-next-korz-dancing-with-symmetry.md) |
 | **The whole project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).
 
-**Your response:** yes (solo / reunion / both / something else), later, too busy, or no — all
+**Your response:** yes (solo / reunion / async 2014 follow-up / both / something else), later, too busy, or no — all
 honored gracefully. There's no debt here, only an open door if a show sounds like fun.
 
 It would be a joy to build something useful with you on air — and to say plainly, on the record,

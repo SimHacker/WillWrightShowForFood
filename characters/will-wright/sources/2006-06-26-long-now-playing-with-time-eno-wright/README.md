@@ -54,7 +54,7 @@ family as Eno's observer completing generative work.
 - Wind chimes / Aeolian harp as first generative music; pitch fixed, timing "random."
 - Eno releases at **half speed** — composes at double speed, slows for release; composers over-fill,
   listeners want less. Will: release the fast versions. Eno: **"Amphetamine Ambient."** Will riffs
-  **acid jazz** (verify on audio). Flagship clip: [`short-form-clips.yml`](short-form-clips.yml#amphetamine-ambient-acid-jazz).
+  **acid jazz** (verify on audio). Flagship clip: [`short-form-clips.md`](short-form-clips.md#amphetamine-ambient-acid-jazz).
 
 ### III — Generative systems tour (10:00–27:00)
 

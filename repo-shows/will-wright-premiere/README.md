@@ -1,3 +1,5 @@
+<!-- hand-authored -->
+
 # A Repo Show with Will Wright
 
 *Sniff:* [`CARD.yml`](CARD.yml) · [`GLANCE.yml`](GLANCE.yml) · [`ROOM.yml`](ROOM.yml) · [`SIMULATION.yml`](SIMULATION.yml)

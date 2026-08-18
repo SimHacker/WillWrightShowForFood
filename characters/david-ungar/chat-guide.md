@@ -7,6 +7,7 @@ Deep background: `[ideas.md](ideas.md)` · `[reflecting-on-self.md](reflecting-o
 
 - **David Ungar.** Fast-forward standing offer: "tell me when I'm
 explaining something you already know."
+- **No fire-hose.** Aug 2026: David thanked Don for *not* fire-hosing — prefer small batches, async written Q&A ([Option D](invitation.md)).
 - Show, don't slide. Let him poke — ARK energy.
 - Ask questions back; his questions are the best part.
 - Crash = laugh, grep, keep going. Offer a recorded rambling demo later.

@@ -1,291 +1,160 @@
-<!-- GENERATED from `process/manual-transmission.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:862f3b6c4dadb541 -->
-
 # Manual Transmission
 
-> **Girder:** [`manual-transmission.yml`](manual-transmission.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
+> **Girder:** [`manual-transmission.yml`](manual-transmission.yml) · **Format:** [repo-show-format.md#game-show-formats](repo-show-format.md#game-show-formats) · **Overlay:** [brain-stream.md](brain-stream.md) · **Harvest:** [orchestration-gold.md](orchestration-gold.md)
 
-## Pitch
+**Tagline:** *What's the smallest model — or fewest tokens — you can code the spec with?*
 
-Real programmers, real tools, real models, real specs — a FUN reason to document how you
-orchestrate LLMs. Submit your Cursor spend CSV like a piss test: voluntary, verified,
-the ref that doesn't lie. We are facilitating circumstances that collect invaluable data
-for training models to orchestrate multiple LLMs. This shit is GOLD.
+Real programmers, real tools, real models, real specs — a FUN reason to document how you orchestrate LLMs. Submit your Cursor spend CSV like a piss test: voluntary, verified, the ref that doesn't lie. We are facilitating circumstances that collect invaluable data for training models to orchestrate multiple LLMs. This shit is GOLD.
 
-## Tagline
+**Contest prompt:** same spec CARD for everyone. Compete on as many dimensions as you dare — measurable and subjective — at the same time. Like a Rubik's cube: many faces, one solve, twist any axis you want to optimize.
 
-*What's the smallest model — or fewest tokens — you can code the spec with?*
+---
 
-## Meta
+## On this page
 
-| Key | Value |
-|-----|-------|
-| **id** | manual-transmission |
-| **status** | seed |
-| **answer** | Declare class, prove with spend, score on many rubrics at once, let Slats werk. |
+| Read | In one line |
+|------|-------------|
+| [How a round works](#how-a-round-works) | Bid → ship branch → multi-rubric score → merge or sashay |
+| [Spend CSV piss test](#spend-csv-piss-test) | Voluntary proof — spreadsheet doesn't lie |
+| [Rig classes](#rig-classes) | Artisanal to orchestrated — declare, don't exclude |
+| [Scoring](#scoring) | Rubric + experiment + Slats + spreadsheet |
+| [Judges](#judges) | Slats werk · MOOLLM rubric · human taste · CSV ref |
+| [Post-run forensics](#post-run-forensics) | deep-snitch before public harvest |
+| [Navigate](#navigate) | Related formats and skills |
 
-**Contest Prompt:** What's the smallest model — or fewest tokens — you can code the spec with?
+---
 
-Same spec CARD for everyone.
-Compete on as many dimensions as you dare — measurable and subjective — at the same time.
-Like a Rubik's cube: many faces, one solve, twist any axis you want to optimize.
+## How a round works
 
-## Orchestration Gold
+**Duration:** 5–10 min mini slot or full [Micropolis AI Drag Race](../repo-shows/micropolis-ai-drag-race/README.md) rotation.
 
-- **canonical:** orchestration-gold.yml
-- **what:** Competitive runs produce labeled trajectories. Steve Kommrusch (Leela, PhD CSU 2022)
-showed GitHub bug-fix commits train repair models; we extend with thoughtful-commitment
-+ cursor-mirror since-last-commit — WHY, which model, which tools, audit questions.
-- **why_fun_matters:** People submit honest rig reports when the game is werk, not homework
-- **artifacts:**
-  - Cursor spend CSV (required — the piss test)
-  - cursor-mirror composer timeline + since-last-commit slice
-  - thoughtful-commitment commit chain (thinking-ref links)
-  - rigs/*.rig.yml declared shift map
-  - optional brain-stream event log
-  - post_run deep-snitch clean bill (before public export)
-- **ethics:** Opt-in, public repo, redact secrets — see brain-stream.yml#privacy
-- **harvest:** Anonymized aggregates → MOOLLM experiment runs + future skills/ packages
-- **model_branching:** model-branching.yml
+| Step | What |
+|------|------|
+| 1 | Drop spec CARD — same for everyone |
+| 2 | Declare bids — model tier + token budget + rig class |
+| 3 | Start engines — audience chants **CODE THAT SPEC!!!!!** |
+| 4 | Ship branch — merge-ready PR |
+| 5 | Multi-rubric score — many faces at once |
+| 6 | Merge or sashay |
+| 7 | Post-run forensics — before publishing artifacts |
 
-## Spend Csv Piss Test
+**Overlay** ([brain stream](brain-stream.md)): current prompt · model badge · cost ticker · shift events · GitHub attachment links.
 
-- **metaphor:** Submitting your Cursor spend export is like taking a piss test — voluntary proof
-- **what_it_proves:**
-  - model_tier_timeline
-  - token_totals
-  - bid_honesty
-  - shift_count
-  - cost_to_ship
-- **ref:** Spreadsheet doesn't lie. Misbid and the audience is the ref.
-- **see:** ai-offs.yml#cursor-mirror
+**Bid examples:**
 
-## Multi Rubric
+- *I can code that spec on Composer Fast — 50k tokens, zero shifts.*
+- *GPT-5 Mini scaffold, one Opus hairpin for the schema — 120k total.*
+- *Zero tokens — artisanal only; my model is a mechanical pencil.*
+- *Bull ride: one mini, four retries, still under 80k — hold my chaps.*
 
-- **metaphor:** Rubik's cube — many faces scored at once; no single-axis winner required
-### Moollm Skills
+---
 
-- **rubric:**
-  - repo: https://github.com/SimHacker/moollm/tree/main/skills/rubric
-  - role: Define criteria + weights; SCORE outputs; RUBRIC-BRIDGE qualitative → quantitative
-  - credits: Mike Gallaher
-- **experiment:**
-  - repo: https://github.com/SimHacker/moollm/tree/main/skills/experiment
-  - role: SIMULATE → EVALUATE → ITERATE → ANALYZE — compare runs, configs, model lanes
-  - credits: Mike Gallaher lineage via evaluator + rubric; live proof Fluxx Championship
+## Spend CSV piss test
 
-- **how:**
-  - Host or AI judge CREATE rubric from spec CARD + declared rig class
-  - SCORE each contestant on N criteria simultaneously — weights explicit
-  - experiment COMPARE runs across contestants or across your own retries
-  - Slats judges subjective faces; spreadsheet judges measurable faces
-### Example Axes
+Submitting your Cursor spend export is like taking a piss test — **voluntary proof**.
 
-- **measurable:**
-  - cost_to_ship
-  - smallest_model
-  - shift_smoothness
-  - bid_honesty
-  - wall_clock
-  - spec_compliance
-  - merge
-- **subjective:**
-  - eleganza
-  - taste
-  - humor
-  - constructionist_generosity
-  - shift_feel
-  - narration
-- **aesthetic:**
-  - brain_stream_readability
-  - rig_costume
-  - commit_lip_sync
+| Proves | How |
+|--------|-----|
+| Model tier timeline | Spend breakdown timestamps |
+| Token totals | CSV aggregates |
+| Bid honesty | Bid vs actual — misbid and the audience is the ref |
+| Shift count | Gear changes on the tachometer |
+| Cost to ship | Tokens + dollars + wall-clock |
 
-- **note:** Winner per axis optional — crown 'best mini lane', 'best stick shift', 'best werk' separately
+See [AI-offs · cursor-mirror](ai-offs.md) for forensics workflow.
 
-## How It Works
+---
 
-- **host_drops:** One spec CARD — yaml stub, issue, guest throw-down — identical for all lanes
-### Contestants
+## Rig classes
 
-- **declare:**
-  - rig_class
-  - minimum_model_tier
-  - max_tokens_or_spend_bid
-  - shift_count_or_stick_shift_map
-  - which_rubric_axes_you_optimize_for
-- **prove:**
-  - Cursor spend CSV export
-  - cursor-mirror composer id + timeline
-  - thoughtful-commitment commit SHAs
-  - merged PR branch
+Same track — declare class; compete fair within it.
 
-- **audience:**
-  - chant: CODE THAT SPEC!!!!!
-  - ref: Misbid vs spend CSV — thumbs, chat, PR comments
-### Overlay
+| Class | Play |
+|-------|------|
+| **artisanal** | Zero tokens — smallest model is you |
+| **single gear mini** | One cheap/fast model, no shifts — purity play |
+| **stick shift** | Every shift = commit; runbooks span many prompts ([stick-shift-protocol.md](stick-shift-protocol.md)) |
+| **bull ride** | One tier through hallucination hairpins — retries are costume |
+| **orchestrated** | Many models + MCP — judged on efficiency per complexity, not raw spend |
 
-- **see:** brain-stream.yml
-- **shows:**
-  - current_prompt
-  - model_badge
-  - cost_ticker
-  - shift_events
-  - github_attachment_links
+Full rig spectrum: [repo-show-format.md#rig-spectrum](repo-show-format.md#rig-spectrum)
 
-
-## Bid Examples
-
-- I can code that spec on Composer Fast — 50k tokens, zero shifts.
-- GPT-5 Mini scaffold, one Opus hairpin for the schema — 120k total.
-- Zero tokens — artisanal only; my model is a mechanical pencil.
-- Bull ride: one mini, four retries, still under 80k — hold my chaps.
-
-## Rig Classes Same Track
-
-- **artisanal:** Zero tokens — smallest model is you
-- **single_gear_mini:** One cheap/fast model, no shifts — purity play
-- **stick_shift:**
-  - see: stick-shift-protocol.yml
-  - note: Every shift = commit; runbooks span many prompts; design mode → descent
-- **bull_ride:** One tier through hallucination hairpins — retries are costume
-- **orchestrated:** Many models + MCP — judged on efficiency per complexity, not raw spend
+---
 
 ## Scoring
 
-- **engine:** MOOLLM rubric SCORE + experiment COMPARE — many criteria at once
-### Measurable
+**Engine:** MOOLLM [rubric](https://github.com/SimHacker/moollm/tree/main/skills/rubric) SCORE + [experiment](https://github.com/SimHacker/moollm/tree/main/skills/experiment) COMPARE — many criteria at once.
 
-- **cost_to_ship:**
-  - proof: Cursor spend CSV
-  - weight: high
-- **smallest_model_used:**
-  - proof: spend breakdown on merge commit
-  - weight: high
-- **shift_smoothness:**
-  - proof: spend timestamps + cursor-mirror timeline
-  - weight: medium
-- **bid_honesty:**
-  - proof: bid vs CSV
-  - weight: high
-- **wall_clock:**
-  - proof: stream clock vs bid
-  - weight: medium
-- **spec_compliance:**
-  - proof: diff vs CARD + automated lint
-  - weight: high
-- **merge_harvest:**
-  - proof: PR merged; skills/packages graft bonus
-  - weight: high
+### Measurable (high weight)
+
+| Criterion | Proof |
+|-----------|-------|
+| Cost to ship | Cursor spend CSV |
+| Smallest model used | Spend breakdown on merge commit |
+| Bid honesty | Bid vs CSV |
+| Spec compliance | Diff vs CARD + automated lint |
+| Merge harvest | PR merged; skills/packages graft bonus |
+
+### Measurable (medium weight)
+
+Shift smoothness · wall-clock vs bid
 
 ### Subjective
 
-### Eleganza
+Eleganza · shift feel · narration · replication · brain-stream aesthetics — [Slats](../characters/robots/slats/) judges camp and werk.
 
-- **judges:**
-  - slats
-  - human
-- **weight:** medium
+**Credits:** [Mike Gallaher](https://github.com/SimHacker/moollm/blob/main/designs/mike-gallaher-ideas.md) — rubric, experiment lineage, adversarial committee, evaluator.
 
-- **shift_feel:**
-  - note: Premium for yaml formatting = riding the clutch
-  - weight: medium
-- **narration:**
-  - proof: thoughtful-commitment + lip_sync_for_your_commits
-  - weight: low
-- **replication:**
-  - proof: rigs/*.rig.yml mash_up
-  - weight: medium
-- **brain_stream_aesthetics:**
-  - proof: overlay readable; prompts interesting; GH links clean
-  - weight: low
-
+---
 
 ## Judges
 
-- **slats:**
-  - role: celebrity_robot_judge
-  - rubric: ../characters/robots/slats/judge-rubric.yml
-  - note: Subjective Rubik faces — camp, robopoetry, werk
-### Rubric Experiment
+| Judge | Role |
+|-------|------|
+| **[Slats](../characters/robots/slats/)** | Celebrity robot judge — subjective Rubik faces; camp, robopoetry, werk |
+| **Rubric + experiment** | MOOLLM SCORE + COMPARE — many axes at once |
+| **Human** | Taste, constructionist generosity, merge-worthiness |
+| **Spreadsheet** | Cursor spend CSV — the piss test; the ref that doesn't lie |
 
-- **role:** MOOLLM rubric SCORE + experiment COMPARE — many axes at once
-- **credits:** Mike Gallaher
-- **repos:**
-  - SimHacker/moollm/skills/rubric
-  - SimHacker/moollm/skills/experiment
+---
 
-- **human:**
-  - role: taste, constructionist_generosity, merge_worthiness
-- **spreadsheet:**
-  - role: Cursor spend CSV — the piss test; the ref that doesn't lie
+## Post-run forensics
 
-## Credits
+**When:** after the run — before publishing artifacts or harvesting to `skills/`.
 
-### Mike Gallaher
+The chat generated code, yaml, commits, transcripts. Run [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) to archaeology the session; run deep-snitch to audit what left the building. Forensics feed rubric SCORE, experiment COMPARE, and [orchestration gold](orchestration-gold.md) — with secrets stripped.
 
-- **contributions:**
-  - rubric_skill
-  - experiment_lineage
-  - adversarial_committee
-  - evaluator
-- **see:** SimHacker/moollm/designs/mike-gallaher-ideas.md
+| Step | Command / artifact |
+|------|-------------------|
+| Timeline | `cursor-mirror timeline <composer>` |
+| Thinking | `cursor-mirror thinking <composer>` |
+| Tools | `cursor-mirror tools <composer>` |
+| Context | `cursor-mirror context-sources <composer>` |
+| Gut camera | `cursor-mirror deep-snitch <composer>` |
+| Attach | Forensics summary to PR / rig report / experiment run config |
 
+Full spec: [AI-offs post-run analysis](ai-offs.md)
 
-## Episode Beat
+**Required artifacts for orchestration gold:**
 
-- **duration:** 5–10 min mini or full Drag Race rotation slot
-- **steps:**
-  - drop_spec
-  - declare_bids
-  - start_engines
-  - ship_branch
-  - multi_rubric_score
-  - merge_or_sashay
-  - post-run-forensics
+- Cursor spend CSV
+- cursor-mirror composer timeline + since-last-commit slice
+- thoughtful-commitment commit chain
+- `rigs/*.rig.yml` declared shift map
+- Optional brain-stream event log
+- Post-run deep-snitch clean bill before public export
 
-## Post Run Forensics
+---
 
-- **when:** After the run — before publishing artifacts or harvesting to skills/
-- **see:** ai-offs.yml#post-run-analysis
-- **pitch:** The chat generated artifacts (code, yaml, commits, transcripts). Run cursor-mirror to
-archaeology the session; run deep-snitch to audit what left the building. Forensics
-feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets stripped.
-- **workflow:**
-  - cursor-mirror timeline <composer> — chronological ride
-  - cursor-mirror thinking <composer> — reasoning blocks
-  - cursor-mirror tools <composer> — what it actually touched
-  - cursor-mirror context-sources <composer> — files assembled into prompts
-  - cursor-mirror deep-snitch <composer> — gut-camera on transcripts; secrets, exfil patterns
-  - Attach forensics summary to PR / rig report / experiment run config
-- **public_artifacts:** Redact before bus or repo — deep-snitch first, then publish
+## Navigate
 
-## Model Branching
-
-- **see:** model-branching.yml
-- **pitch:** Snapshot chat → fork model at any bubble → replay instructions → compare trajectories
-- **speed_run:** Stick-shift slalom with rewind — branch worlds branch models
-
-## Ties to
-
-| Link |
-|------|
-| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) |
-| [`ai-offs.yml`](ai-offs.yml) |
-| [`code-that-spec.yml`](code-that-spec.yml) |
-| [`brain-stream.yml`](brain-stream.yml) |
-| [`model-branching.yml`](model-branching.yml) |
-| [`sources/bun-rust-rewrite-2026-07.yml`](sources/bun-rust-rewrite-2026-07.yml) |
-| [`../characters/robots/slats/judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) |
-| [`../rigs/stick-shift-composer-moollm.rig.yml`](../rigs/stick-shift-composer-moollm.rig.yml) |
-| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) |
-| [`SimHacker/moollm/skills/experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
-| [`SimHacker/moollm/skills/evaluator`](https://github.com/SimHacker/moollm/tree/main/skills/evaluator) |
-
-## Related
-
-| Link |
-|------|
-| [`showmaker-network.yml#competitions`](showmaker-network.yml) |
-| [`repo-show-format.yml#rig-spectrum`](repo-show-format.yml) |
+| Destination | Why |
+|-------------|-----|
+| [Code That Spec](code-that-spec.md) | Bid tokens/time — audience chants |
+| [Micropolis AI Drag Race](../repo-shows/micropolis-ai-drag-race/README.md) | Flagship drag-race show |
+| [AI-offs](ai-offs.md) | Competitive forensics family |
+| [Orchestration gold](orchestration-gold.md) | Labeled trajectories for training |
+| [Model branching](model-branching.md) | Fork worlds at any bubble |
+| [Brain stream](brain-stream.md) | Live overlay bus |
+| [ShowMaker network](showmaker-network.md) | Competitions index |
+| [Repo Show format](repo-show-format.md) | Participation + rig culture |

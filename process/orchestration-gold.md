@@ -1,194 +1,129 @@
-<!-- GENERATED from `process/orchestration-gold.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:65eab07187920d72 -->
-
 # Orchestration gold
 
-> **Girder:** [`orchestration-gold.yml`](orchestration-gold.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
+> **Girder:** [`orchestration-gold.yml`](orchestration-gold.yml) · **AI-offs:** [ai-offs.md](ai-offs.md) · **Homefun:** [homefun-grading.md](homefun-grading.md) · **Manual Transmission:** [manual-transmission.md](manual-transmission.md)
 
-## Pitch
+**Tagline:** *Real programmers + real specs + real routing traces → multi-LLM orchestrator training*
 
-Manual Transmission and model-branching runs produce labeled trajectories: spec in,
-model choices, tool calls, spend, merge out. Steve Kommrusch's PhD showed GitHub
-commit histories are training data for repair models. We extend: commits plus
-cursor-mirror forensics — and human stick-shift decisions as training BY demonstration.
-As conventional and valuable to tool vendors (Cursor-class) as PBD was to UI research.
+Manual Transmission and [model branching](model-branching.md) runs produce labeled trajectories: spec in, model choices, tool calls, spend, merge out. Steve Kommrusch's PhD showed GitHub commit histories are training data for repair models. We extend: commits plus cursor-mirror forensics — and human stick-shift decisions as **training BY demonstration**. As conventional and valuable to tool vendors (Cursor-class) as PBD was to UI research.
 
-## Tagline
+---
 
-*Real programmers + real specs + real routing traces → multi-LLM orchestrator training*
+## On this page
 
-## Meta
+| Read | In one line |
+|------|-------------|
+| [Human taste routing](#human-taste-routing) | Expert shifts captured as labeled segments |
+| [Training by demonstration](#training-by-demonstration) | PBD → TBD for model routing |
+| [Since last commit](#since-last-commit) | Forensics slice per thoughtful COMMIT |
+| [Bundle per run](#bundle-per-run) | What to submit for harvest |
+| [Navigate](#navigate) | Related specs |
 
-| Key | Value |
-|-----|-------|
-| **id** | orchestration-gold |
-| **status** | seed |
+---
 
-## Human Taste Routing
+## Human taste routing
 
-- **what:** It takes human taste and experience to learn which models to shift between for
-different tasks — not fully specifiable upfront. The sport captures expert routing
-as labeled segments: task type, model chosen, outcome, spend — orchestration gold.
-- **learned_by_doing:** Manual Transmission + Repo Show homefun — many drivers, many laps
-- **see:** stick-shift-protocol.yml
+It takes human taste and experience to learn which models to shift between for different tasks — not fully specifiable upfront. The sport captures expert routing as labeled segments: task type, model chosen, outcome, spend — **orchestration gold**.
 
-## Training By Demonstration
+**Learned by doing:** [Manual Transmission](manual-transmission.md) + Repo Show homefun — many drivers, many laps.
 
-- **lineage:**
-  - pbd: Programming by demonstration — Brad Myers, Watch What I Do, Garnet (Don ~1992–93)
-  - see: ../characters/brad-myers/ · ../repo-shows/INDEX.yml#brad-myers-garnet-vpl
-- **tbd:** Training BY demonstration — harvest expert multi-model laps as supervised routing signal
-### Macro Tier
+See: [stick-shift-protocol.md](stick-shift-protocol.md)
 
-- **what:** Many steps are simple syntactic transformations — the kind Don used to do with
-Emacs keyboard macros over dired buffers: transform one file, next file, rinse, repeat.
-- **shift_rule:** Cheap/fast model or artisanal macro pass — do not burn premium on batch syntax
-- **examples:**
-  - normalize filenames
-  - yaml header pass
-  - import reorder
-  - bulk rename
-  - scaffold fill
-- **record_in_commit:** task_class: macro_batch — links thinking blocks to repetitive tool pattern
+---
 
-- **vs_design_tier:**
-  - macro: Syntactic rinse-repeat — upshift to mini/fast, or hand macro
-  - design: Scout problem space — premium design_mode — stick-shift-protocol.yml
-  - hairpin: Reasoning bug — downshift premium
-- **industry_value:** Opt-in, consented, real-programmer traces with task labels + model choices + outcomes
-is as grounded and best-practice as ML data gets — valuable to Cursor-class vendors
-training orchestration and routing, not just base models. Fun competition → honest logs.
+<a id="training-by-demonstration"></a>
 
-## Lineage
+## Training by demonstration
 
-### Steve Kommrusch
+| | |
+|--|--|
+| **PBD lineage** | Programming by demonstration — [Brad Myers](../characters/brad-myers/), Watch What I Do, Garnet (Don ~1992–93) |
+| **TBD extension** | **Training BY demonstration** — harvest expert multi-model laps as supervised routing signal |
 
-- **role:** Leela AI colleague; PhD Colorado State 2022
-- **thesis:** Machine Learning for Computer Aided Programming — stochastic program repair to verifiable equivalence
-- **insight:** Mined GitHub repos — before/after bug-fix commits as supervised signal (VRepair, transfer learning)
-- **repos:**
-  - SteveKommrusch/VRepair
-  - OpenNMT-py contributions
-- **see:** https://github.com/SteveKommrusch/VRepair
-- **note:** Bug-fix diffs + context lines — we add orchestration context + thinking blocks
+### Macro vs design tier
 
-- **our_extension:** Git log tells you WHAT changed. thoughtful-commitment + cursor-mirror tell you WHY,
-WHICH MODEL, WHICH TOOLS, WHAT CONTEXT was assembled — and let you ask audit questions
-across dimensions since the last commit.
+| Tier | When | Shift rule |
+|------|------|------------|
+| **Macro batch** | Syntactic rinse-repeat — normalize filenames, yaml headers, import reorder, scaffold fill | Cheap/fast model or artisanal macro pass — don't burn premium on batch syntax |
+| **Design** | Scout problem space | Premium `design_mode` — [stick-shift-protocol.md](stick-shift-protocol.md) |
+| **Hairpin** | Reasoning bug | Downshift premium |
 
-## Thoughtful Commitment
+Record in commit: `task_class: macro_batch` — links thinking blocks to repetitive tool pattern.
 
-- **skill:** SimHacker/moollm/skills/thoughtful-commitment
-- **also_called:**
-  - conscientious_commits
-  - thoughtful_commits
-- **what:** Intentional, reflective git commits — document what the LLM actually did and thought,
-not just the diff. Links commit SHA ↔ cursor-mirror composer ↔ thinking event range.
-- **message_shape:**
-  - type: summary (imperative)
-  - narrative — intent, not mechanics only
-  - changes — bullet scan list
-  - Thinking: cursor-mirror://<composer>/<event-range>
-- **composes:**
-  - cursor-mirror
-  - git
-  - trekify
-  - deep-snitch
+**Industry value:** Opt-in, consented, real-programmer traces with task labels + model choices + outcomes — valuable to Cursor-class vendors training orchestration and routing, not just base models. Fun competition → honest logs.
 
-## Since Last Commit
+### Steve Kommrusch lineage
 
-- **when:** Each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now
-- **stick_shift:** If commit equals shift point — segment is one gear commitment until prompt closure;
-see stick-shift-protocol.yml#gear-commitment
-- **workflow:**
-  - git log -1 --format=%H — anchor
-  - cursor-mirror timeline / thinking / tools / context-sources since anchor
-  - cursor-mirror export-prompts — instruction tape for this slice
-  - Optional: deep-snitch on slice before public harvest
-### Analyze Dimensions
+| | |
+|--|--|
+| **Role** | Leela AI colleague; PhD Colorado State 2022 |
+| **Thesis** | Machine Learning for Computer Aided Programming — stochastic program repair to verifiable equivalence |
+| **Insight** | Mined GitHub repos — before/after bug-fix commits as supervised signal ([VRepair](https://github.com/SteveKommrusch/VRepair)) |
+| **Our extension** | Git log tells you WHAT changed. thoughtful-commitment + cursor-mirror tell you WHY, WHICH MODEL, WHICH TOOLS, WHAT CONTEXT — audit questions across dimensions since last commit |
 
-- **routing:**
-  - models_used_and_when
-  - shift_count_vs_declared_rig_class
-  - spend_csv_slice
-- **cognition:**
-  - thinking_blocks_summary
-  - user_prompts_vs_assistant_plan
-  - retries_and_recovery
-- **context:**
-  - files_read_grep_searched
-  - messageRequestContext_assembly
-  - terminal_commands_run
-- **artifacts:**
-  - images_added — provenance audit
-  - new_files_and_why
-  - deleted_or_renamed_and_why
-- **quality:**
-  - rubric SCORE on slice vs spec CARD
-  - spec_compliance_diff
+---
 
-### Audit Questions
+<a id="since-last-commit"></a>
 
-- **flagship:** homefun-grading.yml#flagship-question
-- **examples:**
-  - Does the commit message match the thinking blocks? — Repo Show homefun grading
-  - Why did you add that image — where did it come from?
-  - Which model wrote this yaml vs this prose?
-  - What file selections drove this tool call?
-  - Was this retry necessary or riding the clutch?
+## Since last commit
 
-- **output:**
-  - enriched_commit_message
-  - optional orchestration-gold appendix in PR or experiment run
-  - anonymized aggregate for harvest
+**When:** each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now.
 
-## Case Studies
+| Step | Command / output |
+|------|------------------|
+| Anchor | `git log -1 --format=%H` |
+| Mirror | timeline · thinking · tools · context-sources since anchor |
+| Export | `cursor-mirror export-prompts` — instruction tape for slice |
+| Snitch | optional deep-snitch before public harvest |
 
-- **bun_rust_rewrite_2026_07:**
-  - what: Jarred Sumner's public receipt bundle — 535K LOC Zig→Rust in 11 days, ~50 workflows,
-1 implementer : 2 adversarial reviewers, TypeScript test oracle, ~$165K API spend.
-Fix-the-loop discipline when agents misbehave. Industrial-scale analog to our harvest shape.
-  - digest: sources/bun-rust-rewrite-2026-07.md
-  - yaml: sources/bun-rust-rewrite-2026-07.yml
+**Stick-shift rule:** if commit equals shift point — segment is one gear commitment until prompt closure ([stick-shift-protocol.md#gear-commitment](stick-shift-protocol.md)).
 
-## Bundle Per Run
+### Analyze dimensions
 
-- **required:**
-  - Cursor spend CSV
-  - composer id(s)
-  - thoughtful-commitment commit chain with thinking-ref links
-- **recommended:**
-  - cursor-mirror export-jsonl since last commit
-  - model-branch manifests — model-branching.yml
-  - rubric scores + experiment COMPARE report
-  - deep-snitch clean bill
-- **harvest:** skills/ packages/ experiment runs — opt-in, redacted
+| Dimension | Inspect |
+|-----------|---------|
+| **Routing** | models used and when · shift count vs declared class · spend CSV slice |
+| **Cognition** | thinking blocks summary · user prompts vs assistant plan · retries |
+| **Context** | files read/grep · messageRequestContext assembly · terminal commands |
+| **Artifacts** | images added — provenance · new/deleted files and why |
+| **Quality** | rubric SCORE vs spec CARD · spec compliance diff |
 
-## Credits
+### Audit questions
 
-- **steve_kommrusch:** GitHub commit logs as ML training signal — repair / equivalence research
-- **mike_gallaher:** RUBRIC-BRIDGE + experiment COMPARE for multi-axis scoring
-- **brad_myers:** Programming by demonstration — Watch What I Do, Garnet; TBD extends to model routing
+- **Flagship:** [Does the commit message match the thinking blocks?](homefun-grading.md#flagship-question)
+- Why did you add that image — where did it come from?
+- Which model wrote this yaml vs this prose?
+- What file selections drove this tool call?
+- Was this retry necessary or riding the clutch?
 
-## Ties to
+**Output:** enriched commit message · optional orchestration-gold appendix in PR · anonymized aggregate for harvest
 
-| Link |
-|------|
-| [`manual-transmission.yml`](manual-transmission.yml) |
-| [`model-branching.yml`](model-branching.yml) |
-| [`ai-offs.yml`](ai-offs.yml) |
-| [`brain-stream.yml`](brain-stream.yml) |
-| [`homefun-grading.yml`](homefun-grading.yml) |
-| [`../characters/brad-myers/`](../characters/brad-myers/) |
-| [`SimHacker/moollm/skills/thoughtful-commitment`](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) |
-| [`SimHacker/moollm/skills/cursor-mirror`](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) |
-| [`SimHacker/moollm/skills/rubric`](https://github.com/SimHacker/moollm/tree/main/skills/rubric) |
-| [`SimHacker/moollm/skills/experiment`](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
+---
 
-## Related
+## Bundle per run
 
-| Link |
-|------|
-| [`ai-offs.yml#post-run-analysis`](ai-offs.yml) |
-| [`manual-transmission.yml#post-run-forensics`](manual-transmission.yml) |
-| [`repo-show-format.yml#cauldron-scoop`](repo-show-format.yml) |
+| Required | Recommended |
+|----------|-------------|
+| Cursor spend CSV | cursor-mirror export-jsonl since last commit |
+| composer id(s) | model-branch manifests ([model-branching.md](model-branching.md)) |
+| thoughtful-commitment commit chain with thinking-ref links | rubric scores + experiment COMPARE report |
+| | deep-snitch clean bill |
+
+**Harvest:** `skills/` · `packages/` · experiment runs — opt-in, redacted
+
+**Case study:** [Bun → Rust rewrite receipt](sources/bun-rust-rewrite-2026-07.md) — industrial-scale adversarial port (Jul 2026)
+
+---
+
+## Navigate
+
+| Destination | Why |
+|-------------|-----|
+| [Manual Transmission](manual-transmission.md) | Primary competition lane |
+| [AI-offs post-run analysis](ai-offs.md#post-run-analysis) | Forensics workflow |
+| [Homefun grading](homefun-grading.md) | Flagship audit question |
+| [Brain stream](brain-stream.md) | Live bus during runs |
+| [Repo Show harvest](repo-show-format.md#harvest) | cauldron SCOOP |
+| [thoughtful-commitment skill](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) | Commit shape |
+| [cursor-mirror skill](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | Session archaeology |
+
+**Credits:** Steve Kommrusch (GitHub logs as ML signal) · Mike Gallaher (rubric + experiment) · Brad Myers (PBD lineage)

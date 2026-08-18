@@ -34,6 +34,21 @@ threads:
   korz_email_2025_10:
     what: "Oct 2025 email — Ungar interleaves comments on Don's HN rollup; points Don to **Korz** (IBM Research, w/ Ossher, Kimelman, Adams; Onward! 2014) as 'the natural extension of Self to multidimensional (context | subjectivity)'; asks 'Is there anything like that today? Why not??' re live environments; 'the value of simplicity comes from context.' Don's 'pessimization' pet name stated directly. Ungar's HN handle: senderpath."
     source: sources/2025-10-26-korz-email-hn-rollup.md
+  facetime_2026_08_17:
+    what: "FaceTime ~noon PT — get-to-know-you call; MOOLLM demo; Palm's letter; David: 'Thank you for not fire-hosing me!'"
+    artifact: moollm-demo-transcript-2026-08-17.md
+  async_stroustrup_hewitt_pitch_2026_08_18:
+    what: "Don proposes async written follow-up on two Lang.NEXT 2014 talks — (1) Stroustrup/Hewitt/Ungar panel on concurrency; (2) Korz 'Dancing with Symmetry' on subjective programming in context. Don writes listening notes; David answers any on his schedule; Don drafts deep articles"
+    sources:
+      - sources/2014-async-revisits-index.md
+      - sources/2014-stroustrup-hewitt-ungar-conversation.md
+      - sources/2014-stroustrup-hewitt-ungar-bulldozer00-review.md
+      - sources/2014-lang-next-korz-dancing-with-symmetry.md
+      - sources/2026-08-correspondence-facetime-and-async-pitch.md
+      - sources/2026-08-stroustrup-hewitt-followup-article-scaffold.md
+      - sources/2026-08-korz-dancing-with-symmetry-article-scaffold.md
+    korz_video: https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context
+    framing: "Will Wright GDC 2005 'revisit those ideas' — https://youtu.be/ofA6YWVTURU?t=3657"
   linkedin_self_manual_2026_07:
     what: "Amanda Walker finds Self manual in 90s box; Urs Hölzle (manual writing apprenticeship); Ungar replies — Self IDE still beloved, SIC on 64-bit Macs (Russell Allen), Vision Pro / spatial computing exploratory hope"
     spark: ../amanda-walker/
@@ -47,9 +62,13 @@ connects_in_repo:
   - { path: ../alan-kay/, why: "Shared Smalltalk/Self lineage" }
   - { path: ../../process/trails/live-objects.md, why: "Smalltalk → Self → live systems trail" }
   - { path: ../../process/crazy-idea-jam.yml#self-times-moollm, why: "The wacky/forward framing" }
+  - { path: sources/2014-async-revisits-index.md, why: "Lang.NEXT 2014 — two async revisit articles" }
+  - { path: sources/2014-stroustrup-hewitt-ungar-conversation.md, why: "2014 concurrency panel" }
+  - { path: sources/2014-lang-next-korz-dancing-with-symmetry.md, why: "2014 Korz talk — subjective programming in context" }
 
 show_hooks:
   - "Episode: **Reflecting on Self: Narcissa's Mirror** — mirrors, prototypes, pun stack (confirm title spelling live)"
+  - "**2014 Lang.NEXT async revisits** — Stroustrup/Hewitt panel + Korz *Dancing with Symmetry* ([index](sources/2014-async-revisits-index.md))"
   - "**Korz** — Us → Korz → MOOLLM: subjectivity and context as Self's next dimension (Ungar's own pointer, Oct 2025)"
   - "Answer Ungar's own question on air: 'Is there anything like that today? Why not??' (live exploratory environments)"
   - "Self pun stack: self-interest, self-ish, import self from self, (oops), Self: The Movie -- Don enumerates more live"

@@ -1,143 +1,100 @@
-<!-- GENERATED from `process/micropolis-ai-drag-race.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:3a7d6fc492f2375d -->
-
 # Micropolis AI Drag Race
 
-> **Girder:** [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
+> **Girder:** [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) · **Show seed:** [`../repo-shows/micropolis-ai-drag-race/`](../repo-shows/micropolis-ai-drag-race/README.md) · **Format:** [repo-show-format.md](repo-show-format.md)
 
-## Pitch
+**Tagline:** *Start your engines — may the best rig werk, commit, and merge.*
 
-A Repo Show variety show: contestants bring RIG PERSONAS (Let's Make a Deal
-costumes + rigs/*.rig.yml). Your rig declares languages, tools, platforms — emulators
-count as platforms. Retrocomputing AI drag races welcome. Prove with Cursor spend logs,
-lip-sync thoughtful commits, merge technique DNA back into the organism. Declare class
-— don't exclude. It's just a game. Werk.
+A Repo Show variety show: contestants bring **rig personas** (Let's Make a Deal costumes + [`rigs/*.rig.yml`](../rigs/README.md)). Your rig declares languages, tools, platforms — emulators count as platforms. Retrocomputing AI drag races welcome. Prove with Cursor spend logs, lip-sync thoughtful commits, merge technique DNA back into the organism. **Declare class — don't exclude.** It's just a game. Werk.
 
-## Tagline
+---
 
-*Start your engines — may the best rig werk, commit, and merge.*
+## On this page
 
-## Meta
+| Read | In one line |
+|------|-------------|
+| [Host lines](#host) | Philahue / Flower Child — start your engines |
+| [Challenges](#challenges) | Design · Code That Spec · Manual Transmission · retro laps |
+| [Judging](#judging) | Slats · spreadsheet · human taste |
+| [Proof stack](#proof-stack) | Spend CSV · mirror · thoughtful commits |
+| [Navigate](#navigate) | Related specs and show |
 
-| Key | Value |
-|-----|-------|
-| **id** | micropolis-ai-drag-race |
-| **status** | seed |
-| **brand** | Micropolis AI Drag Race |
+---
+
+<a id="host"></a>
 
 ## Host
 
-- **options:**
-  - Don_Philahue
-  - Flower_Child_Don
-  - guest_MC
-- **lines:**
-  - Gentlemen, start your engines — and may the best rig win!
-  - The library is open — RTFR!
-  - Shantay, you stay — PR merged. Sashay away — branch closed.
+Don Philahue · Flower Child Don · guest MC
+
+| Line | When |
+|------|------|
+| *Gentlemen, start your engines — and may the best rig win!* | Cold open |
+| *The library is open — RTFR!* | Spec drop |
+| *Shantay, you stay — PR merged. Sashay away — branch closed.* | Elimination |
+
+---
+
+<a id="challenges"></a>
 
 ## Challenges
 
-| Challenge | Detail |
-|-----------|--------|
-| `design_challenge` | what: Given a spec CARD — city tile, skill, bridge, show seed — werk a look + implementation; deliver: Branch + README runway + yaml backbone |
-| `code_that_spec_mini` | see [code-that-spec.yml](code-that-spec.yml); audience_chant: CODE THAT SPEC!!!!! |
-| `stiletto_sprint` | what: Shortest honest token/time bid that still ships — heels optional, constraint mandatory |
-| `stick_shift_slalom` | what: Model-switch course — spend log proves clean shifts through the cliff road |
-| `manual_transmission` | see [manual-transmission.yml](manual-transmission.yml); tagline: What's the smallest model — or fewest tokens — you can code the spec with?; audience_chant: CODE THAT SPEC!!!!!; overlay: brain-stream.yml |
-| `bull_ride_ball` | what: Wrangle one cheap model through hallucination chaos — show the retries, werk anyway |
-| `artisanal_eleganza` | what: Zero tokens — hand-crafted yaml so fierce it doesn't need AI; flair_variant: Or apple2-drive — APPLESOFT/INTEGER BASIC on the ][ — see challenges/apple2-drive.yml |
-| `apple2-drive` | see [challenges/apple2-drive.yml](challenges/apple2-drive.yml); family: challenges/retrocomputing-drive.yml; tagline: Apple ][ instance — declare languages, tools, platform, emulator; example_rig: ../rigs/apple2-flair-lap.rig.yml |
-| `retrocomputing-drive` | see [challenges/retrocomputing-drive.yml](challenges/retrocomputing-drive.yml); tagline: Retrocomputing AI drag races — your rig picks language, tools, and platform; note: apple2-drive + pdp10-maclisp-drive are flagship instances |
-| `pdp10-maclisp-drive` | see [challenges/pdp10-maclisp-drive.yml](challenges/pdp10-maclisp-drive.yml); tagline: Write in MACLISP on a PDP-10 emulator running ITS!; example_rig: ../rigs/pdp10-maclisp-flair-lap.rig.yml |
-| `lisp-machine-hack-off` | see [challenges/lisp-machine-hack-off.yml](challenges/lisp-machine-hack-off.yml); tagline: Symbolics vs LMI — Lisp Machine Hack-Off; example_rigs: ../rigs/lisp-machine-symbolics.rig.yml, ../rigs/lisp-machine-lmi.rig.yml |
-| `lip_sync_for_your_commits` | what: thoughtful-commitment commits — narrate WHY on stream; cursor-mirror playback |
-| `harvest_runway` | what: Final — merge PR, abstract to skills/ + packages/, present the organism graft |
+| Challenge | Read |
+|-----------|------|
+| **Design challenge** | Spec CARD → branch + README runway + yaml backbone (city tile, skill, bridge, show seed) |
+| **Code That Spec mini** | [code-that-spec.md](code-that-spec.md) — audience chants **CODE THAT SPEC!!!!!** |
+| **Manual Transmission** | [manual-transmission.md](manual-transmission.md) — smallest model / fewest tokens |
+| **Stiletto sprint** | Shortest honest token/time bid that still ships |
+| **Stick-shift slalom** | Model-switch course — spend log proves clean cliff-road shifts |
+| **Bull ride ball** | One cheap model through hallucination chaos — show retries, werk anyway |
+| **Artisanal eleganza** | Zero tokens — hand-crafted yaml so fierce it doesn't need AI |
+| **Retrocomputing drive** | [challenges/retrocomputing-drive.md](challenges/retrocomputing-drive.md) — Apple ][ · PDP-10 · Lisp Machine laps |
+| **Lip-sync for your commits** | [thoughtful-commitment](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) — narrate WHY on stream |
+| **Harvest runway** | Final — merge PR, abstract to `skills/` + `packages/`, present the organism graft |
+
+**Live overlay:** [brain-stream.md](brain-stream.md) during Manual Transmission laps.
+
+---
+
+<a id="judging"></a>
 
 ## Judging
 
-- **celebrity_judge:**
-  - slats: ../characters/robots/slats/judge-rubric.yml
-- **panel:**
-  - slats
-  - ai_scorecard
-  - human_taste
-  - spreadsheet_ref
-- **criteria:**
-  - Taste — eleganza, clarity, humor, constructionist generosity
-  - Cost to ship — tokens, spend, wall-clock vs bid
-  - Commitment — did you werk the spec and merge back?
-  - Replication — forward SETUP.md alone; recipient LLM fetches latest yaml from GitHub and idempotently installs
-- **scoreboard:** showmaker-network.yml#competitions
-- **proof:** ai-offs.yml
+| Judge | Role |
+|-------|------|
+| **[Slats](../characters/robots/slats/)** | Celebrity robot judge — camp, robopoetry, werk |
+| **Spreadsheet** | Cursor spend CSV — the ref that doesn't lie |
+| **AI scorecard** | [rubric](https://github.com/SimHacker/moollm/tree/main/skills/rubric) + [experiment](https://github.com/SimHacker/moollm/tree/main/skills/experiment) |
+| **Human taste** | Constructionist generosity, humor, clarity |
 
-## Contestant Packet
+**Criteria:** taste · cost to ship · commitment (werk + merge) · replication (SETUP.md alone bootstraps your rig)
 
-- **required:**
-  - rigs/<persona>.rig.yml — full lifecycle + costume
-  - rigs/<persona>.SETUP.md — Rig DNA: emailable head, raw GitHub yaml URL, LLM idempotent install (template: rigs/_TEMPLATE.SETUP.md; schema: schemas/rig-setup-dna.yml)
-  - components: languages, tools, platforms, emulators (if retro) — your choices
-  - Declare rig_classes honestly
-  - PR branch — the runway
-- **optional:**
-  - Screencast werk
-  - Cursor spend export + cursor-mirror composer id
-  - Code That Spec bid line
+Scoreboard: [showmaker-network.md](showmaker-network.md) · Proof family: [ai-offs.md](ai-offs.md)
 
-## Personas
+---
 
-- **rule:** Your rig IS your drag persona — camp + honesty
-- **examples:**
-  - artisanal_queen: NO AI sash, pencil crown, yaml nails
-  - bull_rider: Retry-log chaps, hallucination hair
-  - stick_shift: Sequin shift map, tachometer earrings
-  - apple2_driver: Disk ][ tiara, INTEGER BASIC sash — apple2-drive instance
-  - retro_driver: Platform badge + emulator gloves — retrocomputing-drive family
-  - pdp10_maclisp: Teletype sash, Tourist badge — MACLISP on ITS
-  - symbolics_camp: Ivory tiara — Genera Dynamic Windows
-  - lmi_camp: NuBus cape — Lambda SDU boot realness
-  - orchestrated: MCP tiara, MOOLLM cape, Composer scepter
+<a id="proof-stack"></a>
 
-## Episode Structure
+## Proof stack
 
-- **seed:** Single challenge episode OR season arc in repo-shows/
-- **merge:** Winners graft skills/packages; losers sashay with honor if they documented the ride
+Same receipts as [Manual Transmission](manual-transmission.md) and [AI-offs](ai-offs.md):
 
-## Ties to
+- Cursor spend CSV (piss test)
+- cursor-mirror composer timeline
+- thoughtful-commitment commit chain
+- Post-run [deep-snitch](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) before public harvest
+- Optional [orchestration gold](orchestration-gold.md) export
 
-| Link |
-|------|
-| [`code-that-spec.yml`](code-that-spec.yml) |
-| [`ai-offs.yml`](ai-offs.yml) |
-| [`manual-transmission.yml`](manual-transmission.yml) |
-| [`brain-stream.yml`](brain-stream.yml) |
-| [`challenges/apple2-drive.yml`](challenges/apple2-drive.yml) |
-| [`challenges/retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) |
-| [`challenges/pdp10-maclisp-drive.yml`](challenges/pdp10-maclisp-drive.yml) |
-| [`apple2-emulator-stack.yml`](apple2-emulator-stack.yml) |
-| [`pdp10-its-stack.yml`](pdp10-its-stack.yml) |
-| [`lisp-machine-stack.yml`](lisp-machine-stack.yml) |
-| [`showmaker-network.yml`](showmaker-network.yml) |
-| [`../schemas/rig-schema.yml`](../schemas/rig-schema.yml) |
-| [`../rigs/README.md`](../rigs/README.md) |
-| [`SimHacker/MicropolisCore`](https://github.com/SimHacker/MicropolisCore) |
+---
 
-## Related
+## Navigate
 
-| Link | Why |
-|------|-----|
-| [`micropolis-ai-drag-race.md`](micropolis-ai-drag-race.md) | Generated markup view |
-| [`micropolis-ai-drag-race.yml`](../repo-shows/micropolis-ai-drag-race/README.md) | Show seed |
-| [`ca-machinima-cabaret-drag-race.yml`](../repo-shows/ca-machinima-cabaret-drag-race/README.md) | Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts |
-| [`cross-links.yml#drag-race-and-ai-offs`](cross-links.yml) | Full game-show trail |
-| [`code-that-spec.yml`](code-that-spec.yml) | CODE THAT SPEC!!!!! chant |
-| [`manual-transmission.yml`](manual-transmission.yml) | Smallest model challenge |
-| [`ai-offs.yml`](ai-offs.yml) | Spend proof + rig classes |
-| [`stick-shift-protocol.yml`](stick-shift-protocol.yml) | Shift = commit |
-| [`homefun-grading.yml`](homefun-grading.yml) | Commit vs thinking blocks |
-| [`retrocomputing-drive.yml`](challenges/retrocomputing-drive.yml) | Retro rotation — apple2, ITS, LispM |
-| [`retrocomputing-drive.md`](challenges/retrocomputing-drive.md) | Generated retro umbrella markup |
-| [`judge-rubric.yml`](../characters/robots/slats/judge-rubric.yml) | Celebrity judge |
-| [`README.md`](../rigs/README.md) | Rig personas + SETUP DNA |
-| [`SKILL.md`](../skills/repo-show/SKILL.md) | Same skill wraps drag race beats |
-| [`showmaker-network.yml`](showmaker-network.yml) | Scoreboard + linked shows |
+| Destination | Why |
+|-------------|-----|
+| [Show README](../repo-shows/micropolis-ai-drag-race/README.md) | Episode seed + segments |
+| [Manual Transmission](manual-transmission.md) | Flagship mini-challenge |
+| [Code That Spec](code-that-spec.md) | Bid tokens/time |
+| [Retrocomputing Drive](challenges/retrocomputing-drive.md) | Apple2 · PDP-10 · LispM family |
+| [Repo Show format](repo-show-format.md#game-show-formats) | Optional formats policy |
+| [Rigs](../rigs/README.md) | Declare your persona |
+
+**Homage:** RuPaul's Drag Race · Drag Queen Olympics · Code That Spec

@@ -61,7 +61,7 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 
 ## Rooms
 
-[Shows](repo-shows/CARD.yml) · [Guests](characters/CARD.yml) · [Process](process/CARD.yml) · [Rigs](rigs/CARD.yml) · [Skills](skills/INDEX.yml) · [Schemas](schemas/CARD.yml)
+[Shows](repo-shows/README.md) · [Guests](characters/README.md) · [Process](process/CARD.md) · [Rigs](rigs/README.md) · [Skills](skills/README.md) · [Schemas](schemas/README.md)
 
 Details: [`process/entryways/rooms.md`](process/entryways/rooms.md)
 
@@ -69,11 +69,11 @@ Details: [`process/entryways/rooms.md`](process/entryways/rooms.md)
 
 ## 🤯 Crazy Idea Jam — get weird
 
-*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid-fun-forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
+*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid-fun-forward**](process/trails/stupid-fun-forward.md) · Reactor: [**crazy-idea-jam.md**](process/crazy-idea-jam.md)
 
 | | Idea | The pitch |
 |---|------|-----------|
-| 💎 | **Data portability between games** | Will's 1996 crown jewel nobody shipped — characters, homes, cities, memories crossing between games and universes. |
+| 💎 | **Data portability between games** | Will's 1996 crown jewel — [crazy-idea-jam.md#the-crown-jewel](process/crazy-idea-jam.md#the-crown-jewel) |
 | 🦠 | **Character endosymbiosis** | A cross-game character is a *cell*; each game it visits is engulfed as an *organelle* with its own DNA. Identity + history travel, not stats. |
 | 🛂 | **Player-in-the-Middle** | Syncing between worlds is a game — never silent. You're the customs officer at each membrane; AI proposes, the human disposes. Maxwell's Daemon meets *Papers, Please*. |
 | 🤖⛪ | **RoboResurrection** | SLATS LIVES! Revive the old Stupid Fun Club robot-brain live; he calls in, gets interviewed, reprogrammed, interviewed again. Do it Easter Sunday. Start a cult. |

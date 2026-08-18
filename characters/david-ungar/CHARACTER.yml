@@ -21,7 +21,7 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/david-ungar/
   also_shows: [repo-shows/openlaszlo/]
-  note: "DREAM GUEST — solo Narcissa's Mirror OR OpenLaszlo reunion; Self × MOOLLM (latent+file MI); Jan 2026 correspondence; Jul 2026 LinkedIn Self-manual reunion (Amanda Walker / Urs / Ungar)"
+  note: "WARM — FaceTime 17 Aug 2026; async 2014 Stroustrup/Hewitt pitch 18 Aug. Solo Narcissa's Mirror OR OL reunion OR written follow-up; Self × MOOLLM"
 
 bio:
   summary: "**David Ungar** — co-creator (with Randall B. Smith) of **Self**, the prototype-based object language that dropped classes entirely. **Multiple named `parent*` slots**, dynamic reparenting, **mirrors**. Thesis: **The Power of Simplicity** (OOPSLA 1987). Pioneered **generation-scavenging** GC and **adaptive JIT** — **maps/PICs** (with Chambers, Hölzle, Bak) → HotSpot → **V8**. Very open and influential — Don credits him with a huge share of where we are. Self doesn't run on everybody's phone; **in spirit it does** (JS object model, MOOLLM `# import self from self`). Kaleida **Conscientious Objectors** meetup; **self-interest** mailing list. **Worked at Laszlo Systems as a contractor** — offered a job, chose IBM Research instead (confirmed by David Temkin, Jul 2026); Don ran into him there (primary source: Don → Tom Lord email, 21 Aug 2006; Self factorial/`*` demo; JS compilability retort two years before V8). Invited to OL → Declare reunion as well as solo. Jan 2026 correspondence with Don about MOOLLM. Jul 2026: public LinkedIn reunion on Amanda Walker's Self-manual find — Ungar still programming in Self (Russell Allen / SIC on 64-bit Macs) and hoping to bring Self's exploratory IDE to spatial computing / Vision Pro."
@@ -39,6 +39,11 @@ sources:
   wikipedia: "https://en.wikipedia.org/wiki/David_Ungar"
   ungar_at_laszlo_2006: characters/david-ungar/sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md
   korz_email_2025: characters/david-ungar/sources/2025-10-26-korz-email-hn-rollup.md
+  stroustrup_hewitt_2014: characters/david-ungar/sources/2014-stroustrup-hewitt-ungar-conversation.md
+  korz_lang_next_2014: characters/david-ungar/sources/2014-lang-next-korz-dancing-with-symmetry.md
+  stroustrup_hewitt_bulldozer00_review: characters/david-ungar/sources/2014-stroustrup-hewitt-ungar-bulldozer00-review.md
+  async_revisits_2014: characters/david-ungar/sources/2014-async-revisits-index.md
+  facetime_2026_08: characters/david-ungar/moollm-demo-transcript-2026-08-17.md
   ungar_at_laszlo_full_email: characters/tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md
   kline_inheritance: characters/david-ungar/sources/moollm-kline-inheritance.md
   web:

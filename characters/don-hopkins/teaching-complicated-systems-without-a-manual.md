@@ -503,6 +503,7 @@ Interactive graph at https://www.tademehl.com/bookshelf — 113 books via `/api/
 - Open Micropolis / constructionist SimCity: [MicropolisCore](https://github.com/SimHacker/MicropolisCore) · [`open-sourcing-simcity-for-olpc.md`](open-sourcing-simcity-for-olpc.md)  
 - MOOLLM Play-Learn-Lift + constructionism + PBD-as-skills: [moollm](https://github.com/SimHacker/moollm) — [`skills/play-learn-lift/`](https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift), [`skills/constructionism/`](https://github.com/SimHacker/moollm/tree/main/skills/constructionism), [`skills/skill/`](https://github.com/SimHacker/moollm/tree/main/skills/skill), [`skills/adventure/`](https://github.com/SimHacker/moollm/tree/main/skills/adventure)  
 - MOOLLM as microworld OS — flagship talk: [`moollm-microworld-os-talk.md`](moollm-microworld-os-talk.md)
+- Canon / Cant harvest — Nick Tau's kid-teachable MUD, governance by topology, rate-limited LLM tutoring: [`canon-cant-and-teachable-worlds.md`](canon-cant-and-teachable-worlds.md)
 
 ---
 

@@ -10,7 +10,7 @@ The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
 
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
-**Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (generated — `pnpm run facades`)  
+**Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (hand-authored — edit `.md`; sync girder)  
 **Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description-scaffolding)
 
 ### CARD + GLANCE split (WWSFF experiment → moollm upstream)
@@ -51,9 +51,9 @@ Do not maintain navigation in two places. When this split proves out here, promo
 All clocks write into **one GitHub repo**:
 
 - **Before announce** — show planted; sources gathered
-- **From announce** — HN pointer, issues, **TicketPRs** under `repo-shows/<show>/audience/<you>/` ([`process/ticket-pr.yml`](../../process/ticket-pr.yml))
+- **From announce** — HN pointer, issues, **TicketPRs** under `repo-shows/<show>/audience/<you>/` ([`process/ticket-pr.md`](../../process/ticket-pr.md))
 - **Before guest accepts** — TicketPRs still welcome; seed interest so invitees see real questions
-- **During** — Twitch chat; Don Philahue passes mic; brain-stream overlay ([`process/brain-stream.yml`](../../process/brain-stream.yml))
+- **During** — Twitch chat; Don Philahue passes mic; brain-stream overlay ([`process/brain-stream.md`](../../process/brain-stream.md))
 - **After** — implementation PRs; transcript; harvest
 
 ### Producers + Show Notes (No Agenda mechanics, Repo Show ethics)
@@ -117,7 +117,7 @@ Menu of **continuations**: homefun prompt, recommended viewing, repo trailheads.
 
 *"No homework — but as much homefun as you like!"*
 
-Submit PRs; best work discussed on later episodes. Graded by [`process/homefun-grading.yml`](../../process/homefun-grading.yml) — flagship question: **Does the commit message match the thinking blocks?**
+Submit PRs; best work discussed on later episodes. Graded by [`process/homefun-grading.md`](../../process/homefun-grading.md) — flagship question: **Does the commit message match the thinking blocks?**
 
 ## Rig spectrum
 
@@ -132,14 +132,14 @@ Declare honestly in [`rigs/<slug>.rig.yml`](../../rigs/README.md) + [`SETUP.md`]
 | orchestrated | Full agent stack |
 | stick_shift | Multi-model routing — proof in spend log |
 
-Full spec: [`process/repo-show-format.yml`](../../process/repo-show-format.yml) · [`process/ai-offs.yml`](../../process/ai-offs.yml)
+Full spec: [`process/repo-show-format.md`](../../process/repo-show-format.md) · [`process/ai-offs.md`](../../process/ai-offs.md)
 
 ## Game-show formats (same SHOW skill, different TYPE)
 
 | Format | Spec |
 |--------|------|
-| Code That Spec | [`process/code-that-spec.yml`](../../process/code-that-spec.yml) |
-| Manual Transmission | [`process/manual-transmission.yml`](../../process/manual-transmission.yml) |
+| Code That Spec | [`process/code-that-spec.md`](../../process/code-that-spec.md) |
+| Manual Transmission | [`process/manual-transmission.md`](../../process/manual-transmission.md) |
 | Micropolis AI Drag Race | [`process/micropolis-ai-drag-race.md`](../../process/micropolis-ai-drag-race.md) |
 | Retrocomputing Drive | [`process/challenges/retrocomputing-drive.md`](../../process/challenges/retrocomputing-drive.md) |
 
@@ -168,7 +168,7 @@ After AIR:
 | Topic | Path |
 |-------|------|
 | Vision | [`process/vision-and-ambition.md`](../../process/vision-and-ambition.md) |
-| ShowMaker network | [`process/showmaker-network.yml`](../../process/showmaker-network.yml) |
+| ShowMaker network | [`process/showmaker-network.md`](../../process/showmaker-network.md) |
 | Live repo policy | [`process/live-repo.yml`](../../process/live-repo.yml) |
 | Will kickoff | [`repo-shows/will-wright-premiere/`](../../repo-shows/will-wright-premiere/README.md) |
 | Lars + Thomas retro | [`characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/README.md) · [`characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/README.md) |

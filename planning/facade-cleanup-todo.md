@@ -15,11 +15,11 @@ Humans read markdown facades (warm, images, links). Machines read yaml girders. 
 | **P0** | [Policy + stop the bleeding](#p0-policy--stop-the-bleeding) | done | Vision doc + repo-shows README |
 | **P1** | [Gosling media readable editions](#p1-gosling-media-readable-editions) | done | Template for photo sidecars |
 | **P2** | [Quarantine readme-from-yml.py](#p2-quarantine-readme-from-yml) | done | hand-authored marker + no silent overwrite |
-| **P3** | [Hand-author repo-show-format.md](#p3-hand-author-repo-show-format) | pending | Worst link polluter (65 yml links); retire GENERATED banner |
-| **P4** | [Retire remaining GENERATED process facades](#p4-retire-generated-process-facades) | pending | 7 files in `process/markup-facades.yml` fallback list |
-| **P5** | [Fix vision + entry high-traffic yml links](#p5-fix-high-traffic-yml-links) | pending | vision-and-ambition.md, process/README.md, ENTRYWAYS |
-| **P6** | [Triage 63 script-generated show READMEs](#p6-triage-script-show-readmes) | pending | Hand-author or stub-mark shows linked from museum map |
-| **P7** | [Media sidecar sweep](#p7-media-sidecar-sweep) | pending | Pattern: `artifact.yml` → sibling `artifact.md` with embedded image |
+| **P3** | [Hand-author repo-show-format.md](#p3-hand-author-repo-show-format) | done | Readable prose; instance_first in registry |
+| **P4** | [Retire remaining GENERATED process facades](#p4-retire-generated-process-facades) | done | all 7 instance_first; fallback list empty |
+| **P5** | [Fix vision + entry high-traffic yml links](#p5-fix-high-traffic-yml-links) | in progress | vision prose cleaned; TRAILS reactor link done |
+| **P6** | [Triage 63 script-generated show READMEs](#p6-triage-script-show-readmes) | done | Tier A: 6/6 hand-authored |
+| **P7** | [Media sidecar sweep](#p7-media-sidecar-sweep) | in progress | Will Wright priority bucket (5 sidecars + head-shot gallery) |
 | **P8** | [Character scaffold README uplift](#p8-character-scaffold-readmes) | pending | 128 boilerplate guest pages — upgrade on invitation priority |
 
 ---
@@ -29,7 +29,7 @@ Humans read markdown facades (warm, images, links). Machines read yaml girders. 
 - [x] Add to **What we are not doing**: no linking humans to yaml girders; no script-generated markdown when hand-authored facades exist
 - [x] Add to **Curb appeal meets brutalism**: facade = `.md` humans read; girder = `.yml` machines read; link to `.md`
 - [x] **`repo-shows/README.md`**: remove "run readme-from-yml.py to regenerate" — replace with hand-author-first policy
-- [ ] **`skills/repo-show/SKILL.md`**: same policy if it endorses the generator
+- [x] **`skills/repo-show/SKILL.md`**: hand-authored facade policy; `.md` links not `.yml` girders
 
 **Done when:** a new contributor reading repo-shows/ or vision-and-ambition never gets told to run yaml→md scripts for human pages.
 
@@ -60,10 +60,10 @@ Humans read markdown facades (warm, images, links). Machines read yaml girders. 
 
 ## P3 — Hand-author repo-show-format.md
 
-- [ ] Replace GENERATED tree-dump with readable prose (keep yaml girder for machines)
-- [ ] Mark `render.mode: llm` / `instance_first` in `markup-facades.yml`
-- [ ] Replace 65 inline `.yml` links with `.md` companions where they exist
-- [ ] Delete `<!-- GENERATED -->` banner
+- [x] Replace GENERATED tree-dump with readable prose (keep yaml girder for machines)
+- [x] Mark `render.mode: llm` / `instance_first` in `markup-facades.yml`
+- [x] Replace inline `.yml` links with `.md` companions where they exist
+- [x] Delete `<!-- GENERATED -->` banner
 
 **Done when:** repo-show-format.md reads like vision-and-ambition.md, not a yaml printout.
 
@@ -73,15 +73,17 @@ Humans read markdown facades (warm, images, links). Machines read yaml girders. 
 
 Hand-author or mark `instance_first` (skip generator):
 
-| File | Girder |
-|------|--------|
-| `process/micropolis-ai-drag-race.md` | micropolis-ai-drag-race.yml |
-| `process/ai-offs.md` | ai-offs.yml |
-| `process/manual-transmission.md` | manual-transmission.yml |
-| `process/homefun-grading.md` | homefun-grading.yml |
-| `process/brain-stream.md` | brain-stream.yml |
-| `process/orchestration-gold.md` | orchestration-gold.yml |
-| `process/challenges/retrocomputing-drive.md` | retrocomputing-drive.yml |
+| File | Girder | Status |
+|------|--------|--------|
+| `process/micropolis-ai-drag-race.md` | micropolis-ai-drag-race.yml | done |
+| `process/ai-offs.md` | ai-offs.yml | done |
+| `process/manual-transmission.md` | manual-transmission.yml | done |
+| `process/homefun-grading.md` | homefun-grading.yml | done |
+| `process/brain-stream.md` | brain-stream.yml | done |
+| `process/orchestration-gold.md` | orchestration-gold.yml | done |
+| `process/challenges/retrocomputing-drive.md` | retrocomputing-drive.yml | done |
+
+**P4 complete:** `fallback_deterministic` list in `markup-facades.yml` is empty.
 
 ---
 
@@ -91,11 +93,10 @@ Audit top offenders (2026-08-18 scan):
 
 | Links | File | Action |
 |------:|------|--------|
-| 65 | `process/repo-show-format.md` | P3 |
-| 59 | `process/README.md` | Link to `.md` facades |
-| 42 | `process/vision-and-ambition.md` | Sidecars, jam entries → `.md` |
-| 32 | `characters/don-hopkins/README.md` | Media companions |
-| 29 | `process/micropolis-ai-drag-race.md` | P4 |
+| 65 | `process/repo-show-format.md` | done (P3) |
+| 42 | `process/vision-and-ambition.md` | prose links → `.md` (girder footers + K-lines OK) — batch 2 done |
+| 59 | `process/README.md` | girder table intentional; fallback list updated |
+| 29 | `process/micropolis-ai-drag-race.md` | done (P4) |
 
 Rule: **public prose links to `.md`**. Girder links only in "machine reading" footers or maintainer sections.
 
@@ -107,12 +108,12 @@ Rule: **public prose links to `.md`**. Girder links only in "machine reading" fo
 
 **Tier A — hand-author first** (linked from ENTRYWAYS, vision, HN-bound):
 
-- will-wright-premiere ✓ (already hand)
-- ebike-safari ✓ (already hand)
-- james-gosling
-- micropolis-ai-drag-race
-- remembering-douglas-engelbart
-- terry-winograd
+- will-wright-premiere ✓ (`<!-- hand-authored -->`)
+- ebike-safari ✓ (`<!-- hand-authored -->`)
+- james-gosling ✓ (hand-authored; PDP-8 hotrod → `.md` sidecar)
+- micropolis-ai-drag-race ✓ (hand-authored; process links → `.md`)
+- remembering-douglas-engelbart ✓ (hand-authored; yml ties removed)
+- terry-winograd ✓ (`<!-- hand-authored -->`)
 
 **Tier B — stub is fine** until show is scheduled: mark README with `<!-- seed-stub: run hand-author before linking publicly -->` or delete script README and leave only yml + note in INDEX.
 
@@ -132,7 +133,7 @@ artifact.md    ← human facade: image + caption + context + see also
 
 Priority buckets after Gosling:
 
-1. will-wright media (ant farm, transmogrifier, head-shot progression)
+1. will-wright media — **in progress:** ant-farm, transmogrifier, simcity box, gallium Pac-Man, head-shot progression; plus short-form-clips + adorable-minutes-ae + make-play-tools-show README
 2. don-hopkins media heroes linked from vision/trails
 3. memorial / remembering-* show artifacts
 
@@ -167,8 +168,11 @@ Not urgent for seeds with `consent: not_yet_asked` and no inbound links.
 | Show | Notes |
 |------|-------|
 | `repo-shows/ebike-safari/` | `<!-- hand-authored -->` on README |
-| `repo-shows/will-wright-premiere/` | Flagship — add marker when touched |
-| *(add as upgraded)* | |
+| `repo-shows/will-wright-premiere/` | Flagship — `<!-- hand-authored -->` |
+| `repo-shows/james-gosling/` | `<!-- hand-authored -->` |
+| `repo-shows/micropolis-ai-drag-race/` | `<!-- hand-authored -->` |
+| `repo-shows/remembering-douglas-engelbart/` | `<!-- hand-authored -->` |
+| `repo-shows/terry-winograd/` | `<!-- hand-authored -->` |
 
 ---
 

@@ -1,186 +1,110 @@
-<!-- GENERATED from `process/challenges/retrocomputing-drive.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:2efdb4b7282b2be2 -->
+<!-- hand-authored -->
 
 # Retrocomputing Drive
 
-> **Girder:** [`retrocomputing-drive.yml`](retrocomputing-drive.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](../markup-facades.yml)
+> **Girder:** [`retrocomputing-drive.yml`](retrocomputing-drive.yml) · **Drag race:** [micropolis-ai-drag-race.md](../micropolis-ai-drag-race.md) · **Trail:** [retrocomputing-drive.md](../trails/retrocomputing-drive.md)
 
-## Pitch
+**Tagline:** *Retrocomputing AI drag races — pick your language, tools, and platform*
 
-Same spec CARD as the room — but you declare the whole rig: programming languages,
-tools, and target platform. Real hardware, native cross-compile, or emulator — all valid.
-Cursor + MOOLLM drive the stack you choose. Slats judges driver flair; spreadsheet still
-gets the piss test. Fans watch retro AI drag races: who ships on the ][, MACLISP on ITS,
-the PET, MAME, or a breadboard with honor?
+Same spec CARD as the room — but you declare the **whole rig**: programming languages, tools, and target platform. Real hardware, native cross-compile, or emulator — all valid. Cursor + MOOLLM drive the stack you choose. [Slats](../../characters/robots/slats/) judges driver flair; the spreadsheet still gets the piss test.
 
-## Tagline
+Fans watch retro AI drag races: who ships on the ][, MACLISP on ITS, the PET, MAME, or a breadboard with honor?
 
-*Retrocomputing AI drag races — pick your language, tools, and platform*
+---
 
-## Meta
+## On this page
 
-| Key | Value |
-|-----|-------|
-| **id** | retrocomputing-drive |
-| **status** | seed |
-| **celebrity_judge** | ../characters/robots/slats/judge-rubric.yml |
+| Read | In one line |
+|------|-------------|
+| [What a rig declares](#what-a-rig-declares) | Languages · tools · platforms · emulators |
+| [Challenge lanes](#challenge-lanes) | Flair showoff vs measurement vertical |
+| [How it runs](#how-it-runs) | Spec drop → branch → demo → proof |
+| [Flagship instances](#flagship-instances) | Apple ][ · PDP-10 · Lisp Machine |
+| [Navigate](#navigate) | Stacks · rigs · related specs |
 
-## What A Rig Declares
+---
 
-### Languages
+<a id="what-a-rig-declares"></a>
 
-- **what:** Host language, target language, or both — declare honestly
-- **examples:**
-  - MACLISP
-  - APPLESOFT_FP_BASIC
-  - INTEGER_BASIC
-  - FORTH
-  - 6502 asm
-  - C
-  - Pascal
-  - Rust_on_host
+## What a rig declares
 
-### Tools
+| Axis | Declare honestly |
+|------|------------------|
+| **Languages** | Host, target, or both — e.g. MACLISP, APPLESOFT/INTEGER BASIC, FORTH, 6502 asm, C, Pascal, Rust on host |
+| **Tools** | DDT, SIMH, apple2js, cc65, xa, Cursor, MOOLLM, VICE, MAME, Emularity |
+| **Platforms** | Where the spec actually runs — real, emulated, or hybrid |
+| **Emulators** | If no real iron — emulator **is** your platform; pin version; demo must boot on stream |
 
-- **what:** Assembler, IDE, emulator front-end, disk tools, AI orchestration
-- **examples:**
-  - DDT
-  - SIMH
-  - PDP-10/its
-  - apple2js
-  - cc65
-  - xa
-  - Cursor
-  - MOOLLM
-  - vice
-  - MAME
-  - Emularity
+**Rig DNA:** colocate [`rigs/<slug>.SETUP.md`](../../rigs/_TEMPLATE.SETUP.md) — emailable, sniffable, self-replicating ([`rig-setup-dna.yml`](../../schemas/rig-setup-dna.yml)). Sniffable head + raw GitHub URLs for latest rig yaml + LLM idempotent install preserving `.rig/<slug>/state.yml`.
 
-### Platforms
+Example platforms:
 
-- **what:** Where the spec actually runs — real, emulated, or hybrid
-### Examples
+| Platform | Run on |
+|----------|--------|
+| PDP-10 / ITS | SIMH + MACLISP, MIDAS |
+| Apple ][ | Real floppy, apple2js, MAME, Emularity |
+| Symbolics Genera | Portable Genera / Open Genera VLM |
+| LMI Lambda | LambdaDelta |
+| MIT CADR | usim (ancestor lap) |
+| Cross-host | Build modern; demo retro target via emulator or serial |
 
-- {"id": "pdp10_its", "emulated": "PDP-10/its + SIMH", "languages": ["MACLISP", "MIDAS"]}
-- {"id": "symbolics_genera", "emulated": "Portable Genera / Open Genera VLM", "languages": ["ZetaLisp", "Flavors"]}
-- {"id": "lmi_lambda", "emulated": "LambdaDelta", "languages": ["ZetaLisp", "Flavors"]}
-- {"id": "mit_cadr", "emulated": "usim", "note": "CADR heritage — ancestor lap"}
-- {"id": "apple2", "real": "Apple ][+ with floppy", "emulated": "apple2js, MAME, Emularity"}
-- {"id": "commodore64", "emulated": "VICE, Emularity"}
-- {"id": "atari8", "emulated": "Altirra, Atari800"}
-- {"id": "trs80", "emulated": "SDLTRS, MAME"}
-- {"id": "bbc_micro", "emulated": "beebem, MAME"}
-- {"id": "cross_host", "note": "Build on modern host; demo on retro target via emulator or serial"}
+Stack specs: [`pdp10-its-stack.yml`](../pdp10-its-stack.yml) · [`apple2-emulator-stack.yml`](../apple2-emulator-stack.yml) · [`lisp-machine-stack.yml`](../lisp-machine-stack.yml) (machine girders — `.md` companions pending)
 
+---
 
-- **emulators:**
-  - when: Platform is retro but you have no real iron — emulator IS your platform
-  - rule: Declare which emulator + version; demo must boot on stream
-- **setup_md:**
-  - what: Colocated rigs/<slug>.SETUP.md — viral Rig DNA (emailable, sniffable, self-replicating)
-  - schema: ../../schemas/rig-setup-dna.yml
-  - template: ../../rigs/_TEMPLATE.SETUP.md
-  - rule: Sniffable head (why/what/CTA) + raw GitHub URLs for latest rig yaml + LLM idempotent
-install/upgrade preserving .rig/<slug>/state.yml. Human decides whether agent executes.
+<a id="challenge-lanes"></a>
 
-## Challenge Lanes
+## Challenge lanes
 
-### Flair Showoff
+| Lane | Judges | Rule |
+|------|--------|------|
+| **Flair showoff** | Slats, audience, [brain stream](../brain-stream.md) | Spec ships on declared platform — language/tool choices are the costume. Wrong platform? Sashay. |
+| **Measurement vertical** | Spreadsheet, rubric, human | Same rig declaration — optimize cost/shifts while touching real retro I/O ([Manual Transmission](../manual-transmission.md), stick shift, or artisanal) |
 
-- **declare:** flair_class
-- **judges:**
-  - Slats
-  - audience
-  - brain_stream
-- **rule:** Spec ships on declared platform — language/tool choices are the costume
-- **slats:** Wrong platform for the challenge card? Sashay. Right platform, wrong werk? GOTO 20 with pride.
+Audience chant: **CODE THAT SPEC!!!!!** *(on your platform)*
 
-### Measurement Vertical
+---
 
-- **declare:** stick_shift_or_artisanal
-- **judges:**
-  - spreadsheet
-  - rubric
-  - human
-- **rule:** Same rig declaration — optimize cost/shifts while touching real retro I/O
+<a id="how-it-runs"></a>
 
+## How it runs
 
-## How It Runs
+| Step | Action |
+|------|--------|
+| **Host drops** | Spec CARD — platform constraint optional (*Apple ][ only* or *any retro target*) |
+| **Contestant** | `rigs/<persona>.rig.yml` + `rigs/<persona>.SETUP.md` · declare flair vs measurement · implement on branch |
+| **Demo** | Screencast, emulator URL, or hardware capture on PR |
+| **Commits** | [thoughtful-commitment](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) — Thinking ref; [homefun grading](../homefun-grading.md) applies |
+| **Proof** | Demo on declared platform · rig yaml + SETUP.md pinned · optional spend CSV + cursor-mirror composer id |
 
-- **host_drops:** Spec CARD — platform constraint optional (e.g. 'Apple ][ only' or 'any retro target')
-- **contestant:**
-  - rigs/<persona>.rig.yml — document languages, tools, platforms, emulators in components
-  - rigs/<persona>.SETUP.md — Rig DNA (template: rigs/_TEMPLATE.SETUP.md; schema: schemas/rig-setup-dna.yml)
-  - Declare flair vs measurement + platform lane
-  - Implement on branch — screencast, emulator URL, or hardware capture on PR
-  - thoughtful-commitment — Thinking ref; homefun grading applies
-- **proof:**
-  - Demo on declared platform (recording or live boot)
-  - Rig yaml + SETUP.md — reproducible toolchain; pin versions
-  - Optional: Cursor spend CSV + cursor-mirror composer id
+---
 
-## Flagship Instances
+<a id="flagship-instances"></a>
 
-### Apple2 Drive
+## Flagship instances
 
-- **see:** apple2-drive.yml
-- **example_rig:** ../../rigs/apple2-flair-lap.rig.yml
-- **tagline:** Drive the ][ — INTEGER BASIC if you dare
+| Instance | Tagline | Girder |
+|----------|---------|--------|
+| **Apple ][ drive** | *Drive the ][ — INTEGER BASIC if you dare* | [`apple2-drive.yml`](apple2-drive.yml) · example [`apple2-flair-lap.rig.yml`](../../rigs/apple2-flair-lap.rig.yml) |
+| **PDP-10 MACLISP drive** | *Write in MACLISP on a PDP-10 emulator running ITS!* | [`pdp10-maclisp-drive.yml`](pdp10-maclisp-drive.yml) · example [`pdp10-maclisp-flair-lap.rig.yml`](../../rigs/pdp10-maclisp-flair-lap.rig.yml) |
+| **Lisp Machine hack-off** | *Symbolics vs LMI — the battle continues* | [`lisp-machine-hack-off.yml`](lisp-machine-hack-off.yml) · example rigs: Symbolics + LMI |
 
+**Future seeds:** C64 PETSCII lap · Atari 8-bit · real iron only (no emulator — breadboard or attic hardware)
 
-### Pdp10 Maclisp Drive
+**Anchor guests:** [Lars Brinkhoff](../../characters/lars-brinkhoff/README.md) (PDP-10 / ITS) · [Thomas Cherryhomes](../../characters/thomas-cherryhomes/README.md) (real ][ on FujiNet — pairs with Apple2 drive)
 
-- **see:** pdp10-maclisp-drive.yml
-- **example_rig:** ../../rigs/pdp10-maclisp-flair-lap.rig.yml
-- **tagline:** Write in MACLISP on a PDP-10 emulator running ITS!
+---
 
+## Navigate
 
-### Lisp Machine Hack Off
+| Destination | Why |
+|-------------|-----|
+| [Micropolis AI Drag Race](../micropolis-ai-drag-race.md) | Retro laps in drag-race rotation |
+| [Manual Transmission](../manual-transmission.md) | Measurement lane |
+| [AI-offs](../ai-offs.md) | Declare class + spend proof |
+| [Homefun grading](../homefun-grading.md) | Retro PR rubric |
+| [Stick-shift protocol](../stick-shift-protocol.md) | Gear = commit |
+| [Rigs README](../../rigs/README.md) | Personas + SETUP DNA |
+| [Repo Show skill](../../skills/repo-show/SKILL.md) | Harvest retro technique to `skills/` |
 
-- **see:** lisp-machine-hack-off.yml
-- **example_rigs:**
-  - ../../rigs/lisp-machine-symbolics.rig.yml
-  - ../../rigs/lisp-machine-lmi.rig.yml
-- **tagline:** Symbolics vs LMI — the battle continues
-
-
-### Future Seeds
-
-- {"id": "c64_drive", "note": "PETSCII flair lap — seed when first rig lands"}
-- {"id": "atari800_drive", "note": "Atari 8-bit — seed when first rig lands"}
-- {"id": "real_iron_only", "note": "No emulator — breadboard or attic hardware"}
-
-
-- **Audience Chant:** CODE THAT SPEC!!!!! (on your platform)
-
-## Ties to
-
-| Link |
-|------|
-| [`apple2-drive.yml`](apple2-drive.yml) |
-| [`pdp10-maclisp-drive.yml`](pdp10-maclisp-drive.yml) |
-| [`lisp-machine-hack-off.yml`](lisp-machine-hack-off.yml) |
-| [`../lisp-machine-stack.yml`](../lisp-machine-stack.yml) |
-| [`../apple2-emulator-stack.yml`](../apple2-emulator-stack.yml) |
-| [`../pdp10-its-stack.yml`](../pdp10-its-stack.yml) |
-| [`../micropolis-ai-drag-race.yml`](../micropolis-ai-drag-race.yml) |
-| [`../stick-shift-protocol.yml`](../stick-shift-protocol.yml) |
-| [`../../schemas/rig-schema.yml`](../../schemas/rig-schema.yml) |
-| [`../../rigs/README.md`](../../rigs/README.md) |
-| [`../../characters/robots/slats/judge-rubric.yml`](../../characters/robots/slats/judge-rubric.yml) |
-
-## Related
-
-| Link | Why |
-|------|-----|
-| Narrative trail — all retro nodes | *(this document)* |
-| [`retrocomputing-drive.md`](retrocomputing-drive.md) | Generated markup view of this family |
-| [`micropolis-ai-drag-race.md`](../micropolis-ai-drag-race.md) | Retro laps are drag race challenge rotation |
-| [`manual-transmission.yml`](../manual-transmission.yml) | Measurement lane — smallest model on retro target |
-| [`ai-offs.yml`](../ai-offs.yml) | Declare class + spend proof for AI-assisted retro |
-| [`homefun-grading.yml`](../homefun-grading.yml) | Homefun rubric applies to retro PRs |
-| [`../../characters/lars-brinkhoff/`](../../characters/lars-brinkhoff/) | PDP-10 anchor — make it so |
-| [`../../characters/thomas-cherryhomes/`](../../characters/thomas-cherryhomes/) | Real ][ on FujiNet — pairs with apple2-drive |
-| [`rig-setup-dna.yml`](../../schemas/rig-setup-dna.yml) | SETUP.md is Rig DNA — LLM may draft; not facade-registry bulk md |
-| [`SKILL.md`](../../skills/repo-show/SKILL.md) | Repo Show harvests retro technique back to skills/ |
-| [`constructionism`](https://github.com/SimHacker/moollm/skills/constructionism) | Microworlds — learn by building on your platform |
+↑ [challenges README](README.md) · [process INDEX](../INDEX.md)

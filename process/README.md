@@ -2,15 +2,15 @@
 
 **Yaml is source of truth for machines** — compact data; dependency graph; MOOLLM and CI read yaml.
 
-**Markdown is the human view** — hand-authored dossiers for navigation and onboarding. **Yaml→md (`pnpm facades`) is a temporary fallback** for a few legacy entries until replaced.
+**Markdown is the human view** — hand-authored dossiers for navigation and onboarding. **Yaml→md (`pnpm facades`) is a temporary fallback** for legacy entries not yet hand-authored (see registry).
 
 ## Instance-first vs kebab-case
 
 | Tier | Pattern | Examples | Edit |
 |------|---------|----------|------|
-| **Instance-first** (hand, special names) | `foo-bar.yml` → `SPECIAL.md` | [vision-and-ambition.md](vision-and-ambition.md) · [crazy-idea-jam.md](crazy-idea-jam.md) · [ENTRYWAYS.md](../ENTRYWAYS.md) · [TRAILS.md](../TRAILS.md) | Edit the `.md`; sync yaml girder |
-| **Kebab-case facades** (hand index docs) | `foo-bar.yml` → `foo-bar.md` | [ticket-pr.md](ticket-pr.md) · [guest-participation-ladder.md](guest-participation-ladder.md) · [moollm-stage.md](moollm-stage.md) · … | Edit the `.md`; sync yaml girder |
-| **Fallback** (script dump) | `pnpm run facades` | [repo-show-format.md](repo-show-format.md) · [micropolis-ai-drag-race.md](micropolis-ai-drag-race.md) · [homefun-grading.md](homefun-grading.md) · … | Replace with hand doc; flip registry |
+| **Instance-first** (hand) | `foo-bar.yml` → readable `.md` | [vision-and-ambition.md](vision-and-ambition.md) · [repo-show-format.md](repo-show-format.md) · [challenges/retrocomputing-drive.md](challenges/retrocomputing-drive.md) · [ai-offs.md](ai-offs.md) · [homefun-grading.md](homefun-grading.md) | Edit the `.md`; sync yaml girder |
+| **Kebab-case facades** (hand index docs) | `foo-bar.yml` → `foo-bar.md` | [ticket-pr.md](ticket-pr.md) · [showmaker-network.md](showmaker-network.md) · [moollm-stage.md](moollm-stage.md) · … | Edit the `.md`; sync yaml girder |
+| **Fallback** (script dump) | `pnpm run facades` | *(none — registry `fallback_deterministic` empty)* | Add id only if a girder lacks a hand facade |
 
 Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · human index: [`markup-facades.md`](markup-facades.md) · schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
 

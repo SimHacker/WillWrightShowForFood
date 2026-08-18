@@ -20,6 +20,9 @@ room still has to *run* one day.
 
 ---
 
+<a id="the-crown-jewel"></a>
+<a id="data-portability-crown-jewel"></a>
+
 ## 💎 The crown jewel
 
 *The goal Will named on a Stanford stage in 1996 — and that **still** hasn't shipped. Everything else here is a facet of this one stone.*

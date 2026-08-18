@@ -1,189 +1,148 @@
-<!-- GENERATED from `process/ai-offs.yml` — do not edit; run `pnpm run facades` -->
-<!-- content-sha256:1748e84eb8ab7b23 -->
-
 # AI-offs
 
-> **Girder:** [`ai-offs.yml`](ai-offs.yml) · **Regenerate:** `pnpm run facades` · **Registry:** [`markup-facades.yml`](markup-facades.yml)
+> **Girder:** [`ai-offs.yml`](ai-offs.yml) · **Format:** [repo-show-format.md#rig-spectrum](repo-show-format.md#rig-spectrum) · **Rig reports:** [rig-feedback.md](rig-feedback.md) · **Scoreboard:** [showmaker-network.md](showmaker-network.md)
 
-## What
+**Tagline:** *Declare class, report spend, live-code your thinking into git*
 
-AI-offs are declared-class competitions — artisanal vs budget bull ride vs stick-shift
-model switching vs orchestrated. Score cost-to-ship AND solution quality. Prove with
-Cursor spend CSV + cursor-mirror + thoughtful commits.
-Manual Transmission: smallest model that works — multi-rubric orchestration gold.
+AI-offs are declared-class competitions — artisanal vs budget bull ride vs stick-shift model switching vs orchestrated. Score cost-to-ship **and** solution quality. Prove with Cursor spend CSV + [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) + [thoughtful commits](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment).
 
-## Tagline
+Flagship lane: [Manual Transmission](manual-transmission.md) — smallest model that works — multi-rubric [orchestration gold](orchestration-gold.md).
 
-*Declare class, report spend, live-code your thinking into git*
+---
 
-## Meta
+## On this page
 
-| Key | Value |
-|-----|-------|
-| **id** | ai-offs |
-| **status** | seed |
+| Read | In one line |
+|------|-------------|
+| [Game shows](#game-shows) | Code That Spec · Drag Race · Manual Transmission |
+| [Spend proof](#spend-proof) | Cursor CSV — voluntary piss test |
+| [Rig classes](#rig-classes) | Bull ride · stick shift · code that spec |
+| [Thoughtful commits](#thoughtful-commits) | WHY in git, not just WHAT |
+| [Scoreboard](#scoreboard) | Cost + quality + merge + abstraction |
+| [Post-run analysis](#post-run-analysis) | Mirror + deep-snitch before harvest |
+| [Navigate](#navigate) | Related specs and skills |
 
-## Orchestration Lab
+---
 
-- **see:** orchestration-gold.yml
-- **pitch:** FUN competitive reason for real programmers to submit real multi-LLM routing traces.
-GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful commits
-+ cursor-mirror slices can train orchestrators.
-- **moollm:**
-  - rubric
-  - experiment
-  - evaluator
-  - cursor-mirror
-  - thoughtful-commitment
-- **model_branching:** model-branching.yml
+## Game shows
 
-## Spend Proof
+| Format | Spec |
+|--------|------|
+| **Code That Spec** | [code-that-spec.md](code-that-spec.md) — bid tokens/time; audience chants **CODE THAT SPEC!!!!!** |
+| **Manual Transmission** | [manual-transmission.md](manual-transmission.md) — smallest model / fewest tokens |
+| **Micropolis AI Drag Race** | [show README](../repo-shows/micropolis-ai-drag-race/README.md) · [process spec](micropolis-ai-drag-race.md) |
 
-### Cursor Spend Csv
+**Drag race opener:** *Start your engines — may the best rig werk, commit, and merge.*
 
-- **required_for:**
-  - manual_transmission
-  - stick_shift
-  - code_that_spec
-- **metaphor:** Voluntary piss test — the ref that doesn't lie
-- **proves:**
-  - model_timeline
-  - tokens
-  - bid_honesty
-  - shift_count
+**Live overlay:** [brain stream](brain-stream.md) — prompts, thinking, shifts — Manual Transmission tachometer.
 
-- **see:** manual-transmission.yml#spend-csv-piss-test
+---
 
-## Rig Classes
+## Spend proof
 
-| Key | Value |
-|-----|-------|
-| **budget_bull_ride** | One tier, tight budget, wrangle through chaos and hallucinations |
-| **stick_shift** | Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer |
-| **code_that_spec** | Game-show bid — tokens or time; audience CODE THAT SPEC; rig as Let's Make a Deal costume |
+**Cursor spend CSV** — required for Manual Transmission, stick shift, and Code That Spec.
 
-## Game Shows
+| | |
+|--|--|
+| **Metaphor** | Voluntary piss test — the ref that doesn't lie |
+| **Proves** | Model timeline · tokens · bid honesty · shift count |
+| **Full spec** | [Manual Transmission · spend CSV](manual-transmission.md#spend-csv-piss-test) |
 
-| Key | Value |
-|-----|-------|
-| **code_that_spec** | code-that-spec.yml |
-| **micropolis_ai_drag_race** | micropolis-ai-drag-race.yml |
-| **manual_transmission** | manual-transmission.yml |
-| **chant** | CODE THAT SPEC!!!!! |
-| **drag_race** | Start your engines — may the best rig werk, commit, and merge |
-| **manual_transmission_prompt** | What's the smallest model — or fewest tokens — you can code the spec with? |
+Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with cursor-mirror session IDs for the ai-offs scoreboard — efficiency vs extravagance within class. Stick-shift competitions: the spend log shows every model switch — smooth shifts vs grinding gears.
 
-## Brain Stream
+---
 
-- **see:** brain-stream.yml
-- **role:** Live overlay + chat bus for prompts, thinking, shifts — Manual Transmission tachometer
+## Rig classes
 
-## Cursor Mirror
+| Class | Play |
+|-------|------|
+| **budget bull ride** | One tier, tight budget, wrangle through chaos and hallucinations — *"We can't stop here — this is bat country!"* |
+| **stick shift** | Multi-model — shift efficiently; cliff-road metaphor; spend log is the tachometer ([stick-shift-protocol.md](stick-shift-protocol.md)) |
+| **code that spec** | Game-show bid — tokens or time; rig as Let's Make a Deal costume |
 
-- **repo:** https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror
-- **role:** Introspect Cursor sessions — timeline, thinking blocks, tool calls, model routing.
-Download your timestamped Cursor spending spreadsheet; analyze tokens and models per session.
-- **commands:**
-  - python3 skills/cursor-mirror/scripts/cursor-mirror.py timeline <composer>
-  - python3 skills/cursor-mirror/scripts/cursor-mirror.py thinking <composer>
-  - python3 skills/cursor-mirror/scripts/cursor-mirror.py tools <composer>
-  - python3 skills/cursor-mirror/scripts/cursor-mirror.py context-sources <composer>
-  - python3 skills/cursor-mirror/scripts/cursor-mirror.py deep-snitch <composer>
-- **spend_proof:** Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with
-cursor-mirror session IDs for ai-offs scoreboard — efficiency vs extravagance within class.
-Stick-shift competitions: the spend log shows every model switch — smooth shifts vs grinding gears.
+Declare honestly in [`rigs/`](../rigs/README.md) + [`rig-schema.yml`](../schemas/rig-schema.yml). Full spectrum: [repo-show-format.md#rig-spectrum](repo-show-format.md#rig-spectrum)
 
-## Thoughtful Commits
+---
 
-- **also_called:**
-  - conscientious_commits
-  - thoughtful_commitment
-- **skill:** https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment
-- **idea:** Live-code thought process into git commits — COMMIT with cursor-mirror-backed reasoning.
-Share WHY not just WHAT. Session linkage so others can archaeology your ai-off ride.
-Since-last-commit: analyze mirror output across routing, cognition, context, artifacts.
-- **since-last-commit:** orchestration-gold.yml#since-last-commit
-- **workflow:**
-  - cursor-mirror timeline / thinking / tools / context-sources since last commit SHA
-  - thoughtful-commitment COMMIT — narrative + Thinking: cursor-mirror://composer/range
-  - PR merges tissue + provenance back into the organism
-- **moollm_spread:** MOOLLM spreads virally as enabling substrate — cursor-mirror + thoughtful-commitment +
-cauldron SCOOP + skills/ harvest. Floor wax AND dessert topping. (It's a dessert topping.
-No — it's a floor wax!)
+## Thoughtful commits
+
+Also called **conscientious commits** or **thoughtful commitment**.
+
+Live-code thought process into git commits — COMMIT with cursor-mirror-backed reasoning. Share **WHY** not just WHAT. Session linkage so others can archaeology your ai-off ride.
+
+| Step | Action |
+|------|--------|
+| Mirror | `timeline` / `thinking` / `tools` / `context-sources` since last commit SHA |
+| Commit | thoughtful-commitment COMMIT — narrative + `Thinking: cursor-mirror://composer/range` |
+| Merge | PR merges tissue + provenance back into the organism |
+
+**Since-last-commit** slices feed [orchestration gold](orchestration-gold.md). Grading tie-in: [homefun-grading.md](homefun-grading.md) — *Does the commit message match the thinking blocks?*
+
+MOOLLM spreads virally as enabling substrate — cursor-mirror + thoughtful-commitment + cauldron SCOOP + `skills/` harvest. Floor wax **and** dessert topping.
+
+---
 
 ## Scoreboard
 
-- **report:**
-  - Cursor spend export + token totals
-  - cursor-mirror session/composer ID
-  - thoughtful-commitment commit SHAs
-  - Rig class declared (artisanal / budget bull ride / stick shift / orchestrated)
-- **stick_shift_judging:**
-  - smooth: Right model for the curve — planning vs implementation vs polish
-  - proof: Cursor spend log timestamps + cursor-mirror timeline alignment
-  - fail: Premium model for yaml formatting — that's riding the clutch
-- **judge:**
-  - Cost to ship
-  - Solution quality
-  - Integration (PR merge)
-  - Abstraction (skills/ + packages/)
+Report on every ai-off:
 
-## Case Studies
+- Cursor spend export + token totals
+- cursor-mirror session/composer ID
+- thoughtful-commitment commit SHAs
+- Rig class declared (artisanal / budget bull ride / stick shift / orchestrated)
 
-### Bun Rust Rewrite 2026 07
+### Stick-shift judging
 
-- **digest:** sources/bun-rust-rewrite-2026-07.md
-- **axes:**
-  - cost_to_ship
-  - adversarial_ratio
-  - oracle_strength
-  - loop_discipline
-  - merge_confidence
+| | |
+|--|--|
+| **Smooth** | Right model for the curve — planning vs implementation vs polish |
+| **Proof** | Cursor spend log timestamps + cursor-mirror timeline alignment |
+| **Fail** | Premium model for yaml formatting — that's riding the clutch |
 
+**Judges:** cost to ship · solution quality · integration (PR merge) · abstraction (`skills/` + `packages/`)
 
-## Post Run Analysis
+**Orchestration lab:** FUN competitive reason for real programmers to submit real multi-LLM routing traces. GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful commits + cursor-mirror slices can train orchestrators. MOOLLM stack: [rubric](https://github.com/SimHacker/moollm/tree/main/skills/rubric) · [experiment](https://github.com/SimHacker/moollm/tree/main/skills/experiment) · [evaluator](https://github.com/SimHacker/moollm/tree/main/skills/evaluator) · [model branching](model-branching.md)
 
-- **when:** After Manual Transmission, Code That Spec, or any ai-off run
-- **what:** Analyze artifacts the chat generated — not just the merge diff. cursor-mirror
-reconstructs prompts, thinking, tool calls, context assembly; deep-snitch audits
-transcripts for secrets and sketch before anything goes public or into orchestration gold.
-### Workflow
+**Case study:** [Bun → Rust rewrite receipt](sources/bun-rust-rewrite-2026-07.md) — industrial-scale adversarial port (Jul 2026)
 
-- **mirror:**
-  - timeline
-  - thinking
-  - tools
-  - context-sources
-  - stream
-- **snitch:**
-  - command: deep-snitch
-  - note: Gut-camera pass — mask secrets before harvest or brain-stream replay
-- **harvest:**
-  - rubric SCORE forensics summary
-  - experiment COMPARE vs bid and vs other contestants
-  - model-branching COMPARE across forked trajectories — see model-branching.yml
-  - Optional: attach composer id + deep-snitch clean bill to PR
+---
 
-- **skill_snitch:** SimHacker/moollm/skills/skill-snitch
-- **see:** manual-transmission.yml#post-run-forensics
+<a id="post-run-analysis"></a>
 
-## Related
+## Post-run analysis
 
-| Link | Why |
-|------|-----|
-| [`cross-links.yml#drag-race-and-ai-offs`](cross-links.yml) | Full game-show + proof trail |
-| [`rig-schema.yml`](../schemas/rig-schema.yml) | Declare rig_classes honestly |
-| [`README.md`](../rigs/README.md) | Rig personas — spend log lives in proof block |
-| [`rig-feedback.yml`](rig-feedback.yml) | Tell us your real stack |
-| [`showmaker-network.yml`](showmaker-network.yml) | Competition scoreboard |
-| [`manual-transmission.yml`](manual-transmission.yml) | Smallest model — piss test required |
-| [`brain-stream.yml`](brain-stream.yml) | Live overlay during ai-offs |
-| [`model-branching.yml`](model-branching.yml) | Fork trajectories — post-run compare |
-| [`orchestration-gold.yml`](orchestration-gold.yml) | Training gold from real routing traces |
-| [`bun-rust-rewrite-2026-07.md`](sources/bun-rust-rewrite-2026-07.md) | Industrial-scale adversarial port receipt — Jul 2026 |
-| [`stick-shift-protocol.yml`](stick-shift-protocol.yml) | Shift = commit — tachometer metaphor |
-| [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) | Drag race uses ai-offs proof |
-| [`homefun-grading.yml`](homefun-grading.yml) | thoughtful-commitment rubric |
-| [`INDEX.yml`](../skills/INDEX.yml) | cursor-mirror, thoughtful-commitment upstream |
-| [`cursor-mirror`](https://github.com/SimHacker/moollm/skills/cursor-mirror) | Post-run forensics engine |
-| [`rubric`](https://github.com/SimHacker/moollm/skills/rubric) | Score forensics summaries |
+**When:** after Manual Transmission, Code That Spec, or any ai-off run.
+
+Analyze artifacts the chat generated — not just the merge diff. cursor-mirror reconstructs prompts, thinking, tool calls, context assembly; deep-snitch audits transcripts for secrets and sketch before anything goes public or into orchestration gold.
+
+| Phase | Commands / outputs |
+|-------|-------------------|
+| **Mirror** | `timeline` · `thinking` · `tools` · `context-sources` · `stream` |
+| **Snitch** | `deep-snitch` — gut-camera pass; mask secrets before harvest or brain-stream replay |
+| **Harvest** | rubric SCORE forensics summary · experiment COMPARE vs bid and vs other contestants · model-branching COMPARE across forked trajectories |
+
+Attach composer id + deep-snitch clean bill to PR. Full workflow: [Manual Transmission · post-run forensics](manual-transmission.md#post-run-forensics)
+
+**cursor-mirror commands:**
+
+```bash
+python3 skills/cursor-mirror/scripts/cursor-mirror.py timeline <composer>
+python3 skills/cursor-mirror/scripts/cursor-mirror.py thinking <composer>
+python3 skills/cursor-mirror/scripts/cursor-mirror.py tools <composer>
+python3 skills/cursor-mirror/scripts/cursor-mirror.py context-sources <composer>
+python3 skills/cursor-mirror/scripts/cursor-mirror.py deep-snitch <composer>
+```
+
+---
+
+## Navigate
+
+| Destination | Why |
+|-------------|-----|
+| [Manual Transmission](manual-transmission.md) | Smallest model — piss test required |
+| [Brain stream](brain-stream.md) | Live overlay during ai-offs |
+| [Orchestration gold](orchestration-gold.md) | Training gold from real routing traces |
+| [Model branching](model-branching.md) | Fork trajectories — post-run compare |
+| [Drag race + ai-offs trail](cross-links.yml#drag-race-and-ai-offs) | Full game-show + proof trail (girder) |
+| [Rig feedback](rig-feedback.md) | Tell us your real stack |
+| [skills/INDEX.yml](../skills/INDEX.yml) | cursor-mirror, thoughtful-commitment upstream |

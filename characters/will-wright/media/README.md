@@ -41,8 +41,8 @@ Nintendo. [`will-wright-and-miyamoto-simcity-snes.png`](will-wright-and-miyamoto
 skyline with tornado on the “monitor.” **1989 GAME OF THE YEAR** (CGW) · **100,000+ sold** (SPA).
 Featured in [Jimmy Maher's Maxis Part 1](../sources/2026-07-03-digital-antiquarian-maxis-part1/README.md)
 ([filfre.net](https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/)).
-[`simcity-macintosh-front-cover.jpg`](simcity-macintosh-front-cover.jpg) ·
-[`simcity-macintosh-front-cover.yml`](simcity-macintosh-front-cover.yml)
+[`simcity-macintosh-front-cover.md`](simcity-macintosh-front-cover.md) ·
+[`simcity-macintosh-front-cover.jpg`](simcity-macintosh-front-cover.jpg)
 
 ## Events
 
@@ -57,8 +57,9 @@ Conference photo with colleagues. [`will-wright-conference-photo.png`](will-wrig
 **Ant Farm Revolution** — Will Wright designed with **Uncle Milton**: gel ant habitat with **ceiling
 projector** (giant ant shadows on your ceiling). Stupid Fun Club badge on box. Don found it at
 **Fry's** — cowboy-themed Silicon Valley retail archaeology, all now gone.
-[`ant-farm-revolution-frys-box.png`](ant-farm-revolution-frys-box.png) · [`ant-farm-revolution-frys.yml`](ant-farm-revolution-frys.yml) ·
-[Fry's gallery](../../don-hopkins/media/frys-electronics/INDEX.yml)
+[`ant-farm-revolution-frys.md`](ant-farm-revolution-frys.md) ·
+[`ant-farm-revolution-frys-box.png`](ant-farm-revolution-frys-box.png) ·
+[Fry's gallery](../../don-hopkins/media/frys-electronics/INDEX.yml) (machine index)
 
 ## Micropolis — open-source SimCity lineage
 
@@ -75,7 +76,7 @@ Don's screenshot gallery: **HyperLook on Sun** · **OLPC XO** · **HAR** constru
 
 Giant pushpins with **Mona Lisa** texture-mapped heads — pipeline test for **Transmogrifier**
 and **3D Studio Max** UV layer export back onto Sims object surfaces.
-[`transmogrifier-mona-lisa-pushpins.yml`](transmogrifier-mona-lisa-pushpins.yml) ·
+[`transmogrifier-mona-lisa-pushpins.md`](transmogrifier-mona-lisa-pushpins.md) ·
 [`sims-series-transmogrifier-story.md`](sims-series-transmogrifier-story.md)
 
 ## The Sims — before it was "The Sims"
@@ -183,7 +184,8 @@ $80 compensation). **Will Wright** snapped it on a corkboard and sent it to Don.
 
 **Gallium party, GDC** — **Pac-Man Battle Royale** cocktail cabinet at an Alameda arcade.
 Don playing with **Will Wright** (Gallium Studios party).
-[`gallium-gdc-alameda-pacman-will-wright.png`](gallium-gdc-alameda-pacman-will-wright.png) · [`gallium-gdc-alameda-pacman-will-wright.yml`](gallium-gdc-alameda-pacman-will-wright.yml)
+[`gallium-gdc-alameda-pacman-will-wright.md`](gallium-gdc-alameda-pacman-will-wright.md) ·
+[`gallium-gdc-alameda-pacman-will-wright.png`](gallium-gdc-alameda-pacman-will-wright.png)
 
 ---
 
@@ -211,13 +213,14 @@ Longer scrolls with many figures — files sit alongside this README:
 | Simlish origins audio | `steve-and-gerri-simlish-adlib.wav` → [source bundle](../sources/steve-and-gerri-simlish-adlib/README.md) |
 | Robot meetup | `robot-fight-la-1.png` … `robot-fight-la-8-controller.png` |
 | Snapshots from Will | `high-while-programming-flyer.png` · [`high-while-programming-flyer.yml`](high-while-programming-flyer.yml) |
-| Gallium / GDC | `gallium-gdc-alameda-pacman-will-wright.png` · [`gallium-gdc-alameda-pacman-will-wright.yml`](gallium-gdc-alameda-pacman-will-wright.yml) |
+| Gallium / GDC | [`gallium-gdc-alameda-pacman-will-wright.md`](gallium-gdc-alameda-pacman-will-wright.md) |
+| Head-shot gags | [`will-head-shot-progression/will-head-shot-progression.md`](will-head-shot-progression/will-head-shot-progression.md) |
 | Space junk | → [`russian-space-junk.md`](russian-space-junk.md) — **Oakland**; 16 photos now on disk |
 | Physical art | → [`artwork.md`](artwork.md) |
 
 ---
 
-See also: [CHARACTER](../CHARACTER.yml) · [will wright premiere](../../../repo-shows/will-wright-premiere/README.md)
+See also: [Guest hub](../README.md) · [will wright premiere](../../../repo-shows/will-wright-premiere/README.md)
 
 ---
 

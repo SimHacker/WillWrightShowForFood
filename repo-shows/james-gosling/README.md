@@ -1,3 +1,5 @@
+<!-- hand-authored -->
+
 # Repo Show — James Gosling × Arthur van Hoff
 
 *Seed — consent not yet asked. A pairing of two old Sun friends; can also run solo.*
@@ -10,7 +12,7 @@
 
 From **NeWS to Java**. James architected **NeWS/SunDew** — a PostScript-programmable, network-transparent window system that was, in effect, an AJAX architecture years early — and wrote **Gosling Emacs**. Arthur built **HyperLook** (a NeWS reimagining of HyperCard, where Don built SimCity's UI) and **PdB**, then joined the early **Java** team and wrote the compiler in Java. Don worked alongside both (the UniPress Emacs NeWS driver, pie menus, the lunar-lander-in-PostScript). A conversation about a lost future, the extension-language lineage, and what carried into Java.
 
-**Opening beat (optional):** Don holds up [`gosling-young-pdp8-hotrod.png`](../../characters/james-gosling/media/gosling-young-pdp8-hotrod.png) — satisfied kid at a fully loaded **PDP-8 hotrod**. Ask James whose rig, what ran, what had just worked. *Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.*
+**Opening beat (optional):** Don holds up the [PDP-8 hotrod photo edition](../../characters/james-gosling/media/gosling-young-pdp8-hotrod.md) — satisfied kid at a fully loaded **PDP-8 hotrod**. Ask James whose rig, what ran, what had just worked. *Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.*
 
 ## Trail
 

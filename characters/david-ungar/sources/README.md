@@ -10,6 +10,14 @@
 | [2026-07-linkedin-self-manual-thread.md](2026-07-linkedin-self-manual-thread.md) | Self manual reunion — Amanda Walker's spiral-bound manual, Urs's thirty-versions story, Ungar still programming in Self daily |
 | [hn-self-1989-selfishscript-45706924.md](hn-self-1989-selfishscript-45706924.md) | HN thread on the 1989 Self implementation paper; Don's SelfishScript comment; senderpath's reply |
 | [moollm-kline-inheritance.md](moollm-kline-inheritance.md) | Point don't humansplain — paper + patent + mixins; three-axis accessibility; yaml-jazz; skill link table; OL reunion tie-in |
+| [2026-08-correspondence-facetime-and-async-pitch.md](2026-08-correspondence-facetime-and-async-pitch.md) | FaceTime Aug 17 + async 2014-panel pitch Aug 18 — public-safe digest |
+| [2014-async-revisits-index.md](2014-async-revisits-index.md) | **Lang.NEXT 2014** — two async revisit articles (concurrency panel + Korz talk) |
+| [2014-stroustrup-hewitt-ungar-conversation.md](2014-stroustrup-hewitt-ungar-conversation.md) | Concurrency panel — Channel 9 / LangNEXT mirrors |
+| [2014-stroustrup-hewitt-ungar-bulldozer00-review.md](2014-stroustrup-hewitt-ungar-bulldozer00-review.md) | **Bulldozer00** Oct 2014 review — three-position lay summary |
+| [2014-lang-next-korz-dancing-with-symmetry.md](2014-lang-next-korz-dancing-with-symmetry.md) | **Korz talk** — [Dancing with Symmetry](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context) (Lang.NEXT 2014) |
+| [2026-08-stroustrup-hewitt-followup-article-scaffold.md](2026-08-stroustrup-hewitt-followup-article-scaffold.md) | Article outline — concurrency panel |
+| [2026-08-korz-dancing-with-symmetry-article-scaffold.md](2026-08-korz-dancing-with-symmetry-article-scaffold.md) | Article outline — Korz talk |
+| [moollm-demo-transcript-2026-08-17.md](../moollm-demo-transcript-2026-08-17.md) | Annotated MOOLLM demo from FaceTime call |
 | [self-entry-points.md](self-entry-points.md) | Verified links — OOP-RISC primary sources (self-power, SOAR, HOPL), compiler line, Randy line (ARK, Morphic, Us → Korz), videos |
 
 ↑ [character](../README.md) · [invitation](../invitation.md)

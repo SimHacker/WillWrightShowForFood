@@ -31,7 +31,7 @@ Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/mo
 | [Invitation to stakeholders](#invitation-to-stakeholders) | `invitation-to-stakeholders` | Inspect · fork · talk |
 | [Navigate](#navigate) | — | Trails · format · setup |
 
-**Related K-lines elsewhere:** [`data-portability-crown-jewel`](crazy-idea-jam.yml#data-portability-crown-jewel) (Will's 1996 goal, still unshipped) · [`stupid-fun-forward`](cross-links.yml#stupid-fun-forward) (reactor trail) · [`repo-show-spine`](cross-links.yml#repo-show-spine) (*So you have a Repo to Show us?*)
+**Related K-lines elsewhere:** [`data-portability-crown-jewel`](crazy-idea-jam.md#the-crown-jewel) (Will's 1996 goal, still unshipped) · [`stupid-fun-forward`](trails/stupid-fun-forward.md) (reactor trail) · [`repo-show-spine`](trails/repo-show-spine.md) (*So you have a Repo to Show us?*)
 
 ---
 
@@ -47,7 +47,7 @@ Will Wright gave [*Interfacing to Microworlds*](https://web.stanford.edu/class/c
 |--|--|
 | **Primary source** | [1996 source bundle — transcript, provenance, links](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Show pitch built on it** | [Will Wright kickoff show](../repo-shows/will-wright-premiere/README.md) |
-| **Crown jewel named there** | [Data portability between games](crazy-idea-jam.yml#data-portability-crown-jewel) — characters, cities, *memories* crossing worlds. Still not shipped. |
+| **Crown jewel named there** | [Data portability between games](crazy-idea-jam.md#the-crown-jewel) — characters, cities, *memories* crossing worlds. Still not shipped. |
 
 The long arc since: Will and Don kept returning to the same question — when does the seminar become the city? **WillWrightShowForFood** is the public answer in repo form.
 
@@ -101,7 +101,7 @@ so git actually understands it (history, branch, merge, fork).
 the format die; a soul in git outlives any single game. Characters **sync across worlds** (git-merge over
 identity) rather than being copied or trapped. That is repossession delivered as a feature, not a manifesto:
 **you keep your characters because you keep the repo.** The long-promised
-[data portability between games](crazy-idea-jam.yml#data-portability-crown-jewel) — Will's still-unshipped
+[data portability between games](crazy-idea-jam.md#the-crown-jewel) — Will's still-unshipped
 1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
 Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) — guest rooms as consented portrayals, incarnation as authorship ([*On Being Simulated*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)).
@@ -116,7 +116,7 @@ Everything above — repo as medium, social collaboration hub, living artifact �
 **surface projection** of a deeper move. [MOOLLM](https://github.com/SimHacker/moollm) comes in through
 the back door. Not merely as an authoring tool, a show orchestrator, or a coherence engine — those are
 its day jobs. Its night job is to bring the repo to **life** as a **simulation engine**: directories are
-rooms, characters have state and motives, [session logs are episodes](moollm-stage.yml), and the
+rooms, characters have state and motives, [session logs are episodes](moollm-stage.md), and the
 LLM runs the world the way SimAntics ran a Sims lot.
 
 That changes what kind of show this is. Not a time-shifted public-participation show *documented in* a
@@ -143,7 +143,7 @@ was *Interfacing to Microworlds*. The Repo Show's answer, thirty years on: **the
 microworld is the microworld** — git for physics, YAML for matter, the LLM for causality, and every
 guest, viewer, and character a resident. The seminar doesn't just become the city;
 **the show is played, the way a city is played.** Where discussions actually run:
-[`moollm-stage.yml`](moollm-stage.yml) — the [adventure-4 pub](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub)
+[`moollm-stage.md`](moollm-stage.md) — the [adventure-4 pub](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub)
 third place, room graph, session-log episodes, [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) harvest.
 
 ---
@@ -152,18 +152,18 @@ third place, room graph, session-log episodes, [cauldron](https://github.com/Sim
 
 Picture a pyramid the ordinary way — **point up**. **You are standing on the tip**: the first public point of origin. The mass — skills, shows, characters, code — is **everything beneath your feet**, still being built.
 
-**On the tip today:** one kickoff [show seed](../repo-shows/will-wright-premiere/README.md), a [ShowMaker graph](showmaker-network.yml) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
+**On the tip today:** one kickoff [show seed](../repo-shows/will-wright-premiere/README.md), a [ShowMaker graph](showmaker-network.md) scaffold, verify CI, yaml indexes. [Curb appeal on the README](../README.md); [CARD.yml](../CARD.yml), [SHOW.yml](../schemas/), [MANIFEST](../MANIFEST.yml), and [`pnpm verify`](../SETUP.md) under that.
 
 **Building beneath you:**
 
-1. More show objects and edges — [ShowMaker network](showmaker-network.yml).
+1. More show objects and edges — [ShowMaker network](showmaker-network.md).
 2. More [MOOLLM skills](../skills/README.md) — cauldron SCOOP after each show; [**131 upstream skills (and counting)**](https://github.com/SimHacker/moollm/tree/main/skills) in [SimHacker/moollm](https://github.com/SimHacker/moollm) today, plus show-born skills bred here (GLANCE → CARD → SKILL → README).
 3. More [characters](../characters/README.md), [apps](../apps/), [packages](../packages/) — all feeding the skill library.
 4. Live conversation → melt in the [cauldron](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) → [SCOOP](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) skills and code → breed back via git PRs.
 
 **Shows are the stage; skills are the durable artifact.** Every [Repo Show](repo-show-format.md) should leave inheritable technique — protocols and [SKILL.md](../skills/repo-show/SKILL.md) bodies agents and humans can run, not pitch decks. That is how the [1996 microworlds talk](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) becomes *runnable* thirty years later.
 
-**Not vapor:** brutalist GitHub surface — rebar in [schemas/](../schemas/README.md), i-beams in `process/*.yml`, poured slab in verify CI. Browse without an account. Clone and break it. [Open an issue or PR](https://github.com/SimHacker/WillWrightShowForFood/issues).
+**Not vapor:** brutalist GitHub surface — rebar in [schemas/](../schemas/README.md), i-beams in [process/](../process/README.md), poured slab in verify CI. Browse without an account. Clone and break it. [Open an issue or PR](https://github.com/SimHacker/WillWrightShowForFood/issues).
 
 ---
 
@@ -182,9 +182,9 @@ Declare your class honestly. Weight class, not banishment — same shape Don use
 | **Stick shift switchers** | Multi-model routing — shift at the right moment; timestamped spend log as proof. |
 | **Consciencious objectors** | Don coined this at a Kaleida meetup with [David Ungar](../characters/david-ungar/) — programmers who conscientiously object to replacing hand craft with opaque automation. See [Self × MOOLLM show seed](../repo-shows/david-ungar-self-moollm/README.md). |
 
-Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [Manual Transmission](manual-transmission.md). Full spectrum: [repo-show-format.yml — rig-spectrum](repo-show-format.yml#rig-spectrum) · [repo-show-format.md](repo-show-format.md).
+Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.md) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [Manual Transmission](manual-transmission.md). Full spectrum: [repo-show-format.md — rig-spectrum](repo-show-format.md#rig-spectrum) · [repo-show-format.md](repo-show-format.md).
 
-Declare yours: [rig-feedback.yml](rig-feedback.yml) · [`rigs/`](../rigs/README.md) · [AI coder doorway](entryways/ai-coder.md)
+Declare yours: [rig-feedback.md](rig-feedback.md) · [`rigs/`](../rigs/README.md) · [AI coder doorway](entryways/ai-coder.md)
 
 ---
 
@@ -202,13 +202,13 @@ Stumbled here? Pick a doorway — numbered playlists in [ENTRYWAYS.md](../ENTRYW
 | [Jens Mönig](../characters/jens-monig/) | Snap! architect; Micropolis × Snap! | [jens-monig](../characters/jens-monig/) · [snap-logo-brian-jens](../repo-shows/snap-logo-brian-jens/) |
 | [Walter Bender](../characters/walter-bender/) | OLPC Stone Soup; open-source SimCity | [walter-bender-olpc](../repo-shows/walter-bender-olpc/) · [skill-creation](../skills/README.md) |
 
-Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → [MOOLLM skills](../skills/README.md) your class can run. RTFR together. Fork a [show seed](../repo-shows/README.md). Grade homefun: does the commit match the thinking? [homefun-grading.md](homefun-grading.md) · [homefun-grading.yml](homefun-grading.yml).
+Repo Shows as constructionist microworlds: Winograd lineage, Papert energy, Logo/Snap!/BJC in the stack. Live conversation → cauldron → [MOOLLM skills](../skills/README.md) your class can run. RTFR together. Fork a [show seed](../repo-shows/README.md). Grade homefun: does the commit match the thinking? [homefun-grading.md](homefun-grading.md).
 
 → [Educator doorway playlist](entryways/educator.md)
 
 ### Players and the general public
 
-A [Repo Show](repo-show-format.md): the stage is GitHub. **[Will Wright](../characters/will-wright/) is the confirmed kickoff guest** — [invitation accepted](../characters/will-wright/invitation.md), topic-less by design, async at his pace. You do not need AI. Fork, homeplay, PR your show into the [ShowMaker network](showmaker-network.yml).
+A [Repo Show](repo-show-format.md): the stage is GitHub. **[Will Wright](../characters/will-wright/) is the confirmed kickoff guest** — [invitation accepted](../characters/will-wright/invitation.md), topic-less by design, async at his pace. You do not need AI. Fork, homeplay, PR your show into the [ShowMaker network](showmaker-network.md).
 
 → [Player doorway](entryways/player.md) · [Will's show README](../repo-shows/will-wright-premiere/README.md) · [Guest — Will playlist](entryways/guest-will.md)
 
@@ -216,7 +216,7 @@ A [Repo Show](repo-show-format.md): the stage is GitHub. **[Will Wright](../char
 
 We want **real** setups — not vendor demos. Tools, models, MCP, skills, repos, [MOOLLM](https://github.com/SimHacker/moollm) wiring. Tell us how you actually work: show, harvest, homeplay, class.
 
-→ [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) or PR with [rig-feedback](rig-feedback.yml) · [AI coder doorway](entryways/ai-coder.md)
+→ [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) or PR with [rig-feedback](rig-feedback.md) · [AI coder doorway](entryways/ai-coder.md)
 
 ### Hackers, streamers, makers
 
@@ -228,7 +228,7 @@ RTFR. Man-vs-machine optional. Questions as PRs. Run a parallel show on your bra
 
 Permanent, attributed, forkable record — talk lineage from 1996 forward. This repo is a **public bud** from a private archive; mirror, cite, ingest show objects. We want the graph to outlive any one platform.
 
-→ [Archivist doorway](entryways/archivist.md) · [Archive trail](trails/archive-and-provenance.md) · [live-repo policy](live-repo.yml)
+→ [Archivist doorway](entryways/archivist.md) · [Archive trail](trails/archive-and-provenance.md) · [live-repo policy](live-repo.md)
 
 ### Hardware hackers and builders
 
@@ -240,7 +240,7 @@ Schematics in the repo. No gatekeeping. Bare-hands rig class welcome.
 
 Publication **network** — graph of shows, not a flat feed. We are not pitching a deal; we are planting a format you can inspect. Repo-native show: HN pointer → audience RTFR → live guest as Repo Man → harvest to code and skills → graph grows by PR.
 
-→ [Publisher doorway](entryways/publisher.md) · [make-play-tools-show format seed](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml)
+→ [Publisher doorway](entryways/publisher.md) · [make-play-tools-show format seed](../bits/tradition-make-play-tools-show/README.md)
 
 ---
 
@@ -263,9 +263,9 @@ These exist in the repo today (some as seeds; yaml says which):
 |----------|---------------|
 | Kickoff guest (confirmed) | [Will Wright show](../repo-shows/will-wright-premiere/README.md) · [accepted invitation](../characters/will-wright/invitation.md) |
 | MOOLLM skills library | [`skills/`](../skills/README.md) |
-| Cauldron SCOOP pipeline | [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) · [MicropolisCore cauldron example](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) · [repo-show-format.yml](repo-show-format.yml) |
+| Cauldron SCOOP pipeline | [cauldron skill](https://github.com/SimHacker/moollm/tree/main/skills/cauldron) · [SCOOP protocol](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/protocols/SCOOP.yml) · [MicropolisCore cauldron example](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) · [repo-show-format.md](repo-show-format.md) |
 | Repo Show format | [repo-show-format.md](repo-show-format.md) |
-| ShowMaker graph | [showmaker-network.yml](showmaker-network.yml) |
+| ShowMaker graph | [showmaker-network.md](showmaker-network.md) |
 | Repo Show — credited public ideas | [characters/](../characters/README.md) |
 | Polyglot monorepo + verify CI | [SETUP.md](../SETUP.md) |
 | Idea reactor | [crazy-idea-jam.md](crazy-idea-jam.md) |
@@ -286,7 +286,7 @@ Inheritable [MOOLLM](https://github.com/SimHacker/moollm) skills — protocols +
 | | |
 |--|--|
 | **Protocol** | [cauldron/SKILL.md](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/SKILL.md) — MELT → STIR → LADLE → ANCHOR → LINK → TASTE → SERVE; SCOOP is what you ladle *out* (skills, playbooks, sub-cauldrons) |
-| **Show loop** | [repo-show-format.yml § cauldron-scoop](repo-show-format.yml#cauldron-scoop) — melt on air → harvest after |
+| **Show loop** | [repo-show-format.md § harvest](repo-show-format.md#harvest) — melt on air → harvest after |
 | **Teaching examples** | [cauldron/examples/](https://github.com/SimHacker/moollm/tree/main/skills/cauldron/examples) — e.g. [configuration-flags](https://github.com/SimHacker/moollm/tree/main/skills/cauldron/examples/configuration-flags) |
 | **Deep live instance** | [**MicropolisCore — playable · pie · publishing cauldron**](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) — cross-cutting monolith ([GATHERING.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/playable-pie-publishing-cauldron/GATHERING.md)), playbooks, playable vertical slice. Same skill, real soup. |
 
@@ -334,13 +334,13 @@ That apartment session is not a footnote — **many threads in this repo flow fr
 
 | What flowed | Where it lives now |
 |-------------|-------------------|
-| **Eno ↔ Scott ↔ Don** friendship (still active) | [`scott-draves/correspondence.yml`](../characters/scott-draves/correspondence.yml) · [Scott Draves show](../repo-shows/scott-draves/README.md) |
-| **Dream four-way reunion** (Don + Scott + Brian + Will) | [Brian Eno dream show](../repo-shows/brian-eno/README.md) · [`old-band-back-together.yml`](old-band-back-together.yml) |
-| **Electric Sheep / Unity** redesign (2020s) | [Scott CHARACTER](../characters/scott-draves/CHARACTER.yml) · correspondence timeline |
+| **Eno ↔ Scott ↔ Don** friendship (still active) | [Scott Draves — Eno evening (2006)](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [Scott Draves show](../repo-shows/scott-draves/README.md) |
+| **Dream four-way reunion** (Don + Scott + Brian + Will) | [Brian Eno dream show](../repo-shows/brian-eno/README.md) · [old-band-back-together.md](old-band-back-together.md) |
+| **Electric Sheep / Unity** redesign (2020s) | [Scott Draves](../characters/scott-draves/README.md) · correspondence timeline (machine girder) |
 | **Generative art × simulation** show thesis | [Scott Draves README — Eno evening](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [Long Now source — Don's thread §4](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
 | **Doug Hilsinger / Taking Tiger Mountain** serendipity (Don → Will, same week) | [Doug Hilsinger — *Taking Tiger Mountain by Serendipity*](../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md) |
 
-Receipts: [Scott Draves — The Brian Eno evening (2006)](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [`correspondence.yml#brian-eno-2006`](../characters/scott-draves/correspondence.yml) · [Brian Eno character — the 2006 evening](../characters/brian-eno/CHARACTER.yml)
+Receipts: [Scott Draves — The Brian Eno evening (2006)](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [Brian Eno — the 2006 evening](../characters/brian-eno/README.md)
 
 ### Documented seed: open-source SimCity → OLPC → Micropolis
 
@@ -348,7 +348,7 @@ The same Long Now talk is also the **documented seed of open-sourcing SimCity** 
 
 **At the talk (Q&A):** Two audience members — **Dan Ancona** and **Mark Live** — **submitted the same question** to the Long Now stack: would Will open-source SimCity (and other games) so people could **see how the rules work and change them**? **Stewart Brand — the orchestrator** — gathered the audience's written questions and read it from the pile. Will, put on the spot in the best way, answered on stage that he was **very open to the idea** (arguing with the sim means it worked; SimHealth already exposed rules); Brian loved it too. Don was in the audience and heard it live.
 
-**Stewart Brand was running a proto-TicketPR.** Gathering written questions from the audience, curating the pile, reading the best ones to the guest on stage — that is exactly the mechanism [TicketPR](ticket-pr.yml) formalizes in git. Two audience-submitted questions changed software history; the Repo Show exists to make that kind of question **routine, attributed, and permanent**.
+**Stewart Brand was running a proto-TicketPR.** Gathering written questions from the audience, curating the pile, reading the best ones to the guest on stage — that is exactly the mechanism [TicketPR](ticket-pr.md) formalizes in git. Two audience-submitted questions changed software history; the Repo Show exists to make that kind of question **routine, attributed, and permanent**.
 
 **The cascade after the talk:** the two questions didn't stop at the stage. They triggered discussion **outside the talk** — numerous people, meetups and demos, emails and appointments — through the post-talk dinner circle and the months that followed. Years earlier Don had **written proposals for an educational version of SimCity that never led to anything**; now the same idea had a live public "yes" from Will and a **tangible justification**: a constructionist educational game for the OLPC. When Gilmore's November email landed, Don sent Will a **skeptical-but-I'll-ask-anyway** email about making SimCity free — skeptical because of the earlier EA dead-ends — and Will, primed at Long Now, **loved it**.
 
@@ -356,9 +356,9 @@ That is **[Alan Kay](../characters/alan-kay/README.md)'s critique**, restated by
 
 → [Alan Kay — OLPC glass-box SimCity](../characters/alan-kay/ideas.md) · [open-sourcing SimCity for OLPC](../characters/don-hopkins/open-sourcing-simcity-for-olpc.md)
 
-→ [YouTube clip ~t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [clip card](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question)
+→ [YouTube clip ~t=3929](https://youtu.be/Dfc-DQorohc?t=3929) · [clip card](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.md#open-source-simcity-audience-question)
 
-**Flagship short-form video:** Will's on-stage answer is the perfect cold open — audience asks, Will says he's **very open**, cut forward to **open-source Micropolis** as the direct documented result (Long Now → Gilmore → EA → OLPC → [MicropolisCore](https://github.com/SimHacker/MicropolisCore)). Not a montage of vibes; one question, one yes, one fork you can run. Production card: [`open-source-simcity-audience-question`](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.yml#open-source-simcity-audience-question) · [Adorable Minutes AE](post-production/adorable-minutes-ae.yml)
+**Flagship short-form video:** Will's on-stage answer is the perfect cold open — audience asks, Will says he's **very open**, cut forward to **open-source Micropolis** as the direct documented result (Long Now → Gilmore → EA → OLPC → [MicropolisCore](https://github.com/SimHacker/MicropolisCore)). Not a montage of vibes; one question, one yes, one fork you can run. Production: [open-source SimCity clip](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/short-form-clips.md#open-source-simcity-audience-question) · [Adorable Minutes AE](post-production/adorable-minutes-ae.md)
 
 **Don did not plant it.** In his Nov 2006 email to Will he wrote explicitly that he was **not** the person who submitted the Long Now question — and **John Gilmore did not ask it either**. (The denial sounded insincere only for humorous effect; Don had already been burned by earlier EA dead-ends and did not want to put Will on the spot in public.)
 
@@ -390,7 +390,7 @@ Gilmore was at the Long Now talk; his November email is the outside spark that t
 
 **Not promising:** any partnership, funding, or endorsement from institutions named here — or that they know this repo exists. This is alignment, offered for inspection.
 
-→ [old-band-back-together.yml](old-band-back-together.yml) · [**SimCity open-source saga**](../characters/will-wright/sources/simcity-open-source-saga/README.md) · [OLPC email thread](../characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/)
+→ [old-band-back-together.md](old-band-back-together.md) · [**SimCity open-source saga**](../characters/will-wright/sources/simcity-open-source-saga/README.md) · [OLPC email thread](../characters/will-wright/sources/2006-11-13-simcity-olpc-email-thread/)
 
 ---
 
@@ -411,7 +411,7 @@ The product is not an episode that evaporates. It is a growing **series** of Rep
 
 ### Reunions as a format
 
-*Get the old band back together* recurs across every era Don worked in — NeWS gang, Sims team, David Levitt crew, OpenLaszlo, 2006 Eno circle. Format spec: [old-band-back-together.yml](old-band-back-together.yml).
+*Get the old band back together* recurs across every era Don worked in — NeWS gang, Sims team, David Levitt crew, OpenLaszlo, 2006 Eno circle. Format spec: [old-band-back-together.md](old-band-back-together.md).
 
 **Warm ties (examples):** [Yoot Saito](../characters/yoot-saito/) · [Scott McCloud](../characters/scott-mccloud/) · [Douglas Engelbart](../characters/douglas-engelbart/) (memorial) · [Scott Draves](../characters/scott-draves/) · [remembering Douglas Engelbart show](../repo-shows/remembering-douglas-engelbart/)
 
@@ -423,9 +423,9 @@ Relationships described from Don's perspective. **Will Wright accepted** (July 2
 
 **Tone:** Inspect first. Fork second. Talk third.
 
-If you represent a platform, archive, publisher, or large audience channel: read the [process index](INDEX.yml), clone the repo, run [`pnpm verify`](../SETUP.md). If the format resonates, [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) — mirror, production, anthology, tooling, guest show. No NDAs required to see the shape.
+If you represent a platform, archive, publisher, or large audience channel: read the [process index](INDEX.md), clone the repo, run [`pnpm verify`](../SETUP.md). If the format resonates, [open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues) — mirror, production, anthology, tooling, guest show. No NDAs required to see the shape.
 
-**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](repo-show-format.md) proves the repo. Spec: [make-play-tools-show.yml](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml).
+**Television pitch (one paragraph):** A show about developing and playing games and tools — using automation honestly for code and orchestration; people voice and author. [Bar Karma](https://en.wikipedia.org/wiki/Bar_Karma) proved community-authored TV; [Repo Show](repo-show-format.md) proves the repo. Spec: [make-play-tools-show](../bits/tradition-make-play-tools-show/README.md).
 
 → [Publisher doorway playlist](entryways/publisher.md)
 
@@ -437,7 +437,7 @@ If you represent a platform, archive, publisher, or large audience channel: read
 |-----------|-----|
 | Repo home | [README.md](../README.md) |
 | Doorways by interest | [ENTRYWAYS.md](../ENTRYWAYS.md) |
-| How a show runs | [repo-show-format.md](repo-show-format.md) · [repo-show-format.yml](repo-show-format.yml) |
+| How a show runs | [repo-show-format.md](repo-show-format.md) |
 | Wild ideas | [crazy-idea-jam.md](crazy-idea-jam.md) · [`stupid-fun-forward` trail](trails/stupid-fun-forward.md) |
 | Will / 1996 talk | [Will show](../repo-shows/will-wright-premiere/README.md) · [1996 source](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | All show seeds | [repo-shows/README.md](../repo-shows/README.md) |

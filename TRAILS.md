@@ -39,7 +39,7 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 |-------|--------|----------|
 | [**stupid-fun-forward**](process/trails/stupid-fun-forward.md) | *Get weird — coolest, whackiest, most forward-thinking* | RoboResurrection, soul bridges, cells that travel between games |
 
-Reactor: [**Crazy Idea Jam**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
+Reactor: [**Crazy Idea Jam**](process/crazy-idea-jam.md)
 
 ---
 

@@ -119,11 +119,27 @@ live-edit of `*`. ISP + Self next to Declare's "heir not port."
 - **[Henry Minsky](../henry-minsky/)** — Laszlo + Leela; reunion
 - **[David Rosenthal](../david-rosenthal/slots-all-the-way-down.md)** — NeWS/fs pole vs Self pole; patent co-parent
 
+### 14. 2014 Lang.NEXT async revisits (two talks)
+
+Don's Aug 2026 pitch: re-listen to **two** Lang.NEXT 2014 episodes; write listening notes; David
+answers any on his schedule; Don drafts deep articles. Will Wright's GDC 2005 hinge — *revisit
+weird old ideas* when the stack catches up.
+
+| Talk | Bundle |
+|------|--------|
+| **Stroustrup × Hewitt × Ungar** — concurrency, inspirations | [`2014-stroustrup-hewitt-ungar-conversation.md`](sources/2014-stroustrup-hewitt-ungar-conversation.md) · [Bulldozer00 review](sources/2014-stroustrup-hewitt-ungar-bulldozer00-review.md) |
+| **Korz — Dancing with Symmetry** — subjective programming in context | [`2014-lang-next-korz-dancing-with-symmetry.md`](sources/2014-lang-next-korz-dancing-with-symmetry.md) · [Microsoft Learn](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context) |
+
+The Korz talk connects Oct 2025 email → [`korz-prime.md`](korz-prime.md) → MOOLLM specimens in [`chat-guide.md`](chat-guide.md) §5.
+
+→ [`sources/2014-async-revisits-index.md`](sources/2014-async-revisits-index.md) · [`invitation.md` Option D](invitation.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md) · [`reflecting-on-self.md`](reflecting-on-self.md)
 - [`sources/moollm-kline-inheritance.md`](sources/moollm-kline-inheritance.md)
-- [`correspondence.yml`](correspondence.yml) — Jan 2026 digest
+- [`correspondence.yml`](correspondence.yml) — Jan 2026 + Aug 2026 digest
+- [`sources/2014-async-revisits-index.md`](sources/2014-async-revisits-index.md) · [`sources/2014-lang-next-korz-dancing-with-symmetry.md`](sources/2014-lang-next-korz-dancing-with-symmetry.md)
 - [`from-alan-kay.yml`](from-alan-kay.yml) — Kay lineage quotes
 - [`repo-shows/david-ungar/`](../../repo-shows/david-ungar/) · [`repo-shows/openlaszlo/`](../../repo-shows/openlaszlo/)
 - [Self: The Power of Simplicity](https://bibliography.selflanguage.org/self-power.html)

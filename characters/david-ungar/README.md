@@ -31,7 +31,7 @@ Self doesn't run on everybody's phone — **in spirit it does**.
 - [Self and MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md) · [Latent-Space Inheritance](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)
 - [K-line inheritance — Self's simplicity for LLMs](sources/moollm-kline-inheritance.md) — paper + patent + mixin skills
 - [HN — Self 1989 JIT + SelfishScript (Nov 2025)](sources/hn-self-1989-selfishscript-45706924.md) — Don + Ungar reply
-- [Reflecting on Self](reflecting-on-self.md) · [Ideas](ideas.md) · [Chat guide](chat-guide.md) · [Korz notes & Q&A](korz-notes.md) · [Korz′ for the LLM age](korz-prime.md) · [Correspondence](correspondence.yml)
+- [Reflecting on Self](reflecting-on-self.md) · [Ideas](ideas.md) · [Chat guide](chat-guide.md) · [Korz notes & Q&A](korz-notes.md) · [Korz′ for the LLM age](korz-prime.md) · [Correspondence](correspondence.yml) · [2014 Lang.NEXT revisits](sources/2014-async-revisits-index.md) · [FaceTime demo transcript](moollm-demo-transcript-2026-08-17.md)
 - Temkin / Declare: [`../david-temkin/`](../david-temkin/) · Amanda Walker: [`../amanda-walker/`](../amanda-walker/)
 
 Don's threads: [`import-self-from-self`](../don-hopkins/import-self-from-self.md) ·

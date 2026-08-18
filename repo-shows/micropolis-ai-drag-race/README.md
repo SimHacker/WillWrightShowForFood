@@ -1,41 +1,51 @@
+<!-- hand-authored -->
+
 # Micropolis AI Drag Race
 
-> Flagship variety format: rig personas compete in design challenges, Code That Spec minis, Stiletto Sprints, Manual Transmission (smallest model / fewest tokens …
+> **Format spec:** [process/micropolis-ai-drag-race.md](../../process/micropolis-ai-drag-race.md) · **Host:** [Don Philahue](../../characters/don-philahue/) · **Judge:** [Slats](../../characters/robots/slats/)
 
-| Field | Value |
-|-------|-------|
-| **Status** | seed |
-| **Type** | game_show |
-| **Host** | Don Philahue |
+**Tagline:** *Start your engines — may the best rig werk, commit, and merge.*
 
-## Pitch
+Flagship **Repo Show variety format** — rig personas (Let's Make a Deal costumes + [`rigs/*.rig.yml`](../../rigs/README.md)) compete in design challenges, Code That Spec minis, Stiletto Sprints, [Manual Transmission](../../process/manual-transmission.md) laps, [Retrocomputing Drive](../../process/challenges/retrocomputing-drive.md) (MACLISP on ITS, Apple ][, Lisp Machine Hack-Off), and lip-sync-for-your-commits finales.
 
-Flagship variety format: rig personas compete in design challenges, Code That Spec
-minis, Stiletto Sprints, Manual Transmission (smallest model / fewest tokens to code the spec), Retrocomputing
-Drive (MACLISP on ITS, Apple ][, Lisp Machine Hack-Off Symbolics vs LMI), and
-lip-sync-for-your-commits finales. Cursor spend CSV is the piss test. Multi-rubric
-scoring via MOOLLM rubric + experiment. Winners merge to skills/ + packages/; werk.
+Cursor spend CSV is the **piss test**. Multi-rubric scoring via MOOLLM [rubric](https://github.com/SimHacker/moollm/tree/main/skills/rubric) + [experiment](https://github.com/SimHacker/moollm/tree/main/skills/experiment). Winners merge to `skills/` + `packages/`; werk.
 
+---
 
-## Related
+## Challenge rotation
 
-- [code-that-spec.yml](process/code-that-spec.yml)
-- [ai-offs.yml](process/ai-offs.yml)
-- [manual-transmission.yml](process/manual-transmission.yml)
-- [brain-stream.yml](process/brain-stream.yml)
-- [retrocomputing-drive.yml](process/challenges/retrocomputing-drive.yml)
-- [apple2-drive.yml](process/challenges/apple2-drive.yml)
-- [pdp10-maclisp-drive.yml](process/challenges/pdp10-maclisp-drive.yml)
-- [lisp-machine-hack-off.yml](process/challenges/lisp-machine-hack-off.yml)
-- [lisp-machine-symbolics.rig.yml](rigs/lisp-machine-symbolics.rig.yml)
-- [lisp-machine-lmi.rig.yml](rigs/lisp-machine-lmi.rig.yml)
-- [judge-rubric.yml](characters/robots/slats/judge-rubric.yml)
-- [stick-shift-composer-moollm.rig.yml](rigs/stick-shift-composer-moollm.rig.yml)
-- [game-show-wigcercize.yml](game-show-wigcercize.yml)
+| Challenge | Spec |
+|-----------|------|
+| Design challenge | Spec CARD → branch + README runway + yaml backbone |
+| [Code That Spec](../../process/code-that-spec.md) | Audience chants **CODE THAT SPEC!!!!!** |
+| [Manual Transmission](../../process/manual-transmission.md) | Smallest model / fewest tokens |
+| [Retrocomputing Drive](../../process/challenges/retrocomputing-drive.md) | Declare language + tools + platform |
+| Apple ][ lap | [`apple2-drive.yml`](../../process/challenges/apple2-drive.yml) |
+| PDP-10 MACLISP lap | [`pdp10-maclisp-drive.yml`](../../process/challenges/pdp10-maclisp-drive.yml) |
+| Lisp Machine hack-off | [`lisp-machine-hack-off.yml`](../../process/challenges/lisp-machine-hack-off.yml) |
+| Stiletto sprint | Shortest honest bid that still ships |
+| Lip-sync for your commits | [thoughtful-commitment](https://github.com/SimHacker/moollm/tree/main/skills/thoughtful-commitment) on stream |
+
+**Live overlay:** [brain stream](../../process/brain-stream.md) · **Proof family:** [AI-offs](../../process/ai-offs.md)
+
+---
+
+## Example rigs
+
+| Rig | Platform |
+|-----|----------|
+| [`lisp-machine-symbolics.rig.yml`](../../rigs/lisp-machine-symbolics.rig.yml) | Symbolics Genera |
+| [`lisp-machine-lmi.rig.yml`](../../rigs/lisp-machine-lmi.rig.yml) | LMI Lambda |
+| [`stick-shift-composer-moollm.rig.yml`](../../rigs/stick-shift-composer-moollm.rig.yml) | Multi-model routing |
+| [`apple2-flair-lap.rig.yml`](../../rigs/apple2-flair-lap.rig.yml) | Apple ][ flair |
+
+Slats rubric: [`characters/robots/slats/judge-rubric.yml`](../../characters/robots/slats/judge-rubric.yml) (machine girder)
+
+---
 
 ## In this directory
 
 - [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) — machine reading (seed spec)
-- `SHOW.yml` — *not yet*; add when ready to run the show (lazy prototype promotion)
+- `SHOW.yml` — add when ready to run the show
 
-↑ [`../README.md`](../README.md) · [`../INDEX.yml`](../INDEX.yml)
+↑ [`../README.md`](../README.md) · [ShowMaker network](../../process/showmaker-network.md)
