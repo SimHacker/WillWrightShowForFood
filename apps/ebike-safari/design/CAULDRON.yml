@@ -17,8 +17,8 @@ slurp_queue:
     extract: [performed live flow, StoryMaker hooks, show beats]
     status: pending
 
-  - id: urban-ebike-safari-seed
-    from: ../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  - id: ebike-safari-seed
+    from: ../../../repo-shows/ebike-safari/ebike-safari.yml
     into: [VISION.md, lineage.yml]
     extract: [voice-first, Ray-Ban, Bosch, hidden story graph, DreamScape chain]
     status: in_progress

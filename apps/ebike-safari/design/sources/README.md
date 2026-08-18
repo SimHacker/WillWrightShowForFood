@@ -12,7 +12,7 @@ Reference material melted into [`../CAULDRON.yml`](../CAULDRON.yml).
 | Abraham Moller — XOSS G collaboration | [abraham-moller-xoss.md](abraham-moller-xoss.md) | in repo |
 | Ben Cerveny jam — city record + speech track | [ben-cerveny-city-record-jam.md](ben-cerveny-city-record-jam.md) | in repo |
 | Urban Safari amber archive | [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md) | pointer |
-| Show seed lineage | [`../../../repo-shows/urban-ebike-safari/`](../../../../repo-shows/urban-ebike-safari/) | slurping |
+| Show seed lineage | [`../../../repo-shows/ebike-safari/`](../../../../repo-shows/ebike-safari/) | slurping |
 
 Add new sources here when dropping files into the cauldron.
 

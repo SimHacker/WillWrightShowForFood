@@ -6,7 +6,7 @@ meta:
   status: seed
   art_lead: howard-penner
   operator: lightpenisland-net
-  ties: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  ties: ../../repo-shows/ebike-safari/ebike-safari.yml
 
 one_line: "Industrial-warning parody + SFC globe + REVISIT THE IMPOSSIBLE — sticker packs Will would actually slap on a robot."
 
@@ -57,7 +57,7 @@ channels:
   - Fourthwall / print-on-demand (see DonHopkins projects/willwrightshowforfood/strategy/swag-lightpenisland.md)
 
 urban_safari_merch:
-  tie: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  tie: ../../repo-shows/ebike-safari/ebike-safari.yml
   note: "Safari capture cards + map posters + codebase-posters edition"
 
 voystick_warning_pack:

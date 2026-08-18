@@ -85,7 +85,7 @@ television_lineage:
       paths through a shared graph. Lessons from playtesting StoryMaker on real TV-show users.
     demo: https://www.youtube.com/watch?v=Db8KGNoeKHE
     jam: ../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
-    product: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+    product: ../../repo-shows/ebike-safari/ebike-safari.yml
   drew_carey_show_in_sims:
     what: "TV met games met improv — Maxis built a lot; Drew narrated live inside The Sims."
     url: https://www.youtube.com/watch?v=5wr04-WmWkg

@@ -20,7 +20,7 @@ and the MapLibre viewer.
 | **Demo data** | [`demo/`](demo/) — synthetic track |
 | **Media** | [`media/`](media/MANIFEST.yml) — live viewer screenshots (all rides, De Pijp flood fill, backwards roundabout…) |
 | **Skill** | [`../../skills/ebike-safari/`](../../skills/ebike-safari/) |
-| **Show seed** | [`../../repo-shows/urban-ebike-safari/`](../../repo-shows/urban-ebike-safari/) |
+| **Show seed** | [`../../repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) |
 
 ## Quick start (pipeline)
 

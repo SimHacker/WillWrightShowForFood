@@ -61,7 +61,7 @@ don't port the stack.
 
 ## Show + history
 
-- [`../../../repo-shows/urban-ebike-safari/`](../../../repo-shows/urban-ebike-safari/) — 2026 product seed (voice, Ray-Ban, Bosch)
+- [`../../../repo-shows/ebike-safari/`](../../../repo-shows/ebike-safari/) — 2026 product seed (voice, Ray-Ban, Bosch)
 - [`../../../repo-shows/urban-safari-live/`](../../../repo-shows/urban-safari-live/) — 2011 performed live
 - [`../../../skills/ebike-safari/`](../../../skills/ebike-safari/) — skill activation
 

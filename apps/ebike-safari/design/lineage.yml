@@ -78,9 +78,9 @@ chain:
     source: ../../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
 
   - era: "2026"
-    project: Urban eBike Safari (seed)
+    project: eBike Safari (seed)
     hook: voice, Ray-Ban, Bosch, hidden story graph
-    show: ../../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+    show: ../../../repo-shows/ebike-safari/ebike-safari.yml
 
   - era: "2009"
     project: Micropolis PacBot

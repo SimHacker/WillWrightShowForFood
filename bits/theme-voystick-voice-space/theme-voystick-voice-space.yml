@@ -24,19 +24,19 @@ pie_navigation_lineage:
   zeroth: ../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md
   first: ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
   chain: |
-    Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari
+    Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → eBike Safari
   pie_flick_from: MediaGraph — Mario-cannon flick on song+road graph (not MediaFlow)
   outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"
 
 canonical_idea: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-urban_product: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+urban_product: ../../repo-shows/ebike-safari/ebike-safari.yml
 mediaflow_lineage: ../../characters/don-hopkins/mediaflow-design-comments.md
 
 stack:
   analysis: [SpeechAnalyzer words, imitone F1/F2, aubio pitch]
   synthesis: [Pink Trombone, Flite/Phoneloper]
   ui: [pie-menu wedges, voice-ahead expert path, GuitarPie fretboard]
-  outdoor: ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  outdoor: ../../repo-shows/ebike-safari/ebike-safari.yml
 
 shows_and_activities:
   - ../../repo-shows/voystick-pink-trombone/SHOW.yml
@@ -59,4 +59,4 @@ moollm:
 
 see_also:
   - ../../process/crazy-idea-jam.md
-  - ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+  - ../../repo-shows/ebike-safari/ebike-safari.yml

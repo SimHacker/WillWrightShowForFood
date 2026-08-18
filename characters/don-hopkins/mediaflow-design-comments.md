@@ -57,7 +57,7 @@ MediaFlow                Interval — Mac Common Lisp + QuickTime streams (no pi
 iLoci                    pie-menu network — rooms kiss to connect
 MediaGraph               SFC Unity Jul 2015 — per-song pies; kiss roads; flick-on-song; CA biomes; LOD terrain
 Urban Safari             cards at POIs — invisible graph overlay
-Urban eBike Safari       Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking
+eBike Safari       Outdoor = wide sloppy fast warbles, no social cost; pitch+vowel trace steers singing while biking
 ```
 
 On a bike you cannot pinch-zoom a map — you **sing along wedge arcs** (Voystick) to hop between POIs
@@ -67,7 +67,7 @@ Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 → [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystick-pie-network.md) ·
 [Crazy Idea Jam — Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) ·
-[Urban eBike Safari](../../repo-shows/urban-ebike-safari/README.md)
+[eBike Safari](../../repo-shows/ebike-safari/README.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # Urban Safari — steering law, pie networks, VoyStick ride game
 
-Field UX for [Urban eBike Safari](../../../repo-shows/urban-ebike-safari/README.md): continuous
+Field UX for [eBike Safari](../../../repo-shows/ebike-safari/README.md): continuous
 **guess where I'm going** / **suggest places to go** between rider and AI — positional direct
 manipulation through a pie-menu network you navigate by biking, with voice skip-ahead.
 
@@ -55,7 +55,7 @@ World cannon; pan = left-drag elsewhere. LOD flat polygons far, 3D terrain close
 
 **Urban Safari** — cards at POIs; invisible graph overlay.
 
-On the bike (**Urban eBike Safari**): continuous pitch+vowel trace steers **singing while biking** —
+On the bike (**eBike Safari**): continuous pitch+vowel trace steers **singing while biking** —
 Voystick warbles along wedge **arcs** to hop POI→POI, card→card; NL + gestural **code-switch**; hands
 on handlebars. Don: *really fun and smooth — best gestural UI I've ever done.*
 
@@ -108,7 +108,7 @@ NL punctuation. Parser/LLM fuses intent from whichever channel is live.
 35-year arc: [voystick-correspondence-lineage.md](voystick-correspondence-lineage.md) (1991
 homomorphic vocoder → Evan Balster formants → Geoff Lindsey vowel space → GuitarPie 2025).
 
-Urban eBike Safari is the **primary outdoor Voystick application**:
+eBike Safari is the **primary outdoor Voystick application**:
 
 - **Outdoor = wide sloppy fast warbles without social cost** — open air, nobody to bother (Evan: quiet monotone mode too)
 - **Continuous pitch+vowel trace steers singing while biking** — flick between linked cards along pie arcs
@@ -160,7 +160,7 @@ imply the depth; reveal on approach; don't simulate every brick.
 
 ## Trail
 
-- [`../../../repo-shows/urban-ebike-safari/README.md`](../../../repo-shows/urban-ebike-safari/README.md) · `steering_pie_ride_game`
+- [`../../../repo-shows/ebike-safari/README.md`](../../../repo-shows/ebike-safari/README.md) · `steering_pie_ride_game`
 - [sutton-one-step-trap.md](sutton-one-step-trap.md)
 - [voystick-correspondence-lineage.md](voystick-correspondence-lineage.md)
 - [Crazy Idea Jam — Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick)

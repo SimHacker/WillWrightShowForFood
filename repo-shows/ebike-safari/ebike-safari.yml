@@ -1,21 +1,22 @@
-# Urban eBike Safari — voice-first AI touring companion (product seed)
+# eBike Safari — voice-first AI touring companion (product seed)
 # Product layer on Urban Safari LIVE; license don't acquihire (Uncle Milton model).
 # Ray-Ban Meta + handlebar phone + Bosch + Koga + Enviolo + SpeechAnalyzer + hidden story graph.
 
 meta:
-  id: urban-ebike-safari
+  id: ebike-safari
   status: seed
   host: don-hopkins
   participants: [don-hopkins, will-wright, wills-son]
   parent: ../urban-safari-live/urban-safari-live.yml
   format: ../../process/one-minute-movie-sandwich.yml
+  rendered_edition: ebike-safari.md
 
 one_line: |
   Voice-controlled adventure navigation through a hidden graph of story cards at real-world
   places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
 
 elevator: |
-  Urban eBike Safari is DreamScape on wheels, descended through iLoci and Urban Safari: geolocated
+  eBike Safari is DreamScape on wheels, descended through iLoci and Urban Safari: geolocated
   scene cards, topical link layers, adventure-style voice navigation while riding. Meta Ray-Ban glasses capture POV and handle
   mic/speakers (prescription lenses, hands on handlebars). Any phone on a handlebar mount is
   display-only — map, Bosch stats, turn-by-turn. Apple SpeechAnalyzer drives hands-free control.
@@ -65,7 +66,7 @@ lineage:
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
     - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Will's son calls Will; git audience cards", file: ../urban-safari-live/urban-safari-live.yml }
-    - { era: "2026+", project: Urban eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
+    - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
     demos; Will said leave EA and come back to SFC. iLoci moment again.
@@ -87,7 +88,7 @@ dreamscape_wwdc_1995:
     Each room a distributable title container; plug-togetherable interactive objects on the web;
     window-shopping GIF storefronts linking to downloadable ScriptX objects for test drives. Long
     before modern component web — same itch as Urban Safari cards at POIs and MOOLLM rooms.
-  leads_to: [iLoci, StoryMaker, Urban Safari, MediaGraph, MOOLLM, urban-ebike-safari]
+  leads_to: [iLoci, StoryMaker, Urban Safari, MediaGraph, MOOLLM, ebike-safari]
   quote: "We want to give creative people an environment in which to plant their seeds — fertile ground, instead of a killer app."
   split_architecture:
     ray_ban_meta:
@@ -208,11 +209,11 @@ steering_pie_ride_game:
     pie_navigation_lineage:
       zeroth: "../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md — REPL-as-parser, hidden graph"
       first: "../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md — rooms kiss, 1995 WWDC"
-      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari"
+      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → eBike Safari"
     navigation_lineage:
       mediaflow: "Interval — Mac Common Lisp + QuickTime streams (no pie menus)"
       pie_flick: "MediaGraph — song+road graph; Mario-cannon flick; iLoci → MediaGraph → Urban Safari"
-      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → Urban eBike Safari"
+      chain: "Logo Adventure → DreamScape → MediaFlow (Lisp+QT, no pies) → iLoci → MediaGraph (flick) → Urban Safari → eBike Safari"
     vowel_space: "F1/F2 acoustic space (Geoff Lindsey) — not Jones tongue quadrilateral"
     diphthong_rails: "Front (i,e,ɛ,a) + back (u,o,ɔ,ɑ) — skip central schwa"
     outdoor: "Outdoor = wide sloppy fast warbles without social cost; pitch+vowel trace steers singing while biking"

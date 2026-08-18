@@ -66,7 +66,7 @@ Interval **MediaFlow** is a **parallel** hypermedia thread (Lisp + QuickTime str
 ## Lineage forward
 
 ```
-Logo Adventure → DreamScape → MediaFlow (no pies) → iLoci → MediaGraph → Urban Safari → Urban eBike Safari
+Logo Adventure → DreamScape → MediaFlow (no pies) → iLoci → MediaGraph → Urban Safari → eBike Safari
 ```
 
 MediaGraph cannon-flick → Voystick warble along pie wedges outdoors ([urban-safari-steering](urban-safari-steering-voystick-pie-network.md)).

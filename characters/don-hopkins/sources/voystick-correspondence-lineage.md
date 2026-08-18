@@ -133,7 +133,7 @@ discover what works; possible side app; integrates with aQuery/accessibility.
 Evan: activism angle (voice gender training, accessibility); cooperative/crowdfunding for
 sustained R&D.
 
-## Urban eBike Safari (2026 use case)
+## eBike Safari (2026 use case)
 
 **Primary application** — not a side demo. Voystick navigates the **linked card overlay** on a bike:
 warble along pie wedge arcs to hop between POIs and cards (MediaGraph-style Mario-cannon flick),
@@ -160,4 +160,4 @@ Arc de Triomphe energy.
 | [gesture-space (Medium)](https://donhopkins.medium.com/gesture-space-842e3cdc7102) | Pie rehearsal theory |
 | [Pie menus retrospective](https://donhopkins.medium.com/pie-menus-936fed383ff1) | Fitts + voystick HN refs |
 
-↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban eBike Safari](../../../repo-shows/urban-ebike-safari/README.md) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/README.md)
+↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [eBike Safari](../../../repo-shows/ebike-safari/README.md) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/README.md)

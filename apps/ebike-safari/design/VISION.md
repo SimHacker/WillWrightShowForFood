@@ -42,7 +42,7 @@ Score **novel exposure** and **recognized gestures**, not kilometers.
 
 ## Show direction
 
-Voice-first touring companion seed: [`../../../repo-shows/urban-ebike-safari/`](../../../repo-shows/urban-ebike-safari/).
+Voice-first touring companion seed: [`../../../repo-shows/ebike-safari/`](../../../repo-shows/ebike-safari/).
 Pipeline first; viewer + gestures prove the idea on real rides.
 
 ↑ [`README.md`](README.md) · [`ARCHITECTURE.yml`](ARCHITECTURE.yml)

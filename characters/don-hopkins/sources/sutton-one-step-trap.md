@@ -26,9 +26,9 @@ not microscopic rollout. See Sutton–Precup–Singh (1999), Horde (2011), rewar
 | **mxwsn** | LeCun-style compounding-error argument vs LLMs that improve with more tokens / self-correction ("Wait" in S1). Counterpoint, not refutation. |
 | **tipsytoad** | First-principles traps can be convincing and wrong — hold lightly. |
 
-## Urban eBike Safari — already on Sutton's side
+## eBike Safari — already on Sutton's side
 
-Product seed: [`../../../repo-shows/urban-ebike-safari/README.md`](../../../repo-shows/urban-ebike-safari/README.md)
+Product seed: [`../../../repo-shows/ebike-safari/README.md`](../../../repo-shows/ebike-safari/README.md)
 
 | One-step trap (avoid) | Safari design (use) |
 |-----------------------|---------------------|
@@ -72,13 +72,13 @@ Parser lineage in product seed explicitly cites MOOLLM adventure → SpeechAnaly
 ## Adjacent threads
 
 - SpeechAnalyzer on bike: HN [48894752](https://news.ycombinator.com/item?id=48894752) — same week as
-  Sutton trap thread; cited in `urban-ebike-safari.yml` voice_stack.
+  Sutton trap thread; cited in `ebike-safari.yml` voice_stack.
 - Spore GDC belief gate: revisit weird ideas once abstract model is believed buildable — partner pitch
   is logistics, not physics simulation.
 
 ## Trail
 
-- [`../../../repo-shows/urban-ebike-safari/README.md`](../../../repo-shows/urban-ebike-safari/README.md) · `temporal_abstraction`
+- [`../../../repo-shows/ebike-safari/README.md`](../../../repo-shows/ebike-safari/README.md) · `temporal_abstraction`
 - [`../../media/storymaker-urban-safari/storymaker-urban-safari.yml`](../media/storymaker-urban-safari/storymaker-urban-safari.yml)
 - [`../../../process/crazy-idea-jam.yml`](../../../process/crazy-idea-jam.yml#iloci_memory_palace)
 - [MOOLLM simulation/ONE-STEP-TRAP.md](https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md)

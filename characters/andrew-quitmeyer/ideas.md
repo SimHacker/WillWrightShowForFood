@@ -32,7 +32,7 @@ Don's pitch (green-room; ask permission before filming):
 ## Show seeds
 
 - `repo-shows/will-wright-premiere/` — SFC alumni arc
-- `repo-shows/urban-ebike-safari/README.md` — bike + GPS storytelling
+- `repo-shows/ebike-safari/README.md` — bike + GPS storytelling
 - Future: `repo-shows/andrew-quitmeyer/` when planted
 
 ↑ [README](README.md) · [invitation](invitation.md)

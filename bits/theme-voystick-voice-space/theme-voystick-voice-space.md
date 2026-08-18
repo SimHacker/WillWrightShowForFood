@@ -37,10 +37,10 @@
 |-----|------|
 | **Zeroth** | [Logo Adventure C64 Terrapin](../../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md) |
 | **First** | [DreamScape / ScriptX](../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md) |
-| **Chain** | DreamScape → MediaFlow → iLoci → **MediaGraph** (pie flick) → Urban Safari → Urban eBike Safari |
+| **Chain** | DreamScape → MediaFlow → iLoci → **MediaGraph** (pie flick) → Urban Safari → eBike Safari |
 | **Outdoor** | Wide sloppy fast warbles without social cost — pitch+vowel trace steers singing while biking |
 
-→ [MediaFlow design comments](../../characters/don-hopkins/mediaflow-design-comments.md) · [Urban eBike Safari](../../repo-shows/README.md)
+→ [MediaFlow design comments](../../characters/don-hopkins/mediaflow-design-comments.md) · [eBike Safari](../../repo-shows/README.md)
 
 ---
 

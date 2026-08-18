@@ -8,7 +8,7 @@ meta:
   art_lead: howard-penner
   operator: lightpenisland-net
   ties:
-    - ../../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+    - ../../repo-shows/ebike-safari/ebike-safari.yml
     - ../../characters/don-hopkins/sources/voystick-correspondence-lineage.md
     - ../../characters/don-hopkins/sources/usenet-matter-product-warnings.md
     - ../swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
@@ -67,7 +67,7 @@ warnings:
       Cyclist stick figure warbling while both hands wave free; Koga bars empty; canal edge approaching;
       pie-menu wedge ghost overlay on front wheel
     formats: [sticker, tee, helmet_decal]
-    tie: urban-ebike-safari.yml#voystick
+    tie: ebike-safari.yml#voystick
 
   - id: unattended-music-playing
     tier: WARNING
@@ -164,7 +164,7 @@ warnings:
     pictogram: |
       E-bike stick figure; rear hub glow; speech bubble pie wedges; canal + Invader tile on wall
     formats: [tee, helmet_decal]
-    tie: urban-ebike-safari.yml
+    tie: ebike-safari.yml
 
 # Usenet matter-product warnings — folklore physics humor (in the clear)
 # Don Medium 2018: https://donhopkins.medium.com/warnings-f53f75aa2ec8

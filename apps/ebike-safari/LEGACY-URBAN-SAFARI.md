@@ -22,7 +22,7 @@ Full harvest index: [`design/sources/amsterdam-gps-lineage.md`](design/sources/a
 |---------|------|
 | **TomTom trilogy + lineage index** | [`design/sources/amsterdam-gps-lineage.md`](design/sources/amsterdam-gps-lineage.md) |
 | **2011 performed live** | [`../../repo-shows/urban-safari-live/`](../../repo-shows/urban-safari-live/) |
-| **Product vision (2026 seed)** | [`../../repo-shows/urban-ebike-safari/`](../../repo-shows/urban-ebike-safari/) |
+| **Product vision (2026 seed)** | [`../../repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) |
 | **StoryMaker media** | [`../../characters/don-hopkins/media/storymaker-urban-safari/`](../../characters/don-hopkins/media/storymaker-urban-safari/) |
 | **Steering / VoyStick notes** | [`../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) |
 | **Crazy idea jam** | [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml) — `#urban_safari_gps_storytelling` |

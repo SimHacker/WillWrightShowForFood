@@ -160,7 +160,7 @@ isochrone without smell is vanilla routing UI. Together: **intent + time + scent
 #### Routing APIs (isochrone support)
 
 Already in our orbit via [`skeleton/road-graph.md`](skeleton/road-graph.md) and
-[`urban-ebike-safari`](../../../repo-shows/urban-ebike-safari/README.md):
+[`ebike-safari`](../../../repo-shows/ebike-safari/README.md):
 
 | Engine | Isochrone? | Bike / e-bike | Notes |
 |--------|------------|---------------|-------|
@@ -579,7 +579,7 @@ the **combined** fruit-scented gradient toward the market hall. Pinch → single
 | Sniff panel | list perceive(L) at edge with sim and strength bars |
 | Path highlight | top neighbor by `score(e→e')` |
 
-Voice-first seed ([`../../../repo-shows/urban-ebike-safari/`](../../../repo-shows/urban-ebike-safari/)):
+Voice-first seed ([`../../../repo-shows/ebike-safari/`](../../../repo-shows/ebike-safari/)):
 "I'm hungry for fruit" → set `q`, widen nostrils, ride highlighted gradient.
 "I want Thai" → `q = cuisine:thai`. Arrival → decode menu YAML at source.
 

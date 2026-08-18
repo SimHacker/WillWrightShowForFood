@@ -254,7 +254,7 @@ ideas:
       first: "DreamScape (1995 WWDC) — rooms kiss to connect; link globally, interact locally"
       then: [MediaFlow, iLoci, MediaGraph, Urban_Safari, Urban_eBike_Safari]
       chain: |
-        Logo Adventure (zeroth) → DreamScape (first) → MediaFlow → iLoci → MediaGraph → Urban Safari → Urban eBike Safari
+        Logo Adventure (zeroth) → DreamScape (first) → MediaFlow → iLoci → MediaGraph → Urban Safari → eBike Safari
       mediaflow: "Interval — Mac Common Lisp + QuickTime hypermedia streams/dataflow (no pie menus)"
       iloci: "pie-menu network — rooms kiss to connect"
       mediagraph: "SFC Unity Jul 2015 — per-song pies (radius, CA biome); kiss-toggle roads; flick-on-song Mario-cannon nav; LOD terrain"
@@ -265,14 +265,14 @@ ideas:
       REPL-as-parser, hidden graph) through **DreamScape** (first: rooms kiss, link globally interact
       locally) to Interval **MediaFlow** (Mac Common Lisp + QuickTime hypermedia streams — **no pie
       menus**), **iLoci**, **MediaGraph** (song+road graph with Mario-cannon flick navigation),
-      **Urban Safari** cards at POIs. **Urban eBike Safari** completes it: outdoor = wide sloppy fast
+      **Urban Safari** cards at POIs. **eBike Safari** completes it: outdoor = wide sloppy fast
       warbles without social cost; continuous pitch+vowel trace steers **singing while biking** —
       Voystick warbles along wedge arcs, hop POI→card, hands on bars. Don: "really fun and smooth —
       best gestural UI I've ever done."
     field_hardware: [Koga, Enviolo, Bosch, Ray-Ban Meta]
     voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
     ties:
-      - ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+      - ../repo-shows/ebike-safari/ebike-safari.yml
       - ../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
@@ -310,7 +310,7 @@ ideas:
       Pink Trombone, MIDI/gamepad control. Repo Show stacks Phoneloper × Pink Trombone × Voystick live.
     pie_integration: |
       Steady vowel pops pie menu at voice-space coordinates; each slice label sung as its vocal
-      gesture; **voice ahead** = expert path (mouse-ahead analogue). Urban eBike Safari = **primary
+      gesture; **voice ahead** = expert path (mouse-ahead analogue). eBike Safari = **primary
       use case**: hop down arcs and between POIs/cards in the linked overlay while pedaling — hands
       stay on handlebars.
     bike_navigation:
@@ -348,7 +348,7 @@ ideas:
       - ../repo-shows/voystick-pink-trombone/SHOW.yml
       - ../apps/performance-space/pink-trombone-jam.yml
       - ../repo-shows/phoneloper/SHOW.yml
-      - ../repo-shows/urban-ebike-safari/urban-ebike-safari.yml
+      - ../repo-shows/ebike-safari/ebike-safari.yml
       - crazy-idea-jam.yml#phoneloper
       - crazy-idea-jam.yml#pie_menus_put_out_fires
       - crazy-idea-jam.yml#urban_ebike_safari
