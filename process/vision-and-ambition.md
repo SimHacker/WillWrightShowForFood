@@ -18,7 +18,7 @@ Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/mo
 |------|--------|-------------|
 | [Lineage](#lineage) | `lineage` | 1996 anchor · forebears · the long arc |
 | [RepoShow — the medium](#reposhow-the-medium) | `reposhow_the_medium` | A new medium — *reposhowing* — and its soul: repossession |
-| [The deep move](#the-deep-move--the-repo-is-a-simulation) | `repo_as_simulation` | MOOLLM through the back door — the repo runs as a simulation; the show is performed inside it |
+| [The deep move](#the-deep-move) | `repo_as_simulation` | MOOLLM through the back door — the repo runs as a simulation; the show is performed inside it |
 | [Pyramid](#pyramid) | `pyramid` | Stand on the apex; mass builds beneath |
 | [Rig culture](#rig-culture) | `rig_culture` | Declare your class; artisanal gets extra respect |
 | [Who this is for](#who-this-is-for) | `audiences_if_you_stumbled_here` | Doorways by interest |
@@ -62,6 +62,8 @@ Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS
 
 ---
 
+<a id="reposhow-the-medium"></a>
+
 ## RepoShow — the medium
 
 **K-line:** `reposhow_the_medium`
@@ -103,6 +105,8 @@ identity) rather than being copied or trapped. That is repossession delivered as
 1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
 Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) — guest rooms as consented portrayals, incarnation as authorship ([*On Being Simulated*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)).
+
+<a id="the-deep-move"></a>
 
 ### The deep move — the repo is a simulation
 
@@ -267,6 +271,8 @@ These exist in the repo today (some as seeds; yaml says which):
 | Scaffold automation for CARDs and link PRs | Roadmap — not shipped yet |
 
 ---
+
+<a id="skills-the-real-harvest"></a>
 
 ## Skills — the real harvest
 

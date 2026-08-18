@@ -6,7 +6,7 @@ The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 **The deep move:** orchestration is this skill's day job. Under it, MOOLLM runs the repo as a
 **simulation engine** — the show is performed *inside* the world, not documented beside it. K-line:
 [`repo_as_simulation`](../../process/vision-and-ambition.yml) · prose:
-[VISION.md § The deep move](../../process/vision-and-ambition.md#the-deep-move--the-repo-is-a-simulation) ·
+[VISION.md § The deep move](../../process/vision-and-ambition.md#the-deep-move) ·
 machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
 
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
