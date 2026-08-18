@@ -28,7 +28,7 @@ why_them:
 # THE POINT (say it plainly): these are independent creators who've paid the mortgage for years on
 # subscriptions + content + side jobs. The show is a NON-EXTRACTIVE LIFT — celebrate the work and
 # send real fans/subscribers their way.
-support_them:
+support-them:
   drive_fans: "Spotlight their sites as **storefronts**; point the audience to **subscriptions + content** they can buy to directly support the work."
   micropolis_publishing: "Don's **Micropolis content-management & publishing system** — built for their enormous artisanal back-catalogs + new streams (and Don's own): republish, reopen development to fans/devs, reincarnate the classic tools (SimShow, Sim Transmogrifier, RugOMatic, body/head/wig editors), optionally AI-orchestrated."
   ethos: "Sincere praise that sends people to buy. No extraction, no exploitation — lift."
@@ -37,7 +37,7 @@ episodes:
   - { id: fan-band-marriage, doc: sources/fan-band-marriage-arc.md, what: "★ Origin story — two fan sites, one marriage, Zombie Sims, Gallium, Soul City; evidence-bounce edit from async interviews." }
   - { id: whole-career, what: "The retrospective + showcase: SliceCity live, the SimFreaks catalog, Zombie Sims, the Gallium/Will chapter, 26 years of craft — and where it goes next." }
   - { id: afterlife-zombie-bridge, doc: afterlife-zombie-bridge.yml, what: "★ FLAGSHIP playful episode — Afterlife 'hell is full' × ZombieSims horde, drain souls by religion into SimFreaks/SimSlice zombie skins; They Are Billions scale." }
-  - { id: data-portability, what: "SliceCity → Soul City: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges_architecture)." }
+  - { id: data-portability, what: "SliceCity → Soul City: widen nested games to real save files + emulators across many games (repo-shows/INDEX.yml bridges-architecture)." }
 
 format:
   live: true
@@ -51,5 +51,5 @@ ties_to:
   - ../../characters/don-hopkins/
   - ../../process/trails/send-code-not-commands.md
   - ../../characters/will-wright/media/
-  - ../INDEX.yml          # bridges_architecture (Soul City; SliceCity precedent)
+  - ../INDEX.yml          # bridges-architecture (Soul City; SliceCity precedent)
   - afterlife-zombie-bridge.yml

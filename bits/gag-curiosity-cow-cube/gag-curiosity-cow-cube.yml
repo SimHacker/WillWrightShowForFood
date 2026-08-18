@@ -48,7 +48,7 @@ sources:
     don_hn: "https://news.ycombinator.com/item?id=27324466"
   bogost_show: repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   deconstruct_the_cube: ../gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml
-  pantomime_squish_parallel: ../gag-pantomime-gallery/gag-pantomime-gallery.yml#bug_farm
+  pantomime_squish_parallel: ../gag-pantomime-gallery/gag-pantomime-gallery.yml#bug-farm
   face_puppet_parallel: "../../characters/don-hopkins/media/don-high-score-space-invaders.yml"
   morningstar:
     essay: "http://www.fudco.com/chip/deconstr.html"
@@ -108,7 +108,7 @@ parody_game:
     surfaces: "ANY face can show ANY stolen deed (AATG scrape) — Molyneux crucifix pose energy"
     center_reveal: "Rightward-Facing Cow — OR the Telegraph Avenue horse (menagerie insists: cow)"
     cow_asset: "Ian Bogost's cow — social commentary payload"
-    click_audio:
+    click-audio:
       rule: "Sometimes — not every click — a filtered, echoing, far-away distressed moo cries for help"
       feel: "Reverb tail · band-passed · distant pasture · wrong room · wrong decade"
       compulsion: "You hear something suffering behind the next layer; you keep clicking to 'rescue' it"

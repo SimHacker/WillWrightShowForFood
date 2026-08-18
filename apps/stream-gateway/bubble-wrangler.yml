@@ -28,7 +28,7 @@ meta:
 # READING PROGRESS (make reading EVERYTHING easy + default)
 # Honors overlay-viewer.yml prime_directive. The point: never lose your place, never
 # re-read by accident, always find what you haven't seen.
-reading_progress:
+reading-progress:
   default: "EASY + DEFAULT to read ALL LLM output. The system tracks what you've seen."
   read_state:
     per_node: [unread, seen, read]   # auto 'seen' when scrolled into view long enough; 'read' on explicit mark or dwell
@@ -41,7 +41,7 @@ reading_progress:
   bookmarks: "Any number, named OR numbered (overlay-viewer.yml#bookmarks). Stacks of bookmarks (below)."
 
 # POP-OUT + CROSS-WINDOW LINKING (Smalltalk browser, and better)
-panes_and_windows:
+panes-and-windows:
   pop_out_subtree: "Detach any node/subtree into its own window (or pane); it stays live (same bus + read-state)."
   reparent: "Drag a subtree between windows; promote/demote; merge back."
   cross_window_links:
@@ -100,7 +100,7 @@ piecraft:
   crafting:
     what: "CRAFT new container/pie types — needs skills + materials (game-economy of UI itself)."
     craftables: ["typed containers (food/reagent/ammo/...)", "custom pies", "item limits", "slice layouts", "submenu trees"]
-  memory_palace:
+  memory-palace:
     what: "Pie/menu NETWORKS laid out as a memory palace — rooms connected by links."
     metaphors: [adventure_maps, mediagraph, iloci, dreamscape]
     note: "Menu networks are navigable places, two-way Nelsonian links, not flat lists — the layout direction IS the mnemonic."
@@ -144,7 +144,7 @@ virtual_cursor:
     - "Mario-cannon objects can AIM and SHOOT the cursor to a different (LINKED) window."
   relativization: "Cursor position is expressed RELATIVE to the platform it's on; platform motion carries it. Detach by lifting off."
   consent: "Carrying only happens via opted-in physics zones; never yanks the pointer unbidden (prime_directive)."
-  ties: "Links between windows (panes_and_windows.cross_window_links) are the cannon destinations."
+  ties: "Links between windows (panes-and-windows.cross_window_links) are the cannon destinations."
 
 # DESIGN JAMS / INFLUENCES
 jams:

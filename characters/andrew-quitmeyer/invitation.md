@@ -36,7 +36,7 @@ is pure SFC energy — I commented on it years ago and still love it.
 
 **Materials:** [`CHARACTER.yml`](CHARACTER.yml) · [`ideas.md`](ideas.md) ·
 [`sources/mark-your-territory.md`](sources/mark-your-territory.md) ·
-[`Bongo Bingo`](../../process/crazy-idea-jam.yml#bongo_bingo)
+[`Bongo Bingo`](../../process/crazy-idea-jam.yml#bongo-bingo)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).
 

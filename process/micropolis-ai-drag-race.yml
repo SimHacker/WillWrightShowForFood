@@ -44,20 +44,20 @@ challenges:
   artisanal_eleganza:
     what: "Zero tokens — hand-crafted yaml so fierce it doesn't need AI"
     flair_variant: "Or apple2-drive — APPLESOFT/INTEGER BASIC on the ][ — see challenges/apple2-drive.yml"
-  apple2_drive:
+  apple2-drive:
     see: challenges/apple2-drive.yml
     family: challenges/retrocomputing-drive.yml
     tagline: "Apple ][ instance — declare languages, tools, platform, emulator"
     example_rig: ../rigs/apple2-flair-lap.rig.yml
-  retrocomputing_drive:
+  retrocomputing-drive:
     see: challenges/retrocomputing-drive.yml
     tagline: "Retrocomputing AI drag races — your rig picks language, tools, and platform"
     note: "apple2-drive + pdp10-maclisp-drive are flagship instances"
-  pdp10_maclisp_drive:
+  pdp10-maclisp-drive:
     see: challenges/pdp10-maclisp-drive.yml
     tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
     example_rig: ../rigs/pdp10-maclisp-flair-lap.rig.yml
-  lisp_machine_hack_off:
+  lisp-machine-hack-off:
     see: challenges/lisp-machine-hack-off.yml
     tagline: "Symbolics vs LMI — Lisp Machine Hack-Off"
     example_rigs: [../rigs/lisp-machine-symbolics.rig.yml, ../rigs/lisp-machine-lmi.rig.yml]
@@ -127,7 +127,7 @@ see_also:
   - { path: micropolis-ai-drag-race.md, why: "Generated markup view" }
   - { path: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Show seed" }
   - { path: ../repo-shows/ca-machinima-cabaret-drag-race/ca-machinima-cabaret-drag-race.yml, why: "Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts" }
-  - { path: cross-links.yml#drag_race_and_ai_offs, why: "Full game-show trail" }
+  - { path: cross-links.yml#drag-race-and-ai-offs, why: "Full game-show trail" }
   - { path: code-that-spec.yml, why: "CODE THAT SPEC!!!!! chant" }
   - { path: manual-transmission.yml, why: "Smallest model challenge" }
   - { path: ai-offs.yml, why: "Spend proof + rig classes" }

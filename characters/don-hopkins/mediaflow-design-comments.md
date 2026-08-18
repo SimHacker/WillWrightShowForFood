@@ -66,7 +66,7 @@ and cards, hands on handlebars.
 Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 → [Urban Safari steering / Voystick](../../sources/urban-safari-steering-voystick-pie-network.md) ·
-[Crazy Idea Jam — Voystick](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) ·
+[Crazy Idea Jam — Voystick](../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick) ·
 [eBike Safari](../../repo-shows/ebike-safari/README.md)
 
 ---

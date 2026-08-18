@@ -17,7 +17,7 @@ why_him:
   tick_for_tick: "Reimplemented it in pure TypeScript, byte-identical to the original on every tick, proven by replaying captured gameplay traces."
   multiplayer: "Put the sim behind a Cloudflare Worker for real-time collaborative building (towers.world); MIT-licensed (tower-together)."
 
-dream_segments:
+dream-segments:
   - "Live walk-through: binary → spec → TS, with trace tests as ground truth."
   - "How much was the model vs. the human — the honest division of labor."
   - "Yoot Tower path — the Tower II 'Tower Kit' plug-in system as a JS/HTML modding target."

@@ -27,7 +27,7 @@ David.
 
 **Attachment (forwarded thread end):** `PIXIE Part 1.docx` — may overlap
 [`1967-back-to-the-roots-part1.md`](1967-back-to-the-roots-part1.md) or a new installment.
-See [`../pull-in-gaps.md`](../pull-in-gaps.md#pixie_part1_docx_dshr).
+See [`../pull-in-gaps.md`](../pull-in-gaps.md#pixie-part1-docx-dshr).
 
 ---
 

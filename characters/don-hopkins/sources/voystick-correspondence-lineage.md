@@ -144,7 +144,7 @@ Lineage: Logo Adventure (zeroth) → DreamScape (first) → MediaFlow (Lisp+QT, 
 Don (2026): *really fun and smooth — best gestural UI I've ever done.*
 
 See [urban-safari-steering-voystick-pie-network.md](urban-safari-steering-voystick-pie-network.md) ·
-[Crazy Idea Jam Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick).
+[Crazy Idea Jam Voystick](../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick).
 
 GuitarPie + Voystick (Sep 2025 HN): hardcore cyberpunk grindcore metal indistinguishable from
 computer interaction — [Eclipse](https://en.wikipedia.org/wiki/Eclipse_(novel)) Rickenharp on the
@@ -160,4 +160,4 @@ Arc de Triomphe energy.
 | [gesture-space (Medium)](https://donhopkins.medium.com/gesture-space-842e3cdc7102) | Pie rehearsal theory |
 | [Pie menus retrospective](https://donhopkins.medium.com/pie-menus-936fed383ff1) | Fitts + voystick HN refs |
 
-↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [eBike Safari](../../../repo-shows/ebike-safari/README.md) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/README.md)
+↑ [Don's sources](README.md) · [Crazy Idea Jam](../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick) · [eBike Safari](../../../repo-shows/ebike-safari/README.md) · [Voystick × Pink Trombone show](../../../repo-shows/voystick-pink-trombone/README.md)

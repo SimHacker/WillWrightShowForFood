@@ -19,7 +19,7 @@ why_her:
   teaching: "Has taught intro-AI to high-schoolers and helped run MIT's Women's Technology Program — making AI legible to newcomers."
   representation: "Great women belong on this guest list on the merits — Isabella's work spans the practical (production vision) and the structural (policy/explainability)."
 
-dream_segments:
+dream-segments:
   - "Evaluate + fine-tune a vision model live — honest metrics, frugal training, robustness to camera movement."
   - "Explainability stress-test — take an explanation method and probe where it misleads."
   - "Draw the AI supply chain for our own stack — who provides what, and where harm concentrates."

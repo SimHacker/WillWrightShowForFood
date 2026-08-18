@@ -4,7 +4,7 @@
 meta:
   note: "Priority order for finishing invitations — not pressure on guests"
 
-public_outreach_policy:
+public-outreach-policy:
   updated: "2026-07-08"
   rule: |
     Until Repo Show videos ship: public comments tease get-in-touch + forthcoming video only.
@@ -117,7 +117,7 @@ elders_priority:
     - id: ted-nelson
       why: |
         DREAM GUEST. Intertwingled two-way media is what the whole show is built
-        on (one-minute-movie-sandwich.yml#two_answering_machines
+        on (one-minute-movie-sandwich.yml#two-answering-machines
         .repo_show_is_the_answer names him); the Bar Karma StoryMaker loop and
         provenance-links-all-the-way-down are his ideas walking around. He paid
         beautiful respect to Doug Engelbart; the show pays the same respect
@@ -142,7 +142,7 @@ elders_priority:
 
 long_shots:
   - id: jensen-huang
-    why: "Spatula collection cameo — the Spatula City gambit (../process/one-minute-movie-sandwich.yml#found_commercials.jensen_spatula_gambit). Bit works without him (kitchen-keynote excerpt + UHF pivot); finished bit doubles as the invitation."
+    why: "Spatula collection cameo — the Spatula City gambit (../process/one-minute-movie-sandwich.yml#found-commercials.jensen_spatula_gambit). Bit works without him (kitchen-keynote excerpt + UHF pivot); finished bit doubles as the invitation."
     status: bit_first_then_invite
 
 wanted_artifacts:
@@ -152,7 +152,7 @@ wanted_artifacts:
       why: "The real corpus of community submissions → producer outlines → voted storyboards → episode scripts. Gold for a show segment."
       ask: ["Will Wright", "Peter Swearengen (StoryMaker Producer)", "Albie Hecht / Worldwide Biggies", "Laura Knight", "David Cohn (Current TV)"]
       status: not_yet_asked
-      detail: ../process/crazy-idea-jam.yml#creationtv_storymaker
+      detail: ../process/crazy-idea-jam.yml#creationtv-storymaker
 
 see_also:
   - INDEX.yml

@@ -42,7 +42,7 @@ candidate_guests:
   - "Jens Mönig + Brian Harvey — Snap! (the foundation)"
   - "Bernat Romagosa — Snap!/Beetle Cloud (SAP)"
 
-dream_segments:
+dream-segments:
   - "Program a pattern live in TurtleStitch and stitch it on a real machine on stream."
   - "The Logo → Scratch → Snap! → TurtleStitch lineage; turtle geometry as 'a mathematics made for learning'."
   - "Constructionism for real: physical making + code, inclusive by nature — the Barcelona classroom moment."

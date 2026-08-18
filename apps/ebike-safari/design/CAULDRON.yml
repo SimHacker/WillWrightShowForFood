@@ -37,7 +37,7 @@ slurp_queue:
 
   - id: crazy-idea-jam-urban
     from: ../../../process/crazy-idea-jam.yml
-    tags: [urban_safari_gps_storytelling, mediagraph, dreamscape]
+    tags: [urban-safari-gps-storytelling, mediagraph, dreamscape]
     into: lineage.yml
     status: pending
 
@@ -102,7 +102,7 @@ slurp_queue:
     extract:
       - peerboard replaces segment speed leaderboard
       - pee = embedding of YAML jazz; follow smell to source
-      - diffusion: concentration not semantics; sub-ε rises; sparse ambient slow diffuse; collapse to generic_fruit/food/good/bad
+      - diffusion: concentration not semantics; sub-ε rises; sparse ambient slow diffuse; collapse to generic-fruit/food/good/bad
       - smells = ads (YAML creatives); roads = distribution channels (graph strength)
       - isochrones = travel-time reach on same graph; Valhalla/ORS/GraphHopper/TomTom Reachable Range
       - market + restaurant menus as YAML payloads; nostril width navigation
@@ -187,13 +187,13 @@ slurp_queue:
 
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
-    tags: [iloci_memory_palace, amsterdam_coffeeshops_app, bongo_bingo]
+    tags: [iloci-memory-palace, amsterdam-coffeeshops-app, bongo-bingo]
     into: sources/amsterdam-gps-lineage.md
     status: pending
 
   - id: sfc-storymaker-chain
     from: ../../../process/crazy-idea-jam.yml
-    tags: [creationtv_storymaker, urban_safari_gps_storytelling, mediagraph]
+    tags: [creationtv-storymaker, urban-safari-gps-storytelling, mediagraph]
     into: sources/amsterdam-gps-lineage.md
     note: StoryMaker/Bar Karma/Urban Safari + MediaGraph — lore and UI patterns
     status: pending

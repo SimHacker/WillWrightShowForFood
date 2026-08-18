@@ -154,7 +154,7 @@ bite ∝ flock_size · hunger · taste(L)
 
 | Layer flavor | Who feasts |
 |--------------|------------|
-| `generic_fruit`, garden gazette | pigeons, goats |
+| `generic-fruit`, garden gazette | pigeons, goats |
 | `cuisine:dutch`, herring menu | ducks near canal |
 | feral vintage, spam brew | goats (or windmill filters it out first) |
 | solidarity / commons tags | sheep (tend credit if well-managed pasture) |

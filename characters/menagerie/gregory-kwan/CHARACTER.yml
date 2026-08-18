@@ -96,7 +96,7 @@ relationships:
       daily: -10
       lifetime: 5
       narrative: "Scotland/blockchain derails his gamma lecture"
-    bucky_jr:
+    bucky-jr:
       type: 'friend'
       daily: 30
       lifetime: 35

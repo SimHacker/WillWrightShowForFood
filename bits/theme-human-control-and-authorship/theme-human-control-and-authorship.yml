@@ -17,14 +17,14 @@ lineage:
     Augmentation NOT automation; not replacement.
   character: ../../characters/douglas-engelbart/
   trail: ../../process/trails/augmentation-and-hypertext.md
-  pitm: ../../process/crazy-idea-jam.yml#player_in_the_middle
+  pitm: ../../process/crazy-idea-jam.yml#player-in-the-middle
 
 thesis: |
   AI proposes; PEOPLE dispose. The LLM writes CODE, orchestrates live streams, and stages
   discussion between HUMANS — it does not replace human voice, personality, or authorship on air.
 
-player_in_the_middle:
-  canonical: ../../process/crazy-idea-jam.yml#player_in_the_middle
+player-in-the-middle:
+  canonical: ../../process/crazy-idea-jam.yml#player-in-the-middle
   one_line: "Center people, not the machine. Curation of the flow IS the show."
 
 what_ai_does:
@@ -82,7 +82,7 @@ see_also:
   - ../theme-simulating-people/theme-simulating-people.md
   - ../tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml
   - ../tradition-honest-fake-call-in/tradition-honest-fake-call-in.yml
-  - ../../repo-shows/will-wright-premiere/SHOW.yml#defense_against_ai_slop
+  - ../../repo-shows/will-wright-premiere/SHOW.yml#defense-against-ai-slop
   - ../../process/performance-space.yml#ethics
   - ../../characters/douglas-engelbart/
   - ../../process/trails/augmentation-and-hypertext.md

@@ -59,7 +59,7 @@ constitution — surfacing TicketPRs, passing the mic, routing the right questio
 the right guest at the right time, sweeping the qa-ledger so nothing dies in the
 queue — is Phil's mic-run implemented in git. And integrity is the first
 orchestration skill: an MC who sells out the audience has no audience left to
-orchestrate. Full detail: [`CHARACTER.yml`](CHARACTER.yml) `homage_phil_donahue`,
+orchestrate. Full detail: [`CHARACTER.yml`](CHARACTER.yml) `homage-phil-donahue`,
 `avatar_model`, `representation`.
 
 ## How he's performed
@@ -120,7 +120,7 @@ Full protocol: [`qa-orchestration.yml`](qa-orchestration.yml)
 
 **Right guest:** question node `to:` must match who's on stage (see [`question-tree.yml`](../../schemas/question-tree.yml)).
 
-**Right question:** `theme` + `context_lasers` align with live thread; `prior_reading` satisfied before ambush.
+**Right question:** `theme` + `context-lasers` align with live thread; `prior_reading` satisfied before ambush.
 
 **Nothing lost:** merged qa ledger from all `audience/*/questions.yml` — status `open` → `asked` → `answered` | `deferred`.
 
@@ -136,7 +136,7 @@ Full protocol: [`qa-orchestration.yml`](qa-orchestration.yml)
 | **Eject** | The [Glick Gallery](../menagerie/GLICK-GALLERY.yml) — his unethical presenter cousins commit their signature interviewing sin; he scores the ad dishonest, cuts the mic, deadpan escort out |
 | **Close** | Q&A ledger sweep + sign-off ritual |
 
-Constitution + simulation tick: [`CHARACTER.yml`](CHARACTER.yml) (`programmed_by`, `simulation_loop`, `orchestration_model` — plus the merged avatar soul: `avatar_model`, `homage_phil_donahue`, `voice`, `agent`, `ceremonies`, `representation`).
+Constitution + simulation tick: [`CHARACTER.yml`](CHARACTER.yml) (`programmed-by`, `simulation_loop`, `orchestration_model` — plus the merged avatar soul: `avatar_model`, `homage-phil-donahue`, `voice`, `agent`, `ceremonies`, `representation`).
 
 Branding + DC host lineage: [`repo-show-branding.yml`](../../process/repo-show-branding.md) · [`performance-space.yml`](../../process/performance-space.md).
 

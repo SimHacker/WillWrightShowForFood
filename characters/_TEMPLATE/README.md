@@ -14,7 +14,7 @@ as the portrayal grows.
 
 The human **`README.md`** is the character's profile page — shows they attend, TicketPR seats,
 cross-repo dreams, likes & joins, plus writing/media. See [`palm/README.md`](../palm/README.md)
-and [`character-colocation.yml`](../../process/character-colocation.md#character_profile).
+and [`character-colocation.yml`](../../process/character-colocation.md#character-profile).
 Mirror key tables in **`CHARACTER.yml`** (`ticketpr_seats`, `shows`, `dreams`, `likes_and_joins`) for agents.
 
 ## Files

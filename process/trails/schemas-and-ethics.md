@@ -1,10 +1,10 @@
-# Trail — schemas_and_ethics
+# Trail — schemas-and-ethics
 
 > *Contracts before characters*
 
 Portrayal standards, invitations, rig shape, markup facades — read contracts before portraits.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#schemas_and_ethics) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#schemas-and-ethics) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

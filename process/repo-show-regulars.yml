@@ -15,7 +15,7 @@ homage:
     Two grumpy fans in the cheap seats — Muppet Show balcony energy, original characters.
     We never use Statler/Waldorf names; ours are balcony left & balcony right seats.
 
-balcony_duos:
+balcony-duos:
   note: "Pairs of hecklers in a shared balcony box — Statler & Waldorf homage."
   sims_balcony:
     id: sims-balcony
@@ -58,7 +58,7 @@ kinds:
       Guest or guest-approved curator plants audience — virtual, costume, running gags.
       Disclosure required. Will Wright kickoff: fictional Sims seeded by show curators with
       guest welcome; Will may add his own via PR.
-    spec: ticket-pr.yml#guest_primed_audience
+    spec: ticket-pr.yml#guest-primed-audience
 
   running_gags:
     tag: "running_gag: true in CHARACTER.yml or questions.yml"
@@ -69,7 +69,7 @@ kinds:
       - recurring Come On Down costume
       - lightpenisland-net regular sponsor read + SWAG
 
-regular_sponsors:
+regular-sponsors:
   lightpenisland_net:
     domain: lightpenisland.net
     operator: Ground Up Software
@@ -92,10 +92,10 @@ during_show:
     - "Regulars' CARD abilities compete with human TicketPR question-advertisements"
     - "Guest may answer balcony barbs or wave them off"
 
-closing_ceremony:
+closing-ceremony:
   ritual: ultimate-machine-switches-off-the-stream
   who: bot-ultimate-machine
-  spec: ../process/repo-show-format.yml#closing_ceremony
+  spec: ../process/repo-show-format.yml#closing-ceremony
   what: |
     A RECURRING closing ceremony every Repo Show can perform: the Ultimate Machine ends the
     show by switching OFF the stream — its one function, applied to the broadcast itself.

@@ -47,7 +47,7 @@ threads:
   cmu_origins:
     when: "early–mid 1990s"
     what: "Reconnected at Carnegie Mellon — Scott in his CS PhD (advised by Andy Witkin & Dana Scott 1990–92, then Peter Lee through 1997; thesis 'Automatic Program Specialization for Interactive Media'), Don with Brad Myers (Lisp UI), porting SimCity from NeWS→X11/Tcl/Tk, making it multi player, and writing the Unix-Haters X-Windows chapter."
-  brian_eno_2006:
+  brian-eno-2006:
     when: "June 2006, San Francisco"
     what: "After Brian Eno + Will Wright's Long Now talk 'Playing with Time', Don introduced Brian Eno to Scott; the three met at Scott's apartment and bounced ideas around. Brian saw Electric Sheep and the hour-per-frame Dreams in High Fidelity. Scott photographed the evening (Brian with Electric Sheep 'on his head')."
   bittorrent_tomtom:

@@ -34,7 +34,7 @@ voicing:
     voice live. We can do that now — and so much more.
 
 # PUPPET TAXONOMY — three ways to embody a character (pick per performer)
-puppet_kinds:
+puppet-kinds:
   face_puppet:
     canonical_name: conan-face-puppet     # (replaces working name 'Conangab')
     homage: "Conan O'Brien's bit — a still photo of a face with the mouth cut out; a person talks through the hole."
@@ -48,7 +48,7 @@ puppet_kinds:
       **Modular face puppet per guest** — their photo + Faceball Construction Set attachments.
       Guest puppeteers **live** on stream, or **records offline** and submits clips. Exemplar:
       **James Gosling at the PDP-8** — young James, satisfied, hotrod iron behind him.
-    spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    spec: ../../apps/performance-space/faceball-construction-set.yml#guest-characters
     not: "Voice clone; host impersonation — guest drives their own mouth through the hole"
   voice_puppet:
     what: "Hide your face entirely; just VOICE the character off-screen. Lowest friction; anyone can do it."
@@ -58,7 +58,7 @@ puppet_kinds:
         show the raw UI + a link so the audience sings/jams along (a 'Pink Trombone musician' doing YAML Jazz).
       • PHONELOPER — Don's SFC expressive-speech toy (open-sourcing; reimplement as a web app on a show,
         add a Cow Moo modulation interface, jam it against Pink Trombone).
-      See schemas/language-cow.yml#performance_instruments.
+      See schemas/language-cow.yml#performance-instruments.
   puppet:
     what: "Full embodiment of the character on screen — NOT the performer's face. Options:"
     also_called: "VIDEO PUPPET — a character embodied as low-tech COMPOSITED video (chroma-key body, drawn/scrubbed limbs) that a human voices/drives live, rather than the performer's own face."
@@ -95,7 +95,7 @@ puppet_kinds:
         trail and ../../characters/david-rosenthal/). Censor-subversion ties to
         ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml.
 
-the_reading:
+the-reading:
   what: |
     The show can run as a READING: performers stream video (face-puppet) or go off-screen
     (voice-puppet) or drive a puppet, and VOICE a character's live-generated speech.
@@ -115,7 +115,7 @@ fan_content_and_trademarks:
     clearly-labeled affectionate fan portrayals — homage, not official dialogue.
 
 # PARTICIPATION CULTURE — Rocky Horror for a repo
-rocky_horror_culture:
+rocky-horror-culture:
   homage: |
     Rocky Horror Picture Show audience participation — knowing what to say/do at the right moment
     (Don learned it from the MIT AI Lab ITS PDP-10 AI:HUMOR;ROCKY HORROR file, and once delighted
@@ -127,7 +127,7 @@ rocky_horror_culture:
     reaction — and Don translates it for the room. You look brilliant for getting that reaction.
   jump_on_stage: "Understanding the machinery lets you effectively become one of the actors yourself."
 
-backstage_ethics:
+backstage-ethics:
   assume: "Most audience members won't look behind the scenes at the constitution/scripts/sim."
   if_you_do: |
     We WELCOME 'spying' backstage — the 'how Star Wars was made' featurettes were the best part.
@@ -138,7 +138,7 @@ backstage_ethics:
   you_become_crew: "In on the joke + behaving + contributing at the right beats? You're crew — join the repo, attend cast parties."
 
 # ECONOMY — pies, seltzer, and real support
-participation_economy:
+participation-economy:
   free_tier: |
     Typing cheat codes (Klapaucius!) and throwing Simoleons is like throwing pies / squirting
     seltzer — anyone can do it free. KACHING. Pure play.
@@ -192,7 +192,7 @@ venue_tour:
 # THE SPEECH-FEEDBACK-LOOP INSTRUMENT (Slats's robopoetry, playable)
 # Slats spiraling into recursive robopoetry isn't just a gag — it's a playable, parameterizable
 # musical instrument that invites remote audience participation by voice streaming.
-speech_feedback_loop_instrument:
+speech-feedback-loop-instrument:
   what: |
     A speech-synth → speech-recognition feedback loop: the system speaks a line, hears its own
     output, and re-speaks a mutated version — iterating into evolving 'robopoetry.' Slats is the
@@ -208,12 +208,12 @@ speech_feedback_loop_instrument:
   remote_participation: |
     Rich and easy to jam: remote audience members VOICE-STREAM in to nudge the loop — a chorus
     steering Slats together. Pairs with the vocal-tract instruments (Pink Trombone, Phoneloper —
-    see schemas/language-cow.yml#performance_instruments) and the Phoneloper granular moo-chorus.
+    see schemas/language-cow.yml#performance-instruments) and the Phoneloper granular moo-chorus.
   arc: "Let it climb to peak absurd beauty, then the Ultimate Machine gongs Slats. Reset laugh. Repeat later."
   see: ../../characters/robots/slats/CHARACTER.yml
 
 # UNNECESSARY CENSORSHIP — a homage gag (credit where due)
-unnecessary_censorship:
+unnecessary-censorship:
   homage: "Jimmy Kimmel Live's 'This Week in Unnecessary Censorship' — bleeping/blurring innocuous words for comedy."
   credit: "Full credit + respect to Jimmy Kimmel Live; we'd run it as a clearly-attributed homage."
   the_gag: |
@@ -231,7 +231,7 @@ unnecessary_censorship:
     We say it plainly. (The 'unnecessary censorship' bit is voluntary comedy, never timid euphemism.)
 
 # CREDIBILITY & STANCE (publishable; professional; anti-hype)
-credibility_and_stance:
+credibility-and-stance:
   weve_done_this: |
     This isn't a pitch deck for vaporware. The pieces are proven, separately, over decades:
     SimCity (now open-source as Micropolis), The Sims and its user-created-content explosion,
@@ -252,4 +252,4 @@ credibility_and_stance:
   tone: "Coherent, creative, professional, tractable. If a collaborator reads the repo, it should read like craft, not crypto."
 
 future_note:
-  live_call_in: "Real-time call-ins + video bots are v2 (see SEGMENTS.yml#live_call_in). v1 fakes it honestly in Cursor."
+  live-call-in: "Real-time call-ins + video bots are v2 (see SEGMENTS.yml#live-call-in). v1 fakes it honestly in Cursor."

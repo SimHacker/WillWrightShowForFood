@@ -1,6 +1,6 @@
 # Artifact scoping — colocate by reusable scope (placement constitution girder)
-# Canonical summary: repo-show-format.yml#placement_constitution
-# Audience exception: ticket-pr.yml#where_not
+# Canonical summary: repo-show-format.yml#placement-constitution
+# Audience exception: ticket-pr.yml#where-not
 
 meta:
   id: character-colocation
@@ -61,7 +61,7 @@ placement:
 # CARDIFY — MOOLLM interfaces on directories
 cardify:
   what: "GLANCE = nav/metadata SSOT · CARD = interface/ads · read both · README for humans"
-  description_scaffolding: repo-show-format.yml#description_scaffolding
+  description-scaffolding: repo-show-format.yml#description-scaffolding
   upstream: "Experiment here; promote to moollm skills/card + skills/glance when proven"
   applies_to: [characters, repo-shows, audience_ticketpr, venue_subdirs, shared_rooms]
   show_directory_minimum: [SHOW.yml]
@@ -100,7 +100,7 @@ readme_index_policy:
     object_pile_only: "Short prose + sample table or pop-out to ./ for exhaustive listing"
     group_has_story: "Prose first; curated table — not a 167-row manifest"
     very_long_gallery: "README themed section + sibling sub-scroll (.md) — still no INDEX.md"
-  character_profile:
+  character-profile:
     what: |
       Character README = the person's profile page (MySpace/LinkedIn for agents and guests).
       Index categorized life across repos — not only artifacts in this directory.
@@ -164,9 +164,9 @@ catalogs_room:
   steam: get-the-sims-on-steam.md
 
 see_also:
-  - repo-show-format.yml#placement_constitution
+  - repo-show-format.yml#placement-constitution
   - ticket-pr.yml
   - character-endosymbiosis.yml
   - showmaker-network.yml
-  - ../schemas/portrayal-standards.yml#guest_directory
+  - ../schemas/portrayal-standards.yml#guest-directory
   - ../packages/README.md

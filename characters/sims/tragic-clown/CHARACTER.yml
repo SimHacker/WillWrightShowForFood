@@ -21,7 +21,7 @@ character:
   home: characters/sims/tragic-clown/
   gallery_opening: always
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🤡💧🖼️😭🛏️"
     legend:
       - "🤡 — Tragic Clown painting"

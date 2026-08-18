@@ -7,7 +7,7 @@ status: seed
 shows: [richard-stallman, brian-fox]   # emacs-lineage panel; also james-gosling thread
 
 title: "THE BIGGEST EMACS IN THE WORLD!!!"
-alt_titles:
+alt-titles:
   - "M-x world-record"                # the command as the brand
   - "Eight Terabytes And Constantly Swapping"  # the old EMACS backronym, inflated to spec
   - "C-x C-f /"                       # find-file the universe; for the shirts

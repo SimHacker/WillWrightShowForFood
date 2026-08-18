@@ -1,7 +1,7 @@
 # Heinz Lemke — 1969 US lab tour (Greyhound summer)
 
 **Source:** Heinz U. Lemke email, 10 July 2026, 17:07 GMT+1 (PIXIE thread)  
-**Attachment:** agenda (not yet in repo — see `pull-in-gaps.md#heinz_1969_us_trip_agenda`)  
+**Attachment:** agenda (not yet in repo — see `pull-in-gaps.md#heinz-1969-us-trip-agenda`)  
 [Portrayal standards](../../../schemas/portrayal-standards.md)
 
 ---

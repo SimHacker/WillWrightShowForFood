@@ -2,7 +2,7 @@
 
 *Async interviews edited into a back-and-forth sequence — each claim answered by a screen-shared artifact.*
 
-[Portrayal standards](../../schemas/portrayal-standards.md) · lineage: [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#splice_in_reactions)
+[Portrayal standards](../../schemas/portrayal-standards.md) · lineage: [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#splice-in-reactions)
 
 ## Pattern (abstract)
 
@@ -10,7 +10,7 @@
 2. **Extract** claims, corrections, modest denials, Glick-trap questions from each tape.
 3. **Bounce** each verbal beat off **evidence** — listing page, headline, case study PDF, repo file, photo.
 4. **Splice** into a ping-pong timeline: A speaks → evidence appears → B reacts (recorded later) → new evidence.
-5. **Tag** a Director's Cut release — longer each merge; latest cut is self-sufficient ([`repo-show-format.yml`](../../process/repo-show-format.yml#iteration_model)).
+5. **Tag** a Director's Cut release — longer each merge; latest cut is self-sufficient ([`repo-show-format.yml`](../../process/repo-show-format.yml#iteration-model)).
 
 Not a montage of vibes — each cut is a **rebuttal or confirmation** you can point at.
 
@@ -48,8 +48,8 @@ Book source card (Sims reunion arc): [`../../characters/eric-bowman/sources/dire
 | Parent | Role |
 |--------|------|
 | [`../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml`](../../bits/gag-did-you-do-dots-together/gag-did-you-do-dots-together.yml) | DoDots homophone trap → CNN/Stanford bounce |
-| [`../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml#signature_beats.directx_bobo_correction) | Wrong author → book cover bounce |
-| [`../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml#sims_team) | Multi-guest reunion container |
+| [`../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml`](../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml#signature-beats.directx_bobo_correction) | Wrong author → book cover bounce |
+| [`../../process/old-band-back-together.yml`](../../process/old-band-back-together.yml#sims-team) | Multi-guest reunion container |
 
 Private shot list + interview order: *(private — not in this repo)*
 

@@ -55,7 +55,7 @@ exchange:
     performances: [burn_moola, dig_hole, scatter_to_chat, repair_auction, fund_backhoe]
     re_exchange: "MOOLA → § only as narrative beat (Philahue prints more §)"
 
-training_data_for_moola:
+training-data-for-moola:
   tagline: "Feed the AI god. Get paid in nothing."
   what_counts:
     - chat messages and reactions (TicketPR, stream-gateway)
@@ -100,7 +100,7 @@ performances:
       Wanted poster loading screen. Repair auction returns one deed — performative justice.
     ties: [art-thief-game.yml, characters/robots/slats/auto-stolen-collection.yml]
 
-  curiosity_cow_cube:
+  curiosity-cow-cube:
     reference: "Curiosity + Cow Clicker parody — click cube for MOOLA; center is Rightward-Facing Cow"
     spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
     repo_beat: |
@@ -109,7 +109,7 @@ performances:
       Center reveal: cow, not godhood. Then burn the pile.
     never_ship: "Parody beat only — keep real Curiosity dead and buried"
 
-  turing_robot_olympics:
+  turing-robot-olympics:
     reference: "First Robot Olympics 1990 — Peter Mowforth photos; vision APIs misread robots"
     spec: ../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
     repo_beat: |
@@ -117,7 +117,7 @@ performances:
       Cardiff Walker poses; pizza arm = gas pump; Richard 1st hammers talking gold.
     ties: [../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml, characters/robots/slats/]
 
-  pantomime_gallery:
+  pantomime-gallery:
     reference: "Bug Farm squish + Copyleft (L) envelope — compulsion and all-rights-reversed"
     spec: ../characters/don-hopkins/media/pantomime/INDEX.yml
     repo_beat: |
@@ -125,7 +125,7 @@ performances:
       Copyleft sticker read aloud; amoeba named Tom; pimple-under-fingernail clause auction.
     ties: [../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml, ../characters/david-levitt/]
 
-  rolf_junk_auction:
+  rolf-junk-auction:
     reference: "Rolf Pixley Amsterdam drawer — 23 deduped lots, MIND=BLOWN face puppet, RAVING BONKERS"
     spec: ../characters/don-hopkins/media/rolf/INDEX.yml
     repo_beat: |
@@ -156,4 +156,4 @@ see_also:
   - art-thief-game.yml
   - orchestration-gold.yml
   - ../characters/don-hopkins/jsonsters/simoleon-auctions.yml
-  - crazy-idea-jam.yml#moola_worthless_performances
+  - crazy-idea-jam.yml#moola-worthless-performances

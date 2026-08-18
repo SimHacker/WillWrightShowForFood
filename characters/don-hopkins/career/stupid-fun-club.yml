@@ -1,6 +1,6 @@
 # Stupid Fun Club — Will Wright's creative laboratory (public backbone)
 
-stupid_fun_club:
+stupid-fun-club:
   what: |
     Will Wright's post-EA lab — robotics, videogames, television, toys.
     Berkeley/Oakland warehouse along the Amtrak tracks (~2009–2014 active band).
@@ -27,7 +27,7 @@ stupid_fun_club:
         - "MediaGraph music navigation (SFC Unity Jul 2015; songs+roads, per-song pies, kiss-toggle links, flick-on-song Mario-cannon, CA biomes, LOD terrain). YouTube https://www.youtube.com/watch?v=2KfeHNIXYUc · Medium https://donhopkins.medium.com/mediagraph-demo-a7534add63e5"
         - "Several client/server iterations including MediaWiki plugins and a Unity app"
 
-  how_don_rejoined_will:
+  how-don-rejoined-will:
     what: |
       During TomTom (2007–2009), Don built three solo self-education projects on the side — pre-SFC,
       leveraging mobile/maps skills from the day job: iLoci (Memory Palace pie-menu network, 2008,
@@ -37,19 +37,19 @@ stupid_fun_club:
       into the spreadsheet). Together they matched exactly what Will was working on — CurrentTV,
       community GPS storytelling.
     the_moment: "Don showed them at an Amsterdam meetup — Will wasn't there — then sent Will the videos and demos. Will looked at them and said: 'Hey, by the way, I'm leaving EA — want to work together again, remotely?' Don said yes, left TomTom, and went back to Stupid Fun Club projects. The TomTom trilogy was the progenitor of StoryMaker / Bar Karma / Urban Safari."
-    tomtom_trilogy: [iloci, amsterdam_coffeeshops_app, bongo_bingo]
+    tomtom_trilogy: [iloci, amsterdam-coffeeshops-app, bongo-bingo]
     coffeeshops_app_video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     iloci_video: "https://www.youtube.com/watch?v=03ddG3jWF98"
     reincarnate: "Don would love to reincarnate + reinvent the TomTom trilogy — Coffeeshops, BONGO BINGO, iLoci — decades out of date, but a fun idea; all part of the tapestry."
     lineage: "Logo Adventure (zeroth) → DreamScape (first) → iLoci → Coffeeshops/BONGO BINGO → StoryMaker/Bar Karma/Urban Safari → MediaGraph"
     ties:
-      - ../../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
-      - ../../../process/crazy-idea-jam.yml#bongo_bingo
-      - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
-      - ../../../process/crazy-idea-jam.yml#iloci_memory_palace
-      - ../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
-      - ../../../process/crazy-idea-jam.yml#ebike_safari
-      - ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+      - ../../../process/crazy-idea-jam.yml#amsterdam-coffeeshops-app
+      - ../../../process/crazy-idea-jam.yml#bongo-bingo
+      - ../../../process/crazy-idea-jam.yml#creationtv-storymaker
+      - ../../../process/crazy-idea-jam.yml#iloci-memory-palace
+      - ../../../process/crazy-idea-jam.yml#urban-safari-gps-storytelling
+      - ../../../process/crazy-idea-jam.yml#ebike-safari
+      - ../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
       - work-history.yml      # TomTom 2007–2009 → SFC 2009–2014
     one_minute_movies:
       films:
@@ -103,6 +103,6 @@ see_also:
   - { path: ../../slats/CHARACTER.yml, why: "Slats fictional character today" }
   - { path: ../../slats/judge-rubric.yml, why: "Drag race judging" }
   - { path: ../../../process/micropolis-ai-drag-race.yml, why: "Game show format" }
-  - { path: ../../../process/cross-links.yml#drag_race_and_ai_offs, why: "Trail" }
+  - { path: ../../../process/cross-links.yml#drag-race-and-ai-offs, why: "Trail" }
   - { path: ../sync-sources.yml, why: "Normalized from moollm adventure-4" }
   - { path: ../README.md, why: "Human narrative" }

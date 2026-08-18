@@ -71,7 +71,7 @@ locked_ads:
     score_when_locked: often high — surface locked items so they teach
   simantics: Failed precondition dialog elevated to first-class advertisement type
 
-coherence_pass:
+coherence-pass:
   description: Single merge + score pass when building pie menu for focus F
   algorithm: |
     ads(F) =

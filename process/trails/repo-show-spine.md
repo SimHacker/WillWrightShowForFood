@@ -1,10 +1,10 @@
-# Trail — repo_show_spine
+# Trail — repo-show-spine
 
 > *So you have a Repo to Show us?*
 
 The show **is** the repo — RTFR, play on your rig, harvest skills back into the network.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#repo_show_spine) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#repo-show-spine) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 
@@ -19,8 +19,8 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 | [**will-wright show**](../../repo-shows/will-wright-premiere/README.md) | Flagship planted show — Will kickoff arc |
 | [**REPO-SHOWS.yml**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for whole collection |
 | [**Live repo**](../live-repo.yml) | Public WWSFF vs DonHopkins private — export ethics |
-| [**RepoShow — the medium**](../vision-and-ambition.md#reposhow-the-medium) | `reposhow_the_medium` — the verb is *reposhowing*; living forkable repo, not a dead clip |
-| [**The deep move**](../vision-and-ambition.md#the-deep-move) | `repo_as_simulation` — MOOLLM runs the repo as a simulation; the show is performed *inside* it |
+| [**RepoShow — the medium**](../vision-and-ambition.md#reposhow-the-medium) | `reposhow-the-medium` — the verb is *reposhowing*; living forkable repo, not a dead clip |
+| [**The deep move**](../vision-and-ambition.md#the-deep-move) | `repo-as-simulation` — MOOLLM runs the repo as a simulation; the show is performed *inside* it |
 | [**MOOLLM stage**](../moollm-stage.yml) | The machinery — pub third place, room graph, session-log episodes |
 | [**Root README**](../../README.md) | Two layers — brutalist directory listing + humane README overlay |
 | [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | Humane interface memorial — README overlay echo |

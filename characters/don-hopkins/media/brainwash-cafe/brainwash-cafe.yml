@@ -7,7 +7,7 @@ artifact:
   status: "Sadly closed — laundromat + cafe culture landmark"
 
 repo_orbit:
-  pizza_tool: ../news-tnt/news-tnt.yml#pizza_tool
+  pizza-tool: ../news-tnt/news-tnt.yml#pizza-tool
   bay_area: ../../career/work-history.yml
 
 menagerie:

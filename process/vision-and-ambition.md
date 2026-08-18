@@ -17,21 +17,21 @@ Jump by topic. Each section maps to a **[K-line](https://github.com/SimHacker/mo
 | Read | [K-line](https://github.com/SimHacker/moollm/tree/main/skills/k-lines) | In one line |
 |------|--------|-------------|
 | [Lineage](#lineage) | `lineage` | 1996 anchor · forebears · the long arc |
-| [RepoShow — the medium](#reposhow-the-medium) | `reposhow_the_medium` | A new medium — *reposhowing* — and its soul: repossession |
-| [The deep move](#the-deep-move) | `repo_as_simulation` | MOOLLM through the back door — the repo runs as a simulation; the show is performed inside it |
+| [RepoShow — the medium](#reposhow-the-medium) | `reposhow-the-medium` | A new medium — *reposhowing* — and its soul: repossession |
+| [The deep move](#the-deep-move) | `repo-as-simulation` | MOOLLM through the back door — the repo runs as a simulation; the show is performed inside it |
 | [Pyramid](#pyramid) | `pyramid` | Stand on the apex; mass builds beneath |
-| [Rig culture](#rig-culture) | `rig_culture` | Declare your class; artisanal gets extra respect |
-| [Who this is for](#who-this-is-for) | `audiences_if_you_stumbled_here` | Doorways by interest |
-| [What we are not doing](#what-we-are-not-doing) | `what_we_are_not_promising` | No deals, no launch fiction |
-| [What we are building](#what-we-are-building-in-public) | `what_we_are_building_in_public` | Artifacts you can clone today |
+| [Rig culture](#rig-culture) | `rig-culture` | Declare your class; artisanal gets extra respect |
+| [Who this is for](#who-this-is-for) | `audiences-if-you-stumbled-here` | Doorways by interest |
+| [What we are not doing](#what-we-are-not-doing) | `what-we-are-not-promising` | No deals, no launch fiction |
+| [What we are building](#what-we-are-building-in-public) | `what-we-are-building-in-public` | Artifacts you can clone today |
 | [Skills](#skills-the-real-harvest) | `skills` | Shows are stage; skills are stack |
-| [Curb appeal meets brutalism](#curb-appeal-meets-brutalism) | `curb_appeal_meets_brutalism` | Warm README; cold verify |
-| [**Long Now and Later**](#long-now-and-later) | **`long_now_and_later`** | Long Now ethos · documented SimCity open-source seed |
-| [Connectors and legacy](#connectors-and-legacy) | `connectors_and_legacy` | Hubs, reunions, warm ties |
-| [Invitation to stakeholders](#invitation-to-stakeholders) | `invitation_to_stakeholders` | Inspect · fork · talk |
+| [Curb appeal meets brutalism](#curb-appeal-meets-brutalism) | `curb-appeal-meets-brutalism` | Warm README; cold verify |
+| [**Long Now and Later**](#long-now-and-later) | **`long-now-and-later`** | Long Now ethos · documented SimCity open-source seed |
+| [Connectors and legacy](#connectors-and-legacy) | `connectors-and-legacy` | Hubs, reunions, warm ties |
+| [Invitation to stakeholders](#invitation-to-stakeholders) | `invitation-to-stakeholders` | Inspect · fork · talk |
 | [Navigate](#navigate) | — | Trails · format · setup |
 
-**Related K-lines elsewhere:** [`data_portability_crown_jewel`](crazy-idea-jam.yml#data_portability_crown_jewel) (Will's 1996 goal, still unshipped) · [`stupid_fun_forward`](cross-links.yml#stupid_fun_forward) (reactor trail) · [`repo_show_spine`](cross-links.yml#repo_show_spine) (*So you have a Repo to Show us?*)
+**Related K-lines elsewhere:** [`data-portability-crown-jewel`](crazy-idea-jam.yml#data-portability-crown-jewel) (Will's 1996 goal, still unshipped) · [`stupid-fun-forward`](cross-links.yml#stupid-fun-forward) (reactor trail) · [`repo-show-spine`](cross-links.yml#repo-show-spine) (*So you have a Repo to Show us?*)
 
 ---
 
@@ -47,7 +47,7 @@ Will Wright gave [*Interfacing to Microworlds*](https://web.stanford.edu/class/c
 |--|--|
 | **Primary source** | [1996 source bundle — transcript, provenance, links](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | **Show pitch built on it** | [Will Wright kickoff show](../repo-shows/will-wright-premiere/README.md) |
-| **Crown jewel named there** | [Data portability between games](crazy-idea-jam.yml#data_portability_crown_jewel) — characters, cities, *memories* crossing worlds. Still not shipped. |
+| **Crown jewel named there** | [Data portability between games](crazy-idea-jam.yml#data-portability-crown-jewel) — characters, cities, *memories* crossing worlds. Still not shipped. |
 
 The long arc since: Will and Don kept returning to the same question — when does the seminar become the city? **WillWrightShowForFood** is the public answer in repo form.
 
@@ -55,10 +55,10 @@ The long arc since: Will and Don kept returning to the same question — when do
 
 - **[Terry Winograd](../repo-shows/terry-winograd/)** — open seminar as curriculum; [CS547 archive recovery](../repo-shows/terry-winograd/) saves the videos that include Will's talk.
 - **[Internet Archive](https://archive.org/)** and **[Brewster Kahle](https://en.wikipedia.org/wiki/Brewster_Kahle)** — mirrorable culture; see the [archive and provenance trail](trails/archive-and-provenance.md).
-- **[The Long Now](https://longnow.org/)** — Brian Eno's coinage; 10,000-year thinking; the [**2006 *Playing with Time* talk**](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) also seeded [open-source SimCity → Micropolis](../characters/will-wright/sources/simcity-open-source-saga/README.md). See [`long_now_and_later`](#long-now-and-later).
+- **[The Long Now](https://longnow.org/)** — Brian Eno's coinage; 10,000-year thinking; the [**2006 *Playing with Time* talk**](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) also seeded [open-source SimCity → Micropolis](../characters/will-wright/sources/simcity-open-source-saga/README.md). See [`long-now-and-later`](#long-now-and-later).
 - **Hacker/builder culture** — show the schematic, ship the board. Exemplar: [James Gosling](../characters/james-gosling/) young with a [PDP-8 hotrod](../characters/james-gosling/media/gosling-young-pdp8-hotrod.yml).
 
-Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS.md) · [cs547_seminar_lineage](trails/cs547-seminar-lineage.md)
+Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS.md) · [cs547-seminar-lineage](trails/cs547-seminar-lineage.md)
 
 ---
 
@@ -66,7 +66,7 @@ Trail: [constructionist lineage from Winograd 1996 to open Micropolis](../TRAILS
 
 ## RepoShow — the medium
 
-**K-line:** `reposhow_the_medium`
+**K-line:** `reposhow-the-medium`
 
 Blogging, podcasting, video, streaming — each is a **medium**, and you can tell because each earned a
 **verb**. You blog. You podcast. You stream. **RepoShow claims the next slot — and its verb is
@@ -101,7 +101,7 @@ so git actually understands it (history, branch, merge, fork).
 the format die; a soul in git outlives any single game. Characters **sync across worlds** (git-merge over
 identity) rather than being copied or trapped. That is repossession delivered as a feature, not a manifesto:
 **you keep your characters because you keep the repo.** The long-promised
-[data portability between games](crazy-idea-jam.yml#data_portability_crown_jewel) — Will's still-unshipped
+[data portability between games](crazy-idea-jam.yml#data-portability-crown-jewel) — Will's still-unshipped
 1996 crown jewel — starts here, with the smallest durable unit: one soul you can never lose.
 
 Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md) — guest rooms as consented portrayals, incarnation as authorship ([*On Being Simulated*](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md)).
@@ -110,7 +110,7 @@ Palm names the ethical layer under the title pun: [**Will Wright Soul For Food**
 
 ### The deep move — the repo is a simulation
 
-**K-line:** `repo_as_simulation`
+**K-line:** `repo-as-simulation`
 
 Everything above — repo as medium, social collaboration hub, living artifact — is true and it is the
 **surface projection** of a deeper move. [MOOLLM](https://github.com/SimHacker/moollm) comes in through
@@ -182,7 +182,7 @@ Declare your class honestly. Weight class, not banishment — same shape Don use
 | **Stick shift switchers** | Multi-model routing — shift at the right moment; timestamped spend log as proof. |
 | **Consciencious objectors** | Don coined this at a Kaleida meetup with [David Ungar](../characters/david-ungar/) — programmers who conscientiously object to replacing hand craft with opaque automation. See [Self × MOOLLM show seed](../repo-shows/david-ungar-self-moollm/README.md). |
 
-Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [Manual Transmission](manual-transmission.md). Full spectrum: [repo-show-format.yml — rig_spectrum](repo-show-format.yml#rig_spectrum) · [repo-show-format.md](repo-show-format.md).
+Optional game-show formats — fun, not the point: [Code That Spec](code-that-spec.yml) · [Micropolis AI Drag Race](micropolis-ai-drag-race.md) · [Manual Transmission](manual-transmission.md). Full spectrum: [repo-show-format.yml — rig-spectrum](repo-show-format.yml#rig-spectrum) · [repo-show-format.md](repo-show-format.md).
 
 Declare yours: [rig-feedback.yml](rig-feedback.yml) · [`rigs/`](../rigs/README.md) · [AI coder doorway](entryways/ai-coder.md)
 
@@ -285,7 +285,7 @@ Inheritable [MOOLLM](https://github.com/SimHacker/moollm) skills — protocols +
 | | |
 |--|--|
 | **Protocol** | [cauldron/SKILL.md](https://github.com/SimHacker/moollm/blob/main/skills/cauldron/SKILL.md) — MELT → STIR → LADLE → ANCHOR → LINK → TASTE → SERVE; SCOOP is what you ladle *out* (skills, playbooks, sub-cauldrons) |
-| **Show loop** | [repo-show-format.yml § cauldron_scoop](repo-show-format.yml#cauldron_scoop) — melt on air → harvest after |
+| **Show loop** | [repo-show-format.yml § cauldron-scoop](repo-show-format.yml#cauldron-scoop) — melt on air → harvest after |
 | **Teaching examples** | [cauldron/examples/](https://github.com/SimHacker/moollm/tree/main/skills/cauldron/examples) — e.g. [configuration-flags](https://github.com/SimHacker/moollm/tree/main/skills/cauldron/examples/configuration-flags) |
 | **Deep live instance** | [**MicropolisCore — playable · pie · publishing cauldron**](https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/playable-pie-publishing-cauldron) — cross-cutting monolith ([GATHERING.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/playable-pie-publishing-cauldron/GATHERING.md)), playbooks, playable vertical slice. Same skill, real soup. |
 
@@ -313,7 +313,7 @@ If it is not in the repo yet, the yaml says **seed** or **roadmap**. No launch-d
 
 ## Long Now and Later
 
-**K-line:** [`long_now_and_later`](vision-and-ambition.yml#long_now_and_later)
+**K-line:** [`long-now-and-later`](vision-and-ambition.yml#long-now-and-later)
 
 Don, paraphrased: *"I am in this for the LONG NOW and LATER game."*
 
@@ -339,7 +339,7 @@ That apartment session is not a footnote — **many threads in this repo flow fr
 | **Generative art × simulation** show thesis | [Scott Draves README — Eno evening](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [Long Now source — Don's thread §4](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/README.md) |
 | **Doug Hilsinger / Taking Tiger Mountain** serendipity (Don → Will, same week) | [Doug Hilsinger — *Taking Tiger Mountain by Serendipity*](../characters/doug-hilsinger/taking-tiger-mountain-by-serendipity.md) |
 
-Receipts: [Scott Draves — The Brian Eno evening (2006)](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [`correspondence.yml#brian_eno_2006`](../characters/scott-draves/correspondence.yml) · [Brian Eno character — the 2006 evening](../characters/brian-eno/CHARACTER.yml)
+Receipts: [Scott Draves — The Brian Eno evening (2006)](../characters/scott-draves/README.md#the-brian-eno-evening-2006) · [`correspondence.yml#brian-eno-2006`](../characters/scott-draves/correspondence.yml) · [Brian Eno character — the 2006 evening](../characters/brian-eno/CHARACTER.yml)
 
 ### Documented seed: open-source SimCity → OLPC → Micropolis
 
@@ -395,7 +395,7 @@ Gilmore was at the Long Now talk; his November email is the outside spark that t
 
 ## Connectors and legacy
 
-**K-line:** [`connectors_and_legacy`](vision-and-ambition.yml#connectors_and_legacy)
+**K-line:** [`connectors-and-legacy`](vision-and-ambition.yml#connectors-and-legacy)
 
 The product is not an episode that evaporates. It is a growing **series** of Repo Shows others can pick up: live conversation plus repos, transcripts, revived code, [MOOLLM skills](../skills/README.md) — built to last, and to *take to the stars long after we're all gone*.
 
@@ -437,7 +437,7 @@ If you represent a platform, archive, publisher, or large audience channel: read
 | Repo home | [README.md](../README.md) |
 | Doorways by interest | [ENTRYWAYS.md](../ENTRYWAYS.md) |
 | How a show runs | [repo-show-format.md](repo-show-format.md) · [repo-show-format.yml](repo-show-format.yml) |
-| Wild ideas | [crazy-idea-jam.md](crazy-idea-jam.md) · [`stupid_fun_forward` trail](trails/stupid-fun-forward.md) |
+| Wild ideas | [crazy-idea-jam.md](crazy-idea-jam.md) · [`stupid-fun-forward` trail](trails/stupid-fun-forward.md) |
 | Will / 1996 talk | [Will show](../repo-shows/will-wright-premiere/README.md) · [1996 source](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) |
 | All show seeds | [repo-shows/README.md](../repo-shows/README.md) |
 | Sideways leaps | [TRAILS.md](../TRAILS.md) |

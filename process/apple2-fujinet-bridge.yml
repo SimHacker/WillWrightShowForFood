@@ -116,4 +116,4 @@ ties:
   - ../characters/thomas-cherryhomes/
   - ../repo-shows/thomas-cherryhomes/SHOW.yml
   - ../rigs/apple2-flair-lap.rig.yml
-  - cross-links.yml#retro_guests_real_wire
+  - cross-links.yml#retro-guests-real-wire

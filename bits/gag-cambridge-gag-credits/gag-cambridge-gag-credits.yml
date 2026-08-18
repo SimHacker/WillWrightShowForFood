@@ -68,7 +68,7 @@ ground_up_software:
       optional: true
       placement: end_roll_only
 
-light_pen_bureau_sponsor:
+light-pen-bureau-sponsor:
   id: light-pen-bureau-sponsor
   pairs_with: "Computing Laboratory — Light Pen Bureau"
   segment: heinz_history
@@ -85,10 +85,10 @@ light_pen_bureau_sponsor:
     Parody spirit of penisland.net; not affiliated. Read URL twice, deadpan; *surf carefully* is the punchline.
     **Brother site** to penisland.net — aligned goals, looking ahead together; do not cross beams.
     **Comic register:** straight-faced surface, running penis gag underneath — see
-    ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic_register (*Spy Who Shagged Me* intro + *Half-Life* propaganda
+    ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic-register (*Spy Who Shagged Me* intro + *Half-Life* propaganda
     videos: earnest institutional film, subtext for the ear). Read URL twice, deadpan; *surf carefully* is the wink.
-  comic_register: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic_register
-  brother_site: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#brother_site
+  comic-register: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#comic-register
+  brother-site: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#brother-site
   inspiration: https://penisland.net/
   pen_network: https://penisland.net/
   inspiration_note: |
@@ -96,13 +96,13 @@ light_pen_bureau_sponsor:
     **Light Pen Bureau** swaps pen → light pen. Play the ad completely straight on Cambridge telecine jiggle.
     penisland.net — deadpan custom-pen shop. *Your Pen Is Our Business.* We are the brother site:
     **Light Pen Bureau**, *Your light pen is our business.* Play the ad **completely straight** on
-    Cambridge telecine jiggle — running penis gag under the surface (#comic_register); never mug for camera.
+    Cambridge telecine jiggle — running penis gag under the surface (#comic-register); never mug for camera.
     **Delivery tone:** *Half-Life* propaganda / Breencast energy — civic announcement earnestness,
     flickering film, institutional cheer; plus *Spy Who Shagged Me* opening — respectable copy, subtext running.
   visual_style:
     vibe: "Strong Apple II **Beagle Bros** manual energy — whimsical borders, hand-lettered captions, friendly absurdity"
     illustrations: "Historic figures lifted from dead-iron manuals (Type 340, PDP-7, light pen) — line art, scanned grain"
-    pdfs: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#manual_library
+    pdfs: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#manual-library
     on_sponsor_spot: "Cut between ad read and manual plates — telecine jiggle on each figure"
     woz_hook: characters/steve-wozniak/
     note: "Woz will love it — ][ hacker-doc joy meets Cambridge Computing Laboratory"
@@ -127,7 +127,7 @@ light_pen_bureau_sponsor:
       - "Also compatible with Mother-of-All-Demos-style proof films"
       - "Augment your light pen — bootstrap sold separately"
       - "Engelbart mouse & keyset replicas, kits, maker guides — lightpenisland.net/augment"
-    catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+    catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division
     gag_credit_lines:
       - "Mother of All Demos — Licensed Light Pen Accessories"
       - "Stanford Research Institute — Demo Envy Division (1968)"
@@ -136,25 +136,25 @@ light_pen_bureau_sponsor:
       After sponsor read — optional one-liner from Don: *Beautiful.* Same year Engelbart showed
       the world what a demo could be, Heinz was drawing radial menus on Titan's graphics satellite.
       Not claiming PIXIE copied Augment — claiming the **light pen zeitgeist** was everywhere.
-  telecine: "Same AE motion track + blur/glow as gag credits — fake 1969 sponsor film insert; straight face (#comic_register); optional Half-Life propaganda earnestness; cut to Beagle Bros manual plates (#manual_library)"
+  telecine: "Same AE motion track + blur/glow as gag credits — fake 1969 sponsor film insert; straight face (#comic-register); optional Half-Life propaganda earnestness; cut to Beagle Bros manual plates (#manual-library)"
   disclaimer: "Parody sponsor spot for Repo Show comedy — family-friendly light-pen catalog only; not an endorsement of any third-party site; brother site to penisland.net"
   catalog: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#catalog
-  amazon_storefront: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#amazon_storefront
+  amazon-storefront: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#amazon-storefront
 
 pixie_pie_menus_pdp7:
   show_seed: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml
   roll_note: |
     On-air roll — pick ~8–10 per episode from this curated set. Overflow plugs live in
-    ground_up_software.consulting_plugs; Engelbart alternates in light_pen_bureau_sponsor.engelbart.gag_credit_lines.
+    ground_up_software.consulting_plugs; Engelbart alternates in light-pen-bureau-sponsor.engelbart.gag_credit_lines.
   roll:
     - line: "Department of Research Simulation"
       note: "Anchor gag — Repo Show in 1969 university voice"
     - line: "Computing Laboratory — Light Pen Bureau"
-      sponsor_spot: light_pen_bureau_sponsor
+      sponsor_spot: light-pen-bureau-sponsor
     - line: "Rainbow Group — Distributed CAD"
       note: "Real group; deadpan credit"
     - line: "Manual Illustrations — Beagle Bros Compliance Division"
-      sponsor_spot: light_pen_bureau_sponsor
+      sponsor_spot: light-pen-bureau-sponsor
       note: "Historic manual plates + PDF links on sponsor insert"
     - line: "Mother of All Demos — Licensed Light Pen Accessories"
       engelbart: douglas-engelbart
@@ -173,7 +173,7 @@ pixie_pie_menus_pdp7:
       note: "Consulting plug — pairs anchor gag"
     - line: "Augment Division — Engelbart Mouse & Keyset Open Models"
       engelbart: douglas-engelbart
-      catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+      catalog: ../gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division
     - line: "Stanford Research Institute — Demo Envy Division (1968)"
       engelbart: mother_of_all_demos
     - line: "Type 340 Display Programming — Manual Compliance Office"

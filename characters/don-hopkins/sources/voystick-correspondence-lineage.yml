@@ -49,7 +49,7 @@ moollm:
   urban_ride_game: skills/simulation/examples/urban-safari-ride-game.yml
 
 crazy_idea_jam:
-  voystick: ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-  urban_safari: ../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
-  urban_ebike: ../../../process/crazy-idea-jam.yml#ebike_safari
+  voystick: ../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
+  urban_safari: ../../../process/crazy-idea-jam.yml#urban-safari-gps-storytelling
+  urban_ebike: ../../../process/crazy-idea-jam.yml#ebike-safari
   show: ../../../repo-shows/voystick-pink-trombone/SHOW.yml

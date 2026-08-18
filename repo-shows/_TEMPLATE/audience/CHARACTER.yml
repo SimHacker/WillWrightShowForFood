@@ -17,7 +17,7 @@ character:
 show:
   slug: "<show-slug>"
   path: "../.."
-  ticket_pr: questions.yml
+  ticket-pr: questions.yml
 
 representation:
   schema: ../../../schemas/audience-character.yml

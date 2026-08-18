@@ -23,7 +23,7 @@ generative systems, performed live**. The tape-bow violin is a "video puppet" fo
 brilliant hack that turns playback into an instrument; the "Voice of Authority" is a **voice puppet**
 decades before the show's own puppet taxonomy
 ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
-`#puppet_kinds`). **[Pink Trombone](https://dood.al/pinktrombone)** — drag-the-tongue vocal tract in
+`#puppet-kinds`). **[Pink Trombone](https://dood.al/pinktrombone)** — drag-the-tongue vocal tract in
 the browser — is the obvious live jam partner for her voice work. She belongs in the same conversation as **Brian Eno** (generative systems on stage)
 and the whole avant-garde performer thread — Bowie, Klaus Nomi, Joey Arias, Leigh Bowery, Nina Hagen —
 that runs through the show's DNA.

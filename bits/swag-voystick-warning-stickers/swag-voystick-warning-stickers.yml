@@ -170,7 +170,7 @@ warnings:
 # Don Medium 2018: https://donhopkins.medium.com/warnings-f53f75aa2ec8
 # SWAG register: fine-print product label — contrast with ISO yellow-black Voystick hazards above
 
-usenet_matter_warnings:
+usenet-matter-warnings:
   provenance:
     source: ../../characters/don-hopkins/sources/usenet-matter-product-warnings.md
     medium: https://donhopkins.medium.com/warnings-f53f75aa2ec8
@@ -280,5 +280,5 @@ see_also:
   - ../../characters/howard-penner/README.md
   - ../../characters/will-wright/media/swag/INDEX.yml
   - ../../characters/don-hopkins/sources/usenet-matter-product-warnings.md
-  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
   - https://github.com/SimHacker/moollm/blob/main/skills/speech/voystick.yml

@@ -63,7 +63,7 @@ video_archive:
 repo_orbit:
   one_minute_movies: one-minute-movies.md
   photos: photos.md
-  stupid_fun_club: ../../don-hopkins/career/stupid-fun-club.yml
+  stupid-fun-club: ../../don-hopkins/career/stupid-fun-club.yml
   will_wright: ../../../will-wright/CHARACTER.yml
   slats_reincarnation: ../../../../repo-shows/will-wright-premiere/slats-reincarnation.yml
 

@@ -77,7 +77,7 @@ wwsff_overlay:
     - foundational_portability_example    # ambient-field archetype in the game-cartridge story
     - lighting_hazard                     # any show segment that dims the lights is legally a grue segment
     - text_adventure_royalty              # Zork panel material: Lebling, Blank, Infocom lineage
-  gallery_openings:
+  gallery-openings:
     beat: "Nobody has seen it attend. The gallery lights flickered twice during the § auction. Two hors d'oeuvres trays unaccounted for."
     constraint: "appears only in unlit rooms; the AV booth keeps a spare lamp for exactly this reason"
   show_hooks:

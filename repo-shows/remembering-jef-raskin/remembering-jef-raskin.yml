@@ -1,6 +1,6 @@
 # SHOW SEED — Remembering Jef Raskin (group memorial / tribute)
 # Memorial mode for Jef ONLY. Possible discussants = documented connections, NOT invitations.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
   id: remembering-jef-raskin
@@ -11,10 +11,10 @@ show:
   status: seed
   consent: not_yet_asked
 
-memorial_mode:
+memorial-mode:
   subject: jef-raskin
   rule: "We represent and discuss Jef's documented work only. We do NOT interview him or speak as him. Any living person on a produced episode requires their own consent — listing below is NOT an invitation."
-  standards: ../../schemas/portrayal-standards.yml#memorial_mode
+  standards: ../../schemas/portrayal-standards.yml#memorial-mode
   memorial: ../../characters/jef-raskin/memorial.md
 
 the_frame:

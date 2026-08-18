@@ -85,7 +85,7 @@ album_engine:
     outputs: [published_album_page, machinima_video, stream_vod_chapters, magazine_article]
 
 # SOUL CITY BROADCAST NETWORK — TV, radio, magazine
-broadcast_network:
+broadcast-network:
   id: scbn
   tagline: "The liminal city has a station."
   channels:

@@ -15,7 +15,7 @@ show:
   interview_planned: true
 
 why_him:
-  dynamic_stage: "The artist who opened Don's eyes to dynamically orchestrating the stage with scripts — Flash cast members conjured and directed procedurally, one step past Marc Canter's Director rotation, ancestor of repo_as_simulation."
+  dynamic_stage: "The artist who opened Don's eyes to dynamically orchestrating the stage with scripts — Flash cast members conjured and directed procedurally, one step past Marc Canter's Director rotation, ancestor of repo-as-simulation."
   arc: "levitated.net (2000, gave it away) → complexification.net (2004, Gallery of Computation) → Etsy (2005, co-founder — found through his art) → Levitated Toy Factory (2014, bits & atoms)."
   will_link: "Will pointed Don at levitated.net in 2005; Spore tidepool ↔ Jared's procedural creatures; Will friended Jared during the 2010 Amsterdam visit."
   friendship: "Twenty years of correspondence; met in person Amsterdam 2010 (FITC) with Laurie."
@@ -47,5 +47,5 @@ media:
 ties_to:
   - ../../characters/jared-tarbell/
   - ../../characters/marc-canter/timeline-rotated-90-degrees.md
-  - ../../process/vision-and-ambition.yml   # repo_as_simulation
+  - ../../process/vision-and-ambition.yml   # repo-as-simulation
   - ../../process/trails/visual-programming-patch-cord.md

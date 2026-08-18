@@ -111,4 +111,4 @@ artifacts:
     source_url: http://bitsavers.trailing-edge.com/pdf/dec/graphics/PDP4-340_Experimental_Display_System.pdf
 
 missing_from_bitsavers:
-  see: cambridge-pixie-hardware-stack.yml#dec_manuals_not_on_bitsavers
+  see: cambridge-pixie-hardware-stack.yml#dec-manuals-not-on-bitsavers

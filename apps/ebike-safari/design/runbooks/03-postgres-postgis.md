@@ -11,15 +11,15 @@
 ## Create database
 
 ```bash
-createdb ebike_safari
-psql ebike_safari -f apps/ebike-safari/db/init/001_extensions.sql
-psql ebike_safari -f apps/ebike-safari/db/init/002_schema.sql
+createdb ebike-safari
+psql ebike-safari -f apps/ebike-safari/db/init/001_extensions.sql
+psql ebike-safari -f apps/ebike-safari/db/init/002_schema.sql
 ```
 
 Or as postgres superuser if extensions need it:
 
 ```bash
-psql -d ebike_safari <<'SQL'
+psql -d ebike-safari <<'SQL'
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS postgis_topology;  -- optional, for graph work later
 SQL
@@ -35,8 +35,8 @@ SELECT ST_AsText(ST_MakePoint(4.789, 52.333)::geography);
 ## Connection string (local dev)
 
 ```bash
-export DATABASE_URL="postgresql://localhost/ebike_safari"
-# or postgresql://user:pass@localhost:5432/ebike_safari
+export DATABASE_URL="postgresql://localhost/ebike-safari"
+# or postgresql://user:pass@localhost:5432/ebike-safari
 ```
 
 Viewer v0 does **not** require Postgres — static JSON only. Postgres enters when:
@@ -57,7 +57,7 @@ Viewer v0 does **not** require Postgres — static JSON only. Postgres enters wh
 
 ```bash
 python scripts/import_trip_pg.py --data-dir demo/web/data
-psql ebike_safari -c "SELECT id, ST_NPoints(path) FROM rides;"
+psql ebike-safari -c "SELECT id, ST_NPoints(path) FROM rides;"
 ```
 
 Future: wire into `pipeline.py --postgres` flag.

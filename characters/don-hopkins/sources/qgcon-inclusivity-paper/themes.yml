@@ -1,6 +1,6 @@
 # Thematic sections — QGCon paper outline (beyond timeline)
 
-simulator_effect:
+simulator-effect:
   will_definition: |
     Players imagine the simulation is vastly more detailed than it is — don't talk them out of it.
   two_computers: "Electronic desk machine + biological imagination in player's head"
@@ -25,7 +25,7 @@ masking_mcccloud:
 constructionism:
   papert_microworld: "Logo geometry → Sims/SimCity as shareable microworlds"
   olpc: "2007 GPLv3 Micropolis for XO-1"
-  doreen_nelson: "Design Based Learning; SimCity lineage"
+  doreen-nelson: "Design Based Learning; SimCity lineage"
 
 procedural_rhetoric_negative:
   note: |

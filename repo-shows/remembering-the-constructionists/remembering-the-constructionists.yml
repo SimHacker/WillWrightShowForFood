@@ -1,6 +1,6 @@
 # SHOW SEED — Remembering the Constructionists (group memorial / tribute)
 # Standalone seed file. Memorial mode for Piaget, Papert & Minsky; living guests, consent not_yet_asked.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
   id: remembering-the-constructionists
@@ -11,10 +11,10 @@ show:
   status: seed
   consent: not_yet_asked          # every living guest invited + consents per representation-ethics
 
-memorial_mode:
+memorial-mode:
   subjects: [jean-piaget, seymour-papert, marvin-minsky]
   rule: "We represent and discuss their documented work and invite those shaped by them to share memories. We do NOT interview them or speak as them. No invented quotes, dialogue, or inner life."
-  standards: ../../schemas/portrayal-standards.yml#memorial_mode
+  standards: ../../schemas/portrayal-standards.yml#memorial-mode
   memorials:
     - ../../characters/jean-piaget/memorial.md
     - ../../characters/seymour-papert/memorial.md

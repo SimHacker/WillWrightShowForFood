@@ -99,7 +99,7 @@ not just the diff. Links commit SHA ↔ cursor-mirror composer ↔ thinking even
 
 - **when:** Each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now
 - **stick_shift:** If commit equals shift point — segment is one gear commitment until prompt closure;
-see stick-shift-protocol.yml#gear_commitment
+see stick-shift-protocol.yml#gear-commitment
 - **workflow:**
   - git log -1 --format=%H — anchor
   - cursor-mirror timeline / thinking / tools / context-sources since anchor
@@ -129,7 +129,7 @@ see stick-shift-protocol.yml#gear_commitment
 
 ### Audit Questions
 
-- **flagship:** homefun-grading.yml#flagship_question
+- **flagship:** homefun-grading.yml#flagship-question
 - **examples:**
   - Does the commit message match the thinking blocks? — Repo Show homefun grading
   - Why did you add that image — where did it come from?
@@ -189,6 +189,6 @@ Fix-the-loop discipline when agents misbehave. Industrial-scale analog to our ha
 
 | Link |
 |------|
-| [`ai-offs.yml#post_run_analysis`](ai-offs.yml) |
-| [`manual-transmission.yml#post_run_forensics`](manual-transmission.yml) |
-| [`repo-show-format.yml#cauldron_scoop`](repo-show-format.yml) |
+| [`ai-offs.yml#post-run-analysis`](ai-offs.yml) |
+| [`manual-transmission.yml#post-run-forensics`](manual-transmission.yml) |
+| [`repo-show-format.yml#cauldron-scoop`](repo-show-format.yml) |

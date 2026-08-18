@@ -1,10 +1,10 @@
-# Trail — live_production
+# Trail — live-production
 
 > *Brain stream on overlay — show the thinking*
 
 Live bus for prompts, model shifts, and GitHub doc links — Philahue surfaces audience questions in parallel.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#live_production) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#live-production) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

@@ -19,4 +19,4 @@ Conan-style face-hole puppetry, and browser/OBS toys for Twitch audience.
 - Drew Sims segment: https://www.youtube.com/watch?v=5wr04-WmWkg
 - Simlish inventors: https://www.youtube.com/watch?v=Y_E6026i9tA
 
-Registry: [`cross-links.yml`](../cross-links.yml) `#performance_space`
+Registry: [`cross-links.yml`](../cross-links.yml) `#performance-space`

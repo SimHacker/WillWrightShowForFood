@@ -21,4 +21,4 @@ show_hooks:
   - "Late binding vs browser lock-in — Ungar + Kay + Don"
 
 see_also:
-  - { path: ../../process/crazy-idea-jam.yml, why: "self_times_moollm" }
+  - { path: ../../process/crazy-idea-jam.yml, why: "self-times-moollm" }

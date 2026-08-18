@@ -62,7 +62,7 @@ slice_city_precedent:
   shallow_vs_deep:
     shallow: "A computer object in The Sims that 'plays' a toy SimCity/Sims — surface-level, decorative (it's been done)."
     deep: "What SliceCity did and what Soul City proposes: real simulations nested and **data flowing between games** — link **actual save files**, run **game emulators**, and **edit save files** to round-trip characters/state."
-  ambition: "Generalize beyond SimCity ⇔ The Sims to **as many games as possible** — the Soul City hub-and-spoke (see ../repo-shows/INDEX.yml bridges_architecture; game-bridge-*.yml, incl. the Mind Mirror emulated-runtime bridge)."
+  ambition: "Generalize beyond SimCity ⇔ The Sims to **as many games as possible** — the Soul City hub-and-spoke (see ../repo-shows/INDEX.yml bridges-architecture; game-bridge-*.yml, incl. the Mind Mirror emulated-runtime bridge)."
   on_show: "Have Steve walk through how SliceCity actually nests the sim; then design live how to widen it to save-file + emulator bridges across the catalog."
 
 interview_heather:
@@ -107,8 +107,8 @@ segments:
 implements: "Fresh shipment → read hell save → subtract soul batch → ZombieSims wave with SimFreaks skins → play live → catalog integration path."
 
 ties_to:
-  - ../process/crazy-idea-jam.yml#soul_bridge_afterlife
-  - ../process/crazy-idea-jam.yml#hell_is_full_zombie_sims
+  - ../process/crazy-idea-jam.yml#soul-bridge-afterlife
+  - ../process/crazy-idea-jam.yml#hell-is-full-zombie-sims
   - game-bridge-afterlife-soul.yml
   - ../process/hosted-content-cards.yml
   - ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md

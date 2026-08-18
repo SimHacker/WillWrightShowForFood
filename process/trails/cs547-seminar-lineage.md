@@ -1,10 +1,10 @@
-# Trail — cs547_seminar_lineage
+# Trail — cs547-seminar-lineage
 
 > *One guest, open access, recorded for posterity*
 
 Terry Winograd's Stanford **CS547 "People, Computers, and Design"** seminar is the direct forebear of the Repo Show: one luminary a week, open to the public, recorded, real Q&A. Will's 1996 talk lives in that archive.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#cs547_seminar_lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#cs547-seminar-lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

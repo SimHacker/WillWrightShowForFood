@@ -25,7 +25,7 @@ upstream_moollm:
   thoughtful_commitment: SimHacker/moollm/skills/thoughtful-commitment
   rubric: SimHacker/moollm/skills/rubric
   experiment: SimHacker/moollm/skills/experiment
-  cursor_mirror: SimHacker/moollm/skills/cursor-mirror
+  cursor-mirror: SimHacker/moollm/skills/cursor-mirror
   cauldron: SimHacker/moollm/skills/cauldron
   character: SimHacker/moollm/skills/character
   constructionism: SimHacker/moollm/skills/constructionism
@@ -33,7 +33,7 @@ upstream_moollm:
   representation_ethics: SimHacker/moollm/skills/representation-ethics
 
 narrative_connections:
-  repo_show_spine: "repo-show skill ↔ process/repo-show-format.yml ↔ repo-shows/ — the show IS the repo"
+  repo-show-spine: "repo-show skill ↔ process/repo-show-format.yml ↔ repo-shows/ — the show IS the repo"
   harvest_loop: "cauldron SCOOP → skills/ here → showmaker-network breeds to other repos"
   retro_rigs: "thoughtful-commitment + cursor-mirror prove retro laps — see process/challenges/"
   ethics_first: "representation-ethics before reading characters/ — portrayal-standards.yml"
@@ -44,8 +44,8 @@ harvest_targets:
 see_also:
   - { path: repo-show/SKILL.md, why: "Public live orchestrator — start here" }
   - { path: repo-show/CARD.yml, why: "Interface — lifecycle methods" }
-  - { path: ../process/cross-links.yml#moollm_compose, why: "Compose trail — kernel + upstream skills" }
-  - { path: ../process/cross-links.yml#repo_show_spine, why: "Show spine — FORMAT, network, Will show" }
+  - { path: ../process/cross-links.yml#moollm-compose, why: "Compose trail — kernel + upstream skills" }
+  - { path: ../process/cross-links.yml#repo-show-spine, why: "Show spine — FORMAT, network, Will show" }
   - { path: ../process/repo-show-format.yml, why: "Format girder — not duplicated in skill body" }
   - { path: ../process/showmaker-network.yml, why: "Shows link shows — graph of episodes" }
   - { path: ../repo-shows/INDEX.yml, why: "Find planted shows" }

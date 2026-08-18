@@ -16,7 +16,7 @@ relationship: |
 
 # questions.yml = sparse orchestration tree (SSOT).
 # Optional `repo_pointer` (whole repo/namespace) and `discussion` (issue + comment) — separate.
-# Optional `context_lasers:` — many pointers at files, dirs, lines, anchors, MOOLLM facets.
+# Optional `context-lasers:` — many pointers at files, dirs, lines, anchors, MOOLLM facets.
 
 # SIMLISH (optional): questions in ENGLISH (thoughts). Simlish is SPOKEN live by Don Philahue.
 # speaks: simlish
@@ -55,12 +55,12 @@ questions:
       path: examples/adventure-4/pub/arcade
       label: "Gezelligheid Grotto arcade alcove"
 
-  # --- context_lasers — typed arrays (directory = whole object; interface = one facet) ---
+  # --- context-lasers — typed arrays (directory = whole object; interface = one facet) ---
   - id: 4
     to: will-wright
     status: open
     question: "About the whole room vs one interface facet"
-    context_lasers:
+    context-lasers:
       directory:
         - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
           label: "Whole character object"

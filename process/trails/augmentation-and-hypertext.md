@@ -1,10 +1,10 @@
-# Trail — augmentation_and_hypertext 🕯️
+# Trail — augmentation-and-hypertext 🕯️
 
 > *Augment, don't replace — and connect everything*
 
 The forebears behind the show's **Player-in-the-Middle** tenet: Engelbart's *augmentation*, Nelson's *hypertext*, Weiser's *calm computing*, Raskin's *humane interface*. Several are honored in **memorial mode** — we represent and **discuss** them, and invite the living people who knew them; we never interview or speak as them.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#augmentation_and_hypertext) · **Memorial mode:** [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml#memorial_mode) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#augmentation-and-hypertext) · **Memorial mode:** [`portrayal-standards.yml`](../../schemas/portrayal-standards.yml#memorial-mode) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 
@@ -22,7 +22,7 @@ The forebears behind the show's **Player-in-the-Middle** tenet: Engelbart's *aug
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + HyperTIES — augmentation in practice |
 | [**HyperTIES reincarnation**](../../characters/don-hopkins/hyperties-reincarnation.md) | Ben Shneiderman's HCIL hypermedia + Don's NeWS/PostScript version — bring it back pixel-perfect in the browser as a living emulator (Forth/MockLisp/C/markup/docs/NeWS PS + XML DBs) |
 | [**Player-in-the-Middle**](../crazy-idea-jam.yml) | Augmentation-not-automation = the PITM tenet |
-| [**memorial mode**](../../schemas/portrayal-standards.yml#memorial_mode) | How we honor the deceased — represent + discuss, never interview |
+| [**memorial mode**](../../schemas/portrayal-standards.yml#memorial-mode) | How we honor the deceased — represent + discuss, never interview |
 
 ---
 

@@ -4,7 +4,7 @@
 meta:
   id: scbn
   parent: GLANCE.yml
-  product_spec: ../../catalogs/soul-city/soul-angel.yml#broadcast_network
+  product_spec: ../../catalogs/soul-city/soul-angel.yml#broadcast-network
 
 channels:
   tv:

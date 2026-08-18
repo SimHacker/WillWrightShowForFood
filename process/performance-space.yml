@@ -6,7 +6,7 @@ meta:
   id: performance-space
   status: active_design
   tagline: "The game is the prompt. Your mouth is the puppet. The chat is the crew."
-  narrative_engine: character_button_board   # ties short clips + session logs + ensemble together
+  narrative-engine: character_button_board   # ties short clips + session logs + ensemble together
   thesis: |
     One performance space where mute gameplay, generated scripts, celebrity face-cutouts, and
     vocal-tract instruments all share the same stack: human voice + optional video + OBS/Twitch
@@ -22,7 +22,7 @@ production_values:
   mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
   panel_engine: ../apps/performance-space/squares-in-a-box.yml
   faceball_construction_set: ../apps/performance-space/faceball-construction-set.yml
-  sanspiel: ../apps/performance-space/faceball-construction-set.yml#sanspiel_simulation
+  sanspiel: ../apps/performance-space/faceball-construction-set.yml#sanspiel-simulation
   render: "TypeScript + WebGPU browser compositor — per-face grade, operator mouth normalize"
   narrative_engine_tools:
     - "Conan face-hole PNG + laptop webcam"
@@ -34,7 +34,7 @@ production_values:
     Orchestration + participation rituals + cultural excerpts → repo-show-branding.yml.
     Host biography (DC Metro, local TV lived memory) → don-hopkins/portrayal/upbringing.yml.
 
-narrative_engine:
+narrative-engine:
   id: character-button-board
   panel_evolution: ../apps/performance-space/squares-in-a-box.yml
   core: |
@@ -47,8 +47,8 @@ narrative_engine:
     avatar: don-philahue
     performer: "Don Hopkins does a great impression — but Don Hopkins is NOT Don Philahue"
     anyone: "Any performer can voice Don Philahue or any other character — human puppetry, not identity theft"
-    dc_lineage_puppets: ../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
-    see: ../characters/don-philahue/CHARACTER.yml#host_performance
+    dc_lineage_puppets: ../apps/performance-space/character-button-board.yml#dc-host-lineage-puppets
+    see: ../characters/don-philahue/CHARACTER.yml#host-performance
   face_holes:
     idle: "Full distinguished portrait — mouth intact when not talking"
     active: "Fade-open mouth hole; driver webcam mouth mapped (scale, stretch, rotate — upside down OK)"
@@ -70,10 +70,10 @@ narrative_engine:
     - audience_ticketpr_lines
     - moollm_pub_episodes
     - memory_palace_tours
-  memory_palace_tour:
+  memory-palace-tour:
     what: "Many puppets — one per topic; posed next to each artifact; walk the palace on air"
-    talking_selfies: "Phone clips per stop — puppet + artifact in frame; ideal async guest format"
-    spec: ../apps/performance-space/faceball-construction-set.yml#memory_palace_tour
+    talking-selfies: "Phone clips per stop — puppet + artifact in frame; ideal async guest format"
+    spec: ../apps/performance-space/faceball-construction-set.yml#memory-palace-tour
 
 convergence:
   one_liner: "Icons carry meaning; the voice carries feeling — whether the icons are Sims pixels, a script, or a photo with a mouth hole."
@@ -86,14 +86,14 @@ convergence:
     drew_carey_sims:
       what: "Network TV ran The Sims twice — parody cold open + Maxis-built in-game segment; House Party shipped the limo cameo."
       format: sims-play-along-narration.yml
-      show: ../repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+      show: ../repo-shows/drew-carey/SHOW.yml#sims-play-along-narration
     script_reading:
       what: "Repo Show as live reading — performers voice MOOLLM-generated character lines (face visible, hidden, or puppet)."
-      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
+      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the-reading
     conan_face_puppet:
       what: "Late-night homage — still photo of a face with mouth cut out; performer speaks through the hole (Arnold, etc.)."
       canonical_name: conan-face-puppet
-      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
+      spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.face_puppet
       ethics: "Affectionate fan portrayals of game characters OK; living celebrities need consent; deceased = memorial mode only."
     mona_eyes:
       what: "NeWS Mona Eyes — paste-on googly eyeballs track focus; asleep = frozen lids + nostril ZZZ particles."
@@ -102,7 +102,7 @@ convergence:
       spec: ../apps/performance-space/faceball-construction-set.yml
       panel: ../apps/performance-space/squares-in-a-box.yml
 
-performance_modes:
+performance-modes:
   play_along_narration:
     id: play-along-narration
     emoji: "🎬🗣️"
@@ -112,49 +112,49 @@ performance_modes:
     spec: sims-play-along-narration.yml
     segment: ../repo-shows/will-wright-premiere/sims-play-along-narration.yml
 
-  live_script_reading:
+  live-script-reading:
     id: live-script-reading
     emoji: "📜🎭"
     prompt: "Generated character text read aloud — table-read energy, no prep on exact lines."
     inputs: [moollm_character_output, performer_rotation, don_philahue_facilitation]
-    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#the-reading
 
   face_puppet:
     id: conan-face-puppet
     emoji: "🕳️👄"
     prompt: "Webcam mouth through a face-hole overlay — perform lips + voice simultaneously."
     inputs: [webcam, png_mask_with_mouth_hole, optional_amplitude_scrub_video]
-    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.face_puppet
     web_toy: ../apps/performance-space/conan-face-puppet.yml
 
   voice_puppet:
     id: voice-puppet
     emoji: "🎤👻"
     prompt: "Off-screen voice only — lowest friction; Pink Trombone / Phoneloper as instruments."
-    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.voice_puppet
-    instruments: ../schemas/language-cow.yml#performance_instruments
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.voice_puppet
+    instruments: ../schemas/language-cow.yml#performance-instruments
 
   amplitude_puppet:
     id: amplitude-scrub-puppet
     emoji: "📈🤡"
     prompt: "Short character clip scrubbed by mic amplitude — cheesy step past the still photo."
     credit: "Don Hopkins + David Levitt — Jesse Jackson / Rush Limbaugh clip scrub technique."
-    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.puppet.voice_to_motion
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.puppet.voice_to_motion
 
-  audience_chorus:
+  audience-chorus:
     id: audience-chorus
     emoji: "🎛️👥"
     prompt: "Remote voice streams steer Slats robopoetry loop or jam Pink Trombone together."
-    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#speech_feedback_loop_instrument
+    spec: ../repo-shows/will-wright-premiere/performance-and-culture.yml#speech-feedback-loop-instrument
     group_activity: ../apps/performance-space/pink-trombone-jam.yml   # 4 people accompany/follow/lead/ridicule/parody their own voices
 
-  sims_3d_puppet:
+  sims-3d-puppet:
     id: vitamoo-3d-puppet
     emoji: "🧍‍♂️🎮"
     prompt: "Drive a real 3D Sims 1 character LIVE — VitaMoo renders skeleton/mesh/animation in-browser; human voices + controls it."
     inputs: [vitamoo_webgl_character, live_voice, mic_amplitude_scrub, pose_controls]
     engine: "VitaMoo (Don Hopkins) — vitamoo.space; already shipped + improving"
-    spec: ../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml#kinds.sims_3d_puppet
+    spec: ../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml#kinds.sims-3d-puppet
     note: "3D sibling of face/video puppets — on-brand: our own Sims-1 tooling, real characters on stage."
 
 lineage_index:
@@ -177,7 +177,7 @@ lineage_index:
       - { label: "Conan celebrity face cutout (curate canonical clip)", url: "https://www.youtube.com/results?search_query=conan+face+cutout+impression" }
       - { label: "Conan Arnold impression (reference)", url: "https://www.youtube.com/results?search_query=conan+arnold+schwarzenegger+impression" }
     in_repo:
-      - ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
+      - ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.face_puppet
       - ../repo-shows/will-wright-premiere/SEGMENTS.yml  # Masturbating Bear cadence — separate running-gag lineage
   hn_citation:
     - { label: "Don Hopkins — NaturalSpeech thread (Simlish / DECTalk / Simlish links)", url: "https://news.ycombinator.com/item?id=31430802" }
@@ -191,14 +191,14 @@ stack:
     webcam: "Face-puppet mouth tracking — browser getUserMedia → canvas mask composite"
     mic: "Amplitude for scrub-puppet; optional viseme v2"
   audience_ingress:
-    ticket_pr: process/ticket-pr.yml
+    ticket-pr: process/ticket-pr.yml
     submissions: [github_pr, issue_link, youtube_unlisted, internet_archive]
   output_sinks:
     - twitch_overlay
     - youtube_live
     - repo_artifact  # transcript, sealed session sqlite — apps/stream-gateway/cursor-tap.yml
 
-proof_of_concept_roadmap:
+proof-of-concept-roadmap:
   p0_on_air:
     - id: steve-gerri-clip
       what: "Play 60–90s of Kearin/Lawlor WAV with transcript on screen — Simlish origins cold open."
@@ -208,13 +208,13 @@ proof_of_concept_roadmap:
       assets: [sims-play-along-narration.yml, ../characters/will-wright/media/sims-people-and-events-drew-carey-house-party-crowd-fraps.png]
     - id: character-button-board
       what: "Live narrative engine — face-hole roster + button board; Don Philahue MC switching characters while reading session log / ensemble clips."
-      assets: [../apps/performance-space/character-button-board.yml, ../characters/don-philahue/CHARACTER.yml#host_performance]
+      assets: [../apps/performance-space/character-button-board.yml, ../characters/don-philahue/CHARACTER.yml#host-performance]
     - id: conan-face-browser
       what: "Browser toy: pick face PNG, cutout mouth, webcam composite — OBS Browser Source URL."
       assets: [../apps/performance-space/conan-face-puppet.yml]
     - id: script-reading-block
       what: "10-minute table read — two performers rotate face-puppet / voice-puppet on MOOLLM lines."
-      assets: [../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading]
+      assets: [../repo-shows/will-wright-premiere/performance-and-culture.yml#the-reading]
     - id: unnecessary-censorship-sims
       what: "Recorded Sims gameplay — mesh pixelization gag (hand on joint pass, head after hit); SimProv wedding double pre-game."
       assets: [../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml, ../catalogs/simprov/README.md]
@@ -226,18 +226,18 @@ proof_of_concept_roadmap:
     note: "Native OBS filter optional — v1 is Browser Source + obs-websocket scene cues from stream-gateway."
     see: ../apps/stream-gateway/overlay-viewer.yml
 
-episode_ideas:
+episode-ideas:
   - title: "Foreign Poet Theatre"
-    modes: [play_along_narration, live_script_reading]
+    modes: [play_along_narration, live-script-reading]
     guests: [claire-curtin, jerry-martin, stephen-kearin]
   - title: "Come On Down to This Lot"
     modes: [play_along_narration]
     guest: drew-carey
   - title: "Hole in the Guest"
-    modes: [face_puppet, live_script_reading]
+    modes: [face_puppet, live-script-reading]
     note: "Game-character faces only on air unless guest consents to celebrity cutout."
   - title: "Phoneloper vs Pink Trombone"
-    modes: [voice_puppet, audience_chorus]
+    modes: [voice_puppet, audience-chorus]
     show: ../repo-shows/phoneloper/SHOW.yml
     group_activity: ../apps/performance-space/pink-trombone-jam.yml
     note: "Climax = 4-player Pink Trombone Jam: accompany / follow / lead / ridicule / parody your own voice."
@@ -257,7 +257,7 @@ ethics:
     - "Living public figures: discuss and portray; do not impersonate without consent (portrayal-standards.yml)."
     - "Gerri Lawlor (d. 2019): cite and honor; never voice her as a character."
     - "Conan / Drew / Kimmel bits: clearly labeled homage; credit the source tradition."
-    - "Planted audience and virtual Sims: disclosed in git (ticket-pr.yml#planted_audience)."
+    - "Planted audience and virtual Sims: disclosed in git (ticket-pr.yml#planted-audience)."
   schema: ../schemas/portrayal-standards.yml
 
 see_also:

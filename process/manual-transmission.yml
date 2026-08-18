@@ -40,11 +40,11 @@ orchestration_gold:
   harvest: "Anonymized aggregates → MOOLLM experiment runs + future skills/ packages"
   model_branching: model-branching.yml
 
-spend_csv_piss_test:
+spend-csv-piss-test:
   metaphor: "Submitting your Cursor spend export is like taking a piss test — voluntary proof"
   what_it_proves: [model_tier_timeline, token_totals, bid_honesty, shift_count, cost_to_ship]
   ref: "Spreadsheet doesn't lie. Misbid and the audience is the ref."
-  see: ai-offs.yml#cursor_mirror
+  see: ai-offs.yml#cursor-mirror
 
 multi_rubric:
   metaphor: "Rubik's cube — many faces scored at once; no single-axis winner required"
@@ -144,11 +144,11 @@ credits:
 
 episode_beat:
   duration: "5–10 min mini or full Drag Race rotation slot"
-  steps: [drop_spec, declare_bids, start_engines, ship_branch, multi_rubric_score, merge_or_sashay, post_run_forensics]
+  steps: [drop_spec, declare_bids, start_engines, ship_branch, multi_rubric_score, merge_or_sashay, post-run-forensics]
 
-post_run_forensics:
+post-run-forensics:
   when: "After the run — before publishing artifacts or harvesting to skills/"
-  see: ai-offs.yml#post_run_analysis
+  see: ai-offs.yml#post-run-analysis
   pitch: |
     The chat generated artifacts (code, yaml, commits, transcripts). Run cursor-mirror to
     archaeology the session; run deep-snitch to audit what left the building. Forensics
@@ -183,4 +183,4 @@ ties_to:
 
 see_also:
   - showmaker-network.yml#competitions
-  - repo-show-format.yml#rig_spectrum
+  - repo-show-format.yml#rig-spectrum

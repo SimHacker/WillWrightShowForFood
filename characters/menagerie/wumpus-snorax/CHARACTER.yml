@@ -79,7 +79,7 @@ wwsff_overlay:
     - foundational_portability_example    # instanced-beast archetype; the self-carrying game cartridge
     - basic_era_royalty                   # 1973, People's Computer Company lineage, teletype gaming
     - gallery_sleeper                     # attends everything, sleeps through most of it
-  gallery_openings:
+  gallery-openings:
     beat: "Slept through the entire § auction in the corner. Woke once, when someone whispered a room number. Bid on nothing. Missed nothing."
     warning: "guests one room away report a faint smell"
   show_hooks:

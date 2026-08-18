@@ -1,14 +1,14 @@
 # Question tree — sparse show-orchestration trees with optional GitHub pointers
 # questions.yml is each character's curated queue — SSOT for what the orchestrator focuses on.
 # repo_pointer (whole repo/module) and discussion (issue/comment) are separate optional attachments.
-# Girder: ../process/ticket-pr.yml#character_queues · Template: ../repo-shows/_TEMPLATE/audience/questions.yml
+# Girder: ../process/ticket-pr.yml#character-queues · Template: ../repo-shows/_TEMPLATE/audience/questions.yml
 
 meta:
   id: question-tree
   version: 0.7
   one_line: |
     Recursive question trees in questions.yml — orchestration SSOT. Nodes may attach repo_pointer
-    (whole repo/module), discussion (issue/comment), and context_lasers (typed pointer arrays).
+    (whole repo/module), discussion (issue/comment), and context-lasers (typed pointer arrays).
 
 orchestration:
   ssot: |
@@ -70,7 +70,7 @@ github_ref:
     what: |
       Point at an entire GitHub repo as a module — or a path within it as namespace/object.
       MOOLLM root, adventure-4/pub/, a bare nested repo, MicropolisCore, anything in git.
-      No issue required. Use context_lasers for finer beams inside the repo.
+      No issue required. Use context-lasers for finer beams inside the repo.
     forms:
       url: "https://github.com/SimHacker/moollm — whole repo"
       tree: "https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/arcade — namespace"
@@ -105,7 +105,7 @@ github_ref:
       the question locally. repo_pointer and discussion may both be set (e.g. point at moollm
       pub/arcade AND discuss on a WWSFF issue about Palm's high score).
 
-context_lasers:
+context-lasers:
   what: |
     Optional lasers on any question node — multiple pointers at once. Each laser aims at something
     in git (any repo). The question text is what you ask on air; lasers are what you point at.
@@ -114,9 +114,9 @@ context_lasers:
   cross_repo: true
   shapes:
     flat_array: |
-      context_lasers: [ laser, laser, … ] — each entry carries `type` (or legacy `kind`).
+      context-lasers: [ laser, laser, … ] — each entry carries `type` (or legacy `kind`).
     typed_arrays: |
-      context_lasers:
+      context-lasers:
         directory: [ … ]      # whole room / object / ensemble
         interface: [ … ]      # one CARDIFY facet of a dir
         file: [ … ]           # specific file (prose, yaml, code)
@@ -187,7 +187,7 @@ context_lasers:
     flat:
       - question: "About Palm's whole being vs just his ask ability"
         to: will-wright
-        context_lasers:
+        context-lasers:
           - type: directory
             url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
             label: "Whole monkey-palm room"
@@ -200,7 +200,7 @@ context_lasers:
     typed:
       - question: "Did your Sims feel their bars filling?"
         to: will-wright
-        context_lasers:
+        context-lasers:
           directory:
             - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/pub/stage/palm-nook/study
               label: "Whole study shelf"
@@ -215,7 +215,7 @@ context_lasers:
             - url: https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-being-palm.md#L1-L40
               label: "Opening — navigation through possibility space"
 
-character_queues:
+character-queues:
   output:
     file: questions.yml
     shape: |
@@ -232,12 +232,12 @@ character_queues:
       node in their tree with `to: <your-id>`. Optional inbound.yml for @mention inbox.
     optional_file: inbound.yml
 
-tree_shape:
+tree-shape:
   model: graphtal
   node_type: question
   recursion: |
-    questions → [question_node, …]
-    question_node.children → [question_node, …]   # sub-questions, same schema
+    questions → [question-node, …]
+    question-node.children → [question-node, …]   # sub-questions, same schema
   analogy: |
     Sparse show-orchestration tree. May mirror a slice of a GitHub issue thread: parent ref →
     issue; child refs → specific comments. Or entirely YAML with no GitHub attachment.
@@ -245,7 +245,7 @@ tree_shape:
     Each character owns their questions.yml — their curated view. Shared refs do not merge files;
     orchestrator merges at read time.
 
-question_node:
+question-node:
   required_for_orchestration: [question, to]
   required_alt: [text, to]
   optional:
@@ -264,14 +264,14 @@ question_node:
     prior_reading: "urls or repo paths guest should read first"
     stance: "me_too | amplify | dissent — when sharing someone else's ref"
     by: "who curated this node — character id or @github handle"
-    context_lasers: "flat array or typed { directory, interface, file, line } — see context_lasers"
-    children: "array of question_node — sub-questions, each with optional ref and lasers"
+    context-lasers: "flat array or typed { directory, interface, file, line } — see context-lasers"
+    children: "array of question-node — sub-questions, each with optional ref and lasers"
   bare_bones: |
     Minimum useful node — no ref, no children:
     { question: "…", to: will-wright, status: open }
   with_lasers: |
     # typed arrays — directory = whole object; interface = one CARDIFY facet of that dir
-    context_lasers:
+    context-lasers:
       directory:
         - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
       interface:
@@ -301,7 +301,7 @@ thread_node:
     on_air: boolean
     segment: slug
     sim: boolean
-    children: nested thread_node or question_node
+    children: nested thread_node or question-node
 
 cross_character:
   same_ref: |
@@ -317,14 +317,14 @@ cross_character:
         stance: me_too
         discussion: { repo: https://github.com/SimHacker/WillWrightShowForFood, issue: 42, comment: 111 }
 
-github_discussion:
+github-discussion:
   votes:
     how: [issue_reactions, "+1 / me too comments"]
     scope: global on the shared ref target
     orchestrator: may boost nodes whose refs have high vote counts when merging trees
   answers: "Guest replies on the issue; optionally mirrored as sub-question with ref.comment"
 
-status_lifecycle:
+status-lifecycle:
   open: "In queue — not yet asked on air"
   asked: "Surfaced — awaiting answer"
   answered: "Guest replied (on ref and/or local answer field)"

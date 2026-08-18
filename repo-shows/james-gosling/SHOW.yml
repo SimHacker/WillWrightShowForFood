@@ -18,7 +18,7 @@ why_pair:
   van_hoff: "Built GoodNeWS → HyperLook (a NeWS HyperCard) and PdB at the Turing Institute; on the early Java team he wrote the compiler in Java (javac) + AWT + HotJava."
   shared: "NeWS and PostScript programmability → HyperLook → early Java. Don worked alongside both (the UniPress Emacs NeWS driver, pie menus, the lunar-lander-in-PostScript)."
 
-dream_segments:
+dream-segments:
   - "NeWS as a lost future — PostScript-programmable, network-transparent windows (AJAX before AJAX); why it lost to X11 and what we'd revive"
   - "HyperLook — van Hoff's NeWS reimagining of HyperCard, where Don built SimCity's UI"
   - "Gosling Emacs → UniPress → GNU Emacs; 'the largest number of cheesy little extension languages'"

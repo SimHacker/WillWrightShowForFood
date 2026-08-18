@@ -34,7 +34,7 @@ runbook:
     philahue:
       pulls_from: [audience/*/questions.yml, github_issues, hn_comments]
       invokes: [ASK-QUESTION, SURFACE-TICKETPR]
-    closing: ../../process/repo-show-format.yml#closing_ceremony
+    closing: ../../process/repo-show-format.yml#closing-ceremony
   after_show:
     homefun: ../../process/homefun-grading.yml
     harvest: "../../skills/repo-show/ — cauldron → packages/"

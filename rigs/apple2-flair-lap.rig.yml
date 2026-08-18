@@ -39,7 +39,7 @@ lifecycle:
       Retrocomputing AI drag race: same spec as the room, your rig drives how you ship.
       Host may write on laptop; demo must run on declared platform. Record boot + werk;
       thoughtful-commitment with Thinking ref. Slats roasts INTEGER BASIC crashes lovingly.
-    contexts: [retrocomputing_drive, apple2_drive, micropolis_ai_drag_race, homefun]
+    contexts: [retrocomputing-drive, apple2-drive, micropolis_ai_drag_race, homefun]
   replicate:
     checklist:
       - "Copy rig yaml; swap components for your languages/tools/platform/emulator choices"

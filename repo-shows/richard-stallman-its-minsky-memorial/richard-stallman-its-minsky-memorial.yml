@@ -22,7 +22,7 @@ format:
   refuses: [zoom, skype, discord, whatsapp, surprise_panel]
   recording: [webm_vp8_vp9, ogg_vorbis_speex]
   editorial_veto: guest
-  memorial_mode: |
+  memorial-mode: |
     Marvin Minsky discussed, not impersonated. RMS as documented lab peer + memorial discussant.
 
 segments:

@@ -44,7 +44,7 @@ bio:
 
 connections:
   the_og_flower_child: "**Owen is the original 'User Interface Flower Child'** — Don shamelessly took his own title as an homage. One of the great, kind elders of the **Silicon Valley Hippie Mafia**."
-  news_gang: "Core of the **NeWS gang** with James Gosling, David Rosenthal, Arthur van Hoff (and Don) — the 'send code, not commands' window system. Natural co-guest for the NeWS reunion."
+  news-gang: "Core of the **NeWS gang** with James Gosling, David Rosenthal, Arthur van Hoff (and Don) — the 'send code, not commands' window system. Natural co-guest for the NeWS reunion."
   send_code_philosophy: "His class.ps is the proof of NeWS's bet: ship **programs**, not command streams — PostScript for code, data, AND graphics. See ../../process/trails/send-code-not-commands.md."
   warnock_lineage: "PostScript runs from **John Warnock** (Adobe; d. 2023) → NeWS (Gosling) → Owen's object PostScript. The thread to discuss: Warnock's idea of PostScript as a **linguistic motherboard** (graphics card + networking card in software, more cards to come)."
   filesystem_oo_patent: "With **David Rosenthal**, Owen patented **US 5,187,786** (1993, Sun): a full OO class hierarchy in a plain **hierarchical file system** — classes & instances as **directories**, **path files** doing inheritance/method lookup (the shell PATH as a dictionary stack), even supporting **Self** and **Super**. Filesystem-as-object-system."

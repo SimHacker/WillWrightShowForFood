@@ -24,7 +24,7 @@ Will said it on a Stanford stage in 1996: characters, homes, cities, objects, id
 | Stop | Why wander here |
 |------|-----------------|
 | [**Crazy Idea Jam — crown jewel**](../../process/crazy-idea-jam.md#-the-crown-jewel) | Reactor blurbs — the jewel in context |
-| [**CRAZY-IDEA-JAM.md**](../../process/crazy-idea-jam.md#data_portability_crown_jewel) | Machine girder — `#data_portability_crown_jewel` |
+| [**CRAZY-IDEA-JAM.md**](../../process/crazy-idea-jam.md#data-portability-crown-jewel) | Machine girder — `#data-portability-crown-jewel` |
 | [**Character endosymbiosis**](../../process/character-endosymbiosis.md) | Lynn Margulis as save format — soul-file + organelles |
 | [Bridge proposals](../../repo-shows/README.md) | Show seeds orbiting the jewel |
 | [**1996 transcript**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) | Will names the goal — primary source |

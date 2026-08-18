@@ -13,7 +13,7 @@ Don's VoyStick correspondence arc (Apr 2023): GDC → email thread with Zack (Pi
 | VoyStick lineage | [`../don-hopkins/sources/voystick-correspondence-lineage.md`](../don-hopkins/sources/voystick-correspondence-lineage.md) |
 | Show seed | [`../../repo-shows/voystick-pink-trombone/README.md`](../../repo-shows/voystick-pink-trombone/README.md) |
 | Group activity | [`../../apps/performance-space/pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md) |
-| Crazy Idea Jam | [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) |
+| Crazy Idea Jam | [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick) |
 
 ## Ethics
 

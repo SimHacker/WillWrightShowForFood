@@ -168,7 +168,7 @@ Demo data is baked into the image for local builds only; production requires `de
 PostGIS initializes from `db/init/` on first boot.
 
 ```bash
-docker compose exec db psql -U ebike -d ebike_safari -c "SELECT PostGIS_Version();"
+docker compose exec db psql -U ebike -d ebike-safari -c "SELECT PostGIS_Version();"
 ```
 
 Import rides from the host (needs Python + psycopg2 on VM, or run one-off container later):
@@ -176,7 +176,7 @@ Import rides from the host (needs Python + psycopg2 on VM, or run one-off contai
 ```bash
 cd ../..
 pip install psycopg2-binary
-DATABASE_URL="postgresql://ebike:YOUR_PASSWORD@localhost:5432/ebike_safari" \
+DATABASE_URL="postgresql://ebike:YOUR_PASSWORD@localhost:5432/ebike-safari" \
   python scripts/import_trip_pg.py --data-dir deploy/data
 ```
 

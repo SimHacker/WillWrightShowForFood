@@ -7,7 +7,7 @@ meta:
   status: spec
   role: panel_talk_show_engine
   one_camera: true
-  design: ../../process/performance-space.yml#narrative_engine
+  design: ../../process/performance-space.yml#narrative-engine
   inherits: [character-button-board.yml, conan-face-puppet.yml, faceball-construction-set.yml]
 
 names:

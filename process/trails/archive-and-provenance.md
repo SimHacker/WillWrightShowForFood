@@ -1,10 +1,10 @@
-# Trail — archive_and_provenance
+# Trail — archive-and-provenance
 
 > *Source, don't paraphrase — know what's public and what isn't*
 
 Historians and archivists: export policy, primary sources, sync logs, honest invitation record.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#archive_and_provenance) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#archive-and-provenance) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

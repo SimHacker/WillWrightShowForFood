@@ -15,7 +15,7 @@ meta:
 reading_habit: "Pick playlist in ENTRYWAYS.md → follow priority → leap via trails here when curious"
 
 trails:
-  repo_show_spine:
+  repo-show-spine:
     k_line: "So you have a Repo to Show us?"
     human: trails/repo-show-spine.md
     why: "The show IS the repo — RTFR, play on your rig, harvest back"
@@ -33,7 +33,7 @@ trails:
       - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface memorial — philosophical anchor for README overlay" }
       - { path: character-colocation.yml, why: "github_ux — humans link to README.md, not bare directory URLs" }
 
-  drag_race_and_ai_offs:
+  drag-race-and-ai-offs:
     k_line: "Start your engines — werk, commit, merge"
     human: trails/drag-race-and-ai-offs.md
     why: "Game-show formats inside Repo Show — declare class honestly"
@@ -48,7 +48,7 @@ trails:
       - { path: ../characters/robots/slats/judge-rubric.yml, why: "Celebrity judge — flair vs spreadsheet" }
       - { path: ../repo-shows/micropolis-ai-drag-race/micropolis-ai-drag-race.yml, why: "Show seed for drag race episodes" }
 
-  retrocomputing_drive:
+  retrocomputing-drive:
     k_line: "CODE THAT SPEC on your platform"
     human: trails/retrocomputing-drive.md
     why: "Same spec CARD — you declare languages, tools, platform, emulator"
@@ -65,7 +65,7 @@ trails:
       - { path: ../rigs/README.md, why: "Rig yaml + SETUP DNA — reproduce without you in room" }
       - { path: ../schemas/rig-setup-dna.yml, why: "Emailable viral install protocol for LLMs" }
 
-  retro_guests_real_wire:
+  retro-guests-real-wire:
     k_line: "Make it so — real retro on the wire"
     human: trails/retro-guests-real-wire.md
     why: "Emulated AI Lab meets FujiNet tree fort"
@@ -78,7 +78,7 @@ trails:
       - { path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Rig DNA — email this file alone" }
       - { path: ../rigs/apple2-flair-lap.rig.yml, why: "][ flair lap — pairs with FujiNet segments" }
 
-  live_production:
+  live-production:
     k_line: "Brain stream on overlay — show the thinking"
     human: trails/live-production.md
     why: "Live bus for prompts, shifts, GH doc links"
@@ -90,7 +90,7 @@ trails:
       - { path: ../apps/stream-gateway/, why: "Future deployable brain bus app" }
       - { path: ../characters/don-philahue/ORCHESTRATOR.yml, why: "Repo Show hub avatar — merges all plugin CARDs" }
 
-  constructionist_lineage:
+  constructionist-lineage:
     k_line: "Piaget → Papert → Minsky → 1996 microworlds → living organism"
     human: trails/constructionist-lineage.md
     why: "The developmental + AI roots → Winograd interview → Will show → breed DNA back"
@@ -112,7 +112,7 @@ trails:
       - { path: https://github.com/SimHacker/moollm/skills/constructionism, why: "Papert — learn by building in microworlds" }
       - { path: https://github.com/SimHacker/moollm/skills/play-learn-lift, why: "PLAY → LEARN → LIFT — show harvest pattern" }
 
-  moollm_compose:
+  moollm-compose:
     k_line: "Compose with MOOLLM — skills are inheritable prototypes"
     human: trails/moollm-compose.md
     why: "WWSFF is a public microworld plugin"
@@ -128,7 +128,7 @@ trails:
       - { path: https://github.com/SimHacker/moollm/skills/character, why: "Guest incarnations — consensual portrayals" }
       - { path: https://github.com/SimHacker/moollm/skills/representation-ethics, why: "Portrayal ethics before reading guests" }
 
-  rig_personas:
+  rig-personas:
     k_line: "Your rig IS your drag persona"
     human: trails/rig-personas.md
     why: "download → install → configure → use → replicate → mash up"
@@ -140,7 +140,7 @@ trails:
       - { path: ../rigs/artisanal-vscode.rig.yml, why: "Zero tokens — hand-only respect" }
       - { path: rig-feedback.yml, why: "Tell us your real stack — ai-offs honesty" }
 
-  schemas_and_ethics:
+  schemas-and-ethics:
     k_line: "Contracts before characters"
     human: trails/schemas-and-ethics.md
     why: "Portrayal standards, invitations, rig shape, markup facades"
@@ -152,7 +152,7 @@ trails:
       - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Constitutional theme — AI proposes, people dispose" }
       - { path: ../bits/theme-simulating-people/theme-simulating-people.md, why: "Impersonation vs simulation — Sims 26-year precedent" }
 
-  archive_and_provenance:
+  archive-and-provenance:
     k_line: "Source, don't paraphrase — know what's public and what isn't"
     human: trails/archive-and-provenance.md
     why: "Historians and archivists — export policy, primary sources, honest invitation record"
@@ -174,7 +174,7 @@ trails:
       - { path: ../characters/README.md, why: "Contribution channels — self-edit or email assisted" }
       - { path: vision-and-ambition.yml, why: "Forebears and long arc in yaml girder" }
 
-  cs547_seminar_lineage:
+  cs547-seminar-lineage:
     k_line: "One guest, open access, recorded for posterity"
     human: trails/cs547-seminar-lineage.md
     why: "Terry Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show as its descendant"
@@ -190,7 +190,7 @@ trails:
       - { path: ../characters/will-wright/, why: "Flagship guest — the talk the repo orbits" }
       - { path: repo-show-format.yml, why: "The Repo Show — CS547's recorded-conversation descendant" }
 
-  augmentation_and_hypertext:
+  augmentation-and-hypertext:
     k_line: "Augment, don't replace — and connect everything"
     human: trails/augmentation-and-hypertext.md
     why: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech + Raskin's humane interface — forebears behind Player-in-the-Middle (memorial mode: represent + discuss)"
@@ -204,11 +204,11 @@ trails:
       - { path: ../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml, why: "Memorial seed — possible_discussants are connections only, not invitations" }
       - { path: ../README.md, why: "Root two-layer navigation essay — brutalist listing + humane README" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + HyperTIES — augmentation in practice" }
-      - { path: crazy-idea-jam.yml#player_in_the_middle, why: "Augmentation-not-automation = the PITM tenet" }
+      - { path: crazy-idea-jam.yml#player-in-the-middle, why: "Augmentation-not-automation = the PITM tenet" }
       - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Cross-show constitutional theme — Engelbart lineage spelled out" }
-      - { path: ../schemas/portrayal-standards.yml#memorial_mode, why: "How we honor the deceased — represent + discuss, never interview" }
+      - { path: ../schemas/portrayal-standards.yml#memorial-mode, why: "How we honor the deceased — represent + discuss, never interview" }
 
-  game_design_lineage:
+  game-design-lineage:
     k_line: "What is a game? Toys, possibility space, player types"
     human: trails/game-design-lineage.md
     why: "Designers across genres — simulation toys, MUDs, one-page systems, reverse-engineered history"
@@ -222,7 +222,7 @@ trails:
       - { path: ../characters/jason-shankel/, why: "Maxis / Stupid Fun Club alumnus — games + AI" }
       - { path: ../characters/robots/slats/judge-rubric.yml, why: "Flair vs spreadsheet — how design gets judged on air" }
 
-  direct_manipulation:
+  direct-manipulation:
     k_line: "See it, touch it, change it live"
     human: trails/direct-manipulation.md
     why: "Direct manipulation, programming by demonstration, media for thought — the interface IS the idea"
@@ -236,7 +236,7 @@ trails:
       - { path: ../characters/jef-raskin/, why: "🕯️ Humane Interface — locus of attention; README overlay (memorial)" }
       - { path: ../characters/don-hopkins/CARD.yml, why: "Pie menus + PostScript UI — direct manipulation in practice" }
 
-  live_objects:
+  live-objects:
     k_line: "The machine is alive — late binding, live objects, network windows"
     human: trails/live-objects.md
     why: "Smalltalk → Self → NeWS → Java; the live-object lineage behind HyperLook and SimCity"
@@ -254,7 +254,7 @@ trails:
       - { path: ../characters/hugh-daniel/, why: "🕯️ Hacked NeWS with Don (Grasshopper Group) — Xanadu/NeWS lineage (memorial)" }
       - { path: ../characters/don-hopkins/career/simcity-lineage.yml, why: "SimCity on NeWS/HyperLook with pie menus — the lineage in action" }
 
-  procedural_beauty:
+  procedural-beauty:
     k_line: "Procedural texture, generative art, runnable artifacts"
     human: trails/procedural-beauty.md
     why: "Noise, light, audiovisual art, maps — beauty you can run and remix"
@@ -265,7 +265,7 @@ trails:
       - { path: ../characters/amy-jo-kim/, why: "Game Thinking; Sims social design; pair show with Scott Kim" }
       - { path: ../characters/ben-cerveny/, why: "GNE/Flickr × browser Soul City; public code × publish gates; data-portability spine for Will ep.1" }
 
-  maxis_sims_lineage:
+  maxis-sims-lineage:
     k_line: "SimCity → Dollhouse → The Sims → Spore"
     human: trails/maxis-sims-lineage.md
     why: "The specific genealogy this repo grew from — with its primary-source images"
@@ -279,7 +279,7 @@ trails:
       - { path: ../characters/jason-shankel/, why: "Maxis / SFC alumnus — games + AI" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — the post-Maxis lab" }
 
-  ucc_catalogs:
+  ucc-catalogs:
     k_line: "SimFreaks · SimSlice · SimProv · Zombie Sims · Soul City"
     why: "Legacy artisanal catalogs + the create/publish/share platform that hosts them"
     nodes:
@@ -296,7 +296,7 @@ trails:
       - { path: ../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md, why: "Mission + proof" }
       - { path: ../repo-shows/heather-and-steve-alvey/, why: "First platform users" }
 
-  the_card_game:
+  the-card-game:
     k_line: "Build a segment deck — stack guest abilities"
     human: trails/the-card-game.md
     why: "Every guest CARD is MTG-style invokable verbs; combos link cards across guests; Slats judges"
@@ -312,7 +312,7 @@ trails:
       - { path: ../characters/CARD.yml, why: "Guest room interface — per-person verbs" }
       - { path: https://github.com/SimHacker/moollm/skills/advertisement, why: "How abilities score, Sims-style" }
 
-  stupid_fun_forward:
+  stupid-fun-forward:
     k_line: "Get weird — the coolest, whackiest, most forward-thinking stuff"
     human: trails/stupid-fun-forward.md
     why: "The crazy idea reactor — robo-resurrection, soul bridges, cells that travel between games"
@@ -330,13 +330,13 @@ trails:
       - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year VoyStick email harvest" }
       - { path: ../repo-shows/ebike-safari/ebike-safari.yml, why: "Outdoor Voystick demo — StoryMaker on wheels" }
       - { path: ../apps/performance-space/pink-trombone-jam.yml, why: "Four-player vocal-tract choir — We Are the Weird" }
-      - { path: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick, why: "The idea — not the warning stickers" }
+      - { path: crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick, why: "The idea — not the warning stickers" }
       - { path: ../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md, why: "Crown jewel theme — Will 1996 goal still unshipped" }
       - { path: ../bits/theme-the-riff-loop/theme-the-riff-loop.md, why: "Steerable recursion — Slats, Jeff, Eno, Director's Cut" }
       - { path: ../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md, why: "One Minute Movies + Slats opening energy" }
       - { path: ../bits/theme-voystick-voice-space/theme-voystick-voice-space.md, why: "Voystick theme — homomorphic instrument stack" }
 
-  repo_show_themes:
+  repo-show-themes:
     k_line: "Threads to revisit across episodes"
     human: trails/repo-show-themes.md
     why: "Substantive show ideas — yaml girders + markdown overlays; themes graduate into episodes"
@@ -351,7 +351,7 @@ trails:
       - { path: ../repo-shows/INDEX.yml, why: "Master ideas catalog" }
       - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md overlay policy" }
 
-  performance_space:
+  performance-space:
     k_line: "Icons carry meaning; the voice carries feeling"
     human: trails/performance-space.md
     why: "Play-along Sims narration, script readings, Conan face-puppet, OBS/webcam toys — one design"

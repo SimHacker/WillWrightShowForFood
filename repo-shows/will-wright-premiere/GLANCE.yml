@@ -60,7 +60,7 @@ read_order:
 structure:
   topic_less: true
   centerpiece: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
-  the_arc: "1996 post-mortems + forward preview → this show = ~26yr Sims 1 post-mortem"
+  the-arc: "1996 post-mortems + forward preview → this show = ~26yr Sims 1 post-mortem"
   flows_into:
     - game-bridge-proxi-sims.yml
     - game-bridge-proxi-minecraft.yml
@@ -93,7 +93,7 @@ see_also:
     - { path: ../../characters/will-wright/GLANCE.yml, why: "Guest portrayal" }
     - { path: ../../characters/terry-winograd/README.md, why: "1996 seminar lineage" }
     - { path: ../../process/entryways/guest-will.md, why: "Guest playlist" }
-    - { path: ../../process/repo-show-format.yml#description_scaffolding, why: "CARD + GLANCE constitution" }
+    - { path: ../../process/repo-show-format.yml#description-scaffolding, why: "CARD + GLANCE constitution" }
   deep:
     - { path: README.md, why: "Full human article" }
     - { path: ../../characters/will-wright/videos.yml, why: "Video content plan with Will — promotes/previews/seeds the show" }

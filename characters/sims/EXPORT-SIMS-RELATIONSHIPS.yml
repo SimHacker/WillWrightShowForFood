@@ -40,4 +40,4 @@ neighbors:
       julian_strait: 50
 
 gallery_opening_edges:
-  note: Narrative-only symbolic edges; full matrix in menagerie/GUEST-ROSTER.yml#cross_edges
+  note: Narrative-only symbolic edges; full matrix in menagerie/GUEST-ROSTER.yml#cross-edges

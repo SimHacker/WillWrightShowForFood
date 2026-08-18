@@ -62,7 +62,7 @@ bridges:
       60,000 residents moving INTO your towers. Same crowd, opposite valence.
       Salvation at scale, measured in occupancy rates.
 
-the_role_gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into SimCity
+the-role-gate:  # Don's ruling, 2026-07-07 — how NAMED characters cross into SimCity
   insight: |
     SimCity does not directly represent citizens. Population is statistical — a
     hydraulic quantity, not a crowd of individuals. So the bridge into SimCity has

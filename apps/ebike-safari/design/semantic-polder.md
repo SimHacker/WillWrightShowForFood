@@ -65,7 +65,7 @@ for each layer L with strength inside polder P:
 
 | Filter setting | Passes | Rejects to sewage |
 |----------------|--------|-------------------|
-| `q = generic_fruit`, τ wide | fruit stand layers | meat, feral, spam brews |
+| `q = generic-fruit`, τ wide | fruit stand layers | meat, feral, spam brews |
 | `q = cuisine:dutch`, τ medium | Dutch restaurant Peecons | Thai bleed from outside |
 | `q = peer:alice`, τ narrow | Alice's solidarity brews | everything else |
 | `τ → 1` (pinch shut) | almost nothing — polder floods | — |

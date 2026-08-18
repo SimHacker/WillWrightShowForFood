@@ -19,7 +19,7 @@ spawn_pee(edge, payload) → L0 layer, embedding fixed, s(L, edge)=1
   → L0 empty → recycle id
 re_pee(same payload) → new L0 or boost strength (policy TBD)
 ambient bins combine category strength; coarsen upward on further fade
-collapse: many L0 → abstract sparse ambient (generic_fruit, food, good/bad); slow diffuse
+collapse: many L0 → abstract sparse ambient (generic-fruit, food, good/bad); slow diffuse
 ```
 
 ## State
@@ -43,9 +43,9 @@ sniff:
   similarity_beta: 1.5          # path score exponent on cos(q, embed(L))
 
 # territory/market/centroids.yml  (collapse targets)
-generic_fruit: { embedding: [...], tags: [apple, tomato, mango] }
+generic-fruit: { embedding: [...], tags: [apple, tomato, mango] }
 generic_meat: { embedding: [...], tags: [beef, lamb, duck] }
-food: { embedding: [...], tags: [generic_fruit, generic_meat, bakery] }
+food: { embedding: [...], tags: [generic-fruit, generic_meat, bakery] }
 good: { embedding: [...], tags: [food, comfort, fair_pick] }
 bad: { embedding: [...], tags: [feral, sewage, spam] }
 cuisine_thai: { embedding: [...], tags: [curry, basil, chili] }

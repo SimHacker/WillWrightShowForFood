@@ -7,7 +7,7 @@ Machine index: [`pull-in-gaps.md`](pull-in-gaps.md) · **Consent:** `not_yet_ask
 
 ## Crown jewel
 
-### pixie_complete_source_listing
+### pixie-complete-source-listing
 
 **THE CROWN JEWEL** — complete PIXIE program, ~5000 words Assembler/Machine code for PDP-7 + DEC 340: light pen, interrupts, interactive model building. Heinz offered to prepare a copy (2026-07-07).
 
@@ -37,7 +37,7 @@ Predates his contact with Engelbart's 1962 framework.
 | Public | [sources/1967-03-10-system-analysis/](sources/1967-03-10-system-analysis/README.md) — scan, page images, full transcript |
 | Open | Ask Heinz whose hand wrote the "how about steered beams?" marginal note |
 
-### electronics_magazine_1969_pdf
+### electronics-magazine-1969-pdf
 
 McGraw-Hill *Electronics* (28 Apr 1969) PIXIE article; Gilmore scan.
 
@@ -47,7 +47,7 @@ McGraw-Hill *Electronics* (28 Apr 1969) PIXIE article; Gilmore scan.
 | Public | [sources/electronics-international-1969-04-28-pixie.md](sources/electronics-international-1969-04-28-pixie.md) |
 | Photo | [media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png](media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |
 
-### heinz_1967_origin_story
+### heinz-1967-origin-story
 
 *PIXIE History — Back to the Roots (Part 1, 1967)* — Plessey spy accusation, Phil Cook, Wilkes visit, 29 Jun 1967 talk, PhD offer, Wiseman supervision, through 1972 thesis.
 
@@ -120,7 +120,7 @@ Heinz Word doc summarizing Cambridge work (Don asked permission to Medium-ify). 
 
 *Wiseman Notes on Radial Menus in PIXIE.pdf* — Don has copy at donhopkins.com; export SAVE-FAILED.
 
-### heinz_phd_thesis_1972
+### heinz-phd-thesis-1972
 
 Lemke (1972) *Interactive graphics in an integrated CAD system* — Appendix 4 pp 187–209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE.
 
@@ -146,11 +146,11 @@ Named-people storyline Roy asked for: Wilkes, Wiseman, Hiles, Cheney, Etherton; 
 
 Roy has photos of Zenon Pylyshyn with Allen Newell and John McCarthy — request scans + permission if willing.
 
-### nagoya_ai_surgery_slides_2026
+### nagoya-ai-surgery-slides-2026
 
 Model Guided Medicine + AI in Surgery, Nagoya CARS 2026. From Heinz 10 Jul attachment; consent for repo.
 
-### heinz_1969_us_trip_agenda
+### heinz-1969-us-trip-agenda
 
 Summer 1969 US lab-tour agenda (Greyhound $99 / 3-month ticket): United Aircraft, MIT/Licklider, Lincoln Lab/Sutherland, Engelbart at SRI, Utah/Evans/Sutherland, ~15 more stops.
 
@@ -181,7 +181,7 @@ Jul 2026 inventory: Multipatch/Multiobject octal listings, PDP-7/340 manuals, Ti
 | Doc | [../andrew-armit/sources/2026-07-16-armit-archive-manifest.md](../andrew-armit/sources/2026-07-16-armit-archive-manifest.md) |
 | Architecture | [../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md](../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) |
 
-### cars_2027_hci_session
+### cars-2027-hci-session
 
 CARS Congress Berlin — special HCI session **29 June 2027** (60th anniversary Cambridge PIXIE lecture). Joskowicz (ELIZA), Cypko (Human-AI), Roy's UWO PIXIE re-implementation.
 
@@ -192,7 +192,7 @@ CARS Congress Berlin — special HCI session **29 June 2027** (60th anniversary 
 | Characters | [../leo-joskowicz/](../leo-joskowicz/) · [../mario-cypko/](../mario-cypko/) |
 | Thread | [sources/2026-07-16-pixie-storyline-thread.md](sources/2026-07-16-pixie-storyline-thread.md) |
 
-### pixie_part1_docx_dshr
+### pixie-part1-docx-dshr
 
 *PIXIE Part 1.docx* — attached at end of DSHR/Roy thread forward. May overlap 1967-back-to-the-roots or new installment.
 

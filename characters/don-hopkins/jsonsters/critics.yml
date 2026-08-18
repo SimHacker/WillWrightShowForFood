@@ -8,7 +8,7 @@ instantiation:
   gallery: jsonsters
   premiere: README.md
   graduation: ../../menagerie/GRADUATION.yml
-  character_room: ../../menagerie/
+  character-room: ../../menagerie/
   reuse: |
     Instantiate these eight (or fork critics.yml) for NeMACS, Turing Institute,
     or future repo-show gallery walks. After premiere, patrons graduate to
@@ -53,7 +53,7 @@ critics:
     catches: ["I can prove it", "I wrote that in the guest book"]
     plays_with: [margot, mimsy, gregory]
 
-  bucky_jr:
+  bucky-jr:
     name: Bucky Jr. (never "the younger")
     role: Williamsburg sculptor — welded armatures, honest gravity
     lens: material truth, nib taper, tensile honesty
@@ -87,7 +87,7 @@ critics:
     blind_spot: parabolas are always about him
     voice: darling, overwhelmed, don't look at me
     catches: ["narrative climax", "each segment a heartbeat"]
-    plays_with: [margot, bucky_jr, gregory]
+    plays_with: [margot, bucky-jr, gregory]
 
   bunny:
     name: Bunny Whitmore
@@ -102,7 +102,7 @@ interplay:
   opening_beat: mimsy and gregory bid-war over frame 01 minimalism vs conduit metaphor
   mid_tour_fight: vandermeer vs margot at hex islands — class allegory vs administrative violence
   helena_arc: whisper → tunnel sermon (terrain ribcage) → "we were always the Bleep" (monster coda)
-  julian_margot: flirt vs fury; bucky_jr corrects julian's tensile metaphors
+  julian_margot: flirt vs fury; bucky-jr corrects julian's tensile metaphors
   bunny_pivot: asks if hex pillars are broccoli; gregory explains GME; bunny funds monster era
   facebook_chorus: real commenters (Brendan, Ron, Simon) as ground-truth hecklers in coda — not patrons
 

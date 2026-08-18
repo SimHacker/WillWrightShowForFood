@@ -102,7 +102,7 @@ show_ties:
     - ../model-branching.yml
     - ../stick-shift-protocol.yml
   formats:
-    - ../repo-wars.yml#translation_arena
+    - ../repo-wars.yml#translation-arena
     - ../../repo-shows/openlaszlo/README.md
     - ../../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
   moollm_skills:
@@ -118,7 +118,7 @@ show_ties:
 episode_beats:
   - "Manual Transmission segment — score Jarred's run: spend CSV fantasy, adversarial ratio, test oracle"
   - "Adversarial committee live — implementer + 2 reviewers on a micro port (Mike Gallaher personas)"
-  - "Repo Wars translation_arena — Zig→Rust drag race with declared rigs + budget cap"
+  - "Repo Wars translation-arena — Zig→Rust drag race with declared rigs + budget cap"
   - "OpenLaszlo contrast — smaller AI revival, same 'resurrect with receipts' shape"
   - "Drew Carey AI contrast — AI backstage crew vs replacing the personality on mic"
   - "Stick-shift beat — Theo: different model families for reviewer lanes"

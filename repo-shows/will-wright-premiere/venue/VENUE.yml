@@ -53,7 +53,7 @@ rooms:
   - { id: rig_above,        dir: stage/rig-above/,  exits: [stage], note: "above-stage rig — gong, lights, the Ultimate Machine's reach" }
   - { id: trap_below,       dir: stage/trap-below/, exits: [stage], note: "below-stage trap doors — Broken Robot crashes up/down" }
 
-assignments_seed:
+assignments-seed:
   # current placements (mirror of audience/INDEX seating — kept in sync)
   balcony_left:  [fictional-tragic-clown]
   balcony_right: [fictional-grim-reaper]

@@ -23,7 +23,7 @@ representation:
   note: "Don controls this directory. Adventure microworld state stays upstream."
   reading_experience: |
     YAML Jazz here = rambling conversation with Don, sometimes coherent interview.
-    See portrayal/voice.yml#character_room.
+    See portrayal/voice.yml#character-room.
 
 # Adventure-4 microworld character — absolute once; shorthand elsewhere
 moollm_source:
@@ -75,9 +75,9 @@ see_also:
   - { path: ../robots/slats/, why: "Slats — waiter robot → drag race judge (adventure-4 under don-hopkins/slats/)" }
   - { path: ../will-wright/, why: "Boss, collaborator, flagship guest" }
   - { path: ../david-ahl/, why: "Patron saint — Creative Computing; aspire to be as wonderful" }
-  - { path: ../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division, why: "Public Engelbart open models + SWAG catalog (Augment Division)" }
+  - { path: ../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division, why: "Public Engelbart open models + SWAG catalog (Augment Division)" }
   - { path: ../../process/repo-show-branding.yml, why: "Show orchestration + branding — participation rituals, cultural excerpts" }
   - { path: ../../skills/repo-show/SKILL.md, why: "Show orchestrator" }
   - { path: ../../process/live-repo.yml, why: "WWSFF is live — edit here" }
-  - { path: ../../process/cross-links.yml#constructionist_lineage, why: "1996 microworlds → today" }
+  - { path: ../../process/cross-links.yml#constructionist-lineage, why: "1996 microworlds → today" }
   - { path: ../../rigs/stick-shift-composer-moollm.rig.yml, why: "Host rig seed" }

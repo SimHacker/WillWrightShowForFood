@@ -24,10 +24,10 @@ challenges_rotation:
   - stiletto_sprint
   - stick_shift_slalom
   - manual_transmission
-  - retrocomputing_drive
-  - apple2_drive
-  - pdp10_maclisp_drive
-  - lisp_machine_hack_off
+  - retrocomputing-drive
+  - apple2-drive
+  - pdp10-maclisp-drive
+  - lisp-machine-hack-off
   - bull_ride_ball
   - artisanal_eleganza
   - lip_sync_for_your_commits

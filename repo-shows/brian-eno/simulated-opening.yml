@@ -111,10 +111,10 @@ parody:
     - "Training data to AI god → worthless MOOLA — that IS the joke"
     - "K Foundation burn · Cards Against Humanity Holiday Hole"
     - "Curiosity cube clicks · Cow Clicker Mooney lineage · Cowpocalypse extensions"
-  curiosity_cow_cube:
+  curiosity-cow-cube:
     spec: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
     beat: "Gallery cube — click for MOOLA — distant distressed moos — AATG fills faces — center is Rightward-Facing Cow"
-  turing_robot_olympics:
+  turing-robot-olympics:
     spec: ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
     beat: "Peter Mowforth wall — Slats runs vision APIs — JOY · POSING · GAS PUMP — MOOLA payout"
 
@@ -144,4 +144,4 @@ see_also:
 
 scott_draves_pairing:
   run_order: "Scott opening (sheep) → Eno opening (77MP) → merged scenius beat"
-  show: repo-shows/scott-draves/SHOW.yml#dream_segments
+  show: repo-shows/scott-draves/SHOW.yml#dream-segments

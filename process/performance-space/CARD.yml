@@ -17,7 +17,7 @@ methods:
     signature: "linkLineage() → steve-gerri + drew + conan + simlish schema"
     advertisement: "All canonical examples in one index."
   PLAN-POC:
-    signature: "planPoc() → performance-space.yml#proof_of_concept_roadmap"
+    signature: "planPoc() → performance-space.yml#proof-of-concept-roadmap"
     advertisement: "Four P0 demos to prove the space on air."
 
 abilities:

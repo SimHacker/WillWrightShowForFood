@@ -17,7 +17,7 @@ show:
   status: seed
   consent: not_yet_asked
 
-memorial_mode:
+memorial-mode:
   rule: "Represent and discuss documented work + stories friends tell. Do not interview Vanessa; do not speak as her."
   directory: characters/vanessa-freudenberg/
 

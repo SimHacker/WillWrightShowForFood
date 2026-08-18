@@ -35,7 +35,7 @@ don_hopkins_witness:
   mattrick_beat: "Don gave Mattrick Understanding Comics during EA due diligence"
 
 proxi_beats:
-  - memory_palace: snow globes, 3D mind map
+  - memory-palace: snow globes, 3D mind map
   - gen_ai_scenes: text memories → generated explorable scenes
   - shared_memories: intersections with others; geolocated hometown map
   - memory_categories: [people, places, time, feelings, things, activities]

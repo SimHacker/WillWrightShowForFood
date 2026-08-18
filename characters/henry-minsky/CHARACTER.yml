@@ -45,7 +45,7 @@ wit:
 
 connector:
   role: "A superhero-nexus connector. Henry grew up in and around the MIT AI Lab (Marvin's son) and knows an extraordinary number of brilliant people from that world — a natural bridge both to great Repo Show guests and to opportunities. He's on it."
-  see: ../../process/vision-and-ambition.yml   # connectors_and_legacy#brokering (henry_minsky_as_hub)
+  see: ../../process/vision-and-ambition.yml   # connectors-and-legacy#brokering (henry_minsky_as_hub)
 
 drescher_thread:
   friend: "Longtime friend of Gary Drescher (his father's PhD student); Gary advises Leela AI."
@@ -79,5 +79,5 @@ see_also:
   - { path: ../gary-drescher/, why: "Friend + Leela adviser; Henry's Python schema factory carries Made-Up Minds forward" }
   - { path: ../margaret-minsky/, why: "His sister — haptics / MIT Media Lab" }
   - { path: ../../repo-shows/openlaszlo/, why: "OpenLaszlo → Declare reunion show" }
-  - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors_and_legacy#brokering) — MIT-AI-Lab nexus" }
+  - { path: ../../process/vision-and-ambition.yml, why: "Connector hub (connectors-and-legacy#brokering) — MIT-AI-Lab nexus" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

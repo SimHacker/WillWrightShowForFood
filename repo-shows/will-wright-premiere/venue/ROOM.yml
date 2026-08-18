@@ -14,7 +14,7 @@ exits:
   map: VENUE.yml               # the full room graph + seat assignments
 
 contains:
-  note: "Characters appear here by location reference; see VENUE.yml#assignments_seed"
+  note: "Characters appear here by location reference; see VENUE.yml#assignments-seed"
 
 see_also:
   - VENUE.yml

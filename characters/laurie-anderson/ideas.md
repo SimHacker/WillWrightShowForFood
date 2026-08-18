@@ -45,7 +45,7 @@ reimplementation target: [`../don-hopkins/musical-gas-granular-ca-synth.md`](../
 Laurie's pitch-shifted male persona is a **voice puppet** — hiding the performer to speak *as* a
 character — decades before the show's own puppet taxonomy
 ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
-`#puppet_kinds`). A natural thread on **voice, persona, and authority** — who gets to speak, and in
+`#puppet-kinds`). A natural thread on **voice, persona, and authority** — who gets to speak, and in
 whose voice, when a machine can shift yours.
 
 ### 3. Spoken-word storytelling, live, in a repo

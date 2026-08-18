@@ -27,9 +27,9 @@ Retrocomputing Drive challenges are platform instances of one umbrella spec. Lar
 
 | Trail | When to leap |
 |-------|----------------|
-| [retrocomputing_drive](../trails/retrocomputing-drive.md) | Umbrella spec + stack pointers |
-| [retro_guests_real_wire](../trails/retro-guests-real-wire.md) | Lars + Thomas guest arcs |
-| [rig_personas](../trails/rig-personas.md) | SETUP DNA as viral artifact |
+| [retrocomputing-drive](../trails/retrocomputing-drive.md) | Umbrella spec + stack pointers |
+| [retro-guests-real-wire](../trails/retro-guests-real-wire.md) | Lars + Thomas guest arcs |
+| [rig-personas](../trails/rig-personas.md) | SETUP DNA as viral artifact |
 
 ---
 

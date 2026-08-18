@@ -8,7 +8,7 @@ shows: [will-wright]
 premiere_doc: ../../repo-shows/will-wright-premiere/simprov-slap-conga.yml
 
 title: "The Slap Conga"
-alt_titles:
+alt-titles:
   - "Cupid's Cascade"           # prettier; less slap-funny
   - "Relationship Stack Overflow"  # HN/dev gag — systems joke, longer
   - "Love Queue"                # soft; undersells the slap

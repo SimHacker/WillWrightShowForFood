@@ -13,13 +13,13 @@ meta:
 production_values:
   stance: "High production values. Low production costs."
   mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
-  mechanism: performance-space.yml#narrative_engine
-  host_wavelength: upbringing.yml#production_aesthetic
+  mechanism: performance-space.yml#narrative-engine
+  host_wavelength: upbringing.yml#production-aesthetic
 
 hosting:
   north_star: Captain Chesapeake
-  dc_lineage: upbringing.yml#local_tv
-  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
+  dc_lineage: upbringing.yml#local-tv
+  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc-host-lineage-puppets
   sign_on_sign_off:
     what: "Chesapeake / Captain 20 / Count Gore face puppets + canned sound-box buttons — lip-sync like a drag queen"
     sign_offs:
@@ -37,20 +37,20 @@ hosting:
 panel_format:
   spec: ../apps/performance-space/squares-in-a-box.yml
   face_attachments: ../apps/performance-space/faceball-construction-set.yml
-  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
-  guest_puppets: faceball-construction-set.yml#guest_characters
-  memory_palace_tour: faceball-construction-set.yml#memory_palace_tour
-  talking_selfies: faceball-construction-set.yml#memory_palace_tour#talking_selfies
-  sanspiel: faceball-construction-set.yml#sanspiel_simulation
-  audience_as_balls: faceball-construction-set.yml#audience_as_balls
-  faceball_machine: faceball-construction-set.yml#faceball_machine
-  choreography_modes: faceball-construction-set.yml#faceball_machine#choreography_modes
-  spore_creature_avatars: faceball-construction-set.yml#spore_creature_avatars
+  dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc-host-lineage-puppets
+  guest_puppets: faceball-construction-set.yml#guest-characters
+  memory-palace-tour: faceball-construction-set.yml#memory-palace-tour
+  talking-selfies: faceball-construction-set.yml#memory-palace-tour#talking-selfies
+  sanspiel: faceball-construction-set.yml#sanspiel-simulation
+  audience-as-balls: faceball-construction-set.yml#audience-as-balls
+  faceball-machine: faceball-construction-set.yml#faceball-machine
+  choreography_modes: faceball-construction-set.yml#faceball-machine#choreography_modes
+  spore-creature-avatars: faceball-construction-set.yml#spore-creature-avatars
   tagline: "Push-to-talk multi-dummy improv in a box — Faceball Construction Set"
   mona_eyes_lineage: "NeWS googly eyes awake/asleep; nostril ZZZ particles when asleep"
   not: Celebrity Sims
 
-attention_atoms:
+attention-atoms:
   tagline:
     - "Twittier than Twitter."
     - "Exier than X."
@@ -64,7 +64,7 @@ attention_atoms:
     repo_show_flip: |
       **TicketPR is free.** Merged PR = crew member. Optional donations buy recognition (box seats),
       not the right to speak. We charge for **less** text only as comedy — never as gatekeeping.
-    see: repo-shows/will-wright-premiere/performance-and-culture.yml#participation_economy
+    see: repo-shows/will-wright-premiere/performance-and-culture.yml#participation-economy
   forms:
     one_quote_one_link:
       what: "One quote. No explanation. Just a link."
@@ -90,9 +90,9 @@ attention_atoms:
     - "Shotgun blast of atoms — skim, skip, jump; depth is optional, always linkable"
     - "Repo path as the explanation (RTFR when you want more)"
   ties_to:
-    - couple-and-solo-shows.yml#shows_and_episodes
-    - characters/will-wright/guest-prototype.yml#attention_economy
-    - characters/don-hopkins/portrayal/voice.yml#writing_philosophy
+    - couple-and-solo-shows.yml#shows-and-episodes
+    - characters/will-wright/guest-prototype.yml#attention-economy
+    - characters/don-hopkins/portrayal/voice.yml#writing-philosophy
 
 interstitials:
   note: "Between-segment bumpers + palate cleansers that make full shows feel personal and lived-in."
@@ -103,16 +103,16 @@ interstitials:
       recurring tribute to **Napoleon** (the cat we lost) from the photo/video archive.
     running_gag: "Monetize the cats to pay for the food they eat — deadpan mock-business (a PUBLIC gag, not the real monetization plan)."
     spec: ../characters/don-hopkins/cats.yml
-    faceball: ../apps/performance-space/faceball-construction-set.yml#talking_selfies
-    feeds: repo-show-format.yml#directors_cuts     # short-form between-segment content
+    faceball: ../apps/performance-space/faceball-construction-set.yml#talking-selfies
+    feeds: repo-show-format.yml#directors-cuts     # short-form between-segment content
 
-participation_rituals:
+participation-rituals:
   note: "Local kids-TV participation → Repo Show orchestration (TicketPR, audience/, live call-on)"
   map:
     - from: "Captain 20 Gerbil Races — postcard in, call kid live, pick a racer, win a prize"
       to: "TicketPR lottery + YOUR NAME HERE: COME ON DOWN"
     - from: "Channel 20 Club Card drum — numbered stubs pulled between cartoons"
-      to: "Merged TicketPRs + box_seats / balcony in audience/INDEX.yml"
+      to: "Merged TicketPRs + box-seats / balcony in audience/INDEX.yml"
     - from: "Space Gallery / Bozo Art Gallery — every kid drawing on air"
       to: "Audience PR artifacts, costume.yml, homefun — shown in repo + on stream"
     - from: "Captain Chesapeake treasure chest — read viewer letters on the tugboat"
@@ -124,14 +124,14 @@ participation_rituals:
     - from: "Kids Break — snack, cartoon, discuss, craft"
       to: "Async clips + research bundle walkthrough + live homefun implement"
 
-cultural_excerpts:
+cultural-excerpts:
   note: "Go-to clips and scenes for cold opens, themes, or between-segment riffs — not biographical SSOT"
   dc_cold_war_wavelength:
     show: The Americans
-    era: "1980s DC Metro — same window as host upbringing (see upbringing.yml#dc_metro)"
+    era: "1980s DC Metro — same window as host upbringing (see upbringing.yml#dc-metro)"
     authenticity_touchstone: "Jhoon Rhee 'Nobody bothers me' — Don loved the show's DC detail"
-    jhoon_rhee: cultural_excerpts#jhoon_rhee_nobody_bothers_me
-    arpanet_pdp10: cultural_excerpts#americans_arpanet_pdp10
+    jhoon_rhee: cultural-excerpts#jhoon_rhee_nobody_bothers_me
+    arpanet_pdp10: cultural-excerpts#americans-arpanet-pdp10
     lars_intro_sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
   jhoon_rhee_nobody_bothers_me:
     what: |
@@ -154,8 +154,8 @@ cultural_excerpts:
       - "The Americans cold open or between-segment riff"
       - "Local TV lineage beside Captain Chesapeake / Captain 20"
       - "Attention atom — one line, then link"
-    host_note: upbringing.yml#dc_metro#jhoon_rhee
-  claudia_ms_pac_man:
+    host_note: upbringing.yml#dc-metro#jhoon_rhee
+  claudia-ms-pac-man:
     show: The Americans
     season: 1
     episode: "The Oath"
@@ -172,8 +172,8 @@ cultural_excerpts:
       - "Video games + philosophy / procedural rhetoric"
       - "Cold War DC backdrop + formative tech culture"
       - "Handlers, puppetry, characters who perform identities (ties to Don Philahue)"
-    host_note: upbringing.yml#dc_metro
-  americans_arpanet_pdp10:
+    host_note: upbringing.yml#dc-metro
+  americans-arpanet-pdp10:
     show: The Americans
     season: 2
     episode: ARPANET
@@ -204,9 +204,9 @@ cultural_excerpts:
       - "ARPANET + Beltway kid networking thread (upbringing.yml)"
       - "Thomas Cherryhomes pair episode — emulated × networked retro"
     guest: characters/lars-brinkhoff/
-    host_note: upbringing.yml#dc_metro
+    host_note: upbringing.yml#dc-metro
     clip_sidecar: videos/the-americans-s02e07-arpanet.clips.yml
-  americans_claudia_pacman:
+  americans-claudia-pacman:
     show: The Americans
     season: 1
     episode: The Oath
@@ -285,7 +285,7 @@ cultural_excerpts:
       upbringing networking thread).
     quote: "If you're not playing with 36 bits, you're not playing with a full DEC."
     attribution: "DIGEX — Don's old friend; USENIX era"
-    host_note: upbringing.yml#dc_metro#networking
+    host_note: upbringing.yml#dc-metro#networking
     guest: characters/lars-brinkhoff/
     sequence: characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
     use_when:
@@ -293,7 +293,7 @@ cultural_excerpts:
       - "DEC PDP-10 vs VAX culture"
   umd_college_park:
     era: "1980s UMD College Park — same window as HCIL + host student life"
-    host_note: upbringing.yml#dc_metro#umd#college_park_life
+    host_note: upbringing.yml#dc-metro#umd#college_park_life
     terrapin_tacos:
       what: "Terrapin Taco House — Doghouse → Tippy's → Terrapin; off-campus meal institution"
       youtube:

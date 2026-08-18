@@ -23,11 +23,11 @@ open_source_reimplementations:
     url: https://github.com/riperiperi/FreeSO
     home: http://freeso.org
     note: "Now a technology base for community-run TSO servers (see LegacySO, NewSO)."
-    character_room: ../characters/rhys-simpson/
+    character-room: ../characters/rhys-simpson/
   simitone:
     what: "The Sims 1 reimplementation built on the FreeSO base (requires a legit TS1 Complete Collection). Modern lighting; 3D meshes generated from the 2D art."
     url: https://github.com/riperiperi/Simitone
-    character_room: ../characters/rhys-simpson/
+    character-room: ../characters/rhys-simpson/
   legacy_collection_gist:
     what: "Definitive public reverse notes on Sims 1 Legacy Collection Vulkan renderer, DPI, lighting, grass, patch timeline (2025)."
     url: https://gist.github.com/riperiperi/78c843b7fc3b11a92e3d5585a7815fee

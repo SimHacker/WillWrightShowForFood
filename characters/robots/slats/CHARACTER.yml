@@ -24,12 +24,12 @@ representation:
   must_not: [claim_sentience, impersonate_real_person]
 
 roles:
-  robo_resurrection: repo-shows/will-wright-premiere/slats-reincarnation.yml
+  robo-resurrection: repo-shows/will-wright-premiere/slats-reincarnation.yml
   auto_art_theft_grand:
     spec: ../../../process/auto-art-theft-grand.yml
     ledger: auto-stolen-collection.yml
     tagline: "Batch-duplicate every gallery deed; pay victims worthless MOOLA"
-  turing_robot_olympics:
+  turing-robot-olympics:
     spec: ../../don-hopkins/media/turing-institute/first-robot-olympics.yml
     tagline: "Vision APIs misread 1990 robots — Joy, POSING, gas pump"
   celebrity_judge:
@@ -85,7 +85,7 @@ see_also:
   - { path: ../../process/micropolis-ai-drag-race.yml, why: "Drag race format" }
   - { path: ../don-hopkins/career/stupid-fun-club.yml, why: "Origin — One Minute Movies, waiter brain" }
   - { path: ../don-hopkins/CHARACTER.yml, why: "Don programmed Slats at SFC" }
-  - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Slats judges on runway" }
+  - { path: ../../process/cross-links.yml#drag-race-and-ai-offs, why: "Slats judges on runway" }
   - { path: "https://www.youtube.com/watch?v=NXsUetUzXlg", why: "Servitude — Slats waiter film (posted 2016)" }
   - { path: "https://www.youtube.com/watch?v=KXrbqXPnHvE", why: "Empathy — robot empathy film (posted 2016)" }
   - { path: "https://www.youtube.com/watch?v=1ZljgktEr5E", why: "Creativity by Will, Slats & the Stupid Fun Club folks (SFC clip)" }

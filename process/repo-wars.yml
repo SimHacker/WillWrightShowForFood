@@ -20,7 +20,7 @@ marc_thorpe_beats:
   - art_sport: sculpture environment interesting even without fights
   - first_crowd_roar: Spiny Norman featherweight — proof of sport
   - will_juliebot: quiet genius in the pit
-  - stupid_fun_club: Reality Robot psychology (Marc + Mike Winter + Will)
+  - stupid-fun-club: Reality Robot psychology (Marc + Mike Winter + Will)
 
 repo_show_fit:
   phase: after_brainstorming
@@ -53,7 +53,7 @@ event_formats:
     blurb: Port races — TypeScript challengers
   multilingual_code_golf:
     blurb: Which language solves in fewest lines/tokens/complexity
-  translation_arena:
+  translation-arena:
     blurb: Same spec, many languages, judges compare craft
     precedent: |
       Bun Zig→Rust (Jul 2026) — 535K LOC mechanical port in 11 days with AI workflows + test oracle.

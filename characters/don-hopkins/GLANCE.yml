@@ -52,9 +52,9 @@ future:   # the roadmap form of serves_as -- where this dir wants to grow
     that carry their own behavior (also from his lineage). The flat dir is v1; the walkable
     palace is the payoff -- and a natural Repo Show.
   on_air_palace_tour:
-    spec: ../../apps/performance-space/faceball-construction-set.yml#memory_palace_tour
+    spec: ../../apps/performance-space/faceball-construction-set.yml#memory-palace-tour
     what: "Many puppets — one per stop; each posed next to the artifact; button-board walk through the dir"
-    talking_selfies: "Phone front-camera clips per room — works great for async guests"
+    talking-selfies: "Phone front-camera clips per room — works great for async guests"
   compiled_artifact: |
     Then run it through the ADVENTURE COMPILER to compile the palace into a self-contained,
     interactive, browser-based artifact: text + multimedia, with time-based content
@@ -111,5 +111,5 @@ see_also:
     - { path: ../../characters/will-wright/sources/simcity-open-source-saga/GLANCE.yml, why: "Micropolis origin mail" }
   deep:
     - { path: README.md, why: "Connections narrative index — Burke thread through every file" }
-    - { path: CARD.yml, why: "connections_index — machine mirror of README narrative" }
+    - { path: CARD.yml, why: "connections-index — machine mirror of README narrative" }
     - { path: sync-sources.yml, why: "Moollm adventure sync policy" }

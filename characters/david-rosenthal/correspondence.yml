@@ -108,7 +108,7 @@ threads:
     scope:
       pdp7_340: "On-topic for PIXIE show"
       later_history: "NeWS/X11/NVIDIA/LOCKSS/etc. — separate show later, not distraction on PIXIE call"
-  don_async_pivot:
+  don-async-pivot:
     date: "2026-07-02"
     what: |
       Async 1-on-1 whenever convenient; post-production interlink. DSHR can do short Cambridge

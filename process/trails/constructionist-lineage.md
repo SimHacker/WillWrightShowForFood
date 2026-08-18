@@ -1,10 +1,10 @@
-# Trail — constructionist_lineage
+# Trail — constructionist-lineage
 
 > *Piaget → Papert → Minsky → 1996 microworlds → living organism*
 
 The developmental + AI roots → Winograd interview → Will show → breed DNA back into open Micropolis and MOOLLM skills.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#constructionist_lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#constructionist-lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

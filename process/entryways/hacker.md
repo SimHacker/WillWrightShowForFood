@@ -27,9 +27,9 @@ Real monorepo: pnpm + Python venv + CI. Yaml girders are canonical; markdown fac
 
 | Trail | When to leap |
 |-------|----------------|
-| [moollm_compose](../trails/moollm-compose.md) | Plugin wiring and skill harvest |
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Validation contracts |
-| [repo_show_spine](../trails/repo-show-spine.md) | Which yaml defines "the show" |
+| [moollm-compose](../trails/moollm-compose.md) | Plugin wiring and skill harvest |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Validation contracts |
+| [repo-show-spine](../trails/repo-show-spine.md) | Which yaml defines "the show" |
 
 ---
 

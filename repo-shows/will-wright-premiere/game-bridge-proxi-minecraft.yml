@@ -37,7 +37,7 @@ ties:
   - ../../characters/subutai-ahmad/sources/numenta-proxi-partnership.yml
   - ../../characters/subutai-ahmad/
   - ../../characters/heather-alvey/
-  - ../INDEX.yml#bridges_architecture
+  - ../INDEX.yml#bridges-architecture
   - ../../process/character-endosymbiosis.yml
 
 guests:

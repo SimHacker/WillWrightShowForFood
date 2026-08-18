@@ -5,7 +5,7 @@ meta:
   id: conan-face-puppet
   status: spec
   type: [web_toy, obs_browser_source]
-  design: ../../process/performance-space.yml#performance_modes.face_puppet
+  design: ../../process/performance-space.yml#performance-modes.face_puppet
 
 what: |
   Single-page web app: load a face PNG (with alpha mouth hole), capture webcam, composite
@@ -40,7 +40,7 @@ ui:
   faceball_construction_set: ../faceball-construction-set.yml
 
 tech:
-  stack: "TypeScript + WebGPU in browser — see faceball-construction-set.yml#render_pipeline"
+  stack: "TypeScript + WebGPU in browser — see faceball-construction-set.yml#render-pipeline"
   v0:
     - getUserMedia → Canvas2D composite (bring-up)
     - per-face preset yaml; button jump swaps mappings + grade
@@ -59,5 +59,5 @@ ethics:
 
 see_also:
   - ../../process/performance-space/README.md
-  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds.face_puppet
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds.face_puppet
   - ../stream-gateway/overlay-viewer.yml

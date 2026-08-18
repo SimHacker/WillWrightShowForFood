@@ -14,7 +14,7 @@ meta:
     resolution: 640x360
     video_codec: mpeg4
     audio_codec: mp3
-  branding_ref: process/repo-show-branding.yml#americans_arpanet_pdp10
+  branding_ref: process/repo-show-branding.yml#americans-arpanet-pdp10
   guest_room: characters/lars-brinkhoff/
   transcript_draft: characters/lars-brinkhoff/sources/americans-arpanet-transcript.md
 
@@ -42,7 +42,7 @@ clips:
     captions: captions/rosenbloom-arpanet-pdp10.srt   # Whisper draft — proofread against transcript md
     youtube: null   # paste URL after upload
     show_use: |
-      Lars Brinkhoff / PDP-10 cold open. Pair with repo-show-branding americans_arpanet_pdp10.
+      Lars Brinkhoff / PDP-10 cold open. Pair with repo-show-branding americans-arpanet-pdp10.
     key_lines:
       - "It is, in a manner of speaking, the interstate highway system through which all of information flows."
       - "It's sort of like God, except without the big beard and flowing white robes."

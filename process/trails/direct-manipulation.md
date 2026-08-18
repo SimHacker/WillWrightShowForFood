@@ -1,10 +1,10 @@
-# Trail — direct_manipulation
+# Trail — direct-manipulation
 
 > *See it, touch it, change it live*
 
 Direct manipulation, programming by demonstration, media for thought — the lineage where the interface IS the idea.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#direct_manipulation) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#direct-manipulation) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

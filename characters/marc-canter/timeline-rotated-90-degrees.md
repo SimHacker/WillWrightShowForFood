@@ -34,7 +34,7 @@ Two rotations, one lesson: **a new medium is often an old program turned so you 
 | **Repo Show** | A repo of YAML + markdown | A running simulation | A resident, not a reader |
 
 The Repo Show's [deep move](../../process/vision-and-ambition.md#the-deep-move)
-(`repo_as_simulation`) is the same rotation applied to GitHub. The **repo structure itself is the
+(`repo-as-simulation`) is the same rotation applied to GitHub. The **repo structure itself is the
 simulation**: [`characters/`](../README.md) is the **cast window** — each performer defined by a
 `CHARACTER.yml` and `CARD.yml` the way Director cast members carried their media and Lingo behaviors.
 Git history is the **score**. Session logs are the playback. [MOOLLM](https://github.com/SimHacker/moollm)

@@ -58,7 +58,7 @@ object_record_schema:
     - backstory
 
 pipeline:
-  iff_reader:
+  iff-reader:
     status: planned
     host: "Soul City TypeScript in Angel WebView2 + FileBridge to local .far"
     note: "Read .iff directly; WebGPU render — Transmogrifier / ShowNTell parity without ActiveX"

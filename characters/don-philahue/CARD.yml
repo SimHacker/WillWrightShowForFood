@@ -108,7 +108,7 @@ abilities:
     - trigger: act_runs_long
       weight: 0.9
   effect: Ultimate Machine gong — or Simoleon bribe — ends the loop.
-  verifiable: CHARACTER.yml#shut_up_protocol
+  verifiable: CHARACTER.yml#shut-up-protocol
   combos_with: []
 - id: ROUTE-QUESTION
   name: Route Question
@@ -147,7 +147,7 @@ abilities:
     - trigger: in_conversation_window_beats_closing
       weight: 0.9
   effect: Fire ASK-QUESTION mid-segment when the door is open — not FIFO, not only at end.
-  verifiable: qa-orchestration.yml#right_time.in_conversation
+  verifiable: qa-orchestration.yml#right-time.in_conversation
   combos_with: []
 - id: DEFER-QUESTION
   name: Defer Question
@@ -164,14 +164,14 @@ abilities:
     - trigger: to_guest_not_on_stage
       weight: 0.86
   effect: Keep on qa ledger with status deferred + guidance — returns if theme recurs or closing sweep.
-  verifiable: qa-orchestration.yml#qa_ledger
+  verifiable: qa-orchestration.yml#qa-ledger
   combos_with: []
 - id: QA-LEDGER-SWEEP
   name: QA Ledger Sweep
   type: triggered
   mana: "{W}{W}"
   conditions:
-  - show_state: closing_sweep
+  - show_state: closing-sweep
   advertisement:
     method: qaLedgerSweep
     signature: qaLedgerSweep(open_nodes) → final pass before sign-off
@@ -184,7 +184,7 @@ abilities:
     - trigger: high_vote_github_ref_unasked
       weight: 0.92
   effect: Ensure all relevant open questions get asked or routed async — nothing important dies in queue.
-  verifiable: qa-orchestration.yml#closing_sweep · ORCHESTRATOR.yml show_state_machine
+  verifiable: qa-orchestration.yml#closing-sweep · ORCHESTRATOR.yml show_state_machine
   combos_with: [SURFACE-QUESTION, PASS-MIC]
 - id: SURFACE-QUESTION
   name: Surface Question
@@ -271,6 +271,6 @@ see_also:
 - path: qa-orchestration.yml
   why: Right question, guest, time — ledger sweep protocol
 - path: CHARACTER.yml
-  why: Constitution — programmed_by, simulation_loop, translator
+  why: Constitution — programmed-by, simulation_loop, translator
 - path: ../../designs/orchestrator-playsets/README.md
   why: Hope Chest / ham radio / power plant lineage

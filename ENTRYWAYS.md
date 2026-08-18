@@ -7,7 +7,7 @@ Pick a **doorway** (ordered playlist). Follow the numbers. Leap **sideways** on 
 | **Bots** | [`process/for-bots.yml`](process/for-bots.yml) | [**FOR-BOTS.md**](FOR-BOTS.md) |
 | Playlists | [`process/entryways.yml`](process/entryways.yml) | [`process/entryways/`](process/entryways/README.md) |
 | Trails | [`process/cross-links.yml`](process/cross-links.yml) | [**TRAILS.md**](TRAILS.md) |
-| Rooms | [`entryways.yml#rooms_pitch`](process/entryways.yml) | [`process/entryways/rooms.md`](process/entryways/rooms.md) |
+| Rooms | [`entryways.yml#rooms-pitch`](process/entryways.yml) | [`process/entryways/rooms.md`](process/entryways/rooms.md) |
 
 Full index with cross-links: [`process/entryways/README.md`](process/entryways/README.md)
 
@@ -38,24 +38,24 @@ Full index with cross-links: [`process/entryways/README.md`](process/entryways/R
 
 | Trail | → | One line |
 |-------|---|----------|
-| repo_show_spine | [open](process/trails/repo-show-spine.md) | Show IS the repo |
-| constructionist_lineage | [open](process/trails/constructionist-lineage.md) | 1996 → Will → Micropolis |
-| drag_race_and_ai_offs | [open](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
-| retrocomputing_drive | [open](process/trails/retrocomputing-drive.md) | One spec, many platforms |
-| retro_guests_real_wire | [open](process/trails/retro-guests-real-wire.md) | Lars ITS + Thomas FujiNet |
-| live_production | [open](process/trails/live-production.md) | Brain stream + Philahue |
-| moollm_compose | [open](process/trails/moollm-compose.md) | Plugin microworld |
-| rig_personas | [open](process/trails/rig-personas.md) | Rig = drag persona |
-| schemas_and_ethics | [open](process/trails/schemas-and-ethics.md) | Contracts before characters |
-| archive_and_provenance | [open](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
-| game_design_lineage | [open](process/trails/game-design-lineage.md) | Toys, possibility space, player types |
-| direct_manipulation | [open](process/trails/direct-manipulation.md) | See it, touch it, change it live |
-| live_objects | [open](process/trails/live-objects.md) | Smalltalk → Self → NeWS → Java |
-| procedural_beauty | [open](process/trails/procedural-beauty.md) | Generative art, runnable artifacts |
-| maxis_sims_lineage | [open](process/trails/maxis-sims-lineage.md) | SimCity → Dollhouse → The Sims → Spore |
-| the_card_game | [open](process/trails/the-card-game.md) | Stack guest CARDs as MTG verbs |
-| cs547_seminar_lineage | [open](process/trails/cs547-seminar-lineage.md) | Winograd's CS547 → Will's 1996 talk → Repo Show |
-| augmentation_and_hypertext 🕯️ | [open](process/trails/augmentation-and-hypertext.md) | Engelbart + Nelson + Weiser → Player-in-the-Middle |
+| repo-show-spine | [open](process/trails/repo-show-spine.md) | Show IS the repo |
+| constructionist-lineage | [open](process/trails/constructionist-lineage.md) | 1996 → Will → Micropolis |
+| drag-race-and-ai-offs | [open](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
+| retrocomputing-drive | [open](process/trails/retrocomputing-drive.md) | One spec, many platforms |
+| retro-guests-real-wire | [open](process/trails/retro-guests-real-wire.md) | Lars ITS + Thomas FujiNet |
+| live-production | [open](process/trails/live-production.md) | Brain stream + Philahue |
+| moollm-compose | [open](process/trails/moollm-compose.md) | Plugin microworld |
+| rig-personas | [open](process/trails/rig-personas.md) | Rig = drag persona |
+| schemas-and-ethics | [open](process/trails/schemas-and-ethics.md) | Contracts before characters |
+| archive-and-provenance | [open](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
+| game-design-lineage | [open](process/trails/game-design-lineage.md) | Toys, possibility space, player types |
+| direct-manipulation | [open](process/trails/direct-manipulation.md) | See it, touch it, change it live |
+| live-objects | [open](process/trails/live-objects.md) | Smalltalk → Self → NeWS → Java |
+| procedural-beauty | [open](process/trails/procedural-beauty.md) | Generative art, runnable artifacts |
+| maxis-sims-lineage | [open](process/trails/maxis-sims-lineage.md) | SimCity → Dollhouse → The Sims → Spore |
+| the-card-game | [open](process/trails/the-card-game.md) | Stack guest CARDs as MTG verbs |
+| cs547-seminar-lineage | [open](process/trails/cs547-seminar-lineage.md) | Winograd's CS547 → Will's 1996 talk → Repo Show |
+| augmentation-and-hypertext 🕯️ | [open](process/trails/augmentation-and-hypertext.md) | Engelbart + Nelson + Weiser → Player-in-the-Middle |
 
 ---
 
@@ -69,7 +69,7 @@ Details: [`process/entryways/rooms.md`](process/entryways/rooms.md)
 
 ## 🤯 Crazy Idea Jam — get weird
 
-*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
+*After the serious stuff: the coolest, whackiest, most forward-thinking ideas in the show.* Trail: [**stupid-fun-forward**](process/trails/stupid-fun-forward.md) · Reactor: [**CRAZY-IDEA-JAM.md**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
 
 | | Idea | The pitch |
 |---|------|-----------|

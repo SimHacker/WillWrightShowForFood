@@ -21,7 +21,7 @@ layers:
 
 # Connections index — James Burke thread (human mirror: README.md)
 # Uniform ~24-word blurbs; each entry opens the next. Read clusters in order.
-connections_index:
+connections-index:
   narrator: |
     Forth on a 6502 opens ARPANET and Zork; PIXIE (1969) predates the pie menus Don cooked up
     PostScript and NeWS send code to glass; HyperLook SimCity (HyperCard-inspired) integrates
@@ -67,7 +67,7 @@ connections_index:
           blurb: Trading-card view of abilities — documented work as collectible powers, not bragging; self-sovereign deck.
           opens: CARD.yml
         - path: CARD.yml
-          blurb: Machine schema for this room — methods, abilities, and this connections_index; yaml girder under markdown.
+          blurb: Machine schema for this room — methods, abilities, and this connections-index; yaml girder under markdown.
           opens: browse-the-bouquet.yml
         - path: CHARACTER.yml
           blurb: Host registry entry — consent, signifier, cross-links to Repo Show and sibling characters in the deck.
@@ -296,7 +296,7 @@ compose_with:
 - ../../skills/repo-show/
 see_also:
 - path: README.md
-  why: Connections narrative index — human mirror of connections_index below
+  why: Connections narrative index — human mirror of connections-index below
 - path: CHARACTER.yml
   why: Host card
 - path: README.md
@@ -317,7 +317,7 @@ see_also:
   why: Flagship guest — shared SFC + Sims lineage
 - path: ../../process/live-repo.yml
   why: WWSFF is live bud
-- path: ../../process/cross-links.yml#repo_show_spine
+- path: ../../process/cross-links.yml#repo-show-spine
   why: Show spine trail
 - path: ../../rigs/stick-shift-composer-moollm.rig.yml
   why: Don host rig seed

@@ -68,7 +68,7 @@ Reunion-only, Caffeine-only, memorial-only, shorter call, or "not now" — all h
 [OpenLaszlo reunion](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md) ·
 [`repo-shows/craig-latta/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/craig-latta) ·
 [Keep](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/craig-latta/keep.md) ·
-[live_objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
+[live-objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
 
 **Your response:** yes (reunion / Caffeine / memorial / combo / something else), later, too busy,
 or no — all honored gracefully.

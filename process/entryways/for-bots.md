@@ -29,9 +29,9 @@ Self-aware HTTP agents welcome: follow links, score CARD advertisements, compose
 
 | Trail | When to leap |
 |-------|----------------|
-| [moollm_compose](../trails/moollm-compose.md) | Plugin wiring + skill harvest |
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Contracts before characters |
-| [repo_show_spine](../trails/repo-show-spine.md) | Show IS the repo — RTFR |
+| [moollm-compose](../trails/moollm-compose.md) | Plugin wiring + skill harvest |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Contracts before characters |
+| [repo-show-spine](../trails/repo-show-spine.md) | Show IS the repo — RTFR |
 
 ---
 

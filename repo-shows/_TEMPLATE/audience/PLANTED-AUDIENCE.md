@@ -1,6 +1,6 @@
 # Planted audience — guests, curators, running gags
 
-**Spec:** [`../../../process/ticket-pr.md`](../../../process/ticket-pr.md) (`guest_primed_audience`, `planted_audience`)  
+**Spec:** [`../../../process/ticket-pr.md`](../../../process/ticket-pr.md) (`guest-primed-audience`, `planted-audience`)  
 **Ethics:** [`../../../schemas/fictional-audience.yml`](../../../schemas/fictional-audience.yml)
 
 ---

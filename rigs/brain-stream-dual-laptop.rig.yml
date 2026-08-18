@@ -37,7 +37,7 @@ lifecycle:
     steps:
       - "Mac: run stream-gateway (SvelteKit) — serves bus + /overlay/brain + /brain on LAN"
       - "Mac: start the tap — `cursor-mirror watch --live --sink sse` (privacy gate ON)"
-      - "Mac: dock the viewer in cursor_chat_replacement mode over Cursor's history pane"
+      - "Mac: dock the viewer in cursor-chat-replacement mode over Cursor's history pane"
       - "Legion OBS: add NDI source (Cursor screen from Mac) + Browser Source (GUI URL, native alpha)"
       - "Legion OBS: enable obs-websocket (port 4455) for the `obs` skill"
       - "Legion OBS: build scenes (see stage.obs.scenes); set canvas 1920x1080"
@@ -129,7 +129,7 @@ stage:
       covers: "Cursor chat HISTORY pane on display d1"
       leaves_exposed: "Cursor input bar (native model switcher / attach / type-through)"
       scale_zoom: "docked | fullscreen-on-demand"
-      mode_ref: "apps/stream-gateway/overlay-viewer.yml#rendering.modes.cursor_chat_replacement"
+      mode_ref: "apps/stream-gateway/overlay-viewer.yml#rendering.modes.cursor-chat-replacement"
     - id: stream-brain-rail
       source: src-gui
       covers: "right rail of the program canvas"

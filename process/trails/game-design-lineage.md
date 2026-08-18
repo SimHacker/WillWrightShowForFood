@@ -1,10 +1,10 @@
-# Trail — game_design_lineage
+# Trail — game-design-lineage
 
 > *What is a game? Toys, possibility space, player types*
 
 Designers across genres — simulation toys, MUDs, one-page systems, reverse-engineered history. The theory of play, not one franchise.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#game_design_lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#game-design-lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

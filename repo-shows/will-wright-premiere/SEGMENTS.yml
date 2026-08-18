@@ -21,7 +21,7 @@ interview_lineage:
   see: audience/fictional-seaman/
 
 # EARLY SIMCITY THREAD — the Cyberiad debate
-simcity_cyberiad_thread:
+simcity-cyberiad-thread:
   when: "Early — while discussing SimCity, before the 1996 video."
   what: |
     Surface the Klapaucius/Trurl thread (Will = Klapaucius, Don = Trurl) and Lem's 'Seventh Sally'
@@ -31,7 +31,7 @@ simcity_cyberiad_thread:
   # Easter-egg timing: see characters/don-philahue/CHARACTER.yml — do not spoil in announce copy.
 
 # OPENING SEGMENT — before the 1996 video
-opening_one_minute_movies:
+opening-one-minute-movies:
   name: "The Stupid Fun Club One Minute Movies"
   why_first: |
     Warm up with the SFC One Minute Movies — Empathy and Servitude — BEFORE diving into the
@@ -65,7 +65,7 @@ sidekicks:
       seat: floating
 
 # LIVE CALL-IN — fake it till we make it, honestly
-live_call_in:
+live-call-in:
   status: future_tech_v2          # not v1; we FAKE it transparently in v1
   honest_faking: |
     MOOLLM lets us stage call-ins earnestly and TRANSPARENTLY — clearly labeled "calling in now"
@@ -85,7 +85,7 @@ live_call_in:
     note: "Don is up for building these. Until then: fake it honestly, label it clearly."
 
 # SIMS PLAY-ALONG NARRATION — community footage + live guest voice-over
-sims_play_along_narration:
+sims-play-along-narration:
   name: "Sims Play-Along Narration (Foreign Poet Theatre)"
   spec: ../../process/sims-play-along-narration.yml
   segment: sims-play-along-narration.yml
@@ -94,10 +94,10 @@ sims_play_along_narration:
     improv inventing dialogue and plot. Lineage: Drew Carey Show in-game segment (Maxis custom
     build), House Party cameo crowd energy, and Kearin/Lawlor Foreign Poet → Simlish origins.
   submit: "TicketPR, issue, or PR tagged sims-play-along — see format spec#submission"
-  drew_carey_episode: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+  drew_carey_episode: repo-shows/drew-carey/SHOW.yml#sims-play-along-narration
 
 # WILL DRIVES THE DEMO — Cursor on the repos, guest interrogates host
-will_drives_cursor:
+will-drives-cursor:
   name: "Will Drives: Cursor on the Repos"
   what: |
     Don shows Will how to use Cursor on the show's repos (WillWrightShowForFood,
@@ -117,13 +117,13 @@ will_drives_cursor:
     Cursor on these repos and work this way — that's the real invitation, the repo as
     a place you inhabit, not a document you read.
   time_shift_payoff: |
-    Compounds with time_shifting below: viewers watching Will drive can PAUSE and do
+    Compounds with time-shifting below: viewers watching Will drive can PAUSE and do
     the exact same thing — clone the same public repos, open Cursor, ask the same
     question their own way — then pop back and compare answers. The demo is runnable
     by the audience while they watch it.
 
 # TIME-SHIFTED BY DESIGN
-time_shifting:
+time-shifting:
   intent: |
     Recorded live, but OPTIMIZED for time-shifted, time-paused viewing. Characters drop links at
     the right moment (e.g. Palm's 'On Being Palm' essay); the viewer pauses, reads, explores

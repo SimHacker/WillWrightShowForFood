@@ -41,11 +41,11 @@ dense_to_verbose_example:
 reading_framing: |
   In a live Reading, a guest or audience member VOICES the cow — through a video face-hole or
   off-screen as a vocal puppet. They perform the modulated moo; Don performs the English unpacking.
-  (See performance-and-culture.yml#voice_puppetry — also the Godzilla-call-in 'YAAARR!' lineage.)
+  (See performance-and-culture.yml#voice-puppetry — also the Godzilla-call-in 'YAAARR!' lineage.)
 
 # PERFORMANCE INSTRUMENTS — don't just moo with your mouth; PLAY the moo
 # A moo is all vocal-tract modulation, so vocal-tract INSTRUMENTS are the perfect way to perform it.
-performance_instruments:
+performance-instruments:
   pink_trombone:
     what: "Neil Thapen's interactive vocal-tract synth — drag tongue/lips/constrictions to shape live speech-like sound."
     url: https://dood.al/pinktrombone/

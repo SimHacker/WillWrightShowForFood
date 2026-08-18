@@ -47,7 +47,7 @@ possibilities_no_promises:
 seaman_reincarnation:
   what: "Reincarnate Seaman — the creature that remembers you, judges you, and insults you between life lessons — for the LLM era."
   why_now: "It's certainly time: a talking creature with memory and attitude is exactly what LLMs are good at. 1999's forward-thinking move was treating the player as someone worth being rude to."
-  ties: [../../process/crazy-idea-jam.yml#yoot_boot_and_seaman]
+  ties: [../../process/crazy-idea-jam.yml#yoot-boot-and-seaman]
 
 the_show_we_dream_of:
   yoot_on_air: "Yoot on the show talking about anything and everything — no agenda required, no pressure."
@@ -67,4 +67,4 @@ connects_in_repo:
   - { path: ../ted-nelson/, why: "Engelbart eulogy — the moving YouTube one" }
   - { path: ../douglas-engelbart/memorial.md, why: "Memorial segment this material feeds" }
   - { path: ../../repo-shows/yoot-saito/SHOW.yml, why: "Show seed pulling this together" }
-  - { path: ../../process/crazy-idea-jam.yml#yoot_boot_and_seaman, why: "YOOT BOOT successor + Seaman reincarnation" }
+  - { path: ../../process/crazy-idea-jam.yml#yoot-boot-and-seaman, why: "YOOT BOOT successor + Seaman reincarnation" }

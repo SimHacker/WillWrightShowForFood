@@ -24,6 +24,6 @@ formats: "design-interview · series · group · bridge · game-show. (Same SHOW
 
 across:
   - ../crystallized/CONSTELLATIONS.yml   # the cast grouped into star clusters
-  - ../crystallized/DESIGN-WISDOM.yml    # data_portability_crown_jewel (the bridges)
+  - ../crystallized/DESIGN-WISDOM.yml    # data-portability-crown-jewel (the bridges)
   - ../process/collaborators.yml          # consent + value offers for each guest
   - /skills/repo-show/CARD.yml                 # the show lifecycle + intro ritual + characters + question_voting

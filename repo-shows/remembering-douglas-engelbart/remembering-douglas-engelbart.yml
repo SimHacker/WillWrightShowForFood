@@ -1,6 +1,6 @@
 # SHOW SEED — Remembering Douglas Engelbart (group memorial / tribute)
 # Standalone seed file. Memorial mode for Doug; living guests, consent not_yet_asked.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
   id: remembering-douglas-engelbart
@@ -11,10 +11,10 @@ show:
   status: seed
   consent: not_yet_asked          # every living guest invited + consents per representation-ethics
 
-memorial_mode:
+memorial-mode:
   subject: douglas-engelbart
   rule: "We represent and discuss Doug's documented work and invite those shaped by him to share memories. We do NOT interview him or speak as him."
-  standards: ../../schemas/portrayal-standards.yml#memorial_mode
+  standards: ../../schemas/portrayal-standards.yml#memorial-mode
   memorial: ../../characters/douglas-engelbart/memorial.md
 
 the_frame:
@@ -75,7 +75,7 @@ threads:
   - "NLS text interface → mouse class → Internet mail standards — Dave Crocker's lived thread from Doug's lab to RFC 822."
   - "Collective intelligence as the actual goal — what the web got right, what it degraded (cf. the 'LOLCats' critique)."
   - "From NLS to the Dynabook to Dynamicland — Bret's lineage as continuation, not nostalgia."
-  - "Show the mouse + chord keyset on air — and the 'democratize the keyset' preservation idea: 3D-scan it, publish free printable + working-replica files (see ../../process/crazy-idea-jam.yml#engelbart_keyset_3d_replica)."
+  - "Show the mouse + chord keyset on air — and the 'democratize the keyset' preservation idea: 3D-scan it, publish free printable + working-replica files (see ../../process/crazy-idea-jam.yml#engelbart-keyset-3d-replica)."
 
 format:
   live: true

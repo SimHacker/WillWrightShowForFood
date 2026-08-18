@@ -19,13 +19,13 @@ to the modern net (FujiNet, IRATA.ONLINE).
 
 **Use this chain to open the Lars thread** — then roll into async PDP-10/ITS discussion. Break
 every beat into **small digestible short-form videos** (attention atoms — shorter than TikTok;
-shotgun-blast intercut in post). See [`couple-and-solo-shows.yml#async_production`](../../process/couple-and-solo-shows.md#async_production) · [`repo-show-branding.yml#attention_atoms`](../../process/repo-show-branding.md#attention_atoms).
+shotgun-blast intercut in post). See [`couple-and-solo-shows.yml#async-production`](../../process/couple-and-solo-shows.md#async-production) · [`repo-show-branding.yml#attention-atoms`](../../process/repo-show-branding.md#attention-atoms).
 
 | # | Atom | What |
 |---|------|------|
-| 1 | *The Americans* **ARPANET** | Professor explains the network; camera pans up to **PDP-10** — "It's like God." Gets the ball rolling. [`cultural_excerpts#americans_arpanet_pdp10`](../../process/repo-show-branding.md#cultural_excerpts#americans_arpanet_pdp10) |
+| 1 | *The Americans* **ARPANET** | Professor explains the network; camera pans up to **PDP-10** — "It's like God." Gets the ball rolling. [`cultural-excerpts#americans-arpanet-pdp10`](../../process/repo-show-branding.md#cultural-excerpts#americans-arpanet-pdp10) |
 | 2 | **Worf / Deck Ten** | Don asks: *"Worf, what is your favorite 36-bit computer?"* — short **ST:TNG** clip: Worf in the elevator, loud and clear: **"Deck Ten!"** (PDP-10 pun) |
-| 3 | **DIGEX @ USENIX** | Don replies, quoting old friend **DIGEX** (East Coast commercial internet — see [`upbringing.yml#networking`](../don-hopkins/portrayal/upbringing.yml#dc_metro#networking)): at **USENIX**, teased the 32-bit VAX weenies with: *"If you're not playing with 36 bits, you're not playing with a full DEC."* |
+| 3 | **DIGEX @ USENIX** | Don replies, quoting old friend **DIGEX** (East Coast commercial internet — see [`upbringing.yml#networking`](../don-hopkins/portrayal/upbringing.yml#dc-metro#networking)): at **USENIX**, teased the 32-bit VAX weenies with: *"If you're not playing with 36 bits, you're not playing with a full DEC."* |
 | 4 | **Lars's t-shirt** | Don on camera in a tee from [Lars's t-shirt emporium](https://github.com/larsbrinkhoff/t-shirts) — among others the orange **LISP MACHINE MANUAL** (*LISP CHINE NUAL* — [`don-hopkins/media.md`](../don-hopkins/media.md)) |
 
 Then: Lars async segments — boot ITS, Type 340, munching squares, Engelbart hook — each its own short clip.

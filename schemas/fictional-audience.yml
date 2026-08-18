@@ -38,7 +38,7 @@ allowed:
     examples: [edith-simantics-ghost]
 
   guest_primed:
-    type: guest_primed_audience
+    type: guest-primed-audience
     rule: |
       Guest (or guest-approved curator) authors audience/ TicketPRs — including virtual plants
       and running gags. Same ethics as fictional characters plus **disclosure**: planted,
@@ -57,7 +57,7 @@ allowed:
       - "Guest adds running balcony heckle bank for Don to fire between segments"
       - "Costume plant — Come On Down with rig in costume.yml"
 
-planted_audience:
+planted-audience:
   late_night_ethics: |
     Talk-show tradition: planted celebrities, audience in costume, recurring comedy characters.
     Ethical when **transparent** — repo labels, on-air wink, no fake humans without consent.
@@ -76,10 +76,10 @@ forbidden:
     rule: |
       Do NOT create audience/ TicketPRs that speak AS deceased real people (Dani Berry, Marvin
       Minsky, etc.) **without guest/family consent**. Default: memorial mode = discuss ABOUT
-      them with living guests — see portrayal-standards.yml#memorial_mode.
+      them with living guests — see portrayal-standards.yml#memorial-mode.
     exception:
       when: guest_authored_family_memorial
-      spec: audience-ethics-experiments.yml#yellow_guest_authored
+      spec: audience-ethics-experiments.yml#yellow-guest-authored
       rule: |
         Will (guest) may author family memorial audience voices he controls — disclosed plants,
         questions he approved. Not curator-invented private stories.

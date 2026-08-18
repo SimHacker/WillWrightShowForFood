@@ -8,7 +8,7 @@ meta:
   status: constitutional
   applies_to: [characters/, repo-shows/, schemas/invitation-workflow.yml]
 
-constitutional_law:
+constitutional-law:
   time_zones: |
     Guests live in different time zones. Coordinating more than one person for a live call gets
     exponentially harder — David (Amsterdam +9h, grandparent duty) and Lars (Swedish July offline)
@@ -34,7 +34,7 @@ franchise:
     WillWrightShowForFood is **Will's** show — his ideas, audience, guests. The format is a
     **franchise**: any guest can spin their own public repo + private green room (BrianEnoRepoShow,
     DrewCareyRepoShow, …) for their orbit, ideas, and fan base. Shared Repo Show infrastructure;
-    owned show per host. See showmaker-network.yml#show_repos.franchises.
+    owned show per host. See showmaker-network.yml#show-repos.franchises.
   deep_involvement: |
     People like Brian Eno and Drew Carey may "get it" immediately — generative systems, improv,
     audience participation — and want to apply the pattern to their own work. That is the stretch
@@ -88,7 +88,7 @@ participation_tiers:
       Twitch (or similar) with direct audience interaction, TicketPR chime-ins, play-along.
       Performance-space.yml territory. Special events — not required for participation.
     effort: highest
-    see: couple-and-solo-shows.yml#show_tiers.special_events
+    see: couple-and-solo-shows.yml#show-tiers.special_events
 
 initial_ask_template: |
   **Easy path (pick any):**
@@ -102,7 +102,7 @@ initial_ask_template: |
 production:
   don_weaves: |
     Don records host narrative in production after guests submit solo video or 1-on-1 sessions.
-    Break clips, interlink yaml + transcripts + sources, shotgun-blast ensemble — guest-prototype.yml#ensemble_medium.
+    Break clips, interlink yaml + transcripts + sources, shotgun-blast ensemble — guest-prototype.yml#ensemble-medium.
   private_repo: |
     Guests with access can watch production repo while artifacts land — questions, edits, raw
     footage — before public publish. Same accretive rounds apply inside the green room.

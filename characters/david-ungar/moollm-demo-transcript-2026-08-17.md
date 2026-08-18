@@ -149,7 +149,7 @@ The demo runbook calls cursor-mirror "Self mirrors, reimplemented ugly...
 wearing a SQLite raincoat" — a *separate object* that does reflection, so
 the base objects stay clean. Making this document exercised it:
 
-- `cursor_mirror.py status` — the orchestrator holds **634 composers,
+- `cursor-mirror.py status` — the orchestrator holds **634 composers,
   1,386,616 messages** across dozens of workspaces. Reflection has a lot of
   base level to reflect on.
 - A naive `grep` across all 1.4M messages was still running at three and a

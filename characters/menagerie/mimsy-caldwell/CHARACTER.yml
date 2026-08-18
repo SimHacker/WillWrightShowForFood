@@ -96,7 +96,7 @@ relationships:
       daily: 50
       lifetime: 55
       narrative: "He validates her semiotics; she prints his guest-book entries"
-    bucky_jr:
+    bucky-jr:
       type: 'friend'
       daily: 45
       lifetime: 50

@@ -4,7 +4,7 @@
 
 AI optional on the show; when used, we score cost-to-ship and solution quality. Rig yaml + SETUP.md DNA lets others reproduce your stack; ai-offs is voluntary spend proof.
 
-**Girder:** [`entryways.yml`](../entryways.yml#ai_coder) · **Map:** [Museum map](README.md)
+**Girder:** [`entryways.yml`](../entryways.yml#ai-coder) · **Map:** [Museum map](README.md)
 
 ---
 
@@ -29,9 +29,9 @@ AI optional on the show; when used, we score cost-to-ship and solution quality. 
 
 | Trail | When to leap |
 |-------|----------------|
-| [rig_personas](../trails/rig-personas.md) | Rig lifecycle — download through mash up |
-| [drag_race_and_ai_offs](../trails/drag-race-and-ai-offs.md) | Stick shift on air — Slats judges |
-| [live_production](../trails/live-production.md) | Brain stream when models shift live |
+| [rig-personas](../trails/rig-personas.md) | Rig lifecycle — download through mash up |
+| [drag-race-and-ai-offs](../trails/drag-race-and-ai-offs.md) | Stick shift on air — Slats judges |
+| [live-production](../trails/live-production.md) | Brain stream when models shift live |
 
 ---
 

@@ -39,7 +39,7 @@ lifecycle:
       Retrocomputing AI drag race on the AI Lab: boot PDP-10/ITS, define MACLISP for
       the spec CARD, capture console eval on stream or screencast. thoughtful-commitment
       with Thinking ref. Slats roasts unbalanced parens lovingly.
-    contexts: [retrocomputing_drive, pdp10_maclisp_drive, micropolis_ai_drag_race, homefun]
+    contexts: [retrocomputing-drive, pdp10-maclisp-drive, micropolis_ai_drag_race, homefun]
   replicate:
     checklist:
       - "SIMH + ITS image boot on clean machine"

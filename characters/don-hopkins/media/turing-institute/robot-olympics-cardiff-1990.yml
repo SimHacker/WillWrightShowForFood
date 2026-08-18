@@ -9,7 +9,7 @@ artifact:
 
 room: INDEX.yml
 
-turing_institute:
+turing-institute:
   place: Turing Institute, Glasgow
   don_and_arthur: |
     Don worked with **Arthur van Hoff** at the Turing Institute — built **HyperLook** in Glasgow,
@@ -34,7 +34,7 @@ patron_whispers:
   bunny: "Are those little humans? How darling. The robot looks like a walking briefcase. I need a tee."
 
 vision_api_beats:
-  canonical: first-robot-olympics.yml#cardiff_vision_apis
+  canonical: first-robot-olympics.yml#cardiff-vision-apis
   google: "POSSIBLE JOY DETECTED!!!"
   microsoft: "POSING: a group of people posing for the camera"
   ibm_watson: "ROBOT ANDROID GAS PUMP DETECTED!"

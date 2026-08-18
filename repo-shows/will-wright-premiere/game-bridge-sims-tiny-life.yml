@@ -25,7 +25,7 @@ soul_city:
 why_ell:
   friend: "Don talked with Ell previously; Don quote on game's Praise page"
   handle: "Ell — online Ellpeck (@ellpeck.bsky.social); studio Ellpeck Games"
-  character_room: characters/ellpeck/
+  character-room: characters/ellpeck/
   project: |
     Solo queer dev; no GenAI; hand pixelart + C#; Early Access life sim with full open-world
     simulation off-screen — indie answer to corporate life-sim churn.

@@ -1,6 +1,6 @@
 # SHOW SEED — Remembering Mark Weiser (memorial tribute, edited from separate interviews)
 # Memorial mode for Mark ONLY. Possible discussants = documented connections, NOT invitations.
-# Standards: ../../schemas/portrayal-standards.yml#memorial_mode
+# Standards: ../../schemas/portrayal-standards.yml#memorial-mode
 
 show:
   id: remembering-mark-weiser
@@ -11,10 +11,10 @@ show:
   status: seed
   consent: not_yet_asked
 
-memorial_mode:
+memorial-mode:
   subject: mark-weiser
   rule: "We represent and discuss Mark's documented work only. We do NOT interview him or speak as him, and invent no inner life or quotes. Any living person on a produced episode requires their own consent — the list below is NOT an invitation."
-  standards: ../../schemas/portrayal-standards.yml#memorial_mode
+  standards: ../../schemas/portrayal-standards.yml#memorial-mode
   memorial: ../../characters/mark-weiser/memorial.md
 
 the_frame:
@@ -33,7 +33,7 @@ production:
     Record separate 1-on-1 memory clips with each person who knew Mark, whenever convenient for
     them — no synchronized group call required. Interlink their directories, artifacts, and videos,
     then edit the clips into one memorial tapestry in post. Same async pivot used for the PIXIE /
-    David Rosenthal shows (characters/david-rosenthal/correspondence.yml#don_async_pivot).
+    David Rosenthal shows (characters/david-rosenthal/correspondence.yml#don-async-pivot).
   friend_phone_clips: "Short remembrances from family, friends, colleagues welcome — no live interview required."
 
 possible_discussants:

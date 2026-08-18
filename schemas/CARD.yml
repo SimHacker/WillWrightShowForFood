@@ -22,7 +22,7 @@ read_first:
 see_also:
   - { path: README.md, why: "Schema index table" }
   - { path: GLANCE.yml, why: "One-screen sniff" }
-  - { path: ../process/cross-links.yml#schemas_and_ethics, why: "Ethics + contracts trail" }
+  - { path: ../process/cross-links.yml#schemas-and-ethics, why: "Ethics + contracts trail" }
   - { path: ../characters/INDEX.yml, why: "Guests validate against portrayal + invitation" }
   - { path: ../rigs/INDEX.yml, why: "Rigs validate against rig-schema + SETUP DNA" }
   - { path: ../process/markup-facades.yml, why: "Generated md registry" }

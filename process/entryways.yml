@@ -14,7 +14,7 @@ meta:
   human_bots: ../FOR-BOTS.md
 
 entryways:
-  guest_will:
+  guest-will:
     title: "Guest — Will Wright"
     human: entryways/guest-will.md
     cta: "Start with the invite, then the 1996 talk — skip anything that doesn't grab you"
@@ -32,7 +32,7 @@ entryways:
       - { priority: 8, title: "Vision", path: vision-and-ambition.md, why: "Where data portability fits the long arc — ambition stated, not promised" }
       - { priority: 9, title: "Browse characters", path: ../characters/, why: "One directory per guest — grows with responses and show artifacts; not a separate people index" }
 
-  guest_any:
+  guest-any:
     title: "Guest — anyone invited"
     human: entryways/guest-any.md
     cta: "Read portrayal standards once, then your invitation and CARD"
@@ -79,7 +79,7 @@ entryways:
       - { priority: 6, title: "Flagship context", path: ../repo-shows/will-wright-premiere/README.md, why: "What the kickoff episode is about — Will, 1996, topic-less" }
       - { priority: 7, title: "Homefun", path: homefun-grading.md, why: "Repo Show rubric — did the commit message match the thinking?" }
 
-  for_bots:
+  for-bots:
     title: "Bot — browsing HTTP agent"
     human: entryways/for-bots.md
     cta: "Read FOR-BOTS.md — GLANCE, CARD, pick one ENTRYWAY; wander, don't flatten"
@@ -115,7 +115,7 @@ entryways:
       - { priority: 7, title: "MOOLLM plugin", path: ../kernel/moollm-plugin.yml, why: "How WWSFF composes with SimHacker/moollm" }
       - { priority: 8, title: "Markup facades", path: markup-facades.yml, why: "Yaml → md registry and dependency graph" }
 
-  ai_coder:
+  ai-coder:
     title: "AI — orchestration, rigs, ai-offs"
     human: entryways/ai-coder.md
     cta: "Declare your rig honestly — stick shift means every model change is a commit"
@@ -220,31 +220,31 @@ entryways:
 trails_pitch:
   note: "Sideways leaps — full pages in trails/*.md and TRAILS.md"
   items:
-    - { id: repo_show_spine, human: trails/repo-show-spine.md, pitch: "The show IS the repo — RTFR, play on your rig, harvest skills back" }
-    - { id: constructionist_lineage, human: trails/constructionist-lineage.md, pitch: "Winograd 1996 → Will kickoff → Papert/Kay K-lines → open Micropolis" }
-    - { id: drag_race_and_ai_offs, human: trails/drag-race-and-ai-offs.md, pitch: "Game-show formats — Slats judges, ai-offs scores the spend" }
-    - { id: retrocomputing_drive, human: trails/retrocomputing-drive.md, pitch: "One spec, many platforms — SETUP DNA is the viral piece" }
-    - { id: retro_guests_real_wire, human: trails/retro-guests-real-wire.md, pitch: "Lars boots ITS; Thomas wires FujiNet — emulated meets real wire" }
-    - { id: live_production, human: trails/live-production.md, pitch: "Brain stream overlay + Philahue audience bus" }
-    - { id: moollm_compose, human: trails/moollm-compose.md, pitch: "WWSFF as microworld plugin — skills inherit from shows" }
-    - { id: rig_personas, human: trails/rig-personas.md, pitch: "download → install → configure → replicate → mash up" }
-    - { id: schemas_and_ethics, human: trails/schemas-and-ethics.md, pitch: "Contracts before characters — portrayal and rig shape" }
-    - { id: archive_and_provenance, human: trails/archive-and-provenance.md, pitch: "Public bud vs private archive — export log, primary sources, honest status" }
-    - { id: game_design_lineage, human: trails/game-design-lineage.md, pitch: "Toys, possibility space, player types — Wright, Yoot, Bartle, Librande, Gingold" }
-    - { id: direct_manipulation, human: trails/direct-manipulation.md, pitch: "See it, touch it, change it live — Shneiderman, Myers, Victor, Winograd" }
-    - { id: live_objects, human: trails/live-objects.md, pitch: "Smalltalk → Self → NeWS → Java — Kay, Ungar, Gosling, van Hoff, Rosenthal" }
-    - { id: procedural_beauty, human: trails/procedural-beauty.md, pitch: "Generative art + runnable artifacts — Perlin, Debevec, Levin, Cerveny" }
-    - { id: maxis_sims_lineage, human: trails/maxis-sims-lineage.md, pitch: "SimCity → Dollhouse → The Sims → Spore — the genealogy + 167 source images" }
-    - { id: the_card_game, human: trails/the-card-game.md, pitch: "Stack guest CARDs as MTG verbs — combos across guests; Slats judges" }
-    - { id: cs547_seminar_lineage, human: trails/cs547-seminar-lineage.md, pitch: "Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show" }
-    - { id: augmentation_and_hypertext, human: trails/augmentation-and-hypertext.md, pitch: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech → Player-in-the-Middle (memorial mode)" }
+    - { id: repo-show-spine, human: trails/repo-show-spine.md, pitch: "The show IS the repo — RTFR, play on your rig, harvest skills back" }
+    - { id: constructionist-lineage, human: trails/constructionist-lineage.md, pitch: "Winograd 1996 → Will kickoff → Papert/Kay K-lines → open Micropolis" }
+    - { id: drag-race-and-ai-offs, human: trails/drag-race-and-ai-offs.md, pitch: "Game-show formats — Slats judges, ai-offs scores the spend" }
+    - { id: retrocomputing-drive, human: trails/retrocomputing-drive.md, pitch: "One spec, many platforms — SETUP DNA is the viral piece" }
+    - { id: retro-guests-real-wire, human: trails/retro-guests-real-wire.md, pitch: "Lars boots ITS; Thomas wires FujiNet — emulated meets real wire" }
+    - { id: live-production, human: trails/live-production.md, pitch: "Brain stream overlay + Philahue audience bus" }
+    - { id: moollm-compose, human: trails/moollm-compose.md, pitch: "WWSFF as microworld plugin — skills inherit from shows" }
+    - { id: rig-personas, human: trails/rig-personas.md, pitch: "download → install → configure → replicate → mash up" }
+    - { id: schemas-and-ethics, human: trails/schemas-and-ethics.md, pitch: "Contracts before characters — portrayal and rig shape" }
+    - { id: archive-and-provenance, human: trails/archive-and-provenance.md, pitch: "Public bud vs private archive — export log, primary sources, honest status" }
+    - { id: game-design-lineage, human: trails/game-design-lineage.md, pitch: "Toys, possibility space, player types — Wright, Yoot, Bartle, Librande, Gingold" }
+    - { id: direct-manipulation, human: trails/direct-manipulation.md, pitch: "See it, touch it, change it live — Shneiderman, Myers, Victor, Winograd" }
+    - { id: live-objects, human: trails/live-objects.md, pitch: "Smalltalk → Self → NeWS → Java — Kay, Ungar, Gosling, van Hoff, Rosenthal" }
+    - { id: procedural-beauty, human: trails/procedural-beauty.md, pitch: "Generative art + runnable artifacts — Perlin, Debevec, Levin, Cerveny" }
+    - { id: maxis-sims-lineage, human: trails/maxis-sims-lineage.md, pitch: "SimCity → Dollhouse → The Sims → Spore — the genealogy + 167 source images" }
+    - { id: the-card-game, human: trails/the-card-game.md, pitch: "Stack guest CARDs as MTG verbs — combos across guests; Slats judges" }
+    - { id: cs547-seminar-lineage, human: trails/cs547-seminar-lineage.md, pitch: "Winograd's Stanford CS547 → Will's 1996 talk → Gosling's 1995 talk → the Repo Show" }
+    - { id: augmentation-and-hypertext, human: trails/augmentation-and-hypertext.md, pitch: "Engelbart's augmentation + Nelson's hypertext + Weiser's calm tech → Player-in-the-Middle (memorial mode)" }
 
 trails_pitch_wacky:
   note: "Get weird — put after the serious stuff. Reactor: crazy-idea-jam.yml / crazy-idea-jam.md"
   items:
-    - { id: stupid_fun_forward, human: trails/stupid-fun-forward.md, pitch: "RoboResurrection, soul bridges, cells that travel between games — Stupid Fun Club energy aimed at the future" }
+    - { id: stupid-fun-forward, human: trails/stupid-fun-forward.md, pitch: "RoboResurrection, soul bridges, cells that travel between games — Stupid Fun Club energy aimed at the future" }
 
-rooms_pitch:
+rooms-pitch:
   human: entryways/rooms.md
   rooms:
     - { path: ../repo-shows/CARD.yml, title: "Shows", pitch: "Planted episodes + seeds — will-wright flagship" }

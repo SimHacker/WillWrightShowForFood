@@ -71,13 +71,13 @@ files_mapped:
     from: [moollm/.../work-history.yml]
     action: condensed_timeline
   - wwsff: career/stupid-fun-club.yml
-    from: [moollm/.../stupid-fun-club.yml, moollm/.../CHARACTER.yml#stupid_fun_club]
+    from: [moollm/.../stupid-fun-club.yml, moollm/.../CHARACTER.yml#stupid-fun-club]
     action: merge_dedupe
   - wwsff: portrayal/voice.yml
     from: [moollm/.../CHARACTER.yml#voice, moollm/.../CHARACTER.yml#frobisms]
     action: extract_public
   - wwsff: portrayal/heroes.yml
-    from: [moollm/.../HEROS.yml#direct_mentors]
+    from: [moollm/.../HEROS.yml#direct-mentors]
     action: condense
   - wwsff: portrayal/presentations.yml
     from: [moollm/.../presentations.yml]
@@ -90,5 +90,5 @@ see_also:
   - { path: ../../process/sync-with-donhopkins.yml, why: "Export pipeline" }
   - { path: ../../process/live-repo.yml, why: "Edit WWSFF — source on hold when projected" }
   - { path: ../slats/CHARACTER.yml, why: "Slats — SFC robot → drag race judge" }
-  - { path: ../../process/cross-links.yml#constructionist_lineage, why: "Will show + microworld arc" }
+  - { path: ../../process/cross-links.yml#constructionist-lineage, why: "Will show + microworld arc" }
   - { path: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/real-people/don-hopkins, why: "Full adventure layer upstream" }

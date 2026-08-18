@@ -32,9 +32,9 @@ This repo is a **public bud** grafted from a private archive: one-way export, ho
 
 | Trail | When to leap |
 |-------|----------------|
-| [archive_and_provenance](../trails/archive-and-provenance.md) | Full node list for this interest |
-| [constructionist_lineage](../trails/constructionist-lineage.md) | 1996 → Will show → open Micropolis arc |
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Portrayal contracts before reading guests |
+| [archive-and-provenance](../trails/archive-and-provenance.md) | Full node list for this interest |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | 1996 → Will show → open Micropolis arc |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Portrayal contracts before reading guests |
 
 ---
 

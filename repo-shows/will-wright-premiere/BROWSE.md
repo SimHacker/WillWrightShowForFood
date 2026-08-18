@@ -47,12 +47,12 @@
 
 | Doorway | → |
 |---------|---|
-| **Guest (Will)** | [guest_will playlist](../../process/entryways/guest-will.md) — invite → 1996 → portrait → CARD |
+| **Guest (Will)** | [guest-will playlist](../../process/entryways/guest-will.md) — invite → 1996 → portrait → CARD |
 | **Player** | [Sims fan path](../../process/entryways/player.md) — no git required |
 | **Full map** | [**ENTRYWAYS.md**](../../ENTRYWAYS.md) · [**TRAILS.md**](../../TRAILS.md) |
-| **Sideways** | [`constructionist_lineage`](../../process/trails/constructionist-lineage.md) · [`cross-links.yml`](../../process/cross-links.yml) |
+| **Sideways** | [`constructionist-lineage`](../../process/trails/constructionist-lineage.md) · [`cross-links.yml`](../../process/cross-links.yml) |
 
-Other playlists on the full map: watcher · hacker · AI · retro · educator · producer · publisher · guest_any
+Other playlists on the full map: watcher · hacker · AI · retro · educator · producer · publisher · guest-any
 
 | Rooms | [`characters/CARD.yml`](../../characters/CARD.yml) · [`repo-shows/CARD.yml`](../../repo-shows/CARD.yml) · [`process/CARD.yml`](../../process/CARD.yml) |
 

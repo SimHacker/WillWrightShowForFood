@@ -35,5 +35,5 @@ reception:
     text: "Badass. Great idea."
 
 show_mashup:
-  bongo_bingo: ../../../process/crazy-idea-jam.yml#bongo_bingo
+  bongo-bingo: ../../../process/crazy-idea-jam.yml#bongo-bingo
   note: ask Andrew before filming bodily-check-in comedy beat

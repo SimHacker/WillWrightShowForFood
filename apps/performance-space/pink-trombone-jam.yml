@@ -1,6 +1,6 @@
 # Pink Trombone Jam — group activity 🎺👥🗣️
 # A bunch of people pink-trombone-ing and singing together, live.
-# Home: ../../process/performance-space.yml (audience_chorus mode) · Human view: pink-trombone-jam.md
+# Home: ../../process/performance-space.yml (audience-chorus mode) · Human view: pink-trombone-jam.md
 # Lineage: articulatory synthesis (physical vocal-tract model) — NOT a voice clone of any person.
 
 meta:
@@ -48,7 +48,7 @@ group_session:
   as_many_as_possible: "Croquet-synced (see multiplayer) — the more tracts in sync, the wilder and better."
   edit_together: |
     Time-shifted contributions spliced into one number across shows — same async accretion as the
-    Director's-Cuts model (see ../../process/repo-show-format.yml#iteration_model).
+    Director's-Cuts model (see ../../process/repo-show-format.yml#iteration-model).
   dream_choir: [laurie_anderson, brian_eno, nina_hagen, craig_latta, alan_kay, kevin_lenzo, zack_qattan]
 
 # ── Multiplayer / sync ───────────────────────────────────────────────
@@ -84,14 +84,14 @@ thesis:
     cost.** The instrument is silly, legible, and anybody can play it — which is exactly why clips of
     four people trombone-singing go viral. Direct manipulation; no AI required (voice→params is a
     bonus, not a prerequisite).
-  direct_manipulation: "You grab a tongue and move it and a voice comes out. That's the whole pitch."
+  direct-manipulation: "You grab a tongue and move it and a voice comes out. That's the whole pitch."
   ties:
     - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md  # Bounce: play any audio with any gesture
-    - faceball-construction-set.yml#amplitude_scrub                            # scrub-puppet sibling
-    - ../../process/performance-space.yml#audience_chorus                       # the mode this fills
+    - faceball-construction-set.yml#amplitude-scrub                            # scrub-puppet sibling
+    - ../../process/performance-space.yml#audience-chorus                       # the mode this fills
     - ../../repo-shows/phoneloper/SHOW.yml                                      # Don's SFC expressive-speech toy
     - ../../repo-shows/voystick-pink-trombone/SHOW.yml                          # homomorphic Voystick jam
-    - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    - ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
     - ../../schemas/language-cow.yml                                            # vocal-tract instruments
 
 # ── Building blocks (public creators — cite & build on, don't replace) ──
@@ -146,10 +146,10 @@ browser_and_motion:
     Real-time video motion tracking + background removal has a direct show ancestor: **Subutai Ahmad**'s
     Interval-era computer vision (hand/body tracking, virtual blue screen → the IntelPlay Me2Cam), which
     **Don helped with**. Same "play any gesture / any body movement drives the puppet" idea as Bounce and
-    Faceball's amplitude_scrub + motion drive.
+    Faceball's amplitude-scrub + motion drive.
   see:
     - ../../characters/subutai-ahmad/README.md
-    - faceball-construction-set.yml#anonymizing_puppet_and_reveal   # motion_drive
+    - faceball-construction-set.yml#anonymizing-puppet-and-reveal   # motion_drive
     - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
 
 ethics:
@@ -158,7 +158,7 @@ ethics:
   - "Credit the ecosystem (Thapen, Qattan, Batchelor, Moro); build on, don't rebrand."
 
 see_also:
-  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  - ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
   - ../../repo-shows/voystick-pink-trombone/SHOW.yml
   - ../../process/performance-space.yml
   - ../../process/performance-space/README.md

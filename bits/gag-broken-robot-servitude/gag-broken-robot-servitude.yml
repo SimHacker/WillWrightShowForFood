@@ -8,5 +8,5 @@ status: ready
 shows: [will-wright]
 
 film: "Stupid Fun Club One Minute Movie — Empathy (Dents, broken robot begs for help)"
-opening: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#opening_one_minute_movies
+opening: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#opening-one-minute-movies
 rhyme: "Unitree falling-robot energy — crashes in, breaks down, begs, dragged off"

@@ -40,7 +40,7 @@ threads:
   - "**Relativistic parallelism** — 'Everything You Know (About Parallel Programming) Is Wrong!' vs git's many-worlds cosmology"
   - "Self pun stack — self-interest, self-ish, (oops)/OOPS, *Self: The Movie* (Don enumerates; David vetoes)"
 
-dream_segments:
+dream-segments:
   - "Clone a MOOLLM skill from a prototype directory live — Self delegation in YAML on air."
   - "Walk maps/PICs → V8 — the implementation story JavaScript borrowed without the model."
   - "Multiple `parent*` slots in MOOLLM config — MI back, serializable parent lists."

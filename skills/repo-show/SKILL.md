@@ -5,13 +5,13 @@ The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 
 **The deep move:** orchestration is this skill's day job. Under it, MOOLLM runs the repo as a
 **simulation engine** — the show is performed *inside* the world, not documented beside it. K-line:
-[`repo_as_simulation`](../../process/vision-and-ambition.yml) · prose:
+[`repo-as-simulation`](../../process/vision-and-ambition.yml) · prose:
 [VISION.md § The deep move](../../process/vision-and-ambition.md#the-deep-move) ·
 machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
 
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
 **Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (generated — `pnpm run facades`)  
-**Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description_scaffolding)
+**Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description-scaffolding)
 
 ### CARD + GLANCE split (WWSFF experiment → moollm upstream)
 
@@ -196,18 +196,18 @@ DC Metro childhood, Captain Chesapeake / Captain 20 routines and slogans.
 
 **Go-to excerpt** — video games + existentialism: *The Americans* S1 **"The Oath"** — Claudia
 (Margo Martindale) on Ms. Pac-Man: *"I enjoy the maze part… Pac-dots are calorie free"* — handler
-as maze philosopher. See `repo-show-branding.yml#claudia_ms_pac_man`.
+as maze philosopher. See `repo-show-branding.yml#claudia-ms-pac-man`.
 
-Performed by [`characters/don-philahue/`](../../characters/don-philahue/). Mechanism: [`performance-space.yml#narrative_engine`](../../process/performance-space.yml#narrative_engine).
+Performed by [`characters/don-philahue/`](../../characters/don-philahue/). Mechanism: [`performance-space.yml#narrative-engine`](../../process/performance-space.yml#narrative-engine).
 
 ## See also (rabbit holes)
 
 | Trail | Start here |
 |-------|------------|
-| Repo Show spine | [`process/cross-links.yml`](../../process/cross-links.yml) → `repo_show_spine` |
-| Drag race + ai-offs | [`process/cross-links.yml`](../../process/cross-links.yml) → `drag_race_and_ai_offs` |
-| Retro computing | [`process/cross-links.yml`](../../process/cross-links.yml) → `retrocomputing_drive` |
-| MOOLLM compose | [`process/cross-links.yml`](../../process/cross-links.yml) → `moollm_compose` |
+| Repo Show spine | [`process/cross-links.yml`](../../process/cross-links.yml) → `repo-show-spine` |
+| Drag race + ai-offs | [`process/cross-links.yml`](../../process/cross-links.yml) → `drag-race-and-ai-offs` |
+| Retro computing | [`process/cross-links.yml`](../../process/cross-links.yml) → `retrocomputing-drive` |
+| MOOLLM compose | [`process/cross-links.yml`](../../process/cross-links.yml) → `moollm-compose` |
 | Format girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
 | Generated markup | [`process/repo-show-format.md`](../../process/repo-show-format.md) — `pnpm run facades` |
 | Harvest registry | [`skills/INDEX.yml`](../INDEX.yml) |

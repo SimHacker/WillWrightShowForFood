@@ -28,7 +28,7 @@ naming:
     - "repo-shows/ → episode focus and pair membership"
   show_guest_lists: "Use legal names only — Heather Alvey, Scott Kim — not Heather (SimFreaks)"
 
-shows_and_episodes:
+shows-and-episodes:
   shape: |
     A **show** is the long-running frame (`repo-shows/<slug>/` — SHOW.yml, README, ideas).
     **Episodes** are passes within that show — new interviews, artifact drops, responses to
@@ -38,17 +38,17 @@ shows_and_episodes:
     Each show is a **shotgun blast** — an ensemble of intertwingled multimedia artifacts (video,
     transcripts, sources, code, links), time-shifted and **jumpable**: pause, skip, fast-forward,
     follow links into Cursor, run code, return. Defined in yaml; transcribed for search.
-    Prototype: characters/will-wright/guest-prototype.yml#ensemble_medium
+    Prototype: characters/will-wright/guest-prototype.yml#ensemble-medium
   attention: |
     Designed for today's browsing — bumblebee spans, not appointment TV. **Shorter than TikTok:**
-    one quote + link, or one K-line that explains itself — see repo-show-branding.yml#attention_atoms.
+    one quote + link, or one K-line that explains itself — see repo-show-branding.yml#attention-atoms.
     Guests and audience want to be seen and heard without burning time neither side has.
   default_show: one primary show per character (or pair); episodes accumulate inside it
   guest_returns: |
     Encourage guests back on their own show as the conversation grows — late-night casual
     energy, low scheduling friction, pick up where the repo left off.
 
-show_tiers:
+show-tiers:
   ongoing_one_on_one:
     what: |
       **Default cadence** — casual late-night-style interviews, one guest at a time, recorded
@@ -171,7 +171,7 @@ women_trans_pioneers:
         note: "SqueakJS, Croquet, Multisynq — existing memorial arc; Craig Latta anchor"
   see_also: SimHacker/moollm/designs/pr/PR-CHARACTER-CATALOG-EXPANSION.md#women--trans-pioneers
 
-async_production:
+async-production:
   the_thing: |
     Minimally intrusive interviews, **time-shifted and woven together** in post. This can be
     the whole style — not a compromise. Previous and ongoing guests mix on the timeline;
@@ -181,17 +181,17 @@ async_production:
     - "Don pre-gathers research bundles (private archive → guest review → public projection)"
     - "Guest walks the bundle on camera — point, correct, story; or solo demo videos (best take wins)"
     - "Guest-submitted or recommended YouTube links woven into episodes"
-    - "Guest **face puppet** clips — live on stream or recorded offline; modular portrait from their photo (see faceball-construction-set.yml#guest_characters)"
-    - "Memory palace **talking selfies** — one phone clip per stop, puppet posed next to artifact (see faceball-construction-set.yml#memory_palace_tour#talking_selfies)"
+    - "Guest **face puppet** clips — live on stream or recorded offline; modular portrait from their photo (see faceball-construction-set.yml#guest-characters)"
+    - "Memory palace **talking selfies** — one phone clip per stop, puppet posed next to artifact (see faceball-construction-set.yml#memory-palace-tour#talking-selfies)"
     - "Audience watches time-shifted and opens the same paths in Cursor — edit data, run code, PR"
     - "Guests watch each other's prior shows and raw footage in the repo"
     - "Respond, chime in, and ask questions asynchronously — correspondence, ideas.md, artifacts"
     - "Pre-show threads shape what each one-on-one covers without a live roundtable"
   repeat_shows: |
-    Same as shows_and_episodes.guest_returns — episodes on your show, chime-ins on others',
+    Same as shows-and-episodes.guest_returns — episodes on your show, chime-ins on others',
     async threads between passes. Ideas diffuse across the network instead of one-and-done.
 
-guest_prototype:
+guest-prototype:
   archetype: will-wright
   girder: ../characters/will-wright/guest-prototype.yml
   when: "2026-07 — accepted; nucleates crystallization"
@@ -199,11 +199,11 @@ guest_prototype:
     Optimize every process for **Will's time first**. He is the reference guest: async
     one-on-one, topic-less, no homework, episodes not one-shot, repo does staging, special
     live events only on request. Don pre-researches; guest reviews bundle on video; audience
-    follows in Cursor time-shifted. Copy `respect_time` + `research_bundle` for anyone else.
+    follows in Cursor time-shifted. Copy `respect-time` + `research-bundle` for anyone else.
 
 see_also:
   - brainstorm-heartbeat.yml   # talk designs; others implement — why invites are easy
-  - ../schemas/portrayal-standards.yml#guest_directory
+  - ../schemas/portrayal-standards.yml#guest-directory
   - ../characters/INDEX.yml
   - ../repo-shows/moollm-readings/
   - ../characters/will-wright/guest-prototype.yml

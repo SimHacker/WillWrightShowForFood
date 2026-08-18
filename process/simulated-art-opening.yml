@@ -35,7 +35,7 @@ economy:
   flow: "Menagerie patrons → guest (artist) in § — then exchange §/gold/art → MOOLA for performances"
   crossref:
     - moola.yml
-    - characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat
+    - characters/don-philahue/CHARACTER.yml#easter-eggs.rosebud_cheat
     - characters/don-hopkins/jsonsters/simoleon-auctions.yml
 
 moola_exchange:
@@ -45,7 +45,7 @@ moola_exchange:
   performances: [burning_money, holiday_hole, surrender_pile, ten_bazillion_patrons]
 
 cast:
-  canonical: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  canonical: characters/menagerie/GUEST-ROSTER.yml#gallery-openings
   fork: "Per-show critics.yml optional — patron voices tuned to guest medium"
   auctioneer: don-philahue
   host: don-hopkins
@@ -61,7 +61,7 @@ sales_tiers:
 parody_threads:
   crypto_nft_web3:
     rule: "Running gag in patron lines — never earnest web3 advocacy"
-    see: jsonsters/art-opening-night.yml#crypto_parody
+    see: jsonsters/art-opening-night.yml#crypto-parody
   generative_surrender:
     rule: "Guest's philosophy reflected in misread — art as trigger, scenius, never-repeating"
     eno: "77 Million Paintings (2006 DVD) — 296 slides, ~77M combinations, not 77M files"
@@ -113,6 +113,6 @@ instances:
     status: dream_seed
 
 see_also:
-  - repo-show-format.yml#simulated_art_opening
-  - ../skills/repo-show/CARD.yml#guest_rituals
+  - repo-show-format.yml#simulated-art-opening
+  - ../skills/repo-show/CARD.yml#guest-rituals
   - ../characters/menagerie/GUEST-ROSTER.yml

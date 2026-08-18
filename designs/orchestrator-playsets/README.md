@@ -144,7 +144,7 @@ Philahue merges **every plugin** without recompile:
 - Gags [`bits/`](../../bits/INDEX.yml) (gag-*)
 - Catalog playsets (SimProv, SliceCity, Zombie Sims orchestrator trees)
 
-Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`programmed_by` — audience collectively programs how he orchestrates; `orchestration_model.attention_pilot`).
+Constitution: [`CHARACTER.yml`](../../characters/don-philahue/CHARACTER.yml) (`programmed-by` — audience collectively programs how he orchestrates; `orchestration_model.attention_pilot`).
 
 **Q&A protocol:** [`qa-orchestration.yml`](../../characters/don-philahue/qa-orchestration.yml) — right question, right guest, right time; in-conversation `ASK-NOW`; closing `QA-LEDGER-SWEEP`.
 

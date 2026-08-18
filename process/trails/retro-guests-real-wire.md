@@ -1,10 +1,10 @@
-# Trail — retro_guests_real_wire
+# Trail — retro-guests-real-wire
 
 > *Make it so — real retro on the wire*
 
 Emulated AI Lab meets FujiNet tree fort — guests who boot real stacks on air.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#retro_guests_real_wire) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#retro-guests-real-wire) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 
@@ -23,7 +23,7 @@ Emulated AI Lab meets FujiNet tree fort — guests who boot real stacks on air.
 
 ## Doorways that use this trail
 
-[Retro doorway](../entryways/retro.md) · [retrocomputing_drive](retrocomputing-drive.md)
+[Retro doorway](../entryways/retro.md) · [retrocomputing-drive](retrocomputing-drive.md)
 
 ---
 

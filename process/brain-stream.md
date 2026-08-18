@@ -27,7 +27,7 @@ Pairs with Manual Transmission — the tachometer the audience watches.
 ## Repo Show Clock
 
 - **when:** during_Twitch
-- **see:** repo-show-format.yml#how_it_runs
+- **see:** repo-show-format.yml#how-it-runs
 - **also:**
   - before_async_PRs
   - after_harvest_PRs
@@ -123,7 +123,7 @@ Pairs with Manual Transmission — the tachometer the audience watches.
   - trekify
   - stream_mode_toggle
 - **after_run:** Post-stream: deep-snitch + cursor-mirror forensics on the session before replay,
-harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
+harvest, or orchestration gold export. See ai-offs.yml#post-run-analysis.
 - **model_branching:**
   - see: model-branching.yml
   - live: Overlay shows fork events — Branch A vs Branch B on tachometer
@@ -141,7 +141,7 @@ harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
 - {"id": 3, "ship": "Twitch bot + GitHub permalink resolver", "model_cost": "zero"}
 - {"id": 4, "ship": "Rolling resummary for chat", "model_cost": "mini_on_interval"}
 - {"id": 5, "ship": "YouTube chat bot + ai-offs scoreboard tile", "model_cost": "mini"}
-- {"id": 6, "ship": "Post-run forensics hook — deep-snitch gate before replay export", "model_cost": "zero", "see": "ai-offs.yml#post_run_analysis"}
+- {"id": 6, "ship": "Post-run forensics hook — deep-snitch gate before replay export", "model_cost": "zero", "see": "ai-offs.yml#post-run-analysis"}
 
 ## Ties to
 

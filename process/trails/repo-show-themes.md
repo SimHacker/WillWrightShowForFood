@@ -1,4 +1,4 @@
-# Trail — repo_show_themes
+# Trail — repo-show-themes
 
 > *Substantive threads to revisit across episodes — not one-liner gags*
 

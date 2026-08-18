@@ -24,7 +24,7 @@ invitation:
   status: accepted
   consent: invitation_accepted
   accepted: "2026-07 — pitched; loves the idea, gets it, hot to trot"
-  guest_prototype: guest-prototype.yml
+  guest-prototype: guest-prototype.yml
   document: invitation.md
   official_invitation: repo-shows/will-wright-premiere/invitation.md
   browse_landing: repo-shows/will-wright-premiere/BROWSE.md
@@ -81,7 +81,7 @@ proxi:
 
 design_traditions:
   - toys_not_games
-  - simulator_effect
+  - simulator-effect
   - object_centric_ai
   - hobby_model
   - implication_over_simulation

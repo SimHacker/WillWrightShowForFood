@@ -84,7 +84,7 @@ symbolic_attachments:
       narrative: "Small but tensile. His proudest offspring."
 
 relationships:
-  matrix: ../RELATIONSHIP-MATRIX.yml#bucky_jr
+  matrix: ../RELATIONSHIP-MATRIX.yml#bucky-jr
   edges:
     julian:
       type: 'rivalry'
@@ -119,7 +119,7 @@ representation:
   fictional: true
   portrayal_tier: game_and_fictional
   authored_by: don-hopkins
-  prototype: ../../don-hopkins/jsonsters/critics.yml#critics.bucky_jr
+  prototype: ../../don-hopkins/jsonsters/critics.yml#critics.bucky-jr
 
 simoleons: 18000
 collection: []

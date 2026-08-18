@@ -3,7 +3,7 @@
 
 meta:
   id: the-nomi-song
-  type: hosted_video_wrapper
+  type: hosted-video-wrapper
   status: seed
   one_line: "Wrap Andrew Horn's Klaus Nomi documentary — play it, bookmark it, and honor Nomi as part of the Bowie/SNL lineage."
 
@@ -27,7 +27,7 @@ memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml   # klaus_n
 
 ties:
   - ../../characters/brian-eno/bowie-snl-1979.md
-  - ../../process/showmaker-network.yml   # hosted_video_wrapper
+  - ../../process/showmaker-network.yml   # hosted-video-wrapper
   - ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml
 
 note: "Artifacts (clips, stills) belong in a character dir once Nomi gets one; this show only DRAWS on them."

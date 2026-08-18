@@ -44,12 +44,12 @@ bookmarks:
   reading_marker: "A distinct 'you are here' marker separate from bookmarks; persists across reflows."
   read_tracking:
     why: "Make it EASY + DEFAULT to read ALL LLM output, mark what you've read, find what you haven't, and pick up where you left off."
-    state: "per-node unread|seen|read (full model in bubble-wrangler.yml#reading_progress)"
+    state: "per-node unread|seen|read (full model in bubble-wrangler.yml#reading-progress)"
     find_unread: "jump-to-next/prev-unread; unread count + gutter ticks; filter to unread-only."
     stacks_of_bookmarks: "bookmarks can be grouped into tangible stacks (bubble-wrangler.yml#stacks)."
   pop_out_and_link:
     what: "Pop any node/subtree into its own window; link back-and-forth between popped-out subtrees in different windows."
-    substrate: "bubble-wrangler.yml#panes_and_windows (Smalltalk-browser-and-better; first-class visible links)."
+    substrate: "bubble-wrangler.yml#panes-and-windows (Smalltalk-browser-and-better; first-class visible links)."
 
 # THE TREE — nodes
 tree:
@@ -95,7 +95,7 @@ scale_model:
       layer 2: child_scale     (inherited geometric zoom field)
       layer 3: pinned_scale    (absolute geometric overrides)
       layer 4: search/score    (automatic zoom, below)
-      layer 5: semantic_zoom   (LOD / meaning density — "token mipmaps", below)
+      layer 5: semantic-zoom   (LOD / meaning density — "token mipmaps", below)
     You can scatter zoom: blow up the 3 things you care about, shrink everything else,
     all at once — manually or driven by scoring. Geometric scale and semantic LOD are
     independent knobs that can be coupled or decoupled.
@@ -105,7 +105,7 @@ scale_model:
 # Each node carries a ladder of representations at increasing detail, pre-summarized
 # by a small/free LOCAL LLM. As you zoom, font size scales continuously AND the
 # representation "pops" between rungs — exactly like texture mipmaps for text.
-semantic_zoom:
+semantic-zoom:
   idea: |
     Zooming out must NOT just shrink text into unreadable specks. It collapses each node
     down its semantic ladder: full → paragraph → one-line → few words → k-line symbol → icon.
@@ -120,7 +120,7 @@ semantic_zoom:
     - { lod: 5, name: summary,    form: "short paragraph" }
     - { lod: 6, name: full,       form: "verbatim content" }
   selection:
-    continuous_param: "semantic_zoom ∈ [0..6] (real number), derived from effective_scale by default."
+    continuous_param: "semantic-zoom ∈ [0..6] (real number), derived from effective_scale by default."
     font_scale: "Within a rung, font size scales continuously with effective_scale (the geometric part)."
     pops: "Crossing a rung threshold swaps the representation to the next LOD."
     crossfade: "Optional trilinear-style crossfade between adjacent rungs during a pop (smoothness, no jarring swap)."
@@ -141,7 +141,7 @@ semantic_zoom:
       store: ".moollm/stream-gateway/mips/<composer>/<node>.json"
       note: "Precomputed 'token mipmaps'; regenerate only on content change (debounced)."
     fallbacks: "If summarizer is down/slow: show finest available rung; truncate-with-ellipsis as LOD stand-in (robust-first — degrade, don't block)."
-  relation_to_resummary: "This is brain-stream.yml#overlay_ux.resummary generalized into a full LOD ladder, done locally for free."
+  relation_to_resummary: "This is brain-stream.yml#overlay-ux.resummary generalized into a full LOD ladder, done locally for free."
 
 # SEARCH / SCORE-DRIVEN ZOOM (automatic, manual always wins)
 importance_zoom:
@@ -212,7 +212,7 @@ rendering:
   modes:
     overlay: "route /overlay/brain — transparent bg, OBS Browser Source (CEF). Crisp at canvas res."
     full: "route /brain — opaque, same viewer, for the RTFR web crowd."
-    cursor_chat_replacement:
+    cursor-chat-replacement:
       what: "Local always-on-top TRANSPARENT browser window docked over Cursor's chat HISTORY pane — replaces the scrollback 'bloody mess' with this stable viewer."
       keep_native: "Do NOT cover Cursor's input bar — leave it exposed so you keep typing into Cursor (model switcher, attach, etc. all native). Overlay covers only the history rectangle above it."
       mechanics:

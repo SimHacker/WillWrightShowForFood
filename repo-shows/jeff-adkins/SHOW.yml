@@ -17,7 +17,7 @@ why_him:
   the_holy_grail: "Will Wright called cross-game data portability the holy grail in his 1996 talk (the first show). SimObliterator is how that becomes runnable now."
   the_feedback_loop: "Jeff built it with AI from Don's documented/published code + open-source Sims-family reimplementations; Don reimplements it into TypeScript with AI + full credit. Each pass improves the last."
 
-dream_segments:
+dream-segments:
   - "Fan → tool maker: Jeff at the top of Will Wright's 'pyramid of players' (w/ Heather/Steve Alvey) — the creators who drastically improve the game for the casual millions below; how open tools + AI change who gets to climb."
   - "SimObliterator from the inside: IFF/FAR, OBJD objects, GUID identity + collision analysis."
   - "The soul mover, live: drop a 25-year-old save in, lift it, move it, write it back."

@@ -11,7 +11,7 @@ instances: [apple2-drive, pdp10-maclisp-drive, lisp-machine-hack-off]
 guests: [lars-brinkhoff, thomas-cherryhomes]
 
 see_also:
-  - { path: ../cross-links.yml#retrocomputing_drive, why: "Master trail — all retro nodes with why" }
+  - { path: ../cross-links.yml#retrocomputing-drive, why: "Master trail — all retro nodes with why" }
   - { path: retrocomputing-drive.md, why: "Generated markup — pnpm run facades" }
   - { path: ../micropolis-ai-drag-race.md, why: "Retro challenges rotate on drag race runway" }
   - { path: ../../rigs/README.md, why: "Rig yaml + SETUP DNA per contestant" }

@@ -7,7 +7,7 @@ show:
   type: performance
   host: Don Hopkins
   status: airing
-  format: live_script_reading
+  format: live-script-reading
   distribution: YouTube
   character: characters/don-hopkins/
 
@@ -43,7 +43,7 @@ dream_reading_guests:
   - brian-eno
 
 ties_to:
-  - ../../process/performance-space.yml#live_script_reading
-  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
-  - ../../process/couple-and-solo-shows.yml#show_tiers.moollm_readings
+  - ../../process/performance-space.yml#live-script-reading
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#the-reading
+  - ../../process/couple-and-solo-shows.yml#show-tiers.moollm_readings
   - SimHacker/moollm

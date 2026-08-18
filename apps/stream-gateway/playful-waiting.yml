@@ -18,7 +18,7 @@ why: |
 activities:
   explore_analyze_visualize:
     basis: "Shneiderman's Visual Information-Seeking Mantra: OVERVIEW first, ZOOM & FILTER, then DETAILS-ON-DEMAND."
-    on: "the brain stream + our derived DB (cursor-tap.yml#our_derived_db)"
+    on: "the brain stream + our derived DB (cursor-tap.yml#our-derived-db)"
     views:
       - "Tree outliner (overlay-viewer.yml) — the spine"
       - "Timeline (events over time; spend over time; tool-call rhythm)"
@@ -56,7 +56,7 @@ dogfooding:
 games_overlay:
   idea: "Game platform as overlay literally comes into PLAY — segments, mini-games, and the city/home sim run over/around the brain stream."
   hooks: "Stream events drive game events (a tool_call spawns something; a commit triggers a flourish; cost milestones unlock bits)."
-  audience: "Interactive for the companion-app / Twitch-extension viewers (SPEC.yml#delivery_surfaces); ambient for OBS-baked viewers."
+  audience: "Interactive for the companion-app / Twitch-extension viewers (SPEC.yml#delivery-surfaces); ambient for OBS-baked viewers."
 
 build_phases:
   - { id: a, ship: "Spinner → live timeline + cost ticker (overview)", cost: zero }

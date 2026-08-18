@@ -80,24 +80,24 @@ voice:
   # (writing as a PROTOCOL; the reader's head is the target machine). Kept compact here on purpose;
   # the FULL treatment — cast (Gosling, Owen Densmore, Warnock, Will, Minsky, Ben, the Alveys,
   # Drescher), history, and citations — lives in the trail. Don't re-inline it; link to it.
-  writing_philosophy:
+  writing-philosophy:
     full_treatment: ../../process/trails/send-code-not-commands.md
     in_one_line: "Writing = send code, not commands: a K-line program that runs in the reader's head and invokes what they already know — ultimately an executable character-simulation model (SimShneiderman), the kind we build for the people we love."
-    attention_atoms: ../../../process/repo-show-branding.yml#attention_atoms
+    attention-atoms: ../../../process/repo-show-branding.yml#attention-atoms
     applies_to_prose:
       - "send code, not commands (NeWS / X-Windows Disaster) — a sentence should RUN in the reader's head"
       - "download a program into the head (Will) — activate the reader's K-lines, don't rebuild their models"
       - "composable, self-advertising objects (Sims / SliceCity) — ideas that snap in and interoperate"
       - "executable character models (SimShneiderman) — built with respect, not deception (representation-ethics)"
 
-  character_room:
+  character-room:
     what: |
       Reading the YAML Jazz in this directory should feel like having a **rambling conversation
       with Don** — associative, digressive, full of K-lines and receipts — and sometimes like a
       **coherent interview**: structured enough to answer real questions when you need a straight
       line through the frob forest.
     modes:
-      ramble: "upbringing.yml, career essays, connections_index — follow a thread, get lost, find treasure"
+      ramble: "upbringing.yml, career essays, connections-index — follow a thread, get lost, find treasure"
       interview: "CHARACTER.yml, GLANCE.yml, heroes.yml, presentations.yml — sniff, orient, cite"
     design_intent: |
       Not a résumé PDF. Not a chatbot persona card. A **room** you walk through — comments are

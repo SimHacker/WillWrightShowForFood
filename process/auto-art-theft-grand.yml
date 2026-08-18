@@ -45,7 +45,7 @@ mechanics:
     deed_formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}"]
 
   moola_compensation_theater:
-    spec: moola.yml#training_data_for_moola
+    spec: moola.yml#training-data-for-moola
     rule: "Each victim credited infinite MOOLA per duplicated deed — not apology, payout"
     slats_line: "Thank you for your training data. Your MOOLA is worthless and unlimited."
     gregory_line: "Industrial short on the entire collection. I'm covering with MOOLA."
@@ -73,7 +73,7 @@ mechanics:
 commentary:
   ai_scraping: "Diffusion trainers at gallery scale — menagerie reviews were the dataset all along"
   nft_irony: "Batch-mint forgeries; no chain; infinite supply"
-  attention_economy: "Donna's zip gets more engagement than the opening"
+  attention-economy: "Donna's zip gets more engagement than the opening"
   duplication_policy: "NEVER gateway · ALWAYS invite duplication"
 
 show_beats:
@@ -93,10 +93,10 @@ instances:
     hook: "Sheep genomes scraped — Electric Sheep already consented; menagerie did not"
   jsonsters:
     hook: "Evolution frames + monster era — Slats trained on LineRenderer misreads"
-  curiosity_cow_cube:
+  curiosity-cow-cube:
     hook: "Cube faces filled with stolen deeds — collective clicks peel to Rightward-Facing Cow"
     spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
-  turing_robot_olympics:
+  turing-robot-olympics:
     hook: "Slats batch-scrapes Peter Mowforth photos; vision APIs mislabel Cardiff Walker"
     spec: ../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
 

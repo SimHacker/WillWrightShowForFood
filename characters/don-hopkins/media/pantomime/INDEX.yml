@@ -29,7 +29,7 @@ copyleft_elsewhere:
   wikipedia: "https://en.wikipedia.org/wiki/Copyleft"
 
 gallery_wings:
-  bug_farm: bug-farm.yml
+  bug-farm: bug-farm.yml
   too_many_butterflies: too-many-butterflies.yml
   unity_dev: unity-levitt-nelson.yml
 

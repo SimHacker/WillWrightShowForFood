@@ -37,7 +37,7 @@ connects_in_repo:
   - { path: ../alan-kay/, why: "The interview subject — Smalltalk, Dynabook, late binding" }
   - { path: ../../process/trails/live-objects.md, why: "Alan Kay → Self → NeWS lineage this interview anchors" }
   - { path: ../../process/trails/game-design-lineage.md, why: "Yoot's sim toys among the designers" }
-  - { path: ../../process/crazy-idea-jam.yml#yoot_boot_and_seaman, why: "YOOT BOOT successor + Seaman energy" }
+  - { path: ../../process/crazy-idea-jam.yml#yoot-boot-and-seaman, why: "YOOT BOOT successor + Seaman energy" }
 
 show_hooks:
   - "Decode the Alan Kay 1993 interview on air — primary-source history segment"

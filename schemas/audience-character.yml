@@ -73,7 +73,7 @@ journal:
     episode with your layer for a richer experience (MSPO: Massively Single-Player Online).
   question_tree: ../schemas/question-tree.yml
   repo_urls: |
-    `repo` fields in questions.yml (discussion, repo_pointer, context_lasers) use absolute
+    `repo` fields in questions.yml (discussion, repo_pointer, context-lasers) use absolute
     HTTPS GitHub repo-root URLs — https://github.com/owner/repo — not owner/name slugs.
   when: [before_air, during_live, during_time_shift, after_air]
   watch_order: "Episodes may be watched in any order; your per-episode dirs are souvenirs of each"
@@ -109,7 +109,7 @@ seating:
   principle: |
     Seats are NOT characters. The balcony, box seats, front row, and orchestra pit are PLACES
     (seats). Only CHARACTERS exist in the audience; each character DECLARES its own seating as
-    a property. The INDEX 'box_seats' view is COMPUTED from these declarations, not the source.
+    a property. The INDEX 'box-seats' view is COMPUTED from these declarations, not the source.
   field: "seating"
   shape:
     seat: "front_row | box_left | box_right | balcony_left | balcony_right | orchestra_pit | general | floating"

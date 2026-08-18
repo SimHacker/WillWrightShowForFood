@@ -1,6 +1,6 @@
 # Pop-up menus ↔ pie menus — show prep
 
-> Two cousins on the [direct_manipulation](../../process/trails/direct-manipulation.md) trail.  
+> Two cousins on the [direct-manipulation](../../process/trails/direct-manipulation.md) trail.  
 > Public-safe digest of real correspondence — see [correspondence.yml](correspondence.yml).
 
 ---
@@ -57,4 +57,4 @@ Show segment: not a debate — a *retrospective* with live demos of both menu st
 
 - [invitation.md](invitation.md)
 - [repo-shows/dan-ingalls/](../../repo-shows/dan-ingalls/README.md)
-- [live_objects trail](../../process/trails/live-objects.md)
+- [live-objects trail](../../process/trails/live-objects.md)

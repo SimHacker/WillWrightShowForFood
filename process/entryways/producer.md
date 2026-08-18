@@ -27,9 +27,9 @@ Your branch, your rig, your guests. Shows inherit SHOW skill; harvested ideas be
 
 | Trail | When to leap |
 |-------|----------------|
-| [repo_show_spine](../trails/repo-show-spine.md) | Canonical spine — RTFR to harvest |
-| [moollm_compose](../trails/moollm-compose.md) | Where harvested skills land |
-| [guest_any](guest-any.md) | Invitation pattern for your guests |
+| [repo-show-spine](../trails/repo-show-spine.md) | Canonical spine — RTFR to harvest |
+| [moollm-compose](../trails/moollm-compose.md) | Where harvested skills land |
+| [guest-any](guest-any.md) | Invitation pattern for your guests |
 
 ---
 

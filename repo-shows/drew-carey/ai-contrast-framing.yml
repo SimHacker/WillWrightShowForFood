@@ -46,9 +46,9 @@ our_frame:
     source: "'Augmenting Human Intellect: A Conceptual Framework' (1962); NLS / Mother of All Demos (1968)"
     character: ../../characters/douglas-engelbart/
     trail: ../../../process/trails/augmentation-and-hypertext.md
-    pitm: ../../../process/crazy-idea-jam.yml#player_in_the_middle
+    pitm: ../../../process/crazy-idea-jam.yml#player-in-the-middle
 
-  television_lineage:
+  television-lineage:
     from: [will-wright, don-hopkins]
     note: |
       This frame is not greenfield — Will and Don already **made a TV show** and applied what
@@ -74,8 +74,8 @@ our_frame:
       - { label: "StoryMaker demo (Stupid Fun Club)", url: "https://www.youtube.com/watch?v=_2yEHs_WLzQ" }
       - { label: "Urban Safari GPS storytelling demo", url: "https://www.youtube.com/watch?v=Db8KGNoeKHE" }
     canonical:
-      - ../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage
-      - ../../../process/crazy-idea-jam.yml#creationtv_storymaker
+      - ../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television-lineage
+      - ../../../process/crazy-idea-jam.yml#creationtv-storymaker
     career: ../../characters/don-hopkins/career/stupid-fun-club.yml
 
   not_this:
@@ -141,7 +141,7 @@ our_frame:
       same rule Drew learned on radio. Sympathize, don't preach.
 
   micropolis_angel_advice:
-    spec: ../../catalogs/soul-city/micropolis-angel.yml#chat_with_god
+    spec: ../../catalogs/soul-city/micropolis-angel.yml#chat-with-god
     one_line: |
       Screen + telemetry → ChatGPT advice → read aloud. "Chatting with God" — playful Sim Religion;
       not a host voice clone. Cross-game Angel; character models as souls. Optional token subscription.
@@ -157,13 +157,13 @@ conversation_hooks:
   - "Phoneloper / Pink Trombone as toys you PLAY — not a voice that replaces you"
 
 see_also:
-  - SHOW.yml#sims_play_along_narration
+  - SHOW.yml#sims-play-along-narration
   - ../../process/sims-play-along-narration.yml
   - ../../will-wright-premiere/performance-and-culture.yml
   - ../../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
   - ../../bits/theme-simulating-people/theme-simulating-people.md
   - ../../schemas/portrayal-standards.yml#simulation
-  - ../../process/crazy-idea-jam.yml#player_in_the_middle
+  - ../../process/crazy-idea-jam.yml#player-in-the-middle
   - ../../characters/douglas-engelbart/
   - ../../process/trails/augmentation-and-hypertext.md
   - ../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml

@@ -1,10 +1,10 @@
-# Trail — drag_race_and_ai_offs
+# Trail — drag-race-and-ai-offs
 
 > *Start your engines — werk, commit, merge*
 
 Game-show formats inside Repo Show — declare class honestly; Slats judges; ai-offs scores the spend.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#drag_race_and_ai_offs) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#drag-race-and-ai-offs) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

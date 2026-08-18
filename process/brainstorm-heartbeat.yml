@@ -24,8 +24,8 @@ audience_and_repo:
   - "Originators get credit; implementers get credit; nobody is on the hook to ship"
 
 inherits:
-  guest_prototype: ../characters/will-wright/guest-prototype.yml#respect_time
-  couple_shows: couple-and-solo-shows.yml#guest_prototype
+  guest-prototype: ../characters/will-wright/guest-prototype.yml#respect-time
+  couple_shows: couple-and-solo-shows.yml#guest-prototype
   line: "No homework — but as much *homefun* as you like."
 
 on_air_shapes:

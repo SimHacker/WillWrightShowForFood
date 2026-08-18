@@ -99,7 +99,7 @@ capabilities:
       - "OBS, YouTube, Twitch integration"
       - "Repo Show stream rig shares DNA with stream-gateway (broadcast tier)"
 
-  chat_with_god:
+  chat-with-god:
     playful_name: "Chatting with God"
     what: |
       Capture screen + game telemetry, send to ChatGPT (or chosen model), get advice, read it aloud

@@ -12,7 +12,7 @@ tagline: "SLATS LIVES! The first RoboResurrection."
 
 what_is_slats:
   who: "Slats — a robot 'brain' Don programmed at the STUPID FUN CLUB (Will Wright's Berkeley think-tank/incubator)."
-  seen_in: "One Minute Movies — 'Servitude' (Slats, waiter) and 'Empathy' (Dents, broken robot). Voiced via canned say-menu + free-form text field (see ../PATTER.yml#slats_call_in_menu)."
+  seen_in: "One Minute Movies — 'Servitude' (Slats, waiter) and 'Empathy' (Dents, broken robot). Voiced via canned say-menu + free-form text field (see ../PATTER.yml#slats-call-in-menu)."
   source: "characters/don-hopkins/stupid-fun-club/STORY.yml (Slats and Dents)."
 
 the_asset:
@@ -78,7 +78,7 @@ after_robo_resurrection:
 ties:
   - ./SHOW.yml
   - ../../bits/theme-the-riff-loop/theme-the-riff-loop.md
-  - ../PATTER.yml#slats_call_in_menu
+  - ../PATTER.yml#slats-call-in-menu
   - ../../../../characters/don-hopkins/stupid-fun-club/STORY.yml
   - ../../process/apple2-emulator-stack.yml
   - ../../process/manual-transmission.yml

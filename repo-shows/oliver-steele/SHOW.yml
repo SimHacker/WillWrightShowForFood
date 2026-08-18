@@ -19,7 +19,7 @@ why_him:
   slots_connection: "Sharpens the 'slots all the way down' thesis — no privileged class layer, only slots you may hoist into a shared parent. See characters/david-rosenthal/slots-all-the-way-down.md."
   don_firsthand: "Don shipped a lot of OpenLaszlo (pie menus, Micropolis, SimFaux, constraints) and vouches for instance-first as method — kin to Garnet, now Svelte/MOOLLM."
 
-dream_segments:
+dream-segments:
   - "Walk Instance-First on a real widget — start with one pie menu / one LZX view, refactor into a reusable class live."
   - "Instance Substitution Principle vs JavaScript — why JS 1.x violates it and LZX obeys it."
   - "Reactive constraints in LZX — Garnet's declarative idea on the web, years early."

@@ -24,4 +24,4 @@ show beats — not a claim about Torin's product choices.
 
 Torin Block (contact on request)
 
-→ [`career/work-history.yml`](career/work-history.yml) · [`career/lineage.yml`](career/lineage.yml) (`zope_to_moollm`)
+→ [`career/work-history.yml`](career/work-history.yml) · [`career/lineage.yml`](career/lineage.yml) (`zope-to-moollm`)

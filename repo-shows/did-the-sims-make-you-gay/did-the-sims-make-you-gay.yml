@@ -28,7 +28,7 @@ solidarity:
     LGBTQ+ solidarity default — trans, queer, nb, ace, bi, lesbian, gay, genderfluid,
     gender-benders of any persuasion. **This IS The Sims audience:** builders, modders,
     storytellers, creator-network solidarity. Pride is welcome mat, not punchline.
-  lexicon: repo-shows/infodump/infodump.yml#solidarity_lexicon
+  lexicon: repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 segments:
   integrated_story:
@@ -75,7 +75,7 @@ invitation:
 evidence:
   - characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
   - characters/patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
-  - repo-shows/infodump/infodump.yml#solidarity_lexicon
+  - repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 see_also:
   - characters/will-wright/  # inclusivity-by-design

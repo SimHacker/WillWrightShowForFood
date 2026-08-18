@@ -63,7 +63,7 @@ dec_manuals_local:
       title: "PDP-4 / Type 340 Experimental Display System"
       note: Context for 340 architecture evolution
 
-dec_manuals_not_on_bitsavers:
+dec-manuals-not-on-bitsavers:
   cited_by_340_programming_manual:
     - id: H-342
       title: "342 Symbol Generator Technical Manual"

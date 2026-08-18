@@ -23,7 +23,7 @@ Stupid Fun Club creation. Don commented on the video.
 | Thread | Link |
 |--------|------|
 | **SFC alumni** | [`stupid-fun-club.yml`](../don-hopkins/career/stupid-fun-club.yml) · [`slats-reincarnation`](../../repo-shows/will-wright-premiere/slats-reincarnation.md) |
-| **Bongo Bingo mashup** | Don's TomTom-era [Foursquare bingo](../../process/crazy-idea-jam.yml#bongo_bingo) × Mark Your Territory — check-in comedy beat |
+| **Bongo Bingo mashup** | Don's TomTom-era [Foursquare bingo](../../process/crazy-idea-jam.yml#bongo-bingo) × Mark Your Territory — check-in comedy beat |
 | **Narrative line** | Janet Murray (interactive narrative) · Brenda Laurel orbit · constructionism / field science |
 | **Nancy van seat** | [`sources/nancy-van-seat.md`](sources/nancy-van-seat.md) |
 

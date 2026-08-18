@@ -62,7 +62,7 @@ Either shape — or both, or neither — works. **You pick.**
   own, and it's carried me through life. I'd love to talk **Mother of All Demos** hardware — we're
   publishing **free Engelbart mouse + chord keyset models** (STL/STEP) plus SWAG and working
   **Bluetooth kits** via lightpenisland.net Augment Division
-  ([Augment Division catalog](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/ideas/gags/lightpenisland-net.yml#engelbart_division)).
+  ([Augment Division catalog](https://github.com/SimHacker/WillWrightShowForFood/blob/main/bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division)).
 - **Remembering Hugh Daniel.** I first met Hugh at MIT's 545 Tech Square — at your Xanadu demo, him
   in his winged Xanadu cap, waving his arms. After he passed, John Gilmore brought some of his ashes
   to Amsterdam and we scattered them in the canal at Brouwersgracht and Lijnbaansgracht; friends are

@@ -1,10 +1,10 @@
-# Trail — the_card_game
+# Trail — the-card-game
 
 > *Build a segment deck — stack guest abilities*
 
 Every guest CARD is a hand of MTG-style invokable verbs. Combos link cards across guests; Slats judges the flair.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#the_card_game) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#the-card-game) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

@@ -95,8 +95,8 @@ history:
     transcript: characters/heinz-lemke/sources/2026-07-07-pixie-trio-thread.md
     pull_in: characters/heinz-lemke/pull-in-gaps.md
     priority:
-      - pixie_complete_source_listing
-      - electronics_magazine_1969_pdf
+      - pixie-complete-source-listing
+      - electronics-magazine-1969-pdf
       - wiseman_radial_menu_notes
       - newman_sproull_movable_menu_citation
   virtual_light_pen:
@@ -223,8 +223,8 @@ interview_center:
     ask: "1968 Mother of All Demos ↔ 1969 PIXIE film — same light-pen era, different labs. What did Heinz see on the US trip? Demo culture vs distributed CAD?"
     doc: characters/douglas-engelbart/GLANCE.md
     memorial: "Discuss Engelbart in memorial mode — never interview"
-    sponsor_gag: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
-    open_models: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+    sponsor_gag: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light-pen-bureau-sponsor
+    open_models: bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division
     on_air: "Mother of All Demos zeitgeist; demo Bluetooth kits and free STL — not private reference hardware"
   us_research_labs_trip:
     ask: "What was Heinz's trip to the US research labs like, and what did he see there?"
@@ -253,7 +253,7 @@ interview_center:
     on_air: "Scan ref 520 on stream; compare Wiseman radial-menu notes; credit lineage (Buxton, Kurtenbach)"
   alan_kay_light_pen_vs_tablet:
     ask: "Alan Kay wondered why PIXIE used a light pen instead of a RAND tablet — fatigued hand, twitch button. What did the pen actually feel like? What does the driver code show?"
-    kay_quote: characters/heinz-lemke/from-alan-kay.yml#light_pen_2020
+    kay_quote: characters/heinz-lemke/from-alan-kay.yml#light-pen-2020
     lars_segment: "Emulator tests mouse → pen; compare tablet affordances"
   medical_automation_today:
     ask: "How does Heinz see the line from early graphical interaction/CAD to his later medical-computing work?"
@@ -325,12 +325,12 @@ format:
     gag_credits_anchor: "Department of Research Simulation"
     consulting: Ground Up Software
     sponsor_spot:
-      id: light_pen_bureau_sponsor
+      id: light-pen-bureau-sponsor
       after: "Computing Laboratory — Light Pen Bureau"
       opener: "And now, a word from our sponsors."
       url: https://lightpenisland.net/
       url_repeat: "I repeat, lightpenisland.net. Surf carefully."
-      spec: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light_pen_bureau_sponsor
+      spec: bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml#light-pen-bureau-sponsor
 
 ties_to:
   - characters/heinz-lemke/

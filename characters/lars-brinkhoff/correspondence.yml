@@ -34,7 +34,7 @@ threads:
       munching_squares: |
         PDP-7 munching squares video link dead; web archive still has it. Lars revised PDP-10
         Type 340 + Knight TV munching squares; can port to PDP-7.
-    don_async_pivot:
+    don-async-pivot:
       date: "2026-07-03"
       what: |
         Async 1-on-1 videos whenever convenient; Don interlinks directories, artifacts, and cuts in

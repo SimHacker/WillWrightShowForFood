@@ -49,7 +49,7 @@ Many MOOLLM skills enclose CLI tools today — at every rung of the ladder:
 
 | Entry | Rung | 🐒✋ Note |
 |-------|------|----------|
-| [**cursor-mirror**](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | lifted | The exemplar: `scripts/cursor_mirror.py` is a real tool (tail, timeline, grep, deep-snitch) with a documented command language, wrapped by a skill that teaches *when* to reach for it. |
+| [**cursor-mirror**](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) | lifted | The exemplar: `scripts/cursor-mirror.py` is a real tool (tail, timeline, grep, deep-snitch) with a documented command language, wrapped by a skill that teaches *when* to reach for it. |
 | [**sister-script**](https://github.com/SimHacker/moollm/tree/main/skills/sister-script) | doctrine | Doc-first automation — the skill that *describes* this ladder: write the doc, then the script that obeys it. |
 | [**sniffable-python**](https://github.com/SimHacker/moollm/tree/main/skills/sniffable-python) | doctrine | How to structure the lifted module so LLMs comprehend it at a sniff — doc up front, structure as signage. |
 | [**skill-snitch**](https://github.com/SimHacker/moollm/tree/main/skills/skill-snitch) | lifting | Audit protocol (SCAN/AUDIT/SNITCH) partially backed by cursor-mirror's deterministic scanner — a hybrid mid-lift. |

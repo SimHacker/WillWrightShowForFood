@@ -47,10 +47,10 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | `manual_transmission` | see [manual-transmission.yml](manual-transmission.yml); tagline: What's the smallest model — or fewest tokens — you can code the spec with?; audience_chant: CODE THAT SPEC!!!!!; overlay: brain-stream.yml |
 | `bull_ride_ball` | what: Wrangle one cheap model through hallucination chaos — show the retries, werk anyway |
 | `artisanal_eleganza` | what: Zero tokens — hand-crafted yaml so fierce it doesn't need AI; flair_variant: Or apple2-drive — APPLESOFT/INTEGER BASIC on the ][ — see challenges/apple2-drive.yml |
-| `apple2_drive` | see [challenges/apple2-drive.yml](challenges/apple2-drive.yml); family: challenges/retrocomputing-drive.yml; tagline: Apple ][ instance — declare languages, tools, platform, emulator; example_rig: ../rigs/apple2-flair-lap.rig.yml |
-| `retrocomputing_drive` | see [challenges/retrocomputing-drive.yml](challenges/retrocomputing-drive.yml); tagline: Retrocomputing AI drag races — your rig picks language, tools, and platform; note: apple2-drive + pdp10-maclisp-drive are flagship instances |
-| `pdp10_maclisp_drive` | see [challenges/pdp10-maclisp-drive.yml](challenges/pdp10-maclisp-drive.yml); tagline: Write in MACLISP on a PDP-10 emulator running ITS!; example_rig: ../rigs/pdp10-maclisp-flair-lap.rig.yml |
-| `lisp_machine_hack_off` | see [challenges/lisp-machine-hack-off.yml](challenges/lisp-machine-hack-off.yml); tagline: Symbolics vs LMI — Lisp Machine Hack-Off; example_rigs: ../rigs/lisp-machine-symbolics.rig.yml, ../rigs/lisp-machine-lmi.rig.yml |
+| `apple2-drive` | see [challenges/apple2-drive.yml](challenges/apple2-drive.yml); family: challenges/retrocomputing-drive.yml; tagline: Apple ][ instance — declare languages, tools, platform, emulator; example_rig: ../rigs/apple2-flair-lap.rig.yml |
+| `retrocomputing-drive` | see [challenges/retrocomputing-drive.yml](challenges/retrocomputing-drive.yml); tagline: Retrocomputing AI drag races — your rig picks language, tools, and platform; note: apple2-drive + pdp10-maclisp-drive are flagship instances |
+| `pdp10-maclisp-drive` | see [challenges/pdp10-maclisp-drive.yml](challenges/pdp10-maclisp-drive.yml); tagline: Write in MACLISP on a PDP-10 emulator running ITS!; example_rig: ../rigs/pdp10-maclisp-flair-lap.rig.yml |
+| `lisp-machine-hack-off` | see [challenges/lisp-machine-hack-off.yml](challenges/lisp-machine-hack-off.yml); tagline: Symbolics vs LMI — Lisp Machine Hack-Off; example_rigs: ../rigs/lisp-machine-symbolics.rig.yml, ../rigs/lisp-machine-lmi.rig.yml |
 | `lip_sync_for_your_commits` | what: thoughtful-commitment commits — narrate WHY on stream; cursor-mirror playback |
 | `harvest_runway` | what: Final — merge PR, abstract to skills/ + packages/, present the organism graft |
 
@@ -129,7 +129,7 @@ lip-sync thoughtful commits, merge technique DNA back into the organism. Declare
 | [`micropolis-ai-drag-race.md`](micropolis-ai-drag-race.md) | Generated markup view |
 | [`micropolis-ai-drag-race.yml`](../repo-shows/micropolis-ai-drag-race/README.md) | Show seed |
 | [`ca-machinima-cabaret-drag-race.yml`](../repo-shows/ca-machinima-cabaret-drag-race/README.md) | Sister runway — CA Machinima CAbaret Drag Race; tile sets as costumes, rules as acts |
-| [`cross-links.yml#drag_race_and_ai_offs`](cross-links.yml) | Full game-show trail |
+| [`cross-links.yml#drag-race-and-ai-offs`](cross-links.yml) | Full game-show trail |
 | [`code-that-spec.yml`](code-that-spec.yml) | CODE THAT SPEC!!!!! chant |
 | [`manual-transmission.yml`](manual-transmission.yml) | Smallest model challenge |
 | [`ai-offs.yml`](ai-offs.yml) | Spend proof + rig classes |

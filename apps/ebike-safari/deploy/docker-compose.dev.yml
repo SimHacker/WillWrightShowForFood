@@ -1,7 +1,7 @@
 # Local dev: Postgres only (viewer runs via pnpm dev on host)
 # Usage:
 #   docker compose -f docker-compose.dev.yml up -d
-#   export DATABASE_URL=postgresql://ebike:ebike@localhost:5432/ebike_safari
+#   export DATABASE_URL=postgresql://ebike:ebike@localhost:5432/ebike-safari
 #   cd ../viewer && pnpm dev
 
 services:
@@ -11,7 +11,7 @@ services:
     ports:
       - '5432:5432'
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-ebike_safari}
+      POSTGRES_DB: ${POSTGRES_DB:-ebike-safari}
       POSTGRES_USER: ${POSTGRES_USER:-ebike}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-ebike}
     volumes:

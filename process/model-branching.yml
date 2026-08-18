@@ -25,7 +25,7 @@ snapshot_sources:
   cursor_native:
     what: "Cursor chat import/export — round-trip conversations"
     note: "User can export chat, branch manually, import into fresh composer with different model"
-  cursor_mirror:
+  cursor-mirror:
     export_chat: "export-chat <composer> --yaml | --json"
     export_jsonl: "export-jsonl — training/analysis format"
     export_prompts: "export-prompts — prompts and generations for replay"
@@ -58,7 +58,7 @@ branch_workflow:
     tools:
       rubric: "MOOLLM rubric SCORE both trajectories on same criteria"
       experiment: "experiment COMPARE runs — labeled configs per branch"
-      cursor_mirror: "timeline diff — what each model actually touched"
+      cursor-mirror: "timeline diff — what each model actually touched"
       spend_csv: "piss test per branch — separate composer ids"
   decide:
     keep: "Adopt winning model lane; merge PR from that trajectory"
@@ -119,12 +119,12 @@ ties_to:
   - manual-transmission.yml
   - ai-offs.yml
   - brain-stream.yml
-  - repo-show-format.yml#breeding_and_nesting
-  - showmaker-network.yml#evolving_organism
+  - repo-show-format.yml#breeding-and-nesting
+  - showmaker-network.yml#evolving-organism
   - SimHacker/moollm/skills/cursor-mirror
   - SimHacker/moollm/skills/rubric
   - SimHacker/moollm/skills/experiment
 
 see_also:
-  - manual-transmission.yml#post_run_forensics
-  - ai-offs.yml#post_run_analysis
+  - manual-transmission.yml#post-run-forensics
+  - ai-offs.yml#post-run-analysis

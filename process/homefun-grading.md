@@ -27,7 +27,7 @@ Does the commit message match the thinking blocks?
 ## Homefun Not Homework
 
 - **line:** No homework — but as much homefun as you like.
-- **see:** ../repo-shows/will-wright-premiere/README.md#audience_homefun
+- **see:** ../repo-shows/will-wright-premiere/README.md#audience-homefun
 - **loop:** Do homefun → check into repo → show originators → best work discussed in later episode
 - **vs_homework:** Homework optimizes for completion. Homefun optimizes for exploration, taste,
 and show-your-work — with optional AI rig, declared class, and public receipts.
@@ -96,7 +96,7 @@ scales to human teachers AND rubric/experiment automation.
 - **fit:** Logo/Snap!/BJC constructionism — microworlds, blocks, show your work.
 Homefun grading is PBD for the LLM era: the commit message is the student's
 story; thinking blocks are the replay. Expert stick-shift laps are training BY
-demonstration — see orchestration-gold.yml#training_by_demonstration
+demonstration — see orchestration-gold.yml#training-by-demonstration
 
 ## Ai Offs As Lab
 
@@ -123,8 +123,8 @@ demonstration — see orchestration-gold.yml#training_by_demonstration
 
 | Link |
 |------|
-| [`orchestration-gold.yml#audit_questions`](orchestration-gold.yml) |
-| [`orchestration-gold.yml#since_last_commit`](orchestration-gold.yml) |
+| [`orchestration-gold.yml#audit-questions`](orchestration-gold.yml) |
+| [`orchestration-gold.yml#since-last-commit`](orchestration-gold.yml) |
 | [`../repo-shows/will-wright-premiere/README.md`](../repo-shows/will-wright-premiere/README.md) |
 | [`vision-and-ambition.yml`](vision-and-ambition.yml) |
 | [`repo-show-format.yml`](repo-show-format.yml) |

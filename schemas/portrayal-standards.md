@@ -131,7 +131,7 @@ Fields: `status: deceased` · `invitation_status: memorial` · `consent_level: 5
 | **Recommended** | `ideas.md` |
 | **Optional** | `correspondence.yml`, `sources.yml`, `bio.yml`, `portrayal/`, `sources/`, `media/`, `face-puppet.yml` |
 
-**Face puppet (optional):** modular portrait puppet — guest photo + attachments; live or offline recording. Spec: [faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml#guest_characters)
+**Face puppet (optional):** modular portrait puppet — guest photo + attachments; live or offline recording. Spec: [faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml#guest-characters)
 
 **ideas.md:** conversation hooks for the guest browsing their invitation — public career, shared ground with the repo (abstracted), numbered show segments.
 
@@ -186,7 +186,7 @@ LLMs open a new layer: simulated people who can autonomously converse, act, and 
 
 **Soul For Food:** Palm's bridge from [incarnation ethics](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/on-being-simulated.md) (*the right to write my own soul*) to guest directories in this repo — [Will Wright Soul For Food](https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md).
 
-See also: [human-control-and-authorship](../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md) · [simulating-people](../bits/theme-simulating-people/theme-simulating-people.md) · [Player-in-the-Middle](../process/crazy-idea-jam.md#player_in_the_middle)
+See also: [human-control-and-authorship](../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md) · [simulating-people](../bits/theme-simulating-people/theme-simulating-people.md) · [Player-in-the-Middle](../process/crazy-idea-jam.md#player-in-the-middle)
 
 ## See also
 

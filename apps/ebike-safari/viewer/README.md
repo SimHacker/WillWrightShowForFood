@@ -61,7 +61,7 @@ Local Postgres:
 cd apps/ebike-safari/deploy
 docker compose -f docker-compose.dev.yml up -d
 cd ../viewer
-DATABASE_URL=postgresql://ebike:ebike@localhost:5432/ebike_safari pnpm dev
+DATABASE_URL=postgresql://ebike:ebike@localhost:5432/ebike-safari pnpm dev
 ```
 
 Seed user (first boot): `don` / `changeme` — change password in DB before production.

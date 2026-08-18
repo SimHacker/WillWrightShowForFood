@@ -42,11 +42,11 @@ M1 (SQLite) is the real product.
   prompts/text/tools appear in a browser.* (No thinking yet.)
 - **M1 — SQLite tap for thinking + tool_result.**
   Read-only `state.vscdb` poll by composer + high-water mark; enrich events with thinking, tool args,
-  tool results, model, spend. Write our derived SQLite (`cursor-tap.yml#our_derived_db`). This is the
+  tool results, model, spend. Write our derived SQLite (`cursor-tap.yml#our-derived-db`). This is the
   real brain stream. → becomes `cursor-mirror watch --live`.
 - **M2 — Privacy gate + canonical schema.**
   path-strip + secret-scan + private-repo filter + visibility tags BEFORE publish. Normalize to
-  `brain-stream.yml#event_schema`. Kill-switch (`--pause`).
+  `brain-stream.yml#event-schema`. Kill-switch (`--pause`).
 - **M3 — SvelteKit gateway + stable viewer.**
   `/api/events` (SSE, ring buffer), `/overlay/brain`, `/brain`. Outliner tree honoring the
   **prime_directive**: no auto-scroll, opt-in follow-tail, bookmarks, read/unread. (overlay-viewer.yml)
@@ -54,7 +54,7 @@ M1 (SQLite) is the real product.
   `process(text,channel,scope) → {redacted_full, mips}` (summarizers.yml), remote provider first;
   enables semantic zoom + cost ticker + squished-tab labels.
 - **M5 — Electron overlay (local) + Bubble Wrangler basics.**
-  Transparent click-through window docked over Cursor (cursor_chat_replacement); tabs, pop-out,
+  Transparent click-through window docked over Cursor (cursor-chat-replacement); tabs, pop-out,
   stacks, read-tracking (bubble-wrangler.yml). Operator gets the non-shit chat view.
 - **M6 — OBS + stream.**
   `obs` skill (obs-websocket); Browser Source loads the client; two-machine NDI; private stream test;

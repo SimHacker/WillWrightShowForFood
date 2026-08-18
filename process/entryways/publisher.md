@@ -25,9 +25,9 @@ Inspectable public repo as pitch deck: yaml girders, CI, portrayal ethics. Flags
 
 | Trail | When to leap |
 |-------|----------------|
-| [constructionist_lineage](../trails/constructionist-lineage.md) | Product story — 1996 to living organism |
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Guest ethics and contracts |
-| [repo_show_spine](../trails/repo-show-spine.md) | What you're investing in technically |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | Product story — 1996 to living organism |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Guest ethics and contracts |
+| [repo-show-spine](../trails/repo-show-spine.md) | What you're investing in technically |
 
 ---
 

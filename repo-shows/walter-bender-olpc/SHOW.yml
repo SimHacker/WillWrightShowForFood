@@ -31,7 +31,7 @@ segments:
   - id: jim_gettys_cairo
     topic: "Jim Gettys / Cairo — why Micropolis ended up on Cairo/GTK path"
 
-  - id: doreen_nelson
+  - id: doreen-nelson
     topic: "Doreen Nelson — curriculum guides and Design-Based Learning"
     links:
       - characters/doreen-nelson/invitation.md

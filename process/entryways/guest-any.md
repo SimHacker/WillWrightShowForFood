@@ -4,7 +4,7 @@
 
 We publish portrayals **about** real people — verifiable, polite, revocable. Your directory is yours to accept, edit, or delete; the CARD lists public skills we might invoke on air.
 
-**Girder:** [`entryways.yml`](../entryways.yml#guest_any) · **Map:** [Museum map](README.md)
+**Girder:** [`entryways.yml`](../entryways.yml#guest-any) · **Map:** [Museum map](README.md)
 
 ---
 
@@ -27,9 +27,9 @@ We publish portrayals **about** real people — verifiable, polite, revocable. Y
 
 | Trail | When to leap |
 |-------|----------------|
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Contracts before you read any portrait |
-| [repo_show_spine](../trails/repo-show-spine.md) | What you're agreeing to if you say yes |
-| [moollm_compose](../trails/moollm-compose.md) | How guest cards compose with MOOLLM |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Contracts before you read any portrait |
+| [repo-show-spine](../trails/repo-show-spine.md) | What you're agreeing to if you say yes |
+| [moollm-compose](../trails/moollm-compose.md) | How guest cards compose with MOOLLM |
 
 ---
 

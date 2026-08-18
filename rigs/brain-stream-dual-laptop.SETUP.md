@@ -55,7 +55,7 @@ Local copies go stale. Install/upgrade pulls **latest yaml** from the raw URL un
 ```
 
 - **Local win (no stream needed):** the viewer docks over Cursor's chat **history** in
-  `cursor_chat_replacement` mode — you keep typing in Cursor's real input bar (model switcher,
+  `cursor-chat-replacement` mode — you keep typing in Cursor's real input bar (model switcher,
   attach), but the scrollback above becomes stable/zoomable/bookmarkable.
 - **Stream win:** OBS renders the GUI as a Browser Source (true alpha — no chroma key) and composes
   it with the Cursor capture; scale/animate live like a VJ.
@@ -115,7 +115,7 @@ map of machines, capture sources, transport, OBS scenes, overlay layout, and str
 - *NDI not appearing:* both on same wired subnet; DistroAV + NDI runtime installed; firewall allows mDNS.
 - *No alpha on GUI:* you're capturing a screen, not using a Browser Source — switch to Browser Source, or chroma-key a solid bg.
 - *NVENC missing:* update NVIDIA driver; enable hardware-accelerated GPU scheduling (Windows).
-- *Overlay covers the input box:* shrink the docked window's bottom edge above Cursor's input (cursor_chat_replacement leaves it exposed).
+- *Overlay covers the input box:* shrink the docked window's bottom edge above Cursor's input (cursor-chat-replacement leaves it exposed).
 
 ### Proof checklist
 - [ ] Idempotent re-run skips completed phases

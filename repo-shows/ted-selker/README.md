@@ -11,7 +11,7 @@ Input efficiency and attention-respecting design. The **TrackPoint** (cursor wit
 
 ## Trail
 
-[direct_manipulation](../../process/trails/direct-manipulation.md) — input, interface, and the people who shaped both.
+[direct-manipulation](../../process/trails/direct-manipulation.md) — input, interface, and the people who shaped both.
 
 ---
 

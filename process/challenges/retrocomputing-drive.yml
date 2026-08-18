@@ -58,7 +58,7 @@ challenge_lanes:
     judges: [spreadsheet, rubric, human]
     rule: "Same rig declaration — optimize cost/shifts while touching real retro I/O"
 
-how_it_runs:
+how-it-runs:
   host_drops: "Spec CARD — platform constraint optional (e.g. 'Apple ][ only' or 'any retro target')"
   contestant:
     - "rigs/<persona>.rig.yml — document languages, tools, platforms, emulators in components"
@@ -72,15 +72,15 @@ how_it_runs:
     - "Optional: Cursor spend CSV + cursor-mirror composer id"
 
 flagship_instances:
-  apple2_drive:
+  apple2-drive:
     see: apple2-drive.yml
     example_rig: ../../rigs/apple2-flair-lap.rig.yml
     tagline: "Drive the ][ — INTEGER BASIC if you dare"
-  pdp10_maclisp_drive:
+  pdp10-maclisp-drive:
     see: pdp10-maclisp-drive.yml
     example_rig: ../../rigs/pdp10-maclisp-flair-lap.rig.yml
     tagline: "Write in MACLISP on a PDP-10 emulator running ITS!"
-  lisp_machine_hack_off:
+  lisp-machine-hack-off:
     see: lisp-machine-hack-off.yml
     example_rigs: [../../rigs/lisp-machine-symbolics.rig.yml, ../../rigs/lisp-machine-lmi.rig.yml]
     tagline: "Symbolics vs LMI — the battle continues"
@@ -105,7 +105,7 @@ ties_to:
   - ../../characters/robots/slats/judge-rubric.yml
 
 see_also:
-  - { path: cross-links.yml#retrocomputing_drive, why: "Narrative trail — all retro nodes" }
+  - { path: cross-links.yml#retrocomputing-drive, why: "Narrative trail — all retro nodes" }
   - { path: retrocomputing-drive.md, why: "Generated markup view of this family" }
   - { path: ../micropolis-ai-drag-race.md, why: "Retro laps are drag race challenge rotation" }
   - { path: ../manual-transmission.yml, why: "Measurement lane — smallest model on retro target" }

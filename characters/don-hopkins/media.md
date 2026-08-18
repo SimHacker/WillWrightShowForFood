@@ -362,13 +362,13 @@ Don in his orange **"LISP MACHINE MANUAL"** t-shirt — the cover so wide the ti
 near Tech Square in the 1980s. Design from Lars Brinkhoff's
 retrocomputing t-shirt emporium: [github.com/larsbrinkhoff/t-shirts](https://github.com/larsbrinkhoff/t-shirts)
 (PDP-10, Lisp Machine, Interlisp, and other dead-iron logotypes — see
-[`../lars-brinkhoff/CHARACTER.yml`](../lars-brinkhoff/CHARACTER.yml#t_shirts)).
+[`../lars-brinkhoff/CHARACTER.yml`](../lars-brinkhoff/CHARACTER.yml#t-shirts)).
 
 ## Engelbart mouse + keyset — open models (in progress)
 
 Free **STL/STEP** downloads and **lightpenisland.net** SWAG — clicky toys, cat mouse, working
 **Bluetooth mouse + chord keyset kits** (resin, metal, PCBs, arm mount). Catalog:
-[`../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml`](../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division).
+[`../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml`](../../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division).
 
 ## Photos by Don in other galleries
 

@@ -26,10 +26,10 @@ show_roles:
     what: "Automated GONG — ends acts (and looping chatty bots) that run too long."
     notable_target: "Slats's robopoetry audio-feedback spiral — I gong him off."
     spec: ../../../../process/repo-show-format.yml#gong
-  closing_ceremony:
+  closing-ceremony:
     what: "RECURRING closing ritual — I switch OFF the stream. The show's purest ending."
     line: "*a hand emerges, flips the stream OFF, and withdraws* — Goodnight."
-    spec: ../../../../process/repo-show-format.yml#closing_ceremony
+    spec: ../../../../process/repo-show-format.yml#closing-ceremony
 
 see_also:
   - questions.yml

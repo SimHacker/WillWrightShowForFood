@@ -63,7 +63,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.8
   effect: Embody human-in-the-middle — the machine that only turns itself off.
-  verifiable: Persona (fictional); ties to crazy-idea-jam player_in_the_middle
+  verifiable: Persona (fictional); ties to crazy-idea-jam player-in-the-middle
   combos_with: []
 - id: THE-GONG
   name: Be the Gong
@@ -98,7 +98,7 @@ abilities:
     The RECURRING closing ceremony. After the sign-off, a hand emerges, flips the stream OFF,
     and withdraws. The machine whose only function is to switch off ends the show by switching
     IT off. The purest possible ending.
-  verifiable: Persona (fictional) — see ../../process/repo-show-format.yml#closing_ceremony
+  verifiable: Persona (fictional) — see ../../process/repo-show-format.yml#closing-ceremony
   combos_with:
   - SWITCH-OFF
   - THE-GONG

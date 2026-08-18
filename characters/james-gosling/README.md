@@ -54,7 +54,7 @@ Proposed **Repo Show** guest — solo or **NeWS reunion** with [Arthur van Hoff]
 [Rosenthal](../david-rosenthal/README.md), [Owen Densmore](../owen-densmore/README.md),
 [Josh Siegel](../josh-siegel/README.md) (Gosling arranged his 1990 Sun interview; Josh rewrote the
 NeWS interpreter). Trail:
-[`live_objects`](../../process/trails/live-objects.md) · [`send_code_not_commands`](../../process/trails/send-code-not-commands.md)
+[`live-objects`](../../process/trails/live-objects.md) · [`send_code_not_commands`](../../process/trails/send-code-not-commands.md)
 
 ---
 

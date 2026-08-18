@@ -26,7 +26,7 @@ lisp_machine_manual_parallel:
   shirt: don-hopkins-lisp-machine-manual-shirt-queensday.png
   wraparound: "Letters wrap spine and back — front cover reads LISP / CHINE / NUAL"
   warehouse_parallel: "METROPOLITAN / RAGE WAREHOUSE / IRE PROOF — framing eats the letters"
-  lars_brinkhoff: "../../lars-brinkhoff/CHARACTER.yml#t_shirts"
+  lars_brinkhoff: "../../lars-brinkhoff/CHARACTER.yml#t-shirts"
   punchline: "Typography as accidental poetry when the viewport is wrong"
 
 copyleft_orbit:

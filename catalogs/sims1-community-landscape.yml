@@ -133,7 +133,7 @@ virtual_catalogs:
       seed — Steam Legacy Collection (2025-01-31) ships without Exchange button, web hooks, or upload path;
       community uses SFS + manual zip. Soul City / Angel = revival infrastructure.
 
-  internet_archive_import:
+  internet-archive-import:
     working_name: tornado_importer  # IA harvest → Soul City catalog entries
     what: |
       Pipeline: Wayback / IA collections → normalized CARD records (title, creator, date, IA URL,
@@ -144,7 +144,7 @@ virtual_catalogs:
 
   soul_city_hub:
     what: "Git-checked-in + web hub for round-trippable saves, albums, cross-game facets"
-    architecture: ../../repo-shows/INDEX.yml#bridges_architecture
+    architecture: ../../repo-shows/INDEX.yml#bridges-architecture
     distribution: ../soul-city/github-distribution-model.yml
 
 # STEAM COMMUNITY GUIDES — Soul City discovery (web hub + Repo Shows)
@@ -198,9 +198,9 @@ steam_community_guides:
     wrap: "Guide + web hub list SimProv as federated catalog — downloads from Soul City or creator CDN"
 
 # FEDERATION PRINCIPLE (Heather & Steve show)
-non_extractive_lift:
+non-extractive-lift:
   rule: "Send fans to SimFreaks / ZombieSims subscriptions — Soul City is rails, not a loot box"
-  show: ../../repo-shows/heather-and-steve-alvey/SHOW.yml#support_them
+  show: ../../repo-shows/heather-and-steve-alvey/SHOW.yml#support-them
 
 see_also:
   - soul-city/README.md

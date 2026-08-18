@@ -33,7 +33,7 @@ lifecycle:
     workflow: |
       Hack-Off: ship spec CARD in Zmacs on Genera. Dynamic Windows flair welcome.
       Host Cursor orchestrates; demo is on the VLM. License compliance declared in PR.
-    contexts: [lisp_machine_hack_off, retrocomputing_drive, micropolis_ai_drag_race]
+    contexts: [lisp-machine-hack-off, retrocomputing-drive, micropolis_ai_drag_race]
   replicate:
     checklist:
       - "Emulator boots Genera"

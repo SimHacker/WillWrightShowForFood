@@ -38,7 +38,7 @@ connections:
 
 show_suggestions:
   - { seed: ../../repo-shows/doreen-nelson/README.md, what: "Design-Based Learning × open SimCity — curriculum for the XO and beyond" }
-  - { seed: ../../repo-shows/walter-bender-olpc/SHOW.yml#doreen_nelson, what: "OLPC segment — curriculum guides + DBL" }
+  - { seed: ../../repo-shows/walter-bender-olpc/SHOW.yml#doreen-nelson, what: "OLPC segment — curriculum guides + DBL" }
   - { seed: ../../repo-shows/remembering-the-constructionists/remembering-the-constructionists.yml, what: "Constructionist education reunion" }
 
 sources:

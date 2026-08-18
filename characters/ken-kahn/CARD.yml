@@ -23,7 +23,7 @@ relationships:
   # kinds may stack — real people relate in multiple ways at once
   # Fact-checked: PhD advisor was Carl HEWITT, not Minsky (MIT DSpace 1721.1/16012; Math Genealogy)
   - { with: marvin-minsky, kinds: [lab_milieu, committee_reported, memorial_discussant], why: "PhD 1979 in the AI Lab Minsky co-directed — advisor Carl Hewitt; Minsky + Papert reported on committee; Logo group member" }
-  - { with: seymour-papert, kinds: [logo_group, constructionist_lineage], why: "🕯️ Joined the Logo group after his master's; taught kids programming; ToonTalk continues the line" }
+  - { with: seymour-papert, kinds: [logo_group, constructionist-lineage], why: "🕯️ Joined the Logo group after his master's; taught kids programming; ToonTalk continues the line" }
   - { with: cynthia-solomon, kinds: [logo_culture_colleague], why: "MIT Logo culture of the 1970s" }
   - { with: margaret-minsky, kinds: [colleague_flagged_by], why: "Margaret flagged his Snap! AI blocks to colleagues" }
   - { with: brian-harvey, kinds: [snap_ecosystem_peer], why: "AI blocks extend the Snap! world Brian co-created" }

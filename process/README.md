@@ -186,13 +186,13 @@ Twelve doorways — ordered playlists. Full pages: [**ENTRYWAYS.md**](../ENTRYWA
 
 | Doorway | Page | CTA |
 |---------|------|-----|
-| **guest_will** | [guest-will.md](entryways/guest-will.md) | Will's invitation thread |
-| **guest_any** | [guest-any.md](entryways/guest-any.md) | Any guest's path |
+| **guest-will** | [guest-will.md](entryways/guest-will.md) | Will's invitation thread |
+| **guest-any** | [guest-any.md](entryways/guest-any.md) | Any guest's path |
 | **player** | [player.md](entryways/player.md) | 1996 talk — no git |
 | **watcher** | [watcher.md](entryways/watcher.md) | FORMAT first |
-| **for_bots** | [for-bots.md](entryways/for-bots.md) | FOR-BOTS.md → one ENTRYWAY |
+| **for-bots** | [for-bots.md](entryways/for-bots.md) | FOR-BOTS.md → one ENTRYWAY |
 | **hacker** | [hacker.md](entryways/hacker.md) | `pnpm verify` |
-| **ai_coder** | [ai-coder.md](entryways/ai-coder.md) | Declare rig honestly |
+| **ai-coder** | [ai-coder.md](entryways/ai-coder.md) | Declare rig honestly |
 | **retro** | [retro.md](entryways/retro.md) | SETUP DNA required |
 | **educator** | [educator.md](entryways/educator.md) | Will 1996 → Papert/Kay |
 | **archivist** | [archivist.md](entryways/archivist.md) | Provenance → primary sources |

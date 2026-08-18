@@ -6,7 +6,7 @@ Don's pitch (green-room; ask permission before filming):
 
 - **Bongo Bingo** — random Amsterdam coffeeshops on a card; bike there; Foursquare GPS check-in;
   review what you tried. TomTom-era self-education; progenitor of StoryMaker / Urban Safari.
-  [`process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#bongo_bingo)
+  [`process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml#bongo-bingo)
 - **Mark Your Territory** — [Oct 2011](https://www.quitmeyer.org/updates/mark-your-territory-release/) pee-to-Foursquare
   ([GitHub](https://github.com/quitmeyer/Mark-Your-Territory---Pee-to-Check-In-to-Foursquare),
   [video](https://www.youtube.com/watch?v=rRdfeb7vDWg), [Instructables](https://www.instructables.com/id/Pee-to-Check-In-to-Foursquare-Mark-Your-Territor/))

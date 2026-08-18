@@ -57,7 +57,7 @@ stages:
     what: |
       High-production long-form renders of proven playlist sequences — interstitial
       glue, overlays, callouts, commentary. Multiple director's cuts over time
-      (repo-show-format.yml#directors_cuts). Only render what playlists prove works.
+      (repo-show-format.yml#directors-cuts). Only render what playlists prove works.
     artifact: "Long-form videos on the show channel"
     note: "Rendering internalizes traffic that composition-by-reference was exporting — do it when the composition is the product."
 

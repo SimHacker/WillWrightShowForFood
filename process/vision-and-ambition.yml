@@ -57,11 +57,11 @@ lineage:
   forebears:
     - "Terry Winograd open seminar tradition (CS547 archive)"
     - "Internet-scale permanent record (archival ethos — Internet Archive / Brewster Kahle)"
-    - "The Long Now (Brian Eno's coinage; Long Now Foundation) — 10,000-year thinking; see long_now_and_later"
+    - "The Long Now (Brian Eno's coinage; Long Now Foundation) — 10,000-year thinking; see long-now-and-later"
     - "Hacker/builder culture — Woz energy: show the schematic, ship the board"
 
-repo_as_simulation:
-  # The deep move under reposhow_the_medium. Facade prose: vision-and-ambition.md § "The deep move".
+repo-as-simulation:
+  # The deep move under reposhow-the-medium. Facade prose: vision-and-ambition.md § "The deep move".
   surface: "Repo as medium, social collaboration hub, living artifact — true, and only the projection"
   deep_move: |
     MOOLLM enters through the back door. Day jobs: authoring tool, show orchestrator, coherence
@@ -120,7 +120,7 @@ pyramid:
     Brutalist GitHub surface: rebar (schemas), i-beams (process/*.yml), poured slab
     (monorepo verify). Browse without an account. Clone and break it. PR or issue.
 
-rig_culture:
+rig-culture:
   teaching: |
     Repo Shows teach rig culture — not just tools. Declare your class honestly.
     Don't exclude — declare and have fun. It's just a game. (Same shape Don applies to
@@ -163,9 +163,9 @@ rig_culture:
       coinage: "Don Hopkins coined consciencious objectors at a meetup with David Ungar and Kaleida colleagues (ScriptX object-system era)"
       meaning: "Programmers who conscientiously object to replacing hand craft with opaque automation"
       show_tie: "david-ungar-self-moollm.yml — Self × MOOLLM + rig culture"
-  see: repo-show-format.yml#rig_spectrum
+  see: repo-show-format.yml#rig-spectrum
 
-audiences_if_you_stumbled_here:
+audiences-if-you-stumbled-here:
   educators_and_constructionists:
     for: "The people we are inviting — and everyone who teaches with microworlds"
     invited_guests:
@@ -210,7 +210,7 @@ audiences_if_you_stumbled_here:
       - "MOOLLM included or not — how wired (kernel/moollm-plugin.yml)"
       - "How you actually use it; what contexts (show, harvest, homeplay, class, …)"
     participate: "Issue or PR with rig-feedback — help the network breed technique DNA."
-    see: repo-show-format.yml#rig_spectrum
+    see: repo-show-format.yml#rig-spectrum
   hacker_news_viral:
     hook: "RTFR. Man-vs-machine optional. Dance-off optional."
     participate: "Questions as PRs. Rig class declared. Coolest implementation wins attention, not a prize we guarantee."
@@ -221,7 +221,7 @@ audiences_if_you_stumbled_here:
     namesake_examples: [Brewster_Kahle, Internet_Archive, Stanford_Libraries]
     hook: "Permanent, attributed, forkable record — talk lineage from 1996 forward."
     participate: "Mirror, cite, ingest show objects; we want the graph to outlive any one platform."
-  hardware_hacker_builder:
+  hardware-hacker-builder:
     namesake_examples: [Steve_Wozniak, James_Gosling]
     hook: "Schematics in the repo. No gatekeeping. Bare-hands rig class welcome."
     exemplar: characters/james-gosling/media/gosling-young-pdp8-hotrod.yml
@@ -237,7 +237,7 @@ audiences_if_you_stumbled_here:
       harvest to code and skills → graph grows by PR. Production layers can wrap the same object graph.
     participate: "If this format interests you, start with the yaml — process/repo-show-format.yml"
 
-what_we_are_not_promising:
+what-we-are-not-promising:
   section_title: "What we are not doing"
   items:
     - "No greenlit series, stream, or distribution deal"
@@ -247,7 +247,7 @@ what_we_are_not_promising:
     - "Not blocked on Will (accepted July 2026); kickoff confirmed; air on his schedule"
   # Will Wright accepted 2026-07 — see meta.will_wright
 
-what_we_are_building_in_public:
+what-we-are-building-in-public:
   - "Kickoff Repo Show with Will Wright (accepted guest — repo-shows/will-wright-premiere/)"
   - "MOOLLM skills library (skills/) — harvested, credited, composable; the main long-term stack"
   - "Cauldron SCOOP pipeline — live jam → lift skills out of the melt (see repo-show-format.yml)"
@@ -278,13 +278,13 @@ skills:
     hosted-content-cards, representation-ethics, … each traced to a guest, a show, a PR.
     Skills are how the 1996 microworlds talk becomes *runnable* thirty years later.
 
-curb_appeal_meets_brutalism:
+curb-appeal-meets-brutalism:
   facade: "README.md, show READMEs, vision-and-ambition.md — human-readable, warm, Flower Child energy"
   girder: "YAML indexes, schemas, SHOW.yml, CARD.yml, GLANCE pyramid, git history"
   slab: "pnpm verify, GitHub Actions, SETUP.md — it either passes or it doesn't"
   rule: "We don't dress up emptiness. If it's not in the repo yet, the yaml says seed or roadmap."
 
-long_now_and_later:
+long-now-and-later:
   # Don's words: "I am in this for the LONG NOW and LATER game."
   disclaimer: |
     No relationship, endorsement, or support from any institution named here is claimed or
@@ -388,7 +388,7 @@ long_now_and_later:
       what: "Permanent, open, mirrorable record of culture and software."
       resonance: |
         The repo's stated goal is a graph that outlives any one platform — mirror, cite, ingest
-        (see audiences_if_you_stumbled_here.archive_and_library, namesake Brewster Kahle). Reviving
+        (see audiences-if-you-stumbled-here.archive_and_library, namesake Brewster Kahle). Reviving
         SimCity/old code, archiving the 1996 Stanford talk, and primary-source provenance are
         exactly the kind of work an archive wants to preserve.
       in_repo: [../process/trails/archive-and-provenance.md]
@@ -404,7 +404,7 @@ long_now_and_later:
     - "Any Long Now or Internet Archive partnership, funding, or endorsement."
     - "That these institutions know this exists. This is alignment, offered for inspection."
 
-connectors_and_legacy:
+connectors-and-legacy:
   # Don, paraphrased: "I'm lucky to have met my heroes. I want to stay or get back in touch — or
   # memorialize them with others who knew them — and share our networks. The product is a series of
   # Repo Shows others can pick up and carry to the stars long after we're all gone."
@@ -458,7 +458,7 @@ connectors_and_legacy:
     - "Scott Draves — the still-active throughline (correspondence + collaboration to today). See ../characters/scott-draves/"
   disclaimer: "Relationships described from Don's perspective. No claim that any named person has committed to participate; busy people are hard to reach, and every reply (or none) is honored gracefully."
 
-invitation_to_stakeholders:
+invitation-to-stakeholders:
   tone: "Inspect first. Fork second. Talk third."
   contact: "https://github.com/SimHacker/WillWrightShowForFood/issues"
   ask: |

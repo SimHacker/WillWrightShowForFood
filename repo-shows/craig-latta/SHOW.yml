@@ -18,11 +18,11 @@ why_him:
   caffeine: "Caffeine — live, persistent changes to a running web page via SqueakJS + WASM; the JS bridge; Catalyst's LLM-assisted Smalltalk→WASM translation."
   keep_smalltalk: "Craig had Opus 4.8 whiteroom-port Keep (generalbusiness-ai/keep) to Smalltalk — a graph database for agentic memory he prefers to a pile of Markdown files."
   amsterdam_now: "Craig divides time between Amsterdam and Berkeley — an in-person, on-camera session while both are in town (heat-wave timing)."
-  live_object_lineage: "Sits on the live_objects trail with Dan Ingalls and Vanessa Freudenberg."
+  live_object_lineage: "Sits on the live-objects trail with Dan Ingalls and Vanessa Freudenberg."
 
 remember_vanessa:
   why: "Great friends; her SqueakJS is the foundation Caffeine builds on."
-  memorial_mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/ (memorial)."
+  memorial-mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/ (memorial)."
   wasm_thread: "Her sharp, insightful take on WebAssembly after SqueakJS — the exact thread Craig carried into Caffeine/Catalyst."
 
 threads:

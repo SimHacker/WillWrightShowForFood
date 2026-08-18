@@ -9,7 +9,7 @@ March, 1972." Delivered in the 24 July 2026 pcloud bundle
 |------|------|
 | [`PIXIE-PhD-Thesis-HULEMKE-Interactive-Graphics-in-an-integrated-CAD-system-1972.pdf`](PIXIE-PhD-Thesis-HULEMKE-Interactive-Graphics-in-an-integrated-CAD-system-1972.pdf) | Original scan (219 pages, image-only, typewritten + hand-drawn figures) |
 
-Closes the `heinz_phd_thesis_1972` gap in [`../../pull-in-gaps.md`](../../pull-in-gaps.md).
+Closes the `heinz-phd-thesis-1972` gap in [`../../pull-in-gaps.md`](../../pull-in-gaps.md).
 
 ## Notes from survey pass
 

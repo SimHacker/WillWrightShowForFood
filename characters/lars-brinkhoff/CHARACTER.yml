@@ -24,7 +24,7 @@ invitation:
   show_seed: repo-shows/lars-brinkhoff/
   paired_guest: thomas-cherryhomes
   challenge: "Make it so — PDP-10/ITS + MACLISP on emulated iron for Micropolis AI Drag Race"
-  cold_open_excerpt: ../../process/repo-show-branding.yml#cultural_excerpts#americans_arpanet_pdp10
+  cold_open_excerpt: ../../process/repo-show-branding.yml#cultural-excerpts#americans-arpanet-pdp10
 
 bio:
   summary: |
@@ -36,7 +36,7 @@ bio:
     with **Thomas Cherryhomes** — Lars makes emulated ITS boot; Thomas wires retro machines
     to the modern net (FujiNet, IRATA.ONLINE).
 
-t_shirts:
+t-shirts:
   url: https://github.com/larsbrinkhoff/t-shirts
   what: |
     Vintage computing t-shirt design emporium — PDP-10, Lisp Machine Inc., Interlisp, IMP,

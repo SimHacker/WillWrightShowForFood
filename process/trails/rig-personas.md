@@ -1,10 +1,10 @@
-# Trail — rig_personas
+# Trail — rig-personas
 
 > *Your rig IS your drag persona*
 
 download → install → configure → use → replicate → mash up
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#rig_personas) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#rig-personas) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

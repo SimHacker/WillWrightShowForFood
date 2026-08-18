@@ -27,9 +27,9 @@ Repo Show treats credited public ideas as curriculum. Will's talk is primary sou
 
 | Trail | When to leap |
 |-------|----------------|
-| [constructionist_lineage](../trails/constructionist-lineage.md) | Full arc from Winograd 1996 to open Micropolis |
-| [repo_show_themes](../trails/repo-show-themes.md) | Educators' track + simulation effect + crown jewel threads |
-| [moollm_compose](../trails/moollm-compose.md) | Skills harvested from shows back into MOOLLM |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | Full arc from Winograd 1996 to open Micropolis |
+| [repo-show-themes](../trails/repo-show-themes.md) | Educators' track + simulation effect + crown jewel threads |
+| [moollm-compose](../trails/moollm-compose.md) | Skills harvested from shows back into MOOLLM |
 | [player](player.md) | Same 1996 source, fan-facing order |
 
 ---

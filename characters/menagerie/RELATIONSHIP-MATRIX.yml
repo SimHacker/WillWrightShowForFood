@@ -6,7 +6,7 @@ meta:
   ensemble: lower-chelsea-eight
   schema: SCHEMA.yml
   sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
-  fictional_neighbor_ids: { mimsy: 901, gregory: 902, vandermeer: 903, bucky_jr: 904, helena: 905, margot: 906, julian: 907, bunny: 908, donna_toadstool: 912, doctor_no: 913, palm: 914 }
+  fictional_neighbor_ids: { mimsy: 901, gregory: 902, vandermeer: 903, bucky-jr: 904, helena: 905, margot: 906, julian: 907, bunny: 908, donna_toadstool: 912, doctor_no: 913, palm: 914 }
 
 edge_types:
   friend: mutual warmth
@@ -47,7 +47,7 @@ matrix:
       type: friend
       sims: { daily: 50, lifetime: 55 }
       history: He validates her semiotics; she prints his guest-book entries
-    bucky_jr:
+    bucky-jr:
       type: friend
       sims: { daily: 45, lifetime: 50 }
       history: Only patron who mentions nib taper — she calls it aggressive restraint
@@ -87,7 +87,7 @@ matrix:
       type: enemy
       sims: { daily: -10, lifetime: 5 }
       history: Scotland/blockchain derails his gamma lecture
-    bucky_jr:
+    bucky-jr:
       type: friend
       sims: { daily: 30, lifetime: 35 }
       history: Tensile honesty is the only non-derivative asset class
@@ -148,7 +148,7 @@ matrix:
       sims: { daily: 95, lifetime: 98 }
       narrative: Publishes there first. Married in citation.
 
-  bucky_jr:
+  bucky-jr:
     julian:
       type: rivalry
       sims: { daily: 15, lifetime: 20 }
@@ -225,7 +225,7 @@ matrix:
     margot:
       type: rivalry
       sims: { daily: -5, lifetime: 15 }
-    bucky_jr:
+    bucky-jr:
       type: rivalry
       sims: { daily: 15, lifetime: 20 }
     mimsy:
@@ -261,7 +261,7 @@ matrix:
     julian:
       type: friend
       sims: { daily: 45, lifetime: 50 }
-    bucky_jr:
+    bucky-jr:
       type: friend
       sims: { daily: 55, lifetime: 60 }
     board-approval:

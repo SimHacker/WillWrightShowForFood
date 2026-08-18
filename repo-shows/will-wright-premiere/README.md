@@ -104,13 +104,13 @@ Next: crystallize the repo, gather audience TicketPRs, schedule the kickoff conv
 
 ## Museum map
 
-This show is stop #1–2 on the **guest_will** and **player** playlists. Full map: [**ENTRYWAYS.md**](../../ENTRYWAYS.md)
+This show is stop #1–2 on the **guest-will** and **player** playlists. Full map: [**ENTRYWAYS.md**](../../ENTRYWAYS.md)
 
 | Doorway | → | Why |
 |---------|---|-----|
 | **Guest (Will)** | [playlist](../../process/entryways/guest-will.md) | invitation → here → 1996 → portrait → CARD |
 | **Player** | [playlist](../../process/entryways/player.md) | 1996 talk first — no git |
-| **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
+| **constructionist-lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
 | **All doorways** | [ENTRYWAYS.md](../../ENTRYWAYS.md) · [TRAILS.md](../../TRAILS.md) | watcher · hacker · AI · retro · educator · producer · publisher |
 
 ---

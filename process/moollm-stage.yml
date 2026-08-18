@@ -6,7 +6,7 @@ meta:
   status: active
   thesis: "MOOLLM is the ideal environment for Repo Show discussions — navigable rooms, ongoing narrative, harvestable skills."
   deep_move: |
-    This file is the machinery of the repo_as_simulation K-line (vision-and-ambition.yml):
+    This file is the machinery of the repo-as-simulation K-line (vision-and-ambition.yml):
     MOOLLM's night job is to run the repo as a SIMULATION ENGINE — the show is performed
     inside the world, not documented beside it. See vision-and-ambition.md § "The deep move".
 
@@ -41,8 +41,8 @@ pub_as_show:
 repo_show_bridge:
   wwsff: "Public Repo Show — shotgun-blast ensemble, guest prototype, ensemble medium"
   moollm: "Third place + session logs + room graph — where discussions actually happen"
-  memory_palace_tour:
-    spec: ../apps/performance-space/faceball-construction-set.yml#memory_palace_tour
+  memory-palace-tour:
+    spec: ../apps/performance-space/faceball-construction-set.yml#memory-palace-tour
     what: "Face puppets at each palace stop — git room + artifact + one K-line; tour on stream or async clips per room"
   together: |
     Guest async video walks the WWSFF bundle; MOOLLM pub session logs capture pop-in continuations;

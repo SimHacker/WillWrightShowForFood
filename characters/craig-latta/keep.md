@@ -21,7 +21,7 @@ The bundled **SKILL.md** treats memory as **practice**, not storage: reflect bef
 
 ## Why Craig's Smalltalk port matters here
 
-Craig sits on the **[live_objects](../../process/trails/live-objects.md)** trail — objects that stay live in the browser via SqueakJS and WASM. **Keep in Smalltalk** is the same instinct applied to **agent memory**:
+Craig sits on the **[live-objects](../../process/trails/live-objects.md)** trail — objects that stay live in the browser via SqueakJS and WASM. **Keep in Smalltalk** is the same instinct applied to **agent memory**:
 
 | Markdown pile | Keep graph |
 |---------------|------------|

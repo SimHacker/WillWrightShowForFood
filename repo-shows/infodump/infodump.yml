@@ -46,10 +46,10 @@ show:
       already knows is happening — without diagnostic claims, without invoking infamous names,
       without pretending we're doing something else. Late-night evangelical TV for people who
       can't stop explaining bastion geometry or Care Bear lore. The congregation knows. The
-      Will Roll is amen. See solidarity_lexicon — homage not diagnosis; The Sims audience
+      Will Roll is amen. See solidarity-lexicon — homage not diagnosis; The Sims audience
       includes trans, queer, nb, ace, and gender-benders of every persuasion.
 
-  production_aesthetic:
+  production-aesthetic:
     register: "Late-night evangelical TV — parody with love"
     visual:
       - Stained-glass bell curves and raised eyebrows (Eval Genius nod)
@@ -73,7 +73,7 @@ show:
     nobody has to feel bad about it — cutaways carry the social meta-commentary so the dumper
     never breaks flow.
 
-solidarity_lexicon:
+solidarity-lexicon:
   what: |
     Shared vocabulary for the congregation — **homage, not diagnosis**. We design for people who
     go deep, loop happily, and sometimes need a loving eye-roll before the next insight lands.
@@ -168,7 +168,7 @@ solidarity_lexicon:
     - characters/don-hopkins/witty-diatribes.yml
     - schemas/portrayal-standards.md
 
-cutaway_library:
+cutaway-library:
   name: "The Will Roll"
   spec: characters/will-wright/will-roll.yml
   role: "Congregation amen — he has heard this before, AGAIN and AGAIN, with kindness"

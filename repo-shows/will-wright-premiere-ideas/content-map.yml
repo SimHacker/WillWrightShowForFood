@@ -26,7 +26,7 @@ crown_jewel_block:
   theme: ../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.yml
   bridges: ../INDEX.yml
 
-stupid_fun_club:
+stupid-fun-club:
   theme: ../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.yml
   slats: ../will-wright-premiere/slats-reincarnation.yml
 

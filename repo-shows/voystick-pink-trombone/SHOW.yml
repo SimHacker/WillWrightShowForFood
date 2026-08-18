@@ -10,7 +10,7 @@ show:
   guests:
     - zack-qattan          # Pink Trombone ML, Vocap, Croquet multiplayer — private lead; confirm with Don
     - evan-balster         # imitone formant tracker — optional correspondent
-  crazy_idea_jam: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+  crazy_idea_jam: ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
 
 logline: |
   Don's **VoyStick** — pitch=Y, vowel=X, homomorphic bidirectional synthesis — meets Neil Thapen's
@@ -33,7 +33,7 @@ backstory:
 segments:
   - id: what_is_voystick
     topic: "Pitch=Y vowel=X; homomorphic loop; dual-channel voice — NL + gestural, code switching"
-    jam: ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    jam: ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
   - id: pink_trombone_stack
     topic: "Articulatory synthesis — yeah yeah / oy oy; Zack Vocap vs direct F1/F2 (Evan's counsel)"
     demo: pink-trombone-jam.yml
@@ -42,7 +42,7 @@ segments:
     moollm: https://github.com/SimHacker/moollm/blob/main/skills/speech/platforms/vowel-space.yml
   - id: pie_wedge_steering
     topic: "Voice-ahead expert path; steady vowel pops pie menu; GuitarPie + Voystick combo"
-    tie: ../ebike-safari/ebike-safari.yml#steering_pie_ride_game
+    tie: ../ebike-safari/ebike-safari.yml#steering-pie-ride-game
   - id: phoneloper_duet
     topic: "Phoneloper × Pink Trombone — granular moo chorus + vocal-tract jam"
     show: ../phoneloper/SHOW.yml
@@ -55,8 +55,8 @@ segments:
     product: ../ebike-safari/ebike-safari.yml
 
 related:
-  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-  - ../../process/crazy-idea-jam.yml#ebike_safari
+  - ../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
+  - ../../process/crazy-idea-jam.yml#ebike-safari
   - ../../apps/performance-space/pink-trombone-jam.yml
   - ../phoneloper/SHOW.yml
   - ../marc-canter/SHOW.yml

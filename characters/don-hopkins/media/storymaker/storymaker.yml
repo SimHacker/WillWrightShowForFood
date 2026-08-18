@@ -17,8 +17,8 @@ screenshots:
     what: "Green cross navigation — Keyboard Cat center; storyboard sketch above; red + button"
 
 repo_orbit:
-  stupid_fun_club: ../../career/stupid-fun-club.yml
-  crazy_idea_jam: ../../../../process/crazy-idea-jam.yml#creationtv_storymaker
+  stupid-fun-club: ../../career/stupid-fun-club.yml
+  crazy_idea_jam: ../../../../process/crazy-idea-jam.yml#creationtv-storymaker
   urban_safari: ../storymaker-urban-safari/INDEX.yml
   jason_shankel: ../../../jason-shankel/CARD.yml
 

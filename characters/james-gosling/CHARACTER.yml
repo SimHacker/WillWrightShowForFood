@@ -58,7 +58,7 @@ see_also:
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }
 
 face_puppet:
-  spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
+  spec: ../../apps/performance-space/faceball-construction-set.yml#guest-characters
   exemplar_label: "James Gosling at the PDP-8"
   portrait: media/gosling-young-pdp8-hotrod.png
   sidecar: media/gosling-young-pdp8-hotrod.yml

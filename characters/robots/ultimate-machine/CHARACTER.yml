@@ -52,5 +52,5 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities (it mostly declines to act)" }
   - { path: ../slats/, why: "Good old friend — the other oddball bot" }
   - { path: ../marvin-minsky/, why: "🕯️ Designed the original (1952); represent + discuss, never as him" }
-  - { path: ../../process/crazy-idea-jam.yml#player_in_the_middle, why: "The purest off-switch — AI proposes, human disposes" }
+  - { path: ../../process/crazy-idea-jam.yml#player-in-the-middle, why: "The purest off-switch — AI proposes, human disposes" }
   - { path: ../../repo-shows/REPO-SHOWS.yml, why: "game-show-gong seed — it IS the gong" }

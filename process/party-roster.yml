@@ -43,7 +43,7 @@ right_away:
     - { id: bret-victor, show: repo-shows/bret-victor/, invite: send_ready, next: "send — Micropolis legibility + Dynamicland honest beat" }
     - { id: oliver-steele, show: [repo-shows/oliver-steele/, repo-shows/openlaszlo/], invite: draft, next: "send OpenLaszlo + instance-first" }
 
-  sims_team_reunion:
+  sims-team-reunion:
     - { id: jamie-doornbos, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — pool architecture / SimAntics" }
     - { id: tom-van-dijk, show: building-the-sims, invite: draft, contact: [email redacted], location: Deventer, next: "NL meet — IFF Pencil + Behavior.iff + pair Jamie/Heather" }
     - { id: eric-bowman, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — grid + pool layer" }

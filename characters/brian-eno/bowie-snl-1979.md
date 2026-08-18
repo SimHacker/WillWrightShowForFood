@@ -11,7 +11,7 @@ TV — and one of it, "Boys Keep Swinging," is a **Bowie/Eno co-write**, so it's
 a conversation with Brian about that whole period.
 
 It's also the origin of the show's **["video puppet"](../../repo-shows/will-wright-premiere/performance-and-culture.yml)**
-performance kind (`#puppet_kinds` → `puppet.canonical_ancestor`): a human performing live through a
+performance kind (`#puppet-kinds` → `puppet.canonical_ancestor`): a human performing live through a
 cheap, seams-showing composited body.
 
 ## The three songs
@@ -103,7 +103,7 @@ if he's ever curious; the default assumption is that he isn't, and that's comple
 
 ### The bit, extracted as a reusable meme 🎭 (a general tool, NOT an ask of Brian)
 Separately from any guest, the show can rebuild **Bowie's SNL video puppet — fully articulated** — as a
-buildable Faceball preset: **[`#bowie_video_puppet`](../../apps/performance-space/faceball-construction-set.yml#bowie_video_puppet)**,
+buildable Faceball preset: **[`#bowie-video-puppet`](../../apps/performance-space/faceball-construction-set.yml#bowie-video-puppet)**,
 living in the opt-in, curtained **ADULT section** (`#adult_section`). It's a tool in the kit for whoever
 chooses it — a live-performable reaction shot you can bind to a button. **We do not present it as Brian's
 to perform**; it stands on its own as a piece of restaged pop history.
@@ -129,5 +129,5 @@ Two small threads to widen the conversation beyond the one night (Don wanted bot
 - "Boys Keep Swinging" music video (dir. David Mallet, 1979)
 
 *See also:* [`ideas.md`](ideas.md) (hook #9 points here) ·
-[`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) (`#puppet_kinds`) ·
+[`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml) (`#puppet-kinds`) ·
 [`../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml`](../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)

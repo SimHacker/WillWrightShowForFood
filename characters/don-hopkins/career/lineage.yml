@@ -216,7 +216,7 @@ culmination_moollm:
     now with LLMs reading YAML skills off the dict stack.
     See: characters/owen-densmore/, characters/david-rosenthal/,
     process/trails/send-code-not-commands.md, repo-shows/
-  zope_to_moollm: |
+  zope-to-moollm: |
     Don spent years in Zope object publishing, Plone, CMF content management, Python
     workflows, and through-the-web editing -- navigable content trees, types, state
     machines, publish/submit/review. Then abandoned the mind-numbing complexity of Zope for

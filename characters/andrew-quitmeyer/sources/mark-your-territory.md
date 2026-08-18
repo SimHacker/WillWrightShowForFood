@@ -48,7 +48,7 @@ Instructables (**blorgggg** = Andrew): Featured; contest wins — Hack It!, Pock
 ## Show use (Don's pitch — ask permission)
 
 - Walk the **2011 explainer** + Instructables build — ethics, comedy, embodied ubicomp
-- **Bongo Bingo mashup** — Don's TomTom-era Amsterdam Foursquare bingo ([`crazy-idea-jam`](../../../process/crazy-idea-jam.yml#bongo_bingo)) × bodily check-in loop
+- **Bongo Bingo mashup** — Don's TomTom-era Amsterdam Foursquare bingo ([`crazy-idea-jam`](../../../process/crazy-idea-jam.yml#bongo-bingo)) × bodily check-in loop
 - Tie to Foursquare-era GPS storytelling → StoryMaker / Urban Safari thread
 
 ## Green-room

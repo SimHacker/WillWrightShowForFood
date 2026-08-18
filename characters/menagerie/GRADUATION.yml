@@ -67,7 +67,7 @@ roster:
     name: Prof. Eli Vandermeer
     signifier: "📚"
     status: reified
-  - id: bucky_jr
+  - id: bucky-jr
     slug: bucky-jr
     name: Bucky Jr.
     signifier: "🔧"

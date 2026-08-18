@@ -39,7 +39,7 @@ pattern:
     - character.signifier
     - wwsff_overlay.roles
   optional_local_fields:
-    - wwsff_overlay.gallery_openings
+    - wwsff_overlay.gallery-openings
     - wwsff_overlay.relationships
     - symbolic_attachments
     - SIMS-UPLIFT.yml
@@ -102,9 +102,9 @@ instances:
     status: active
     note: "Game-cartridge foundational example — instanced border; dual-minded (zork-mind + adventure-mind, GAME-CARTRIDGES.md)"
 
-emoji_flourish:
+emoji-flourish:
   pattern: "Five emojis — memorable cast signature (Palm originated the format)"
-  fields: [character.signifier, character.emoji_flourish.string, character.emoji_flourish.legend]
+  fields: [character.signifier, character.emoji-flourish.string, character.emoji-flourish.legend]
   examples:
     palm: "🐒✋🌴🔮💜"
     donna-toadstool: "🍄👸🍊💅🎭"

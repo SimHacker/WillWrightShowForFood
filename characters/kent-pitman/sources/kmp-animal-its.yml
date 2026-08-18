@@ -19,7 +19,7 @@ tagline: |
 tree_format:
   persistence: "(PRINT *MEMORY* OUTSTREAM) via UNSAVE/SAVE"
   initial_seed: "(CONSTRUCT-TERMINAL 'DOG '|No one|)"
-  question_node: "(QUESTION text author no-branch yes-branch)"
+  question-node: "(QUESTION text author no-branch yes-branch)"
   terminal_node: "(TERMINAL animal author)"
   internal_forms:
     - HAS-STATE

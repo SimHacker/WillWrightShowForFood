@@ -1,10 +1,10 @@
-# Trail — moollm_compose
+# Trail — moollm-compose
 
 > *Compose with MOOLLM — skills are inheritable prototypes*
 
 WWSFF is a public microworld plugin — shows harvest into upstream MOOLLM skills.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#moollm_compose) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#moollm-compose) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

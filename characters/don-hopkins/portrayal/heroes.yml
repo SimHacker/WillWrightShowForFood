@@ -6,7 +6,7 @@ meta:
   purpose: "Names in the README. Credit where credit is due."
   ethics: "Real beings — respectful mention; fuller portrayal only with consent"
 
-direct_mentors:
+direct-mentors:
   ben_shneiderman:
     relationship: "UMD HCIL mentor"
     taught: "HCI is science AND art — measure, test, prove; humans before computers"

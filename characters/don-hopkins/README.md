@@ -34,7 +34,7 @@ play across the network. **Maxis** turns the dollhouse into **The Sims**;
 **DreamScape** as memory-palace precursor. **Robots** beg for empathy at **Stupid Fun Club**; **constraint solvers**
 (Garnet → Laszlo → Svelte) keep declarative UI honest across decades. Today the filesystem
 itself is the game board: **`import self from self`**, **MOOLLM**, **Repo Show** — the
-bundle finally compiles. Machine mirror: [`CARD.yml`](CARD.yml) → `connections_index`.
+bundle finally compiles. Machine mirror: [`CARD.yml`](CARD.yml) → `connections-index`.
 
 Each blurb below is **one beat long** (~24 words). Read in order; each line **opens** the next.
 

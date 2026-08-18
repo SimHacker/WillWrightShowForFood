@@ -33,7 +33,7 @@ lineage:
     television" ($80,000 and a week's suspension). A MINUTE is our BEAT: the 1MM,
     Will's suggested length for any video. One minute is enough to make history —
     Soupy proved it live. (House gag: one-minute-movie-sandwich.yml
-    #found_commercials.soupy_green_paper.)
+    #found-commercials.soupy_green_paper.)
   max_headroom_blipverts: |
     *Max Headroom* (1987–88, "20 minutes into the future"): **blipverts** — ads
     compressed to sub-second bursts, dropped anywhere in the feed. The show
@@ -47,10 +47,10 @@ lineage:
     the same spirit (Ronco, Zik-Zak, Head On: repetition, psychic damage, eight
     seconds that mean something). Satire stays satire: our blipverts ask you to
     participate or support open source, not buy a bomb.
-  see: ../repo-shows/will-wright-premiere/SEGMENTS.yml#opening_one_minute_movies
+  see: ../repo-shows/will-wright-premiere/SEGMENTS.yml#opening-one-minute-movies
 
 first_instances:
-  upload_roars:
+  upload-roars:
     idea_45s: "The [NOT GODZILLA] monster needs a voice. Jeff Braun got sued; our monster roars by MOOD — angry in traffic, mournful in ruins — and kids will program its brain in Snap!."
     cta_15s: "Hey — we need you ALL to upload ROARS!!! Record yourself roaring — angry, sad, hungry, polite — and send it in. Your roar ships in Micropolis, credited."
     feeds: ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # audience roars join Will's in the mood-tagged library
@@ -60,7 +60,7 @@ first_instances:
       instructions for recording, uploading, and contributing roars, explaining WHY
       we want them and HOW we use them (mood-tagged library, monster's voice, kids
       program the brain in Snap!). Same pattern as the answering machine issue
-      (one-minute-movie-sandwich.yml#show_is_a_playlist.answering_machine_link):
+      (one-minute-movie-sandwich.yml#show-is-a-playlist.answering_machine_link):
       every kind of participation gets its own well-lit front door, linked from
       video ends. Each issue states the license grant (contributions ship in a
       GPL-3 game) and the credit policy up front.
@@ -79,8 +79,8 @@ first_instances:
         afterthought — the explicit, repeated, all-caps ask is ROARS. Participation
         is the currency of the drive; cash is the optional tip jar. Inverting the
         usual fundraising appeal IS the joke, and also the honest priority.
-      support_framing: "Roars are ROARS OF SUPPORT — full framing (Hate Man spirit, imply-don't-accuse) in participation-funnels.yml#roars_of_support; monster sprite-art ask in #artist_ask."
-      origin_story: "The GPL-3 beat threads into the two-answering-machines story arc — one-minute-movie-sandwich.yml#two_answering_machines (two audience members at Long Now set the ball rolling; ask your question)."
+      support_framing: "Roars are ROARS OF SUPPORT — full framing (Hate Man spirit, imply-don't-accuse) in participation-funnels.yml#roars-of-support; monster sprite-art ask in #artist_ask."
+      origin_story: "The GPL-3 beat threads into the two-answering-machines story arc — one-minute-movie-sandwich.yml#two-answering-machines (two audience members at Long Now set the ball rolling; ask your question)."
       deliverable: "Long-form drive video + the 60s One-Minute Intense cut, both feeding the same GitHub submission funnel."
     roar_engine:
       roar_off: "Will & Don ROAR-OFF — a series of ESCALATING roars; the session footage doubles as the drive video's beat 5."
@@ -139,7 +139,7 @@ first_instances:
         into all of this. The Phoneloper demo is part of that story and draws
         from Simlish too; so does the Slats loop: speech recognition =>
         synthesis => noise feedback.
-      crazy_idea_jam: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+      crazy_idea_jam: crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
       show: ../repo-shows/voystick-pink-trombone/SHOW.yml
     moderation_and_trust:
       how: |
@@ -163,7 +163,7 @@ first_instances:
         musically autotuned and time-warped to SING A SONG. Lineage: Captain
         Chesapeake showing kids' mailed-in photos on screen; Soupy Sales's
         little green pieces of paper (one-minute-movie-sandwich.yml
-        #found_commercials.soupy_green_paper).
+        #found-commercials.soupy_green_paper).
     example_blipverts:
       what: |
         Seed the drive with EXAMPLE ROARS as BLIPVERTS — independent, super-short
@@ -177,7 +177,7 @@ first_instances:
       blipvert_rule: |
         Blipverts are first-class playlist atoms: seconds long, self-contained,
         droppable into ANY playlist anywhere in a sandwich (see
-        one-minute-movie-sandwich.yml#show_is_a_playlist). A roar between two
+        one-minute-movie-sandwich.yml#show-is-a-playlist). A roar between two
         segments needs no explanation — that's the format working as intended.
         The word comes from *Max Headroom* — see #lineage.max_headroom_blipverts.
 

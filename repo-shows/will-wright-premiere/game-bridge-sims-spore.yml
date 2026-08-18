@@ -44,6 +44,6 @@ save_spore_souls:
 
 ties:
   - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml            # references this bridge (spore_tie)
-  - ../../apps/performance-space/faceball-construction-set.yml   # spore_creature_avatars + soft-body parts
+  - ../../apps/performance-space/faceball-construction-set.yml   # spore-creature-avatars + soft-body parts
   - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md  # ECG blend engine
-  - ../ideas/crazy-idea-jam.yml                      # character_endosymbiosis + data_portability
+  - ../ideas/crazy-idea-jam.yml                      # character-endosymbiosis + data_portability

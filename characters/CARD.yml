@@ -30,6 +30,6 @@ see_also:
   - { path: lars-brinkhoff/README.md, why: "PDP-10/ITS — make it so" }
   - { path: thomas-cherryhomes/README.md, why: "FujiNet — real retro on wire" }
   - { path: ../repo-shows/INDEX.yml, why: "Shows pair with guest dirs" }
-  - { path: ../process/cross-links.yml#retro_guests_real_wire, why: "Lars × Thomas trail" }
-  - { path: ../process/cross-links.yml#constructionist_lineage, why: "1996 → Will show arc" }
+  - { path: ../process/cross-links.yml#retro-guests-real-wire, why: "Lars × Thomas trail" }
+  - { path: ../process/cross-links.yml#constructionist-lineage, why: "1996 → Will show arc" }
   - { path: ../skills/repo-show/SKILL.md, why: "INVITE phase — invitation.md pattern" }

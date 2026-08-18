@@ -69,7 +69,7 @@ solidarity:
   stance: |
     LGBTQ+ solidarity — trans, queer, nb, ace, bi, lesbian, gay, genderfluid. The Sims audience
     IS the congregation Alex documented. No mockery of commenters.
-  lexicon: repo-shows/infodump/infodump.yml#solidarity_lexicon
+  lexicon: repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 invitation:
   path: characters/alexander-avila/invitation.md

@@ -1,6 +1,6 @@
 # Participation Funnels — pinned GitHub issues as the show's switchboard (DESIGN SPEC)
 # Grew out of the answering-machine funnel (one-minute-movie-sandwich.yml
-# #show_is_a_playlist.answering_machine_link) — the funnel system is now its own design.
+# #show-is-a-playlist.answering_machine_link) — the funnel system is now its own design.
 
 meta:
   id: participation-funnels
@@ -43,7 +43,7 @@ participation_ladder:
   rungs:
     - "SAY HI — reply to the onboarding issue. (Account + comment. That's it.)"
     - "LEAVE A MESSAGE — the answering machine issue; text or a linked video clip."
-    - "CONTRIBUTE A ROAR — audio/video + mood tag (one-minute-intense.yml#upload_roars)."
+    - "CONTRIBUTE A ROAR — audio/video + mood tag (one-minute-intense.yml#upload-roars)."
     - "DRAW A MONSTER — sprite sets + rights grant (artist_ask below)."
     - "MAKE A TicketPR — the git tutorial tier (ticket-pr.yml): PR your way into the show."
     - "CREATE YOUR AUDIENCE CHARACTER — add and edit questions, customize your
@@ -72,7 +72,7 @@ inverted_hollywood:
     in one of the technical discussions: the show's feedback loop, named with
     a CS in-joke that's also literally true of the format.
 
-roars_of_support:
+roars-of-support:
   framing: |
     Your roars are ROARS OF SUPPORT: the monster's voice, and the audience's.
     The implication (never the accusation) is that a project like this needs a
@@ -99,10 +99,10 @@ artist_ask:
     priceless: humans draw the monsters and voice the roars; the machines do
     the plumbing. Forefronting and centering human art is not a disclaimer,
     it's the FEATURE.
-  license_note: "Same license-grant + credit policy as the roar funnel (one-minute-intense.yml#upload_roars.standing_issue) — stated up front, in the issue template."
+  license_note: "Same license-grant + credit policy as the roar funnel (one-minute-intense.yml#upload-roars.standing_issue) — stated up front, in the issue template."
 
 ties:
   - one-minute-movie-sandwich.yml     # answering_machine_link, github_onboarding_tutorial, messages_for_will
-  - one-minute-intense.yml            # upload_roars funnel + standing_issue pattern
+  - one-minute-intense.yml            # upload-roars funnel + standing_issue pattern
   - ticket-pr.yml                     # the TicketPR tier of the ladder
   - ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # leave_a_message_funnel

@@ -20,7 +20,7 @@ plugin:
     glance: GLANCE.yml
     card: CARD.yml
     readme: README.md
-    for_bots: FOR-BOTS.md
+    for-bots: FOR-BOTS.md
     setup: SETUP.md
     kernel: kernel/moollm-plugin.yml
 

@@ -101,14 +101,14 @@ commentary_threads:
 
   ai_generated_images:
     gregory: "Diffusion is just another tranche."
-    bucky_jr: "There is no clay in a PNG. I forgive the drape anyway."
+    bucky-jr: "There is no clay in a PNG. I forgive the drape anyway."
 
   crypto_nft:
     vandermeer: "Scotland invented the bored ape."
     bunny: "My profile picture is a broccoli combination. §500,000 floor."
     margot: "The rug is tartan. I'm openly crying."
 
-  attention_economy:
+  attention-economy:
     mimsy: "I bought before the JPEG loaded."
     donna: "TREMENDOUS engagement on my forgery post."
 
@@ -116,11 +116,11 @@ commentary_threads:
     bunny_pfp: "Adopted Bleep swarm as PFP — board approved"
     gregory: "Blue-chip sheep genome; I'm short apes, long wool"
 
-curiosity_cow_cube:
+curiosity-cow-cube:
   spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   tagline: "Click cube for MOOLA — center is Bogost's cow, not Molyneux's lies"
   cube_faces: "Stolen deeds from AATG pasted on surfaces — ANY image ANY face"
-  click_audio: "Intermittent filtered echoing moos — distressed, far away — compulsion without rescue"
+  click-audio: "Intermittent filtered echoing moos — distressed, far away — compulsion without rescue"
   cowpocalypse: "Scheduled death; pay MOOLA to extend — it wasn't very fun before"
 
 eno_77_million_mode:

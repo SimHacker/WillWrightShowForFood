@@ -28,7 +28,7 @@ abilities:
       method: edithDeepDive
       signature: "edithDeepDive() → sims post-mortem segment"
       score_when:
-        - trigger: sims_team_reunion
+        - trigger: sims-team-reunion
           weight: 1.0
     effect: "Best segment for Jamie/Bobo/Irk/Patrick reunion — not the kickoff video."
     combos_with:

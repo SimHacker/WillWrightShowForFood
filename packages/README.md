@@ -24,4 +24,4 @@ Future packages may wrap [MicropolisCore](https://github.com/SimHacker/Micropoli
 
 Python packages can live here too (`packages/foo/pyproject.toml`) when we add them.
 
-See [`../process/showmaker-network.yml`](../process/showmaker-network.yml#evolving_organism).
+See [`../process/showmaker-network.yml`](../process/showmaker-network.yml#evolving-organism).

@@ -21,7 +21,7 @@ places:
     things: [pixie_demo, eliza]
     note: "Greyhound $99 tour — Engelbart, Sutherland, Weizenbaum, many labs"
 
-  mit_ai_its:
+  mit-ai-its:
     name: MIT-AI Lab / ITS / PDP-10
     hosts: [kent-pitman, marvin-minsky]
     visitors: [don-hopkins]

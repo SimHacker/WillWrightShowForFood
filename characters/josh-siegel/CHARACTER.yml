@@ -24,7 +24,7 @@ invitation:
   consent: not_yet_asked
   document: invitation.md
   show_seed: repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
-  reunion: process/old-band-back-together.yml#news_gang
+  reunion: process/old-band-back-together.yml#news-gang
 
 bio:
   summary: |
@@ -69,4 +69,4 @@ see_also:
   - { path: ../james-gosling/, why: "Set up the Sun interview; NeWS creator; reunion anchor" }
   - { path: ../david-rosenthal/, why: "LGATE eyewitness; ICCCM debate correspondent; reunion anchor" }
   - { path: ../owen-densmore/, why: "class.ps — the object system the rewritten interpreter ran" }
-  - { path: ../../process/old-band-back-together.yml, why: "news_gang reunion roster" }
+  - { path: ../../process/old-band-back-together.yml, why: "news-gang reunion roster" }

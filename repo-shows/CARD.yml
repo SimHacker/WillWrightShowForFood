@@ -31,7 +31,7 @@ see_also:
   - { path: lars-brinkhoff/SHOW.yml, why: "Retro guest show — make it so" }
   - { path: ../skills/repo-show/CARD.yml, why: "Orchestrator interface" }
   - { path: ../skills/repo-show/SKILL.md, why: "SEED → HARVEST protocol" }
-  - { path: ../process/cross-links.yml#repo_show_spine, why: "Show spine trail" }
+  - { path: ../process/cross-links.yml#repo-show-spine, why: "Show spine trail" }
   - { path: ../process/showmaker-network.yml, why: "Link your show into the graph" }
   - { path: ../characters/INDEX.yml, why: "Guests pair with shows" }
   - { path: ../process/live-repo.yml, why: "Public vs DonHopkins export policy" }

@@ -20,7 +20,7 @@ countertenor. A natural thread on **voice as instrument**, pairing with the show
 (**Pink Trombone**, **Phoneloper** — see [`../../apps/performance-space/pink-trombone-jam.md`](../../apps/performance-space/pink-trombone-jam.md))
 and the voice-puppet performance kind
 ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
-`#puppet_kinds`).
+`#puppet-kinds`).
 
 ### 3. Art under a censoring state — GDR, Biermann, and repossession
 Growing up in East Germany as **Wolf Biermann's** stepdaughter, leaving in 1976 — a lived education in

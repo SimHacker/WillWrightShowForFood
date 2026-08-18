@@ -13,7 +13,7 @@ scene:
 
 contrast_bug_farm:
   butterflies: "Beauty overload — serene uncanny"
-  bug_farm: "Creepy overload — squish compulsion"
+  bug-farm: "Creepy overload — squish compulsion"
   shared: "Hands reach through portal; physics toy; Don + Levitt + Nelson in Unity"
 
 see_also:

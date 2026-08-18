@@ -57,7 +57,7 @@ solidarity:
   audience: |
     The Sims audience — builders, modders, storytellers, creator-network solidarity.
     Trans, queer, nb, ace, bi, lesbian, gay, genderfluid, gender-benders of any persuasion.
-  lexicon: repo-shows/infodump/infodump.yml#solidarity_lexicon
+  lexicon: repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 related_press:
   - { title: "A Queer History of The Sims — KQED", url: "https://www.kqed.org/news/12087897/a-queer-history-of-the-sims" }

@@ -16,13 +16,13 @@ pitch: |
 
 homefun_not_homework:
   line: "No homework — but as much homefun as you like."
-  see: ../repo-shows/will-wright-premiere/SHOW.yml#audience_homefun
+  see: ../repo-shows/will-wright-premiere/SHOW.yml#audience-homefun
   loop: "Do homefun → check into repo → show originators → best work discussed in later episode"
   vs_homework: |
     Homework optimizes for completion. Homefun optimizes for exploration, taste,
     and show-your-work — with optional AI rig, declared class, and public receipts.
 
-flagship_question:
+flagship-question:
   text: "Does the commit message match the thinking blocks?"
   why_brilliant: |
     One question bridges narrative (what you claim) and forensics (what the session
@@ -71,7 +71,7 @@ educator_pillar:
     Logo/Snap!/BJC constructionism — microworlds, blocks, show your work.
     Homefun grading is PBD for the LLM era: the commit message is the student's
     story; thinking blocks are the replay. Expert stick-shift laps are training BY
-    demonstration — see orchestration-gold.yml#training_by_demonstration
+    demonstration — see orchestration-gold.yml#training-by-demonstration
 
 ai_offs_as_lab:
   note: "Manual Transmission runs produce the same artifacts teachers grade — sport = assessment"
@@ -88,8 +88,8 @@ student_artifact:
     - homefun README in branch
 
 ties_to:
-  - orchestration-gold.yml#audit_questions
-  - orchestration-gold.yml#since_last_commit
+  - orchestration-gold.yml#audit-questions
+  - orchestration-gold.yml#since-last-commit
   - ../repo-shows/will-wright-premiere/SHOW.yml
   - vision-and-ambition.yml
   - repo-show-format.yml

@@ -6,7 +6,7 @@ Pick a **doorway** (ordered playlist) or leap **sideways** on a trail when one t
 |------|-------------|-------------|
 | Playlists | [`entryways.yml`](../entryways.yml) | This directory |
 | Trails | [`cross-links.yml`](../cross-links.yml) | [`TRAILS.md`](../../TRAILS.md) · [`trails/`](../trails/README.md) |
-| Rooms | [`entryways.yml`](../entryways.yml#rooms_pitch) | [`rooms.md`](rooms.md) |
+| Rooms | [`entryways.yml`](../entryways.yml#rooms-pitch) | [`rooms.md`](rooms.md) |
 
 ---
 
@@ -35,16 +35,16 @@ Full trail pages: [**TRAILS.md**](../../TRAILS.md)
 
 | Trail | One line |
 |-------|----------|
-| [repo_show_spine](../trails/repo-show-spine.md) | The show IS the repo — RTFR, harvest skills back |
-| [constructionist_lineage](../trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → open Micropolis |
-| [drag_race_and_ai_offs](../trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores the spend |
-| [retrocomputing_drive](../trails/retrocomputing-drive.md) | One spec, many platforms — SETUP DNA is viral |
-| [retro_guests_real_wire](../trails/retro-guests-real-wire.md) | Lars boots ITS; Thomas wires FujiNet |
-| [live_production](../trails/live-production.md) | Brain stream overlay + Philahue audience bus |
-| [moollm_compose](../trails/moollm-compose.md) | WWSFF as microworld plugin |
-| [rig_personas](../trails/rig-personas.md) | Your rig IS your drag persona |
-| [schemas_and_ethics](../trails/schemas-and-ethics.md) | Contracts before characters |
-| [archive_and_provenance](../trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
+| [repo-show-spine](../trails/repo-show-spine.md) | The show IS the repo — RTFR, harvest skills back |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → open Micropolis |
+| [drag-race-and-ai-offs](../trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores the spend |
+| [retrocomputing-drive](../trails/retrocomputing-drive.md) | One spec, many platforms — SETUP DNA is viral |
+| [retro-guests-real-wire](../trails/retro-guests-real-wire.md) | Lars boots ITS; Thomas wires FujiNet |
+| [live-production](../trails/live-production.md) | Brain stream overlay + Philahue audience bus |
+| [moollm-compose](../trails/moollm-compose.md) | WWSFF as microworld plugin |
+| [rig-personas](../trails/rig-personas.md) | Your rig IS your drag persona |
+| [schemas-and-ethics](../trails/schemas-and-ethics.md) | Contracts before characters |
+| [archive-and-provenance](../trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
 
 ---
 

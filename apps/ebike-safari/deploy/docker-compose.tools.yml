@@ -11,7 +11,7 @@ services:
       dockerfile: deploy/Dockerfile.osm-tools
     working_dir: /app
     environment:
-      DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike-safari}
       OSM_DATA_DIR: /osm
     volumes:
       - ./osm:/osm

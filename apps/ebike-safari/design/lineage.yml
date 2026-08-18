@@ -11,7 +11,7 @@ naming:
     status: amber
     note: SFC, Google Maps, MySQL — do not extend
     archive: ../LEGACY-URBAN-SAFARI.md
-  ebike_safari:
+  ebike-safari:
     era: 2026+
     status: active
     note: FIT → OSM → gestures + exposure; this repo

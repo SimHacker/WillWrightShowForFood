@@ -80,13 +80,13 @@ founding_example:
     - '"Dr. Elena Rodriguez 2030" (fabricated historian)'
     - '"Sion Shankel goddess trinity" (LARP)'
     - GDC 2016 / TED 2019 talks that never happened
-    - directx_book_wrong_author: see signature_beats.directx_bobo_correction
+    - directx_book_wrong_author: see signature-beats.directx_bobo_correction
   sample_real_beats:
     - ParticleMan, SimMars, first Spore programmer
     - AWE 2013 Connected Play
     - Sonoma CS Colloquium teaching arc
 
-signature_beats:
+signature-beats:
   directx_bobo_correction:
     canonical: true
     flatterbot_line: |

@@ -16,7 +16,7 @@ pitch: |
 canonical: ../../characters/don-hopkins/media/pantomime/INDEX.yml
 
 wings:
-  bug_farm:
+  bug-farm:
     compulsion: "Squish loop — cousin to Curiosity cube distressed moos"
     tutorial: "Parchment scraps teach stroke/twist/walk — pie-menu energy in VR"
   butterflies:
@@ -29,7 +29,7 @@ integration:
   jsonsters: "Adjacent gallery wing — virtual patrons squish bugs between misread reviews"
   moola: "Squish → MOOLA; copyleft sticker text → legal parody payout roulette"
   levitt_show: "../../process/old-band-back-together.yml — Pantomime reunion beat"
-  curiosity_cow_cube: "Distressed moo audio ↔ bug chitter — shared compulsion grammar"
+  curiosity-cow-cube: "Distressed moo audio ↔ bug chitter — shared compulsion grammar"
 
 menagerie_lines:
   mimsy: "The splat refuses the artist—"

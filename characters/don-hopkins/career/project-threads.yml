@@ -22,9 +22,9 @@ threads:
     artifacts: [Sims UI, mod tools, SimAntics/Edith advocacy, inclusive relationships]
     context: hired for animation/UI/tools; architecture → people; smart objects; Mattrick/McCloud
     witness: ../sources/sims-origin-core-tech-four-1997.md
-    merges_with: [simcity_micropolis, stupid_fun_club, repo_show, browser_sims_stack]
+    merges_with: [simcity_micropolis, stupid-fun-club, repo_show, browser_sims_stack]
 
-  stupid_fun_club:
+  stupid-fun-club:
     span: "2002–2003, 2009–2014"
     artifacts:
       - Slats and Dents robot brains

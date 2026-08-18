@@ -155,7 +155,7 @@ questions:
       hn:
         user: nanna
         comment_id: 48780477
-    context_lasers:
+    context-lasers:
       file:
         - url: https://de.wikipedia.org/wiki/%C3%96kolopoly
           label: "Ökolopoly (German Wikipedia)"

@@ -1,9 +1,9 @@
 # StoryMaker — stories & scenes file-system representation (DESIGN SPEC)
 #
 # The story/scene layer of the StoryMaker substrate that ShowMaker inherits (see
-# showmaker-network.yml#storymaker_inheritance). This captures Don's spec for the card-based story FS.
+# showmaker-network.yml#storymaker-inheritance). This captures Don's spec for the card-based story FS.
 # NOTE: this is the STORY/SCENE layer. The larger tenants/worlds/projects + per-realm taxonomy layer is
-# still a separate note-for-later (see showmaker-network.yml#future_design_story_fs).
+# still a separate note-for-later (see showmaker-network.yml#future-design-story-fs).
 # Lineage: Don's SFC iPhone StoryMaker (Bar Karma progenitor) — characters/don-hopkins/media/storymaker/.
 
 meta:
@@ -62,8 +62,8 @@ storage_modes:
   repository_repositories: "Totally free-form: repos of repos, owner-controlled — whatever structure the author wants."
 
 relationship:
-  showmaker: "ShowMaker's shows are a graph-walk over this story/scene content (see showmaker-network.yml#storymaker_inheritance)."
-  still_pending: "The tenants/worlds/projects + per-realm taxonomy-tag-tree layer above this — see showmaker-network.yml#future_design_story_fs."
+  showmaker: "ShowMaker's shows are a graph-walk over this story/scene content (see showmaker-network.yml#storymaker-inheritance)."
+  still_pending: "The tenants/worlds/projects + per-realm taxonomy-tag-tree layer above this — see showmaker-network.yml#future-design-story-fs."
   lineage: ../characters/don-hopkins/media/storymaker/storymaker.yml   # the SFC iPhone progenitor
 
 ties:

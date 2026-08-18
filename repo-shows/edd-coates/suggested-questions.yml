@@ -45,7 +45,7 @@ micropolis_integration:
   - id: executable-archives
     q: "I'm building the Repo Show to turn computing history into executable artifacts. How do visual archives like yours relate to runnable, interactive archives?"
 
-pie_menus_and_piecraft:
+pie-menus-and-piecraft:
   - id: pies-in-the-database
     q: "How many pie/radial examples have you catalogued? What tags would make them more useful?"
   - id: sims-pies

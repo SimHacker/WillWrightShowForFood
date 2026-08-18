@@ -112,7 +112,7 @@ opening:
   sales:
     magnificent_auction: "Two grandest per series — 15 brisk hammers (60–90 sec)"
     quick_sale: "17 red-dot delight sales (10–20 sec each)"
-    crypto_parody: "NFT/false scarcity/web3 — patron running gag, not lecture"
+    crypto-parody: "NFT/false scarcity/web3 — patron running gag, not lecture"
   wall_text_they_never_read: |
     JSONsters — serialized ontologies in real-time engine space.
     The artist refuses the caption. The work refuses the artist.
@@ -126,7 +126,7 @@ patron_arc_by_phase:
   essential:
     mimsy: "Two orbs and a sigh of graphite. The restraint is *aggressive*. I bought it before finishing my sentence."
     gregory: "Source node, sink node, one conduit. This is how I wish my books looked."
-    bucky_jr: "Finally — an edge with a point. The nib taper is the only honest curve in the room."
+    bucky-jr: "Finally — an edge with a point. The nib taper is the only honest curve in the room."
   textured_arcs:
     gregory: "Layered tranches! Flame strip is gamma exposure. Purple noise is regulatory fog. I'm diversifying."
     vandermeer: "The mesh layer is the veil of Maya over a CSV. I wrote that in the guest book."
@@ -173,7 +173,7 @@ images_monster_era:
     patron_readings:
       mimsy: |
         The **pearl collar** — court dress! The orange nucleus presented to society. Deceased. Wine.
-      bucky_jr: |
+      bucky-jr: |
         Gravity is doing honest work. The drape forgives me.
 
   - file: jsonsters-04-bleep-swarm.png

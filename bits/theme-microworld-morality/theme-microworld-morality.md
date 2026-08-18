@@ -26,7 +26,7 @@ Early SimCity section material — before or during the 1996 video orbit. The Cy
 | Stop | Why wander here |
 |------|-----------------|
 | [**Cyberiad lore**](../../repo-shows/will-wright-premiere/lore/cyberiad-klapaucius-trurl.md) | K-line backstory for on-air segment |
-| [**../../repo-shows/will-wright-premiere/README.md**](../../repo-shows/will-wright-premiere/README.md) | `#simcity_cyberiad_thread` — where it lands in show flow |
+| [**../../repo-shows/will-wright-premiere/README.md**](../../repo-shows/will-wright-premiere/README.md) | `#simcity-cyberiad-thread` — where it lands in show flow |
 | [**1996 Winograd talk**](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md) | Microworlds as moral laboratories |
 | [**Simulation effect**](../theme-simulation-effect/theme-simulation-effect.md) | Player-as-author — who bears responsibility for narrated causality? |
 | [**Simulating people**](../theme-simulating-people/theme-simulating-people.md) | Ethics when the microworld contains people-shaped agents |

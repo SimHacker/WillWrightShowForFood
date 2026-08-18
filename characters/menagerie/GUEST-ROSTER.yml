@@ -6,7 +6,7 @@ rule: |
   Canonical souls live in menagerie/, sims/, or robots/. Show-specific TicketPR forks live under
   repo-shows/*/audience/ with prototype_ref pointing back here.
 
-gallery_openings:
+gallery-openings:
   event: jsonsters_premiere
   show_seed: ../../repo-shows/jsonsters-gallery-lecture/jsonsters-gallery-lecture.yml
   always:
@@ -64,7 +64,7 @@ opening_beats:
   - "Doctor No raises with 'No comment.' — wins the compliance-dashboard lot"
   - "Palm offers 🐒✋🌴 — emoji bid nobody can parse except Don"
 
-cross_edges:
+cross-edges:
   note: Person-to-person scores in EXPORT-SIMS-RELATIONSHIPS.yml (901–908, 912–913)
   gallery_nights:
     - { from: tragic-clown, to: bella-goth, type: symbolic, narrative: "Both haunt openings — absence and aura" }

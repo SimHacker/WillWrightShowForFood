@@ -29,7 +29,7 @@ bio:
 leela_colleagues:
   note: "Don's CURRENT colleagues at Leela AI — for a Leela / vision-AI episode showcasing present work (not a reunion)."
   with: ["henry-minsky (co-founder/CTO)", "Milan Singh Minsky (VP Product)", "Steve Kommrusch", "don-hopkins"]
-  showcase: ../../process/vision-and-ambition.yml   # connectors_and_legacy#current_colleagues_showcase
+  showcase: ../../process/vision-and-ambition.yml   # connectors-and-legacy#current_colleagues_showcase
 
 why_invite: |
   Don is genuinely enthusiastic about having Isabella on a Repo Show — for the substance of it. She
@@ -56,5 +56,5 @@ see_also:
   - { path: CARD.yml, why: "Invokable abilities for show segments" }
   - { path: ../henry-minsky/, why: "Leela AI co-founder/CTO — colleague" }
   - { path: ../steve-kommrusch/, why: "Leela AI colleague" }
-  - { path: ../../process/vision-and-ambition.yml, why: "Current-colleagues showcase (connectors_and_legacy) — present work, not a reunion" }
+  - { path: ../../process/vision-and-ambition.yml, why: "Current-colleagues showcase (connectors-and-legacy) — present work, not a reunion" }
   - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses" }

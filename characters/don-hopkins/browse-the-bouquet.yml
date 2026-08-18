@@ -57,7 +57,7 @@ bouquet:
   policy:
     - sync-sources.yml
 
-# Narrative read order (Connections thread) — human prose: README.md · machine: CARD.yml connections_index
+# Narrative read order (Connections thread) — human prose: README.md · machine: CARD.yml connections-index
 narrative_order:
   - identity
   - gestural_verbs

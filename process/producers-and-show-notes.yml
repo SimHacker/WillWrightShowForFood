@@ -110,7 +110,7 @@ clips:
     **No** `show-notes/clips/` tree. Clips go where the Producer already lives:
     - **Audience Producer (TicketPR):** `repo-shows/<episode-slug>/audience/<github-username>/clip.yml` — PR alongside questions.yml
     - **Character room:** `characters/<slug>/sources/` or `media/` — if you have a character dir (guest or recurring Producer persona)
-    Colocate with identity; see ticket-pr.yml#where_not and repo-show-format.yml#placement_constitution.
+    Colocate with identity; see ticket-pr.yml#where-not and repo-show-format.yml#placement-constitution.
   required_fields: [source_url, context, why_it_matters, license_or_fair_use_note]
   template: "../repo-shows/_TEMPLATE/audience/clip.yml"
   review: "Producer (Philahue or show producer) merges before air; no clip without source"

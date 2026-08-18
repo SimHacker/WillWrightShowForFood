@@ -39,7 +39,7 @@ the old argument; Palm answers it from the inside.
 - Surface this **early**, in the SimCity discussion (before the 1996 video / Stanford segment).
 - The **Klapaucius KACHING** easter egg is the comic flip-side of the same word — the cheat that
   makes simulated money rain. Lofty debate ↔ slapstick cheat, same syllables. (See
-  `../../../characters/don-philahue/CHARACTER.yml#easter_eggs`.)
+  `../../../characters/don-philahue/CHARACTER.yml#easter-eggs`.)
 
 ## Sources
 - Stanisław Lem, *The Cyberiad* (Cyberiada, 1965; Eng. trans. Michael Kandel, 1974).

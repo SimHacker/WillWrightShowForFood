@@ -4,7 +4,7 @@
 
 Topic-less show: you choose the thread. One recording when it suits you; episodes accumulate. The repo orbits your 1996 talk and data-portability ideas. Slats optional.
 
-**Girder:** [`entryways.yml`](../entryways.yml#guest_will) · **Prototype:** [`guest-prototype.yml`](../../characters/will-wright/guest-prototype.yml)
+**Girder:** [`entryways.yml`](../entryways.yml#guest-will) · **Prototype:** [`guest-prototype.yml`](../../characters/will-wright/guest-prototype.yml)
 
 ---
 
@@ -29,9 +29,9 @@ Topic-less show: you choose the thread. One recording when it suits you; episode
 
 | Trail | When to leap |
 |-------|----------------|
-| [constructionist_lineage](../trails/constructionist-lineage.md) | 1996 source → open Micropolis lineage |
-| [repo_show_spine](../trails/repo-show-spine.md) | What "topic-less Repo Show" means mechanically |
-| [drag_race_and_ai_offs](../trails/drag-race-and-ai-offs.md) | Slats quest connects here |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | 1996 source → open Micropolis lineage |
+| [repo-show-spine](../trails/repo-show-spine.md) | What "topic-less Repo Show" means mechanically |
+| [drag-race-and-ai-offs](../trails/drag-race-and-ai-offs.md) | Slats quest connects here |
 
 ---
 

@@ -48,7 +48,7 @@ repo_show:
     - "Gosling Emacs lineage — the kid at the switches becomes the person who ships NeWS then Java"
   repo_ethos:
     hook: "Schematics in the repo. No gatekeeping. Bare-hands rig class welcome."
-    vision: ../../../process/vision-and-ambition.yml#hardware_hacker_builder
+    vision: ../../../process/vision-and-ambition.yml#hardware-hacker-builder
   on_air:
     don_loves_this_photo: |
       Young James posing satisfied in front of his **PDP-8 hotrod muscle car** — fully loaded DEC
@@ -63,7 +63,7 @@ repo_show:
   character_readme: ../README.md
   face_puppet:
     label: "James Gosling at the PDP-8"
-    spec: ../../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    spec: ../../../apps/performance-space/faceball-construction-set.yml#guest-characters
     modes:
       - "James puppeteers live — webcam through paste-on young-Gosling portrait"
       - "Or records offline session → submits clip to repo"

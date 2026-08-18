@@ -36,7 +36,7 @@ object_tooling:
     object_catalog_seed: "Thousands of object name/description/GUID records — seed the SQLite catalog"
     batch_automation: "COM automation scripts batch-exported object previews"
   port_to:
-    - "TypeScript/WASM file reader replaces 2000s preview plumbing (catalogs/maxis/CATALOG.yml#iff_reader)"
+    - "TypeScript/WASM file reader replaces 2000s preview plumbing (catalogs/maxis/CATALOG.yml#iff-reader)"
     - "Import legacy catalog seed → SQLite object_records table (one-time + diff on new packs)"
     - "GUID clone/renumber logic informs Soul City 'publish collection' installer helpers"
     - "Batch-export pattern → headless preview render job queue"

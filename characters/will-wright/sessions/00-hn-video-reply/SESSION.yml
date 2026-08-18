@@ -8,7 +8,7 @@ meta:
   status: planned
   priority: now
   participants: [don-hopkins, will-wright]
-  index: ../../videos.yml#hn_video_reply
+  index: ../../videos.yml#hn-video-reply
 
 purpose: |
   Will responds on camera to the early Hacker News questions — several, all good.
@@ -33,7 +33,7 @@ framing: |
   This is the first instance of the TIME-SHIFTED CALL-IN frame: Don plays the
   caller who knows Will and reads him other people's questions down the phone —
   the proxy for everyone who submits by HN, GitHub issue, or comment instead of
-  video. See ../01-mic-check/SESSION.yml#answering_machine_gag.the_caller_role;
+  video. See ../01-mic-check/SESSION.yml#answering-machine-gag.the_caller_role;
   the answering machine gag is the universal cold open that sets this contract.
 
 why_immediately: |

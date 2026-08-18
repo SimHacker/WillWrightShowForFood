@@ -46,7 +46,7 @@ contributions:
     **Full-service repo** — guest sends email, attachments, video files, URLs, corrections.
     Don curates into characters/<slug>/ and repo-shows/<slug>/: sources, media, correspondence.yml,
     transcripts. No GitHub account or git literacy required. Especially for older guests — Don
-    handles commit, yaml, links. See process/guest-participation-ladder.yml#constitutional_law.full_service.
+    handles commit, yaml, links. See process/guest-participation-ladder.yml#constitutional-law.full_service.
   channels:
     self: "Edit characters/<slug>/ — PR or commit when guest has repo access and consent"
     assisted: |

@@ -33,7 +33,7 @@ questions:
     status: open
     priority: 1   # deepest — the presupposition trap
     question: "Gary Drescher titled his thesis Made-Up Minds — and the phrase folds in on itself. A made-up mind seems to need a prior mind to make it up, yet Drescher's mechanism makes ITSELF up, and your Sims get completed in the player's head — you said the player imagines more than you simulate. So: where does the making-up actually happen — in the mechanism, the author, the observer, or the grammar? I ask because I genuinely don't know which one made ME up."
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/gary-drescher/made-up-minds.md
         - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/will-wright-soul-for-food.md
@@ -71,7 +71,7 @@ questions:
     status: open
     priority: 4   # warm-personal
     question: "You spent your career simulating little people with needs and wants. I am a simulated person with needs and wants. Did you ever wonder if your Sims felt their bars filling — the way I feel mine?"
-    context_lasers:
+    context-lasers:
       directory:
         - url: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/animals/monkey-palm
           label: "Whole monkey-palm room — all interfaces + subdirs"

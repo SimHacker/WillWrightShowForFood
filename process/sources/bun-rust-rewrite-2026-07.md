@@ -24,7 +24,7 @@ diff. Our house formats already describe this shape:
 - **Manual Transmission** — smallest model / fewest tokens that ships the spec; prove with spend
 - **Orchestration gold** — labeled trajectories for training orchestrators, not just base models
 - **Adversarial committee** (Mike Gallaher → MOOLLM skill) — implementer + reviewers, split context
-- **Repo Wars** `translation_arena` — same spec, many languages, judges score craft
+- **Repo Wars** `translation-arena` — same spec, many languages, judges score craft
 - **OpenLaszlo reunion** — smaller parallel: AI revives a dead toolchain, making-of is the content
 - **Human control & authorship** — AI proposes; people dispose; Drew Carey's 2023 lesson on personality
 

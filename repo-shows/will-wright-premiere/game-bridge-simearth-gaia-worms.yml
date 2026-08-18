@@ -37,7 +37,7 @@ the_alignment_of_planets:  # the real people behind the living-earth idea
     note: "Ground with an API; already a MOOLLM ambient influence (robust-first) and already in the worm canon (the Awakening)"
   supporting: [Fred Haslam (SimEarth co-designer), Carl Sagan (the popularizer model), James Hutton (Gaia before Gaia, 1788)]
 
-the_arc: "scorched earth -> worms move in -> castings enrich -> fertile environment. Death of a substrate is the birth of a soil."
+the-arc: "scorched earth -> worms move in -> castings enrich -> fertile environment. Death of a substrate is the birth of a soil."
 
 segment_shape: |
   Open on SimEarth + Daisyworld (Lovelock on screen). Pivot to Margulis: evolution by merger, not
@@ -54,7 +54,7 @@ discuss_with_will:
 fieldnotes: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md"
 
 ties:
-  - ../ideas/crazy-idea-jam.yml                       # character_endosymbiosis + data_portability
+  - ../ideas/crazy-idea-jam.yml                       # character-endosymbiosis + data_portability
   - game-bridge-sims-spore.yml                        # the procedural-life companion bridge
   - ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/  # Brand/Eno/Wright Long Now
   - ../../palmhoo/concurrency-and-messaging/README.md # the worms + Pike/CSP shelf

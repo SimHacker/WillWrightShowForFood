@@ -19,7 +19,7 @@ what_its_really_about: |
   trans people while (per tabloid reporting) its own household privately plays dress-up. Celebrate the
   gender play; point the mockery at the cruelty and the double standard, not at anyone's cross-dressing.
 
-source_caveat: |
+source-caveat: |
   **Don's position:** it's **real** — it happened, and the neighbor who said the images "must have been
   AI" was mistaken. The public sourcing is thin (NY Post relaying the Daily Mail, dated April 1, 2026,
   with that "must have been AI" quote), so the repo won't stamp it as neutral, settled fact in its own
@@ -45,7 +45,7 @@ dance_off:
     A **dance off** built from **Faceball Construction Kit** puppets — dongs and boobies bouncing
     together on Sanspiel jiggle physics. Show a guest the puppets others have made, then invite them to
     build their own and join the floor.
-  build_with: ../../apps/performance-space/faceball-construction-set.yml#soft_body_anatomy
+  build_with: ../../apps/performance-space/faceball-construction-set.yml#soft-body-anatomy
   cast:
     # NOTE: we do NOT presume Brian participates in this bit. He's a conversation guest about the
     # Bowie/Eno history; he was shown the tools + warned about the ADULT section earlier, and any
@@ -60,7 +60,7 @@ dance_off:
     not a bug report. TTP as a feature, celebrated.
   spore_tie: ../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
 
-the_reveal:
+the-reveal:
   what: |
     The comedic climax. The balloon-boob / dong puppet is a **full-screen anonymizing mask** the dancer
     performs behind — driven by their whole-body motion. After a spectacular number, **with their
@@ -72,10 +72,10 @@ the_reveal:
   blackmail_trope_inverted: |
     Deliberately evokes the kompromat / "Epstein tapes" blackmail vibe — then INVERTS it: real kompromat
     is nonconsensual coercion; ours is consensual celebration. Same tension, opposite ethics; the
-    consent is the joke. The "Bryon Noem" peg is treated per source_caveat (Don: real, not a hoax; the
+    consent is the joke. The "Bryon Noem" peg is treated per source-caveat (Don: real, not a hoax; the
     sim is proudly AI — "That's not AI. THIS is AI.") — satire of a public political figure, never
     outing a private person.
-  engine: ../../apps/performance-space/faceball-construction-set.yml#anonymizing_puppet_and_reveal
+  engine: ../../apps/performance-space/faceball-construction-set.yml#anonymizing-puppet-and-reveal
 
 physics_note: |
   Real, buildable: soft-body / jiggle physics on a puppet rig is a legible, funny tech demo — the

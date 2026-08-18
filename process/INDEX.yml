@@ -11,7 +11,7 @@ meta:
   trails_md: ../TRAILS.md
   trails_dir: trails/
   for_bots_md: ../FOR-BOTS.md
-  for_bots: for-bots.yml
+  for-bots: for-bots.yml
 
 show_and_network:
   brainstorm-heartbeat.yml:
@@ -159,7 +159,7 @@ vision:
   crazy-idea-jam.yml:
     markup: crazy-idea-jam.md
     topic: "Wacky + forward-thinking idea reactor — curated public-safe from Don's crystallized notes"
-    trail: cross-links.yml#stupid_fun_forward
+    trail: cross-links.yml#stupid-fun-forward
 
 markup_facades:
   registry: markup-facades.yml

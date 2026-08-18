@@ -9,7 +9,7 @@ meta:
   rule: |
     OK to list dream guests before asking. Track invitation.status honestly in each directory.
     Subject may edit or delete anytime. Directories grow with responses and show artifacts —
-    see portrayal-standards.md guest_directory.
+    see portrayal-standards.md guest-directory.
 
 flagship:
   will-wright:
@@ -19,7 +19,7 @@ flagship:
     invitation_note: "Accepted 2026-07 — loves async repo-show; guest prototype for all invites (guest-prototype.yml)"
     show_seed: repo-shows/will-wright-premiere/
     consent: invitation_accepted
-    guest_prototype: characters/will-wright/guest-prototype.yml
+    guest-prototype: characters/will-wright/guest-prototype.yml
     path: characters/will-wright/
     media: "characters/will-wright/media/ — SimCity/Sims history + robot-combat meetup; russian-space-junk.md (Soviet spaceflight hardware, photos by Don); artwork.md (mixed-media relief constructions)"
 
@@ -88,13 +88,13 @@ sims:
     bella-goth: "👗🔥👁️🌙👻"
     mortimer-goth: "🔭🏚️💔📚🔬"
     tragic-clown: "🤡💧🖼️😭🛏️"
-  gallery_openings: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  gallery-openings: characters/menagerie/GUEST-ROSTER.yml#gallery-openings
 
 robots:
   path: characters/robots/
   note: "Fictional robot cast — Slats, Ultimate Machine; gallery-opening regulars"
   roster: [slats, ultimate-machine]
-  gallery_openings: characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  gallery-openings: characters/menagerie/GUEST-ROSTER.yml#gallery-openings
   slats:
     path: characters/robots/slats/
     moollm_source:
@@ -239,7 +239,7 @@ guests:
   jason-scott: { invitation_status: stub, path: characters/jason-scott/, consent: not_yet_asked, note: "textfiles.com / Archive Team; GET LAMP (2010) text-adventure documentary — free IA ISOs. Framing: characters/jason-scott/sources/get-lamp.md. Pair: Frontalot anthem, Brewster, Montfort, Scott Adams, Jimmy Maher." }
   jason-shankel: { invitation_status: not_yet_asked, show_seed: repo-shows/jason-shankel/, note: "Maxis/Spore (ParticleMan, prototypes wiki); SFC/Syntertainment; Sonoma CS Colloquium teacher — 17+ YouTube talks indexed in sources/TALKS-INDEX; AWE 2013 Connected Play; StoryMaker/Bar Karma needs_confirmation" }
   janet-murray: { invitation_status: draft, path: characters/janet-murray/, consent: not_yet_asked, channel: email, warm_contact: true, note: "Hamlet on the Holodeck (1997) — agency/immersion/transformation. Georgia Tech; SFC StoryMaker w/ her students (2011). Private GitHub-as-Holodeck draft in DonHopkins email archive — not sent. Framing: characters/janet-murray/sources/hamlet-on-the-holodeck.md. Pair: Quitmeyer, Laurel, Montfort, Chaim." }
-  jared-tarbell: { invitation_status: draft, path: characters/jared-tarbell/, show_seed: repo-shows/jared-tarbell/, consent: not_yet_asked, warm_contact: true, channel: email, interview_planned: true, include: [Laurie Tarbell, Will Wright], note: "Generative artist — levitated.net + complexification.net (Substrate); Etsy co-founder (found via his art); Levitated Toy Factory (laser-cut computational gems). Will → Don intro 2005 (Spore tidepool ↔ his Flash creatures); Amsterdam FITC 2010 with wife Laurie. Dynamic stage orchestration exemplar → repo_as_simulation." }
+  jared-tarbell: { invitation_status: draft, path: characters/jared-tarbell/, show_seed: repo-shows/jared-tarbell/, consent: not_yet_asked, warm_contact: true, channel: email, interview_planned: true, include: [Laurie Tarbell, Will Wright], note: "Generative artist — levitated.net + complexification.net (Substrate); Etsy co-founder (found via his art); Levitated Toy Factory (laser-cut computational gems). Will → Don intro 2005 (Spore tidepool ↔ his Flash creatures); Amsterdam FITC 2010 with wife Laurie. Dynamic stage orchestration exemplar → repo-as-simulation." }
   jean-piaget: { invitation_status: memorial, note: "MEMORIAL MODE (1896–1980): genetic epistemology; constructivism + stages of cognitive development; the developmental root of Papert's constructionism. Discussants: Alan Kay, Walter Bender, Brian Harvey, Ken Kahn, Don" }
   ken-kahn: { invitation_status: draft, path: characters/ken-kahn/, show_seed: repo-shows/ken-kahn/, consent: not_yet_asked, warm_contact: true, channel: "in person (Amsterdam/Westerpark, ebike lent 2026) + mail", note: "ToonTalk; eCraft2Learn AI blocks for Snap!; MIT AI Lab PhD 1979 (Hewitt; Ani text-to-video); The Learner's Apprentice. July 2026: machine-written AI-history essay (Claude+ChatGPT ping-pong, Perceptrons myths) — road-tested our production method independently. NPUC Almaden panel photo w/ Don. Hooks: birds-for-worms skill co-design, essay saga, NPUC tapes (Selker has 7 years)." }
   ken-perlin: { invitation_status: not_yet_asked }

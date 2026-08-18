@@ -93,7 +93,7 @@ wwsff_overlay:
     - foundational_portability_example    # instanced-border archetype; the dual-minded cartridge
     - soul_model_demo                     # one soul, two minds, live on stage
     - door_policy                         # somebody has to price admission; he insists
-  gallery_openings:
+  gallery-openings:
     beat: "Worked the door at the § auction. Charged one treasure per entry, accepted two hors d'oeuvres and a business card, ate the business card. Both minds kept separate ledgers; they reconciled at close."
     fronting_note: "gallery counts as commerce — adventure-mind fronted all night; zork-mind heckled from counsel"
   show_hooks:

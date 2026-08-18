@@ -319,7 +319,7 @@ def extract_show(data: dict[str, Any], show_dir: Path, yml_path: Path | None, ym
             lines.append(text.strip())
             lines.append("")
 
-    memorial = data.get("memorial_mode")
+    memorial = data.get("memorial-mode")
     if isinstance(memorial, dict):
         lines.append("## Memorial mode")
         lines.append("")

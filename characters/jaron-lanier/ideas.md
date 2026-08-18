@@ -37,7 +37,7 @@ expression, morphing your avatar as you'd bend a note. That is *exactly* the sho
 culture** — instruments, not apps: the **gestural/musical pie menu** (direction = timbre, the curve
 between = the sound), the vocal-tract toys (**Pink Trombone**, **Phoneloper**), and the
 puppet/voice-puppet kinds ([`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
-`#puppet_kinds`). Natural **generative-performance ensemble** with the avant-garde thread —
+`#puppet-kinds`). Natural **generative-performance ensemble** with the avant-garde thread —
 [`../brian-eno/`](../brian-eno/README.md), [`../laurie-anderson/`](../laurie-anderson/README.md)
 (invented instruments / tape-bow violin), [`../nina-hagen/`](../nina-hagen/README.md). Build a toy live:
 a gesture/VR controller driving a WebAudio instrument the audience can fork.

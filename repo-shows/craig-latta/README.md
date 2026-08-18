@@ -27,7 +27,7 @@ Hooks in [`characters/craig-latta/ideas.md`](../../characters/craig-latta/ideas.
 
 ## Trail
 
-[live_objects](../../process/trails/live-objects.md) — Craig · Dan Ingalls · Vanessa
+[live-objects](../../process/trails/live-objects.md) — Craig · Dan Ingalls · Vanessa
 
 ---
 

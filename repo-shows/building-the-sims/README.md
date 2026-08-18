@@ -56,7 +56,7 @@ Show seed: [`../REPO-SHOWS.yml`](../REPO-SHOWS.yml) (`building-the-sims.yml`)
 
 ### Optional / adjacent
 
-Tom van Dijk (modding), Scott McCloud (patron), others on [`party-roster`](../../process/party-roster.yml#sims_team_reunion).
+Tom van Dijk (modding), Scott McCloud (patron), others on [`party-roster`](../../process/party-roster.yml#sims-team-reunion).
 
 ## Working agreement
 

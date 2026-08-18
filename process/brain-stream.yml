@@ -22,7 +22,7 @@ pitch: |
 
 repo_show_clock:
   when: during_Twitch
-  see: repo-show-format.yml#how_it_runs
+  see: repo-show-format.yml#how-it-runs
   also: [before_async_PRs, after_harvest_PRs]
 
 architecture:
@@ -47,7 +47,7 @@ architecture:
     youtube_chat: "Throttled summaries only — API quotas"
     web_full: "/brain — scrollable, expandable, resummarized"
 
-event_schema:
+event-schema:
   types: [prompt, thinking, tool_call, tool_result, assistant_chunk, commit, shift, summary, branch_fork, branch_compare, gear_shift, runbook_start, design_mode]
   fields:
     composer_id: string
@@ -66,7 +66,7 @@ event_schema:
         tokens_out: number
         cost_usd: number
 
-overlay_ux:
+overlay-ux:
   collapsed: [latest_prompt, model_badge, cost_ticker, thinking_teaser]
   expanded: [full_thinking, tool_names, github_links, shift_timeline]
   resummary: "Mini model on interval OR on bubble close — chat gets paragraph, /brain keeps log"
@@ -75,7 +75,7 @@ privacy:
   before_bus: [deep_snitch, trekify, stream_mode_toggle]
   after_run: |
     Post-stream: deep-snitch + cursor-mirror forensics on the session before replay,
-    harvest, or orchestration gold export. See ai-offs.yml#post_run_analysis.
+    harvest, or orchestration gold export. See ai-offs.yml#post-run-analysis.
   model_branching:
     see: model-branching.yml
     live: "Overlay shows fork events — Branch A vs Branch B on tachometer"
@@ -107,7 +107,7 @@ build_phases:
   - id: 6
     ship: "Post-run forensics hook — deep-snitch gate before replay export"
     model_cost: zero
-    see: ai-offs.yml#post_run_analysis
+    see: ai-offs.yml#post-run-analysis
 
 ties_to:
   - manual-transmission.yml

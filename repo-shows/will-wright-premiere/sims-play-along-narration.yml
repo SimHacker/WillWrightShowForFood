@@ -16,7 +16,7 @@ what:
 when_on_show:
   - "After or beside the Simlish-origins beat (Claire Curtin / Jerry Martin / language-simlish.yml)"
   - "Palette cleanser between heavy archive segments"
-  - "Live call-in guest narrates a submitted clip (v1: honest staging per SEGMENTS.yml#live_call_in)"
+  - "Live call-in guest narrates a submitted clip (v1: honest staging per SEGMENTS.yml#live-call-in)"
   - "Drew Carey episode — he hosts, judges, or duets on narration if he accepts"
 
 how_it_works:
@@ -32,7 +32,7 @@ reference_footage:
   note: "The Fraps-era crowd shot is the vibe — real players, real UI, guest voice supplies the plot"
 
 lineage_links:
-  drew_carey_show: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+  drew_carey_show: repo-shows/drew-carey/SHOW.yml#sims-play-along-narration
   simlish_origins: ../../schemas/language-simlish.yml#origins
   eric_hedman: ../../characters/eric-hedman/
 

@@ -31,8 +31,8 @@ segments:
     script: ../../characters/don-hopkins/jsonsters/art-opening-night.yml
     lots: magnificent_lots + quick_sale_lots
     ledger: ../../characters/don-hopkins/jsonsters/AUCTIONS.yml
-  - id: crypto_parody
-    spec: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto_parody
+  - id: crypto-parody
+    spec: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto-parody
     what: Running gag — false scarcity, floor price, rug pull, mint pass; Facebook chorus = truth
   - id: facebook_chorus
     what: Chat hecklers cite pie menus — not eligible to bid
@@ -57,20 +57,20 @@ later_modes:
     graduation: ../../characters/menagerie/GRADUATION.yml
     perform: [bid_on_air, misread_any_artifact, banter_with_guests, audience/fictional-* instances]
 
-crypto_parody:
-  doc: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto_parody
+crypto-parody:
+  doc: ../../characters/don-hopkins/jsonsters/art-opening-night.yml#crypto-parody
   tone: "Social criticism through patron misread — never earnest web3 advocacy"
 
 economy:
   currency: Simoleons
   fictional: true
-  crossref: ../../characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat
+  crossref: ../../characters/don-philahue/CHARACTER.yml#easter-eggs.rosebud_cheat
 
 gallery:
   path: ../../characters/don-hopkins/jsonsters/
   readme: ../../characters/don-hopkins/jsonsters/README.md
   critics: critics.yml
-  opening_guests: ../../characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  opening_guests: ../../characters/menagerie/GUEST-ROSTER.yml#gallery-openings
 
 see_also:
   - ../../characters/don-hopkins/jsonsters/INDEX.yml

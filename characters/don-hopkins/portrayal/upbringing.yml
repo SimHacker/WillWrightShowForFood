@@ -11,7 +11,7 @@ cohort:
   label: Early Gen X
   note: "Born just after the Boomer cutoff — dodged the 'OK, Boomer' bullet"
 
-production_aesthetic:
+production-aesthetic:
   stance: "High production values. Low production costs."
   mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
   what: |
@@ -30,7 +30,7 @@ production_aesthetic:
     - GitHub repo + Cursor — audience plays along for $0
     - Human voice only — no clones
 
-national_touchstones:
+national-touchstones:
   thesis: |
     Late-70s / early-80s variety-and-puppet TV soaked into kids who became builders.
     Camp-forward, sincere underneath, never ashamed of the cardboard.
@@ -42,13 +42,13 @@ national_touchstones:
     - "Rip Taylor and the closeted-but-obvious camp Hollywood constellation — confetti, 'Dear!'"
   note: "Anchors, not a closed canon — the list could run all night, dear."
 
-dc_metro:
+dc-metro:
   place: "DC Metropolitan Area — just inside the Beltway"
   era: "Same Cold War window as The Americans — loved its DC authenticity (Jhoon Rhee 'Nobody bothers me')"
-  show_excerpts: ../../../process/repo-show-branding.yml#cultural_excerpts
+  show_excerpts: ../../../process/repo-show-branding.yml#cultural-excerpts
   jhoon_rhee:
     what: "Local taekwondo TV jingle — 'Nobody bothers me!' — real DC; The Americans used it; Don loved the detail"
-    clips: ../../../process/repo-show-branding.yml#cultural_excerpts#jhoon_rhee_nobody_bothers_me
+    clips: ../../../process/repo-show-branding.yml#cultural-excerpts#jhoon_rhee_nobody_bothers_me
   beltway_bandits: |
     Grew up among Beltway Bandits — government-contractor suburbia: badge readers, SCIFs,
     parking-lot patriotism.
@@ -95,14 +95,14 @@ dc_metro:
           fixture for decades.
         closed: 2019-05-31
         vibe: "Bright lighting, well-worn couches, nutrient-heavy snacks — real sense of community"
-      show_excerpt: ../../../process/repo-show-branding.yml#cultural_excerpts#umd_college_park
+      show_excerpt: ../../../process/repo-show-branding.yml#cultural-excerpts#umd_college_park
   networking:
     - "Early ARPANET — high-school access to MIT-AI"
     - "UMD CSD on NSA's secret IMP 57 at Fort Meade → MILNET"
     - "NSFNet, UUNET, DIGEX — East Coast commercial internet unfurling"
   fandom: "East Coast science-fiction convention culture — parallel network of builders"
 
-local_tv:
+local-tv:
   wdca:
     station: "WDCA Channel 20, Washington DC"
     dick_dyszel:
@@ -205,7 +205,7 @@ hosting_lineage:
     - "Be somebody important — be yourself!"
     - "So long, crew members."
   on_air_puppets:
-    spec: ../../../apps/performance-space/character-button-board.yml#dc_host_lineage_puppets
+    spec: ../../../apps/performance-space/character-button-board.yml#dc-host-lineage-puppets
     what: "Chesapeake, Captain 20, Count Gore — sound-box lip-sync for sign-on/sign-off"
 
 show_inheritance: |
@@ -216,5 +216,5 @@ see_also:
   - voice.yml
   - heroes.yml
   - ../career/on-stream.yml
-  - ../../don-philahue/CHARACTER.yml#host_performance
+  - ../../don-philahue/CHARACTER.yml#host-performance
   - ../../../process/performance-space.yml

@@ -6,7 +6,7 @@ gag:
   source: characters/don-hopkins/media/memorial-sf/memorial-sf-heklina-trannyshack-tshirt.yml
 
 homage:
-  performance_space: process/performance-space.yml
+  performance-space: process/performance-space.yml
   conan_face_puppet: apps/performance-space/conan-face-puppet.yml
   don_note: "Great one for conan face hole trick: Heklina!"
 

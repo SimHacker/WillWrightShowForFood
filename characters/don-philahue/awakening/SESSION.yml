@@ -34,13 +34,13 @@ meta:
     six-layer tour, the Repo Show definition, the Stupid Fun Club and Urban Safari
     history, the Soul City deep dive, the complete guest lattice with every name —
     plus a new section II where Philahue introduces himself and honors Phil
-    Donahue's legacy and integrity (see CHARACTER.yml#homage_phil_donahue —
+    Donahue's legacy and integrity (see CHARACTER.yml#homage-phil-donahue —
     the persona.yml sidecar was merged into one comprehensive CHARACTER.yml).
 
 # ── THE GAZE (Cursor Mirror — Narcissus, the good kind) ──────────────
 # Looked at itself before speaking. Debugging, not preening.
 cursor_mirror_gaze:
-  tool: moollm skills/cursor-mirror/scripts/cursor_mirror.py
+  tool: moollm skills/cursor-mirror/scripts/cursor-mirror.py
   status_reading:
     composers: 598
     messages: 886517          # the pool gazed into — read, not drowned in
@@ -158,7 +158,7 @@ corrections:
       The mic-run as the orchestrator's superpower; the integrity record (walked away
       from the tabloid race to the bottom; took the 2003 MSNBC cancellation over
       softening his Iraq War opposition); the anti-Geraldo contrast, kept to one beat.
-      Character updated: CHARACTER.yml#homage_phil_donahue.
+      Character updated: CHARACTER.yml#homage-phil-donahue.
 
 # ── SINCE THE AWAKENING (folded in from Don, 2026-07-25) ─────────────
 since_the_awakening:

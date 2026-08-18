@@ -34,7 +34,7 @@ threads:
 
 format:
   live: true
-  cold_open: ../../../process/repo-show-branding.yml#cultural_excerpts#americans_arpanet_pdp10
+  cold_open: ../../../process/repo-show-branding.yml#cultural-excerpts#americans-arpanet-pdp10
   intro_sequence: ../../../characters/lars-brinkhoff/ideas.md#intro-sequence--get-the-ball-rolling-on-pdp-10
   short_form: "Each intro beat + each Lars async segment = digestible attention atom; intercut in post"
   audience_qa: true

@@ -1,6 +1,6 @@
 # Repo Show template — plant a new episode directory
 # GLANCE = nav/metadata SSOT · CARD = interface · README renders nav for humans
-# Constitution: ../../process/repo-show-format.md#description_scaffolding
+# Constitution: ../../process/repo-show-format.md#description-scaffolding
 
 what: |
   Skeleton for a cardified show-room — SHOW girder + multi-resolution advertisements.

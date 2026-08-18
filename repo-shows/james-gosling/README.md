@@ -14,7 +14,7 @@ From **NeWS to Java**. James architected **NeWS/SunDew** — a PostScript-progra
 
 ## Trail
 
-[live_objects](../../process/trails/live-objects.md) — NeWS in the network-window / live-object lineage.
+[live-objects](../../process/trails/live-objects.md) — NeWS in the network-window / live-object lineage.
 
 ---
 

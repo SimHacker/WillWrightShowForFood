@@ -16,7 +16,7 @@ ladder:  # increasing involvement; every rung fully honored
   6_collaborator: "Ask Don for direct access — edit your own room; subject rights self-service."
 
 stealth_caution: |
-  While in stealth mode (portrayal-standards.yml#stealth_mode): do NOT star, fork, or share
+  While in stealth mode (portrayal-standards.yml#stealth-mode): do NOT star, fork, or share
   publicly — those appear in public activity feeds. Watch (All activity) is private.
 
 next_level: onboarding-cursor-moollm.yml

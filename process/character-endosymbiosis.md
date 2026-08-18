@@ -4,7 +4,7 @@
 life used to build complex cells.*
 
 Girder: [`character-endosymbiosis.yml`](character-endosymbiosis.yml) · Architecture:
-[`../repo-shows/INDEX.yml#bridges_architecture`](../repo-shows/INDEX.yml)
+[`../repo-shows/INDEX.yml#bridges-architecture`](../repo-shows/INDEX.yml)
 
 ---
 

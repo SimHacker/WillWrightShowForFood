@@ -3,7 +3,7 @@
 
 meta:
   id: leigh-bowery
-  type: hosted_video_wrapper
+  type: hosted-video-wrapper
   status: seed
   one_line: "Wrap a Leigh Bowery documentary — play it, bookmark it, and honor Bowery in the persona/mask/living-sculpture lineage (with Nomi + Bowie)."
 
@@ -28,7 +28,7 @@ memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml   # leigh_b
 
 ties:
   - ../../characters/brian-eno/bowie-snl-1979.md   # companion-viewing note already points here
-  - ../../process/showmaker-network.yml            # hosted_video_wrapper
+  - ../../process/showmaker-network.yml            # hosted-video-wrapper
   - ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml
 
 note: "Artifacts belong in a character dir once Bowery gets one; this show only DRAWS on them."

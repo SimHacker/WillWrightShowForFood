@@ -7,7 +7,7 @@ meta:
   show: will-wright-premiere
   status: planned
   participants: [don-hopkins, will-wright]
-  index: ../../videos.yml#mic_check
+  index: ../../videos.yml#mic-check
   pitch: PITCH.md   # "Hi Will, I promised to send you a recap of our phone call, so here it is." — the recap letter, filed in the repo where everyone reads along. Performed on camera as ../05-cold-call-pitch/SCRIPT.md
 
 purpose: |
@@ -77,7 +77,7 @@ the_quine: |
     The long-form raw footage of the initial shooting and audio capture session
     SHIPS AS-IS: we are showing our process, tools, and technique — BRUTALIST
     at first, then iterating, refined, and polished (plywood → mahogany:
-    one-minute-movie-sandwich.yml#show_is_a_playlist.promotion_pipeline). The
+    one-minute-movie-sandwich.yml#show-is-a-playlist.promotion_pipeline). The
     roughness is the tutorial.
 
 production_pattern:
@@ -171,7 +171,7 @@ production_pattern:
 
 beats:
 
-  answering_machine_gag:
+  answering-machine-gag:
     order_note: "Natural OPENER — it's a phone bit, and the session is called Mic Check."
     the_history: |
       Will used to have an answering machine message where he'd answer the phone,
@@ -209,7 +209,7 @@ beats:
       axes, both poles performed, all keepers.
     tone_matched_openers: |
       The bouquet serves ALL the shows: the universal cold open
-      (../../../../process/one-minute-movie-sandwich.yml#show_is_a_playlist
+      (../../../../process/one-minute-movie-sandwich.yml#show-is-a-playlist
       .bookends) comes in TONE-MATCHED VARIANTS — the too-silly machine message
       opens silly shows; the too-serious one opens serious shows (tours behind
       the tech, programming, game design, social issues). Same door into
@@ -251,7 +251,7 @@ beats:
       video of its own: Don walks WILL through getting a GitHub account, opening
       an issue, and leaving a comment — the onboarding tutorial disguised as a
       buddy bit (../../../../process/one-minute-movie-sandwich.yml
-      #show_is_a_playlist.github_onboarding_tutorial).
+      #show-is-a-playlist.github_onboarding_tutorial).
     segue_engine: |
       The forced reverse knock knock is a SUB-ROUTINE, not a one-off: run it again
       and again. Each time, Will gets flustered, doesn't know what to say — then
@@ -310,7 +310,7 @@ beats:
       refuses to build gets its OWN failure expression. Users submit more; each is
       classified with TAGS and WEIGHTS that help select which to play at any given
       moment. Same engine as the roar library (../../../../process/
-      one-minute-intense.yml#upload_roars.roar_engine): tag matching + fuzzy
+      one-minute-intense.yml#upload-roars.roar_engine): tag matching + fuzzy
       scoring, surprising beats perfect.
     deliverable: "A vowel bank per tool family + the UH UH! refusal set at several intensities."
 
@@ -347,12 +347,12 @@ beats:
       their own roars via GitHub issue or PR, with a mood tag. Audience roars join
       Will's in the same mood-tagged manifest, credited. The monster speaks with
       everyone's voice. The full ROAR DRIVE appeal video (beats specced at
-      one-minute-intense.yml#upload_roars.drive_video) opens with Will telling the
+      one-minute-intense.yml#upload-roars.drive_video) opens with Will telling the
       Godzilla story and the GPL-3 pitch, plays the original scratchy monster roar,
       then shows Will and Don roaring at each other — THIS SESSION's takes are that
       footage. Money implicit, roars explicit: WE NEED YOUR ROARS! Example
       contributions seed the drive as BLIPVERTS (Don's extremely loud cat Nelson;
-      Will's cat) — see one-minute-intense.yml#upload_roars.example_blipverts.
+      Will's cat) — see one-minute-intense.yml#upload-roars.example_blipverts.
 
 sound_catalog:  # the catalog Don wants to walk Will through PLAYFULLY — seed list, grows on contact
   how: "Not a checklist to grind — a toy box to rummage. Play the old sound (where one exists), giggle, try a version, move on. Anything skipped is a reason for another session."

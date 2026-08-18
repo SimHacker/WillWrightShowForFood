@@ -30,7 +30,7 @@ character:
   home: characters/menagerie/saint-ignucius/
   pronouns: he/him
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🦬🎭🙏💾🦜"
     legend:
       - "🦬 — GNU / saintly beast"

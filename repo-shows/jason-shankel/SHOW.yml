@@ -23,7 +23,7 @@ ties_to:
   - ../../characters/eric-bowman/
   - ../../bits/tradition-flatterbot-2000/tradition-flatterbot-2000.yml
   - ../building-the-sims/evidence-bounce-cut.md
-  - ../../process/old-band-back-together.yml#sims_team
+  - ../../process/old-band-back-together.yml#sims-team
 
 private:
 # private archive — not in this repo

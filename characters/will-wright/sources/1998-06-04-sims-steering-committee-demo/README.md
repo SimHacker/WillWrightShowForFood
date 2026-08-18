@@ -100,7 +100,7 @@ the show's consent flow ([invitation](../../invitation.md)).
 
 - [1996 Winograd centerpiece](../1996-04-26-winograd-interfacing-to-microworlds/README.md) — previews Dollhouse → The Sims.
 - [don-hopkins](../../../don-hopkins/README.md) — pie menus, Edith/SimAntics tools, the uploader.
-- [`scriptable_simulators`](../../../../process/crazy-idea-jam.md#scriptable_simulators) — modern echo of SimAntics' user-extensible objects.
+- [`scriptable-simulators`](../../../../process/crazy-idea-jam.md#scriptable-simulators) — modern echo of SimAntics' user-extensible objects.
 
 ---
 

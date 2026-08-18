@@ -48,7 +48,7 @@ exports:
     906: { daily: -45, lifetime: -30 }
     907: { daily: 5, lifetime: 10 }
     908: { daily: 35, lifetime: 40 }
-  904:  # bucky_jr
+  904:  # bucky-jr
     901: { daily: 45, lifetime: 50 }
     902: { daily: 30, lifetime: 35 }
     906: { daily: 40, lifetime: 45 }

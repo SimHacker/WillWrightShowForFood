@@ -1,10 +1,10 @@
-# Trail — stupid_fun_forward 🤯
+# Trail — stupid-fun-forward 🤯
 
 > *Get weird — the coolest, whackiest, most forward-thinking stuff*
 
 The crazy idea reactor: robo-resurrection, soul bridges, and cells that travel between games. Stupid Fun Club energy pointed at the future.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#stupid_fun_forward) · **Reactor:** [`crazy-idea-jam.yml`](../crazy-idea-jam.yml) · [CRAZY-IDEA-JAM.md](../crazy-idea-jam.md) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#stupid-fun-forward) · **Reactor:** [`crazy-idea-jam.yml`](../crazy-idea-jam.yml) · [CRAZY-IDEA-JAM.md](../crazy-idea-jam.md) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 > Tone: joyful, irreverent, a little blasphemous. Keep it kind.
 

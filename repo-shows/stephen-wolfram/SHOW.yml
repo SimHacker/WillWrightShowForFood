@@ -20,7 +20,7 @@ why_him:
 read_first:
   artifact: characters/stephen-wolfram/MOOLLM-AS-A-COMPUTATIONAL-SYSTEM.md   # the argument, kept out of the invite; grew from the acronym field theory in Don's research notes
 
-dream_segments:
+dream-segments:
   - "Model MOOLLM live as MultiwaySystem[skillRules, fileTree, steps] — the codebase as a branch space of worlds"
   - "Is a heizronym a rulial coordinate patch? One name, many context-selected meanings"
   - "Irreducibility as product design — the case for simulation and repo-shows over prediction"

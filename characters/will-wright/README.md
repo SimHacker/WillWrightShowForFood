@@ -116,7 +116,7 @@ He may request correction, edit, reduction, or deletion anytime.
 
 ## Museum map — other doorways
 
-This directory is the **guest_will** playlist stop #4. Full museum map: [**ENTRYWAYS.md**](../../ENTRYWAYS.md)
+This directory is the **guest-will** playlist stop #4. Full museum map: [**ENTRYWAYS.md**](../../ENTRYWAYS.md)
 
 | Doorway | → | Why look |
 |---------|---|----------|
@@ -124,9 +124,9 @@ This directory is the **guest_will** playlist stop #4. Full museum map: [**ENTRY
 | **Educator** | [playlist](../../process/entryways/educator.md) | Transcript + Papert/Kay cards + Homefun rubric |
 | **Archivist** | [playlist](../../process/entryways/archivist.md) | Provenance policy → 1996 primary source chain |
 | **Producer** | [playlist](../../process/entryways/producer.md) | Run your own Repo Show — fork the format |
-| **constructionist_lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
+| **constructionist-lineage** | [trail](../../process/trails/constructionist-lineage.md) | 1996 → this show → Micropolis open lineage |
 
-Your ordered tour: [**guest_will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [characters](../README.md)
+Your ordered tour: [**guest-will**](../../process/entryways/guest-will.md) — invitation → BROWSE → 1996 → here → CARD → Slats → Don → Vision → browse [characters](../README.md)
 
 ---
 

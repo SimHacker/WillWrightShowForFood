@@ -371,7 +371,7 @@ tables:
 
 # ── SCREEN OCR MATCH (buy/build catalog — GUID unknown until resolved) ───────
 
-  screen_catalog_matches:
+  screen-catalog-matches:
     purpose: "One row per in-game catalog selection observation"
     columns:
       - { name: id, type: TEXT, pk: true }
@@ -396,7 +396,7 @@ tables:
     purpose: "Ordered candidate set when title/GUID ambiguous — never silent pick"
     columns:
       - { name: id, type: TEXT, pk: true }
-      - { name: match_id, type: TEXT, fk: screen_catalog_matches.id }
+      - { name: match_id, type: TEXT, fk: screen-catalog-matches.id }
       - { name: object_id, type: TEXT, fk: objects.id }
       - { name: guid, type: INTEGER }
       - { name: rank, type: INTEGER }
@@ -511,7 +511,7 @@ workflows:
 
   catalog_screen_match:
     steps:
-      - "OCR buy/build panel → screen_catalog_matches"
+      - "OCR buy/build panel → screen-catalog-matches"
       - "Fuzzy query installed objects → screen_match_candidates"
       - "If ambiguous: UI pick or LLM suggest → update resolved_object_id + operator_kind"
     spec: CATALOG-SCREEN-MATCH.yml

@@ -24,7 +24,7 @@ menagerie:
   slats: "Normals inverted. Feature, not bug."
   doctor_no: "Declared bias: the mesh is the costume."
 
-performance_space:
+performance-space:
   face_puppet: "Blender eye-bone holes — accidental Conan cutouts"
   see_also: ../../apps/performance-space/conan-face-puppet.yml
 

@@ -16,7 +16,7 @@ will_birthday:
   what: "Will Wright at red table — cake, balloons, HAPPY BIRTHDAY banner, workshop interior"
 
 repo_orbit:
-  stupid_fun_club: ../../career/stupid-fun-club.yml
+  stupid-fun-club: ../../career/stupid-fun-club.yml
   slats: ../../../robots/slats/photos.md
   maxis_suite_6: ../maxis-emeryville/maxis-suite-6-door.yml
   jason_shankel: ../../../will-wright/media/sims-series-maxis-people.yml#jason-shankel

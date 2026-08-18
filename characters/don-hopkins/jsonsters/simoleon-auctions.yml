@@ -1,5 +1,5 @@
 # Simoleon auctions — sell art to virtual patrons for §
-# Play-money only (see characters/don-philahue/CHARACTER.yml#easter_eggs.rosebud_cheat.ethics)
+# Play-money only (see characters/don-philahue/CHARACTER.yml#easter-eggs.rosebud_cheat.ethics)
 # Instance-first: this gallery debuts the mechanic; fork for NeMACS / Turing / scarcity auctions.
 
 economy:
@@ -58,7 +58,7 @@ modes:
       Don delivers the lecture. Patrons bid aloud (simulated) at ensemble beats.
       Hammer prices committed to AUCTIONS.yml after the segment. Not all 32 lots —
       highlight lots tied to ensemble beats; remainder listed as buy-now wall labels.
-    highlight_lots: art-opening-night.yml#series_auction_map
+    highlight_lots: art-opening-night.yml#series-auction-map
     legacy_beats:
       # Ensemble beats map to magnificent lots — full script in art-opening-night.yml
       - evolution-01   # Mimsy/Gregory bid war
@@ -67,8 +67,8 @@ modes:
       - evolution-25   # Plaid peacock scream
       - bleep-swarm    # Bunny adopts choir
 
-crypto_parody:
-  doc: art-opening-night.yml#crypto_parody
+crypto-parody:
+  doc: art-opening-night.yml#crypto-parody
   rule: "Running gag in patron lines — false scarcity, floor price, rug pull, mint pass, DAO board approval"
   patrons:
     gregory: "Accidental web3 bro — liquidity, floor, short the plaid"
@@ -96,7 +96,7 @@ patron_wallets:
   mimsy: { simoleons: 120000, spend_style: impulse, already_owns: [evolution-01] }
   gregory: { simoleons: 850000, spend_style: portfolio, notes: "Short plaid mentally; may still bid" }
   vandermeer: { simoleons: 2400, spend_style: IOU_and_footnotes }
-  bucky_jr: { simoleons: 18000, spend_style: craft_selective }
+  bucky-jr: { simoleons: 18000, spend_style: craft_selective }
   helena: { simoleons: 420000, spend_style: redemptive_premium }
   margot: { simoleons: 22000, spend_style: hostile_acquisition }
   julian: { simoleons: 45000, spend_style: erotic_escalation }

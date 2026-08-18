@@ -30,7 +30,7 @@ character:
   pronouns: he/him
   nickname: ["Doc", "No", "Dr. N"]
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🧣🔦🚫🤫🌟"
     legend:
       - "🧣 — scarf one color away from iconic"
@@ -109,7 +109,7 @@ wwsff_overlay:
     funds: "NO-AI hygiene aesthetic — art that looks like compliance dashboards, bias declarations, consent forms"
     bidding_style: "Raises with 'No comment.' Wins lots that teach a lesson. Never explains why."
     board_seats: [helena-featherstone trustee circle, bunny-whitmore benefactor orbit]
-  gallery_openings:
+  gallery-openings:
     beat: "Reviews catalog like embassy paperwork; bids on frame 01 because the JSON looks declared"
     relationship_to_art: "Misreads as policy document — highest compliment"
 

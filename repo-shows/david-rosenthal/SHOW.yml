@@ -29,7 +29,7 @@ async_now:
   discussion_pack: discussion-pack.md
   moollm_demo: moollm-demo.md
 
-dream_segments:
+dream-segments:
   - "Window-system wars — what historians should get right (NeWS vs X11, not a morality play)"
   - "ICCCM and X security — the protocols David actually wrote"
   - "Selections trio — Ted Nelson invisible-clipboard rant × ICCCM author (../selections-icccm-clipboard/selections-icccm-clipboard.yml)"

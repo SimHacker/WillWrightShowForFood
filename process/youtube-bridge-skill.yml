@@ -7,14 +7,14 @@ meta:
   type: [moollm_skill, tooling, production]
   lift: "Dogfood here first, then LIFT into a public MOOLLM skill (lift-pipeline.yml)."
 
-render_pipeline: |
+render-pipeline: |
   Tools that make it VERY EASY to render playlists as full videos with FFMPEG —
   automatically composing and enhancing layers and tracks: music, closed
   captions, link overlays, chapters and sections. All configured with YAML JAZZ
   metadata. Bootstrap: CURSOR runs the utils by hand first, watches what
   happens, then PLAY-LEARN-LIFT scripts it into a deterministic CLI-driven
   pipeline — systematize the flow for the show. This is the plywood→mahogany
-  promotion machine (one-minute-movie-sandwich.yml#show_is_a_playlist
+  promotion machine (one-minute-movie-sandwich.yml#show-is-a-playlist
   .promotion_pipeline) — and the answer to the discovery weak link: every
   render is an individually discoverable video the algorithm CAN surface,
   carrying its playlist inside it.
@@ -30,7 +30,7 @@ what: |
     recommended content.
   - DIG THE GROOVES: from the YAML storymaker/show/playlist metadata network,
     write per-playlist previous/next links into every video we control
-    (one-minute-movie-sandwich.yml#show_is_a_playlist.skip_the_needle).
+    (one-minute-movie-sandwich.yml#show-is-a-playlist.skip_the_needle).
 
 simfaux_lineage: |
   The architecture has SIMFAUX'S FINGERPRINTS ALL OVER IT — Don's 2006
@@ -44,7 +44,7 @@ simfaux_lineage: |
   PIE MENU DRIVEN. See the line and where it points: the same design,
   reimplemented on GitHub + YouTube + MOOLLM and tools we create, orchestrated.
   (The roar engine's tag-matching + fuzzy scoring — one-minute-intense.yml
-  #upload_roars.roar_engine — is the same machinery pointed at audio.)
+  #upload-roars.roar_engine — is the same machinery pointed at audio.)
 
 feeds_on:
   - ../characters/will-wright/sources/don-youtube-playlist-index/INDEX.yml   # the partial index; full channel export is its todo

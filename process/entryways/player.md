@@ -26,9 +26,9 @@ You know the games; this repo is a public conversation about how they were desig
 
 | Trail | When to leap |
 |-------|----------------|
-| [constructionist_lineage](../trails/constructionist-lineage.md) | From 1996 microworlds to open Micropolis |
-| [drag_race_and_ai_offs](../trails/drag-race-and-ai-offs.md) | Slats and the game-show beats |
-| [guest_will](guest-will.md) | Full guest-facing tour if Will's invitation thread interests you |
+| [constructionist-lineage](../trails/constructionist-lineage.md) | From 1996 microworlds to open Micropolis |
+| [drag-race-and-ai-offs](../trails/drag-race-and-ai-offs.md) | Slats and the game-show beats |
+| [guest-will](guest-will.md) | Full guest-facing tour if Will's invitation thread interests you |
 
 ---
 

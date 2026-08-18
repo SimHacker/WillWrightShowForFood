@@ -76,7 +76,7 @@ projects:
     don_pitch: |
       Mash Mark Your Territory with Don's Bongo Bingo — GPS check-ins at coffeeshops while marking
       territory; Foursquare but pee instead of bong water (on-air comedy beat — ask permission).
-    canonical: ../../../process/crazy-idea-jam.yml#bongo_bingo
+    canonical: ../../../process/crazy-idea-jam.yml#bongo-bingo
 
 # private archive — not in this repo
 show_angles:
@@ -89,4 +89,4 @@ see_also:
   - { path: ../matthew-sibigtroth/, why: "SFC alum — different orbit, same club" }
   - { path: ../jason-shankel/, why: "SFC hub — 13 mutual FB w/ Andrew" }
   - { path: ../brenda-laurel/, why: "127 FB mutual — narrative systems" }
-  - { path: ../../process/crazy-idea-jam.yml#bongo_bingo, why: "Don's Foursquare bingo progenitor" }
+  - { path: ../../process/crazy-idea-jam.yml#bongo-bingo, why: "Don's Foursquare bingo progenitor" }

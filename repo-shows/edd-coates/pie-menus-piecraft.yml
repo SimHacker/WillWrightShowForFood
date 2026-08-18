@@ -50,7 +50,7 @@ format:
 ties_to:
   - SHOW.yml
   - pie-menus-discussion-notes.md
-  - suggested-questions.yml#pie_menus_and_piecraft
+  - suggested-questions.yml#pie-menus-and-piecraft
   - ../../characters/don-hopkins/pie-menus-chi-88-and-beyond.md
   - https://github.com/SimHacker/MicropolisCore/tree/main/documentation/designs/piecraft
   - https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md

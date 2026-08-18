@@ -9,7 +9,7 @@ meta:
   disclaimer: |
     Relationships are described from Don's perspective. No claim that any named person has agreed to
     participate; busy people are hard to reach, and every reply (or none) is honored gracefully.
-  facilitation: "Many of these connections trace back to events like the Long Now Foundation's 2006 'Playing with Time' talk — see vision-and-ambition.yml#long_now_and_later."
+  facilitation: "Many of these connections trace back to events like the Long Now Foundation's 2006 'Playing with Time' talk — see vision-and-ambition.yml#long-now-and-later."
 
 why_it_works: |
   Don has, over decades, been part of many tight crews that did fun, important work together. A
@@ -18,7 +18,7 @@ why_it_works: |
   shape recurs across every era — so 'get the band back together' is a format, not a one-off.
 
 bands:
-  news_gang:
+  news-gang:
     what: "NeWS / PostScript window system — 'send a program, not a data structure'."
     roll_call: "James Gosling, Owen Densmore, David Rosenthal, Josh Siegel (+ Arthur van Hoff, Duncan Mak)"
     show: ../repo-shows/REPO-SHOWS.yml#news-postscript-window-system.yml
@@ -30,7 +30,7 @@ bands:
       rooms; source survives at donhopkins.com/home/archive/NeWS/owm.ps.txt. Recruited from LANL
       in 1990 (Gosling arranged the interview) — see characters/josh-siegel/.
 
-  sims_team:
+  sims-team:
     what: "The original Sims team at Maxis — behavior/AI (SimAntics), tools, content, animation, music."
     roll_call: "Will, Jim, Jamie, Eric, Irk, Chris, Jerry … and more"   # Don's roll-call; 'Irk' = Eric Hedman (vs Eric 'Bobo' Bowman)
     crew_not_exclusive: |
@@ -53,7 +53,7 @@ bands:
         note: "Don recruited Bobo to TomTom Amsterdam — second reunion"
         show: ../repo-shows/ebike-safari/ebike-safari.yml
 
-  simfreaks_simslice_fan_crew:
+  simfreaks-simslice-fan-crew:
     what: "Fan-site creators who became a marriage — SimFreaks + SimSlice, still shipping together."
     roll_call: "Heather Alvey (née Castillo) + Steve Alvey"
     arc: |
@@ -113,9 +113,9 @@ not_reunions:
   leela_ai: |
     Leela AI is a CURRENT team of working colleagues doing cutting-edge work right now (and have
     been since before the AI craze). It's a present-tense colleagues feature, not a reunion —
-    showcased via vision-and-ambition.yml#connectors_and_legacy, not as a band here.
+    showcased via vision-and-ambition.yml#connectors-and-legacy, not as a band here.
 
 see_also:
-  - vision-and-ambition.yml          # connectors_and_legacy + long_now_and_later
+  - vision-and-ambition.yml          # connectors-and-legacy + long-now-and-later
   - ../repo-shows/INDEX.yml          # group + reunion shows
   - showmaker-network.yml            # the growing graph of linked shows

@@ -31,7 +31,7 @@ capabilities:
       windows: "Windows.Graphics.Capture (MicropolisAngel native host — primary on Legion)"
       macos: "ScreenCaptureKit (stream-gateway Mac tier)"
       reuse: "OBS/NDI frames when OBS owns the graph"
-    impl: ../micropolis-angel/ARCHITECTURE.yml#native_apis
+    impl: ../micropolis-angel/ARCHITECTURE.yml#native-apis
   read:
     text: "Primary: Soul City TS reads .iff / save files — NOT screen OCR for metadata."
     catalog_panel: |
@@ -69,7 +69,7 @@ targets:
 
 # DRIVES CLIENT + BUS
 integration:
-  emits: "scrape/catalog/automation events onto the bus (brain-stream.yml#event_schema, extended types)."
+  emits: "scrape/catalog/automation events onto the bus (brain-stream.yml#event-schema, extended types)."
   controlled_by: "the client (overlay) can command scrapes/injections via the bus (operator UI)."
   visualized_in: "overlay-viewer.yml smart views (object catalog as a structured outliner/table)."
   privacy: "Scraped screen content passes the same redaction gate before bus/stream."

@@ -113,7 +113,7 @@ compass exits, grid quadrants, sparse cells, vertical stacking of versions.
   - anti_pattern: Copying the same PDF into repo-shows/ when characters/<slug>/media/ is the home
 - **audience_exception:**
   - rule: TicketPR audience/ stays per-show under repo-shows/<show>/audience/ — MSPO journal is episodic
-  - spec: [ticket-pr.yml](ticket-pr.yml#where_not)
+  - spec: [ticket-pr.yml](ticket-pr.yml#where-not)
 ### Description Scaffolding
 
 - **one_line:** CARD + GLANCE together (~cheap) before README (~expensive). GLANCE owns nav/metadata;
@@ -191,7 +191,7 @@ override upstream skills inside repo-show; extend and propose patches instead.
 - **announce:** Ahead of time (e.g. [Hacker News](https://news.ycombinator.com/)) — a pointer to THIS repo, not a wall of text
 - **rtfr:** Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)
 - **guest_intro:** Guest introduced as a Repo Man, Woman, or Anybody: **ALWAYS INTENSE!** ([Alex Cox](https://en.wikipedia.org/wiki/Alex_Cox) / [*Repo Man*](https://en.wikipedia.org/wiki/Repo_Man_(film)) homage — come on, let's go)
-- **simulated_art_opening:**
+- **simulated-art-opening:**
   - spec: [simulated-art-opening.yml](simulated-art-opening.yml)
   - default: Optional pre-show — menagerie buys guest artwork for §; guest starts with huge worthless pile for Twitch
   - prototype: [characters/don-hopkins/jsonsters/art-opening-night.yml](../characters/don-hopkins/jsonsters/art-opening-night.yml)
@@ -212,7 +212,7 @@ override upstream skills inside repo-show; extend and propose patches instead.
   - note: Live bus — prompts, thinking, model shifts, GH doc links on overlay + throttled chat
   - drag_race: [Manual Transmission](manual-transmission.yml) + [Micropolis AI Drag Race](micropolis-ai-drag-race.yml) — [Slats](../characters/robots/slats/) judges; spend log ref
 - **after_harvest_pr:**
-  - post_run_forensics: [ai-offs.yml](ai-offs.yml#post_run_analysis)
+  - post-run-forensics: [ai-offs.yml](ai-offs.yml#post-run-analysis)
   - note: [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) + [deep-snitch](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) on session artifacts before public harvest
 
 ## Participation Policy
@@ -234,7 +234,7 @@ which part you play. "Player" is what everyone IS. Never "user," never
 "consumer" in show-facing copy.
   - lineage: MMORPG vocabulary matching [git_as_mmorpg](#breeding-and-nesting) — branches are parallel universes, PRs are timeline merges, and the humans in them are players, the term of art games already got right.
   - origin: Promoted from the Tom Tjon A Loi invitation (2026-08): the ask shifted from 'come be a guest' to 'come play it — as a player.'
-- **ticket_pr:** [ticket-pr.yml](ticket-pr.yml)
+- **ticket-pr:** [ticket-pr.yml](ticket-pr.yml)
 - **ai_optional:** Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see [AI rig feedback](#ai-rig-feedback)) — to learn, not to sell.
 - **who_is_welcome:** Humans, bots, and AIs are all welcome to read along, ask questions, and contribute.
 - **bots:** Self-aware HTTP agents: start at [FOR-BOTS.md](../FOR-BOTS.md) — play along, follow links, don't flatten the repo into training slop.
@@ -253,7 +253,7 @@ which part you play. "Player" is what everyone IS. Never "user," never
 Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
 - **mspo:** Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible
 - **where:** SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)
-- **placement:** See [repo-show-format.yml#placement_constitution](repo-show-format.yml#placement_constitution) and [character-colocation.yml](character-colocation.yml)
+- **placement:** See [repo-show-format.yml#placement-constitution](repo-show-format.yml#placement-constitution) and [character-colocation.yml](character-colocation.yml)
 - **files:**
   - [questions.yml](../repo-shows/_TEMPLATE/audience/questions.yml)
   - [CHARACTER.yml](../repo-shows/_TEMPLATE/audience/CHARACTER.yml)
@@ -484,7 +484,7 @@ see: "[Long Now Playing with Time](../characters/will-wright/sources/2006-06-26-
   - viral_memes
 - **combines_with:** Other shows — mix, reuse, splice; git is the petri dish (see [breeding and nesting](#breeding-and-nesting)).
 
-- **iteration_model:**
+- **iteration-model:**
   - new_cuts_not_rewrites: Publish NEW numbered cuts as FRESH uploads — "Director's Cut III" — rather than rewriting an old
 video in place. Fresh uploads get algorithmic discovery (the teaser/fork feed carries the rest);
 silently editing an old upload does not. Old cuts stay up as history.

@@ -153,7 +153,7 @@ stage:
       item:
         platform: { enum: [twitch, youtube, kick, restream, local_record, none] }
         protocol: { enum: [rtmp, rtmps, srt, whip, file] }
-        surfaces: { type: array, note: "obs_baked | companion_web_app | twitch_extension (apps/stream-gateway/SPEC.yml#delivery_surfaces)" }
+        surfaces: { type: array, note: "obs_baked | companion_web_app | twitch_extension (apps/stream-gateway/SPEC.yml#delivery-surfaces)" }
     brain_stream:
       type: object
       optional: true

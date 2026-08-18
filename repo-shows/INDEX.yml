@@ -75,7 +75,7 @@ shows:
       game-bridge-sims-shattered.yml: "Evan Debenham (00-Evan) — Sims ⇔ Soul City ⇔ Shattered Pixel Dungeon (GPLv3 repo to show; brutal-roguelike contrast world; + the funding model)."
       game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Soul City ⇔ Spore creatures. The CAPSTONE/big-ambition bridge: not just creature-DATA IO but a clean-room, web-native re-creation of the creature RENDERER/ANIMATOR/EDITOR/BUILDER, designed live from interviews (likely a multi-episode ARC). Will's last Maxis game; closes the lineage loop."
       game-bridge-mind-mirror.yml:  "Sims ⇔ Soul City ⇔ Timothy Leary's Mind Mirror (1986 EA) — the FIRST emulated-runtime organelle: run the real Apple ][ binary in a web emulator, round-trip a character through it, diffuse its personality readings into sibling organelles. Proves emulated runtimes + cross-organelle diffusion (process/character-endosymbiosis.yml)."
-      game-bridge-afterlife-soul.yml: "Soul City Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send TO hell; hell-is-full → ZombieSims waves; They Are Billions scale (process/crazy-idea-jam.yml#hell_is_full_zombie_sims)."
+      game-bridge-afterlife-soul.yml: "Soul City Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send TO hell; hell-is-full → ZombieSims waves; They Are Billions scale (process/crazy-idea-jam.yml#hell-is-full-zombie-sims)."
       heather-and-steve-alvey/afterlife-zombie-bridge.yml: "Heather Alvey (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; religion skin mapping; catalog + authoring tool integration. (FLAGSHIP EPISODE of the whole-career Alvey show — see heather-and-steve-alvey/SHOW.yml.)"
     solo_and_series:
       placeholder/: "★ PAIR PLANTED. Brenda Laurel + Rob Tow — Placeholder VR (1993 CS547); Computers as Theatre; Purple Moon; Interval reunion. send_ready."
@@ -117,14 +117,14 @@ shows:
       brad-myers/pbd-in-llm-era.yml: "Narrow vertical: PBD in the LLM Era. Watch What I Do (Cypher + Brad) chapter-by-chapter modern reimplementations as simple playable demo seeds + exercises. Explicit open courseware for CMU and others."
       ted-nelson-intertwingled.yml: "Ted Nelson — Xanalinks vs jumplinks, intertwingling, MOOLLM, transcribe-the-vision. DREAM GUEST (warm lead). Optional co-guest Ted Selker for NPUC resurrection."
       phoneloper/SHOW.yml: "Kevin Lenzo — open-source Phoneloper Repo Show (Flite/Cepstral; SFC talking toys; phonoscoping → web vocal jam + Pink Trombone)."
-      voystick-pink-trombone/SHOW.yml: "★ Voystick × Pink Trombone — homomorphic vocal joystick jam; Zack Qattan Vocap + four-player choir; outdoor eBike slice. crazy-idea-jam#voystick_homomorphic_vocal_joystick."
+      voystick-pink-trombone/SHOW.yml: "★ Voystick × Pink Trombone — homomorphic vocal joystick jam; Zack Qattan Vocap + four-player choir; outdoor eBike slice. crazy-idea-jam#voystick-homomorphic-vocal-joystick."
       pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml: "Heinz U. Lemke + Lars Brinkhoff + David Rosenthal — PIXIE on PDP-7/Titan; emulation + same-machine memory."
       david-fleck-pen-input/david-fleck-pen-input.yml: "Dave Fleck — 26 years at Wacom (VP Eng); Wacom Radial Menu co-inventor (US 7,941,765); his 2008 prior-art question + forwarded PDFs set the PIXIE film recovery in motion. Cold open: closing the 18-year 'I need to see the original' loop on air. Pair options: Heinz Lemke, Simon Schneegans."
       pie-menus-retrospective.yml: "Don (host-as-expert) — redesign + reimplement pie menus from scratch."
       gesture-space-self-revealing-ui/gesture-space-self-revealing-ui.yml: "Gesture space — multitouch constraints, Pantomime inertia, pie menus vs graffiti gestures; Norman/Jobs receipts."
       connectedtv-calm-technology/connectedtv-calm-technology.yml: "David Levitt + Don — ConnectedTV Touch Tuning & Finger Pies; calm technology in the dark living room."
       will-wright-adorable-minutes/will-wright-adorable-minutes.yml: "Async one-minute Will Wright Q&A — revive 2008 format; HN question pump."
-      infodump/infodump.yml: "Have I Told You About…? / Short Attention Span Theater — ShorDurPerEval franchise; solidarity_lexicon (SpIn, infodump, monotropism, homage-not-diagnosis, LGBTQ+ Sims audience); Will Roll amen. Ep 001: STAR FORTS; 002: Care Bears (Will)."
+      infodump/infodump.yml: "Have I Told You About…? / Short Attention Span Theater — ShorDurPerEval franchise; solidarity-lexicon (SpIn, infodump, monotropism, homage-not-diagnosis, LGBTQ+ Sims audience); Will Roll amen. Ep 001: STAR FORTS; 002: Care Bears (Will)."
       did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml: "★ Patrick J. Barrett III + Don — same-sex romance engine room; Alexander Avila essay (openly trans masc) + MOOLLM comment analysis; LGBTQ+ Sims audience solidarity. send_now."
       im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml: "★ Alexander Avila solo — I'm Queer Therefore I Sim; discuss essay + 1,712 MOOLLM comment themes with Don. warm_lead."
       fluxx-rules-change-as-you-play/fluxx-rules-change-as-you-play.yml: "★ Andy + Kristin Looney × Don — Fluxx, UMD/LUMSSFS, MOOLLM fluxx-chaos simulation, live play. warm_lead."
@@ -149,7 +149,7 @@ shows:
       will-wright-premiere-ideas/: "Flagship content pack for will-wright-premiere/ — episode seeds, content map, performance bits, audience hooks. (Was ideas/shows/will-wright-premiere/.)"
 
 # SOUL CITY HUB — the architecture under every bridge (hub-and-spoke; "fly through Atlanta")
-bridges_architecture:
+bridges-architecture:
   hub: "Soul City is the HUB that all bridges lead to — a git-checked-in store holding many facets of each character in high-fidelity, round-trippable data."
   spokes: "Each game bridges to/from Soul City (a spoke). 'Proxi <-> Sims' really means Proxi <-> Soul City <-> Sims; any game-to-game path routes THROUGH the hub. Hub-and-spoke — like flying through Atlanta."
   bridge_ui_skins: "Gonzo UI is totally skinnable — one skin pack per spoke so bridge chrome matches the game (Sims-evoking first). Multi-bridge sessions stay visually obvious when moving characters/content between worlds. Kernel stays game-agnostic. See MicropolisCore documentation/designs/GONZO-UI-MANIFEST.md."

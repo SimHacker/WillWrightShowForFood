@@ -6,7 +6,7 @@ tnt:
     raster_rap:
       file: news-tnt-raster-rap-demos.png
       what: "RasterRap collage tool — Scratch, Spotlight, Rotate, Dizzy; JED editor; ClassPopup demos"
-    pizza_tool:
+    pizza-tool:
       file: news-pizza-tool.png
       what: "Pizza Tool — Tony & Alba's Mountain View; Don Hopkins order; fax confirmation dialog"
       address: "Sun Microsystems, 2400 Garcia Ave, Mountain View"

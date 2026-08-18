@@ -31,7 +31,7 @@ character:
   home: characters/menagerie/donna-toadstool/
   pronouns: she/her
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🍄👸🍊💅🎭"
     legend:
       - "🍄 — Stormy's mushroom crown; Mario Kart Toad pin"
@@ -107,7 +107,7 @@ wwsff_overlay:
     - performance_artist
     - gallery_opening_disruptor
     - security_consultant_gag
-  gallery_openings:
+  gallery-openings:
     beat: "Arrives mid-lot; description of HER exceeds description of the art"
     bids: "Raises on anything orange, mushroom-shaped, or ego-adjacent — outbids Gregory out of spite"
   relationships:

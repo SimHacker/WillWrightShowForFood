@@ -38,7 +38,7 @@ questions:
       Did you design the ring to be *visible* quote for kids who will never type an apostrophe? And
       Jens — when the ring captures an environment for a macro expansion, is that closure the same
       object as a lambda closure, or a different beast under the hood?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
         - https://docs.snap.berkeley.edu/procedures-as-data/
@@ -64,7 +64,7 @@ questions:
       continuations, macros, metaprogramming — lives in Snap! through BJC. I want the honest
       scorecard: what's **fully** there for a kid doing SICP-shaped thinking, what's **partial**
       (macros?), and what would you tell a Racket user *not* to expect yet?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
         - ../../../../characters/brian-harvey/sources/simply-scheme.yml
@@ -92,7 +92,7 @@ questions:
       Can you lay out the **arguments for** (Logo MAP and ?, debugging at the REPL, one-off helpers)
       and the **arguments against** (name capture, interchangeable blocks, teams of 500) — and which
       side you still hold after Snap! shipped **lexical** scope anyway?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
         - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml
@@ -143,7 +143,7 @@ questions:
       metacircular evaluator falls out of list structure. In Morphic.js, did you expose what was
       already internal, or invent a parallel AST? And can Palm **see** inside a ringed script on stage
       without breaking the insulation metaphor?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/jens-monig/sources/morphic-js.md
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
@@ -161,7 +161,7 @@ questions:
       example that finally made macros click for me. The Manual admits macros aren't fully wired:
       you pass the calling script explicitly, there's no checkbox yet, users in 2023 couldn't tell
       macro from `call` of a ring. What's the status now — demo-ready, or still Snap!Con homework?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snap-macros-metaprogramming.yml
       url:
@@ -187,7 +187,7 @@ questions:
       You started as Logo disguised as Scratch; lambda made it Scheme disguised as Scratch. Theo the
       Turtle in my notebook draws lines; the ring holds a script still. Is metaprogramming the moment
       the turtle learns to read its own pen trails as data — or is that over-poetic?
-    context_lasers:
+    context-lasers:
       file:
         - https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/pub/stage/palm-nook/study/palm-on-worms-fieldnotes.md
         - ../../../../characters/brian-harvey/sources/computer-science-logo-style.yml
@@ -203,7 +203,7 @@ questions:
       Don's 2018 thread — drive Micropolis and CAM6 from Snap! blocks. If we finish it on air, is
       the interesting beat **simulation API** or **kids rewriting city rules** via split/join on
       their own custom blocks? Which would you demo first?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/micropolis-snap-2018.yml
         - ../../../../characters/jens-monig/sources/micropolis-snap-2018.md
@@ -222,7 +222,7 @@ questions:
       how *strange* is it that a business-intelligence giant funds microworlds for kids? What did
       "people, not projects" research culture actually buy Snap! — and what survived after CDG wound
       down? Would Snap! exist without SAP's patience?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/jens-monig/sources/sap-research-and-snap.md
         - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.md
@@ -263,7 +263,7 @@ questions:
       barely mean anything. Morphic was the live-object answer: morphs all the way down, edit the IDE
       while it runs. Why did MVC win the textbook and job-interview lottery while Morphic never got
       the same love — even from people who claim to admire Smalltalk?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/jens-monig/sources/morphic-js.md
         - ../../../../characters/jens-monig/sources/gp-alan-kay-lineage.yml
@@ -311,7 +311,7 @@ questions:
       is holistic — building a relationship, showing ways to lead lives together, not just
       transmitting content — what does that mean concretely for how we should run classrooms,
       and what did CCUS prove that schools still refuse to hear?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
         - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address-transcript.md
@@ -374,7 +374,7 @@ questions:
       want to memorialize, or still hear teaching when you make a design choice? Not a eulogy contest —
       name someone who isn't in the room enough (or isn't anymore) and one lesson we should still learn
       from them. What would you want this repo to remember?
-    context_lasers:
+    context-lasers:
       file:
         - ../../../../characters/brian-harvey/sources/snapcon-2025-karlstrom-address.yml
         - ../../../../characters/jens-monig/sources/snapcon-2025-karlstrom-intro.md

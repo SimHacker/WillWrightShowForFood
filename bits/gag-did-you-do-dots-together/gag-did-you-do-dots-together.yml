@@ -11,7 +11,7 @@ hook: |
 
 lineage:
   jiminy_glick: "Oblivious follow-ups until innocent facts sound compromising"
-  old_band_reunion: ../../process/old-band-back-together.yml#sims_team
+  old_band_reunion: ../../process/old-band-back-together.yml#sims-team
 
 guests: [jim-mackraz, eric-bowman, don-hopkins]
 
@@ -53,7 +53,7 @@ variations:
     beat: '"And then you hired him? More dots? In Amsterdam?" — second reunion act'
   flatterbot_crossover:
     beat: Jason credits Bobo for DirectX book → "speaking of Bobo, did you Do Dots Together?"
-    parent: ../tradition-flatterbot-2000/tradition-flatterbot-2000.yml#signature_beats.directx_bobo_correction
+    parent: ../tradition-flatterbot-2000/tradition-flatterbot-2000.yml#signature-beats.directx_bobo_correction
   async_ensemble:
     beat: Jim and Eric answer on separate timelines; splice clips; Glick voiceover pretends they were in the same awkward moment
   evidence_bounce_cut:
@@ -62,4 +62,4 @@ variations:
       Founding payoff: FlatterBot credits Jason with DirectX book → cut to listing cover showing Eric Bowman.
     parent: ../../repo-shows/building-the-sims/evidence-bounce-cut.md
     book_evidence: ../../characters/eric-bowman/sources/direct3d-professional-reference.md
-    lineage: ../../process/repo-show-format.yml#splice_in_reactions
+    lineage: ../../process/repo-show-format.yml#splice-in-reactions

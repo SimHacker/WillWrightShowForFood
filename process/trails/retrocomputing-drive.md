@@ -1,10 +1,10 @@
-# Trail — retrocomputing_drive
+# Trail — retrocomputing-drive
 
 > *CODE THAT SPEC on your platform*
 
 Same spec CARD — you declare languages, tools, platform, emulator. SETUP DNA is the piece you email forward.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#retrocomputing_drive) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#retrocomputing-drive) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 
@@ -29,7 +29,7 @@ Same spec CARD — you declare languages, tools, platform, emulator. SETUP DNA i
 
 [Retro doorway](../entryways/retro.md)
 
-**Also:** [retro_guests_real_wire](retro-guests-real-wire.md) for Lars + Thomas guest arcs
+**Also:** [retro-guests-real-wire](retro-guests-real-wire.md) for Lars + Thomas guest arcs
 
 ---
 

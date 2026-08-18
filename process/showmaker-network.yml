@@ -12,7 +12,7 @@ what: |
   A ShowMaker network — interrelated show proposals and finished shows as first-class
   objects. Not a linear playlist: a GRAPH you can browse, fork, and extend.
 
-show_repos:
+show-repos:
   model: |
     A show repo owns a fan base and collaboration space — not one episode. Episodes live as
     repo-shows/<slug>/ subdirectories (WillWrightShowForFood is the first example: will-wright,
@@ -44,7 +44,7 @@ edges:
   storage: "yaml links in INDEX.yml + REPO-SHOWS.yml + per-show ties_to"
   pr_adds_edge: "Contributor PR adds node + one or more edges — we merge into index"
 
-storymaker_inheritance:
+storymaker-inheritance:
   one_line: "ShowMaker is a SPECIALIZATION of StoryMaker — same substrate, one more layer."
   storymaker: |
     **StoryMaker** is the base: down-to-earth **directories + files in a git repo** (NOT an SQL
@@ -62,7 +62,7 @@ storymaker_inheritance:
     - ../characters/don-hopkins/media/storymaker/storymaker.yml
     - ../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
 
-future_design_story_fs:
+future-design-story-fs:
   status: PARTIALLY-SPECIFIED   # story/scene card layer now designed; tenant/taxonomy layer still pending.
   one_line: "Design the story file-system representation so ShowMaker can publish NETWORKS of shows — ours, our guests', and videos we recommend."
   need: |
@@ -85,7 +85,7 @@ future_design_story_fs:
   provenance: "There is a big, battle-tested design behind this that Don wants to discuss and REINVENT cleanly in MOOLLM — not cargo-culted. Hold for that session."
   do_not_build_yet: true
 
-hosted_video_wrapper:
+hosted-video-wrapper:
   one_line: "A show can be a WRAPPER around an existing video we didn't produce — we pull it in and augment it."
   how: |
     We don't have to produce a video to make a show of it. Point a **`SHOW.yml`** at an existing hosted
@@ -112,7 +112,7 @@ hosted_video_wrapper:
     - ../bits/tradition-in-memoriam/tradition-in-memoriam.yml
     - ../characters/nina-hagen/ideas.md
 
-show_path_as_playlist:
+show-path-as-playlist:
   one_line: "Publish the path you walked through the show network during a show AS a playlist of that show."
   how: |
     A ShowMaker session is a **walk** through the graph. Record the traversal and publish it as the
@@ -250,7 +250,7 @@ competitions:
   man_vs_machine: "Delightful adversarial play — not anti-AI, not anti-hand, not anti-budget; pro-declaration"
   breed_winners: "Merge technique DNA from winning branches — horizontal gene transfer via git"
 
-evolving_organism:
+evolving-organism:
   metaphor: "The repo federation is one organism evolving — shows are organelles; PRs merge DNA"
   merge_back: "Judge the solution, then integrate it — PR merges tissue into main timeline"
   abstract_reusable:

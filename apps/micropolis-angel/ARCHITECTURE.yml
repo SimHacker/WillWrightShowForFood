@@ -102,7 +102,7 @@ dev_stack:
     WinUI XAML designer still smoother in Visual Studio.
 
 # NATIVE API MAP (modern Windows — prefer WinRT over legacy)
-native_apis:
+native-apis:
   ui_shell:
     primary: "WinUI 3 (Microsoft.UI.Xaml) — app window, navigation, settings, tray"
     alt: "WPF only if WinUI blocker; WinUI 3 is the current Microsoft default for new desktop apps"
@@ -198,7 +198,7 @@ streaming:
       twitch: "EventSub WebSocket in + Helix chat out (stream-gateway twitch skill)"
       youtube: "liveChat poll + insert (throttled)"
       obs_ws: "obs-websocket v5 — scenes, sources, stream start/stop"
-      cursor_mirror: "When Cursor on same box or LAN — SQLite tap → bus (cursor-tap.yml)"
+      cursor-mirror: "When Cursor on same box or LAN — SQLite tap → bus (cursor-tap.yml)"
   angel_as_gateway:
     - "One app toggles: stream mode / catalog mode / graveyard mode / chat-with-god"
     - "Screen scrape + compress + push — no separate Simplifier.exe"
@@ -219,13 +219,13 @@ launcher:
     - "Missing-object prediction from save parse (before generic in-game dialog)"
   tornado_install:
     what: "CARD install blocks — fetch any URL (IA, creator site), extract, rescan"
-    spec: "../../catalogs/sims1-community-landscape.yml#internet_archive_import"
+    spec: "../../catalogs/sims1-community-landscape.yml#internet-archive-import"
   binary_fingerprint_track:
     status: research_only
     note: "SHA256 Sims.exe per LC patch; patch recipes private until legal posture clear"
 
 # CATALOG CRAWLER — Simplifier port (bootstrap until WebGPU renderer)
-catalog_crawler:
+catalog-crawler:
   lineage: SIMSKIT-LINEAGE.yml#simplifier
   goal: "Enumerate every object, wallpaper, floor tile in buy-mode; SQLite catalog with preview images"
   screen_match: CATALOG-SCREEN-MATCH.yml
@@ -237,7 +237,7 @@ catalog_crawler:
       what: |
         Port Simplifier navigation + inject: walk categories, select each item,
         OCR title/price/description + scrape preview bitmap when WebGPU iff renderer not ready.
-      store: "screen_catalog_matches + previews + crawl_state; sync metadata to federation"
+      store: "screen-catalog-matches + previews + crawl_state; sync metadata to federation"
       retire_when: "WebGPU iff renderer produces previews from .far without running the game"
     read_text:
       primary: "OCR catalog panel → fuzzy match installed objects; ambiguous sets for user/AI"

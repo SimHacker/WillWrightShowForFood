@@ -3,7 +3,7 @@
 id: puppet-taxonomy
 type: tradition
 status: ready
-canonical: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds
+canonical: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds
 
 kinds:
   face_puppet:
@@ -14,10 +14,10 @@ kinds:
     instruments: [pink_trombone, phoneloper]
   puppet:
     also_called: video_puppet   # low-tech composited body (chroma-key / drawn / scrubbed), human-voiced
-    amplitude_scrub: "David Levitt technique — voice drives video scrub"
-    canonical_ancestor: "Bowie's chroma-key marionette on SNL, 'Boys Keep Swinging,' 1979 — see performance-and-culture.yml#puppet_kinds (puppet.canonical_ancestor)"
+    amplitude-scrub: "David Levitt technique — voice drives video scrub"
+    canonical_ancestor: "Bowie's chroma-key marionette on SNL, 'Boys Keep Swinging,' 1979 — see performance-and-culture.yml#puppet-kinds (puppet.canonical_ancestor)"
     soft_body_physics: "Exaggerated jiggle/soft-body rig (boobs, dongs, etc.) — a legible, funny tech demo; forkable browser toy. Segment: ../gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml (celebrate gender play; aim satire at power, not private people)."
-  sims_3d_puppet:
+  sims-3d-puppet:
     name: vitamoo-3d-puppet
     what: "Real, shipped **3D Sims 1 characters** (skeletons + meshes + animations) driven LIVE as puppets — the 3D sibling of the 2D face/video puppets."
     engine: "VitaMoo — Don Hopkins' in-browser WebGL Sims character/skeleton/mesh/animation renderer (vitamoo.space)."
@@ -35,4 +35,4 @@ consent: |
   live, if he wants): ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
   Guest example / the live ask: ../../characters/brian-eno/bowie-snl-1979.md
 
-reading: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#the_reading
+reading: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#the-reading

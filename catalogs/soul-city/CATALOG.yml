@@ -84,7 +84,7 @@ sibling_repo:
   engine: "MicropolisCore — WASM/SvelteKit playable + publishing projection"
 
 implements_from:
-  show: "../SHOW.yml#the_mission_grounded_in_the_invite.web_tools_platform"
+  show: "../SHOW.yml#the-mission-grounded-in-the-invite.web_tools_platform"
   distribution: github-distribution-model.yml
   browser_ecosystem: browser-ecosystem.yml
   modules:

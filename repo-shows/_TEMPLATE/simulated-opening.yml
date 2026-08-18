@@ -8,7 +8,7 @@ simulated_opening:
   fictional: true
 
   artwork_dir: gallery/          # or characters/<guest>/media/
-  patrons: ../../characters/menagerie/GUEST-ROSTER.yml#gallery_openings
+  patrons: ../../characters/menagerie/GUEST-ROSTER.yml#gallery-openings
   critics_fork: critics.yml    # optional — patron voices tuned to this guest
 
   tiers:

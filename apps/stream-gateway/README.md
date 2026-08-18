@@ -121,7 +121,7 @@ You don't need to reverse-engineer anything — wrap these:
 - **Self-hosted bots** (Go/Node) doing *Twitch EventSub + YouTube polling → normalized payload →
   OBS Browser Source over WebSocket* — exactly our architecture. The recurring lesson:
   **normalize platform payloads into one canonical schema at the ingestion boundary.** We already
-  do — see `brain-stream.yml#event_schema`.
+  do — see `brain-stream.yml#event-schema`.
 
 ## What else to know
 

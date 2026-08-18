@@ -32,14 +32,14 @@ artifacts: sessions/   # one dir per session — SESSION.yml, takes log, publish
 
 videos:  # index only — name, one line, pointer. Rich content lives in each session dir.
 
-  hn_video_reply:
+  hn-video-reply:
     name: "Will Answers Hacker News (video reply)"
     order: 0
     priority: now
     one_line: "Will answers the early HN questions on camera, as long as he wants; YouTube URL drops on the HN thread; feedback layers across media."
     session: sessions/00-hn-video-reply/SESSION.yml
 
-  mic_check:
+  mic-check:
     name: "Mic Check: Is This Thing On?"
     order: 1
     one_line: "A/V shakedown that becomes a recording session: the answering-machine gag opener ('Hey — I'm the Sim!'), SimCopter One, talking pie menus, tool vowel vocals + UH UH!, and mood-tagged [NOT GODZILLA] roars — every beat shot Goldilocks-style (too A / too B / just right), all three takes used, cut into playlist timelines."
@@ -54,7 +54,7 @@ videos:  # index only — name, one line, pointer. Rich content lives in each se
   moollm_show_and_tell:
     name: "MOOLLM Show-and-Tell"
     order: 3
-    one_line: "Don explains MOOLLM; Will's newcomer questions ARE the tutorial. Rehearses the premiere's will_drives_cursor role reversal."
+    one_line: "Don explains MOOLLM; Will's newcomer questions ARE the tutorial. Rehearses the premiere's will-drives-cursor role reversal."
     session: sessions/03-moollm-show-and-tell/SESSION.yml
 
   portable_data_1996:
@@ -75,4 +75,4 @@ videos:  # index only — name, one line, pointer. Rich content lives in each se
     name: "Will Drives: Cursor on the Repos (pre-show tour)"
     order: 6
     one_line: "Don gives Will the pre-show tour of the repos in Cursor; the live role reversal happens in the premiere."
-    spec: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#will_drives_cursor
+    spec: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#will-drives-cursor

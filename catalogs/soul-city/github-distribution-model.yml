@@ -86,7 +86,7 @@ soul_city_and_moollm:
 federation_rules:
   non_extractive:
     rule: "Send buyers to ZombieSims lifetime / SimFreaks — Soul City is rails, not a loot box"
-    see: ../sims1-community-landscape.yml#non_extractive_lift
+    see: ../sims1-community-landscape.yml#non-extractive-lift
   paid_vs_free_split:
     free_on_github: [SimProv HN giveaway pattern, Don composable objects, show artifacts, MOOLLM examples]
     federate_only: [SimFreaks/SimSlice paid sets, TSR VIP convenience — link + metadata CARD]

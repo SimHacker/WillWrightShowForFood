@@ -1,7 +1,7 @@
 # Don's cats — recurring stars, talking cat faces, interstitials & interruptions 🐱
 # The host's personal cast. Makes full shows PERSONAL: cat cameos between segments, talking-cat-face
 # faceballs, and the real-life interruptions that happen when you film at home with cats.
-# Talking cat faces are a Faceball `talking_selfies` application (photo → posed talking face).
+# Talking cat faces are a Faceball `talking-selfies` application (photo → posed talking face).
 
 meta:
   id: don-hopkins-cats
@@ -31,11 +31,11 @@ the_cast:
       - "Napoleon and Nelson Licking (4:28)"
       - "Low Contrast Nelson Licks High Contrast Napoleon's Head (0:34)"
       - "Head Licking + Love Bite (0:53)"
-    memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml#napoleon_the_cat
+    memorial: ../../bits/tradition-in-memoriam/tradition-in-memoriam.yml#napoleon-the-cat
   nelson:
     status: current
     personality: "EXTREMELY LOUD (HE IS LOUD!!!) — the roar drive's first example contributor"
-    signature_bit: "Nelson's roar seeds the upload-ROARS!!! drive as a blipvert: if a cat can submit, so can you (../../process/one-minute-intense.yml#upload_roars.example_blipverts)."
+    signature_bit: "Nelson's roar seeds the upload-ROARS!!! drive as a blipvert: if a cat can submit, so can you (../../process/one-minute-intense.yml#upload-roars.example_blipverts)."
     media: ./media/cats/nelson/
     published_clips:   # already on youtube.com/@a2deh — blipvert-shaped and proven
       - "Nelson Spins Pip While Emacs Watches (2:57, 1.8K views)"
@@ -51,13 +51,13 @@ the_cast:
 
 media_kinds:
   talking_cat_faces:
-    what: "Cat photos → talking faces (googly eyes + lip-synced mouth) — a Faceball `talking_selfies` application."
+    what: "Cat photos → talking faces (googly eyes + lip-synced mouth) — a Faceball `talking-selfies` application."
     source: hand_picked_cat_photos
-    faceball: ../../apps/performance-space/faceball-construction-set.yml#talking_selfies
+    faceball: ../../apps/performance-space/faceball-construction-set.yml#talking-selfies
     use: "Cat 'comments' on a segment, reads a viewer letter, or deadpan-reacts to the guest."
   interstitials:
     what: "Short cat video clips between segments — palate cleanser, scene transition, cold-open charm."
-    feeds: ../../process/repo-show-format.yml#directors_cuts    # short-form between-segment content
+    feeds: ../../process/repo-show-format.yml#directors-cuts    # short-form between-segment content
   interruptions:
     what: "The real thing: a cat walks across the desk / knocks something over / demands attention mid-take."
     stance: "DON'T cut them — they're the best part. Lean into the live-at-home authenticity; caption + keep."
@@ -94,6 +94,6 @@ production:
 see_also:
   - ./README.md
   - ./ideas.md
-  - ../../apps/performance-space/faceball-construction-set.yml   # talking_selfies → talking cat faces
+  - ../../apps/performance-space/faceball-construction-set.yml   # talking-selfies → talking cat faces
   - ../../process/repo-show-branding.yml                          # interstitials in show orchestration
-  - ../../process/repo-show-format.yml                            # directors_cuts: short-form between-segment
+  - ../../process/repo-show-format.yml                            # directors-cuts: short-form between-segment

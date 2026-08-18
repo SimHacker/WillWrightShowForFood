@@ -53,7 +53,7 @@ bundles:
     priority: 4
     source: projects/micropolis-moollm/
     target: micropolis-moollm/
-    include: [GLANCE.yml, crystallized/AI-MANIFESTO.yml, process/design-in-public.yml#the_soul_of_the_show]
+    include: [GLANCE.yml, crystallized/AI-MANIFESTO.yml, process/design-in-public.yml#the-soul-of-the-show]
     note: "Partial — link-heavy excerpts only in v0.1"
 
 filtered_out_stays_private:

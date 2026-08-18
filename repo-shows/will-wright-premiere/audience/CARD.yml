@@ -6,7 +6,7 @@ glance: GLANCE.yml
 room:
   id: audience
   name: "Will Wright Show Audience"
-  type: [audience_collector, ticket_pr]
+  type: [audience_collector, ticket-pr]
   home: repo-shows/will-wright-premiere/audience/
 
 methods:

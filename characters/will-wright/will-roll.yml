@@ -10,7 +10,7 @@ library:
     He has heard this before. AGAIN. And again. With kindness.
 
   provenance:
-    specified_in: repo-shows/infodump/infodump.yml#cutaway_library
+    specified_in: repo-shows/infodump/infodump.yml#cutaway-library
     witness: don-hopkins
     years: "Maxis / The Sims era through decades of work and play"
     consent: |

@@ -98,7 +98,7 @@ Amber archive: [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md)
 | TomTom Home / BitTorrent DNA (resume) | [`../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md`](../../../../characters/don-hopkins/sources/2018-05-24-don-hopkins-resume.md) |
 | BitTorrent deploy go-ahead (Aug 2008) | [`../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md`](../../../../characters/don-hopkins/sources/pie-menu-timeline-medium-full.md) |
 | TomTom trilogy + Will rejoin | [`../../../characters/don-hopkins/career/stupid-fun-club.yml`](../../../../characters/don-hopkins/career/stupid-fun-club.yml) |
-| Idea jam entries | [`../../../process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml) — `#iloci_memory_palace`, `#amsterdam_coffeeshops_app`, `#bongo_bingo`, `#creationtv_storymaker`, `#urban_safari_gps_storytelling` |
+| Idea jam entries | [`../../../process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml) — `#iloci-memory-palace`, `#amsterdam-coffeeshops-app`, `#bongo-bingo`, `#creationtv-storymaker`, `#urban-safari-gps-storytelling` |
 | Career lineage | [`../../../characters/don-hopkins/career/lineage.yml`](../../../../characters/don-hopkins/career/lineage.yml) |
 | eBike Safari show + product seed | [`../../../repo-shows/ebike-safari/`](../../../../repo-shows/ebike-safari/) |
 | StoryMaker media | [`../../../characters/don-hopkins/media/storymaker-urban-safari/`](../../../../characters/don-hopkins/media/storymaker-urban-safari/) |

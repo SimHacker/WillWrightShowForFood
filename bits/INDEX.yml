@@ -28,22 +28,22 @@ traditions:   # cross-show formats and homages
     file: tradition-participation-rocky-horror/tradition-participation-rocky-horror.yml
     shows: [will-wright]
     status: ready
-    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#rocky_horror_culture
+    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#rocky-horror-culture
   - id: time-shifted-viewing
     file: tradition-time-shifted-viewing/tradition-time-shifted-viewing.yml
     shows: [will-wright]
     status: ready
-    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#time_shifting
+    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#time-shifting
   - id: honest-fake-call-in
     file: tradition-honest-fake-call-in/tradition-honest-fake-call-in.yml
     shows: [will-wright]
     status: ready
-    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#live_call_in
+    canonical: ../repo-shows/will-wright-premiere/SEGMENTS.yml#live-call-in
   - id: puppet-taxonomy
     file: tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml
     shows: [will-wright]
     status: ready
-    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds
+    canonical: ../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds
   - id: old-band-reunion
     file: tradition-old-band-reunion/tradition-old-band-reunion.yml
     shows: [all]
@@ -193,7 +193,7 @@ themes:   # substantive threads to revisit across episodes; every theme has a ha
     human: theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md
     shows: [will-wright]
     status: ready
-    canonical: ../process/crazy-idea-jam.yml#data_portability_crown_jewel
+    canonical: ../process/crazy-idea-jam.yml#data-portability-crown-jewel
   - id: stupid-fun-club-robots
     file: theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.yml
     human: theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md
@@ -221,7 +221,7 @@ themes:   # substantive threads to revisit across episodes; every theme has a ha
     human: theme-voystick-voice-space/theme-voystick-voice-space.md
     shows: [will-wright, all]
     status: ready
-    canonical: ../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    canonical: ../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
     note: "Homomorphic vocal joystick + Pink Trombone — idea in jam; stickers are SWAG only"
   - id: the-riff-loop
     file: theme-the-riff-loop/theme-the-riff-loop.yml
@@ -240,7 +240,7 @@ swag:   # merch design briefs — cheap to re-home if swag earns its own registr
     file: swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
     art_lead: howard-penner
     status: design_brief
-    note: "SWAG only — ISO hazards + Usenet physics labels; idea is ../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick"
+    note: "SWAG only — ISO hazards + Usenet physics labels; idea is ../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick"
 
 moved_out:
   educators-track: ../process/tracks/educators-track/educators-track.yml   # a TRACK (programming arc), not a theme

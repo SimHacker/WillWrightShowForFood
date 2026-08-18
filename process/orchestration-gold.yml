@@ -22,7 +22,7 @@ human_taste_routing:
   learned_by_doing: "Manual Transmission + Repo Show homefun — many drivers, many laps"
   see: stick-shift-protocol.yml
 
-training_by_demonstration:
+training-by-demonstration:
   lineage:
     pbd: "Programming by demonstration — Brad Myers, Watch What I Do, Garnet (Don ~1992–93)"
     see: ../characters/brad-myers/ · ../repo-shows/INDEX.yml#brad-myers-garnet-vpl
@@ -69,11 +69,11 @@ thoughtful_commitment:
     - "Thinking: cursor-mirror://<composer>/<event-range>"
   composes: [cursor-mirror, git, trekify, deep-snitch]
 
-since_last_commit:
+since-last-commit:
   when: "Each thoughtful COMMIT — analyze cursor-mirror from previous commit SHA to now"
   stick_shift: |
     If commit equals shift point — segment is one gear commitment until prompt closure;
-    see stick-shift-protocol.yml#gear_commitment
+    see stick-shift-protocol.yml#gear-commitment
   workflow:
     - "git log -1 --format=%H — anchor"
     - "cursor-mirror timeline / thinking / tools / context-sources since anchor"
@@ -99,8 +99,8 @@ since_last_commit:
     quality:
       - rubric SCORE on slice vs spec CARD
       - spec_compliance_diff
-  audit_questions:
-    flagship: homefun-grading.yml#flagship_question
+  audit-questions:
+    flagship: homefun-grading.yml#flagship-question
     examples:
       - "Does the commit message match the thinking blocks? — Repo Show homefun grading"
       - "Why did you add that image — where did it come from?"
@@ -146,9 +146,9 @@ ties_to:
   - SimHacker/moollm/skills/experiment
 
 see_also:
-  - ai-offs.yml#post_run_analysis
-  - manual-transmission.yml#post_run_forensics
-  - repo-show-format.yml#cauldron_scoop
+  - ai-offs.yml#post-run-analysis
+  - manual-transmission.yml#post-run-forensics
+  - repo-show-format.yml#cauldron-scoop
 
 credits:
   steve_kommrusch: "GitHub commit logs as ML training signal — repair / equivalence research"

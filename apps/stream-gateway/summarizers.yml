@@ -1,5 +1,5 @@
 # summarizers — pluggable summarizer backends for semantic mips + chat resummary
-# Part of: SPEC.yml  |  Feeds: overlay-viewer.yml#semantic_zoom, brain-stream.yml#overlay_ux.resummary
+# Part of: SPEC.yml  |  Feeds: overlay-viewer.yml#semantic-zoom, brain-stream.yml#overlay-ux.resummary
 # One interface, many backends. Start remote (fast to wire), move local (free).
 
 meta:
@@ -11,12 +11,12 @@ meta:
 # We ALREADY have to LLM-redact every string before the bus. So the SAME completion
 # also emits the whole mip ladder. One call → redacted text + all LODs. Amortize the
 # ping-pong: one round-trip per node (batched), not one per LOD.
-fused_call:
+fused-call:
   why: "Redaction is mandatory (cursor-tap.yml#privacy). Summarizing is nearly free if the same model does both in one shot."
   call: "process(text, channel, scope) -> { redacted_full, mips: {0..6}, flags }"
   emits_all_lods: "icon, kline, acronym, few_words, one_line, summary, redacted_full — in a single completion."
   amortize: "Batch dirty nodes per settle tick → one request carries many nodes × all LODs; LAN/Remote RTT paid once."
-  cache: "Store the whole ladder at once (cursor-tap.yml#our_derived_db table mips)."
+  cache: "Store the whole ladder at once (cursor-tap.yml#our-derived-db table mips)."
 
 # STYLIZED SUMMARIZATION DICTIONARY (coarse LODs)
 # Supplied to the model as instructions + a dictionary so coarse rungs are glanceable.
@@ -98,7 +98,7 @@ routing:
 
 # CACHE (shared with semantic mips)
 cache:
-  store: "our derived DB (cursor-tap.yml#our_derived_db, table: mips) + .moollm/stream-gateway/mips/"
+  store: "our derived DB (cursor-tap.yml#our-derived-db, table: mips) + .moollm/stream-gateway/mips/"
   key: "content_hash + lod + provider_profile"
   invalidation: "content change re-dirties only changed nodes (debounced)."
 

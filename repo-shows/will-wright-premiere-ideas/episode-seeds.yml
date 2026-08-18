@@ -7,7 +7,7 @@ kickoff:
   canonical: ../will-wright-premiere/episodes.yml#kickoff
 
 from_1996_video:
-  canonical: ../will-wright-premiere/episodes.yml#seeded_by_the_1996_video
+  canonical: ../will-wright-premiere/episodes.yml#seeded-by-the-1996-video
   highlights:
     - taken-aback-moment
     - anatomy-of-a-simulation-game
@@ -25,9 +25,9 @@ performance_episodes:
     modes: [play_along_narration]
     guest: drew-carey
   - title: "Hole in the Guest"
-    modes: [face_puppet, live_script_reading]
+    modes: [face_puppet, live-script-reading]
   - title: "Phoneloper vs Pink Trombone"
-    modes: [voice_puppet, audience_chorus]
+    modes: [voice_puppet, audience-chorus]
   - title: "SimProv Wedding — Double Pre-Game"
     modes: [machinima, play_along_narration]
     gag: ../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
@@ -37,4 +37,4 @@ performance_episodes:
     note: "Audience suggests who falls in love first; live Cupid object — prior art on YouTube."
 
 topical_flows:
-  canonical: ../will-wright-premiere/episodes.yml#flows_from_it
+  canonical: ../will-wright-premiere/episodes.yml#flows-from-it

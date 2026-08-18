@@ -88,8 +88,8 @@ sparse trees, not every GitHub issue. See [`../../../schemas/question-tree.yml`]
 | **Orchestration** | `questions.yml` tree | What this character wants on air — **authoritative for the show** |
 | **Repo pointer** | `repo_pointer:` on a node | Whole repo, module, or namespace path — **no issue required** |
 | **Discussion** | `discussion:` on a node | Issue + optional comment — durable thread (any repo) |
-| **Sub-questions** | `children:` | Same schema, recursive — each may have its own pointers and `context_lasers` |
-| **Context lasers** | `context_lasers:` | Many beams — files, dirs, line ranges, MOOLLM facets |
+| **Sub-questions** | `children:` | Same schema, recursive — each may have its own pointers and `context-lasers` |
+| **Context lasers** | `context-lasers:` | Many beams — files, dirs, line ranges, MOOLLM facets |
 
 **Unreferenced nodes are valid** — pure YAML drives the queue with no GitHub lookup.
 
@@ -139,7 +139,7 @@ node and local `question` text. 👍 / "+1" on GitHub counts globally; YAML reco
 **Context lasers** — multiple pointers per question. Flat array or **typed arrays**:
 
 ```yaml
-context_lasers:
+context-lasers:
   directory:   # whole MOOLLM room / object — all interfaces + subdirs
     - url: https://github.com/SimHacker/moollm/tree/main/…/monkey-palm
   interface:   # one CARDIFY facet of a dir — CARD, GLANCE, CHARACTER, README, …

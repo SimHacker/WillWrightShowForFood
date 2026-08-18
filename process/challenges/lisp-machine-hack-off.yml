@@ -73,7 +73,7 @@ challenge_lanes:
       eval: "One defun + one call matching spec CARD output"
       zmacs: "Source file in PR — reload path documented"
 
-how_it_runs:
+how-it-runs:
   host_drops: "Spec CARD + optional vendor constraint ('Symbolics only heat' or 'pick your camp')"
   contestant:
     - "Pick Symbolics or LMI lane — document in rig yaml + SETUP.md"
@@ -109,9 +109,9 @@ see_also:
   - { path: ../pdp10-its-stack.yml, why: "ITS/MACLISP ancestor — AI Lab before ivory" }
   - { path: ../../rigs/lisp-machine-symbolics.rig.yml, why: "Symbolics camp rig" }
   - { path: ../../rigs/lisp-machine-lmi.rig.yml, why: "LMI camp rig" }
-  - { path: ../micropolis-ai-drag-race.yml#lisp_machine_hack_off, why: "Drag race vendor battle slot" }
+  - { path: ../micropolis-ai-drag-race.yml#lisp-machine-hack-off, why: "Drag race vendor battle slot" }
   - { path: ../../characters/robots/slats/judge-rubric.yml, why: "Slats judges Zmacs werk" }
-  - { path: ../cross-links.yml#retrocomputing_drive, why: "Full retro trail index" }
+  - { path: ../cross-links.yml#retrocomputing-drive, why: "Full retro trail index" }
   - { path: https://lisp-machine.org/, why: "Community hub — emulator links" }
   - { path: https://github.com/salewski/ld-lambda-delta, why: "LambdaDelta — LMI lane emulator" }
   - { path: https://github.com/unya/usim, why: "CADR heritage — MIT AI Lab ancestor" }

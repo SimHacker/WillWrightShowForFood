@@ -77,7 +77,7 @@ show_beats:
   - "Slats trains on Ashford PDF — MOOLA payout"
 
 ties:
-  curiosity_cow_cube: ../gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
+  curiosity-cow-cube: ../gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   bogost_show: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   moola: ../../process/moola.yml
   morningstar_habitat: "Chip Morningstar & Randy Farmer — Habitat 1986, avatar, First Penguin Award"

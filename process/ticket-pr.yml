@@ -1,6 +1,6 @@
 # TicketPR — Master → PR (the pun is the point)
 # Constitutional layer for Repo Show audience participation.
-# Girder: repo-show-format.yml#ticket_pr | Skill: ../skills/repo-show/SKILL.md
+# Girder: repo-show-format.yml#ticket-pr | Skill: ../skills/repo-show/SKILL.md
 
 meta:
   id: ticket-pr
@@ -23,7 +23,7 @@ lineage:
       Two audience-submitted questions changed software history. TicketPR formalizes Brand's
       mechanism in git: questions gathered before the show, curated by the producer, read to the
       guest, answered on the record — attributed and permanent instead of a paper pile.
-    receipts: vision-and-ambition.yml#long_now_and_later
+    receipts: vision-and-ambition.yml#long-now-and-later
 
 etymology:
   pun: "TicketMaster → TicketPR"
@@ -52,11 +52,11 @@ anti_pattern:
     TicketPR inverts the model: attendance is free; interest is expressed in git (HN, issues,
     merge requests). Money is optional recognition, never a gate.
 
-where_not:
+where-not:
   character_dir: |
     characters/<name>/ is for PORTRAYED guests and long-lived personas — a person may appear
     on many shows. Person artifacts (media/, papers, catalogs) live here; see
-    repo-show-format.yml#placement_constitution.
+    repo-show-format.yml#placement-constitution.
   show_dir: |
     repo-shows/<show-slug>/audience/<github-username>/ — episodic TicketPR only; show yaml
     REFERENCES character dirs, does not duplicate guest-owned files.
@@ -170,7 +170,7 @@ questions_file:
   template: repo-shows/_TEMPLATE/audience/
   schema: ../schemas/question-tree.yml
   provenance_schema: ../schemas/question-provenance.yml
-  character_queues:
+  character-queues:
     output: |
       Root `questions:` list — what THIS character wants asked (to guest, named person, or `any`).
       The file is primarily an output queue; CARD question-advertisements read from here.
@@ -195,7 +195,7 @@ questions_file:
       video + live Twitch and route Will's answer back on HN. See question-provenance.yml.
     node_kinds: [answer, follow_up, me_too, quorum, discussion, answer_draft]
     status: [open, asked, answered, deferred, withdrawn]
-    fields: [question, to, answer, ref, issue, id, context_lasers, children]
+    fields: [question, to, answer, ref, issue, id, context-lasers, children]
   include:
     - display_name
     - github: "@username"
@@ -214,7 +214,7 @@ guest_participation:
   guest_prs: |
     Invited guests may open PRs under audience/ or reply in PR threads — e.g. answer a question
     early, welcome a fan, post their own 'see you there' note.
-  guest_primed_audience:
+  guest-primed-audience:
     what: |
       Guests may also **pre-prime audience members** — including clearly marked **virtual**
       characters, costumed plants, and **running gags** — by opening PRs under the show's
@@ -238,7 +238,7 @@ guest_participation:
       - add running gags that return each segment (balcony, bots, costume plants)
       - merge fan TicketPRs and reply in character as themselves — not as fans
       - call out planted audience on air ("that's our Tragic Clown — he's fiction, we planted him")
-  planted_audience:
+  planted-audience:
     homage: |
       Talk-show and late-night tradition — staged audience for rhythm and comedy, disclosed or
       obviously fictional. Repo Show puts the plants **in git** so the priming is honest.
@@ -295,7 +295,7 @@ donations:
     organic_advantages: [more_camera_time, called_on_first, guest_eye_contact, named_in_roll]
     not_a_gate: "You can ask the best question from the back row for free and still get picked."
     simoleons_note: "In-show § (Simoleons) are play-money only — NOT a way to buy seats. Real seating nods to real (optional) donations."
-    spec: ../repo-shows/will-wright-premiere/audience/INDEX.yml#box_seats
+    spec: ../repo-shows/will-wright-premiere/audience/INDEX.yml#box-seats
 
 relation_to_character_prs:
   characters: |

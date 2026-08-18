@@ -52,7 +52,7 @@ GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful comm
   - bid_honesty
   - shift_count
 
-- **see:** manual-transmission.yml#spend_csv_piss_test
+- **see:** manual-transmission.yml#spend-csv-piss-test
 
 ## Rig Classes
 
@@ -84,11 +84,11 @@ GitHub logs trained bug-fix models (Steve Kommrusch); our logs + thoughtful comm
 - **role:** Introspect Cursor sessions — timeline, thinking blocks, tool calls, model routing.
 Download your timestamped Cursor spending spreadsheet; analyze tokens and models per session.
 - **commands:**
-  - python3 skills/cursor-mirror/scripts/cursor_mirror.py timeline <composer>
-  - python3 skills/cursor-mirror/scripts/cursor_mirror.py thinking <composer>
-  - python3 skills/cursor-mirror/scripts/cursor_mirror.py tools <composer>
-  - python3 skills/cursor-mirror/scripts/cursor_mirror.py context-sources <composer>
-  - python3 skills/cursor-mirror/scripts/cursor_mirror.py deep-snitch <composer>
+  - python3 skills/cursor-mirror/scripts/cursor-mirror.py timeline <composer>
+  - python3 skills/cursor-mirror/scripts/cursor-mirror.py thinking <composer>
+  - python3 skills/cursor-mirror/scripts/cursor-mirror.py tools <composer>
+  - python3 skills/cursor-mirror/scripts/cursor-mirror.py context-sources <composer>
+  - python3 skills/cursor-mirror/scripts/cursor-mirror.py deep-snitch <composer>
 - **spend_proof:** Export Cursor usage/spending (timestamped spreadsheet or billing export). Pair with
 cursor-mirror session IDs for ai-offs scoreboard — efficiency vs extravagance within class.
 Stick-shift competitions: the spend log shows every model switch — smooth shifts vs grinding gears.
@@ -102,7 +102,7 @@ Stick-shift competitions: the spend log shows every model switch — smooth shif
 - **idea:** Live-code thought process into git commits — COMMIT with cursor-mirror-backed reasoning.
 Share WHY not just WHAT. Session linkage so others can archaeology your ai-off ride.
 Since-last-commit: analyze mirror output across routing, cognition, context, artifacts.
-- **since_last_commit:** orchestration-gold.yml#since_last_commit
+- **since-last-commit:** orchestration-gold.yml#since-last-commit
 - **workflow:**
   - cursor-mirror timeline / thinking / tools / context-sources since last commit SHA
   - thoughtful-commitment COMMIT — narrative + Thinking: cursor-mirror://composer/range
@@ -165,13 +165,13 @@ transcripts for secrets and sketch before anything goes public or into orchestra
   - Optional: attach composer id + deep-snitch clean bill to PR
 
 - **skill_snitch:** SimHacker/moollm/skills/skill-snitch
-- **see:** manual-transmission.yml#post_run_forensics
+- **see:** manual-transmission.yml#post-run-forensics
 
 ## Related
 
 | Link | Why |
 |------|-----|
-| [`cross-links.yml#drag_race_and_ai_offs`](cross-links.yml) | Full game-show + proof trail |
+| [`cross-links.yml#drag-race-and-ai-offs`](cross-links.yml) | Full game-show + proof trail |
 | [`rig-schema.yml`](../schemas/rig-schema.yml) | Declare rig_classes honestly |
 | [`README.md`](../rigs/README.md) | Rig personas — spend log lives in proof block |
 | [`rig-feedback.yml`](rig-feedback.yml) | Tell us your real stack |

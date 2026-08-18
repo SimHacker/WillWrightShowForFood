@@ -16,7 +16,7 @@ provenance:
   ticket_level:
     what: "Once per audience/questions.yml — the submitter's identity and capture event."
     fields:
-      source: [hacker_news, github_issue, email, twitch_chat, youtube_comment, ticket_pr, curator]
+      source: [hacker_news, github_issue, email, twitch_chat, youtube_comment, ticket-pr, curator]
       captured_at: ISO date
       curator: "github username or character id who moved ephemeral → git"
       hn:
@@ -88,7 +88,7 @@ amplification:
     children with stance: amplify | me_too.
   fields:
     by: "hn_user or github or character id"
-    channel: hacker_news | github | ticket_pr
+    channel: hacker_news | github | ticket-pr
     action: "question_pump | me_too | repost | +1"
     ref: URL or comment id
     date: ISO date

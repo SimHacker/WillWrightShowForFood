@@ -1,6 +1,6 @@
 # Buy-mode / build-mode screen read → fuzzy catalog match
 # When GUID is unknown (user browsing in-game), OCR/UIA yields title, price, description.
-# Parent: ARCHITECTURE.yml#catalog_crawler  |  simplifier.yml#read
+# Parent: ARCHITECTURE.yml#catalog-crawler  |  simplifier.yml#read
 
 meta:
   id: catalog-screen-match
@@ -80,7 +80,7 @@ duplicate_titles:
     - AI suggestion with confidence + rationale (logged to dispositions)
   ui_copy: |
     "We see 3 installed objects matching 'Victorian Lamp'. Pick one, or let AI suggest."
-  store: "screen_catalog_matches + screen_match_candidates tables (CATALOG-DB-SCHEMA.yml)"
+  store: "screen-catalog-matches + screen_match_candidates tables (CATALOG-DB-SCHEMA.yml)"
 
 # WHAT WE CAN KNOW (epistemic hygiene)
 knowledge_layers:
@@ -100,7 +100,7 @@ knowledge_layers:
 integration:
   bus_event: screen.catalog_match
   simplifier: "../stream-gateway/simplifier.yml#read"
-  sqlite: "CATALOG-DB-SCHEMA.yml#screen_catalog_matches"
+  sqlite: "CATALOG-DB-SCHEMA.yml#screen-catalog-matches"
   tts: "SpeechService reads title+description when selection changes (Simplifier showcase)"
   crawl: |
     Catalog crawler walks buy mode: each selection → OCR match → store preview_blob +

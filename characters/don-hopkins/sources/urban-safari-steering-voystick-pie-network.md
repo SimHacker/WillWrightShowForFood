@@ -37,14 +37,14 @@ no separate engine; `GO`/`LOOK`/`TAKE` between rooms in a hidden graph. The adve
 lineage starts here.
 
 **First:** [DreamScape](https://www.youtube.com/watch?v=5NytloOy7WM) (1995 WWDC) — rooms kiss to
-connect on an editable map; link globally, interact locally ([crazy-idea-jam](../../../process/crazy-idea-jam.yml#dreamscape_scriptx)).
+connect on an editable map; link globally, interact locally ([crazy-idea-jam](../../../process/crazy-idea-jam.yml#dreamscape-scriptx)).
 
 **Then:** Interval **MediaFlow** — Don's **Mac Common Lisp + QuickTime** hypermedia stream/dataflow
 implementation ([mediaflow-design-comments.md](../mediaflow-design-comments.md)). **No pie menus** —
 parallel hypermedia thread, not the flick-navigation UI.
 
 [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) — pie-menu network editor; rooms kiss to connect
-([jam](../../../process/crazy-idea-jam.yml#iloci_memory_palace)).
+([jam](../../../process/crazy-idea-jam.yml#iloci-memory-palace)).
 
 **MediaGraph** (SFC Unity, Jul 2015 — [YouTube demo](mediagraph-sfc-youtube-demo.md)) — **songs**
 on **roads**; drag nodes, edit labels. Per-song **pie menu**: radius + **biome** (CA — Life, ice,
@@ -160,8 +160,8 @@ imply the depth; reveal on approach; don't simulate every brick.
 
 ## Trail
 
-- [`../../../repo-shows/ebike-safari/README.md`](../../../repo-shows/ebike-safari/README.md) · `steering_pie_ride_game`
+- [`../../../repo-shows/ebike-safari/README.md`](../../../repo-shows/ebike-safari/README.md) · `steering-pie-ride-game`
 - [sutton-one-step-trap.md](sutton-one-step-trap.md)
 - [voystick-correspondence-lineage.md](voystick-correspondence-lineage.md)
-- [Crazy Idea Jam — Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick)
+- [Crazy Idea Jam — Voystick](../../../process/crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick)
 - [MOOLLM urban-safari-ride-game.yml](https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml)

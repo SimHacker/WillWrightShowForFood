@@ -11,7 +11,7 @@ meta:
   network: FX
   source_file: private path (not in this repo) Americans 2013 S01E12 HDTV.XviD-AFG.avi
   fandom: https://theamericans.fandom.com/wiki/The_Oath
-  branding_ref: process/repo-show-branding.yml#americans_claudia_pacman
+  branding_ref: process/repo-show-branding.yml#americans-claudia-pacman
   guest_room: characters/lars-brinkhoff/
   series_note: "Don — one of the great series."
 

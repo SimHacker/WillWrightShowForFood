@@ -6,7 +6,7 @@ meta:
   show: will-wright-premiere
   status: planned
   participants: [don-hopkins, will-wright]
-  related: ../../../../repo-shows/will-wright-premiere/SEGMENTS.yml#will_drives_cursor   # the premiere segment this rehearses
+  related: ../../../../repo-shows/will-wright-premiere/SEGMENTS.yml#will-drives-cursor   # the premiere segment this rehearses
 
 shape: |
   Don shows Will MOOLLM and explains it — and the explanation is DRIVEN by Will's
@@ -16,7 +16,7 @@ shape: |
   Will confuses everyone — his questions script the intro better than any outline.
 
 relation_to_premiere: |
-  This is the pre-show half of the will_drives_cursor segment (../../../../repo-shows/will-wright-premiere/SEGMENTS.yml):
+  This is the pre-show half of the will-drives-cursor segment (../../../../repo-shows/will-wright-premiere/SEGMENTS.yml):
   the tour happens here, off the clock and low pressure; the role reversal — Will
   DRIVING Cursor on the repos and interrogating Don — happens live in the premiere,
   with Will already knowing the geography.

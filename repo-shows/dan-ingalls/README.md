@@ -19,9 +19,9 @@ Walk one or two exhibits at [smalltalkzoo.thechm.org](https://smalltalkzoo.thech
 
 ## Trail
 
-[live_objects](../../process/trails/live-objects.md) — Alan Kay · Dan · Vanessa · Craig · the NeWS/Java branch
+[live-objects](../../process/trails/live-objects.md) — Alan Kay · Dan · Vanessa · Craig · the NeWS/Java branch
 
-[direct_manipulation](../../process/trails/direct-manipulation.md) — pop-up ↔ pie
+[direct-manipulation](../../process/trails/direct-manipulation.md) — pop-up ↔ pie
 
 ---
 

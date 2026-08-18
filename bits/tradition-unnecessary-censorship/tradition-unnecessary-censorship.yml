@@ -1,5 +1,5 @@
 # Unnecessary Censorship — cross-show tradition
-# Policy: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#unnecessary_censorship
+# Policy: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#unnecessary-censorship
 
 id: unnecessary-censorship
 type: tradition
@@ -29,8 +29,8 @@ anti_rule: |
   Unnecessary censorship is opt-in comedy; plain speech elsewhere.
 
 see_also:
-  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#unnecessary_censorship
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#unnecessary-censorship
   - ../gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
   # Getting-away-with-it lineage: Bowie's video puppet slipping past the NBC censors, SNL 1979.
-  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet_kinds
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#puppet-kinds
   - ../tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml

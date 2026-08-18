@@ -52,7 +52,7 @@ No synchronized group call required. No git required. Many short passes beat one
 
 ## Production rhythm
 
-Don records host narrative **after** guests submit solo video or 1-on-1 sessions. Break clips, interlink yaml + transcripts + sources, shotgun-blast ensemble — [guest-prototype.yml](../characters/will-wright/guest-prototype.yml#ensemble_medium).
+Don records host narrative **after** guests submit solo video or 1-on-1 sessions. Break clips, interlink yaml + transcripts + sources, shotgun-blast ensemble — [guest-prototype.yml](../characters/will-wright/guest-prototype.yml#ensemble-medium).
 
 Guests with access can watch the **private production repo** while artifacts land — same accretive rounds inside the green room.
 

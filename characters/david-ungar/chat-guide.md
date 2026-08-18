@@ -90,7 +90,7 @@ Links: [SELF-AND-MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/o
 
 ## 3. cursor-mirror — Self mirrors, reimplemented ugly
 
-- [ ] `cursor_mirror.py status` / `tree` / `tail` — deterministic Python
+- [ ] `cursor-mirror.py status` / `tree` / `tail` — deterministic Python
   CLI the LLM calls to introspect its own chat history.
 - [ ] Point: mirrors as *separate objects* doing reflection — his idea,
   wearing a SQLite raincoat.

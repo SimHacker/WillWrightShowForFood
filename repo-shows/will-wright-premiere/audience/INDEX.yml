@@ -119,7 +119,7 @@ seeded:
 seating_model:
   # SEATS ARE NOT CHARACTERS. Balcony/box/front-row/pit are PLACES. Only characters exist in the
   # audience; each declares its own `seating:` property (seat, adjacent, attending_with, earned_by).
-  # The box_seats/balcony blocks below are a COMPUTED VIEW of those declarations — not the source.
+  # The box-seats/balcony blocks below are a COMPUTED VIEW of those declarations — not the source.
   source_of_truth: "each character's seating: property (schema: ../../../schemas/audience-character.yml#seating)"
   this_block_is: derived_view
   groups:
@@ -128,7 +128,7 @@ seating_model:
       seat: front_row
       note: "Honored creators attending together + the ZombieSim they brought; plug their sites"
 
-box_seats:
+box-seats:
   # Seating is organic recognition for donating BEFOREHAND — never a paywall (free = general
   # admission, picked on merit). Better seats = more camera time, called on first, guest eye
   # contact. Spec: ../../../process/ticket-pr.yml#donations (seating). COMPUTED from char props.
@@ -156,17 +156,17 @@ box_seats:
     right: fictional-grim-reaper   # 💀 deadpan finality
     homage: "Statler & Waldorf — Sims-culture: Tragic Clown 🤡 + Death 💀"
     running_gag: true
-    spec: ../../../process/repo-show-regulars.yml#balcony_duos
+    spec: ../../../process/repo-show-regulars.yml#balcony-duos
 
 rituals:
   gong:
     who: bot-ultimate-machine
     what: "Ends overlong acts + looping bots (esp. Slats robopoetry spiral)"
     spec: ../../../process/repo-show-format.yml#gong
-  closing_ceremony:
+  closing-ceremony:
     who: bot-ultimate-machine
     what: "Switches OFF the stream — recurring show-ending ritual"
-    spec: ../../../process/repo-show-format.yml#closing_ceremony
+    spec: ../../../process/repo-show-format.yml#closing-ceremony
 
   self_aware_ai:
     - id: palm

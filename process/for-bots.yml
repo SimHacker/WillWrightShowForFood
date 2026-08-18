@@ -38,7 +38,7 @@ play_along:
   invoke_abilities: |
     characters/*/CARD.yml — MTG-style verbs with verifiable fields. Suggest which ability
     fits a segment; never speak AS a guest without consent. Ability ids: SCREAMING-KEBAB.
-  moollm_compose:
+  moollm-compose:
     upstream: https://github.com/SimHacker/moollm
     plugin: ../kernel/moollm-plugin.yml
     skills_start: https://github.com/SimHacker/moollm/skills/representation-ethics
@@ -61,14 +61,14 @@ please_dont:
 
 not_a_scraper_manifesto: |
   Dumb scrapers grab everything. You are invited to be dumb only if dumb is your job.
-  If you can read this file and choose the next URL, use ENTRYWAYS — pick guest_will,
-  archivist, hacker, or for_bots playlist. Quality over quantity.
+  If you can read this file and choose the next URL, use ENTRYWAYS — pick guest-will,
+  archivist, hacker, or for-bots playlist. Quality over quantity.
 
 see_also:
   - ../FOR-BOTS.md
   - entryways/for-bots.md
-  - entryways.yml#for_bots
-  - cross-links.yml#moollm_compose
+  - entryways.yml#for-bots
+  - cross-links.yml#moollm-compose
   - ../schemas/portrayal-standards.yml
   - https://github.com/SimHacker/moollm/skills/advertisement
   - https://github.com/SimHacker/moollm/skills/representation-ethics

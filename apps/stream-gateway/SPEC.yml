@@ -21,8 +21,8 @@ topology:
     what: "ONE SvelteKit server on the Mac serves ONE client (pie menus, tab frames, brain-stream viewer, Micropolis city/home app). Multiple hosts load the same URL."
     hosts:
       - "OBS Browser Source (Legion) — for the stream (native alpha)."
-      - "Electron transparent click-through overlay (Mac) — docked over Cursor, alpha hit-test, Kandu-style (overlay-viewer.yml#cursor_chat_replacement)."
-      - "Companion web app (public) — viewers' browsers (SPEC#delivery_surfaces)."
+      - "Electron transparent click-through overlay (Mac) — docked over Cursor, alpha hit-test, Kandu-style (overlay-viewer.yml#cursor-chat-replacement)."
+      - "Companion web app (public) — viewers' browsers (SPEC#delivery-surfaces)."
   source_machine:
     name: "Mac (main dev box)"
     runs:
@@ -53,13 +53,13 @@ topology:
     discovery: "mDNS/Bonjour (<mac>.local) or static IP"
 
 # THE BUS
-# One canonical schema, many subscribers (brain-stream.yml#event_schema).
+# One canonical schema, many subscribers (brain-stream.yml#event-schema).
 bus:
   server: "apps/stream-gateway (SvelteKit, Node adapter)"
   transports:
     sse: "/api/events  — default; simplest for overlay + /brain page"
     websocket: "/ws     — for bidirectional (overlay control, bookmarks, OBS bridge)"
-  schema: ../../process/brain-stream.yml#event_schema
+  schema: ../../process/brain-stream.yml#event-schema
   ingestion_boundary:
     rule: "Normalize ALL inputs (cursor tap, twitch, youtube, github) to the canonical event schema HERE, before anything subscribes."
     privacy_gate: "Every event passes the redaction filter (privacy.before_bus) before publish. No exceptions."
@@ -87,8 +87,8 @@ inputs:
   local_summarizer:
     what: "Small/free LOCAL LLM (Ollama / llama.cpp) — generates the semantic-zoom LOD ladder per node."
     cost: zero
-    produces: [semantic_mips]   # cached 'token mipmaps' per node (overlay-viewer.yml#semantic_zoom)
-    note: "Also powers chat resummary (brain-stream.yml#overlay_ux.resummary) for free."
+    produces: [semantic_mips]   # cached 'token mipmaps' per node (overlay-viewer.yml#semantic-zoom)
+    note: "Also powers chat resummary (brain-stream.yml#overlay-ux.resummary) for free."
 
 # OUTPUTS (sinks)
 outputs:
@@ -111,7 +111,7 @@ outputs:
 
 # DELIVERY SURFACES (how viewers receive the brain stream)
 # One Svelte viewer (overlay-viewer.yml), shipped THREE ways from one codebase.
-delivery_surfaces:
+delivery-surfaces:
   one_codebase: "overlay-viewer renders in all three; differ only by host chrome + transport endpoint."
   surfaces:
     obs_baked:
@@ -152,11 +152,11 @@ delivery_surfaces:
 # ANALYTICS BACKEND (queryable history for the audience)
 # Two tiers, each with the tool that FITS its store. Datasette is SQLite-only;
 # Grafana is the right fit for the cloud Postgres/TimescaleDB.
-analytics_backend:
+analytics-backend:
   why: "Beyond a live feed: let audience dynamically QUERY historical + analytic info — browse any part of the stream, any depth, pull just what they need."
   pipeline: "gateway → privacy gate → (a) live relay (SSE/WS) AND (b) a store for query/analytics."
   tier_local_sqlite:
-    store: "our derived SQLite (cursor-tap.yml#our_derived_db), per-session."
+    store: "our derived SQLite (cursor-tap.yml#our-derived-db), per-session."
     tool: "Datasette — instant read-only JSON API + UI over SQLite. Great for LOCAL ad-hoc querying, forensics, replay."
     note: "Datasette is SQLite-ONLY — keep it on the local DB, not the cloud Postgres."
   tier_cloud_timescale:
@@ -241,7 +241,7 @@ build_phases:
   - { id: 2, ship: "SvelteKit gateway: /api/events + /overlay/brain + /brain (overlay-viewer.yml)", cost: zero }
   - { id: 3, ship: "obs skill (obs-websocket) + OBS Browser Source wired", cost: zero }
   - { id: 4, ship: "Micropolis GUI shell hosts the brain panel (pie menus, tabs)", cost: zero }
-  - { id: 5, ship: "local_summarizer: semantic-zoom LOD ladder (token mipmaps) + chat resummary", cost: zero, note: "local model — free; see overlay-viewer.yml#semantic_zoom" }
+  - { id: 5, ship: "local_summarizer: semantic-zoom LOD ladder (token mipmaps) + chat resummary", cost: zero, note: "local model — free; see overlay-viewer.yml#semantic-zoom" }
   - { id: 6, ship: "twitch skill: EventSub in + chat commands out", cost: zero }
   - { id: 7, ship: "youtube skill: polling in + throttled summaries out", cost: mini }
 

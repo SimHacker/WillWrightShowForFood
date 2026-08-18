@@ -37,9 +37,9 @@ soul_stack:
   sims_export: EXPORT-SIMS-RELATIONSHIPS.yml
   schema: SCHEMA.yml
 
-gallery_openings:
+gallery-openings:
   always: [bella-goth, mortimer-goth, tragic-clown]
-  roster: ../menagerie/GUEST-ROSTER.yml#gallery_openings
+  roster: ../menagerie/GUEST-ROSTER.yml#gallery-openings
 
 see_also:
   - GLANCE.yml

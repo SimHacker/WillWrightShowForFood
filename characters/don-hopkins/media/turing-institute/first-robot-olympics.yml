@@ -80,7 +80,7 @@ best_photos:
       - "Don't get slap happy with me, robomofo!"
     tim_kaiser: "Banana peel!"
 
-  cardiff_vision_apis:
+  cardiff-vision-apis:
     parent: cardiff_walker_girls
     google_file: cardiff-walker-vision-google-1990.png
     microsoft_file: cardiff-walker-vision-microsoft-1990.png

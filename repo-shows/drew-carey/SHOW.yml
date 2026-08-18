@@ -42,7 +42,7 @@ segments:
     ties:
       - repo-shows/will-wright-premiere/audience/
 
-  - id: sims_play_along_narration
+  - id: sims-play-along-narration
     topic: |
       Sims Play-Along Narration — audience sends screen recordings; Drew (or guest improvisers)
       narrates live, making shit up. Replicates the Maxis-built Drew Carey Show in-game segment
@@ -67,10 +67,10 @@ segments:
     framing: ai-contrast-framing.yml
     ties:
       - bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
-      - bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage
+      - bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television-lineage
       - repo-shows/will-wright-premiere/performance-and-culture.yml
-      - process/crazy-idea-jam.yml#player_in_the_middle
-      - process/crazy-idea-jam.yml#creationtv_storymaker
+      - process/crazy-idea-jam.yml#player-in-the-middle
+      - process/crazy-idea-jam.yml#creationtv-storymaker
 
 framing:
   note: |

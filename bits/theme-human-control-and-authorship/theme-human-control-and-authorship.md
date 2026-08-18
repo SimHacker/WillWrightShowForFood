@@ -87,7 +87,7 @@ Will's beloved menagerie + our own + contributors' — **ethically and respectfu
 | [Augmentation trail](../../process/trails/augmentation-and-hypertext.md) | Engelbart + Nelson + Weiser → PITM |
 | [Puppet taxonomy](../../repo-shows/README.md) | Conan face-hole, Pink Trombone, Phoneloper |
 | [Honest fake call-in](../../repo-shows/README.md) | Staged but labeled |
-| [Will Wright premiere defense](../../repo-shows/will-wright-premiere/README.md) | `#defense_against_ai_slop` |
+| [Will Wright premiere defense](../../repo-shows/will-wright-premiere/README.md) | `#defense-against-ai-slop` |
 | [Performance space ethics](../../process/performance-space.md) | Live rig ethics |
 | [MOOLLM representation-ethics](https://github.com/SimHacker/moollm/skills/representation-ethics) | Upstream skill |
 

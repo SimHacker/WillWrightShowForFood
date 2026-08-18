@@ -20,14 +20,14 @@ character_file:
   optional:
     - soul_philosophy
     - emoji_identity
-    - emoji_flourish
+    - emoji-flourish
     - symbolic_attachments
     - SIMS-UPLIFT.yml  # per-character obliterator handoff
 
 signifier:
   format: "Five-emoji flourish string — cast signature (Palm originated)"
   example: "🐒✋🌴🔮💜"
-  see: MOOLLM-OVERLAY.yml#emoji_flourish
+  see: MOOLLM-OVERLAY.yml#emoji-flourish
 
 sims_traits:
   scale: "0-10 (Sims 1 display)"
@@ -56,7 +56,7 @@ sims_export:
     mimsy: 901
     gregory: 902
     vandermeer: 903
-    bucky_jr: 904
+    bucky-jr: 904
     helena: 905
     margot: 906
     julian: 907

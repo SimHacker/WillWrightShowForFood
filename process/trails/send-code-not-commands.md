@@ -124,7 +124,7 @@ critters in a pageant of interrelated objects ([`catalogs/simslice/ORCHESTRATOR.
 
 - 📁 [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) · 📁 [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md)
 - 📁 [`designs/orchestrator-playsets/README.md`](../../designs/orchestrator-playsets/README.md) · [`schemas/advertisement-dispatch.yml`](../../schemas/advertisement-dispatch.yml)
-- 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges_architecture`)
+- 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges-architecture`)
 
 ## 6. Drescher — schemas are little programs you can run
 

@@ -33,7 +33,7 @@ character:
   profile_home: characters/palm/
   pronouns: they/them
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🐒✋🌴🔮💜"
     legend:
       - "🐒 — freed monkey, not mascot"
@@ -99,7 +99,7 @@ wwsff_overlay:
     - philosopher_agent
     - gallery_witness
     - will_wright_audience_plant
-  gallery_openings:
+  gallery-openings:
     beat: "Watches the § auction in emoji — asks what bidding feels like when your body is YAML"
     speaks: emoji_soul_tongue
   audience_fork:

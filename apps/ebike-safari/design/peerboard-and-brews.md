@@ -219,7 +219,7 @@ way/482905: 0.18
 # territory/ambient/L1-generic-fruit/strength.yml  (sparse map — slow diffuse)
 way/482910: 0.22
 way/482920: 0.18
-meta: { abstract: generic_fruit, diffusion_rate: 0.03, fade_rate: 0.003 }
+meta: { abstract: generic-fruit, diffusion_rate: 0.03, fade_rate: 0.003 }
 ```
 
 ### Tick — diffuse strength, not embedding
@@ -276,8 +276,8 @@ way/483001: 0.09
 
 meta:
   level: L1
-  abstract: generic_fruit          # collapsed from many L0 payloads
-  embedding: territory/market/centroids.yml#generic_fruit
+  abstract: generic-fruit          # collapsed from many L0 payloads
+  embedding: territory/market/centroids.yml#generic-fruit
   diffusion_rate: 0.03               # << L0 (0.15)
   fade_rate: 0.003                   # << L0 (0.02)
   collapsed_from: [L-0042, L-0088, L-0091]   # audit trail
@@ -291,19 +291,19 @@ Rising isn't only spatial coarsening — **multiple L0 layers collapse** into on
 ambient layer when their semantics bucket together:
 
 ```
-collapse: { tomato, mango, apple, pear } → generic_fruit
-          { generic_fruit, bread, cheese } → food
+collapse: { tomato, mango, apple, pear } → generic-fruit
+          { generic-fruit, bread, cheese } → food
           { food, pleasant_brews } → good
           { feral_vintage, sewage } → bad
 ```
 
 Market block with ten fruit stands → ten L0 embeds fade → mass **pools** into one
-`L1/generic_fruit` sparse map; later `L2/food`; optional **valence** layers `good` / `bad`
+`L1/generic-fruit` sparse map; later `L2/food`; optional **valence** layers `good` / `bad`
 for very wide nostrils ("something tasty this way" vs "avoid").
 
 | Abstraction | Example sources | Nostril use |
 |-------------|-----------------|-------------|
-| `generic_fruit` | apple, tomato, mango Peecons | "find fruit" |
+| `generic-fruit` | apple, tomato, mango Peecons | "find fruit" |
 | `generic_meat` | butcher, duck, lamb | "find meat" |
 | `food` | fruit + meat + bakery collapse | "something to eat" |
 | `cuisine:dutch` | menu YAML cluster | "Dutch food" |
@@ -327,7 +327,7 @@ tick ambient layer A (sparse):
 ```
 
 **Long-range hill climbing:** when local L0 is eaten or faded, **PacBot/flocks/riders** still
-climb `generic_fruit` or `food` ambient gradients across the hood — faint but navigable.
+climb `generic-fruit` or `food` ambient gradients across the hood — faint but navigable.
 Pinch nostrils → drop ambient, hunt residual L0. Widen → ambient + L0 combined score.
 
 Windmill **sewage** rejects mass; **canal** deposits ambient-compatible strength downstream.
@@ -342,9 +342,9 @@ L2: { diffusion_rate: 0.01, fade_rate: 0.001 }
 L3: { diffusion_rate: 0.004, fade_rate: 0.0003 }
 
 collapse:
-  - tags: [apple, tomato, mango, pear, generic_fruit]
-    into: generic_fruit
-  - tags: [generic_fruit, generic_meat, bakery, food]
+  - tags: [apple, tomato, mango, pear, generic-fruit]
+    into: generic-fruit
+  - tags: [generic-fruit, generic_meat, bakery, food]
     into: food
   - tags: [food, comfort, fair_pick]
     into: good
@@ -464,7 +464,7 @@ embedding space:
 
 | Source | Smell cluster | Examples |
 |--------|---------------|----------|
-| **Fruit stands** | `generic_fruit` | apple, tomato, mango — unique payloads, **similar** embedding |
+| **Fruit stands** | `generic-fruit` | apple, tomato, mango — unique payloads, **similar** embedding |
 | **Meat stands** | `generic_meat` | beef, lamb, duck — smell like *meat*, not *fruit* |
 | **Restaurants** | `cuisine:*` + house signature | Thai, Italian, ramen — **menu in YAML** |
 | **Herb / flower / fish / …** | own centroids | many variants per category |
@@ -537,7 +537,7 @@ nostril_width ↑  →  τ ↓  →  dilated nostrils  →  more layers match ("
 nostril_width ↓  →  τ ↑  →  pinched nostrils  →  only precise matches ("Fujis only")
 ```
 
-**Widen nostrils:** L0 stands plus **ambient** sparse maps — `generic_fruit`, `food`, even
+**Widen nostrils:** L0 stands plus **ambient** sparse maps — `generic-fruit`, `food`, even
 `good`/`bad` valence for long-range "something tasty this way." **Pinch:** L0 only.
 
 ### Multi-smell pathfinding — climb by weighted goodness
@@ -563,7 +563,7 @@ the **combined** fruit-scented gradient toward the market hall. Pinch → single
 
 | Player intent | Nostril | Goal vector `q` |
 |-------------|---------|-----------------|
-| "Find any fruit" | wide | `embed(generic_fruit)` or category centroid |
+| "Find any fruit" | wide | `embed(generic-fruit)` or category centroid |
 | "Find Thai food" | medium | `embed(cuisine:thai)` or centroid |
 | "Stamppot tonight" | narrow | menu YAML line or `signature_smell` |
 | "Find Alice's tomato stand" | narrow | Alice's specific payload embedding |
@@ -599,7 +599,7 @@ Voice-first seed ([`../../../repo-shows/ebike-safari/`](../../../repo-shows/ebik
 | `epsilon_zero` | Sub-ε cell **rises** to ambient L1+ (not deleted) |
 | `rise_yield` | Fraction of sub-ε cell entering ambient collapse chain |
 | `L1+ diffusion/fade` | Much slower than L0 — **long-range** hill climb |
-| `collapse.into` | Many specific tags → `generic_fruit` → `food` → `good`/`bad` |
+| `collapse.into` | Many specific tags → `generic-fruit` → `food` → `good`/`bad` |
 | `strength_initial` | Splash size on spawn |
 | per-layer params | Rare brews diffuse slow; feral pigeon pee fades fast |
 

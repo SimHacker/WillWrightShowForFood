@@ -15,7 +15,7 @@ acceptance:
   summary: "Pitched and accepted. Will loves the async repo-show idea, understands the format, eager to participate."
   consent: invitation_accepted
 
-respect_time:
+respect-time:
   north_star: |
     Will's attention is the scarce resource. The repo + audience do the homework; he brings
     curiosity and stories. One session at a time; no marathon; no synchronized roundtable unless
@@ -46,7 +46,7 @@ show_shape:
   special_tier: "Live Twitch / group reading only if Will wants it — not the default ask"
   weave: "Other guests time-shifted; Will can chime in async between his own episodes"
 
-ensemble_medium:
+ensemble-medium:
   metaphor: shotgun_blast
   what: |
     A show — especially the first with Will — is not one linear video. It is a **shotgun blast**:
@@ -66,7 +66,7 @@ ensemble_medium:
   not_appointment_tv: |
     The ensemble grows over episodes. Will's first show crystallizes the pattern: blast the
     bundle, let the audience assemble their own path through it.
-  attention_economy:
+  attention-economy:
     designed_for: |
       Today's **eyeball economy** and **attention theater** — bumblebee attention spans and
       browsing patterns, not couch-and-commitment TV. People do not have time anymore; they
@@ -84,7 +84,7 @@ ensemble_medium:
     not_fighting_the_feed: |
       We do not pretend everyone will sit through a linear three-hour interview. We design for
       how people actually browse — and give guests a dignified way to show up without burning out.
-    shorter_than_tiktok: ../../process/repo-show-branding.yml#attention_atoms
+    shorter_than_tiktok: ../../process/repo-show-branding.yml#attention-atoms
 
 moollm_stage:
   girder: ../../process/moollm-stage.yml
@@ -103,12 +103,12 @@ moollm_stage:
     criterion_collection: |
       Commentary overlay — humans who made it talk over the log: backstory, why they said it,
       what happened. Session + commentary → cauldron → skill.
-  narrative_engine:
-    girder: performance-space.yml#narrative_engine
+  narrative-engine:
+    girder: performance-space.yml#narrative-engine
     summary: "Button board + Conan face-holes + improv voices — Don Philahue host ties clips together live"
     style: "../../don-hopkins/portrayal/upbringing.yml — host wavelength + production aesthetic"
 
-research_bundle:
+research-bundle:
   what: |
     For many guests Don has **already done the homework** — artifacts, links, videos, Hacker News
     threads, essays Don wrote, email archives. Curate a **review bundle** (private repo first,
@@ -150,7 +150,7 @@ first_episode:
   optional_segments: [slats-reincarnation, the_big_ask AI visual play]
 
 template_for_other_guests: |
-  Copy **respect_time** + **research_bundle** + **video_walkthrough** + **ensemble_medium**
+  Copy **respect-time** + **research-bundle** + **video_walkthrough** + **ensemble-medium**
   when inviting anyone else. Will is the reference: shotgun-blast ensemble, intertwingled,
   time-shifted, jumpable — Don pre-researches → guest reviews bundle → audience assembles path.
 

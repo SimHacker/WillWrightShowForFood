@@ -24,7 +24,7 @@ arc:
   permission: "Norman gave Don permission to take chapters from *Cellular Automata Machines* and make interactive playgrounds around particular sections and rules."
   chapter_picks: "Don's bias — the physical simulations: billiard-ball logic, spin glasses / Ising energy models, lattice gases, especially on the Margolus neighborhood (block partitioning → reversible, momentum-conserving physics). Norman explains why they're interesting; Don makes them playable."
 
-dream_segments:
+dream-segments:
   - "CAM-6, live: CAM6.js — Sun Forth compiled book rules to lookup tables; JS imported them, then rewrote rules + compiler in JS."
   - "DLA / dendrite: the Margolus-dendrite rule from p.167 §15.7 aggregating live on the Margolus-neighborhood engine — the exact FORTH-generated lookup table."
   - "Block CA + the Margolus neighborhood: how partitioning makes a rule reversible."

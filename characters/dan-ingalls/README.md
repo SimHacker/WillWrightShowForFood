@@ -12,7 +12,7 @@ Invitation portrayal — **not** Dan Ingalls. [Standards](../../schemas/portraya
 | **Correspondence** | [correspondence.yml](correspondence.yml) |
 | **Show seed** | [repo-shows/dan-ingalls/](../../repo-shows/dan-ingalls/README.md) |
 
-The live-object lineage made visible: BitBlt under every bitmap GUI, pop-up menus (cousin of Don's pie menus), Squeak written in itself, and historical Smalltalk running live in the browser at CHM. Sits on the [live_objects](../../process/trails/live-objects.md) trail with [Alan Kay](../alan-kay/README.md), [Craig Latta](../craig-latta/README.md), and [Vanessa Freudenberg](../vanessa-freudenberg/README.md) 🕯️.
+The live-object lineage made visible: BitBlt under every bitmap GUI, pop-up menus (cousin of Don's pie menus), Squeak written in itself, and historical Smalltalk running live in the browser at CHM. Sits on the [live-objects](../../process/trails/live-objects.md) trail with [Alan Kay](../alan-kay/README.md), [Craig Latta](../craig-latta/README.md), and [Vanessa Freudenberg](../vanessa-freudenberg/README.md) 🕯️.
 
 **The quote that won't leave the building:** Ingalls, *Design Principles Behind Smalltalk* (Byte, Aug 1981):
 

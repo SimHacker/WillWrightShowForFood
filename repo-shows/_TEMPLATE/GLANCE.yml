@@ -31,7 +31,7 @@ see_also:
     - { path: audience/GLANCE.yml, why: "TicketPR template" }
   across:
     - { path: ../will-wright-premiere/GLANCE.yml, why: "Flagship example" }
-    - { path: ../../process/repo-show-format.yml#description_scaffolding, why: "CARD + GLANCE constitution" }
+    - { path: ../../process/repo-show-format.yml#description-scaffolding, why: "CARD + GLANCE constitution" }
   deep:
     - { path: README.md, why: "Human article" }
     - { path: CARD.yml, why: "Show interface" }

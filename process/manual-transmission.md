@@ -58,7 +58,7 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
   - shift_count
   - cost_to_ship
 - **ref:** Spreadsheet doesn't lie. Misbid and the audience is the ref.
-- **see:** ai-offs.yml#cursor_mirror
+- **see:** ai-offs.yml#cursor-mirror
 
 ## Multi Rubric
 
@@ -242,12 +242,12 @@ showed GitHub bug-fix commits train repair models; we extend with thoughtful-com
   - ship_branch
   - multi_rubric_score
   - merge_or_sashay
-  - post_run_forensics
+  - post-run-forensics
 
 ## Post Run Forensics
 
 - **when:** After the run — before publishing artifacts or harvesting to skills/
-- **see:** ai-offs.yml#post_run_analysis
+- **see:** ai-offs.yml#post-run-analysis
 - **pitch:** The chat generated artifacts (code, yaml, commits, transcripts). Run cursor-mirror to
 archaeology the session; run deep-snitch to audit what left the building. Forensics
 feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets stripped.
@@ -288,4 +288,4 @@ feed rubric SCORE, experiment COMPARE, and orchestration gold — with secrets s
 | Link |
 |------|
 | [`showmaker-network.yml#competitions`](showmaker-network.yml) |
-| [`repo-show-format.yml#rig_spectrum`](repo-show-format.yml) |
+| [`repo-show-format.yml#rig-spectrum`](repo-show-format.yml) |

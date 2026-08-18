@@ -27,7 +27,7 @@ private-materials handling policy: [`yoot-tower-discussion.yml`](../../character
 
 ## Trail
 
-[game_design_lineage](../../process/trails/game-design-lineage.md) — Yoot among the sim-toy designers.
+[game-design-lineage](../../process/trails/game-design-lineage.md) — Yoot among the sim-toy designers.
 
 ---
 

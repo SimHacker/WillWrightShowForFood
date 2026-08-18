@@ -72,7 +72,7 @@ per_robot:
   fictional-broken-robot:
     dialect: glitch
     note: "Degrading speech; '—help— me—'; falls over (Unitree rhyme)"
-    instrument: "Voice it live on PINK TROMBONE (dood.al/pinktrombone) — its wet, strained vocal-tract pleading is perfect. See language-cow.yml#performance_instruments."
+    instrument: "Voice it live on PINK TROMBONE (dood.al/pinktrombone) — its wet, strained vocal-tract pleading is perfect. See language-cow.yml#performance-instruments."
 
 reincarnation_endgame:
   what: |

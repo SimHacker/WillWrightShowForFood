@@ -5,7 +5,7 @@
 room:
   id: YOUR-GITHUB-USERNAME
   name: "Your Display Name"
-  type: [audience_member, ticket_pr, player]
+  type: [audience_member, ticket-pr, player]
   home: "repo-shows/<show-slug>/audience/YOUR-GITHUB-USERNAME/"
 
 meta:

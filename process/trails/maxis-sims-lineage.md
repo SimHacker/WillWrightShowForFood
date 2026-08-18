@@ -1,10 +1,10 @@
-# Trail — maxis_sims_lineage
+# Trail — maxis-sims-lineage
 
 > *SimCity → Dollhouse → The Sims → Spore*
 
 The specific genealogy this repo grew from — with its primary-source images.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#maxis_sims_lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#maxis-sims-lineage) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

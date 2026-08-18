@@ -249,17 +249,17 @@ Full pages: [**TRAILS.md**](TRAILS.md)
 
 | Trail | One line |
 |-------|----------|
-| [repo_show_spine](process/trails/repo-show-spine.md) | Show IS the repo — RTFR, harvest skills back |
-| [augmentation_and_hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle |
-| [constructionist_lineage](process/trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → Micropolis |
-| [drag_race_and_ai_offs](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
-| [retrocomputing_drive](process/trails/retrocomputing-drive.md) | One spec — SETUP DNA is viral |
-| [retro_guests_real_wire](process/trails/retro-guests-real-wire.md) | Lars ITS + Thomas FujiNet |
-| [live_production](process/trails/live-production.md) | Brain stream + Philahue bus |
-| [moollm_compose](process/trails/moollm-compose.md) | Plugin microworld — skills from shows |
-| [rig_personas](process/trails/rig-personas.md) | Rig = drag persona lifecycle |
-| [schemas_and_ethics](process/trails/schemas-and-ethics.md) | Contracts before characters |
-| [archive_and_provenance](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
+| [repo-show-spine](process/trails/repo-show-spine.md) | Show IS the repo — RTFR, harvest skills back |
+| [augmentation-and-hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle |
+| [constructionist-lineage](process/trails/constructionist-lineage.md) | 1996 → Will kickoff → Papert/Kay → Micropolis |
+| [drag-race-and-ai-offs](process/trails/drag-race-and-ai-offs.md) | Slats judges; ai-offs scores spend |
+| [retrocomputing-drive](process/trails/retrocomputing-drive.md) | One spec — SETUP DNA is viral |
+| [retro-guests-real-wire](process/trails/retro-guests-real-wire.md) | Lars ITS + Thomas FujiNet |
+| [live-production](process/trails/live-production.md) | Brain stream + Philahue bus |
+| [moollm-compose](process/trails/moollm-compose.md) | Plugin microworld — skills from shows |
+| [rig-personas](process/trails/rig-personas.md) | Rig = drag persona lifecycle |
+| [schemas-and-ethics](process/trails/schemas-and-ethics.md) | Contracts before characters |
+| [archive-and-provenance](process/trails/archive-and-provenance.md) | Public bud vs private archive — cite primary sources |
 
 ### Rooms
 
@@ -285,7 +285,7 @@ multiverse**. Some are jokes that turned out to be load-bearing. All of them are
 
 > *AI proposes; the **player** disposes — now let's get weird with it.*
 
-→ **[Read the Crazy Idea Jam](process/crazy-idea-jam.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid_fun_forward](process/trails/stupid-fun-forward.md)
+→ **[Read the Crazy Idea Jam](process/crazy-idea-jam.md)** · girder [`crazy-idea-jam.yml`](process/crazy-idea-jam.yml) · trail [stupid-fun-forward](process/trails/stupid-fun-forward.md)
 
 ---
 

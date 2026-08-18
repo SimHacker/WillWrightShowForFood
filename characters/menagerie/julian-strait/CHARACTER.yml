@@ -90,7 +90,7 @@ relationships:
       type: 'rivalry'
       daily: -5
       lifetime: 15
-    bucky_jr:
+    bucky-jr:
       type: 'rivalry'
       daily: 15
       lifetime: 20

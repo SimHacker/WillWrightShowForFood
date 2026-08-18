@@ -11,10 +11,10 @@ show:
   character: characters/will-wright/    # represented, living, consent level 3
   topic: TOPIC-LESS                 # Will Wright is the topic — talk about anything he wants.
   status: accepted                   # Will accepted 2026-07 — kickoff guest confirmed
-  guest_prototype: ../../characters/will-wright/guest-prototype.yml
+  guest-prototype: ../../characters/will-wright/guest-prototype.yml
 
 ensemble:
-  # The medium — not appointment TV. See guest-prototype.yml#ensemble_medium
+  # The medium — not appointment TV. See guest-prototype.yml#ensemble-medium
   shape: shotgun_blast
   moollm_stage: ../../process/moollm-stage.yml
   what: |
@@ -22,7 +22,7 @@ ensemble:
     skippable, jumpable, transcribed, linked, and yaml-defined. Video is one thread through the
     repo; the repo is the show. Will's kickoff crystallizes this pattern for every show after.
   navigate: "Transcript → link → open in Cursor → edit/run → jump back to timestamp — audience assembles their own path"
-  attention_economy: |
+  attention-economy: |
     Built for eyeball economy + bumblebee attention spans — skim, skip, jump. Guests and audience
     both get to be seen and heard without pretending anyone has three uninterrupted hours.
 
@@ -35,14 +35,14 @@ public_repo:
 
 ideas: ../../characters/will-wright/ideas.md   # grounded conversation hooks — a topic MENU, not an agenda (topic-less by design)
 
-topic_less_by_design:
+topic-less-by-design:
   why: "The first show has NO assigned topic. Will Wright is the topic. We talk about whatever he wants — and the topical shows (the simulation effect, Proxi, original SimCity intent, post-mortems...) FLOW FROM it as follow-ups."
   the_move: "Open the door wide first; let the threads he pulls become the season. Show, don't tell."
   but_with_a_centerpiece:
     centerpiece: "Anything goes — BUT we start with, and orbit, ONE artifact: the 1996 Winograd video + Don's Medium article (../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/). It's the seed for asking Will questions + making comments."
     focus_discipline: "NO more videos. Just that one. Keep focused — there's more than enough in it already."
 
-the_arc:
+the-arc:
   # The show's shape mirrors + completes the 1996 talk's own shape.
   the_1996_talk:
     looked_back: "Post-mortems of THREE games — a perfect constellation of easy / hard / just-right: SimAnt (too easy) · SimEarth (too complex) · SimCity 2000 (just right)."
@@ -63,7 +63,7 @@ why:
 
 format:
   canonical: ../../process/repo-show-format.yml
-  guest_prototype: ../../characters/will-wright/guest-prototype.yml
+  guest-prototype: ../../characters/will-wright/guest-prototype.yml
   default_tier: ongoing_one_on_one   # couple-and-solo-shows.yml — async, respect Will's time
   live: true                         # optional special tier — not the default ask
   audience_qa: true                  # async via repo; live chat only on special events
@@ -76,7 +76,7 @@ format:
     Announce the repo ahead of time. Audience submits HN comments, issues, and TicketPRs
     (repo-shows/<show>/audience/<github-user>/) — including before the guest accepts.
     Harvest builds interest the guest can see. See ../../process/ticket-pr.yml.
-  ticket_pr: ../../process/ticket-pr.yml
+  ticket-pr: ../../process/ticket-pr.yml
   intro_ritual: "Per /skills/repo-show: 'this episode's repos are:', AI announcer (superposition of acronyms for MOOLLM), license+credit beat, Will introduced as a Repo Man. Don Philahue wrangles TicketPRs + live chat; optional 'Come On Down' for costumed audience members."
   mspo_rpg_resonance: "The async audience (characters ask even when their author is offline; MSPO RPG = Massively Single-Player Online RPG) is WILL'S OWN Spore frame. Especially apt that he's the first guest — invite him to riff on it."
   shape: "No agenda. Explain WHY when a design idea comes up → implement a little of it live (MOOLLM + Cursor). Whatever threads open become future shows."
@@ -87,12 +87,12 @@ the_big_ask:
   # Don's framing (2026-06-27): the ONE concrete request to Will for this show.
   ask: "Use Claude (Opus) to MAKE the slides, illustrations, and even videos for this interview — author his own visual aids WITH the AI, ahead of / during the show, instead of slideware or a deck someone else builds."
   why: "Demonstrates the thesis ON him: AI as a creative CO-AUTHOR for an originator, not a scraper hoovering his work. The making-of is itself content. And it models — for the audience — exactly the kind of AI-assisted creation we then invite THEM to do."
-  not_in_tension_with_centerpiece: "Distinct from the 'no more archival videos' focus rule (topic_less_by_design.but_with_a_centerpiece) — that caps SOURCE videos to react to; this is Will GENERATING fresh visuals with Claude. Different thing, fully compatible."
+  not_in_tension_with_centerpiece: "Distinct from the 'no more archival videos' focus rule (topic-less-by-design.but_with_a_centerpiece) — that caps SOURCE videos to react to; this is Will GENERATING fresh visuals with Claude. Different thing, fully compatible."
   make_them_wild:
     directive: "Will should make the slides REALLY WILD. The point isn't a clean corporate deck — it's an originator playing HARD with a new instrument, on camera. Maximal Will-Wright weirdness encouraged."
     reference_glee: "Don's reaction to source material like the beautiful yellow slime mold (Physarum) image in the HN/Medium thread — THAT register of delight. Generative, organic, powers-of-ten, emergent-system imagery is exactly Will's vocabulary (cf. SimAnt, Spore, the Wired 'Evolve!' diagram)."
     asset: ../../../../characters/will-wright/media/spore-wired-diagram-2004.jpeg  # TODO: add file — Will's 'grand unified theory' Wired diagram
-  defense_against_ai_slop:
+  defense-against-ai-slop:
     # Pre-emptive rebuttal to the reflexive HN/social "That's AI slop → won't read/discuss" dismissal.
     context: "Some people post zero-value 'that's ai slop' to refuse to engage the moment AI is involved. We answer it head-on, with charm, and keep moving."
     the_patter: >
@@ -105,9 +105,9 @@ the_big_ask:
     ties:
       - ../../crystallized/AI-MANIFESTO.yml
       - /skills/no-ai-slop      # ambient: our standard is human-authored, reviewed, effective — not volume
-      - ../../funding/references.yml#mrbeast_approach  # study, don't ape; effective production without the vice
+      - ../../funding/references.yml#mrbeast-approach  # study, don't ape; effective production without the vice
 
-audience_homefun:
+audience-homefun:
   # The reward loop. 'Homefun' = the social, rewarded sibling of homeplay (/skills/repo-show CARD homeplay.homefun).
   invite: "Invite the audience to IMPLEMENT their own exploratory, live implementations of the ideas raised — AI-assisted (Claude/Cursor) on the MicropolisCore engine + MOOLLM."
   the_real_reward: "A chance to actually WORK WITH WILL — the way Don and a lucky few have, and as depicted in Will's MasterClass (the scene where a student works through a design + prototyping task WITH Will)."
@@ -133,7 +133,7 @@ relationship:
   shared_history: "Don worked with Will on The Sims at Maxis; Will's 1996 Stanford 'Interfacing to Microworlds' talk is what drew Don to Maxis. Old colleagues, real rapport."
   recent_call: "Don + Will had a great phone call (2026-06-24) — Don gave a whirlwind overview of the ideas. Too complicated to land in the first show, so invitation.md GROUNDS in writing what whizzed by. The show itself stays loose."
 
-the_mission_grounded_in_the_invite:
+the-mission-grounded-in-the-invite:
   # The fuller mission the invitation lays out (so the show can stay focused/anything-goes).
   bridges: "Bridging characters between worlds — Proxi ↔ Sims ↔ Stardew + beyond (data-portability crown jewel + Mind Mirror). See game-bridge-proxi-sims.yml, ../game-bridge-sims-stardew.yml."
   web_tools_platform: "Rebuilding the whole Sims content stack (render/read/write/edit/GENERATE) as a web-browser platform for content tools — Transmogrifier/RugOMatic/WigFabrik (aka WigOMatic — Tom Ngo ECG multitarget mesh+texture) reborn web-native. = Soul City (MODULES)."
@@ -144,7 +144,7 @@ willwrightshowforfood_monorepo:
   brand: "WillWrightShowForFood — too good a name not to keep + grow. Not just the kickoff gag: it becomes Will's OFFICIAL MONOREPO — everything he wants to publish, in one place HE owns."
   contents: "All the stuff Will wants out there: e.g. the RELEASED Spore demo/prototypes (a show about THOSE + more), talks, design docs, the bridges. His one-stop published corpus + an ongoing show."
   origin: "Started as the SimHacker/WillWrightShowForFood repo-invite gag (the JOIN ask, now folded into the public invitation.md)."
-  shows_as_cards: "Each show in it is a CARD with categorized links (next/prev + many kinds) + playlists — ../../process/family-album-cards.yml#shows_are_cards + /skills/repo-show CARD#shows_are_cards."
+  shows_as_cards: "Each show in it is a CARD with categorized links (next/prev + many kinds) + playlists — ../../process/family-album-cards.yml#shows-are-cards + /skills/repo-show CARD#shows-are-cards."
   gather_inspired_code: "A repo to GATHER all the code Will has inspired people to write — and to inspire people to fork + build on it (with or without AI). Don will publish his own prototypes: the StoryMaker iPhone prototype (built from Will's slide symbols), MediaGraph (Unity3D drag-&-'glick' pie-menu node navigation + direct manipulation), Phonoloper, and add the released Spore prototype code. Contributors add theirs (or we link their repos/forks)."
 
 the_intro_be_wills_protege:
@@ -166,8 +166,8 @@ invite_sfc_alumni:
 
 segments:
   slats_reincarnation: ./slats-reincarnation.yml   # ROBORESURRECTION: revive Slats live as a call-in robot sidekick (Easter Sunday). Will will LOVE it.
-  sims_play_along_narration: ./sims-play-along-narration.yml   # Audience Sims footage + live guest voice-over improv (Foreign Poet × Drew Carey Show).
-  performance_space: ../../process/performance-space.yml   # Umbrella — play-along, script reading, Conan face-puppet, OBS/webcam toys.
+  sims-play-along-narration: ./sims-play-along-narration.yml   # Audience Sims footage + live guest voice-over improv (Foreign Poet × Drew Carey Show).
+  performance-space: ../../process/performance-space.yml   # Umbrella — play-along, script reading, Conan face-puppet, OBS/webcam toys.
 
 consent: invitation_accepted          # Will accepted July 2026 — kickoff guest confirmed; async at his pace
 files:

@@ -28,7 +28,7 @@ pyramid: "GLANCE.yml (nav SSOT) + CARD.yml (interface) → SKILL.md → README.m
 see_also:
   - { path: CARD.yml, why: "Interface — methods, lifecycle, compose_with" }
   - { path: SKILL.md, why: "Protocol depth" }
-  - { path: ../../process/cross-links.yml#repo_show_spine, why: "Mind-expanding trail from here" }
+  - { path: ../../process/cross-links.yml#repo-show-spine, why: "Mind-expanding trail from here" }
   - { path: ../../process/repo-show-format.yml, why: "Format girder" }
   - { path: ../../process/repo-show-branding.yml, why: "Orchestration + branding — rituals, cultural excerpts" }
   - { path: ../../process/repo-show-format.md, why: "Generated markup" }

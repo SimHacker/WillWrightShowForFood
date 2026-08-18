@@ -9,7 +9,7 @@ meta:
   showmaker_network: "[showmaker-network.yml](showmaker-network.yml)"
 
 # PLACEMENT CONSTITUTION — colocate artifacts by reusable scope (Postel: accept messy layout, emit clean links)
-placement_constitution:
+placement-constitution:
   spec: "[character-colocation.yml](character-colocation.yml)"
   one_line: |
     Put each artifact where its scope makes it most reusable. Characters own person stuff.
@@ -92,9 +92,9 @@ placement_constitution:
 
   audience_exception:
     rule: "TicketPR audience/ stays per-show under repo-shows/<show>/audience/ — MSPO journal is episodic"
-    spec: "[ticket-pr.yml](ticket-pr.yml#where_not)"
+    spec: "[ticket-pr.yml](ticket-pr.yml#where-not)"
 
-  description_scaffolding:
+  description-scaffolding:
     one_line: |
       CARD + GLANCE together (~cheap) before README (~expensive). GLANCE owns nav/metadata;
       CARD owns interface/ads. LLMs read both. README renders nav for humans.
@@ -156,11 +156,11 @@ placement_constitution:
       - "https://github.com/SimHacker/moollm/blob/main/skills/advertisement/SKILL.md"
     spec_girder: "[character-colocation.yml](character-colocation.yml#cardify)"
 
-how_it_runs:
+how-it-runs:
   announce: "Ahead of time (e.g. [Hacker News](https://news.ycombinator.com/)) — a pointer to THIS repo, not a wall of text"
   rtfr: "Read The Fucking Repo — follow along on your own rig (editor, browser, notebook, AI, or bare hands)"
   guest_intro: "Guest introduced as a Repo Man, Woman, or Anybody: **ALWAYS INTENSE!** ([Alex Cox](https://en.wikipedia.org/wiki/Alex_Cox) / [*Repo Man*](https://en.wikipedia.org/wiki/Repo_Man_(film)) homage — come on, let's go)"
-  simulated_art_opening:
+  simulated-art-opening:
     spec: "[simulated-art-opening.yml](simulated-art-opening.yml)"
     default: "Optional pre-show — menagerie buys guest artwork for §; guest starts with huge worthless pile for Twitch"
     prototype: "[characters/don-hopkins/jsonsters/art-opening-night.yml](../characters/don-hopkins/jsonsters/art-opening-night.yml)"
@@ -177,7 +177,7 @@ how_it_runs:
     note: "Live bus — prompts, thinking, model shifts, GH doc links on overlay + throttled chat"
     drag_race: "[Manual Transmission](manual-transmission.yml) + [Micropolis AI Drag Race](micropolis-ai-drag-race.yml) — [Slats](../characters/robots/slats/) judges; spend log ref"
   after_harvest_pr:
-    post_run_forensics: "[ai-offs.yml](ai-offs.yml#post_run_analysis)"
+    post-run-forensics: "[ai-offs.yml](ai-offs.yml#post-run-analysis)"
     note: "[cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) + [deep-snitch](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) on session artifacts before public harvest"
 
 participation_policy:
@@ -201,14 +201,14 @@ participation_policy:
       "consumer" in show-facing copy.
     lineage: "MMORPG vocabulary matching [git_as_mmorpg](#breeding-and-nesting) — branches are parallel universes, PRs are timeline merges, and the humans in them are players, the term of art games already got right."
     origin: "Promoted from the Tom Tjon A Loi invitation (2026-08): the ask shifted from 'come be a guest' to 'come play it — as a player.'"
-  ticket_pr: "[ticket-pr.yml](ticket-pr.yml)"
+  ticket-pr: "[ticket-pr.yml](ticket-pr.yml)"
   ai_optional: "Follow along with your own AI coding tools if you like, or none at all. Hand-craft earns extra respect; if you do use AI we'd love to hear how (see [AI rig feedback](#ai-rig-feedback)) — to learn, not to sell."
   who_is_welcome: "Humans, bots, and AIs are all welcome to read along, ask questions, and contribute."
   bots: "Self-aware HTTP agents: start at [FOR-BOTS.md](../FOR-BOTS.md) — play along, follow links, don't flatten the repo into training slop."
   no_gatekeeping: "Participation is the perk, never knowledge-gated. Declare your category honestly; don't exclude anyone — see [declare_not_exclude](#declare-not-exclude)."
   conversation_first: "Most shows are conversations on a topic, not contests. The game-show formats ([Code That Spec](code-that-spec.yml), [Manual Transmission](manual-transmission.yml), [Micropolis AI Drag Race](micropolis-ai-drag-race.yml)) are optional fun, not the point."
 
-ticket_pr:
+ticket-pr:
   spec: "[ticket-pr.yml](ticket-pr.yml)"
   term: TicketPR
   etymology: "Pun on [Ticketmaster](https://en.wikipedia.org/wiki/Ticketmaster) — Master ⇒ PR (pull request): toxic gatekeeper → free collaborative GitHub workflow"
@@ -221,7 +221,7 @@ ticket_pr:
     Independent shows spin off to their own repos. TicketPR characters migrate between episodes within a repo.
   mspo: "Massively Single-Player Online — your timestamped layer on a shared artifact; others replay with your journal visible"
   where: "SHOW directory audience/ — NOT characters/ (guests have many shows; audience is per-episode)"
-  placement: "See [repo-show-format.yml#placement_constitution](repo-show-format.yml#placement_constitution) and [character-colocation.yml](character-colocation.yml)"
+  placement: "See [repo-show-format.yml#placement-constitution](repo-show-format.yml#placement-constitution) and [character-colocation.yml](character-colocation.yml)"
   files:
     - "[questions.yml](../repo-shows/_TEMPLATE/audience/questions.yml)"
     - "[CHARACTER.yml](../repo-shows/_TEMPLATE/audience/CHARACTER.yml)"
@@ -281,7 +281,7 @@ sign_offs:
     - line: "Order before midnight tonight, or it will be tomorrow!"
       homage: "1970s cheesy late-night TV commercial sign-off"
 
-closing_ceremony:
+closing-ceremony:
   name: "The [Ultimate Machine](../characters/robots/ultimate-machine/) switches off the stream"
   who: "[ultimate-machine](../characters/robots/ultimate-machine/)"  # audience overlay bot-ultimate-machine/
   recurring: true                # a REGULAR closing ceremony every show can perform
@@ -313,7 +313,7 @@ gong:
     vibe: "Confused LLM doing speech-to-speech feedback; accidental poetry; merciful gong."
     see: "[../characters/robots/slats/CHARACTER.yml](../characters/robots/slats/CHARACTER.yml)"
 
-rig_spectrum:
+rig-spectrum:
   principle: "Play along with YOUR rig — or learn a new one. See who makes the coolest."
   rig_schema: |
     Rigs are defined by extensible schemas — download, install, configure, use, replicate,
@@ -410,7 +410,7 @@ play_along:
     [skills/](../skills/) (protocols) and [packages/](../packages/) (@wwsff/* libs) so other organisms can use them.
   report_cost_to_ship: "Tokens + spend + time in rig report — judge efficiency AND taste"
 
-breeding_and_nesting:
+breeding-and-nesting:
   horizontal_gene_transfer: "Merge technique DNA from forks and PRs — git is the petri dish"
   serial_endosymbiosis: "Characters and shows accrete organelles — each game/world keeps its own DNA in parallel"
   powers_of_ten: |
@@ -423,7 +423,7 @@ breeding_and_nesting:
     chat_branches: "Parallel model trajectories — see [model-branching.yml](model-branching.yml)"
     see: "[GitHub-as-MMORPG](https://github.com/SimHacker/moollm/blob/main/skills/github/SKILL.md) + [character-endosymbiosis](character-endosymbiosis.yml)"
 
-directors_cuts:
+directors-cuts:
   one_line: "The show is a living git repo: it accretes reactions and re-releases as ever-longer Director's Cuts."
   thesis: |
     Episodes are not shipped-and-frozen. Like a repo that keeps merging branches and tagging
@@ -436,7 +436,7 @@ directors_cuts:
     tag:    "Each Director's Cut is a tagged release. Jump in anywhere; returning viewers find fresh material spliced all over since last time."
     fork:   "Shows fork into sub-shows; sub-shows merge with other shows; DNA recombines (see [breeding and nesting](#breeding-and-nesting))."
     literal: "Not a metaphor: the shows ARE git repos, so branch/merge/tag/fork are the actual mechanism, not an analogy."
-  splice_in_reactions:
+  splice-in-reactions:
     pattern: |
       1) Discuss or show a clip about a person.  2) Invite them to react, explain, correct, expand.
       3) Splice their response into the timeline where it belongs.  4) Re-release — longer and richer.
@@ -455,7 +455,7 @@ directors_cuts:
       see: "[Long Now Playing with Time](../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/)"
     breaks_up_into: [sub_shows, short_form_teasers, viral_memes]
     combines_with: "Other shows — mix, reuse, splice; git is the petri dish (see [breeding and nesting](#breeding-and-nesting))."
-  iteration_model:
+  iteration-model:
     new_cuts_not_rewrites: |
       Publish NEW numbered cuts as FRESH uploads — "Director's Cut III" — rather than rewriting an old
       video in place. Fresh uploads get algorithmic discovery (the teaser/fork feed carries the rest);
@@ -504,7 +504,7 @@ directors_cuts:
     see:
       - "[bowie-snl-1979.md](../characters/brian-eno/bowie-snl-1979.md)"
       - "[puppet-me-consent.yml](../characters/don-hopkins/portrayal/puppet-me-consent.yml)"
-      - "[faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml)"  # soft_body_anatomy + trump_mushroom
+      - "[faceball-construction-set.yml](../apps/performance-space/faceball-construction-set.yml)"  # soft-body-anatomy + trump_mushroom
       - "[vice-not-ice-puppet.yml](../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml)"
       - "[unnecessary-censorship.yml](../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml)"
   respect_the_viewer: |
@@ -525,7 +525,7 @@ showmaker_network:
   automation_goal: "Tooling to easily author show CARDs, pitch videos, and link PRs ([hosted-content](https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/website/pages/about/hosted-content/README.md) pattern)"
   see: "[showmaker-network.yml](showmaker-network.yml)"
 
-cauldron_scoop:
+cauldron-scoop:
   insight: |
     You can scoop many types of things OUT of a cauldron — not only LADLE.
     MELT/STIR grows the soup; SCOOP selects what leaves the pot and in what form.

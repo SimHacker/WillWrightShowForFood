@@ -112,4 +112,4 @@ To the future.
 | ??? | `[universities?]` — could be **researchers** |
 | TOP-20 | TOPS-20 |
 
-↑ [`repo-show-branding.yml`](../../../process/repo-show-branding.yml#americans_arpanet_pdp10) · [`ideas.md`](../ideas.md)
+↑ [`repo-show-branding.yml`](../../../process/repo-show-branding.yml#americans-arpanet-pdp10) · [`ideas.md`](../ideas.md)

@@ -49,7 +49,7 @@ rig_declaration:
     platforms: "apple2_real | apple2_emulated"
     emulators: "apple2js, MAME, Emularity — declare version; optional if real iron"
 
-how_it_runs:
+how-it-runs:
   host_drops: "Spec CARD — e.g. 'Print MICROPOLIS CLASS on the ][' or 'Touch sector 0'"
   contestant:
     - "Declare flair vs measurement lane + full rig (languages, tools, platform, emulator)"
@@ -87,10 +87,10 @@ see_also:
   - { path: retrocomputing-drive.yml, why: "Umbrella family — same spec CARD, your platform" }
   - { path: ../apple2-emulator-stack.yml, why: "Stack pointer — emulators, FujiNet, apple2js" }
   - { path: ../apple2-fujinet-bridge.yml, why: "Three-phase Apple ][ + FujiNet plan — AppleWin vs apple2js vs WASM" }
-  - { path: ../micropolis-ai-drag-race.yml#apple2_drive, why: "Drag race challenge rotation" }
+  - { path: ../micropolis-ai-drag-race.yml#apple2-drive, why: "Drag race challenge rotation" }
   - { path: ../../rigs/apple2-flair-lap.rig.yml, why: "Example rig — flair lap on ][" }
   - { path: ../../rigs/apple2-flair-lap.SETUP.md, why: "Rig DNA — forward to a friend" }
-  - { path: ../cross-links.yml#retro_guests_real_wire, why: "Thomas Cherryhomes — real iron on wire" }
+  - { path: ../cross-links.yml#retro-guests-real-wire, why: "Thomas Cherryhomes — real iron on wire" }
   - { path: ../../characters/thomas-cherryhomes/, why: "FujiNet / IRATA guest — network retro segments" }
   - { path: ../../characters/steve-wozniak/, why: "][ lineage — INTEGER BASIC heritage" }
   - { path: ../../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "Slats on ][ — show seed crossover" }

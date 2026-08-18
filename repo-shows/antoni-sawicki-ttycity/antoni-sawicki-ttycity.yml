@@ -55,7 +55,7 @@ segments:
 
 drag_race_tie:
   format: ../micropolis-ai-drag-race/micropolis-ai-drag-race.yml
-  challenge: retrocomputing_drive
+  challenge: retrocomputing-drive
   note: "ttycity is a ready-made vehicle: how small a terminal, how old a machine, how few colors can still hold a living city?"
 
 ties_to:

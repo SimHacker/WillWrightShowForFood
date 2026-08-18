@@ -20,7 +20,7 @@ why_her:
   sigkids: "SIGGRAPH SIGKids host — where Don met David Levitt / Bounce; 'royalty and a goddess' (Don's words)."
   hackers_conference_tapes: "Coco's video tapes from Hackers Conference — live highlight reel with commentary; Scott Kim, Rudy Rucker, many Repo Show dream guests."
 
-dream_segments:
+dream-segments:
   - "Charles Moore at HOMER — hiring Forth, Inc.; learning Forth from the inventor; 32K OS + paint + printer."
   - "Homer II performance — joystick bumper, touch faders, hero floppy → optical printer passes."
   - "Flying Logos — Peter Conn's SIGGRAPH '89 hack; forkable logo cinema / screensaver in repo?"

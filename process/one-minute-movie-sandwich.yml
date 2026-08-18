@@ -56,7 +56,7 @@ episode_grammar:
     answering_machine_link below). Don is THE CALLER WHO KNOWS WILL, voicing
     text-submitted questions (HN / GitHub) for people who don't send video —
     characters/will-wright/sessions/01-mic-check/SESSION.yml
-    #answering_machine_gag.the_caller_role.
+    #answering-machine-gag.the_caller_role.
   sequence:
     - "START: Call Will. He answers."
     - "Not home — leave a message. (The answering machine gag: sessions/01-mic-check.)"
@@ -145,12 +145,12 @@ messages_for_will:
     sustainable solo production line: the machine is always on.
   role_symmetry: |
     Completes the caller role (characters/will-wright/sessions/01-mic-check/
-    SESSION.yml#answering_machine_gag.the_caller_role): same phone, two
+    SESSION.yml#answering-machine-gag.the_caller_role): same phone, two
     directions. Don-the-caller relays OTHER PEOPLE'S questions to Will;
     Don-the-message-leaver shows Will HIS OWN work. Audience questions in,
     portfolio out — the answering machine is the show's switchboard.
 
-show_is_a_playlist:
+show-is-a-playlist:
   what: |
     A show IS a playlist. Compose it on YouTube; keep adding to it. Keep the shorter
     playlists around and grow longer ones from them — a short arc is a citable object
@@ -190,7 +190,7 @@ show_is_a_playlist:
     outro_landing_page). Universal open, specific close: series identity in
     front, playlist identity behind. The universal opener comes in TONE-MATCHED
     variants from the answering-machine BOUQUET (characters/will-wright/
-    sessions/01-mic-check/SESSION.yml#answering_machine_gag.the_bouquet):
+    sessions/01-mic-check/SESSION.yml#answering-machine-gag.the_bouquet):
     too-silly machine message for silly shows, too-serious for serious ones —
     same recognizable door, pre-tuned to the room behind it.
   outro_landing_page: |
@@ -237,7 +237,7 @@ show_is_a_playlist:
     Links at the ends of videos offer branches — but the DEFAULT is do nothing and
     watch through the playlist. Branching is easy, optional, and can be built into
     rendered continuous videos too (the branch menu is just another clip).
-    Same shape as showmaker-network.yml#show_path_as_playlist: the walk is the show,
+    Same shape as showmaker-network.yml#show-path-as-playlist: the walk is the show,
     the path can branch and merge.
   answering_machine_link: |
     After Will asks you to leave a message, one of the end-of-video links is the
@@ -246,7 +246,7 @@ show_is_a_playlist:
     linked in. The issue says you need a GitHub account and invites people to sign
     up and join the repo that way. Branch link as onboarding funnel — see
     characters/will-wright/sessions/01-mic-check/SESSION.yml
-    #answering_machine_gag.leave_a_message_funnel.
+    #answering-machine-gag.leave_a_message_funnel.
   github_onboarding_tutorial: |
     THE KEY AUDIENCE PARTICIPATION ONBOARDING TUTORIAL: a video of Don explaining
     to WILL that he needs a GitHub account — and showing him how, step by step,
@@ -413,7 +413,7 @@ fundraising_commercials:
     register is the joke AND the honesty: we really are asking, the product
     really is free, the urgency really is fake.
 
-found_commercials:
+found-commercials:
   what: |
     Not every commercial needs producing — some of the best FAKE ADS already
     exist as FOUND OBJECTS:
@@ -444,7 +444,7 @@ found_commercials:
     blipvert-SHAPED in the same compression grammar — but the ask is
     participation and GPL-3 contribution, not Zik-Zak consumerism. Cross-ref:
     one-minute-intense.yml#lineage.max_headroom_blipverts ·
-    #show_is_a_playlist.links_and_provenance (blipvert = door to context).
+    #show-is-a-playlist.links_and_provenance (blipvert = door to context).
   soupy_green_paper: |
     SOUPY SALES' GREEN PIECES OF PAPER — house gag and support-appeal template
     (https://www.youtube.com/watch?v=a-OGy3Kh7yM — Soupy telling the story to a
@@ -499,7 +499,7 @@ retro_host_frame:
     Ronco) is Don's childhood furniture and Will's first-job-era wallpaper;
     they rib each other from opposite sides of the same rabbit-eared screen.
 
-two_answering_machines:
+two-answering-machines:
   what: |
     The GPL-3 origin story and the Tiger Mountain story are ONE STORY, threaded
     through TWO ANSWERING MACHINES — and it loops back to the show's own cold
@@ -507,7 +507,7 @@ two_answering_machines:
     thread below is the source of truth to cut from.
   the_origin: |
     When Will explains GPL-3 free open source SimCity => Micropolis City (the
-    roar drive beat — one-minute-intense.yml#upload_roars.drive_video), he and
+    roar drive beat — one-minute-intense.yml#upload-roars.drive_video), he and
     Don BOTH tell how the 2006 Long Now Brian Eno + Will Wright talk led to it.
     AUDIENCE PARTICIPATION did it: not one but TWO audience members asked Will
     and Brian about opening up SimCity and other games. Brian's and Will's
@@ -565,7 +565,7 @@ back_catalog:
     is the template: every long video gets one, then its clips join playlists
     like any session take.
   wrapper_rule: |
-    This is showmaker-network.yml#hosted_video_wrapper in playlist form: we don't
+    This is showmaker-network.yml#hosted-video-wrapper in playlist form: we don't
     have to own or re-host the long video — clips + provenance links point back
     to the full source (links_and_provenance), and video artifacts stay in the
     CHARACTER directories (characters/<id>/media/), with shows and playlists
@@ -625,7 +625,7 @@ back_catalog:
 ties:
   - one-minute-intense.yml                     # sibling :60 format — participation instead of ads
   - storymaker-stories-and-scenes.yml          # scene cards + multiple timelines substrate
-  - showmaker-network.yml                      # show_path_as_playlist, hosted_video_wrapper
+  - showmaker-network.yml                      # show-path-as-playlist, hosted-video-wrapper
   - ../characters/robots/slats/one-minute-movies.md
   - ../characters/will-wright/sessions/01-mic-check/SESSION.yml   # opener beats + Goldilocks axes + slats_commercial_sandwich
   - ../characters/will-wright/sources/         # back-catalog quarry — source bundles + transcript caches

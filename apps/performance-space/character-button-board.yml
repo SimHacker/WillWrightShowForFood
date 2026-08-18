@@ -5,7 +5,7 @@ meta:
   id: character-button-board
   status: spec
   role: core_narrative_engine
-  design: ../../process/performance-space.yml#narrative_engine
+  design: ../../process/performance-space.yml#narrative-engine
   style: "See characters/don-hopkins/portrayal/upbringing.yml — high values, low costs, Don's wavelength"
 
 what: |
@@ -23,13 +23,13 @@ host:
     Don Philahue is the MC **character**. Don Hopkins is NOT him — he does a great impression.
     **Anyone** can perform Don Philahue or any other role: human puppetry, not impersonation.
 
-dc_host_lineage_puppets:
+dc-host-lineage-puppets:
   what: |
     Face puppets of **Captain Chesapeake**, **Captain 20**, and **Count Gore De Vol** — DC kids-TV
     lineage from upbringing. Each gets a button on the board plus **canned sound-box clips** you
     **lip-sync to like a drag queen**: tap button → face swaps → audio plays → performer mouths
     through the hole. Perfect for **sign-on and sign-off** beats without breaking the bit.
-  lineage: ../../characters/don-hopkins/portrayal/upbringing.yml#local_tv
+  lineage: ../../characters/don-hopkins/portrayal/upbringing.yml#local-tv
   performed_by: don-philahue
   sound_box:
     what: "Pre-recorded audio on a button — host lip-syncs; mic ducked or muted during playback"
@@ -115,4 +115,4 @@ see_also:
   - conan-face-puppet.yml
   - ../../characters/don-philahue/CHARACTER.yml
   - ../../process/performance-space.yml
-  - ../../characters/will-wright/guest-prototype.yml#ensemble_medium
+  - ../../characters/will-wright/guest-prototype.yml#ensemble-medium

@@ -80,7 +80,7 @@ We sympathize. You learned on radio in a weekend. We learned on TV over years. S
 - [StoryMaker (Stupid Fun Club)](https://www.youtube.com/watch?v=_2yEHs_WLzQ)
 - [Urban Safari — GPS storytelling](https://www.youtube.com/watch?v=Db8KGNoeKHE)
 
-More context: [make-play-tools-show tradition](../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television_lineage)
+More context: [make-play-tools-show tradition](../../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml#television-lineage)
 
 ---
 

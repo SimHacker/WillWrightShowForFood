@@ -10,26 +10,26 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 
 | Trail | K-line | One line |
 |-------|--------|----------|
-| [repo_show_spine](process/trails/repo-show-spine.md) | *So you have a Repo to Show us?* | The show IS the repo — RTFR, harvest skills back |
-| [constructionist_lineage](process/trails/constructionist-lineage.md) | *1996 microworlds → living organism* | Winograd 1996 → Will kickoff → Papert/Kay → open Micropolis |
-| [drag_race_and_ai_offs](process/trails/drag-race-and-ai-offs.md) | *Start your engines — werk, commit, merge* | Slats judges; ai-offs scores the spend |
-| [retrocomputing_drive](process/trails/retrocomputing-drive.md) | *CODE THAT SPEC on your platform* | One spec, many platforms — SETUP DNA is viral |
-| [retro_guests_real_wire](process/trails/retro-guests-real-wire.md) | *Make it so — real retro on the wire* | Lars boots ITS; Thomas wires FujiNet |
-| [live_production](process/trails/live-production.md) | *Brain stream on overlay — show the thinking* | Brain stream + Philahue audience bus |
-| [moollm_compose](process/trails/moollm-compose.md) | *Compose with MOOLLM — skills are inheritable prototypes* | WWSFF as microworld plugin |
-| [rig_personas](process/trails/rig-personas.md) | *Your rig IS your drag persona* | download → install → configure → replicate → mash up |
-| [schemas_and_ethics](process/trails/schemas-and-ethics.md) | *Contracts before characters* | Portrayal, invitations, rig shape, markup facades |
-| [archive_and_provenance](process/trails/archive-and-provenance.md) | *Source, don't paraphrase* | Public bud vs private archive — export log, primary sources |
-| [game_design_lineage](process/trails/game-design-lineage.md) | *What is a game?* | Toys, possibility space, MUDs, one-page design, reverse-engineered history |
-| [direct_manipulation](process/trails/direct-manipulation.md) | *See it, touch it, change it live* | Shneiderman → Myers → Victor — the interface IS the idea |
+| [repo-show-spine](process/trails/repo-show-spine.md) | *So you have a Repo to Show us?* | The show IS the repo — RTFR, harvest skills back |
+| [constructionist-lineage](process/trails/constructionist-lineage.md) | *1996 microworlds → living organism* | Winograd 1996 → Will kickoff → Papert/Kay → open Micropolis |
+| [drag-race-and-ai-offs](process/trails/drag-race-and-ai-offs.md) | *Start your engines — werk, commit, merge* | Slats judges; ai-offs scores the spend |
+| [retrocomputing-drive](process/trails/retrocomputing-drive.md) | *CODE THAT SPEC on your platform* | One spec, many platforms — SETUP DNA is viral |
+| [retro-guests-real-wire](process/trails/retro-guests-real-wire.md) | *Make it so — real retro on the wire* | Lars boots ITS; Thomas wires FujiNet |
+| [live-production](process/trails/live-production.md) | *Brain stream on overlay — show the thinking* | Brain stream + Philahue audience bus |
+| [moollm-compose](process/trails/moollm-compose.md) | *Compose with MOOLLM — skills are inheritable prototypes* | WWSFF as microworld plugin |
+| [rig-personas](process/trails/rig-personas.md) | *Your rig IS your drag persona* | download → install → configure → replicate → mash up |
+| [schemas-and-ethics](process/trails/schemas-and-ethics.md) | *Contracts before characters* | Portrayal, invitations, rig shape, markup facades |
+| [archive-and-provenance](process/trails/archive-and-provenance.md) | *Source, don't paraphrase* | Public bud vs private archive — export log, primary sources |
+| [game-design-lineage](process/trails/game-design-lineage.md) | *What is a game?* | Toys, possibility space, MUDs, one-page design, reverse-engineered history |
+| [direct-manipulation](process/trails/direct-manipulation.md) | *See it, touch it, change it live* | Shneiderman → Myers → Victor — the interface IS the idea |
 | [visual_programming_patch_cord](process/trails/visual-programming-patch-cord.md) | *Boxes, lines, patch-cords* | Hookup → Bounce → Image/ine → Isadora |
-| [live_objects](process/trails/live-objects.md) | *The machine is alive* | Smalltalk → Self → NeWS → Java; the lineage behind HyperLook |
-| [procedural_beauty](process/trails/procedural-beauty.md) | *Generative art, runnable artifacts* | Perlin noise, Light Stage, audiovisual art, maps |
-| [maxis_sims_lineage](process/trails/maxis-sims-lineage.md) | *SimCity → Dollhouse → The Sims → Spore* | The genealogy this repo grew from — with primary-source images |
-| [the_card_game](process/trails/the-card-game.md) | *Build a segment deck* | Guest CARDs as MTG verbs; combos across guests; Slats judges |
-| [cs547_seminar_lineage](process/trails/cs547-seminar-lineage.md) | *One guest, open access, recorded* | Winograd's CS547 → Will's 1996 talk → the Repo Show |
-| [augmentation_and_hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | *Augment, don't replace* | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle (memorial mode) |
-| [repo_show_themes](process/trails/repo-show-themes.md) | *Threads to revisit across episodes* | Simulation effect, crown jewel, educators' track |
+| [live-objects](process/trails/live-objects.md) | *The machine is alive* | Smalltalk → Self → NeWS → Java; the lineage behind HyperLook |
+| [procedural-beauty](process/trails/procedural-beauty.md) | *Generative art, runnable artifacts* | Perlin noise, Light Stage, audiovisual art, maps |
+| [maxis-sims-lineage](process/trails/maxis-sims-lineage.md) | *SimCity → Dollhouse → The Sims → Spore* | The genealogy this repo grew from — with primary-source images |
+| [the-card-game](process/trails/the-card-game.md) | *Build a segment deck* | Guest CARDs as MTG verbs; combos across guests; Slats judges |
+| [cs547-seminar-lineage](process/trails/cs547-seminar-lineage.md) | *One guest, open access, recorded* | Winograd's CS547 → Will's 1996 talk → the Repo Show |
+| [augmentation-and-hypertext](process/trails/augmentation-and-hypertext.md) 🕯️ | *Augment, don't replace* | Engelbart + Nelson + Weiser + Raskin → Player-in-the-Middle (memorial mode) |
+| [repo-show-themes](process/trails/repo-show-themes.md) | *Threads to revisit across episodes* | Simulation effect, crown jewel, educators' track |
 
 ---
 
@@ -37,7 +37,7 @@ Playlists ([**entryways**](process/entryways/README.md)) are **ordered tours**. 
 
 | Trail | K-line | One line |
 |-------|--------|----------|
-| [**stupid_fun_forward**](process/trails/stupid-fun-forward.md) | *Get weird — coolest, whackiest, most forward-thinking* | RoboResurrection, soul bridges, cells that travel between games |
+| [**stupid-fun-forward**](process/trails/stupid-fun-forward.md) | *Get weird — coolest, whackiest, most forward-thinking* | RoboResurrection, soul bridges, cells that travel between games |
 
 Reactor: [**Crazy Idea Jam**](process/crazy-idea-jam.md) · [`process/crazy-idea-jam.yml`](process/crazy-idea-jam.yml)
 
@@ -47,7 +47,7 @@ Reactor: [**Crazy Idea Jam**](process/crazy-idea-jam.md) · [`process/crazy-idea
 
 | If you entered as… | Start here |
 |--------------------|------------|
-| Will's guest | [guest_will](process/entryways/guest-will.md) |
+| Will's guest | [guest-will](process/entryways/guest-will.md) |
 | Sims player | [player](process/entryways/player.md) |
 | Stream viewer | [watcher](process/entryways/watcher.md) |
 | Cloner | [hacker](process/entryways/hacker.md) |

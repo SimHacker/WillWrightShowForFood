@@ -49,7 +49,7 @@ ai:
   pitch_contrast: ../../repo-shows/drew-carey/ai-contrast-framing.yml
 
 # TELEVISION LINEAGE — we've shipped this shape before
-television_lineage:
+television-lineage:
   will_and_don:
     note: |
       Will Wright and Don Hopkins did not invent audience participation on paper — they **made a TV
@@ -84,7 +84,7 @@ television_lineage:
       **Urban Safari** — geolocated GPS storytelling; capture cards in the field, follow others'
       paths through a shared graph. Lessons from playtesting StoryMaker on real TV-show users.
     demo: https://www.youtube.com/watch?v=Db8KGNoeKHE
-    jam: ../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
+    jam: ../../process/crazy-idea-jam.yml#urban-safari-gps-storytelling
     product: ../../repo-shows/ebike-safari/ebike-safari.yml
   drew_carey_show_in_sims:
     what: "TV met games met improv — Maxis built a lot; Drew narrated live inside The Sims."
@@ -110,6 +110,6 @@ distribution:
 see_also:
   - ../../process/repo-show-format.yml
   - ../../process/vision-and-ambition.yml
-  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#credibility_and_stance
+  - ../../repo-shows/will-wright-premiere/performance-and-culture.yml#credibility-and-stance
   - ../theme-human-control-and-authorship/theme-human-control-and-authorship.md
   - ../../process/performance-space.yml

@@ -35,7 +35,7 @@ celebrated here with credit regardless; the invitation is a standing offer, not 
 
 Builders, modders, storytellers, creator-network solidarity — trans, queer, nb, ace, bi, lesbian,
 gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
-[`repo-shows/infodump/README.md#solidarity_lexicon`](../../repo-shows/infodump/README.md).
+[`repo-shows/infodump/README.md#solidarity-lexicon`](../../repo-shows/infodump/README.md).
 
 ## Files
 

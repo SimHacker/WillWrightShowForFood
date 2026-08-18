@@ -75,7 +75,7 @@ declare:
 
 proof:
   cursor_spend_export: "path or attach in PR"
-  cursor_mirror_composer: "composer id from cursor_mirror.py tree"
+  cursor_mirror_composer: "composer id from cursor-mirror.py tree"
   setup_md: "rigs/<your-rig-slug>.SETUP.md"
   setup_dna:
     canonical_rig_yaml: "https://raw.githubusercontent.com/SimHacker/WillWrightShowForFood/main/rigs/<your-rig-slug>.rig.yml"

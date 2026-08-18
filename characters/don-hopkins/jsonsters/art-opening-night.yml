@@ -8,7 +8,7 @@ meta:
   duration: "45–55 minutes on air"
   host: don-hopkins
   auctioneer: don-philahue
-  cast: ../../menagerie/GUEST-ROSTER.yml#gallery_openings
+  cast: ../../menagerie/GUEST-ROSTER.yml#gallery-openings
   not_real_money: true
   currency: "§"
 
@@ -35,7 +35,7 @@ tiers:
     rule: "Facebook commenters — ground truth, no §"
     pace: "heckle from chat overlay"
 
-crypto_parody:
+crypto-parody:
   thread: running_gag
   not_a_lecture: "Woven into patron dialogue — never a sober web3 explainer"
   motifs:
@@ -53,7 +53,7 @@ crypto_parody:
     - "So this is the new bleep/bloop menu?"
     - "Now do it in 64k"
 
-series_auction_map:
+series-auction-map:
   # Two magnificent per series; remainder → quick_sale in salon_pass
   essential:
     magnificent:
@@ -165,9 +165,9 @@ run_of_show:
     series: [spindle_tendrils, inspector_surgery]
     magnificent:
       - lot: lot-10-tendrils
-        quick_hammer: { bucky_jr: "Edge with a point. §4,200.", buyer: bucky_jr }
+        quick_hammer: { bucky-jr: "Edge with a point. §4,200.", buyer: bucky-jr }
       - lot: lot-11-tendrils
-        quick_hammer: { bucky_jr: "Tensile honesty. §4,800.", buyer: bucky_jr }
+        quick_hammer: { bucky-jr: "Tensile honesty. §4,800.", buyer: bucky-jr }
       - lot: lot-12-rainbow-inspector
         script: |
           Vandermeer: "Update Always checked — that's the smart contract. Always updates. Scotland."

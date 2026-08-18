@@ -25,9 +25,9 @@ commit_equals_shift:
     - reason — hill, curve, design_recon, runbook_start, merge_lane, flair
     - spend_slice_since_last_shift
     - "Thinking: cursor-mirror://composer/event-range"
-  see: orchestration-gold.yml#since_last_commit
+  see: orchestration-gold.yml#since-last-commit
 
-gear_commitment:
+gear-commitment:
   what: "Lock model M until this prompt's task envelope closes"
   envelope:
     sculpt: "Tight fit — task scope, token budget, time box, definition of done"
@@ -39,7 +39,7 @@ driving_metaphor:
     what: "Syntactic rinse-repeat — Emacs keyboard macros over dired: one file, next file"
     shift: "Upshift to cheap/fast or artisanal — batch transform, not premium reasoning"
     task_class: macro_batch
-    see: orchestration-gold.yml#training_by_demonstration
+    see: orchestration-gold.yml#training-by-demonstration
   upshift: "Straightaway — cheap/fast model, bulk scaffold, known pattern"
   downshift: "Hairpin — premium model, nasty bug, architecture fork"
   hill: "Climb — more context, harder reasoning, may need premium torque"
@@ -79,7 +79,7 @@ workflow_phases:
     gear: any
     deliver: PR + orchestration gold bundle
 
-class_rules_vs_driver_flair:
+class-rules-vs-driver-flair:
   measurement_class:
     goal: "Clean signal — fewer shifts, tight envelopes, fair model capacity comparison"
     judges: spreadsheet, rubric, experiment COMPARE
@@ -99,7 +99,7 @@ class_rules_vs_driver_flair:
           - { lang: "Apple ][ INTEGER BASIC", slats: "If you dare — no floats, all nerve" }
           - { lang: "MACLISP on ITS", slats: "PDP-10 emulator running ITS — AI Lab eleganza. DDT or sashay." }
           - { lang: artisanal_hand, slats: "Zero tokens pencil sash — oldest show-off" }
-      retrocomputing_drive:
+      retrocomputing-drive:
         pitch: "Retrocomputing AI drag races — rig declares languages, tools, platform, emulator"
         rule: "Spec runs on declared platform; host language may differ if demo boots on target"
         see: challenges/retrocomputing-drive.yml
@@ -129,4 +129,4 @@ ties_to:
 
 see_also:
   - showmaker-network.yml#competitions
-  - repo-show-format.yml#rig_spectrum
+  - repo-show-format.yml#rig-spectrum

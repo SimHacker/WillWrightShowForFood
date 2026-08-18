@@ -77,7 +77,7 @@ shows:
     segment: repo-shows/will-wright-premiere/sims-play-along-narration.yml
     when: "Simlish origins segment; Claire Curtin / Jerry Martin beat; general chaos interlude"
   drew_carey:
-    segment: repo-shows/drew-carey/SHOW.yml#sims_play_along_narration
+    segment: repo-shows/drew-carey/SHOW.yml#sims-play-along-narration
     when: "Dream guest hosts or judges the narration; compares to S6E01 and House Party lore"
   cross_show: "Reusable format — any Repo Show with Sims audience regulars"
 

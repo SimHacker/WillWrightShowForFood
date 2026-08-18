@@ -1,10 +1,10 @@
-# Trail — procedural_beauty
+# Trail — procedural-beauty
 
 > *Procedural texture, generative art, runnable artifacts*
 
 Noise, light, audiovisual art, maps — beauty you can run and remix.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#procedural_beauty) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#procedural-beauty) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

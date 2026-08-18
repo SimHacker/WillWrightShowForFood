@@ -61,7 +61,7 @@ ties:
   - ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   - ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
   - ../../process/character-endosymbiosis.yml
-  - ../INDEX.yml#bridges_architecture
+  - ../INDEX.yml#bridges-architecture
 
 see_also:
   - SHOW.yml

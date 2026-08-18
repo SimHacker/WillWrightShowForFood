@@ -24,10 +24,10 @@ threads:
     public: characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   olpc_micropolis:
     what: "Open SimCity for children; EA licensing; Micropolis activity on OLPC Sugar"
-  proxi_gallium:
+  proxi-gallium:
     what: "Character-as-AI across games; Gallium Studios; Proxi as über-character + software heirloom (family memory)"
     public: characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-software-heirloom.yml
-  stupid_fun_club:
+  stupid-fun-club:
     what: "Robotics, Slats, One Minute Movies — constructionism as theater"
   sims_reunion:
     what: "Original Sims team — SimAntics, Exchange, design-by-accretion"

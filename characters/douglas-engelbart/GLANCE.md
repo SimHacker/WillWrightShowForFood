@@ -4,6 +4,6 @@
 - Augmenting human intellect: **NLS**, the **mouse**, hypertext, collaborative editing
 - **The Mother of All Demos** (Dec 9, 1968); 'Augmenting Human Intellect' (1962); bootstrapping; Turing Award 1997
 - Discussants: [Ted Nelson](../ted-nelson/README.md), [Alan Kay](../alan-kay/README.md), [Yoot Saito](../yoot-saito/README.md)
-- Repo ties: augmentation-not-automation → [PITM](../../process/crazy-idea-jam.md#player_in_the_middle); 1968 demo → Yoot/Kay interview
+- Repo ties: augmentation-not-automation → [PITM](../../process/crazy-idea-jam.md#player-in-the-middle); 1968 demo → Yoot/Kay interview
 
 Read next: [README](README.md) · [memorial](memorial.md) · [CHARACTER.yml](CHARACTER.yml)

@@ -5,7 +5,7 @@
 # that already live in this repo. Tight blurbs here; deeper girders linked per idea.
 #
 # Tone: joyful, irreverent, a little blasphemous — Stupid Fun Club energy. Keep it kind.
-# Human facade: crazy-idea-jam.md | Trail: cross-links.yml#stupid_fun_forward
+# Human facade: crazy-idea-jam.md | Trail: cross-links.yml#stupid-fun-forward
 
 meta:
   id: crazy-idea-jam
@@ -20,7 +20,7 @@ meta:
 # THE CROWN JEWEL
 ideas:
 
-  data_portability_crown_jewel:
+  data-portability-crown-jewel:
     emoji: "💎"
     blurb: |
       The CROWN JEWEL of Will's 1996 Stanford talk — the goal he named and the one STILL
@@ -30,7 +30,7 @@ ideas:
     non_destructive: "Bridging is non-destructive + regenerable: the soul-file is canonical, runtimes are ephemeral. Send a character to die in a dungeon, regenerate at will."
     ties: [../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md]
 
-  character_endosymbiosis:
+  character-endosymbiosis:
     emoji: "🦠"
     blurb: |
       A cross-game character is a eukaryotic CELL. Each game it passes through gets engulfed
@@ -44,7 +44,7 @@ ideas:
     progenitor: "SPORE prefigured this — pond→creature→tribe→civ→space — but lacked one identity TRAVELLING between layers with its history. The Spore bridge gets a per-LEVEL end: one self reincarnated cell→fish→gazelle→human→town→ship."
     ties: [../characters/will-wright/CARD.yml]
 
-  identity_threads_through:
+  identity-threads-through:
     emoji: "📖"
     blurb: |
       We sure do STATS — attributes cross between worlds too. But the magic is that IDENTITY
@@ -54,7 +54,7 @@ ideas:
       life into The Sims as a physical photo-album BOOK you shelve, read on the couch, and leave
       out for guests.
 
-  player_in_the_middle:
+  player-in-the-middle:
     emoji: "🛂"
     blurb: |
       Syncing between games is itself a GAME — never automate it silently. The PLAYER sits in
@@ -65,7 +65,7 @@ ideas:
     archetype_gallery: "The player as gatekeeper-transformer: Maxwell's Daemon, the 'Papers, Please' customs agent (a bridgeable game!), Saint Peter's Gates, Satan's Back Door, the psychopomps at the Bifröst — a person judging what crosses, made into gameplay."
     constitutional: "PITM is our human↔AI manifesto: center PEOPLE, not the machine. Pairs with no-ai-slop (don't let AI hollow out the WORK) and no-ai-soul (don't let AI hollow out the AUTHOR — the soul stays with the people)."
 # private archive — not in this repo
-  import_the_virtue_filter_the_vice:
+  import-the-virtue-filter-the-vice:
     emoji: "🧪"
     blurb: |
       To learn from someone problematic, IMPORT them as a filtered persona-organelle: keep-
@@ -74,7 +74,7 @@ ideas:
       designing — endosymbiosis applied to OURSELVES, Don as player-in-the-middle. First test:
       MrBeast TENACITY (kept) minus hype/exploitation (filtered), channeled into constructionism.
 
-  sync_config_is_gameplay:
+  sync-config-is-gameplay:
     emoji: "🔧"
     blurb: |
       Bring content-management and configuration INTO the world AS a game. Wiring the cross-game
@@ -83,7 +83,7 @@ ideas:
       Max/MSP patches. Includes cross-VERSION bridging: the WEDDING ALBUM round-tripping a couple
       through Sims 1⇔2⇔3⇔4, each edition a clean non-destructive organelle.
 
-  robo_resurrection:
+  robo-resurrection:
     emoji: "🤖⛪"
     blurb: |
       SLATS LIVES! The first RoboResurrection. Read the old Stupid Fun Club robot-brain code on
@@ -114,7 +114,7 @@ ideas:
     status: "Source releasable — Don will add it to this monorepo soon"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright-premiere/slats-reincarnation.yml]
 
-  amsterdam_coffeeshops_app:
+  amsterdam-coffeeshops-app:
     emoji: "🍃"
     blurb: |
       An iPhone app Don built in 2009 with photos and info about every coffeeshop in Amsterdam,
@@ -126,10 +126,10 @@ ideas:
     tomtom_pre_sfc: true
     video: "https://www.youtube.com/watch?v=nG90XG3STz8"
     vibe: "No words — look-and-feel + Amsterdam coffeeshop ASMR (chatter, distorted music)"
-    leads_to: [bongo_bingo, iloci_memory_palace, creationtv_storymaker, urban_safari_gps_storytelling]
+    leads_to: [bongo-bingo, iloci-memory-palace, creationtv-storymaker, urban-safari-gps-storytelling]
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
 
-  bongo_bingo:
+  bongo-bingo:
     emoji: "🚲🎯"
     blurb: |
       A web game wired to the **Foursquare API** on top of Don's all-Amsterdam-coffeeshops
@@ -139,11 +139,11 @@ ideas:
       spreadsheet metadata. Geolocated, social, generative — and the true PROGENITOR of StoryMaker
       / Bar Karma / Urban Safari. Built solo at TomTom for fun, same self-education streak as the
       Coffeeshops app and iLoci — pre-SFC, leveraging mobile/maps skills from the day job.
-    progenitor_of: [creationtv_storymaker, urban_safari_gps_storytelling]
+    progenitor_of: [creationtv-storymaker, urban-safari-gps-storytelling]
     tomtom_pre_sfc: true
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
 
-  iloci_memory_palace:
+  iloci-memory-palace:
     emoji: "🏛️"
     blurb: |
       iLoci — an iPhone app + server based on the **Method of Loci** (the ancient Memory Palace
@@ -164,7 +164,7 @@ ideas:
     tomtom_pre_sfc: true
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../characters/don-hopkins/career/work-history.yml]
 
-  creationtv_storymaker:
+  creationtv-storymaker:
     emoji: "📺"
     blurb: |
       CreationTV — an iPhone prototype Don built for Will Wright at the Stupid Fun Club — grew
@@ -216,23 +216,23 @@ ideas:
       - ../characters/don-hopkins/career/stupid-fun-club.yml
       - ../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
 
-  urban_safari_gps_storytelling:
+  urban-safari-gps-storytelling:
     emoji: "🗺️"
     blurb: |
       **Urban Safari** — the geolocated branch of StoryMaker: capture scene cards in the field,
       follow others' paths through a shared graph at real POIs. Layar AR field demos, Facebook album
       export/edit/import round-trip, lessons from playtesting StoryMaker on Bar Karma's real audience.
       Performed in Amsterdam (2011); 2026 carries it forward as eBike Safari — the live app and Repo Show.
-    progenitor_of: [ebike_safari]
-    progenitor_chain: [bongo_bingo, creationtv_storymaker, iloci_memory_palace]
+    progenitor_of: [ebike-safari]
+    progenitor_chain: [bongo-bingo, creationtv-storymaker, iloci-memory-palace]
     demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
     room: ../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
     ties:
       - ../repo-shows/ebike-safari/ebike-safari.yml
       - ../characters/don-hopkins/career/stupid-fun-club.yml
-      - crazy-idea-jam.yml#creationtv_storymaker
+      - crazy-idea-jam.yml#creationtv-storymaker
 
-  ebike_safari:
+  ebike-safari:
     emoji: "🚴🎤"
     blurb: |
       **StoryMaker on wheels** — voice-first adventure navigation through a hidden story graph while
@@ -268,20 +268,20 @@ ideas:
       Voystick warbles along wedge arcs, hop POI→card, hands on bars. Don: "really fun and smooth —
       best gestural UI I've ever done."
     field_hardware: [Koga, Enviolo, Bosch, any camera]
-    voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
+    voystick: crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
     ties:
       - ../repo-shows/ebike-safari/ebike-safari.yml
       - ../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
-      - crazy-idea-jam.yml#urban_safari_gps_storytelling
-      - crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-      - crazy-idea-jam.yml#iloci_memory_palace
+      - crazy-idea-jam.yml#urban-safari-gps-storytelling
+      - crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
+      - crazy-idea-jam.yml#iloci-memory-palace
       - crazy-idea-jam.yml#mediagraph
       - ../characters/don-hopkins/sources/logo-adventure-c64-terrapin.md
-      - crazy-idea-jam.yml#dreamscape_scriptx
+      - crazy-idea-jam.yml#dreamscape-scriptx
 
-  voystick_homomorphic_vocal_joystick:
+  voystick-homomorphic-vocal-joystick:
     emoji: "🎙️"
     blurb: |
       **VoyStick** — pitch=Y, vowel=X: a parallel gesture channel *below* speech recognition. The
@@ -348,12 +348,12 @@ ideas:
       - ../repo-shows/phoneloper/SHOW.yml
       - ../repo-shows/ebike-safari/ebike-safari.yml
       - crazy-idea-jam.yml#phoneloper
-      - crazy-idea-jam.yml#pie_menus_put_out_fires
-      - crazy-idea-jam.yml#ebike_safari
+      - crazy-idea-jam.yml#pie-menus-put-out-fires
+      - crazy-idea-jam.yml#ebike-safari
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
 
-  dreamscape_scriptx:
+  dreamscape-scriptx:
     emoji: "🌀"
     blurb: |
       The ancestor of it all: DreamScape, Don's Kaleida Labs ScriptX demo at the **1995 Apple
@@ -367,7 +367,7 @@ ideas:
     video: "https://www.youtube.com/watch?v=5NytloOy7WM"
     ties: [../characters/don-hopkins/career/work-history.yml, vision-and-ambition.yml]
 
-  soul_bridge_afterlife:
+  soul-bridge-afterlife:
     emoji: "👻"
     blurb: |
       A two-way, round-trippable SOUL LEDGER between LucasArts' Afterlife and The Sims. Souls
@@ -375,7 +375,7 @@ ideas:
       hell as upstream supply for downstream worlds. The bridge IS the gameplay.
     ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
 
-  hell_is_full_zombie_sims:
+  hell-is-full-zombie-sims:
     emoji: "🧟"
     blurb: |
       "Hell is full." Debit damned souls by religion from an Afterlife save and spawn matching
@@ -386,7 +386,7 @@ ideas:
       artisan label on the jar, SFC alumni; the hell save = the industrial supply chain.
     ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
 
-  github_as_mmorpg_multiverse:
+  github-as-mmorpg-multiverse:
     emoji: "🌌"
     blurb: |
       The show artifact IS a public repo, so treat GitHub as a multiplayer multiverse: branches
@@ -394,7 +394,7 @@ ideas:
       viewer gets their own playspace. Repossess "repo" from the tow-truck — Repo Man / Woman /
       Bot honorifics; MMORPG quest levels onboard kids via web-editor PRs; badges via Actions.
 
-  self_times_moollm:
+  self-times-moollm:
     emoji: "🪞"
     blurb: |
       Self invented prototype-based objects and adaptive simplicity; MOOLLM reimagines that
@@ -403,7 +403,7 @@ ideas:
       characters. Build it live with David Ungar; artisanal hand-programming vs intentional AI.
     ties: [../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml]
 
-  yoot_boot_and_seaman:
+  yoot-boot-and-seaman:
     emoji: "🐟"
     blurb: |
       A clean-room successor to the Yoot lineage (working name YOOT BOOT — decided WITH Yoot, on
@@ -415,7 +415,7 @@ ideas:
     no_promises: "Yoot Tower itself is in a delayed/unknown licensing state — discussed only in the abstract, with no pressure on Yoot."
     ties: [../characters/yoot-saito/yoot-tower-discussion.yml, ../repo-shows/yoot-saito/SHOW.yml]
 
-  simulator_effect:
+  simulator-effect:
     emoji: "🧠"
     blurb: |
       Will Wright's Simulator Effect (apophenia): players imagine the sim is vastly deeper than
@@ -424,7 +424,7 @@ ideas:
       The trick of optimizing games is offloading simulation into the player's brain. Rule of
       thumb: never simulate more than one layer below what the player can observe.
 
-  full_nutrient_cycle:
+  full-nutrient-cycle:
     emoji: "🌱"
     blurb: |
       Land → Seed → Crop → Ingredient → Food → Body → Mind → Shit → Land. We cover the WHOLE loop as
@@ -434,7 +434,7 @@ ideas:
       Water = donations; fertilizer = tokens.
       A Nurturing Environment, not a Killer App — the Flower Child nurtures; the buyout extracts.
 
-  educational_data_literacy:
+  educational-data-literacy:
     emoji: "📊"
     blurb: |
       Make the sim EXPORT its guts. Earth-science professor Upmanu Lall (Columbia) wanted SimCity
@@ -448,9 +448,9 @@ ideas:
       things together.
     ties:
       - ../characters/don-hopkins/career/simcity-lineage.yml
-      - github_as_mmorpg_multiverse
+      - github-as-mmorpg-multiverse
 
-  scriptable_simulators:
+  scriptable-simulators:
     emoji: "🧩"
     blurb: |
       Push ALL the UI out of the engine and let players reprogram the rest. emscripten + embind
@@ -461,16 +461,16 @@ ideas:
       PacBots and feeds them. The SimAntics VPL spirit from The Sims — but easy to use and extend.
     ties: [../characters/don-hopkins/career/simcity-lineage.yml]
 
-  towers_in_micropolis:
+  towers-in-micropolis:
     emoji: "🏙️"
     blurb: |
       The concrete crown-jewel facet that makes everyone grin: embed multiple YOOT TOWERS inside
       your Micropolis city. Same era, same Maxis lineage, shared WASM / emscripten / embind /
       SvelteKit infrastructure — two open games sharing one stack so a tower can be a building in a
       city. Data portability you can point at.
-    ties: [crazy-idea-jam.yml#data_portability_crown_jewel, ../characters/yoot-saito/]
+    ties: [crazy-idea-jam.yml#data-portability-crown-jewel, ../characters/yoot-saito/]
 
-  engelbart_keyset_3d_replica:
+  engelbart-keyset-3d-replica:
     emoji: "🖱️⌨️"
     blurb: |
       Democratize the Mother of All Demos desk. Publish **free Engelbart mouse + five-finger chord
@@ -481,11 +481,11 @@ ideas:
       by proliferation — put the 1968 desk back in everyone's hands.
     preservation_framing: "Open models + maker kits + museum-shop SWAG — education and hands-on history"
     ties:
-      - ../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart_division
+      - ../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml#engelbart-division
       - ../characters/douglas-engelbart/memorial.md
       - ../repo-shows/remembering-douglas-engelbart/remembering-douglas-engelbart.yml
 
-  cellular_automata_as_drm:
+  cellular-automata-as-drm:
     emoji: "🫠"
     blurb: |
       The 1991 free-but-not-free demo: play the Unix SimCity for five minutes, and if you haven't
@@ -498,7 +498,7 @@ ideas:
       micropolis_web_music_1: "https://www.youtube.com/watch?v=BBVyCpmVQew"
       micropolis_web_music_1_title: "Micropolis Web Space Inventory Cellular Automata Music 1"
 
-  pie_menus_put_out_fires:
+  pie-menus-put-out-fires:
     emoji: "🥧🔥"
     blurb: |
       A live on-air bit about the interface shaping the thinking. UI critic Don Norman complained
@@ -508,7 +508,7 @@ ideas:
       twitch game. Demonstrate it; argue about whether ease helps or hurts learning.
     ties: [../characters/don-hopkins/CARD.yml]
 
-  moola_worthless_performances:
+  moola-worthless-performances:
     emoji: "🐄🔥"
     blurb: |
       MOOLA — native worthless play currency. Exchange § Simoleons, gold, and art deeds into MOOLA.
@@ -519,7 +519,7 @@ ideas:
       opening. NEVER gateway. ALWAYS invite duplication — the anti-NFT, anti-scarcity, pro-fork economy.
     ties: [moola.yml, art-thief-game.yml, auto-art-theft-grand.yml, simulated-art-opening.yml, ../repo-shows/brian-eno/77-million-paintings.yml]
 
-  curiosity_cow_cube:
+  curiosity-cow-cube:
     emoji: "🧊🐄"
     blurb: |
       Parody of Peter Molyneux's **Curiosity** (2012 cube clicker — dead, buried, never deliver
@@ -533,7 +533,7 @@ ideas:
       *It wasn't very fun before.*
     ties: [../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml, ../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml, moola.yml, ../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml]
 
-  how_to_deconstruct_the_cube:
+  how-to-deconstruct-the-cube:
     emoji: "📖🚀🐄"
     blurb: |
       **Morningstar → Ashford → Bogost** on Curiosity. Chip's *How to Deconstruct Almost Anything*
@@ -542,7 +542,7 @@ ideas:
       Bogost invite — procedural rhetoric vs engineer deconstruction; Cow Clicker meant it; Molyneux didn't.
     ties: [../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml, ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml]
 
-  turing_robot_olympics:
+  turing-robot-olympics:
     emoji: "🤖🏅"
     blurb: |
       **First Robot Olympics** (Glasgow, Sept 1990) — Turing Institute, Peter Mowforth photos,
@@ -552,7 +552,7 @@ ideas:
       "Delivering a pizza or a SparcStation." Training data → MOOLA. Slats scrapes Mowforth copyright.
     ties: [../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml, ../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml, moola.yml]
 
-  pantomime_gallery:
+  pantomime-gallery:
     emoji: "🪲🦋🄯"
     blurb: |
       **Pantomime gallery** — Bug Farm creepy squisher (hands, spiders, green splats), *Too many
@@ -560,7 +560,7 @@ ideas:
       envelope to RMS — amoeba named Tom, all rights reversed. Squish compulsion ↔ cube distressed moos.
     ties: [../characters/don-hopkins/media/pantomime/INDEX.yml, ../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml, moola.yml]
 
-  rolf_junk_auction:
+  rolf-junk-auction:
     emoji: "🗄️🧑‍🚀"
     blurb: |
       **Rolf Pixley junk drawer** — Amsterdam workshop hoard before departure. 23 deduped photos:
@@ -568,7 +568,7 @@ ideas:
       MIND=BLOWN.* Virtual junk auction — JUNK-{slug} deeds.
     ties: [../characters/don-hopkins/media/rolf/INDEX.yml, ../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml, moola.yml]
 
-  animated_intro_repossession:
+  animated-intro-repossession:
     emoji: "📽️♻️"
     blurb: |
       The show's animated intro — honestly AI-GENERATED (embrace AI exactly where it belongs: the
@@ -586,7 +586,7 @@ ideas:
       information, and AI" as a revolutionary cry — a swag theme and a social-welfare campaign.
     ties: [../bits/theme-the-riff-loop/theme-the-riff-loop.md, vision-and-ambition.md]
 
-  pyramid_swag_and_apex_toolmakers:
+  pyramid-swag-and-apex-toolmakers:
     emoji: "👕🔺"
     blurb: |
       A cross-cutting user-created-content SWAG line — high-production-VALUE, low-production-COST,
@@ -602,7 +602,7 @@ ideas:
     warning_stickers_not_the_idea: |
       ISO hazard tees + Usenet physics product-label slaps are SWAG (Howard illustrates) — see
       bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml. The *ideas* are Voystick + Urban Safari
-      in crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick.
+      in crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick.
     will_approval: "Uses Will's art — Will has full right of review, refusal, and improvement (that's the great part). Family-friendly WillWrightCodeForFood storefront."
     monetization_is_private: "Revenue / print-vendor / support mechanics live in the PRIVATE strategy (green room: supporters-and-anti-sharecropping), not here."
     ties: [../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml, showmaker-network.yml]
@@ -616,7 +616,7 @@ graduation:
     - "→ a trail node in cross-links.yml"
 
 see_also:
-  - { path: cross-links.yml#stupid_fun_forward, why: "The wacky trail that wanders these ideas" }
+  - { path: cross-links.yml#stupid-fun-forward, why: "The wacky trail that wanders these ideas" }
   - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack Qattan — live homomorphic jam" }
   - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year email harvest" }
   - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest in full" }

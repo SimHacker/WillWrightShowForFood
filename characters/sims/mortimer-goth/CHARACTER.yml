@@ -22,7 +22,7 @@ character:
   pronouns: he/him
   gallery_opening: always
 
-  emoji_flourish:
+  emoji-flourish:
     string: "🔭🏚️💔📚🔬"
     legend:
       - "🔭 — telescope pointed at stars that don't answer"

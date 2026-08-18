@@ -47,9 +47,9 @@ subject_rights:
     No pressure. No re-pitch without new reason. Status tracked honestly in invitation.md.
   no_reflexive_submissions: |
     Willing contributions only — not reflexive SUBMIT-button compliance. See
-    process/guest-participation-ladder.yml#constitutional_law.no_reflexive_submissions
+    process/guest-participation-ladder.yml#constitutional-law.no_reflexive_submissions
 
-stealth_mode:
+stealth-mode:
   now: |
     QUIET MODE — repo technically public but unannounced: invited guests read invitations,
     check portrayals, and join BEFORE any audience shows up. Do not post/link publicly:
@@ -76,7 +76,7 @@ consent_levels:
   3_public_figure: "Public work + tradition/K-line; no impersonation"
   5_deceased_legacy: "Reverence; legacy and artifacts only; no invented inner life"
 
-memorial_mode:
+memorial-mode:
   what: "A full character directory for a deceased person, kept in memorial mode."
   represent_discuss_not_interview: |
     We REPRESENT and DISCUSS them — their documented work, ideas, and stories. We do NOT
@@ -107,7 +107,7 @@ invitation_documents:
   strip_from_public: [private_email, phone, github_account_requirement, ephemeral_private_asides]
   workflow: invitation-workflow.yml
 
-guest_directory:
+guest-directory:
   not_a_people_index: |
     Humans browse characters/ — one directory per person. We refer to guests organically in
     prose, trails, and show materials; we do not maintain a separate catalog-of-people page
@@ -138,7 +138,7 @@ per_character_files:
   recommended: [ideas.md]
   optional: [correspondence.yml, sources.yml, bio.yml, portrayal/, sources/, media/, face-puppet.yml]
   face_puppet:
-    spec: ../../apps/performance-space/faceball-construction-set.yml#guest_characters
+    spec: ../../apps/performance-space/faceball-construction-set.yml#guest-characters
     file: face-puppet.yml
     rule: "Optional modular portrait puppet — guest photo + attachments; live or offline recording"
   ideas_file: |
@@ -225,7 +225,7 @@ simulation:
   see_also:
     - ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md
     - ../bits/theme-simulating-people/theme-simulating-people.md
-    - ../process/crazy-idea-jam.yml#player_in_the_middle
+    - ../process/crazy-idea-jam.yml#player-in-the-middle
 
 see_also:
   - invitation-workflow.yml

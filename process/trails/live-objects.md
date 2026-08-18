@@ -1,10 +1,10 @@
-# Trail — live_objects
+# Trail — live-objects
 
 > *The machine is alive — late binding, live objects, network windows*
 
 Smalltalk → Self → NeWS → Java. The live-object lineage behind HyperLook and SimCity on the wire.
 
-**Girder:** [`cross-links.yml`](../cross-links.yml#live_objects) · **Index:** [TRAILS.md](../../TRAILS.md)
+**Girder:** [`cross-links.yml`](../cross-links.yml#live-objects) · **Index:** [TRAILS.md](../../TRAILS.md)
 
 ---
 

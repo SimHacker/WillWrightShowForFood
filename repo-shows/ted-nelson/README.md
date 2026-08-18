@@ -18,7 +18,7 @@ A chance to remember the friends, in memorial mode (represent + discuss, never i
 
 ## Trail
 
-[augmentation_and_hypertext](../../process/trails/augmentation-and-hypertext.md) — Engelbart · Nelson · Weiser.
+[augmentation-and-hypertext](../../process/trails/augmentation-and-hypertext.md) — Engelbart · Nelson · Weiser.
 
 ---
 

@@ -24,7 +24,7 @@ threads:
     what: "Livelymerge at Ink & Switch — explore data representation, workflows, collaboration with Dan: Automerge in-session vs YAML Jazz + GitHub-as-MMORPG publish vs stream"
     trail: ../../process/trails/yaml-jazz-collaboration-stack.md
     open_question: "Can a saved Lively page become a yaml-jazz repo commit without losing liveness? Comments = overlay of intent + annotations (humans + LLMs)."
-  pop_up_vs_pie: "Pop-up menus (Dan) ↔ pie menus (Don) — cousins on the direct_manipulation trail; CHI'88 lineage; live demo segment"
+  pop_up_vs_pie: "Pop-up menus (Dan) ↔ pie menus (Don) — cousins on the direct-manipulation trail; CHI'88 lineage; live demo segment"
   fabrik_dataflow: "Fabrik visual programming — kindred to Don's pie-menu / visual UI work; Alan Kay introduction"
   smalltalk_zoo_live: "Walk the Zoo on air — Smalltalk-72 → Squeak; what 'liveness' means when the artifact runs in the browser"
   live_web_today: "SqueakJS (Vanessa) → Caffeine (Craig) → MicropolisCore WASM + MOOLLM tutors — same problem, new decade"
@@ -32,7 +32,7 @@ threads:
 
 remember_vanessa:
   why: "Dan credits Vanessa Freudenberg for SqueakJS on the Smalltalk Zoo welcome page."
-  memorial_mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/"
+  memorial-mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/"
   show_angle: "Smalltalk Zoo as the right stage to honor what she built — with Craig if schedules align"
 
 format:

@@ -15,16 +15,16 @@ card:
 term_of_art:
   name: "Repo Show"
   etymology: "Like blog = web log — a show whose artifact + stage IS a git repo."
-  ticket_pr: "TicketMaster reframed — Master ⇒ PR (pull request); free audience ticket via merge request"
+  ticket-pr: "TicketMaster reframed — Master ⇒ PR (pull request); free audience ticket via merge request"
   quintessentially: "RTFR, implement, harvest — show don't tell."
   guest_honorifics: [Repo_Man, Repo_Woman]
   orchestrator: Don_Philahue
 
-how_it_runs:
+how-it-runs:
   markup: ../../process/repo-show-format.md
   girder: ../../process/repo-show-format.yml
   regenerate: "pnpm run facades"
-  elements: [HN_pointer, RTFR, TicketPR, audience_character_PRs, don_philahue, cauldron_melt, rig_spectrum, showmaker_network]
+  elements: [HN_pointer, RTFR, TicketPR, audience_character_PRs, don_philahue, cauldron_melt, rig-spectrum, showmaker_network]
 
 join:
   the_verb: "JOIN the repo — accept GitHub invite first; then stream, chat, collaborate."
@@ -72,8 +72,8 @@ intro_ritual:
   catchphrase: ["So you have a Repo to Show us?", "You sure have a great Repo to Show us!"]
   opener: "This episode's repos are:"
 
-guest_rituals:
-  simulated_art_opening:
+guest-rituals:
+  simulated-art-opening:
     spec: ../../process/simulated-art-opening.yml
     tagline: "Menagerie buys your art for § — start the show buried in worthless Simoleons"
     prototype: ../../characters/don-hopkins/jsonsters/
@@ -109,8 +109,8 @@ see_also:
   - { path: README.md, why: "Pitch + where things live in WWSFF" }
   - { path: ../../process/repo-show-format.yml, why: "Canonical format girder" }
   - { path: ../../process/repo-show-format.md, why: "Generated markup view" }
-  - { path: ../../process/cross-links.yml#repo_show_spine, why: "Narrative trail — RTFR spine" }
-  - { path: ../../process/cross-links.yml#drag_race_and_ai_offs, why: "Game-show formats inside shows" }
+  - { path: ../../process/cross-links.yml#repo-show-spine, why: "Narrative trail — RTFR spine" }
+  - { path: ../../process/cross-links.yml#drag-race-and-ai-offs, why: "Game-show formats inside shows" }
   - { path: ../../process/showmaker-network.yml, why: "Linked shows graph" }
   - { path: ../../repo-shows/REPO-SHOWS.yml, why: "SHOW inheritance for collection" }
   - { path: ../../repo-shows/will-wright-premiere/README.md, why: "Flagship planted show" }
@@ -125,11 +125,11 @@ credits:
   inspiration:
     branding_ssot: ../../process/repo-show-branding.yml
     host_biography: ../../characters/don-hopkins/portrayal/upbringing.yml
-    participation_rituals: repo-show-branding.yml#participation_rituals
+    participation-rituals: repo-show-branding.yml#participation-rituals
     go_to_excerpt:
       show: The Americans
       scene: "Claudia (Margo Martindale) plays Ms. Pac-Man — maze, chase, life as game"
       use: "Video games + existentialism cold opens"
-      see: repo-show-branding.yml#cultural_excerpts
-    attention_atoms: repo-show-branding.yml#attention_atoms
+      see: repo-show-branding.yml#cultural-excerpts
+    attention-atoms: repo-show-branding.yml#attention-atoms
     tagline: "Twittier than Twitter. Exier than X."

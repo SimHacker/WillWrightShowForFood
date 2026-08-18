@@ -26,9 +26,9 @@ The show is the repo. Live overlay may show Cursor thinking; Don Philahue surfac
 
 | Trail | When to leap |
 |-------|----------------|
-| [live_production](../trails/live-production.md) | Brain stream + Philahue bus in depth |
-| [drag_race_and_ai_offs](../trails/drag-race-and-ai-offs.md) | Game-show segments on stream |
-| [repo_show_spine](../trails/repo-show-spine.md) | RTFR — why the repo is the show |
+| [live-production](../trails/live-production.md) | Brain stream + Philahue bus in depth |
+| [drag-race-and-ai-offs](../trails/drag-race-and-ai-offs.md) | Game-show segments on stream |
+| [repo-show-spine](../trails/repo-show-spine.md) | RTFR — why the repo is the show |
 
 ---
 

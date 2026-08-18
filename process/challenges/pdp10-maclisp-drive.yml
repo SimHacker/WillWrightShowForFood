@@ -58,7 +58,7 @@ challenge_lanes:
       file_roundtrip: "Source on disk image or tape — reload and re-run"
     note: "Each card independently shippable — preservation + show segments"
 
-how_it_runs:
+how-it-runs:
   host_drops: "Spec CARD — e.g. 'MACLISP function that returns MICROPOLIS CLASS string'"
   contestant:
     - "Declare flair vs measurement + full rig (languages, tools, platform, emulator)"
@@ -104,13 +104,13 @@ ties_to:
 see_also:
   - { path: retrocomputing-drive.yml, why: "Family umbrella — declare your whole rig" }
   - { path: ../pdp10-its-stack.yml, why: "SIMH, PDP-10/its, disk images — stack pointer" }
-  - { path: ../cross-links.yml#retro_guests_real_wire, why: "Lars × Thomas tag-team trail" }
+  - { path: ../cross-links.yml#retro-guests-real-wire, why: "Lars × Thomas tag-team trail" }
   - { path: ../../characters/lars-brinkhoff/, why: "Guest anchor — boot ITS on air" }
   - { path: ../../characters/thomas-cherryhomes/, why: "Real retro net — paired segments" }
   - { path: ../../repo-shows/lars-brinkhoff/SHOW.yml, why: "Planted show — make-it-so deliverable" }
   - { path: ../../rigs/pdp10-maclisp-flair-lap.rig.yml, why: "Example rig yaml" }
   - { path: ../../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Gold-standard Rig DNA target" }
-  - { path: ../micropolis-ai-drag-race.yml#pdp10_maclisp_drive, why: "Drag race rotation slot" }
+  - { path: ../micropolis-ai-drag-race.yml#pdp10-maclisp-drive, why: "Drag race rotation slot" }
   - { path: ../lisp-machine-stack.yml, why: "CADR → Symbolics/LMI — ancestor lap" }
   - { path: https://github.com/PDP-10/its, why: "Upstream ITS restoration project" }
   - { path: SimHacker/DonHopkins/characters/don-hopkins/correspondence/kent-pitman.yml, why: "MACLISP lineage — AI Lab oral history" }

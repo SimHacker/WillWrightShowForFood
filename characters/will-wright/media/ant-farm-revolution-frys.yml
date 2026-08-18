@@ -31,7 +31,7 @@ silicon_valley:
   culture: "Will toy on Fry's shelf = peak SV retail archaeology"
 
 repo_orbit:
-  stupid_fun_club: ../../don-hopkins/career/stupid-fun-club.yml
+  stupid-fun-club: ../../don-hopkins/career/stupid-fun-club.yml
   slats: ../../robots/slats/CHARACTER.yml
   pantomime_bug_farm: ../../don-hopkins/media/pantomime/bug-farm.yml
 

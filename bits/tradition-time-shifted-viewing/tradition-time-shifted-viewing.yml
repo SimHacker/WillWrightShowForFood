@@ -3,7 +3,7 @@
 id: time-shifted-viewing
 type: tradition
 status: ready
-canonical: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#time_shifting
+canonical: ../../repo-shows/will-wright-premiere/SEGMENTS.yml#time-shifting
 
 intent: |
   Recorded live, optimized for pause/branch. Characters drop links at beats; viewer reads,

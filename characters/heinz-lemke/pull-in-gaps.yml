@@ -8,7 +8,7 @@ meta:
   human_readable: pull-in-gaps.md
 
 gaps:
-  pixie_complete_source_listing:
+  pixie-complete-source-listing:
     what: |
       THE CROWN JEWEL — complete PIXIE program, ~5000 words of Assembler/Machine code for
       PDP-7 + DEC 340 Display: light pen handling, interrupt management, interactive model
@@ -18,7 +18,7 @@ gaps:
     show_use: "Lars assembles/runs against Type 340 manual under SIMH; walk the interrupt handler on air"
     doc: pixie-source-recovery.md
 
-  electronics_magazine_1969_pdf:
+  electronics-magazine-1969-pdf:
     what: "McGraw-Hill Electronics (Apr 28 1969) PIXIE article; Gilmore scan"
     status: received   # 2026-07-10 from Heinz (PDF + clean MD)
     filed:
@@ -41,7 +41,7 @@ gaps:
     pull_in: "Don has copy at donhopkins.com/home/Wiseman%20Notes... ; export SAVE-FAILED"
     show_use: "Radial menu prehistory evidence"
 
-  heinz_1967_origin_story:
+  heinz-1967-origin-story:
     what: |
       Heinz's own memoir, first installment — "PIXIE History - Back to the Roots (Part 1, 1967)",
       authored March 2020: the German-spy accusation at Plessey, Phil Cook, the day trip to
@@ -64,7 +64,7 @@ gaps:
     pull_in: "Snip 4 embedded images from .doc; ask Heinz for PhD thesis scan"
     show_use: "Buxton/Microsoft thread; extended PIXIE predates Gosling SunDew; PACS lineage"
 
-  heinz_phd_thesis_1972:
+  heinz-phd-thesis-1972:
     what: |
       Lemke (1972) Interactive graphics in an integrated CAD system — Cambridge PhD.
       Appendix 4 pp 187-209 = PIXIE User Manual; Ch 5 = architecture; fig 9.4 = multi-user PIXIE.
@@ -117,14 +117,14 @@ gaps:
     show_use: "Textbook erasure beat — repo corrects the canon on air"
     thread: sources/2026-07-10-pixie-storyline-thread.md
 
-  nagoya_ai_surgery_slides_2026:
+  nagoya-ai-surgery-slides-2026:
     what: "Heinz slides — Model Guided Medicine + AI in Surgery, Nagoya CARS 2026 (German Society of Surgery)"
     status: gap
     pull_in: "From Heinz 10 Jul attachment; consent for repo"
     show_use: "Modern CARS episode — PIXIE → model-guided medicine continuity"
     thread: sources/2026-07-10-pixie-storyline-thread.md
 
-  heinz_1969_us_trip_agenda:
+  heinz-1969-us-trip-agenda:
     what: |
       Heinz's summer 1969 US lab-tour agenda (Greyhound $99 / 3-month ticket). Email attachment
       10 Jul 2026 — lists United Aircraft, MIT/Licklider, Lincoln Lab/Sutherland, Engelbart at SRI,
@@ -143,7 +143,7 @@ gaps:
     show_use: "PDP-7 double feature with PIXIE; Coons patches vs radial menus"
     doc: ../andrew-armit/sources/alan-kay-utah-coons-patches.md
 
-  pixie_part1_docx_dshr:
+  pixie-part1-docx-dshr:
     what: "PIXIE Part 1.docx — attached at end of DSHR/Roy thread forward"
     status: gap
     pull_in: "Extract from mail; may overlap 1967-back-to-the-roots or new installment"

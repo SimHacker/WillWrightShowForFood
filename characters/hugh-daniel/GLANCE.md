@@ -5,6 +5,6 @@
 - **NeWS** with Don (Grasshopper Group, John Gilmore); **FreeS/WAN** IPsec project manager
 - Social hub; glowing LED rice-crispy cake; ashes in the Amsterdam Jordaan
 - Discussants: [Ted Nelson](../ted-nelson/README.md), [Don Hopkins](../don-hopkins/README.md)
-- Repo ties: [live_objects](../../process/trails/live-objects.md) (NeWS) · Xanadu/hypertext
+- Repo ties: [live-objects](../../process/trails/live-objects.md) (NeWS) · Xanadu/hypertext
 
 Read next: [README](README.md) · [memorial](memorial.md) · [CHARACTER.yml](CHARACTER.yml)

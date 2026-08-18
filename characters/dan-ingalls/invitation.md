@@ -74,7 +74,7 @@ its own short episode or part of a longer Zoo walk — your call. No homework �
 
 **Materials:** [`repo-shows/dan-ingalls/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/dan-ingalls) ·
 [ideas](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/ideas.md) · [correspondence](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/dan-ingalls/correspondence.yml) ·
-[live_objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
+[live-objects trail](https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/trails/live-objects.md)
 (you, Alan, Vanessa, Craig)
 
 Browse without a GitHub account — [README](https://github.com/SimHacker/WillWrightShowForFood).

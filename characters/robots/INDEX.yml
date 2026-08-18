@@ -24,9 +24,9 @@ roster:
     role: "Minsky 1952 koan — only switches itself off; Slats's good old friend"
     audience_fork: ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/
 
-gallery_openings:
+gallery-openings:
   always: [slats, dents, ultimate-machine]
-  roster: ../menagerie/GUEST-ROSTER.yml#gallery_openings
+  roster: ../menagerie/GUEST-ROSTER.yml#gallery-openings
 
 duo:
   name: more-and-enough
@@ -38,7 +38,7 @@ sfc_robot_pair:
   members: [slats, dents]
   dynamic: "Slats wants a 10; Dents is scared — same rig, two films, two souls"
 
-turing_robot_olympics:
+turing-robot-olympics:
   spec: ../don-hopkins/media/turing-institute/first-robot-olympics.yml
   gag: ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   lineage: "Richard 1st (Groucho) → Slats; Cardiff Walker → vision-API training data"

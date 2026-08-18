@@ -36,7 +36,7 @@ orchestrator:
       - segment_desk_magazines                   # what the humans can grab
       - spawn_bits_and_npc_puppets               # who enters
       - github_feed_pulse                        # live repo as chat scenery
-      - qa_ledger                                # nothing dies in the queue
+      - qa-ledger                                # nothing dies in the queue
 
   sims_parallels:
     hope_chest: catalogs/simprov/ORCHESTRATOR.yml
@@ -53,9 +53,9 @@ orchestrator:
     - https://github.com/SimHacker/moollm/skills/advertisement
     - https://github.com/SimHacker/moollm/skills/simulation
 
-  coherence_pass:
+  coherence-pass:
     performer: don-philahue
-    algorithm: advertisement-dispatch.yml#coherence_pass
+    algorithm: advertisement-dispatch.yml#coherence-pass
     when: each simulation tick + on segment focus change
     focus_objects:
       - current_guest_character
@@ -82,8 +82,8 @@ orchestrator:
       - process/auto-art-theft-grand.yml
     skills: skills/repo-show/
 
-  programmed_by:
-    constitution: CHARACTER.yml#programmed_by
+  programmed-by:
+    constitution: CHARACTER.yml#programmed-by
     sources:
       - repo-shows/<show>/audience/*/questions.yml
       - repo-shows/<show>/audience/*/CARD.yml
@@ -110,7 +110,7 @@ orchestrator:
   qa_orchestration:
     spec: qa-orchestration.yml
     schema: ../../schemas/question-tree.yml
-    ticket_pr: ../../process/ticket-pr.yml
+    ticket-pr: ../../process/ticket-pr.yml
     one_line: |
       Right question of the right guest at the right time — in-conversation when perfect,
       dedicated Q&A block when needed, closing sweep so nothing relevant is left behind.
@@ -122,28 +122,28 @@ orchestrator:
 
     routing:
       right_guest: question node `to:` must match on-stage focus (or to any)
-      right_question: theme + context_lasers align with conversation; prior_reading satisfied
+      right_question: theme + context-lasers align with conversation; prior_reading satisfied
       lasers_before_ask: true
 
     timing_windows:
       in_conversation:
         card: ASK-NOW
-        beats: closing_sweep
+        beats: closing-sweep
         when: topic_matches_question scores highest mid-segment
       segment_bookend:
         when: natural pause before segment change — batch same-theme questions
       audience_qa_block:
         state: audience_qa
         cards: [SURFACE-QUESTION, PASS-MIC, ROUTE-QUESTION]
-      closing_sweep:
-        state: closing_sweep
+      closing-sweep:
+        state: closing-sweep
         card: QA-LEDGER-SWEEP
         when: open nodes never surfaced; high-vote refs unasked; last chance before sign-off
 
-    qa_ledger:
+    qa-ledger:
       merge: all audience questions.yml forests at read time
       status: open | asked | answered | deferred | withdrawn
-      sweep: qa-orchestration.yml#qa_ledger.sweep_algorithm
+      sweep: qa-orchestration.yml#qa-ledger.sweep_algorithm
       optional_audit_file: repo-shows/<show>/audience/QA-LEDGER.yml
 
     ethics:
@@ -159,7 +159,7 @@ orchestrator:
       - segment_active
       - gag_interstitial
       - audience_qa
-      - closing_sweep
+      - closing-sweep
       - sign_off
     transitions:
       - from: cold_open
@@ -189,21 +189,21 @@ orchestrator:
         note: Does not change state — fires ASK-QUESTION when topic opens the door
 
       - from: segment_active
-        to: closing_sweep
+        to: closing-sweep
         on: segment_arc_complete_or_producer_cue
         ads: [QA-LEDGER-SWEEP]
 
       - from: audience_qa
-        to: closing_sweep
+        to: closing-sweep
         on: qa_block_complete
         ads: [QA-LEDGER-SWEEP]
 
       - from: audience_qa
-        to: closing_sweep
+        to: closing-sweep
         on: qa_ledger_sweep
         note: Residual open questions — final pass before sign-off
 
-      - from: closing_sweep
+      - from: closing-sweep
         to: sign_off
         on: segment_complete
         ads: [SIGN-OFF]
@@ -248,7 +248,7 @@ orchestrator:
       - simprov-exploratorium-sparc.yml
 
   group_activities:
-    crowd_sitter_analog: audience/INDEX.yml box_seats + balcony roster
+    crowd_sitter_analog: audience/INDEX.yml box-seats + balcony roster
     party_deck_analog: ensemble invoke when rebounce_origin_ensemble_present
     come_on_down: TicketPR lottery — YOUR NAME HERE ritual
 
@@ -258,12 +258,12 @@ orchestrator:
     meshes_with: audience characters speaking Simlish, Palm emoji, robot dialects, Cow MOO
 
   easter_egg_hub:
-    spec: CHARACTER.yml#easter_eggs.rosebud_cheat
+    spec: CHARACTER.yml#easter-eggs.rosebud_cheat
     note: Secret Simoleon grants — discoverable by snooping; Philahue performs ledger commits live
 
   branding:
     performed_via: ../../process/repo-show-branding.yml
-    narrative_engine: ../../process/performance-space.yml#narrative_engine
+    narrative-engine: ../../process/performance-space.yml#narrative-engine
     button_board: ../../apps/performance-space/character-button-board.yml
 
 identity:

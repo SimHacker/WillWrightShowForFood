@@ -55,7 +55,7 @@ sqlite_cross_reference:
     - "Look those IDs up in state.vscdb (cursorDiskKV: bubbleId:*, agentKv:* tool args/results, messageRequestContext:* context sources)."
     - "Merge → a COMPLETE event (prompt+thinking+tool args+result+context+model+spend)."
     - "Write to OUR OWN derived SQLite (below) AND emit to the bus."
-  our_derived_db:
+  our-derived-db:
     path: ".moollm/stream-gateway/session-<id>.sqlite   (gitignored)"
     why: "A clean, queryable, cross-referenced store for the overlay (infovis queries, search, replay) — independent of Cursor's 9GB DB and its churn."
     tables: [events, prompts, thinking, tools, shell_commands, gear_shifts, context_sources, spend, mips, read_state, bookmarks]
@@ -76,7 +76,7 @@ session_capture:
     seal: "At end: finalize, compute totals, checksum/sign the file. Immutable performance record."
   portable: "Single self-contained file — easy to archive, share, replay, or upload."
   uses:
-    local_analysis: "Run queries/infovis on your own run; Datasette over it (SPEC.yml#analytics_backend.tier_local_sqlite)."
+    local_analysis: "Run queries/infovis on your own run; Datasette over it (SPEC.yml#analytics-backend.tier_local_sqlite)."
     competition_proof:
       what: "For 'professional' competitions (ai-offs / Code That Spec / Micropolis AI Drag Race), UPLOAD the sealed DB as proof + analytics."
       proves: ["who won (objective metrics)", "played fair (auditable: every tool call, shell command, spend — cross-check with deep-snitch)"]
@@ -125,7 +125,7 @@ daemon:
     - "Establish high-water mark (transcript byte offset AND/OR db max key)."
     - "Poll on interval (default 250ms transcript, 500ms db) for appended content."
     - "Parse new content into raw fragments."
-    - "Normalize → canonical event (brain-stream.yml#event_schema)."
+    - "Normalize → canonical event (brain-stream.yml#event-schema)."
     - "Run privacy redaction (below). Drop or mask as needed."
     - "Emit to sink(s): POST to gateway /api/ingest, or write JSONL, or stdout."
   incremental_parsing:
@@ -138,7 +138,7 @@ daemon:
 
 # NORMALIZED OUTPUT
 emits:
-  schema: ../../process/brain-stream.yml#event_schema
+  schema: ../../process/brain-stream.yml#event-schema
   event_examples:
     - { type: prompt, payload: { text: "<redacted user prompt>" } }
     - { type: thinking, bubble_id: b123, payload: { text: "...", delta: true } }
@@ -152,7 +152,7 @@ emits:
 privacy:
   pipeline: [path_strip, secret_scan, private_repo_filter, llm_redact_and_mipmap, optional_delay, visibility_tag]
   llm_redact_and_mipmap:
-    what: "The mandatory LLM redaction pass ALSO emits the full semantic-mip ladder in the SAME call (summarizers.yml#fused_call)."
+    what: "The mandatory LLM redaction pass ALSO emits the full semantic-mip ladder in the SAME call (summarizers.yml#fused-call)."
     why: "We pay for the completion anyway — get redaction + all LODs in one amortized round-trip."
     per_channel: "Redaction strength + style vary by channel/content-type (summarizers.yml#channels)."
   path_strip: "Rewrite absolute paths → repo-relative or public GitHub blob URLs; drop home dir, usernames."

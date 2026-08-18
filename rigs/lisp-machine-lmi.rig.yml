@@ -34,7 +34,7 @@ lifecycle:
     workflow: |
       Hack-Off: ship spec CARD in Zmacs on LMI Lambda. Peek Mode victory lap optional.
       Capture SDU boot sequence for the fans. thoughtful-commitment on host side.
-    contexts: [lisp_machine_hack_off, retrocomputing_drive, micropolis_ai_drag_race]
+    contexts: [lisp-machine-hack-off, retrocomputing-drive, micropolis_ai_drag_race]
   replicate:
     checklist:
       - "./lam + telnet SDU boot"

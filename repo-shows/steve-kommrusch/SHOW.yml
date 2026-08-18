@@ -17,7 +17,7 @@ why_him:
   silicon_to_ml: "A former CPU/chip-design architect (HP, National Semiconductor, AMD; MIT MSc) who moved into ML research."
   piaget_schemas: "At Leela, a learning approach inspired by Piaget's schemas — a live bridge to Gary Drescher's schema mechanism and the constructionist lineage."
 
-dream_segments:
+dream-segments:
   - "Repair a bug live with a model that can also PROVE the fix preserves behavior."
   - "Chip-architecture discipline applied to ML systems."
   - "Leela's Piaget schemas ↔ Drescher's Made-Up Minds ↔ LLM grounding (with Gary Drescher / Henry Minsky)."

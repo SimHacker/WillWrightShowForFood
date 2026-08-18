@@ -8,7 +8,7 @@ meta:
   name: Faceball Construction Set
   status: spec
   tagline: "Faceball like Pinball — paste on, wire up, play; audience sometimes as balls"
-  design: ../../process/performance-space.yml#narrative_engine
+  design: ../../process/performance-space.yml#narrative-engine
   used_by: squares-in-a-box.yml
 
 tribute:
@@ -64,14 +64,14 @@ lineage:
     what: |
       **The Incredible Machine** / **Incredible Toons** energy — Sanspiel fluids and props;
       tears drench the panel below, vomit arcs, spit takes. Breaks the Brady Bunch grid.
-    engine: sanspiel_simulation
+    engine: sanspiel-simulation
   bounce_commentary_bots:
     what: |
       **Bounce** at Interval Research (David Levitt + Don) — live TV plus a synchronized
       **closed-caption feed** driving simulated character puppets: **Jesse Jackson, Rush
       Limbaugh, and a house fly** arguing about the show, MST3K-style. Amplitude scrub
       ("play any audio with any gesture") is the direct ancestor of
-      #expression_modes.amplitude_scrub. The story that demo was trying to tell gets
+      #expression_modes.amplitude-scrub. The story that demo was trying to tell gets
       reimagined and reimplemented in this kit — brainstorm with David on Rebounce; the
       clearly-labeled LLOOOOMM mythology (Truth Fly, the Great Transformation) is the backstory.
     see:
@@ -102,8 +102,8 @@ expression_modes:
       what: "Pre-recorded clip plays; driver lip-syncs like a drag queen — mic ducked"
       drives: [mouth_viseme_approx]
       eyes: manual_or_button_cued
-      see: character-button-board.yml#dc_host_lineage_puppets
-    amplitude_scrub:
+      see: character-button-board.yml#dc-host-lineage-puppets
+    amplitude-scrub:
       what: "Audio amplitude or manual slider scrubs mouth open/closed on still portrait"
       drives: [mouth]
       lineage: |
@@ -129,7 +129,7 @@ accessories:
       gag: "Panel dummy deploys umbrella mid-roast — hair survives, dignity does not"
     plastic_tarp:
       what: "Front-row / low-seat drape — Gallagher-era splash protection for audience cells"
-      see: sanspiel_simulation#stage_gags#watermelon_smash
+      see: sanspiel-simulation#stage_gags#watermelon_smash
 
 attachments:
   mouth_hole:
@@ -173,7 +173,7 @@ particle_systems:
     trigger: character_state_asleep
     combo: googly_eyes asleep + non_responsive_lids
 
-sanspiel_simulation:
+sanspiel-simulation:
   what: |
     **Sanspiel** — pluggable particle/fluid simulation for Faceball gags. Tears, vomit, sweat from
     the brow, snot from sneezes, Rip Taylor confetti, watermelon pulp — **easy to plug in new
@@ -207,7 +207,7 @@ sanspiel_simulation:
       trigger: sneeze_button
     rip_taylor_confetti:
       emitter: confetti_cannon_or_hand
-      wavelength: upbringing.yml#national_touchstones
+      wavelength: upbringing.yml#national-touchstones
       tagline: "Dear!"
     spit_take:
       emitter: mouth_fiduciary
@@ -234,7 +234,7 @@ sanspiel_simulation:
     prison walls. Squares in a Box is the default layout; Sanspiel physics is the escape hatch.
   extensible: "Any Sanspiel rig snaps to fiduciary markers — construction set, not one-off"
 
-audience_as_balls:
+audience-as-balls:
   what: |
     Faceball includes **audience members** — sometimes as panel cells, sometimes literally as
     **balls** in the physics sim. ;) TicketPR crew in `repo-shows/<show>/audience/` bounce between
@@ -247,7 +247,7 @@ audience_as_balls:
   consent: "Self-authored audience characters only — see fictional-audience.yml"
   front_row:
     plastic_tarp: true
-    plexiglass: sanspiel_simulation#arena_defenses#plexiglass_barrier
+    plexiglass: sanspiel-simulation#arena_defenses#plexiglass_barrier
 
 dizziness_tracking:
   what: |
@@ -266,13 +266,13 @@ dizziness_tracking:
     decay: slow_when_stable
     vomit_threshold: configurable_per_avatar   # Spore creature constitution stat
   on_threshold:
-    - trigger: sanspiel_simulation#built_ins#vomit
+    - trigger: sanspiel-simulation#built_ins#vomit
     - expression: ecg_blend dizzy_face corner
     - googly_eyes: spiral_spin_mode
     - reset_pressure: partial   # can barf again — endurance game
   display: [per_cell_barf_bar, leaderboard_time_since_last_barf]
 
-faceball_machine:
+faceball-machine:
   what: |
     The **Faceball machine** — pinball table meets Brady Bunch grid. Every player has **two
     flippers**; avatars may **move around** inside the playfield (not locked to panel cells).
@@ -295,7 +295,7 @@ faceball_machine:
     ticketpr: "Audience crew as balls + flippers via merged PR"
     leaderboard: [time_since_last_barf, clean_streak, most_barfs_survived]
   choreography: choreography_modes
-  arena: sanspiel_simulation#arena_defenses
+  arena: sanspiel-simulation#arena_defenses
   choreography_modes:
     what: |
       Scripted chaos → deadpan reset. Penalty spin, synchronized swimmers, formation swoop,
@@ -344,7 +344,7 @@ faceball_machine:
       what: "Cut to VC grid — everyone in a seat, mouths closed, as if choreography never happened"
       host_line: optional_none
 
-spore_creature_avatars:
+spore-creature-avatars:
   what: |
     **Build-and-play avatar face puppets** like **Spore creatures** — pop-on mouth, eyes, brows,
     then **capabilities, tools, armor, vehicular appendages**. Faceball Construction Set meets
@@ -363,7 +363,7 @@ spore_creature_avatars:
       - tool_appendages
       - armor_plates
       - vehicular_limbs        # wheels, treads, fins, rotors
-      - soft_body_anatomy_parts  # boobs, dongs, any jiggly part — see soft_body_anatomy
+      - soft_body_anatomy_parts  # boobs, dongs, any jiggly part — see soft-body-anatomy
     snap_points: [head, mouth, eye_l, eye_r, brow, shoulder_l, shoulder_r, chassis, mount_n]
     per_creature_yaml: spore-avatar.yml
   capabilities:
@@ -379,11 +379,11 @@ spore_creature_avatars:
     what: "Avatar moves as vehicle — appendages drive Sanspiel body; face puppet stays on cockpit"
     examples: [shopping_cart_chassis, office_chair_treads, terrapin_shell]
   play:
-    faceball_machine: faceball_machine
+    faceball-machine: faceball-machine
     export: "PR spore-avatar.yml into characters/<id>/ or audience/<you>/"
     will_wright_show: "Natural homefun — build creature, survive the barf machine on stream"
 
-soft_body_anatomy:
+soft-body-anatomy:
   what: |
     **Plug-in jiggle parts** — pop-on **boobs, dongs, and anything else**, driven by Sanspiel soft-body
     physics. Same construction-kit verbs as every other Faceball part: snap to a fiduciary anchor, tune
@@ -394,7 +394,7 @@ soft_body_anatomy:
     - dongs                  # any size/shape/count — "make your own"
     - custom_yaml_part       # bring your own soft-body mesh
   snap_to: [chassis, shoulder_l, shoulder_r, crotch_anchor, custom_yaml_anchor]
-  physics: sanspiel_simulation      # soft-body jiggle pass in WebGPU, beside the fluids
+  physics: sanspiel-simulation      # soft-body jiggle pass in WebGPU, beside the fluids
   fields: [mass, stiffness, damping, jiggle_gain, gravity, collision]
   componentized_abstraction:
     what: |
@@ -408,7 +408,7 @@ soft_body_anatomy:
     safer_and_funnier: |
       No photo (copyright + no outing), no name required — just a cartoon everyone recognizes. The
       abstraction is BOTH the ethical sidestep AND the better joke. (Don's stance on the underlying story
-      stands — see ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#source_caveat — but the KIT itself
+      stands — see ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#source-caveat — but the KIT itself
       never needs his image.)
   modifiers:
     what: |
@@ -486,10 +486,10 @@ soft_body_anatomy:
           Perform Trump and other puppets **LIVE**, **playing actual Trump quotes** and animating the
           puppet's mouth to them — the **Sarah Cooper** technique (her viral deadpan lip-syncs to his
           "inject disinfectant / UV light up the body" briefing). The **real audio carries the satire**;
-          the puppet just embodies it. This is a straight application of the amplitude_scrub / Bounce
+          the puppet just embodies it. This is a straight application of the amplitude-scrub / Bounce
           "play any audio with any gesture" lineage.
         drives:
-          - "#amplitude_scrub"   # mic/audio loudness → mouth
+          - "#amplitude-scrub"   # mic/audio loudness → mouth
           - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md   # play any audio with any gesture
         care: "Lip-sync to REAL, verifiable public quotes of a public official — satire/commentary, never fabricated words."
   time_to_penis: |
@@ -497,7 +497,7 @@ soft_body_anatomy:
     WILL make a penis; the only variable is how fast. Dramatized in **Mythic Quest**'s penis-building
     storyline, and proven for real by **Spore** creatures ("Sporn"). Faceball doesn't fight it — it ships
     the part and hands you the physics. It's the UGC truth Will Wright's whole career demonstrates (see
-    spore_creature_avatars).
+    spore-creature-avatars).
   consent_and_care: |
     Self-authored avatars + consenting guests only. **Celebrate** gender play; don't shame anyone. Aim
     any satire at power/hypocrisy, never private people. See puppet-me-consent + vice-not-ice-puppet.
@@ -507,15 +507,15 @@ soft_body_anatomy:
     - ../../characters/brian-eno/bowie-snl-1979.md   # Bowie/Eno history conversation — Brian is shown the kit, no presumption he uses it
     - ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md   # Tom Ngo's ECG — the example-based blend engine for parameterized parts + faces
 
-anonymizing_puppet_and_reveal:
+anonymizing-puppet-and-reveal:
   one_line: "The full-screen puppet is a MASK you perform behind — then, only with consent, you take it off."
   motion_drive:
     what: |
       Track the **overall (DC / low-frequency) motion of the whole video frame** — the performer's gross
       body movement — and drive the soft-body **jiggle simulation** with it (e.g. the balloon-boob / dong
-      physics). Dance hard → the puppet wobbles hard. This is the whole-body sibling of amplitude_scrub
+      physics). Dance hard → the puppet wobbles hard. This is the whole-body sibling of amplitude-scrub
       (mic loudness → mouth) and the Bounce "any gesture, scrubbed by amplitude" trick.
-    drives: soft_body_anatomy.physics       # sanspiel jiggle gain fed by motion energy
+    drives: soft-body-anatomy.physics       # sanspiel jiggle gain fed by motion energy
     lineage: ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
   the_mask_disinhibition:
     what: |
@@ -537,7 +537,7 @@ anonymizing_puppet_and_reveal:
       Don't spell out the glory-hole framing — the audience gets it. The overlay is literally a surface
       you hide behind and perform through; that naughty, thrilling, exposed-if-you-slip vibe is the point,
       left implied (see the_mask_disinhibition), never stated outright.
-  the_reveal:
+  the-reveal:
     the_bit: |
       The height of the comedy: after somebody gives a **spectacular** performance to music behind the
       puppet, **then — only with their explicit consent — show the raw 'behind-the-scenes' video WITHOUT
@@ -561,7 +561,7 @@ anonymizing_puppet_and_reveal:
       footage of any real person. Aim the edge at the ABUSE OF POWER (blackmail itself); the show's own
       consenting version is its antidote.
   see:
-    - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#the_reveal
+    - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#the-reveal
     - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
     - ../../schemas/portrayal-standards.yml
 
@@ -586,12 +586,12 @@ streisand_effect:
   composable_examples:
     - "Bowie whip-it-out → re-created with any puppet (the canonical ancestor)"
     - "trump_mushroom → size × MeatSpin political caricature"
-    - "bryon_noem balloon-boobs → soft-body jiggle satire (Don: real, not a hoax; the sim is proudly, obviously AI — 'That's not AI. THIS is AI.'; keep it satire of a PUBLIC political figure — see vice-not-ice-puppet.yml#source_caveat)"
+    - "bryon_noem balloon-boobs → soft-body jiggle satire (Don: real, not a hoax; the sim is proudly, obviously AI — 'That's not AI. THIS is AI.'; keep it satire of a PUBLIC political figure — see vice-not-ice-puppet.yml#source-caveat)"
   its_our_brand: "Faceball Construction Kit = democratize the censored gag. Composability is the point; the kit IS the brand."
   see:
     - ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
     - ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml
-    - ../../process/repo-show-format.yml   # honest_clickbait + directors_cuts
+    - ../../process/repo-show-format.yml   # honest_clickbait + directors-cuts
     - ../../characters/brian-eno/bowie-snl-1979.md
 
 adult_section:
@@ -601,7 +601,7 @@ adult_section:
     bachelor-party** than porn store. **Cheezy. Very cheezy.** That register is Conan's gift to us: the
     self-deprecating, we-know-it's-dumb cheesiness that makes it fun instead of gross.
   how_it_works:
-    - "The soft_body_anatomy parts (dongs, boobs), the satirical spin/size modifiers, and the bowie_video_puppet all live IN here."
+    - "The soft-body-anatomy parts (dongs, boobs), the satirical spin/size modifiers, and the bowie-video-puppet all live IN here."
     - "The rest of the kit (googly eyes, umbrella hats, spore avatars) stays out front, all-ages."
     - "You part the curtains on purpose — a deliberate, visible choice, with a red-light cue that you're entering it."
   for_everyone_not_singling_anyone_out: |
@@ -615,16 +615,16 @@ adult_section:
       A rack of snap-on prosthetics for the video puppet (Bowie lineage). Star exhibit: a **universally
       recognized Mario mushroom rigged as a tiny penis** — no more need be said.
     respectful_note: "Totally **respectful of the presidency** — if not the president himself. Pairs with the trump_mushroom preset; satire of a public official, protected parody (see #satirical_presets)."
-    see: ["#bowie_video_puppet", "#satirical_presets"]
+    see: ["#bowie-video-puppet", "#satirical_presets"]
   see:
     - ../../characters/brian-eno/bowie-snl-1979.md
     - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
 
-bowie_video_puppet:
+bowie-video-puppet:
   one_line: "Rebuild Bowie's SNL-1979 marionette 'video puppet' — the articulated lower-body/prosthetic bit NBC censored — as a buildable, LIVE-performable Faceball preset."
   what: |
     We've extracted **the best part of that SNL performance** as an **interactive meme**: the tuxedo-torso
-    video puppet with a **fully articulated** lower half. Build it in the kit (soft_body_anatomy + the
+    video puppet with a **fully articulated** lower half. Build it in the kit (soft-body-anatomy + the
     size/spin modifiers), and **perform it again**, live, driven by a performer behind the mask.
   the_reaction_shot: |
     Bind it to a button as a **live-performable reaction shot to anything that gives you a boner** — come
@@ -635,7 +635,7 @@ bowie_video_puppet:
   see:
     - ../../characters/brian-eno/bowie-snl-1979.md
     - "#streisand_effect"          # the censored Bowie gag, democratized as a kit
-    - "#soft_body_anatomy"
+    - "#soft-body-anatomy"
 
 character_states:
   awake: [eyes_track, mouth_on_ptt, particles_off_or_idle]
@@ -732,7 +732,7 @@ look_grade:
     vc_webcam: [auto_exposure_look, soft_sharpen]
   jump: "Switching presets loads that face's grade + mapping — no re-tune mid-show"
 
-render_pipeline:
+render-pipeline:
   stack: "TypeScript + WebGPU in the browser — single OBS Browser Source"
   piece_of_cake: true
   modules:
@@ -750,7 +750,7 @@ render_pipeline:
     - ../../characters/don-hopkins/porter-duff-postscript-to-webgpu.md
     - NeWS send-code-not-commands → GPU shaders
 
-guest_characters:
+guest-characters:
   what: |
     Every guest character can ship a **modular face puppet** — their photo + Faceball Construction
     Set attachments (mouth hole, googly eyes, nostril pins, accessories, grade). Stored in
@@ -779,13 +779,13 @@ guest_characters:
       what: |
         Guest records a puppeteering session offline — phone or laptop — best take wins; PR or
         drop into `characters/<id>/media/` or show `sources/`. Woven into shotgun-blast ensemble.
-      fits: couple-and-solo-shows.yml#async_production
+      fits: couple-and-solo-shows.yml#async-production
     host_driven:
       what: "Driver performs guest dummy on button board — improv voice; guest reviews async"
       when: "Guest has no time to record — dignity preserved via bundle + correspondence"
   not_voice_clone: "Human mouth through hole only — see portrayal-standards.yml#simulation"
 
-memory_palace_tour:
+memory-palace-tour:
   what: |
     **Many puppets, many topics** — build a different face puppet for each idea, era, or guest
     beat. Take the audience on a **tour of your memory palace**: at each stop, the active puppet is
@@ -821,7 +821,7 @@ memory_palace_tour:
   guests:
     what: "Guest builds their own palace tour — puppets at their artifacts; live or offline takes per stop"
     async: "One clip per room — woven shotgun-blast; audience walks git paths between videos"
-  talking_selfies:
+  talking-selfies:
     what: |
       **Works great for talking selfies** — phone, front camera, you in frame **next to the thing**
       you talk about. One puppet preset per topic; one clip per palace stop.
@@ -841,10 +841,10 @@ memory_palace_tour:
     talking_cat_faces:
       what: "Same trick on CAT photos — googly eyes + lip-synced mouth turn Don's cat pics into talking-cat-face stars."
       see: ../../characters/don-hopkins/cats.yml
-    see: ../../process/repo-show-branding.yml#attention_atoms
+    see: ../../process/repo-show-branding.yml#attention-atoms
   see:
     - ../../process/moollm-stage.yml
-    - ../../apps/stream-gateway/bubble-wrangler.yml#memory_palace
+    - ../../apps/stream-gateway/bubble-wrangler.yml#memory-palace
     - ../../characters/don-hopkins/ideas.md
 
 tech:
@@ -854,7 +854,7 @@ tech:
   v1:
     - WebGPU compositor — grade shader + mouth warp per preset
     - squares-roster.yml hot-swap on button board
-    - memory_palace_tour stops yaml — puppet + artifact per room
+    - memory-palace-tour stops yaml — puppet + artifact per room
   v2:
     - ECG blend mode — barycentric pose corners per face
     - Sanspiel built-ins — tears, vomit, sweat, snot, confetti, spit take
@@ -865,8 +865,8 @@ tech:
     - per-guest particle plugins — particles/guest-<slug>-<gag>.yml
   v4:
     - dizziness_tracking + vomit threshold → Sanspiel barf trigger
-    - faceball_machine Twitch game — flippers, movement, barf leaderboard
-    - spore_creature_avatars — pop-on tools, armor, vehicular appendages
+    - faceball-machine Twitch game — flippers, movement, barf leaderboard
+    - spore-creature-avatars — pop-on tools, armor, vehicular appendages
   v5:
     - spin_wheel penalty + synchronized swimmer choreography
     - musical_chairs seat swap + eliminated avatar (deadpan never-mention)

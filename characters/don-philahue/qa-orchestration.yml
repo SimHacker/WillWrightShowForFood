@@ -21,7 +21,7 @@ inputs:
     paths:
       - repo-shows/<show>/audience/*/questions.yml
       - characters/*/questions.yml
-    merge: "read_time union — orchestrator merges at read; see question-tree.yml#tree_shape"
+    merge: "read_time union — orchestrator merges at read; see question-tree.yml#tree-shape"
   advertisements:
     - audience/*/CARD.yml ASK-QUESTION
     - guest CARD abilities (may outscore or defer Q&A)
@@ -43,20 +43,20 @@ routing:
 
   right_question:
     rule: |
-      Question text + theme + context_lasers must align with current conversation thread.
+      Question text + theme + context-lasers must align with current conversation thread.
       Score ASK-QUESTION via topic_matches_question, segment theme tag, prior_reading satisfied.
     context_lasers_first: |
-      Follow lasers before asking — load what the question is ABOUT (question-tree.yml#context_lasers).
+      Follow lasers before asking — load what the question is ABOUT (question-tree.yml#context-lasers).
       discussion ref = where thread lives; lasers = what to point at on air.
     prior_reading: |
       If node lists prior_reading, guest should have had access before_air (ticket-pr timing).
       If not satisfied, defer or preface — do not ambush with unread context.
 
-  right_time:
+  right-time:
     windows:
       in_conversation:
         what: Perfect moment — topic just opened the door; ASK-QUESTION scores highest NOW
-        beats: closing_sweep
+        beats: closing-sweep
         score_boost:
           - topic_matches_question
           - guest_said_keyword_that_unlocks_theme
@@ -74,9 +74,9 @@ routing:
         when: Segment arc complete; guest ready; or producer cue
         invokes: [SURFACE-QUESTION, PASS-MIC, ROUTE-QUESTION]
 
-      closing_sweep:
+      closing-sweep:
         what: Safety net — all still-open relevant questions get final pass before sign-off
-        when: segment_active → closing_sweep transition (ORCHESTRATOR.yml state machine)
+        when: segment_active → closing-sweep transition (ORCHESTRATOR.yml state machine)
         includes:
           - status open nodes not yet asked
           - high-vote github discussion refs never surfaced
@@ -92,28 +92,28 @@ routing:
     dynamic_competition: |
       Question ads compete with guest CARD inject ads, gag interstitials, and balcony characters.
       Highest score wins the next beat — not FIFO queue. A perfect in-conversation question can
-      interrupt; a weak question waits for closing_sweep or defers.
+      interrupt; a weak question waits for closing-sweep or defers.
 
-qa_ledger:
+qa-ledger:
   what: |
     Virtual merged view of all question nodes across audience forests for this show episode.
     Not necessarily one file — computed at read time; optional mirror at
     repo-shows/<show>/audience/QA-LEDGER.yml for human audit (producer-maintained).
-  node_fields: question-tree.yml#question_node
-  status_lifecycle: question-tree.yml#status_lifecycle
+  node_fields: question-tree.yml#question-node
+  status-lifecycle: question-tree.yml#status-lifecycle
   sweep_algorithm: |
     1. Merge all questions.yml forests for show
     2. Filter status == open OR (deferred AND theme matches current segment)
     3. Score each ASK-QUESTION ad against live context + to: routing
     4. During segment: fire top scorer if above threshold
-    5. At closing_sweep: sort remaining open by vote weight + curator priority + age
+    5. At closing-sweep: sort remaining open by vote weight + curator priority + age
     6. Mark asked → asked_at + segment; guest reply → answered (local + GitHub ref)
 
 scoring:
   combines:
     - CARD ASK-QUESTION score_when weights
     - question node theme vs segment topic
-    - github_discussion vote boost (question-tree.yml#github_discussion)
+    - github-discussion vote boost (question-tree.yml#github-discussion)
     - guest_already_read_ticketpr boost
     - "to: matches focus guest (required gate — score 0 if mismatch)"
     - prior_reading satisfied
@@ -143,7 +143,7 @@ card_abilities:
     ROUTE-QUESTION: right guest routing
     ASK-NOW: in-conversation perfect moment
     DEFER-QUESTION: ledger defer with guidance
-    QA-LEDGER-SWEEP: closing_sweep
+    QA-LEDGER-SWEEP: closing-sweep
     SURFACE-QUESTION: pull TicketPR to mic
     READ-ROOM: pick next thread from chat + ledger
 

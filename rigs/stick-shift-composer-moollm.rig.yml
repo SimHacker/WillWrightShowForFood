@@ -77,7 +77,7 @@ declare:
 
 proof:
   cursor_spend_export: "Cursor settings → usage / billing export (timestamped)"
-  cursor_mirror_composer: "python3 moollm/skills/cursor-mirror/scripts/cursor_mirror.py tree"
+  cursor_mirror_composer: "python3 moollm/skills/cursor-mirror/scripts/cursor-mirror.py tree"
 
 costume:
   lets_make_a_deal: "Racing gloves, tachometer printout of spend log, cape of MCP server icons"
