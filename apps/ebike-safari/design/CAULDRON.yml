@@ -11,10 +11,10 @@ meta:
     Chain: TomTom (UGC/BitTorrent/i18n) → iLoci → Coffeeshops DB → StoryMaker/Bar Karma/Urban Safari → Ebike Safari.
 
 slurp_queue:
-  - id: urban-safari-live
-    from: ../../../repo-shows/urban-safari-live/
+  - id: live-show-beats
+    from: ../../../repo-shows/ebike-safari/
     into: lineage.yml
-    extract: [performed live flow, StoryMaker hooks, show beats]
+    extract: [live show flow, StoryMaker hooks, show beats]
     status: pending
 
   - id: ebike-safari-seed

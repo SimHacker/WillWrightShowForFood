@@ -52,7 +52,6 @@ legacy:
 
 show:
   - ../../../repo-shows/ebike-safari/
-  - ../../../repo-shows/urban-safari-live/
 
 skill:
   - ../../../skills/ebike-safari/

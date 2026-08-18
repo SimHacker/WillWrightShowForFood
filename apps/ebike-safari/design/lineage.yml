@@ -62,14 +62,14 @@ chain:
     project: StoryMaker / Bar Karma
     hook: collaborative branching TV stories; geolocated scenes; many clients
     video: https://www.youtube.com/watch?v=_2yEHs_WLzQ
-    show: ../../../repo-shows/urban-safari-live/
+    show: ../../../repo-shows/ebike-safari/
     harvest: [story layer from detected events, community branches]
 
   - era: "2009–11"
     project: Urban Safari
     hook: geolocated scene cards, Layar AR, Facebook albums, performed live Amsterdam 2011
     room: ../../../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
-    show: ../../../repo-shows/urban-safari-live/
+    show: ../../../repo-shows/ebike-safari/
     harvest: [continuous trace, shared path graph, field capture]
 
   - era: "2011–14"

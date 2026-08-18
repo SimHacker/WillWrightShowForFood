@@ -3,7 +3,7 @@
 > **Girder:** [`ebike-safari.yml`](ebike-safari.yml) · **Front page:** [`README.md`](README.md)  
 > **Live code:** [`apps/ebike-safari/`](../../apps/ebike-safari/README.md) · **Rides:** [ebike-safari.com](https://ebike-safari.com/)
 
-Voice-first AI touring companion. Product layer on [Urban Safari LIVE](../urban-safari-live/README.md).
+Voice-first AI touring companion — and the live Repo Show. Don rides real Amsterdam streets; each stop becomes a geotagged scene card in a playlist; the audience adds cards via git, and the map grows city by city.
 
 ---
 
@@ -38,8 +38,7 @@ We already built several versions of this idea (1995 DreamScape → 2008–2011 
 | **2011** | Urban Safari | Layar AR field cards; [Layar demo](https://www.youtube.com/watch?v=Db8KGNoeKHE); [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~13:11 import) |
 | **2011–14** | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | SFC Unity — songs on roads; per-song pies; Mario-cannon flick nav; LOD terrain. [Medium demo](https://donhopkins.medium.com/mediagraph-demo-a7534add63e5) |
 | **2025–26** | Proxi | Memory snow globes at geo stops — press parallel |
-| **2026** | [Urban Safari LIVE](../urban-safari-live/README.md) | Real streets; git audience cards |
-| **2026+** | **eBike Safari** | This spec — eBike + voice + camera + LLM narrator |
+| **2026+** | **eBike Safari** | This spec — eBike + voice + camera + LLM narrator; real streets, git audience cards |
 
 **Pivotal moment:** TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems. Don sent demos; Will said leave EA and come back to SFC. [How Don rejoined Will](../../characters/don-hopkins/career/stupid-fun-club.yml).
 
@@ -260,8 +259,8 @@ Howard flagged [codebase-posters](https://github.com/unable12/codebase-posters) 
 | Document | Role |
 |----------|------|
 | [ebike-safari.yml](ebike-safari.yml) | Machine girder (this doc's source) |
-| [Urban Safari LIVE](../urban-safari-live/README.md) | Companion Repo Show |
 | [StoryMaker / Urban Safari (2011)](../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml) | SFC era artifacts |
+| [Amsterdam tile art](../../characters/don-hopkins/media/amsterdam-tile-art/INDEX.yml) | Space Invader mosaics — ready-made topical layer |
 | [Stupid Fun Club lineage](../../characters/don-hopkins/career/stupid-fun-club.yml) | Will rejoin story |
 | [Crazy Idea Jam — urban cluster](../../process/crazy-idea-jam.yml) | Idea reactor |
 | [ebike-safari skill](../../skills/ebike-safari/SKILL.md) | MOOLLM protocol |

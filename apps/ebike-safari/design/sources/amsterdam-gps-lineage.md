@@ -100,7 +100,7 @@ Amber archive: [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md)
 | TomTom trilogy + Will rejoin | [`../../../characters/don-hopkins/career/stupid-fun-club.yml`](../../../../characters/don-hopkins/career/stupid-fun-club.yml) |
 | Idea jam entries | [`../../../process/crazy-idea-jam.yml`](../../../../process/crazy-idea-jam.yml) — `#iloci_memory_palace`, `#amsterdam_coffeeshops_app`, `#bongo_bingo`, `#creationtv_storymaker`, `#urban_safari_gps_storytelling` |
 | Career lineage | [`../../../characters/don-hopkins/career/lineage.yml`](../../../../characters/don-hopkins/career/lineage.yml) |
-| Urban Safari performed live | [`../../../repo-shows/urban-safari-live/`](../../../../repo-shows/urban-safari-live/) |
+| eBike Safari show + product seed | [`../../../repo-shows/ebike-safari/`](../../../../repo-shows/ebike-safari/) |
 | StoryMaker media | [`../../../characters/don-hopkins/media/storymaker-urban-safari/`](../../../../characters/don-hopkins/media/storymaker-urban-safari/) |
 | Steering / VoyStick | [`../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md`](../../../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) |
 

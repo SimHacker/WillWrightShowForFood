@@ -222,14 +222,13 @@ ideas:
       **Urban Safari** — the geolocated branch of StoryMaker: capture scene cards in the field,
       follow others' paths through a shared graph at real POIs. Layar AR field demos, Facebook album
       export/edit/import round-trip, lessons from playtesting StoryMaker on Bar Karma's real audience.
-      Don + Will's son performed it in Amsterdam (2011); 2026 carries it as Urban Safari LIVE (Will's son
-      video-calls Will from the street) and the eBike product layer.
+      Performed in Amsterdam (2011); 2026 carries it forward as eBike Safari — the live app and Repo Show.
     progenitor_of: [ebike_safari]
     progenitor_chain: [bongo_bingo, creationtv_storymaker, iloci_memory_palace]
     demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
     room: ../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
     ties:
-      - ../repo-shows/urban-safari-live/urban-safari-live.yml
+      - ../repo-shows/ebike-safari/ebike-safari.yml
       - ../characters/don-hopkins/career/stupid-fun-club.yml
       - crazy-idea-jam.yml#creationtv_storymaker
 

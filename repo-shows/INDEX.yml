@@ -143,8 +143,7 @@ shows:
       ca-machinima-cabaret-drag-race/: "★ Cellular Automata Machinima CAbaret Drag Race — tile sets as costumes, CA rules as acts; live simulation-bending cabaret competition; merge or sashay. Sister runway to micropolis-ai-drag-race (that one races rigs; this one races performances)."
     ideas:   # host-side show seeds (kind: idea) — from the dissolved ideas/ room (../REFACTOR.md)
       jsonsters-gallery-lecture/: "Sell art to virtual patrons for § — lecture + ensemble-beat hammers; scarcity auctions later. Gallery: ../characters/don-hopkins/jsonsters/"
-      urban-safari-live/: "2011 StoryMaker Urban Safari performed for real — Don + Will's son in Amsterdam; Will's son video-calls Will from the street; clips from other European cities join the playlists."
-      ebike-safari/: "Product seed — pie-network ride game + VoyStick; DreamScape→iLoci→Urban Safari; Koga/Enviolo; Howard art lead."
+      ebike-safari/: "Product seed + live Repo Show — safari rides as episodes, geotagged scene cards into playlists, git audience cards; pie-network ride game + VoyStick; StoryMaker→iLoci→Urban Safari lineage; Koga/Enviolo; Howard art lead."
       kids-city-newspaper/: "Kids publish a newspaper INTO the game ABOUT the game — the SimCityNet scrolling chat window grown into a newsroom; Soul City federation as the modern rail."
     packs:   # content packs for shows (kind: pack) — big-endian names sort them beside their show
       will-wright-premiere-ideas/: "Flagship content pack for will-wright-premiere/ — episode seeds, content map, performance bits, audience hooks. (Was ideas/shows/will-wright-premiere/.)"

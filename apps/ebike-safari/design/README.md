@@ -62,7 +62,7 @@ don't port the stack.
 ## Show + history
 
 - [`../../../repo-shows/ebike-safari/`](../../../repo-shows/ebike-safari/) — 2026 product seed (voice, camera, Bosch)
-- [`../../../repo-shows/urban-safari-live/`](../../../repo-shows/urban-safari-live/) — 2011 performed live
+- [`../../../characters/don-hopkins/media/storymaker-urban-safari/`](../../../characters/don-hopkins/media/storymaker-urban-safari/) — 2011 Urban Safari artifacts
 - [`../../../skills/ebike-safari/`](../../../skills/ebike-safari/) — skill activation
 
 ↑ [`../README.md`](../README.md)

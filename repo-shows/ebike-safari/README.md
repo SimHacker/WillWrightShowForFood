@@ -7,7 +7,6 @@
 | **Status** | seed |
 | **Host** | Don Hopkins |
 | **Participants** | Don Hopkins, Will Wright |
-| **Parent show** | [Urban Safari LIVE](../urban-safari-live/README.md) |
 | **Live app** | [apps/ebike-safari](../../apps/ebike-safari/README.md) · [ebike-safari.com](https://ebike-safari.com/) |
 | **Readable spec** | [**ebike-safari.md**](ebike-safari.md) ← start here for the full story |
 | **Machine girder** | [`ebike-safari.yml`](ebike-safari.yml) |
@@ -37,7 +36,7 @@ Any camera captures POV for scene cards — phone, GoPro, action cam, whatever y
 
 You never see the graph. You ride Amsterdam (or anywhere), and the world becomes an adventure parser.
 
-This seed is the **product layer** on [Urban Safari LIVE](../urban-safari-live/README.md) — the Repo Show where Don hops real streets and drops geotagged scene cards into git. Same participatory itch as **StoryMaker**, **Urban Safari**, and [**Bar Karma**](https://en.wikipedia.org/wiki/Bar_Karma) at Stupid Fun Club: audience-authored stories at real places — rebuilt with open maps, FIT rides, and MOOLLM instead of a dead MySQL server.
+It's the product **and** the Repo Show: Don rides real streets, each stop becomes a scene card — short clip, geotagged, dropped into playlists in git. The map is the story graph, ridden. The audience adds cards via git; the map grows city by city, contributor by contributor. Same participatory itch as **StoryMaker**, **Urban Safari**, and [**Bar Karma**](https://en.wikipedia.org/wiki/Bar_Karma) at Stupid Fun Club: audience-authored stories at real places — rebuilt with open maps, FIT rides, and MOOLLM instead of a dead MySQL server.
 
 Why keep revisiting a thirty-year-old weird idea? Will answered that himself, closing the 2005 Spore GDC talk:
 
@@ -117,8 +116,7 @@ Field-tested on real safaris around Amsterdam — not aspirational spec.
 | 2008–11 | iLoci → StoryMaker → Urban Safari — TomTom trilogy recalls Don to SFC |
 | 2011 | [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — branching geo stories; [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) |
 | 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on roads; pie flick navigation |
-| 2026 | Urban Safari LIVE — git audience cards; Will async |
-| 2026+ | **eBike Safari** — voice + camera + LLM + open FIT/map stack |
+| 2026+ | **eBike Safari** — voice + camera + LLM + open FIT/map stack; git audience cards |
 
 **Pivotal moment:** Will saw iLoci + Coffeeshops + Bongo Bingo; said leave EA, come back to Stupid Fun Club. [The receipt](../../characters/don-hopkins/career/stupid-fun-club.yml).
 
@@ -165,7 +163,6 @@ Not gamified distance — score **novel exposure** and **recognized gestures**. 
 | **Full human-readable spec** | [**ebike-safari.md**](ebike-safari.md) — architecture, Sutton, VoyStick, MVP |
 | Machine yaml | [`ebike-safari.yml`](ebike-safari.yml) |
 | Live code + design | [`apps/ebike-safari/`](../../apps/ebike-safari/README.md) |
-| Companion show | [Urban Safari LIVE](../urban-safari-live/README.md) |
 | SFC artifacts | [storymaker-urban-safari.yml](../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml) |
 | Steering + VoyStick | [urban-safari-steering-voystick-pie-network.md](../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md) |
 | MOOLLM skill | [ebike-safari/SKILL.md](../../skills/ebike-safari/SKILL.md) |

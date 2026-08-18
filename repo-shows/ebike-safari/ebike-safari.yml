@@ -1,5 +1,4 @@
-# eBike Safari — voice-first AI touring companion (product seed)
-# Product layer on Urban Safari LIVE.
+# eBike Safari — voice-first AI touring companion, and the live Repo Show
 # Camera + handlebar phone + Bosch + Koga + Enviolo + SpeechAnalyzer + hidden story graph.
 
 meta:
@@ -7,9 +6,16 @@ meta:
   status: seed
   host: don-hopkins
   participants: [don-hopkins, will-wright]
-  parent: ../urban-safari-live/urban-safari-live.yml
   format: ../../process/one-minute-movie-sandwich.yml
   rendered_edition: ebike-safari.md
+
+live_show: |
+  eBike Safari is the show as well as the product. Don rides real Amsterdam streets and
+  shows cool stuff — canals, Space Invader mosaics, whatever the street serves up. Each
+  stop is a scene card: short clip, geotagged, dropped into playlists. The map is the
+  story graph, ridden. Modular and incrementally assembled — exactly how StoryMaker built
+  stories: scene cards accumulate, walks over them multiply. The Repo Show audience adds
+  cards via git; the map grows city by city, contributor by contributor.
 
 one_line: |
   Voice-controlled adventure navigation through a hidden graph of story cards at real-world
@@ -66,8 +72,7 @@ lineage:
       source: ../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
-    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; git audience cards", file: ../urban-safari-live/urban-safari-live.yml }
-    - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + camera + LLM narrator" }
+    - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + camera + LLM narrator; real streets, git audience cards" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
     demos; Will said leave EA and come back to SFC. iLoci moment again.
@@ -320,9 +325,15 @@ mvp_demo:
     paint WillWrightShowForFood / MOOLLM git history as wall art. Every repository has a shape.
 
 ties:
-  - name: Urban Safari LIVE
-    connection: companion show — real Amsterdam hops, scene cards
-    character: ../urban-safari-live/urban-safari-live.yml
+  - name: Amsterdam tile art (Space Invader mosaics)
+    connection: ready-made topical layer for street safaris
+    character: ../../characters/don-hopkins/media/amsterdam-tile-art/INDEX.yml
+  - name: Amsterdam Coffeeshops Layar
+    connection: 2009 map layer — first Amsterdam safari database
+    character: ../../characters/don-hopkins/media/amsterdam-coffeeshops-layar/INDEX.yml
+  - name: StoryMaker stories and scenes
+    connection: scene-card assembly pattern the playlists follow
+    character: ../../process/storymaker-stories-and-scenes.yml
   - name: eBike Safari app
     connection: code, FIT pipeline, design cauldron, live map JSON
     character: ../../apps/ebike-safari/README.md

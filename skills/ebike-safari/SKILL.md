@@ -41,6 +41,6 @@ Docs: [`DATA-CONTRACT.md`](../../apps/ebike-safari/DATA-CONTRACT.md) · [`design
 ## Show hooks
 
 - [`../../repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) — 2026 product seed (voice, camera, Bosch)
-- [`../../repo-shows/urban-safari-live/`](../../repo-shows/urban-safari-live/) — 2011 performed live (amber)
+- [`../../characters/don-hopkins/media/storymaker-urban-safari/`](../../characters/don-hopkins/media/storymaker-urban-safari/) — 2011 Urban Safari artifacts (amber)
 
 Part of [WillWrightShowForFood](../../README.md).
