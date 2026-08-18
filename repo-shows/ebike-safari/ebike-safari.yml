@@ -1,25 +1,26 @@
 # eBike Safari — voice-first AI touring companion (product seed)
-# Product layer on Urban Safari LIVE; license don't acquihire (Uncle Milton model).
-# Ray-Ban Meta + handlebar phone + Bosch + Koga + Enviolo + SpeechAnalyzer + hidden story graph.
+# Product layer on Urban Safari LIVE.
+# Camera + handlebar phone + Bosch + Koga + Enviolo + SpeechAnalyzer + hidden story graph.
 
 meta:
   id: ebike-safari
   status: seed
   host: don-hopkins
-  participants: [don-hopkins, will-wright, wills-son]
+  participants: [don-hopkins, will-wright]
   parent: ../urban-safari-live/urban-safari-live.yml
   format: ../../process/one-minute-movie-sandwich.yml
   rendered_edition: ebike-safari.md
 
 one_line: |
   Voice-controlled adventure navigation through a hidden graph of story cards at real-world
-  places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
+  places — you talk, the LLM listens, the phone shows the route, the bike moves you.
 
 elevator: |
   eBike Safari is DreamScape on wheels, descended through iLoci and Urban Safari: geolocated
-  scene cards, topical link layers, adventure-style voice navigation while riding. Meta Ray-Ban glasses capture POV and handle
-  mic/speakers (prescription lenses, hands on handlebars). Any phone on a handlebar mount is
-  display-only — map, Bosch stats, turn-by-turn. Apple SpeechAnalyzer drives hands-free control.
+  scene cards, topical link layers, adventure-style voice navigation while riding. Any camera
+  captures POV for scene cards — phone, GoPro, action cam. Any phone on a handlebar mount is
+  display-only — map, Bosch stats, turn-by-turn. A mic and open-ear audio carry the
+  conversation; Apple SpeechAnalyzer drives hands-free control.
   The rider never sees the graph; the LLM interprets natural language, hops virtual focus across
   nearby POIs and cards, then "set destination" arms Bosch/Apple routing. We already built
   several versions of this idea (1995 DreamScape → 2008–2011 TomTom/SFC → 2026); 2026 adds on-device speech, vision, and LLM narration.
@@ -65,8 +66,8 @@ lineage:
       source: ../../characters/don-hopkins/sources/mediagraph-sfc-youtube-demo.md
       jam: ../../process/crazy-idea-jam.yml#mediagraph
     - { era: "2025–26", project: Proxi, what: "Memory snow globes at geo stops — press parallel" }
-    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; Will's son calls Will; git audience cards", file: ../urban-safari-live/urban-safari-live.yml }
-    - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + Ray-Ban + LLM narrator" }
+    - { era: "2026", project: Urban Safari LIVE, what: "Real streets; git audience cards", file: ../urban-safari-live/urban-safari-live.yml }
+    - { era: "2026+", project: eBike Safari, what: "This doc — eBike + voice + camera + LLM narrator" }
   pivotal_moment: |
     TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems; Don sent
     demos; Will said leave EA and come back to SFC. iLoci moment again.
@@ -91,21 +92,19 @@ dreamscape_wwdc_1995:
   leads_to: [iLoci, StoryMaker, Urban Safari, MediaGraph, MOOLLM, ebike-safari]
   quote: "We want to give creative people an environment in which to plant their seeds — fertile ground, instead of a killer app."
   split_architecture:
-    ray_ban_meta:
-      roles: [capture_pov, open_ear_audio, microphone, prescription_lenses]
+    camera_and_audio:
+      roles: [capture_pov, open_ear_audio, microphone]
       why: |
-        Will Wright is excited about Ray-Ban Meta glasses — no display, but good earphones, mic,
-        and camera; safe while riding; put your own prescription lenses in. Camera off the phone
-        means any handlebar mount works (display only).
-      will_suggestion: true
-      licensing_target: meta
+        Any camera works for POV scene cards — phone, GoPro, action cam; optional, not required.
+        Mic + open-ear audio carry the conversation. Camera off the phone means any handlebar
+        mount works (display only); hands stay on handlebars.
     handlebar_phone:
       roles: [map_display, turn_by_turn, bosch_sdk_ui, optional_android]
       mount: "Any phone mount — Quad Lock, Bosch, generic; no integrated camera required"
     bosch:
       roles: [motor_assist_context, battery, speed, route_to_head_unit]
-      sdk: "Kiox/Nyon — evaluate current Flow SDK vs legacy extensible mount platform Bosch acquihired and killed"
-      note: "Flow is better than the acquired indie app but still sucks; we supply voice + story graph they lack"
+      sdk: "Kiox/Nyon — read telemetry and routing via current Flow SDK"
+      note: "Flow does turn-by-turn; it doesn't do voice or story graphs — this does"
 
 field_hardware:
   note: "What Don actually rides on Amsterdam safaris — authentic endorsement, not aspirational spec."
@@ -120,9 +119,6 @@ field_hardware:
       on Koga builds. Hands stay on handlebars; voice UX is not fighting drivetrain.
     site: "https://www.enviolo.com/"
   stack: "Koga frame + Bosch motor + Enviolo CVT — field-tested on real safaris"
-  partner_or_ads: |
-    Genuine product love from daily use. Open to co-marketing, sponsored safari episodes, or
-    lightweight ad integration — show the bike as part of the story, not a spec sheet.
 
 dual_location_navigation:
   what: |
@@ -138,7 +134,7 @@ dual_location_navigation:
     examples:
       - "What's near me?"
       - "Tell me about that canal"
-      - "What did Will's son film here?"
+      - "What's the story behind that bridge?"
       - "Take me to the next Invader"
       - "Set destination"
     set_destination: |
@@ -236,7 +232,7 @@ steering_pie_ride_game:
   ai_memory_loop:
     - remember — past safaris, linger time, git audience cards
     - lookup — graph links at approaching POIs
-    - organize — topical layers (Invader, Will's son, canal, contributor)
+    - organize — topical layers (Invader, canal, contributor)
     - project — rank onto rider interest profile
     - speak — proximity-triggered narration
     - answer — questions without stopping or screen touch
@@ -268,74 +264,25 @@ llm_layer:
     - caption_captured_scene_cards
     - memory_snow_globe_export_proxi_parallel
   capture_loop: |
-    "Capture this" → Ray-Ban or phone photo + GPS + LLM caption → geotagged scene card on map/git
+    "Capture this" → camera photo + GPS + LLM caption → geotagged scene card on map/git
 
-meta_licensing:
+social_card_sync:
   heritage: |
     StoryMaker shipped Facebook app with album import/export (scene photos ↔ story cards).
     Micropolis Facebook app same era. **Don demonstrates album export / edit / import on camera**
     in the StoryMaker comprehensive demo (not the Layar-only clip):
     https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742
     (~12:22 export → ~12:39 Facebook drag-edit → ~13:11 import round-trip)
-  fresh_audit_2026:
-    status: needed
-    why: "Graph API, Reels, Ray-Ban device SDK evolved; many 2011 endpoints dropped — evaluate before pitch"
-  pitch_angle: |
-    Meta already has the wearable (Ray-Ban). We built the safari layer + social card sync once.
-    License the graph engine and voice adventure navigation — not acquihire. Uncle Milton model:
-    contribute the weird idea; partner ships product with credit.
-  licensing_preferred_over: acquihire
-
-partners:
-  meta:
-    angle: "Ray-Ban capture + voice; resurrect album/social sync on modern APIs; glasses-first safari demo"
-    model: license
-  apple:
-    angle: "SpeechAnalyzer + Vision showcase; phone-as-display; MagSafe mount ecosystem (any mount vendor)"
-    model: co_marketing_or_license
-  bosch:
-    angle: "Companion brain Flow should have — voice, story graph, extensible cards; keep Flow, license engine"
-    model: license
-    anti_pattern: "Acquihire + kill extensible dev platform (indie iPhone mount/browser app → Flow)"
-  koga:
-    angle: |
-      Don rides Koga on Amsterdam safaris — Dutch brand, canal-loop credibility. Co-marketing or
-      sponsored episode: safari as product story (comfort, range, urban daily driver).
-    model: co_marketing_or_sponsorship
-    authentic_use: true
-    site: "https://www.koga.com/"
-  enviolo:
-    angle: |
-      CVT on the same bikes — no gear hunting between story stops; pairs with voice-first UX.
-      "Set destination and roll" without shifting. Co-marketing or ad read on safari clips.
-    model: co_marketing_or_sponsorship
-    authentic_use: true
-    site: "https://www.enviolo.com/"
-  strava:
-    angle: "Segments as story segments; social paths; route export"
-    model: api_integration
-  accessory_makers:
-    angle: "Display-only mounts simplified once camera is on glasses"
-    examples: [Quad Lock, Peak Design, generic]
-
-business_model:
-  uncle_milton: |
-    Will contributed transparent ant medium → Uncle Milton Ant Farm ceiling projector shipped with
-    credit. We contribute Urban Safari graph + voice UX → Bosch/Meta/Apple ship with license fee.
-  not: "Acquihire and disappear (Bosch pattern on indie eBike iPhone mount + browser extensibility)"
+  now: "2026 equivalent syncs scene cards with whatever photo/social service the rider already uses"
 
 mvp_demo:
   slice: |
     Amsterdam canal eBike loop on Koga + Enviolo; SpeechAnalyzer voice loop (zero screen touches);
     Bosch read-only speed/battery/route; voice capture → geotagged card; one playlist export for Will async.
-  field_test: "30-minute ride WER + wind — moat nobody else's benchmark covers"
+  field_test: "30-minute ride WER + wind — a benchmark nobody else runs"
   belief_gate: |
-    Same Spore GDC hinge: believe the weird idea is buildable on today's stack; then persuading
-    partners is logistics. revisit-weird-outside-the-box @ https://youtu.be/ofA6YWVTURU?t=3657
-
-competitive_gap:
-  flow_lacks: [voice_first_ux, story_graph, adventure_navigation, audience_card_git_layer]
-  we_have: "Fifteen years of shipped iterations + MOOLLM parser + Repo Show audience model"
+    Same Spore GDC hinge: believe the weird idea is buildable on today's stack.
+    revisit-weird-outside-the-box @ https://youtu.be/ofA6YWVTURU?t=3657
 
 ../../bits:
   will_sticker_culture: "Will loves industrial-warning / absurd stickers — SFC gift seeded packs"
@@ -351,7 +298,7 @@ competitive_gap:
 
 ties:
   - name: Urban Safari LIVE
-    connection: companion show — real Amsterdam hops, scene cards, Will's son
+    connection: companion show — real Amsterdam hops, scene cards
     character: ../urban-safari-live/urban-safari-live.yml
   - name: eBike Safari app
     connection: code, FIT pipeline, design cauldron, live map JSON

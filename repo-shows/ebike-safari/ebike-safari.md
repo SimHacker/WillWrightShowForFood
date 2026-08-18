@@ -3,20 +3,19 @@
 > **Girder:** [`ebike-safari.yml`](ebike-safari.yml) · **Front page:** [`README.md`](README.md)  
 > **Live code:** [`apps/ebike-safari/`](../../apps/ebike-safari/README.md) · **Rides:** [ebike-safari.com](https://ebike-safari.com/)
 
-Voice-first AI touring companion. Product layer on [Urban Safari LIVE](../urban-safari-live/README.md).  
-**License, don't acquihire** — Uncle Milton model (weird idea in, partner ships with credit).
+Voice-first AI touring companion. Product layer on [Urban Safari LIVE](../urban-safari-live/README.md).
 
 ---
 
 ## One line
 
-Voice-controlled adventure navigation through a hidden graph of story cards at real-world places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
+Voice-controlled adventure navigation through a hidden graph of story cards at real-world places — you talk, the LLM listens, the phone shows the route, the bike moves you.
 
 ## Elevator pitch
 
 eBike Safari is **DreamScape on wheels**, descended through iLoci and Urban Safari: geolocated scene cards, topical link layers, adventure-style voice navigation while riding.
 
-Meta Ray-Ban glasses capture POV and handle mic/speakers (prescription lenses, hands on handlebars). Any phone on a handlebar mount is **display-only** — map, Bosch stats, turn-by-turn. Apple SpeechAnalyzer drives hands-free control.
+Any camera captures POV for scene cards — phone, GoPro, action cam, whatever you ride with. Any phone on a handlebar mount is **display-only** — map, Bosch stats, turn-by-turn. A mic and open-ear audio carry the conversation; Apple SpeechAnalyzer drives hands-free control.
 
 The rider never sees the graph. The LLM interprets natural language, hops virtual focus across nearby POIs and cards, then **"set destination"** arms Bosch/Apple routing.
 
@@ -39,8 +38,8 @@ We already built several versions of this idea (1995 DreamScape → 2008–2011 
 | **2011** | Urban Safari | Layar AR field cards; [Layar demo](https://www.youtube.com/watch?v=Db8KGNoeKHE); [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~13:11 import) |
 | **2011–14** | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) | SFC Unity — songs on roads; per-song pies; Mario-cannon flick nav; LOD terrain. [Medium demo](https://donhopkins.medium.com/mediagraph-demo-a7534add63e5) |
 | **2025–26** | Proxi | Memory snow globes at geo stops — press parallel |
-| **2026** | [Urban Safari LIVE](../urban-safari-live/README.md) | Real streets; Will's son calls Will; git audience cards |
-| **2026+** | **eBike Safari** | This spec — eBike + voice + Ray-Ban + LLM narrator |
+| **2026** | [Urban Safari LIVE](../urban-safari-live/README.md) | Real streets; git audience cards |
+| **2026+** | **eBike Safari** | This spec — eBike + voice + camera + LLM narrator |
 
 **Pivotal moment:** TomTom trilogy (iLoci + Coffeeshops + Bongo Bingo) matched Will's CurrentTV problems. Don sent demos; Will said leave EA and come back to SFC. [How Don rejoined Will](../../characters/don-hopkins/career/stupid-fun-club.yml).
 
@@ -62,17 +61,15 @@ Leads to: iLoci, StoryMaker, Urban Safari, MediaGraph, MOOLLM, ebike-safari.
 
 ---
 
-## Split architecture — three devices, one rider
+## Split architecture — three roles, one rider
 
-### Ray-Ban Meta
+### Camera + audio
 
 | Role | Detail |
 |------|--------|
-| Capture | POV video/photo for scene cards |
-| Audio | Open-ear speakers + microphone |
-| Lenses | Prescription swap-in |
-| Why | Will is excited about Ray-Ban Meta — no display, but good earphones, mic, camera; safe while riding. Camera off the phone means **any handlebar mount works** (display only). |
-| Licensing target | Meta |
+| Capture | POV video/photo for scene cards — phone, GoPro, action cam, camera glasses if you like; optional, not required |
+| Audio | Mic + open-ear speakers — earbuds, headset, whatever's safe on a bike |
+| Why | Camera off the phone means **any handlebar mount works** (display only); hands stay on handlebars |
 
 ### Handlebar phone
 
@@ -80,9 +77,7 @@ Display-only: map, turn-by-turn, Bosch SDK UI. Optional Android. Any mount — Q
 
 ### Bosch eBike system
 
-Motor assist context, battery, speed, route to head unit. Evaluate current Flow SDK vs legacy extensible mount platform Bosch acquihired and killed.
-
-> Flow is better than the acquired indie app but still sucks; **we supply voice + story graph they lack.**
+Motor assist context, battery, speed, route to head unit — read via the Flow SDK. Flow does turn-by-turn; it doesn't do voice or story graphs. This does.
 
 ---
 
@@ -95,8 +90,6 @@ Authentic endorsement, not aspirational spec.
 | **[Koga](https://www.koga.com/)** | Dutch premium e-bike — Don's safari fleet | Built for daily Dutch urban riding; local brand fits Amsterdam canal-loop demos |
 | **[Enviolo](https://www.enviolo.com/)** | CVT hub — no discrete gear shifts | Stop-start urban safari: narrate at a canal, roll off without hunting gears. Hands stay on handlebars; voice UX is not fighting drivetrain. |
 | **Stack** | Koga frame + Bosch motor + Enviolo CVT | Field-tested on real safaris |
-
-Open to co-marketing, sponsored safari episodes, or lightweight ad integration — show the bike as part of the story, not a spec sheet.
 
 ---
 
@@ -113,7 +106,7 @@ The user does not care how it is modeled. The LLM hides structure, interprets in
 
 - "What's near me?"
 - "Tell me about that canal"
-- "What did Will's son film here?"
+- "What's the story behind that bridge?"
 - "Take me to the next Invader"
 - **"Set destination"** — commit virtual focus → route via Bosch/Apple. MUCH safer than pinch-zoom or list scroll while riding.
 
@@ -192,41 +185,15 @@ Audit: [STT-STACK.md](https://github.com/SimHacker/moollm/blob/main/skills/speec
 | Caption | Scene cards from captures |
 | Export | Memory snow globe — Proxi parallel |
 
-**Capture loop:** *"Capture this"* → Ray-Ban or phone photo + GPS + LLM caption → geotagged scene card on map/git.
+**Capture loop:** *"Capture this"* → camera photo + GPS + LLM caption → geotagged scene card on map/git.
 
 ---
 
-## Meta licensing — we already did the hard part once
+## Social card sync — we already built it once
 
-StoryMaker shipped Facebook app with album import/export (scene photos ↔ story cards). Micropolis Facebook app same era.
+StoryMaker shipped a Facebook app with album import/export (scene photos ↔ story cards). Micropolis Facebook app same era.
 
-**Don demonstrates album export / edit / import on camera** in the [StoryMaker comprehensive demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~12:39 Facebook drag-edit → ~13:11 import round-trip).
-
-**2026 audit needed:** Graph API, Reels, Ray-Ban device SDK evolved; many 2011 endpoints dropped — evaluate before pitch.
-
-**Pitch:** Meta already has the wearable. We built the safari layer + social card sync once. **License** the graph engine and voice adventure navigation — not acquihire. Uncle Milton model: contribute the weird idea; partner ships product with credit.
-
----
-
-## Partners
-
-| Partner | Angle | Model |
-|---------|-------|-------|
-| **Meta** | Ray-Ban capture + voice; resurrect album/social sync on modern APIs; glasses-first safari demo | License |
-| **Apple** | SpeechAnalyzer + Vision showcase; phone-as-display; MagSafe mount ecosystem | Co-marketing or license |
-| **Bosch** | Companion brain Flow should have — voice, story graph, extensible cards. Anti-pattern: acquihire + kill extensible dev platform | License |
-| **Koga** | Don rides Koga on Amsterdam safaris — Dutch brand credibility | Co-marketing / sponsorship |
-| **Enviolo** | CVT — no gear hunting between story stops; pairs with voice-first UX | Co-marketing / sponsorship |
-| **Strava** | Segments as story segments; social paths; route export | API integration |
-| **Accessory makers** | Display-only mounts simplified once camera is on glasses (Quad Lock, Peak Design, …) | Integration |
-
----
-
-## Business model
-
-**Uncle Milton:** Will contributed transparent ant medium → Uncle Milton Ant Farm ceiling projector shipped with credit. We contribute Urban Safari graph + voice UX → Bosch/Meta/Apple ship with license fee.
-
-**Not:** Acquihire and disappear (Bosch pattern on indie eBike iPhone mount + browser extensibility).
+**Don demonstrates album export / edit / import on camera** in the [StoryMaker comprehensive demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) (~12:22 export → ~12:39 Facebook drag-edit → ~13:11 import round-trip). The 2026 equivalent syncs scene cards with whatever photo/social service the rider already uses.
 
 ---
 
@@ -234,22 +201,9 @@ StoryMaker shipped Facebook app with album import/export (scene photos ↔ story
 
 Amsterdam canal eBike loop on Koga + Enviolo; SpeechAnalyzer voice loop (zero screen touches); Bosch read-only speed/battery/route; voice capture → geotagged card; one playlist export for Will async.
 
-**Field test:** 30-minute ride WER + wind — moat nobody else's benchmark covers.
+**Field test:** 30-minute ride WER + wind — a benchmark nobody else runs.
 
-**Belief gate:** Same Spore GDC hinge — believe the weird idea is buildable on today's stack; then persuading partners is logistics. [revisit-weird-outside-the-box](https://youtu.be/ofA6YWVTURU?t=3657)
-
----
-
-## Competitive gap vs Bosch Flow
-
-| Flow lacks | We have |
-|------------|---------|
-| Voice-first UX | ✓ |
-| Story graph | ✓ |
-| Adventure navigation | ✓ |
-| Audience card git layer | ✓ |
-
-Fifteen years of shipped iterations + MOOLLM parser + Repo Show audience model.
+**Belief gate:** Same Spore GDC hinge — believe the weird idea is buildable on today's stack. [revisit-weird-outside-the-box](https://youtu.be/ofA6YWVTURU?t=3657)
 
 ---
 

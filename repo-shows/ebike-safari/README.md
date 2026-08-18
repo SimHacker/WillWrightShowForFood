@@ -1,12 +1,12 @@
 # eBike Safari
 
-> Voice-controlled adventure navigation through a hidden graph of story cards at real-world places — Ray-Bans see and hear, phone shows the route, Bosch moves the bike, LLM translates intent.
+> Voice-controlled adventure navigation through a hidden graph of story cards at real-world places — you talk, the LLM listens, the phone shows the route, the bike moves you.
 
 | Field | Value |
 |-------|-------|
 | **Status** | seed |
 | **Host** | Don Hopkins |
-| **Participants** | Don Hopkins, Will Wright, Will's son |
+| **Participants** | Don Hopkins, Will Wright |
 | **Parent show** | [Urban Safari LIVE](../urban-safari-live/README.md) |
 | **Live app** | [apps/ebike-safari](../../apps/ebike-safari/README.md) · [ebike-safari.com](https://ebike-safari.com/) |
 | **Readable spec** | [**ebike-safari.md**](ebike-safari.md) ← start here for the full story |
@@ -21,11 +21,10 @@
 | [What this is](#what-this-is) | Product + show relationship |
 | [How it works](#how-it-works) | Two locations, voice, hidden graph |
 | [The ride game](#the-ride-game) | AI vs rider; pie menus; VoyStick |
-| [Hardware stack](#hardware-stack) | Ray-Ban · phone · Bosch · Koga · Enviolo |
+| [Hardware stack](#hardware-stack) | Camera · phone · Bosch · Koga · Enviolo |
 | [From Bar Karma to Amsterdam](#from-bar-karma-to-amsterdam) | StoryMaker lineage |
 | [What's shipping now](#whats-shipping-now) | FIT pipeline, live map, gestures |
 | [Video gallery](#video-gallery) | Demos 1995–2015 |
-| [Partners & licensing](#partners--licensing) | Uncle Milton model |
 | [Read next](#read-next) | Full spec + code |
 
 ---
@@ -34,11 +33,11 @@
 
 **eBike Safari** is DreamScape on wheels — geolocated scene cards, topical link layers, and adventure-style voice navigation **while riding**.
 
-You wear Ray-Ban Meta glasses (POV, mic, open-ear audio, your prescription). Your phone on the handlebar is **display only** — map, Bosch stats, turn-by-turn. Apple SpeechAnalyzer listens. You talk; the LLM interprets; a hidden graph of story cards at real places updates; **"set destination"** commits routing through Bosch or Apple Maps.
+Any camera captures POV for scene cards — phone, GoPro, action cam, whatever you ride with. Your phone on the handlebar is **display only** — map, Bosch stats, turn-by-turn. A mic and open-ear audio keep the conversation going; Apple SpeechAnalyzer listens. You talk; the LLM interprets; a hidden graph of story cards at real places updates; **"set destination"** commits routing through Bosch or Apple Maps.
 
 You never see the graph. You ride Amsterdam (or anywhere), and the world becomes an adventure parser.
 
-This seed is the **product layer** on [Urban Safari LIVE](../urban-safari-live/README.md) — the Repo Show where Don (and Will's son) hop real streets and drop geotagged scene cards into git. Same participatory itch as **StoryMaker**, **Urban Safari**, and [**Bar Karma**](https://en.wikipedia.org/wiki/Bar_Karma) at Stupid Fun Club: audience-authored stories at real places — rebuilt with open maps, FIT rides, and MOOLLM instead of a dead MySQL server.
+This seed is the **product layer** on [Urban Safari LIVE](../urban-safari-live/README.md) — the Repo Show where Don hops real streets and drops geotagged scene cards into git. Same participatory itch as **StoryMaker**, **Urban Safari**, and [**Bar Karma**](https://en.wikipedia.org/wiki/Bar_Karma) at Stupid Fun Club: audience-authored stories at real places — rebuilt with open maps, FIT rides, and MOOLLM instead of a dead MySQL server.
 
 **Read the full product spec:** [**ebike-safari.md**](ebike-safari.md) — human-readable edition of everything in the yaml girder.
 
@@ -60,7 +59,7 @@ Physical GPS          Virtual focus (hidden)
         Bosch / Apple routing
 ```
 
-**Voice examples:** *"What's near me?"* · *"Tell me about that canal"* · *"What did Will's son film here?"* · *"Take me to the next Invader"* · **"Set destination"**
+**Voice examples:** *"What's near me?"* · *"Tell me about that canal"* · *"What's the story behind that bridge?"* · *"Take me to the next Invader"* · **"Set destination"**
 
 **Why voice:** Pinch-zoom and list scroll while riding is unsafe. Voice syncs bike location and graph cursor. Hands stay on handlebars — the hero tee writes itself: **HANDS MUST REMAIN ON HANDLEBARS**.
 
@@ -89,7 +88,8 @@ Each POI is a **pie-menu hub**. Wedges are nearby cards and topical links. You n
 
 | Piece | Role |
 |-------|------|
-| **Ray-Ban Meta** | See, hear, speak, capture — camera off the phone |
+| **Any camera** | POV capture for scene cards — phone, GoPro, action cam; optional, not required |
+| **Mic + open-ear audio** | The conversation channel — earbuds, headset, whatever's safe |
 | **Any phone + mount** | Map display only (Quad Lock, Bosch, generic) |
 | **Bosch eBike** | Motor, battery, speed, route to head unit |
 | **[Koga](https://www.koga.com/)** | Don's Amsterdam safari fleet — Dutch daily rider |
@@ -108,7 +108,7 @@ Field-tested on real safaris around Amsterdam — not aspirational spec.
 | 2011 | [StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ) — branching geo stories; [Facebook album round-trip on camera](https://www.youtube.com/watch?v=_2yEHs_WLzQ&t=742) |
 | 2011–14 | [MediaGraph](https://www.youtube.com/watch?v=2KfeHNIXYUc) — songs on roads; pie flick navigation |
 | 2026 | Urban Safari LIVE — git audience cards; Will async |
-| 2026+ | **eBike Safari** — voice + Ray-Ban + LLM + open FIT/map stack |
+| 2026+ | **eBike Safari** — voice + camera + LLM + open FIT/map stack |
 
 **Pivotal moment:** Will saw iLoci + Coffeeshops + Bongo Bingo; said leave EA, come back to Stupid Fun Club. [The receipt](../../characters/don-hopkins/career/stupid-fun-club.yml).
 
@@ -148,26 +148,11 @@ Not gamified distance — score **novel exposure** and **recognized gestures**. 
 
 ---
 
-## Partners & licensing
-
-**License, don't acquihire.** We built Facebook album ↔ story card sync in 2011 on camera. Meta has Ray-Ban now; we have the safari graph + voice adventure layer.
-
-| Partner | Pitch |
-|---------|-------|
-| Meta | Glasses-first demo; resurrect social card sync on modern APIs |
-| Apple | SpeechAnalyzer + Vision field showcase |
-| Bosch | Voice + story graph Flow lacks — don't kill extensibility again |
-| Koga / Enviolo | Authentic Amsterdam safari fleet — co-marketing |
-
-Uncle Milton precedent: Will's ant medium → shipped product with credit. Details: [**ebike-safari.md § Partners**](ebike-safari.md#partners)
-
----
-
 ## Read next
 
 | Depth | Document |
 |-------|----------|
-| **Full human-readable spec** | [**ebike-safari.md**](ebike-safari.md) — architecture, Sutton, VoyStick, partners, MVP, competitive gap |
+| **Full human-readable spec** | [**ebike-safari.md**](ebike-safari.md) — architecture, Sutton, VoyStick, MVP |
 | Machine yaml | [`ebike-safari.yml`](ebike-safari.yml) |
 | Live code + design | [`apps/ebike-safari/`](../../apps/ebike-safari/README.md) |
 | Companion show | [Urban Safari LIVE](../urban-safari-live/README.md) |
@@ -183,7 +168,7 @@ Uncle Milton precedent: Will's ant medium → shipped product with credit. Detai
 | File | Purpose |
 |------|---------|
 | [**ebike-safari.md**](ebike-safari.md) | **Readable product spec** — the whole yaml in prose |
-| [`ebike-safari.yml`](ebike-safari.yml) | Machine girder — partners, lineage chain, voice stack |
+| [`ebike-safari.yml`](ebike-safari.yml) | Machine girder — lineage chain, ride game, voice stack |
 | `SHOW.yml` | *Not yet* — lazy prototype promotion when ready to air |
 
 ↑ [`../README.md`](../README.md) · [`../INDEX.yml`](../INDEX.yml)
