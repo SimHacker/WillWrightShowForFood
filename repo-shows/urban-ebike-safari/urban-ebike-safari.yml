@@ -349,32 +349,33 @@ competitive_gap:
     paint WillWrightShowForFood / MOOLLM git history as wall art. Every repository has a shape.
 
 ties:
-  - ../urban-safari-live/urban-safari-live.yml
-  - ../../characters/don-hopkins/career/stupid-fun-club.yml
-  - ../../characters/don-hopkins/career/lineage.yml
-  - ../../process/crazy-idea-jam.yml#iloci_memory_palace
-  - ../../process/crazy-idea-jam.yml#amsterdam_coffeeshops_app
-  - ../../process/crazy-idea-jam.yml#bongo_bingo
-  - ../../process/crazy-idea-jam.yml#creationtv_storymaker
-  - ../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
-  - ../../process/crazy-idea-jam.yml#urban_ebike_safari
-  - ../../characters/don-hopkins/mediaflow-design-comments.md
-  - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
-  - ../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
-  - ../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
-  - ../../bits/swag-sfc-sticker-packs/swag-sfc-sticker-packs.yml
-  - ../../bits/swag-voystick-warning-stickers/swag-voystick-warning-stickers.yml
-  - ../../bits/INDEX.yml
-  - ../../characters/will-wright/media/swag/INDEX.yml
-  - ../../characters/will-wright/sources/2025-04-29-venturebeat-proxi-funding-crisis/proxi-pitch-parallels.yml
-  - ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
-  - ../../process/crazy-idea-jam.yml#dreamscape_scriptx
-  - ../../characters/don-hopkins/sources/sutton-one-step-trap.md
-  - ../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
-  - ../../apps/ebike-safari/README.md
-  - ../../apps/ebike-safari/design/README.md
-  - ../../skills/ebike-safari/SKILL.md
-  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml
-  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/ONE-STEP-TRAP.md
-  - https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/one-step-trap.yml
-  - ../../characters/will-wright/sources/2005-03-11-spore-gdc-future-of-content/short-form-clips.yml  # revisit-weird-outside-the-box
+  - name: Urban Safari LIVE
+    connection: companion show — real Amsterdam hops, scene cards, Will's son
+    character: ../urban-safari-live/urban-safari-live.yml
+  - name: eBike Safari app
+    connection: code, FIT pipeline, design cauldron, live map JSON
+    character: ../../apps/ebike-safari/README.md
+  - name: StoryMaker / Urban Safari (2011)
+    connection: SFC era — Layar scenes, Facebook album round-trip
+    character: ../../characters/don-hopkins/media/storymaker-urban-safari/storymaker-urban-safari.yml
+  - name: Stupid Fun Club lineage
+    connection: TomTom trilogy → Will recalls Don to SFC
+    character: ../../characters/don-hopkins/career/stupid-fun-club.yml
+  - name: Career lineage
+    character: ../../characters/don-hopkins/career/lineage.yml
+  - name: Crazy Idea Jam
+    connection: iLoci · Amsterdam layers · StoryMaker · GPS storytelling · Voystick · DreamScape · MediaGraph
+    character: ../../process/crazy-idea-jam.yml
+  - name: DreamScape @ WWDC 1995
+    character: ../../characters/don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md
+  - name: MediaFlow (Interval)
+    character: ../../characters/don-hopkins/mediaflow-design-comments.md
+  - name: Sutton one-step trap
+    connection: scene cards as options, not rollout — MOOLLM simulation tie-in
+    character: ../../characters/don-hopkins/sources/sutton-one-step-trap.md
+  - name: Steering + Voystick + pie network
+    character: ../../characters/don-hopkins/sources/urban-safari-steering-voystick-pie-network.md
+  - name: ebike-safari skill
+    character: ../../skills/ebike-safari/SKILL.md
+  - name: MOOLLM ride-game example
+    character: https://github.com/SimHacker/moollm/blob/main/skills/simulation/examples/urban-safari-ride-game.yml

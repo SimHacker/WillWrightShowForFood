@@ -114,6 +114,35 @@ def first_paragraph(*chunks: Any) -> str:
     return ""
 
 
+def consolidate_tie_strings(ties: list[Any]) -> list[Any]:
+    """Collapse repeated paths (e.g. crazy-idea-jam.yml#foo × 8) into one labeled entry."""
+    groups: dict[str, list[str]] = {}
+    order: list[str] = []
+    others: list[Any] = []
+    for item in ties:
+        if not isinstance(item, str):
+            others.append(item)
+            continue
+        base, _, anchor = item.partition("#")
+        if base not in groups:
+            groups[base] = []
+            order.append(base)
+        if anchor:
+            groups[base].append(anchor)
+    result: list[Any] = []
+    for base in order:
+        anchors = groups[base]
+        if not anchors:
+            result.append(base)
+        elif len(anchors) == 1:
+            result.append(f"{base}#{anchors[0]}")
+        else:
+            label = humanize_slug(Path(base).stem)
+            note = " · ".join(a.replace("_", " ") for a in anchors)
+            result.append({"name": label, "connection": note, "character": base})
+    return result + others
+
+
 def md_link(path_str: str, show_dir: Path) -> str:
     if path_str.startswith(("http://", "https://")):
         return f"[{path_str}]({path_str})"
@@ -334,7 +363,9 @@ def extract_show(data: dict[str, Any], show_dir: Path, yml_path: Path | None, ym
         or flip.get("ties_to")
     )
     if ties:
-        lines.append(list_section("Related", ties if isinstance(ties, list) else [ties], show_dir))
+        tie_list = ties if isinstance(ties, list) else [ties]
+        tie_list = consolidate_tie_strings(tie_list)
+        lines.append(list_section("Related", tie_list, show_dir))
 
     companion = companion_md(show_dir, yml_path, data)
     lines.append("## In this directory")
