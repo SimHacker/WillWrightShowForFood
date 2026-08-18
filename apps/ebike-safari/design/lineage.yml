@@ -79,7 +79,7 @@ chain:
 
   - era: "2026"
     project: eBike Safari (seed)
-    hook: voice, Ray-Ban, Bosch, hidden story graph
+    hook: voice, camera, Bosch, hidden story graph
     show: ../../../repo-shows/ebike-safari/ebike-safari.yml
 
   - era: "2009"

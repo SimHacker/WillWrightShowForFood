@@ -224,7 +224,7 @@ ideas:
       export/edit/import round-trip, lessons from playtesting StoryMaker on Bar Karma's real audience.
       Don + Will's son performed it in Amsterdam (2011); 2026 carries it as Urban Safari LIVE (Will's son
       video-calls Will from the street) and the eBike product layer.
-    progenitor_of: [urban_ebike_safari]
+    progenitor_of: [ebike_safari]
     progenitor_chain: [bongo_bingo, creationtv_storymaker, iloci_memory_palace]
     demo: "https://www.youtube.com/watch?v=Db8KGNoeKHE"
     room: ../characters/don-hopkins/media/storymaker-urban-safari/INDEX.yml
@@ -233,16 +233,15 @@ ideas:
       - ../characters/don-hopkins/career/stupid-fun-club.yml
       - crazy-idea-jam.yml#creationtv_storymaker
 
-  urban_ebike_safari:
+  ebike_safari:
     emoji: "🚴🎤"
     blurb: |
       **DreamScape on wheels** — voice-first adventure navigation through a hidden story graph while
-      riding a Koga eBike (Bosch motor + Enviolo CVT), Ray-Ban Meta capture, phone-as-display-only,
+      riding a Koga eBike (Bosch motor + Enviolo CVT), any camera for capture, phone-as-display-only,
       Apple SpeechAnalyzer for words. The rider never sees the graph; the LLM interprets intent and
       hops virtual focus across POIs. **Voystick is the primary navigation UI on the bike** — not a
       side demo: warble along pie wedges to hop down arcs and between POIs/cards in the linked overlay,
-      hands on handlebars, open-air gestures. Uncle Milton licensing — contribute graph + voice UX;
-      Meta/Bosch/Apple ship with credit, not acquihire.
+      hands on handlebars, open-air gestures.
     why_voystick_on_bike: |
       **Outdoor = wide sloppy fast warbles without social cost.** Continuous pitch+vowel trace steers
       **singing while biking** — hands on handlebars, no office shame. **Both channels at once**:
@@ -269,7 +268,7 @@ ideas:
       warbles without social cost; continuous pitch+vowel trace steers **singing while biking** —
       Voystick warbles along wedge arcs, hop POI→card, hands on bars. Don: "really fun and smooth —
       best gestural UI I've ever done."
-    field_hardware: [Koga, Enviolo, Bosch, Ray-Ban Meta]
+    field_hardware: [Koga, Enviolo, Bosch, any camera]
     voystick: crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
     ties:
       - ../repo-shows/ebike-safari/ebike-safari.yml
@@ -351,7 +350,7 @@ ideas:
       - ../repo-shows/ebike-safari/ebike-safari.yml
       - crazy-idea-jam.yml#phoneloper
       - crazy-idea-jam.yml#pie_menus_put_out_fires
-      - crazy-idea-jam.yml#urban_ebike_safari
+      - crazy-idea-jam.yml#ebike_safari
       - ../characters/don-hopkins/mediaflow-design-comments.md
       - ../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
 

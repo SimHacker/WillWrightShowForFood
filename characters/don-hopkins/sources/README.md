@@ -99,7 +99,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 | [Urban Safari steering / pie / VoyStick](urban-safari-steering-voystick-pie-network.md) | — | eBike ride game, F1/F2 map, steering law |
 | [Usenet matter-product warnings](usenet-matter-product-warnings.md) | — | Physics humor sticker folklore — Don Medium 2018; SWAG only |
 
-**Crazy Idea Jam:** [Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [eBike Safari](../../../process/crazy-idea-jam.yml#urban_ebike_safari)
+**Crazy Idea Jam:** [Voystick](../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick) · [Urban Safari](../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling) · [eBike Safari](../../../process/crazy-idea-jam.yml#ebike_safari)
 
 **Show seed:** [Voystick × Pink Trombone](../../../repo-shows/voystick-pink-trombone/README.md) · [Zack Qattan](../../../characters/zack-qattan/README.md)
 

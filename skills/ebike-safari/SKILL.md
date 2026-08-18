@@ -40,7 +40,7 @@ Docs: [`DATA-CONTRACT.md`](../../apps/ebike-safari/DATA-CONTRACT.md) · [`design
 
 ## Show hooks
 
-- [`../../repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) — 2026 product seed (voice, Ray-Ban, Bosch)
+- [`../../repo-shows/ebike-safari/`](../../repo-shows/ebike-safari/) — 2026 product seed (voice, camera, Bosch)
 - [`../../repo-shows/urban-safari-live/`](../../repo-shows/urban-safari-live/) — 2011 performed live (amber)
 
 Part of [WillWrightShowForFood](../../README.md).

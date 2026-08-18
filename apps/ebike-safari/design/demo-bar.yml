@@ -30,7 +30,7 @@ nice_to_have:
 
 not_required_for_v0:
   - voice control
-  - Ray-Ban integration
+  - camera capture integration
   - story card graph editor
 
 see_also:

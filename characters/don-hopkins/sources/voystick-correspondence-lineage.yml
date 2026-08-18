@@ -51,5 +51,5 @@ moollm:
 crazy_idea_jam:
   voystick: ../../../process/crazy-idea-jam.yml#voystick_homomorphic_vocal_joystick
   urban_safari: ../../../process/crazy-idea-jam.yml#urban_safari_gps_storytelling
-  urban_ebike: ../../../process/crazy-idea-jam.yml#urban_ebike_safari
+  urban_ebike: ../../../process/crazy-idea-jam.yml#ebike_safari
   show: ../../../repo-shows/voystick-pink-trombone/SHOW.yml

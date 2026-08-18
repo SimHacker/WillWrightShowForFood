@@ -20,7 +20,7 @@ slurp_queue:
   - id: ebike-safari-seed
     from: ../../../repo-shows/ebike-safari/ebike-safari.yml
     into: [VISION.md, lineage.yml]
-    extract: [voice-first, Ray-Ban, Bosch, hidden story graph, DreamScape chain]
+    extract: [voice-first, camera, Bosch, hidden story graph, DreamScape chain]
     status: in_progress
 
   - id: storymaker-media
