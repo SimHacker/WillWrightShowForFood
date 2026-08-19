@@ -18,7 +18,7 @@ leadership, **turd polishing**, and what reached CTG from pool architecture deba
 
 | File | Purpose |
 |------|---------|
-| [`invitation.md`](invitation.md) | Send-ready draft |
+| [`invitation.md`](invitation.md) | Invitation (shared via chat, Aug 2026) |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md) | Turd polishing + CTG context |
 | [`CHARACTER.yml`](CHARACTER.yml) | Machine-readable portrayal |
