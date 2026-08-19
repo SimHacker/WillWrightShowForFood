@@ -1,5 +1,12 @@
 # Eric "Bobo" Bowman — media
 
+## Bobo signage
+
+Letterpress-style directory signage — the complete Bobo declension, manicule hands included.
+Full page: [`bobo-signage.md`](bobo-signage.md) · [`bobo-signage.yml`](bobo-signage.yml)
+
+![Bobo signage — BOOBOO, BOBO, BOB, BOBOLOGICAL, BOBOLICIOUS, BOBOLICIFED](bobo-signage.png)
+
 ## Team lunch (photo from Eric)
 
 Shared by Eric Bowman, August 2026 — a team lunch around a long white-tablecloth table, cobalt-blue

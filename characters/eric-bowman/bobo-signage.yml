@@ -1,0 +1,21 @@
+# Sidecar — bobo-signage.png
+
+artifact:
+  file: bobo-signage.png
+  slug: bobo-signage
+  what: "Vintage letterpress-style signage for Bobo — pointing hands, arrows, and the full declension: BOOBOO, BOBO, BOB, BOBOLOGICAL, BOBOLICIOUS, BOBOLICIFED"
+  era: "AI-generated signage, 2026"
+  sidecar_of: bobo-signage.png
+
+details:
+  style: "Woodcut / letterpress specimen sheet — manicule pointing hands, banner ribbon, starburst"
+  declension: [BOOBOO, BOBO, BOB, BOBOLOGICAL, BOBOLICIOUS, BOBOLICIFED]
+
+provenance:
+  made_for: eric-bowman
+  added_by: don-hopkins
+  added: 2026-08-20
+
+see_also:
+  - bobo-signage.md
+  - media.md
