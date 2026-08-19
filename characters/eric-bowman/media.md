@@ -17,8 +17,14 @@ possibly Will and Luc among them. Full story and metadata:
 
 ![Team lunch photo shared by Eric Bowman — long table, cobalt-blue glasses, boat dining room](team-lunch-from-eric-bowman.png)
 
-More promised from the same chat: Will's NYE 1999 → 2000 party photo with Jamie Doornbos — and an
-EA watch can just brimming.
+## New Year's Eve at Will's, 1999 → 2000
+
+Jamie Doornbos, Eric, and two of Eric's Reed friends at Will Wright's millennium-rollover party —
+six weeks before The Sims shipped. Full page:
+[`nye-1999-2000-will-wright-party.md`](nye-1999-2000-will-wright-party.md) ·
+[`nye-1999-2000-will-wright-party.yml`](nye-1999-2000-will-wright-party.yml)
+
+![Four guests at Will Wright's NYE party, 1999 to 2000 — Jamie Doornbos, a friend in a celestial robe, Eric Bowman, and a friend in a blue robe](nye-1999-2000-will-wright-party.png)
 
 ## The "throbbing brain" Sims UI (not shipped)
 

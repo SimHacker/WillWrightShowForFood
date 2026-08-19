@@ -1,0 +1,26 @@
+# SimCopter himbo glow — evidence room
+# Rumor: himbo nipples rendered with the airport-running-lights rendering mode.
+# Status: UNVERIFIED. Screenshots suggestive; fog experiment pending; Jacques asked to confirm.
+
+room:
+  what: "SimCopter (1996) screenshots -- himbo easter egg, fluorescent chest points"
+  hypothesis: "Nipples rendered with the self-luminous fog-piercing mode intended for airport running lights, not skin"
+  evidence_state: "Suggestive -- points glow at distances where bodies dissolve; not proof"
+  proof_requires: "Experiment with fog present: do the points punch through like runway markers?"
+  ask: "Jacques Servin to verify or debunk"
+
+artifacts:
+  - { file: simcopter-himbos-crowd-night.png, what: "Crowd of himbos at night, lit buildings, player figure foreground" }
+  - { file: simcopter-himbo-closeup-1.png, what: "Single himbo close-up, bright chest points" }
+  - { file: simcopter-himbo-closeup-2.png, what: "Two himbos walking, sprite scale" }
+  - { file: simcopter-himbo-closeup-3.png, what: "Himbo close-up with visible face" }
+  - { file: simcopter-city-glow-distance.png, what: "Helicopter view -- bright orange-red points scattered across the dark city at distance; the distance test" }
+
+provenance:
+  screenshots_via: don-hopkins
+  added: 2026-08-20
+
+see_also:
+  - README.md
+  - ../../sources/simcopter-himbo-easter-egg.md
+  - ../../ideas.md

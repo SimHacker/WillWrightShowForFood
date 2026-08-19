@@ -14,26 +14,24 @@ provenance:
   received_by: don-hopkins
 
 people:
-  # Don's first tentative reading, sent back to Eric for confirmation — NONE confirmed yet.
-  # Don's words: "That's who on the right? then Will, (somebody at another table), Luc, you,
-  # and the back of somebody's head? Remember who they were? And the place?"
+  # Don's first reading sent to Eric; Eric confirmed three on 2026-08-20:
+  # "That's the back of Christine's head / Ocean on the left / Paul P in the background RIP (the other table)"
   - { position: "right foreground, red plaid shirt", id: unconfirmed }
   - { position: "center, dark red sweater, big grin", id: unconfirmed, don_guess: luc-barthelet }
   - { position: "background, blue jacket, mid-bite", id: unconfirmed, don_guess: will-wright }
   - { position: "left, maroon shirt, glasses, cookie in hand", id: unconfirmed }
-  - { position: "far left edge, dark top", id: unconfirmed }
-  - { position: "foreground, back of head, long hair", id: unconfirmed }
-  - { position: "other tables in background", id: unconfirmed }
+  - { position: "far left edge, dark top", id: "Ocean", confirmed_by: eric-bowman }
+  - { position: "foreground, back of head, long hair", id: "Christine", confirmed_by: eric-bowman }
+  - { position: "background, the other table", id: "Paul P", confirmed_by: eric-bowman, note: "RIP" }
 
 lore:
   bunny_ears: "Luc + bunny ears surfaced in the caption chat -- 'wore those all the time, wouldn't take 'em off.' Caption candidate once the IDs land."
 
 incoming:
-  # Eric, same chat: "Somewhere I have a picture from Will's NYE party 1999->2000 with Jamie
-  # and some of my friends and an EA watch can just brimming."
-  - what: "Will's New Year's Eve party photo, 1999 -> 2000, with Jamie Doornbos and friends; an EA watch can brimming"
+  - what: "Will's New Year's Eve party photo, 1999 -> 2000, with Jamie Doornbos and friends"
     from: eric-bowman
-    status: promised
+    status: arrived
+    file: nye-1999-2000-will-wright-party.png
 
 see_also:
   - team-lunch-from-eric-bowman.md

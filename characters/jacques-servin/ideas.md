@@ -25,3 +25,9 @@
 
 7. **What should a studio do** when an engineer ships unauthorized representation? Fire, patch,
    both, neither? The 2026 EA-ownership question gives this fresh teeth.
+
+8. **The fog-piercing nipple hypothesis.** Rumor Don heard: the himbos' fluorescent nipples were
+   rendered with the mode intended for airport running lights -- self-luminous, fog-piercing.
+   [Screenshots seem to confirm](media/simcopter-himbo-glow/README.md): they glow at distances
+   where the bodies dissolve. Unverified -- total proof needs an experiment with fog present.
+   True? And if so: whose idea was the rendering-path choice?

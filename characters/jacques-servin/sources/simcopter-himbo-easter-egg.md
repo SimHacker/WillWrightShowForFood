@@ -32,3 +32,10 @@ and [same-sex-design-arc.yml](../../don-hopkins/sources/qgcon-inclusivity-paper/
 Framing note: the two stories are complementary, not equivalent. Servin's egg was unauthorized
 visibility that cost him his job; The Sims' same-sex romance was reviewed, promised in writing,
 and shipped. Back door, then front door.
+
+## Open question: the fog-piercing nipple hypothesis
+
+Unverified rumor with suggestive screenshot evidence: the himbos' fluorescent nipples may have
+been rendered with the mode intended for airport running lights. Evidence room, hypothesis, and
+the proposed fog experiment: [media/simcopter-himbo-glow/](../media/simcopter-himbo-glow/README.md).
+Standing question for Jacques.

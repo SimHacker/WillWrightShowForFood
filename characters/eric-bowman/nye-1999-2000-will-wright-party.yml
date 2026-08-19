@@ -1,0 +1,27 @@
+# Sidecar — nye-1999-2000-will-wright-party.png
+
+artifact:
+  file: nye-1999-2000-will-wright-party.png
+  slug: nye-1999-2000-will-wright-party
+  what: "Four guests at Will Wright's New Year's Eve party, 1999 -> 2000 -- the millennium rollover, celebrated by the team shipping The Sims six weeks later"
+  date: 1999-12-31
+  location: "Will Wright's NYE party"
+
+provenance:
+  from: eric-bowman
+  received: 2026-08-20
+  channel: chat
+  received_by: don-hopkins
+
+people:
+  # Left to right, per Eric.
+  - { position: "left, glasses, arms crossed", id: jamie-doornbos }
+  - { position: "second, celestial-print robe", id: "friend of Eric's from Reed" }
+  - { position: "third, brown shirt", id: eric-bowman }
+  - { position: "right, blue robe, beard", id: "friend of Eric's from Reed" }
+
+see_also:
+  - nye-1999-2000-will-wright-party.md
+  - team-lunch-from-eric-bowman.yml
+  - media.md
+  - ../jamie-doornbos/CHARACTER.yml
