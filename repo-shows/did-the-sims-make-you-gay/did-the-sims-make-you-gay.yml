@@ -13,7 +13,7 @@ show:
     How Patrick programmed same-sex relationships; Don's design-doc advocacy; E3 1999 kiss;
     Alexander Avila's video essay and comment corpus — The Sims audience as congregation.
   status: proposed
-  urgency: "Living history — invite Patrick while memory is fresh; solidarity with queer Sims creators."
+  urgency: "Living history — standing, no-pressure invitation to Patrick; solidarity with queer Sims creators. Story already stands on documents + past Don/Patrick conversations."
 
 dialect:
   voice: stoner_techno_hippie
@@ -64,8 +64,12 @@ format:
   live: false
   async_one_on_one: true
   production_model: |
-    Patrick records when ready; Don intercuts design docs, Avila clips (commentary), MOOLLM comment
-    themes, and optional steering-committee footage. Congregation participates via repo issues.
+    Fully async and degradable: the episode works with Don presenting the marked-up design docs,
+    credited press quotes, and the past Don/Patrick conversations alone. If Patrick ever wants to
+    contribute — email lines, relayed questions, audio, video, any pace — Don intercuts it with
+    design docs, Avila clips (commentary), MOOLLM comment themes, and optional steering-committee
+    footage. No deadlines, no dependency on any guest recording. Congregation participates via
+    repo issues.
 
 invitation:
   path: characters/patrick-j-barrett-iii/invitation.md

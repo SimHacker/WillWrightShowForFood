@@ -8,12 +8,21 @@ feature that helped make The Sims the queer microworld a generation grew up insi
 ## Why invite Patrick
 
 Don advocated in **1998 design-doc reviews** for inclusive romance (the prototype slapped
-same-sex kiss attempts). Patrick, hired soon after, implemented social interactions from an
-**older doc that still allowed same-sex unions** — preference emerging from **what you do**, not
-a fixed trait. Will approved. **E3 1999** kiss on stage; EA kept it.
+same-sex kiss attempts; Drafts 5 & 7 **explicitly promised** same-sex romance was coming).
+Patrick, hired soon after, implemented social interactions **before production had spec'd those
+reviews** — preference emerging from **what you do**, not a fixed trait. Will approved. **E3 1999**
+autonomous kiss on stage; EA kept it.
+
+**Press vs docs:** The 2014 New Yorker piece (Barrett via Simon Parkin) told an "outdated doc /
+accident" story. Don's marked-up PDFs tell a different **written** trajectory. See
+[`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md)
+§ Press discrepancies — neither Patrick nor Parkin had the full paper trail in 2014.
 
 This is the story **from both perspectives, together and integrated** — not Don solo, not press
-recap alone.
+recap alone. The integration already happened: Don and Patrick compared notes years ago, and the
+sequence on [donhopkins.com](https://donhopkins.com/home/TheSims/) is based on those
+conversations. Don would love to have Patrick on to talk it through — and would be equally glad
+of a few lines by email, or nothing at all. Nothing here depends on it.
 
 ## "Did The Sims make you gay?"
 
@@ -25,7 +34,9 @@ realization. Already analyzed in MOOLLM:
 
 [`sims-queer-identity-formation.md`](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md) — themes, clusters, counter-testimonies, one-liners.
 
-**Show beat:** Avila's essay + comment corpus + Patrick and Don on **how the code actually worked**.
+**Show beat:** Avila's essay + comment corpus + **how the code actually worked** — told from the
+documents and from Don and Patrick's past conversations, with room for Patrick's voice in any
+form if he ever wants to add it.
 
 **Participation model:** fully time-shifted and any-medium — written comments, relayed questions,
 Q&A at his own pace, audio, video, or simply enjoying the repo. Patrick's contributions are
@@ -41,6 +52,7 @@ gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
 
 | File | Purpose |
 |------|---------|
+| [`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md) | **Public clarification — post this one link** when the "accident" myth comes up |
 | [`invitation.md`](invitation.md) | Send-ready draft |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md) | Don + Patrick timeline |

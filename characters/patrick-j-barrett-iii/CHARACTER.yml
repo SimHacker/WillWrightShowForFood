@@ -8,7 +8,7 @@ character:
   type: invitation
   signifier: "💋🏳️‍🌈"
   status: living
-  field: "Original The Sims programmer — same-sex romantic interactions; accidental queer history"
+  field: "Original The Sims programmer — same-sex romantic interactions; implementation + E3 kiss"
   home: characters/patrick-j-barrett-iii/
 
 representation:
@@ -28,12 +28,19 @@ invitation:
 bio:
   summary: |
     **Patrick J. Barrett III** implemented social interactions on the original **The Sims**
-    (1999–2000). Working from an older design document, he coded **same-sex romantic
-    interactions** — tagging interactions as romantic and letting preference emerge from
-    player-directed behavior rather than fixed personality traits. **E3 1999:** two female Sims
-    kissed during the live demo; EA kept the feature. *"It was a magical moment when my first
-    same-sex Sims couple kissed. I still sometimes wonder how in the world I got away with it."*
-    (New Yorker / Game Developer, 2014). Will Wright approved: glad to see same-sex support back.
+    (1999–2000). Hired ~Oct 1998, he coded **same-sex romantic interactions** on his own
+    initiative — romantic tags; preference emerging from player-directed behavior rather than
+    fixed personality traits — while the **production database had not yet spec'd** Don Hopkins's
+    Aug–Oct 1998 design reviews (see [integrated story](sources/same-sex-relationships-integrated-story.md)).
+    **E3 1999:** two female Sims kissed autonomously during the live demo; EA kept the feature.
+    *"It was a magical moment when my first same-sex Sims couple kissed…"* (Barrett, New Yorker 2014).
+    Will Wright approved: glad to see same-sex support **"back in the game."**
+
+  press_note: |
+    2014 press (Parkin/New Yorker) reported an "outdated design doc" and "team decided too
+    controversial" — incomplete vs Don's marked-up PDFs, which show written docs **promising**
+    inclusion after Aug 1998. Patrick may not have seen those reviews when hired. See
+    sources/same-sex-relationships-integrated-story.md § Press discrepancies.
 
 show_suggestions:
   - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "With Don — integrated implementation story + Avila comments + Sims audience solidarity" }
@@ -49,6 +56,6 @@ sources:
     - { title: "Comment analysis (MOOLLM)", url: "https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis" }
 
 see_also:
-  - { path: ../don-hopkins/, why: "Design-doc advocacy; integrated story on air" }
+  - { path: ../don-hopkins/, why: "Design-doc advocacy; integrated story (from past Don + Patrick conversations)" }
   - { path: ../will-wright/, why: "Approved social interactions; inclusivity-by-design thread" }
   - { path: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, why: "Planted show" }

@@ -17,6 +17,11 @@ is also a serious question about microworlds and identity.
 - **Avila essay + comments** — 1,700+ testimonies already analyzed in [MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis)
 - **The Sims audience** — builders, modders, storytellers; LGBTQ+ solidarity as core congregation, not sidebar
 
+Fully async and degradable: the story already stands on the
+[marked-up design docs](https://donhopkins.com/home/TheSims/), credited press quotes, and past
+Don + Patrick conversations. Patrick's voice — in any form, at any pace, from a one-line email up —
+would make it better, and is warmly invited but never required.
+
 See [`did-the-sims-make-you-gay.yml`](did-the-sims-make-you-gay.yml) · [`invitation`](../../characters/patrick-j-barrett-iii/invitation.md). **send_now** · consent not_yet_asked.
 
 — Don Hopkins *(User Interface Flower Child)*

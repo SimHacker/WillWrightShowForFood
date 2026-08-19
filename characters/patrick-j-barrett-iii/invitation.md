@@ -19,10 +19,12 @@ First, before any ask: **we love what you did, and we're fond of you.** You wrot
 interactions that let millions of Sims kiss whoever they chose — including the **E3 1999** moment
 that stuck. I've told pieces of that story from my side (design-doc reviews, the slap when two
 women tried to kiss in the early prototype, how glad I am you implemented preference as
-**behavior over time** rather than my over-engineered 1998 straw man). Your work is already
-celebrated in this repo, with credit, whether or not you ever lift a finger. **But nobody should
-hear the story without you**, so this is a standing invitation to add your voice — in whatever
-form, at whatever pace, whenever you feel like it, including never.
+**behavior over time** rather than my over-engineered 1998 straw man), and the account on my
+website is based on the conversations we had comparing notes, so the record already carries your
+side too. Your work is celebrated in this repo, with credit, whether or not you ever lift a
+finger. **The story is better with your voice in it**, so this is a standing invitation to add
+it — in whatever form, at whatever pace, whenever you feel like it, including never. There is no
+schedule and nothing riding on it.
 
 **Fact:** **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 

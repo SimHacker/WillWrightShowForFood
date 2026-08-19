@@ -10,8 +10,12 @@ Early tree code: two women try to kiss → **violent negative interaction**. Don
 (8/7/98): heterosexist/monosexist; proposed 0–100 scales per sex (Don now prefers Patrick's simpler model).
 
 ### 2. Which design doc did you have?
-Team had debated removing same-sex romance; production DB may not have reflected Don's reviews.
-Patrick worked from an **older doc** that still allowed it — implement first, politics later?
+Don's Draft 5 (31 Aug 1998) and Draft 7 (2 Oct 1998) **already say** heterosexual romance
+*"will not be the only type available."* Production DB may not have reflected those reviews when
+you started. The 2014 New Yorker story said "outdated doc" + "team decided too controversial" —
+Don and Patrick already reconciled the outline in past conversations (basis of the donhopkins.com
+sequence). If Patrick ever feels like adding detail — what material he was given, whether he saw
+the marked-up reviews — by email, text, or on air, it's welcome; if not, the record stands.
 
 ### 3. How you programmed it
 Romantic interactions **tagged**; game tracks same-sex vs opposite-sex over time; preference

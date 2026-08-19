@@ -1,4 +1,5 @@
 # Same-sex relationships in The Sims — design-document arc (Patrick J Barrett III)
+# Canonical = marked-up PDFs + donhopkins.com sequence. Press = Barrett via Parkin 2014 (see press_discrepancies).
 
 sequence:
   - step: 1
@@ -13,7 +14,8 @@ sequence:
   - step: 2
     when: "Drafts 5 & 7 (Aug–Oct 1998)"
     response: |
-      "Currently the game only allows heterosexual romance — reflects early implementation.
+      Written design explicitly: "Currently the game only allows heterosexual romance —
+      reflects early implementation. This will NOT be the only type available.
       Will is reviewing the code and will make recommendations for homosexual romance."
     urls:
       - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf
@@ -23,14 +25,36 @@ sequence:
     who: patrick-j-barrett-iii
     when: "Hired ~1998-10-22"
     action: |
-      Implemented same-sex relationships without explicit sexual-preference property —
-      behavior possible for any character at any time (playability/shippability over realism).
+      Implemented same-sex relationships on his own initiative — without explicit
+      sexual-preference property; behavior possible for any character at any time.
+      Production database had not yet spec'd Don's reviews; Will had not yet returned
+      with recommendations. NOT: "compliance with outdated doc team had suppressed."
     character: ../../../patrick-j-barrett-iii/
     canonical_story: https://donhopkins.com/home/TheSims/
 
   - step: 4
     ship: "2000-01-31 The Sims released"
-    note: "Same-sex relationships from day one; accidental lesbian kiss press moment"
+    note: "Same-sex relationships from day one; E3 1999 autonomous lesbian kiss (press moment)"
+
+press_discrepancies:
+  summary: |
+    Simon Parkin (New Yorker, June 2014) interviewed Barrett and reported an "outdated design
+    doc" + "team decided too controversial" + accident frame. Don's marked-up PDFs (published
+    later) show written docs moving TOWARD inclusion after Aug 1998 — not a quiet decision to
+    drop the feature. Patrick may not have seen Don's review trail when hired; Parkin did not
+    have the PDFs in 2014. Neither Patrick (implementation memory) nor Parkin (dramatized
+    narrative) is the best record of design intent — the marked-up drafts are.
+  new_yorker_wrong_about: "Design intent / 'team decided to omit' — overstated vs Draft 5/7"
+  patrick_not_wrong_about: "His implementation, Will approval, E3 kiss — largely accurate"
+  patrick_may_not_have_known: "Don's Draft 3/5/7 marked-up reviews; explicit written decision to include"
+  integrated_story: ../../../patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+  press_sources:
+    - title: "The Kiss That Changed Video Games (Simon Parkin)"
+      url: https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
+    - title: "Game Developer summary"
+      url: https://www.gamedeveloper.com/design/the-story-of-how-i-the-sims-i-got-same-sex-relationships---in-1999
+    - title: "PC Gamer — docs vs Barrett"
+      url: https://www.pcgamer.com/unearthed-the-sims-design-docs-show-the-debate-over-same-sex-relationships/
 
 press_beats:
   new_yorker_kiss: https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games

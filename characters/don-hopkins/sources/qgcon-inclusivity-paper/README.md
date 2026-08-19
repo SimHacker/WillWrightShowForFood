@@ -13,7 +13,7 @@ Source doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2A
 | [abstract.md](abstract.md) | ~350-word abstract + theory stack |
 | [interview-points.yml](interview-points.yml) | Five QGCon beats + bio + talk structure |
 | [procedural-rhetoric-theory.yml](procedural-rhetoric-theory.yml) | Bogost, Murray, Frasca, constructionism |
-| [same-sex-design-arc.yml](same-sex-design-arc.yml) | Don review → Patrick implementation → ship |
+| [same-sex-design-arc.yml](same-sex-design-arc.yml) | Don review → Patrick implementation → ship; **press_discrepancies** (New Yorker 2014 vs marked-up PDFs) |
 | [timeline.yml](timeline.yml) | Chronological inclusivity + culture parallel track |
 | [themes.yml](themes.yml) | Thematic sections (masking, zodiac, modding, PKD, etc.) |
 
