@@ -1,0 +1,41 @@
+# Team lunch photo — from Eric "Bobo" Bowman
+# Caption under construction: IDs being confirmed with Eric in chat, Aug 2026.
+
+artifact:
+  file: team-lunch-from-eric-bowman.png
+  what: "Team lunch around a long white-tablecloth table — cobalt-blue glasses, brass sconces, what looks like a boat's dining saloon"
+  date: unknown            # early-2000s digital camera era by the look of it
+  location: unknown        # boat? restaurant? Eric to confirm
+
+provenance:
+  from: eric-bowman
+  received: 2026-08-20
+  channel: chat
+  received_by: don-hopkins
+
+people:
+  # Don's first tentative reading, sent back to Eric for confirmation — NONE confirmed yet.
+  # Don's words: "That's who on the right? then Will, (somebody at another table), Luc, you,
+  # and the back of somebody's head? Remember who they were? And the place?"
+  - { position: "right foreground, red plaid shirt", id: unconfirmed }
+  - { position: "center, dark red sweater, big grin", id: unconfirmed, don_guess: luc-barthelet }
+  - { position: "background, blue jacket, mid-bite", id: unconfirmed, don_guess: will-wright }
+  - { position: "left, maroon shirt, glasses, cookie in hand", id: unconfirmed }
+  - { position: "far left edge, dark top", id: unconfirmed }
+  - { position: "foreground, back of head, long hair", id: unconfirmed }
+  - { position: "other tables in background", id: unconfirmed }
+
+lore:
+  bunny_ears: "Luc + bunny ears surfaced in the caption chat -- 'wore those all the time, wouldn't take 'em off.' Caption candidate once the IDs land."
+
+incoming:
+  # Eric, same chat: "Somewhere I have a picture from Will's NYE party 1999->2000 with Jamie
+  # and some of my friends and an EA watch can just brimming."
+  - what: "Will's New Year's Eve party photo, 1999 -> 2000, with Jamie Doornbos and friends; an EA watch can brimming"
+    from: eric-bowman
+    status: promised
+
+see_also:
+  - team-lunch-from-eric-bowman.md
+  - media.md
+  - CHARACTER.yml

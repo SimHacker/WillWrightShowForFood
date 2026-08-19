@@ -3,10 +3,15 @@
 ## Team lunch (photo from Eric)
 
 Shared by Eric Bowman, August 2026 — a team lunch around a long white-tablecloth table, cobalt-blue
-glasses and all, in what looks like a boat's dining saloon. Names, date, and occasion to be
-captioned by Eric and Don.
+glasses and all, in what looks like a boat's dining saloon. IDs being confirmed with Eric —
+possibly Will and Luc among them. Full story and metadata:
+[`team-lunch-from-eric-bowman.md`](team-lunch-from-eric-bowman.md) ·
+[`team-lunch-from-eric-bowman.yml`](team-lunch-from-eric-bowman.yml)
 
 ![Team lunch photo shared by Eric Bowman — long table, cobalt-blue glasses, boat dining room](team-lunch-from-eric-bowman.png)
+
+More promised from the same chat: Will's NYE 1999 → 2000 party photo with Jamie Doornbos — and an
+EA watch can just brimming.
 
 ## The "throbbing brain" Sims UI (not shipped)
 
