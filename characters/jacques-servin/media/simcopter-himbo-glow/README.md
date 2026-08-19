@@ -13,9 +13,17 @@ These screenshots seem to confirm it. The nipples read as bright self-lit points
 distances where the rest of the body dissolves into a few pixels — exactly how running lights
 behave, and not how ordinary lit geometry behaves. **They do seem to glow from a distance.**
 
-Status: **unverified.** Total proof would require an experiment with fog present — if the nipples
-punch through the fog like runway markers while the himbos' bodies disappear, the case is closed.
-Question standing for Jacques: is the rumor true?
+Status: **unverified.** Three ways to settle it:
+
+1. **Ask Jacques.** He wrote it. Standing question.
+2. **The fog experiment.** Run the game with fog present — if the nipples punch through like
+   runway markers while the himbos' bodies disappear, the case is closed.
+3. **AI-assisted binary archaeology.** Decompile the SimCopter renderer (Ghidra plus an LLM
+   reading the decompilation) and check whether the himbo chest sprites go through the same
+   draw path as the airport running lights — a shared self-luminous billboard routine would be
+   the smoking gun, no fog required. The same pass could settle the other open question: find
+   the date-trigger and spawn-rate logic and determine whether the famous "bug" that made the
+   himbos appear far more often than intended was really a bug.
 
 ## The evidence
 

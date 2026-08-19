@@ -2,7 +2,9 @@
 
 1. **The mechanics of the egg.** How was the himbo trigger coded? The date checks, the spawn
    rate bug that made them show up "more often than intended, and in greater numbers" -- was
-   the bug really a bug?
+   the bug really a bug? We could settle this with AI-assisted decompilation of the shipped
+   binary (see [the evidence room](media/simcopter-himbo-glow/README.md)) -- or Jacques could
+   just tell us, which would be more fun.
 
 2. **Protest vs prank.** The record says partly working-conditions protest, partly
    RTMark-sponsored culture jam (the $5000 story). How much of each framing was real at the

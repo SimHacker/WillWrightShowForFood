@@ -6,7 +6,8 @@ room:
   what: "SimCopter (1996) screenshots -- himbo easter egg, fluorescent chest points"
   hypothesis: "Nipples rendered with the self-luminous fog-piercing mode intended for airport running lights, not skin"
   evidence_state: "Suggestive -- points glow at distances where bodies dissolve; not proof"
-  proof_requires: "Experiment with fog present: do the points punch through like runway markers?"
+  proof_requires: "Any of: Jacques confirms; fog experiment (points punch through like runway markers?); binary archaeology (Ghidra + LLM: do chest sprites share the running-lights draw path?)"
+  bonus_target: "Same decompilation pass can settle whether the spawn-rate 'bug' was really a bug (date triggers, spawn logic)"
   ask: "Jacques Servin to verify or debunk"
 
 artifacts:
