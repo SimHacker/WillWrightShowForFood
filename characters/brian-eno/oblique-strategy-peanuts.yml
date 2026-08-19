@@ -1,0 +1,23 @@
+# Sidecar — oblique-strategy-peanuts.png
+
+artifact:
+  file: oblique-strategy-peanuts.png
+  slug: oblique-strategy-peanuts
+  what: "Peanuts-style gag panel — Charlie Brown to Lucy: 'So, I said, I've got an oblique strategy for you - shut the #@$% up! After that, he started making instrumental albums.'"
+  era: "AI-generated parody panel, 2026"
+  sidecar_of: oblique-strategy-peanuts.png
+
+joke:
+  spirit: good-natured
+  targets:
+    - "Oblique Strategies (Eno + Peter Schmidt, 1975) — the deck of lateral-thinking cards"
+    - "Eno's turn toward ambient / instrumental records"
+  reading: "The rudest card in the deck turns out to be the most productive one."
+
+provenance:
+  added_by: don-hopkins
+  added: 2026-08-20
+
+see_also:
+  - oblique-strategy-peanuts.md
+  - README.md
