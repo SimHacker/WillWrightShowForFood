@@ -24,7 +24,13 @@
    the himbo egg the first Yes Men action in spirit?
 
 7. **What should a studio do** when an engineer ships unauthorized representation? Fire, patch,
-   both, neither? The 2026 EA-ownership question gives this fresh teeth.
+   both, neither? The 2026 EA sale -- Saudi Public Investment Fund + Jared Kushner's Affinity
+   Partners buying the company that patched out the himbos -- gives this fresh teeth.
+
+7b. **Identity correction comes home.** The Yes Men impersonated Dow, HUD, the WTO to say what
+   those institutions should have said. What would identity correction look like for EA's new
+   owners? What *should* EA be saying about The Sims' queer legacy right now -- and who gets to
+   say it if they won't?
 
 8. **The fog-piercing nipple hypothesis.** Rumor Don heard: the himbos' fluorescent nipples were
    rendered with the mode intended for airport running lights -- self-luminous, fog-piercing.

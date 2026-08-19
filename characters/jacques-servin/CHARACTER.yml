@@ -48,8 +48,19 @@ bio:
     (like the guys in SimCopter)". The fiasco set the context in which written inclusion won.
     See characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md.
 
+ea_2026_context: |
+  EA (Maxis's parent; fired Servin, patched the himbos) was bought in 2026 by the Saudi Public
+  Investment Fund and Jared Kushner's Affinity Partners. The Yes Men's specialty -- identity
+  correction of corporations -- makes Servin uniquely qualified to comment on what the sale
+  means for The Sims' queer legacy. Stated as situation, not attack; see the record's closing
+  chapter.
+
+open_questions:
+  fog_piercing_nipples: "Rumor: himbo nipples rendered with the airport-running-lights mode (self-luminous, fog-piercing). Screenshots suggestive; fog experiment pending. See media/simcopter-himbo-glow/."
+
 show_suggestions:
   - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Prequel segment -- back door (1996 easter egg, fired) vs front door (1998-2000 designed-in, shipped)" }
+  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Identity correction comes home -- the Yes Men lens on the 2026 EA sale and The Sims' queer legacy" }
 
 sources:
   primary:
@@ -69,3 +80,4 @@ see_also:
   - { path: ../patrick-j-barrett-iii/, why: "The front-door chapter -- same-sex romance designed and shipped in The Sims" }
   - { path: ../don-hopkins/, why: "Draft 3 review cites the SimCopter fiasco by name" }
   - { path: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, why: "Show seed -- prequel segment" }
+  - { path: media/simcopter-himbo-glow/, why: "Himbo screenshots + fog-piercing nipple hypothesis (standing question)" }

@@ -23,6 +23,22 @@ As **Andy Bichlbaum**, Servin went on to co-found **The Yes Men**, the culture-j
 behind the 2004 BBC Dow/Bhopal hoax and the Yes Men films. The easter egg is a canonical entry
 in the [LGBTQ Video Game Archive](https://lgbtqgamearchive.com/2015/08/31/gay-sims-easter-egg-and-controversy-in-simcopter/).
 
+Screenshots of the himbos in action -- including the unverified but suggestive **fog-piercing
+nipple hypothesis** (rendered with the airport-running-lights mode?) -- are archived in
+[`media/simcopter-himbo-glow/`](media/simcopter-himbo-glow/README.md), with a standing question
+for Jacques.
+
+## Why now -- the 2026 EA sale
+
+EA -- Maxis's parent, the company that patched out the himbos and fired their author -- was
+bought in 2026 by the **Saudi Public Investment Fund** and **Jared Kushner's Affinity Partners**.
+The franchise whose same-sex weddings shipped on day one now answers to a government that
+criminalizes the people it depicted. That's not an attack; it's the situation, and
+[the record](../patrick-j-barrett-iii/same-sex-relationships-the-record.md) closes with a chapter
+on it. Servin spent thirty years doing **identity correction** on corporations exactly like this
+-- which makes him not just the prequel voice but arguably the most qualified commentator alive
+on what the sale means.
+
 ## Why he belongs in this repo
 
 Don's **7 August 1998 Draft 3 review** of The Sims cites the episode by name, in writing:
@@ -50,9 +66,10 @@ record either way.
 
 | File | Purpose |
 |------|---------|
-| [`invitation.md`](invitation.md) | Send-ready draft |
+| [`invitation.md`](invitation.md) | Send-ready draft (polished Aug 2026 -- EA sale, Yes Men, nipple hypothesis) |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`sources/simcopter-himbo-easter-egg.md`](sources/simcopter-himbo-easter-egg.md) | Source dossier with citations |
+| [`media/simcopter-himbo-glow/`](media/simcopter-himbo-glow/README.md) | Himbo screenshots + the fog-piercing nipple hypothesis |
 
 ## See also
 
