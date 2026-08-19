@@ -9,6 +9,12 @@
 
 This is the story supported by Don's **marked-up PDFs** and the sequence on [donhopkins.com/home/TheSims/](https://donhopkins.com/home/TheSims/) (written after Don and Patrick compared notes).
 
+> **Markup provenance:** In Draft 3, Don typed his comments directly into the document body
+> with nothing marking them as additions -- the page-5 "Heterosexist and Monosexist" passage is
+> Don's text, quoted in full in [the record](../same-sex-relationships-the-record.md). Drafts 5
+> and 7 are scans of printouts with Don's handwritten notes, visibly distinct; their typed body
+> text (including the "will not be the only type available" promise) is the team's own.
+
 | When | Who | What |
 |------|-----|------|
 | Early prototype | Code | Same-sex romantic attempt → **slap**. Never in any spec — a zeroth-order sketch's unexamined default (probably Jamie Doornbos, no homophobe, zero blame). Don recognized the behavior, confirmed the rule in the **SimAntics source** ([tree code screenshot](https://twitter.com/xardox/status/1152266586025332736) · [archive](../../don-hopkins/media/sims-steering-committee-twitter/README.md)), flagged it. Procedural rhetoric (Bogost): code argues what no document says — and why diverse teams catch each other's blind spots |

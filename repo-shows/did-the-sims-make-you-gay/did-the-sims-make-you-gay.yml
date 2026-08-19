@@ -59,6 +59,11 @@ segments:
   optional_reunion:
     ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
     seed: ../will-wright-premiere/sims-team-steering-committee-playthrough/
+  simcopter_prehistory:
+    ask: "The back door and the front door -- 1996 himbo easter egg (unauthorized, fired) vs 1998-2000 designed-in inclusion (reviewed, promised in writing, shipped). Don's Draft 3 cites 'the SimCopter fiasco' by name."
+    character: characters/jacques-servin/
+    optional_bud: "Jacques Servin / Andy Bichlbaum -- invitation draft, not yet asked; segment stands on published record without him"
+    sources: characters/jacques-servin/sources/simcopter-himbo-easter-egg.md
 
 format:
   live: false
@@ -83,6 +88,7 @@ evidence:
 
 see_also:
   - characters/will-wright/  # inclusivity-by-design
+  - characters/jacques-servin/  # SimCopter himbo easter egg -- the 1996 prequel
   - characters/alexander-avila/  # Sims essay + looksmaxxing companion; community voice
   - characters/don-hopkins/career/project-threads.yml  # Sims UI + inclusive relationships
   - documentation/designs/og-cozy-games.md  # MicropolisCore — procedural rhetoric thread

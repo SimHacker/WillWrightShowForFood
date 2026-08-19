@@ -37,18 +37,53 @@ the gap himself.
 
 ## The primary sources
 
-All on my site, scans of the originals with my 1998 markup:
+All on my site, with my 1998 review comments (see the note below on which words are mine):
 
 | Document | What it shows |
 |----------|---------------|
 | [The Sims Design Documents hub](https://donhopkins.com/home/TheSims/) | The full sequence, written after Patrick and I compared notes |
-| [Draft 3 review — 7 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) | Page 5: my comments calling the relationship code "Heterosexist and Monosexist," warning we'd get flak after the SimCopter scandal, proposing a 0–100 romantic-interest model per sex |
+| [Draft 3 review — 7 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) | Page 5: my comments calling the relationship code "Heterosexist and Monosexist," warning we'd get flak after the [SimCopter scandal](../jacques-servin/README.md), proposing a 0–100 romantic-interest model per sex |
 | [Draft 5 — 31 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) | Page 4: *"Currently the game only allows heterosexual romance. **This will not be the only type available** — it just reflects the early stages of implementation. Will is reviewing the code and will make recommendations for how to implement homosexual romance as well."* |
 | [Draft 7 — 2 Oct 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) | The Same-Sex / Opposite-Sex section retained, three weeks before Patrick was hired |
 | [SimAntics "kissed core" tree code screenshot (tweet, 19 Jul 2019)](https://twitter.com/xardox/status/1152266586025332736) | The rule itself, from the June 4 1998 Steering Committee build: "Genders Equal? — are they the same sex?" routing to a BAD result. [Archived copy with the full tweet thread](../don-hopkins/media/sims-steering-committee-twitter/README.md) |
 
 Note the direction: after my review, the written design got **more** inclusive, not less. There
 is no draft that drops the feature — and no draft that ever excluded it in the first place.
+
+### Which words are mine -- how to read the markup
+
+My review comments appear in two different forms, and one of them is easy to misread:
+
+- **Draft 3 (the first review) has no visible markup.** I typed my comments directly into the
+  Word document without marking them as edits or comments, so in that PDF my additions read as
+  if they were part of the original document. They were not. In particular, the entire
+  "Heterosexist and Monosexist" passage on page 5 is mine, added 7 August 1998 (spelling as
+  typed):
+
+  > "The whole relationship design and implementation (I've looked at the tree code) is
+  > Heterosexist and Monosexist. We are going to be expected to do better than that after the
+  > SimCopter fiasco and the lip service that Maxis publically gave in response about not being
+  > anti-gay. The code tests to see if the sex of the people trying to romantically interact is
+  > the same, and if so, the result is a somewhat violent negative interaction, clearly
+  > homophobic. We are definitly going to get flack for that. It would be much more realistic to
+  > model it by two numbers from 0 to100 for each person, which was the likelyhood of that
+  > person being interested in a romantic interaction with each sex. So you can simply model
+  > monosexual heterosexual (which is all we have now), monosexual homosexual (like the guys in
+  > SimCopter), bisexual, nonsexual (mother theresa, presumably), and all shades in between
+  > (most of the rest of the world's population). It would make for a much more interesting and
+  > realistic game, partially influenced by random factors, and anyone offended by that needs to
+  > grow up and get a life, and hopefully our game will help them in that quest. Anyone who is
+  > afraid that it might offend the sensibilities of other people (but of course not themselves)
+  > is clearly homophobic by proxy but doesn't realize it since they're projecting their
+  > homophobia onto other people."
+
+- **The later drafts are scans of printouts with my handwritten notes**, so my additions are
+  visibly distinct from the printed original. The Draft 5 promise quoted above -- *"this will
+  not be the only type available"* -- is the team's own typed text, not my addition: the
+  document itself answering my review.
+
+So when quoting Draft 3 page 5, attribute those words to me, not to the document's original
+authors.
 
 ---
 

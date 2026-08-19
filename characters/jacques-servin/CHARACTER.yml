@@ -1,0 +1,71 @@
+# Jacques Servin (aka Andy Bichlbaum) -- invitation portrayal.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: jacques-servin
+  name: "Jacques Servin"
+  aliases: [Andy Bichlbaum, Ray Thomas]
+  type: invitation
+  signifier: "🩳🏳️‍🌈"
+  status: living
+  field: "SimCopter programmer -- the 1996 'himbo' easter egg; The Yes Men co-founder; culture jamming"
+  home: characters/jacques-servin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  note: |
+    The prequel voice for the Sims inclusivity arc: his 1996 SimCopter easter egg (and firing)
+    is the "SimCopter fiasco" Don's Draft 3 review cites by name. Back door 1996 vs front door
+    1998-2000 -- one story, told by the people on both sides of the door.
+
+bio:
+  summary: |
+    **Jacques Servin** was a programmer on Maxis's **SimCopter** (1996). He inserted an easter
+    egg that, on certain dates (his birthday, his boyfriend's birthday, Friday the 13th),
+    filled the game's cities with **men in swim trunks hugging and kissing** -- partly a protest
+    over working conditions, later framed as an RTMark-sponsored act of culture jamming. A
+    trigger bug made the "himbos" appear far more often than intended; the egg was discovered
+    after the game shipped, and Servin was **fired** in late 1996. **ACT UP** called for a
+    boycott of Maxis until he was rehired; Servin called the boycott "absurd" and had no desire
+    to return. Maxis patched the content out and publicly insisted it was not anti-gay.
+
+    He went on to co-found **RTMark** (as "Ray Thomas") and, as **Andy Bichlbaum**, co-founded
+    **The Yes Men** -- the culture-jamming duo behind the 2004 BBC Dow/Bhopal hoax and the Yes
+    Men films. The SimCopter egg is a canonical entry in the LGBTQ Video Game Archive.
+
+  wwsff_connection: |
+    Don's 7 Aug 1998 Draft 3 review of The Sims cites the episode directly: "We are going to be
+    expected to do better than that after the SimCopter fiasco and the lip service that Maxis
+    publically gave in response about not being anti-gay" -- and models "monosexual homosexual
+    (like the guys in SimCopter)". The fiasco set the context in which written inclusion won.
+    See characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md.
+
+show_suggestions:
+  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Prequel segment -- back door (1996 easter egg, fired) vs front door (1998-2000 designed-in, shipped)" }
+
+sources:
+  primary:
+    - { title: "LGBTQ Video Game Archive -- Gay Sims easter egg and controversy in SimCopter", url: "https://lgbtqgamearchive.com/2015/08/31/gay-sims-easter-egg-and-controversy-in-simcopter/" }
+    - { title: "Wired -- Boycott Maxis? 'Absurd,' Fired Programmer Says (Silberman, Dec 1996)", url: "https://archive.wired.com/culture/lifestyle/news/1996/12/915" }
+    - { title: "Wired -- Secret Prankster Fund Goes Public (Frauenfelder, Apr 1997)", url: "https://archive.wired.com/culture/lifestyle/news/1997/04/2997" }
+    - { title: "libcom.org -- An interview with Jacques Servin", url: "http://libcom.org/history/interview-jacques-servin" }
+    - { title: "The Backlot -- Whatever happened to the man behind SimCopter's gay easter egg (Masaki, 2007)", url: "http://www.thebacklot.com/whatever-happened-to-the-man-behind-simcopters-gay-easter-egg/06/2007/" }
+    - { title: "GameSpot -- Maxis public response (archived)", url: "https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html" }
+  context:
+    - { title: "The Yes Men (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Yes_Men" }
+    - { title: "RTMark (Wikipedia)", url: "https://en.wikipedia.org/wiki/RTMark" }
+    - { title: "SimCopter (Wikipedia)", url: "https://en.wikipedia.org/wiki/SimCopter" }
+    - { title: "LGR -- SimCopter review (easter egg footage)", url: "https://www.youtube.com/watch?v=x4mh7Pc5MSI&t=8m19s" }
+
+see_also:
+  - { path: ../patrick-j-barrett-iii/, why: "The front-door chapter -- same-sex romance designed and shipped in The Sims" }
+  - { path: ../don-hopkins/, why: "Draft 3 review cites the SimCopter fiasco by name" }
+  - { path: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, why: "Show seed -- prequel segment" }

@@ -16,6 +16,7 @@ is also a serious question about microworlds and identity.
 - **How Patrick programmed it** — romantic tags, preference from behavior, not fixed traits
 - **Avila essay + comments** — 1,700+ testimonies already analyzed in [MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis)
 - **The Sims audience** — builders, modders, storytellers; LGBTQ+ solidarity as core congregation, not sidebar
+- **The prequel** — [Jacques Servin's 1996 SimCopter himbo easter egg](../../characters/jacques-servin/README.md), the "SimCopter fiasco" Don's Draft 3 review cites by name: back door vs front door
 
 Fully async and degradable: the story already stands on the
 [marked-up design docs](https://donhopkins.com/home/TheSims/), credited press quotes, and past

@@ -10,6 +10,11 @@ sequence:
       homophobic slap. Don proposed 0–100 interest per sex (hetero, homo, bi, asexual spectrum).
     urls:
       - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf
+    markup_provenance: |
+      Don's Draft 3 comments were typed inline into the Word doc, unmarked -- in the PDF they
+      read as original text. The page-5 "Heterosexist and Monosexist" passage is Don's addition.
+      Drafts 5/7 are print-out scans with Don's handwriting, visibly distinct; their typed body
+      (including the inclusion promise) is the team's own text.
 
   - step: 2
     when: "Drafts 5 & 7 (Aug–Oct 1998)"
@@ -88,4 +93,7 @@ simcopter_context:
   note: |
     Himbo easter egg — programmer protest; random-number generator too effective; fired.
     Maxis public response set expectation for inclusive stance post-fiasco.
+  who: jacques-servin
+  character: ../../../jacques-servin/
+  dossier: ../../../jacques-servin/sources/simcopter-himbo-easter-egg.md
   url: https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html

@@ -61,5 +61,6 @@ gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
 ## See also
 
 - [`../don-hopkins/`](../don-hopkins/) — design reviews, Simprov Wedding Playset, inclusivity thesis
+- [`../jacques-servin/`](../jacques-servin/) — the 1996 SimCopter himbo easter egg, the "fiasco" Don's Draft 3 review cites; prequel to this story
 - [`../will-wright/`](../will-wright/) — inclusivity-by-design on Will's page
 - [`../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/`](../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/) — optional reunion playthrough
