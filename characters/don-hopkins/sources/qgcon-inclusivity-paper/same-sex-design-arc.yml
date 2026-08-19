@@ -10,6 +10,7 @@ sequence:
       homophobic slap. Don proposed 0–100 interest per sex (hetero, homo, bi, asexual spectrum).
     urls:
       - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf
+    repo_copy: ../sims-design-documents/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf
     markup_provenance: |
       Don's Draft 3 comments were typed inline into the Word doc, unmarked -- in the PDF they
       read as original text. The page-5 "Heterosexist and Monosexist" passage is Don's addition.
@@ -25,6 +26,10 @@ sequence:
     urls:
       - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf
       - https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf
+    repo_copies:
+      - ../sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf
+      - ../sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview-Handwritten.pdf
+      - ../sims-design-documents/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf
 
   - step: 3
     who: patrick-j-barrett-iii

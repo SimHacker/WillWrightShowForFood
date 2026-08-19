@@ -112,10 +112,10 @@ medium — live, recorded, email, or a one-line text.*
 
 | Source | URL |
 |--------|-----|
-| Don's Sims design doc hub | https://donhopkins.com/home/TheSims/ |
-| Draft 3 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf |
-| Draft 5 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf |
-| Draft 7 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf |
+| Don's Sims design doc hub | https://donhopkins.com/home/TheSims/ · [repo archive](../../don-hopkins/sources/sims-design-documents/README.md) |
+| Draft 3 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf · [repo copy](../../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) |
+| Draft 5 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf · [repo copy](../../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) · [handwritten scan](../../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview-Handwritten.pdf) |
+| Draft 7 — Don's review | https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf · [repo copy](../../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) |
 | New Yorker — Parkin interviews Barrett | https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games |
 | Game Developer summary | https://www.gamedeveloper.com/design/the-story-of-how-i-the-sims-i-got-same-sex-relationships---in-1999 |
 | PC Gamer — docs vs Barrett account | https://www.pcgamer.com/unearthed-the-sims-design-docs-show-the-debate-over-same-sex-relationships/ |

@@ -42,9 +42,9 @@ All on my site, with my 1998 review comments (see the note below on which words 
 | Document | What it shows |
 |----------|---------------|
 | [The Sims Design Documents hub](https://donhopkins.com/home/TheSims/) | The full sequence, written after Patrick and I compared notes |
-| [Draft 3 review — 7 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) | Page 5: my comments calling the relationship code "Heterosexist and Monosexist," warning we'd get flak after the [SimCopter scandal](../jacques-servin/README.md), proposing a 0–100 romantic-interest model per sex |
-| [Draft 5 — 31 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) | Page 4: *"Currently the game only allows heterosexual romance. **This will not be the only type available** — it just reflects the early stages of implementation. Will is reviewing the code and will make recommendations for how to implement homosexual romance as well."* |
-| [Draft 7 — 2 Oct 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) | The Same-Sex / Opposite-Sex section retained, three weeks before Patrick was hired |
+| [Draft 3 review — 7 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) ([repo copy](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf)) | Page 5: my comments calling the relationship code "Heterosexist and Monosexist," warning we'd get flak after the [SimCopter scandal](../jacques-servin/README.md), proposing a 0–100 romantic-interest model per sex |
+| [Draft 5 — 31 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) ([repo copy](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) · [handwritten scan](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview-Handwritten.pdf)) | Page 4: *"Currently the game only allows heterosexual romance. **This will not be the only type available** — it just reflects the early stages of implementation. Will is reviewing the code and will make recommendations for how to implement homosexual romance as well."* |
+| [Draft 7 — 2 Oct 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) ([repo copy](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf)) | The Same-Sex / Opposite-Sex section retained, three weeks before Patrick was hired |
 | [SimAntics "kissed core" tree code screenshot (tweet, 19 Jul 2019)](https://twitter.com/xardox/status/1152266586025332736) | The rule itself, from the June 4 1998 Steering Committee build: "Genders Equal? — are they the same sex?" routing to a BAD result. [Archived copy with the full tweet thread](../don-hopkins/media/sims-steering-committee-twitter/README.md) |
 
 Note the direction: after my review, the written design got **more** inclusive, not less. There
@@ -77,10 +77,11 @@ My review comments appear in two different forms, and one of them is easy to mis
   > is clearly homophobic by proxy but doesn't realize it since they're projecting their
   > homophobia onto other people."
 
-- **The later drafts are scans of printouts with my handwritten notes**, so my additions are
-  visibly distinct from the printed original. The Draft 5 promise quoted above -- *"this will
-  not be the only type available"* -- is the team's own typed text, not my addition: the
-  document itself answering my review.
+- **The later drafts are scans of printouts with my handwritten notes**
+  ([Draft 5 handwritten scan](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview-Handwritten.pdf)),
+  so my additions are visibly distinct from the printed original. The Draft 5 promise quoted
+  above -- *"this will not be the only type available"* -- is the team's own typed text, not my
+  addition: the document itself answering my review.
 
 So when quoting Draft 3 page 5, attribute those words to me, not to the document's original
 authors.
