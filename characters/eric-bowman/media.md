@@ -1,5 +1,13 @@
 # Eric "Bobo" Bowman — media
 
+## Team lunch (photo from Eric)
+
+Shared by Eric Bowman, August 2026 — a team lunch around a long white-tablecloth table, cobalt-blue
+glasses and all, in what looks like a boat's dining saloon. Names, date, and occasion to be
+captioned by Eric and Don.
+
+![Team lunch photo shared by Eric Bowman — long table, cobalt-blue glasses, boat dining room](team-lunch-from-eric-bowman.png)
+
 ## The "throbbing brain" Sims UI (not shipped)
 
 Bobo's **"throbbing brain"** — a Sims needs/mood interface prototype that **did not ship** — plus his
