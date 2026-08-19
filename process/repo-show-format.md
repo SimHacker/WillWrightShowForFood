@@ -119,7 +119,7 @@ Guests may review, reply, and merge TicketPRs. Optional donations → recognitio
 
 ## Producers and show notes
 
-**Spec:** [producers-and-show-notes.yml](producers-and-show-notes.yml) (girder — hand-authored facade pending)
+**Spec:** [producers-and-show-notes.yml](producers-and-show-notes.yml)
 
 **Listeners are Producers** — steal the participation loop from [No Agenda](https://www.noagendashow.net/); dodge the charlatan triangle. Send clips and corrections as PRs with **source URLs**; show notes live in `SHOW-NOTES.yml` per episode — **git is SSOT**.
 
@@ -172,7 +172,7 @@ WWSFF experiment ahead of formal MOOLLM `card` and `glance` skills — promote u
 |------|------|
 | **GLANCE.yml** | Title, iconic (tab label), description, keywords, **navigation SSOT** (parent/siblings/children, see_also, read_order) — smaller, no ads |
 | **CARD.yml** | Interface only — methods, abilities, protocols, `compose_with`; points at `glance:` |
-| **README.md** | Human article; teaser from GLANCE; nav links at bottom; add `<!-- hand-authored -->` to protect from script overwrite |
+| **README.md** | Human article; teaser from GLANCE; nav links at bottom |
 
 **Activation flow for agents:**
 
@@ -282,6 +282,5 @@ A graph and publication network of show objects — not a flat playlist.
 | [characters/](../characters/README.md) | Guests — portrayal standards first |
 | [schemas/portrayal-standards.yml](../schemas/portrayal-standards.yml) | Ethics contract (machine girder) |
 | [skills/repo-show/SKILL.md](../skills/repo-show/SKILL.md) | Orchestrator protocol |
-| [markup-facades.yml](markup-facades.yml) | Facade policy — hand-authored `.md`, yaml girders for machines |
 
 **Related K-lines elsewhere:** [`reposhow-the-medium`](vision-and-ambition.md#reposhow-the-medium) · [`repo-as-simulation`](vision-and-ambition.md#the-deep-move) · [`curb-appeal-meets-brutalism`](vision-and-ambition.md#curb-appeal-meets-brutalism)

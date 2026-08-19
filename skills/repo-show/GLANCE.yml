@@ -15,7 +15,7 @@ lifecycle: "SEED → PLANT → ELABORATE → INVITE → TEND → ANNOUNCE → AI
 
 wwsff_anchors:
   format: ../../process/repo-show-format.yml
-  format_md: ../../process/repo-show-format.md  # generated markup — pnpm run facades
+  format_md: ../../process/repo-show-format.md
   shows: ../../repo-shows/
   characters: ../../characters/
   harvest: ../

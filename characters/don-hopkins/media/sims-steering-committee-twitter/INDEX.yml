@@ -1,0 +1,35 @@
+# The Sims Steering Committee tweets — SimAntics kiss code + prototype artifacts
+
+room:
+  id: sims-steering-committee-twitter
+  name: Sims Steering Committee Twitter archive
+  era: "1998 build · 2019-2024 tweets"
+  count: 6
+  human_hub: README.md  # tweet transcripts, provenance, context
+
+artifacts:
+  - file: simantics-kissed-core-tree-1998-06-04.png
+    what: "SocialObj::kissed core Edit Tree — the 'Genders Equal?' rule Don flagged. Original from tweet 1152266586025332736"
+  - file: edith-object-browser-original-sims-gang.jpg
+    what: "Edith Object Browser + original Sims cast reunion (Archie Bunker with cigar)"
+  - file: ugly-flamingos.png
+    what: "Prototype flamingos"
+  - file: candy-corn-phone.png
+    what: "Candy-corn phone ring effect"
+  - file: pie-menu-nod-proposal-1.png
+    what: "Draft 5 thought balloon / visual feedback proposal excerpt (tweet 1820723967121822161)"
+  - file: pie-menu-nod-proposal-2.png
+    what: "Draft 5 nod/shake proposal with Don's markup questions"
+
+tweets:
+  tree_code: https://twitter.com/xardox/status/1152266586025332736  # 2019-07-19
+  sims_turns_20: https://twitter.com/xardox/status/1223211835823984642  # 2020-01-31
+  pie_menu_nod: https://x.com/xardox/status/1820723967121822161  # 2024-08-06
+  thread_parent: https://twitter.com/itstheshadsy/status/1151868012707962881  # protected account
+  # Edith / flamingos / phone reply tweets: IDs unrecoverable (protected thread parent);
+  # images preserved from Don's originals
+
+see_also:
+  - ../../patrick-j-barrett-iii/same-sex-relationships-the-record.md
+  - ../../patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+  - ../../will-wright/sources/1998-06-04-sims-steering-committee-demo/README.md

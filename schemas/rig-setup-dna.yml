@@ -21,8 +21,8 @@ sniffable_head:
     - rig_classes: "artisanal | stick_shift | flair — declare honestly"
     - challenge: "Which spec CARD this rig targets"
   authoring: |
-    Instance-first: LLM may draft SETUP.md from rig yaml + this schema + _TEMPLATE.SETUP.md.
-    Not bulk-regenerated via process/markup-facades.yml — maintained as forwardable Rig DNA.
+    SETUP.md may be drafted from rig yaml + this schema + _TEMPLATE.SETUP.md,
+    then maintained directly as forwardable Rig DNA.
 
 canonical_source:
   required:

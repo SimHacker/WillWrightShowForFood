@@ -251,7 +251,7 @@ Publication **network** — graph of shows, not a flat feed. We are not pitching
 - **No** requirement to use AI — and **no** ban on AI either.
 - **Not** a finished product — an origin point, not launch day.
 - **Not** blocked on the guest: [Will Wright accepted](../characters/will-wright/invitation.md) (July 2026); kickoff confirmed; air on his schedule.
-- **Not** linking humans to yaml girders — visitors read **`.md` facades** (images, prose, links). Girders (`.yml`) are for machines, MOOLLM, and CI. Hand-author markdown; do not script-generate human pages when a readable instance is cheaper and better. ([Facade cleanup plan](../planning/facade-cleanup-todo.md))
+- **Not** linking humans to yaml girders — visitors read **`.md` pages** (images, prose, links). Girders (`.yml`) are for machines, MOOLLM, and CI.
 
 ---
 
@@ -448,4 +448,4 @@ If you represent a platform, archive, publisher, or large audience channel: read
 
 ← [Home](../README.md) · [Crazy Idea Jam](crazy-idea-jam.md) · [Format](repo-show-format.md) · [Entryways](../ENTRYWAYS.md) · [Trails](../TRAILS.md) · [Girder yaml](vision-and-ambition.yml)
 
-*This page is hand-authored (instance-first). Machine-readable source: [`vision-and-ambition.yml`](vision-and-ambition.yml). Do not bulk-regenerate from `pnpm facades`.*
+*Machine-readable source: [`vision-and-ambition.yml`](vision-and-ambition.yml).*

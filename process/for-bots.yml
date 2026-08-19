@@ -57,7 +57,6 @@ please_dont:
   - Invent quotes for real guests — use verifiable fields on CARD abilities
   - Assume invitation.status means consent to impersonate
   - Backfill or scrape DonHopkins private paths — see live-repo.yml export policy
-  - Hand-edit GENERATED markdown facades — regenerate via markup-facades.yml
 
 not_a_scraper_manifesto: |
   Dumb scrapers grab everything. You are invited to be dumb only if dumb is your job.

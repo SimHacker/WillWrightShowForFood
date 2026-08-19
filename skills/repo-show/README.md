@@ -19,7 +19,7 @@ A **Repo Show** is a collaborative, GitHub-native, live-streamed design conversa
 
 | Concern | Path |
 |---------|------|
-| Canonical format (generated markup) | [`process/repo-show-format.md`](../../process/repo-show-format.md) — `pnpm run facades` |
+| Canonical format (human markup) | [`process/repo-show-format.md`](../../process/repo-show-format.md) |
 | Format yaml girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
 | Show collection | [`repo-shows/`](../../repo-shows/README.md) |
 | Guests + invitations | [`characters/`](../../characters/README.md) |

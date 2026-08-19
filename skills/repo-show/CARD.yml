@@ -23,7 +23,6 @@ term_of_art:
 how-it-runs:
   markup: ../../process/repo-show-format.md
   girder: ../../process/repo-show-format.yml
-  regenerate: "pnpm run facades"
   elements: [HN_pointer, RTFR, TicketPR, audience_character_PRs, don_philahue, cauldron_melt, rig-spectrum, showmaker_network]
 
 join:

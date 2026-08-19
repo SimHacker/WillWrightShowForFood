@@ -1,6 +1,6 @@
 # Retrocomputing challenges
 
-> **Umbrella:** [`retrocomputing-drive.md`](retrocomputing-drive.md) (hand-authored)  
+> **Umbrella:** [`retrocomputing-drive.md`](retrocomputing-drive.md)  
 > **Girder:** [`retrocomputing-drive.yml`](retrocomputing-drive.yml)
 
 Same spec CARD — your **rig** declares languages, tools, platform, emulator. Ship **`SETUP.md`** so others reproduce and mod.

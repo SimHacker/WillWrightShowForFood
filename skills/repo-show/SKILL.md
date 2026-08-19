@@ -10,7 +10,7 @@ The **show orchestrator** for Repo Show. Protocol for what you do *with* a show,
 machinery: [`moollm-stage.yml`](../../process/moollm-stage.yml).
 
 **Interface:** [`CARD.yml`](CARD.yml) · **Nav/metadata:** [`GLANCE.yml`](GLANCE.yml) — **read both** before README  
-**Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (hand-authored — edit `.md`; sync girder)  
+**Human markup:** [`../../process/repo-show-format.md`](../../process/repo-show-format.md) (edit `.md`; sync girder)  
 **Girder:** [`../../process/repo-show-format.yml`](../../process/repo-show-format.yml#description-scaffolding)
 
 ### CARD + GLANCE split (WWSFF experiment → moollm upstream)
@@ -209,7 +209,7 @@ Performed by [`characters/don-philahue/`](../../characters/don-philahue/). Mecha
 | Retro computing | [`process/cross-links.yml`](../../process/cross-links.yml) → `retrocomputing-drive` |
 | MOOLLM compose | [`process/cross-links.yml`](../../process/cross-links.yml) → `moollm-compose` |
 | Format girder | [`process/repo-show-format.yml`](../../process/repo-show-format.yml) |
-| Generated markup | [`process/repo-show-format.md`](../../process/repo-show-format.md) — `pnpm run facades` |
+| Human markup | [`process/repo-show-format.md`](../../process/repo-show-format.md) |
 | Harvest registry | [`skills/INDEX.yml`](../INDEX.yml) |
 | Upstream skills | [moollm/skills/README.md](https://github.com/SimHacker/moollm/skills/README.md) |
 

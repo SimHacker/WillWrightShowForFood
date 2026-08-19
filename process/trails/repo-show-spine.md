@@ -14,7 +14,7 @@ The show **is** the repo — RTFR, play on your rig, harvest skills back into th
 |------|-----------------|
 | [**repo-show SKILL**](../../skills/repo-show/SKILL.md) | Orchestrator protocol — SEED → AIR → HARVEST |
 | [**Format girder**](../repo-show-format.yml) | Canonical yaml — rig spectrum, cauldron, clocks |
-| [**FORMAT.md**](../repo-show-format.md) | Human-readable view — `pnpm run facades` |
+| [**repo-show-format.md**](../repo-show-format.md) | Human-readable view |
 | [**ShowMaker network**](../showmaker-network.yml) | Shows breed shows — graph of linked episodes |
 | [**will-wright show**](../../repo-shows/will-wright-premiere/README.md) | Flagship planted show — Will kickoff arc |
 | [**REPO-SHOWS.yml**](../../repo-shows/REPO-SHOWS.yml) | Implicit SHOW inheritance for whole collection |

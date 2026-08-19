@@ -15,11 +15,10 @@ Real monorepo: pnpm + Python venv + CI. Yaml girders are canonical; markdown fac
 | 1 | [**SETUP**](../../SETUP.md) | nvm, corepack, pnpm install, verify — proves the tree is not vapor |
 | 2 | [**GLANCE**](../../GLANCE.yml) | One-screen map of rooms and read order |
 | 3 | [**Root CARD**](../../CARD.yml) | FIND-GUEST, FIND-SHOW — plugin methods |
-| 4 | [**Process INDEX**](../INDEX.yml) | Every spec girder + generated markup link |
+| 4 | [**Process INDEX**](../INDEX.yml) | Every spec girder + markup link |
 | 5 | [**Format girder**](../repo-show-format.yml) | Canonical Repo Show definition — rigs, cauldron, clocks |
-| 6 | [**Schemas**](../../schemas/README.md) | Portrayal, rigs, invitations, markup facades — contracts |
+| 6 | [**Schemas**](../../schemas/README.md) | Portrayal, rigs, invitations — contracts |
 | 7 | [**MOOLLM plugin**](../../kernel/moollm-plugin.yml) | How WWSFF composes with SimHacker/moollm |
-| 8 | [**Markup facades**](../markup-facades.yml) | Yaml → md registry and dependency graph |
 
 ---
 

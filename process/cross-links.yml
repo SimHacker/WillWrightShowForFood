@@ -22,7 +22,7 @@ trails:
     nodes:
       - { path: ../skills/repo-show/SKILL.md, why: "Orchestrator protocol — SEED → AIR → HARVEST" }
       - { path: repo-show-format.yml, why: "Canonical girder — rig spectrum, cauldron, clocks" }
-      - { path: repo-show-format.md, why: "Generated human view — pnpm run facades" }
+      - { path: repo-show-format.md, why: "Human view" }
       - { path: showmaker-network.yml, why: "Shows breed shows — graph of linked episodes" }
       - { path: ../repo-shows/will-wright-premiere/, why: "Flagship planted show — Will kickoff arc" }
       - { path: ../repo-shows/REPO-SHOWS.yml, why: "Implicit SHOW inheritance for whole collection" }
@@ -143,12 +143,10 @@ trails:
   schemas-and-ethics:
     k_line: "Contracts before characters"
     human: trails/schemas-and-ethics.md
-    why: "Portrayal standards, invitations, rig shape, markup facades"
+    why: "Portrayal standards, invitations, rig shape"
     nodes:
       - { path: ../schemas/portrayal-standards.yml, why: "Public-safe guest tone — read once" }
       - { path: ../schemas/invitation-workflow.yml, why: "draft → sent → replied → consent" }
-      - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md — LLM instance-first; deterministic bulk refresh" }
-      - { path: markup-facades.yml, why: "Registry + dependency graph for facades" }
       - { path: ../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md, why: "Constitutional theme — AI proposes, people dispose" }
       - { path: ../bits/theme-simulating-people/theme-simulating-people.md, why: "Impersonation vs simulation — Sims 26-year precedent" }
 
@@ -349,7 +347,6 @@ trails:
       - { path: tracks/educators-track/educators-track.md, why: "Classroom as cast — Bartle, Lall, Eagleson" }
       - { path: ../bits/theme-the-riff-loop/theme-the-riff-loop.md, why: "Steerable AI+people recursion" }
       - { path: ../repo-shows/INDEX.yml, why: "Master ideas catalog" }
-      - { path: ../schemas/markup-facade.yml, why: "Yaml girder → md overlay policy" }
 
   performance-space:
     k_line: "Icons carry meaning; the voice carries feeling"
@@ -382,7 +379,6 @@ see_also:
   - entryways/README.md
   - ../TRAILS.md
   - INDEX.yml
-  - markup-facades.yml
   - ../ENTRYWAYS.md
   - ../skills/INDEX.yml
   - ../CARD.yml

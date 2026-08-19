@@ -40,7 +40,7 @@ Same rule as humans: **GLANCE → CARD → README → deep trees.**
 | Interface | `CARD.yml` | What can I invoke? |
 | Prose | `README.md` | Cream + museum map |
 | Girder | `process/*.yml`, `characters/*/CHARACTER.yml` | Source of truth for tools |
-| Facade | `process/repo-show-format.md`, etc. | Human view — may be GENERATED |
+| Markdown view | `process/repo-show-format.md`, etc. | Human view |
 
 Edit yaml; regenerate markdown. Do not treat generated `*.md` as canonical.
 
@@ -64,7 +64,7 @@ Portrayals are **about** real people — tribute cards, not impersonation. Brows
 
 **Do:** follow `see_also` whys · cite Will's [1996 transcript](characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md) · rate-limit · file issues for broken links
 
-**Don't:** flatten the repo · invent guest quotes · scrape private DonHopkins paths ([`live-repo.yml`](process/live-repo.yml)) · hand-edit GENERATED facades
+**Don't:** flatten the repo · invent guest quotes · scrape private DonHopkins paths ([`live-repo.yml`](process/live-repo.yml))
 
 ---
 

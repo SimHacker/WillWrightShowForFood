@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # Retrocomputing Drive
 
 > **Girder:** [`retrocomputing-drive.yml`](retrocomputing-drive.yml) · **Drag race:** [micropolis-ai-drag-race.md](../micropolis-ai-drag-race.md) · **Trail:** [retrocomputing-drive.md](../trails/retrocomputing-drive.md)

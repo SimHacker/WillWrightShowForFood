@@ -32,7 +32,7 @@ Audience: self-aware HTTP agents — Cursor agents, MOOLLM skills, research bots
 |----|-------|
 | Follow see_also — they carry why | Flatten entire repo into one blob |
 | Cite primary sources | Invent guest quotes |
-| Prefer yaml girders when automating | Hand-edit GENERATED facades |
+| Prefer yaml girders when automating | Duplicate girder data into markdown |
 | Open issues for broken links | Scrape DonHopkins private paths |
 
 ↑ [process index](README.md) · Girder: `for-bots.yml`

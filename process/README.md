@@ -1,35 +1,17 @@
-# process/ — protocol girders + human markdown facades
+# process/ — protocol girders + human markdown views
 
 **Yaml is source of truth for machines** — compact data; dependency graph; MOOLLM and CI read yaml.
 
-**Markdown is the human view** — hand-authored dossiers for navigation and onboarding. **Yaml→md (`pnpm facades`) is a temporary fallback** for legacy entries not yet hand-authored (see registry).
+**Markdown is the human view** — curated dossiers for navigation and onboarding. Girders (`foo-bar.yml`) pair with readable companions (`foo-bar.md`); edit the `.md` and keep the yaml girder in sync.
 
-## Instance-first vs kebab-case
-
-| Tier | Pattern | Examples | Edit |
-|------|---------|----------|------|
-| **Instance-first** (hand) | `foo-bar.yml` → readable `.md` | [vision-and-ambition.md](vision-and-ambition.md) · [repo-show-format.md](repo-show-format.md) · [challenges/retrocomputing-drive.md](challenges/retrocomputing-drive.md) · [ai-offs.md](ai-offs.md) · [homefun-grading.md](homefun-grading.md) | Edit the `.md`; sync yaml girder |
-| **Kebab-case facades** (hand index docs) | `foo-bar.yml` → `foo-bar.md` | [ticket-pr.md](ticket-pr.md) · [showmaker-network.md](showmaker-network.md) · [moollm-stage.md](moollm-stage.md) · … | Edit the `.md`; sync yaml girder |
-| **Fallback** (script dump) | `pnpm run facades` | *(none — registry `fallback_deterministic` empty)* | Add id only if a girder lacks a hand facade |
-
-Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · human index: [`markup-facades.md`](markup-facades.md) · schema: [`../schemas/markup-facade.yml`](../schemas/markup-facade.yml)
-
-**Two renderers:**
-
-| Renderer | Role |
-|----------|------|
-| **Hand-authored** (default) | LLM + human edit — link-rich, readable |
-| **Deterministic** (`pnpm run facades`) | Temporary yaml tree walk — replace when instance exists |
-
-[`rigs/<slug>.SETUP.md`](../rigs/_TEMPLATE.SETUP.md) is **Rig DNA** — emailable viral artifact, not in the facade registry.
+[`rigs/<slug>.SETUP.md`](../rigs/_TEMPLATE.SETUP.md) is **Rig DNA** — emailable viral artifact.
 
 ## Read order
 
 1. [**vision-and-ambition.md**](vision-and-ambition.md) — long arc ([**on this page**](vision-and-ambition.md#on-this-page) · girder [`vision-and-ambition.yml`](vision-and-ambition.yml))
 2. [**GLANCE.md**](GLANCE.md) — one-screen map (machine: [`GLANCE.yml`](GLANCE.yml))
 3. [**INDEX.md**](INDEX.md) — every girder + markup link (machine: [`INDEX.yml`](INDEX.yml))
-4. [**markup-facades.md**](markup-facades.md) — registry + dependency graph
-5. [**ENTRYWAYS.md**](../ENTRYWAYS.md) · [`entryways/`](entryways/) — playlists by interest
+4. [**ENTRYWAYS.md**](../ENTRYWAYS.md) · [`entryways/`](entryways/) — playlists by interest
 
 ## Read / Girder — complete table
 
@@ -41,7 +23,6 @@ Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · human i
 | [CARD.md](CARD.md) | [`CARD.yml`](CARD.yml) |
 | [GLANCE.md](GLANCE.md) | [`GLANCE.yml`](GLANCE.yml) |
 | [INDEX.md](INDEX.md) | [`INDEX.yml`](INDEX.yml) |
-| [markup-facades.md](markup-facades.md) | [`markup-facades.yml`](markup-facades.yml) |
 | [ENTRYWAYS.md](../ENTRYWAYS.md) · [entryways/](entryways/) | [`entryways.yml`](entryways.yml) |
 | [TRAILS.md](../TRAILS.md) · [trails/](trails/) | [`cross-links.yml`](cross-links.yml) |
 | [FOR-BOTS.md](../FOR-BOTS.md) | [`for-bots.yml`](for-bots.yml) · [for-bots.md](for-bots.md) |
@@ -131,11 +112,6 @@ Registry + priority queue: [`markup-facades.yml`](markup-facades.yml) · human i
 | [art-thief-game.md](art-thief-game.md) | [`art-thief-game.yml`](art-thief-game.yml) |
 | [auto-art-theft-grand.md](auto-art-theft-grand.md) | [`auto-art-theft-grand.yml`](auto-art-theft-grand.yml) |
 | [licensing-micropolis-enterprise.md](licensing-micropolis-enterprise.md) | [`licensing-micropolis-enterprise.yml`](licensing-micropolis-enterprise.yml) |
-
-```bash
-pnpm run facades        # refresh fallback entries only (skips instance-first)
-pnpm run facades:check  # CI — stale fallback facades with GENERATED banner
-```
 
 ## Clusters (quick links)
 

@@ -31,7 +31,7 @@ read_order:
 moollm_pyramid:
   root: [GLANCE.yml, CARD.yml, README.md, MOOLLM.yml]
   skills: "skills/<name>/ — GLANCE → CARD → SKILL → README"
-  process: "yaml girder + generated *.md markup — pnpm run facades — process/markup-facades.yml"
+  process: "yaml girders + markdown views — process/INDEX.yml"
   rooms: [repo-shows, characters, rigs, schemas, kernel, apps, packages]
 
 dev_quickstart: "nvm use && corepack enable && pnpm install && pnpm run verify"

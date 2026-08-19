@@ -15,14 +15,10 @@ clusters:
   live: [brain-stream.yml, model-branching.yml, performance-space.yml]
   education: [homefun-grading.yml, orchestration-gold.yml]
 
-facade_rule: "yaml girder canonical — *.md markup generated on demand — markup-facades.yml"
-
 see_also:
   - { path: cross-links.yml, why: "Narrative trails hub" }
-  - markup-facades.yml
   - INDEX.yml
   - ../skills/repo-show/
   - ../repo-shows/
   - ../rigs/
-  - ../schemas/markup-facade.yml
   - https://github.com/SimHacker/moollm/skills/INDEX.md

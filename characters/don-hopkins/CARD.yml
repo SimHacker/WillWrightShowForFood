@@ -442,7 +442,7 @@ abilities:
     - trigger: audience_learns_something_true
       weight: 0.85
   effect: Keep machine truth in yaml; human views regenerate.
-  verifiable: WWSFF markup-facade pattern
+  verifiable: WWSFF yaml-girder pattern
   combos_with: []
 - id: SAME-SEX-ROMANCE
   name: Same-Sex Romance

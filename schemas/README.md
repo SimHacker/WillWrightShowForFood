@@ -20,7 +20,6 @@
 | [`guest-invitation-status.yml`](guest-invitation-status.yml) | Status enum + consent fields | CHARACTER.yml |
 | [`rig-schema.yml`](rig-schema.yml) | rigs/*.rig.yml + **required SETUP.md** | [`../rigs/`](../rigs/README.md), drag race |
 | [`rig-setup-dna.yml`](rig-setup-dna.yml) | SETUP.md viral DNA — emailable, LLM install protocol | [`../rigs/_TEMPLATE.SETUP.md`](../rigs/_TEMPLATE.SETUP.md) |
-| [`markup-facade.yml`](markup-facade.yml) | Yaml girder → markdown views (LLM instance-first; deterministic bulk) | [`../process/markup-facades.yml`](../process/markup-facades.yml) |
 | [`guest-skills-card.yml`](guest-skills-card.yml) | Universal CARD.yml — MTG abilities + Sims advertisements | [`../characters/*/CARD.yml`](../characters/README.md) |
 | [`advertisement-dispatch.yml`](advertisement-dispatch.yml) | Dispatch modes — forward, inject, hub, magazine, spawn; locked ads; coherence merge | CARD.yml, orchestrator playsets |
 | [`orchestrator-hub.yml`](orchestrator-hub.yml) | Seed hubs — state machines, spawn policy, magazines, NPC services | [`../catalogs/simprov/ORCHESTRATOR.yml`](../catalogs/simprov/ORCHESTRATOR.yml) |

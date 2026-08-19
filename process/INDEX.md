@@ -1,6 +1,6 @@
 # process/ — INDEX
 
-[README](README.md) · [markup facades registry](markup-facades.md) · [CARD](CARD.md)
+[README](README.md) · [CARD](CARD.md)
 
 ---
 
@@ -101,7 +101,6 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 | CARD.yml | [CARD.md](CARD.md) |
 | GLANCE.yml | [GLANCE.md](GLANCE.md) |
 | INDEX.yml | [INDEX.md](INDEX.md) |
-| markup-facades.yml | [markup-facades.md](markup-facades.md) |
 | licensing-micropolis-enterprise.yml | [licensing-micropolis-enterprise.md](licensing-micropolis-enterprise.md) |
 
 Full machine registry: [INDEX.yml](INDEX.yml)

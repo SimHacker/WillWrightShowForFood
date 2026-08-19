@@ -2,7 +2,7 @@
 
 > *Contracts before characters*
 
-Portrayal standards, invitations, rig shape, markup facades — read contracts before portraits.
+Portrayal standards, invitations, rig shape — read contracts before portraits.
 
 **Girder:** [`cross-links.yml`](../cross-links.yml#schemas-and-ethics) · **Index:** [TRAILS.md](../../TRAILS.md)
 
@@ -17,9 +17,6 @@ Portrayal standards, invitations, rig shape, markup facades — read contracts b
 | [**Simulating people**](../../bits/theme-simulating-people/theme-simulating-people.md) | Impersonation vs simulation — constitutional theme |
 | [**Human control & authorship**](../../bits/theme-human-control-and-authorship/theme-human-control-and-authorship.md) | AI proposes; people dispose — Engelbart lineage |
 | [**invitation-workflow.yml**](../../schemas/invitation-workflow.yml) | draft → sent → replied → consent |
-| [**markup-facade.yml**](../../schemas/markup-facade.yml) | Yaml girder → md — LLM instance-first; deterministic bulk refresh |
-| [**markup-facades.yml**](../markup-facades.yml) | Registry + dependency graph for facades |
-
 **Room:** [schemas/CARD.yml](../../schemas/CARD.yml) · [schemas/README.md](../../schemas/README.md)
 
 ---

@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # How same-sex relationships really got into The Sims — the record
 
 *Don Hopkins · August 2026 · post this one link when the "accident" story comes up*
@@ -19,7 +17,8 @@ published the marked-up documents. Here is what actually happened, with the prim
    and nobody decided it. It existed only as **behavior in the early prototype code**: when I
    had one woman try to kiss another, the would-be kissee **slapped** the kisser. I recognized
    what that behavior was saying, read the **SimAntics visual program** to confirm the rule was
-   really in there (I've posted screenshots of the original code on Twitter), and flagged it.
+   really in there ([screenshot of the offending tree code](https://twitter.com/xardox/status/1152266586025332736),
+   from the June 4, 1998 internal build), and flagged it.
 2. I called that out in my **August 1998 design review** and argued for inclusive romance.
 3. The **written design documents then moved toward inclusion** — they explicitly said
    heterosexual romance would *not* be the only kind available.
@@ -46,6 +45,7 @@ All on my site, scans of the originals with my 1998 markup:
 | [Draft 3 review — 7 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) | Page 5: my comments calling the relationship code "Heterosexist and Monosexist," warning we'd get flak after the SimCopter scandal, proposing a 0–100 romantic-interest model per sex |
 | [Draft 5 — 31 Aug 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) | Page 4: *"Currently the game only allows heterosexual romance. **This will not be the only type available** — it just reflects the early stages of implementation. Will is reviewing the code and will make recommendations for how to implement homosexual romance as well."* |
 | [Draft 7 — 2 Oct 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) | The Same-Sex / Opposite-Sex section retained, three weeks before Patrick was hired |
+| [SimAntics "kissed core" tree code screenshot (tweet, 19 Jul 2019)](https://twitter.com/xardox/status/1152266586025332736) | The rule itself, from the June 4 1998 Steering Committee build: "Genders Equal? — are they the same sex?" routing to a BAD result. [Archived copy with the full tweet thread](../don-hopkins/media/sims-steering-committee-twitter/README.md) |
 
 Note the direction: after my review, the written design got **more** inclusive, not less. There
 is no draft that drops the feature — and no draft that ever excluded it in the first place.

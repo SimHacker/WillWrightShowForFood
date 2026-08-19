@@ -142,7 +142,7 @@ CARDS["don-hopkins"] = card(
         A("VITABOY-PIPELINE", "VitaBoy Pipeline", "vitaboyPipeline", "vitaboyPipeline(mesh, anim) → Sims character on screen", "Explain deformable mesh animation pipelines without mystifying artists.", "The Sims VitaBoy system", combos=["ERIC-WIGGLE-DEBUG"]),
         A("DEBUG-AS-FEATURE", "Debug as Feature", "debugAsFeature", "debugAsFeature(tool) → player-visible introspection", "Ship the frob panel; hide nothing that helps learning.", "Public talks; MOOLLM philosophy", type="static"),
         A("HOST-REPO-SHOW", "Host Repo Show", "hostRepoShow", "hostRepoShow(repo) → RTFR → harvest PRs", "Point at the repo; get out of the way of implementation.", "Repo Show format; WWSFF host", mana="{W}"),
-        A("YAML-GIRDER", "YAML Girder", "yamlGirder", "yamlGirder(spec) → generated markup + tools", "Keep machine truth in yaml; human views regenerate.", "WWSFF markup-facade pattern", mana="{U}"),
+        A("YAML-GIRDER", "YAML Girder", "yamlGirder", "yamlGirder(spec) → markup + tools", "Keep machine truth in yaml; human views stay in sync.", "WWSFF yaml-girder pattern", mana="{U}"),
         A("SAME-SEX-ROMANCE", "Same-Sex Romance", "sameSexRomanceAdvocacy", "sameSexRomanceAdvocacy(code) → remove arbitrary check", "Name the pattern; make the code match the philosophy.", "The Sims inclusion advocacy (documented)", mana="{G}"),
     ],
     slug="don-hopkins",

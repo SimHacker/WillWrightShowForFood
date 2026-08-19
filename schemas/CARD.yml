@@ -10,7 +10,6 @@ entries:
   invitation: invitation-workflow.yml
   rig: rig-schema.yml
   rig_setup_dna: rig-setup-dna.yml
-  markup_facade: markup-facade.yml
   guest_card: guest-skills-card.yml
 
 rule: "Characters and rigs validate against these — PR review + future verify scripts"
@@ -25,6 +24,5 @@ see_also:
   - { path: ../process/cross-links.yml#schemas-and-ethics, why: "Ethics + contracts trail" }
   - { path: ../characters/INDEX.yml, why: "Guests validate against portrayal + invitation" }
   - { path: ../rigs/INDEX.yml, why: "Rigs validate against rig-schema + SETUP DNA" }
-  - { path: ../process/markup-facades.yml, why: "Generated md registry" }
   - { path: ../process/cross-links.yml, why: "Master narrative web" }
   - { path: https://github.com/SimHacker/moollm/skills/representation-ethics, why: "Upstream ethics skill" }

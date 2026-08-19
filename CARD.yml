@@ -59,7 +59,6 @@ see_also:
   - { path: process/cross-links.yml, why: "Generous narrative trails between all rooms" }
   - { path: process/README.md, why: "Process room — yaml girders + generated markup" }
   - { path: process/INDEX.yml, why: "Spec registry" }
-  - { path: process/markup-facades.yml, why: "Yaml → md generation registry" }
   - { path: FOR-BOTS.md, why: "Hello bot — browsing agents welcome" }
   - { path: process/for-bots.yml, why: "Bot reading thread girder" }
   - { path: ENTRYWAYS.md, why: "Front door playlists — pick your interest" }

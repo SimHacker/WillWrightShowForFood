@@ -13,9 +13,7 @@ best way (people author; AI orchestrates and writes code). [`../bits/tradition-m
 
 Every entry is a directory: `<name>/<name>.yml` seed at minimum, growing
 whatever it needs. **Every show directory has a human `README.md` front page**
-— **hand-authored** (warm prose, images, real links). Yaml girders are for
-machines; do not script-generate READMEs from yaml when a readable instance is
-better. See [facade cleanup plan](../planning/facade-cleanup-todo.md).
+— warm prose, images, real links. Yaml girders are for machines.
 **`SHOW.yml` is added later** when the show is ready to run as
 interface + state — lazy prototype promotion; the seed yml keeps its name.
 The *kind* of an entry — show, idea, series, episode, pack, performance,

@@ -33,4 +33,3 @@ see_also:
   - { path: ../process/cross-links.yml#rig-personas, why: "Master trail" }
   - { path: ../process/challenges/retrocomputing-drive.md, why: "Retro challenges require SETUP DNA" }
   - { path: ../skills/repo-show/CARD.yml, why: "Rig spectrum in show format" }
-  - { path: ../schemas/markup-facade.yml, why: "Yaml girder vs md — SETUP is Rig DNA, not facade-registry output" }

@@ -49,7 +49,7 @@ wwsff_layout:
   GLANCE.yml: machine nav SSOT
   GLANCE.md: human one-screen sniff
   browse-the-bouquet.yml: top-level topic index (filenames as ads)
-  README.md: human narrative (hand-authored)
+  README.md: human narrative
   ideas.md: Repo Show + dream guest hooks
   about-host.md: resume reimagined (from DonHopkins master-of-ceremonies)
   "*.md topic files": self-declaring entry points (distilled from upstream)

@@ -8,21 +8,16 @@ room:
 purpose: |
   Canonical specs for Repo Show format, game-show variants, retro challenges, ai-offs,
   and vision. Yaml stays brutalist machine-readable girders.
-  Important markdown (VISION, CRAZY-IDEA-JAM, ENTRYWAYS, TRAILS, …) is hand-authored;
+  Important markdown (VISION, CRAZY-IDEA-JAM, ENTRYWAYS, TRAILS, …) is curated directly;
   yaml→md script is temporary fallback for the rest.
 
 methods:
   FIND-SPEC:
     signature: "INDEX.yml → yaml girder"
   READ-MARKUP:
-    signature: "Human markdown view — hand-authored when instance_first; else pnpm facades fallback"
-    instance_first: [vision-and-ambition.md, crazy-idea-jam.md, ENTRYWAYS.md, TRAILS.md, entryways/*.md, trails/*.md]
-    registry: markup-facades.yml
+    signature: "Human markdown view"
   READ-GIRDER:
     signature: "Raw yaml when implementing or automating"
-  REGENERATE-FACADES:
-    signature: "pnpm run facades"
-    registry: markup-facades.yml
   PICK-ENTRYWAY:
     signature: "entryways.yml → playlist by interest (guest, hacker, retro, …)"
     human: ../ENTRYWAYS.md
@@ -50,11 +45,9 @@ see_also:
   - INDEX.yml
   - GLANCE.yml
   - entryways.yml
-  - markup-facades.yml
   - cross-links.yml
   - entryways/README.md
   - ../TRAILS.md
   - ../ENTRYWAYS.md
-  - ../schemas/markup-facade.yml
   - ../skills/repo-show/CARD.yml
   - ../skills/INDEX.yml

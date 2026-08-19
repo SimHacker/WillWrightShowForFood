@@ -13,9 +13,8 @@
 | Method | Signature |
 |--------|-----------|
 | FIND-SPEC | INDEX.yml → yaml girder |
-| READ-MARKUP | Human markdown — instance-first or `pnpm facades` fallback |
+| READ-MARKUP | Human markdown view |
 | READ-GIRDER | Raw yaml for implementation/automation |
-| REGENERATE-FACADES | `pnpm run facades` — see markup-facades.yml |
 | PICK-ENTRYWAY | entryways.yml → playlist — [ENTRYWAYS.md](../ENTRYWAYS.md) |
 | PICK-TRAIL | cross-links.yml → [TRAILS.md](../TRAILS.md) |
 

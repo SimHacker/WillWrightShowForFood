@@ -111,9 +111,8 @@ entryways:
       - { priority: 3, title: "Root CARD", path: ../CARD.yml, why: "FIND-GUEST, FIND-SHOW — plugin methods" }
       - { priority: 4, title: "Process INDEX", path: INDEX.yml, why: "Every spec girder + generated markup link" }
       - { priority: 5, title: "Format girder", path: repo-show-format.yml, why: "Canonical Repo Show definition — rigs, cauldron, clocks" }
-      - { priority: 6, title: "Schemas", path: ../schemas/README.md, why: "Portrayal, rigs, invitations, markup facades — contracts" }
+      - { priority: 6, title: "Schemas", path: ../schemas/README.md, why: "Portrayal, rigs, invitations — contracts" }
       - { priority: 7, title: "MOOLLM plugin", path: ../kernel/moollm-plugin.yml, why: "How WWSFF composes with SimHacker/moollm" }
-      - { priority: 8, title: "Markup facades", path: markup-facades.yml, why: "Yaml → md registry and dependency graph" }
 
   ai-coder:
     title: "AI — orchestration, rigs, ai-offs"

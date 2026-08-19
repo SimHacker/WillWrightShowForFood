@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # Repo Show — James Gosling × Arthur van Hoff
 
 *Seed — consent not yet asked. A pairing of two old Sun friends; can also run solo.*

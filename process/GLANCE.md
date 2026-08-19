@@ -25,7 +25,7 @@ Protocol girders — Repo Show format, drag race, retro challenges, ai-offs, vis
 | Live | brain-stream, model-branching, performance-space |
 | Education | homefun-grading, orchestration-gold |
 
-**Facade rule:** yaml girder canonical — `*.md` human views — [markup-facades.md](markup-facades.md)
+**Rule:** yaml girder canonical — `*.md` human views
 
 Machine source: [GLANCE.yml](GLANCE.yml)
 

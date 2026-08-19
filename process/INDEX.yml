@@ -1,9 +1,8 @@
-# process/ — spec registry (yaml girders → generated markup facades)
-# Registry: markup-facades.yml | Schema: ../schemas/markup-facade.yml
+# process/ — spec registry (yaml girders + markdown views)
 
 meta:
   girder_rule: "Yaml is machine-readable source of truth — compact data, includes, dependency refs"
-  markup_rule: "Markdown views are generated on demand — LLM instance-first; pnpm run facades for cheap deterministic refresh"
+  markup_rule: "Markdown views are curated companions of yaml girders — edit the md; sync the girder"
   exception: "rigs/<slug>.SETUP.md is Rig DNA — may be LLM-authored initially; not in facade registry"
   entryways: entryways.yml
   entryways_md: ../ENTRYWAYS.md
@@ -154,20 +153,12 @@ methodology:
 vision:
   vision-and-ambition.yml:
     markup: vision-and-ambition.md
-    topic: "Long arc since 1996 — hand-authored vision-and-ambition.md facade; yaml girder for machines"
+    topic: "Long arc since 1996 — vision-and-ambition.md for humans; yaml girder for machines"
     sections: "vision-and-ambition.md#on-this-page — lineage · pyramid · audiences · long-now · navigate"
   crazy-idea-jam.yml:
     markup: crazy-idea-jam.md
     topic: "Wacky + forward-thinking idea reactor — curated public-safe from Don's crystallized notes"
     trail: cross-links.yml#stupid-fun-forward
-
-markup_facades:
-  registry: markup-facades.yml
-  generator: ../scripts/generate-markup-facades.py
-  invoke: "pnpm run facades"
-  policy: |
-    Important markdown is hand-authored (instance-first). Yaml→md script is temporary fallback.
-    See markup-facades.yml meta.policy and schemas/markup-facade.yml.
 
 cross_links:
   registry: cross-links.yml

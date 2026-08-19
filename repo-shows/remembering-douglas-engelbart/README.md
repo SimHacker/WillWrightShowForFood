@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # Remembering Douglas Engelbart 🕯️
 
 > A tribute to Doug Engelbart (1925–2013) — memories, eulogies, and above all his **INTENT**: augmenting collective human intellect, not a laundry list of inventions.

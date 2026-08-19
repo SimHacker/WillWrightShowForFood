@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # Micropolis AI Drag Race
 
 > **Format spec:** [process/micropolis-ai-drag-race.md](../../process/micropolis-ai-drag-race.md) · **Host:** [Don Philahue](../../characters/don-philahue/) · **Judge:** [Slats](../../characters/robots/slats/)

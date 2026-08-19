@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # eBike Safari
 
 > Voice-controlled adventure navigation through a hidden graph of story cards at real-world places — you talk, the LLM listens, the phone shows the route, the bike moves you.

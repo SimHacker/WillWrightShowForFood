@@ -1,5 +1,3 @@
-<!-- hand-authored -->
-
 # A Repo Show with Terry Winograd — The Forebear 🐉
 
 > The dragon with the treasure trove. Terry Winograd convened Stanford's **CS547
