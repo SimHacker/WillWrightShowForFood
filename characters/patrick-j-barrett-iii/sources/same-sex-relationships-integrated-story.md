@@ -11,7 +11,7 @@ This is the story supported by Don's **marked-up PDFs** and the sequence on [don
 
 | When | Who | What |
 |------|-----|------|
-| Early prototype | Code | Same-sex romantic attempt → **slap** (violent negative interaction) |
+| Early prototype | Code | Same-sex romantic attempt → **slap**. Never in any spec — a zeroth-order sketch's unexamined default (probably Jamie Doornbos, no homophobe, zero blame). Don recognized the behavior, confirmed the rule in the **SimAntics source**, flagged it. Procedural rhetoric (Bogost): code argues what no document says — and why diverse teams catch each other's blind spots |
 | 1998-08-07 | Don | [Draft 3 review](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf) — "Heterosexist and Monosexist"; proposes 0–100 romance likelihood per sex |
 | 1998-08-31 | Design | [Draft 5](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft5-1998-08-31-DonsReview.pdf) — *"Currently the game only allows heterosexual romance. **This will not be the only type available**… Will is reviewing the code and will make recommendations for how to implement homosexual romance as well."* |
 | 1998-10-02 | Design | [Draft 7](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) — Same-Sex / Opposite-Sex section retained |

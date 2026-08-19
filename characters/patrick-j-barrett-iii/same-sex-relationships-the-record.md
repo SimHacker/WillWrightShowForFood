@@ -15,9 +15,12 @@ published the marked-up documents. Here is what actually happened, with the prim
 
 ## The short version
 
-1. The early **prototype code** was heterosexist: when I tried to have two women kiss, the
-   would-be kissee **slapped** the kisser. Homophobia was in the code, not in the plan.
-2. I flagged that in my **August 1998 design review** and argued for inclusive romance.
+1. **No design document ever said "no same-sex relationships."** Nobody wrote that rule down,
+   and nobody decided it. It existed only as **behavior in the early prototype code**: when I
+   had one woman try to kiss another, the would-be kissee **slapped** the kisser. I recognized
+   what that behavior was saying, read the **SimAntics visual program** to confirm the rule was
+   really in there (I've posted screenshots of the original code on Twitter), and flagged it.
+2. I called that out in my **August 1998 design review** and argued for inclusive romance.
 3. The **written design documents then moved toward inclusion** — they explicitly said
    heterosexual romance would *not* be the only kind available.
 4. **Patrick Barrett**, hired that October to implement social interactions, started work
@@ -45,7 +48,36 @@ All on my site, scans of the originals with my 1998 markup:
 | [Draft 7 — 2 Oct 1998 (PDF)](https://donhopkins.com/home/TheSims/TheSimsDesignDocumentDraft7-1998-10-02-DonsReview.pdf) | The Same-Sex / Opposite-Sex section retained, three weeks before Patrick was hired |
 
 Note the direction: after my review, the written design got **more** inclusive, not less. There
-is no draft that drops the feature.
+is no draft that drops the feature — and no draft that ever excluded it in the first place.
+
+---
+
+## What the code said that no document did
+
+This is the part the "outdated document" story gets structurally wrong, and Ian Bogost gave us
+the vocabulary for it: **procedural rhetoric** (*Persuasive Games*, 2007) — software makes
+arguments through its **rules and processes**, whether or not anyone writes them in a document.
+The kiss-slap rule was never in any spec. Nobody proposed it, debated it, or signed off on it.
+But the moment the code ran, the game *argued* that same-sex affection deserves a slap — an
+argument nobody on the team believed, made by code on their behalf.
+
+The original interaction code was a **zeroth-order sketch** — probably by Jamie Doornbos, a
+brilliant engineer who is in no way homophobic and deserves **zero blame**. Its job was to get
+Sims interacting at all, so other people could play, comment, and iterate. Kiss-slap was an
+unexamined default that fell out of a quick first pass, not anyone's intent.
+
+That's exactly why this story is a **textbook case for diverse teams**. The straight members of
+the team were supporters and allies — and still didn't read kiss → slap as homophobia, because
+they had never been on the receiving end of it. I had, so I recognized it on sight, went and
+read the SimAntics source to prove the rule was really there, and put it in writing. Different
+perspectives don't just coexist on a team; they **catch each other's blind spots**. The fix
+went into the written design within weeks, and Patrick later built it better than my proposal.
+Nobody in this story is a villain. The lesson is that even a team of allies needs eyes that
+have lived the experience, because code makes arguments its authors never meant to make.
+
+*(Bogost's frame is a pillar of my QGCon paper on this history:
+[procedural-rhetoric-theory.yml](../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml) ·
+[Ian Bogost's guest page](../ian-bogost/).)*
 
 ---
 
@@ -71,10 +103,11 @@ contradict. Parkin didn't have the documents in 2014; they were published later.
 [PC Gamer](https://www.pcgamer.com/unearthed-the-sims-design-docs-show-the-debate-over-same-sex-relationships/)
 saw them, the framing began to correct.
 
-The honest reconciliation: there was surely **verbal** debate about controversy — and real
-homophobic behavior in the **prototype code** — but the **written record** moved toward
-inclusion from August 1998 onward. "Outdated document" really means "production database
-hadn't caught up with the design documents." That's a schedule gap, not a suppressed feature.
+The honest reconciliation: there was surely **verbal** debate about controversy — and
+heterosexist behavior **enacted by the prototype code**, an unexamined default rather than
+anyone's intent — but the **written record** moved toward inclusion from August 1998 onward.
+"Outdated document" really means "production database hadn't caught up with the design
+documents." That's a schedule gap, not a suppressed feature.
 
 ---
 
