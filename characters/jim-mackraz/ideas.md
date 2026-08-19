@@ -23,9 +23,9 @@ Architecture question from the CTG years — manager's view of how the debate lo
 → [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md)
 
 ### 3. Turd polishing
-Don called code shit; Jim assigned him to clean and polish it — *then you'll have done what we hired
-you for and you'll be golden. Careful what you ask for.* Satisfying de-Macification; porting back to
-Mac got interesting.
+Don called the code a turd; Jim said his job was turd polishing — *clean it out and polish your
+turd, then you'll have done what we hired you for and you'll be golden. Careful what you ask for.*
+Satisfying de-Macification; porting back to Mac got interesting.
 
 → [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md)
 

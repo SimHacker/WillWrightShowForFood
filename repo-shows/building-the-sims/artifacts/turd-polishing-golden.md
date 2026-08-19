@@ -1,7 +1,7 @@
 ---
 id: turd-polishing-golden
 title: "Turd polishing — golden"
-hook: "Jim: polish the code and you'll be golden — careful what you ask for."
+hook: "Jim: your job is turd polishing — clean it out and polish your turd, and you'll be golden."
 category: [team-lore, ctg]
 status: documented
 heat: high
@@ -12,14 +12,14 @@ guests: [jim-mackraz, don-hopkins, will-wright]
 
 ## Hook
 
-Don criticized code quality. Jim (CTG lead): clean it out, polish it — that's what we hired you for.
+Don called the code a turd. Jim (CTG lead) took the word and handed it back as a job description.
 
 ## Story
 
 Jim Mackraz, roughly:
 
-> Clean it out and polish it. Then you will have done what we hired you for — and you will be golden.
-> Careful what you ask for.
+> Your job is turd polishing. Clean it out and polish your turd. Then you will have done what we
+> hired you for — and you will be golden. Careful what you ask for.
 
 Don did — **de-Macification** work that later affected **Mac porting**. Will has a separate
 **turd polishing** talk (2023) — compare Jim↔Don exchange vs Will's framing.

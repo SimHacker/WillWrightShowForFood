@@ -8,10 +8,10 @@ over the years, until the team confirms on air.*
 
 → [`artifacts/turd-polishing-golden.md`](artifacts/turd-polishing-golden.md)
 
-Don criticized some code quality. Jim Mackraz (CTG lead), roughly:
+Don called the code a turd. Jim Mackraz (CTG lead), roughly:
 
-> Clean it out and polish it. Then you will have done what we hired you for — and you will be golden.
-> Careful what you ask for.
+> Your job is turd polishing. Clean it out and polish your turd. Then you will have done what we
+> hired you for — and you will be golden. Careful what you ask for.
 
 Don took the work — **de-Macification** that later affected **Mac porting**. Related shipping
 philosophy: [`will-wright/sources/2023-turd-polishing-talk/`](../../characters/will-wright/sources/2023-turd-polishing-talk/README.md)
