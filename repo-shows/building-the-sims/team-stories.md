@@ -81,10 +81,11 @@ Lost and found, chain of custody intact.
 
 ### The jilted lovers club
 
-Don built a **Cupid** test object with a phone-style menu that let you call up any neighbor;
-they'd come over, fall completely in love with you (mutually), and kiss you. Enumerate the whole
-neighborhood and your jilted lovers would cooperate beautifully — forming an orderly queue to slap
-you, one after another. Patrick remembered the object; his name for it: **the jilted lovers club**.
+Years after The Sims shipped, Don built a **Cupid** object for the **SimProv Wedding Playset**:
+a phone-style menu to call up any neighbor, who'd come over, fall completely in love with you
+(mutually), and kiss you. Enumerate the whole neighborhood and your jilted lovers would form an
+orderly queue to slap you, one after another. Patrick remembered it, and named it:
+**the jilted lovers club**.
 
 ### The love bed
 
