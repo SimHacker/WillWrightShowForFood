@@ -1,10 +1,11 @@
 ---
-status: send_now
+status: sent
 character_id: eric-hedman
 public: true
-consent: not_yet_asked
+consent: asked
+sent: 2026-08-20
 warm_contact: true
-channel: "already in conversation — YouTube comments on @irkinteraction; Don sends personally"
+channel: "direct — Don sends personally (already in conversation via @irkinteraction comments)"
 show_seed: repo-shows/eric-hedman/
 send_batch: sims-reunion-2026
 format: remote_or_in_person
@@ -12,8 +13,9 @@ format: remote_or_in_person
 
 # Repo Show invitation — Eric Hedman
 
-*Send-ready — Don delivers personally. Eric Hedman may edit, decline, delay, or request removal at any time.*
+*Shared 20 Aug 2026 — Don delivered personally. Eric may edit, decline, delay, or request removal at any time.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+
 Eric (Irk) —
 
 We've already been talking, and I've been having a blast commenting on your wonderful videos — so
@@ -26,6 +28,20 @@ digging into that craft. The stage is a public GitHub repo; we talk; artifacts s
 forever. **Show, don't tell.**
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+
+**Some repo news you might enjoy.** With the EA sale in the news, the story of how same-sex
+relationships got into The Sims has been circulating again, in a garbled version, so I wrote up
+[the record](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md)
+with the 1998 marked-up design docs and SimAntics tree-code screenshots
+[archived in the repo](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/sims-design-documents/README.md).
+Your retrospectives are exactly the kind of first-person craft history this repo exists to hold.
+
+**Want the keys?** Tell me your GitHub account and I'll give you write access — no PRs, we're in
+push-to-main mode. Your directory is yours to edit, prune, or grow. And if you have any old
+Maxis-era artifacts — animation tests, walk-cycle studies, expansion design notes, sketches,
+renders — upload them, polished or not. That's the whole point of the repo: get the great work
+out where people and machines can learn from it. And it drives people to your channel and your
+indie work, which is exactly what I want it to do.
 
 **Threads — your pick:**
 

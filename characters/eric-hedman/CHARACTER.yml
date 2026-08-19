@@ -16,8 +16,10 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: sent
+  consent: asked
+  sent: 2026-08-20
+  channel: direct
   document: invitation.md
   show_seed: repo-shows/eric-hedman/
 

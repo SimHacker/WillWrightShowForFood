@@ -18,7 +18,7 @@ Amsterdam/TomTom, and how pools fit the lot grid (objects vs rooms vs dedicated 
 
 | File | Purpose |
 |------|---------|
-| [`invitation.md`](invitation.md) | Send-ready draft |
+| [`invitation.md`](invitation.md) | Invitation (shared via chat, Aug 2026) |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`media.md`](media.md) | Throbbing brain UI sketches + Tanja Sihvonen reading |
 | [`sources/direct3d-professional-reference.md`](sources/direct3d-professional-reference.md) | Book evidence — cover/listing for bounce cuts |
