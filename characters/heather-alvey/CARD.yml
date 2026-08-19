@@ -96,7 +96,7 @@ abilities:
   verifiable: SimFreaks aesthetic culture
   combos_with: []
 invoke_rules:
-  consent: not_yet_asked
+  consent: asked  # invited 2026-08-20, reply pending
   simulation: false
 see_also:
 - path: CHARACTER.yml

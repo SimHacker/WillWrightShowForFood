@@ -1,8 +1,10 @@
 ---
-status: draft
+status: sent
 character_id: steve-alvey
 public: true
-consent: not_yet_asked
+consent: asked
+sent: 2026-08-20
+channel: chat
 show_seed: repo-shows/heather-and-steve-alvey/
 pair_with: heather-alvey
 send_batch: alvey-pair-2026
@@ -11,8 +13,9 @@ format: live_or_async
 
 # Repo Show invitation — Steve Alvey 🏙️
 
-*Steve may edit, decline, delay, or request removal at any time — or take direct edit access. [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers quiet mode and onboarding.*
+*Shared 20 Aug 2026. Steve may edit, decline, delay, or request removal at any time — or take direct edit access.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
+
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
 **Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
@@ -34,6 +37,15 @@ magnum-opus packs like **Zombie Sims**, your work with **Will at Gallium** — a
 **find and subscribe to your work**, because that's what keeps it going. The **Micropolis publishing
 system** I'm building is for exactly this: your back-catalog and new content, plus tools (reincarnated
 SimShow, Transmogrifier, RugOMatic, body/head/wig editors), optionally AI-orchestrated, open to fans.
+
+**The band is getting back together.** This week the Sims Fest reunion invitations went out —
+Jamie Doornbos, Jim Mackraz, Eric "Bobo" Bowman, Eric "Irk" Hedman — and Patrick Barrett has a
+standing invitation. Old photos and team stories are already landing in the repo.
+
+**Want the keys?** Tell me your GitHub account and I'll give you write access — no PRs, we're in
+push-to-main mode. Your directory is yours to edit, prune, or grow, and anything from the SimSlice
+archive — SliceCity internals included — has a home here where people and machines can learn from
+it and bring it back to life.
 
 ---
 

@@ -19,8 +19,10 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: sent
+  consent: asked
+  sent: 2026-08-20
+  channel: chat
   document: invitation.md
   show_seed: repo-shows/heather-and-steve-alvey/
 
