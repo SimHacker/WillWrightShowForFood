@@ -413,10 +413,47 @@ The Zork compiler (above) is what turns a SKILL-level slot space into
 strict-tier Korz — CARD and GLANCE survive as the human/LLM-facing
 views; the compiled sea is what the VM runs.
 
+### No IDE required — bootstrapping on bare files and git
+
+Design constraint, stated flat: **this has to work with a normal
+filesystem and a git repo, no IDE.** So what about Korz actually
+*required* one? Audit the paper's IDE dependencies and almost all of
+them turn out to be compensation for the heap — slots lived in an
+opaque Self image, so you needed a tool to see them at all. Put the
+sea in files and the image is born visible; the residue is semantic,
+and the LLM covers it.
+
+| The IDE did | The bare repo does |
+|---|---|
+| Group slots into objects/layers on demand | Directories, big-endian prefixes, `INTERFACE.yml`/`CARD.yml` — saved views that are *durable and versioned*, where the IDE's were ephemeral |
+| Browse and navigate the sea | `ls` is reflection, `glob` is a subtree query, `grep <selector>` is "show every slot for this message"; filenames are K-lines; directory listings are advertisements |
+| Answer "what does this code do in all contexts?" | The LLM cuts any subjective plane and narrates it — the disco ball talks in chat, no window system required |
+| Guard-writing support, ambiguity warnings | The strict compiler's refusal is the linter; `git diff` and PR review are the change protocol; crystallizations reviewed like pull requests |
+| Debugging symmetric dispatch (no receiver to follow) | Dispatch traces as plain text committed beside the code; the provenance dimension; the troll's heads — weights worn as visible anatomy; `git bisect` as the time-travel debugger |
+
+The pattern: the Korz prototype inherited its IDE-dependence from its
+host — it was built *on the Self environment*, where everything lives
+in an image and outliners are how you see. MOOLLM made the opposite
+bet and it's load-bearing here: `cat`, `ls`, `grep`, `glob`, and
+`git` are the primitive IDE, the yaml-jazz comment channel carries
+what tooltips and inspectors carried, and the LLM supplies the one
+genuinely semantic service (cross-context comprehension) that Unix
+tools can't. That service used to require building an environment;
+now it requires a conversation.
+
+So the bootstrap order inverts the paper's: **files first,
+conversation second, IDE last** — and when the IDE eventually comes,
+it's progressive enhancement generated *from* the same data (GLANCEs
+and CARDs are precompiled views; an IDE is just a renderer for saved
+views with faster refresh). Nothing in the semantics waits for it.
+
 **ASK David:** is this how he imagined the partial IDE — saved views
 over the sea, not reified layers — and does hosting Korz in Self
 predict that the filesystem could host both readings without a second
-repository?
+repository? Sharper: how much of the prototype's IDE was Korz
+needing an IDE, and how much was the Self image needing a window? If
+the slots had been files in a repo, what tooling would he have
+actually missed?
 
 ## What the soft tier adds to Korz's open problems
 
