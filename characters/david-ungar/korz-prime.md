@@ -51,6 +51,16 @@ and bodies have been made decidable. Between them, two movements:
   semantics; deopt in Korz′ rescues *determinism* without losing
   meaning.
 
+Crystallization already has a shipped precedent: the
+[adventure compiler](https://github.com/SimHacker/moollm/blob/main/skills/adventure/ADVENTURE-COMPILER.md)
+compiles adventure YAML — rooms, objects, guards — into deterministic
+JavaScript and Python that runs standalone or tethered to an LLM for
+creative decisions. The next step is a **Zork compiler** that emits
+deterministic, executable **Korz** instead of (or as well as) JS and
+Python — the strict tier's slot space as a compilation target, not
+just a hand-authored one. Zork improvises, the compiler crystallizes,
+Korz runs: the anagram becomes a toolchain.
+
 Endosymbiosis, stated mechanically: the deterministic program lives
 inside the model the way mitochondria live inside the cell, doing the
 high-throughput metabolism, with gene transfer (crystallization) in
