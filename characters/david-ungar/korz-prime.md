@@ -97,8 +97,28 @@ synthesized. A beat for the
 No new syntax. Slots are YAML; the sea is a directory tree; git is
 the persistence, history, and diff of the sea. One artifact, three
 readings: the machine parses structure, the human reads names and
-comments, the LLM reads everything — comments are load-bearing in the
-soft tier (YAML jazz) and free in the strict tier.
+comments, the LLM reads everything.
+
+**Korz Jazz.** (Or *Jazzork*, when the soft tier is playing.) This is
+where the language leans hardest into
+[yaml-jazz](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz),
+and it is a foundational design goal, not a courtesy: **comments in
+code impart understanding and meaning to humans, to LLMs, and even to
+deterministic programs — everything else follows from that.** The
+lineage is Knuth's literate programming, with one inversion. WEB wove
+prose and code into a single document, but `tangle` stripped the
+prose before the machine ever saw it — literature for humans, dead
+weight for the compiler. In Korz′ the tangle step disappears, because
+the interpreter is a *reader*: in the soft tier a comment on a slot
+is semantics (it changes how the slot matches, samples, and blends);
+in the toolchain a comment is the crystallizer's specification (the
+compiled slot is checked against what the prose said it *meant*, and
+carries that comment forward as its contract); and in the strict tier
+comments round-trip as data — YAML preserves them, so the
+deterministic program that doesn't understand a comment still
+transports it faithfully to the next reader who does. Weave and
+tangle collapse into one artifact: the program is the book, and the
+book runs.
 
 ```yaml
 # sea/troll/greet.yml — three slots, one selector
@@ -117,6 +137,9 @@ greet:
   do: |                # prose body: soft tier only, for now
     Greet in a way that fits {mood}; lead with menace if provoked,
     grudging respect if the visitor has beaten you before.
+  # He's privately embarrassed about the axe incident — never mentions
+  # it first. This comment is load-bearing: the strict tier transports
+  # it, the soft tier plays it.
 ```
 
 The strict compiler takes the first two, refuses the third (prose
