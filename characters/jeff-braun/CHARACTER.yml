@@ -1,0 +1,31 @@
+# Jeff Braun — archival source portrayal. NOT Jeffrey Braun.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: jeff-braun
+  name: "Jeffrey Braun"
+  type: source
+  signifier: "🏢"
+  status: living
+  field: "Co-founder and CEO of Maxis; led the company through SimCity, SimEarth, SimAnt, and The Sims era"
+  home: characters/jeff-braun/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+  note: "Archival email source only. Jeff replied directly to Don Feb 2024; no invitation sent yet."
+
+bio:
+  summary: "**Jeffrey Braun** co-founded Maxis with Will Wright and was CEO through the SimCity and early Sims years. He licensed SimCity to Nintendo (Miyamoto's million-dollar check across the table, 1989). Don Hopkins consulted him in 2024 while open-sourcing Yoot Tower about Maxis's Toho trademark settlement."
+
+sources:
+  primary:
+    - sources/email-godzilla-toho-2024-02-17.md
+  web:
+    - "https://www.pcgamer.com/games/sim/in-1989-a-nintendo-bigwig-licensed-simcity-on-the-spot-by-sliding-a-million-dollar-check-across-the-table/"
+
+see_also:
+  - { path: ../will-wright/, why: "Maxis co-founder" }
+  - { path: ../don-hopkins/, why: "Email correspondent; Micropolis / Yoot Tower open source" }
+  - { path: ../will-wright/media/simcity-macintosh-front-cover.md, why: "Box art with monster disaster button" }
