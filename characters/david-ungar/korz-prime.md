@@ -311,6 +311,50 @@ axes have names like `mood` and `world`; a dense numeric array is
 just the corner of the sea where every coordinate happens to be an
 integer and every cell happens to be full.
 
+### CSV headers bind to dimension names
+
+So how would that work — the header row as dimension binding? Take
+the troll's three `greet` slots from above and lay them flat:
+
+```csv
+rcvr,world,mood,greet
+troll*,zork,,The troll brandishes his axe and blocks the passage.
+troll*,adventure,,The troll demands payment before you may cross the bridge.
+troll*,,*,"Greet to fit {mood}; menace if provoked, grudging respect if they've beaten you."
+```
+
+The header row declares which dimensions this file's rows are
+guarded on; **each data row pours one guarded slot into the sea**,
+and the three guard stances map onto cell syntax with nothing left
+over: an **empty cell** is *unmentioned* (the row stays generic on
+that dimension — the honest structural absence from the null table,
+not a null), a **`*`** is the *bare* stance (bind whatever mood is
+present), and a **value** is *constrained*. Dispatch is row
+selection: `greet.csv#world=zork` — RFC 7111's positional fragments
+upgraded to named ones, the query string as guard expression — and
+most-specific-wins falls out as *fewest empty cells among the
+matching rows*. Sorting by guard columns, big-endian, groups the
+table into its own specificity lattice: the flat CSV is a little
+sea, and every sort order is a saved view, same fractal as the
+directory.
+
+And this reading has three famous ancestors, none of which knew they
+were doing Korz: **decision tables** (1960s — condition columns,
+action columns, most-specific row wins; the shape survives in
+`.gitattributes` and firewall rule tables); **Codd's relational
+model** (1970 — a relation *is* a set of tuples over named
+attributes, `SELECT ... WHERE` *is* a guarded query over named
+dimensions; the relational database was N-dimensional dispatch all
+along, minus the specificity lattice); and **tidy data** (Wickham —
+one variable per column, one observation per row: the
+coordinate-native serialization of a sparse tensor, which is why
+`pandas.melt` and `xarray` convert between CSV-shape and
+tensor-shape mechanically). The Zork compiler gains a second
+target: crystallize hot slots not into code but into a dispatch
+CSV — diffable row-wise in git, greppable, sortable into its own
+lattice, loadable by the strict tier as a table and readable by the
+soft tier as prose with a header.
+
 ### Names are inheritance
 
 Dimensions and coordinates are ordinary words — `mood`, `weather`,
