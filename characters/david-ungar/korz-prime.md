@@ -228,6 +228,17 @@ What it buys:
   careful literalism near zorbleflax — instead of hallucinating with
   uniform confidence. State the confidence as a number, then act on
   it: calibrated dereferencing.
+- **Advertisement scoring expressions get an epistemic term.** A Sims
+  ad's score is already an expression re-weighted by the chooser's
+  needs; let it also multiply in the isKnown of the ad's own
+  referents — `score: 80 * isKnown(template) * isKnown(voice)` — and
+  a slot whose pointers are shaky **bids low in its own auction**.
+  Confident slots outbid vague ones; a half-remembered behavior
+  gracefully loses to a well-grounded one instead of winning on a
+  hardcoded number; and the hallucination damper is built into the
+  market instead of bolted onto the model. (The troll's head-weights
+  inherit it too: a mind whose referents have gone vague visibly
+  shrinks.)
 
 ## Zorkizing Adventure
 
