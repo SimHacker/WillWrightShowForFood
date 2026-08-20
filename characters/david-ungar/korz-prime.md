@@ -302,8 +302,9 @@ isKnown mechanically:
 
 And the comment's kicker — "Microsoft COM hinges on the IUnknown
 interface" — closes a loop this document already opened: MOOLLM reads
-directories as IUnknown (`ls` is QueryInterface), so the whole object
-world already rests on the Unknown. Korz′ upgrades the root interface
+directories as IUnknown (`ls` as QueryInterface — except `ls`
+out-reflects it; see the accretion section: `ls` is a mirror), so the
+whole object world already rests on the Unknown. Korz′ upgrades the root interface
 by one letter and one type: **IUnknown → isKnown**, boolean interface
 to measured float. (TypeScript's `unknown` is the top type and
 `never` its dual bottom; Don's corollary stands — INever implements
@@ -529,9 +530,23 @@ soft tier's relevance sampling interpolates between them.
 How does dropping `ROOM.yml`, `CHARACTER.yml`, `HTML-RENDERER.yml`
 into a directory actually work? **By accretion, with no
 registration.** The directory is the object; the filename is the
-interface ID; QueryInterface is a stat call — `ls` is reflection.
-Drop the file in and the object grows a queryable facet without
-touching anything that was already there
+interface ID; QueryInterface is a stat call — and **`ls` is more
+powerful and reflective than QueryInterface ever was. `ls` is a
+mirror.** QueryInterface only answers yes or no to an IID you must
+already possess — COM never shipped enumeration, so you interrogate
+IUnknown by guessing GUIDs you brought from somewhere else. `ls`
+inverts the epistemics: the object volunteers its complete manifest,
+unprompted, in human-readable names — and since names are K-lines,
+each line of the listing is also an activation, which is why
+yaml-jazz says the directory listing *is* the advertisement index,
+the Sims-style "what's here?". COM's root interface confesses
+ignorance (IUnknown: you must already know); the filesystem's root
+operation confers knowledge (`ls`: now you know). The object shows
+you itself — reflection without registration, introspection for the
+price of a syscall, the same move cursor-mirror makes one level up
+when a session reads its own transcript. Drop the file in and the
+object grows a queryable facet without touching anything that was
+already there
 ([Directory-as-IUnknown](https://github.com/SimHacker/moollm/blob/main/designs/DIRECTORY-AS-IUNKNOWN.md)
 calls this design by accretion). In the Korz reading, dropping an
 interface file **pours new slots into the sea** pre-guarded by the
