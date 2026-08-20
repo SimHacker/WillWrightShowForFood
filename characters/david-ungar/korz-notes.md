@@ -343,7 +343,12 @@ context dimension and a stateful API's "current X"?
 Korz argmaxes (most specific slot wins; Appendix B legislates ties).
 The Sims auctioned all matching ads and dithered among the top N;
 temperature could be a context dimension — `{temperature: 0}` recovers
-classical Korz. **ASK:** would he buy dispatch as an auction?
+classical Korz. And the auction is already running in this repo:
+MOOLLM cards are bundles of Sims advertisements — guarded (`condition`)
+and scored (`score`) — i.e. Korz slots with the precedence declared
+numerically instead of derived structurally. See
+[korz-prime §What are cards?](korz-prime.md). **ASK:** would he buy
+dispatch as an auction?
 
 **Can the LLM be the Korz interpreter, the way MOOLLM interprets Self?**
 MOOLLM applies LLMs to executing Self with inferencing extensions:

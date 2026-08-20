@@ -310,6 +310,85 @@ it **advertises** which slots exist and how to invoke them from a
 typical context. Add dimensions to the card's guard and you've
 declared which subjective object you're looking at.
 
+**A card is a bundle of Sims advertisements — guarded and scored.**
+Look at the troll's advertisement shape: `action` (selector),
+`condition` (guard), `score` (weight), `effect` (body). That is a
+Korz slot with one addition Korz doesn't have: the **explicit score**.
+Korz derives precedence structurally — unique most-specific wins, ties
+are errors; The Sims declared it numerically — every object advertises
+scored actions, every Sim re-weights the scores through its own needs
+and personality, and dithers among the top few. So MOOLLM cards have
+been doing Korz dispatch all along, on roughly one dimension, with an
+**auction instead of a lattice** — which is exactly the korz-notes ASK
+("would he buy dispatch as an auction?") already running in
+production. The score is where the two resolution strategies meet:
+lattice specificity is a score the guard structure computes;
+advertisement scoring is a lattice the designer flattens by hand; the
+soft tier's relevance sampling interpolates between them.
+
+### Dropping interface files — accretion, state, pointers
+
+How does dropping `ROOM.yml`, `CHARACTER.yml`, `HTML-RENDERER.yml`
+into a directory actually work? **By accretion, with no
+registration.** The directory is the object; the filename is the
+interface ID; QueryInterface is a stat call — `ls` is reflection.
+Drop the file in and the object grows a queryable facet without
+touching anything that was already there
+([Directory-as-IUnknown](https://github.com/SimHacker/moollm/blob/main/designs/DIRECTORY-AS-IUNKNOWN.md)
+calls this design by accretion). In the Korz reading, dropping an
+interface file **pours new slots into the sea** pre-guarded by the
+directory's address coordinates: an `HTML-RENDERER.yml` under
+`troll/` arrives already guarded `{rcvr: troll*}`; its own keys add
+`{medium: html}`.
+
+**Yes, they carry state as well as declarations** — that's the
+inside-out-COM point. COM hid state behind interface methods; MOOLLM
+inverts it: the directory is visible state, and the interface file is
+both a contract *and* a place to keep the facet's own slots. A
+`ROOM.yml` holds exits, contents, and mood (state) next to its
+protocol hooks (declarations). COM even has the precedent for facet-
+private state: **tear-off interfaces**, created on demand with their
+own storage — dropping `HTML-RENDERER.yml` with a `theme:` block is a
+tear-off that persists. In Korz terms the distinction dissolves
+anyway: state is slots with data bodies, declarations are slots with
+guard templates, and both float in the same sea.
+
+**And yes, they point to other files** — pointers are just slots
+whose bodies are addresses. The idiom is everywhere already:
+`prototype:` and `parents:` (delegation), `script:` in CARD methods
+(behavior lives in a sibling file), `see_also:` (associative edges),
+the troll instance's pointer-file visa. Shared state between facets
+is the same move: `ROOM.yml` and `BUSINESS.yml` both pointing at
+`inventory.yml` is COM aggregation with the sharing visible in the
+open. One worked example, all three at once:
+
+```yaml
+# HTML-RENDERER.yml — dropped into troll/; the facet arrives by accretion
+interface:
+  id: html-renderer
+  query: {medium: html}        # + {rcvr: troll*} free, from the address
+
+state:                         # tear-off state, private to this facet
+  theme: bridge-gothic
+  last_rendered: 2026-08-20    # facet remembers; directory persists it
+
+pointers:                      # slots whose bodies are addresses
+  template: ../shared/character-page.tmpl.html
+  heads_widget: ./heads-gauge.js   # renders the live fronting weights
+  shares: ../CHARACTER.yml         # reads the same soul every facet reads
+
+advertisements:
+  - action: RENDER
+    score: 80
+    condition: "medium: html AND observer wants a page"
+    effect: "Emit the troll's page; heads drawn at current weights."
+```
+
+Query it, and the directory answers as an HTML renderer; delete the
+file, and that facet of the object simply ceases — no deregistration,
+no dangling vtable, and every other reading of the directory
+untouched.
+
 The Zork compiler (above) is what turns a SKILL-level slot space into
 strict-tier Korz — CARD and GLANCE survive as the human/LLM-facing
 views; the compiled sea is what the VM runs.
