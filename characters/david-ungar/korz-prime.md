@@ -38,6 +38,7 @@ the same respect class.ps paid the PostScript interpreter. Itemized:
 | Directory tree | Sea of slots; containment is a guard |
 | Filename prefixes + sort order | Implicit subtrees; cheapest specificity index |
 | Filename suffix | Type declaration on the reader dimension |
+| URL fragments — `#row=`, JSON Pointer, `#t=`, `#xywh=` | The guard chain continuing inside the file — intra-file coordinates |
 | `ls` | The mirror — reflection, advertisement index |
 | YAML comments | Load-bearing semantics (Korz Jazz) |
 | `git log` / `diff` / `bisect` | Time dimension, change protocol, time-travel debugger |
@@ -250,6 +251,49 @@ recipe — prefix path says *what it's about* (semantic address,
 big-endian), suffix says *how to perceive it* (type, little-endian
 caboose) — and MIME types turn out to have been coordinate guards
 worn on the name all along.
+
+### Fragments — the path drills through the file boundary
+
+Paths don't stop at files. URLs continue inside with `#` and `?`,
+and the internet already standardized the per-format drill-down:
+[RFC 7111](https://www.rfc-editor.org/rfc/rfc7111) gives CSV
+`#row=2-5`, `#col=3`, `#cell=4,2` — row, column, cell, region;
+[JSON Pointer](https://www.rfc-editor.org/rfc/rfc6901) gives
+`#/defs/troll/greet`, the `$ref` idiom JSON Schema runs on;
+[RFC 5147](https://www.rfc-editor.org/rfc/rfc5147) gives plain text
+`#line=10,20` (GitHub's `#L10-L20` is folk practice of the same);
+[W3C Media Fragments](https://www.w3.org/TR/media-frags/) give
+`#t=10,20` into a video and `#xywh=160,120,320,240` into an image —
+drilling by time and by pixel region. One uniform notation, cross
+syntax, XPath's ambition done federated: **as easy and as cheap to
+point at a cell as at the file as at the directory.**
+
+In the Korz reading the fragment is the guard chain continuing past
+the file boundary. The directory supplied coarse coordinates, the
+filename prefix finer ones, the suffix picked the reader — and the
+fragment addresses *within the reader's own coordinate system*:
+`#cell=4,2` is `{row: 4, col: 2}` worn on the address, a hyperslab
+range is a region guard. Every address is a guard vector at
+successively finer grain, and the file boundary is not a wall — just
+the point where the dimension vocabulary changes.
+
+**Higher-dimensional spreadsheets exist, and the best one is a
+directory tree.** CSV never grew an N-D extension worth having; the
+real lineage is HDF5/NetCDF — named dimensions, hierarchical groups,
+an internal filesystem with `#/group/dataset` paths plus hyperslab
+selection — and **Zarr**, which stores an N-D array as a directory
+tree of chunk files where *the chunk's coordinates are its filename*.
+That's our head-tilt running in reverse: the array world looked at a
+directory and saw a tensor. Or skip formats entirely and fold a flat
+file numpy-style — shape, strides, rowbytes: three integers turn
+bytes into any rank you like, the oldest lesson in the business that
+**dimensionality is a reading, not a property of the bytes**. And the
+pun that isn't one: array *dimensions* and Korz *dimensions* unify.
+A context vector is an index tuple into a sparse, high-dimensional,
+semantically indexed array; the sea of slots is a sparse tensor whose
+axes have names like `mood` and `world`; a dense numeric array is
+just the corner of the sea where every coordinate happens to be an
+integer and every cell happens to be full.
 
 ### Names are inheritance
 
