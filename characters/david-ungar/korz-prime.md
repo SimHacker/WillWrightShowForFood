@@ -280,7 +280,16 @@ the repo is RAM, and the resident page is the file — except this
 cache is **editable and learnable**: pages are yaml-jazz with
 provenance (search date, sources, who distilled), humans and LLMs
 correct them in place, git versions every refinement, and a page
-that's wrong gets *fixed*, not just evicted. Cache policy falls out
+that's wrong gets *fixed*, not just evicted. And because paging in
+is a commit, every page-in can go through a pull request — **the PR
+review agent is the memory integrity checker**: it reads the new
+resident page's provenance, checks claims against the cited sources,
+and catches a bad page *before it becomes resident* — ECC for the
+K-line cache, except the parity check is a literate review with
+comments, and the correction is a diff. Hallucinations that survive
+distillation still have to survive review; and unlike DRAM, a page
+that passes review is *better* than the backing store it came from,
+because a reviewer signed it. Cache policy falls out
 of the two signals already on hand: page in when isKnown is low and
 usage is high; leave latent when isKnown is high (the training data
 is the file); a paged K-line serves both tiers at once — the strict
