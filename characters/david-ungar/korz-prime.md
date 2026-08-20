@@ -200,6 +200,35 @@ crystallization into a real file once its improvised referent
 stabilizes. Dangling pointers become deopt triggers instead of
 segfaults.
 
+**isNull becomes isKnown.** With path pointers the presence test is
+boolean — the file exists or it doesn't. With K-line pointers the
+question generalizes: not *is it null* but **how known is it** —
+`isNull: bool ⇒ isKnown: float`. `mood: gezellig` activates deep,
+dense, consistent training knowledge; `layout: zorbleflax` activates
+nothing; `theme: bridge-gothic` sits in between — composable from
+parts, but no canonical referent. Measurable, too: ask the model to
+describe the referent several times and score the agreement
+(consistency probing), or read the logprobs directly; cheap
+conversational version and instrumented version of the same test.
+What it buys:
+
+- **Guards can threshold on knownness** — `template: {kline:
+  gothic-victorian-newspaper, min_known: 0.6}` matches only when the
+  referent is solid enough to trust. The korz-notes null question
+  ("no null coordinate — missing feature or dodged bullet?") gets a
+  third answer: neither null nor absence, but *graded presence*.
+- **Crystallization gets its policy signal.** High isKnown → safe to
+  leave latent (the training data is the file). Low isKnown → spell
+  it once, in a real file — which is the
+  [no-ai-humansplaining](https://github.com/SimHacker/moollm/tree/main/skills/no-ai-humansplaining)
+  test ("is the pointee in latent space?") turned from a heuristic
+  into a compiler policy with a threshold.
+- **Improvisation scales its own caution.** The soft tier can lower
+  its temperature as isKnown drops — confident riffing on gezellig,
+  careful literalism near zorbleflax — instead of hallucinating with
+  uniform confidence. State the confidence as a number, then act on
+  it: calibrated dereferencing.
+
 ## Zorkizing Adventure
 
 Knuth literate-ized Adventure: his CWEB edition of Crowther & Woods's

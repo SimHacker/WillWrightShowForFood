@@ -79,7 +79,12 @@ as a named implicit parameter), *constrained* (present and at least
 that specific). Less context ⇒ only more-generic slots match, down to
 the zero-dimensional procedural case. But there is **no null
 coordinate**: you can't bind `location: none` to mask specific slots,
-or guard on absence. **ASK:** missing feature or dodged bullet?
+or guard on absence. The soft tier offers a third option beyond
+null/absence: **graded presence** — with K-line referents the test is
+not `isNull: bool` but `isKnown: float`, and guards can threshold on
+it (see [korz-prime](korz-prime.md) §isNull becomes isKnown).
+**ASK:** missing feature or dodged bullet — or a boolean shadow of a
+continuous question?
 
 **Is Korz a discipline for using Self multidimensionally, or a new
 quark in Self's atom?**
