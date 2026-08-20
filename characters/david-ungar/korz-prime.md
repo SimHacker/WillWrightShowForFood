@@ -16,6 +16,50 @@ dispatch must be decidable. Alternative naming scheme, via the
 anagram: the deterministic tier is **Korz**, the LLM tier is **Zork**.
 Korz compiles; Zork improvises.
 
+## Interpret, don't invent
+
+The method throughout this document, stated once so every section
+can lean on it: **no new mechanisms — only new readings of
+mechanisms already deployed.** What we are really building is a way
+of *tilting your head in multiple dimensions at once*, so that an
+ordinary directory tree of ordinary files reads as a tag-soup Korz
+system.
+
+The precedent is NeWS's `class.ps`, which got a full class system
+with inheritance not by extending the PostScript VM but by
+*respecting* it: the dictionary stack was already a delegation
+chain, so class.ps made dict-stack search *be* method lookup — the
+object system was a disciplined way of using what the host already
+did on every name lookup. Korz′ owes the filesystem, git, and Unix
+the same respect class.ps paid the PostScript interpreter. Itemized:
+
+| Already exists | Head-tilt reading |
+|---|---|
+| Directory tree | Sea of slots; containment is a guard |
+| Filename prefixes + sort order | Implicit subtrees; cheapest specificity index |
+| Filename suffix | Type declaration on the reader dimension |
+| `ls` | The mirror — reflection, advertisement index |
+| YAML comments | Load-bearing semantics (Korz Jazz) |
+| `git log` / `diff` / `bisect` | Time dimension, change protocol, time-travel debugger |
+| `sources/` directories | Paged-in K-lines |
+| PR review | Memory integrity check for the K-line cache |
+| The LLM | doesNotUnderstand promoted to peer dispatcher |
+
+Nothing in the left column was built for Korz′; everything in the
+right column is a way of *reading* it. And the head-tilt is
+reflexive — choosing which dimensions to read the repo along is
+itself a Korz dispatch, a context vector applied to the world. The
+discipline matters because it is the same discipline that made the
+ancestors essential rather than merely clever: Self got its power by
+*removing* — classes, variables — until only objects and messages
+remained; Korz removed the receiver and the object boundary until
+only slots and context remained. Korz′ tries to remove the last
+thing: the requirement that anything new exist at all. If a feature
+needs a mechanism the filesystem, git, and the model don't already
+supply, it doesn't belong here. A language you adopt by
+reinterpreting the repo you already have is a language whose VM is
+already installed everywhere.
+
 ## One semantics, two dispatchers
 
 Keep the Korz model exactly: a sea of slots, guards over named
