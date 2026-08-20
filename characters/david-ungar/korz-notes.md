@@ -249,10 +249,14 @@ compositionally shared. Korz diagnosis: `me` and `stackObject` are two
 hardwired dispatch dimensions — a binary multimethod frozen in the VM;
 Korz generalizes to N, addable later. The verb lives in the direct
 object. And Zork got there first: ZIL dispatches every turn through
-PRSA/PRSO/PRSI — verb, direct object, indirect object — with a fixed
-action-routine cascade (room, indirect, direct, verb default). Three
+PRSA/PRSO/PRSI — verb, direct object, indirect object — plus WINNER
+(the character; "ROBOT, PUSH BUTTON" rebinds it) and HERE (the
+location; its action routine speaks first), with a fixed
+action-routine cascade (room, indirect, direct, verb default). Five
 hardwired dimensions and a frozen specificity order in the Z-machine,
-1979. Full riff: [korz-prime §Zorkizing Adventure](korz-prime.md).
+1979 — and character + location are exactly the pair MOOLLM reifies
+as directories. Full riff:
+[korz-prime §Zorkizing Adventure](korz-prime.md).
 **ASK:** did the Korz team know they were generalizing two shipped
 game VMs — and that one of them spells the language's name?
 

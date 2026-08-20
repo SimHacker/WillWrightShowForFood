@@ -173,19 +173,33 @@ reader can enjoy.
 
 And Zork itself decomposes into Korz with almost no force. ZIL
 dispatches every turn through parser globals — **PRSA** (the verb),
-**PRSO** (direct object), **PRSI** (indirect object) — and runs a
-fixed most-specific-first cascade of action routines: roughly the
-room speaks first (`M-BEG`), then the indirect object's handler, then
-the direct object's, then the verb's default. That is symmetric
-dispatch over an implicit context with no privileged receiver —
-**three hardwired dimensions and a frozen specificity order, shipped
-in the Z-machine in 1979**. The Sims froze two dimensions (`me` and
-`stackObject` — see [korz-notes](korz-notes.md)); Zork froze three,
-sixteen years earlier. Korz generalizes to N: verb, actors, objects,
-room, light, and the clock (daemons and fuses become slots guarded on
-a time dimension) all become ordinary addable dimensions, the cascade
-becomes the specificity lattice, and "you can't get there from here"
-degrades from error to improvisation in the soft tier. **Korz may be
+**PRSO** (direct object), **PRSI** (indirect object) — plus two more
+implicit context globals the parser keeps bound: **WINNER**, the
+character (say "ROBOT, PUSH BUTTON" in Zork II and the parser rebinds
+WINNER to the robot — same verb, same object, different dispatch),
+and **HERE**, the location (the current room, whose action routine
+speaks first via `M-BEG`). Then a fixed most-specific-first cascade:
+roughly the room, the indirect object's handler, the direct object's,
+the verb's default. That is symmetric dispatch over an implicit
+context with no privileged receiver — **five hardwired dimensions —
+verb, direct object, indirect object, character, location — and a
+frozen specificity order, shipped in the Z-machine in 1979**. The
+Sims froze two dimensions (`me` and `stackObject` — see
+[korz-notes](korz-notes.md)); Zork froze five, sixteen years earlier.
+Korz generalizes to N: those five, plus light and the clock (daemons
+and fuses become slots guarded on a time dimension), all become
+ordinary addable dimensions, the cascade becomes the specificity
+lattice, and "you can't get there from here" degrades from error to
+improvisation in the soft tier.
+
+**Character and location are the load-bearing pair.** They're the two
+dimensions MOOLLM already reifies as first-class directories —
+`characters/` and rooms, the adventure-game pair — which is why the
+hosting section below works: the filesystem tree *is* those two
+dimensions spatialized (containment is a guard; a character directory
+is a standing `rcvr` binding). Zork bound them as globals; MOOLLM
+binds them as addresses; Korz names them as ordinary dimensions and
+lets you add the rest. **Korz may be
 the ultimate adventure modeling and scripting language** — the
 [GAME-PIECES](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
 thesis stated as a language claim, and the anagram closing into a
