@@ -34,7 +34,7 @@ it to Self's dynamic deoptimization — see
 
 | File | What | Source | sha256 |
 |---|---|---|---|
-| [`jit.md`](jit.md) | The main brain dump, March 2021 (updated November 2023), extracted to plain Markdown for reading here | body of `jit.md.html` | `4587755f…` |
+| [`jit.md`](jit.md) | The main brain dump, March 2021 (updated November 2023), extracted to plain Markdown for GitHub reading — `<script>` blocks and Markdeep live counters omitted; see `jit.md.html` for interactive benchmarks | body of `jit.md.html` | `b6da6a42…` |
 | [`jit.md.html`](jit.md.html) | The original [Markdeep](https://casual-effects.com/markdeep/) file, verbatim | [squeak.js.org/docs/jit.md.html](https://squeak.js.org/docs/jit.md.html) | `a93fe2f0…` |
 | [`jit-ideas-wiki.md`](jit-ideas-wiki.md) | The earlier "before" sketch she linked from the top of the brain dump | [SqueakJS wiki: JIT Ideas…](https://github.com/codefrau/SqueakJS/wiki/JIT-Ideas-...) | `7d548284…` |
 | [`jit-perf.js`](jit-perf.js) | The benchFib mockup benchmark (November 2023 update) — hand-written "JIT output" showing the optimizations in runnable form | [gh-pages/docs/jit-perf.js](https://github.com/codefrau/SqueakJS/blob/gh-pages/docs/jit-perf.js) | `d0913645…` |
@@ -46,7 +46,7 @@ All fetched 2026-07-20. Full hashes:
 7d5482840401ba6b23b99d2e7aa6d69847917e8c623dde9884a7728138317e42  jit-ideas-wiki.md
 252d349ba0b1aa915b9e5ce5dafe0961cf02a0c0024c0ba6fafb37a0e553ae5a  jit-perf.html
 d0913645d21ee23e91e9cf989ab42c79fcff43589a9945ce8fdf60027902afaf  jit-perf.js
-4587755fed8f72527dca673f2428d36eebe1c5f269b5abe80ee711862983d77a  jit.md
+b6da6a423f9207ab07e9267fc0cd2b9c478b45094dd8678a8f37b96bec04af3b  jit.md
 a93fe2f08b78c36767cb79b33b371867ea84f211c142ab08f5c5620f9d8499ac  jit.md.html
 ```
 

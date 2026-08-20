@@ -4,6 +4,9 @@ This is a much-more detailed version of the ideas outlined [before](https://gith
 
 # Context Mapping
 
+> **Reading note:** Interactive Fibonacci benchmarks and mockup harnesses in the original [Markdeep edition](jit.md.html) run in the browser. This Markdown copy is for GitHub reading; `<script>` blocks from the original are omitted here. Runnable consolidated mockup: [jit-perf.html](jit-perf.html).
+
+
 ## Contexts are slow
 
 In Smalltalk, every send conceptually creates a new Context object referencing its sender, holding a method (for referencing literals) and an instruction pointer, as well as fields for the receiver (to access instance variables), arguments, and temporary variables of the activated method. There is also a variable-sized stack area for holding intermediate computation results and parameters to be passed as arguments to other methods.
@@ -26,7 +29,7 @@ So while we could attempt a traditional Context-to-Stack mapping approach to spe
 
 To gauge if this makes a significant difference, let's do a little benchmark. We'll implement the same send-heavy algorithm once with passing arguments on a stack, and once passing them as arguments:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 const stack = [];
 function benchFibStack() {
     let n = stack.pop();
@@ -41,12 +44,12 @@ function benchFibStack() {
         stack.push(stack.pop() + stack.pop());
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[Fibonacci benchmark passing args via stack: <span id="fibStack">?</span> million sends/s in this browser]
+```
+*(Stack version: run the live benchmark in [jit.md.html](jit.md.html) — typically slower than the args version below.)*
 
 As opposed to the hopefully more efficient
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 function benchFibArgs(n) {
     let result;
     if (n < 2) result = 1;
@@ -58,68 +61,10 @@ function benchFibArgs(n) {
     }
     return result;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[Fibonacci benchmark passing args directly: <span id="fibArgs">?</span> million sends/s in this browser]
+```
+*(Args version: run the live benchmark in [jit.md.html](jit.md.html).)*
 
-<script>
-const stack = [];
-function benchFibStack() {
-    let n = stack.pop();
-    if (n < 2) { stack.push(1); }
-    else {
-        stack.push(n - 1);
-        benchFibStack();
-        stack.push(n - 2);
-        benchFibStack();
-        stack.push(stack.pop() + stack.pop());
-        stack.push(1);
-        stack.push(stack.pop() + stack.pop());
-    }
-}
-
-function benchFibArgs(n) {
-    let result;
-    if (n < 2) result = 1;
-    else {
-        let tmp0 = benchFibArgs(n - 1);
-        let tmp1 = benchFibArgs(n - 2);
-        let tmp2 = tmp0 + tmp1;
-        result = tmp2 + 1;
-    }
-    return result;
-}
-
-var cache = [];
-function benchFibCache(n) {
-    let result;
-    if (n < 2) result = 1;
-    else {
-        let tmp0 = cache[0](n - 1);
-        let tmp1 = cache[0](n - 2);
-        let tmp2 = tmp0 + tmp1;
-        result = tmp2 + 1;
-    }
-    return result;
-}
-cache.push(benchFibCache);
-
-const results = [];
-for (const [result, f] of [
-    [fibArgs, n => benchFibArgs(n)],
-    [fibStack, n => { stack.push(n); benchFibStack(); return stack.pop() }],
-    [null, n => cache[0](n)],
-]) {
-    let t = Date.now();
-    const sends = f(32);    // ~7 million sends
-    t = Date.now() - t;
-    if (result) result.innerText = (sends / t / 1000).toFixed(0);
-    results.push(t);
-}
-</script>
-
-The caption of these code blocks should show the performance of `benchFib()` in this browser. Typically, the stack version is 2.5x-5x times slower than the argument-passing version (<span id="factor">?</span>x slower in this browser, reload the page to get more accurate results).
-
-<script>factor.innerText = (results[1] / results[0]).toFixed(1)</script>
+In the [Markdeep edition](jit.md.html), the caption under each code block shows live `benchFib()` numbers for this browser. Typically, the stack version is 2.5×–5× slower than the argument-passing version.
 
 Since the whole point of implementing a new JIT is speed, we might as well try to use the fastest option possible.
 
@@ -179,7 +124,7 @@ For our Javascript implementation, closure variables seem like a natural place t
 
 For each send, we store the receiver class, the lookup result (method), and the jitted function of that method. On each invocation we need to verify that the receiver is still of the same class, and if it is, we can directly call the function. Only if the class does not match do we need to perform the lookup (and in that case, the global cache will help).
 
-~~~~~~~~~~~~~~~~~~~~
+```
 var cachedClass=null, cachedMethod, cachedFunc;
 if (cachedClass !== receiver.sqClass) {
     cachedClass = receiver.sqClass;
@@ -187,8 +132,7 @@ if (cachedClass !== receiver.sqClass) {
     cachedFunc = vm.compile(cachedMethod);
 }
 cachedFunc(...);
-~~~~~~~~~~~~~~~~~~~~
-
+```
 One detail here is that this needs to work for both full Squeak objects that have a `sqClass` property, and SmallIntegers, which are represented as Javascript numbers. For them, `receiver.sqClass` will be `undefined`. To make the initial check fail, we initialize `cachedClass` to `null` instead of the default `undefined`. And inside of `vm.lookup()`, an `undefined` class will be treated as `SmallInteger`.
 
 ## Polymorphic Inline Caching
@@ -204,24 +148,21 @@ We do not want to compile every method on its first encounter, because compilati
 So even though for now we punt on implementing PICs (which naturally undergo an evolution from mono- to poly- to megamorphic), we still need to relink send sites. Unlike the C VM we cannot simply patch something in the middle of a Javascript function. But function references are held in variables, and we can re-assign variables.
 
 So instead of simply storing the compiled function in the cache
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 cachedFunc = vm.compile(cachedMethod);
-~~~~~~~~~~~~~~~~~~~~
+```
 we give the compiler a way to later replace the function with an optimized version:
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 vm.compile(cachedMethod, f => cachedFunc = f);
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Alternatively, we don't use individual variables for these, and use an array instead. Then the VM can do both the lookup and compilation in one go, and update the cache:
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 if (cache[0] !== receiver.sqClass) {
     vm.lookupAndCompile(cache, receiver.sqClass, selector, supered);
 }
 cache[2](...);
-~~~~~~~~~~~~~~~~~~~~
-This simplifies the generated code quite a bit, but we should measure the impact of calling functions from an array vs from a variable (in this browser performance appears to be <span id="cached">?</span>% of direct calls). Typically, it is about the same.
-
-<script>cached.innerText = (results[0] * 100 / results[2]).toFixed(0)</script>
+```
+This simplifies the generated code quite a bit, but we should measure the impact of calling functions from an array vs from a variable. The [Markdeep edition](jit.md.html) runs a live comparison in the browser; typically, performance is about the same.
 
 Regarding optimal performance, we should pay attention to Slava Egorov's JS Conf talk about dynamic dispatch ([Video](http://2014.jsconf.eu/speakers/vyacheslav-egorov-invokedynamic-js.html) and [Slides](http://mrale.ph/talks/jsconfeu2014/)). The scheme outlined here is partly inspired by that talk.
 
@@ -244,7 +185,7 @@ However, we are not compiling to low-level machine code that will be executed as
 
 This is actually another argument for using the context-to-var mapping instead of using a stack. Consider what our current JIT generates for the expression `3 + 4`:
 
-~~~~~~~~~~~~~~~~~~~~
+```
 stack = vm.activeContext.pointers;
 lit = method.pointers;
 
@@ -254,22 +195,22 @@ var a = stack[vm.sp - 1], b = stack[vm.sp];
 if (typeof a === 'number' && typeof b === 'number') {
    stack[--vm.sp] = vm.primHandler.signed32BitIntegerFor(a + b);
 } else { ... }
-~~~~~~~~~~~~~~~~~~~~
+```
 This does not give the JS JIT much to work with. If instead we use temp vars instead of a stack, and resolve the literals at compile time:
-~~~~~~~~~~~~~~~~~~~~
+```
 t0 = 3;
 t1 = 4;
 var a = t0, b = t1;
 if (typeof a === 'number' && typeof b === 'number') {
    t0 = vm.primHandler.signed32BitIntegerFor(a + b);
 } else { ... }
-~~~~~~~~~~~~~~~~~~~~
+```
 In this case the JS JIT can infer that indeed `a` and `b` are both numbers so it can omit generating the `else` case completely and replace the whole thing with
-~~~~~~~~~~~~~~~~~~~~
+```
 t1 = vm.primHandler.signed32BitIntegerFor(7);
-~~~~~~~~~~~~~~~~~~~~
+```
 We could go even further and inline part of the `signed32BitIntegerFor` call:
-~~~~~~~~~~~~~~~~~~~~
+```
 t0 = 3;
 t1 = 4;
 var a = t0, b = t1;
@@ -277,28 +218,26 @@ if (typeof a === 'number' && typeof b === 'number') {
     a += b;
     t0 = a >= -0x40000000 && a <= 0x3FFFFFFF ? a : vm.makeLarge(a);
 } else { ... }
-~~~~~~~~~~~~~~~~~~~~
+```
 which would allow the JS JIT to reduce this to
-~~~~~~~~~~~~~~~~~~~~
+```
 t0 = 7;
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Our guiding principle will be to keep our own optimizations to a minimum in order to have quick compiles, but structure the generated code in a way so that the host JIT can perform its own optimizations well.
 
 # Sketching a JIT
 
 With all that in mind, let's imagine what a jitted method could look like. Maybe for `Integer>>benchFib`:
 
-~~~~~~~~~~~~~~~~~~~~
+```
 benchFib
 	^ self < 2
 		ifTrue: [1]
 		ifFalse: [(self - 1) benchFib + (self - 2) benchFib + 1]
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Bytecodes:
 
-~~~~~~~~~~~~~~~~~~~~
+```
  0 <70> push: self
  1 <77> pushConst: 2
  2 <B2> send: #<
@@ -317,13 +256,12 @@ Bytecodes:
 16 <76> pushConst: 1
 17 <B0> send: #+
 18 <7C> return: topOfStack
-~~~~~~~~~~~~~~~~~~~~
-
+```
 ## Current JIT
 
 This is what the _current_ JIT generates, using the indexed fields of the real context object as stack (`vm.activeContext.pointers`):
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 function Integer_benchFib(vm) {
     // Integer>>benchFib
     var context = vm.activeContext;
@@ -378,13 +316,12 @@ function Integer_benchFib(vm) {
     default: vm.interpretOne(true); return;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 ## Idea: context proxy and inline caches
 
 Here is the same method with a context proxy and inline caches:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 var cache = new Array(3*7).fill(null);  // [class, method, function]
 function Integer_benchFib(vm, depth, sender, method, closureOrNil, rcvr) {
     var pc = 0;
@@ -489,15 +426,14 @@ function Integer_benchFib(vm, depth, sender, method, closureOrNil, rcvr) {
         return t1;
     }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 The main difference here is that the stack is "virtualized", and that method lookups are cached.
 
 The stack contents is held in temp vars (`t1`-`t3`) and the `thisProxy` function allows indexed access. The stack pointer is virtualized as well based on the `pc`. When the actual context is needed, `thisContext` is created on the fly. That would be a real context object, but it would hold onto the `thisProxy` function to fetch the actual values.
 
 The inline cache holds the result of the previous method lookup. Each cache line has 3 entries: a class, a method, and a function. If the receiver class is the same as in a previous invocation, the method and function are used without lookup. Otherwise, `vm.updateCache()` is invoked to do the method lookup and compilation. The result is written to the cache. To reduce the number of closure variables, a single `cache` array per method holds the entries for all its send sites.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 updateCache(cache, index, cls, selector, supered) {
     var method = this.lookup(cls, selector, supered);
     var func = method.compiled || this.compile(method);
@@ -505,167 +441,10 @@ updateCache(cache, index, cls, selector, supered) {
     cache[index+1] = method;
     cache[index+2] = func;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 ### Performance estimate
 
-Running the code above in a mockup harness on this browser shows a performance of <span id="mockup">?</span> million sends/s. You may inspect the browser's console to see the context inspection working -- once every million sends, the full context call chain is logged. You could also play with the code at https://codepen.io/codefrau/pen/JjbmVGw
-
-<script>
-    const mockMethod = {
-        pointers: [0, { sqClass: "Symbol", value: "benchFib" }],
-        source: `
-var cache = new Array(3*7).fill(null);  // [class, method, function]
-function Integer_benchFib(vm, depth, sender, method, closureOrNil, rcvr) {
-    var pc = 0;
-    var thisContext, t1, t2, t3;
-    function thisProxy(op, index, value) {
-        switch(op) {
-            case "read":
-                switch (index) {
-                    case 0: return sender;
-                    case 1: return pc;
-                    case 2: /* stackp */ return [0,1,2,1,0,1,0,1,2,1,1,2,3,2,2,1,2,1][pc];
-                    case 3: return method;
-                    case 4: return closureOrNil;
-                    case 5: return rcvr;
-                    case 6: return t1;
-                    case 7: return t2;
-                    case 8: return t3;
-                    default:
-                        if (index === -1) {
-                            if (!thisContext) thisContext = vm.makeContext(thisProxy);
-                            return thisContext;
-                        }
-                        throw Error();
-                }
-            case "write": switch(index) {
-                case 0: sender = value; return;
-                case 1: pc = value; return;
-                case 2: stackp = value; return;
-                case 3: method = value; return;
-                case 4: closureOrNil = value; return;
-                case 5: rcvr = value; return;
-                case 6: t1 = value; return;
-                case 7: t2 = value; return;
-                case 8: t3 = value; return;
-                default:
-                    if (index === -1 && !thisContext) { thisContext = value; return; }
-                    throw Error();
-            }
-            case "invalidate":
-                cache.fill(null);
-                return;
-        }
-    }
-    // handleDepthAndInterrupts checks nesting depth and context switches.
-    // If necessary it uses thisProxy to reify this context (and possibly its senders)
-    depth++; if (--vm.interruptCheckCounter <= 0 && vm.handleDepthAndInterrupts(depth, thisProxy) === true) return false;
-    while (true) switch (pc) {
-    case 0:
-        t1 = rcvr;
-        t2 = 2;
-        if (typeof t1 === 'number' && typeof t2 === 'number') { t1 = t1 < t2 ? vm.trueObj : vm.falseObj; }
-        else {
-            if (cache[3*0] !== t1.sqClass) vm.updateCache(cache, 3*0, t1.sqClass, vm.specialSendSelector[2], false); // #<
-            pc = 3; t1 = cache[3*0+2](vm, depth, thisProxy, cache[3*0+1], null, t1, t2); if (t1 === false) return false;
-        }
-    case 3:
-        if (t1 === vm.falseObj) {pc = 7; continue}
-        else if (t1 !== vm.trueObj) {
-            if (cache[3*1] !== t1.sqClass) vm.updateCache(cache, 3*1, t1.sqClass, vm.specialObjects[25], false); // #mustBeBoolean
-            pc = 4; t1 = cache[3*1+2](vm, depth, thisProxy, cache[3*1+1], null, t1); if (t1 === false) return false;
-        }
-    case 4:
-        t1 = 1;
-        pc = 18; continue;
-    case 7:
-        t1 = rcvr;
-        t2 = 1;
-        if (typeof t1 === 'number' && typeof t2 === 'number') { t1 -= t2 ; t1 >= -0x40000000 && t1 <= 0x3FFFFFFF ? t1 : vm.makeLarge(t1); }
-        else {
-            if (cache[3*2] !== t1.sqClass) vm.updateCache(cache, 3*2, t1.sqClass, vm.specialSendSelector[1], false); // #-
-            pc = 10; t1 = cache[3*2+2](vm, depth, thisProxy, cache[3*2+1], null, t1, t2); if (t1 === false) return false;
-        }
-    case 10:
-        if (cache[3*3] !== t1.sqClass) vm.updateCache(cache, 3*3, t1.sqClass, method.pointers[1], false); // #benchFib
-        pc = 11; t1 = cache[3*3+2](vm, depth, thisProxy, cache[3*3+1], null, t1);
-        if (t1 === false) return false;
-    case 11:
-        t2 = rcvr;
-        t3 = 2;
-        if (typeof t2 === 'number' && typeof t3 === 'number') { t2 -= t3 ; t2 >= -0x40000000 && t2 <= 0x3FFFFFFF ? t2 : vm.makeLarge(t2); }
-        else {
-            if (cache[3*4] !== t2.sqClass) vm.updateCache(cache, 3*4, t2.sqClass, vm.specialSendSelector[2], false); // #-
-            pc = 14; t2 = cache[3*4+2](vm, depth, thisProxy, cache[3*4+1], null, t2, t3); if (t2 === false) return false;}
-    case 14:
-        if (cache[3*5] !== t2.sqClass) vm.updateCache(cache, 3*5, t2.sqClass, method.pointers[1], false); // #benchFib
-        pc = 15; t2 = cache[3*5+2](vm, depth, thisProxy, cache[3*5+1], null, t2);
-        if (t2 === false) return false;
-    case 15:
-        if (typeof t1 === 'number' && typeof t2 === 'number') { t1 += t2 ; t1 >= -0x40000000 && t1 <= 0x3FFFFFFF ? t1 : vm.makeLarge(t1); }
-        else {
-            if (cache[3*6] !== t1.sqClass) vm.updateCache(cache, 3*6,t1.sqClass, vm.specialSendSelector[0], false);  // #+
-            pc = 16; t1 = cache[3*6+2](vm, depth, thisProxy, cache[3*6+1], null, t1, t2); if (t1 === false) return false;
-        }
-    case 16:
-        t2 = 1;
-        if (typeof t1 === 'number' && typeof t2 === 'number') { t1 += t2 ; t1 >= -0x40000000 && t1 <= 0x3FFFFFFF ? t1 : vm.makeLarge(t1); }
-        else {
-            if (cache[3*7] !== t1.sqClass) vm.updateCache(cache, 3*7, t1.sqClass, vm.specialSendSelector[0], false); // #+
-            pc = 18; t1 = cache[3*7+2](vm, depth, thisProxy, cache[3*7+1], null, t1, t2); if (t1 === false) return false;
-        }
-    case 18:
-        return t1;
-    }
-}
-return Integer_benchFib;
-`};
-    const mockVM = {
-        trueObj: { sqClass: "True" },
-        falseObj: { sqClass: "False" },
-        updateCache(cache, index, cls, selector, supered) {
-            var method = this.lookup(cls, selector, supered);
-            var func = method.compiled || this.compile(method);
-            cache[index] = cls;
-            cache[index+1] = method;
-            cache[index+2] = func;
-        },
-        lookup(cls, selector, supered) {
-            if (selector.value === "benchFib") return mockMethod;
-            throw Error("method not found: ", selector.value)
-        },
-        compile(method) {
-            if (!method.compiled) {
-                const compiler = new Function(method.source);
-                method.compiled = compiler();
-            }
-            return method.compiled;
-        },
-        interruptCheckCounter: 1000,
-        handleDepthAndInterrupts(depth, ctxProxy) {
-            this.interruptCheckCounter = 1000000;
-            console.log("interrupt check, depth: ", depth);
-            while (ctxProxy) {
-                console.log(depth, this.printContext(ctxProxy));
-                ctxProxy = ctxProxy("read", 0); // sender
-                depth--;
-            }
-        },
-        printContext(proxy) {
-            const stack = [];
-            for (let i = 0; i < proxy("read", 2); i++) stack.push(proxy("read", 6+i));
-            return `pc: ${proxy("read", 1)} stack: [${stack.join(' ')}]`;
-        },
-        makeLarge(n) { return { sqClass: "LargeInt", value: n }},
-    };
-    let t = Date.now();
-    const mockFunc = mockVM.compile(mockMethod);
-    const sends = mockFunc(mockVM, 0, null, mockMethod, null, 32);    // ~7 million sends
-    t = Date.now() - t;
-    console.log("result:", sends);
-    mockup.innerText = (sends / t / 1000).toFixed(0);
-</script>
+Running the code above in a mockup harness ([jit.md.html](jit.md.html) or [CodePen JjbmVGw](https://codepen.io/codefrau/pen/JjbmVGw)) shows millions of sends/s in the browser. You may inspect the browser's console to see the context inspection working — once every million sends, the full context call chain is logged.
 
 On my machine:
 
@@ -719,15 +498,14 @@ There is a runnable mockup of block contexts (but not yet closures) with non-loc
 
 It implements Array>>do:
 
-~~~~~~~~~~~~~~~~~~~~
+```
 do: aBlock
     1 to: self size do:
         [:index | aBlock value: (self at: index)]
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Bytecodes:
 
-~~~~~~~~~~~~~~~~~~~~
+```
  0 <70> self
  1 <C2> send: size
  2 <6A> popIntoTemp: 2
@@ -749,11 +527,10 @@ Bytecodes:
 19 <69> popIntoTemp: 1
 20 <A3 EF> jumpTo: 5
 22 <78> returnSelf
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Jitted method:
 
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 const cache = new Array(2*7).fill(null);  // [class, function]
 const PCtoSP = [3,4,4,3,4,3,4,5,4,4,3,4,5,6,5,4,3,4,5,4,3,3,3];
 return function Array_do_(rcvr, t0) {
@@ -827,19 +604,17 @@ return function Array_do_(rcvr, t0) {
       throw frame;
     }
 };
-~~~~~~~~~~~~~~~~~~~~
-
+```
 which is used by Array>>has42
 
-~~~~~~~~~~~~~~~~~~~~
+```
 has42
     self do: [:i | i == 42 ifTrue: [^true] ].
     ^false
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Bytecodes:
 
-~~~~~~~~~~~~~~~~~~~~
+```
  0 <70> self
  1 <89> pushThisContext:
  2 <76> pushConstant: 1
@@ -856,11 +631,10 @@ Bytecodes:
 14 <CB> send: do:
 15 <87> pop
 16 <7A> return: false
-~~~~~~~~~~~~~~~~~~~~
-
+```
 JavaScript:
 
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 const cache = new Array(2*7).fill(null);  // [class, function]
 const PCtoSP = [1,2,3,4,3,3,1,0,1,2,1,0,0,1,2,1,0];
 function Array_has42(rcvr) {
@@ -953,19 +727,17 @@ function Array_has42(rcvr) {
   }
 }
 return Array_has42;
-~~~~~~~~~~~~~~~~~~~~
-
+```
 which are used in a simple DOIT
 
-~~~~~~~~~~~~~~~~~~~~
+```
 DoIt
     #(3 4 7 13) has42.
     #(3 4 42 13) has42.
-~~~~~~~~~~~~~~~~~~~~
-
+```
 Bytecodes:
 
-~~~~~~~~~~~~~~~~~~~~
+```
 0 <21> pushConstant: #(3 4 7 13)
 1 <D0> send: has42
 2 <87> pop
@@ -973,8 +745,7 @@ Bytecodes:
 4 <D0> send: has42
 5 <87> pop
 6 <78> returnSelf
-~~~~~~~~~~~~~~~~~~~~
-
+```
 The second invocation of `has42` does find a 42, it successfully does a non-local return, proving that the scheme is viable.
 
 ### Optimizing Control Flow – no `switch`
@@ -1009,13 +780,12 @@ An idea to do that is inspired by [Stopify](https://arxiv.org/abs/1802.02974). I
 
 Here is an example function from the Stopify paper:
 
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 function P(f, g, x) { return f(g(x)); }
-~~~~~~~~~~~~~~~~~~~~
-
+```
 This gets instrumented as follows:
 
-~~~~~~~~~~~~~~~~~~~~ JS
+```javascript
 var mode = 'normal';
 var stack = [];
 function P(f, g, x) {
@@ -1037,8 +807,7 @@ function P(f, g, x) {
     }
     return f(t0);
 }
-~~~~~~~~~~~~~~~~~~~~
-
+```
 _TODO: implement this on codepen_
 
 # What about ...

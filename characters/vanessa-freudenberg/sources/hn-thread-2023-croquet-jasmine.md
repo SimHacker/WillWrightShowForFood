@@ -213,7 +213,7 @@ the directory copy is the durable target.
 >
 > https://bibliography.selflanguage.org/dynamic-deoptimization.html
 >
-> That paper really blew my mind and cemented my respect for Self, in how they were able to
+> That paper really [blew my mind](https://www.youtube.com/watch?v=Le_znuXcP2M) and cemented my respect for Self, in how they were able to
 > deliver on such idealistic promises of simplicity and performance, and then oh by the way,
 > you can also debug it too.
 
