@@ -609,6 +609,37 @@ The Zork compiler (above) is what turns a SKILL-level slot space into
 strict-tier Korz — CARD and GLANCE survive as the human/LLM-facing
 views; the compiled sea is what the VM runs.
 
+### The self-revealing soup
+
+`ls`-is-a-mirror is the static claim; here is the dynamic one: the
+slot soup is a **self-revealing interface** in the pie-menu sense
+([gesture-space-self-revealing-ui](../../repo-shows/gesture-space-self-revealing-ui/)).
+A pie menu's display isn't separate from its expert gesture — the
+novice's guided walk *is* the rehearsal for the expert's blind
+stroke, same motion at different speeds. The soup works identically:
+the novice runs `ls`, reads names, descends; the expert types the
+full path unprompted. Browsing trains direct address, because the
+reveal and the invocation are the same syntax. No mode switch, no
+separate command language to graduate into — the menu *is* the
+gesture.
+
+And the reveal is **hierarchic both ways at once** — directories and
+alphabetical sorting of shared prefixes — because hierarchy in the
+soup is *revealed, not imposed*. Sorting adds nothing; it exposes
+structure the big-endian names already carry: a flat `ls` of
+prefix-clustered names reads as an outline, and `ls -R` is the same
+outline played on directories. The two axes are one mechanism at two
+temperatures: `/` is the hard separator (crystallized hierarchy —
+somebody ran `mkdir`), `-` is the soft one (implicit hierarchy —
+nobody had to). A path is a big-endian name whose separators got
+promoted; a prefix cluster is a directory that hasn't been mkdir'd
+yet; promotion and demotion are ordinary renames, and rename
+re-guards, same rule as always. So the sea is flat and hierarchic
+*simultaneously* — the hierarchy is just the cheapest saved view
+there is, the one `sort` computes for free — which is the
+interfaces-are-saved-views doctrine bottoming out in the collation
+order of the filename alphabet.
+
 ### No IDE required — bootstrapping on bare files and git
 
 Design constraint, stated flat: **this has to work with a normal
