@@ -26,8 +26,18 @@ its own transcript, play-learn-lift into the
 Source: [`sources/2026-summer-rehearsal-and-messages.md`](sources/2026-summer-rehearsal-and-messages.md)
 
 ### 0. OpenLaszlo reunion → Declare (optional group)
-[`invitation.md`](invitation.md) Option A. **What prototypes are** / live objects with Ungar +
+[`invitation.md`](invitation.md) Option B. **What prototypes are** / live objects with Ungar +
 Brad Myers + Temkin — Morphic / Caffeine next to Self, Garnet, LZX, Declare. Amsterdam-friendly.
+
+### 0.5 Korz — Smalltalk molecules, Self atoms, Korz quarks
+Don's fresh chat with Ungar (Aug 2026): **Korz**, the even-selfisher language — unintentional
+anagram of Zork; subjective programming, a sea of slots grouped along parameterized dimensions
+instead of decomposed into objects. Built at IBM, presented at Microsoft's LANG.NEXT. Deep
+material already in the repo:
+[korz-notes.md](../david-ungar/korz-notes.md) · [korz-prime.md](../david-ungar/korz-prime.md) ·
+[Onward! 2014 paper](../david-ungar/sources/korz-2014-onward.pdf).
+**Jam with Craig:** the lineage from the Smalltalker's side — what would a Korz image feel like
+to livecode? Could Caffeine host a sea of slots the way Self hosted the Korz prototype?
 
 ### 1. Show seed: `repo-shows/craig-latta/`
 Caffeine solo — walk the repo on air.

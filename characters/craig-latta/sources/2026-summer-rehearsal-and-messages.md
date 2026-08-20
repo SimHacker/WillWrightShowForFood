@@ -25,6 +25,11 @@ in citations. The session was later lifted into the reusable
   Craig had flown back on the 21st — the day after the rehearsal.
 - **Aug 20** — Craig, on seeing the repo: "Yay, happy to see your latest plans for
   WillWrightShowForFood! 🙂"
+- **Aug 20** — Don told Craig about his wonderful chat with Dave Ungar and **Korz** — the
+  even-selfisher language, unintentionally an anagram of Zork ("If Smalltalk is molecules,
+  Self is atoms, Korz is quarks!"): subjective programming, a soup of slots viewed and
+  grouped along parameterized dimensions, built at IBM, presented at Microsoft — and sent
+  the updated [invitation](../invitation.md), which now carries Korz as a topic.
 
 That last message is why the invitation frontmatter reads `consent: warm` — Craig has seen
 the plans and cheered them; the formal show ask is the next step.

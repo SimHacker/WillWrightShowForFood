@@ -69,6 +69,22 @@ really get into **what prototypes are** without the word becoming mush.
 
 Stage: [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/openlaszlo/README.md)
 
+**And Korz.** I just had a wonderful chat with Dave Ungar. He made an even *selfisher* language
+called **Korz** — unintentionally an anagram of Zork. If Smalltalk is molecules and Self is
+atoms, **Korz is quarks**: subjective programming — instead of decomposing everything into
+objects, it's a sea of slots you can view and group in many ways along parameterized
+dimensions. Kind of like, but better than, aspect-oriented programming and generic templates.
+He built it at IBM, presented it at Microsoft's LANG.NEXT
+([*Dancing with Symmetry*](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/2014-lang-next-korz-dancing-with-symmetry.md)),
+and wrote some mind-blowing papers
+([Onward! 2014](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/korz-2014-onward.pdf) ·
+[FOOL 2014](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/fool2014-korz-foundation.pdf)).
+My working notes, questions, and the LLM-age redesign:
+[korz-notes.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz-notes.md) ·
+[korz-prime.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz-prime.md).
+Smalltalk → Self → Korz next to Morphic / Caffeine / Catalyst — that's a conversation I'd love
+to have with you, with or without the full reunion cast.
+
 ## Option C — Solo: Caffeine / Keep / Cursor vs liveness
 
 - **Caffeine** — livecoding the web with SqueakJS + dynamically generated WebAssembly. Bring your
@@ -77,6 +93,8 @@ Stage: [`repo-shows/openlaszlo/`](https://github.com/SimHacker/WillWrightShowFor
 - **Keep** — Smalltalk whiteroom port of Hugh Pyle's graph memory.
   [`keep.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/craig-latta/keep.md)
 - **Cursor vs live systems** — IDE chrome vs the object that stays alive in the browser.
+- **Korz** — Ungar's sea of slots and subjective dispatch (see Option B) from the Smalltalker's
+  side: what would a Korz image feel like to livecode?
 
 ## Option D — Whatever works
 
