@@ -6,8 +6,8 @@ show:
   subtitle: "Same-sex romance in the engine room — Patrick + Don + Avila + Servin"
   type: group
   host: Don Hopkins
-  guests: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin"]
-  buds: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin"]
+  guests: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin", "Blake Jennings"]
+  buds: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin", "Blake Jennings"]
   character: characters/patrick-j-barrett-iii/
   topic: |
     How Patrick programmed same-sex relationships; Don's design-doc advocacy; E3 1999 kiss;
@@ -74,6 +74,12 @@ segments:
   sims_audience:
     ask: "Builders, modders, storytellers — creator-network solidarity and post-Collection exodus ethic"
     rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]
+  blake_war_crimes:
+    ask: "Sims community ethics essayist — War Crimes video named Don; Repo Show as antidote to comment-section landfill"
+    with: characters/blake-jennings/
+    invitation: characters/blake-jennings/invitation.md
+    video: https://www.youtube.com/watch?v=zMD44gcSIJw
+    outreach: "replied_interested_2026-07-16; second_round_follow_up_pending"
   optional_reunion:
     ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
     seed: ../will-wright-premiere/sims-team-steering-committee-playthrough/
@@ -103,6 +109,11 @@ invitations:
     path: characters/jacques-servin/invitation.md
     priority: send_now
     consent: not_yet_asked
+  blake_jennings:
+    path: characters/blake-jennings/invitation.md
+    priority: send_now
+    consent: replied_interested_2026-07-16
+    note: "First round sent/replied Jul 2026; second-round follow-up draft adds LGBTQ cluster"
 
 invitation:
   path: characters/patrick-j-barrett-iii/invitation.md
@@ -116,6 +127,7 @@ evidence:
   - repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 see_also:
+  - characters/blake-jennings/
   - repo-shows/lgbtq-sims-cluster/README.md
   - repo-shows/simcopter-himbos/simcopter-himbos.yml
   - repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml

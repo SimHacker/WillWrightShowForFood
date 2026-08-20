@@ -1,13 +1,24 @@
 ---
-status: sent
+status: follow_up_draft
 sent: 2026-07-16
+follow_up: second_round_pending
 channel: email
 character_id: blake-jennings
-consent: replied_interested
+consent: replied_interested_2026-07-16
 show_seed: repo-shows/will-wright-premiere/
+also_in:
+  - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
+  - repo-shows/lgbtq-sims-cluster/README.md
+format: async_friendly
+priority: send_now
 ---
 
-# Repo Show invitation — Blake Jennings
+# Repo Show invitation — Blake Jennings (follow-up draft)
+
+*First round sent 2026-07-16 — you replied interested. This draft adds the LGBTQ+ Sims show
+cluster now that the repo pieces are in place. Don may ping soon.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Blake,
 
@@ -16,29 +27,38 @@ You already did the hard part — you put Sims community history and EA ethics o
 named me in it. Middle-school-you playing The Sims meeting one of the people who built the tools
 is exactly the kind of recursion this show is for.
 
-I'm building **Will Wright Show For Food** — a **Repo Show**: the stage is a live GitHub repo
-(before / during / after), not a dead mp4 on YouTube with a toxic comment section.
-**Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
+Since you replied, the repo grew a whole **LGBTQ+ Sims cluster** — group shows, not just solo
+guest rooms — and I'd love you in that orbit:
 
-I'd love to talk with you about:
+| Show | Link | Your beat |
+|------|------|-----------|
+| **Did The Sims Make You Gay?** (group) | [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) | Patrick Barrett's engine room + Alexander Avila's essay congregation — **your** Sims war-crimes forensic voice on EA/community ethics |
+| **How Inclusivity Saved The Sims** (panel) | [`how-inclusivity-saved-the-sims`](../../repo-shows/how-inclusivity-saved-the-sims/README.md) | Twenty years of procedural rhetoric — inclusivity as mechanism, not decoration |
+| **Creator Network exodus** (group) | [`creator-network-exodus`](../../repo-shows/will-wright-premiere/creator-network-exodus.yml) | Plumbella / lilsimsie / peers who left EA's Creator Network — stacks with your EA coverage |
+| **Cluster index** | [`lgbtq-sims-cluster`](../../repo-shows/lgbtq-sims-cluster/README.md) | Map of all group + solo shows in this arc |
+| **Will Wright premiere** (original pitch) | [`will-wright-premiere`](../../repo-shows/will-wright-premiere/README.md) | 1996 "$5-billion question" / Dollhouse clip |
+
+**Will Wright is in** — signed on for the premiere and more.
+
+I'd still love to talk about:
 
 - What a Repo Show could do for essayists like you (sources, discussions, audience PRs — not
   comment-section landfill)
 - Wrapping an Unnecessary Analysis video as a living repo (retrofit your existing work)
-- Sitting in (or stacking) when Will and I unpack the 1996 Stanford talk — the **$5-billion
-  question** that previewed Dollhouse → The Sims
-- Meeting **Ell** ([Tiny Life](https://tinylifegame.com/)) — I think you'll love that game, and
-  you'd be perfect in the **Soul City ⇔ Tiny Life** bridge conversation (and maybe an Unnecessary
-  Analysis on who the real "war criminals" around that community are: the GamerGate Incel Maga Trolls!)
+- Meeting **Ell** ([Tiny Life](https://tinylifegame.com/)) — Soul City bridge + "war crimes of
+  Tiny Life" invert (trolls = the crime, not the Tinies)
 - Your [WoW essay](https://www.youtube.com/watch?v=OGV5uPmFzrE) / Steve Bannon gold-farming beat —
-  I have a rabbit hole full of snarky dishing and all the receipts for you if you want it (pull my finger). Hint: The Steve Bannon connection leads to GamerGate and MAGA and Lolita Island. 
+  I still have the rabbit hole full of receipts if you want to pull my finger
 
-Your room is started — please correct anything wrong:
+Your room:
 
-- **Your room:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/blake-jennings/
+- **Guest page:** https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/blake-jennings/
 - **Hooks:** https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/blake-jennings/ideas.md
-- **Premiere (Will):** https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md
+
+Zero pressure — reply whenever, or not at all. The story stands on your published essays either way.
 
 — Don Hopkins
 
-*P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*
+`🎬 An Unnecessary Analysis` · `💋 LGBTQ+ Sims cluster` · `📼 Repo Show`
+
+*Quiet mode — please don't share repo links publicly yet.*

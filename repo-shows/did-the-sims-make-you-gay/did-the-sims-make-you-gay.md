@@ -1,11 +1,11 @@
 # Did The Sims Make You Gay? 💋🏳️‍🌈
 
-> **Patrick J. Barrett III + Don Hopkins** — with **Alexander Avila** and **Jacques Servin**
-> invited as buds. How same-sex romance got into the original Sims, and what a generation of
+> **Patrick J. Barrett III + Don Hopkins** — with **Alexander Avila**, **Jacques Servin**, and
+> **Blake Jennings** invited as buds. How same-sex romance got into the original Sims, and what a generation of
 > players did with it.
 
 Working title borrows Alexander Avila's video essay — we **invited Alex** before using it on air
-(same for Jacques on the SimCopter prequel). Both may be hard to reach; invitations are on record.
+(same for Jacques on the SimCopter prequel, and Blake on Sims community ethics). All may be hard to reach; invitations are on record.
 See [`lgbtq-sims-cluster`](../lgbtq-sims-cluster/README.md) for all group LGBTQ+ shows.
 
 Avila is **openly trans masc** (transgender man; he/him;
@@ -22,6 +22,7 @@ is also a serious question about microworlds and identity.
 | **Patrick J. Barrett III** | [`invitation.md`](../../characters/patrick-j-barrett-iii/invitation.md) | Engine room |
 | **Alexander Avila** | [`invitation.md`](../../characters/alexander-avila/invitation.md) | Solo: [`im-queer-therefore-i-sim`](../im-queer-therefore-i-sim/README.md) |
 | **Jacques Servin** | [`invitation.md`](../../characters/jacques-servin/invitation.md) | Solo: [`simcopter-himbos`](../simcopter-himbos/README.md) |
+| **Blake Jennings** | [`invitation.md`](../../characters/blake-jennings/invitation.md) | Sims war-crimes essay — replied Jul 2026; follow-up pending |
 
 ## What we'd get into
 
@@ -41,7 +42,8 @@ would make it better, and is warmly invited but never required.
 See [`did-the-sims-make-you-gay.yml`](did-the-sims-make-you-gay.yml) · Invitations:
 [Patrick](../../characters/patrick-j-barrett-iii/invitation.md) ·
 [Avila](../../characters/alexander-avila/invitation.md) ·
-[Servin](../../characters/jacques-servin/invitation.md). **send_now** · consent not_yet_asked.
+[Servin](../../characters/jacques-servin/invitation.md) ·
+[Jennings](../../characters/blake-jennings/invitation.md). **send_now** · consent varies.
 
 ## Cross-repo analysis map
 

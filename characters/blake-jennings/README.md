@@ -10,7 +10,14 @@ best known for the **"War Crimes of the … Community"** series. He named Don on
 middle-school-him playing The Sims never imagined talking to one of the people who built the
 tools — and that he'd love to hear about the project with **Will Wright**.
 
-That's the door. Here's what's on the other side.
+**Outreach:** first invite sent 2026-07-16; Blake replied interested same day. **Second-round
+follow-up draft** ready in [`invitation.md`](invitation.md) — adds LGBTQ+ Sims cluster shows now
+that repo pieces are in place; Don may ping soon.
+
+**Shows:** [`will-wright-premiere`](../../repo-shows/will-wright-premiere/README.md) ·
+[`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) ·
+[`how-inclusivity-saved-the-sims`](../../repo-shows/how-inclusivity-saved-the-sims/README.md) ·
+[`lgbtq-sims-cluster`](../../repo-shows/lgbtq-sims-cluster/README.md)
 
 ---
 

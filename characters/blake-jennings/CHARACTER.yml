@@ -15,7 +15,7 @@ representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 1
   authored_by: don-hopkins
-  invitation_status: drafting_email
+  invitation_status: follow_up_draft
   consent: replied_interested_2026-07-16
 
 web:
@@ -64,6 +64,15 @@ relationship:
 
 show_relevance:
   primary: repo-shows/will-wright-premiere/
+  secondary:
+    - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+    - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
+    - repo-shows/lgbtq-sims-cluster/README.md
+  also_in: repo-shows/will-wright-premiere/creator-network-exodus.yml
+  outreach:
+    first_sent: 2026-07-16
+    replied: 2026-07-16
+    follow_up: second_round_pending
   hooks:
     - "Community ethics essayist who already understands Sims history + named Don on camera"
     - "Repo Show as the opposite of toxic YouTube comments — living collaboration after the essay"
