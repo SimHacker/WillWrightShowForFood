@@ -215,7 +215,13 @@ interpreter. Take that seriously and standardize three:
   weights are just more context bindings: `{world: {zork: 0.7,
   adventure: 0.3}}` turns a coordinate into a distribution, dispatch
   into a mixture, and the sample/blend distinction into a continuum —
-  sampling is blending with all the weight on one slot.
+  sampling is blending with all the weight on one slot. And the troll
+  is **literally two-headed** (retconned canonical, one head per
+  mind, more addable): head size displays the live fronting weight,
+  so the dispatch mixture is visible anatomy — you know you're in
+  trouble when the bridge-toll head shrinks and the fighting head
+  expands. Debuggability by physiology: the blend that "no debugger
+  can see" (ASK below), worn on the neck.
 - **`temperature:`** — how adventurous sampling and improvisation may
   be. Ambient; a room can set it (MOODY). Zero recovers determinism:
   strict Korz is the corner case Korz′ reaches at temperature 0 with
