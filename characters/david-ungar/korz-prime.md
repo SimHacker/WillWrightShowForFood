@@ -10,6 +10,9 @@ sketch redoes the dispatch semantics. Prior art it leans on:
 [SELF-AND-MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md),
 [MOODY](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md),
 [LATENT-SPACE-INHERITANCE](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md).
+Sidecar: [korz-prime-trajectory.md](korz-prime-trajectory.md) — the
+session that grew this document, as a K-line paging log: what Don
+pointed at, what came back, where it crystallized.
 
 The name, after Bourland's E-Prime: Korz minus the assumption that
 dispatch must be decidable. Alternative naming scheme, via the
