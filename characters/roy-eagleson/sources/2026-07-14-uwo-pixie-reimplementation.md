@@ -27,9 +27,8 @@ Roy's teaching context:
 
 Has the **PDP-7 assembly** been dug out yet?
 
-Heinz replied [15 Jul](../../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md): **125 pages**
-(110 A3 + 15 RSP) — digitization planned; thesis Appendix 4 + 1969 film first; **CARS 2027 Berlin**
-HCI session **29 Jun 2027** as presentation target.
+Heinz (15 Jul): **125 pages** to digitize; points students to thesis Appendix 4 + 1969 film first; **CARS 2027 Berlin**
+HCI session **29 Jun 2027** as presentation target **if the project proceeds** (planned, not yet underway).
 
 ## Wilkes / PARC question to Alan
 

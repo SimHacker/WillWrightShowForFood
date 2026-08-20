@@ -55,6 +55,11 @@ limits, JSON-bridge integration, and the **Desktop** demo as in-app window manag
 [Garnet/OL/Svelte article pack](../don-hopkins/sources/articles/README.md) in reply:
 [`sources/2026-08-03-declare-constraints-thread.md`](sources/2026-08-03-declare-constraints-thread.md)
 
+**20 Aug:** Don challenged Declare to wrap HTML widgets Laszlo-style (slippery map, video/WebRTC,
+SimFaux). David shipped **DOMIsland** — bidirectional attribute constraints between host and
+embedded HTML — [guide §18](https://davidtemkin.github.io/declarelang?apps/docs/docs.declare#guide/18-embedding):
+[`sources/2026-08-20-domisland-embedding-thread.md`](sources/2026-08-20-domisland-embedding-thread.md)
+
 ## Mesa · In Formation · Claude Code game port
 
 Spatial AI canvas, print satire revival, 1991 Mac stereo game → JS — Act IV material:

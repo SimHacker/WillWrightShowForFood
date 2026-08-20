@@ -1,0 +1,68 @@
+# Warren Spector — invitation portrayal. NOT Warren Spector.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: warren-spector
+  name: "Warren Spector"
+  type: invitation
+  signifier: "📜"
+  status: living
+  field: "Immersive-sim pioneer (System Shock, Deus Ex, Thief); game preservationist; UT Videogame Archive donor"
+  home: characters/warren-spector/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: sent
+  consent: not_yet_asked
+  sent: 2026-08-20
+  channel: LinkedIn connect request
+  document: invitation.md
+  show_seed:
+    - repo-shows/phil-salvador-simrefinery/   # game preservation panel — his natural room
+    - repo-shows/pixie-pie-menus-pdp7/        # archive-recovery arc he'd appreciate
+    - repo-shows/REPO-SHOWS.yml#building-the-sims.yml  # optional, not the lead ask
+  discipline: process/entryways/archivist.md
+  pacing_note: "Retired Aug 2026 — lecturing/consulting open per his LinkedIn post; async-first; archive routing + consulting ask first, shows second"
+
+bio:
+  summary: "**Warren Spector** — designer/producer behind System Shock, Deus Ex, and Thief; donated his papers to the UT Videogame Archive (Dolph Briscoe Center). Years ago he asked Don whether he had Sims design notes, and they discussed Don donating his design docs, notes, and code for academic research; Don never finished the scanning backlog."
+
+archive:
+  ut_videogame_archive: https://repositories.lib.utexas.edu/communities/4bf6571f-a6c3-4cd2-8258-1fa5f0d76355
+  rps_preservation: https://www.rockpapershotgun.com/deus-ex-creator-warren-spector-has-literally-dumpster-dived-to-help-with-game-preservation
+
+connections:
+  the_sims: "Asked Don directly, years before 2012, whether he had Sims design notes; they discussed donating docs/notes/code for academic research. Don's Feb 2012 email to Will/Jim/Eric names Warren as the interested recipient."
+  don: "Never completed the scan/share; Don emailed once ~2020 without reply; LinkedIn reconnect Aug 2026 on Warren's retirement"
+  will_wright: "Recipient of Don's Feb 2012 email about the Sims design notes"
+  chaim_gingold: "2020 thread — Strong Museum + MIT Press SimCity book; parallel archive interest"
+  henry_lowood: "Stanford curator; confirmed interest in Don's Sims papers (2020)"
+  archivist_cluster: "Natural co-panelists already in the repo: phil-salvador (VGHF/SimRefinery), david-rosenthal (LOCKSS), brewster-kahle (Internet Archive), jason-scott"
+  pixie: "Archive-recovery arc Don wants to show him — Cambridge librarians digitized 1969 PIXIE films; PDP-7 restoration with Heinz Lemke underway"
+
+sources:
+  primary:
+    - sources/comments-on-design-documents.md
+    - sources/email-2012-02-22-sims-design-notes.md
+    - sources/email-2012-12-20-scribd-collection.md
+    - sources/thread-2020-archiving-sims-materials.md
+  web:
+    - { title: "Spector (Warren) Papers — UT Repository", url: https://repositories.lib.utexas.edu/communities/4bf6571f-a6c3-4cd2-8258-1fa5f0d76355 }
+    - { title: "The Sims design documents (Don Hopkins)", url: https://donhopkins.com/home/TheSimsDesignDocuments/ }
+    - { title: "Scribd collection (2012)", url: https://www.scribd.com/collections/4050497/The-Sims }
+
+see_also:
+  - { path: ../will-wright/sources/the-sims-design-documents-zip/README.md, why: "94-PDF manifest + scan backlog" }
+  - { path: ../don-hopkins/, why: "Holder of the paper + email archive" }
+  - { path: ../chaim-gingold/, why: "2020 archive thread; SimCity historian" }
+  - { path: ../eric-bowman/, why: "Cc on 2012 Sims design-notes email" }
+  - { path: ../phil-salvador/, why: "VGHF preservation scholarship — co-panelist for a game preservation show" }
+  - { path: ../david-rosenthal/, why: "LOCKSS founder — digital preservation peer; also on the PIXIE show" }
+  - { path: ../brewster-kahle/, why: "Internet Archive — preservation panel candidate" }
+  - { path: ../../repo-shows/pixie-pie-menus-pdp7/README.md, why: "Archive request → digitized film → running code: the arc Don proposes for the Sims material" }
+  - { path: ../../process/entryways/archivist.md, why: "The repo's archivist discipline — provenance policy, export pipeline, portrayal standards" }
+  - { path: ../../process/maxis-history-collaborators.yml, why: "Registry of parallel historians and archivists" }

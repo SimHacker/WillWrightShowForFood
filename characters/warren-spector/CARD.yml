@@ -1,0 +1,96 @@
+# CARD — Warren Spector (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+# Nav + metadata: GLANCE.yml
+
+glance: GLANCE.yml
+
+room:
+  id: warren-spector
+  name: Warren Spector
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Warren Spector
+  title: Archive the Work Product
+  rarity: rare
+  signifier: 📜
+  flavor: The history isn't just the shipped game — it's the notes you almost threw away.
+abilities:
+- id: PRESERVE-DESIGN-HISTORY
+  name: Preserve Design History
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: preserveDesignHistory
+    signature: preserveDesignHistory(artifacts) → curated archive
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Treat design documents and dev correspondence as first-class heritage.
+  verifiable: UT Videogame Archive donor; RPS preservation essay
+  combos_with:
+  - CITE-SOURCES
+- id: IMMERSIVE-SIM-LENS
+  name: Immersive Sim Lens
+  type: activated
+  mana: '{B}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: immersiveSimLens
+    signature: immersiveSimLens(designDoc) → player-agency reading
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Read simulation design through agency, systems, and consequence.
+  verifiable: System Shock, Deus Ex, Thief lineage
+  combos_with: []
+- id: DUMPSTER-DIVE
+  name: Dumpster Dive
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: dumpsterDive
+    signature: dumpsterDive(discardPile) → recovered history
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Recover what the industry threw out before it's gone forever.
+  verifiable: Literally dumpster-dived for Deus Ex materials (RPS)
+  combos_with:
+  - PRESERVE-DESIGN-HISTORY
+- id: CITE-SOURCES
+  name: Cite Sources
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: citeSources
+    signature: citeSources(claim) → provenance chain
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Keep academic and author access honest.
+  verifiable: Archive mission statements; consulting/lecturing post-retirement
+  combos_with: []
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+see_also:
+- path: CHARACTER.yml
+  why: Bio girder — invitation status
+- path: invitation.md
+  why: Archive reconnect + optional Repo Show
+- path: sources/comments-on-design-documents.md
+  why: Don's 2012 Sims design review notes

@@ -81,9 +81,9 @@ re-implementation** (Thompson & Ritchie eating PDP-7 cycles with Unix/C, ha). He
 
 Full thread: [**10 July storyline**](../heinz-lemke/sources/2026-07-10-pixie-storyline-thread.md)
 
-## 14 July — UWO students re-implement PIXIE
+## 14 July — UWO students re-implement PIXIE (planned)
 
-Roy confirmed **UWO students** want to re-implement **PIXIE** as an HCI exercise — same pedagogical
+Roy confirmed **UWO students** are **interested in** re-implementing **PIXIE** as an HCI exercise — same pedagogical
 move as Sketchpad (rediscover data structures → OOP), now paired with his **hardware/software
 co-design** course (design ISA + compiler from scratch). Asked Heinz for the PDP-7 assembly.
 
@@ -92,7 +92,7 @@ Heinz (15 Jul): **125 pages** to digitize; points students to thesis Appendix 4 
 
 → [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md)
 
-**Update (24–25 Jul):** the digitization landed and the student kit now exists — the full stack is
+**Update (24–25 Jul):** the digitization landed and the **student kit** now exists — the full stack is
 indexed in [Heinz's README, "For students, hackers, and turists"](../heinz-lemke/README.md):
 the [turist guide](../heinz-lemke/sources/pdp7-reference/GUIDE.md) (PDP-7 / Type 340 / Titan
 architecture), the [mirrored manual library](../heinz-lemke/sources/pdp7-reference/README.md),
@@ -102,6 +102,16 @@ the [recovered assembler source](../heinz-lemke/sources/pixie-assembler-listing-
 from the [fully annotated thesis](../heinz-lemke/sources/phd-thesis-1972/annotated/README.md),
 and the [emulation plan](../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md) with the
 [Titan link protocol decode](../heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md).
+
+Don (25 Jul): *"The idea is to provide the students with everything they need to get started."*
+
+## 13 Aug — CARS 2027 Think Tank
+
+Heinz Cc'd Roy and **his students** for CARS 2027 **HCI and Modelling** planning. Roy replied:
+symbolic-AI pendulum (~25-year cycles), open research directions, and the CARS '95 *Hospital of
+the Future* paper as *"a screenplay to a science fiction cyberpunk movie."*
+
+→ [`sources/2026-08-13-think-tank-reply.md`](sources/2026-08-13-think-tank-reply.md)
 
 ## Don welcomes Roy — 10 July 17:59
 

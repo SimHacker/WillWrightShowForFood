@@ -103,13 +103,19 @@ the unfulfilled Microsoft digitization offer).
 
 ## Gaps — still to pull in
 
-### heinz_1960_draftsman_drawing
+### heinz_1960_draftsman_drawing — PULLED IN (2026-08-20)
 
-**NEW (2026-07-30 email):** Heinz's own 1m × 2.5m technical drawing from 1960, digitized by
-him days before — attached to his 30 July email explaining that PIXIE's radial menus digitized
+Heinz's own 1m × 2.5m technical drawing of a **wood processing plant** from 1960, digitized by
+him 28 July 2026 — attached to his 30 July email explaining that PIXIE's radial menus digitized
 the draftsman's symbol template (pencil one hand, template the other → light pen + adaptive
-radial menu, free hand on TTY). The physical prehistory of radial menus; prime show
-illustration. Ask Heinz for the file / permission to publish.
+radial menu, free hand on TTY). The physical prehistory of radial menus; prime show illustration.
+
+| Field | Value |
+|-------|-------|
+| Status | **received + filed** (2026-08-20) |
+| Filed | [media/drawing-1960/](media/drawing-1960/README.md) |
+| Remaining | Confirm publish permission with Heinz; consider page rasters for web viewing |
+
 → [sources/2026-07-30-pixie-storyline-thread.md](sources/2026-07-30-pixie-storyline-thread.md)
 
 ### heinz_cambridge_word_doc
@@ -188,9 +194,9 @@ CARS Congress Berlin — special HCI session **29 June 2027** (60th anniversary 
 | Field | Value |
 |-------|-------|
 | Status | proposed |
-| Pull in | Session confirmation; Joskowicz ELIZA sources; student project timeline |
-| Characters | [../leo-joskowicz/](../leo-joskowicz/) · [../mario-cypko/](../mario-cypko/) |
-| Thread | [sources/2026-07-16-pixie-storyline-thread.md](sources/2026-07-16-pixie-storyline-thread.md) |
+| Pull in | Session confirmation; Joskowicz ELIZA sources; **UWO student project timeline (planned)**; Think Tank meeting date |
+| Characters | [../leo-joskowicz/](../leo-joskowicz/) · [../mario-cypko/](../mario-cypko/) · [../roy-eagleson/](../roy-eagleson/) |
+| Thread | [sources/2026-08-13-cars-2027-hci-modelling-think-tank.md](sources/2026-08-13-cars-2027-hci-modelling-think-tank.md) |
 
 ### pixie-part1-docx-dshr
 

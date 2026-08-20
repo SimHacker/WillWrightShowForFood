@@ -1,0 +1,51 @@
+# WARREN SPECTOR — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml
+
+title: Warren Spector
+iconic: "📜 Warren"
+description: |
+  Immersive-sim designer + preservationist. UT Videogame Archive donor.
+  Asked Don for Sims design materials years ago; donation discussed, never delivered.
+  Reconnect on retirement — donation routing, scan consulting, archivist shows, PIXIE.
+
+keywords:
+  - warren spector
+  - deus ex
+  - system shock
+  - game preservation
+  - the sims design documents
+  - ut videogame archive
+
+card: CARD.yml
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - sources/
+  siblings:
+    - ../will-wright/
+    - ../chaim-gingold/
+    - ../phil-salvador/
+    - ../david-rosenthal/
+    - ../brewster-kahle/
+
+read_order:
+  - README.md
+  - invitation.md
+  - sources/comments-on-design-documents.md
+  - sources/email-2012-02-22-sims-design-notes.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../will-wright/sources/the-sims-design-documents-zip/README.md, why: "Published PDF manifest" }
+    - { path: ../chaim-gingold/GLANCE.yml, why: "Parallel archive interest (2020)" }
+    - { path: ../phil-salvador/, why: "Preservation-panel co-guest" }
+  across:
+    - { path: ../../repo-shows/pixie-pie-menus-pdp7/README.md, why: "Archive-recovery show he'd appreciate" }
+    - { path: ../../process/entryways/archivist.md, why: "Repo's archivist discipline" }
+    - { path: ../../process/maxis-history-collaborators.yml, why: "Registered under archivists_and_scholarship" }
+  deep:
+    - { path: CHARACTER.yml, why: "Invitation status + UT archive links" }

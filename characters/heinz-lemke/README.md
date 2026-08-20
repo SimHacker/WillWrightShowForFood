@@ -9,9 +9,8 @@ correspondence (~2020–present): Chapman film recovery, *Flight of the PIXIE*, 
 Black Forest visits. **ASAP Repo Show:** Heinz + **Lars Brinkhoff** (PDP-7/340 emulation) +
 **David Rosenthal** (same Cambridge stack ~1970) — [`invitation.md`](invitation.md).
 
-**Aug 2026:** CARS office closed; reading Don's Model Science note afternoons. Proposes IFCARS
-joint project [**HCI and Modelling**](sources/2026-08-03-cars-2027-hci-modelling-cooperation.md)
-for **CARS 2027 Berlin** (and 2028–2030); possible IFCARS contract for travel and project support.
+**Aug 2026:** CARS office closed. Proposes IFCARS joint project [**HCI and Modelling**](sources/2026-08-03-cars-2027-hci-modelling-cooperation.md)
+for **CARS 2027 Berlin** (and 2028–2030). Aug 13: Think Tank Cc for **IA and AI: pearls and pitfalls** session.
 
 ## Start here
 

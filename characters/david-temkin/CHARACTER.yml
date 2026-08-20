@@ -21,7 +21,7 @@ invitation:
   document: invitation.md
   show_seed: repo-shows/openlaszlo/
   call_scheduled: "2026-08-06 18:00 Don time (Wed) — Zoom TBD"
-  note: "Aug 3: David reading Don's constraint articles; Declare=push/spreadsheet; JSON bridge for embedding; ISP 'yup'; Desktop demo vs Kando WM stress test"
+  note: "Aug 3: David reading Don's constraint articles; Declare=push/spreadsheet; JSON bridge for embedding; ISP 'yup'. Aug 20: **DOMIsland** — bidirectional attribute constraints for HTML islands (guide §18); answers Don's PlugOver/PlugOn challenge for eBike Safari map + SimFaux."
 
 bio:
   summary: "**David Temkin** — founder (and first CEO, then CTO/VP Engineering) of **Laszlo Systems** (2000–2009), creator of **OpenLaszlo**: the **LZX** XML+JavaScript language and Presentation Server for rich internet apps that compiled to Flash or DHTML/Ajax, open-sourced in 2004. In 2026 shipped **OpenLaszlo 5.0** (TypeScript/browser compile) and **Declare** (`declarelang`) — a new UI DSL that declares itself heir to OpenLaszlo but is not a port; also **Mesa** (spatial AI canvas) and the **In Formation** magazine revival. Earlier Senior Director of Engineering at Excite@Home; later co-founded **Cola**. Brown undergrad. Don worked with him (and Henry Minsky and Oliver Steele) on OpenLaszlo."
@@ -46,6 +46,11 @@ declare:
     heir to OpenLaszlo but ground-up redesign (not a port). Reference apps: calendar,
     desktop, docs, inspector. Does not use Svelte; spiritually closer to Svelte 5 runes
     than to React.
+  domisland_2026_08_20: |
+    **DOMIsland** (guide §18): embed HTML in a Declare app as a typed instance; host and
+    island exchange attribute changes via function calls — bidirectional constraints from
+    Declare's POV. Answers Don's Aug 13 challenge (slippery map, video/WebRTC, SimFaux).
+    https://davidtemkin.github.io/declarelang?apps/docs/docs.declare#guide/18-embedding
   provenance: "Public GitHub + davidtemkin.github.io/declarelang; LinkedIn thread Jul 2026."
   why_it_matters: "Third act of the reunion show — OL soul for the AI era; Don's Svelte/Micropolis parallel; training-data leverage (OL in corpus, Declare declares the inheritance)."
   repo: "https://github.com/davidtemkin/declarelang"
@@ -68,6 +73,7 @@ sources:
   declarelang: characters/david-temkin/sources/declarelang.md
   declare_reimagine: characters/david-temkin/sources/declare-reimagine-discussion.md
   declare_constraints_2026_08: characters/david-temkin/sources/2026-08-03-declare-constraints-thread.md
+  domisland_2026_08_20: characters/david-temkin/sources/2026-08-20-domisland-embedding-thread.md
   mesa_and_in_formation: characters/david-temkin/sources/mesa-and-in-formation.md
   wikipedia: null
   web:

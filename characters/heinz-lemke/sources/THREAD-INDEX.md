@@ -26,6 +26,9 @@
 | **28 Jul** | [`2026-07-28-pixie-storyline-thread.md`](2026-07-28-pixie-storyline-thread.md) | Heinz: **Oldfield** insisted on rebuildable docs (→ 210pp thesis); PDP-9 not PDP-8 as 18-bit sibling; Lowe 1970 MSc; real-time debugging. Don bridges to **Duckmouse** / Pete book / Arthur poster scan. Alan: Wes Clark LINC/TX-2/IMP; Popplestone; Bletchley day trip. **Roy: `.oct`→`.rim` loads in SIMH; step OK; GO blank — needs light pen** → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md) |
 | **29 Jul** | [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md) | **Andrew:** Multipatch = PDP-7 only ~4K (no Titan, ASR-33, paper tape); Multiobject = Titan-linked 16K→24K, 100-word link, P.J. Payne plane intersections. **Corollary: Multipatch-first recreation.** **Lars:** SIMH custom device = `pdp18b_foo.c`; 340 char gen already; display-list subroutines provisional/untested |
 | **30 Jul** | [`2026-07-30-pixie-storyline-thread.md`](2026-07-30-pixie-storyline-thread.md) | **Heinz: the draftsman origin of radial menus** — 1950s symbol template in one hand + pencil in the other → light pen + adaptive radial menu, other hand free for TTY; **1m×2.5m 1960 drawing digitized** (pull-in); the tilted drawing board as lost social meeting point. **Answers Roy's GO-blank mystery:** thesis p.189 — address switches **22** + START = clean start, light buttons + tracking cross appear, no pen interrupt needed |
+| **3 Aug** | [`2026-08-03-cars-2027-hci-modelling-cooperation.md`](2026-08-03-cars-2027-hci-modelling-cooperation.md) | Heinz: August solo on ~150++ IJCARS manuscripts; proposes IFCARS joint **HCI and Modelling** project for CARS 2027+ |
+| **13 Aug** | [`2026-08-13-cars-2027-hci-modelling-think-tank.md`](2026-08-13-cars-2027-hci-modelling-think-tank.md) + [`../../roy-eagleson/sources/2026-08-13-think-tank-reply.md`](../../roy-eagleson/sources/2026-08-13-think-tank-reply.md) | Heinz: CARS 2027 **IA and AI: pearls and pitfalls** session; PIXIE → PACS 1979 → PIXIE II 2014 → PIXIE III/XYZ; IFCARS Think Tank Cc; Roy: symbolic-AI pendulum, CARS'95 as cyberpunk screenplay |
+| **14 Aug** | same + [`../../leo-joskowicz/sources/2026-08-14-think-tank-reply.md`](../../leo-joskowicz/sources/2026-08-14-think-tank-reply.md) | Leo: delighted; Good/Bad/Ugly CAOS quotes; **bottleneck of AI is the human**; false sense of understanding in DS students |
 
 ## Primary sources pulled in alongside the thread
 
@@ -33,7 +36,8 @@
   how the films were found. Cambridge ticket #43348 (Don, 10 Feb 2019) → David Chapman's
   detective work → both films in a Rainbow member's office (8 Mar 2019) → published
   9 Jul 2019 → first contact with Heinz (21 Feb 2020) → *Flight of the PIXIE* (Mar 2020).
-  Distilled from Don's full mail export (411 messages, 2019–2023; private repo).
+  Distilled from Don's full mail export (109,264 lines, Aug 2026; private repo — see
+  `lemke-messages-export.txt` + `lemke-messages-export-index.md`).
 - [`buxton-2008-wiseman-notes/`](buxton-2008-wiseman-notes/README.md) — Buxton's July 2008
   Wiseman-papers documents (Folder B.218, Cambridge): PIXIE paper pp. 466–467 transcription +
   archive report (talk-note button lists, radial-menu figure, proof the film existed, the

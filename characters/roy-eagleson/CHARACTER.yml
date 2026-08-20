@@ -38,8 +38,16 @@ bio:
     Jerry Fodor, and founded Rutgers Cognitive Science. Has photos of Pylyshyn with Newell/McCarthy.
   teaching_method: |
     Assigns students to re-implement Sketchpad; they rediscover data structures and reinvent
-    object-oriented programming bottom-up (sometimes at assembly level). Carries the Sutherland →
-    Utah genealogy (Kay, Clark, Blinn, Phong, Gouraud, Fuchs, Catmull, Warnock).
+    object-oriented programming bottom-up (sometimes at assembly level). **Planned (Jul 2026):**
+    UWO students to re-implement PIXIE as HCI exercise — same pedagogical move, paired with
+    hardware/software co-design course; student kit indexed 25 Jul; CARS 2027 Berlin presentation
+    target if project proceeds. Carries the Sutherland → Utah genealogy (Kay, Clark, Blinn, Phong,
+    Gouraud, Fuchs, Catmull, Warnock).
+  cars_2027_think_tank:
+    date: "2026-08-13"
+    role: "Named in Heinz Cc for CARS 2027 HCI and Modelling planning; replied same day"
+    transcript: sources/2026-08-13-think-tank-reply.md
+    note: "Symbolic-AI pendulum; CARS '95 Hospital of the Future as cyberpunk screenplay"
 
 sources:
   # email in DonHopkins green-room/contacts/guest-emails.yml

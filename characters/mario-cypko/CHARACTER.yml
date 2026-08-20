@@ -65,6 +65,7 @@ sources:
     - { title: "Model guided medicine and the search for truth (Lemke editorial, 2024)", url: "https://doi.org/10.1007/s11548-024-03097-z" }
   email:
     - { title: "Heinz CARS 2027 proposal (Cc)", digest: ../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md }
+    - { title: "IFCARS Think Tank — PIXIE III / Model Identity Certificate (13 Aug 2026)", digest: ../heinz-lemke/sources/2026-08-13-cars-2027-hci-modelling-think-tank.md }
 
 see_also:
   - { path: ../heinz-lemke/, why: "PhD supervisor; CARS/IFCARS; barn video; PIXIE→MGM arc" }

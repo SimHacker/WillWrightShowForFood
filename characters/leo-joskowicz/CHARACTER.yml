@@ -64,6 +64,7 @@ sources:
     - { title: "CRIS HUJI profile", url: "https://cris.huji.ac.il/en/persons/leo-joskowicz/" }
   email:
     - { title: "Heinz CARS 2027 proposal (Cc)", digest: ../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md }
+    - { title: "IFCARS Think Tank reply — AI bottleneck is the human (14 Aug 2026)", digest: sources/2026-08-14-think-tank-reply.md }
 
 see_also:
   - { path: ../heinz-lemke/, why: "CARS founder; PIXIE thread; proposed Berlin 2027 HCI session" }

@@ -49,6 +49,14 @@ archivists_and_scholarship:
     topics: [SimRefinery, Maxis Business Simulations, Yoot Tower VGHF source release]
     jess_bridge: true
 
+  - id: warren-spector
+    role: designer-preservationist; UT Videogame Archive donor
+    org: "Dolph Briscoe Center for American History, UT Austin"
+    path: characters/warren-spector/
+    status: invited_2026-08-20
+    topics: [Sims design docs/notes/code donation routing, LLM scan-pipeline consulting, preservation panel, PIXIE commentary]
+    note: "Asked Don for Sims design materials years ago; donation discussed but never delivered. Retired Aug 2026, open to consulting — the archive thread reopened."
+
   - id: chaim-gingold
     role: author / researcher
     path: characters/chaim-gingold/
