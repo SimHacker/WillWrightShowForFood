@@ -1,0 +1,80 @@
+# SHOW PROPOSAL — SimCopter Himbos (Jacques Servin + Don Hopkins)
+
+show:
+  id: simcopter-himbos
+  title: "SimCopter Himbos"
+  subtitle: "The back door — 1996 easter egg, firing, ACT UP, The Yes Men, fog-piercing nipples"
+  type: group
+  host: Don Hopkins
+  guests: ["Jacques Servin"]
+  buds: ["Jacques Servin"]
+  character: characters/jacques-servin/
+  topic: |
+    Jacques Servin's 1996 SimCopter himbo easter egg — culture jamming, RTMark, getting fired,
+    Maxis patch and public denial, ACT UP boycott, The Yes Men afterlife. The prequel to The Sims
+    same-sex romance story; identity correction on corporations; 2026 EA sale context.
+  status: proposed
+  urgency: |
+    Standing invitation — Jacques may be hard to reach; story stands on LGBTQ Game Archive,
+    Wired, and Don's Draft 3 review citing the "SimCopter fiasco" by name.
+
+dialect:
+  voice: stoner_techno_hippie
+  terms:
+    guest: bud
+    guests: buds
+  on_air_opener: "This show's bud is…"
+  voice_ref: characters/don-hopkins/portrayal/voice.yml
+
+solidarity:
+  stance: |
+    LGBTQ+ solidarity default — unauthorized visibility vs corporate patch-out; culture jamming
+    as procedural rhetoric. Respect Jacques's Yes Men identity (Andy Bichlbaum) if he prefers that frame.
+  lexicon: repo-shows/infodump/infodump.yml#solidarity-lexicon
+
+segments:
+  the_egg:
+    ask: "How did the himbos get in — dates, trigger bug, ship, discovery?"
+    sources: characters/jacques-servin/sources/simcopter-himbo-easter-egg.md
+    archive: https://lgbtqgamearchive.com/2015/08/31/gay-sims-easter-egg-and-controversy-in-simcopter/
+  firing_and_patch:
+    ask: "Firing, ACT UP boycott ('absurd'), Maxis public response — what actually happened?"
+    press:
+      - https://archive.wired.com/culture/lifestyle/news/1996/12/915
+      - https://web.archive.org/web/19991109030656/http://www.gamespot.com/features/maxis/page6.html
+  yes_men_afterlife:
+    ask: "RTMark → The Yes Men — identity correction as a career. Optional if Jacques wants that angle."
+    optional: true
+  fog_piercing_nipples:
+    ask: "Airport-running-lights rendering mode for nipples — true? fog experiment?"
+    evidence: characters/jacques-servin/media/simcopter-himbo-glow/README.md
+  front_door_sequel:
+    ask: "1998 Draft 3 cites you by name — how does back door relate to Patrick's front door?"
+    public_record: characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
+    group_show: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  ea_2026:
+    ask: "PIF / Kushner buyout — what does identity correction look like now?"
+    optional: true
+
+format:
+  live: false
+  async_one_on_one: true
+  production_model: |
+    Fully async and degradable: published record + archive citations + himbo screenshots.
+    Jacques in any form — email, audio, call — makes it sing; never required.
+
+invitation:
+  path: characters/jacques-servin/invitation.md
+  priority: send_now
+  consent: not_yet_asked
+
+evidence:
+  - characters/jacques-servin/sources/simcopter-himbo-easter-egg.md
+  - characters/jacques-servin/media/simcopter-himbo-glow/README.md
+  - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
+
+see_also:
+  - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
+  - repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+  - repo-shows/lgbtq-sims-cluster/README.md

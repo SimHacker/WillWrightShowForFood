@@ -3,7 +3,7 @@
 **Original The Sims programmer** who implemented **same-sex romantic interactions** — the
 feature that helped make The Sims the queer microworld a generation grew up inside.
 
-**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md)
+**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) · **Public record:** [`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md)
 
 ## Why invite Patrick
 
@@ -15,7 +15,8 @@ autonomous kiss on stage; EA kept it.
 
 **Press vs docs:** The 2014 New Yorker piece (Barrett via Simon Parkin) told an "outdated doc /
 accident" story. Don's marked-up PDFs tell a different **written** trajectory. See
-[`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md)
+[`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md) (one-link public
+correction) and [`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md)
 § Press discrepancies — neither Patrick nor Parkin had the full paper trail in 2014.
 
 This is the story **from both perspectives, together and integrated** — not Don solo, not press
@@ -60,6 +61,7 @@ gay, genderfluid, gender-benders of every persuasion. Not a sidebar. See
 
 ## See also
 
+- [`../../repo-shows/im-queer-therefore-i-sim/`](../../repo-shows/im-queer-therefore-i-sim/README.md) — sibling show (Avila + Don; essay + comments)
 - [`../don-hopkins/`](../don-hopkins/) — design reviews, Simprov Wedding Playset, inclusivity thesis
 - [`../jacques-servin/`](../jacques-servin/) — the 1996 SimCopter himbo easter egg, the "fiasco" Don's Draft 3 review cites; prequel to this story
 - [`../will-wright/`](../will-wright/) — inclusivity-by-design on Will's page

@@ -1,5 +1,5 @@
-# MOOLLM cross-links — Alexander Avila / Sims queer identity corpus
-# Sibling repo: github.com/SimHacker/moollm
+# MOOLLM + MicropolisCore cross-links — Alexander Avila / Sims queer identity corpus
+# Sibling repos: github.com/SimHacker/moollm · github.com/SimHacker/MicropolisCore
 
 meta:
   analyzed_by: don-hopkins
@@ -38,6 +38,35 @@ comment_analysis:
     - "Cross-generational patterns (Sims 1–4)"
     - "Theory appreciation"
   cluster_summary: "#comment-cluster-summary"
+
+micropoliscore:
+  og_cozy_games:
+    title: "OG Cozy Games — procedural rhetoric + 1998 design receipts"
+    path: documentation/designs/og-cozy-games.md
+    url: https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md
+    contains:
+      - "1998 design-document reviews (Draft 3 + Draft 5) — primary historical receipts"
+      - "Procedural rhetoric — same-sex relationships as rule of the simulated world"
+      - "Gamergate counterargument — The Sims as structural counterexample"
+      - "Avila essay + comments section cited as primary source for cultural reach"
+    anchors:
+      procedural_rhetoric: "#procedural-rhetoric-why-the-rule-not-the-representation-is-the-argument"
+      design_receipts: "#the-receipts-dons-1998-design-document-reviews"
+  will_wright_page:
+    title: "MicropolisCore — Will Wright about page"
+    url: https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/website/pages/about/will-wright/README.md
+    hook: "Same-sex romance arc + Avila testimonials paragraph"
+
+will_wright_show_for_food:
+  show:
+    path: repo-shows/did-the-sims-make-you-gay/
+    url: https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/did-the-sims-make-you-gay
+  public_record:
+    path: characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
+    url: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
+  solo_show:
+    path: repo-shows/im-queer-therefore-i-sim/
+    url: https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/im-queer-therefore-i-sim
 
 companion_readings:
   mirror_stage_of_games:

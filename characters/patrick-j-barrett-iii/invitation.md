@@ -36,10 +36,13 @@ and the long-running community joke:
 2. **Alexander Avila's video essay** — he is openly trans masc; we've already digested the wonderful
    [comments](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis)
    as a qualitative dataset (safe space, hiding from parents, "the Sims knew before I did").
-3. **The congregation** — this show is for **The Sims audience**: builders, modders,
+   **Alex is invited** — we borrowed his title; see [`alexander-avila/invitation.md`](../../characters/alexander-avila/invitation.md).
+3. **Jacques Servin / SimCopter prequel** — back door vs front door; **Jacques is invited** —
+   [`jacques-servin/invitation.md`](../../characters/jacques-servin/invitation.md) · solo [`simcopter-himbos`](../../repo-shows/simcopter-himbos/README.md).
+4. **The congregation** — this show is for **The Sims audience**: builders, modders,
    storytellers, trans/queer/nb/ace/bi/gay/lesbian/genderfluid creators — solidarity default,
    not garnish.
-4. **Pool ladder culture** (optional beat) — player cruelty as community lore; not your code alone,
+5. **Pool ladder culture** (optional beat) — player cruelty as community lore; not your code alone,
    but the social interactions engine met emergent drowning. Lighter tangent if you want it.
 
 **Participate on your own terms — every one of these counts as a full yes:**
@@ -63,7 +66,9 @@ and approve anything with your name on it before it ships.
 
 | | |
 |---|---|
-| **Show** | [`repo-shows/did-the-sims-make-you-gay.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay.yml) |
+| **Public record** | [`same-sex-relationships-the-record.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md) — post this one link when the "accident" myth comes up |
+| **Show** | [`repo-shows/did-the-sims-make-you-gay/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/did-the-sims-make-you-gay) · [`did-the-sims-make-you-gay.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/did-the-sims-make-you-gay.yml) |
+| **Sibling show** | [`im-queer-therefore-i-sim/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/im-queer-therefore-i-sim) — Avila essay + comment corpus with Don |
 | **Your guest page** | [`characters/patrick-j-barrett-iii/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/patrick-j-barrett-iii) |
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/patrick-j-barrett-iii/ideas.md) |
 | **Integrated timeline** | [`sources/same-sex-relationships-integrated-story.md`](sources/same-sex-relationships-integrated-story.md) |

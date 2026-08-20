@@ -1,17 +1,32 @@
-# Invitation draft -- Jacques Servin / Andy Bichlbaum
-
-**Status:** send-ready draft (polished 2026-08-20) · **Consent:** not_yet_asked · **Channel:** TBD (Yes Men contact form / mutual friends)
-
+---
+status: draft
+character_id: jacques-servin
+public: true
+consent: not_yet_asked
+show_seed: repo-shows/simcopter-himbos/simcopter-himbos.yml
+also_in:
+  - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
+format: async_friendly
+priority: send_now
 ---
 
-Subject: The SimCopter himbos have a sequel -- and you're cited in the design docs
+# Repo Show invitation — Jacques Servin / Andy Bichlbaum
+
+*Send-ready draft — not yet sent. Jacques may edit, decline, delay, or request removal at any time.*
+[Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Hi Jacques,
 
 I'm Don Hopkins. I worked at Maxis on The Sims (character animation, pie menus, and the 1998
 design-doc reviews). I'm building a show-and-tell series about how simulated worlds get made,
-and one episode is about how same-sex relationships got into The Sims -- on purpose, in
-writing, two years after your himbos got you fired.
+and you're invited to **two group shows** plus a **solo SimCopter episode**:
+
+| Show | Link | Your beat |
+|------|------|-----------|
+| **SimCopter Himbos** (solo) | [`simcopter-himbos`](../../repo-shows/simcopter-himbos/README.md) | The egg, firing, ACT UP, Yes Men, fog-piercing nipples |
+| **Did The Sims Make You Gay?** (group) | [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) | Prequel segment — back door vs front door |
+| **How Inclusivity Saved The Sims** (panel) | [`how-inclusivity-saved-the-sims`](../../repo-shows/how-inclusivity-saved-the-sims/README.md) | Culture jamming vs procedural rhetoric; 2026 EA sale |
 
 You're already in the primary sources. My August 1998 design review argued the prototype's
 relationship code was heterosexist, and put it this way: "We are going to be expected to do
@@ -55,4 +70,8 @@ respect regardless. If The Yes Men angle is more fun for you (culture jamming as
 rhetoric), I'd happily go there instead. Will Wright is in -- he's signed on for the premiere
 -- and the old Sims team reunion invitations went out this week.
 
--Don
+-Don Hopkins *(User Interface Flower Child)*
+
+`🩳 SimCopter Himbos` · `💋 Did The Sims Make You Gay?` · `🏳️‍🌈 back door / front door`
+
+*Quiet mode — please don't share repo links publicly yet.*

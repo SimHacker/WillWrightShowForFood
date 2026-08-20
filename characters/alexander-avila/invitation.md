@@ -4,22 +4,31 @@ character_id: alexander-avila
 public: true
 consent: not_yet_asked
 show_seed: repo-shows/im-queer-therefore-i-sim.yml
+also_in: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
 format: async_friendly
-priority: warm_lead
+priority: send_now
 working_title: "I'm Queer Therefore I Sim"
 ---
 
-# I'm Queer Therefore I Sim — Alexander Avila × Don Hopkins
+# Invitations — Alexander Avila × Don Hopkins
 
-*Draft — not sent. Alex may edit, decline, or ignore. Fair-use commentary proceeds with or without reply.*
+*Draft — not sent. Alex may edit, decline, or ignore. We borrowed your essay title for a group
+show — this invitation is on record before we use it on air.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md)
 
 Alex —
 
 Your [**Did The Sims make you gay?**](https://www.youtube.com/watch?v=Xi-HWyh0Ybk) essay is already
-in our spine — and I want a **Repo Show with you**, not just fair-use clips on a Patrick episode.
+in our spine — and I want **Repo Shows with you**, not just fair-use clips on someone else's episode.
 
-Working title: **I'm Queer Therefore I Sim** (my QGCon coinage; yours if you want a different one).
+## Two shows (pick either, both, or neither)
+
+| Show | Link | Role |
+|------|------|------|
+| **I'm Queer Therefore I Sim** | [`im-queer-therefore-i-sim`](../../repo-shows/im-queer-therefore-i-sim/README.md) | Solo talk — essay + comment corpus + Don engine room |
+| **Did The Sims Make You Gay?** | [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) | Group with Patrick Barrett + Don — your essay as congregation voice; we borrowed the title and are inviting you before airing anything |
+
+Working title for solo: **I'm Queer Therefore I Sim** (my QGCon coinage; yours if you want a different one).
 
 **What we've done:** analyzed all **1,712+ comments** on your video in MOOLLM — fourteen themes,
 cluster summary, representative quotes (underground lesbian houses at 9.7k likes, quit-without-saving,
@@ -38,16 +47,14 @@ holy-shit-they-can-just-do-that, too-busy-placing-couches, 2022 orientation upda
 4. **May 2026 looksmaxxing essay** — performativity thread across both videos; yes I saw Patreon thanks.
 5. **Audience stories** — optional TicketPR: congregation submits Sims queer awakening tales; you react.
 
-**Also brewing:** Patrick Barrett episode ([`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay.yml)) — your essay as congregation voice; can cross-cut or stay separate.
-
-**Format:** Async-friendly — record when you want; I intercut MOOLLM theme cards + fair-use clips + comment commentary. Live also fine.
+**Format:** Async-friendly — record when you want; I intercut MOOLLM theme cards + fair-use clips + comment commentary. Live also fine. May be hard to reach — zero pressure.
 
 **Not asking:** to speak for Patrick, Will, or EA.
 
 — Don Hopkins
 
-Show seed: [`repo-shows/im-queer-therefore-i-sim.yml`](../../repo-shows/im-queer-therefore-i-sim.yml) · Ideas: [`ideas.md`](ideas.md)
+Show seeds: [`im-queer-therefore-i-sim.yml`](../../repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml) · [`did-the-sims-make-you-gay.yml`](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml) · Ideas: [`ideas.md`](ideas.md)
 
-`🎬 I'm Queer Therefore I Sim` · `🏳️‍🌈 congregation` · `📊 1,712 comments digested`
+`🎬 I'm Queer Therefore I Sim` · `💋 Did The Sims Make You Gay?` · `🏳️‍🌈 congregation`
 
 *Quiet mode — please don't share repo links publicly yet.*

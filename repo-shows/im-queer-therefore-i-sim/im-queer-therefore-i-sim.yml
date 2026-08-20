@@ -41,8 +41,10 @@ segments:
     moollm_index: characters/alexander-avila/sources/moollm-links.yml
 
   historical_correction:
-    ask: "MOOLLM documents Don's design-doc intervention — slap in prototype, advocacy, Patrick parallel. Fair?"
-    doc: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#historical-correction-the-full-story
+    ask: "Don's design-doc intervention — slap in prototype, advocacy, Patrick parallel. Fair?"
+    public_record: characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
+    integrated_story: characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+    moollm: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#historical-correction-the-full-story
     optional_clip: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml  # Patrick episode cross-cut
 
   mirror_stage:
@@ -73,16 +75,20 @@ solidarity:
 
 invitation:
   path: characters/alexander-avila/invitation.md
-  priority: warm_lead
+  priority: send_now
   consent: not_yet_asked
+  also_in: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
 
 evidence:
+  - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
   - characters/alexander-avila/sources/moollm-links.yml
   - characters/alexander-avila/sources/filmography.yml
   - characters/patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
 
 see_also:
   - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.md
+  - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
   - characters/patrick-j-barrett-iii/
   - characters/don-hopkins/sources/qgcon-inclusivity-paper/
   - repo-shows/flipbook/

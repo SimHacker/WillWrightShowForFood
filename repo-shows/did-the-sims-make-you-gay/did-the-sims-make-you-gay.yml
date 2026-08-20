@@ -1,19 +1,22 @@
-# SHOW PROPOSAL — Did The Sims Make You Gay? (Patrick Barrett III + Don Hopkins)
+# SHOW PROPOSAL — Did The Sims Make You Gay? (Patrick Barrett III + Don Hopkins + invited congregation)
 
 show:
   id: did-the-sims-make-you-gay
   title: "Did The Sims Make You Gay?"
-  subtitle: "Same-sex romance in the engine room — Patrick + Don, integrated"
+  subtitle: "Same-sex romance in the engine room — Patrick + Don + Avila + Servin"
   type: group
   host: Don Hopkins
-  guests: ["Patrick J. Barrett III"]
-  buds: ["Patrick J. Barrett III"]
+  guests: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin"]
+  buds: ["Patrick J. Barrett III", "Alexander Avila", "Jacques Servin"]
   character: characters/patrick-j-barrett-iii/
   topic: |
     How Patrick programmed same-sex relationships; Don's design-doc advocacy; E3 1999 kiss;
-    Alexander Avila's video essay and comment corpus — The Sims audience as congregation.
+    Alexander Avila's video essay and comment corpus (title borrowed with invitation);
+    Jacques Servin's SimCopter prequel — The Sims audience as congregation.
   status: proposed
-  urgency: "Living history — standing, no-pressure invitation to Patrick; solidarity with queer Sims creators. Story already stands on documents + past Don/Patrick conversations."
+  urgency: |
+    Living history — invitations out to Patrick, Alex, and Jacques (may be hard to reach).
+    Cannot use Avila's essay title without inviting him. Story degrades gracefully on documents alone.
 
 dialect:
   voice: stoner_techno_hippie
@@ -34,6 +37,7 @@ segments:
   integrated_story:
     ask: "Walk the timeline together — slap in prototype, Don's reviews, which doc Patrick had, how romantic tags worked, Will's OK, E3."
     doc: characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
+    public_record: characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
     primary: https://donhopkins.com/home/TheSims/
   patrick_implementation:
     ask: "How did you program same-sex relationships without modeling fixed orientation?"
@@ -42,39 +46,63 @@ segments:
       - https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games
   avila_comments:
     ask: "What do 1,700+ Avila comments tell us about the microworld Patrick and Don enabled?"
-    creator: characters/alexander-avila/
+    with: characters/alexander-avila/
+    invitation: characters/alexander-avila/invitation.md
     video: https://www.youtube.com/watch?v=Xi-HWyh0Ybk
     companion: https://www.youtube.com/watch?v=uox4OMC50-4
-    analysis: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
-    on_air: "Fair-use commentary; celebrate testimonies; no outing; no mockery"
-  optional_avila_voice:
-    ask: "Warm invite — solo I'm Queer Therefore I Sim OR async on Patrick episode"
+    analysis:
+      comment_corpus: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+      essay_full: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md
+      cluster_summary: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#comment-cluster-summary
+      cross_repo_index: characters/alexander-avila/sources/moollm-links.yml
+    micropoliscore:
+      procedural_rhetoric: https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#procedural-rhetoric-why-the-rule-not-the-representation-is-the-argument
+      design_receipts: https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#the-receipts-dons-1998-design-document-reviews
+      will_wright_page: https://github.com/SimHacker/MicropolisCore/blob/main/apps/micropolis/website/pages/about/will-wright/README.md
+    on_air: "Fair-use commentary only with invitation on record; celebrate testimonies; no outing; no mockery"
+  avila_solo_also:
+    ask: "Same bud — optional deeper dive on solo show I'm Queer Therefore I Sim"
     solo_show: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
     room: characters/alexander-avila/
-    invitation: characters/alexander-avila/invitation.md
     moollm: characters/alexander-avila/sources/moollm-links.yml
+  simcopter_prehistory:
+    ask: "The back door and the front door -- 1996 himbo easter egg (unauthorized, fired) vs 1998-2000 designed-in inclusion (reviewed, promised in writing, shipped). Don's Draft 3 cites 'the SimCopter fiasco' by name."
+    with: characters/jacques-servin/
+    invitation: characters/jacques-servin/invitation.md
+    solo_show: repo-shows/simcopter-himbos/simcopter-himbos.yml
+    sources: characters/jacques-servin/sources/simcopter-himbo-easter-egg.md
   sims_audience:
     ask: "Builders, modders, storytellers — creator-network solidarity and post-Collection exodus ethic"
     rooms: [characters/plumbella/, characters/lil-simsie/, characters/ellpeck/]
   optional_reunion:
     ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
     seed: ../will-wright-premiere/sims-team-steering-committee-playthrough/
-  simcopter_prehistory:
-    ask: "The back door and the front door -- 1996 himbo easter egg (unauthorized, fired) vs 1998-2000 designed-in inclusion (reviewed, promised in writing, shipped). Don's Draft 3 cites 'the SimCopter fiasco' by name."
-    character: characters/jacques-servin/
-    optional_bud: "Jacques Servin / Andy Bichlbaum -- invitation draft, not yet asked; segment stands on published record without him"
-    sources: characters/jacques-servin/sources/simcopter-himbo-easter-egg.md
 
 format:
   live: false
   async_one_on_one: true
   production_model: |
     Fully async and degradable: the episode works with Don presenting the marked-up design docs,
-    credited press quotes, and the past Don/Patrick conversations alone. If Patrick ever wants to
-    contribute — email lines, relayed questions, audio, video, any pace — Don intercuts it with
-    design docs, Avila clips (commentary), MOOLLM comment themes, and optional steering-committee
+    credited press quotes, and the past Don/Patrick conversations alone. If any bud contributes —
+    Patrick, Alex, or Jacques — in any medium, Don intercuts it with design docs, fair-use Avila
+    clips (invitation on record), MOOLLM comment themes, SimCopter prequel, and optional reunion
     footage. No deadlines, no dependency on any guest recording. Congregation participates via
     repo issues.
+
+invitations:
+  patrick:
+    path: characters/patrick-j-barrett-iii/invitation.md
+    priority: send_now
+    consent: not_yet_asked
+  alexander_avila:
+    path: characters/alexander-avila/invitation.md
+    priority: send_now
+    consent: not_yet_asked
+    note: "Title borrows his essay — invitation required before on-air use of title/clips"
+  jacques_servin:
+    path: characters/jacques-servin/invitation.md
+    priority: send_now
+    consent: not_yet_asked
 
 invitation:
   path: characters/patrick-j-barrett-iii/invitation.md
@@ -82,13 +110,20 @@ invitation:
   consent: not_yet_asked
 
 evidence:
+  - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
   - characters/patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md
   - characters/patrick-j-barrett-iii/sources/did-the-sims-make-you-gay-avila.yml
   - repo-shows/infodump/infodump.yml#solidarity-lexicon
 
 see_also:
+  - repo-shows/lgbtq-sims-cluster/README.md
+  - repo-shows/simcopter-himbos/simcopter-himbos.yml
+  - repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
+  - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
   - characters/will-wright/  # inclusivity-by-design
   - characters/jacques-servin/  # SimCopter himbo easter egg -- the 1996 prequel
   - characters/alexander-avila/  # Sims essay + looksmaxxing companion; community voice
   - characters/don-hopkins/career/project-threads.yml  # Sims UI + inclusive relationships
-  - documentation/designs/og-cozy-games.md  # MicropolisCore — procedural rhetoric thread
+  - https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md  # procedural rhetoric + 1998 receipts
+  - https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis  # comment analysis
+  - characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md  # one-link public record

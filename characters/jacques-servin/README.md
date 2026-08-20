@@ -4,7 +4,7 @@
 fired for it, and went on to co-found **The Yes Men**. The prequel to the Sims same-sex
 relationships story.
 
-**Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md)
+**Status:** invitation draft · **Consent:** not_yet_asked · **Shows:** [`simcopter-himbos`](../../repo-shows/simcopter-himbos/README.md) (solo) · [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) · [`how-inclusivity-saved-the-sims`](../../repo-shows/how-inclusivity-saved-the-sims/README.md)
 
 ## The himbo easter egg
 

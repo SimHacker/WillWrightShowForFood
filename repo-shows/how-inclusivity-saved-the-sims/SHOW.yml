@@ -5,7 +5,7 @@ show:
   title: "How Inclusivity Saved The Sims"
   type: solo_or_panel
   host: Don Hopkins
-  guests: ["Ian Bogost", "Janet Murray", "Tanja Sihvonen"]
+  guests: ["Ian Bogost", "Janet Murray", "Tanja Sihvonen", "Jacques Servin", "Alexander Avila"]
   topic: |
     Twenty years of Sims inclusivity — procedural rhetoric (Bogost), agency and storytelling
     (Murray), modding culture (Sihvonen), same-sex design arc (Don → Patrick Barrett),
@@ -50,7 +50,12 @@ ties_to:
   - ../../../characters/ian-bogost/
   - ../../../characters/janet-murray/
   - ../../../characters/tanja-sihvonen/
+  - ../../../characters/jacques-servin/
+  - ../../../characters/alexander-avila/
   - ../../../characters/ellpeck/
   - ../../../catalogs/soul-city/
   - ../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
   - ../will-wright-premiere/game-bridge-sims-tiny-life.yml
+  - ../did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  - ../simcopter-himbos/simcopter-himbos.yml
+  - ../lgbtq-sims-cluster/README.md

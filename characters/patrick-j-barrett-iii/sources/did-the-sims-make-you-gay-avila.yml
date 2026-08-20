@@ -32,8 +32,14 @@ community_joke: |
     location: |
       MOOLLM designs/sims/sims-queer-identity-formation.md — section "Community Response: Comment Analysis"
     url: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis
+    cluster_summary: https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#comment-cluster-summary
     index: characters/alexander-avila/sources/moollm-links.yml
     scale: "1,712+ comments; 14 themes; cluster summary"
+  micropoliscore:
+    procedural_rhetoric: https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#procedural-rhetoric-why-the-rule-not-the-representation-is-the-argument
+    design_receipts: https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#the-receipts-dons-1998-design-document-reviews
+    show: repo-shows/did-the-sims-make-you-gay/
+    public_record: characters/patrick-j-barrett-iii/same-sex-relationships-the-record.md
   themes_sample:
     - "Yes — Sims made me realize I was queer (retrospective recognition)"
     - "Hiding queer gameplay from parents"

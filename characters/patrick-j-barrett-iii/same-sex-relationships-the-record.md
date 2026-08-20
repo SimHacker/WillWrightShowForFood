@@ -2,6 +2,22 @@
 
 *Don Hopkins · August 2026 · post this one link when the "accident" story comes up*
 
+**Repo Shows built on this record:**
+
+| Show | Link | Role |
+|------|------|------|
+| **Did The Sims Make You Gay?** | [show hub](../../repo-shows/did-the-sims-make-you-gay/README.md) · [readable outline](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.md) | Patrick + Don + **Avila + Servin invited** |
+| **I'm Queer Therefore I Sim** | [show hub](../../repo-shows/im-queer-therefore-i-sim/README.md) | Avila solo + Don |
+| **SimCopter Himbos** | [show hub](../../repo-shows/simcopter-himbos/README.md) | Servin solo + Don |
+| **How Inclusivity Saved The Sims** | [show hub](../../repo-shows/how-inclusivity-saved-the-sims/README.md) | Panel — Bogost, Murray, Sihvonen, Servin, Avila |
+| **LGBTQ+ cluster index** | [lgbtq-sims-cluster](../../repo-shows/lgbtq-sims-cluster/README.md) | All group + solo shows |
+
+This document is the **one-link public correction** (myth vs primary sources). The shows above
+extend it with Avila's essay, the MOOLLM comment analysis, and optional guest voices — but the
+historical record stands on the documents alone.
+
+---
+
 A story circulates that goes roughly like this: *programmer Patrick J. Barrett III was given
 an outdated design document that still included same-sex unions — a feature the team had
 quietly decided was too risky — and he built it because nobody told him not to.*
@@ -184,7 +200,8 @@ whoever owns the servers.
 - [Integrated timeline — Don + Patrick, with press-discrepancy table](sources/same-sex-relationships-integrated-story.md)
 - [Design-arc source file (QGCon inclusivity paper)](../don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml)
 - [Inclusivity timeline, 1996–2019, game ↔ culture parallel track](../don-hopkins/sources/qgcon-inclusivity-paper/timeline.yml)
-- [Patrick's guest page](README.md) · [show seed: *Did The Sims Make You Gay?*](../../repo-shows/did-the-sims-make-you-gay/README.md)
+- [Patrick's guest page](README.md) · [show: *Did The Sims Make You Gay?*](../../repo-shows/did-the-sims-make-you-gay/README.md) · [readable outline](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.md) · [sibling: *I'm Queer Therefore I Sim*](../../repo-shows/im-queer-therefore-i-sim/README.md)
+- [Avila comment analysis (MOOLLM — 14 themes, 1,712+ comments)](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis) · [MicropolisCore procedural-rhetoric frame](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#procedural-rhetoric-why-the-rule-not-the-representation-is-the-argument)
 
 Press: [New Yorker (Parkin, 2014)](https://www.newyorker.com/tech/annals-of-technology/the-kiss-that-changed-video-games) ·
 [Game Developer (2014)](https://www.gamedeveloper.com/design/the-story-of-how-i-the-sims-i-got-same-sex-relationships---in-1999) ·

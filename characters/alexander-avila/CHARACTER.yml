@@ -27,6 +27,7 @@ representation:
   authored_by: don-hopkins
   invitation_status: draft
   consent: not_yet_asked
+  document: invitation.md
 
 relationship:
   kind: community_analyst
@@ -37,10 +38,11 @@ relationship:
 show_relevance:
   primary: repo-shows/im-queer-therefore-i-sim/im-queer-therefore-i-sim.yml
   secondary: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  also_in: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
   working_title: "I'm Queer Therefore I Sim"
   role: |
     Solo Repo Show with Don — discuss essay, 1,712+ comment MOOLLM analysis, historical correction,
-    mirror stage, optional looksmaxxing companion. Also congregation voice on Patrick episode.
+    mirror stage, optional looksmaxxing companion. Invited co-bud on Did The Sims Make You Gay? group show.
 
 flagship_videos:
   - id: did-the-sims-make-you-gay

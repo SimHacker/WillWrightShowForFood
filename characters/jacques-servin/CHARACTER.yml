@@ -20,7 +20,10 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+  show_seed: repo-shows/simcopter-himbos/simcopter-himbos.yml
+  also_in:
+    - repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
+    - repo-shows/how-inclusivity-saved-the-sims/SHOW.yml
   note: |
     The prequel voice for the Sims inclusivity arc: his 1996 SimCopter easter egg (and firing)
     is the "SimCopter fiasco" Don's Draft 3 review cites by name. Back door 1996 vs front door
@@ -59,8 +62,9 @@ open_questions:
   fog_piercing_nipples: "Rumor: himbo nipples rendered with the airport-running-lights mode (self-luminous, fog-piercing). Screenshots suggestive; fog experiment pending. See media/simcopter-himbo-glow/."
 
 show_suggestions:
-  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Prequel segment -- back door (1996 easter egg, fired) vs front door (1998-2000 designed-in, shipped)" }
-  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Identity correction comes home -- the Yes Men lens on the 2026 EA sale and The Sims' queer legacy" }
+  - { seed: ../../repo-shows/simcopter-himbos/simcopter-himbos.yml, what: "Solo — himbo egg, firing, Yes Men, fog-piercing nipples" }
+  - { seed: ../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml, what: "Group prequel — back door (1996) vs front door (1998-2000)" }
+  - { seed: ../../repo-shows/how-inclusivity-saved-the-sims/SHOW.yml, what: "Panel — culture jamming vs procedural rhetoric; EA 2026" }
 
 sources:
   primary:

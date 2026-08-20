@@ -103,7 +103,7 @@ medium — live, recorded, email, or a one-line text.*
 2. Show Draft 5/7 "will not be the only type" — contrast with 2014 press summary  
 3. The interaction tree / romantic tags — from docs, press, and past conversations; (optional) Patrick adds detail in whatever form suits him  
 4. E3 clip + fair-use commentary (autonomous kiss, not wedding-on-rails myth)  
-5. Avila essay + **comment themes** from MOOLLM analysis  
+5. Avila essay + **comment themes** from [MOOLLM comment analysis](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis) — cultural frame in [MicropolisCore *OG Cozy Games*](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md)  
 6. Audience Q: builders/modders/storytellers — microworld solidarity  
 
 ---
@@ -120,3 +120,6 @@ medium — live, recorded, email, or a one-line text.*
 | Game Developer summary | https://www.gamedeveloper.com/design/the-story-of-how-i-the-sims-i-got-same-sex-relationships---in-1999 |
 | PC Gamer — docs vs Barrett account | https://www.pcgamer.com/unearthed-the-sims-design-docs-show-the-debate-over-same-sex-relationships/ |
 | Don HN (Feb 2025) — TBD before production DB | https://news.ycombinator.com/item?id=43068114 |
+| Avila comment analysis (MOOLLM) | https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis |
+| MicropolisCore — procedural rhetoric + receipts | https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md |
+| WWSFF show seed | ../../repo-shows/did-the-sims-make-you-gay/README.md |
