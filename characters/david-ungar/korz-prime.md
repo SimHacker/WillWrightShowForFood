@@ -182,6 +182,24 @@ data knows about gezelligheid, no definition required. The strict
 tier treats the same word as an opaque symbol. One name, prepaid
 latent semantics above, free interning below.
 
+And not only `parents:` — **any slot can hold a K-line pointer into
+latent space.** [LATENT-SPACE-INHERITANCE](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)
+established the move for the parent list; the sea generalizes it to
+every slot body. `template: gothic-victorian-newspaper` with no such
+file on disk isn't a broken link — it's an address into training
+data, dereferenced by the soft tier at send time. `voice:
+carnival-barker`, `layout: ransom-note`, `physics: looney-tunes` —
+each resolves to more than any file you'd bother writing. Every slot
+value is an address, and addresses come in two kinds: filesystem
+paths (resolved by `open`, versioned by git, honored by the strict
+tier) and K-lines (resolved by inference, versioned by the model
+generation, soft tier only). The strict compiler treats an
+unresolvable pointer the way it treats a prose body — refuses it,
+which marks it: every latent pointer is a standing candidate for
+crystallization into a real file once its improvised referent
+stabilizes. Dangling pointers become deopt triggers instead of
+segfaults.
+
 ## Zorkizing Adventure
 
 Knuth literate-ized Adventure: his CWEB edition of Crowther & Woods's
@@ -374,7 +392,10 @@ anyway: state is slots with data bodies, declarations are slots with
 guard templates, and both float in the same sea.
 
 **And yes, they point to other files** — pointers are just slots
-whose bodies are addresses. The idiom is everywhere already:
+whose bodies are addresses, and addresses come in two kinds: paths
+into the repo and K-lines into latent space (see "Names are
+inheritance" above — any slot, not just `parents:`, can hold either).
+The path idiom is everywhere already:
 `prototype:` and `parents:` (delegation), `script:` in CARD methods
 (behavior lives in a sibling file), `see_also:` (associative edges),
 the troll instance's pointer-file visa. Shared state between facets
