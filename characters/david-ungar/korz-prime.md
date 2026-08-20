@@ -240,6 +240,33 @@ What it buys:
   inherit it too: a mind whose referents have gone vague visibly
   shrinks.)
 
+**Do we want nulls at all? (The zillion-dollar question.)** Hoare
+called null references his billion-dollar mistake — a zillion with
+inflation — and his regret was specific: null silently inhabits
+*every* reference type, so every dereference is a hidden conditional.
+Korz already dodged that bullet structurally, and it's worth saying
+how: **absence is not a value.** A dimension is either bound or
+unmentioned; there is no `location: null` poisoning the coordinate
+space, no token you can accidentally dereference — an unbound
+dimension just means only more-generic slots match. The deeper sin of
+null is that one token conflated at least three meanings — *no
+binding*, *unknown*, and *nothing* — and Korz′ gives each its own
+honest mechanism:
+
+| Null conflated | Korz′ separates |
+|---|---|
+| No binding | Unmentioned dimension — structural absence, matched by generic slots |
+| Unknown | `isKnown: float` — measured, thresholded, acted on |
+| Nothing | A real sentinel coordinate you name and guard on — `inventory: empty`, `location: nowhere` — a value, never a hole |
+| Failure | Deopt to the soft tier — improvise, don't segfault |
+
+So: keep Korz's refusal of the null coordinate (dodged bullet,
+confirmed), replace null's epistemic duty with isKnown (the boolean
+shadow gets its continuum), and when a domain genuinely needs
+"nothing," model it as a named coordinate that dispatch can see —
+E-Prime discipline applied to reference: ban the degenerate universal
+token, and every absence has to say *which kind of absent it is*.
+
 **Paging latent space: K-line virtual memory.** isKnown is the page
 fault detector; here is the fault handler. When an important K-line
 dereferences below threshold, don't just improvise cautiously —
