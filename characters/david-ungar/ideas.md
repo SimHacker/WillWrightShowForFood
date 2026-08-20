@@ -102,6 +102,25 @@ And his question about live exploratory environments — **"Is there anything li
 today? Why not??"** — is the show's thesis; answer it on air.
 → [`sources/2025-10-26-korz-email-hn-rollup.md`](sources/2025-10-26-korz-email-hn-rollup.md)
 
+### 11.5 MOOLLM × Korz — the LLM as the Korz interpreter
+
+MOOLLM applies LLMs to executing Self with inferencing extensions — **inherit from latent
+space**, smart context-sensitive method resolution. The discussion to have with David: can we
+do the same for **Korz**? An LLM dispatcher over the sea of slots — semantic coordinate
+matching, prose guards, sampling among matches instead of erroring on ambiguity, falling
+through to latent space on a miss. [`korz-prime.md`](korz-prime.md) is the design sketch that
+starts answering: one semantics, two dispatchers — the deterministic VM as optimizing compiler,
+the LLM as interpreter, crystallize/deopt between them, the Self JIT playbook run one level up.
+Companion design: [LATENT-SPACE-INHERITANCE](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md).
+
+And the filesystem question: MOOLLM views the file system as a **tree of Self objects**
+(directories as prototypes, parent lists, delegation). Could it *also* view the same files as
+a **Korz soup of slots** — semi-organized, but arbitrarily viewable and groupable as subjective
+objects along parameterized dimensions? The tree becomes one saved view among many; layers as
+queries over the sea ([korz-notes on layers](korz-notes.md)); the LLM as the IDE tier that
+materializes any grouping on demand. One repo, two object models, dual-readable — is the Self
+reading and the Korz reading of the same directory a duality or a hierarchy?
+
 ### 12. OpenLaszlo reunion → Declare (optional group)
 **Receipt:** Don ran into Ungar interviewing at Laszlo — email to Tom Lord, 21 Aug 2006
 ([extract](sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) ·

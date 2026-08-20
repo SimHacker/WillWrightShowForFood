@@ -334,6 +334,31 @@ The Sims auctioned all matching ads and dithered among the top N;
 temperature could be a context dimension — `{temperature: 0}` recovers
 classical Korz. **ASK:** would he buy dispatch as an auction?
 
+**Can the LLM be the Korz interpreter, the way MOOLLM interprets Self?**
+MOOLLM applies LLMs to executing Self with inferencing extensions:
+inherit from latent space, smart context-sensitive method resolution.
+The same move for Korz is [korz-prime](korz-prime.md) — one semantics,
+two dispatchers: the VM compiles the decidable slots, the LLM
+improvises over the rest (semantic coordinate match, prose guards,
+sample-don't-error on ambiguity, fall through to latent space on a
+miss), crystallize/deopt between the tiers. **ASK:** the Self JIT
+watched types recur and compiled them; this one watches *meanings*
+recur. Does the JIT analogy hold all the way up, or does inference
+break some invariant the deopt safety net depended on?
+
+**Filesystem: tree of Self objects, or soup of slots?**
+MOOLLM views the file system as a tree of Self objects — directories
+as prototypes, parent lists, delegation. Could it *also* view the same
+files as a Korz sea of slots: semi-organized, but arbitrarily viewable
+and groupable as subjective objects along parameterized dimensions?
+Then the tree is just one saved view among many (see the layers
+question above — layers as queries over the sea), and the LLM is the
+IDE tier that materializes any grouping on demand. **ASK:** is the
+Self reading and the Korz reading of the same directory a duality or a
+hierarchy — and does the paper's "IDE restores the abstractions" line
+predict that a filesystem never needed to *be* a tree, only to be
+viewable as one?
+
 **"Slot space" is a config system Don already runs in production.**
 The paper: *"A body of Korz code is termed a slot space: a collection
 of slots organized in a multidimensional space."* Chess shows the

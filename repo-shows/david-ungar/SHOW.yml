@@ -36,6 +36,8 @@ threads:
   - "**Idea Scavenging** → persistent characters and skills"
   - "**Dynamic deoptimization** — Don's pet name: **dynamic pessimization** (pessimization as a synonym for deoptimization — the only pessimizing compiler pass shipped on purpose); when to reveal complexity"
   - "**Korz — the subjective dimension** — Us → Korz (symmetric multidimensional dispatch; Ungar's Oct 2025 pointer: 'the natural extension of Self') → MOOLLM context-activated inheritance; answer his own question on air: 'Is there anything like that today? Why not??'"
+  - "**MOOLLM × Korz — LLM as the Korz interpreter** — apply LLMs to executing Korz with inferencing extensions the way MOOLLM does for Self: inherit from latent space, smart context-sensitive method resolution; korz-prime's two dispatchers (VM compiles, LLM improvises, crystallize/deopt between)"
+  - "**Filesystem: tree of Self objects, or soup of slots?** — MOOLLM reads directories as prototypes; could the same files read as a Korz sea of slots, semi-organized but arbitrarily groupable into subjective objects along dimensions? Tree as one saved view; the LLM as the IDE tier materializing any grouping"
   - "**Slots all the way down** — Self as RISC/CHON of objects; multiple inheritance; what JS ⊂ Self lost"
   - "**Relativistic parallelism** — 'Everything You Know (About Parallel Programming) Is Wrong!' vs git's many-worlds cosmology"
   - "Self pun stack — self-interest, self-ish, (oops)/OOPS, *Self: The Movie* (Don enumerates; David vetoes)"
