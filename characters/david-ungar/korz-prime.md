@@ -32,6 +32,22 @@ program means. Add a second executor:
 | No match | doesNotUnderstand | **fall through to latent space** — improvise a slot from training |
 | Slot body | code | code, prose, or both |
 
+That doesNotUnderstand row is the oldest trapdoor in object-land, and
+worth naming as lineage: Smalltalk-80's `doesNotUnderstand:`,
+Objective-C's `forwardInvocation:`, Ruby's `method_missing`, Python's
+`__getattr__`, Perl's `AUTOLOAD`. Every dynamic language kept a hatch
+where *failed dispatch becomes a first-class event with a handler* —
+and the handler is where the magic always lived: proxies, mocks,
+ORMs, NeXT's entire Distributed Objects remoting system squatting in
+Objective-C's forwarding path. Those systems proved that the failure
+path can carry production architecture; they just had to hand-write
+the handler per trick. Korz′ finishes the thought: **the soft tier is
+doesNotUnderstand: promoted from escape hatch to peer dispatcher.**
+The handler of last resort is a mind with the training distribution
+behind it, "message not understood" stops being an error family and
+becomes the boundary marker between the tiers, and crystallization
+moves that boundary one slot at a time.
+
 The two tiers are not rivals; they are **JIT tiers**. This is the
 Self playbook run one level up. The LLM is the interpreter: slow,
 expensive, handles everything, understands prose guards. The VM is
