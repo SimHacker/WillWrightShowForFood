@@ -155,6 +155,26 @@ supplies default coordinates the way MOOLLM's typed container
 directories supply inherited metadata. Location is a guard; moving a
 file re-guards it; `git log` is the time dimension.
 
+**Prefixes are containment without directories.** Big-endian naming —
+most significant first: `2026-08-20-topic.yml`,
+`heads-axe-brow.yml` / `heads-ledger-squint.yml` — makes lexicographic
+order semantic order, and **prefix matching clusters the files of one
+flat directory into implicit trees with semantically meaningful
+paths**. The shared `heads-` prefix is a subtree node nobody had to
+`mkdir`; a plain sorted `ls` is a treewalk; `heads-*` is a subtree
+query the filesystem answers for free. In the Korz reading, a
+filename prefix is a guard coordinate at finer grain than the
+directory address — the same containment-is-a-guard rule, one level
+down: renaming re-guards a file exactly the way moving it does, and a
+date prefix is the time dimension worn on the name (git log gives the
+edit history; the prefix gives the *subject* time). So the tree/sea
+duality goes fractal: every directory is simultaneously a little flat
+sea and a bundle of implicit subtrees pattern-matched out of its
+names — the explicit tree below it and the implicit trees within it
+are both just saved views over prefix guards, and the strict tier
+gets its cheapest discrimination index — sort order — as a gift from
+the filesystem.
+
 **Names are inheritance.** Dimensions and coordinates are ordinary
 words — `mood`, `weather`, `era`, `trust` — and in the soft tier a
 word is a K-line: `mood: gezellig` imports everything the training
