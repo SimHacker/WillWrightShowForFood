@@ -45,6 +45,13 @@ he told her that she'd love to share. Entirely on Patrick's terms and at his pac
 [team stories page](../../repo-shows/building-the-sims/team-stories.md) already holds a batch
 of his best, and there's always room for more.
 
+### 8. The Brain Flurry defense
+
+Mod the McFlurry to advertise **Brain Flurries** zombies can't resist — laxative payload,
+they flee with the shits; ring the encampment with stands (tower defense by advertisement),
+then fertilize the garden with the aftermath. Feeds the Hierarchy of Bleeds fluid CA.
+→ [`../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md`](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

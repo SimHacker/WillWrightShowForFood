@@ -65,6 +65,30 @@ slice_city_precedent:
   ambition: "Generalize beyond SimCity ⇔ The Sims to **as many games as possible** — the Soul City hub-and-spoke (see ../repo-shows/INDEX.yml bridges-architecture; game-bridge-*.yml, incl. the Mind Mirror emulated-runtime bridge)."
   on_show: "Have Steve walk through how SliceCity actually nests the sim; then design live how to widen it to save-file + emulator bridges across the catalog."
 
+brain_flurry_defense:
+  # From the 2026-08-20 chat jam — sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md
+  concept: "Mod the McFlurry to advertise **Brain Flurries** zombies can't resist — laxative payload, they get the shits and run away"
+  mechanism: "Tower defense by advertisement — the Sims ad auction does the targeting; zombie brain-hunger re-weights the Brain Flurry ad sky-high and the zombie walks itself into the trap"
+  deployment: "Station several stands around the encampment perimeter — no bullets fired"
+  byproduct: "A hell of a lot of shit all over the place — which fertilizes the garden. Siege → sewage → soil → supper: every repelled invasion feeds next season's harvest"
+  feeds_into: "hierarchy_of_bleeds — the brown flood is this defense's own effluent, piped into the fluid CA"
+
+hierarchy_of_bleeds:
+  # Maslow for fluids — https://en.wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs
+  ask_steve: "Did you clone the blue flood into a red blood flood? Or chum flood with lots of niblets? 😉"
+  precedent: "SimSlice's blue flood is already a tile-spreading machine — the pyramid is a palette-and-rules mod away"
+  escalation_rules:
+    - "Chum flows into and replaces blood"
+    - "Blood and chum flow into and replace water"
+    - "Once you're blood you're no longer water; once you're chum you're no longer blood"
+  total_order: "water < blood < chum — one-way escalation; fluids self-actualize upward and never come back down"
+  brown: "Diarrhea floods fit the hierarchy AND the cellular automata — and close the Brain Flurry loop as its byproduct"
+  yellow: "Pee — does it pool or not? Vanilla Sims pee is a static puddle; if a puddle is just a flood with spread radius zero, pee joins as the humble ground floor — the physiological base of the pyramid"
+  moveable_feces: "Like a moveable feast — random combination rules when two fluids meet; roll on a combination table, let the rules mutate mid-flood, Fluxx-style (../fluxx-rules-change-as-you-play/)"
+  z_buffers: "Floods stack into layers — not raised, OVERLAPPING co-located strata per tile, composited by z-buffer in disgusting patterns. Painter's algorithm for filth; Porter–Duff for bodily fluids: chum-over-blood-over-water, marbled"
+  attachment_points: "Each layer gets 'same height' and 'above' slots to layer objects on, like plates stack — a flood layer with slots is just an object that happens to be a liquid: raft in water's same-height slot, corpse in blood's, McFlurry stand riding 'above' the whole parfait"
+  source: sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md
+
 interview_heather:
   segment: "Zombie provenance — artisanal vs industrial"
   ask: |

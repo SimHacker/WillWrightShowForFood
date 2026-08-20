@@ -31,6 +31,13 @@ Round-tripping saves; federated catalogs — [`../https://github.com/SimHacker/W
 ### 6. Gallium / Proxi
 What nested-simulation craft meant inside Will's AI life-sim experiment.
 
+### 7. The Hierarchy of Bleeds — clone the blue flood
+Did you clone the blue flood into a red blood flood? Or chum flood with lots of niblets? 😉
+Chum replaces blood, blood replaces water, never backward — Maslow for fluids, plus diarrhea
+floods, the pee-puddle question, moveable-feces combination rules, z-buffered layer
+compositing, and plate-style attachment slots on every layer.
+→ [`../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md`](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
