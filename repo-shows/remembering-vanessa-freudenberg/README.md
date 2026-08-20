@@ -4,10 +4,10 @@
 
 | Field | Value |
 |-------|-------|
-| **Status** | seed |
+| **Status** | rehearsed (2026-07-20) |
 | **Type** | memorial_arc |
 | **Host** | Don Hopkins |
-| **Consent** | not yet asked |
+| **Consent** | Craig warm — rehearsed the tribute; Dan + Alan not yet asked |
 
 ## Topic
 
@@ -15,6 +15,31 @@ Honor Vanessa Freudenberg (d. 2025) — SqueakJS, Etoys, Croquet/Multisynq, her 
 SqueakJS — with the people who knew her and carry the lineage forward. Craig's Caffeine builds on
 her VM; Dan's Smalltalk Zoo credits SqueakJS; Alan's constructionist microworld arc runs through
 the same live-object thread.
+
+## The rehearsal — and what it sparked
+
+On July 20, 2026, Don and Craig recorded a rehearsal screencast reading her SqueakJS paper
+(DLS '14, Most Notable Paper 2024) — and found that every public copy still carried her
+deadname. That became the founding case of the
+[prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration): a
+[memorial edition](https://github.com/SimHacker/moollm/blob/main/designs/prestoration/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf)
+with her correct name, the original preserved bit-for-bit beside it, every change hashed and
+disclosed — and the discovery of her own 2021 HN comment asking not to be deadnamed in
+citations. The session was lifted into the
+[change-name skill](https://github.com/SimHacker/moollm/tree/main/skills/change-name) via
+[cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror).
+
+## The show
+
+**Act 1:** Craig screen-shares the memorial edition and scrolls through it at his own pace —
+his scrolling sets the tempo, the conversation follows the pages. Other papers of hers are
+welcome in the same sitting; her
+[JIT brain dumps](../../characters/vanessa-freudenberg/sources/jit-notes/) are preserved in
+the repo.
+
+**Act 2:** the adventure of making the memorial edition — the font-subset archaeology,
+cursor-mirror reading its own session transcript, and play-learn-lift turning the one-off
+surgery into the reusable change-name skill.
 
 ## Memorial mode
 

@@ -50,7 +50,7 @@ in_flight:
   - { id: blake-jennings, status: awaiting_reply_to_firehose, next: "give it room; gentle follow-up in a week or two; queer show cluster w/ avila + ellpeck" }
   - { id: ben-cerveny, status: in_the_loop, next: "reviewed + approved Don's Heinz email; formal invite when ben-cerveny.yml seed ripens" }
   - { id: heinz-lemke, status: engaged_delivering, next: "SEND the Ben-reviewed email TODAY; then receive memoir installments + listing" }
-  - { id: craig-latta, status: engaged, next: "MEET IN PERSON (Amsterdam) — schedule Vanessa memorial session + OL reunion slot; unlocks Kay + Ingalls momentum" }
+  - { id: craig-latta, status: engaged, next: "Schedule the memorial recording — Craig scrolls the memorial edition at his pace (rehearsed 2026-07-20), then making-of act; he cheered repo plans 2026-08-20; remote fine (he's Berkeley-side since Jul 21); unlocks Kay + Ingalls momentum" }
   - { id: warren-spector, status: sent_2026-08-20, next: "await LinkedIn connect accept; if yes send invitation.md fuller note — donation routing (UT/Stanford/Strong/IA) + scan-pipeline consulting + preservation panel (phil-salvador/rosenthal/kahle) + PIXIE" }
 
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.

@@ -24,6 +24,8 @@ remember_vanessa:
   why: "Great friends; her SqueakJS is the foundation Caffeine builds on."
   memorial-mode: "Represent + discuss — never speak as her. See characters/vanessa-freudenberg/ (memorial)."
   wasm_thread: "Her sharp, insightful take on WebAssembly after SqueakJS — the exact thread Craig carried into Caffeine/Catalyst."
+  rehearsed: "2026-07-20 — Don + Craig read her DLS '14 paper on screencast; exposed the deadname problem; sparked the prestoration/memorial edition (moollm designs/prestoration)."
+  show_plan: "Craig screen-shares the memorial edition and scrolls at his own pace — his scrolling sets the tempo; other papers welcome (her JIT brain dumps are in the repo). Act two: the making-of adventure — change-name skill, cursor-mirror, play-learn-lift."
 
 threads:
   livecode_on_air: "Bring a laptop — make live persistent changes to a running page on stream"
@@ -44,4 +46,4 @@ ties_to:
   - ../../process/trails/live-objects.md
   - https://github.com/generalbusiness-ai/keep
 
-consent: not_yet_asked
+consent: "warm — rehearsed Vanessa memorial 2026-07-20; cheered repo plans 2026-08-20; formal show ask pending"

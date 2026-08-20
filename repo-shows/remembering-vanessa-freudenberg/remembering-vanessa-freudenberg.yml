@@ -14,19 +14,36 @@ show:
     SqueakJS — with the people who knew her and carry the lineage forward. Craig's Caffeine builds on
     her VM; Dan's Smalltalk Zoo credits SqueakJS; Alan's constructionist microworld arc runs through
     the same live-object thread.
-  status: seed
-  consent: not_yet_asked
+  status: rehearsed  # 2026-07-20 — Don + Craig read her DLS '14 paper on a rehearsal screencast
+  consent: "Craig warm — rehearsed the tribute, cheered the repo plans; Dan + Alan not yet asked"
 
 memorial-mode:
   rule: "Represent and discuss documented work + stories friends tell. Do not interview Vanessa; do not speak as her."
   directory: characters/vanessa-freudenberg/
 
+rehearsal:
+  date: 2026-07-20
+  what: "Don + Craig screencast reading Vanessa's SqueakJS paper (DLS '14, Most Notable Paper 2024)"
+  consequence: |
+    The rehearsal exposed that every public copy of the paper carried her deadname —
+    founding case of the prestoration: a memorial edition with her correct name, original
+    preserved bit-for-bit, changes hashed and disclosed. Her own 2021 HN comment asking not
+    to be deadnamed in citations surfaced during the precedent hunt. The session was lifted
+    into the change-name skill via cursor-mirror.
+  case_study: https://github.com/SimHacker/moollm/tree/main/designs/prestoration
+  memorial_edition: https://github.com/SimHacker/moollm/blob/main/designs/prestoration/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf
+
 episode_shape:
   anchor:
     guest: Craig Latta
     show: repo-shows/craig-latta/SHOW.yml
-    what: "Live Caffeine demo + Craig's memories + WASM thread Vanessa started"
-    format: "Remote screencast or in-person Amsterdam — Craig + Don"
+    what: |
+      Act 1 — Craig screen-shares the MEMORIAL EDITION of her SqueakJS paper and scrolls
+      through it at his own pace; his scrolling sets the tempo, the conversation follows
+      the pages. Other papers welcome in the same sitting (her JIT brain dumps are in the
+      repo). Act 2 — the adventure of making the memorial edition: font-subset archaeology,
+      cursor-mirror reading its own transcript, play-learn-lift into the change-name skill.
+    format: "Remote screencast or in-person Amsterdam — Craig + Don; Craig drives the scroll"
   warmly_invited:
     - guest: Dan Ingalls
       why: "Smalltalk Zoo credits SqueakJS; Lively/SqueakJS collaboration; pop-up menus ↔ pie menus cousin show"
@@ -36,8 +53,11 @@ episode_shape:
       format: "Remote — memorial segment + microworld show can share the arc"
 
 threads:
+  - "The memorial edition scroll-through — her DLS '14 paper with her name said right, Craig setting the pace"
   - "SqueakJS — live Smalltalk in the browser (Vanessa's documented public work)"
   - "JS vs WASM for live VMs — her insights; Craig's Caffeine/Catalyst continuation"
+  - "Her JIT brain dumps — characters/vanessa-freudenberg/sources/jit-notes/"
+  - "The prestoration adventure — change-name skill, cursor-mirror, ethics of correcting the record with receipts"
   - "Etoys, Plopp, Croquet/Multisynq — playful objects that stay live"
   - "Smalltalk Zoo welcome page credit — Dan names SqueakJS; say it on air"
   - "Cursor / IDE chrome vs live systems — Don + Craig (and friends) compare notes"
@@ -45,6 +65,7 @@ threads:
 ties_to:
   - ../../characters/vanessa-freudenberg/memorial.md
   - ../../characters/craig-latta/invitation.md
+  - ../../characters/craig-latta/sources/2026-summer-rehearsal-and-messages.md
   - ../../characters/dan-ingalls/invitation.md
   - ../../characters/alan-kay/invitation.md
   - ../../process/trails/live-objects.md

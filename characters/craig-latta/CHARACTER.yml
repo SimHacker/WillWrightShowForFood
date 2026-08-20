@@ -16,15 +16,23 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: in_conversation
+  consent: "warm — rehearsed Vanessa tribute 2026-07-20; cheered repo plans 2026-08-20; formal show ask pending"
   document: invitation.md
   show_seed: repo-shows/craig-latta/
   also_shows: [repo-shows/openlaszlo/]
-  note: "Caffeine solo / Vanessa memorial / OR OpenLaszlo reunion (prototypes + live objects with Ungar + Myers)"
+  note: "Lead: Vanessa memorial — Craig scrolls the memorial edition at his pace, then the making-of (change-name / cursor-mirror). Also Caffeine solo / OpenLaszlo reunion."
+
+memorial_rehearsal:
+  date: 2026-07-20
+  what: "Rehearsal screencast — Don + Craig reading Vanessa's DLS '14 SqueakJS paper (Most Notable Paper 2024)"
+  outcome: "Exposed the deadname problem in every public copy → founding case of the prestoration → memorial edition PDF + change-name skill"
+  source: sources/2026-summer-rehearsal-and-messages.md
+  case_study: https://github.com/SimHacker/moollm/tree/main/designs/prestoration
+  show_format: "Craig screen-shares the memorial edition, scrolling sets the pace; other papers welcome; act two = the making-of adventure"
 
 bio:
-  summary: "**Craig Latta** — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of **Black Page Digital**. Creator of **Caffeine** (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the **Context** minimal Squeak distribution, and **Catalyst** (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; Amsterdam ⇄ Berkeley. Invited to OpenLaszlo → Declare reunion (what prototypes are / live objects) as well as Caffeine and Vanessa memorial arcs."
+  summary: "**Craig Latta** — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of **Black Page Digital**. Creator of **Caffeine** (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the **Context** minimal Squeak distribution, and **Catalyst** (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; Amsterdam ⇄ Berkeley. Rehearsed the Vanessa memorial with Don (2026-07-20 — the session that sparked the prestoration); also invited to OpenLaszlo → Declare reunion (what prototypes are / live objects) and a Caffeine solo."
 
 show_suggestions:
   - { seed: ../../repo-shows/openlaszlo/, what: "Group — OL reunion → Declare; live-objects / prototypes act with Ungar + Myers + Temkin" }
@@ -46,7 +54,9 @@ sources:
       doc: keep.md
 
 see_also:
-  - { path: invitation.md, why: "A reunion / B Caffeine / C Vanessa / D whatever works" }
+  - { path: invitation.md, why: "A Vanessa memorial (rehearsed) / B reunion / C Caffeine / D whatever works" }
+  - { path: sources/2026-summer-rehearsal-and-messages.md, why: "Jul 20 rehearsal + summer messages — why consent reads warm" }
+  - { path: ../vanessa-freudenberg/sources/jit-notes/, why: "Her JIT brain dumps — 'other papers' material for the scroll-through" }
   - { path: keep.md, why: "Keep — reflective agent memory; Craig's Smalltalk whiteroom port" }
   - { path: ../../repo-shows/openlaszlo/, why: "OL → Declare reunion — prototypes + live objects" }
   - { path: ../david-ungar/, why: "Self — pair on what prototypes are" }

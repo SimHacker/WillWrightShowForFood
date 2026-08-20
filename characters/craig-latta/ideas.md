@@ -3,13 +3,27 @@
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Craig's
 public work and documented connections to this repository. Things Don would love to follow
 **with** Craig Latta; not quotes, not claims about what they think.*
-[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent not_yet_asked
+[Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent warm (rehearsed the memorial 2026-07-20)
 
 ## What Craig has done
 
 Craig Latta — livecoding composer and research computer scientist (UC Berkeley, CS + Music), founder of Black Page Digital. Creator of Caffeine (livecode the web — the SqueakJS Smalltalk VM bridged into browsers/Deno with dynamically generated WebAssembly), the Context minimal Squeak distribution, and Catalyst (a self-hosted WASM-GC Smalltalk VM with LLM-assisted method translation). Squeak Foundation board member, Appsterdam volunteer; divides his time between Amsterdam and Berkeley.
 
 ## The hooks
+
+### ★ The memorial edition scroll-through (rehearsed — the lead)
+We already read her DLS '14 SqueakJS paper together on the July 20 rehearsal — the session
+that exposed the deadname problem and sparked the
+[prestoration](https://github.com/SimHacker/moollm/tree/main/designs/prestoration). The show:
+Craig screen-shares the
+[memorial edition](https://github.com/SimHacker/moollm/blob/main/designs/prestoration/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf)
+and scrolls at his own pace — his scrolling sets the tempo, the talk follows the pages. Other
+papers welcome; her [JIT brain dumps](../vanessa-freudenberg/sources/jit-notes/) are in the
+repo. Act two: the making-of adventure — font-subset archaeology,
+[cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/cursor-mirror) reading
+its own transcript, play-learn-lift into the
+[change-name skill](https://github.com/SimHacker/moollm/tree/main/skills/change-name).
+Source: [`sources/2026-summer-rehearsal-and-messages.md`](sources/2026-summer-rehearsal-and-messages.md)
 
 ### 0. OpenLaszlo reunion → Declare (optional group)
 [`invitation.md`](invitation.md) Option A. **What prototypes are** / live objects with Ungar +
