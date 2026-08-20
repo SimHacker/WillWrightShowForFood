@@ -24,7 +24,8 @@ and the specimens already run: the
 [Cross-Platform Troll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll)
 dispatching on a `world` dimension (zork-mind vs adventure-mind — he's
 a Korz subjective object *containing Zork*, the anagram closed into a
-loop),
+loop; he can front one mind or blend between them, mixing the minds
+with different weights — see korz-prime on `ambiguity: blend`),
 [Revolutionary Chess](https://github.com/SimHacker/moollm/tree/main/skills/experiment/experiments/turing-chess/plugins/revolutionary-chess)
 reparenting pieces mid-game, moody rooms writing dispatch temperature
 ([MOODY](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md)).

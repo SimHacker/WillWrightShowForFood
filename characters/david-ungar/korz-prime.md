@@ -121,7 +121,15 @@ interpreter. Take that seriously and standardize three:
   `error` (Korz), `arbitrary` (Linda), `sample` (LLM), `blend` (LLM
   method combination: merge the matching bodies — the composition
   operator no deterministic dispatcher can offer, because it requires
-  understanding what the bodies *mean*).
+  understanding what the bodies *mean*). `blend` already has a running
+  specimen: the
+  [Cross-Platform Troll](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll)
+  can front one mind — zork-mind or adventure-mind — or blend between
+  them, mixing the minds together with different **weights**. The
+  weights are just more context bindings: `{world: {zork: 0.7,
+  adventure: 0.3}}` turns a coordinate into a distribution, dispatch
+  into a mixture, and the sample/blend distinction into a continuum —
+  sampling is blending with all the weight on one slot.
 - **`temperature:`** — how adventurous sampling and improvisation may
   be. Ambient; a room can set it (MOODY). Zero recovers determinism:
   strict Korz is the corner case Korz′ reaches at temperature 0 with
