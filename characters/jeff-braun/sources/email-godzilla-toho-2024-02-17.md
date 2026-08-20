@@ -1,35 +1,16 @@
-# Jeff Braun on Maxis, Toho, and the SimCity box monster
+# Jeff Braun email — Maxis, Toho, SimCity box monster
 
-**Source:** email thread, 17 February 2024  
-**Context:** Don Hopkins asked Jeff Braun what happened when Maxis was sued over the SimCity disaster monster, while planning to open-source Yoot Tower / The Tower II (Gamera movie tie-in plugins).  
-**Archived by:** Don Hopkins, with Jeff's permission implied by direct reply to a personal question.
+Email thread, 17 February 2024.
 
----
-
-## Jeffrey Braun to Don Hopkins
-
-**From:** Jeffrey Braun \<jeff.braun@gmail.com\>  
-**Subject:** Re: Open source Yoot Tower!  
-**Date:** 17 February 2024, 21:11 GMT+1  
-**To:** Don Hopkins \<simhacker@gmail.com\>
-
-Hi Don!
-
-Exciting news. As open source, The Tower II will live on forever!
-
-> Maxis was sued by Toho. We never referred to the name Godzilla, our monster on the box cover was a T-Rex looking character, but... a few magazine reviews called the monster, Godzilla. That was all it took. Toho called it "confusion in the marketplace". We paid $50k for Godzilla to go away. In all honesty, Toho liked Maxis, they said $50k was the minimum they take for Godzilla infringement. I doubt you will need to worry about Toho, as long as there are no magazine reviews that call the monster Godzilla.
-
-Are you still in the Netherlands?
-
-Jeff
+**Canonical copy:** [MicropolisCore — jeff-braun-toho-godzilla-email-2024-02-17.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/jeff-braun-toho-godzilla-email-2024-02-17.md)
 
 ---
 
-## Don Hopkins to Jeffrey Braun (prior message, same thread)
+## 1. Don Hopkins to Jeffrey Braun
 
 **From:** Don Hopkins \<simhacker@gmail.com\>  
-**Date:** 17 February 2024, 03:42 GMT+1  
-**To:** Jeffrey Braun \<jeff.braun@gmail.com\>
+**To:** Jeffrey Braun \<jeff.braun@gmail.com\>  
+**Date:** 17 February 2024, 03:42 GMT+1
 
 Hi Jeff!
 
@@ -53,9 +34,19 @@ I noticed there are still some "God" prefixed function names and variables in th
 
 ---
 
-## See also
+## 2. Jeffrey Braun to Don Hopkins
 
-- [SimCity Macintosh box art (1989) — monster disaster button](../../will-wright/media/simcity-macintosh-front-cover.md)
-- [MicropolisCore README — Jeff quote in trademark context](https://github.com/SimHacker/MicropolisCore#the-story)
-- [YootTower README — same Jeff quote, open-source trademark lesson](https://github.com/YootTowerManagement/YootTower)
-- [HN draft — Raymond Chen Rorschach / Godzilla thread](../../don-hopkins/hn-raymond-chen-rorschach-godzilla-2026-08-20.md) (Will iMessage quotes sourced there; private green room)
+**From:** Jeffrey Braun \<jeff.braun@gmail.com\>  
+**To:** Don Hopkins \<simhacker@gmail.com\>  
+**Subject:** Re: Open source Yoot Tower!  
+**Date:** 17 February 2024, 21:11 GMT+1
+
+Hi Don!
+
+Exciting news. As open source, The Tower II will live on forever!
+
+Maxis was sued by Toho. We never referred to the name Godzilla, our monster on the box cover was a T-Rex looking character, but... a few magazine reviews called the monster, Godzilla. That was all it took. Toho called it "confusion in the marketplace". We paid $50k for Godzilla to go away. In all honesty, Toho liked Maxis, they said $50k was the minimum they take for Godzilla infringement. I doubt you will need to worry about Toho, as long as there are no magazine reviews that call the monster Godzilla.
+
+Are you still in the Netherlands?
+
+Jeff
