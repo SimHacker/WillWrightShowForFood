@@ -247,8 +247,13 @@ differently; relationship matrices are one party's opinion),
 compositionally shared. Korz diagnosis: `me` and `stackObject` are two
 hardwired dispatch dimensions — a binary multimethod frozen in the VM;
 Korz generalizes to N, addable later. The verb lives in the direct
-object. **ASK:** did the Korz team know they were generalizing a
-shipped game VM?
+object. And Zork got there first: ZIL dispatches every turn through
+PRSA/PRSO/PRSI — verb, direct object, indirect object — with a fixed
+action-routine cascade (room, indirect, direct, verb default). Three
+hardwired dimensions and a frozen specificity order in the Z-machine,
+1979. Full riff: [korz-prime §Zorkizing Adventure](korz-prime.md).
+**ASK:** did the Korz team know they were generalizing two shipped
+game VMs — and that one of them spells the language's name?
 
 **Pronouns: this vs self vs me/it.**
 `this` points at a thing (dehumanizing); `self` is the personhood word

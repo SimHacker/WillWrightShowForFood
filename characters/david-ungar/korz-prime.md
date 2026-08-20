@@ -162,6 +162,42 @@ data knows about gezelligheid, no definition required. The strict
 tier treats the same word as an opaque symbol. One name, prepaid
 latent semantics above, free interning below.
 
+## Zorkizing Adventure
+
+Knuth literate-ized Adventure: his CWEB edition of Crowther & Woods's
+ADVENT (*Selected Papers on Fun and Games*) is the canonical literate
+program — the cave as a book. Korz Jazz suggests the sequel:
+**zorkize it** — rewrite the cave as a sea of slots with load-bearing
+comments, one artifact that both tiers can run and both kinds of
+reader can enjoy.
+
+And Zork itself decomposes into Korz with almost no force. ZIL
+dispatches every turn through parser globals — **PRSA** (the verb),
+**PRSO** (direct object), **PRSI** (indirect object) — and runs a
+fixed most-specific-first cascade of action routines: roughly the
+room speaks first (`M-BEG`), then the indirect object's handler, then
+the direct object's, then the verb's default. That is symmetric
+dispatch over an implicit context with no privileged receiver —
+**three hardwired dimensions and a frozen specificity order, shipped
+in the Z-machine in 1979**. The Sims froze two dimensions (`me` and
+`stackObject` — see [korz-notes](korz-notes.md)); Zork froze three,
+sixteen years earlier. Korz generalizes to N: verb, actors, objects,
+room, light, and the clock (daemons and fuses become slots guarded on
+a time dimension) all become ordinary addable dimensions, the cascade
+becomes the specificity lattice, and "you can't get there from here"
+degrades from error to improvisation in the soft tier. **Korz may be
+the ultimate adventure modeling and scripting language** — the
+[GAME-PIECES](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md)
+thesis stated as a language claim, and the anagram closing into a
+loop a second time: first the troll was a Korz subjective object
+*containing* Zork; now Zork the language *decomposes into* Korz the
+semantics, letter for letter.
+
+The toolchain sketch above completes the circle: Adventure → literate
+CWEB (Knuth's weave) → jazz YAML (zorkized) → the Zork compiler →
+deterministic Korz slots — played strict when the guards are
+decidable, improvised soft when the player walks off the map.
+
 ## What the soft tier adds to Korz's open problems
 
 The paper's future work asked for dimensions that alter the
