@@ -1,9 +1,9 @@
-# CARD — Heather Alvey (public portrayal)
+# CARD — Heather Castillo (public portrayal)
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
 
 room:
   id: heather-alvey
-  name: Heather Alvey
+  name: Heather Castillo
   type:
   - invitation
   - guest
@@ -13,7 +13,7 @@ meta:
   governed_by: ../../schemas/portrayal-standards.md
   card_type: guest_skills
 card:
-  name: Heather Alvey
+  name: Heather Castillo
   title: Founder of SimFreaks
   rarity: rare
   signifier: 🧟

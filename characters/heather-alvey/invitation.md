@@ -11,7 +11,7 @@ send_batch: alvey-pair-2026
 format: live_or_async
 ---
 
-# Repo Show invitation — Heather Alvey 🧟
+# Repo Show invitation — Heather Castillo 🧟
 
 *Shared 20 Aug 2026. Heather may edit, decline, delay, or request removal at any time — or take direct edit access.*
 [Portrayal standards](https://github.com/SimHacker/WillWrightShowForFood/blob/main/schemas/portrayal-standards.md) — also covers direct repo access, the quiet-mode publication plan, and easy onboarding.
@@ -67,14 +67,14 @@ angles. **Read either or both** before you reply — including how **Steve** des
 
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
-| **Heather Alvey** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
+| **Heather Castillo** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
 | **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Soul City, save round-tripping, games-in-games |
 
 ---
 
 ## Each guest's room — work and contributions on this show
 
-### Heather Alvey 🧟
+### Heather Castillo 🧟
 
 | | |
 | --- | --- |

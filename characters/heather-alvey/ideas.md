@@ -1,13 +1,13 @@
-# Ideas to explore with Heather Alvey 🧟
+# Ideas to explore with Heather Castillo 🧟
 
 *Conversation hooks for a Repo Show — **Don's proposed topics**, each grounded in Heather's
 public work and documented connections to this repository. Things Don would love to follow
-**with** Heather Alvey; not quotes, not claims about what they think.*
+**with** Heather Castillo; not quotes, not claims about what they think.*
 [Portrayal standards](../../schemas/portrayal-standards.md) · invitation guest · consent asked (invited Aug 2026)
 
 ## What Heather has done
 
-Heather Alvey (née Castillo) — founder of **SimFreaks**, one of the longest-running Sims custom-content houses (~26 years). Met **Steve Alvey** (SimSlice) through the fan community (SimBabe intro); married; co-ship **Zombie Sims**. **Gallium Studios** / Proxi with Will Wright. Now: **Soul City** publishing with Don.
+Heather Castillo — founder of **SimFreaks**, one of the longest-running Sims custom-content houses (~26 years). Met **Steve Alvey** (SimSlice) through the fan community (SimBabe intro); married; co-ship **Zombie Sims**. **Gallium Studios** / Proxi with Will Wright. Now: **Soul City** publishing with Don.
 
 ## The hooks
 
@@ -37,6 +37,13 @@ Unreleased-era collaboration; Cupid object gag — [`../../bits/gag-speed-dating
 ### 6. Gallium / Proxi chapter
 
 Artist in Residence threads ([thealveys.us](https://thealveys.us/), LinkedIn) — what working with Will again meant after decades as fan creators.
+
+### 7. Patrick's stories, second-hand with love
+
+Heather is in touch with [Patrick Barrett](../patrick-j-barrett-iii/) and has hilarious stories
+he told her that she'd love to share. Entirely on Patrick's terms and at his pace — the
+[team stories page](../../repo-shows/building-the-sims/team-stories.md) already holds a batch
+of his best, and there's always room for more.
 
 ## Sources (public)
 

@@ -33,7 +33,7 @@ bio:
     Will Wright's long-aspired **data-portability / games-nested-in-games** vision (which Will
     articulated in his 1996 Winograd talk) — years before anyone called it that. A **~26-year**
     respected Sims-content brand: programmer, artist, publisher, and community leader. With his wife
-    **Heather Alvey** (née Castillo — **SimFreaks**) he still ships **tour-de-force magnum-opus
+    **Heather Castillo** (**SimFreaks**) he still ships **tour-de-force magnum-opus
     expansion packs** like **Zombie Sims** for The Sims 1. He also worked with **Will Wright at
     Gallium Studios** (Will & Lauren Elliott's studio behind **Proxi**).
   known_for:
@@ -43,7 +43,7 @@ bio:
     - "Worked with Will Wright at Gallium Studios (Proxi)"
 
 connections:
-  heather_alvey: "Married to **Heather Alvey** (née Castillo — **SimFreaks**). Two partner ~26-year Sims-content brands; co-author of Zombie Sims."
+  heather_alvey: "Married to **Heather Castillo** (**SimFreaks**). Two partner ~26-year Sims-content brands; co-author of Zombie Sims."
   slice_city_precedent: "SliceCity is the **shipped precedent** for Soul City data portability — real nested simulation, not a cosmetic prop. See repo-shows/INDEX.yml#bridges-architecture + process/trails/send-code-not-commands.md."
   will_gallium: "Worked with **Will Wright** at **Gallium Studios** (the indie studio Will founded with Lauren Elliott; AI life-sim **Proxi**, built in Unity)."
   don_collab: "Don's longtime friend/collaborator — **SimProv Wedding Playset** (with Heather, SimBabes, others) and the first user of Don's **Micropolis content-management & publishing system** for his back-catalog + new content."

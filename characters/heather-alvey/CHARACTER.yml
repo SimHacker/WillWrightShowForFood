@@ -1,15 +1,16 @@
-# Heather Alvey — invitation portrayal. NOT Heather Alvey.
+# Heather Castillo — invitation portrayal. NOT Heather Castillo.
 # Standards: ../../schemas/portrayal-standards.md
 
 character:
-  id: heather-alvey
-  name: "Heather Alvey"
+  id: heather-alvey   # slug retained for link stability; see naming note
+  name: "Heather Castillo"
   type: invitation
   signifier: "🧟"
   status: living
   field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
   home: characters/heather-alvey/
-  aliases: ["SimFreaks", "Heather Castillo"]
+  aliases: ["SimFreaks", "Heather Alvey (Facebook name)"]
+  naming: "Legally Heather Castillo -- 'Heather Alvey' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md
@@ -21,11 +22,13 @@ invitation:
   consent: asked
   sent: 2026-08-20
   channel: chat
+  replied: 2026-08-20
+  reply_note: "Reading through it; asked for the nutshell (Don gave it); confirmed the Castillo naming; in touch with Patrick and has stories he told her that she'd love to share."
   document: invitation.md
   show_seed: repo-shows/heather-and-steve-alvey/
 
 bio:
-  summary: "**Heather Alvey** (née **Castillo**) — founder of **SimFreaks**, one of the longest-running, most respected Sims custom-content houses (a **~26-year** brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband **Steve Alvey** (**SimSlice** / **SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. Don's longtime friend and collaborator."
+  summary: "**Heather Castillo** — founder of **SimFreaks**, one of the longest-running, most respected Sims custom-content houses (a **~26-year** brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband **Steve Alvey** (**SimSlice** / **SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. Don's longtime friend and collaborator."
 
 connections:
   steve_alvey: "Married to **Steve Alvey** (**SimSlice / SliceCity** — a Lilliputian SimCity that fits in your Sims back yard: fan-coded SimCity inside The Sims; the shipped precedent for Will Wright's data-portability / games-nested-in-games vision, deep not cosmetic). The two have run active, respected ~26-year Sims-content brands as publishers, artists, programmers, and community leaders."

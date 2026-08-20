@@ -2,7 +2,7 @@
 
 > Drain Hell — *Afterlife* × ZombieSims, with the **SimFreaks** and **SimSlice** crews.
 
-A group-show seed reuniting **Heather Alvey (SimFreaks**, née Castillo**)** and **Steve Alvey
+A group-show seed reuniting **Heather Castillo (SimFreaks)** and **Steve Alvey
 (SimSlice / SliceCity** — fan-coded **SimCity running *inside* The Sims**) — partners and longtime
 Sims content creators with **~26-year respected brands** as publishers, artists, programmers, and
 community leaders, still shipping tour-de-force magnum-opus expansion packs like **Zombie Sims**.

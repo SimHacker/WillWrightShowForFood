@@ -1,11 +1,14 @@
-# Heather Alvey 🧟
+# Heather Castillo 🧟
 
-*Invitation portrayal — a respectful, source-grounded sketch, not Heather Alvey and not her words.*
+*Invitation portrayal — a respectful, source-grounded sketch, not Heather Castillo and not her words.*
 [Portrayal standards](../../schemas/portrayal-standards.md) · consent level 3 · authored by Don Hopkins
+
+*Naming: legally **Heather Castillo** — the name the Sims community knows. "Heather Alvey" is her
+Facebook name; this directory keeps that slug only so old links don't break.*
 
 ## Who
 
-**Heather Alvey** (née **Castillo**) founded **SimFreaks** — one of the longest-running, most
+**Heather Castillo** founded **SimFreaks** — one of the longest-running, most
 respected **Sims custom-content** houses: a **~26-year** practice of original object suites,
 sophisticated **SimAntics** programming, and community leadership. With her husband **Steve Alvey**
 (**SimSlice / SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force

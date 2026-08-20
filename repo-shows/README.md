@@ -6,6 +6,14 @@ Each inherits [`skills/repo-show/`](../skills/repo-show/README.md).
 
 > *"So you have a Repo to Show us?"*
 
+**In a nutshell** (Don, explaining it to a guest): instead of a show being a dead mp4 video, it's
+a live GitHub repo — it can point to videos on YouTube, but also contains design documents, code,
+objects, and everything else, checked in before the show so people can read it before, during,
+and after. A repo is a living, breathing collaborative space: a "show" can have any number of
+episodes in any media — video, audio, pictures, source code, Twitch streams. The ultimate form is
+live streams with multiple people chatting and engaging the audience in real time — but GitHub is
+all about audience participation, time-shifted, and still active after the main show.
+
 **Format pitch:** A TV/streaming show about **developing and playing** games & tools — using AI the
 best way (people author; AI orchestrates and writes code). [`../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml`](../bits/tradition-make-play-tools-show/tradition-make-play-tools-show.yml)
 

@@ -10,7 +10,7 @@
 Wright's long-aspired **data-portability / games-nested-in-games** idea (which Will articulated in his
 1996 Winograd talk) — years before anyone had a name for it.
 
-With his wife **Heather Alvey** (née Castillo — **SimFreaks**), Steve has run one of the longest,
+With his wife **Heather Castillo** (**SimFreaks**), Steve has run one of the longest,
 most respected **Sims custom-content** brands — a **~26-year** practice of programming, art,
 publishing, and community leadership — and they still ship **tour-de-force magnum-opus expansion
 packs** like **Zombie Sims** for The Sims 1. Steve also worked with **Will Wright at Gallium

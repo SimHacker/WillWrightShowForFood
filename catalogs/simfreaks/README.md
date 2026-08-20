@@ -2,7 +2,7 @@
 
 *Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
 
-**Heather Alvey** (née Castillo) — ~26-year Sims custom-content brand.
+**Heather Castillo** — ~26-year Sims custom-content brand.
 
 ## What
 
