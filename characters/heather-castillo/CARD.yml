@@ -2,7 +2,7 @@
 # NOT the person. Schema: ../../schemas/guest-skills-card.yml
 
 room:
-  id: heather-alvey
+  id: heather-castillo
   name: Heather Castillo
   type:
   - invitation

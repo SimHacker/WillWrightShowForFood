@@ -163,7 +163,7 @@ bridges-architecture:
   precedent: |
     NOT hypothetical — shipped deep bridges already exist:
     - **Steve Alvey's SimSlice / SliceCity** — SimCity running *inside* The Sims* (community precedent).
-      See characters/heather-alvey/ + repo-shows/heather-and-steve-alvey/.
+      See characters/heather-castillo/ + repo-shows/heather-and-steve-alvey/.
     - **Will Wright's Proxi → Minecraft export** — Proxi characters already exported into Minecraft
       (Gallium; Dev Diaries Dec 2025). See characters/will-wright/sources/2025-12-will-wright-dev-diaries/proxi-minecraft-export.yml
       + game-bridge-proxi-minecraft.yml.

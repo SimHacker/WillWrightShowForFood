@@ -42,7 +42,7 @@ questions he may curate.
 
 **[drew-carey/](drew-carey/README.md)** — Dream guest invitation portrayal (Whose Line + Price Is Right + Sims NPC).
 
-**[heather-alvey/](heather-alvey/README.md)** · **[steve-alvey/](steve-alvey/README.md)** — SimFreaks / SimSlice honored
+**[heather-castillo/](heather-castillo/README.md)** · **[steve-alvey/](steve-alvey/README.md)** — SimFreaks / SimSlice honored
 creators; front-row audience + catalog cross-links.
 
 **[phil-salvador/](phil-salvador/README.md)** — VGHF / Obscuritory; SimRefinery recovery; librarian box seat.

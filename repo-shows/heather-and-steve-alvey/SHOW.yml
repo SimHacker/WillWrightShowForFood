@@ -8,7 +8,7 @@ show:
   type: group
   host: Don Hopkins
   guests: ["Heather Alvey", "Steve Alvey"]
-  character: [characters/heather-alvey/, characters/steve-alvey/]
+  character: [characters/heather-castillo/, characters/steve-alvey/]
   topic: "The full Alvey story — two partner ~26-year Sims-content brands (SimFreaks + SimSlice/SliceCity), all their projects, and how to keep independent creators thriving. Non-extractive lift: drive real fans + subscribers."
   status: seed
   consent: not_yet_asked
@@ -45,7 +45,7 @@ format:
   audience_qa: true
 
 ties_to:
-  - ../../characters/heather-alvey/
+  - ../../characters/heather-castillo/
   - ../../characters/steve-alvey/
   - ../../characters/will-wright/
   - ../../characters/don-hopkins/

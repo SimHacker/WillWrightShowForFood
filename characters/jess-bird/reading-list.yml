@@ -27,7 +27,7 @@ arcs:
     logline: "The pyramid of players — fans who became tool makers; the community as second act."
     sources:
       - ../../catalogs/sims1-community-landscape.md
-      - ../heather-alvey/README.md
+      - ../heather-castillo/README.md
       - ../steve-alvey/README.md
       - ../jeff-adkins/README.md
       - ../daniel-tupper/README.md
@@ -74,7 +74,7 @@ interview_universe:
     - { id: will-wright, room: ../will-wright/, status: accepted }
     - { id: don-hopkins, room: ../don-hopkins/, status: host }
     - { id: jeff-adkins, room: ../jeff-adkins/, status: accepted }
-    - { id: heather-alvey, room: ../heather-alvey/, status: draft }
+    - { id: heather-castillo, room: ../heather-castillo/, status: draft }
     - { id: steve-alvey, room: ../steve-alvey/, status: draft }
     - { id: phil-salvador, room: ../phil-salvador/, status: draft }
     - { id: drew-carey, room: ../drew-carey/, status: dream_guest }

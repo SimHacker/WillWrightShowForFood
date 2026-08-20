@@ -6,7 +6,7 @@ consent: asked
 sent: 2026-08-20
 channel: chat
 show_seed: repo-shows/heather-and-steve-alvey/
-pair_with: heather-alvey
+pair_with: heather-castillo
 send_batch: alvey-pair-2026
 format: live_or_async
 ---
@@ -18,7 +18,7 @@ format: live_or_async
 
 **Will Wright is in — he's signed on to do the [premiere](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/README.md) and more.**
 
-**Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
+**Today I'm sending two matching invitations** — yours and **Heather's** ([Heather's invitation](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/invitation.md)) — for one **pair show**. Each letter is written for the person receiving it; both describe the same show from your two angles, and each of you can read the other's.
 
 Steve —
 
@@ -70,7 +70,7 @@ angles. **Read either or both** before you reply — including how **Heather** d
 | Guest | Invitation | Their angle on this show |
 | --- | --- | --- |
 | **Steve Alvey** 🏙️ | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) *(this letter)* · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey/invitation.md) | SliceCity, Soul City, save round-tripping, games-in-games |
-| **Heather Castillo** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
+| **Heather Castillo** 🧟 | [invitation.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/invitation.md) | SimFreaks catalog, object suites, Zombie Sims, community, publishing revival |
 
 ---
 
@@ -91,10 +91,10 @@ angles. **Read either or both** before you reply — including how **Heather** d
 | | |
 | --- | --- |
 | **On this show** | SimFreaks catalog live; object suites & SimAntics; Zombie Sims; community leadership; publishing revival |
-| **Invitation** (her view) | [`../heather-alvey/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/invitation.md) |
-| **Guest README** | [`../heather-alvey/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/README.md) |
-| **Conversation hooks** | [`../heather-alvey/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/ideas.md) |
-| **Portrait / sources** | [`../heather-alvey/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/CHARACTER.yml) · [`../heather-alvey/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/GLANCE.md) · [`../heather-alvey/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey/CARD.yml) |
+| **Invitation** (her view) | [`../heather-castillo/invitation.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/invitation.md) · [GitHub](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/invitation.md) |
+| **Guest README** | [`../heather-castillo/README.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/README.md) |
+| **Conversation hooks** | [`../heather-castillo/ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/ideas.md) |
+| **Portrait / sources** | [`../heather-castillo/CHARACTER.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/CHARACTER.yml) · [`../heather-castillo/GLANCE.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/GLANCE.md) · [`../heather-castillo/CARD.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo/CARD.yml) |
 
 ---
 

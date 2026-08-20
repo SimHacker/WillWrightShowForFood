@@ -34,6 +34,6 @@ keep it thriving (the Micropolis publishing system; subscriptions). Flagship epi
 
 ## Browse
 
-- Partner: [Heather Alvey (SimFreaks)](../heather-alvey/README.md) · Host: [Don Hopkins](../don-hopkins/README.md)
+- Partner: [Heather Alvey (SimFreaks)](../heather-castillo/README.md) · Host: [Don Hopkins](../don-hopkins/README.md)
 - Store / support: [simfreaks.com](https://www.simfreaks.com/)
 - Will's studio: [Gallium Studios / Proxi](../will-wright/README.md)

@@ -64,7 +64,7 @@ right_away:
     - { id: glenn-edens, show: repo-shows/glenn-edens-grid-interval/, invite: send_ready, send_batch: interval-reunion-2026, next: "send — GRiD Compass + Interval Camelot interview (NOT Glenn Reid PostScript)" }
 
   heather_steve_alvey:
-    - { id: heather-alvey, show: repo-shows/heather-and-steve-alvey/, invite: draft, next: "flagship zombie-bridge episode" }
+    - { id: heather-castillo, show: repo-shows/heather-and-steve-alvey/, invite: draft, next: "flagship zombie-bridge episode" }
     - { id: steve-alvey, show: repo-shows/heather-and-steve-alvey/, invite: draft, next: "SimSlice precedent for Will bridges" }
 
   leela_ai_cluster:
@@ -177,7 +177,7 @@ no_invite:
 
   audience_ticketpr_living:
     note: "Real people as audience avatars — portrayal only, not Repo Show guest invites unless promoted"
-    examples: [phil-salvador-audience-seat, heather-alvey-audience-if-any]
+    examples: [phil-salvador-audience-seat, heather-castillo-audience-if-any]
 
   robots_sims_agents:
     note: "In-world / MOOLLM agents — no human invitation"

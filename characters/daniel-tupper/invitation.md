@@ -23,7 +23,7 @@ your **own engine**. You weren't performing fandom; you were **building toward s
 I'd love you on the **Repo Show** — not as a prop, as a **peer on the ladder** Will Wright has talked
 about for decades: players at the bottom, modders and tool makers near the top, each lift making the
 game better for everyone below. You're on that climb. So are [Jeff](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jeff-adkins) (SimObliterator),
-[Heather](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-alvey) & [Steve](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey) (SimFreaks / SimSlice). Your angle is
+[Heather](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/heather-castillo) & [Steve](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/steve-alvey) (SimFreaks / SimSlice). Your angle is
 different and just as real: **city-scale open worlds**, **studio identity**, and the offer to help
 drag **Transmogrifier** into the modern browser — the same toolchain thread I've been on since
 Maxis days.

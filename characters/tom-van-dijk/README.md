@@ -6,4 +6,4 @@
 
 **Primary source:** [`sources/2024-06-van-dijk-sims-modding-reconnect.md`](sources/2024-06-van-dijk-sims-modding-reconnect.md)
 
-**Show:** Sims team reunion + modding community bridge — pair with [Jamie Doornbos](../jamie-doornbos/), [Heather & Steve Alvey](../heather-alvey/).
+**Show:** Sims team reunion + modding community bridge — pair with [Jamie Doornbos](../jamie-doornbos/), [Heather & Steve Alvey](../heather-castillo/).

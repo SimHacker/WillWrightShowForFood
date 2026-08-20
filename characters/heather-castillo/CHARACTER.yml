@@ -2,13 +2,13 @@
 # Standards: ../../schemas/portrayal-standards.md
 
 character:
-  id: heather-alvey   # slug retained for link stability; see naming note
+  id: heather-castillo
   name: "Heather Castillo"
   type: invitation
   signifier: "🧟"
   status: living
   field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
-  home: characters/heather-alvey/
+  home: characters/heather-castillo/
   aliases: ["SimFreaks", "Heather Alvey (Facebook name)"]
   naming: "Legally Heather Castillo -- 'Heather Alvey' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
 

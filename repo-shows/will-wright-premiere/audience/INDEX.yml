@@ -124,7 +124,7 @@ seating_model:
   this_block_is: derived_view
   groups:
     simfreaks-simslice:
-      members: [heather-alvey, steve-alvey, fictional-zombie-sim]
+      members: [heather-castillo, steve-alvey, fictional-zombie-sim]
       seat: front_row
       note: "Honored creators attending together + the ZombieSim they brought; plug their sites"
 
@@ -142,7 +142,7 @@ box-seats:
     note: "Fictional Curator beside the real archivist who inspired them — tribute made literal"
   front_row:
     group: simfreaks-simslice
-    members: [heather-alvey, steve-alvey, fictional-zombie-sim, fictional-little-computer-person, fictional-seaman]
+    members: [heather-castillo, steve-alvey, fictional-zombie-sim, fictional-little-computer-person, fictional-seaman]
     note: "Honored creators + the Sims ancestor + Seaman (asking for Yoot)"
   orchestra_pit:
     members: [fictional-transmogrifier, bot-slats]

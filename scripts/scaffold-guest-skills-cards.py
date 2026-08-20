@@ -553,7 +553,7 @@ _living_guest(
 )
 
 _living_guest(
-    "heather-alvey",
+    "heather-castillo",
     "Heather Alvey",
     "SimFreaks Teacher",
     "✨",

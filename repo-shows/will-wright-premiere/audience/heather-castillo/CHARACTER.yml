@@ -5,7 +5,7 @@ character:
   type: real_being
   real_being: true
   signifier: "🧟‍♀️🛋️"
-  home: repo-shows/will-wright-premiere/audience/heather-alvey/
+  home: repo-shows/will-wright-premiere/audience/heather-castillo/
   field: "SimFreaks founder — ~26-year Sims custom-content brand; ZombieSims; worked with Will at Gallium"
 
 representation:
@@ -13,7 +13,7 @@ representation:
   consent: collaborator_invited
   self_authored: invited
   status: "Honored front-row invite. She writes her own questions / plugs. No fabricated words."
-  canonical_guest: ../../../../characters/heather-alvey/
+  canonical_guest: ../../../../characters/heather-castillo/
 
 seating:
   seat: front_row
@@ -35,4 +35,4 @@ see_also:
   - questions.yml
   - steve-alvey/
   - fictional-zombie-sim/
-  - ../../../../characters/heather-alvey/
+  - ../../../../characters/heather-castillo/

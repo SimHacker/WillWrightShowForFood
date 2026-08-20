@@ -35,7 +35,7 @@ SimRefinery work survived on the page.
 | Thread                  | Notes                                                                                                                                   |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | **Archival depth**      | SimRefinery / MBS history via [Phil Salvador](../phil-salvador/); Don's published *Soul of The Sims* source                             |
-| **Community voices**    | Introductions toward [Heather](../heather-alvey/) & [Steve](../steve-alvey/) (SimFreaks / SimSlice), Alexander Avila's Sims documentary work (openly trans masc) |
+| **Community voices**    | Introductions toward [Heather](../heather-castillo/) & [Steve](../steve-alvey/) (SimFreaks / SimSlice), Alexander Avila's Sims documentary work (openly trans masc) |
 | **Maxis veterans**      | Don's epithet roster + naming lore (Project X → The Sims); Understanding Comics / smart-objects lineage                                 |
 | **Tim LeTourneau**      | Interviewed Tim before his passing — Don shares Jess's wish that **Tim's words live on** in the history                                 |
 | **Repo Show curiosity** | July 2026 — browsed [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood); wants to keep things moving together   |

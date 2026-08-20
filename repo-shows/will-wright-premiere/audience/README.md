@@ -56,7 +56,7 @@ The fastest way in is to **copy a character you like** and make it yours:
 | A Sims character | [fictional-bella-goth/](fictional-bella-goth/README.md) | CARD advertisements + Simlish |
 | A philosopher | [palm/](palm/README.md) | Self-aware AI; links home to MOOLLM |
 | A running gag | [fictional-broken-robot/](fictional-broken-robot/CHARACTER.yml) | Crashes, begs, dragged off |
-| Honored creator, front row | [heather-alvey/](heather-alvey/README.md) | Real guest, reserved seat, plugs |
+| Honored creator, front row | [heather-castillo/](heather-castillo/README.md) | Real guest, reserved seat, plugs |
 
 Or start from the blank [`_TEMPLATE/audience/`](../../_TEMPLATE/audience/README.md). Tutorial: [`CHARACTER.md`](../../_TEMPLATE/audience/CHARACTER.md).
 

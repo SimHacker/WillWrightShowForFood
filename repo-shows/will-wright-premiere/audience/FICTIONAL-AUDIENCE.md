@@ -36,7 +36,7 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |
 | **Self-aware AI agent** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_agent`; knows it's simulated |
 | **Consented real self-author** | [Richard Bartle](richard-bartle/README.md) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
-| **Honored real guests** | [Heather Alvey](heather-alvey/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/CHARACTER.yml) | Real, invited, front-row/box; write their own |
+| **Honored real guests** | [Heather Alvey](heather-castillo/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/CHARACTER.yml) | Real, invited, front-row/box; write their own |
 
 ---
 
@@ -86,7 +86,7 @@ Same for living humans: no impersonating guests or fans without consent.
 **Real guests (seated by invitation/donation):**
 [richard-bartle/](richard-bartle/README.md) (consented, self-authoring) ·
 [phil-salvador/](phil-salvador/CHARACTER.yml) (box seat w/ Curator) ·
-[heather-alvey/](heather-alvey/README.md) + [steve-alvey/](steve-alvey/README.md) (front-row SimFreaks/SimSlice crew).
+[heather-castillo/](heather-castillo/README.md) + [steve-alvey/](steve-alvey/README.md) (front-row SimFreaks/SimSlice crew).
 
 **More games & ideas:** [AUDIENCE-ROSTER-IDEAS.md](AUDIENCE-ROSTER-IDEAS.md) · **Machine index:** [INDEX.yml](INDEX.yml) · **Regulars spec:** [../../../process/repo-show-regulars.md](../../../process/repo-show-regulars.md)
 

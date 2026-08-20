@@ -36,13 +36,13 @@ ties:
   - ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/
   - ../../characters/subutai-ahmad/sources/numenta-proxi-partnership.yml
   - ../../characters/subutai-ahmad/
-  - ../../characters/heather-alvey/
+  - ../../characters/heather-castillo/
   - ../INDEX.yml#bridges-architecture
   - ../../process/character-endosymbiosis.yml
 
 guests:
   will_wright: required
-  optional: [subutai-ahmad, heather-alvey, steve-alvey, ben-cerveny]
+  optional: [subutai-ahmad, heather-castillo, steve-alvey, ben-cerveny]
 
 see_also:
   - ../../repo-shows/INDEX.yml

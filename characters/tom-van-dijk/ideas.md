@@ -14,7 +14,7 @@ Teen reverse-engineering story; contrast Jamie's architecture from inside.
 Feb 2002 PJB3 takedown; Don's recovered mail on open/closed SimAntics politics.
 
 ### 4. IFF Pencil today
-Heather/Steve **ZombieSim**, **iffpencil2** still running. [`../heather-alvey/`](../heather-alvey/)
+Heather/Steve **ZombieSim**, **iffpencil2** still running. [`../heather-castillo/`](../heather-castillo/)
 
 ### 5. Steering committee tools (2024)
 LUCPIX, FARx, XAbatch — Tom's VC++ archaeology; playthrough show seed.

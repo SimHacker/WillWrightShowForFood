@@ -68,7 +68,7 @@ see_also:
     - { path: soul-city/README.md, why: "Federation platform" }
     - { path: simfreaks/README.md, why: "Heather's deep catalog" }
   across:
-    - { path: ../characters/heather-alvey/README.md, why: "SimFreaks founder" }
+    - { path: ../characters/heather-castillo/README.md, why: "SimFreaks founder" }
     - { path: ../characters/steve-alvey/README.md, why: "SimSlice founder" }
     - { path: ../process/licensing-micropolis-enterprise.yml, why: "Enterprise + trademark posture" }
   deep:

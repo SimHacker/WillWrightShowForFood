@@ -19,7 +19,7 @@ simlish_voice: "...braaa... sul sul... braaains?"   # Simlish, but make it hungr
 seating:
   seat: front_row
   attending_with: simfreaks-simslice
-  adjacent: [heather-alvey, steve-alvey]
+  adjacent: [heather-castillo, steve-alvey]
   earned_by: guest_primed
   note: "Slumped in the front row between its makers. Occasionally lunges. Harmless. Mostly."
 
@@ -29,5 +29,5 @@ relationship: |
 
 see_also:
   - questions.yml
-  - ../heather-alvey/
+  - ../heather-castillo/
   - ../steve-alvey/

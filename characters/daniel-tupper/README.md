@@ -24,7 +24,7 @@ browser-native Sims content tools.
 
 Daniel is another rung on **Will Wright's pyramid of players** — the wide base of people who play,
 and fewer as you climb who **build tools** that lift everyone below. Same ladder as
-[Jeff Adkins](../jeff-adkins/) (SimObliterator), [Heather](../heather-alvey/) & [Steve](../steve-alvey/)
+[Jeff Adkins](../jeff-adkins/) (SimObliterator), [Heather](../heather-castillo/) & [Steve](../steve-alvey/)
 (SimFreaks / SimSlice) — but Daniel's angle is **open-city dreams + pipeline modernization**.
 
 The repo grows from correspondents like him: every thread becomes files, demos, and session beats.

@@ -62,4 +62,4 @@ Pattern: [`../../building-the-sims/evidence-bounce-cut.md`](../../building-the-s
 - Gallium / Proxi — Artist in Residence vs day-to-day; what carried into Soul City?
 - SliceCity today — still the best argument for Soul City bridges?
 
-↑ [`../README.md`](../README.md) · [`../../../characters/heather-alvey/`](../../../characters/heather-alvey/) · [`../../../characters/steve-alvey/`](../../../characters/steve-alvey/)
+↑ [`../README.md`](../README.md) · [`../../../characters/heather-castillo/`](../../../characters/heather-castillo/) · [`../../../characters/steve-alvey/`](../../../characters/steve-alvey/)

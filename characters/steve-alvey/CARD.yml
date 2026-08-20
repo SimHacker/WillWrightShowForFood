@@ -72,7 +72,7 @@ invoke_rules:
 see_also:
 - path: CHARACTER.yml
   why: Bio girder — invitation status
-- path: ../heather-alvey/CARD.yml
+- path: ../heather-castillo/CARD.yml
   why: Partner — SimFreaks
 - path: invitation.md
   why: Public invitation document

@@ -42,7 +42,7 @@ worked with **Will Wright at Gallium Studios** (Proxi).
 - [`afterlife-zombie-bridge.yml`](afterlife-zombie-bridge.yml) — the **flagship episode**: the
   two-way soul ledger, *They Are Billions* horde pressure, and the Micropolis publishing angle.
 
-Guests: [`characters/heather-alvey/`](../../characters/heather-alvey/README.md) ·
+Guests: [`characters/heather-castillo/`](../../characters/heather-castillo/README.md) ·
 [`characters/steve-alvey/`](../../characters/steve-alvey/README.md). Consent **not yet asked**.
 
 — Don Hopkins *(User Interface Flower Child)*

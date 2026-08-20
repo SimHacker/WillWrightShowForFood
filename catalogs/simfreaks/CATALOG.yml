@@ -7,7 +7,7 @@ catalog:
 creators:
   - name: Heather Alvey
     handle: SimFreaks
-    character: ../characters/heather-alvey/
+    character: ../characters/heather-castillo/
 
 storefront: https://www.simfreaks.com/
 since: ~1999

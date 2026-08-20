@@ -51,7 +51,7 @@ connects_in_repo:
   - { path: ideas.md, why: "Flagship topic menu" }
   - { path: sources/, why: "Dated source bundles from mail + CS547" }
   - { path: ../chaim-gingold/, why: "Maxis history book vs building now" }
-  - { path: ../heather-alvey/, why: "SliceCity / SimFreaks / Gallium" }
+  - { path: ../heather-castillo/, why: "SliceCity / SimFreaks / Gallium" }
   - { path: sources/2026-07-09-will-conversation-notes.md, why: "Romero, Cunk, Burke, fiction/non-fiction stack" }
   - { path: ../../repo-shows/will-wright-premiere/, why: "Flagship show seed" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Cc on PIXIE thread 2026-07-07" }

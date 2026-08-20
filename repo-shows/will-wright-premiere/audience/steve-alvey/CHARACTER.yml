@@ -17,7 +17,7 @@ representation:
 seating:
   seat: front_row
   attending_with: simfreaks-simslice
-  adjacent: [heather-alvey, fictional-zombie-sim]
+  adjacent: [heather-castillo, fictional-zombie-sim]
   earned_by: invited
   note: "Front row with Heather (SimFreaks) and a ZombieSim."
 
@@ -31,6 +31,6 @@ bridge_to_will: "SliceCity = SimCity inside The Sims — the shipped precedent f
 awaiting_author: true
 see_also:
   - questions.yml
-  - heather-alvey/
+  - heather-castillo/
   - fictional-zombie-sim/
   - ../../../../characters/steve-alvey/

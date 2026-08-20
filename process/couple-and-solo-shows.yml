@@ -81,7 +81,7 @@ natural_couples:
     **as a pair** for the shared story so we do not dilute or repeat the same material in
     two solo episodes.
   examples:
-    - pair: [heather-alvey, steve-alvey]
+    - pair: [heather-castillo, steve-alvey]
       show: repo-shows/heather-and-steve-alvey/
     - pair: [amy-jo-kim, scott-kim]
       show: repo-shows/amy-jo-and-scott-kim/
@@ -112,7 +112,7 @@ pair_show_shape:
   character: [characters/person-one/, characters/person-two/]
   id: "<first>-and-<first>-<surname>"  # surname once — how people say it
   examples:
-    - heather-and-steve-alvey   # not heather-alvey-and-steve-alvey
+    - heather-and-steve-alvey   # not heather-castillo-and-steve-alvey
     - amy-jo-and-scott-kim      # not amy-jo-kim-and-scott-kim
 
 memorial_shows:
