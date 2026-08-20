@@ -240,6 +240,31 @@ What it buys:
   inherit it too: a mind whose referents have gone vague visibly
   shrinks.)
 
+**Paging latent space: K-line virtual memory.** isKnown is the page
+fault detector; here is the fault handler. When an important K-line
+dereferences below threshold, don't just improvise cautiously —
+**page it in**: system call out to a web search or vector-store
+lookup, distill what comes back, and cache it as a repo file under
+the same K-line name (`klines/gothic-victorian-newspaper.yml`,
+big-endian, greppable). Next dereference hits the file instead of
+faulting. The virtual memory mapping is exact — the K-line name is
+the virtual address, latent space and the web are the backing store,
+the repo is RAM, and the resident page is the file — except this
+cache is **editable and learnable**: pages are yaml-jazz with
+provenance (search date, sources, who distilled), humans and LLMs
+correct them in place, git versions every refinement, and a page
+that's wrong gets *fixed*, not just evicted. Cache policy falls out
+of the two signals already on hand: page in when isKnown is low and
+usage is high; leave latent when isKnown is high (the training data
+is the file); a paged K-line serves both tiers at once — the strict
+tier reads the file, the soft tier reads the file *plus* the
+activation. And the repo already runs this pattern by hand:
+every `sources/` directory — Vanessa's JIT notes fetched from
+squeak.js.org, hashed, and preserved "so they survive even if the
+site goes away" — is a paged-in K-line. The proposal just makes the
+librarian automatic and lets the dispatch statistics decide what's
+worth shelving.
+
 ## Zorkizing Adventure
 
 Knuth literate-ized Adventure: his CWEB edition of Crowther & Woods's
