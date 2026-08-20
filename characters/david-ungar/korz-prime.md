@@ -277,6 +277,22 @@ range is a region guard. Every address is a guard vector at
 successively finer grain, and the file boundary is not a wall — just
 the point where the dimension vocabulary changes.
 
+**And it recurses through archives.** A suffix that names an archive
+reader turns "file" back into "directory": a zip is a filesystem in a
+file (and half the world's formats confess it — `.jar`, `.docx`,
+`.epub` are zips wearing costumes), a `.tgz` is one with a bow on it,
+and loopback mounts and FUSE make the head-tilt literal — `mount`
+*is* the reinterpretation operator. The Sims shipped this doctrine in
+1999: **FAR** files are Maxis archives containing **IFF** object
+files, and IFF is itself chunked — `OBJD` definitions, `SPR2`
+sprites, `TTAB` action tables, `BHAV` SimAntics behavior trees — so
+one address drills `objects.far#/troll.iff#/BHAV/4096` from archive
+through object through chunk to a single behavior tree, alternating
+file and directory vocabularies the whole way down. Don's
+Transmogrifier walked exactly that path twenty-five years ago; the
+drill already exists, it just never got written as a URL. Turtles all
+the way down, and every turtle is addressable.
+
 **Higher-dimensional spreadsheets exist, and the best one is a
 directory tree.** CSV never grew an N-D extension worth having; the
 real lineage is HDF5/NetCDF — named dimensions, hierarchical groups,
