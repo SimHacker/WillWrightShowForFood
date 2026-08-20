@@ -191,6 +191,22 @@ are both just saved views over prefix guards, and the strict tier
 gets its cheapest discrimination index — sort order — as a gift from
 the filesystem.
 
+**And the suffix is a type declaration.** A filename is big-endian
+almost all the way: most significant first, subject before detail —
+except the very end, where one little-endian holdout declares the
+*type*: `.yml`, `.png`, `.pdf`, `.js`. In the Korz reading the
+extension is a guard on the **reader dimension** — it dispatches
+perception itself. `.yml` says parse me as structured text with
+load-bearing comments; `.png` says run me through the vision tool;
+`.pdf` says extract me; `.js` says I am executable by the strict
+tier. The LLM reads the suffix the way a compiler reads a type
+annotation: it selects which faculty to bring, before a single byte
+of the body is touched. So one filename carries the full dispatch
+recipe — prefix path says *what it's about* (semantic address,
+big-endian), suffix says *how to perceive it* (type, little-endian
+caboose) — and MIME types turn out to have been coordinate guards
+worn on the name all along.
+
 ### Names are inheritance
 
 Dimensions and coordinates are ordinary words — `mood`, `weather`,
