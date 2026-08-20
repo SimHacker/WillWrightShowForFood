@@ -2,40 +2,36 @@
 
 **Thread:** Raymond Chen, [Windows brings out the Rorschach test in everyone](https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42723) (HN repost Aug 2026)
 
-**Source:** [MicropolisCore — jeff-braun-toho-godzilla-email-2024-02-17.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/jeff-braun-toho-godzilla-email-2024-02-17.md)
+**Sources:**
+- [MicropolisCore — jeff-braun-toho-godzilla-email-2024-02-17.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/jeff-braun-toho-godzilla-email-2024-02-17.md)
+- [MicropolisCore — documentation/box-art](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/box-art/README.md)
 
 ---
 
 ## HN comment
 
 ```
-Re Raymond Chen's Rorschach post -- the original SimCity Macintosh box had a red MONSTER disaster button -- stompy orange creature on the monitor, Bakelite-appliance cover art. Maxis never called it Godzilla on the box or in the game. Jimmy Maher's Maxis history post has a good scan of that cover:
+Re Raymond Chen's Rorschach post -- the original 1989 SimCity box was a Rorschach test that cost Maxis $50k. The cover was a toy city simulator appliance with a red MONSTER disaster button, and a stompy T-Rex-looking creature waving over San Francisco on its TV screen. Maxis never called it Godzilla on the box or in the game. Reviewers looked at the inkblot and saw Godzilla anyway.
 
-https://www.filfre.net/2026/07/the-life-and-times-of-maxis-part-1-simeverything/
+Original monster cover:
 
-Last year I was open-sourcing Yoot Tower with Yoot Saito. The Tower II shipped Gamera movie tie-in maps in Japan and I did not want to step on anybody's trademark the way Maxis did. So I emailed Jeff Braun (Maxis co-founder/CEO) on Feb 17, 2024:
+https://raw.githubusercontent.com/SimHacker/MicropolisCore/main/documentation/box-art/simcity-box-front-monster-c64.jpg
 
-> We will have to fictionalize all the trademarked plugins, to avoid the Godzilla problem that Maxis experienced.
->
-> What happened with that anyway? How much did Maxis have to pay in the end?
->
-> I noticed there are still some "God" prefixed function names and variables in the SimCity code, but Godzilla is never spelled out in full. ;)
+Revised cover after the lawsuit, monster swapped for a tornado (the MONSTER button survived):
 
-He wrote back that evening:
+https://raw.githubusercontent.com/SimHacker/MicropolisCore/main/documentation/box-art/simcity-box-front-tornado-macintosh.jpg
 
-> Maxis was sued by Toho. We never referred to the name Godzilla, our monster on the box cover was a T-Rex looking character, but... a few magazine reviews called the monster, Godzilla. That was all it took. Toho called it "confusion in the marketplace". We paid $50k for Godzilla to go away. In all honesty, Toho liked Maxis, they said $50k was the minimum they take for Godzilla infringement. I doubt you will need to worry about Toho, as long as there are no magazine reviews that call the monster Godzilla.
+In Feb 2024 I emailed Jeff Braun (Maxis co-founder/CEO) and asked what actually happened and how much Maxis had to pay. He wrote back the same day:
 
-Full thread archived in the Micropolis repo:
+> Maxis was sued by Toho. We never referred to the name Godzilla, our monster on the box cover was a T-Rex looking character, but... a few magazine reviews called the monster, Godzilla. That was all it took. Toho called it "confusion in the marketplace". We paid $50k for Godzilla to go away. In all honesty, Toho liked Maxis, they said $50k was the minimum they take for Godzilla infringement.
+
+All the box scans are in the Micropolis repo -- high res front, back with the "floods, earthquakes, fires, tornados, meltdowns and monsters" disaster list, side panels, and the platform variants, each with descriptions:
+
+https://github.com/SimHacker/MicropolisCore/blob/main/documentation/box-art/README.md
+
+Full email thread:
 
 https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/jeff-braun-toho-godzilla-email-2024-02-17.md
 
-(I quote Jeff in the Micropolis README too -- please call the open source game Micropolis, not SimCity, or EA's lawyers may come knocking:)
-
-https://github.com/SimHacker/MicropolisCore#the-story
-
-Raymond Chen, "Windows brings out the Rorschach test in everyone":
-
-https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42723
-
-Still working on the Micropolis monster sound. Will and I call it the "definitely not Godzilla" disaster. July 21 I texted him "Well on my todo list is letting you play as Godzilla!" He said "Don't get him near a Monopoly set". July 22 I told him the monster needs a better roar and maybe we should run a player contest for mood-tagged roars. He said "lol, try recording your cats meowing in slow motion". I added that maybe Toho only sued for $50k because a real Godzilla would have been much angrier, but that would have cost a million in legal fees to argue in court -- that part is my joke, not Will's.
+The back of the box kept advertising monsters as a feature the same year the monster got lawyered off the front.
 ```
