@@ -283,6 +283,34 @@ shadow gets its continuum), and when a domain genuinely needs
 E-Prime discipline applied to reference: ban the degenerate universal
 token, and every absence has to say *which kind of absent it is*.
 
+**Prior art, from Don's own peanut gallery.** A July 2024
+[HN comment of Don's](https://news.ycombinator.com/item?id=41043950)
+already staked out this ground: JavaScript's null *and* undefined make
+a "holy trinity of nothingness" with TypeScript's `unknown` — Anders
+Hejlsberg calls it the Two-Billion-Dollar Mistake, and commenter
+dunham lands the punchline: "assuming these mistakes are additive and
+not multiplicative." Korz′'s answer to the multiplication is to hold
+a zero factor: no null tokens at all, so the product of the mistakes
+is zero. The same comment cites the Rumsfeld Matrix, and it maps onto
+isKnown mechanically:
+
+| Rumsfeld | isKnown |
+|---|---|
+| Known knowns | High isKnown — dense latent activation, or a resident page a reviewer signed |
+| Known unknowns | Low isKnown, *measured* — the page-fault queue; the strict compiler's crystallization to-do list |
+| Unknown unknowns | K-lines never minted, dereferences never attempted — no score exists; deopt is the detector that turns one into a known unknown |
+
+And the comment's kicker — "Microsoft COM hinges on the IUnknown
+interface" — closes a loop this document already opened: MOOLLM reads
+directories as IUnknown (`ls` is QueryInterface), so the whole object
+world already rests on the Unknown. Korz′ upgrades the root interface
+by one letter and one type: **IUnknown → isKnown**, boolean interface
+to measured float. (TypeScript's `unknown` is the top type and
+`never` its dual bottom; Don's corollary stands — INever implements
+IEnumerable, so you can iterate until the
+[12th of Never](https://www.youtube.com/watch?v=2PnPnSjCUnc), and
+that's a long, long time.)
+
 ### Paging latent space: K-line virtual memory
 
 isKnown is the page fault detector; here is the fault handler. When
