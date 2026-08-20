@@ -198,6 +198,113 @@ CWEB (Knuth's weave) → jazz YAML (zorkized) → the Zork compiler →
 deterministic Korz slots — played strict when the guards are
 decidable, improvised soft when the player walks off the map.
 
+## Hosting Korz in MOOLLM — soups intertwingled with objects
+
+David prototyped Korz **in Self** — an interpreter, debugger, and
+partial IDE hosted on the Self language, VM, and environment. MOOLLM
+**is** Self on the filesystem: directories as prototypes, slots as
+files, `parents:` / `inherits:` as ordered delegation, clone as
+`cp -r`, reflection as `ls`. So the hosting question isn't "can we
+build a Korz VM beside MOOLLM?" — it's "can MOOLLM host the same
+Korz-in-Self move one level up, with the filesystem as the substrate
+instead of the Self heap?"
+
+Yes — and the asymmetry from [korz-notes](korz-notes.md) says it
+should be *cheap*: Korz-in-Self took machinery; Self-in-Korz takes
+only restraint (guard every slot on `rcvr` alone and you're writing
+Self). MOOLLM's selfish object system is exactly that restraint —
+**a one-dimensional Korz system**. The paper's spectrum runs from
+procedural (zero dimensions) through single-receiver OO (one) to full
+Korz (N). MOOLLM sits at dimension one: the receiver is the
+directory path; lookup walks the parent list; first match wins. Add
+guards on more dimensions and you've opened the sea without leaving
+the repo.
+
+So Korz soups and MOOLLM objects **intertwingle in place** — same
+files, same
+[yaml-jazz](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz)
+syntax, same
+[big-endian naming](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz)
+(`2026-01-24-description.yml`), same git history as the time
+dimension — dual-readable:
+
+| Reading | What the filesystem is | Dispatch |
+|---|---|---|
+| **Self / MOOLLM** | Tree of prototypes | Send to path; walk `parents:`; first slot wins |
+| **Korz** | Sea of slots | Send + implicit context; specificity lattice |
+
+A `CHARACTER.yml` in the Self reading is prototype metadata and
+shared state. In the Korz reading the *same directory* is a bundle of
+guarded slots — and every file under it may carry more slots for other
+selectors. Directory address supplies default coordinates
+(`world: zork` because the file lives under `worlds/zork/`); moving
+the file re-guards it. The tree isn't abolished; it's **one saved
+view** among many the Korz dispatcher can cut through the sea.
+
+### What is an interface in Korz?
+
+In MOOLLM's
+[Directory-as-IUnknown](https://github.com/SimHacker/moollm/blob/main/designs/DIRECTORY-AS-IUNKNOWN.md)
+model, an interface is a **queryable facet** — drop `ROOM.yml`,
+`CHARACTER.yml`, `SKILL.md` into a directory and QueryInterface finds
+it. Inside-out COM: visible state, multiple interface files, shared
+directory.
+
+In Korz an interface is a **saved view** — a named cut through the
+slot sea, not a container. The paper refused to reify layers in the
+language and said the IDE would group slots as needed; an interface is
+that grouping made durable:
+
+```yaml
+# INTERFACE.yml — Korz facet declaration (same filename, extended semantics)
+interface:
+  id: gatekeeper
+  query: {rcvr: troll*, selector: [BLOCK, DEMAND-TOLL, BRANDISH-AXE]}
+  default_context: {world: null}   # bind at query time
+  advertisement: |
+    Prices an edge. Currency depends on which mind fronts.
+```
+
+QueryInterface in the hybrid: "does this directory implement
+`gatekeeper`?" → read `INTERFACE.yml` (or infer from slot files) →
+bind the declared default context → surface the matching slot group.
+Not a vtable — a **subjective projection** with a contract. Multiple
+interfaces on one directory share the same files the way COM
+interfaces share state; in Korz they share the **sea** underneath.
+
+### What are cards?
+
+In MOOLLM the semantic image pyramid is fixed resolution:
+[GLANCE.yml](https://github.com/SimHacker/moollm/tree/main/skills/yaml-jazz)
+→ CARD.yml → SKILL.md → README.md — precompiled views at increasing
+depth, each a K-line activation packet.
+
+In Korz a **card** is the same idea wearing guard algebra:
+
+| MOOLLM | Korz |
+|---|---|
+| GLANCE | Minimal guard + one-line activation ("is this relevant?") |
+| CARD | Saved view at medium resolution — methods/advertisements as guarded slots |
+| SKILL | Full slot space for that facet — every selector, every guard stance |
+| README | Human narrative layer; comments load-bearing in the soft tier |
+
+`CARD.yml` on the Cross-Platform Troll is already both readings at
+once: Self-side rarity, methods, and combos_with *and* Korz-side
+advertisements (`BLOCK`, `BLEND-FRONT`, `READ-HEADS`) that dispatch
+when `{rcvr: troll*, ...}` matches. The card doesn't own the troll —
+it **advertises** which slots exist and how to invoke them from a
+typical context. Add dimensions to the card's guard and you've
+declared which subjective object you're looking at.
+
+The Zork compiler (above) is what turns a SKILL-level slot space into
+strict-tier Korz — CARD and GLANCE survive as the human/LLM-facing
+views; the compiled sea is what the VM runs.
+
+**ASK David:** is this how he imagined the partial IDE — saved views
+over the sea, not reified layers — and does hosting Korz in Self
+predict that the filesystem could host both readings without a second
+repository?
+
 ## What the soft tier adds to Korz's open problems
 
 The paper's future work asked for dimensions that alter the

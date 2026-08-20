@@ -121,6 +121,16 @@ queries over the sea ([korz-notes on layers](korz-notes.md)); the LLM as the IDE
 materializes any grouping on demand. One repo, two object models, dual-readable — is the Self
 reading and the Korz reading of the same directory a duality or a hierarchy?
 
+### 11.6 MOOLLM hosts Korz — one-dimensional Self, N-dimensional soup, same files
+MOOLLM's selfish object system is Korz at dimension one (`rcvr` = path,
+`parents:` = delegation). David prototyped Korz in Self; MOOLLM is Self
+on the filesystem — so hosting a Korz VM here should be the same move
+one level up, with soups and objects intertwingled: dual-readable tree vs
+sea, same yaml-jazz and big-endian naming. In Korz an **interface** is a
+saved view (guard template + slot grouping, not a container); a **card**
+is GLANCE/CARD/SKILL resolution as guarded advertisements. Full sketch:
+[korz-prime §Hosting Korz in MOOLLM](korz-prime.md).
+
 ### 12. OpenLaszlo reunion → Declare (optional group)
 **Receipt:** Don ran into Ungar interviewing at Laszlo — email to Tom Lord, 21 Aug 2006
 ([extract](sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) ·
