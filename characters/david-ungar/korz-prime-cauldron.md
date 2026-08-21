@@ -43,9 +43,15 @@ Two processes, one repo, ping-pong via files:
    It never guesses. It exits 0 having reported honestly.
 2. **The LLM** (in Cursor) reads open events, does what the strict tier
    cannot — writes the missing slot, resolves the ambiguity by adding a
-   guard, translates a prose slot into code, or declares the send out of
-   scope — commits, and re-runs the engine. Repeat until the events
-   directory is quiet.
+   guard, translates a prose slot into code, edits the world, sends
+   messages back to the engine — commits, and re-runs. Repeat until the
+   events directory is quiet.
+3. **The user** is the third dispatcher. Events the LLM can't resolve —
+   ambiguous intent, decisions that are genuinely the author's to make —
+   get escalated with the **same event shape** (`status: escalated`,
+   audience: human). This is where the cool user interface eventually
+   comes in; for the PoC the human's inbox is Cursor chat, and the LLM
+   presents escalated events there as questions.
 
 The engine is also the **round-trip custodian**: it may rewrite values but
 must preserve comments and, as far as practical, formatting. Comments are
@@ -138,8 +144,10 @@ status: open                   # LLM flips to `resolved`, adds `commit: <sha>`
 ```
 
 `ambiguous` events carry the tied slots; `needsCrystallization` carries the
-prose slot; every event has `status: open|resolved|declined` so the events
-directory doubles as the work queue and the audit log.
+prose slot; every event has `status: open|resolved|declined|escalated` so
+the events directory doubles as the work queue and the audit log —
+`escalated` means the LLM has forwarded it up the chain to the human, and
+the event waits on an answer only the author can give.
 
 ## 4. Language decision
 

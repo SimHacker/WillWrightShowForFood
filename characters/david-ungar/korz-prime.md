@@ -137,6 +137,20 @@ behind it, "message not understood" stops being an error family and
 becomes the boundary marker between the tiers, and crystallization
 moves that boundary one slot at a time.
 
+And the chain doesn't stop at the model. The engine emits
+doesNotUnderstand as an event — message, address, context — and the
+LLM figures out what to do with it: edit the world, add or amend code
+and data, send messages back to the engine. But when the *soft tier*
+doesn't understand — an intent the training distribution can't
+resolve, a decision that is genuinely the author's to make — it
+delegates the same way the strict tier delegated to it: the same
+event shape, escalated to **the user**. Three dispatchers, one
+protocol: VM → LLM → human, each forwarding what it cannot decide
+with the evidence attached. The human's inbox is where the cool user
+interface comes in — the pie-menu-and-popup-head end of this design
+space — but Cursor chat will have to do for now, which is honest
+about where the bootstrap actually lives.
+
 The two tiers are not rivals; they are **JIT tiers**. This is the
 Self playbook run one level up. The LLM is the interpreter: slow,
 expensive, handles everything, understands prose guards. The VM is
