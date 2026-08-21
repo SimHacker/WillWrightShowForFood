@@ -786,6 +786,23 @@ The classic rule families are guard algebra wearing lab coats:
   man coined the K-lines this document runs on. He dissolved the
   privileged receiver of folk psychology decades before Korz
   dissolved the one in message sends.
+
+  And Minsky wrote the capstone himself, in the same section: "In
+  every field, as Scientists we're always forced to recognize that
+  what we see as single things — like rocks or clouds, or even
+  minds — must sometimes be described as made of other kinds of
+  things. We'll have to understand that Self, itself, is not a
+  single thing." Read that with 2026 eyes and a capital S: it names
+  Ungar's language and predicts its dissolution in one sentence,
+  eleven years before Self shipped and four decades before Korz.
+  Ungar simplified objects to their bare essentials by removing
+  classes, and got Self — the JIT lineage that made Java,
+  JavaScript, and Lua fast. Then he removed the objects themselves.
+  Or rather, self itself: **Selfless self**, a sea of slots that
+  assemble themselves into virtual objects depending on how you
+  look at them — where "how you look at them" is the context
+  binding, said in plain English. Rocks, clouds, minds, objects:
+  none of them are single things; all of them are dispatch.
 - **The Moveable Feast Machine is the soft tier's physics.**
   Ackley's MFM abandons the synchronous total table: events fire
   asynchronously and stochastically, and an element's behavior
