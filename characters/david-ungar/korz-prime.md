@@ -1021,6 +1021,24 @@ copy, don't materialize, fall through — which is why it feels
 Self-shaped: the shadow tree is to the containment tree what the
 parent slot is to the object.
 
+**Ethics is one of the shadows.** A MOOLLM directory can optionally
+declare an ethical scope — consent levels, portrayal rules, forbidden
+topics, what may be quoted — or declare nothing and inherit from its
+**ethics-parent**. A child scope *refines*: it makes the inherited
+rules more specific, tightens them, or sandboxes its subtree
+entirely, exactly the way a ScriptX child clock transforms its
+parent's time — offset it, scale it, even reverse it — without ever
+escaping the parent's timeline. The refinement is one-way by
+default: a subtree can always forbid more than its parent, but
+loosening what the parent forbids requires explicit consent recorded
+*at the parent*, the same way a Consent Ladder grant must come from
+the person it concerns. A sandbox is then nothing special — just a
+directory whose scope says "stricter in here" — and a private annex
+is a shadow node materialized where the public default stops being
+true. One dense tree of files; the ethics ride above it as a nearly
+empty shadow, materializing only at the doors where the rules
+change.
+
 Prior art is everywhere once it has a name: **CSS inherited
 properties** (set `color` on one node; ten thousand descendants read
 it without storing it), **X resources** falling through the widget
