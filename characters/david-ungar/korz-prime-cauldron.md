@@ -36,11 +36,20 @@ Korz′ PoC is the same loop with dispatch instead of adventure traversal.
 
 Two processes, one repo, ping-pong via files:
 
-1. **The strict engine** (deterministic, boring, proud of it) scans the
-   soup — YAML jazz slot files in a directory tree — executes sends,
-   writes traces, and on any failure of decidability emits an **event
-   file**: `doesNotUnderstand`, `ambiguous`, `malformed`, `unknownDimension`.
-   It never guesses. It exits 0 having reported honestly.
+1. **The strict engine** (deterministic, boring, proud of it — working
+   name **Kelvin**, see B.2) scans the soup — YAML jazz slot files in a
+   directory tree — executes sends, writes traces, and on any failure of
+   decidability emits an **event file**: `doesNotUnderstand`,
+   `ambiguous`, `malformed`, `unknownDimension`. It never guesses. It
+   exits 0 having reported honestly.
+
+   And it is a **faithful courier**: every event carries as much
+   contextual comment material as practical — the jazz on and around
+   the failed send, the nearest-miss slots, the relevant dimension
+   declarations — quoted verbatim with provenance paths. The engine
+   cannot read these letters; it delivers them anyway, because the
+   event's addressee can. Comments are semantic data, and the machine's
+   job at the boundary is to forward the channel that isn't for it.
 2. **The LLM** (in Cursor) reads open events, does what the strict tier
    cannot — writes the missing slot, resolves the ambiguity by adding a
    guard, translates a prose slot into code, edits the world, sends
@@ -137,6 +146,11 @@ send: serenade
 context: {character: troll, place: bridge}
 nearest:                       # engine's best forensics, no interpretation
   - {slot: "greet.slots.yml#/slots/2", note: "message differs, guard matches"}
+jazz:                          # comments harvested near the failure, verbatim —
+  - from: "greet.slots.yml#/slots/2"        # the engine can't read these;
+    comment: "# code slot: the strict tier executes this"   # its reader can
+  - from: "DIMENSIONS.yml#/dimensions/mood"
+    comment: "# open enum — a novel value is doesNotUnderstand fuel, not an error"
 ask: |
   No slot answers `serenade` under this context. Write one, alias
   serenade -> greet, or mark it out of scope.
@@ -278,6 +292,13 @@ that shipped in 1977.
   literate comments are ready-made jazz; translation is transcription),
   Zork MDL second (the dispatch structure is the prize but muddle
   requires more archaeology).
+- **The engine's name.** Default: **Kelvin** — the strict tier runs at
+  absolute zero (korz-prime's own metaphor: crystallize, melt, the warm
+  end of the scale), and Lord Kelvin's "when you cannot measure it...
+  your knowledge is of a meagre and unsatisfactory kind" is the strict
+  tier's constitution, with the soft tier as the meagre-but-necessary
+  kind. Alternates: **Zorkmid** (the hard currency of the realm),
+  **Frobozz** (the magic company). Awaiting Don's ratification.
 
 ### B.3 New questions raised by later deep-dives
 

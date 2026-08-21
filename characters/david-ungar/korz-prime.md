@@ -151,6 +151,17 @@ interface comes in — the pie-menu-and-popup-head end of this design
 space — but Cursor chat will have to do for now, which is honest
 about where the bootstrap actually lives.
 
+"With the evidence attached" includes the evidence the sender can't
+read. The strict engine is a **faithful courier**: when it writes an
+event it harvests as much contextual comment material as practical —
+the jazz on the failed send, on the nearest-miss slots, on the
+relevant dimension declarations — and quotes it verbatim with
+provenance paths. Comments are semantic data addressed to the *next*
+dispatcher up; the machine's job at the boundary is to forward the
+channel that isn't for it. The three audiences of Korz Jazz, made
+operational: the machine parses structure, and hands the meaning it
+skipped to the reader who won't.
+
 The two tiers are not rivals; they are **JIT tiers**. This is the
 Self playbook run one level up. The LLM is the interpreter: slow,
 expensive, handles everything, understands prose guards. The VM is
