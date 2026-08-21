@@ -171,6 +171,17 @@ the second manual of the organ.
   Lollapalooza video guerrillas since the '91 tour, per Don's recollection
   scratching QuickTime on that midway too. The robopoetry telephone game is
   an Electric Carnival reunion with thirty years of better latency.
+- **ScriptX's clock hierarchy (Kaleida, 1993)** — the infrastructure under
+  the time-chording lineage. VuJak played a QuickTime movie's timeline from
+  keys; ScriptX (built on Apple's crown-jewel QuickTime API, and Don was
+  there) made time a **hierarchical coordinate system** — a clock tree
+  interpolated into the window hierarchy, every window with its own rate and
+  offset relative to its parent: forward, pause, **backwards with audio**,
+  any speed. Web browsers still can't do it (negative `playbackRate` isn't
+  *playing*; it's a strobe of seeks). The organ wants exactly this under its
+  stations: the distorter as a clock-tree node, pitch-bending and reversing
+  the loop's output as ordinary time transforms.
+  → [kaleida-scriptx-dreamscape-multimedia-lisp-machine.md](kaleida-scriptx-dreamscape-multimedia-lisp-machine.md)
 
 **Constraint machines and combinatorial decks:**
 
