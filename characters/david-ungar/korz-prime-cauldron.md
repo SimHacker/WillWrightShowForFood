@@ -222,6 +222,17 @@ behavior, with forty-five years of players as the oracle. Modularity is
 the acceptance test: a part counts as extracted only if it runs in a
 soup that doesn't contain the rest of its game.
 
+Corpus measurements (2026-08-21): `advent.w` is 4,439 lines including
+all literate prose and TeX, one file, 201 sections, 131 `make_loc`,
+393 `make_inst`, ~500 decision points (`if`/`case`/loops). Zork MDL is
+20,703 lines across 19 files, 196 rooms, 211 objects, 675 `DEFINE`s,
+1,519 `COND`s with ~2,170 clauses. Adventure is 4-5x smaller on every
+axis and pre-annotated. **First import shipped:** the all-alike maze
+(26 rooms, pure travel table, zero code) as
+[moollm examples/all-alike-maze](https://github.com/SimHacker/moollm/tree/main/examples/all-alike-maze)
+— one inherited description, exits-only rooms, a sparse shadow tree
+that shipped in 1977.
+
 ---
 
 ## Appendix A. Design wisdom and conventions (cross-cutting)
