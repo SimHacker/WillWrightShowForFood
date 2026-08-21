@@ -13,6 +13,10 @@ sketch redoes the dispatch semantics. Prior art it leans on:
 Sidecar: [korz-prime-trajectory.md](korz-prime-trajectory.md) — the
 session that grew this document, as a K-line paging log: what Don
 pointed at, what came back, where it crystallized.
+Cauldron: [korz-prime-cauldron.md](korz-prime-cauldron.md) — Phase-1
+monolith planning the runnable proof of concept: YAML jazz schemas by
+example, a deterministic engine with doesNotUnderstand events, and
+the LLM ping-pong loop.
 
 The name, after Bourland's E-Prime: Korz minus the assumption that
 dispatch must be decidable. Alternative naming scheme, via the
