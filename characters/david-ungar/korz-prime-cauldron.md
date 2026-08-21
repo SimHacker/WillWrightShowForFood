@@ -241,11 +241,20 @@ all literate prose and TeX, one file, 201 sections, 131 `make_loc`,
 393 `make_inst`, ~500 decision points (`if`/`case`/loops). Zork MDL is
 20,703 lines across 19 files, 196 rooms, 211 objects, 675 `DEFINE`s,
 1,519 `COND`s with ~2,170 clauses. Adventure is 4-5x smaller on every
-axis and pre-annotated. **First import shipped:** the all-alike maze
+axis and pre-annotated. **First imports shipped:** the all-alike maze
 (26 rooms, pure travel table, zero code) as
 [moollm examples/all-alike-maze](https://github.com/SimHacker/moollm/tree/main/examples/all-alike-maze)
 — one inherited description, exits-only rooms, a sparse shadow tree
-that shipped in 1977.
+that shipped in 1977 — and its structural opposite, the
+[all-different maze](https://github.com/SimHacker/moollm/tree/main/examples/all-different-maze):
+an 11×11 Latin square where every room answers all ten motions (total
+dispatch, doesNotUnderstand impossible by construction) and the eleven
+"different" descriptions are permutations of one word bag. The pirate
+cross-links the pair: chest at `dead2` (alike), taunting message at
+`pony` (different). The transcription practice has a name —
+**Jazzork**: lifting the historic comments out of the code and into
+the YAML jazz data, Knuth's `@q..@>` numbers and asides preserved
+beside the facts they annotate.
 
 ---
 

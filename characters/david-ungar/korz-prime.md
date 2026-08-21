@@ -681,7 +681,12 @@ the lamp fuse, the pirate, the thief, the parser's WINNER rebinding,
 the troll himself — and translate each into Korz slots one artifact
 at a time: **Korzork**. The name is the method — Korz semantics
 wearing Zork's flesh — and each translated part is a test case with
-forty-five years of players as its oracle.
+forty-five years of players as its oracle. The transcription
+discipline is **Jazzork**: lift the historic comments out of the code
+and into the YAML jazz data — Knuth's `@q..@>` location numbers, his
+"dirty trick!" aside, Woods's Latin-square construction — preserved as
+comments beside the facts they annotate, where all three audiences
+can reach them.
 
 ## Cellular automata — Korz at absolute zero
 
