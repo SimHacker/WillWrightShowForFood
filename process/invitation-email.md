@@ -197,7 +197,7 @@ Move existing long `invitation.md` bodies here when refactoring (e.g. David Levi
 
 - [`characters/_TEMPLATE/invitation.md`](../characters/_TEMPLATE/invitation.md) — copy per guest
 - Flagship (accepted, longer — exception): [`characters/will-wright/invitation.md`](../characters/will-wright/invitation.md)
-- Good lean draft: [`characters/jim-crutchfield/invitation.md`](../characters/jim-crutchfield/invitation.md)
+- Good lean draft: [`characters/lars-brinkhoff/invitation.md`](../characters/lars-brinkhoff/invitation.md)
 
 ---
 

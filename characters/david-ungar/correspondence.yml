@@ -49,6 +49,9 @@ threads:
       - sources/2026-08-korz-dancing-with-symmetry-article-scaffold.md
     korz_video: https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context
     framing: "Will Wright GDC 2005 'revisit those ideas' — https://youtu.be/ofA6YWVTURU?t=3657"
+  fitts_and_foveation:
+    what: "Don demos Unity3D pie menus — selected label slides to cursor, description reveals under it (Fitts, mountain-to-Mohammed), deselected slices dramatically shrink/retreat into center. David: the retreat animation is counterproductive — motion attracts foveation; sight is a reconstructed illusion; we evolved startled by peripheral motion. Don concedes; lifts it to an ambient design awareness alongside Fitts (PieCraft teaches Fitts; this is the companion lesson). Prior art excavated from The Sims source: the Brady Bunch popup head (deliberate center-stage shimmer, 'make it noticeable') and the desaturated darkened radial shadow behind it (gray=(R+G+B)/6+8, inner-2/3 full, outer-third d² taper) — anti-Zardoz plane separation, accidentally exemplary foveation hygiene"
+    artifact: fitts-and-foveation.md
   linkedin_self_manual_2026_07:
     what: "Amanda Walker finds Self manual in 90s box; Urs Hölzle (manual writing apprenticeship); Ungar replies — Self IDE still beloved, SIC on 64-bit Macs (Russell Allen), Vision Pro / spatial computing exploratory hope"
     spark: ../amanda-walker/
@@ -75,3 +78,4 @@ show_hooks:
   - "Build MOOLLM live with Self idioms — prototypes, mirrors, Stage Magic"
   - "Conscientious Objectors — Kaleida: ScriptX object-system team × Self team; what ideas bounced both ways?"
   - "Artisanal hand-programming vs intentional AI use — the Conscientious Objectors ethic"
+  - "Fitts and foveation — Don's Unity3D pies bring the mountain to Mohammed; David explains why the retreating slices steal the eye ([fitts-and-foveation.md](fitts-and-foveation.md))"

@@ -23,28 +23,52 @@ and **evolving cellular automata to perform computation** (with **Melanie Mitche
 **computational mechanics** — the **ε-machine**, a method for discovering the intrinsic structure
 and hidden computation inside any process.
 
-## Why a Repo Show — picking up where we left off
+## Why a Repo Show
 
-This isn't a cold call: Don and Jim have **decades of correspondence**, and the show is the instrument the old threads were waiting for — [`don-and-jim-history.md`](don-and-jim-history.md).
+This isn't a cold call: Don and Jim have known each other and corresponded for
+decades (the history stays in Don's private archive), and Jim's public work —
+video feedback, evolving cellular automata, computational mechanics — runs
+straight through this repo's obsessions.
 
-- **2008:** Jim asked Don how to reach **Will Wright** to show him his CAVE immersive rig. This Repo Show is the delayed rendezvous.
-- **2013:** the "Powers of Feedback" tape thread — and the **director's cut** project. Jim had to
-axe the original soundtrack over music rights; the explanatory narration deserves to go back on.
-Plan: record the voice-over **live on the show**, over the clean transfer. *We're the Mystery Science Home Theater robots.*
-- **Dec 2013:** Jim offered to **co-develop an introduction to CAs and structural complexity
-theory**, with his grad class as test bunnies. That offer is now buildable — see below.
-- **2019:** Amsterdam — **Ben Cerveny's canal boat**, Sims-object-programming demos at the UvA
-IAS attic, the **CAM-8-hardware-missing-its-software** revelation, and the soundtrack credits
-(Jim composed ***Rio Chama*** himself).
-- **2025:** the browser-dynamics thread — Ed Puckett's ODE plotter and Jim's *"wholly
-unrealized"* plan to port his Jupyter class demos to the browser.
+The show runs on **Will Wright's rule from the Spore talk: dust off your old
+ideas every few years, because the world changes underneath them and the
+reasons they were shelved expire.** The plans below are dusted-off old ideas
+whose blockers are gone — *things have changed*.
 
+### Don & Jim, over the years 🚤
 
+The friendship predates Don's mail archive. Around **1990**, **Kathy Abelson** —
+Don's office mate at Sun and technical writer on The NeWS Toolkit — handed him
+a videotape of Jim's video-feedback film, correctly guessing he would love it.
+It rewired him: Don's own feedback experiments (up through Mac-era video
+feedback with live background removal) and the CAM6 performance platform grew
+in its afterglow — see the [papers & film annex](papers/README.md).
+
+Since then the conversation has kept circling the same strange attractors, in
+person and by mail:
+
+- **Video feedback** — the physics, the art, and the **director's-cut dream**:
+  Don's old tape carried explanatory narration the online transfer lacks; it
+  would be wonderful to hear it again — or better, record Jim narrating over
+  the film, live.
+- **Cellular automata** — evolving CA rules, structural complexity, CA
+  pedagogy, and the CA-machine hardware lineage that runs to Norman Margolus.
+- **Art & science** — talks in Santa Fe about Jim's **Art & Science
+  Laboratory**: CA and video feedback for artistic purposes as well as
+  scientific ones, and applying science to art.
+- **Immersive visualization and games** — Jim's CAVE work and his
+  long-standing wish to show it to the games world, Will Wright very much
+  included.
+- **Browser-based dynamics** — the shared itch to get chaos, CAs, and class
+  demos running where anyone can touch them.
+- **Amsterdam** — Jim visits; there has been canal boating with Ben Cerveny
+  and friends, demos traded, and a standing invitation to come back — the
+  Internet Archive's new European home is right on the boat route.
 
 ### The CA playground plan 🌸
 
 **Norman Margolus has given Don permission to turn chapters of *Cellular Automata Machines* into
-interactive instructional and artistic CA web apps.** That unlocks the whole 2013 offer:
+interactive instructional and artistic CA web apps.** The plan:
 
 1. **First cut:** rewrite Don's old monolithic **CAM6** simulator as **modern, modular
   TypeScript** — the engine the playgrounds share.
@@ -63,10 +87,8 @@ This is exactly what the show is for: brainstorm, document, commit, inspire.
 
 The video-feedback thread starts a generation before Jim's 1984 paper: **Ralph Abraham**
 published the camera-at-monitor loop as "Simulation of cascades by video feedback" at UCSC in
-**1976**; Jim turned the demo into the formal dynamical-systems treatment. The handoff — and
-Don's own VHS-tape provenance (the tape came from **Kathy Abelson**, Don's office mate at Sun and
-author of the NeWS manual Don reviewed and illustrated) — is written up in
-[`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md). Ralph died in September
+**1976**; Jim turned the demo into the formal dynamical-systems treatment. The handoff is
+written up in [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md). Ralph died in September
 2024; the show carries a **memorial segment** where Jim remembers him —
 [`../ralph-abraham/memorial.md`](../ralph-abraham/memorial.md).
 
@@ -80,7 +102,7 @@ reversible CA — and the book behind the playgrounds). All Santa Fe Institute�
 ## Browse
 
 - Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/README.md)
-- The history: [`don-and-jim-history.md`](don-and-jim-history.md) · The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
+- The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
 - Joint CA show: [Norman Margolus](../norman-margolus/README.md) · Dream co-guest: [Scott Draves](../scott-draves/README.md)
 - Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia](https://en.wikipedia.org/wiki/James_P._Crutchfield)
 

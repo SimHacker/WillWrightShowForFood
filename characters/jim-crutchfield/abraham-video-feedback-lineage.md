@@ -32,14 +32,12 @@ Crutchfield didn't just write the paper; he **shot the movie**:
 > Santa Cruz (1984)**. Original U-matic video transferred to digital. 16 minutes.
 > [YouTube (posted by YoDrChaos)](https://www.youtube.com/watch?v=B4Kn3djJMCE) · 77k+ views
 
-**Don's firsthand thread:** **Kathy Abelson** — Don's office mate at Sun, the technical writer who
-wrote the **NeWS manual** Don meticulously reviewed and helped illustrate — gave Don a copy of that tape back in the day
-(Don later digitized it as a low-res QuickTime when the internet was slow — see
-[don-and-jim-history.md](don-and-jim-history.md)), and a lot of Don's work is directly inspired
-by it — the CAM6 cellular-automata performance platform, the feedback experiments, the whole
-"point the system at itself and steer" instinct. The tape is the personal link in the chain; the
-YouTube upload means everyone can now watch the same 16 minutes that rewired Don. Don: it reminded
-him of *Powers of Ten*. Jim: **"Powers of Feedback."**
+**Don's firsthand thread:** Don got a copy of that tape back in the day and
+digitized it as a low-res QuickTime when the internet was slow. A lot of Don's
+work is directly inspired by it — the CAM6 cellular-automata performance
+platform, the feedback experiments, the whole "point the system at itself and
+steer" instinct. The YouTube upload means everyone can now watch the same 16
+minutes that rewired Don.
 
 Paper + plates (UC Davis mirrors):
 

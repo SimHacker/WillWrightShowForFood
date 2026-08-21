@@ -1,9 +1,9 @@
-# Jim Crutchfield — papers annex 🦋
+# Jim Crutchfield — papers & film annex 🦋🎞️
 
-*Local copies of key papers, with summaries and the reasons each one lives in
-this repo. Don has been giving Jim feedback about his feedback since 2013 —
-see [don-and-jim-history.md](../don-and-jim-history.md) for the correspondence,
-the Amsterdam boat, and the director's-cut project.*
+*Local copies of key papers plus the companion film — summaries, commentary,
+and the reasons each one lives in this repo. The 1984 paper and the 1984 film
+are two performances of the same work: the paper is the score, the film is the
+concert.*
 
 ## In this directory
 
@@ -78,45 +78,103 @@ organisms, such as budding ferns and conch shells."*
 ![Plates 5-7: relaxation oscillation burst, pinwheels, spiral waves](../media/video-feedback-plates-5-7.jpg)
 
 *Plate 5: a noise-amplified burst — "noise-driven spatial structures in a
-relaxation oscillator," first cousin of the [dripping
-handrail](../don-and-jim-history.md#the-dripping-handrail-). Plates 6-7 (shot
+relaxation oscillator," first cousin of the **dripping handrail** (Crutchfield
+& Kaneko 1988, cited below). Plates 6-7 (shot
 on Larry Cuba's equipment): luminance-inversion pinwheels compared to the
 rotating electrical waves of the beating heart, and outward-spiralling color
 waves reminiscent of Belousov-Zhabotinsky.*
 
-### Why this paper lives in this repo
+### The film 🎞️
 
-- **It's the video verse of the feedback-loop hymn.** Lucier ran the loop
-  through a room (1969, audio); Crutchfield ran it through a camera-monitor
-  pair (1984, video); the [robopoetry telephone
-  game](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) runs
-  it through a language model (2026, text). And Crutchfield's variation (6) —
-  put a computer in the loop — **is** the telephone game's architecture,
-  proposed forty-two years early: the LLM is the frame buffer.
-- **It premiered at the CA conference where the CAM was born.** Jim's 2019
-  recollection (see [don-and-jim-history.md](../don-and-jim-history.md)): at
-  the 1983 Los Alamos gathering, Toffoli and Margolus were **wire-wrapping the
-  first CAM in the back of the room**. The film premiered at the 1984 workshop
-  in the same series. That thread runs straight to the [Norman Margolus
+> **Space-Time Dynamics in Video Feedback** — *"A film by Jim Crutchfield,
+> Entropy Productions, Santa Cruz (1984). Original U-matic video transferred to
+> digital video. 16 minutes."*
+> **[Watch on YouTube](https://www.youtube.com/watch?v=B4Kn3djJMCE)** (posted
+> by YoDrChaos, 77k+ views) · [Jim's films
+> page](https://csc.ucdavis.edu/~chaos/chaos/films.htm)
+
+The film is the paper's taxonomy **performed**: equilibrium images blooming
+into symmetry-locked mandalas, the limit cycles breathing, chaotic image
+sequences, the "noise-driven spatial structures in a relaxation oscillator"
+section (one YouTube commenter: *"sounds like every good drug trip"*; another:
+*"Finally a documentary about the creation of the universe"*), dislocation
+mazes, pinwheels, and spiral waves. The soundtrack — credited on the upload to
+**Richard Burmer** (*Sun Dreams*, *Mechanical Witch*, *Sunshade*) and
+**Eberhard Schoener** (*Nadi*, from *Bali-Agúng*) — gives it the pacing of a
+planetarium show; viewers keep comparing it to Eames's *Powers of Ten*, and
+they're right to: it's *Powers of Feedback*.
+
+**Read one, watch the other.** Section 3's taxonomy tells you what you're
+looking at; the plates above are frames from the same family of experiments.
+A companion piece from the same shop: [*Chaotic Attractors of Driven
+Oscillators* (1982)](https://youtu.be/Sq8Vu40Bw1g), Entropy Productions.
+
+**The Don connection.** A hand-me-down videotape of this film reached Don
+around **1990** and quietly rewired him ([the story](../README.md#don--jim-over-the-years-)).
+His own video feedback experiments — up through Mac-era feedback with live
+background removal — and the "point the system at itself and steer" instinct
+behind the [CAM6 performance
+platform](../../don-hopkins/cam6-cellular-automata-machine.md) grew in its
+afterglow. An open dream: Don's tape carried **explanatory narration** that
+the online transfer lacks — the director's cut wants to exist, or better,
+**Jim narrating over the film live**.
+
+### Why this paper (and film) live in this repo
+
+- **It's the video verse of the feedback-loop hymn — and the voice stuff is
+  the other verse.** Alvin Lucier ran the loop through a room and a voice
+  (*I Am Sitting in a Room*, 1969, audio); Crutchfield ran it through a
+  camera-monitor pair (1984, video); the [robopoetry telephone game and
+  Rhetoric Organ](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md)
+  run it through a speech recognizer, a language model, and a speech
+  synthesizer (2026, voice and text) — with [Pink Trombone as the adversarial
+  larynx](../../../repo-shows/voystick-pink-trombone/SHOW.yml). Same hymn,
+  three instruments: room, camera, mouth. The show wants all three loops on
+  one stage.
+- **Injection is an instrument.** The most delightful way to play a video
+  feedback loop: **hold things up in front of the camera** — hands, faces,
+  flowers, confetti, puppets, dolls, stuffed animals, jewelry — and watch the
+  loop metabolize them: iterated, smeared, symmetry-locked, folded into the
+  attractor. It's exactly the [adversarial Pink Trombone
+  move](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) in
+  the video register — playing a loud Pink Trombone over the speech is
+  holding a flower in front of the camera. Same attack, different sense organ:
+  **inject a signal the loop didn't generate and make the system believe it
+  was always there.** Prompt injection by hand, by face, by confetti.
+- **Variation (6) is the telephone game's architecture, proposed forty-two
+  years early.** The paper's list of extensions includes *"inserting a digital
+  computer into the feedback loop via a video frame buffer"* — swap the frame
+  buffer for a language model and you have the robopoetry loop's wiring
+  diagram: the LLM is the frame buffer. And the buildable version is in the
+  browser: [korz-prime](../../david-ungar/korz-prime.md) sketches compiling
+  Korz specs into **WebGPU compute shaders with the video camera in the
+  loop** — camera → shader pipeline → canvas → camera, variation (6) live in
+  a tab, with 1984's knobs (rotation, zoom, pan, focus) as shader uniforms.
+- **It premiered in the conference series where the CAM was born.** The film
+  premiered at the 1984 Los Alamos workshop, in the same series where Toffoli
+  and Margolus's first CAM hardware made its debut appearances a year earlier.
+  That thread runs straight to the [Norman Margolus
   show](../../../repo-shows/norman-margolus/SHOW.yml), Don's CAM6.js, and the
   CAM-8 software-archaeology beat.
-- **Nonlocal neighborhoods are dimension guards.** Rotation and zoom
-  parameterize *which cells are your neighbors* — the same generalization
+- **Nonlocal neighborhoods are dimension guards.** Rotation, zoom, and pan
+  parameterize *which cells are your neighbors* — rotation twists the
+  neighborhood, zoom scales it, pan translates it — and **focus sets its
+  radius** (defocusing is literally turning up the spatial diffusion rate).
+  It's the same generalization
   [korz-prime](../../david-ungar/korz-prime.md) makes when it reads cellular
   automata as fully-crystallized Korz ("CA at absolute zero") with
   neighborhoods as dimensions. Video feedback is the analog machine where you
-  *turn the neighborhood with a lens ring*.
+  *turn the neighborhood with a lens ring* — the optical bench is the
+  dimension-selection UI.
 - **Turing 1952 is the shared ancestor** of this paper's PDE model, of
   reaction-diffusion texture work everywhere, and of the morphogenesis riffs
   in the [hierarchy-of-bleeds fluid
   CA](../../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml).
   Plate 3's dislocations are what the blood/chum flood z-buffer wants to look
   like when it grows up.
-- **The director's cut is an open show project.** The film ([YouTube, 77k
-  views](https://www.youtube.com/watch?v=B4Kn3djJMCE)) lost its narration to
-  music rights; the narration survives on Kathy Abelson's tape; the plan is to
-  re-record it **live on the show**, MST3K-style. Bonus sleeper credit: the
-  soundtrack's *Rio Chama* is **composed by Crutchfield himself**.
+- **The film is watchable today.** Crutchfield's 16-minute companion film
+  ([YouTube, 77k views](https://www.youtube.com/watch?v=B4Kn3djJMCE)) shows
+  the experiments the paper formalizes.
 
 ## What Lies Between Order and Chaos? (2002)
 
@@ -165,6 +223,7 @@ history it stores and how it uses that memory to behave.
 
 ## See also
 
-- [don-and-jim-history.md](../don-and-jim-history.md) — the correspondence, the boat, the tape
 - [abraham-video-feedback-lineage.md](../abraham-video-feedback-lineage.md) — the 1976 → 1984 handoff
-- [ideas.md](../ideas.md) · [invitation.md](../invitation.md) · [CHARACTER.yml](../CHARACTER.yml)
+- [README.md](../README.md) — who Jim is, the friendship, and the show plans · [CHARACTER.yml](../CHARACTER.yml)
+- [The Rhetoric Organ / robopoetry loop](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) — the voice-and-text verse of the feedback hymn
+- [CAM6](../../don-hopkins/cam6-cellular-automata-machine.md) — Don's cellular-automata performance platform, grown in the film's afterglow

@@ -614,7 +614,9 @@ The classic rule families are guard algebra wearing lab coats:
   never looks at individual neighbors — it guards on their *sum*:
   `{center: dead, live_neighbors: 3} → born`. An aggregate of
   dimensions used as a dimension. (ASK David: are derived/computed
-  dimensions ordinary dimensions, or a new kind of guard?)
+  dimensions ordinary dimensions, or a new kind of guard? The
+  Margolus bullet below finds a second species — coordinate
+  transforms, not just aggregates.)
 - **Rotational symmetry is guards quotiented by a group.** A
   symmetric rule doesn't enumerate four rotations; it matches the
   *orbit*, not the point — dispatch modulo group action, a symmetry
@@ -622,13 +624,47 @@ The classic rule families are guard algebra wearing lab coats:
 - **The Margolus neighborhood is no-privileged-receiver in
   silicon.** A 2×2 block with *no center cell* — four sites dispatch
   symmetrically, none of them "the receiver" — and the alternating
-  partition makes the block phase a **time-parity dimension**: the
-  same four cells match different slots on even and odd ticks.
+  partition makes the block phase a **time-and-space parity
+  dimension**: `T` decides which tick's partition you're in, `V` and
+  `H` decide which corner of your block you are, so the same four
+  cells match different slots on even and odd ticks *and* the block
+  boundaries themselves shift under your feet.
   Reversible rules make the slot set bijective — `git revert` as
-  physics. And the crystallization pipeline already shipped, in
-  1987: **CAM-6** rules were written in Forth and *compiled into
-  lookup tables* — expressive description down to total dispatch
-  table, exactly the Zork-compiler movement — the machine Don's own
+  physics.
+
+  And here's the head-tilt: the Margolus neighborhood **isn't new
+  hardware, it's a derived coordinate system**. CAM-6 implemented it
+  on plain Moore-neighborhood machinery: the block-relative
+  dimensions `C`, `CW`, `CCW`, `OPP` are *functions* of the compass
+  rose (`N S E W NW NE SW SE`) plus three phase dimensions — `T`
+  (time parity), `V` (vertical phase), `H` (horizontal phase). Which
+  physical neighbor is "clockwise from you" depends on where you sit
+  in the block and which tick it is — a **change of basis over
+  dimensions you already had**. That sharpens the derived-dimensions
+  question from the totalistic bullet: Life's `live_neighbors` is an
+  *aggregate* (sum of dimensions), but `CW` is a *coordinate
+  transform* (permutation of dimensions indexed by other
+  dimensions). Same machinery, second species.
+
+  The rules complete the no-privileged-receiver story, and the name
+  for it is **multiple dispatch**. Single dispatch picks the method
+  from one privileged receiver (`cell.update(...)`); multiple
+  dispatch (CLOS, Cecil) picks it from the joint types of *all* the
+  arguments; and Korz goes one step further — dispatch on the whole
+  **context**, where "arguments" and "environment" are just
+  dimensions, and nothing is the receiver. A Margolus rule is
+  exactly that: a generic function whose method is selected by the
+  **joint state of all four sites plus the phase dimensions** — not
+  `nw.update(ne, sw, se)` but `update{a, b, c, d, T, V, H}`, written
+  **once, rotationally symmetric (dispatch modulo the rotation
+  group), with four receivers and four outputs**. Every site is
+  simultaneously an argument to dispatch and a result of it; the
+  block updates as one atomic multimethod call. Korz's symmetric,
+  receiverless message send was running in silicon in 1987. The
+  crystallization pipeline shipped there too: CAM-6 rules were
+  written in Forth and *compiled into lookup tables* — expressive
+  description down to total dispatch table, exactly the
+  Zork-compiler movement — the machine Don's own
   [CAM6.js](../don-hopkins/cam6-cellular-automata-machine.md)
   simulates and the [Norman Margolus
   show](../../repo-shows/norman-margolus/) plays live.
@@ -651,6 +687,36 @@ about Life (nobody says "dead cell with three live neighbors
 northeast"; they say *glider*). Pattern names are the semantic
 compression the strict table can't express and the soft tier gets
 free.
+
+### Crystallization targets — compile Korz to kernels
+
+CAM-6 already proved the movement: Forth descriptions compiled into
+total lookup tables. Generalize the back end and Korz becomes a
+**source language for GPU kernels**. The soft tier (an LLM) reads a
+Korz spec — dimensions, guards, neighborhood declarations, symmetry
+quotients — and lowers it to:
+
+- **PyTorch** — wildly specialized CA and image-processing flows as
+  tensor programs, including **training and generation**: make the
+  rule table differentiable and you're in neural-CA territory
+  (Mordvintsev's growing CAs), where the crystallized table is the
+  *result* of gradient descent instead of hand enumeration. Korz
+  guards in, learned physics out.
+- **WebGPU TypeScript** — better, because it runs where the audience
+  is: in the browser, with `getUserMedia` putting the **video camera
+  in the loop**. Camera → compute shader pipeline → canvas → camera:
+  [Crutchfield's variation (6)](../jim-crutchfield/papers/README.md)
+  — "insert a digital computer into the feedback loop via a video
+  frame buffer" — running live in a tab, forty-two years later. The
+  1984 control knobs map straight onto shader uniforms: rotation,
+  zoom, and pan choose *which cells are your neighbors*, focus is
+  the diffusion radius — dimension guards you turn with a slider
+  instead of a lens ring.
+
+The pipeline is the same in both cases: **describe in Korz, ask the
+soft tier to crystallize, run the strict artifact on the GPU** — and
+when a guard needs renegotiating, melt it back up a tier and
+recompile. Zork-compiler movement, hot loop edition.
 
 ## Hosting Korz in MOOLLM — soups intertwingled with objects
 
@@ -1088,3 +1154,10 @@ guarded `skill: medical`.
   bug no debugger can see.
 - Is prose-in-guards a feature or a moral hazard? (The strict tier's
   refusal to compile it is the only discipline on offer.)
+- What are derived dimensions, formally? The CA section finds two
+  species: **aggregates** (Life's `live_neighbors`, a sum used as a
+  dimension) and **coordinate transforms** (CAM-6's Margolus
+  neighborhood: `CW`/`CCW`/`OPP` as permutations of the Moore
+  compass indexed by phase dimensions `T`/`V`/`H`). Are both
+  ordinary dimensions, a new guard kind, or evidence that dimensions
+  form an algebra?

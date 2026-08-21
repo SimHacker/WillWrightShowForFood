@@ -43,6 +43,7 @@ Working document for the PieCraft episode. Screen-sharing, whiteboarding, follow
 - Pies craftable / lootable / damageable; combat spills slices
 - Good layout = survival; bad layout = death
 - Fitts + muscle memory as *gameplay skills*
+- Companion lesson from David Ungar: **motion is a foveation summons — only send it where you want the eye** ([fitts-and-foveation.md](../../characters/david-ungar/fitts-and-foveation.md)); score layouts on misdirected motion too
 - MH players already optimize radials like pros
 
 **Historical thread — PIXIE / PDP-7 / light pen / Engelbart / Lars**

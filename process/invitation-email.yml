@@ -56,7 +56,7 @@ refactor_queue_note: |
 
 template: ../characters/_TEMPLATE/invitation.md
 flagship_exception: ../characters/will-wright/invitation.md
-lean_example: ../characters/jim-crutchfield/invitation.md
+lean_example: ../characters/lars-brinkhoff/invitation.md
 
 see_also:
   - portrayal-standards.yml

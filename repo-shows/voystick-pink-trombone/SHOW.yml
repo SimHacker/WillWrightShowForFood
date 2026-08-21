@@ -49,6 +49,10 @@ segments:
   - id: collaborative_choir
     topic: "Four-player Croquet Pink Trombone — We Are the Weird anthem energy"
     activity: ../../apps/performance-space/pink-trombone-jam.yml
+  - id: adversarial_recognizer
+    topic: "Game: make a speech recognizer recognize ANYTHING with Pink Trombone — seed the robopoetry loop, prepend/append syllable injection around human utterances, stomp-and-blend over the synth. Transcript is the judge."
+    tie: ../../characters/don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md
+    note: "Prompt injection by larynx; adversarial examples as live performance; Postel torture test for the loop's most liberal parser"
   - id: outdoor_slice
     topic: "Canal-loop field test — pitch+vowel trace steers singing while biking; SpeechAnalyzer for words"
     note: "Outdoor = wide sloppy fast warbles, no social cost; MediaGraph cannon-flick on handlebars"

@@ -45,6 +45,11 @@ re-speak the mutated line — evolving robopoetry, steerable by talking over
 it, gongable by the Ultimate Machine. Don built the speech-synthesizer
 feedback idea once and wants to recreate it.
 
+The loop idea has been in writing since at least **May 2018**, when Don
+proposed it as a Snap! blocks project under the subject line "DeepScat Speech
+Synthesizer <=Feedback=> Speech Recognizer!" The Rhetoric Organ closes a loop
+that has been open for years.
+
 The Rhetoric Organ is the missing instrument on the **text-generation side**
 of that loop. Full telephone game, every station live:
 
@@ -64,6 +69,46 @@ player steers it), mutation at the synthesizer
 tract), mutation at the distorter. Alvin Lucier ran this loop with a room in
 1969 and got pure tones out of speech; we run it with a language model in the
 middle and get robopoetry that *argues back*.
+
+### Adversarial Pink Trombone — make the recognizer hear ANYTHING
+
+The recognizer station has its own game: **who can play
+[Pink Trombone](https://dood.al/pinktrombone/) well enough to make a speech
+recognizer recognize *anything at all* — or anything they want?** A vocal
+tract with no lungs, no larynx ancestry, no mother tongue, driven by mouse
+and MIDI, versus a recognizer trained on a hundred thousand hours of humans.
+Three attack surfaces:
+
+- **Seed the loop.** Start the whole robopoetry telephone game from Pink
+  Trombone instead of a human utterance — generation zero is pure synthetic
+  articulation, and whatever the recognizer hallucinates from it becomes the
+  founding text. The poem's ancestor is a gesture, not a word.
+- **Prepend and append.** Play articulations before and after a human
+  utterance to smuggle extra syllables into the transcript — prefix and
+  suffix injection at the phonetic layer. Prompt injection by larynx: the
+  recognizer can't tell where the person stops and the trombone starts.
+- **Stomp and blend.** Play *over* the synthesizer's output — duet or
+  sabotage — so the recognizer hears a chimera of machine speech and vocal
+  tract, and transcribes a sentence neither performer said. The Distorter
+  station gets a mouth.
+
+The move has a video-feedback ancestor: **holding things up in front of the
+camera** — hands, faces, flowers, confetti, puppets, stuffed animals — and
+letting the loop metabolize them into the attractor. Playing a loud Pink
+Trombone over the speech *is* holding a flower in front of Crutchfield's
+camera: inject a signal the loop didn't generate and make the system believe
+it was always there
+([the 1984 paper annex](../jim-crutchfield/papers/README.md)).
+
+It's the adversarial-example genre performed live: the audience watches the
+transcript to see what the recognizer *believed*. Scoring is built in — the
+transcript is the judge, no arguing with it. And it's a Postel torture test:
+the recognizer is the most liberal parser in the loop, and this measures
+exactly how liberal. Natural contestants: Zack Qattan (voice→tract ML,
+collaborative Pink Trombone), David Levitt (who has bent instruments toward
+speech since *Machine Models of Music*), and the audience, whose phones all
+have recognizers of their own listening to the same room. See the
+[Voystick × Pink Trombone show](../../repo-shows/voystick-pink-trombone/SHOW.yml).
 
 ## Implementation depths
 

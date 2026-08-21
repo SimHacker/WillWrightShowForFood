@@ -103,7 +103,7 @@ right_away:
     - { id: margaret-minsky, show: repo-shows/margaret-minsky/, invite: draft, next: "haptics + sibling session w/ Henry (optional couple: no — siblings)" }
 
   complexity_ca_cluster:  # SFI nexus — the chaotic-CA/feedback/complexity universal hub
-    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: [email redacted], next: "WARM, not cold — 17 yrs mail (2008 CAVE/Will ask; 2019 Amsterdam boat w/ Ben Cerveny; 2025 browser-dynamics reply). Jan 2025 Psychedelic Graphics HN — video feedback + CAM6 + WebGPU sim jam; director's-cut narration restore; CAM-8 software archaeology; dripping handrail browser sim. See characters/jim-crutchfield/don-and-jim-history.md" }
+    - { id: jim-crutchfield, show: repo-shows/jim-crutchfield/, invite: draft, contact: private, next: "WARM, not cold — longtime correspondence (details in Don's private archive). Video feedback + CAM6 + WebGPU sim jam; director's-cut narration; dripping handrail browser sim." }
     - { id: dave-tristram, show: repo-shows/dave-tristram/, invite: draft, next: "Raster Masters @ Dead/Shoreline — pair Crutchfield; Live Canvas beta PRIVATE until Dave clears" }
     - { id: stephen-wolfram, show: repo-shows/stephen-wolfram/, invite: draft, next: "MOOLLM readings + NKS" }
     - { id: reese-jones, show: characters/reese-jones/, invite: draft, warm_contact: true, next: "SFI board trustee — agent-based modeling/ALife in the CA rules-and-art jam; earth-soul (SimEarth/Gaia/worms); filmed Sam's 2016 Overcomplicated launch" }

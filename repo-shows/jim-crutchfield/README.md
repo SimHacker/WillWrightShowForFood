@@ -12,17 +12,19 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
 
 ## What we'd get into
 
-- **The director's cut, live — *we're the robots*** 🤖 — Jim axed the 1984 film's soundtrack over
-  music rights; the U-Matic master kept narration and music on separate tracks. Record the
-  explanatory voice-over **live on the show** over the clean transfer, MST3K-silhouette style.
-  Backstory + the Kathy Abelson tape provenance:
-  [`don-and-jim-history.md`](../../characters/jim-crutchfield/don-and-jim-history.md).
+**The operating rule is Will Wright's, from the Spore talk: dust off your old ideas every few
+years, because the world changes underneath them and the reasons they were shelved expire.**
+Everything below is a dusted-off old idea whose blockers have expired — browsers grew real GPUs,
+the CA book got its blessing, and the show is the excuse. *Things have changed.*
+
+- **The director's cut, live — *we're the robots*** 🤖 — record explanatory voice-over
+  **live on the show** over the clean transfer of the 1984 film, MST3K-silhouette style.
 - **The CA playground plan** 🌸 — Norman Margolus has given Don permission to turn chapters of
   *Cellular Automata Machines* into interactive instructional and artistic web apps. First cut:
   rewrite Don's monolithic CAM6 as **modular TypeScript**; brainstorm designs on air, check them
   in; Jim's structural-complexity layer (excess entropy, ε-machines, 1D CAs with 1+1D space-time
   diagrams) on Norman's rules; Jim's students get [homefun](../../process/homefun-grading.md), and a
-  thousand flowers bloom from the seeds. Picks up Jim's December 2013 co-development offer.
+  thousand flowers bloom from the seeds.
 - **Video feedback, live** — close the camera→screen→camera loop and steer spatiotemporal chaos.
 - **The Abraham handoff** — Ralph Abraham published the camera-at-monitor loop as mathematics at
   UCSC ("Simulation of cascades by video feedback," 1976); Jim turned the demo into the formal
@@ -41,8 +43,7 @@ mechanics** (ε-machines). He was one of the UC Santa Cruz **Dynamical Systems C
 
 ## In this directory
 
-- [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](../../characters/jim-crutchfield/invitation.md) — the draft invitation.
+- [`SHOW.yml`](SHOW.yml) — the show seed. (Invitation materials live in Don's private archive.)
 
 Guest: [`characters/jim-crutchfield/`](../../characters/jim-crutchfield/README.md). Consent **not yet asked**.
 
