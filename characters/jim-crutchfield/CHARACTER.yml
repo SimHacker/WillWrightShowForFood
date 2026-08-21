@@ -19,8 +19,9 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: warming   # three-doors email sent 2026-08-21; formal show ask pending
+  status: warming   # correspondence resumed 2026-08-21; warmup page public, formal show ask pending
   consent: not_yet_asked
+  warmup: invitation-warmup.md   # the light public page — no ask, just the trail that led here
   document: ../../characters/jim-crutchfield/invitation.md
   show_seed: repo-shows/jim-crutchfield/
 

@@ -930,11 +930,46 @@ opinion. (Not to be confused with the DOM's "shadow tree," which is
 encapsulation — walls. This is the opposite: transparency by
 fall-through.)
 
+**But which parent? "Ask your parent" is a big ask.** In a soup,
+"parent" has a lot of subjective and objective meanings at once: the
+same node is embedded in many hierarchies simultaneously — physical
+directory parent, placement parent, time parent, style parent — and
+may have **multiple parents within one hierarchy** besides. An
+unqualified fall-through instruction would be a dangling pointer of a
+different flavor. The resolution is that the null is
+**dimension-indexed**: empty doesn't mean "ask *the* parent," it
+means "ask my predecessor **along the tree whose shadow this is**."
+So: a null clock means **inherit from your time-parent**. A null
+placement means ask your **place-parent**; a null style, your
+**style-parent**. The hyphenated compound is the dimension index made
+visible in the name — big-endian naming applied to kinship, so the
+word itself carries the guard. Each sparse shadow supplies its own
+parent function; the time-parent climbs the view tree, the
+place-parent climbs the room tree, and they can disagree about who
+your parent is without conflict, because they are different
+questions. ScriptX and CSS never noticed the problem only because
+their hosts were single-parent trees — the degenerate case where all
+the parent functions coincide and "parent," unqualified, is
+harmless.
+
+And when a single dimension genuinely offers multiple parents
+(ordered delegation, Self-style), fall-through lands in machinery
+this document already built: **ordered parents** resolve it the way
+Self's parent priorities do, and a genuinely unordered tie is just
+**ambiguity**, handled by the standing policies — `error` in the
+strict tier, `sample` or `blend` in the soft tier. A slot with two
+time-parents and no preference *blends their clocks* the way the
+troll blends his heads. Whether that's a feature or a horror is a
+per-dimension guard decision, which is exactly where Korz likes to
+put such decisions.
+
 One more resolution for the nulls section above: *this* null is the
 benign kind. It isn't Hoare's billion-dollar "value that explodes when
 touched" — it's a **delegation instruction**, "no local opinion, ask
-my parent." Absence-as-delegation is the one null that was never a
-mistake; Self bet the whole language on it.
+my parent along this dimension." Absence-as-delegation is the one
+null that was never a mistake; Self bet the whole language on it —
+though Korz has to say *which* parent, because it dissolved the
+privilege of having only one.
 
 ### No IDE required — bootstrapping on bare files and git
 

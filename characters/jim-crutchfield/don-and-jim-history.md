@@ -96,17 +96,17 @@ is the living path.** Prime Rebounce-adjacent show beat: the software archaeolog
 Don: *"Why is it that they always pepper spray the hippies instead of the Proud Boys?"*
 Jim: *"Fair point."*
 
-### 2026 — the three doors email 🚪
+### 2026 — correspondence resumed 🚪
 
-**21 Aug 2026.** Don wrote Jim after finding that the three research-area links on
-[research.htm](https://csc.ucdavis.edu/~chaos/chaos/research.htm) (a 2004-vintage page) all 404 —
-"just as I got to the most exciting part, I was unable to choose what was behind Door #1, #2,
-or #3!" Diagnosis and the working Davis URLs in
-[sources/2026-08-21-three-doors-email.md](sources/2026-08-21-three-doors-email.md). The email
-also asks after evolving CA in Petri dishes uplifting into sentience (the Cyberiad's Seventh
-Sally), and delivers the news hook: **the Internet Archive opened its European HQ in a
-17th-century canal house on the Oudeschans** — and **Ben Cerveny's boat now stops at its dock**
-(Don was just aboard). Standing invitation renewed: come back to Amsterdam.
+**Aug 2026.** Don wrote Jim again (email offline, like the rest of the correspondence) after
+finding that the three research-area links on
+[research.htm](https://csc.ucdavis.edu/~chaos/chaos/research.htm) (a 2004-vintage page) all
+404 — they point at the old `santafe.edu` addresses, while the pages live on at
+[csc.ucdavis.edu/~cmg](http://csc.ucdavis.edu/~cmg), [~dynlearn](http://csc.ucdavis.edu/~dynlearn),
+and [~evca](http://csc.ucdavis.edu/~evca). Also in the news: **the Internet Archive opened its
+European HQ in a 17th-century canal house on the Oudeschans** — and **Ben Cerveny's boat now
+stops at its dock** (Don was just aboard). Standing invitation renewed: come back to Amsterdam.
+The public warm-up page Don sent along: [invitation-warmup.md](invitation-warmup.md).
 
 ### 2025 — the browser-dynamics answer
 
