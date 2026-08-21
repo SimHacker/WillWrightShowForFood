@@ -655,6 +655,23 @@ CWEB (Knuth's weave) → jazz YAML (zorkized) → the Zork compiler →
 deterministic Korz slots — played strict when the guards are
 decidable, improvised soft when the player walks off the map.
 
+**Instance first: Korzork.** Don't design the adventure dimension set
+from theory — reverse-engineer it from the two best corpora in
+existence. Knuth's `advent.w` is Adventure with the crystallization
+commentary *already written*: every data structure explained in prose
+beside its code, literate programming as pre-paid jazz. And the
+original MIT Zork MDL source (the late-'70s "muddle" code, preserved
+from the Dynamic Modeling Group tape at
+[MITDDC/zork](https://github.com/MITDDC/zork), with Infocom's ZIL
+descendants at [historicalsource](https://github.com/historicalsource))
+is where the five-dimension dispatch actually lives in the wild. Mine
+both for interesting, modular, *reusable* parts — the dwarf daemon,
+the lamp fuse, the pirate, the thief, the parser's WINNER rebinding,
+the troll himself — and translate each into Korz slots one artifact
+at a time: **Korzork**. The name is the method — Korz semantics
+wearing Zork's flesh — and each translated part is a test case with
+forty-five years of players as its oracle.
+
 ## Cellular automata — Korz at absolute zero
 
 How does Korz map to CAs? **Neighbors are dimensions.** A cell's

@@ -204,6 +204,24 @@ Runners-up, honestly assessed:
 Repo: start as `korz-poc/` inside a sandbox, graduate to its own GitHub
 repo at M2 when the ping-pong is demonstrable.
 
+## 7. Instance first: Korzork
+
+Feed M5/M5.5 from real corpora instead of invented examples —
+reverse-engineer interesting, modular, reusable parts into Korz slots.
+
+| Corpus | What it gives | Where |
+|---|---|---|
+| Knuth's `advent.w` (CWEB Adventure, *Selected Papers on Fun and Games*) | Literate commentary = crystallization notes already written; clean data structures (travel table, object properties, dwarf/pirate daemons, lamp fuse) | Knuth's Stanford CWEB samples |
+| MIT Zork MDL source (late '70s "muddle", Dynamic Modeling Group tape) | The five-dimension dispatch in the wild: PRSA/PRSO/PRSI, WINNER rebinding, HERE cascade, daemons and fuses via the clock | [MITDDC/zork](https://github.com/MITDDC/zork) |
+| Infocom ZIL sources (secondary) | The commercialized, refactored descendant for comparison | [historicalsource](https://github.com/historicalsource) |
+
+Extraction discipline: one artifact at a time (the troll first — he's
+already this document's mascot), each becoming (a) a set of Korz slots,
+(b) a round-trip test file, and (c) a diff against the original's
+behavior, with forty-five years of players as the oracle. Modularity is
+the acceptance test: a part counts as extracted only if it runs in a
+soup that doesn't contain the rest of its game.
+
 ---
 
 ## Appendix A. Design wisdom and conventions (cross-cutting)
@@ -245,6 +263,10 @@ repo at M2 when the ping-pong is demonstrable.
   runs a soup.
 - **Event numbering.** Default: zero-padded sequence per directory; git
   history disambiguates collisions.
+- **Which Korzork corpus first?** Default: Knuth's `advent.w` first (the
+  literate comments are ready-made jazz; translation is transcription),
+  Zork MDL second (the dispatch structure is the prize but muddle
+  requires more archaeology).
 
 ### B.3 New questions raised by later deep-dives
 
