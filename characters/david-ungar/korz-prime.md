@@ -762,6 +762,30 @@ The classic rule families are guard algebra wearing lab coats:
   [CAM6.js](../don-hopkins/cam6-cellular-automata-machine.md)
   simulates and the [Norman Margolus
   show](../../repo-shows/norman-margolus/) plays live.
+
+  Minsky demolished the same receiver in a different substrate.
+  ["Why People Think Computers
+  Can't"](https://doi.org/10.1609/aimag.v3i4.376) (*AI Magazine*,
+  1982; [full
+  text](http://www.sci.brooklyn.cuny.edu/~sklar/teaching/f05/alife/papers/minsky-computerscantthink.pdf))
+  takes apart what he calls the **"Single
+  Agent" theory** — "that deep inside each mind resides a special,
+  central 'self' that does the real mental work for us, a little
+  person deep down there to hear and see and understand what's
+  going on," an idea that "underlies all principles of law, work,
+  and morality" no matter "how ridiculous it may seem,
+  scientifically." Most of what our "consciousness" reveals, he
+  says in the same breath, is just "made up" — so our minds are
+  **made up** in both senses: confabulated, and then decided,
+  closed around the confabulation. Single dispatch is the Single
+  Agent theory frozen into syntax — `cell.update(...)` posits a
+  little person deep down inside the object who does the real
+  work — and receiverless dispatch is *The Society of Mind* stated
+  as a calling convention: no agent in the society is "the self,"
+  and the behavior lives in the joint state. Fitting that the same
+  man coined the K-lines this document runs on. He dissolved the
+  privileged receiver of folk psychology decades before Korz
+  dissolved the one in message sends.
 - **The Moveable Feast Machine is the soft tier's physics.**
   Ackley's MFM abandons the synchronous total table: events fire
   asynchronously and stochastically, and an element's behavior
