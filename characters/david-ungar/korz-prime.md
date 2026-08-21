@@ -68,8 +68,23 @@ the same respect class.ps paid the PostScript interpreter. Itemized:
 | YAML comments | Load-bearing semantics (Korz Jazz) |
 | `git log` / `diff` / `bisect` | Time dimension, change protocol, time-travel debugger |
 | `sources/` directories | Paged-in K-lines |
-| PR review | Memory integrity check for the K-line cache |
+| Pull-request review (git PR — proposed changes reviewed before merging) | Memory integrity check for the K-line cache; human-and-agent-in-the-middle |
 | The LLM | doesNotUnderstand promoted to peer dispatcher |
+
+One row deserves spelling out, for readers who have never merged a
+branch. A PR — pull request — is git's code-review ritual: someone
+proposes a set of changes on a branch, others read the diff, comment
+line by line, request revisions, and finally merge or reject.
+**THIS is human-and-agent-in-the-middle.** GitHub is a massively
+multiplayer online game whose world state is structured knowledge:
+humans and agents collaborate in building, reviewing, and processing
+it along branching, merging timelines — issue tracking, code review,
+discussions, releases, blame, and more affordances than anyone can
+enumerate. Every mutation is proposed, inspected by any mix of human
+and machine reviewers, and only then merged into shared reality. For
+Korz′ that ritual is the write barrier: nothing enters the soup
+unreviewed, and the reviewer can be a person, a model, or both
+taking turns.
 
 Nothing in the left column was built for Korz′; everything in the
 right column is a way of *reading* it. And the head-tilt is
