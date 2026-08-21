@@ -73,7 +73,7 @@ group_activities:
 data_portability:
   will_wright_1996: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   steve_character: ../../characters/steve-alvey/
-  show: ../../repo-shows/heather-and-steve-alvey/
+  show: ../../repo-shows/heather-and-steve/
 
 assets:
   - ../../characters/will-wright/media/sims-simslice-README.md

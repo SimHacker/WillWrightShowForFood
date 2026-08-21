@@ -24,7 +24,7 @@ Married or long-running creative partners who ship shared work together — inte
 
 | Pair | Show |
 |------|------|
-| Heather + Steve Alvey | [heather-and-steve-alvey](../repo-shows/heather-and-steve-alvey/) |
+| Heather + Steve Alvey | [heather-and-steve](../repo-shows/heather-and-steve/) |
 | Amy Jo Kim + Scott Kim | [amy-jo-and-scott-kim](../repo-shows/amy-jo-and-scott-kim/) |
 
 Pair show is default for shared career chapters. Two one-on-ones at each person's best time, woven in post, is fine.

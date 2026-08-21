@@ -43,6 +43,23 @@ form if he ever wants to add it.
 Q&A at his own pace, audio, video, or simply enjoying the repo. Patrick's contributions are
 celebrated here with credit regardless; the invitation is a standing offer, not a demand.
 
+## After EA — meeting through games, literally
+
+Patrick's own company bio ([MeetPlayLive About](http://meetplaylive.com/about.php),
+captured in [`sources/meetplaylive-about-2026.md`](sources/meetplaylive-about-2026.md))
+fills in the arc: at EA he led engineering and design for Sims expansion
+packs and The Sims Online, and was **lead designer on The Sims 2**. After
+EA he teamed with **Heather Castillo** (SimFreaks — see
+[her page](../heather-castillo/README.md)) under his Star Gaming Network and
+Strange Games Studios banners, then co-founded **MeetPlayLive LLC** (2012)
+as President/CEO — whose flagship, **LiveGLBT.com**, is a dating site where
+people meet **through games**, with **Steve Alvey** as a partner too.
+
+The resonance writes itself: the programmer whose Sims code let romantic
+preference emerge from *what you do* built a GLBT dating platform whose
+whole thesis is meeting through play. The E3 1999 autonomous kiss, grown up
+into a business model — a natural beat for the show.
+
 ## LGBTQ+ solidarity — this IS The Sims audience
 
 Builders, modders, storytellers, creator-network solidarity — trans, queer, nb, ace, bi, lesbian,

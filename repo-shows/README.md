@@ -50,7 +50,7 @@ Cross-cutting material lives in sibling registries: performable bits in
 | [`will-wright-premiere-ideas/`](will-wright-premiere-ideas/README.md) | Its content pack (episode seeds, content map) |
 | [`micropolis-ai-drag-race/`](micropolis-ai-drag-race/README.md) | Drag race variety game show |
 | [`ca-machinima-cabaret-drag-race/`](ca-machinima-cabaret-drag-race/README.md) | CA Machinima CAbaret Drag Race — sister runway |
-| lars-brinkhoff/ · heather-and-steve-alvey/ · jason-shankel/ | Planted guest shows |
+| lars-brinkhoff/ · heather-and-steve/ · jason-shankel/ | Planted guest shows |
 | `flipbook-*/` | Flipbook packs ([format room: `flipbook/`](flipbook/README.md)) |
 
 ## Lifecycle

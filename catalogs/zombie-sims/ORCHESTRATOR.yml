@@ -42,7 +42,7 @@ orchestrator:
     shared_creators: Steve Alvey — nested sim + siege same craft lineage
 
 show_hook:
-  path: ../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml
+  path: ../../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml
   beat: Afterlife hell-is-full → drain souls by religion → Zombie Sims waves at TAB scale
 
 repo_show_mirror:

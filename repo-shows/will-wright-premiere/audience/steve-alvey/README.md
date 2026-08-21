@@ -9,7 +9,7 @@
 | **Character** | [Steve Alvey](../../../../characters/steve-alvey/README.md) |
 | **Catalog** | [SimSlice](../../../../catalogs/simslice/README.md) |
 | **Partner** | [heather-castillo](../heather-castillo/README.md) |
-| **Show** | [Heather & Steve Alvey](../../../../repo-shows/heather-and-steve-alvey/README.md) |
+| **Show** | [Heather & Steve Alvey](../../../../repo-shows/heather-and-steve/README.md) |
 
 ↑ [audience](../README.md) · [show](../../README.md)
 

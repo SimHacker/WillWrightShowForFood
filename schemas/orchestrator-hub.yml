@@ -37,7 +37,7 @@ types:
     max_participants: integer
 
   show_seed:
-    what: Repo Show segment hub — rebounce/, heather-and-steve-alvey/
+    what: Repo Show segment hub — rebounce/, heather-and-steve/
     roster_from: party-deck.yml or INDEX ensemble
     avatar: characters/don-philahue/ORCHESTRATOR.yml
 

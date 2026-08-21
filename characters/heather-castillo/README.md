@@ -15,6 +15,21 @@ sophisticated **SimAntics** programming, and community leadership. With her husb
 magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. The two also worked with **Will
 Wright at Gallium Studios** (the studio behind the AI life-sim **Proxi**).
 
+## Credits the community should know
+
+Per her own company bio ([MeetPlayLive About](http://meetplaylive.com/about.php),
+captured in [`../patrick-j-barrett-iii/sources/meetplaylive-about-2026.md`](../patrick-j-barrett-iii/sources/meetplaylive-about-2026.md)):
+SimFreaks grew to a **worldwide team of twenty-eight artists**, EA
+contracted SimFreaks for expansion packs — and **SimFreaks content was used
+by EA to create the prototype for The Sims: Hot Date**. She also sat in a
+**PayPal focus group** helping design subscription and per-item content
+delivery — early creator-economy infrastructure, the very machinery she and
+Steve still pay the mortgage with. Fourth-generation artist; five years US
+Air Force electronics before any of it. After SimFreaks she teamed with
+**Patrick J. Barrett III** (Star Gaming Network / Strange Games Studios;
+mobile, Xbox 360, PS4) and is now **Art Director at MeetPlayLive** —
+[his page](../patrick-j-barrett-iii/README.md) has the arc.
+
 ## Why she's here
 
 Heather is a master of the craft this whole repo loves — content that carries its own behavior and
@@ -26,7 +41,7 @@ users of Don's **Micropolis content-management & publishing system**.
 
 ## The show
 
-[`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md) — a whole-career show with
+[`repo-shows/heather-and-steve/`](../../repo-shows/heather-and-steve/README.md) — a whole-career show with
 **Steve**: SimFreaks, SimSlice/SliceCity, Zombie Sims, 26 years of artisanal content, and how to keep
 it thriving. Flagship episode: the playful **Afterlife × ZombieSims** bridge.
 

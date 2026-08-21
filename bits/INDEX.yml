@@ -51,7 +51,7 @@ traditions:   # cross-show formats and homages
     canonical: ../process/old-band-back-together.yml
   - id: audience-orchestrated-gameplay
     file: tradition-audience-orchestrated-gameplay/tradition-audience-orchestrated-gameplay.yml
-    shows: [will-wright, heather-and-steve-alvey]
+    shows: [will-wright, heather-and-steve]
     status: ready
   - id: make-play-tools-show
     file: tradition-make-play-tools-show/tradition-make-play-tools-show.yml
@@ -90,7 +90,7 @@ gags:   # specific comedy bits with enough detail to record or rehearse
     status: seed
   - id: speed-dating-with-cupid
     file: gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
-    shows: [will-wright, heather-and-steve-alvey]
+    shows: [will-wright, heather-and-steve]
     status: recorded_prior_art
     episode: "Speed Dating with Cupid"
   - id: did-you-do-dots-together
@@ -181,7 +181,7 @@ themes:   # substantive threads to revisit across episodes; every theme has a ha
   - id: procedural-rhetoric
     file: theme-procedural-rhetoric/theme-procedural-rhetoric.yml
     human: theme-procedural-rhetoric/theme-procedural-rhetoric.md
-    shows: [will-wright, heather-and-steve-alvey]
+    shows: [will-wright, heather-and-steve]
     status: ready
   - id: microworld-morality
     file: theme-microworld-morality/theme-microworld-morality.yml

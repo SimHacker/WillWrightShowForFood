@@ -134,7 +134,7 @@ that came back → where cached.
 
 *Interlude, 22:30–23:30:* the Brain Flurries / Hierarchy of Bleeds
 jam with Heather and Steve — same method, different document
-([the Alvey show's sources](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md),
+([the Alvey show's sources](../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md),
 `a24fcade`). The session multitasked; the method didn't change.
 
 ## Phase 2 — the addressing cascade (Aug 20, 23:41 – Aug 21, 00:04)

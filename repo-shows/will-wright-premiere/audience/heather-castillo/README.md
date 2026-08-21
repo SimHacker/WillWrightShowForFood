@@ -15,7 +15,7 @@ This is an **invited seat**, not a plant. Heather writes her own questions when 
 | **Up** | [audience](../README.md) |
 | **Character portrait** | [Heather Castillo](../../../../characters/heather-castillo/README.md) |
 | **Catalogs** | [SimFreaks](../../../../catalogs/simfreaks/README.md) · [Zombie Sims](../../../../catalogs/zombie-sims/README.md) |
-| **Show seed** | [Heather & Steve Alvey](../../../../repo-shows/heather-and-steve-alvey/README.md) |
+| **Show seed** | [Heather & Steve Alvey](../../../../repo-shows/heather-and-steve/README.md) |
 | **Adjacent seats** | [steve-alvey](../steve-alvey/) · [fictional-zombie-sim](../fictional-zombie-sim/) |
 
 **Plugs on air:** SimFreaks custom content · ZombieSims — see [`CHARACTER.yml`](CHARACTER.yml) `plugs:` block.

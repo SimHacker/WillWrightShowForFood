@@ -292,7 +292,7 @@ trails:
       - { path: ../schemas/advertisement-dispatch.yml, why: "forward / inject / hub / magazine / spawn" }
       - { path: ../catalogs/zombie-sims/, why: "Current magnum-opus pack — Afterlife bridge" }
       - { path: ../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md, why: "Mission + proof" }
-      - { path: ../repo-shows/heather-and-steve-alvey/, why: "First platform users" }
+      - { path: ../repo-shows/heather-and-steve/, why: "First platform users" }
 
   the-card-game:
     k_line: "Build a segment deck — stack guest abilities"
@@ -320,7 +320,7 @@ trails:
       - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "SLATS LIVES — RoboResurrection on Easter, robopoetry ceremony" }
       - { path: ../characters/robots/slats/CARD.yml, why: "Robot waiter abilities — SEEK-GENETIC-MATERIAL, ROBO-RESURRECT" }
       - { path: ../characters/don-hopkins/career/stupid-fun-club.yml, why: "Robots among humans — One Minute Movies" }
-      - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
+      - { path: ../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml, why: "Drain Hell — artisanal ZombieSims, soul ledger" }
       - { path: ../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml, why: "Self × MOOLLM — Stage Magic, Idea Scavenging" }
       - { path: ../characters/will-wright/CARD.yml, why: "Procedural creatures, gallium voxel worlds" }
       - { path: ../characters/yoot-saito/, why: "Seaman energy — a creature that insults you on purpose" }

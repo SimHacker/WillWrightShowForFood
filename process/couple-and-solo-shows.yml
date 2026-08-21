@@ -82,7 +82,7 @@ natural_couples:
     two solo episodes.
   examples:
     - pair: [heather-castillo, steve-alvey]
-      show: repo-shows/heather-and-steve-alvey/
+      show: repo-shows/heather-and-steve/
     - pair: [amy-jo-kim, scott-kim]
       show: repo-shows/amy-jo-and-scott-kim/
     - pair: null  # cheech-and-chong — pattern placeholder when/if invited
@@ -112,7 +112,7 @@ pair_show_shape:
   character: [characters/person-one/, characters/person-two/]
   id: "<first>-and-<first>-<surname>"  # surname once — how people say it
   examples:
-    - heather-and-steve-alvey   # not heather-castillo-and-steve-alvey
+    - heather-and-steve   # not heather-castillo-and-steve-alvey
     - amy-jo-and-scott-kim      # not amy-jo-kim-and-scott-kim
 
 memorial_shows:

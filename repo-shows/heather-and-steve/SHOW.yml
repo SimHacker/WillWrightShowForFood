@@ -3,7 +3,7 @@
 # (flagship) episode — see afterlife-zombie-bridge.yml. Inherits from the SHOW skill (/skills/repo-show).
 
 show:
-  id: heather-and-steve-alvey
+  id: heather-and-steve
   title: "A Repo Show with Heather & Steve Alvey — 26 Years of Sims Magic"
   type: group
   host: Don Hopkins

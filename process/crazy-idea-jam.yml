@@ -401,7 +401,7 @@ ideas:
       A two-way, round-trippable SOUL LEDGER between LucasArts' Afterlife and The Sims. Souls
       are a portable resource that crosses the membrane (player-in-the-middle again) — heaven and
       hell as upstream supply for downstream worlds. The bridge IS the gameplay.
-    ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
+    ties: [../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml]
 
   hell-is-full-zombie-sims:
     emoji: "🧟"
@@ -412,7 +412,7 @@ ideas:
       zombie suppliers: artisanal, farm-grown, soil-to-spike? SimFreaks & SimSlice spouses = 
       original and renounded Sims 1 content creators from the very beginning, 
       artisan label on the jar, SFC alumni; the hell save = the industrial supply chain.
-    ties: [../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml]
+    ties: [../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml]
 
   github-as-mmorpg-multiverse:
     emoji: "🌌"
@@ -648,7 +648,7 @@ see_also:
   - { path: ../repo-shows/voystick-pink-trombone/SHOW.yml, why: "Voystick × Pink Trombone × Zack Qattan — live homomorphic jam" }
   - { path: ../characters/don-hopkins/sources/voystick-correspondence-lineage.md, why: "35-year email harvest" }
   - { path: ../repo-shows/will-wright-premiere/slats-reincarnation.yml, why: "RoboResurrection quest in full" }
-  - { path: ../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
+  - { path: ../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml, why: "Drain Hell soul/zombie bridge" }
   - { path: ../repo-shows/david-ungar-self-moollm/david-ungar-self-moollm.yml, why: "Self × MOOLLM seed" }
   - { path: vision-and-ambition.md, why: "Serious long arc — readable navigation layer" }
   - { path: vision-and-ambition.yml, why: "Yaml girder for the long arc" }

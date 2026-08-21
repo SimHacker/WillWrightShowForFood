@@ -25,7 +25,7 @@ invitation:
   replied: 2026-08-20
   reply_note: "Reading through it; asked for the nutshell (Don gave it); confirmed the Castillo naming; in touch with Patrick and has stories he told her that she'd love to share."
   document: invitation.md
-  show_seed: repo-shows/heather-and-steve-alvey/
+  show_seed: repo-shows/heather-and-steve/
 
 bio:
   summary: "**Heather Castillo** — founder of **SimFreaks**, one of the longest-running, most respected Sims custom-content houses (a **~26-year** brand): original object suites, sophisticated SimAntics programming, and community leadership. With her husband **Steve Alvey** (**SimSlice** / **SliceCity** — SimCity running *inside* The Sims) she still ships **tour-de-force magnum-opus expansion packs** like **Zombie Sims** for The Sims 1. Don's longtime friend and collaborator."
@@ -49,8 +49,8 @@ sources:
   blogs: []
 
 see_also:
-  - { path: ../../repo-shows/heather-and-steve-alvey/, why: "Afterlife × ZombieSims show + fan-band-marriage arc + Soul City" }
-  - { path: ../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md, why: "Fan sites → marriage → Gallium → Soul City story card" }
+  - { path: ../../repo-shows/heather-and-steve/, why: "Afterlife × ZombieSims show + fan-band-marriage arc + Soul City" }
+  - { path: ../../repo-shows/heather-and-steve/sources/fan-band-marriage-arc.md, why: "Fan sites → marriage → Gallium → Soul City story card" }
   - { path: ../../catalogs/soul-city/README.md, why: "Current publishing collaboration" }
   - { path: ../../characters/will-wright/media/sims-simfreaks-openlaszlo-catalog-README.md, why: "OpenLaszlo catalog CMS + SimFreaks gameplay gallery" }
   - { path: ../don-hopkins/, why: "Host — longtime friend/collaborator (SimProv Wedding Playset)" }

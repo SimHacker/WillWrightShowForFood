@@ -122,7 +122,7 @@ Alvey's SimSlice / SliceCity** — a **Lilliputian SimCity that fits in your Sim
 critters in a pageant of interrelated objects ([`catalogs/simslice/ORCHESTRATOR.yml`](../../catalogs/simslice/ORCHESTRATOR.yml)). That's the **shipped precedent** for **Soul City** data portability
 (link actual save files, run emulators, round-trip state across many games).
 
-- 📁 [`characters/heather-castillo/`](../../characters/heather-castillo/README.md) · 📁 [`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md)
+- 📁 [`characters/heather-castillo/`](../../characters/heather-castillo/README.md) · 📁 [`repo-shows/heather-and-steve/`](../../repo-shows/heather-and-steve/README.md)
 - 📁 [`designs/orchestrator-playsets/README.md`](../../designs/orchestrator-playsets/README.md) · [`schemas/advertisement-dispatch.yml`](../../schemas/advertisement-dispatch.yml)
 - 📁 [`process/character-endosymbiosis.yml`](../character-endosymbiosis.yml) · [`repo-shows/INDEX.yml`](../../repo-shows/INDEX.yml) (`bridges-architecture`)
 

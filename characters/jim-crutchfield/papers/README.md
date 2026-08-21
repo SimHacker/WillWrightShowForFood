@@ -169,7 +169,7 @@ the online transfer lacks — the director's cut wants to exist, or better,
 - **Turing 1952 is the shared ancestor** of this paper's PDE model, of
   reaction-diffusion texture work everywhere, and of the morphogenesis riffs
   in the [hierarchy-of-bleeds fluid
-  CA](../../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml).
+  CA](../../../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml).
   Plate 3's dislocations are what the blood/chum flood z-buffer wants to look
   like when it grows up.
 - **The film is watchable today.** Crutchfield's 16-minute companion film

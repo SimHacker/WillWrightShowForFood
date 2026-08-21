@@ -5,7 +5,7 @@ public: true
 consent: asked
 sent: 2026-08-20
 channel: chat
-show_seed: repo-shows/heather-and-steve-alvey/
+show_seed: repo-shows/heather-and-steve/
 pair_with: heather-castillo
 send_batch: alvey-pair-2026
 format: live_or_async
@@ -102,8 +102,8 @@ angles. **Read either or both** before you reply — including how **Heather** d
 
 | If you're curious about… | Link |
 | --- | --- |
-| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve-alvey/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/README.md) |
-| **Afterlife / Zombie bridge** (shared idea room) | [`afterlife-zombie-bridge.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
+| **Show seed** (full outline + roles) | [`repo-shows/heather-and-steve/`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve/README.md) · [`SHOW.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve/README.md) |
+| **Afterlife / Zombie bridge** (shared idea room) | [`afterlife-zombie-bridge.yml`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/heather-and-steve/afterlife-zombie-bridge.yml) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 Browse without a GitHub account — start at the [README](https://github.com/SimHacker/WillWrightShowForFood).

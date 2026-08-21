@@ -15,10 +15,10 @@ Heather Castillo — founder of **SimFreaks**, one of the longest-running Sims c
 
 ### 1. Fan band back (and still) together ★
 
-Origin story card: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)  
+Origin story card: [`../../repo-shows/heather-and-steve/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve/sources/fan-band-marriage-arc.md)  
 Two independent fan sites → marriage → Zombie Sims → Gallium → Soul City. Evidence-bounce edit with Steve's async interviews.
 
-### 2. Show seed: `repo-shows/heather-and-steve-alvey/`
+### 2. Show seed: `repo-shows/heather-and-steve/`
 
 Walk the repo on air — whole-career show + Afterlife × ZombieSims flagship.
 
@@ -50,12 +50,12 @@ of his best, and there's always room for more.
 Mod the McFlurry to advertise **Brain Flurries** zombies can't resist — laxative payload,
 they flee with the shits; ring the encampment with stands (tower defense by advertisement),
 then fertilize the garden with the aftermath. Feeds the Hierarchy of Bleeds fluid CA.
-→ [`../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md`](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
+→ [`../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md`](../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
 
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
-- Story arc: [`../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve-alvey/sources/fan-band-marriage-arc.md)
-- Show seed: [`../../repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/)
+- Story arc: [`../../repo-shows/heather-and-steve/sources/fan-band-marriage-arc.md`](../../repo-shows/heather-and-steve/sources/fan-band-marriage-arc.md)
+- Show seed: [`../../repo-shows/heather-and-steve/`](../../repo-shows/heather-and-steve/)
 - [`CHARACTER.yml`](CHARACTER.yml)
 

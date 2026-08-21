@@ -16,6 +16,19 @@ publishing, and community leadership — and they still ship **tour-de-force mag
 packs** like **Zombie Sims** for The Sims 1. Steve also worked with **Will Wright at Gallium
 Studios** (the indie studio Will founded with Lauren Elliott, behind the AI life-sim **Proxi**).
 
+## The résumé behind the storefront
+
+Per his company bio ([MeetPlayLive About](http://meetplaylive.com/about.php),
+captured in [`../patrick-j-barrett-iii/sources/meetplaylive-about-2026.md`](../patrick-j-barrett-iii/sources/meetplaylive-about-2026.md)):
+before SimSlice, Steve supervised a **national plasma-recall system** at
+American Red Cross headquarters and built shipment-discrepancy and
+plasma-scanning systems at Baxter Biotech — serious infrastructure
+engineering. SimSlice itself "maintained a customer base in every
+industrialized country in the world" and drew **BBC coverage and a Wired
+interview**. He's now a partner at **MeetPlayLive** (with
+[Patrick J. Barrett III](../patrick-j-barrett-iii/README.md) and Heather),
+running HR and liaising with hardware manufacturers.
+
 ## Why he's here
 
 Two reasons. First, **SliceCity is foundational** to this repo's data-portability dream — the
@@ -27,7 +40,7 @@ sincere praise that sends real **fans and subscribers** their way.
 
 ## The show
 
-[`repo-shows/heather-and-steve-alvey/`](../../repo-shows/heather-and-steve-alvey/README.md) — a whole-career show with
+[`repo-shows/heather-and-steve/`](../../repo-shows/heather-and-steve/README.md) — a whole-career show with
 **Heather**: SimSlice/SliceCity, SimFreaks, Zombie Sims, 26 years of artisanal content, and how to
 keep it thriving (the Micropolis publishing system; subscriptions). Flagship episode: the playful
 **Afterlife × ZombieSims** bridge.

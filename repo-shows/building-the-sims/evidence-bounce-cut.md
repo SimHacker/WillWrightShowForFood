@@ -30,9 +30,9 @@ Not a montage of vibes — each cut is a **rebuttal or confirmation** you can po
 | Two independent fan sites | [simfreaks.com](https://www.simfreaks.com/) · [simslice.com/about](https://www.simslice.com/about/index.shtml) | SimBabe intro; 10yr online → meet → 7yr → marriage |
 | SimCity inside The Sims | [Sims Zone / Wired archive](https://www.thesimszone.co.uk/news/archive.php?ID=1371) | Steve on SliceCity |
 | Gallium / Proxi with Will | [thealveys.us](https://thealveys.us/) | Heather + Steve on second act with Will |
-| Soul City now | [`../heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../heather-and-steve-alvey/sources/fan-band-marriage-arc.md) | Live federated catalog demo |
+| Soul City now | [`../heather-and-steve/sources/fan-band-marriage-arc.md`](../heather-and-steve/sources/fan-band-marriage-arc.md) | Live federated catalog demo |
 
-Story card: [`../heather-and-steve-alvey/sources/fan-band-marriage-arc.md`](../heather-and-steve-alvey/sources/fan-band-marriage-arc.md)
+Story card: [`../heather-and-steve/sources/fan-band-marriage-arc.md`](../heather-and-steve/sources/fan-band-marriage-arc.md)
 
 Book source card (Sims reunion arc): [`../../characters/eric-bowman/sources/direct3d-professional-reference.md`](../../characters/eric-bowman/sources/direct3d-professional-reference.md)
 

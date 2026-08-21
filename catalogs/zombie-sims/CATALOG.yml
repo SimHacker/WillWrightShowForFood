@@ -18,7 +18,7 @@ what: |
 tone: "Artisanal craft UCC — hand-sculpted, kitbashed, SimAntics-driven"
 
 show_hook:
-  path: ../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml
+  path: ../../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml
   beat: "Afterlife 'hell is full' → drain souls by religion → Zombie Sims waves at TAB scale"
 
 interview_prompts:

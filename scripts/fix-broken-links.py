@@ -70,7 +70,7 @@ GLOBAL = [
     ("../../repo-shows/pie-menus-retrospective.yml", "../../repo-shows/pie-menus-retrospective/pie-menus-retrospective.yml"),
     ("README.mdREADME.md", "README.md"),
     ("../../will-wright/sims-team-steering-committee-playthrough/", "../../repo-shows/will-wright-premiere/sims-team-steering-committee-playthrough/"),
-    ("../../../heather-and-steve-alvey/", "../../../repo-shows/heather-and-steve-alvey/"),
+    ("../../../heather-and-steve/", "../../../repo-shows/heather-and-steve/"),
     ("../../../repo-shows/REPO-SHOWS.yml", "../../../../repo-shows/REPO-SHOWS.yml"),
     ("../bits/gag-curiosity-cow-cube/", "../../bits/gag-curiosity-cow-cube/"),
     ("../bits/gag-how-to-deconstruct-the-cube/", "../../bits/gag-how-to-deconstruct-the-cube/"),
@@ -124,7 +124,7 @@ def depth_fix(resolved, src, files, dirs):
     if resolved in files or resolved in dirs:
         return None
 
-    # heather-and-steve-alvey/README.md → repo-shows/heather-and-steve-alvey/README.md
+    # heather-and-steve/README.md → repo-shows/heather-and-steve/README.md
     for prefix in ("repo-shows/", "characters/", "bits/", "process/", "catalogs/"):
         cand = prefix + resolved
         if cand in files or cand.rstrip("/") in dirs:

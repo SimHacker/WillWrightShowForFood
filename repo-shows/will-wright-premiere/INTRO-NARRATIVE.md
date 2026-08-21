@@ -56,7 +56,7 @@ Open-source descendant of SimCity — Don's lineage from the NeWS port through O
 
 ### WillWrightShowForFood (the show + corpus)
 
-Public monorepo for **Repo Shows**: GitHub-native, live conversations whose artifact and stage is the repo itself. The Will Wright kickoff is the anchor; sibling shows ([Heather & Steve Alvey](../heather-and-steve-alvey/README.md), Eric Bowman, Jamie Doornbos, …) carry specific threads.
+Public monorepo for **Repo Shows**: GitHub-native, live conversations whose artifact and stage is the repo itself. The Will Wright kickoff is the anchor; sibling shows ([Heather & Steve Alvey](../heather-and-steve/README.md), Eric Bowman, Jamie Doornbos, …) carry specific threads.
 
 **WWSFF is credibility packaging** for funders and fans:
 
@@ -89,7 +89,7 @@ Heather gave permission to share the archive: classic SimFreaks objects, unrelea
 
 That is agitprop too — but of inclusion and family play, not exclusion. **Intentional inclusion procedural rhetoric** — politics in orchestration rules (Cupid, Crowd Sitter, Buddha), not a manifesto dialog. Pair with the [Dumbold](#the-dumbold-voting-machine--dated-agitprop-preserved-honestly) (institutional farce, same engine). Discuss with **Ian Bogost** on a future show: [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) · [show seed](ian-bogost-procedural-rhetoric/SHOW.yml).
 
-See also: [Heather & Steve show seed](../heather-and-steve-alvey/afterlife-zombie-bridge.yml) (`micropolis_publishing_system`, `simprov_wedding_playset`).
+See also: [Heather & Steve show seed](../heather-and-steve/afterlife-zombie-bridge.yml) (`micropolis_publishing_system`, `simprov_wedding_playset`).
 
 ---
 
@@ -134,7 +134,7 @@ The wedding playset is the human magnum opus; Micropolis + federation publishing
 |----------|------------|
 | Funder / producer | This file → [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md) → [Crowd Sitter + Dumbold sources](../../characters/will-wright/sources/README.md) |
 | Will / design peer | [1996 Winograd medium article](../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md) → [SHOW.yml](SHOW.yml) |
-| Heather / Steve / UCC veterans | [Catalogs hub](../../catalogs/README.md) → [SimFreaks](../../catalogs/simfreaks/README.md) → [afterlife-zombie-bridge](../heather-and-steve-alvey/afterlife-zombie-bridge.yml) |
+| Heather / Steve / UCC veterans | [Catalogs hub](../../catalogs/README.md) → [SimFreaks](../../catalogs/simfreaks/README.md) → [afterlife-zombie-bridge](../heather-and-steve/afterlife-zombie-bridge.yml) |
 | Player / Steam Sims 1 fan | [Content catalogs](../../catalogs/README.md) → [../../characters/will-wright/media/](../../characters/will-wright/media/README.md) galleries → download via [Soul City](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) |
 
 ---

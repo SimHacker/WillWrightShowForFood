@@ -7,7 +7,7 @@
 > *Objects argue — the rules are the rhetoric.*
 
 
-**Shows:** will-wright, heather-and-steve-alvey · **Status:** ready
+**Shows:** will-wright, heather-and-steve · **Status:** ready
 
 ---
 
@@ -32,7 +32,7 @@ Ian Bogost's frame applied to Repo Show inventory: simulations don't just repres
 | [**SimProv catalog**](../../catalogs/simprov/README.md) | Magnum opus — wedding playset as inclusion agitprop |
 | [**Inclusion agitprop**](../theme-inclusion-agitprop/theme-inclusion-agitprop.md) | Sister theme — SimProv wedding thread |
 | [**Pixelized joint wedding**](../../repo-shows/README.md) | Gag crossover — Double Pre-Game |
-| [**Heather & Steve Alvey show**](../../repo-shows/heather-and-steve-alvey/) | Afterlife × voting farce lane |
+| [**Heather & Steve Alvey show**](../../repo-shows/heather-and-steve/) | Afterlife × voting farce lane |
 
 ---
 

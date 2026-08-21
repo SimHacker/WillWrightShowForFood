@@ -87,7 +87,7 @@ Each link **advertises** to the next; the player experiences a nested simulation
 
 ## Zombie Sims — Ham radio hub
 
-Heather + Steve's magnum opus ([`catalogs/zombie-sims/README.md`](../../catalogs/zombie-sims/README.md)). **Ham radio** orchestrates outbreak/wave logic (parallel to Hope Chest's romance state machine). Skins, religion maps, and wave configs plugin onto the hub. Show hook: [`afterlife-zombie-bridge.yml`](../../repo-shows/heather-and-steve-alvey/afterlife-zombie-bridge.yml).
+Heather + Steve's magnum opus ([`catalogs/zombie-sims/README.md`](../../catalogs/zombie-sims/README.md)). **Ham radio** orchestrates outbreak/wave logic (parallel to Hope Chest's romance state machine). Skins, religion maps, and wave configs plugin onto the hub. Show hook: [`afterlife-zombie-bridge.yml`](../../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml).
 
 SliceCity and Zombie Sims share Steve/Heather craft; ham radio vs power plant are the same **orchestrator-hub** pattern applied to different genres.
 
