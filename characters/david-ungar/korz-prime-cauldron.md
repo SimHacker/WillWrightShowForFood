@@ -133,13 +133,31 @@ toll:
     lang: js
     params: [traveler]
     body: return traveler.gold >= 5 ? "pass, friend" : "SPLASH";
+---
+menace:
+  guards: {rcvr: troll*}
+  constraint:                             # Laszlo-style: value tracks its dependencies
+    lang: js
+    # Menace rises with strength and collapses without the axe.
+    # Reads ctx.strength and ctx.axe — the engine re-evaluates when
+    # either changes; readers always see a current value.
+    body: return ctx.strength * (ctx.axe ? 2 : 0.5);
 ```
 
 Body kinds: `do:` with a plain string is a data slot (strict tier returns
 it, interpolating bound guards like `{mood}`); `do:` with prose that needs
 judgment is a soft slot (strict tier emits `needsCrystallization` or routes
-the send to the LLM); `method:` is a code slot. The strict tier decides
-which kind it holds by what it can decide, not by being told.
+the send to the LLM); `method:` is a code slot; `constraint:` is a
+**Laszlo-style constraint** — an expression whose value is kept current
+against the slots and dimensions it reads, OpenLaszlo's `$` expressions
+reborn in YAML. The strict tier decides which kind it holds by what it can
+decide, not by being told.
+
+Constraints are a natural LLM output format: the model generates them
+directly as **commented code** — the comment carrying the design intent,
+the expression carrying the law — or crystallizes them from user prompts
+and design sketches ("menace should track strength but crater when he's
+disarmed" becomes the constraint above, intent preserved as jazz).
 
 ### 3.3 Manifest guard tree expressions
 
@@ -418,6 +436,12 @@ beside the facts they annotate.
   literate comments are ready-made jazz; translation is transcription),
   Zork MDL second (the dispatch structure is the prize but muddle
   requires more archaeology).
+- **Constraint evaluation: pull or push?** Default: **pull** — recompute
+  on read, memoized keyed by the content hashes of the dependencies the
+  compiled function actually read (dependency capture at first eval, the
+  signals trick). Push (listener graphs, Laszlo's compiler-registered
+  dependencies, live UI updates) is the browser-demo milestone's problem;
+  the repo substrate has no event loop, only reads.
 - **Pointer fragment syntax.** Default: JSON-Pointer-ish over the
   multi-doc stream — `path#/docIndex/key/...` — with repo-relative paths
   default, `./` for file-relative, `scheme://` for cross-repo (e.g.
