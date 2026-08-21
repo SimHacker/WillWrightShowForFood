@@ -250,6 +250,20 @@ parser.** Confidence: 85%.
   in the loop, no port required.
 - Dynamic enough for soup semantics, typed enough to encode the schemas.
 
+**Execution model (ratified 2026-08-21).** The Korz′ compiler compiles
+slots into JavaScript: a decidable guard tree becomes a predicate
+function, a method body becomes a callable, and the engine executes them
+by eval — `new Function` (or `node:vm` when isolation matters, per B.2) —
+**caching the compiled functions** keyed by content hash, so editing a
+slot invalidates exactly that slot's cache entry, then calling them with
+the context as argument. This makes the JIT metaphor literal twice over:
+crystallization emits JS, and V8's JIT then compiles *that* — the strict
+tier rides the platform's optimizer rather than fighting it, which is
+Vanessa's SqueakJS bet run one level down. The cache is also the deopt
+site: a cache miss on a stale hash is just recompilation, and a guard the
+compiler can't make decidable never enters the cache at all — it stays
+soft and routes to the LLM.
+
 Runners-up, honestly assessed:
 
 - **Python + ruamel.yaml** — ruamel's default round-trip fidelity is
@@ -348,8 +362,9 @@ beside the facts they annotate.
 
 ### B.1 Already resolved (kept here for audit)
 
-- **Language:** TypeScript + eemeli `yaml` (§4). Python twin deferred to
-  the PyTorch crystallization milestone.
+- **Language:** TypeScript + eemeli `yaml` (§4), ratified by Don
+  2026-08-21, with the compile-to-JS / eval / function-cache execution
+  model. Python twin deferred to the PyTorch crystallization milestone.
 - **Schema style:** by example + comments, normative examples in §3, no
   JSON Schema until the examples stabilize.
 
