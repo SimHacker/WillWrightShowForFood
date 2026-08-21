@@ -652,13 +652,6 @@ northeast"; they say *glider*). Pattern names are the semantic
 compression the strict table can't express and the soft tier gets
 free.
 
-And the loop closes on last night's joke: the
-[Hierarchy of Bleeds](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
-is a monotone escalation CA (water < blood < chum, fixed point
-guaranteed), and *moveable feces* — random combination rules
-mutating mid-flood — is MFM dynamics by name and by nature: Ackley's
-moveable feast, with the menu the Alveys would actually serve.
-
 ## Hosting Korz in MOOLLM — soups intertwingled with objects
 
 David prototyped Korz **in Self** — an interpreter, debugger, and

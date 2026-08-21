@@ -114,6 +114,33 @@ ideas:
     status: "Source releasable — Don will add it to this monorepo soon"
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml, ../repo-shows/will-wright-premiere/slats-reincarnation.yml]
 
+  rhetoric-organ-semantic-modulator-keyboard:
+    emoji: "🎹🗣️"
+    blurb: |
+      **The Rhetoric Organ** — a chorded keyboard of rhetorical figures (EPIZEUXIS, DIACOPE,
+      POLYSYNDETON, ALLITERATION…) plus mood/register/persona faders that modulates a streaming
+      LLM in real time — organ **stops for prose**, chords as **registrations** (DIACOPE +
+      EPANALEPSIS = the DRILL BABY DRILL preset). Velocity = intensity: whail on ALLITERATION
+      letter-locked to S and you get Lem's Electronic Bard ("Seduced, shaggy Samson snored…" —
+      Kandel translated the *constraint*, not the words). Completes the Slats robopoetry loop
+      as the missing instrument on the text-generation side: recognizer → **transformer (organ
+      console)** → synthesizer (Phoneloper) → distorter → room → back. Every station a guest,
+      the audience steering by voice and Voystick.
+    keys_are_klines: "Press 'diacope' and the training data supplies the figure — point, don't spell. A chord is a Korz context vector; faders are fronting weights; the keyboard is a context controller you can gig with (korz-prime.md)."
+    ancestors: "Bell Labs Voder (1939 — Voderettes chorded phonemes; we chord semantics), Eno's Oblique Strategies (K-line deck, one card at a time — ours is chorded and continuous), Oulipo, Llull's volvelles, Lucier's 'I Am Sitting in a Room', Burroughs cut-ups, Strachey 1952, Mark V. Shaney, Ken Nordine's Word Jazz, Homeric oral-formulaic bards (stock epithets = K-lines with meter guards)."
+    levitt_invite: "David Levitt first: Minsky-advised PhD on machine improvisation in musical dialects; Hookup patches the telephone-game stations live on stage; referee of 'what does it mean for a machine to improvise WELL?'"
+    born: "2026-08-21, mid-HN-argument, when 'what figure is again-and-again-and-again?' collided with 'what if I had keys for those?'"
+    ties:
+      - ../characters/don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md
+      - ../repo-shows/will-wright-premiere/performance-and-culture.yml
+      - ../characters/david-levitt/ideas.md
+      - ../characters/brian-eno/speculative-jams.md
+      - ../characters/laurie-anderson/ideas.md
+      - ../characters/david-ungar/korz-prime.md
+      - crazy-idea-jam.yml#phoneloper
+      - crazy-idea-jam.yml#voystick-homomorphic-vocal-joystick
+      - crazy-idea-jam.yml#engelbart-keyset-3d-replica
+
   amsterdam-coffeeshops-app:
     emoji: "🍃"
     blurb: |

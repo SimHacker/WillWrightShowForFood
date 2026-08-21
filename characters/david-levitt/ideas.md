@@ -164,6 +164,26 @@ Puckette), **Harmony Grid** and **Hookup + MMP/Director**, VPL and the Body Elec
 the **SIGGRAPH / Coco Conn SIGKids** serendipity ("HE did what I wanted to do!"), and the road stories
 (the **CES massage-chair vow**, the lampshade photo): [`don-and-david-history.md`](don-and-david-history.md).
 
+### 8. The Robopoetry Telephone Game — and the Rhetoric Organ
+
+A live performance loop with a human hand on every station: speech **recognizer** →
+LLM **transformer** → speech **synthesizer** → **distorter** → room → back to the recognizer —
+Alvin Lucier's "I Am Sitting in a Room" with a language model in the middle, evolving robopoetry
+that argues back. Don plays the **Rhetoric Organ**: a chorded keyboard of rhetorical figures
+(EPIZEUXIS, DIACOPE, POLYSYNDETON, ALLITERATION…) that modulates the streaming LLM in real
+time — organ stops for prose, chords as registrations, velocity as intensity.
+
+**David is the first invite, for reasons that stack:** machine improvisation in musical
+dialects is *literally his thesis* — the organ plays rhetorical dialects, one symbol system
+over. **Hookup** patches the telephone-game stations together live on stage — the stage diagram
+IS a patch. Pantomime butterflies as visuals. And *Machine Models of Music* makes him the
+natural referee of the question the show stages: what does it mean for a machine to improvise
+*well*? Slats calls in mid-show and gets gonged, obviously.
+
+→ [`../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md`](../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) ·
+[`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml) (rhetoric-organ entry) ·
+Slats loop: [`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)
+
 ## Sources (public)
 
 - **Sourced evidence hub (HN permalinks + videos, by project):** [`media/README.md`](media/README.md)

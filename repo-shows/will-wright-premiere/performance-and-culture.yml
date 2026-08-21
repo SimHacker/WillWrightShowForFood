@@ -210,6 +210,12 @@ speech-feedback-loop-instrument:
     steering Slats together. Pairs with the vocal-tract instruments (Pink Trombone, Phoneloper —
     see schemas/language-cow.yml#performance-instruments) and the Phoneloper granular moo-chorus.
   arc: "Let it climb to peak absurd beauty, then the Ultimate Machine gongs Slats. Reset laugh. Repeat later."
+  rhetoric_organ: |
+    NEW (2026-08-21): the missing instrument on the TEXT-GENERATION side of this loop — a chorded
+    keyboard of rhetorical figures (organ stops for prose) modulating the LLM transformer station
+    in real time. Full telephone game: recognizer → organ console → Phoneloper → distorter → room.
+    First invite: David Levitt (machine improvisation in musical dialects = his thesis; Hookup
+    patches the stations on stage). See ../../characters/don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md
   see: ../../characters/robots/slats/CHARACTER.yml
 
 # UNNECESSARY CENSORSHIP — a homage gag (credit where due)
