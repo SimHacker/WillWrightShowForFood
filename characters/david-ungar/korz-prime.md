@@ -28,12 +28,34 @@ of *tilting your head in multiple dimensions at once*, so that an
 ordinary directory tree of ordinary files reads as a tag-soup Korz
 system.
 
-The precedent is NeWS's `class.ps`, which got a full class system
-with inheritance not by extending the PostScript VM but by
-*respecting* it: the dictionary stack was already a delegation
-chain, so class.ps made dict-stack search *be* method lookup — the
-object system was a disciplined way of using what the host already
-did on every name lookup. Korz′ owes the filesystem, git, and Unix
+The precedent is NeWS's `class.ps`
+([Densmore, "Object Oriented Programming in NeWS," Monterey Usenix 1986](https://mirrors.meulie.net/bitsavers.org/pdf/sun/NeWS/Densmore_-_Object-Oriented_Programming_in_NeWS_Monterey86.pdf)
+— "Much to our surprise, PostScript could implement classes with no
+modifications! The secret is PostScript dictionaries."), which got a
+full class system with inheritance not by extending the PostScript
+VM but by *respecting* it: the dictionary stack was already a
+delegation chain, so class.ps made dict-stack search *be* method
+lookup — the object system was a disciplined way of using what the
+host already did on every name lookup.
+
+And the same two people then aimed the same trick at the filesystem
+itself. Owen Densmore and David S. H. Rosenthal's
+[US Patent 5,187,786](https://patents.google.com/patent/US5187786A/en)
+(Sun, filed April 1991) is "a method for implementing a class
+hierarchy of objects in a hierarchical file system" — classes as
+directories, methods and instance variables as files, inheritance
+via path files whose contents are logically related by the class
+relationships, `Self` and `Super` as pseudo entries — explicitly
+requiring **no additional file attributes** from the filesystem. The
+directory-tree-as-object-system head-tilt is not a metaphor Korz′
+invented; it is prior art, patented by the class.ps authors, and
+expired in 2011 — public-domain furniture now. What their patent
+froze was a single dimension: the class hierarchy, materialized as
+*the* tree. Korz′ generalizes the same reading to N dimensions —
+the tree stays put and the dimensions are in the tilt of the
+reader's head.
+
+Korz′ owes the filesystem, git, and Unix
 the same respect class.ps paid the PostScript interpreter. Itemized:
 
 | Already exists | Head-tilt reading |
