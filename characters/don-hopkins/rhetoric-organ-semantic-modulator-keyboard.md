@@ -200,6 +200,15 @@ the second manual of the organ.
   against themselves; the distorter station's homework.
 - **Eno & Fripp's Frippertronics / Discreet Music** — long-delay tape
   feedback as a performance instrument; the loop *is* the score.
+- **Jim Crutchfield, "Space-Time Dynamics in Video Feedback" (Physica D,
+  1984)** — the loop taken seriously as *physics*: camera watches its own
+  monitor, and the rig is analyzed as a space-time analog computer with
+  zoom/rotation/focus as control parameters. His list of future variations
+  ends with *"inserting a digital computer into the feedback loop"* — this
+  show's architecture, proposed forty-two years early; the LLM is the frame
+  buffer. Don has been giving Jim feedback about his feedback since 2013.
+  → [papers annex with the plates](../jim-crutchfield/papers/README.md) ·
+  [the film](https://www.youtube.com/watch?v=B4Kn3djJMCE)
 
 **Cut, steer, and permute text:**
 

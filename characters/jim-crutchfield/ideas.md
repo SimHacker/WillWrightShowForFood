@@ -121,6 +121,19 @@ his SFI board seat — [Reese Jones](../reese-jones/README.md) (agent-based mode
 Santa Fe Institute is the shared home for all of it. See the
 [Margolus CA looping fest](../../repo-shows/norman-margolus/README.md).
 
+### 11. The robopoetry telephone game — variation (6), forty-two years later 🎹🗣️
+
+The 1984 paper's list of future variations ends with *"inserting a digital computer into the
+feedback loop via a video frame buffer."* Don is now building exactly that with a language model
+as the frame buffer: speech recognizer → LLM transformer → speech synthesizer → distorter → room,
+round and round — Lucier's room, Jim's camera-monitor pair, and now a text loop, steered live from
+the [Rhetoric Organ](../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md), a chorded
+keyboard of rhetorical figures. Questions for Jim: what attractors live in *that* image space?
+Quasi-attractors of register and rhyme? Can an **ε-machine be fitted to the loop's output** —
+statistical complexity as a robopoetry quality metric? The dramaturgy is his 2002 essay applied:
+ride the loop up to the interesting zone between order and chaos, then gong it.
+→ [`papers/README.md`](papers/README.md) — both papers summarized, with the Physica D plates.
+
 ## Sources (public)
 
 - Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/)

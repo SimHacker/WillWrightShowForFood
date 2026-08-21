@@ -66,8 +66,10 @@ sources:
     - "https://csc.ucdavis.edu/~chaos/   # UC Davis Complexity Sciences Center"
     - "https://artscilab.com/   # Art & Science Laboratory, Santa Fe"
     - "https://scholar.google.com/citations?user=D37XAbIAAAAJ"
+  papers_annex: papers/README.md   # local PDFs + summaries + plate scans + repo cross-links
   papers:
     - "Crutchfield, J.P. (1984). 'Space-time dynamics in video feedback.' Physica D 10:229–245."
+    - "Crutchfield, J.P. (2002). 'What Lies Between Order and Chaos?' in Art and Complexity, J. Casti ed., Oxford."
     - "Crutchfield & Kaneko (1988). 'Are Attractors Relevant to Turbulence?' Phys. Rev. Lett. 60:2715 — the 'dripping handrail' model Don loves."
     - "Abraham, R. (1976). 'Simulation of cascades by video feedback.' Springer LNM 525:10–14 — the UCSC ancestor; see abraham-video-feedback-lineage.md"
   correspondence:
