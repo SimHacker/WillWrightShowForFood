@@ -180,6 +180,13 @@ IS a patch. Pantomime butterflies as visuals. And *Machine Models of Music* make
 natural referee of the question the show stages: what does it mean for a machine to improvise
 *well*? Slats calls in mid-show and gets gonged, obviously.
 
+And it's a **reunion**: Don and David already toured this exact show once — the
+[Electric Carnival](../will-wright/sources/art-net-simcity-archive/electric-carnival.md) at
+Lollapalooza '94, David patching Bounce live at the MIDI Zoo, Don running multiplayer SimCity
+two tables over, and EBN (Emergency Broadcast Network) scratching QuickTime video from a MIDI
+keyboard down the midway — VuJak chorded *time*; the Rhetoric Organ chords *semantics*.
+Same carnival, new instruments.
+
 → [`../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md`](../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) ·
 [`../../process/crazy-idea-jam.yml`](../../process/crazy-idea-jam.yml) (rhetoric-organ entry) ·
 Slats loop: [`../../repo-shows/will-wright-premiere/performance-and-culture.yml`](../../repo-shows/will-wright-premiere/performance-and-culture.yml)

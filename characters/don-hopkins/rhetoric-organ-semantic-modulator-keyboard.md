@@ -148,6 +148,29 @@ the second manual of the organ.
 - **Stenotype chording (and open-source Plover)** — court stenographers
   chord *syllables* at 225 wpm; the machine-shorthand lineage proves chorded
   language entry scales to realtime performance.
+- **EBN — Emergency Broadcast Network — and VuJak (1991–92)**: the MIDI
+  keyboard that played *time*. Brian Kane's "oh yeah" moment, 1991: he tied
+  a QuickTime movie into Max, pressed a MIDI note, and saw the movie play —
+  that became **VuJak** (with Lisa Eisenpresser and Jay Haynes, Max +
+  QuickTime 1.0), the first video sampler: keys jumped in real time across
+  the movie's timeline. EBN's live rig (Mark Marinello's samplers on Mac
+  Quadra 950s) went further — pitch-bend the audio, play clips backward,
+  **video scratching** from a keybed, the George H. W. Bush "We Will Rock
+  You" Gulf War remix as the demo reel. The progression writes itself: the
+  Voder chorded *phonemes*, VuJak chorded *time*, the Rhetoric Organ chords
+  *semantics*. And the lineage reconverges twice: Josh Pearson named
+  **Laurie Anderson** as EBN's influence (Wired, Feb 1993), and EBN's live
+  video technologist Greg Deocampo founded CoSA — the company that made
+  After Effects.
+
+  The personal thread: Don **toured with these people**. Interval Research's
+  [Electric Carnival tent](../will-wright/sources/art-net-simcity-archive/electric-carnival.md)
+  traveled with **Lollapalooza '94** — Don showing two-player **SimCityNet**
+  on an SGI Indigo + NCD X terminal ("SimCity Without Walls"), **David
+  Levitt showing Bounce at the MIDI Zoo** *in the same tent*, and EBN — the
+  Lollapalooza video guerrillas since the '91 tour, per Don's recollection
+  scratching QuickTime on that midway too. The robopoetry telephone game is
+  an Electric Carnival reunion with thirty years of better latency.
 
 **Constraint machines and combinatorial decks:**
 
@@ -233,6 +256,12 @@ collaborator on **Pantomime** (Bug Farm butterflies as visual accompaniment);
 and the co-editor of *Machine Models of Music*, which makes him the natural
 referee of the argument the show stages: what does it mean for a machine to
 improvise *well*? Slats calls in mid-show, obviously, and gets gonged.
+
+And it's a reunion, not a cold call: Don and David **already toured this
+exact show once** — the [Electric Carnival](../will-wright/sources/art-net-simcity-archive/electric-carnival.md)
+at Lollapalooza '94, David patching Bounce live at the MIDI Zoo, Don running
+multiplayer SimCity two tables over, EBN scratching video down the midway.
+Same carnival, new instruments.
 
 Natural co-conspirators, each already seeded in this repo: [Laurie
 Anderson](../laurie-anderson/ideas.md) (invented instruments, Voice of
