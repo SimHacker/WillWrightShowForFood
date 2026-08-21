@@ -594,6 +594,71 @@ CWEB (Knuth's weave) → jazz YAML (zorkized) → the Zork compiler →
 deterministic Korz slots — played strict when the guards are
 decidable, improvised soft when the player walks off the map.
 
+## Cellular automata — Korz at absolute zero
+
+How does Korz map to CAs? **Neighbors are dimensions.** A cell's
+update rule dispatches on its neighborhood, and the neighborhood is
+an implicit context: von Neumann is five named dimensions (`c`, `n`,
+`s`, `e`, `w`), Moore is nine, an MFM event window is forty-one. The
+rule table is a set of guarded slots over those dimensions — and it
+is **total and decidable**: every context matches exactly one rule,
+zero ambiguity, nothing left latent. A cellular automaton is the
+extreme strict tier — Korz fully crystallized, the specificity
+lattice flattened into a complete lookup table. **Korz at absolute
+zero**: Zork froze five dimensions, The Sims froze two, and the CA
+freezes them all the way down to the compass rose.
+
+The classic rule families are guard algebra wearing lab coats:
+
+- **Totalistic rules guard on derived dimensions.** Life's B3/S23
+  never looks at individual neighbors — it guards on their *sum*:
+  `{center: dead, live_neighbors: 3} → born`. An aggregate of
+  dimensions used as a dimension. (ASK David: are derived/computed
+  dimensions ordinary dimensions, or a new kind of guard?)
+- **Rotational symmetry is guards quotiented by a group.** A
+  symmetric rule doesn't enumerate four rotations; it matches the
+  *orbit*, not the point — dispatch modulo group action, a symmetry
+  declaration collapsing many contexts into one equivalence class.
+- **The Margolus neighborhood is no-privileged-receiver in
+  silicon.** A 2×2 block with *no center cell* — four sites dispatch
+  symmetrically, none of them "the receiver" — and the alternating
+  partition makes the block phase a **time-parity dimension**: the
+  same four cells match different slots on even and odd ticks.
+  Reversible rules make the slot set bijective — `git revert` as
+  physics. And the crystallization pipeline already shipped, in
+  1987: **CAM-6** rules were written in Forth and *compiled into
+  lookup tables* — expressive description down to total dispatch
+  table, exactly the Zork-compiler movement — the machine Don's own
+  [CAM6.js](../don-hopkins/cam6-cellular-automata-machine.md)
+  simulates and the [Norman Margolus
+  show](../../repo-shows/norman-margolus/) plays live.
+- **The Moveable Feast Machine is the soft tier's physics.**
+  Ackley's MFM abandons the synchronous total table: events fire
+  asynchronously and stochastically, and an element's behavior
+  function acts on *whatever its event window actually contains* —
+  including noise, decay, and corruption. That is deopt-not-segfault
+  as a physical law: robust-first, survive > heal > function,
+  guards written to tolerate partial matches instead of erroring on
+  them. The MFM sits exactly on the tier boundary — strict elements,
+  soft scheduling — and its indefinite scalability comes from
+  refusing the strict tier's global synchrony the same way the soft
+  tier refuses its global decidability.
+
+The soft tier adds one more reading: a neighborhood can be a
+*pattern coordinate* instead of per-site dimensions — `neighborhood:
+glider-head` is a K-line guard, which is how humans actually talk
+about Life (nobody says "dead cell with three live neighbors
+northeast"; they say *glider*). Pattern names are the semantic
+compression the strict table can't express and the soft tier gets
+free.
+
+And the loop closes on last night's joke: the
+[Hierarchy of Bleeds](../../repo-shows/heather-and-steve-alvey/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
+is a monotone escalation CA (water < blood < chum, fixed point
+guaranteed), and *moveable feces* — random combination rules
+mutating mid-flood — is MFM dynamics by name and by nature: Ackley's
+moveable feast, with the menu the Alveys would actually serve.
+
 ## Hosting Korz in MOOLLM — soups intertwingled with objects
 
 David prototyped Korz **in Self** — an interpreter, debugger, and
