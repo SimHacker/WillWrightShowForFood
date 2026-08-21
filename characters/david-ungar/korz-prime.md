@@ -881,6 +881,61 @@ there is, the one `sort` computes for free — which is the
 interfaces-are-saved-views doctrine bottoming out in the collation
 order of the filename alphabet.
 
+### Sparse shadow trees — null means "ask your parent"
+
+Name for a pattern this document keeps using without naming: a
+**sparse shadow tree** is a secondary hierarchy that shadows a dense
+primary tree but only materializes nodes where a value actually
+*changes*. Everywhere else the slot is empty, and empty means
+**delegate up** — fall through to the nearest materialized ancestor.
+
+The type specimen is **ScriptX clocks over views** (Don was there).
+Every view has a clock slot; the root view has the root clock. A
+subview's clock is either null — inherit your (grand\*)parent's clock
+— or an explicit reference, which may just point at the same clock the
+parent uses; same effect either way. The default is inherit, so you
+never end up with unnecessary clocks: the clock tree stays a sparse
+shadow of the dense view tree, materialized only where somebody
+actually needed a new timebase (a paused panel, a reversed movie, a
+slow-motion inset). Time inheritance rides the containment hierarchy
+for free, and overriding it costs exactly one node.
+
+The same term describes MOOLLM's **placement hierarchy**: the
+containment tree of *rooms holding things* is a sparse tree over the
+physical directory tree, skipping the intermediate **chrome** —
+`sources/`, `media/`, organizational directories that exist for
+filing, not for meaning. Placement materializes only at the
+semantically load-bearing nodes; everything between them is
+fall-through.
+
+And it answers a Korz scaling worry directly: won't N dimensions
+demand N parallel trees? No — **one dense tree, N sparse shadows,
+each nearly empty.** Every dimension (time, style, provenance,
+security, mood) keeps its own shadow over the same files,
+materializing a coordinate only where it changes; absence delegates
+up. This is prototype delegation projected onto containment — don't
+copy, don't materialize, fall through — which is why it feels
+Self-shaped: the shadow tree is to the containment tree what the
+parent slot is to the object.
+
+Prior art is everywhere once it has a name: **CSS inherited
+properties** (set `color` on one node; ten thousand descendants read
+it without storing it), **X resources** falling through the widget
+hierarchy, **git config** (system → global → repo → worktree),
+**process environments** (fork inherits; override one variable),
+**Emacs buffer-local variables** shadowing globals. The dense
+counterpart is the scene-graph transform, where *every* node composes;
+the sparse shadow is what you build when most nodes have no local
+opinion. (Not to be confused with the DOM's "shadow tree," which is
+encapsulation — walls. This is the opposite: transparency by
+fall-through.)
+
+One more resolution for the nulls section above: *this* null is the
+benign kind. It isn't Hoare's billion-dollar "value that explodes when
+touched" — it's a **delegation instruction**, "no local opinion, ask
+my parent." Absence-as-delegation is the one null that was never a
+mistake; Self bet the whole language on it.
+
 ### No IDE required — bootstrapping on bare files and git
 
 Design constraint, stated flat: **this has to work with a normal

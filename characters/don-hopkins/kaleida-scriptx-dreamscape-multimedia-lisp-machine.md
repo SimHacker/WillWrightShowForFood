@@ -35,6 +35,15 @@ with audio: `playbackRate` can't go negative in practice, so the best you can do
 set `currentTime` — a strobe of seeks, not *playing* in the sense ScriptX/Clocks/QuickTime
 meant it. The web got the window hierarchy and never got the time hierarchy.
 
+The mechanics, as Don remembers them: every view has a clock slot; the root view has the root
+clock; a subview's clock is either **null — inherit your (grand\*)parent's clock** — or an
+explicit reference (possibly to the very clock the parent uses; same effect either way). The
+default is inherit, so unnecessary clocks never get made. The clock tree is a **sparse shadow
+tree** over the dense view tree — materialized only where somebody needed a new timebase —
+the pattern named and generalized in
+[korz-prime § Sparse shadow trees](../david-ungar/korz-prime.md): one dense tree, N sparse
+shadows (time, style, placement, provenance), each nearly empty, absence delegating up.
+
 The Korz reading writes itself: the clock tree is **delegation along a time dimension** — every
 node inherits its parent's timebase and overrides rate and offset locally, exactly as a
 transform hierarchy delegates space. Windows had both at once: one tree, two dimensions,
