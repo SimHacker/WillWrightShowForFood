@@ -41,6 +41,27 @@ the repo.
 cursor-mirror reading its own session transcript, and play-learn-lift turning the one-off
 surgery into the reusable change-name skill.
 
+## A design beat: what would Vanessa think of Korz′?
+
+[korz-prime.md](../../characters/david-ungar/korz-prime.md) leans on her SqueakJS
+one-liner — *"My plan is to do as little as necessary to leverage the enormous
+engineering achievements in modern JS runtimes"* — as prior art for its soft tier,
+and poses the question without answering it. This is where it gets argued, because
+memorial mode applies to design discussions too: we don't ask an LLM to simulate
+her. We ask the people who knew her to remember what she *did* say and imagine what
+she would say, working from her notes, papers, code, and live environments — the
+[jit notes](../../characters/vanessa-freudenberg/sources/jit-notes/) with their
+runnable mockups (which cite the Hölzle–Chambers–Ungar deoptimization paper
+directly), the
+[DLS '14 memorial edition](https://github.com/SimHacker/moollm/blob/main/designs/prestoration/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf),
+SqueakJS itself still live in the browser.
+
+She had strong documented opinions at exactly this fault line: she chose readable,
+debuggable, *fun* JS over a WASM rewrite, and rode the platform's JIT instead of
+fighting it. Would she read Korz′'s soft tier as the same bet one level up, or as
+the thing she warned about — readability and flexibility lost to an opaque
+optimizer? Her friends get to argue it; she gets quoted, not synthesized.
+
 ## Memorial mode
 
 

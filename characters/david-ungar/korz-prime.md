@@ -180,22 +180,14 @@ soft tier ([her room](../vanessa-freudenberg/README.md), her
 [jit notes](../vanessa-freudenberg/sources/jit-notes/) — which cite
 the Hölzle–Chambers–Ungar deoptimization paper directly).
 
-**What would Vanessa think of this?** A question for her friends, not
-for the model — memorial mode applies to design discussions too. We
-don't ask an LLM to simulate her; we ask the people who knew her to
-remember her and imagine what she would say, to remember what she
-*did* say, and to go over her notes, papers, code, and live
-environments — the [jit notes](../vanessa-freudenberg/sources/jit-notes/)
-with their runnable mockups, the
-[DLS '14 paper](https://github.com/SimHacker/moollm/blob/main/designs/prestoration/sources/Freudenberg-2014-SqueakJS-memorial-edition.pdf),
-SqueakJS itself still live in the browser. She had strong documented
-opinions exactly here — she chose readable, debuggable, *fun* JS over
-a WASM rewrite, and rode the platform's JIT instead of fighting it.
-Would she read the soft tier as the same bet one level up, or as the
-thing she warned about — losing readability and flexibility to an
-opaque optimizer? Her friends get to argue it; she gets quoted, not
-synthesized. A beat for the
-[memorial arc](../../repo-shows/remembering-vanessa-freudenberg/).
+**What would Vanessa think of this?** Worth posing precisely because
+she had strong documented opinions at exactly this fault line: she
+chose readable, debuggable, *fun* JS over a WASM rewrite and rode the
+platform's JIT rather than fighting it. So the soft tier reads two
+ways — the same bet one level up, or the very thing she warned
+about, readability and flexibility lost to an opaque optimizer. The
+question stays open here; how it gets asked and argued is a beat of
+the [memorial arc](../../repo-shows/remembering-vanessa-freudenberg/).
 
 ## The surface: slots are data
 
