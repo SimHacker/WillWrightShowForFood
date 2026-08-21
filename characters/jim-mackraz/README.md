@@ -12,7 +12,9 @@ shipped. Don credits him with keeping the team (and Don himself) focused enough 
 ## Why a Repo Show
 
 A natural voice for the [Sims team reunion](../../repo-shows/building-the-sims/), especially on
-leadership, **turd polishing**, and what reached CTG from pool architecture debates.
+leadership, **the polished turd** (his quote, with
+[his 2026 correction on record](sources/2026-08-21-polished-turd-correction.md):
+documents and decks, never code), and what reached CTG from pool architecture debates.
 
 ## Files
 
@@ -20,7 +22,8 @@ leadership, **turd polishing**, and what reached CTG from pool architecture deba
 |------|---------|
 | [`invitation.md`](invitation.md) | Invitation (shared via chat, Aug 2026) |
 | [`ideas.md`](ideas.md) | Conversation hooks |
-| [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md) | Turd polishing + CTG context |
+| [`sources/2026-08-21-polished-turd-correction.md`](sources/2026-08-21-polished-turd-correction.md) | Jim's quote correction, verbatim |
+| [`../../repo-shows/building-the-sims/team-stories.md`](../../repo-shows/building-the-sims/team-stories.md) | The polished turd + CTG context |
 | [`CHARACTER.yml`](CHARACTER.yml) | Machine-readable portrayal |
 
 ## See also

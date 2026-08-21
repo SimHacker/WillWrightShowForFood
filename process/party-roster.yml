@@ -47,7 +47,7 @@ right_away:
     - { id: jamie-doornbos, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — pool architecture / SimAntics" }
     - { id: tom-van-dijk, show: building-the-sims, invite: draft, contact: [email redacted], location: Deventer, next: "NL meet — IFF Pencil + Behavior.iff + pair Jamie/Heather" }
     - { id: eric-bowman, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — grid + pool layer" }
-    - { id: jim-mackraz, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — CTG + turd polishing" }
+    - { id: jim-mackraz, show: building-the-sims, invite: send_ready, send_batch: sims-fest-2026, next: "Sims Fest — CTG + the polished turd (his correction on record)" }
     - { id: patrick-j-barrett-iii, show: did-the-sims-make-you-gay, invite: send_now, send_batch: sims-fest-2026, next: "integrated episode; optional pool-ladder culture beat" }
     - { id: eric-hedman, show: repo-shows/eric-hedman/, invite: send_ready, send_batch: sims-fest-2026, also: pantomime w/ david-levitt, next: "Sims Fest — object pipeline + pools" }
     - { id: chris-trottier, show: [building-the-sims, design-by-accretion], invite: draft, send_batch: sims-fest-2026, next: "Sims Fest — design by accretion" }

@@ -41,9 +41,10 @@ designs and prototypes out where people and machines can learn from them and bri
 
 - **Pools: objects or rooms?** — architecture question from the CTG years; what did it look like from
   your chair as lead?
-- **Turd polishing** — I called the code a turd; you told me my job was turd polishing: clean it
-  out and polish your turd, then I'd have done what you hired me for and I'd be golden. Careful
-  what you ask for. Very satisfying. De-Macification; made porting back to Mac interesting.
+- **"Never underestimate the power of a polished turd"** — your line, now with your correction
+  on the record: documents and ppt decks (SimWorld Report the likely context), never code. My
+  memory had merged it with the code-cleanup marching orders — de-Macification, which made
+  porting back to Mac interesting. What was the SimWorld Report, and who polished it?
 - **How CTG actually shipped** — team leadership, scope, the tricks that worked.
 - **Pool QA lore** — pathological lots, urn rings, maid murder trap, bug reports vs "players enjoy this."
 - **Don's bug pile** — I have a **big stack** of old Sims QA to go through on air (some fixed, some not).

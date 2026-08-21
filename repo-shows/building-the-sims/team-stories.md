@@ -4,18 +4,24 @@
 over the years, until the team confirms on air.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
-## Turd polishing
+## The polished turd (corrected by Jim, 2026-08-21)
 
 → [`artifacts/turd-polishing-golden.md`](artifacts/turd-polishing-golden.md)
 
-Don called the code a turd. Jim Mackraz (CTG lead), roughly:
+Jim Mackraz's actual line, per Jim:
 
-> Your job is turd polishing. Clean it out and polish your turd. Then you will have done what we
-> hired you for — and you will be golden. Careful what you ask for.
+> Never underestimate the power of a polished turd.
 
-Don took the work — **de-Macification** that later affected **Mac porting**. Related shipping
-philosophy: [`will-wright/sources/2023-turd-polishing-talk/`](../../characters/will-wright/sources/2023-turd-polishing-talk/README.md)
-(Will's telling; this is Don↔Jim's specific exchange).
+The turd was **documents and ppt decks** (SimWorld Report the likely
+context) — *"there is no concept of polishing turd code,"* says Jim
+([his correction, verbatim](../../characters/jim-mackraz/sources/2026-08-21-polished-turd-correction.md)).
+Don's earlier telling had Jim handing the word back as a code job
+description after Don called the code a turd; the **de-Macification**
+cleanup (which later affected **Mac porting**) really happened, but the
+quote belongs to the documents. How the two memories fused is an on-air
+question now. Related shipping philosophy:
+[`will-wright/sources/2023-turd-polishing-talk/`](../../characters/will-wright/sources/2023-turd-polishing-talk/README.md)
+(Will's telling).
 
 ## Pool architecture discussions
 
