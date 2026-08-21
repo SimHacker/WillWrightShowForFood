@@ -1310,7 +1310,8 @@ guarded `skill: medical`.
 - What are derived dimensions, formally? The CA section finds two
   species: **aggregates** (Life's `live_neighbors`, a sum used as a
   dimension) and **coordinate transforms** (CAM-6's Margolus
-  neighborhood: `CW`/`CCW`/`OPP` as permutations of the Moore
-  compass indexed by phase dimensions `T`/`V`/`H`). Are both
+  neighborhood: `C`/`CW`/`CCW`/`OPP`, all four block cells, as
+  permutations of the Moore compass — plus center — indexed by phase
+  dimensions `T`/`V`/`H`). Are both
   ordinary dimensions, a new guard kind, or evidence that dimensions
   form an algebra?
