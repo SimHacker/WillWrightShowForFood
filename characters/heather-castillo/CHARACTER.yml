@@ -9,8 +9,8 @@ character:
   status: living
   field: "SimFreaks founder — Sims content publisher, artist, programmer, community leader (26-year brand)"
   home: characters/heather-castillo/
-  aliases: ["SimFreaks", "Heather Alvey (Facebook name)"]
-  naming: "Legally Heather Castillo -- 'Heather Alvey' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
+  aliases: ["SimFreaks", "Heather Castillo (Facebook name)"]
+  naming: "Legally Heather Castillo -- 'Heather Castillo' is her Facebook name only. She prefers Castillo, the name the Sims community knows. (Confirmed by Heather, 2026-08-20.)"
 
 representation:
   governed_by: ../../schemas/portrayal-standards.md

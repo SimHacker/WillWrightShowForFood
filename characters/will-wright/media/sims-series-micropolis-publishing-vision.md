@@ -34,6 +34,6 @@ This is what **Ian Bogost** calls procedural rhetoric: ideology and argument enc
 ## Cross-links
 
 - [Content catalogs](../../../catalogs/README.md) — SimFreaks, SimSlice, SimProv, Zombie Sims + Soul City
-- [Heather & Steve Alvey show](../../../repo-shows/heather-and-steve/README.md) — independent creators, first platform users
+- [Heather & Steve show](../../../repo-shows/heather-and-steve/README.md) — independent creators, first platform users
 - [afterlife-zombie-bridge.yml](../../../repo-shows/heather-and-steve/afterlife-zombie-bridge.yml) — Zombie Sims flagship episode
 - [send-code-not-commands trail](../../../process/trails/send-code-not-commands.md)

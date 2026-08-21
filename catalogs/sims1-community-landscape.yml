@@ -41,14 +41,14 @@ sites:
     - id: zombiesims
       url: https://zombiesims.com/
       model: "Free newbie tier + **$9.99 lifetime** unlocks Zombie Sims + SimSlice archive"
-      creators: [Heather Alvey, Steve Alvey]
+      creators: [Heather Castillo, Steve Alvey]
       note: "SimFreaks migration in progress (2025–2026); SimSlice files temporarily centralized here"
       federated: ../zombie-sims/
 
     - id: simfreaks
       url: https://www.simfreaks.com/
       model: "Long-running creator storefront; server migration; Discord for site requests"
-      creators: [Heather Alvey]
+      creators: [Heather Castillo]
       federated: ../simfreaks/
       note: "Cool Sites list — directory of legacy Sims 1 URLs"
 

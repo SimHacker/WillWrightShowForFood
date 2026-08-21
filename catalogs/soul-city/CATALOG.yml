@@ -69,7 +69,7 @@ hosts:
     - ../simprov/
     - ../zombie-sims/
   first_users:
-    - "Heather Alvey (SimFreaks)"
+    - "Heather Castillo (SimFreaks)"
     - "Steve Alvey (SimSlice)"
     - "Don Hopkins (SimProv, composable objects, Dumbold, Crowd Sitter)"
 

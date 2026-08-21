@@ -75,7 +75,7 @@ wave_1_send_now:
   - { id: ted-nelson, why: "ELDER PRIORITY — invitation finished; after Selker intro or framing call", gate: "Selker contact first" }
   - { id: ken-kahn, why: "NPUC reunion — 1993 speaker + panel photo; pairs with Selker archive", show: "repo-shows/npuc-reunion/" }
   - { id: scott-adams, why: "Warm (Jan 2026 'sucked me in'); dual-palace show; pairs with Woods send" }
-  - { id: patrick-j-barrett-iii, why: "send_now; invitation REFRAMED 31 Jul — love/respect first, low ask, time-shifted any-medium menu; deliver warmly via Heather Alvey or Eric Hedman (old friends), no on-the-spot attention", batch: sims-reunion-2026 }
+  - { id: patrick-j-barrett-iii, why: "send_now; invitation REFRAMED 31 Jul — love/respect first, low ask, time-shifted any-medium menu; deliver warmly via Heather Castillo or Eric Hedman (old friends), no on-the-spot attention", batch: sims-reunion-2026 }
   - { id: clint-basinger, why: "send_now — LGR audience bridge" }
   - { id: reese-jones, why: "Warm; Sam/Will/Chaim stack" }
   - { id: gary-drescher, why: "★ interview planned — Leela adviser; Made-Up Minds" }

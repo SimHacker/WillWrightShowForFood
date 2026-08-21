@@ -9,4 +9,4 @@
 
 Direct ancestor of the **Micropolis publishing system** vision. See [sims series micropolis publishing vision](sims-series-micropolis-publishing-vision.md).
 
-Cross-link: [Heather Alvey](../../heather-castillo/README.md) (SimFreaks).
+Cross-link: [Heather Castillo](../../heather-castillo/README.md) (SimFreaks).

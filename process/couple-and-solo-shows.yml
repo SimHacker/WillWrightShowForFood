@@ -26,7 +26,7 @@ naming:
     - "CHARACTER.yml → field, bio, connections, aliases[]"
     - "ideas.md → show hooks tied to public work"
     - "repo-shows/ → episode focus and pair membership"
-  show_guest_lists: "Use legal names only — Heather Alvey, Scott Kim — not Heather (SimFreaks)"
+  show_guest_lists: "Use legal names only — Heather Castillo, Scott Kim — not Heather (SimFreaks)"
 
 shows-and-episodes:
   shape: |

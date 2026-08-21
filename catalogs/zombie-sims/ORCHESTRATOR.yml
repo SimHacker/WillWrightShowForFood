@@ -1,13 +1,13 @@
 # Zombie Sims — Ham radio wave orchestrator
 # Schema: ../../schemas/orchestrator-hub.yml · ../../schemas/advertisement-dispatch.yml
-# Creators: Heather Alvey (SimFreaks) + Steve Alvey (SimSlice)
+# Creators: Heather Castillo (SimFreaks) + Steve Alvey (SimSlice)
 
 orchestrator:
   id: ham-radio
   name: Zombie Sims Ham Radio
   type: wave_controller
   catalog: zombie-sims
-  creators: [Heather Alvey, Steve Alvey]
+  creators: [Heather Castillo, Steve Alvey]
   tone: Artisanal craft UCC — hand-sculpted, kitbashed, SimAntics-driven
 
   role: |

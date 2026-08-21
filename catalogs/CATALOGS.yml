@@ -32,13 +32,13 @@ catalogs:
   - id: simprov
     path: simprov/
     kind: legacy_playset
-    creators: ["Don Hopkins", "Heather Alvey", "Steve Alvey", "SimBabes", "Donna / SimBabes artists"]
+    creators: ["Don Hopkins", "Heather Castillo", "Steve Alvey", "SimBabes", "Donna / SimBabes artists"]
     flagship: SimProv Wedding Playset
 
   - id: zombie-sims
     path: zombie-sims/
     kind: legacy_brand
-    creators: ["Heather Alvey", "Steve Alvey"]
+    creators: ["Heather Castillo", "Steve Alvey"]
     status: actively_shipping
     note: "Magnum-opus expansion pack; Afterlife soul-bridge show hook"
 

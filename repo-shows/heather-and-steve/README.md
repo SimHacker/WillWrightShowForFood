@@ -21,7 +21,7 @@ Underneath the fun: Don is building [**Soul City**](../https://github.com/SimHac
 Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
 [SimFreaks](../../catalogs/simfreaks/README.md), [SimSlice](../../catalogs/simslice/README.md),
 [SimProv](../../catalogs/simprov/README.md), [Zombie Sims](../../catalogs/zombie-sims/README.md).
-Republishing the **SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists), reopening its
+Republishing the **SimProv Wedding Playset** (made with Heather and Steve, **SimBabes**, and other artists), reopening its
 development to fans + devs, and **reincarnating** the classic Sims tools (SimShow, Sim Transmogrifier,
 RugOMatic, body/head/wig editors…) as living, open, optionally **AI-orchestrated** apps. Their sites
 become storefronts; the community keeps making and selling new work.

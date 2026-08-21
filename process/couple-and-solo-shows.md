@@ -43,7 +43,7 @@ Minimally intrusive interviews, **time-shifted and woven together** — can be t
 
 ## Show hooks
 
-- **Naming beat:** "Heather Alvey, not Heather (SimFreaks)" — roles in yaml, not slugs.
+- **Naming beat:** "Heather Castillo, not Heather (SimFreaks)" — roles in yaml, not slugs.
 - **Episode not sequel:** Same guest returns on their own show — normal, not gimmick.
 - **Memorial phone clip:** Friend in a park, one story — async weave.
 

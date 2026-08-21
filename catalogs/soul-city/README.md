@@ -50,14 +50,14 @@ Each keeps its brand and storefront; Soul City is the shared rails:
 
 | Catalog | → |
 |---------|---|
-| **SimFreaks** | [simfreaks/README.md](../simfreaks/README.md) — Heather Alvey |
+| **SimFreaks** | [simfreaks/README.md](../simfreaks/README.md) — Heather Castillo |
 | **SimSlice** | [simslice/README.md](../simslice/README.md) — Steve Alvey / SliceCity |
 | **SimProv** | [simprov/README.md](../simprov/README.md) — wedding playset |
 | **Zombie Sims** | [zombie-sims/README.md](../zombie-sims/README.md) — current magnum opus |
 
 ## Why now
 
-Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and the Alveys' permission to republish make **now** the moment to finish the job.
+Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and Heather and Steve's permission to republish make **now** the moment to finish the job.
 
 Reported EA take-private (Saudi PIF, Affinity Partners in press — verify before cite) and Legacy Collection's Exchange removal sharpen the case: **Soul Saver** / [**SoulAngel**](soul-angel.yml) relocates character souls from oligarch-owned silos into git-checked-in hub-and-spoke rails — first spoke [**Tiny Life**](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml). Academic frame: Don's QGCon paper [**How Inclusivity Saved The Sims**](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) — procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates and exit ([`soul-city-soul-saver-thesis.yml`](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml)). Namesake: [Soul City NC](../../repo-shows/will-wright-premiere/soul-city-namesake.md) (McKissick, Nixon HUD, Helms foreclosure).
 

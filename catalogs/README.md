@@ -34,7 +34,7 @@ We made this stuff; we want EA to see revenue and good publicity, not another fa
 
 ## SimFreaks — [`simfreaks/`](simfreaks/README.md)
 
-**Heather Alvey** — ~26 years of object suites, deep SimAntics, themed collections. One of the
+**Heather Castillo** — ~26 years of object suites, deep SimAntics, themed collections. One of the
 deepest artisanal catalogs in Sims 1 history. Storefront meets OpenLaszlo CMS essay in
 [`../characters/will-wright/sources/`](../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md).
 
@@ -43,7 +43,7 @@ deepest artisanal catalogs in Sims 1 history. Storefront meets OpenLaszlo CMS es
 ## SimSlice — [`simslice/`](simslice/README.md)
 
 **Steve Alvey** — *SliceCity*: SimCity nested inside The Sims as playable content. Partner brand
-to SimFreaks; the Alveys share front-row seats on the show.
+to SimFreaks; Heather and Steve share front-row seats on the show.
 
 ---
 
@@ -95,8 +95,8 @@ SimFreaks, SimSlice, SimProv, and Zombie Sims federate **into** Soul City.
 - CMS lineage: [micropolis-publishing-vision.md](../characters/will-wright/media/sims-series-micropolis-publishing-vision.md)
 - Primary sources: [../characters/will-wright/sources/README.md](../characters/will-wright/sources/README.md) · [1996 centerpiece](../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
 - Screenshot themes: [../characters/will-wright/media/](../characters/will-wright/media/README.md)
-- Alvey show seed: [heather-and-steve/](../repo-shows/heather-and-steve/README.md)
-- Founders: [Heather Alvey](../characters/heather-castillo/README.md) · [Steve Alvey](../characters/steve-alvey/README.md)
+- Heather & Steve show seed: [heather-and-steve/](../repo-shows/heather-and-steve/README.md)
+- Founders: [Heather Castillo](../characters/heather-castillo/README.md) · [Steve Alvey](../characters/steve-alvey/README.md)
 
 ## Status
 

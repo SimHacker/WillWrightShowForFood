@@ -36,7 +36,7 @@ Guide: [PLANTED-AUDIENCE.md](../../_TEMPLATE/audience/PLANTED-AUDIENCE.md).
 | **Running gags** | Broken Robot, Slats robopoetry, Ultimate Machine gong | `running_gag: true`; recurring CARD / SIMULATION hooks |
 | **Self-aware AI agent** | [Palm](palm/README.md) — freed Monkey's Paw philosopher | `fictional_ai_agent`; knows it's simulated |
 | **Consented real self-author** | [Richard Bartle](richard-bartle/README.md) — MUD1 co-creator | Real person, explicit consent, **writes his own questions** |
-| **Honored real guests** | [Heather Alvey](heather-castillo/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/CHARACTER.yml) | Real, invited, front-row/box; write their own |
+| **Honored real guests** | [Heather Castillo](heather-castillo/README.md), [Steve Alvey](steve-alvey/README.md), [Phil Salvador](phil-salvador/CHARACTER.yml) | Real, invited, front-row/box; write their own |
 
 ---
 

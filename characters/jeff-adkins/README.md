@@ -28,7 +28,7 @@ players.** A huge base of casual players sits at the bottom; as you climb, a sma
 tinker, then mod, then **build tools** — and the creators near the top **drastically improve the game
 for the casual millions below.** Will has always called those fans some of the most important people in
 the whole ecosystem. Jeff **climbed the entire pyramid** — player → reverse-engineer → **tool maker** —
-landing alongside community pillars like **Heather Alvey (SimFreaks)** and **Steve Alvey (SimSlice)**.
+landing alongside community pillars like **Heather Castillo (SimFreaks)** and **Steve Alvey (SimSlice)**.
 The tools he built now lift the next wave of players and makers up behind him.
 
 ## The feedback loop (the beautiful part)

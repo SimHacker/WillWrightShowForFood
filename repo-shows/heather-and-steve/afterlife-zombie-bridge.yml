@@ -8,7 +8,7 @@ show:
   title: "Drain Hell — Afterlife × ZombieSims with SimFreaks & SimSlice"
   type: group
   host: Don Hopkins
-  guests: ["Heather Alvey (SimFreaks)", "Steve Alvey (SimSlice)"]
+  guests: ["Heather Castillo (SimFreaks)", "Steve Alvey (SimSlice)"]
   character: []                    # TODO: characters/heather-castillo/, characters/steve-alvey/ when consent
   topic: |
     Afterlife 'hell is full' — subtract souls by religion from hell saves, spawn ZombieSims waves
@@ -50,9 +50,9 @@ micropolis_publishing_system:
     - ../catalogs/simslice/
     - ../catalogs/simprov/
     - ../catalogs/zombie-sims/
-  what: "Don's **Soul City** — create · publish · share — built to host and publish the Alveys' enormous, rich **artisanal back-catalogs** AND their current content streams, plus Don's own. Open to fans and other devs to contribute."
+  what: "Don's **Soul City** — create · publish · share — built to host and publish Heather and Steve's enormous, rich **artisanal back-catalogs** AND their current content streams, plus Don's own. Open to fans and other devs to contribute."
   who_its_for: "Steve Alvey (SimSlice/SliceCity) + Heather Castillo (SimFreaks) — ~26-year respected Sims-content brands, still shipping magnum-opus packs (Zombie Sims) — and Don."
-  simprov_wedding_playset: "Don's **SimProv Wedding Playset** (made with the Alveys, **SimBabes**, and other artists; unreleased back then) — recently released; now being reorganized/republished and restarting development, opened up to fans + devs."
+  simprov_wedding_playset: "Don's **SimProv Wedding Playset** (made with Heather and Steve, **SimBabes**, and other artists; unreleased back then) — recently released; now being reorganized/republished and restarting development, opened up to fans + devs."
   reincarnate_tools: "Bring back the classic Sims content tools as living, open, optionally **AI-orchestrated** apps: SimShow, Sim Transmogrifier, RugOMatic, and body / head / wig editors — and more."
   principle: "Honor 26 years of artisanal UCC: preserve + republish the back catalog, AND give them (and the community) better tools to keep making + selling new work. Sites as storefronts; federation publishing."
 

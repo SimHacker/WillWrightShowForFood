@@ -57,8 +57,8 @@ through together. *(Unity3D C# zip sources: TODO link.)*
 Will Wright's long-held idea: a huge base of casual players, and a shrinking number as you climb who
 tinker, mod, and **build tools** — the ones near the top **drastically improving the game for the
 millions below.** Jeff's own arc *is* that pyramid: player → reverse-engineer → **tool maker**, in the
-company of **Heather Alvey (SimFreaks)** and **Steve Alvey (SimSlice)**. A great thread to explore
-*with* Will and the Alveys: how the creators at the top carry the whole community — and how open tools
+company of **Heather Castillo (SimFreaks)** and **Steve Alvey (SimSlice)**. A great thread to explore
+*with* Will and Heather and Steve: how the creators at the top carry the whole community — and how open tools
 + AI change who gets to climb.
 
 ### 7. VitaMoo — Sims characters in the browser (Don's TS renderer, inspired by SimObliterator)

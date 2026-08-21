@@ -7,7 +7,7 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Steve has done
 
-Steve Alvey — **SimSlice** / **SliceCity** (SimCity running *inside* The Sims): the shipped precedent for Will's nested-games vision. Married to **Heather Alvey** (SimFreaks) after years as parallel fan-site creators. Co-ships **Zombie Sims**. **Gallium / Proxi** with Will. **Soul City** publishing with Don now.
+Steve Alvey — **SimSlice** / **SliceCity** (SimCity running *inside* The Sims): the shipped precedent for Will's nested-games vision. Married to **Heather Castillo** (SimFreaks) after years as parallel fan-site creators. Co-ships **Zombie Sims**. **Gallium / Proxi** with Will. **Soul City** publishing with Don now.
 
 ## The hooks
 

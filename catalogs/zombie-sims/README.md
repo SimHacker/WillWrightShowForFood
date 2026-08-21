@@ -2,7 +2,7 @@
 
 *Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
 
-**Heather Alvey + Steve Alvey** — current magnum-opus expansion pack for The Sims 1.
+**Heather Castillo + Steve Alvey** — current magnum-opus expansion pack for The Sims 1.
 
 ## What
 
@@ -36,6 +36,6 @@ On-air prompt for Heather: *"Where do you source your zombies? Artisanal? Farm-g
 
 ---
 
-↑ [catalogs](../README.md) · [Alvey show](../../repo-shows/heather-and-steve/README.md)
+↑ [catalogs](../README.md) · [Heather & Steve show](../../repo-shows/heather-and-steve/README.md)
 
 *Raw directory:* [browse files in this folder](./)

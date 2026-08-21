@@ -412,7 +412,7 @@ the June 1998 steering-committee build live. The game itself was dedicated to
 **Danielle Bunten Berry** 🕯️ (M.U.L.E. — multiplayer social play before anyone),
 memorialized here too.
 
-**The community that never stopped.** **Heather Alvey** (SimFreaks, ~26 years of
+**The community that never stopped.** **Heather Castillo** (SimFreaks, ~26 years of
 Sims content) and **Steve Alvey** — whose SimSlice/SliceCity put SimCity *inside*
 The Sims, the shipped precedent for the whole bridge architecture. **Tom van Dijk**
 (IFF Pencil), scholar **Tanja Sihvonen** (*Players Unleashed!*), **Ellpeck** (Tiny

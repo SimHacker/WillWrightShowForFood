@@ -554,7 +554,7 @@ _living_guest(
 
 _living_guest(
     "heather-castillo",
-    "Heather Alvey",
+    "Heather Castillo",
     "SimFreaks Teacher",
     "✨",
     "Grandmother who'd rather mod Sims objects than knit — community as classroom.",

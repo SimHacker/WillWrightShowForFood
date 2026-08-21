@@ -20,7 +20,7 @@ We are not pitching vapor. The evidence lives in [`../../characters/will-wright/
 
 | Catalog | What |
 |---------|------|
-| [SimFreaks](../../catalogs/simfreaks/README.md) | Heather Alvey — object suites, SimAntics depth |
+| [SimFreaks](../../catalogs/simfreaks/README.md) | Heather Castillo — object suites, SimAntics depth |
 | [SimSlice](../../catalogs/simslice/README.md) | Steve Alvey — SliceCity, nested SimCity |
 | [SimProv](../../catalogs/simprov/README.md) | Wedding playset + composable orchestration |
 | [Zombie Sims](../../catalogs/zombie-sims/README.md) | Current magnum-opus pack — still shipping |

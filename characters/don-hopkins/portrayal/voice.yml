@@ -78,7 +78,7 @@ voice:
 
   # WHY Don writes the way he does — he applies the project's core design philosophy to PROSE
   # (writing as a PROTOCOL; the reader's head is the target machine). Kept compact here on purpose;
-  # the FULL treatment — cast (Gosling, Owen Densmore, Warnock, Will, Minsky, Ben, the Alveys,
+  # the FULL treatment — cast (Gosling, Owen Densmore, Warnock, Will, Minsky, Ben, Heather and Steve,
   # Drescher), history, and citations — lives in the trail. Don't re-inline it; link to it.
   writing-philosophy:
     full_treatment: ../../process/trails/send-code-not-commands.md

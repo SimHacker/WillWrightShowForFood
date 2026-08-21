@@ -10,7 +10,7 @@ Photographed by Don during a **Gallium Studios** party in **Alameda** during **G
 
 ## Repo orbit
 
-- [Heather & Steve Alvey show](../../../repo-shows/heather-and-steve/)
+- [Heather & Steve show](../../../repo-shows/heather-and-steve/)
 - [Will Wright premiere](../../../repo-shows/will-wright-premiere/README.md)
 - Microworld parallel: maze procedural rhetoric — eat dots, avoid ghosts, wait for next round
 
