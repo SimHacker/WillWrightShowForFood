@@ -250,6 +250,31 @@ parser.** Confidence: 85%.
   in the loop, no port required.
 - Dynamic enough for soup semantics, typed enough to encode the schemas.
 
+**Embedded language: JS in the YAML, TS around it (2026-08-21).** The
+precedent is OpenLaszlo — JavaScript embedded in XML, with the platform
+itself written in another language. This is JavaScript embedded in YAML,
+with the engine written in TypeScript. Slot bodies are **JS, not TS**:
+
+- `new Function` evals JS directly — zero toolchain in the hot path,
+  identical in node and browser. TS in slots means transpile-before-eval
+  everywhere, forever.
+- Type *stripping* is cheap and portable (esbuild-wasm, sucrase, and
+  node's own strip-types can all run in or near the browser), but
+  stripping without *checking* buys only decoration — and checking means
+  shipping tsc, which is heavy in a browser tab.
+- The guards already carry the types. `guards: {rcvr: troll*, strength:
+  {gte: 2}}` is the parameter declaration; TS annotations inside the body
+  would restate the guard in a second notation that can drift from it.
+- Slot bodies are tiny and LLM-authored; JS is maximally in-distribution.
+- Want types anyway? Use **JSDoc — types as comments, comments as jazz.**
+  The strict tier transports them, tooling that cares can check them, and
+  the round-trip custodian preserves them for free. The type channel is
+  the comment channel.
+
+`lang: ts` stays legal later as a *source* format: crystallization
+transpiles it once (esbuild) and the cache stores JS — TS melts, JS
+freezes. But the PoC defines `lang: js` and nothing else.
+
 **Execution model (ratified 2026-08-21).** The Korz′ compiler compiles
 slots into JavaScript: a decidable guard tree becomes a predicate
 function, a method body becomes a callable, and the engine executes them
@@ -365,6 +390,10 @@ beside the facts they annotate.
 - **Language:** TypeScript + eemeli `yaml` (§4), ratified by Don
   2026-08-21, with the compile-to-JS / eval / function-cache execution
   model. Python twin deferred to the PyTorch crystallization milestone.
+- **Embedded language:** slot bodies are JS, not TS (§4) — the
+  OpenLaszlo arrangement: script in the delivery language, platform in
+  the typed one. JSDoc comments are the sanctioned type channel;
+  `lang: ts` deferred as a crystallization source format.
 - **Schema style:** by example + comments, normative examples in §3, no
   JSON Schema until the examples stabilize.
 
