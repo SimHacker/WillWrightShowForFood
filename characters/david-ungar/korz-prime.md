@@ -166,6 +166,20 @@ Python — the strict tier's slot space as a compilation target, not
 just a hand-authored one. Zork improvises, the compiler crystallizes,
 Korz runs: the anagram becomes a toolchain.
 
+And the arrow points both ways: the adventure compiler can use the
+**Korz deterministic engine as its runtime** instead of emitting a
+bespoke JS or Python engine per game. The adventure model is already
+slot-shaped — rooms, objects, verbs, guards — and Zork's five frozen
+dimensions (verb, direct object, indirect object, character,
+location) map straight onto Korz guards, so compilation becomes
+*translation into the soup* rather than code generation. What the
+engine can't supply — I/O, persistence, dice, timers, media — arrives
+as **plug-in objects**: host objects registered into the soup under
+their own dimension, callable from method slots, the same trick every
+scripting language uses at its C boundary. One runtime, many games;
+the compiler's output is slots, and doesNotUnderstand already knows
+where to send whatever the compiler couldn't decide.
+
 Endosymbiosis, stated mechanically: the deterministic program lives
 inside the model the way mitochondria live inside the cell, doing the
 high-throughput metabolism, with gene transfer (crystallization) in

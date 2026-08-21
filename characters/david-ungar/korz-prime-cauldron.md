@@ -240,7 +240,16 @@ repo at M2 when the ping-pong is demonstrable.
 
 ### B.3 New questions raised by later deep-dives
 
-*(empty at MELT)*
+- **Adventure compiler as a client (2026-08-21).** korz-prime now
+  proposes the reverse arrow: the adventure compiler targets the Korz
+  engine as its runtime — compilation becomes translation into the
+  soup, host capabilities (I/O, persistence, dice, timers, media)
+  arrive as plug-in objects registered under their own dimension.
+  Default: M5's troll bridge is hand-authored slots first; an M5.5
+  re-emits the same game through the adventure compiler and diffs the
+  soups. New sub-question with default: plug-in object API = a
+  `host` dimension whose values are engine-registered objects,
+  callable from method slots; no other FFI in the PoC.
 
 ### B.4 Questions confirmed or declined during drafting
 
