@@ -96,60 +96,133 @@ dimensions:
 
 ### 3.2 Slot files — the sea
 
+Surface form: **the selector is the key**; each slot is its own YAML
+document (`---` separators), so the same selector can recur freely.
+Postel note: the parser accepts repeated keys within one document too
+(eemeli's yaml parses them with `uniqueKeys: false`) but the custodian
+emits the canonical multi-document form.
+
 ```yaml
-# greet.slots.yml — every slot that answers the message `greet`.
-# File-per-message is a convention, not a rule; the file boundary is chrome.
-slots:
-  - guard: {character: troll, place: bridge}
-    value: "None shall pass!"            # data slot: dispatch returns the value
-
-  - guard: {character: troll, place: bridge, mood: sunny}
-    value: "Fine day for a toll, eh?"    # 3 dims > 2 dims: wins when mood matches
-
-  - guard: {character: troll}
-    method:                              # code slot: the strict tier executes this
-      lang: js
-      params: [traveler]
-      body: return traveler.gold >= 5 ? "pass, friend" : "SPLASH";
-
-  - guard: {character: troll, mood: poetic}
-    prose: |                             # prose slot: strict tier CANNOT run this —
-      The troll waxes lyrical about      # emits a `needsCrystallization` event
-      bridges he has known.              # asking the LLM to translate prose → method
+# sea/troll/greet.yml — three slots, one selector
+greet:
+  guards: {rcvr: troll*, world: zork}     # troll* — glob over the rcvr dimension
+  do: The troll brandishes his axe and blocks the passage.
+---
+greet:
+  guards: {rcvr: troll*, world: adventure}
+  do: The troll demands payment before you may cross the bridge.
+---
+greet:
+  guards:
+    rcvr: troll*
+    mood:              # bare name — presence guard: bind whatever mood is present
+  do: |                # prose body: soft tier only, for now
+    Greet in a way that fits {mood}; lead with menace if provoked,
+    grudging respect if the visitor has beaten you before.
+  # He's privately embarrassed about the axe incident — never mentions
+  # it first. This comment is load-bearing: the strict tier transports
+  # it, the soft tier plays it.
+---
+greet:
+  guards: {rcvr: troll*, world: zork, mood: sunny}
+  do: "Fine day for a toll, eh?"          # 3 guards > 2: wins when mood matches
+---
+toll:
+  guards: {rcvr: troll*}
+  method:                                 # code slot: the strict tier executes this
+    lang: js
+    params: [traveler]
+    body: return traveler.gold >= 5 ? "pass, friend" : "SPLASH";
 ```
 
-### 3.3 Sends and traces
+Body kinds: `do:` with a plain string is a data slot (strict tier returns
+it, interpolating bound guards like `{mood}`); `do:` with prose that needs
+judgment is a soft slot (strict tier emits `needsCrystallization` or routes
+the send to the LLM); `method:` is a code slot. The strict tier decides
+which kind it holds by what it can decide, not by being told.
+
+### 3.3 Manifest guard tree expressions
+
+Flat `guards:` maps are sugar. When sugar runs out, guards are **manifest
+trees** — expression trees written as data, inspectable, diffable,
+round-trippable, never code:
+
+```yaml
+guard-trees:
+  guards:
+    rcvr: troll*         # glob leaf — sugar for {glob: "troll*"}
+    mood:                # presence leaf — dimension bound, any value
+    all:                 # tree combinators: all / any / not, nesting freely
+      - any:
+          - {world: zork}
+          - {world: adventure}
+      - not: {mood: sunny}
+      - strength: {gte: 2}          # comparison leaves: gte/lte/eq/in/range
+      - place: {within: rooms/underground/}   # tree-dimension leaf: ancestor test (M4)
+```
+
+The strict tier evaluates any tree whose leaves are all decidable; one
+prose leaf (`vibe: "seems trustworthy"`) makes the whole guard soft and
+routes it to the LLM. Specificity generalizes from "count of guard
+dimensions" to "count of distinct dimensions constrained anywhere in the
+tree" — default until M4 forces better (see B.2).
+
+### 3.4 Pointers — one way to point at anything
+
+Events, traces, and jazz harvests all need to report context. One
+convention: a **purposed dict of pointers** — the key says what kind of
+context it is, the value is a path that can drill *into* objects. Paths
+are repo-relative by default, `./`-relative to the reporting file, or
+global (`scheme://`) for cross-repo; the fragment drills down.
+
+```yaml
+pointers:
+  failed_send: sends/0013-serenade.send.yml
+  nearest_slot: sea/troll/greet.yml#/2/greet        # doc 2, key greet
+  dimension_decl: DIMENSIONS.yml#/dimensions/mood
+  guard_leaf: sea/troll/greet.yml#/2/greet/guards/mood
+  world_room: ../rooms/bridge/                      # relative: drill into the world
+  prior_art: moollm://examples/all-alike-maze/MAZE.yml#/rooms/like13
+```
+
+An array is legal where purpose is obvious (the `jazz:` harvest list), but
+the purposed dict is the default: readers should never have to guess why a
+pointer was included.
+
+### 3.5 Sends and traces
 
 ```yaml
 # sends/0007-greet.send.yml — a send is a file; drop it in, run the engine
 send: greet
 context:
-  character: troll
-  place: bridge
+  rcvr: troll
+  world: zork
   mood: grumpy
 ```
 
 ```yaml
 # sends/0007-greet.trace.yml — written by the engine; append-only sibling
 send: greet
-matched: {slot: "greet.slots.yml#/slots/0", specificity: 2}
-considered: 4
-result: "None shall pass!"
+matched: {slot: "sea/troll/greet.yml#/0/greet", specificity: 2}
+considered: 5
+result: "The troll brandishes his axe and blocks the passage."
 ```
 
-### 3.4 Events — the flare the strict tier fires
+### 3.6 Events — the flare the strict tier fires
 
 ```yaml
 # events/0012-doesNotUnderstand.yml
 event: doesNotUnderstand
 send: serenade
-context: {character: troll, place: bridge}
-nearest:                       # engine's best forensics, no interpretation
-  - {slot: "greet.slots.yml#/slots/2", note: "message differs, guard matches"}
+context: {rcvr: troll, world: zork}
+pointers:                      # purposed dict (§3.4): why each pointer is here
+  failed_send: sends/0013-serenade.send.yml
+  nearest_slot: sea/troll/greet.yml#/2/greet   # message differs, guard matches
+  dimension_decl: DIMENSIONS.yml#/dimensions/mood
 jazz:                          # comments harvested near the failure, verbatim —
-  - from: "greet.slots.yml#/slots/2"        # the engine can't read these;
-    comment: "# code slot: the strict tier executes this"   # its reader can
-  - from: "DIMENSIONS.yml#/dimensions/mood"
+  - from: sea/troll/greet.yml#/2/greet         # the engine can't read these;
+    comment: "# He's privately embarrassed about the axe incident — never mentions it first."
+  - from: DIMENSIONS.yml#/dimensions/mood      # its reader can
     comment: "# open enum — a novel value is doesNotUnderstand fuel, not an error"
 ask: |
   No slot answers `serenade` under this context. Write one, alias
@@ -301,6 +374,14 @@ beside the facts they annotate.
   literate comments are ready-made jazz; translation is transcription),
   Zork MDL second (the dispatch structure is the prize but muddle
   requires more archaeology).
+- **Pointer fragment syntax.** Default: JSON-Pointer-ish over the
+  multi-doc stream — `path#/docIndex/key/...` — with repo-relative paths
+  default, `./` for file-relative, `scheme://` for cross-repo (e.g.
+  `moollm://`). Alternative: XPath-ish selectors matching guards instead
+  of positions; revisit when doc order churns under edits.
+- **Guard-tree leaf vocabulary.** Default set: glob, presence (bare
+  name), `eq/gte/lte/in/range`, `within:` for tree dimensions,
+  combinators `all/any/not`. Anything else is a prose leaf and soft.
 - **The engine's name.** Default: **Kelvin** — the strict tier runs at
   absolute zero (korz-prime's own metaphor: crystallize, melt, the warm
   end of the scale), and Lord Kelvin's "when you cannot measure it...
@@ -326,6 +407,13 @@ beside the facts they annotate.
 
 - **Declined:** inventing a comment-preserving YAML dialect of our own.
   Two mature libraries exist; the PoC's job is dispatch, not parsing.
+- **Confirmed (2026-08-21):** selector-as-key surface form (`greet:` with
+  `guards:` and `do:` inside), canonical multi-document stream so a
+  selector can recur; duplicate keys within one document accepted on read
+  (Postel), re-emitted as multi-doc by the custodian.
+- **Confirmed (2026-08-21):** context reporting via purposed pointer
+  dicts — the key names the purpose, the value drills into the object
+  (§3.4); bare arrays only where purpose is self-evident.
 
 ### B.5 Convention for tracking questions going forward
 
