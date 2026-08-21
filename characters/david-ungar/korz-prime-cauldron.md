@@ -412,6 +412,15 @@ beside the facts they annotate.
   OpenLaszlo arrangement: script in the delivery language, platform in
   the typed one. JSDoc comments are the sanctioned type channel;
   `lang: ts` deferred as a crystallization source format.
+- **Constraint evaluation: push**, ratified by Don 2026-08-21 — Laszlo's
+  actual model: dependency graphs with eager propagation. Within an
+  engine run, a write propagates through the dirty subgraph in
+  topological order and constraint outputs are materialized into the
+  world, so files always hold current values and diffs show consequences
+  beside causes. Dependency capture at first eval builds the graph; the
+  content-hash cache doubles as the dirty detector on cold start. In the
+  browser demo the same graph drives live listeners. (Pull-on-read
+  survives only as the cold-start recovery path.)
 - **Schema style:** by example + comments, normative examples in §3, no
   JSON Schema until the examples stabilize.
 
@@ -436,12 +445,6 @@ beside the facts they annotate.
   literate comments are ready-made jazz; translation is transcription),
   Zork MDL second (the dispatch structure is the prize but muddle
   requires more archaeology).
-- **Constraint evaluation: pull or push?** Default: **pull** — recompute
-  on read, memoized keyed by the content hashes of the dependencies the
-  compiled function actually read (dependency capture at first eval, the
-  signals trick). Push (listener graphs, Laszlo's compiler-registered
-  dependencies, live UI updates) is the browser-demo milestone's problem;
-  the repo substrate has no event loop, only reads.
 - **Pointer fragment syntax.** Default: JSON-Pointer-ish over the
   multi-doc stream — `path#/docIndex/key/...` — with repo-relative paths
   default, `./` for file-relative, `scheme://` for cross-repo (e.g.
