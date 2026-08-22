@@ -90,6 +90,10 @@ as background, not ammunition.
 - Ian's 2015 essay was a eulogy for Maxis; the postmortem of The Sims is
   the sequel only he can co-write — with Will in the room and the source
   code on the table
+- The Khandaker-Kokoris emergence↔nuance spectrum, answered: the Family
+  Album and Exchange made it a per-scene slider — retroactively narrate the
+  emergence, or stage-direct every shot, or anywhere between; improv meets
+  playwriting (see [roles-not-characters.md](roles-not-characters.md))
 
 ## Sources
 

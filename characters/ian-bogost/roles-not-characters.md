@@ -173,6 +173,40 @@ the characters whose existence was won by a 1998 design argument
 shouldn't have their souls held in a debt-loaded silo whose owners'
 law forbids them. In the public domain instead of the prison camp.
 
+## Improv meets playwriting — the spectrum was a slider
+
+The essay's last act reports Mitu Khandaker-Kokoris's GDC continuum:
+emergence at one end (The Sims — "a complex, unexpected result that
+arises from the unforeseeable interactions of smaller, autonomous
+components"), the predictability required for emotional nuance at the
+other (Telltale's authored zombies), with her honest systems-thinker's
+conclusion — it depends, it's complicated.
+
+The Sims community had already dissolved the continuum, and the tools
+shipped in the box. The Family Album and the Exchange let players layer
+emotional nuance **on top of** emergence — playing off the emergent
+behavior or totally ignoring it. At one end, the improviser's move: let
+the simulation play out, then *retroactively explain* what happened —
+"yes, and" applied to whatever the engine offers, narrating the burnt
+dinner and the spurned kiss into a tragedy after the fact. At the other,
+the playwright's move: meticulously set up, direct, and script every
+scene — Sims as actors under direction, the simulation reduced to a
+stage with very opinionated stagehands. And every position in between,
+chosen per story, per *scene*. The spectrum isn't a property of the
+game; it's a slider in the player's hand. Improv meets playwriting.
+
+That's why the storytelling layer, not the simulation, is where
+identification finally happened in The Sims — on the player's terms, in
+the caption layer, where the human is. The engine stayed emergence; the
+nuance was applied where nuance lives, in authorship. The repo's
+receipts run from [SimProv](../../catalogs/simprov/README.md) (the name
+confesses the thesis) through
+[Janet Murray's](../janet-murray/) reading of the Family Album and
+Exchange as a storytelling holodeck, to
+[Bar Karma](../../process/showmaker-network.md) — the same
+improv-meets-playwriting slider, scaled up to a broadcast writers'
+room.
+
 ## The abdication, implemented
 
 The essay's crescendo is a philosophical dare:
