@@ -262,7 +262,15 @@ was inside:
 - **Bar Karma** (2011) — a broadcast television show on Current TV
   whose episodes were written by its audience through **StoryMaker**,
   the SFC's branching-story platform: a community writers' room years
-  before anyone said "crowdsourced narrative" without smirking.
+  before anyone said "crowdsourced narrative" without smirking. And it
+  was announced in the press before it existed: in
+  [October 2009](https://www.cnet.com/culture/will-wright-speaks-about-his-stupid-fun-club-start-up/)
+  Will told VentureBeat the online communities around TV shows were
+  what fascinated him — "The community around The Lost show on TV is
+  one of my favorites. It's awe inspiring" — and fifteen months later
+  he shipped a TV show written by its community. The "mysterious"
+  output was following a publicly stated thesis
+  ([2009 press capture](../will-wright/sources/2009-cnet-stupid-fun-club/README.md)).
 - **Urban Safari** — StoryMaker's field arm: geo-captured story cards
   at real-world places, same stack as Bar Karma
   ([lineage receipts](../../process/showmaker-network.md), with the
@@ -295,7 +303,14 @@ greeted Dark Castle's creator Jonathan Gay in the game's own
 monster-voice
 ([sources/hn-dark-castle-nya.md](sources/hn-dark-castle-nya.md)). Then
 answer with running code: Micropolis with the roles broken out, humans
-and imported characters seated at the same city. The essay says games about systems
+and imported characters seated at the same city. And save one card for
+the middle of the table: Will,
+[April 2009](https://www.cnet.com/culture/will-wright-to-leave-electronic-arts/) —
+"Most people are very narcissistic. The more you can make the game
+about that person, the more interested, the more emotionally involved
+they will get." The man who built system protagonists diagnosing the
+identification hook, six years before Ian's essay argued against
+indulging it. Read it aloud and let the two of them argue about it. The essay says games about systems
 lost. The rebuttal isn't an argument; it's a table with more chairs.
 
 ## Links
