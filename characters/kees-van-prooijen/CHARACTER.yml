@@ -1,0 +1,55 @@
+# Kees van Prooijen — invitation portrayal. NOT Kees van Prooijen.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: kees-van-prooijen
+  name: "Kees van Prooijen"
+  type: invitation
+  signifier: "🎨"
+  status: living
+  field: "Computer artist + language designer (Intercol, IL) — Spore prototyping trio w/ Will Wright; independently discovered the Bohlen–Pierce scale (1978); Kees height; Electrogig Amsterdam technology founder; Institute of Sonology"
+  home: characters/kees-van-prooijen/
+  aliases: ["Kees", "Cornelis van Prooijen"]
+  pronounce: "Kees ~ 'Case' (like the Neuromancer protagonist)"
+  born: 1952-08-07   # The Hague; Wikipedia
+  # NOT the same person as kees-colijn (Arthur van Hoff's Amsterdam friend,
+  # private repo) or keez-duyves (PIPS:lab). Three Keeses, three characters.
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+  note: "Don's friend since ~2000 (introduced by Howard Penner, Berkeley);
+    Don forwarded his resume to Will Wright — which worked. Everything here
+    is from public sources: Wikipedia, kees.cc (site + resume), Facebook bio."
+  subject_rights: correction_edit_or_deletion_anytime
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel_options: [facebook, email]
+  show_fits:
+    - spore reunion (Will, Chaim, Chris Trottier)
+    - language design (korz-prime thread — IL/Intercol × Self/Korz)
+    - music and theory (Bohlen–Pierce, Sonology, tuning)
+
+bio:
+  summary: |
+    Dutch computer artist and language designer. Institute of Sonology under
+    Koenig; real-time synthesis in PDP-15 assembly (1977). Independently
+    discovered the Bohlen–Pierce scale via continued fractions (Interface,
+    1978); the Kees height is named for him. Technology founder of Electrogig
+    (Amsterdam/SF): designed 3DGO and the languages Intercol and IL — IL
+    "based on intensional logic," unifying imaging, modeling, texturing,
+    animation, and sound. Maxis 2001–2007: one of three engineers on the
+    Spore prototyping team — creature editor, GA-evolved nervous systems for
+    locomotion (in IL), L-system body plans, the any-number-of-legs walking
+    algorithm (GDC 2005 demo; SIGGRAPH 2008 retargeting paper). Art: grown
+    then sculpted, printed 1/1; Berg Lyric Suite Function series; Tribonacci
+    "Odd Golden Section" aspect ratio; Filter Farm genetic Photoshop filters.
+  links:
+    wikipedia: https://en.wikipedia.org/wiki/Kees_van_Prooijen
+    home: https://www.kees.cc/
+    il: https://www.kees.cc/il/
+    kees_height: https://en.xen.wiki/w/Kees_height
