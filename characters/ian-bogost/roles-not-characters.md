@@ -87,9 +87,13 @@ as the load-bearing pair.
 ## Show beat
 
 Read the essay's SimCity passages on air with Ian and Will — the
-B. Dalton opening deserves to be read aloud — then answer with running
-code: Micropolis with the roles broken out, humans and imported
-characters seated at the same city. The essay says games about systems
+B. Dalton opening deserves to be read aloud, and it has a response beat
+waiting: the essay opens with Dark Castle at Software Etc., and Don once
+greeted Dark Castle's creator Jonathan Gay in the game's own
+monster-voice
+([sources/hn-dark-castle-nya.md](sources/hn-dark-castle-nya.md)). Then
+answer with running code: Micropolis with the roles broken out, humans
+and imported characters seated at the same city. The essay says games about systems
 lost. The rebuttal isn't an argument; it's a table with more chairs.
 
 ## Links
