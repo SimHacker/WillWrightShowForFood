@@ -115,6 +115,42 @@ different substrate — see
 [korz-prime](../david-ungar/korz-prime.md) on characters and locations
 as the load-bearing pair.
 
+## The Willy Wonka factory had output
+
+One more correction the essay earns, gently. Bogost writes that Wright
+"left the company in 2009 to work on projects at his Stupid Fun Club, a
+Willy Wonka-version of a think tank whose output remains mysterious and
+largely hypothetical." Fair from outside the gates in 2015 — the
+factory didn't publish. But the output existed, and it had names. Don
+was inside:
+
+- **Bar Karma** (2011) — a broadcast television show on Current TV
+  whose episodes were written by its audience through **StoryMaker**,
+  the SFC's branching-story platform: a community writers' room years
+  before anyone said "crowdsourced narrative" without smirking.
+- **Urban Safari** — StoryMaker's field arm: geo-captured story cards
+  at real-world places, same stack as Bar Karma
+  ([lineage receipts](../../process/showmaker-network.md), with the
+  2011 Shneiderman correspondence documenting it at deployment).
+- **Slats and Dents** — the improvising street robots and their One
+  Minute Movies
+  ([theme](../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)),
+  entertainment research with hidden cameras and public reactions.
+
+And this names the other half of WWSFF's mission. The show isn't only
+an archive of what shipped; it's a workshop for **reimagining and
+reimplementing** what the factory prototyped, now that the missing
+ingredient — an interpreter that can read prose and improvise — exists.
+StoryMaker begat [ShowMaker](../../process/showmaker-network.md), the
+format this very show runs on. Urban Safari begat
+[eBike Safari](../../repo-shows/ebike-safari/README.md), live at
+[ebike-safari.com](https://ebike-safari.com/) — voice-controlled
+adventure navigation through a hidden graph of story cards, on an
+actual bicycle in actual Amsterdam. The robots are queued for
+resurrection. "Mysterious and largely hypothetical" turns out to have
+been a scheduling problem: the ideas were fifteen years early, and this
+repo is where they stop waiting.
+
 ## Show beatI
 
 Read the essay's SimCity passages on air with Ian and Will — the
