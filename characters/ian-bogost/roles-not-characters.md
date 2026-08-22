@@ -143,7 +143,11 @@ inside who does the real mental work — is a myth every culture clings
 to, and good theories require dissolving it into a society. [korz-prime](../david-ungar/korz-prime.md) works
 both threads; the Margolus neighborhood is the emblem — a cellular
 automaton block with **no center cell**, four sites dispatching
-symmetrically, none of them "the receiver."
+symmetrically, none of them "the receiver." The pronouns tell the
+story: object-oriented programming is *this*; a cellular automaton is
+*us* — every cell the center of its own neighborhood and a neighbor in
+everyone else's, which is the essay's "higher-order domains to which we
+might belong" rendered in grid coordinates.
 
 So the question to put to the author of *Alien Phenomenology*, on the
 record: is Korz the refutation of object-oriented ontology, or its

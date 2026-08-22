@@ -702,6 +702,20 @@ lattice flattened into a complete lookup table. **Korz at absolute
 zero**: Zork froze five dimensions, The Sims froze two, and the CA
 freezes them all the way down to the compass rose.
 
+There's a pronoun grammar hiding in that mapping, and it's the real
+reason CAs land so neatly in Korz. Object-oriented programming is
+**"this"** — first person singular, one privileged receiver, the
+world sorted into me and them. A cellular automaton is **"us"**: I am
+at the center, surrounded by neighbors, and the rule dispatches on
+all of us at once — multiple dispatch as a way of life, no cell ever
+addressed in the second person. And there's a gradient inside the
+"us": a Moore rule reads all of us but writes only *me* — "I among
+us" — while the Margolus block below removes even the center: reads
+us, writes us, four receivers and four outputs, first person plural
+with no singular left. Every cell is simultaneously the center of its
+own neighborhood and a neighbor in eight others — perspectival
+symmetry, which is just Korz's subjectivity said in grid coordinates.
+
 The classic rule families are guard algebra wearing lab coats:
 
 - **Totalistic rules guard on derived dimensions.** Life's B3/S23
