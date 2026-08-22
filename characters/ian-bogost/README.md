@@ -33,12 +33,26 @@ Sources: [`sources/cow-clicker.yml`](sources/cow-clicker.yml) · [Wikipedia](htt
 critical frame. Don's [Unite 2012 Amsterdam](https://www.youtube.com/watch?v=24AY4fJ66xA&t=1h08m21s)
 cow joke (Molyneux didn't get it) → [`../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml`](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml). Repo parody keeps Curiosity **dead**; center is Bogost's cow: [`curiosity-cow-cube`](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml).
 
+## "Video Games Are Better Without Characters" — answered
+
+Bogost's [2015 Atlantic essay](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/)
+(written the week Maxis Emeryville closed) asks why games need characters
+at all, holding up SimCity — protagonist: the system — as the abandoned
+road. Don's response doc,
+[`roles-not-characters.md`](roles-not-characters.md), argues the
+dichotomy is inside-versus-around: SimCity always implied its characters
+as **roles** on the player's side of the glass (mayor, treasurer,
+planner), multiplayer X11 SimCity made them literal voting seats, and
+Soul City now casts imported characters and agents into those seats
+while the system stays the protagonist.
+
 ## Artifacts
 
 | File | Contents |
 |------|----------|
 | [sources/procedural-rhetoric-quote.yml](sources/procedural-rhetoric-quote.yml) | Wright + Aristotle line + MIT Press sources |
 | [sources/cow-clicker.yml](sources/cow-clicker.yml) | Mechanics, Cowpocalypse, reception, HN |
+| [roles-not-characters.md](roles-not-characters.md) | Response to the 2015 "Better Without Characters" essay |
 | [invitation.md](invitation.md) | Draft invite (not sent) |
 | [ideas.md](ideas.md) | Segment map |
 | [CARD.yml](CARD.yml) | Guest card |

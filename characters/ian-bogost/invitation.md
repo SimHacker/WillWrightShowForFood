@@ -49,6 +49,16 @@ argues for inclusion, one argues by farce, same instruction set. I also have
 an unfinished QGCon paper, "How Inclusivity Saved The Sims," that needs your
 kind of reading more than it needs my polish.
 
+There's a second thread if you want it, and it's a reply to you: your 2015
+"Better Without Characters" piece. I think SimCity answered its own question
+long ago — the characters were never in the simulation, they were the roles
+around it: mayor, treasurer, planner, tool operator. My multiplayer X11
+SimCity in the early nineties gave those roles literal seats and a vote, and
+the project I'm building now casts characters from other games — and agents —
+into them, while the system stays the protagonist. I wrote the argument up in
+your room, so you can disagree with it in writing before disagreeing with it
+on air.
+
 And only if it sounds like fun: Cow Clicker against Curiosity, done as a
 postmortem, not a revival. We keep Curiosity dead. The contrast I care about
 is satire built on purpose versus hype that satirized itself by accident —

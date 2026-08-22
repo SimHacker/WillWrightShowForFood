@@ -35,6 +35,17 @@
 
 - Federation publishing for artisanal UCC; procedural rhetoric as infrastructure
 
+### 4b. Roles, not characters — his 2015 essay, answered with running code
+
+- ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/)
+  asks "why must we have characters in games at all?" — Don's decades-old
+  answer: SimCity implies its characters as **roles around the glass**
+  (mayor, treasurer, planner, tool operator), and multiplayer X11 SimCity
+  made them literal seats with voting
+- Soul City casts the roles: characters imported from other games — and
+  agents — playing mayor's advisor, traffic engineer, opposition paper
+- Full response doc: [`roles-not-characters.md`](roles-not-characters.md)
+
 ### 5. Cow Clicker — the show Don wants (optional dessert)
 
 *Respectful love letter to intentional satire — not a dunk on Molyneux for sport.*

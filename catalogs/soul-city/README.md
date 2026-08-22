@@ -63,6 +63,12 @@ Reported EA take-private (Saudi PIF, Affinity Partners in press — verify befor
 
 See [INTRO-NARRATIVE.md](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
 
+The design thesis behind character import — SimCity's characters live *around*
+the simulation as roles (mayor, treasurer, planner), multiplayer made them
+voting seats, and Soul City casts traveling characters and agents into them —
+is argued against Ian Bogost's 2015 "Better Without Characters" essay in
+[roles-not-characters.md](../../characters/ian-bogost/roles-not-characters.md).
+
 ## Proof it already worked
 
 - [SimFreaks Laszlo CMS essay](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md)
