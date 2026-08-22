@@ -31,6 +31,15 @@
   the playset argues through a supply chain, not a manifesto; Cupid runs the
   saga state machine, the Buddha statue manages crowd needs, and the locked
   menus *teach* by what they permit
+- **Paperwork as procedural rhetoric**
+  ([wedding-playset-depth.md](../../catalogs/simprov/wedding-playset-depth.md)):
+  officiant chosen from a magazine (priest, rabbi, clown), invitation list as
+  a neighborhood-wide toggle phone, the marriage license as capability token
+  that *enables* the ceremony — and binds two Sims with no gender check on
+  the form; photographers feed the Family Album; the unshipped plan generated
+  wall paintings and a coffee-table wedding storybook from the simulation's
+  after-effects; plus a hireable divorce lawyer — the institution modeled
+  honestly, exits included
 - Ask: useful category next to *Persuasive Games*?
 
 ### 3. Dumbold — institutional farce that dates

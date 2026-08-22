@@ -20,6 +20,8 @@ Built when marriage equality was still a fight in the real world. Republishing f
 
 **Orchestrator protocol:** [`ORCHESTRATOR.yml`](ORCHESTRATOR.yml) — Hope Chest state machine, Cupid reciprocal services, wedding planner magazines on the dining table, locked menu guidance, spawned NPC staff. Design doc: [`orchestrator-playsets`](../../designs/orchestrator-playsets/README.md).
 
+**Design history:** [`wedding-playset-depth.md`](wedding-playset-depth.md) — paperwork as procedural rhetoric: officiant-by-magazine (priest, rabbi, clown), the invitation list as a neighborhood-wide toggle phone, the marriage license as capability token, the photographer→Family Album pipeline, the unshipped generated-content plan (wall paintings, coffee-table wedding storybook), and the divorce lawyer. ;)
+
 **Performance gag (show seed):** [SimProv Wedding — Double Pre-Game](../../bits/gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml) — bride's friends and groom's friends each sneak off to calm nerves before the ceremony; neither knows the other is doing it; aisle reveal with both heads pixelized (original Sims mesh censorship: hand on pass, head after hit). Kimmel *Unnecessary Censorship* homage; Steve & Gerri ad-lib already jokes about hot-tub pixelation on the same engine.
 
 **Challenge (premiere):** [The Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) — Cupid-farm a lover stack, fall in love in public, survive the jealousy slap queue; kiss/Cupid buffs restart the conga until they fall out of love.
