@@ -38,10 +38,27 @@ the constructive counter to its premise: identity as a fortress to
 defend versus identity as a seat at a table facing a shared system. A
 mayor arguing with a treasurer over a budget has an identity that
 *does* something; a "gamer" defending the borders of a demographic has
-an identity that can only be threatened. The Sims history in this repo
-— same-sex romance shipped in 1999, the Wedding Playset, the QGCon
-"How Inclusivity Saved The Sims" argument — is the receipts for the
-other road.
+an identity that can only be threatened.
+
+And Don's standing thesis, argued across
+[years of Hacker News comments](sources/hn-gamergate-sims-thesis.md)
+(many flagged into invisibility by Kiwi Farms trolls — the Firebase API
+remembers what search forgets): **The Sims proves GamerGate's premise
+wrong.** The premise had empirical content — gamers are a coherent
+young male identity, games belong to them, inclusion ruins games
+commercially — and every clause was falsified in advance by the
+best-selling PC game franchise in history: a famously majority-female
+player base, teams that were "anything but a boys club," creator
+communities led by women, and same-sex romance from day one, which
+didn't cost the franchise anything but *saved* it (the QGCon "How
+Inclusivity Saved The Sims" argument). The Sims sat at the top of the
+sales charts contradicting the premise for fourteen years before the
+premise was shouted. GamerGate wasn't just morally wrong; it was
+empirically refuted by the biggest game in the industry, in advance —
+and the refutation's warmest evidence is the players themselves, hiding
+gay Sims families in underground rooms and on separate memory cards
+until the world caught up
+([the receipts with a heartbeat](sources/hn-gamergate-sims-thesis.md)).
 
 ## The answer that was already running
 
