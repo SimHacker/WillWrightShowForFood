@@ -115,6 +115,64 @@ different substrate — see
 [korz-prime](../david-ungar/korz-prime.md) on characters and locations
 as the load-bearing pair.
 
+## The Sims resisted representation — by design, twice
+
+The essay's sharpest observation about The Sims is this one:
+
+> It would appear to offer all the representation and identity that
+> would appeal to contemporary critics, but in practice, The Sims
+> resists representation and identification.
+
+That resistance wasn't an accident of abstraction. It was one side of
+a design argument that played out in writing in 1998, and the archive
+has both sides
+([same-sex-design-arc.yml](../don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml),
+[the integrated story](../patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md)).
+Don's review of Design Document Draft 3 called the relationship code
+what it was — "Heterosexist and Monosexist"; a same-sex advance earned
+a homophobic slap — and proposed the **representational** fix: a 0–100
+interest per sex, a spectrum covering hetero, homo, bi, and asexual
+Sims. An identity attribute, in the data model. Patrick J. Barrett
+III, hired that October, independently built the **behavioral** fix
+and shipped it: no sexual-preference property at all — same-sex
+romance simply possible, for any Sim, at any time. Orientation as
+something a Sim *does*, not something a Sim *is*.
+
+Patrick's system is the one that made history — the autonomous kiss at
+E3 1999, same-sex relationships on day one in 2000 — and it made
+history precisely *because* it resists representation, exactly as the
+essay says. There was no orientation checkbox to argue about, censor,
+or localize away; there was only behavior, emergent from the same
+engine as everything else. Identity enacted rather than represented —
+the roles thesis, running inside the simulation this time. And then
+the franchise spent two decades walking the other road, expansion by
+expansion: the Sims 2 FAQ quietly dropped its same-sex marriage
+question in 2004; Russia restricted The Sims 4 over it in 2014
+(fourteen years late — a badge of honor); Patch 34 unlocked gender
+customization in 2016; sexual orientation arrived as an explicit,
+player-set attribute in 2022 — which is to say, The Sims 4 eventually
+implemented roughly what Don proposed in 1998. Both systems were
+right. They were right **in that order**: behavior first made the
+identity undeniable; representation later made it legible.
+
+Now the coda. As of August 4, 2026, EA is a private company — roughly
+93% owned by Saudi Arabia's Public Investment Fund, with Silver Lake
+and Jared Kushner's Affinity Partners, and about $20 billion of buyout
+debt loaded onto it
+([AP](https://apnews.com/article/electronic-arts-sims-battlefield-silver-lake-e50d653ac4616d063296e2021d826a3c),
+[the 8-K](https://www.sec.gov/Archives/edgar/data/712515/000114036126031157/ef20079099_8k.htm)).
+The kiss that changed video games is now an asset of a state whose law
+criminalizes it. Protesters dressed as Sims stood outside Redwood City
+while the deal closed. The
+[Soul City namesake](../../repo-shows/will-wright-premiere/soul-city-namesake.md)
+already taught us this coda's shape — Soultech 1, the incubator built
+for second chances, houses a prison work complex today. Which is why
+Soul City runs the arrow the other way, and why it matters that it
+runs on GPL'd public rails rather than better-behaved private ones:
+the characters whose existence was won by a 1998 design argument
+shouldn't have their souls held in a debt-loaded silo whose owners'
+law forbids them. In the public domain instead of the prison camp.
+
 ## The abdication, implemented
 
 The essay's crescendo is a philosophical dare:

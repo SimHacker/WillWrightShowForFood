@@ -77,6 +77,18 @@ still express ourselves with tools rationed by the billionaires. I'm trying
 to build the exit, and you're one of the few people who's been arguing the
 systems side of this the whole time.
 
+One more artifact, in case it hasn't crossed your desk: Will's April 1996
+talk to Terry Winograd's Stanford user-interface class — postmortems of
+SimEarth, SimAnt, and SimCity 2000, then the first public preview of
+Dollhouse, four years before it shipped as The Sims. I was in the audience;
+years later I dug the tape out of the Stanford Archives, put it on YouTube,
+and hand-perfected a transcript. It rewards study against everything that's
+happened since — down to Will's answer to "what are you working on now,"
+which begins, of all things, with data portability. In 1996. So the record
+contains postmortems of everything before The Sims, and the birth
+announcement of The Sims itself. The postmortem of The Sims has never been
+done. I think you should be part of it.
+
 And only if it sounds like fun: Cow Clicker against Curiosity, done as a
 postmortem, not a revival. We keep Curiosity dead. The contrast I care about
 is satire built on purpose versus hype that satirized itself by accident —
@@ -91,6 +103,7 @@ Links, if you want to poke around:
 - Your room in the repo: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ian-bogost/
 - The currency spec with your credit: https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/mooney.yml
 - The Soul City namesake, told carefully: https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/soul-city-namesake.md
+- Will's 1996 Stanford talk: https://www.youtube.com/watch?v=nsxoZXaYJSk — my write-up with transcript and slides: https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d
 - The Molyneux keynote: https://www.youtube.com/watch?v=24AY4fJ66xA (1:08:21)
 
 -Don

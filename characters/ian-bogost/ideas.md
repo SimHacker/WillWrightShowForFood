@@ -75,6 +75,22 @@ as background, not ammunition.
 - Distressed-moo click audio — procedural rhetoric admitting manipulation?
 - Medium-as-skinner-box: Don's [HN Medium essay](../don-hopkins/writing/hn-medium-failure-and-github-moollm.md) cites Cow Clicker as comparator
 
+### 6. The postmortem of The Sims — the one that's never been done
+
+- The prenatal record exists:
+  [Will's 1996 Winograd talk](../will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md)
+  ([YouTube](https://www.youtube.com/watch?v=nsxoZXaYJSk) ·
+  [Don's Medium write-up](https://donhopkins.medium.com/designing-user-interfaces-to-simulation-games-bd7a9d81e62d))
+  — postmortems of SimEarth/SimAnt/SimCity 2000, then the Dollhouse preview,
+  with Will's "what now?" answer opening on **data portability** (1996!)
+- Study Will's early words against everything since: two representational
+  systems for same-sex love (see
+  [roles-not-characters.md](roles-not-characters.md)), the expansion-pack
+  arc, the Exchange rise and removal, Moola, the 2026 take-private
+- Ian's 2015 essay was a eulogy for Maxis; the postmortem of The Sims is
+  the sequel only he can co-write — with Will in the room and the source
+  code on the table
+
 ## Sources
 
 - [`../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml`](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
