@@ -25,11 +25,35 @@
 
 - Built when marriage equality was still contested; republishing for Steam Sims 1 families
 - Politics in orchestration rules (Cupid, Crowd Sitter, Buddha) — not a cutscene manifesto
+- **The component chain as rhetoric**: Hope Chest → Wedding Consultant →
+  wedding planner magazines on the dining table → objects → spawned NPC staff
+  → reciprocal services ([ORCHESTRATOR.yml](../../catalogs/simprov/ORCHESTRATOR.yml)) —
+  the playset argues through a supply chain, not a manifesto; Cupid runs the
+  saga state machine, the Buddha statue manages crowd needs, and the locked
+  menus *teach* by what they permit
 - Ask: useful category next to *Persuasive Games*?
 
 ### 3. Dumbold — institutional farce that dates
 
-- 2004 e-voting satire — preserve honestly; how procedural satire ages vs inclusion playsets that **gain** force
+- 2004 e-voting satire, charmingly dated on purpose — preserve honestly; how procedural satire ages vs inclusion playsets that **gain** force
+
+### 3b. Death, zombies, and the kindest graveyard on the internet
+
+- His own parenthetical from the 2015 essay: *"in video games, emotional
+  nuance often seems to involve zombies"* — so bring him
+  [Heather and Steve's Zombie Sims](../../catalogs/zombie-sims/README.md),
+  artisanal and still shipping; Don's HN framing: "Simprov was all about
+  passion, but ZombieSims is all about revenge and murder and chaos and
+  brains! @;)"
+- The [tombstone generator](../will-wright/sources/2005-09-22-halloween-tombstones-original-sims/article.md)
+  (2005): Halloween Tombstone with ghosts or Solemn Tombstone with flowers,
+  upload a photo of the deceased — somber and playful in one object,
+  the emergence↔nuance slider applied to grief
+- The [Original Sims cemetery](http://www.originalsims.com/cemetery): 1200+
+  memorials of people *and* Sims by 2005 — **read epitaphs from the Wayback
+  archive on air**, then ask the 2026 question: what does a UGC memorial
+  site where strangers wrote each other's grief with care say against the
+  internet we got instead? The cemetery as the counterfactual internet
 
 ### 4. Soul City — rhetoric as platform
 

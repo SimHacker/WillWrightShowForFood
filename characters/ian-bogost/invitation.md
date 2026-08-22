@@ -45,9 +45,15 @@ bed" — and two objects of mine that ran on the same engine with opposite
 intents: the SimProv Wedding Playset, which put same-sex weddings in front of
 friends and family years before the law caught up, and the Dumbold Voting
 Machine, a 2004 e-voting satire with the broken audit trail built in. One
-argues for inclusion, one argues by farce, same instruction set. I also have
-an unfinished QGCon paper, "How Inclusivity Saved The Sims," that needs your
-kind of reading more than it needs my polish.
+argues for inclusion, one argues by farce, same instruction set. There's also
+a graveyard: my 2005 tombstone generator — Halloween with ghosts or Solemn
+with flowers, upload a photo of the deceased — and the Original Sims cemetery
+it fed, over 1200 memorials of people and Sims, written by strangers with a
+care that reads like a message from a gentler internet. And Heather Castillo
+and Steve Alvey's ZombieSims is still shipping, which matters because you're
+the one who observed that emotional nuance in games usually involves zombies.
+I also have an unfinished QGCon paper, "How Inclusivity Saved The Sims," that
+needs your kind of reading more than it needs my polish.
 
 There's a second thread if you want it, and it's a reply to you: your 2015
 "Better Without Characters" piece. I think SimCity answered its own question
