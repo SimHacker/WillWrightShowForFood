@@ -50,6 +50,17 @@
 
 *Respectful love letter to intentional satire — not a dunk on Molyneux for sport.*
 
+**Register rule — the withheld dunk (praeteritio):** deadpan facts only, no
+adjectives on Molyneux; the reader/audience supplies the judgment ("He didn't
+get it. I explained. He still didn't get it."). The contrast does all the
+work: Cow Clicker is self-aware on purpose — Cowpocalypse, "It wasn't very
+fun before" — while Curiosity satirized itself by accident. Bogost dunks on
+himself better than anyone; piling on Molyneux would miss the point of the
+satire, withholding proves we got it. The Molyneux receipts (RPS
+"pathological liar" interview, TechCrunch) stay in
+[the source file](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml)
+as background, not ammunition.
+
 - [`sources/cow-clicker.yml`](sources/cow-clicker.yml) — mechanics, Cowpocalypse, citations
 - [Cow Clicker site](http://www.cowclicker.com/) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
 - Bogost line: *"It wasn't very fun before."* — scheduled death as honesty
