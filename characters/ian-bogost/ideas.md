@@ -34,6 +34,10 @@
 ### 4. Soul City — rhetoric as platform
 
 - Federation publishing for artisanal UCC; procedural rhetoric as infrastructure
+- [The attitude](../../catalogs/soul-city/README.md#the-attitude): Nina Hagen
+  as patron saint — punk exit from walled gardens, not exit interview; answers
+  the closing of his own 2015 essay ("we'll sign away anything… rationed by
+  the billionaires") with a systems move: leave, take the souls, get louder
 
 ### 4b. Roles, not characters — his 2015 essay, answered with running code
 

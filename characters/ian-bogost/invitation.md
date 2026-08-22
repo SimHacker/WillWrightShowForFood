@@ -59,6 +59,24 @@ into them, while the system stays the protagonist. I wrote the argument up in
 your room, so you can disagree with it in writing before disagreeing with it
 on air.
 
+That project is called Soul City — the city between games where characters
+travel, meet, and take up roles. The name is a tribute, and you may already
+know the story: Floyd McKissick's Soul City, North Carolina. The head of CORE
+built a new town on former plantation land, funded in 1972 by Richard Nixon
+of all people — Black capitalism fit his coalition math — as the first
+federally backed new town developed by a Black-led company. Jesse Helms
+killed it: he forced an audit that froze funding for over a year, the audit
+cleared the project, and the smear finished it anyway. HUD pulled out in
+1979, McKissick foreclosed, and Soultech 1 — the incubator meant to seed
+24,000 jobs — houses a prison work complex today. Our Soul City runs that
+arrow the other way: characters locked in dead formats and foreclosed
+platforms get carried out and given new lives, on GPL'd rails no senator can
+defund and no marketplace can ration. You wrote the closing argument
+yourself, eleven years ago — we'll sign away anything so long as we can
+still express ourselves with tools rationed by the billionaires. I'm trying
+to build the exit, and you're one of the few people who's been arguing the
+systems side of this the whole time.
+
 And only if it sounds like fun: Cow Clicker against Curiosity, done as a
 postmortem, not a revival. We keep Curiosity dead. The contrast I care about
 is satire built on purpose versus hype that satirized itself by accident —
@@ -72,6 +90,7 @@ Links, if you want to poke around:
 
 - Your room in the repo: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ian-bogost/
 - The currency spec with your credit: https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/mooney.yml
+- The Soul City namesake, told carefully: https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/soul-city-namesake.md
 - The Molyneux keynote: https://www.youtube.com/watch?v=24AY4fJ66xA (1:08:21)
 
 -Don

@@ -69,6 +69,20 @@ voting seats, and Soul City casts traveling characters and agents into them —
 is argued against Ian Bogost's 2015 "Better Without Characters" essay in
 [roles-not-characters.md](../../characters/ian-bogost/roles-not-characters.md).
 
+## The attitude
+
+Patron saint: **Nina Hagen**. In 1976 the DDR stripped Wolf Biermann of his
+citizenship for singing the wrong songs; his stepdaughter Nina demanded to
+follow him out, and walked out of an actual walled state with her voice
+intact — then got louder. No petition to the wall's owners, no waiting for
+the garden to improve. A departure that takes the soul along.
+
+That's the Soul Saver move, note for note: when the silo's owner starts
+charging Moola for your own memories, you don't lobby — you relocate the
+souls to rails nobody can expatriate you from (plain files, git, federation),
+and keep performing. Punk exit, not exit interview. The walls can keep the
+buildings; the characters were never furniture.
+
 ## Proof it already worked
 
 - [SimFreaks Laszlo CMS essay](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md)

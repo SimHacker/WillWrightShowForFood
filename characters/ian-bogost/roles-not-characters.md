@@ -24,6 +24,25 @@ identification produced identity politics without systems literacy. His
 closing image: "we are the Sims now," user-interface elements in the
 power brokers' cities.
 
+One paragraph deserves its proper name. When the essay describes gamers
+"so attached to their identity that they've been willing to burn down
+anything to defend it," seeking "to exclude anyone—particularly
+women—who challenge their ideas about what games and gamers look like,"
+Bogost is writing about **GamerGate** — March 2015, the harassment
+campaign still smoldering around him. His analysis is the systems one:
+"the gamer" is what happens when identity becomes the product instead
+of the seat — cherished so hard its defenders sabotaged it in the
+public imagination, accelerated by the corporatized internet. Don
+opposed GamerGate adamantly then and now, and the roles thesis below is
+the constructive counter to its premise: identity as a fortress to
+defend versus identity as a seat at a table facing a shared system. A
+mayor arguing with a treasurer over a budget has an identity that
+*does* something; a "gamer" defending the borders of a demographic has
+an identity that can only be threatened. The Sims history in this repo
+— same-sex romance shipped in 1999, the Wedding Playset, the QGCon
+"How Inclusivity Saved The Sims" argument — is the receipts for the
+other road.
+
 ## The answer that was already running
 
 Here is the thing the essay walks right past, and it was sitting in
@@ -76,6 +95,18 @@ of participating in systems larger than ourselves," which is the
 essay's own wish, granted by role decomposition rather than by deleting
 the people.
 
+And the essay's closing — "We'll sign away anything, it would seem, so
+long as we're still able to 'express ourselves' with the makeshift tools
+we are rationed by the billionaires" — is a diagnosis with no exit
+ramp. Soul City's answer is the punk one, with
+[Nina Hagen as patron saint](../../catalogs/soul-city/README.md#the-attitude):
+when the wall's owner starts rationing your tools, you don't petition —
+you walk out with your voice intact and get louder. She did it to an
+actual walled state in 1976; Soul Saver does it to the silos, moving
+character souls onto rails nobody can expatriate you from. Bogost asked
+us to play the game of systems rather than the game of identities; exit
+is a systems move.
+
 One footnote for the language-design bench: a role is a **dimension
 binding**. Zork rebound WINNER when you said "ROBOT, PUSH BUTTON"; The
 Sims bound `me` and `stackObject`; a SimCity role binds *which controls
@@ -84,7 +115,7 @@ different substrate — see
 [korz-prime](../david-ungar/korz-prime.md) on characters and locations
 as the load-bearing pair.
 
-## Show beat
+## Show beatI
 
 Read the essay's SimCity passages on air with Ian and Will — the
 B. Dalton opening deserves to be read aloud, and it has a response beat
