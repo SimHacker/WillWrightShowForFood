@@ -115,6 +115,45 @@ different substrate — see
 [korz-prime](../david-ungar/korz-prime.md) on characters and locations
 as the load-bearing pair.
 
+## The abdication, implemented
+
+The essay's crescendo is a philosophical dare:
+
+> What if games' role in representation and identity lies not in
+> offering familiar characters for us to embody, but in helping wrest
+> us from the temptation of personal identification entirely? … the
+> abdication of our own selfish, individual desires in the interest of
+> participating in systems larger than ourselves?
+
+There is a programming language that took that dare literally, and
+Bogost is unusually equipped to judge it — because he's not only a
+game critic, he's an object-oriented ontologist (*Unit Operations*,
+*Alien Phenomenology, or What It's Like to Be a Thing*). Call it **the
+de-objectification of object-oriented programming**. David Ungar spent
+a career performing the abdication one layer at a time: Smalltalk had
+classes, **Self** removed them (objects all the way down, no privileged
+taxonomy), and **Korz** removes the objects — no privileged receiver at
+all, just a sea of slots with dimensional guards that assemble into
+*virtual* objects depending on how you look at them. In Korz the
+receiver is demoted to one guard among many — `rcvr` alongside place,
+time, mood, world. **There are more dimensions than Self** — the
+language, the ego, and the guard list, all at once. Minsky made the
+same move on minds: the "Single Agent" theory — the little person deep
+inside who does the real mental work — is a myth every culture clings
+to, and good theories require dissolving it into a society. [korz-prime](../david-ungar/korz-prime.md) works
+both threads; the Margolus neighborhood is the emblem — a cellular
+automaton block with **no center cell**, four sites dispatching
+symmetrically, none of them "the receiver."
+
+So the question to put to the author of *Alien Phenomenology*, on the
+record: is Korz the refutation of object-oriented ontology, or its
+purest implementation? The objects aren't denied — they're *earned*,
+assembled fresh from slots each time a context looks at them, the way
+the essay wants identity earned from participation in systems rather
+than presumed by a sprite. Ungar wrested the receiver from the message
+send; Bogost wants the player wrested from the avatar. It's the same
+abdication, and only one of them has a working interpreter.
+
 ## The Willy Wonka factory had output
 
 One more correction the essay earns, gently. Bogost writes that Wright

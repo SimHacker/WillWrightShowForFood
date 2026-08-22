@@ -802,7 +802,11 @@ The classic rule families are guard algebra wearing lab coats:
   assemble themselves into virtual objects depending on how you
   look at them — where "how you look at them" is the context
   binding, said in plain English. Rocks, clouds, minds, objects:
-  none of them are single things; all of them are dispatch.
+  none of them are single things; all of them are dispatch. The
+  de-objectification of object-oriented programming, in one motto:
+  **there are more dimensions than Self** — the language, the ego,
+  and the guard list, all at once; `rcvr` demoted to one dimension
+  among place, time, mood, world.
 - **The Moveable Feast Machine is the soft tier's physics.**
   Ackley's MFM abandons the synchronous total table: events fire
   asynchronously and stochastically, and an element's behavior
