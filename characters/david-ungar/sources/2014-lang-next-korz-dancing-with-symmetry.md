@@ -59,9 +59,9 @@ David pointed Don at Korz in **Oct 2025** — *"the natural extension of Self to
 
 | 2014 talk thread | 2026 repo thread |
 |------------------|------------------|
-| Multi-dimensional context dispatch | [`korz-prime.md`](../korz-prime.md) — strict VM tier + soft LLM tier |
+| Multi-dimensional context dispatch | [`korz/design.md`](../korz/design.md) — strict VM tier + soft LLM tier |
 | Progressive disclosure / Stage Magic | MOOLLM GLANCE → CARD → SKILL pyramid |
-| Symmetric dimensions | Korz eval battery · [`korz-notes.md`](../korz-notes.md) |
+| Symmetric dimensions | Korz eval battery · [`korz/korz-notes.md`](../korz/korz-notes.md) |
 | Early prototype glimpse | Two-minded Troll, Wumpus cartridge, Revolutionary Chess reparenting ([`chat-guide.md`](../chat-guide.md) §5) |
 | Subjectivity | Cross-Platform Troll = Korz subjective object in adventure-4 |
 

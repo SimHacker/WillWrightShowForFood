@@ -43,7 +43,7 @@ surgery into the reusable change-name skill.
 
 ## A design beat: what would Vanessa think of Korz′?
 
-[korz-prime.md](../../characters/david-ungar/korz-prime.md) leans on her SqueakJS
+[The Korz′ design](../../characters/david-ungar/korz/design.md) leans on her SqueakJS
 one-liner — *"My plan is to do as little as necessary to leverage the enormous
 engineering achievements in modern JS runtimes"* — as prior art for its soft tier,
 and poses the question without answering it. This is where it gets argued, because

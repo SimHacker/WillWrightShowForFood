@@ -46,6 +46,11 @@ bio:
     - "AI-assisted reverse engineering across languages — analyze, translate, verify, iterate"
     - "The tooling that inspired Don's VitaMoo (Don's own TypeScript character renderer)"
 
+current_work:  # 2026-08 — brief; details evolve at Jeff's pace
+  - "Hod (from Greek hodos, 'path') — rework of the Sims tooling as an ecosystem: save editor + mod manager designed to be AI-optional, exchange backend, node-graph SimAntics editing"
+  - "Local AI character experiments on small local models — voice in and out via his 'voice box' STT+TTS module, voice-to-voice conversation between two characters running fully locally, and vibe-labeled voices so dialogue generation can cast the right voice for the right role"
+  - "Unreal Engine and virtual production"
+
 why_a_guest:
   foundational: "SimObliterator is part of what made the show technically possible — the save-file read/write layer under the soul mover."
   the_feedback_loop: |
@@ -67,6 +72,7 @@ why_a_guest:
 
 sources:
   github: https://github.com/DnfJeff/SimObliterator_Suite   # Jeff's SimObliterator Suite
+  homepage: https://dnfjeff.github.io   # Jeff's page
   designs: https://github.com/SimHacker/moollm/tree/main/designs/sim-obliterator
   vitamoo_repo: https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo   # Don's VitaMoo
   vitamoo_demo: https://vitamoo.space

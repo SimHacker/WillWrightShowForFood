@@ -59,7 +59,7 @@ trusted mapping wins most auctions but never owns the outcome.
 ## Links
 
 - The Korz paper (shareable): [worrydream.com/refs/…Korz…](https://worrydream.com/refs/Ungar_2014_-_Korz_Simple,_Symmetric,_Subjective,_Context-Oriented_Programming.pdf) · [ACM](https://dl.acm.org/doi/10.1145/2661136.2661147)
-- The full analysis: [david-ungar deep dive](../../david-ungar/sources/korz-paper-deep-dive-moollm-mapping.md) · [Don's Korz Q&A](../../david-ungar/korz-notes.md)
+- The full analysis: [david-ungar deep dive](../../david-ungar/sources/korz-paper-deep-dive-moollm-mapping.md) · [Don's Korz Q&A](../../david-ungar/korz/korz-notes.md)
 - Grig's constellation: [CHARACTER.yml](../CHARACTER.yml) — Universal Manifest, Web of Worlds, EverArchive
 
 ↑ [character](../README.md)

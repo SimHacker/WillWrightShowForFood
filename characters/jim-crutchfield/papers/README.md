@@ -146,7 +146,7 @@ the online transfer lacks — the director's cut wants to exist, or better,
   computer into the feedback loop via a video frame buffer"* — swap the frame
   buffer for a language model and you have the robopoetry loop's wiring
   diagram: the LLM is the frame buffer. And the buildable version is in the
-  browser: [korz-prime](../../david-ungar/korz-prime.md) sketches compiling
+  browser: [the Korz CA case study](../../david-ungar/korz/case-cellular-automata.md) sketches compiling
   Korz specs into **WebGPU compute shaders with the video camera in the
   loop** — camera → shader pipeline → canvas → camera, variation (6) live in
   a tab, with 1984's knobs (rotation, zoom, pan, focus) as shader uniforms.
@@ -161,7 +161,7 @@ the online transfer lacks — the director's cut wants to exist, or better,
   neighborhood, zoom scales it, pan translates it — and **focus sets its
   radius** (defocusing is literally turning up the spatial diffusion rate).
   It's the same generalization
-  [korz-prime](../../david-ungar/korz-prime.md) makes when it reads cellular
+  [the Korz CA case study](../../david-ungar/korz/case-cellular-automata.md) makes when it reads cellular
   automata as fully-crystallized Korz ("CA at absolute zero") with
   neighborhoods as dimensions. Video feedback is the analog machine where you
   *turn the neighborhood with a lens ring* — the optical bench is the
@@ -195,7 +195,7 @@ history it stores and how it uses that memory to behave.
   inventory sets, and the [rhetoric
   organ](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md)'s
   dramaturgy (ride the loop up to peak absurd beauty, then gong it).
-- **It's korz-prime's temperature axis with the sign conventions worked out.**
+- **It's Korz′'s temperature axis with the sign conventions worked out.**
   Fully crystallized rules at one end (strict tier, CA at absolute zero),
   noise at the other, and the interesting representations in between — the
   soft/strict two-tier design is a bid to *live* at Crutchfield's operating

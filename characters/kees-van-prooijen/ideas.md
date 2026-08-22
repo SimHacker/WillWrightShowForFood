@@ -14,7 +14,7 @@
   morphologies."
 - Chaim × Kees: editor design meets editor engineering.
 
-## Language design beats (korz-prime thread)
+## Language design beats (the [Korz′ thread](../david-ungar/korz/README.md))
 
 - Intercol → IL: what the shading language taught him about language
   design ("the lessons learned... were fully exploited as a new

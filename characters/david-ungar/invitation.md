@@ -131,7 +131,7 @@ Don writes timestamped listening notes and questions; you reply async; Don weave
 **Scaffolds:** [Stroustrup/Hewitt](sources/2026-08-stroustrup-hewitt-followup-article-scaffold.md) · [Korz](sources/2026-08-korz-dancing-with-symmetry-article-scaffold.md) ·
 **Correspondence:** [`sources/2026-08-correspondence-facetime-and-async-pitch.md`](sources/2026-08-correspondence-facetime-and-async-pitch.md)
 
-Framing: Will Wright's GDC 2005 close — [*revisit those weird old ideas*](https://youtu.be/ofA6YWVTURU?t=3657) when the stack finally catches up. The Korz talk connects directly to your Oct 2025 pointer and [`korz-prime.md`](korz-prime.md).
+Framing: Will Wright's GDC 2005 close — [*revisit those weird old ideas*](https://youtu.be/ofA6YWVTURU?t=3657) when the stack finally catches up. The Korz talk connects directly to your Oct 2025 pointer and [`korz/design.md`](korz/design.md).
 
 This is TicketPR-shaped — written participation, zero live pressure, honor your *no fire-hose* preference.
 

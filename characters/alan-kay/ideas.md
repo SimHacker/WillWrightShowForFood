@@ -53,7 +53,7 @@ the model — HyperCard cards, Morphic, Self 4.0 outliners). ASK Alan: is a user
 bidirectional view layer over a minimal live model *the* missing HyperCard layer he keeps
 pointing at? MOOLLM's answer is that the LLM is that layer — views are conversational
 projections, materialized on request, and writable. Worked notes:
-[Ungar korz-notes](../david-ungar/korz-notes.md), [Korz′](../david-ungar/korz-prime.md).
+[Ungar korz-notes](../david-ungar/korz/korz-notes.md), [Korz′](../david-ungar/korz/design.md).
 
 ### 4. PIXIE and halos — light-pen menus before the mouse won
 **PIXIE** (Engelbart-era light pen, down-facing display sketch) and Smalltalk **halos**

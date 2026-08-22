@@ -4,7 +4,7 @@
 > directly; wait for LADLE to produce playbooks.
 >
 > Started: 2026-08-21. Skill: moollm `skills/cauldron` (MELT).
-> Design source: [korz-prime.md](korz-prime.md). This monolith plans the
+> Design source: [design.md](design.md). This monolith plans the
 > **runnable, unoptimized proof of concept**: YAML jazz schemas defined by
 > example, a deterministic interpreter over a git repo substrate, and the
 > LLM ping-pong loop for everything the strict tier refuses.
@@ -13,7 +13,7 @@
 
 ## 1. Current state: what is wrong
 
-korz-prime.md is ~1200 lines of design with zero running code. Every claim
+The design (design.md, né korz-prime.md) is ~1200 lines of design with zero running code. Every claim
 about the strict tier — guards match decidably, ambiguity errors, dispatch
 traces as plain text, doesNotUnderstand promoted to peer dispatcher — is
 currently prose. The Self prototype needed an image and an IDE; Korz′ claims
@@ -264,7 +264,7 @@ parser.** Confidence: 85%.
   `commentBefore`/`comment` on every node, is designed for parse-edit-
   stringify workflows, and exposes a CST layer when byte-exactness matters.
 - One language spans the whole arc: node CLI engine now, browser demo later,
-  and the WebGPU crystallization target korz-prime already names — camera
+  and the WebGPU crystallization target the design already names — camera
   in the loop, no port required.
 - Dynamic enough for soup semantics, typed enough to encode the schemas.
 
@@ -343,7 +343,7 @@ Runners-up, honestly assessed:
 | M3 | Method slots (js bodies via `node:vm`), `needsCrystallization` prose → code | two tiers, one soup |
 | M4 | Tree-dimension fall-through: guard matches value or ancestor (sparse shadow delegation) | dimension-parents |
 | M5 | Troll-bridge adventure on the Zork five dimensions | it plays |
-| M6 | Crystallization spike: compile a rule-table subset to a lookup table or WGSL | korz-prime §crystallization, live |
+| M6 | Crystallization spike: compile a rule-table subset to a lookup table or WGSL | design.md §crystallization, live |
 
 Repo: start as `korz-poc/` inside a sandbox, graduate to its own GitHub
 repo at M2 when the ping-pong is demonstrable.
@@ -398,7 +398,7 @@ beside the facts they annotate.
 - **The file boundary is chrome.** Slot identity is `path#/slots/N`, not
   the file; reorganizing files must not change dispatch.
 - **Traces beside sends.** Debugging symmetric dispatch means reading the
-  trace file, not stepping a debugger — korz-prime's IDE-audit table, made
+  trace file, not stepping a debugger — hosting-moollm.md's IDE-audit table, made
   real.
 
 ## Appendix B. Questions still awaiting a decision
@@ -454,7 +454,7 @@ beside the facts they annotate.
   name), `eq/gte/lte/in/range`, `within:` for tree dimensions,
   combinators `all/any/not`. Anything else is a prose leaf and soft.
 - **The engine's name.** Default: **Kelvin** — the strict tier runs at
-  absolute zero (korz-prime's own metaphor: crystallize, melt, the warm
+  absolute zero (the design's own metaphor: crystallize, melt, the warm
   end of the scale), and Lord Kelvin's "when you cannot measure it...
   your knowledge is of a meagre and unsatisfactory kind" is the strict
   tier's constitution, with the soft tier as the meagre-but-necessary
@@ -463,7 +463,7 @@ beside the facts they annotate.
 
 ### B.3 New questions raised by later deep-dives
 
-- **Adventure compiler as a client (2026-08-21).** korz-prime now
+- **Adventure compiler as a client (2026-08-21).** the design now
   proposes the reverse arrow: the adventure compiler targets the Korz
   engine as its runtime — compilation becomes translation into the
   soup, host capabilities (I/O, persistence, dice, timers, media)

@@ -7,8 +7,9 @@ as the portrayal grows.
 ## Layout
 
 - **`media/`** — flat room for PDFs, photos, catalogs (see [`will-wright/media/`](../will-wright/media/README.md) and [`../process/character-colocation.md`](../../process/character-colocation.md))
-- **`sources/`** — receipts, links, Producer clips (if you have a character room — see [`producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml))
+- **`sources/`** — receipts, links, Producer clips (if you have a character room — see [`producers-and-show-notes.yml`](../../process/producers-and-show-notes.yml)); `sources/private/` is gitignored for correspondence bodies
 - Person stuff stays here even if the guest appears on many shows under `repo-shows/`
+- **No `portrayal/` for guests.** Supplementary facts go straight into `CHARACTER.yml`; don't scaffold satellite YAML (`extensions.yml`, stub `bio.yml`) around it. The `portrayal/` directory is a **host-only** pattern — [`don-hopkins/portrayal/`](../don-hopkins/portrayal/) exists because Don models himself deeply (voice, upbringing, consent grants) and the repo-show skill reads those files; a guest gets that treatment only if they show up and want it
 
 ## Character profile README
 

@@ -251,7 +251,7 @@ After AIR: melt via cauldron → SCOOP into [`skills/`](../skills/README.md) and
 
 **Breeding:** horizontal gene transfer via PRs · serial endosymbiosis ([character endosymbiosis](character-endosymbiosis.md)) · [Powers of Ten](https://en.wikipedia.org/wiki/Powers_of_Ten) nesting · git-as-MMORPG (branches = parallel universes, PRs = timeline merges).
 
-**Director's cuts:** episodes accrete reactions and re-release as ever-longer cuts — the diff between releases IS the drama.
+**Director's cuts:** episodes accrete reactions and re-release as ever-longer cuts — the diff between releases IS the drama. Lineage: the [Stanford Storytelling Project](https://storytelling.stanford.edu/)'s *State of the Human* — theme episodes plus bonus episodes where the makers articulate the craft of their process.
 
 ---
 

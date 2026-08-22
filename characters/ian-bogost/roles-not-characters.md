@@ -117,19 +117,37 @@ long as we're still able to 'express ourselves' with the makeshift tools
 we are rationed by the billionaires" — is a diagnosis with no exit
 ramp. Soul City's answer is the punk one, with
 [Nina Hagen as patron saint](../../catalogs/soul-city/README.md#the-attitude):
-when the wall's owner starts rationing your tools, you don't petition —
-you walk out with your voice intact and get louder. She did it to an
-actual walled state in 1976; Soul Saver does it to the silos, moving
-character souls onto rails nobody can expatriate you from. Bogost asked
-us to play the game of systems rather than the game of identities; exit
-is a systems move.
+when the wall's owner starts rationing your tools, you don't petition
+the wall — you walk out with your voice intact and get louder. She did
+it to an actual walled state in 1976; Soul Saver does it to the silos,
+moving character souls onto rails nobody can expatriate you from.
+
+And the walking out *is* the petition. Migrating your Sims to Soul City
+means more than the practical fact that it saves the essence — the soul
+— of characters you've spent years empathizing with. It's **an act of
+protest: voting with your feet**, legible to EA in the only language a
+debt-loaded balance sheet reads. Hirschman framed exit and voice as the
+customer's two options; a federation collapses them — every household
+that walks out of the barbed-wire-and-guard-post walled garden into the
+open public commons is a countable signature, a walk for charity out
+the front gate, souls in hand. And the counting is designed, not
+metaphorical: the Sims bridge gets a voluntary petition that players
+*and their characters* can sign and comment, a one-way turnstile that
+counts you if you choose, and a real-time "OVER *N* SIMS SOULS SAVED"
+tote board, golden-arches style
+([the turnstile](../../catalogs/soul-city/README.md#the-turnstile)).
+Procedural rhetoric all the way down: the protest is an interface, the
+signature is opt-in, and the Sims get to sign their own emancipation
+papers. Bogost asked us to play the game of systems rather than the
+game of identities; exit is a systems move, and here it's also the
+message.
 
 One footnote for the language-design bench: a role is a **dimension
 binding**. Zork rebound WINNER when you said "ROBOT, PUSH BUTTON"; The
 Sims bound `me` and `stackObject`; a SimCity role binds *which controls
 and which views* a character gets over the shared model. Same move,
 different substrate — see
-[korz-prime](../david-ungar/korz-prime.md) on characters and locations
+[the Korz Zork case study](../david-ungar/korz/case-zork.md) on characters and locations
 as the load-bearing pair.
 
 ## The Sims resisted representation — by design, twice
@@ -249,7 +267,7 @@ time, mood, world. **There are more dimensions than Self** — the
 language, the ego, and the guard list, all at once. Minsky made the
 same move on minds: the "Single Agent" theory — the little person deep
 inside who does the real mental work — is a myth every culture clings
-to, and good theories require dissolving it into a society. [korz-prime](../david-ungar/korz-prime.md) works
+to, and good theories require dissolving it into a society. [The Korz CA case study](../david-ungar/korz/case-cellular-automata.md) works
 both threads; the Margolus neighborhood is the emblem — a cellular
 automaton block with **no center cell**, four sites dispatching
 symmetrically, none of them "the receiver." The pronouns tell the

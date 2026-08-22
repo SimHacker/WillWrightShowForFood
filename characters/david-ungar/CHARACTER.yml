@@ -29,6 +29,17 @@ bio:
     David was generous, open, and cross-pollinating — Conscientious Objectors, self-interest,
     papers, humor (Self: The Movie). Don: huge credit owed even if Self never shipped on every device;
     the ideas did — and the VMs (V8) borrowed the speed without the simplicity.
+    And he literally opened Don's eyes and focused his attention: his foveation critique of the
+    Unity3D pie menus' deselection flourish (peripheral motion is a hardware interrupt — animate
+    the rejects and you summon the eye to exactly what the user just dismissed) became a standing
+    design principle: "Motion is a foveation summons. Only send it where you want the eye."
+    (fitts-and-foveation.md)
+
+moollm_lineage:
+  # What MOOLLM inherits from Ungar's line, in his own vocabulary
+  stage_magic_principle: "Simple view until complex truth — GLANCE → CARD → SKILL pyramid"
+  idea_scavenging: "Focus compute on persistent ideas — character/skill persistence (after generation scavenging)"
+  dynamic_pessimization: "MOOLLM optimistic simplification until forced to deepen (Don's pet name for dynamic deoptimization — stated to Ungar directly, Oct 2025)"
 
 show_suggestions:
   - { seed: ../../repo-shows/david-ungar/, what: "Solo — Reflecting on Self: Narcissa's Mirror; Self × MOOLLM; k-line inheritance; build live" }
@@ -61,6 +72,7 @@ sources:
 
 see_also:
   - { path: reflecting-on-self.md, why: "North star — episode menu + Self × MOOLLM mapping" }
+  - { path: fitts-and-foveation.md, why: "David's foveation critique of Don's pie menus — motion is a foveation summons; Sims popup-head prior art" }
   - { path: sources/2006-08-21-don-to-tom-lord-ungar-at-laszlo.md, why: "Primary receipt — Ungar interviewing at Laszlo, Aug 2006" }
   - { path: ../tom-lord/sources/2006-08-21-lua-spidermonkey-ungar-at-laszlo.md, why: "Full Don→Tom Lord email (Ungar + OL + Lua thread)" }
   - { path: ../tom-lord/self-v8-tom-lord-2006-hn-2022.md, why: "HN 2022 quote of the Ungar graph" }
@@ -72,6 +84,7 @@ see_also:
   - { path: ../henry-minsky/, why: "Laszlo + Leela — reunion cast" }
   - { path: ../david-rosenthal/slots-all-the-way-down.md, why: "Self pole — slots, MI, JS critique; patent co-thread" }
   - { path: ../don-hopkins/import-self-from-self.md, why: "MOOLLM constitution — import self from self" }
+  - { path: ../don-hopkins/conscientious-objectors-enlightened-self-interest.md, why: "Conscientious Objectors — the Kaleida meetup he was in the room for, full lineage" }
   - { path: ../alan-kay/, why: "Smalltalk → Self lineage (messaging, late binding)" }
   - { path: ../dan-ingalls/, why: "Smalltalk/Squeak — live-object substrate" }
   - { path: ../oliver-steele/, why: "Instance-first — LZX obeys what JS violates; ISP vs Declare" }

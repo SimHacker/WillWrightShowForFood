@@ -115,7 +115,7 @@ Link: [cursor-mirror](https://github.com/SimHacker/moollm/tree/main/skills/curso
 
 ## 5. Korz — he opened this door
 
-**Don's Q&A crib sheet: [korz-notes.md](korz-notes.md)** — all questions
+**Don's Q&A crib sheet: [korz/korz-notes.md](korz/korz-notes.md)** — all questions
 and worked answers, including the KORZ⇄ZORK anagram (great for
 adventures and games; the troll is a Korz subjective object containing
 Zork).
@@ -141,9 +141,9 @@ his original pointer: [sources/2025-10-26-korz-email-hn-rollup.md](sources/2025-
   the is-of-predication, and the passive voice in one move. Korz does
   the same to the object model: no object *is* anything absolutely —
   only behavior in context. "Red" lives in the dispatch, not the rose.
-  ([worked out in korz-notes](korz-notes.md))
+  ([worked out in korz-notes](korz/korz-notes.md))
 - [ ] **Korz′ (Korz-Prime) — the constructive pitch**
-  ([korz-prime.md](korz-prime.md)): keep Korz's semantics, add a
+  ([korz/design.md](korz/design.md)): keep Korz's semantics, add a
   second dispatcher. Strict tier = deterministic VM (compiles the
   decidable subset); soft tier = LLM (prose guards, semantic match,
   latent fallthrough, `blend` combination). **Crystallize** hot soft
@@ -168,7 +168,7 @@ his original pointer: [sources/2025-10-26-korz-email-hn-rollup.md](sources/2025-
   dimension = Self's move on Smalltalk's classes, one level up. *Ask
   about the future-work "dimensions that alter the interpreter" — how
   far did they get? what grounds the regress?*
-  ([worked out in korz-notes](korz-notes.md))
+  ([worked out in korz-notes](korz/korz-notes.md))
 - [ ] **Cross-Platform Troll = a Korz subjective object** — one sea of
   slots, `world` dimension picks zork-mind vs adventure-mind. His
   sentence ("same entity behaving differently in different

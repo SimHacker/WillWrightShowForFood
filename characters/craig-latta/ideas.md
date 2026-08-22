@@ -34,7 +34,7 @@ Don's fresh chat with Ungar (Aug 2026): **Korz**, the even-selfisher language �
 anagram of Zork; subjective programming, a sea of slots grouped along parameterized dimensions
 instead of decomposed into objects. Built at IBM, presented at Microsoft's LANG.NEXT. Deep
 material already in the repo:
-[korz-notes.md](../david-ungar/korz-notes.md) · [korz-prime.md](../david-ungar/korz-prime.md) ·
+[korz-notes.md](../david-ungar/korz/korz-notes.md) · [korz/design.md](../david-ungar/korz/design.md) ·
 [Onward! 2014 paper](../david-ungar/sources/korz-2014-onward.pdf).
 **Jam with Craig:** the lineage from the Smalltalker's side — what would a Korz image feel like
 to livecode? Could Caffeine host a sea of slots the way Self hosted the Korz prototype?

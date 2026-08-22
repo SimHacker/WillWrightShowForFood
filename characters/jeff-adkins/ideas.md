@@ -75,6 +75,16 @@ voiced and posed live (mic amplitude scrub applies). On-brand and *already shipp
 [`puppet-taxonomy.yml#kinds.sims-3d-puppet`](../../bits/tradition-puppet-taxonomy/tradition-puppet-taxonomy.yml) and
 [`performance-space.yml#sims-3d-puppet`](../../process/performance-space.md).
 
+### 8. Local voices — two characters talking on your own machine
+Jeff has voice-to-voice conversation running between two AI characters on **small local
+models** — a primer prompt becomes the first character's opening line to the other, and
+they take it from there, fully offline. Where that meets the show's voice stack:
+**[Voystick & voice space](../../bits/theme-voystick-voice-space/theme-voystick-voice-space.md)**
+(instruments, not clones), **Pink Trombone** vocal-tract synthesis, and **VitaMoo puppets**
+(7b) as the faces — local characters with local voices driving Sims bodies on stage. The
+Sims angle writes itself: **Simlish was always emotional gibberish** — prosody over
+content — which is exactly what small local models are best at.
+
 ## Sources (real, public)
 - SimObliterator Suite: https://github.com/DnfJeff/SimObliterator_Suite
 - VitaMoo (WebGL characters — **Don's**, TS reimpl of his own Unity3D C#): https://github.com/SimHacker/MicropolisCore/tree/main/packages/vitamoo · demo https://vitamoo.space

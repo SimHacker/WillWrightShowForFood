@@ -52,7 +52,7 @@ logic**."
 Sit with that phrase. Intensional logic is the logic where an
 expression's value depends on the *context of evaluation* — the same
 name denotes different things at different indices. That is the
-[korz-prime](../david-ungar/korz-prime.md) move — slots whose meaning
+[Korz′](../david-ungar/korz/design.md) move — slots whose meaning
 is subject to the dimensions you evaluate them under — shipped as a
 working art tool decades early. Kees didn't write a paper about
 subjective programming; he grew three decades of paintings out of it.
@@ -115,7 +115,7 @@ function.
   Trottier](../chris-trottier/)): the prototyping era, when the
   creature editor was three engineers, a designer, and a genetic
   algorithm learning to walk.
-- **Language design** — the [korz-prime](../david-ungar/korz-prime.md)
+- **Language design** — the [Korz](../david-ungar/korz/README.md)
   conversation needs him: Self and Korz from David Ungar's side,
   Intercol and IL from the working artist's side. Two languages of
   his own, one based on intensional logic — context-dependent

@@ -1,12 +1,12 @@
 # Korz — Don's notes, questions, and answers
 
 Working notes from reading the paper
-([sources/korz-2014-onward.pdf](sources/korz-2014-onward.pdf)) ahead of
+([../sources/korz-2014-onward.pdf](../sources/korz-2014-onward.pdf)) ahead of
 the demo. Short answers here; the long arguments live in the
-[deep dive](sources/korz-paper-deep-dive-moollm-mapping.md). Questions
+[deep dive](../sources/korz-paper-deep-dive-moollm-mapping.md). Questions
 still open for David are marked **ASK**. The constructive answer —
 what a Korz redesigned for the LLM age looks like — is
-[korz-prime.md](korz-prime.md): one semantics, two dispatchers,
+[design.md](design.md): one semantics, two dispatchers,
 crystallize/deopt between them.
 
 ## KORZ is an anagram of ZORK
@@ -26,7 +26,7 @@ dispatching on a `world` dimension (zork-mind vs adventure-mind — he's
 a Korz subjective object *containing Zork*, the anagram closed into a
 loop; he can front one mind or blend between them, mixing the minds
 with different weights — and he's literally two-headed, head size
-displaying the live weights — see korz-prime on `ambiguity: blend`),
+displaying the live weights — see the [troll-blend example](examples/troll-blend.md)),
 [Revolutionary Chess](https://github.com/SimHacker/moollm/tree/main/skills/experiment/experiments/turing-chess/plugins/revolutionary-chess)
 reparenting pieces mid-game, moody rooms writing dispatch temperature
 ([MOODY](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md)).
@@ -82,7 +82,7 @@ coordinate**: you can't bind `location: none` to mask specific slots,
 or guard on absence. The soft tier offers a third option beyond
 null/absence: **graded presence** — with K-line referents the test is
 not `isNull: bool` but `isKnown: float`, and guards can threshold on
-it (see [korz-prime](korz-prime.md) §isNull becomes isKnown).
+it (see [epistemics.md](epistemics.md) §isNull becomes isKnown).
 **ASK:** missing feature or dodged bullet — or a boolean shadow of a
 continuous question?
 
@@ -240,7 +240,7 @@ SOP (Harrison & Ossher '93, IBM) decomposes by *who is looking* —
 composed perspectives, build time, symmetric. COP (Costanza &
 Hirschfeld, ContextL) decomposes by *what is happening* — layers
 activated at run time. Neither contains the other; the FOOL '14
-position paper ([local PDF](sources/fool2014-korz-foundation.pdf))
+position paper ([local PDF](../sources/fool2014-korz-foundation.pdf))
 argues both are projections of Korz: subject = viewer coordinate,
 layer = guard, composition rules = dispatch specificity. **ASK:** still
 hold that, ten years on?
@@ -261,7 +261,7 @@ action-routine cascade (room, indirect, direct, verb default). Five
 hardwired dimensions and a frozen specificity order in the Z-machine,
 1979 — and character + location are exactly the pair MOOLLM reifies
 as directories. Full riff:
-[korz-prime §Zorkizing Adventure](korz-prime.md).
+[case-zork.md](case-zork.md).
 **ASK:** did the Korz team know they were generalizing two shipped
 game VMs — and that one of them spells the language's name?
 
@@ -352,13 +352,13 @@ classical Korz. And the auction is already running in this repo:
 MOOLLM cards are bundles of Sims advertisements — guarded (`condition`)
 and scored (`score`) — i.e. Korz slots with the precedence declared
 numerically instead of derived structurally. See
-[korz-prime §What are cards?](korz-prime.md). **ASK:** would he buy
+[hosting-moollm.md §What are cards?](hosting-moollm.md). **ASK:** would he buy
 dispatch as an auction?
 
 **Can the LLM be the Korz interpreter, the way MOOLLM interprets Self?**
 MOOLLM applies LLMs to executing Self with inferencing extensions:
 inherit from latent space, smart context-sensitive method resolution.
-The same move for Korz is [korz-prime](korz-prime.md) — one semantics,
+The same move for Korz is [design.md](design.md) — one semantics,
 two dispatchers: the VM compiles the decidable slots, the LLM
 improvises over the rest (semantic coordinate match, prose guards,
 sample-don't-error on ambiguity, fall through to latent space on a
@@ -411,8 +411,8 @@ his pocket; every guard is a hole waiting for a context to fall
 through it. And every don't-care is a hole the disco ball shines
 through.
 
-Related: [deep dive + MOOLLM mapping](sources/korz-paper-deep-dive-moollm-mapping.md) ·
-[chat guide](chat-guide.md) ·
-[his original Korz pointer](sources/2025-10-26-korz-email-hn-rollup.md) ·
+Related: [deep dive + MOOLLM mapping](../sources/korz-paper-deep-dive-moollm-mapping.md) ·
+[chat guide](../chat-guide.md) ·
+[his original Korz pointer](../sources/2025-10-26-korz-email-hn-rollup.md) ·
 [GAME-PIECES](https://github.com/SimHacker/moollm/blob/main/designs/GAME-PIECES.md) ·
 [ENDOSYMBIOSIS](https://github.com/SimHacker/moollm/blob/main/designs/object-system/ENDOSYMBIOSIS.md)

@@ -75,6 +75,21 @@
   as patron saint — punk exit from walled gardens, not exit interview; answers
   the closing of his own 2015 essay ("we'll sign away anything… rationed by
   the billionaires") with a systems move: leave, take the souls, get louder
+- [The turnstile](../../catalogs/soul-city/README.md#the-turnstile): exit as
+  petition — voluntary signatures from players *and their Sims*, a one-way
+  turnstile that counts you if you choose, and a live "OVER *N* SIMS SOULS
+  SAVED" tote board; protest as procedural rhetoric, for the man who named
+  the category — and Don, Heather, and Steve can build it **in The Sims** as
+  custom objects (petition on the dining table, turnstile in the yard, tote
+  board on the lawn syncing to the site): the exit conducted diegetically,
+  from inside the walled garden being left
+- [The pool](../../catalogs/soul-city/README.md#the-pool): the turnstile
+  opens onto a gated pool with a diving board and **no ladder** — the game's
+  most famous death inverted into ceremony; the soul is already exported, so
+  the dive is pure statement, and the lawn of generator-engraved tombstones
+  grows one grave per saved soul — the drowning pool as baptismal font in
+  reverse, surely the darkest procedural rhetoric ever pitched to its own
+  theorist
 
 ### 4b. Roles, not characters — his 2015 essay, answered with running code
 

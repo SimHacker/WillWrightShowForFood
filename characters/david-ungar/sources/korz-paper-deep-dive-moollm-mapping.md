@@ -26,7 +26,7 @@ perspective constructs perception. (Korz is also an anagram of Zork —
 same four letters, *not* a reversal; Korz backwards is "Zrok." Don's
 observation, unremarked in the published record — and apt: adventures
 and games are where subjective dispatch earns its keep; see
-[Don's Korz notes & Q&A](../korz-notes.md).) Two Korzybski
+[Don's Korz notes & Q&A](../korz/korz-notes.md).) Two Korzybski
 resonances worth keeping: MOOLLM's rebuttal to the map/territory slogan
 is that the map *can* be the territory if you make the map a directory —
 the [Cross-Platform Troll's soul realms](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll/realms)
@@ -369,7 +369,7 @@ endosymbiosis, and MOOLLM keeps a specimen cabinet:
 own genome in four languages, the coatroom grue metabolizing the host
 world's darkness.
 
-Related: [Don's Korz notes & Q&A](../korz-notes.md) ·
+Related: [Don's Korz notes & Q&A](../korz/korz-notes.md) ·
 [Oct 2025 Korz pointer](2025-10-26-korz-email-hn-rollup.md) ·
 [Self entry points](self-entry-points.md) ·
 [Don's tiered-JIT note](../../don-hopkins/deoptimize-to-the-llm.md) ·

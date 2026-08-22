@@ -80,8 +80,8 @@ and wrote some mind-blowing papers
 ([Onward! 2014](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/korz-2014-onward.pdf) ·
 [FOOL 2014](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/sources/fool2014-korz-foundation.pdf)).
 My working notes, questions, and the LLM-age redesign:
-[korz-notes.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz-notes.md) ·
-[korz-prime.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz-prime.md).
+[korz-notes.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz/korz-notes.md) ·
+[korz/design.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/david-ungar/korz/design.md).
 Smalltalk → Self → Korz next to Morphic / Caffeine / Catalyst — that's a conversation I'd love
 to have with you, with or without the full reunion cast.
 

@@ -61,6 +61,35 @@ more paperwork. The institution modeled honestly, exits included:
 procedural rhetoric that trusts you with the whole loop, not just the
 aisle.
 
+## Watch it run
+
+Don demoed the whole chain on video in 2019:
+[Simprov Wedding Play Set](https://www.youtube.com/watch?v=Mwt5LJlrMe8)
+(The Sims 1, graphics by SimBabes and SimFreaks, programming by Don
+Hopkins). The demo documents, live and unrehearsed:
+
+- **The food chain in action** — "it's like the food chain where one
+  object leads to the next": Hope Chest → ownership ("this hope chest
+  now belongs to Bob") → Wedding Consultant → magazines → services.
+- **Cupid as speed-dating infrastructure** — Jim Pitts cloned the phone
+  and modified it so that instead of just calling people up, it makes
+  them fall in love; Don stations Cupid by the front door "for
+  logistical purposes" and runs the numbers game on camera, arrows,
+  rejections, and all.
+- **Satan as emotional-state NPC** — "Satan shows up when somebody is
+  really depressed," so the demo detours into cheering a Sim up before
+  the devil collects him. Consequences modeled diegetically, again.
+- **A same-sex wedding attempted on camera** — "now Bob and Michael…
+  male marriage — like, this is really hard." The playset's paperwork
+  has no gender check; the demo shows the license chain being worked
+  for two men in The Sims 1, nineteen years after ship.
+- **The Crowd Sitter deployed** — "the Crowd Sitter makes people sit
+  down… it's quite useful for weddings": the ceremony's stage
+  management done by an invisible object.
+- The invitation list, the altar/aisle/gown chain, the reset that eats
+  an hour of setup — the chaotic energy is the point, and the comments
+  agree ("I love the caothic energy so much").
+
 ## Reading it now
 
 Marriage in the playset is a *configuration*: officiant, guests,

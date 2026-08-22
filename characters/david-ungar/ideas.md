@@ -108,7 +108,7 @@ MOOLLM applies LLMs to executing Self with inferencing extensions — **inherit 
 space**, smart context-sensitive method resolution. The discussion to have with David: can we
 do the same for **Korz**? An LLM dispatcher over the sea of slots — semantic coordinate
 matching, prose guards, sampling among matches instead of erroring on ambiguity, falling
-through to latent space on a miss. [`korz-prime.md`](korz-prime.md) is the design sketch that
+through to latent space on a miss. [`korz/design.md`](korz/design.md) is the design sketch that
 starts answering: one semantics, two dispatchers — the deterministic VM as optimizing compiler,
 the LLM as interpreter, crystallize/deopt between them, the Self JIT playbook run one level up.
 Companion design: [LATENT-SPACE-INHERITANCE](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md).
@@ -117,7 +117,7 @@ And the filesystem question: MOOLLM views the file system as a **tree of Self ob
 (directories as prototypes, parent lists, delegation). Could it *also* view the same files as
 a **Korz soup of slots** — semi-organized, but arbitrarily viewable and groupable as subjective
 objects along parameterized dimensions? The tree becomes one saved view among many; layers as
-queries over the sea ([korz-notes on layers](korz-notes.md)); the LLM as the IDE tier that
+queries over the sea ([korz-notes on layers](korz/korz-notes.md)); the LLM as the IDE tier that
 materializes any grouping on demand. One repo, two object models, dual-readable — is the Self
 reading and the Korz reading of the same directory a duality or a hierarchy?
 
@@ -129,7 +129,7 @@ one level up, with soups and objects intertwingled: dual-readable tree vs
 sea, same yaml-jazz and big-endian naming. In Korz an **interface** is a
 saved view (guard template + slot grouping, not a container); a **card**
 is GLANCE/CARD/SKILL resolution as guarded advertisements. Full sketch:
-[korz-prime §Hosting Korz in MOOLLM](korz-prime.md).
+[korz/hosting-moollm.md](korz/hosting-moollm.md).
 
 ### 12. OpenLaszlo reunion → Declare (optional group)
 **Receipt:** Don ran into Ungar interviewing at Laszlo — email to Tom Lord, 21 Aug 2006
@@ -159,7 +159,7 @@ weird old ideas* when the stack catches up.
 | **Stroustrup × Hewitt × Ungar** — concurrency, inspirations | [`2014-stroustrup-hewitt-ungar-conversation.md`](sources/2014-stroustrup-hewitt-ungar-conversation.md) · [Bulldozer00 review](sources/2014-stroustrup-hewitt-ungar-bulldozer00-review.md) |
 | **Korz — Dancing with Symmetry** — subjective programming in context | [`2014-lang-next-korz-dancing-with-symmetry.md`](sources/2014-lang-next-korz-dancing-with-symmetry.md) · [Microsoft Learn](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context) |
 
-The Korz talk connects Oct 2025 email → [`korz-prime.md`](korz-prime.md) → MOOLLM specimens in [`chat-guide.md`](chat-guide.md) §5.
+The Korz talk connects Oct 2025 email → [`korz/design.md`](korz/design.md) → MOOLLM specimens in [`chat-guide.md`](chat-guide.md) §5.
 
 → [`sources/2014-async-revisits-index.md`](sources/2014-async-revisits-index.md) · [`invitation.md` Option D](invitation.md)
 

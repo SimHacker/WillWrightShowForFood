@@ -60,7 +60,7 @@ sources:
 see_also:
   - { path: invitation.md, why: "Draft invitation — OL reunion + preservation × metaverse show" }
   - { path: sources/2026-08-17-open-intent-layer-korz.md, why: "Open Intent Layer ↔ Korz dimensions ↔ MOOLLM Postel+provenance — 'defaults without becoming rules' = ads that earn trust" }
-  - { path: ../david-ungar/korz-notes.md, why: "The Korz Q&A Don pointed him toward" }
+  - { path: ../david-ungar/korz/korz-notes.md, why: "The Korz Q&A Don pointed him toward" }
   - { path: ideas.md, why: "Conversation hooks" }
   - { path: sources/2026-07-linkedin-reconnection.md, why: "The Jul 2026 thread that warmed this up" }
   - { path: ../david-temkin/, why: "Laszlo founder — OL 5.0 cc list" }

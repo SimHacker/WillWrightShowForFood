@@ -1,0 +1,61 @@
+# CHARACTER.yml — Dan Bornstein (danfuzz)
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: dan-bornstein
+  name: "Dan Bornstein"
+  aka: danfuzz
+  type: invitation
+  signifier: "🥛"          # milk.com — he'd want the glass, not the trophy
+  status: living
+  field: "VMs and language runtimes — Kaleida ScriptX, Danger, Dalvik (Android's original VM)"
+  home: characters/dan-bornstein/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  channel: "email — public address on milk.com; warm contact (fellow Kaleidan)"
+  show_seed: null          # candidate: pair with david-ungar Kaleida/Korz material
+
+bio:
+  summary: >
+    Kaleida Labs engineer on the ScriptX object system; later Danger,
+    then Google, where he created the Dalvik VM that Android shipped
+    on. Keeps milk.com and its Wall o' Shame.
+
+connections:
+  don-hopkins: "Fellow Kaleidan — worked together in the ScriptX era; in touch since"
+  david-ungar: >
+    Don recalls Dan at the Conscientious Objectors meetup (ScriptX
+    object-system team × Self team, Kaleida, early 1990s) —
+    unconfirmed, ask both.
+
+recollections:
+  # Don's memories, marked as such — ask Dan to refresh them, if he remembers
+  scriptx_multiple_dispatch: >
+    Don recalls ScriptX supported CLOS-like multiple dispatch, which
+    Dan implemented: single-dispatch syntax already annotated the
+    first parameter with its class when defining a method outside
+    the class, and multiple dispatch was just annotating subsequent
+    parameters. Don discussed it with Dan at the time; shipping
+    status uncertain ("I think so").
+  scriptx_scheme_surface: >
+    Don recalls Dan implemented a Scheme-like syntactic surface for
+    ScriptX — straightforward because the language was layered.
+
+sources:
+  web:
+    - https://milk.com/
+    - https://milk.com/wall-o-shame/
+  # Correspondence digest lives in sources/private/ (gitignored per
+  # portrayal-standards: correspondence bodies stay out of the repo).
+
+see_also:
+  - { path: ../don-hopkins/kaleida-scriptx-dreamscape-multimedia-lisp-machine.md, why: "Kaleida/ScriptX context; Conscientious Objectors meetup" }
+  - { path: ../david-ungar/korz/README.md, why: "Korz — multiple dispatch is the shared thread" }
+  - { path: ideas.md, why: "Show hooks" }

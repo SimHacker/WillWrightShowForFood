@@ -43,7 +43,9 @@ At **Kaleida Labs**, the **ScriptX object-system design team** and the **Self te
 (David Ungar and colleagues) held a recurring meetup that Don named the
 **Conscientious Objectors** — conscientious about how we design our *objects*. Prototype-based
 object systems from two directions, bouncing ideas off each other in good faith; not a
-one-way lecture.
+one-way lecture. Don recalls [Dan Bornstein](../dan-bornstein/README.md) — who implemented
+ScriptX's CLOS-like dispatch and later created Android's Dalvik VM — among the attendees
+(unconfirmed; ask him).
 
 The companion phrase in the air back then was **enlightened self-interest** — the
 self-interest pun completed: sharing your object-system ideas openly with the "competing"

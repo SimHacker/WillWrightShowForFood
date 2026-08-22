@@ -35,7 +35,7 @@ This article: what the talk said · what MOOLLM built anyway · what David think
 
 - [Microsoft Learn episode](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context) still up; under-discussed next to the Stroustrup/Hewitt panel at the **same conference**
 - David's Oct 2025 Korz pointer + *"Is there anything like that today? Why not??"*
-- 2026: LLM soft dispatch, yaml-jazz guards, Korz′ two-tier proposal ([`korz-prime.md`](../korz-prime.md))
+- 2026: LLM soft dispatch, yaml-jazz guards, Korz′ two-tier proposal ([`korz/design.md`](../korz/design.md))
 
 ### 2. What Ungar said in 2014 (scene summary)
 
@@ -76,7 +76,7 @@ Cross-walk episode beats to:
 Suggested prompts (David picks any):
 
 - Did the prototype go anywhere after 2014? What would you ship differently now?
-- Korz vs Korz′ ([`korz-prime.md`](../korz-prime.md)) — does the strict/soft tier split honor or betray the symmetry thesis?
+- Korz vs Korz′ ([`korz/design.md`](../korz/design.md)) — does the strict/soft tier split honor or betray the symmetry thesis?
 - **KORZ⇄ZORK** — intentional anagram or happy accident?
 - Self as "Korz unidimensionally" — still your framing?
 - Advertisement scoring in MOOLLM as soft multiple dispatch — did Korz ever consider scored dispatch?
@@ -104,7 +104,7 @@ Both Lang.NEXT 2014. See [`2014-async-revisits-index.md`](2014-async-revisits-in
 ## Don's next actions
 
 - [ ] Re-listen with timestamps; fill section 3
-- [ ] Cross-link listening notes to [`korz-notes.md`](../korz-notes.md) Q&A crib sheet
+- [ ] Cross-link listening notes to [`korz/korz-notes.md`](../korz/korz-notes.md) Q&A crib sheet
 - [ ] Small question batch to David (honor no-fire-hose)
 - [ ] Ask consent before publishing replies verbatim
 

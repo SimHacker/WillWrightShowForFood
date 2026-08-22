@@ -6,8 +6,16 @@ The design principle at the end is the takeaway; the disagreement in the middle 
 
 ## Don's demo: bring the mountain to Mohammed
 
-Don's Unity3D pie menus play an aggressive game with attention. When you move out
-into a slice:
+Don's Unity3D pie menus play an aggressive game with attention. **Watch them run:**
+[Unity3D Pie Menu Demo](https://www.youtube.com/watch?v=sMN1LQ7qx9g) (2012, Stupid Fun
+Club) — the label-comes-to-the-cursor move is at 0:49 ("it's bringing these to where my
+eyes are looking instead of I have to move my eyes around a lot"), and the center head
+that looks at the selected item is at 1:37 — in this demo it's **your own head**, webcam
+texture on a 3D object, playing the Sims popup head's role. The demo also shows a
+disabled item that explains *why* it's disabled (Pac-Man, 1:05) — a different courtesy
+to attention: don't make the user hunt for a reason the interface already knows.
+
+When you move out into a slice:
 
 - **The selected item comes to you.** The label slides right up to the cursor, and a
   description progressively reveals itself *under* the cursor — right where you're
@@ -114,6 +122,12 @@ thing in the spotlight. The Sims menu got the split right by theatrical instinct
 - **Fitts' law design notes** —
   [pie-menus-fitts-law.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/pie-menus-fitts-law.md)
   in MicropolisCore.
+- **Popup head design archaeology** (code-free Knuth-style reading of shipped vs cut features) —
+  [popup-head-design-notes.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/vitamoo/popup-head-design-notes.md)
+  in MicropolisCore vitamoo docs.
+- **The demo video's source room** —
+  [don-youtube-sMN1LQ7qx9g-unity-pie-menus](../will-wright/sources/don-youtube-sMN1LQ7qx9g-unity-pie-menus/README.md)
+  under Will's sources (harvested for the premiere show; same lineage as the Sims/NeWS pie menu work).
 - **Self's Stage Magic Principle** — David has been applying theatrical attention
   discipline to UIs since the Self morphs: the magician controls where you look.
   Same instinct, now with the evolutionary mechanism spelled out.

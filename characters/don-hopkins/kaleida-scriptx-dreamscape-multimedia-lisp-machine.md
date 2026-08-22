@@ -41,15 +41,33 @@ explicit reference (possibly to the very clock the parent uses; same effect eith
 default is inherit, so unnecessary clocks never get made. The clock tree is a **sparse shadow
 tree** over the dense view tree — materialized only where somebody needed a new timebase —
 the pattern named and generalized in
-[korz-prime § Sparse shadow trees](../david-ungar/korz-prime.md): one dense tree, N sparse
+[sparse-shadow-trees](../david-ungar/korz/sparse-shadow-trees.md): one dense tree, N sparse
 shadows (time, style, placement, provenance), each nearly empty, absence delegating up.
 
 The Korz reading writes itself: the clock tree is **delegation along a time dimension** — every
 node inherits its parent's timebase and overrides rate and offset locally, exactly as a
 transform hierarchy delegates space. Windows had both at once: one tree, two dimensions,
-per-node overrides. ([korz-prime](../david-ungar/korz-prime.md)'s "interpret, don't invent"
-table would file this as prior art: the head-tilt where a containment hierarchy *is* an
-inheritance hierarchy, applied to time in 1993.)
+per-node overrides. ([The Korz′ design](../david-ungar/korz/design.md)'s "interpret, don't
+invent" table would file this as prior art: the head-tilt where a containment hierarchy *is*
+an inheritance hierarchy, applied to time in 1993.)
+
+## The object system — multiple dispatch, as Don remembers it
+
+ScriptX's method syntax already leaned generic-function: defining a method outside its class,
+you **annotated the first parameter with its class name** — the receiver as an explicit,
+typed argument rather than an implicit `self`. And Don recalls that **multiple dispatch was
+just annotating subsequent parameters too** — a CLOS-like approach where single dispatch was
+merely the one-annotation case. **Dan Bornstein ([danfuzz](../dan-bornstein/README.md))
+implemented it**; Don discussed it with him at the time, though he's not certain the feature
+shipped ("I think so"). Dan also built a **Scheme-like syntactic surface** for ScriptX —
+straightforward, because the language was layered. He went on to Danger and then to Google,
+where he created the **Dalvik VM** that Android shipped on.
+
+If the recollection holds, ScriptX belongs in the shipped-multimethod lineage beside CLOS and
+Dylan — which matters one directory over: [Korz](../david-ungar/korz/README.md) generalizes
+multiple dispatch from "all the arguments" to "the whole context," and Kaleida had the
+N-argument ancestor running down the hall from the Self team. Verification is a show segment
+waiting to happen: ask Dan, with David Ungar in the room.
 
 And it's the missing infrastructure under the video-sampler lineage: **EBN's VuJak chorded
 time from a keybed** (MIDI notes jumping a QuickTime movie's playhead — see the
@@ -80,7 +98,9 @@ and 2026 eBike Safari's hidden graph at real-world POIs.
 The **ScriptX object-system design team** and the **Self team** held a great Kaleida meetup
 called **Conscientious Objectors** — prototype-based object systems from two directions,
 bouncing ideas off each other. Not a one-way lecture: ScriptX OO multimedia Lisp meets Self's
-power-of-simplicity rig; mirrors, inheritance, and live objects argued in good faith.
+power-of-simplicity rig; mirrors, inheritance, and live objects argued in good faith. Don
+thinks [Dan Bornstein](../dan-bornstein/README.md) was in the room — the man who implemented
+ScriptX's dispatch would have been arguing the multimethod corner.
 
 → Dream show with David Ungar: [`self-interest-narcissas-mirror-david-ungar.md`](self-interest-narcissas-mirror-david-ungar.md) · [`../david-ungar/`](../david-ungar/README.md)
 → The term's full 1967–2026 lineage: [`conscientious-objectors-enlightened-self-interest.md`](conscientious-objectors-enlightened-self-interest.md)

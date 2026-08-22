@@ -8,7 +8,7 @@ with "what if I had keys for those?" Then it plugs into the speech-synth
 feedback loop as the missing instrument on the text-generation side.*
 
 Sidecar of the Korz′ design run —
-[korz-prime.md](../david-ungar/korz-prime.md) supplies the theory
+[korz/design.md](../david-ungar/korz/design.md) supplies the theory
 (K-lines, context vectors, guarded dispatch); this is the theory with keys
 under your fingers.
 
@@ -136,7 +136,7 @@ knows about diacope — you never define the figure, you press its name.
 Point, don't spell. A chord is a **context vector**; the streaming model is
 **dispatch resolving against it in real time**; the faders are **fronting
 weights** (the [two-headed
-troll](../david-ungar/korz-prime.md) as a mixing console — a mind's head
+troll](../david-ungar/korz/examples/troll-blend.md) as a mixing console — a mind's head
 swells when its fader rises). Velocity-sensitive keys make `isKnown` audible:
 a figure the model knows deep (alliteration) responds at a feather touch; an
 obscure one (zeugma) needs the key mashed. The keyboard is a Korz context
@@ -343,7 +343,7 @@ gongs the whole rig. Reset laugh. Encore: the audience picks the letter.
 
 ## Ties
 
-- [korz-prime.md](../david-ungar/korz-prime.md) — K-lines, context vectors,
+- [korz/design.md](../david-ungar/korz/design.md) — K-lines, context vectors,
   isKnown, the two-headed mixer
 - [performance-and-culture.yml#speech-feedback-loop-instrument](../../repo-shows/will-wright-premiere/performance-and-culture.yml) — the Slats loop this completes
 - [crazy-idea-jam.yml#phoneloper](../../process/crazy-idea-jam.yml) — the synthesizer station

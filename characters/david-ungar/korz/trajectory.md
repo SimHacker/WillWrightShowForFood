@@ -1,6 +1,6 @@
 # Korz′ Trajectory — the session that grew the document
 
-A sidecar to [korz-prime.md](korz-prime.md), prefix-named so `ls`
+A sidecar to [korz-prime.md — now design.md](design.md), prefix-named so `ls`
 clusters them into the implicit subtree that document describes —
 the sidecar practices the doctrine it records. This is the design
 discussion of **August 20–21, 2026** written up as what it actually
@@ -134,7 +134,7 @@ that came back → where cached.
 
 *Interlude, 22:30–23:30:* the Brain Flurries / Hierarchy of Bleeds
 jam with Heather and Steve — same method, different document
-([the Heather & Steve show's sources](../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md),
+([the Heather & Steve show's sources](../../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md),
 `a24fcade`). The session multitasked; the method didn't change.
 
 ## Phase 2 — the addressing cascade (Aug 20, 23:41 – Aug 21, 00:04)

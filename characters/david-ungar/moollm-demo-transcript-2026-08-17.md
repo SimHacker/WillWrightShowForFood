@@ -192,5 +192,5 @@ concrete objects (Palm's self-authored YAML) · delegation (`inherits:`)
 ---
 
 *See also in this directory: [chat-guide.md](chat-guide.md) (the runbook this
-session unknowingly followed, beat for beat) · [korz-notes.md](korz-notes.md)
+session unknowingly followed, beat for beat) · [korz/korz-notes.md](korz/korz-notes.md)
 · [reflecting-on-self.md](reflecting-on-self.md).*

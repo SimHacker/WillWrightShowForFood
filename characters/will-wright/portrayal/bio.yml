@@ -1,5 +1,0 @@
-# Biographical girder — see CHARACTER.yml (canonical)
-
-bio:
-  canonical: ../CHARACTER.yml
-  note: "README.md is the human portrait; CHARACTER.yml holds sims flavor + sources"

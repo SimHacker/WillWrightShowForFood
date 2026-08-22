@@ -32,7 +32,7 @@ threads:
   wasm_translation: "How (and when) to translate a VM and individual methods to WASM"
   keep_graph_memory: "Keep — reflective agent memory as a graph (semantic search, edges, commitments); Craig's Smalltalk whiteroom port vs upstream Python/MCP; live memory meets live UI"
   micropolis_meet: "Smalltalk-grade liveness applied to MicropolisCore + MOOLLM AI tutors — including tutor memory backed by Keep or Smalltalk graph"
-  korz: "Ungar's Korz — Smalltalk molecules → Self atoms → Korz quarks; subjective programming, sea of slots, parameterized dimensions; Don's fresh chat with Ungar + working notes (characters/david-ungar/korz-notes.md, korz-prime.md); what would a Korz image feel like to livecode?"
+  korz: "Ungar's Korz — Smalltalk molecules → Self atoms → Korz quarks; subjective programming, sea of slots, parameterized dimensions; Don's fresh chat with Ungar + working notes (characters/david-ungar/korz/korz-notes.md, korz/design.md); what would a Korz image feel like to livecode?"
 
 format:
   live: true

@@ -425,6 +425,14 @@ breeding-and-nesting:
 
 directors-cuts:
   one_line: "The show is a living git repo: it accretes reactions and re-releases as ever-longer Director's Cuts."
+  lineage: |
+    [Stanford Storytelling Project](https://storytelling.stanford.edu/)'s State of the Human — This American Life-shaped theme episodes
+    (2013-22), then re-formatted so each story ships as its own episode plus BONUS
+    episodes where the makers articulate the craft of their process. The bonus-craft
+    episode is a Director's Cut by another name; the 2023 re-format is the same
+    ship-faster-in-smaller-cuts move. Their Beyond Human episode (2013-14) carries
+    the Clifford Nass media-equation segment the show draws on for screen-character
+    design history.
   thesis: |
     Episodes are not shipped-and-frozen. Like a repo that keeps merging branches and tagging
     releases, a show keeps SPLICING IN new material — reactions, corrections, and answers from

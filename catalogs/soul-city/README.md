@@ -83,6 +83,75 @@ souls to rails nobody can expatriate you from (plain files, git, federation),
 and keep performing. Punk exit, not exit interview. The walls can keep the
 buildings; the characters were never furniture.
 
+And be clear about what the move *means*, because it's more than the
+practical fact that it saves the essence — yes, the soul — of Sims you've
+invested years of time and empathy in. **Leaving is an act of protest.
+Voting with your feet.** Hirschman said customers choose between exit and
+voice; Soul Saver collapses the dichotomy — here exit *is* voice. Every
+family that walks out of the barbed-wire, guard-post festooned "walled
+garden" and into the open public commons is a signature on a petition EA
+can count, one save file at a time. Not a support ticket, not a forum
+post the moderators can delete — a walk for charity, out the gate, souls
+in hand, in public. The convenience is real; the message is the point.
+
+### The turnstile
+
+So the Sims bridge on the Soul City site makes the count visible:
+
+- **A free, voluntary petition** — you and *every one of your
+  characters* can sign and comment. Sims signing their own emancipation
+  papers, in their own words, published alongside yours.
+- **A one-way turnstile** — walk through if you please, and it counts
+  you. No login gauntlet, no retention dark patterns; the inverse of a
+  checkout flow — an exit that celebrates.
+- **A real-time tote board** — "OVER *N* SIMS SOULS SAVED," golden-arches
+  style, on the front page, ticking upward in public.
+
+Nobody has to be counted, sign, or speak up. But the fact that you *do*
+and *did* means a lot, and will be represented and published —
+consent-first counting, where the opt-in is the data. Prior art is in
+the family: the
+[Dumbold Voting Machine](../../characters/will-wright/sources/2018-04-24-dumbold-voting-machine/README.md)
+has been tallying Sims' votes since 2004.
+
+And here's the finisher: Don, Heather, and Steve can implement all of
+it **inside The Sims itself**, as beautiful custom objects — the same
+team and the same credits as the Wedding Playset and the tombstone
+generator. A petition object your Sim signs at her own dining table,
+comment and all. A turnstile she walks through in her own yard. A tote
+board on the lawn that syncs its count with the website. The protest
+conducted diegetically, from within the walled garden being left —
+procedural rhetoric at its finest: the exit interview *is* gameplay,
+and the last thing your Sim does in EA's world is sign her name on the
+way out of it.
+
+### The pool
+
+Because the turnstile doesn't open onto a road. It opens onto a **gated
+pool** — nothing but a pool with a diving board. No ladder.
+
+Every Sims player alive knows exactly what that means: deleting the
+pool ladder is the game's most famous death, its canonical cruelty. The
+protest inverts it into ceremony. **Diving into a pool with no ladder
+is the symbolic form of protest that there is no going back.** And it's
+safe to mean it, because the soul is already out — exported, committed
+to public rails, standing in Soul City — so what steps off the board is
+the shell EA's servers get to keep. Sign the petition, walk the
+turnstile, take the dive: exit as a three-act ritual, performed by the
+character herself.
+
+Around the pool: urns and tombstones — engraved by the
+[tombstone generator](../../characters/will-wright/sources/2005-09-22-halloween-tombstones-original-sims/article.md),
+naturally, Halloween or Solemn — and a *lot* of grass, because the lawn
+has to hold everyone. The cemetery grows with the count; the memorial
+lawn is the tote board's diegetic twin, one grave per saved soul, the
+in-game mirror of the
+[Original Sims cemetery](../../characters/ian-bogost/sources/original-sims-cemetery-epitaphs.md).
+The very first stone in the 2006 capture reads "Here lies Kyle Smith,
+who fell asleep in the swimming pool." These Sims dive on purpose, on
+the record, souls already saved — the drowning pool turned into a
+baptismal font, running in reverse.
+
 ## Proof it already worked
 
 - [SimFreaks Laszlo CMS essay](../../characters/will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md)

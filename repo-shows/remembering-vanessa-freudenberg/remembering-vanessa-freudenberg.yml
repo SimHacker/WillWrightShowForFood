@@ -58,7 +58,7 @@ threads:
   - "JS vs WASM for live VMs — her insights; Craig's Caffeine/Catalyst continuation"
   - "Her JIT brain dumps — characters/vanessa-freudenberg/sources/jit-notes/"
   - "The prestoration adventure — change-name skill, cursor-mirror, ethics of correcting the record with receipts"
-  - "What would Vanessa think of Korz-prime's LLM tier? Friends remember and imagine — never LLM-simulated; her own words, notes, papers, code, live environments as the evidence (she chose readable JS over WASM and rode the JIT; see david-ungar/korz-prime.md)"
+  - "What would Vanessa think of Korz-prime's LLM tier? Friends remember and imagine — never LLM-simulated; her own words, notes, papers, code, live environments as the evidence (she chose readable JS over WASM and rode the JIT; see david-ungar/korz/design.md)"
   - "Etoys, Plopp, Croquet/Multisynq — playful objects that stay live"
   - "Smalltalk Zoo welcome page credit — Dan names SqueakJS; say it on air"
   - "Cursor / IDE chrome vs live systems — Don + Craig (and friends) compare notes"
