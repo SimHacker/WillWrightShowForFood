@@ -14,41 +14,57 @@ format: remote_or_async
 
 Ian —
 
-You coined **procedural rhetoric** — "an unholy blend of Will Wright and Aristotle"
-([*The Atlantic*, 16 Mar 2015](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/);
-*Persuasive Games*, MIT Press, 2007). The Sims
-lineage in our repo is basically a two-register case study waiting for the person who named the
-category — and Don's unfinished **QGCon paper** [*How Inclusivity Saved The Sims*](../don-hopkins/sources/qgcon-inclusivity-paper/README.md)
-makes the same argument across twenty years of marriage-law parallel track + design docs.
+Some news you'll enjoy, in case it hasn't reached you: since March, The Sims 4
+Marketplace runs on a real-money currency called "Moola." $2.49 buys 200.
+Balances don't transfer between platforms.
 
-| Register | Artifact | Argument in rules |
-|----------|----------|-------------------|
-| **Inclusion agitprop** | SimProv Wedding Playset (Crowd Sitter, Cupid, Buddha, Hope Chest) | Who gets recognized in front of friends and family |
-| **Institutional farce** | Dumbold Voting Machine (2004 e-voting satire) | Broken audit trail, vendor accountability — time capsule |
+I found out because it collided with a joke of mine. I've been building a
+project with Will Wright — details in a second — and its play economy used a
+satirical currency called MOOLA: infinite, worthless on purpose, paid out to
+anyone who feeds the machine training data. When EA shipped actual Moola, my
+parody was suddenly sharing a name with the cash register it was parodying. So
+this week I renamed it MOONEY, lifted straight from Cow Clicker, with credit
+and a tip of the hat written into the spec file itself. Sixteen years on, your
+fake currency is still satire and their real one is sincere, which I believe
+means you win.
 
-Both sit on the same **SimAntics / dialog engine** Will Wright's January 1997
-[Motive.c](../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c) started — hunger, bladder,
-`"\pYou have wet your bed"`. We'd love your reaction on air: is the wedding playset quintessential
-**intentional inclusion procedural rhetoric** next to *Persuasive Games*? How does procedural satire
-(Dumbold) age vs inclusion playsets republished 20+ years later?
+I've been carrying your cow around for a while. At Unite 2012 in Amsterdam,
+after Peter Molyneux's Curiosity keynote, I chatted him up and joked that the
+big secret inside the cube was a cow. He didn't get it. I explained Cow
+Clicker and the Zynga satire. He still didn't get it. (His keynote is on
+YouTube at 1:08:21; the joke sadly went unrecorded.)
 
-**Will Wright is in** for the [premiere](../../repo-shows/will-wright-premiere/README.md) and more.
+The project: it's called Will Wright Show For Food. Will and old friends and
+colleagues go through real source code and design documents together, on the
+record, in a git repository that doubles as the show's archive. Will is in for
+the premiere.
 
-**Optional dessert** (only if fun): [Cow Clicker](https://bogost.com/games/cow-clicker/) vs Peter
-Molyneux's Curiosity — we keep real Curiosity dead; our cube parody's center is **your** cow (or a
-Berkeley horse — "that's a cow"). [Morningstar's engineer deconstruction](http://www.fudco.com/chip/deconstr.html)
-→ MOOLLM Captain Ashford homage → you → Don putting the cow inside the box. Not a Curiosity revival —
-a postmortem.
+The segment I'd want you for is The Sims read as procedural rhetoric. We have
+Will's Motive.c from January 1997 — hunger, bladder, "\pYou have wet your
+bed" — and two objects of mine that ran on the same engine with opposite
+intents: the SimProv Wedding Playset, which put same-sex weddings in front of
+friends and family years before the law caught up, and the Dumbold Voting
+Machine, a 2004 e-voting satire with the broken audit trail built in. One
+argues for inclusion, one argues by farce, same instruction set. I also have
+an unfinished QGCon paper, "How Inclusivity Saved The Sims," that needs your
+kind of reading more than it needs my polish.
 
-**Repo links:**
+And only if it sounds like fun: Cow Clicker against Curiosity, done as a
+postmortem, not a revival. We keep Curiosity dead. The contrast I care about
+is satire built on purpose versus hype that satirized itself by accident —
+nobody needs another Molyneux dunking, least of all Molyneux.
 
-- Your room: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ian-bogost/
-- Show seed: https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
-- Essay hook: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md
-- Conversation hooks: [`ideas.md`](ideas.md)
+Format is whatever suits you: written Q&A over email, a call, a recorded
+segment. You'd have editorial veto over anything that publishes near your
+name.
 
-Async written Q&A → optional recorded addendum is fine. Your editorial veto on what publishes.
+Links, if you want to poke around:
 
-— Don Hopkins
+- Your room in the repo: https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ian-bogost/
+- The currency spec with your credit: https://github.com/SimHacker/WillWrightShowForFood/blob/main/process/mooney.yml
+- The Molyneux keynote: https://www.youtube.com/watch?v=24AY4fJ66xA (1:08:21)
 
-*P.S. Repo in quiet mode while invitations go out — please don't share links publicly just yet.*
+-Don
+
+*P.S. The repo is in quiet mode while invitations go out — please don't share
+links publicly just yet.*
