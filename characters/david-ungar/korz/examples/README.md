@@ -25,7 +25,7 @@ Each example states which end of the spectrum it sits on, up front.
 |---|---|---|
 | [troll-blend.md](troll-blend.md) | Self-contained intro → MOOLLM-integrated | Ambiguity policy: sample vs blend; coordinates as distributions; dispatch mixtures worn as visible anatomy |
 | [sims-advertisements.md](sims-advertisements.md) | Self-contained (shipped commercial software is the canon) | Dispatch as an auction: scored advertisements, find-best-N dither, why argmax over lies is being deterministically conned |
-| [moody-temperature.md](moody-temperature.md) | MOOLLM-integrated | Temperature as a context dimension; environments that write the dispatch context; media broadcasting coordinates |
+| [moody-temperature.md](moody-temperature.md) | MOOLLM-integrated | Temperature as a context dimension; environments that write the dispatch context; media broadcasting coordinates; virtual vs API heat 2D map |
 
 More are planned as the case studies mature — the
 [Zork](../case-zork.md) and

@@ -349,7 +349,8 @@ interpreter. Take that seriously and standardize three:
   be. Ambient — a scene sets it once and every dispatch below
   inherits it — and the environment itself can write it: moody media
   broadcasting heat into the room
-  ([the MOODY example](examples/moody-temperature.md)). Zero recovers
+  ([the MOODY example](examples/moody-temperature.md) — including
+  the virtual-vs-API heat 2D map). Zero recovers determinism: strict
   determinism: strict Korz is the corner case Korz′ reaches at
   temperature 0 with decidable guards.
 - **`provenance:`** — who wrote this slot (human, model, session,

@@ -159,6 +159,139 @@ not into code but into a dispatch CSV — diffable row-wise in git,
 greppable, sortable into its own lattice, loadable by the strict tier
 as a table and readable by the soft tier as prose with a header.
 
+## Array view declaration — shape in the URL, then drill
+
+The tensor paragraph above names the family (Zarr paths, HDF5 hyperslabs,
+numpy strides) but does not yet spell the **URL grammar** for treating an
+opaque file as an N-D array and drilling into it. MOOCO's seek table
+([PROTOTYPE-FRAGMENT-CONFIG.md](https://github.com/SimHacker/moollm/blob/main/designs/PROTOTYPE-FRAGMENT-CONFIG.md))
+says "opaque binary: no seek unless registered handler." This section is
+that handler's contract: **two layers in one address**.
+
+1. **View declaration** — how to *read* the bytes (dtype, shape, offset,
+   strides, CSV header policy). Usually `?` on the URL; Postel also accepts
+   the same keys as the first `#` segment when query strings are awkward.
+2. **Coordinate drill** — where to point *inside* the interpreted array or
+   table. Always `#`, continuing the guard chain in the reader's coordinate
+   system.
+
+The file boundary is not a wall; neither is the byte boundary. Offset skips
+a prefix **without parsing it** — dc offset for binary, distinct from CSV
+`header=` which *does* parse the skipped rows as metadata.
+
+### View declaration (`?` query)
+
+| Key | Meaning | Example |
+|---|---|---|
+| `offset=` | Byte offset before first element | `offset=512` |
+| `dtype=` | Element type (numpy spellings) | `f32`, `float32`, `>f4`, `i16`, `u8` |
+| `shape=` | Dimensions, comma or `×` separated | `784,784` or `256×256×3` |
+| `strides=` | Optional byte strides per axis | `3136,4` |
+| `order=` | `C` or `F` if strides omitted | `order=C` |
+| `header=` | CSV: rows to skip, or `names` | `header=1`, `header=names` |
+| `delimiter=` | CSV field separator | `delimiter=;` |
+| `encoding=` | Text decoding | `encoding=utf-8` |
+| `names=` | Axis names when shape is given | `names=time,mood,world` |
+
+Minimal raw view:
+
+```text
+weights.bin?offset=512&dtype=f32&shape=784,784
+```
+
+Suffix shorthand (dtype worn on the name, like MIME):
+
+```text
+weights.f32?offset=512&shape=784,784     # .f32 ⇒ dtype=float32
+map.u16?shape=120,120                     # .u16 ⇒ dtype=uint16
+```
+
+If `shape` is omitted but `dtype` and file size are known, infer length-1
+or square 2D when unambiguous; otherwise the address is incomplete and the
+strict tier errors (soft tier may guess with provenance attached).
+
+### CSV — header-aware, two drill dialects
+
+**Named dimensions** (Korz guard query on rows — header row binds axis
+names, see above):
+
+```text
+greet.csv#world=zork
+greet.csv#world=zork&mood=*
+greet.csv#rcvr=troll*,world=adventure
+```
+
+**Positional** ([RFC 7111](https://www.rfc-editor.org/rfc/rfc7111)):
+
+```text
+greet.csv#row=4
+greet.csv#row=2-5
+greet.csv#col=3
+greet.csv#cell=4,2
+greet.csv#region=2,2,5,8
+```
+
+**Column by header name** (header-aware positional):
+
+```text
+greet.csv#col=mood
+greet.csv#row=4-8,col=greet
+```
+
+Default for `.csv`: `header=names` unless overridden. Row 0 binds
+dimensions; empty cell = unmentioned, `*` = bare, value = constrained.
+
+### Array drill (`#` hyperslab)
+
+Comma separates axes; `:` gives ranges (numpy slice semantics, half-open).
+Ellipsis and named axes when `names=` was declared:
+
+```text
+weights.bin?dtype=f32&shape=784,784#0,0:16,16
+weights.bin?dtype=f32&shape=784,784#100:110,200:210
+
+tensor.bin?dtype=f32&shape=100,8,12&names=time,mood,world#time=45,mood=romantic
+tensor.bin?dtype=f32&shape=100,8,12#45,3,0:12
+```
+
+1-D flat index when rank is collapsed:
+
+```text
+weights.bin?dtype=f32&shape=614656#flat=1024:2048
+```
+
+### Self-describing and standard binary types
+
+When the suffix registers a native reader, the view declaration is
+optional — the format header supplies dtype and shape:
+
+| Suffix / container | Address pattern |
+|---|---|
+| `.npy` | `array.npy#0,0:10,10` |
+| `.npz` | `archive.npz#weights#0,0:10` (archive member, then slice) |
+| `.h5`, `.hdf5` | `data.h5#/group/dataset#0:10,0:10` |
+| `.nc` | `field.nc#/temperature#time=0,lat=40:50` |
+| `.zarr` | `tensor.zarr/3/1/0` (path = chunk coordinates; head-tilt in reverse) |
+| `.zarr` (mounted) | `tensor.zarr#3,1,0` |
+
+Nested archives chain left-to-right (MOOCO rule): each `#` re-enters the
+handler for the resource selected so far.
+
+```text
+assets.pack.zip#weights.bin?offset=512&dtype=f32&shape=784,784#0,0:16,16
+checkpoint.npz#layer3/weights#100:110,0:64
+objects.far#/troll.iff#/SPR2/0#0,0:32,32
+```
+
+### Handler registration
+
+New suffixes and view keys register a **seek adapter** — same path
+language, different drill implementation. Korz reading: the view
+declaration is a guard on the **reader dimension**; the hyperslab is a
+guard vector in the array's coordinate system; CSV header names are
+guard dimensions on rows. Zarr chunk filenames, HDF5 internal paths, and
+`?dtype=&shape=` on a flat `.bin` are three faces of one sea.
+
 ---
 
 *Next: [epistemics.md](epistemics.md) — what happens when an address
