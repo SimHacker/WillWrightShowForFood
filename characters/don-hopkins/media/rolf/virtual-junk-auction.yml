@@ -2,7 +2,7 @@
 
 auction:
   name: Rolf Pixley Virtual Junk Auction
-  currency: MOOLA
+  currency: MOONEY
   deed_format: "JUNK-{slug}"
   discovery: "Found in junk drawer — patrons bid after misreading labels"
   mantra: "NEVER gateway · ALWAYS invite duplication"
@@ -11,56 +11,56 @@ lots:
   - slug: workshop-panorama
     deed: JUNK-WORKSHOP-PANORAMA
     file: workshop-panorama-amsterdam.png
-    floor_moola: 12000
+    floor_cud: 12000
     menagerie: "Gregory: long clutter, short liquidity."
 
   - slug: space-keychains-bundle
     deed: JUNK-SPACE-KEYCHAINS
     files: 8
-    floor_moola: 8500
+    floor_cud: 8500
     menagerie: "Bunny: Board approved Tereshkova PFP."
 
   - slug: retro-compute-bundle
     deed: JUNK-RETRO-COMPUTE
     files: 5
-    floor_moola: 22000
+    floor_cud: 22000
     menagerie: "Slats: I trained on your breadboard. You're welcome."
 
   - slug: thacher-slide-rule
     deed: JUNK-THACHER-1881
     file: thachers-calculating-instrument-1881.png
-    floor_moola: 45000
+    floor_cud: 45000
     menagerie: "Margot: K&E 1881 — the warrantee voids your kitchen anyway."
 
   - slug: jenny-haniver-cloche
     deed: JUNK-JENNY-HANIVER
     file: jenny-haniver-bell-jar.png
-    floor_moola: 18000
+    floor_cud: 18000
     menagerie: "Vandermeer: Sea devil under glass. Do not step."
 
   - slug: alligator-fridge
     deed: JUNK-GATOR-FRIDGE
     file: alligator-fridge-curious-moments.png
-    floor_moola: 31000
+    floor_cud: 31000
     menagerie: "Mimsy: CURIOUS MOMENTS — aggressive restraint on appliance—"
 
   - slug: mind-blown-face-puppet
     deed: JUNK-MIND-BLOWN-DON
     file: don-hopkins-mind-blown-face-puppet.png
-    floor_moola: 77000
+    floor_cud: 77000
     premium: "Face-puppet canonical — Pantomime rig reference"
     menagerie: "Don: Great face puppet! MIND=BLOWN."
 
   - slug: raving-bonkers
     deed: JUNK-RAVING-BONKERS
     files: 2
-    floor_moola: 14000
+    floor_cud: 14000
     menagerie: "Slats: British boxing robots — different name, same punch."
 
   - slug: rhino-beetle
     deed: JUNK-RHINO-BEETLE
     file: rhinoceros-beetle-shadow-box.png
-    floor_moola: 9000
+    floor_cud: 9000
     menagerie: "Helena: Wings spread like a sermon from the hollow."
 
 hammer_rules:
@@ -70,6 +70,6 @@ hammer_rules:
 
 see_also:
   - amsterdam-junk-drawer.yml
-  - ../../../../process/moola.yml
+  - ../../../../process/mooney.yml
   - ../../jsonsters/simoleon-auctions.yml
   - ../../../../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml

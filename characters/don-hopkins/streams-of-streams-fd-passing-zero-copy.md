@@ -65,7 +65,7 @@ because the transport (a Unix-domain socket) is itself an fd through which you c
 - **File mappings** (`CreateFileMapping`/`MapViewOfFile`) for named/anonymous shared memory;
   `WriteProcessMemory` for direct cross-process writes.
 - **DXGI/D3D shared handles** — `IDXGIResource1::CreateSharedHandle` gives an **NT handle** to a GPU
-  texture/surface that other processes/devices/APIs can open. **Vulkan/CUDA external memory &
+  texture/surface that other processes/devices/APIs can open. **Vulkan/MOONEYA external memory &
   semaphores** on Windows import exactly these NT handles.
 
 ## The cross-API standard (this is where it converges)
@@ -73,7 +73,7 @@ because the transport (a Unix-domain socket) is itself an fd through which you c
 **Vulkan/OpenGL external objects** (`VK_KHR_external_memory` / `_semaphore`, GL `EXT_external_objects`):
 **export** device memory or a sync primitive to an **OS handle** — an **fd/dma-buf on Linux**, an **NT
 handle on Windows**, a **Mach port / IOSurface on Apple** — and **import** it in another API, device,
-or process. **CUDA external memory interop** uses the same handles. So "share this GPU texture with
+or process. **MOONEYA external memory interop** uses the same handles. So "share this GPU texture with
 that process, zero copy" now has a portable recipe: *pick your OS's handle type, export, pass it with
 your OS's handle-passing mechanism, import.*
 

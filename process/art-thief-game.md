@@ -1,12 +1,12 @@
 # Art Thief
 
-[Simulated art opening](simulated-art-opening.md) · [MOOLA](moola.md) · [Menagerie](../characters/menagerie/)
+[Simulated art opening](simulated-art-opening.md) · [MOONEY](mooney.md) · [Menagerie](../characters/menagerie/)
 
 ---
 
 ## The hook
 
-**Own a screenshot deed. Forge a combination. Steal Mimsy's plaid. Argue on Twitch.** Secondary market after simulated opening — patrons covet, trade, forge, steal digital deeds; friendships snap; enemies form. Play § only; settles in MOOLA. **Theft is narrative; the fork was always free.**
+**Own a screenshot deed. Forge a combination. Steal Mimsy's plaid. Argue on Twitch.** Secondary market after simulated opening — patrons covet, trade, forge, steal digital deeds; friendships snap; enemies form. Play § only; settles in MOONEY. **Theft is narrative; the fork was always free.**
 
 Targets already exist: NFT false scarcity, attention economy, training-data heists, PFP flex.
 

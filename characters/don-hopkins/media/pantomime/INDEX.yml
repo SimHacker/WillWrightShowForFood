@@ -43,7 +43,7 @@ artifacts:
 
 repo_show_beats:
   - jsonsters_opening_adjacent_wing
-  - menagerie_squishes_bugs_for_moola
+  - menagerie_squishes_bugs_for_cud
   - levitt_reunion_old_band_back_together
   - distressed_moo_meets_bug_squish_compulsion
 
@@ -51,6 +51,6 @@ see_also:
   - ../../../david-levitt/
   - ../../../../process/old-band-back-together.yml
   - ../../../../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml
-  - ../../../../process/moola.yml
+  - ../../../../process/mooney.yml
   - ../turing-institute/INDEX.yml
   - ../../../richard-stallman/media/copyleft-envelope-1984.yml

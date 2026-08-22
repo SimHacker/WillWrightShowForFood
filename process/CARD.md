@@ -20,7 +20,7 @@
 
 ## Key entries
 
-Format · MOOLA · Drag Race · Retro · AI-offs · Manual · Homefun · Brain stream · Orchestration · Vision
+Format · MOONEY · Drag Race · Retro · AI-offs · Manual · Homefun · Brain stream · Orchestration · Vision
 
 Machine source: [CARD.yml](CARD.yml)
 

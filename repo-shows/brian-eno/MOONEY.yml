@@ -1,0 +1,20 @@
+# MOONEY ledger — Brian Eno opening (play only)
+meta:
+  currency: MOONEY
+  symbol: "🐄"
+  fictional: true
+  spec: ../../process/mooney.yml
+  show: brian-eno
+
+exchange_log: []
+# Example after opening:
+# - { from: guest_§, amount_§: 3700000, to_cud: 3700000, performance: surrender_pile }
+# - { performance: holiday_hole, cud_spent: 1200000, note: "Backhoe until zero" }
+
+performances_planned:
+  - surrender_pile
+  - burning_money
+  - holiday_hole
+  - art_thief_repair_auction
+  - auto_art_theft_grand
+  - curiosity_cow_cube_cowpocalypse

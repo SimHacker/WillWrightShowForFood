@@ -35,7 +35,7 @@ face_puppets:
 
 virtual_auction:
   spec: virtual-junk-auction.yml
-  currency: MOOLA
+  currency: MOONEY
   deed_format: "JUNK-{slug}"
   mantra: "NEVER gateway · ALWAYS invite duplication"
 
@@ -45,5 +45,5 @@ see_also:
   - ../pantomime/INDEX.yml
   - ../robot-collection/INDEX.yml
   - ../../../../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml
-  - ../../../../process/moola.yml
+  - ../../../../process/mooney.yml
   - ../../jsonsters/simoleon-auctions.yml

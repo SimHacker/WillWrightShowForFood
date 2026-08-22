@@ -1,6 +1,6 @@
 # Simulated art opening
 
-[Art Thief game](art-thief-game.md) · [MOOLA](moola.md) · [Menagerie roster](../characters/menagerie/GUEST-ROSTER.yml)
+[Art Thief game](art-thief-game.md) · [MOONEY](mooney.md) · [Menagerie roster](../characters/menagerie/GUEST-ROSTER.yml)
 
 ---
 
@@ -16,9 +16,9 @@ Menagerie patrons bid on wall-title deeds (Unity screenshots, Flame stills, 77MP
 
 Auctioneer: Don Philahue. Ledger: `repo-shows/<show>/AUCTIONS.yml`.
 
-## MOOLA exchange
+## MOONEY exchange
 
-After opening: guest § pile → MOOLA — burn, dig hole, scatter to chat, fund art-thief repairs. Mantra: **NEVER gateway · ALWAYS invite duplication.**
+After opening: guest § pile → MOONEY — burn, dig hole, scatter to chat, fund art-thief repairs. Mantra: **NEVER gateway · ALWAYS invite duplication.**
 
 ## Show hooks
 

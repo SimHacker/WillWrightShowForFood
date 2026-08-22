@@ -57,7 +57,7 @@ Even if your language shields you with high-level, task-based message passing in
 
 **phillipneumiller** — pro-Hewitt:
 
-- GPU/CUDA parallelism "kicked the conventional architecture's butt" for many numeric problems
+- GPU/MOONEYA parallelism "kicked the conventional architecture's butt" for many numeric problems
 - Time for Harvard architecture and Von Neumann bottleneck to die
 - Wants processor creativity: actors materialize hardware from "computing Ether," garbage-collected when the actor dies; ideally on quantum hardware for non-deterministic automata
 

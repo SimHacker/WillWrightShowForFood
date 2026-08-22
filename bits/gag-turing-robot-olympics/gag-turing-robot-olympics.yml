@@ -5,7 +5,7 @@ id: turing-robot-olympics
 type: gag
 status: canon
 authored_by: don-hopkins
-tagline: "POSSIBLE JOY DETECTED!!! — submit Peter Mowforth's 1990 photos to the AI god; receive MOOLA."
+tagline: "POSSIBLE JOY DETECTED!!! — submit Peter Mowforth's 1990 photos to the AI god; receive MOONEY."
 
 pitch: |
   The [First Robot Olympics](https://en.wikipedia.org/wiki/First_Robot_Olympics) (Glasgow, Sept 1990):
@@ -17,7 +17,7 @@ pitch: |
   Years later Don posted Cardiff Walker on Facebook and ran **Google Cloud Vision** (POSSIBLE JOY
   DETECTED!!!), **Microsoft Computer Vision** (POSING: a group of people posing for the camera),
   and **IBM Watson** on the pizza-arm photo (ROBOT ANDROID GAS PUMP DETECTED). The robot is
-  delivering a pizza or a SparcStation. That IS the MOOLA joke.
+  delivering a pizza or a SparcStation. That IS the MOONEY joke.
 
 canonical: ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
 
@@ -28,7 +28,7 @@ highlight_photos:
   - cardiff_walker_girls — Joy + Posing detected
 
 integration:
-  moola: ../../process/moola.yml
+  mooney: ../../process/mooney.yml
   art_thief: ../../process/art-thief-game.yml
   auto_art_theft_grand: ../../process/auto-art-theft-grand.yml
   simulated_opening: "Robot-OLY deeds auction beside 77MP combinations"

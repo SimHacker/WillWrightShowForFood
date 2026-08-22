@@ -39,7 +39,7 @@ vision_api_beats:
   microsoft: "POSING: a group of people posing for the camera"
   ibm_watson: "ROBOT ANDROID GAS PUMP DETECTED!"
   don_pizza_line: "delivering a pizza or a SparcStation"
-  moola: "Misread labels → training data → worthless MOOLA"
+  mooney: "Misread labels → training data → worthless MOONEY"
 
 see_also:
   - first-robot-olympics.yml

@@ -28,7 +28,7 @@ roles:
   auto_art_theft_grand:
     spec: ../../../process/auto-art-theft-grand.yml
     ledger: auto-stolen-collection.yml
-    tagline: "Batch-duplicate every gallery deed; pay victims worthless MOOLA"
+    tagline: "Batch-duplicate every gallery deed; pay victims worthless MOONEY"
   turing-robot-olympics:
     spec: ../../don-hopkins/media/turing-institute/first-robot-olympics.yml
     tagline: "Vision APIs misread 1990 robots — Joy, POSING, gas pump"

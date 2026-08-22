@@ -33,7 +33,7 @@ robot_olympics:
   gag: ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
   wikipedia: "https://en.wikipedia.org/wiki/First_Robot_Olympics"
   david_buckley: "http://davidbuckley.net/RS/History/Olympics90.htm"
-  vision_api_joke: "Google JOY · Microsoft POSING · IBM GAS PUMP — MOOLA training data"
+  vision_api_joke: "Google JOY · Microsoft POSING · IBM GAS PUMP — MOONEY training data"
   this_photo:
     file: robot-olympics-cardiff-1990.png
     credit: "Copyright Peter Mowforth, 1990"
@@ -62,7 +62,7 @@ see_also:
   - ../../../tim-niblett/     # cofounder; named the Institute; HyperNeWS/PdB — memorial
   - ../../../arthur-van-hoff/sources/2026-07-28-robot-olympics-poster-scan-ask.md
   - ../../../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
-  - ../../../../process/moola.yml
+  - ../../../../process/mooney.yml
   - ../../../hyperlook-news-postscript-simcity.md
   - ../../career/work-history.yml
   - ../../career/lineage.yml

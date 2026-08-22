@@ -83,9 +83,9 @@ guest-rituals:
     ledger: repo-shows/<slug>/SECONDARY-MARKET.yml
   auto_art_theft_grand:
     spec: ../../process/auto-art-theft-grand.yml
-    tagline: "Auto Art Theft Grand — Slats scrapes all deeds; GTA energy; MOOLA payouts"
-  moola:
-    spec: ../../process/moola.yml
+    tagline: "Auto Art Theft Grand — Slats scrapes all deeds; GTA energy; MOONEY payouts"
+  mooney:
+    spec: ../../process/mooney.yml
     tagline: "Native worthless currency — exchange §/gold/art; burn, dig hole, duplicate everything"
 
 close_ritual:

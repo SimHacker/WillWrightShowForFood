@@ -30,18 +30,18 @@ outcome:
 economy:
   currency: Simoleons
   symbol: "§"
-  native_settlement: MOOLA
-  moola_spec: moola.yml
-  flow: "Menagerie patrons → guest (artist) in § — then exchange §/gold/art → MOOLA for performances"
+  native_settlement: MOONEY
+  cud_spec: mooney.yml
+  flow: "Menagerie patrons → guest (artist) in § — then exchange §/gold/art → MOONEY for performances"
   crossref:
-    - moola.yml
+    - mooney.yml
     - characters/don-philahue/CHARACTER.yml#easter-eggs.rosebud_cheat
     - characters/don-hopkins/jsonsters/simoleon-auctions.yml
 
-moola_exchange:
-  after_opening: "Guest § pile → MOOLA — burn, dig hole, scatter to chat, fund art-thief repairs"
+cud_exchange:
+  after_opening: "Guest § pile → MOONEY — burn, dig hole, scatter to chat, fund art-thief repairs"
   mantra: "NEVER gateway · ALWAYS invite duplication"
-  training_data_joke: "Chat/patron misreads → AI god harvest → worthless MOOLA payout"
+  training_data_joke: "Chat/patron misreads → AI god harvest → worthless MOONEY payout"
   performances: [burning_money, holiday_hole, surrender_pile, ten_bazillion_patrons]
 
 cast:
@@ -73,9 +73,9 @@ art_thief_game:
   tagline: "Covet, trade, forge, steal digital deeds — friendships snap on git"
   auto_art_theft_grand: auto-art-theft-grand.yml
 
-moola:
-  spec: moola.yml
-  tagline: "Native worthless currency — exchange §/gold/art; training data in, MOOLA out"
+mooney:
+  spec: mooney.yml
+  tagline: "Native worthless currency — exchange §/gold/art; training data in, MOONEY out"
   mantra: "NEVER gateway · ALWAYS invite duplication"
 
 per_guest_files:
@@ -84,7 +84,7 @@ per_guest_files:
     - repo-shows/<guest>/simulated-opening.yml
     - repo-shows/<guest>/AUCTIONS.yml
     - repo-shows/<guest>/SECONDARY-MARKET.yml
-    - repo-shows/<guest>/MOOLA.yml
+    - repo-shows/<guest>/MOONEY.yml
     - repo-shows/<guest>/gallery/ or characters/<guest>/media/
   script_optional: art-opening-night.yml  # fork jsonsters pattern when piece count warrants
 

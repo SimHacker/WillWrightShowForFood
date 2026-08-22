@@ -107,7 +107,7 @@
 |------|--------|
 | [artifactory.md](artifactory.md) | [`artifactory.yml`](artifactory.yml) |
 | [artifactorio.md](artifactorio.md) | [`artifactorio.yml`](artifactorio.yml) |
-| [moola.md](moola.md) | [`moola.yml`](moola.yml) |
+| [mooney.md](mooney.md) | [`mooney.yml`](mooney.yml) |
 | [simulated-art-opening.md](simulated-art-opening.md) | [`simulated-art-opening.yml`](simulated-art-opening.yml) |
 | [art-thief-game.md](art-thief-game.md) | [`art-thief-game.yml`](art-thief-game.yml) |
 | [auto-art-theft-grand.md](auto-art-theft-grand.md) | [`auto-art-theft-grand.yml`](auto-art-theft-grand.yml) |

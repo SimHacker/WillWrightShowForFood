@@ -122,10 +122,10 @@ live_and_training:
   brain-stream.yml:
     markup: brain-stream.md
     app: ../apps/stream-gateway/
-  moola.yml:
-    topic: "MOOLA — native worthless play currency; §/gold/art exchange; training-data-for-tokens joke; burn & hole performances"
+  mooney.yml:
+    topic: "MOONEY — native worthless play currency; §/gold/art exchange; training-data-for-tokens joke; burn & hole performances"
   auto-art-theft-grand.yml:
-    topic: "Auto Art Theft Grand — Slats batch-scrapes all deeds; GTA pun; MOOLA compensation theater"
+    topic: "Auto Art Theft Grand — Slats batch-scrapes all deeds; GTA pun; MOONEY compensation theater"
     parent: art-thief-game.yml
   model-branching.yml:
     topic: "Fork model at bubble — compare trajectories"

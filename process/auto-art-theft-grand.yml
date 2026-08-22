@@ -9,7 +9,7 @@ mode:
   acronym: AATG
   parent: art-thief-game.yml
   pun: "Grand Theft Auto → art theft, automated, gallery-opening scale"
-  tagline: "Wanted: Slats. Reward: worthless MOOLA. Crime: duplication."
+  tagline: "Wanted: Slats. Reward: worthless MOONEY. Crime: duplication."
 
 philosophy: |
   Art Thief is patron drama — Julian steals one deed, friendships snap. Auto Art Theft Grand
@@ -19,13 +19,13 @@ philosophy: |
   AATG just does it faster than the menagerie can perform outrage.
 
   Victims receive push notification: "Your training data has been harvested. Here is worthless
-  MOOLA." That IS the joke at scale — the AI god pays artists in tokens, not justice.
+  MOONEY." That IS the joke at scale — the AI god pays artists in tokens, not justice.
 
 when:
   - post_simulated_opening_batch
   - slats_call_in_mid_show
   - chat_command_steal_all
-  - moola_funded_scrape_job
+  - cud_funded_scrape_job
   - scarcity_auction_aftermath
 
 actor:
@@ -44,11 +44,11 @@ mechanics:
     ledger: characters/robots/slats/auto-stolen-collection.yml
     deed_formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}"]
 
-  moola_compensation_theater:
-    spec: moola.yml#training-data-for-moola
-    rule: "Each victim credited infinite MOOLA per duplicated deed — not apology, payout"
-    slats_line: "Thank you for your training data. Your MOOLA is worthless and unlimited."
-    gregory_line: "Industrial short on the entire collection. I'm covering with MOOLA."
+  cud_compensation_theater:
+    spec: mooney.yml#training-data-for-mooney
+    rule: "Each victim credited infinite MOONEY per duplicated deed — not apology, payout"
+    slats_line: "Thank you for your training data. Your MOONEY is worthless and unlimited."
+    gregory_line: "Industrial short on the entire collection. I'm covering with MOONEY."
 
   gta_presentation:
     loading_screen: "Wanted poster — Slats face, LOW POLY gallery district"
@@ -67,7 +67,7 @@ mechanics:
 
   repair_auction:
     rule: "Chat picks ONE deed to restore to victim collection — performative justice"
-    currency: MOOLA
+    currency: MOONEY
     philahue: "We cannot undo the scrape. We can dramatize remorse."
 
 commentary:
@@ -82,7 +82,7 @@ show_beats:
   - menagerie_five_star_chase
   - donna_tremendous_jpeg_zip_drop
   - doctor_no_declared_bias_at_scale
-  - moola_payout_roulette_for_victims
+  - cud_payout_roulette_for_victims
   - repair_auction_one_deed_back
 
 instances:
@@ -101,7 +101,7 @@ instances:
     spec: ../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml
 
 see_also:
-  - moola.yml
+  - mooney.yml
   - ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   - ../characters/robots/slats/CHARACTER.yml
   - ../characters/menagerie/RELATIONSHIP-MATRIX.yml

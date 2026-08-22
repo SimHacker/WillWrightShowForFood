@@ -70,7 +70,7 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 |--------|------|
 | artifactory.yml | [artifactory.md](artifactory.md) |
 | artifactorio.yml | [artifactorio.md](artifactorio.md) |
-| moola.yml | [moola.md](moola.md) |
+| mooney.yml | [mooney.md](mooney.md) |
 | art-thief-game.yml | [art-thief-game.md](art-thief-game.md) |
 | auto-art-theft-grand.yml | [auto-art-theft-grand.md](auto-art-theft-grand.md) |
 | simulated-art-opening.yml | [simulated-art-opening.md](simulated-art-opening.md) |

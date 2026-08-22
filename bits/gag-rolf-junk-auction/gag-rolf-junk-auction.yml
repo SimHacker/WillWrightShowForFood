@@ -4,7 +4,7 @@ id: rolf-junk-auction
 type: gag
 status: canon
 authored_by: don-hopkins
-tagline: "Found in a junk drawer. MIND=BLOWN. Bid in MOOLA."
+tagline: "Found in a junk drawer. MIND=BLOWN. Bid in MOONEY."
 
 pitch: |
   **Rolf Pixley**'s Amsterdam workshop hoard — before he left the city. Twenty-three deduped photos:
@@ -19,7 +19,7 @@ pitch: |
 canonical: ../../characters/don-hopkins/media/rolf/INDEX.yml
 
 integration:
-  moola: ../../process/moola.yml
+  mooney: ../../process/mooney.yml
   jsonsters: "Fork simoleon-auctions.yml — junk drawer premiere"
   pantomime: "../../characters/don-hopkins/media/rolf/face-puppets.yml"
   face_puppet: don-hopkins-mind-blown-face-puppet.png

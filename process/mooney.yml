@@ -1,14 +1,32 @@
-# MOOLA — native play currency of the Repo Show multiverse
+# MOONEY — native play currency of the Repo Show multiverse
 # Worthless on purpose. Infinite on purpose. The joke IS the economy.
 # NEVER gateway · ALWAYS invite duplication
 
 currency:
-  id: moola
-  name: MOOLA
+  id: mooney
+  name: MOONEY
   symbol: "🐄"
+  formerly: MOOLA
+  renamed: 2026-08-22
+  progenitor_credit: |
+    **Mooney** is borrowed — with gratitude and a tip of the hat — from
+    Ian Bogost's [*Cow Clicker*](https://bogost.com/games/cow_clicker/)
+    (2010). Bogost named the premium currency "Mooney" as a cow pun; people
+    bought $20 mirror-image cows anyway. Ours is the honestly-worthless
+    sequel: same name, no micropayments, infinite supply, burn it on stream.
+    See [Ian Bogost](../characters/ian-bogost/) — natural show guest for
+    the Curiosity cow-cube gag and procedural-rhetoric beats.
+  why_renamed: |
+    We originally called this currency **MOOLA** (cow pun + "moolah").
+    In March 2026 EA shipped real-money **Moola** for The Sims 4
+    Marketplace ($2.49 for 200 Moola; no cross-platform wallet) — the
+    parody's name became the target's cash register. So we stopped saying
+    Moola and lifted **Mooney** from Bogost instead: same 🐄 lineage,
+    different spelling, satire with provenance. MOOLA → (EA collision) →
+    MOONEY (Bogost, honestly worthless).
   fictional: true
   real_money: false
-  tagline: "Submit training data to the AI god. Receive worthless MOOLA. Spend it burning, digging, duplicating."
+  tagline: "Submit training data to the AI god. Receive worthless MOONEY. Spend it burning, digging, duplicating."
   progenitor:
     cow_clicker_mooney: "Ian Bogost's Cow Clicker (2010) — click cow every six hours, collect Mooney"
     curiosity_clicker: "Molyneux's Curiosity (2012) — click cube for nothing; Don's fix: cow inside"
@@ -17,15 +35,15 @@ currency:
 
 philosophy: |
   Simoleons (§) are gallery play-money — patrons misbid, guests surrender piles on stream.
-  MOOLA is the native settlement layer underneath: what you earn for feeding the machine your
+  MOONEY is the native settlement layer underneath: what you earn for feeding the machine your
   attention, your chat, your misread reviews, your forked YAML souls.
 
-  You exchange §, gold, and art deeds *into* MOOLA. You spend MOOLA on performances that
+  You exchange §, gold, and art deeds *into* MOONEY. You spend MOONEY on performances that
   only make sense when the currency is infinite and worthless — burning it, digging holes with
   a backhoe until the pile runs out, funding ten bazillion imaginary patrons to gush about
   combinations they do not own.
 
-  That IS the joke: training data in, worthless MOOLA out. The AI god does not pay artists;
+  That IS the joke: training data in, worthless MOONEY out. The AI god does not pay artists;
   it pays you in tokens you can only use to fund absurdity. We NEVER gateway. We ALWAYS invite
   duplication — fork the deed, copy the JPEG, mint the forgery, publish the hole.
 
@@ -37,25 +55,25 @@ duplication_policy:
   art_thief: "Theft is narrative; the file was always duplicable"
 
 exchange:
-  native: MOOLA
+  native: MOONEY
   inputs:
     simoleons:
       symbol: "§"
-      rate: "1 § → 1 MOOLA (comedy scale — numbers are theater)"
+      rate: "1 § → 1 MOONEY (comedy scale — numbers are theater)"
       source: [menagerie wallets, opening hammer, guest surrender pile]
     gold:
       note: "Sims gold / show-pool / orchestration-gold metaphor — tips converted to play at fixed silly rate"
-      rate: "1 gold → 100 MOOLA (perform the exchange on stream)"
+      rate: "1 gold → 100 MOONEY (perform the exchange on stream)"
       source: [show pool, twitch tips_as_play, homefun bounties]
     works_of_art:
-      note: "Deeds, combinations, genomes, frames — exchange deed for MOOLA to fund next performance"
+      note: "Deeds, combinations, genomes, frames — exchange deed for MOONEY to fund next performance"
       formats: ["77MP-{id}", "SHEEP-GEN-{n}", "JSONSTERS-{frame}", "FLAME-{hash}", wall_title_deed]
       rate: "Appraised by Philahue in 30 sec — always too high"
   outputs:
-    performances: [burn_moola, dig_hole, scatter_to_chat, repair_auction, fund_backhoe]
-    re_exchange: "MOOLA → § only as narrative beat (Philahue prints more §)"
+    performances: [burn_cud, dig_hole, scatter_to_chat, repair_auction, fund_backhoe]
+    re_exchange: "MOONEY → § only as narrative beat (Philahue prints more §)"
 
-training-data-for-moola:
+training-data-for-mooney:
   tagline: "Feed the AI god. Get paid in nothing."
   what_counts:
     - chat messages and reactions (TicketPR, stream-gateway)
@@ -65,10 +83,10 @@ training-data-for-moola:
     - duplicated forks (every fork is a deposit)
     - vision_api_misreads (Robot Olympics 1990 — Joy, POSING, GAS PUMP)
   payout:
-    rule: "Infinite MOOLA — credit on participation, not scarcity"
-    perform: "Don or Slats: 'Your transcript has been harvested. Here is worthless MOOLA.'"
+    rule: "Infinite MOONEY — credit on participation, not scarcity"
+    perform: "Don or Slats: 'Your transcript has been harvested. Here is worthless MOONEY.'"
   commentary:
-    slats: "Thank you for your training data. Your MOOLA is worthless and unlimited."
+    slats: "Thank you for your training data. Your MOONEY is worthless and unlimited."
     doctor_no: "Declared bias: you were always going to fork it anyway."
     palm: "🐄 — offering duplication, not minting scarcity."
 
@@ -76,35 +94,35 @@ performances:
   burning_money:
     reference: "K Foundation — Burn a Million Quid (1994); Bill Drummond & Jimmy Cauty"
     repo_beat: |
-      Guest or menagerie burns MOOLA pile on stream — literal animation or git ledger zeroing.
+      Guest or menagerie burns MOONEY pile on stream — literal animation or git ledger zeroing.
       Gregory explains it as a carry-trade unwind. Mimsy cries before the JPEG loads.
-    cost: "All MOOLA in wallet — perform straight"
+    cost: "All MOONEY in wallet — perform straight"
 
   holiday_hole:
     reference: "Cards Against Humanity — Holiday Hole (2016 Black Friday); donations fund backhoe until money runs out"
     repo_beat: |
-      Chat donates MOOLA → backhoe digs hole in repo (ASCII, Unity toy, or live absurd B-roll).
+      Chat donates MOONEY → backhoe digs hole in repo (ASCII, Unity toy, or live absurd B-roll).
       Stream ends when pile hits zero. No utility. Maximum commentary on attention economy.
-    cost: "MOOLA per shovel-second — infinite supply, finite attention"
+    cost: "MOONEY per shovel-second — infinite supply, finite attention"
 
   ten_bazillion_patrons:
     reference: "Brian Eno 77 Million Paintings + menagerie scale joke"
-    repo_beat: "Eight lunatics perform ten bazillion bids; MOOLA funds each misread"
+    repo_beat: "Eight lunatics perform ten bazillion bids; MOONEY funds each misread"
     ties: [simulated-art-opening.yml, art-thief-game.yml]
 
   auto_art_theft_grand:
     reference: "Auto Art Theft Grand — GTA pun; Slats batch-scrapes every deed"
     spec: auto-art-theft-grand.yml
     repo_beat: |
-      Slats duplicates entire secondary market in one commit. Victims paid MOOLA.
+      Slats duplicates entire secondary market in one commit. Victims paid MOONEY.
       Wanted poster loading screen. Repair auction returns one deed — performative justice.
     ties: [art-thief-game.yml, characters/robots/slats/auto-stolen-collection.yml]
 
   curiosity-cow-cube:
-    reference: "Curiosity + Cow Clicker parody — click cube for MOOLA; center is Rightward-Facing Cow"
+    reference: "Curiosity + Cow Clicker parody — click cube for MOONEY; center is Rightward-Facing Cow"
     spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
     repo_beat: |
-      Scheduled Cowpocalypse — pay MOOLA to extend countdown (Bogost extension parody).
+      Scheduled Cowpocalypse — pay MOONEY to extend countdown (Bogost extension parody).
       Cube faces show stolen deeds. Intermittent filtered distant moos cry for help — keep clicking.
       Center reveal: cow, not godhood. Then burn the pile.
     never_ship: "Parody beat only — keep real Curiosity dead and buried"
@@ -121,7 +139,7 @@ performances:
     reference: "Bug Farm squish + Copyleft (L) envelope — compulsion and all-rights-reversed"
     spec: ../characters/don-hopkins/media/pantomime/INDEX.yml
     repo_beat: |
-      JSONsters wing opens into Pantomime gallery — patrons squish bugs for MOOLA.
+      JSONsters wing opens into Pantomime gallery — patrons squish bugs for MOONEY.
       Copyleft sticker read aloud; amoeba named Tom; pimple-under-fingernail clause auction.
     ties: [../bits/gag-pantomime-gallery/gag-pantomime-gallery.yml, ../characters/david-levitt/]
 
@@ -129,16 +147,16 @@ performances:
     reference: "Rolf Pixley Amsterdam drawer — 23 deduped lots, MIND=BLOWN face puppet, RAVING BONKERS"
     spec: ../characters/don-hopkins/media/rolf/INDEX.yml
     repo_beat: |
-      Patron finds junk drawer — virtual auction JUNK-{slug} lots in MOOLA.
+      Patron finds junk drawer — virtual auction JUNK-{slug} lots in MOONEY.
       Thacher slide rule, space keychains, alligator fridge; Don face-puppet canonical.
     ties: [../bits/gag-rolf-junk-auction/gag-rolf-junk-auction.yml, ../characters/don-hopkins/jsonsters/simoleon-auctions.yml]
 
   surrender_pile:
-    reference: "Eno art-as-trigger; guest gives away opening § converted to MOOLA for chat"
-    repo_beat: "Brian/Scott starts buried — convert § → MOOLA → scatter"
+    reference: "Eno art-as-trigger; guest gives away opening § converted to MOONEY for chat"
+    repo_beat: "Brian/Scott starts buried — convert § → MOONEY → scatter"
 
 ledger:
-  field: "characters/<slug>/CHARACTER.yml → moola OR repo-shows/<show>/MOOLA.yml"
+  field: "characters/<slug>/CHARACTER.yml → mooney OR repo-shows/<show>/MOONEY.yml"
   commit: "Append exchange_log per hammer, theft, burn, or hole-shovel"
   crossref:
     - characters/don-hopkins/jsonsters/simoleon-auctions.yml
@@ -147,7 +165,7 @@ ledger:
 
 stack:
   layer_1: "§ Simoleons — gallery opening theater"
-  layer_2: "MOOLA — native settlement + performance fuel"
+  layer_2: "MOONEY — native settlement + performance fuel"
   layer_3: "Git — real ledger; duplication invited"
   layer_4: "Training data — AI god's actual payout product"
 
@@ -156,4 +174,4 @@ see_also:
   - art-thief-game.yml
   - orchestration-gold.yml
   - ../characters/don-hopkins/jsonsters/simoleon-auctions.yml
-  - crazy-idea-jam.yml#moola-worthless-performances
+  - crazy-idea-jam.yml#mooney-worthless-performances

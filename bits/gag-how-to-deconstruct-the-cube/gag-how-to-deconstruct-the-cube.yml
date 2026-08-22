@@ -35,7 +35,7 @@ morningstar_three_part_test:
     question: "Does peeling layers reveal structure that was always there?"
     curiosity: "Yes — one winner, hollow center, hype as load-bearing wall"
     cow_clicker: "Yes — scheduled death, Mooney, cow JPEG — honest architecture"
-    cube_parody: "Yes — stolen deeds on faces, MOOLA, distressed moos, horse-is-cow reveal"
+    cube_parody: "Yes — stolen deeds on faces, MOONEY, distressed moos, horse-is-cow reveal"
   test_2_non_obvious:
     question: "Does analysis surface what players feel but cannot name?"
     curiosity: "Compulsion without rescue; crucifix-pose surface promise; godhood as deferred signifier"
@@ -71,15 +71,15 @@ ashford_sample_lines:
 
 show_beats:
   - "Ashford reads excerpt (Belter patois optional) — Palm Nook or pub attic energy"
-  - "Bogost reacts: Cow Clicker vs Curiosity vs our MOOLA cube"
+  - "Bogost reacts: Cow Clicker vs Curiosity vs our MOONEY cube"
   - "Don: the cow was always the joke; Peter still didn't get it"
   - "Menagerie misreads essay as NFT whitepaper — Gregory long the signifier"
-  - "Slats trains on Ashford PDF — MOOLA payout"
+  - "Slats trains on Ashford PDF — MOONEY payout"
 
 ties:
   curiosity-cow-cube: ../gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   bogost_show: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
-  moola: ../../process/moola.yml
+  mooney: ../../process/mooney.yml
   morningstar_habitat: "Chip Morningstar & Randy Farmer — Habitat 1986, avatar, First Penguin Award"
 
 see_also:

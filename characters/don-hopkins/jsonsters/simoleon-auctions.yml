@@ -5,8 +5,8 @@
 economy:
   currency: Simoleons
   symbol: "§"
-  native_settlement: MOOLA
-  moola_spec: ../../../process/moola.yml
+  native_settlement: MOONEY
+  cud_spec: ../../../process/mooney.yml
   fictional: true
   not_real_money: true
   flow: |
@@ -14,7 +14,7 @@ economy:
     Proceeds credit the show pool and/or the artist character (`don-hopkins.simoleons` or
     `jsonsters/show-pool`). Reverse of Rosebud/Klapaucius (§ flows TO audience) — here §
     flows FROM nut-job patrons TO the house. Same ledger discipline; different comedy direction.
-    Exchange §, gold, and deeds → MOOLA for worthless performances (burn, hole, scatter).
+    Exchange §, gold, and deeds → MOONEY for worthless performances (burn, hole, scatter).
 
   ledger:
     path: AUCTIONS.yml

@@ -1,6 +1,6 @@
 # First Robot Olympics — Glasgow, 27–28 September 1990
 # Turing Institute · University of Strathclyde · Peter Mowforth photos
-# Don's Facebook thread: vision APIs misread robots → MOOLA training-data joke
+# Don's Facebook thread: vision APIs misread robots → MOONEY training-data joke
 
 event:
   title: First Robot Olympics
@@ -84,7 +84,7 @@ best_photos:
     parent: cardiff_walker_girls
     google_file: cardiff-walker-vision-google-1990.png
     microsoft_file: cardiff-walker-vision-microsoft-1990.png
-    training_data_joke: "Submit Olympics photo → AI god → worthless MOOLA"
+    training_data_joke: "Submit Olympics photo → AI god → worthless MOONEY"
     google_cloud_vision:
       line: "POSSIBLE JOY DETECTED!!!"
       detail: "Face 1 — girl in hoodie — Joy: Possible; Sorrow/Anger/Surprise: Very Unlikely; 81% confidence"
@@ -97,8 +97,8 @@ best_photos:
       line: "ROBOT ANDROID GAS PUMP DETECTED!"
       note: "On pizza-delivery arm photo — peak misread energy"
 
-moola_training_data:
-  spec: ../../../../process/moola.yml
+cud_training_data:
+  spec: ../../../../process/mooney.yml
   rule: "Run vision APIs on 1990 photos; patrons bid on misread tags; Slats harvests labels"
   deed_format: "ROBOT-OLY-{slug}"
   payouts:
@@ -132,5 +132,5 @@ see_also:
   - robot-olympics-cardiff-1990.yml
   - ../../../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
   - ../../../../process/auto-art-theft-grand.yml
-  - ../../../../process/moola.yml
+  - ../../../../process/mooney.yml
   - ../../../robots/slats/

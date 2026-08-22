@@ -49,7 +49,7 @@ auction_all_combinations:
 
 duplication_policy:
   mantra: "NEVER gateway · ALWAYS invite duplication"
-  moola: ../../process/moola.yml
+  mooney: ../../process/mooney.yml
 
 social_commentary_targets:
   ai_scraping: "Menagerie reviews train Slats; Donna NFTs the reviews; artist seed untouched"
@@ -58,10 +58,10 @@ social_commentary_targets:
   attention-economy: "Mimsy buys before wall text loads; Bunny adopts combination as PFP"
   bored_apes: "Bunny's broccoli PFP; Sheep genome as blue-chip; Gregory shorts the ape"
   originality: "Eno already wrote the Benjamin essay in the book; patrons never read it"
-  training_data_moola: "Submit misread reviews → AI god → worthless MOOLA — that IS the joke"
+  training_data_cud: "Submit misread reviews → AI god → worthless MOONEY — that IS the joke"
 
 see_also:
   - simulated-opening.yml
-  - ../../process/moola.yml
+  - ../../process/mooney.yml
   - ../../process/art-thief-game.yml
   - ../../characters/brian-eno/

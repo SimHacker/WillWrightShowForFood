@@ -75,7 +75,7 @@ HyperLook + SimCity with [Arthur van Hoff](../arthur-van-hoff/) — shipped both
 
 ## Rolf Pixley — Amsterdam junk drawer
 
-Before Rolf left Amsterdam — workshop hoard found in a **junk drawer**. Virtual junk auction in MOOLA; **MIND=BLOWN** face-puppet reference.
+Before Rolf left Amsterdam — workshop hoard found in a **junk drawer**. Virtual junk auction in MOONEY; **MIND=BLOWN** face-puppet reference.
 
 [`media/rolf/`](media/rolf/INDEX.yml)
 

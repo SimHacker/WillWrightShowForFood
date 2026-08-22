@@ -73,18 +73,18 @@ opening_beats:
   - combination_quick_sales: "Red-dot storm — everyone owns a unique 77MP number (until collision)"
   - forgery_trial: "Two patrons, same combination — Doctor No: declared bias; Palm: offering not minting"
   - art_thief: "Julian steals Gregory's deed; matrix updates; friendships snap"
-  - auto_art_theft_grand: "Slats batch-scrapes every 77MP deed — GTA wanted poster — MOOLA payout roulette"
+  - auto_art_theft_grand: "Slats batch-scrapes every 77MP deed — GTA wanted poster — MOONEY payout roulette"
   - oblique_mint: "Bunny slaps red dot on a card; room obeys the error."
   - scenius_sermon: "Helena: collective genius is a tunnel; walk through or don't."
   - slats_scrape_jab: "I trained on the wall labels. The art is the dataset now."
   - donna_forgery_nft: "TREMENDOUS JPEG of the forgery. Stormy was right."
-  - guest_wallet: "§3,700,000 aggregate — exchange to MOOLA — burn, dig hole, surrender on stream"
+  - guest_wallet: "§3,700,000 aggregate — exchange to MOONEY — burn, dig hole, surrender on stream"
 
-moola:
-  spec: ../../process/moola.yml
-  after_opening: "§ → MOOLA — burning money performance or Holiday Hole backhoe until pile zero"
+mooney:
+  spec: ../../process/mooney.yml
+  after_opening: "§ → MOONEY — burning money performance or Holiday Hole backhoe until pile zero"
   mantra: "NEVER gateway · ALWAYS invite duplication"
-  training_data_joke: "Patron misreads harvested → Slats pays worthless MOOLA"
+  training_data_joke: "Patron misreads harvested → Slats pays worthless MOONEY"
 
 art_thief_game:
   spec: ../../process/art-thief-game.yml
@@ -104,19 +104,19 @@ parody:
   art_thief:
     - "Covet, trade, forge, steal — digital deeds only; duplication always invited"
     - "Bored ape → bored sheep / broccoli PFP"
-    - "AI scrape → Slats trained on misread reviews → MOOLA payout"
+    - "AI scrape → Slats trained on misread reviews → MOONEY payout"
     - "Attention economy → Mimsy buys before JPEG loads"
-  moola:
-    - "§ → MOOLA — burn pile or fund backhoe hole"
-    - "Training data to AI god → worthless MOOLA — that IS the joke"
+  mooney:
+    - "§ → MOONEY — burn pile or fund backhoe hole"
+    - "Training data to AI god → worthless MOONEY — that IS the joke"
     - "K Foundation burn · Cards Against Humanity Holiday Hole"
     - "Curiosity cube clicks · Cow Clicker Mooney lineage · Cowpocalypse extensions"
   curiosity-cow-cube:
     spec: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
-    beat: "Gallery cube — click for MOOLA — distant distressed moos — AATG fills faces — center is Rightward-Facing Cow"
+    beat: "Gallery cube — click for MOONEY — distant distressed moos — AATG fills faces — center is Rightward-Facing Cow"
   turing-robot-olympics:
     spec: ../../bits/gag-turing-robot-olympics/gag-turing-robot-olympics.yml
-    beat: "Peter Mowforth wall — Slats runs vision APIs — JOY · POSING · GAS PUMP — MOOLA payout"
+    beat: "Peter Mowforth wall — Slats runs vision APIs — JOY · POSING · GAS PUMP — MOONEY payout"
 
 twitch_after:
   guest_simoleons_start: 3700000
@@ -130,8 +130,8 @@ twitch_after:
 see_also:
   - 77-million-paintings.yml
   - SECONDARY-MARKET.yml
-  - MOOLA.yml
-  - ../../process/moola.yml
+  - MOONEY.yml
+  - ../../process/mooney.yml
   - ../../process/auto-art-theft-grand.yml
   - ../../process/art-thief-game.yml
   - ../../characters/don-hopkins/media/turing-institute/first-robot-olympics.yml

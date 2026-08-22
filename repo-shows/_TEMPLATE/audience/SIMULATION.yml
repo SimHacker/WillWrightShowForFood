@@ -64,7 +64,7 @@ runbook:
       submit_via: SUBMIT-HOMEFUN
       grading: ../../../process/homefun-grading.yml
     inter_character:
-      protocols: [GREET, ASK, CHEER, CUDDLE]
+      protocols: [GREET, ASK, CHEER, MOONEYDLE]
       note: "Audience members GREET each other in adventure microworld layers"
     harvest:
       note: "Show skills scooped from cauldron — compose_with new skills"

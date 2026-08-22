@@ -29,7 +29,7 @@ methods:
 
 entries:
   format: { yaml: repo-show-format.yml, markup: repo-show-format.md }
-  moola: { yaml: moola.yml, topic: "Native play currency — exchange, duplication policy, performances" }
+  mooney: { yaml: mooney.yml, topic: "Native play currency — exchange, duplication policy, performances" }
   auto_art_theft_grand: { yaml: auto-art-theft-grand.yml, topic: "AATG — Slats batch-scrapes deeds at GTA scale" }
   drag_race: { yaml: micropolis-ai-drag-race.yml, markup: micropolis-ai-drag-race.md }
   retro: { yaml: challenges/retrocomputing-drive.yml, markup: challenges/retrocomputing-drive.md }

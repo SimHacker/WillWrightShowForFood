@@ -54,9 +54,9 @@ simulated_opening:
     Menagerie misreads as NFT/web3; Brian surrenders § on stream. Pairs with Scott Draves opening.
   ledger: AUCTIONS.yml
   secondary_market: SECONDARY-MARKET.yml
-  moola: MOOLA.yml
+  mooney: MOONEY.yml
   art_thief: ../../process/art-thief-game.yml
-  moola_spec: ../../process/moola.yml
+  cud_spec: ../../process/mooney.yml
 
 ties_to:
   - ../../characters/brian-eno/

@@ -1,14 +1,14 @@
 # Curiosity Cow Cube — parody of Peter Molyneux's Curiosity + Ian Bogost's Cow Clicker
 # Don's Unite 2012 troll: the secret inside the cube is a Rightward-Facing Cow
 # Berkeley 2008: Mediterraneum Cafe — deadpan hippie gaslighting that a horse is a cow
-# MOOLA clicks · scheduled death · NEVER gateway · the cow was always duplicable
+# MOONEY clicks · scheduled death · NEVER gateway · the cow was always duplicable
 # Status: gag / show beat — NOT a product resurrection (keep Curiosity dead and buried)
 
 id: curiosity-cow-cube
 type: gag
 status: parody_seed
 authored_by: don-hopkins
-tagline: "Click the cube for worthless MOOLA. Peel layers. The center is a cow. It wasn't very fun before. That's a cow."
+tagline: "Click the cube for worthless MOONEY. Peel layers. The center is a cow. It wasn't very fun before. That's a cow."
 
 should_never_ship: |
   If there was ever a game that should never be recreated and kept dead and buried forever,
@@ -100,8 +100,8 @@ don_unite_2012:
 parody_game:
   title: "Curiosity: What's Inside the Repo?"
   subtitle: "A cube clicker that should stay dead — performed once, then Cowpocalypse"
-  clicks_for: MOOLA
-  moola_lineage: "Cow Clicker Mooney → Repo Show MOOLA 🐄 — click cow, click cube, receive nothing"
+  clicks_for: MOONEY
+  cud_lineage: "Cow Clicker Mooney → Repo Show MOONEY 🐄 — click cow, click cube, receive nothing"
 
   cube:
     layers: "Peel by collective clicks — each layer a gallery deed / 77MP face / sheep genome tile"
@@ -130,11 +130,11 @@ parody_game:
 
   cowpocalypse:
     rule: "Scheduled termination communicated upfront — death date is the feature"
-    countdown: "Every click deducts time; pay MOOLA to supplicate and extend (Cow Clicker parody)"
+    countdown: "Every click deducts time; pay MOONEY to supplicate and extend (Cow Clicker parody)"
     extension_rates:
-      - { moola: 10, extends: "1 hour" }
-      - { moola: 4000, extends: "1 month" }
-    end_state: "Cows raptured to blank spaces — cube hollow — MOOLA pile burned or hole dug"
+      - { mooney: 10, extends: "1 hour" }
+      - { mooney: 4000, extends: "1 month" }
+    end_state: "Cows raptured to blank spaces — cube hollow — MOONEY pile burned or hole dug"
     bogost_energy: "It wasn't very fun before. Now it's honest about that."
 
   never_gateway:
@@ -146,7 +146,7 @@ commentary_targets:
   dopamine_clicker: "Zynga/Facebook rage era — arbitrary value becomes real value when not meant to"
   grandiose_promises: "Godhood, credits, royalties, surprise the world — arms spread like crucifix"
   pathological_hype: "Not lying if circumstances outside control — RPS interview energy"
-  ai_attention_economy: "Curiosity was clicks for clicks; MOOLA is training data for training data"
+  ai_attention_economy: "Curiosity was clicks for clicks; MOONEY is training data for training data"
   procedural_rhetoric: "Bogost made the argument on purpose; Curiosity made the addiction by accident"
   distressed_moo_audio: "Filtered far-away moos cry for help — compulsion without rescue until center JPEG"
   berkeley_gaslighting: "Horse on Telegraph → 'that's a cow' — epistemic commitment as performance art"
@@ -183,13 +183,13 @@ live_build_seed:
   berkeley_reveal_option: |
     Alternate ending: cube opens to horse-on-Telegraph footage (Scamahorn 2008). Chat and
     menagerie must deadpan 'that's a cow.' Don comments: "It's a cow." Never break character.
-  minimal: "Unity/Web toy — cube mesh, click counter, MOOLA ticker, intermittent distressed moo SFX, cow-or-horse reveal, countdown"
+  minimal: "Unity/Web toy — cube mesh, click counter, MOONEY ticker, intermittent distressed moo SFX, cow-or-horse reveal, countdown"
   scheduled_death: true
   do_not: "Promise godhood, single winner, or life-changing anything except the cow"
 
 repo_show_integration:
   simulated_opening:
-    beat: "Cube in gallery corner — patrons click for MOOLA; surfaces show misread deed JPEGs"
+    beat: "Cube in gallery corner — patrons click for MOONEY; surfaces show misread deed JPEGs"
     spec: ../../process/simulated-art-opening.yml
   art_thief:
     beat: "Steal deed → paste on cube face — Molyneux surface promise as duplication invite"
@@ -197,9 +197,9 @@ repo_show_integration:
   auto_art_theft_grand:
     beat: "Slats batch-fills all cube faces before anyone reaches center"
     spec: ../../process/auto-art-theft-grand.yml
-  moola:
-    beat: "Click cube → MOOLA; pay MOOLA → extend Cowpocalypse; burn remainder at end"
-    spec: ../../process/moola.yml
+  mooney:
+    beat: "Click cube → MOONEY; pay MOONEY → extend Cowpocalypse; burn remainder at end"
+    spec: ../../process/mooney.yml
   brian_eno:
     beat: "77MP combination tiles on cube faces — center is still the cow (or the horse — it's a cow)"
   berkeley:
@@ -209,7 +209,7 @@ repo_show_integration:
 see_also:
   - ../gag-pantomime-gallery/gag-pantomime-gallery.yml
   - ../gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml
-  - ../../process/moola.yml
+  - ../../process/mooney.yml
   - ../../process/art-thief-game.yml
   - ../../process/auto-art-theft-grand.yml
   - ../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml

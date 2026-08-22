@@ -12,8 +12,8 @@ game:
     - during_show_secondary_market
     - scarcity_auction_mode
   currency: "§"
-  settlement: MOOLA
-  moola_spec: moola.yml
+  settlement: MOONEY
+  cud_spec: mooney.yml
   fictional: true
   duplication: "NEVER gateway · ALWAYS invite duplication — theft is narrative; the fork was always free"
 
@@ -24,8 +24,8 @@ philosophy: |
   breaking friendships over bored-ape energy. The jokes write themselves because the targets
   already exist: NFT false scarcity, attention economy, training-data heists, PFP flex.
 
-  Deeds settle in § for theater; exchanges settle in MOOLA. You submitted training data to
-  the AI god — here is worthless MOOLA. We NEVER gateway. We ALWAYS invite duplication.
+  Deeds settle in § for theater; exchanges settle in MOONEY. You submitted training data to
+  the AI god — here is worthless MOONEY. We NEVER gateway. We ALWAYS invite duplication.
 
 digital_property:
   deed:
@@ -81,7 +81,7 @@ mechanics:
     rule: "Slats batch-duplicates ALL deeds — industrial scrape; originals stay; copies fork"
     actor: characters/robots/slats/
     never_gateway: "Duplication only — AATG tells the truth about copies at scale"
-    payout: "Victims receive worthless MOOLA per deed — training data compensation theater"
+    payout: "Victims receive worthless MOONEY per deed — training data compensation theater"
     gta_energy: "Wanted poster · five-star chase · repair auction picks one deed back"
 
   friendship_enemy:
@@ -118,10 +118,10 @@ commentary_threads:
 
 curiosity-cow-cube:
   spec: ../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml
-  tagline: "Click cube for MOOLA — center is Bogost's cow, not Molyneux's lies"
+  tagline: "Click cube for MOONEY — center is Bogost's cow, not Molyneux's lies"
   cube_faces: "Stolen deeds from AATG pasted on surfaces — ANY image ANY face"
   click-audio: "Intermittent filtered echoing moos — distressed, far away — compulsion without rescue"
-  cowpocalypse: "Scheduled death; pay MOOLA to extend — it wasn't very fun before"
+  cowpocalypse: "Scheduled death; pay MOONEY to extend — it wasn't very fun before"
 
 eno_77_million_mode:
   doc: ../repo-shows/brian-eno/77-million-paintings.yml
@@ -172,7 +172,7 @@ instances:
 see_also:
   - simulated-art-opening.yml
   - auto-art-theft-grand.yml
-  - moola.yml
+  - mooney.yml
   - ../characters/menagerie/RELATIONSHIP-MATRIX.yml
   - ../characters/don-hopkins/jsonsters/simoleon-auctions.yml#modes.scarcity_auction
   - ../repo-shows/brian-eno/77-million-paintings.yml

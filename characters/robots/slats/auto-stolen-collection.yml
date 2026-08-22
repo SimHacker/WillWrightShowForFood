@@ -14,4 +14,4 @@ stolen_deeds: []
 # - { deed_id: JSONSTERS-evolution-01, copied_from: mimsy-caldwell, batch: opening_night }
 
 batch_log: []
-moola_paid_to_victims: {}
+cud_paid_to_victims: {}
