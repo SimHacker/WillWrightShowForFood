@@ -51,9 +51,13 @@
   the emergence↔nuance slider applied to grief
 - The [Original Sims cemetery](http://www.originalsims.com/cemetery): 1200+
   memorials of people *and* Sims by 2005 — **read epitaphs from the Wayback
-  archive on air**, then ask the 2026 question: what does a UGC memorial
-  site where strangers wrote each other's grief with care say against the
-  internet we got instead? The cemetery as the counterfactual internet
+  archive on air**
+  ([harvested sample, verbatim](sources/original-sims-cemetery-epitaphs.md):
+  Christopher Reeve beside Frankenstein, the first Sim to die of a broken
+  heart, the Updating Queen, an excellent cat), then ask the 2026 question:
+  what does a UGC memorial site where strangers wrote each other's grief
+  with care say against the internet we got instead? The cemetery as the
+  counterfactual internet
 
 ### 4. Soul City — rhetoric as platform
 
