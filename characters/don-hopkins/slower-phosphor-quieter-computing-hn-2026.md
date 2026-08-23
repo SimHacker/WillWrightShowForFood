@@ -30,9 +30,15 @@
 
 > Naw, we just need better software and slower computers, like the PDP-1, that don't require such fast refresh rates, just slow phosphor.
 >
-> But slow computers still need fast and reliable user interfaces, like radial pie menus:
+> But slow computers still need fast and reliable user interfaces, like radial pie menus.
+>
+> Flight of the PIXIE - Yuja Wang:
 >
 > https://www.youtube.com/watch?v=jDrqR9XssJI
+>
+> PIXIE: A New Approach to Graphical Man-Machine Communication:
+>
+> https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf
 >
 > The computer shown in that video is a much more advanced and faster PDP-7, talking to an even bigger and faster Titan mainframe over a custom network!
 >
@@ -40,9 +46,9 @@
 >
 > It proves that slow computers can still be usable with better software, and that today's unusable computers are pissing away enourmous amounts of power, but still suck.
 >
-> Edit: I just showed you a video of a computer with a light pen. Did you see that?
+> Edit: I just showed you a video of a computer with a light pen. Did you check that out? It's only two minutes, and I made it to musically highlight PIXIE, because most people don't want to sit through silent hours of the original digitized films from Cambridge.
 >
-> PIXIE is not one box. It is a distributed CAD workstation (1967–1972):
+> PIXIE is not one box. It is a network distributed CAD workstation (1967–1972) — like AJAX, but with P7 two-layer cascade phosphor on a 16ADP7A radar tube instead of HTML:
 >
 > Interactive front end: DEC PDP-7 + Type 340 CRT. Real-time drawing, light pen, radial "control lightbuttons", graph model in core.
 >
@@ -52,7 +58,7 @@
 >
 > Word size: 18 bits. Core (PIXIE design target): 8K words — "only 8K of 18 bit words ... no auxiliary storage". Core (likely installed): 8K–16K (GUIDE: "here likely 16K"). Cycle time: ~1.75 µs. ~571K cycles/s. Addressing: 13-bit + indirect bit. Registers: One accumulator + link bit.
 >
-> DEC made lots of "instruction sets in a chassie" extension and Wiseman at Cambridge rolled his own network:
+> DEC made lots of "instruction sets in a chassie" extension boxes, and Wiseman at Cambridge rolled his own network with its own custom instructions.
 >
 > Extended Arithmetic Element: Type 177 EAE. Multiply, divide, shifts, normalize (64xxxx op family in listing).
 >
@@ -66,7 +72,7 @@
 >
 > Titan link interface: Cambridge custom (Wiseman) Undocumented IOTs: LCF, LSF, LKE, LLB6, LLB18, LRB18, LLAM, LSA, LKD — networking as instructions.
 >
-> The 340 display was an amazing ensembel of hardware, and could plug into a PDP-1 as well.
+> The 340 display was an amazing ensembel of hardware, and could plug into a PDP-1 as well. The SIMH emulator supports it well.
 >
 > Model: DEC Type 340 Precision Incremental CRT System (H-340, Nov 1964). Tube lineage: Type 30E → 16ADP7A radar tube, P7 phosphor, 1024×1024 address grid. CPU coupling: Cycle steal / data break — 340 fetches display words from PDP-7 core while CPU runs. Vector timing: ~1.5 µs incremental vectors (vs Type 30 ~50 µs per CPU-plotted dot). Display word types: Parameter, point, vector, vector-continue, increment, character; with 347: DJS/DJP subroutines. Light pen: Per-word pen-enable bits; tracking uses cross + recovery spiral (~2× cross size) — spec in Ch. 5.
 >
@@ -76,7 +82,7 @@
 >
 > Identity: Ferranti/ICT Atlas 2 prototype; Cambridge name Titan (1964–Oct 1973). Word size: 48 bits (8×6-bit chars or 2×24-bit halfwords). Core growth: 32K → 64K → 128K words. Addressing: Base/limit registers; user address ORed with base (not added). "Cache": Tunnel-diode operand slave store — Cambridge claims first cache. Software "instructions": Up to 512 extracodes (supervisor code in main store). OS: Titan Supervisor / Cambridge Multiple-Access System — public 22 Mar 1967. Storage: Two Data Products 16M-word discs; tape; card/punch. Terminals: Cambridge 64-line multiplexor — 73 registered, 26 simultaneous; modems from 1967.
 >
-> I've gathered together and shared all this information about it, because Heinz Lemke, the guy operating the lightpen in the video, has recently unearthed 128 pages of PIXIE source code in PDP-7 assembly source and octal machine language, and we're scanning it in, and working on reincarnating it with SIMH and a virtual lightpen!
+> I've been able to gather together and shared all this information about it, thanks to an ongoing discussion with Heinz Lemke, the guy operating the lightpen in the video. He has recently unearthed 128 pages of PIXIE source code in PDP-7 assembly source and octal machine language, and we're scanning it in, and working on reincarnating it with SIMH and a virtual lightpen!
 
 *(Verbatim from HN API, Aug 2026. Don's spellings: enourmous, chassie, ensembel, woth.)*
 
