@@ -27,7 +27,10 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 
 ## Repo Show
 
-Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* ·
+Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* —
+**replied same day, enthusiastic** ([`sources/messenger-2026-07-06-reply.md`](sources/messenger-2026-07-06-reply.md)):
+interview **[Paul Rother](../paul-rother/)** first (Topanga); **Peter Conn** intro coming by email;
+Coco herself open to chat (San Jose). ·
 warm follow-up: [`invitation-followup-2026-08.md`](invitation-followup-2026-08.md) ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 

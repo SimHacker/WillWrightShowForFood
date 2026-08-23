@@ -93,14 +93,22 @@ sources:
     path: ../david-levitt/don-and-david-history.md
 
 invitation:
-  status: in_conversation
+  status: replied_enthusiastic
   sent: 2026-07-06
   sent_via: facebook
+  replied: 2026-07-06
+  replied_via: messenger
+  reply_capture: sources/messenger-2026-07-06-reply.md
   followup: invitation-followup-2026-08.md
   fb_thread: sources/fb-llm-lsd-thread-2026-08.md
   show_seed: repo-shows/coco-conn/
   path: ../../characters/coco-conn/invitation.md
-  next: "FB LLM LSD reply posted 2026-08-23; warm follow-up draft ready; Hackers tapes + clip rights still open"
+  next: |
+    1. Send Coco best email address (she'll send Peter Conn story — PRIVATE until cleared)
+    2. Connect + interview Paul Rother FIRST (her ask) — characters/paul-rother/
+    3. Schedule Coco chat — she's open, San Jose
+    4. Hackers tapes + clip rights still open
+    5. FB LLM LSD reply posted 2026-08-23 — thread live
 
 facts_to_confirm:
   - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"

@@ -1,0 +1,70 @@
+# Paul Rother — HOMER & Assoc. in-house programmer; learned Forth from Charles Moore
+# Public sources only; warm path via Coco Conn.
+
+character:
+  id: paul-rother
+  name: "Paul Rother"
+  type: invitation
+  signifier: "🕹️"
+  status: living
+  field: "Homer II Forth programming (with Charles Moore); CAT-700 paint system; music-video and film FX pipeline"
+  home: characters/paul-rother/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: warm_lead
+  consent: not_yet_asked
+  warm_path: "Coco Conn — Messenger 2026-07-06: 'I'd love for you to first connect and interview Paul Rother.. he has so many great stories to tell about those times.' Lives in Topanga with his wife."
+  show_seed: repo-shows/coco-conn/
+  note: "Coco's FIRST ask from the Repo Show invitation — interview Paul before anyone. Contact via Coco."
+
+bio:
+  summary: >
+    **Paul Rother** was the in-house programmer at **HOMER & Assoc.** (Sunset Gower Studios,
+    1977–1997). Hired to program **Homer II** — the real-time visual mixing console — he worked
+    directly with **Charles Moore** (Forth, Inc.), programming the **2K EPROM** in each of 24 Z80
+    visual channels while Moore programmed the PolyForth host. He got the **CAT-700** 7-bit frame
+    buffer running in Forth — optical-printer control, paint system, OS, compiler, and debugger in
+    **32K** — first used on *Abracadabra* and *Atomic Dog*. He also designed S100 boards (stepper
+    motors, projector lamp triacs) and co-authored the public HOMER history with Coco Conn.
+
+known_for:
+  - "Homer II — Forth programming with Charles Moore; 2K EPROM per Z80 channel; PolyForth host in 32K"
+  - "CAT-700 paint system — 7-bit frame buffer, Summagraphics Bitpad, two optical printers"
+  - "'I learned Object Oriented Programming without knowing it' — factoring WORDs under Moore"
+  - "S100 TTL board design — stepper motors, slide-projector triacs, cassette-interface timecode"
+  - "Co-author (with Coco Conn) of the public HOMER & Assoc. history Don reposts on HN"
+
+connections:
+  - id: coco-conn
+    relation: HOMER & Assoc. colleague; co-author of public history; warm path for invitation
+  - id: peter-conn
+    relation: HOMER & Assoc. founder; hired Paul to program Homer II
+  - id: charles-moore
+    relation: mentor — learned Forth working beside Moore on the Homer II host
+  - id: don-hopkins
+    relation: HN indexer of the HOMER story; parallel Forth thread (Mitch Bradley / Open Firmware at Sun)
+
+sources:
+  - type: hn
+    url: https://news.ycombinator.com/item?id=29261868
+    note: Canonical HOMER/Forth write-up (Coco Conn + Paul Rother, reposted by Don with permission)
+  - type: web
+    url: http://leftbrain.us/rotherHistory/homer.html
+    note: Paul Rother — Homer & Associates history page
+  - type: internal
+    path: ../coco-conn/homer-forth-flying-logos.md
+  - type: internal
+    path: ../coco-conn/sources/hn-homer-forth-index.yml
+  - type: internal
+    path: ../coco-conn/sources/messenger-2026-07-06-reply.md
+    note: Coco's warm handoff — "interview Paul Rother first"
+
+facts_to_confirm:
+  - "Best contact channel — via Coco"
+  - "Years at HOMER; what he did after 1997"
+  - "Whether he kept any Homer II code, EPROMs, schematics, or the 8-inch hero floppies"
