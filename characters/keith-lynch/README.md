@@ -6,6 +6,8 @@ Primary-source witness to [ARPAnet](https://en.wikipedia.org/wiki/ARPANET) and e
 
 **Full text in this repo:** [`sources/history-of-the-net-1994.md`](sources/history-of-the-net-1994.md)
 
+**Contact (Aug 2026):** Don recontacted Lynch after [HN #49406210](https://news.ycombinator.com/item?id=49406210) (ITS as original social network). Private email — [`correspondence/2026-08-23-don-to-keith-lynch-recontact.md`](correspondence/2026-08-23-don-to-keith-lynch-recontact.md) (body not in public repo).
+
 ---
 
 ## Why this room exists

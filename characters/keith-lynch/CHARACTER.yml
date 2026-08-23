@@ -1,0 +1,33 @@
+character:
+  id: keith-lynch
+  name: "Keith F. Lynch"
+  type: primary_source
+  status: living
+  field: "ARPAnet/ITS witness; author of the 1994 net-history memoir"
+  home: characters/keith-lynch/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: not_applicable
+  consent: outreach_sent_awaiting_reply
+  first_contact: correspondence/2026-08-23-don-to-keith-lynch-recontact.md
+  note: |
+    Not a show guest — primary-source archivist. Don recontacted 2026-08-23 after HN
+    ITS-social-network thread; private email body in DonHopkins private/ only.
+
+bio:
+  summary: >
+    **Keith F. Lynch** — on the ARPAnet from 1977 (TI Silent 700, TIP/TAC dialup, MIT ITS
+    guest culture). His July 1994 email to Ronda Hauben, republished at
+    [keithlynch.net/history.net.html](https://keithlynch.net/history.net.html), is a standard
+    reference for early net folklore (Zork on DM, SEND→DDT guest login, Bandykin, netism).
+
+sources:
+  public:
+    - sources/history-of-the-net-1994.md
+  private:
+    note: "Full 2026-08-23 Don email — DonHopkins correspondence/attachments/keith-lynch/private/"
