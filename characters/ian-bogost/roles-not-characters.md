@@ -4,8 +4,10 @@
 ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/),
 The Atlantic, March 13, 2015 — written the week EA closed Maxis
 Emeryville. Consent note: this is
-[Don](../don-hopkins/README.md)'s reading of a published essay;
-Bogost hasn't been asked about any of it yet.*
+[Don](../don-hopkins/README.md)'s reading of a published essay.
+Don sent it to Ian on August 23, 2026, with the Korz question up front
+([the message, archived](correspondence/2026-08-23-don-to-ian-roles-not-characters.md));
+awaiting his reply.*
 
 ## The essay's question
 

@@ -12,10 +12,14 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: draft
-  consent: not_yet_asked
+  status: contacted
+  consent: outreach_sent_awaiting_reply
   document: invitation.md
-  note: "Draft invite ready — procedural rhetoric × Sims lineage show seed planted; not sent."
+  first_contact: correspondence/2026-08-23-don-to-ian-roles-not-characters.md
+  note: |
+    Don sent first message 2026-08-23 — roles-not-characters answer + the Korz
+    question (refutation of OOO or its purest implementation?). Formal show
+    invite (invitation.md) still unsent; awaiting reply to first contact.
 
 bio:
   summary: >

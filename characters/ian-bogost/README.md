@@ -53,7 +53,8 @@ while the system stays the protagonist.
 | [sources/procedural-rhetoric-quote.md](sources/procedural-rhetoric-quote.md) | Wright + Aristotle line + MIT Press sources ([data](sources/procedural-rhetoric-quote.yml)) |
 | [sources/cow-clicker.md](sources/cow-clicker.md) | Mechanics, Cowpocalypse, reception, HN ([data](sources/cow-clicker.yml)) |
 | [roles-not-characters.md](roles-not-characters.md) | Response to the 2015 "Better Without Characters" essay |
-| [invitation.md](invitation.md) | Draft invite (not sent) |
+| [correspondence/](correspondence/README.md) | Don's outreach, archived — first message sent 2026-08-23 |
+| [invitation.md](invitation.md) | Draft show invite (not yet sent; first contact made) |
 | [ideas.md](ideas.md) | Segment map |
 | [CARD.yml](CARD.yml) | Guest card |
 
