@@ -139,6 +139,7 @@ Suggested reading order:
 | Doc | What it is |
 |---|---|
 | [README.md](README.md) | You are here — Korz itself, and the Self : MOOLLM :: Korz : Korz′ analogy |
+| [deconstruct-oriented-programming.md](deconstruct-oriented-programming.md) | **Morningstar-style deconstruction** — declassification (Class→Object), deobjectification (Object→slot soup), Oriented vs Disoriented Programming |
 | [design.md](design.md) | **The Korz′ design** — one semantics, two dispatchers; crystallize/deopt; slots as YAML; the discipline ("interpret, don't invent") |
 | [addressing.md](addressing.md) | Every address is a guard vector: directories, filename prefixes and suffixes, URL fragments, archives, CSV, tensors |
 | [epistemics.md](epistemics.md) | What replaces null: names as inheritance, K-line pointers, `isKnown` as a float, latent-space paging with review |
