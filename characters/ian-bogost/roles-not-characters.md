@@ -356,10 +356,21 @@ was inside:
   at real-world places, same stack as Bar Karma
   ([lineage receipts](../../process/showmaker-network.md), with the
   2011 Shneiderman correspondence documenting it at deployment).
-- **Slats and Dents** — the improvising street robots and their One
-  Minute Movies
-  ([theme](../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)),
-  entertainment research with hidden cameras and public reactions.
+- **[Slats](../robots/slats/README.md) and
+  [Dents](../robots/dents/README.md)** — the improvising street robots
+  and their One Minute Movies, entertainment research with hidden
+  cameras and public reactions. **Watch them**: *Servitude* — Slats the
+  anxious robot waiter at an Oakland BBQ joint, desperate for a perfect
+  10 ([video](https://www.youtube.com/watch?v=NXsUetUzXlg) ·
+  [film page + transcript](../robots/slats/one-minute-movie-servitude.md));
+  *Empathy* — Dents broken down on an Oakland sidewalk, pleading with
+  real passersby for Professor Johnson
+  ([video](https://www.youtube.com/watch?v=KXrbqXPnHvE) ·
+  [film page + transcript](../robots/dents/one-minute-movie-empathy.md)).
+  Will wrote the robot content and built the robots; Don teleoperated
+  them through hidden cameras and a wireless pie-menu web rig from
+  inside his FMC Motorcoach across the street
+  ([theme](../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)).
 
 And this names the other half of WWSFF's mission. The show isn't only
 an archive of what shipped; it's a workshop for **reimagining and
