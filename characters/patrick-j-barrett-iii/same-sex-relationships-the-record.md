@@ -128,7 +128,7 @@ Nobody in this story is a villain. The lesson is that even a team of allies need
 have lived the experience, because code makes arguments its authors never meant to make.
 
 *(Bogost's frame is a pillar of my QGCon paper on this history:
-[procedural-rhetoric-theory.yml](../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.yml) ·
+[the theory spine](../don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.md) ·
 [Ian Bogost's guest page](../ian-bogost/).)*
 
 ---
@@ -187,7 +187,7 @@ My response is the same as it was in 1998: don't just object — build the inclu
 [**Soul City**](../../catalogs/soul-city/README.md) is infrastructure for keeping player-made
 characters — including every queer household anyone ever built — portable and publishable in
 git, outside any single owner's silo, with bridges to indie worlds like
-[Tiny Life](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml). The academic
+[Tiny Life](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md). The academic
 frame is the sequel to this very story:
 [*How Inclusivity Saved The Sims* — and what saves the sims now](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md).
 The record above shows inclusion was designed in on purpose. Soul City is how it stays in,

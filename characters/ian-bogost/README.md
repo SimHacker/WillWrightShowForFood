@@ -15,7 +15,7 @@ planted show on **The Sims as procedural rhetoric** (Motive.c → Wedding Playse
 | **Term coined** | *Persuasive Games: The Expressive Power of Videogames* (MIT Press, 2007) |
 | **Academic chapter** | "The Rhetoric of Video Games" in *The Ecology of Games* (Salen, ed., MIT Press, 2008), pp. 117–140 |
 
-Full citation chain: [`sources/procedural-rhetoric-quote.yml`](sources/procedural-rhetoric-quote.yml)
+Full citation chain: [the quote, sourced](sources/procedural-rhetoric-quote.md)
 
 Argument in **rules and processes**, not essays — the lens for Motive.c alerts, SimProv Wedding Playset
 (inclusion agitprop), and Dumbold Voting Machine (institutional farce) on the same SimAntics engine.
@@ -27,11 +27,11 @@ a Facebook game built in days to satirize FarmVille-era mechanics (click every s
 feed spam). It went viral anyway; Bogost leaned into the irony, then ended it with the **Cowpocalypse**
 (Sept 2011) — cows raptured, blanks remain, fan complaint answered: *"It wasn't very fun before."*
 
-Sources: [`sources/cow-clicker.yml`](sources/cow-clicker.yml) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
+Sources: [the Cow Clicker story](sources/cow-clicker.md) · [Wikipedia](https://en.wikipedia.org/wiki/Cow_Clicker) · [HN 2022](https://news.ycombinator.com/item?id=31979586)
 
 **Show beat:** contrast with Peter Molyneux's *Curiosity* (2012) — cube clicker hype without Bogost's
 critical frame. Don's [Unite 2012 Amsterdam](https://www.youtube.com/watch?v=24AY4fJ66xA&t=1h08m21s)
-cow joke (Molyneux didn't get it) → [`../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml`](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml). Repo parody keeps Curiosity **dead**; center is Bogost's cow: [`curiosity-cow-cube`](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml).
+cow joke (Molyneux didn't get it) → [the Unite 2012 story](../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.md). Repo parody keeps Curiosity **dead**; center is Bogost's cow: [Curiosity Cow Cube](../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.md).
 
 ## "Video Games Are Better Without Characters" — answered
 
@@ -50,8 +50,8 @@ while the system stays the protagonist.
 
 | File | Contents |
 |------|----------|
-| [sources/procedural-rhetoric-quote.yml](sources/procedural-rhetoric-quote.yml) | Wright + Aristotle line + MIT Press sources |
-| [sources/cow-clicker.yml](sources/cow-clicker.yml) | Mechanics, Cowpocalypse, reception, HN |
+| [sources/procedural-rhetoric-quote.md](sources/procedural-rhetoric-quote.md) | Wright + Aristotle line + MIT Press sources ([data](sources/procedural-rhetoric-quote.yml)) |
+| [sources/cow-clicker.md](sources/cow-clicker.md) | Mechanics, Cowpocalypse, reception, HN ([data](sources/cow-clicker.yml)) |
 | [roles-not-characters.md](roles-not-characters.md) | Response to the 2015 "Better Without Characters" essay |
 | [invitation.md](invitation.md) | Draft invite (not sent) |
 | [ideas.md](ideas.md) | Segment map |

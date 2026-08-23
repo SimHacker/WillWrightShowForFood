@@ -12,7 +12,7 @@ Source doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2A
 | [title-candidates.yml](title-candidates.yml) | Title votes — Don + Ben Shneiderman suggestions |
 | [abstract.md](abstract.md) | ~350-word abstract + theory stack |
 | [interview-points.yml](interview-points.yml) | Five QGCon beats + bio + talk structure |
-| [procedural-rhetoric-theory.yml](procedural-rhetoric-theory.yml) | Bogost, Murray, Frasca, constructionism |
+| [procedural-rhetoric-theory.md](procedural-rhetoric-theory.md) | Bogost, Murray, Frasca, constructionism ([YAML source data](procedural-rhetoric-theory.yml)) |
 | [the record (accessible)](../../../patrick-j-barrett-iii/same-sex-relationships-the-record.md) | Don review → Patrick implementation → ship; myth vs primary sources ([YAML source data](same-sex-design-arc.yml)) |
 | [timeline.yml](timeline.yml) | Chronological inclusivity + culture parallel track |
 | [themes.yml](themes.yml) | Thematic sections (masking, zodiac, modding, PKD, etc.) |
