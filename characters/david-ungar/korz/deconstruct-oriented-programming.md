@@ -1,356 +1,187 @@
-# How to Deconstruct Almost Anything (Again)
-## My Oriented Adventure Through Classes, Objects, and Slot Soups
+# How to Disorient Almost Anything
 
-*(After Chip Morningstar's ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html), Second International Conference on Cyberspace, 1991 — and after MOOLLM's ["How to Incarnate Almost Anything"](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md), which proved the formula travels.)*
+In 1991, Chip Morningstar — an engineer, co-creator of Lucasfilm's
+Habitat — attended the Second International Conference on Cyberspace
+and found himself surrounded by postmodern literary theorists. Instead
+of dismissing them, he did the engineering thing: he read the theory,
+reverse-engineered deconstruction into a working recipe, and published
+it as ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html).
+His recipe, lightly restated:
 
-**Don Hopkins**  
-*Department of Oriented Programming, University of the Slot Soup*
+1. Select a text.
+2. Decide what it says — any defensible reading will do.
+3. Find a distinction the text takes for granted.
+4. Show that the distinction is really a hierarchy: one side is
+   presumed superior.
+5. Derive a reading in which the text undermines its own hierarchy.
 
----
+The point of deconstruction, in Morningstar's hands, is not destruction.
+It is showing that a text already contradicts its own premises once you
+notice which assumption it quietly enthroned.
 
-> ### Acknowledgment
+This essay applies the recipe to programming paradigm names — twice.
+The first pass dissolves the class. The second dissolves the object.
+What's left at the bottom is a language design David Ungar and
+colleagues actually built, and a naming question worth asking him
+(filed in [ask-david.md](ask-david.md)).
 
-> Chip Morningstar went to a postmodern conference so we wouldn't have to.
-> He returned with the news that deconstruction is mostly five steps and
-> a sense of humor. David Ungar went further: he **deconstructed Smalltalk
-> in public**, twice — first into Self, then into Korz — and neither time
-> did the sky fall. The JIT got *faster*. This paper applies Chip's
-> formula to that demolition crew.
+## First pass: the class
 
-> Morningstar deconstructed academic prose. MOOLLM deconstructed YAML.
-> We deconstruct **paradigm names** — because *Object-Oriented Programming*
-> minus the `Object` guard is just **Oriented Programming**, and everything
-> else is **Disoriented Programming**. ;)
-
----
-
-> "Academics get paid for being clever, not for being right."  
-> — Donald Norman (via Morningstar)
-
-> "The map is not the territory."  
-> — Alfred Korzybski (via Ungar, via Korz)
-
-> "We removed classes and got Self; then we removed the objects themselves.
-> Or rather, self itself."  
-> — Don Hopkins, on Stephen Wolfram's wall, 2026
-
----
-
-## Prologue: What "Oriented" Meant Before We Ruined It
-
-To **orient** (Latin *oriens*, the rising sun, the east) was to establish
-your bearing: which way is the frame, which axis organizes action. An
-**oriented** language is not a language *about* objects. It is a language
-where behavior is **relative to a stance** — indexed by named dimensions,
-not grounded in nouns pretending to be physics.
-
-Every *X-Oriented Programming* freezes one guard on one axis and
-trademarks the compass:
-
-| Paradigm | Frozen guard | Bearing |
-|----------|--------------|---------|
-| Object-oriented | `{rcvr: …}` | behavior indexed by receiver |
-| Subject-oriented | `{subject: …}` | behavior indexed by composer |
-| Context-oriented | `{context: …}` | behavior indexed by situation |
-| Aspect-oriented | `{aspect: …}` | behavior indexed by cross-cut |
-
-Korz's move: **ditch the modifier**. Oriented Programming — *N*
-dimensions, none privileged in the name. Freeze only `rcvr` and OO
-reappears as a **view**. Leave all guards open and you have a **sea of
-slots**.
-
-Corollary: paradigms that name one axis and ignore the rest are
-**Disoriented Programming**.
-
-Now. Chip's formula.
-
----
-
-## The Five Steps (Morningstar's Patent Pending)
-
-1. **Select a text.**
-2. **Decide what the text says.** (Your reading — any reading.)
-3. **Identify a distinction** the text presupposes.
-4. **Convert the distinction to a hierarchical opposition** (society
-   presumes the superiority of one pole).
-5. **Derive a self-referential reading** that reverses or dissolves the
-   hierarchy — ideally one that makes the text undermine itself.
-
-Deconstruction is not destruction. It is **showing that the text already
-contradicts its own premises** once you notice which guard it froze.
-
-We run the formula twice: on **Class**, then on **Object**.
-
----
-
-## Part I: Declassification — From Class to Object
-
-### Step 1: Select a text
+**Step 1 — the text.** A line of Smalltalk:
 
 ```smalltalk
 Account subclass: #SavingsAccount
     instanceVariableNames: 'balance'
 ```
 
-Or, if you prefer the ceremonial version: **"Everything is an object."**
+Smalltalk's founding slogan makes the reading official: "everything is
+an object," and every object gets its behavior from its class.
 
-### Step 2: What the text says
+**Step 2 — what it says.** The class is the essence of the account.
+An instance is an account because it is a member of the class. Behavior
+lives in the taxonomy; the objects at runtime are tokens stamped from
+the mold.
 
-The class **is** the essence of the account. Instances **are** accounts
-because they **are** members of the class. Behavior lives in the
-taxonomy; objects are tokens stamped from the mold.
+**Step 3 — the distinction.** Class versus instance. Type versus token.
+Essence versus accident.
 
-### Step 3: The distinction
+**Step 4 — the hierarchy.** Programming culture presumes the class is
+the superior pole. The class file is where the author works, the
+debugger prints class names, and design patterns are drawn as class
+diagrams. The instance is a second-class citizen, literally.
 
-**CLASS / INSTANCE** — type versus token. Essence versus accident.
-Plato's lobby, air-conditioned.
+**Step 5 — the text undermines itself.** In 1987 David Ungar and
+Randall Smith built Self, a Smalltalk descendant with no classes at
+all. Objects inherit directly from other objects (prototypes), and
+anything a class did — grouping, sharing, documentation — turns out to
+be expressible as ordinary objects pointing at ordinary objects. The
+kicker is that the machine never needed the taxonomy: Self's compiler
+watched what actually happened at each call site and generated fast
+code from observed behavior, and that technique became the JIT
+technology that later made Java and JavaScript fast. The class
+hierarchy was a reading aid for humans. The computation was
+object-to-object all along.
 
-Also smuggled in: **TAXONOMY / BEHAVIOR** — the hierarchy is primary;
-what happens at runtime is derived.
+Call this move **declassification**. The class survives it — but as an
+optional view you can project when it helps, not as the axis the
+runtime obeys.
 
-### Step 4: Hierarchical opposition
+## Second pass: the object
 
-Programming culture presumes **CLASS > INSTANCE**. The class file is
-where the author works. The debugger shows class names. Design patterns
-are named after class diagrams. The instance is a second-class citizen
-— literally.
-
-### Step 5: Self-referential reading — **Declassification**
-
-David Ungar and Randall Smith performed the reversal in 1987:
-
-> What if the class hierarchy is not the ground truth, but a **view**?
-> What if objects inherit from objects, and "class" is just another
-> object you can ignore?
-
-**Declassification** is not anti-object. It removes the **privileged
-guard** `{decomposition: class}`. The sea of behavior remains. Objects
-remain. Classes become **optional grouping** — a dimension you may
-project, not the axis the runtime obeys.
-
-Self's paper title is the whole joke: *"Self: The Power of Simplicity."*
-Remove the complicated thing. Keep the power. The JIT watches what
-actually happens at send sites, not what the UML diagram claims.
-
-**The class deconstructs itself:** it was always a **compression** of
-prototype relations for human readers. Strip the compression; the
-computation was already object-to-object.
-
-| Before | After declassification |
-|--------|------------------------|
-| Class defines essence | Prototype defines delegation |
-| Instance is-a Class | Object delegates-to Object |
-| Refactor = move methods up/down | Refactor = rewire prototypes |
-| JIT compiles class shapes | JIT compiles **what got sent** |
-
-Smalltalk's text said classes were fundamental. Self's runtime said
-otherwise. Self won on speed. The hierarchy was **literary**.
-
----
-
-## Part II: Deobjectification — From Object to Slot Soup
-
-### Step 1: Select a text
+**Step 1 — the text.** One message send:
 
 ```smalltalk
 anAccount withdraw: 100.
 ```
 
-Or: **"A message is sent to a receiver."**
+**Step 2 — what it says.** There is an object. It owns the method. The
+message goes to it, and to it alone. One receiver, one privileged
+actor — a little agent inside the object who does the real work.
 
-### Step 2: What the text says
+**Step 3 — the distinction.** Receiver versus everything else. The
+first argument of every call is sacred; the rest of the situation —
+caller, thread, security domain, assertion mode, user, device, time of
+day — is either unmentioned or bolted on later through annotations,
+thread-locals, aspect weavers, and dependency injection.
 
-There **is** an object `anAccount`. It **has** the method. The message
-goes **to** it. One receiver. One privileged actor. The Single Agent
-theory, frozen in syntax.
+**Step 4 — the hierarchy.** Object-oriented culture presumes the
+receiver outranks the context. `self` is a keyword; the ambient
+situation is somebody else's problem. Whole paradigms — subject-oriented
+programming, context-oriented programming, aspect-oriented programming —
+exist as separate movements precisely because the receiver was never
+allowed to step down.
 
-### Step 3: The distinction
+Marvin Minsky saw the same enthronement in psychology. In a 1982 essay
+he demolished what he called the Single Agent theory — the folk idea of
+"a little person deep down there" who does the real mental work — and
+concluded: "Self, itself, is not a single thing." He wrote that five
+years before Self the language shipped, and it reads as a prophecy of
+what came next.
 
-**RECEIVER / EVERYTHING-ELSE** — one coordinate is sacred. Context,
-caller, thread, security domain, assertion mode, user, device, time —
-all secondary, unmentioned, or bolted on later (aspects, annotations,
-thread-locals, dynamic scope, `Environment` records, …).
+**Step 5 — the text undermines itself.** In 2014, Ungar — with Harold
+Ossher and Doug Kimelman at IBM Research — took the step past Self:
+Korz, a language with no objects. A Korz program is a flat collection
+of slots (data and methods) owned by nothing. Each slot carries guards
+over named dimensions — `rcvr`, `assertions`, `user`, `device`,
+whatever the design needs. A message send happens in a context, a set
+of dimension bindings that flows implicitly down the call chain, and
+dispatch matches the whole context symmetrically. No argument is the
+receiver.
 
-Also: **OBJECT / SLOT** — the object is the unit of ownership; slots
-belong to it.
+Their worked example: define `pop()` once, guarded on
+`{rcvr ≤ stack}`. Later, add assertion checking by defining a second
+`pop()` guarded on `{rcvr ≤ stack, assertions ≤ true}` — more specific,
+so it wins whenever the context carries `assertions: true`. The main
+program switches assertions on, and no intermediate code mentions them;
+the binding flows through implicitly. A new concern was added to a
+running design without touching a line between the top and the bottom.
 
-### Step 4: Hierarchical opposition
+And the object survives this move the same way the class survived the
+last one: as a view. Gather the slots along the `rcvr` dimension and
+familiar objects reappear. Gather along `user` and you see one person's
+version of the system. The object was a projection of the slot soup
+along one axis — a projection with very good PR.
 
-OO culture presumes **RECEIVER > CONTEXT**. The first argument is
-special. `self` is a keyword. Multimethods are exotic. Subject-oriented,
-context-oriented, and aspect-oriented programming are **separate
-paradigms** because they weren't allowed to dissolve the receiver.
+Call this move **deobjectification**.
 
-Minsky, 1982: *"Self, itself, is not a single thing."* Eleven years
-before Self 1.0 shipped.
+## What's left: Oriented Programming
 
-### Step 5: Self-referential reading — **Deobjectification**
+Run both passes and look at the residue. Every paradigm in the family
+turns out to be the same mechanism with one dimension frozen into the
+brand name:
 
-Ungar, Ossher, and Kimelman performed the second reversal (Korz, Onward!
-2014):
+| Paradigm | Frozen dimension |
+|----------|------------------|
+| Object-oriented | receiver |
+| Subject-oriented | who is looking |
+| Context-oriented | what is happening |
+| Aspect-oriented | which concern cuts across |
 
-> What if the object boundary is not the ground truth, but a **view**?
-> What if a program is a **sea of slots**, and "object" is what you see
-> when you gather slots along the `rcvr` dimension?
+Korz's own position papers argue that the last three are projections of
+one smaller mechanism. This essay's proposal is one step blunter: drop
+the modifier entirely. **Oriented Programming** — behavior selected by
+orientation along any number of named dimensions, none privileged in
+the name. The word even wants this reading: to orient (from Latin
+*oriens*, the rising sun) is to establish a bearing, and an oriented
+program is one whose behavior is relative to a declared bearing rather
+than to nouns pretending to be physics.
 
-**Deobjectification** removes the privileged guard `{dispatch: single-receiver}`.
+The corollary writes itself. A language that names one axis in its
+paradigm while actually running on a dozen unstated ones — classloader,
+thread, transaction, annotation, weave order — is practicing
+**Disoriented Programming**. It isn't wrong to use those dimensions.
+It's disoriented to pretend only one appears on the compass.
 
-What remains:
+## The arc, and the question
 
-- **Slots** — data and methods, owned by nothing.
-- **Dimensions** — `rcvr`, `assertions`, `user`, `device`, …
-- **Guards** — each slot says which coordinates it cares about.
-- **Context** — bindings flowing implicitly down the call chain.
-- **Symmetric dispatch** — match the **whole** context; no receiver.
+Three subtractions, forty years:
 
-The worked example: `pop()` guarded `{rcvr ≤ stack}`. Add assertions
-later: second `pop()` guarded `{rcvr ≤ stack, assertions ≤ true}`.
-`main()` never mentions assertions again. No Visitor. No aspect weave.
-No refactor cascade. A new **orientation** arrived; the sea rearranged.
+- Smalltalk: everything is an object, and classes rule the objects.
+- Self (1987): remove the classes. Objects and messages remain, and
+  the machinery gets *faster*.
+- Korz (2014): remove the object boundary. Slots, dimensions, and
+  context remain, and the paradigm wars over Subject versus Context
+  versus Aspect collapse into a choice of which guard to freeze.
 
-**The object deconstructs itself:** it was always a **projection** of
-slot soup along one dimension. Freeze `rcvr` → familiar nouns. Freeze
-`assertions` → checking layer. Freeze `user` → subjective view. Same
-sea. Different bearing.
+Each step selected a smaller text, found a smaller enthroned
+distinction, and showed the previous language already contradicted it.
+Morningstar's recipe, run on language design instead of literary
+criticism — by the language designers themselves, in working code.
 
-| Before | After deobjectification |
-|--------|-------------------------|
-| Object owns slots | Slots pertain to coordinates |
-| Message → receiver | Send → context match |
-| `self` is special | `rcvr` is one dimension |
-| Add concern = refactor graph | Add concern = add dimension + guards |
-| Multimethods = exotic | Symmetry = default |
+The open question, filed for David Ungar in
+[ask-david.md](ask-david.md): the Korz papers still wear a modifier
+("Simple, Symmetric, Subjective, Context-Oriented Programming"). Having
+demoted the receiver, would he go the rest of the way and let the genre
+just be called Oriented Programming?
 
-Self removed **classes**. Korz removed **objects**. The pattern is
-identical: remove the guard that pretended to be physics.
-
----
-
-## Part III: Oriented Programming (Bare)
-
-Strip both deconstructions to the residue:
-
-**Oriented Programming** = behavior from **alignment along named
-dimensions**, with no dimension ontologically privileged in the language
-name.
-
-- **Declassification** = `{decomposition: class}` becomes optional view.
-- **Deobjectification** = `{dispatch: rcvr}` becomes optional view.
-- **Korz** = the slot soup + guard lattice made explicit.
-- **Korz′** = same semantics; strict tier crystallizes; soft tier (Zork)
-  improvises and lifts rulings into slots.
-
-The Ungar arc in one line:
-
-```
-Smalltalk  →  Self  →  Korz
-(molecules)    (atoms)   (quarks)
- classes       objects    boundaries
-```
-
-Or in Morningstar's voice: each step **selects a smaller text**, finds
-a **smaller distinction**, and discovers the previous text was **already
-about the thing it claimed to own**.
-
----
-
-## Part IV: Disoriented Programming (The Other Kind)
-
-A language is **disoriented** when it:
-
-1. **Names one axis** in the paradigm (`Object`, `Class`, `Function`)
-   but **runs on many** unstated dimensions.
-2. **Uses "is"** for identity (Korzybski's sin) instead of indexed
-   behavior.
-3. **Forces homing** — to the class file, the mouse, the menu bar —
-   instead of letting the frame come to the work (pie menu at cursor,
-   TrackPoint at home row, radial menu at the tracking cross).
-
-Java is disoriented. C++ is disoriented. Most "OO" shops are
-disoriented in the Korzybski sense: they talk as if objects are
-**territory**, while actual behavior depends on classloader, thread,
-transaction, annotation, profile, AOP weave, and seventeen other
-dimensions not in the name.
-
-They are not wrong to use those dimensions. They are **disoriented** to
-pretend only one appears on the compass rose.
+Hang on to your sense of humor. Don't let anyone intimidate you with
+taxonomy. And when someone insists a paradigm *is* object-oriented, ask
+which dimension they froze — and which ones they're disoriented about.
 
 ---
 
-## Part V: A Deconstruction Exercise (Graded)
-
-**Beginner:**
-- `Account subclass: #SavingsAccount` — declassify into prototypes
-- `anAccount withdraw: 100` — who is the real receiver?
-- The phrase "object-oriented"
-
-**Intermediate:**
-- CLOS `:before`/`:after`/`:around` — demons as guard dimensions
-- AspectJ pointcuts — aspects as late admission the receiver wasn't enough
-- `doesNotUnderstand:` — the hatch that proves dispatch was always negotiable
-
-**Advanced:**
-- Korz `pop()` + `{assertions ≤ true}` — implicit context flow
-- Margolus CA neighborhood — receiverless multimethod in silicon
-- MOOLLM reading a git tree as Self — filesystem as one-dimensional Korz
-
-**Tour de force:**
-- The FOOL 2014 title: *Foundation for Object-, Aspect- and Context-Oriented Programming* — three paradigms, one mechanism, still three guards in the name
-- This document
-- Asking David Ungar whether he'd rename Korz **Oriented Programming** and drop the modifier guard entirely
-
----
-
-## Conclusion: The Slot Soup Was Always Already There
-
-Buried under the postmodern muck — and there is muck; Morningstar
-warned us — are practical claims:
-
-1. **Classes were documentation** compressing prototype graphs for
-   humans. Declassification made machines faster.
-
-2. **Objects were projections** gathering slot soup along `rcvr`.
-   Deobjectification makes other projections first-class.
-
-3. **"-Oriented"** in a paradigm name marks the frozen guard, not the
-   deepest truth. Oriented Programming names the general case.
-
-4. **Disoriented Programming** is what happens when you freeze one
-   guard in the brand but not in the runtime.
-
-5. **Korz** is Oriented Programming with the guards visible. **Korz′**
-   adds a second dispatcher for when the lattice hasn't crystallized yet.
-
-Chip went to cyberspace and learned how to read a paper so it reads
-itself. David went to Smalltalk and learned how to read a language so
-it **dissolves its own nouns**. We went to a Hacker News thread about
-phosphor and came back with Heinz's draftsman template, Ted Selker's
-Joy Button, and the suspicion that **PIXIE was oriented programming in
-1969** — drawing gestures indexed by direction, domain, and hand — before
-the word *object* colonized the compass.
-
-The sea of slots was always already there. Classes and objects were
-**views with good PR**.
-
-Hang on to your sense of humor. Don't let them intimidate you with
-taxonomy. And if someone insists the paradigm *is* object-oriented —
-ask which guard they froze, and which dimensions they disoriented to
-sell you the name.
-
----
-
-## Colophon
-
-**Chip Morningstar** — ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html) (1991). The five steps. The courage to read Culler and write it up for engineers.
-
-**David Ungar** — Self (1987), Korz (2014). Declassification and deobjectification in working code, not just essays.
-
-**Harold Ossher** — Subject-oriented programming and Korz co-authorship. The `subject` dimension before it was a modifier guard in a title.
-
-**Alfred Korzybski** — *Science and Sanity* (1933). Orientation as indexed perception. The map is not the territory; the object is not the behavior.
-
-**Captain Ashford** — ["How to Incarnate Almost Anything"](https://github.com/SimHacker/moollm/blob/main/designs/postmodern-deconstruction.md). Proof the formula survives contact with YAML and grues.
-
-→ [korz/README.md](README.md) · [ask-david.md](ask-david.md) · [design.md](design.md)
-
-*Submitted to: Onward! 2034 (pending declassification of the submission process)*
+*After Chip Morningstar's ["How to Deconstruct Almost Anything"](http://www.fudco.com/chip/deconstr.html)
+(1991). Korz: Ungar, Ossher, Kimelman, Onward! 2014 — see
+[README.md](README.md) for the language itself and
+[design.md](design.md) for Korz′, its LLM-age reading. Minsky's essay:
+"Why People Think Computers Can't," AI Magazine, 1982.*
