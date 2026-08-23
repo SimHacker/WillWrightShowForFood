@@ -6,7 +6,7 @@ Primary-source witness to [ARPAnet](https://en.wikipedia.org/wiki/ARPANET) and e
 
 **Full text in this repo:** [`sources/history-of-the-net-1994.md`](sources/history-of-the-net-1994.md)
 
-**Contact (Aug 2026):** Don recontacted Lynch after [HN #49406210](https://news.ycombinator.com/item?id=49406210) (ITS as original social network). Private email — [`correspondence/2026-08-23-don-to-keith-lynch-recontact.md`](correspondence/2026-08-23-don-to-keith-lynch-recontact.md) (body not in public repo).
+**Contact (Aug 2026):** Don recontacted Lynch after [HN #49407711](https://news.ycombinator.com/item?id=49407711) (ITS as first social network on the [quieter computing thread](https://news.ycombinator.com/item?id=49405682)). Private email — [`correspondence/2026-08-23-don-to-keith-lynch-recontact.md`](correspondence/2026-08-23-don-to-keith-lynch-recontact.md) (body not in public repo).
 
 ---
 
@@ -34,7 +34,7 @@ In July 1994 [Keith F. Lynch](https://keithlynch.net/) answered [Ronda Hauben](h
 | **Steven Levy *Hackers*** | RMS quoted extensively (Dell 1984) | [Wikipedia](https://en.wikipedia.org/wiki/Hackers:_Heroes_of_the_Computer_Revolution) |
 | **SF-Lovers / Proxmire Golden Fleece** | List killed; wine-lovers never returned | [Brad Templeton](https://en.wikipedia.org/wiki/Brad_Templeton) SF-lovers archives |
 | **Human-Nets / worldnet** | Read backwards = period snapshot | [Human-Nets archives](https://www.davidwittenbrook.com/human-nets/) |
-| **Netism essay** | Usenet vs Internet as black/white — coined "netism" | Henry's [small web](https://henry.codes/writing/i-dream-of-quieter-computing/) thread echo |
+| **Netism essay** | Usenet vs Internet as black/white — coined "netism" | Henry's [small web](https://henry.codes/writing/i-dream-of-quieter-computing/) thread — [`../don-hopkins/its-first-social-network-hn-2026.md`](../don-hopkins/its-first-social-network-hn-2026.md) |
 | **FCC modem tax (real, then urban legend)** | Packet vs dedicated lane economics | [`../don-hopkins/slower-phosphor-quieter-computing-hn-2026.md`](../don-hopkins/slower-phosphor-quieter-computing-hn-2026.md) (quiet = cultural + hardware) |
 
 ---

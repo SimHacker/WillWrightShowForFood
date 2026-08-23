@@ -4,15 +4,35 @@
 
 **Parent comment:** [mrob](https://news.ycombinator.com/item?id=49406990), replying to Henry's "glass and refresh rates" line — argues the *opposite* hardware fix: higher refresh rate is metaphorically *quieter* because discrete frames introduce latency, phantom-array strobe, and sample-and-hold blur; a tool that disappears into the body needs **at least 1000 Hz**.
 
-**Don's reply:** [49407686](https://news.ycombinator.com/item?id=49407686) — two sentences and a receipt.
+**Don's replies:** [49407686](https://news.ycombinator.com/item?id=49407686) (phosphor) · [49407938](https://news.ycombinator.com/item?id=49407938) (slow computers + pie menus)
+
+**mrob's rebuttal:** [49407821](https://news.ycombinator.com/item?id=49407821) — slow phosphors also artifact; 1000 Hz ≈ reality.
 
 ---
 
-## The comment (verbatim)
+## The comments (verbatim)
+
+### Don → mrob (phosphor)
 
 > We don't need faster refresh rates, we need slower phosphor.
 >
 > https://youtu.be/1EWQYAfuMYw?t=832
+
+### mrob → Don
+
+> We need faster refresh rates. Slow phosphors also cause unnatural visual artifacts. 1000Hz is roughly the point where you get motion quality that, except for a rare few test signals (e.g. multiplexed displays), is easily mistaken for reality.
+
+### Don → mrob (slow computers, pie menus)
+
+> Naw, we just need better software and slower computers, like the PDP-1, that don't require such fast refresh rates, just slow phosphor.
+>
+> And slow computers still need fast and reliable user interfaces, like radial pie menus:
+>
+> https://www.youtube.com/watch?v=jDrqR9XssJI
+>
+> That's a much more advanced and faster PDP-7, talking to an even bigger and faster Titan over a custom network!
+>
+> It proves that slow computers can still be usable with better software, and that today's unusable computers are pissing away enourmous amounts of power, but still suck.
 
 ---
 
@@ -33,6 +53,8 @@ Modern LCD/OLED panels chase Hz because they have almost no persistence. Each fr
 That is the link Don pasted: [CuriousMarc — Lyle Bickley explains the PDP-1](https://www.youtube.com/watch?v=1EWQYAfuMYw) at **13:52** ([`?t=832`](https://youtu.be/1EWQYAfuMYw?t=832)), loading and playing the original [Steve Russell](https://en.wikipedia.org/wiki/Spacewar!) game. Lyle calls out the **P7** explicitly (~7:47 in the same video): short-timescale white flash, long-timescale yellow-green persistence — a radar tube repurposed as the first bitmap game monitor. The cone hoods on old radar scopes existed to make the afterglow readable; [Star Trek's](https://en.wikipedia.org/wiki/Star_Trek:_The_Original_Series) bridge displays were the same callback.
 
 So "quieter" can mean: fewer frames fighting your eye (**mrob**), or fewer frames *needed* because the phosphor smooths between them (**Don**). Persistence is temporal low-pass filtering built into the display chemistry — the opposite of glass-and-Hz modernism. [Norbert Landsteiner's browser PDP-1](https://www.masswerk.at/spacewar/) and the [FPG-1 Verilog replica](https://github.com/hrvach/fpg1) still cheat with software trails; the real tube did it for free.
+
+Don's second beat widens the argument: the problem is not just the display — it is **software and hardware bloat**. A [PDP-1](https://www.computerhistory.org/) with P7 phosphor did not need 1000 Hz; neither did a [PDP-7 with PIXIE radial menus](https://www.youtube.com/watch?v=jDrqR9XssJI) talking to [Titan](https://en.wikipedia.org/wiki/Titan_(1964_computer)) over a custom network ([`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)). Slow machine, fast *interface* — pie menus as the gestural answer to cognitive load, not more Hz.
 
 Thread neighbors worth the same quiet:
 
@@ -62,13 +84,17 @@ Thread neighbors worth the same quiet:
 | [`../lars-brinkhoff/ideas.md`](../lars-brinkhoff/ideas.md) | PDP restoration orbit — Landsteiner, CHM, FPGA Spacewar |
 | [`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md) | Sibling HN archive — handmade microworlds vs feed troughs |
 | [`../keith-lynch/README.md`](../keith-lynch/README.md) | 1977 ARPAnet entry on TI Silent 700 — same terminal class, thermal paper quiet |
+| [`its-first-social-network-hn-2026.md`](its-first-social-network-hn-2026.md) | Sibling comment — ITS as artisan social network on same thread |
 
 ## External receipts
 
 | What | URL |
 |------|-----|
 | HN story | https://news.ycombinator.com/item?id=49405682 |
-| Don's comment | https://news.ycombinator.com/item?id=49407686 |
+| Don's comment (phosphor) | https://news.ycombinator.com/item?id=49407686 |
+| mrob rebuttal | https://news.ycombinator.com/item?id=49407821 |
+| Don's comment (slow computers + pie menus) | https://news.ycombinator.com/item?id=49407938 |
+| PIXIE / PDP-7 pie menus (Cambridge film) | https://www.youtube.com/watch?v=jDrqR9XssJI |
 | Henry's essay | https://henry.codes/writing/i-dream-of-quieter-computing/ |
 | CuriousMarc PDP-1 tour | https://www.youtube.com/watch?v=1EWQYAfuMYw |
 | Phosphor moment (Spacewar load) | https://youtu.be/1EWQYAfuMYw?t=832 |
