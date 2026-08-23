@@ -83,7 +83,9 @@ documents that raise them — the agenda for the conversation.*
 
 [korz-notes.md](korz-notes.md) carries Don's Q&A working notes on
 the papers, with embedded ASKs on nulls, JIT history, Linda, layers,
-mirrors, and Emacs buffer-locals — those stay in their reading
-context rather than being duplicated here. The
+mirrors, Emacs buffer-locals, and before/after demons (CLOS method
+combination as a dispatch pattern — what is Korz's
+`call-next-method`?) — those stay in their reading context rather
+than being duplicated here. The
 [deep dive](../sources/korz-paper-deep-dive-moollm-mapping.md) ends
 with its own open-questions list, which this page subsumes.

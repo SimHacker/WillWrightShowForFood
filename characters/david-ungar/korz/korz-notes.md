@@ -344,6 +344,40 @@ same context that lookup does. **ASK:** does he read Emacs
 buffer-locals as a Korz precedent? What's the design line between a
 context dimension and a stateful API's "current X"?
 
+**Before/after demons: language features become patterns.**
+Don's observation: Korz lets you *wrap* minimal, essential methods in
+**before and after demons** — slots that perform assertions, logging,
+tracing, permission checks, anything cross-cutting — and then delegate
+inward to the more essential method. The mechanics fall out of
+dispatch: the demon slot guards one dimension more specifically than
+the essential slot (a phase or aspect coordinate, or any extra
+constraint), so it matches first; it does its demon work, then
+re-sends with that dimension stripped or advanced, and the
+next-most-specific slot — the essential method — runs. Stacking demons
+is stacking dimensions; ordering comes from the specificity lattice,
+not a combination DSL. What this buys is the point: **features of
+other systems become patterns of a simpler system with fewer, more
+essential features.** CLOS ships `:before`/`:after`/`:around` as
+language features and needs the MOP — a protocol for designing *other*
+object systems — to let you change them; AOP ships a weaver, with
+pointcuts and advice as first-class machinery. In Korz the pointcut is
+a guard, the advice is a slot, and method combination is something you
+*write*, not something the language *is*. It's the same subtraction
+run one more time: Self showed classes are a pattern of prototypes;
+Korz shows objects are a pattern of guarded slots — and now CLOS's
+flagship feature is a pattern of dispatch. The paper's own future work
+gestures here from the interpreter side ("dimensions that alter the
+behavior of the interpreter… the key to method combination, e.g. an
+Ensembles dimension"); demons come at the same target from below, with
+no interpreter change at all. And Ossher is the right co-author for
+this conversation — subject-oriented programming and Hyper/J were IBM's
+composition machinery; Korz makes the machinery a idiom. **ASK:** what
+is Korz's `call-next-method` — is there a clean resend-to-next-most-
+specific idiom for the demon's inward delegation, did the prototype
+have one, and does demons-as-a-pattern make the Ensembles dimension
+unnecessary — or is "run every matching slot" the one combination that
+genuinely needs the interpreter?
+
 **Would Korz accept scored or stochastic dispatch?**
 Korz argmaxes (most specific slot wins; Appendix B legislates ties).
 The Sims auctioned all matching ads and dithered among the top N;
