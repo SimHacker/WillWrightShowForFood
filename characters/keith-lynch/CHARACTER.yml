@@ -13,11 +13,10 @@ representation:
 
 invitation:
   status: not_applicable
-  consent: outreach_sent_awaiting_reply
-  first_contact: correspondence/2026-08-23-don-to-keith-lynch-recontact.md
+  consent: not_applicable
   note: |
-    Not a show guest — primary-source archivist. Don recontacted 2026-08-23 after HN
-    ITS-social-network thread; private email body in DonHopkins private/ only.
+    Not a show guest — primary-source archivist. Public material only:
+    keithlynch.net/history.net.html and HN cross-links.
 
 bio:
   summary: >
@@ -29,5 +28,3 @@ bio:
 sources:
   public:
     - sources/history-of-the-net-1994.md
-  private:
-    note: "Full 2026-08-23 Don email — DonHopkins correspondence/attachments/keith-lynch/private/"

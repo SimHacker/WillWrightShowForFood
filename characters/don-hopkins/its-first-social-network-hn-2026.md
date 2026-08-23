@@ -52,15 +52,13 @@ Don's prior receipts (linked in-comment):
 | [35759887](https://news.ycombinator.com/item?id=35759887) | **UNTALK** before Unix `talk` — UNCOLA's split-screen conference |
 | [35759965](https://news.ycombinator.com/item?id=35759965) | **rwall incident** — March 31, 1987 |
 
-Same day Don [emailed Keith Lynch](../keith-lynch/correspondence/2026-08-23-don-to-keith-lynch-recontact.md) after posting this — crediting Lynch's TIP/TAC counter-case that dialup terminals were an even *more* retro social layer, lacking ITS discoverability.
-
 ---
 
 ## Repo context
 
 | File | Why |
 |------|-----|
-| [`../keith-lynch/README.md`](../keith-lynch/README.md) | Lynch memoir linked in-comment; Don recontacted same day |
+| [`../keith-lynch/README.md`](../keith-lynch/README.md) | Lynch memoir linked in-comment (public keithlynch.net text) |
 | [`slower-phosphor-quieter-computing-hn-2026.md`](slower-phosphor-quieter-computing-hn-2026.md) | Sibling comments on same Henry thread |
 | [`../richard-stallman/README.md`](../richard-stallman/README.md) | ITS Emacs, null password, guest culture |
 | [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) | Fast UI on slow machines — paired beat in phosphor follow-up |
