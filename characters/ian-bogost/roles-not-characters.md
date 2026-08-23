@@ -354,8 +354,11 @@ was inside:
   ([2009 press capture](../will-wright/sources/2009-cnet-stupid-fun-club/README.md)).
 - **Urban Safari** — StoryMaker's field arm: geo-captured story cards
   at real-world places, same stack as Bar Karma
-  ([lineage receipts](../../process/showmaker-network.md), with the
-  2011 Shneiderman correspondence documenting it at deployment).
+  ([Urban Safari overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md) ·
+  [Bar Karma overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md) ·
+  [the 2011 Don ↔ Ben Shneiderman correspondence](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/storymaker/shneiderman-2011-correspondence.md)
+  documenting StoryMaker at deployment ·
+  [lineage receipts](../../process/showmaker-network.md)).
 - **[Slats](../robots/slats/README.md) and
   [Dents](../robots/dents/README.md)** — the improvising street robots
   and their One Minute Movies, entertainment research with hidden
