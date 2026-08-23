@@ -68,11 +68,11 @@ sources:
     path: sources/hn-homer-forth-index.yml
     note: Index of Don's HN reposts citing Coco's HOMER story
   - type: internal
-    path: sources/fb-llm-lsd-thread-2026-08.md
-    note: FB thread — LLM LSD, brain rot, Don's reply (Aug 2026)
+    path: correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
+    note: Canonical archive — Don's full reply on Coco's wall (Aug 2026)
   - type: internal
-    path: media/fb-reply-llm-lsd-2026-08.md
-    note: Full text of Don's posted FB reply
+    path: correspondence/README.md
+    note: Index of archived public thread (no Facebook login required)
   - type: web
     url: http://leftbrain.us/rotherHistory/homer.html
     note: Paul Rother — Homer & Associates history
@@ -100,7 +100,7 @@ invitation:
   replied_via: messenger
   reply_capture: sources/messenger-2026-07-06-reply.md
   followup: invitation-followup-2026-08.md
-  fb_thread: sources/fb-llm-lsd-thread-2026-08.md
+  correspondence: correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
   show_seed: repo-shows/coco-conn/
   path: ../../characters/coco-conn/invitation.md
   next: |
@@ -108,7 +108,7 @@ invitation:
     2. Connect + interview Paul Rother FIRST (her ask) — characters/paul-rother/
     3. Schedule Coco chat — she's open
     4. Hackers tapes + clip rights still open
-    5. FB LLM LSD reply posted 2026-08-23 — thread live
+    5. LLM LSD reply archived 2026-08-23 — correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
 
 facts_to_confirm:
   - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"

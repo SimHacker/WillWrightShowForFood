@@ -1,6 +1,12 @@
-# Facebook reply — Coco Conn LLM LSD thread
+# Don Hopkins — reply on Yo Coco's wall
 
-*Don Hopkins → Yo Coco, posted 2026-08-23. Archive copy for the repo.*
+**Posted:** 23 August 2026  
+**Venue:** Facebook comment on Yo Coco's wall (LLM / LSD thread)  
+**Author:** Don Hopkins  
+**To:** Coco Conn (Yo Coco)  
+**In reply to:** [Coco's post asking how to give an LLM the equivalent of LSD](2026-08-22-coco-llm-lsd-question.md)
+
+**This file is the canonical archive.** Facebook login is not required to read it.
 
 ---
 
@@ -38,22 +44,22 @@ Last footnote, tying to your brain-rot post from yesterday: mind the difference 
 
 The map is not the territory. The self is not the mind. It just has really good PR. As in both Public Relations and Pull Request — GitHub as MMORPG!
 
-Links:
+## Links (as posted)
 
-David Ungar — Korz (my working notes)
+David Ungar — Korz (my working notes)  
 https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/david-ungar/korz
 
-Marvin Minsky — "Why People Think Computers Can't"
+Marvin Minsky — "Why People Think Computers Can't"  
 https://fmfi-uk.hq.sk/Informatika/Uvod%20Do%20Umelej%20Inteligencie/clanky/wptccant.pdf
 
-Ian Bogost — "Video Games Are Better Without Characters" (The Atlantic)
+Ian Bogost — "Video Games Are Better Without Characters" (The Atlantic)  
 https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/
 
-Don Hopkins — "Roles, not characters" (response to Bogost)
+Don Hopkins — "Roles, not characters" (response to Bogost)  
 https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ian-bogost/roles-not-characters.md
 
-Don Hopkins — "GitHub as MMORPG"
+Don Hopkins — "GitHub as MMORPG"  
 https://github.com/SimHacker/moollm/blob/main/designs/GITHUB-AS-MMORPG.md
 
-Michael Grey — "What Happens IF You 'DRUG' LLMs?" (Wolfram Community; project defined by Stephen Wolfram)
+Michael Grey — "What Happens IF You 'DRUG' LLMs?" (Wolfram Community; project defined by Stephen Wolfram)  
 https://community.wolfram.com/groups/-/m/t/2959382

@@ -17,9 +17,12 @@ Peter Conn email, her own interview, plus the LLM LSD thread that just reconnect
 
 ---
 
-Coco!! Your message made my whole month — and then your LSD question on Facebook made my whole year.
-(You saw the reply — you asked the exact question I'd been living inside for weeks, so you got both
-barrels. Minsky, Leary, the works.)
+Coco!! Your message made my whole month — and then your LSD question made my whole year.
+(You got the full reply — Minsky, Leary, the works — archived here if you want to reread or link friends:
+
+https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/coco-conn/correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
+
+)
 
 Now, answering your message properly:
 
@@ -39,9 +42,11 @@ And YES, I want to chat with you — no camera, no homework, just catching up fi
 my evenings, which works great. Name a day.
 
 Meanwhile your room in the repo keeps growing — the HOMER story, Flying Logos, the SIGKids day I met
-David, and now the LSD thread, all in one place:
+David, and the LSD thread, all in one place:
 
 https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/coco-conn
+
+(Full reply text: `correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md`)
 
 And I still dream about those Hackers Conference tapes. No rush on any of it.
 
