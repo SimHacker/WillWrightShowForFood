@@ -49,6 +49,12 @@ Don sent matching invitations (Heinz, Lars, David). David flagged timezone/grand
 
 → [Lars correspondence](../lars-brinkhoff/correspondence.md) · [PIXIE show](../../repo-shows/pixie-pie-menus-pdp7/README.md)
 
+### Draftsman's template → radial menus (23 Aug 2026)
+
+Don shares the [HN quieter-computing thread](https://news.ycombinator.com/item?id=49405682) with Heinz + the PIXIE circle. Heinz's reply (posted to HN with permission): PIXIE's light pen + radial menus **translate the 1950s draftsman's practice** — pencil in one hand, symbol template in the other, on a tilted drawing board. The radial menu *is* the template, dynamically adapted; the freed hand works the TTY. He mourns the tilted drawing board as the drawing office's lost social meeting point. Attachment: 1960 drawing digitised from 1 m × 2.5 m original (not yet filed).
+
+→ [Full source](sources/2026-08-23-draftsman-template-radial-menus.md) · [HN archive](../don-hopkins/slower-phosphor-quieter-computing-hn-2026.md)
+
 ### Cambridge / TRE storyline (9–10 Jul 2026)
 
 Roy asks Heinz + Don to collect storyline: Maurice Wilkes, Neil Wiseman, John Hiles, Cheney, Etherton, Rainbow Project, PIXIE, PDP-7 ↔ Titan. Heinz begins installments from 1967 origin story.

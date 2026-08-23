@@ -9,7 +9,10 @@ Machine index: [`pdp7-development.yml`](pdp7-development.yml) · **Updated:** 20
 
 ## Hardware stack
 
-→ [cambridge-pixie-hardware-stack.yml](media/reference/cambridge-pixie-hardware-stack.yml) · [MANIFEST](media/reference/MANIFEST.yml)
+→ [cambridge-pixie-hardware-stack.md](media/reference/cambridge-pixie-hardware-stack.md)
+(geometry and performance:
+[`../heinz-lemke/pixie-hardware.md`](../heinz-lemke/pixie-hardware.md))
+· [MANIFEST](media/reference/MANIFEST.yml)
 
 ### CPU and system manuals (local)
 

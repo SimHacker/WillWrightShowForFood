@@ -56,6 +56,8 @@ see_also:
   - { path: ../alan-kay/, why: "PIXIE Cc; Wilkes→PARC; hoped series with living+passed Cambridge collaborators" }
   - { path: ../alan-kay/sources/2026-07-12-wilkes-parc-london.md, why: "Kay Wilkes/PARC/London digest (PIXIE thread)" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7/pixie-pie-menus-pdp7.yml, why: "Group show — Heinz + Lars + David Rosenthal" }
+  - { path: pixie-hardware.md, why: "Model numbers, memory, clock, display options, link — one-page iron inventory" }
+  - { path: sources/pdp7-reference/GUIDE.md, why: "Turist guide — IOT, 340 as second computer, Titan extracodes" }
   - { path: ../lars-brinkhoff/, why: "Co-guest — Type 340 display, SIMH, make PIXIE runnable today" }
   - { path: ../david-rosenthal/, why: "Co-guest — same Cambridge PDP-7/Titan ~1970; NeWS/X11 lineage" }
   - { path: ../roy-eagleson/, why: "Educator friend — teaches Sketchpad → PIXIE; UWO graphics history" }

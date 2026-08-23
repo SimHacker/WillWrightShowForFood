@@ -32,6 +32,8 @@ met Wiseman, **PIXIE → NeWS/X11** lineage, **LOCKSS** preservation. Trio with 
 **Lars Brinkhoff** joins for the hardware segment: Type 340 vector display, light pen, SIMH /
 preservation toolchain — *make PIXIE runnable again on stream*. Heinz remembers what it felt like;
 Lars maps the manual to emulators. [`../lars-brinkhoff/`](../lars-brinkhoff/) ·
+[PIXIE hardware sheet](pixie-hardware.md) ·
+[Lars manual shelf](../lars-brinkhoff/media/reference/cambridge-pixie-hardware-stack.md) ·
 [Type 340 manual](http://bitsavers.trailing-edge.com/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf)
 
 ### 0e. Roy Eagleson — educator teaching Sketchpad → PIXIE

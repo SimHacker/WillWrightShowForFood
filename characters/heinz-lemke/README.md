@@ -19,8 +19,9 @@ New to this room? Three doors, pick by appetite:
 1. **The story** — [Back to the Roots (Part 1, 1967)](sources/1967-back-to-the-roots-part1.md):
    Heinz's own origin memoir — the Plessey "spy" accusation, the handwritten design doc, the
    Wilkes talk, the PhD offer.
-2. **The machine** — [the turist guide](sources/pdp7-reference/GUIDE.md): PDP-7, Type 340
-   display, Titan mainframe, light pen, and why a display can *add instructions* to a computer.
+2. **The machine** — [PIXIE hardware](pixie-hardware.md) (model numbers, memory, clock, link)
+   and [the turist guide](sources/pdp7-reference/GUIDE.md): PDP-7, Type 340 display, Titan
+   mainframe, light pen, and why a display can *add instructions* to a computer.
 3. **The code** — [the recovered PIXIE assembler listing](sources/pixie-assembler-listing-1972/README.md):
    ~5,000 words of commented 1972 PDP-7 assembly, OCR'd back to runnable text.
 
@@ -114,6 +115,7 @@ line.
 | 1972 | PhD thesis, 219 pp — annotated 8-part edition | [annotated/](sources/phd-thesis-1972/annotated/README.md) |
 | 1972 | Complete assembler listing, 128 pp — recovered text | [pixie-assembler-listing-1972/](sources/pixie-assembler-listing-1972/README.md) |
 | 2008 | Bill Buxton "memory lane" PIXIE letter | [notes](sources/2008-bill-buxton-pixie-memory-lane.md) |
+| 2026 | Draftsman's template → radial menus (Heinz's origin story, posted to HN) | [source](sources/2026-08-23-draftsman-template-radial-menus.md) |
 | — | Newman & Sproull ref 520 "movable menu" citation | [yml](sources/newman-sproull-ref-520-movable-menu.yml) |
 
 ## Correspondence and threads
@@ -125,8 +127,9 @@ Also: [correspondence digest](correspondence.md) · [from Alan Kay](from-alan-ka
 
 ## Working documents
 
-[Interview ideas](ideas.md) (incl. the two-teletypes nightly-workflow question — now
-pre-confirmed by thesis Figs 8.6/8.7) · [source recovery plan](pixie-source-recovery.md) ·
+[PIXIE hardware](pixie-hardware.md) · [Interview ideas](ideas.md) (incl. the two-teletypes
+nightly-workflow question — now pre-confirmed by thesis Figs 8.6/8.7) ·
+[source recovery plan](pixie-source-recovery.md) ·
 [pull-in gaps](pull-in-gaps.md) (open: RAINBOW MEMO series, Wiseman notes, seminar attachments) ·
 [show seed](../../repo-shows/pixie-pie-menus-pdp7/README.md) · Don's pie-menu history:
 [`../don-hopkins/pie-menus-chi-88-and-beyond.md`](../don-hopkins/pie-menus-chi-88-and-beyond.md)

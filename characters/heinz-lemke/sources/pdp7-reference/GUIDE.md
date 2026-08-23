@@ -5,6 +5,9 @@ PDP-7 is, how plugging in a device literally added instructions to it, why the T
 display is a second computer, and what Titan — the mainframe across the link — was. Written
 for anyone spending precious time here; manuals are in [README.md](README.md).
 
+**Inventory sheet:** [PIXIE hardware](../../pixie-hardware.md) — model numbers, memory, clock,
+link protocol identifiers, documented vs missing manuals.
+
 ## Why "turist"
 
 Not a typo — a credential. **TURIST** is MIT AI Lab / ITS spelling: SIXBIT filenames held
