@@ -26,7 +26,7 @@
 
 > Naw, we just need better software and slower computers, like the PDP-1, that don't require such fast refresh rates, just slow phosphor.
 >
-> And slow computers still need fast and reliable user interfaces, like radial pie menus:
+> But slow computers still need fast and reliable user interfaces, like radial pie menus:
 >
 > https://www.youtube.com/watch?v=jDrqR9XssJI
 >
