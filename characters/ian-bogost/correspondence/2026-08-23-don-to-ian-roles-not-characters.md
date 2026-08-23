@@ -12,7 +12,7 @@ https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ian-bogo
 
 The short version: SimCity never lacked characters — it implied them as roles around the glass (mayor, treasurer, planner, tool operator), and role decomposition grants your essay's wish without deleting the people. But the section I most want your judgment on is "The abdication, implemented."
 
-Your crescendo asked what it would take to wrest us from personal identification entirely — "the abdication of our own selfish, individual desires in the interest of participating in systems larger than ourselves." There's a programming language that took that dare literally, and you're unusually equipped to judge it, as the author of Unit Operations and Alien Phenomenology.
+Your crescendo asked what it would take to wrest us from personal identification entirely — "the abdication of our own selfish, individual desires in the interest of participating in systems larger than ourselves." There's a programming language that took that dare literally, and you're uniquely equipped to judge it, as the author of Unit Operations and Alien Phenomenology.
 
 David Ungar spent a career performing the abdication one layer at a time. Smalltalk had classes; Self removed them — and that simplification produced the JIT technology that makes the Java and JavaScript we're communicating through fast.
 
