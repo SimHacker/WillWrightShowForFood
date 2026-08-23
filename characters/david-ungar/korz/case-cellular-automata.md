@@ -141,6 +141,12 @@ same man coined the K-lines this whole design runs on
 of folk psychology decades before Korz dissolved the one in message
 sends.
 
+The same Single Agent demolition earned Minsky a villain's role in the
+LaRouche movement's 2001 "Cult of Artificial Intelligence" polemic,
+which quotes these very lines as proof of degeneracy — one text, two
+readers, opposite verdicts, which is itself a dispatch-on-context demo:
+[archived with commentary](../../marvin-minsky/sources/2001-liebig-cult-of-artificial-intelligence.md).
+
 And Minsky wrote the capstone himself, in the same section: "In every
 field, as Scientists we're always forced to recognize that what we see
 as single things — like rocks or clouds, or even minds — must

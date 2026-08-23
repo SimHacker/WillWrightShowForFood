@@ -34,6 +34,10 @@
 6. **Perceptrons + Papert** — with Seymour memorial room; constructionist lineage trail.
 7. **Sketchpad seat** — Ivan citation: Shannon + Minsky shaped Sketchpad's character.
 8. **Brain Opera / Media Lab** — Tod Machover; Stewart Brand *Media Lab* book adjacency.
+9. **Villain of the LaRouche movement** — the 2001 *Fidelio* "Cult of AI" polemic quotes
+   Minsky verbatim and reads him doctrinally backwards; reception history where the enemy
+   did the reading. Same Single Agent passage the Korz work reads as prophecy.
+   [`sources/2001-liebig-cult-of-artificial-intelligence.md`](sources/2001-liebig-cult-of-artificial-intelligence.md)
 
 ## Sources
 

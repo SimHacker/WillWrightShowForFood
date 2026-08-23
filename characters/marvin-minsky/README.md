@@ -32,4 +32,18 @@ implementation bridge.
 [`sources/2022-12-23-hn-society-of-mind.md`](sources/2022-12-23-hn-society-of-mind.md) ·
 [`ideas.md`](ideas.md) · HN IDs: [`../../process/hn-harvest/marvin-minsky.md`](../../process/hn-harvest/marvin-minsky.md)
 
+## Villain of the LaRouche movement (2001)
+
+The Schiller Institute's *Fidelio* cast Marvin as high priest of "The
+Cult of Artificial Intelligence" — counterpole of Lyndon LaRouche
+himself, inducted into a villain gallery alongside Bertrand Russell and
+H.G. Wells. High praise. The polemic quotes the Jokes memo, "Music,
+Mind, and Meaning," and the Single Agent demolition verbatim (verified
+against our archives) while getting the frame around them doctrinally
+wrong.
+
+[`sources/2001-liebig-cult-of-artificial-intelligence.md`](sources/2001-liebig-cult-of-artificial-intelligence.md) —
+full text, quote verification, political commentary: what holds up,
+what holds up ironically, what's cult doctrine.
+
 Verifiable sources in `CHARACTER.yml`. Family may request correction or removal anytime.
