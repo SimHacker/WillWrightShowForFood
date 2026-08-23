@@ -3,7 +3,8 @@
 *A response to Ian Bogost,
 ["Video Games Are Better Without Characters"](https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/),
 The Atlantic, March 13, 2015 — written the week EA closed Maxis
-Emeryville. Consent note: this is Don's reading of a published essay;
+Emeryville. Consent note: this is
+[Don](../don-hopkins/README.md)'s reading of a published essay;
 Bogost hasn't been asked about any of it yet.*
 
 ## The essay's question
@@ -120,8 +121,9 @@ gave them names, a sovereign wealth fund, and a cap table (the coda
 below has the receipts). Soul City's answer is the punk one, with
 [Nina Hagen as patron saint](../../catalogs/soul-city/README.md#the-attitude):
 when the wall's owner starts rationing your tools, you don't petition
-the wall — you walk out with your voice intact and get louder. She did
-it to an actual walled state in 1976; Soul Saver does it to the silos,
+the wall — you walk out with your voice intact and get louder.
+[She did it to an actual walled state in 1976](../nina-hagen/README.md);
+Soul Saver does it to the silos,
 moving character souls onto **underground rails** nobody can expatriate
 you from — an **underground railroad** for the twenty-first century:
 plain files, git, federation spokes, hub-and-spoke bridges to indie
@@ -194,14 +196,17 @@ The essay's sharpest observation about The Sims is this one:
 That resistance wasn't an accident of abstraction. It was one side of
 a design argument that played out in writing in 1998, and the archive
 has both sides
-([same-sex-design-arc.yml](../don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml),
+([the record — myth vs primary sources](../patrick-j-barrett-iii/same-sex-relationships-the-record.md),
 [the integrated story](../patrick-j-barrett-iii/sources/same-sex-relationships-integrated-story.md)).
-Don's review of Design Document Draft 3 called the relationship code
+Don's review of
+[Design Document Draft 3](../don-hopkins/sources/sims-design-documents/TheSimsDesignDocumentDraft3-1998-08-07-DonsReview.pdf)
+called the relationship code
 what it was — "Heterosexist and Monosexist"; a same-sex advance earned
 a homophobic slap — and proposed the **representational** fix: a 0–100
 interest per sex, a spectrum covering hetero, homo, bi, and asexual
-Sims. An identity attribute, in the data model. Patrick J. Barrett
-III, hired that October, independently built the **behavioral** fix
+Sims. An identity attribute, in the data model.
+[Patrick J. Barrett III](../patrick-j-barrett-iii/README.md),
+hired that October, independently built the **behavioral** fix
 and shipped it: no sexual-preference property at all — same-sex
 romance simply possible, for any Sim, at any time. Orientation as
 something a Sim *does*, not something a Sim *is*.
@@ -235,7 +240,8 @@ punishable up to and including death. The fund that holds it is chaired
 by the man U.S. intelligence says approved the Khashoggi operation, and
 the crown prince's American defender collects the carry. Bogost's
 abstract billionaires acquired names, a bone saw in the record, and a
-son-in-law on the cap table. Patrick Barrett's autonomous kiss —
+son-in-law on the cap table.
+[Patrick Barrett's autonomous kiss](../patrick-j-barrett-iii/same-sex-relationships-the-record.md) —
 shipped with no orientation checkbox precisely so no censor could find
 one — is now owned by the censor. Protesters dressed as Sims stood
 outside Redwood City while the deal closed. The

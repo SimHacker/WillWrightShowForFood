@@ -7,13 +7,13 @@ Source doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2A
 
 | File | Contents |
 |------|----------|
-| [soul-city-soul-saver-thesis.yml](soul-city-soul-saver-thesis.yml) | **2026 reframe** — Soul City NC, Nixon, EA buyout, Soul Saver, Tiny Life exodus |
+| [soul-city-soul-saver-thesis.md](soul-city-soul-saver-thesis.md) | **2026 reframe** — Soul City NC, Nixon, EA buyout, Soul Saver, Tiny Life exodus ([YAML source data](soul-city-soul-saver-thesis.yml)) |
 | [flipbook B-roll](../../../../repo-shows/flipbook/README.md) | **Graphics department** — illustrated narration shows for paper acts 1–4 |
 | [title-candidates.yml](title-candidates.yml) | Title votes — Don + Ben Shneiderman suggestions |
 | [abstract.md](abstract.md) | ~350-word abstract + theory stack |
 | [interview-points.yml](interview-points.yml) | Five QGCon beats + bio + talk structure |
 | [procedural-rhetoric-theory.yml](procedural-rhetoric-theory.yml) | Bogost, Murray, Frasca, constructionism |
-| [same-sex-design-arc.yml](same-sex-design-arc.yml) | Don review → Patrick implementation → ship; **press_discrepancies** (New Yorker 2014 vs marked-up PDFs) |
+| [the record (accessible)](../../../patrick-j-barrett-iii/same-sex-relationships-the-record.md) | Don review → Patrick implementation → ship; myth vs primary sources ([YAML source data](same-sex-design-arc.yml)) |
 | [timeline.yml](timeline.yml) | Chronological inclusivity + culture parallel track |
 | [themes.yml](themes.yml) | Thematic sections (masking, zodiac, modding, PKD, etc.) |
 
@@ -36,7 +36,7 @@ and Legacy Collection's Exchange removal make **exit infrastructure** the next i
 [`soul-city-namesake.md`](../../../../repo-shows/will-wright-premiere/soul-city-namesake.md)) is the
 git hub for soul-files; **Soul Saver** / **SoulAngel** relocates characters from oligarch-owned silos
 into indie spokes — **Tiny Life** first — where share + story still ship. Procedural rhetoric as
-**platform**, not one-off objects ([`soul-city-soul-saver-thesis.yml`](soul-city-soul-saver-thesis.yml)).
+**platform**, not one-off objects ([the thesis](soul-city-soul-saver-thesis.md)).
 
 ## Show / Repo Show use
 

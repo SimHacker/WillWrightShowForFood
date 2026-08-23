@@ -189,7 +189,7 @@ characters — including every queer household anyone ever built — portable an
 git, outside any single owner's silo, with bridges to indie worlds like
 [Tiny Life](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml). The academic
 frame is the sequel to this very story:
-[*How Inclusivity Saved The Sims* — and what saves the sims now](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml).
+[*How Inclusivity Saved The Sims* — and what saves the sims now](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md).
 The record above shows inclusion was designed in on purpose. Soul City is how it stays in,
 whoever owns the servers.
 
@@ -198,8 +198,8 @@ whoever owns the servers.
 ## Supporting documentation in this repo
 
 - [Integrated timeline — Don + Patrick, with press-discrepancy table](sources/same-sex-relationships-integrated-story.md)
-- [Design-arc source file (QGCon inclusivity paper)](../don-hopkins/sources/qgcon-inclusivity-paper/same-sex-design-arc.yml)
-- [Inclusivity timeline, 1996–2019, game ↔ culture parallel track](../don-hopkins/sources/qgcon-inclusivity-paper/timeline.yml)
+- [QGCon inclusivity paper hub — outline, abstract, thesis](../don-hopkins/sources/qgcon-inclusivity-paper/README.md)
+- [The 2026 thesis — Soul City + Soul Saver as the sequel](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)
 - [Patrick's guest page](README.md) · [show: *Did The Sims Make You Gay?*](../../repo-shows/did-the-sims-make-you-gay/README.md) · [readable outline](../../repo-shows/did-the-sims-make-you-gay/did-the-sims-make-you-gay.md) · [sibling: *I'm Queer Therefore I Sim*](../../repo-shows/im-queer-therefore-i-sim/README.md)
 - [Avila comment analysis (MOOLLM — 14 themes, 1,712+ comments)](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-queer-identity-formation.md#community-response-comment-analysis) · [MicropolisCore procedural-rhetoric frame](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/og-cozy-games.md#procedural-rhetoric-why-the-rule-not-the-representation-is-the-argument)
 
