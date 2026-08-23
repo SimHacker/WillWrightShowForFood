@@ -1,0 +1,54 @@
+# Don Hopkins HN comments indexing Coco Conn's HOMER & Assoc. story (with her permission)
+# Canonical thread: item 29261868 ("Forth vs Lisp", 2021-11-18)
+
+canonical:
+  url: https://news.ycombinator.com/item?id=29261868
+  story: Forth vs Lisp
+  date: 2021-11-18
+  note: Full Coco Conn + Paul Rother write-up; Charles Moore at HOMER; Flying Logos lore
+
+reposts:
+  - id: 36751574
+    story: "Forth: The programming language that writes itself: The Web Page"
+    date: 2023-07-16
+  - id: 45646243
+    story: "Forth: The programming language that writes itself"
+    date: 2025-10-20
+  - id: 32123270
+    story: "Byte Magazine: The Forth Language (1980)"
+    date: 2022-07-17
+  - id: 34765743
+    story: "Sun: The Network Is the Computer"
+    date: 2023-02-12
+
+excerpts:
+  - id: 42532404
+    story: "That's not an abstraction, that's a layer of indirection"
+    date: 2024-12-28
+    note: HOMER as counterexample to "simple thing"
+  - id: 38689488
+    story: A Forth Vocabulary for Iteration
+    date: 2023-12-18
+  - id: 38689282
+    story: A Forth Vocabulary for Iteration
+    date: 2023-12-18
+    note: Mitch Bradley at Sun vs Charles Moore at HOMER
+  - id: 44530822
+    story: "Grok 4 Launch [video]"
+    date: 2025-07-11
+    note: Charles Moore simulated in LLOOOOMM; links back to HOMER story
+
+links_in_thread:
+  peter_conn_photos: https://imgur.com/a/4Bmb4xu
+  paul_rother_history: http://leftbrain.us/rotherHistory/homer.html
+  stanford_peter_conn_papers: https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/entire_text/
+  atomic_dog: https://www.youtube.com/watch?v=LMVZ36VA0wg
+  abracadabra: https://www.youtube.com/watch?v=tY8B0uQpwZs
+  bongo_bongo: https://www.youtube.com/watch?v=_NrsRZdMI-A
+  flying_logos: https://www.youtube.com/watch?v=9hIOfEiy4lc
+
+permission: "Coco Conn — included with her permission (per Don's HN posts)"
+
+see_also:
+  - ../homer-forth-flying-logos.md
+  - ../invitation.md

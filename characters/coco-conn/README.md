@@ -19,14 +19,16 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 
 | Era | Thread |
 |-----|--------|
-| **1980s–90s HOMER** | Don reposted Coco & **Paul Rother**'s history on **Hacker News** (with permission) |
+| **1980s–90s HOMER** | Don reposted Coco & **Paul Rother**'s history on **Hacker News** (with permission) — [`sources/hn-homer-forth-index.yml`](sources/hn-homer-forth-index.yml) |
 | **Hackers Conference** | Video archive — speakers, demos, minds blown; highlight reel with Coco narrating → [`hackers-conference-tapes.md`](hackers-conference-tapes.md) |
 | **SIGKids** | Don: Coco is **"royalty and a goddess"** — kids off the main floor **make** the future; met **David Levitt** / **Bounce** there |
+| **Aug 2026 FB** | Coco asks about **LLM LSD** + **brain rot**; Don replies — Minsky, Leary set/setting, Korz, Bogost, Wolfram → [`sources/fb-llm-lsd-thread-2026-08.md`](sources/fb-llm-lsd-thread-2026-08.md) |
 | **Later** | **CitySpace** — collaborative virtual worlds for kids (stub); **2024** — Tapestry / Internet Archive intro via Bob Stein |
 
 ## Repo Show
 
 Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* ·
+warm follow-up: [`invitation-followup-2026-08.md`](invitation-followup-2026-08.md) ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 
 ## Media

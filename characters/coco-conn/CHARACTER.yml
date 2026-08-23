@@ -38,9 +38,17 @@ connections:
     note: Homer II Forth/CAT-700; co-authored public HN history with Coco
   - id: charles-moore
     relation: Forth, Inc. — hired to program console host
-    note: Not a character file yet; inventor of Forth
+    note: Moore programmed Homer II host; Coco and Paul learned Forth from him (public HN account)
+  - id: marvin-minsky
+    relation: mutual orbit — Coco knew Minsky; Don applies Society of Mind to LLMs (FB thread Aug 2026)
+  - id: timothy-leary
+    relation: mutual orbit — Zach Leary mutual friend; set and setting in Don's LLM LSD reply to Coco
+  - id: david-ungar
+    relation: thread bridge — Korz / dissolution of Self linked in Don's FB reply Aug 2026
+  - id: rudy-rucker
+    relation: mutual friend; Merge ↔ Korz; cellular automata since Hackers
   - id: don-hopkins
-    relation: SIGKids host; HN indexer of HOMER story (with permission)
+    relation: SIGKids host; HN indexer of HOMER story (with permission); FB LLM LSD thread Aug 2026
   - id: david-levitt
     relation: SIGKids serendipity — Don met David at Coco's SIGKids area
   - id: scott-kim
@@ -55,7 +63,16 @@ connections:
 sources:
   - type: hn
     url: https://news.ycombinator.com/item?id=29261868
-    note: Coco Conn & Paul Rother HOMER/Forth write-up; Don reposted with permission
+    note: Canonical — Coco Conn & Paul Rother HOMER/Forth write-up; Don reposted with permission
+  - type: internal
+    path: sources/hn-homer-forth-index.yml
+    note: Index of Don's HN reposts citing Coco's HOMER story
+  - type: internal
+    path: sources/fb-llm-lsd-thread-2026-08.md
+    note: FB thread — LLM LSD, brain rot, Don's reply (Aug 2026)
+  - type: internal
+    path: media/fb-reply-llm-lsd-2026-08.md
+    note: Full text of Don's posted FB reply
   - type: web
     url: http://leftbrain.us/rotherHistory/homer.html
     note: Paul Rother — Homer & Associates history
@@ -79,9 +96,11 @@ invitation:
   status: in_conversation
   sent: 2026-07-06
   sent_via: facebook
+  followup: invitation-followup-2026-08.md
+  fb_thread: sources/fb-llm-lsd-thread-2026-08.md
   show_seed: repo-shows/coco-conn/
   path: ../../characters/coco-conn/invitation.md
-  next: "await reply — Hackers Conference tape catalog + clip rights"
+  next: "FB LLM LSD reply posted 2026-08-23; warm follow-up draft ready; Hackers tapes + clip rights still open"
 
 facts_to_confirm:
   - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"
