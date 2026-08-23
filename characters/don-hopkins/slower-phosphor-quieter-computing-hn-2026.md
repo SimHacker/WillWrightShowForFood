@@ -61,6 +61,7 @@ Thread neighbors worth the same quiet:
 | [`../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md) | Early interactive graphics lineage (PDP-7 PIXIE → pie menus) |
 | [`../lars-brinkhoff/ideas.md`](../lars-brinkhoff/ideas.md) | PDP restoration orbit — Landsteiner, CHM, FPGA Spacewar |
 | [`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md) | Sibling HN archive — handmade microworlds vs feed troughs |
+| [`../keith-lynch/README.md`](../keith-lynch/README.md) | 1977 ARPAnet entry on TI Silent 700 — same terminal class, thermal paper quiet |
 
 ## External receipts
 
