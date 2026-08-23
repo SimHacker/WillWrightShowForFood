@@ -52,6 +52,7 @@
 | [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) | Bounce @ Levity — patch-cord trail with [`../jaron-lanier/`](../jaron-lanier/README.md) + [`../david-levitt/`](../david-levitt/README.md) |
 | [`../will-wright/adorable-minutes.md`](../will-wright/adorable-minutes.md) | Async one-minute Q&A — [`will-wright-adorable-minutes.yml`](../../repo-shows/will-wright-adorable-minutes/README.md) |
 | [`hypercard-network-hyperlook-hn-2026.md`](hypercard-network-hyperlook-hn-2026.md) | Networked HyperCard fantasy → HyperLook on NeWS (HN Mar 2026) |
+| [`slower-phosphor-quieter-computing-hn-2026.md`](slower-phosphor-quieter-computing-hn-2026.md) | Henry's small-web manifesto vs mrob's 1000 Hz vs Don's P7 phosphor receipt — CuriousMarc PDP-1 / Spacewar (HN Aug 2026) |
 | [`hyperlook-news-postscript-simcity.md`](hyperlook-news-postscript-simcity.md) | HyperLook SimCity — send-code microworld on NeWS |
 | [`logo-adventure-c64-terrapin.md`](logo-adventure-c64-terrapin.md) | Logo REPL as adventure parser (age 17, Terrapin C64) → MOOLLM adventure compiler |
 | [`characters/scott-adams/`](../../characters/scott-adams/) | Adventure-as-data ancestor — portable VM + 16K worlds |
