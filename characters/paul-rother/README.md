@@ -8,10 +8,8 @@ debugger), and co-authored the public HOMER history with **[Coco Conn](../coco-c
 
 ## Why this room exists
 
-Coco Conn's first ask when she accepted conversation about the Repo Show (Messenger, 2026-07-06):
-
-> I'd love for you to first connect and interview Paul Rother.. he has so many great stories to
-> tell about those times.. He lives in Topanga with his wife.
+When Coco Conn accepted conversation about the Repo Show (July 2026), her first recommendation was
+to connect with and interview Paul — he has the deepest HOMER stories.
 
 **Status: warm lead — contact via Coco. Invitation not yet drafted or sent.**
 

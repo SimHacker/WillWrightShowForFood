@@ -35,8 +35,8 @@ Best addy for me: don@donhopkins.com — please do send the Peter story there. F
 alone he sounds unstoppable, and yes, I'd love to talk to him too. Anything you send offline stays
 offline until you both say otherwise — that's how the whole show works.
 
-And YES, I want to chat with you — no camera, no homework, just catching up first. San Jose mornings
-are my Amsterdam evenings, which works great. Name a day.
+And YES, I want to chat with you — no camera, no homework, just catching up first. Your mornings are
+my evenings, which works great. Name a day.
 
 Meanwhile your room in the repo keeps growing — the HOMER story, Flying Logos, the SIGKids day I met
 David, and now the LSD thread, all in one place:

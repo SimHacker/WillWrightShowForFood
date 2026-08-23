@@ -18,7 +18,7 @@ representation:
 invitation:
   status: warm_lead
   consent: not_yet_asked
-  warm_path: "Coco Conn — Messenger 2026-07-06: 'I'd love for you to first connect and interview Paul Rother.. he has so many great stories to tell about those times.' Lives in Topanga with his wife."
+  warm_path: "Coco Conn recommended connecting with Paul first (July 2026). Contact via Coco."
   show_seed: repo-shows/coco-conn/
   note: "Coco's FIRST ask from the Repo Show invitation — interview Paul before anyone. Contact via Coco."
 
@@ -62,7 +62,7 @@ sources:
     path: ../coco-conn/sources/hn-homer-forth-index.yml
   - type: internal
     path: ../coco-conn/sources/messenger-2026-07-06-reply.md
-    note: Coco's warm handoff — "interview Paul Rother first"
+    note: Coco's warm handoff — action items only, private message not stored
 
 facts_to_confirm:
   - "Best contact channel — via Coco"
