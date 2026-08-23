@@ -371,12 +371,56 @@ behavior of the interpreter… the key to method combination, e.g. an
 Ensembles dimension"); demons come at the same target from below, with
 no interpreter change at all. And Ossher is the right co-author for
 this conversation — subject-oriented programming and Hyper/J were IBM's
-composition machinery; Korz makes the machinery a idiom. **ASK:** what
+composition machinery; Korz makes the machinery an idiom. **ASK:** what
 is Korz's `call-next-method` — is there a clean resend-to-next-most-
 specific idiom for the demon's inward delegation, did the prototype
 have one, and does demons-as-a-pattern make the Ensembles dimension
 unnecessary — or is "run every matching slot" the one combination that
 genuinely needs the interpreter?
+
+**What does "super" even mean in Korz?**
+Don's recollection (confirm with David): he named resend as an
+unsolved — or at least unaddressed — problem of Korz. The history
+explains why it goes hard here: every prior super was an anchor into
+machinery the language hid, and Korz dissolved everything the anchors
+held onto. Smalltalk's `super` is *static* — the compiler bakes the
+method's defining class into the send; same receiver, lookup just
+starts one level above where the method textually lives. Which already
+gives the game away: super was never a different object, it was a
+different *lookup position* — dispatch state wearing a keyword
+costume. Self's `resend` anchors to the slot *holder* (and directed
+resends name a parent explicitly). CLOS's `call-next-method` is
+*dynamic interpreter state* — a closure over the remaining sorted
+applicable-method list, handed to you mid-dispatch; the MOP even
+exposes the list (`compute-applicable-methods`). So: defining class,
+slot holder, linearization. Korz has none of them — no class, no
+owner, and the specificity lattice is a **partial order**, so "next
+most specific" inherits exactly the tie-ambiguity that Appendix B
+legislates into errors, one level down. Two candidate meanings
+survive the dissolution. (1) **Context weakening** — the demon
+pattern's delegation: re-send with the discriminating dimension
+stripped or generalized. Pure Korz, no interpreter reflection; but
+semantically it is *re-dispatch from scratch*, not continue-from-here
+— it can re-match the sender if the guard still passes (loop hazard),
+and it answers "what would a poorer context see?" rather than "who is
+below me?" (2) **Reified dispatch** — expose the matching computation
+itself: the rest-of-the-lattice as a first-class value, a
+`call-next-slot` closure the interpreter hands the winner. Honest,
+and continuous with the paper's interpreter-altering-dimensions
+future work — but it is precisely a **reflective function into the
+interpreter**, and once dispatch position is data, the sea of slots
+has a hidden second context ("where am I in the current send") that
+the language's own contexts don't reify. That's the answer to Don's
+question: yes — and it always was. Smalltalk just compiled the
+reflection in statically; CLOS handed it to you as a closure; Korz,
+having nothing left to hide it behind, would have to admit it's
+reflection or define it away as weakening. Soft-tier coda: under LLM
+dispatch "next most specific" becomes *resample, excluding the
+previous draw* — super as rejection sampling — which suggests the
+honest primitive was never "go up" but "try again, differently."
+**ASK:** which did he mean by unsolved — that neither meaning is
+right, or that both are and they don't coincide? And did the Self
+prototype's interpreter keep a candidate list it *could* have exposed?
 
 **Would Korz accept scored or stochastic dispatch?**
 Korz argmaxes (most specific slot wins; Appendix B legislates ties).
