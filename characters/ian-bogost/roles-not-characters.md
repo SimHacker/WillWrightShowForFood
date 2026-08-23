@@ -51,8 +51,11 @@ commercially — and every clause was falsified in advance by the
 best-selling PC game franchise in history: a famously majority-female
 player base, teams that were "anything but a boys club," creator
 communities led by women, and same-sex romance from day one, which
-didn't cost the franchise anything but *saved* it (the QGCon "How
-Inclusivity Saved The Sims" argument). The Sims sat at the top of the
+didn't cost the franchise anything but *saved* it (the QGCon
+["How Inclusivity Saved The Sims"](../don-hopkins/sources/qgcon-inclusivity-paper/README.md)
+argument, extended to 2026 in
+[the Soul City thesis](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)).
+The Sims sat at the top of the
 sales charts contradicting the premise for fourteen years before the
 premise was shouted. GamerGate wasn't just morally wrong; it was
 empirically refuted by the biggest game in the industry, in advance —
@@ -160,7 +163,8 @@ the same playbook as LIV Golf and Newcastle United: reputation
 laundering at sovereign scale, except this time the asset being
 laundered through is the dollhouse your family's characters live in.
 Those are the billionaires rationing your makeshift tools. You don't
-file a support ticket with a bone saw. You leave. Hirschman framed
+file a support ticket with a bone saw. You leave.
+[Hirschman](https://en.wikipedia.org/wiki/Exit,_Voice,_and_Loyalty) framed
 exit and voice as the
 customer's two options; a federation collapses them — every household
 that walks out of the barbed-wire-and-guard-post walled garden into the
@@ -220,8 +224,10 @@ engine as everything else. Identity enacted rather than represented —
 the roles thesis, running inside the simulation this time. And then
 the franchise spent two decades walking the other road, expansion by
 expansion: the Sims 2 FAQ quietly dropped its same-sex marriage
-question in 2004; Russia restricted The Sims 4 over it in 2014
-(fourteen years late — a badge of honor); Patch 34 unlocked gender
+question in 2004;
+[Russia restricted The Sims 4 over it in 2014](https://www.huffingtonpost.co.uk/2014/05/12/the-sims-russia-gay-ban_n_5309847.html)
+(fourteen years late — a badge of honor);
+[Patch 34](https://sims.fandom.com/wiki/The_Sims_4/Patch_34) unlocked gender
 customization in 2016; sexual orientation arrived as an explicit,
 player-set attribute in 2022 — which is to say, The Sims 4 eventually
 implemented roughly what Don proposed in 1998. Both systems were
@@ -300,17 +306,22 @@ The essay's crescendo is a philosophical dare:
 
 There is a programming language that took that dare literally, and
 Bogost is unusually equipped to judge it — because he's not only a
-game critic, he's an object-oriented ontologist (*Unit Operations*,
-*Alien Phenomenology, or What It's Like to Be a Thing*). Call it **the
-de-objectification of object-oriented programming**. David Ungar spent
+game critic, he's an object-oriented ontologist
+([*Unit Operations*, *Alien Phenomenology, or What It's Like to Be a Thing*](README.md)).
+Call it **the
+de-objectification of object-oriented programming**.
+[David Ungar](../david-ungar/README.md) spent
 a career performing the abdication one layer at a time: Smalltalk had
-classes, **Self** removed them (objects all the way down, no privileged
-taxonomy), and **Korz** removes the objects — no privileged receiver at
+classes, [**Self**](https://selflanguage.org/) removed them (objects
+all the way down, no privileged
+taxonomy), and [**Korz**](../david-ungar/korz/README.md) removes the
+objects — no privileged receiver at
 all, just a sea of slots with dimensional guards that assemble into
 *virtual* objects depending on how you look at them. In Korz the
 receiver is demoted to one guard among many — `rcvr` alongside place,
 time, mood, world. **There are more dimensions than Self** — the
-language, the ego, and the guard list, all at once. Minsky made the
+language, the ego, and the guard list, all at once.
+[Minsky](../marvin-minsky/README.md) made the
 same move on minds: the "Single Agent" theory — the little person deep
 inside who does the real mental work — is a myth every culture clings
 to, and good theories require dissolving it into a society. [The Korz CA case study](../david-ungar/korz/case-cellular-automata.md) works
@@ -340,25 +351,6 @@ largely hypothetical." Fair from outside the gates in 2015 — the
 factory didn't publish. But the output existed, and it had names. Don
 was inside:
 
-- **Bar Karma** (2011) — a broadcast television show on Current TV
-  whose episodes were written by its audience through **StoryMaker**,
-  the SFC's branching-story platform: a community writers' room years
-  before anyone said "crowdsourced narrative" without smirking. And it
-  was announced in the press before it existed: in
-  [October 2009](https://www.cnet.com/culture/will-wright-speaks-about-his-stupid-fun-club-start-up/)
-  Will told VentureBeat the online communities around TV shows were
-  what fascinated him — "The community around The Lost show on TV is
-  one of my favorites. It's awe inspiring" — and fifteen months later
-  he shipped a TV show written by its community. The "mysterious"
-  output was following a publicly stated thesis
-  ([2009 press capture](../will-wright/sources/2009-cnet-stupid-fun-club/README.md)).
-- **Urban Safari** — StoryMaker's field arm: geo-captured story cards
-  at real-world places, same stack as Bar Karma
-  ([Urban Safari overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md) ·
-  [Bar Karma overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md) ·
-  [the 2011 Don ↔ Ben Shneiderman correspondence](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/storymaker/shneiderman-2011-correspondence.md)
-  documenting StoryMaker at deployment ·
-  [lineage receipts](../../process/showmaker-network.md)).
 - **[Slats](../robots/slats/README.md) and
   [Dents](../robots/dents/README.md)** — the improvising street robots
   and their One Minute Movies, entertainment research with hidden
@@ -374,20 +366,49 @@ was inside:
   them through hidden cameras and a wireless pie-menu web rig from
   inside his FMC Motorcoach across the street
   ([theme](../../bits/theme-stupid-fun-club-robots/theme-stupid-fun-club-robots.md)).
+  And Slats is coming back:
+  [**RoboResurrection**](../../repo-shows/will-wright-premiere/slats-reincarnation.md)
+  reincarnates his brain as this show's judge, with a real MCP channel
+  this time instead of a wireless rig and a hidden RV.
+- **Bar Karma** (2011) — a broadcast television show on Current TV
+  whose episodes were written by its audience through **StoryMaker**,
+  the SFC's branching-story platform
+  ([Bar Karma overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md)):
+  a community writers' room years
+  before anyone said "crowdsourced narrative" without smirking. And it
+  was announced in the press before it existed: in
+  [October 2009](https://www.cnet.com/culture/will-wright-speaks-about-his-stupid-fun-club-start-up/)
+  Will told VentureBeat the online communities around TV shows were
+  what fascinated him — "The community around The Lost show on TV is
+  one of my favorites. It's awe inspiring" — and fifteen months later
+  he shipped a TV show written by its community. The "mysterious"
+  output was following a publicly stated thesis
+  ([2009 press capture](../will-wright/sources/2009-cnet-stupid-fun-club/README.md)).
+- **Urban Safari** — StoryMaker's field arm: geo-captured story cards
+  at real-world places, same stack as Bar Karma
+  ([Urban Safari overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md) ·
+  [the 2011 Don ↔ Ben Shneiderman correspondence](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/storymaker/shneiderman-2011-correspondence.md)
+  documenting StoryMaker at deployment ·
+  [lineage receipts](../../process/showmaker-network.md)).
+- **[eBike Safari](../../repo-shows/ebike-safari/README.md)** — the
+  reimagination and continuation of the StoryMaker line, live today at
+  [ebike-safari.com](https://ebike-safari.com/): voice-controlled
+  adventure navigation through a hidden graph of story cards, on an
+  actual bicycle in actual Amsterdam — Urban Safari's field mechanics
+  and Bar Karma's community-authored branching story, rebuilt on an
+  interpreter that can read prose and improvise
+  ([design](../../repo-shows/ebike-safari/ebike-safari.md)).
 
-And this names the other half of WWSFF's mission. The show isn't only
-an archive of what shipped; it's a workshop for **reimagining and
-reimplementing** what the factory prototyped, now that the missing
-ingredient — an interpreter that can read prose and improvise — exists.
+And this names the other half of WWSFF's mission — **the chocolate
+factory lives on in Will Wright Show For Food**. The show isn't only
+an archive of what shipped; it's the same workshop, reopened:
 StoryMaker begat [ShowMaker](../../process/showmaker-network.md), the
-format this very show runs on. Urban Safari begat
-[eBike Safari](../../repo-shows/ebike-safari/README.md), live at
-[ebike-safari.com](https://ebike-safari.com/) — voice-controlled
-adventure navigation through a hidden graph of story cards, on an
-actual bicycle in actual Amsterdam. The robots are queued for
-resurrection. "Mysterious and largely hypothetical" turns out to have
-been a scheduling problem: the ideas were fifteen years early, and this
-repo is where they stop waiting.
+format this very show runs on; Urban Safari begat eBike Safari; Slats
+is queued for resurrection as the house judge. "Mysterious and largely
+hypothetical" turns out to have been a scheduling problem: the ideas
+were fifteen years early, the missing ingredient was an interpreter
+that can read prose and improvise, and this repo is where the factory
+starts shipping again.
 
 ## Show beat
 
