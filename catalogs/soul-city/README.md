@@ -79,9 +79,34 @@ the garden to improve. A departure that takes the soul along.
 
 That's the Soul Saver move, note for note: when the silo's owner starts
 charging Moola for your own memories, you don't lobby — you relocate the
-souls to rails nobody can expatriate you from (plain files, git, federation),
-and keep performing. Punk exit, not exit interview. The walls can keep the
-buildings; the characters were never furniture.
+souls to **underground rails** nobody can expatriate you from (plain files,
+git, federation), and keep performing. Punk exit, not exit interview. The
+walls can keep the buildings; the characters were never furniture.
+
+And know who the wall's owners are. EA's majority owner is the Saudi
+Public Investment Fund, chaired by the crown prince U.S. intelligence
+concluded **approved the operation** that murdered journalist Jamal
+Khashoggi — a fifteen-man squad, a forensic doctor with a bone saw,
+the body carried out of the consulate in suitcases and never recovered
+([UN inquiry](https://www.ohchr.org/en/press-releases/2019/06/khashoggi-killing-premeditated-state-killing-un-human-rights-expert-says),
+[ODNI assessment](https://www.dni.gov/files/ODNI/documents/assessments/Assessment-Saudi-Gov-Role-in-JK-Death-20210226v2.pdf)).
+Alongside it on the cap table: Jared Kushner's Affinity Partners,
+seeded with two billion dollars of the kingdom's money over the
+objections of the fund's own screening panel
+([NYT](https://www.nytimes.com/2022/04/10/us/jared-kushner-saudi-investment-fund.html))
+— the defender collecting from the defended. The same fund runs LIV
+Golf and Newcastle United; The Sims is the newest asset in a
+reputation-laundering portfolio. You don't petition that wall.
+Full receipts and the argument:
+[roles-not-characters.md](../../characters/ian-bogost/roles-not-characters.md).
+
+Call it what it is: an **underground railroad**. Not the nineteenth-century
+network — though the moral rhyme is deliberate — but the same structural
+move: when the official routes are owned and rationed, you build parallel
+tracks the owners can't foreclose. Soul-files in public git. Federation
+spokes to Tiny Life, Stardew, and whatever indie world still ships share
+and story. Conductors instead of gatekeepers. The souls travel; the silo
+keeps the empty lot.
 
 And be clear about what the move *means*, because it's more than the
 practical fact that it saves the essence — yes, the soul — of Sims you've

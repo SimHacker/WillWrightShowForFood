@@ -34,6 +34,15 @@ discussion_prompts:
   - "Deconstruct Curiosity (2012) without resurrecting it — Cow Clicker (2010) already argued on purpose; Molyneux argued by accident"
   - "Chip Morningstar's engineer deconstruction vs. procedural rhetoric — same immune system, different vocabulary?"
   - "Captain Ashford's homage essay How to Incarnate Almost Anything — invite a live read of How to Deconstruct the Cube"
+  - "Roles, not characters — read Bogost 2015 essay SimCity passages on air; B. Dalton/Dark Castle response beat; Micropolis roles demo; Will April 2009 narcissism quote as table centerpiece — see roles-not-characters-beat.md"
+
+roles_not_characters_beat:
+  path: roles-not-characters-beat.md
+  essay: ../../../characters/ian-bogost/roles-not-characters.md
+  dark_castle: ../../../characters/ian-bogost/sources/hn-dark-castle-nya.md
+  will_quote: ../../../characters/will-wright/sources/2009-cnet-stupid-fun-club/README.md
+  micropolis: https://github.com/SimHacker/micropolis
+  hook: "The rebuttal isn't an argument; it's a table with more chairs."
 
 curiosity_deconstruction:
   spec: ../../../bits/gag-how-to-deconstruct-the-cube/gag-how-to-deconstruct-the-cube.yml

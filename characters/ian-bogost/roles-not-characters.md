@@ -115,18 +115,51 @@ the people.
 And the essay's closing — "We'll sign away anything, it would seem, so
 long as we're still able to 'express ourselves' with the makeshift tools
 we are rationed by the billionaires" — is a diagnosis with no exit
-ramp. Soul City's answer is the punk one, with
+ramp. In 2015 "the billionaires" was an abstraction; the 2026 EA buyout
+gave them names, a sovereign wealth fund, and a cap table (the coda
+below has the receipts). Soul City's answer is the punk one, with
 [Nina Hagen as patron saint](../../catalogs/soul-city/README.md#the-attitude):
 when the wall's owner starts rationing your tools, you don't petition
 the wall — you walk out with your voice intact and get louder. She did
 it to an actual walled state in 1976; Soul Saver does it to the silos,
-moving character souls onto rails nobody can expatriate you from.
+moving character souls onto **underground rails** nobody can expatriate
+you from — an **underground railroad** for the twenty-first century:
+plain files, git, federation spokes, hub-and-spoke bridges to indie
+worlds where the guard posts don't get a veto. Not a support ticket.
+A route out.
 
 And the walking out *is* the petition. Migrating your Sims to Soul City
 means more than the practical fact that it saves the essence — the soul
 — of characters you've spent years empathizing with. It's **an act of
 protest: voting with your feet**, legible to EA in the only language a
-debt-loaded balance sheet reads. Hirschman framed exit and voice as the
+debt-loaded balance sheet reads. And be clear about who owns the walled
+garden now, because every link in this chain is documented. On October
+2, 2018, a fifteen-man Saudi squad — including a forensic doctor who
+brought a **bone saw** — murdered journalist Jamal Khashoggi inside the
+Istanbul consulate, dismembered him, and carried the pieces out in
+suitcases. His body has never been recovered. The UN special rapporteur
+ruled it a **premeditated extrajudicial execution** for which the Saudi
+state is responsible
+([UN inquiry](https://www.ohchr.org/en/press-releases/2019/06/khashoggi-killing-premeditated-state-killing-un-human-rights-expert-says));
+U.S. intelligence concluded that Crown Prince **Mohammed bin Salman
+approved the operation**
+([ODNI assessment](https://www.dni.gov/files/ODNI/documents/assessments/Assessment-Saudi-Gov-Role-in-JK-Death-20210226v2.pdf)).
+That same crown prince chairs the Public Investment Fund that now owns
+The Sims. And **Jared Kushner** — the White House adviser who urged the
+president to stand by the prince while the world recoiled from the
+murder — collected **two billion dollars** from that fund six months
+after leaving office, over the written objections of the fund's own
+screening panel, which flagged his firm's inexperience and was
+overruled by the board the crown prince chairs
+([NYT](https://www.nytimes.com/2022/04/10/us/jared-kushner-saudi-investment-fund.html)).
+Now his firm holds equity in EA. Murder, cover, payout, profit — four
+steps, each one on the public record, each man named. The EA buyout is
+the same playbook as LIV Golf and Newcastle United: reputation
+laundering at sovereign scale, except this time the asset being
+laundered through is the dollhouse your family's characters live in.
+Those are the billionaires rationing your makeshift tools. You don't
+file a support ticket with a bone saw. You leave. Hirschman framed
+exit and voice as the
 customer's two options; a federation collapses them — every household
 that walks out of the barbed-wire-and-guard-post walled garden into the
 open public commons is a countable signature, a walk for charity out
@@ -197,8 +230,15 @@ debt loaded onto it
 ([AP](https://apnews.com/article/electronic-arts-sims-battlefield-silver-lake-e50d653ac4616d063296e2021d826a3c),
 [the 8-K](https://www.sec.gov/Archives/edgar/data/712515/000114036126031157/ef20079099_8k.htm)).
 The kiss that changed video games is now an asset of a state whose law
-criminalizes it. Protesters dressed as Sims stood outside Redwood City
-while the deal closed. The
+makes that kiss a crime — in Saudi Arabia same-sex relations are
+punishable up to and including death. The fund that holds it is chaired
+by the man U.S. intelligence says approved the Khashoggi operation, and
+the crown prince's American defender collects the carry. Bogost's
+abstract billionaires acquired names, a bone saw in the record, and a
+son-in-law on the cap table. Patrick Barrett's autonomous kiss —
+shipped with no orientation checkbox precisely so no censor could find
+one — is now owned by the censor. Protesters dressed as Sims stood
+outside Redwood City while the deal closed. The
 [Soul City namesake](../../repo-shows/will-wright-premiere/soul-city-namesake.md)
 already taught us this coda's shape — Soultech 1, the incubator built
 for second chances, houses a prison work complex today. Which is why
@@ -329,24 +369,23 @@ resurrection. "Mysterious and largely hypothetical" turns out to have
 been a scheduling problem: the ideas were fifteen years early, and this
 repo is where they stop waiting.
 
-## Show beatI
+## Show beat
 
-Read the essay's SimCity passages on air with Ian and Will — the
-B. Dalton opening deserves to be read aloud, and it has a response beat
-waiting: the essay opens with Dark Castle at Software Etc., and Don once
-greeted Dark Castle's creator Jonathan Gay in the game's own
-monster-voice
-([sources/hn-dark-castle-nya.md](sources/hn-dark-castle-nya.md)). Then
-answer with running code: Micropolis with the roles broken out, humans
-and imported characters seated at the same city. And save one card for
-the middle of the table: Will,
-[April 2009](https://www.cnet.com/culture/will-wright-to-leave-electronic-arts/) —
-"Most people are very narcissistic. The more you can make the game
-about that person, the more interested, the more emotionally involved
-they will get." The man who built system protagonists diagnosing the
-identification hook, six years before Ian's essay argued against
-indulging it. Read it aloud and let the two of them argue about it. The essay says games about systems
-lost. The rebuttal isn't an argument; it's a table with more chairs.
+Read the essay's SimCity passages on air with Ian and Will — full segment script:
+[`repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md`](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md).
+
+The B. Dalton opening deserves to be read aloud, and it has a response beat waiting: the essay
+opens with Dark Castle at Software Etc., and Don once greeted Dark Castle's creator Jonathan Gay in
+the game's own monster-voice
+([sources/hn-dark-castle-nya.md](sources/hn-dark-castle-nya.md)). Then answer with running code:
+Micropolis with the roles broken out, humans and imported characters seated at the same city. And
+save one card for the middle of the table: Will,
+[April 2009](https://www.cnet.com/culture/will-wright-to-leave-electronic-arts/) — "Most people are
+very narcissistic. The more you can make the game about that person, the more interested, the more
+emotionally involved they will get." The man who built system protagonists diagnosing the
+identification hook, six years before Ian's essay argued against indulging it. Read it aloud and let
+the two of them argue about it. The essay says games about systems lost. The rebuttal isn't an
+argument; it's a table with more chairs.
 
 ## Links
 

@@ -101,6 +101,7 @@
 - Soul City casts the roles: characters imported from other games — and
   agents — playing mayor's advisor, traffic engineer, opposition paper
 - Full response doc: [`roles-not-characters.md`](roles-not-characters.md)
+- On-air segment beat: [`../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md`](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md) — Act 4: Bogost closing + Soul City underground railroad
 
 ### 5. Cow Clicker — the show Don wants (optional dessert)
 
