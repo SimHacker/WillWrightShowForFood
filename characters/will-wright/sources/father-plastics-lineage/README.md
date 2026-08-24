@@ -12,7 +12,8 @@ SimCity, The Sims, and the SimCity box's Bakelite-appliance aesthetic.
 |-------|--------|--------|
 | Father was Georgia Tech engineering lineage (father + grandfather) | **Confirmed** | [New Yorker 2006](../2006-11-06-new-yorker-game-master/excerpts.md#engineering-lineage) |
 | 1960s: new process for plastic **packing materials**; successful company in **Atlanta** | **Confirmed** | [New Yorker 2006](../2006-11-06-new-yorker-game-master/excerpts.md#plastics-company) |
-| Company name **Wright Plastics** | **Unverified here** | Common in secondary bios; not in Seabrook 2006 — treat as plausible, not cited |
+| Company name **Wright Plastics** | **Named later; 1960s name unproven** | Seabrook does not name it. Fansite does (unsourced). **Wright Plastics Co., Chamblee** is in the 1974 Georgia manufacturing directory. Street and later life: [`wright-plastics-chamblee.md`](wright-plastics-chamblee.md) |
+| Factory location | **Atlanta metro — Chamblee, DeKalb, by 1974** | Will (2026): "Atlanta." Pin we have: **3315 McGaw Drive, Chamblee, GA 30341**. 1960s street unknown |
 | Father died **leukemia**, Will **nine**, **January 1969**, age **36** | **Partial** | New Yorker: died when Will was nine, leukemia; year/age from Wikipedia + user research — cross-check before on-air |
 | Family moved to **Baton Rouge** after father's death | **Confirmed** | [New Yorker 2006](../2006-11-06-new-yorker-game-master/excerpts.md#after-death) |
 | Family expected Will to **take over plastics company**; he refused; business **sold** | **Confirmed** | [New Yorker 2006](../2006-11-06-new-yorker-game-master/excerpts.md#company-sold) |
@@ -23,8 +24,9 @@ SimCity, The Sims, and the SimCity box's Bakelite-appliance aesthetic.
 ## Bill Wright, Sr. (sketch)
 
 - **Profession:** Chemical engineer; developed a new way to manufacture plastic **packing
-  materials** in the 1960s; ran a successful company in **Atlanta** (Seabrook does not name
-  "Wright Plastics" — verify separately if needed for on-air).
+  materials** in the 1960s; ran a successful company in **Atlanta** (Seabrook). The later
+  firm of that product class is **Wright Plastics Co.**, **3315 McGaw Drive, Chamblee**
+  (DeKalb) — blown PE film and bags. See [`wright-plastics-chamblee.md`](wright-plastics-chamblee.md).
 - **Family:** Wife **Beverlye Wright Edwards** (amateur magician, actress). Children: Will,
   younger sister **Whitney**.
 - **Personality (press):** Excellent golfer; porch conversations with young Will about stars,
@@ -35,7 +37,7 @@ SimCity, The Sims, and the SimCity box's Bakelite-appliance aesthetic.
 
 ### Polyethylene vat (primary)
 
-Weekend at the Atlanta factory; large drum of **polyethylene pellets** — whitish, tactile,
+Weekend at the Atlanta factory (metro; later documented plant in **Chamblee**); large drum of **polyethylene pellets** — whitish, tactile,
 "like a ball pit." Will jumped in; **quicksand** behavior; father rescued him when only his
 arms showed above the rim. Will: could easily have died if he inhaled the pellets.
 
@@ -82,5 +84,6 @@ WillWrightShowForFood.
 ## Navigation
 
 ↑ [sources](../README.md) · [Will Wright](../../README.md) ·
+[Wright Plastics / Chamblee](wright-plastics-chamblee.md) ·
 [New Yorker profile](../2006-11-06-new-yorker-game-master/README.md) ·
 [Vulture Proxi profile](../2026-03-25-vulture-proxi-profile/README.md)

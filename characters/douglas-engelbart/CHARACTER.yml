@@ -29,7 +29,8 @@ memorial:
     - { who: alan-kay, why: "PARC lineage; recalled the 1968 demo's impact (Yoot Saito interview)" }
     - { who: yoot-saito, why: "Interviewed Alan Kay for the 25th anniversary of Engelbart's 1968 demo" }
     - { who: dave-maynard, why: "Fifty-year-old mouse collector; donated chord keyset to Stanford Hohbach; Old Farts Club thread with Don" }
-    - { who: don-hopkins, why: "SRI mouse + keyset from Mark Lottor; reproduction scan plan; augmentation thesis underlies PITM" }
+    - { who: don-hopkins, why: "Cybernex Palo Alto mouse SN M026 / 8/76 + keyset from Mark Lottor; reproduction scan plan; augmentation thesis underlies PITM" }
+    - { who: jaron-lanier, why: "Heard Engelbart tell the Minsky story — 'What are you going to do for the people?' (American Scientist 2005)" }
   draw_on_for_shows:
     - "The Mother of All Demos (Dec 9, 1968) — NLS, the mouse, hypertext, video conferencing, collaborative editing in one sitting"
     - "'Augmenting Human Intellect: A Conceptual Framework' (1962) — bootstrapping, the augmentation thesis"
@@ -55,6 +56,10 @@ sources:
 see_also:
   - { path: memorial.md, why: "Tribute — represent + discuss, not an invitation" }
   - { path: engelbart-mouse-and-keyset.md, why: "Mouse + chord keyset provenance, Maynard, Lottor, reproduction plan" }
+  - { path: sources/2025-ken-shirriff-usb-keyset.md, why: "Public USB keyset interface + TubeTime replica links" }
+  - { path: sources/2022-rr-auction-bill-daul-mouse-keyset.md, why: "Bill Daul pair sold 2022-03-17 for $54,904 — not Don's" }
+  - { path: sources/cybernex-palo-alto.md, why: "Who made Don's mouse — Cybernex Palo Alto, SN M026, 8/76" }
+  - { path: ../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md, why: "Engelbart to Minsky: what are you going to do for the people?" }
   - { path: eulogy-ted-nelson.md, why: "Ted Nelson's eulogy — primary source for the memorial segment" }
   - { path: from-alan-kay.yml, why: "Kay on augmentation, inverse vandalism, PIXIE, Yoot interview" }
   - { path: ../yoot-saito/from-alan-kay.yml, why: "Yoot interviewed Engelbart; Alan reviewed transcript" }

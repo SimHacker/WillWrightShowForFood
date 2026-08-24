@@ -37,6 +37,7 @@ sources:
 see_also:
   - { path: README.md, why: "Orientation" }
   - { path: from-alan-kay.yml, why: "Kay / Yoot portrait" }
+  - { path: ../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md, why: "Lanier 2005: Markoff organizes around Brand + McCarthy; Spacewar as first OSS" }
   - { path: ../alan-kay/, why: "PARC media history" }
   - { path: ../butler-lampson/, why: "Alto era Brand covered" }
   - { path: ../chuck-thacker/, why: "Alto hardware" }

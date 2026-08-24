@@ -46,4 +46,6 @@ Slats rubric: [`characters/robots/slats/judge-rubric.yml`](../../characters/robo
 - [`micropolis-ai-drag-race.yml`](micropolis-ai-drag-race.yml) — machine reading (seed spec)
 - `SHOW.yml` — add when ready to run the show
 
+**Field tape (2026):** Andrew Dunn's Hallucinating Splines already has same-seed model bake-off and shared-city / disaster ideas on a live Micropolis API. Harvest: [`../../characters/will-wright/sources/2026-02-dunn-hallucinating-splines.md`](../../characters/will-wright/sources/2026-02-dunn-hallucinating-splines.md) · HN: https://news.ycombinator.com/item?id=46946593
+
 ↑ [`../README.md`](../README.md) · [ShowMaker network](../../process/showmaker-network.md)

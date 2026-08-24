@@ -44,6 +44,7 @@ this first, then branch to threads below.
 | [2007-11-02 QA sign-off](../2007-11-02-olpc-simcity-qa-sign-off/README.md) | EA QA milestone |
 | [2013 tale of two SimCities](../2013-tale-of-two-simcities/README.md) | Charles Normann — EA CEO sign-off inside story |
 | [micropolis-saga-don-draft](../micropolis-saga-don-draft/README.md) | Don's informal Micropolis history |
+| [2026 Dunn Hallucinating Splines](../2026-02-dunn-hallucinating-splines.md) | AI agents play Micropolis via REST; **Micropolis Earth** globe; Don on HN: name, Toho, Earle, MicropolisCore |
 
 ## People & shows
 

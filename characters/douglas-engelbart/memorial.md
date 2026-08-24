@@ -33,7 +33,13 @@ that world yourself."*
 The group tribute is seeded here: [**Remembering Douglas Engelbart**](../../repo-shows/remembering-douglas-engelbart/README.md)
 (Ted Nelson · Alan Kay · Yoot Saito · Bret Victor · **David Maynard** on tactile hardware).
 
-**Hardware thread:** Don holds an SRI mouse + keyset (from Mark Lottor); **David Maynard** posted his fifty-year-old mouse on the Internet Old Farts Club and donated his chord keyset to Stanford's Hohbach collection. See [`engelbart-mouse-and-keyset.md`](engelbart-mouse-and-keyset.md).
+Engelbart, after Minsky described what the AI lab would do for the machines:
+
+> "You're going to do all that for the machines? What are you going to do for the people?"
+
+Jaron Lanier heard him tell it (2005). Full review: [`../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md). Living discussant: Jaron. Memorial: [`../marvin-minsky/`](../marvin-minsky/).
+
+**Hardware thread:** Don holds a **Cybernex Palo Alto** mouse (**SN M026**, **8/76**) + keyset from Mark Lottor; **David Maynard** posted his fifty-year-old mouse on the Internet Old Farts Club and donated his chord keyset to Stanford's Hohbach collection. See [`engelbart-mouse-and-keyset.md`](engelbart-mouse-and-keyset.md) · [`sources/cybernex-palo-alto.md`](sources/cybernex-palo-alto.md).
 
 We celebrate his documented public work; we do not speak as him.
 

@@ -26,6 +26,7 @@ sources:
     - "https://www.pcgamer.com/games/sim/in-1989-a-nintendo-bigwig-licensed-simcity-on-the-spot-by-sliding-a-million-dollar-check-across-the-table/"
 
 see_also:
+  - { path: ../will-wright/sources/2026-02-dunn-hallucinating-splines.md, why: "Don retells Jeff's Toho / $50k Godzilla story on HN 2026-02-11" }
   - { path: ../will-wright/, why: "Maxis co-founder" }
   - { path: ../don-hopkins/, why: "Email correspondent; Micropolis / Yoot Tower open source" }
   - { path: ../will-wright/media/simcity-macintosh-front-cover.md, why: "Box art with monster disaster button" }

@@ -42,6 +42,7 @@ memorial:
     - { who: warren-teitelman, why: "🕯️ Pilot thesis under Minsky; DWIM / Interlisp — memorial room" }
     # Students of the milieu, colleagues, and documented friends
     - { who: ray-kurzweil, why: "Corresponded with Marvin from high school; invited to visit; went to MIT expressly to study with him (B.S. 1970)" }
+    - { who: jaron-lanier, why: "Heard Engelbart recount meeting Marvin — 'What are you going to do for the people?' (American Scientist 2005)" }
     - { who: alan-kay, why: "AI/personal-computing peer shaped by the same MIT/ARPA milieu" }
     - { who: walter-bender, why: "MIT Media Lab; OLPC — carried the lab's learning mission forward" }
     - { who: nicholas-negroponte, why: "Co-founded the Media Lab (1985) — built the institutional roof Marvin lived under for three decades; Margaret's PhD advisor" }
@@ -111,6 +112,7 @@ sources:
   blogs: []
 
 see_also:
+  - { path: ../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md, why: "Engelbart to Minsky: what are you going to do for the people? — Jaron heard it" }
   - { path: sources/jokes-and-the-cognitive-unconscious/README.md, why: "Humor as cognitive bug recognition — AI Memo 603" }
   - { path: sources/2022-12-23-hn-society-of-mind.md, why: "HN SoM — neat/scruffy + Drescher Made-Up Minds" }
   - { path: ideas.md, why: "Discussant hooks" }

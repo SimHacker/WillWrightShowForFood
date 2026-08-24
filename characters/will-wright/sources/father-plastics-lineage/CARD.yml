@@ -11,7 +11,7 @@ room:
 methods:
   CITE-FATHER:
     signature: "citeFather() → README.md claim ledger"
-    advertisement: "Sourced answer for 'Will's dad was plastics' — Seabrook + Boodman + gift lore."
+    advertisement: "Sourced answer for 'Will's dad was plastics' — Seabrook + Boodman + Chamblee plant."
   BRIDGE-TO-SIMCITY:
     signature: "bridgeToSimCity() → README.md § Bridge to game design"
     advertisement: "Montessori, models, factory, Bakelite box art — one table."
@@ -19,4 +19,5 @@ methods:
 compose_with:
   - ../2006-11-06-new-yorker-game-master/
   - ../2026-03-25-vulture-proxi-profile/
+  - wright-plastics-chamblee.md
   - ../../media/russian-space-junk.md

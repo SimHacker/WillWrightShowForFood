@@ -11,4 +11,6 @@ argument is the intellectual godfather of RepoShow's **repossession** thesis.
 Dream guest — a **VPL reunion / patch-cord lineage** show with David Levitt + Don, *and* a
 **generative-performance** thread with the avant-garde ensemble (Eno, Laurie Anderson, Nina Hagen).
 
+Engelbart to Minsky, as Jaron heard it (2005): *"You're going to do all that for the machines? What are you going to do for the people?"* — [`sources/2005-american-scientist-early-computings-long-strange-trip.md`](sources/2005-american-scientist-early-computings-long-strange-trip.md)
+
 → [`ideas.md`](ideas.md) · [`../david-levitt/`](../david-levitt/README.md) · [`../don-hopkins/levity-bounce-space-seed.md`](../don-hopkins/levity-bounce-space-seed.md)

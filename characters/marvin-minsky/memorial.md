@@ -11,6 +11,12 @@ mode: represent_and_discuss
 him, and we invent no quotes or inner life.*
 [Memorial standards](../../schemas/portrayal-standards.md#memorial-mode)
 
+Engelbart, after Minsky described what the AI lab would do for intelligent machines:
+
+> "You're going to do all that for the machines? What are you going to do for the people?"
+
+Jaron Lanier heard Engelbart tell it (2005). Full review: [`../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md). Living discussant: Jaron. We do not invent Marvin's side of that meeting.
+
 Marvin Minsky helped invent the very idea that a machine could be made to think. With **John
 McCarthy** he co-founded the **MIT AI Lab** in 1959, and for decades — often alongside **Seymour
 Papert**, with whom he co-directed the lab — he pushed at the hardest question there is: *what is a

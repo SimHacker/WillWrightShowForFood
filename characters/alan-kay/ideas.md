@@ -78,6 +78,10 @@ credited anthology — not a scraper, a **curated microworld** others can extend
 Photos in [`media/from-mail/`](media/from-mail/) — Alan's wooden Dynabook model and related
 artifacts. Material culture of "a computer for children of all ages."
 
+### 8b. The half-born computer (Lanier / Markoff)
+Jaron Lanier's 2005 review of Markoff names **Alan Kay and Ted Nelson** with Engelbart as pioneers still building the computer they think should exist, while the world scaled a machine they saw as only half-born. Engelbart's lost half is **virtuosity** (the keyset, not just the mouse). Ask Alan whether he accepts that grouping.
+→ Full review: [`../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md)
+
 ## More hooks — from Alan's Quora threads (credit Quora)
 
 *Grounded in the recap [`media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md`](media/quora-recaps/browsers-documents-news-hypercard-hyperlook.md)

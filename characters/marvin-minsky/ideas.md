@@ -34,7 +34,9 @@
 6. **Perceptrons + Papert** — with Seymour memorial room; constructionist lineage trail.
 7. **Sketchpad seat** — Ivan citation: Shannon + Minsky shaped Sketchpad's character.
 8. **Brain Opera / Media Lab** — Tod Machover; Stewart Brand *Media Lab* book adjacency.
-9. **Villain of the LaRouche movement** — the 2001 *Fidelio* "Cult of AI" polemic quotes
+9. **Engelbart vs Minsky (Lanier)** — Engelbart: *"You're going to do all that for the machines? What are you going to do for the people?"* Jaron heard it; published 2005. Living discussant: Jaron. Memorial: this room.
+   Full review: [`../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md)
+10. **Villain of the LaRouche movement** — the 2001 *Fidelio* "Cult of AI" polemic quotes
    Minsky verbatim and reads him doctrinally backwards; reception history where the enemy
    did the reading. Same Single Agent passage the Korz work reads as prophecy.
    [`sources/2001-liebig-cult-of-artificial-intelligence.md`](sources/2001-liebig-cult-of-artificial-intelligence.md)

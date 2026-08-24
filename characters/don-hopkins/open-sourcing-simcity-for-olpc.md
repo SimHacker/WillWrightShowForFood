@@ -24,4 +24,6 @@
 | Full evidence room map | [`../will-wright/primary-sources-evidence-room.md`](../will-wright/primary-sources-evidence-room.md) |
 | Chaim Gingold account | [Open Sourcing SimCity on Medium](https://donhopkins.medium.com/open-sourcing-simcity-58470a275446) |
 
+**2026 downstream:** Andrew Dunn's [Hallucinating Splines](https://hallucinatingsplines.com) — LLM (and one evolutionary) agents as mayors on micropolisJS / Cloudflare. Don on the [Show HN](https://news.ycombinator.com/item?id=46946593): call it Micropolis; Toho/$50k; prefer MicropolisCore. Harvest: [`../will-wright/sources/2026-02-dunn-hallucinating-splines.md`](../will-wright/sources/2026-02-dunn-hallucinating-splines.md)
+
 → Python/Sugar detail: [`olpc-micropolis-python-pygtk.md`](olpc-micropolis-python-pygtk.md)

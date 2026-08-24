@@ -26,6 +26,10 @@ Xanadu, transclusion, visible connections
 
 ### 4. Remember Engelbart and Hugh Daniel with the people who knew them
 
+### 4b. The half-born computer (Lanier / Markoff)
+Jaron Lanier's 2005 review of Markoff groups **Ted with Alan Kay and Engelbart**: still building the computer as they feel it should be, against a mass machine those pioneers saw as only half-born. Pairs with the Engelbart eulogy and the virtuosity/keyset beat.
+→ Full review: [`../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md)
+
 ### 5. Copy/paste-to-an-invisible-clipboard rant
 Ted's recurring position: **shoveling bytes into a hidden scrap is evil** — hypertext wants
 **visible parallel connections** and transclusion, not Mac-style clipboard darkness. Don agrees

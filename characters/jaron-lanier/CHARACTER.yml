@@ -27,7 +27,14 @@ see_also:
   - { path: README.md, why: "VR/VPL pioneer profile" }
   - { path: sources/2007-01-02-olpc-rebounce-keith-mcmillen.md, why: "OLPC SimCity → Keith McMillen + Mary Lou Jepsen convergence; Max/Jitter → best-of architecture" }
   - { path: sources/2009-06-11-don-introduces-pipslab.md, why: "Don → Jaron: meet Amsterdam PIPS:lab / Body Electric yearning" }
+  - { path: sources/2005-american-scientist-early-computings-long-strange-trip.md, why: "Full 2005 American Scientist review — Engelbart to Minsky: what are you going to do for the people?" }
+  - { path: sources/2005-american-scientist-dormouse.md, why: "Apparatus / show beats for the 2005 review" }
   - { path: sources/2023-01-24-dormouse-engelbart-minsky.md, why: "Engelbart vs Minsky quote; Bay Area reopen" }
+  - { path: ../stewart-brand/, why: "Markoff organizing portrait; Spacewar / Rolling Stone adjacency" }
+  - { path: ../alan-kay/, why: "Named with Nelson as still building the half-born computer" }
+  - { path: ../ted-nelson/, why: "Named with Kay as still building the half-born computer" }
+  - { path: ../marvin-minsky/, why: "Engelbart's 'what are you going to do for the people?' — Jaron heard it" }
+  - { path: ../douglas-engelbart/, why: "Lanier's most beautiful portrait in the Markoff review" }
   - { path: ../keez-duyves/, why: "PIPS:lab / Die Space / Anyways — the Amsterdam intro from 2009" }
   - { path: ../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md, why: "Sugar mailing-list manifesto naming Body Electric + HyperLook" }
   - { path: ../don-hopkins/body-electric-bounce-vr-stack.md, why: "Don's firsthand Body Electric / Bounce VR-stack history — VPL's stack (Chuck Blanchard lead; Jaron's VPL)" }

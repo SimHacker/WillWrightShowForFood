@@ -55,9 +55,9 @@ Everything*.)
 Will's xmas party → Don has SimCity on XO → Jaron (2 Jan 2007): converge with **Keith McMillen** (robot dance at Will's party) + **Mary Lou Jepsen** (OLPC display). Jaron + Keith reviving **Body Electric**-class performances; frustrated with **Max/Jitter** — *"cook up a scheme to make a best-of architecture… important for the future of culture."*  
 → [`sources/2007-01-02-olpc-rebounce-keith-mcmillen.md`](sources/2007-01-02-olpc-rebounce-keith-mcmillen.md) · Don's Sugar manifesto: [`../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md`](../don-hopkins/sources/2006-12-28-sugar-hyperlook-simcity-ideas.md)
 
-### 8. Engelbart vs Minsky — Dormouse Said (2023 reopen)
-Don quotes Jaron's [American Scientist review](https://web.archive.org/web/20110312232514/https://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip) of Markoff's *What the Dormouse Said*: Engelbart to Minsky — *"You're going to do all that for the machines? What are you going to do for the people?"* Bay Area visit ping.  
-→ [`sources/2023-01-24-dormouse-engelbart-minsky.md`](sources/2023-01-24-dormouse-engelbart-minsky.md)
+### 8. Engelbart virtuosity vs the half-born computer — Dormouse Said
+Lanier's 2005 *American Scientist* review of Markoff. Opening warrant: UI history is the Shakespeare problem, not Tesla trivia. Engelbart wanted **musician-grade virtuosity**; the mainstream kept the easy half (mouse, not keyset). He names **Kay** and **Nelson** as still building the "half-born" computer. Same review: SAIL funk; Spacewar as first open-source; communal-era email → forgeable identity → spam; organizing portraits McCarthy + **Stewart Brand**, best portrait Engelbart. The line Don already quoted — Engelbart to Minsky: *"You're going to do all that for the machines? What are you going to do for the people?"*  
+→ Full text: [`sources/2005-american-scientist-early-computings-long-strange-trip.md`](sources/2005-american-scientist-early-computings-long-strange-trip.md) · apparatus: [`sources/2005-american-scientist-dormouse.md`](sources/2005-american-scientist-dormouse.md) · [`sources/2023-01-24-dormouse-engelbart-minsky.md`](sources/2023-01-24-dormouse-engelbart-minsky.md) · [`../douglas-engelbart/engelbart-mouse-and-keyset.md`](../douglas-engelbart/engelbart-mouse-and-keyset.md) · [`../stewart-brand/`](../stewart-brand/)
 
 ## Sources
 
