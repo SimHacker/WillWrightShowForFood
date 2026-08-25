@@ -31,6 +31,7 @@ Self doesn't run on everybody's phone — **in spirit it does**.
 - [Self and MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/object-system/SELF-AND-MOOLLM.md) · [Latent-Space Inheritance](https://github.com/SimHacker/moollm/blob/main/designs/object-system/LATENT-SPACE-INHERITANCE.md)
 - [K-line inheritance — Self's simplicity for LLMs](sources/moollm-kline-inheritance.md) — paper + patent + mixin skills
 - [HN — Self 1989 JIT + SelfishScript (Nov 2025)](sources/hn-self-1989-selfishscript-45706924.md) — Don + Ungar reply
+- [Call with David Ungar (2015) — Hernán Wilkinson](sources/2015-11-03-call-with-david-ungar-hernan-wilkinson.md) — Hangout transcript + [HN 23800625](https://news.ycombinator.com/item?id=23800625)
 - [Reflecting on Self](reflecting-on-self.md) · [Ideas](ideas.md) · [Chat guide](chat-guide.md) · [Korz — the cauldron](korz/README.md) · [Korz notes & Q&A](korz/korz-notes.md) · [Korz′ design](korz/design.md) · [Correspondence](correspondence.yml) · [2014 Lang.NEXT revisits](sources/2014-async-revisits-index.md) · [FaceTime demo transcript](moollm-demo-transcript-2026-08-17.md)
 - [Fitts and foveation](fitts-and-foveation.md) — David opened Don's eyes and focused his attention: peripheral motion is a hardware interrupt, so his critique of the pie menus' deselection flourish became the standing rule "motion is a foveation summons — only send it where you want the eye"
 - Temkin / Declare: [`../david-temkin/`](../david-temkin/) · Amanda Walker: [`../amanda-walker/`](../amanda-walker/)

@@ -3,6 +3,7 @@
 | Artifact | What |
 |---|---|
 | [2006-08-21-don-to-tom-lord-ungar-at-laszlo.md](2006-08-21-don-to-tom-lord-ungar-at-laszlo.md) | **Receipt** — Don ran into Ungar interviewing at Laszlo (email to Tom Lord); Self demo + JS compilability; full letter in tom-lord/sources/ |
+| [2015-11-03-call-with-david-ungar-hernan-wilkinson.md](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) | Hangout with Hernán Wilkinson's Buenos Aires class — Self origin, live objects, JS, Korz, Klein, HotSpot, foveation; HN thread 23800625 as posted |
 | [2025-10-26-korz-email-hn-rollup.md](2025-10-26-korz-email-hn-rollup.md) | Ungar's Korz pointer ("the natural extension of Self to multidimensional context \| subjectivity"); interleaved comments on Don's SelfishScript rollup; the pessimization receipt |
 | [korz-paper-deep-dive-moollm-mapping.md](korz-paper-deep-dive-moollm-mapping.md) | Korz papers analyzed — the Korzybski name, SOP vs COP lineage, the Sims' me/stack-object as two hardwired dimensions, two senses of "generic," COP context vs LLM context, the MOOLLM mapping table, dispatch spectrum (argmax/find-best-N/softmax), tiered-JIT thesis, open questions, endosymbiosis coda |
 | [korz-2014-onward.pdf](korz-2014-onward.pdf) | **The paper** — Ungar, Ossher, Kimelman, *Korz: Simple, Symmetric, Subjective, Context-Oriented Programming*, Onward! 2014 (8 pp). Study copy via [Bret Victor's refs library](https://worrydream.com/refs/Ungar_2014_-_Korz_Simple,_Symmetric,_Subjective,_Context-Oriented_Programming.pdf); [ACM record](https://dl.acm.org/doi/10.1145/2661136.2661147) |

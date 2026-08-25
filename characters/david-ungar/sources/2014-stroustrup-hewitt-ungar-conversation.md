@@ -19,6 +19,7 @@ ideas came from.
 | Source | What |
 |--------|------|
 | **[Bulldozer00 review](2014-stroustrup-hewitt-ungar-bulldozer00-review.md)** (22 Oct 2014) | Anthony DaSilva Jr — watched 3×, commute MP3; lay summary of Hewitt / Ungar / Stroustrup multicore positions · [original post](https://bulldozer00.blog/2014/10/22/a-fascinating-conversation/) |
+| **Don's HN comment** (July 2020) | On the [2015 Ungar Hangout thread](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) — [23806717](https://news.ycombinator.com/item?id=23806717) |
 | **Don's HN comment** (Nov 2022) | Seymour Papert thread — *"fascinating (and polite, respectful) argument about shared memory, message passing, locks, synchronization, and lock free message passing!"* — [`hn-self-1989-selfishscript-45706924.md`](hn-self-1989-selfishscript-45706924.md) |
 
 ### Three positions (Bulldozer00 checksum)

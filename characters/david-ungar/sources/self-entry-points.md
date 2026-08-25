@@ -42,6 +42,7 @@ Debugging Optimized Code with Dynamic Deoptimization (Hölzle, Ungar, PLDI '92 �
 | What | Link |
 |---|---|
 | Self: The Movie (1995) — Randy on directness/liveness, Dave on implementation, Mario's Smalltalk-in-Self | https://www.youtube.com/watch?v=Ox5P7QyL774 |
+| Call with David Ungar (Hernán Wilkinson, Buenos Aires, 3 Nov 2015) — origin of Self, live objects, JS, Korz, Klein, HotSpot | [transcript + HN](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) · [YouTube](https://www.youtube.com/watch?v=8nfrC-YLYqc) |
 | Self and Self: Whys and Wherefores (Ungar, Stanford EE380, 2009) | https://www.youtube.com/watch?v=3ka4KY7TMTU |
 | Lang.NEXT / Channel 9 — Stroustrup, Hewitt, Ungar (shared memory vs messages) | [2014 concurrency panel](2014-stroustrup-hewitt-ungar-conversation.md) |
 | Lang.NEXT 2014 — Korz, *Dancing with Symmetry* (subjective programming in context) | [2014 Korz talk](2014-lang-next-korz-dancing-with-symmetry.md) · [Microsoft Learn video](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context) |

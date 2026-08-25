@@ -56,6 +56,13 @@ the fitts-shaped one:
 
 > **Motion is a foveation summons. Only send it where you want the eye.**
 
+David gives the same visual-system lecture in public in the
+[2015 Hangout with Hernán Wilkinson's class](sources/2015-11-03-call-with-david-ungar-hernan-wilkinson.md)
+(~39:00): fovea vs periphery, motion as the interrupt that zooms the eye,
+Road Runner hopping in place then a streak instead of interpolated frames —
+the Self UI 1 object that backs up, streaks, and wiggles so you never have
+to search for where it went.
+
 Spend the animation budget on the selected item — the label sliding to the cursor,
 the description unfolding under it. Make deselection cheap and quiet: a **slow
 ramping blur and fade**, dimming and defocusing gradually enough to stay under the
