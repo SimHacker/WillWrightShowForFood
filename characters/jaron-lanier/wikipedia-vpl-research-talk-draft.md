@@ -41,6 +41,23 @@ The authoritative account is Lanier's own:
 ["Virtually There"](https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf),
 Scientific American, April 2001.
 
+## HN ninja edit (same fact, comment-sized)
+
+Insert into the HN comment
+([thread](https://news.ycombinator.com/item?id=49426548)) right after
+"'Visual Programming Language' was not an afterthought nailed on the
+side, it was what the name of the company VPL stood for." — before the
+Wikipedia quote block, so the receipt precedes the claim it corrects.
+
+```
+Update: Jaron himself settled this in "Virtually There" (Scientific American, April 2001). The September 1984 Scientific American cover used one of his visual programming experiments as its illustration, an editor called in a panic because contributors must list an affiliation, and: "I blurted out 'VPL Research' (for Visual Programming Language, or Virtual Programming Language), and thus was born VPL. After the issue's publication, investors came calling, and a company came to exist in reality." Both expansions, singular "Language", Visual first — the company was named after the visual programming language, not the other way around. Wikipedia's "Virtual Programming Languages" citation is a C-SPAN page that's just a video listing and never expands the acronym at all.
+
+https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf
+```
+
+If the edit window has closed, post it as a reply to your own comment
+instead — it works standalone.
+
 ## How to post
 
 Copy the fenced block below verbatim into a new section on
