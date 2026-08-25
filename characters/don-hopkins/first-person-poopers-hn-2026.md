@@ -23,9 +23,7 @@ replying to wyclif's "Where's the human poop on the sidewalks?").
 
 ## The comment (verbatim, as posted)
 
-Live at [49431612](https://news.ycombinator.com/item?id=49431612), posted
-2026-08-25 10:40 UTC and ninja-edited to this final form within the edit
-window.
+Live at [49431612](https://news.ycombinator.com/item?id=49431612).
 
 ```
 It won't be a solid hit until you can do your civic doody on the sidewalks yourself.
@@ -119,27 +117,3 @@ Every link curl-checked, every quote grepped verbatim from the page source.
 | Party Pooper tagline | Verbatim [itch.io](https://padierfind.itch.io/party-pooper) description: "Drink as much alcohol as possible! (without pooping on yourself)", Ludum Dare 40 |
 | Poop On 2020 Simulator | [Steam page](https://store.steampowered.com/app/1433480/Poop_On_2020_Simulator/) tags First-Person + Immersive Sim, soft-body turds; [PC Gamer coverage](https://www.pcgamer.com/this-dollar2-game-lets-you-throw-turds-at-the-year-2020-while-gentle-piano-music-plays/) linked from the Steam page itself |
 | Bird Game | Verbatim [itch.io](https://dandonnan.itch.io/bird-game): "Stealing food and pooping on things scores points", anti-bird drones |
-
-Dropped from earlier drafts for lack of receipts: "Poop Run" (claimed App Store
-copy "An action-packed first person pooper!" could not be verified — the app
-appears gone without an archive) and "Poopy Pooper (2026)" (unverifiable).
-
-## Show fodder
-
-- **The register:** deadpan taxonomist. The joke is the rigor — every turd has
-  a citation.
-- **The escalation:** one-liner ("Try not to step in doo-doo?") → gag quote →
-  fully sourced genre survey with a seven-branch taxonomy.
-- **The mic drop:** Reverse Pac-Man as the Platonic FPP — scatological gag
-  transmuted into a game-mechanics inversion.
-- **The deep cut:** two unrelated games both named Pooper Scooper, and the
-  2009 one accidentally continues Taito's 1982 Zoo Keeper Zeke lore.
-- **Pun engineering:** every framing phrase is a bowel euphemism disguised as
-  critic-speak, iterated word by word — "a solid hit" (stool consistency),
-  "civic doody" (civic duty, the city-sim joke), "rich fertile tradition",
-  "regular, long-running, impactful, or corny" (regularity, the runs,
-  fecal impaction, then corn as the punchline), and the closer "A deep fast moving genre" (a good
-  movement, at speed — the "fast running" candidate rejected up top sneaks
-  back in through the exit).
-  Rejected: "number one" (wrong fluid), "impacted" (wrong part of speech),
-  "fast running" (tips its hand — nobody describes games that way).
