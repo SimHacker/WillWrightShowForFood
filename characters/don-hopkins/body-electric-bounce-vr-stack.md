@@ -97,7 +97,7 @@ Interval. Chuck's name was reduced in stature…" Jaron founded VPL and drove th
 the custom tools (e.g. the Swivel 3D transform-tree editor). *(To do: a `chuck-blanchard/` character.)*
 - Don's Bounce writeup: [Medium — *Bounce Stuff](https://medium.com/@donhopkins/bounce-stuff-8310551a96e3)* ·
 [c2: BounceLanguage](https://wiki.c2.com/?BounceLanguage) ·
-[bounce-notes.txt (LEV list 2000; 1999 Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt)
+[bounce-notes.txt (LEV list 2000; 1999 Jaron thread)](https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt) — [archived + harvested in the repo](sources/1998-2000-bounce-notes-visual-programming.md)
 - Neighbors: [Levity / Bounce / Space Seed](levity-bounce-space-seed.md) ·
 [David Levitt](../david-levitt/README.md) · [Jaron Lanier](../jaron-lanier/README.md) ·
 [visual-programming taxonomy](visual-programming-taxonomy.md)

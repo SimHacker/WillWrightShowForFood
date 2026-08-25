@@ -66,7 +66,7 @@ sources:
   blogs:
     - "https://medium.com/@donhopkins/bounce-stuff-8310551a96e3  (Bounce writeup)"
     - "https://wiki.c2.com/?BounceLanguage  (Bounce language)"
-    - "https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt  (Bounce notes, LEV list 2000)"
+    - "https://www.donhopkins.com/home/archive/visual-programming/bounce-notes.txt  (Bounce notes, LEV list 2000; archived+harvested in ../don-hopkins/sources/1998-2000-bounce-notes-visual-programming.md)"
   papers:
     - "David Levitt, *A Representation of Musical Dialects* (MIT)"
     - "*Machine Models of Music* (MIT Press) — co-edited"
