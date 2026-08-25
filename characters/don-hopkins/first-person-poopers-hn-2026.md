@@ -32,7 +32,7 @@ It won't be a solid hit until you can do your civic doody on the sidewalks yours
 
 There's a rich fertile tradition of "First Person Poopers", some of them quite regular, long-running, corny, or impactful.
 
-Natural Selection 2: Combat — Rock Paper Shotgun's literal headline: "First-Person Pooper: Swallowed Alive In NS2 Combat". You get devoured by an Onos and can fight your way through "the finale of the digestion process. All from an appalling first-person view. What great guts!" You don't poop — you ARE the poop.
+Natural Selection 2: Combat -- Rock Paper Shotgun's literal headline: "First-Person Pooper: Swallowed Alive In NS2 Combat". You get devoured by an Onos and can fight your way through "the finale of the digestion process. All from an appalling first-person view. What great guts!" You don't poop — you ARE the poop.
 
 https://www.rockpapershotgun.com/natural-selection-2-combat-devour-guts
 
@@ -40,39 +40,39 @@ https://www.youtube.com/watch?v=WacIMCEhVYU
 
 >"We want players to feel not only horrified at the idea of being eaten alive but that even after being devoured, there's still a chance to destroy the beast and stay alive!" director and sound designer Thomas Loupe told RPS.
 
-Zoo Tycoon 2 — Eurogamer on its first-person Zookeeper Mode, where you personally clean up after the animals: "The fact it turns the game into the world's first first-person pooper-scoop-'em-up is just an added bonus."
+Zoo Tycoon 2 -- Eurogamer on its first-person Zookeeper Mode, where you personally clean up after the animals: "The fact it turns the game into the world's first first-person pooper-scoop-'em-up is just an added bonus."
 
 https://www.eurogamer.net/r-zootycoon2-pc
 
-Sploot — first-person seagull bombing simulator. Boing Boing: "Poop on everyone as a beautiful seagull." Pro tip from the review: "if you fly in low you can almost always make a very personal deposit."
+Sploot -- first-person seagull bombing simulator. Boing Boing: "Poop on everyone as a beautiful seagull." Pro tip from the review: "if you fly in low you can almost always make a very personal deposit."
 
 https://boingboing.net/2015/08/24/sploot-seagull-poop-game.html
 
-A Dump in the Dark — fecal survival-horror FPS with five ammo classes, including Cannon Shot, Liquid Diarrhea, Rapid Fire, and Sniper Shot.
+A Dump in the Dark -- fecal survival-horror FPS with five ammo classes, including Cannon Shot, Liquid Diarrhea, Rapid Fire, and Sniper Shot.
 
 https://store.steampowered.com/app/577080/A_Dump_in_the_Dark/
 
-Pooper Scooper — asymmetric first-person dog-vs-human PvP: "The Dog must collect meat in order to drop slippery poops throughout each map while the Human must collect all of the poops before the time runs out."
+Pooper Scooper -- asymmetric first-person dog-vs-human PvP: "The Dog must collect meat in order to drop slippery poops throughout each map while the Human must collect all of the poops before the time runs out."
 
 https://store.steampowered.com/app/682370/Pooper_Scooper/
 
-Pooper Scooper (2009, iOS, a completely different game) — you are Zookeeper Zeke, frantically shoveling animal "products" into a waiting tractor. "No time to dally - there is poop to scoop!" Delisted from the App Store, but archived:
+Pooper Scooper (2009, iOS, a completely different game) -- you are Zookeeper Zeke, frantically shoveling animal "products" into a waiting tractor. "No time to dally - there is poop to scoop!" Delisted from the App Store, but archived:
 
 https://web.archive.org/web/20250812150108/https://apps.apple.com/us/app/pooper-scooper/id320696112
 
 (Zeke has been the canonical zookeeper name since Taito's 1982 arcade game Zoo Keeper.)
 
-Party Pooper — Ludum Dare 40 entry representing the abstinence branch of the genre: "Drink as much alcohol as possible! (without pooping on yourself)"
+Party Pooper -- Ludum Dare 40 entry representing the abstinence branch of the genre: "Drink as much alcohol as possible! (without pooping on yourself)"
 
 https://padierfind.itch.io/party-pooper
 
-Poop On 2020 Simulator — hurl soft-body physics turds at the year 2020 while gentle piano music plays. Steam tags it "Immersive Sim".
+Poop On 2020 Simulator -- hurl soft-body physics turds at the year 2020 while gentle piano music plays. Steam tags it "Immersive Sim".
 
 https://store.steampowered.com/app/1433480/Poop_On_2020_Simulator/
 
 https://www.pcgamer.com/this-dollar2-game-lets-you-throw-turds-at-the-year-2020-while-gentle-piano-music-plays/
 
-Bird Game — steal people's food and poop on them for points until they deploy anti-bird drones.
+Bird Game -- steal people's food and poop on them for points until they deploy anti-bird drones.
 
 https://dandonnan.itch.io/bird-game
 
