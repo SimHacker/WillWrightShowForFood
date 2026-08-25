@@ -78,7 +78,7 @@ https://dandonnan.itch.io/bird-game
 
 And of course Reverse Pac-Man, the mathematically pure form: traverse the maze depositing the dots instead of eating them.
 
-So the First Person Pooper design space spans pooping, being pooped on, becoming poop, scooping poop, weaponizing poop, and heroically holding it in. A deep moving genre.
+So the First Person Pooper design space spans pooping, being pooped on, becoming poop, scooping poop, weaponizing poop, and heroically holding it in. A deep fast moving genre.
 ```
 
 ---
@@ -138,6 +138,8 @@ appears gone without an archive) and "Poopy Pooper (2026)" (unverifiable).
   critic-speak, iterated word by word — "a solid hit" (stool consistency),
   "civic doody" (civic duty, the city-sim joke), "rich fertile tradition",
   "regular, long-running, corny, or impactful" (regularity, the runs, corn,
-  fecal impaction), and the closer "A deep moving genre" (a good movement).
+  fecal impaction), and the closer "A deep fast moving genre" (a good
+  movement, at speed — the "fast running" candidate rejected up top sneaks
+  back in through the exit).
   Rejected: "number one" (wrong fluid), "impacted" (wrong part of speech),
   "fast running" (tips its hand — nobody describes games that way).
