@@ -1,8 +1,13 @@
 ---
-type: draft
-venue: "Wikipedia talk page — Talk:VPL Research"
-target: https://en.wikipedia.org/wiki/Talk:VPL_Research
-status: draft, not yet posted
+type: snapshot
+venue: "Wikipedia talk page + Hacker News"
+posted:
+  - url: https://en.wikipedia.org/wiki/Talk:VPL_Research#What_VPL_Stands_For
+    as: SimHacker
+    date: 2026-08-25 09:51 UTC
+  - url: https://news.ycombinator.com/item?id=49431291
+    as: DonHopkins
+    date: 2026-08-25 09:57 UTC
 author: don-hopkins
 date: 2026-08-25
 related:
@@ -15,12 +20,11 @@ context: >
   citation is a bare video-listing page containing no expansion of the
   acronym at all. Jaron Lanier's own published account (Scientific
   American, April 2001) gives both expansions, singular, with Visual
-  first. This draft proposes the fix on the talk page with citations,
-  per Wikipedia's preference for discussing sourcing changes before
-  editing contested facts.
+  first. Both the Wikipedia talk section and the Hacker News comment
+  below are mirrored verbatim as posted.
 ---
 
-# Draft: Talk:VPL Research — what "VPL" stood for
+# What "VPL" stood for — as posted
 
 ## The name, and Wikipedia's problem
 
@@ -41,39 +45,16 @@ The authoritative account is Lanier's own:
 ["Virtually There"](https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf),
 Scientific American, April 2001.
 
-## HN ninja edit (same fact, comment-sized)
+## As posted on Talk:VPL Research
 
-Insert into the HN comment
-([thread](https://news.ycombinator.com/item?id=49426548)) right after
-"'Visual Programming Language' was not an afterthought nailed on the
-side, it was what the name of the company VPL stood for." — before the
-Wikipedia quote block, so the receipt precedes the claim it corrects.
+Live at [Talk:VPL Research § What VPL Stands For](https://en.wikipedia.org/wiki/Talk:VPL_Research#What_VPL_Stands_For),
+posted by [SimHacker](https://en.wikipedia.org/wiki/User:SimHacker),
+09:51, 25 August 2026 (UTC). Wikitext as posted:
 
 ```
-Update: Jaron himself settled this in "Virtually There" (Scientific American, April 2001). The September 1984 Scientific American cover used one of his visual programming experiments as its illustration, an editor called in a panic because contributors must list an affiliation, and: "I blurted out 'VPL Research' (for Visual Programming Language, or Virtual Programming Language), and thus was born VPL. After the issue's publication, investors came calling, and a company came to exist in reality." Both expansions, singular "Language", Visual first — the company was named after the visual programming language, not the other way around. Wikipedia's "Virtual Programming Languages" citation is a C-SPAN page that's just a video listing and never expands the acronym at all.
+== What VPL Stands For ==
 
-https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf
-```
-
-If the edit window has closed, post it as a reply to your own comment
-instead — it works standalone.
-
-## How to post
-
-Copy the fenced block below verbatim into a new section on
-[Talk:VPL Research](https://en.wikipedia.org/wiki/Talk:VPL_Research)
-(use "Add topic"). The `~~~~` at the end auto-signs. If you edit the
-article directly instead, the same refs work in the article body.
-
-Notes (do not paste): Wikipedia treats Lanier's Scientific American
-article as a reliable primary source for the naming of his own
-company — it was professionally published by SciAm, not a blog post;
-the jaronlanier.com PDF is a courtesy copy of the published article.
-The proposal deliberately keeps "Virtual Programming Language" in the
-text so it's a correction-with-both-names, not a revert war.
-
-```
-== Name: "Visual Programming Language, or Virtual Programming Language" — current sourcing does not support "Virtual Programming Languages" ==
+"Visual Programming Language, or Virtual Programming Language" — current sourcing does not support "Virtual Programming Languages"
 
 The article currently states: ''"VPL" stood for "Virtual Programming Languages"'', cited to Burbules (2006). Neither of the article's early citations actually verifies this expansion:
 
@@ -98,12 +79,50 @@ This keeps both expansions in Lanier's own order, attributes the claim, and repl
 
 {{reflist-talk}}
 
-~~~~
+[[User:SimHacker|SimHacker]] ([[User talk:SimHacker|talk]]) 09:51, 25 August 2026 (UTC)
 ```
 
-## After posting
+## As posted on Hacker News
 
-- Record the permalink to the talk section here.
+Live at [news.ycombinator.com/item?id=49431291](https://news.ycombinator.com/item?id=49431291),
+posted by DonHopkins, 2026-08-25 09:57 UTC, as a reply to the
+[Body Electric vs. VRML comment](https://news.ycombinator.com/item?id=49429733)
+in the [VRML thread](https://news.ycombinator.com/item?id=49426548).
+Text as posted:
+
+```
+Update: The "VPL Research" Wikipedia page gets the acronym expansion and citation wrong (the transcripts of the videos it cites don't actually say what VPL stands for).
+
+https://en.wikipedia.org/wiki/VPL_Research
+
+However Jaron himself settled this in "Virtually There" (Scientific American, April 2001). The September 1984 Scientific American cover used one of his visual programming experiments as its illustration, an editor called in a panic because contributors must list an affiliation, and:
+
+"I blurted out 'VPL Research' (for Visual Programming Language, or Virtual Programming Language), and thus was born VPL. After the issue's publication, investors came calling, and a company came to exist in reality."
+
+Both expansions, singular "Language", Visual first — the company was named after the visual programming language, not the other way around.
+
+Jaron's September 1984 Scientific American Cover (and check out the authors of the featured articles!):
+
+https://www.scientificamerican.com/issue/sa/1984/09-01/
+
+Jaron's April 2001 Scientific American Article: Virtually There -- Three-dimensional tele-immersion may eventually bring the world to your desk
+
+https://www.scientificamerican.com/issue/sa/2001/04-01/
+
+Wikipedia's "Virtual Programming Languages" citation is a C-SPAN page that's just a video listing and never expands the acronym at all.
+
+https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf
+
+I suggested an edit, if anyone wants to apply it:
+
+https://en.wikipedia.org/wiki/Talk:VPL_Research#What_VPL_Stands_For
+```
+
+## Watch items
+
+- The talk post offers to make the article edit "in a week or so" if
+  unopposed — check back around 2026-09-01 and apply the proposed
+  change if there are no objections.
 - If Jaron replies to the [2026-08-25 email](correspondence/2026-08-25-don-to-jaron-and-david-vrml-vs-body-electric.md)
   with anything citable (or posts a clarification anywhere public),
   add it to the talk thread — a founder's contemporary statement would

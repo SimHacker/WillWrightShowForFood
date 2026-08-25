@@ -38,7 +38,7 @@ related:
   - ../../don-hopkins/sources/1998-2000-bounce-notes-visual-programming.md
   - ../sources/2015-04-02-cspan-digital-future-engelbart-lanier-thrun.md
   - ../sources/2013-05-15-cspan-book-tv-who-owns-the-future-keplers.md
-  - ../wikipedia-vpl-research-talk-draft.md
+  - ../wikipedia-vpl-research-talk-post.md
   - ../../../repo-shows/rebounce/README.md
 ---
 
