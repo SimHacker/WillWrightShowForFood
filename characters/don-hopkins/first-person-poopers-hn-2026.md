@@ -21,17 +21,16 @@ replying to wyclif's "Where's the human poop on the sidewalks?").
 
 ---
 
-## The comment (full version, ready to post)
+## The comment (verbatim, as posted)
 
-Ninja edit: replace the whole body of
-[49431612](https://news.ycombinator.com/item?id=49431612) with this, or post it
-as a reply to your own comment if the edit window has closed — it works
-standalone.
+Live at [49431612](https://news.ycombinator.com/item?id=49431612), posted
+2026-08-25 10:40 UTC and ninja-edited to this final form within the edit
+window.
 
 ```
-It won't be fun until you can poop in the sidewalks yourself.
+It won't be a solid hit until you can do your civic doody on the sidewalks yourself.
 
-There's a rich tradition of computer games that critics have dubbed "First Person Poopers". A field guide:
+There's a rich fertile tradition of "First Person Poopers", some of them quite regular, long-running, corny, or impactful.
 
 Natural Selection 2: Combat — Rock Paper Shotgun's literal headline: "First-Person Pooper: Swallowed Alive In NS2 Combat". You get devoured by an Onos and can fight your way through "the finale of the digestion process. All from an appalling first-person view. What great guts!" You don't poop — you ARE the poop.
 
@@ -79,7 +78,7 @@ https://dandonnan.itch.io/bird-game
 
 And of course Reverse Pac-Man, the mathematically pure form: traverse the maze depositing the dots instead of eating them.
 
-So the design space spans pooping, being pooped on, becoming poop, scooping poop, weaponizing poop, and heroically holding it in. A respectable genre.
+So the First Person Pooper design space spans pooping, being pooped on, becoming poop, scooping poop, weaponizing poop, and heroically holding it in. A deep moving genre.
 ```
 
 ---
@@ -135,3 +134,10 @@ appears gone without an archive) and "Poopy Pooper (2026)" (unverifiable).
   transmuted into a game-mechanics inversion.
 - **The deep cut:** two unrelated games both named Pooper Scooper, and the
   2009 one accidentally continues Taito's 1982 Zoo Keeper Zeke lore.
+- **Pun engineering:** every framing phrase is a bowel euphemism disguised as
+  critic-speak, iterated word by word — "a solid hit" (stool consistency),
+  "civic doody" (civic duty, the city-sim joke), "rich fertile tradition",
+  "regular, long-running, corny, or impactful" (regularity, the runs, corn,
+  fecal impaction), and the closer "A deep moving genre" (a good movement).
+  Rejected: "number one" (wrong fluid), "impacted" (wrong part of speech),
+  "fast running" (tips its hand — nobody describes games that way).
