@@ -22,6 +22,27 @@ context: >
 
 # Draft: Talk:VPL Research — what "VPL" stood for
 
+## The name, and Wikipedia's problem
+
+When Scientific American put one of Jaron Lanier's visual-programming
+experiments on the cover of its September 1984 issue, an editor called
+in a panic because contributors must list an affiliation — and Lanier,
+who had none, blurted out "VPL Research" (for Visual Programming
+Language, or Virtual Programming Language); investors came calling
+after publication, and the company came to exist in reality. So the
+acronym meant both, singular, with Visual first — the company was
+named for the language, not the other way around. Wikipedia's
+[VPL Research](https://en.wikipedia.org/wiki/VPL_Research) article
+instead states flatly that VPL "stood for 'Virtual Programming
+Languages'" — plural, Virtual-only — resting on a C-SPAN organization
+page that is just a video listing containing no expansion of the
+acronym, and a 2006 education-handbook chapter that gives no source.
+The authoritative account is Lanier's own:
+["Virtually There"](https://www.jaronlanier.com/cocodexintro/lanier01sciam.pdf),
+Scientific American, April 2001.
+
+## How to post
+
 Copy the fenced block below verbatim into a new section on
 [Talk:VPL Research](https://en.wikipedia.org/wiki/Talk:VPL_Research)
 (use "Add topic"). The `~~~~` at the end auto-signs. If you edit the
