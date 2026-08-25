@@ -36,6 +36,12 @@ Related in this room: the [2006 Laszlo receipt](2006-08-21-don-to-tom-lord-ungar
 [Self: The Movie](https://www.youtube.com/watch?v=Ox5P7QyL774)
 and Jecel's index of Self/Smalltalk movies.
 
+> Because we had Smalltalk blocks we didn't need a lot of the
+> cockamamy Gang of Four patterns, which to me mostly look like
+> apologies for poor programming language design.
+>
+> — David Ungar, [17:48](https://www.youtube.com/watch?v=8nfrC-YLYqc&t=1068s)
+
 ## Hooks
 
 - **APL as first language, 1972.** Freshman assembler assignment: classmates
@@ -59,8 +65,10 @@ and Jecel's index of Self/Smalltalk movies.
 - **Unify state and behavior.** Touching a thing *is* an experiment. You
   don't care whether `x` was stored or computed. Implicit self: the
   difference between OO and procedural is one element of context. Dynamic
-  inheritance fell out. Gang of Four patterns: "apologies for poor
-  programming language design."
+  inheritance fell out. [17:48](https://www.youtube.com/watch?v=8nfrC-YLYqc&t=1068s):
+  "Because we had Smalltalk blocks we didn't need a lot of the
+  cockamamy Gang of Four patterns, which to me mostly look like
+  apologies for poor programming language design."
 - **The environment is the org chart.** Michael Van De Vanter. Squint test:
   the most salient thing on screen should be the task. Art that hides art.
   Generation scavenging cursor-flash as Ungar's own guilty counterexample.
@@ -307,9 +315,13 @@ objects, then returns.
 Along the way: dynamic inheritance. If inheritance is just a special
 kind of link between two objects, why not change the link like any
 other reference? That fell out. A really new powerful idea. Singletons
-were easy because they had Smalltalk blocks. "We didn't need a lot of
-the cockamamy Gang of Four patterns, which to me mostly look like
-apologies for poor programming language design."
+were easy:
+
+> Because we had Smalltalk blocks we didn't need a lot of the
+> cockamamy Gang of Four patterns, which to me mostly look like
+> apologies for poor programming language design.
+>
+> — [17:48](https://www.youtube.com/watch?v=8nfrC-YLYqc&t=1068s)
 
 That was the language. Next phases were building it out, the user
 interface, the programming environment. He stops for questions.
