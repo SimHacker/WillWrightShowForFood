@@ -30,7 +30,7 @@ window.
 ```
 It won't be a solid hit until you can do your civic doody on the sidewalks yourself.
 
-There's a rich fertile tradition of "First Person Poopers", some of them quite regular, long-running, corny, or impactful.
+There's a rich fertile tradition of "First Person Poopers", some of them quite regular, long-running, impactful, or corny.
 
 Natural Selection 2: Combat -- Rock Paper Shotgun's literal headline: "First-Person Pooper: Swallowed Alive In NS2 Combat". You get devoured by an Onos and can fight your way through "the finale of the digestion process. All from an appalling first-person view. What great guts!" You don't poop — you ARE the poop.
 
@@ -137,8 +137,8 @@ appears gone without an archive) and "Poopy Pooper (2026)" (unverifiable).
 - **Pun engineering:** every framing phrase is a bowel euphemism disguised as
   critic-speak, iterated word by word — "a solid hit" (stool consistency),
   "civic doody" (civic duty, the city-sim joke), "rich fertile tradition",
-  "regular, long-running, corny, or impactful" (regularity, the runs, corn,
-  fecal impaction), and the closer "A deep fast moving genre" (a good
+  "regular, long-running, impactful, or corny" (regularity, the runs,
+  fecal impaction, then corn as the punchline), and the closer "A deep fast moving genre" (a good
   movement, at speed — the "fast running" candidate rejected up top sneaks
   back in through the exit).
   Rejected: "number one" (wrong fluid), "impacted" (wrong part of speech),
