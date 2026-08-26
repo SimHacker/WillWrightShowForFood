@@ -15,6 +15,11 @@ sent_via: messenger
 *Send-ready draft for Messenger. Answers her 2026-07-06 reply point by point: Paul Rother first,
 Peter Conn email, her own interview, plus the LLM LSD thread that just reconnected us.*
 
+**2026-08-26:** Coco already introduced Paul (he asked for WhatsApp/text). The Paul
+paragraph below is superseded — thank her, then send
+[`../paul-rother/invitation.md`](../paul-rother/invitation.md). Peter + her own chat
+still open.
+
 ---
 
 Coco!! Your message made my whole month — and then your LSD question made my whole year.

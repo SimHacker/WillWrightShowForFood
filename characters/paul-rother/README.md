@@ -1,28 +1,80 @@
 # Paul Rother 🕹️
 
-**HOMER & Assoc.** in-house programmer — programmed **Homer II** alongside **Charles Moore**,
-built the **CAT-700** Forth paint system (**32K**: printer control + paint + OS + compiler +
-debugger), and co-authored the public HOMER history with **[Coco Conn](../coco-conn/)**.
+**HOMER & Assoc.** in-house programmer. Hired to run a console nobody had
+software for. Sat beside **Charles Moore**. Put a paint system, an optical-
+printer controller, an OS, a compiler, and a debugger in **32K**, and used
+it on ***Abracadabra*** and ***Atomic Dog***.
 
-*"I learned Object Oriented Programming without knowing it."* — on factoring Forth WORDs under Moore.
+*"I learned Object Oriented Programming without knowing it."*
 
-## Why this room exists
+Invitation portrayal — **not** Paul Rother.
+[Standards](../../schemas/portrayal-standards.md)
 
-When Coco Conn accepted conversation about the Repo Show (July 2026), her first recommendation was
-to connect with and interview Paul — he has the deepest HOMER stories.
+[invitation.md](invitation.md) — send-ready, Coco intro 26 Aug 2026.
 
-**Status: warm lead — contact via Coco. Invitation not yet drafted or sent.**
+## The story
 
-## The story so far (public)
+Sunset Gower, 1977–1997 (Stanford's finding aid says the shop closed 1996).
+**Peter** and **Coco Conn** built a real-time visual mixing desk named
+**HOMER** — Hybrid Optical Montage Electronically Reproduced. Coco soldered
+LEDs and ran cable. Peter built an optical printer. The engineer who wired
+the desk moved to England. Then **Paul Rother** walked in.
 
-- [`../coco-conn/homer-forth-flying-logos.md`](../coco-conn/homer-forth-flying-logos.md) — the full HOMER deep dive
-- [HN canonical thread](https://news.ycombinator.com/item?id=29261868) — Coco + Paul's write-up, Don's repost with permission
-- [Paul's own history page](http://leftbrain.us/rotherHistory/homer.html)
+**Homer II:** 16 slide projectors, 4 movie projectors, 24 Z80s with 2K EPROM
+each, PolyForth on a master Z80 in 32K, touch faders, a joystick bumper
+stolen from a 1964 Mustang. You performed fades like an audio mixer,
+overdubbed, wrote the hero take to an 8-inch floppy, then burned 10–15
+passes onto IP film. Forth, Inc. sent **Charles Moore** for the host. Paul
+programmed the channel EPROMs.
 
-## Show hooks
+Peter wanted to see the printer move. They bought a **CAT-700** 7-bit S100
+frame buffer from a log cabin in Truckee (the 8th bit never worked), flew
+to Palo Alto to meet the French designer of the Van Gogh traces, slept at
+a Stanford friend's who was building the **Lisa**. Paul got the board
+running in Forth. Filter wheels on steppers: *it made music.* Millimeter
+Magazine ran the photo as a two-page color spread.
 
-- **Charles Moore as deskmate** — what the inventor of Forth was like to work beside, day to day
-- **2K EPROM per channel** — 24 Z80s, PolyForth host, four tasks in 32K
-- **Truckee log cabin** — buying the CAT-700 from the secret demo; hand-routed "Van Gogh" traces; the night at a Stanford friend's working on a secret Apple project called Lisa
-- **The machine that made music** — stepper-motor filter wheels; Rube Goldberg that worked
-- **Millimeter Magazine two-page spread** — "I think Peter was pissed, cause I got premier exposure"
+1989: SIGGRAPH banned demo reels. Peter wrote ***Flying Logos*** — a client
+calls to order chrome, then orders the cosmos — and sneaked the reel into
+the Electronic Theater. Corey Burton on the phones. Niccograph of Japan;
+Monitor Award for Best Showreel.
+
+Complete records are in [`sources/`](sources/README.md). They are meant to
+be read offline. Two originals are already 404.
+
+![Paul Rother, optical printer / 7-bit paint, circa 1982](media/1982-optical-printer-7bit-paint-system.jpg)
+
+## Read in this order
+
+1. [Paul's 1982 memoir](sources/homer-and-associates-1982.md) — his words,
+   his photo
+2. [Coco's 2021 post](sources/2021-10-20-facebook-homer.md) — how you
+   *played* the desk; comments that add history (phone-pencil, T2 scan,
+   wire-wrap)
+3. [Flying Logos](sources/1989-flying-logos.md) — why it exists, proofread
+   transcript
+4. [Stanford M2262](sources/stanford-m2262/GUIDE.md) — live catalog
+   [archives.stanford.edu/catalog/m2262](https://archives.stanford.edu/catalog/m2262);
+   finding aid copied here. Announcement blog (404):
+   [2019-05-17-stanford-peter-conn-papers.md](sources/2019-05-17-stanford-peter-conn-papers.md)
+5. [HN 18 Nov 2021](sources/2021-11-18-hn-homer-forth.md) — as posted, with
+   a map of which links died
+
+Coco's company page (SIGKids, Don):
+[../coco-conn/homer-forth-flying-logos.md](../coco-conn/homer-forth-flying-logos.md).
+
+## Watch
+
+| | |
+|---|---|
+| *Flying Logos* | https://www.youtube.com/watch?v=9hIOfEiy4lc |
+| *Atomic Dog* | https://www.youtube.com/watch?v=LMVZ36VA0wg |
+| *Abracadabra* | https://www.youtube.com/watch?v=tY8B0uQpwZs |
+| *Bongo Bongo* | https://www.youtube.com/watch?v=_NrsRZdMI-A |
+| Peter's site (credits, still live) | https://www.milesconsulting.org/service.html |
+
+## Show
+
+[ideas.md](ideas.md) · seed [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
+
+↑ [Coco Conn](../coco-conn/README.md)

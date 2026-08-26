@@ -118,12 +118,21 @@ the console**, code behind the glass.
   lineage.
 - **SIGKids** — where kids touched the future; **David Levitt** / **Bounce** origin story with Don.
 
-## Sources (public)
+## Sources (complete records in Paul's room)
 
-- [HN — Forth vs Lisp — Coco Conn & Paul Rother thread (Don repost, with permission)](https://news.ycombinator.com/item?id=29261868)
-- [HN — Forth: The programming language that writes itself — 2023 repost](https://news.ycombinator.com/item?id=36751574)
-- [HN — Don on Flying Logos / logos (2023)](https://news.ycombinator.com/item?id=34134114) · [Feb 2023 Sun thread excerpt](https://news.ycombinator.com/item?id=29261868) (same HOMER block)
-- [Paul Rother — Homer & Associates history](http://leftbrain.us/rotherHistory/homer.html)
-- [Peter Conn Papers — Stanford Special Collections](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/entire_text/)
-- [Peter Conn — photo album (imgur mirror)](https://web.archive.org/web/20230516102928/https://imgur.com/a/4Bmb4xu)
-- Don ↔ David: [`../david-levitt/don-and-david-history.md`](../david-levitt/don-and-david-history.md)
+Do not depend on leftbrain.us or the old Stanford blog — both **404** as of
+26 Aug 2026. Readable copies:
+
+- [Paul's 1982 memoir](../paul-rother/sources/homer-and-associates-1982.md)
+- [Coco's 2021 Facebook post](../paul-rother/sources/2021-10-20-facebook-homer.md)
+- [Flying Logos transcript](../paul-rother/sources/1989-flying-logos.md)
+- [Stanford Peter Conn papers M2262](../paul-rother/sources/2019-05-17-stanford-peter-conn-papers.md)
+- [HN 18 Nov 2021 as posted](../paul-rother/sources/2021-11-18-hn-homer-forth.md)
+
+Live catalog: [archives.stanford.edu/catalog/m2262](https://archives.stanford.edu/catalog/m2262)
+· [finding aid in this repo](../paul-rother/sources/stanford-m2262/GUIDE.md)
+· [OAC](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/)
+
+Peter's site (credits): https://www.milesconsulting.org/service.html
+
+Don ↔ David: [`../david-levitt/don-and-david-history.md`](../david-levitt/don-and-david-history.md)

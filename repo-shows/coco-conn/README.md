@@ -23,8 +23,9 @@ a decades-long collaboration.
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — the show seed.
-- [`invitation.md`](invitation.md) — invitation (**sent 2026-07-06 via Facebook**; awaiting reply).
+- [`invitation.md`](invitation.md) — invitation (**sent 2026-07-06 via Facebook**; Coco replied same day).
 
 Guest: [`characters/coco-conn/`](../../characters/coco-conn/README.md). Invite **sent**; consent pending.
+Paul: [`characters/paul-rother/invitation.md`](../../characters/paul-rother/invitation.md) — send-ready (Coco intro 26 Aug 2026).
 
 — Don Hopkins *(User Interface Flower Child)*

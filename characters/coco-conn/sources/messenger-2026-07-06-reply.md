@@ -8,7 +8,7 @@ warm and enthusiastic. The message itself is private and is NOT stored in this p
 | # | Action | Status |
 |---|--------|--------|
 | 1 | Send Coco Don's email address | open |
-| 2 | Connect with and interview **Paul Rother** first — her recommendation; contact via Coco | open |
+| 2 | Connect with and interview **Paul Rother** first — her recommendation; contact via Coco | **intro received 2026-08-26** — [`../../paul-rother/correspondence/2026-08-26-coco-introduces-paul.md`](../../paul-rother/correspondence/2026-08-26-coco-introduces-paul.md); invite [`../../paul-rother/invitation.md`](../../paul-rother/invitation.md) |
 | 3 | **Peter Conn** — intro and background coming from Coco by email; private until cleared | open |
 | 4 | Schedule a chat with Coco herself — she's open | open |
 

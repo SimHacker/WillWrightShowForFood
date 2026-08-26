@@ -16,11 +16,12 @@ representation:
   authored_by: don-hopkins
 
 invitation:
-  status: warm_lead
+  status: send_ready
   consent: not_yet_asked
-  warm_path: "Coco Conn recommended connecting with Paul first (July 2026). Contact via Coco."
+  warm_path: "Coco Conn email 2026-08-26 — Paul asked to talk (WhatsApp/text via Coco; number not in this repo). Offered a writeup."
+  document: invitation.md
   show_seed: repo-shows/coco-conn/
-  note: "Coco's FIRST ask from the Repo Show invitation — interview Paul before anyone. Contact via Coco."
+  note: "Coco's first Repo Show ask. Intro landed 2026-08-26."
 
 bio:
   summary: >
@@ -50,21 +51,30 @@ connections:
     relation: HN indexer of the HOMER story; parallel Forth thread (Mitch Bradley / Open Firmware at Sun)
 
 sources:
-  - type: hn
-    url: https://news.ycombinator.com/item?id=29261868
-    note: Canonical HOMER/Forth write-up (Coco Conn + Paul Rother, reposted by Don with permission)
+  - type: internal
+    path: sources/homer-and-associates-1982.md
+    note: Paul's memoir — leftbrain.us original 404 as of 2026-08-26
+  - type: internal
+    path: sources/2021-10-20-facebook-homer.md
+  - type: internal
+    path: sources/1989-flying-logos.md
+  - type: internal
+    path: sources/stanford-m2262/GUIDE.md
+    note: Peter Conn papers M2262 finding aid (copied). Catalog https://archives.stanford.edu/catalog/m2262. 31.5 linear feet; nothing digitized.
+  - type: internal
+    path: sources/2021-11-18-hn-homer-forth.md
+  - type: internal
+    path: correspondence/2026-08-26-coco-introduces-paul.md
+    note: Coco's intro email (contact details not stored here)
   - type: web
-    url: http://leftbrain.us/rotherHistory/homer.html
-    note: Paul Rother — Homer & Associates history page
-  - type: internal
-    path: ../coco-conn/homer-forth-flying-logos.md
-  - type: internal
-    path: ../coco-conn/sources/hn-homer-forth-index.yml
-  - type: internal
-    path: ../coco-conn/sources/messenger-2026-07-06-reply.md
-    note: Coco's warm handoff — action items only, private message not stored
+    url: https://archives.stanford.edu/catalog/m2262
+    note: Live Stanford Archives catalog — Peter Conn papers M2262
+  - type: video
+    url: https://www.youtube.com/watch?v=9hIOfEiy4lc
+    note: Flying Logos — SIGGRAPH 1989 Electronic Theater
 
 facts_to_confirm:
-  - "Best contact channel — via Coco"
   - "Years at HOMER; what he did after 1997"
-  - "Whether he kept any Homer II code, EPROMs, schematics, or the 8-inch hero floppies"
+  - "Whether he kept Homer II code, EPROMs, schematics, or 8-inch hero floppies"
+  - "Leo Brodie as HOMER associate (Coco's 2021 post) — confirm with Paul"
+  - "Writeup he offered to send"
