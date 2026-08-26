@@ -23,6 +23,7 @@
 		ROUTE_HIGHLIGHT_PAINT,
 		ROUTE_LINE_PAINT
 	} from '$lib/heatmap-paint';
+	import { debugLog } from '$lib/debug-trap';
 	import { cachedFineHeat, FINE_HEAT_ZOOM } from '$lib/map-bounds';
 
 	setWorkerUrl(workerUrl);
@@ -100,7 +101,11 @@
 
 	function updateFineHeatMode() {
 		if (!map) return;
-		useFineHeat = map.getZoom() >= FINE_HEAT_ZOOM;
+		const next = map.getZoom() >= FINE_HEAT_ZOOM;
+		if (next !== useFineHeat) {
+			debugLog(`fine-heat ${next} zoom=${map.getZoom().toFixed(2)}`);
+		}
+		useFineHeat = next;
 	}
 
 	function syncRoutes() {
@@ -254,6 +259,7 @@
 		map.addControl(new NavigationControl(), 'bottom-right');
 
 		map.on('load', () => {
+			debugLog(`map load zoom=${map?.getZoom()?.toFixed(2)}`);
 			styleLoaded = true;
 			updateFineHeatMode();
 			syncAll();
@@ -263,7 +269,9 @@
 		map.on('zoomend', updateFineHeatMode);
 
 		map.on('error', (e) => {
-			console.error('[SafariMap]', e.error?.message ?? e);
+			const msg = e.error?.message ?? String(e);
+			debugLog(`map error ${msg}`);
+			console.error('[SafariMap]', msg);
 		});
 
 		return () => {

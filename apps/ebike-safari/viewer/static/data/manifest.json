@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T00:47:28.916840+00:00",
+  "generated_at": "2026-08-26T21:35:26.450484+00:00",
   "home": {
     "label": "Marconistraat 25, Badhoevedorp",
     "lat": 52.3382,
@@ -11,6 +11,46 @@
   },
   "trip_count": 40,
   "trips": [
+    {
+      "id": "badhoevedorp-roundtrip-c3a6ba80-989c-11f1-8ad1-a40dbc8fa83a",
+      "title": "Badhoevedorp roundtrip",
+      "started_at": "2026-08-15T11:34:21",
+      "distance_km": 40.45,
+      "duration_min": 124.1,
+      "point_count": 7261,
+      "bounds": [
+        4.777348,
+        52.337864,
+        4.931417,
+        52.363941
+      ],
+      "pause_count": 6,
+      "source_fit": "Badhoevedorp roundtrip-c3a6ba80-989c-11f1-8ad1-a40dbc8fa83a.fit",
+      "geojson": "trips/badhoevedorp-roundtrip-c3a6ba80-989c-11f1-8ad1-a40dbc8fa83a.geojson",
+      "series": "trips/badhoevedorp-roundtrip-c3a6ba80-989c-11f1-8ad1-a40dbc8fa83a.series.json",
+      "meta": "trips/badhoevedorp-roundtrip-c3a6ba80-989c-11f1-8ad1-a40dbc8fa83a.meta.json",
+      "videos": []
+    },
+    {
+      "id": "badhoevedorp-roundtrip-2ab93a80-9623-11f1-8ad1-a40dbc8fa83a",
+      "title": "Badhoevedorp roundtrip",
+      "started_at": "2026-08-12T14:07:14",
+      "distance_km": 43.34,
+      "duration_min": 129.3,
+      "point_count": 7511,
+      "bounds": [
+        4.777983,
+        52.329418,
+        4.930178,
+        52.37553
+      ],
+      "pause_count": 7,
+      "source_fit": "Badhoevedorp roundtrip-2ab93a80-9623-11f1-8ad1-a40dbc8fa83a.fit",
+      "geojson": "trips/badhoevedorp-roundtrip-2ab93a80-9623-11f1-8ad1-a40dbc8fa83a.geojson",
+      "series": "trips/badhoevedorp-roundtrip-2ab93a80-9623-11f1-8ad1-a40dbc8fa83a.series.json",
+      "meta": "trips/badhoevedorp-roundtrip-2ab93a80-9623-11f1-8ad1-a40dbc8fa83a.meta.json",
+      "videos": []
+    },
     {
       "id": "amsterdam-to-badhoevedorp-ride-77aaed00-950d-11f1-8ad1-a40dbc8fa83a",
       "title": "Amsterdam to Badhoevedorp ride",
@@ -212,26 +252,6 @@
       "videos": []
     },
     {
-      "id": "haarlemmermeer-to-badhoevedorp-ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a",
-      "title": "Haarlemmermeer to Badhoevedorp ride",
-      "started_at": "2026-07-24T16:57:39",
-      "distance_km": 62.82,
-      "duration_min": 186.1,
-      "point_count": 4499,
-      "bounds": [
-        4.57248,
-        52.296886,
-        4.779777,
-        52.37212
-      ],
-      "pause_count": 2,
-      "source_fit": "Haarlemmermeer to Badhoevedorp ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a.fit",
-      "geojson": "trips/haarlemmermeer-to-badhoevedorp-ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a.geojson",
-      "series": "trips/haarlemmermeer-to-badhoevedorp-ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a.series.json",
-      "meta": "trips/haarlemmermeer-to-badhoevedorp-ride-c708c380-8780-11f1-8ad1-a40dbc8fa83a.meta.json",
-      "videos": []
-    },
-    {
       "id": "amsterdam-to-badhoevedorp-ride-ba711d80-83c4-11f1-8ad1-a40dbc8fa83a",
       "title": "Amsterdam to Badhoevedorp ride",
       "started_at": "2026-07-19T22:55:00",
@@ -409,26 +429,6 @@
       "geojson": "trips/badhoevedorp-to-zaandam-ride-134d0180-7cb3-11f1-8ad1-a40dbc8fa83a.geojson",
       "series": "trips/badhoevedorp-to-zaandam-ride-134d0180-7cb3-11f1-8ad1-a40dbc8fa83a.series.json",
       "meta": "trips/badhoevedorp-to-zaandam-ride-134d0180-7cb3-11f1-8ad1-a40dbc8fa83a.meta.json",
-      "videos": []
-    },
-    {
-      "id": "bosch-ebike-tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a",
-      "title": "Bosch eBike Tour",
-      "started_at": "2026-07-09T15:26:19",
-      "distance_km": 1.3,
-      "duration_min": 4.6,
-      "point_count": 263,
-      "bounds": [
-        4.7447,
-        52.401402,
-        4.748704,
-        52.407921
-      ],
-      "pause_count": 1,
-      "source_fit": "Bosch eBike Tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a.fit",
-      "geojson": "trips/bosch-ebike-tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a.geojson",
-      "series": "trips/bosch-ebike-tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a.series.json",
-      "meta": "trips/bosch-ebike-tour-8880df80-7baa-11f1-8ad1-a40dbc8fa83a.meta.json",
       "videos": []
     },
     {
@@ -816,13 +816,13 @@
   "video_count": 0,
   "coverage": {
     "bounds": [
-      4.57248,
+      4.683872,
       52.26786,
       4.988189,
       52.478374
     ],
     "trip_count": 40,
-    "cell_count": 41180,
+    "cell_count": 84286,
     "all_routes": "coverage/all-routes.geojson",
     "heatmap": "coverage/heatmap.geojson"
   }

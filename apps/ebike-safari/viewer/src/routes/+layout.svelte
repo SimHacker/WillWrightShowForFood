@@ -1,10 +1,14 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import { setAuthContext } from '$lib/auth-context';
+	import DebugPanel from '$lib/components/DebugPanel.svelte';
+	import { installDebugTrap } from '$lib/debug-trap';
 	import { setSettingsContext } from '$lib/settings-context';
 	import { createSettingsStore } from '$lib/settings-store.svelte';
 	import type { AuthUser } from '$lib/types/auth';
 	import { onMount } from 'svelte';
+
+	if (typeof window !== 'undefined') installDebugTrap();
 
 	let { children } = $props();
 
@@ -51,6 +55,7 @@
 </svelte:head>
 
 {@render children()}
+<DebugPanel />
 
 <style>
 	:global(html, body) {

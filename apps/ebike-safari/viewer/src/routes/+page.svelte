@@ -6,6 +6,7 @@
 	import SettingsDialog from '$lib/components/SettingsDialog.svelte';
 	import TripPicker from '$lib/components/TripPicker.svelte';
 	import { getAuthContext } from '$lib/auth-context';
+	import { debugLog, skipHeatmap } from '$lib/debug-trap';
 	import { filterRoutes, heatFromRoutes, unionTripBounds } from '$lib/map-bounds';
 	import { loadSelectedTripIds, saveSelectedTripIds } from '$lib/selected-trips';
 	import { getSettingsContext } from '$lib/settings-context';
@@ -194,14 +195,20 @@
 				throw new Error('no route GeoJSON on server');
 			}
 
-			if (m.coverage?.heatmap) {
+			if (m.coverage?.heatmap && !skipHeatmap()) {
 				try {
+					debugLog(`heatmap json parse start ${m.coverage.heatmap}`);
 					const hRes = await dataFetch(`/data/${m.coverage.heatmap}`);
-					if (hRes.ok) fullHeatmap = (await hRes.json()) as FeatureCollection;
+					if (hRes.ok) {
+						fullHeatmap = (await hRes.json()) as FeatureCollection;
+						debugLog(`heatmap features ${fullHeatmap.features.length}`);
+					}
 				} catch (e) {
-					// Heatmap is a nice-to-have; the app works without it.
+					debugLog(`heatmap fail ${describeError(e)}`);
 					noteNetworkHiccup(e);
 				}
+			} else if (skipHeatmap()) {
+				debugLog('heatmap skipped (?noheat=1)');
 			}
 			retryDelayMs = 2000;
 		} catch (e) {
