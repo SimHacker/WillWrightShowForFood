@@ -8,10 +8,48 @@ uploaded: 2006-09-30
 runtime: "2:13 (YouTube file; descriptions say 2 or 3 minutes)"
 ---
 
-# Flying Logos — Homer & Associates, 1989
+# Flying Logos — Homer & Associates, 1988–89
 
 Watch: [youtube.com/watch?v=9hIOfEiy4lc](https://www.youtube.com/watch?v=9hIOfEiy4lc)
 (Peter Conn's channel, uploaded 30 Sep 2006). Live 2026-08-26.
+
+![Still from Flying Logos, Inc. — SIGGRAPH History Archives](../media/1988-siggraph-flying-logos-still.jpg)
+
+*SIGGRAPH History Archives still (cataloged as SIGGRAPH 1988 Film & Video Show).*
+
+## SIGGRAPH catalog copy
+
+This is the public program text. Stanford's paper **"Flying Logos" press
+release** is still Box 1, folder 22 in [M2262](stanford-m2262/GUIDE.md) — not
+digitized. Until someone photographs that folder, this is the press.
+
+Source: [ACM SIGGRAPH History Archives — “Flying Logos, Inc.” by Conn](https://history.siggraph.org/animation-video-pod/flying-logos-inc-by-conn/)
+(copied 2026-08-26). They file it under **SIGGRAPH 1988**, Video Review Issue
+38, Film & Video Show, track #06. Coco, Peter's YouTube, and the Stanford
+finding aid all say **1989 Electronic Theater**. Both dates stand until
+someone checks the paper.
+
+**Title:** *Flying Logos, Inc.*
+**Director:** Peter Conn
+**Company:** Homer & Associates
+
+Chrome? Wood and chrome? Chrome and marble? Marble and glass? Is this a high
+class hardware store or is this a telephone pitch by the loquacious and
+simplistic salesman for the quiet imaginary firm of Flying Logos, Inc.? In a
+world where aspirations are high but creative frustration is rampant, it is
+not surprising to realize that the bread 'n butter of small computer graphics
+companies has something to do with how many interesting ways you can bring on
+and off somebody's name. And this is not to say that the designers and
+animators don't take their task quite seriously? Now could I interest you in
+a plastic look? All animations were created and rendered on a PC/AT with a
+Definicon Accelerator Board and Targa frame buffer using Digital Arts DGS 1.0
+and 2.0 software. Animations were designed and directed by President/Director
+Peter Conn and Creative/Technical Director Michael Kory. The Flying Logo
+sequence was created by Jim Hillin.
+
+Hardware that the later YouTube/milesconsulting blurbs skip: **PC/AT**,
+**Definicon** accelerator, **Targa** frame buffer, **Digital Arts DGS** 1.0
+and 2.0.
 
 ## Why it exists
 

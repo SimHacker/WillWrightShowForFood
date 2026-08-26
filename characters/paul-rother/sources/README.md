@@ -7,7 +7,7 @@ without leaving the repo.
 |---|---|
 | [homer-and-associates-1982.md](homer-and-associates-1982.md) | Paul's memoir. Original leftbrain.us page **404**. |
 | [2021-10-20-facebook-homer.md](2021-10-20-facebook-homer.md) | Coco's 20 Oct 2021 post + comments that add facts. Facebook login-walls the body. |
-| [1989-flying-logos.md](1989-flying-logos.md) | SIGGRAPH '89 film — context and proofread transcript. Video still on YouTube. |
+| [1989-flying-logos.md](1989-flying-logos.md) | Video, SIGGRAPH catalog/press copy, proofread transcript. Paper press release still in M2262 Box 1.22. |
 | [stanford-m2262/GUIDE.md](stanford-m2262/GUIDE.md) | Finding aid for **M2262** (PDF + EAD copied). Nothing in the boxes is online. Catalog: https://archives.stanford.edu/catalog/m2262 |
 | [2019-05-17-stanford-peter-conn-papers.md](2019-05-17-stanford-peter-conn-papers.md) | Vanished announcement blog + its five photos. Not the archive. |
 | [2021-11-18-hn-homer-forth.md](2021-11-18-hn-homer-forth.md) | Don's HN comment as posted (Coco's permission). |

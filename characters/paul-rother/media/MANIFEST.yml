@@ -53,3 +53,8 @@ artifacts:
   - file: stanford-2019/vince-neil-sister-of-pain-costume.jpg
     kind: photo
     title: Vince Neil Sister of Pain costume
+  - file: 1988-siggraph-flying-logos-still.jpg
+    kind: still
+    date: 1988
+    title: Flying Logos, Inc. — SIGGRAPH History Archives still
+    source: https://history.siggraph.org/wp-content/uploads/2023/04/1988-Animation-Conn_Flying-Logos-Inc.jpg
