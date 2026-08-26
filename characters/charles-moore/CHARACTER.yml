@@ -1,0 +1,64 @@
+# Charles Moore — Forth inventor; Forth, Inc. programmed the Homer II host
+# Public sources only. No warm path yet (Paul / Coco). Not sent.
+
+character:
+  id: charles-moore
+  name: "Charles Moore"
+  type: invitation
+  signifier: "⚙️"
+  status: living
+  field: "Inventor of Forth; Forth, Inc. — Homer II host at HOMER & Assoc."
+  home: characters/charles-moore/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  warm_path: "None yet — Paul Rother and Coco Conn are the people who sat with him. Not sent."
+  document: invitation.md
+  show_seed: repo-shows/coco-conn/
+
+bio:
+  summary: >
+    **Charles Moore** invented **Forth**. **Forth, Inc.** sent him to **HOMER & Assoc.**
+    (Sunset Gower) to program the **Homer II** host: PolyForth, multitasking, 32K on a
+    master Z80, while **Paul Rother** programmed the 2K EPROM in each of 24 channel Z80s.
+    Paul's public memoir: "I learned Object Oriented Programming without knowing it."
+    That HOMER contract is the thread this room is for — not a recap of Forth.
+
+known_for:
+  - "Forth"
+  - "Forth, Inc. — Homer II host (PolyForth in 32K, ~four tasks per Paul's memory)"
+  - "Paul Rother: factoring WORDs, vectors; Coco learned Forth from him too (public accounts)"
+
+connections:
+  - id: paul-rother
+    relation: deskmate at HOMER — Paul on channel EPROMs, Moore on the host
+  - id: coco-conn
+    relation: HOMER & Assoc. — hired Forth, Inc.; learned Forth from Moore (her public account)
+  - id: peter-conn
+    relation: HOMER & Assoc. founder; the shop that hired Forth, Inc.
+  - id: don-hopkins
+    relation: parallel Forth thread (Mitch Bradley / Open Firmware at Sun) — did not work with Moore
+
+sources:
+  - type: internal
+    path: ../paul-rother/sources/homer-and-associates-1982.md
+    note: Paul's memoir — the HOMER / Moore section
+  - type: internal
+    path: ../paul-rother/sources/2021-10-20-facebook-homer.md
+  - type: hn
+    url: https://news.ycombinator.com/item?id=29261868
+    note: Don's comment as posted; local copy ../paul-rother/sources/2021-11-18-hn-homer-forth.md
+  - type: web
+    url: https://en.wikipedia.org/wiki/Charles_H._Moore
+    note: Public career pointer — not a substitute for the HOMER record
+
+facts_to_confirm:
+  - "Whether he remembers the HOMER contract; years; what of the host code survived"
+  - "Leo Brodie as HOMER associate (Coco's 2021 post) — Forth, Inc. orbit"
+  - "Body Music laserdisc (Stanford Box 28.7) — Coco said Charles on Forth; confirm"

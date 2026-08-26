@@ -1,0 +1,74 @@
+# Peter Conn — HOMER & Assoc. founder; optical printer; Flying Logos
+# Public sources only. Coco said an intro by email is coming; not yet landed.
+
+character:
+  id: peter-conn
+  name: "Peter Conn"
+  type: invitation
+  signifier: "🎬"
+  status: living
+  field: "HOMER & Assoc. founder; optical printer; Flying Logos (SIGGRAPH); Stanford papers M2262"
+  home: characters/peter-conn/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 2
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  warm_path: "Coco Conn — intro by email still open (her 2026-07-06 Messenger reply). Not sent."
+  document: invitation.md
+  show_seed: repo-shows/coco-conn/
+
+bio:
+  summary: >
+    **Peter Conn** founded **HOMER & Assoc.** with **Coco Conn** at Sunset Gower Studios
+    (1977–1997 per Coco; Stanford finding aid says closed 1996). Stanford BA Communications
+    1971. He built the **optical printer** the desk recorded onto, directed *Abracadabra*
+    and *Atomic Dog*, and wrote ***Flying Logos*** so Homer's reel could sneak into the
+    SIGGRAPH Electronic Theater after straight demos were banned. Gift of papers to Stanford
+    2017 — call number **M2262**, 31.5 linear feet, nothing digitized.
+
+known_for:
+  - "HOMER (Hybrid Optical Montage Electronically Reproduced) — visual mixing desk + optical printer"
+  - "Flying Logos — SIGGRAPH catalog director credit; Niccograph of Japan; Monitor Award for Best Showreel"
+  - "Steve Miller — Abracadabra (American Video Awards Director of the Year nominee, per finding aid)"
+  - "George Clinton — Atomic Dog; Bongo Bongo; RoboCop / Total Recall FX (Coco's public list)"
+  - "Peter Conn papers, Stanford Special Collections M2262"
+
+connections:
+  - id: coco-conn
+    relation: co-founder / spouse (HOMER & Assoc.); warm path for invitation
+  - id: paul-rother
+    relation: hired to program Homer II after the console engineer left
+  - id: charles-moore
+    relation: Forth, Inc. — programmed the Homer II host
+  - id: don-hopkins
+    relation: HN indexer of the HOMER story (Coco's permission); Flying Logo Heaven aside
+
+sources:
+  - type: web
+    url: https://archives.stanford.edu/catalog/m2262
+    note: Live Stanford Archives catalog — Peter Conn papers M2262
+  - type: internal
+    path: ../paul-rother/sources/stanford-m2262/GUIDE.md
+    note: Finding aid copied into Paul's room (PDF + EAD). Nothing in the boxes is online.
+  - type: internal
+    path: ../paul-rother/sources/1989-flying-logos.md
+  - type: internal
+    path: ../paul-rother/sources/homer-and-associates-1982.md
+    note: Paul's memoir — Peter hired him; optical printer; CAT-700
+  - type: web
+    url: https://www.milesconsulting.org/service.html
+    note: Peter's live credit list (checked 2026-08-26); names Paul on Abracadabra
+  - type: video
+    url: https://www.youtube.com/watch?v=9hIOfEiy4lc
+    note: Flying Logos — Peter's YouTube, uploaded 2006-09-30
+
+facts_to_confirm:
+  - "Coco email intro — still open"
+  - "Shop closed 1996 (finding aid) vs 1997 (Coco)"
+  - "HOMER invented 1973 / Levi's 1974 / company 1977 (finding aid) vs Coco's 1978–1981 console build"
+  - "Imgur album https://imgur.com/a/4Bmb4xu still live — not copied"

@@ -1,7 +1,7 @@
 # Paul Rother 🕹️
 
 **HOMER & Assoc.** in-house programmer. Hired to run a console nobody had
-software for. Sat beside **Charles Moore**. Put a paint system, an optical-
+software for. Sat beside **[Charles Moore](../charles-moore/README.md)**. Put a paint system, an optical-
 printer controller, an OS, a compiler, and a debugger in **32K**, and used
 it on ***Abracadabra*** and ***Atomic Dog***.
 
@@ -15,7 +15,8 @@ Invitation portrayal — **not** Paul Rother.
 ## The story
 
 Sunset Gower, 1977–1997 (Stanford's finding aid says the shop closed 1996).
-**Peter** and **Coco Conn** built a real-time visual mixing desk named
+**[Peter](../peter-conn/README.md)** and **[Coco Conn](../coco-conn/README.md)**
+built a real-time visual mixing desk named
 **HOMER** — Hybrid Optical Montage Electronically Reproduced. Coco soldered
 LEDs and ran cable. Peter built an optical printer. The engineer who wired
 the desk moved to England. Then **Paul Rother** walked in.
@@ -24,7 +25,7 @@ the desk moved to England. Then **Paul Rother** walked in.
 each, PolyForth on a master Z80 in 32K, touch faders, a joystick bumper
 stolen from a 1964 Mustang. You performed fades like an audio mixer,
 overdubbed, wrote the hero take to an 8-inch floppy, then burned 10–15
-passes onto IP film. Forth, Inc. sent **Charles Moore** for the host. Paul
+passes onto IP film. Forth, Inc. sent **[Charles Moore](../charles-moore/README.md)** for the host. Paul
 programmed the channel EPROMs.
 
 Peter wanted to see the printer move. They bought a **CAT-700** 7-bit S100
@@ -77,4 +78,4 @@ Coco's company page (SIGKids, Don):
 
 [ideas.md](ideas.md) · seed [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/)
 
-↑ [Coco Conn](../coco-conn/README.md)
+↑ [Coco Conn](../coco-conn/README.md) · [Peter Conn](../peter-conn/README.md) · [Charles Moore](../charles-moore/README.md)

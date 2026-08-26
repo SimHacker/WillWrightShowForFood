@@ -5,10 +5,10 @@
 
 ## The HOMER story (public)
 
-Peter and Coco Conn ran **HOMER & Assoc.** at **Sunset Gower Studios** (1977–1997). Their **Homer II**
+[Peter Conn](../peter-conn/README.md) and Coco Conn ran **HOMER & Assoc.** at **Sunset Gower Studios** (1977–1997). Their **Homer II**
 console — **16 slide projectors**, **4 film projectors**, **24 Z80 channels**, touch **faders**, **joystick
 bumper** — was **performed live** like an audio mixer, then recorded to **IP film** on Peter's **optical
-printer**. They **hired Forth, Inc.**; **Charles Moore** programmed the host in **PolyForth** (**32K**).
+printer**. They **hired Forth, Inc.**; **[Charles Moore](../charles-moore/README.md)** programmed the host in **PolyForth** (**32K**).
 Out of that pipeline: ***Atomic Dog***, ***Abracadabra***, **RoboCop**, **Total Recall**, and ***Flying
 Logos*** at **SIGGRAPH 1989**.
 
@@ -29,11 +29,13 @@ Deep dive: [`homer-forth-flying-logos.md`](homer-forth-flying-logos.md) · hooks
 
 Invitation: [`invitation.md`](invitation.md) *(sent 2026-07-06 via Facebook)* —
 **replied same day, enthusiastic** ([`sources/messenger-2026-07-06-reply.md`](sources/messenger-2026-07-06-reply.md) — action items only):
-interview **[Paul Rother](../paul-rother/)** first; **Peter Conn** intro coming by email;
+interview **[Paul Rother](../paul-rother/)** first; **[Peter Conn](../peter-conn/)** intro coming by email;
 Coco herself open to chat. ·
 warm follow-up: [`invitation-followup-2026-08.md`](invitation-followup-2026-08.md) ·
 seed: [`repo-shows/coco-conn/`](../../repo-shows/coco-conn/) ·
-**Paul Rother:** Coco intro 26 Aug 2026 — [invite](../paul-rother/invitation.md) send-ready
+**Paul Rother:** Coco intro 26 Aug 2026 — [invite](../paul-rother/invitation.md) send-ready.
+**[Peter Conn](../peter-conn/):** [room](../peter-conn/README.md) up; email intro still open.
+**[Charles Moore](../charles-moore/):** [room](../charles-moore/README.md) up; invitation draft.
 
 ## Media
 
