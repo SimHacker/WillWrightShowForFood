@@ -30,12 +30,6 @@ export function filterRoutes(
 const DEFAULT_CELL_DEG = 0.00008;
 const DEFAULT_SAMPLE_DIVISOR = 3;
 
-/** ~1.8 m grid for close-zoom heat (full route geometry). */
-const FINE_CELL_DEG = 0.000018;
-const FINE_SAMPLE_DIVISOR = 7;
-
-const fineCache = new WeakMap<FeatureCollection, FeatureCollection>();
-
 function interpolateSegment(
 	lon0: number,
 	lat0: number,
@@ -102,20 +96,6 @@ export function heatFromRoutes(
 	return gridToFeatureCollection(grid);
 }
 
-/** Finer grid from full GPS line geometry — used when zoomed in. */
-export function heatFromRoutesFine(routes: FeatureCollection): FeatureCollection {
-	return heatFromRoutes(routes, FINE_CELL_DEG, FINE_SAMPLE_DIVISOR);
-}
-
-/** Memoize fine heat; routes FC identity changes when trip selection changes. */
-export function cachedFineHeat(routes: FeatureCollection): FeatureCollection {
-	const hit = fineCache.get(routes);
-	if (hit) return hit;
-	const built = heatFromRoutesFine(routes);
-	fineCache.set(routes, built);
-	return built;
-}
-
 function gridToFeatureCollection(
 	grid: Map<string, { lon: number; lat: number; weight: number }>
 ): FeatureCollection {
@@ -128,5 +108,3 @@ function gridToFeatureCollection(
 		}))
 	};
 }
-
-export const FINE_HEAT_ZOOM = 15;

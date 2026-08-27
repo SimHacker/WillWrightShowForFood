@@ -59,12 +59,29 @@ export function subscribeDebug(fn: () => void): () => void {
 	return () => listeners.delete(fn);
 }
 
-function persist() {
+function persistNow() {
 	try {
 		localStorage.setItem(LOG_KEY, JSON.stringify(lines.slice(-MAX)));
 	} catch {
 		/* quota / private mode */
 	}
+}
+
+let persistTimer = 0;
+function persist() {
+	if (typeof window === 'undefined') return;
+	window.clearTimeout(persistTimer);
+	persistTimer = window.setTimeout(persistNow, 400);
+}
+
+function flushDebugLog() {
+	if (typeof window === 'undefined') return;
+	window.clearTimeout(persistTimer);
+	persistNow();
+}
+
+function isMapTileUrl(url: string) {
+	return url.includes('tile.openstreetmap.org') || /\.png(\?|$)/i.test(url);
 }
 
 export function debugLog(msg: string) {
@@ -101,6 +118,7 @@ export function installDebugTrap() {
 		'error',
 		(ev) => {
 			debugLog(`error ${ev.message} ${ev.filename}:${ev.lineno}:${ev.colno}`);
+			flushDebugLog();
 		},
 		true
 	);
@@ -108,11 +126,17 @@ export function installDebugTrap() {
 		const r = ev.reason;
 		debugLog(`unhandledrejection ${r instanceof Error ? r.message : String(r)}`);
 	});
-	window.addEventListener('pagehide', () => debugLog('pagehide'));
+	window.addEventListener('pagehide', () => {
+		debugLog('pagehide');
+		flushDebugLog();
+	});
 	document.addEventListener('visibilitychange', () =>
 		debugLog(`visibility ${document.visibilityState}`)
 	);
-	document.addEventListener('freeze', () => debugLog('freeze'));
+	document.addEventListener('freeze', () => {
+		debugLog('freeze');
+		flushDebugLog();
+	});
 
 	const origFetch = window.fetch.bind(window);
 	window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {
@@ -124,6 +148,7 @@ export function installDebugTrap() {
 					: input instanceof Request
 						? input.url
 						: String(input);
+		if (isMapTileUrl(url)) return origFetch(input, init);
 		const t0 = performance.now();
 		debugLog(`fetch start ${url}`);
 		try {

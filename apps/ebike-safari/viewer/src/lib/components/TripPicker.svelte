@@ -5,12 +5,23 @@
 		open: boolean;
 		trips: SafariTrip[];
 		selected: Set<string>;
+		active: string | null;
 		onToggle: (id: string) => void;
+		onNameTap: (id: string) => void;
 		onSelectAll: () => void;
 		onSelectNone: () => void;
 	};
 
-	let { open, trips, selected, onToggle, onSelectAll, onSelectNone }: Props = $props();
+	let {
+		open,
+		trips,
+		selected,
+		active,
+		onToggle,
+		onNameTap,
+		onSelectAll,
+		onSelectNone
+	}: Props = $props();
 
 	function formatDate(iso: string): string {
 		if (!iso) return '';
@@ -25,7 +36,10 @@
 {#if open}
 	<aside id="rides-panel">
 		<div class="panel">
-			<p class="hint">Pick rides to show. All = coverage heatmap (secondary).</p>
+			<p class="hint">
+				Checkbox shows a ride on the map. Tap a name (or its path on the map) to select it —
+				heat and replay follow the selected ride.
+			</p>
 
 			<div class="bulk">
 				<button type="button" onclick={onSelectAll}>All</button>
@@ -34,20 +48,24 @@
 
 			<ul>
 				{#each trips as trip (trip.id)}
-					<li>
-						<label>
-							<input
-								type="checkbox"
-								checked={selected.has(trip.id)}
-								onchange={() => onToggle(trip.id)}
-							/>
-							<span class="text">
-								<span class="title">{trip.title}</span>
-								<span class="meta"
-									>{formatDate(trip.started_at)} · {trip.distance_km?.toFixed(1)} km</span
-								>
-							</span>
-						</label>
+					<li class:active={active === trip.id}>
+						<input
+							type="checkbox"
+							checked={selected.has(trip.id)}
+							onchange={() => onToggle(trip.id)}
+							aria-label={`Show ${trip.title}`}
+						/>
+						<button
+							type="button"
+							class="name"
+							aria-pressed={active === trip.id}
+							onclick={() => onNameTap(trip.id)}
+						>
+							<span class="title">{trip.title}</span>
+							<span class="meta"
+								>{formatDate(trip.started_at)} · {trip.distance_km?.toFixed(1)} km</span
+							>
+						</button>
 					</li>
 				{/each}
 			</ul>
@@ -105,33 +123,46 @@
 	}
 
 	li {
-		border-top: 1px solid rgba(255, 255, 255, 0.08);
-	}
-
-	label {
 		display: flex;
-		flex-direction: row;
 		align-items: flex-start;
 		gap: 0.5rem;
 		padding: 0.35rem 0;
-		cursor: pointer;
+		border-top: 1px solid rgba(255, 255, 255, 0.08);
 	}
 
 	input[type='checkbox'] {
 		flex: 0 0 auto;
 		margin: 0.15rem 0 0;
+		cursor: pointer;
 	}
 
-	.text {
+	.name {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		gap: 0.1rem;
 		min-width: 0;
+		padding: 0;
+		border: none;
+		background: none;
+		color: inherit;
+		font: inherit;
+		text-align: left;
+		cursor: pointer;
 	}
 
 	.title {
 		font-weight: 500;
 		line-height: 1.25;
+	}
+
+	li.active .title {
+		color: #fcbf49;
+	}
+
+	li.active .title::after {
+		content: ' ▶';
+		font-size: 0.7em;
 	}
 
 	.meta {

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PopupMenu from '$lib/components/PopupMenu.svelte';
+	import { formatDuration } from '$lib/format';
 	import type { SeriesPoint, MapViewMode } from '$lib/types/safari';
 	import type { LocationMode } from '$lib/types/settings';
 
@@ -15,6 +16,10 @@
 		viewMode: MapViewMode;
 		selectedCount: number;
 		tripCount: number;
+		stopped: boolean;
+		pauseRemainingS: number | null;
+		headingArrow: string | null;
+		onSkipPause: () => void;
 		onTogglePlay: () => void;
 		onScrubInput: () => void;
 		onScrubChange: (index: number) => void;
@@ -37,6 +42,10 @@
 		viewMode,
 		selectedCount,
 		tripCount,
+		stopped,
+		pauseRemainingS,
+		headingArrow,
+		onSkipPause,
 		onTogglePlay,
 		onScrubInput,
 		onScrubChange,
@@ -75,17 +84,23 @@
 
 	const statLine = $derived.by(() => {
 		if (replayActive && currentPoint) {
+			if (stopped) {
+				const wait = pauseRemainingS !== null ? ` ${formatDuration(pauseRemainingS)}` : '';
+				return `stopped${wait}${headingArrow ? ` ${headingArrow}` : ''}`;
+			}
 			const speed = currentPoint.speed_kmh?.toFixed(1) ?? '—';
-			return `${speed} km/h · ${scrubIndex + 1}/${pointCount}`;
+			const dir = headingArrow ? ` ${headingArrow}` : '';
+			return `${speed} km/h${dir} · ${scrubIndex + 1}/${pointCount}`;
 		}
 		return `${selectedCount}/${tripCount} rides`;
 	});
 
 	/** Worst-case stat width in ch so the scrub slider never reflows mid-replay. */
 	const statWidthCh = $derived.by(() => {
-		const replayWorst = `888.8 km/h · ${pointCount}/${pointCount}`.length;
+		const replayWorst = `888.8 km/h ↖ · ${pointCount}/${pointCount}`.length;
+		const stoppedWorst = 'stopped 88h 88m ↖'.length;
 		const idleWorst = `${tripCount}/${tripCount} rides`.length;
-		return Math.max(replayWorst, idleWorst) + 1;
+		return Math.max(replayWorst, stoppedWorst, idleWorst) + 1;
 	});
 
 	function closeMenus() {
@@ -108,11 +123,13 @@
 		<button
 			type="button"
 			class="play"
+			class:skip={playing && stopped}
 			disabled={!replayActive}
 			aria-pressed={playing}
-			onclick={onTogglePlay}
+			aria-label={playing ? (stopped ? 'Skip pause' : 'Pause') : 'Play'}
+			onclick={playing && stopped ? onSkipPause : onTogglePlay}
 		>
-			{playing ? '❚❚' : '▶'}
+			{playing ? (stopped ? '⏭' : '❚❚') : '▶'}
 		</button>
 		<input
 			class="scrub"
@@ -288,6 +305,11 @@
 
 	.play[aria-pressed='true'] {
 		background: #0077b6;
+	}
+
+	.play.skip {
+		background: #fcbf49;
+		color: #16213e;
 	}
 
 	.scrub {

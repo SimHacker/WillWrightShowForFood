@@ -8,7 +8,9 @@
 		type GeoJSONSource,
 		type LayerSpecification,
 		type LineLayerSpecification,
-		type Map as MapLibreMap
+		type Map as MapLibreMap,
+		type MapMouseEvent,
+		type MapTouchEvent
 	} from 'maplibre-gl';
 	import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 	import 'maplibre-gl/dist/maplibre-gl.css';
@@ -24,7 +26,7 @@
 		ROUTE_LINE_PAINT
 	} from '$lib/heatmap-paint';
 	import { debugLog } from '$lib/debug-trap';
-	import { cachedFineHeat, FINE_HEAT_ZOOM } from '$lib/map-bounds';
+	import { formatDuration } from '$lib/format';
 
 	setWorkerUrl(workerUrl);
 
@@ -40,6 +42,11 @@
 		userLocationDraggable?: boolean;
 		followUser?: boolean;
 		onUserLocationChange?: (loc: UserLocation) => void;
+		onPathTap?: (tripId: string, lon: number, lat: number) => void;
+		onPathScrub?: (lon: number, lat: number) => void;
+		/** Ride-seconds until the replay head moves again; null hides the clock. */
+		pauseSeconds?: number | null;
+		onSkipPause?: () => void;
 	};
 
 	let {
@@ -53,13 +60,16 @@
 		userLocation = null,
 		userLocationDraggable = false,
 		followUser = false,
-		onUserLocationChange
+		onUserLocationChange,
+		onPathTap,
+		onPathScrub,
+		pauseSeconds = null,
+		onSkipPause
 	}: Props = $props();
 
 	let container: HTMLDivElement | undefined = $state();
 	let map: MapLibreMap | undefined;
 	let styleLoaded = $state(false);
-	let useFineHeat = $state(false);
 	let userMarker: Marker | undefined;
 	let recentering = false;
 
@@ -93,19 +103,7 @@
 	}
 
 	function resolveHeatData(): FeatureCollection {
-		if (useFineHeat && routes?.features.length) {
-			return cachedFineHeat(routes);
-		}
 		return heatmap?.features.length ? heatmap : EMPTY_FC;
-	}
-
-	function updateFineHeatMode() {
-		if (!map) return;
-		const next = map.getZoom() >= FINE_HEAT_ZOOM;
-		if (next !== useFineHeat) {
-			debugLog(`fine-heat ${next} zoom=${map.getZoom().toFixed(2)}`);
-		}
-		useFineHeat = next;
 	}
 
 	function syncRoutes() {
@@ -258,15 +256,75 @@
 
 		map.addControl(new NavigationControl(), 'bottom-right');
 
+		// Finger-sized hit box for picking a route line on the map.
+		const HIT_PX = 14;
+
+		function tripAtPoint(p: { x: number; y: number }): string | null {
+			if (!map) return null;
+			const layers = [ROUTES_HIGHLIGHT, ROUTES_LAYER, ROUTES_CASING].filter((id) =>
+				map!.getLayer(id)
+			);
+			if (!layers.length) return null;
+			const feats = map.queryRenderedFeatures(
+				[
+					[p.x - HIT_PX, p.y - HIT_PX],
+					[p.x + HIT_PX, p.y + HIT_PX]
+				],
+				{ layers }
+			);
+			for (const f of feats) {
+				const id = f.properties?.trip_id;
+				if (typeof id === 'string') return id;
+			}
+			return null;
+		}
+
+		// Drag along the selected (highlighted) path scrubs replay time.
+		let scrubbing = false;
+
+		function beginScrub(e: MapMouseEvent | MapTouchEvent) {
+			if (!map || !highlightTripId || !onPathScrub) return;
+			if ('points' in e && e.points.length > 1) return;
+			if (tripAtPoint(e.point) !== highlightTripId) return;
+			scrubbing = true;
+			map.dragPan.disable();
+			e.preventDefault();
+			onPathScrub(e.lngLat.lng, e.lngLat.lat);
+		}
+
+		function moveScrub(e: MapMouseEvent | MapTouchEvent) {
+			if (!scrubbing || !onPathScrub) return;
+			e.preventDefault();
+			onPathScrub(e.lngLat.lng, e.lngLat.lat);
+		}
+
+		function endScrub() {
+			if (!scrubbing || !map) return;
+			scrubbing = false;
+			if (!(followUser && userLocation)) map.dragPan.enable();
+		}
+
+		map.on('mousedown', beginScrub);
+		map.on('touchstart', beginScrub);
+		map.on('mousemove', moveScrub);
+		map.on('touchmove', moveScrub);
+		map.on('mouseup', endScrub);
+		map.on('touchend', endScrub);
+		map.on('touchcancel', endScrub);
+
+		map.on('click', (e) => {
+			const id = tripAtPoint(e.point);
+			if (!id) return;
+			debugLog(`map tap trip ${id}`);
+			onPathTap?.(id, e.lngLat.lng, e.lngLat.lat);
+		});
+
 		map.on('load', () => {
 			debugLog(`map load zoom=${map?.getZoom()?.toFixed(2)}`);
 			styleLoaded = true;
-			updateFineHeatMode();
 			syncAll();
 			fitMapBounds();
 		});
-
-		map.on('zoomend', updateFineHeatMode);
 
 		map.on('error', (e) => {
 			const msg = e.error?.message ?? String(e);
@@ -286,7 +344,6 @@
 	$effect(() => {
 		routes;
 		heatmap;
-		useFineHeat;
 		viewMode;
 		highlightTripId;
 		syncAll();
@@ -358,6 +415,33 @@
 		if (followUser) centerOnUser();
 	}
 
+	// Ticking clock over the replay pin during a stop; tap = skip the pause.
+	function syncPauseBadge() {
+		if (!userMarker) return;
+		const el = userMarker.getElement();
+		let badge = el.querySelector('.pause-badge') as HTMLDivElement | null;
+		if (pauseSeconds === null) {
+			badge?.remove();
+			return;
+		}
+		if (!badge) {
+			badge = document.createElement('div');
+			badge.className = 'pause-badge';
+			badge.addEventListener('click', (ev) => {
+				ev.stopPropagation();
+				onSkipPause?.();
+			});
+			el.appendChild(badge);
+		}
+		badge.textContent = `⏱ ${formatDuration(pauseSeconds)}`;
+	}
+
+	$effect(() => {
+		pauseSeconds;
+		userLocation;
+		syncPauseBadge();
+	});
+
 	$effect(() => {
 		if (!map || !styleLoaded) return;
 		const activeMap = map;
@@ -394,5 +478,31 @@
 
 	.map-root :global(.maplibregl-marker-container) {
 		z-index: 20;
+	}
+
+	.map-root :global(.pause-badge) {
+		position: absolute;
+		bottom: calc(100% + 6px);
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 2px 8px;
+		border-radius: 10px;
+		background: rgba(22, 33, 62, 0.94);
+		color: #fcbf49;
+		font: 600 12px/1.4 system-ui, sans-serif;
+		white-space: nowrap;
+		pointer-events: auto;
+		cursor: pointer;
+		animation: pause-tick 1s ease-in-out infinite;
+	}
+
+	@keyframes pause-tick {
+		0%,
+		100% {
+			transform: translateX(-50%) scale(1);
+		}
+		50% {
+			transform: translateX(-50%) scale(1.08);
+		}
 	}
 </style>

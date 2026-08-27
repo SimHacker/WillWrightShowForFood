@@ -33,13 +33,11 @@ export const HEATMAP_PAINT = {
 		12,
 		0.55,
 		14,
-		0.9,
-		15,
-		0.86,
+		0.82,
 		16,
-		0.9,
-		17,
-		0.94
+		0.78,
+		18,
+		0.74
 	],
 	'heatmap-radius': [
 		'interpolate',
@@ -50,17 +48,13 @@ export const HEATMAP_PAINT = {
 		10,
 		14,
 		12,
-		24,
+		22,
 		14,
-		32,
-		15,
-		72,
+		28,
 		16,
-		88,
-		17,
-		104,
+		34,
 		18,
-		118
+		40
 	],
 	'heatmap-opacity': [
 		'interpolate',

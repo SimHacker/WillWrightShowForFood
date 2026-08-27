@@ -19,10 +19,11 @@
 
 	let manifest = $state<SafariManifest | null>(null);
 	let allRoutes = $state<FeatureCollection | null>(null);
-	let fullHeatmap = $state<FeatureCollection | null>(null);
 	let selected = $state<Set<string>>(new Set());
 	let viewMode = $state<MapViewMode>('both');
-	let replayTripId = $state<string | null>(null);
+	// The one "selected" ride (0 or 1): drives heat, highlight, and replay.
+	// `selected` above is the set of *shown* rides (checkboxes).
+	let activeTripId = $state<string | null>(null);
 	let series = $state<SafariSeries | null>(null);
 	let scrubIndex = $state(0);
 	let playing = $state(false);
@@ -42,16 +43,11 @@
 		return filterRoutes(allRoutes, selected);
 	});
 
+	// Heat only for the selected ride: one ride's geometry is cheap to grid,
+	// and the 17MB precomputed all-rides heatmap never gets downloaded.
 	const displayHeatmap = $derived.by(() => {
-		if (selected.size === 0) return null;
-		if (
-			manifest &&
-			selected.size === manifest.trips.length &&
-			fullHeatmap?.features.length
-		) {
-			return fullHeatmap;
-		}
-		return heatFromRoutes(filteredRoutes);
+		if (!activeTripId || !allRoutes || skipHeatmap()) return null;
+		return heatFromRoutes(filterRoutes(allRoutes, new Set([activeTripId])));
 	});
 
 	const mapBounds = $derived.by(() => {
@@ -65,7 +61,7 @@
 		);
 	});
 
-	const replayMode = $derived(replayTripId !== null && selected.size === 1);
+	const replayMode = $derived(activeTripId !== null);
 
 	const locationMode = $derived(settingsStore.current.locationMode);
 	const followUser = $derived(settingsStore.current.followUser);
@@ -155,7 +151,7 @@
 
 			const validIds = new Set(m.trips.map((t) => t.id));
 			selected = loadSelectedTripIds(validIds);
-			await syncReplayFromSelection();
+			if (selected.size === 1) setActive([...selected][0]);
 
 			if (m.coverage?.all_routes) {
 				try {
@@ -195,21 +191,6 @@
 				throw new Error('no route GeoJSON on server');
 			}
 
-			if (m.coverage?.heatmap && !skipHeatmap()) {
-				try {
-					debugLog(`heatmap json parse start ${m.coverage.heatmap}`);
-					const hRes = await dataFetch(`/data/${m.coverage.heatmap}`);
-					if (hRes.ok) {
-						fullHeatmap = (await hRes.json()) as FeatureCollection;
-						debugLog(`heatmap features ${fullHeatmap.features.length}`);
-					}
-				} catch (e) {
-					debugLog(`heatmap fail ${describeError(e)}`);
-					noteNetworkHiccup(e);
-				}
-			} else if (skipHeatmap()) {
-				debugLog('heatmap skipped (?noheat=1)');
-			}
 			retryDelayMs = 2000;
 		} catch (e) {
 			if (manifest && allRoutes) {
@@ -228,23 +209,22 @@
 		loadAll();
 	});
 
-	async function syncReplayFromSelection() {
-		if (selected.size === 1) {
-			const only = [...selected][0];
-			replayTripId = only;
-			await loadSeries(only);
-		} else {
-			replayTripId = null;
-			series = null;
-			playing = false;
-		}
-	}
-
 	function applySelection(next: Set<string>) {
 		selected = next;
 		saveSelectedTripIds(next);
-		syncReplayFromSelection();
 	}
+
+	function setActive(id: string | null) {
+		if (activeTripId === id) return;
+		activeTripId = id;
+		playing = false;
+		series = null;
+		if (id) loadSeries(id);
+	}
+
+	// Where to seat the scrub index once the series arrives (map tap on a
+	// not-yet-selected path).
+	let pendingSeat: { lon: number; lat: number } | null = null;
 
 	async function loadSeries(tripId: string) {
 		const trip = manifest?.trips.find((t) => t.id === tripId);
@@ -252,23 +232,84 @@
 		try {
 			const sRes = await dataFetch(`/data/${trip.series}`);
 			if (!sRes.ok) return;
-			series = (await sRes.json()) as SafariSeries;
+			const s = (await sRes.json()) as SafariSeries;
+			if (activeTripId !== tripId) return; // selection moved on
+			series = s;
 		} catch (e) {
 			noteNetworkHiccup(e);
 			window.setTimeout(() => {
-				if (replayTripId === tripId && !series) loadSeries(tripId);
+				if (activeTripId === tripId && !series) loadSeries(tripId);
 			}, 3000);
 			return;
 		}
-		scrubIndex = 0;
 		playing = false;
+		scrubIndex = pendingSeat ? (nearestIndex(pendingSeat.lon, pendingSeat.lat) ?? 0) : 0;
+		pendingSeat = null;
 	}
 
+	function nearestIndex(lon: number, lat: number): number | null {
+		const pts = series?.points;
+		if (!pts?.length) return null;
+		const cosLat = Math.cos((lat * Math.PI) / 180);
+		let best = 0;
+		let bestD = Infinity;
+		for (let i = 0; i < pts.length; i++) {
+			const dx = (pts[i].lon - lon) * cosLat;
+			const dy = pts[i].lat - lat;
+			const d = dx * dx + dy * dy;
+			if (d < bestD) {
+				bestD = d;
+				best = i;
+			}
+		}
+		return best;
+	}
+
+	function seatAt(lon: number, lat: number) {
+		const i = nearestIndex(lon, lat);
+		if (i === null) return;
+		playing = false;
+		scrubIndex = i;
+	}
+
+	// Checkbox: shown on/off. Checking also selects; unchecking only steals
+	// selection from itself.
 	function toggleTrip(id: string) {
 		const next = new Set(selected);
-		if (next.has(id)) next.delete(id);
-		else next.add(id);
+		if (next.has(id)) {
+			next.delete(id);
+			if (activeTripId === id) setActive(null);
+		} else {
+			next.add(id);
+			setActive(id);
+		}
 		applySelection(next);
+	}
+
+	// Name tap: force shown, toggle selected.
+	function nameTap(id: string) {
+		if (!selected.has(id)) {
+			const next = new Set(selected);
+			next.add(id);
+			applySelection(next);
+		}
+		setActive(activeTripId === id ? null : id);
+	}
+
+	// Map tap on a path: select it and seat replay time at the tap point.
+	function handlePathTap(tripId: string, lon: number, lat: number) {
+		debugLog(`path tap ${tripId}`);
+		if (activeTripId === tripId) {
+			seatAt(lon, lat);
+			return;
+		}
+		if (!selected.has(tripId)) {
+			const next = new Set(selected);
+			next.add(tripId);
+			applySelection(next);
+		}
+		pendingSeat = { lon, lat };
+		setActive(tripId);
 	}
 
 	function selectAll() {
@@ -278,6 +319,7 @@
 
 	function selectNone() {
 		applySelection(new Set());
+		setActive(null);
 	}
 
 	$effect(() => {
@@ -293,11 +335,16 @@
 		};
 	});
 
+	// Bumped to restart the playback clock after an external scrub jump
+	// (skip-pause) without toggling `playing`.
+	let playbackEpoch = $state(0);
+
 	// Playback clock: one stable ~30fps timer that advances as many points as
 	// elapsed wall time × speed requires. It must NOT track scrubIndex, or every
 	// tick tears the effect down and reschedules — fragile and easy to stall.
 	$effect(() => {
 		if (!playing || !series?.points.length) return;
+		playbackEpoch;
 		const pts = series.points;
 		const speed = playbackSpeed;
 		let idx = untrack(() => scrubIndex);
@@ -345,6 +392,121 @@
 	const currentPoint = $derived.by(() => {
 		if (!replayMode || !series?.points.length) return null;
 		return series.points[Math.min(scrubIndex, series.points.length - 1)];
+	});
+
+	// Below this, the rider counts as stopped (traffic light, bridge, break).
+	const STOP_KMH = 2;
+	// A sample gap this long means the app auto-paused recording: no points
+	// exist for the stop, so speed alone can't see it.
+	const GAP_S = 10;
+
+	function pointSpeed(i: number): number {
+		const pts = series?.points;
+		if (!pts?.length) return 0;
+		const p = pts[Math.max(0, Math.min(i, pts.length - 1))];
+		if (typeof p.speed_kmh === 'number') return p.speed_kmh;
+		if (i <= 0) return 0;
+		const prev = pts[i - 1];
+		const dtS = (Date.parse(p.t) - Date.parse(prev.t)) / 1000;
+		if (!(dtS > 0)) return 0;
+		const cosLat = Math.cos((p.lat * Math.PI) / 180);
+		const dxM = (p.lon - prev.lon) * cosLat * 111320;
+		const dyM = (p.lat - prev.lat) * 110540;
+		return (Math.hypot(dxM, dyM) / dtS) * 3.6;
+	}
+
+	/** Ride-seconds between point i and i+1 (0 at the last point). */
+	function gapAfterS(i: number): number {
+		const pts = series?.points;
+		if (!pts?.length || i >= pts.length - 1 || i < 0) return 0;
+		const dt = (Date.parse(pts[i + 1].t) - Date.parse(pts[i].t)) / 1000;
+		return Number.isFinite(dt) && dt > 0 ? dt : 0;
+	}
+
+	/** Stopped = dwelling at low speed, or parked inside a recording gap. */
+	function stoppedAt(i: number): boolean {
+		return pointSpeed(i) < STOP_KMH || gapAfterS(i) >= GAP_S;
+	}
+
+	const isStopped = $derived.by(() => {
+		if (!replayMode || !series?.points.length) return false;
+		return stoppedAt(Math.min(scrubIndex, series.points.length - 1));
+	});
+
+	// When the replay head is stopped: index of the next motion and how many
+	// ride-seconds remain until it. Null while moving or if stopped to the end.
+	const stopInfo = $derived.by(() => {
+		if (!replayMode || !series?.points.length) return null;
+		const pts = series.points;
+		const i = Math.min(scrubIndex, pts.length - 1);
+		if (!stoppedAt(i)) return null;
+		// Scan by speed only: a moving point that precedes another gap is real
+		// motion and ends this pause (the next pause gets its own badge).
+		let j = i + 1;
+		while (j < pts.length && pointSpeed(j) < STOP_KMH) j++;
+		if (j >= pts.length) return null;
+		const remainingS = Math.max(
+			0,
+			Math.round((Date.parse(pts[j].t) - Date.parse(pts[i].t)) / 1000)
+		);
+		return { nextIndex: j, remainingS };
+	});
+
+	// Pause countdown ticks at 10 Hz during playback instead of only when the
+	// scrub index advances (which can sit on one sample for minutes).
+	const PAUSE_TICK_MS = 100;
+	let pauseDisplayS = $state<number | null>(null);
+
+	$effect(() => {
+		if (!stopInfo) {
+			pauseDisplayS = null;
+			return;
+		}
+		if (!playing) {
+			pauseDisplayS = stopInfo.remainingS;
+			return;
+		}
+		const speed = playbackSpeed;
+		scrubIndex;
+		stopInfo.nextIndex;
+		playbackEpoch;
+		let remaining = stopInfo.remainingS;
+		pauseDisplayS = Math.max(0, Math.ceil(remaining));
+		const id = window.setInterval(() => {
+			remaining = Math.max(0, remaining - (PAUSE_TICK_MS / 1000) * speed);
+			pauseDisplayS = Math.max(0, Math.ceil(remaining));
+		}, PAUSE_TICK_MS);
+		return () => window.clearInterval(id);
+	});
+
+	const uiPauseRemainingS = $derived.by(() => {
+		if (!stopInfo || !isStopped) return null;
+		if (playing) return pauseDisplayS ?? stopInfo.remainingS;
+		return stopInfo.remainingS;
+	});
+
+	function skipPause() {
+		if (!stopInfo) return;
+		scrubIndex = stopInfo.nextIndex;
+		playbackEpoch++;
+	}
+
+	// Compass arrow for current motion; while stopped, the last direction moved.
+	const headingArrow = $derived.by(() => {
+		if (!replayMode || !series?.points.length) return null;
+		const pts = series.points;
+		let i = Math.min(scrubIndex, pts.length - 1);
+		while (i > 0 && pointSpeed(i) < STOP_KMH) i--;
+		if (i <= 0) return null;
+		const from = pts[i - 1];
+		const to = pts[i];
+		const cosLat = Math.cos((to.lat * Math.PI) / 180);
+		const dx = (to.lon - from.lon) * cosLat;
+		const dy = to.lat - from.lat;
+		if (dx === 0 && dy === 0) return null;
+		const deg = ((Math.atan2(dx, dy) * 180) / Math.PI + 360) % 360;
+		const arrows = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖'];
+		return arrows[Math.round(deg / 45) % 8];
 	});
 
 	const mapUserLocation = $derived(replayMode ? userLocation : locationMode === 'off' ? null : userLocation);
@@ -398,17 +560,23 @@
 				routes={filteredRoutes}
 				heatmap={displayHeatmap}
 				{viewMode}
-				highlightTripId={replayTripId}
+				highlightTripId={activeTripId}
 				userLocation={mapUserLocation}
 				userLocationDraggable={mapLocationDraggable}
 				followUser={mapFollowUser}
 				onUserLocationChange={setUserLocation}
+				onPathTap={handlePathTap}
+				onPathScrub={seatAt}
+				pauseSeconds={playing && uiPauseRemainingS !== null ? uiPauseRemainingS : null}
+				onSkipPause={skipPause}
 			/>
 			<TripPicker
 				open={ridesOpen}
 				trips={manifest.trips}
 				{selected}
+				active={activeTripId}
 				onToggle={toggleTrip}
+				onNameTap={nameTap}
 				onSelectAll={selectAll}
 				onSelectNone={selectNone}
 			/>
@@ -425,6 +593,10 @@
 			{viewMode}
 			selectedCount={selected.size}
 			tripCount={manifest.trip_count}
+			stopped={isStopped}
+			pauseRemainingS={uiPauseRemainingS}
+			{headingArrow}
+			onSkipPause={skipPause}
 			onTogglePlay={togglePlay}
 			onScrubInput={() => (playing = false)}
 			onScrubChange={(index) => (scrubIndex = index)}
