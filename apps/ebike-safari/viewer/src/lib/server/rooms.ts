@@ -4,6 +4,12 @@ export type RoomMessage = {
 	id: number;
 	atMs: number;
 	room: string;
+	/**
+	 * Per-tab sender id. Identity must not be the display name: two devices
+	 * both left at the default name would each treat the other's messages as
+	 * their own and stay silent.
+	 */
+	from?: string;
 	name: string;
 	text: string;
 	/** Exact voice as named on the sender's device; receivers match by name. */
@@ -19,6 +25,19 @@ type Client = { send: (chunk: string) => void };
 const rooms = new Map<string, Set<Client>>();
 let nextId = 1;
 
+function announcePresence(room: string): void {
+	const members = rooms.get(room);
+	if (!members) return;
+	const chunk = `event: presence\ndata: ${JSON.stringify({ room, members: members.size })}\n\n`;
+	for (const client of members) {
+		try {
+			client.send(chunk);
+		} catch {
+			// Dead stream; its cancel handler reaps it.
+		}
+	}
+}
+
 export function joinRoom(room: string, client: Client): () => void {
 	let members = rooms.get(room);
 	if (!members) {
@@ -26,9 +45,11 @@ export function joinRoom(room: string, client: Client): () => void {
 		rooms.set(room, members);
 	}
 	members.add(client);
+	announcePresence(room);
 	return () => {
 		members.delete(client);
 		if (members.size === 0) rooms.delete(room);
+		else announcePresence(room);
 	};
 }
 

@@ -20,6 +20,7 @@ export const POST: RequestHandler = async ({ params, request }) => {
 	}
 
 	const msg = broadcast(params.room, {
+		from: typeof b.from === 'string' ? b.from.slice(0, 64) : undefined,
 		name,
 		text,
 		voiceName: typeof b.voiceName === 'string' ? b.voiceName.slice(0, 128) : undefined,

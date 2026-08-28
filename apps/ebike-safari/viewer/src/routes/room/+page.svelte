@@ -17,6 +17,8 @@
 	type RoomMessage = {
 		id: number;
 		atMs: number;
+		/** Sender's per-tab id; identity is never the display name. */
+		from?: string;
 		name: string;
 		text: string;
 		/** Exact voice, as named on the sender's device. */
@@ -42,8 +44,21 @@
 		{ label: 'high', value: 1.6 }
 	];
 
+	/** This tab, for the life of this page. Two devices may share a name. */
+	const clientId =
+		typeof crypto !== 'undefined' && 'randomUUID' in crypto
+			? crypto.randomUUID()
+			: `c${Math.random().toString(36).slice(2)}${Date.now()}`;
+
 	let room = $state('lobby');
 	let name = $state('rider');
+	let members = $state(0);
+	/**
+	 * iOS refuses speechSynthesis.speak() that isn't rooted in a user gesture,
+	 * silently. Incoming room messages are not gestures, so a phone stays mute
+	 * forever unless we speak once from a real tap first.
+	 */
+	let audioUnlocked = $state(false);
 	let voices = $state<VoiceInfo[]>([]);
 	let myVoiceURI = $state('');
 	let rate = $state(1);
@@ -101,18 +116,34 @@
 	let speakQueue: RoomMessage[] = [];
 	let earRunning = false;
 
+	/** Speak once from inside a real tap, which is what iOS wants to see. */
+	async function unlockAudio() {
+		if (!speechOk || audioUnlocked) return;
+		try {
+			await speakAndWait('ready', { voiceURI: myVoiceURI || null, rate: 1.4, pitch: 1 });
+			audioUnlocked = true;
+		} catch {
+			// Leave it false so the warning stays visible.
+		}
+	}
+
 	function join() {
 		leave();
+		void unlockAudio(); // join is a tap; borrow it to prime the phone's voice
 		const r = room.trim() || 'lobby';
 		source = new EventSource(`/api/rooms/${encodeURIComponent(r)}/events`);
 		source.onopen = () => {
 			joined = true;
 			status = `In room “${r}”.`;
 		};
+		source.addEventListener('presence', (ev) => {
+			const data = JSON.parse((ev as MessageEvent).data) as { members: number };
+			members = data.members;
+		});
 		source.onmessage = (ev) => {
 			const msg = JSON.parse(ev.data) as RoomMessage;
 			log = [...log.slice(-199), msg];
-			const isMine = msg.name === name;
+			const isMine = msg.from === clientId;
 			if (speakIncoming && (!isMine || speakOwn)) {
 				speakQueue.push(msg);
 				void drainMouth();
@@ -127,6 +158,7 @@
 		source?.close();
 		source = null;
 		joined = false;
+		members = 0;
 		speakQueue = [];
 		earOn = false;
 		cancelSpeech();
@@ -167,6 +199,7 @@
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
+				from: clientId,
 				name,
 				text: t,
 				voiceName: myVoice?.name,
@@ -299,9 +332,18 @@
 					}).catch(() => {})}>Test my voice</button
 			>
 		</div>
-		<p class="status">{status}</p>
+		<p class="status">
+			{status}{#if joined}
+				· {members} device{members === 1 ? '' : 's'} connected{/if}
+		</p>
 		{#if !speechOk}
 			<p class="warn">No speech synthesis here — this device can still send and read text.</p>
+		{:else if !audioUnlocked}
+			<p class="warn">
+				Voice not unlocked yet. iOS ignores speech that didn't start from a tap, so this
+				device will stay silent until you tap below.
+				<button type="button" class="unlock" onclick={unlockAudio}>Tap to enable voice</button>
+			</p>
 		{/if}
 	</section>
 
@@ -572,6 +614,14 @@
 
 	.voice-pick select {
 		max-width: 100%;
+	}
+
+	.unlock {
+		margin-left: 0.4rem;
+		background: #9ef01a;
+		border-color: #9ef01a;
+		color: #1a1a2e;
+		font-weight: 600;
 	}
 
 	.chips {
