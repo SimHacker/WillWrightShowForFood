@@ -1,10 +1,15 @@
 import { json } from '@sveltejs/kit';
-import { broadcast, roomSize } from '$lib/server/rooms';
 import type { RequestHandler } from './$types';
+// Relative import: this file lives outside src/, so $lib does not reach it.
+import { broadcastToRoom } from '../../../../../../socket-server.js';
 
 export const prerender = false;
 
-/** Say something into the room: { name, text, voiceName?, voiceURI?, rate?, pitch? } */
+/**
+ * Say something into a room over HTTP: { name, text, from?, voiceName?,
+ * voiceURI?, rate?, pitch? }. Clients use the socket directly; this exists so
+ * a room can be driven from curl or a script.
+ */
 export const POST: RequestHandler = async ({ params, request }) => {
 	let body: unknown;
 	try {
@@ -12,22 +17,14 @@ export const POST: RequestHandler = async ({ params, request }) => {
 	} catch {
 		return json({ ok: false, error: 'invalid JSON' }, { status: 400 });
 	}
-	const b = body as Record<string, unknown>;
-	const name = typeof b.name === 'string' ? b.name.trim().slice(0, 64) : '';
-	const text = typeof b.text === 'string' ? b.text.trim().slice(0, 2000) : '';
-	if (!name || !text) {
-		return json({ ok: false, error: 'name and text required' }, { status: 400 });
+
+	const sent = broadcastToRoom(params.room, body);
+	if (!sent) {
+		return json(
+			{ ok: false, error: 'name and text required, or realtime server unavailable' },
+			{ status: 400 }
+		);
 	}
 
-	const msg = broadcast(params.room, {
-		from: typeof b.from === 'string' ? b.from.slice(0, 64) : undefined,
-		name,
-		text,
-		voiceName: typeof b.voiceName === 'string' ? b.voiceName.slice(0, 128) : undefined,
-		voiceURI: typeof b.voiceURI === 'string' ? b.voiceURI.slice(0, 256) : undefined,
-		rate: typeof b.rate === 'number' ? b.rate : undefined,
-		pitch: typeof b.pitch === 'number' ? b.pitch : undefined
-	});
-
-	return json({ ok: true, id: msg.id, members: roomSize(params.room) });
+	return json({ ok: true, id: sent.id, members: sent.members });
 };

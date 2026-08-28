@@ -12,6 +12,7 @@
 		type RecogPhase
 	} from '$lib/speech/speech-bridge';
 	import type { VoiceInfo } from '$lib/speech/types';
+	import { io, type Socket } from 'socket.io-client';
 	import { onDestroy, onMount } from 'svelte';
 
 	type RoomMessage = {
@@ -113,7 +114,7 @@
 	let earOn = $state(false);
 	let halfDuplex = $state(true);
 
-	let source: EventSource | null = null;
+	let socket: Socket | null = null;
 	let mouthBusy = $state(false);
 	let speakQueue: RoomMessage[] = [];
 	let earRunning = false;
@@ -133,32 +134,50 @@
 		leave();
 		void unlockAudio(); // join is a tap; borrow it to prime the phone's voice
 		const r = room.trim() || 'lobby';
-		source = new EventSource(`/api/rooms/${encodeURIComponent(r)}/events`);
-		source.onopen = () => {
-			joined = true;
-			status = `In room “${r}”.`;
-		};
-		source.addEventListener('presence', (ev) => {
-			const data = JSON.parse((ev as MessageEvent).data) as { members: number };
+
+		socket = io({ path: '/socket.io', transports: ['websocket', 'polling'] });
+
+		socket.on('connect', () => {
+			socket?.emit('join', r, (res: { ok: boolean; members?: number }) => {
+				if (res?.ok) {
+					joined = true;
+					members = res.members ?? 0;
+					status = `In room “${r}” via ${socket?.io.engine.transport.name}.`;
+				}
+			});
+		});
+
+		socket.on('presence', (data: { members: number }) => {
 			members = data.members;
 		});
-		source.onmessage = (ev) => {
-			const msg = JSON.parse(ev.data) as RoomMessage;
+
+		socket.on('said', (msg: RoomMessage) => {
 			log = [...log.slice(-199), msg];
 			const isMine = msg.from === clientId;
 			if (speakIncoming && (!isMine || speakOwn)) {
 				speakQueue.push(msg);
 				void drainMouth();
 			}
-		};
-		source.onerror = () => {
-			status = joined ? 'Connection lost — retrying…' : 'Could not connect.';
-		};
+		});
+
+		socket.on('disconnect', (reason: string) => {
+			status = `Disconnected (${reason}) — reconnecting…`;
+		});
+
+		socket.io.on('reconnect', () => {
+			// Rooms are per-connection, so rejoin after the socket comes back.
+			socket?.emit('join', r);
+			status = `Reconnected to “${r}”.`;
+		});
+
+		socket.on('connect_error', (err: Error) => {
+			status = `Could not connect: ${err.message}`;
+		});
 	}
 
 	function leave() {
-		source?.close();
-		source = null;
+		socket?.disconnect();
+		socket = null;
 		joined = false;
 		members = 0;
 		speakQueue = [];
@@ -194,28 +213,24 @@
 		mouthBusy = false;
 	}
 
-	async function say(text: string) {
+	function say(text: string) {
 		const t = text.trim();
-		if (!t || !joined) return;
-		await fetch(`/api/rooms/${encodeURIComponent(room.trim() || 'lobby')}/say`, {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify({
-				from: clientId,
-				name,
-				text: t,
-				voiceName: myVoice?.name,
-				voiceURI: myVoiceURI || undefined,
-				rate,
-				pitch
-			})
+		if (!t || !joined || !socket) return;
+		socket.emit('say', {
+			from: clientId,
+			name,
+			text: t,
+			voiceName: myVoice?.name,
+			voiceURI: myVoiceURI || undefined,
+			rate,
+			pitch
 		});
 	}
 
-	async function sendNow() {
+	function sendNow() {
 		const t = sendText;
 		sendText = '';
-		await say(t);
+		say(t);
 	}
 
 	// Paste = play: pasted text goes into the room immediately, no Return needed.
@@ -225,7 +240,7 @@
 		e.preventDefault();
 		const whole = (sendText + pasted).trim();
 		sendText = '';
-		void say(whole);
+		say(whole);
 	}
 
 	// The ear: continuously listen and repost what it hears into the room.
@@ -240,7 +255,7 @@
 			try {
 				const heard = (await listenOnce(10000)).trim();
 				if (heard && earOn) {
-					await say(heard);
+					say(heard);
 				}
 			} catch (e) {
 				status = `Ear stopped: ${e instanceof Error ? e.message : e}`;
