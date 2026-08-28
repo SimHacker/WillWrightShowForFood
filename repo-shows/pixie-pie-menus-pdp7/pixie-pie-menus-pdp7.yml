@@ -315,7 +315,7 @@ format:
   post_production:
     look: cambridge_telecine_jiggle
     spec: process/post-production/cambridge-telecine-jiggle.yml
-    pipeline: characters/will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md
+    pipeline: characters/don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/production-notes.md
     what: |
       After Effects — reuse the exact motion track + blur/glow from Don's *Flight of the PIXIE*
       Bumblebee edit on Repo Show titles, credits, bud slates, segment cards, jokes, and

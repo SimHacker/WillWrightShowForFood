@@ -45,3 +45,4 @@ see_also:
   - { path: from-alan-kay.yml, why: "Kay / Yoot apparatus" }
   - { path: ../alan-kay/, why: "Kay history hub" }
   - { path: ../../process/yoot-people-wwsff-map.yml, why: "People.md map" }
+  - { path: ../david-ungar/sources/2014-stroustrup-hewitt-ungar-conversation.md, why: "Lang.NEXT 2014 panel — Hewitt on camera with Ungar and Stroustrup" }

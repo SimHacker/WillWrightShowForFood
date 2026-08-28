@@ -40,25 +40,25 @@ calls to order chrome, then orders the cosmos — and sneaked the reel into
 the Electronic Theater. Corey Burton on the phones. Niccograph of Japan;
 Monitor Award for Best Showreel.
 
-Complete records are in [`sources/`](sources/README.md). They are meant to
-be read offline. Two originals are already 404.
+Paul's memoir is in [`sources/`](sources/README.md). Peter's papers, Coco's
+post, and the HN posting live in those rooms. Two originals are already 404.
 
 ![Paul Rother, optical printer / 7-bit paint, circa 1982](media/1982-optical-printer-7bit-paint-system.jpg)
 
 ## Read in this order
 
-1. [Paul's 1982 memoir](sources/homer-and-associates-1982.md) — his words,
+1. [Paul's 1982 memoir](sources/1982-homer-and-associates.md) — his words,
    his photo
-2. [Coco's 2021 post](sources/2021-10-20-facebook-homer.md) — how you
+2. [Coco's 2021 post](../coco-conn/sources/2021-10-20-facebook-homer.md) — how you
    *played* the desk; comments that add history (phone-pencil, T2 scan,
    wire-wrap)
-3. [Flying Logos](sources/1989-flying-logos.md) — why it exists, proofread
+3. [Flying Logos](../peter-conn/sources/1989-flying-logos.md) — why it exists, proofread
    transcript
-4. [Stanford M2262](sources/stanford-m2262/GUIDE.md) — live catalog
+4. [Stanford M2262](../peter-conn/sources/stanford-m2262/GUIDE.md) — live catalog
    [archives.stanford.edu/catalog/m2262](https://archives.stanford.edu/catalog/m2262);
-   finding aid copied here. Announcement blog (404):
-   [2019-05-17-stanford-peter-conn-papers.md](sources/2019-05-17-stanford-peter-conn-papers.md)
-5. [HN 18 Nov 2021](sources/2021-11-18-hn-homer-forth.md) — as posted, with
+   finding aid in Peter's room. Announcement blog (404):
+   [2019-05-17-stanford-peter-conn-papers.md](../peter-conn/sources/2019-05-17-stanford-peter-conn-papers.md)
+5. [HN 18 Nov 2021](../don-hopkins/sources/2021-11-18-hn-homer-forth.md) — as posted, with
    a map of which links died
 
 Coco's company page (SIGKids, Don):

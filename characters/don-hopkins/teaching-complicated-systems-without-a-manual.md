@@ -138,13 +138,7 @@ Will's **train set** metaphor (1996 talk): some buyers care about hills, some ab
 
 ### 6. Discoverability vs minimalism (counter-example)
 
-John Gruber's [*Bad Dye Job*](https://daringfireball.net/2025/12/bad_dye_job) (Dec 2025) — harvest summary:
-
-Alan Dye led Apple's HI design from brand/print (Kate Spade, Ogilvy), not interaction design. A decade of UI driven by **how things look** at the expense of **how things work** — Liquid Glass readability failures, Mac complexity underserved, designers inside Apple who couldn't use terms like "key window" without being treated as "programmer talk."
-
-> Design is not just what it looks like and feels like. Design is how it works. — Jobs (quoted on stage while doing the opposite)
-
-The iOS 26.1 **clear/tinted** Liquid Glass toggle was an admission that visual minimalism broke function.
+Full diatribe: [**Dye-a-Tribe**](dye-a-tribe.md) — Alan Dye as counterexample to HCIL direct manipulation (pie menus, NeWS tabs, webtop, calm technology). Evidence: [Gruber, *Bad Dye Job*](https://daringfireball.net/2025/12/bad_dye_job).
 
 **Lesson for robot builders:** hiding controls to look clean is not the same as progressive disclosure. Power and discoverability are not sins. Pie menus exist partly so frequent actions stay **spatially learnable** without cluttering the main canvas ([pie menu retrospective](https://donhopkins.medium.com/pie-menus-a-30-year-retrospective-5bdcb24a835a)).
 

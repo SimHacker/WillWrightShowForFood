@@ -16,8 +16,8 @@ Story: [Forth vs Lisp](https://news.ycombinator.com/item?id=29243476)
 (18 Nov 2021). HN HEAD returns 405; GET is live (checked 2026-08-26).
 
 Coco gave permission to post. The readable history is
-[Paul's 1982 page](homer-and-associates-1982.md) and
-[Coco's 2021 post](2021-10-20-facebook-homer.md). Below is the comment
+[Paul's 1982 page](../../paul-rother/sources/1982-homer-and-associates.md) and
+[Coco's 2021 post](../../coco-conn/sources/2021-10-20-facebook-homer.md). Below is the comment
 **as posted**, links un-abbreviated, so this file stands if HN rot sets in.
 
 Don posted a near-duplicate of the same block elsewhere in that thread;
@@ -104,11 +104,11 @@ At Homer and Assoc. I also learned TTL logic and designed a number of computer b
 | As posted | 2026-08-26 |
 |---|---|
 | imgur.com/a/4Bmb4xu | **200** — still up |
-| leftbrain.us/rotherHistory/homer.html | **404** — text+photo here: [homer-and-associates-1982.md](homer-and-associates-1982.md) |
-| library.stanford.edu/blogs/.../peter-conn-papers-available-research | **404** — [2019-05-17-stanford-peter-conn-papers.md](2019-05-17-stanford-peter-conn-papers.md) |
+| leftbrain.us/rotherHistory/homer.html | **404** — text+photo here: [1982-homer-and-associates.md](../../paul-rother/sources/1982-homer-and-associates.md) |
+| library.stanford.edu/blogs/.../peter-conn-papers-available-research | **404** — [2019-05-17-stanford-peter-conn-papers.md](../../peter-conn/sources/2019-05-17-stanford-peter-conn-papers.md) |
 | oac.cdlib.org/.../entire_text/ | JS wall / redirect — use [archives.stanford.edu/catalog/m2262](https://archives.stanford.edu/catalog/m2262) or [OAC finding aid](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/) |
 | YouTube four videos | **200** |
 
-Same thread, Don also posted the Forth HONK (see Coco's Facebook record).
+Same thread, Don also posted the Forth HONK (see [Coco's Facebook record](../../coco-conn/sources/2021-10-20-facebook-homer.md)).
 
-↑ [sources](README.md)
+↑ [Flying Logo Heaven](../flying-logo-heaven.md)

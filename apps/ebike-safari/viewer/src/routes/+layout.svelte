@@ -51,7 +51,6 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 </svelte:head>
 
 {@render children()}
@@ -64,5 +63,11 @@
 		height: 100%;
 		overflow: hidden;
 		font-family: system-ui, sans-serif;
+		/* No double-tap zoom, no rubber-band, no iOS font inflation:
+		   the app decides what every scale and pan gesture means. */
+		touch-action: manipulation;
+		overscroll-behavior: none;
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
 	}
 </style>

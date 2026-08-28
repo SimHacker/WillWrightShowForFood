@@ -39,9 +39,9 @@ catalog it as 1988 Film & Video Show; Coco, Peter's YouTube, and Stanford
 say 1989. Director credit: Peter Conn. Voice (later consensus): Corey
 Burton.
 
-Complete records already in Paul's room — [sources/](sources/README.md)
-maps them. Do not depend on the 2019 Stanford announcement blog; it is
-404. The papers did not move.
+Papers, the vanished 2019 announcement, and *Flying Logos* are in
+[sources/](sources/README.md). Do not depend on the Stanford blog URL; it
+is 404. The boxes are still in Green Library.
 
 ## Watch
 

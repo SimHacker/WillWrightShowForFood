@@ -1,0 +1,108 @@
+# CARD — Coco Conn (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: coco-conn
+  name: "Coco Conn"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Coco Conn"
+  title: "HOMER & Assoc. · SIGKids"
+  rarity: rare
+  signifier: "🎛️"
+  flavor: "You literally performed a sequence of visual effects with your hands."
+
+abilities:
+  - id: SOLDER-THE-DESK
+    name: "Solder the Desk"
+    type: static
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: solderTheDesk
+      signature: "solderTheDesk() → Homer II console you can play"
+      score_when:
+        - trigger: audience_sees_hardware_as_instrument
+          weight: 0.9
+    effect: "LEDs and cable on the visual mixing console, 1978–1981, until the engineer left for England."
+    verifiable: "sources/2021-10-20-facebook-homer.md"
+    combos_with: [HOMER-II-INSTRUMENT, BUILD-THE-PRINTER]
+
+  - id: PERFORM-THE-MIX
+    name: "Perform the Mix"
+    type: activated
+    mana: "{U}{R}"
+    conditions:
+      - segment_topic_in: [homer, visual-mixing, forth]
+    advertisement:
+      method: performTheMix
+      signature: "performTheMix(faders, bumper) → hero take on 8-inch floppy"
+      score_when:
+        - trigger: audience_grasps_desk_as_daw
+          weight: 0.92
+    effect: "Crossfade by programming or by performing; overdub; 10–15 optical-printer passes."
+    verifiable: "sources/2021-10-20-facebook-homer.md"
+    combos_with: [HOMER-II-INSTRUMENT, OPTICAL-PASSES]
+
+  - id: HIRE-MOORE
+    name: "Hire Charles Moore"
+    type: triggered
+    mana: "{B}"
+    conditions:
+      - segment_topic_in: [forth, charles-moore]
+    advertisement:
+      method: hireForthInc
+      signature: "hireForthInc() → Moore on the Homer II host"
+      score_when:
+        - trigger: forth_legend_named
+          weight: 0.93
+    effect: "Forth, Inc. sent Moore. Coco and Paul learned Forth at that desk."
+    verifiable: "sources/2021-10-20-facebook-homer.md · ../paul-rother/sources/1982-homer-and-associates.md"
+    combos_with: [POLYFORTH-HOST, FACTOR-WORDS]
+
+  - id: SNEAK-THE-REEL
+    name: "Sneak the Reel"
+    type: activated
+    mana: "{R}{W}"
+    conditions:
+      - segment_topic_in: [flying-logos, siggraph]
+    advertisement:
+      method: sneakTheReel
+      signature: "sneakTheReel(story) → Electronic Theater"
+      score_when:
+        - trigger: audience_gets_why_flying_logos_exists
+          weight: 0.94
+    effect: "Demos banned. Peter wrote a salesman. The reel walked in as a film."
+    verifiable: "sources/2021-10-20-facebook-homer.md · ../peter-conn/sources/1989-flying-logos.md"
+    combos_with: [WRITE-FLYING-LOGOS]
+
+  - id: SIGKIDS
+    name: "SIGKids"
+    type: static
+    mana: "{G}"
+    conditions:
+      - segment_topic_in: [sigkids, david-levitt, bounce]
+    advertisement:
+      method: holdTheKidsFloor
+      signature: "holdTheKidsFloor() → serendipity off the main SIGGRAPH floor"
+      score_when:
+        - trigger: don_met_david_there
+          weight: 0.88
+    effect: "Kids making the future. Don met David Levitt / Bounce in that room."
+    verifiable: "homer-forth-flying-logos.md · ../david-levitt/"
+    combos_with: [BOUNCE]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: homer-forth-flying-logos.md, why: "HOMER narrative page" }

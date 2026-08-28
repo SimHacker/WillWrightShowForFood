@@ -58,6 +58,11 @@ Six years after Sketchpad, [**PIXIE**](../heinz-lemke/README.md) (Wiseman, Lemke
 Same pen-and-beam era; different application domain — but one lecture arc from Sutherland to Heinz.
 See [`../roy-eagleson/sketchpad-to-pixie-lineage.md`](../roy-eagleson/sketchpad-to-pixie-lineage.md).
 
+The **processor** paper from the same year as the HMD is Myer & Sutherland,
+[*On the Design of Display Processors*](sources/1968-06-myer-sutherland-design-of-display-processors.md)
+(CACM, June 1968). They name the PDP-1 + Type 30 as the start of the wheel of
+reincarnation and the **340–347** — PIXIE's display — as the cardinal half-turn.
+
 ---
 
 ## Mother of All Demos (1968) — neighbor, not parent

@@ -3,11 +3,8 @@
 character: paul-rother
 consent_note: >
   1982 Millimeter Magazine studio photo of Paul Rother at the optical
-  printer / CAT-700; HOMER "Good to the Last Frame" card; Stanford 2019
-  announcement photos from the Peter Conn papers. Public in Coco's 2021
-  post, leftbrain.us (now 404), and the vanished Stanford blog. Confirm
-  with Paul and Stanford/rights holders before any use beyond this
-  invitation room.
+  printer / CAT-700. Public in Coco's 2021 post and leftbrain.us (now 404).
+  Confirm with Paul before any use beyond this invitation room.
 
 artifacts:
   - file: 1982-optical-printer-7bit-paint-system.jpg
@@ -29,32 +26,3 @@ artifacts:
     date: 1982
     title: leftbrain.us original (B&W, 720×551)
     source: https://web.archive.org/web/20240627184122im_/http://leftbrain.us/rotherHistory/homer.jpg
-  - file: homer-good-to-the-last-frame.png
-    kind: illustration
-    title: HOMER AND ASSOCIATES, INC. — "GOOD TO THE LAST FRAME"
-    source: Peter Conn / Homer promotional art (Bonehead-adjacent)
-  - file: stanford-2019/atomic-dog-sketches.jpg
-    kind: photo
-    date: 2019-05-17
-    title: Atomic Dog sketches from the Peter Conn papers
-    source: vanished Stanford Libraries blog; Wayback 2019-06-12
-  - file: stanford-2019/abracadabra-gold-record.jpg
-    kind: photo
-    title: Abracadabra gold sales award in the Conn papers
-  - file: stanford-2019/bongo-character-sketch.jpg
-    kind: photo
-    title: Bongo character sketch
-  - file: stanford-2019/bongo-bongo-storyboard.jpg
-    kind: photo
-    title: Bongo Bongo storyboard
-  - file: stanford-2019/bonehead-postcard.jpg
-    kind: photo
-    title: Bonehead postcard — "Why Do You Think They Call Him Dope?"
-  - file: stanford-2019/vince-neil-sister-of-pain-costume.jpg
-    kind: photo
-    title: Vince Neil Sister of Pain costume
-  - file: 1988-siggraph-flying-logos-still.jpg
-    kind: still
-    date: 1988
-    title: Flying Logos, Inc. — SIGGRAPH History Archives still
-    source: https://history.siggraph.org/wp-content/uploads/2023/04/1988-Animation-Conn_Flying-Logos-Inc.jpg

@@ -13,7 +13,7 @@ original_status: "URL live 2026-08-26 but Facebook login-walls the body. This fi
 Coco posted this as **HOMER & Associates**. She sent Don the short link
 on 26 Aug 2026. Facebook still resolves; the body is not reliably readable
 without an account. Paul's 1982 memoir is not repeated below — it lives in
-[homer-and-associates-1982.md](homer-and-associates-1982.md). What Coco
+[../../paul-rother/sources/1982-homer-and-associates.md](../../paul-rother/sources/1982-homer-and-associates.md). What Coco
 added, and what the public comments added, is here in full.
 
 ## Coco's post (body)
@@ -57,8 +57,8 @@ system. But it worked.
 HOMER Explained by Paul Rother, in-house programmer, (1982):
 
 *(Paul's text follows on the post; complete copy:
-[homer-and-associates-1982.md](homer-and-associates-1982.md). Photo:
-[1982 optical printer](../media/1982-optical-printer-facebook-hq.png).)*
+[../../paul-rother/sources/1982-homer-and-associates.md](../../paul-rother/sources/1982-homer-and-associates.md). Photo:
+[1982 optical printer](../../paul-rother/media/1982-optical-printer-facebook-hq.png).)*
 
 Coco also named Leo Brodie (*Using Forth*) as an associate — confirm with
 Paul.
@@ -126,7 +126,7 @@ THEN
 
 Posted the Coco+Paul write-up to HN with Coco's permission:
 [news.ycombinator.com/item?id=29261868](https://news.ycombinator.com/item?id=29261868)
-— complete copy [here](2021-11-18-hn-homer-forth.md).
+— complete copy [here](../../don-hopkins/sources/2021-11-18-hn-homer-forth.md).
 
 **Jeanne Rich.** Forth was popular; she was at Grinnell Systems,
 refrigerator-sized frame buffers, area fills (competitor orbit to Ikonas).
@@ -151,6 +151,6 @@ Lacas, Susan Lenti, Richard Lowenberg (*Atomic Dog*), Sylvie Rueff,
 Meredith Bricken Mills.
 
 Stanford links Don and Coco dropped in-thread now live as
-[2019-05-17-stanford-peter-conn-papers.md](2019-05-17-stanford-peter-conn-papers.md).
+[2019-05-17-stanford-peter-conn-papers.md](../../peter-conn/sources/2019-05-17-stanford-peter-conn-papers.md).
 
 ↑ [sources](README.md)

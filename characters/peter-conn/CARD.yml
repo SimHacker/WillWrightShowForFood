@@ -1,0 +1,108 @@
+# CARD — Peter Conn (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: peter-conn
+  name: "Peter Conn"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Peter Conn"
+  title: "HOMER founder · optical printer · Flying Logos"
+  rarity: rare
+  signifier: "🎬"
+  flavor: "Turn the demo reel into a story. Walk it into the Electronic Theater."
+
+abilities:
+  - id: BUILD-THE-PRINTER
+    name: "Build the Printer"
+    type: static
+    mana: "{R}"
+    conditions:
+      - segment_topic_in: [homer, optical-printer]
+    advertisement:
+      method: buildThePrinter
+      signature: "buildThePrinter() → 10–15 passes to IP film"
+      score_when:
+        - trigger: audience_sees_commit_not_preview
+          weight: 0.91
+    effect: "The desk performed. The printer committed."
+    verifiable: "sources/stanford-m2262/GUIDE.md · ../paul-rother/sources/1982-homer-and-associates.md"
+    combos_with: [PERFORM-THE-MIX, TTL-BOARDS]
+
+  - id: WRITE-FLYING-LOGOS
+    name: "Write Flying Logos"
+    type: activated
+    mana: "{W}{U}"
+    conditions:
+      - segment_topic_in: [flying-logos, siggraph]
+    advertisement:
+      method: writeFlyingLogos
+      signature: "writeFlyingLogos(banned_demos) → Electronic Theater"
+      score_when:
+        - trigger: audience_gets_the_sneak
+          weight: 0.95
+    effect: "A salesman for chrome, then the cosmos. Niccograph of Japan. Monitor Award."
+    verifiable: "sources/1989-flying-logos.md"
+    combos_with: [SNEAK-THE-REEL]
+
+  - id: OPTICAL-PASSES
+    name: "Optical Passes"
+    type: activated
+    mana: "{R}{R}"
+    conditions:
+      - segment_topic_in: [homer, production]
+    advertisement:
+      method: opticalPasses
+      signature: "opticalPasses(hero) → IP film"
+      score_when:
+        - trigger: analogue_pipeline_lands
+          weight: 0.88
+    effect: "Countless passes until it was right. Then video."
+    verifiable: "../coco-conn/sources/2021-10-20-facebook-homer.md"
+    combos_with: [PERFORM-THE-MIX]
+
+  - id: GIFT-M2262
+    name: "Gift the Papers"
+    type: static
+    mana: "{W}"
+    conditions:
+      - segment_topic_in: [stanford, archives]
+    advertisement:
+      method: giftM2262
+      signature: "giftM2262(2017) → 31.5 linear feet, nothing digitized"
+      score_when:
+        - trigger: audience_knows_the_boxes_exist
+          weight: 0.9
+    effect: "Stanford Special Collections, call number M2262. Finding aid in this room."
+    verifiable: "sources/stanford-m2262/GUIDE.md"
+    combos_with: []
+
+  - id: DIRECT-THE-VIDEOS
+    name: "Direct the Videos"
+    type: static
+    mana: "{R}{G}"
+    conditions:
+      - segment_topic_in: [atomic-dog, abracadabra, music-video]
+    advertisement:
+      method: directTheVideos
+      signature: "directTheVideos() → Atomic Dog, Abracadabra, Bongo Bongo"
+      score_when:
+        - trigger: the_reel_plays
+          weight: 0.92
+    effect: "Director credit on the Homer reel the desk and printer made possible."
+    verifiable: "sources/2019-05-17-stanford-peter-conn-papers.md · https://www.milesconsulting.org/service.html"
+    combos_with: [WRITE-FLYING-LOGOS]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: sources/stanford-m2262/GUIDE.md, why: "Peter Conn papers M2262" }

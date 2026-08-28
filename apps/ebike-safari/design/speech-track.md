@@ -87,5 +87,6 @@ here" reliably means in your mouth, on cobblestones, in wind.
 | [`skeleton/story-layer.md`](skeleton/story-layer.md) | narration reads impressions, never invents geometry |
 | [`semantic-taxonomy-pyramid.md`](semantic-taxonomy-pyramid.md) | coalescing open-vocabulary impressions |
 | [MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md) | spoken impressions in the place+time sync track |
+| [`speech-plumbing.md`](speech-plumbing.md) | audio-stack reality: echo suppression rules, routing rigs, the `/lab` instrument |
 
 ↑ [`README.md`](README.md) · [`VISION.md`](VISION.md)

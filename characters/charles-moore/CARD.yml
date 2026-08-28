@@ -1,0 +1,108 @@
+# CARD — Charles Moore (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: charles-moore
+  name: "Charles Moore"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Charles Moore"
+  title: "Forth · Homer II host"
+  rarity: rare
+  signifier: "⚙️"
+  flavor: "They hired Forth, Inc. and got Charles Moore."
+
+abilities:
+  - id: INVENTED-FORTH
+    name: "Invented Forth"
+    type: static
+    mana: ""
+    conditions:
+      - segment_topic_in: [forth]
+    advertisement:
+      method: inventedForth
+      signature: "inventedForth() → the language"
+      score_when:
+        - trigger: audience_knows_who_wrote_it
+          weight: 0.85
+    effect: "This room is the HOMER contract, not a Forth encyclopedia."
+    verifiable: "https://en.wikipedia.org/wiki/Charles_H._Moore"
+    combos_with: [POLYFORTH-HOST]
+
+  - id: POLYFORTH-HOST
+    name: "PolyForth Host"
+    type: activated
+    mana: "{U}{U}"
+    conditions:
+      - segment_topic_in: [forth, homer]
+    advertisement:
+      method: programTheHost
+      signature: "programTheHost(32K) → Homer II master Z80"
+      score_when:
+        - trigger: audience_sees_the_desk_as_forth_machine
+          weight: 0.94
+    effect: "Multitasking PolyForth in 32K. Extra 16K for buffers. About four tasks (Paul, years later)."
+    verifiable: "../paul-rother/sources/1982-homer-and-associates.md"
+    combos_with: [FACTOR-WORDS, HIRE-MOORE]
+
+  - id: DESKMATE-PAUL
+    name: "Deskmate"
+    type: triggered
+    mana: "{W}"
+    conditions:
+      - co_guest_is: paul-rother
+    advertisement:
+      method: deskmatePaul
+      signature: "deskmatePaul() → host vs 24× 2K EPROM"
+      score_when:
+        - trigger: split_of_labor_lands
+          weight: 0.92
+    effect: "Moore on the host. Paul on the channel EPROMs."
+    verifiable: "../paul-rother/sources/1982-homer-and-associates.md"
+    combos_with: [FACTOR-WORDS]
+
+  - id: HOMER-CONTRACT
+    name: "The HOMER Contract"
+    type: activated
+    mana: "{R}"
+    conditions:
+      - segment_topic_in: [homer, forth-inc]
+    advertisement:
+      method: homerContract
+      signature: "homerContract(Sunset Gower) → visual mixer as Forth machine"
+      score_when:
+        - trigger: unusual_forth_inc_job
+          weight: 0.9
+    effect: "Faders, Mustang bumper, hero floppy, optical printer. Unusual Forth, Inc. work — or not, from his side."
+    verifiable: "../paul-rother/sources/1982-homer-and-associates.md · ../coco-conn/sources/2021-10-20-facebook-homer.md"
+    combos_with: [HOMER-II-INSTRUMENT]
+
+  - id: WORD-SCHOOL
+    name: "What School Never Taught"
+    type: emote
+    mana: "{1}"
+    conditions:
+      - segment_topic_in: [forth, pedagogy]
+    advertisement:
+      method: whatSchoolNeverTaught
+      signature: "whatSchoolNeverTaught() → factoring, vectors, OOP without the name"
+      score_when:
+        - trigger: paul_quote_lands
+          weight: 0.88
+    effect: "Paul: they never taught that in programming school. Coco learned Forth from him too."
+    verifiable: "../paul-rother/sources/1982-homer-and-associates.md"
+    combos_with: [FACTOR-WORDS]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ../paul-rother/sources/1982-homer-and-associates.md, why: "The HOMER / Moore section" }

@@ -7,7 +7,7 @@ Readable edition of Anthony DaSilva Jr's contemporaneous blog post. **Secondary 
 | **Author** | Anthony DaSilva Jr ([bulldozer00](https://bulldozer00.blog/about-me/)) |
 | **Published** | 22 October 2014 |
 | **URL** | https://bulldozer00.blog/2014/10/22/a-fascinating-conversation/ |
-| **Primary bundle** | [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md) |
+| **Primary bundle** | [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md) — YouTube https://www.youtube.com/watch?v=52o5FPymtD0 |
 
 ---
 

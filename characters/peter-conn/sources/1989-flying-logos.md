@@ -79,13 +79,8 @@ Hillin**. Voice (YouTube comments, later logo-wiki consensus): **Corey
 Burton**. Moviefone lists Burton as narrator, Conn as director, Homer &
 Associates as production company, theatrical date 20 Jun 1989.
 
-**Don Hopkins** (same 2021 thread):
-
-> I truly believe that in some other alternate dimension, there is a Flying
-> Logo Heaven where the souls of dead flying logos go, where they dramatically
-> promenade and swoop and spin around each other in pomp and pageantry to
-> bombastic theme music. It would make a great screen saver, at least!
-> Somewhere the Sun Logo and the SGI Logo are still dancing together.
+**Don Hopkins** (same 2021 thread) — full text:
+[`../../don-hopkins/flying-logo-heaven.md`](../../don-hopkins/flying-logo-heaven.md)
 
 ## What the pictures are
 
@@ -155,4 +150,4 @@ chrome; *inl* → inlaid; *crystallin* → crystalline; *Ting* → tinge;
 the gag in the mapping litany. "You a real-time heart" kept as spoken
 sales-patter, not cleaned into grammar.
 
-↑ [sources](README.md) · [Coco + Paul on how it got in](2021-10-20-facebook-homer.md)
+↑ [sources](README.md) · [Coco + Paul on how it got in](../../coco-conn/sources/2021-10-20-facebook-homer.md)

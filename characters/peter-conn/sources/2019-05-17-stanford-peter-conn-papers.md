@@ -119,4 +119,4 @@ your head indefinitely.
 
 — Brian Bethel, Rare Books Cataloger / Project Archivist
 
-↑ [guide M2262](stanford-m2262/GUIDE.md) · [Paul's 1982 page](homer-and-associates-1982.md)
+↑ [guide M2262](stanford-m2262/GUIDE.md) · [Paul's 1982 page](../../paul-rother/sources/1982-homer-and-associates.md)

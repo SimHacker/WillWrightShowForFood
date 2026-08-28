@@ -1,0 +1,30 @@
+# Kristen Nygaard 100 Years — Celebration Symposium (Aarhus University, 27 Aug 2026)
+
+event:
+  title: "Celebration Symposium: Kristen Nygaard 100 years"
+  date: 2026-08-27
+  venue: "Peter Bøgh Andersen auditorium, Nygaard building, Aarhus University"
+  program: https://cs.au.dk/nygaard100years/celebration
+
+recordings:
+  panopto:
+    title: Nygaard-symposium
+    url: https://au.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fe0c3b34-90d9-4853-94db-b4b3009fd277
+    note: "Official symposium recording (Aarhus Panopto). OOP afternoon panel; Bjarne Stroustrup; Alan Kay online."
+    marks:
+      alan_kay: "2:30:30"
+      alan_kay_seconds: 9030
+      alan_kay_url: "https://au.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=fe0c3b34-90d9-4853-94db-b4b3009fd277&start=9030"
+
+clips:
+  alan_kay_shannon_feedback:
+    title: "Shannon Gave Us A Way of Dealing With Noisy Channels"
+    url: https://www.youtube.com/watch?v=2zkhlCkRZDw
+    source:
+      panopto: recordings.panopto.url
+      at: "2:30:30"
+    note: "Don Hopkins excerpt — Kay's accidental Zoom/stream audio-feedback loop during symposium, not the planned Simula talk."
+
+see_also:
+  - ../../alan-kay/CHARACTER.yml
+  - ../CHARACTER.yml

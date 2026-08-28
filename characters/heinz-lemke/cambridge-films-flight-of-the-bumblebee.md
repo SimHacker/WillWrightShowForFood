@@ -55,7 +55,7 @@ same After Effects motion track and filter stack** to episode graphics — not o
 Goal: titles and credits look like they were **printed on the same old university film** as the
 PIXIE demonstration reels — one visual language from archival clip through Bumblebee homage through
 live show packaging. **Gag credits** (*Department of Research Simulation!*, **Ground Up Software**
-consulting plugs, Light Pen Bureau, …) on the same jiggle track: [`../../bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml`](../../bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml). Canonical spec: [`../../process/post-production/cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml). Pipeline detail: [`../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md`](../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/production-notes.md).
+consulting plugs, Light Pen Bureau, …) on the same jiggle track: [`../../bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml`](../../bits/gag-cambridge-gag-credits/gag-cambridge-gag-credits.yml). Canonical spec: [`../../process/post-production/cambridge-telecine-jiggle.yml`](../../process/post-production/cambridge-telecine-jiggle.yml). Pipeline detail: [`../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/production-notes.md`](../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/production-notes.md).
 
 Munching Squares on living PDP-7/340 (AM radio music): https://www.youtube.com/watch?v=V4oRHv-Svwc
 
@@ -69,6 +69,9 @@ Luxury options Don cites on HN: 342 Symbol Generator, 370 Light Pen, 347 Subrout
 
 ## HN threads (Don → PIXIE / pie menus)
 
+As-posted reading copy (dedication, hardware, Heinz, deduped comments):
+[`../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/README.md`](../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/README.md)
+
 | Item | Date | Note |
 |------|------|------|
 | [22346556](https://news.ycombinator.com/item?id=22346556) | Feb 2020 | Max/MSP thread — Chapman librarian, first HN PIXIE film post |
@@ -77,6 +80,8 @@ Luxury options Don cites on HN: 342 Symbol Generator, 370 Light Pen, 347 Subrout
 | [40196586](https://news.ycombinator.com/item?id=40196586) | Apr 2024 | PDP-1 Spacewar — PIXIE + Titan + **Rosenthal Cambridge** |
 | [38235871](https://news.ycombinator.com/item?id=38235871) | Nov 2023 | GIMP pie menus — distributed PIXIE on PDP-7/Titan |
 | [41168858](https://news.ycombinator.com/item?id=41168858) | Aug 2024 | macOS pie menu — Flight dedication block |
+| [49407938](https://news.ycombinator.com/item?id=49407938) | Aug 2026 | Quieter computing — PIXIE hardware sheet |
+| [49408130](https://news.ycombinator.com/item?id=49408130) | Aug 2026 | Quieter computing — Heinz draftsman letter |
 
 Pull-in gaps (assets not yet in repo): [`pull-in-gaps.md`](pull-in-gaps.md)
 

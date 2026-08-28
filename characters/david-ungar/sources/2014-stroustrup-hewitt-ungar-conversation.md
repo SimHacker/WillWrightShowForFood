@@ -1,76 +1,96 @@
-# A Conversation with Bjarne Stroustrup, Carl Hewitt, and Dave Ungar (2014)
+# A Conversation with Bjarne Stroustrup, Carl Hewitt, and Dave Ungar
 
-Primary source bundle for Don Hopkins's planned async follow-up article (Aug 2026).
-Charles Torre interview — shared memory vs message passing, locks, actors, and where those
-ideas came from.
+https://www.youtube.com/watch?v=52o5FPymtD0
 
-## Video and mirrors
+Lang.NEXT 2014. Host: **Charles Torre**. Don's YouTube mirror, uploaded 26 Aug 2026
+(processing when first posted). Channel 9 original is gone; this is the watch copy.
 
-| Mirror | URL |
-|--------|-----|
-| **ISO C++ blog post** (Sep 2014) | https://isocpp.org/blog/2014/09/stroustrup-hewitt-ungar |
-| **Channel 9** (Charles Torre) | https://channel9.msdn.com/Blogs/Charles/A-Conversation-with-Bjarne-Stroustrup-Carl-Hewitt-and-Dave-Ungar |
-| **Wayback** (Channel 9, Apr 2015) | https://web.archive.org/web/20150403234147/https://channel9.msdn.com/Blogs/Charles/A-Conversation-with-Bjarne-Stroustrup-Carl-Hewitt-and-Dave-Ungar |
-| **Don's mirror** (LangNEXT panel clip) | https://donhopkins.com/home/movies/BjarneCarlDaveLangNEXT_mid.mp4 |
-| **Reddit** (r/cpp, 2014) | https://www.reddit.com/r/cpp/comments/2gl7th/a_conversation_with_bjarne_stroustrup_carl_hewitt/ |
+Published description (YouTube):
 
-## Contemporary reception
+> "A Conversation with Bjarne Stroustrup, Carl Hewitt, and Dave Ungar" is a classic 2014 technical panel discussion hosted by Charles Torre that brings together three prominent computer scientists to discuss programming language design, concurrency, and computing models.
+>
+> **Overview of Participants**
+>
+> **Bjarne Stroustrup:** Creator of the C++ programming language.
+> **Carl Hewitt:** Creator of the Actor model for concurrent computation.
+> **Dave Ungar:** Co-designer of the Self programming language and expert in object-oriented systems and garbage collection.
+>
+> **Key Themes**
+>
+> **Concurrency and Parallelism:** The panel explores how modern hardware shifts require rethinking traditional locks and shared-state programming.
+> **Actor Model vs. Traditional Models:** Carl Hewitt’s Actor model is contrasted with other approaches to managing concurrent execution safely.
+> **Language Evolution:** The discussion reflects on the design trade-offs, historical context, and future direction of programming languages.
 
-| Source | What |
-|--------|------|
-| **[Bulldozer00 review](2014-stroustrup-hewitt-ungar-bulldozer00-review.md)** (22 Oct 2014) | Anthony DaSilva Jr — watched 3×, commute MP3; lay summary of Hewitt / Ungar / Stroustrup multicore positions · [original post](https://bulldozer00.blog/2014/10/22/a-fascinating-conversation/) |
-| **Don's HN comment** (July 2020) | On the [2015 Ungar Hangout thread](2015-11-03-call-with-david-ungar-hernan-wilkinson.md) — [23806717](https://news.ycombinator.com/item?id=23806717) |
-| **Don's HN comment** (Nov 2022) | Seymour Papert thread — *"fascinating (and polite, respectful) argument about shared memory, message passing, locks, synchronization, and lock free message passing!"* — [`hn-self-1989-selfishscript-45706924.md`](hn-self-1989-selfishscript-45706924.md) |
+ISO C++ blog, 23 Sep 2014: [isocpp.org/blog/2014/09/stroustrup-hewitt-ungar](https://isocpp.org/blog/2014/09/stroustrup-hewitt-ungar)
 
-### Three positions (Bulldozer00 checksum)
+---
 
-| Speaker | 2014 summary |
-|---------|----------------|
+## Transcript
+
+*(Paste here when YouTube captions / Don's transcript land.)*
+
+---
+
+## Who is in the room
+
+| | Room | Notes |
+|---|---|---|
+| **Dave Ungar** | [this room](../README.md) | Self — prototypes, simplicity, adaptive JIT |
+| **Carl Hewitt** | [`../../carl-hewitt/`](../../carl-hewitt/README.md) | Actor model — memorial 🕯️ 1944–2022 |
+| **Bjarne Stroustrup** | — | C++ — no character room yet |
+| **Charles Torre** | — | Host; Channel 9 |
+
+## Mirrors
+
+| | URL |
+|---|---|
+| **Watch (YouTube)** | https://www.youtube.com/watch?v=52o5FPymtD0 |
+| ISO C++ blog (23 Sep 2014) | https://isocpp.org/blog/2014/09/stroustrup-hewitt-ungar |
+| Channel 9 (dead) | https://channel9.msdn.com/Blogs/Charles/A-Conversation-with-Bjarne-Stroustrup-Carl-Hewitt-and-Dave-Ungar |
+| Wayback (Apr 2015) | https://web.archive.org/web/20150403234147/https://channel9.msdn.com/Blogs/Charles/A-Conversation-with-Bjarne-Stroustrup-Carl-Hewitt-and-Dave-Ungar |
+| Don's mp4 | https://donhopkins.com/home/movies/BjarneCarlDaveLangNEXT_mid.mp4 |
+| Reddit r/cpp (2014) | https://www.reddit.com/r/cpp/comments/2gl7th/a_conversation_with_bjarne_stroustrup_carl_hewitt/ |
+
+## Don on HN — as posted
+
+[33527561](https://news.ycombinator.com/item?id=33527561), 9 Nov 2022, on
+[The influence of Self](https://news.ycombinator.com/item?id=33502897). Also
+linked from [45707646](https://news.ycombinator.com/item?id=45707646) (1989 Self
+implementation paper).
+
+```
+A Conversation with Bjarne Stroustrup, Carl Hewitt, and Dave Ungar
+
+https://web.archive.org/web/20150403234147/https://channel9.msdn.com/Blogs/Charles/A-Conversation-with-Bjarne-Stroustrup-Carl-Hewitt-and-Dave-Ungar
+
+https://donhopkins.com/home/movies/BjarneCarlDaveLangNEXT_mid.mp4
+
+They have a fascinating (and polite, respectful) argument about shared memory, message passing, locks, synchronization, and lock free message passing!
+```
+
+Wayback URL as posted sometimes used `20150428011217` / `http://channel9.m…` —
+same Channel 9 page. The mp4 path as posted used an underscore-truncated
+`BjarneCarlDaveLangNEXT_mi…`. Full URLs above.
+
+## Three positions (2014 checksum)
+
+Anthony DaSilva Jr watched it three times in 2014
+([full digest](2014-stroustrup-hewitt-ungar-bulldozer00-review.md) ·
+[original](https://bulldozer00.blog/2014/10/22/a-fascinating-conversation/)):
+
+| Speaker | As summarized then |
+|---|---|
 | **Hewitt** | Revolutionary actor languages; abandon Von Neumann — current languages won't scale with cores |
 | **Ungar** | Incoherent unsynchronized memory + background cache error correction — reliable from unreliable parts |
 | **Stroustrup** | Revolutions are rare; layered libraries hiding locks (C++ threads → tasks → *next?*) |
 
-Full digest + async questions for David: [`2014-stroustrup-hewitt-ungar-bulldozer00-review.md`](2014-stroustrup-hewitt-ungar-bulldozer00-review.md)
+## Same conference
 
-## Participants
+[Korz — Dancing with Symmetry](2014-lang-next-korz-dancing-with-symmetry.md)
+([Microsoft Learn](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context))
 
-| Person | Repo room | Notes |
-|--------|-----------|-------|
-| **David Ungar** | [`../`](../README.md) | Self — prototypes, simplicity, adaptive JIT |
-| **Carl Hewitt** | [`../../carl-hewitt/`](../../carl-hewitt/README.md) | Actor model (memorial 🕯️ 1944–2022) |
-| **Bjarne Stroustrup** | — (no character room yet) | C++ — value vs pointer semantics, systems pragmatism |
-
-## Topics worth revisiting (2026)
-
-Don's pitch (Aug 2026): technology makes many 2014 arguments worth **re-evaluating** — actors vs
-shared memory, lock-free message passing, prototype OO vs class-based C++, and the **people who
-inspired them** (the "where did the great ideas come from?" thread in the talk).
-
-Cross-links in this repo:
-
-- [Live objects trail](../../../process/trails/live-objects.md) — Smalltalk → Self → live systems
-- [Ken Kahn](../../ken-kahn/README.md) — Hewitt PhD advisor; actor-model animated films (1979)
-- [Alan Kay on Hewitt](../../alan-kay/media/discussions/malleable-systems-systems-vs-data.md) — messaging neighborhood
-- [Will Wright — revisit weird ideas](https://youtu.be/ofA6YWVTURU?t=3657) — Don's framing quote for why old arguments deserve another pass ([full source bundle](../../will-wright/sources/2005-03-11-spore-gdc-future-of-content/README.md))
-
-## Planned follow-up (async)
-
-Don proposes (Aug 2026 email to Ungar):
-
-1. Re-listen to the talk (Don associates different city bike routes with different segments).
-2. Write comments and questions; email to David — **answer any you choose, on your schedule**.
-3. Don drafts a **deep article** — what was said in 2014 + what they discuss afterward.
-4. Optional: Carl Hewitt (memorial — discussants / estate TBD) and Bjarne Stroustrup chime in.
-5. Don will **upload a clean mirror to YouTube** with transcription for accessibility.
-
-Format fits [TicketPR / written Q&A](../../../process/repo-show-format.md#ticketpr) — no new video
-required from David unless he wants one.
-
-**Same conference:** [Korz — Dancing with Symmetry](2014-lang-next-korz-dancing-with-symmetry.md) ([Microsoft Learn](https://learn.microsoft.com/en-us/shows/lang-next-2014/dancing-symmetry-to-harness-power-of-complexity-subjective-programming-in-context))
-
-See: [`2014-async-revisits-index.md`](2014-async-revisits-index.md) ·
-[`2026-08-correspondence-facetime-and-async-pitch.md`](2026-08-correspondence-facetime-and-async-pitch.md) ·
-[`2026-08-stroustrup-hewitt-followup-article-scaffold.md`](2026-08-stroustrup-hewitt-followup-article-scaffold.md) ·
-[`2026-08-korz-dancing-with-symmetry-article-scaffold.md`](2026-08-korz-dancing-with-symmetry-article-scaffold.md)
+Async revisit (TicketPR, no new video from David required):
+[2014-async-revisits-index.md](2014-async-revisits-index.md) ·
+[article scaffold](2026-08-stroustrup-hewitt-followup-article-scaffold.md)
 
 ↑ [sources](README.md) · [character](../README.md)

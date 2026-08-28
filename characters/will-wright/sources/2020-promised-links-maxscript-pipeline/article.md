@@ -38,7 +38,7 @@ https://medium.com/@donhopkins/automating-the-sims-character-animation-pipeline-
 | [Nzz0cFSmgiM](https://www.youtube.com/watch?v=Nzz0cFSmgiM) | [don-youtube-Nzz0cFSmgiM-freethesims-activex](../don-youtube-Nzz0cFSmgiM-freethesims-activex/README.md) |
 | [Imu1v3GecB8](https://www.youtube.com/watch?v=Imu1v3GecB8) | [don-youtube-imu1v3GecB8-simplifier-tools-demo](../don-youtube-imu1v3GecB8-simplifier-tools-demo/README.md) |
 | [N1Y-29tX0Co](https://www.youtube.com/watch?v=N1Y-29tX0Co) | [don-youtube-N1Y-29tX0Co-aether](../don-youtube-N1Y-29tX0Co-aether/README.md) |
-| [jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) | [don-youtube-jDrqR9XssJI-flight-of-pixie](../don-youtube-jDrqR9XssJI-flight-of-pixie/README.md) |
+| [jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) | [2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie](../../../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/README.md) |
 
 Also in mail: [2023-unity-tools-portfolio](../2023-unity-tools-portfolio/README.md) (2023 re-send of same cluster).
 

@@ -75,10 +75,14 @@ PIXIE's display files read like programs and its subpictures are display subrout
 Myer & Sutherland formalized the consequence in 1968 as the **wheel of reincarnation**: give
 a display a subroutine capability, then conditionals, then registers, and you've built
 another computer — so you offload *its* display work to something simpler, and around the
-wheel goes. The 340 is the canonical first turn; the modern GPU executing command buffers
-(long literally called *display lists*) is the same wheel, many revolutions later. The IBM
-System/360 channels — processors executing Channel Command Word programs from main memory,
-contemporaries of the 340 — are the same idea at datacenter scale.
+wheel goes. They name the **PDP-1 + Type 30** as the start (no processor) and the
+**340–347** as the cardinal half-turn — still thought to be a channel, already a processor.
+PIXIE sits on that cell: DJS/DJP, no hardware stack. Analysis and PDF:
+[`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
+The modern GPU executing command buffers (long literally called *display lists*) is the
+same wheel, many revolutions later. The IBM System/360 channels — processors executing
+Channel Command Word programs from main memory, contemporaries of the 340 — are the same
+idea at datacenter scale.
 
 ## Titan — the mainframe across the link
 
@@ -174,7 +178,7 @@ from the listing, in [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md).
 - [CUCPS Titan archive](https://cucps.soc.srcf.net/titan/) — supervisor planning docs, programming manual, by permission of Landy/Needham/Hartley
 - [Titan (1963 computer), Wikipedia](https://en.wikipedia.org/wiki/Titan_(1963_computer))
 - [Computer Conservation Society software & emulators](https://computerconservationsociety.org/software/software-index.htm) — the Atlas 1 emulators
-- Myer & Sutherland, *On the Design of Display Processors* (CACM, 1968) — the wheel of reincarnation
+- Myer & Sutherland, *On the Design of Display Processors* (CACM, 1968) — the wheel of reincarnation. Reading copy + PIXIE mapping: [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md). PDF: http://cva.stanford.edu/classes/cs99s/papers/myer-sutherland-design-of-display-processors.pdf
 - [Type 340 Precision Incremental Display, Computer History Wiki](https://gunkies.org/wiki/Type_340_Precision_Incremental_Display)
 
 ↑ [reference library](README.md) · [PIXIE listing](../pixie-assembler-listing-1972/README.md) · [transcription report](../pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md) · [character README](../../README.md)

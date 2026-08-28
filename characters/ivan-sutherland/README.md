@@ -19,13 +19,15 @@ software against. **Not** an interview ask by default (`invitation: not_offered`
 | Era | System | Notes |
 |-----|--------|-------|
 | 1963 | **Sketchpad** | TX-2 · Wes Clark machine · Shannon advisor · Minsky on committee |
+| 1968 | **Display processors** | Myer & Sutherland — wheel of reincarnation; names Type 30 → 340–347 ([paper](sources/1968-06-myer-sutherland-design-of-display-processors.md)) |
 | 1968 | **Sword of Damocles** | First HMD — VR/AR hardware ancestor |
 | 1968– | **Utah / E&S** | Kay student era; Evans & Sutherland company |
 | 1969 | **PIXIE** | Heinz et al. · Cambridge · six years after Sketchpad |
 | 1980s– | **Geometer's Sketchpad** | Nick Jackiw · classroom dynamic geometry |
 | 2008– | **PSU ARC** | Async research with Marly Roncken |
 
-Essay: [`sketchpad-and-descendants.md`](sketchpad-and-descendants.md) · Kay:
+Essay: [`sketchpad-and-descendants.md`](sketchpad-and-descendants.md) · display processors:
+[`sources/1968-06-myer-sutherland-design-of-display-processors.md`](sources/1968-06-myer-sutherland-design-of-display-processors.md) · Kay:
 [`from-alan-kay.yml`](from-alan-kay.yml) · Hooks: [`ideas.md`](ideas.md)
 
 ## Yoot / Alan Kay apparatus

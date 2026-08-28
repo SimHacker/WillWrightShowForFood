@@ -68,13 +68,14 @@ why_the_show_cares: |
 
 sources:
   linkedin_thread: sources/2020-03-linkedin-lem-thread.yml
+  linkedin_transcript: sources/2020-03-linkedin-lem-thread.md
   web:
     - "https://aresluna.org/ — his archive"
     - "https://aresluna.org/one-hundred-and-thirty-seven-seconds/ — the Lem translation"
     - "https://mwichary.medium.com/translating-a-stanislaw-lem-story-6c2446632bd8 — the translator's essay"
     - "https://shifthappens.site/ — the keyboard book"
     - "https://doodles.google/doodle/30th-anniversary-of-pac-man/ — the Pac-Man doodle"
-    - "https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-book-publication/ — the Lem doodle"
+    - "https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-publication/ — the Lem doodle"
 
 see_also:
   - { path: README.md, why: "Public-facing overview — point Marcin here" }

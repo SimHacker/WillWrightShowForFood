@@ -3,6 +3,7 @@
 Working outline for Don Hopkins's planned deep dive. **Draft — not published.**
 Fill listening notes in PRs; David Ungar answers inline when ready.
 
+**Watch:** https://www.youtube.com/watch?v=52o5FPymtD0
 **Primary source:** [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md)
 
 ---

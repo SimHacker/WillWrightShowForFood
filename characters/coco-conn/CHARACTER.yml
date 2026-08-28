@@ -65,8 +65,11 @@ sources:
     url: https://news.ycombinator.com/item?id=29261868
     note: Canonical — Coco Conn & Paul Rother HOMER/Forth write-up; Don reposted with permission
   - type: internal
-    path: sources/hn-homer-forth-index.yml
+    path: sources/2021-11-18-hn-homer-forth-index.yml
     note: Index of Don's HN reposts citing Coco's HOMER story
+  - type: internal
+    path: sources/2021-10-20-facebook-homer.md
+    note: Coco's 20 Oct 2021 HOMER & Associates post — readable copy
   - type: internal
     path: correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
     note: Canonical archive — Don's full reply on Coco's wall (Aug 2026)
@@ -98,7 +101,7 @@ invitation:
   sent_via: facebook
   replied: 2026-07-06
   replied_via: messenger
-  reply_capture: sources/messenger-2026-07-06-reply.md
+  reply_capture: sources/2026-07-06-messenger-reply.md
   followup: invitation-followup-2026-08.md
   correspondence: correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
   show_seed: repo-shows/coco-conn/
@@ -118,3 +121,8 @@ facts_to_confirm:
 
 media:
   manifest: media/MANIFEST.yml
+
+see_also:
+  - { path: CARD.yml, why: "Show abilities" }
+  - { path: invitation.md, why: "Sent invite" }
+  - { path: sources/2021-10-20-facebook-homer.md, why: "Coco's HOMER post" }

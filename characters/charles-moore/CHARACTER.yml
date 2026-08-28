@@ -47,13 +47,13 @@ connections:
 
 sources:
   - type: internal
-    path: ../paul-rother/sources/homer-and-associates-1982.md
+    path: ../paul-rother/sources/1982-homer-and-associates.md
     note: Paul's memoir — the HOMER / Moore section
   - type: internal
-    path: ../paul-rother/sources/2021-10-20-facebook-homer.md
+    path: ../coco-conn/sources/2021-10-20-facebook-homer.md
   - type: hn
     url: https://news.ycombinator.com/item?id=29261868
-    note: Don's comment as posted; local copy ../paul-rother/sources/2021-11-18-hn-homer-forth.md
+    note: Don's comment as posted; local copy ../don-hopkins/sources/2021-11-18-hn-homer-forth.md
   - type: web
     url: https://en.wikipedia.org/wiki/Charles_H._Moore
     note: Public career pointer — not a substitute for the HOMER record
@@ -62,3 +62,8 @@ facts_to_confirm:
   - "Whether he remembers the HOMER contract; years; what of the host code survived"
   - "Leo Brodie as HOMER associate (Coco's 2021 post) — Forth, Inc. orbit"
   - "Body Music laserdisc (Stanford Box 28.7) — Coco said Charles on Forth; confirm"
+
+see_also:
+  - { path: CARD.yml, why: "Show abilities" }
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: ../paul-rother/sources/1982-homer-and-associates.md, why: "The HOMER / Moore section" }

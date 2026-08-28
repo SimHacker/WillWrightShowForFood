@@ -9,8 +9,10 @@ Verifiable on HN. Governed by [`../../../schemas/portrayal-standards.md`](../../
 
 - All-time favorite paper — **"You're soaking in jit!"**
 - Prefers **"pessimization"** over "dynamic deoptimization."
-- [**SelfishScript**](https://news.ycombinator.com/item?id=33527561): JavaScript took Self's "prototype" label
+- [**SelfishScript**](https://news.ycombinator.com/item?id=45315685): JavaScript took Self's "prototype" label
   but betrayed simplicity, uniformity, live environment, and compile-friendly semantics.
+- The Lang.NEXT conversation Don keeps linking: [33527561](https://news.ycombinator.com/item?id=33527561) —
+  [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md).
 - **2006 memory:** Ungar interviewing at Laszlo — Self demo editing `*` for `1_000_000`, incremental recompile;
   on JS, Ungar said efficient compilation was possible "if you were really devious enough."
 

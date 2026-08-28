@@ -7,7 +7,7 @@ Both talks are **Lang.NEXT 2014**. Same conference, two under-appreciated episod
 
 | Talk | Source bundle | Article scaffold |
 |------|---------------|------------------|
-| **Stroustrup × Hewitt × Ungar** — shared memory vs messages, inspirations | [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md) · [Bulldozer00 review (Oct 2014)](2014-stroustrup-hewitt-ungar-bulldozer00-review.md) | [`2026-08-stroustrup-hewitt-followup-article-scaffold.md`](2026-08-stroustrup-hewitt-followup-article-scaffold.md) |
+| **Stroustrup × Hewitt × Ungar** — shared memory vs messages, inspirations | [`2014-stroustrup-hewitt-ungar-conversation.md`](2014-stroustrup-hewitt-ungar-conversation.md) · [YouTube](https://www.youtube.com/watch?v=52o5FPymtD0) · [Bulldozer00 review (Oct 2014)](2014-stroustrup-hewitt-ungar-bulldozer00-review.md) | [`2026-08-stroustrup-hewitt-followup-article-scaffold.md`](2026-08-stroustrup-hewitt-followup-article-scaffold.md) |
 | **Korz — Dancing with Symmetry** — subjective programming in context | [`2014-lang-next-korz-dancing-with-symmetry.md`](2014-lang-next-korz-dancing-with-symmetry.md) | [`2026-08-korz-dancing-with-symmetry-article-scaffold.md`](2026-08-korz-dancing-with-symmetry-article-scaffold.md) |
 
 **Framing quote:** Will Wright, [GDC 2005 (1:00:57)](https://youtu.be/ofA6YWVTURU?t=3657) — *go back occasionally and revisit those ideas.*

@@ -108,7 +108,7 @@ I can even repurpose the cool Flight of the PIXIE AfterEffects techniques to giv
 | Will Wright on thread (Cc) | [`../../will-wright/correspondence.yml`](../../will-wright/correspondence.yml) |
 | Source listing + correction essay | [`../pixie-source-recovery.md`](../pixie-source-recovery.md) |
 | DSHR Hex draft + Lem thread (3 Jul) | [`../../david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md`](../../david-rosenthal/sources/2026-07-03-pixie-moollm-lem-rautavaara-thread.md) |
-| *Flight of the PIXIE* | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) · [`../../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/`](../../will-wright/sources/don-youtube-jDrqR9XssJI-flight-of-pixie/) |
+| *Flight of the PIXIE* | [youtube.com/watch?v=jDrqR9XssJI](https://www.youtube.com/watch?v=jDrqR9XssJI) · [`../../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/`](../../don-hopkins/sources/2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/) |
 | Buxton patent thread | [`../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md`](../../don-hopkins/sources/2008-2023-pixie-buxton-patent-thread.md) |
 | Roy Eagleson · educator room | [`../../roy-eagleson/`](../../roy-eagleson/) |
 | Ivan Sutherland · Sketchpad north star | [`../../ivan-sutherland/`](../../ivan-sutherland/) |

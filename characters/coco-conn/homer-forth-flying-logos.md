@@ -85,9 +85,9 @@ imagination vs. possibility. It worked.
 Landmark claim in the thread: debut of the **PC as a broadcast-quality production system** — work that
 had been **million-dollar workstation** territory.
 
-**Don (public HN):** *"I truly believe that in some other alternate dimension, there is a **Flying Logo
-Heaven** where the souls of dead flying logos go… Somewhere the **Sun Logo** and the **SGI Logo** are
-still dancing together."*
+**Don (public HN):** [Flying Logo Heaven](../don-hopkins/flying-logo-heaven.md) — the souls of dead
+flying logos promenade and swoop to bombastic theme music; the Sun logo and the SGI logo are still
+dancing together.
 
 ## Don ↔ Coco (firsthand, separate eras)
 
@@ -118,19 +118,19 @@ the console**, code behind the glass.
   lineage.
 - **SIGKids** — where kids touched the future; **David Levitt** / **Bounce** origin story with Don.
 
-## Sources (complete records in Paul's room)
+## Sources
 
 Do not depend on leftbrain.us or the old Stanford blog — both **404** as of
 26 Aug 2026. Readable copies:
 
-- [Paul's 1982 memoir](../paul-rother/sources/homer-and-associates-1982.md)
-- [Coco's 2021 Facebook post](../paul-rother/sources/2021-10-20-facebook-homer.md)
-- [Flying Logos transcript](../paul-rother/sources/1989-flying-logos.md)
-- [Stanford Peter Conn papers M2262](../paul-rother/sources/2019-05-17-stanford-peter-conn-papers.md)
-- [HN 18 Nov 2021 as posted](../paul-rother/sources/2021-11-18-hn-homer-forth.md)
+- [Paul's 1982 memoir](../paul-rother/sources/1982-homer-and-associates.md)
+- [Coco's 2021 Facebook post](sources/2021-10-20-facebook-homer.md)
+- [Flying Logos transcript](../peter-conn/sources/1989-flying-logos.md)
+- [Stanford Peter Conn papers M2262](../peter-conn/sources/2019-05-17-stanford-peter-conn-papers.md)
+- [HN 18 Nov 2021 as posted](../don-hopkins/sources/2021-11-18-hn-homer-forth.md)
 
 Live catalog: [archives.stanford.edu/catalog/m2262](https://archives.stanford.edu/catalog/m2262)
-· [finding aid in this repo](../paul-rother/sources/stanford-m2262/GUIDE.md)
+· [finding aid in this repo](../peter-conn/sources/stanford-m2262/GUIDE.md)
 · [OAC](https://oac.cdlib.org/findaid/ark:/13030/c8n303pn/)
 
 Peter's site (credits): https://www.milesconsulting.org/service.html

@@ -69,9 +69,11 @@ sources:
   papers:
     - "Sutherland, I. E. — Sketchpad: A Man-Machine Graphical Communication System (MIT, 1963)."
     - "Sutherland, I. E. — A head-mounted three dimensional display (AFIPS 1968)."
+    - "Myer, T. H. & Sutherland, I. E. — On the Design of Display Processors (CACM 11:6, June 1968). Wheel of reincarnation. Reading copy: sources/1968-06-myer-sutherland-design-of-display-processors.md"
   yoot_people: "https://github.com/YootTowerManagement/YootTower/blob/main/Yoot_Saito_Alan_Kay_Interview/People.md"
   room:
     - sketchpad-and-descendants.md
+    - sources/1968-06-myer-sutherland-design-of-display-processors.md
     - from-alan-kay.yml
     - ideas.md
 
@@ -90,6 +92,7 @@ see_also:
   - { path: CARD.yml, why: "Hero skills card" }
   - { path: ideas.md, why: "Show / teaching hooks" }
   - { path: sketchpad-and-descendants.md, why: "Sketchpad → GSP → PIXIE lineage essay" }
+  - { path: sources/1968-06-myer-sutherland-design-of-display-processors.md, why: "1968 display-processor paper — wheel of reincarnation; Type 340–347 is PIXIE" }
   - { path: from-alan-kay.yml, why: "Kay's public Sketchpad reading (Yoot + Quora)" }
   - { path: ../alan-kay/, why: "Utah student; proto-OOP; declarative whats" }
   - { path: ../alan-kay/media/quora-recaps/declarative-whats-vs-hows.md, why: "Kay — Sketchpad as declarative CAD+sim" }

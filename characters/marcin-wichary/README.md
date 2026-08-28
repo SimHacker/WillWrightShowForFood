@@ -24,7 +24,7 @@ Marcin sits at the junction of nearly everything this repo cares about:
 - **The doodles.** He co-created the
   [playable Pac-Man Google Doodle](https://doodles.google/doodle/30th-anniversary-of-pac-man/)
   (2010, with Ryan Germick) — the first interactive doodle — and the
-  [Stanisław Lem doodle](https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-book-publication/)
+  [Stanisław Lem doodle](https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-publication/)
   (2011), a mini-game drawn in the style of Daniel Mróz's *Cyberiad*
   illustrations, honoring 60 years since Lem's first book.
 - **Shift Happens.** His two-volume history of keyboards,
@@ -44,12 +44,13 @@ translate the Electronic Bard's poetry?** Marcin answered with the
 original Polish [Elektrybałt poem](http://niniwa22.cba.pl/lem_elektrybalt.htm).
 The thread then ranged across Pac-Man reverence, cooperative multiplayer
 SimCity, pie menus, Glenn Reid's TouchType, and Engelbart's multiple
-cursors — [summarized with quotes here](sources/2020-03-linkedin-lem-thread.yml).
+cursors — [summarized with quotes here](sources/2020-03-linkedin-lem-thread.yml),
+[full transcript](sources/2020-03-linkedin-lem-thread.md).
 
 ## Start here
 
 | | |
 | --- | --- |
 | **The invitation** | [`invitation.md`](invitation.md) |
-| **The correspondence** | [`sources/2020-03-linkedin-lem-thread.yml`](sources/2020-03-linkedin-lem-thread.yml) |
+| **The correspondence** | [`sources/2020-03-linkedin-lem-thread.yml`](sources/2020-03-linkedin-lem-thread.yml) (summary) · [`sources/2020-03-linkedin-lem-thread.md`](sources/2020-03-linkedin-lem-thread.md) (full transcript) |
 | **Portrayal details** | [`CHARACTER.yml`](CHARACTER.yml) |

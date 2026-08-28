@@ -53,7 +53,7 @@ https://internetdisruption.report/2019/09/12/internet-disruption-report-august-2
 
 ## Cross-links
 
-- [Don → jwz — PDP-7 munching squares ping (18 Mar 2020)](2020-03-don-jwz-pdp7-munching-squares-pixie/README.md) — same `jDrqR9XssJI` film, sent to jwz first
+- [Don's homage edit — dedication, hardware, HN](2020-03-17-youtube-jDrqR9XssJI-flight-of-the-pixie/README.md)
 - [`../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md`](../../heinz-lemke/cambridge-films-flight-of-the-bumblebee.md)
 - [`../../brewster-kahle/sources/chm-interview-1996.md`](../../brewster-kahle/sources/chm-interview-1996.md)
 - [`../../yuja-wang/sources/flight-of-the-pixie-tribute.md`](../../yuja-wang/sources/flight-of-the-pixie-tribute.md)

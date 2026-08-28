@@ -100,6 +100,7 @@ Also mirrored under [`../../heinz-lemke/sources/pdp7-reference/`](../../heinz-le
 | Title | URL |
 |-------|-----|
 | PIXIE paper (1969 CAD Conference) | https://www.donhopkins.com/home/documents/PIXIE%20a%20new%20approach%20to%20man-machine%20communication.pdf |
+| Myer & Sutherland, *On the Design of Display Processors* (CACM 1968) — wheel of reincarnation; names 340–347 | [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md) |
 | Titan / PDP-7 link software notes | https://cucps.soc.srcf.net/titan/supplan/pd10.htm |
 | Cambridge Lab EDSAC99 history | https://www.cl.cam.ac.uk/events/EDSAC99/history.html |
 | 1969 PIXIE films (Chapman digitization) | https://www.cl.cam.ac.uk/library/archives.html |

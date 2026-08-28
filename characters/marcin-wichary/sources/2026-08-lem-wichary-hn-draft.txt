@@ -1,0 +1,65 @@
+Stanislaw Lem's robots are timeless!
+
+Marcin Wichary made the Google Doodle about Stanislaw Lem:
+
+60th Anniversary of Stanislaw Lem's First Publication:
+
+https://doodles.google/doodle/60th-anniversary-of-stanislaw-lems-first-publication/
+
+See the interactive version here:
+
+https://www.google.com/logos/lem/
+
+He also co-created the first interactive Google Doodle -- Pac-Man, 2010.
+
+Lem's Cyberiad has at least two Sallys that matter to hackers:
+
+The Seventh Sally (or How Trurl's Own Perfection Led to No Good) is the story Will Wright says inspired SimCity -- a simulated kingdom in a box.
+
+The First Sally (A), or Trurl's Electronic Bard, is about a robot that makes poetry. Lem wrote in Polish; Michael Kandel translated it to English, including constrained poems that are somehow excellent.
+
+The Bard is commissioned to write "A love poem, lyrical, pastoral, and expressed in the language of pure mathematics. Tensor algebra mainly, with a little topology and higher calculus, if need be. But with feeling, you understand, and in the cybernetic spirit."
+
+Marcin Wichary is not just a doodler -- in 2015 he translated Lem's 1976 story "One hundred and thirty-seven seconds" into English and wrote about the translation:
+
+https://aresluna.org/one-hundred-and-thirty-seven-seconds/
+
+https://mwichary.medium.com/translating-a-stanislaw-lem-story-6c2446632bd8
+
+In March 2020 I wrote to him, asking where to find the Polish original of the Electronic Bard's mathematical love poem. I'd love to compare Kandel's English to the Polish even though I don't know the language. I sent him my old web pages collecting the Bard's wonderful and horrible poems:
+
+https://www.donhopkins.com/home/catalog/lem/WonderfulPoems.html
+
+https://www.donhopkins.com/home/catalog/lem/HorriblePoems.html
+
+Marcin Wichary => Don Hopkins:
+
+Thanks for reaching out and reading! You can find the original Polish poem here:
+
+https://web.archive.org/web/20190814065711/http://niniwa22.cba.pl/lem_elektrybalt.htm
+
+That one link answered the question I'd wondered about for decades.
+
+Then I discovered we both had the same fear of spoiling retro games like PacMan. I ported SimCity to Unix with a multiplayer interface, and had the same respect and trepidation about changing something classic. I made multiplayer SimCity cooperative instead of competitive -- competition would spoil what was great about SimCity. We're all living in the same city/planet and we have to learn how to get along.
+
+Oh yeah, back to the point: here's SimCity with PacMan!
+
+I hated all the heavy traffic in SimCity, so I created the Church of PacMania, which worships PacBot: a gargantuan yellow road-following car-devouring Pac-Man. The church generates traffic to attract PacBot and sacrificially feed its followers to god -- an automotive version of PKD's "Rautavaara's Case", where god eats people instead of the other bizarre upside-down way around, Catholic style Transubstantiation where humans eat their god instead.
+
+https://en.wikipedia.org/wiki/Rautavaara%27s_Case
+
+Micropolis Online (SimCity) Web Demo -- PacBot eats traffic:
+
+https://www.youtube.com/watch?v=8snnqQSI0GE
+
+Multi Player SimCityNet for X11 on Linux:
+
+https://www.youtube.com/watch?v=_fVl4dGwUrA
+
+Pie menus in SimCity:
+
+https://www.youtube.com/watch?v=Jvi98wVUmQA
+
+Also Lem translation related: the Washington Post on new MIT Press translations, which had just come out that month (although I've since canceled my subscription because of how Bezos corrupted and destroyed that once great institution -- so here's an archive link):
+
+https://web.archive.org/web/20200831203319/https://www.washingtonpost.com/entertainment/books/stanislaw-lem-has-finally-gotten-the-translations-his-genius-deserves/2020/03/03/3227b18c-5982-11ea-ab68-101ecfec2532_story.html

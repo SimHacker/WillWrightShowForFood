@@ -123,6 +123,11 @@ Manuals mirrored in [pdp7-reference/README.md](sources/pdp7-reference/README.md)
 | Refresh | Tracking cross alone: kHz possible; large PDF/TDF: **10–20 cycles/s** | Thesis §5.5.1 |
 | Hardware limits | Limited vector length; **no scissoring**; no hardware subroutine stack (software uses DJS/DJP) | Thesis §5.4.3 |
 
+Myer & Sutherland (CACM, June 1968) name this exact landmark: Type 30 as the start of
+the **wheel of reincarnation**, **340–347** as the cardinal half-turn (jump + subroutine,
+still called a channel). PIXIE is on that cell. Paper + mapping:
+[`../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
+
 UI layout: **12** command lightbuttons on the right edge; **6** control buttons around the
 tracking cross (Appendix 4; [Wiseman radial-menu notes](sources/buxton-2008-wiseman-notes/wiseman-notes-on-radial-menus-in-pixie.md)).
 
@@ -237,3 +242,4 @@ link hardware schematics; Titan emulator; full *Electronics* PDF (summary only h
 - [Recovered assembler listing](sources/pixie-assembler-listing-1972/README.md)
 - [Lars Brinkhoff — PDP-7 development](../lars-brinkhoff/pdp7-development.md)
 - [Show seed — PIXIE pie menus](../../repo-shows/pixie-pie-menus-pdp7/README.md)
+- [Myer & Sutherland 1968 — wheel of reincarnation](../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md)

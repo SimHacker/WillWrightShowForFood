@@ -9,6 +9,7 @@ unless invitation status changes.*
 | Anchor | Evidence |
 |--------|----------|
 | Sketchpad (1963) | MIT PhD / TX-2 — constraints, master/instance, light pen, zoom |
+| Display processors (1968) | Myer & Sutherland CACM — wheel of reincarnation; Type 340–347 is PIXIE's cell. [`sources/1968-06-myer-sutherland-design-of-display-processors.md`](sources/1968-06-myer-sutherland-design-of-display-processors.md) |
 | Sword of Damocles (1968) | AFIPS HMD paper — VR/AR ancestor |
 | Evans & Sutherland | Co-founded with Dave Evans; real-time 3D |
 | Utah teaching era | Kay grad student; Armit Coons-patch visit (Kay July 2026) |
@@ -18,6 +19,7 @@ unless invitation status changes.*
 ## Hooks (with living discussants)
 
 1. **Sketchpad → PIXIE** — Roy teaches the arc; Heinz brings Cambridge 1969. Constraints vs radial menus.
+   The 340–347 is the cell Myer & Sutherland named the same year as the HMD.
 2. **Declarative whats** — Kay's Quora: show the system what must be true. Pair Nile / spreadsheets / MOOLLM.
 3. **OOP trinity** — Sketchpad + Simula (Dahl/Nygaard) + B5000 (Barton). Essay:
    [`../alan-kay/oop-trinity-sketchpad-simula-b5000.md`](../alan-kay/oop-trinity-sketchpad-simula-b5000.md)

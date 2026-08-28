@@ -25,8 +25,8 @@ circa 1982.* Same session, Facebook scan:
 scan (B&W, 720×551):
 [jpg](../media/1982-optical-printer-leftbrain-wayback.jpg).
 
-Same memoir, shorter Coco frame: [2021 Facebook record](2021-10-20-facebook-homer.md).
-Don posted both with Coco's permission: [HN 18 Nov 2021](2021-11-18-hn-homer-forth.md).
+Same memoir, shorter Coco frame: [2021 Facebook record](../../coco-conn/sources/2021-10-20-facebook-homer.md).
+Don posted both with Coco's permission: [HN 18 Nov 2021](../../don-hopkins/sources/2021-11-18-hn-homer-forth.md).
 
 Homer and Associates was really one of a kind kinda of company. Founded by
 Peter Conn, originally I got hired to program Homer II, a visual realtime

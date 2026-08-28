@@ -52,17 +52,17 @@ connections:
 
 sources:
   - type: internal
-    path: sources/homer-and-associates-1982.md
+    path: sources/1982-homer-and-associates.md
     note: Paul's memoir — leftbrain.us original 404 as of 2026-08-26
   - type: internal
-    path: sources/2021-10-20-facebook-homer.md
+    path: ../coco-conn/sources/2021-10-20-facebook-homer.md
   - type: internal
-    path: sources/1989-flying-logos.md
+    path: ../peter-conn/sources/1989-flying-logos.md
   - type: internal
-    path: sources/stanford-m2262/GUIDE.md
-    note: Peter Conn papers M2262 finding aid (copied). Catalog https://archives.stanford.edu/catalog/m2262. 31.5 linear feet; nothing digitized.
+    path: ../peter-conn/sources/stanford-m2262/GUIDE.md
+    note: Peter Conn papers M2262 finding aid. Catalog https://archives.stanford.edu/catalog/m2262. 31.5 linear feet; nothing digitized.
   - type: internal
-    path: sources/2021-11-18-hn-homer-forth.md
+    path: ../don-hopkins/sources/2021-11-18-hn-homer-forth.md
   - type: internal
     path: correspondence/2026-08-26-coco-introduces-paul.md
     note: Coco's intro email (contact details not stored here)
@@ -78,3 +78,8 @@ facts_to_confirm:
   - "Whether he kept Homer II code, EPROMs, schematics, or 8-inch hero floppies"
   - "Leo Brodie as HOMER associate (Coco's 2021 post) — confirm with Paul"
   - "Writeup he offered to send"
+
+see_also:
+  - { path: CARD.yml, why: "Show abilities" }
+  - { path: invitation.md, why: "Send-ready invite" }
+  - { path: sources/1982-homer-and-associates.md, why: "Paul's memoir" }

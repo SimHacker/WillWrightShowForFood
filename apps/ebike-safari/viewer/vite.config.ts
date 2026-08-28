@@ -21,5 +21,10 @@ export default defineConfig({
 	],
 	optimizeDeps: {
 		exclude: ['maplibre-gl']
+	},
+	server: {
+		// Reachable as https://<host>.<tailnet>.ts.net via `tailscale serve`,
+		// which phones need: microphone access requires a secure context.
+		allowedHosts: ['.ts.net']
 	}
 });

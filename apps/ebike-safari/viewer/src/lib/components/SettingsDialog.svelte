@@ -71,6 +71,23 @@
 			Keep map centered on my location
 		</label>
 
+		<fieldset>
+			<legend>Speech (experimental)</legend>
+			<label class="check">
+				<input
+					type="checkbox"
+					checked={settings.speechEnabled}
+					onchange={(e) => onChange({ speechEnabled: e.currentTarget.checked })}
+				/>
+				Enable speech in and out (voice synthesis + recognition)
+			</label>
+			{#if settings.speechEnabled}
+				<p class="hint speech-hint">
+					<a href="/lab">Open the speech lab</a> — pick voices, test the mic, run feedback mode.
+				</p>
+			{/if}
+		</fieldset>
+
 		<div class="actions">
 			<button type="button" onclick={onClose}>Done</button>
 		</div>
@@ -143,6 +160,14 @@
 	.check.disabled {
 		opacity: 0.45;
 		cursor: not-allowed;
+	}
+
+	.speech-hint {
+		margin: 0.15rem 0 0 1.6rem;
+	}
+
+	.speech-hint a {
+		color: #8cf;
 	}
 
 	.actions {

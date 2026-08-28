@@ -53,12 +53,12 @@ sources:
     url: https://archives.stanford.edu/catalog/m2262
     note: Live Stanford Archives catalog — Peter Conn papers M2262
   - type: internal
-    path: ../paul-rother/sources/stanford-m2262/GUIDE.md
-    note: Finding aid copied into Paul's room (PDF + EAD). Nothing in the boxes is online.
+    path: sources/stanford-m2262/GUIDE.md
+    note: Finding aid (PDF + EAD). Nothing in the boxes is online.
   - type: internal
-    path: ../paul-rother/sources/1989-flying-logos.md
+    path: sources/1989-flying-logos.md
   - type: internal
-    path: ../paul-rother/sources/homer-and-associates-1982.md
+    path: ../paul-rother/sources/1982-homer-and-associates.md
     note: Paul's memoir — Peter hired him; optical printer; CAT-700
   - type: web
     url: https://www.milesconsulting.org/service.html
@@ -72,3 +72,8 @@ facts_to_confirm:
   - "Shop closed 1996 (finding aid) vs 1997 (Coco)"
   - "HOMER invented 1973 / Levi's 1974 / company 1977 (finding aid) vs Coco's 1978–1981 console build"
   - "Imgur album https://imgur.com/a/4Bmb4xu still live — not copied"
+
+see_also:
+  - { path: CARD.yml, why: "Show abilities" }
+  - { path: invitation.md, why: "Draft invite" }
+  - { path: sources/stanford-m2262/GUIDE.md, why: "Peter Conn papers M2262" }

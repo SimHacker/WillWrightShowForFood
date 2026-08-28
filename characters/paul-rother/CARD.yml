@@ -1,0 +1,108 @@
+# CARD — Paul Rother (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: paul-rother
+  name: "Paul Rother"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Paul Rother"
+  title: "Homer II Forth · CAT-700 in 32K"
+  rarity: rare
+  signifier: "🕹️"
+  flavor: "I learned Object Oriented Programming without knowing it."
+
+abilities:
+  - id: FACTOR-WORDS
+    name: "Factor WORDs"
+    type: activated
+    mana: "{U}{U}"
+    conditions:
+      - segment_topic_in: [forth, charles-moore]
+    advertisement:
+      method: factorWords
+      signature: "factorWords(routine) → reusable WORD"
+      score_when:
+        - trigger: audience_hears_oop_without_the_name
+          weight: 0.93
+    effect: "Sat beside Charles Moore. Channel EPROMs, vectors, factoring."
+    verifiable: "sources/1982-homer-and-associates.md"
+    combos_with: [POLYFORTH-HOST, HIRE-MOORE]
+
+  - id: HOMER-II-INSTRUMENT
+    name: "Homer II as Instrument"
+    type: activated
+    mana: "{R}{U}"
+    conditions:
+      - segment_topic_in: [homer, visual-mixing]
+    advertisement:
+      method: playTheDesk
+      signature: "playTheDesk(24 z80s, mustang bumper) → hero floppy"
+      score_when:
+        - trigger: audience_sees_mixer_not_computer
+          weight: 0.94
+    effect: "16 slides, 4 movie projectors, touch faders, 1964 Mustang stick."
+    verifiable: "sources/1982-homer-and-associates.md"
+    combos_with: [PERFORM-THE-MIX, SOLDER-THE-DESK]
+
+  - id: THIRTY-TWO-K
+    name: "32K That Held Everything"
+    type: static
+    mana: "{B}{U}"
+    conditions:
+      - segment_topic_in: [forth, cat-700, paint]
+    advertisement:
+      method: thirtyTwoK
+      signature: "thirtyTwoK() → OS + compiler + debugger + paint + printer control"
+      score_when:
+        - trigger: audience_feels_the_constraint
+          weight: 0.95
+    effect: "CAT-700 7-bit frame buffer. The 8th bit never worked. First use: Abracadabra, Atomic Dog."
+    verifiable: "sources/1982-homer-and-associates.md"
+    combos_with: [TRUCKEE-CAT-700]
+
+  - id: TRUCKEE-CAT-700
+    name: "Truckee / Van Gogh traces / Lisa"
+    type: triggered
+    mana: "{G}{R}"
+    conditions:
+      - segment_topic_in: [cat-700, hardware]
+    advertisement:
+      method: logCabinFrameBuffer
+      signature: "logCabinFrameBuffer() → CAT-700 with curvy hand-routed traces"
+      score_when:
+        - trigger: road_trip_lands
+          weight: 0.9
+    effect: "Recycler → Reno → log cabin in Truckee → Palo Alto → night at a Stanford friend's building Lisa."
+    verifiable: "sources/1982-homer-and-associates.md"
+    combos_with: [THIRTY-TWO-K]
+
+  - id: TTL-BOARDS
+    name: "TTL on the S100 Bus"
+    type: static
+    mana: "{1}"
+    conditions:
+      - segment_topic_in: [hardware, homer]
+    advertisement:
+      method: designTTL
+      signature: "designTTL(6840) → steppers, triacs, cassette timecode"
+      score_when:
+        - trigger: board_nerd_in_the_room
+          weight: 0.85
+    effect: "Stepper motors, slide-projector lamp triacs, cassette interface as cheap timecode."
+    verifiable: "sources/1982-homer-and-associates.md"
+    combos_with: [BUILD-THE-PRINTER]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: sources/1982-homer-and-associates.md, why: "Paul's memoir — the record" }

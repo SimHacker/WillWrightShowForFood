@@ -12,7 +12,7 @@ weaponizing it, withholding it, and in the NS2: Combat case, becoming it.
 Reverse Pac-Man is the closing move: the mathematically pure inverse of Pac-Man's
 digestive function.
 
-**Thread:** [The entire city of San Francisco as a video game](https://news.ycombinator.com/item?id=49422784) (Aug 2026, 481 points).
+**Thread:** [The entire city of San Francisco as a video game](https://news.ycombinator.com/item?id=49422784) (Aug 2026).
 
 **Don's comments:** [49424108](https://news.ycombinator.com/item?id=49424108)
 ("What's the actual game? Try not to step in doo-doo?") →
@@ -117,3 +117,7 @@ Every link curl-checked, every quote grepped verbatim from the page source.
 | Party Pooper tagline | Verbatim [itch.io](https://padierfind.itch.io/party-pooper) description: "Drink as much alcohol as possible! (without pooping on yourself)", Ludum Dare 40 |
 | Poop On 2020 Simulator | [Steam page](https://store.steampowered.com/app/1433480/Poop_On_2020_Simulator/) tags First-Person + Immersive Sim, soft-body turds; [PC Gamer coverage](https://www.pcgamer.com/this-dollar2-game-lets-you-throw-turds-at-the-year-2020-while-gentle-piano-music-plays/) linked from the Steam page itself |
 | Bird Game | Verbatim [itch.io](https://dandonnan.itch.io/bird-game): "Stealing food and pooping on things scores points", anti-bird drones |
+
+## See also
+
+[**Mark Your Territory**](../andrew-quitmeyer/sources/mark-your-territory.md) — Andrew Quitmeyer, Oct 2011: pee-to-check-in-to-Foursquare. Same deposition verb, in the city instead of a game.

@@ -25,7 +25,7 @@ room, night after night?
 
 Demos banned. Write a salesman. Sneak the reel in. PC/AT, Definicon,
 Targa, Digital Arts DGS — hardware the later blurbs skip. Corey Burton
-on the phones. Niccograph; Monitor Award. [Video and catalog copy](../paul-rother/sources/1989-flying-logos.md).
+on the phones. Niccograph; Monitor Award. [Video and catalog copy](sources/1989-flying-logos.md).
 
 ### 3. Stanford M2262
 
