@@ -50,6 +50,8 @@
 			? crypto.randomUUID()
 			: `c${Math.random().toString(36).slice(2)}${Date.now()}`;
 
+	const serverHost = typeof location !== 'undefined' ? location.host : '';
+
 	let room = $state('lobby');
 	let name = $state('rider');
 	let members = $state(0);
@@ -336,6 +338,12 @@
 			{status}{#if joined}
 				· {members} device{members === 1 ? '' : 's'} connected{/if}
 		</p>
+		<!-- Rooms live in one server's memory: devices on different origins
+		     (dev vs production) silently form separate rooms. -->
+		<p class="origin">
+			server: <strong>{serverHost}</strong> — every device must be on this same
+			address
+		</p>
 		{#if !speechOk}
 			<p class="warn">No speech synthesis here — this device can still send and read text.</p>
 		{:else if !audioUnlocked}
@@ -614,6 +622,17 @@
 
 	.voice-pick select {
 		max-width: 100%;
+	}
+
+	.origin {
+		margin: 0.3rem 0 0;
+		font-size: 0.78rem;
+		opacity: 0.7;
+	}
+
+	.origin strong {
+		color: #8cf;
+		font-family: ui-monospace, monospace;
 	}
 
 	.unlock {
