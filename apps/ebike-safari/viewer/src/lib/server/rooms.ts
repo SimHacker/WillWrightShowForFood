@@ -6,7 +6,10 @@ export type RoomMessage = {
 	room: string;
 	name: string;
 	text: string;
-	voiceType?: string;
+	/** Exact voice as named on the sender's device; receivers match by name. */
+	voiceName?: string;
+	/** Device-local identifier — only useful when sender and receiver match. */
+	voiceURI?: string;
 	rate?: number;
 	pitch?: number;
 };

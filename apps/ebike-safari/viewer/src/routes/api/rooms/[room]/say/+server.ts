@@ -4,7 +4,7 @@ import type { RequestHandler } from './$types';
 
 export const prerender = false;
 
-/** Say something into the room: { name, text, voiceType?, rate?, pitch? } */
+/** Say something into the room: { name, text, voiceName?, voiceURI?, rate?, pitch? } */
 export const POST: RequestHandler = async ({ params, request }) => {
 	let body: unknown;
 	try {
@@ -22,7 +22,8 @@ export const POST: RequestHandler = async ({ params, request }) => {
 	const msg = broadcast(params.room, {
 		name,
 		text,
-		voiceType: typeof b.voiceType === 'string' ? b.voiceType : undefined,
+		voiceName: typeof b.voiceName === 'string' ? b.voiceName.slice(0, 128) : undefined,
+		voiceURI: typeof b.voiceURI === 'string' ? b.voiceURI.slice(0, 256) : undefined,
 		rate: typeof b.rate === 'number' ? b.rate : undefined,
 		pitch: typeof b.pitch === 'number' ? b.pitch : undefined
 	});
