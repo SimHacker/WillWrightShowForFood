@@ -19,7 +19,7 @@
 ## Stack: Blake Jennings
 
 Introduce [Blake Jennings](../blake-jennings/) (*An Unnecessary Analysis* — Sims / Stardew
-"war crimes" essays; named Don on camera; replied yes to WWSFF). Don's casting bet: Blake will
+"war crimes" essays; named Don on camera). Don's casting bet: Blake will
 love Tiny Life and belongs in the **Soul City ⇔ Tiny Life** bridge design talk.
 
 - **Blake + Ell (+ Don)** — Tiny Life walkthrough → soul-file / export schema → bridge

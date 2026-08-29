@@ -79,7 +79,7 @@ segments:
     with: characters/blake-jennings/
     invitation: characters/blake-jennings/invitation.md
     video: https://www.youtube.com/watch?v=zMD44gcSIJw
-    outreach: "replied_interested_2026-07-16; second_round_follow_up_pending"
+    outreach: "invited_2026-07-16"
   optional_reunion:
     ask: "Jun 1998 steering committee build — Edith/SimAntics with Jamie, Bobo, Irk, Patrick, Don, Will?"
     seed: ../will-wright-premiere/sims-team-steering-committee-playthrough/
@@ -112,8 +112,8 @@ invitations:
   blake_jennings:
     path: characters/blake-jennings/invitation.md
     priority: send_now
-    consent: replied_interested_2026-07-16
-    note: "First round sent/replied Jul 2026; second-round follow-up draft adds LGBTQ cluster"
+    consent: invited_2026-07-16
+    note: "First round sent Jul 2026; follow-up adds LGBTQ cluster"
 
 invitation:
   path: characters/patrick-j-barrett-iii/invitation.md

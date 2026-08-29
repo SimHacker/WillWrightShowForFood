@@ -3,16 +3,13 @@
 *Portrayal of a real invitee, written by Don — not Blake.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
-**Blake Jennings** ([**@jakeblennings**](https://www.youtube.com/@jakeblennings), ~577k) is the
-voice behind **An Unnecessary Analysis** — long-form forensic comedy about game communities,
-best known for the **"War Crimes of the … Community"** series. He named Don on camera in
-[The War Crimes of the Sims Community](https://youtu.be/zMD44gcSIJw?t=274). He replied that
-middle-school-him playing The Sims never imagined talking to one of the people who built the
-tools — and that he'd love to hear about the project with **Will Wright**.
+**Blake Jennings** ([**@jakeblennings**](https://www.youtube.com/@jakeblennings), ~577k) makes
+**An Unnecessary Analysis**, long-form video essays about game communities, including the
+**"War Crimes of the … Community"** series. He named Don on camera in
+[The War Crimes of the Sims Community](https://youtu.be/zMD44gcSIJw?t=274).
 
-**Outreach:** first invite sent 2026-07-16; Blake replied interested same day. **Second-round
-follow-up draft** ready in [`invitation.md`](invitation.md) — adds LGBTQ+ Sims cluster shows now
-that repo pieces are in place; Don may ping soon.
+**Outreach:** invite sent 2026-07-16. The follow-up in [`invitation.md`](invitation.md) adds the
+LGBTQ+ Sims cluster shows now that the repo pieces are in place.
 
 **Shows:** [`will-wright-premiere`](../../repo-shows/will-wright-premiere/README.md) ·
 [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) ·
@@ -97,10 +94,9 @@ Soon after that talk, Don went to Maxis to work with Will on Dollhouse → The S
 
 ## Why Blake
 
-Blake already does at essay scale what the show needs: receipts, community ethics, Sims history,
-EA drama — with panache. A viral Unnecessary Analysis *ends* where the comment fight starts. A
-Repo Show is what comes **after**: sources, issues, audience PRs, collaboration that isn't
-landfill.
+Blake's essays already work from sources: community ethics, Sims history, EA coverage. A viral
+Unnecessary Analysis *ends* where the comment fight starts. A Repo Show is what comes **after**:
+sources, issues, audience PRs, collaboration that isn't landfill.
 
 Natural fits:
 

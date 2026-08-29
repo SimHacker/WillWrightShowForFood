@@ -22,7 +22,7 @@ is also a serious question about microworlds and identity.
 | **Patrick J. Barrett III** | [`invitation.md`](../../characters/patrick-j-barrett-iii/invitation.md) | Engine room |
 | **Alexander Avila** | [`invitation.md`](../../characters/alexander-avila/invitation.md) | Solo: [`im-queer-therefore-i-sim`](../im-queer-therefore-i-sim/README.md) |
 | **Jacques Servin** | [`invitation.md`](../../characters/jacques-servin/invitation.md) | Solo: [`simcopter-himbos`](../simcopter-himbos/README.md) |
-| **Blake Jennings** | [`invitation.md`](../../characters/blake-jennings/invitation.md) | Sims war-crimes essay — replied Jul 2026; follow-up pending |
+| **Blake Jennings** | [`invitation.md`](../../characters/blake-jennings/invitation.md) | Sims war-crimes essay — invited Jul 2026 |
 
 ## What we'd get into
 

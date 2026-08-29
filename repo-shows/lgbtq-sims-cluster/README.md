@@ -21,7 +21,7 @@
 
 | Guest | Room | Status |
 |-------|------|--------|
-| [**Blake Jennings**](../../characters/blake-jennings/) | Sims war-crimes essayist | Replied interested 2026-07-16; **second-round follow-up draft** ready |
+| [**Blake Jennings**](../../characters/blake-jennings/) | Sims war-crimes essayist | Invited 2026-07-16 |
 
 ## Flipbook B-roll
 
