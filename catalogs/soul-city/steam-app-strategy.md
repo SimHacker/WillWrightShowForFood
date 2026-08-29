@@ -1,4 +1,4 @@
-# Steam app strategy -- Soul City, SoulAngel, and the TMog Bridge
+# Steam app strategy -- Soul City, SoulAngel, and TMog
 
 *Researched 2026-08-29. Answers: is a Steam app worth it, or is the web
 site enough? Can a Steam app meaningfully integrate with other Steam
@@ -8,13 +8,15 @@ rules? Sibling specs: [soul-angel.md](soul-angel.md),
 [steam-community-guide.md](steam-community-guide.md),
 [browser-ecosystem.md](browser-ecosystem.md).*
 
-Naming in this page follows the family rules: **TMog** is our brand for
-the sims1-facing toolchain and facet (the Transmogrifier lineage,
-reclaimed); `sims1` is the internal token for The Sims 1 (anticipating
-`sims2`, `sims3`, `sims4`); publisher brands ("The Sims", "Tiny Life",
-"Proxi", "Steam") are always used nominatively, naming their products,
-never as our brands. Tiny Life and Proxi are friends and collaborators;
-EA gets respectful nominative distance.
+Naming in this page follows the family rules: **TMog** is the umbrella
+brand for our sims1 content tools (the Transmogrifier lineage,
+reclaimed); the **sims1 Soul Bridge** and the sims1 portal *use* TMog
+modules (see [portals-and-modules.md](portals-and-modules.md));
+`sims1` is the internal token for The Sims 1 (anticipating `sims2`,
+`sims3`, `sims4`); publisher brands ("The Sims", "Tiny Life", "Proxi",
+"Steam") are always used nominatively, naming their products, never as
+our brands. Tiny Life and Proxi are friends and collaborators; EA gets
+respectful nominative distance.
 
 ## Verdict
 
@@ -38,7 +40,7 @@ cannot add a Workshop to The Sims or hook Tiny Life's Steam features.
 - Detect installed games by reading `steamapps` appmanifest files
 - Launch games via `steam://` protocol URIs
 - Watch the sims1 `UserData` tray, saves, and Web Pages exports
-  (the TMog Bridge feature set)
+  (the sims1 Soul Bridge feature set, built from TMog modules)
 - Watch Tiny Life's export folder (cooperative, with Ell)
 - Screen capture, DVR, TTS -- the SoulAngel universal tier
 
@@ -95,8 +97,8 @@ Not legal advice; EA's temperament in 2026 is not EA's temperament in
 ## The protest architecture (three layers, three venues)
 
 1. **The Steam app is a utility.** SoulAngel: DVR, Soul Album,
-   machinima, broadcast, with the TMog Bridge (sims1) as launch
-   showcase. The store page describes creation, preservation, and
+   machinima, broadcast, with the sims1 Soul Bridge and its TMog
+   modules as launch showcase. The store page describes creation, preservation, and
    storytelling. The word "protest" never appears on it.
 2. **The movement lives on the web.** Petition, turnstile, tote board,
    migration counts, and comments run on Soul City -- git-backed,
@@ -177,8 +179,9 @@ currently empty). It is safe and singularly useful:
    players to the web site (already specced:
    [steam-community-guide.md](steam-community-guide.md)).
 3. **SoulAngel ships on Steam** as a Player Tools listing: universal
-   tier plus the TMog Bridge as launch showcase. Utility on the store,
-   movement on the web, ceremony in the game.
+   tier plus the sims1 Soul Bridge and TMog modules as launch
+   showcase. Utility on the store, movement on the web, ceremony in
+   the game.
 4. **Friend bridges deepen by cooperation, not injection**: Tiny Life
    with Ell, Proxi with Galium -- shared formats and export paths,
    credited and paid where possible.
