@@ -214,6 +214,87 @@ artifact (official catalog + cookie registrations + observed ids),
 the **remapper** as a shipping module, and **per-save
 virtualization** as the policy that makes arbitrary combination safe.
 
+## Renumbered objects carry their own papers
+
+*Don, 2026-08-29: when we renumber an object, we stamp metadata into
+it -- what the original was, plus a snapshot of what our database
+knows, as a JSON resource.*
+
+The stamp records what a remap otherwise destroys and what a database
+alone cannot promise:
+
+- **The original numbers.** Ids and magic cookie as found, so any
+  remap is reversible and re-mappable.
+- **The remap itself.** Old to new, which set, which tool version,
+  when.
+- **Registry identity plus a snapshot** of what we knew at stamp
+  time: provenance, source archive, requirements, conflicts,
+  attribution state, the readme if there is one.
+- **A resolvable id** for the live version, since the snapshot is a
+  cache and knows it.
+
+### Why it goes in the object and not only in the database
+
+**Because objects escape.** Somebody zips their Downloads folder and
+posts it in 2031, on a forum we have never heard of, long after
+whatever happens to us has happened. A file that carries its own
+provenance stays interpretable by strangers with no access to our
+index; a file whose provenance lives only in our database becomes
+anonymous again the moment it travels.
+
+That is the whole archival principle in one line: **metadata travels
+with the artifact, not just in the index.** It is also the honest
+answer to "what if Soul City disappears," and it costs a few
+kilobytes.
+
+### Append, never overwrite
+
+Provenance is a **log, not a field**. An object that has passed
+through three sets carries all three entries in order, so the chain
+of custody stays readable and a second pass cannot quietly erase the
+first. If the stamp is already there, we are re-processing something
+we processed before, which is worth knowing on its own.
+
+This also makes the remapper safe in the way that matters: the
+original numbering is always recoverable, cross-set
+[migration](#the-downloads-set-is-the-scope-for-save-files) is
+lossless in both directions, and
+[dummy objects](#dummy-objects-so-saves-round-trip) know exactly what
+they are standing in for.
+
+### Three places, because tools are careless
+
+An unknown chunk in an IFF file *should* be skipped harmlessly by
+anything that reads it -- verify that against the game and the
+common editors before relying on it -- but a tool that **rewrites**
+the file may drop what it does not recognize. So redundancy, cheaply:
+
+1. **A custom chunk** holds the machine-readable JSON. The truth.
+2. **A string-table entry** holds a short human-readable summary, in
+   a chunk type every Sims editor already supports, so the
+   provenance is visible even in tools that know nothing about us.
+   This is also what the [About box](object-shops.md) renders.
+3. **A sidecar file** beside the object, for tools that never look
+   inside and for objects that get rewritten by something old and
+   grumpy.
+
+Any two surviving is enough to reconstruct the third.
+
+### Two rules on the contents
+
+- **Small.** A snapshot summary, not a database dump: a few
+  kilobytes, with ids to resolve for the long version. Embedded says
+  *last known*, online says *current*.
+- **Facts about the object, never about the person.** No local paths,
+  no usernames, no machine identifiers, nothing about who ran the
+  tool. Downloads folders get shared, and a stamp must never be the
+  thing that leaks somebody's home directory.
+
+One dividend worth noting: because the stamp is in the file, **the
+About box works with no network at all.** It renders from the
+embedded snapshot, and the scannable link is there for whoever wants
+the live version.
+
 ## The registry shows up in the game: the About slice
 
 A registry nobody reads is a filing cabinet. So the import transform

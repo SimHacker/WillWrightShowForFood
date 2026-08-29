@@ -80,6 +80,36 @@ virtualized_ids:   # the key move (Don, 2026-08-29)
     - "Registry identity never changes no matter how many local ids it wears — credit attaches to identity, not to a free number"
     - "Save-before-mutate, always, with operator consent — snapshot the whole closure, not just the touched file"
 
+provenance_stamp:   # Don, 2026-08-29 -- renumbered objects carry their own papers
+  what: "When we renumber an object we stamp metadata INTO it: what the original was, plus a JSON snapshot of what the database knows"
+  contents:
+    original_numbers: "Ids and magic cookie AS FOUND -- so any remap is reversible and re-mappable"
+    the_remap: "Old to new, which set, which tool version, when"
+    registry_snapshot: "What we knew at stamp time: provenance, source archive, requirements, conflicts, attribution state, readme if any"
+    resolvable_id: "For the live version -- the snapshot is a cache and knows it"
+  why_in_the_object_not_only_the_database:
+    because_objects_escape: |
+      Somebody zips their Downloads folder and posts it in 2031 on a forum we never heard of, long
+      after whatever happens to us has happened. A file carrying its own provenance stays
+      interpretable by strangers with no access to our index; a file whose provenance lives only in
+      our database goes anonymous again the moment it travels.
+    principle: "METADATA TRAVELS WITH THE ARTIFACT, NOT JUST IN THE INDEX"
+    also: "The honest answer to 'what if Soul City disappears' -- and it costs a few kilobytes"
+  append_never_overwrite:
+    principle: "Provenance is a LOG, NOT A FIELD"
+    effect: "An object through three sets carries all three entries in order; a second pass cannot quietly erase the first. A stamp already present means we are RE-processing -- worth knowing on its own."
+    safety: "Original numbering always recoverable; cross-set migration lossless in both directions; dummy objects know exactly what they stand in for"
+  three_places:   # because tools are careless
+    caveat: "An unknown IFF chunk SHOULD be skipped harmlessly -- VERIFY against the game and common editors -- but a tool that REWRITES the file may drop what it does not recognize"
+    1_custom_chunk: "Machine-readable JSON. The truth."
+    2_string_table_entry: "Short human-readable summary in a chunk type every Sims editor supports -- visible even in tools that know nothing about us; this is what the About box renders"
+    3_sidecar_file: "Beside the object, for tools that never look inside and objects rewritten by something old and grumpy"
+    redundancy: "Any two surviving is enough to reconstruct the third"
+  contents_rules:
+    small: "A snapshot SUMMARY, not a database dump: a few KB, with ids to resolve for the long version. Embedded says LAST KNOWN; online says CURRENT."
+    facts_about_the_object_never_the_person: "No local paths, no usernames, no machine identifiers, nothing about who ran the tool. Downloads folders get shared; a stamp must never leak somebody's home directory."
+  dividend: "Because the stamp is in the file, THE ABOUT BOX WORKS WITH NO NETWORK AT ALL -- it renders from the embedded snapshot, with the scannable link there for the live version"
+
 about_slice_delivery:   # Don, 2026-08-29 -- the registry shows up IN THE GAME
   problem: "A registry nobody reads is a filing cabinet"
   mechanism: "The import transform that builds a Downloads set injects an About action into every object it imports -- first slice, always top"

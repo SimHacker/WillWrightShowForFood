@@ -322,9 +322,57 @@ about_slice:   # Don, 2026-08-29 -- inject metadata into OTHER PEOPLE'S objects 
       Downloads folder becomes a prompt, in context, at the moment somebody is curious. The corpus
       documents itself because the object asks. No cataloging campaign we could run would reach as
       many people as their own game does.
+  the_page_behind_the_link:   # Don, 2026-08-29
+    what: "The About link lands on THAT OBJECT'S PAGE -- a venue, not a record: chat, hints, tutorials, corrections, and CLAIM ATTRIBUTION for work that lost its credit in the repack chain"
+    same_page_type: "The template instance browser -- objects we generated and objects strangers made in 2003 both get one page each, in one system, reachable by scanning the object"
+    backend_github_first:   # Don's call
+      discussion_is_free_and_moderated: "Threads, markdown, image uploads, notifications, search, spam handling, identity -- none of which we build. Discussions suit hints/Q&A; Issues suit corrections."
+      claims_become_reviewable_diffs: |
+        THE REAL WIN. A claim against registry data arrives as a PR or structured issue, gets
+        reviewed, lands as a commit with author, date, signature. PROVENANCE HISTORY IS GIT HISTORY --
+        the right shape for an archival project, and something a form-and-database would reinvent badly.
+      issue_forms_parse_to_registry_data: "Humans fill a friendly form, a bot emits clean YAML. Liberal in, conservative out."
+    limits_named_now:
+      no_github_account_required: "Reading requires nothing. For writing, Soul City is the friendly face and GitHub the ledger: our form takes the submission, a bot files it upstream with the contributor credited. Direct filing still available."
+      it_will_outgrow_this: "Hundreds of thousands of objects on issues in one repo will hurt eventually. Git history is then the migration source of truth, so moving to Postgres costs no provenance. Start where the tooling is free."
+    claims_are_evidence:
+      why: "'I made this' twenty years later needs support: creator cookie, original site plus archive snapshot, an old readme, a forum post, a matching body of work, an account on a defunct fansite"
+      states: [unclaimed, claimed, corroborated, disputed, settled]
+      disputes_stay_disputed: |
+        Two people claiming the same object gets what colliding ids get: DOCUMENT, DO NOT ADJUDICATE.
+        A disputed object says so, shows both claims and both sets of evidence, and waits. We are not
+        a court and pretending otherwise would poison the well.
+      acted_on_without_argument: "A creator who wants their work taken down gets it taken down"
+    the_loop:
+      steps:
+        - "Player finds a mystery object and clicks About"
+        - "The box admits what we do not know and offers a scannable link"
+        - "They land on the object's page and say what they know"
+        - "Curation folds it into the registry entry"
+        - "The next import bakes the answer into the About box, in the game, for everybody"
+      summary: "THE GAME RECRUITS ITS OWN CATALOGERS AND THE CATALOG PAYS THEM BACK IN THE GAME"
+      precedent: "Crowd-cataloging at this scale is well-trodden: MusicBrainz on edit-with-peer-review, Discogs on submissions with community votes, both with dispute processes rather than referees"
+
   reserved_position:
     rule: "Always first, always top -- where the about box has lived in every interface since 1984"
     muscle_memory_objection: "Does not really apply: Sims pie menus already vary slice count by object and state, so there is no fixed geometry to disturb. A reserved slot at a known angle beats angles that happen to be stable."
+    object_manager:   # Don, 2026-08-29 -- "About could open up into a whole object manager! Or have submenus for all kinds of magical things."
+      why_here: "THE SYSTEM SLICE IS THE ONLY GUARANTEED ENTRY POINT ON EVERY OBJECT IN THE GAME -- anything we offer on all objects has exactly one place to live, so About stops being a dialog and becomes a door"
+      ancestor: "The Smalltalk inspector, not a help screen: open any object, see what it is, change it from the same window"
+      groups:   # grouped by verb because a flat list becomes a junk drawer
+        identity: [About, open its page, claim or credit it, view the remap chain, verify the stamp]
+        repair: [fix conflicts, remap into this set, check requirements, restore original numbering, export a clean copy]
+        author: [open in TMog, edit the pie menu tree, edit advertisements, swap media, reskin]
+        life_and_death: [hand to Death, clone, spawn copies, resurrect from a tombstone]
+        housekeeping: [reset, unstick, clear the interaction queue, make invisible, show placeholder, snapshot]
+        social: [publish, share, report a problem, see every instance of this template]
+      housekeeping_note: "That row is where the community's 25 years of cheat-and-fix folklore becomes an ordinary menu on the object that needs it, instead of a console incantation remembered from a forum post"
+      three_channels:   # writing out the runtime limit reveals the architecture has three complete channels
+        tools_to_game: "Bake content into the Downloads set and saves -- content arrives without the game opening a socket"
+        game_to_tools: "A slice the engine cannot execute QUEUES AN INTENT IN THE SAVE FILE; the tools perform it next time they are opened. 'Remap this', 'clean this up', 'clone this thirty times'. The game asks; the tools answer later."
+        game_to_web_through_the_player: "The SoulGlyph -- point a phone at the screen and leave the game entirely"
+        property: "Every arrow is asynchronous and offline-safe. The player never has to be online, and nothing requires the game to know the internet exists."
+      disciplines: ["The system submenu must never crowd out the object's own actions", "Anything destructive snapshots first and stays undoable"]
     system_slice: "About is the first citizen of a SYSTEM SLICE -- our slot on somebody else's object. Family: repair a conflict, remap, export a clean copy, hand it to Death, report a problem."
   inherited_rules:
     never_modify_the_original: "Injection is part of the import transform that builds the Downloads set; originals untouched, unmodified copy always exportable (save-before-mutate discipline)"

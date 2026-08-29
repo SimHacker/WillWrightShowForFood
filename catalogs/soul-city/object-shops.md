@@ -560,6 +560,86 @@ curious. The corpus documents itself because the object asks. No
 cataloging campaign we could run would reach as many people as their
 own game does.
 
+### The page behind the link
+
+The About box's link lands on **that object's page**, and the page is
+a venue, not a record: chat about it, post hints and tutorials,
+correct what we got wrong, and **claim attribution** for work that
+lost its credit somewhere in the repack chain.
+
+This is the same page type as the
+[template instance browser](portals-and-modules.md), which is the
+tidy part: objects we generated and objects strangers made in 2003
+both get one page each, in one system, reachable by scanning the
+object itself.
+
+**GitHub is the backend to start with** (Don's call), and it is a
+better fit than it first sounds:
+
+- **Discussion is free and already moderated.** Threads, markdown,
+  image uploads, notifications, search, spam handling, and identity,
+  none of which we build. Discussions suit hints and Q&A better than
+  Issues do; Issues suit corrections.
+- **An attribution claim becomes a reviewable diff.** This is the
+  real win. A claim against registry data arrives as a pull request
+  or a structured issue, gets reviewed, and lands as a commit with an
+  author, a date, and a signature. **Provenance history is git
+  history** -- exactly the right shape for an archival project, and
+  something a form-and-database would have to reinvent badly.
+- **Structured issue forms parse into registry data.** Humans fill in
+  a friendly form, a bot emits clean YAML. Liberal in, conservative
+  out, which is how the rest of this system already works.
+
+Two limits worth naming now rather than discovering later:
+
+1. **Most Sims players do not have GitHub accounts, and should not
+   need one.** Reading requires nothing. For writing, Soul City is
+   the friendly face and GitHub is the ledger: our form takes the
+   submission, a bot files it upstream with the contributor
+   credited. Anyone who prefers to file directly still can.
+2. **It will outgrow this, and that is fine.** Hundreds of thousands
+   of objects mapped onto issues in one repo will eventually hurt.
+   When it does, git history is the migration source of truth, so
+   moving to Postgres costs no provenance. Start where the tooling is
+   free.
+
+### Claims are evidence, and disputes stay disputed
+
+A claim is not a checkbox, because "I made this" twenty years later
+needs support: the creator cookie, the original site plus its archive
+snapshot, an old readme, a forum post, a matching body of work, an
+account on a defunct fansite. So a claim carries its evidence and
+sits in a visible state: **unclaimed, claimed, corroborated,
+disputed, settled.**
+
+And when two people claim the same object, we do what the registry
+already does with colliding ids: **document, do not adjudicate.**
+[Overlaps are documented, not silently fixed](guid-registry.md), and
+attribution works the same way -- a disputed object says so, shows
+both claims and both sets of evidence, and waits. We are not a court
+and pretending otherwise would poison the well.
+
+One thing we do act on without argument: a creator who wants their
+work taken down gets it taken down.
+
+### The loop this closes
+
+Worth seeing whole, because each piece was designed separately and
+they happen to chain:
+
+1. A player finds a mystery object and clicks **About**.
+2. The box admits what we do not know and offers a scannable link.
+3. They land on the object's page and say what they know.
+4. Curation folds it into the registry entry.
+5. The next import bakes the answer into the About box, in the game,
+   for everybody.
+
+**The game recruits its own catalogers, and the catalog pays them
+back in the game.** No campaign we could run reaches as far, and
+crowd-cataloging at this scale is well-trodden: MusicBrainz built a
+music database on edit-with-peer-review, Discogs on submissions with
+community votes, both with dispute processes rather than referees.
+
 ### Reserved position, and the system slice it starts
 
 Always first, always top, because that is where the about box lives
@@ -573,6 +653,63 @@ About is the first citizen of a **system slice** -- our slot on
 somebody else's object -- and once it exists the family is obvious:
 repair a conflict, remap, export a clean copy, hand it to
 [Death](sims1-soul-bridge.md), report a problem.
+
+### About opens into the object manager
+
+*Don, 2026-08-29: About could open up into a whole object manager, or
+have submenus for all kinds of magical things.*
+
+Which is where it wants to go, for a structural reason: **the system
+slice is the only guaranteed entry point on every object in the
+game.** Anything we want to offer on all objects has exactly one
+place to live, so About stops being a dialog and becomes a door. The
+ancestor is the Smalltalk inspector rather than a help screen: open
+any object, see what it is, and change it from the same window.
+
+The magical things, grouped by verb because a flat list becomes a
+junk drawer:
+
+| Group | Slices |
+|-------|--------|
+| **Identity** | About, open its page, claim or credit it, view the remap chain, verify the [stamp](guid-registry.md) |
+| **Repair** | Fix conflicts, remap into this set, check requirements, restore original numbering, export a clean copy |
+| **Author** | Open in TMog, edit the pie menu tree, edit advertisements, swap media, reskin |
+| **Life and death** | Hand to Death, clone, spawn copies, resurrect from a tombstone |
+| **Housekeeping** | Reset, unstick, clear the interaction queue, make invisible, show placeholder, snapshot |
+| **Social** | Publish, share, report a problem, see every instance of this template |
+
+Housekeeping deserves a note: that row is where the community's
+twenty-five years of cheat-and-fix folklore becomes an ordinary menu
+on the object that needs it, instead of a console incantation
+remembered from a forum post.
+
+### Three channels, and none of them need a networked game
+
+The manager runs into the limit already established for
+[Death](sims1-soul-bridge.md): an in-game slice can only do what the
+engine permits at runtime, while the web tools have full read and
+write. That is not a problem to solve, it is a routing table, and
+writing it out reveals that the architecture has quietly acquired
+three complete channels:
+
+1. **Tools to game.** Bake content into the Downloads set and saves.
+   Content arrives without the game ever opening a socket.
+2. **Game to tools.** A slice that the engine cannot execute
+   **queues an intent in the save file**, and the tools perform it
+   next time they are opened. "Remap this," "clean this up," "clone
+   this thirty times." The game asks; the tools answer later.
+3. **Game to web, through the player.** The
+   [SoulGlyph](#qr-codes-the-return-path-out-of-the-game): point a
+   phone at the screen and leave the game entirely.
+
+Every arrow is asynchronous and offline-safe. The player never has to
+be online to play, and nothing in the loop requires the game to know
+the internet exists.
+
+Two disciplines to hold, both inherited: the system submenu must
+never crowd out the object's own actions, and anything destructive
+snapshots first and stays undoable. Slice budgets and menu craft are
+the author's department, and that author invented these menus.
 
 Two rules, both inherited:
 
