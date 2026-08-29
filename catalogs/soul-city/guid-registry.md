@@ -177,6 +177,47 @@ invisible" and "show placeholder" are exactly the kind of toggle the
 invisible dummies still loads, still plays, and still tells you what
 is missing when you ask it.
 
+### A dummy can display as its own QR code
+
+*Don, 2026-08-29.* Third presentation mode, and the best one: the
+proxy renders as a
+**[SoulGlyph](object-shops.md) pointing at the page for the object
+that should be there.** Point a phone at the hole in the lot and
+arrive at the thing you are missing.
+
+This inverts the oldest annoyance in Sims custom content. Downloading
+somebody's lot has always meant discovering you lack forty-seven
+objects, with no good way to find out which. Now **every gap is a
+self-service install link**, and a broken lot is a shopping list that
+explains itself.
+
+Four reasons this is the cleanest case for an in-world code:
+
+- **We own the geometry.** A dummy is our object, so it can be shaped
+  for scanning rather than shaped like furniture: flat,
+  screen-aligned, quiet zone intact. The
+  [reliability worries](object-shops.md) about in-world codes are
+  mostly worries about somebody else's sprite.
+- **Bigger missing object, bigger code.** The dummy knows the
+  footprint it is standing in, so a large absence gets a large panel,
+  which means more pixels per module and an easier scan.
+- **No rights question whatsoever.** Nothing here is official art. We
+  are rendering a code we generated in place of an object nobody has.
+- **The payload already exists.** The provenance stamp records what
+  the dummy stands in for, so the code is just that resolvable id.
+
+Two practical rules. **One code for the lot, too:** scanning
+forty-seven glyphs is not a plan, so a lot with dummies also offers a
+single manifest code that installs everything missing at once, with
+the per-object codes there for people who want to choose. And the
+manifest is a **list of ids, not content** -- the same recipe
+discipline as everywhere else.
+
+Screenshots do the rest. A picture of a lot studded with glyphs *is*
+a manifest: post it, stream it, clip it, and anyone watching can scan
+the exact objects out of the image. The failure state advertises its
+own cure.
+
 The direction to hold on to: **full virtualization of game data.**
 Not this month, but every design decision should stay compatible with
 it.
