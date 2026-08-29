@@ -233,6 +233,49 @@ radio_simulator:   # Don, 2026-08-29 -- the natural top-of-ladder project; why t
     ADVERTISEMENT in the full behavioral sense, broadcast into the room, scored by everyone who
     hears it, acted on by the susceptible. Authoring a commercial IS authoring an argument aimed at
     your Sims' desires -- the mechanism, not a joke about it.
+  podcasts:   # Don, 2026-08-29 -- "export podcast list to sims radio object, several podcasts on the same radio"
+    the_import_is_a_file_open_dialog: |
+      PODCAST APPS EXPORT SUBSCRIPTION LISTS AS OPML -- Apple Podcasts, Pocket Casts, Overcast,
+      AntennaPod, all of them, because sharing subscription lists was the point of the format. Not a
+      scraping project.
+    mapping:
+      opml_subscription_list: "The dial: one station per show"
+      rss_feed: "A station's schedule"
+      episode_enclosures: "The segments"
+      chapters: "Segment boundaries inside a long episode (Podcasting 2.0 JSON, or ID3 chapters)"
+      transcripts: "podcast:transcript -> subtitle popups, search, and mood tagging"
+    several_on_one_dial: "The pie menu tree becomes the tuner -- no new mechanism"
+    first_genuinely_shareable_catalog: |
+      The format/catalog split said the records stay home -- but a PODCAST catalog IS A LIST OF URLS,
+      and feed URLs are made to be passed around. Sharing a podcast station = an OPML file plus a
+      schedule; the downloader's tool fetches the episodes itself. Nothing encumbered moves between
+      players.
+    fetch_client_side_from_the_publisher:
+      rule: "Fetch audio client-side from the publisher's own feed, NEVER through us"
+      why_not_just_legal: |
+        Hosting somebody's show is redistribution, but the direct fetch is also the RIGHT thing: the
+        publisher gets the download, the analytics, and the subscriber. A proxy would quietly steal
+        all three. Podcasters have reason to LIKE this rather than tolerate it.
+    freshness_is_the_1999_dream:
+      mechanism: "Refresh: re-fetch latest episodes, re-bake, write into the Downloads set (guid-registry.yml)"
+      payoff: "Open the tools on Sunday and your Sims radio has this week's shows"
+      simradio: "Exactly what SimRadio wanted servers for -- fresh programming instead of insane loops -- with NO NETWORKED GAME AT ALL"
+      monetization: "An honest recurring reason to open the tools: scheduled refresh + transcoding as a paid service (membership-model.md). Bake stays free and local; the convenience is the product; no content is ever sold."
+    long_form_fits:
+      time_scale: "A Sims day is roughly 24 real minutes at normal speed (calibration constant -- verify against the build), so an hour episode spans ~2.5 Sim days"
+      chapters: "Clean segment boundaries where a show publishes them"
+      better_answer: "Leave episodes whole and let the station keep its virtual playhead -- DEAD RECKONING TURNS LONG-FORM INTO REAL RADIO: tune in mid-sentence, the show was already going without you"
+    better_than_the_podcast_part:
+      talk_radio_in_the_dollhouse: "MOODY's SimDJ slot has been empty since 1999; the world now produces effectively infinite free talk audio, so the slot fills itself and motive consequences are already authorable"
+      transcripts_compile_to_mood: |
+        A show that ships a transcript can have its moody envelopes GENERATED from its own content
+        instead of hand-authored -- a legitimate AI feature, not a decorative one. Subtitle popups
+        come free, which is accessibility arriving through the side door.
+    soulglyph_closes_the_loop: |
+      Put a SoulGlyph on the radio pointing at the current show: SCAN YOUR SIMS RADIO, SUBSCRIBE ON
+      YOUR PHONE. In-game listening becomes real-world subscription, linking is always clean, and the
+      podcaster gains a listener out of somebody's dollhouse.
+
   format_vs_catalog:   # why stations are shareable even when music is not
     format: "Schedule, rotation rules, patter, jingles, show structure -- authored structure plus your own voice, so it travels clean"
     catalog: "The records -- encumbered music stays a local-only pleasure, exactly as designed"

@@ -399,6 +399,89 @@ in. Every instance is personal; the format is the shareable artifact.
 Radio formats have been syndicated that way for a century, and it
 happens to be the only version of this that is rights-clean.
 
+### Podcasts: OPML in, several shows on one dial
+
+*Don, 2026-08-29. Export your podcast list to a Sims radio object,
+several podcasts on the same radio.*
+
+This is the case where every constraint above relaxes at once, and it
+starts with a file format that already exists. **Podcast apps export
+subscription lists as OPML** -- Apple Podcasts, Pocket Casts,
+Overcast, AntennaPod, all of them, because sharing subscription lists
+was the point of the format. So the import is not a scraping project,
+it is a file open dialog.
+
+The mapping writes itself:
+
+| Podcast side | Radio side |
+|--------------|-----------|
+| OPML subscription list | The dial: one station per show |
+| RSS feed | A station's schedule |
+| Episode enclosures | The segments |
+| Chapters (Podcasting 2.0 JSON, or ID3) | Segment boundaries inside a long episode |
+| Transcripts (`podcast:transcript`) | Subtitle popups, search, and mood tagging |
+
+Several podcasts on one radio is then just the pie menu doing what it
+already does: the tree becomes the tuner.
+
+**Podcast stations are the first genuinely shareable catalog.** The
+[format/catalog split](#format-and-catalog-why-stations-are-shareable-even-when-music-isnt)
+said the records stay home -- but a podcast catalog *is a list of
+URLs*, and feed URLs are made to be passed around. So sharing a
+podcast station means sharing an OPML file plus a schedule, and the
+downloader's tool fetches the episodes itself. Nothing encumbered
+ever moves between players.
+
+That also settles where the audio comes from: **fetch it client-side
+from the publisher's own feed, never through us.** Not only because
+hosting somebody's show is redistribution, but because the direct
+fetch is the *right* thing: the publisher gets the download, the
+analytics, and the subscriber. A proxy would quietly steal all three.
+This makes the feature something podcasters have reason to like
+rather than tolerate.
+
+**Freshness is the whole trick, and it is the 1999 dream.** Podcasts
+update, baked audio goes stale, so the tool grows a refresh: re-fetch
+the latest episodes, re-bake, write into the
+[Downloads set](guid-registry.md). Open the tools on Sunday and your
+Sims radio has this week's shows. That is precisely what SimRadio
+wanted servers for -- fresh programming instead of the same loops
+driving players insane -- delivered with **no networked game at
+all**. It is also an honest recurring reason to open the tools, which
+makes scheduled refresh and transcoding a plausible
+[paid service](membership-model.md): the bake stays free and local,
+the convenience is the product, and no content is ever sold.
+
+**Long-form fits better than it should.** A Sims day runs roughly 24
+real minutes at normal speed (calibration constant, verify against
+the build), so an hour-long episode spans two and a half Sim days.
+Chapters give clean segment boundaries where a show publishes them,
+but the more interesting answer is to leave episodes whole and let
+the station keep its virtual playhead: **dead reckoning turns
+long-form into real radio**, where you tune in mid-sentence and the
+show was already going without you.
+
+Two things fall out that are better than the podcast part:
+
+- **Talk radio in the dollhouse, finally.** MOODY's SimDJ slot has
+  been empty since 1999. The world now produces an effectively
+  infinite supply of free talk audio, so the slot fills itself, and
+  the motive consequences are already authorable.
+- **Transcripts are a mood track waiting to be compiled.** A show
+  that ships a transcript can have its
+  [moody envelopes](#moody-jukebox-the-flagship-of-the-ad-editor)
+  generated from its own content instead of hand-authored, which is a
+  legitimate AI feature rather than a decorative one. It also gives
+  subtitle popups for free, which is accessibility arriving through
+  the side door.
+
+And the return path closes the loop in the most satisfying possible
+place: put a [SoulGlyph](#qr-codes-the-return-path-out-of-the-game)
+on the radio pointing at the current show. **Scan your Sims radio,
+subscribe to the podcast on your phone.** In-game listening becomes
+real-world subscription, linking is always clean, and the podcaster
+gets a new listener out of somebody's dollhouse.
+
 ## QR codes: the return path out of the game
 
 *Don, 2026-08-29. Named: a **SoulGlyph** is the mechanism, which
