@@ -65,14 +65,24 @@ virtualized_ids:   # the key move (Don, 2026-08-29)
   principle: "Object ids are virtualized PER SAVE FILE — global uniqueness was never actually required"
   registry_holds: "Global truth about identity and provenance"
   save_holds: "Its own mapping table from registry identity to that save's local id space"
+  scope_clarification: |
+    "Save file" INCLUDES the Downloads directory (Don, 2026-08-29) — that is where the local id
+    space actually lives. Installed custom objects DEFINE the numbers; neighborhoods and lots only
+    REFERENCE them. So the unit is the CLOSURE: install + Downloads + every neighborhood and save,
+    remapped together as one transaction. We have read/write over all of it, so it can be atomic —
+    the same supernatural access the web reaper has (sims1-soul-bridge.yml), aimed at identity.
+  closure: [install, downloads_directory, neighborhoods, saves, lots]
   consequences:
-    - "Two globally colliding objects can both be installed in the same save under different local ids"
+    - "Two globally colliding objects can both be installed in the same game under different local ids"
     - |
-      A save and its installed objects must be remapped TOGETHER and consistently; remapping an
-      object already placed in existing saves without updating those saves breaks them.
-      Per-save mapping is what makes that safe.
+      The closure is remapped TOGETHER and consistently; rewriting saves without Downloads (or
+      Downloads without the saves that point into it) breaks the game.
+    - |
+      Downloads sets can be PER NEIGHBORHOOD: swappable content profiles, each with its own id
+      space. One global identity can wear different local ids in different neighborhoods, and the
+      16-bit per-cookie ceiling stops being a global budget — it only has to fit one neighborhood.
     - "Registry identity never changes no matter how many local ids it wears — credit attaches to identity, not to a free number"
-    - "Save-before-mutate, always, with operator consent"
+    - "Save-before-mutate, always, with operator consent — snapshot the whole closure, not just the touched file"
 
 lineage:
   request_2004: |

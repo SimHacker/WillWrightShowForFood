@@ -88,7 +88,7 @@ graph the existing analysis plan calls for (scan every object's code
 for GUID references, build the edges, keep coherent families
 together) is the prerequisite, not an optimization.
 
-## Virtualized ids, per save file
+## Virtualized ids, per save file -- Downloads included
 
 The key move: **object ids are virtualized per save file.** Global
 uniqueness was never actually required -- ids only need to be unique
@@ -97,18 +97,36 @@ about identity and provenance, and each save file gets its own
 mapping table from registry identity to the local id space that save
 uses.
 
+And **"save file" includes the Downloads directory** (Don,
+2026-08-29), because that is where the local id space actually lives:
+the installed custom objects DEFINE the numbers, the neighborhoods
+and lots merely REFERENCE them. A remap that rewrote saves without
+rewriting Downloads, or vice versa, would be a broken game. So the
+real unit is the closure: **install + Downloads + every neighborhood
+and save, remapped together as one transaction.** We have read/write
+access to all of it, so we can do that atomically -- the same
+supernatural access the [web reaper](sims1-soul-bridge.md) has, aimed
+at identity instead of mortality.
+
 Consequences worth stating plainly:
 
 - Two objects that collide globally can both be installed, in the
-  same save, under different local ids.
-- A save and its installed objects must be remapped **together and
-  consistently**; remapping an object already placed in existing
-  saves without updating those saves breaks them. Per-save mapping is
-  what makes that safe.
+  same game, under different local ids.
+- The closure is remapped **together and consistently**; remapping an
+  object already placed in existing saves without updating those
+  saves (or updating Downloads without the saves that point into it)
+  breaks them.
+- Because the mapping is ours and the whole closure is rewritable,
+  **Downloads sets can be per neighborhood**: swappable content
+  profiles, each with its own id space. One global identity can wear
+  different local ids in different neighborhoods, and the 16-bit
+  per-cookie ceiling stops being a global budget -- it only has to
+  fit one neighborhood at a time.
 - An object's identity in the registry never changes, no matter how
   many local ids it wears. Credit is attached to identity, not to a
   number that happens to be free.
-- Save-before-mutate, always, with operator consent.
+- Save-before-mutate, always, with operator consent. Snapshot the
+  whole closure, not just the file being touched.
 
 ## Lineage: this is a 22-year-old request
 
