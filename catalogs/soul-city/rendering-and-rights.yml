@@ -44,6 +44,23 @@ architecture:   # split the layers and the question mostly dissolves
     where: "Server, creator's choice, credited"
     why: "Creator's own work; EA mods policy already allows free distribution"
 
+glyph_fallback_renderer:   # Don, 2026-08-29 -- what a non-owner sees
+  principle: "ANYTHING WE CANNOT DRAW RENDERS AS A SOULGLYPH INSTEAD, and the code carries the REASON"
+  turns_policy_into_behavior: "The missing piece of the design -- a policy paragraph becomes a product behavior"
+  reasons:
+    needs_game: "This is official Maxis content. It renders from your own install. Here is where to get the game."
+    needs_permission: "You have the game; the browser needs access to your Downloads and save folders. Here is how, and exactly what we read and write."
+    missing_content: "Somebody's custom object belongs here and you do not have it yet. Install it."
+    unknown_object: "We have never identified this one. Do you know what it is?"
+  no_blank_boxes: "One mechanism, four causes. A shared lot opened by a non-owner does not fail -- it comes up as a BLUEPRINT STUDDED WITH SCANNABLE CODES, honest about what it withholds and specific about the fix."
+  what_this_gets_right:
+    rights_posture_becomes_self_evident: "We never host official art, and the reason is visible in the product at the moment it bites rather than buried in a policy page. Where the art would be, a code says YOUR COPY OF THE GAME DRAWS THIS."
+    two_different_problems: "needs-game and needs-permission are NOT the same. Telling someone who already owns the game to go buy it loses a user for good. The permission page is also the right place to be precise about scope: which directories, read or write, revocable whenever."
+  real_constraint:
+    browser_directory_access_is_not_universal: "The File System Access API is a Chromium feature -- Safari and Firefox users cannot grant folder permission at all"
+    consequence: "One of the concrete reasons SoulAngel exists as a Windows and Mac app; on those browsers needs-permission routes to the app rather than pretending a prompt is coming"
+  not_a_paywall: "Metadata travels freely (rule 4) -- a non-owner can browse, search, read, and discuss every object in the game. The glyph is an honest statement that a particular PIXEL needs a particular LICENSE."
+
 install_requirement:
   what: "Advanced dynamic house rendering, editors, and scene composition need a real purchased install"
   framing: |

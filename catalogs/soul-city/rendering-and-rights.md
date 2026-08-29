@@ -72,6 +72,57 @@ built for the turnstile
 ([steam-app-strategy.md](steam-app-strategy.md)). It does double duty
 here as the license-hygiene gate.
 
+### What a non-owner sees: the glyph is the fallback renderer
+
+*Don, 2026-08-29: without the game installed, official content
+renders as QR codes, leading to a page carrying a "you need the game,
+and you need to grant file access" flag.*
+
+This is the missing piece of the whole design, and it turns a policy
+paragraph into a product behavior. **Anything we cannot draw renders
+as a [SoulGlyph](object-shops.md) instead**, and the code carries the
+reason:
+
+| Reason | What the page says |
+|--------|--------------------|
+| `needs-game` | This is official Maxis content. It renders from your own install. Here is where to get the game. |
+| `needs-permission` | You have the game; the browser needs access to your Downloads and save folders. Here is how, and here is exactly what we read and write. |
+| `missing-content` | Somebody's custom object belongs here and you do not have it yet. Install it. |
+| `unknown-object` | We have never identified this one. Do you know what it is? |
+
+One mechanism, four causes, and no blank boxes anywhere. A shared lot
+opened by somebody who does not own the game does not fail -- it
+comes up as a **blueprint studded with scannable codes**, honest
+about what it is withholding and specific about how to fix it.
+
+Two things this gets right that a paywall message would not:
+
+- **The rights posture becomes self-evident.** We never host official
+  art, and the reason is visible in the product at the exact moment
+  it bites, rather than buried in a page like this one. Where the art
+  would be, there is a code that says *your copy of the game draws
+  this*.
+- **`needs-game` and `needs-permission` are genuinely different
+  problems.** Telling someone who already owns the game to go buy the
+  game is the kind of mistake that loses a user for good. The flag
+  keeps them separate, and the permission page is the right place to
+  be precise about scope: which directories, read or write, and
+  revocable whenever.
+
+Worth naming a real constraint here: **browser directory access is
+not universal.** The File System Access API is a Chromium feature, so
+Safari and Firefox users cannot grant folder permission at all, which
+is one of the concrete reasons [SoulAngel](soul-angel.md) exists as a
+Windows and Mac app. On those browsers the `needs-permission` page
+should route to the app rather than pretend a permission prompt is
+coming.
+
+And the catalog stays complete for everyone regardless, because
+metadata travels freely (rule 4). A non-owner can browse, search,
+read, and discuss every object in the game. The glyph is not a
+paywall on information; it is an honest statement that a particular
+*pixel* needs a particular *license*.
+
 ## The gray area, resolved
 
 You named it precisely: composed scenes read as screenshots;

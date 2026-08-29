@@ -147,6 +147,23 @@ save_scope:   # the rule that makes the model sound
     round_trip: |
       Migrate a save to a poorer set and home again, and the real objects come back because the
       dummies remembered their places.
+    glyph_mode:   # Don, 2026-08-29 -- third presentation mode, and the best one
+      what: "The proxy renders as a SoulGlyph pointing at the page for the object that should be there -- point a phone at the hole in the lot and arrive at what you are missing"
+      inverts_the_oldest_annoyance: |
+        Downloading somebody's lot has always meant discovering you lack forty-seven objects with no
+        good way to find out which. Now EVERY GAP IS A SELF-SERVICE INSTALL LINK and a broken lot is a
+        shopping list that explains itself.
+      cleanest_case_for_an_in_world_code:
+        we_own_the_geometry: "A dummy is OUR object, so it can be shaped for scanning rather than like furniture: flat, screen-aligned, quiet zone intact. In-world reliability worries are mostly worries about somebody else's sprite."
+        bigger_absence_bigger_code: "The dummy knows the footprint it stands in, so a large absence gets a large panel -- more pixels per module, easier scan"
+        no_rights_question: "Nothing here is official art -- we render a code we generated in place of an object nobody has"
+        payload_already_exists: "The provenance stamp records what the dummy stands in for, so the code is just that resolvable id"
+      practical_rules:
+        one_code_for_the_lot: "Scanning forty-seven glyphs is not a plan -- a lot with dummies also offers a single MANIFEST code that installs everything missing at once, with per-object codes for people who want to choose"
+        manifest_is_ids_not_content: "Same recipe discipline as everywhere else"
+      screenshots_do_the_rest: |
+        A picture of a lot studded with glyphs IS a manifest: post it, stream it, clip it, and anyone
+        watching can scan the exact objects out of the image. The failure state advertises its own cure.
     presentation: |
       Invisible or an obvious placeholder — a pie menu action away in either direction.
       "Make invisible" / "show placeholder" is exactly what the action editor generates
