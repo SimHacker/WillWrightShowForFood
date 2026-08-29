@@ -1,0 +1,103 @@
+# The GUID registry + remapper — TMog module and Soul City service (Don, 2026-08-29)
+# Prose spec: guid-registry.md. Lineage: the 2004 Transmogrifier renovation plan asked for
+# "The Sims File Cop rules, checks and conventions" — 22 years later the browser can do it.
+
+meta:
+  id: guid-registry
+  type: module_and_service
+  status: spec
+  one_line: "Index every object id and Magic Cookie registration, document overlaps, remap ids so any objects coexist — creator attribution preserved."
+  playful_name: "Sims File Cop on shrooms"
+
+guid_anatomy:   # why suffix-only renumbering preserves credit
+  bits: 32
+  high_16: "Magic Cookie — the producer (person or org), honor-system registered at thesimstransmogrifier.com"
+  low_16: "Suffix — which object that producer made (originally random)"
+  design_consequence: |
+    Renumber the LOW half and keep the cookie: a remapped object still says who made it.
+    Attribution survives the collision fix.
+  registry_rules_2004:
+    - "65535 cookies; each allows fewer than 65536 unique objects"
+    - "Maxis-published object ids are RESERVED regardless of cookie field"
+    - "Cookie hoarders banned, cookies recycled"
+    - "Transmogrifier clone dialog defaulted the cookie to 0 when unset — a large unknown tier"
+  source: ../../characters/will-wright/sources/2004-transmogrifier-magic-cookie-registry/README.md
+
+id_space_tiers:
+  official_maxis:
+    what: "Base game + every expansion — immutable anchors, reserved regardless of cookie field"
+    policy: "NEVER renumbered; conflicts resolve around them"
+    deliverable: "Complete catalog of official objects — also the test that no UGC overlaps it"
+  registered_cookies:
+    what: "Producers who signed up 2000-2004"
+    seed: "Don has the old registration database — becomes the index seed and historical record"
+  unregistered_unknown:
+    what: "Cookie 0, hand-hacked ids, tools that ignored the convention, 26 years of drift"
+    note: "Where the interesting damage lives"
+  newly_issued:
+    what: "Ids we allocate now, in space the index shows is free"
+
+overlaps:
+  stance: "Documented, not silently fixed"
+  object_clashes: "Same 32-bit id, different objects — classified exact-duplicate / near-duplicate / hard-conflict"
+  creator_clashes: |
+    Two producers using the same 16-bit cookie — the honor system was an honor system.
+    A cookie is EVIDENCE of a creator, not proof. Keep the ambiguity on the record.
+  provenance_per_record: [source_file, root, archive, siblings_shipped_alongside]
+  knowledge_model: |
+    Incremental and cumulative: scan a new archive, learn more, publish the delta. Nobody has
+    ever had a complete map of this space; building one is worth doing for its own sake.
+
+remapper:
+  what: "TMog module in SoulAngel — pick any set of objects, however conflicting, get an installable set with unique ids"
+  policy_order:
+    1: "Never renumber an official Maxis object"
+    2: "Renumber the SUFFIX only, keep the cookie — creator stays legible"
+    3: "Stay close to the original: prefer the nearest free suffix, so ids remain recognizable"
+    4: "If the cookie itself is contested, keep it and record the ambiguity — do not launder it"
+  hard_part: |
+    Not the number — the REFERENCES. SimAntics code, other objects, and save files point at GUIDs.
+    A remap that misses a reference breaks the object. The whole-library reference graph
+    (scan every object's code for GUID refs, build edges, keep coherent families together) is a
+    PREREQUISITE, not an optimization.
+
+virtualized_ids:   # the key move (Don, 2026-08-29)
+  principle: "Object ids are virtualized PER SAVE FILE — global uniqueness was never actually required"
+  registry_holds: "Global truth about identity and provenance"
+  save_holds: "Its own mapping table from registry identity to that save's local id space"
+  consequences:
+    - "Two globally colliding objects can both be installed in the same save under different local ids"
+    - |
+      A save and its installed objects must be remapped TOGETHER and consistently; remapping an
+      object already placed in existing saves without updating those saves breaks them.
+      Per-save mapping is what makes that safe.
+    - "Registry identity never changes no matter how many local ids it wears — credit attaches to identity, not to a free number"
+    - "Save-before-mutate, always, with operator consent"
+
+lineage:
+  request_2004: |
+    From Don's own Transmogrifier renovation plan, user-requested features: "Incorporate The Sims
+    File Cop rules, checks and conventions from managing objects and verifying validity. Detect,
+    repair and prevent conflicts and crashes." Same document requested object preview export and
+    the statue renderer now spec'd as Stat-U-Matic.
+  source: ../../characters/will-wright/sources/2004-02-05-transmogrifier-renovation-plan/README.md
+  existing_groundwork:
+    collision_analysis: "TMog suite collision layer (carried from SimObliterator) — intake, exact grouping, near-match clustering, classification; ANALYSIS ONLY, never mutates"
+    catalog_storage: ../../apps/soul-angel/windows/CATALOG-DB-SCHEMA.yml   # objects, guid_references, guid_collision_cases, creators
+    public_triage: ../../apps/soul-angel/windows/GUID-ISSUE-HUB.yml        # one issue per GUID or cluster
+  what_this_adds:
+    - "The registry as a first-class PUBLISHED artifact (official catalog + cookie registrations + observed ids)"
+    - "The remapper as a shipping module"
+    - "Per-save virtualization as the policy that makes arbitrary combination safe"
+
+monetization:
+  free: "Local scans and remaps of your own folders — like every other local TMog operation"
+  metered: "Hosted registry side: continuous Downloads-folder monitoring, catalog-wide bulk ops, the published index"
+  spec: membership-model.md
+
+see_also:
+  - portals-and-modules.md
+  - sims1-soul-bridge.yml
+  - soul-angel.yml
+  - browser-ecosystem.yml
+  - ../sims-open-source-and-formats.yml   # file_cop entry

@@ -64,7 +64,7 @@ format_notes:   # publicly documented on the wikis above; summarized for orienta
 
 why_this_matters:
   soul_mover: "IFF/FAR/DBPF + OBJD/BHAV are exactly what SimObliterator reads/writes — the substrate the character import/export stands on."
-  file_cop: "SimAntics/BHAV + OBJD/GUID knowledge powers the content 'file cop': detect missing objects + broken user-created content, repair, and locate catalog sources."
+  file_cop: "SimAntics/BHAV + OBJD/GUID knowledge powers the content 'file cop': detect missing objects + broken user-created content, repair, and locate catalog sources. Full spec: soul-city/guid-registry.yml (registry index, suffix-only remap, per-save id virtualization)."
   ip_hygiene: |
     Community reverse-engineering + open documentation are the KNOWLEDGE base; WWSFF reimplements in
     its own TypeScript with credit. Cite sources; ship no copyrighted assets; require users bring their

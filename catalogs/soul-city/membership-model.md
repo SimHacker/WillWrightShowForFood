@@ -118,7 +118,7 @@ players feel they are paying for something real.
 | Cellular automata generators | Living patterns for rugs, walls, animated objects (fireplaces, TVs, lava lamps, fish tanks) | Rug-O-Matic, CAM-6 lineage |
 | Mesh generation | Text/image -> 3D -> game skeleton | TMog mesh tools |
 | Batch operations | One object free, a catalog's worth metered: bulk recolor, bulk repair, bulk re-credit | TMog proper |
-| Registry services | GUID conflict scans of your Downloads folder: occasional free, continuous monitoring paid | Magic Cookie registry reborn |
+| Registry services | GUID conflict scans of your Downloads folder: occasional free, continuous monitoring paid ([guid-registry.md](guid-registry.md)) | Magic Cookie registry reborn |
 | Album and video production | Narrated album -> rendered video (TTS, DVR compositing, machinima export) | SoulAngel, ShowNTell |
 | Hosted AI assist | Chatting with God with our keys metered; bring your own key free | sims1 Soul Bridge |
 | Restoration | Repair corrupted saves and broken legacy downloads; resurrect dead-link content | TMog save layer |
