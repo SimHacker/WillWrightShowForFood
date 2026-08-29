@@ -60,6 +60,14 @@ the second one no harder than the first.
 
 ## Moody Jukebox: the flagship of the ad editor
 
+*This shop is the implementation of an existing design. Canonical
+spec: [MOODY.md](https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md)
+("A moody jukebox for The Sims 1, in SimAntics") -- proposed to the
+Maxis team as SimRadio on February 18, 1999, with the moody track as
+its emotional payload. Show seed:
+[Moody -- MIDI for Mood](../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml).
+What follows is the shop and its authoring tool, not a new design.*
+
 The jukebox is the demo that teaches the whole system, because it
 exercises every part of it at once. Load your own tracks, then answer
 three questions about each one.
@@ -83,27 +91,60 @@ consequence is a consequence.
 
 **What happens while it plays?** **Moody timelines.** Schedule
 effects along the track: the chorus hits and the mood jumps, the
-bridge drops and the Sim slows down. Which needs an honest engineering
-note, and you already named it:
+bridge drops and the Sim slows down. In MOODY terms these are
+`(time, tag, heat)` envelopes -- the mood swing literally is an
+envelope -- and the conditions above are the same parameter bus read
+from the other end.
 
-> Dead reckoning audio time, assuming normal play speed.
+Synchronization by **dead reckoning audio time, assuming normal play
+speed**, exactly as you framed it: MOODY calls this *hot dogging it*,
+open loop, and works through why it is respectable navigation anyway
+(t=0 is anchored to the tick that issued the play call; ticks convert
+to seconds by calibration; resync is free at every track boundary
+because the jukebox controls when songs start; and emotional weather
+is forgiving in a way lip-sync is not, so quantizing envelopes to
+coarse sections means dead reckoning never misses by a section).
 
-The game will not tell us where the playhead is, so the timeline is
-open loop: note when the track started, count forward, and compute
-the position. That works precisely as long as nothing moves the
-goalposts. What moves them is **game speed** -- audio runs in real
-seconds while sim time can run at 2x or 3x, so a timeline authored in
-audio time drifts against a game running fast. Practical answers:
-keep the schedule in audio seconds, notice speed changes, and resync
-at the events we do know for certain (track start, loop boundary,
-track change, lot load). Drift between resyncs is a design
-constraint, not a bug to hide: author timelines with a little slack
-and they stay musical.
+One correction to something I said earlier: **game speed is invisible
+from inside SimAntics** -- ticks are the only clock, so all speeds
+feel identical from within, and the object cannot notice a speed
+change. That is what makes the drift structural rather than
+detectable in-object. The web side has full save access and can
+calibrate, and the reimplementations (FreeSO, Simitone) can grow a
+real audio-position primitive and close the loop properly.
 
 Then the shop tool: an **advanced moody timeline and audio editor**
 -- waveform, markers, and the condition/consequence editors side by
 side, so scoring your own game is a visual task instead of a
-programming one.
+programming one. This is the companion authoring tool MOODY.md
+describes in the Transmogrifier lineage: pick tracks, author their
+envelopes, and the tool bakes them into the generated object's
+behavior data.
+
+### The blue note
+
+The fun moody action, and it is already canon. MOODY.md's degenerate
+case: the legendary **brown note** is, in this schema, just a tag
+whose constraint binds not to a mood but to the **bladder motive at
+max gain** -- media driving physiology, skipping the heart entirely.
+The Sims localizes it as **the blue note**, because Sims pee blue
+puddles: the game collapses all bodily catastrophe into one
+blue-puddled bladder motive, so the note comes out the color of the
+puddle. It is also the bent, flatted tone that makes the blues the
+blues, which is exactly the register of a Sim standing in a puddle
+with both hands on their head.
+
+MythBusters busted the note in the real world. In a microworld it
+works every time, which is why the **prank subwoofer** with a
+BLUE-NOTE parameter track is a legitimate plug-in object -- and why
+**the diaper is a buff that disables exactly one binding.**
+
+The point under the joke is the reason the ad editor is general:
+**the moody track is a parameter bus, not a mood system.** Mood was
+just the first thing worth broadcasting on it. Any plugin that can
+write a motive can be scheduled on a timeline and advertised on a
+condition, which is why "play when you gotta pee" and "make you need
+to pee" are the same machinery pointed in opposite directions.
 
 This is also the clearest argument for the ad editor existing at all.
 A jukebox that plays your songs is nice. A jukebox that knows your

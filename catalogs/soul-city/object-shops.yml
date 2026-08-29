@@ -15,6 +15,12 @@ shops:   # each = one template + a generator + a storefront; open list by constr
     container: "Music player"
     fill_with: "Your own tracks — the most requested thing in the game's history, and it was always just a file list"
     moody_jukebox:   # Don, 2026-08-29 — the flagship demo of the ad editor
+      canonical_design: https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md   # "A moody jukebox for The Sims 1, in SimAntics"
+      lineage: |
+        NOT a new design — the implementation of one. Proposed to the Maxis team as SimRadio on
+        1999-02-18 with the moody track as its emotional payload; MOODY.md is the canonical spec.
+        This entry covers the shop and its authoring tool.
+      show_seed: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml
       why_flagship: "Exercises every part of the system at once: advertisement conditions, consequences, timelines"
       when_does_it_call_you:
         what: "Conditions on the ADVERTISEMENT, written against motives the game already tracks"
@@ -37,12 +43,37 @@ shops:   # each = one template + a generator + a storefront; open list by constr
           started, count forward, compute position. What moves the goalposts is GAME SPEED — audio
           runs in real seconds while sim time can run 2x or 3x, so a timeline authored in audio
           time drifts against a fast-running game.
+        moody_terms: "(time, tag, heat) envelopes — the mood swing literally IS an envelope; conditions read the same parameter bus from the other end"
+        correction: |
+          GAME SPEED IS INVISIBLE FROM INSIDE SIMANTICS — ticks are the only clock, so all speeds
+          feel identical from within and the object CANNOT notice a speed change. The drift is
+          structural, not detectable in-object. (Corrects an earlier note that said otherwise.)
         mitigations:
-          - "Keep the schedule in audio seconds"
-          - "Notice speed changes"
-          - "Resync at events we know for certain: track start, loop boundary, track change, lot load"
-          - "Author with slack — drift between resyncs is a design constraint, not a bug to hide"
+          - "t=0 is anchored to the tick that issued the play call"
+          - "Ticks convert to seconds by calibration (MOODY.md ships measured constants)"
+          - "Resync is free at every track boundary — the jukebox controls when songs start"
+          - "Quantize envelopes to coarse sections (intro, verse, chorus, drop) — dead reckoning never misses by a section"
+          - "Emotional weather is forgiving in a way lip-sync is not"
+          - "Web side has full save access and can calibrate; FreeSO/Simitone can grow a real audio-position primitive and close the loop"
       shop_tool: "Advanced moody timeline + audio editor — waveform, markers, condition/consequence editors side by side; scoring your game is a visual task, not a programming one"
+      blue_note:   # Don, 2026-08-29: "One fun moody action is the blue note! ;)" — already canon in MOODY.md
+        what: |
+          The legendary BROWN NOTE, in this schema, is just a tag whose constraint binds not to a
+          mood but to the BLADDER MOTIVE AT MAX GAIN — media driving physiology, skipping the heart.
+        localization: |
+          The Sims localizes it as THE BLUE NOTE: Sims pee blue puddles, the game collapses all
+          bodily catastrophe into one blue-puddled bladder motive, so the note comes out the color
+          of the puddle. Also the bent, flatted tone that makes the blues the blues — exactly the
+          register of a Sim standing in a puddle with both hands on their head.
+        artifacts:
+          prank_subwoofer: "A legitimate plug-in object with a BLUE-NOTE parameter track"
+          diaper: "A buff that disables exactly one binding"
+        real_world: "MythBusters busted the note; in a microworld it works every time"
+        point_under_the_joke: |
+          The moody track is a PARAMETER BUS, not a mood system. Mood was just the first thing worth
+          broadcasting on it. Any plugin that can write a motive can be scheduled on a timeline and
+          advertised on a condition — which is why "play when you gotta pee" and "make you need to
+          pee" are the same machinery pointed in opposite directions.
       the_argument: |
         A jukebox that plays your songs is nice. A jukebox that knows your Sim is miserable at 3am
         and plays the right song, unprompted, is the game writing a scene with you.
