@@ -58,19 +58,20 @@ jobs:
 implementation:
   v1_web: "Soul City SvelteKit site — primary product; any browser, no install"
   v2_steam_guides: "One or more Community Guides on Legacy Collection hub — link-rich sections"
-  v3_micropolis_angel: |
-    MicropolisAngel — Windows Steam Software companion (see micropolis-angel.yml). Native while-you-play
-    helper: Simplifier, catalog/install, machinima, streaming. Announced AFTER web hub bootstraps audience.
+  v3_soul_angel: |
+    SoulAngel — Windows + Mac Steam Software companion (see soul-angel.yml; sims1 bridge in
+    sims1-soul-bridge.yml). Native while-you-play helper: Simplifier, catalog/install, machinima,
+    streaming. Announced AFTER web hub bootstraps audience.
   not_planned: "Electron or Steam app shell wrapping Soul City — rejected June 2026"
 
 rollout:
   1: Web Soul City + WWSFF public repo + catalog CARD dirs
   2: Steam Community Guide + MTS cross-links + YouTube (content + show clips)
-  3: MicropolisAngel on Steam Software (Windows) — when web federation + catalog sync are live
+  3: SoulAngel on Steam Software (Windows + Mac) — when web federation + catalog sync are live
   4: EA / platform conversations after traction
 
 see_also:
-  - micropolis-angel.yml
+  - sims1-soul-bridge.yml
   - ../sims1-community-landscape.yml
   - README.md
   - ../../process/repo-show-format.yml

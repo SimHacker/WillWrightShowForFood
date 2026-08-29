@@ -39,7 +39,7 @@ embeds images and YouTube, and links out to the web
 
 Web Soul City and the public repo first; the Community Guide plus
 ModTheSims cross-links and YouTube second;
-[MicropolisAngel](micropolis-angel.md) on Steam Software third, once
+[SoulAngel](soul-angel.md) on Steam Software third, once
 web federation and catalog sync are live; EA and platform conversations
 after traction. A rejected alternative, for the record: wrapping Soul
 City in an Electron or Steam app shell (June 2026).

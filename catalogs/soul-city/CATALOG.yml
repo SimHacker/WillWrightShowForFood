@@ -9,7 +9,7 @@ catalog:
 what: |
   Web-browser platform for Sims-family user-created content — the whole stack
   Don and the community built for The Sims 1 (render, read, write, edit, generate)
-  reborn on Micropolis Federation rails. Hosts legacy catalogs AND new creator work.
+  reborn web-native. Hosts legacy catalogs AND new creator work.
 
 not_just_a_catalog: |
   Catalogs list what exists. Soul City is where you make it, ship it, and
@@ -50,13 +50,13 @@ soul_angel:
     hub audience). Universal tier: always-on DVR, Soul Album with story cards + voice narration,
     machinima, OBS/Twitch/YouTube gateway — works on ANY game. Soul Bridge tier: per-game save/album
     read-write plugins in the web overlay. Windows first, Mac after (universal tier needs no Sims).
-  sims1_bridge: micropolis-angel.yml
+  sims1_bridge: sims1-soul-bridge.yml
   broadcast: "Soul City Broadcast Network — TV (streams/machinima), radio (narrated albums), magazine (published stories)"
   not: "Web wrapper; Sim*/Micropolis trademark in product name"
 
-micropolis_angel:
-  spec: micropolis-angel.yml
-  role: "Sims 1 Soul Bridge module of SoulAngel"
+sims1_soul_bridge:
+  spec: sims1-soul-bridge.yml
+  role: "Sims 1 Soul Bridge module of SoulAngel; uses TMog modules"
   summary: |
     The Sims-1-specific bridge: Family Album round-trip while game runs, family file
     import/export, save parse, graveyard manager, Simplifier showcase, catalog crawl.

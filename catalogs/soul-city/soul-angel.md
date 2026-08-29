@@ -35,7 +35,7 @@ and makes each new bridge a content drop instead of a new app.
 2. **Soul Bridge** (per-game plugin): a TypeScript module in the web
    overlay — save file read/write/edit/generate, character (soul)
    enumeration, native album round-trip where the game has one. First
-   bridge: [the Sims 1 module](micropolis-angel.md).
+   bridge: [the sims1 Soul Bridge](sims1-soul-bridge.md).
 3. **Broadcast** (Soul City account): membership in the Soul City
    Broadcast Network — scheduled shows, channels, federation
    syndication.
@@ -91,7 +91,7 @@ affiliated with any game publisher.
 
 ## Related
 
-- [MicropolisAngel — the Sims 1 Soul Bridge module](micropolis-angel.md)
+- [The sims1 Soul Bridge module](sims1-soul-bridge.md)
 - [Browser ecosystem spec](browser-ecosystem.md) · [GitHub distribution model](github-distribution-model.md)
 - [Steam Community Guide strategy](steam-community-guide.md)
 - [Soul City catalog](README.md)

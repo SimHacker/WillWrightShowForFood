@@ -55,9 +55,8 @@ souls, federation rails, the Depot/Plaza/Station/Terminal districts.
 **TMog** is the umbrella brand for our sims1 content tools -- the
 continuation of the Transmogrifier / Rug-O-Matic / SimShow / ShowNTell
 / Tombstone Generator / Simplifier lineage. The **sims1 Soul Bridge**
-(today specced as [micropolis-angel.md](micropolis-angel.md), rename
-pending) *uses* TMog modules; the bridge is Soul family plumbing, the
-tools are TMog.
+([sims1-soul-bridge.md](sims1-soul-bridge.md)) *uses* TMog modules;
+the bridge is Soul family plumbing, the tools are TMog.
 
 Candidate TMog modules for the sims1 portal:
 
@@ -93,3 +92,7 @@ possible payment.
    universe.
 4. Brand tools TMog (ours), bridges and platform Soul (ours), games by
    their own names (theirs, nominatively).
+5. Tools can be characters: embody a module as a character with a pie
+   menu when the game already gives it a face -- Death is the
+   graveyard manager ([sims1-soul-bridge.md](sims1-soul-bridge.md),
+   "Tools as characters").

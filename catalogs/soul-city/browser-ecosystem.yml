@@ -133,8 +133,8 @@ what_else:
   - Verify Legacy Collection paths on real Steam install before shipping FileBridge defaults
 
 see_also:
-  - micropolis-angel.yml
+  - sims1-soul-bridge.yml
   - github-distribution-model.yml
   - steam-community-guide.yml
   - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/README.md
-  - ../../apps/micropolis-angel/ARCHITECTURE.yml
+  - ../../apps/soul-angel/windows/ARCHITECTURE.yml

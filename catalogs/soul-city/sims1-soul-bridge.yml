@@ -1,31 +1,33 @@
-# MicropolisAngel — the Sims 1 Soul Bridge module of SoulAngel (see soul-angel.yml)
+# The sims1 Soul Bridge — the Sims-1-specific module of SoulAngel (see soul-angel.yml)
 # Name lineage: SimAngel (working title) -> MicropolisAngel (EA TM respect) -> product rebranded
-# SoulAngel 2026-07-11 (Micropolis is licensed; Soul is the family name). This file stays as the
-# Sims-1-specific spec: save bridge, Family Album round-trip, graveyard, Simplifier, catalog crawl.
+# SoulAngel 2026-07-11 (Micropolis is licensed; Soul is the family name) -> spec renamed
+# sims1-soul-bridge 2026-08-29 (one Angel in the family; bridges are Soul class; tools are TMog).
+# This file stays as the Sims-1-specific spec: save bridge, Family Album round-trip, graveyard,
+# Simplifier, catalog crawl — built from TMog modules (portals-and-modules.md).
 # NOT a web wrapper — native helper while you play. Web hub (Soul City) ships FIRST.
 
-id: micropolis-angel
+id: sims1-soul-bridge
 status: planted
 role: sims1_soul_bridge   # module of soul-angel.yml — universal DVR/album/broadcast engine lives there
 announce: after_web_hub_audience
 parent: CATALOG.yml
-platform: windows
+platform: windows   # the while-you-play bridge runs where the game runs; SoulAngel itself is windows + mac
 requires:
   game: https://store.steampowered.com/app/3314070/The_Sims/
   doc: ../get-the-sims-on-steam.md
   note: |
-    The Sims 1 runs on Windows only in Legacy Collection — not on Mac. MicropolisAngel targets
-    the PC where the game actually runs. Mac users browse catalogs and albums on Soul City (web).
+    The Sims 1 runs on Windows only in Legacy Collection — not on Mac. The while-you-play bridge
+    targets the PC where the game actually runs. SoulAngel ships Windows AND Mac (universal, all
+    games); Mac players get the universal tier plus catalogs and albums on Soul City (web).
 
 one_line: |
-  Steam Software companion that watches over you playing Sims 1 — catalog, accessibility, machinima,
+  The part of SoulAngel that watches over you playing Sims 1 — catalog, accessibility, machinima,
   streaming, and Exchange revival — supercharging storytelling without replacing the game.
 
 not:
   - "Electron shell around Soul City website"
   - "Implied EA endorsement or Plumbob branding"
   - "Cheat bot or TSO economy exploit suite"
-  - "Mac app (game does not run there)"
 
 # WHY NOW (2000 vs 2026)
 why_now:
@@ -37,18 +39,18 @@ why_now:
     scenes, share object collections, revive Exchange-style publishing — plus Simplifier lineage
     (screen read, TTS, guided browse) and modern streaming stack.
   gateway: |
-    MicropolisAngel is the desktop gateway to Soul City and the resurrection of EA's historic
-    but expired web services (Sims Exchange storytelling + downloadable content culture).
+    SoulAngel is the desktop gateway to Soul City; the sims1 Soul Bridge is the resurrection of
+    EA's historic but expired web services (Sims Exchange storytelling + downloadable content culture).
 
 # ROLLOUT — web first, Angel second
 rollout:
   order:
     1: "Soul City web hub — create · publish · share; bootstrap audience (no install)"
     2: "Steam Community Guides + MTS + YouTube + Repo Shows — promote web URL"
-    3: "Announce MicropolisAngel on Steam Software when web hub + catalog sync are live"
+    3: "Announce SoulAngel on Steam Software when web hub + catalog sync are live"
   rule: |
     Do not lead with the Steam app. Get the web hub working, promote elsewhere, build audience,
-    then announce the tangible Windows companion as the power-user / creator / streamer upgrade.
+    then announce the tangible desktop companion as the power-user / creator / streamer upgrade.
 
 # WHAT IT DOES (grouped)
 capabilities:
@@ -92,6 +94,19 @@ capabilities:
       auto-upload to Soul City / optional SFS → clipboard link. Replaces alt-tab browser upload
       the 2025 Steam release never restored.
 
+  sims1_district:
+    what: |
+      The Soul City end of the bridge is a PLACE (Don, 2026-08-29): the sims1 part of town, with
+      shops and residencies — creator storefronts, TMog tool shops, album galleries, the graveyard.
+      It expands (like a pie menu slide) into a huge suburbia of featured home save files, the way
+      The Sims Online presented neighborhoods.
+    open_book: |
+      Click a featured house to load the actual save file and step inside — NOT a simulation, an
+      editor and reader: explore and edit everything the save knows. What each sim was doing, their
+      action queue, motives, relationships, inventory. Frozen neighborhoods you walk through and
+      read like albums; every lot is shared content, free to download and load into your own game.
+    viewer_lineage: stat-u-matic.md   # same viewer growing into scenes: z-buffered rooms, pie menus, sound
+
   machinima_and_streaming:
     items:
       - "Machinima video storytelling tools (impractical in 2000; practical now)"
@@ -120,6 +135,20 @@ capabilities:
       Integrates with Sims 1 Death (Grim Reaper) and Satan NPCs; enumerates urns and tombstones
       from **save-file parse** (Soul City TS in embedded WebView2); guides resurrection,
       deliberate story kills, and cloning.
+    embodiment:   # tools as characters (Don, 2026-08-29): Death IS the graveyard manager
+      character: "Death (Grim Reaper — already a sims1 NPC)"
+      interface: "Pie menu on Death — one character fronts the whole life-cycle toolchain"
+      pie_menu:
+        - "Resurrect from tombstones and urns"
+        - "Kill people, leaving tombstones and urns behind"
+        - "Generate custom tombstones (Tombstone Generator, embodied)"
+        - "Edit relationships and life/death-related objects"
+        - "Sync Soul City representation of the departed"
+      life_side: |
+        Life as well as death: usher souls into existence — as many as you want — placed into
+        the save file. Many clones from one tombstone or out of thin air; import a character
+        or generate from a template. Character editing could be his skill too.
+      pattern: "Generalizes: a tool with a face is an interface players already know how to talk to"
     data_path: |
       Primary: read neighborhood/lot saves via FileBridge — not screen scrape.
       Angel runs full Soul City content platform in WebView2; talks to central SvelteKit
@@ -129,22 +158,22 @@ capabilities:
       Some flows need save game → main menu → reload lot → or restart Sims — Angel orchestrates
       inject when needed, always save-before-mutate.
     ethics: "Operator consent for kill/resurrect/clone; accessibility + storytelling, not grief bot"
-    lineage: ../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml
+    lineage: ../../apps/soul-angel/windows/SIMSKIT-LINEAGE.yml
 
   unified_stream_gateway:
     what: |
-      MicropolisAngel IS the Windows ship target for stream-gateway + Simplifier — one app:
+      SoulAngel IS the desktop ship target for stream-gateway + Simplifier — one app:
       embedded Soul City TS platform, Twitch/YouTube/OBS, cursor-mirror, catalog crawl.
-    shell: "WinUI 3 + WebView2 → central Soul City site + FileBridge (NOT local Svelte v1)"
-    impl: ../../apps/micropolis-angel/ARCHITECTURE.yml
-    simskit: ../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml
-    dev_setup: ../../apps/micropolis-angel/WINDOWS-DEV-SETUP.md
+    shell: "WinUI 3 + WebView2 on Windows → central Soul City site + FileBridge (NOT local Svelte v1); Mac shell TBD"
+    impl: ../../apps/soul-angel/windows/ARCHITECTURE.yml
+    simskit: ../../apps/soul-angel/windows/SIMSKIT-LINEAGE.yml
+    dev_setup: ../../apps/soul-angel/windows/WINDOWS-DEV-SETUP.md
 
 # STEAM LISTING SHAPE
 steam:
   category: software
   model: companion_requires_owned_game
-  platform: [windows]
+  platform: [windows, mac]   # sims1 bridge features are windows; universal tier both
   framing: |
     Fair assistant and creator tool for Legacy Collection players — catalog, accessibility,
     machinima, streaming. Links to Soul City and federated creator storefronts (SimFreaks,
@@ -159,14 +188,15 @@ relationship:
   guides: steam-community-guide.yml
   division: |
     Browser = create · publish · share · discover · Repo Shows · zero install.
-    MicropolisAngel = Windows-native while-you-play: scrape, install, TTS showcase, stream, playset publish.
+    SoulAngel = native while-you-play: scrape, install, TTS showcase, stream, playset publish.
   sync: "Favorites lists, catalogs, albums, saves round-trip through Soul City federation APIs"
 
 see_also:
   - README.md
   - steam-community-guide.yml
-  - ../../apps/micropolis-angel/ARCHITECTURE.yml
-  - ../../apps/micropolis-angel/WINDOWS-DEV-SETUP.md
+  - portals-and-modules.md
+  - ../../apps/soul-angel/windows/ARCHITECTURE.yml
+  - ../../apps/soul-angel/windows/WINDOWS-DEV-SETUP.md
   - ../../apps/stream-gateway/simplifier.yml
   - ../../apps/stream-gateway/SPEC.yml
   - ../sims1-community-landscape.yml

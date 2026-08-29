@@ -80,10 +80,10 @@ TTS/Simplifier accessibility lane.
    and compatibility gates.
 4. **Angel:** WebView2 shell, tray watcher, stream integration,
    graveyard manager
-   ([MicropolisAngel](micropolis-angel.md)).
+   ([the sims1 Soul Bridge](sims1-soul-bridge.md)).
 
 ## Related
 
-- [SoulAngel](soul-angel.md) · [MicropolisAngel](micropolis-angel.md)
+- [SoulAngel](soul-angel.md) · [sims1 Soul Bridge](sims1-soul-bridge.md)
 - [GitHub distribution model](github-distribution-model.md) · [Steam guide strategy](steam-community-guide.md)
 - [The Exchange gap research](../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/README.md)

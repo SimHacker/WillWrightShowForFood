@@ -2,11 +2,11 @@
 # Rebrand lineage: SimAngel (working title) -> MicropolisAngel (EA TM respect) -> SoulAngel
 # (Micropolis name is licensed too — same reason micropolis-home became Soul City).
 # Soul is the family name: Soul City (web), SoulAngel (native), Soul Bridges (per-game plugins),
-# Soul City Broadcast Network (channels). micropolis-angel.yml remains as the Sims 1 bridge module.
+# Soul City Broadcast Network (channels). sims1-soul-bridge.yml holds the Sims 1 bridge module spec.
 
 id: soul-angel
 status: planted
-supersedes: micropolis-angel.yml   # that file narrows to the Sims 1 Soul Bridge module
+supersedes: sims1-soul-bridge.yml   # that file narrows to the Sims 1 Soul Bridge module
 subsumes: ../../apps/stream-gateway/   # brain bus + broadcast sinks fold into the universal tier
 parent: CATALOG.yml
 platforms: [windows, macos_later]
@@ -47,7 +47,7 @@ tiers:
       TS module loaded in the web overlay, switched per game: save file read/write/edit/generate,
       character (soul) enumeration, native album round-trip where the game has one.
       FileBridge host object gives the browser sandboxed access to the game's data paths.
-    first: sims1   # micropolis-angel.yml — Family Album round-trip, save parse, graveyard, catalog lineage
+    first: sims1   # sims1-soul-bridge.yml — Family Album round-trip, save parse, graveyard, catalog lineage
     later: [sims2_plus_native_albums, other_games_with_photo_or_replay_modes]
   3_broadcast:
     requires: soul_city_account
@@ -98,7 +98,7 @@ broadcast-network:
 platforms_plan:
   windows:
     status: primary
-    shell: "WinUI 3 + WebView2 (existing apps/micropolis-angel/native tree — code rename later)"
+    shell: "WinUI 3 + WebView2 (apps/soul-angel/windows/native tree — renamed 2026-08-29)"
     capture: "Windows.Graphics.Capture + NVENC"
   macos:
     status: after_windows_v1
@@ -124,7 +124,7 @@ naming:
   family: [soul-city, soul-angel, soul-bridge, scbn]
   check_before_steam: "Soul* marks in games/software class — one search before the listing, not a blocker now"
 
-# ROLLOUT — inherits web-first rule from micropolis-angel.yml
+# ROLLOUT — inherits web-first rule from sims1-soul-bridge.yml
 rollout:
   1: "Soul City web hub live (unchanged prerequisite)"
   2: "SoulAngel Windows: universal tier (DVR + album + Twitch) with Sims 1 bridge as launch showcase"
@@ -136,8 +136,8 @@ app_room: ../../apps/soul-angel/   # show/community side: README + SCBN; dev hom
 
 see_also:
   - ../../apps/soul-angel/GLANCE.yml
-  - micropolis-angel.yml            # Sims 1 Soul Bridge module (formerly the whole product)
-  - ../../apps/micropolis-angel/ARCHITECTURE.yml
+  - sims1-soul-bridge.yml           # Sims 1 Soul Bridge module (formerly the whole product)
+  - ../../apps/soul-angel/windows/ARCHITECTURE.yml
   - ../../apps/stream-gateway/SPEC.yml
   - ../../apps/stream-gateway/simplifier.yml
   - CATALOG.yml

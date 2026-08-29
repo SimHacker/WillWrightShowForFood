@@ -40,9 +40,9 @@ Four jobs the guides cover:
 | Phase | Surface |
 |-------|---------|
 | **Now** | [Soul City](CATALOG.yml) web hub + [Steam Community Guides](steam-community-guide.md) |
-| **Later** | [**MicropolisAngel**](micropolis-angel.md) — Windows Steam Software companion (Simplifier + catalog + machinima + streaming). Announced after web audience bootstraps. |
+| **Later** | [**SoulAngel**](soul-angel.md) — Windows and Mac Steam Software companion (Simplifier + catalog + machinima + streaming), carrying [the sims1 Soul Bridge](sims1-soul-bridge.md) and its TMog modules. Announced after web audience bootstraps. |
 
-Spec: [Steam guide strategy](steam-community-guide.md) · [Steam app strategy](steam-app-strategy.md) · [Portals and modules](portals-and-modules.md) · [Stat-U-Matic](stat-u-matic.md) · [MicropolisAngel](micropolis-angel.md) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
+Spec: [Steam guide strategy](steam-community-guide.md) · [Steam app strategy](steam-app-strategy.md) · [Portals and modules](portals-and-modules.md) · [Stat-U-Matic](stat-u-matic.md) · [sims1 Soul Bridge](sims1-soul-bridge.md) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
 
 ## Federated catalogs
 
