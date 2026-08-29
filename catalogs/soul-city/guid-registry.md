@@ -218,6 +218,108 @@ a manifest: post it, stream it, clip it, and anyone watching can scan
 the exact objects out of the image. The failure state advertises its
 own cure.
 
+### Proxies generate offline; querying the catalog is opt-in
+
+*Don, 2026-08-29.* A generic proxy needs no network. Everything it
+requires is either in the save already or pure computation: the id it
+is standing in for, the footprint, and a
+[glyph](object-shops.md) whose payload is a resolver URL derived from
+that id. Code generation is arithmetic, so an offline import produces
+working, scannable proxies with no lookup at all.
+
+Querying the registry to make a *better* proxy -- real name,
+thumbnail, creator, what expansion it wants -- is then an **opt-in
+enrichment**, on the same consent footing as everything else here.
+Offline is complete; online is nicer.
+
+### The resolver page: an id is always a valid key
+
+Even when we know nothing, the id is a key we can honor. The glyph
+points at the resolver for that id, and the resolver page **lists
+every known object bearing it** -- which is the normal case, not the
+degenerate one, since
+[collisions are the point](#overlaps-are-documented-not-silently-fixed)
+of this registry.
+
+So resolution has two levels and neither dead-ends:
+
+1. **Id known, instance unknown.** The page is a disambiguation list:
+   here are the four objects that have used this number, with dates,
+   sources, creators, and pictures. Pick yours, or tell us which it
+   was.
+2. **Instance known.** The glyph points straight at the specific
+   object, which may still share its id with others -- and the page
+   says so, because that is a fact about the object worth knowing.
+
+An id therefore never produces a 404, only a shorter or longer list.
+
+### What a proxy has to carry, which is less than it looks
+
+The question of preserving all the object data mostly dissolves once
+the two kinds of data are separated:
+
+| | Where it comes from | Can we preserve it? |
+|---|---|---|
+| **The object** -- meshes, sprites, behavior, catalog entry | The installed package | **No, and there is nothing to preserve.** If the object was never installed, the save never contained it. |
+| **The instance** -- position, rotation, level, orientation, contents, per-instance attributes, who was using it | The save file | **Yes, and it is small.** Bytes, not megabytes. |
+
+That is the whole answer to round-tripping: **the save only ever held
+a reference plus instance state, so a proxy that preserves the
+reference and the state loses nothing that was there.** The assets
+come back by installing the real object, exactly as they arrived the
+first time.
+
+One structural caveat worth designing around: **the game rewrites its
+own save files.** Anything we tuck into a house or neighborhood file
+may not survive the next in-game save, so per-instance state belongs
+in **our own sidecar journal**, keyed to the save and the object's
+place in it, rather than in a chunk the game might drop. The dummy
+object package carries the class-level stand-in facts, which are the
+same for every instance of that absence; the journal carries the
+per-instance particulars.
+
+### Punt on embedding whole objects -- and it is not a punt
+
+Let people download the resolved object. That is the better answer on
+five counts, not the lazy one:
+
+1. **It is a redistribution question.** An object embedded inside a
+   save that then gets shared *is* a redistributed object. A
+   reference plus a scan-to-install link is not. Every rights
+   decision on this project points the same way
+   ([rendering and rights](rendering-and-rights.md)), and this is the
+   same call in a new costume.
+2. **You get the current version.** Fresh metadata, fresh credit,
+   fixes applied since -- rather than a copy pickled in 2027.
+3. **The set stays consistent.** The object arrives through the
+   normal install path, so the registry, the manifest, and the id
+   mapping all agree afterward. An object smuggled in through a save
+   agrees with nothing.
+4. **Saves stay small and loadable.** Object packages are loaded
+   wholesale; fattening them taxes every lot that uses them.
+5. **Reconstruction beats replication.** A named set built from a
+   manifest is the design already
+   ([how the virtualization works](#how-the-virtualization-is-actually-implemented)).
+   Shipping bytes inside saves is the thing that model exists to
+   avoid.
+
+So a shared lot travels as **lot plus manifest**: what it needs, by
+id, with glyphs for each. Recipes, not files, one more time.
+
+### If bulk ever is required, the answer is boring
+
+No tricky pickling scheme. If some future case genuinely needs more
+bytes than a chunk comfortably holds, the standard moves are enough:
+deflate the payload, split it across numbered part chunks with a
+small index chunk carrying the part count and a hash, and reassemble
+on read. Text-only surfaces like the string table need a text-safe
+encoding; a custom chunk can stay binary.
+
+And put bulk in the **sidecar file** by default, since it has no
+ceiling and no loader to surprise us. The practical limits of what
+the game and the common editors tolerate inside an object are an
+empirical question -- measure them before depending on any number.
+
 The direction to hold on to: **full virtualization of game data.**
 Not this month, but every design decision should stay compatible with
 it.

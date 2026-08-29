@@ -169,6 +169,41 @@ save_scope:   # the rule that makes the model sound
       "Make invisible" / "show placeholder" is exactly what the action editor generates
       (object-shops.yml). A lot full of invisible dummies still loads, still plays, and still
       reports what is missing when asked.
+  proxy_mechanics:   # Don, 2026-08-29 -- offline generation, resolver pages, and what a proxy carries
+    offline_first:
+      what: "A generic proxy needs NO NETWORK -- the id it stands in for and the footprint are in the save; glyph generation is arithmetic"
+      result: "An offline import produces working scannable proxies with no lookup at all"
+      opt_in_enrichment: "Querying the registry for a BETTER proxy (real name, thumbnail, creator, expansion) is opt-in, same consent footing as everything else. Offline is complete; online is nicer."
+    resolver_page:
+      principle: "AN ID IS ALWAYS A VALID KEY -- the glyph points at the resolver for that id"
+      id_known_instance_unknown: "Disambiguation list: every known object bearing this number, with dates, sources, creators, pictures. Pick yours, or tell us which it was."
+      instance_known: "Glyph points straight at the specific object -- and the page still says which others share its id, because that is a fact worth knowing"
+      property: "An id never produces a 404, only a shorter or longer list"
+      why_normal: "Collisions are THE POINT of this registry, not the degenerate case"
+    what_a_proxy_carries:   # the question mostly dissolves once the two kinds of data are separated
+      the_object: "Meshes, sprites, behavior, catalog entry -- from the installed package. CANNOT be preserved and THERE IS NOTHING TO PRESERVE: if it was never installed, the save never contained it."
+      the_instance: "Position, rotation, level, orientation, contents, per-instance attributes, who was using it -- from the save file. CAN be preserved, and it is small: bytes, not megabytes."
+      the_answer: "The save only ever held A REFERENCE PLUS INSTANCE STATE, so a proxy preserving both loses nothing that was there. Assets come back by installing the real object."
+      structural_caveat: |
+        THE GAME REWRITES ITS OWN SAVE FILES -- anything tucked into a house or neighborhood file may
+        not survive the next in-game save. So per-instance state lives in OUR SIDECAR JOURNAL, keyed to
+        the save and the object's place in it. The dummy package carries class-level stand-in facts
+        (same for every instance of that absence); the journal carries per-instance particulars.
+    punt_on_embedding:   # and it is not a punt
+      ruling: "Let people download the resolved object"
+      reasons:
+        redistribution: "An object embedded in a save that gets shared IS a redistributed object. A reference plus a scan-to-install link is not. Same call as every other rights decision here, in a new costume."
+        current_version: "Fresh metadata, fresh credit, fixes applied since -- rather than a copy pickled in 2027"
+        set_stays_consistent: "The object arrives through the normal install path, so registry, manifest, and id mapping all agree afterward. An object smuggled in through a save agrees with nothing."
+        saves_stay_loadable: "Object packages load wholesale; fattening them taxes every lot that uses them"
+        reconstruction_beats_replication: "A named set built from a manifest is already the design; shipping bytes inside saves is what that model exists to avoid"
+      shared_lot_format: "LOT PLUS MANIFEST -- what it needs, by id, with glyphs for each. Recipes, not files."
+    if_bulk_is_ever_required:
+      no_tricky_pickling: "Standard moves suffice: deflate the payload, split across numbered part chunks with a small index chunk carrying part count and hash, reassemble on read"
+      encoding: "Text-only surfaces (string table) need text-safe encoding; a custom chunk can stay binary"
+      default_home: "The SIDECAR FILE -- no ceiling, no loader to surprise us"
+      unknown: "Practical limits of what the game and common editors tolerate inside an object are EMPIRICAL -- measure before depending on any number"
+
   direction: "FULL VIRTUALIZATION OF GAME DATA — not this month, but every decision stays compatible with it"
 
 lineage:
