@@ -182,6 +182,34 @@ save_scope:   # the rule that makes the model sound
       instance_known: "Glyph points straight at the specific object -- and the page still says which others share its id, because that is a fact worth knowing"
       property: "An id never produces a 404, only a shorter or longer list"
       why_normal: "Collisions are THE POINT of this registry, not the degenerate case"
+    clustering:   # Don, 2026-08-29 -- "look at all object ids in the house ... it's a clue which alternative might be right"
+      why_it_works: "CONTENT ARRIVES CORRELATED. Nobody downloads one object -- they download a set, from a site, from a creator, in an afternoon. An ambiguous id among thirty unambiguous neighbors is not really ambiguous."
+      signals:   # each weak alone; combine them
+        magic_cookie_cooccurrence: "The cookie IS creator identity -- thirty objects here carrying 0x4A2F make the disputed 0x4A2F object probably from that set"
+        id_adjacency: "Creators numbered a set's objects consecutively, so a candidate whose suffix sits next to ids already present is the better bet"
+        expansion_requirements: "A lot needing Superstar makes a Superstar-dependent candidate more plausible"
+        era_coherence: "A lot assembled in 2002 does not contain a 2005 object -- the rest of the content dates the lot"
+        archive_comembership: "Candidates from the same mirror or bundle as the lot's other objects, per the cache's provenance (content-pipeline.yml)"
+        local_presence: "If one candidate is already installed, HASH MATCHING answers outright -- no inference needed"
+        placement_fit: "Whatever the save records about how the instance sat (wall vs floor, level, orientation) constrains what it could have been. MEASURE what the format actually preserves before leaning on it."
+      method: "Prior from the registry (which candidate is more widely attested) times the likelihood from each independent signal -- market-basket analysis with better priors"
+      discipline:
+        rule: "IT PRODUCES A HYPOTHESIS, AND HYPOTHESES STAY LABELED -- document, do not adjudicate, same as collisions"
+        storage: "Stored as an inference with its confidence and the evidence that produced it"
+        presentation: "Shown in those terms: 'probably this one, because thirty-one objects here share its cookie'"
+        promotion: "To fact only by a human confirming. An inference never overwrites a claim and never quietly becomes the registry's answer."
+      better_payoffs:   # worth building even if no id were ever ambiguous
+        reassembles_lost_download_sets: |
+          Twelve objects that always appear together were one package, whatever its zip was called
+          before the readme went missing. Recovering set membership lets us name them, describe them,
+          and offer them as sets again -- a large piece of what the repack chain destroyed.
+        anonymous_cookie_becomes_a_portfolio: |
+          If cookie 0x4A2F has forty objects and no name attached, the cluster IS that creator's body
+          of work, assembled and waiting. Someone who can show it was theirs claims THE WHOLE
+          PORTFOLIO IN ONE ACTION instead of forty separate arguments -- the difference between a
+          credit system somebody might use and one nobody will.
+      data_needed: "Co-occurrence across many collections: cheap (id lists, no content) and consent-gated -- compute locally, contribute aggregate counts if you choose, never lot contents"
+
     what_a_proxy_carries:   # the question mostly dissolves once the two kinds of data are separated
       the_object: "Meshes, sprites, behavior, catalog entry -- from the installed package. CANNOT be preserved and THERE IS NOTHING TO PRESERVE: if it was never installed, the save never contained it."
       the_instance: "Position, rotation, level, orientation, contents, per-instance attributes, who was using it -- from the save file. CAN be preserved, and it is small: bytes, not megabytes."

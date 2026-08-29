@@ -258,6 +258,68 @@ So resolution has two levels and neither dead-ends:
 
 An id therefore never produces a 404, only a shorter or longer list.
 
+### Clustering: the rest of the lot is evidence
+
+*Don, 2026-08-29: look at all the object ids in the house. Other
+creator-adjacent objects suggest you downloaded more than one from the
+same creator, or the same magic cookie. It is a clue about which
+candidate is right.*
+
+Exactly right, and it works because **content arrives correlated.**
+Nobody downloads one object; they download a set, from a site, from a
+creator, in an afternoon. So an ambiguous id sitting in a lot with
+thirty unambiguous neighbors is not really ambiguous.
+
+Signals worth combining, each weak alone:
+
+| Signal | Why it discriminates |
+|--------|---------------------|
+| **Magic cookie co-occurrence** | The cookie *is* creator identity. Thirty objects here carry cookie 0x4A2F, so the disputed 0x4A2F object is probably from that same set. |
+| **Id adjacency** | Creators numbered a set's objects consecutively, so a candidate whose suffix sits next to ids already present is the better bet. |
+| **Expansion requirements** | A lot that needs Superstar makes a Superstar-dependent candidate more plausible. |
+| **Era coherence** | A lot assembled in 2002 does not contain a 2005 object. The rest of the content dates the lot. |
+| **Archive co-membership** | Candidates from the same mirror or bundle as the lot's other objects, per the [cache's provenance](content-pipeline.md). |
+| **Local presence** | If one candidate is already installed, hash matching answers the question outright. No inference needed. |
+| **Placement fit** | Whatever the save records about how the instance sat -- wall versus floor, level, orientation -- constrains what it could have been. Worth measuring what the format actually preserves before leaning on it. |
+
+Combine them the boring way: a prior from the registry (which
+candidate is more widely attested), times the likelihood from each
+independent signal. It is market-basket analysis with better priors,
+and it will be right most of the time.
+
+**But it produces a hypothesis, and hypotheses stay labeled.** The
+rule that governs collisions governs this too:
+[document, do not adjudicate](#overlaps-are-documented-not-silently-fixed).
+An inference is stored as an inference, with its confidence and the
+evidence that produced it, shown to the player in those terms --
+*probably this one, because thirty-one objects here share its
+cookie* -- and promoted to fact only by a human confirming it. An
+inference never overwrites a claim and never quietly becomes the
+registry's answer.
+
+### Two better payoffs than disambiguation
+
+The clustering is worth building even if no id were ever ambiguous.
+
+**It reassembles lost download sets.** Twelve objects that always
+appear together were one package, whatever its zip was called before
+the readme went missing. Recovering set membership means we can name
+them, describe them, and offer them as sets again -- which is a large
+piece of what the repack chain destroyed.
+
+**It turns an anonymous cookie into a portfolio.** If cookie 0x4A2F
+has forty objects across the corpus and no name attached, the cluster
+*is* that creator's body of work, assembled and waiting. When someone
+turns up who can show it was theirs, they claim **the whole portfolio
+in one action** instead of forty separate arguments. That is the
+difference between a credit system somebody might actually use and
+one nobody will.
+
+Both of those need co-occurrence data across many collections, which
+is cheap -- id lists, no content -- and consent-gated like everything
+else: compute locally, contribute aggregate counts if you choose,
+never lot contents.
+
 ### What a proxy has to carry, which is less than it looks
 
 The question of preserving all the object data mostly dissolves once
