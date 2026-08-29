@@ -77,6 +77,44 @@ shops:   # each = one template + a generator + a storefront; open list by constr
       the_argument: |
         A jukebox that plays your songs is nice. A jukebox that knows your Sim is miserable at 3am
         and plays the right song, unprompted, is the game writing a scene with you.
+  squawk_box:   # Don, 2026-08-29 — trainable parrot / sound board; THE SHAREABLE ONE
+    container: "Recorded sounds plus dialogs"
+    fill_with: "Your own microphone. Your cat meowing. Your dog farting. Your kid's laugh. A photo from your pocket."
+    names: [Squawk Box, trainable parrot, sound board]
+    the_delight: |
+      Immediate and slightly stupid, which is the correct register: invent silly action names
+      attached to your own sounds and have them AFFECT THE SIMULATION.
+    inherits_from_jukebox: "Everything — conditions on advertisement, consequences as plugins, timelines. It was never really about music."
+    dialogs: "Every action can open a dialog (title, picture, text, buttons, branching) — rung 3; a sound board is one edit away from interactive fiction that talks in your voice"
+    embodiment: |
+      A trainable parrot wants to be a CHARACTER rather than an appliance (Death precedent,
+      sims1-soul-bridge.yml). Whether the game ships a bird to embody is a question for the
+      official-object catalog scan (guid-registry.yml); if not, we make the object.
+    rights_clean_by_construction:   # the strategic point — a rights argument, not an aesthetic one
+      music_is_encumbered: |
+        Locally fine, and exactly the point of local-first: make an object with any track you love
+        on your own machine and nobody distributes anything. But SHARED music is somebody else's
+        copyright — the one content class that cannot go viral safely.
+      your_media_is_yours: |
+        Voice, pets, phone photos: no license, no clearance, no takedown, no gray area. Shareable
+        BY CONSTRUCTION. The publishable class is also the more personal and funnier one.
+      the_viral_artifact: "A template + your own recordings and photos + visually programmed behavior"
+      requirements_met:
+        inherently_shareable: "Only the creator's own media — no third-party rights, no official game art"
+        browser_full_fidelity: "Voice, photo, dialog, buttons need no install to EXPERIENCE; owning the game is what lets you INSTALL it"
+        template_based: "One template, infinite instances, each on the template index page"
+        visually_programmable: "The action editor and its ladder"
+        expressive_personal: "It is literally your voice and your cat"
+        memetic: "THE TEMPLATE IS THE MEME FORMAT — instances are the memes; the template index page is the gallery"
+      distribution_strategy: |
+        A meme format is a template strangers fill in and pass along; ours are EXECUTABLE. Fill in
+        the blanks with your own media, get a real object, and it plays back in anybody's browser
+        whether or not they own the game. Owning the game is the upgrade, not the ticket.
+      composes_back: |
+        Once the sharing-safe class exists, the sophisticated storytelling machinery (branching
+        dialog, motive consequences, moody timelines) rides on content free to travel. The jukebox
+        stays local and personal; the squawk box goes everywhere.
+
   anythingomatic:
     container: "Accessory manager (appliance pattern, portals-and-modules.md)"
     fill_with: "Any accessory category — toggle on/off, reset, organize; generalizes past wigs"

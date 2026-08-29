@@ -24,6 +24,7 @@ Each shop is one template plus a generator plus a storefront in the
 | **Jukebox** / [Moody Jukebox](#moody-jukebox-the-flagship-of-the-ad-editor) | Music player | Your own tracks. The most requested thing in the game's history, and it was always just a file list. |
 | **WigOMatic** and the AnythingOMatic family | Accessory manager | Any accessory category: toggle on and off, reset, organize. Generalizes past wigs to whatever the shop stocks ([the appliance pattern](portals-and-modules.md)). |
 | **RugOMatic picture rig** | One rug, many images | Switch between them from the pie menu. **Import a Family Album into a rug** and walk on your own story. A picture rig you can stand on. |
+| **[Squawk Box](#the-squawk-box-your-voice-your-pet-your-phone)** (trainable parrot, sound board) | Recorded sounds plus dialogs | Your own microphone. Your cat. Your phone photos. The shareable one. |
 | **Backdrop** | Switchable scene | Lineage: Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town. Bring the backdrop home and load your own scenes. |
 | **Statue** | Posed character | [Stat-U-Matic](stat-u-matic.md), already spec'd. |
 | **Tombstone** | Text and a soul | The Tombstone Generator, embodied in Death ([the reaping ceremony](sims1-soul-bridge.md)). |
@@ -150,6 +151,80 @@ This is also the clearest argument for the ad editor existing at all.
 A jukebox that plays your songs is nice. A jukebox that knows your
 Sim is miserable at 3am and plays the right song, unprompted, is the
 game writing a scene with you.
+
+## The Squawk Box: your voice, your pet, your phone
+
+**Why stop at files you downloaded?** Record your own microphone.
+Then it is not a jukebox at all -- it is a **trainable parrot**, a
+**squawk box**, a **sound board**. Say a thing, name the action
+whatever you want, and hang consequences off it. The delight is
+immediate and slightly stupid, which is the correct register:
+inventing silly action names attached to your own sounds, and having
+them **affect the simulation**.
+
+Everything from the jukebox carries over unchanged, because it was
+never really about music: conditions on the advertisement,
+consequences as plugins, timelines. And every action can open a
+dialog -- title, picture, text, buttons, branching -- which is rung 3
+of the ladder, so a sound board is one edit away from being
+interactive fiction that talks in your voice.
+
+The material is whatever a phone can capture. Your voice. Your cat
+meowing. Your dog farting. Your kid's laugh. A photo from your
+pocket.
+
+Embodiment note: a trainable parrot wants to be a character rather
+than an appliance, following the Death precedent
+([tools as characters](sims1-soul-bridge.md)). Whether the game
+already ships a bird to embody is a question for the official-object
+catalog scan ([GUID registry](guid-registry.md)) -- and if it does
+not, the parrot is just an object we make.
+
+### Rights-clean by construction: the viral content class
+
+Here is why this matters more than the jukebox, and it is a rights
+argument, not an aesthetic one.
+
+**Music is encumbered.** Locally, that is fine and it is exactly the
+point of local-first: make an object with any track you love, on your
+own machine, and nobody is distributing anything
+([the membership model](membership-model.md),
+[EA policy fit](membership-model.md)). But **shared** music is
+somebody else's copyright, which makes it the one content class that
+cannot go viral safely.
+
+**Your voice, your pet, and your phone photos are yours.** No
+license, no clearance, no takedown, no gray area -- shareable *by
+construction*. Which means the content class that can be freely
+published is also, conveniently, the more personal and funnier one. A
+soundboard of your own voice beats a licensed track on every axis
+that matters here.
+
+So the viral artifact is: **a template, plus your own recordings and
+photos, plus visually programmed behavior.** Every requirement lines
+up:
+
+| Requirement | How it is met |
+|-------------|---------------|
+| Inherently shareable | Contains only the creator's own media -- no third-party rights, no official game art |
+| Playable at full fidelity in a browser | Voice, photo, dialog, and buttons need no game install to experience; owning the game is what lets you *install* it |
+| Template based | One template, infinite instances, each listed on the template's index page |
+| Visually programmable | [The action editor and its ladder](#the-plugin-ladder) |
+| Expressive and personal | It is literally your voice and your cat |
+| Memetic | **The template is the meme format.** Instances are the memes; the template index page is the gallery. |
+
+That last row is the whole distribution strategy in one line. A meme
+format is a template that strangers fill in and pass along, and ours
+are **executable** ones: fill in the blanks with your own media, get
+a real object, and the object plays back in anybody's browser whether
+or not they own the game. Owning the game is the upgrade, not the
+ticket.
+
+And it composes back the other way. Once the sharing-safe class
+exists, the sophisticated storytelling machinery -- branching dialog,
+motive consequences, moody timelines -- rides on content that is free
+to travel. The jukebox stays local and personal; the squawk box goes
+everywhere.
 
 ## The plugin ladder
 
