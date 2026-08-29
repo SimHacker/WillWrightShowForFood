@@ -77,12 +77,42 @@ virtualized_ids:   # the key move (Don, 2026-08-29)
     - |
       The closure is remapped TOGETHER and consistently; rewriting saves without Downloads (or
       Downloads without the saves that point into it) breaks the game.
-    - |
-      Downloads sets can be PER NEIGHBORHOOD: swappable content profiles, each with its own id
-      space. One global identity can wear different local ids in different neighborhoods, and the
-      16-bit per-cookie ceiling stops being a global budget — it only has to fit one neighborhood.
     - "Registry identity never changes no matter how many local ids it wears — credit attaches to identity, not to a free number"
     - "Save-before-mutate, always, with operator consent — snapshot the whole closure, not just the touched file"
+
+implementation:   # Don, 2026-08-29 — the honest mechanism
+  hard_constraint: "We do NOT change how The Sims reads and writes files. Its file handling is fixed; we work with it."
+  what_we_control: "Which directory trees occupy the paths the game reads: GameData, UserData, Downloads"
+  mechanism: "Not runtime indirection — honest file management"
+  steps:
+    named_sets: "Every Downloads tree (and companion user data) is a named, registry-tracked set with a manifest of contents and which id mapping it uses"
+    mount_one: "The game always sees exactly ONE set, where it expects it. Swap between sessions, never during."
+    synchronize: "The registry knows what each set holds — sets can be built, diffed, updated, shared, rebuilt from manifests"
+  sets:
+    default: "For normal play"
+    special_purpose: |
+      Built for one body of content: a zombies set, a SimProv set, a recreate-a-2002-fansite set.
+      Small, coherent, fast to load, no conflicts — a purpose-built set holds only what it needs.
+
+save_scope:   # the rule that makes the model sound
+  rule: "A SAVE FILE BELONGS TO A DOWNLOADS SET — its object ids only mean anything inside that set"
+  binding: "Part of the save's identity; the registry records it"
+  cross_set_move: "A MIGRATION, not a copy"
+  migration_steps:
+    - "Remap every object id in the save into the target set's id space"
+    - "Discover which objects the target set does not have — unknown objects are the NORMAL case, not an error"
+  dummy_objects:   # long-term plan; design toward it now
+    what: "Generate a placeholder object standing in at the right id, carrying what the save knows about what belonged there"
+    marking: "Marked as a dummy in a way WE RECOGNIZE on the way back — this is what makes round-tripping work"
+    round_trip: |
+      Migrate a save to a poorer set and home again, and the real objects come back because the
+      dummies remembered their places.
+    presentation: |
+      Invisible or an obvious placeholder — a pie menu action away in either direction.
+      "Make invisible" / "show placeholder" is exactly what the action editor generates
+      (object-shops.yml). A lot full of invisible dummies still loads, still plays, and still
+      reports what is missing when asked.
+  direction: "FULL VIRTUALIZATION OF GAME DATA — not this month, but every decision stays compatible with it"
 
 lineage:
   request_2004: |

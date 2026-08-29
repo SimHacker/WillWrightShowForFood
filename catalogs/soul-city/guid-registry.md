@@ -116,17 +116,70 @@ Consequences worth stating plainly:
   object already placed in existing saves without updating those
   saves (or updating Downloads without the saves that point into it)
   breaks them.
-- Because the mapping is ours and the whole closure is rewritable,
-  **Downloads sets can be per neighborhood**: swappable content
-  profiles, each with its own id space. One global identity can wear
-  different local ids in different neighborhoods, and the 16-bit
-  per-cookie ceiling stops being a global budget -- it only has to
-  fit one neighborhood at a time.
 - An object's identity in the registry never changes, no matter how
   many local ids it wears. Credit is attached to identity, not to a
   number that happens to be free.
 - Save-before-mutate, always, with operator consent. Snapshot the
   whole closure, not just the file being touched.
+
+## How the virtualization is actually implemented
+
+**We do not change how The Sims reads and writes files** (Don,
+2026-08-29). The game's file handling is fixed and we work with it,
+not around it. What we control completely is **which directory trees
+occupy the paths the game reads**: GameData, UserData, Downloads. So
+the mechanism is not a clever runtime indirection, it is honest file
+management:
+
+1. **Named sets.** Every Downloads tree (and its companion user data)
+   is a named, registry-tracked set with a manifest of what it
+   contains and which id mapping it uses.
+2. **Mount one at a time.** The game always sees exactly one set, in
+   the place it expects to find it. Swap sets between sessions, never
+   during.
+3. **Synchronize.** The registry knows what each set holds, so sets
+   can be built, diffed, updated, shared, and rebuilt from their
+   manifests.
+
+There is a **default set** for normal play, plus special-purpose sets
+built for one body of content: a zombies set, a SimProv set, a
+recreate-a-2002-fansite set. Small, coherent, fast to load, no
+conflicts, because a purpose-built set only contains what that purpose
+needs.
+
+## The Downloads set is the scope for save files
+
+This is the rule that makes the model sound: **a save file belongs to
+a Downloads set.** Its object ids only mean anything inside that set,
+so the binding between save and set is part of the save's identity and
+the registry records it.
+
+Moving a save between sets is therefore a **migration, not a copy**:
+
+- Remap every object id in the save into the target set's id space.
+- Discover which objects the target set simply does not have.
+  Unknown objects are the normal case, not an error.
+
+### Dummy objects, so saves round-trip
+
+For missing objects, **generate a dummy** (long-term plan, worth
+designing toward now): a placeholder object standing in at the right
+id, carrying whatever the save knows about what belonged there, and
+**marked as a dummy in a way we recognize on the way back**. Then the
+save round-trips instead of losing furniture: migrate it to a
+poorer set and home again, and the real objects come back because the
+dummies remembered their places.
+
+Presentation: a dummy can be invisible or an obvious placeholder,
+which is a pie menu action away in either direction -- "make
+invisible" and "show placeholder" are exactly the kind of toggle the
+[action editor](object-shops.md) already generates. A lot full of
+invisible dummies still loads, still plays, and still tells you what
+is missing when you ask it.
+
+The direction to hold on to: **full virtualization of game data.**
+Not this month, but every design decision should stay compatible with
+it.
 
 ## Lineage: this is a 22-year-old request
 
