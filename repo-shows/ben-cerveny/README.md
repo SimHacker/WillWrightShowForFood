@@ -22,16 +22,16 @@ Exchange content; preview the **Will Wright kickoff** as episode-one spine.
 
 ## Related
 
-- [ben-cerveny](characters/ben-cerveny)
-- [will-wright](characters/will-wright)
-- [ken-kahn](characters/ken-kahn)
-- [SHOW.yml](repo-shows/will-wright-premiere/README.md)
-- [theme-data-portability-crown-jewel.md](bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md)
-- [crazy-idea-jam.yml](process/crazy-idea-jam.yml)
-- [lane-neverending](SimHacker/moollm/examples/adventure-4/street/lane-neverending)
-- [soul-city](SimHacker/moollm/examples/soul-city/README.md)
-- [soul-city.md](SimHacker/MicropolisCore/documentation/designs/soul-city.md)
-- [sims-io](SimHacker/MicropolisCore/packages/sims-io)
+- [ben-cerveny](../../characters/ben-cerveny/)
+- [will-wright](../../characters/will-wright/)
+- [ken-kahn](../../characters/ken-kahn/)
+- [will-wright-premiere](../will-wright-premiere/README.md)
+- [theme-data-portability-crown-jewel.md](../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md)
+- [crazy-idea-jam.yml](../../process/crazy-idea-jam.yml)
+- [lane-neverending](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/street/lane-neverending)
+- [soul-city](https://github.com/SimHacker/moollm/blob/main/examples/soul-city/README.md)
+- [soul-city.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/soul-city.md)
+- [sims-io](https://github.com/SimHacker/MicropolisCore/tree/main/packages/sims-io)
 
 ## In this directory
 

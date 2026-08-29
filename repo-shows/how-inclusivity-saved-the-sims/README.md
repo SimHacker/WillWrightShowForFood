@@ -36,13 +36,13 @@ QGCon 2020 abstract (canceled); Google Doc integrated to repo 2026-07; Soul City
 
 ## Related
 
-- [ian-bogost](../../../characters/ian-bogost)
-- [janet-murray](../../../characters/janet-murray)
-- [tanja-sihvonen](../../../characters/tanja-sihvonen)
-- [ellpeck](../../../characters/ellpeck)
-- [soul-city](../../../catalogs/soul-city)
-- [SHOW.yml](repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
-- [game-bridge-sims1-tinylife.yml](repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
+- [ian-bogost](../../characters/ian-bogost)
+- [janet-murray](../../characters/janet-murray)
+- [tanja-sihvonen](../../characters/tanja-sihvonen)
+- [ellpeck](../../characters/ellpeck)
+- [soul-city](../../catalogs/soul-city)
+- [SHOW.yml](../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
+- [game-bridge-sims1-tinylife.yml](../will-wright-premiere/game-bridge-sims1-tinylife.yml)
 
 ## In this directory
 

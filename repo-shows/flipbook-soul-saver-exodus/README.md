@@ -20,10 +20,10 @@
 
 ## Related
 
-- [soul-city-soul-saver-thesis.yml](../../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml)
-- [game-bridge-sims1-tinylife.yml](../../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
-- [soul-angel.yml](../../../catalogs/soul-city/soul-angel.yml)
-- [sims-creator-network-exodus.yml](../../../process/sims-creator-network-exodus.yml)
+- [soul-city-soul-saver-thesis.yml](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.yml)
+- [game-bridge-sims1-tinylife.yml](../will-wright-premiere/game-bridge-sims1-tinylife.yml)
+- [soul-angel.yml](../../catalogs/soul-city/soul-angel.yml)
+- [sims-creator-network-exodus.yml](../../process/sims-creator-network-exodus.yml)
 
 ## In this directory
 

@@ -29,7 +29,7 @@ design_parallels:
   habitat: "Objects in a shared spatial world; persistence; user-authored extensions"
   game_neverending: "Playful social space that became durable photo infrastructure (Flickr)"
   lane_neverending: "Infinite loop by splicing — git-checked-in segments, not one frozen map"
-  micropolis_home: "Browser TS tools; player-owned Sims directory as working copy; opt-in publish"
+  soul_city: "Browser TS tools; player-owned Sims directory as working copy; opt-in publish"
 
 show_beat: |
   Walk Ben through Lane Neverending on air — compare Habitat/GNE splice semantics to

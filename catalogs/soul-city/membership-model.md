@@ -60,6 +60,51 @@ of that history. What paid privacy is FOR, framed positively: works
 in progress, commissions, surprise gifts, contest entries before the
 deadline.
 
+## EA policy fit (checked 2026-08-29)
+
+Two documents govern, and neither requires anyone to share anything.
+
+**The [EA User Agreement](https://www.ea.com/legal/user-agreement)
+UGC clause** is a license grant, not a sharing duty: it triggers
+"when you contribute UGC" *to EA Services*, at which point EA takes a
+perpetual, transferable, sublicensable license to your creation,
+without payment or attribution. Content generated locally, or on Soul
+City, never touches EA Services and grants EA nothing. Two
+consequences: private generation is unambiguously fine, and sharing
+on Soul City keeps creators' rights with creators instead of handing
+EA a perpetual license -- which is a reason to share HERE, worth
+saying out loud.
+
+**The [EA mods policy](https://help.ea.com/en/articles/the-sims/the-sims-4/mods-policy/)**
+(written for The Sims 4; the operative EA posture) says mods "must be
+non-commercial and distributed free of charge," cannot be "sold,
+licensed, or rented for a fee," and cannot contain monetary-transaction
+features. Explicitly allowed: passive ads and donation requests on
+the distribution site, and paid early access for a "reasonable"
+period before free release.
+
+How the models score against that:
+
+- **Public-on-free, private-on-paid: compliant.** The policy governs
+  *distribution*. A never-shared private object isn't distributed at
+  all; everything that IS distributed on Soul City is free to every
+  downloader, forever -- stronger than EA requires, since we skip even
+  the early-access window EA itself blesses. What's paid is the
+  service (compute, storage, staging), never the content. Photoshop
+  sells subscriptions, not your paintings.
+- **Pay-to-share (the inversion): legally harmless, socially
+  backwards.** Downloads would still be free, so the letter of the
+  policy holds -- but it taxes generosity, throttles the commons,
+  reads as paysite-with-extra-steps to a community still sore from
+  the paysite wars, and starves the flywheel that makes the whole
+  model work. Publishing stays free.
+
+Bright lines, stated once: no object marketplace, no selling content,
+no monetary features inside objects, donations and recognition
+always allowed. The Soul City pitch is that it is the
+EA-policy-cleanest place there is to share: everything free, everyone
+credited, nobody's rights quietly assigned away.
+
 ## What the meter can sit on (candidates)
 
 The test for every candidate: compute-heavy or service-backed, so

@@ -9,7 +9,7 @@ meta:
   id: soul-angel-windows
   status: spec
   platform: windows
-  parent_spec: ../../../../catalogs/soul-city/sims1-soul-bridge.yml
+  parent_spec: ../../../catalogs/soul-city/sims1-soul-bridge.yml
   stream_gateway: ../../stream-gateway/SPEC.yml
   simplifier: ../../stream-gateway/simplifier.yml
   one_liner: |
@@ -311,7 +311,7 @@ see_also:
   - CATALOG-SCREEN-MATCH.yml
   - GUID-ISSUE-HUB.yml
   - OBJECT-ERROR-TELEMETRY.yml
-  - ../../../../catalogs/soul-city/sims1-soul-bridge.yml
+  - ../../../catalogs/soul-city/sims1-soul-bridge.yml
   - ../../../catalogs/maxis/CATALOG.yml
   - ../../stream-gateway/SPEC.yml
   - ../../stream-gateway/simplifier.yml

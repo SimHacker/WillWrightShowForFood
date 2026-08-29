@@ -245,6 +245,6 @@ Do **not** commit:
 | [`ARCHITECTURE.yml`](ARCHITECTURE.yml) | Unified product plan |
 | [`CATALOG-DB-SCHEMA.yml`](CATALOG-DB-SCHEMA.yml) | SQLite schema |
 | [`../../stream-gateway/README.md`](../../stream-gateway/README.md) | Stream / OBS topology |
-| [`../../../../catalogs/soul-city/sims1-soul-bridge.yml`](../../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product / Steam spec |
+| [`../../../catalogs/soul-city/sims1-soul-bridge.yml`](../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product / Steam spec |
 
 Parent product: Soul City · Will Wright Show For Food · public repo.

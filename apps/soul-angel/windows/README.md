@@ -16,6 +16,6 @@ Windows-native host for the Sims Legacy Collection companion and the unified str
 | [native/README.md](native/README.md) | WinUI solution layout, `dotnet` CLI |
 | [native/SoulAngel.sln](native/SoulAngel.sln) | Open in Visual Studio 2022 (Windows only) |
 | [../../stream-gateway/SPEC.yml](../../stream-gateway/SPEC.yml) | Bus, overlay, Twitch/YouTube/OBS |
-| [../../../../catalogs/soul-city/sims1-soul-bridge.yml](../../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product spec (Steam, rollout, ethics) |
+| [../../../catalogs/soul-city/sims1-soul-bridge.yml](../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product spec (Steam, rollout, ethics) |
 
 Native project scaffold (`native/SoulAngel.sln`) — **w0 WinUI 3 + WebView2 placeholder**. Build on Windows; edit specs on Mac or Windows.
