@@ -14,7 +14,7 @@ of entry) are its districts.*
 
 ## What it is
 
-Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform** on Micropolis Federation rails:
+Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform**:
 
 | Layer | Examples |
 |-------|----------|
