@@ -101,10 +101,10 @@ Don's later [**breakfast simplex**](breakfast-simplex-barycentric-direct-manipul
 
 Don's picks for what to build with a re-implemented ECG (patent's expired — it's free now):
 
-### WigFabrik / Wig-M-Porium / WigOMatic (Soul City craft shop) — public showcase
+### WigFabrik / Wig-M-Porium (Soul City craft shop) — public showcase
 
 The [WigFabrik](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)
-(*wig factory* — Dutch-hybrid shop name; aka Wig-M-Porium / WigOMatic) is the **perfect shippable
+(*wig factory* — Dutch-hybrid shop name; aka Wig-M-Porium; WigOMatic is the in-game wig-manager appliance the shop sells) is the **perfect shippable
 demo** of ECG brought forward:
 
 - **Multitarget mesh interpolation** — hair-cap / silhouette / volume exemplars at simplex vertices

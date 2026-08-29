@@ -37,7 +37,7 @@ dons_thread:
     rigs) instead of hand-tuning sliders. Direct design input to the Faceball
     Construction Set's ecg_blend driver and parameterized soft-body parts.
   wigfabrik_showcase: |
-    Soul City's **WigFabrik** (aka Wig-M-Porium / WigOMatic) is the public product
+    Soul City's **WigFabrik** (aka Wig-M-Porium; WigOMatic is the in-game wig-manager appliance the shop sells) is the public product
     showcase for the ECG reimplementation: multitarget mesh + texture interpolation,
     AI-generated texture maps and hair patterns as *targets*, drag-to-solve blend
     weights. Camp shop, Interval math. Tom would be thrilled to discuss it.

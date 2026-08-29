@@ -148,7 +148,25 @@ capabilities:
         Life as well as death: usher souls into existence — as many as you want — placed into
         the save file. Many clones from one tombstone or out of thin air; import a character
         or generate from a template. Character editing could be his skill too.
-      pattern: "Generalizes: a tool with a face is an interface players already know how to talk to"
+      pattern: "Generalizes: a tool with a face is an interface players already know how to talk to; object-shaped sibling = AnythingOMatic appliances (portals-and-modules.md)"
+    web_reaper:   # Don, 2026-08-29: Death's true form runs on the web site, not in the game
+      power: |
+        An in-game Grim Soul Reaper can only do what the engine allows at runtime; the reaper in
+        your browser has full read/write over save files and characters — supernaturally more
+        powerful. Both can exist; the browser one is the real power.
+      reaping_ceremony: |
+        Reap a character → web reaper replaces them with a custom tombstone that says anything
+        you want, written AS the character ("I'm leaving The Sims and here is why"). Virtual
+        death of a Sim as testimony — diegetic, fictional representations (privacy pitfalls
+        sidestepped by construction; proper privacy policy still covers the rest). Soul City
+        keeps the exit tally — the character petition (steam-app-strategy.md) in ritual form.
+        Always undoable: the same reaper resurrects from the same tombstone on request.
+      iconified_souls: "Tombstones are iconified souls — installable objects the reaper can resurrect"
+    template_index_pages: |
+      Every object template gets a page with stats + links to all public objects created from it
+      (object viewer + template instance browser, portals-and-modules.md). The page listing every
+      i-am-leaving-the-sims tombstone falls out of the generic system — like Don's original
+      Tombstone Generator index page, decades ago.
     data_path: |
       Primary: read neighborhood/lot saves via FileBridge — not screen scrape.
       Angel runs full Soul City content platform in WebView2; talks to central SvelteKit

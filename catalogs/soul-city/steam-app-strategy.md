@@ -135,6 +135,13 @@ whether the character "is" its player stays permanently on the
 player's side of the line). If somebody signs a petition with their
 sims characters, well, nobody controls that. Wink.
 
+The petition's ritual form is **the reaping ceremony**: the web
+reaper replaces a character with a custom tombstone bearing the
+character's own last words, Soul City tallies the exits, and the same
+reaper can resurrect from the same tombstone whenever the player
+wants -- see "The web reaper and the reaping ceremony" in
+[sims1-soul-bridge.md](sims1-soul-bridge.md).
+
 Compliance note: delegating the human petition shrinks the GDPR
 surface to the tote board's consent-first counts and whatever the app
 collects (Steam's own Privacy Policy applies there). Character

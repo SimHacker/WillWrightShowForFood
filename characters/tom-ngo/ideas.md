@@ -40,7 +40,7 @@ Ask Tom: which path is elegant for a *first* public ECG toy? What’s a beautifu
 ### WigFabrik — the shippable ECG showcase
 
 Soul City craft shop ([portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)):
-aka **Wig-M-Porium** / **WigOMatic**.
+aka **Wig-M-Porium**. (**WigOMatic** is the in-game wig-manager appliance the shop sells.)
 
 - Multitarget **mesh** interpolation (hair-cap / silhouette / volume at simplex vertices)
 - Multitarget **texture** interpolation (same weights over SPR2 / UV atlases)

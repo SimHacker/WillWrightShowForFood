@@ -88,7 +88,38 @@ skill. The scythe cuts both ways: one character, one pie menu, the
 whole life-cycle toolchain behind a face you already know from the
 game. (The pattern generalizes -- a tool with a face is an interface
 players already know how to talk to -- and Death is its first
-incarnation.)
+incarnation. Its object-shaped sibling is the
+[AnythingOMatic appliance pattern](portals-and-modules.md).)
+
+### The web reaper and the reaping ceremony (Don, 2026-08-29)
+
+Death's true form runs **on the web site, not in the game**. An
+in-game Grim Soul Reaper could only do what the engine allows at
+runtime; the reaper running in your browser has **full read and write
+over your save files and characters** -- supernaturally much more
+powerful. (Both can exist; the browser one is the real power.)
+
+The ceremony: **reap a character** and the web reaper replaces them
+with a **custom tombstone that says anything you want** -- written AS
+the character. A sim's exit, in the sim's own words: "I'm leaving The
+Sims, and here is why." The virtual death of a Sim as testimony --
+poignant, diegetic, and composed of fictional representations
+(personal-data pitfalls sidestepped by construction; a proper privacy
+policy covers the rest). Soul City keeps the tally of exits -- this is
+the [character petition](steam-app-strategy.md) given its ritual form.
+And the murder is always undoable: the same reaper resurrects from
+the same tombstone whenever you want. Tombstones are **iconified
+souls**.
+
+### Every template gets an index page
+
+Each object template has a page with stats and links to **all public
+objects created from it** -- install any of them into your catalog,
+place them in any save file. So the page listing every
+i-am-leaving-the-sims tombstone isn't a special campaign feature: it
+falls out of the generic **object viewer and template instance
+browser**, exactly like the tombstone index page Don made decades ago
+with the original Tombstone Generator.
 
 ## The sims1 district (Don, 2026-08-29)
 

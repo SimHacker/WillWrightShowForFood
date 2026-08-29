@@ -20,7 +20,7 @@ the_core_idea: |
   vertices; drag a feature, solve barycentric blend weights. Golan Levin (with Malcolm
   Slaney) used that editor for Mouther (1995–96): speech-driven cartoon faces.
   Patent US5933150 expired ~2016. The shippable public demo is Soul City's **WigFabrik**
-  (aka Wig-M-Porium / WigOMatic): multitarget mesh + texture interpolation, AI-generated
+  (aka Wig-M-Porium): multitarget mesh + texture interpolation, AI-generated
   texture maps and hair patterns as ECG *targets*, drag-to-solve weights → Sims head IFF.
   Dream pair: engine builder + artist brainstorm WigFabrik + how to reverse-engineer
   Mouther art (or recover archives), and SVG / Canvas / WebGPU paths for Faceball /

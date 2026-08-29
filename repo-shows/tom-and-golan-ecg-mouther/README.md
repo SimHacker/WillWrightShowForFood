@@ -10,7 +10,7 @@ for **[Mouther](https://www.flong.com/archive/projects/mouther/)** — speech-dr
 Patent [US5933150](https://patents.google.com/patent/US5933150) expired ~2016. The dream is to
 sit both of them down and **talk**:
 
-- **WigFabrik** (aka Wig-M-Porium / WigOMatic) as the shippable ECG showcase — multitarget mesh +
+- **WigFabrik** (aka Wig-M-Porium) as the shippable ECG showcase — multitarget mesh +
   texture interpolation, AI-generated texture maps / hair patterns as *targets*, drag-to-solve
   weights → Sims head IFF
   ([portal §6](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio))

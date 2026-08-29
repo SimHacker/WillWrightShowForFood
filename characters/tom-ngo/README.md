@@ -41,7 +41,7 @@ FaceIt, etc.) instead of hand-tuning sliders. That idea loads the
 **HOMER → NeWS Mona Eyes → Tom Ngo ECG / Mouther → Bounce → SimFaux → Squares in a Box.**
 
 The **public product showcase** is Soul City's **[WigFabrik](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/the-computer-as-portal.md#6-wigfabrik--wigomatic-and-the-character-customization-studio)**
-(aka Wig-M-Porium / WigOMatic): multitarget mesh + texture interpolation, AI-generated texture maps
+(aka Wig-M-Porium; WigOMatic is the in-game wig-manager appliance the shop sells): multitarget mesh + texture interpolation, AI-generated texture maps
 and hair patterns as *ECG targets*, drag-to-solve blend weights → Sims-1 head-skin IFF. Camp
 storefront; Interval math. Tom would be thrilled to discuss it.
 

@@ -75,11 +75,33 @@ Candidate TMog modules for the sims1 portal:
 | Catalog browser and favorites | SimFreaks Laszlo CMS, the Plaza |
 | [Stat-U-Matic](stat-u-matic.md) statue photo booth and scene poser | SimShow + the SimFreaks playset prototype; seed: VitaMoo viewer in the TMog suite |
 
+| Object viewer + template instance browser | every template gets a stats page listing all public objects made from it -- the Tombstone Generator's index page, generalized |
+
 Below the modules sits a shared **texture plugin registry**: generic
 generate/edit/apply texture plugins (material library, cellular
 automata generator, AI image generation and editing) that any module
 consumes -- Rug-O-Matic, WigFabrik, and Stat-U-Matic all pull from the
 same plugins. Spec: [stat-u-matic.md](stat-u-matic.md).
+
+## Appliances: the AnythingOMatic pattern (Don, 2026-08-29)
+
+WigFabrik keeps its exotic shop name -- and **WigOMatic is an
+appliance WigFabrik sells**: a custom in-game object, like a dresser,
+that manages all your wigs. Place it with the house editor or just
+inject it into your catalog; pick a wig; dress and undress; organize
+your own wig categories online, and the appliance **renders its pie
+menu tree custom** from your categories and your wigs.
+
+The pattern is generic: an accessory manager reskinnable as
+**AnythingOMatic** -- DongOMatic, Pixel8OMatic, whatever the shop
+stocks. Dress and undress accessories, easy peasy. Precedent with
+full credit: the one-armed-bandit TMog Steve Alvey (SimSlice) made
+for Don -- but less random.
+
+Appliances are the sibling of tools-as-characters (rule 5 below):
+the same online module embodied in the game as an OBJECT rather than
+a character. Death fronts the graveyard toolchain; WigOMatic fronts
+your wig library. Both render their pie menus from live online state.
 
 Friend portals are cooperative, not extractive: Tiny Life modules with
 Ell, Proxi modules with Galium -- shared formats, credit, and where
