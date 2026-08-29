@@ -24,6 +24,103 @@ the repository, a set is a working tree, the overlay is the diff you
 meant, and the manifest is a lockfile.** You do not edit a checkout
 and hope; you change the inputs and rebuild.
 
+## First run: rename Downloads to Sources, and never touch it again
+
+*Don, 2026-08-29: at startup look for a sibling of Downloads named
+Sources. If it exists we already initialized. Otherwise rename
+Downloads to Sources, make a fresh Downloads, inventory everything
+that was there into a manifest, and build -- wrapping user content in
+About boxes, pulling catalog info, generating glyphs.*
+
+That is the whole bootstrap, and the **rename** is what makes it
+respectable. It is not a copy, so it costs nothing on an eight
+gigabyte Downloads folder, it cannot half-succeed into two divergent
+copies, and it means the player's original bytes are never rewritten
+even once. Everything after that point is generated and therefore
+expendable.
+
+In pipeline terms, first run is `git init` plus the initial commit:
+the manifest of what was already there is the **baseline snapshot**,
+which is simultaneously the rollback target, the provenance record for
+content that arrived with no readme, and the first observation for
+[co-occurrence clustering](guid-registry.md).
+
+### Five ways the naive version bites, and what to do instead
+
+**1. Directory existence is a weak sentinel.** Players have their own
+folders, sync clients create empty ones, and a crashed first run
+leaves a real `Sources` that is not initialized. Gate on a **marker
+file** -- `Sources/.soul-sources.json`, carrying schema version,
+initialization time, and tool version -- and treat a bare `Sources`
+directory with no marker as an unrelated folder to leave alone and
+name around.
+
+**2. The dangerous window is between the two operations.** After the
+rename and before the fresh Downloads exists, an interrupted run
+leaves a game with no Downloads at all. **Write the intent before
+acting** and keep a small state machine on disk: `planned`,
+`renamed`, `downloads_created`, `inventoried`, `built`. Recovery
+reads the last state and finishes the job rather than guessing. This
+is the boring write-ahead discipline and it is exactly what the
+situation deserves.
+
+**3. Cloud sync will hurt somebody.** The Sims lives under
+Documents, and OneDrive redirects Documents by default on Windows;
+iCloud and Dropbox do comparable things on the Mac. Renaming a synced
+directory can mean a full re-upload, and sync clients have been known
+to resurrect deleted files or delete partially. **Detect the sync
+root before touching anything** and say so plainly, with the option
+to proceed, relocate, or stop.
+
+**4. Renaming a directory may not be available in the browser.**
+File System Access gives us `move()` for file handles; directory
+support is the part to verify against current browsers rather than
+assume. If it is unavailable, the fallback is copy, **verify every
+file by hash**, and only then remove -- and this is a concrete
+argument for [SoulAngel](sims1-soul-bridge.md), which has ordinary
+filesystem access and can do the atomic thing.
+
+**5. Sources must become genuinely read-only.** Not "we promise not
+to write there": mark it read-only where the platform allows, keep
+the write path physically separate in the code, and have the build
+refuse to run if the marker's recorded hashes disagree with what is
+on disk.
+
+### The escape hatch is the feature
+
+Uninstall is: delete the generated Downloads, rename Sources back.
+Two operations, no data at risk, and the player's collection is
+exactly as it was. **Say that out loud in the UI before asking for
+permission**, because it is the honest answer to "what is this thing
+about to do to twenty years of my stuff," and it is the reason
+somebody clicks yes.
+
+Two things still to measure rather than assume: whether the game
+ignores an unfamiliar sibling directory (it should, since it looks
+for Downloads specifically), and what the practical ceiling is on
+inventorying a very large collection in a browser.
+
+## Lineage: Don built this pipeline once already
+
+The framing is not a metaphor borrowed from software development; it
+is the same job Don did for Sims character animation, with 3ds Max
+and MaxScript plus C++ extensions, SourceSafe, and Access. The
+correspondence is close enough to be worth writing down:
+
+| Animation pipeline | This pipeline |
+|--------------------|---------------|
+| Max scene files, the authoring originals | The catalog cache, never edited |
+| MaxScript and C++ exporters | TMog build modules |
+| SourceSafe | Content addressing plus git for sources and overlays |
+| Access database of metadata and ids | The [GUID registry](guid-registry.md) |
+| Game-ready exported animation data | The generated Downloads set |
+
+Same shape, same reason: authoring originals outlive the build format,
+so the build format has to be regenerable and the metadata has to
+live in a database rather than in filenames. *Worth asking Don on the
+record: did the Access side hold id assignment, and what broke often
+enough to be memorable?*
+
 ## What falls out of this for free
 
 The reason to say yes immediately is that most of the hard problems

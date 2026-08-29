@@ -21,6 +21,55 @@ layers:   # one direction of flow
 
 analogy: "Git rather than filesystem: the cache is the REPOSITORY, a set is a WORKING TREE, the overlay is the DIFF YOU MEANT, the manifest is a LOCKFILE. You do not edit a checkout and hope."
 
+first_run:   # Don, 2026-08-29 -- "look for a sibling dir to Downloads named Sources"
+  bootstrap:
+    - "Startup: look for a sibling of Downloads named Sources"
+    - "Marker present -> already initialized, proceed"
+    - "Otherwise: RENAME Downloads -> Sources"
+    - "Create a fresh empty Downloads"
+    - "Inventory everything in Sources into a manifest (the baseline snapshot)"
+    - "Build: wrap user content in About boxes, pull catalog info, generate glyphs"
+  why_rename_not_copy:
+    - "Costs nothing on an 8GB Downloads folder"
+    - "Cannot half-succeed into two divergent copies"
+    - "The player's original bytes are never rewritten even once"
+    - "Everything after that point is generated, therefore expendable"
+  git_analogy: "First run is git init plus the initial commit; the baseline manifest is the rollback target, the provenance record for content that arrived with no readme, and the first observation for co-occurrence clustering (guid-registry.yml)"
+  five_ways_the_naive_version_bites:
+    weak_sentinel:
+      problem: "Directory existence is weak -- players have their own folders, sync clients create empty ones, a crashed first run leaves a real Sources that is not initialized"
+      fix: "Gate on MARKER FILE Sources/.soul-sources.json with schema version, init time, tool version. A bare Sources with no marker is an unrelated folder: leave it alone, name around it."
+    dangerous_window:
+      problem: "Between rename and fresh-Downloads-created, an interrupted run leaves a game with NO Downloads at all"
+      fix: "WRITE INTENT BEFORE ACTING. On-disk state machine: planned, renamed, downloads_created, inventoried, built. Recovery reads last state and finishes rather than guessing."
+    cloud_sync:
+      problem: "The Sims lives under Documents; OneDrive redirects Documents by default on Windows, iCloud/Dropbox comparable on Mac. Renaming a synced dir can mean full re-upload; sync clients have resurrected deleted files and deleted partially."
+      fix: "DETECT THE SYNC ROOT BEFORE TOUCHING ANYTHING. Say so plainly: proceed, relocate, or stop."
+    browser_rename_limits:
+      problem: "File System Access gives move() for FILE handles; DIRECTORY support is to be verified against current browsers, not assumed"
+      fallback: "Copy, VERIFY EVERY FILE BY HASH, only then remove"
+      implication: "Concrete argument for SoulAngel (sims1-soul-bridge.yml) -- ordinary filesystem access can do the atomic thing"
+    sources_readonly:
+      problem: "'We promise not to write there' is not a guarantee"
+      fix: "Mark read-only where the platform allows, keep the write path physically separate in code, build REFUSES to run if marker hashes disagree with disk"
+  escape_hatch:
+    uninstall: "Delete generated Downloads, rename Sources back. Two operations, no data at risk, collection exactly as it was."
+    ux_rule: "SAY THAT OUT LOUD IN THE UI BEFORE ASKING FOR PERMISSION -- the honest answer to 'what is this about to do to twenty years of my stuff', and the reason somebody clicks yes"
+  to_measure:
+    - "Whether the game ignores an unfamiliar sibling directory (it should -- it looks for Downloads specifically)"
+    - "Practical ceiling on inventorying a very large collection in a browser"
+
+lineage:   # Don built this pipeline once already, for Sims character animation
+  tools: "3ds Max, MaxScript plus C++ extensions, SourceSafe, Access"
+  correspondence:
+    max_scene_files: "The catalog cache, never edited -- authoring originals"
+    maxscript_and_cpp_exporters: "TMog build modules"
+    sourcesafe: "Content addressing plus git for sources and overlays"
+    access_database: "The GUID registry (guid-registry.yml) -- metadata and ids"
+    exported_animation_data: "The generated Downloads set"
+  same_reason: "Authoring originals outlive the build format, so the build format has to be regenerable and the metadata has to live in a database rather than in filenames"
+  open_question: "Ask Don on the record: did the Access side hold id assignment, and what broke often enough to be memorable?"
+
 what_falls_out_free:   # most hard problems elsewhere stop being problems
   downloads_becomes_fearless: "Delete the whole thing, rebuild from cache plus manifest. The folder every Sims player has feared since 2000 becomes a cache directory."
   renumbering_is_a_build_step: "Two sets can assign different ids to the same source and neither disturbs it. Id virtualization (guid-registry.yml) stops being a clever trick and becomes an ordinary consequence of building."
