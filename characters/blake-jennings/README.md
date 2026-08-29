@@ -114,6 +114,48 @@ Natural fits:
 
 ---
 
+## What we could discuss
+
+The full list of hooks lives in [`ideas.md`](ideas.md); the short version:
+
+- **The record, corrected** — [how same-sex relationships really got into The Sims](../patrick-j-barrett-iii/same-sex-relationships-the-record.md):
+  a decade of retellings (New Yorker, Game Developer, Kotaku) that the 1998 primary sources
+  contradict. A case study in how games history gets written and how it gets fixed.
+- **Procedural rhetoric without the jargon** — [Bogost's frame](../ian-bogost/roles-not-characters.md):
+  the kiss-slap rule was never in any spec, so the code argued something no human on the team
+  endorsed. The academic handle for what his essays already do.
+- **Repo Show mechanics** — retrofit an Unnecessary Analysis video as a living repo: transcript,
+  sources, discussion threads, audience PRs instead of comment-section landfill.
+- **Tiny Life and the bridge** — meet [Ell](../ellpeck/), walk the
+  [Soul City bridge](../ellpeck/bridge/soul-city-bridge.md), and consider the "war crimes" invert
+  where the trolls are the criminals, not the Tinies.
+- **Recording policy and economics** — first call off the record, format decided together;
+  and the open question of YouTube monetization vs Patreon vs GitHub Sponsors for funding
+  open-source bridges.
+- **The Bannon / WoW rabbit hole** — his
+  [gold-farming beat](https://youtu.be/OGV5uPmFzrE?t=2404); Don has receipts.
+
+## Soul City: designs and examples
+
+The publish-and-share platform the show orbits, specced in readable pages:
+
+| Page | What |
+|------|------|
+| [Soul City catalog](../../catalogs/soul-city/README.md) | The hub: create, publish, share; Plaza, Depot, Station, Terminal |
+| [GitHub distribution model](../../catalogs/soul-city/github-distribution-model.md) | Catalogs and free content in public git repos |
+| [Browser ecosystem](../../catalogs/soul-city/browser-ecosystem.md) | Save read/write in the browser; Share-button replacement |
+| [SoulAngel / Soul Saver](../../catalogs/soul-city/soul-angel.md) | Relocating character souls out of owned silos |
+| [Soul Saver thesis](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md) | Exit as voice: the petition, the turnstile, the pool with no ladder |
+| [Tiny Life bridge spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md) | The first federation spoke |
+
+Worked examples from the first time around: the
+[SimFreaks Laszlo CMS](../will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md),
+the [Sims Exchange](../will-wright/sources/2004-01-12-sims-exchange/README.md),
+the [Crowd Sitter](../will-wright/sources/2018-04-23-sims-crowd-sitter/README.md), and the
+[Dumbold Voting Machine](../will-wright/sources/2018-04-24-dumbold-voting-machine/README.md).
+
+---
+
 ## Blake's essays (entry points)
 
 | Essay | Link |

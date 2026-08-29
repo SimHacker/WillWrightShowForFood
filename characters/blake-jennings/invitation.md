@@ -39,10 +39,11 @@ guest rooms, where your work would be relevant:
 
 **Will Wright is in** — signed on for the premiere and more.
 
-## What crystallized since July (Aug 2026)
+## Now in the repo
 
-Patrick Barrett III and I have been talking a lot lately, comparing notes and stories — and the
-history came out considerably clearer than the version that's been published for a decade:
+Patrick Barrett III and I have been talking about our experiences working together on The Sims
+recently, comparing notes and stories, and the history came out considerably clearer than the
+version that's been published for a decade. That work, plus the standing pieces of the project:
 
 | Now in the repo | Why it might interest you |
 |---|---|
@@ -50,7 +51,10 @@ history came out considerably clearer than the version that's been published for
 | [QGCon inclusivity paper hub](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/don-hopkins/sources/qgcon-inclusivity-paper) | That Google Doc outline I sent you now has a real home: [abstract](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md), [theory spine](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/qgcon-inclusivity-paper/procedural-rhetoric-theory.md), [the 2026 thesis](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md) |
 | [Ian Bogost's room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ian-bogost) · [roles not characters](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ian-bogost/roles-not-characters.md) | **Procedural rhetoric**: the argument is in the *rule*, not the representation. The kiss-slap rule was never in any spec — the code argued something nobody on the team believed. This is the vocabulary your essays already use without the jargon |
 | [Jacques Servin's room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/jacques-servin) | The SimCopter easter-egg prequel — the actual events behind the scandal that my 1998 review cites as "we'll get flak after SimCopter" |
-| [Soul City catalog](https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city) | Now specced in readable pages, not just YAML — and after the Aug 2026 EA buyout it reads less like a hobby and more like an evacuation plan |
+| [Soul City catalog](https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city) | Now specced in readable pages, not just YAML — and after the Aug 2026 EA buyout it reads less like a hobby and more like an evacuation plan. Designs: [GitHub distribution model](https://github.com/SimHacker/WillWrightShowForFood/blob/main/catalogs/soul-city/github-distribution-model.md), [browser ecosystem](https://github.com/SimHacker/WillWrightShowForFood/blob/main/catalogs/soul-city/browser-ecosystem.md), [SoulAngel / Soul Saver](https://github.com/SimHacker/WillWrightShowForFood/blob/main/catalogs/soul-city/soul-angel.md) |
+| [Ell's room (Tiny Life)](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/ellpeck) | [Tiny Life](https://tinylifegame.com/) is the queer indie life-sim that still ships sharing, stories, and mods while the Legacy Collection dropped the Exchange. The [Soul City bridge doc](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ellpeck/bridge/soul-city-bridge.md) and [bridge spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md) make it the first spoke out of the silo |
+| [1996 Winograd talk source bundle](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds) | The "$5-billion question": video, transcript, and notes from the Stanford class where a student's question turned into Dollhouse, then The Sims. Anchor of the Will Wright premiere |
+| [Will Wright sources archive](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/will-wright/sources) | Primary-source Maxis and Sims history, growing weekly: prerelease art and cut characters, the E3 1999 booth photos, design documents, internal newsletters, alumni threads. Receipts, not retellings |
 
 I'd still love to talk about:
 
