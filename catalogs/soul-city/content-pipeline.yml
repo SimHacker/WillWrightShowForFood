@@ -1,0 +1,70 @@
+# The content pipeline -- pristine sources, sidecar overlays, generated sets (Don, 2026-08-29)
+# Prose spec: content-pipeline.md. One line: Downloads is a build output, not the source of truth.
+# "It's a pipeline, never edit in place, just make data flow dependency network." -- Don
+
+meta:
+  decided_by: Don Hopkins
+  date: 2026-08-29
+  supersedes: "The implicit model where the Downloads directory WAS the content of record"
+
+layers:   # one direction of flow
+  catalog_cache:
+    holds: "Every object exactly as it arrived, byte for byte, from whatever zip or mirror or folder it came from"
+    mutability: "NEVER EDITED. Append-only."
+    role: "The single source of truth"
+  sidecar_overlays:
+    holds: "YAML or JSON beside each source: identity binding to our catalog, corrections, categories, credits, claim state, notes"
+    mutability: "Edited freely, by us and by contributors"
+  generated_sets:
+    holds: "The Downloads trees the game actually reads: renumbered, localized, About wrapped around each object"
+    mutability: "DISPOSABLE. Rebuilt on demand."
+
+analogy: "Git rather than filesystem: the cache is the REPOSITORY, a set is a WORKING TREE, the overlay is the DIFF YOU MEANT, the manifest is a LOCKFILE. You do not edit a checkout and hope."
+
+what_falls_out_free:   # most hard problems elsewhere stop being problems
+  downloads_becomes_fearless: "Delete the whole thing, rebuild from cache plus manifest. The folder every Sims player has feared since 2000 becomes a cache directory."
+  renumbering_is_a_build_step: "Two sets can assign different ids to the same source and neither disturbs it. Id virtualization (guid-registry.yml) stops being a clever trick and becomes an ordinary consequence of building."
+  every_profile_is_a_build_target: "Zombie set, SimProv set, recreate-a-2002-fansite set: same sources, different manifests and overlays"
+  stamp_becomes_a_build_receipt: "Which source hash, which overlay revision, which mapping, which tool version -- describes a DERIVATION instead of asserting a history"
+  improvements_apply_retroactively: |
+    When the registry learns what a mystery object actually is, you rebuild and EVERY ABOUT BOX IN
+    YOUR COLLECTION GETS BETTER. No re-downloading, no mutation, nothing lost. The payoff the
+    cataloging flywheel needed.
+  undo_is_free: "The original never changed"
+
+content_addressing:   # an unexpected dividend
+  scheme: "Address the cache by HASH OF THE ORIGINAL FILE"
+  dividend: "REPACK DETECTION BECOMES A SIDE EFFECT rather than a project"
+  why_it_matters: |
+    Twenty-five years of custom content circulated through zips inside zips, rehosted, rebundled,
+    renamed, stripped of readmes. Hash the bytes and the same object arriving from five bundles is
+    STORED ONCE WITH FIVE PROVENANCE RECORDS -- the cache automatically reconstructs the
+    redistribution chains.
+  feeds_attribution: "Those chains are exactly the evidence attribution claims need: who published first, who repacked, where the readme survived (object-shops.yml)"
+  conclusion: "The storage optimization and the archival mission are the same mechanism"
+
+determinism:   # a requirement, not a nicety
+  why: "Two players building from the same manifest must get THE SAME BYTES, because they will trade saves that reference those ids"
+  constraints:
+    - "Seed anything random"
+    - "No wall-clock timestamps in outputs; if one must exist, take it from the manifest"
+    - "Fix iteration order everywhere -- directory listing order is not an order"
+    - "Pin inputs by HASH in the manifest, never by filename (filenames from 2003 are not identifiers)"
+    - "Record the tool version; treat generator changes that alter output bytes as version bumps"
+  payoff: "A manifest becomes a reproducible description of a set; sets diff and travel as RECIPES; a save's id space means the same thing on both machines"
+
+backup_policy:
+  precious: [catalog cache, overlays, manifests, per-save journal]
+  disposable: "Every generated set -- regenerable by definition, so backing it up is backing up a build directory"
+  honest_cost: "Storing original plus built copy roughly doubles a large collection. The cache compresses well and can keep originals in their delivered archives; outputs need no backup. Cheap for what it buys."
+
+footgun:   # name it now
+  what: "FIND OUT WHAT THE GAME ITSELF WRITES INTO THE OUTPUT TREES before treating them as disposable"
+  severity: "A build system that deletes user files is a catastrophe, not a bug"
+  rule: "Anything the game or player creates inside a generated tree must be ADOPTED AS A SOURCE on the next build. The importer needs a rule for unrecognized files in output directories: never delete, always ingest or leave alone."
+
+see_also:
+  guid_registry: guid-registry.yml   # the id mapping this pipeline applies
+  object_shops: object-shops.yml   # the About wrapper and the generators that emit objects
+  rendering_policy: rendering-and-rights.yml
+  portals: portals-and-modules.md

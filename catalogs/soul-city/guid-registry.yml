@@ -120,6 +120,8 @@ about_slice_delivery:   # Don, 2026-08-29 -- the registry shows up IN THE GAME
   why_it_matters: "How a corpus this size gets cataloged: it asks for help from inside the game"
   full_spec: object-shops.yml   # about_slice
 
+build_architecture: content-pipeline.yml   # pristine catalog cache + sidecar overlays -> generated sets; Downloads is a build OUTPUT
+
 implementation:   # Don, 2026-08-29 — the honest mechanism
   hard_constraint: "We do NOT change how The Sims reads and writes files. Its file handling is fixed; we work with it."
   what_we_control: "Which directory trees occupy the paths the game reads: GameData, UserData, Downloads"

@@ -124,6 +124,11 @@ Consequences worth stating plainly:
 
 ## How the virtualization is actually implemented
 
+*The three-layer build architecture underneath all of this -- pristine
+catalog cache, sidecar overlays, generated sets -- is spec'd in
+[content-pipeline.md](content-pipeline.md). What follows is how it
+looks from the game's side.*
+
 **We do not change how The Sims reads and writes files** (Don,
 2026-08-29). The game's file handling is fixed and we work with it,
 not around it. What we control completely is **which directory trees
