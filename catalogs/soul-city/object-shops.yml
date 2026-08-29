@@ -242,7 +242,11 @@ radio_simulator:   # Don, 2026-08-29 -- the natural top-of-ladder project; why t
       been syndicated this way for a century, and it is the only rights-clean version of this.
 
 qr_codes:   # Don, 2026-08-29 -- "THIS OPENS UP THE UNIVERSE"
-  provisional_name: "SoulGlyph (platform mechanism) / TMogCode (the sims1 object that displays one) -- pending Don's pick; rename is one line"
+  name:   # DECIDED Don, 2026-08-29
+    soulglyph: "The MECHANISM -- platform-level, because it works for any game (Soul family)"
+    tmogcode: "The sims1 OBJECT that displays one (TMog family)"
+    rationale: "Follows the decided Soul/TMog split: Soul = cross-game platform, TMog = sims1 content tools"
+  build_scope: "DECIDED Don, 2026-08-29: dialog surface FIRST AND ALONE, shipped alongside the Squawk Box -- the surface that always scans. Panel and conditional-destination shop follow; neither is worth delaying a mechanism this cheap."
   what: "Objects that display QR codes with URLs. Any number per object, chosen by circumstance. In popup dialogs and drawn in the world."
   the_unmet_need: |
     Twenty-five years of Sims object creators wanting a link back to their own site inside their

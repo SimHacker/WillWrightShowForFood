@@ -401,10 +401,11 @@ happens to be the only version of this that is rights-clean.
 
 ## QR codes: the return path out of the game
 
-*Don, 2026-08-29. Provisional name pending: **SoulGlyph** for the
-platform-wide mechanism, **TMogCode** for the sims1 object that
-displays one. Rename is a one-line change; the design is independent
-of it.*
+*Don, 2026-08-29. Named: a **SoulGlyph** is the mechanism, which
+belongs to the platform because it works for any game; a **TMogCode**
+is the sims1 object that displays one. First build is the dialog
+surface, shipped alongside the [Squawk Box](#the-squawk-box-your-voice-your-pet-your-phone),
+because that is the surface that always scans.*
 
 **Objects that display QR codes with URLs in them.** Any number per
 object, chosen by circumstance. Shown in popup dialogs, and drawn in
@@ -433,6 +434,10 @@ flowed *out*. Now the return path exists, and it needs no permission
 from anybody.
 
 ### Three surfaces, in order of reliability
+
+*Build order: surface 1 first and alone. The panel and the
+conditional-destination shop are worth doing, and neither is worth
+delaying a mechanism this cheap.*
 
 1. **The popup dialog.** Biggest, flattest, most stable, and it stops
    the world while it is open. This is the one that always scans, so
