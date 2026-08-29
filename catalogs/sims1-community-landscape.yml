@@ -90,6 +90,35 @@ sites:
         - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/community-sharing-today.yml
         - ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/simfileshare-official.yml
 
+  tutorial_and_creator_archives:
+    - id: bunnywuffles
+      url: http://bwsost.woobsha.com/            # The Bunny Wuffles School of Sims Transmogrification -- tutorials
+      archive_url: http://sas.woobsha.com/       # Bunny Wuffles Architectural Supplies (ARCHIVES) -- objects, themes, houses, walls, floors
+      status: "LIVE as of 2026-08-29 -- moved off StrategyPlanet when SP stopped hosting Sims sites; now shares server space at woobsha.com"
+      also_hosted: "Some sets on SimFileShare (folder list circulated at simscave.mustbedestroyed.org topic 36086), including Donation Files with a permission statement inside the download"
+      dead_mirrors: "The 'Saving the Sims' Yahoo Groups referenced on her archive page are gone -- Yahoo Groups shut down"
+      why_it_matters:
+        - "The pedagogical ancestor of what we are building: a progressive TMog + Photoshop curriculum, illustrated step by step"
+        - "Her 'first entirely new object' tutorial credits Don by name -- a warm contact path already exists"
+        - "The tutorial kits (BunnyWufflesTutorialKit, Kit2) are TEST FIXTURES: grid templates plus deliberately ugly 1-simolean objects made for checking placement and z-buffers"
+        - "Site pages are ATTRIBUTION GROUND TRUTH: object names, pictures, theme grouping, and credit links back to originating creators"
+      stated_terms_verbatim: |
+        "If you would like to redesign or recolor objects from The Bunny Wuffles School of Sims
+        Transmogrification, please provide credit on your site and in the object description with a
+        link back to us. Where I have had specific permission for an item to be cloned for this site,
+        you will need to ask the same permissions from the original designer."
+      what_the_terms_do_and_do_not_say:
+        granted: "Redesign and recolor, with credit in the object description and a link back"
+        silent_on: "RE-HOSTING her files. Silence is not permission -- rendering-and-rights.yml rule 9 defaults to no."
+        third_party_layer: "Part of the catalog is cloned from other creators with their specific permission, which does NOT transfer. A bulk mirror would sweep in rights she cannot grant."
+      intake_verdict:   # applies rendering-and-rights.yml identification_rewards
+        personal_download: "Fine -- freely offered, that is what the site is for. Crawl politely: serial, rate-limited, robots honored, identifiable agent with contact address. The site is live and small."
+        page_and_shot_archiving: "Fine for private research and preservation. Save the terms pages FIRST -- they are the license record."
+        push_to_internet_archive: "Do this early. Preservation without becoming the host, and it does not depend on us surviving."
+        metadata_publication: "Publishable -- names, ids, hashes, set membership, credit chains are facts (rule 4)"
+        public_mirror_of_bytes: "NOT without her permission, and not at all for the third-party clones"
+        best_move: "ASK HER. Live server, published permission statement, downloads that already ship permission statements, and she cited Don in her own tutorial. First creator aboard, gray corpus turns clean, and she is exactly the audience."
+
   tools_and_wikis:
     - { name: IFF Pencil 2, role: SimAntics editing }
     - { name: SimPose, role: posing }

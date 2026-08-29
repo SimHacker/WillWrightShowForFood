@@ -38,6 +38,60 @@ Status quo (MTS, SimFreaks, subscriptions) is not a signed release from EA Legal
 
 **Yahoo Groups:** largely dead. Recovery = Internet Archive + preservation groups (e.g. Saving The Sims, CTO Sims — cited by SneakySims).
 
+### First corpus case: Bunny Wuffles (checked 2026-08-29)
+
+*Don asked whether the whole Bunny Wuffles catalog can be pulled down,
+site pages and object shots included.*
+
+**Both sites are live**, not dead:
+[the School of Sims Transmogrification](http://bwsost.woobsha.com/)
+for the tutorials and
+[Architectural Supplies (ARCHIVES)](http://sas.woobsha.com/) for the
+objects, themes, houses, walls, and floors. She moved to woobsha.com
+when StrategyPlanet stopped hosting Sims sites; the Yahoo Groups
+mirrors her archive page still points at are gone. Some sets also live
+on SimFileShare, and the Donation Files ship a permission statement
+inside the download, which is the
+[read-the-terms-in-the-box](soul-city/rendering-and-rights.md) case
+arriving on cue.
+
+Her site states terms:
+
+> If you would like to redesign or recolor objects from The Bunny
+> Wuffles School of Sims Transmogrification, please provide credit on
+> your site and in the object description with a link back to us.
+> Where I have had specific permission for an item to be cloned for
+> this site, you will need to ask the same permissions from the
+> original designer.
+
+That grants **derivation with credit**, says **nothing about
+re-hosting**, and warns that part of the catalog is cloned from other
+creators under permission **she cannot pass along.** So:
+
+| Act | Verdict |
+|-----|---------|
+| Download it all for your own use | Fine. It is offered for download. Crawl politely: serial, rate-limited, robots honored, identifiable agent with a contact address, because the server is live and small. |
+| Save pages and object shots | Fine for private research. **Save the terms pages first** -- they are the license record. |
+| Push the pages into the Internet Archive | Do it early. Preservation without becoming the host, and it survives us. |
+| Publish the metadata | Yes -- names, ids, hashes, set membership, credit chains are facts. |
+| Publicly mirror her files | **No**, absent her permission, and never for the third-party clones. |
+
+**The move that makes all of this easy is asking her.** She is
+reachable, she already publishes a permission statement, some of her
+downloads carry their own, and her "first entirely new object"
+tutorial credits Don by name. First creator aboard, and the natural
+one: her school is the pedagogical ancestor of what we are building.
+
+Two technical notes for whenever it lands. The tutorial kits
+(BunnyWufflesTutorialKit and Kit2) are **test fixtures** -- grid
+templates plus deliberately ugly one-simolean objects built for
+checking placement and z-buffers -- which is exactly what a pipeline
+needs to validate against. And her site pages are **attribution
+ground truth**: object names, pictures, theme grouping, and credit
+links back to originating creators, which is the scoring corpus the
+[registry](soul-city/guid-registry.md) wants for fitting weights
+against confirmed cases rather than guesses.
+
 ---
 
 ## Virtual catalogs to build
