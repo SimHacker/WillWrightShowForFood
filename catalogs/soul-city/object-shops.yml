@@ -166,6 +166,83 @@ plugin_ladder:   # progressive disclosure, NOT tiers sold separately
     people who grew up reading it. Everything the friendly editor emits must be inspectable and
     editable at the level below it, all the way down.
 
+preview_runtime:   # Don, 2026-08-29 — "it can say what it would have done"
+  we_own_both_ends: |
+    We design the templates AND implement the runtime, so full-fidelity browser playback is a
+    DESIGN GUARANTEE, not an emulation problem. Nobody emulates The Sims to show off a squawk box —
+    the only thing that needs running is the layer the author actually wrote.
+  the_pie_menu_is_the_point: |
+    Not a form describing the pie menu, not a screenshot of one: THE OBJECT'S OWN PIE MENU, LIVE,
+    built from the authored tree, doing what it does as far as it can go. Click a slice: sound
+    plays, dialog opens, picture is there, buttons branch, state remembers. The preview of what you
+    made — and the same thing a stranger experiences on the object's page.
+  layers:
+    authored: "pie menu tree, sounds, pictures, dialogs, branching, state, timelines → EXECUTED EXACTLY (our code, our data)"
+    simulated: "motives, routing, animation, autonomy, other Sims → DECLARED, NOT FAKED: it says what it WOULD HAVE done"
+  narration_beats_faking: |
+    "Fun +30, Comfort +10." "The Sim would walk here and use this for two hours." "Advertises to
+    tired Sims within eight tiles." A fake simulation is a lie that breaks the moment it disagrees
+    with the real game; a STATED CONSEQUENCE is accurate by construction and makes invisible
+    mechanics visible during authoring. The preview is an INSPECTOR, not a diorama.
+  reads_the_argument_aloud: |
+    The rhetoric layer surfacing (see visual_procedural_rhetoric): an ad is a claim about what is
+    worth wanting, and the preview states the claim in words while the author is still deciding
+    whether they meant it.
+  falls_out_free:
+    one_runtime_two_audiences: "Author preview and stranger playback are the same code path — no separate web demo to keep in sync. Whatever previews, shares."
+    dry_run_is_a_test_harness: |
+      If it can say what it WOULD have done, it can enumerate what it COULD do: walk every branch,
+      list every ending, flag the slice unreachable because its condition can never be true.
+      Authoring tools usually get that late or never.
+    real_simulation_is_an_upgrade_path: |
+      The authored layer is DATA; a real VM can consume it. FreeSO/Simitone
+      (../sims-open-source-and-formats.yml) are where "actually simulate it in the browser" lives
+      if anyone wants it. Not needed to ship; designing as if we might get it costs nothing.
+
+visual_procedural_rhetoric:   # Don, 2026-08-29 — naming what rung 5 actually IS
+  name: "Visual Procedural Rhetoric Programming Language"
+  not_just_a_vpl: |
+    A VPL is a language you draw instead of type — that describes rung 5's NOTATION, not its
+    PURPOSE. The purpose is Ian Bogost's procedural rhetoric: argument made through processes and
+    rule authorship rather than words or pictures.
+  bogost: ../../characters/ian-bogost/sources/procedural-rhetoric-quote.md   # "an unholy blend of Will Wright and Aristotle"
+  the_loop_closes: |
+    SimAntics was already a visual language and Edith was already its editor; Wright's half of
+    Bogost's blend IS this simulation. What was missing was AUTHORS. Procedural rhetoric has had
+    twenty years of critics and few practitioners because arguing in rules required being a
+    programmer. Aristotle taught rhetoric as a CITIZEN SKILL — too important to leave to
+    professionals. Rung 5 is that theory applied to procedures.
+  advertisement_is_the_argument:   # structural, not decorative
+    claim: "A Sims ad literally IS an advertising claim: this object will satisfy this need, by this much, from this far"
+    authoring_one: "Making a claim about WHAT IS WORTH WANTING"
+    enthymeme: "The author supplies the premise; the Sim completes the argument by choosing to walk over"
+    consequence: "THE AD EDITOR IS THE RHETORIC EDITOR"
+  aristotle_mapping:
+    logos: "The rule structure — conditions, state, branching"
+    pathos: "Motive consequences — what it does to how they feel"
+    ethos: "Whose object it is: credit, soul voice, the creator's name on the template"
+    enthymeme: "The advertisement — a premise the Sim finishes by acting"
+  already_in_use: |
+    The reaping ceremony was using the language before we named it: a tombstone speaking a
+    character's last words is an argument authored in rules, delivered by a process, counted on a
+    tote board (sims1-soul-bridge.yml, steam-app-strategy.md).
+  consequences:   # accept these on purpose
+    editorial_responsibility: |
+      If templates carry arguments, WHICH TEMPLATES SHIP is an editorial decision wearing a
+      technical costume. Own it explicitly rather than discovering it later.
+    must_make_arguments_we_dislike: |
+      The classic failure of persuasive-game tooling is the single-issue toy — a machine that can
+      only produce its author's opinion. Defense is already in the design: primitives are motives,
+      media, and consequences, NEVER slogans. If ours can only make our argument it is not a
+      language, it is a pamphlet with a GUI.
+    venue_is_constitutive: |
+      An argument nobody can hear is not rhetoric. Browser full-fidelity playback and the
+      sharing-safe content class are parts of the LANGUAGE, not distribution details.
+  open_naming_question: |
+    The phrase is what the thing IS, but "VPRL" is not a name for a shop door. UI names stay plain
+    (action editor, ad editor, timeline editor); whether the language gets a proper name is a
+    branding decision, not a technical one, and it can wait.
+
 why_it_matters: |
   These are not important objects. A rug that cycles your vacation photos is not important. But it
   is YOURS, it took five minutes, and it makes a house feel like somebody lives there. The Sims was

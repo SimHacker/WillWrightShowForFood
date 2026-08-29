@@ -207,7 +207,7 @@ up:
 | Requirement | How it is met |
 |-------------|---------------|
 | Inherently shareable | Contains only the creator's own media -- no third-party rights, no official game art |
-| Playable at full fidelity in a browser | Voice, photo, dialog, and buttons need no game install to experience; owning the game is what lets you *install* it |
+| Playable at full fidelity in a browser | [The preview runtime](#the-preview-runtime-it-can-say-what-it-would-have-done) runs the authored layer for real; owning the game is what lets you *install* it |
 | Template based | One template, infinite instances, each listed on the template's index page |
 | Visually programmable | [The action editor and its ladder](#the-plugin-ladder) |
 | Expressive and personal | It is literally your voice and your cat |
@@ -226,6 +226,62 @@ motive consequences, moody timelines -- rides on content that is free
 to travel. The jukebox stays local and personal; the squawk box goes
 everywhere.
 
+## The preview runtime: it can say what it would have done
+
+**We own both ends** (Don, 2026-08-29). We design the templates *and*
+we implement the runtime, so full-fidelity browser playback is a
+design guarantee rather than an emulation problem. Nobody has to
+emulate The Sims to show off a squawk box: the only thing that needs
+running is **the layer the author actually wrote**.
+
+So the object gets shown in its full glory and splendor -- with a
+real pie menu, which is the whole point. Not a form describing the
+pie menu, not a screenshot of one: **the object's own pie menu, live,
+built from the tree you authored, doing what it does as far as it can
+go.** Click a slice and the sound plays, the dialog opens, the
+picture is there, the buttons branch, the state remembers. That is
+the preview of what you made, and it is the same thing a stranger
+experiences when they open your object's page.
+
+### Two layers, and honesty at the seam
+
+| Layer | In the browser |
+|-------|----------------|
+| **Authored** -- pie menu tree, sounds, pictures, dialogs, branching, state, timelines | **Executed, exactly.** This is our code running our data. |
+| **Simulated** -- motives, routing, animation, autonomy, other Sims | **Declared, not faked.** It says what it *would have* done. |
+
+That seam is the interesting part, and narrating it beats faking it.
+"Fun +30, Comfort +10." "The Sim would walk here and use this for two
+hours." "Advertises to tired Sims within eight tiles." A fake
+simulation would be a lie that breaks the moment it disagrees with
+the real game; a **stated consequence** is accurate by construction,
+and it makes normally invisible mechanics visible while you are
+authoring them. The preview is an inspector, not a diorama.
+
+It reads the argument out loud, too, which is exactly the
+[rhetoric](#what-the-language-is-for-visual-procedural-rhetoric)
+layer surfacing: an advertisement is a claim about what is worth
+wanting, and the preview says the claim in words while the author is
+still deciding whether they meant it.
+
+### Three things fall out of this for free
+
+1. **One runtime, two audiences.** The author's preview and the
+   stranger's playback are the same code path, so there is no
+   separate web demo to build or keep in sync. Whatever previews,
+   shares.
+2. **A dry run is a test harness.** If the runtime can say what it
+   would have done, it can also enumerate what it *could* do: walk
+   every branch, list every ending, flag the slice that is
+   unreachable because its condition can never be true. Authoring
+   tools usually get that late or never.
+3. **Real simulation stays an upgrade path, not a dependency.** The
+   authored layer is data; a real VM can consume it. The open
+   reimplementations ([FreeSO, Simitone](../sims-open-source-and-formats.yml))
+   are where "actually simulate it in the browser" lives if and when
+   anyone wants it. We do not need it to ship, and designing as if we
+   might get it costs nothing today.
+
 ## The plugin ladder
 
 Start trivial and climb. Each rung is a plugin an author picks from a
@@ -239,6 +295,7 @@ list and fills in:
    on motives, relationships, time of day, who is clicking
 5. **A friendly visual programming language** -- the branching
    dialog and behavior graph, authored visually, compiled down
+   ([what it actually is](#what-the-language-is-for-visual-procedural-rhetoric))
 6. **Raw SimAntics** -- Edith-class access for people who want it
 
 Rung 3 is where it stops being decoration and becomes **interactive
@@ -252,6 +309,82 @@ both**: the visual language for everyone, the raw semantics tree for
 the people who grew up reading it. Everything the friendly editor
 emits should be inspectable and editable at the level below it, all
 the way down.
+
+## What the language is for: visual procedural rhetoric
+
+**Naming it properly (Don, 2026-08-29): this is a Visual Procedural
+Rhetoric Programming Language.**
+
+Not just a VPL. A VPL is a language you draw instead of type -- that
+describes rung 5's *notation*, not its *purpose*. The purpose is the
+thing Ian Bogost named:
+[procedural rhetoric](../../characters/ian-bogost/sources/procedural-rhetoric-quote.md),
+"an unholy blend of Will Wright and Aristotle" -- argument made
+through processes and rule authorship rather than through words or
+pictures.
+
+The loop closes on itself, which is the pleasing part. SimAntics was
+already a visual language, and Edith was already its editor; Wright's
+half of Bogost's blend was this simulation. What was missing was
+**authors**. Procedural rhetoric has had twenty years of critics and
+very few practitioners, because making an argument in rules has
+required being a programmer. Aristotle taught rhetoric as a citizen
+skill, on the theory that persuasion is too important to leave to
+professionals. Rung 5 is that theory applied to procedures: hand the
+rule-authoring to everybody, in a notation you can draw.
+
+### The advertisement is the argument
+
+The mapping is not decorative, it is structural, and the load-bearing
+piece is the advertisement.
+
+A Sims advertisement literally is an advertising claim: *this object
+will satisfy this need, by this much, from this far away.* Authoring
+one is making a claim about **what is worth wanting** -- and the Sim
+completes the argument by choosing to walk over. That is an
+enthymeme: the author supplies the premise, the audience supplies the
+conclusion by acting on it. The game's entire economy of desire runs
+on it.
+
+So the classical parts land where you would want them:
+
+| Aristotle | Here |
+|-----------|------|
+| Logos | The rule structure -- conditions, state, branching |
+| Pathos | Motive consequences -- what it does to how they feel |
+| Ethos | Whose object it is: credit, soul voice, the creator's name on the template |
+| Enthymeme | The advertisement -- a premise the Sim finishes by acting |
+
+Which means **the ad editor is the rhetoric editor**, and the reaping
+ceremony was already using the language before we named it: a
+tombstone that speaks the character's last words is an argument
+authored in rules, delivered by a process, and counted on a tote
+board.
+
+### Three consequences worth accepting on purpose
+
+1. **A rhetoric library is an editorial responsibility.** If
+   templates carry arguments, then which templates ship is an
+   editorial decision wearing a technical costume. Own that
+   explicitly rather than discovering it later.
+2. **It has to be able to make arguments we dislike.** The classic
+   failure of persuasive-game tooling is the single-issue toy: a
+   machine that can only produce its author's opinion. The defense is
+   already in the design -- the primitives are motives, media, and
+   consequences, never slogans. The author supplies the argument. If
+   ours can only make our argument, it is not a language, it is a
+   pamphlet with a GUI.
+3. **Rhetoric needs a venue, so browser playback is constitutive,
+   not merely convenient.** An argument nobody can hear is not
+   rhetoric. That is why the sharing-safe content class and
+   full-fidelity browser playback are load-bearing parts of the
+   language rather than distribution details.
+
+Open naming question, flagged rather than answered: the phrase is
+what the thing *is*, but "VPRL" is not a name you put on a shop door.
+The UI names stay plain (action editor, ad editor, timeline editor);
+whether the language itself ever gets a proper name is a branding
+decision, not a technical one, and it can wait.
 
 ## Why this matters more than it looks
 
