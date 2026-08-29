@@ -107,10 +107,39 @@ sites:
         Transmogrification, please provide credit on your site and in the object description with a
         link back to us. Where I have had specific permission for an item to be cloned for this site,
         you will need to ask the same permissions from the original designer."
-      what_the_terms_do_and_do_not_say:
-        granted: "Redesign and recolor, with credit in the object description and a link back"
-        silent_on: "RE-HOSTING her files. Silence is not permission -- rendering-and-rights.yml rule 9 defaults to no."
-        third_party_layer: "Part of the catalog is cloned from other creators with their specific permission, which does NOT transfer. A bulk mirror would sweep in rights she cannot grant."
+      file_share_terms_verbatim: |   # from the Architectural Supplies page -- EXPLICIT, not silence
+        "You may share my files with individuals through e-mail, private messages, and IMs provided
+        the zips are intact, including readme. You may not redistribute my files by uploading them to
+        a webpage, a forum, or including them in any collection or CD/DVD"
+      cloning_terms_verbatim: |
+        "Please do not take objects from Architectural Supplies as they are to use on your site.
+        However, if you have a free site or immediate-access Yahoo group, I am very happy indeed for
+        you to take and recolour / retexture / redesign my original objects, and indeed, actively
+        encourage you to do so. You don't need to ask me, just go ahead and have fun. The only thing
+        I ask is that you provide credit to Bunny Wuffles and a link to Architectural Supplies both
+        on your site and in the object description. If you have a pay site; a site / group / forum
+        where registration or donation is required before gaining access to the objects or a Yahoo
+        group that requires access to be granted manually by the owner, I need you to ask me FIRST
+        please."
+      what_the_terms_say:
+        derivation_on_free_sites: "Recolour, retexture, redesign her ORIGINAL objects -- encouraged, no need to ask -- with credit plus link back on site AND in object description"
+        gated_sites_must_ask_first: "Pay site, or registration/donation/manual-approval required = ASK FIRST. SOUL CITY WITH ACCOUNTS OR MEMBERSHIP TIERS LANDS IN THIS BUCKET even for derivatives -- a real test of membership-model.yml against a real creator's terms."
+        mirroring_forbidden_explicitly: "Not silence: uploading her files to a webpage or forum, or including them in any collection, is expressly disallowed. Person-to-person sharing with intact zips including readme is expressly allowed."
+        objects_as_they_are: "'Do not take objects ... as they are to use on your site' -- the as-is redistribution ban again, from the other direction"
+        third_party_layer: "Part of the catalog is cloned from other creators with their specific permission, which does NOT transfer -- marked on download pages, and 'Little Artist Wuffles' icons flag per-set cloning terms. A bulk mirror would sweep in rights she cannot grant."
+      contact_search_2026_08_29:
+        email: "NONE PUBLISHED, AND DELIBERATELY SO -- no mailto and no contact link in the HTML of either index; the Supplies page carries a long essay on address-harvesting bots and spoofed virus mail 'from BunnyWuffles', referring to 'my old addresses'"
+        activity: "Last site news September 2015 (three entries Aug-Sep 2015). Server live and running PHP, but the '2002 - 2026' copyright line is generated, NOT evidence of activity. Outbound links to Yuku and Yahoo Groups are dead, so nobody has fixed link rot since roughly 2015."
+        personas_caveat: "She writes in bunny personas (Housekeeper Wuffles, Chambermaid Wuffles, Secretary Wuffles), so 'Caretaker Bunny' in the 2015 entries is most likely her own persona rather than proof of a handoff to someone else"
+        routes_in_order:
+          - "woobsha.com -- she shares server space there; the host can forward"
+          - "SimsCave 'Saving the Sims Archive (s1)' has a Bunny Wuffles subforum; Ginnie (Cave Gatherer, 2551 posts) posted the file index in January 2020 and the forum is live today"
+          - "The SimFileShare uploader of her folders -- SFS uploaders are invite-only, so it is a known community member"
+          - "Jendea (jendea.com), who wrote a guest rug tutorial for her school, as a peer who may have a line"
+      artifacts_worth_having:
+        guid_fixes_page: "http://sas.woobsha.com/guid_fixes.php -- her own list of objects RECLONED to resolve GUID conflicts, shipped with an '_idfix' filename suffix and manual removal of the old file. Hand-run conflict repair in 2015; direct field evidence for soul-city/guid-registry.yml."
+        magic_cookies_tutorial: "http://bwsost.woobsha.com/Kmagiccookies/TMog.html -- a community masterclass on magic cookies, the registry's own subject matter"
+        tutorial_kits: "bunnywufflestutorialkit.zip and BunnyWufflesTutorialKit2.zip, linked from the school index"
       intake_verdict:   # applies rendering-and-rights.yml identification_rewards
         personal_download: "Fine -- freely offered, that is what the site is for. Crawl politely: serial, rate-limited, robots honored, identifiable agent with contact address. The site is live and small."
         page_and_shot_archiving: "Fine for private research and preservation. Save the terms pages FIRST -- they are the license record."

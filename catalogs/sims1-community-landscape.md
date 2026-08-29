@@ -64,9 +64,22 @@ Her site states terms:
 > this site, you will need to ask the same permissions from the
 > original designer.
 
-That grants **derivation with credit**, says **nothing about
-re-hosting**, and warns that part of the catalog is cloned from other
-creators under permission **she cannot pass along.** So:
+Her Architectural Supplies page goes further, and it is not silence:
+
+> You may share my files with individuals through e-mail, private
+> messages, and IMs provided the zips are intact, including readme.
+> You may not redistribute my files by uploading them to a webpage, a
+> forum, or including them in any collection or CD/DVD
+
+Recolouring is **encouraged without asking** for free or
+immediate-access sites, with credit and a link back. But "if you have
+a pay site; a site / group / forum where registration or donation is
+required before gaining access to the objects ... I need you to ask me
+FIRST." **Soul City with accounts or membership tiers lands in that
+bucket even for derivative work** -- a useful early test of our model
+against a real creator's actual terms. And part of the catalog is
+cloned from other creators under permission **she cannot pass along.**
+So:
 
 | Act | Verdict |
 |-----|---------|
@@ -74,13 +87,35 @@ creators under permission **she cannot pass along.** So:
 | Save pages and object shots | Fine for private research. **Save the terms pages first** -- they are the license record. |
 | Push the pages into the Internet Archive | Do it early. Preservation without becoming the host, and it survives us. |
 | Publish the metadata | Yes -- names, ids, hashes, set membership, credit chains are facts. |
-| Publicly mirror her files | **No**, absent her permission, and never for the third-party clones. |
+| Publicly mirror her files | **No.** Expressly disallowed by her own terms, and never for the third-party clones. |
 
-**The move that makes all of this easy is asking her.** She is
-reachable, she already publishes a permission statement, some of her
-downloads carry their own, and her "first entirely new object"
-tutorial credits Don by name. First creator aboard, and the natural
-one: her school is the pedagogical ancestor of what we are building.
+**Asking her is the only path to more than that, and there is no
+published address.** No mailto and no contact link in either site's
+HTML, deliberately: the Supplies page carries a long warning about
+address-harvesting bots and spoofed virus mail sent "from
+BunnyWuffles" using her old addresses. Reachable routes, in order:
+woobsha.com, where she shares server space; the Bunny Wuffles
+subforum in SimsCave's Saving the Sims Archive, where Ginnie posted
+her file index in 2020 and the forum is live today; the SimFileShare
+uploader of those folders, who is necessarily a known community
+member; and Jendea, who wrote a guest tutorial for her school.
+
+**Activity: last site news September 2015.** The server is live and
+running PHP, but the "2002 - 2026" copyright line is generated rather
+than evidence, and the outbound Yuku and Yahoo Groups links are dead,
+so nobody has tended link rot in roughly a decade. Her bunny personas
+(Housekeeper, Chambermaid, Secretary Wuffles) mean the third-person
+"Caretaker Bunny" of the 2015 entries is probably her own voice, not
+proof of a handoff.
+
+**Status: parked**, pending a first corpus that needs nobody's
+permission. Two artifacts to collect whenever this resumes:
+`guid_fixes.php` on the Supplies site, her own list of objects
+recloned to resolve GUID conflicts and shipped with an `_idfix`
+filename suffix, which is hand-run conflict repair in 2015 and direct
+field evidence for the [registry](soul-city/guid-registry.md); and
+`Kmagiccookies/TMog.html` on the school site, a community masterclass
+on magic cookies.
 
 Two technical notes for whenever it lands. The tutorial kits
 (BunnyWufflesTutorialKit and Kit2) are **test fixtures** -- grid
