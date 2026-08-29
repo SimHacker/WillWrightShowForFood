@@ -3,8 +3,8 @@
 *Researched 2026-08-29. Answers: is a Steam app worth it, or is the web
 site enough? Can a Steam app meaningfully integrate with other Steam
 apps (the Sims 1 Legacy Collection, Tiny Life, other bridge
-destinations)? Is the migration-and-petition campaign OK by Steam
-rules? Sibling specs: [soul-angel.md](soul-angel.md),
+destinations)? Where do the site, the guides, and the app each live?
+Sibling specs: [soul-angel.md](soul-angel.md),
 [steam-community-guide.md](steam-community-guide.md),
 [browser-ecosystem.md](browser-ecosystem.md).*
 
@@ -20,14 +20,14 @@ respectful nominative distance.
 
 ## Verdict
 
-Ship the web site first, the Steam app second, and never put the
-protest on the store page. The app is worth building for **reach and
-revenue**, not for platform integration: Steam grants no special powers
-over other publishers' apps, but it puts SoulAngel on a store page next
-to the game itself, with payments, reviews, and discovery attached. The
-campaign infrastructure stays sovereign on web + git, where no platform
-can foreclose it. This confirms and extends the "web first, Angel
-second" rollout rule already in [soul-angel.md](soul-angel.md).
+Ship the web site first, the Steam app second. The app is worth
+building for **reach and revenue**, not for platform integration:
+Steam grants no special powers over other publishers' apps, but it
+puts SoulAngel on a store page next to the game itself, with payments,
+reviews, and discovery attached. The community layer stays on web +
+git, open and platform-independent by construction. This confirms and
+extends the "web first, Angel second" rollout rule already in
+[soul-angel.md](soul-angel.md).
 
 ## What Steam actually gives a companion app
 
@@ -79,46 +79,40 @@ are web and portable by construction.
 
 Nothing does soul migration or petitions. That lane is open.
 
-## Steam rules and the real risk
+## Steam rules and historic ground
 
 [Steamworks onboarding](https://partner.steamgames.com/doc/gettingstarted/onboarding)
 accepts "Player Tools" as a software category; the prohibited list
-(porn, hate, malware, crypto/NFT apps) has nothing against save tools,
-albums, or petitions. Submission is $100 per app through Steam Direct
-plus build review; digital sales run through Steam's 70/30 split.
+(porn, hate, malware, crypto/NFT apps) has nothing against save
+tools, albums, or capture suites. Submission is $100 per app through
+Steam Direct plus build review; digital sales run through Steam's
+70/30 split.
 
-The real constraint is unwritten: Valve ships "everything except
-what's illegal or straight-up trolling," decided at their discretion,
-and **EA is one of Valve's largest partners** -- the Legacy Collection
-is a Steam product. A store page that markets "organize protests
-against EA" invites a partner complaint Valve has every incentive to
-honor. Note the useful irony: the migration funnel *sells* Legacy
-Collection copies on Steam, since players need the game to rescue
-their families from it.
+A pleasing economic alignment: the rescue funnel *sells* Legacy
+Collection copies on Steam, since players need the game to bring
+their families out of it.
 
 Historic ground: reading and writing the player's own save files is
 what the Transmogrifier did from 2000 with Maxis's written blessing
 (see [the naming saga](../../characters/will-wright/sources/2000-05-17-transmogrifier-naming-saga/article.md)
 and [the license notes](../../characters/don-hopkins/career/contracts/transmogrifier-distribution-license-notes.md)).
-The TMog brand carries that lineage and keeps EA's marks out of ours.
-Not legal advice; EA's temperament in 2026 is not EA's temperament in
-2000.
+The TMog brand carries that lineage and keeps everyone's marks where
+they belong. Not legal advice.
 
-## The protest architecture (three layers, three venues)
+## Three venues
 
-1. **The Steam app is a utility.** SoulAngel: DVR, Soul Album,
+1. **The store carries the utility.** SoulAngel: DVR, Soul Album,
    machinima, broadcast, with the sims1 Soul Bridge and its TMog
-   modules as launch showcase. The store page describes creation, preservation, and
-   storytelling. The word "protest" never appears on it.
-2. **The movement lives on the web.** Turnstile, tote board, migration
-   counts, and comments run on Soul City -- git-backed, consent-first,
-   platform-independent. Steam sign-in provides voluntary ownership
-   verification. Do not build the underground railroad's headquarters
-   inside the landlord's mall.
-3. **The ceremony lives in the game.** Petition table, turnstile, tote
-   board, and the pool with no ladder ship as sims1 custom objects
-   through the same custom-content channel every other object uses --
-   procedural rhetoric, performed diegetically (see
+   modules as launch showcase. The store page describes what the app
+   does: creation, preservation, and storytelling.
+2. **The community lives on the web.** Turnstile, tote board,
+   migration counts, and comments run on Soul City -- git-backed,
+   consent-first, platform-independent. Steam sign-in provides
+   voluntary ownership verification.
+3. **The ceremony lives in the game.** Petition table, turnstile,
+   tote board, and the pool with no ladder ship as sims1 custom
+   objects through the same custom-content channel every other object
+   uses -- procedural rhetoric, performed diegetically (see
    [the Soul City README](README.md), "The turnstile" and "The pool").
 
 ### Two petitions (ruling, Don 2026-08-29)
@@ -150,7 +144,7 @@ the standard publish step every shared object already takes.
 ## Stop Killing Games -- the adjacent movement
 
 Nothing like the soul-migration hub exists -- that lane is open. The
-closest cultural precedent for organized player protest over game
+closest cultural precedent for organized player advocacy over game
 mortality: **Stop Killing Games** gathered **1,294,188 verified
 signatures**, submitted as the "Stop Destroying Videogames" European
 Citizens' Initiative on 26 January 2026. The European Commission
@@ -164,14 +158,14 @@ consumer-awareness work. The campaign has pivoted to the Digital
 Fairness Act, with roughly 45 MEPs supportive per press coverage.
 
 Two lessons, one framing. First: a proven audience of over a million
-people will sign for game preservation. Second: asking institutions
-for permission just hit its ceiling. The Soul City mechanism is
-different in kind -- **exit as voice**, actual migration rather than
-petition-and-wait -- which makes it the working demonstration the SKG
-argument lacked: souls don't need EA's permission to leave, and the
-tote board counts what the Commission wouldn't legislate. The
-carriable story: **"we built what the EU said it couldn't require"**
--- a frame essayists and the SKG community can pick up and run with.
+people cares enough about game preservation to sign for it. Second:
+asking institutions for permission just hit its ceiling. The Soul
+City mechanism is different in kind -- **exit as voice**, actual
+migration rather than petition-and-wait: souls don't need anyone's
+permission to move house, and the tote board counts what the
+Commission declined to legislate. Preservation you can do is worth
+more than preservation you can ask for. **"We built what the EU said
+it couldn't require."**
 
 ## The dormant domain: thesimstransmogrifier.com
 
@@ -202,10 +196,10 @@ currently empty). It is safe and singularly useful:
   authorized download, and a visible on-ramp to TMog and Soul City.
   Host it as GitHub Pages from a public repo: the museum is itself a
   Repo Show artifact.
-- **What NOT to put there:** the petition and migration campaign. This
-  is the most EA-visible property in the family; museum and funnel
-  only. New brands (TMog, Soul City) never live under EA's game name
-  -- nominative rule holds.
+- **What NOT to put there:** anything but the museum and the funnel.
+  New brands (TMog, Soul City) never live under another company's
+  game name -- the nominative rule holds; the domain names one
+  historical tool, and that is all it should ever do.
 
 ## Rollout (extends soul-angel.md)
 
@@ -216,8 +210,8 @@ currently empty). It is safe and singularly useful:
    [steam-community-guide.md](steam-community-guide.md)).
 3. **SoulAngel ships on Steam** as a Player Tools listing (Windows
    and Mac; Linux if feasible): universal tier plus the sims1 Soul
-   Bridge and TMog modules as launch showcase. Utility on the store, movement on the web, ceremony in
-   the game.
+   Bridge and TMog modules as launch showcase. Utility on the store,
+   community on the web, ceremony in the game.
 4. **Friend bridges deepen by cooperation, not injection**: Tiny Life
    with Ell, Proxi with Galium -- shared formats and export paths,
    credited and paid where possible.
