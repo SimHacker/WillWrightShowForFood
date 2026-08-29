@@ -44,10 +44,12 @@ down, inside the tools.
 ## The growth path: from viewer to scene editor
 
 Stat-U-Matic is not a from-scratch app. It is the **current SimShow
-replacement, kept improving**: today's seed is VitaMoo, the browser
-3D character viewer with animation playback in the SimObliterator
-Suite (character browser, mesh/sprite library, glTF export already
-working). The path:
+replacement, kept improving**: today's codebase is the **TMog suite**
+-- TypeScript, running in the browser, based on the SimObliterator
+Suite (the earlier Python generation, whose character browser,
+mesh/sprite library, and glTF export prove the pipeline). The seed
+viewer is VitaMoo, the browser 3D character viewer with animation
+playback, carried forward into the TMog suite. The path:
 
 1. **One character** -- dress, wig, accessorize, pose (SimShow, done
    right).
@@ -72,8 +74,9 @@ working). The path:
   era plumbing.
 - **2026:** it's SO much easier now. The browser reads game files
   directly ([browser ecosystem](browser-ecosystem.md) save layer),
-  sprite and mesh export exist in the SimObliterator backend, WebGL
-  renders what Flash had to fake with pre-baked FLVs.
+  the TMog suite carries the sprite and mesh pipeline SimObliterator
+  proved in Python into TypeScript, and WebGL renders what Flash had
+  to fake with pre-baked FLVs.
 
 ## Fit in the model
 

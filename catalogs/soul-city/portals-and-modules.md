@@ -54,7 +54,10 @@ souls, federation rails, the Depot/Plaza/Station/Terminal districts.
 
 **TMog** is the umbrella brand for our sims1 content tools -- the
 continuation of the Transmogrifier / Rug-O-Matic / SimShow / ShowNTell
-/ Tombstone Generator / Simplifier lineage. The **sims1 Soul Bridge**
+/ Tombstone Generator / Simplifier lineage. The **TMog suite** is its
+codebase: TypeScript, running in the browser, based on the
+SimObliterator Suite (the prior Python generation) -- the modules
+below are TMog suite modules. The **sims1 Soul Bridge**
 ([sims1-soul-bridge.md](sims1-soul-bridge.md)) *uses* TMog modules;
 the bridge is Soul family plumbing, the tools are TMog.
 
@@ -70,7 +73,7 @@ Candidate TMog modules for the sims1 portal:
 | Tray and save inspector | TMog Bridge save layer |
 | Graveyard manager | Tombstone Generator |
 | Catalog browser and favorites | SimFreaks Laszlo CMS, the Plaza |
-| [Stat-U-Matic](stat-u-matic.md) statue photo booth and scene poser | SimShow + the SimFreaks playset prototype; seed: VitaMoo viewer |
+| [Stat-U-Matic](stat-u-matic.md) statue photo booth and scene poser | SimShow + the SimFreaks playset prototype; seed: VitaMoo viewer in the TMog suite |
 
 Below the modules sits a shared **texture plugin registry**: generic
 generate/edit/apply texture plugins (material library, cellular

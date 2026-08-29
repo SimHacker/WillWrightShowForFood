@@ -7,7 +7,7 @@ meta:
   id: sims-open-source-and-formats
   purpose: |
     Where Sims file-format + engine knowledge is publicly documented, and the open-source projects
-    that reimplement it. Feeds the SimObliterator/VitaMoo TypeScript port and the content "file cop"
+    that reimplement it. Feeds the TMog suite (the SimObliterator/VitaMoo TypeScript port) and the content "file cop"
     (missing-object + broken-UCC detection, repair, catalog source-location).
   see_also:
     - sims1-community-landscape.yml
