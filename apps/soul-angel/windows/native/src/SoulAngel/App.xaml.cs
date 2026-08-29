@@ -1,6 +1,6 @@
 using Microsoft.UI.Xaml;
 
-namespace MicropolisAngel;
+namespace SoulAngel;
 
 public partial class App : Application
 {

@@ -99,7 +99,7 @@ knowledge_layers:
 # INTEGRATION
 integration:
   bus_event: screen.catalog_match
-  simplifier: "../stream-gateway/simplifier.yml#read"
+  simplifier: "../../stream-gateway/simplifier.yml#read"
   sqlite: "CATALOG-DB-SCHEMA.yml#screen-catalog-matches"
   tts: "SpeechService reads title+description when selection changes (Simplifier showcase)"
   crawl: |
@@ -115,5 +115,5 @@ build_phases:
 see_also:
   - ARCHITECTURE.yml
   - CATALOG-DB-SCHEMA.yml
-  - ../stream-gateway/simplifier.yml
+  - ../../stream-gateway/simplifier.yml
   - SIMSKIT-LINEAGE.yml

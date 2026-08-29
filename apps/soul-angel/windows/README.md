@@ -1,4 +1,4 @@
-# MicropolisAngel (app)
+# SoulAngel (app)
 
 Windows-native host for the Sims Legacy Collection companion and the unified stream-gateway rig.
 
@@ -14,8 +14,8 @@ Windows-native host for the Sims Legacy Collection companion and the unified str
 | [SIMSKIT-LINEAGE.yml](SIMSKIT-LINEAGE.yml) | Capability lineage from Don's 2000s Windows tooling + Sim Obliterator credit |
 | [WINDOWS-DEV-SETUP.md](WINDOWS-DEV-SETUP.md) | **Start here on Legion** — VS, Cursor, first build, phases |
 | [native/README.md](native/README.md) | WinUI solution layout, `dotnet` CLI |
-| [native/MicropolisAngel.sln](native/MicropolisAngel.sln) | Open in Visual Studio 2022 (Windows only) |
-| [../stream-gateway/SPEC.yml](../stream-gateway/SPEC.yml) | Bus, overlay, Twitch/YouTube/OBS |
-| [../../catalogs/soul-city/micropolis-angel.yml](../../catalogs/soul-city/micropolis-angel.yml) | Product spec (Steam, rollout, ethics) |
+| [native/SoulAngel.sln](native/SoulAngel.sln) | Open in Visual Studio 2022 (Windows only) |
+| [../../stream-gateway/SPEC.yml](../../stream-gateway/SPEC.yml) | Bus, overlay, Twitch/YouTube/OBS |
+| [../../../../catalogs/soul-city/sims1-soul-bridge.yml](../../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product spec (Steam, rollout, ethics) |
 
-Native project scaffold (`native/MicropolisAngel.sln`) — **w0 WinUI 3 + WebView2 placeholder**. Build on Windows; edit specs on Mac or Windows.
+Native project scaffold (`native/SoulAngel.sln`) — **w0 WinUI 3 + WebView2 placeholder**. Build on Windows; edit specs on Mac or Windows.

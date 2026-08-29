@@ -1,6 +1,6 @@
 # Soul City — local catalog SQLite schema (v1)
 # Regenerate from owned Sims install + user roots — NOT third-party XML catalogs as truth.
-# Browser TypeScript (sql.js / wa-sqlite) + MicropolisAngel FileBridge; Node scan on server for heavy jobs.
+# Browser TypeScript (sql.js / wa-sqlite) + SoulAngel FileBridge; Node scan on server for heavy jobs.
 # Publish read-only snapshots via Datasette; federation sync → Postgres on central Soul City.
 
 meta:
@@ -26,11 +26,11 @@ lineage:
       Full credit in CREDITS.yml and package READMEs. We reimplement in WWSFF-owned TypeScript
       under our IP hygiene rules — we do not ship Obliterator as a dependency without license review.
     read_first:
-      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/OBLITERATOR-TYPESCRIPT.md
-      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/guid-collision-analysis-plan.md
-      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoo/io/guid-collision.ts
-      - ../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoospace/src/lib/server/files-inventory.ts
-      - ../../../../Leela/git/SimObliterator_Suite/src/formats/iff/chunks/objd.py
+      - ../../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/OBLITERATOR-TYPESCRIPT.md
+      - ../../../../../Leela/git/SimObliterator_Suite/vitamoo/docs/guid-collision-analysis-plan.md
+      - ../../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoo/io/guid-collision.ts
+      - ../../../../../Leela/git/SimObliterator_Suite/vitamoo/vitamoospace/src/lib/server/files-inventory.ts
+      - ../../../../../Leela/git/SimObliterator_Suite/src/formats/iff/chunks/objd.py
   not_source_of_truth:
     - "Legacy object catalog seed XML (Transmogrifier-era export) — useful for diff/comparison only"
     - "Any precomputed JSON catalog from unknown provenance"
@@ -58,7 +58,7 @@ ip_hygiene:
 # ── RUNTIME TOPOLOGY ─────────────────────────────────────────────────────────
 runtime:
   local:
-    host: "MicropolisAngel FileBridge OR browser File System Access API"
+    host: "SoulAngel FileBridge OR browser File System Access API"
     engine: "sql.js / wa-sqlite — single .sqlite file per user machine"
     path_default: "%APPDATA%/SoulCity/catalog.sqlite"
   server:
@@ -550,6 +550,6 @@ see_also:
   - CATALOG-SCREEN-MATCH.yml
   - GUID-ISSUE-HUB.yml
   - OBJECT-ERROR-TELEMETRY.yml
-  - ../../catalogs/maxis/CATALOG.yml
-  - ../../process/trails/archive-and-provenance.md
-  - ../../schemas/portrayal-standards.yml
+  - ../../../catalogs/maxis/CATALOG.yml
+  - ../../../process/trails/archive-and-provenance.md
+  - ../../../schemas/portrayal-standards.yml

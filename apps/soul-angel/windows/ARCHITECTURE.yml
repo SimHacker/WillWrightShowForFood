@@ -1,17 +1,17 @@
-# MicropolisAngel — unified Windows native host + stream-gateway
-# Product rebranded SoulAngel 2026-07-11 (../../catalogs/soul-city/soul-angel.yml): universal
+# SoulAngel — unified Windows native host + stream-gateway
+# Product rebranded SoulAngel 2026-07-11 (../../../catalogs/soul-city/soul-angel.yml): universal
 # DVR/album/broadcast engine + per-game Soul Bridges. This file = Windows native host + the
-# Sims 1 bridge. Code/dir/solution rename to SoulAngel deferred until first packaging pass.
+# Sims 1 bridge. Code/dir/solution renamed to SoulAngel 2026-08-29 (the renaming festival).
 # One app: Sims companion, graveyard manager, Simplifier, Twitch/YouTube/OBS rig.
 # Replaces Electron/CEF shell on Windows with WebView2 + WinUI 3 native services.
 
 meta:
-  id: micropolis-angel-app
+  id: soul-angel-windows
   status: spec
   platform: windows
-  parent_spec: ../../catalogs/soul-city/micropolis-angel.yml
-  stream_gateway: ../stream-gateway/SPEC.yml
-  simplifier: ../stream-gateway/simplifier.yml
+  parent_spec: ../../../../catalogs/soul-city/sims1-soul-bridge.yml
+  stream_gateway: ../../stream-gateway/SPEC.yml
+  simplifier: ../../stream-gateway/simplifier.yml
   one_liner: |
     Swiss-army Windows companion: WebView2 UI shell, native capture/inject/accessibility,
     Sims lifecycle control, Death/Satan graveyard manager, OBS/Twitch/YouTube/cursor-tap streaming.
@@ -20,9 +20,9 @@ meta:
 unification:
   before: |
     stream-gateway = Mac SvelteKit server + Electron overlay + Legion OBS (two-machine).
-    micropolis-angel.yml = planted Steam companion spec (catalog, TTS, machinima).
+    sims1-soul-bridge.yml = planted Steam companion spec (catalog, TTS, machinima).
   after: |
-    MicropolisAngel IS the Windows implementation of stream-gateway + Simplifier + Sims tools.
+    SoulAngel IS the Windows implementation of stream-gateway + Simplifier + Sims tools.
     Same SvelteKit client (overlay-viewer, catalogs, brain stream). Different native host per OS:
     - Windows (Legion, Sims PC): WinUI 3 + WebView2 + native services — PRIMARY SHIP TARGET
     - macOS (dev stream): Electron overlay + stream-gateway server — Repo Show / Cursor tier
@@ -185,10 +185,10 @@ graveyard_manager:
 
 # STREAMING CLUSTERFUCK — unified rig on Legion
 streaming:
-  inherits: ../stream-gateway/SPEC.yml
+  inherits: ../../stream-gateway/SPEC.yml
   windows_topology:
     single_machine_primary: |
-      Legion runs: Sims (full screen or windowed) + MicropolisAngel (WebView2 panels) +
+      Legion runs: Sims (full screen or windowed) + SoulAngel (WebView2 panels) +
       OBS (NVENC) + optional cursor-tap if Cursor also on Legion.
     obs:
       browser_source: "WebView2/OBS Browser → same /overlay/brain URL (localhost)"
@@ -219,7 +219,7 @@ launcher:
     - "Missing-object prediction from save parse (before generic in-game dialog)"
   tornado_install:
     what: "CARD install blocks — fetch any URL (IA, creator site), extract, rescan"
-    spec: "../../catalogs/sims1-community-landscape.yml#internet-archive-import"
+    spec: "../../../catalogs/sims1-community-landscape.yml#internet-archive-import"
   binary_fingerprint_track:
     status: research_only
     note: "SHA256 Sims.exe per LC patch; patch recipes private until legal posture clear"
@@ -271,7 +271,7 @@ telemetry:
 # BUILD PHASES
 build_phases:
   - id: w0
-    ship: "WinUI 3 + WebView2 → dev URL or placeholder — native/MicropolisAngel.sln"
+    ship: "WinUI 3 + WebView2 → dev URL or placeholder — native/SoulAngel.sln"
     cost: zero
   - id: w1
     ship: "TS save/.iff reader — household list + graveyard urn index from local files"
@@ -311,9 +311,9 @@ see_also:
   - CATALOG-SCREEN-MATCH.yml
   - GUID-ISSUE-HUB.yml
   - OBJECT-ERROR-TELEMETRY.yml
-  - ../../catalogs/soul-city/micropolis-angel.yml
-  - ../../catalogs/maxis/CATALOG.yml
-  - ../stream-gateway/SPEC.yml
-  - ../stream-gateway/simplifier.yml
-  - ../stream-gateway/ROADMAP.md
-  - ../../process/brain-stream.yml
+  - ../../../../catalogs/soul-city/sims1-soul-bridge.yml
+  - ../../../catalogs/maxis/CATALOG.yml
+  - ../../stream-gateway/SPEC.yml
+  - ../../stream-gateway/simplifier.yml
+  - ../../stream-gateway/ROADMAP.md
+  - ../../../process/brain-stream.yml

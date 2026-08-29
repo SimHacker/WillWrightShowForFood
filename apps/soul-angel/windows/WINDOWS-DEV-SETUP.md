@@ -1,10 +1,10 @@
-# MicropolisAngel — Windows dev setup
+# SoulAngel — Windows dev setup
 
 Target machine: **Lenovo Legion** (or any Windows 11 PC with The Sims Legacy Collection).
 
-MicropolisAngel is a **WinUI 3 + WebView2** shell around Soul City / stream-gateway — not Electron.
+SoulAngel is a **WinUI 3 + WebView2** shell around Soul City / stream-gateway — not Electron.
 
-Native project: [`native/MicropolisAngel.sln`](native/MicropolisAngel.sln)
+Native project: [`native/SoulAngel.sln`](native/SoulAngel.sln)
 
 ---
 
@@ -39,7 +39,7 @@ Optional: open repo in **two roots** if you also mount MicropolisCore / SimOblit
 Run preflight:
 
 ```powershell
-cd apps\micropolis-angel\native
+cd apps\soul-angel\windows\native
 .\scripts\check-dev.ps1
 ```
 
@@ -65,14 +65,14 @@ cd apps\micropolis-angel\native
 
 | Layer | Tool | What you edit |
 |-------|------|----------------|
-| Native shell | **Visual Studio 2022** | `apps/micropolis-angel/native/` — WinUI, WebView2, capture, inject |
-| Web + specs | **Cursor / VS Code** | `apps/micropolis-angel/*.yml`, future `apps/stream-gateway` SvelteKit |
+| Native shell | **Visual Studio 2022** | `apps/soul-angel/windows/native/` — WinUI, WebView2, capture, inject |
+| Web + specs | **Cursor / VS Code** | `apps/soul-angel/windows/*.yml`, future `apps/stream-gateway` SvelteKit |
 | Stream ops | Terminal + OBS | `pnpm dev`, obs-websocket, Twitch EventSub |
 
 Typical session:
 
 1. Terminal A: `pnpm dev` (when stream-gateway exists) on port **5371**
-2. Visual Studio: F5 on `MicropolisAngel.sln` → WebView loads localhost
+2. Visual Studio: F5 on `SoulAngel.sln` → WebView loads localhost
 3. Cursor: edit specs, TS packages, commit from Windows
 
 ---
@@ -80,22 +80,22 @@ Typical session:
 ## First build (w0 spike)
 
 ```powershell
-cd apps\micropolis-angel\native
-dotnet restore MicropolisAngel.sln
-dotnet build MicropolisAngel.sln -c Debug
-dotnet run --project src\MicropolisAngel\MicropolisAngel.csproj
+cd apps\soul-angel\windows\native
+dotnet restore SoulAngel.sln
+dotnet build SoulAngel.sln -c Debug
+dotnet run --project src\SoulAngel\SoulAngel.csproj
 ```
 
-**Success looks like:** WinUI window titled *MicropolisAngel* with WebView content.
+**Success looks like:** WinUI window titled *SoulAngel* with WebView content.
 
 - If `http://127.0.0.1:5371` is down → yellow InfoBar + local `Assets/placeholder.html`
-- Edit start URL: `native/src/MicropolisAngel/appsettings.json` → `WebView.StartUrl`
+- Edit start URL: `native/src/SoulAngel/appsettings.json` → `WebView.StartUrl`
 
 ### Visual Studio
 
-1. Open `apps/micropolis-angel/native/MicropolisAngel.sln`
+1. Open `apps/soul-angel/windows/native/SoulAngel.sln`
 2. Set configuration **Debug | x64**
-3. **Project → MicropolisAngel Properties → Debug** — confirm launch profile
+3. **Project → SoulAngel Properties → Debug** — confirm launch profile
 4. F5
 
 First WinUI + WebView2 build can take several minutes (NuGet + Windows App SDK).
@@ -104,7 +104,7 @@ First WinUI + WebView2 build can take several minutes (NuGet + Windows App SDK).
 
 ## Configuration
 
-`native/src/MicropolisAngel/appsettings.json`:
+`native/src/SoulAngel/appsettings.json`:
 
 ```json
 {
@@ -153,7 +153,7 @@ Legacy fallbacks only when WinRT fails: `BitBlt`, `FindWindow`.
 
 ```
 WillWrightShowForFood/          ← workspace root
-  apps/micropolis-angel/        ← specs + native/
+  apps/soul-angel/windows/        ← specs + native/
   apps/stream-gateway/          ← future SvelteKit
   catalogs/
 ```
@@ -244,7 +244,7 @@ Do **not** commit:
 | [`native/README.md`](native/README.md) | Solution layout, dotnet CLI |
 | [`ARCHITECTURE.yml`](ARCHITECTURE.yml) | Unified product plan |
 | [`CATALOG-DB-SCHEMA.yml`](CATALOG-DB-SCHEMA.yml) | SQLite schema |
-| [`../stream-gateway/README.md`](../stream-gateway/README.md) | Stream / OBS topology |
-| [`../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml`](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml) | Product / Steam spec |
+| [`../../stream-gateway/README.md`](../../stream-gateway/README.md) | Stream / OBS topology |
+| [`../../../../catalogs/soul-city/sims1-soul-bridge.yml`](../../../../catalogs/soul-city/sims1-soul-bridge.yml) | Product / Steam spec |
 
 Parent product: Soul City · Will Wright Show For Food · public repo.

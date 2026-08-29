@@ -16,11 +16,11 @@ entries:
     dev_home: MicropolisCore/apps/soul-angel/   # source-available; architecture, schemas, SDK, license
     glance: soul-angel/GLANCE.yml
     spec: ../catalogs/soul-city/soul-angel.yml
-    note: "Universal game companion — DVR, Soul Album, broadcast; micropolis-angel = Windows host + Sims 1 bridge"
-  micropolis-angel:
+    note: "Universal game companion — DVR, Soul Album, broadcast; Windows host + sims1 Soul Bridge in soul-angel/windows/"
+  soul-angel-windows:
     status: spec
     role: sims1_soul_bridge_and_windows_host
-    spec: micropolis-angel/ARCHITECTURE.yml
+    spec: soul-angel/windows/ARCHITECTURE.yml
   ebike-safari:
     status: live_pipeline
     glance: ebike-safari/GLANCE.yml

@@ -1,9 +1,9 @@
 <Window
-    x:Class="MicropolisAngel.MainWindow"
+    x:Class="SoulAngel.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:wv2="using:Microsoft.UI.Xaml.Controls"
-    Title="MicropolisAngel">
+    Title="SoulAngel">
 
     <Grid RowDefinitions="Auto,*">
         <InfoBar

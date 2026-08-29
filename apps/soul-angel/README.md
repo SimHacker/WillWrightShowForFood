@@ -6,11 +6,11 @@ characters — from a web overlay.
 
 **Development home:** `MicropolisCore/apps/soul-angel/` — architecture, Soul Album schema, bridge
 SDK, DVR spec, and the source-available license live there. This directory keeps the show and
-community side. **Product spec:** [`catalogs/soul-city/soul-angel.yml`](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/soul-angel.yml)
+community side. **Product spec:** [`catalogs/soul-city/soul-angel.yml`](../../catalogs/soul-city/soul-angel.yml)
 
 ## The inversion
 
-[MicropolisAngel](../micropolis-angel/) was a Sims 1 companion with streaming bolted on.
+[MicropolisAngel](windows/) was a Sims 1 companion with streaming bolted on.
 SoulAngel is a **universal capture/album/broadcast engine with game bridges plugged in**.
 The Sims 1 is the first bridge, not the product.
 

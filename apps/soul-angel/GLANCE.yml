@@ -18,7 +18,7 @@ here:   # what stays in WWSFF (show/community side)
   network: SCBN.yml   # broadcast channels — TV, radio, magazine
 
 hosts:
-  windows: ../micropolis-angel/ARCHITECTURE.yml   # WinUI 3 + WebView2 host specs + Sims 1 bridge
+  windows: windows/ARCHITECTURE.yml               # WinUI 3 + WebView2 host specs + Sims 1 bridge
   macos: ../stream-gateway/SPEC.yml               # Mac-tier research; port after Windows v1
 
 parent_spec: ../../catalogs/soul-city/soul-angel.yml

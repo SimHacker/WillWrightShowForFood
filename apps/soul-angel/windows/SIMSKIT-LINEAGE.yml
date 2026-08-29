@@ -86,6 +86,6 @@ port_priority:
 
 see_also:
   - ARCHITECTURE.yml
-  - ../../catalogs/maxis/CATALOG.yml
-  - ../stream-gateway/simplifier.yml
-  - ../../characters/will-wright/sources/don-youtube-imu1v3GecB8-simplifier-tools-demo/
+  - ../../../catalogs/maxis/CATALOG.yml
+  - ../../stream-gateway/simplifier.yml
+  - ../../../characters/will-wright/sources/don-youtube-imu1v3GecB8-simplifier-tools-demo/

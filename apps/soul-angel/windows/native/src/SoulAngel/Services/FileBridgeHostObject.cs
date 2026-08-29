@@ -1,4 +1,4 @@
-namespace MicropolisAngel.Services;
+namespace SoulAngel.Services;
 
 // w1 — CoreWebView2.AddHostObjectToScript("fileBridge", ...)
 // Exposes read-only UserData paths to embedded Soul City TypeScript.

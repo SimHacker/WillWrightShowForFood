@@ -1,30 +1,30 @@
-# MicropolisAngel — native (WinUI 3)
+# SoulAngel — native (WinUI 3)
 
-Windows shell for MicropolisAngel: **WinUI 3 + WebView2**, not Electron.
+Windows shell for SoulAngel: **WinUI 3 + WebView2**, not Electron.
 
 | Path | Purpose |
 |------|---------|
-| `MicropolisAngel.sln` | Open this in Visual Studio 2022 on Windows |
-| `src/MicropolisAngel/` | C# WinUI 3 app — WebView host, future FileBridge |
+| `SoulAngel.sln` | Open this in Visual Studio 2022 on Windows |
+| `src/SoulAngel/` | C# WinUI 3 app — WebView host, future FileBridge |
 | `scripts/check-dev.ps1` | Preflight: SDK, WebView2, optional tools |
 
-**Mac:** edit specs in `apps/micropolis-angel/*.yml` and this README; build on the Legion.
+**Mac:** edit specs in `apps/soul-angel/*.yml` and this README; build on the Legion.
 
 **Windows first run:** [`../WINDOWS-DEV-SETUP.md`](../WINDOWS-DEV-SETUP.md)
 
 ## Quick start (Legion)
 
 ```powershell
-cd apps\micropolis-angel\native
+cd apps\soul-angel\native
 .\scripts\check-dev.ps1
-dotnet restore MicropolisAngel.sln
-dotnet build MicropolisAngel.sln -c Debug
-dotnet run --project src\MicropolisAngel\MicropolisAngel.csproj
+dotnet restore SoulAngel.sln
+dotnet build SoulAngel.sln -c Debug
+dotnet run --project src\SoulAngel\SoulAngel.csproj
 ```
 
-Or open `MicropolisAngel.sln` in Visual Studio → **Debug → Start Debugging** (F5).
+Or open `SoulAngel.sln` in Visual Studio → **Debug → Start Debugging** (F5).
 
-Default WebView URL: `http://127.0.0.1:5371` (edit `src/MicropolisAngel/appsettings.json`).
+Default WebView URL: `http://127.0.0.1:5371` (edit `src/SoulAngel/appsettings.json`).
 
 If nothing is listening, the app shows `Assets/placeholder.html`.
 
@@ -35,7 +35,7 @@ If the placeholder drifts from current WinUI templates:
 ```powershell
 dotnet new uninstall Microsoft.WindowsAppSDK.ProjectTemplates 2>$null
 dotnet new install Microsoft.WindowsAppSDK.ProjectTemplates
-dotnet new winui -n MicropolisAngelFresh -o .\tmp-winui
+dotnet new winui -n SoulAngelFresh -o .\tmp-winui
 # Diff and merge — keep WebView2 + appsettings patterns from this repo.
 ```
 

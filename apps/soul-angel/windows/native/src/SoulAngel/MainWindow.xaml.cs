@@ -3,7 +3,7 @@ using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.Web.WebView2.Core;
 
-namespace MicropolisAngel;
+namespace SoulAngel;
 
 public sealed partial class MainWindow : Window
 {
@@ -69,7 +69,7 @@ public sealed partial class MainWindow : Window
 
 internal sealed class AppSettings
 {
-    public string WindowTitle { get; init; } = "MicropolisAngel";
+    public string WindowTitle { get; init; } = "SoulAngel";
     public WebViewSettings WebView { get; init; } = new();
 
     public static AppSettings Load()

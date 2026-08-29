@@ -1,7 +1,7 @@
 using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml;
 
-namespace MicropolisAngel;
+namespace SoulAngel;
 
 public static class Program
 {

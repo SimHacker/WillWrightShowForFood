@@ -1,12 +1,12 @@
 #Requires -Version 5.1
 <#
 .SYNOPSIS
-  Preflight MicropolisAngel dev environment on Windows.
+  Preflight SoulAngel dev environment on Windows.
 #>
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Continue"
 
-Write-Host "MicropolisAngel dev preflight" -ForegroundColor Cyan
+Write-Host "SoulAngel dev preflight" -ForegroundColor Cyan
 Write-Host ""
 
 function Test-Command($name) {
@@ -67,5 +67,5 @@ foreach ($p in $simsPaths) {
 }
 
 Write-Host ""
-Write-Host "Next: dotnet restore && dotnet build in apps\micropolis-angel\native" -ForegroundColor Cyan
-Write-Host "Docs: apps\micropolis-angel\WINDOWS-DEV-SETUP.md" -ForegroundColor Cyan
+Write-Host "Next: dotnet restore && dotnet build in apps\soul-angel\native" -ForegroundColor Cyan
+Write-Host "Docs: apps\soul-angel\WINDOWS-DEV-SETUP.md" -ForegroundColor Cyan

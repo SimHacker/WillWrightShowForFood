@@ -7,9 +7,9 @@ meta:
   id: simplifier
   status: spec
   one_liner: "Read text/images off the screen, catalog app objects, and inject keys/clicks — one or many apps at once — from the gateway server."
-  product_home: ../../catalogs/soul-city/micropolis-angel.yml
+  product_home: ../../catalogs/soul-city/sims1-soul-bridge.yml
   note: |
-    Consumer-facing reincarnation ships as MicropolisAngel (Windows Steam companion).
+    Consumer-facing reincarnation ships as SoulAngel (Windows + Mac Steam companion).
     Stream-gateway server variant powers Repo Show broadcast rig — same lineage, different packaging.
   lineage: |
     Reimplement Simplifier: it ran two Sims Online clients (different accounts) side by side on
@@ -28,10 +28,10 @@ capabilities:
   capture:
     what: "Grab pixels from a display/window/region (one or many apps at once)."
     backends:
-      windows: "Windows.Graphics.Capture (MicropolisAngel native host — primary on Legion)"
+      windows: "Windows.Graphics.Capture (SoulAngel native host — primary on Legion)"
       macos: "ScreenCaptureKit (stream-gateway Mac tier)"
       reuse: "OBS/NDI frames when OBS owns the graph"
-    impl: ../micropolis-angel/ARCHITECTURE.yml#native-apis
+    impl: ../soul-angel/windows/ARCHITECTURE.yml#native-apis
   read:
     text: "Primary: Soul City TS reads .iff / save files — NOT screen OCR for metadata."
     catalog_panel: |
@@ -45,7 +45,7 @@ capabilities:
     keys: "SendInput keystrokes to a whitelisted target window (Windows); CGEvent (macOS)."
     clicks: "SendInput mouse; UI Automation InvokePattern when coords fragile."
     multi_app: "Drive MULTIPLE apps simultaneously (the original two-accounts trick)."
-    lifecycle: "Save game, main menu, reload lot, restart process — MicropolisAngel game state machine"
+    lifecycle: "Save game, main menu, reload lot, restart process — SoulAngel game state machine"
   understand:
     what: "Optional model pass: interpret the scraped state, plan actions (maze/money/task logic)."
     catalog_match: "Fuzzy rank installed objects from OCR text; emit ambiguous sets — never silent GUID pick."
@@ -60,7 +60,7 @@ targets:
     platform: "Soul City TypeScript — read .iff/.far, WebGPU render (replaces scrape for metadata)"
     ties:
       - "catalogs/maxis/CATALOG.yml#pipeline"
-      - "apps/micropolis-angel/SIMSKIT-LINEAGE.yml"
+      - "apps/soul-angel/windows/SIMSKIT-LINEAGE.yml"
       - "characters/will-wright/sources/2004-01-08-showntell-activex-preview/"
     note: "Inject+crawl remains for preview images until WebGPU renderer ships."
   generic:
@@ -93,6 +93,6 @@ ties_to:
   - cursor-tap.yml
   - summarizers.yml
   - overlay-viewer.yml
-  - ../micropolis-angel/CATALOG-SCREEN-MATCH.yml
+  - ../soul-angel/windows/CATALOG-SCREEN-MATCH.yml
   - ../../process/brain-stream.yml
-  - ../../catalogs/soul-city/micropolis-angel.yml
+  - ../../catalogs/soul-city/sims1-soul-bridge.yml
