@@ -7,11 +7,15 @@ Full page: [`bobo-signage.md`](bobo-signage.md) · [`bobo-signage.yml`](bobo-sig
 
 ![Bobo signage — BOOBOO, BOBO, BOB, BOBOLOGICAL, BOBOLICIOUS, BOBOLICIFED](bobo-signage.png)
 
-## Team lunch (photo from Eric)
+## Team lunch — a Hornblower bay cruise, probably 1997
 
-Shared by Eric Bowman, August 2026 — a team lunch around a long white-tablecloth table, cobalt-blue
-glasses and all, in what looks like a boat's dining saloon. IDs being confirmed with Eric —
-possibly Will and Luc among them. Full story and metadata:
+Shared by Eric with Don in August 2026, and **now dated and placed**: a Maxis team event aboard a
+**Hornblower cruise on San Francisco Bay**, probably **1997**, settled by Eric's own 2017 Maxis
+Alumni post of the same photo and the thread under it — Shannon Gray Copur remembered "that cruise
+in the bay," Christine McGavran named the Hornblower event and confirmed she's the back of the head
+in the foreground, and Jim Mackraz asked whether it was the one "with the chocolate fountain."
+Will and Luc are in frame; Don's caption: *"Luc looks like the cat that ate the canary! Will looks
+like it was his canary…"* Full story and metadata:
 [`team-lunch-from-eric-bowman.md`](team-lunch-from-eric-bowman.md) ·
 [`team-lunch-from-eric-bowman.yml`](team-lunch-from-eric-bowman.yml)
 

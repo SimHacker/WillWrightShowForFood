@@ -1,0 +1,96 @@
+# ARCHIE-SUIT CMX WHITMAN — GLANCE (nav + metadata SSOT)
+
+title: "archie-suit.txt — Whitman in the bone report"
+iconic: "🦴📜"
+description: |
+  Don's CMX exporter, run with debugging on, wrote a human-readable report for Archie Bunker's suit:
+  the 21-bone skeleton sung as Dem Bones ("The ROOT bone's connected to the NULL bone") under an
+  epigraph from Whitman's I Sing the Body Electric — the poem insisting the body's parts ARE the
+  soul. The machine format and the human format came out of the same exporter, and the human one
+  had room for poetry.
+
+source:
+  artifact: archie-suit.txt            # the real file, 276 lines / 9271 bytes
+  artifact_header: "Character File Report. Copyright 1997, Maxis Inc. / version 200"
+  artifact_origin: https://donhopkins.com/home/text/archie-suit.txt
+  artifact_verified: 2026-08-29        # byte-identical to live copy
+  artifact_sha256: 641bc8965446bd1bf0dbb8bfca2a2413863f4a9f41649cb238226dc557169554
+  skeleton_excerpt: archie-skeleton-dump.txt   # the portion Don quoted on Facebook
+  posted: 2022-05-18
+  venue: "Maxis Alumni (Facebook group)"
+  author: "Don Hopkins"
+  reactions: 9
+  comments: 27
+  screenshot: ../../media/2022-05-18-maxis-alumni-archie-suit-whitman-post.png
+  binary_counterpart: ../2004-02-05-sims-character-animation-file-format/article.md
+
+report_contents:
+  poem_placement: "interleaved as section separators at lines 4-6, 17-18, 45-46, 92-93, 273-274, attribution 276 — not an epigraph"
+  skeleton_count: 1
+  suit_count: 6      # 5 head-mood suits + 1 body suit
+  suits: [archie-head-sleep, archie-head-mad, archie-head-sad, archie-head-happy, archie-head-normal, archie]
+  mood_mechanism: "each mood is its own suit binding a different HEAD mesh (HEAD01-HEAD05) plus its own material — geometry AND texture, not texture alone"
+  body_suit_skins: 15   # one mesh per bone
+  material_count: 11
+  materials: [asleep, amad, asad, ahappy, aface, ahips, ajeans, ashoes, atshirt, atopskin, aarmskin]
+  skill_count: 1
+  motion_count: 21   # one per bone; frames 1, duration 33 — a static pose at 30fps, rotation only
+
+skeleton_facts:
+  name: archie
+  bone_count: 21
+  can_translate: "ROOT only — the other 20 bones rotate"
+  hair_is_a_bone: "HAIR hangs off HEAD, length 0.840235 (longer than HEAD at 0.246656)"
+  zero_length_pivots: "RIGHT_HIP / LEFT_HIP at 9.79906e-008 — joints with no bone"
+  root_parent: "NULL — the song bottoms out in a null pointer, under a poem about the soul"
+
+era: |
+  Dollhouse-era test household: the Bunker family from All in the Family (Archie, Edith, Darren,
+  Samantha), which is why the rig is named archie. Terrain art still says SIMPEOPLE.
+
+thread_voices:
+  - { who: "Eric Lennon Bowman", said: "single most 'this was The Sims team vibe' thing ever" }
+  - { who: "Jim Mackraz", said: "Freak." }
+  - { who: "Matt Wynne", said: "I love this!" }
+
+excluded:
+  - what: "FTFY BOBO pixelated photo and private banter (the bust / stays in Amsterdam)"
+    why: "personal, not Sims history; Don had already censored it himself"
+
+keywords:
+  - cmx exporter
+  - archie-suit.txt
+  - skeletal animation
+  - dem bones
+  - walt whitman
+  - i sing the body electric
+  - bunker family
+  - dollhouse era
+  - soul files
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../2004-02-05-sims-character-animation-file-format/
+    - ../1998-06-04-sims-steering-committee-demo/
+    - ../2001-08-23-simlish-voice-video/
+
+read_order:
+  - README.md
+  - archie-skeleton-dump.txt
+  - ../../media/sims-prerelease-bunker-README.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../2004-02-05-sims-character-animation-file-format/article.md, why: "The binary CMX layout this report is the debug view of" }
+    - { path: ../1998-06-04-sims-steering-committee-demo/README.md, why: "Same Bunker-era build, running live" }
+  across:
+    - { path: ../../media/sims-prerelease-bunker-README.md, why: "15 textures and cut UI from the same thread" }
+    - { path: ../../../../catalogs/soul-city/README.md, why: "Soul files — the descendant of body-parts-are-the-soul" }
+    - { path: ../../../eric-bowman/, why: "Thread voice" }
+    - { path: ../../../jim-mackraz/, why: "Thread voice: 'Freak.'" }
+  deep:
+    - { path: archie-skeleton-dump.txt, why: "Verbatim primary source" }

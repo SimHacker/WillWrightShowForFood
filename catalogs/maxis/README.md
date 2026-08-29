@@ -16,6 +16,14 @@ This catalog points at objects and downloads; it does not replace EA's store.
 - **Expansion pack objects** — same schema, tagged by pack
 - **Where the bytes live** — Steam install path, Internet Archive, donhopkins.com, Wayback, TCRF/Hidden Palace (link-only for protos)
 
+## Physical artifacts
+
+**[`physical-artifacts.md`](physical-artifacts.md)** — boxes, employee merch, tour tees. The
+**SIM ROCK 95 Maxis World Tour** shirt (with its suspicious itinerary through three Philadelphia
+suburbs), the **SimCity Graphics Set 2: Future Cities** box (Moon Colony, 1990), and **Judson
+Hudson's** 2010 collector post — which leaves two open leads: a Maxis pin badge off eBay, and
+whatever Jenny Martin knew about **the Godzilla monster on the original SimCity box.**
+
 ## What does NOT go here
 
 - Retail `.exe` / `.package` mirrors in git

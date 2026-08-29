@@ -17,6 +17,7 @@ content-creation story (Transmogrifier, SimFreaks, SimSlice, SimProv, procedural
 | **SimSlice / SliceCity** | [gallery](sims-simslice-README.md) | [simslice](../../../catalogs/simslice/README.md) |
 | **SimAntics objects** | [gallery](sims-simantics-objects-README.md) | [transmogrifier hub](../sources/2004-transmogrifier-documentation-hub/README.md) |
 | **People & events** | [photos](sims-people-and-events-README.md) | [maxis-people essay](sims-series-maxis-people.md) |
+| **Pre-release Bunkers** | [textures + cut UI](sims-prerelease-bunker-README.md) | [`archie-suit.txt` Whitman bone report](../sources/2022-05-18-archie-suit-cmx-whitman/README.md) |
 | **1996 centerpiece** | [167 figures](../sources/1996-04-26-winograd-interfacing-to-microworlds/README.md#image-gallery) | Winograd talk |
 
 Flat filenames in this directory — no theme subfolders. Scroll each `sims-*-README.md` for captions.

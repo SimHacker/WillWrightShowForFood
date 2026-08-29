@@ -1,0 +1,72 @@
+# SIMLISH VOICE VIDEO 2001-08-23 — GLANCE (nav + metadata SSOT)
+
+title: "Simlish voice video — Kearin & Lawlor at the mic, 23 Aug 2001"
+iconic: "🎙️📼"
+description: |
+  78 seconds of Stephen Kearin and Gerri Lawlor recording Simlish on camera, voicing to picture
+  with two Sims on a CRT in front of them. Camcorder-stamped AUG 23 2001 — expansion-pack era,
+  a later session than the English ad-lib audio. Rescued from a 2,531-view upload Don found at
+  700 views in 2022. Carries two accidental artifacts: YouTube's ASR transcribing Simlish as
+  Spanish, and a 290-comment corpus from 290 distinct accounts that reads as an engagement farm
+  performing memorial ritual for a real dead performer.
+
+source:
+  youtube_id: Y_E6026i9tA
+  url: https://www.youtube.com/watch?v=Y_E6026i9tA
+  uploader: "Ella Reed (AKA Rayanna Thompson)"
+  channel_id: UCieqNqEA8Xd2gUwoj9aJdsQ
+  uploaded: 2020-01-24
+  footage_date: 2001-08-23   # camcorder overlay; only dating evidence, treat as approximate
+  runtime: "1:18"
+  stats_as_of: 2026-08-29
+  views: 2531
+  likes: 240
+  comments: 290
+  local_preservation: videos/clips/simlish-voice-video-2001/   # gitignored: mp4, info.json, thumb, comments
+  found_by_don: 2022-05-19   # Maxis Alumni post, then at ~700 views
+
+performers:
+  - name: "Gerri Lawlor"
+    frame_position: right    # per fan comments identifying her side
+    lived: "1969-05-16 / 2019-01-28"
+    ethics: "memorial respect; do not voice as character, do not synthesize"
+  - name: "Stephen Kearin"
+    frame_position: left
+    status: living           # reachable as a guest
+
+keywords:
+  - simlish
+  - gerri lawlor
+  - stephen kearin
+  - voice session on camera
+  - voicing to picture
+  - asr hears simlish as spanish
+  - engagement farm memorial
+  - procedural rhetoric
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  siblings:
+    - ../steve-and-gerri-simlish-adlib/
+    - ../1998-06-04-sims-steering-committee-demo/
+    - ../1999-01-06-sims-alpha-prototype/
+
+read_order:
+  - README.md
+  - ../../media/2001-08-23-simlish-session-kearin-lawlor-sims-onscreen.jpg
+  - ../steve-and-gerri-simlish-adlib/README.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Sources room" }
+  siblings:
+    - { path: ../steve-and-gerri-simlish-adlib/GLANCE.yml, why: "Same pair, English narration, ~1998-99 audio" }
+  across:
+    - { path: ../../../../schemas/language-simlish.yml, why: "Simlish as language plugin" }
+    - { path: ../../../../repo-shows/will-wright-premiere/sims-play-along-narration.yml, why: "Foreign Poet live segment" }
+    - { path: ../../../claire-curtin/, why: "Kauker credits her with bringing Gerri in — provenance to resolve" }
+    - { path: ../../../jim-mackraz/, why: "'a treasure this recording is' — Maxis Alumni thread" }
+    - { path: ../../../ian-bogost/roles-not-characters.md, why: "Procedural rhetoric frame for ASR pass and comment farm" }
+  deep:
+    - { path: ../../media/2022-05-19-maxis-alumni-simlish-video-post.png, why: "Provenance screenshot" }

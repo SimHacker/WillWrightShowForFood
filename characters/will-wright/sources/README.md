@@ -137,9 +137,25 @@ reunion show seed. *Play it on air with the team.*
 **[1999-01-06-sims-alpha-prototype/](1999-01-06-sims-alpha-prototype/README.md)**  
 "SimEstates" January 1999 alpha — Hidden Palace release (Oct 2025). Compare to steering committee.
 
+**[2010-03-11-livin-large-team-photo/](2010-03-11-livin-large-team-photo/README.md)**  
+The **Livin' Large** crew portrait (c. 2000, shot by Alex Zvenigorodsky), posted by B.J. West in
+2010 — with **Dr. Strange** the chicken and **Gnomingo** the gnome. Bob King still had both the
+chicken and the chicken-print shirt in 2010. *Preservation lead; rest of the photo series wanted.*
+
 **[steve-and-gerri-simlish-adlib/](steve-and-gerri-simlish-adlib/README.md)**  
 Stephen Kearin & Gerri Lawlor improvising **English narration** over an early Sims build — the
 Foreign Poet session that foreshadowed **Simlish**. Don Hopkins catalog WAV + [`TRANSCRIPT-DRAFT.md`](steve-and-gerri-simlish-adlib/TRANSCRIPT-DRAFT.md) for proofreading.
+
+**[2022-05-18-archie-suit-cmx-whitman/](2022-05-18-archie-suit-cmx-whitman/README.md)**  
+Don's **CMX exporter** debug report for **Archie Bunker's suit** — the skeleton hierarchy sung as
+*Dem Bones* under an epigraph from Whitman's **I Sing the Body Electric**. The root bone's connected
+to the NULL bone. Plus 15 pre-release Bunker textures and cut UI:
+[gallery](../media/sims-prerelease-bunker-README.md).
+
+**[2001-08-23-simlish-voice-video/](2001-08-23-simlish-voice-video/README.md)**  
+The same pair **on camera** two years later, voicing **Simlish** to picture with two Sims on a CRT
+in front of them. Preserved from a 2,531-view upload, plus two accidents worth a segment: YouTube's
+ASR transcribes Simlish as **Spanish**, and 290 comments arrive from 290 distinct accounts.
 
 **[2026-e3-1999-prototype-preservation/](2026-e3-1999-prototype-preservation/README.md)**  
 E3 1999 music hunt — Jerry Martin, Phil Ramsey, VitaMoo/SimObliterator preservation thread.
@@ -304,6 +320,11 @@ StoryMaker, Edith SimAntics, Unity pie menus — video companions to written sou
 
 ## Correspondence & contemporary threads
 
+**[2018-12-28-game-informer-life-after-maxis/](2018-12-28-game-informer-life-after-maxis/README.md)**  
+Game Informer Show (~30 min) — **earliest on-camera Proxi pitch**; MasterClass; Sims Online *"glorious failure"*;
+Strong Museum notebooks + empirical astrology in Sims personality design; Miyamoto / Dr. Wright; small-team
+nostalgia.
+
 **[2025-04-29-venturebeat-proxi-funding-crisis/](2025-04-29-venturebeat-proxi-funding-crisis/README.md)**  
 Dean Takahashi — Proxi as hard to pitch as The Sims; Gallium runway crisis; smart-objects origin;
 Mattrick acquisition anecdote; memory-palace design. Pairs with Dev Diaries + Numenta.
@@ -345,6 +366,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [2001-gdc-design-plunder](2001-gdc-design-plunder/README.md) | Design Plunder GDC 2001 — Cory Martin + slides; failure states, SimFreaks |
 | [2005-03-11-spore-gdc-future-of-content](2005-03-11-spore-gdc-future-of-content/README.md) | Spore GDC 2005 — first public reveal; Don's Medium notes |
 | [2006-06-26-long-now-playing-with-time-eno-wright](2006-06-26-long-now-playing-with-time-eno-wright/README.md) | Playing with Time — Eno + Will, Long Now 2006 (Spore demo; Don in audience) |
+| [2010-03-11-livin-large-team-photo](2010-03-11-livin-large-team-photo/README.md) | Livin' Large crew portrait — Dr. Strange (chicken), Gnomingo (gnome) |
 | [2018-04-23-sims-crowd-sitter](2018-04-23-sims-crowd-sitter/README.md) | The Sims 1 Crowd Sitter |
 | [2018-04-24-dumbold-voting-machine](2018-04-24-dumbold-voting-machine/README.md) | Dumbold Voting Machine for The Sims 1 |
 
@@ -404,6 +426,8 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [1998-06-04-sims-steering-committee-demo](1998-06-04-sims-steering-committee-demo/README.md) | Steering committee demo (1998) — Don's YouTube + [IA build links](1998-06-04-sims-steering-committee-demo/README.md#find-the-build-do-not-host-in-repo) |
 | [1999-01-06-sims-alpha-prototype](1999-01-06-sims-alpha-prototype/README.md) | Jan 1999 alpha — Hidden Palace (Oct 2025) |
 | [steve-and-gerri-simlish-adlib](steve-and-gerri-simlish-adlib/README.md) | Kearin & Lawlor — English ad-lib over early Sims (Simlish origins) |
+| [2001-08-23-simlish-voice-video](2001-08-23-simlish-voice-video/README.md) | Kearin & Lawlor on camera speaking Simlish to picture (Aug 2001) |
+| [2022-05-18-archie-suit-cmx-whitman](2022-05-18-archie-suit-cmx-whitman/README.md) | `archie-suit.txt` — CMX debug report with Whitman + Dem Bones skeleton |
 | [2026-e3-1999-prototype-preservation](2026-e3-1999-prototype-preservation/README.md) | E3 1999 music hunt · Jerry Martin · VitaMoo/SimObliterator |
 | [simcity-open-source-saga](simcity-open-source-saga/README.md) | OLPC open source timeline |
 | [simcity-unix-rights-history](simcity-unix-rights-history/README.md) | DUX/Maxis contracts |
@@ -413,6 +437,7 @@ CAM-6 pie menus as visual programming — YouTube + essay cross-link.
 | [stupid-fun-club-one-minute-movies](stupid-fun-club-one-minute-movies/README.md) | Servitude & Empathy robots |
 | [2024-building-simcity-chaim-intro](2024-building-simcity-chaim-intro/README.md) | Chaim MIT Press book + Sam Arbesman intro |
 | [2026-07-03-digital-antiquarian-maxis-part1](2026-07-03-digital-antiquarian-maxis-part1/README.md) | Jimmy Maher Maxis history (SimEverything) + HN question-pump thread |
+| [2018-12-28-game-informer-life-after-maxis](2018-12-28-game-informer-life-after-maxis/README.md) | Game Informer — life after Maxis, early Proxi, MasterClass, Sims Online post-mortem, Strong Museum notebooks |
 | [2025-04-29-venturebeat-proxi-funding-crisis](2025-04-29-venturebeat-proxi-funding-crisis/README.md) | VentureBeat — Proxi pitch parallel, Gallium funding (Apr 2025) |
 | [2024-11-12-reddit-ama-proxi](2024-11-12-reddit-ama-proxi/README.md) | Reddit AMA — Proxi design manifesto, privacy, Sims gems (Nov 2024) |
 | [2024-12-17-breakthrought1d-proxi-stream](2024-12-17-breakthrought1d-proxi-stream/README.md) | T1D Twitch + PC Gamer — mind world, Sims 2 memories (Dec 2024) |

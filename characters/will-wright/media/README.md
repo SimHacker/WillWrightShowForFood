@@ -134,7 +134,18 @@ Foreign Poet session that foreshadowed Simlish. Source bundle:
 
 | File | Notes |
 |------|-------|
-| [`steve-and-gerri-simlish-adlib.wav`](steve-and-gerri-simlish-adlib.wav) | From [Don Hopkins catalog](https://donhopkins.com/home/catalog/sounds/Steve_And_Gerri.wav); mono 22050 Hz |
+| [`steve-and-gerri-simlish-adlib.wav`](steve-and-gerri-simlish-adlib.wav) | From [Don Hopkins catalog](https://donhopkins.com/home/catalog/sounds/Steve_And_Gerri.wav); mono 22050 Hz. Re-verified byte-identical to source 2026-08-29 |
+
+## Simlish origins — on camera, 23 Aug 2001
+
+The same two performers **voicing Simlish to picture**, camcorder-stamped AUG. 23 2001. Source
+bundle: [2001-08-23-simlish-voice-video](../sources/2001-08-23-simlish-voice-video/README.md)
+
+| File | Notes |
+|------|-------|
+| [`2001-08-23-simlish-session-gerri-lawlor-at-mic.jpg`](2001-08-23-simlish-session-gerri-lawlor-at-mic.jpg) | Gerri Lawlor at the mic under a boom; fan comments place her on the right |
+| [`2001-08-23-simlish-session-kearin-lawlor-sims-onscreen.jpg`](2001-08-23-simlish-session-kearin-lawlor-sims-onscreen.jpg) | Both performers, plus a CRT showing two Sims — the method in one frame |
+| [`2022-05-19-maxis-alumni-simlish-video-post.png`](2022-05-19-maxis-alumni-simlish-video-post.png) | Don surfaces the video to Maxis Alumni at 700 views; Jim Mackraz: *"a treasure"* |
 
 ## Robot-combat meetup (Los Angeles)
 

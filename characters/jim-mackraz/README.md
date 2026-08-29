@@ -20,6 +20,7 @@ documents and decks, never code), and what reached CTG from pool architecture de
 
 | File | Purpose |
 |------|---------|
+| [`memorial-foosball-table.md`](memorial-foosball-table.md) | **The Memorial Foosball Table** — Will Wright joke that became furniture; Jim wants it back (2021 thread) |
 | [`invitation.md`](invitation.md) | Invitation (shared via chat, Aug 2026) |
 | [`ideas.md`](ideas.md) | Conversation hooks |
 | [`sources/2026-08-21-polished-turd-correction.md`](sources/2026-08-21-polished-turd-correction.md) | Jim's quote correction, verbatim |

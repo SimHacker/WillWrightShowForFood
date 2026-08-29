@@ -47,6 +47,8 @@ clusters:
     - 1998-06-04-sims-steering-committee-demo
     - 1999-01-06-sims-alpha-prototype
     - steve-and-gerri-simlish-adlib
+    - 2001-08-23-simlish-voice-video
+    - 2022-05-18-archie-suit-cmx-whitman
     - 2008-02-10-soul-of-the-sims
   transmogrifier:
     - 2004-transmogrifier-documentation-hub
@@ -69,6 +71,7 @@ see_also:
     - { path: 2008-02-10-soul-of-the-sims/GLANCE.yml, why: "Motive.c substrate" }
     - { path: 1998-06-04-sims-steering-committee-demo/GLANCE.yml, why: "Edith + SimAntics live" }
     - { path: steve-and-gerri-simlish-adlib/GLANCE.yml, why: "Simlish origins — Kearin/Lawlor ad-lib" }
+    - { path: 2001-08-23-simlish-voice-video/GLANCE.yml, why: "Simlish on camera, Aug 2001 — voicing to picture" }
     - { path: 2004-transmogrifier-documentation-hub/GLANCE.yml, why: "Fan tools cluster hub" }
     - { path: stupid-fun-club-one-minute-movies/GLANCE.yml, why: "Slats origin" }
   across:

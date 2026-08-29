@@ -1,10 +1,11 @@
-# Proxi / Gallium — public source cluster (2024–2025)
+# Proxi / Gallium — public source cluster
 
-Curated digests of Will Wright on **Proxi** from press, Reddit, and charity streams.
+Curated digests of Will Wright on **Proxi** from press, Reddit, charity streams, and interviews.
 All public-safe — no private funding strategy or layoff roster.
 
 | Date | Slug | What |
 |------|------|------|
+| 2018-12-28 | [game-informer-life-after-maxis](2018-12-28-game-informer-life-after-maxis/README.md) | Game Informer — **earliest Proxi pitch on camera**; memory scape + psyche map; ~10-person team; ~1yr release estimate |
 | 2024-11-12 | [reddit-ama-proxi](2024-11-12-reddit-ama-proxi/README.md) | r/gaming AMA — design manifesto, privacy, Sims origin gems |
 | 2024-12 | [breakthrought1d-proxi-stream](2024-12-17-breakthrought1d-proxi-stream/README.md) | Twitch + PC Gamer — mind world, Sims 2 memory panel |
 | 2025-04-29 | [venturebeat-proxi-funding-crisis](2025-04-29-venturebeat-proxi-funding-crisis/README.md) | Pitch parallel, smart objects, memory palace, industry frame |
@@ -12,6 +13,7 @@ All public-safe — no private funding strategy or layoff roster.
 
 ## Reading order for Proxi newcomers
 
+0. **Game Informer 2018** — first public description of memories → psyche landscape (predates Gallium branding).
 1. **T1D stream** — what the player loop looks like (mind world).
 2. **Reddit AMA** — home vs shared worlds, AI connection-mapping, privacy.
 3. **VentureBeat** — Sims pitch déjà vu + memory taxonomy + McCloud/Lynch.

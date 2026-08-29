@@ -1,0 +1,24 @@
+skeleton # 0
+name: archie
+bone count 21
+The ROOT bone's connected to the NULL bone, length 2.82201, canTranslate 1, canRotate 1.
+The TORSO bone's connected to the ROOT bone, length 0.469819, canTranslate 0, canRotate 1.
+The NECK bone's connected to the TORSO bone, length 0.986622, canTranslate 0, canRotate 1.
+The HEAD bone's connected to the NECK bone, length 0.246656, canTranslate 0, canRotate 1.
+The HAIR bone's connected to the HEAD bone, length 0.840235, canTranslate 0, canRotate 1.
+The RIGHT_SHOULDER bone's connected to the TORSO bone, length 0.986621, canTranslate 0, canRotate 1.
+The RIGHT_UPPERARM bone's connected to the RIGHT_SHOULDER bone, length 0.558374, canTranslate 0, canRotate 1.
+The RIGHT_LOWERARM bone's connected to the RIGHT_UPPERARM bone, length 0.951385, canTranslate 0, canRotate 1.
+The RIGHT_HAND bone's connected to the RIGHT_LOWERARM bone, length 0.786948, canTranslate 0, canRotate 1.
+The LEFT_SHOULDER bone's connected to the TORSO bone, length 0.986621, canTranslate 0, canRotate 1.
+The LEFT_UPPERARM bone's connected to the LEFT_SHOULDER bone, length 0.547017, canTranslate 0, canRotate 1.
+The LEFT_LOWERARM bone's connected to the LEFT_UPPERARM bone, length 0.927893, canTranslate 0, canRotate 1.
+The LEFT_HAND bone's connected to the LEFT_LOWERARM bone, length 0.775203, canTranslate 0, canRotate 1.
+The RIGHT_HIP bone's connected to the ROOT bone, length 9.79906e-008, canTranslate 0, canRotate 1.
+The RIGHT_THIGH bone's connected to the RIGHT_HIP bone, length 0.223473, canTranslate 0, canRotate 1.
+The RIGHT_CALF bone's connected to the RIGHT_THIGH bone, length 1.17455, canTranslate 0, canRotate 1.
+The RIGHT_FOOT bone's connected to the RIGHT_CALF bone, length 1.35409, canTranslate 0, canRotate 1.
+The LEFT_HIP bone's connected to the ROOT bone, length 9.79906e-008, canTranslate 0, canRotate 1.
+The LEFT_THIGH bone's connected to the LEFT_HIP bone, length 0.20105, canTranslate 0, canRotate 1.
+The LEFT_CALF bone's connected to the LEFT_THIGH bone, length 1.19827, canTranslate 0, canRotate 1.
+The LEFT_FOOT bone's connected to the LEFT_CALF bone, length 1.31378, canTranslate 0, canRotate 1.

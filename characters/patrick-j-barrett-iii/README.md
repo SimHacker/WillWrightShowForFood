@@ -5,6 +5,14 @@ feature that helped make The Sims the queer microworld a generation grew up insi
 
 **Status:** invitation draft · **Consent:** not_yet_asked · **Show:** [`did-the-sims-make-you-gay`](../../repo-shows/did-the-sims-make-you-gay/README.md) · **Public record:** [`same-sex-relationships-the-record.md`](same-sex-relationships-the-record.md)
 
+**His own photographs:** [The Sims booth at E3 1999](e3-1999-sims-booth.md) — *"Hidden behind the EA
+Arena. This was the closest I could get to it."* Eight months before ship, mobbed anyway.
+
+**His own photographs:** [Maxis, Christmas 1998](media/README.md) — Patrick shot the Walnut Creek
+offices for his family about two months after being hired, inadvertently documenting the room where
+he implemented same-sex relationships. Includes the *"extremely rare photo of Don Hopkins at his
+desk"* with both a Coke and a Pepsi open on it.
+
 ## Why invite Patrick
 
 Don advocated in **1998 design-doc reviews** for inclusive romance (the prototype slapped

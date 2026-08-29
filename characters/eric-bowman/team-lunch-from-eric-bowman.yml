@@ -1,39 +1,83 @@
 # Team lunch photo — from Eric "Bobo" Bowman
-# Caption under construction: IDs being confirmed with Eric in chat, Aug 2026.
+# Dated and placed 2026-08-29 from Eric's own 2017 Maxis Alumni post + thread.
 
 artifact:
   file: team-lunch-from-eric-bowman.png
-  what: "Team lunch around a long white-tablecloth table — cobalt-blue glasses, brass sconces, what looks like a boat's dining saloon"
-  date: unknown            # early-2000s digital camera era by the look of it
-  location: unknown        # boat? restaurant? Eric to confirm
+  what: "Maxis team event aboard a Hornblower bay cruise — long white-tablecloth table, cobalt-blue glasses, brass sconces, cookies"
+  date: "1997?"                 # Eric: "I have no recollection the circumstances or the date ... maybe 1997?"
+  date_confidence: low
+  location: "Hornblower cruise, San Francisco Bay"
+  location_confidence: medium   # two independent recollections in the thread
+  corrections:
+    - "Earlier guess 'early-2000s digital camera era' — superseded; Eric says maybe 1997."
+    - "Earlier guess 'restaurant?' — superseded; charter boat on the bay."
 
 provenance:
   from: eric-bowman
   received: 2026-08-20
   channel: chat
   received_by: don-hopkins
+  also_posted:
+    group: "Maxis Alumni"
+    author: eric-bowman
+    tagged: "with Will Wright and 2 others"
+    reactions: 9
+    comments: 6
+    screenshots:
+      - team-lunch-from-eric-bowman-facebook-post.jpg
+      - team-lunch-from-eric-bowman-facebook-comments.png
 
 people:
-  # Don's first reading sent to Eric; Eric confirmed three on 2026-08-20:
-  # "That's the back of Christine's head / Ocean on the left / Paul P in the background RIP (the other table)"
-  - { position: "right foreground, red plaid shirt", id: unconfirmed }
-  - { position: "center, dark red sweater, big grin", id: unconfirmed, don_guess: luc-barthelet }
-  - { position: "background, blue jacket, mid-bite", id: unconfirmed, don_guess: will-wright }
-  - { position: "left, maroon shirt, glasses, cookie in hand", id: unconfirmed }
-  - { position: "far left edge, dark top", id: "Ocean", confirmed_by: eric-bowman }
-  - { position: "foreground, back of head, long hair", id: "Christine", confirmed_by: eric-bowman }
-  - { position: "background, the other table", id: "Paul P", confirmed_by: eric-bowman, note: "RIP" }
+  - position: "foreground, back of head, long hair"
+    id: "Christine McGavran"
+    confirmed_by: [eric-bowman, self]
+    note: "Ocean Quigley asked; she replied 'And I do think that is me'"
+  - position: "far left edge, dark top"
+    id: "Ocean"                 # Ocean Quigley
+    confirmed_by: eric-bowman
+  - position: "background, the other table"
+    id: "Paul P"
+    confirmed_by: eric-bowman
+    note: "RIP"
+  - position: "center, dark red sweater, big grin"
+    id: unconfirmed
+    don_reading: luc-barthelet
+    supporting: "Eric's caption singles out Luc; Don's comment names Luc as 'the cat that ate the canary'"
+  - position: "background, blue jacket, mid-bite"
+    id: unconfirmed
+    don_reading: will-wright
+    supporting: "post tagged 'with Will Wright'; Don's comment names Will"
+  - position: "left, maroon shirt, glasses, cookie in hand"
+    id: unconfirmed
+  - position: "right foreground, red plaid shirt"
+    id: unconfirmed
+    hypothesis: "Eric himself? — 'We all seem to be enjoying our cookies'. Not asked."
+
+thread_voices:
+  - { who: "Shannon Gray Copur", said: "Was that when we took that cruise in the bay? I bet Tammy would remember. 😜" }
+  - { who: "Ocean Quigley", said: "That looks like Christine McGavran in the foreground?" }
+  - { who: "Christine McGavran", said: "Was that from a Hornblower cruise team event? (And I do think that is me)" }
+  - { who: "Jim Mackraz", said: "with the chocolate fountain?" }
+  - { who: "Don Hopkins", said: "Luc looks like the cat that ate the canary! 😉 Will looks like it was his canary... ;(" }
 
 lore:
-  bunny_ears: "Luc + bunny ears surfaced in the caption chat -- 'wore those all the time, wouldn't take 'em off.' Caption candidate once the IDs land."
+  cookies: "Eric's caption makes the cookies the subject: 'We all seem to be enjoying our cookies though, especially Luc.'"
+  chocolate_fountain: "Jim Mackraz's uncorroborated detail. Worth confirming — a chocolate fountain on a chartered boat is a 1997 corporate-event artifact in itself."
+  cat_and_canary: "Don's joke reads as an acquisition-year joke: Luc had just taken over Maxis under EA; Will was the founder inside it."
+  bunny_ears: "Luc + bunny ears surfaced in the caption chat -- 'wore those all the time, wouldn't take 'em off.' Caption candidate."
 
-incoming:
-  - what: "Will's New Year's Eve party photo, 1999 -> 2000, with Jamie Doornbos and friends"
-    from: eric-bowman
-    status: arrived
-    file: nye-1999-2000-will-wright-party.png
+open_questions:
+  - "Which figure is Eric?"
+  - "Who is Tammy? (Shannon says she'd remember)"
+  - "Was there a chocolate fountain?"
+  - "Exact date and occasion — team event, ship party, post-acquisition offsite?"
+  - "Confirm Will/Luc face assignments with Eric directly."
+
+rooms_needed: [ocean-quigley, christine-mcgavran, shannon-gray-copur]
 
 see_also:
   - team-lunch-from-eric-bowman.md
   - media.md
   - CHARACTER.yml
+  - ../luc-barthelet/
+  - ../mike-perry/lunasim-tycho-rising.md    # the other 1997 Maxis casualty

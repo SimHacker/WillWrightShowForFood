@@ -1,0 +1,107 @@
+# Mike Perry — invitation portrayal. NOT Mike Perry.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: mike-perry
+  name: "Mike Perry"
+  formal_name: "Michael Perry"          # as printed on the design document title page
+  type: invitation
+  signifier: "🌙"
+  status: living
+  field: "Game production + design — Maxis producer; designer of the unreleased LunaSim / Tycho Rising"
+  home: characters/mike-perry/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 1                      # public Facebook post to Maxis Alumni; not yet contacted
+  authored_by: don-hopkins
+  needs_confirmation:
+    - "Start date at Maxis — March 1996 newsletter says producers had been around 'the last year and a half', implying ~late 1994. Not stated directly."
+    - "Exact role/title on LunaSim/Tycho Rising — 'designing' per his own post; 'Producer' per the newsletter. Both, probably; confirm."
+    - "Whether the Tycho Rising E3 disc (6-17-97) and LunaSimX Resource Files (4/29/98) are readable."
+    - "Whether the Talley Research LunaSim focus group report (Dec 1996) survives."
+    - "Why two documents both marked 'Rev A' — 1997-07-22 (49pp) and 1997-08-29 (36pp)."
+    - "Whether the robot-instruction mechanic was ever implemented/playable."
+
+invitation:
+  status: not_yet_written
+  consent: not_yet_asked
+  contact: "via Maxis Alumni (Facebook)"
+
+bio:
+  summary: |
+    **Mike Perry** — Maxis producer and designer. Designed **LunaSim** (1996), an open-ended
+    moonbase colony simulator, which by 1997 became **Tycho Rising**, adding RTS combat. Shelved
+    shortly after the EA acquisition in favor of **SimMars**. He kept the design binder, the
+    focus-group report cover, and two CD-Rs, and photographed them for the Apollo 11 50th
+    anniversary in July 2019 — which is the entire surviving public record of the project.
+
+career:
+  - era: "by ~1994–1998"
+    org: Maxis
+    role: "Producer; designer, LunaSim / Tycho Rising"
+    evidence: "March 1996 what Newsletter? names 'Producers Michael Perry, Andy Larson and Chris Weiss'"
+
+artifacts:                              # unless noted, photographed by him, 2019-07-21
+  - what: "Tycho Rising press fact sheet — description, features, availability, price, sysreqs"
+    date: "1997-06"
+    held_by: "The Strong / Museum of Play"
+    found_by: phil-salvador
+    photographed: "2018-05-02"
+    from: "Maxis '10 Years of Fun and Games' press kit, sticker: 'Preview Maxis' Fall Line-Up · BOOTH 4646 · SimCity 3000 Press Conference · June 18, 12:00 · Press Center'"
+    announced:
+      availability: "1st Quarter 1998"
+      price_usd: "40-50"
+      players: "1-8; modem, LAN, Internet"
+      platform: "Windows 95, Pentium 90MHz, SVGA 65K colors, 2x CD-ROM, 16MB RAM"
+  - { what: "LunaSim / Tycho Rising design document, 'Design Details', Rev A", date: "1997-07-22", pages: 49, held_by: "Mike Perry" }
+  - { what: "Same title, Introduction section, Rev A", date: "1997-08-29", pages: 36, held_by: "Mike Perry", note: "second document, same revision letter" }
+  - { what: "LunaSim Focus Groups, Talley Research (Mill Valley CA), prepared for Maxis", date: "1996-12", held_by: "Mike Perry", note: "cover sheet only in photographs" }
+  - { what: "TYCHO RISING E3 DISC — gold KAO CD-R, 74min/650MB, hand-labeled", date: "1997-06-17", note: "E3 1997 ran June 19–21, Atlanta" }
+  - { what: "LunaSimX Resource Files — Maxis-pressed CD, Windows 95, Confidential/Internal", date: "1998-04-29", note: "10 months after EA acquisition; name mutated to LunaSimX" }
+  - { what: "Rendered animation — astronauts, laser truck, radial colony, title card", date: "1997?", note: "posted as video; renderer unidentified" }
+
+design_notes:                            # quoted from the document, see lunasim-tycho-rising.md
+  creed: "'a software toy whose uses are limited only by the player's imagination'; 'no winning or losing conditions'"
+  central_mechanic: "player cannot act directly — must instruct special-function robots, which carry out the instructions"
+  economy: "LUNOX oxygen from 40%-oxygenated regolith; Hydrogen arrives only as export profit, so breathing depends on trade"
+  combat: "no dedicated weapons — civilian machines repurposed; Road Builder's paving laser (1:1 accuracy), Truck's rock-throwing (1:3)"
+  city_form: "radial colony growing in rings from a pressurized hub, not a grid"
+  disasters: [meteor strikes, rocket crashes, radiation, moonquakes]      # press sheet
+  research_basis: "'Scientifically accurate with information from NASA and the USGS'"  # press sheet
+  tension: |
+    Internal doc calls it a "software toy" with "no winning or losing conditions"; the press sheet
+    calls it "a strategic game" with "combat missions" and "declare war". Same features, inverted
+    priority. The robot-command mechanic survives in both.
+
+lineage:
+  chain: "LunaSim (1996) → Tycho Rising (1997) → shelved for SimMars → SimMars cancelled, climate tech reused in Spore"
+  see: ../jason-shankel/sources/spore-prototyping-career.md
+  irony: "'launching a mission to Mars' was itself an advanced-event feature of Tycho Rising, per the press sheet"
+
+timeline:
+  - { date: "1996-12", event: "Talley Research LunaSim focus groups" }
+  - { date: "1997-06-17", event: "TYCHO RISING E3 DISC cut (hand-labeled CD-R)" }
+  - { date: "1997-06-18", event: "Maxis press conference, noon, Press Center — fact sheet distributed" }
+  - { date: "1997-06-19/21", event: "E3, Atlanta — Maxis booth 4646", external_fact: true }
+  - { date: "1997-07-22", event: "Design document Rev A (49pp)" }
+  - { date: "1997-08-29", event: "Design document Rev A (36pp)" }
+  - { date: "1998-Q1", event: "announced ship date — did not ship" }
+  - { date: "1998-04-29", event: "LunaSimX Resource Files disc pressed" }
+
+others_needing_rooms:
+  - { name: "Christine McGavran", why: "only commenter; 'I still think SimMars would have been awesome. If only it hadn't gone all 3D and just focused on the game.'" }
+  - { name: "Andy Larson", why: "Maxis producer, named alongside Perry in the 1996 newsletter" }
+  - { name: "Chris Weiss", why: "Maxis producer, named alongside Perry in the 1996 newsletter" }
+
+sources:
+  facebook:
+    - { group: "Maxis Alumni", author: "Mike Perry", date: "2019-07-21", reactions: 27, comments: 1, screenshot: media/2019-07-21-maxis-alumni-post.jpg }
+    - { author: "Phil Salvador", date: "2018-05-02", reactions: 7, screenshot: media/2018-05-02-phil-salvador-museum-of-play-post.jpg, what: "press fact sheet + Maxis 10-year press kit + SimCity 3000 35mm slide, found at Museum of Play" }
+  institutions:
+    - { name: "The Strong / Museum of Play", url: https://www.museumofplay.org/, holds: "Maxis press kit incl. Tycho Rising fact sheet", ask: "rest of the Fall 1997 line-up folder" }
+  repo:
+    archive: lunasim-tycho-rising.md
+    newsletter: ../will-wright/sources/1996-03-what-newsletter/README.md
+    phil_salvador: ../phil-salvador/
+    simrefinery: ../will-wright/sources/simrefinery-recovery/README.md

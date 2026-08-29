@@ -17,6 +17,8 @@
 | [qgcon-inclusivity-paper/](qgcon-inclusivity-paper/README.md) | **How Inclusivity Saved The Sims** — abstract, timeline, Bogost/Murray stack, same-sex design arc |
 | [Will Wright — paper index](../../will-wright/media/sims-series-inclusivity-paper-draft.md) | Cross-link hub |
 | [2019 EA historian thread](../../will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/) | Lyndsay Pearson, Chloe Dubini, Mike Duke |
+| ["I accidentally broke fire!" — 16 Jan 2009](2009-01-16-accidentally-broke-fire/README.md) | **Verified regression, with the commit.** Flattening two nested flag tests in `doFire()` let fire ignite unburnable rubble — and since fire *dies* by becoming rubble, the terminal state became fuel and cities burned forever. Fixed in `1954d98`; original 1989 code and current MicropolisCore both quoted |
+| [Weird Sims objects on a Windows XP VM, 12 May 2019](2019-05-12-weird-sims-objects-20th-anniversary/README.md) | **Edith running again** — SimFreaks + SimSlice archives, Cupid sculpture, Crowd Sitter, NPC Satan spawned as wedding guests; the emerald plumbob; **Freakslice** (Heather Castillo ⚭ Steve Alvey); Jenny Martin asks for "the original demo" |
 
 ## Compression / latent space (2026 harvest)
 
@@ -135,7 +137,7 @@ Long-form room doc (Adventure implementation): [`../logo-adventure-c64-terrapin.
 |------|------|
 | [jwz — "Why the long face?" (May 2008)](2008-05-jwz-simrogenous-street-view/README.md) | Google Street View blurs Central Park horse; jwz coins **SimRogenous zones**; Nick Papadakis forwards to Don |
 | [Sims pixelation — Don HN notes (2022)](../sims-pixelation-censorship-hn-2022.md) | Shimmer RNG, no mesh underneath, TSO lockstep bug, maid/plunger |
-| [Pixelation & modesty — Building The Sims](../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Show reunion hub |
+| [Pixelation & modesty — Building The Sims](../../../repo-shows/building-the-sims/pixelation-and-modesty.md) | Show reunion hub |
 
 ## X11 / Unix-Haters lore
 

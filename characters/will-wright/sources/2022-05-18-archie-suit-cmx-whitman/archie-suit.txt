@@ -1,0 +1,276 @@
+Character File Report. Copyright 1997, Maxis Inc.
+version 200
+
+O my Body!
+I dare not desert the likes of you in other men and women,
+nor the likes of the parts of you.
+
+skeleton count 1
+    archie 
+suit count 6
+    archie-head-sleep archie-head-mad archie-head-sad archie-head-happy archie-head-normal archie 
+skill count 1
+    archie 
+material count 11
+    asleep amad asad ahappy aface ahips ajeans ashoes atshirt atopskin aarmskin 
+
+I believe the likes of you are to stand or fall with the likes of the Soul,
+(and that they are the Soul).
+
+skeleton # 0
+    name: archie
+    bone count 21
+        The ROOT bone's connected to the NULL bone, length 2.82201, canTranslate 1, canRotate 1.
+            The TORSO bone's connected to the ROOT bone, length 0.469819, canTranslate 0, canRotate 1.
+                The NECK bone's connected to the TORSO bone, length 0.986622, canTranslate 0, canRotate 1.
+                    The HEAD bone's connected to the NECK bone, length 0.246656, canTranslate 0, canRotate 1.
+                        The HAIR bone's connected to the HEAD bone, length 0.840235, canTranslate 0, canRotate 1.
+                The RIGHT_SHOULDER bone's connected to the TORSO bone, length 0.986621, canTranslate 0, canRotate 1.
+                    The RIGHT_UPPERARM bone's connected to the RIGHT_SHOULDER bone, length 0.558374, canTranslate 0, canRotate 1.
+                        The RIGHT_LOWERARM bone's connected to the RIGHT_UPPERARM bone, length 0.951385, canTranslate 0, canRotate 1.
+                            The RIGHT_HAND bone's connected to the RIGHT_LOWERARM bone, length 0.786948, canTranslate 0, canRotate 1.
+                The LEFT_SHOULDER bone's connected to the TORSO bone, length 0.986621, canTranslate 0, canRotate 1.
+                    The LEFT_UPPERARM bone's connected to the LEFT_SHOULDER bone, length 0.547017, canTranslate 0, canRotate 1.
+                        The LEFT_LOWERARM bone's connected to the LEFT_UPPERARM bone, length 0.927893, canTranslate 0, canRotate 1.
+                            The LEFT_HAND bone's connected to the LEFT_LOWERARM bone, length 0.775203, canTranslate 0, canRotate 1.
+            The RIGHT_HIP bone's connected to the ROOT bone, length 9.79906e-008, canTranslate 0, canRotate 1.
+                The RIGHT_THIGH bone's connected to the RIGHT_HIP bone, length 0.223473, canTranslate 0, canRotate 1.
+                    The RIGHT_CALF bone's connected to the RIGHT_THIGH bone, length 1.17455, canTranslate 0, canRotate 1.
+                        The RIGHT_FOOT bone's connected to the RIGHT_CALF bone, length 1.35409, canTranslate 0, canRotate 1.
+            The LEFT_HIP bone's connected to the ROOT bone, length 9.79906e-008, canTranslate 0, canRotate 1.
+                The LEFT_THIGH bone's connected to the LEFT_HIP bone, length 0.20105, canTranslate 0, canRotate 1.
+                    The LEFT_CALF bone's connected to the LEFT_THIGH bone, length 1.19827, canTranslate 0, canRotate 1.
+                        The LEFT_FOOT bone's connected to the LEFT_CALF bone, length 1.31378, canTranslate 0, canRotate 1.
+
+I believe the likes of you shall stand or fall with my poems --
+and that they are poems.
+
+suit # 0
+    name: archie-head-sleep
+    skin count 1
+        bone HEAD gets skin xskin-archie-head-sleep-HEAD-HEAD05.msh
+
+suit # 1
+    name: archie-head-mad
+    skin count 1
+        bone HEAD gets skin xskin-archie-head-mad-HEAD-HEAD04.msh
+
+suit # 2
+    name: archie-head-sad
+    skin count 1
+        bone HEAD gets skin xskin-archie-head-sad-HEAD-HEAD03.msh
+
+suit # 3
+    name: archie-head-happy
+    skin count 1
+        bone HEAD gets skin xskin-archie-head-happy-HEAD-HEAD02.msh
+
+suit # 4
+    name: archie-head-normal
+    skin count 1
+        bone HEAD gets skin xskin-archie-head-normal-HEAD-HEAD01.msh
+
+suit # 5
+    name: archie
+    skin count 15
+        bone ROOT gets skin xskin-archie-ROOT-PELVIS.msh
+        bone LEFT_THIGH gets skin xskin-archie-LEFT_THIGH-LEFT_THIGH.msh
+        bone LEFT_CALF gets skin xskin-archie-LEFT_CALF-LEFT_CALF.msh
+        bone LEFT_FOOT gets skin xskin-archie-LEFT_FOOT-LEFT_FOOT.msh
+        bone RIGHT_THIGH gets skin xskin-archie-RIGHT_THIGH-RIGHT_THIGH.msh
+        bone RIGHT_CALF gets skin xskin-archie-RIGHT_CALF-RIGHT_CALF.msh
+        bone RIGHT_FOOT gets skin xskin-archie-RIGHT_FOOT-RIGHT_FOOT.msh
+        bone TORSO gets skin xskin-archie-TORSO-TORSO.msh
+        bone LEFT_UPPERARM gets skin xskin-archie-LEFT_UPPERARM-LEFT_UPPERARM.msh
+        bone LEFT_LOWERARM gets skin xskin-archie-LEFT_LOWERARM-LEFT_LOWERARM.msh
+        bone LEFT_HAND gets skin xskin-archie-LEFT_HAND-LEFT_HAND.msh
+        bone RIGHT_UPPERARM gets skin xskin-archie-RIGHT_UPPERARM-RIGHT_UPPERARM.msh
+        bone RIGHT_LOWERARM gets skin xskin-archie-RIGHT_LOWERARM-RIGHT_LOWERARM.msh
+        bone RIGHT_HAND gets skin xskin-archie-RIGHT_HAND-RIGHT_HAND.msh
+        bone NECK gets skin xskin-archie-NECK-NECK.msh
+
+Man's, woman's, child's, youth's, wife's, husband's, mother's,
+father's, young man's, young woman's poems.
+
+skill # 0
+    name: archie
+    fileName xskill-archie
+    bytes: 348
+    duration: 33
+    distance: 0
+    isMoving: 0
+    isTurning: 0
+    motion count 21
+    motion # 0
+        bone: ROOT
+        frames: 1
+        duration: 33
+        hasTranslation: 1
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 1
+        bone: LEFT_HIP
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 2
+        bone: LEFT_THIGH
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 3
+        bone: LEFT_CALF
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 4
+        bone: LEFT_FOOT
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 5
+        bone: RIGHT_HIP
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 6
+        bone: RIGHT_THIGH
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 7
+        bone: RIGHT_CALF
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 8
+        bone: RIGHT_FOOT
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 9
+        bone: TORSO
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 10
+        bone: LEFT_SHOULDER
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 11
+        bone: LEFT_UPPERARM
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 12
+        bone: LEFT_LOWERARM
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 13
+        bone: LEFT_HAND
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 14
+        bone: RIGHT_SHOULDER
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 15
+        bone: RIGHT_UPPERARM
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 16
+        bone: RIGHT_LOWERARM
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 17
+        bone: RIGHT_HAND
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 18
+        bone: NECK
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 19
+        bone: HEAD
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+    motion # 20
+        bone: HAIR
+        frames: 1
+        duration: 33
+        hasTranslation: 0
+        hasRotation: 1
+        props size 0
+        timeprops size 0
+
+O I say, these are not the parts and poems of the Body only, but of the Soul,
+O I say now these are the Soul!
+
+- From 'I Sing the Body Electric', by Walt Whitman.

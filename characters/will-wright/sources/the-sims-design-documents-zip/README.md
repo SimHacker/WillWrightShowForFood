@@ -11,7 +11,19 @@
 | VM design (HN-linked) | https://donhopkins.com/home/TheSimsDesignDocuments/VMDesign.pdf |
 | Maxis Sim requirements doc | https://donhopkins.com/home/TheSimsDesignDocuments/MaxisSimRequirements… |
 
-Zip bundle: published on donhopkins.com (exact zip filename to confirm on mount). Includes **CTG (Core Tech Group) email archive** and inside discussion — historic, beans already spilled.
+Zip bundle: **URL confirmed** — <http://www.donhopkins.com/home/TheSimsDesignDocuments.zip>, posted by
+Don himself in a [Maxis Alumni thread on 6 Feb 2015](../../../eric-hedman/media/2015-02-06-jim-mackraz-shtick-thread.png):
+*"Here is a bunch of old Sims 1 design documents that I scanned nad curated and rendered as PDF
+files."* Includes **CTG (Core Tech Group) email archive** and inside discussion — historic, beans
+already spilled.
+
+**Codenames decoded.** The manifest's cryptic `TDSB.pdf`, `TDSBInfo.pdf`, `TDSEditToDo.pdf` and
+`TDRObjects.pdf` are explained by a document photographed from
+[Melissa Bachman-Wood's box](../../../melissa-bachman-wood/the-box.md#1-the-design-script--five-working-titles-on-one-page):
+**The Sims — Design Script**, whose title page reads *"A.K.A. PROJECT X · A.K.A. JEFFERSON · a.k.a.
+**T.D.S.— the Tactical Domestic Simulator** · a.k.a. **T.D.S.—the Total Dollhouse System** · a.k.a.
+What the Hell Is It?"* That Design Script itself is **not in this bundle** — Don holds a paper copy
+and has owed a scan since 2018.
 
 ## DON — REMINDER (Cursor session)
 
