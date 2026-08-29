@@ -28,6 +28,7 @@ Each shop is one template plus a generator plus a storefront in the
 | **Backdrop** | Switchable scene | Lineage: Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town. Bring the backdrop home and load your own scenes. |
 | **Statue** | Posed character | [Stat-U-Matic](stat-u-matic.md), already spec'd. |
 | **Tombstone** | Text and a soul | The Tombstone Generator, embodied in Death ([the reaping ceremony](sims1-soul-bridge.md)). |
+| **[QR panel](#qr-codes-the-return-path-out-of-the-game)** | A code and a destination | Links out of the game **that players can actually follow**. Any object can carry them. |
 
 The list is open by construction. Every object with a state you can
 switch is a shop waiting to open: TVs, paintings, fireplaces, fish
@@ -397,6 +398,147 @@ for tracks by tag or role, and the downloader maps their own library
 in. Every instance is personal; the format is the shareable artifact.
 Radio formats have been syndicated that way for a century, and it
 happens to be the only version of this that is rights-clean.
+
+## QR codes: the return path out of the game
+
+*Don, 2026-08-29. Provisional name pending: **SoulGlyph** for the
+platform-wide mechanism, **TMogCode** for the sims1 object that
+displays one. Rename is a one-line change; the design is independent
+of it.*
+
+**Objects that display QR codes with URLs in them.** Any number per
+object, chosen by circumstance. Shown in popup dialogs, and drawn in
+the world. And the twenty-five-year-old unmet need finally met:
+**object creators can put a link to their own site inside their
+object, and players can actually follow it.**
+
+### Why it works, and why it needed no permission
+
+Every other route out of the game requires the game to cooperate:
+clickable links, a browser control, network access, an API nobody
+shipped. This route needs none of it, because the channel is not the
+game at all -- it is **the player's phone looking at the screen**.
+
+Mechanically it is nothing: a QR code is a static bitmap, and the
+generator bakes it at authoring time. No engine change, no runtime
+cost, no network in the game, nothing to patch. The rendering
+pipeline that already draws sprites draws this one. A 2000-era engine
+gets a working hyperlink because the link travels **out of band**,
+through a camera, on hardware nobody had when the game shipped.
+
+This also fills the one real hole in the architecture. The tools are
+networked, the game is not, and content flows in by
+[baking into saves](#simradio-with-the-network-moved) -- but nothing
+flowed *out*. Now the return path exists, and it needs no permission
+from anybody.
+
+### Three surfaces, in order of reliability
+
+1. **The popup dialog.** Biggest, flattest, most stable, and it stops
+   the world while it is open. This is the one that always scans, so
+   this is the default. (Verify what the dialog primitive accepts for
+   its picture slot -- if it is limited to the object's own thumbnail,
+   see 2.)
+2. **The catalog thumbnail.** If the dialog picture is the object's
+   icon, then **make the icon the code**. Sneaky bonus: thumbnails
+   also show in buy mode, so the object advertises its own source
+   from the catalog page.
+3. **In-world, as a panel.** The spectacle version: a code standing
+   in the room. Since object sprites are pre-rendered per rotation
+   and zoom anyway, draw the code **flat and screen-aligned in all
+   four rotations** rather than perspective-projected onto a surface.
+   It reads as a floating panel, which is diegetically fine -- it is
+   obviously a magic sign -- and flat beats skewed for scanning at
+   this resolution.
+
+### Making them actually scannable
+
+The constraints are geometric and they are not severe:
+
+- **Module budget.** Version 1 (21x21 modules) carries about 25
+  alphanumeric characters, version 2 (25x25) about 47, version 3
+  (29x29) about 77. Short URLs stay small. Numeric-only payloads are
+  denser still, so a short domain plus a numeric id is the cheapest
+  possible code.
+- **Pixels per module.** Phones want roughly 3 screen pixels per
+  module off a monitor. A version-3 code at 3 pixels plus its quiet
+  zone lands near 110 pixels square -- comfortable in a dialog, fine
+  in-world at the closest zoom, hopeless at the farthest. So zoom
+  level is part of the design, not a bug.
+- **The quiet zone is load-bearing.** Four modules of light border,
+  or scanners fail. Which means occlusion at the *edges* breaks a
+  code as thoroughly as occlusion in the middle: pad generously.
+- **"Flashing" needs to be slow.** A phone wants about a second of
+  steady frame. Cycling codes is fine; strobing them is not.
+- **Test-scan it in the preview.** The
+  [preview runtime](#the-preview-runtime-it-can-say-what-it-would-have-done)
+  can decode its own render at each target zoom and report which ones
+  scan. A dry run that catches an unscannable code before publishing
+  is exactly the test-harness dividend.
+
+### Occlusion, honestly
+
+High z helps and will not save you: Sims 1 composites per-pixel
+against a z-buffer, so a tall enough neighbor still wins. Wall
+paintings sit higher than most traffic and fare better than floor
+tiles. The dialog is the guaranteed-clear surface, which is why it is
+the default.
+
+And your instinct is right that this is not really a problem: **"get
+out of the way, I am trying to open a QR code"** is a perfect Sims
+sentence. The failure mode is a joke about the game's own rules,
+which is the kind of failure mode to keep.
+
+### Bake an id, not a destination
+
+The URL in the code should be a **stable short id that we resolve**,
+not a final destination. Baked bitmaps are forever; a code minted
+today must still land somewhere sane years from now, after sites move
+and shops rename. Resolve server-side and the destination stays
+editable, dead links degrade into an explanation instead of a 404,
+and the same code can carry per-instance identity: which template,
+which instance, whose object.
+
+That last part closes the loop with something already designed. A
+scan lands on **the exact instance page in the
+[template instance browser](portals-and-modules.md)** -- see it,
+inspect it, install it. Every object becomes its own distribution
+vector.
+
+### What this unlocks
+
+- **Credit that survives distribution.** The creator's link rides
+  inside the object, through every repost, forever.
+- **Screenshots and video carry live links.** A QR code survives
+  being photographed, streamed, clipped, and re-encoded. Somebody
+  else's let's-play or TikTok of your object is a **working link** to
+  it. That is the viral mechanism the shareable content class was
+  missing.
+- **Scan a tombstone, meet the soul.** The
+  [reaping ceremony](sims1-soul-bridge.md) gets a physical gesture:
+  point your phone at a grave, arrive at the soul's page and the exit
+  tally.
+- **Conditional codes.** Different circumstances, different
+  destinations, chosen by the same conditions the
+  [ad editor](#moody-jukebox-the-flagship-of-the-ad-editor) already
+  evaluates. A sign that links somewhere else at night.
+
+### Bright lines, stated once
+
+Two, both consistent with policy already written down:
+
+- **No transaction destinations in shared objects.** EA's mods policy
+  forbids monetary-transaction features in mods
+  ([the analysis](membership-model.md)). A code that opens a checkout
+  is exactly the clean violation we refuse to hand anybody. Links to
+  a creator's site: fine. Links to a cart: never.
+- **Opaque links get inspected.** A QR code is unreadable to humans
+  by design, which makes it a phishing surface. So: the generator
+  always displays the decoded URL, published codes resolve through
+  our redirector, destinations are visible on the object's page
+  before anyone scans, and the redirector can revoke. This is normal
+  hygiene for hosting links, and worth building in from the start
+  rather than after the first incident.
 
 ## What the language is for: visual procedural rhetoric
 
