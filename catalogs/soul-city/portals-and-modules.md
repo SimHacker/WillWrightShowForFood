@@ -71,6 +71,13 @@ Candidate TMog modules for the sims1 portal:
 | Tray and save inspector | TMog Bridge save layer |
 | Graveyard manager | Tombstone Generator |
 | Catalog browser and favorites | SimFreaks Laszlo CMS, the Plaza |
+| [Stat-U-Matic](stat-u-matic.md) statue photo booth and scene poser | SimShow + the SimFreaks playset prototype; seed: VitaMoo viewer |
+
+Below the modules sits a shared **texture plugin registry**: generic
+generate/edit/apply texture plugins (material library, cellular
+automata generator, AI image generation and editing) that any module
+consumes -- Rug-O-Matic, WigFabrik, and Stat-U-Matic all pull from the
+same plugins. Spec: [stat-u-matic.md](stat-u-matic.md).
 
 Friend portals are cooperative, not extractive: Tiny Life modules with
 Ell, Proxi modules with Galium -- shared formats, credit, and where
