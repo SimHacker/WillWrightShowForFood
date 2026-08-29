@@ -284,6 +284,45 @@ radio_simulator:   # Don, 2026-08-29 -- the natural top-of-ladder project; why t
       library in. Every instance personal; the FORMAT is the shareable artifact. Radio formats have
       been syndicated this way for a century, and it is the only rights-clean version of this.
 
+about_slice:   # Don, 2026-08-29 -- inject metadata into OTHER PEOPLE'S objects at import time
+  trigger: "Importing user-created objects into a Downloads scope (guid-registry.yml)"
+  injection: "An About action as the FIRST slice, ALWAYS TOP, where the about box belongs"
+  the_question: "What the hell is this, where did it come from, and what can you tell me about it? -- asked about half of everyone's Downloads folder for 25 years"
+  why_it_is_different: "Everything else in this file is about objects WE generate. This reaches objects OTHER PEOPLE made -- most of the corpus and all of the history."
+  contents:
+    identity: "Ids, and the magic cookie that names the creator"
+    provenance: "Which archive or site, when scanned, the original download page, and THE ORIGINAL README VERBATIM when we have it (frequently the only documentation that ever existed)"
+    requirements_and_conflicts: "Which expansion it needs; what it collided with in your set and what remap we applied"
+    soulglyph: "Scan it, land on the object's registry page, read the long version, contribute to it"
+    illustrated_help: "Pages, paginated with Next buttons, user contributed and curated"
+  no_new_machinery: |
+    An About box is a title, a picture, text, and buttons -- RUNG 3, the same plugin a squawk box
+    uses to tell a joke. The archival apparatus and the fart button are built from the same part.
+  credit_restored_retroactively:
+    the_history: "Enormous amounts of 2000s custom content circulated repacked, rezipped, and stripped of its readme; creators lost attribution to the redistribution chain"
+    what_survived: "The magic cookie, usually -- because it is INSIDE the object"
+    the_move: "The About slice GIVES CREDIT BACK to people never credited by whoever passed their work along. Archival, not legal -- and it is what makes the registry worth trusting."
+    dead_sites: |
+      Creator URLs from 2002 mostly do not resolve. The resolve-an-id indirection lets our redirector
+      fall back to an Internet Archive snapshot instead of a 404: point your phone at a
+      fifteen-year-old object and arrive at its creator's site as it stood when the object was new.
+  when_we_know_nothing:   # this case matters MORE than the well-documented one
+    bad: "An About box that says 'unknown' is useless"
+    good: "One that says what it can INFER and HOW TO HELP turns every mystery object into an open question with a submit button"
+    example: "Creator cookie 0x4A2F, unregistered. Scanned from a 2004 archive mirror. Nobody has identified this yet. Do you know what it is?"
+    the_flywheel: |
+      THE ABOUT BOX IS THE CROWDSOURCING INTERFACE. Every unidentified object in every player's
+      Downloads folder becomes a prompt, in context, at the moment somebody is curious. The corpus
+      documents itself because the object asks. No cataloging campaign we could run would reach as
+      many people as their own game does.
+  reserved_position:
+    rule: "Always first, always top -- where the about box has lived in every interface since 1984"
+    muscle_memory_objection: "Does not really apply: Sims pie menus already vary slice count by object and state, so there is no fixed geometry to disturb. A reserved slot at a known angle beats angles that happen to be stable."
+    system_slice: "About is the first citizen of a SYSTEM SLICE -- our slot on somebody else's object. Family: repair a conflict, remap, export a clean copy, hand it to Death, report a problem."
+  inherited_rules:
+    never_modify_the_original: "Injection is part of the import transform that builds the Downloads set; originals untouched, unmodified copy always exportable (save-before-mutate discipline)"
+    removable: "Anyone who wants their menu back can have it"
+
 qr_codes:   # Don, 2026-08-29 -- "THIS OPENS UP THE UNIVERSE"
   name:   # DECIDED Don, 2026-08-29
     soulglyph: "The MECHANISM -- platform-level, because it works for any game (Soul family)"

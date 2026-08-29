@@ -80,6 +80,16 @@ virtualized_ids:   # the key move (Don, 2026-08-29)
     - "Registry identity never changes no matter how many local ids it wears — credit attaches to identity, not to a free number"
     - "Save-before-mutate, always, with operator consent — snapshot the whole closure, not just the touched file"
 
+about_slice_delivery:   # Don, 2026-08-29 -- the registry shows up IN THE GAME
+  problem: "A registry nobody reads is a filing cabinet"
+  mechanism: "The import transform that builds a Downloads set injects an About action into every object it imports -- first slice, always top"
+  contents: [identity, provenance, original readme verbatim, conflicts and the remap applied, scannable link to the registry page, illustrated user-contributed pages]
+  both_directions:
+    when_known: "The player finally gets an answer, and creators stripped of attribution by the old repack chain GET THEIR CREDIT BACK"
+    when_unknown: "The box says exactly that and ASKS -- every unidentified object in every player's game becomes a documentation prompt at the moment somebody is curious"
+  why_it_matters: "How a corpus this size gets cataloged: it asks for help from inside the game"
+  full_spec: object-shops.yml   # about_slice
+
 implementation:   # Don, 2026-08-29 — the honest mechanism
   hard_constraint: "We do NOT change how The Sims reads and writes files. Its file handling is fixed; we work with it."
   what_we_control: "Which directory trees occupy the paths the game reads: GameData, UserData, Downloads"

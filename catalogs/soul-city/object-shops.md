@@ -482,6 +482,105 @@ subscribe to the podcast on your phone.** In-game listening becomes
 real-world subscription, linking is always clean, and the podcaster
 gets a new listener out of somebody's dollhouse.
 
+## The About slice: wrapping our metadata around other people's objects
+
+*Don, 2026-08-29. When importing user-created objects into a
+[Downloads scope](guid-registry.md), inject an **About** action as the
+first slice, always top, where the about box belongs.*
+
+The question every player has asked about half the objects in their
+Downloads folder for twenty-five years: **what the hell is this,
+where did it come from, and what can you tell me about it?** We are
+building the database that answers it. This is how the answer gets
+delivered: in the game, on the object, one click away.
+
+Everything else here is about objects we generate. This is the move
+that reaches **objects other people made**, which is most of the
+corpus and all of the history.
+
+### What is in the box
+
+Straight out of the [registry](guid-registry.md), with the honest
+parts marked honest:
+
+- **Identity.** Ids, and the magic cookie that names the creator.
+- **Provenance.** Which archive or site it came from, when it was
+  scanned, the original download page, and **the original readme
+  verbatim** when we have it, since that is frequently the only
+  documentation that ever existed.
+- **Requirements and conflicts.** Which expansion it needs; what it
+  collided with in your set and what remap we applied.
+- **A [SoulGlyph](#qr-codes-the-return-path-out-of-the-game).** Scan
+  it, land on the object's registry page, read the long version,
+  contribute to it.
+- **Pages of illustrated help,** paginated with Next buttons, user
+  contributed and curated.
+
+That last bullet needs no new machinery, which is the pleasing part:
+an About box is a **title, a picture, text, and buttons** -- rung 3 of
+[the ladder](#the-plugin-ladder), the same plugin a squawk box uses
+to tell a joke. The archival apparatus and the fart button are built
+from the same part.
+
+### Credit, restored retroactively
+
+Worth saying plainly, because it is the best thing about this
+feature. Enormous amounts of 2000s custom content circulated
+repacked, rezipped, and stripped of its readme, so creators lost
+attribution to the redistribution chain. The magic cookie usually
+survived that, because it is inside the object.
+
+So the About slice **gives credit back** to people who were never
+credited by whoever passed their work along. Not a legal maneuver, an
+archival one, and it is the sort of thing that makes the registry
+worth trusting.
+
+Dead sites get the same treatment. Creator URLs from 2002 mostly do
+not resolve, and the [resolve-an-id](#bake-an-id-not-a-destination)
+indirection means our redirector can fall back to an Internet Archive
+snapshot instead of a 404. Point your phone at a fifteen-year-old
+object and arrive at its creator's site as it stood when the object
+was new.
+
+### When we know nothing, the box says so and asks
+
+The database will often have nothing, and that case matters more than
+the well-documented one. An About box that says "unknown" is useless;
+an About box that says **what it can infer and how to help** turns
+every mystery object into an open question with a submit button:
+
+> Creator cookie 0x4A2F, unregistered. Scanned from a 2004 archive
+> mirror. Nobody has identified this yet. Do you know what it is?
+
+**The About box is the crowdsourcing interface**, and that is the
+flywheel. Every unidentified object in every player's Downloads
+folder becomes a prompt, in context, at the exact moment somebody is
+curious. The corpus documents itself because the object asks. No
+cataloging campaign we could run would reach as many people as their
+own game does.
+
+### Reserved position, and the system slice it starts
+
+Always first, always top, because that is where the about box lives
+in every interface anyone has used since 1984. The muscle-memory
+objection does not really apply here: Sims pie menus already vary
+their slice count by object and state, so there is no fixed geometry
+to disturb, and a reserved slot at a known angle is worth more than
+angles that happen to be stable.
+
+About is the first citizen of a **system slice** -- our slot on
+somebody else's object -- and once it exists the family is obvious:
+repair a conflict, remap, export a clean copy, hand it to
+[Death](sims1-soul-bridge.md), report a problem.
+
+Two rules, both inherited:
+
+- **Never modify the original.** The injection is part of the import
+  transform that builds the Downloads set; originals stay untouched
+  and an unmodified copy is always exportable. Same discipline as
+  [save-before-mutate](guid-registry.md).
+- **Removable.** Anyone who wants their menu back can have it.
+
 ## QR codes: the return path out of the game
 
 *Don, 2026-08-29. Named: a **SoulGlyph** is the mechanism, which

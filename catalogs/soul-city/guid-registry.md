@@ -214,6 +214,25 @@ artifact (official catalog + cookie registrations + observed ids),
 the **remapper** as a shipping module, and **per-save
 virtualization** as the policy that makes arbitrary combination safe.
 
+## The registry shows up in the game: the About slice
+
+A registry nobody reads is a filing cabinet. So the import transform
+that builds a Downloads set also **injects an About action into every
+object it imports**, first slice, always top: identity, provenance,
+the original readme, conflicts and the remap we applied, a scannable
+link to the object's registry page, and illustrated pages of what
+anyone knows about it.
+
+It runs in both directions. When the registry knows the answer, the
+player finally gets one, and creators stripped of attribution by the
+old repack chain **get their credit back**. When the registry knows
+nothing, the box says exactly that and asks, which turns every
+unidentified object in every player's game into a documentation
+prompt at the moment somebody is curious. That is how a corpus this
+size gets cataloged: it asks for help from inside the game.
+
+Full spec: [object-shops.md](object-shops.md), "The About slice."
+
 ## How it is offered
 
 Local scans and remaps of your own folders are free, like every other
