@@ -24,6 +24,7 @@ Each shop is one template plus a generator plus a storefront in the
 | **Jukebox** / [Moody Jukebox](#moody-jukebox-the-flagship-of-the-ad-editor) | Music player | Your own tracks. The most requested thing in the game's history, and it was always just a file list. |
 | **WigOMatic** and the AnythingOMatic family | Accessory manager | Any accessory category: toggle on and off, reset, organize. Generalizes past wigs to whatever the shop stocks ([the appliance pattern](portals-and-modules.md)). |
 | **RugOMatic picture rig** | One rug, many images | Switch between them from the pie menu. **Import a Family Album into a rug** and walk on your own story. A picture rig you can stand on. |
+| **Video quote rig** (rug, painting, TV, projector screen) | Selected frames plus their lines | Frames pulled from your own video, chosen by hand or by transcript, each carrying a scannable citation back to the source at its timecode. Same rig as RugOMatic with a frame picker in front. Rules: [rendering-and-rights.md](rendering-and-rights.md). |
 | **[Squawk Box](#the-squawk-box-your-voice-your-pet-your-phone)** (trainable parrot, sound board) | Recorded sounds plus dialogs | Your own microphone. Your cat. Your phone photos. The shareable one. |
 | **Backdrop** | Switchable scene | Lineage: Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town. Bring the backdrop home and load your own scenes. |
 | **Statue** | Posed character | [Stat-U-Matic](stat-u-matic.md), already spec'd. |

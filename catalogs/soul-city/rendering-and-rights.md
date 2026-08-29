@@ -94,6 +94,182 @@ The practical difference is small and cheap to honor: render Maxis
 object previews locally, cache them locally, and let the server hold
 the metadata plus whatever the player composed on purpose.
 
+## Audio sources: what we fetch, and the one thing we will not build
+
+*Asked directly (Don, 2026-08-29): could we point at a YouTube video,
+extract its audio **locally**, and put it in a radio object, as long
+as we never share the audio and only share instructions and data to
+recreate it in each user's own browser?*
+
+**The architecture is right and the source is wrong.** Recipes
+instead of files is exactly the correct model, and we should build it.
+But we should not build the YouTube fetcher, and the reason is not
+squeamishness about copyright, it is two specific precedents plus one
+strategic asymmetry.
+
+### The precedent that decides it
+
+Germany has appellate law directly on this, and it reaches **hosts**,
+not just authors:
+
+- **LG Hamburg, 31 March 2023** (310 O 316/21): YouTube's rolling
+  cipher **is** an effective technological measure under section 95a
+  UrhG, because it stops a substantial share of average users from
+  downloading. Uberspace, merely the *hosting provider* for
+  youtube-dl.org, was ordered to stop hosting the site.
+- **OLG Hamburg, 21 November 2024** (5 U 54/23): appeal rejected,
+  ruling confirmed. Users of such tools act in **bad faith**; the
+  host is liable as a participant and in principle owes damages. The
+  court held it irrelevant that the tool has legitimate uses
+  (journalists and activists archiving newsworthy video) if it is in
+  fact used primarily to circumvent. It also noted that Uberspace
+  **accepted payments** in connection with the project.
+
+Read that last detail against our own plan: a paid membership site
+distributing a browser module that performs the extraction is in a
+*worse* position than the hoster who already lost, twice.
+
+The US picture is contested rather than settled, and contested is not
+the same as safe. RIAA sent GitHub a **DMCA 1201** notice against
+youtube-dl in October 2020, attaching the Hamburg decision. EFF
+answered that reading the signature JavaScript the way any browser
+does is not circumvention (citing *Digital Drilling Data Systems v.
+Petrolink*, 5th Cir. 2020), and **GitHub reinstated the repository**
+in November 2020 and reformed its 1201 review process. That is a
+platform declining a takedown, not a court ruling. Meanwhile
+shipping a ripper inside a paid product invites the inducement theory
+from *MGM v. Grokster* -- and YouTube's own terms prohibit
+downloading by non-YouTube means regardless of how the copyright
+question comes out.
+
+### The strategic asymmetry
+
+Our whole posture is that we are the clean ones: everything free,
+everyone credited, nobody's rights quietly assigned away
+([the EA analysis](membership-model.md)). That posture is worth real
+money and real goodwill, and it survives a hostile reading. "Paid
+service ships a YouTube ripper" is a far easier story to tell against
+us than any question about mod policy, and it would be told by people
+who have never cared about The Sims. Wrong risk, wrong decade, no
+upside.
+
+### What we build instead, which is better anyway
+
+**1. Bring your own file.** Drag in audio you already have. We do not
+fetch it, we do not ask where it came from, we do not scan or
+fingerprint-report it. Whatever anybody runs on their own machine is
+their business and happens outside our tool. That is not a loophole,
+it is the same local-first guarantee as everywhere else: local means
+local.
+
+**2. Recipes resolve against your own library, not against a
+download.** This is the fix that keeps your idea intact. Share the
+**envelope and timing data** keyed to a track *identity* -- duration
+plus an acoustic fingerprint -- and the recipient's tool matches it
+against the copy they already have. A shared moody station then does
+nothing at all for somebody who does not own the track, and never
+instructs anyone to fetch anything. Sharing annotation that
+references a work you do not ship is thoroughly established practice:
+LRC lyric files, karaoke and rhythm-game charts, MusicBrainz and
+AcoustID, CDDB before them. It is also strictly more useful than a
+URL recipe, because it works no matter where a legitimate copy came
+from.
+
+**3. Fetch only enclosure-style URLs.** The crisp distinction, and
+the reason [podcast stations](object-shops.md) are fine while YouTube
+is not:
+
+> **Is the URL a published file, or a page?** RSS and OPML
+> enclosures are files their publishers put up *to be downloaded*,
+> and fetching them gives the publisher the download, the stats, and
+> the subscriber. A watch page is not that.
+
+So the fetcher's allowlist is sources that publish files: podcast
+feeds, the Internet Archive, Free Music Archive, ccMixter, Jamendo,
+Wikimedia Commons, the YouTube Audio Library's own downloads, plus
+public-domain recordings.
+
+**4. Do not be fooled by CC-BY on YouTube.** YouTube's Creative
+Commons license option really does grant reuse rights, and it fixes
+the *copyright* question -- but it does not touch the *access* and
+*terms* question, which is where both rulings above live. Permission
+from the uploader is not permission to bypass the platform. Get CC
+material from places that offer a download button.
+
+Not legal advice, and counsel reviews this page before launch. But
+the answer to the question as asked is: **local extraction is
+plausibly fine for the person doing it and unwise for us to build,
+and the recipe model does not need it.**
+
+### Frames: quotation is the strongest posture we have
+
+*Don, 2026-08-29: grab frames from the video and render them on a TV
+set, a movie screen, or a rug -- not every frame, some chosen by the
+user or picked automatically, possibly using the transcript.*
+
+Same source rule, better rights posture, and the transcript turns it
+into something more interesting than a screenshot.
+
+**Stills are the favorable end of every factor that matters.** A
+frame is a small fraction of an audiovisual work, screenshot practice
+is universal, and criticism and commentary are exactly what
+quotation is for. That is not a licence to host frames from other
+people's films on our servers, but it is a much better place to stand
+than a full song, and it points at the version worth building:
+
+> **A frame plus its transcript line is a block quote of a video.**
+> Fair-use sized, with the citation attached.
+
+That vocabulary is already ours: a
+[realm is a block quote of another game](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll/realms)
+-- procedural rhetorical excerpt, fog as the ellipsis, canon fields
+as the citation, seven rooms rather than the Great Underground
+Empire. A quoted frame is the same move at a smaller scale.
+
+**So the object cites its source, and the citation is scannable.**
+Put a [SoulGlyph](object-shops.md) on the rug or the TV pointing at
+the original **at that timecode** (deep-linking into a video by time
+is a supported, ordinary thing). Three things follow at once: the
+quotation carries attribution, traffic goes *to* the source rather
+than away from it, and somebody scanning a TV in a Sims house ends up
+watching the actual clip. Attribution and virality turn out to be the
+same gesture.
+
+**The recipe is a cue sheet.** Shared artifacts carry
+**timecodes, not pixels**: "frames at 12:31 and 47:02 of this
+source." Tiny, obviously not a copy, resolves against the file the
+recipient already has, and identical in spirit to the audio envelope
+rule above. Frames themselves stay local unless the creator owns them
+-- your own footage, your own phone video, public-domain and
+CC-licensed material with a download button.
+
+**The transcript is what makes automatic selection good.** Caption
+timings are semantic anchors, so instead of sampling every N seconds
+the tool can grab the frame where a memorable line lands, and put the
+line in the object's popup as the caption. Practical selection stack,
+cheapest first: caption boundaries for candidates, frame differencing
+for scene changes, a sharpness and brightness filter to throw out
+blurry and black frames, and optionally a language model reading the
+transcript to pick the lines worth quoting. Every step runs on the
+client against a local file.
+
+**What it looks like in the game.** No new object is required: the
+[RugOMatic picture rig](object-shops.md) already holds many images
+with pie-menu switching, so a video quote rig is that with a
+frame-picker in front of it, pointed at a rug, a painting, a TV, or a
+projector screen. Aspect ratio needs a crop-or-letterbox choice, and
+the generator has to quantize and downscale to what the game's sprite
+pipeline accepts, which reads as period-correct rather than as
+degradation.
+
+And frames can advance on the
+[moody timeline](object-shops.md): dead-reckon the audio position and
+swap the sprite when the next cue arrives. At roughly a frame per
+second with synced audio you get something between a comic and a
+video, which is precisely the 2000-era slideshow aesthetic and is
+charming on purpose. Real video playback is not on the table; this is
+better than a stalled attempt at it.
+
 ## Rules
 
 1. **Push rendering to the client.** Always. The server never needs
@@ -112,6 +288,9 @@ the metadata plus whatever the player composed on purpose.
    call, credited.
 7. **Advanced rendering requires a verified install.** Not a
    punishment -- the thing that keeps the whole design clean.
+8. **Fetchers only for enclosure-style URLs** from sources that
+   publish files. Everything else is a recipe that resolves against
+   the user's own library: envelopes for audio, timecodes for frames.
 
 Not legal advice; counsel should read this page before launch. But
 the posture is defensible and the architecture costs us nothing,

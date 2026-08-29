@@ -77,6 +77,13 @@ shops:   # each = one template + a generator + a storefront; open list by constr
       the_argument: |
         A jukebox that plays your songs is nice. A jukebox that knows your Sim is miserable at 3am
         and plays the right song, unprompted, is the game writing a scene with you.
+  video_quote_rig:   # Don, 2026-08-29 -- frames on a TV, movie screen, or rug
+    container: "Selected frames plus their transcript lines (rug, painting, TV, projector screen)"
+    fill_with: "Frames from your own video, chosen by hand or picked via transcript, each carrying a scannable citation back to the source at its timecode"
+    no_new_object: "RugOMatic plus a frame picker in front"
+    frame: "A frame plus its transcript line is a BLOCK QUOTE of a video -- fair-use sized, citation attached"
+    rules: rendering-and-rights.yml   # media_sources.frames -- cue sheets not pixels; enclosure-only fetching
+
   squawk_box:   # Don, 2026-08-29 -- trainable parrot / sound board; THE SHAREABLE ONE
     container: "Recorded sounds plus dialogs"
     fill_with: "Your own microphone. Your cat meowing. Your dog farting. Your kid's laugh. A photo from your pocket."

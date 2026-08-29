@@ -58,6 +58,63 @@ gray_area_resolved:   # Don named it precisely; where each case falls
   complete_asset_fidelity_extraction: "DON'T — functions as an asset repository, substitutes for the install, fails the test"
   cost_of_honoring: "Small: render Maxis previews locally, cache locally, server holds metadata + deliberate compositions"
 
+media_sources:   # Don, 2026-08-29 -- "could we point at YouTube, extract audio LOCALLY, share only instructions?"
+  verdict: "THE ARCHITECTURE IS RIGHT AND THE SOURCE IS WRONG. Build the recipe model; do NOT build the YouTube fetcher."
+  precedent_that_decides_it:
+    lg_hamburg_2023: "31 March 2023, 310 O 316/21 -- YouTube's rolling cipher IS an effective technological measure under sec. 95a UrhG (stops a substantial share of average users). Uberspace, merely the HOSTING PROVIDER for youtube-dl.org, ordered to stop hosting."
+    olg_hamburg_2024: |
+      21 November 2024, 5 U 54/23 -- appeal rejected, ruling confirmed. Users act in BAD FAITH; the
+      host is liable as participant and in principle owes damages. Legitimate uses (journalists,
+      activists archiving) held irrelevant if the tool is in fact used primarily to circumvent. The
+      court noted Uberspace ACCEPTED PAYMENTS in connection with the project.
+    read_against_our_plan: "A paid membership site distributing a browser module that performs the extraction is in a WORSE position than the hoster who already lost, twice."
+    us_picture: |
+      Contested, not settled -- and contested is not safe. RIAA sent GitHub a DMCA 1201 notice against
+      youtube-dl in Oct 2020 attaching the Hamburg decision; EFF answered that reading the signature
+      JavaScript as any browser does is not circumvention (Digital Drilling Data Systems v. Petrolink,
+      5th Cir. 2020); GitHub REINSTATED the repo in Nov 2020 and reformed its 1201 review. That is a
+      platform declining a takedown, not a court ruling. Shipping a ripper inside a paid product also
+      invites the MGM v. Grokster inducement theory, and YouTube's terms prohibit non-YouTube
+      downloading regardless of how copyright comes out.
+  strategic_asymmetry: |
+    Our posture is that we are the clean ones -- everything free, everyone credited, nobody's rights
+    quietly assigned away. "Paid service ships a YouTube ripper" is a far easier story to tell against
+    us than any mod-policy question, told by people who never cared about The Sims. Wrong risk, wrong
+    decade, no upside.
+  what_we_build_instead:
+    byo_file: "Drag in audio you already have. We do not fetch, do not ask where it came from, do not scan or fingerprint-report. What anybody runs on their own machine happens outside our tool -- local means local."
+    recipes_resolve_against_your_library: |
+      THE FIX THAT KEEPS THE IDEA INTACT. Share envelope/timing data keyed to a track IDENTITY
+      (duration + acoustic fingerprint); the recipient's tool matches their own copy. A shared station
+      does nothing for someone who lacks the track and never instructs a fetch. Established practice:
+      LRC lyric files, karaoke/rhythm-game charts, MusicBrainz/AcoustID, CDDB. Strictly more useful
+      than a URL recipe -- works wherever a legitimate copy came from.
+    fetch_only_enclosure_urls:
+      test: "IS THE URL A PUBLISHED FILE, OR A PAGE? RSS/OPML enclosures are files published TO BE DOWNLOADED -- fetching gives the publisher the download, the stats, the subscriber. A watch page is not that."
+      allowlist: [podcast feeds, Internet Archive, Free Music Archive, ccMixter, Jamendo, Wikimedia Commons, YouTube Audio Library downloads, public-domain recordings]
+    cc_by_on_youtube_is_a_trap: "YouTube's CC option really grants reuse and fixes the COPYRIGHT question -- but not the ACCESS/TERMS question, which is where both rulings live. Permission from the uploader is not permission to bypass the platform. Get CC material from places with a download button."
+  frames:   # Don, 2026-08-29 -- frames on a TV, movie screen, or rug; user or auto selected; use the transcript
+    posture: "Same source rule, BETTER rights posture: a still is a small fraction of an audiovisual work, screenshot practice is universal, and criticism/commentary is what quotation is for"
+    the_frame: "A FRAME PLUS ITS TRANSCRIPT LINE IS A BLOCK QUOTE OF A VIDEO -- fair-use sized, citation attached"
+    vocabulary_already_ours: https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll/realms   # a realm is a block quote of another game
+    citation_is_scannable: |
+      A SoulGlyph on the rug or TV pointing at the original AT THAT TIMECODE. Three things at once:
+      the quotation carries attribution, traffic goes TO the source, and somebody scanning a TV in a
+      Sims house ends up watching the clip. Attribution and virality are the same gesture.
+    recipe_is_a_cue_sheet: "Shared artifacts carry TIMECODES, NOT PIXELS. Frames stay local unless the creator owns them (own footage, phone video, PD/CC with a download button)."
+    transcript_makes_auto_selection_good:
+      why: "Caption timings are semantic anchors -- grab the frame where a memorable line lands and put the line in the popup as its caption"
+      stack_cheapest_first: [caption boundaries for candidates, frame differencing for scene changes, sharpness/brightness filter to drop blurry and black frames, optional LLM reading the transcript to pick quotable lines]
+      where_it_runs: "Every step client-side against a local file"
+    in_game:
+      no_new_object: "RugOMatic already holds many images with pie-menu switching -- a video quote rig is that plus a frame picker, pointed at a rug, painting, TV, or projector screen"
+      details: "Crop-or-letterbox choice for aspect ratio; quantize and downscale to the sprite pipeline, which reads as period-correct rather than degraded"
+      moody_timeline: |
+        Frames can advance on the timeline: dead-reckon audio position, swap the sprite at the next
+        cue. ~1 frame/second with synced audio lands between a comic and a video -- the 2000-era
+        slideshow aesthetic, charming on purpose. Real video playback is not on the table; this beats
+        a stalled attempt at it.
+
 rules:
   1: "Push rendering to the client, always — the server never needs game art to do its job"
   2: "Upload only on explicit per-artifact consent, never ambiently (paid tiers gate FEATURES, never widen uploads)"
@@ -66,6 +123,7 @@ rules:
   5: "Never host official object art as a standalone download, at any fidelity, for any tier"
   6: "Creators own their own art; UGC publishing is the creator's call, credited"
   7: "Advanced rendering requires a verified install — the thing that keeps the design clean"
+  8: "Fetchers only for enclosure-style URLs from sources that publish files -- everything else is a recipe resolving against the user's own library"
 
 see_also:
   - portals-and-modules.md
