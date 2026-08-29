@@ -81,6 +81,19 @@ what_falls_out_free:   # most hard problems elsewhere stop being problems
     cataloging flywheel needed.
   undo_is_free: "The original never changed"
 
+sealed_containers:   # Don, 2026-08-29 -- "leave downloaded objects in their original containers ... point to them as sub-objects-in-nested-containers"
+  rule: "The cache holds THE ARCHIVE EXACTLY AS IT ARRIVED, hashed whole, never unpacked in place"
+  addressing: "sha256:9f86d0...!zip:BedroomSet.zip/Objects/set.far!far:bed.iff   # JAR convention for nested containers"
+  what_unpacking_loses:
+    container_is_evidence: "Two objects in the same zip are the same download -- strongest co-residence signal for clustering (guid-registry.yml)"
+    readme_survives: "THE README IS THE ATTRIBUTION: creator names, set names, terms, object lists sit in text files that unpacking scatters and re-zipping loses. Sealed containers keep the primary source for the metadata we most want."
+    structure_survives: "Directory layout, timestamps, casing -- all of which date and locate content"
+    deterministic_reextraction: "One canonical input rather than a folder somebody has since tidied"
+  hazard:
+    problem: "ARCHIVE ENTRY NAMES ARE NOT STABLE KEYS -- old zips carry code-page filenames, duplicate entries, and paths a naive extractor would follow out of the directory"
+    fix: "Address entries by INDEX PLUS CONTENT HASH with the name as a hint (same soft-key discipline as reference descriptors); store raw name bytes beside a normalized form, discard neither"
+  built_object_carries_forward: "Which archive, which entry, which hash, what the readme said, what the registry knows -- what makes a mystery object tractable to a script or an agent, and what the About box reads from"
+
 content_addressing:   # an unexpected dividend
   scheme: "Address the cache by HASH OF THE ORIGINAL FILE"
   dividend: "REPACK DETECTION BECOMES A SIDE EFFECT rather than a project"

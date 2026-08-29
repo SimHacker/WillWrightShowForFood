@@ -147,6 +147,49 @@ elsewhere in this design stop being problems.
   cataloging flywheel needed.
 - **Undo is free**, because the original never changed.
 
+## Containers stay sealed: address sub-objects by path into the archive
+
+*Don, 2026-08-29: leave downloaded objects in their original
+containers, zip or FAR or IFF or whatever, and point at sub-objects as
+nested-container paths. Then inject into the built version everything
+we know about where it came from, which helps scripts and LLMs score
+guid resolutions.*
+
+The cache holds **the archive exactly as it arrived**, hashed whole,
+never unpacked in place. Objects inside it are named by a path through
+the nesting, borrowing the JAR convention:
+
+```
+sha256:9f86d0...!zip:BedroomSet.zip/Objects/set.far!far:bed.iff
+```
+
+Four things this buys that unpacking loses:
+
+- **The container is evidence.** Two objects in the same zip are the
+  same download, which is the strongest co-residence signal available
+  to [clustering](guid-registry.md).
+- **The readme survives, and the readme is the attribution.** Creator
+  names, set names, terms, and object lists are sitting in text files
+  that unpacking scatters and re-zipping loses. Sealed containers keep
+  the primary source for exactly the metadata we most want.
+- **Directory structure, timestamps, and casing survive**, all of
+  which date and locate content.
+- **Re-extraction is deterministic**, because there is one canonical
+  input rather than a folder somebody has since tidied.
+
+One hazard worth pinning down early: **archive entry names are not
+stable keys.** Old zips carry code-page filenames, duplicate entries,
+and paths that a naive extractor would follow out of the directory.
+So address entries by **index plus content hash, with the name as a
+hint** -- the same soft-key discipline as the
+[reference descriptors](guid-registry.md) -- and store the raw name
+bytes next to a normalized form rather than throwing either away.
+
+The built object then carries the provenance forward: which archive,
+which entry, which hash, what the readme said, what the registry
+knows. That is what makes a mystery object tractable to a script or an
+agent later, and it is also what the About box reads from.
+
 ## Content addressing pays an unexpected dividend
 
 Address the cache by **hash of the original file**, and repack

@@ -297,6 +297,85 @@ cookie* -- and promoted to fact only by a human confirming it. An
 inference never overwrites a claim and never quietly becomes the
 registry's answer.
 
+### Resolution is a scored, ranked list
+
+*Don, 2026-08-29: we are scoring possible guid-to-object mappings and
+putting the best at the top so it is easy to select by default. Many
+possible ways to score, to be decided.*
+
+So make the ranked list **the interface**, not an implementation
+detail. Every id query returns candidates in order, each with the
+evidence that ranked it, the best one preselected, and the
+alternatives one click away. Scripts get the same list as the UI, and
+so does an agent.
+
+Three requirements that are easy to get wrong and expensive to
+retrofit:
+
+**Scores must be explainable and re-runnable.** Store the feature
+vector and the scorer version alongside every decision. When a better
+scorer arrives we can re-rank the whole corpus and see exactly which
+decisions changed, which is the difference between improving the
+system and reshuffling it.
+
+**Resolutions are pinned in the manifest, like a lockfile.** A better
+scorer must never silently change somebody's build. The chosen mapping
+goes in the lock; re-resolving is an explicit action with a diff.
+[Determinism](content-pipeline.md) requires this.
+
+**A pick is always recorded as a pick.** Preselecting the top
+candidate is a convenience, not a claim, and it stays labeled as an
+inference until a human confirms it.
+
+Features to draw on, in rough order of how much they should move the
+needle: exact content hash, our own stable id, cookie co-occurrence,
+co-residence in the same original archive, id adjacency, name-string
+agreement, reference-descriptor agreement (below), era coherence,
+expansion requirements, and breadth of attestation across the corpus.
+Weighting is genuinely to be decided, and should be fit against
+cases we have confirmed rather than guessed at.
+
+### The reference table: make every link carry several keys
+
+*Don: our metadata includes a table of guid references with metadata
+that helps resolve them if they got scrambled, like the object title
+or our own unique id. Make the links stronger.*
+
+Right, and this is the move that makes scrambled content recoverable.
+Every outgoing reference in an object gets a **descriptor** rather
+than a bare number:
+
+| Field | Why it is there |
+|-------|-----------------|
+| Numeric id as found | The original link, whatever state it is in |
+| Site | Where in the file it was found: which field, which behavior, which operand |
+| Role | What the link means: multi-tile part, created object, related object |
+| Target name string | Survives renumbering and is often human-recognizable |
+| Our stable id | The strong key, once known |
+| Target content hash | The strongest key, once known |
+| Confidence and source | How we came to believe it |
+
+Resolution is then a cascade: content hash, then stable id, then id
+plus cookie, then name plus role plus closure membership, then the
+bare number. **A link with five keys survives losing four of them.**
+
+The precedent is the old Alias Manager, which stored file id, name,
+path, volume, and dates, and tried them in order precisely because
+any single locator eventually goes stale. Package managers do the same
+thing with name, version, and integrity hash.
+
+**The reference table also becomes the test suite for renumbering,
+which may be its biggest payoff.** After a build rewrites ids, re-run
+every descriptor against the new set: each edge must resolve to the
+same target it did before. If any edge lands somewhere else or
+nowhere, fail the build. Combined with the rule that unmapped
+references are a
+[refusal rather than a guess](content-pipeline.md), that turns
+renumbering from an operation we hope is right into one we can check.
+
+Keep the inverse index too. "Who points at me" is what tells you the
+closure boundary before you move anything.
+
 ### Two better payoffs than disambiguation
 
 The clustering is worth building even if no id were ever ambiguous.

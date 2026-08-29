@@ -182,6 +182,44 @@ save_scope:   # the rule that makes the model sound
       instance_known: "Glyph points straight at the specific object -- and the page still says which others share its id, because that is a fact worth knowing"
       property: "An id never produces a 404, only a shorter or longer list"
       why_normal: "Collisions are THE POINT of this registry, not the degenerate case"
+    scored_ranked_list:   # Don, 2026-08-29 -- "scoring possible guid=>object mappings, best at the top, ez to select by default"
+      make_the_list_the_interface: "Every id query returns candidates IN ORDER, each with the evidence that ranked it, best preselected, alternatives one click away. Scripts and agents get the same list as the UI."
+      requirements:
+        explainable_and_rerunnable: "Store the FEATURE VECTOR and SCORER VERSION with every decision, so a better scorer can re-rank the corpus and show exactly which decisions changed -- improving the system rather than reshuffling it"
+        pinned_like_a_lockfile: "The chosen mapping goes in the manifest. A better scorer must never silently change somebody's build; re-resolving is explicit, with a diff. Determinism requires this (content-pipeline.yml)."
+        a_pick_is_recorded_as_a_pick: "Preselecting the top candidate is a convenience, not a claim -- stays labeled as inference until a human confirms"
+      features_rough_order:   # weighting genuinely TBD; fit against confirmed cases, do not guess
+        - "Exact content hash"
+        - "Our own stable id"
+        - "Cookie co-occurrence"
+        - "Co-residence in the same original archive"
+        - "Id adjacency"
+        - "Name-string agreement"
+        - "Reference-descriptor agreement"
+        - "Era coherence"
+        - "Expansion requirements"
+        - "Breadth of attestation across the corpus"
+
+    reference_table:   # Don, 2026-08-29 -- "a table of guid references with metadata ... make the links stronger!"
+      idea: "Every outgoing reference gets a DESCRIPTOR rather than a bare number"
+      descriptor_fields:
+        numeric_id_as_found: "The original link, whatever state it is in"
+        site: "Where in the file it was found -- which field, which behavior, which operand"
+        role: "What the link means -- multi-tile part, created object, related object"
+        target_name_string: "Survives renumbering, often human-recognizable"
+        our_stable_id: "The strong key, once known"
+        target_content_hash: "The strongest key, once known"
+        confidence_and_source: "How we came to believe it"
+      resolution_cascade: ["content hash", "stable id", "id plus cookie", "name plus role plus closure membership", "the bare number"]
+      slogan: "A LINK WITH FIVE KEYS SURVIVES LOSING FOUR OF THEM"
+      precedent: "The old Alias Manager stored file id, name, path, volume, dates and tried them in order, because any single locator goes stale. Package managers do the same with name, version, integrity hash."
+      biggest_payoff: |
+        THE REFERENCE TABLE IS THE TEST SUITE FOR RENUMBERING. After a build rewrites ids, re-run every
+        descriptor against the new set: each edge must resolve to the same target it did before. If any
+        edge lands elsewhere or nowhere, FAIL THE BUILD. With the rule that unmapped references are a
+        refusal rather than a guess, renumbering goes from hoped-right to checkable.
+      inverse_index: "Keep it -- 'who points at me' is what tells you the closure boundary before you move anything"
+
     clustering:   # Don, 2026-08-29 -- "look at all object ids in the house ... it's a clue which alternative might be right"
       why_it_works: "CONTENT ARRIVES CORRELATED. Nobody downloads one object -- they download a set, from a site, from a creator, in an afternoon. An ambiguous id among thirty unambiguous neighbors is not really ambiguous."
       signals:   # each weak alone; combine them
