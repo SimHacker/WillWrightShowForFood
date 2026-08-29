@@ -1,4 +1,4 @@
-# The shops + the action editor — objects as UGC containers (Don, 2026-08-29)
+# The shops + the action editor -- objects as UGC containers (Don, 2026-08-29)
 # Prose spec: object-shops.md. The realization: a startling number of Sims objects are already
 # containers with a switch. Ship them empty, let players fill them.
 
@@ -13,11 +13,11 @@ meta:
 shops:   # each = one template + a generator + a storefront; open list by construction
   jukebox:
     container: "Music player"
-    fill_with: "Your own tracks — the most requested thing in the game's history, and it was always just a file list"
-    moody_jukebox:   # Don, 2026-08-29 — the flagship demo of the ad editor
+    fill_with: "Your own tracks -- the most requested thing in the game's history, and it was always just a file list"
+    moody_jukebox:   # Don, 2026-08-29 -- the flagship demo of the ad editor
       canonical_design: https://github.com/SimHacker/moollm/blob/main/designs/MOODY.md   # "A moody jukebox for The Sims 1, in SimAntics"
       lineage: |
-        NOT a new design — the implementation of one. Proposed to the Maxis team as SimRadio on
+        NOT a new design -- the implementation of one. Proposed to the Maxis team as SimRadio on
         1999-02-18 with the moody track as its emotional payload; MOODY.md is the canonical spec.
         This entry covers the shop and its authoring tool.
       show_seed: ../../repo-shows/moody-midi-for-mood/moody-midi-for-mood.yml
@@ -30,40 +30,40 @@ shops:   # each = one template + a generator + a storefront; open list by constr
           - "Play when you are sad (mood down)"
           - "Any combination, plus time of day, who is home, what room"
         point: |
-          The object is not waiting to be clicked — it advertises to specific MOODS. The Sim
+          The object is not waiting to be clicked -- it advertises to specific MOODS. The Sim
           wanders over on their own because the right song was listening for the right moment.
       what_does_it_do_to_you:
-        what: "Moody consequences — action plugins pointed at motives"
+        what: "Moody consequences -- action plugins pointed at motives"
         examples: [mood_boost, energy_lift, comfort_bump, fun_spike, any_plugin]
       moody_timelines:
-        what: "Schedule effects along the track — chorus hits and mood jumps; bridge drops and the Sim slows"
+        what: "Schedule effects along the track -- chorus hits and mood jumps; bridge drops and the Sim slows"
         mechanism: "Dead reckoning audio time, assuming normal play speed (Don's own framing)"
         honest_constraint: |
           The game will not report the playhead, so the timeline is OPEN LOOP: note when the track
-          started, count forward, compute position. What moves the goalposts is GAME SPEED — audio
+          started, count forward, compute position. What moves the goalposts is GAME SPEED -- audio
           runs in real seconds while sim time can run 2x or 3x, so a timeline authored in audio
           time drifts against a fast-running game.
-        moody_terms: "(time, tag, heat) envelopes — the mood swing literally IS an envelope; conditions read the same parameter bus from the other end"
+        moody_terms: "(time, tag, heat) envelopes -- the mood swing literally IS an envelope; conditions read the same parameter bus from the other end"
         correction: |
-          GAME SPEED IS INVISIBLE FROM INSIDE SIMANTICS — ticks are the only clock, so all speeds
+          GAME SPEED IS INVISIBLE FROM INSIDE SIMANTICS -- ticks are the only clock, so all speeds
           feel identical from within and the object CANNOT notice a speed change. The drift is
           structural, not detectable in-object. (Corrects an earlier note that said otherwise.)
         mitigations:
           - "t=0 is anchored to the tick that issued the play call"
           - "Ticks convert to seconds by calibration (MOODY.md ships measured constants)"
-          - "Resync is free at every track boundary — the jukebox controls when songs start"
-          - "Quantize envelopes to coarse sections (intro, verse, chorus, drop) — dead reckoning never misses by a section"
+          - "Resync is free at every track boundary -- the jukebox controls when songs start"
+          - "Quantize envelopes to coarse sections (intro, verse, chorus, drop) -- dead reckoning never misses by a section"
           - "Emotional weather is forgiving in a way lip-sync is not"
           - "Web side has full save access and can calibrate; FreeSO/Simitone can grow a real audio-position primitive and close the loop"
-      shop_tool: "Advanced moody timeline + audio editor — waveform, markers, condition/consequence editors side by side; scoring your game is a visual task, not a programming one"
-      blue_note:   # Don, 2026-08-29: "One fun moody action is the blue note! ;)" — already canon in MOODY.md
+      shop_tool: "Advanced moody timeline + audio editor -- waveform, markers, condition/consequence editors side by side; scoring your game is a visual task, not a programming one"
+      blue_note:   # Don, 2026-08-29: "One fun moody action is the blue note! ;)" -- already canon in MOODY.md
         what: |
           The legendary BROWN NOTE, in this schema, is just a tag whose constraint binds not to a
-          mood but to the BLADDER MOTIVE AT MAX GAIN — media driving physiology, skipping the heart.
+          mood but to the BLADDER MOTIVE AT MAX GAIN -- media driving physiology, skipping the heart.
         localization: |
           The Sims localizes it as THE BLUE NOTE: Sims pee blue puddles, the game collapses all
           bodily catastrophe into one blue-puddled bladder motive, so the note comes out the color
-          of the puddle. Also the bent, flatted tone that makes the blues the blues — exactly the
+          of the puddle. Also the bent, flatted tone that makes the blues the blues -- exactly the
           register of a Sim standing in a puddle with both hands on their head.
         artifacts:
           prank_subwoofer: "A legitimate plug-in object with a BLUE-NOTE parameter track"
@@ -72,40 +72,40 @@ shops:   # each = one template + a generator + a storefront; open list by constr
         point_under_the_joke: |
           The moody track is a PARAMETER BUS, not a mood system. Mood was just the first thing worth
           broadcasting on it. Any plugin that can write a motive can be scheduled on a timeline and
-          advertised on a condition — which is why "play when you gotta pee" and "make you need to
+          advertised on a condition -- which is why "play when you gotta pee" and "make you need to
           pee" are the same machinery pointed in opposite directions.
       the_argument: |
         A jukebox that plays your songs is nice. A jukebox that knows your Sim is miserable at 3am
         and plays the right song, unprompted, is the game writing a scene with you.
-  squawk_box:   # Don, 2026-08-29 — trainable parrot / sound board; THE SHAREABLE ONE
+  squawk_box:   # Don, 2026-08-29 -- trainable parrot / sound board; THE SHAREABLE ONE
     container: "Recorded sounds plus dialogs"
     fill_with: "Your own microphone. Your cat meowing. Your dog farting. Your kid's laugh. A photo from your pocket."
     names: [Squawk Box, trainable parrot, sound board]
     the_delight: |
       Immediate and slightly stupid, which is the correct register: invent silly action names
       attached to your own sounds and have them AFFECT THE SIMULATION.
-    inherits_from_jukebox: "Everything — conditions on advertisement, consequences as plugins, timelines. It was never really about music."
-    dialogs: "Every action can open a dialog (title, picture, text, buttons, branching) — rung 3; a sound board is one edit away from interactive fiction that talks in your voice"
+    inherits_from_jukebox: "Everything -- conditions on advertisement, consequences as plugins, timelines. It was never really about music."
+    dialogs: "Every action can open a dialog (title, picture, text, buttons, branching) -- rung 3; a sound board is one edit away from interactive fiction that talks in your voice"
     embodiment: |
       A trainable parrot wants to be a CHARACTER rather than an appliance (Death precedent,
       sims1-soul-bridge.yml). Whether the game ships a bird to embody is a question for the
       official-object catalog scan (guid-registry.yml); if not, we make the object.
-    rights_clean_by_construction:   # the strategic point — a rights argument, not an aesthetic one
+    rights_clean_by_construction:   # the strategic point -- a rights argument, not an aesthetic one
       music_is_encumbered: |
         Locally fine, and exactly the point of local-first: make an object with any track you love
         on your own machine and nobody distributes anything. But SHARED music is somebody else's
-        copyright — the one content class that cannot go viral safely.
+        copyright -- the one content class that cannot go viral safely.
       your_media_is_yours: |
         Voice, pets, phone photos: no license, no clearance, no takedown, no gray area. Shareable
         BY CONSTRUCTION. The publishable class is also the more personal and funnier one.
       the_viral_artifact: "A template + your own recordings and photos + visually programmed behavior"
       requirements_met:
-        inherently_shareable: "Only the creator's own media — no third-party rights, no official game art"
+        inherently_shareable: "Only the creator's own media -- no third-party rights, no official game art"
         browser_full_fidelity: "Voice, photo, dialog, buttons need no install to EXPERIENCE; owning the game is what lets you INSTALL it"
         template_based: "One template, infinite instances, each on the template index page"
         visually_programmable: "The action editor and its ladder"
         expressive_personal: "It is literally your voice and your cat"
-        memetic: "THE TEMPLATE IS THE MEME FORMAT — instances are the memes; the template index page is the gallery"
+        memetic: "THE TEMPLATE IS THE MEME FORMAT -- instances are the memes; the template index page is the gallery"
       distribution_strategy: |
         A meme format is a template strangers fill in and pass along; ours are EXECUTABLE. Fill in
         the blanks with your own media, get a real object, and it plays back in anybody's browser
@@ -117,16 +117,16 @@ shops:   # each = one template + a generator + a storefront; open list by constr
 
   anythingomatic:
     container: "Accessory manager (appliance pattern, portals-and-modules.md)"
-    fill_with: "Any accessory category — toggle on/off, reset, organize; generalizes past wigs"
+    fill_with: "Any accessory category -- toggle on/off, reset, organize; generalizes past wigs"
   rugomatic_picture_rig:
     container: "ONE rug holding MANY images, switchable from the pie menu"
-    fill_with: "Import a Family Album into a rug — walk on your own story. A picture rig you can stand on."
+    fill_with: "Import a Family Album into a rug -- walk on your own story. A picture rig you can stand on."
   backdrop:
     container: "Switchable scene backdrop"
     lineage: |
       Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town.
       Bring the backdrop home and load your own scenes. (Exact object names to be confirmed from
-      the official-object catalog scan — guid-registry.yml.)
+      the official-object catalog scan -- guid-registry.yml.)
     fill_with: "Your own scenes"
   statue:
     container: "Posed character"
@@ -138,25 +138,25 @@ shops:   # each = one template + a generator + a storefront; open list by constr
   rule: "Every object with a state you can switch is a shop waiting to open"
 
 action_editor:
-  what: "General pie menu tree editor — organize any number of actions into slices, submenus, slides"
+  what: "General pie menu tree editor -- organize any number of actions into slices, submenus, slides"
   populated_from: "A library of ACTION PLUGINS; no SimAntics required to make a jukebox that plays your songs"
   two_kinds:
     player_actions:
       what: "What appears when you click the object"
       examples: [toggle_accessory, switch_to_picture, play_track, next_scene]
     autonomous_actions:
-      what: "What the object BROADCASTS so Sims come use it on their own — the motive advertising system"
-      surface: "THE AD EDITOR — set what the object advertises, to whom, how loudly, under what conditions"
+      what: "What the object BROADCASTS so Sims come use it on their own -- the motive advertising system"
+      surface: "THE AD EDITOR -- set what the object advertises, to whom, how loudly, under what conditions"
       dispatch_semantics: ../../schemas/advertisement-dispatch.yml   # forward / inject / hub; SimAntics lineage acknowledged
       why_it_matters: "An object without advertisements is furniture; an object with them joins the simulation. The editor should make the second no harder than the first."
 
 plugin_ladder:   # progressive disclosure, NOT tiers sold separately
   1: "Play this audio file [upload file]"
   2: "Show this picture and text [upload picture] [enter text]"
-  3: "Say something in a popup, with this picture and these buttons — each button branches to another node"
-  4: "Conditionals and state — remember choices; gate slices on motives, relationships, time of day, who is clicking"
-  5: "A friendly visual programming language — branching dialog and behavior graph, authored visually, compiled down"
-  6: "Raw SimAntics — Edith-class access for people who want it"
+  3: "Say something in a popup, with this picture and these buttons -- each button branches to another node"
+  4: "Conditionals and state -- remember choices; gate slices on motives, relationships, time of day, who is clicking"
+  5: "A friendly visual programming language -- branching dialog and behavior graph, authored visually, compiled down"
+  6: "Raw SimAntics -- Edith-class access for people who want it"
   rung_3_note: |
     Where it stops being decoration and becomes INTERACTIVE FICTION INSIDE A SIMS OBJECT: a
     branching conversation with a picture and buttons is a complete storytelling medium, and it is
@@ -166,19 +166,19 @@ plugin_ladder:   # progressive disclosure, NOT tiers sold separately
     people who grew up reading it. Everything the friendly editor emits must be inspectable and
     editable at the level below it, all the way down.
 
-preview_runtime:   # Don, 2026-08-29 — "it can say what it would have done"
+preview_runtime:   # Don, 2026-08-29 -- "it can say what it would have done"
   we_own_both_ends: |
     We design the templates AND implement the runtime, so full-fidelity browser playback is a
-    DESIGN GUARANTEE, not an emulation problem. Nobody emulates The Sims to show off a squawk box —
+    DESIGN GUARANTEE, not an emulation problem. Nobody emulates The Sims to show off a squawk box --
     the only thing that needs running is the layer the author actually wrote.
   the_pie_menu_is_the_point: |
     Not a form describing the pie menu, not a screenshot of one: THE OBJECT'S OWN PIE MENU, LIVE,
     built from the authored tree, doing what it does as far as it can go. Click a slice: sound
     plays, dialog opens, picture is there, buttons branch, state remembers. The preview of what you
-    made — and the same thing a stranger experiences on the object's page.
+    made -- and the same thing a stranger experiences on the object's page.
   layers:
-    authored: "pie menu tree, sounds, pictures, dialogs, branching, state, timelines → EXECUTED EXACTLY (our code, our data)"
-    simulated: "motives, routing, animation, autonomy, other Sims → DECLARED, NOT FAKED: it says what it WOULD HAVE done"
+    authored: "pie menu tree, sounds, pictures, dialogs, branching, state, timelines -> EXECUTED EXACTLY (our code, our data)"
+    simulated: "motives, routing, animation, autonomy, other Sims -> DECLARED, NOT FAKED: it says what it WOULD HAVE done"
   narration_beats_faking: |
     "Fun +30, Comfort +10." "The Sim would walk here and use this for two hours." "Advertises to
     tired Sims within eight tiles." A fake simulation is a lie that breaks the moment it disagrees
@@ -189,7 +189,7 @@ preview_runtime:   # Don, 2026-08-29 — "it can say what it would have done"
     worth wanting, and the preview states the claim in words while the author is still deciding
     whether they meant it.
   falls_out_free:
-    one_runtime_two_audiences: "Author preview and stranger playback are the same code path — no separate web demo to keep in sync. Whatever previews, shares."
+    one_runtime_two_audiences: "Author preview and stranger playback are the same code path -- no separate web demo to keep in sync. Whatever previews, shares."
     dry_run_is_a_test_harness: |
       If it can say what it WOULD have done, it can enumerate what it COULD do: walk every branch,
       list every ending, flag the slice unreachable because its condition can never be true.
@@ -199,10 +199,52 @@ preview_runtime:   # Don, 2026-08-29 — "it can say what it would have done"
       (../sims-open-source-and-formats.yml) are where "actually simulate it in the browser" lives
       if anyone wants it. Not needed to ship; designing as if we might get it costs nothing.
 
-visual_procedural_rhetoric:   # Don, 2026-08-29 — naming what rung 5 actually IS
+radio_simulator:   # Don, 2026-08-29 -- the natural top-of-ladder project; why the ladder goes that high
+  what: "Several shows, each a sequence of clips, randomized, looping, commercials inserted -- the GTA model"
+  key_insight: "A station is NOT a playlist, it is a SCHEDULER OVER POOLS OF SEGMENTS"
+  segment_pools:
+    music: "The tracks, tagged"
+    dj_links: "Patter between songs"
+    station_ids: "The three seconds that make it a station"
+    commercials: "Fake ads -- the classic delight"
+    other: "News, weather, call-ins, whatever the author invents"
+  programming_rules: "No repeat inside a window; patter between songs; ad break cadence; this show mornings, that one nights"
+  ladder_rung: "Rung 4 (conditionals + state) pointed at a playlist instead of a conversation -- no new engine features needed"
+  dead_reckoning_easy_case: |
+    A station that plays whether or not anyone is tuned in is the moody-timeline trick, but CHEAPER:
+    it needs only a start tick plus a table of segment durations. Tuning in mid-song is the FEATURE
+    and it falls out of arithmetic, not an audio API the game lacks.
+  simradio_with_the_network_moved:
+    source: ../../characters/don-hopkins/simradio-moody-1999-maxis-email.md   # 1999-02-18 to the Maxis team
+    then: "SimRadio needed THE GAME on the network: SimRadioStation servers, IP multicast, a receiver in the game"
+    now: |
+      No networked game at all. THE TOOLS are networked; the game reads local files. Browser-based
+      save/object editing is the delivery channel and it is asynchronous by nature: fetch, compose,
+      bake, write. Content still arrives; nobody is forced online to play; the always-online lesson
+      stays learned.
+    survives: [fresh programming instead of insane loops, plug-in objects as diegetic events, personality-filtered reactions]
+    does_not_survive: |
+      LIVE SIMULTANEITY -- the twentieth-caller contest, everyone hearing the same broadcast in the
+      same minute. Scheduled drops approximate it (bake a segment with a time window; the ad expires
+      on schedule) but true simultaneity needs a network the game does not have. Say so.
+  squawk_box_is_the_staff: |
+    Your DJ links, station IDs, and fake commercials are recordings YOU made -- the whole station
+    lands in the rights-clean class. And MOODY's pun is load-bearing: A RADIO AD IS A SIMS
+    ADVERTISEMENT in the full behavioral sense, broadcast into the room, scored by everyone who
+    hears it, acted on by the susceptible. Authoring a commercial IS authoring an argument aimed at
+    your Sims' desires -- the mechanism, not a joke about it.
+  format_vs_catalog:   # why stations are shareable even when music is not
+    format: "Schedule, rotation rules, patter, jingles, show structure -- authored structure plus your own voice, so it travels clean"
+    catalog: "The records -- encumbered music stays a local-only pleasure, exactly as designed"
+    shared_station: |
+      Arrives as programming with SLOTS: asks for tracks by tag or role, downloader maps their own
+      library in. Every instance personal; the FORMAT is the shareable artifact. Radio formats have
+      been syndicated this way for a century, and it is the only rights-clean version of this.
+
+visual_procedural_rhetoric:   # Don, 2026-08-29 -- naming what rung 5 actually IS
   name: "Visual Procedural Rhetoric Programming Language"
   not_just_a_vpl: |
-    A VPL is a language you draw instead of type — that describes rung 5's NOTATION, not its
+    A VPL is a language you draw instead of type -- that describes rung 5's NOTATION, not its
     PURPOSE. The purpose is Ian Bogost's procedural rhetoric: argument made through processes and
     rule authorship rather than words or pictures.
   bogost: ../../characters/ian-bogost/sources/procedural-rhetoric-quote.md   # "an unholy blend of Will Wright and Aristotle"
@@ -210,7 +252,7 @@ visual_procedural_rhetoric:   # Don, 2026-08-29 — naming what rung 5 actually 
     SimAntics was already a visual language and Edith was already its editor; Wright's half of
     Bogost's blend IS this simulation. What was missing was AUTHORS. Procedural rhetoric has had
     twenty years of critics and few practitioners because arguing in rules required being a
-    programmer. Aristotle taught rhetoric as a CITIZEN SKILL — too important to leave to
+    programmer. Aristotle taught rhetoric as a CITIZEN SKILL -- too important to leave to
     professionals. Rung 5 is that theory applied to procedures.
   advertisement_is_the_argument:   # structural, not decorative
     claim: "A Sims ad literally IS an advertising claim: this object will satisfy this need, by this much, from this far"
@@ -218,10 +260,10 @@ visual_procedural_rhetoric:   # Don, 2026-08-29 — naming what rung 5 actually 
     enthymeme: "The author supplies the premise; the Sim completes the argument by choosing to walk over"
     consequence: "THE AD EDITOR IS THE RHETORIC EDITOR"
   aristotle_mapping:
-    logos: "The rule structure — conditions, state, branching"
-    pathos: "Motive consequences — what it does to how they feel"
+    logos: "The rule structure -- conditions, state, branching"
+    pathos: "Motive consequences -- what it does to how they feel"
     ethos: "Whose object it is: credit, soul voice, the creator's name on the template"
-    enthymeme: "The advertisement — a premise the Sim finishes by acting"
+    enthymeme: "The advertisement -- a premise the Sim finishes by acting"
   already_in_use: |
     The reaping ceremony was using the language before we named it: a tombstone speaking a
     character's last words is an argument authored in rules, delivered by a process, counted on a
@@ -231,7 +273,7 @@ visual_procedural_rhetoric:   # Don, 2026-08-29 — naming what rung 5 actually 
       If templates carry arguments, WHICH TEMPLATES SHIP is an editorial decision wearing a
       technical costume. Own it explicitly rather than discovering it later.
     must_make_arguments_we_dislike: |
-      The classic failure of persuasive-game tooling is the single-issue toy — a machine that can
+      The classic failure of persuasive-game tooling is the single-issue toy -- a machine that can
       only produce its author's opinion. Defense is already in the design: primitives are motives,
       media, and consequences, NEVER slogans. If ours can only make our argument it is not a
       language, it is a pamphlet with a GUI.
@@ -248,7 +290,7 @@ why_it_matters: |
   is YOURS, it took five minutes, and it makes a house feel like somebody lives there. The Sims was
   always a medium for personal expression pretending to be a game about furniture; giving players
   containers to fill is the shortest path from "I downloaded some stuff" to "I made this, look."
-  Every generated object gets its template index page — the jukebox template's page lists every
+  Every generated object gets its template index page -- the jukebox template's page lists every
   jukebox anyone published, a browsable installable catalog of other people's taste.
 
 see_also:

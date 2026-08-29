@@ -310,6 +310,94 @@ the people who grew up reading it. Everything the friendly editor
 emits should be inspectable and editable at the level below it, all
 the way down.
 
+## What advanced users build: the radio simulator
+
+*Don, 2026-08-29. The natural top-of-ladder project, and the reason
+the ladder goes that high.*
+
+Give people conditionals, state, and a media library and somebody
+builds a **radio station**: several shows, each a sequence of clips,
+randomized, looping, with commercials inserted. The GTA model, which
+is the model precisely because it works -- a station is not a
+playlist, it is a **scheduler over pools of segments**.
+
+| Segment pool | What it is |
+|--------------|-----------|
+| Music | The tracks, tagged |
+| DJ links | Patter between songs |
+| Station IDs and jingles | The three seconds that make it a station |
+| Commercials | Fake ads, the classic delight |
+| News, weather, call-ins | Whatever the author invents |
+
+The programming is the rules over those pools: no repeat inside a
+window, patter between songs, an ad break every so often, this show
+in the morning and that one at night. All of it is rung 4 work
+(conditionals and state) pointed at a playlist instead of a
+conversation, which is why an advanced user can build it without any
+new engine features.
+
+**Radio is the easy case for dead reckoning.** A station that keeps
+playing whether or not anyone is tuned in is exactly the trick
+already spec'd for [moody timelines](#moody-jukebox-the-flagship-of-the-ad-editor)
+-- and cheaper here, because a station needs only a start tick and a
+table of segment durations to know what "should" be on the air.
+Tuning in mid-song is the *feature*, and it comes free from arithmetic
+rather than from an audio API the game does not have.
+
+### SimRadio, with the network moved
+
+This is the [1999 SimRadio proposal](../../characters/don-hopkins/simradio-moody-1999-maxis-email.md)
+(February 18, 1999, to the Maxis team) with one substitution.
+SimRadio needed **the game** on the network: Maxis-run
+SimRadioStation servers, IP multicast, a receiver in the game. The
+2026 version needs **no networked game at all**. The tools are
+networked; the game reads local files. Browser-based save and object
+editing is the delivery channel, and it is asynchronous by nature:
+fetch, compose, bake, write. Content still arrives, nobody is ever
+forced online to play, and the always-online lesson stays learned.
+
+Most of what the 1999 email wanted servers for survives the
+substitution intact: fresh programming instead of the same loops
+driving players insane, plug-in objects delivered as diegetic events,
+personality-filtered reactions. What genuinely does not survive is
+**live simultaneity** -- the twentieth-caller contest, everyone
+hearing the same broadcast in the same minute. Scheduled drops can
+approximate it (the tools bake a segment with a time window, the ad
+expires on schedule) but real simultaneity needs a network the game
+does not have, and saying otherwise would be a lie the design would
+eventually have to pay for.
+
+### The squawk box is the station's staff
+
+The pieces connect the moment you look at who records the patter.
+**Your DJ links, your station IDs, and your fake commercials are
+recordings you made** -- which puts the whole station inside the
+[rights-clean class](#rights-clean-by-construction-the-viral-content-class).
+Fake radio ads have been a joy of the medium since GTA III, and here
+they are load-bearing rather than decorative: MOODY's pun is that **a
+radio ad IS a Sims advertisement** in the full behavioral sense,
+broadcast into the room, scored by everyone who hears it, acted on by
+the susceptible. Author a commercial and you have authored an
+argument aimed at your Sims' desires. That is not a joke about
+procedural rhetoric, it is the mechanism.
+
+### Format and catalog: why stations are shareable even when music isn't
+
+The split that makes this work, and it is the radio industry's own
+distinction. A station has a **format** (schedule, rotation rules,
+patter, jingles, show structure) and a **catalog** (the records).
+
+- **The format is yours and travels.** It is authored structure plus
+  your own voice, so publishing it is clean.
+- **The catalog stays home.** Encumbered music is a local-only
+  pleasure, exactly as designed.
+
+So a shared station arrives as programming with **slots**: it asks
+for tracks by tag or role, and the downloader maps their own library
+in. Every instance is personal; the format is the shareable artifact.
+Radio formats have been syndicated that way for a century, and it
+happens to be the only version of this that is rights-clean.
+
 ## What the language is for: visual procedural rhetoric
 
 **Naming it properly (Don, 2026-08-29): this is a Visual Procedural
