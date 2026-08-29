@@ -854,9 +854,9 @@ Two, both consistent with policy already written down:
 
 - **No transaction destinations in shared objects.** EA's mods policy
   forbids monetary-transaction features in mods
-  ([the analysis](membership-model.md)). A code that opens a checkout
-  is exactly the clean violation we refuse to hand anybody. Links to
-  a creator's site: fine. Links to a cart: never.
+  ([the analysis](membership-model.md)), and a code that opens a
+  checkout would be one. Links to a creator's site: fine. Links to a
+  cart: never.
 - **Opaque links get inspected.** A QR code is unreadable to humans
   by design, which makes it a phishing surface. So: the generator
   always displays the decoded URL, published codes resolve through

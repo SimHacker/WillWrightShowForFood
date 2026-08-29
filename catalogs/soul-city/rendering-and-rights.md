@@ -94,112 +94,67 @@ The practical difference is small and cheap to honor: render Maxis
 object previews locally, cache them locally, and let the server hold
 the metadata plus whatever the player composed on purpose.
 
-## Audio sources: what we fetch, and the one thing we will not build
+## Media sources: where content may come from
 
-*Asked directly (Don, 2026-08-29): could we point at a YouTube video,
-extract its audio **locally**, and put it in a radio object, as long
-as we never share the audio and only share instructions and data to
-recreate it in each user's own browser?*
+The tools accept media from two places: **files you already have on
+your machine**, and **URLs that publish files for download**. That is
+the whole policy, and the rest of this section is why it is drawn
+there and why it costs nothing.
 
-**The architecture is right and the source is wrong.** Recipes
-instead of files is exactly the correct model, and we should build it.
-But we should not build the YouTube fetcher, and the reason is not
-squeamishness about copyright, it is two specific precedents plus one
-strategic asymmetry.
+### The rule
 
-### The precedent that decides it
+> **Is the URL a published file, or a page?**
 
-Germany has appellate law directly on this, and it reaches **hosts**,
-not just authors:
+RSS and OPML enclosures are files their publishers put up *to be
+downloaded*, so fetching one gives the publisher the download, the
+statistics, and the subscriber. A streaming platform's watch page is
+not that, and platform terms generally prohibit retrieving media from
+one by other means. So the fetcher's allowlist is sources that
+publish files: podcast feeds, the Internet Archive, Free Music
+Archive, ccMixter, Jamendo, Wikimedia Commons, the YouTube Audio
+Library's own downloads, and public-domain material.
 
-- **LG Hamburg, 31 March 2023** (310 O 316/21): YouTube's rolling
-  cipher **is** an effective technological measure under section 95a
-  UrhG, because it stops a substantial share of average users from
-  downloading. Uberspace, merely the *hosting provider* for
-  youtube-dl.org, was ordered to stop hosting the site.
-- **OLG Hamburg, 21 November 2024** (5 U 54/23): appeal rejected,
-  ruling confirmed. Users of such tools act in **bad faith**; the
-  host is liable as a participant and in principle owes damages. The
-  court held it irrelevant that the tool has legitimate uses
-  (journalists and activists archiving newsworthy video) if it is in
-  fact used primarily to circumvent. It also noted that Uberspace
-  **accepted payments** in connection with the project.
+We do not build extraction for streaming platforms. The legal
+position around such tools is unsettled at best: in Germany it is
+settled against them and reaches hosting providers, not only authors
+(LG Hamburg, 31 March 2023, 310 O 316/21; upheld OLG Hamburg,
+21 November 2024, 5 U 54/23, holding YouTube's rolling cipher to be
+an effective technological measure under section 95a UrhG). In the US
+the question is contested rather than resolved: RIAA sent GitHub a
+DMCA 1201 notice against youtube-dl in October 2020, EFF answered
+that reading the signature JavaScript as any browser does is not
+circumvention, and GitHub reinstated the repository, which is a
+platform declining a takedown rather than a court ruling. None of
+that is a landscape to build a product feature into.
 
-Read that last detail against our own plan: a paid membership site
-distributing a browser module that performs the extraction is in a
-*worse* position than the hoster who already lost, twice.
+**Local stays local, in both directions.** What anyone does with
+their own machine and their own files is their business, outside our
+tools, and we do not inspect it: we do not ask where a file came
+from, and we do not scan or fingerprint-report anything. That is the
+same guarantee as everywhere else on this page.
 
-The US picture is contested rather than settled, and contested is not
-the same as safe. RIAA sent GitHub a **DMCA 1201** notice against
-youtube-dl in October 2020, attaching the Hamburg decision. EFF
-answered that reading the signature JavaScript the way any browser
-does is not circumvention (citing *Digital Drilling Data Systems v.
-Petrolink*, 5th Cir. 2020), and **GitHub reinstated the repository**
-in November 2020 and reformed its 1201 review process. That is a
-platform declining a takedown, not a court ruling. Meanwhile
-shipping a ripper inside a paid product invites the inducement theory
-from *MGM v. Grokster* -- and YouTube's own terms prohibit
-downloading by non-YouTube means regardless of how the copyright
-question comes out.
+### Recipes, not files
 
-### The strategic asymmetry
+The interesting consequence is that the sharing model does not need
+fetching at all. **Shared artifacts carry annotation, not media.**
 
-Our whole posture is that we are the clean ones: everything free,
-everyone credited, nobody's rights quietly assigned away
-([the EA analysis](membership-model.md)). That posture is worth real
-money and real goodwill, and it survives a hostile reading. "Paid
-service ships a YouTube ripper" is a far easier story to tell against
-us than any question about mod policy, and it would be told by people
-who have never cared about The Sims. Wrong risk, wrong decade, no
-upside.
+A moody station travels as **envelope and timing data keyed to a
+track identity** -- duration plus an acoustic fingerprint -- and the
+recipient's tool matches it against the copy they already have. A
+shared station therefore does nothing whatsoever for somebody who
+does not own the track, and never asks anyone to fetch anything.
+Sharing annotation that references a work you do not ship is
+thoroughly established practice: LRC lyric files, karaoke and
+rhythm-game charts, MusicBrainz and AcoustID, CDDB before them. It is
+also more useful than a URL recipe would be, because it works no
+matter where a legitimate copy came from.
 
-### What we build instead, which is better anyway
+One trap worth flagging: **Creative Commons licensing on a streaming
+platform is not a download permission.** The uploader's CC grant
+settles the *copyright* question and leaves the platform's *terms*
+untouched. Get CC material from places that offer a download button.
 
-**1. Bring your own file.** Drag in audio you already have. We do not
-fetch it, we do not ask where it came from, we do not scan or
-fingerprint-report it. Whatever anybody runs on their own machine is
-their business and happens outside our tool. That is not a loophole,
-it is the same local-first guarantee as everywhere else: local means
-local.
-
-**2. Recipes resolve against your own library, not against a
-download.** This is the fix that keeps your idea intact. Share the
-**envelope and timing data** keyed to a track *identity* -- duration
-plus an acoustic fingerprint -- and the recipient's tool matches it
-against the copy they already have. A shared moody station then does
-nothing at all for somebody who does not own the track, and never
-instructs anyone to fetch anything. Sharing annotation that
-references a work you do not ship is thoroughly established practice:
-LRC lyric files, karaoke and rhythm-game charts, MusicBrainz and
-AcoustID, CDDB before them. It is also strictly more useful than a
-URL recipe, because it works no matter where a legitimate copy came
-from.
-
-**3. Fetch only enclosure-style URLs.** The crisp distinction, and
-the reason [podcast stations](object-shops.md) are fine while YouTube
-is not:
-
-> **Is the URL a published file, or a page?** RSS and OPML
-> enclosures are files their publishers put up *to be downloaded*,
-> and fetching them gives the publisher the download, the stats, and
-> the subscriber. A watch page is not that.
-
-So the fetcher's allowlist is sources that publish files: podcast
-feeds, the Internet Archive, Free Music Archive, ccMixter, Jamendo,
-Wikimedia Commons, the YouTube Audio Library's own downloads, plus
-public-domain recordings.
-
-**4. Do not be fooled by CC-BY on YouTube.** YouTube's Creative
-Commons license option really does grant reuse rights, and it fixes
-the *copyright* question -- but it does not touch the *access* and
-*terms* question, which is where both rulings above live. Permission
-from the uploader is not permission to bypass the platform. Get CC
-material from places that offer a download button.
-
-Not legal advice, and counsel reviews this page before launch. But
-the answer to the question as asked is: **local extraction is
-plausibly fine for the person doing it and unwise for us to build,
-and the recipe model does not need it.**
+Not legal advice; counsel reviews this page before launch.
 
 ### Frames: quotation is the strongest posture we have
 

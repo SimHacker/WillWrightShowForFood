@@ -430,9 +430,8 @@ qr_codes:   # Don, 2026-08-29 -- "THIS OPENS UP THE UNIVERSE"
     conditional_codes: "Different circumstances, different destinations, chosen by the conditions the ad editor already evaluates -- a sign that links elsewhere at night"
   bright_lines:
     no_transaction_destinations: |
-      EA's mods policy forbids monetary-transaction features in mods (membership-model.md). A code
-      that opens a checkout is exactly the clean violation we refuse to hand anybody. Creator site:
-      fine. Cart: never.
+      EA's mods policy forbids monetary-transaction features in mods (membership-model.md), and a code
+      that opens a checkout would be one. Creator site: fine. Cart: never.
     opaque_links_get_inspected: |
       A QR is unreadable to humans BY DESIGN, which makes it a phishing surface. So: the generator
       always displays the decoded URL; published codes resolve through our redirector; destinations
