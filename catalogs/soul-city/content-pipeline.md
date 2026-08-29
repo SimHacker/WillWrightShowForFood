@@ -256,6 +256,101 @@ a shared lot is a link back to whoever made it. Those are the terms
 that were missing when people stopped sharing lots with content in
 them.
 
+## Never share a build: the renumbering unit is the group
+
+*Don, 2026-08-29: warn people not to share the objects that got
+built. Share the originals and let people build them themselves. A
+built object is machine generated, possibly personalized, and it has
+absolute guids in it pointing at the other objects it depends on.
+They have to move as a group and get renumbered coherently, all at
+once. You do not want iterative guid drift.*
+
+This is the sharpest constraint in the whole pipeline, and it comes
+from the file format rather than from policy. **Sims objects hold
+absolute references to other objects by id**: a multi-tile object's
+master points at its parts, a stove names the food it creates,
+behaviors instantiate other objects by number. So the thing you can
+safely renumber is not an object, it is a **reference closure** --
+every object that names, or is named by, anything else in the group.
+Renumber a master and miss its parts and you have not moved an
+object, you have broken one.
+
+### Iterative guid drift, and why it would poison our own data
+
+Suppose built objects circulate anyway. A shares a build to B, B's
+build renumbers it again, B shares to C. Each hop moves the object's
+identity further from its registry key; provenance becomes a chain of
+relabelings; internal references survive only if the entire closure
+happened to travel together at every hop, which it will not.
+
+The part that should decide the question: **that stream of
+near-duplicates is exactly the noise that destroyed attribution the
+first time.** Copies that hash differently but are the same object
+are what a repack chain produces, and our
+[co-occurrence clustering](guid-registry.md) is only as good as the
+corpus is clean. Circulating build output would mean rebuilding the
+repack problem with better tooling.
+
+There is a second, smaller reason that makes the warning easy to
+give: **a built object is partly yours, not the creator's.** Your
+About text, your local numbering, your categories, your provenance
+stamp. Sharing it ships your local configuration along with somebody
+else's work.
+
+### Warnings do not work, so make drift structurally impossible
+
+Every generated object is already stamped as generated, which means
+build output is **self-identifying**. Four mechanisms follow, and none
+of them is a dialog box nobody reads:
+
+1. **The importer recognizes build output and offers the original
+   instead.** "This is somebody's generated copy of X. Fetch the real
+   one?" Drift becomes self-repairing on contact with our tools.
+2. **The builder refuses to renumber an already-stamped object.** It
+   resolves the stamp to its source id and rebuilds from the cache
+   instead. Renumbering a renumbering never happens.
+3. **There is no share button on a built set.** Sharing offers the
+   manifest and links, one click, because the easy path has to be the
+   correct one.
+4. **The glyph is the way home.** Every built object carries the
+   address of its own original, so even a screenshot of somebody's
+   game leads back to the source in its original glory. That is the
+   repair path for the copies that escape anyway, and copies will
+   escape.
+
+### "Share the originals" means point, then mirror, never upload blind
+
+Worth being precise, because this has to square with never
+redistributing other people's work:
+
+1. **Point at the creator's canonical entry.** The default, always.
+2. **Mirror the original bytes** only under the archival policy, for
+   orphaned content whose source is gone -- unmodified, credited, and
+   takedown-honoring.
+3. **Never ship your build.** Not to be nice: because it is wrong,
+   and it breaks.
+
+Then group import does the rest. Downloaded originals still carry
+their original ids, so their cross-references resolve *before*
+anything is renumbered; one build pass then renumbers the whole
+closure at once, rewriting every internal reference, and the About
+boxes, glyphs, and tips get injected on the way out.
+
+### The hard part, stated honestly
+
+Coherent renumbering requires knowing **every field that can hold an
+id** -- object definition fields, behavior operands, multi-tile master
+and part links, and whatever else the format hides. We need that
+inventory to be complete, and "mostly complete" corrupts objects
+quietly.
+
+The robust-first answer is to treat a byte scan for id-shaped words
+as a **detector rather than a rewriter**: if the scan finds a
+reference in a place our field map does not explain, do not renumber.
+Ship the group with its original ids, report the collision, and let a
+human look. A refused build is recoverable; a silently mangled object
+is somebody's afternoon.
+
 ## One footgun worth naming now
 
 **Find out what the game itself writes into the output trees before

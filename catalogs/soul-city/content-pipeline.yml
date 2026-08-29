@@ -134,6 +134,32 @@ exchange_revival:   # Don, 2026-08-29 -- "this lets us recreate the sims exchang
     - "Every object in a shared lot is a link back to whoever made it"
   venue: sims1-soul-bridge.yml   # the suburbia of featured home save files -- where shared lots live
 
+never_share_a_build:   # Don, 2026-08-29 -- "share the original objects, let people build them themselves ... you don't want iterative guid drift"
+  root_cause: "FILE FORMAT, NOT POLICY. Sims objects hold ABSOLUTE references to other objects by id: multi-tile master points at parts, a stove names the food it creates, behaviors instantiate objects by number."
+  renumbering_unit: "NOT an object -- a REFERENCE CLOSURE: every object that names, or is named by, anything else in the group. Renumber a master and miss its parts and you have broken it, not moved it."
+  iterative_guid_drift:
+    mechanism: "A shares a build to B, B's build renumbers it again, B shares to C. Each hop moves identity further from the registry key; provenance becomes a chain of relabelings; internal references survive only if the whole closure travels every hop, which it will not."
+    the_deciding_argument: |
+      That stream of near-duplicates is EXACTLY THE NOISE THAT DESTROYED ATTRIBUTION THE FIRST TIME.
+      Copies that hash differently but are the same object are what a repack chain produces, and
+      co-occurrence clustering (guid-registry.yml) is only as good as the corpus is clean.
+      Circulating build output means rebuilding the repack problem with better tooling.
+    second_reason: "A BUILT OBJECT IS PARTLY YOURS, not the creator's -- your About text, local numbering, categories, provenance stamp. Sharing it ships your local config with somebody else's work."
+  enforcement:   # warnings do not work; build output is self-identifying because every generated object is stamped
+    importer_redirects: "Recognizes build output and offers the original instead: 'this is somebody's generated copy of X, fetch the real one?' Drift self-repairs on contact with our tools."
+    builder_refuses_double_renumber: "Resolves the stamp to its source id and rebuilds from the cache. Renumbering a renumbering never happens."
+    no_share_button_on_builds: "Sharing offers the manifest and links, one click -- the easy path has to be the correct one"
+    glyph_is_the_way_home: "Every built object carries the address of its own original, so even a screenshot leads back to the source. The repair path for copies that escape, and copies will escape."
+  share_the_originals_means:   # squares with never redistributing other people's work
+    1_point: "Point at the creator's canonical entry -- the default, always"
+    2_mirror: "Mirror original bytes only under the archival policy, for orphaned content whose source is gone -- unmodified, credited, takedown-honoring"
+    3_never: "NEVER ship your build. Not to be nice: because it is wrong, and it breaks."
+  group_import: "Downloaded originals still carry original ids, so cross-references resolve BEFORE renumbering; one build pass renumbers the whole closure at once, rewriting every internal reference, injecting About boxes, glyphs, and tips on the way out"
+  the_hard_part:
+    requirement: "Knowing EVERY FIELD that can hold an id -- object definition fields, behavior operands, multi-tile master/part links, and whatever else the format hides. 'Mostly complete' corrupts objects quietly."
+    robust_first_answer: "Treat a byte scan for id-shaped words as a DETECTOR, NOT A REWRITER. If the scan finds a reference our field map does not explain, DO NOT RENUMBER: ship the group with original ids, report the collision, let a human look."
+    why: "A refused build is recoverable; a silently mangled object is somebody's afternoon"
+
 footgun:   # name it now
   what: "FIND OUT WHAT THE GAME ITSELF WRITES INTO THE OUTPUT TREES before treating them as disposable"
   severity: "A build system that deletes user files is a catastrophe, not a bug"
