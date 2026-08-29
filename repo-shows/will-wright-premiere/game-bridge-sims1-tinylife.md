@@ -2,7 +2,7 @@
 
 *The first federation spoke: Ell's indie life sim as the landing world
 for evacuated Sims souls. Machine-readable seed:
-[game-bridge-sims-tiny-life.yml](game-bridge-sims-tiny-life.yml).*
+[game-bridge-sims1-tinylife.yml](game-bridge-sims1-tinylife.yml).*
 
 **In one line:** [Tiny Life](https://tinylifegame.com/) exports
 households and lots with story text — lay over in Soul City, compile to

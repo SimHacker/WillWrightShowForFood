@@ -36,7 +36,7 @@ alongside it and send players to you.
 
 - [Soul City skill](https://github.com/SimHacker/moollm/tree/main/skills/soul-city) — the whole ensemble
 - [SOUL-MODEL.md](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/SOUL-MODEL.md) — the soul-file model itself (facets, provenance, re-rendering per world — the "pandoc for life sim characters" architecture you named)
-- [Your bridge spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml) — Sims ⇔ Tiny Life, drafted for us to tear apart together
+- [Your bridge spec](https://github.com/SimHacker/WillWrightShowForFood/blob/main/repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml) — Sims ⇔ Tiny Life, drafted for us to tear apart together
 
 **And the queer lineage your game continues** — Tiny Life's matter-of-fact inclusivity isn't a
 side feature to this show, it's a thread with its own episodes:
@@ -60,6 +60,6 @@ deletions, or additions. Optional: open a **TicketPR** audience seat on the
 with questions for Will in advance ([Palm example](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/will-wright-premiere/audience/palm)).
 
 ↑ [CHARACTER.yml](CHARACTER.yml) · [Correspondence](correspondence.yml) · [Soul City bridge](bridge/soul-city-bridge.md) ·
-[spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+[spec](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
 
 *P.S. The repo is in quiet mode while invitations go out — please don't share links publicly just yet.*

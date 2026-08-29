@@ -3,7 +3,7 @@
 # Soul City = liminal waystation (Will invitation). NOT Soul City.
 
 meta:
-  id: game-bridge-sims-tiny-life
+  id: game-bridge-sims1-tinylife
   type: bridge
   status: seed
   guest: characters/ellpeck/
@@ -72,5 +72,5 @@ non_goals:
 see_also:
   - ../../characters/ellpeck/bridge/soul-city-bridge.md
   - ../../characters/ellpeck/invitation.md
-  - game-bridge-proxi-sims.yml
+  - game-bridge-proxi-sims1.yml
   - ../../catalogs/soul-city/github-distribution-model.yml

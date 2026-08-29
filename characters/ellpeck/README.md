@@ -67,7 +67,7 @@ to Sims 1 for Exchange-starved players. Federate Workshop; don't replace it.
 
 ## Bridge spec
 
-[`game-bridge-sims-tiny-life.yml`](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+[`game-bridge-sims1-tinylife.yml`](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
 
 Sibling: [Soul City procreation](../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml)
 

@@ -40,7 +40,7 @@ navigation:
   siblings:
     - ../terry-winograd/
     - ../drew-carey/
-    - game-bridge-proxi-sims.yml
+    - game-bridge-proxi-sims1.yml
     - game-bridge-proxi-minecraft.yml
 
 status: planted
@@ -62,11 +62,11 @@ structure:
   centerpiece: ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/
   the-arc: "1996 post-mortems + forward preview → this show = ~26yr Sims 1 post-mortem"
   flows_into:
-    - game-bridge-proxi-sims.yml
+    - game-bridge-proxi-sims1.yml
     - game-bridge-proxi-minecraft.yml
-    - game-bridge-sims-spore.yml
+    - game-bridge-sims1-spore.yml
     - game-bridge-soul-city-procreation.yml
-    - game-bridge-sims-tiny-life.yml
+    - game-bridge-sims1-tinylife.yml
     - creator-network-exodus.yml
     - game-bridge-soul-hydraulics.yml
 
@@ -78,9 +78,9 @@ see_also:
     - { path: ../terry-winograd/README.md, why: "Forebear — CS547 seminar host" }
     - { path: ../drew-carey/README.md, why: "Play-along narration cousin show" }
     - { path: game-bridge-proxi-minecraft.yml, why: "SHIPPED — Proxi characters already in Minecraft; extend via Soul City" }
-    - { path: game-bridge-proxi-sims.yml, why: "Next — data portability payoff" }
+    - { path: game-bridge-proxi-sims1.yml, why: "Next — data portability payoff" }
     - { path: game-bridge-soul-city-procreation.yml, why: "Cross-game conception via Soul City — pure content injection" }
-    - { path: game-bridge-sims-tiny-life.yml, why: "Ell (Ellpeck) — Tiny Life friend; Workshop + Soul City bridge" }
+    - { path: game-bridge-sims1-tinylife.yml, why: "Ell (Ellpeck) — Tiny Life friend; Workshop + Soul City bridge" }
     - { path: game-bridge-soul-hydraulics.yml, why: "Measure/drain/squirt souls between saves — Afterlife + They Are Billions" }
   children:
     - { path: ../../characters/will-wright/sources/GLANCE.yml, why: "Evidence room" }

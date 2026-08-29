@@ -33,7 +33,7 @@ threads:
     source: ../../characters/will-wright/sources/sims1-legacy-collection-exchange-gap/ea-ownership-representation-creators.yml
   indie_rails:
     spec: ../../catalogs/soul-city/github-distribution-model.yml
-    soul_city: game-bridge-sims-tiny-life.yml
+    soul_city: game-bridge-sims1-tinylife.yml
 
 show_beats:
   - "Read Tiny Life Praise quotes back — then Legacy Collection without Exchange"
@@ -47,5 +47,5 @@ non_goals:
   - Partisan Saudi politics lecture — document functional impact on LGBTQ+ Sims community
 
 see_also:
-  - game-bridge-sims-tiny-life.yml
+  - game-bridge-sims1-tinylife.yml
   - ../../characters/ellpeck/bridge/soul-city-bridge.md

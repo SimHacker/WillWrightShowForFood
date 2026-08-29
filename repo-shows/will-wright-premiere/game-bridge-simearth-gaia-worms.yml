@@ -1,6 +1,6 @@
 # Game bridge — SimEarth ↔ Gaia ↔ the worms of Ground
 # Public creative concept for the Will Wright premiere.
-# Companion to game-bridge-sims-spore.yml and the crazy-idea-jam endosymbiosis thread.
+# Companion to game-bridge-sims1-spore.yml and the crazy-idea-jam endosymbiosis thread.
 
 meta:
   id: game-bridge-simearth-gaia-worms
@@ -55,7 +55,7 @@ fieldnotes: "https://github.com/SimHacker/moollm/blob/main/examples/adventure-4/
 
 ties:
   - ../ideas/crazy-idea-jam.yml                       # character-endosymbiosis + data_portability
-  - game-bridge-sims-spore.yml                        # the procedural-life companion bridge
+  - game-bridge-sims1-spore.yml                        # the procedural-life companion bridge
   - ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/  # Brand/Eno/Wright Long Now
   - ../../palmhoo/concurrency-and-messaging/README.md # the worms + Pike/CSP shelf
   - ../../characters/dave-ackley/                     # MFM / robust-first

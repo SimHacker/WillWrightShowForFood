@@ -114,7 +114,7 @@ Not just creature-data IO, but a clean-room, web-native re-creation of the creat
 lineage loop.
 
 ### 10. The web-native Sims tool stack + reviving the Exchange
-Rebuilding Transmogrifier / RugOMatic / **WigFabrik** (aka WigOMatic — ECG multitarget mesh+texture
+Rebuilding Transmogrifier / RugOMatic / **WigFabrik** (ECG multitarget mesh+texture
 + AI hair maps; Tom Ngo patent expired) as browser-native tools, and bringing back the
 **Sims Exchange** (now that The Sims 1 is on Steam without it) — the piece that made The Sims a
 *medium*.

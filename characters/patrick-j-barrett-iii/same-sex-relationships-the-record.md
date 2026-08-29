@@ -187,7 +187,7 @@ My response is the same as it was in 1998: don't just object — build the inclu
 [**Soul City**](../../catalogs/soul-city/README.md) is infrastructure for keeping player-made
 characters — including every queer household anyone ever built — portable and publishable in
 git, outside any single owner's silo, with bridges to indie worlds like
-[Tiny Life](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md). The academic
+[Tiny Life](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md). The academic
 frame is the sequel to this very story:
 [*How Inclusivity Saved The Sims* — and what saves the sims now](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md).
 The record above shows inclusion was designed in on purpose. Soul City is how it stays in,

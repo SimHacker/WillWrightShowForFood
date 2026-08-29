@@ -21,7 +21,7 @@ shape: |
 bridge_refs:
   - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
   - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml
-  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims1-spore.yml
   - ../../../../repo-shows/will-wright-premiere/soul-city-namesake.md  # say the namesake sentence when introducing Soul City on air
   # proxi-sims bridge file not yet written — planned in repo-shows/INDEX.yml; concept covered in the procreation bridge + premiere invitation
 

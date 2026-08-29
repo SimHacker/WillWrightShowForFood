@@ -9,7 +9,7 @@
 
 ## In this directory
 
-- [`game-bridge-proxi-sims.yml`](game-bridge-proxi-sims.yml) — machine reading (seed spec)
+- [`game-bridge-proxi-sims1.yml`](game-bridge-proxi-sims1.yml) — machine reading (seed spec)
 - `SHOW.yml` — *not yet*; add when ready to run the show (lazy prototype promotion)
 
 ↑ [`../README.md`](../README.md) · [`../INDEX.yml`](../INDEX.yml)

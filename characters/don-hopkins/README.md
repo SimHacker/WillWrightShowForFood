@@ -189,7 +189,7 @@ Each blurb below is **one beat long** (~24 words). Read in order; each line **op
 Porting **Micropolis** to the web — WASM + SvelteKit. Running **Repo Show** /
 **Repo Show** — live conversations whose stage is a GitHub repo that follows through to
 working code. Building the **Sims content stack** in the browser (Transmogrifier, RugOMatic,
-Wig-O-Matic lineage).
+WigFabrik lineage).
 
 ## Threads at a glance
 

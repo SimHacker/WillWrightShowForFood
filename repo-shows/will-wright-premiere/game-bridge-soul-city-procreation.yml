@@ -1,5 +1,5 @@
 # Game bridge — Soul City procreation (cross-game conception, delivered as pure Sims 1 content)
-# Public creative concept. Sibling of game-bridge-sims-spore.yml.
+# Public creative concept. Sibling of game-bridge-sims1-spore.yml.
 # Don's bathtub scenario, 2026-07-06 — captured verbatim in spirit, engineered in the notes.
 
 meta:
@@ -82,6 +82,6 @@ bridge_to_will: |
   see: ../../characters/will-wright/sources/2006-06-26-long-now-playing-with-time-eno-wright/
 
 see_also:
-  - game-bridge-sims-spore.yml
+  - game-bridge-sims1-spore.yml
   - ../../characters/ben-cerveny/  # liminal-space / Soul City lineage (GNE → Flickr)
   - soul-city-namesake.md  # the real Soul City, NC — not to be confused with, but inspired by

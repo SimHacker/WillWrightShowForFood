@@ -102,7 +102,7 @@ call, the chat; the show **is** the joining. (And yes — the repo's called **Si
    games — home (Sims) → city (SimCity/Micropolis) → planet (SimEarth) → cosmos (Spore) — with Proxi as
    the soul that moves through them.
 2. **A browser-native platform for Sims tools** — the whole content stack (render, read, write, edit,
-   *generate*) reborn web-native: Transmogrifier, RugOMatic, the WigOMatic.
+   *generate*) reborn web-native: Transmogrifier, RugOMatic, WigFabrik.
 3. **Reviving the Sims Exchange** — now that The Sims 1 is on Steam *without* the Exchange, rebuild the
    community save-and-story-sharing site: the piece that made The Sims a **medium**.
 

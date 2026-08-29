@@ -18,7 +18,7 @@ Soul City rebuilds the Sims 1 content-creation stack as a **web-native platform*
 
 | Layer | Examples |
 |-------|----------|
-| **Create** | Transmogrifier, RugOMatic, **WigFabrik** (aka WigOMatic / Wig-M-Porium — ECG multitarget mesh+texture + AI hair maps), SimShow preview, MOOLLM-assisted authoring |
+| **Create** | Transmogrifier, RugOMatic, **WigFabrik** (ECG multitarget mesh+texture + AI hair maps), SimShow preview, MOOLLM-assisted authoring |
 | **Publish** | Hosted CARD dirs, git repos, branching dialog objects, round-trippable saves |
 | **GitHub distribution** | Metadata catalogs **and** free content in public repos — [spec](github-distribution-model.md); MOOLLM skills + Soul City in [moollm](https://github.com/SimHacker/moollm); TSR/SFS replacement lane for repo-native work |
 | **Share** | Exchange revival, family albums, federated storefronts, Repo Show homefun |
@@ -59,7 +59,7 @@ Each keeps its brand and storefront; Soul City is the shared rails:
 
 Don's OpenLaszlo SimFreaks CMS was built for love, not rent — life interrupted before it shipped. The Steam Sims 1 window, federation tooling, and Heather and Steve's permission to republish make **now** the moment to finish the job.
 
-The EA take-private (Saudi PIF, Silver Lake, Kushner's Affinity Partners — [receipts in the indictment](../../characters/ian-bogost/roles-not-characters.md)) and Legacy Collection's Exchange removal sharpen the case: **Soul Saver** / [**SoulAngel**](soul-angel.md) relocates character souls from oligarch-owned silos into git-checked-in hub-and-spoke rails — first spoke [**Tiny Life**](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md). Academic frame: Don's QGCon paper [**How Inclusivity Saved The Sims**](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) — procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates and exit ([the thesis](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)). Namesake: [Soul City NC](../../repo-shows/will-wright-premiere/soul-city-namesake.md) (McKissick, Nixon HUD, Helms foreclosure).
+The EA take-private (Saudi PIF, Silver Lake, Kushner's Affinity Partners — [receipts in the indictment](../../characters/ian-bogost/roles-not-characters.md)) and Legacy Collection's Exchange removal sharpen the case: **Soul Saver** / [**SoulAngel**](soul-angel.md) relocates character souls from oligarch-owned silos into git-checked-in hub-and-spoke rails — first spoke [**Tiny Life**](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md). Academic frame: Don's QGCon paper [**How Inclusivity Saved The Sims**](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/abstract.md) — procedural rhetoric saved the franchise in rules; Soul City extends it to publish gates and exit ([the thesis](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md)). Namesake: [Soul City NC](../../repo-shows/will-wright-premiere/soul-city-namesake.md) (McKissick, Nixon HUD, Helms foreclosure).
 
 See [INTRO-NARRATIVE.md](../../repo-shows/will-wright-premiere/INTRO-NARRATIVE.md) and [family manifesto](../../characters/will-wright/media/sims-series-family-manifesto.md).
 

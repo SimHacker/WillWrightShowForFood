@@ -32,7 +32,7 @@ show_beats:
 hub_path: "Proxi ⇔ Soul City ⇔ Minecraft (⇔ Sims, Stardew, Spore, … via hub)"
 
 ties:
-  - game-bridge-proxi-sims.yml
+  - game-bridge-proxi-sims1.yml
   - ../../characters/will-wright/sources/2025-12-will-wright-dev-diaries/
   - ../../characters/subutai-ahmad/sources/numenta-proxi-partnership.yml
   - ../../characters/subutai-ahmad/

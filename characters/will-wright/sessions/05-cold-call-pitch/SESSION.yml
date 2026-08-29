@@ -55,7 +55,7 @@ beats:  # each is a cut point; full text in SCRIPT.md
 bridge_refs:
   - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
   - ../../../../repo-shows/will-wright-premiere/game-bridge-soul-hydraulics.yml
-  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-spore.yml
+  - ../../../../repo-shows/will-wright-premiere/game-bridge-sims1-spore.yml
 
 takes: []
 published: []

@@ -21,7 +21,7 @@ following through to working code and credited ideas in public.
 - **Data portability** as Will Wright's explicit 1986 thesis — a natural starting point for the first Will episode
 - **TypeScript in the browser** — `packages/sims-io`, local-first save uplift, player-controlled
   publish and attribution (your Public Code lens meets recovered Sims Exchange content)
-- **Head Shop + Wig-O-Matic** — craft shops that emit real Sims IFF
+- **Head Shop + WigFabrik** — craft shops that emit real Sims IFF
 - **Lane Neverending** — MOOLLM's spliceable circular street as homage to GNE/Habitat geometry
 - **OpenLaszlo lineage** — SimProv Wedding Playset / SimFreaks plumbing vs the new LLM uplift layer
 

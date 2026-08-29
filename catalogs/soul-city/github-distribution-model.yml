@@ -109,7 +109,7 @@ contrast_table:
 federate_games:
   tiny_life:
     guest: ../../characters/ellpeck/
-    bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+    bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
     site: https://tinylifegame.com/
     note: "Friend project — metadata CARD + optional git mods; Soul City bridge; traffic to Steam/Workshop"
 

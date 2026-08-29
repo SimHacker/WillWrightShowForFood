@@ -42,7 +42,7 @@ QGCon 2020 abstract (canceled); Google Doc integrated to repo 2026-07; Soul City
 - [ellpeck](../../../characters/ellpeck)
 - [soul-city](../../../catalogs/soul-city)
 - [SHOW.yml](repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml)
-- [game-bridge-sims-tiny-life.yml](repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+- [game-bridge-sims1-tinylife.yml](repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
 
 ## In this directory
 

@@ -2,7 +2,7 @@
 
 meta:
   id: ellpeck-wwsff-synergy
-  bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  bridge: ../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   hub: "Sims ⇔ Soul City ⇔ Tiny Life"
 
 relationship:

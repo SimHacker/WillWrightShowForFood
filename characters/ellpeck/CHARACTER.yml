@@ -29,7 +29,7 @@ invitation:
   status: draft
   consent: not_yet_asked
   document: invitation.md
-  show_seed: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  show_seed: ../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   bridge_narrative: bridge/soul-city-bridge.md
 
 bio:
@@ -52,7 +52,7 @@ soul_city_bridge:
   definition: |
     Soul City — liminal heaven where souls lay over between worlds; soul-file is source of truth;
     each game re-renders (Will Wright Show For Food invitation: Proxi ⇔ Soul City ⇔ The Sims).
-  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   sibling: ../../repo-shows/will-wright-premiere/game-bridge-soul-city-procreation.yml
 
 tiny_life:

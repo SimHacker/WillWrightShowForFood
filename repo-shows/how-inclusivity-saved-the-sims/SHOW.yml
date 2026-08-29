@@ -25,7 +25,7 @@ artifacts:
   wedding_playset: ../../../catalogs/simprov/
   ea_thread: ../../../characters/will-wright/sources/2019-10-qgcon-sims-inclusivity-thread/
   soul_city_namesake: ../will-wright-premiere/soul-city-namesake.md
-  tiny_life_bridge: ../will-wright-premiere/game-bridge-sims-tiny-life.yml
+  tiny_life_bridge: ../will-wright-premiere/game-bridge-sims1-tinylife.yml
   soul_angel: ../../../catalogs/soul-city/soul-angel.yml
   flipbook_graphics:
     catalog: ../../../repo-shows/flipbook/README.md
@@ -56,7 +56,7 @@ ties_to:
   - ../../../characters/ellpeck/
   - ../../../catalogs/soul-city/
   - ../will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml
-  - ../will-wright-premiere/game-bridge-sims-tiny-life.yml
+  - ../will-wright-premiere/game-bridge-sims1-tinylife.yml
   - ../did-the-sims-make-you-gay/did-the-sims-make-you-gay.yml
   - ../simcopter-himbos/simcopter-himbos.yml
   - ../lgbtq-sims-cluster/README.md

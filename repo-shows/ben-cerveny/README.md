@@ -13,7 +13,7 @@ Ben Cerveny helped build **Game Neverending** (→ Flickr), **Stamen** public ma
 leads the **Foundation for Public Code** in Amsterdam. Natural guest for the crown jewel:
 **moving characters and data between game worlds** — Will's explicit 1986 thesis, now
 implemented as browser TypeScript (`packages/sims-io`), **Soul City** as liminal uplift space,
-and craft shops (Head Shop, Wig-O-Matic) with explicit publish/credit gates.
+and craft shops (Head Shop, WigFabrik) with explicit publish/credit gates.
 
 Repo Show: compare **Habitat / GNE spliceable worlds** to MOOLLM **Lane Neverending**; walk
 `packages/sims-io` uplift in the browser; connect **public code** ethics to recovered Sims

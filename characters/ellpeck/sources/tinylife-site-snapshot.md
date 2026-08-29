@@ -40,4 +40,4 @@ See [legacy-collection-exchange-gap research](../../will-wright/sources/sims1-le
 - **Soul City federation:** indexes Workshop items + git-native mod repos as CARD metadata — drives
   players to buy Tiny Life without replacing Ell's Workshop.
 
-↑ [Praise quotes](praise-quotes.md) · [game bridge](../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml) · [Sources index](README.md)
+↑ [Praise quotes](praise-quotes.md) · [game bridge](../../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml) · [Sources index](README.md)

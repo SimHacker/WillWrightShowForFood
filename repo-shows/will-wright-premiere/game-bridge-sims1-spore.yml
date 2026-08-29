@@ -3,7 +3,7 @@
 # see the strategy folder, not here.
 
 meta:
-  id: game-bridge-sims-spore
+  id: game-bridge-sims1-spore
   type: bridge
   status: seed
   one_line: "Import and reincarnate Spore creatures — another concrete bridge into Will Wright's work, and a live animation challenge we can actually code."

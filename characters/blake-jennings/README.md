@@ -107,7 +107,7 @@ Natural fits:
 3. **Meet [Ell / Tiny Life](../ellpeck/)** — Don's bet: Blake will *love*
    [Tiny Life](https://tinylifegame.com/), the queer indie life-sim that still ships share + story
    + mods while EA's Legacy Collection removed the Exchange. Stack: **Soul City ⇔ Tiny Life**
-   bridge design ([spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml) ·
+   bridge design ([spec](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml) ·
    [bridge doc](../ellpeck/bridge/soul-city-bridge.md)).
 4. **"War Crimes of the Tiny Life Community"** — Unnecessary Analysis invert: the real villains
    are Gamergate / Incel / Kiwi Farms / MAGA trolls and detractors harassing that community — not the Tinies. Ell was never the victim, he was victorious.
@@ -146,7 +146,7 @@ The publish-and-share platform the show orbits, specced in readable pages:
 | [Browser ecosystem](../../catalogs/soul-city/browser-ecosystem.md) | Save read/write in the browser; Share-button replacement |
 | [SoulAngel / Soul Saver](../../catalogs/soul-city/soul-angel.md) | Relocating character souls out of owned silos |
 | [Soul Saver thesis](../don-hopkins/sources/qgcon-inclusivity-paper/soul-city-soul-saver-thesis.md) | Exit as voice: the petition, the turnstile, the pool with no ladder |
-| [Tiny Life bridge spec](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md) | The first federation spoke |
+| [Tiny Life bridge spec](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md) | The first federation spoke |
 
 Worked examples from the first time around: the
 [SimFreaks Laszlo CMS](../will-wright/sources/2005-09-18-simfreaks-content-catalog-laszlo/README.md),

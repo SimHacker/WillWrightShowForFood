@@ -27,6 +27,6 @@ Reverse: Sims Exchange-style Family Album yaml in GitHub → soul-file → Tiny 
 - Imply endorsement without Ell's consent.
 - Ship schema without Ell at the keyboard for export format details.
 
-Machine spec: [`game-bridge-sims-tiny-life.yml`](../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml)
+Machine spec: [`game-bridge-sims1-tinylife.yml`](../../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml)
 
 ↑ [Ell](../README.md) · [Will premiere](../../../repo-shows/will-wright-premiere/)

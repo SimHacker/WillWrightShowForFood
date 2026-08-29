@@ -73,13 +73,13 @@ seeds:
   # Soul City is the git-checked-in hub of hi-fidelity, round-trippable character facets; game-to-game
   # paths route THROUGH it ("fly through Atlanta"). Generic hub/spoke first; later, shortcut
   # optimizations + mutual schema recognition for compatible games. Full note: INDEX.yml#bridges-architecture
-  game-bridge-proxi-sims/game-bridge-proxi-sims.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). Seed: will-wright-premiere/game-bridge-proxi-sims.yml."
+  game-bridge-proxi-sims1/game-bridge-proxi-sims1.yml:   "Will — Proxi ⇔ Soul City ⇔ Sims bridge (data-portability payoff + Mind Mirror layer). Seed: will-wright-premiere/game-bridge-proxi-sims1.yml."
   game-bridge-proxi-minecraft.yml: "Will — Proxi ⇔ Soul City ⇔ Minecraft. SHIPPED: Proxi characters already exported to Minecraft (Dev Diaries 2025)."
   game-bridge-sims-stardew.yml: "Group: Eric Barone — Sims ⇔ Soul City ⇔ Stardew two-way bridge."
-  game-bridge-sims-tiny-life.yml: "Ell (Ellpeck) — Sims ⇔ Soul City ⇔ Tiny Life."
+  game-bridge-sims1-tinylife.yml: "Ell (Ellpeck) — Sims ⇔ Soul City ⇔ Tiny Life."
   creator-network-exodus.yml: "Group — lilsimsie, Plumbella, James Turner + peers; EA Creator Network exit; Tiny Life praise; Exchange gap."
   game-bridge-sims-shattered.yml: "Evan Debenham — Sims ⇔ Soul City ⇔ Shattered Pixel Dungeon (GPLv3 repo; roguelike contrast; funding exemplar)."
-  game-bridge-sims-spore.yml:   "Will + Spore team — Sims ⇔ Soul City ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
+  game-bridge-sims1-spore.yml:   "Will + Spore team — Sims ⇔ Soul City ⇔ Spore creatures. CAPSTONE/big-ambition bridge: clean-room web re-creation of the creature renderer/animator/editor/builder, designed from interviews. Likely a multi-episode ARC."
   game-bridge-mind-mirror.yml:  "Sims ⇔ Soul City ⇔ Timothy Leary's Mind Mirror (1986 EA) — first EMULATED-RUNTIME organelle (real Apple ][ binary in a web emulator) + cross-organelle property diffusion."
   game-bridge-afterlife-soul.yml: "Soul City Soul Bridge ⇔ LucasArts Afterlife (1996) — rescue souls FROM hell, send characters TO hell; hell-is-full → ZombieSims waves; They Are Billions scale."
   heather-and-steve/afterlife-zombie-bridge.yml: "Heather Castillo (SimFreaks) + Steve Alvey (SimSlice) — drain hell into ZombieSims; catalog + tool integration show."

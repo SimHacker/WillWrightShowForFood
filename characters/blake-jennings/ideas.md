@@ -21,7 +21,7 @@
 5. **Soul City ⇔ Tiny Life bridge** — stack with Ell (+ Don): soul-files as the liminal layover;
    Tiny Life export already almost a soul-file; Sims characters evacuate EA property into a
    project of love. Spec:
-   [`game-bridge-sims-tiny-life.md`](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md)
+   [`game-bridge-sims1-tinylife.md`](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md)
    · Ell's [bridge doc](../ellpeck/bridge/soul-city-bridge.md).
 6. **"War Crimes of the Tiny Life Community"** — Unnecessary Analysis episode / Repo Show.
    **Thesis (Don):** the real criminals are the Gamergate / incel / MAGA trolls and detractors

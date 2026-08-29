@@ -31,7 +31,7 @@ stars, flowers at his feet. Cozy, psychedelic, generous. Not a suit.)*
 | **Media** | [media](../../characters/will-wright/media/README.md) | Flower Child + sims-series gallery |
 | **Venue** | [venue](venue/README.md) | Theater map · balconies 🤡💀 |
 | **Guest** | [portrayal](../../characters/will-wright/README.md) | Will's invitation + CARD |
-| **Siblings** | [terry-winograd](../terry-winograd/README.md) · [drew-carey](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/drew-carey/README.md) · [game-bridge](game-bridge-proxi-sims.yml) | Related shows |
+| **Siblings** | [terry-winograd](../terry-winograd/README.md) · [drew-carey](https://github.com/SimHacker/WillWrightShowForFood/tree/main/repo-shows/drew-carey/README.md) · [game-bridge](game-bridge-proxi-sims1.yml) | Related shows |
 
 **Suggested read order:** README → BROWSE → 1996 → sources → catalogs → audience → sims-series gallery → venue → invitation *(full list in GLANCE)*
 

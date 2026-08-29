@@ -18,7 +18,7 @@ handles:
 
 bridge:
   path: "Sims ⇔ Soul City ⇔ Tiny Life"
-  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  spec: ../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   narrative: bridge/soul-city-bridge.md
 
 don_on_record:

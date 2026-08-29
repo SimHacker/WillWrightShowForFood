@@ -1,5 +1,5 @@
 # Game bridge — soul hydraulics: add and drain souls on any save file
-# Public creative concept. Sibling of game-bridge-sims-spore.yml and
+# Public creative concept. Sibling of game-bridge-sims1-spore.yml and
 # game-bridge-soul-city-procreation.yml. Don's spec, 2026-07-06.
 
 meta:
@@ -146,6 +146,6 @@ soul_city_tie: |
 
 see_also:
   - game-bridge-soul-city-procreation.yml
-  - game-bridge-sims-spore.yml
-  - game-bridge-proxi-sims.yml
+  - game-bridge-sims1-spore.yml
+  - game-bridge-proxi-sims1.yml
   - soul-city-namesake.md  # the real Soul City, NC — not to be confused with, but inspired by

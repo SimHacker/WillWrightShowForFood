@@ -78,7 +78,7 @@ tiny_life:
   why: |
     Solo queer indie life sim; Workshop + export; praised by ex–Creator Network voices; natural
     spoke when EA removed Exchange from Legacy Collection.
-  bridge: ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+  bridge: ../../../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   ellpeck: ../../../ellpeck/
   line: "Sims characters can evacuate the EA-owned property and live happier lives in Tiny Life"
 
@@ -101,6 +101,6 @@ cross_links:
     act_3_4: ../../../../repo-shows/flipbook-soul-saver-exodus/FLIPBOOK.yml
   show_seeds:
     - ../../../../repo-shows/will-wright-premiere/creator-network-exodus.yml
-    - ../../../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.yml
+    - ../../../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.yml
   bogost: ../../../ian-bogost/
   marusek: ../../../david-marusek/the-wedding-album-and-digital-souls.md

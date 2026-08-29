@@ -18,7 +18,7 @@ not_just_a_catalog: |
 layers:
   create:
     - "Transmogrifier / SafeTMog — web-native object authoring"
-    - "RugOMatic, WigOMatic, body/head editors"
+    - "RugOMatic, WigFabrik, body/head editors"
     - "SimShow — preview objects in-browser (ShowNTell lineage)"
     - "MOOLLM-assisted authoring — optional, human-reviewed"
   publish:

@@ -62,7 +62,7 @@ The contrast, surface by surface: TSR's ad/VIP browse becomes git
 browse with CARD search and no ads; SimFileShare's central shortlinks
 without search become git permanent URLs plus a searchable index;
 the Exchange's EA server becomes git PRs and Family Album YAML;
-[Tiny Life's Workshop](../../repo-shows/will-wright-premiere/game-bridge-sims-tiny-life.md)
+[Tiny Life's Workshop](../../repo-shows/will-wright-premiere/game-bridge-sims1-tinylife.md)
 gets federated in CARDs with the soul-file bridge lifting
 [Ell](../../characters/ellpeck/README.md), not replacing him; MOOLLM
 skill zips become the living `skills/` tree.
