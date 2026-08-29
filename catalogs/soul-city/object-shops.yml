@@ -14,6 +14,38 @@ shops:   # each = one template + a generator + a storefront; open list by constr
   jukebox:
     container: "Music player"
     fill_with: "Your own tracks — the most requested thing in the game's history, and it was always just a file list"
+    moody_jukebox:   # Don, 2026-08-29 — the flagship demo of the ad editor
+      why_flagship: "Exercises every part of the system at once: advertisement conditions, consequences, timelines"
+      when_does_it_call_you:
+        what: "Conditions on the ADVERTISEMENT, written against motives the game already tracks"
+        examples:
+          - "Play when you gotta pee (bladder low)"
+          - "Play when you are tired (energy low)"
+          - "Play when you are sad (mood down)"
+          - "Any combination, plus time of day, who is home, what room"
+        point: |
+          The object is not waiting to be clicked — it advertises to specific MOODS. The Sim
+          wanders over on their own because the right song was listening for the right moment.
+      what_does_it_do_to_you:
+        what: "Moody consequences — action plugins pointed at motives"
+        examples: [mood_boost, energy_lift, comfort_bump, fun_spike, any_plugin]
+      moody_timelines:
+        what: "Schedule effects along the track — chorus hits and mood jumps; bridge drops and the Sim slows"
+        mechanism: "Dead reckoning audio time, assuming normal play speed (Don's own framing)"
+        honest_constraint: |
+          The game will not report the playhead, so the timeline is OPEN LOOP: note when the track
+          started, count forward, compute position. What moves the goalposts is GAME SPEED — audio
+          runs in real seconds while sim time can run 2x or 3x, so a timeline authored in audio
+          time drifts against a fast-running game.
+        mitigations:
+          - "Keep the schedule in audio seconds"
+          - "Notice speed changes"
+          - "Resync at events we know for certain: track start, loop boundary, track change, lot load"
+          - "Author with slack — drift between resyncs is a design constraint, not a bug to hide"
+      shop_tool: "Advanced moody timeline + audio editor — waveform, markers, condition/consequence editors side by side; scoring your game is a visual task, not a programming one"
+      the_argument: |
+        A jukebox that plays your songs is nice. A jukebox that knows your Sim is miserable at 3am
+        and plays the right song, unprompted, is the game writing a scene with you.
   anythingomatic:
     container: "Accessory manager (appliance pattern, portals-and-modules.md)"
     fill_with: "Any accessory category — toggle on/off, reset, organize; generalizes past wigs"

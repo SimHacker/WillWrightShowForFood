@@ -21,7 +21,7 @@ Each shop is one template plus a generator plus a storefront in the
 
 | Shop | The container | What you put in it |
 |------|---------------|--------------------|
-| **Jukebox** | Music player | Your own tracks. The most requested thing in the game's history, and it was always just a file list. |
+| **Jukebox** / [Moody Jukebox](#moody-jukebox-the-flagship-of-the-ad-editor) | Music player | Your own tracks. The most requested thing in the game's history, and it was always just a file list. |
 | **WigOMatic** and the AnythingOMatic family | Accessory manager | Any accessory category: toggle on and off, reset, organize. Generalizes past wigs to whatever the shop stocks ([the appliance pattern](portals-and-modules.md)). |
 | **RugOMatic picture rig** | One rug, many images | Switch between them from the pie menu. **Import a Family Album into a rug** and walk on your own story. A picture rig you can stand on. |
 | **Backdrop** | Switchable scene | Lineage: Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town. Bring the backdrop home and load your own scenes. |
@@ -57,6 +57,58 @@ Two kinds of action, matching how Sims objects actually behave:
 An object without advertisements is furniture. An object with them
 joins the simulation. Both are legitimate, and the editor should make
 the second one no harder than the first.
+
+## Moody Jukebox: the flagship of the ad editor
+
+The jukebox is the demo that teaches the whole system, because it
+exercises every part of it at once. Load your own tracks, then answer
+three questions about each one.
+
+**When does it call you?** Conditions on the advertisement, written
+against the motives the game already tracks:
+
+- Play when you gotta pee (bladder low)
+- Play when you are tired (energy low)
+- Play when you are sad (mood down)
+- ...or any combination, plus time of day, who is home, what room
+
+The object isn't waiting to be clicked; it is **advertising to
+specific moods**. Your Sim wanders over on their own because the
+right song was listening for the right moment.
+
+**What does it do to you?** Moody consequences, which are just action
+plugins pointed at motives: a mood boost, an energy lift, a comfort
+bump, a fun spike -- or anything else in the plugin library, since a
+consequence is a consequence.
+
+**What happens while it plays?** **Moody timelines.** Schedule
+effects along the track: the chorus hits and the mood jumps, the
+bridge drops and the Sim slows down. Which needs an honest engineering
+note, and you already named it:
+
+> Dead reckoning audio time, assuming normal play speed.
+
+The game will not tell us where the playhead is, so the timeline is
+open loop: note when the track started, count forward, and compute
+the position. That works precisely as long as nothing moves the
+goalposts. What moves them is **game speed** -- audio runs in real
+seconds while sim time can run at 2x or 3x, so a timeline authored in
+audio time drifts against a game running fast. Practical answers:
+keep the schedule in audio seconds, notice speed changes, and resync
+at the events we do know for certain (track start, loop boundary,
+track change, lot load). Drift between resyncs is a design
+constraint, not a bug to hide: author timelines with a little slack
+and they stay musical.
+
+Then the shop tool: an **advanced moody timeline and audio editor**
+-- waveform, markers, and the condition/consequence editors side by
+side, so scoring your own game is a visual task instead of a
+programming one.
+
+This is also the clearest argument for the ad editor existing at all.
+A jukebox that plays your songs is nice. A jukebox that knows your
+Sim is miserable at 3am and plays the right song, unprompted, is the
+game writing a scene with you.
 
 ## The plugin ladder
 
