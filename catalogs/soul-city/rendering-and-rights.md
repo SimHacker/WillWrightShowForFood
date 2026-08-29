@@ -276,6 +276,86 @@ video, which is precisely the 2000-era slideshow aesthetic and is
 charming on purpose. Real video playback is not on the table; this is
 better than a stalled attempt at it.
 
+## Rewarding identification, and the upload question
+
+*Don, 2026-08-29: reward users who identify unknown content and
+upload it. Is that legal as long as we give it away for free, since
+it is under EA's license?*
+
+**"Free" answers the wrong rights holder.** EA's mods policy is
+satisfied by free distribution, yes -- but EA's license governs EA's
+material. **Every custom object has two rights holders**: EA, for the
+cloned art, sounds, and behavior it inherited, and **the creator, for
+what they added.** EA saying "free UGC is fine" is not the creator
+saying "anyone may re-host my work." Only the creator can say that,
+and no term in EA's agreement says it for them.
+
+That is also where the actual risk lives. Twenty-five years of
+fansites mirroring free Sims 1 content have produced no visible EA
+enforcement, so the EA-side exposure on free hosting is low. The
+exposure that has repeatedly gone hot is **creator relations** -- the
+re-upload and content-theft fights that defined the Sims 2 era. And
+creator goodwill is not a risk to be managed here, it is the asset the
+whole project runs on.
+
+### Split the reward from the upload
+
+They are different acts, and only one of them is legally interesting:
+
+**Identification is facts, and facts are ours to publish.** "This id
+is that lamp, by this creator, from that set, and here is the readme
+text and the file hash" is not the content. No copyright attaches to
+it. It is also the scarce contribution: the bytes are usually
+somewhere already, while the knowledge of what they are is what died
+with the fansites. **So reward identification, generously and
+visibly**, and treat the upload as a separate, narrower question.
+
+Three tiers of intake, in order of preference:
+
+| Tier | What the contributor sends | Our posture |
+|------|---------------------------|-------------|
+| **Metadata only** | Ids, hashes, names, readme text, set membership, creator claims, screenshots of their own game | Always welcome, always rewarded. Covers most of the value. |
+| **Prove and discard** | The file itself, so we can hash it, pull [reference descriptors](guid-registry.md), and verify the identification | Bytes are used to compute, then dropped or quarantined -- never published. Corpus gets the facts without us becoming a distributor. |
+| **Public mirror** | The file, for hosting | Only under the archival policy: orphaned work, source gone, creator uncontactable, unmodified, credited, opt-out and takedown honored fast, with a standing claim path. |
+
+And one honesty requirement: **an uploader of found content cannot
+license it to us.** A warranty checkbox saying "I own this" is theater
+when the whole point is that nobody knows who made it. Record it as
+what it is -- found, uploader is not the author -- and let the mirror
+rest on archival practice rather than a license we do not have.
+
+### Design the reward so it does not become a laundering bounty
+
+This is the part I would get wrong if I moved fast: **rewarding
+uploads by volume creates a paid incentive to dump everything**,
+including paysite content, ripped content, and objects whose creators
+explicitly forbade re-hosting. The reward has to attach to
+**verified identification quality** -- claims that survive checking
+against hashes, archives, and other contributors -- and never to
+bytes delivered.
+
+Two more constraints that fall out cleanly:
+
+**Reward with standing, not cash.** Recognition, credits, tool quota,
+curation privileges, a name on the registry entry. Paying money for
+work that consists of distributing EA-derived content is the one
+version of this that starts to look commercial, and it contradicts
+[the model](membership-model.md) where money buys services and never
+content.
+
+**Read the terms that came in the box.** Old readmes routinely say
+"do not re-upload," and because [containers stay
+sealed](content-pipeline.md) those readmes are still there. So parse
+them: extract redistribution terms, attach them to the registry entry,
+and **default to no-mirror whenever the creator's own words say no.**
+That is a real capability, it is cheap, and it is the single most
+persuasive thing we could show a suspicious creator.
+
+Clause-level reading of the current EA text, and the archival mirror
+policy specifically, want a lawyer before launch. The split above --
+facts freely, bytes reluctantly, creators' stated terms obeyed --
+does not.
+
 ## Rules
 
 1. **Push rendering to the client.** Always. The server never needs
@@ -297,6 +377,10 @@ better than a stalled attempt at it.
 8. **Fetchers only for enclosure-style URLs** from sources that
    publish files. Everything else is a recipe that resolves against
    the user's own library: envelopes for audio, timecodes for frames.
+9. **Reward identification, not uploads.** Facts about content
+   travel freely; other people's bytes do not, except as archival
+   mirroring of orphaned work under stated terms. Creator terms found
+   in original readmes govern, and default to no.
 
 Not legal advice; counsel should read this page before launch. But
 the posture is defensible and the architecture costs us nothing,

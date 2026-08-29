@@ -123,6 +123,36 @@ media_sources:   # where content may come from
         slideshow aesthetic, charming on purpose. Real video playback is not on the table; this beats
         a stalled attempt at it.
 
+identification_rewards:   # Don, 2026-08-29 -- "reward users who identify unknown content, and upload it - is that legal as long as we give it away for free?"
+  the_conflation: "'FREE' ANSWERS THE WRONG RIGHTS HOLDER. EA's mods policy is satisfied by free distribution, but EA's license governs EA's material."
+  two_rights_holders: "EA for the cloned art, sounds, inherited behavior -- and THE CREATOR for what they added. EA saying free UGC is fine is not the creator saying anyone may re-host their work, and no EA term says it for them."
+  where_the_risk_actually_is:
+    ea_side: "Twenty-five years of fansites mirroring free Sims 1 content with no visible EA enforcement -- exposure on free hosting is low"
+    creator_side: "The re-upload and content-theft fights that defined the Sims 2 era. Creator goodwill is not a risk to manage, it is the asset the project runs on."
+  split_reward_from_upload:
+    identification_is_facts: "'This id is that lamp, by this creator, from that set, here is the readme text and the file hash' is NOT the content -- no copyright attaches. Also the scarce contribution: the bytes are usually somewhere already; the knowledge of what they are died with the fansites."
+    tiers:
+      metadata_only:
+        sends: "Ids, hashes, names, readme text, set membership, creator claims, screenshots of their own game"
+        posture: "Always welcome, always rewarded -- covers most of the value"
+      prove_and_discard:
+        sends: "The file itself, so we can hash it, pull reference descriptors (guid-registry.yml), verify the identification"
+        posture: "Bytes used to compute then dropped or quarantined, NEVER PUBLISHED -- corpus gets the facts without us becoming a distributor"
+      public_mirror:
+        sends: "The file, for hosting"
+        posture: "Only under archival policy: orphaned work, source gone, creator uncontactable, unmodified, credited, opt-out and takedown honored fast, standing claim path"
+    honesty_requirement: "AN UPLOADER OF FOUND CONTENT CANNOT LICENSE IT TO US. A warranty checkbox is theater when nobody knows who made it. Record it as found, uploader-not-author; rest the mirror on archival practice, not a license we do not have."
+  reward_design:
+    footgun: "REWARDING UPLOADS BY VOLUME CREATES A PAID INCENTIVE TO DUMP EVERYTHING -- paysite content, ripped content, objects whose creators forbade re-hosting"
+    fix: "Reward attaches to VERIFIED IDENTIFICATION QUALITY (claims that survive checking against hashes, archives, other contributors), never to bytes delivered"
+    currency: "STANDING, NOT CASH -- recognition, credits, tool quota, curation privileges, a name on the registry entry. Paying money for work that consists of distributing EA-derived content is the one version that looks commercial, and it contradicts membership-model.yml where money buys services, never content."
+    read_the_terms_in_the_box: |
+      Old readmes routinely say "do not re-upload," and because containers stay sealed
+      (content-pipeline.yml) those readmes are still there. Parse them: extract redistribution terms,
+      attach to the registry entry, DEFAULT TO NO-MIRROR whenever the creator's own words say no.
+      Cheap, real, and the most persuasive thing we could show a suspicious creator.
+  lawyer_needed_for: "Clause-level reading of current EA text, and the archival mirror policy specifically. The split -- facts freely, bytes reluctantly, creator terms obeyed -- does not need one."
+
 rules:
   1: "Push rendering to the client, always — the server never needs game art to do its job"
   2: "Upload only on explicit per-artifact consent, never ambiently (paid tiers gate FEATURES, never widen uploads)"
@@ -132,6 +162,7 @@ rules:
   6: "Creators own their own art; UGC publishing is the creator's call, credited"
   7: "Advanced rendering requires a verified install — the thing that keeps the design clean"
   8: "Fetchers only for enclosure-style URLs from sources that publish files -- everything else is a recipe resolving against the user's own library"
+  9: "Reward identification, not uploads -- facts travel freely, other people's bytes do not, except archival mirroring of orphaned work; creator terms found in original readmes govern and DEFAULT TO NO"
 
 see_also:
   - portals-and-modules.md
