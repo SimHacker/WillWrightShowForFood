@@ -364,7 +364,7 @@ trails:
       - { path: ticket-pr.yml, why: "Audience clip + question ingress" }
       - { path: ../repo-shows/, why: "Gags, themes, traditions, show content catalog" }
       - { path: ../catalogs/soul-city/steam-community-guide.yml, why: "Steam Community Guides — channel web hub + Repo Shows" }
-      - { path: ../catalogs/soul-city/micropolis-angel.yml, why: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
+      - { path: ../catalogs/soul-city/sims1-soul-bridge.yml, why: "SoulAngel + sims1 Soul Bridge — Windows/Mac Steam companion (Simplifier + catalog + machinima; after web bootstrap)" }
 
 room_indexes:
   process: INDEX.yml

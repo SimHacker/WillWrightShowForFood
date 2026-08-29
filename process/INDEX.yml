@@ -39,9 +39,9 @@ show_and_network:
   soul-city-steam-guides:
     topic: "Soul City — Steam Community Guides (web hub + Repo Shows discovery)"
     path: ../catalogs/soul-city/steam-community-guide.yml
-  micropolis-angel:
-    topic: "MicropolisAngel — Windows Steam companion (Simplifier + catalog + machinima; announce after web)"
-    path: ../catalogs/soul-city/micropolis-angel.yml
+  sims1-soul-bridge:
+    topic: "SoulAngel + sims1 Soul Bridge — Windows/Mac Steam companion (Simplifier + catalog + machinima; announce after web)"
+    path: ../catalogs/soul-city/sims1-soul-bridge.yml
   character-colocation.yml:
     topic: "Placement + cardify pyramid — characters/packages/rooms; CARD+GLANCE+SIMULATION"
   repo-show-regulars.yml:

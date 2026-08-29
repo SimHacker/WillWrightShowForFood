@@ -117,9 +117,9 @@ without needing EA to build a custom lot.
 
 ---
 
-## MicropolisAngel — when AI *does* talk (but not as you)
+## SoulAngel — when AI *does* talk (but not as you)
 
-Later we're shipping **MicropolisAngel** — a Windows companion for people playing **The Sims 1**
+Later we're shipping **SoulAngel** — a desktop companion for people playing **The Sims 1**
 on Steam (the game runs on PC only; Mac users get the web hub).
 
 This is **not** a voice clone of the host. It's the thing millions of players already do manually:
@@ -137,7 +137,7 @@ people who've watched a Sim remove a pool ladder.
 Optional subscriptions pay for tokens. Same pattern scales to **other games** — a cross-game Angel,
 not a Sims impersonator.
 
-Spec (planted, not announced yet): [MicropolisAngel](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml)
+Spec (planted, not announced yet): [the sims1 Soul Bridge](../../catalogs/soul-city/sims1-soul-bridge.yml)
 
 **The line:** AI advises **your** play in **your** game. It does not host the show pretending to
 be Drew Carey.

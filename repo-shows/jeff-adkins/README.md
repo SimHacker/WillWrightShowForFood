@@ -36,7 +36,7 @@ together** into a longer show. No cross-time-zone live juggling. If Jeff wants t
 A GitHub-native home for decades of **user-created Sims content** — communities like **SimFreaks,
 SimSlice, Zombie Sims**, and the **Simprov Wedding Playset** — cataloged, reviewed, analyzed, patched,
 and upgraded in the open: **file an issue on a Sims object**, discuss what's wrong, fix it together.
-(See [`apps/micropolis-angel/`](../../apps/micropolis-angel/README.md) and the
+(See [`apps/soul-angel/windows/`](../../apps/soul-angel/windows/README.md) and the
 [Sims community landscape](../../catalogs/sims1-community-landscape.yml).)
 
 ## Files

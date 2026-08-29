@@ -59,7 +59,7 @@ why_a_guest:
     is now reimplementing it in WWSFF-owned TypeScript, also with AI — each iteration feeding the
     other and improving every pass. AI copying AI copying people, all the way down: stone soup,
     cauldron, cellular automata, Wolfram, and Eno's generative systems, made literal in a codebase.
-  full_credit: "Jeff gets full credit for SimObliterator's influence and code — interview or not. The TypeScript reimplementation follows the repo's IP-hygiene + credit rules (apps/micropolis-angel/, CREDITS)."
+  full_credit: "Jeff gets full credit for SimObliterator's influence and code — interview or not. The TypeScript reimplementation follows the repo's IP-hygiene + credit rules (apps/soul-angel/windows/, CREDITS)."
   the_build: |
     Concrete engineering role: his solid, well-organized Python (incl. SimAntics analysis) is being
     ported to the browser (via Claude, credited) to power a content 'file cop' / 'virus scanner' —
@@ -81,4 +81,4 @@ see_also:
   - { path: ideas.md, why: "Conversation hooks — grounded in Jeff's real work + the soul-mover thread" }
   - { path: ../../repo-shows/jeff-adkins/, why: "The show proposal + invitation" }
   - { path: ../will-wright/, why: "The 1996 data-portability holy grail SimObliterator helps deliver" }
-  - { path: ../../apps/micropolis-angel/, why: "Catalog/object tooling that credits + builds on SimObliterator" }
+  - { path: ../../apps/soul-angel/windows/, why: "Catalog/object tooling that credits + builds on SimObliterator" }

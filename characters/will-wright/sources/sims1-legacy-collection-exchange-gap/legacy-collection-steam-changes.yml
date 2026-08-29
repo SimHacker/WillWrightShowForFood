@@ -59,7 +59,7 @@ medical_wearables_sims4_parallel:
 soul_city_posture:
   requires_owned_game: true
   steam_guide: ../../../../catalogs/soul-city/steam-community-guide.yml
-  companion: ../../../../catalogs/soul-city/micropolis-angel.yml
+  companion: ../../../../catalogs/soul-city/sims1-soul-bridge.yml
   strategy: ../../../../catalogs/sims1-community-landscape.yml
 
 see_also:

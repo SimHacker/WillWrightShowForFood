@@ -40,7 +40,7 @@ to fix it, and collaborate on debugging and sharing. The engine underneath is a 
 "virus scanner"** for Sims content: using SimObliterator's **SimAntics analysis** to **detect missing
 objects and broken user-created content, repair it, and locate the original sources back in the
 catalog.** This is the piece Jeff is best placed to lead — the **content-management features and the
-back-end site.** (Ties to [`apps/micropolis-angel/`](../../apps/micropolis-angel/README.md) and the
+back-end site.** (Ties to [`apps/soul-angel/windows/`](../../apps/soul-angel/windows/README.md) and the
 [Sims community landscape](../../catalogs/sims1-community-landscape.yml).)
 
 ### 5b. VitaBoy in the browser — clean-room, then rebuilt *better*

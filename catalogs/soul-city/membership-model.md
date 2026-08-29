@@ -36,6 +36,30 @@ version, updated for local-first web modules:
    forced online, the offline tool is whole, and payment buys power,
    not permission.
 
+## Public on free, private on paid (proposal, 2026-08-29)
+
+The GitHub move, applied to generation: **what you make on free
+hosted compute publishes to the commons, with your credit; paying
+members can generate privately.** Two carve-outs keep it honest:
+
+1. **Hosted compute only.** Local tools never upload anything --
+   that guarantee is constitutional and has no paid exception. The
+   rule applies solely to generation that runs on our servers: if the
+   community subsidizes your render, the community gets the result.
+2. **Assets, not stories.** Public-on-free covers generated assets
+   (rugs, wigs, statues, walls, meshes). Albums, saves, and personal
+   storytelling are consent-first always -- privacy of personal
+   material is never a luxury good.
+
+Why it fits this audience: the precedent is familiar (GitHub public
+repos; image-generation services where stealth mode is the paid
+feature), auto-credit turns free-tier publishing into exposure for
+new creators, and this community fought the paysite wars -- everything
+made on free compute enriching the commons is exactly the right side
+of that history. What paid privacy is FOR, framed positively: works
+in progress, commissions, surprise gifts, contest entries before the
+deadline.
+
 ## What the meter can sit on (candidates)
 
 The test for every candidate: compute-heavy or service-backed, so

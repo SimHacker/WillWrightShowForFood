@@ -5,12 +5,12 @@ meta:
   id: sims1-legacy-collection-exchange-gap
   purpose: |
     Document why EA's Jan 2025 Legacy Collection re-release omits the Exchange — and where the
-    fan economy moved. Feeds Soul City / MicropolisAngel Exchange revival design.
+    fan economy moved. Feeds Soul City / SoulAngel Exchange revival design.
   legacy_collection_release: "2025-01-31"
   see_also:
     - ../2004-01-12-sims-exchange/
     - ../../../../catalogs/sims1-community-landscape.yml
-    - ../../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/micropolis-angel.yml
+    - ../../../../catalogs/soul-city/sims1-soul-bridge.yml
 
 files:
   exchange_history: exchange-history-and-ui.yml

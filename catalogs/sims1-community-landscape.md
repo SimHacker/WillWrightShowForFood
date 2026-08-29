@@ -77,19 +77,19 @@ Full spec: [`soul-city/steam-community-guide.yml`](soul-city/steam-community-gui
 | Promote Will show + bridge episodes + public repo | Replace ZombieSims **$9.99 lifetime** — lift creators |
 | Deep-link streams, issues, play-along submit | Plumbob branding / implied EA endorsement |
 
-**Rollout:** web Soul City + public repo → Steam Community Guide + MTS + YouTube → **MicropolisAngel** (Windows Steam companion) → EA conversation after traction.
+**Rollout:** web Soul City + public repo → Steam Community Guide + MTS + YouTube → **SoulAngel** (Windows + Mac Steam companion) → EA conversation after traction.
 
 ---
 
-## MicropolisAngel — Windows Steam companion (later)
+## SoulAngel — Windows + Mac Steam companion (later)
 
-**Not a web wrapper** — native **Steam Software** for Windows (Sims 1 does not run on Mac). Watches over you playing: Simplifier TTS showcase, catalog capture, find/download/install, favorites lists you share and play back, machinima + OBS/Twitch, gateway to Exchange revival via Soul City.
+**Not a web wrapper** — native **Steam Software** (Windows first, Mac after; the sims1 while-you-play features run where the game runs, which is Windows). Watches over you playing: Simplifier TTS showcase, catalog capture, find/download/install, favorites lists you share and play back, machinima + OBS/Twitch, gateway to Exchange revival via Soul City.
 
 Much of the catalog/playset UX already exists in Don's **SimFreaks prototype** — compose 2D scenes with room snapshot backgrounds, place objects and Sims like vinyl sticker playsets, publish installable collections.
 
 **Announce after** the web hub bootstraps an audience — guides and MTS first, Angel second.
 
-Full spec: [`soul-city/micropolis-angel.yml`](soul-city/micropolis-angel.yml)
+Full spec: [`soul-city/sims1-soul-bridge.yml`](soul-city/sims1-soul-bridge.yml)
 
 ---
 

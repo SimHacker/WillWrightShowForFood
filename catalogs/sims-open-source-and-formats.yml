@@ -13,7 +13,7 @@ meta:
     - sims1-community-landscape.yml
     - ../characters/jeff-adkins/
     - ../repo-shows/jeff-adkins/
-    - ../apps/micropolis-angel/
+    - ../apps/soul-angel/windows/
 
 open_source_reimplementations:
   freeso:

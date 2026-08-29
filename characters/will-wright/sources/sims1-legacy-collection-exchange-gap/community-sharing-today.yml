@@ -59,7 +59,7 @@ dream_tools_gap:
     consent, catalog server, virus scan, GUID collision manager, file cop, graveyard manager, offline PWA.
     Replaces zip + Explorer + dead Share button. Spec: ../../../../catalogs/soul-city/browser-ecosystem.yml
   tray_watcher: |
-    MicropolisAngel watches export folder → same publish pipeline via WebView2 + FileBridge.
+    SoulAngel watches export folder → same publish pipeline via WebView2 + FileBridge.
   federate_sfs: |
     Don't replace SFS for external creators — index simfil.es in CARD metadata.
   github_native:

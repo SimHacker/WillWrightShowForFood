@@ -90,7 +90,7 @@ capabilities:
     run_offline: Object browser, shopping list builder, album editor, playset composer (2D sticker stage)
     run_online: Publish, sync favorites, Repo Show stream hooks, cross-player discover
     angel_upgrade: |
-      MicropolisAngel = same TS platform in WebView2 + FileBridge + OBS/stream — not a separate codebase.
+      SoulAngel = same TS platform in WebView2 + FileBridge + OBS/stream — not a separate codebase.
 
 gap_fill_matrix:
   - gap: "No UCP Internet button"

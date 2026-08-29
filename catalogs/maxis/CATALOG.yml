@@ -64,13 +64,13 @@ pipeline:
     note: "Read .iff directly; WebGPU render — Transmogrifier / ShowNTell parity without ActiveX"
   sqlite_catalog:
     status: spec
-    path: "../../apps/micropolis-angel/CATALOG-DB-SCHEMA.yml"
+    path: "../../apps/soul-angel/windows/CATALOG-DB-SCHEMA.yml"
     regenerate: "Scan owned install + user roots via TypeScript IFF parser — NOT legacy seed import"
     compare_only: "Legacy object catalog seed (SIMSKIT-LINEAGE.yml) — validation diff, unknown quality"
     lineage: "Sim Obliterator / vitamoo — full credit in schema doc"
   simplifier_crawl:
     status: spec
-    path: "../../apps/micropolis-angel/SIMSKIT-LINEAGE.yml#simplifier"
+    path: "../../apps/soul-angel/windows/SIMSKIT-LINEAGE.yml#simplifier"
     note: |
       Port navigation+inject from Simplifier C++; scrape **preview images only** during catalog crawl.
       Names/descriptions from XML+iff — NOT glyph OCR. Retire crawl when WebGPU previews ship.

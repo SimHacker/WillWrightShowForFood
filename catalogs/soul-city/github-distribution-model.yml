@@ -41,7 +41,7 @@ repos:
       - catalogs/ — federated brand dirs (simfreaks, simslice, simprov, zombie-sims, maxis metadata)
       - characters/ — portrayal rooms; source bundles; correspondence
       - repo-shows/ — episode artifacts, bridge specs, harvested homefun
-      - apps/ — MicropolisAngel, stream-gateway pointers
+      - apps/ — SoulAngel (windows host + sims1 bridge), stream-gateway pointers
     role: "Show catalog + Sims object repo + Soul City hub index"
   moollm:
     url: https://github.com/SimHacker/moollm

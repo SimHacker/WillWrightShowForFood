@@ -16,7 +16,7 @@ rewrites.*
 |-------|--------|--------------------|
 | [**apps/**](../../apps/README.md) | scaffold + first apps | The honest README says "nothing shipped yet" — then lists what's coming: stream overlay, Windows companion, OBS toys. Watch this space literally. |
 | [**stream-gateway**](../../apps/stream-gateway/GLANCE.yml) | seed | The brain bus: SSE overlay + Twitch/YouTube chat, spec'd in [brain-stream.yml](../../process/brain-stream.md). Live Cursor on a stream overlay. |
-| [**micropolis-angel**](../../apps/micropolis-angel/) | native scaffold | A WinUI 3 + WebView2 Windows companion for Micropolis. |
+| [**soul-angel/windows**](../../apps/soul-angel/windows/) | native scaffold | The WinUI 3 + WebView2 Windows host for SoulAngel and the sims1 Soul Bridge. |
 | [**packages/wwsff-tooling**](../../packages/README.md) | early | Where code that generalizes across shows gets extracted — the `@wwsff/*` layer under the skills layer. |
 | [**rigs/**](../../rigs/README.md) | growing | Bring-your-own-rig setups, from artisanal VS Code to a PDP-10 MacLisp lap rig. Each rig is a reproducible way to attend a show. |
 | [**skills/repo-show**](../../skills/repo-show/README.md) | active | The show orchestrator protocol itself — the first big lift target of the whole repo. |

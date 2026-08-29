@@ -180,8 +180,8 @@ steam_community_guides:
     long: get-the-sims-on-steam.md
 
   native_tools_later:
-    product: soul-city/micropolis-angel.yml
-    name: MicropolisAngel
+    product: soul-city/sims1-soul-bridge.yml
+    name: SoulAngel (sims1 Soul Bridge)
     note: |
       Windows Steam Software companion — Simplifier showcase, catalog capture, machinima, OBS/Twitch,
       Exchange revival gateway. NOT a web wrapper. Announce after Soul City bootstraps audience.
@@ -189,7 +189,7 @@ steam_community_guides:
   rollout_order:
     1: "Web Soul City + public Will Repo Show + catalog CARD dirs"
     2: "ModTheSims + Steam Community Guide + YouTube (UCC installs + show clips)"
-    3: "MicropolisAngel on Steam Software (Windows) — Simplifier + catalog + streaming stack"
+    3: "SoulAngel on Steam Software (Windows + Mac) — Simplifier + catalog + streaming stack"
     4: "EA conversation only after traction + Heather/Steve/MTS relationships warm"
 
   simprov_on_steam:
