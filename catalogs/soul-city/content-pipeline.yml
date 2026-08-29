@@ -58,6 +58,33 @@ backup_policy:
   disposable: "Every generated set -- regenerable by definition, so backing it up is backing up a build directory"
   honest_cost: "Storing original plus built copy roughly doubles a large collection. The cache compresses well and can keep originals in their delivered archives; outputs need no backup. Cheap for what it buys."
 
+exchange_revival:   # Don, 2026-08-29 -- "this lets us recreate the sims exchange ... much safer and more virtual"
+  the_hard_problem: "Never the upload button -- DEPENDENCIES. And only two options, both bad."
+  option_1_dont_bundle: "The lot downloads BROKEN: missing objects, wrong objects, empty rooms, sometimes a crash. Communities adapted by circulating no-custom-content lots -- a real solution and a real amputation."
+  option_2_bundle: |
+    The lot works, and every download REDISTRIBUTES OTHER PEOPLE'S OBJECTS: credit stripped, readmes
+    gone, duplicate copies of the same mesh under different ids, conflicts multiplying, sizes
+    exploding. The failure mode that made Sims 2 era creators furious, and they were right.
+  why_unsolved: "The two obvious answers are broken downloads and unauthorized redistribution"
+  third_answer: "SHARE THE RECIPE, NOT THE PAYLOAD -- same discipline as everywhere else on this project"
+  shared_lot_format: "Lot plus manifest: layout and instance state, plus what it needs by registry id"
+  on_arrival:
+    already_have: "Matched by CONTENT HASH, not filename or number -- nothing installed twice, no collision resolved by coin flip"
+    missing: "Becomes a proxy wearing its own glyph -- the lot loads, plays, and shows exactly what it wants and where to get it"
+    installs: "Resolve to THE CREATOR'S OWN CANONICAL ENTRY -- attribution is structural, not a courtesy line in a readme a repacker deleted"
+    id_conflicts: "Stop mattering -- ids are assigned during YOUR build, not baked into somebody else's upload"
+  result: "The download is never broken and nothing is ever redistributed"
+  why_not_available_in_2001: |
+    Not a failure of nerve: content-addressed storage, client-side compute in a browser with file
+    access, ubiquitous cameras for scanning a code off a screen, and cheap deterministic rebuilds are
+    all recent. The Exchange shipped the right idea on the wrong decade's infrastructure -- and the
+    official exchanges are long gone, along with much of what lived only there.
+  why_it_encourages_sharing:
+    - "A creator's work is never inside somebody else's upload"
+    - "A downloader never chooses between a broken lot and a mystery bundle"
+    - "Every object in a shared lot is a link back to whoever made it"
+  venue: sims1-soul-bridge.yml   # the suburbia of featured home save files -- where shared lots live
+
 footgun:   # name it now
   what: "FIND OUT WHAT THE GAME ITSELF WRITES INTO THE OUTPUT TREES before treating them as disposable"
   severity: "A build system that deletes user files is a catastrophe, not a bug"

@@ -28,8 +28,8 @@ revival_thesis: |
   **Soul City browser ecosystem** replaces zip + file manager + the dead Share button: local
   save read/write with consent, catalog server for discover/install/publish, virus scan, GUID tools,
   graveyard manager — offline-capable, at least as convenient as the old UCP Internet button.
-  Spec: ../../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/browser-ecosystem.yml
-  Git lane: ../../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/github-distribution-model.yml
+  Spec: ../../../../catalogs/soul-city/browser-ecosystem.yml
+  Git lane: ../../../../catalogs/soul-city/github-distribution-model.yml
 
 show_beats:
   - "Will on Exchange as the durable innovation (HN: creators won)"

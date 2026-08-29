@@ -99,6 +99,66 @@ large collection roughly doubles. The cache compresses well and can
 keep originals in their delivered archives; the outputs need no
 backup at all. For what it buys, that is cheap.
 
+## What this makes possible: lot sharing that actually works
+
+*Don, 2026-08-29: this recreates Exchange-style uploading and
+downloading of lots, safer and more virtual, and encouraging to
+sharing.*
+
+The Exchange's hard problem was never the upload button, it was
+**dependencies**, and it had only two options, both bad:
+
+1. **Do not bundle the custom content.** The lot downloads and is
+   broken: missing objects, wrong objects, empty rooms, sometimes a
+   crash. Communities adapted by circulating "no custom content"
+   lots, which is a real solution and also a real amputation.
+2. **Bundle the custom content.** Now the lot works, and every
+   download **redistributes other people's objects** -- credit
+   stripped, readmes gone, duplicate copies of the same mesh
+   accumulating under different ids, conflicts multiplying, file
+   sizes exploding. This is the failure mode that made creators
+   furious in the Sims 2 era, and they were right to be.
+
+Nobody solved it because the two obvious answers are broken
+downloads and unauthorized redistribution. This pipeline has a third
+answer, and it is the same discipline as everywhere else on this
+project: **share the recipe, not the payload.**
+
+A shared lot travels as **lot plus manifest**: the layout and the
+instance state, plus a list of what it needs, by registry id. On
+arrival:
+
+- Everything you already have is **matched by content hash**, not by
+  filename or number, so nothing gets installed twice and no
+  collision has to be resolved by a coin flip.
+- Everything missing becomes a **[proxy that wears its own
+  glyph](guid-registry.md)**, so the lot loads, plays, and shows you
+  exactly what it wants and where to get it.
+- Every install resolves to **the creator's own canonical entry**,
+  which means attribution is structural rather than a courtesy line
+  in a readme that a repacker deleted.
+- Id conflicts stop mattering, because ids are assigned during your
+  build, not baked into somebody else's upload.
+
+So the download is never broken and nothing is ever redistributed.
+The dilemma was real; it just needed pieces that did not exist yet.
+
+**Why this was not available in 2001.** Not a failure of nerve:
+content-addressed storage, client-side compute in a browser with file
+access, ubiquitous cameras for scanning a code off a screen, and
+cheap deterministic rebuilds are all recent. The Exchange shipped the
+right idea on the wrong decade's infrastructure, and the official
+exchanges are long gone, along with a great deal of what lived only
+there.
+
+**And it should make sharing feel safe**, which is the part that
+matters for whether anyone does it. A creator's work is never
+inside somebody else's upload. A downloader never has to choose
+between a broken lot and installing a mystery bundle. Every object in
+a shared lot is a link back to whoever made it. Those are the terms
+that were missing when people stopped sharing lots with content in
+them.
+
 ## One footgun worth naming now
 
 **Find out what the game itself writes into the output trees before
