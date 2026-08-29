@@ -57,6 +57,16 @@ Collection in search and more-like-this, Steam payments for the paid
 tier, reviews, community hub, and the legitimacy of a real store page.
 That reach is the case for the app.
 
+**What the app IS (ruling, Don 2026-08-29):** the main focus of the
+Steam app, besides being a portal and hub wrapper for the web site,
+is **the SoulAngel app itself** -- shipping on **Windows and Mac**,
+and Linux if that makes sense and is possible. Implementation note:
+the current prototype shell (WinUI 3 + WebView2) is Windows-only, so
+Mac support forces the cross-platform shell decision (per-OS native
+shells vs a Tauri/wry-class wrapper around the same web modules) --
+flagged for the SoulAngel architecture doc. The modules themselves
+are web and portable by construction.
+
 ## Precedents
 
 | App | Lesson |
@@ -100,42 +110,68 @@ Not legal advice; EA's temperament in 2026 is not EA's temperament in
    machinima, broadcast, with the sims1 Soul Bridge and its TMog
    modules as launch showcase. The store page describes creation, preservation, and
    storytelling. The word "protest" never appears on it.
-2. **The movement lives on the web.** Petition, turnstile, tote board,
-   migration counts, and comments run on Soul City -- git-backed,
-   consent-first, platform-independent. Steam sign-in provides
-   voluntary ownership verification. Do not build the underground
-   railroad's headquarters inside the landlord's mall.
+2. **The movement lives on the web.** Turnstile, tote board, migration
+   counts, and comments run on Soul City -- git-backed, consent-first,
+   platform-independent. Steam sign-in provides voluntary ownership
+   verification. Do not build the underground railroad's headquarters
+   inside the landlord's mall.
 3. **The ceremony lives in the game.** Petition table, turnstile, tote
    board, and the pool with no ladder ship as sims1 custom objects
    through the same custom-content channel every other object uses --
    procedural rhetoric, performed diegetically (see
    [the Soul City README](README.md), "The turnstile" and "The pool").
 
-Compliance note: signatures and comments are personal data. The web
-side needs a real privacy policy (GDPR); consent-first design already
-matches, and Steam's own Privacy Policy applies to anything the app
-collects.
+### Two petitions (ruling, Don 2026-08-29)
+
+**The human petition is delegated.** Host it on an established
+petition platform and point at it from Soul City. Their signature
+handling, verification, and privacy policy cover the personal data;
+Soul City stays nearly free of it. What Soul City keeps is the
+turnstile and tote board -- voluntary, Steam-verified ownership counts
+("the opt-in is the data"), not names.
+
+**The character petition is ours, and it is the point.** Rescued
+characters sign it themselves -- and giving characters themselves
+voices is the whole THING. The soul IS the signature: a soul-file in
+git, speaking through soul voice (the soul-chat skill: give anything
+a voice), testifying in character on the record. No platform hosts
+it because no platform could: it is diegetic, git-backed, and
+composed of fictional representations, not personal data (BYOB --
+whether the character "is" its player stays permanently on the
+player's side of the line). If somebody signs a petition with their
+sims characters, well, nobody controls that. Wink.
+
+Compliance note: delegating the human petition shrinks the GDPR
+surface to the tote board's consent-first counts and whatever the app
+collects (Steam's own Privacy Policy applies there). Character
+signatures are authored fiction; the player's authorship consent is
+the standard publish step every shared object already takes.
 
 ## Stop Killing Games -- the adjacent movement
 
-The closest precedent for organized player protest over game
+Nothing like the soul-migration hub exists -- that lane is open. The
+closest cultural precedent for organized player protest over game
 mortality: **Stop Killing Games** gathered **1,294,188 verified
-signatures**, and the European Commission
-[formally replied on 16 June 2026](https://citizens-initiative.europa.eu/stop-destroying-videogames-commissions-reply-european-citizens-initiative_en):
-no playability law (intellectual property and proportionality cited),
-a voluntary industry code of conduct to be explored by end of 2026,
-and a consumer-awareness effort
-([PC Gamer's coverage](https://www.pcgamer.com/games/stop-killing-games-says-the-fight-goes-on-after-european-commission-rejects-proposed-rule-changes-were-much-more-than-just-this-single-petition/);
-the campaign has pivoted to the Digital Fairness Act with about 45
-MEPs supporting).
+signatures**, submitted as the "Stop Destroying Videogames" European
+Citizens' Initiative on 26 January 2026. The European Commission
+[formally replied on 16 June 2026](https://citizens-initiative.europa.eu/news/european-commission-replies-stop-destroying-videogames-initiative-2026-06-16_en)
+(communication C(2026) 4110): it "cannot propose a legal obligation"
+to keep games playable (proportionality, intellectual property,
+publisher costs, and security cited), offering instead stakeholder
+exchanges toward a **voluntary industry code of conduct** by end of
+2026, a report on the Digital Content Directive (EU) 2019/770, and
+consumer-awareness work. The campaign has pivoted to the Digital
+Fairness Act, with roughly 45 MEPs supportive per press coverage.
 
-Two lessons. First: more than a million people will sign for game
-preservation -- the audience exists. Second: asking institutions for
-permission just hit its ceiling. Soul Saver's mechanism is different
-in kind -- **exit as voice**, actual migration rather than
-petition-and-wait. The tote board counts what the Commission declined
-to legislate, which makes Soul City the working demonstration the SKG
-argument lacked, and a story its community will carry.
+Two lessons, one framing. First: a proven audience of over a million
+people will sign for game preservation. Second: asking institutions
+for permission just hit its ceiling. The Soul City mechanism is
+different in kind -- **exit as voice**, actual migration rather than
+petition-and-wait -- which makes it the working demonstration the SKG
+argument lacked: souls don't need EA's permission to leave, and the
+tote board counts what the Commission wouldn't legislate. The
+carriable story: **"we built what the EU said it couldn't require"**
+-- a frame essayists and the SKG community can pick up and run with.
 
 ## The dormant domain: thesimstransmogrifier.com
 
@@ -178,9 +214,9 @@ currently empty). It is safe and singularly useful:
 2. **Steam Community Guides** on the Legacy Collection hub funnel
    players to the web site (already specced:
    [steam-community-guide.md](steam-community-guide.md)).
-3. **SoulAngel ships on Steam** as a Player Tools listing: universal
-   tier plus the sims1 Soul Bridge and TMog modules as launch
-   showcase. Utility on the store, movement on the web, ceremony in
+3. **SoulAngel ships on Steam** as a Player Tools listing (Windows
+   and Mac; Linux if feasible): universal tier plus the sims1 Soul
+   Bridge and TMog modules as launch showcase. Utility on the store, movement on the web, ceremony in
    the game.
 4. **Friend bridges deepen by cooperation, not injection**: Tiny Life
    with Ell, Proxi with Galium -- shared formats and export paths,
