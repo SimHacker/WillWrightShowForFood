@@ -76,6 +76,7 @@ Candidate TMog modules for the sims1 portal:
 | [Stat-U-Matic](stat-u-matic.md) statue photo booth and scene poser | SimShow + the SimFreaks playset prototype; seed: VitaMoo viewer in the TMog suite |
 
 | [GUID registry + remapper](guid-registry.md) (file cop on shrooms) | Magic Cookie registry + The Sims File Cop; the 2004 renovation plan asked for it |
+| [Object shops](object-shops.md): jukebox, picture rig, backdrop, accessory manager | objects as containers; built with the pie menu tree editor and the ad editor |
 | Scene and preview rendering (all modules) | governed by [rendering-and-rights.md](rendering-and-rights.md): client renders, server keeps authored work |
 | Object viewer + template instance browser | every template gets a stats page listing all public objects made from it -- the Tombstone Generator's index page, generalized |
 

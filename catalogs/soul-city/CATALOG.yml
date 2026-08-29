@@ -53,6 +53,7 @@ soul_angel:
   sims1_bridge: sims1-soul-bridge.yml
   guid_registry: guid-registry.yml   # object id index + remapper + per-save id virtualization
   rendering_policy: rendering-and-rights.yml   # client renders, server keeps what the player authored
+  object_shops: object-shops.yml   # objects as UGC containers + the pie menu tree / ad editor
   broadcast: "Soul City Broadcast Network — TV (streams/machinima), radio (narrated albums), magazine (published stories)"
   not: "Web wrapper; Sim*/Micropolis trademark in product name"
 

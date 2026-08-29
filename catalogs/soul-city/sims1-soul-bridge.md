@@ -126,7 +126,9 @@ with the original Tombstone Generator.
 The bridge has two ends. The game end is the app above. The **Soul
 City end is a place**: the part of town relating to The Sims 1, with
 shops and residencies -- creator storefronts (SimFreaks, SimSlice, and
-friends), TMog tool shops, album galleries, the graveyard.
+friends), TMog tool shops, album galleries, the graveyard. The shop
+cluster has its own spec: [object-shops.md](object-shops.md), where
+ordinary objects become containers players fill.
 
 And the district expands -- like a pie menu slide -- into a **huge
 suburbia of featured home save files**, the way The Sims Online

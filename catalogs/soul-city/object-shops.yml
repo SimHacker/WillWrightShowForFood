@@ -1,0 +1,82 @@
+# The shops + the action editor — objects as UGC containers (Don, 2026-08-29)
+# Prose spec: object-shops.md. The realization: a startling number of Sims objects are already
+# containers with a switch. Ship them empty, let players fill them.
+
+meta:
+  id: object-shops
+  type: module_cluster
+  status: spec
+  one_line: "Ordinary game objects as containers for player content, plus a general pie menu tree editor that builds new ones without code."
+  clusters_around: sims1-soul-bridge.yml   # the shops-and-residencies district
+  governed_by: rendering-and-rights.yml
+
+shops:   # each = one template + a generator + a storefront; open list by construction
+  jukebox:
+    container: "Music player"
+    fill_with: "Your own tracks — the most requested thing in the game's history, and it was always just a file list"
+  anythingomatic:
+    container: "Accessory manager (appliance pattern, portals-and-modules.md)"
+    fill_with: "Any accessory category — toggle on/off, reset, organize; generalizes past wigs"
+  rugomatic_picture_rig:
+    container: "ONE rug holding MANY images, switchable from the pie menu"
+    fill_with: "Import a Family Album into a rug — walk on your own story. A picture rig you can stand on."
+  backdrop:
+    container: "Switchable scene backdrop"
+    lineage: |
+      Superstar (2003) brought the film set, photo shoot set, and music video set to Studio Town.
+      Bring the backdrop home and load your own scenes. (Exact object names to be confirmed from
+      the official-object catalog scan — guid-registry.yml.)
+    fill_with: "Your own scenes"
+  statue:
+    container: "Posed character"
+    spec: stat-u-matic.md
+  tombstone:
+    container: "Text and a soul"
+    spec: sims1-soul-bridge.md   # Tombstone Generator embodied in Death; the reaping ceremony
+  open_list: [tvs, paintings, fireplaces, fish_tanks, signs, computers, radios, aquaria, lava_lamps]
+  rule: "Every object with a state you can switch is a shop waiting to open"
+
+action_editor:
+  what: "General pie menu tree editor — organize any number of actions into slices, submenus, slides"
+  populated_from: "A library of ACTION PLUGINS; no SimAntics required to make a jukebox that plays your songs"
+  two_kinds:
+    player_actions:
+      what: "What appears when you click the object"
+      examples: [toggle_accessory, switch_to_picture, play_track, next_scene]
+    autonomous_actions:
+      what: "What the object BROADCASTS so Sims come use it on their own — the motive advertising system"
+      surface: "THE AD EDITOR — set what the object advertises, to whom, how loudly, under what conditions"
+      dispatch_semantics: ../../schemas/advertisement-dispatch.yml   # forward / inject / hub; SimAntics lineage acknowledged
+      why_it_matters: "An object without advertisements is furniture; an object with them joins the simulation. The editor should make the second no harder than the first."
+
+plugin_ladder:   # progressive disclosure, NOT tiers sold separately
+  1: "Play this audio file [upload file]"
+  2: "Show this picture and text [upload picture] [enter text]"
+  3: "Say something in a popup, with this picture and these buttons — each button branches to another node"
+  4: "Conditionals and state — remember choices; gate slices on motives, relationships, time of day, who is clicking"
+  5: "A friendly visual programming language — branching dialog and behavior graph, authored visually, compiled down"
+  6: "Raw SimAntics — Edith-class access for people who want it"
+  rung_3_note: |
+    Where it stops being decoration and becomes INTERACTIVE FICTION INSIDE A SIMS OBJECT: a
+    branching conversation with a picture and buttons is a complete storytelling medium, and it is
+    maybe two weeks of work on top of rungs 1 and 2.
+  why_not_both: |
+    The ladder does not replace Edith. Visual language for everyone, raw semantics tree for the
+    people who grew up reading it. Everything the friendly editor emits must be inspectable and
+    editable at the level below it, all the way down.
+
+why_it_matters: |
+  These are not important objects. A rug that cycles your vacation photos is not important. But it
+  is YOURS, it took five minutes, and it makes a house feel like somebody lives there. The Sims was
+  always a medium for personal expression pretending to be a game about furniture; giving players
+  containers to fill is the shortest path from "I downloaded some stuff" to "I made this, look."
+  Every generated object gets its template index page — the jukebox template's page lists every
+  jukebox anyone published, a browsable installable catalog of other people's taste.
+
+see_also:
+  - portals-and-modules.md
+  - sims1-soul-bridge.yml
+  - stat-u-matic.md
+  - rendering-and-rights.yml
+  - guid-registry.yml          # every generated object needs a clean id
+  - ../../schemas/advertisement-dispatch.yml
