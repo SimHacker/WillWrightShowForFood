@@ -62,6 +62,9 @@ deadline.
 
 ## EA policy fit (checked 2026-08-29)
 
+Companion policy for what may be rendered and uploaded:
+[rendering-and-rights.md](rendering-and-rights.md).
+
 Two documents govern, and neither requires anyone to share anything.
 
 **The [EA User Agreement](https://www.ea.com/legal/user-agreement)

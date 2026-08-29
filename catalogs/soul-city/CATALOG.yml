@@ -52,6 +52,7 @@ soul_angel:
     read-write plugins in the web overlay. Windows first, Mac after (universal tier needs no Sims).
   sims1_bridge: sims1-soul-bridge.yml
   guid_registry: guid-registry.yml   # object id index + remapper + per-save id virtualization
+  rendering_policy: rendering-and-rights.yml   # client renders, server keeps what the player authored
   broadcast: "Soul City Broadcast Network — TV (streams/machinima), radio (narrated albums), magazine (published stories)"
   not: "Web wrapper; Sim*/Micropolis trademark in product name"
 

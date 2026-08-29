@@ -61,6 +61,14 @@ playback, carried forward into the TMog suite. The path:
    **editor**. Pie menus, sound effects, all the nice touches from
    The Sims -- implemented fresh and clean and much better.
 
+## What may be published
+
+Stat-U-Matic composes scenes from art the player owns, so its
+publishing rules come from
+[rendering-and-rights.md](rendering-and-rights.md): render on the
+client, publish composed and flattened pictures on explicit consent,
+never a reassemblable sprite set of an official object.
+
 ## Provenance
 
 - **SimShow (2000):** Don's original dress-and-pose viewer, part of

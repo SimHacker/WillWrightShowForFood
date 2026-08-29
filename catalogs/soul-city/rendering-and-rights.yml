@@ -1,0 +1,76 @@
+# Client-side rendering + what we host — the redistribution policy (Don, 2026-08-29)
+# Prose spec: rendering-and-rights.md. One line: the client renders, the server keeps what the
+# player authored. Not legal advice; counsel reviews before launch.
+
+meta:
+  id: rendering-and-rights
+  type: policy
+  status: spec
+  one_line: "Rendered images are screenshots; asset-fidelity sprite sets are the object. Test: is it reconstructable?"
+
+the_test:
+  question: "Could a determined person rebuild a working game object from what we host?"
+  yes_means: "We hosted the OBJECT — do not do it"
+  no_means: "We hosted a PICTURE — fine, publish freely"
+  never_publish: "Complete reassemblable sets of an official object's sprites, rotations, zooms, z-buffers, alpha"
+
+precedents:
+  ea_shipped_it: |
+    The Sims 1 shipped "Auto Generate Web Pages" — exported houses, families, albums as HTML for
+    the internet, rendered Maxis art included. Maxis built the publish-images-of-our-objects
+    pipeline. Soul City album/scene publishing restores it after the Legacy Collection dropped
+    the upload path.
+  fansite_norm: "Object preview images were the download-site economy for 25 years (SimFreaks included)"
+  don_2004_request: |
+    Transmogrifier renovation plan asked Maxis for exactly this tooling: "Export composed picture
+    previews and text descriptions of objects, for use on web pages... export them as gifs or
+    jpegs directly from Transmogrifier." A request ON THE RECORD; no document shows Maxis answered.
+    The practice ran unchallenged for two decades regardless.
+  background: "Screenshots and machinima are normal, expected, publisher-desired marketing"
+
+architecture:   # split the layers and the question mostly dissolves
+  object_metadata:
+    where: "Server, public, complete"
+    why: "Facts about a product, not art — this is what makes the catalog useful to everyone"
+    fields: [name, description, price, guid, expansion, category]
+  official_object_art:
+    where: "Rendered on the CLIENT from the player's own legal install; cached locally"
+    why: "Never uploaded as a standalone asset; materializes only on machines entitled to it"
+  user_authored_compositions:
+    where: "Server, on explicit per-artifact consent"
+    why: "The player made it — it is a screenshot of their game"
+    examples: [scenes, showcases, room_snapshots, albums]
+  ugc_object_art:
+    where: "Server, creator's choice, credited"
+    why: "Creator's own work; EA mods policy already allows free distribution"
+
+install_requirement:
+  what: "Advanced dynamic house rendering, editors, and scene composition need a real purchased install"
+  framing: |
+    Not a limitation to apologize for: Soul City makes owning the game MORE valuable rather than
+    substituting for it — a good-faith posture worth being able to point at.
+  verification: "Steam sign-in via OpenID (built for the turnstile, steam-app-strategy.md) does double duty as the license-hygiene gate"
+  non_owner_experience: "Full metadata catalog + UGC art + user-authored scenes; official art simply does not materialize"
+
+gray_area_resolved:   # Don named it precisely; where each case falls
+  composed_scene_showcases: "FINE — the SimFreaks playset prototype's whole point; same category as any screenshot"
+  catalog_preview_thumbnails: "FINE — the 25-year norm; presentation renders: composed, flattened, one angle, screenshot resolution"
+  complete_asset_fidelity_extraction: "DON'T — functions as an asset repository, substitutes for the install, fails the test"
+  cost_of_honoring: "Small: render Maxis previews locally, cache locally, server holds metadata + deliberate compositions"
+
+rules:
+  1: "Push rendering to the client, always — the server never needs game art to do its job"
+  2: "Upload only on explicit per-artifact consent, never ambiently (paid tiers gate FEATURES, never widen uploads)"
+  3: "Apply the reconstructability test before hosting any render of official art"
+  4: "Metadata travels freely — how non-owners still get a complete searchable catalog"
+  5: "Never host official object art as a standalone download, at any fidelity, for any tier"
+  6: "Creators own their own art; UGC publishing is the creator's call, credited"
+  7: "Advanced rendering requires a verified install — the thing that keeps the design clean"
+
+see_also:
+  - portals-and-modules.md
+  - browser-ecosystem.yml
+  - stat-u-matic.md          # the scene composer this governs
+  - guid-registry.yml        # official-object catalog as metadata
+  - membership-model.md
+  - steam-app-strategy.md

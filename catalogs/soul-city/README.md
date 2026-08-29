@@ -42,7 +42,7 @@ Four jobs the guides cover:
 | **Now** | [Soul City](CATALOG.yml) web hub + [Steam Community Guides](steam-community-guide.md) |
 | **Later** | [**SoulAngel**](soul-angel.md) — Windows and Mac Steam Software companion (Simplifier + catalog + machinima + streaming), carrying [the sims1 Soul Bridge](sims1-soul-bridge.md) and its TMog modules. Announced after web audience bootstraps. |
 
-Spec: [Steam guide strategy](steam-community-guide.md) · [Steam app strategy](steam-app-strategy.md) · [Portals and modules](portals-and-modules.md) · [Stat-U-Matic](stat-u-matic.md) · [GUID registry](guid-registry.md) · [sims1 Soul Bridge](sims1-soul-bridge.md) · [Membership model](membership-model.md) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
+Spec: [Steam guide strategy](steam-community-guide.md) · [Steam app strategy](steam-app-strategy.md) · [Portals and modules](portals-and-modules.md) · [Stat-U-Matic](stat-u-matic.md) · [GUID registry](guid-registry.md) · [Rendering and rights](rendering-and-rights.md) · [sims1 Soul Bridge](sims1-soul-bridge.md) · [Membership model](membership-model.md) · landscape: [`../sims1-community-landscape.md`](../sims1-community-landscape.md)
 
 ## Federated catalogs
 
