@@ -15,6 +15,7 @@ beside it unchanged.
 | [mud-map.txt](mud-map.txt) | 1990-04-23 | 72K | **Rec Room exit crawl**: every advertised exit from the Rec Room, with the room description you get when you go there. A map of CMU TinyMUD as a social universe hub. |
 | [tinymud.txt](tinymud.txt) | 2005-05-20 compile | 25K | **Email corpus**: launch announcement, server moves, Zarf's MIDgaard proposal, **Don's "what could be..." language letter**, furBot mapping treatise, Don's robot-protocol posts, Brian Harrison's robot ethics. |
 | [tinymud-forwards.txt](tinymud-forwards.txt) | 2026-08-30 recovery | 32K | **Forwarded originals**: Todd Masco's 12 Sep 1989 announcement, **Don's 24 Sep letter to MLY with `tinymud.el`** ("a consentual hallucination"), Aspnes's 1.3.1 source release, fuller mapping-droids and furBot texts, **Espen Aarseth's 2 Feb 1990 request** for Don's client. |
+| [clients/](clients/README.md) | 2026-08-30 dig | -- | **Emacs client archaeology**: Don's Mocklisp `tinymud.ml` for UniPress Emacs (NeWS transport, trigger tables, hypertext rooms), the CMU `tinymud.el` in two datable revisions (Sep 1989 and Jul 1990 with Clamen's cyberportals), Goehring's MIT "TinyTalk.el", provenance and comparison. |
 
 Together they are a time capsule of **programmable social worlds before the web**:
 builders, robots, ethics, parsers, and the question "what language should
@@ -260,6 +261,10 @@ Notable for WWSFF/Soul City lineage:
 - **Espen Aarseth** -- Bergen; asked Don for his TinyMUD client Feb 1990;
   founded game studies (*Cybertext*, 1997; *Game Studies* journal).
 - **Todd Masco** -- announced TinyMUD to the elbows list 12 Sep 1989.
+  He has since passed away; the earliest document in this archive is his.
+- **Pavel Curtis** -- co-credited on the later `mud.el` client with
+  Aspnes and Clamen before founding LambdaMOO; see
+  [clients/README.md](clients/README.md).
 
 ## Related in this repo
 

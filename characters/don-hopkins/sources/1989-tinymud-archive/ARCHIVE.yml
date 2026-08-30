@@ -26,6 +26,19 @@ files:
     gems:
       consentual_hallucination: "Don's 24 Sep 1989 one-breath definition: 'a roll-yer-own universe construction kit, a consentual hallucination... a petri-net based hypertext system'"
       aarseth: "Espen Aarseth (Bergen) asks Don for his TinyMUD client, 2 Feb 1990 -- seven years before Cybertext founded game studies"
+  clients/:
+    dug: "2026-08-30"
+    readme: clients/README.md
+    contains:
+      tinymud-1989-09.el: "CMU elisp client, earliest known copy (124 lines, lancelot default), extracted from Don's 24 Sep 1989 letter to MLY"
+      tinymud-1990-07.el: "Aspnes/Clamen elisp client (462 lines, daisy default, cyberportals), comp.sources.games 27 Jul 1990 via BartMassey-upstream/tinymud"
+      tinymud.ml: "Don's Mocklisp client for UniPress (Gosling) Emacs -- NeWS psh transport, mouse look, editable trigger tables, hypertext room authoring; original lives in PieMenus/Misc/"
+      tinytalk-goehring-0.6.el: "Scott Goehring / Robert Earl MIT elisp client (circulated as TinyTalk.el, internally tinymud.el v0.6), 1999 Alex Schroeder maintenance, via oocities"
+      comp-sources-games-1990-README.txt: "Bill Randle provenance note: tinymud.el and tint came from lancelot"
+    open_hunts:
+      - "mud.el with Pavel Curtis credit (Aspnes/Clamen/Curtis 1989-91) -- parcftp.xerox.com and ftp.math.okstate.edu dead, no Wayback captures"
+      - "TinyTalk.el v0.5 per rec.games.mud FAQ census"
+    memorial: "Todd Masco (tm2b@andrew.cmu.edu), author of the archive's earliest document, has passed away"
 
 don_hopkins:
   directory_entry:
