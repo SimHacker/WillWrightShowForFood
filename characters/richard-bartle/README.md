@@ -10,4 +10,6 @@ Invitation portrayal — **not** Richard Bartle. [Standards](../../schemas/portr
 
 Jul 2026: Essex assignment blooper post on Facebook — [`sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml`](sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml)
 
+Aug 2026: [Bartle against the primary record](sources/1990-imucg-vs-tinymud-primary-record.md) — forensic reading of his December 1990 BT-report TinyMUD verdict against [Don's 1989-90 TinyMUD artifacts](../don-hopkins/sources/1989-tinymud-archive/README.md)
+
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

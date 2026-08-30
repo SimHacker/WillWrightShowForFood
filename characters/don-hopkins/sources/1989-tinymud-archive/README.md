@@ -10,7 +10,7 @@ beside it unchanged.
 
 | File | Date | Size | What it is |
 |------|------|------|------------|
-| [meeting.log.txt](meeting.log.txt) | 1989-12-11 | 44K | **Minutes of the First TinyMUD Robotics Conference**, held in-world 12/9/89 7PM EST in the Robot Room off the Rec Room. Stenographer: Fiona (Stewy typing). ~40 participants. |
+| [meeting.log.txt](meeting.log.txt) | 1989-12-11 | 44K | **Minutes of the First TinyMUD Robotics Conference**, held in-world 12/9/89 7PM EST in the Robot Room off the Rec Room. Stenographer: Fiona (Stewy typing). 25 named attendees. |
 | [mud-log.txt](mud-log.txt) | 1990-04-23 | 19K | **Player notebook**: Oxford English Dictionary of TinyMUD commands, control volumes, in-game email how-to, player directory entries, Gloria bot help text, flexi/Terminator logs, notes on OUTPUTPREFIX/SUFFIX. |
 | [mud-map.txt](mud-map.txt) | 1990-04-23 | 72K | **Rec Room exit crawl**: every advertised exit from the Rec Room, with the room description you get when you go there. A map of CMU TinyMUD as a social universe hub. |
 | [tinymud.txt](tinymud.txt) | 2005-05-20 compile | 25K | **Email corpus**: launch announcement, server moves, Zarf's MIDgaard proposal, **Don's "what could be..." language letter**, furBot mapping treatise, Don's robot-protocol posts, Brian Harrison's robot ethics. |
@@ -235,3 +235,4 @@ Notable for WWSFF/Soul City lineage:
 - [qgcon-inclusivity-paper](../../../../catalogs/soul-city/) -- procedural rhetoric thread
 - [object-shops.md](../../../../catalogs/soul-city/object-shops.md) -- VPRL, preview runtime
 - [guid-registry.md](../../../../catalogs/soul-city/guid-registry.md) -- clustering, reference descriptors
+- [Bartle against the primary record](../../../richard-bartle/sources/1990-imucg-vs-tinymud-primary-record.md) -- forensic reading of Bartle's December 1990 TinyMUD verdict against these artifacts

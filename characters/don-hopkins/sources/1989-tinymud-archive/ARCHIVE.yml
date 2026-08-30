@@ -45,3 +45,7 @@ lineage:
   - guid-registry clustering
   - About slice / object pages
   - 1991-09-project-duh-multimedia-mud
+
+see_also:
+  - path: ../../../richard-bartle/sources/1990-imucg-vs-tinymud-primary-record.md
+    why: "Forensic reading of Bartle's 1990 BT-report TinyMUD verdict against these artifacts"

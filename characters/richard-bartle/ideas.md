@@ -35,6 +35,22 @@ Micropolis/repo-show as antidote to slop. Warm Don↔Bartle public thread before
 
 Digest: [`sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml`](sources/2026-07-bartle-essex-assignment-bloopers-facebook.yml)
 
+### 4. The 1990 verdict, thirty-six years later
+
+In his December 1990 BT report, Richard called TinyMUDs "little more than
+chatlines with rooms as conversation pieces." Don was in the Robot Room a year
+earlier, at the First TinyMUD Robotics Conference, arguing wire protocols and
+robot ethics with Aspnes and flexi. Both primary records survive:
+[Don's artifacts](../don-hopkins/sources/1989-tinymud-archive/README.md) and
+[Richard's report](https://mud.co.uk/richard/imucg.htm), read against each
+other in [the forensic analysis](sources/1990-imucg-vs-tinymud-primary-record.md).
+
+**Show beat:** stage the rematch with the principal witnesses -- Richard defends
+or revises the verdict on air; Don presents the counter-archive; both agree the
+Islandia database problem was real and argue over whether The Sims custom-content
+economy settled the "commodities are valueless if they cannot be sold" question.
+Nobody has ever staged this debate with the 1989 logs on the table.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
