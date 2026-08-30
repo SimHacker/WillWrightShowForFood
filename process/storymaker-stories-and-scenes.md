@@ -40,5 +40,6 @@ August–September 2011 email thread (Don Hopkins ↔ Ben Shneiderman): StoryMak
 |-------|--------|
 | Urban Safari StoryMaker | [../characters/don-hopkins/media/storymaker-urban-safari/](../characters/don-hopkins/media/storymaker-urban-safari/) |
 | 1MM sandwich playlists | [one-minute-movie-sandwich.md](one-minute-movie-sandwich.md) |
+| Soul Album — sixth incarnation | [../catalogs/soul-city/soul-angel.md](../catalogs/soul-city/soul-angel.md#this-is-storymakers-sixth-life) |
 
 ↑ [process index](README.md) · Girder: `storymaker-stories-and-scenes.yml`

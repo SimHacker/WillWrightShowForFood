@@ -61,6 +61,34 @@ directory when the album UI opens, so SoulAngel can read *and write*
 the album while the game runs — external edits appear on the next album
 open, no injection.
 
+### This is StoryMaker's sixth life
+
+The Soul Album is not a new idea; it is the newest body for a data
+model that has survived five previous incarnations: **StoryMaker**
+(Stupid Fun Club, 2011 -- geo server plus iPhone app; scene cards
+with photo, text, GPS, links;
+[Don's 2011 provenance](../../process/storymaker-stories-and-scenes.md))
+-> **Bar Karma** (the broadcast writers' room: community-linked scene
+cards became a Current TV show;
+[overview](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md))
+-> **Urban Safari** (field geo capture, now
+[in amber](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md))
+-> **ShowMaker** (the git-native
+[show graph](../../process/showmaker-network.md): a show is a graph
+walk over StoryMaker content) -> **Ebike Safari** (the
+[new FIT pipeline](../../apps/ebike-safari/README.md): GPS tracks as
+scene sequences) -> **Soul Album**.
+
+The invariant across all six: **scenes, sequences, links, story
+graphs**. A card with an image, caption, and provenance; an ordered
+sequence of cards; typed links between cards; a graph you can walk,
+fork, and broadcast. What changes each time is the substrate (hosted
+server -> git), the capture source (phone camera -> game DVR), and
+the venue (one cable show -> every game on the machine). The Sims 1
+Family Album round-trip means the sixth body plugs directly into the
+1999 ancestor of the whole idea: captioned picture cards in a
+directory, telling a story.
+
 ## Broadcast network — TV, radio, magazine
 
 The liminal city has a station: **TV** (live gateway, machinima
@@ -92,6 +120,7 @@ affiliated with any game publisher.
 ## Related
 
 - [The sims1 Soul Bridge module](sims1-soul-bridge.md)
+- [StoryMaker stories and scenes](../../process/storymaker-stories-and-scenes.md) · [ShowMaker network](../../process/showmaker-network.md) — the Soul Album's ancestry
 - [Browser ecosystem spec](browser-ecosystem.md) · [GitHub distribution model](github-distribution-model.md)
 - [Steam Community Guide strategy](steam-community-guide.md)
 - [Soul City catalog](README.md)

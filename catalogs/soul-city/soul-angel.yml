@@ -83,6 +83,18 @@ album_engine:
   production:
     time_shifted: "Voice-assisted album/video production AFTER play — narrate the replay, not the panic"
     outputs: [published_album_page, machinima_video, stream_vod_chapters, magazine_article]
+  # Sixth incarnation of one data model: scenes, sequences, links, story graphs.
+  lineage:
+    invariant: "scenes, sequences, links, story graphs — card + ordered sequence + typed links + walkable graph"
+    chain:
+      - { name: StoryMaker, year: 2011, what: "Stupid Fun Club geo server + iPhone app; scene cards with photo/text/GPS/links", see: ../../process/storymaker-stories-and-scenes.md }
+      - { name: Bar Karma, year: 2011, what: "Broadcast writers' room — community-linked scene cards became a Current TV show", see: "https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/bar-karma/overview.md" }
+      - { name: Urban Safari, what: "Field geo capture; legacy amber", see: "https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/urban-safari/overview.md" }
+      - { name: ShowMaker, what: "Git-native show graph — a show is a graph walk over StoryMaker content", see: ../../process/showmaker-network.md }
+      - { name: Ebike Safari, what: "New FIT pipeline — GPS tracks as scene sequences", see: ../../apps/ebike-safari/README.md }
+      - { name: Soul Album, what: "This engine — capture source is the game DVR, venue is every game" }
+    what_changes: [substrate_server_to_git, capture_phone_to_game_dvr, venue_one_show_to_every_game]
+    ancestor_closure: "Sims 1 Family Album (1999) — captioned picture cards in a directory — is both the oldest ancestor and the first round-trip bridge target"
 
 # SOUL CITY BROADCAST NETWORK — TV, radio, magazine
 broadcast-network:
