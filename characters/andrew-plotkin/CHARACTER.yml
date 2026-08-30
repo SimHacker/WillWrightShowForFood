@@ -1,0 +1,83 @@
+# Andrew Plotkin — invitation portrayal. NOT Andrew Plotkin.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: andrew-plotkin
+  name: "Andrew Plotkin"
+  aka: "Zarf"
+  type: invitation
+  signifier: "👤"
+  status: living
+  field: "Interactive fiction — author (Spider and Web, Hadean Lands) and infrastructure architect (Glulx VM, Glk, Blorb); IFTF co-founder; Zarf of 1989 CMU TinyMUD"
+  home: characters/andrew-plotkin/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/andrew-plotkin/
+
+bio:
+  summary: >
+    **Andrew Plotkin** ("Zarf") — interactive fiction author and toolsmith:
+    games from *A Change in the Weather* (1995) and *Spider and Web* (1998)
+    to the Kickstarter-funded *Hadean Lands* (2014); architect of the IF
+    ecosystem's load-bearing infrastructure (the Glulx virtual machine, the
+    Glk I/O standard, the Blorb packaging format); co-founder of the
+    Interactive Fiction Technology Foundation (2016). In December 1989, as a
+    CMU student, he announced MIDgaard — a "Multi-Implementor Dungeon" with
+    object-oriented rooms and programmable object behavior — on the TinyMUD
+    mailing list, and Don answered with the "what could be..." language
+    letter.
+
+# The 1989 primary record — why this room exists
+tinymud_1989:
+  announcement:
+    date: "1989-12-03"
+    from: "Andrew C. Plotkin <ap1i+@ANDREW.CMU.EDU>"
+    what: |
+      Zarf and Moonchilde announce MIDgaard, a "MID, for Multi-Implementor
+      Dungeon": object-oriented environment instead of a flat database,
+      object responses programmable "in a cheapo Pascalish language," and a
+      real multi-word parser. Explicitly against the few-builders model:
+      "To we of tinyMUD, of course, that ruins the whole point of the game."
+  dons_reply:
+    date: "1989-12-04"
+    subject: "what could be..."
+    thesis: >
+      Do not invent a language — "language implementation is a bitch,
+      language design is a big hairy mother of a bitch, and the biggest
+      nastiest bitch of them all is writing the manual." Use an existing
+      interactive language: PostScript/NeWS, Scheme, Forth, Perl; mine
+      ZIL/MDL and DDL for ideas.
+    archived: ../don-hopkins/sources/1989-tinymud-archive/tinymud.txt
+  aftermath: >
+    MIDgaard did not ship; the embedded-language MUD arrived as MOO
+    (1990-91). Plotkin went on to build exactly the things Don's letter said
+    were the hard part — a virtual machine (Glulx), an I/O standard (Glk),
+    a packaging format (Blorb) — and wrote their manuals, which became the
+    field's specs. In 2013 he shipped Seltani, a multiplayer hypertext world
+    with player-writable Ages: the MIDgaard loop, closed on the web.
+  source: sources/1989-12-midgaard-what-could-be.md
+
+sources:
+  wwsff:
+    - sources/1989-12-midgaard-what-could-be.md
+    - sources/2019-04-what-is-zil-anyway.md
+    - ../don-hopkins/sources/1989-tinymud-archive/README.md
+  web:
+    - https://eblong.com/zarf/
+    - https://blog.zarfhome.com/
+  papers: []
+  blogs: []
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: ../don-hopkins/sources/1989-tinymud-archive/README.md, why: "The 1989 TinyMUD archive — MIDgaard thread and Don's reply" }
+  - { path: ../richard-bartle/sources/1990-imucg-vs-tinymud-primary-record.md, why: "Forensic essay citing the MIDgaard debate" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

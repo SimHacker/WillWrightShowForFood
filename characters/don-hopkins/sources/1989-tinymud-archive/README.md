@@ -14,6 +14,7 @@ beside it unchanged.
 | [mud-log.txt](mud-log.txt) | 1990-04-23 | 19K | **Player notebook**: Oxford English Dictionary of TinyMUD commands, control volumes, in-game email how-to, player directory entries, Gloria bot help text, flexi/Terminator logs, notes on OUTPUTPREFIX/SUFFIX. |
 | [mud-map.txt](mud-map.txt) | 1990-04-23 | 72K | **Rec Room exit crawl**: every advertised exit from the Rec Room, with the room description you get when you go there. A map of CMU TinyMUD as a social universe hub. |
 | [tinymud.txt](tinymud.txt) | 2005-05-20 compile | 25K | **Email corpus**: launch announcement, server moves, Zarf's MIDgaard proposal, **Don's "what could be..." language letter**, furBot mapping treatise, Don's robot-protocol posts, Brian Harrison's robot ethics. |
+| [tinymud-forwards.txt](tinymud-forwards.txt) | 2026-08-30 recovery | 32K | **Forwarded originals**: Todd Masco's 12 Sep 1989 announcement, **Don's 24 Sep letter to MLY with `tinymud.el`** ("a consentual hallucination"), Aspnes's 1.3.1 source release, fuller mapping-droids and furBot texts, **Espen Aarseth's 2 Feb 1990 request** for Don's client. |
 
 Together they are a time capsule of **programmable social worlds before the web**:
 builders, robots, ethics, parsers, and the question "what language should
@@ -82,6 +83,31 @@ Brian Harrison's reply coined **robot ethics**: do not flood with ofail
 spam; ask "mind if I map?"; bread crumbs optional because room contents
 already disambiguate; hidden exits bit + `exits` command wish; Gloria as
 nav server; "garbagemen should be called maids or butlers."
+
+### "A consentual hallucination" (24 Sep 1989, tinymud-forwards.txt)
+
+Don's earliest surviving TinyMUD document: a letter to MLY at the MIT AI
+Lab, twelve days after Todd Masco's announcement reached the elbows
+list, shipping a complete `tinymud.el` Emacs major mode inline and
+defining the thing in one breath:
+
+> It's a multi-user dungeon, a social disease, a roll-yer-own universe
+> construction kit, a consentual hallucination, a replacement for :send,
+> a classic adventure game with a twist, a petri-net based hypertext
+> system with a command-line user interface...
+
+"Roll-yer-own universe construction kit" is the whole Soul City program
+in five words, September 1989.
+
+### Espen Aarseth writes (2 Feb 1990, tinymud-forwards.txt)
+
+"By one of my fellow Tinymudders I have been told that you might have a
+hypercard interface for TinyMUD by TCP/IP" -- from the University of
+Bergen, offering to "gladly pay any 'reasonable' shareware fee." Seven
+years before *Cybertext: Perspectives on Ergodic Literature* founded
+academic game studies, its author was in this scene, asking Don for his
+client. The primary record and the future historiography of the field
+intersect in one email.
 
 ## First TinyMUD Robotics Conference (meeting.log.txt)
 
@@ -221,17 +247,25 @@ Notable for WWSFF/Soul City lineage:
 ## People to cross-link later
 
 - **James Aspnes** (Wizard) -- TinyMUD author; later Yale CS theory.
-- **Andrew Plotkin / Zarf** -- MIDgaard; Inform; decades of parser IF.
+- **Andrew Plotkin / Zarf** -- MIDgaard; decades of parser IF and its
+  infrastructure. Now has [a character room](../../../andrew-plotkin/README.md)
+  with the [MIDgaard thread digest](../../../andrew-plotkin/sources/1989-12-midgaard-what-could-be.md)
+  and a draft invitation -- Don is contacting him.
 - **Roy Riggs / fur** -- furBot mapping; Purdue.
 - **Fuzzy** -- Gloria robot; published C TCP code.
 - **Bennet Yee / flexi** -- Terminator; CMU security legend.
 - **Stewart Clamen / stewy** -- conference minutes; CMU SCS.
 - **Brian Harrison / brie** -- robot ethics post; HyperCard MUD front-end idea.
 - **Rehmi Post** -- PreScript/NetScript cited by Don (NeWS lineage).
+- **Espen Aarseth** -- Bergen; asked Don for his TinyMUD client Feb 1990;
+  founded game studies (*Cybertext*, 1997; *Game Studies* journal).
+- **Todd Masco** -- announced TinyMUD to the elbows list 12 Sep 1989.
 
 ## Related in this repo
 
 - [1991-09-project-duh-multimedia-mud.md](../1991-09-project-duh-multimedia-mud.md) -- Don's later multimedia MUD pitch
+- [1989-12-simcity-ca-vpl-letters.md](../1989-12-simcity-ca-vpl-letters.md) -- the parallel obsession: Don meets SimCity the same two weeks, calls it a visual programming language on 1 Jan 1990, and names TinyMUD in the same letter
+- [Andrew Plotkin's character room](../../../andrew-plotkin/README.md) -- the MIDgaard correspondent, now invited
 - [qgcon-inclusivity-paper](../../../../catalogs/soul-city/) -- procedural rhetoric thread
 - [object-shops.md](../../../../catalogs/soul-city/object-shops.md) -- VPRL, preview runtime
 - [guid-registry.md](../../../../catalogs/soul-city/guid-registry.md) -- clustering, reference descriptors

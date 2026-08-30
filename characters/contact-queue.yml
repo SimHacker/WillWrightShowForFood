@@ -55,6 +55,7 @@ in_flight:
 
 # wave_1: drafts finished + warm channel. Fire this week while threads are hot.
 wave_1_send_now:
+  - { id: andrew-plotkin, why: "NEW 30 Aug — Don contacting personally NOW; 1989 MIDgaard thread + 'what could be...' letter just archived verbatim (TinyMUD archive); MDL-Zork-wish-came-true hook; room + invitation fresh", channel: "email (zarfhome public address)" }
   - { id: eric-hedman, why: "TOP OF LIST 31 Jul — Don already talking w/ him, commenting on @irkinteraction videos; invitation warmed; Don sends formal invite personally", channel: "YouTube/DM (in conversation)", batch: sims-reunion-2026 }
   - { id: james-gosling, why: "HOT 31 Jul — Don just commented on his retirement post (lander.ps / SIMH lightpen + AM radio dare); invitation refreshed w/ retirement side-project section; Don sends connect note + DM personally while the thread is warm (drafts: DonHopkins attachments/james-gosling/2026-07-31)", channel: LinkedIn }
   - { id: nathaniel-borenstein, why: "HOT 31 Jul — Don replied to his comment on Gosling's retirement post w/ the SIMH lightpen + AM radio drivers ask; NEW ROOM; MIME / Andrew / Safe-Tcl behavior-on-the-wire pairing w/ Gosling + Rosenthal; Don sends connect note + DM personally (drafts: DonHopkins attachments/nathaniel-borenstein/2026-07-31)", channel: LinkedIn }

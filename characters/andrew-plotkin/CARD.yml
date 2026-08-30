@@ -1,0 +1,76 @@
+# CARD — andrew-plotkin (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: andrew-plotkin
+  name: "Andrew Plotkin"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Andrew Plotkin"
+  title: "Zarf — the one who ships the VM and writes the manual"
+  rarity: rare
+  signifier: "👤"
+  flavor: "Announced MIDgaard on the TinyMUD list, December 1989; shipped the idea as Seltani, 2013."
+
+abilities:
+  - id: SHIP-THE-SPEC
+    name: "Ship the Spec"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: shipTheSpec
+      signature: "shipTheSpec(hardPart) → VM + I/O standard + packaging format, each with a manual the field adopts"
+      score_when:
+        - trigger: audience_learns_without_lecture
+          weight: 0.85
+    effect: "Walk through how Glulx/Glk/Blorb kept a whole literature portable across four decades of hardware."
+    verifiable: "Glulx, Glk, Blorb specifications at eblong.com/zarf/"
+    combos_with: [MIDGAARD-REMATCH]
+
+  - id: MIDGAARD-REMATCH
+    name: "MIDgaard Rematch"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - both_principals_consent: true
+    advertisement:
+      method: midgaardRematch
+      signature: "midgaardRematch(thread_1989) → the language argument, resumed on air with the primary record open"
+      score_when:
+        - trigger: primary_source_on_screen
+          weight: 0.9
+    effect: "Reread the December 1989 announcement and Don's 'what could be...' reply; score the advice against what actually shipped."
+    verifiable: "characters/don-hopkins/sources/1989-tinymud-archive/tinymud.txt"
+    combos_with: [SHIP-THE-SPEC]
+
+  - id: WRITABLE-AGES
+    name: "Writable Ages"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: writableAges
+      signature: "writableAges(seltani) → everyone-a-builder multiplayer hypertext, compared with Soul City districts"
+      score_when:
+        - trigger: two_lineages_one_premise
+          weight: 0.8
+    effect: "Compare Seltani's player-written Ages with Soul City's writable districts — same 1989 premise, two descents."
+    verifiable: "Seltani, Plotkin's multiplayer hypertext world (2013); see eblong.com/zarf/"
+    combos_with: []
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: sources/1989-12-midgaard-what-could-be.md, why: "The 1989 primary thread" }

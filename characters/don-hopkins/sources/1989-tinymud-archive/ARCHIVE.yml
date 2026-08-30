@@ -20,6 +20,12 @@ files:
   tinymud.txt:
     compiled: "2005-05-20"
     contains: [launch_email, server_move, midgaard_proposal, don_language_letter, furbot_mapping, don_robot_protocol, brie_robot_ethics]
+  tinymud-forwards.txt:
+    recovered: "2026-08-30"
+    contains: [masco_announcement_1989_09_12, don_mly_letter_1989_09_24_with_tinymud_el, aspnes_server_move, zarf_midgaard, aspnes_source_release_1_3_1, furbot_treatise_full, don_mapping_droids_full, brie_robot_ethics_full, aarseth_client_request_1990_02_02, stratton_1990_09]
+    gems:
+      consentual_hallucination: "Don's 24 Sep 1989 one-breath definition: 'a roll-yer-own universe construction kit, a consentual hallucination... a petri-net based hypertext system'"
+      aarseth: "Espen Aarseth (Bergen) asks Don for his TinyMUD client, 2 Feb 1990 -- seven years before Cybertext founded game studies"
 
 don_hopkins:
   directory_entry:
@@ -27,6 +33,10 @@ don_hopkins:
     phones: ["(301) 474-8027", "(301) 454-1517"]
     mailbox: don-emailbox
   key_documents:
+    mly_letter:
+      date: "1989-09-24"
+      to: MLY (MIT AI Lab)
+      contains: "tinymud.el major mode inline; the 'consentual hallucination' definition"
     what_could_be:
       date: "1989-12-04"
       to: Andrew Plotkin (Zarf)

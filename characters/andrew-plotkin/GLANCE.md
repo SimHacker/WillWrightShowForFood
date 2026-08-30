@@ -1,0 +1,1 @@
+👤 **Andrew Plotkin** ("Zarf") — IF author (*Spider and Web*, *Hadean Lands*) and infrastructure architect (Glulx, Glk, Blorb); IFTF co-founder; announced MIDgaard on the 1989 TinyMUD list, and Don's "what could be..." letter answered him.
