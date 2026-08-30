@@ -1,0 +1,47 @@
+meta:
+  id: 1989-tinymud-archive
+  title: TinyMUD archive (robotics conference, Rec Room map, command OED, email corpus)
+  mirror: https://donhopkins.com/home/archive/mud/
+  captured: "2026-08-30"
+  period: "1989-12 through 1990-04 (emails through 1989-12-20)"
+
+files:
+  meeting.log.txt:
+    date: "1989-12-11"
+    event: "First TinyMUD Robotics Conference, 1989-12-09 7PM EST, Robot Room"
+    chair: fur (Roy Riggs)
+    stenographer: Fiona (Stewy Clamen typing)
+  mud-log.txt:
+    date: "1990-04-23"
+    contains: [command_oed, control_volumes, in_game_email, player_directory, gloria_help, flexi_terminator_logs]
+  mud-map.txt:
+    date: "1990-04-23"
+    contains: "Rec Room exit crawl -- 200+ exits with room descriptions"
+  tinymud.txt:
+    compiled: "2005-05-20"
+    contains: [launch_email, server_move, midgaard_proposal, don_language_letter, furbot_mapping, don_robot_protocol, brie_robot_ethics]
+
+don_hopkins:
+  directory_entry:
+    email: don@brillig.umd.edu
+    phones: ["(301) 474-8027", "(301) 454-1517"]
+    mailbox: don-emailbox
+  key_documents:
+    what_could_be:
+      date: "1989-12-04"
+      to: Andrew Plotkin (Zarf)
+      subject: "what could be..."
+      thesis: "Do not invent a behavior language; use PostScript/NeWS, Scheme, Forth, or steal from ZIL/DDL"
+    mapping_droids:
+      date: "1989-12-19"
+      ideas: [adventure_breadcrumbs, tagged_robot_packets, emacs_hypertext_client, postscript_wire_format]
+  in_world:
+    brillig_room: "VAX 8600 room via Rec Room >go clh exit"
+    objects: [Pluribus_IMP, duct_tape_gerbil, amazingly_twisted_little_ass]
+
+lineage:
+  - simantics
+  - object-shops VPRL
+  - guid-registry clustering
+  - About slice / object pages
+  - 1991-09-project-duh-multimedia-mud

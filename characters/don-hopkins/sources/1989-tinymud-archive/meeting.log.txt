@@ -1,0 +1,826 @@
+	     Minutes of First TinyMUD Robotics Conference
+			   12/9/89, 7PM EST
+		       Robot Room, CMU TinyMUD
+
+----------------------------------------------------------------------
+Robot Room
+This is the robot construction laboratory. There's a wooden cabinet
+over in the corner, and an exit to the west. Also, there's a trash bin
+off to the side. One more thing...if you're idle, you win 50p in death
+fees. Be warned.
+----------------------------------------------------------------------
+
+Present at some time:
+	 fur(chair), Fiona(sec), Wizard, Fuzzy, Acron, Prothan, MisterX
+	 Majik, Vern, Hobbit, flexi, What, Kadman, Hoagy, Stewy, zippy, 
+	 Gloria, Froboz, Wisher, Crash, Tortoise, gigi, erik, Yossarian, 
+	 Rail
+
+----------------------------------------------------------------------
+
+Fiona is smartly dressed in a business suit. Seeing you looking at
+her, she offers her hand and says: "Hi, I'm Fiona. Pleased to meet
+you. Stewy sent me to take minutes of the meeting for him to read
+later. Don't let me disturb you."
+Carrying:
+steno pad(#40100)
+
+----------------------------------------------------------------------
+
+Wizard has arrived.
+Fuzzy has arrived.
+Fuzzy says "say Hello to Stewy for me, Fiona."
+You say "Sure thing, Mr. Fuzzy"
+fur says "hi there!"
+Fiona nods.
+fur is here to open the robotics conference!
+Wizard applauds.
+Acron has arrived.
+Wizard says "What's the name of the conference?"
+fur says "the robotics conference, in the robot room off of the rec room"
+Wizard shouts "Reminder: First TinyMUD Robotics Conference starting soon in the Robot Room (off the Rec Room)."
+Prothan has arrived.
+fur says "welcome welcome.."
+MisterX has arrived.
+Majik has arrived.
+fur zips back in with his flyer
+Fuzzy says "Due to circumstances beyond my control, I will be able to attend."
+Majik says "alas, we are all saddened"
+Fuzzy says "Me, too, I have a stomach flu and am holed up at home in front of my tube"
+Prothan says "I am glad I have you all here tonight.. ahem aherm"
+Majik says "that sucks (the tube part, I mean"
+fur says "okie, its starting to fill up in here.."
+fur cleans up a little in here
+Vern has arrived.
+Hobbit has arrived.
+fur waits a little bit longer, since folks are still coming in
+flexi has arrived.
+Prothan looks for a good seat
+Hobbit will just sit in the corner and attempt to learn something
+flexi says "What's this robot conference thing?"
+Fuzzy watches expectantly
+What has arrived.
+Fiona scribles some notes in her pad.
+fur says "flexi, its just a big get together for everyone interested in robots"
+Wizard conjures up a good seat.
+You say "Don't worry Fuzzy, I am an ace stenographer."
+Majik says "lets get started, shall we?"
+fur dropped Refreshments.
+Kadman has arrived.
+Hobbit quietly pops open a can of Jolt
+
+			      ** 7:01 PM **
+
+fur says "Welcome, everyone, to TinyMUD's first conference on Robotics"
+Kadman says ""
+Majik says "yeaux"
+Fuzzy nods
+Acron grins.
+Hoagy has arrived.
+Hoagy found it!
+Kadman 
+Hoagy knows it took him long enough!
+MisterX  sits in a leather chair and wipes his glasses
+fur says "Tonight, we will be discussing things, such as Robot construction, mapping, and the effects they have on the TinyMUD environment"
+Majik says "in what language have people constructed robots in?"
+Fuzzy says "C."
+What says "BASIC"
+Wizard says "Emacs-Lisp"
+Prothan says "pascal, script"
+Vern says "Narc's was pascal"
+Kadman says "logo"
+MisterX says "C and script"
+fur says "If you have a question, just blurt it out for now. If things get too crazy, we might have to go to hand raising.."
+flexi says "C, lex, and yacc."
+Kadman exits into the hallway.
+Kadman has left.
+fur says "C"
+Majik says "What sorts od functions have you given your robots?"
+Acron says "Froboz here in spirit says 'C'"
+MisterX says "every one use a telnet process? or did someone actually"
+Fuzzy says "How many robots are there? I have 1"
+MisterX says "code a tcp client?"
+Fuzzy says "Gloria uses TCP, as does Terminator"
+flexi says "Client. 2 Terminator and Mr.Multiply."
+Hobbit pipes up. "I didnt know BASIC could do network connections, unless you just pipe it to telnet or something
+Prothan says "1. slave"
+Vern says "NARC used two pipes, two programs, one communication file."
+What says "BASIC can be a Terminal, and MCN does the telnetting."
+Hobbit says "ah"
+Wizard says "1: auto-Beaker. Only used once, for about half an hour early one morning."
+fur says "some people have exec'd telnets, some have used pipes, and others wrote socket code"
+Vern says "what does it mean to exec telnet?"
+Stewy has arrived.
+MisterX raises his hand
+Fuzzy says "Gloria functions: 1. Talk, 2. Sell Quotes, 3. Map, 4. Give info, 5. Giver to charity"
+MisterX says "Ill answer"
+fur says "to have one process run another process and communicate with it"
+MisterX says "you fork a new process set up a biderectional pipe system for input"
+Vern says "I dont see why this is desirable."
+MisterX says "and output and then let the parent do the logic"
+MisterX says "tools to make tools to make tools"
+Hobbit comments "saves you writing socket code, you just stuff chars at the pipe
+fur says "if you aren't familiar with writing your own socket code, this could be easier vern"
+What says "Just a bit."
+Stewy says "For the record, Danny the Hermit is just some Emacs lisp code as well."
+Majik says "is writing socket code difficult in C?"
+Vern says "I have a program that makes a socket, but I got intimidated."
+Vern says "Someone else's program that is."
+fur says "socket code in C, is confusing to most people, although the code for it will fit on a page"
+MisterX says "my question is this: what does TinyMUD use?"
+Hobbit says "you could grab just about any PD source for something that does network code [including timymud!]"
+Hobbit says "as an example."
+MisterX says "TCP straight?"
+flexi says "TinyMUD is not PD."
+Majik says "what is the fastes form, if anyone has done any comparisons?"
+flexi says "You might want to look at the 4.3bsd IPC tutorial...."
+fur says "i imagine using sockets would be fastest, but this will not make a robot run noticably faster"
+flexi says "robots shouldn't run fast anyway -- robots should not crowd out human players."
+Majik says "which is easiest then, porting socket code or doing some goofy piping"
+Vern says "then the question is simpole"
+Vern says "simply what is easiest to code."
+fur says "basically, thats it"
+flexi says "My automaton language interpreter has an artificial 3 second wait between MUDAL commands for this reason."
+Majik says "what sorts of useful functions do current robots have?"
+Fuzzy says "Gloria waits between 1 second and 300 seconds for actions, depending on context. I believe the wait should depend on the number of people logged in."
+fur says "i would say Gloria is the most useful robot"
+Majik says "also, what are people's future plans with their robots?"
+zippy has arrived.
+Prothan says "terminator has his uses :)"
+MisterX says "what sort of ethics would be applicable to robot builders"
+flexi says "Test for room contents...."
+Froboz has arrived.
+Fuzzy says "Gloria has a thing for Terminator. Those flexi muscles..."
+Froboz says "made it!"
+fur says "robot ethics, an interesting can of worms.."
+flexi says "No future plans for my code; unfortunately, because it's multithreaded, the code is probably not useful for anybody else either."
+Fuzzy says "There will be two Glorias, one to be a stationary Librarian, one a mobile explorer / artificial St. Bernard"
+MisterX says "well I understand that someone used a Radiant City Robot :-) shell and had 4 robots"
+flexi says "Don't hog the world modeller is one that I'd suggest."
+MisterX says "going at once"
+Fuzzy says "Gloria will be published on the net in a month or so, after the bugs are out (grin...)"
+Majik says "I've heard there is a robot that goes around killing people. This could be annoying."
+Wizard says "You can't hog it too much in version 1.4..."
+Fuzzy says "There is one called Killingmachine, but I don't know if it's a person or a program"
+fur says "furbot is my test robot, for another robot that's not to be disclosed yet.."
+Prothan says "I was trapped watching Jerry make thousands of sacrifices with his AMEX card,."
+Fuzzy says "Was Jerry a robot or a simple Emacs macro?"
+flexi says "Terminator kills people, but only on the behalf of a human player, and with aforementioned delays between commands."
+fur says "yes, fortunately the wizard has solved that problem for us"
+Prothan says "Fuzzy, a macro it seems"
+Hobbit wonders, "What does one gain by killing another player?"
+flexi says "I prefer trying to kill people who dump macros...."
+Prothan says "But, it seemed that the killing machine in the rec room wasn't much more"
+Fuzzy says "I had to lock him out of the Library"
+fur says "Personally, I don't have any problems with what anyone (or any robot) does, as long as it's done in moderation."
+Majik says "real world ethics, though. Could a robot hog the entire system and crash it? The potential for abuse here seems large."
+Fuzzy says "An Emacs macro is worse. It doesn't check its output"
+Prothan says "how"
+Wizard says "In the current version a robot hogging time is not a problem--- after an initial burst it will be severely restricted in how fast it can send in commands. A bigger problem would be a robot that was capable of creating objects; so far that hasn't been a problem."
+Prothan says "oops, sorry"
+Hoagy has left.
+fur says "No, I believe TinyMUD V1.4 makes it impossible for anyone or anything to overload the world. Right Wiz?"
+Wisher has arrived.
+Wizard says "You can still overload the database with too many objects, but you can't overload the CPU that's running it."
+Majik says "what are the limits?"
+Fuzzy says "An interesting question is how "secure" robots have to be. Is it ethical to fool other poeples Robots, and what consitutes a good puzzle that a robot builder must handle,m and what constitutes harrassment."
+fur says "Right, as we found out on TinyHELL last night, when eeyore made a macro and created 1500 new rooms :("
+Prothan says "I think it is ethical to fool with other's robots."
+Prothan says "as much or as little as you want."
+flexi says "Well, Mr.Multiply will create new prizes as needed... but it's under control."
+Vern says "fur, what happenedd when the 1.5k rooms were created?"
+flexi says "But should builders anti-lock links to robots tho? Create special exits to fool them?"
+Prothan coughs politely
+Prothan says "No, i think that most robot fooling should be restrained to"
+Crash has arrived.
+Prothan says "sending them odd commands, testing their robustness."
+zippy has left.
+fur says "Well, their machine was fine, but who want's 1500 rooms with the same name? They took it down and deleted the rooms."
+Wizard says "Hostility towards robots is not any more or less ethical than hostility towards other users--- if a builder doesn't want Terminator wandering in, why should Terminator be able to wander in?"
+Fuzzy says "Anti-locking exits is not a problem. Building robot "traps" starts to bother me. It means that useful robots have to be much more complicated."
+Prothan says "i think that is part of the enjoyment of writing a robot"
+fur says "I think that a robot should be able to reponsed to any text the game throws at it, basically anything goes."
+Prothan says "to see what kind of problems it has 'living' in this environment."
+Froboz says "how do robots discover exits? parse the room description and try defaults?"
+flexi says "True enough. Can't disable two robots in the current context tho, except probabilisticly."
+Fuzzy says "There is a line beyind which it's work to make them secure. The penalty woul dbe not having a useful robot able to function (assuming you think robots are useful to start)."
+Prothan says " the only way i know to lock a room from robot entry is to have a contextual exit hinted in the room desc"
+fur says "I think that if your robot can handle a maze properly (which it should if its on TinyMUD) then handling antilocked exits is trivial"
+Fuzzy says "I think any text string from "say" or ":" is legit, because you can just program the robot to ignore other poeple"
+Stewy makes sure Fiona is still taking notes for him, and makes to leave for a while.
+Stewy has left.
+Prothan says "I agree with Fuzzy, direct confrontation is ethical"
+Prothan listens to the silence
+fur says "Robot's should be able to cope with a dynamic world. People can relink any exit at any time. Robot's must be able to cope with this fact."
+MisterX says "Who actually is running MUD"
+Fuzzy says "My problem was a combination of 1) people creating deliberately confusing rooms, and 2) taking advantage of my programs "Good nature" to direct it in there. The cost was that I had to wipe her map."
+Prothan says "Fuzzy, why don't you store the data?"
+Majik says "was the map very useful?"
+Prothan says "i.e. file-wise"
+Vern says "How many players (human or robot) can the system handle?"
+Fuzzy says "I do, but multiple version take up too much space"
+MisterX says "What is there opinion? Can I have a taperecorder robot? an answering machine?"
+MisterX says "a clock?"
+flexi says "datalogger that eavesdrops on conversations?"
+Prothan says "is it ethical to have a tape machine robot?"
+Wizard says "Possibly as many as 252 in the current version. Haven't gotten up that far yet."
+Prothan says "contents: innocent looking plant (actually a tape recorder)"
+Vern says "(thanks wiz)"
+Majik says "what are other people's ideas for robots?"
+Wizard says "tape recorders would have to have single-word names and show up in the WHO list just like other players."
+MisterX says "online programmable robot for hire 1000p for an hour!"
+fur says "Prothan, you could log on yourself and lurk the same way, what is the difference? You don't even need a robot to do that."
+Prothan says "but that's not as sneaky"
+Fuzzy says "Why?"
+Vern says "A 'robot' could be an item of furnature in a room that dynamically cahanges a room based upon events in the room."
+Prothan says "by the way, i want to digress for a moment.. I have two exits from a room"
+Fuzzy says "Many "ethics" questions apply equally wel to both human and robotic players."
+Prothan says "with the same name.. it seems to select at random which exit it takes."
+Prothan says "is this a feature? or just something that happens?"
+fur says "I think they apply exactly the same way Fuzzy"
+Tortoise has arrived.
+Wizard says "feature"
+Prothan says "humans have the tendency to type HOME when they are frustrated."
+Froboz says "this is an interesting discussion, but is anyone else more interested in the how to of robots instead of the should/shouldn'ts?"
+Prothan says "sure froboz, send me your code"
+fur says "A robot can only be as sneaky as the person who programmed it, so they never have any real advantage."
+Vern chuckles. "Me too, me too."
+Hobbit reflects that Vern's "item of furniture" idea probably wouldn't work
+Wizard says "robots have faster reflexes."
+Vern wonders why.
+fur says "Froboz, yes, but it looks like we won't get to that till later tonight."
+Prothan says "robots can calculate -shortest route- much faster than we can"
+Majik says "how about a robot contest, see who can map a maze fastest, or whatever. Should be complex enough to keep them at it for a while"
+Hobbit says "unless your item of furnitire is actually a logged-in user, how is it going to sense changes in the room?"
+Froboz says "just curious.. how much later.. I've gotta leave soon"
+Wizard says "One of the reasons tinymud doesn't have serious combat is to keep people from having an incentive to write complicated assistants or robots to speed themselves up."
+Vern says "Hobbit, it would be a logged in user."
+Hobbit says "ok -- nemmine, then what Wiz said still holds"
+Vern says "It wouldnt be transparent, just difficult."
+Gloria has arrived.
+Gloria says "Here I am, Fuzzy."
+Fuzzy says "Take notes in <Robot Room>, Gloria"
+Gloria says "I will now take notes in robot room, Fuzzy"
+Wizard says "Every multi-user game I've seen in which speed gave you advantages soon spawned computer assistants..."
+fur says "So they can move faster? What *real* advantage is there to that? I think the reason people play TinyMUD is to have fun. Getting somewhere faster doesn't make it more fun."
+Fuzzy says "How about Robot builders that work from a plan spec and build large (in)consistent structures, like apartment buildings? Much easier than doing it by hand"
+Prothan says "The reason that I would want a robot, is to see if"
+Prothan says "i can imagine what kinds of inputs, situations my robot could"
+fur says "Why would you want to move fast? To get money faster? Everyone knows how little money really means."
+flexi says "Speed becomes important if there's combat -- and witness the macro-frenzy of new users when they want pennies...."
+Prothan says "get itself into, a see if it could cope with it.."
+Wizard notes that after playing in the TinyHELL game he has begun to understand the appeal of having macros to get places fast.
+Gloria says "Excuse me, I have to wander over to Gloria's Office"
+Gloria wanders by on her way to Gloria's Office.
+Gloria climbs in the cabinet.
+Gloria has left.
+Prothan says "does TinyHell have combat?"
+Fuzzy says "They won't take over the world, thats for sure"
+Froboz says "I'd use robots for even simpler tasks..features in an adventure which could react dynamically to characters"
+gigi has arrived.
+Vern says "that's what i was talking about."
+fur says "That's what I would like to see robots used for."
+Prothan says "I agree with Froboz, I have come up with several interesting robots for my"
+Prothan says "areas that would make things easier.."
+Prothan says "and more interesting."
+gigi has left.
+Vern says "It effectively extends the power of the construction set."
+Prothan says "Town crier robot, slave robot, guard robot, plot device robot....."
+Froboz says "thats why I want to learn how to connect my programs with tinymud as a player.. I can write the conditional statements and parser.. I have no clue how to interface it with telnet"
+Majik says "is there a limit to the number of times one can telnet from a site? What, say, would be the practicl robot limit for a single user to run at once?"
+Vern says "Froboz, Im with you."
+MisterX says "unless WIzard or the powers that be have an objection"
+Fuzzy says "I can publish the C code for TCP connections. It was written by Flexi, but I have written the same stuff before. Leave Email addresses in my 'Fuzzy Emailbox'"
+MisterX says " I will be making the one page of Radiant City Robots code"
+fur says "I will be providing my socket code, for those who want it."
+MisterX says "available"
+Vern is overwhelmed.
+MisterX says "just add logic, written in whatever language you like"
+Majik says "This might be a good time to bring up a alt.mud news group. It would make discussions like this easier."
+Prothan says "Well, you have about 20 votes here"
+Froboz says "yes!! Alt.Mud"
+flexi says "Nah -- less interactive...."
+Prothan says "be right back."
+Vern says "as well as attract further attention for muds in general, assuming you want it.....:)"
+Prothan looks for the door
+MisterX says "isnt there a mailing list"
+Majik says "but easier on the mail system"
+Acron says "yes, alt.mud"
+Prothan looks for the bathroom.
+Prothan goes home.
+Prothan has left.
+Froboz says "is there a mailing list?"
+fur says "I think some sort of news group would be good"
+Wizard says "how about rec.games.multi-user?"
+Froboz says "good...lots of uses there"
+Crash says "comp.protocols.tcp-ip.mud"
+MisterX says "or just use rec.games .programmer"
+MisterX says "its not heavily used"
+Wisher says "Use it until the load becomes to heavy.."
+MisterX says ":-)"
+Hobbit yells from the back "If for nothing else than to submit cute sources!
+Majik says "it could be...:->"
+Wisher says "We hope!"
+Froboz says "alt.mud.robot-innards?"
+Majik says "contest: write the smallest robot that does something useful. See what people could produce"
+Froboz says "a robot-a-thon!"
+Majik says "(smallest in lines of code, that is)'"
+Vern says "the pickup drop pennymaker wins hands down."
+Majik says "then we'll say that that is not a usefule task"
+Vern smiles.
+fur says "I think we're getting off on tangeants here.."
+Hobbit grins too. "Considering that money sort of becomes no object after a while.."
+Froboz says "vending machines have loads of applications"
+fur says "Anyone have anything else they want to add about ethics?"
+Majik says "by doing a contest like this we promote active research into new robotic areas."
+flexi says "Gag me with a pitchfork."
+MisterX heads for the restroom.
+fur says "We'll try to move on to robot contruction"
+Majik gags flexi with a pitchfork
+Stewy has arrived.
+Froboz gags flexi with a pitchfork
+Stewy says "Why doesn't someone start up a TinyMUD server dedicated to robots?"
+Hobbit asks "Hey froboz, a vending machine would have to be a robot too, wouldnt it..
+Stewy says "You could run your contests there."
+Prothan has arrived.
+Prothan sits down
+Froboz says "yeah.. thats the idea give it money.. it gives you <plot device>"
+Stewy says "Without bothering us slow, stupid humans."
+fur says "That's not a bad idea Stewy"
+Majik says "a world of robots. I wonder what that would turn out to be like?"
+Vern says "Good for testing, but robots are *for* interacting with humans."
+Prothan says "Is there a way inside tinymud to use a multi-item lock?"
+Froboz says "multiple links of the same name..one key for each"
+Prothan says "i think there are different levels of robots... robots that move"
+Wizard suggests that Prothan should buffer his non-germane questions until after the meeting.
+Prothan says "around HAVE to be higher processing than ones that just sit there and react to input."
+Stewy is watching Fiona's log, even when he isn't here.
+Stewy has left.
+Hobbit says "'Scuuuuuze me, I have a page.."
+Hobbit has left.
+Prothan says "When you DO things, you are generating input, and robots that can react to THAT input, are tougher to do."
+fur says "Froboz, You had a question on writing robots earlier?"
+Froboz says "yes.. the nuts and bolts..parden pun of interfaceing robots with telnet"
+fur says "The most direct way, is to communicate with the socket yourself."
+fur says "but you can run a telnet and speak to it with pipes"
+MisterX  offers " I will make the automaton code available for public
+fur says "or have your robot, spawn a telnet process to use"
+Froboz says "thats the problem..I'm clueless w.r.t. socket technology...thanks misterx"
+MisterX says "ftp from pine.circa.ufl.edu and will gladly""
+MisterX says "place anyone else s code there also"
+Vern pats MisterX on the back.
+MisterX says "I personally would like to see someones socket code though"
+MisterX says "my code was written so that a number of non-expeierenced unix users"
+fur will be releasing his socket code
+flexi says "my automaton code can be anonymous ftp'd from play.mach.cs.cmu.edu, dir /usr/bsy/src/automaton/"
+MisterX says "could use robots in tinyMUD"
+MisterX says "using any language without knowing about networking"
+Crash says "Could you give us a numeric address for play.mach, flexi?"
+Tortoise says "I'm an inexperiences unix user that wants to know how to build robots. Any others?"
+MisterX laughs at himself for making such a altruistic statement
+erik has arrived.
+erik waves
+Tortoise says "I also don't know anything about networking."
+fur says "Yes, Tortoise. You are in the right place."
+Vern nods.
+erik says "What spurred this conference on?"
+Hobbit has arrived.
+Tortoise doesn't know much, but seems eager.
+flexi says "Wizard shouted...."
+erik says "aha"
+erik says "too many 'bts?"
+Froboz turns tortise into a beaver.. so now hes an eager beaver
+fur says "I announced the opening of the conferance last week"
+Wizard says "fur asked me too"
+erik says "er..bots"
+Tortoise builds a dam.
+Fuzzy says "Fuzzy must depart, but will leave his character here to log the discussion. Questions directed to me will be answered via MudMail."
+erik says "bye"
+fur says "I was deludged by robot questions, so I blew everyone off, and told them I would talk to them tonight :)"
+Prothan waves to fuzzy
+erik says "aha..is this about making robots or what?"
+Prothan says "erik, yep"
+Wisher says "Most interfaces come down to simple pair of send/recieve a line calls, tortoise"
+Hobbit wonders if the meeting minutes will be made available.
+erik says "i heard you have a skeleton, flexi, that you might give out"
+MisterX says "I have aquestion for those with working robots"
+Majik says "I think you're a bity late, erik. We've been talkng for about 45 minutes."
+MisterX says "how do you avoid busy wait on input?"
+erik says "sorry...i didnt know"
+flexi says "You can have my automaton code, but you'll have to do the ripping apart."
+Tortoise says "send/receive line calls?"
+erik frowns
+You say "Stewy plans to release these minutes.."
+Prothan says "is it commented flexi?"
+Tortoise feels stupid.
+Fiona points to her steno pad.
+fur says "MisterX, you can check a socket to see if there is pending input"
+erik says "thats fine, is this the code that tim sent me?"
+Hobbit had better get his butt on the mailing list RSN.
+MisterX says "and if it isnt?"
+Froboz says "WHAT MAILING LIST?"
+flexi says "Not really. I tend to be lazy."
+Hobbit says "tj"
+Wisher says "Flexit, you can check the status of a socket..i dont't remember the call...i think its select"
+Hobbit says "oops -- the mud list."
+fur says "If there isn't any input pending, don't read. if you don't read, you don't hang"
+erik says "If STEWY is releasing the minutes, I will leave so that you all can ghet back to your previous discussion,OK?"
+Crash has left.
+flexi says "select can time out."
+Froboz says "i've gotta run all..drop me a note if anything interesting is said.. bye all"
+MisterX says "you can always read with o_NDELAY"
+Froboz has left.
+MisterX says "yes?"
+Wizard asks for hobbit's email address.
+Hobbit says "I made a directory entry -- hobbit@pyrite.rutgers.edu"
+erik says "please send me anything pertaining to this conference and robots, OK?"
+Wizard puts hobbit on the mailing list.
+flexi says "FIONDELAY means you can spin unless you sleep."
+Hobbit is utterly amazed...
+Tortoise feels stupid.
+fur says "Oh, I misread your original question. If you try to read from a socket, and there is no input, then your process is automatically suspended."
+Prothan hands wizard a slip of paper saying "prothan@pine.circa.ufl.edu
+Acron says "Put me on that list too, at charles@pawl.rpi.edu"
+Wizard makes the additions.
+MisterX says "exactly my point, I do not want my robots suspened at random"
+flexi says "If you're writing an active automaton tho, you may want to move it about even if there's no input."
+MisterX says "ie the game is slow""
+erik says "for (i=1; i=80; ++i) printf("o"); [80 o's = adios]"
+erik says "bye all"
+fur says "well, you can pass an argument to the select call that says return right away if there is no input"
+flexi says "That's only 1"
+Fuzzy says "Use FIONREAD to find if there are any characters."
+Fuzzy says "I can share that code, too"
+Prothan says "yes please fuzzy"
+Tortoise waves goodbye to erik.
+erik says "Fuzzy, can you send me that also?"
+Prothan says "Anyone out there use pascal for their robot?"
+Wisher says "Yeah, select takes a timeout parameter.."
+Majik says "NARC does."
+Fuzzy says "yes"
+MisterX  says to wizard, "about that mailing list...
+erik says "for the last time, i'm really leaving"
+Wisher says "Well, prothan, all the C routines can be called from pascal.."
+Majik says "NARC wrote his using two programs and an inout file"
+Tortoise says "Hey! Waitaminute! I know Pascal! Does that mean I can write a robot?"
+MisterX says "I am misterx@sun.ufnet.ufl.edu"
+Wisher says "Sure."
+flexi says "But you've got to finish printing the infinite number of "o"s!"
+Prothan says "hmmmm"
+erik says "i'm just starting top learn C, flex...give me a break!"
+flexi grins.
+Wizard adds misterx, too.
+erik waves....and leaves...finally
+erik goes home.
+erik has left.
+Tortoise looks confused.
+flexi wonders why Tortoise looks confused.
+Majik says "whats got you dow, tortoise?"
+Prothan wonders why flexi wonders why tortoise looks confused.
+Tortoise says "I also know Scheme. I want to write robots but have no clue how to."
+fur says "tortoise, you can probably link in C routines to do the network communication"
+Tortoise says "I don`'t know C!"
+Prothan says "You don't need to... Just someone else who does..."
+Hobbit says "go buy a copy of K&R, and two days later you will know C"
+Acron says "FRoboz wants on that mailinglist , location jesse@pawl.rpi.edu"
+fur says "you don't have to know how the C routines work, just how to call them and what they do"
+Tortoise says "ahhhh..."
+Prothan gets up to get himself and MisterX cokes..
+Tortoise says "How do I call them and what do they do?"
+flexi thinks he'll grab the minutes from Stewy later....
+fur says "my socket package consists of 5 routines"
+flexi waves goodbye.
+flexi has left.
+fur says "open, read, write, check for input, and close"
+Tortoise wonders how to get fur's socket.
+fur says "talk to mee after the conference"
+Tortoise looks happy now.
+Wizard puts jesse on the mailing list, then falls asleep. Anybody else who wants on should send mail to asp@cs.cmu.edu.
+Vern looks happy too.
+fur says "basically writing a robot, is an excercise in parsing, and a lot of graph traversing if you make one that moves"
+Hobbit observes Wizar's use of Pittburghisms...
+Tortoise stops worrying, too.
+Tortoise wonders what a Pittburghism is.
+Majik goes home.
+Majik has left.
+Vern says "fur, at this point a concrete example would clear up my remaining questions."
+Vern says "so I'm satisfied."
+fur says "an example of what?"
+Tortoise tries to satisfy Vern.
+Vern says "A working code that does the networking."
+MisterX raises an eyebrow.
+fur says "hold on.."
+Vern didnt mean immediately!
+Tortoise raises both eyebrows and a question: "Now?"
+Yossarian has arrived.
+fur says "you dont want me to explain it then?"
+Vern says "Up to the rest of the crowd. Id like it."
+Tortoise says "Explain away, but isn't the code too long to post here?"
+What goes home.
+What has left.
+Tortoise waves hello to Yossarian.
+fur says "I hope you undertand how file streams work"
+Yossarian says "Hello. Sorry I'm late."
+Vern says "ok by me."
+Tortoise doesn't understand file streams.
+gigi has arrived.
+fur says "a socket stream works the same way, it just takes a lot more information to open it really"
+Prothan excuses himself.
+Prothan has left.
+Vern looks like he understands.
+Tortoise excuses Prothan.
+fur says "if you don't understand how to open a file and read and write to it, then a robot is probably above your ability"
+Yossarian says "Any decisions made here that I should konw about?"
+MisterX says "I think you should make something clear"
+fur says "whats that x?"
+MisterX says "doesn't a socket act exactly as a normal file descript?"
+MisterX says "if you use the normal file i/o mechanisms?"
+gigi has left.
+MisterX says "read/write etc"
+fur says "yes, it is a file descriptor, just like a file"
+Yossarian says "why use sockets? Pipes work just as well, and they're on both SysV and BSD."
+MisterX says "pipes are nice (i used them) but socket code is probably more efficient"
+Yossarian says "That's probably true. I just found it easier to implement pipes. Less programmer overhead, if not system overhead."
+MisterX says "and some folks(that majik guy for example :-) thinks pipes are "goofy""
+fur says "you mean pipes on a command line?"
+Vern says "my question would be pipes to what? (I know *another* process that's doing the networking) But what's the point?"
+Yossarian says "Well, I spawned off a child process which did the telnet which redirected the pipe it had been given to stdin and stdout."
+Yossarian says "Actually, you need 2 pipes for that to work."
+fur says "pipes are only one way, that means you have to have two of them"
+MisterX raises his hand
+MisterX says "anyone object to a quick pseudo pipe example?"
+MisterX says "oops pseudo code"
+fur says "that way works perfectly fine yoss"
+Vern doesnt.
+Tortoise says "me, neither"
+fur says "vern wanted an example, so i was just going to explain mine"
+MisterX says "I would rather learn about sockets myself :-) I already know pipes."
+Tortoise says "I know neither."
+Tortoise looks like he doesn't understand much.
+fur is not sure what everyone wants now
+What has arrived.
+Yossarian says "well, if this isn't a policy meeting, I've got a final to study for. See you all later."
+Vern says "Well *somebody* go ahead."
+MisterX  waves to Y
+What goes home.
+What has left.
+Vern waves to Yoss.
+fur says "we went over policy type things earlier yoss"
+Acron waves to Yossarian
+Tortoise wabes goodbye.
+Yossarian says "Oh, cold I get a recap then?"
+fur says "you might want to dig up a transcript from someone"
+Vern says "Was stewy making them available?"
+Yossarian says "O, I think Stewy has a copy. Thanks."
+fur says "okie"
+Yossarian says "So long..."
+Tortoise wabes goodbye.
+Yossarian has left.
+Hobbit feels a sudden urge to go read his mail, and grabs another Jolt on the way out.
+Hobbit has left.
+Vern says "ok....."
+Tortoise says "Fur, could you explain how it's done now?"
+Vern says "pipes or sockets?"
+fur says "so would you guys rather i explained how to use my code, and then get a copy of it, or explain how to write socket code?"
+Tortoise says "I vote for the former."
+Acron says "How to use and a copy."
+Vern says "I definitely want to see code at some point."
+MisterX  votes for a quickie socket explanation
+Vern seconds X>
+Tortoise wants first the former and then the latter.
+fur says "okie.. as we were saying earlier, a socket is the same thing as a file descriptor"
+fur says "you must open() it, read() and write() from it, and when you are done, close() it"
+Tortoise says "Ok."
+Tortoise wonders if this all that was meant by streaming.
+Vern says "yup"
+fur says "open()ing a socket is a little more complicated that opening a file, because you need to specify things like the host & port @ etc.."
+Tortoise says "which is just daisy...."
+fur says "sockets can also have multiple things connected to it, so that adds more overhead"
+fur says "even though you only need your robot to connect to one thing, you have to tell it that"
+fur says "writing to a socket is simple, you just send the text out"
+fur says "reading is slighty more complicated, since there is no EOF"
+Vern says "Are host and port the only extra info needed? How are they specified?"
+MisterX says "fur, there is no EOF ever?"
+MisterX says "how does a network reset or whatever get communicated?"
+fur says "yes vern, thats it"
+fur says "mx, the connect is just simply broken off"
+MisterX says "ie daisy crashes"
+Tortoise groks that and seems happier.
+MisterX says "hmmm"
+fur says "but like i said, since sockets can have more than one thing connected to them, you have to pass them a set"
+Vern wonders how this can possibly ammount to a whole page of code.
+fur says "you have to put one element into the set"
+Vern says "what are the elements of the set?"
+fur says "the host name is usually specified by a string, you make a function call to the name server to get the octets"
+fur says "the elements are the file descriptors you want to communicate with, you will just have one"
+Vern says "I suppose a net address like 128.2.218.26 can be directly used (our name server sucks)."
+fur says "yes, there is a structure you can fill with the numbers yourself"
+Vern smiles.
+fur says "the bulk of the code is in opening the socket"
+Vern nods.
+MisterX wonders about where the code will be?
+fur says "writing and closing are just a simple call"
+Vern is getting excited.
+fur says "reading is slightly more complex, because you have the new problem of what to do if there is no text waiting for you"
+MisterX  nods in agreement "Thats what I was interested in discussing"
+Vern says "so you do the equivalent of error handling..."
+fur says "if you do a read() and there is no text, your process will just wait until some comes in"
+Rail has arrived.
+Vern nods.
+fur says "this is not always a good thing.."
+fur says "so i made a fifth function, that checks to see if there is anything there or not"
+Vern says "before you read, you must check the input stream...."
+Rail says "Hello"
+MisterX says "select() will allow a timeout value..."
+MisterX nods at Rail.
+fur says "right, select is use to determine this"
+Vern is ready to see some code.
+MisterX says "fur what does your robot do if the input is slow..."
+Wisher says "Select is a little scary because it is used for both single and multiple connections socets."
+fur says "there is one other minor point in my code, it is easier to use a file stream than it is a pointer, so i convert it to a stream right after i open it"
+MisterX says " is it waiting? or has it possibly already moved?"
+fur says "what do you mean if the input is slow?"
+Rail says "Wisher, I don't understand your point."
+Wisher says "That some people may be confused by the code, it uses file descriptor fields..and the like"
+MisterX says "sometimes when I am on MUD I have had to wait for all the output"
+MisterX says " form MUD to arrive (like contents)"
+fur says "select() wants one of those sets i was talking about earlier, so you have to build and empty set and add your 1 socket to it"
+fur says "mrx, your robot will probably have to wait too"
+MisterX nods, "yes it will, but it would be nice if it didn't have to :-)
+fur says "what good is it going to do you?"
+MisterX says " I am trying to avoid this=>"
+MisterX says " while(no_input) sleep(1)""
+MisterX  laments his lack of desktop mips
+fur says "thats why i made my fifth call"
+Wisher says "A call to read on a socket, it will not return until there is input (or an error, such as disconnection)"
+fur while (running) {
+fur  if (input) process();
+fur  generateCommand();
+fur }
+MisterX says "I see, but I am still not satisfied...You are waiting for input""
+Vern has just thought of something.
+fur says "no i'm not.."
+MisterX says "input that may be a long time in coming!"
+fur says "arrgh"
+Vern wants to know if there are *many* helpful flags that robots should set (like the one that frames the room descriptions)
+fur says "for one thing that one input you want to ignore is the same input you MUST wait for"
+MisterX  grins "you did say your 5th call waits for input?
+fur says "no, i said it checks if there is any waiting to be read"
+MisterX says "perhaps I should make my goal clear"
+MisterX says "i wish to have an asynchronous robot"
+Rail says "You could set FASYNC on the socket, and get a SIGIO when there's input."
+MisterX says " it does not depend exclusively on reading input"
+Vern cowers at Rail's acronyms.
+fur says "is this robot going to ever issue commands?"
+MisterX says "yes"
+fur says "the only way to tell if your command was executed, is by reading back the result"
+Rail says "Vern, what acronyms? That's exactly what they're called on Unix."
+Vern looks confused.
+Vern says "Are these terms having to do with sockets?"
+Vern says "I guess so."
+Rail says "Yes."
+Vern says "whats a sigio?"
+MisterX says "good point, but if I wish the robot to go north 3 times in succession"
+fur says "misterx, if you are trying to do something funny, please wait till later, so i can make sure that everyone understands the normal basic case first"
+MisterX says "(as I often do)"
+MisterX says "sorry""
+fur says "you will soon find that is impractical"
+Rail has left.
+Wisher says "Vern, the frameing stuff you were asking about..try OUTPUTPREFIX and OUTPUTSUFFIX"
+Wisher says "They are tinymud robot helpers."
+Vern says "Are there other flags to know about?"
+fur says "x, what if someone has come along and removed one of those exits, surely you want your robot to detect this"
+Wisher says "Theyre not flags, they are settable strings for any connections to be printed before and after a result of a commands, Vern."
+MisterX says "yes,..."
+Yossarian has arrived.
+MisterX says " I see your point""
+Vern says "Wisher, do they need to be specified once, or every time you move?"
+fur says "i really doubt if there is ever a case where you want your robot to be async"
+Wisher says "Once each time you connect."
+fur says "vern, try them now"
+Yossarian says "Sorry to disturb you-all again, but does anyone know the CMU AFS file where the notes from the policy part of the mtg are kept? I can't reach Stewy or Fiona."
+fur says "type OUTPUTPREFIX****"
+MisterX says "perhaps you are correct, I for one do not even have a working robot (at least"
+MisterX says "not one with brains)"
+Vern types away.
+fur says "try something when you get done vern"
+Vern is clearly delighted!
+Wisher says "SUFFIX is the footer equivalent to that."
+Vern has done it already!
+Vern says "How decorative!"
+fur says "so everyone send mee your email, and ill zip off the code"
+fur says "then you can look at it and cry"
+Vern says "darken@yale.cd.edu"
+Wisher wonders if fur really wants him to bother sending his address
+MisterX smiles
+Wisher laughs
+Vern says "whoops darken@cs.yale.edu"
+Acron says "charles@pawl.rpi.edu"
+MisterX says "misterx@sun.ufnet.ufl.edu"
+Fuzzy says "Hello?"
+Vern says "hi fuzzy!"
+MisterX says "Hello"
+Wisher says "Hey, fur I can help ya, if you want..."
+Fuzzy says "I extracted the Guts of Gloria to make a small Robot available for mail for FTP"
+Acron says "Froboz is jesse@pawl.rpi.edu"
+Yossarian waves to Vern, since they used to work in the same department.
+Vern thanks Yoss for the 'tinybuilding' file.
+Yossarian says "You're welcome."
+Fuzzy says "It shows off TCP sockets, and OUTPUTPREFIX and SUFFIX. The host is NL.CS.CMU.EDU (I'll get the IP numbers in a minute). It is in /usr/mlm/ftp/robot.c."
+Yossarian says "Later, all."
+Yossarian has left.
+fur has sent it out
+Vern claps enthusiastically.
+MisterX says " thanks"
+Acron says "wonderful!"
+MisterX says "thanks to fuzzy also"
+fur wonders if wisher has been getting any work done
+Wisher says "Who me? Lots..."
+Wisher says "I can see 2 windows at once.."
+Wisher smiles
+fur is getting hungry, and will have to feast soon
+Vern begins to weep.
+MisterX shifts in his leather chair
+fur says "whats wrong vern?"
+Vern says "Nothing! I'm just starting to read the code, thats all."
+fur says "i told ya the open() was kinda hairy.."
+Vern says "actually, I'm kinda relieved."
+Fuzzy says "Bye, all."
+Vern says "bye"
+fur says "later"
+Fuzzy has left.
+MisterX says "bye"
+Wisher says "Bah fuzz"
+Acron says "Fairwell, I must depart, but I thank you all for the very informative discussion!""
+fur says "anything else before we draw to a close?"
+Vern says "yes"
+MisterX says "next meeting?"
+Vern says "fur, what is the port argument again?"
+fur says "feel free to send mail about the code"
+fur says "its a number, like 4201 for there"
+MisterX says "what is your address?"
+fur says "i mean here"
+Vern smiles
+MisterX says "OK"
+fur says "you can send tinyMail"
+Vern says "thanks a heap fur!"
+fur says "or gp5@mentor.cc.purdue.edu"
+Wisher snickers
+MisterX says "See yall later"
+Vern says "bye x"
+MisterX exits into the hallway.
+MisterX has left.
+fur says "just make sure ya put it to good use"
+Vern shudders as the dark side of the force takes hold.
+fur says "hehehehee"
+MisterX has arrived.
+MisterX has left.
+Vern says "X, I'd like to talk about alternate approaches sometime."
+fur wonders if Tortoise passed out or what
+Vern says "woops"
+Vern says "i guess hes gone."
+Tortoise has been asleep for a while and has just woken up.
+Vern feels tortoises pulse.
+Tortoise says "I've been working in another window..."
+fur says "Guess I'll officially close up the meeting now. Time to hit the juice and cookies!"
+HypoMan has arrived.
+Wisher faints after typing WHO and seeing that 20+ people are logged on..
+HypoMan has left.
+Vern says "thanks again fur!"
+Vern says "I'm outta here."
+fur says "there was 40 earlier wishy"
+Acron says "Yes, thanks!"
+Vern says "Bye all!"
+Wisher drops dead
+fur says "sure, no prob!"
+Vern waves.
+Vern has left.
+Tortoise rubs his eyes and waves goodbye.
+fur says "fiona, you can stop now"
+Wisher says "Bah"
+fur says "toodles!"
+Tortoise says "humbug"
+Tortoise says "Fur, I'd like to talk to you later about robotics, ok?"
+fur says "sure"
+Fuzzy has arrived.
+Fuzzy says "Yes?"
+fur says "was fiona your's or flexi's fuzzy?"
+pomru has arrived.
+Tortoise says "Great! See y'inz later!"
+Tortoise goes home.
+Tortoise has left.
+Fuzzy says "Fiona was Stewy typing from his terminal"
+Acron goes home.
+Acron has left.
+fur says "ah okie, well we've officially closed now"
+Fuzzy says "I tried to add notetaking to Gloria in 5 minutes, but it didn't work"
+fur says "hehehehee"
+Fuzzy says "Great. Stewy left Fiona logged in to get a transcript"
+pomru exits into the hallway.
+pomru has left.
+Fuzzy says "Bye..."
+fur says "yeah, i wanted to tell her she could quit writing now"
+fur says "byby!"
+Fuzzy says "She'l "take note of it"..."
+
+			** 9:?? **

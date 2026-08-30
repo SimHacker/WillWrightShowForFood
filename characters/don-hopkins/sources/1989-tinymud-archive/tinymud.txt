@@ -1,0 +1,544 @@
+Date: Mon, 11 Sep 89 21:41:18 -0400 (EDT)
+From: "Todd L. Masco" <tm2b+@andrew.cmu.edu>
+To: elbows@bloom-beacon.mit.edu
+Subject: tinyMUD!
+
+Everybody with an internet connection should:
+
+telnet 128.2.242.79 4201
+
+	This access a quickly growing interactive multi-player game
+run off of lancelot.avalon.cs.cmu.edu.  One of the best things about
+it is that it's user-expandable -- For example, John, Doug, and I have
+implemented the Castle Anthrax (where we live) in it.
+	Also, the entire game of ADVENTURE has been implemented (tho
+they had trouble with the Battery Vendor).
+
+	This thing is great -- Oh, a hint:  drop (sacrifice) things at
+The Temple of Arkteks-t'leep (architect's leap) for money.  And north
+takes you to the library.
+
+	Good luck!
+
+	Oh, the author is James Aspnes, a former Bandykin.
+
+		-- Todd
+
+From: James Aspnes <asp@CS.CMU.EDU>
+Date: Tue, 28 Nov 89 22:33:04 EST
+To: bb+andrew.games.tinymud@ANDREW.CMU.EDU
+Subject: TinyMUD has moved
+
+
+The original TinyMUD database has been moved to
+DAISY.LEARNING.CS.CMU.EDU (128.2.218.26).  The port number is still
+4201.  Alas, many changes made in the days before its demise on
+Lancelot have been lost.
+
+If you are running tinymud.el under GNU Emacs, the only thing you need
+to change is the setting of tinymud-server.  An updated version of
+tinymud.el with this change has been put in the pub directory on
+LANCELOT.AVALON.CS.CMU.EDU for anonymous ftp.
+
+--Jim
+
+Date: Sun,  3 Dec 89 12:02:36 -0500 (EST)
+From: "Andrew C. Plotkin" <ap1i+@ANDREW.CMU.EDU>
+To: Tinymud@CS.CMU.EDU
+Subject: Re: what could be...
+
+> Excerpts from andrew.games.tinymud: 2-Dec-89 what could be... Erik
+> Josowitz@vitruvius. (624)
+
+> does anyone have any thoughts on how the tinyMUD environment could
+> develop? 
+
+Moonchilde and I (Zarf) are beginning work on a new MUD. The big
+improvements are a) the environment is an object-oriented sort of thing,
+instead of a flat database, b) the responses of objects to commands are
+programmable (in a cheapo Pascalish language), and c) the parser will be
+a lot better (multi-word parsing, indirect objects as well as direct
+objects).
+   The ADV system on mentor.cc.purdue.edu (port 12345) has the
+object-oriented system and programmable objects (I don't know about
+their parser). However, ADV is meant to have only a few builders -- most
+players will be mere mortals. (They may have done this already.) To we
+of tinyMUD, of course, that ruins the whole point of the game, so we're
+writing our own.
+
+(Actually, to distinguish the two sorts of games, we're calling ours a
+MID, for Multi-Implentor Dungeon. Tentative name for the universe :
+MIDgaard.)
+
+--Zarf
+
+Date: Mon, 4 Dec 89 01:37:01 -0500
+From: don (Don Hopkins)
+To: ap1i+@ANDREW.CMU.EDU
+Cc: don
+Subject: what could be...
+
+I like your ideas for improvements, for the new MUD you're making.
+Especially the idea of having an embeded language to write object
+behavior. I'm afraid that the "cheapo Pascalish language" might get
+you into some trouble, though. I don't know how far you've gotten, or
+how much you enjoy implementing languages, but from what I've seen,
+language implementation is a bitch, and language design is a big hairy
+mother of a bitch. And of course the biggest nastiest bitch of them
+all is writing the manual.
+
+The easy way out is to go with some pre-existing language.  It's got
+to be an interactive language if you're going to use it to program an
+adventure game. C is right out. It's not interactive. (C sucks for
+many other reasons too. And now that it's such a main stream language,
+it's just no fun to program in any more.) You should be able to type
+in little chunks of code to see what happens, instead of having to
+tool out whole function definitions in a text editor, compile them,
+and link them. (Yes, I've heard of Saber C. But last I heard, it
+wasn't on to public domain.)
+
+The advantage of using a pre-existing language is that you don't have
+to implement it, debug it, test it out to see what you forgot, rewrite
+it and make all your old code obsolete, debug it again, again, and
+again, write a manual, etc, etc, etc...
+
+Somebody else has already made all the mistakes, and fixed them by
+going through all that torture. You don't have to waste your time
+chasing down core leaks and segmentation violations, you can get on to
+more interesting stuff like building the universe. 
+
+I know of several pre-existing language implementations whose source
+code is on the public domain, that might make good adventure language
+cores. 
+
+* PostScript:
+  I think a NeWS-like programming environment would be excellent for
+  writting multi user adventures. Light weight processes, the event
+  queue, and object oriented PostScript would be invaluable. There is
+  also quite a potential for graphical adventures!  Rehmi Post is
+  working on PreScript, a multitasking PostScript interpreter like the
+  one in NeWS, but without the graphics. It's intended to be used as
+  an extension language for libraries written in other languages (i.e.
+  you can add your own primatives and data types in C). He's giving it
+  away for free when he's done!  PostScript syntax is trivial, and the
+  language is quite straightforward (or drawrofthgiarts if you're not
+  used to RPN).  It's a powerful language, even without a
+  stencil/paint graphics package, and the object oriented extensions
+  make it great for the kind of programming we're interested in doing.
+  I think it's pretty hard to compile PostScript code, though. You
+  could reduce it down to machine code that would run faster than it
+  would through the interpreter, but it's hard to optomize because of
+  the late binding (because of the dynamic way the dictionary stack is
+  used). But you can do some really funky stuff in PostScript because
+  it's so dynamic!
+
+* Scheme:
+  Scheme would be a great language to program an adventure in.  There
+  are some nice schemes around, some more portable than others. It's
+  small, it's powerful, it's religiously correct. Scheme does not have
+  the nice interactive stuff that NeWS has, like light weight
+  processes or an event queue. You could easily implement them though,
+  but there are better ways to accomplish the same things in scheme.
+  It probably wouldn't be very efficient unless you wrote the critical
+  parts in C, or had a good scheme compiler. I have heard of a
+  scheme=>c compiler out of DEC, but I think they want some money for
+  it and have some distribution restrictions. I'm not sure. I'll try
+  to get in touch with the guy and see...
+
+* Forth:
+  I have a *great* 68000 and SPARC based forth system by Mitch
+  Bradley, as well as a nice portable forth system written in C. 
+  I've always wanted to write an adventure authoring system in Forth!
+  It would be easier in PostScript, though.
+
+* Lisp:
+  Lots of free lisp implementations around. Ho hum. Scheme is
+  more elegant.
+
+* Perl:
+  Now there's a studly language! I love all that it does but I'm
+  having a hard time getting past the syntax (it's like lots of
+  languages mashed together, and I don't know which to use when). Perl
+  is an excellent interface to Unix.  It would be the language in
+  which to write the ultimate adventure shell.
+  
+* ZIL:
+  Zork Implementation Language, a derivitive of MDL (Muddle).
+  Owned by Infocom, but I heard they went under (sigh). The original 
+  Zork on MIT-DM was written in Muddle. Infocom implemented the ZIL 
+  language for micros, and used it to write their games. I wonder what
+  happened to ZIL? Anybody got an MDL interpreter kicking around?
+  I'd do just about anything for original muddle Zork sources.
+     
+* DDL:
+  Dungeon Definition Language. Definitly check this one out! I found
+  it in /usr/src/games/ddl in my local vax 4.3 source tree. No source
+  code for the ddl compiler, but there's a lot that can be learned by
+  looking at the manual, the sample dungeon definitions, and the wish
+  list. It's not an interactive language, but it does have a lot of 
+  good ideas that could be implemented in other languages. 
+
+From: James Aspnes <asp@CS.CMU.EDU>
+Date: Mon, 4 Dec 89 16:32:01 EST
+To: tinymud@CS.CMU.EDU
+Subject: TinyMUD source code now available for anonymous ftp
+
+The sources for beta release 1.3.1 of TinyMUD are available by
+anonymous ftp from LANCELOT.AVALON.CS.CMU.EDU (128.2.242.79), in the
+file pub/tinymud-1.3.1.tar.Z.  The sources are in compressed tar-file
+format, and should include everything you need to get TinyMUD running
+except a BSD-ish Unix box and an ANSI C compiler.
+
+Have fun,
+
+--Jim
+
+Date: Tue, 19 Dec 89 13:27:00 -0500
+From: Fur - Roy Riggs <gp5@mentor.cc.purdue.edu>
+To: tinymud@CS.CMU.EDU
+
+
+
+Well, since I get asked how I made furBot map a bazillion times a day,
+I guess I'll just write this all out once and mail it.  Basically, other
+than trying to give your robot artificial intelligence, mapping a
+dynamic graph is the hardest thing you can do.  There are also a few
+things that cruel people can do to totally fool your robot, which he
+has no chance in detecting, and will introduce errors in your map.
+Such is life in the robot world.  I'll try to cover the 3 most
+important topics, storing the map, building the map, and using the
+map.  Note: this work is by no means definitive!  I'm hoping that
+these notes will get serious robot builders pointed in the right
+direction, and that people who are just bored and want to write a
+robot for the hell of it, will run away screaming pulling their hair.
+	 All I ask is that you please please *please* don't use this   
+information to create one of those stupid robots that are around now,
+like Pink, axe_murderer, and others. These robots really piss mee off
+because they are designed to specifically annoy human users, and they
+give other robots a bad name. I'll get off the soapbox now and begin.
+
+STORING A MAP
+	I stored my map in memory as an ordered tree, where each node
+consists of a room structure.  The room structure holds all the
+important data for that room, such as it's name, tinyMUD number, and a
+list of known exits from the room.  The exits list is a list of exit
+nodes, where each node stores all the directions that lead to one
+room, and that room. My C structures follow:
+
+typedef struct _ROOM {	/* this is one node that holds one room */
+	char *name;
+	long number;	/* our hashed id for a room */
+	long tiny;      /* the tinyMud id for a room */
+	long learned; 
+	int flags;      /* Flags used when traversing the graph */
+	struct _EXITTABLE *exits;
+} ROOM;
+
+typedef struct _ROOMTABLE {	/* this is the ordered tree */
+	ROOM *room;		/* ordered on the number field */
+	struct _ROOMTABLE *left, *right;
+} ROOMTABLE;
+
+typedef struct {	/* this holds all the names for one exit */
+	char **directions;
+	struct _ROOM *leadsTo;
+} EXIT;
+
+
+typedef struct _EXITTABLE {	/* exits are not stored in any order */
+	EXIT *theExit;
+	struct _EXITTABLE *next;
+} EXITTABLE;
+
+The fields in the ROOM structure have the following uses, the name
+obviously stores the name of the room.  You will need this if someone
+pages you to find out where they are at. The number field holds a hash
+value of the rooms name and description.  Just using the name of the
+room is not enough, your robot will get trapped in mazes if you do
+this. If you have a ton of memory to burn you could just store the
+description of the room.  The tiny field is the number that TinyMUD
+uses, I store this for hypothetical purposes only.  This is one of
+those things that someone can fake very easily like making a room
+named 'Bart's Basement (#666)'  Since you can never figgure out a
+room's true tinyNumber unless its link_ok, you can't use these numbers
+for anything important.  (There is a way to tell if someone is trying
+to fool you as above, I leave the solution as an excercise to the reader.)
+The learned field is something I use to tell how many exits furBot has
+tried in this room so far.  More on this field later. The flags field
+is used internally, for the breadth first search.
+An exit is defined by the destination room it leads to, and every direction
+the robot tries that leads to the same room is added to the same exit.
+It doesn't matter if they are actually two separate exits in the game
+or not, because theoretically they are the same. For example if we are
+in the second floor elevator one exit 3;u;up that leads to the 4th
+floor, ends up being stored the exact same way as two exits one named
+3 and the other named u;up.  
+	Naturally when your robot finally shuts down, you will want to
+have it store its map on disk.  I used the following format for my
+file, (if you would like to use it also thats fine, I would like to
+see a standard map file format arise.) Note: tabs are used to separate
+the directions from the id of the destination.
+
+RoomName1
+myId tinyId numberOfExitsTried
+n;north	myIdOfDestination
+u;up	myIdOfDestination
+
+RoomName2
+myId tinyId numberOfExitsTried
+s	myIdOfDestination
+
+
+GENERATING YOUR MAP
+	This is by far the hardest thing you have to do.  Believe it
+or not, it is actually a challenge to figgure out what room you are
+standing in, let alone determine where an exit leads.  Unfortunately,
+builders can create an exit called:
+	l;lo;loo;look;look here
+and then make your robot move somewhere, or print out some tricky
+phrase like 'Limbo (#0)'  There is really nothing you can do about
+this, and without any additional information, your robot is screwed.
+Basically, I assumed that look would always work properly.
+When ever your robot tries to go in a direction, he will get back
+anywhere from 1 to 100+ strings.  The only important cases are from 1
+to 5, because you are guarenteed that from the 6th string on they are
+contents.  From these lines, it is impossible to pick out the name of
+the room with 100% accuracy.  The problem is that there are 3 string
+that are optional, (the succ on the exit, the rooms description, and
+the rooms succ)  I won't go into every possible case, but here is an
+example, if you type 'sit' you could either get back 'You sit down
+on the chair' 'Comfy Chair (#12345)'  The first case gave you a fail
+message, while the second case you actually traveled to a new room
+with no description.  If you really wanted, you could apply a
+heuristic that would help in some cases, but the easiest way is just
+make your robot look in the room.  We assumed earlier that look would
+always work, so now no matter how many strings we get back, we know
+the room name will always be the first one.  Anyone who has seen
+furBot in a room with an osucc will see that he repeatedly looks in
+the room over and over when he is trying new exits.  I think that
+Gloria also looks a second time whenever she enters a new room.
+	Now if that wasn't bad enough, TinyMUD has the random exits.
+Frankly, these are a pain in the ass, and I haven't found a good way
+to deal with them.  For now I just store every exit, and never delete
+them.  You can't know for sure if you try an exit, and it doesnt work
+if the exit has been removed or if it just didn't work this time.
+	To find new exits, I gave furBot a list of 50 common exits to
+try. To this list he adds every word from the rooms name, desc, succ,
+and every word from the contents list. He tries them all in order,
+looking each time to see if he actually moved to a new room or not,
+and adds them if they are a new exit.  If he gets trapped somewhere
+with no exits, he goes home. I have furbot NOT adding any exit that
+leads home in his map. If someone asks him for a shortest path, you
+don't want him telling them to go home first.  If you wanted, you
+could make your robot look at every item in the room, and add those
+words into the list to try also.
+
+USING THE MAP
+	Once you have your map built, you will probably want to make
+your robot respond to pages.  First off you grab the room name out of
+the page message, and search for it in your graph.  If you don't know
+it, you can't get there.  If there is more than one room with that
+name you will have to pick one at random or try them all.  Once you
+determine your destination you use a breadth first search to find it.
+This is a classic algorithm that every robot builder worth his salt
+should know, so im not going to explain it here.
+
+CONCLUSION
+	Hopefully, I have provided enough information to those who are
+really interested in providing the world with useful robots to get
+started off on the right foot.  I also hope that everyone who was
+planning on building a robot to cash in credit cards all day, have
+given up all hope of building one.  There are still many many things
+about mapping that I haven't touched.  I look forward to serious replys
+and will answer them as best as I can for the next few days, until I
+go home for break.  You can mail mee while I'm gone, but don't expect
+a reply until I get back.
+
+fur
+
+
+Date: Tue, 19 Dec 89 20:55:25 -0500
+From: Don Hopkins <don@cs.UMD.EDU>
+To: rosenblk@turing.cs.rpi.edu, brie+@ANDREW.CMU.EDU
+Cc: tinymud@CS.CMU.EDU
+Subject: [Andrew C. Athan <ta-aca@cunixb.cc.columbia.edu>: Re: maping droids]
+
+   Date: Tue, 19 Dec 89 11:27:13 EST
+   From: Keith Rosenblatt <rosenblk@turing.cs.rpi.edu>
+
+   The biggest problem I'm having in conceptualizing the operation of
+   the map-making/exploration droid I've been working on is that of
+   rooms having the same name.  So far, the only good way that I could
+   think of to solve that problem is to 1) Somehow arrange for a 'bot
+   mode where room numbers would always be displayed whether the 'bot
+   could control the room or not and 2) Stop the search right there,
+   marking the problem in the database somehow for later human
+   intervention (the operator would have to tell the droid that the
+   rooms were the same or give paths to avoid the room entirely and
+   still explore beyond that point.)  The former would certainly make
+   the entire process much simpler.
+
+   Has anyone thought of any other solutions or come across other problems
+   I may have missed?
+
+Think of how *you* would map the maze in adventure!  You drop objects,
+and identify the room by the objects it contains.  How about a mapping
+droid who drop ball bearings or dead batteries when it becomes
+confused with rooms of the same name. It could be dangerous for robots
+to indiscriminatly @create objects, though. (I'd be pissed if a
+haywire robot filled my room to the brim with ball bearings because
+some freak thought = was a comparison operator!) Perhaps a robot could
+carry around some some objects just for dropping when it became
+confused, but not create any more. The room description checksum is a
+good idea, but still would not work in the case of the classic maze in
+adventure. (You're an amazingly twisted little ass, always different!)
+
+    Date: Tue, 19 Dec 89 01:42:43 -0500 (EST)
+    From: Brian Harrison <brie+@ANDREW.CMU.EDU>
+    To: Tinymud@CS.CMU.EDU
+    Subject: maping droids
+
+    what do the typical 'mud robot creators use to program their droids?
+    c?  elisp?  pascal?  prolog?  ratfor?  karel?  :)
+
+Mlisp, but I'd much rather PostScript or Scheme. I wish Rehmi would
+get back from Texas and give me a copy of netscript, his PostScript
+extensible rpc server [like NeWS without a graphics library, that you
+can incorperate your own C libraries into]. I stole a clean
+implementation of buffers and marks from James Gosling's "ched", and I
+want to put that in. It would be perfect for implementing a mud
+client, as well as a graphical mud server.
+
+    and for mapping hacks?  anyone have some brilliant tricks that they
+    wouldn't mind sharing with me before they incorporate it into their
+    thesis?
+
+Thesis? Thesis??! I ain't no stinkin' grad student! But if anybody
+wants to send me maps their robots have created, I will run some
+keyboard macros over them, shoot them throught the pseudo-scientific
+visualizer, and send back some psychodellic color PostScript plots of
+the topological texture of TinyMUD. (Specify which room you want the
+view centered around.)
+
+    anyone want to make a decent libdroid.a?
+
+    now for the gross question: how about a separate socket (4202?) for
+    droids only.  sorta packet based.  and gives away the names (ids?) of
+    all the exits.  or is this blasphemy?
+
+    thx,
+    -brie
+
+That's a nice idea, making a HyperCard front end for TinyMUD!  I've
+just started playing around with something similar myself!  My "real"
+job is writing a hypertext authoring tool in Emacs (UniPress, so I am
+using mlisp). Unfortunatly I can't give it out, it's kind of embeded
+in the rest of the stuff I'm working on, which is in a typical state
+of flux. In my spare time, I've connected the emacs hypertext
+authoring tool up to tinymud, and have made nodes for rooms with
+buttons I can click on to send commands, follow exits, etc. Each room
+is in a different emacs window (but same emacs process), which opens
+and comes to the front when you enter the room.  You can click on the
+name of an object or a person, to look at it, and then click on
+various command buttons to do other things to it, follow links to
+other hypertext nodes without actually moving there, make buttons for
+your favorite commands in each room, type notes into the hypertext
+node about the room, etc... The idea is that I'm creating my own
+database that parallels the TinyMUD universe, where I keep my personal
+view of the world, associating local information with the names of
+rooms and objects. Graphics will be an interesting enhancement. (I'll
+be able to make pictures of rooms, objects, and people, and store them
+in my own database, and display them as well as showing their name.)
+Emacs can look for certain strings coming back from tinymud, and react
+to them automatically (for example, I had it automatically killing
+ultratron! whenever he entered into the room), as well as logging
+everything certain people do or say in their own personal buffers.
+It's a giant run-away rube goldberg device, but it's a fun way to
+stress test my hypertext authoring tool!
+
+Yes, I agree that there should be a "back door" entrance for robots
+that sends tagged packets, with object types and ID's. Giving away the
+ID's of all the available exist might be blasphemy, but I don't think
+it would change the nature of the game if it were to just give away
+the IDs of things you could normally see, as long as the normal access
+restrictions still apply. Does just knowing a number give you power
+over a room or an object? Knowing the ID number solves the problem of
+objects having the same name, which is a bitch of a problem to try to
+work around any other way. Every string it sends that comes from the
+database (room descriptions, success and fail messages, etc) could
+have a unique ID in the tag so I can instantly know if I've seen it
+before, and if it has some special meaning, without performing
+millions of string comparisons. You should be able to tell if a packet
+contains a room name, a room description, a player, the name of an
+object, a message from " or :, a page, a status message, the reply to
+a command, something that can be safely ignored (like "Contents:"), or
+whatever. (Idealy I'd like to be able to download PostScript
+procedures to the mud server that tell it what format to send messages
+back to me. The standard text-based user interface would be just one
+such procedure.)
+
+The command replies right now can be delimited by OUTPUTPREFIX and
+OUTPUTSUFFIX. Are command replies the only type of multi-line message?
+Are all other asynchronous messages sent on one line? i.e. Can I
+assume that if I get one line of text, outside of an OUTPUTPREFIX
+OUTPUTSUFFIX group, that it is a complete message, which can be
+interpreted on its own? Also, can I assume that none of the lines
+between the OUTPUTPREFIX and OUTPUTSUFFIX are *not* part of the reply
+to my command? (that is, I don't want people's talking showing up
+inside a delimited room descriptions.)
+
+	-Don
+
+
+Date: Wed, 20 Dec 89 19:09:16 -0500 (EST)
+From: Brian Harrison <brie+@ANDREW.CMU.EDU>
+To: Tinymud@CS.CMU.EDU
+Subject: Robotic Ethics
+
+on the issue of messy, er- noisy robots, i would advise these guidelines:
+
+don't flood players with ofail messages while trying to find exits. 
+this can be solved by checking the objects in the room.  here are three
+types of tests:
+
+1) if one of the objects has "Contents:" when "look"ed at, then it's
+probably another player.
+2) if the object name matches what you get from a periodic "WHO"
+command, then it is probably another player.
+3) if a player replies soon after the robot "say hello", then you've got
+company.  in fact, the robot can ask "mind if i map?" or "got a light?"
+upon entering a new room, and timeout waiting for a reply.
+
+also, i don't feel too happy seeing robot droppings.  i'll gladly pick
+them up.  all's fair in love, war, and tinymud.  :)  besides, who says
+that the robot has to leave the bread crumbs?  we have the added clue of
+the junk, er- contents of a room to help determine what room we are in.
+
+determining exits:
+
+i wish there was a standard "exits" exit:ofail message that people can
+assume enumerates all possible exits.  non trivial.
+
+saving that good mud-digging practice, i wish that another bit could be
+added into exit instances: hidden.   and another command: exits, which
+tells the player all the exits except hidden marked ones.  that way the
+game keeps track a player's options, without giving all the fun away.
+
+on storing maps:
+
+like i have enough virtual memory to have a 2D lookup of shortest paths
+from one room to another!  try some sparse array tricks or something. 
+please.
+
+resolution:
+
+i think i'll make a navigational server robot for "client" robots.  oh,
+wait.  we already have Gloria.
+
+also, "garbagemen" should be called "maids" or "butlers".
+
+god, solving how to make tinyROBOTS is fun!
+
+-brie
+p.s. see yunz at evecon?
+p.s.s. i might have a mail digesting machine...

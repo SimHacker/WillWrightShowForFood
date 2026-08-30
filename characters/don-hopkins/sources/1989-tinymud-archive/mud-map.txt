@@ -1,0 +1,2774 @@
+Advertised exits from the Rec Room:
+
+>go baths
+>go LBL2
+>go inn
+>go lo-rise
+>go pine
+>go trolley
+>go tunnel
+>go mousehole
+>go temple
+>go daemon's
+>go picnic
+>go tden
+>go angel
+>go Jedi's
+>go gate
+>go unicorn
+>go links
+>go ashne's
+>go moonchilde's
+>go klee
+>go moria
+>go balton's
+>go forest
+>go bugeye
+>go bloom
+>go mordor
+>go ski
+>go fnord
+>go message
+>go Tyrone's
+>go bob's
+>go cube
+>go elvis
+>go wilson's
+>go wabe
+>go sanjay
+>go dan's-den
+>go butterfield
+>go 5103
+>go bj's place
+>go fields
+>go police
+>go ashlink
+>go chat
+>go ???
+>go Carol's
+>go Harvard
+>go tundra
+>go bexley
+>go fireplace
+>go goldragon
+>go rand
+>go motel
+>go tfm
+>go paradise
+>go tristan's
+>go clh
+>go droopy's place
+>go balloons
+>go 4122
+>go brandy's
+>go penqueriel
+>go rail
+>go carneggy
+>go d 52
+>go king arthurs castle
+>go pillow
+>go bard
+>go shoebox
+>go alien
+>go hrsfa
+>go david
+>go through
+>go ping pong
+>go apartment
+>go campus center
+>go workroom
+>go tv-33
+>go rec
+>go rathole
+>go tardis
+>go yalea
+>go doghouse
+>go heather
+>go nebutu
+>go alexandra
+>go demon-spawn
+>go waldo's
+>go to
+>go ily's
+>go pouch
+>go bar
+>go sugar mountain
+>go H.P.
+>go ou
+>go carrot
+>go gandalf
+>go alcove
+>go teleport
+>go theater
+>go Fuzzy's
+>go robot
+>go shadow's
+>go guild
+>go rainbow
+>go vortex
+>go dactyl's realm
+>go philcon
+>go phone
+>go polling booth
+>go thalx's
+>go firepole
+>go Nondescript Passageway
+>go MDC
+>go Dazwid's
+>go black hole
+>go gct
+>go ferdinand chalkshoe
+>go sanctuary
+>go myrth
+>go hippo land
+>go hippo world
+>go gnny
+>go igzorp
+>go dagon
+>go tetris
+>go taxi
+>go florida
+>go gm
+>go tardis
+>go wardrobe
+>go bus
+>go tub
+>go ricky
+>go yale
+>go hurst
+>go afton
+>go rainbow's
+>go end
+>go gunslinger central tower.
+>go winter
+>go seal
+>go g21
+>go mars
+>go cloud
+>go dream
+>go bazaar
+>go kadaq
+>go g21
+>go seascape
+>go crux
+>go fortress
+>go dorm
+>go hog
+>go living room
+>go church
+>go Heart of Gold
+>go pervert
+>go tt1
+>go Dunster
+>go sammael's
+>go shmo loft
+>go milk
+>go madonna
+>go nirvana
+>go help
+>go go
+>go MFS
+>go orgasm
+>go tour
+>go asgard
+>go mando
+>go push GridButton
+>go d 32
+>go help
+>go Elf Land
+>go combust
+>go flair
+>go A dark tunnel leading off in
+>go some obtuse direction
+>go bbb
+>go xyzzy
+>go raven
+>go bbbo
+>go zombie
+>go temp-vern-1
+>go hall
+>go marshall will link this
+>go heaven
+>go plane
+>go ciao
+>go rpi
+>go 306
+>go DPW
+>go hammock
+>go cykes place
+>go hamster
+>go hades building
+>go rob's
+>go zanitarium
+>go greyson
+>go duplicate
+>go EC
+>go hard rock
+>go condo
+>go limbo
+>go walker
+>go dive
+>go banzai
+>go lounge
+>go lobby
+>go ric_limbo
+>go khal_limbo
+>go CW
+>go airroc
+>go bemis
+>go ri
+>go slack
+>go out!
+>go cavern
+>go wing
+>go castle D
+>go waiting
+>go miles' place
+>go foyer
+>go bbemis
+>go cave
+>go nest
+>go mad
+>go Greene
+
+
+
+>go baths
+You go into the baths. Invisible hands pluck your clothes off as you
+enter.
+Tub Room
+This room contains a large snowdrift, a trampoline, and a huge wooden
+tub (from which steam rises). The floor is made of sanded but
+unvarnished cedar planks, and gives off a wonderful smell.
+Contents:
+Louisianna State Swimming trunks
+Mississippi State Swimming Trunks
+Texas Longhorn swimming trunks
+Lush
+Arizona State Sun-Devils swimming trunks
+Iowa Hawkeye Swim Trunks
+box of condoms
+Amherst Swim Club swimming suit - male
+utah state swimming trunks
+Gnu Excretion
+
+>go LBL2
+LBL2(#4661RL)
+This is the LBL2 IMP, with links to: UTAH BERK
+
+>go inn
+Corridor
+You nearly slip on the many layers of grease that cover this once
+beautiful olive green and plum purple checkered-tile corridor. There
+are doors here labeled "Kitchen - CONDEMNED (not CONDEMNDED)" and
+"Bathroom". A noisy rec room lies north.
+Contents:
+Reply to bandygram
+
+>go lo-rise
+Williams St. Sidewalk
+This stretch of sidewalk leads west up to Wesleyan campus and
+continues to the east. Poured concrete dorms are to the south, a
+Spanish maison is to the southwest, an advertising agency is to the
+northwest, something is to the northeast, and forest lies to the
+north. Night has obviously fallen over Williams St.- orange
+streetlights make the landscape seem strangely distorted.
+
+>go pine
+Somehow, you find yourself in a forest.
+Pine Clearing
+You are in a clearing surrounded by tall pines, a place of peace and
+serenity. On the east side of the clearing, a log set horizontally
+between two tree trunks gives the impression of a doorway. This
+impression is heightened by the presence of a large grey-and-cream
+cat, who sits on the ground under the log and grooms himself
+complacently.
+Every once in a while, a giant bird flies overhead. It seems to be
+going to and from a point slightly to the west.
+Contents:
+Hole in ground
+wisps of mist floating from the north
+
+>go trolley
+You leap quickly onto a passing trolley car, and it pulls away
+clanging.
+Sidewalk [Puddle Blvd and Kirenion Avenue]
+To the west you see the main entrance to the Zooquarium. This
+world-reknowned home for flightless water fowl of the polar regions
+seems to be closed for the season. On the sidewalk you see a pastel
+chalk drawing of a beautiful island paradise.
+A narrow path winds northwest along the Zooquarium walls, and you
+notice a small sign reading: "Picnic Area". A street sign hanging on a
+lamp post reads: "South: Business District. East: Kirenion Ave. North:
+residential".
+Contents:
+desperate
+medieval castle tourist brochure
+Ed Bear's Vaccum Sewer Valve
+a sign by the curb reads: WAIT HERE FOR REC ROOM TROLLEY
+
+>go tunnel
+tunnel
+You are in a long, dark tunnel.
+
+>go mousehole
+You can't go that way.
+
+>go temple
+You think pure thoughts, and suddenly find yourself at the
+Temple Under the Sky
+You stand on top of a grassy hill. You can see for miles in all
+directions. On a stone altar lie various religious artifacts.
+Contents:
+a porcelain figurine of the Buddha
+a wooden cross
+a white cloak
+a gold star of David
+an obsidian pentacle
+
+>go daemon's
+Daemon's Living Room
+A hallway leads north, and there are stairs up into the ceiling. There
+is a glowing octagon on the floor.
+Contents:
+a little black box
+Daemon
+A book titled "Secure Systems: What You Should Know"
+a door to the rec room
+a window on the south wall
+
+>go picnic
+By making climbing noises, you've attracted a tree. You climb down.
+Picnic Area
+You are in a small clearing. An ancient, and leafy elm tree shades
+several picnic tables. Well traveled paths lead north, northwest,
+northeast, southeast, west, and east. A narrow trail leads southwest,
+and the tree looks climbable.
+Contents:
+A restaurant review
+A sign with a map on it.
+a small brass plaque set in a large rock
+Red neon sign pointing east
+
+>go tden
+You can't go that way.
+
+>go angel
+You enter Angel's living Room.
+Angel's Living Room
+Here is Angel's Living Room. Having just moved it, she hasn't
+decorated it much. There are fluffy pillows to sit on. There's a door
+to the south with a "Rocky Horror Picture Show" poster on it. The door
+to the Rec Room is to the east and a door labeled "Angel's Mailbox" to
+the west. Through the open skylight above you see blue sky.
+Contents:
+a sign on the wall
+
+>go Jedi's
+Reality swirls as you feel the powerful effects of the FORCE. As your
+head clears, you find yourself in...
+Jedi's Training Center
+You see a couple of Jedi Knights in training. One catches your yey
+with a fancy back-flip over several pieces of equipment, to land in a
+perfect position for what would have been killing blow with his Light
+Saber. There is a door to Jedi's Office and one to the Rec Room.
+Contents:
+Notice on Wall
+
+>go gate
+You are suddenly surrounded by thick black fog....You feel yourself
+moved.....
+Access Tunnel from the Rec Room(#9895RL)
+You past through an iron gate and find yourself in a moderately lit
+tunnel that runs north and south. There is a teleport pad to one side,
+complete with a directory control panel. There are some lounge chairs
+for people to sit on all around. In one area of the tunnel, there is a
+body on the ground. On the wall above it, there seems to be something
+written in blood. The place itself is pretty messy...
+Contents:
+Note for Ronin (Apirl 19, 1990)
+black plastic Kodak can
+cat house
+Muse
+Chris
+Rivendell
+Chaos Sword
+Dragonslayer
+a hole
+a pool of mud
+Lolita
+INSTRUCTIONS TO LINKING HERE
+INSTRUCTIONS, PART II
+Directory Control Panel for Teleport Pad
+a sign
+
+>go unicorn
+The Sick Unicorn
+The usual rowdy crowd is here. Say help for some possible commands.
+Contents:
+Fuzball
+sign on wall
+Pig on a Spit
+
+>go links
+You enter the alley of infinite links...
+Alley Behind Bookstore
+You are in an alley behind The Upstart Crow bookstore. There is a huge
+message written in glowing orange letters hanging in the sky.
+Contents:
+message
+message continued
+
+>go ashne's
+Ashne's Library
+Two-story high windows in the west wall cast warm puddles of light on
+the wooden floor. There is a desk to the north and an exit labeled Rec
+Room. In the middle are two overstuffed leather sofas and a coffee
+table. The rest of the walls are covered with book shelves. A ladder
+leads up.
+Contents:
+Macintosh
+library books
+thesis: finished
+fireplace
+wooden ladder
+paperbacks
+
+>go moonchilde's
+The powerful magic invoked draws you through the mystic portal
+to......
+A sumptious living room.
+This is a tastefully furnished living room. The apprentice looks up
+from his studying as you enter, and say, "If you need a clue on the
+puzzle, just ask for help, if you need to know where the exits are,
+just ask for directions."
+Contents:
+Sable
+an apprentice sitting at a desk
+
+>go klee
+Antechamber
+This is the Antechamber on the way to MIT (formerly Klee's room).
+Exits from here include: rec (to the rec room), mit (to MIT - East
+Campus), mit-77 (to MIT - 77 Mass. Ave.), mit-34 (to MIT Building 34
+lobby).
+Contents:
+mit-builder
+blank sign1
+blank sign2
+blank sign3
+blank sign4
+blank sign5
+blank sign6
+blank sign7
+Please attach dates to your signs to all
+HowToGAMIT XVIII
+The Floor Plans to the Massachusetts Institute of Technology
+Dark Sapphire Ring
+Student Center ready for construction--Bruiser
+
+>go moria
+You step through a portal in the air.
+Dark Cavern
+You are in a large damp and dark cavern, somewhere under the
+mountains. There are many cracks and rifts in the walls, but no exits
+you could fit through.
+You see the characters "TIX3" hanging in mid air in the center of the
+room, glowing dimly with red light.
+Contents:
+a sack of jewels
+a fiery opal
+a helm carved out of solid quartz
+Valraven
+magic throwing hammer
+Spigot
+
+>go balton's
+Balton's Tower - Main Entrance
+A smallish tower constructed of purest adamantite stands before you to
+the north. An open door invites you to enter.
+Contents:
+Giant talking steel golem
+
+>go forest
+You walk through a pair of trees into a clearing
+clearing(#11775RL)
+This is a small, circluar clearing deep within the heart of the
+forest. Massive oak trees, with branches that form arches between
+them, ring the clearing. Over each arch is a small sign, and inside
+each arch is a faint mist. There is a pathwhich leads to the west. The
+clearing is quiet and peacefull.
+Contents:
+Lord-Krishna
+Small rocket
+sign
+>FISH<
+SCRIPT FOR A JESTER'S TEAR
+envelope
+Fugazi
+A faint, shimmering portal, almost invisible in the sunlight. It seems
+to lead into a silvery mist.
+khelek
+arrow directing one to ComePlay
+sign to nirvana
+You see a clearing to the north that Rademir wants CZ and others to
+know about.
+A sign saying Wilson's land
+Addenium note
+Note to users!
+A sign saying Rec room.
+
+>go bugeye
+McSquinty: Private Detective(#11819RL)
+You find yourself in the smoke filled office of BugEye McSquinty, PI.
+This place is a rat hole, empty beer cans litter the floor, and a
+small mouse is visible under the desk. There is a gun sitting on a
+small shelf near a door to the inner office.
+Contents:
+secretary
+
+>go bloom
+Poof! You appear in Bloom County.
+In Front of Boardinghouse
+You are outside the Bloom Boardinghouse. A path leads to the front
+door.
+Contents:
+billboard
+A wooden sign pointing north
+A wooden arrow pointing west
+
+>go mordor
+Morannon -- The Gates of Doom
+Here stand the Gates of Doom, towering above a pass formed by a
+meeting of the Ephel Duath and the Ered Lithui. To the south lies the
+barren plain Udun, while a glimmering portal shimmers to the SSE.
+Contents:
+Tetsuro
+belallanon
+
+>go ski
+bottom of mountain
+you are at the bottom of the mountain. A ski lift leads to the top. A
+road leads to the open fields. There is a small ethernet portal here.
+there is a small lodge to the west.
+Contents:
+skis
+
+>go fnord
+fnord's excellent adventure
+There is a great deal of scenery lying around in various states of
+disarray. The dust here is approximately three inches thick on most
+surfaces. The backdrops hanging from the ceiling are torn to shreds.
+There are several dead or drunk Care-Bears lying around in a rather
+pronounced state of blueness. They are all handcuffed to one another
+in a rather large circle.
+Contents:
+NOTE
+A.I.S.B. Wants You!
+A sign floating in midair
+
+>go message
+Rec Room (looking at the message board)
+Notices both private and public may be left here. Please don't leave
+signs, notes, and objects lying about the rec room proper. You can go
+back to the rec room from here.
+Contents:
+Large AD for Garden Ridge Condos(homes)
+Funroy
+Gift for Nymph
+Poster Saying:Alicorn Castle Now Open To The Public!!!!! Type crate
+then rec! Be careful not to get lost!
+note to Wysceroth.
+note to Nymph
+Airroc's House is now complete. Use Mirrornet - air from the rec room
+MYXELROC INVESTIGATIONS - Now open to serve your needs...(myx from rec
+room)
+An UNOFFICIAL holiday has been declared>>RANDOM EXIT DAY<< March 10th.
+Ornate Wooden Sign -- *Plaza of The Americas*
+A CAPELLA NOTICE
+ATTENTION! TinyHELL's new address is: "129.15.20.2 6250". The name
+address, "uokmax.ecn.uoknor.edu 6250" will not be working until
+sometime Monday!
+poster depicting the 11-story condo, Greyson Duplex
+Widener Library is open!
+
+>go Tyrone's
+Tyrone's Pad
+A featureless white cube, obviously newly built since it ain't covered
+with debris yet. Tyrone wishes there were more mail north and less
+south, which is nowhere in particular, after all. Going east is not
+recommended.
+Contents:
+Tyrone
+
+>go bob's
+bob has changed things around a bit. This no longer goes to bob's
+place. I hope you like where it does go.
+bob's pantry(#77237RL)
+A big pantry, of course. With oodles of stuff in it.
+Contents:
+A flower he's planning to give to Molly someday when he works up his
+nerve enough.
+Other exits: Rec Room, bob's.
+A NOTICE ON THE WALL
+
+>go cube
+CLOSED FOR RENOVATIONS.
+
+>go elvis
+A bunch of soaking wet people with popsicles grab you and drag you to
+the Elvis Shrine...
+Elvis Shrine
+This is the most holy elvis shrine. You are inspired by the King's
+hugeness. There are many pictures of his pelvicness on the walls.
+Contents:
+Larry
+
+>go wilson's
+You feel your molecules being torn apart...
+Wilson's teleport booth
+Teleport gates with flickering holograms above them lie in every
+direction.
+Contents:
+Teleport booth instructions
+GATE 0 : PRIVATE
+GATE 1 : Wilson's estate
+GATE 2 : Rec room
+GATE 3 : Sanjay's pad
+GATE 4 : Limbo
+GATE 5 : MIT adventure
+GATE 6 : Forest clearing
+
+>go wabe
+You step in front of the television screen. A white door appears out
+of thin air, and you step over the threshold...
+The Wabe
+You are standing in the middle of a deep, lush meadow. On all sides
+you can see dwarf pine trees, and the occasional house-sized
+toaadstool. Some of these toadstools have white doors embedded
+therein. In the distance, off to the north, a huge triangle extends
+into the sky.
+Contents:
+a note
+An oddly shaped hole in the ground
+A sign saying "ABSOLUTELY NO SLITHY TOVES!!!"
+
+>go sanjay
+Sanjay's Pad
+You are in a small hallway leading north to a stout oak door. A rich
+brown carpet covers the floor. A doorway leads south to the Recreation
+Room; a teleport gate to Wilson's is in the west wall.
+
+>go dan's-den
+Dan's-Den
+Dan's (aka Robert) living room
+Contents:
+A non-descript sign made of platinum
+pizza
+note-from-Robert
+Robert
+note;note-from-Robert
+
+>go butterfield
+Butterfield
+Contents:
+exit
+Amaranth
+x
+
+>go 5103
+flexi's office (5103 WeH)
+You see a nice grad student office with large windows. There are 4
+desks here, each with a workstation on them. A couch sits in the
+middle of the room, facing the windows which looks out into the 4th
+floor parking lot and sort of into the cut, a grassy area outside of
+5th floor Wean. There's a stereo and a CD player in front of Bennet's
+desk. Book filled shelves line the left and back walls, and next to
+the file cabinet there's a small refrigerator.
+Contents:
+flexi
+Giant Room Humidifier
+logic probe
+refrigerator
+small potted fern
+impossiball
+4x4x4 Rubik's cube
+3x3x3 Rubik's cube
+rubber band gun
+a box of rubber bands
+play.mach.cs.cmu.edu
+moriarty.theory.cs.cmu.edu
+couch
+
+>go bj's place
+BJ's Place
+Just a simple place full of ambition and youth. Attractions currently
+being constructed: Kennymetal Park, Casino Royale, and the Boardwalk.
+Enjoy what's around!
+Contents:
+Directory entry for "bj"
+gambler
+bj
+Important Sign
+::: THE CASINO IS OPEN FOR LIMITED BUSINESS :::
+::: READ ALL SIGNS BEFORE CONTINUING :::
+dusty sign
+sign
+
+>go fields
+You dash through the wildflowers, laughing.
+Open Fields
+You are in open farmland northeast of the town. There are exits in all
+directions. Southwest will take you back to the town; southeast is a
+dense, overgrown forest.
+Contents:
+reptillicus
+odd sign
+NEW MUD ADVERTISEMENT
+Israel
+Sign pointing to the east.
+Panthr
+m31
+m30
+Sign pointing to the west.
+avitar
+Barr
+Tourist Information Sign
+silver sign
+a path leading into some woods to the northeast
+wooden sign
+
+>go police
+You enter the station house.
+Station House
+This is T.M. Station House #1. Many uniformed officers are busily
+drinking coffee and eating donuts.
+Contents:
+a set of hand-cuffs
+night-stick
+Officer_O'Hara
+A red bag of BUZZ coffee(#32860)
+coffee
+donuts
+
+>go ashlink
+Ashlink
+You are inside a non-Euclidian space. A dark and pathless emptiness
+extends on all sides.
+Contents:
+blinking hypercube
+
+>go chat
+You go someplace a little more private.
+Secluded Room
+Sounds from the rec room can be only faintly heard in this small room.
+A solid-looking door leads to the chat room, or you can go out and
+rejoin the party.
+Contents:
+Key #1
+Key #2
+a red rose in a small crystal vase
+coffee table book
+a cocktail napkin
+a coffee table
+a small couch
+
+>go ???
+You dissapear in a questionable puff.
+What's Abode
+A very strange room, filled with soda cans. A stairwell goes up and
+down, and there's a door to the NE. A door to the south has a big * on
+it. An information booth lies to the North, and a way out lies to the
+southwest.
+Contents:
+Coca-Cola
+Pepsi
+Sprite
+A&W Root Beer
+Big Red
+Sunkist
+RC Cola
+Welch's Grape Soda
+Sioux City Sarsparilla
+7-Up
+Yoo-Hoo
+Jolt
+Dr Pepper
+A&P Brand Root Beer
+IBC Root Beer
+Arrow Pointing to the Information Booth to the North
+A truss for BraintrusS
+Mountain Dew
+TAB
+Disclaimer
+The infamous construction sign!
+
+>go Carol's
+Hallway
+This cramped, oddly shaped hallway leads from the Rec room to two
+closed doors. Carol's door seems locked, but you can try her
+roommate's.
+Contents:
+Note to Carol
+note stuck to Carol's roommate's door
+
+>go Harvard
+You go to Harvard. Easier than real life, no?
+Harvard Square
+You are at the center of Cantabrigian life. People of all flavors
+swarm around you. Next to Out Of Town News, in the center of the
+square, stands an information kiosk. An MBTA bus has just pulled up to
+the curb.
+Contents:
+TeddyBear
+A newspaper entitled "Square Deal"
+Big Important-Looking Consrtruction Notice
+There's a man in suit & tie standing in the centerof the cement pit,
+trying to avoid the skate punks. He's holding a sign, "DESTROY YOUR
+SACRELIGIOUS MAKINGS BEFORE IT WAS TOO LATE!(#32767)
+bunny rabbit
+movie poster
+Car-Free In Boston: How to find your way around the MBTA
+HRSFA flyer
+T entrance
+
+>go tundra
+You open the door and a blast of cold air greets you. The door slams
+shut behind you.
+The Tundra
+This is the home of Alaska. It is deathly cold in here, but somehow
+you don't seem to be affected. There is a door to the east and a
+corridor leads off to the north. Norwahl's door lies to the west.
+Contents:
+Dorkmaster
+Exit Sign
+some cold beer
+
+>go bexley
+You sink into a pool of acid and slide down the draiinnnnnnn
+BEXLEY COURTYARD
+A small bedraggled courtyard of a four-story brick building. There are
+four entries to the building from the courtyard: 46, 48, 50 and 52
+Massachusetts Ave. A sidewalk decorated with all kinds of interesting
+drawings and graffiti travels around the perimeter of the
+courtyard..............................................A tarp hanging
+from the roof proclaims, "Help available from Divine Sources in 48
+Entry! A cat collar with the words 'Rec Room Link Here' lies on the
+sidewalk.
+Contents:
+A tarp hanging from the roof proclaims,"Help Available from Divine
+Sources in 48 Entry!"
+A cat collar with the words Rec Room Link Here lies on the sidewalk.
+Under Construction--Watch Where You Step Sign
+
+>go fireplace
+You can't go that way.
+
+>go goldragon
+You walk to the Goldragon Estate.
+Who are you?
+You are on a little-used forrest path, that runs north-south, through
+the forrest. To the east and west, are giant pine scented evergreen
+trees as well as deciduous trees at the peak of their fall colors.
+There is a slight chill in the air, telling you that winter isn't far
+off. Phil's house is to the north, and the Rec Room can be reached to
+the south.
+
+>go rand
+You hear cursing and loud noises from behind the door. Randomness is
+cleaning his room. You feel it best
+
+>go motel
+You sneak off to a sleazy motel.
+Sleazy Motel Front Desk
+The sleazy motel proprietor sits behind the desk, watching a miniscule
+black and white TV. He grunts "Drop them keys when yer done."
+Contents:
+room key (1)
+duplicate key (2)
+
+>go tfm
+The TFM Room
+The only furnishings in this small room are a few chairs that
+McDonald's rejected because they were too uncomfortable, and a table
+piled high with manuals. You notice a small door to the north, labeled
+"Acme Travel Agency".
+Contents:
+Tasmyrn
+----------------------------------------
+Read Me First
+----------------------------------------
+Introduction
+----------------------------------------
+Etiquette
+----------------------------------------
+All About Objects
+----------------------------------------
+Using Objects
+----------------------------------------
+All About Me -- Volume I, Descriptions and Theft
+----------------------------------------
+All About Me -- Volume II, Doing Strange and Wondrous Things. You see
+a little sticker on the cover of this volume that sez "A better way to
+do the stuff in this volume is with the ":" command. For example
+:grins will print out "<your name goes here> grins" to everyone in the
+room."
+----------------------------------------
+Magical Places
+----------------------------------------
+Important Places
+----------------------------------------
+The Root of All Evil
+----------------------------------------
+Killing and Being Killed
+----------------------------------------
+Puzzles and Adventures
+----------------------------------------
+
+>go paradise
+beach
+Truely paradise. A warm Caribbean white sand beach. Visible from here
+is the cool blue ocean, the open bar, and the bugalow.
+Contents:
+bty
+octopus
+Case of Cocoa-butter oil
+melted snowball
+Benny
+Blue Rum Drink
+
+>go tristan's
+You catch the soft sounds of beautiful music
+Music Room
+A rather cluttered room with pieces of music paper lying around with
+compositions on them waiting to be finished.
+Contents:
+a Cello
+CD player
+Enya CD
+Baby Grand Piano
+Exit Sign
+Harpsicord
+walking stick flute
+Celtic harp
+lute
+
+>go clh
+You click your heels three times and think of home.
+Brillig(#5006R)
+You are at brillig.umd.edu, a Vax 8600 at the University of Maryland.
+Contents:
+quarter(#16568)
+buck(#16569)
+Seventeen 1K-by-32 pixel multi-flavored windows with turds and arrows
+and documentation panes.(#6440)
+Pluribus IMP(#8103)
+An LA36(#6443)
+duct-tape gerbil(#49595)
+an amazingly twisted little ass, always different(#11357)
+
+>go droopy's place
+You can't go that way.
+
+>go balloons
+Balloon Central
+A large room with floating balloons and many tanks of helium. There is
+an exit to east that leads to the arcade, and exit marked "limbo", and
+an exit to the west that leads to the rec room.
+Contents:
+The clone of Mr.Balloonman
+huge balloon
+a violet balloon
+an indigo balloon
+a blue balloon
+a green balloon
+a yellow balloon
+an orange balloon
+a red balloon
+The clone of Mr.Balloonman says "Hello there!"
+
+>go 4122
+A door appears i front of you it has a little plaque saying 'Gibson D
+4122' on it. You pass through
+crusaders room
+A small dorm room with only one visable exit 'the door' There seems to
+be an abundance of bookshelves here all of which are taken up by
+gaming supplies. All the school books are on the floor in not very
+neat piles.
+Contents:
+A eeyore voodoo doll
+a nymph voodoo doll
+a jedi voodoo doll
+A mack the knife voodoo doll
+a spigot voodoo doll
+note to I'anth from CeNedra
+MESSAGE TO WHOM EVER CREATED akiko's pass
+A dog for TheTick to jump on
+memo
+Crusader
+
+>go brandy's
+You head for brandy's world....
+The front lawn of Brandy's plantation
+A lovely lawn, well-kept, situated before a large house. There is a
+duck pond to the south, a street corner to the east, the front
+entrance to the north, and what appears to be New Orleans to the west.
+Contents:
+UNDER CONSTRUCTION
+Sign that read "README" in large letters
+
+>go penqueriel
+The Penqueriel
+This is the entrance hall of the Penqueriel. It's echoingly large and
+about three stories high. To the south is the main gateway leading
+out; to the north is a tall brass doorway leading into the Penqueriel
+proper. In the center of the west wall is the outline of a small door,
+but the space inside the doorway is solid stone. On the wall above the
+outline is a black triangle.
+Contents:
+A eight-foot high block of transparent crystal stands in the center of
+the room. Within the crystal is the motionless figure of Zarf.
+To the east is a row of teleport gates. Posted above them is a white
+sign listing their destinations.
+
+>go rail
+You fall through a trap door into...
+Rail's living room
+Decorated in Early Minimalist style, this room lacks any feeling of
+distinctiveness. There are exits to the bedroom and the Rec Room, not
+to mention the door out to the hallway. To the left, you can see a
+modest kitchen.
+Contents:
+Rail
+A hunting knife.
+A backpack.
+An aquarium
+A white sofa
+
+>go carneggy
+You turn into a giant watermellon. Passing out from shock, you awake
+in
+Carneggy's living room(#18839RL)
+This is the Entry to Carneggy's house. IT has big cusy chairs, a
+stereo, a TV surrounded by dishes, and a cozy rug in front of a
+fireplace. There is a closet with QUENTIN written on it in crayon.
+Type exits for exits
+Contents:
+Carneggy
+Quentin
+A very important note for Carneggy.
+note for Carneggy
+note for the owner of "note for Carneggy"
+long couch
+Cardon
+
+>go d 52
+You can't go that way.
+
+>go king arthurs castle
+castle
+Contents:
+PULITZ-SURPRISE
+arthur
+
+>go pillow
+You crawl into the pillow house
+Inside pillow house
+This is a cozy pillow house under the duct-tape hammock.
+Contents:
+Tsin_Ragnarok
+
+>go bard
+9 Avon Street
+Contents:
+note1 to flexi
+
+>go shoebox
+You are entering geek's home. It is not an adventure, but does have
+*one* way __out.
+shoebox
+You are in a tiny shoebox in the center lane of a major highway. There
+are no __obvious (safe) exits. There is a tiny trunk, trash barrel,
+and garbage disposal in the corner.
+This is geek's home. Beware of geek.
+Contents:
+slide rule
+kevlar pocket protector
+geek
+
+>go alien
+You head off toward the Alien Landing.
+at the base of the hill
+There is a short wide driveway with four cars in it, and a rough stone
+stairway leading uphill into some trees. Along the stairway is a lit
+wooden banister. At the base of the banister is a mailbox. Ridgemont
+street leads away to the east.
+Contents:
+DarkSide
+A green sign hanging from the banister.
+
+>go hrsfa
+You can never get enough SF.
+The Harvard-Radcliffe Science Fiction Association Office(#19218RL)
+A slightly musty 8 x 15 foot room. There's a black hole in one corner,
+a grey nondescript door ahead of you with a sign on it, and behind you
+is the basement.
+Clockwise, from your left, is a niche, a table with three people
+sitting around it, a bookcase, a desk, a corkboard, and a chalkboard.
+Each of these is overflowing-as-appropriate with flyers, books, games,
+and chalk scrawls.
+Contents:
+Battlefield Earth
+Rademir
+A nearly unlimited supply of griffon food.
+playing card
+DO NOT:
+griffon
+THE WHAT THE OFFICE IS ALL ABOUT AND GENERAL INFO SIGN 1
+
+>go david
+You crawl under the couch, then up _into_ the couch...
+David's Bedroom(#20137RL)
+A little-used bedroom, containing many math books.
+Contents:
+green stuffed frog
+A proof of Fermat's Last Theorem
+Number Theory Textbook
+Sapphire
+bed
+
+>go through
+You feel yoursef orthoganalize
+theo's pad(#20375RL)
+A messy place. There is a bed here, and a list of exits.
+Contents:
+Dan Quayle
+theo
+blueness
+leaf
+note to david re ruby.
+fri
+from theo
+A gold and ivory foosball ball
+lots of papers strewn about the floor.
+Bunny rabbits
+almost unreadable scrawl
+
+>go ping pong
+ping-pong annex(#20587RL)
+A brightly-lit room with a brand new ping pong table. Paddles and
+balls are in a basket on the floor. A sign on the wall reads: Why
+don't you play some ping-pong? There is an exit to the north of this
+room.
+Contents:
+q
+chocolate bar
+Fezzik
+podkayne
+ping pong table
+
+>go apartment
+Claire's Front Room(#17771RL)
+Redecorated at long last...the floor is on polished marble and...nah.
+Just imagine a nice apartment with overstuffed chairs and a fireplace.
+Let's see, there are rugs on the floor, and a huge bay window from
+which either moonlight of sunlight pours. There is a tank filled with
+marbles and unusual plants. In it are two goldfish whose fins are flow
+as they swim. The place is nothing more than comfortable, but no less
+a home.
+Contents:
+Yakuza for Claire
+Claire
+Note from Spanky
+Spanky's hungry cat (staring excitedly at Claire's birds)
+Note for Furr
+HUGE LETTER COVERING THE ENTIRE WALL
+
+>go campus center
+Inside the Campus Center(#20441RL)
+You are at a landing of a large stairwell. There is an exit out and a
+starway down. Upstairs are various ARA-run food establishments. To
+your left is a room with lots of people and a tv.
+Contents:
+A recent issue of the ARGUS
+note
+cheese fries
+foodslave
+cynthia
+pingpong paddles
+pingpong paddles
+
+>go workroom
+You can't go that way.
+
+>go tv-33
+TV-33
+Trebek's television studio. The rec room is to the west. A door
+leading NE says, "Eeyore". A door to the north says "limbo".
+Contents:
+Petri's receipt
+Television Camera Zaphod
+Television Camera Marvin
+
+>go rec
+You go to the Rec Room.
+Rec Room (#58240R)
+This large, darkened room has no obvious exits. A small crowd relaxes
+on pillows in front of a large stone fireplace.
+You can't help noticing a folding lawn chair hanging by one foot from
+the ceiling.
+Contents:
+Princess
+pile of sh*t
+Nymph
+ferret chow
+Irish whiskey
+a rare Ming dynasty enameled coke spoon
+a keg
+a penguin wearing a red bow tie
+a puffin wearing a frilly white apron
+a fishing pole with some mistletoe hanging from the end
+computer printout of "Sleazy Motel HUH files"
+a tote bag
+
+>go rathole
+A Real Rate(#20947RL)
+Contents:
+silver toothbrush
+Charnalbreath
+
+>go tardis
+TARDIS
+An exact working replica of the Doctor's own.
+Contents:
+Exhibit Sign
+post-it on sign
+Manual
+
+>go yalea
+New Haven Green
+The Green lies at the heart of New Haven. Paths crisscross it in all
+directions, but under the gloomy shadow of the trees, most of them
+look too scary to even attempt.
+To the west you can see Phelps Gate, and towering behind that,
+Harkness Tower. Paths also lead to the north and northwest.
+Contents:
+A note for Margaret
+Note: Confusion gets even worse
+Information Sign
+
+>go doghouse
+doghouse
+snoopy invites you to eat some of his food.
+Contents:
+snoopy
+golden supper dish
+
+>go heather
+You walk through to Heather Park.
+Heather Park
+This is a spacious park with benches, birds, trees, and the like. At
+the edge of a park steps lead up to an impressive apartment building,
+while to the east of the park lies a cobblestoned road. To the west
+lies a small lake.
+Contents:
+Heather
+Heather
+Sign.
+
+>go nebutu
+You wander around in a small circle until you find yourself in
+The Grand People's Fascist Monarchy of Nebutu
+This is where all the cool people hang out (when they aren't hanging
+out in the Rec Room, naturally).
+
+>go alexandra
+You can't go that way.
+
+>go demon-spawn
+Transporter Booth(#45084RL)
+Contents:
+Directory
+
+>go waldo's
+You explode.
+Booth(#23454RL)
+You are standing in an old wooden telephone booth looking at an old
+telephone. To the north is the foyer.
+Contents:
+A post-it stuck on the outside of the phone book.
+An old telephone book.
+
+>go to
+You can't go that way.
+
+>go ily's
+You can't go that way.
+
+>go pouch
+Thief's Pouch
+You are inside what appears to be one chamber in an enormous leather
+pouch. You see a series of buttons on the wall beneath a Directory,
+and there is a stairway leading down further into the pouch.
+Contents:
+Thief
+Blue Phone
+Welcome Sign
+Glass Desk
+Message Board
+Directory
+Beanbag Chair
+Giant silver marble
+
+>go bar
+You begin mosin' on over to the bar, when all of a sudden it twists
+and warps into a strange shape. Life isn't as secure as you'd like it
+to be sometimes...
+Surreal Palace
+You are in the throne room of SirRiel. There are several windows,
+through which you can hazard a guess that this building is somethat
+etheral.
+You really have to marvel the structual integrity of this warped room.
+Contents:
+A scroll addressed to The Necromantic Guildmaster of Pooland.
+andromia
+ID Number Checker
+Jeweled Crown
+Gold Throne
+Directory
+
+>go sugar mountain
+You can't go that way.
+
+>go H.P.
+A frigid wind washes over you, and the rec room slowly fades from
+sight.
+H.P.'s Tower
+There is a high lonely tower here, overlooking a ridge that slopes
+down gently into the hills near the village. Gusts of cool autumn wind
+blow from the grey clouds scudding across the heavens. The wind has
+the promise of a cold rain.
+The door to the Tower is shut.
+Contents:
+A button: TinyMUD for people, not machines!
+A flag whipping crazily in the wind high over the tower
+
+>go ou
+You open a door and somehow find yourself in the Oklahoma Memorial
+Union.
+OU Student Union Lounge
+Students are lounging here in the lounge. To the west through a door
+you see the Rec Room. To the south is the foyer.
+Contents:
+A big, red-and-white Teddy bear with OU on its sweater
+OU cap
+couch
+
+>go carrot
+Ugh... maybe you should've taken the CW elevator instead. It'd feel a
+lot better than the awful warping sensation as you turn into little
+specks of orange light and reappear in the Carrot Club.
+The Carrot Club
+The spacious dance floor is crowded with people, but to a comfortable
+level. More popular is the stained-glass coloured floating floor
+drifting about. A central platform as black as the depths between the
+stars appears to not be solid, yet it is jammed with dancing people.
+Small milky force fields locked to the proper height for tables and
+chairs are ranged about the walls. Mr.Carrot, the proprietor, can be
+seen dancing on the space-black floor, his bushy green top bobbing
+above the mob.
+Contents:
+Emorog
+Mr.Carrot
+the band
+jukebox
+floating floor
+multifaceted mirror ball hanging from the ceiling
+To make a request for a song, type 'request'.
+
+>go gandalf
+You stand in a long dark hallway, which echoes to the tread of your
+booted feet. You stride on down the hall, choose your masque, and
+enter the worlds beyond the known...
+Valeyard's Transporter Room
+A room vaguely familiar to the one found on the USS Enterprise. There
+is an exit to Gandalf's Entry to the west.
+Contents:
+Valeyarde
+Transporter Destination Directory #1
+
+>go alcove
+You go to Emailboxes Unlimited's alcove.
+alcove
+You see rows and rows of electronic-mail boxes. Behind you is the
+lobby. On the wall you see a couple of signs. Over to the side is a
+garbage can (trash emptied to the junkpile). Messages dropped here
+will be returned according to the return address.
+REMEMBER TO SIGN YOUR EMAIL -- OTHERWISE THE RECIPIENT CAN NOT TELL
+WHO SENT THE EMAIL
+Contents:
+damian
+White pages dir: h i
+White pages dir: w x y z
+White pages dir: a b
+White pages dir: c
+White pages dir: d e f
+White pages dir: g
+White pages dir: j k
+White pages dir: l m
+White pages dir: n o p q
+White pages dir: r
+White pages dir: s
+White pages dir: t u v
+White pages dir: non-alpha chars
+Yellow pages dir
+How to automatically forward email
+How to create a drop chute.
+How to open your own emailbox
+How to send drop-chute mail
+How to send normal private email
+INFORMATION
+SIGN your email!
+NAMING YOUR EMAILBOX
+
+>go teleport
+Teleporting...
+Green Grass And Shade
+The Glade is a mystic place, lost in the mists of time and space. A
+gently rolling hill to leads south to here, where an inviting meadow
+in a semi-circle of trees awaits you.
+Contents:
+Taldin
+Fantom
+Flynn
+Alhana
+Misty Lake
+Trio Of Pines
+Oak Tree
+Oak Tree
+Ancient Oak
+Oak Tree
+Willow Tree
+Ash Tree
+Boulder
+
+>go theater
+You travel through time in space and find yourself . . .
+Outside The Theater
+You are standing in the courtyard outside The Theater. The courtyard
+is lit with Japanese lanterns and is currently empty. It is strangely
+quiet. To the north is The Theater: a huge stone building witha
+carpeted set of steps leading up to a set of wooden double doors. To
+the east and west are vending booths and to the south is a pathway
+leading away from The Theater. It is a clear cool summer night with a
+light breeze that ruffles your hair. There is a full moon, low in the
+sky.
+Contents:
+Teleport Booth
+easel with poster
+
+>go Fuzzy's
+Fuzzy's Cubbyhole
+You are in Fuzzy's cubby hole. Behind you is the passage to the Rec
+Room.
+Contents:
+An old Concept-100 terminal
+
+>go robot
+Nightfall's Many Rooms of Wonder
+Type 'exitsN' where 0<N<2 for exits.
+
+>go shadow's
+Darkness enevlops you, and you emerge in...
+Shadow's Haunt
+This is a surprisingly normal-looking apartment. There is a kitchen
+area off to the north, and a bedroom to the south. The main entrance
+is northwest. There is a back door to the southwest.
+Contents:
+a bunch of videotapes
+a video cassette recorder (VCR)
+a television set (TV)
+a computer
+a pen
+a pencil
+a crossword puzzle
+a box of disks
+Shadow
+a birthday cake
+a chair
+a desk
+
+>go guild
+You feel a transporter effect take hold of you...
+Main Transporter Room(#26887RL)
+The floor of this enormous room is covered with thousands of glowing
+platforms. An exit leads south.
+There is a directory in one corner.
+Contents:
+jos
+Note for Darkfire concerning platforms!!
+A scrap of parchment
+A black sign, hanging in mid-air
+
+>go rainbow
+You can't go that way.
+
+>go vortex
+You enter the vortex.
+Vortex
+You find yourself in a swirling mesh of colors... all colors, and yet
+none.....
+
+>go dactyl's realm
+The Realm of Dactyl
+You are standing, or, it would appear, floating in the Realm of
+Dactyl. Not so unusual, really, except that there are no walls or
+ceiling, and a strange, greyish mist covers what would be the floor,
+if there were one. You see the outline of a doorway to the north, and
+as you look that way, flashes of scenes from other places pop into
+your mind. Eastward the mist starts to wane, and a simple wooden door
+on which is inscribed "Private" floats in the nothingness.
+Contents:
+Some stuff
+Dactyl
+
+>go philcon
+You dream about what it must have been like to be at the TinyMUD party
+at PHILCON '89. So hard do you concentrate in fact, that it is almost
+as if you are there...
+At PHILCON -- The Rec Room Party(#30721RL)
+You find yourself in Room 409 of the Adam's Mark Hotel in
+Philadelphia. The beds have been moved against the walls, and dozens
+of people are dancing and eating and playing with junk food.
+You see some people you might recognize.
+Contents:
+Hitchhikers Guide
+Guinness Stout
+Cin
+Thing your aunt gave you that you don't know what it is
+an open door to the hall
+A Hotel Flathead with a Radio ... and a *TAIL*?!?
+Eddie
+Tortoise
+Jeff
+Bennet (flexi)
+The Six Billionth Name of G-d
+balloons all over the place
+a bag of potato chips
+a bag of Cheeze Balls
+Pan-Galactic Gargle Blaster
+Elizabeth
+Bryant
+Jennifer
+Leon
+Nymph
+signup sheet
+John
+Stewart
+
+>go phone
+You push open the door to the phone booth and step in. The door shuts
+behind you.
+Rec room phone booth
+This is a phone booth. You see a dial, but curiously enough, there is
+no hand set. In small letters below the dial you read 'JumpShift,
+Ltd.'.
+Contents:
+Poster
+Eric_Holmes
+clock
+Advertisement card.
+Instruction panel
+Directory of working numbers.
+
+>go polling booth
+Thank you for participating!
+polling booth
+Locational Survey Being Taken Now...Register your realworld location
+by typing its name here. Ignore the HUH? message. Thank you for
+participating! =erik
+
+>go thalx's
+You are bathed in blue, coherent light....as it fades away, you
+realize that you are now in...
+Main Hallway
+This is the grand hallway within Thalx's Mansion. The marble floor
+stretches off in both directions. There are many doors. On flying
+balconies above, one can see thousands of volumes. West lies Mansion
+Thalx.
+Contents:
+mist-filled archway
+rusty steel door
+beaded doorway
+Day-Glo Yellow Construction Tape
+
+>go firepole
+You slide down the firepole into the uncertain depths below...
+North end of a long hallway
+You are standing at the beginning of a long hallway, extending out of
+sight to the south. It appears that you are in some sort of a cave, as
+the walls around you are rock, though very smooth. A firepole stands
+in one corner of this otherwise empty room.
+Contents:
+Kronos
+A glowing blue sign hanging in mid-air.
+A firepole leading up through the ceiling
+
+>go Nondescript Passageway
+You can't go that way.
+
+>go MDC
+You walk through the wall, and find yourself in...
+Molecular Dispersal Chamber(#31918RL)
+You are in the Molecular Dispersal Chamber, one of the greatest
+scientific/magical achievements of all time. You see a directory off
+in the corner.
+
+>go Dazwid's
+Huh? (Type "help" for help.)
+
+>go black hole
+You can't go that way.
+
+>go gct
+You can't go that way.
+
+>go ferdinand chalkshoe
+You walk to Tim's apartment and mailbox.
+Living Room/Mailbox(#31378RL)
+This is Tim's living room and mailbox. There's a reasonably nice red
+couch along one wall, an electric piano in one corner, and bookshelves
+with very interesting books along two walls. A cellular phone charger
+is plugged into the same tangle of wires as the electric piano. A safe
+is recessed into a wall, and in another corner there protrudes a small
+chute for disposing of waste paper.
+Contents:
+Tim
+Eileen
+Tim's portable phone. When he's carrying it, paging Tim will get a
+reasonably quick response. When it's sitting in his mailbox/living
+room, it's better to send mail.
+An AberMUD signpost
+a blue coat
+a signpost
+a sign frantically pointing at a fun puzzle!
+
+>go sanctuary
+Microwiz takes pity on YOU, and finishes them quickly with a
+hyperNailed hand driven deep into their chest.
+Soft mists rise about you and, for a moment, obscure your vision. Then
+a soothing breeze clears the air and you are standing in a quiet,
+sylvan forest.
+Sanctuary
+You are standing in a peaceful forest clearing. Soft warm breezes blow
+through the trees causing the leaves to rustle quietly. To the north,
+you can hear the sounds of a small river flowing through the woods.
+Sunlight filters through the foliage and illuminates a large bed of
+wildflowers. The birds flit here and there amongst the branches,
+calling in melodic counterpoint to each other. Off amongst the trees
+to the west, you see the mists which indicate the presence of a
+LimboGate.
+Contents:
+Countessa
+
+>go myrth
+Limbo(#0RDL)
+You are in a dense mist that seems to go on forever. If you drop an
+object here, or set its home to be here, you probably won't be able to
+find it again. For some strange reason, you can sense which way is
+north here.
+
+>go hippo land
+You can't go that way.
+
+>go hippo world
+A rather odd plane of existence.
+You are unsure of your location. Shifting tetra-planes of various
+colors weave their way in and out around you. To the north, in between
+two hot puce colored planes, you can see a small temple.
+Contents:
+goat
+room
+
+>go gnny
+You feel a wrenching sensation...
+Mister Canoehead's tree in Santa Cruz(#31112RL)
+Contents:
+Nothing
+Hippo's Gem
+room key (1)
+Canoehead
+
+>go igzorp
+The Infamous Igzorp's Lab
+This room is filled with old equipment. A modern-looking magnetically
+levitated train, to the west, is in sharp contrast to the rest of the
+room. Steps lead up.
+Contents:
+A map of the northern Pacific Ocean
+
+>go dagon
+Dagon's Abode
+Dagon's Abode is a low, flat island of brown mud, recently arisen from
+the bottom of the Pacific. It smells very bad here, and the weather
+looks very inhospitable. You may want to try digging in to shelter
+yourself from the winds. Obvious exits are: A misty pit; A crevice; A
+shimmering pool; A tunnel; All directions of the compass.
+Contents:
+Dagon
+post-it note stuck to dinghy
+small dinghy
+SIGN
+
+>go tetris
+You sit down at your trusty Mac and begin a game of tetris. The funny
+blocks start falling, and the rows grow higher and higher. It's better
+than Cats. You play it again and again and again. You become absorbed
+in the game...
+ON THE OTHER SIDE OF THE TETRIS SCREEN
+There are many misshapen blocks here, shielding their eyes from the
+painfully blinding light. From this side of the screen, you see that
+the patterns on their faces are black and blue mottled bruises from
+repeated falls. A block next to you moans, "work work, they're working
+us to death. There's no escape; we work or die." In the distance, you
+hear thescreams of falling blocks and the thud of another block
+hitting the concrete.
+Contents:
+note to all from Mr.Big
+
+>go taxi
+You can't go that way.
+
+>go florida
+You remove your shoes and head to the Plaza of the Americas
+Plaza of The Americas(#33020RL)
+A lush green plaza shaded by large oaks. You can hear the strange
+sounds of Hare Krishna music, and you can smell the even more strange
+smells of their food. Sitting around in little groups are earthy,
+artsy types smoking clove cigarettes.
+Contents:
+gun
+krishna robe
+PART II TO BETTY_BOOM
+note to betty_boom from sorry braincell
+Wooden Direction Sign
+Iron Grate in the ground
+Bulletin Board
+slip of paper
+porkfist
+
+>go gm
+You can't go that way.
+
+>go tardis
+TARDIS
+An exact working replica of the Doctor's own.
+Contents:
+Exhibit Sign
+post-it on sign
+Manual
+
+>go wardrobe
+Wardrobe Cabinet(#29367RL)
+This is a rather spacious wooden wardrobe cabinet. It is sparsely
+furnished, with not much more than a drafting table and chair, a
+locked chinese chest, and a murf suspended upsidedown from the ceiling
+by its ankles.
+Contents:
+note-Yossarian
+rock
+A cardboard box
+
+>go bus
+You get on Bus #5 and head off to the University of Florida.
+O'Connell Center parking lot(#33480RL)
+You are in the O'Connell Center parking lot. You see the massive
+O'Connell dome ahead of you. There are service stairs leading down to
+a huge steel door. Obvious Exits: Florida Football stadium is East;
+Stadium road is SE.
+Contents:
+Service Key
+Bus
+Sign
+
+>go tub
+Your sense of Vern's karma becomes stronger.
+Tub
+You are now standing in Vern's tub. It has the usual knobs, labelled
+H, C, rec, cw, junk, limbo.
+Contents:
+Vern
+
+>go ricky
+sand rec room
+This is the Ricky's rec room. It has a trophy case on the wall showing
+all of Ricky's basketball accomplishments.
+
+>go yale
+You vanish in a flash of light (and truth).
+Outside Phelps Gate
+You are standing outside the main entrance to Yale's Old Campus. The
+gate leads west; College Street runs north-south here. The New Haven
+Green is east.
+
+>go hurst
+HurstHome(#35029RL)
+You are standing in a wide sweeping driveway that leads up to a
+stately mansion to the north. To the northwest you can see a small
+park, and to the northeast is a large hedge with a gate in it.
+Contents:
+Acron
+Mailbox
+purple
+
+>go afton
+Outside Afton's Keep, main entrance
+You are standing on the exterior of a very large stone structure.
+There is a large door to your north, and a path leading down the hill
+to the south.
+Contents:
+Gold Penis
+
+>go rainbow's
+You can't go that way.
+
+>go end
+You can't go that way.
+
+>go gunslinger central tower.
+A sidewalk.
+This is a sidewalk leading to the impressive Gunfighter Towers. It
+also leads out into a swirling mist.
+Contents:
+Cowboy
+Charger, Cowboy's Steel Steed
+From Hoagy
+makes items...
+hoagynote
+Demon Tequila
+A blinking neon sign in front of the mist
+
+>go winter
+Winter Wonderland
+You have stepped into a place of silence and peace. Snow lightly
+covers the ground and the pine trees that fill this area. A gentle
+wind blows the falling snow lightly into your face. To the north, you
+see a frozen lake.
+Contents:
+NARC's Gold Card
+Sawed off shotgun.
+Pins and needles.
+Noose.
+Staple gun.
+Diabolical looking knife.
+Razor blade.
+Black robe.
+Large
+Heavy chain.
+Handgun.
+Thin steel wire.
+
+>go seal
+Doc's place
+
+>go g21
+You can't go that way.
+
+>go mars
+You can't go that way.
+
+>go cloud
+Lightray's home
+This is Lightray's cloud. White whispery tendrils float in the air all
+around and a semi-occasional breeze is evident. An open door floats
+unceremoniously to the south and portals to the rec-room and an
+immense hallway can be sensed. At the end of a scintillating streak of
+lost starlight (in a cloud?!) is a tiny void.
+Contents:
+Astral Travel Handbook
+tiny-scroll
+Cheque worth 1200pennies
+tiny message from Lightray
+NEW MESSAGE from Lightray
+a sheet of letterhead
+a colourful RAINBOW with an enscription on it
+
+>go dream
+You drift off to sleep and enter the dreamlands
+Entrance to the Dreamlands(#37508RL)
+You are at the entrance to the Dreamlands. There is a cavern nearby
+which is said to contain the entrance to man's Dreamlands.
+Contents:
+NEW MUD ADVERTISEMENT
+
+>go bazaar
+Iommire decides not to let you.
+
+>go kadaq
+You can't go that way.
+
+>go g21
+You realize that you're just to happy to visit Adams House right now,
+and if youdid really want to go, you wouldn't fit in anyway.
+
+>go seascape
+seascape(#37518RL)
+"This area is under construction. There is a deep mist all around.
+Dimmly you can see the Heart of Gold and the rec room east and west.
+You hear the rush of a waterfall to the south.
+Contents:
+A small white book
+Note2@
+mona
+Greshmire
+note to mona
+beau
+
+>go crux
+>>BAMF!<< <<VAP!>>
+Antechamber(#40926RL)
+You're in a small square foyer with dark grey carpet on the floor and
+along the walls; the lighting is dim. An arched passage leads to the
+northwest, and the main entrance is back to the southeast, through a
+great oaken door.
+Contents:
+Grinning African mask
+Road north to Shady Vale
+Mirror
+Brass plaque
+
+>go fortress
+Living Room(#37659RL)
+This massive room is the center of life on this planet. Definite
+hipness. Passages and stairways lead to exciting and fun-filled
+locations in literally every direction. N is outward, though.
+Contents:
+Note on top of note to Iommire
+Elusive Black Cat
+laid
+Guest Book
+
+>go dorm
+You push real hard on the door and fall onto the floor of the ...
+Dorm room
+A Comfy room with a Mailbox in the corner, an exit to the study lounge
+and a tunnel leading from it and a DOOR TO THE OUTSIDE WORLD..and it
+has the.
+Contents:
+Gold Brick
+dreamer
+PDI #1
+lollypop
+Big mac
+Sun
+A Digital Design Book
+PDI #2
+Long sword
+Book of Dreams
+hatrack
+brick
+A note to Yas
+desk
+bed
+
+>go hog
+Heart of Gold(#37603RL)
+This is the control room of the Heart of Gold, which is still under
+constructionat the moment. To the west, you see seascape. To the
+north, the rec room.
+Contents:
+A cup of tea.
+second note to owner of the heart of gold
+note to owner of the Heart of Gold
+Hig_Hurtenflirst
+Allitnil
+
+>go living room
+Living Room(#37659RL)
+This massive room is the center of life on this planet. Definite
+hipness. Passages and stairways lead to exciting and fun-filled
+locations in literally every direction. N is outward, though.
+Contents:
+Note on top of note to Iommire
+Elusive Black Cat
+laid
+Guest Book
+
+>go church
+Outside St. John's Cathedral
+You are standing outside the cathedral. It is Gothic in design. The
+entrance is to the south.
+
+>go Heart of Gold
+Heart of Gold(#37603RL)
+This is the control room of the Heart of Gold, which is still under
+constructionat the moment. To the west, you see seascape. To the
+north, the rec room.
+Contents:
+A cup of tea.
+second note to owner of the heart of gold
+note to owner of the Heart of Gold
+Hig_Hurtenflirst
+Allitnil
+
+>go pervert
+Front room of Majik's Perversion Palace.
+Welcome to MAJIK'S PERVERSION PALACE. Feel free to do anything you
+want here. It is largely under construction and I hope you will be
+able to give me some suggestions. You see a door to the living room.
+Contents:
+gay
+Note to Majik
+note for Majik
+Another sign.
+dildo
+sign
+
+>go tt1
+Teletran I(#36745RL)
+A domed room made out of what looks like glowing marble. There are no
+apparent entrances or exits, but in the center of the room there
+appears to be a keyboard on a pedestal. Written on the walls in black
+is the following, "Teletran I".
+Contents:
+portal pass
+Open Links Info
+keyboard on a pedestal
+
+>go Dunster
+Concentrating on the crystal ball, Dunster swims closer to you. You
+concentrate still harder, and feel yourself being pulled into the
+ball. You close your eyes, and when you open them you are elsewhere.
+Courtyard
+Scattered about the courtyard are students studentizing. There are
+patches of ice on the walks. It is quite cold. The doors to G and D
+Entries stand open, and the smell of food is coming from J Entry.
+Contents:
+bunny rabbits
+
+>go sammael's
+Off to Sammael's...
+Sammael's Entranceway
+You enter a short hallway connecting Sammael's home proper to his
+mailbox and to the rest of the world in general. There is a small
+table with the following
+Contents:
+pomru
+signpost
+sign on wall
+
+>go shmo loft
+HOME OF THE SHMO
+A spacious five bedroom loft, complete with two full bathrooms, a
+kitchen, dinette, sauna, an enormous gym to keep me looking svelte,
+living room, etc. There is a booth below you with a box in it.
+(Careful where you jump!)
+Contents:
+phone
+One-Of-A-Kind Ring
+100lb bag of jewelry supplies
+transporter
+
+>go milk
+You leap onto the milk crate with great dexterity.
+Milk crate
+You are on an ordinary blue milk crate that Ferret calls home. On a
+nearby wall hangs the Escher print 'Relativity'. You might be able to
+jump to the refrigerator from here. Unless you're very Ferret-like,
+you probably shouldn't go under the milk crate, and whatever you do,
+don't think too hard in this place.
+Contents:
+Ferret
+A box of cheese & peanut butter crackers
+message
+the Original French Concept Album for Les Miserables
+a small blue note: "UDel lies beyond Relativity."
+a scrap of ancient parchment
+
+>go madonna
+BATHROOM
+Just your regular bathroom. Yet you are overwhelmed by the number of
+Madonna posters and memorobilia in the room. The toilet paper,
+toothbrush, towels and bath mats are all Madonna collectables.
+Contents:
+note for shmo
+Shmo
+
+>go nirvana
+HOME OF THE SHMO
+A spacious five bedroom loft, complete with two full bathrooms, a
+kitchen, dinette, sauna, an enormous gym to keep me looking svelte,
+living room, etc. There is a booth below you with a box in it.
+(Careful where you jump!)
+Contents:
+phone
+One-Of-A-Kind Ring
+100lb bag of jewelry supplies
+transporter
+
+>go help
+You can't go that way.
+
+>go go
+You know where you want to go, but getting there seems to be a bit
+nontrivial.
+
+>go MFS
+Grand Opening of Meisters Fixit Shop To be Announced Soon, please be
+patient while construction is completed.
+
+>go orgasm
+You disappear with a prolonged, orgasmic cry.
+The Land of Multiple Orgasms
+A place where you can lay back, relax, and have sex with someone that
+you really love (or someone who just happens to be here!)
+Contents:
+ADY
+note to mandolin
+ADYbot
+
+>go tour
+You board the bus which wisks you away. At the end of the ride you
+disembark and enter a small gatehouse.
+Gatehouse
+You see a bored looking security guard sitting behind a desk. A door
+leads east to the main gates of the chateau grounds, and west to the
+road. A plaque by the east door reads, "Chenonceau chateau owned and
+operated by Darkstar."
+Contents:
+Donation_Box
+A tour bus waits outside the door.
+Register Book
+
+>go asgard
+asgard
+You are in a golden city with a tower in the middle and a rainbow
+bridge that leads to the alcove.
+Contents:
+Spieljunge
+Red Rose
+O_S_Card
+note to Spiel's_slave
+
+>go mando
+Mando's Place(#41092RL)
+You are in a short hallway facing south. The walls are covered with
+paintings by well know artists as well as several plaques and awards
+showing off Mandolin's past achievments. Exits are south, east, and
+west.
+Contents:
+mandolin
+Bottle of Champagne
+Blonde Woman
+Koosh_Ball
+Triskal
+
+>go push GridButton
+You push the button and are blasted across the room by an electric
+jolt. You wake up a minute later flat on your back with a bad headache
+
+>go d 32
+You can't go that way.
+
+>go help
+You can't go that way.
+
+>go Elf Land
+Elf Land
+At first glance, this appears to be a small room, but then you notice
+that there are no walls, only very tall redwood trees. You are
+standing in an enchanted redwood forest with paths in all directions.
+Contents:
+note from BranMuffin
+A secret door leading through a tree back to the rec. room
+A small handpainted wooden sign
+Flounder
+monster
+
+>go combust
+All of a sudden, you spontaneously combust...
+Gold Eagle's First Home
+(Under construction)
+Contents:
+foo
+foo2
+foo3
+foo1
+NOTE TO TRISTAN
+Gold_Eagle
+Note for Three
+GE Key
+Floating Head of Death
+GENote
+Diceman
+the mud someone tracked in
+Inflatable Woman
+Slugs Not Drugs Poster
+
+>go flair
+You can't go that way.
+
+>go A dark tunnel leading off in
+You can't go that way.
+
+>go some obtuse direction
+You can't go that way.
+
+>go bbb
+you walk into the smokey haze of b2wild's blues bar
+b2wilds' blues bar(#41923RL)
+You are in a dusky, smoke filled blues bar.
+Contents:
+a shot of whiskey in a glass
+You see a shelf with a pictures of the Kings of Blues on it
+a shotglass full of Jack Daniels
+a wooden chair
+a shot of Vodka in a glass
+a small round table
+a tarnished trombone
+A candle, possibly from the dimly-lit Blues Bar.
+A bottle of fine Jamaican Rum from the bbb
+AD FOR THE TAVERN
+A large brass sign here says "B2wild's Blues Bar"
+Saxaphone
+You see a hatch in the SE wall that may lead to Philcon.
+To the NW is a gate leading to the Plaza of the Americas
+There is a misty archway on the east wall leading to Limbo.
+You see a series of large smokey mirrors that take up one of the
+walls.
+There is a wooden door on the north wall, leading to the Rec Room.
+
+>go xyzzy
+The room suddenly folds upon itself in a sickening multidimensional
+way. When your head stops spinning, you find yourself elsewhere...
+Smelly Tomb
+A nauseating musty smell fills the room. Dark greasy slime covers
+almost every surface, making it impossible to sit down. A decaying
+knotted rope leads up into a crude hole in the ceiling.
+Contents:
+Gort
+A small crystal sphere
+
+>go xyzzy
+The room suddenly folds upon itself in a sickening multidimensional
+way. When your head stops spinning, you find yourself elsewhere...
+Smelly Tomb
+A nauseating musty smell fills the room. Dark greasy slime covers
+almost every surface, making it impossible to sit down. A decaying
+knotted rope leads up into a crude hole in the ceiling.
+Contents:
+Laryagar
+Gort
+A small crystal sphere
+
+>go raven
+Limbo(#0RDL)
+You are in a dense mist that seems to go on forever. If you drop an
+object here, or set its home to be here, you probably won't be able to
+find it again. For some strange reason, you can sense which way is
+north here.
+
+>go bbbo
+b2wild's office
+This is a large, wood-paneled office with a thick, deep rug. There are
+books andpapers on just about every surface. The whole room seems to
+quietly humm due to the large number of computers around.
+Contents:
+A heavy antique table sits near the east wall.
+there is a dark wooden sign attached to the wall above the desk.
+you see a large panoramic window that takes up the east wall
+To the south is a small closet door leading to a stuffed coat closet.
+small furry kitten
+misty doorway leading to limbo
+junk-pile chute leading into the wall
+You see a large mirror attached to the north wall.
+Varian 620/L mini-mainframe
+a tricorder
+
+>go zombie
+You enter a strange place indeed.
+Necromantic Workroom
+Alias "the rumpus room", the room is about 30' x 20'. The floor is
+unnaturally warm here, and the two side walls and the ceiling are what
+appear to be blackboards. There is the door out, to the north, and
+another door to the south.
+You feel quite uncomfortable here, almost as if you weren't welcome
+...
+Contents:
+A mahogany pipe, the bowl of which is a carved skull.
+A ceramic mug, glazed black, ever full with hot coffee.
+"Deterministic Finite Automata for the Command of Daemons" bound in
+dark wood.
+An oak staff topped with a large Black Opal.
+A thick gold ring, set with a single ruby, bearing the inscription
+"SERVIAM".
+"Networking on the Sun Workstation" bound in a black cardboard binder.
+Oruven
+A large bookshelf, overflowing with books.
+Oruven's bed.
+Nazghul
+Tools of the trade.
+A large desk.
+An operating table.
+
+>go temp-vern-1
+You can't go that way.
+
+>go hall
+You are off to the great hall!
+Immense Hall(#7526RSL)
+You see before you a hallway with no end. There are doors of all
+shapes and sizes everywhere.
+There are usually unlinked exits here, named 1 through 30. I havent
+been here for a while, so re-read the LINKERS messages if you haven't
+been. Try dir1, dir2 or dir3 -- they're updated too.
+Contents:
+Fiora
+whore2
+Sunhawk's Brain
+Emerald Cross
+note to owner, from godfather
+Roy
+Re: London, I've got a street there.
+Black Dot
+The_Prof
+RE: LONDON?? (planning on building...)
+Frang WHERE ARE YOU?----HARRIER
+Zarkon
+Try the Training Maze at the Phoenix Base. Type PHOENIX and follow
+directions.
+WOODEN SIGN : Type DUSTY to go to Dusty Road.
+James
+wildsex's lair is open just type wild's lair (Still under
+construction)
+Granzt
+POISON
+note to axcisis
+LongThorn's abode and COMPLETED castle available for public
+exploration! HIt LT!
+The Body of a Very Dead Man with Note attached
+ALL LINKERS READ THIS MESSAGE
+ALL LINKERS READ THIS TOO
+ALL LINKERS READ THIS AS WELL
+---------------------> note to the owner
+NOW OPEN! - the VENUE. Type VENUE from here.
+Ominous Dials
+BIG club
+A big red envelope
+Type 'tt1' to get to Teletran I (Serving over 60 different locations!)
+A very, very, very, tiny little hole down there.
+Squid-Shaped Sign
+Note to Khalarghast
+red and white sign
+Glowing Purple Letters
+Necrophiliac
+A MEDIEVAL SCROLL
+WARLORD'S TENT AD
+
+>go marshall will link this
+You can't go that way.
+
+>go heaven
+Nice try. The best you can do is ...
+Limbo(#0RDL)
+You are in a dense mist that seems to go on forever. If you drop an
+object here, or set its home to be here, you probably won't be able to
+find it again. For some strange reason, you can sense which way is
+north here.
+
+>go plane
+You ascend a suddenly material staircase to the Planes of Transfinite
+Splendor.
+Planes of Transfinite Splendor
+You are in a magical and wondrous land of peace and plentiful grazing
+where the unicorns roam in freedom. They came here long ago when the
+age of myths had passed in the mortal realm, and they live here still,
+long after their mythical comrades have passed into history. The
+horizon is green as far as you can see, and crystal clear lakes dot
+the countryside.
+Contents:
+LYNXNOTE
+To the distant north, you see a natural spring around which unicorns
+gather.
+A sign posted here talks about mail.
+To the south, a little beyond the gateway, you can see a small meeting
+house.
+A shimmering gateway leads from here to beyond the Planes.
+A notice attached beneath the parchment.
+A piece of parchment attached to a tree close by.
+To the distant west, you see a huge, ancient golden forest.
+
+>go ciao
+You are outta here.
+Brillig(#5006R)
+You are at brillig.umd.edu, a Vax 8600 at the University of Maryland.
+Contents:
+quarter(#16568)
+buck(#16569)
+Seventeen 1K-by-32 pixel multi-flavored windows with turds and arrows
+and documentation panes.(#6440)
+Pluribus IMP(#8103)
+An LA36(#6443)
+duct-tape gerbil(#49595)
+an amazingly twisted little ass, always different(#11357)
+
+>go rpi
+You stride boldly into By-Tor's room, but you find yourself in an
+unfamiliar place. The door disappears behind you.
+Rivendell(#60860RL)
+Sunlight dances through the leaves. Soft winds stir the sighing trees.
+Lying in the warm grass, feel the sun upon your face. Elfin songs and
+endless nights, sweet wine and soft relaxing lights. Time will never
+touch you here in this enchanted place. You feel there's something
+calling you. You're wanting to return to the misty mountains rise and
+friendly fires burn, a place you can escape the world, where the dark
+lord cannot go, peace of mind and sanctuary by loud water's flow.
+Contents:
+A Sign About Linking...
+
+>go 306
+Foyer(#44216RSL)
+A tastefully decorated brightly-lit foyer, with a hallway to the north
+and a coatrack on the left. Stairs lead upwards and downwards; an
+archway leads east to By-Tor's room, and a time-space portal leads to
+the Greene building.
+Contents:
+Golden Vase
+Gershwin
+Note for Whammy
+Coatrack
+
+>go DPW
+DPW office
+This is the DPW office. there are signs on the walls detailing current
+constructions projects of Meister Construction, Inc.
+Contents:
+Traveling on the highways
+Note on Highway
+LINKING INTO THE HIGHWAYS
+Mass Pike Announcement
+Highway Announcement
+
+>go hammock
+you eagerly leap into the hammock, swingning it happily.
+In the Duct-tape Hammock
+This is the infamous duct-tape hammock. It is roomy enough for several
+people, with pillows taped to it. It is very comfy indeed. There is a
+comorter here, pulled up so no light gets in. It also keeps nosy
+people in the rec room for spying on you.
+
+>go cykes place
+You vanish in a flash of energy and enter....
+Cyclops Party Place
+to the south you hear faint laughter, a sign says REC
+Contents:
+penny
+Cyclop's key
+cyclops
+One eyed giant
+
+>go hamster
+You open a tiny door and enter Hurin's Hamster Bar.
+Hurin's Hamster Bar
+You see several of Hell's denizens sticking tiny pitchforks into
+squealing hamsters, and joyfully crunching their skulls. Through the
+smoky haze, you see doors leading east (to Boneyard Way) and west (to
+the Rec Room).
+Contents:
+A cup of tiny pitchforks
+A plate of hamsters.
+
+>go hades building
+You are transported to the Hades Building in Hell in a flash of smoke
+and flame.
+In the Hades Building
+You are standing in the Hades building. Most of the building is
+occupied by a giant pit in the middle of it. Stairs wind down the side
+of this pit as far as you can see.
+Contents:
+To the west, an exit leads back to the Rec Room.
+Burning Yellow Notice
+Blazing Red Notice
+Important Notice
+
+>go rob's
+Rob's den(#45073RL)
+A warm, dark, comfortable room of indefinite size. Everything is black
+plush; there are red neon tubes along the walls near the ceiling
+(assuming there is one).
+Contents:
+Bag of gold
+stereo
+Thorin
+Q-104 Bumper Sticker
+PYX-106 Bumper Sticker
+Note For Thorin
+Note to simon_the_walking_glitch
+Fly-92 Bumper Sticker
+magic dildo
+A ten-pound sack of Doritos
+yttrium
+A floating ball
+
+>go zanitarium
+You dissappear in a flash of day-glo.
+Zanitarium Teleport Control Center(#46467RL)
+The day-glo walls of pink and orange, combined with the pulsing strobe
+light in the ceiling combine to produce a feeling of utmost
+thorkelness. You also feel___somewhat dizzy. Read the directory, or go
+e.
+Contents:
+Potato
+mistletoe
+Directory
+
+>go greyson
+You can't go that way.
+
+>go duplicate
+.
+This is a test to see if this tinywrap thing will allow more than
+three lines of input. Um. Well, if you see this room you will probably
+wonder who is the person who was doing it but I guess that you will
+just have to ask the wizard because I
+
+>go EC
+You can't go that way.
+
+>go hard rock
+You head to WarMUD's Hard Rock Cafe
+Hard Rock Cafe Bar(#45146RL)
+You step into the Hard Rock Cafe WarMUD! A bartender serves drinks as
+barmaids serve the tables. Feel free to @create your own drinks and
+make htem sticky. To the north is the Hard Hock Cafe. West is the
+lobby.
+Contents:
+kamikaze
+A fifth of Whiskey
+Bacardi 151
+suicide
+Old Parr
+Zombie
+Blow Job
+Rum Coke
+Ramous Fizz w/ lots of Vodka
+Phillips Screwdriver
+Martini
+Note to WARLORD
+Clone106
+READ THIS SIGN: EXIT LIST
+Here is a stained bar napkin from B2wild's Blues Bar.
+Hurricane
+Glenfiddich Scotch
+Jukebox
+
+>go condo
+You can't go that way.
+
+>go limbo
+You fade into nothingness.
+Limbo(#0RDL)
+You are in a dense mist that seems to go on forever. If you drop an
+object here, or set its home to be here, you probably won't be able to
+find it again. For some strange reason, you can sense which way is
+north here.
+
+>go walker
+foyer to dora's apartment
+Contents:
+dora
+
+>go dive
+You dive off into a pile of furballs!
+Pile of Furballs
+You are swimming about in a very large pile of furballs. They are
+quite fun to throw at one another.
+Contents:
+Note for microwiz
+fur
+furr
+Yaz
+One Million Roses
+
+>go banzai
+You can't go that way.
+
+>go lounge
+You walk into the lounge.
+lounge
+You find yourself in the lounge. At the far end of the room is a bar,
+and in the corner is a portal leading to the lobby.
+Contents:
+Couch
+
+>go lobby
+After a few moments of disorientation, you realize that your body is
+slowly dematerializing, much in a way reminiscent of star trek's
+transporters.
+Conference Room Lobby(#48923RL)
+You find yourself in the Conference Room Lobby. Many items are here,
+from the familiar to the undiscernably different. To the north is the
+Conference Room.
+Contents:
+note to Paradox
+Notice
+Message Board
+Surf-Bot
+
+>go ric_limbo
+You can't go that way.
+
+>go khal_limbo
+You can't go that way.
+
+>go CW
+You walk into the CyberWare lobby -- the exit back is called "rec"
+cyberware lobby
+This lobby is filled with valuable art. Looks like the robot security
+guards can take care of it, though. Exits are in to an elevator and
+out.
+Contents:
+A Note left only for players of BradSol's pbem game: Become a
+CyberWare Vice President!
+Nude Descending a Stairway by Marcel Duchamp
+Receptionist's Desk
+Ad
+
+>go airroc
+Air
+You have entered the MirrorNet v4.2 node serving the "Rec Room".
+MirrorNet is run exclusively by Airroc...to get to the links directory
+type D.
+
+>go bemis
+Black Bemis (6E)
+A black hallway with dim red lighting. Walcott is to the south,
+Goodale to the north.
+
+>go ri
+You are suddenly suck through a primal void into a small town by the
+name of...
+North Smithfield
+A small rural town. You stand at a crossroads. The roads lead
+north-south and east-west. Down the road to the east, you can see a
+school. To the north, you can make out a house. The road seems to go
+on forever to the west. To the south, you see a quarry. In the
+northwest corner of the crossroad is a run down gas station.
+
+>go slack
+You proceed to the Temple.
+Temple O' Slack
+This holy house of WhorShip to JHVH-1 and `Bob'' is dominated by a
+large DobbsHead (tM) poster tacked to the wall. In front of the poster
+is the sacred Alter. Over to one side is a row of ShorDurPerSav ikons;
+A television facing a large comfy couch is on the other side.
+Contents:
+mongo money
+mongo2 money
+Jumbo Lamb
+Sacrificial Lamb
+Seven-Bladed Windbreaker of True Sight (tm)
+Scrying Glass
+ziplock baggie of 'frop
+button reading "SCIENCE DOES NOT REMOVE THE TERROR OF THE GODS!"
+DobbsHead button
+large poster bearing the face of J. R. `Bob'' Dobbs
+Squid#1
+Alter of Alien Contact
+
+>go out!
+You can't go that way.
+
+>go cavern
+You go to Borric's home.
+Cavern(#51684RL)
+You are in a deep underground cavern. There are passages leading north
+and west.
+Contents:
+Construction Sign
+
+>go wing
+You think to fly, but fail miserably.
+
+>go castle D
+You are wisked away to a beautiful stone castle
+Entrance Hall(#49743RLH)
+This is a very large entryway made mostly of Rose Quartz. Only
+doorways are of other materials. There is a Jade doorway, for
+instance. The room is constructed in a gothic style, and the stone is
+carved like the wood in a cathedral.
+Contents:
+Blanchefleur
+The_Butler
+A note to deathshadow- you are out of the game, even if resurected-
+Daneel
+Butler's Cane
+directions
+
+>go waiting
+You go to the waiting room.
+Waiting Room
+This is the place to wait and do nothing while you're busy, having
+dinner, or some other thing, so as not to clutter up some other place.
+Contents:
+guest
+
+>go miles' place
+Miles' place(#48828RL)
+Miles' place is all you've ever wanted in a apartment (in hell) and
+more! You see a shimmering portal that you sense leads back to the
+lobby
+Contents:
+Contents:
+Note to Miles of MilesMuck
+Miles
+Miles2
+note to miles from atreides
+ANNOUCING Miles' Mini MUCK! l_cae05.icaen.uiowa.edu 2001
+mac
+Bob, the Wand of Creation
+brett
+
+>go foyer
+You push your way through the revolving door and arrive at...
+Opus Apartments Lobby
+This is the lobby area to a bustling apartment complex. Intense
+sunlight flows through the large skylights. There is a balcony around
+the room, and stairs leading up. You can leave notes for Opus up
+there.
+DIR: Resident Directory, EXITS: List of Exits, INFO: Opus Apartments
+News
+Contents:
+Sign: NO SLEEPING
+
+>go bbemis
+you are in BLACK BEMIS
+Black Bemis(#45444RDL)
+A dark hallway, dim red lights barely illuminate your path. You can
+see several exits; n to Goodale, s to Walcott, the stairs, the
+restroom, and rooms b501-b516
+
+>go cave
+You go to Borric's home.
+Cavern(#51684RL)
+You are in a deep underground cavern. There are passages leading north
+and west.
+Contents:
+Construction Sign
+
+>go nest
+You can't go that way.
+
+>go mad
+You back away from Spielmadchen's upraised spear, and decide not to
+use this mystic portal
+
+>go Greene
+You wake up amongst stacks of Arche supplies...
+Greene Building
+A dimly lit, ricketty old building, with piles of trace paper and
+cardboard that reach to the ceiling and the smell of hot glue wafting
+throught the air.
+Contents:
+Large Sign: This building is a Fire Hazard. Troy Fire Marshal.
+Welshman

@@ -1,0 +1,544 @@
+
+Oxford English Dictionary of Commands, Index
+
+Commands described in the main volumes are drop, get, give, go, gripe,
+help, inventory, look, move, password, rob, and say. Other commands
+are described in the supplements.
+
+Oxford English Dictionary of Commands, "Kill"
+
+Syntax: kill <player> [= <cost>]. Kill the specified player. Killing
+costs either <cost> pennies or 10 pennies, whichever is greater. The
+probability of success is proportional to the cost.
+
+Oxford English Dictionary of Commands, "Drop"
+
+Syntax: drop <object>. Drop the specified object.
+
+Oxford English Dictionary of Commands, "Get"
+
+Syntax: get <object>. Get the specified object.
+
+Oxford English Dictionary of Commands, "Give"
+
+Syntax: give <player>=<amount>. Give <player> the specified number of
+pennies.
+
+Oxford English Dictionary of Commands, "Go"
+
+Syntax: go <direction>, go home. Go in the specified direction. Go
+home is a special command that returns you to your starting location.
+If the direction is fully specified, the verb go may be omitted.
+
+Oxford English Dictionary of Commands, "Gripe"
+
+Syntax: gripe <message>. Send <message> to the system maintainer.
+
+Oxford English Dictionary of Commands, "Help"
+
+Syntax: help. Prints a short help message.
+
+Oxford English Dictionary of Commands, "Inventory"
+
+Syntax: inventory. List what you are carrying.
+
+Oxford English Dictionary of Commands, "Look"
+
+Syntax: look <what>. <what> can be a room, thing, player, or
+direction. Prints a description of <what>.
+
+Oxford English Dictionary of Commands, "Move"
+
+Syntax: move <direction>, move home. See "Go"
+
+Oxford English Dictionary of Commands, "Password"
+
+Syntax: password <old>=<new>. Set a new password; you must specify
+your old password to verify your identity.
+
+Oxford English Dictionary of Commands, "Rob"
+
+Syntax: rob <player>. Attempt to steal a penny from <player>.
+
+Oxford English Dictionary of Commands, "Say"
+
+Syntax: say <message>. Say <message>.
+
+Oxford English Dictionary of Commands, "Find"
+
+Syntax: find <name>. Print the name and object number of every room,
+thing, or player that you control whose name matches <name>. Because
+the find command is computationally expensive, there is a small charge
+for using it.
+
+Oxford English Dictionary of Commands, "Examine"
+
+Syntax: examine <name>, examine #<number>. Print a detailed
+description of object specified by <name> or by <number>. You must
+control the object to examine it.
+
+Oxford English Dictionary of Commands, "Ofail"
+
+Syntax: ofail <object> [= <message>]. Without a message argument,
+clear the ofail message on <object>, otherwise set it. The ofail
+message, prefixed by the player's name, is shown to others when the
+player fails to use <object>.
+
+Oxford English Dictionary of Commands, "Set"
+
+Syntax: set <object> = <flag>, set <object> = !<flag>. Sets (first
+form) or resets (second form) <flag> on <object>. Current flags are
+DARK, LINK_OK, STICKY, TEMPLE, and WIZARD.
+
+Oxford English Dictionary of Commands, "Lock"
+
+lock <object>=<key>, lock <object>=!<key>. Set a key for an object.
+First form requires that a player have <key> to use <object>; second
+form requires that a player not have <key>. If <key> starts with *,
+lock to named player.
+
+Oxford English Dictionary of Commands, "Link"
+
+Syntax: link <direction>=<room number>. Link exit specified by
+<direction> to room specified by <room number>. Exit must be unlinked,
+and you must own the target room if its LINK_OK attribute is not set.
+
+Oxford English Dictionary of Commands, "Unlink"
+
+Syntax: unlink <direction> Remove the link on the exit in the
+specified <direction>. The exit may then be relinked by any player
+using the "link" command.
+
+Oxford English Dictionary of Commands, "Unlock"
+
+Syntax: unlock <object>. Remove the lock on an object.
+
+Oxford English Dictionary of Commands, "Create"
+
+Syntax: create <name> [= <cost>]. Create a thing with the specified
+name. Creation costs either <cost> pennies or 10 pennies, whichever is
+greater. The value of a thing is proportional to its cost.
+
+Oxford English Dictionary of Commands, "Describe"
+
+Syntax: describe <what>=<description>. <what> can be a room, thing,
+player, or direction. Set the description a player sees when they use
+the command "look <what>"
+
+Oxford English Dictionary of Commands, "Fail"
+
+Syntax: fail <object> [= <message>]. Without a message argument, clear
+the fail message on object, otherwise set it. The fail message is
+printed when a player unsuccessfully attempts to use the object.
+
+Oxford English Dictionary of Commands, "Success"
+
+Syntax: success <object> = <message>. Set the success message for
+<object>. The success message is printed when a player successfully
+uses <object>.
+
+Oxford English Dictionary of Commands, "Dig"
+
+Syntax: dig <name>. Create a new room with the specified name, and
+print the room's number.
+
+Oxford English Dictionary of Commands, "Open"
+
+Syntax: open <direction>[;<other-dir>]*. Create an unlinked exit in
+the specified direction(s). Once created, you (or any other player)
+may use the "link" command to specify the room to which the exit
+leads. See also "name".
+
+Oxford English Dictionary of Commands, "Name"
+
+Syntax: name <object> = <name>, name <player> = <name> <password>.
+Change the name of the specified object. Can also be used to specify a
+new direction list for an exit (cf. open). For a player, requires
+player's password.
+
+Oxford English Dictionary of Commands, "Osuccess"
+
+Syntax: osuccess <object> [= <message>]. Without a message argument,
+clear the osuccess message on object, otherwise set it. The osuccess
+message, prefixed by the player's name, is shown to others when the
+player successfully uses <object>.
+
+Volume One, Control
+
+There are three rules for determining control: 1. You control anything
+you own. 2. A wizard controls anything. 3. Anybody controls an
+unlinked exit (even if it is locked). Builders should watch out for
+(3).
+
+Volume Two, Linkability
+
+You can link to a room if you control it, or if the room is set to be
+LINK_OK. Being able to link to a room means that you can set the homes
+of objects (or yourself) to that room, and can set the destination of
+exits to that room. See the OED on "link" for more info.
+
+Volume Three, Stickiness
+
+If a thing is STICKY, it immediately goes home when dropped. If a room
+is STICKY, its dropto is delayed until the last person leaves the
+room. Stickiness is not meaningful for players or exits.
+
+Volume Four, Homes
+
+Every thing or player has a home. For things, this is the location the
+thing returns to when sacrificed, when a player carrying it goes home,
+or when (if STICKY) it is dropped. For players, this is where the
+player goes when issuing 'home' command. Homes may be set using the
+'link' command, e.g. 'link donut = <room-number>' or 'link me =
+<room-number>'. Exits may also be linked to the special location
+'home', e.g. 'link north = home'.
+
+Volume Five, Dropto's
+
+When the 'link' command is used on a room, it sets a dropto location
+for that room. Any object dropped in the room (if it is not STICKY;
+cf. vol. 3) will go to that location. If the room is set to be STICKY,
+the effect of the dropto will be delayed until the last player leaves
+the room. The special location 'home' may be used as a dropto, as in
+'link here = home'; in that case objects dropped in the room will go
+to their homes.
+
+Volume Six, Recycling
+
+Nothing can be destroyed in TinyMUD. However, it is possible to
+recycle just about anything. The 'name' command can be used to rename
+objects, making it easy to turn a silk purse into a sow's ear or vice
+versa. Extra exits can be unlinked and picked up by their owner using
+the 'get' command, and dropped like ordinary objects using the 'drop'
+command in any room controlled by the dropper.
+
+The Lost Book of Undocumented Commands
+
+goto <dir>, take <thing>, read <thing>, link <object> = <room #> (set
+home), link <room> = <room #> (set drop-to), unlink <room> (remove
+drop-to), open <direction>[;<direction>]* = <room #> (open and link)
+
+The Compleat Book of Magical Invocations
+
+Words of Power: dump, shutdown, teleport [<victim>=] <destination>,
+wall <message>, force <victim> = <command>, chown <object> = <player>,
+toad <player>
+
+"Casting the Circle" by Moonchilde
+
+"As the circle is cut round, power to the earth is bound. To enter
+circle needs the blade, forged of silver, mystic made."
+
+"In the hands of Fate" by Moonchilde
+
+The book has only one page. It reads: "There are three names for Fate;
+Clotho, Lacheisis, and Atropos in that order."
+
+Mages guide to Power
+
+The guide seems to have a spell engraved in it. From what little you
+can make out, it seems to be a spell of transportation.
+
+You learn the spell to invoke the astral plane. The spell is 
+"io evohe"
+
+dropto command?
+
+
+INFORMATION
+
+The directory contains the names of users with registered emailboxes.
+To go to their emailbox, say "NAME-emailbox". The directory list is
+manually updated by flexi. Email him when you add a new emailbox.
+unused-emailbox-0 through 9 is open.
+
+How to send normal private email
+
+To send private email, create an obj with content as success msg; lock
+obj to recipient; drop obj in emailbox; set home by "link OBJ=HOME#";
+then make obj stick by "set OBJ = sticky". Sticky msgs return to your
+home as receipt (and for reuse)
+
+How to send drop-chute mail
+
+To send drop-chute email, create msg as with private email, set suc
+and description and lock, but do not make message sticky (so drop-to
+will work). Drop msg in recipient's drop-chute to send. Recipient must
+return msg to recycle.
+
+How to open your own emailbox
+
+To open your own mailbox, dig a room and link it to an
+"unused-emailbox-N" exit. Then change the name of the link to
+"NAME-emailbox". You should open a link namd "back" -- drop flexi a
+note and he'll link it to the alcove. Read DROP CHUTE.
+
+How to create a drop chute.
+
+To create a drop chute, dig a room and link to your emailbox. link
+that room to your hidey hole (where dropto mail will go), and you're
+set.
+
+How to automatically forward email
+
+.forward doesn't work. Instead, create your emailbox as normal, then
+go inside and say "link here = HOME-#". You should warn the sender in
+the description msg to not make the msg sticky but to set the home so
+you can sacrifice to return it.
+
+DIRECTORY
+
+cactus cauto cirdan danny darooha doug fence flexi fnord guy hamster
+hde hellhole horatio jonas onchilde opus ronny sip sluggo stewy web
+clamen-airlines clamen-transco
+
+>name unused-emailbox-5 = don-emailbox;don
+Name set.
+
+connect don puke
+connect packet bounce
+connect God dog
+connect Smoke eclipse
+
+>read emer
+It looks very valuable.
+>take emer
+It whispers "go to Daemon's Mount--east end of Misty Mountains."
+Taken.
+
+fex has arrived.
+flexi says "status"
+fex says "reply prob 30, num trips 7, limit 10"
+fex says "auto-greet-on-entry 0, auto-reply 1"
+fex says "leave flag 0, in-Falco's flag 1"
+fex says "somebody-said-no flag 0, go-in-to-Falco's flag 0"
+fex says "shut-up interval 3000 tenths of sec, be-quiet interval 600"
+fex says "idle-move-Falco 75, idle-move-TS 135"
+flexi says "patient"
+fex says "idle-move-Falco 80, idle-move-TS 140"
+flexi says "patient"
+flexi says "patient"
+fex says "idle-move-Falco 85, idle-move-TS 145"
+flexi says "patient"
+
+flexi has arrived.
+Terminator states in a flat voice: I'll be back.
+flexi says "Terminator status"
+Terminator states in a flat voice: I'll be back.
+Terminator says "status: t = 1, T = 20, Z = 50. Purse: 201"
+Terminator says "intended victim: flexi"
+Terminator goes northeast.
+Terminator has left.
+
+
+==========
+
+>read Directory entry for "geek"
+krainier@eagle.wesleyan.edu // krainier@wesleyan.bitnet
+>read Directory entry for "dpeisach"
+the M.I.T. martin // Daniel Peisach // dpeisach@athena.mit.edu //
+(617) 225-6354
+>read Directory entry for "Indy"
+Karyn Pichnarczyk // karyn@nssdca.gsfc.nasa.gov//(301) 949-2471, (301)
+648-0770 (w)
+>read Directory entry for "chuck"
+Chuck Silvers // cs4n@andrew.cmu.edu // (412) 268-4002
+>read Directory entry for "SirRiel"
+Clay Webster // webster@topaz.rutgers.edu // New Brunswick, NJ
+>read Directory entry for "elohssa"
+You see nothing special.
+>read Directory entry for 'Tourmaline'
+Jennifer Kleiman ][ jkleiman@eagle.wesleyan.edu ][ (203) 638 0370
+>read Directory entry for "Moonchilde"
+Joseph L. Traub // jt1o@andrew.cmu.edu // (412) 687-4561 // 403
+Oakland Avenue // Apartment 5a&5b // Pittsburgh, Pa. 15213
+>read Directory entry for "Tyrone"
+Dan Schmidt, MIT / dschmidt@athena.mit.edu / Fickt nicht mit der
+Raketemensch.
+>read Directory entry for "ysatis"
+Katherine Alber (kea@vega.fac.cs.cmu.edu) Pittsburgh
+>read Directory Entry for "Matti"
+Eric (the Finn) Moore em21@andrew.cmu.edu (412)268-4748
+>read Directory entry for "Lord_Jeff"
+Jeff Rosenfeld (jeffro) // jdr@andrew // 268-697[23] // WeH 5316
+>read Directory entry for "Balton"
+Craig Boas // cb39 (ANDREW) // (412) 268-4376
+>read Directory entry for "Ashne"
+Lauren P. Burka//lburka@eagle.wesleyan.edu//wesleyan university
+middletown, connecticut
+>read Directory entry for Lisbet
+Riki Weiner // rweiner@eagle.wesleyan.edu// (203) 638-1323 //Box 5468
+<Wesleyan Station, Middletown, CT 06457
+>read Directory entry for "Fnord"
+Nathan Loofbourrow // nl0s+@andrew // x4447
+>read Directory entry for "BugEye_McSquinty"
+Dave Weinstein <daw@faraday.ece.cmu.edu>
+>read Directory entry for "Nan"
+Nan Ellman // nan@helios.ucsc.edu // (408) 458-1808
+>read Directory entry for "Buck"
+John Kohl // jtkohl@ATHENA.MIT.EDU // (617) 643-2813
+>read Directory entry for "MacShit"
+Miles Bader <bader+@andrew.cmu.edu> // Information Technology Center
+// (412) 268-6742
+>read Directory entry for the sea nymph
+Lisa Greenstein // lgreenstein@eagle.wesleyan.edu // (203) 346-3112
+>read Directory entry for "Mojo"
+Andrew Houghton <ah0i@andrew.cmu.edu> // (412) 422-2470 // School of
+Humanities and Social Science // Carnegie Mellon University //
+Pittsburgh, PA 15213
+>read Directory entry for "Z"
+Zalman Stern, zs01+@andrew.cmu.edu (finger me at z.andrew.cmu.edu for
+more info).
+>read Directory entry for "hobbes"
+David Nichols // nichols+@andrew.cmu.edu
+>read Directory entry for "entropy"
+ncastellano@eagle.wesleyan.edu/entropy@nuacc.acns.nwu.edu//Nick
+Castellano
+>read Directory entry for "Angel"
+Angela Thomas <thomas@shire.cs.psu.edu> // +1 814 865 0994
+>read Directory entry for Yossarian
+John Ockerbloom // ockerbloom@cs.cmu.edu // (412) 268-6247
+>read Directory entry for "William"
+William Lott // wlott@andrew.cmu.edu // (412) 521-4668
+>read Directory entry for Allessindra
+Anne Marie Quint // amq@klinzhai.rutgers.edu // (201) 932-2443 between
+midnight and 8 am
+>read Directory entry for "B'ris"
+Boris Goldowsky <boris@prodigal.psych.rochester.edu> // 716-423-0711
+// 57 Glasgow St, Rochester, NY 14608 // University of Rochester,
+Cognitive Science & Psychology
+>read Directory entry for "Cirdan"
+Andy Perrine // 6600andy@ucsbuxa.ucsb.edu // (805) 968-0403
+>read Directory Entry for Monk
+Sean Levy / snl@edrc.cmu.edu / (412) 268 2257
+>read Directory entry for "'Thyst"
+Jeff Alexander // ja1r+@andrew.cmu.edu
+>read Directory entry for "Doug.deJ"
+Doug DeJulio // dd26@andrew.cmu.edu // (412) 422-2089
+>read Directory entry for "Snowstorm"
+Kenneth Gober // snow@drycas.club.cc.cmu.edu // (201) 757-9488
+>read Directory entry for "Marvin"
+Bruce R. Miller // bm17+@andrew.cmu.edu // CMU NetDev // Pittsburgh,
+PA // (412) 682-7560
+>read Directory entry for "Jedi"
+Gary Schreiber <jedi@drycas.club.cc.cmu.edu> //
+<gds3939@{ultb,vaxa,vaxb,vaxc,vaxd}.isc.rit.edu} // (716) 442-9264 //
+Rochester Institute of Technology
+>read Directory entry for "sluggo"
+Marc Ringuette // mnr@cs.cmu.edu // 412-268-3728 // CMU SCS
+>read Directory entry for "danny"
+Psuedo-automaton for stewy. Usually poses as a hermit in a cave on Mt.
+Kenden.
+>read Directory entry for "Lensman"
+Les Barstow <LENSMAN@drycas.club.cc.cmu.edu> //
+<lmb7421@{ultb,vaxa,vaxb,vaxc,vaxd}.isc.rit.edu> // (716) 292-5844 //
+Rochester Institute of Technology // Wandering Damage, Cosmo Police -
+Psi Division
+>read Directory entry for "Mouser"
+Felix Lee <flee@shire.cs.psu.edu> // +1 814 865 1545
+>read Directory entry for "Cutter"
+Joe Turner // turnerj@gw2.hanscom.af.mil (or) cutter@ghoti.lcs.mit.edu
+// 617-776-3855
+>read Directory entry for "zippy"
+Clauss Strauch // cbs@cad.cs.cmu.edu // (412) 268-8777
+>read Directory entry for guy
+Guy Jacobson <guy@cs.cmu.edu> // (412) 268-3056 // School of Computer
+Science // Carnegie Mellon University // Pittsburgh PA 15213
+>read directory entry for Darooha
+Danny Sleator <sleator@cs.cmu.edu> // 412-268-7563 // School of
+Computer Science // Carnegie Mellon University // Pittsburgh, PA 15213
+>read Directory entry for "Daemon"
+Dave Eckhardt // davide@cs.cmu.edu // +1 412 363 0493
+>read Directory entry for "newt"
+Philip Cutone // pc2d+@andrew.cmu.edu //
+>read Directory entry for "The Terminator"
+Terminator // c/o Flexi Robotics // c/o <bsy@cs.cmu.edu>
+>read Directory entry for "Gahan"
+Sean Goller // sg2s+@andrew.cmu.edu // (412) 268-4473
+>read Directory entry for "Cactus"/"Todd"
+Todd Masco // tm2b+@andrew.cmu.edu // (412) 422-2089
+>read Directory entry for "Synful"
+Marc Shannon // SYNFUL@DRYCAS.CLUB.CC.CMU.EDU // (412) 661-9708
+>read Directory entry for "Rick"
+Rick+@DRYCAS.CLUB.CC.CMU.EDU
+>read Directory entry for "Hamster"
+Chris Newman // cn0h+@andrew.cmu.edu // (412) 268-4236
+>read Directory entry for "Wizard"
+Jim Aspnes // asp@cs.cmu.ed // (412) 268-3054
+>read Directory entry for "Horatio"
+Pete Berger // pb1p@andrew.cmu.edu // (412) 681-4237
+>read Directory entry for "cz"
+Christopher Zach // cz@ai.ai.mit.edu // (301)-825-8832 // Lives in
+Elven forest.
+>read Directory entry for "don"
+Don Hopkins // don@brillig.umd.edu // (301) 474-8027, (301) 454-1517
+>read Directory entry for "Meep"
+Victoria Landgraf // vlandgraf@eagle.wesleyan.edu // (203) 347-0712
+>read Directory entry for "stewy"
+Stewart Clamen <clamen@cs.cmu.edu> // (412) 268-3620 // School of
+Computer Science // Carnegie Mellon Univerity // Pittsburgh, PA
+15213-3890
+>read Directory entry for "flexi"
+Bennet Yee <bsy@play.mach.cs.cmu.edu> // (412) 268-7571 // School of
+Computer Science // Carnegie Mellon University // Pittsburgh, PA
+15213-3890
+
+========================================================================
+
+Mr. Multiply
+
+0000023453
+
+========================================================================
+
+Rec Room
+
+cw	- cyberware
+hrsfa	- rocket
+balton	- his tower
+
+Boston
+
+test-boston	- get there
+forest		- get back
+
+Wizard's room
+
+"In the hands of Fate" by Moonchilde
+The book has only one page. It reads: "There are three names for Fate;
+Clotho, Lacheisis, and Atropos in that order."
+
+========================================================================
+
+OUTPUTPREFIX <<
+OUTPUTSUFFIX >>
+
+========================================================================
+
+AberMUD on uokmax.ecn.uoknor.edu (192.35.96.111) -- log on as 'mud'.
+-- russ@uokmax,Nightfall
+
+========================================================================
+
+Gloria
+
+To give me a penny, type 'give Gloria = 1'
+To ask for directions, type 'say Where is X, Gloria?'
+To see what rooms I've discovered, type 'say Where have
+you been, Gloria?'
+To find out about people, type 'say Who have you seen,
+Gloria?'
+To give me directions, type 'say go direction, Gloria.'
+or 'say type <go direction>, Gloria.'
+To ask for the time, type 'say What time is it, Gloria.'
+
+
+========================================================================
+
+Limbo treasures:
+
+a small ivory knife
+shiny, round rock
+
+Rec room exits
+
