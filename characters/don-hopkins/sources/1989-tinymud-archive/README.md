@@ -232,6 +232,6 @@ Notable for WWSFF/Soul City lineage:
 ## Related in this repo
 
 - [1991-09-project-duh-multimedia-mud.md](../1991-09-project-duh-multimedia-mud.md) -- Don's later multimedia MUD pitch
-- [qgcon-inclusivity-paper](../../../catalogs/soul-city/) -- procedural rhetoric thread
-- [object-shops.md](../../../catalogs/soul-city/object-shops.md) -- VPRL, preview runtime
-- [guid-registry.md](../../../catalogs/soul-city/guid-registry.md) -- clustering, reference descriptors
+- [qgcon-inclusivity-paper](../../../../catalogs/soul-city/) -- procedural rhetoric thread
+- [object-shops.md](../../../../catalogs/soul-city/object-shops.md) -- VPRL, preview runtime
+- [guid-registry.md](../../../../catalogs/soul-city/guid-registry.md) -- clustering, reference descriptors
