@@ -40,9 +40,6 @@ sources:
   papers:
     - { title: "Viewpoint: Toward a Computer for Visual Thinkers (Stanford PhD, 1987; advisor Donald Knuth)", url: "https://mathgenealogy.org/id.php?id=47204" }
   blogs: []
-  internal:
-    - path: sources/2026-08-30-linkedin-productive-struggle.md
-      note: "Public LinkedIn post on AI and productive struggle in education, resharing Dave Hendry."
 
 show_suggestions:
   - "Viewpoint & 'visibility' — his thesis that the screen's pixels ARE the program state; making the invisible visible (deep kin to Don's pie menus, Bret Victor's explorable interfaces, and Shneiderman's direct manipulation)"
