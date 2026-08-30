@@ -63,7 +63,55 @@ tinymud_1989:
     a packaging format (Blorb) — and wrote their manuals, which became the
     field's specs. In 2013 he shipped Seltani, a multiplayer hypertext world
     with player-writable Ages: the MIDgaard loop, closed on the web.
+  evidence_note: >
+    Plotkin's 2024 career interview with Jimmy Maher does not mention
+    MIDgaard or TinyMUD at all; his IF origin story there begins in 1993-94.
+    Don's archived copy of the announcement is therefore a primary source
+    the subject's own retrospective omits. Treat "did not ship" as
+    inference from silence, not from a statement, and ask him.
   source: sources/1989-12-midgaard-what-could-be.md
+
+# Independently converged designs — the strongest show material
+convergences:
+  praser_5_filesystem_mud:
+    when: "circa 1990, CMU"
+    what: >
+      Praser 5 began as a puzzle embedded in the CMU filesystem:
+      directories as rooms, symlinks as exits, `ls` as look, a small
+      executable linked into each directory as its verbs, and file
+      permissions as the progression gate — on a shared multi-user machine.
+      Later rebuilt as an Inform 6 parser game; the original survives in
+      pre-ANSI K&R C. His stated intent was to subvert the filesystem, not
+      to teach it.
+    don_parallel: >
+      Same twelve months, Don built the parallel room database inside Emacs
+      instead of inside the filesystem: one window per room, clickable
+      objects, a personal hypertext universe paralleling TinyMUD.
+    descendant: "MOOLLM — filesystem as navigable space, directories as rooms"
+    source: sources/2024-12-digital-antiquarian-interview.md
+  the_glk_seam:
+    what: >
+      Plotkin's Glk origin story: two front ends times two virtual machines
+      revealed that the VM only accepts text in and emits text out, so slice
+      presentation away from the world model into its own layer.
+    don_1989: >
+      Don proposed the same seam to the TinyMUD list on 1989-12-20: typed
+      output packets with object types and IDs, plus "download PostScript
+      procedures to the mud server that tell it what format to send messages
+      back to me. The standard text-based user interface would be just one
+      such procedure."
+    difference: >
+      Don reached for NeWS, where the interface is code that travels to the
+      display. Plotkin shipped a C API with a capability model, which is the
+      one that got ported everywhere and still sits under Inform 7.
+    source: sources/2024-12-digital-antiquarian-interview.md
+  lisp_punchline:
+    what: >
+      Asked about Lisp: "Yes! I hate it!" — yet Lists and Lists (1996) is a
+      Lisp tutorial with a Lisp interpreter running inside the Z-machine's
+      64K, and Don's 1989 letter had recommended Scheme as the embedded
+      language.
+    source: sources/2024-12-digital-antiquarian-interview.md
 
 sources:
   wwsff:

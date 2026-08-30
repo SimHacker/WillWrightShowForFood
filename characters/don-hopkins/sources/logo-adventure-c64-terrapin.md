@@ -34,6 +34,12 @@ which everyone found funny. Overlays with `LOAD` navigated across roomsets.
   (MOOLLM, Repo Show rooms).
 - **Functional + lists** without graphics — the complement to turtle-forward pedagogy in
   [*Computer Science Logo Style*](../../brian-harvey/sources/computer-science-logo-style.md).
+- **The mirror image exists:** Andrew Plotkin's *Lists and Lists* (1996) is a Lisp tutorial
+  with a Lisp interpreter running inside the Z-machine's 64K, built by a man who says of
+  Lisp "Yes! I hate it!" He put the language inside the game; Logo Adventure put the game
+  inside the language. And in 1989 Don had told him to use an existing interactive language,
+  without mentioning he had already shipped the proof at seventeen. Comparison table in
+  [the Plotkin interview digest](../../andrew-plotkin/sources/2024-12-digital-antiquarian-interview.md).
 
 ## HN archaeology
 

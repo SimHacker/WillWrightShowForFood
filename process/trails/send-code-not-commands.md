@@ -92,6 +92,58 @@ the Zopieness**.
 Owen's `class.ps` → the Rosenthal/Densmore filesystem patent → Zope CMS era → TurboGears/NQ →
 MOOLLM → GitHub → Repo Shows is one continuous thread, not a metaphor stretched for effect.
 
+### Independent discovery: Praser 5, the same substrate with the other semantics
+
+At CMU around 1990, an undergraduate named Andrew Plotkin built **Praser 5** as a puzzle
+living inside the CMU filesystem. In his own words, from the
+[2024 Digital Antiquarian interview](../../characters/andrew-plotkin/sources/2024-12-digital-antiquarian-interview.md):
+
+> Every "room" was a directory, connected by symlinks. You literally CDed into the
+> directory and typed "ls," and the description would pop up in the file listing. ... The
+> riddles were a matter of running a small executable which was linked in each directory. I
+> used file permissions to give people access to more things as they solved more puzzles.
+
+Densmore and Rosenthal filed **[US 5,187,786](https://patents.google.com/patent/US5187786A/en)**
+on 5 April 1991, granted 16 February 1993. So the two designs are contemporaneous and
+independent, they run on the same substrate, and they make the *same three moves*:
+
+| Move | Densmore / Rosenthal (1991) | Plotkin (circa 1990) |
+|---|---|---|
+| Directory is | a class or a class instance | a room |
+| Link is | a **path file**: the delegation chain, shell PATH as dictionary stack, with Self and Super | a **symlink**: an exit, `cd left` |
+| Executable in the directory is | a class method | the room's verb, its riddle |
+| Files in the directory are | class instance variables, reachable only via methods (data abstraction) | the room description, revealed by `ls` |
+| Access control is | (not the point) | **file permissions as the progression gate**: solve more, unlock more |
+| Extends the filesystem? | No: the abstract insists it "does not require the support of additional file attributes" | No: "an experiment in using the tools of a shared computer system" |
+
+The last row is the deep one, and it is this trail's whole thesis wearing a Unix hat.
+Neither design asks for a new filesystem. Both treat `cd`, `ls`, symlink, `chmod`, and
+"run the executable that is sitting right here" as a **complete object protocol that is
+already installed on every machine**. Invoke what's already there.
+
+What differs is only what the link *means*. One reads an edge as **inheritance** (walk it to
+find the method), the other reads it as **movement** (walk it to be somewhere else). In a
+hierarchical filesystem those are the same primitive, so Self's parent slot and TinyMUD's
+exit are the same arrow pointed at different questions. That equivalence is the reason
+MOOLLM can be both at once: a directory is a **room you enter** and a **prototype you
+delegate to**, git supplies the object store's history and branching, skills and shell
+scripts and LLM calls are the methods, and **MOOAM** generalizes exactly the trick Plotkin
+used for puzzle progression, permissions as the gate on what a principal can reach.
+
+Stated intents were mirror images, which is the joke: Densmore and Rosenthal subverted the
+filesystem to make it look like Smalltalk, and Plotkin subverted it to make it look like a
+text adventure. He said so in the interview comments, declining to recommend Praser 5 as a
+teaching aid: "I was trying to *subvert* the idea of the filesystem by making it look more
+like a text adventure." MOOLLM's rooms-that-are-objects is the merger neither of them
+needed at the time.
+
+Same year, one more corner of the same idea: Don was building the parallel room database
+inside Emacs rather than inside the filesystem, one window per room, clickable objects,
+a personal hypertext universe running alongside TinyMUD
+([the Emacs client dig](../../characters/don-hopkins/sources/1989-tinymud-archive/clients/README.md)).
+Filesystem, window system, editor: three people picking whichever environment they already
+lived inside, and declaring it the world.
+
 ## 3. Warnock's "linguistic motherboard"
 
 PostScript runs from the late **John Warnock** (1940–2023; Adobe co-founder, PostScript & PDF) →
@@ -153,6 +205,7 @@ does on purpose, as data structures, what minds do naturally** — which is exac
 | Language | Owen's `class.ps` — objects in pure PostScript |
 | Platform | Warnock's PostScript as a *linguistic motherboard* |
 | Filesystem OOP | Owen/Densmore `class.ps` → patent → Zope CMS/workflows → TurboGears/NQ (still live) → MOOLLM → GitHub MMO → Repo Shows |
+| Filesystem as world | Plotkin's Praser 5 (1990): symlinks as exits, `ls` as look, permissions as progression — the same substrate read as space instead of inheritance |
 | Games | The Sims objects (SimAntics) + SliceCity nested sims + Soul City bridges |
 | Cognition | Drescher schemas (C→A→R), grounded by LLMs |
 | Writing | a sentence that **runs** in the reader's head and invokes what they know |
