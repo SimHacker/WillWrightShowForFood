@@ -42,16 +42,7 @@ sources:
   blogs: []
   internal:
     - path: sources/2026-08-30-linkedin-productive-struggle.md
-      note: "Public LinkedIn post on AI and productive struggle in education; the warmest current invitation opening. Reshare of Dave Hendry; names nephew Hansohl Kim at Anthropic."
-
-outreach:
-  live_opening:
-    date: "2026-08-30"
-    what: "Scott posted publicly asking how AI can increase productive struggle in learning."
-    why_it_matters: "A reply under his own post asks no favor and needs no introduction; the topic is his own craft (designed difficulty curves) applied to AI."
-    source: sources/2026-08-30-linkedin-productive-struggle.md
-    venue_notes: "LinkedIn comments are plain text, 1250 characters, no markdown; mentions must be typed into the composer, never pasted. See moollm skills/copy-that/formats/linkedin.yml."
-    status: comment_drafted_awaiting_don
+      note: "Public LinkedIn post on AI and productive struggle in education, resharing Dave Hendry."
 
 show_suggestions:
   - "Viewpoint & 'visibility' — his thesis that the screen's pixels ARE the program state; making the invisible visible (deep kin to Don's pie menus, Bret Victor's explorable interfaces, and Shneiderman's direct manipulation)"

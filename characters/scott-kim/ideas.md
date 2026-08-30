@@ -43,20 +43,18 @@ his nephew's technique as the example, explaining your understanding to
 an AI and asking for critique, and the conclusion "talk to expert
 students, not just teachers."
 
-Scott has spent a career engineering productive struggle on purpose:
-the difficulty curve in *Heaven & Earth*'s illusions is the pedagogy,
-and a puzzle that solves itself is not a puzzle. So this is his own
-craft turned on learning, which makes him one of the few people who can
-say where the struggle should sit rather than just that it should exist.
+Puzzle design is productive struggle engineered on purpose: the
+difficulty curve in *Heaven & Earth*'s illusions is the pedagogy, and a
+puzzle that solves itself is not a puzzle. Same design problem, new
+tool.
 
-Two things to compare on air: the critique technique needs a model that
-will actually disagree, which is what MOOLLM's ambient anti-sycophancy
-and evaluator skills exist to enforce; and Don's
+Two things to put beside it: the critique technique depends on a model
+that will actually disagree, which is what MOOLLM's ambient
+anti-sycophancy and evaluator skills exist to enforce; and Don's
 [Logo Adventure](../don-hopkins/sources/logo-adventure-c64-terrapin.md)
-made inspecting and patching the running world the only way to win,
-which is productive struggle as level design. Live question: given a
-tool that can hand over any answer instantly, where does a puzzle
-designer put the friction?
+made inspecting and patching the running world the only way to win.
+The question worth asking out loud: given a tool that will hand over
+any answer instantly, where does the friction go?
 
 ### 6. Game Thinking TV as the publishing arm
 
