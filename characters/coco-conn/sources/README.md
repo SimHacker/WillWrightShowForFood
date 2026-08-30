@@ -8,6 +8,7 @@ Coco's public HOMER post lives here. Messenger file is action items only
 | [2021-10-20-facebook-homer.md](2021-10-20-facebook-homer.md) | HOMER & Associates post + comments that add facts. Facebook login-walls the body. |
 | [2021-11-18-hn-homer-forth-index.yml](2021-11-18-hn-homer-forth-index.yml) | Don's HN ids that carry this story (Coco's permission). |
 | [2026-07-06-messenger-reply.md](2026-07-06-messenger-reply.md) | Action items from the invitation reply — not the thread. |
+| [2026-08-30-facebook-story-index.md](2026-08-30-facebook-story-index.md) | Coco's own "stories about my adventures" master index — 17 story titles with resolved permalinks (tinyurls rot). Bodies login-walled; capture pending. |
 
 The as-posted HN comment: [../../don-hopkins/sources/2021-11-18-hn-homer-forth.md](../../don-hopkins/sources/2021-11-18-hn-homer-forth.md).
 Paul's memoir: [../../paul-rother/sources/1982-homer-and-associates.md](../../paul-rother/sources/1982-homer-and-associates.md).

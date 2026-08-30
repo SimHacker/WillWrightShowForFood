@@ -71,6 +71,9 @@ sources:
     path: sources/2021-10-20-facebook-homer.md
     note: Coco's 20 Oct 2021 HOMER & Associates post — readable copy
   - type: internal
+    path: sources/2026-08-30-facebook-story-index.md
+    note: Coco's own "stories about my adventures" index (30 Aug 2026) — 17 titles with resolved permalinks; bodies login-walled, capture pending
+  - type: internal
     path: correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
     note: Canonical archive — Don's full reply on Coco's wall (Aug 2026)
   - type: internal
@@ -112,6 +115,7 @@ invitation:
     3. Schedule Coco chat — she's open
     4. Hackers tapes + clip rights still open
     5. LLM LSD reply archived 2026-08-23 — correspondence/2026-08-23-don-reply-llm-lsd-on-coco-wall.md
+    6. Story index archived 2026-08-30 — capture full story texts while logged in (sources/2026-08-30-facebook-story-index.md)
 
 facts_to_confirm:
   - "Hackers Conference tapes — years, format, speaker index, clip rights for Repo Show"
