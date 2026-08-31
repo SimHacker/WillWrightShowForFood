@@ -83,6 +83,17 @@ interactive instructional and artistic CA web apps.** The plan:
 
 This is exactly what the show is for: brainstorm, document, commit, inspire.
 
+### Somebody already built the rig 🎛️
+
+While the browser-simulator question from Don's 2025 mail sat open, a stranger answered
+most of it in native OpenGL: **[splashkes/crutchfield-machine](https://github.com/splashkes/crutchfield-machine)**,
+an MIT-licensed GPU reimplementation whose credits map **Table I of the 1984 paper onto
+named shader uniforms**, one row per knob. Twelve hot-reloadable layers, Kaneko-style
+coupled fields on a flag, a camera layer that makes **variation (6)** the default
+architecture, and an 8/16/32-bit precision switch that turns the paper's ~20-bits-per-pixel
+Appendix budget into a live experiment about how long a cascade can last. Write-up,
+corrections, and show beats: [`crutchfield-machine.md`](crutchfield-machine.md).
+
 ### The lineage — and remembering Ralph 🌀
 
 The video-feedback thread starts a generation before Jim's 1984 paper: **Ralph Abraham**
@@ -102,7 +113,9 @@ reversible CA — and the book behind the playgrounds). All Santa Fe Institute�
 ## Browse
 
 - Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/README.md)
+- Papers & film annex: [`papers/README.md`](papers/README.md)
 - The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
+- The GPU rig: [`crutchfield-machine.md`](crutchfield-machine.md)
 - Joint CA show: [Norman Margolus](../norman-margolus/README.md) · Dream co-guest: [Scott Draves](../scott-draves/README.md)
 - Live work / sources: [UC Davis CSC](https://csc.ucdavis.edu/~chaos/) · [Art & Science Laboratory](https://artscilab.com/) · [Wikipedia](https://en.wikipedia.org/wiki/James_P._Crutchfield)
 

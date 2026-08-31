@@ -55,6 +55,7 @@ bio:
   rules_and_art_jam: "Anchors the cellular-automatists' rules-and-art jam: Don's CAM6 + Norman Margolus + Scott Draves + Reese Jones's agent-based modeling."
   directors_cut_live: "Record explanatory narration onto the clean 1984 film transfer ON AIR, MST3K-style — 'we're the robots.'"
   ca_playground_plan: "Norman Margolus gave Don permission to build interactive instructional/artistic web apps from Cellular Automata Machines chapters. First cut: modular TypeScript rewrite of Don's monolithic CAM6; Jim's structural-complexity layer (excess entropy, ε-machines, 1+1D space-time diagrams); students get homefun; a thousand flowers bloom."
+  gpu_reimplementation: "Someone already built the rig in fragment shaders — splashkes/crutchfield-machine, a parameter-faithful GPU port of the 1984 model with a CREDITS.md mapping Table I onto shader uniforms. A third-party project, not Jim's; see crutchfield-machine.md."
 
 show_suggestions:
   - { seed: ../../repo-shows/jim-crutchfield/, what: "Edge of Chaos: video feedback live, evolving cellular automata that compute, and computational mechanics — with Don's CAM6 and (dream) Scott Draves + Norman Margolus." }
@@ -67,6 +68,11 @@ sources:
     - "https://artscilab.com/   # Art & Science Laboratory, Santa Fe"
     - "https://scholar.google.com/citations?user=D37XAbIAAAAJ"
   papers_annex: papers/README.md   # local PDFs + summaries + plate scans + repo cross-links
+  implementations:
+    - path: crutchfield-machine.md
+      what: "splashkes/crutchfield-machine — MIT-licensed GPU reimplementation of the 1984 video-feedback model (12 GLSL layers, Kaneko coupled fields, 8/16/32-bit precision study, camera in the loop)"
+      upstream: "https://github.com/splashkes/crutchfield-machine"
+      note: "Third-party project by Simon Plashkes; described here, not affiliated with Jim"
   papers:
     - "Crutchfield, J.P. (1984). 'Space-time dynamics in video feedback.' Physica D 10:229–245."
     - "Crutchfield, J.P. (2002). 'What Lies Between Order and Chaos?' in Art and Complexity, J. Casti ed., Oxford."
@@ -83,6 +89,7 @@ sources:
     - "Thomas A. Bass, *The Eudaemonic Pie* (1985) — the roulette project."
 
 see_also:
+  - { path: crutchfield-machine.md, why: "Third-party GPU reimplementation of the 1984 rig — Table I as shader uniforms, variation (6) built, and a browser port still missing" }
   - { path: ../ralph-abraham/, why: "MEMORIAL (1936–2024) — UCSC teacher generation; 1976 cascades paper Jim formalized; Jim carries the memorial segment on his show" }
   - { path: ../ben-cerveny/, why: "Amsterdam connector — canals, complexity, and shared friends" }
   - { path: ../norman-margolus/, why: "Cellular-automata machines / reversible CA — joint CA show; CAM hardware lineage and software archaeology" }

@@ -149,7 +149,9 @@ the online transfer lacks — the director's cut wants to exist, or better,
   browser: [the Korz CA case study](../../david-ungar/korz/case-cellular-automata.md) sketches compiling
   Korz specs into **WebGPU compute shaders with the video camera in the
   loop** — camera → shader pipeline → canvas → camera, variation (6) live in
-  a tab, with 1984's knobs (rotation, zoom, pan, focus) as shader uniforms.
+  a tab, with 1984's knobs (rotation, zoom, pan, focus) as shader uniforms. Half of that
+  already exists as a desktop app — see [crutchfield-machine.md](../crutchfield-machine.md);
+  the browser half is the remaining gap.
 - **It premiered in the conference series where the CAM was born.** The film
   premiered at the 1984 Los Alamos workshop, in the same series where Toffoli
   and Margolus's first CAM hardware made its debut appearances a year earlier.
@@ -223,6 +225,9 @@ history it stores and how it uses that memory to behave.
 
 ## See also
 
+- [crutchfield-machine.md](../crutchfield-machine.md) — a third party built this paper in
+  fragment shaders; their credits map **Table I** onto shader uniforms and the physics
+  layer onto the Appendix, Plates 6–7 as the target images
 - [abraham-video-feedback-lineage.md](../abraham-video-feedback-lineage.md) — the 1976 → 1984 handoff
 - [README.md](../README.md) — who Jim is, the friendship, and the show plans · [CHARACTER.yml](../CHARACTER.yml)
 - [The Rhetoric Organ / robopoetry loop](../../don-hopkins/rhetoric-organ-semantic-modulator-keyboard.md) — the voice-and-text verse of the feedback hymn

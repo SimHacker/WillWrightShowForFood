@@ -23,6 +23,7 @@ dream-segments:
   - "The director's cut, live — 'we're the robots': record explanatory narration onto the clean 1984 film transfer on air, MST3K-style."
   - "The CA playground plan: Norman Margolus's permission to turn Cellular Automata Machines chapters into interactive web apps — rewrite CAM6 as modular TypeScript, design on air, check in, Jim's structural-complexity layer, students' homefun."
   - "Video feedback, live: close the camera→screen loop and steer spatiotemporal chaos in real time."
+  - "Drive the machine somebody named after you: splashkes/crutchfield-machine, a GPU port whose credits map Table I of the 1984 paper onto shader uniforms. Grade the mapping on air; run the 8 vs 16 vs 32-bit precision experiment (how much of analog video's character was bit depth?); --fields 4 is a Kaneko regime no physical rig reached. characters/jim-crutchfield/crutchfield-machine.md."
   - "Remembering Ralph Abraham (1936–2024): Jim's UCSC teacher-generation colleague who published the camera-at-monitor loop as mathematics in 1976 — Jim tells the real stories; memorial characters/ralph-abraham/memorial.md; lineage abraham-video-feedback-lineage.md."
   - "Edge of chaos: evolve cellular automata until they actually compute — frozen vs. random vs. the sweet spot."
   - "Geometry from a time series: reconstruct a hidden attractor from one stream of measurements."

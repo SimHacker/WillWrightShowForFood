@@ -46,3 +46,10 @@ Full compendium (Raster Masters, CALab, Micropolis CA): [`../../don-hopkins/sour
 2. **Edge of chaos** — evolving CA (Crutchfield/Mitchell) ↔ MicropolisWeb CA mode
 3. **Raster Masters reunion** — co-guest [Dave Tristram](../../dave-tristram/) + [Scott Draves](../../scott-draves/) (dream)
 4. **WebGPU feedback simulator** — open jam prompt from this mail
+
+---
+
+*Later note (not part of the 2025 record):* the simulator question got a partial answer
+from outside the room — **[splashkes/crutchfield-machine](https://github.com/splashkes/crutchfield-machine)**,
+a parameter-faithful GPU implementation of the 1984 model. Native OpenGL, not a browser
+tab, so beat 4 stays open. Write-up: [`../crutchfield-machine.md`](../crutchfield-machine.md).

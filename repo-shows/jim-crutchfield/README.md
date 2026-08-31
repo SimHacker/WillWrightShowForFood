@@ -26,6 +26,12 @@ the CA book got its blessing, and the show is the excuse. *Things have changed.*
   diagrams) on Norman's rules; Jim's students get [homefun](../../process/homefun-grading.md), and a
   thousand flowers bloom from the seeds.
 - **Video feedback, live** — close the camera→screen→camera loop and steer spatiotemporal chaos.
+- **The machine named after him** 🎛️ — a stranger rebuilt the 1984 rig in fragment shaders
+  ([splashkes/crutchfield-machine](https://github.com/splashkes/crutchfield-machine)) with a
+  credits file mapping **Table I onto shader uniforms**. Run it next to the film, grade the
+  mapping on air, and try the experiment no analog rig could: same seed at 8, 16, and 32 bits —
+  how much of what analog video "was doing" was bit depth?
+  [`crutchfield-machine.md`](../../characters/jim-crutchfield/crutchfield-machine.md)
 - **The Abraham handoff** — Ralph Abraham published the camera-at-monitor loop as mathematics at
   UCSC ("Simulation of cascades by video feedback," 1976); Jim turned the demo into the formal
   *Physica* 10D treatment **and** the [16-minute film](https://www.youtube.com/watch?v=B4Kn3djJMCE)
