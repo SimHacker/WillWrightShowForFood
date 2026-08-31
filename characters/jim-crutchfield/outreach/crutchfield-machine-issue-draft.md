@@ -30,9 +30,17 @@ Two pieces of evidence from inside Crutchfield's own paper:
 
 Same campus (UC Santa Cruz), one generation apart — Abraham was faculty in mathematics, Crutchfield a grad student in the Dynamical Systems Collective. Abraham handed the field the demo as a *laboratory instrument for dynamics*: point a camera at its own monitor and the analog loop **simulates a cascade**, i.e. a discrete dynamical system you can watch bifurcate in real time. Crutchfield took that instrument and produced the formal spatiotemporal treatment — the models, the taxonomy, the video physics, the CA connection.
 
+I've written that handoff up with the two papers side by side — what each one claimed, and where the citation trail runs: [`abraham-video-feedback-lineage.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/jim-crutchfield/abraham-video-feedback-lineage.md)
+
 If the project's principle is "cite the ideas, not the implementation," then the idea's first published appearance belongs in the chain.
 
-Ralph Abraham died 19 September 2024, aged 88, in Santa Cruz. It'd be a nice thing to get his name in there.
+### Why I care about this one
+
+Ralph Abraham died on **19 September 2024**, at home in Santa Cruz County, aged 88. We keep a memorial page for him: https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/ralph-abraham/memorial.md
+
+He spent a lifetime arguing that you ought to be able to **see** dynamics rather than only solve them — *Dynamics: The Geometry of Behavior* with Christopher Shaw, the Visual Mathematics Library, phase space rendered as pictures back when that was an eccentric thing to want a computer for. He's also the reason the camera ever got pointed at the monitor in the first place.
+
+Which makes this project a pretty good monument, honestly. A GPU drawing his cascades at 4K, sixty times a second, with a slider on every parameter, is the thing he was reaching for with plotters and film. It'd be a lovely place for his name to turn up.
 
 ### Suggested citation
 
