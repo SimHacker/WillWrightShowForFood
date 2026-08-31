@@ -244,6 +244,16 @@ they're interesting**; I make them playable.
     the same building blocks. A chapter playground = **small graph + prose**, not a monolith fork.
   When a rule *does* fit the classic mold, it can still **compile to lookup tables** for speed — but
   that's optional, not the ceiling.
+- **Expose the machine, not just the rules — the [CAM Construction Set](../don-hopkins/cam-construction-set.md).**
+  This is the part I most want to build with you. Rather than hiding the datapath behind a rule
+  palette, make **every functional block a component you can see and rewire**: cell planes,
+  neighborhood formers (Moore / von Neumann / yours), the address assembler, **the lookup table
+  itself as an inspectable, hand-editable object**, phase generators, plane shifters, color maps,
+  instruments, and a layer bus for **ganging engines in parallel** the way the hardware ganged
+  cards. Wired one way it *is* a CAM-6 — and the acceptance test is falsifiable: run the book's
+  Forth rules, check against the book's figures. Rewired, it's whatever comes next, and the
+  student can see exactly which wire they moved. Named after
+  [Bill Budge](../bill-budge/README.md)'s Pinball Construction Set, which is the right ancestor.
 - **The visual front end: Snap!, not from scratch.** Inspired by **eToys → Scratch →
   [Snap!](https://snap.berkeley.edu/) → [Sandspiel Studio](https://studio.sandspiel.club/)**, I could
   build a whole new visual CA language — but the **best solution is to just integrate the engine with

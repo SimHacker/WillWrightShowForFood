@@ -50,8 +50,15 @@ The rebuilt, modular CAM6 (much better than the old monolith) exposed as **Snap!
 rules and neighborhoods, compile to lookup tables, paint and run live. **Norman Margolus has already
 blessed turning book chapters into interactive playgrounds** — Snap! is how a chapter becomes a
 palette a student can remix.
+Bigger than a rule palette: the **[CAM Construction Set](cam-construction-set.md)** exposes the
+**machine** as components — cell planes, neighborhood formers, the address assembler, the lookup
+table itself, phase generators, instruments — so you snap together a historically accurate CAM-6
+and then rewire it. That design is also where the blocks-vs-patch-cords question below gets
+settled: rules are control flow (Snap!), the datapath is data flow (Bounce).
 - Audience/funders: science + retrocomputing + CS education; the Margolus/Toffoli legacy.
-- Docs: [the CAM6 demo for Norman](../norman-margolus/the-cam6-demo-for-norman.md) ·
+- Docs: [CAM Construction Set](cam-construction-set.md) ·
+  [the CAM6 demo for Norman](../norman-margolus/the-cam6-demo-for-norman.md) ·
+  [transcript + glossary](../norman-margolus/the-cam6-demo-transcript.md) ·
   [CAM6 writeup](cam6-cellular-automata-machine.md)
 
 ### 2. VitaMoo — Sims character animation
