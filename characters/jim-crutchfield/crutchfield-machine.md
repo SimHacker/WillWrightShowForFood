@@ -188,7 +188,10 @@ chaos literature is still behind a Cloudflare challenge.
    Kaneko wrote the phenomenology in 1987; nobody has watched this particular version of it.
 5. **The browser gap.** The one thing still missing is the URL you can send to a class.
    Turn it into the jam: WebGPU port, Jim's structural-complexity readouts (excess entropy,
-   ε-machines) as a HUD layer next to the existing ones.
+   ε-machines) as a HUD layer next to the existing ones — and **live background removal** on
+   the webcam layer, which is what turns "hold something in front of the camera" into a
+   cut-out the loop can lock onto instead of a smear. Don built that part in 2016:
+   [`../don-hopkins/warpomatic-video-background-removal.md`](../don-hopkins/warpomatic-video-background-removal.md).
 
 ## See also
 
@@ -196,6 +199,7 @@ chaos literature is still behind a Cloudflare challenge.
 - [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md) — the 1976 → 1984 handoff the credits doc is missing
 - [`sources/2025-01-25-psychedelic-graphics-hn.md`](sources/2025-01-25-psychedelic-graphics-hn.md) — the open question this partly answers
 - [`outreach/`](outreach/README.md) — the issue draft sent upstream
+- [`../don-hopkins/warpomatic-video-background-removal.md`](../don-hopkins/warpomatic-video-background-removal.md) — background removal in the loop, and the browser/webcam version this is missing
 - [Scott Draves](../scott-draves/README.md) — the loop as art · [Norman Margolus](../norman-margolus/README.md) — the loop as CA hardware
 - Upstream: [repo](https://github.com/splashkes/crutchfield-machine) ·
   [`CREDITS.md`](https://github.com/splashkes/crutchfield-machine/blob/main/CREDITS.md) ·

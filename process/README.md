@@ -97,6 +97,7 @@
 | [character-endosymbiosis.md](character-endosymbiosis.md) | [`character-endosymbiosis.yml`](character-endosymbiosis.yml) |
 | [old-band-back-together.md](old-band-back-together.md) | [`old-band-back-together.yml`](old-band-back-together.yml) |
 | [constructionist-simcity-response.md](constructionist-simcity-response.md) | [`constructionist-simcity-response.yml`](constructionist-simcity-response.yml) |
+| [lecture-as-code-pipeline.md](lecture-as-code-pipeline.md) | [`lecture-as-code-pipeline.yml`](lecture-as-code-pipeline.yml) |
 | [sims-creator-network-exodus.md](sims-creator-network-exodus.md) | [`sims-creator-network-exodus.yml`](sims-creator-network-exodus.yml) |
 | [maxis-history-collaborators.md](maxis-history-collaborators.md) | [`maxis-history-collaborators.yml`](maxis-history-collaborators.yml) |
 | [spore-rethinks-multiplayer-time-ownership.md](spore-rethinks-multiplayer-time-ownership.md) | — |

@@ -61,6 +61,7 @@ Human index of yaml girders. **Yaml = machine source of truth.** Markdown facade
 | character-endosymbiosis.yml | [character-endosymbiosis.md](character-endosymbiosis.md) |
 | old-band-back-together.yml | [old-band-back-together.md](old-band-back-together.md) |
 | constructionist-simcity-response.yml | [constructionist-simcity-response.md](constructionist-simcity-response.md) |
+| lecture-as-code-pipeline.yml | [lecture-as-code-pipeline.md](lecture-as-code-pipeline.md) |
 | sims-creator-network-exodus.yml | [sims-creator-network-exodus.md](sims-creator-network-exodus.yml) |
 | maxis-history-collaborators.yml | [maxis-history-collaborators.md](maxis-history-collaborators.md) |
 

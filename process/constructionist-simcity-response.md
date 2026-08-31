@@ -41,5 +41,6 @@ Educator anchor: Prof. Upmanu Lall — Columbia Civil & Environmental Engineerin
 | Walter Bender | [../characters/walter-bender/](../characters/walter-bender/) |
 | Educational data literacy | [crazy-idea-jam.md](crazy-idea-jam.md) |
 | Micropolis Snap bridge | [../characters/jens-monig/sources/micropolis-snap-2018.md](../characters/jens-monig/sources/micropolis-snap-2018.md) |
+| Explainers as source, ending in a microworld | [lecture-as-code-pipeline.md](lecture-as-code-pipeline.md) |
 
 ↑ [process index](README.md) · Girder: `constructionist-simcity-response.yml`

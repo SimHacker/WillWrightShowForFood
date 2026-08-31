@@ -30,6 +30,7 @@ runbooks_to_ship:
     steps: ["Low floor / high ceiling / wide walls audit", "Transparency checklist", "Data export path", "Live inspect", "No opaque scoring"]
 
 connects:
+  - { path: process/lecture-as-code-pipeline.yml, why: "Explainers as source with a pokeable microworld at the end — the production pipeline for glass-box material" }
   - characters/alan-kay/
   - characters/dan-ingalls/
   - characters/chaim-gingold/

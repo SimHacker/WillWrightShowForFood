@@ -1,0 +1,91 @@
+# Lecture as code — one source, two backends, microworld at the end
+# Public strategy. Private plan: DonHopkins/characters/don-hopkins/plans/lecture-as-code-manim-2026-08-31.md
+
+meta:
+  north_star: "Keep the language in the middle and let the flat video be one export among several. Warnock's PostScript-vs-PDF argument applied to courseware."
+  premise: "A rendered explainer cannot be corrected cheaply and cannot be poked. Source can be diffed, reviewed, and driven into an interactive version."
+
+source_language:
+  format: yaml-jazz            # narration beats paired with scene operations
+  principle: instance-first    # Oliver Steele's Instance-First Development — working instances first, schema discovered by refactoring
+  principle_source: characters/oliver-steele/
+  asset: "The vetted helper vocabulary is what makes LLM generation reliable — publish it rather than moat it"
+
+backends:
+  render:
+    name: Manim Community
+    language: Python
+    licence: MIT
+    role: "Video, stills, print figures"
+    strengths:
+      graphs: "networkx-backed Graph/DiGraph mobjects with animated re-layout — delegation chains, message sends, object graphs"
+      svg: "SVGMobject turns slide exports (PPT → PDF → SVG) into editable vectors, animatable piece by piece"
+      transform: "Morph between arbitrary shapes — equation and picture as one statement"
+    limits:
+      no_event_model: "Retained scene graph with time-keyed animation; no input, no widgets. Renders, cannot be poked."
+      prose: "Pango text + LaTeX math, not a typesetting engine — slide-like layout fights you"
+      no_video_in_scene: true
+      no_browser: "Native C extensions (pycairo, manimpango, skia-pathops, moderngl) + LaTeX install; Pyodide will not carry it"
+  interactive:
+    name: Motion Canvas
+    language: TypeScript
+    licence: MIT
+    role: "Browser version — scrub, pause, poke, inspect; live editor with timeline"
+
+licence_cautions:
+  remotion: "Company-issued licence, not MIT — do not build the open pipeline on it"
+  theatre_js: "Apache-2.0 — acceptable sequencer for hand-tuned timing"
+  closed_ports: "Commercial WebGPU ports of Manim exist; an open browser-native equivalent does not. Hence a second library, not a port."
+
+end_state:
+  principle: "The artifact is a microworld, not a video"
+  micropolis: "Already runs in the browser under WebAssembly — narration drives the live sim, overlays name the mechanisms, viewer can take the wheel mid-sentence"
+  rationale: "Video removes access to the expert; a microworld restores the thing the expert was pointing at"
+  lineage: "Papert constructionism; glass-box SimCity"
+
+further_than_ark:
+  # Not an aspiration — a lineage with unfinished business. Animating a Self object
+  # graph would be a step backwards from work finished thirty years ago.
+  prior_art:
+    ark: "Randall Smith, Xerox PARC — physics microworld programmed by grabbing things; CHI 1987 named the tension between literalism and magic"
+    morphic: "Smith & Maloney, Self 4.0 — 'Directness and Liveness' (UIST 1995) → Squeak → Etoys → Scratch → Snap! (which already drives Micropolis)"
+    kansas: "Shared flat world, everyone in one space, used for distance learning — got to multi-user first"
+  axes:
+    persistence:
+      they_had: "Liveness with snapshots — poke a live world, save an image"
+      further: "Every manipulation emits SOURCE — a diff you can review, revert, replay, narrate. Directness AND provenance."
+    sharing:
+      they_had: "Kansas, on a 1990s network"
+      further: "Browser + WASM, asymmetric roles — lecturer and students in one world, narration track as first-class inhabitant"
+    magic:
+      they_had: "Literal metaphors break where magic is needed, and the magic stays mute"
+      further: "A model inside the world explains the magic in words and writes the delegation on request — a third option Randy did not have"
+    tour:
+      they_had: "No scripted path through a world"
+      further: "A time track that drives the world and can be taken over mid-sentence"
+  dons_entry: "A pie menu is a magic act wearing a literal costume — the interaction layer is Don's own move in the literalism-vs-magic argument"
+  connects: [characters/randall-smith/, characters/david-ungar/, characters/jens-monig/]
+
+first_pieces:
+  - id: will-wright-design-ideas
+    form: "Micropolis running with annotation overlays"
+    connects: process/constructionist-simcity-response.yml
+  - id: self-prototypes-delegation
+    form: "Renders only for the family tree; the explainer itself is a live Morphic-lineage world — see further_than_ark"
+    connects: [characters/david-ungar/, characters/randall-smith/]
+  - id: korz-dimensional-slicing
+    form: "The interaction IS the subject — the honest test of whether interaction is first-class in the source language"
+  - id: postscript-to-pdf-distillery
+    form: "Partial evaluation with loops unrolled"
+
+ground_rules:
+  rights: "Clear slides, artwork, and screen captures before public renders — catalogs/soul-city/rendering-and-rights.md"
+  sequencing: "Prototype one short piece on both backends before generalizing"
+
+connects:
+  - process/constructionist-simcity-response.yml
+  - process/live-repo.yml
+  - process/code-that-spec.yml
+  - { path: characters/randall-smith/, why: "ARK, Morphic, Kansas — the prior art this pipeline has to go further than" }
+  - { path: characters/oliver-steele/, why: "Instance-First Development — how the source vocabulary gets discovered" }
+  - https://github.com/SimHacker/moollm/blob/main/designs/postscript/LINGUISTIC-MOTHERBOARD.md

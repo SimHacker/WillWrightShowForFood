@@ -150,6 +150,11 @@ methodology:
     topic: "WWSFF↔MOOLLM lift pipeline — dogfood concrete here, then LIFT proven core down into public MOOLLM skills. Use before abstract; concrete (repo-show) before generic (show); intentional dogfooding scheduling."
     ties_to: ../skills/repo-show/
     skill: https://github.com/SimHacker/moollm/tree/main/skills/play-learn-lift
+  lecture-as-code-pipeline.yml:
+    markup: lecture-as-code-pipeline.md
+    topic: "Explainers as SOURCE, not renders — one yaml-jazz lecture source, two MIT backends (Manim for video, Motion Canvas for browser), ending in a pokeable Micropolis microworld instead of a video. Warnock's PostScript-vs-PDF argument applied to courseware."
+    ties_to: constructionist-simcity-response.yml
+    design: https://github.com/SimHacker/moollm/blob/main/designs/postscript/LINGUISTIC-MOTHERBOARD.md
 vision:
   vision-and-ambition.yml:
     markup: vision-and-ambition.md

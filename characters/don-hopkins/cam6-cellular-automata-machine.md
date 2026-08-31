@@ -83,6 +83,10 @@ Heat-diffusion overlays, echo trails, pie-menu control, and script record/playba
 - **Neighbors in the repo:** [Norman Margolus show](../../repo-shows/norman-margolus/),
   [Musical Gas](musical-gas-granular-ca-synth.md), and CA/complexity guests
   [Jim Crutchfield](../jim-crutchfield/) and [Scott Draves](../scott-draves/).
+- **The other half of the same workshop:**
+  [WarpOMatic](warpomatic-video-background-removal.md) — video feedback with live background
+  removal. Discrete rules and continuous warps are one family; §5 of Crutchfield's 1984 paper
+  says so, and both want the same browser page.
 
 *Status: firsthand artifact — runs today; the "cauldron out a modern version" arc is a show-time
 design goal, not done yet.*
