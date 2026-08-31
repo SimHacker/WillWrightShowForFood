@@ -4,18 +4,38 @@
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 **Real-time video background removal plus video feedback**, running live on a Mac. Pull the
-person out of their room, then feed the result back into itself and warp it. Four videos,
-all Don Hopkins, posted January 2016 and later:
+person out of their room, then feed the result back into itself and warp it. Three demos and
+one explanation, all Don Hopkins, 2016 and later:
+
+**Start here — [WarpOMatic Explanation](https://www.youtube.com/watch?v=ikFF1frSFRg)
+(8:07)** — how it works, narrated. Watch this first and the demos become legible: you can
+see which artifact is the segmentation and which is the loop.
+
+Then the demos, which are performances, not tutorials:
 
 | Video | Length | What |
 |---|---|---|
-| [WarpOMatic Demo 1](https://www.youtube.com/watch?v=qME6aniaPRg) | 5:22 | The one with the Rikki Sawyer psychedelic dub. *"you are a genius, man!"* — @tobymdev |
-| [WarpOMatic Demo 2](https://www.youtube.com/watch?v=DJoPn1h_ibk) | — | Second pass |
-| [WarpOMatic Demo 3](https://www.youtube.com/watch?v=f-EdTFmRZ34) | 4:10 | Set to Bootsy Collins, "Party Lick-A-Ble's" (Norman Cook version) |
-| [WarpOMatic Explanation](https://www.youtube.com/watch?v=ikFF1frSFRg) | — | How it works, narrated |
+| [Demo 1](https://www.youtube.com/watch?v=qME6aniaPRg) | 5:22 | Rikki Sawyer, "Numb (On the Inside)" psychedelic dub. *"you are a genius, man!"* — @tobymdev |
+| [Demo 2](https://www.youtube.com/watch?v=DJoPn1h_ibk) | 2:56 | Second pass, no soundtrack |
+| [Demo 3](https://www.youtube.com/watch?v=f-EdTFmRZ34) | 4:10 | Bootsy Collins, "Party Lick-A-Ble's" (Norman Cook version) |
 
 Also collected in the Medium piece
 [Empowered Pie Menu Performance at CHI'90, and Other Weird Stuff](https://donhopkins.medium.com/empowered-pie-menu-performance-at-chi90-and-other-weird-stuff-869ccb75ad).
+
+### Which order, for whom
+
+Explanation-first for a technical audience. A programmer asked to watch three weird videos
+cold has no model to hang them on, so they pattern-match to "screensaver" and stop. Give
+them the mechanism and they spend the demos doing the thing you actually want — reverse-
+engineering which parameter produced which artifact.
+
+Demo-first for everyone else, and for a cold room. Curb appeal has to land before anyone
+consents to an explanation.
+
+The two orders are the same tension the whole project is about — see the three-depths
+argument below. The difference is that the browser version doesn't have to choose: the
+demo *is* the explanation when the viewer's own face is the input and the knobs are right
+there.
 
 ## Why background removal is not a garnish
 
