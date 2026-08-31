@@ -116,6 +116,109 @@ which is exactly how [WarpOMatic](warpomatic-video-background-removal.md) drove 
 parameters from the performer's own position and silhouette area. Same architecture, one
 system apart.
 
+## One pattern, four scales
+
+The phase matrix isn't a special case. Once you write it out, **most of what the monolith
+already does is the same component wearing different clothes**: a **bank** of behaviors plus
+a **selector** that decides which one applies, here, now. The zoo collapses.
+
+| Layer | The bank | What selects from it |
+|---|---|---|
+| **Marble / flow rules** | 16 convolution kernels | the phase matrix — constant, clock, cell value, X, Y, coherent noise |
+| **Anneal arbiter** | two or more CA rules (Life here, Brian's Brain there) | a **third CA** — anneal's majority-with-near-tie-inversion vote, which partitions the space into domains and hands each domain to a different rule |
+| **RISCA** | ~16 instructions | the **cell's own top four bits**, with the bottom four as the operand |
+| **Echo / heat** | which bit planes route where | plane masks — a static selector, the degenerate case |
+
+So the Construction Set needs **one** core component, parameterized, not four. A `bank` block
+holding N behaviors and a `selector` input that resolves to an index. Everything else is
+which selector you plug in and how many entries the bank has.
+
+That's what makes it a construction set rather than a menu. And it means each of the
+following is a wire change, not a new subsystem:
+
+- Drive the **rule table** from the phase matrix and you get regime changes over time and
+  space that RISCA reaches by a different route.
+- Drive the **anneal arbiter** from a clock and the domains breathe.
+- Let a RISCA opcode's operand be a **phase offset** and the painted program carries its own
+  modulation depth.
+- Nest them: a selector whose source is *another bank's output*. This is where it stops being
+  a config format and starts being a language.
+
+### RISCA, taken seriously
+
+The Ridiculous Instruction Set deserves more than the joke, because it's the most radical
+thing in the existing engine. Splitting the cell into **opcode field** and **operand field**
+means **the rule a cell obeys is stored in the cell**. Consequences worth building on:
+
+- **Programs are painted, and adjacency is the calling convention.** A patch of Life next to
+  a heat diffuser next to a copy-northward region interact wherever they touch, with no
+  wiring, no ports, no API. In the demo the "logic calculator" visibly sucks Life into
+  itself. That's two hand-painted programs discovering each other at a boundary.
+- **The eyedropper is a debugger.** Sample a cell, paint with it — you have copied behavior,
+  not appearance.
+- **Opcodes should be open.** Any layer in the Construction Set ought to be installable as an
+  opcode, so the instruction set is user-extensible rather than a fixed sixteen.
+- **Opcodes that write opcodes.** Self-modifying spatial code: a region that rewrites its
+  neighbors' instruction fields is a constructor, and von Neumann's 29-state machine is
+  sitting right there as the historical target.
+- **Movement instructions already exist** — the demo's copy-in-a-direction opcodes slurp Life
+  across the grid. Give those a proper operand and you have transport as a primitive.
+
+And here's the bridge worth naming: **RISCA is a proto-Movable Feast Machine.** In
+[Dave Ackley](../dave-ackley/README.md)'s MFM, each **atom** carries a **type**, and the type
+determines the code that runs on it. Don arrived at typed cells dispatching their own
+behavior independently, from the paint-program side. Dave formalized it and asked what
+happens when you also stop assuming a global clock — which is the next section.
+
+## Iteration order is a plug-in
+
+This is the axis nearly every CA system hardcodes and hides, and exposing it is the biggest
+idea here after the lookup table itself.
+
+**Iteration order is not a performance detail. It is part of the rule.** Life updated
+asynchronously is a different system from Life updated synchronously — not slower, *different*,
+with different attractors. Any engine that bakes in "synchronous, whole grid, row-major" has
+silently fixed a parameter its users don't know exists. So make the scheduler a component with
+a plug-in interface, and put the variants in the palette:
+
+- **Synchronous whole-grid.** Read the old state everywhere, write the new state everywhere.
+  The textbook default, and one option among several rather than the law.
+- **Row-major scan.** Required the moment a rule carries state across cells — which
+  **error diffusion** does, by handing the averaging remainder to the next cell instead of
+  discarding it.
+- **Serpentine scan.** Alternate direction each row. The classic partial fix for the
+  directional bias raster scanning introduces.
+- **Four-rotation cycling.** Scan the grid rotated 0°, 90°, 180°, 270° on successive
+  generations. Because a CA runs forever, the accumulated anisotropy **cancels over time**
+  rather than merely being scrambled within one frame — which is strictly better than
+  serpentine for this use, and is only available to you because you're iterating rather than
+  rendering one image. Without it, error diffusion's residual always drifts the same way and
+  the "worming" artifacts acquire a permanent grain.
+- **Block-partitioned (Margolus).** Worth saying out loud: **the Margolus neighborhood is
+  already an iteration-order plug-in** and everyone treats it as a neighborhood. Updating 2×2
+  blocks atomically with the block grid offsetting on alternate steps is a *scheduling*
+  decision, and it's the scheduling decision that buys reversibility and conservation. Once
+  the scheduler is a visible component, that stops being folklore and becomes the obvious
+  first example.
+- **Random event windows (MFM).** Ackley's asynchronous model: pick a site at random, run the
+  rule atomically on a window around it, no global clock at all. **Concurrent windows are safe
+  when they don't overlap**, so parallelism falls out of spatial separation rather than
+  barrier synchronization — which is what makes it **indefinitely scalable**: add hardware
+  without redesigning the program. It's also **robust-first** in the strict sense, because
+  there is no global synchrony left to lose when part of the machine fails.
+- **Tiled parallel dispatch.** The GPU version of the same non-overlap argument, with
+  workgroups instead of random draws.
+
+Two payoffs from making this a component:
+
+**The scheduler can be modulated like anything else.** Plug the phase matrix into the
+iteration-order selector and the update discipline itself becomes a function of time,
+position, or cell value. Synchronous in the calm regions, asynchronous where it's busy.
+
+**Comparisons become one wire.** Run the same rule under four schedulers side by side and
+watch which structures survive. That's a real experiment, it's a good show segment, and it's
+the sort of thing that's currently a rewrite instead of a swap.
+
 ## Rewiring is the curriculum
 
 The point of components is that the lesson plan is a sequence of patches, each one edit away
@@ -195,11 +298,83 @@ So the honest build is Snap! blocks for rules, hosted inside a patch-cord canvas
 machine — which makes CAM-6-in-Snap! the first concrete reason to build the bridge, rather
 than a nice idea deferred forever.
 
+## Retire the XML. Generate the JavaScript. Believe in the JIT.
+
+The monolith composes rules through a **commented XML string-templating system**. It works,
+it got a lot done, and it should go. Its problems are structural rather than cosmetic:
+it's stringly-typed, so nothing is checked until it runs; it has no composition semantics, so
+"combine these two rules" isn't an operation, it's a paste; and meaning ends up in comments
+the parser can't see, which makes the config a document pretending to be a program.
+
+The replacement is **higher-order composition plus code generation**.
+
+**Rules become values.** A rule is a function; a layer is a function; composing them is
+function composition. In Snap! that's free — first-class procedures and lists are the
+language, so `compose (rule) with (layer)` is an ordinary block that takes procedures as
+inputs and returns one. In TypeScript it's just functions. Either way "combine these" becomes
+an operation with a type, instead of template expansion with a prayer.
+
+**Then emit JavaScript and let V8 compile it.** Don't interpret the composed structure per
+pixel, and don't reach for WASM. **Generate specialized source for the exact configuration
+that's currently wired up**, and hand it to the JIT:
+
+- A disabled layer **disappears from the source**, rather than costing a branch per cell per
+  frame.
+- A constant phase offset **inlines its kernel**; the bank and the selector evaporate.
+- The scheduler is **specialized** — the scan loop generated for four-rotation cycling is a
+  different loop from the synchronous one, not the same loop with a mode flag.
+- Everything downstream is straight-line, monomorphic code, which is exactly the shape a
+  modern JIT is good at.
+
+This is **[Vanessa Freudenberg](../vanessa-freudenberg/README.md)'s** lesson from SqueakJS,
+and the repo already states her principle: **target JS, not WASM** — generate source and
+trust the JIT, because the JIT has decades of adaptive optimization in it that a
+hand-written interpreter will never match. She was right, and it's the right call here for
+the same reasons.
+
+It also closes the loop the [letter to Norman](../norman-margolus/the-cam6-demo-for-norman.md#who-jits-the-jitter-a-connections-detour)
+opens. That section traces why `CAM6.js` runs fast — Self's inline caches and adaptive
+optimization → Strongtalk → HotSpot → V8 — and asks *who JITs the jitter?* With codegen the
+answer gets better: **the rule compiler and the JIT become two stages of one pipeline.**
+Toffoli and Margolus's Forth compiled a readable rule down to a table that hardware executed;
+now a block-composed rule compiles down to JavaScript that V8 executes. Same three-layer
+architecture, one era later.
+
+**And it generalizes the book's contract instead of abandoning it.** The lookup table is the
+right target when the state is small and the neighborhood is finite — that's most of the
+book, and those rules should still compile to tables and still match the book's figures. But
+the table can't express many-state cells, continuous values, error diffusion carrying a
+remainder across cells, or MFM event windows. So the compiler gets **two back ends**:
+
+> **Table when it fits. Generated code when it doesn't. One front end either way.**
+
+The user writes a rule once; the compiler picks the representation. That's the honest 2026
+version of "don't evaluate the rule in the inner loop."
+
+Two more reasons this is the right move for a *teaching* system specifically:
+
+- **The generated source is readable, and should be shown.** Put it in a panel. You snap
+  blocks together and watch the JavaScript for your machine appear, then set a breakpoint in
+  it. A lookup table is opaque and a WASM blob is worse; generated source is the most
+  inspectable artifact of the three, which matters more here than in a production engine.
+- **It makes the pipeline itself a lesson.** Rule → composition → generated code → JIT →
+  machine code is the same story as rule → Forth → table → TTL, and a student who has seen
+  one can be shown the other.
+
+**The honest caveats:** generated code has to be regenerated whenever the configuration
+changes, so the edit-to-running latency needs watching in a live-coding context; and the hot
+loops have to stay monomorphic or the JIT's help evaporates, which is a real constraint on
+how clever the generator is allowed to be. Neither is a reason not to do it. Both are reasons
+to measure.
+
 ## Show beats
 
 1. **Assemble Life on air**, from empty canvas to running glider, naming each block as it
    goes down. Under five minutes if the components are right — and if it isn't, that's the
    design review.
+1. **Same rule, four schedulers.** Synchronous, serpentine, Margolus blocks, and MFM random
+   event windows, running side by side on identical seeds. Which structures survive is the
+   whole argument for exposing iteration order, and it needs no explanation to be legible.
 2. **One wire, different universe.** Swap Moore for Margolus live and let Norman explain why
    the physics changes.
 3. **Open the table.** Show the actual lookup table filling up as the compiler runs, then
@@ -217,6 +392,9 @@ than a nice idea deferred forever.
 - [`snap-visual-engines-fundable-goals.md`](snap-visual-engines-fundable-goals.md) — the four-engine strategy this is the first slice of
 - [`levity-bounce-space-seed.md`](levity-bounce-space-seed.md) — the patch-cord half
 - [`../jens-monig/README.md`](../jens-monig/README.md) · [`../brian-harvey/README.md`](../brian-harvey/README.md) — Snap!, integration partners
+- [`../dave-ackley/README.md`](../dave-ackley/README.md) — Movable Feast Machine: random event windows, asynchrony, indefinite scalability, robust-first
+- [`../vanessa-freudenberg/README.md`](../vanessa-freudenberg/README.md) — SqueakJS; target JS not WASM, and believe in the JIT
+- [`../jim-crutchfield/positive-feedback.md`](../jim-crutchfield/positive-feedback.md) — why the continuous half belongs on the same bus: Physica D 10, §5
 
 *Status: design, not built. The components are a proposal; the fidelity claims are
 unverified pending a pass through the book with Norman.*
