@@ -1,0 +1,110 @@
+# Sidecar — positive-feedback.md
+topic:
+  id: positive-feedback
+  status: draft
+  priority: high
+  kind: letter                      # to Jim, readable by anyone; not his words
+  audience: [jim-crutchfield, general]
+  pun: "positive feedback = runaway amplification (control theory) + praise for someone's work"
+
+thesis:
+  # The find that reorganizes the whole thing.
+  one_line: "Don's two machines — continuous video feedback and discrete CA lookup tables — were published as one idea in one volume in 1984, and Jim wrote the bridge."
+  the_volume:
+    citation: "Physica D 10 (1984) = Cellular Automata: Proceedings of an Interdisciplinary Workshop, Los Alamos, March 7-11 1983"
+    editors: [J. Doyne Farmer, Tommaso Toffoli, Stephen Wolfram]
+    publisher: North-Holland
+    also_in_volume:
+      - "Wolfram, 'Universality and Complexity in Cellular Automata', pp. 1-35"
+      - "Toffoli, 'CAM: A High-Performance Cellular Automaton Machine'"   # ← the CAM-6 paper
+      - "Kauffman, 'Emergent properties in random complex automata'"
+      - "Hillis, 'The Connection Machine'"
+      - "Crutchfield, 'Space-time dynamics in video feedback', pp. 229-245"
+  the_smoking_gun:
+    where: "Crutchfield 1984, section 5, variation (6)"
+    quote: >
+      In this process an image is stored each raster time. Each pixel and its neighbors are
+      operated on by some (nonlinear) function. For rapid ("real-time") simulation this
+      function is stored in a "look-up" table. The pixel value and those of its neighbors
+      form the input to the table. The table's result then becomes the pixel's new value
+      that is stored and displayed.
+    why_it_matters: "That is the CAM-6 lookup-table contract, stated in the same proceedings where Toffoli presented CAM-6."
+  supporting_quotes:
+    nonlocality: "With video feedback one has simple control over the nonlocality of the rules using rotation and spatial magnification, and over the number of neighboring pixels using the focus."
+    ladder: "Generalizing cellular automata, from a few states per site to many, leads to lattice dynamical systems."
+    analog_computer: "I will be implicitly arguing that video feedback is a space-time analog computer."
+    workshop_demo: "I would also like to thank the Automata Workshop participants who played with the video feedback demonstration and discussed their ideas with me."
+
+dons_contribution:
+  # The part that is NOT in the 1984 paper — stated as a question for Jim, not a claim.
+  claim: "Background removal turns the performer into a measured object, so position and silhouette area can drive the parameters."
+  in_jims_terms: "The human moves from the state to the parameters. Perturbation and control become the same gesture."
+  open_question: "Is a human closing the loop through her own aesthetic sense doing anything a physicist should care about? Guess: unconscious gradient ascent on statistical complexity."
+  evidence: ../don-hopkins/warpomatic-video-background-removal.md
+
+the_ask:
+  what: "Put computational-mechanics instruments on the front door, not behind an advanced tab."
+  meters: [entropy rate h_mu, statistical complexity C_mu, excess entropy E, live epsilon-machine]
+  payload: "Random is not the same as complex. Nearly impossible to explain in words; trivial to feel in ten seconds with two meters and a knob."
+
+glossary:
+  # Full definitions with citations live in the .md. Index only here.
+  design_rule: "Dependency order — each term uses only terms defined above it."
+  attribution_care:
+    edge_of_chaos:
+      coined_by: "Norman Packard (1988), 'Adaptation Toward the Edge of Chaos'"
+      popularized_by: "Chris Langton, lambda parameter, Physica D 42 (1990) 12"
+      jims_actual_role: "Crutchfield & Young, 'Computation at the Onset of Chaos' (1990) is the rigorous version; Mitchell, Hraber & Crutchfield (1993) 'Revisiting the Edge of Chaos' pushes back on the slogan. He co-wrote the critique of his field's catchphrase."
+      do_not_say: "Crutchfield coined 'edge of chaos'."
+    excess_entropy:
+      one_quantity_three_names:
+        - "excess entropy E — Crutchfield & Feldman, Chaos 13 (2003) 25"
+        - "effective measure complexity — Grassberger, Int. J. Theor. Phys. 25 (1986) 907"
+        - "predictive information — Bialek, Nemenman & Tishby, Neural Computation 13 (2001) 2409"
+      flag: "unverified-detail — check before quoting"
+  jims_coinages:
+    - { term: causal states,           cite: "Crutchfield & Young, Phys. Rev. Lett. 63 (1989) 105" }
+    - { term: epsilon-machine,         cite: "Crutchfield & Young (1989); developed in Physica D 75 (1994) 11" }
+    - { term: statistical complexity,  cite: "Crutchfield & Young (1989)" }
+    - { term: computational mechanics, cite: "Crutchfield, 'The Calculi of Emergence', Physica D 75 (1994) 11" }
+    - { term: intrinsic computation,   cite: "Crutchfield (1994); 'Between Order and Chaos', Nature Physics 8 (2012) 17" }
+  shared_with_others:
+    - { term: attractor reconstruction, cite: "Packard, Crutchfield, Farmer & Shaw, Phys. Rev. Lett. 45 (1980) 712" }
+    - { term: coupled map lattice,      cite: "Kaneko; with Crutchfield, Phys. Rev. Lett. 60 (1988) 2715" }
+  not_jims:
+    - { term: reaction-diffusion,          cite: "Turing, Phil. Trans. R. Soc. B 237 (1952) 37 — ref [6] of the 1984 paper" }
+    - { term: video feedback as mathematics, cite: "Abraham, Springer LNM 525 (1976) 10 — ref [1] of the 1984 paper" }
+    - { term: computational irreducibility,  cite: "Wolfram — opens the same Physica D volume" }
+  verify_against: https://csc.ucdavis.edu/~chaos/
+
+molecules:
+  # Compounds built from defined terms. Each is a design target, not a phrase.
+  - "a nonlocal lattice dynamical system with a human in the parameter loop"
+  - "an epsilon-machine of the instrument's own output, rendered as a HUD layer"
+  - "cat-in-the-loop as a controlled perturbation of a spatially extended dynamical system"
+  - "a curb-appeal front door onto a computational-mechanics instrument"
+  - "excess entropy as a difficulty knob"
+  - "one component bus, both halves of Physica D 10"
+
+show_beats:
+  - "Run the rig next to the 1984 film; Jim points, Don matches the knobs"
+  - "Open Physica D 10 — his paper and Toffoli's — and ask whether the merge was obvious at the time"
+  - "Two-meter demo: h_mu and C_mu on screen, hand someone the noise knob"
+  - "The body-as-parameter question, live and unresolved"
+  - "Ralph Abraham memorial — ref [1] and the first line of the Acknowledgements"
+
+consent:
+  # Jim has not been asked. This is a portrayal, not his words.
+  status: not_yet_asked
+  governed_by: ../../schemas/portrayal-standards.md
+  subject_rights: correction_edit_or_deletion_anytime
+
+cross_links:
+  - crutchfield-machine.md
+  - papers/README.md
+  - abraham-video-feedback-lineage.md
+  - ../ralph-abraham/memorial.md
+  - ../don-hopkins/warpomatic-video-background-removal.md
+  - ../don-hopkins/cam-construction-set.md
+  - ../norman-margolus/the-cam6-demo-for-norman.md
+show_seed: ../../repo-shows/jim-crutchfield/

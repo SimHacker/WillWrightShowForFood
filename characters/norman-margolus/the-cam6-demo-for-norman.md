@@ -168,6 +168,40 @@ place to run this loop live.)*
 
 ---
 
+## Twelve pages away (something I only just noticed)
+
+Tommaso's **"CAM: A High-Performance Cellular Automaton Machine"** was published in
+**Physica D 10** — *Cellular Automata: Proceedings of an Interdisciplinary Workshop, Los
+Alamos, March 7–11, 1983*, edited by Doyne Farmer, Tommaso Toffoli, and Stephen Wolfram.
+
+**[Jim Crutchfield](../jim-crutchfield/README.md)'s "Space-Time Dynamics in Video Feedback"
+is in the same volume**, at pp. 229–245. He brought a camera-and-monitor rig to the workshop
+and let people play with it — his Acknowledgements thank *"the Automata Workshop participants
+who played with the video feedback demonstration."* Which means the room where CAM was
+presented is a room where somebody was running an analog spatial simulator in the corner.
+
+And in §5, listing what to try next, Jim proposes *"inserting a digital computer into the
+feedback loop via a video frame buffer"* and then describes what it would do:
+
+> *"Each pixel and its neighbors are operated on by some (nonlinear) function. For rapid
+> ('real-time') simulation this function is stored in a 'look-up' table. The pixel value and
+> those of its neighbors form the input to the table. The table's result then becomes the
+> pixel's new value that is stored and displayed."*
+
+That's the contract — **the same table this whole letter is about**, described from the
+optical side, printed a few dozen pages from Tommaso's paper describing it from the silicon
+side. He even notes that rotation and magnification control the **nonlocality** of the rule
+while focus controls **the number of neighbors** — a continuous knob doing what you and
+Tommaso did by choosing a neighborhood in hardware.
+
+I have spent forty years building both halves of that volume in separate piles and only just
+looked at the table of contents. The full version of this realization is in
+[the letter to Jim](../jim-crutchfield/positive-feedback.md). For our purposes it's an
+argument for one component bus: the [CAM Construction Set](../don-hopkins/cam-construction-set.md)
+and a warp/feedback engine sharing neighborhoods, parameters, and instruments — because in
+1984 they were one paper apart, and Jim says the only thing between binary CA and continuous
+fields is a threshold you can remove.
+
 ## Your DLA is running right now
 
 Straight off **p. 167, §15.7** — the **Margolus-dendrite** rule — I have a

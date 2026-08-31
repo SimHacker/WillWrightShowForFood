@@ -89,6 +89,7 @@ sources:
     - "Thomas A. Bass, *The Eudaemonic Pie* (1985) — the roulette project."
 
 see_also:
+  - { path: positive-feedback.md, why: "Letter to Jim: what his loop did to Don's work, with the full vocabulary defined and cited. Carries the Physica D 10 find — his video feedback paper and Toffoli's CAM paper are in the same Los Alamos proceedings, and §5 states the CAM lookup-table contract" }
   - { path: crutchfield-machine.md, why: "Third-party GPU reimplementation of the 1984 rig — Table I as shader uniforms, variation (6) built, and a browser port still missing" }
   - { path: ../ralph-abraham/, why: "MEMORIAL (1936–2024) — UCSC teacher generation; 1976 cascades paper Jim formalized; Jim carries the memorial segment on his show" }
   - { path: ../ben-cerveny/, why: "Amsterdam connector — canals, complexity, and shared friends" }
