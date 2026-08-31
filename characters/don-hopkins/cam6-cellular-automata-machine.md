@@ -12,7 +12,8 @@ effects Don added over the years.
 
 Live app: <https://donhopkins.com/home/CAM6> · Source:
 [`CAM6.js`](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js) ·
-Demo (tailored for Norman as the audience): <https://www.youtube.com/watch?v=LyLMHxRNuck>
+Demo (tailored for Norman as the audience): <https://www.youtube.com/watch?v=LyLMHxRNuck> —
+34:20, October 2022. [Cleaned-up transcript with glossary](../norman-margolus/the-cam6-demo-transcript.md).
 
 ## The lineage: C + Sun Forth → lookup tables → JavaScript
 

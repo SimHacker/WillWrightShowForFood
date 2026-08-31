@@ -25,7 +25,8 @@ Since I couldn't take it home with me, I wrote a software emulator in C, and com
 
 This is the guided tour of that — the demo I made **for you as the audience**, written down so it can be run, checked, and continued in the open.
 
-- **Watch the demo (made expressly for you, gets extremely deep and technical, and shows lots of FORTH code, which others may make of what they wish):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck)
+- **Watch the demo (made expressly for you, gets extremely deep and technical, and shows lots of FORTH code, which others may make of what they wish):** [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck) — 34:20, October 2022
+- **Or read it:** [the-cam6-demo-transcript.md](the-cam6-demo-transcript.md) — the whole demo transcribed and cleaned up, with every term defined as it appears and a glossary at the end. Skip the parts you wrote; the definitions are for everyone reading over your shoulder.
 - **Run it live:** [https://donhopkins.com/home/CAM6](https://donhopkins.com/home/CAM6) 
 - **Read the insane monolithic source with its own object system:** [CAM6.js](https://github.com/SimHacker/CAM6/blob/master/javascript/CAM6.js)
 - **Don-side writeup:** [cam6-cellular-automata-machine.md](../don-hopkins/cam6-cellular-automata-machine.md)
@@ -263,7 +264,7 @@ A lot of this is already on the record — we don't have to start cold. The plan
 async**: recent solo/dual/group clips plus archival video, contextualized into one coherent story,
 then re-opened as a **Repo Show anyone can contribute to and learn from**:
 
-- **The demo I made for you** — [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck) (the spine of the story).
+- **The demo I made for you** — [https://www.youtube.com/watch?v=LyLMHxRNuck](https://www.youtube.com/watch?v=LyLMHxRNuck) (the spine of the story), [transcribed and annotated](the-cam6-demo-transcript.md) so it can be quoted, searched, and argued with.
 - **Archival threads to locate + verify** (candidates, not confirmed citations): an early-1990s CAM6
 demo and a **Long Now**-style talk on computation-as-physics. *(Norman / Long Now can confirm exact
 links; flagged so we don't cite from memory.)*
