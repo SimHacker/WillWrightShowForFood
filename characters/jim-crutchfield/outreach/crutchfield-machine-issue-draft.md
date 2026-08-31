@@ -113,7 +113,13 @@ Happy to open a PR with all of the above if that's easier than doing it yourselv
 
 One more reason I care about the browser question, since it's the only real gap left.
 
-The other book that rewired me is **Toffoli and Margolus's *Cellular Automata Machines: A New Environment for Modeling*** (MIT Press, 1987) — the CAM-6 manual that taught a generation to treat a rule as an instrument you play rather than a program you run. **Norman Margolus has given me permission to turn its chapters into interactive instructional and artistic web apps.** That's the thing I'm building toward: rewrite my old monolithic CAM6 simulator as modular TypeScript, then make each chapter something you open in a tab and touch.
+The other book that rewired me is **Tommaso Toffoli and Norman Margolus's *Cellular Automata Machines: A New Environment for Modeling*** (MIT Press, 1987) — the CAM-6 manual that taught a generation to treat a rule as an instrument you play rather than a program you run. **Norman Margolus has given me permission to turn its chapters into interactive instructional and artistic web apps.** That's the thing I'm building toward: rewrite my old monolithic CAM6 simulator as modular TypeScript, then make each chapter something you open in a tab and touch.
+
+Allow me one plug, since it's the most direct answer to what I mean by any of this. I recorded this demo specifically to show Norman and Tommaso what their book set off:
+
+**https://www.youtube.com/watch?v=LyLMHxRNuck**
+
+It opens with the book itself and the **Forth rule compiler** — the CAM-6 contract, neighbor bits → table index → new cell state, which my JavaScript version still matches bit-for-bit against the rules printed in the book — goes extremely technical from there, and ends up somewhere quite whimsical. Both halves are load-bearing. Judging by the way your `CREDITS.md` is written, I suspect you'll get both.
 
 Jim Crutchfield and I have talked about that plan — including what a structural-complexity layer on top of Norman's rules would look like: excess entropy, ε-machines, 1D CAs with their 1+1D space-time diagrams. Which is the same conversation as this repo, not an adjacent one. §5 of the 1984 paper says so outright: rotation and magnification give you **nonlocal neighborhoods**, focus sets the **neighborhood radius**, and variation (6) — a computer in the loop via a frame buffer — generalizes the rig to arbitrary lookup-table rules and lattice dynamical systems. Video feedback and cellular automata are one family, and Crutchfield wrote the bridge himself.
 
