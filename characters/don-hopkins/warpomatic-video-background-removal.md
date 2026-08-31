@@ -3,9 +3,10 @@
 *Don's own work — the videos are public and the code exists.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
-**Real-time video background removal plus video feedback**, running live on a Mac. Pull the
-person out of their room, then feed the result back into itself and warp it. Three demos
-(8 January 2016) and one narrated explanation (3 August 2019):
+**Real-time video background removal plus video feedback**, running live on a **PowerPC
+Mac around 2003**. Pull the person out of their room, then feed the result back into itself
+and warp it. The videos went up much later — three demos (8 January 2016) and one narrated
+explanation (3 August 2019) — so the tape is a decade younger than the code.
 
 **Start here — [WarpOMatic Explanation](https://www.youtube.com/watch?v=ikFF1frSFRg)
 (8:07)** — how it works, narrated, cleaned-up transcript below. Watch this first and the
@@ -122,6 +123,61 @@ while the thing runs.*
 
 > *"Damn. I don't need to smoke up tonight after this. Thanks!"* — @occularmalice
 
+## The blue sheet is neither blue nor a sheet 🔵
+
+At 0:11 Don says he's removing *"the blue sheet I have hung in the background, **which you
+can't see**."* That parenthetical is doing more work than it sounds like. There is no blue
+sheet. There is a **grey** drape that only becomes blue inside the camera.
+
+The rig is **[ReflecMedia](https://usbroadcast.co/chromatte/)**: a fabric called
+**Chromatte**, embedded with millions of microscopic **glass beads**, hung behind the
+subject, plus a ring of **blue LEDs mounted around the camera lens** — the **LiteRing**.
+The beads are **retroreflective**, the same principle as a bicycle reflector or a highway
+safety vest: light that hits them is returned **along the path it arrived on** rather than
+scattered. So the LED ring floods the room, the drape bounces that blue straight back into
+the lens it came from, and the camera sees a perfectly even blue screen while a person
+standing next to the camera sees plain grey cloth.
+
+Why that is better than hanging an actual blue screen, which is the part worth stealing:
+
+- **No spill.** A lit blue screen throws blue light onto the back of the subject's head and
+  shoulders, and that fringe is what makes cheap chromakey look cheap. Here the only blue in
+  the room travels along the lens axis, so nothing lands on the subject from behind.
+- **No background lighting rig.** The backdrop lights itself, from the camera. That removes
+  the lamps, the stands, and the evenness problem all at once.
+- **Even key anywhere.** An office, a hallway, a living room becomes a chromakey stage,
+  which is exactly why it was the right tool for a one-man setup in an apartment.
+
+It was also **expensive** and it was **hardware you had to order and hang**. Hold that
+thought — it's the whole argument for the browser version.
+
+## Where the segmentation code came from 🧠
+
+The matte was the optics half. The software half has a lineage, and it runs through
+**[Subutai Ahmad](../subutai-ahmad/README.md)**.
+
+At **Interval Research** Don helped Subutai with real-time computer vision code Subutai had
+written, then elaborated on those ideas in his own implementation on the PowerPC Mac. The
+piece Don pushed on was the **median filter** — the standard tool for killing the salt-and-
+pepper speckle a keyer produces along an edge, because unlike a blur it removes outliers
+without softening the boundary you're trying to preserve.
+
+The interesting part is how he made it fast enough to run per-frame. A median normally means
+sorting the neighborhood and taking the middle element, and sorting is expensive. Instead
+Don implemented a **partial ordering** — a fixed network of compare-and-swap steps that does
+only the work needed to establish *which value lands in the middle*, and never bothers to
+fully sort the rest — hand-written in **PowerPC AltiVec** SIMD instructions so it processes
+**several pixels simultaneously** in one pass. He ported the approach from an existing
+**MMX** implementation of the same idea on Intel.
+
+Then the lineage keeps going, and lands back in this repo's present tense. Subutai
+co-founded **ePlanet**, an Interval spin-off, whose technology Intel bought and shipped as
+the **IntelPlay Me2Cam** (with Mattel, 1999) — the first consumer computer-vision product,
+a webcam that pulled a kid out of their bedroom so they could play games with their body.
+Subutai is now Chief Scientist at **Numenta**, which announced a collaboration with **Will
+Wright's Proxi**. The person who wrote the background-removal code Don built on in the
+nineties is working with the person this whole show is named for.
+
 ## What the explanation already settles
 
 Seven years before this file existed, the video answered most of the design questions.
@@ -219,16 +275,21 @@ without a manual" — which is the same problem as teaching. That's why the
 studying: `ui.yaml` with sections, pins, and a live layer visualizer; every action named and
 rebindable from key, MIDI, or gamepad; usage telemetry to find the controls nobody touches.
 
-## What's changed since 2019
+## What's changed since 2003
 
-WarpOMatic was a native Mac app **that required a blue sheet hung behind you**. That sheet
-is the whole distance between this and "anyone, anywhere":
+WarpOMatic was a native PowerPC app that required **a patented retroreflective drape, a ring
+of LEDs bolted to the lens, and a median filter hand-written in AltiVec**. Every one of
+those is a reason a stranger could not run it. That list is the whole distance between this
+and "anyone, anywhere":
 
-- **The sheet is gone.** Browser-side person segmentation now runs at frame rate on ordinary
-  hardware, no chroma key, no studio, no lighting setup. In 2019 the matte was the hard
-  part and it cost you a bedsheet; it is now a library call against whatever wall you happen
-  to be sitting in front of. This single change is what converts a demo you *send someone a
-  tape of* into a URL they open.
+- **The backdrop is gone.** Browser-side person segmentation now runs at frame rate on
+  ordinary hardware — no Chromatte, no LiteRing, no chromakey at all, against whatever wall
+  you happen to be sitting in front of. In 2003 the matte was the hard part and it cost you
+  professional equipment; it is now a library call. This single change is what converts a
+  demo you *mail someone a tape of* into a URL they open.
+- **The SIMD is gone too.** The AltiVec median filter was a week of somebody's life and it
+  ran on one processor family that no longer exists. The equivalent work now happens on the
+  GPU, portably, in code you can read.
 - **WebGPU exists.** Compute shaders in a tab, which is what the CA half of the family wants
   (lookup tables, integer state, exact neighborhoods) and what fragment shaders make awkward
   — so the merge Don deferred at 6:30 is now cheap.
@@ -243,4 +304,9 @@ shelved them expire. *Things have changed.*
 - [`cam6-cellular-automata-machine.md`](cam6-cellular-automata-machine.md) — the CA half of the same workshop, and the [CAM6 Demo](https://www.youtube.com/watch?v=LyLMHxRNuck) made for Norman Margolus
 - [`../jim-crutchfield/crutchfield-machine.md`](../jim-crutchfield/crutchfield-machine.md) — a desktop GPU rig that solves the feedback half, with the citations attached
 - [`../jim-crutchfield/papers/README.md`](../jim-crutchfield/papers/README.md) — the 1984 paper and film; injection as an instrument
-- [`../subutai-ahmad/README.md`](../subutai-ahmad/README.md) — the real-time motion tracking and segmentation lineage: Interval → Me2Cam → browser
+- [`../subutai-ahmad/README.md`](../subutai-ahmad/README.md) — where the segmentation code comes from: Interval → the AltiVec median filter → ePlanet → IntelPlay Me2Cam → Numenta → Proxi
+
+*Dating note: "around 2003" is Don's recollection. A Wayback Machine search of
+`donhopkins.com` for WarpOMatic-era pages found nothing — the only archived `warp` URLs are
+a NeWS PostScript file and an unrelated Interval scouting note about a company called Warp
+Inc. If a dated page or a build artifact turns up, correct this.*
