@@ -113,6 +113,8 @@ reversible CA — and the book behind the playgrounds). All Santa Fe Institute�
 ## Browse
 
 - Show seed: [`repo-shows/jim-crutchfield/`](../../repo-shows/jim-crutchfield/README.md)
+- The letter and the single ask: [`positive-feedback.md`](positive-feedback.md) · citations [`positive-feedback.yml`](positive-feedback.yml)
+- Interview questions: [`ideas.md`](ideas.md) — intrinsic computation, what goes on the front panel, the 1984 room
 - Papers & film annex: [`papers/README.md`](papers/README.md)
 - The lineage: [`abraham-video-feedback-lineage.md`](abraham-video-feedback-lineage.md)
 - The GPU rig: [`crutchfield-machine.md`](crutchfield-machine.md)

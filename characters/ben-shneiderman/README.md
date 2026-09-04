@@ -14,6 +14,7 @@ show hook: **reincarnate HyperTIES** as a living browser emulator — [`hypertie
 | **Show series** | [`repo-shows/ben-shneiderman/`](../../repo-shows/ben-shneiderman/README.md) |
 | **Group option** | [`ben-and-heinz-pie-menus.yml`](../../repo-shows/ben-and-heinz-pie-menus/README.md) |
 | **Hooks** | [`ideas.md`](ideas.md) |
+| **1997 agents debate** | [`agents-debate-1997.md`](agents-debate-1997.md) — what was argued vs. what got cited; the convergence; the two unnamed syntheses |
 | **Jan 2022 mail** | [`sources/2022-01-13-hyperties-computer-lib.md`](sources/2022-01-13-hyperties-computer-lib.md) |
 | **CHI'88 paper** | [`media/from-mail/`](media/from-mail/MANIFEST.yml) |
 

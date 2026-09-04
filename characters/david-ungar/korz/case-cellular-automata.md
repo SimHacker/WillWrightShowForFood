@@ -75,6 +75,12 @@ Korz's subjectivity said in grid coordinates.
   transform* (permutation of dimensions indexed by other dimensions).
   Same machinery, second species.
 
+  Worked out as actual Korz slots — the classic block rules (billiard
+  ball, critters, TRON, HPP gas, sand, dendrite, two Isings) plus some
+  invented ones chosen to break the compiler in instructive places — in
+  [examples/margolus-rules.md](examples/margolus-rules.md) and its
+  sidecar [examples/margolus-rules.yml](examples/margolus-rules.yml).
+
   The rules complete the no-privileged-receiver story, and the name
 for it is **multiple dispatch**. Single dispatch picks the method
 from one privileged receiver (`cell.update(...)`); multiple dispatch
@@ -94,7 +100,14 @@ recalls it) picks it from the joint types of *all* the arguments;
   running in silicon in 1987. The crystallization pipeline shipped
   there too: CAM-6 rules were written in Forth and *compiled into
   lookup tables* — expressive description down to total dispatch
-  table, exactly the Zork-compiler movement.
+  table, exactly the Zork-compiler movement. The compiler-theory name
+  for that movement is **partial evaluation**: the rule's parameters
+  are static, the neighborhood is dynamic, and the table is the
+  residual program. Crystallizing a Korz sea is the same operation
+  with the guards as the static input — which means the strict tier
+  isn't a separate mechanism, it's what a specializer leaves behind
+  ([the arithmetic of when tabulation
+  works](../../don-hopkins/cam-construction-set.md#the-move-has-a-name-partial-evaluation-and-one-more-thing)).
 
 - **The Moveable Feast Machine is the soft tier's physics.** Dave
   Ackley's MFM abandons the synchronous total table: events fire

@@ -1,6 +1,8 @@
 # GLANCE — ebike-safari design cauldron
 
 what: |
+  Pinball Construction Set meets OpenStreetMap. Bike is pinball and joystick
+  you ride in the real world — Mario in the kart, Marble Madness marble.
   Product design room: geometry spells, exposure logging, urban garden loop (Farmville on the graph),
   OSM semantics, viewer, story layer.
   Smells = ads (YAML creatives); roads = distribution channels (strength on graph).
@@ -8,7 +10,11 @@ what: |
   Map game platform — shared data plane between games; layers are views.
   City record — every street is a groove; bike as needle; scrobbling with place; radio dial.
   Magnetic playback — play head has inertia; turn = switch, stop = scan; you ARE the radio dial.
+  Patience — wait at lights/signs (typical dwell); spend elsewhere; flowing city heat map.
+  Wait points — OSM, rides, or dropped; TomTom-style tod/weekday envelopes; anchor+radius sniff.
+  Transgression — against the grain; vampire clock; 1 Hz replay; dithered wait fines.
   Speech track — commands interpreted now, impressions timestamped for later; all speech remembered.
+  Photos — point and embed. Instagram handles reporting, privacy, AI review.
 
 phase: slurping
 

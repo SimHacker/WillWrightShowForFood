@@ -108,6 +108,13 @@ Dave brought it to **SGI**; it became demo/screensaver source (later **IGL** dis
 
 Full HN compendium: [`../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md`](../don-hopkins/sources/2025-01-psychedelic-graphics-hn-compendium.md)
 
+**Where the bouncing sliders went.** Don's [Turn Tables](../don-hopkins/turn-tables.md) spec takes
+the Panel Library slider as the corrected primitive: a control and a signal source are **one**
+widget, running on its own and still grabbable mid-motion, and **`wrap`** is what decides whether
+it's a knob or a bouncer. The Indy screensaver — sliders hidden, performances played back — is the
+cautionary tale that page and the [CAM Construction
+Set](../don-hopkins/cam-construction-set.md) are both arguing against.
+
 Dave's own words on EP (darkside archive): *"Electro-Paint responds, but in ways that are hard to
 describe… It will reward attention… Try a little 'wrst', with some 'zoom'…"*
 

@@ -87,6 +87,21 @@ intersection of Vondelpark paths, turn around slowly, and see which music
 there is to follow along each spoke. (Pie menu lineage: the steering
 voystick, [`CAULDRON.yml`](CAULDRON.yml) `steering-voystick` entry.)
 
+### Brake levers are the flippers
+
+The pinball flipper is a *stop and look*. Squeeze the brakes and you have
+declared interest — situational awareness at this point on the graph. That
+is a universal gesture: the world focuses. Cards, prior activity, OSM,
+smells, grooves, and a pie of what's here come up. Keep riding and it all
+**melts away** — sleek, un-obnoxious.
+
+Lead, follow, or get out of the way. The pie menu credo. The UI does not
+chase you down the block.
+
+A wait snapped to a light, signal, or sign is a different stop: **patience**
+([`patience.md`](patience.md)) — civic mint, not a look. Same brakes. It
+feeds transgression; transgression feeds it back.
+
 ## Nodes or arcs? Both — the MediaGraph question
 
 MediaGraph and the later musical projects at Stupid Fun Club kept hitting

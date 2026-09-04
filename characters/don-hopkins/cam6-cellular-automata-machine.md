@@ -77,6 +77,23 @@ Heat-diffusion overlays, echo trails, pie-menu control, and script record/playba
    the monolith; gang layers **zero-copy**
    ([streams-of-streams notes](streams-of-streams-fd-passing-zero-copy.md)).
 
+## What a modular version would keep, and what it would drop
+
+A close read of the shipped source — the fifteen `defineType` registries, the `paramsUsed`
+declarations, the generated parameter panel, `frob` seeking `frobTarget` at rate `unfrob`, and the
+composition-overlay path that lets a tool draw with Canvas 2D and blend the result into cells —
+is written up as a Korz exercise:
+[`layered-rules.md`](../david-ungar/korz/examples/layered-rules.md).
+
+Short version: the abstractions are right and the enumeration is wrong. `Life`/`Life_Echo`/
+`Life_Heat` differ by three integers, and `recordMode` hand-names ten of sixty-four combinations
+of six booleans — suffixes standing in for dimensions. Echo and heat are `if` blocks copy-pasted
+into five `neighborhoodFunction` inner loops, which is hand-run loop fusion and also how one
+suspected typo in the heat sum came to exist five times over (⚠️ found by reading, not running —
+[details](../david-ungar/korz/examples/layered-rules.md#what-hand-fusion-costs-concretely)).
+The proposed replacement is a declared pipeline where drawing tools are ordinary stages, and the
+[CAM Construction Set](cam-construction-set.md) is the back end that compiles it.
+
 ## Credits & connections
 - **Source material:** Tommaso Toffoli & **Norman Margolus**, *Cellular Automata Machines* (MIT
   Press, 1987). Don's simulator follows their book and hardware directly.

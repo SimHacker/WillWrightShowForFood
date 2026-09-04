@@ -201,6 +201,7 @@ slurp_queue:
 harvested:
   - city-record.md
   - speech-track.md
+  - sources/sotm-2026-paris.md   # SotM 2026 programme; 10 follow-ups, one of them a defect
   - sources/ben-cerveny-city-record-jam.md
   - geometry-as-language.md
   - exposure-pac-man.md
@@ -231,6 +232,9 @@ rejected:
     harvested_as: geometry-as-language.md#tomtomagotchi
 
 next_slurp:
+  - "OSM ID STABILITY: watch OSMPID (Keller) + 'Where are my ways?' (Reichert) when recordings land — way/node ids are foreign keys throughout territory YAML and OSM ids are NOT stable. Interim: store snapped geometry alongside the id so a broken key can be re-snapped. sources/sotm-2026-paris.md#1"
+  - "Panoramax: evaluate camera rig as contributor AND imagery as a viewer layer; read their consent/blur governance before filming Dutch streets. sources/sotm-2026-paris.md#2"
+  - "Exposure pellets sit on POI centroids; 'From centroid to entrance' says that's the wrong point. Move to entrances."
   - "Deep-read crazy-idea-jam into amsterdam-gps-lineage (BONGO BINGO → exposure patterns)"
   - "One real FIT through road-graph skeleton (local only) — runbooks/04-pipeline-real-fit.md"
   - "Capacitor iOS smoke test — runbooks/02-capacitor-ios.md"

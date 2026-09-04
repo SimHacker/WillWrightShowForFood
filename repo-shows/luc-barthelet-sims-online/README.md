@@ -11,6 +11,8 @@
 ## In this directory
 
 - [`SHOW.yml`](SHOW.yml) — machine reading (seed spec)
-- `SHOW.yml` — *not yet*; add when ready to run the show (lazy prototype promotion)
+- [`tso-stories.md`](tso-stories.md) — Don's firsthand TSO stories, sourced to his public HN
+  posts: the tip-jar fencepost error, the asymmetric maze game, the Dollhouse Mafia thread, and
+  Simplifier as ancestor of the SoulAngel catalog crawler
 
 ↑ [`../README.md`](../README.md) · [`../INDEX.yml`](../INDEX.yml)

@@ -1,0 +1,46 @@
+# Marriage on Layaway — dialog bit, wedding consultant NPC
+# Don, in session, 1 Sep 2026: the Hope Chest as a FACTORY minting the marriage as a
+# tangible object · rental marriages that expire and need renewing · "there are some
+# good lay away jokes to be made in the dialog dead pan."
+
+id: marriage-layaway
+type: dialog_bit
+status: premise_only        # jokes deliberately NOT written — writers' room fills this
+shows: [will-wright, heather-and-steve]
+
+title: "Marriage on Layaway"
+
+premise: "A hope chest is a layaway plan with a lid."
+
+register: deadpan retail financing. Consultant never winks; nobody lampshades it.
+
+# THE MECHANICS ARE REAL — the dialog is a skin over actual object state.
+# This is the part worth writing down; the funny part is not ours to write.
+
+mechanics:
+  object_chain: "layaway ticket → marriage certificate → (cancellation) → residue"
+  the_chest_is_disposable: "mints the certificate at ceremony, then can be deleted on camera"
+  expiry_is_the_argument:
+    # same object, same ceremony, five different marriages
+    permanent: "until destroyed — the traditional deal"
+    with_host: "till death do us part, implemented literally"
+    after_n_years: "a term marriage, requiring re-ratification"
+    auto_renew: "Don's rental marriage — the subscription, with a cancellation flow"
+    upkeep: "lapses quietly if nobody maintains it"
+  removal_has_tiers: "bin the paper (free, leaves residue) vs. hire the attorney (expensive, unwinds properly)"
+  design: ../../designs/orchestrator-playsets/life-events-playset.md
+
+for_the_writers_room:
+  - "Which payment model does the show actually satirise — layaway, subscription, or rent-to-own?"
+  - "Does the consultant ever break? (Suspect no, and that the answer is the whole bit.)"
+  - "Where does the renewal notice arrive — mail, NPC visit, or the chest itself?"
+  - "Is the prenup an upsell tier, or its own object?"
+
+pairs_with:
+  - ../gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml
+  - ../gag-pixelized-joint-wedding/gag-pixelized-joint-wedding.yml
+  - ../../catalogs/simprov/ORCHESTRATOR.yml
+
+see_also:
+  - ../../catalogs/simprov/wedding-playset-depth.md
+  - ../../../moollm/skills/procedural-rhetoric/

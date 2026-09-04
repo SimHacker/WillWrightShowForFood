@@ -98,5 +98,10 @@ converging, again.
 
 ---
 
+*The rules are translated into Korz slots as a design exercise in
+[`mfm-city.md`](../david-ungar/korz/examples/mfm-city.md) — which is where the bit budget turns into
+a type check, Algorithm 1 turns out to be a saturating Bellman-Ford whose clip is the actual result,
+and intersection canalization turns out to be a polymorphic inline cache.*
+
 *Part of [the CA correspondence story](ca-correspondence-story.md). Paper by Trent
 R. Small; mirrored here with attribution. [Portrayal standards](../../schemas/portrayal-standards.md).*

@@ -1,0 +1,88 @@
+# CHARACTER.yml — gwern
+# Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
+
+character:
+  id: gwern
+  name: "Gwern Branwen"
+  type: invitation
+  signifier: "🧊"
+  status: living
+  field: "Long-form essayist and site-builder — gwern.net; hypertext annotation, popups, archiving"
+  home: characters/gwern/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+privacy:
+  pen_name_only: true
+  rule: |
+    Portray the published work under the published name. Do not research, infer, publish,
+    or speculate about legal identity, location, employer, or photographs — not in this
+    repo, not on air, not in show notes.
+  format_note: |
+    Written answers, audio-only, or altered voice are first-class formats here, not
+    accommodations. No camera required, ever.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: null
+  design_pack: https://github.com/SimHacker/moollm/tree/main/designs/webtop-gwern-inheritance
+  note: |
+    Don wrote a design pack that inherits explicitly from gwern.net before writing this
+    invitation. The ask is to come argue with it.
+
+bio:
+  summary: >
+    Gwern Branwen writes gwern.net, a long-running personal site of heavily revised
+    long-form essays spanning machine learning, statistics, psychology, genetics, and
+    self-experimentation. The site is as notable as the writing: dense hypertext with
+    link annotations, popup previews, transclusion, sidenotes, local archives, and a
+    published design essay documenting the whole apparatus and its rejected features.
+
+why_here: >
+  gwern.net solved, in production and for one author over many years, the problems the
+  MOOLLM webtop is built around: popups that behave like windows, semantic zoom over a
+  large corpus, link annotation with local archives, and provenance that survives
+  linkrot. Don's design pack inherits from it by name.
+
+craft_notes:
+  popup_as_window: >
+    Don read the frontend source while writing the design pack: pin is a class flag on
+    the same window object rather than a rewrap or reparent. That is the same
+    architecture as Don's TNT OPEN LOOK pin-up menus, where menu frames subclass window
+    frames and promotion is a flag — arrived at independently, decades apart.
+  frontend_credit: >
+    Frontend work on gwern.net is credited to Said Achmiz. Any conversation about the
+    popup and annotation machinery should credit him, and he is a natural co-guest.
+
+sources:
+  wikipedia: null
+  web:
+    - { url: https://gwern.net/, why: "The site" }
+    - { url: https://gwern.net/design, why: "Design essay — the apparatus and its trade-offs; cited in Don's design pack" }
+    - { url: https://gwern.net/help, why: "Keyboard chords for popup windows — cited in Don's design pack" }
+    - { url: https://github.com/gwern/gwern.net, why: "Source repository" }
+  papers: []
+  blogs: []
+
+verify:
+  - "Site start year and current build toolchain (Hakyll + Pandoc + custom JS per the design essay — confirm still current)"
+  - "Content license — check the site's own statement rather than assuming"
+  - "Exact URL slugs for individual essays before citing them in show materials"
+  - "Whether Said Achmiz wants a directory and a co-guest invitation of his own"
+
+related_people:
+  - { id: said-achmiz, why: "gwern.net frontend — popup/annotation machinery; natural co-guest", status: not_yet_asked, directory: null }
+  - { id: david-temkin, why: "Declare Desktop as in-browser WM; webtop shell candidate", directory: characters/david-temkin/ }
+  - { id: ted-nelson, why: "Transclusion and Xanadu — the dream gwern.net partially shipped", directory: characters/ted-nelson/ }
+  - { id: ben-shneiderman, why: "HyperTIES embedded menus and link previews — the 1980s ancestor", directory: characters/ben-shneiderman/ }
+
+see_also:
+  - { path: CARD.yml, why: "Universal CARD — MTG invokable abilities for show segments" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../../schemas/portrayal-standards.md#guest-directory, why: "Directory grows with responses — self or assisted contribution" }

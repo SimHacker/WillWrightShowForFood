@@ -61,6 +61,9 @@ Historical receipts:
 
 → [`pie-menus-chi-88-and-beyond.md`](pie-menus-chi-88-and-beyond.md) · ConnectedTV **Finger Pies**
 (stroke-with-feedback): [`connectedtv-touch-tuning-finger-pies.md`](connectedtv-touch-tuning-finger-pies.md)
+· [`turn-tables.md`](turn-tables.md) — the same angular gesture read continuously instead of
+quantized: pie menu and knob as one control with a detent count, plus the bouncing-slider prior art
+from [Dave Tristram's Panel Library](../dave-tristram/raster-masters-panel-library.md)
 
 ## Fitts's Law and steering
 

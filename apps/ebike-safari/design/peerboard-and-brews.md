@@ -27,6 +27,9 @@ Peerboard ranks **contribution and craft**, async and opt-in:
 
 Everyone visible as a peer. Nobody crowned for going fast.
 
+Published traces go through [`privacy.md`](privacy.md): **buffered + home-masked
+by default.** Live is a switch, not the pipe.
+
 ## Craft brews — high-dimensional virtual pee
 
 Gather ride tokens → **craft different brews** → spend painting road segments.

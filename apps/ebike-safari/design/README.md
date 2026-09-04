@@ -23,6 +23,10 @@ don't port the stack.
 | City record | [`city-record.md`](city-record.md) | draft — **every street is a groove**; scrobbling, radio dial |
 | Speech track | [`speech-track.md`](speech-track.md) | draft — commands vs impressions; Drescher food |
 | Geometry as language | [`geometry-as-language.md`](geometry-as-language.md) | draft |
+| Transgression | [`transgression.md`](transgression.md) | draft — late-night full-moon rides encouraged; 1 Hz replay |
+| Patience | [`patience.md`](patience.md) | draft — wait at lights/signs; spend elsewhere; flowing heat map |
+| Wait points | [`wait-points.md`](wait-points.md) | draft — ride-learned envelopes (TomTom tod/dow); anchor+radius; gather; lottery |
+| Privacy | [`privacy.md`](privacy.md) | draft — 24h buffer default; home clip + dither; live is opt-in |
 | Exposure Pac-Man | [`exposure-pac-man.md`](exposure-pac-man.md) | draft |
 | Urban garden loop | [`urban-garden-loop.md`](urban-garden-loop.md) | draft — **don't complete, cooperate** |
 | Animal herding | [`animal-herding.md`](animal-herding.md) | draft — pastures, paths, collies, cozy view |
@@ -36,6 +40,8 @@ don't port the stack.
 | Smell navigation | [`navigation-smell-steer.md`](navigation-smell-steer.md) | draft — hill-climb, pie menu, MediaGraph |
 | Graveyard layers | [`graveyard-soul-city.md`](graveyard-soul-city.md) | draft — real memorial + Soul City |
 | Ben Cerveny jam | [`sources/ben-cerveny-city-record-jam.md`](sources/ben-cerveny-city-record-jam.md) | harvested |
+| Ride gestures Sep 2026 | [`sources/ride-gestures-2026-09.md`](sources/ride-gestures-2026-09.md) | harvested — clockwise undo, De Pijp coloring book, maps |
+| SotM 2026 Paris | [`sources/sotm-2026-paris.md`](sources/sotm-2026-paris.md) | harvested — **OSM ids aren't stable**; Panoramax opportunity |
 | Amsterdam GPS lineage | [`sources/amsterdam-gps-lineage.md`](sources/amsterdam-gps-lineage.md) | harvested |
 | TomTom rejected ideas | [`sources/tomtom-rejected-ideas.md`](sources/tomtom-rejected-ideas.md) | harvested |
 | Lifelogging lineage | [`sources/foursquare-lineage.md`](sources/foursquare-lineage.md) | reference |

@@ -26,15 +26,21 @@ ride forks**, **MOOLLM characters as AI players**.
 
 ## Pinball construction set on the map
 
+**Pinball Construction Set (Budge, 1982) × OSM.** The city is the table. The
+bike is pinball *and* joystick. You do not draw the walls; you ride them. Construction is
+placing gadgets and recognizing gestures on a graph that already exists.
+
 The **demo is the game**. Web/mobile browser — no install required for audience; real bikers
 play with remote operators later.
 
 | Piece | Behavior |
 |-------|----------|
-| **Bike** | Pinball body — mass, velocity, scrub playhead |
-| **Flippers** | Remote players / AI bots trigger gates, fences, pumps |
+| **Bike** | Pinball *and* joystick — mass, velocity, lean, scrub playhead |
+| **You** | Pinball, Sim, or vehicle — a *party* shares one vehicle |
+| **Flippers** | **Brake levers** — stop and look. Also lean / turn / remote gates |
 | **Gadgets** | Roundabout-around detector, pond lap harvest, canal fill |
-| **Multiplayer** | Many bikes + bots on same world; real-time or async |
+| **Live** | **Multiball** — several players / parties on the table now |
+| **Async** | Follow a published path + its cards ([`privacy.md`](privacy.md) delay) |
 | **AI players** | MOOLLM characters tend shops, parks, chess, concession stands |
 | **Construction set** | Place windmills, temp fences, Peecons on map (permissions via Git) |
 

@@ -1,0 +1,123 @@
+# CARD — gwern (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: gwern
+  name: "Gwern Branwen"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: "Gwern Branwen"
+  title: "The Iceberg Site — Hypertext That Behaves Like a Research Environment"
+  rarity: rare
+  signifier: "🧊"
+  flavor: "A calm surface with the whole corpus one keystroke under it."
+
+abilities:
+  - id: POPUP-AS-WINDOW
+    name: "Popups That Are Really Windows"
+    type: activated
+    mana: "{U}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: popupWindow
+      signature: "popupWindow(link) → draggable, resizable, pinnable, tileable preview"
+      score_when:
+        - trigger: audience_learns_something_true
+          weight: 0.9
+    effect: >
+      Walk the popup system as a window manager — previews, recursive popups, pinning,
+      half-screen tiling, focus cycling — and where it stops short of a desk on purpose.
+    verifiable: "https://gwern.net/design · keyboard chords at https://gwern.net/help"
+    combos_with: [ICEBERG-PAGE, LINKROT-DEFENSE, TNT-PIN-CONVERGENCE]
+
+  - id: ICEBERG-PAGE
+    name: "Iceberg Pages / Semantic Zoom"
+    type: activated
+    mana: "{1}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: icebergPage
+      signature: "icebergPage(essay) → calm surface, collapsed depth, drill on demand"
+      score_when:
+        - trigger: audience_learns_without_lecture
+          weight: 0.85
+    effect: >
+      How to publish enormous depth without punishing a first-time reader: collapse,
+      expand in place, reader mode, and typography treated as infrastructure.
+    verifiable: "https://gwern.net/design"
+    combos_with: [POPUP-AS-WINDOW, REVISION-AS-METHOD]
+
+  - id: LINKROT-DEFENSE
+    name: "Annotation, Archives, Provenance"
+    type: activated
+    mana: "{1}{W}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: archiveEverything
+      signature: "archiveEverything(link) → annotation + local mirror + backlink"
+      score_when:
+        - trigger: audience_learns_something_true
+          weight: 0.85
+    effect: >
+      Link annotations, local archive fallback, and backlinks as first-class artifacts —
+      versus git plus a repo graph doing the same job with different machinery.
+    verifiable: "https://gwern.net/design"
+    combos_with: [ICEBERG-PAGE, REVISION-AS-METHOD]
+
+  - id: REVISION-AS-METHOD
+    name: "The Living Document"
+    type: activated
+    mana: "{1}{G}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: reviseForever
+      signature: "reviseForever(essay) → dated, corrected, never finished"
+      score_when:
+        - trigger: audience_learns_without_lecture
+          weight: 0.8
+    effect: >
+      Essays as long-lived revisable objects rather than dated blog posts — and what a
+      published record of *rejected* design features teaches that a changelog cannot.
+    verifiable: "https://gwern.net/design · the site's own design-graveyard essay"
+    combos_with: [ICEBERG-PAGE, LINKROT-DEFENSE]
+
+  - id: TNT-PIN-CONVERGENCE
+    name: "The Pin Test (convergent architecture)"
+    type: activated
+    mana: "{U}{R}"
+    conditions:
+      - topic_matches_public_work: true
+      - host_has_receipts: true
+    advertisement:
+      method: pinFlag
+      signature: "pinFlag(window) → promotion without rewrap or reparent"
+      score_when:
+        - trigger: two_lineages_meet
+          weight: 0.9
+    effect: >
+      Pinning as a flag on one window class, arrived at independently in gwern.net's
+      frontend and in Don's TNT OPEN LOOK pin-up menus — and why a separate-process
+      window manager with no shared class hierarchy could never do it that cleanly.
+    verifiable: "Don's source reading in designs/webtop-gwern-inheritance/GWERN-WHAT-TO-INHERIT.md; frontend credited to Said Achmiz"
+    combos_with: [POPUP-AS-WINDOW]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  pen_name_only: true
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status, privacy rule" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: README.md, why: "Public portrait" }

@@ -1,10 +1,37 @@
 # Don Hopkins — SimCity / Micropolis lineage (public backbone)
 
 simcity_lineage:
-  - name: First encounter
+  - name: First encounter — "what is this thing computing on its own?"
     era: "1989"
-    don_role: "Played SimCity on Mac; posted to comp.theory.cellular-automata same day"
+    where: "University of Maryland, under Ben Shneiderman and Mark Weiser — the same year Don took PSIBER to the USENIX graphics workshop in Monterey"
+    don_role: "Played SimCity on Mac; posted to comp.theory.cellular-automata the same day"
     note: "Started 35+ year arc — cities as visual programming"
+    the_session: "Up all night stoned, watching a city do things nobody told it to do."
+    soundtrack: "unconfirmed — possibly the Rolling Stones"
+    the_question: |
+      Not "how do I win" and not "how is this coded." What is this thing computing ON ITS OWN?
+      The newsgroup is the evidence for how he read it: comp.theory.cellular-automata, not
+      comp.sys.mac.games. He filed SimCity as a cellular automaton the day he met it.
+    the_question_has_a_name: |
+      INTRINSIC COMPUTATION — Jim Crutchfield's term, and the thing computational mechanics was
+      built to measure: not what you can program a process to do, but what information it is
+      already storing, transmitting, and transforming. Don asked it in 1989 without the
+      vocabulary; Jim spent a career building the vocabulary.
+    why_it_belongs_in_the_lineage:
+      no_meters_and_it_surfaced_anyway: >
+        SimCity shipped with no instrumentation on the front panel and a stoned grad student
+        reached for the question unprompted. That is the argument that the question is native to
+        anyone watching a simulation, not to physicists.
+      cost_of_a_missing_instrument: >
+        It stayed unanswered for thirty-seven years. That gap is the whole case for putting
+        meters on the front door instead of behind an advanced tab.
+      the_arc: "1989 question → 2026 apparatus: entropy rate and statistical complexity as two live meters on a CA playground."
+    caveat: "⚠️ Don's recollection, offered in conversation (Aug 2026). Confirm the details he wants on the record before broadcast."
+    see_also:
+      - { path: ../../jim-crutchfield/ideas.md, why: "Interview question #2 — was that a real question before it was measurable?" }
+      - { path: ../../jim-crutchfield/positive-feedback.md, why: "The letter and the single ask: two meters on the front door" }
+      - { path: ../cam-construction-set.md, why: "Where the 1989 question gets an apparatus" }
+      - { path: ../../rudy-rucker/README.md, why: "The other 1980s CA thread — Hackers, CAM-6, CA Lab" }
 
   - name: SimCity on NeWS (Sun / DUX)
     era: "1991–1992"
@@ -113,7 +140,7 @@ simcity_lineage:
       origin_at_sun:
         era: "1991"
         what: "Sun circulated an internal memo to gauge interest in porting the #1-selling SimCity to Unix as a front-end to GIS (ToolTalk + import/export to standard GIS formats), citing support from ESRI and URISA."
-        note: "Don — a Sun programmer who first played SimCity in 1989 at UMD under Shneiderman & Weiser — responded enthusiastically; the port was finished under DUX Software."
+        note: "Don — a Sun programmer who first played SimCity in 1989 at UMD under Shneiderman & Weiser (see the First encounter entry above) — responded enthusiastically; the port was finished under DUX Software."
       the_ask:
         era: "Nov 2006"
         who: "John Gilmore (EFF co-founder, early Sun employee) asked Don to ask Will Wright about open-sourcing the original SimCity for OLPC."

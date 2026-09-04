@@ -15,6 +15,10 @@ pillars:
   - city-record.md
   - speech-track.md
   - geometry-as-language.md
+  - transgression.md
+  - patience.md
+  - wait-points.md
+  - privacy.md
   - exposure-pac-man.md
   - urban-garden-loop.md
   - animal-herding.md
@@ -28,6 +32,8 @@ sources:
   - sources/tomtom-rejected-ideas.md
   - sources/foursquare-lineage.md
   - sources/abraham-moller-xoss.md
+  - sources/sotm-2026-paris.md
+  - sources/ride-gestures-2026-09.md
   - sources/README.md
 
 skeleton:

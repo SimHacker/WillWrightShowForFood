@@ -1,7 +1,9 @@
 # Geometry as language
 
-Core shift: **the world is the controller**. The bicycle is the turtle; OpenStreetMap is
-the microworld; the ride is a program written on the street graph.
+Core shift: **the world is the controller**. The bicycle is pinball and
+joystick you ride — Mario in the kart, the Marble Madness marble;
+OpenStreetMap is the table; the ride is a program written on the
+street graph. ([`VISION.md`](VISION.md) — Budge × OSM)
 
 ## Semantic gestures (spells)
 
@@ -9,7 +11,11 @@ Recognize movement patterns on the road graph — not raw GPS wiggles:
 
 | Gesture | Example |
 |---------|---------|
-| ROUNDABOUT(clockwise) | stir soup |
+| ROUNDABOUT(clockwise) | undo — and a transgression tick ([`transgression.md`](transgression.md)) |
+| STOP (brakes / zero speed) | *look* — flipper; focus this place; melt on roll-on ([`city-record.md`](city-record.md)) |
+| STOP(wait) at wait point | typical dwell → patience; short pass → coin at `p` ([`wait-points.md`](wait-points.md)) |
+| STOP(fake) | staged wait — patience *and* transgression |
+| GATHER at ferry / bus / tram | the wait is the pastime; `p` = 0 |
 | ROUNDABOUT(counterclockwise) | whisk cream |
 | ENCIRCLE(pond) | collect water |
 | COMPLETE_STREET | weave cloth |

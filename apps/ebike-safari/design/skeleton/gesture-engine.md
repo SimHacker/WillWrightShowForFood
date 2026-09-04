@@ -11,7 +11,11 @@ Detect **semantic gestures** on the road graph — not raw GPS wiggles.
 
 | Priority | Gesture | Detection sketch |
 |----------|---------|------------------|
-| P0 | `ROUNDABOUT_LOOP` | Enter mini-roundabout graph; ~360°; exit same arm |
+| P0 | `ROUNDABOUT_LOOP` | Enter mini-roundabout graph; ~360°; exit same arm. Clockwise = undo + transgression ([`../transgression.md`](../transgression.md)) |
+| P0 | `STOP` | Speed → 0 / brake event. Focus this node; dismiss on roll-on |
+| P0 | `STOP(wait)` | Snap to a wait point (light, sign, **drawbridge**). Typical band → patience. Short pass → Bernoulli(`p`) ([`../wait-points.md`](../wait-points.md)) |
+| P1 | `STOP(fake)` | In-band dwell where short-pass rate is high — patience + transgression |
+| P1 | `GATHER` | Live bodies at a ferry / bus / tram wait point — social wait, `p` = 0 |
 | P0 | `ENCIRCLE` | Closed loop around OSM `natural=water` / `leisure=park` polygon |
 | P0 | `ENCIRCLE(fountain)` × N | Repeated loops — pump strokes into **commons tank** |
 | P1 | `ENCIRCLE(block)` | Perimeter → **tend** shared community bed (not solo claim) |

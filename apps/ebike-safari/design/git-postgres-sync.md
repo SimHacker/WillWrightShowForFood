@@ -4,6 +4,10 @@
 yaml-jazz in GitHub; **GitHub Actions** sync into Postgres for GIS, sim, vectors. Changes
 in Postgres merge **carefully** back to Git without losing comments.
 
+Which side a thing belongs on is the backup test: restore last month's dump — should this
+be last month's version or today's? State goes in Postgres, authored content goes in Git.
+General doctrine: [moollm `designs/LEGACY-MIGRATION.md`](https://github.com/SimHacker/moollm/blob/main/designs/LEGACY-MIGRATION.md).
+
 ## Split
 
 | Git (PR-worthy, intent) | Postgres (hot, queryable) |

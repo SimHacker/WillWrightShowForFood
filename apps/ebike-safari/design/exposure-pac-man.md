@@ -53,6 +53,9 @@ Same POIs, different meaning:
 - 5 schools at 15:00 ≠ 5 schools at midnight
 - bakery at 07:00 ≠ bakery at 23:00
 
+Late night + full moon: the maze fills with power pellets. Just riding is the
+chomp — see [`transgression.md`](transgression.md).
+
 ## Semantic edge log (sketch)
 
 ```json

@@ -1,0 +1,105 @@
+# Sidecar — turn-tables.md
+topic:
+  id: turn-tables
+  status: coinage
+  priority: high
+  coined: 2026
+  slogan: "Two Turn Tables and a microphone."
+
+definition: >
+  A general-purpose interface control: you turn it to index a table. Discrete selection and
+  continuous parameter tracking are the same gesture at different resolutions, so one
+  primitive covers menus, knobs, and transport.
+
+the_puns:
+  # Four readings, four different things they buy.
+  turntable: "DJ instrument — a performance surface played by hand in real time. The VJ interface argument."
+  turn:      "Angle as input — unbounded, relative, reversible, no travel limit."
+  table:     "Lookup table — the CAM-6 contract, kernel banks, rule tables, color maps."
+  pie_menu:  "Don's 1988 control = a Turn Table with the quantizer on."
+
+core_claim:
+  one_line: "A pie menu is a quantized angle; a knob is an unquantized angle. Same control, shipped as unrelated widgets for forty years."
+  quantizer:
+    off:      "knob — continuous parameter, full resolution"
+    on_n:     "pie menu with N items — direction memory, self-revealing, mouse-ahead"
+    variable: "a quantizer, which is a musical control"
+
+modes:
+  - { name: select, what: "turn to a detent — which rule, neighborhood, kernel, scheduler" }
+  - { name: tune,   what: "turn freely — zoom, decay, focus, diffusion rate" }
+  - { name: scrub,  what: "turn back and forth — transport, not selector. Nobody builds this; it's free once angle is the input." }
+
+indirection:
+  # The essence is not rotation. It's a pointer operated by hand.
+  the_6502_had_exactly_two:
+    indexed_indirect:
+      syntax: "LDA ($40,X)"
+      order: "add index first, then dereference"
+      structure: "index a table of pointers — a dispatch table"
+      turn_table_meaning: "the turn chooses WHICH TABLE — context"
+    indirect_indexed:
+      syntax: "LDA ($40),Y"
+      order: "dereference first, then add index"
+      structure: "follow a pointer to a base, then index within it"
+      turn_table_meaning: "the turn chooses WHICH ENTRY — content"
+  why_two: "Two composed indirections is the interesting number: one selects context, one selects content. One can't express both; three is showing off."
+
+the_microphone:
+  what: "The third input is not a hand — it's a live signal driving the index."
+  sources: [audio, camera, MIDI clock, body position, cell value, noise]
+  precedent: "WarpOMatic (~2003) wired the performer's position and silhouette area to the parameters. The body was turning the tables, before the name existed."
+  engine_equivalent: "the phase matrix distinction between manual selectors and signal selectors"
+
+same_object_twice:
+  # The Construction Set's core component, seen from the interface side.
+  engine_component: "bank of behaviors + selector resolving to an index"
+  interface_component: "Turn Table"
+  mapping:
+    bank: "the table you turn through"
+    selector: "the Turn Table itself"
+    constant_source: "a hand on the dial"
+    signal_source: "the microphone"
+    nested_selectors: "two Turn Tables — indexed indirect into indirect indexed"
+  consequence: "If the engine is one component repeated, the interface is one control repeated."
+
+prior_art:
+  bouncing_sliders:
+    who: "David Tristram + Eric Raible, Panel Library, NASA Ames/NAS"
+    used_by: "Electropaint, performed live at Grateful Dead shows"
+    shared_venue: "USENIX Fifth Computer Graphics Workshop, Monterey, 16-17 Nov 1989 — where Don gave 'The Shape of PSIBER Space'; Dave mailed him the source after"
+    per_slider_params: [value, min, max, speed, wrap]
+    corrections_to_this_design:
+      one_widget_not_two: >
+        Control and signal source are the same widget. A bouncing slider runs on its own and
+        stays grabbable mid-motion. The DJ reading taken seriously: the platter is always
+        turning; the hand is an interruption, not the drive.
+      boundary_is_the_second_parameter: >
+        wrap makes a slider angular (a knob); without it, it bounces. Turn Tables have TWO
+        discretization parameters — quantizer (detents) and boundary (wrap/bounce/clamp).
+    also_shipped_1989: "Panel Editor emitted human-editable Scheme alongside C — 'binding is data' before it was a spec item"
+    cautionary_tale: >
+      Electropaint reached the world as an SGI Indy screensaver with the sliders HIDDEN,
+      playing back recorded performances. Hiding the controls is how an instrument becomes
+      wallpaper — same loss as CA toys hiding the machine, same argument as putting Jim's
+      meters on the front door.
+    repo: ../dave-tristram/raster-masters-panel-library.md
+
+spec:
+  - "angle in, index out, optional quantizer (detent count or detent set)"
+  - "boundary behavior: wrap | bounce | clamp — wrap is what makes it a knob"
+  - "self-driving: value, min, max, speed — the control runs when no hand is on it"
+  - "self-revealing on hesitation; out of the way on immediate movement"
+  - "bindable to mouse, touch, pen, jog wheel, MIDI encoder, gamepad, key pair, or signal — binding is data"
+  - "nameable and addressable; patches savable, shareable as URL, diffable"
+  - "labeled with what it drives, citation included — put the citation on the slider"
+  - "instrumentable — log which controls nobody finds"
+
+cross_links:
+  - cam-construction-set.md
+  - pie-menus-chi-88-and-beyond.md
+  - gesture-space.md
+  - connectedtv-touch-tuning-finger-pies.md
+  - warpomatic-video-background-removal.md
+  - ../jim-crutchfield/positive-feedback.md
+  - ../jim-crutchfield/crutchfield-machine.md

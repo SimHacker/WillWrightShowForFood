@@ -77,6 +77,62 @@ documents that raise them — the agenda for the conversation.*
    partition survive his scrutiny? And which parent function did the
    Self prototype's delegation *actually* use when hierarchies
    multiplied?
+5. **Slots that mutate other slots' guards.** Magic: The Gathering's
+  layer system exists because effects rewrite what other effects
+   match: a card that turns every nonbasic land into a Mountain
+   deletes the ability of a land that would have turned everything
+   into a Swamp, so "which is newer" is the wrong question — the
+   right one is which effect still *exists* to be asked. Rule 613.8a
+   defines the dependency in terms of guard mutation, and the
+   self-referential case (Humility and Opalescence, an enchantment
+   that removes the abilities of the creatures another effect just
+   made out of enchantments) is handled in at least one engine by
+   *trial application* — provisionally run the slots, observe which
+   outcomes move, derive the order, then run for real. Korz's
+   unique-most-specific-match has no room for a guard that is
+   undecidable until other slots have provisionally run. Is that a
+   new guard kind, a fixpoint one level above dispatch, or a case he
+   would rule out of the language on purpose
+   ([mtg-layers.md](examples/mtg-layers.md))?
+6. **Legislated total order as a third ambiguity policy.** Magic
+  cannot error and cannot ask a player to accept an undefined board,
+   so it stacks fallbacks: hand-authored layer order, then dependency
+   derived from guard mutation, then timestamp, and if the
+   dependencies form a loop, drop a tier. The judges' stated design
+   goal is not principle but expectation — make the answer "what we
+   would intuitively expect as often as possible." Does that read to
+   him as an admission about what specificity heuristics are always
+   doing, or as evidence that a declared lattice is exactly what
+   would have saved them thirty years of errata?
+7. **Rebinding instead of ordering — and self-amendment.** Fluxx
+  ([fluxx-nomic.md](examples/fluxx-nomic.md)) is a Korz context sitting
+   on a table: `Draw`, `Play`, `Limit`, `Other` are dimensions, a card
+   is a coordinate, exactly one is bound per dimension, and playing a
+   card rebinds and discards the displaced one. Conflict is
+   unrepresentable, so no layer system is needed — which reads as the
+   strongest possible argument for declared dimensions, made in a card
+   game in 1997. Two questions follow. First: is "at most one binding
+   per dimension" doing more work in Korz than the papers say out loud,
+   and is Magic's whole layer apparatus just the price of violating it?
+   Second, the harder one: Fluxx's ancestor is Peter Suber's **Nomic**
+   (1982, published in Hofstadter's *Metamagical Themas*), built to
+   embody the thesis of Suber's *The Paradox of Self-Amendment* — that
+   a rule of change may apply to itself and authorize its own
+   amendment. Korz′'s crystallization loop is an amendment process with
+   a ratification step. Does he think the self-amendment literature is
+   load-bearing for a two-tier dispatcher, or a category error?
+8. **Can the lattice itself be generated?** Dwarf Fortress's Myth and
+  Magic work generates each world's magic from a procedural creation
+   myth: which effects exist, what they cost, and what they are
+   *about* all come out of the generated cosmology, and a later
+   mythological event can flip a rule so that "suddenly people's
+   teleport spells don't work anymore" — the paper's assertions
+   demonstration, with thousands of agents re-dispatching underneath
+   and nothing in between written to expect it. Korz's dimensions are
+   declared by a programmer. What is the smallest change that lets a
+   *program* emit a dimension, and does the specificity lattice stay
+   sound when the axes arrive at runtime
+   ([df-procedural-magic.md](examples/df-procedural-magic.md))?
 
 
 

@@ -13,7 +13,9 @@ SvelteKit (or static) app reading [`../../DATA-CONTRACT.md`](../../DATA-CONTRACT
 - Ride polyline + scrubber/playhead
 - Speed / elevation from `*.series.json`
 - Home marker from manifest
-- Layer toggle: gestures, exposure (when available)
+- Layer toggle: gestures, exposure, transgression (when available)
+- **Transgression replay:** playhead warped to **1 event/sec** — not FIT wall-clock.
+  See [`../transgression.md`](../transgression.md). First tape: Schipluidenlaan clockwise loops.
 
 ## Base map vs overlays — do not pollute OSM
 
