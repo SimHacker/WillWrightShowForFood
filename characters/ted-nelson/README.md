@@ -12,32 +12,19 @@ The man who named hypertext — and a key **discussant for the memorials**: Enge
 
 His [**eulogy for Douglas Engelbart**](../douglas-engelbart/eulogy-ted-nelson.md) (Computer History Museum, 2013) — which he calls the best writing he ever did — is here as a formatted primary source. *"I feel like I've lost my best planet."*
 
-## Writing to Ted
+## Two corrections he put on the record
 
-His mail is handled by **Keith Shapiro, Assistant to Ted Nelson** (`tandm@xanadu.net`). A reply will
-usually thank you for your note, regret that Dr Nelson has no time to reply — and then answer your
-question anyway.
+Ted restricts his correspondence deliberately, and this page does not explain how to get around
+that. What it keeps instead is what he took the trouble to correct.
 
-**Treat a reply from Keith as a reply from Ted.** The answers carry Ted's own substance and often his
-exact words, and they arrive because Ted judged your note worth answering. A short reply through
-Keith is not a brush-off; it means you got through. In June 2018 Don wrote asking about a name he
-could not make out in Ted's IEEE interview; Keith wrote back that replying was his job, suggested
-Don post his comments on Ted's work somewhere public, and handed over the line — *"People think it
-sprang from the brow of Zeus."* That fixed the transcript.
+*"People think it sprang from the brow of Zeus"* — his own phrasing, supplied in 2018 for a
+transcript of his IEEE interview. A line about how people imagine ideas arrive, fully formed and
+from nowhere, which is the misconception his whole career argues against.
 
-Sometimes he answers directly. In January 2020, asked who had coined *self revealing* — Don had
-heard "Klaus Landsberg" in a talk and could not match it to anyone — Ted replied himself, signed
-"Best, TN", and stated his policy in one parenthesis:
-
-> (I rarely reply to strangers, wanting not to expand email obligations, but this seemed worth
-> answering.)
-
-The name was **Klavs Landberg**, his supervisor at Datapoint in 1981. He ended with *"Don't know how
-to put this in Wikipedia."*
-
-So the deciding question is not who you are, it is whether the note is worth answering. Both times
-Don got through, he was asking one specific factual question that nobody else could answer. He is 89
-and guards his attention deliberately. Keep it short, ask one thing, don't follow up twice. Protocol
-details in `CHARACTER.yml`.
+**Klavs Landberg**, not "Klaus Landsberg" — his supervisor at Datapoint in 1981, who wrote an
+operating system for the Datapoint 2200 in Denmark "before they would acknowledge that it was a
+computer," and who with Harry Pyle attempted an OS to "Outdo Unix." Ted's closing line was *"Don't
+know how to put this in Wikipedia,"* which reads as a standing request; consider it filed here in
+the meantime. Details in [`CHARACTER.yml`](CHARACTER.yml).
 
 Verifiable sources in `CHARACTER.yml`. Subject may request correction or removal anytime.

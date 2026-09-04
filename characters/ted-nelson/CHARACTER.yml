@@ -25,55 +25,30 @@ invitation:
 bio:
   summary: "**Ted Nelson** (b. 1937) — coined **hypertext** and **hypermedia**, founded **Project Xanadu**, and wrote **Computer Lib / Dream Machines** (1974). Champion of **transclusion**, visible parallel connections (Xanalinks vs jump-only weblinks), and **intertwingularity** — 'everything is deeply intertwingled.' A direct inspiration for Don's HyperTIES work at Maryland and a north star for the Repo Show."
 
-correspondence_protocol:
-  assistant: "Keith Shapiro — Assistant to Ted Nelson"
-  # Personal address deliberately omitted from this public repo per
-  # schemas/portrayal-standards.md ("what we avoid: private contact info").
-  # The xanadu.net assistant channel is a published project address; it stays.
-  channel: "tandm@xanadu.net — Keith has handled the mail since at least 2018. A personal address is on file privately."
-  how_it_works: |
-    Ted receives a great deal of mail and does not have time to answer all of it. Keith Shapiro
-    answers it for him. A typical reply thanks you for your note, regrets that Dr Nelson does not
-    have time to reply — and then answers your actual question anyway.
-  guidance: |
-    **Treat a reply from Keith as a reply from Ted.** The answers Keith sends carry Ted's own
-    substance, often his exact words, and they arrive because Ted judged the note worth answering.
-    A short reply through Keith is not a brush-off. It means you got through.
-  worked_example: |
-    June 2018. Don was transcribing Ted's IEEE interview for people who would not watch the video,
-    and could not make out a name at 2:40 — it sounded like "Franklin Brouwer Zeus" and matched
-    nothing. He wrote to ask. Keith replied that Dr Nelson had no time to reply, that replying was
-    Keith's job, that it would be nice if Don posted his comments on Ted's work in some public
-    forum — and then supplied the line:
+# NOTE, deliberate: there is no "how to reach Ted" section in this public file, and there
+# should not be. He is 89, he restricts his correspondence on purpose, and publishing a
+# playbook for getting past that would be the opposite of respecting it — however
+# admiringly written. Contact routing lives in Don's private correspondence records.
+# What belongs here is the reverse: things Ted took the trouble to put ON the record.
 
-      "People think it sprang from the brow of Zeus."
+corrections_from_ted: |
+  Kept because he asked for the record to be right, and in one case said so outright.
 
-    Which is the answer, and unmistakably Ted's phrasing. The transcript was corrected.
-  he_sometimes_answers_directly: |
-    January 2020. Don asked who "Klaus Landsberg" was — the man Ted credited with the term
-    *self revealing* in a talk — since the only Wikipedia match was clearly the wrong person.
-    Ted answered himself, signed "Best, TN", and opened with his policy stated plainly:
+  **"People think it sprang from the brow of Zeus."** Ted's own phrasing, supplied in June 2018
+  when Don was transcribing his IEEE interview for people who would not watch the video and could
+  not make out a name at 2:40. It is a line about how people imagine ideas arrive — fully formed,
+  from nowhere — which is exactly the misconception his whole career argues against.
 
-      "(I rarely reply to strangers, wanting not to expand email obligations,
-       but this seemed worth answering.)"
+  **Klavs Landberg**, not "Klaus Landsberg." Ted corrected this himself in January 2020, after Don
+  asked about the man Ted had credited with the term *self revealing* in a talk. Landberg was
+  Ted's supervisor at Datapoint in 1981, and had written an operating system for the Datapoint 2200
+  in Denmark "before they would acknowledge that it was a computer." With Harry Pyle he attempted
+  an OS to "Outdo Unix" — "which was a bad idea, but I documented that system till Datapoint
+  folded." Ted's closing line was **"Don't know how to put this in Wikipedia,"** which reads as a
+  standing request. Consider it filed here in the meantime.
 
-    Then he corrected the name to **Klavs Landberg**, his supervisor at Datapoint in 1981, who had
-    written an operating system for the Datapoint 2200 in Denmark "before they would acknowledge
-    that it was a computer," and who with Harry Pyle attempted an OS to "Outdo Unix" — "which was a
-    bad idea, but I documented that system till Datapoint folded." He closed: "Don't know how to
-    put this in Wikipedia."
-
-    Two things to take from it. The filter is deliberate and he will name it. And the deciding
-    question is not who you are, it is whether the note is worth answering — so make it worth
-    answering. Both replies, 2018 and 2020, came back because Don asked one specific factual
-    question he could not resolve himself.
-    Already public: Don published this reply in his Medium archive and on Hacker News.
-
-  courtesy: |
-    Ted is 89. He guards his attention on purpose and owes nobody access. Keep notes short, make
-    the ask singular, and do not follow up twice. Don also got Dan Gackle to fix a typo in a
-    quotation of Ted on Hacker News — "you know NOT where" — because getting his words right is
-    the least the rest of us can do.
+  Also: a misquotation of Ted on Hacker News — "you know NOT where" — was corrected at Don's
+  request. Getting his words right is the least the rest of us can do.
 
 sources:
   wikipedia: "https://en.wikipedia.org/wiki/Ted_Nelson"
