@@ -25,9 +25,12 @@ Satirical tech-critical print magazine (1998, 2000); revived ~2025–2026 with P
 The tagline is the compressed form of a question first asked at the founding of AI, and the chain is
 documented in public at all three points.
 
-**Douglas Engelbart, to Marvin Minsky**, as Jaron Lanier reported it in his review of John Markoff's
-*What the Dormouse Said* (*American Scientist*, July–August 2005,
-[archived](https://web.archive.org/web/20110312232514/http://www.americanscientist.org/bookshelf/pub/early-computings-long-strange-trip)):
+**Douglas Engelbart, to Marvin Minsky**, as Jaron Lanier reported it — first-hand, "Engelbart once
+told me" — in his review of John Markoff's *What the Dormouse Said* (*American Scientist*,
+July–August 2005). Full review formatted in this repo:
+[`../../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md`](../../jaron-lanier/sources/2005-american-scientist-early-computings-long-strange-trip.md),
+with section notes and citation cautions in
+[`2005-american-scientist-dormouse.md`](../../jaron-lanier/sources/2005-american-scientist-dormouse.md).
 
 > Engelbart once told me a story that illustrates the conflict succinctly. He met Marvin Minsky — one
 > of the founders of the field of AI — and Minsky told him how the AI lab would create intelligent

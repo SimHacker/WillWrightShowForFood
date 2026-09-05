@@ -88,6 +88,42 @@ Two cultures that looked compatible and were not: Engelbart / SRI (human-centere
 
 Lanier is the living witness of that telling. Memorial discussant for Marvin: [`../../marvin-minsky/ideas.md`](../../marvin-minsky/ideas.md).
 
+### Cite this version, not the other one
+
+Two things to know before quoting it anywhere, because both bite.
+
+**Lanier's is the first-hand chain.** He writes "Engelbart once told me," and reports Minsky's side as
+*reported speech* — "Minsky told him how the AI lab would create intelligent machines" — not as a
+quotation. **Kevin Kelly printed a version eleven years earlier**, in *Out of Control* (1994, ch. 3),
+formatted as a script with speaker labels: `MINSKY: We're going to make machines intelligent. We are
+going to make them conscious!` Kelly flags it as what the two "are reputed to have had" and dates it
+"when the two gurus met at MIT in the 1950s." That script version is the one that spread, and it
+reads as a transcript when nobody recorded anything. So: **quote Engelbart's line, paraphrase
+Minsky's, and don't assert where the meeting happened.** Markoff's *Harper's* piece (2015)
+reproduces Kelly's text, so it is not a second witness.
+
+**And the paragraph is internally loose.** Lanier sets the AI side up as "centered on the Stanford AI
+lab," then illustrates with Minsky, who ran MIT's. He is describing the West Coast AI culture the
+book is about and reaching for Minsky as an emblem of the two cultures. Fair, but a careful reader
+will catch it, so don't claim the exchange happened at SAIL.
+
+### The honest opposition, twice, signed
+
+Worth having ready, because it is the good-faith counter and it keeps getting made. Kelly, having
+just told the story: *"This story is usually told by engineers working to make computers more
+friendly, more humane, more people centered. But I'm squarely on Minsky's side — on the side of the
+made… But what are we going to do for the machines?"* Which is why the position lands better as a
+question about the **allocation of effort** than as a verdict about whether AI is worth doing.
+
+### The nine-word modern form
+
+David Temkin's *In Formation* tagline — **"Every day, computers are making people easier to use"** —
+is Engelbart's question answered in the past tense, and **Ted Nelson tweeted it** crediting Temkin in
+2018. The chain and the counter-replies:
+[`../../david-temkin/sources/mesa-and-in-formation.md`](../../david-temkin/sources/mesa-and-in-formation.md).
+The same argument gets a stage and two moderators in 1997:
+[`../../ben-shneiderman/agents-debate-1997.md`](../../ben-shneiderman/agents-debate-1997.md).
+
 ## 9. Close
 
 The book as "a hedge against complacency" for engineering students:
