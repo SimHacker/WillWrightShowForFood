@@ -1,0 +1,81 @@
+# Charles London — invitation portrayal. NOT Charles London.
+# Standards: ../../schemas/portrayal-standards.md
+# Derived from README.md; every claim below traces to a cited thread there.
+
+character:
+  id: charles-london
+  name: "Charles London"
+  type: invitation
+  signifier: "💎"                        # the Plumbob
+  status: living
+  field: "Game art — Maxis, The Sims era; author of the Plumbob"
+  home: characters/charles-london/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3                      # public Maxis Alumni posts; not yet contacted
+  authored_by: don-hopkins
+  needs_confirmation:
+    - "Contact Charles London; consent for this room and for quoting him."
+    - "Who is on the scooter in the caricature? Who is DECO?"
+    - "The Brain UI lobe icons Draft 7 assigns him — did he draw them, and do they survive?"
+    - "The Spinning Arrow Of Shame the Plumbob replaced: Don made the model, Charles made the successor. Get his account."
+    - "Which zip file held the scooter art, and what else is in it?"
+    - "Full credit list — what else at Maxis is his?"
+
+invitation:
+  status: not_yet_written
+  consent: not_yet_asked
+  contact: "via Maxis Alumni (Facebook)"
+
+bio:
+  summary: |
+    **Charles London** — Maxis artist during The Sims era. By his own account he drew the
+    **Plumbob**, the floating green indicator above the active Sim, as *placeholder* art that
+    **art lock** then forbade him to improve: *"the placeholder art I'd made for the active
+    character indicator was forbidden to be updated, regardless of any amount of my cajoling. We
+    call it the Plumbob now and it's the symbol of the whole franchise."* Asked directly whether
+    Don deserved the credit, he said *"Nope, it was me,"* and *"The plumbob replaced the arrow."*
+
+why_a_room: |
+  He surfaces three separate times in this archive, each time as the person who actually made the
+  thing: author of the Plumbob and the Brain UI's assigned lobe-icon artist; identified in
+  Patrick's Christmas 1998 Maxis office photos; and the painter of the scooter caricature found
+  inside a shipped Sims zip file — *"I drew that."* The most recognizable icon in life-sim games,
+  the discarded brain interface, and an easter egg buried in the assets are one artist.
+
+appearances:
+  - thread: "Brain UI / beta screenshots"
+    date: "2021-05-31"
+    source: ../will-wright/sources/2021-05-31-brain-ui-beta-screenshots/README.md
+    what: |
+      The Plumbob account in his own words. Design Document Draft 7 assigns the Brain UI's lobe
+      icons to him — *"Charles will try icons for the letters."* First-hand account of EA-era
+      art lock and why the shipped UI renders at 800×600.
+  - thread: "Patrick's Maxis photos"
+    date: "1998-12"
+    source: ../patrick-j-barrett-iii/media/README.md
+    what: "Identified in the office by Veronica Gonzalez — 'Charles London !!!' — confirms an 'Eric' beside him."
+  - thread: "The scooter caricature"
+    date: "2015-02-06"
+    source: README.md#the-scooter-caricature
+    what: |
+      Sean Baity, digging for the Sims 1 voice-talent recording, found a hand-painted caricature
+      in a zip file and posted it. Charles: *"I drew that."* Watercolour or gouache, scanned, and
+      wired to an OK button — about-box or easter-egg art in a shipped asset bundle. A Maxis
+      person being climbed on by his own Sims, one standing on his head in the Plumbob's position.
+
+themes:
+  - "Placeholder art that ships and becomes canonical, because process forbade fixing it"
+  - "Art lock as a design force — the shipped artifact is the one the schedule allowed"
+  - "Easter eggs in asset bundles as an accidental archive"
+
+repo_orbit:
+  - { path: ../will-wright/sources/2021-05-31-brain-ui-beta-screenshots/README.md, why: "The Plumbob account and art lock" }
+  - { path: ../eric-hedman/barkys-revenge.md, why: "The other artist in the same thread; posted the DECO caricature" }
+  - { path: ../eric-bowman/media.md, why: "'Bobo', whose Brain UI this was; throbbing-brain sketches" }
+  - { path: ../sean-baity/README.md, why: "Found and posted the scooter painting" }
+
+see_also:
+  - { path: README.md, why: "The full portrayal, with images and open questions" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Consent levels and portrayal rules" }

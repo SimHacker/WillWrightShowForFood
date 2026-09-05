@@ -19,12 +19,21 @@ representation:
   subject_rights: correction_edit_or_deletion_anytime
 
 invitation:
-  status: sent
-  consent: asked
+  status: accepted
+  consent: granted
   sent: 2026-08-20
+  accepted: 2026-09-05
   channel: chat
   document: invitation.md
   show_seed: repo-shows/heather-and-steve/
+  note: |
+    Accepted 2026-09-05 — an unqualified yes. In the same reply he took up Don's proposal for
+    QR codes on Sims objects and immediately found the better use for it than the one Don
+    proposed: not a link back to the creator's site, but a link to *education about the object*
+    — sending players from a prop to what it teaches. See ideas.md § QR codes.
+  heather_separate: |
+    Heather Castillo was invited the same day and replied warmly, but has not said yes yet.
+    Steve's acceptance is his own and does not stand in for hers.
 
 bio:
   summary: |

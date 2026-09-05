@@ -26,7 +26,7 @@ Whole-career pair show; Afterlife × ZombieSims flagship episode.
 Magnum-opus pack still shipping — the project they build *together* after the fan-site era.
 
 ### 5. Soul City + Soul City bridges
-Round-tripping saves; federated catalogs — [`../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md`](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md).
+Round-tripping saves; federated catalogs — [`../../catalogs/soul-city/README.md`](../../catalogs/soul-city/README.md).
 
 ### 6. Gallium / Proxi
 What nested-simulation craft meant inside Will's AI life-sim experiment.
@@ -37,6 +37,38 @@ Chum replaces blood, blood replaces water, never backward — Maslow for fluids,
 floods, the pee-puddle question, moveable-feces combination rules, z-buffered layer
 compositing, and plate-style attachment slots on every layer.
 → [`../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md`](../../repo-shows/heather-and-steve/sources/2026-08-20-brain-flurries-and-the-hierarchy-of-bleeds.md)
+
+### 8. QR codes — giving a linkless game links, 26 years late ★
+Don's proposal: Sims objects carry a QR code, either as an in-world sprite with a forward-pushed
+z-buffer toggled by a **"QR Code"** action, or — far cheaper — as a BMP injected into an **About**
+dialog. Point your phone at the screen and you are on the creator's page. Steve is in, and moved the
+idea somewhere better than where it started (below).
+
+**Why it feels obvious yet nobody did it: it was impossible while the game was current.** The Sims 1
+shipped in 2000. QR existed (Denso Wave, 1994), but phone cameras were not practical scanners until
+roughly 2010 and OS-level scanning came later still. This is not a gap someone overlooked — it is a
+**genuinely new affordance for a 26-year-old runtime**, which is a much better story.
+
+**The move underneath it:** an optical hyperlink out of a runtime with no link affordance at all. The
+Sims 1 has no browser, no clipboard bridge, no URL type, and needs none, because **the resolver is
+the player's phone.** The host application never has to cooperate or even know. Any closed, finished
+platform that can draw a bitmap can be given links after the fact.
+
+**Steve's version is the stronger one.** Don proposed attribution — link back to my site. Steve
+proposed pedagogy — link to *what this object teaches*, so a player can scan a prop and learn about
+the real thing. That is a **citation apparatus for a game world**: every object footnoted, sourced,
+and followable. It is the version worth building first.
+
+Design questions worth working out together on camera:
+- A short URL is mandatory. At 800×600, a Version-1 QR (21×21 modules) at 2px/module plus quiet zone
+  is ~50px — plenty for a redirector, nowhere near enough for a raw GitHub URL.
+- QR error correction (Reed–Solomon, 7–30% recovery by level) means a partly-occluded in-world sprite
+  may still scan — which softens the z-buffer problem the sprite approach exists to solve.
+- **Link rot is the real risk.** A 26-year catalog will outlive its URLs. Bake in a redirector the
+  creator controls, not destination URLs frozen into objects forever.
+
+Generalized as a dispenser pattern — the object issues the ticket, the ticket points back at the
+object — in [`moollm/designs/webtop/DISPENSERS-AND-SOUVENIRS.md`](https://github.com/SimHacker/moollm/blob/main/designs/webtop/DISPENSERS-AND-SOUVENIRS.md).
 
 ## Sources (public)
 

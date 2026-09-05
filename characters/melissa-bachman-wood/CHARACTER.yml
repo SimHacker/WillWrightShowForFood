@@ -1,0 +1,88 @@
+# Melissa Bachman-Wood — invitation portrayal. NOT Melissa Bachman-Wood.
+# Standards: ../../schemas/portrayal-standards.md
+# Derived from README.md, the-box.md, working-as-implemented.md.
+
+character:
+  id: melissa-bachman-wood
+  name: "Melissa Bachman-Wood"
+  type: invitation
+  signifier: "📦"                        # the box she mailed
+  status: living
+  field: "Game production / QA — Maxis and EA, The Sims era"
+  home: characters/melissa-bachman-wood/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3                      # public Maxis Alumni posts; has corresponded with Don, but portrayal consent not asked
+  authored_by: don-hopkins
+  needs_confirmation:
+    - "Consent to name and quote her here."
+    - "Her exact role and dates at Maxis/EA — the 2002 bug report shows her only as a prior assignee."
+    - "What else surfaced after 2017. She mentioned 'a whole collection of Sims 1 Prima guides?!'"
+
+invitation:
+  status: not_yet_written
+  consent: not_yet_asked
+  contact: "via Maxis Alumni (Facebook); has previously corresponded with Don by mail"
+
+bio:
+  summary: |
+    **Melissa Bachman-Wood** — Maxis/EA, The Sims era. Named on a 2002 bug report as the previous
+    assignee, which places her in the production or QA chain during *Deluxe + Unleashed*. She kept
+    a box of material, photographed it for Maxis Alumni around **2017**, and then **mailed it to
+    Don** — including the title page of **The Sims — Design Script**, which lists five working
+    titles: *Project X*, *Jefferson*, *T.D.S. the Tactical Domestic Simulator*, *T.D.S. the Total
+    Dollhouse System*, and *What the Hell Is It?*
+
+why_she_matters: |
+  **She is why the codenames are legible.** `TDSB.pdf`, `TDSBInfo.pdf`, `TDSEditToDo.pdf`, and
+  `TDRObjects.pdf` sit in Don's published design-documents directory as cryptic filenames; this
+  title page expands the acronym. **She tried to place the collection properly** — in the thread
+  she says she would *"want to start with the Sims folks still at EA, since they own the
+  franchise"* before approaching an outside library, which is an ex-employee doing rights
+  diligence on her own memorabilia, unprompted. **And she mailed it to Don**, who confirmed
+  receipt: *"Your wonderful package arrived in the mail! I will scan it and put the PDF online as
+  soon as I get a chance!"*
+
+open_debts:
+  - what: "Scan the Design Script and publish the PDF"
+    owed_by: don-hopkins
+    since: "2018"
+    note: "Don's own public commitment, still outstanding."
+
+artifacts:
+  - what: "The Sims — Design Script, title page listing five working titles"
+    where: media/the-sims-design-script-title-page.png
+    significance: "Expands the TDS/TDR acronyms that name the published design-document files"
+  - what: "Bug #4124"
+    significance: "Names her as previous assignee; dates her presence in the Deluxe + Unleashed chain"
+  - what: "Envelope sketch"
+    where: the-box.md
+  - what: "Twelve artifacts total"
+    where: the-box.md
+    note: "What each one proves, and what still needs scanning"
+
+threads:
+  - thread: "Working as Implemented"
+    date: "2022-03"
+    source: working-as-implemented.md
+    what: |
+      Melissa exports Sims 1 bug tags — *WAI*, *Working as (poorly) Designed*, *Screw It We're
+      Shipping* — to King colleagues; Jim Mackraz, Eric Hedman, Russ Fan, and Cory Tsang fill in
+      the rest of the lexicon. *The Look (TM).*
+
+themes:
+  - "Ex-employees as the actual archive, doing rights diligence unprompted"
+  - "Working titles as evidence of what a game was trying to be"
+  - "Studio bug-tag vocabulary as institutional folklore"
+
+repo_orbit:
+  - { path: the-box.md, why: "The artifacts" }
+  - { path: working-as-implemented.md, why: "The bug-tag lexicon thread, 2022" }
+  - { path: ../will-wright/sources/the-sims-design-documents-zip/README.md, why: "Where the TDS/TDR filenames live" }
+  - { path: ../will-wright/sources/2000-05-17-transmogrifier-naming-saga/README.md, why: "The other Maxis naming fight" }
+  - { path: ../don-hopkins/README.md, why: "Received the package" }
+
+see_also:
+  - { path: README.md, why: "The full portrayal" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Consent levels and portrayal rules" }
