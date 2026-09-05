@@ -59,6 +59,17 @@ proposed pedagogy — link to *what this object teaches*, so a player can scan a
 the real thing. That is a **citation apparatus for a game world**: every object footnoted, sourced,
 and followable. It is the version worth building first.
 
+**Where it landed: Wikipedia.** An educational object scans through to the real thing's Wikipedia
+article — which also solves the durability problem, since the creator only maintains a mapping from
+object to article instead of keeping a destination page alive for 26 years.
+
+**The dialog wins; the sprite becomes a game mechanic.** Popup dialog images are the practical
+answer — more pixels, no compositing, no occlusion. The in-world floating sprite loses to something
+error correction cannot fix: *dumb Sims walk in front of it*, which makes scanning intermittent
+rather than cleanly broken. But that failure is a brief for a different feature. A code you can only
+catch briefly, partially, from the right angle, is a code you have to **catch** — the Pokémon
+mechanic arriving backwards. Occlusion is a bug in a citation and a feature in a hunt.
+
 Design questions worth working out together on camera:
 - A short URL is mandatory. At 800×600, a Version-1 QR (21×21 modules) at 2px/module plus quiet zone
   is ~50px — plenty for a redirector, nowhere near enough for a raw GitHub URL.
@@ -69,6 +80,25 @@ Design questions worth working out together on camera:
 
 Generalized as a dispenser pattern — the object issues the ticket, the ticket points back at the
 object — in [`moollm/designs/webtop/DISPENSERS-AND-SOUVENIRS.md`](https://github.com/SimHacker/moollm/blob/main/designs/webtop/DISPENSERS-AND-SOUVENIRS.md).
+
+### 9. The TypeScript object compiler — and decompiling 26 years ★
+Don is writing an isomorphic TypeScript pipeline (browser *and* Node) for reading, writing, and
+generating Sims objects, with **SimAntics written as YAML**. Source is a directory: throw images and
+YAML in a folder, run the compiler. YAML because it has comments — which disqualifies JSON, and
+Transmogrifier supplied a lifetime's worth of XML.
+
+It runs in the browser on purpose. The people who make Sims content are mostly **artists, not
+programmers**, so a CLI would exclude the audience the tool exists for. Pointy and clicky is the
+requirement.
+
+**The topic for Steve:** running the compiler *backward*. If existing IFF behaviors decompile into
+the same readable YAML, his ~26-year catalog stops being opaque binaries and becomes greppable,
+diffable source — simultaneously the best documentation the format could have and a corpus of the
+community's own idioms. He is also the ideal first non-Don user and the honest test of the
+artist-not-programmer claim.
+
+The format trap and why the YAML has to be a real language rather than a bytecode dump:
+[`moollm/designs/sim-obliterator/BRIDGE.md`](https://github.com/SimHacker/moollm/blob/main/designs/sim-obliterator/BRIDGE.md).
 
 ## Sources (public)
 
