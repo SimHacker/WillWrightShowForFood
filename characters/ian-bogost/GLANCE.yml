@@ -7,6 +7,8 @@ description: |
   Coined procedural rhetoric — argument encoded in rules and processes, "an unholy blend of
   Will Wright and Aristotle." Cow Clicker (2010): satire that went viral, then ended honestly
   in the Cowpocalypse. The lens this repo reads Sims objects through, Motive.c to Dumbold.
+  WashU distinguished professor across three colleges; comp-lit PhD; edits Platform Studies
+  with Montfort and Object Lessons with Schaberg.
 
 keywords:
   - ian bogost
@@ -17,6 +19,9 @@ keywords:
   - play anything
   - game criticism
   - platform studies
+  - object lessons
+  - washington university st louis
+  - the small stuff
 
 card: CARD.yml
 
@@ -41,6 +46,7 @@ read_order:
   - roles-not-characters.md
   - CARD.yml
   - sources/procedural-rhetoric-quote.md
+  - sources/affiliation-and-books.md
   - invitation.md
 
 see_also:
@@ -57,6 +63,7 @@ see_also:
     - { path: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml, why: "Bogost's cow at the center of the cube" }
   deep:
     - { path: README.md, why: "Portrayal" }
+    - { path: sources/affiliation-and-books.md, why: "Verified affiliation, books, series edited" }
     - { path: sources/cow-clicker.md, why: "Mechanics, Cowpocalypse, reception" }
     - { path: correspondence/README.md, why: "First-contact thread" }
 
@@ -66,5 +73,5 @@ elsewhere:
   - path: https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/FRICTION-FIELDS.md#the-procedural-rhetoric-of-direct-manipulation
     why: "Procedural rhetoric of direct manipulation — the friction-field legitimacy test"
 
-open_questions:
-  - "Affiliation: README says Georgia Tech; believed at Washington University in St. Louis since ~2021 — verify before editing portrayal"
+resolved:
+  - "Affiliation — was stale (Georgia Tech). Verified 2026-09-06 from his own About page + CV: WashU since 2021. See sources/affiliation-and-books.md"

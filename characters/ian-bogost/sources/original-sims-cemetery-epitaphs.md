@@ -102,7 +102,7 @@ in video games. Two players, two registers, one Bob.*
 > pool.
 
 *The very first stone in the 2006 capture, and the game's most famous
-death, deadpanned. The [Soul City pool](../../catalogs/soul-city/README.md#the-pool)
+death, deadpanned. The [Soul City pool](../../../catalogs/soul-city/README.md)
 turns this exact death into a protest ritual.*
 
 > **Ken Lover** — Died on october-31-2004. Born on october-27-1567. Lived

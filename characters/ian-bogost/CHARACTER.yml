@@ -6,6 +6,38 @@ character:
   field: "Procedural rhetoric; Persuasive Games; Cow Clicker; game criticism (Play Anything, How to Talk about Videogames)"
   home: characters/ian-bogost/
 
+# Verified 2026-09-06 against bogost.com/about + self-published CV.
+# Room previously said "Georgia Tech" — out of date since 2021.
+affiliation:
+  record: sources/affiliation-and-books.md
+  current:
+    institution: "Washington University in St. Louis"
+    since: 2021
+    title: "Barbara and David Thomas Distinguished Professor (title since 2022)"
+    appointments:
+      - "Professor of Film & Media Studies — School of Arts & Sciences (chaired the program 2021–2024)"
+      - "Professor of Computer Science and Engineering — McKelvey School of Engineering"
+      - "Professor of Design and Visual Arts — Sam Fox School of Design & Visual Arts"
+    administrative: "Co-Executive Director, Office of Public Scholarship (Provost's Office)"
+  prior:
+    institution: "Georgia Institute of Technology"
+    title: "Ivan Allen College of Liberal Arts Distinguished Chair in Media Studies"
+    note: "Joint appointment — Literature, Media & Communication + Interactive Computing"
+  outside:
+    - "Founding Partner, Persuasive Games LLC"
+    - "Contributing writer, The Atlantic"
+  doctorate: "Ph.D. Comparative Literature, UCLA, 2004 — the Aristotle half of the quote is the trained half"
+
+series_edited:
+  platform_studies:
+    press: "MIT Press"
+    co_editor: nick-montfort
+    why_here: "Reads a design off its substrate — Atari VCS, Amiga, NES, BBC Micro, Minitel, Flash. Same method this repo applies to NeWS, PostScript, SimAntics."
+  object_lessons:
+    press: "Bloomsbury, 2013–"
+    co_editor: "Christopher Schaberg"
+    why_here: "Short books, one ordinary object each. Sustained attention to a single object is what Motive.c does from the inside."
+
 representation:
   governed_by: ../../schemas/portrayal-standards.md
   consent_level: 2
@@ -43,6 +75,7 @@ connections:
   don: "Sims objects as procedural-rhetoric case studies; Cow Clicker / MOONEY cube parody chain"
 
 see_also:
+  - { path: sources/affiliation-and-books.md, why: "Current affiliation, eleven books, series edited — verified 2026-09-06" }
   - { path: sources/procedural-rhetoric-quote.yml, why: "Wright + Aristotle citation chain" }
   - { path: sources/cow-clicker.yml, why: "Cow Clicker — mechanics, Cowpocalypse, HN" }
   - { path: ../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml, why: "Don's Unite 2012 cow joke harvest" }
@@ -57,6 +90,8 @@ see_also:
 
 sources:
   public:
+    - { title: "About — Ian Bogost (current affiliation, self-published)", url: "http://www.bogost.com/about/", local: sources/affiliation-and-books.md }
+    - { title: "Ian Bogost CV (self-published PDF)", url: "http://bogost.com/downloads/I.%20Bogost%20CV.pdf", local: sources/affiliation-and-books.md }
     - { title: "Persuasive Games (MIT Press, 2007)", url: "https://mitpress.mit.edu/9780262026147/persuasive-games/" }
     - { title: "Video Games Are Better Without Characters (The Atlantic, 2015)", url: "https://www.theatlantic.com/technology/archive/2015/03/video-games-are-better-without-characters/387556/" }
     - { title: "Cow Clicker", url: "http://www.cowclicker.com/" }

@@ -1,9 +1,21 @@
 # Ian Bogost — guest room
 
 **Procedural rhetoric** (*Persuasive Games*, MIT Press, 2007); ***Cow Clicker*** (2010) — satire that
-became a phenomenon and ended honestly. Georgia Tech game critic/designer. This room supports a
+became a phenomenon and ended honestly. This room supports a
 planted show on **The Sims as procedural rhetoric** (Motive.c → Wedding Playset → Dumbold) and Don's
 **QGCon inclusivity paper** stack.
+
+Now the **Barbara and David Thomas Distinguished Professor** at **Washington University in St. Louis**,
+appointed in three colleges at once — Film & Media Studies, Computer Science & Engineering, and Design
+& Visual Arts — and co-executive director of its Office of Public Scholarship. Previously the Ivan
+Allen College Distinguished Chair in Media Studies at **Georgia Tech**. Founding partner of Persuasive
+Games LLC, contributing writer at *The Atlantic*, eleven books, most recently *The Small Stuff*
+(2026). Series editor of **Platform Studies** with [Nick Montfort](../nick-montfort/README.md) and of
+Bloomsbury's **Object Lessons** with Christopher Schaberg.
+
+Full sourced record: [affiliation and books](sources/affiliation-and-books.md) — the doctorate is in
+**comparative literature**, which is worth knowing before reading the Aristotle half of the quote
+below.
 
 ## Procedural rhetoric — cited
 
