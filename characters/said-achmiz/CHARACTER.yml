@@ -1,0 +1,135 @@
+# CHARACTER.yml — said-achmiz
+# Standards: ../../schemas/portrayal-standards.md (read once — do not repeat per character)
+
+character:
+  id: said-achmiz
+  name: "Said Achmiz"
+  type: invitation
+  signifier: "📐"
+  status: living
+  field: "Interface designer and implementor — gwern.net design/JS/CSS; GreaterWrong frontend and themes"
+  home: characters/said-achmiz/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+privacy:
+  rule: |
+    Portray the published work under the name he publishes under. No research or
+    speculation about legal identity, location, employer, or photographs.
+  format_note: |
+    Written answers, audio-only, or altered voice are first-class formats here, not
+    accommodations. No camera required, ever. A written exchange conducted entirely in
+    a repo — issues, PRs, review comments — is a completely acceptable "show" and may
+    suit this guest better than a call.
+
+scope:
+  subject: "His published interface and design work."
+  rule: |
+    Portray the work. Nothing about his conduct, disputes, or personal
+    characteristics belongs here — ours or anyone else's. If he wants to widen the
+    subject, that is his to do.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: null
+  design_pack: https://github.com/SimHacker/moollm/tree/main/designs/webtop
+  paired_guest: gwern
+  note: |
+    Invited in his own right, not as an appendage to the gwern invitation. Separate
+    document, separate hooks, addressed to the interface work. Both invitations carry
+    the same credit line and both refuse to divide the design between the two of them.
+    Declared as a dependency in ../gwern/CHARACTER.yml before this directory existed.
+
+bio:
+  summary: >
+    Said Achmiz is an interface designer and implementor. The site's own design page
+    credits him with much of gwern.net's design and JavaScript/CSS from 2017 onward,
+    including sidenotes.js and image-focus.js and — with Shawn Presser — the
+    generalized popup system. He designed the themes and wrote much of the frontend
+    JavaScript for GreaterWrong, an alternate reader for LessWrong and the EA Forum
+    built by clone of saturn, and authored its 2018 feature releases: appearance
+    customization, the theme tweaker, accesskeys throughout, adjustable text size,
+    improved mobile layout. He publishes at wiki.obormot.net and hosts a mirror of
+    gwern.net at gwern.obormot.net.
+
+why_here: >
+  Don's MOOLLM webtop inherits from gwern.net by name, and the specific thing it
+  inherits is a frontend architecture decision: pinning a popup sets a flag on the same
+  window object rather than rewrapping or reparenting it. Don read the source and
+  recognized his own TNT OPEN LOOK pin-up menus, where menu frames subclass window
+  frames and promotion is a flag. Two lineages, decades apart, same answer. That is a
+  conversation between implementors, and it is not the same conversation as the one
+  about writing.
+
+craft_notes:
+  the_pin_test: >
+    The convergence Don found by reading the code rather than the docs. Promotion as a
+    class flag on one window object is exactly the TNT OPEN LOOK architecture, and the
+    opposite of the olwm/ICCCM rewrap dance that X11 forced on a separate-process window
+    manager with no shared class hierarchy. Same constraint, same solution, no contact.
+  reader_controlled_presentation: >
+    GreaterWrong's theme tweaker lets the reader invert colors, and adjust brightness,
+    contrast, saturation and hue, on any of nine themes, on mobile as well as desktop.
+    That is reader control over presentation shipped years ago, and it is the
+    presentation-layer sibling of the Know Knob — the same move applied to epistemic
+    state instead of color.
+  keyboard_as_invariant: >
+    Accesskeys across GreaterWrong, all listed on its About page; a published keyboard
+    chord table for gwern.net's popups. The webtop's TREE-NAVIGATION invariant — every
+    structural operation reachable by keyboard, pie menu, and drag, all dispatching one
+    named command — is the same discipline stated as a lint.
+  argues_back: >
+    Documented publicly: he told gwern the font could not go a touch bigger because of
+    fractional sizes and rounding, and has repeatedly told him there are not enough
+    pixels to lower the sidenote breakpoint. Gwern calls it an argument he has had
+    several times. Useful to know before asking him to review a design.
+
+credit_discipline:
+  line: >
+    Inspired by the publishing and hypertext system developed by Gwern Branwen and Said
+    Achmiz at gwern.net.
+  rule: |
+    Carry it in both directories, identically. Do not use "frontend by" — gwern's own
+    word for the relationship is "tech co-creator". Do not attempt to attribute
+    individual ideas to one or the other; the public record does not support it and
+    guessing is the specific rudeness this directory was built to avoid.
+  receipts: sources/gwern-net-credits.md
+
+sources:
+  wikipedia: null
+  web:
+    - { url: https://wiki.obormot.net/, why: "His own site — the link gwern.net's design page credits him through" }
+    - { url: https://gwern.net/design, why: "The credit line, and the named components: sidenotes.js, image-focus.js, popups" }
+    - { url: https://gwern.obormot.net/, why: "gwern.net mirrored on his domain" }
+    - { url: https://www.greaterwrong.com/, why: "The alternate reader — his themes and much of the frontend JS" }
+    - { url: https://www.greaterwrong.com/about, why: "Feature documentation including the full accesskey list" }
+    - { url: "https://news.ycombinator.com/item?id=37627557", why: "Gwern: 'tech co-creator with Said Achmiz'; the font-size and sidenote-breakpoint arguments" }
+    - { url: https://github.com/gwern/gwern.net, why: "Source repository — 4,095 of 10,623 commits across two recorded identities, checked 2026-09-06" }
+  papers: []
+  local:
+    - { path: sources/gwern-net-credits.md, why: "Every claim above, checked by hand, with the GreaterWrong misattribution we had to correct" }
+
+verify:
+  - "Preferred name form and any preferred title for the interface work — ask, do not assume"
+  - "Whether he wants this directory at all, and whether he wants it separate from gwern's"
+  - "Whether Shawn Presser should have his own directory, given the shared popup credit"
+  - "Current state of the popup/transclusion code before citing specifics on air — it is a moving target"
+
+related_people:
+  - { id: gwern, why: "gwern.net — invited separately, same credit line, different conversation", directory: characters/gwern/, status: draft }
+  - { id: ben-shneiderman, why: "HyperTIES embedded menus and link previews — the 1980s ancestor of the popup", directory: characters/ben-shneiderman/ }
+  - { id: ted-nelson, why: "Transclusion, and the rage against invisible clipboards", directory: characters/ted-nelson/ }
+  - { id: david-temkin, why: "Declare and Mesa — in-browser window management as a language problem", directory: characters/david-temkin/ }
+  - { id: shawn-presser, why: "Co-credited on gwern.net's generalized popups; no directory yet", directory: null }
+
+see_also:
+  - { path: README.md, why: "Public portrait" }
+  - { path: invitation.md, why: "Invitation addressed to the interface work" }
+  - { path: ideas.md, why: "Conversation hooks — implementation-weighted" }
+  - { path: CARD.yml, why: "Universal CARD — invokable abilities for show segments" }
+  - { path: ../gwern/README.md, why: "The other half, invited in parallel" }

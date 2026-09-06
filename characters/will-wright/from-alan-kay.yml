@@ -1,6 +1,6 @@
 # What Alan Kay says about Will Wright / SimCity — public-safe digests only
 # Index: ../alan-kay/people-index.yml
-# No direct Kay↔Will interview quote yet — OLPC-era mail digests + constructionist foil.
+# No direct Kay-on-Will portrait. Kay-on-SimCity verbatim DOES exist and is public (see below).
 
 character: will-wright
 kay_hub: ../alan-kay/
@@ -9,18 +9,38 @@ kay_says:
   gist: |
     Kay's public/constructionist line treats closed simulation models as pedagogically thin
     next to glass-box microworlds (Papert, Etoys, open systems). Don's OLPC-era correspondence
-    digests place SimCity in that contrast — black box vs open model — without a verbatim
-    Kay-on-Will portrait. Useful show foil: Will's Simulator Effect + Kay's "computer
-    revolution hasn't happened yet" / microworlds Sure!
+    places SimCity in that contrast — black box vs open model. Useful show foil: Will's
+    Simulator Effect + Kay's "computer revolution hasn't happened yet" / microworlds Sure!
+
+  verbatim_on_simcity:
+    status: public
+    what: |
+      Kay criticized SimCity on the record in the November 2007 OLPC thread — the game's
+      assumptions and the opacity of its mechanism, in pointed terms, plus the note that he had
+      tried to get Maxis to take the educational possibilities seriously and got nowhere. The
+      constructive half is a design brief: show the rules in a readable and writable form, and
+      separate world dynamics from character strategies from media.
+    target: |
+      Aimed at Maxis and the game's design, not at Don's port. Micropolis is the answer to the
+      brief, and Don published a written response at the time (node 135).
+    handling: |
+      Not featured here, deliberately. This entry exists so nobody re-derives it and assumes it
+      is unpublished. Quote it only with Don's say-so — he is hosting Will, and there is a
+      difference between a citable fact and a thing you put in a guest's room.
 
 sources:
   people_index: ../alan-kay/people-index.yml
+  olpc_archive:
+    mirror: "micropolis/turbogears/micropolis/htdocs/static/html/alankay.html"
+    what: "Seven Kay threads mirrored in Don's own repo, each with a donhopkins.com node URL"
+    simcity_threads: [node145 SimCity Rules, node134 Kay's ideas about SimCity for OLPC, node135 Don's response]
+    analysis: "moollm/designs/webtop/kay/README.md"
   quora:
     - recap: ../alan-kay/media/quora-recaps/microworlds-sure-and-ten-things-heuristic.md
       topics: [microworlds, constructionism]
     - recap: ../alan-kay/media/quora-recaps/computer-revolution-not-yet.md
       topics: [personal computing unfinished]
-  note: "Mail bodies stay private; expand only from approved digests."
+  note: "Mail bodies stay private; expand only from approved digests. The OLPC list is public."
 
 show_hooks:
   - "SimCity black box vs Micropolis / Soul City glass box"

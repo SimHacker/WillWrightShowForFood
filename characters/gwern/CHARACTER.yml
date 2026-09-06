@@ -56,8 +56,22 @@ craft_notes:
     architecture as Don's TNT OPEN LOOK pin-up menus, where menu frames subclass window
     frames and promotion is a flag — arrived at independently, decades apart.
   frontend_credit: >
-    Frontend work on gwern.net is credited to Said Achmiz. Any conversation about the
-    popup and annotation machinery should credit him, and he is a natural co-guest.
+    Not a solo work. The site's design page credits much of gwern.net's design and
+    JavaScript/CSS to Said Achmiz from 2017 onward, and gwern's own word for the
+    relationship is "tech co-creator" — so "frontend by" is retired. Shawn Presser is
+    co-credited on the generalized popup system specifically. Said now has his own
+    directory and his own invitation, addressed to the interface work.
+
+credit_discipline:
+  line: >
+    Inspired by the publishing and hypertext system developed by Gwern Branwen and Said
+    Achmiz at gwern.net.
+  rule: |
+    Carry it in both directories, identically. Do not attempt to attribute individual
+    ideas to one or the other: the public record does not support it, and guessing is
+    the specific rudeness these two directories were built to avoid. Where a component
+    has a printed credit (sidenotes.js, image-focus.js, popups) use the printed credit.
+  receipts: ../said-achmiz/sources/gwern-net-credits.md
 
 sources:
   wikipedia: null
@@ -73,13 +87,15 @@ verify:
   - "Site start year and current build toolchain (Hakyll + Pandoc + custom JS per the design essay — confirm still current)"
   - "Content license — check the site's own statement rather than assuming"
   - "Exact URL slugs for individual essays before citing them in show materials"
-  - "Whether Said Achmiz wants a directory and a co-guest invitation of his own"
+  - "Whether Shawn Presser should have a directory, given the shared popup credit"
 
 related_people:
-  - { id: said-achmiz, why: "gwern.net frontend — popup/annotation machinery; natural co-guest", status: not_yet_asked, directory: null }
+  - { id: said-achmiz, why: "gwern.net design and much of the JS/CSS — 'tech co-creator'; invited separately and in his own right", status: draft, directory: characters/said-achmiz/ }
   - { id: david-temkin, why: "Declare Desktop as in-browser WM; webtop shell candidate", directory: characters/david-temkin/ }
   - { id: ted-nelson, why: "Transclusion and Xanadu — the dream gwern.net partially shipped", directory: characters/ted-nelson/ }
   - { id: ben-shneiderman, why: "HyperTIES embedded menus and link previews — the 1980s ancestor", directory: characters/ben-shneiderman/ }
+  - { id: will-wright, why: "Same reading appetite, opposite artifact — research pile as playable system; Sims object model as the article-as-room receipt", directory: characters/will-wright/ }
+  - { id: ian-bogost, why: "Procedural rhetoric — navigation design as argument; literary critic, and the panelist most likely to attack the premise", directory: characters/ian-bogost/ }
 
 see_also:
   - { path: CARD.yml, why: "Universal CARD — MTG invokable abilities for show segments" }

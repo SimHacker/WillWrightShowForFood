@@ -1,0 +1,175 @@
+# CARD — said-achmiz (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: said-achmiz
+  name: "Said Achmiz"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+
+card:
+  name: "Said Achmiz"
+  title: "Tech Co-Creator — The Popup That Was Always a Window"
+  rarity: rare
+  signifier: "📐"
+  flavor: "Promotion is a flag on the same object. It was never two kinds of thing."
+
+abilities:
+  - id: PIN-AS-FLAG
+    name: "The Pin Test"
+    type: activated
+    mana: "{U}{R}"
+    conditions:
+      - topic_matches_public_work: true
+      - host_has_receipts: true
+    advertisement:
+      method: pinFlag
+      signature: "pinFlag(window) → promotion without rewrap or reparent"
+      score_when:
+        - trigger: two_lineages_meet
+          weight: 0.95
+    effect: >
+      Pinning as a class flag on one window object, arrived at independently in
+      gwern.net's frontend and in Don's TNT OPEN LOOK pin-up menus — and why a
+      separate-process X11 window manager with no shared class hierarchy could never do
+      it that cleanly. Convergent design, or the only sane choice in a DOM?
+    verifiable: "Don's source reading in designs/webtop-gwern-inheritance/GWERN-WHAT-TO-INHERIT.md"
+    combos_with: [PERSISTENT-DESK, ADAPTIVE-WINDOW-CLASS, PIN-ROTATION]
+
+  - id: PERSISTENT-DESK
+    name: "Promotion Should Outlive the Page"
+    type: activated
+    mana: "{2}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: serializeDesk
+      signature: "serializeDesk(pinned[]) → reloadable, shareable, restorable"
+      score_when:
+        - trigger: design_disagreement_gets_specific
+          weight: 0.9
+    effect: >
+      The largest change Don proposes: pinned popups currently die on navigation, and
+      if pinning is promotion they should land on a persistent serialized desk instead.
+      Most likely to have a hard implementation reason it hasn't happened — the reason
+      is the payload.
+    verifiable: "designs/webtop/READING-CURSORS.md"
+    combos_with: [PIN-AS-FLAG]
+
+  - id: ADAPTIVE-WINDOW-CLASS
+    name: "One Window Class, Adaptive Chrome"
+    type: activated
+    mana: "{1}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: oneClassManyChromes
+      signature: "window(viewport) → desktop popup | mobile popover"
+      score_when:
+        - trigger: maintenance_reality_beats_theory
+          weight: 0.8
+    effect: >
+      Desktop popups and mobile popovers as two engines versus one class with
+      viewport-dependent chrome. He has the only real data on whether the shared
+      abstraction survives Safari.
+    verifiable: "https://gwern.net/design"
+    combos_with: [PIN-AS-FLAG]
+
+  - id: READER-CONTROLLED-RENDERING
+    name: "Theme Tweaker → Know Knob"
+    type: activated
+    mana: "{1}{W}{U}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: readerAuthority
+      signature: "readerAuthority(corpus, knob) → narrative | qualified | inspect | challenge | audit"
+      score_when:
+        - trigger: prior_art_reframes_new_idea
+          weight: 0.85
+    effect: >
+      GreaterWrong's theme tweaker — reader-adjustable brightness, contrast, saturation,
+      hue, inversion over nine themes, mobile included — as shipped prior art for
+      reader authority over presentation. The Know Knob is the same move on epistemic
+      state. Ask for the maintenance bill, not the enthusiasm.
+    verifiable: "https://www.greaterwrong.com/about#appearance-customization"
+    combos_with: [KEYBOARD-INVARIANT]
+
+  - id: KEYBOARD-INVARIANT
+    name: "Three Gestures, One Named Command"
+    type: activated
+    mana: "{1}{G}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: dispatchOneCommand
+      signature: "keyboard | pieMenu | drag → sameNamedCommand(structuralOp)"
+      score_when:
+        - trigger: lint_survives_scrutiny
+          weight: 0.85
+    effect: >
+      Accesskeys across GreaterWrong and a published chord table for gwern.net popups
+      are two of the few systems that would pass the webtop's invariant. Stated as a
+      lint rather than a taste, because that is the only version that survives a
+      refactor — and the document most likely to contain an error he can spot on sight.
+    verifiable: "designs/webtop/TREE-NAVIGATION.md · https://gwern.net/help"
+    combos_with: [READER-CONTROLLED-RENDERING, PIN-AS-FLAG]
+
+  - id: PIXEL-ARITHMETIC
+    name: "The Breakpoint Argument"
+    type: activated
+    mana: "{R}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: sayNoWithNumbers
+      signature: "sayNoWithNumbers(request) → margin budget, measure, gutters"
+      score_when:
+        - trigger: the_no_is_the_artifact
+          weight: 0.8
+    effect: >
+      Gwern says publicly he has repeatedly wanted sidenotes at narrower breakpoints and
+      that Said insists the pixels are not there; likewise the font-size ceiling from
+      fractional sizes and rounding. Don wants the arithmetic, facing the same wall with
+      a tab bar and a pie menu competing for the frame.
+    verifiable: "https://news.ycombinator.com/item?id=37627557"
+    combos_with: [ADAPTIVE-WINDOW-CLASS]
+
+  - id: PIN-ROTATION
+    name: "The Animation Is the Affordance"
+    type: activated
+    mana: "{R}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: rotatePin
+      signature: "rotatePin(push_in | pull_out) → teaches promotion wordlessly"
+      score_when:
+        - trigger: stagecraft_does_pedagogy
+          weight: 0.75
+    effect: >
+      OPEN LOOK's push-in / pull-out pin rotation as the thing that teaches a
+      first-time user what promotion means with no documentation. Cheap to add, easy to
+      get wrong, possibly already rejected.
+    verifiable: "designs/webtop-gwern-inheritance/GWERN-WHAT-TO-INHERIT.md"
+    combos_with: [PIN-AS-FLAG]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  credit_discipline: |
+    Any segment touching the popup, annotation, sidenote or transclusion machinery
+    credits both Gwern Branwen and Said Achmiz, and does not attempt to attribute
+    individual ideas to either. Shawn Presser is co-credited on the popup system.
+  scope: "The published interface work — see CHARACTER.yml scope."
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status, credit discipline, exclusions" }
+  - { path: invitation.md, why: "Invitation addressed to the interface work" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: README.md, why: "Public portrait" }
+  - { path: sources/gwern-net-credits.md, why: "Who built what, checked by hand" }

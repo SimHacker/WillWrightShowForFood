@@ -103,6 +103,59 @@
 - Full response doc: [`roles-not-characters.md`](roles-not-characters.md)
 - On-air segment beat: [`../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md`](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/roles-not-characters-beat.md) — Act 4: Bogost closing + Soul City underground railroad
 
+### 4c. The Wumpus and the Troll — characters that are operations, not personalities
+
+*The segment Don most wants to run. Two working exhibits, both browsable, both
+answering 4b from a different direction: they concede his objection and then keep
+going.*
+
+- **Snorax IS the game.** The character directory for the wumpus contains the
+  rules, the topology, and the source — the character is not a personality bolted
+  onto a rule set, it **is** the rule set with a name on it.
+  [`characters/fictional/wumpus-snorax/`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/wumpus-snorax)
+- **Platform studies as a character's soul**, which is his own methodology pointed
+  at an NPC: the same creature held as Yob's 1973 BASIC, his Wumpus 2 BASIC, a BCC1
+  variant, V7 Unix `wump.c` (1979), BSD games `wump.c` (1989), and Yob's own 1975
+  *Creative Computing* essay — sources kept, not summarized. Plus `wumpus.w.md`, a
+  literate treatment of the 1973 BASIC in the manner of Knuth's *Adventure*. Two
+  representations of one character: the readable soul and the machine one.
+- **Yob generalized his own game and we kept the generalization.** Wumpus 2 let you
+  change the graph, so the topologies ship as peers — Möbius strip, string of beads,
+  hex torus, dendrite, one-way lattice. The creature is indifferent to which; the
+  topology is a parameter, not a level.
+- **Two-Toll the Troll: one soul, two minds, and neither flattened into the other.**
+  The Colossal Cave bridge troll (pay a treasure) and the Zork I troll (pay in
+  steel) as the same worker with two jobs, commuting between dungeons and
+  context-switching protocols. Arriving in a new world he **samples the local
+  advertisements**: combat verbs present, the Zork mind bids to front; treasure
+  scoring present, the Adventure mind bids; both, the adventurer picks the currency;
+  neither, he falls back to riddles — the species-level protocol, older than both
+  games.
+  [`characters/fictional/troll/`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll)
+- **Dispatch weight worn as visible anatomy.** He is two-headed, one head per mind,
+  and **head size displays the live fronting weight** — blend `{zork: 0.7,
+  adventure: 0.3}` and the heads hold that ratio. Adventurers read the heads the way
+  sailors read the sky. The mechanism is perceivable rather than ambient, which is
+  the honest answer to a critic who is right to distrust invisible machinery.
+- **Three characters, three graph elements, composable.** The wumpus binds to a
+  **node**, the grue to an **ambient condition**, the troll to an **edge** — so any
+  room network hosts all three at once and none requires the others. That is the
+  extractability test passing in the hard case, not the easy one.
+- **The lamp is the exhibit.** Two games read one piece of shared state: while it
+  burns you are playing Hunt the Wumpus, and when it dies you are in Don't Go In The
+  Dark. *The wumpus did not move; the rules changed under you.* Genre as a
+  consequence of state, from two systems that were never designed together.
+- **The troll is a procedural argument about tolls.** The gatekeeper who demands
+  payment shipped twice in five years with different currencies and has been
+  reinstantiated in every boss door, toll bridge, and paywall since — embodied as
+  somebody with two jobs. Worth asking him whether that is procedural rhetoric or
+  merely a joke with good documentation, because the answer is genuinely unclear and
+  he is the person who would know.
+- **The concession to make out loud:** these have names but their names are labels
+  on mechanisms, not invitations to identify with anyone. His 2015 objection is to
+  characters as vessels for identification, and none of these three are that. Ask
+  whether that satisfies the objection or evades it.
+
 ### 5. Cow Clicker — the show Don wants (optional dessert)
 
 *Respectful love letter to intentional satire — not a dunk on Molyneux for sport.*

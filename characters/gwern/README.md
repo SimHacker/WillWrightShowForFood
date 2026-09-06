@@ -15,7 +15,14 @@ mirrors, so the corpus survives the web rotting around it. And the whole apparat
 public — including a companion essay listing the features that were **tried and rejected**, which is
 rarer and more useful than any changelog.
 
-Frontend work on the site is credited to **Said Achmiz**.
+**It is not a solo work, and "frontend by" undersells it.** The site's design page credits *"much of
+Gwern.net design and JavaScript/CSS"* to **[Said Achmiz](../said-achmiz/README.md)** from 2017 onward,
+and gwern's own word for the relationship is **"tech co-creator."** So everything here says: *inspired
+by the publishing and hypertext system developed by Gwern Branwen and Said Achmiz at gwern.net* — and
+declines to guess which of them thought of what, because the public record does not support that
+division. Said has [a directory and an invitation of his own](../said-achmiz/README.md), addressed to
+the interface work. Receipts:
+[`said-achmiz/sources/gwern-net-credits.md`](../said-achmiz/sources/gwern-net-credits.md).
 
 ## Why this room exists
 
