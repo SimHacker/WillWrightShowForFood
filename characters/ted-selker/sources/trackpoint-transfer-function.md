@@ -15,6 +15,10 @@ story](https://www.youtube.com/watch?v=H6guBllqPPY).
 
 Second-hand via Don, so this is testimony rather than documentation. Selker can correct any of it.
 
+*One transcription note: the 2015 post says "IBM Alameda Research Lab" twice. Don confirms this is a
+typo for **Almaden** — IBM's research center in San Jose, and the home of the NPUC workshops. Read
+Almaden wherever the original says Alameda.*
+
 ---
 
 ## The measurement that started it
@@ -130,8 +134,6 @@ where multiple cursors are still waiting on a user model rather than on input ha
 
 ## Open questions
 
-- **"IBM Alameda Research Lab"** appears twice in the 2015 post; IBM's lab is **Almaden**, and this
-  repo uses Almaden elsewhere. Presumed transcription slip, worth confirming with Don.
 - The **actual plateau parameters** — speeds, pressure ranges, the eye-tracking-speed threshold they
   settled on. Selker's published account may have them; the numbers would make the plateau/detent
   equivalence quantitative rather than structural.
