@@ -137,6 +137,24 @@ going.*
   adventure: 0.3}` and the heads hold that ratio. Adventurers read the heads the way
   sailors read the sky. The mechanism is perceivable rather than ambient, which is
   the honest answer to a critic who is right to distrust invisible machinery.
+- **A realm is a block quote you can walk around inside.** He carries a mirror of
+  each mind's home turf — the Troll Room and its passages, the chasm and its
+  rickety bridge — seven rooms each, dilated one move outward, with exits past the
+  corner ending in fog. Every part of quotation has a counterpart: the excerpt is
+  the mirrored rooms, **the ellipsis is the fog**, the citation is the `canon:`
+  field, and fair-use sizing means seven rooms rather than the Great Underground
+  Empire. The pattern's other names are the Disneyland dark ride, the holodeck
+  reenactment, and the braindance — each a navigable excerpt of somebody else's
+  world, glitch-fuzzed where the recording ends. Which makes it a **procedural
+  rhetoric of quotation**: the argument is carried by what got excerpted, where the
+  fog was placed, and what you are allowed to do inside the passage.
+  [`troll/realms/`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4/characters/fictional/troll/realms)
+- **And the realms are the test rig, which is why this is not just a nice image.**
+  Each isolates one mind, so cross-mounting one mind into the other's realm tests
+  whether "samples the local advertisements" is a mechanism or a description of one.
+  Then strip the world down — fewer rooms, no ambient layer, no sibling characters,
+  descriptions deleted — and **the smallest world in which he still behaves
+  correctly is a number**, which is extractability measured rather than asserted.
 - **Three characters, three graph elements, composable.** The wumpus binds to a
   **node**, the grue to an **ambient condition**, the troll to an **edge** — so any
   room network hosts all three at once and none requires the others. That is the
