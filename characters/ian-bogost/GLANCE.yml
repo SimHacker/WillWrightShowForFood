@@ -1,0 +1,70 @@
+# IAN BOGOST — GLANCE (nav + metadata SSOT)
+# Interface: CARD.yml · Portrayal, NOT the person: ../../schemas/portrayal-standards.md
+
+title: Ian Bogost
+iconic: "🐄 Ian"
+description: |
+  Coined procedural rhetoric — argument encoded in rules and processes, "an unholy blend of
+  Will Wright and Aristotle." Cow Clicker (2010): satire that went viral, then ended honestly
+  in the Cowpocalypse. The lens this repo reads Sims objects through, Motive.c to Dumbold.
+
+keywords:
+  - ian bogost
+  - procedural rhetoric
+  - persuasive games
+  - cow clicker
+  - cowpocalypse
+  - play anything
+  - game criticism
+  - platform studies
+
+card: CARD.yml
+
+status:
+  invitation: contacted
+  consent: outreach_sent_awaiting_reply
+  note: "First contact 2026-08-23 (roles-not-characters + Korz question); formal show invite unsent"
+
+navigation:
+  up: ../GLANCE.yml
+  parent: ../
+  children:
+    - sources/
+    - correspondence/
+  siblings:
+    - ../will-wright/
+    - ../chaim-gingold/
+    - ../brenda-laurel/
+
+read_order:
+  - README.md
+  - roles-not-characters.md
+  - CARD.yml
+  - sources/procedural-rhetoric-quote.md
+  - invitation.md
+
+see_also:
+  parent:
+    - { path: ../GLANCE.yml, why: "Character registry" }
+  siblings:
+    - { path: ../will-wright/GLANCE.yml, why: "The Wright half of the unholy blend — Motive.c substrate" }
+    - { path: ../chaim-gingold/GLANCE.yml, why: "Same artifact, other method — historian's diagrams vs rhetorician's reading" }
+    - { path: ../nick-montfort/README.md, why: "Racing the Beam co-author; Platform Studies series" }
+  across:
+    - { path: ../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml, why: "Planted solo show seed" }
+    - { path: ../will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md, why: "Wedding Playset vs Dumbold — inclusion agitprop vs institutional farce" }
+    - { path: ../don-hopkins/sources/hn-cow-clicker-curiosity-unite-2012.yml, why: "Unite 2012 cow joke; Molyneux's Curiosity contrast" }
+    - { path: ../../bits/gag-curiosity-cow-cube/gag-curiosity-cow-cube.yml, why: "Bogost's cow at the center of the cube" }
+  deep:
+    - { path: README.md, why: "Portrayal" }
+    - { path: sources/cow-clicker.md, why: "Mechanics, Cowpocalypse, reception" }
+    - { path: correspondence/README.md, why: "First-contact thread" }
+
+# Procedural rhetoric also underwrites a MOOLLM design cluster — asymmetric drag thresholds read
+# as deontic operators, argument delivered in the motor channel rather than in prose.
+elsewhere:
+  - path: https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/FRICTION-FIELDS.md#the-procedural-rhetoric-of-direct-manipulation
+    why: "Procedural rhetoric of direct manipulation — the friction-field legitimacy test"
+
+open_questions:
+  - "Affiliation: README says Georgia Tech; believed at Washington University in St. Louis since ~2021 — verify before editing portrayal"
