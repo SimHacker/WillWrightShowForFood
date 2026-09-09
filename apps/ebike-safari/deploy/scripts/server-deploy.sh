@@ -43,6 +43,7 @@ echo "Building viewer on VM (native amd64)…"
 docker compose build viewer
 
 echo "Restarting stack…"
+docker compose up -d --force-recreate viewer
 docker compose up -d
 
 echo "Done. Check: curl -s http://127.0.0.1/api/health"

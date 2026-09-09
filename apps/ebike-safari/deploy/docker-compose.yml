@@ -37,9 +37,10 @@ services:
       HOST: 0.0.0.0
       ORIGIN: ${ORIGIN:-https://${DOMAIN:-localhost}}
       DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike-safari}
+      EBIKE_DATA_DIR: /app/data
     volumes:
-      # Host deploy/data/ is served at https://…/data/* (no startup copy)
-      - ./data:/app/build/client/data:ro
+      # Outside build/client so sirv does not cache stale Content-Length after ride sync.
+      - ./data:/app/data:ro
     depends_on:
       db:
         condition: service_healthy
