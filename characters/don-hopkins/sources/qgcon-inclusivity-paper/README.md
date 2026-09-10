@@ -13,6 +13,8 @@ Source doc: [Google Doc abstract](https://docs.google.com/document/d/13u-kNaWC2A
 | [abstract.md](abstract.md) | ~350-word abstract + theory stack |
 | [interview-points.yml](interview-points.yml) | Five QGCon beats + bio + talk structure |
 | [procedural-rhetoric-theory.md](procedural-rhetoric-theory.md) | Bogost, Murray, Frasca, constructionism ([YAML source data](procedural-rhetoric-theory.yml)) |
+| [objects-that-argue.md](objects-that-argue.md) | **Case chapter** — the SimProv Wedding Playset (a marriage contract with no gender check, circa 2002), the Dumbold Voting Machine, the tombstone generator. Three objects that execute an argument none of them states |
+| [reading-the-prototype.md](reading-the-prototype.md) | **Don's testimony** — reading the 1998 prototype as homophobic nine years before *Persuasive Games* named the mechanism; his own theory at the time, which was about suicide |
 | [the record (accessible)](../../../patrick-j-barrett-iii/same-sex-relationships-the-record.md) | Don review → Patrick implementation → ship; myth vs primary sources ([YAML source data](same-sex-design-arc.yml)) |
 | [timeline.yml](timeline.yml) | Chronological inclusivity + culture parallel track |
 | [themes.yml](themes.yml) | Thematic sections (masking, zodiac, modding, PKD, etc.) |

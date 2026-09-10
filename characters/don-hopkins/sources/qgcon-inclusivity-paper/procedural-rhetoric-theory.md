@@ -4,6 +4,14 @@
 Machine-readable source data:
 [procedural-rhetoric-theory.yml](procedural-rhetoric-theory.yml).*
 
+## Before the theory — reading the prototype without the words
+
+[`reading-the-prototype.md`](reading-the-prototype.md) — Don's first-person account of reading
+the 1998 prototype's rhetoric as homophobic when no document and no person intended it, nine
+years before *Persuasive Games* named the mechanism. Also his own theory at the time, which was
+about suicide and loneliness rather than rhetoric: a non-judgmental place, where same-sex
+relationships work **without the game raising an eyebrow**. Normality as a default, intentionally.
+
 ## Bogost — argument in rules
 
 **Procedural rhetoric**: argument encoded in rules, processes, and
@@ -58,12 +66,21 @@ lineage.
 
 ## The Sims artifacts as rhetoric
 
+Full chapter: [`objects-that-argue.md`](objects-that-argue.md) — three objects that execute an
+argument none of them states, all built before the term existed.
+
 - **Inclusion agitprop:** the
-  [SimProv Wedding Playset](../../../../catalogs/simprov/README.md) —
-  gay marriage, Cupid, Crowd Sitter, Buddha, improv storytelling.
+  [SimProv Wedding Playset](../../../../catalogs/simprov/README.md) — a marriage contract that
+  binds two Sims and never checks gender, circa 2002, two years before any American state would
+  issue such a license. The chapter's centerpiece.
 - **Institutional farce:** the
   [Dumbold Voting Machine](../../../will-wright/sources/2018-04-24-dumbold-voting-machine/medium-article.md)
-  — 2004 e-voting agitprop.
+  — built for the 2 November 2004 election, the one where eleven states constitutionalized the
+  marriage ban. "Free speech and political commentary rendered as executable multimedia software."
+- **Authorship without gatekeepers:** the
+  [tombstone generator and the Original Sims cemetery](../../../ian-bogost/sources/original-sims-cemetery-epitaphs.md)
+  — 2,249 stones written by strangers with no moderator, and the worst thing in them is
+  playground spite.
 - **Substrate persuasion:**
   [Motive.c](../../../will-wright/sources/2008-02-10-soul-of-the-sims/Motive.c)
   — failure alerts as persuasive design at the bottom of the stack.

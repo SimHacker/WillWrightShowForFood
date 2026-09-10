@@ -48,7 +48,7 @@ soul_city_namesake:
 
 soul_saver:
   brand: Soul Saver  # mission / Repo Show naming (see process/repo-show-class-naming.md)
-  product: SoulAngel  # MicropolisCore/apps/soul-angel — universal companion + per-game Soul Bridges
+  product: SoulAngel  # MicropolisCore/apps/screen-angel — universal companion + per-game Soul Bridges
   what_it_saves: |
     Character souls locked in EA-owned saves, dead Exchange URLs, Legacy Collection without sharing,
     and platforms subject to sovereign-wealth or censorship pressure. Read/write soul-files; publish
