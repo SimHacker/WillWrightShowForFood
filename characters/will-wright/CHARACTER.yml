@@ -19,6 +19,16 @@ representation:
   primed_by: don-hopkins
   note: "Host-authored best effort — Will may edit, reduce, or delete anytime"
   subject_rights: correction_edit_or_deletion_anytime
+  family: off_the_record
+  family_rule: |
+    No spouse, no former spouse, no children — not named, not counted, not described, not
+    implied by a gap. The only family material anywhere in this repo is what WILL has already
+    put on the record himself (the SimCity 2000 cheat-code story, BattleBots), and it stays
+    exactly as narrow as he left it. Public in one frame is not public in every frame:
+    collecting scattered fragments into a family section is a fresh disclosure even when each
+    fragment was already out there. If a family member is structurally necessary to a sentence,
+    cut the sentence. There is forty years of work to talk about.
+    Never ask him about it. The full rule and its audit live in the private register.
 
 invitation:
   status: accepted
