@@ -1,0 +1,77 @@
+# Rich Gold -- memorial portrayal. NOT Rich Gold.
+# Died 2003. Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: rich-gold
+  name: "Rich Gold"
+  also_known_as: ["Richard J. Goldstein"]
+  type: memorial
+  signifier: "🕯️🏠"
+  status: deceased
+  born: "1950-06-24"
+  died: "2003-01-09"  # Menlo Park, CA -- died in his sleep, aged 52
+  field: "Little Computer People; Mattel PowerGlove; Xerox PARC ubicomp, PAIR and RED; Evocative Knowledge Objects"
+  home: characters/rich-gold/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: memorial.md
+
+memorial:
+  mode: represent_and_discuss
+  the_tribute_is_the_work: "Reading a real 1985 person off a real floppy and giving him somewhere to live is the tribute. Not a retrospective panel."
+  who_can_discuss:
+    - { who: david-crane, why: "Co-creator. Took Gold's passive concept and made it interactive, over Gold's objection -- the disagreement is the interesting part", path: ../david-crane/ }
+    - { who: will-wright, why: "Cites LCP as an ancestor of The Sims, and is documented as having received feedback on The Sims from Gold", path: ../will-wright/ }
+    - { who: mark-weiser, why: "PARC ubicomp and the calm-technology circle Gold was part of", path: ../mark-weiser/legacy.yml }
+    - { who: terry-winograd, why: "CS547 holds Gold's 2002-10-11 talk on VHS -- see artifacts below", path: ../terry-winograd/media/cs547-archive.yml }
+    - { who: ellpeck, why: "Tiny Life is where the little computer person finally gets neighbours", path: ../ellpeck/ }
+  not_yet_approached:
+    - { who: "Marina LaPalma", relation: "Widow and artistic collaborator; with the family, published The Plenitude posthumously", status: "Don's call, Don's wording -- nothing drafted, nothing sent" }
+    - { who: "Sam Nelson", relation: "Activision producer whose LCP apartment-complex sequel was prototyped and dropped", status: "No contact route identified" }
+
+bio:
+  summary: |
+    Artist, composer, cartoonist, inventor and researcher. Co-founded the League of Automatic Music
+    Composers in the 1970s, the first network computer band. Directed sound and music at Sega, then
+    conceived the Pet Person program that became Little Computer People (Activision, 1985) -- the
+    first commercially available autonomous computer person. Ran electronic-toy research at Mattel
+    and managed the PowerGlove. At Xerox PARC from 1991 he researched ubiquitous computing, founded
+    the PARC Artist-in-Residence program (PAIR), and created RED, whose Experiments in the Future of
+    Reading showed at the San Jose Tech Museum in 2000.
+
+the_design_argument_worth_preserving:
+  golds_position: "A pet person is a fishbowl. You watch; you do not poke. Interactivity was contrary to the Pet Rock premise the whole thing rested on."
+  cranes_position: "It needed to respond to you, and he rewrote about half the program to make it do that."
+  why_it_matters_now: |
+    Both positions shipped: LCP is watched more than played, and The Sims is played. Ambient
+    companion versus operable simulation is the live question in every agent design today, and these
+    two had it out over one house in 1985.
+
+artifacts_and_leads:
+  cs547_vhs:
+    what: "Rich Gold, 'The Red Shift / Desire in Context', Stanford CS547 seminar, 2002-10-11 -- about three months before he died"
+    where: "VHS, Box 7, in the CS547 catalog already inventoried in this repo"
+    path: ../terry-winograd/media/cs547-archive.yml
+  the_plenitude: "The Plenitude: Creativity, Innovation, and Making Stuff, MIT Press, 2007 -- assembled by his family after his death"
+  papers: "Rich Gold papers, circa 1978-2005, including 114 notebooks -- https://oac.cdlib.org/findaid/ark:/13030/c81v5m8c/"
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/Little_Computer_People
+  web:
+    - { what: "Obituary -- died in his sleep 9 Jan 2003; career summary", url: "https://eliterature.org/2003/01/rich-gold-digital-pioneer-die/" }
+    - { what: "Dates, family, The Plenitude", url: "https://www.encyclopedia.com/arts/educational-magazines/gold-rich-1950-2003" }
+    - { what: "His own bio, PAIR and RED, in his words while alive", url: "https://hci.stanford.edu/seminar/abstracts/02-03/021011-gold.html" }
+    - { what: "Papers finding aid, 114 notebooks", url: "https://oac.cdlib.org/findaid/ark:/13030/c81v5m8c/" }
+    - { what: "Crane on the genesis, the fishbowl argument, and the dropped sequel", url: "https://www.lemon64.com/doc/little-computer-people/353" }
+
+see_also:
+  - { path: memorial.md, why: "The memorial document and the tribute segment" }
+  - { path: README.md, why: "Profile page" }
+  - { path: ../david-crane/, why: "Co-creator, living, invitation drafted" }
+  - { path: ../../schemas/portrayal-standards.md#memorial-mode, why: "Memorial rules -- represent and discuss, never impersonate" }

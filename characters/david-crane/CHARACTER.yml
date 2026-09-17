@@ -1,0 +1,83 @@
+# CHARACTER.yml — David Crane
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: david-crane
+  name: "David Crane"
+  type: invitation
+  signifier: "🕹️🏠"
+  status: living
+  field: "Activision founder; Pitfall!; the programmer who made Little Computer People interactive"
+  home: characters/david-crane/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  channel: "Not yet identified — he does interviews and retro-scene appearances; find a route before sending"
+  show_seed: repo-shows/little-computer-people/
+
+bio:
+  summary: |
+    One of the four Atari programmers who founded Activision in 1979, and the author of Pitfall!
+    (1982). In 1985 he took Rich Gold's passive "Pet Person" concept and rewrote about half of it to
+    make the little person respond to the player, shipping Little Computer People — the game Will
+    Wright names as an ancestor of The Sims. He co-founded Absolute Entertainment in 1986.
+
+why_him_for_this_show:
+  the_bridge_needs_him: |
+    LCP is the headwater target of the whole Soul City federation, and the only documented account of
+    where its character data lives comes from Crane's own email to the Software Preservation Society —
+    and it documents the C64 version, which he programmed personally. The Apple ][ layout is
+    undocumented. He is the person who would know, or know who knew.
+  he_already_framed_the_question: |
+    In 2005 he said part of him wanted to make the little person "the smartest thing in computing
+    maybe even to pass the Turing test — but with the constraints of time in the software business
+    that was impractical." That constraint is gone now. Asking him what he would do with it is not a
+    nostalgia question.
+
+verified_facts:
+  interactivity_was_his_addition: |
+    "When it was brought in-house, the original plan was for it to be more like a fish-bowl, with no
+    input from the user. I took it in and rewrote about half of the original program to include the
+    interactivity that ended up in the final product." — Crane, Lemon64 interview archive
+  every_disk_was_a_different_person: |
+    Activision serialized each disk as it was duplicated, and the serial number seeded a polynomial
+    counter that set name, shirt colour, personality traits and preferences. "Each disk was
+    effectively unique." — Crane, same source
+  the_brain_is_256_bytes: |
+    "A 256 byte block of data on the disk held the LCPs 'brain' to keep personality status as the LCP
+    aged and developed. If you have a disk that has been executed you will see that that block has
+    been rewritten by the user's disk drive. If it is a virgin diskette that block will be in its
+    initial state (probably all zeros)." — Crane, email to the Software Preservation Society. Scoped
+    to the C64 version; he also notes he personally programmed that one, and that Gene Smith did the
+    Amiga version.
+  hardest_thing_he_did: "Crane described LCP as one of the hardest programming challenges of his career (2005)."
+
+sources:
+  wikipedia: https://en.wikipedia.org/wiki/David_Crane_(programmer)
+  web:
+    - { what: "Crane interview — LCP origin, in-house duplication, serial numbers, the dropped sequel (Sam Nelson)", url: "https://www.lemon64.com/doc/little-computer-people/353" }
+    - { what: "Crane's email on the 256-byte brain block and per-disk serialization (C64)", url: "https://web.archive.org/web/20250103095311/http://www.softpres.org/article:game:little_computer_people" }
+    - { what: "Little Computer People — platforms, dates, Wright's citation of Gold", url: "https://en.wikipedia.org/wiki/Little_Computer_People" }
+
+connections:
+  rich-gold: "Conceived LCP; died 2003. See characters/rich-gold/ — the tribute is the reincarnation."
+  will-wright: "Cites LCP as an ancestor of The Sims, and received feedback on The Sims from Gold."
+  ellpeck: "Tiny Life — where an LCP person can move in and finally have neighbours."
+  jeff-braun: "Maxis side of the same lineage."
+
+shows:
+  - { id: little-computer-people, role: "Principal guest", what: "Read a 1985 person off a real disk, live, and ask him what the Apple ][ layout was" }
+
+see_also:
+  - { path: CARD.yml, why: "Invokable segments" }
+  - { path: invitation.md, why: "Draft invitation — not sent" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../rich-gold/, why: "Co-creator, in memoriam" }
+  - { path: ../../schemas/portrayal-standards.md, why: "Portrayal rules" }

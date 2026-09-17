@@ -1,0 +1,94 @@
+# CARD — david-crane (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: david-crane
+  name: "David Crane"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "David Crane"
+  title: "The programmer who gave the first computer person a brain you can find"
+  rarity: rare
+  signifier: "🕹️🏠"
+  flavor: "\"Each disk was effectively unique.\" — Crane, on serializing every copy of Little Computer People at the duplicator"
+
+abilities:
+  - id: LOCATE-THE-BRAIN
+    name: "Locate the Brain"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_is_lcp_disk_format: true
+    advertisement:
+      method: locateTheBrain
+      signature: "locateTheBrain(platform) → where persistent personality lives on that disk"
+      score_when:
+        - trigger: apple_ii_layout_still_undocumented
+          weight: 0.95
+    effect: "The one question only he can answer: he documented the C64 block, and the Apple ][ version — the one this project targets — has never been documented publicly."
+    verifiable: "His email to the Software Preservation Society, archived: https://web.archive.org/web/20250103095311/http://www.softpres.org/article:game:little_computer_people"
+    combos_with: [apple2-retro-stack, rich-gold]
+
+  - id: FISHBOWL-VS-INTERACTION
+    name: "Fishbowl or Interaction"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_is_agent_versus_direct_manipulation: true
+    advertisement:
+      method: fishbowlVsInteraction
+      signature: "fishbowlVsInteraction() → the 1985 version of the argument everyone is having in 2026"
+      score_when:
+        - trigger: audience_thinks_this_debate_is_new
+          weight: 0.9
+    effect: "He rewrote half of Rich Gold's passive Pet Person to make it respond to the player, over Gold's objection. Ambient companion versus operable simulation, settled once by whoever held the compiler."
+    verifiable: "Crane's own account: https://www.lemon64.com/doc/little-computer-people/353"
+    combos_with: [rich-gold, will-wright, ben-shneiderman]
+
+  - id: IDENTITY-AT-THE-DUPLICATOR
+    name: "Identity at the Duplicator"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_is_procedural_identity_or_uniqueness: true
+    advertisement:
+      method: identityAtTheDuplicator
+      signature: "identityAtTheDuplicator() → per-artifact procedural personality, 1985"
+      score_when:
+        - trigger: someone_calls_unique_digital_artifacts_a_new_idea
+          weight: 0.85
+    effect: "Activision modified the disk duplicator's code to stamp an incrementing serial on every copy, and used it to seed the person's personality. Unique by manufacture, no ledger required."
+    verifiable: "Same interview; and his SPS email on the polynomial counter seeded by that serial."
+    combos_with: [rich-gold, ellpeck]
+
+  - id: THE-CONSTRAINT-THAT-LIFTED
+    name: "The Constraint That Lifted"
+    type: activated
+    mana: "{3}"
+    conditions:
+      - topic_is_what_a_character_could_be_now: true
+    advertisement:
+      method: theConstraintThatLifted
+      signature: "theConstraintThatLifted() → what he'd build with the budget he didn't have"
+      score_when:
+        - trigger: guest_named_the_limit_decades_before_it_lifted
+          weight: 0.9
+    effect: "In 2005 he said part of him wanted the little person to pass the Turing test, but the software business's time constraints made it impractical. Asking him now is not a nostalgia question."
+    verifiable: "2005 recollection, quoted in the LCP development record: https://en.wikipedia.org/wiki/Little_Computer_People"
+    combos_with: [will-wright, rich-gold]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+  note: "Nothing here is a simulated Crane. These are segments Don would propose to the real person."
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Draft invitation, unsent" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: ../rich-gold/, why: "Co-creator, memorial" }
