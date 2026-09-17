@@ -2,7 +2,8 @@
 
 *Sniff:* [`CATALOG.yml`](CATALOG.yml) · [`../GLANCE.yml`](../GLANCE.yml) · [`../README.md`](../README.md)
 
-**Composable playsets** for staging stories in The Sims — built by Don Hopkins with **SimFreaks**, **SimSlice**, **SimBabes**, and Donna.
+**Composable playsets** for staging stories in The Sims — built by Don Hopkins with **Donna
+(SimBabes)**, **Steve Alvey (SimSlice)** and **Heather Castillo (SimFreaks)**. Never released.
 
 ## Magnum opus: Wedding Playset
 
@@ -13,7 +14,8 @@ The emotional center of the Soul City mission. An orchestration kit — not one 
 | [Crowd Sitter](../../characters/will-wright/sources/2018-04-23-sims-crowd-sitter/README.md) | Gather and seat guests |
 | Cupid | Prerequisite romance — [Speed Dating](../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml) · [Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) |
 | Buddha statue | Crowd need management — keep the Slap Conga trap alive |
-| Hope Chest + consultant | Onboarding and catalogs |
+| Hope Chest + consultant | Onboarding and catalogs. The object a player accumulates a relationship with rather than merely owns |
+| The tip of the pyramid | SimProv object — Don's to describe |
 | Donna's set pieces | Premium craft layer |
 
 Built when marriage equality was still a fight in the real world. Republishing for the Steam Sims 1 generation is deliberate **inclusion procedural rhetoric** — see [procedural-rhetoric-inclusion-agitprop.md](../../characters/will-wright/media/sims-series-procedural-rhetoric-inclusion-agitprop.md) and [Ian Bogost show seed](../../repo-shows/will-wright-premiere/ian-bogost-procedural-rhetoric/SHOW.yml).

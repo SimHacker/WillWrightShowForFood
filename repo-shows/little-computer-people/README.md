@@ -49,6 +49,6 @@ character export. If a character can make that trip, the rest of the federation 
 
 Nothing sent. Crane has no identified contact route. Gold is [memorial mode](../../schemas/portrayal-standards.md#memorial-mode).
 Ell has said the bridge idea sounds interesting and has an [updated invitation](../../characters/ellpeck/invitation.md)
-plus a [quote offer](../../characters/ellpeck/quote-offer.md) waiting.
+plus a quote offer drafted and held privately until Don picks a line.
 
 ↑ [repo-shows/](../README.md) · [characters/david-crane/](../../characters/david-crane/) · [characters/rich-gold/](../../characters/rich-gold/)
