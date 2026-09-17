@@ -33,6 +33,17 @@ An homage cover in the key of The Sims 0.
 — Don Hopkins, designer on The Sims
 ```
 
+## Why the coinage is worth keeping
+
+"The Sims 0" does in three characters what a paragraph of lineage explanation does: it says *ancestor*,
+it says *same series in spirit*, and it says *before the numbering started*. It also opens the question
+that makes the whole show interesting — what would have been, if there had been a game in between?
+There nearly was: Activision prototyped an LCP apartment complex in 1986 and dropped it. That is The
+Sims 0.5, and Tiny Life is the honest occupant of the slot, with the actual soul of retro gaming in it
+— one author, small scope, exportable households, files the player keeps.
+
+Written up in moollm: [The Sims 0, and the game that should have been between](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-0-the-missing-game.md).
+
 ## Notes on the wording
 
 **"The Sims 0"** is Little Computer People (Activision, 1985) — the ancestor Will Wright cites,
