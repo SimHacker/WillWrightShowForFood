@@ -58,12 +58,12 @@ descendant with you.
 
 | Question                 | Where the answer lives                                                              |
 | ------------------------ | ----------------------------------------------------------------------------------- |
-| Employment timeline      | `[career/work-history.yml](career/work-history.yml)`                                |
-| Idea lineage, 6502 → LLM | `[career/lineage.yml](career/lineage.yml)` · `[career/range.yml](career/range.yml)` |
-| Open-source paper trail  | `[career/contracts/README.md](career/contracts/README.md)`                          |
-| Talks, on the record     | `[portrayal/presentations.yml](portrayal/presentations.yml)`                        |
-| The narrative version    | `[README.md](README.md)` — the Connections thread                                   |
-| The quick sniff          | `[about-host.md](about-host.md)` · `[GLANCE.md](GLANCE.md)`                         |
+| Employment timeline      | [`career/work-history.yml`](career/work-history.yml)                                |
+| Idea lineage, 6502 → LLM | [`career/lineage.yml`](career/lineage.yml) · [`career/range.yml`](career/range.yml) |
+| Open-source paper trail  | [`career/contracts/README.md`](career/contracts/README.md)                          |
+| Talks, on the record     | [`portrayal/presentations.yml`](portrayal/presentations.yml)                        |
+| The narrative version    | [`README.md`](README.md) — the Connections thread                                   |
+| The quick sniff          | [`about-host.md`](about-host.md) · [`GLANCE.md`](GLANCE.md)                         |
 | Canonical site           | [donhopkins.com](https://donhopkins.com)                                            |
 
 

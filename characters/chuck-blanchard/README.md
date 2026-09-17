@@ -18,6 +18,17 @@ straight in a **1999 email** to Don (see the [primary source](../don-hopkins/bod
 
 This repo credits Chuck plainly. Jaron founded VPL and dreamed the vision; **Chuck built the thing.**
 
+Jaron also said it in public, on his own site — *"It was created by Chuck Blanchard"* — alongside the
+verdict that the VPL software was **"both the best and the worst VR software ever made."** And the
+earliest public quotation of Chuck, in the *Christian Science Monitor* in 1989, is not about
+technology at all: a system for a children's hospital, *"so they can leave their disabilities behind
+and interact with others on the same level."*
+
+→ [`sources/public-corroboration-of-authorship.md`](sources/public-corroboration-of-authorship.md) —
+three public sources three decades apart, plus **current contact status**: `chuckbl.com` looks dead
+because the site is a parked lander, but the registration runs to **2027** and the domain has mail
+records configured.
+
 ## Artifacts (Feb 2020)
 
 Chuck still had a **Mac OS 9 + CodeWarrior** dev system with compiling Body Electric source and attached **screenshots** of live patches:

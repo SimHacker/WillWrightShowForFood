@@ -61,4 +61,4 @@ Standards: [portrayal-standards](../../schemas/portrayal-standards.md).
 - **The dispatch panel** — Dan + David Ungar on symmetric dispatch:
   one built the multimethods, one is dissolving the receiver;
   moderated by the troll who blends his heads
-  ([exhibit](../david-ungar/korz/examples/troll-blend.md)).
+  ([exhibit](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-prime/examples/troll-blend.md)).

@@ -25,7 +25,8 @@ invitation:
 see_also:
   - { path: README.md, why: "Audience-facing bio" }
   - { path: invitation.md, why: "Guest invite" }
-  - { path: ideas.md, why: "Mouther recover/reverse-engineer; SVG/Canvas/WebGPU; flong" }
+  - { path: ideas.md, why: "Mouther recover/reverse-engineer; SVG/Canvas/WebGPU; flong; Media Streams icon language" }
+  - { path: media-streams-icon-language.yml, why: "His principal design role on Media Streams' iconic visual language — what is published, what is not, the rights research, and the questions to ask" }
   - { path: ../../repo-shows/tom-and-golan-ecg-mouther/, why: "Pair show seed with Tom Ngo" }
   - { path: ../../process/brainstorm-heartbeat.md, why: "Conversation not code — why invites are easy" }
   - { path: ../tom-ngo/, why: "ECG — the engine Mouther ran on; dream pair (engine + artist)" }
@@ -34,7 +35,7 @@ see_also:
   - { path: https://www.flong.com/archive/projects/mouther/, why: "Mouther project page" }
 
 bio:
-  summary: "**Golan Levin** — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; **Interval Research** colleague of Don Hopkins and Paul Debevec (*Rouen Revisited*; Mouther on Tom Ngo's ECG). Same PARC/Apple/MIT-adjacent circle as Terry Winograd, David Levitt, Marc Davis — Don's Camelot roster, not all overlapping one year."
+  summary: "**Golan Levin** — Interactive/computational media artist, engineer, and educator (b. 1972, NYC; based in Pittsburgh). Professor of Electronic Art at Carnegie Mellon University (courtesy appointments in Design, Architecture, Computer Science, ETC) and former Director of CMU's Frank-Ratchye STUDIO for Creative Inquiry. MIT Media Lab alum; **Interval Research** colleague of Don Hopkins and Paul Debevec (*Rouen Revisited*; Mouther on Tom Ngo's ECG). From the project's inception, **principal designer and lexicographer of the iconic visual language of Marc Davis's Media Streams** — a composable grammar of thousands of icons for annotating video, MIT then Interval, 1991–1997. Same PARC/Apple/MIT-adjacent circle as Terry Winograd, David Levitt, Marc Davis — Don's Camelot roster, not all overlapping one year."
 
 sources:
   wikipedia: null

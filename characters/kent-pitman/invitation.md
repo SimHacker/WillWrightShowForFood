@@ -47,10 +47,4 @@ Don Hopkins
 
 ---
 
-## Notes
-
-- Private full draft: `DonHopkins/.../correspondence/kent-pitman.yml` (includes Pope/ANIMAL apology arc)
-- Do not send until Don reviews tone + whether to lead with MOO vs Lisp/fexprs
-- Subject rights: correction/removal anytime
-
 ↑ [`README.md`](README.md) · [`sources/`](sources/)

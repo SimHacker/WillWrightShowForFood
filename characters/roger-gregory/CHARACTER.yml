@@ -1,0 +1,91 @@
+# Roger Gregory — invitation portrayal. NOT Roger Gregory.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: roger-gregory
+  name: "Roger Gregory"
+  type: invitation
+  signifier: "🔢"
+  status: living
+  field: "Project Xanadu implementation — tumblers (transfinite addressing) with Mark Miller, the Autodesk-era codebase, Xanadu Operating Company; Ann Arbor Computer Club; rotary rocket engine design"
+  home: characters/roger-gregory/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: replied
+  consent: not_addressed          # he answered about the work, not about the show or the portrayal
+  channel: facebook
+  sent: 2026-09-13
+  replied: 2026-09-14
+  document: invitation.md
+  reply: sources/2026-09-14-facebook-reply-c-and-rust.md
+  show_seed: null
+  note: |
+    Don sent the invitation as a Facebook message; invitation.md is the deeply linked
+    repo version of that message, and supersedes it. The ask has three named texts on
+    the table (Gwern's Xanadu essay, Ben Shneiderman's Computer Lib assessment, Don's
+    1999 Udanax review) and one concrete deliverable: correct the Green/Gold lineage
+    account in public.
+
+    He answered the next day with news instead of an answer: the 150,000 lines of
+    Smalltalk have been turned into two apps, C and Rust, byte identical in output,
+    about 27,000 lines each, release gated on Ted's sign-off. He had not yet read the
+    linked material and said he would. Nothing said about a show, so no seed yet, and
+    quoting permission has not been asked.
+
+bio:
+  summary: >
+    **Roger Everett Gregory** — one of the people who actually had to build Xanadu. Mathematics at
+    the University of Michigan; founded the **Ann Arbor Computer Club** in the 1970s. Met Ted Nelson
+    in 1974, and in 1979 joined him for the **Swarthmore Summer** with Stuart Greene and Mark Miller,
+    where he and Miller designed **tumblers** — transfinite-number addresses that can name any range
+    inside any version of any document, the mechanism underneath Xanadu's whole claim about quoting.
+    Moved to Sausalito in 1988 when **Autodesk** bought a controlling interest, and led the
+    implementation there; later founder, CEO, CTO and chairman of the **Xanadu Operating Company**.
+    Also co-designer of a rotary rocket engine based on Robert Goddard's posthumous patents
+    (US 6,212,876, 2001), and a cofounder of Eyegorithm.
+
+why_him:
+  the_gap: |
+    Three widely read post-mortems of Xanadu are on the table — Gwern's essay, Ben Shneiderman's
+    assessment of Computer Lib, and Don's own 1999 review of the Udanax release — and all three are
+    written from outside the implementation. Roger is the person who can say which parts of the
+    machinery actually existed, in which language, in which year, and what the constraints were.
+  what_only_he_can_settle:
+    - "What the C and Rust ports are: which Smalltalk tree they came from, what turned it into them, and what byte-identical output was measured against."
+    - "The Green / Xu88 versus Gold lineage, and who wrote which — Ted has corrected Don's account in public, and Roger is the primary source."
+    - "What Don was shown at the Xanadu offices: a Smalltalk system, per Don's memory, distinct from the 1980s MIT AI Lab demo on an Ann Arbor Ambassador."
+    - "What the 1999 release could legally and organizationally contain, and why the readable sources were not in it."
+    - "Whether Xanadu was ever used to document its own source code — Don's 1999 question, quoted by Gwern in 2025, still unanswered."
+
+sources:
+  wikipedia: "https://en.wikipedia.org/wiki/Roger_Gregory_(programmer)"
+  web:
+    - { title: "Project Xanadu — the Swarthmore Summer, tumblers, Autodesk, XOC", url: "https://en.wikipedia.org/wiki/Project_Xanadu" }
+    - { title: "Gary Wolf, The Curse of Xanadu (Wired 3.06, June 1995)", url: "https://www.wired.com/1995/06/xanadu/" }
+    - { title: "Udanax — the 1999 open-source release (Green and Gold)", url: "http://udanax.com/" }
+    - { title: "Belinda Barnet, Memory Machines: The Evolution of Hypertext (Anthem, 2013) — interviews Gregory", url: "https://anthempress.com/memory-machines-pb" }
+  code_mirrors:
+    - { title: "rfinz/udanax-gold — mirror of the Gold Smalltalk sources", url: "https://github.com/rfinz/udanax-gold" }
+    - { title: "jonesd/udanax-gold2java — David G. Jones: released Smalltalk + C++, an automatic Smalltalk-to-Java translator, generated Java, some hand translations", url: "https://github.com/jonesd/udanax-gold2java" }
+    - { title: "sisbell/xanadu-spec — an agentic-AI-derived formal specification from Ted's design and Udanax Green (accuracy unvalidated)", url: "https://github.com/sisbell/xanadu-spec" }
+  in_repo:
+    - { path: sources/2026-09-14-facebook-reply-c-and-rust.md, why: "His reply, its four claims, and the questions they earn" }
+    - { path: sources/udanax-lineage-questions.md, why: "The lineage table and the open questions, assembled so he can correct it rather than reconstruct it" }
+    - { path: ../gwern/sources/1999-userland-xanadu-thread.md, why: "Don's 1999 review, all five UserLand posts in one piece — the text Gwern quotes" }
+    - { path: ../gwern/sources/2025-xanadu-even-more-hindsight.md, why: "Gwern's essay digest, including both citations of Don" }
+    - { path: ../ben-shneiderman/sources/2022-01-13-hyperties-computer-lib.md, why: "Ben's Computer Lib assessment, in Don's mail to Ben" }
+
+see_also:
+  - { path: ../ted-nelson/, why: "Met 1974; Xanadu's author. Ted corrected Don's Green/Gold account on Hacker News" }
+  - { path: ../hugh-daniel/, why: "🕯️ Xanadu and NeWS — Don met Hugh at the AI Lab Xanadu demo (memorial)" }
+  - { path: ../gwern/, why: "Wrote the 2025 post-mortem that cites Don's 1999 review twice" }
+  - { path: ../ben-shneiderman/, why: "The Computer Lib assessment — innovation that needed to connect to practical realities" }
+  - { path: ../donald-knuth/, why: "Literate programming — the standard Don's 1999 dogfood question measured Xanadu against" }
+  - { path: ../vanessa-freudenberg/, why: "🕯️ SqueakJS — Smalltalk in the browser, one answer to 'what would you write it in now' (memorial)" }
+  - { path: ../david-ungar/, why: "Self and Smalltalk implementation; Korz — subjective dispatch" }
+  - { path: ../../process/trails/augmentation-and-hypertext.md, why: "The trail he belongs on" }

@@ -124,9 +124,9 @@ is a second implementation with a different job, and legibility is the job. Func
 like `wellFlankedByConfluentExcitedState` are the same instinct applied to the source.
 
 **The 29-state rule as a recurring test case.** It shows up again in
-`[cam6-cellular-automata-machine.md](../cam6-cellular-automata-machine.md)` as the
+[`cam6-cellular-automata-machine.md`](../cam6-cellular-automata-machine.md) as the
 `JohnVonNeumann29` rule, and the self-reproduction argument runs through
-`[cam-construction-set.md](../cam-construction-set.md)`. The 2006 OpenLaszlo build is the
+[`cam-construction-set.md`](../cam-construction-set.md). The 2006 OpenLaszlo build is the
 browser-side, hobby-scale, watch-it-think member of that family.
 
 **Compilers that treat JavaScript as machine language.** OpenLaszlo targeting both SWF and
@@ -139,8 +139,8 @@ industrial-strength ActiveX, aimed at a pie-menu touch shell for phones and PDAs
 synthesis, GPS, MAPI, and TomTom driven through it — plus event synthesis and screen scraping
 to "overlay and drive existing applications' user interfaces." Nobody shipped that stack. The
 pie-menu-on-a-touchscreen thread continues in
-`[connectedtv-touch-tuning-finger-pies.md](../connectedtv-touch-tuning-finger-pies.md)` and
-`[ie-jscript-htc-xslt-pie-menus.md](../ie-jscript-htc-xslt-pie-menus.md)`.
+[`connectedtv-touch-tuning-finger-pies.md`](../connectedtv-touch-tuning-finger-pies.md) and
+[`ie-jscript-htc-xslt-pie-menus.md`](../ie-jscript-htc-xslt-pie-menus.md).
 
 Note what the last two threads share: **driving somebody else's application from outside it,
 by faking input and reading pixels.** He proposes it as a product architecture in one
@@ -186,13 +186,13 @@ Full telling, references, and the show framing:
 
 | This mail                                 | Room it belongs to                                                                                                                                                  |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| von Neumann 29-state, `JohnVonNeumann29`  | `[cam6-cellular-automata-machine.md](../cam6-cellular-automata-machine.md)` · `[cam-construction-set.md](../cam-construction-set.md)`                               |
-| OpenLaszlo, constraints, XML data binding | `[garnet-to-svelte-constraint-ui-lineage.md](../garnet-to-svelte-constraint-ui-lineage.md)`                                                                         |
-| Pie menus on touch devices                | `[connectedtv-touch-tuning-finger-pies.md](../connectedtv-touch-tuning-finger-pies.md)` · `[ie-jscript-htc-xslt-pie-menus.md](../ie-jscript-htc-xslt-pie-menus.md)` |
-| Electronic mirrors, video in the loop     | `[warpomatic-video-background-removal.md](../warpomatic-video-background-removal.md)`                                                                               |
-| Narcissus, mirrors, reflection            | `[self-interest-narcissas-mirror-david-ungar.md](../self-interest-narcissas-mirror-david-ungar.md)`                                                                 |
+| von Neumann 29-state, `JohnVonNeumann29`  | [`cam6-cellular-automata-machine.md`](../cam6-cellular-automata-machine.md) · [`cam-construction-set.md`](../cam-construction-set.md)                               |
+| OpenLaszlo, constraints, XML data binding | [`garnet-to-svelte-constraint-ui-lineage.md`](../garnet-to-svelte-constraint-ui-lineage.md)                                                                         |
+| Pie menus on touch devices                | [`connectedtv-touch-tuning-finger-pies.md`](../connectedtv-touch-tuning-finger-pies.md) · [`ie-jscript-htc-xslt-pie-menus.md`](../ie-jscript-htc-xslt-pie-menus.md) |
+| Electronic mirrors, video in the loop     | [`warpomatic-video-background-removal.md`](../warpomatic-video-background-removal.md)                                                                               |
+| Narcissus, mirrors, reflection            | [`self-interest-narcissas-mirror-david-ungar.md`](../self-interest-narcissas-mirror-david-ungar.md)                                                                 |
 | Driving a Sims game from outside it       | [angel event bus](https://github.com/SimHacker/moollm/blob/main/designs/sim-obliterator/ANGEL-EVENT-BUS.md)                                                         |
-| Jim Mackraz, copied                       | `[../../jim-mackraz/README.md](../../jim-mackraz/README.md)`                                                                                                        |
+| Jim Mackraz, copied                       | [`../../jim-mackraz/README.md`](../../jim-mackraz/README.md)                                                                                                        |
 
 
 

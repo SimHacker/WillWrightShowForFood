@@ -31,6 +31,32 @@ Audience README: [`README.md`](README.md) · Pair: [`tom-and-golan-ecg-mouther`]
 - Drive [Faceball](../../apps/performance-space/faceball-construction-set.yml) morph targets by dragging features
 - Pair show: [tom-and-golan-ecg-mouther](../../repo-shows/tom-and-golan-ecg-mouther/)
 
+## Media Streams icon language
+
+Details and the rights research: [`media-streams-icon-language.yml`](media-streams-icon-language.yml)
+
+Golan was the **principal designer and lexicographer** of Media Streams' iconic visual
+language — 2,500 primitives in the 1993 prototype, over 6,000 icons later, composing into
+sentences with a real grammar. Marc Davis conceived the system; Brian Williams built much
+of it; MIT then Interval, 1991–1997.
+
+- **The finding worth bringing him:** his icon grammar and the modern computer vision task
+  taxonomy are the same schema, thirty years apart. `subject-action-object` *is* human-object
+  interaction detection — the `<human, verb, object>` triplet, identically.
+  `subject-relative-position-object` is scene graph generation. Open question back to him:
+  which dialects has vision *still* not caught up to? Cinematic operations, camera motion as
+  intent rather than measurement, character relationships.
+- **Icons for abstract concepts** — the genuinely hard part, done across many dialects at
+  once. How did the visual resonances get designed?
+- **Does anything survive** — the lexicon as data, the Media Streams Manual he wrote, the Mac
+  Common Lisp source?
+- **Rights are unknown.** flong.com is plain © with no open license; MIT holds thesis
+  copyright; Interval-era work has a third possible claimant. Would he consider releasing the
+  lexicon openly?
+- Why it matters now: [MEDIAFLOW.yml](https://github.com/SimHacker/MicropolisCore/blob/main/apps/screen-angel/MEDIAFLOW.yml)
+  treats the grammar as a ready-made schema for video annotation — the argument being that
+  models solved the *labour* of annotating and left the *representation* problem untouched.
+
 ## Other hooks
 
 1. flong.com as Repo Show cousin — provenance, anti-extraction, forkable demos

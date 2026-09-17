@@ -42,13 +42,3 @@ studio, or just email threads that become show notes. No deadlines, no
 production pressure — the repo waits patiently.
 
 -Don
-
-## Send notes
-
-- Lead with the Spore reunion — Will and Chaim are the warm center of
-  gravity; language design and music are the depth behind it.
-- The IL/intensional-logic observation is the genuine hook for the
-  Korz thread — he built context-dependent evaluation as a tool, not
-  a thesis.
-- His art deserves gallery treatment in any show: the 1/1 editions,
-  Filter Farm as playable segment (evolve filters live on air?).

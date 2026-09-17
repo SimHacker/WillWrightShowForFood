@@ -84,7 +84,7 @@ emails stay private, by design.)
 | **CA Lab demo** (with the 1-800 gag) | [youtube.com/watch?v=lyZUzakG3bE](https://www.youtube.com/watch?v=lyZUzakG3bE) |
 | **CA jam co-guests** | [Norman Margolus](../norman-margolus/) · [Jim Crutchfield](../jim-crutchfield/) · [Dave Ackley](../dave-ackley/) |
 | **What the CAM-6 became** | [CAM Construction Set](../don-hopkins/cam-construction-set.md) — the board's architecture rebuilt as rewireable components |
-| **The rule catalog, as code** | [`margolus-rules.md`](../david-ungar/korz/examples/margolus-rules.md) — block rules written as Korz slots, compiled to tables or shaders |
+| **The rule catalog, as code** | [`margolus-rules.md`](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-prime/examples/margolus-rules.md) — block rules written as Korz slots, compiled to tables or shaders |
 | **The 1984 room and the 1987 one** | [`jim-crutchfield/ideas.md`](../jim-crutchfield/ideas.md) — where CAM was first shown, and where it landed three years later |
 
 Sources in [CHARACTER.yml](CHARACTER.yml). Subject may request correction or removal anytime.

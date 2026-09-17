@@ -1,8 +1,8 @@
 # Ideas to explore with Jim Crutchfield 🦋♾️
 
-*Interview hooks. The letter — `[positive-feedback.md](positive-feedback.md)` — carries the
+*Interview hooks. The letter — [`positive-feedback.md`](positive-feedback.md) — carries the
 tribute and the single ask; this file carries the questions. Citations:
-`[positive-feedback.yml](positive-feedback.yml)`.*
+[`positive-feedback.yml`](positive-feedback.yml).*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 ## What Jim has done

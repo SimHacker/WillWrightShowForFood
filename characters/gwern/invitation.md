@@ -47,7 +47,7 @@ deliberately **not** guessing which of you thought of what, because the record d
 division. He has [a directory and an invitation of his own](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/said-achmiz/),
 written to the interface work and sent independently, so that neither of you is an appendage to the
 other. Receipts, including a GreaterWrong misattribution I had to correct in my own first draft:
-`[said-achmiz/sources/gwern-net-credits.md](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/said-achmiz/sources/gwern-net-credits.md)`.
+[`said-achmiz/sources/gwern-net-credits.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/said-achmiz/sources/gwern-net-credits.md).
 
 If any of that is still wrong, tell me and I will fix it.
 
@@ -110,7 +110,7 @@ worth inheriting from. The residual risk is only that good plumbing can manufact
 itself, independent of what flows through it.
 
 I have written down my own strongest objections so you do not have to reconstruct them:
-`[OBJECTIONS.md](https://github.com/SimHacker/moollm/blob/main/designs/webtop/OBJECTIONS.md)`, which
+[`OBJECTIONS.md`](https://github.com/SimHacker/moollm/blob/main/designs/webtop/OBJECTIONS.md), which
 takes Borretti's *Unbundling Tools for Thought* — which you endorsed — and turns it on this work.
 **Read that first if you only read one thing.**
 

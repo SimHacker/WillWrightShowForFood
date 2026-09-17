@@ -59,14 +59,25 @@
   upload a photo of the deceased — somber and playful in one object,
   the emergence↔nuance slider applied to grief
 - The [Original Sims cemetery](http://www.originalsims.com/cemetery): 1200+
-  memorials of people *and* Sims by 2005 — **read epitaphs from the Wayback
-  archive on air**
+  memorials of people *and* Sims by 2005, 2,249 by June 2006
   ([harvested sample, verbatim](sources/original-sims-cemetery-epitaphs.md):
   Christopher Reeve beside Frankenstein, the first Sim to die of a broken
   heart, the Updating Queen, an excellent cat), then ask the 2026 question:
   what does a UGC memorial site where strangers wrote each other's grief
   with care say against the internet we got instead? The cemetery as the
-  counterfactual internet
+  counterfactual internet — and as **a graveyard of the internet that was**,
+  in both senses: made by that internet, and now a grave for it
+- **The best-of tombstone reading — in the game, not off the archive.**
+  Import a selection of the real stones back as working Sims objects, walk
+  the graveyard on a lot, and read them aloud on camera. The tombstone
+  generator's actual achievement was that it **made it possible to include
+  dead people in the game** — two prototypes, Halloween and Solemn, and
+  thousands of personalized stones with photographs. Reading them standing
+  in front of them is the argument delivered as a walk: strangers' grief,
+  unvetted, twenty years later, still kind. Then name the terms on air —
+  procedural rhetoric, the meta-rule level, the finding that playground
+  spite is the ceiling. Chapter text:
+  [`objects-that-argue.md`](../don-hopkins/sources/qgcon-inclusivity-paper/objects-that-argue.md)
 
 ### 4. Soul City — rhetoric as platform
 

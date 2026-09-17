@@ -46,11 +46,4 @@ Amsterdam
 
 ---
 
-## Notes
-
-- Lead with playable *Common Loot* + Pitch Dark lineage — not a generic “come on a podcast”
-- Optional live beat: open frontalot.com/loot on stream
-- Pair options: Jason Scott · Scott Adams / Infocom lore · Will systems talk
-- Quiet-mode P.S. if still in invite-only phase
-
 ↑ [`README.md`](README.md) · [`sources/`](sources/)

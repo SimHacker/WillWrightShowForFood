@@ -136,7 +136,7 @@ knows about diacope — you never define the figure, you press its name.
 Point, don't spell. A chord is a **context vector**; the streaming model is
 **dispatch resolving against it in real time**; the faders are **fronting
 weights** (the [two-headed
-troll](../david-ungar/korz/examples/troll-blend.md) as a mixing console — a mind's head
+troll](https://github.com/SimHacker/moollm/blob/main/designs/korz/korz-prime/examples/troll-blend.md) as a mixing console — a mind's head
 swells when its fader rises). Velocity-sensitive keys make `isKnown` audible:
 a figure the model knows deep (alliteration) responds at a feather touch; an
 obscure one (zeugma) needs the key mashed. The keyboard is a Korz context

@@ -45,7 +45,9 @@ interval:
   project: "Media Streams / MediaFlow / automatic media production"
 
 see_also:
+  - { path: ideas.md, why: "Topics — the grammar/CV-taxonomy correspondence, semasiography, glommable compounds, Garage Cinema" }
   - { path: ../david-levitt/, why: "Interval colleague; Bounce / ConnectedTV thread" }
   - { path: ../golan-levin/, why: "Media Streams co-designer" }
+  - { path: ../golan-levin/media-streams-icon-language.yml, why: "What is published, what is not, and the rights research on the icon language" }
   - { path: ../ken-kahn/, why: "Same NPUC panel photo" }
   - { path: ../../repo-shows/npuc-reunion/, why: "Group reunion show" }

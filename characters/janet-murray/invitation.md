@@ -47,11 +47,4 @@ Don Hopkins
 
 ---
 
-## Notes
-
-- Lead with SFC / her students — not a cold academic pitch
-- Private fuller draft: `DonHopkins/characters/don-hopkins/email/email-to-janet-murray.md`
-- Confirm retirement/status tone before send
-- Pair options: Quitmeyer episode · Laurel · Montfort/Adventure literary batch
-
 ↑ [`README.md`](README.md) · [`sources/`](sources/)

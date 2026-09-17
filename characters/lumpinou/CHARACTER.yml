@@ -1,0 +1,70 @@
+# Lumpinou — invitation portrayal. NOT Lumpinou.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: lumpinou
+  name: "Lumpinou"
+  type: invitation
+  signifier: "🏳️‍🌈🔧"
+  status: living
+  field: |
+    The Sims 4 gameplay modding (Python) — LGBTQIA+ / Gender & Orientation Overhaul and a
+    catalog of relationship and life-event mods; lumpinoumods.com
+  home: characters/lumpinou/
+  naming_note: |
+    Goes by the handle **Lumpinou** across the site, Mod The Sims, Patreon and Discord. No legal
+    name published on lumpinoumods.com. Pronouns are not stated in any source found; Don refers
+    to him as he. Ask before writing pronouns into anything public or filmed.
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 0
+  authored_by: don-hopkins
+  note: "Never contacted. Everything here is from public pages; nothing said on his behalf."
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  cluster: ../../repo-shows/lgbtq-sims-cluster/README.md
+  stack_with: [ellpeck, heather-castillo, steve-alvey, patrick-j-barrett-iii]
+
+bio:
+  summary: |
+    Lumpinou writes gameplay mods for The Sims 4 in Python. The flagship,
+    [LGBTQIA+ / Gender & Orientation Overhaul](https://lumpinoumods.com/2022/06/07/lumpinous-lgbtqia-mod/),
+    published 7 June 2022 and still maintained against EA patches, turns identity from a CAS
+    setting into something Sims live through: gender identities including questioning, agender,
+    non-binary, genderfluid and transgender; medical and non-medical gender affirmation played out
+    in interactions, moodlets, sentiments and relationship statuses rather than a menu; romantic
+    and sexual orientation split apart and modeled separately; optional self-discovery and coming
+    out; queerplatonic partnerships; romance-free WooHoo for aromantic Sims; and an auto-assign
+    system with tunable population percentages so a neighborhood is not uniformly straight by
+    default. Every part of it can be turned off — the whole mod is built to be customized rather
+    than imposed.
+  why_it_matters: |
+    This is procedural rhetoric done by a modder, on top of a game that stopped at the
+    representation layer. EA shipped the wardrobe — gender-independent clothing in 2016, custom
+    pronouns in 2022, an orientation setting in July 2022, binders and top surgery scars in the
+    January 2023 patch. Lumpinou shipped the rules underneath it. That is the same move Patrick
+    Barrett made in 1998 when he simply did not check sex, twenty-four years later and from
+    outside the company.
+
+verify_before_contact:
+  - "Whether the mods are free with timed Patreon early access, and how long — stated policy, cited"
+  - "Collaborators on the surgery-scar and body content (a MonoChaos collaboration is in Don's notes, unconfirmed)"
+  - "Fastest channel — Discord is likely, confirm the invite link before writing"
+  - "Pronouns"
+
+known_from:
+  don: "Don does not know The Sims 4 well; Lumpinou is the person who does, and the reason the Sims 4 bridge is a partnership rather than a reverse-engineering project"
+  bridge_role: "See the Sims 4 entry in the SoulAngel game bridge roster (MicropolisCore apps/screen-angel/modules/soul-angel/GAME-BRIDGES.yml)"
+
+see_also:
+  - README.md
+  - GLANCE.yml
+  - ideas.md
+  - invitation.md
+  - ../ellpeck/
+  - ../patrick-j-barrett-iii/same-sex-relationships-the-record.md
+  - ../../repo-shows/lgbtq-sims-cluster/README.md

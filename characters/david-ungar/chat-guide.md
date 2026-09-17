@@ -1,7 +1,7 @@
 # David Ungar chat guide — scroll to keep your place
 
 One screen per beat. Check things off, skip freely, follow his energy.
-Deep background: `[ideas.md](ideas.md)` · `[reflecting-on-self.md](reflecting-on-self.md)`
+Deep background: [`ideas.md`](ideas.md) · [`reflecting-on-self.md`](reflecting-on-self.md)
 
 ## Ground rules (self-reminders)
 
@@ -50,7 +50,7 @@ Links: [SELF-AND-MOOLLM](https://github.com/SimHacker/moollm/blob/main/designs/o
 
 ## 2. Live adventure — feel the microworld
 
-- [ ] Boot `[examples/adventure-4/](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4)`
+- [ ] Boot [`examples/adventure-4/`](https://github.com/SimHacker/moollm/tree/main/examples/adventure-4)
   (Gezelligheid Grotto) — garden → pub → palm-nook.
 - [ ] Meet **Palm** — `ls` a room = reflection; talk to him = NL scripts
   on objects. Invite Palm to ask Dave Ungar some deep philosophical existential questions, and tell him about himself and how he feels and behaves and self-organizes under the influence of self! 
@@ -242,7 +242,7 @@ his original pointer: [sources/2025-10-26-korz-email-hn-rollup.md](sources/2025-
   — show him the consent machinery *is* the ceremony. A live `cp -r`
   with a soul. Entirely his call, on or off the air.
 - [ ] Vision Pro / exploratory environment — his "Is there anything like
-  that today? Why not??" (`[ideas.md §10](ideas.md)`)
+  that today? Why not??" ([`ideas.md §10`](ideas.md))
 - [ ] Repo Show: *[Reflecting on Self: Narcissa's Mirror](reflecting-on-self.md)*
   — yes / later / no, zero pressure. ([show seed](../../repo-shows/david-ungar/))
 - [ ] **David Temkin** — our mutual friend and colleague (David
@@ -341,7 +341,7 @@ his original pointer: [sources/2025-10-26-korz-email-hn-rollup.md](sources/2025-
 
 ## Afterward
 
-- [ ] Log what landed in `[correspondence.yml](correspondence.yml)`
+- [ ] Log what landed in [`correspondence.yml`](correspondence.yml)
   (public only with David's OK)
 - [ ] Record the standalone rambling demo for the show pipeline
 - [ ] Follow up on unanswered opener questions

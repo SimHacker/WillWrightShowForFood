@@ -73,13 +73,4 @@ just yet.*
 
 ---
 
-## Notes
-
-- Lead with the human-not-twin respect + the Minsky thread — both are specific to him
-- Henry Minsky is the warm bridge: ask Henry first whether he'd like to co-sign or forward
-- RAI cameo is an offer, never a requirement — the show wants the human
-- Critics stay on the table (Hofstadter, Allen, prediction scorecards) — he's engaged them
-  publicly for decades; honesty is the invitation's credibility
-- Facebook mutuals as fallback introducers: Philip van Nedervelde, Nicole Lazzaro, Pooky Amsterdam
-
 ↑ [`README.md`](README.md) · [`ideas.md`](ideas.md) · [`CHARACTER.yml`](CHARACTER.yml)

@@ -147,7 +147,7 @@ No dunking — redesign briefs with attribution.
 
 ## Episode 2 hooks — pies, radials, PieCraft
 
-See `[pie-menus-discussion-notes.md](../../repo-shows/edd-coates/pie-menus-discussion-notes.md)`.
+See [`pie-menus-discussion-notes.md`](../../repo-shows/edd-coates/pie-menus-discussion-notes.md).
 
 - How many pie / radial / wheel examples in the catalog? Tags that would help
 - The Sims pies — Don’s firsthand; how they read in GUIDB
@@ -167,7 +167,7 @@ See `[pie-menus-discussion-notes.md](../../repo-shows/edd-coates/pie-menus-discu
 A third spine (or a fat middle of ep.2): **old-school interactive graphics as game UI ancestry** —
 and [PadCrafter](https://www.padcrafter.com/) as the tool that makes dead iron’s *controls* legible again.
 
-Deep show seed already planted: `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/README.md)`
+Deep show seed already planted: [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/README.md)
 (buds: [Heinz Lemke](../heinz-lemke/), **[Lars Brinkhoff](../lars-brinkhoff/)**, [David Rosenthal](../david-rosenthal/)).
 Edd is the [GUIDB](https://www.gameuidatabase.com/) / PadCrafter lens on that iron.
 Audience map: [README § PIXIE](README.md#pixie--emulator--padcrafter-blinkenlights-episode-3-spine).
@@ -211,7 +211,7 @@ Audience map: [README § PIXIE](README.md#pixie--emulator--padcrafter-blinkenlig
 ### Emulators + Lars Brinkhoff
 
 - Lars: PDP-7 / Type 340 / ITS preservation — make PIXIE **runnable**, not only discussed
-- Room: `[characters/lars-brinkhoff/](../lars-brinkhoff/)` · [pdp7-development.md](../lars-brinkhoff/pdp7-development.md) · [invitation](../lars-brinkhoff/invitation.md)
+- Room: [`characters/lars-brinkhoff/`](../lars-brinkhoff/) · [pdp7-development.md](../lars-brinkhoff/pdp7-development.md) · [invitation](../lars-brinkhoff/invitation.md)
 - Screen-share fantasy: GUIDB modern radial ↔ live PDP-7 emulator pie on the same desk
 - Emulator UX as game UI — pause menus, CRT shaders, save states — does GUIDB already catalog “emulator chrome”?
 
@@ -267,9 +267,9 @@ emulator hotkeys → compare to a GUIDB “pause menu” from a modern game that
 - [PIXIE on PDP-7](../../repo-shows/pixie-pie-menus-pdp7/README.md) — Heinz + **Lars** + DSHR; Edd as GUIDB/PadCrafter co-bud or cold-open
 - [Lars Brinkhoff](../lars-brinkhoff/) — emulator iron; virtual light pen
 - [Remembering Engelbart](../../repo-shows/remembering-douglas-engelbart/README.md) — keyset / mouse memorial thread
-- Don reimplements pies — `[pie-menus-retrospective](../../repo-shows/INDEX.yml)`
-- PIXIE + Ben — `[ben-and-heinz-pie-menus](../../repo-shows/ben-and-heinz-pie-menus/README.md)`
-- CMU pie guest lecture — `[brad-myers-garnet-vpl](../../repo-shows/INDEX.yml)`
+- Don reimplements pies — [`pie-menus-retrospective`](../../repo-shows/INDEX.yml)
+- PIXIE + Ben — [`ben-and-heinz-pie-menus`](../../repo-shows/ben-and-heinz-pie-menus/README.md)
+- CMU pie guest lecture — [`brad-myers-garnet-vpl`](../../repo-shows/INDEX.yml)
 
 ---
 
@@ -277,9 +277,9 @@ emulator hotkeys → compare to a GUIDB “pause menu” from a modern game that
 
 ## Sources
 
-- `[README.md](README.md)` · `[invitation.md](invitation.md)` · `[CHARACTER.yml](CHARACTER.yml)`
-- `[suggested-questions.yml](../../repo-shows/edd-coates/suggested-questions.yml)`
+- [`README.md`](README.md) · [`invitation.md`](invitation.md) · [`CHARACTER.yml`](CHARACTER.yml)
+- [`suggested-questions.yml`](../../repo-shows/edd-coates/suggested-questions.yml)
 - [gameuidatabase.com](https://www.gameuidatabase.com/) · [padcrafter.com](https://www.padcrafter.com/) · [eddcoatesdesign.com](https://www.eddcoatesdesign.com/)
 - [GONZO-UI-MANIFEST](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/GONZO-UI-MANIFEST.md)
-- `[pixie-pie-menus-pdp7.yml](../../repo-shows/pixie-pie-menus-pdp7/README.md)` · `[lars-brinkhoff/](../lars-brinkhoff/)`
+- [`pixie-pie-menus-pdp7.yml`](../../repo-shows/pixie-pie-menus-pdp7/README.md) · [`lars-brinkhoff/`](../lars-brinkhoff/)
 

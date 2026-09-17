@@ -1,0 +1,101 @@
+# Media Streams' iconic visual language — what is published, what is not, and what to ask.
+#
+# Golan Levin was its principal designer and lexicographer. This file exists because the
+# language is directly relevant to current work (see downstream), and because the questions
+# about availability and rights are ones only he can answer.
+#
+# Don's research notes — not Golan's words. Portrayal standards: ../../schemas/portrayal-standards.md
+
+meta:
+  researched: 2026-09-11
+  status: "Questions prepared. Nothing asked yet."
+  confidence: "Publication facts: high, all verified against primary pages. Rights: low — see rights, which is mostly an absence of evidence rather than evidence of an answer."
+
+what_it_is:
+  system: "Media Streams — a system for annotating, retrieving, repurposing and automatically assembling digital video."
+  conceived_by: "Marc Davis"
+  built_by: "Marc Davis, Brian Williams, Golan Levin"
+  where: "MIT Media Lab (under Prof. Kenneth Haase), then Interval Research Corporation. 1991 through 1997."
+  golans_role: "Principal designer of the iconic visual language and its lexicographer, from the project's inception. Also a contributing designer of the interface, and author of the Media Streams Manual. His own description on his own site."
+  scale: "Over 2,500 iconic primitives in the 1993 prototype; more than 6,000 icons later."
+  why_it_is_a_language_not_an_iconography: "The icons compose into sentences with a grammar — hundreds of millions of meaningful combinations — and a completed compound is added back to the palette to be used as a primitive itself."
+
+# WHAT IS PUBLISHED
+
+published_about_it:
+  davis_1993_paper:
+    what: "Marc Davis, 'Media streams: an iconic visual language for video annotation'"
+    url: "https://www.w3.org/People/howcome/p/telektronikk-4-93/Davis_M.html"
+    status: "Freely readable. Contains the grammar forms, the Director's Workshop organization, and the stated rationale for using icons."
+  davis_1995_thesis:
+    what: "Marc Davis, 'Media Streams: Representing Video for Retrieval and Repurposing', PhD thesis, MIT"
+    urls:
+      - "https://marcdavis.me/wp-content/uploads/Publications/1995_PHDThesisMIT_MediaStreamsRepVideoRetrievalRepurposing.pdf"
+      - "http://dspace.mit.edu/handle/1721.1/29088"
+    status: "Freely downloadable. The definitive detailed source. Golan is credited in the acknowledgements for the icon and interface design and for assembling the document."
+  golans_own_pages:
+    urls:
+      - "https://www.flong.com/archive/projects/icons/index.html"
+      - "https://acg.media.mit.edu/people/golan/mediastreams/"
+    status: "Live. Include images of the Icon Space — the hierarchically indexed dictionary of iconic descriptors — and his own account of his role."
+  the_media_streams_manual:
+    what: "Golan wrote it. Its existence is documented in the thesis acknowledgements."
+    availability: "Unknown. Not found online in this search. Worth asking about specifically — a manual for a 6,000-icon language is the artifact that would make the language usable by someone who was not there."
+
+published_as_reusable_material:
+  icon_set_as_data: "No evidence of any. No downloadable set, no repository, no machine-readable lexicon found."
+  source_code: "No evidence. And the implementation stack — Macintosh Common Lisp with FRAMER, plus a custom Lisp interface to QuickTime — means surviving source would be difficult to run and impossible to run unmodified."
+  conclusion: "The language is thoroughly DOCUMENTED and not at all DISTRIBUTED. Everything public is description and screenshots; nothing public is the artifact itself."
+
+# RIGHTS
+
+rights:
+  short_answer: "Unknown, and restrictive by default. Nobody has granted reuse of anything."
+  what_the_pages_say:
+    flong: "'Contents © 2020 Golan Levin and Collaborators.' Plain copyright. No Creative Commons license and no general reuse permission found anywhere on the site."
+    mit_theses: "MIT theses carry MIT copyright — Golan's own 2000 master's thesis reads '© Massachusetts Institute of Technology, 2000. All rights reserved.' Freely readable is not the same as freely reusable."
+  the_third_claimant:
+    what: "Development continued at Interval Research Corporation from about 1995 to 1997, so the Interval-era work has a separate possible owner from the MIT-era work."
+    complication: "Interval ceased operations in 2000 and its intellectual property went to a holding entity — Interval Licensing LLC, which litigated Interval patents in 2010. Tracing a 1990s research artifact through that is not a thing to guess at."
+    confidence: "~85% on the holding entity and the litigation. The specific status of Media Streams material is genuinely unknown."
+  the_practical_separation:
+    the_grammar: "Composition rules — subject-action, subject-action-object, subject-relative-position-object, camera-movement-object — are a method, and methods are not what copyright covers. Describing, citing and USING the grammar is unproblematic."
+    the_glyphs: "Six thousand specific drawings are copyrightable artifacts, and reproducing or deriving from them needs permission."
+    so: "Any work downstream is unblocked on the grammar and blocked on the glyphs. Worth knowing before asking, because it means the ask is an opportunity rather than a dependency."
+
+# WHAT TO ASK HIM
+
+questions:
+  availability:
+    - "Does a machine-readable form of the icon lexicon survive — the icons as files, the hierarchy as data, anything from the Director's Workshop?"
+    - "Does the Media Streams Manual survive, and is it shareable?"
+    - "Does any of the Mac Common Lisp source survive, at MIT or at Interval or in a personal archive?"
+  rights:
+    - "Who does he understand to hold rights in the icon designs — himself, MIT, Interval's successor, some combination?"
+    - "Would he consider releasing the lexicon, or a subset, under an open license? Given his openFrameworks and Processing Foundation history the question is a reasonable one to put to him rather than a presumptuous one."
+    - "Does he know what happened to Interval-era research artifacts when the company wound down?"
+  the_thing_he_might_enjoy_most:
+    what: |
+      His 1990s icon grammar and the present-day computer vision task taxonomy are the same
+      schema, arrived at independently thirty years apart. subject-action-object IS
+      human-object interaction detection — the <human, verb, object> triplet, identically.
+      subject-relative-position-object is scene graph generation. camera-movement-object is
+      camera motion estimation plus tracking.
+    why_bring_it: "It is a real finding, it is checkable from both sides, and it says his design work anticipated a structure the field had to rediscover. Also a genuinely open question for him: which dialects has vision still not caught up to? Cinematic operations and character relationships are the obvious candidates."
+    downstream: "MicropolisCore/apps/screen-angel/MEDIAFLOW.yml — the_grammar_maps_onto_modern_vision_tasks"
+
+# WHY IT MATTERS HERE
+
+downstream:
+  screen_angel: "MicropolisCore/apps/screen-angel/MEDIAFLOW.yml treats the icon grammar as a ready-made schema for annotating video, and argues that the schema — not the labour of annotating — was always the hard part. Vision models solved the labour and left the representation problem untouched."
+  the_argument_from_1993_that_still_holds:
+    verbatim: "\"an accurate and readable time-indexed representation of simultaneous, sequential, overlapping and contained actions (natural languages are not very good at this task)\""
+    source: "Davis 1993"
+    why: "It is the argument against free-text description from a language model as the representation for video content, written thirty-three years early."
+  interval_thread: "Golan, Marc Davis, Brian Williams and Don overlap at Interval. See ../don-hopkins/interval-research-pluggers-and-mediaflow.md and ../../apps/performance-space/faceball-construction-set.yml for the adjacent projects."
+
+see_also:
+  - { path: ideas.md, why: "Topics for the conversation" }
+  - { path: invitation.md, why: "The invite" }
+  - { path: ../tom-ngo/, why: "ECG — the other Interval thread, and the flagship pair show" }
+  - { path: ../paul-debevec/, why: "Rouen Revisited, 1996" }

@@ -1,0 +1,97 @@
+# CARD — Roger Gregory (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: roger-gregory
+  name: Roger Gregory
+  type:
+  - invitation
+  - guest
+  - portrayal
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+  card_type: guest_skills
+card:
+  name: Roger Gregory
+  title: The One Who Had To Build It
+  rarity: rare
+  signifier: 🔢
+  flavor: Ted named the dream. Somebody had to make the addresses work.
+abilities:
+- id: TUMBLER-ADDRESSING
+  name: Tumbler Addressing
+  type: activated
+  mana: '{U}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: addressAnyRange
+    signature: addressAnyRange(document, version, span) → a name that survives revision
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.9
+  effect: Name any range of any version of any document, with transfinite numbers.
+  verifiable: Tumblers, designed with Mark Miller at the 1979 Swarthmore Summer
+  combos_with:
+  - TRANSCLUDE
+- id: SHIP-THE-IMPLEMENTATION
+  name: Ship the Implementation
+  type: activated
+  mana: '{1}{U}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: buildUnderTheTheory
+    signature: buildUnderTheTheory(vision) → running code, and a deadline
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.85
+  effect: Lead the Autodesk-era Xanadu implementation; run the company that outlived it.
+  verifiable: Autodesk/Sausalito 1988; founder, CEO, CTO and chairman of Xanadu Operating Company
+  combos_with: []
+- id: CORRECT-THE-RECORD
+  name: Correct the Record
+  type: activated
+  mana: '{1}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: correctLineage
+    signature: correctLineage(Green, Gold) → who wrote what, in which language, in which year
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.95
+  effect: Settle the Green/Xu88 versus Gold account that outsiders keep guessing at.
+  verifiable: Primary participant; Ted Nelson has already corrected part of Don's public account
+  combos_with:
+  - COIN-HYPERTEXT
+- id: RESURRECT-DEAD-DESIGNS
+  name: Resurrect Dead Designs
+  type: activated
+  mana: '{2}'
+  conditions:
+  - 'show_topic_matches_public_work: true'
+  advertisement:
+    method: makeItRunAgain
+    signature: makeItRunAgain(unbuilt design) → hardware, or a patent
+    score_when:
+    - trigger: audience_learns_something_true
+      weight: 0.8
+  effect: Take a dead inventor's unbuilt design and make it work — including his own.
+  verifiable: Rotary rocket engine from Robert Goddard's posthumous patents, US 6,212,876 (2001); the Smalltalk turned into C and Rust, announced 14 Sep 2026, unreleased
+  combos_with: []
+invoke_rules:
+  consent: not_addressed          # replied 14 Sep 2026 about the work; nothing said about a show
+  simulation: false
+see_also:
+- path: sources/2026-09-14-facebook-reply-c-and-rust.md
+  why: His reply — C and Rust, byte identical, waiting on Ted
+- path: CHARACTER.yml
+  why: Bio girder — invitation sent by Facebook message, Sep 2026
+- path: invitation.md
+  why: The deeply linked repo version of that message
+- path: ideas.md
+  why: Conversation hooks
+- path: sources/udanax-lineage-questions.md
+  why: The table he is being asked to correct

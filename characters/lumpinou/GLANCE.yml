@@ -1,0 +1,28 @@
+# Lumpinou — GLANCE
+# Sims 4 modder; LGBTQIA+ gender & orientation gameplay; invite candidate.
+
+title: "Lumpinou — LGBTQIA+ gameplay for The Sims 4"
+signifier: "🏳️‍🌈🔧"
+description: |
+  Author of the LGBTQIA+ / Gender & Orientation Overhaul for The Sims 4 — gender identity,
+  affirmation and transition, split romantic and sexual orientations, self-discovery, coming out,
+  queerplatonic partners, all as gameplay rather than a CAS checkbox. Deep Python knowledge of a
+  game Don does not know well. Candidate for the inclusivity cluster and for the Sims 4 side of
+  the Soul City bridge.
+
+keywords: [lumpinou, sims 4, lgbtqia, mod, gender identity, transition, orientation, python, soul city]
+
+card: CHARACTER.yml
+invitation: invitation.md
+
+contact:
+  site: https://lumpinoumods.com/
+  mod: https://lumpinoumods.com/2022/06/07/lumpinous-lgbtqia-mod/
+  modthesims: https://modthesims.info/d/668488/
+  patreon: https://www.patreon.com/lumpinou
+
+see_also:
+  - README.md
+  - ideas.md
+  - ../ellpeck/
+  - ../../repo-shows/lgbtq-sims-cluster/README.md
