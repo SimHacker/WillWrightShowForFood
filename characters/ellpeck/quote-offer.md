@@ -42,6 +42,19 @@ There nearly was: Activision prototyped an LCP apartment complex in 1986 and dro
 Sims 0.5, and Tiny Life is the honest occupant of the slot, with the actual soul of retro gaming in it
 — one author, small scope, exportable households, files the player keeps.
 
+**And "tiny" is literally in the name, which is the point rather than the caveat.** The essence of
+*Understanding Comics* is that you can trade resolution for identification — an exchange rate, not a
+compromise. Lower graphical resolution is not pixels swapped for soul as if soul were a consolation
+prize; it is the mechanism that produces the binding. Every specific a face carries is a specific that
+can contradict the player, so subtracting detail buys the player room inside the character. A photorealistic face is somebody
+else's; a six-pixel face is yours. Keep the world concrete and the person iconic and the player wears
+the person while believing the place — which is what The Sims did with mumbling low-poly people in
+carefully detailed rooms, and what LCP did with one man drawn in a handful of pixels whom players
+named and worried about for forty years.
+
+That is why "soul over resolution" is not a hedge about the graphics. It is a claim about *what the
+graphics are for*.
+
 Written up in moollm: [The Sims 0, and the game that should have been between](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-0-the-missing-game.md).
 
 ## Notes on the wording
@@ -55,9 +68,38 @@ scale ever got.
 **"Soul over resolution"** is a compliment about where the effort went, not a hedge about the
 pixels. The gloss is in the quote so a stranger reading a praise page gets it without homework.
 
-**Deliberately not included:** the bone-saw line about EA removing the Exchange from the Legacy
-Collection. It's true and it's Don's to say on the show — it does not belong in a quote on Ell's own
-storefront, where it would make his page political on someone else's behalf.
+**Lowering the resolution is like taking the batteries out of a talking doll.**
+
+A doll that talks says the same sentence forever, in someone else's voice, and every time it speaks
+it is not the child speaking. Take the batteries out and it says whatever the child needs it to say
+this afternoon.
+
+Simlish is the batteries removed on purpose — tone with no words, so the player supplies the line.
+Pixel art is the same removal in the visual channel. This is
+[Scott McCloud's masking](https://github.com/SimHacker/moollm/blob/main/skills/design-sense/lenses/masking.md):
+the essence of *Understanding Comics* is that you can trade resolution for identification, and it is
+an exchange rate rather than a compromise.
+
+**And the same trade makes user-created content possible.**
+
+Low resolution lowers the authoring floor. A player can draw a sprite or recolour a tile in an
+afternoon with free tools; nobody makes a photoreal asset without a pipeline, a suite, and a
+professional skill set.
+
+So the fidelity a game demands of its own art, it also demands of anyone who wants to add to it. That
+one setting quietly decides whether a game gets a modding community or an asset store.
+
+Tiny Life makes that decision on purpose, and it is the property
+[Wright's hobby model](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-will-wright-microworlds-1996.md)
+ran on: people collect and extend what they can also *make*.
+
+Abstraction travels, too. A low-res character can move between worlds; a photoreal one clashes with
+every room it did not ship in — which is why
+[soul bridges](https://github.com/SimHacker/moollm/blob/main/skills/soul-city/README.md) are
+plausible between small games and hard between big ones.
+
+Full write-up:
+[`sims-tiny-life.md`](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-tiny-life.md#the-masking-principle)
 
 ↑ [Invitation](invitation.md) · [CHARACTER.yml](CHARACTER.yml) · [Existing praise](sources/don-praise.md) ·
 [Soul City bridge](bridge/soul-city-bridge.md)
