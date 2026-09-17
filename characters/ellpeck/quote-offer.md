@@ -89,6 +89,14 @@ professional skill set.
 So the fidelity a game demands of its own art, it also demands of anyone who wants to add to it. That
 one setting quietly decides whether a game gets a modding community or an asset store.
 
+Which makes it a learning argument rather than a marketing one. Papert's whole case is that people
+build knowledge by building things other people can look at, so anything that lowers the cost of
+making a thing is a teaching decision — a game a fourteen-year-old can add to on a school laptop is
+teaching, whatever the box says.
+[Low floor, high ceiling](https://github.com/SimHacker/moollm/blob/main/skills/design-sense/methods/low-floor-no-ceiling.md)
+is the standard, and resolution is one of the sliders on the floor, usually set by people who think
+they are only choosing a look.
+
 Tiny Life makes that decision on purpose, and it is the property
 [Wright's hobby model](https://github.com/SimHacker/moollm/blob/main/designs/sims/sims-will-wright-microworlds-1996.md)
 ran on: people collect and extend what they can also *make*.
