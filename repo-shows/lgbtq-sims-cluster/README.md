@@ -22,6 +22,7 @@
 | Guest | Room | Status |
 |-------|------|--------|
 | [**Blake Jennings**](../../characters/blake-jennings/) | Sims war-crimes essayist | Invited 2026-07-16 |
+| [**Lumpinou**](../../characters/lumpinou/) | Sims 4 LGBTQIA+ gender & orientation overhaul | Room built, invitation drafted, not sent |
 
 ## Flipbook B-roll
 

@@ -3,7 +3,7 @@
 Messenger design jam, August 17, 2026, Don Hopkins ↔ Ben Cerveny. Pitched the
 city record ("eBike Safari meets scrobbling: every street is a groove") and got
 back geometry, lineage, and credentials. Harvested into
-`[../city-record.md](../city-record.md)` and `[../speech-track.md](../speech-track.md)`.
+[`../city-record.md`](../city-record.md) and [`../speech-track.md`](../speech-track.md).
 
 ## What Ben said
 
@@ -15,7 +15,7 @@ landed with someone who didn't need the footnote.
 - **Dennis Crowley was his student at NYU**, and **"i was on the board of
 foursquare!"** — the "Foursquare for linear roads" framing was pitched,
 by accident, at a Foursquare board member. Lineage doc:
-`[foursquare-lineage.md](foursquare-lineage.md)`.
+[`foursquare-lineage.md`](foursquare-lineage.md).
 
 
 
@@ -42,7 +42,7 @@ with a timestamp align along them.
 - Much of this shipped once already:
 [Stupid Fun Club StoryMaker demo](https://www.youtube.com/watch?v=_2yEHs_WLzQ)
 (Urban Safari era). "This is just a refinement and elaboration of what
-worked well." Amber archive: `[../../LEGACY-URBAN-SAFARI.md](../../LEGACY-URBAN-SAFARI.md)`.
+worked well." Amber archive: [`../../LEGACY-URBAN-SAFARI.md`](../../LEGACY-URBAN-SAFARI.md).
 
 
 
@@ -57,6 +57,6 @@ worked well." Amber archive: `[../../LEGACY-URBAN-SAFARI.md](../../LEGACY-URBAN-
 > here. hey ebike, what's this?) and the results of interpreting that command
 > (including error handling and mitigation, great drescher schema engine food).
 
-Distilled into `[../speech-track.md](../speech-track.md)`.
+Distilled into [`../speech-track.md`](../speech-track.md).
 
-↑ `[README.md](README.md)` · `[../CAULDRON.yml](../CAULDRON.yml)`
+↑ [`README.md`](README.md) · [`../CAULDRON.yml`](../CAULDRON.yml)

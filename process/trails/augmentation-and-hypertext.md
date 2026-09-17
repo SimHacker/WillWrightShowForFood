@@ -15,6 +15,7 @@ The forebears behind the show's **Player-in-the-Middle** tenet: Engelbart's *aug
 | [**Douglas Engelbart**](../../characters/douglas-engelbart/README.md) 🕯️ | Augmenting human intellect — NLS, the mouse, the Mother of All Demos (memorial) |
 | [**Ted Nelson**](../../characters/ted-nelson/README.md) | Coined hypertext; Xanadu; transclusion — living discussant for the memorials |
 | [**Hugh Daniel**](../../characters/hugh-daniel/README.md) 🕯️ | Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial) |
+| [**Roger Gregory**](../../characters/roger-gregory/README.md) | Built it: tumblers with Mark Miller, the Autodesk-era implementation, XOC — invited Sep 2026; replied that the 150,000 lines of Smalltalk are now C and Rust, byte identical, ~27,000 lines each, waiting on Ted |
 | [**Mark Weiser**](../../characters/mark-weiser/README.md) 🕯️ | Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial) |
 | [**Jef Raskin**](../../characters/jef-raskin/README.md) 🕯️ | *The Humane Interface* — locus of attention; humane README overlay (memorial) |
 | [**Root README**](../../README.md) | Two-layer navigation — brutalist listing + humane README at every folder |

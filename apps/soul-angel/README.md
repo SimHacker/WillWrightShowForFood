@@ -4,7 +4,7 @@
 studio, and per-game **Soul Bridges** that read and write the game's own soul — saves, albums,
 characters — from a web overlay.
 
-**Development home:** `MicropolisCore/apps/soul-angel/` — architecture, Soul Album schema, bridge
+**Development home:** `MicropolisCore/apps/screen-angel/` — architecture, Soul Album schema, bridge
 SDK, DVR spec, and the source-available license live there. This directory keeps the show and
 community side. **Product spec:** [`catalogs/soul-city/soul-angel.yml`](../../catalogs/soul-city/soul-angel.yml)
 

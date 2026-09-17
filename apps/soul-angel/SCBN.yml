@@ -9,7 +9,7 @@ meta:
 channels:
   tv:
     what: "Live Twitch/YouTube gateway, machinima premieres, instant-replay segments, Repo Show simulcast"
-    source: "DVR clips + album sequences + live capture (MicropolisCore/apps/soul-angel/DVR.yml)"
+    source: "DVR clips + album sequences + live capture (MicropolisCore/apps/screen-angel/modules/soul-angel/DVR.yml)"
   radio:
     what: "Audio-only — narrated albums as podcast episodes; TTS story readings (Simplifier lineage)"
     source: "Album narration tracks stitched; TTS for text-only albums"
@@ -26,6 +26,6 @@ federation:
   syndication: "Creator storefronts and community sites as federated nodes (SimFreaks, SimSlice lineage)"
 
 see_also:
-  - README.md   # dev home: MicropolisCore/apps/soul-angel/ (SOUL-ALBUM.yml, DVR.yml)
+  - README.md   # dev home: MicropolisCore/apps/screen-angel/ (SOUL-ALBUM.yml, DVR.yml)
   - ../stream-gateway/SPEC.yml
   - ../../catalogs/soul-city/CATALOG.yml

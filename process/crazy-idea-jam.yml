@@ -364,7 +364,7 @@ ideas:
     extensions:
       guitar_pie: "Andreas Fender UIST 2025 — fretboard pies + Voystick on the bike"
       domain_specific_roar: "one-minute-intense.yml — continuous pitch+vowel+timbre as command bus"
-      aquery: "jQuery-for-accessibility overlay — prerequisite in arbitrary apps"
+      screen_angel: "Selector/event overlay across accessibility APIs and pixels — prerequisite in arbitrary apps (named aQuery 2013-2026)"
     not_stickers: "Merch warnings live in bits/ (swag-*) — this entry is the *idea*"
     posture: "Flexible working implementation to discover what works — not academic, not startup"
     lecture: "https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f0600d9d-282e-4b83-a6f4-a9f2003ad407"

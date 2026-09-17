@@ -1,0 +1,5 @@
+# Patrons get episodes and clips early, plus write access, editing, voting on what
+# gets made, curation, and chat. See https://github.com/SimHacker/moollm/blob/main/designs/PATRONS.md
+patreon: DonHopkins
+github: # enable GitHub Sponsors on the SimHacker account, then put SimHacker here
+custom: ["https://www.donhopkins.com"]

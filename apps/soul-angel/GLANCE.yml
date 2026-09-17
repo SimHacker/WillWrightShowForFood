@@ -1,10 +1,10 @@
-# soul-angel — show/community side. DEV HOME MOVED to MicropolisCore/apps/soul-angel/
+# soul-angel — show/community side. DEV HOME MOVED to MicropolisCore/apps/screen-angel/
 # Product spec: ../../catalogs/soul-city/soul-angel.yml
 
 app:
   id: soul-angel
   status: spec
-  dev_home: MicropolisCore/apps/soul-angel/   # architecture, soul album schema, bridge SDK, DVR, license
+  dev_home: MicropolisCore/apps/screen-angel/   # architecture, soul album schema, bridge SDK, DVR, license
   purpose: "Always-on DVR + universal Soul Album + machinima/stream studio + per-game Soul Bridges"
   subsumes: ../stream-gateway/   # brain bus + broadcast sinks fold into the universal tier
 

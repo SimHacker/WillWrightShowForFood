@@ -4,6 +4,11 @@
 [ORCHESTRATOR.yml](ORCHESTRATOR.yml); this is what the paper on the
 dining table actually did, and what it was going to do next.*
 
+*The argument this makes, and why it is a chapter of the inclusivity paper:
+[`objects-that-argue.md`](../../characters/don-hopkins/sources/qgcon-inclusivity-paper/objects-that-argue.md)
+— the contract binds two Sims and never checks gender, circa 2002, roughly two years before any
+American state would issue such a license.*
+
 ## Documents as diegetic UI
 
 The Wedding Consultant didn't open dialog boxes. She produced

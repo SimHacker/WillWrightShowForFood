@@ -44,7 +44,7 @@ steam_community_guides:
 
 soul_angel:
   spec: soul-angel.yml
-  dev_home: MicropolisCore/apps/soul-angel/   # source-available; subsumes stream-gateway
+  dev_home: MicropolisCore/apps/screen-angel/   # source-available; subsumes stream-gateway
   summary: |
     SoulAngel — paid Steam Software, general-purpose game companion (planted — announce after web
     hub audience). Universal tier: always-on DVR, Soul Album with story cards + voice narration,

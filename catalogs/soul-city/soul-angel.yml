@@ -3,16 +3,38 @@
 # (Micropolis name is licensed too — same reason micropolis-home became Soul City).
 # Soul is the family name: Soul City (web), SoulAngel (native), Soul Bridges (per-game plugins),
 # Soul City Broadcast Network (channels). sims1-soul-bridge.yml holds the Sims 1 bridge module spec.
+# The LAYER underneath is the Screen Angel (named aQuery 2013-2026): SoulAngel is its first
+# application, and The Sims 1 is SoulAngel's. Spec: MicropolisCore/apps/screen-angel/.
 
 id: soul-angel
 status: planted
+
+# THE LAYER BELOW — decided 2026-09-10
+built_on:
+  screen_angel:
+    what: |
+      Selectors and event bindings over the OS accessibility tree, plus pixel pattern
+      recognition, hosted in a transparent always-topmost click-through overlay. Works on any
+      application — "soulless apps like Microsoft Word as well as soulful games like The Sims"
+      (Don). That scope test is why the layer cannot be called Soul anything.
+    formerly: "aQuery — jQuery for Accessibility, 2013 through 2026"
+    spec: MicropolisCore/apps/screen-angel/SCREEN-ANGEL.yml
+  beachheads: |
+    SoulAngel is the Screen Angel's first application; The Sims 1 is SoulAngel's. Each is the
+    other's beachhead — not the easiest landing, the one that proves the rest is reachable.
+    Games expose no accessibility tree at all, so the pixel path carries the whole load; a layer
+    that works on games works on anything.
+  one_angel_rule: |
+    The August 2026 rule stands — one Angel per layer, and bridges are bridges, not angels.
+    Screen Angel sits below SoulAngel, so there are two angels at two layers and no siblings at
+    either.
 supersedes: sims1-soul-bridge.yml   # that file narrows to the Sims 1 Soul Bridge module
 subsumes: ../../apps/stream-gateway/   # brain bus + broadcast sinks fold into the universal tier
 parent: CATALOG.yml
 platforms: [windows, macos_later]
 product: paid   # worth paying for; Steam Software listing; subscription only for AI/API tiers
-license: source_available   # MicropolisCore/apps/soul-angel/LICENSE.md — open surface, reserved core
-dev_home: MicropolisCore/apps/soul-angel/   # all software dev lives there; WWSFF keeps show/community side
+license: source_available   # MicropolisCore/apps/screen-angel/LICENSE.md — open surface, reserved core
+dev_home: MicropolisCore/apps/screen-angel/   # all software dev lives there; WWSFF keeps show/community side
 
 one_line: |
   A guardian angel for your games: always-on DVR, universal family album, machinima and
@@ -59,7 +81,7 @@ tiers:
 # We never co-opt game vocabulary — bridges uplift it into game-independent schemas.
 album_engine:
   claim: "Everything the built-in Sims Family Album does, plus video, voice, and the network."
-  schema: MicropolisCore/apps/soul-angel/SOUL-ALBUM.yml
+  schema: MicropolisCore/apps/screen-angel/modules/soul-angel/SOUL-ALBUM.yml
   model:
     album: "Ordered story cards; per-game or cross-game; local-first, publishable"
     card:
@@ -144,7 +166,7 @@ rollout:
   4: "Mac universal tier"
   5: "SCBN channels as audience forms"
 
-app_room: ../../apps/soul-angel/   # show/community side: README + SCBN; dev home is MicropolisCore/apps/soul-angel/
+app_room: ../../apps/soul-angel/   # show/community side: README + SCBN; dev home is MicropolisCore/apps/screen-angel/
 
 see_also:
   - ../../apps/soul-angel/GLANCE.yml

@@ -197,6 +197,8 @@ trails:
       - { path: ../characters/douglas-engelbart/eulogy-ted-nelson.md, why: "Ted Nelson's eulogy for Doug (CHM, 2013) — primary source, 'I feel like I've lost my best planet'" }
       - { path: ../characters/ted-nelson/, why: "Coined hypertext; Xanadu; transclusion — living discussant for the memorials" }
       - { path: ../characters/hugh-daniel/, why: "🕯️ Xanadu + NeWS — the Hugh + Ted + Don triangle (memorial)" }
+      - { path: ../characters/roger-gregory/, why: "Implemented Xanadu — tumblers, the Autodesk years, XOC; invited to correct the Green/Gold lineage in public" }
+      - { path: ../characters/gwern/sources/1999-userland-xanadu-thread.md, why: "Don's 1999 Udanax review, five 6K UserLand posts reassembled whole — the text Gwern's essay quotes twice" }
       - { path: ../characters/mark-weiser/, why: "🕯️ Ubiquitous + calm computing; CHI'88 pie-menu co-author with Don (memorial)" }
       - { path: ../characters/jef-raskin/, why: "🕯️ The Humane Interface — locus of attention; humane README overlay echo (memorial)" }
       - { path: ../repo-shows/remembering-jef-raskin/remembering-jef-raskin.yml, why: "Memorial seed — possible_discussants are connections only, not invitations" }
