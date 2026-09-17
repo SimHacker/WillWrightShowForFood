@@ -1,0 +1,70 @@
+# Game bridge — Soul City ⇔ LucasArts Afterlife (1996)
+#
+# THIN WRAPPER ON PURPOSE. The design moved to the public repos in Sep 2026 so it could be
+# read by people who don't have this one. Nothing here restates it; this file holds only the
+# show-side material that belongs in a private planning repo.
+#
+#   protocol  (the two gates, conservation, the squirt restraint, fork-and-sync)
+#             → moollm skills/soul-city/SOUL-BRIDGES.md
+#   worked case (the game, the three properties, gate analysis, reality check, open questions)
+#             → MicropolisCore documentation/designs/afterlife-soul-bridge.md
+#   roster entry (graded, Tier 4, "the SOUL LEDGER")
+#             → MicropolisCore documentation/designs/federation-peer-games.md
+#
+# Referenced as parent_bridge by heather-and-steve/afterlife-zombie-bridge.yml and listed in
+# ../INDEX.yml + ../REPO-SHOWS.yml under bridges.
+
+meta:
+  id: game-bridge-afterlife-soul
+  type: bridge
+  status: seed
+  one_line: "Rescue souls FROM hell, send characters TO hell; hell-is-full drains into ZombieSims waves."
+  public_design:
+    protocol: "moollm skills/soul-city/SOUL-BRIDGES.md"
+    worked_case: "MicropolisCore documentation/designs/afterlife-soul-bridge.md"
+  sibling_bridges: [game-bridge-soul-hydraulics.yml, game-bridge-soul-city-procreation.yml]
+
+why_it_is_its_own_bridge: |
+  Hydraulics (game-bridge-soul-hydraulics.yml) is the general primitive — three verbs on any
+  save file. Afterlife is the one game where the primitive needs no metaphor, because the
+  population unit already IS a soul and the game already ships karma trains that reincarnate
+  them. This file exists so the Afterlife-specific show material has a parent, and so the
+  zombie episode has something to inherit from.
+
+the_two_directions:
+  rescue: "Drain a heaven or hell save; squirt the souls into a living city. Resurrection as re-zoning."
+  damnation: |
+    The reverse nobody has specced: send a NAMED character TO hell. Notable because it inverts
+    the gate — hell receives population as fluid, so a named arrival has to cross as something
+    the game can hold. What is the role gate in Afterlife? Demon middle management? A gate
+    demon with a tenure record? OPEN QUESTION, and the most interesting one on this bridge.
+  hell_is_full: "Debit damned souls by denomination → ZombieSims waves → outcomes credited back."
+
+show_side:   # the part that stays private
+  flagship_episode: ../heather-and-steve/afterlife-zombie-bridge.yml
+  guests: "See ../heather-and-steve/SHOW.yml — consent status lives there, not here."
+  don_line: "We're just getting in a fresh shipment from Afterlife now — let's go and play!"
+  staging: |
+    Two monitors: hell save on one, soul ledger by denomination on the other. Batch just
+    arrived, still warm from the damned. Truck backing-beep gag optional.
+  demo_arc:
+    - "measure — open a hell save, report population (the honest first milestone)"
+    - "drain — debit one batch, audience picks the size; start small"
+    - "squirt — into a sleepy Micropolis town; watch the skyline jump"
+    - "name one — a drained soul acquires a household, then a role sheet. Statistic becomes citizen."
+  why_it_plays_on_air: |
+    Every step is visible and reversible, and the restraint is the drama: the city can refuse
+    the crowd if the player never zoned for them. Souls wait at the Station. That is a better
+    beat than a number going up.
+
+publishing_note: |
+  If any design thinking accumulates here, it is in the wrong file — promote it to the
+  MicropolisCore worked case (or, if it generalizes past this one game, to the moollm
+  protocol) and leave a pointer. This repo holds people and plans, not the model.
+
+ties_to:
+  - game-bridge-soul-hydraulics.yml
+  - ../heather-and-steve/afterlife-zombie-bridge.yml
+  - ../../process/crazy-idea-jam.yml#soul-bridge-afterlife
+  - ../../process/crazy-idea-jam.yml#hell-is-full-zombie-sims
+  - ../../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md

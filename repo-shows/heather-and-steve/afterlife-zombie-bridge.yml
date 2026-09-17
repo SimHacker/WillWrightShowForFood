@@ -133,8 +133,12 @@ implements: "Fresh shipment → read hell save → subtract soul batch → Zombi
 ties_to:
   - ../process/crazy-idea-jam.yml#soul-bridge-afterlife
   - ../process/crazy-idea-jam.yml#hell-is-full-zombie-sims
-  - game-bridge-afterlife-soul.yml
+  - ../will-wright-premiere/game-bridge-afterlife-soul.yml
   - ../process/hosted-content-cards.yml
   - ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/medium-article.md
 
-parent_bridge: game-bridge-afterlife-soul.yml
+parent_bridge: ../will-wright-premiere/game-bridge-afterlife-soul.yml
+
+public_design:   # the model moved out of this repo in Sep 2026 — cite, don't restate
+  protocol: "moollm skills/soul-city/SOUL-BRIDGES.md"          # two gates, conservation, fork-and-sync
+  worked_case: "MicropolisCore documentation/designs/afterlife-soul-bridge.md"  # incl. hell-is-full + dezombify
