@@ -139,6 +139,73 @@ between a survey and a click farm:
 - **A wrong answer costs nothing and pays nothing.** No punishment, because punishment produces
   cautious lying; no payment, because payment produces confident lying.
 
+## Attribution and thanks — a reputation system, with the tensions named
+
+Every fact already records who measured, confirmed and entered it. Let riders attach their name to
+those facts, and give anyone reading a fact a **thank-you button**, and you have built a reputation
+system whether or not you meant to. Better to design it than to discover it.
+
+A thank-you is a good primitive for one specific reason: **you cannot issue it to yourself.** It costs
+the giver nothing but requires their judgement, and it attaches to a particular fact rather than to a
+person, so it is evidence about work rather than a score about a human. Wikipedia's *Thanks* is the
+model to copy — a notification to one person, no public tally, no ranking, no leaderboard.
+
+Four tensions, and how they resolve.
+
+**1. An attributed contribution list is a de-anonymisation attack surface.** This is the serious one,
+and it points straight back at [`privacy.md`](privacy.md#why-the-clip-happens-at-the-source-and-not-to-the-finished-ride).
+The whole clip-at-source architecture exists because every published attack on Strava needed *the set
+of geolocated observations belonging to one person* in order to intersect them. A public profile
+listing the facts you contributed **is that set**, handed over voluntarily, with dates. So:
+
+- Attribution is **opt-in per fact**, never per account and never retroactive by default.
+- Facts inside a declared private region are **not attributable at all** — the option is absent, not
+  merely defaulted off, because the polite version of this mistake is an option someone will enable
+  once on a bad day.
+- The default public form is a **count and a set of kinds**, not an enumeration. "137 surface
+  confirmations, 40 kerbs, mostly Nieuw-West" is a reputation. A clickable list of coordinates and
+  timestamps is a diary.
+- Enumeration is available to anyone who wants it, because plenty of people will — see the portfolio
+  point below — but it is a decision made once, deliberately, with the consequence spelled out in one
+  sentence and no cheerful framing.
+
+**2. Thanks flow to the visible work, and the important work is invisible.** A photogenic new bike path
+gets thanked. "Checked, nothing there" does not. Neither does correcting somebody's wrong tag, or
+confirming a negative — which the credit rules above already identify as the most valuable and least
+rewarded answers anywhere in that prior-art table. So **thanks and credit stay separate and
+non-fungible.** Thanks never converts into standing, priority, or bounty. Merge them into one number
+and the number will describe charisma.
+
+**3. Reciprocity rings.** Two friends thanking each other forever is the oldest failure in the genre,
+from eBay feedback onward. Mitigations are unglamorous and known: no weight on a reciprocal thanks,
+decaying weight for repeated giver–receiver pairs, and weight proportional to the giver's independence
+from the receiver. State them in the code, since none of them work as good intentions.
+
+**4. Reputation must route, never permit.** Legitimate uses: whose claim needs a lighter review, who to
+ask about a gable or a kerb height, which district needs a specialist. Illegitimate use: deciding who
+is allowed to contribute. OpenStreetMap has deliberately never built a reputation gate — anyone edits,
+disputes resolve by conversation — and adding a priesthood upstream of it would be a regression
+disguised as quality control. **Reputation is a hint to the reviewer, never a permission bit,** and a
+newcomer's first correct claim must be able to overturn a veteran's.
+
+This is also why the **no count board** rule survives intact. There is no ranked list of people. The
+peerboard still shows what was checked and what nobody has checked, so the scoreboard is still the
+worklist. Standing exists per role and per domain — measured, confirmed, entered; surfaces, kerbs,
+architecture, night — because those are different skills and a single scalar collapses them into a
+popularity contest with a technical vocabulary.
+
+**The real reward is a portfolio, not a number.** StreetComplete's insight, which the table above
+already borrows, is that the prize should be a door. Attribution is the strongest version of that:
+an architecture student's named, dated, registry-checked body of claims about the building stock of a
+district is a **credential** — something to put in front of a supervisor or an employer, which is
+worth more than any score and costs us nothing to issue. A courier's record of hazard reports that a
+municipality acted on is the same artifact aimed at a different door.
+
+And the thank-you should carry **a sentence**, optionally, because what people actually want is not a
+tally but the knowledge that a specific person found their work useful and said why. That sentence is
+worth more than the button, and it is the same principle as the spoken annotation: the human
+sentence is the payload.
+
 ## If it were funded
 
 Everything above is unpaid, which bounds it to what people will do for their own city. The arithmetic
