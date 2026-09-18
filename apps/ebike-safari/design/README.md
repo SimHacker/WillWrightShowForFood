@@ -22,6 +22,7 @@ don't port the stack.
 |--------|-----|--------|
 | **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, replaces Bosch Flow |
 | Bumps as input | [`bumps-as-input.md`](bumps-as-input.md) | draft — **a bump is a measurement, not a dialog box**; three axes, spoken labels, hits and dodges, puddles as next winter's potholes, Signalen loop |
+| Mechanical Turk on an eBike | [`mechanical-turk-ebike.md`](mechanical-turk-ebike.md) | draft — **verification worklists as a game**; tasks from measurements not map gaps, saddle/desk tiers, the prize is a door not a number, and the refusal list that keeps it from becoming gig work |
 | Camera | [`camera.md`](camera.md) | draft — **half the app**; distance-sampled frames, four directions, local blur |
 | Every screen | [`virtual-ride.md`](virtual-ride.md) | draft — **the desktop is a bike**; WASD, turtle graphics, dynamic queries, one point stream |
 | Map distribution | [`map-distribution.md`](map-distribution.md) | draft — region packs, peer-assisted, the TomTom consent panel |
@@ -37,13 +38,14 @@ don't port the stack.
 | Animal herding | [`animal-herding.md`](animal-herding.md) | draft — pastures, paths, collies, cozy view |
 | Peerboard and brews | [`peerboard-and-brews.md`](peerboard-and-brews.md) | draft — MMORPG |
 | Semantic polder | [`semantic-polder.md`](semantic-polder.md) | draft — waterschap / Git-as-MMORPG |
-| Map game platform | [`map-game-platform.md`](map-game-platform.md) | draft — many games, one map, layer composability |
+| Map game platform | [`map-game-platform.md`](map-game-platform.md) | draft — many games, one map, layer composability; **the third-party test** — Safe Lanes as a contract, the frame not the plate |
 | ONI / pinball platform | [`oni-map-platform.md`](oni-map-platform.md) | draft — street-graph ONI, bike pinball, replay branches |
 | Embedding views | [`embedding-views.md`](embedding-views.md) | draft — factories, multi-embed plugins |
 | Git ↔ Postgres sync | [`git-postgres-sync.md`](git-postgres-sync.md) | draft — yaml-jazz source of truth |
 | Taxonomy pyramid | [`semantic-taxonomy-pyramid.md`](semantic-taxonomy-pyramid.md) | draft — LLM tags, coalesce |
 | Smell navigation | [`navigation-smell-steer.md`](navigation-smell-steer.md) | draft — hill-climb, pie menu, MediaGraph |
 | Graveyard layers | [`graveyard-soul-city.md`](graveyard-soul-city.md) | draft — real memorial + Soul City |
+| Blocked bike lanes | [`sources/blocked-bike-lanes-record.md`](sources/blocked-bike-lanes-record.md) | harvested — Safe Lanes matched SFMTA's whole citation output; enforcement geography ≠ problem geography; loading zones not tickets; the measure-vs-capture fork |
 | TomTom on HN | [`sources/tomtom-hn-record.md`](sources/tomtom-hn-record.md) | harvested — 38 comments, 2014–2026; BitTorrent maps, trace anonymisation, EPT, dynamic queries, why the PND died |
 | CloudMade 2009 | [`sources/cloudmade-2009-stack.md`](sources/cloudmade-2009-stack.md) | harvested — **the map vendor is rented**; style 8558 switched off from London |
 | Ben Cerveny jam | [`sources/ben-cerveny-city-record-jam.md`](sources/ben-cerveny-city-record-jam.md) | harvested |

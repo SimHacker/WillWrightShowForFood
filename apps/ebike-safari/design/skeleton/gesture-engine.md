@@ -31,6 +31,7 @@ Detect **semantic gestures** on the road graph — not raw GPS wiggles.
 | P1 | `RAIL_TRACK(along)` | Sustained small lateral corrections on an edge whose lane holds tram rails |
 | P0 | `DISMOUNT` → `WALK` | Speed to walking pace, ~2 Hz footfall, bike still rolling. The least ambiguous statement in the corpus |
 | P1 | `LABEL` | Spoken word attached to the most recent event — the rider names what the sensors only measured |
+| P1 | `CONFIRM(task)` | Answer to a question the corpus asked, about something just passed ([`../mechanical-turk-ebike.md`](../mechanical-turk-ebike.md)). `LABEL` names the unasked; this answers the asked. "Nothing there" is a valid answer and pays |
 
 ## Outputs
 

@@ -120,6 +120,82 @@ emits_events: [graze, poo, gate_cross, fair_pick]
 
 New game = new contract file listing **reads, writes, events** — not a forked codebase.
 
+## The third-party test — somebody else's app, as a contract
+
+Every tenant listed so far is ours, which proves nothing. A platform is only a platform when a
+stranger with a serious purpose can build on it without touching our code, and there is a real app to
+test that against.
+
+[**Safe Lanes**](https://www.safelanes.org/) is a San Francisco website for reporting cars blocking
+bike lanes: photograph it, record the plate and category, and the report is filed with 311
+automatically. In its first nine months, volunteers using it filed **9,477 reports — matching the
+entire citation output of the city's transport agency** — and the peer-reviewed analysis found that
+enforcement geography does not match where the problem actually is, with delivery and ridehail
+vehicles prominent, pointing at **loading zones rather than tickets** as the fix. Its automated
+successor [Bike Bureau](https://loudbicycle.com/bb/) reads the plate and prepares the filing in about
+three seconds, in some twenty-eight cities. Numbers and citations:
+[`sources/blocked-bike-lanes-record.md`](sources/blocked-bike-lanes-record.md).
+
+A blocked lane is worse than a pothole, and it should be a **layer**, not a fork. So: what would that
+layer need that we do not already have?
+
+| It needs | We already have | Store |
+|---|---|---|
+| Photo evidence without stopping | Retroactive frames from the ring buffer ([`camera.md`](camera.md)) | `rides/{id}/frames/` |
+| Which lane, which edge, which direction | Snap and map-match | `road_graph` |
+| Proof it was blocked, not merely present | **Forced-merge dynamics** — see below | `rides/{id}/dynamics.json` |
+| A confirm-then-file workflow | Worklist tiers ([`mechanical-turk-ebike.md`](mechanical-turk-ebike.md)) | `worklist/` |
+| Somewhere to send it | Report sink adapters — 311 and SeeClickFix in the US, [Signalen](https://signalen.org/) in NL | `sinks/` |
+| Credit that is not a surveillance score | Peerboard, no counts, no speed | `peerboard/` |
+| Not doxxing the rider in the process | Home masking, publish delay ([`privacy.md`](privacy.md)) | — |
+| A way to demo it without a bike | Desk mode ([`virtual-ride.md`](virtual-ride.md)) | — |
+
+**One new primitive: the report sink.** Everything else on that list exists for other reasons. That is
+what makes this a good test rather than a flattering one.
+
+### The forced-merge signature
+
+A blocked lane leaves a trace even when nobody photographs it: swerve out of the lane, brake, a heading
+change into the traffic lane, then a return. It is the [dodge
+channel](bumps-as-input.md#three-axes-not-one) again, and it means **the obstruction is measurable
+without a camera and without naming anyone**.
+
+Aggregated by hour it gives what the SF study had to infer from photograph timestamps — a weekday van
+that sits in the same lane between nine and eleven is a **schedule**, not an incident. And a schedule
+is the argument that changes a curb, where a photograph is only ever an argument with one driver.
+
+### Where the boundary goes
+
+The platform hands a layer the **frame**, not the plate. Recognising licence plates and filing against
+individuals is the layer's own business, declared in its own contract, carrying its own disclosure —
+and identities never enter the shared store, because a store that accumulates them becomes a
+surveillance archive no matter what everyone intended. What the shared plane accepts is the
+**obstruction event**: this edge, this hour, this duration, this confidence. Aggregate-safe, useful to
+advocates, and no subject to wrong.
+
+```yaml
+# design/games/blocked-lanes.contract.yml   (third party — not in this repo)
+id: game/blocked-lanes
+author: "someone else entirely"
+reads:
+  - road_graph                      # which edges carry cycleway tags
+  - rides/*/dynamics.json           # forced-merge candidates
+  - rides/*/frames/                 # rider's own frames, local by default
+writes:
+  - obstructions/events/*           # edge, hour, duration, confidence — no identities
+  - worklist/tasks/*                # "was this lane blocked?" as a confirmable task
+emits_events: [lane_blocked, forced_merge_confirmed]
+report_sinks:
+  - sink/sf311                      # or sink/signalen, sink/seeclickfix
+declares:
+  reads_identities: false           # if true, must say so here and in the UI
+  scores_captures: false            # trophies for plates are not available on our peerboard
+```
+
+The acceptance test is blunt: a stranger should be able to write that file, a sim module, and a
+MapLibre projection, and have a working civic reporting app on top of our rides — without a pull
+request against us. If they cannot, this is a monolith with a plugins folder.
+
 ## Ride event bus — detect once, share everywhere
 
 ```

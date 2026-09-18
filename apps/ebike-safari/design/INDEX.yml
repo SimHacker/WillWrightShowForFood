@@ -14,6 +14,7 @@ core:
 pillars:
   - bike-computer.md
   - bumps-as-input.md
+  - mechanical-turk-ebike.md
   - camera.md
   - virtual-ride.md
   - map-distribution.md
@@ -32,6 +33,7 @@ pillars:
   - map-game-platform.md
 
 sources:
+  - sources/blocked-bike-lanes-record.md
   - sources/tomtom-hn-record.md
   - sources/cloudmade-2009-stack.md
   - sources/ben-cerveny-city-record-jam.md

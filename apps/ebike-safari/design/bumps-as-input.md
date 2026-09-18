@@ -259,7 +259,8 @@ This is why bumps are worth measuring rather than merely surviving.
 
 **Map contributions.** Measured roughness proposes OSM `surface=*` and `smoothness=*` values, and
 finds `traffic_calming` that nobody tagged. Proposals only — a worklist a human reviews and enters,
-never an automated edit. Store snapped geometry alongside way ids, because
+never an automated edit. That worklist is its own product surface, and its own hazard:
+[`mechanical-turk-ebike.md`](mechanical-turk-ebike.md). Store snapped geometry alongside way ids, because
 [OSM ids are not stable](sources/sotm-2026-paris.md).
 
 **Comfort-weighted routing.** "Avoid the cobbles" is the feature Amsterdam actually wants, and it

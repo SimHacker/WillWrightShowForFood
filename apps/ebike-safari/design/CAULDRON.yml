@@ -292,6 +292,37 @@ slurp_queue:
       - measure the hole dry, measure the puddle wet; weather must be attached to every event
     status: harvested
 
+  - id: mechanical-turk-on-an-ebike
+    from: Don Hopkins, 2026-09-18
+    into: [mechanical-turk-ebike.md, skeleton/gesture-engine.md]
+    extract:
+      - "'a worklist a human reviews and enters' => like the mobile OSM editing maps"
+      - "a tool for humans executing verification worklists, as a game, with social currency as credit"
+      - "'mechanical turk on an ebike' — the name indicts itself, which is why it is right"
+      - our tasks come from measurements, not from gaps in the map, so each one arrives with a suspicion
+      - "'was this repaired?' is a question only we can ask, because we measured before and after"
+      - StreetComplete's achievements unlock links to other projects — the prize is a door, not a number
+      - MapRoulette is the integration path; do not build another editor
+      - pay the null result, pay corroboration over first report, grow the bounty with neglect
+      - the refusal list is the whole point — never route for throughput, never blur play with paid wages
+    status: harvested
+
+  - id: blocked-bike-lanes-as-a-plugin
+    from: Don Hopkins, 2026-09-18
+    into: [map-game-platform.md, sources/blocked-bike-lanes-record.md, mechanical-turk-ebike.md]
+    extract:
+      - "overlaps the app somebody posted to HN about cars blocking bike lanes in SF — worse than potholes"
+      - "should be easily doable as a plug-in layer — THAT is why we need a platform other people can build on top of"
+      - identified as Safe Lanes (Stephen Braitsch, 2019) and its successor Bike Bureau
+      - 9477 volunteer reports in nine months matched SFMTA's entire citation output over the same period
+      - enforcement geography does not match problem geography; the fix is loading zones, not tickets
+      - SFMTA's TOLE already auto-cites from transit-vehicle cameras — precedent exists, never aimed at bike lanes
+      - a blocked lane leaves a forced-merge signature, so it is measurable with no camera and no plate
+      - aggregated by hour the obstruction has a schedule, and a schedule argues with a curb
+      - platform boundary — a layer gets the frame, never the plate; identities never enter the shared store
+      - one new primitive only, the report sink; everything else already exists for other reasons
+    status: harvested
+
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
     tags: [iloci-memory-palace, amsterdam-coffeeshops-app, bongo-bingo]
@@ -307,6 +338,7 @@ slurp_queue:
 
 harvested:
   - bumps-as-input.md   # three axes, spoken labels, hits vs dodges, puddles, Signalen
+  - mechanical-turk-ebike.md   # verification worklists as a game, and the refusal list
   - bike-computer.md
   - sources/cloudmade-2009-stack.md
   - city-record.md
