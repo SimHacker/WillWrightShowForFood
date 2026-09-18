@@ -185,6 +185,16 @@ So a share **decays with staleness**, and re-verification re-earns it. First mea
 mineral right. This also answers the obvious exploit — measure ten thousand things badly, once, and
 retire on the diffusion.
 
+Two things decay is careful **not** to mean:
+
+- **Decay applies to the claim on future thanks, never to the record of the work.** Your 2009
+  observation is permanently in the provenance of everything derived from it, at full weight, with your
+  name on it if you wanted it there. What fades is your claim on gratitude arriving in 2034 for a street
+  you have not looked at since.
+- **A stale reading is not a suspect reading.** It was true when it was taken, and it stays true of that
+  date forever. Staleness is a statement about our knowledge of *now*, not a demotion of a past
+  observation — which is the same point supersession makes below, arrived at from the other side.
+
 ## Does it actually encourage verification? Partly, and it needs a correction
 
 Yes: buying a stake in a fact by corroborating it is a real incentive to verify rather than to hunt for
@@ -209,8 +219,17 @@ with three confirmations becomes harder to dislodge than a missing fact is to ad
 how map data rots. The unglamorous truth about markets finding fraud is that the short sellers found
 it, because they were the only participants being paid to look.
 
-So: **let people stake against a claim.** A challenge says *I think this is false, and I will put
-something behind saying so.*
+So: **let people stake against a claim.** But against *which* claim, exactly — and this is the whole
+design, not a detail. A challenge does not say "your observation was false." It says **"this is no
+longer the case, and I will put something behind saying so."**
+
+> **You short the currency of a fact, never the observation behind it.**
+
+That distinction is structural rather than polite. "Was this ever true?" is a proposition about a
+person's competence and it implicates an author. "Is this still true?" has no author at all — it is a
+question about a street, and the street is the only thing that can lose. Which means the earlier
+observer is not a counterparty because there is nothing for them to be a counterparty *to*, and the
+protection needs no policy to enforce it.
 
 ### The settlement problem is the whole payoff
 
@@ -225,17 +244,23 @@ So a challenge does not open a market. It opens a **funded task**:
    ([`mechanical-turk-ebike.md`](mechanical-turk-ebike.md)), with the disagreement written into the
    task so the observer knows what is actually in question.
 3. Somebody rides there and reports. That report settles it.
-4. **The loser's stake pays the observer.** Either way, the person with the muddy shoes gets paid, the
-   fact gets a fresh measurement, and the dispute is resolved by evidence rather than by vote.
+4. **The observer gets paid either way, from one of two purses.** If the fact stands, the failed
+   challenger's stake pays them. If the challenge was right — the street changed, or a reading really
+   was mistaken — the stake returns and the **commons pool** pays the fieldwork, because a challenge
+   that improved the record produced a public good and should not cost the person who raised it.
+
+That asymmetry is the incentive gradient the system wants: **a correct challenge is free and a wrong
+one funds somebody's afternoon.** Neither outcome burns anything, and neither requires anyone to have
+been at fault.
 
 Three properties fall out of that structure, and they are why this is worth building rather than merely
 arguing about:
 
 - **Disputes self-prioritise the worklist.** The size of the pot on an edge is a better ranking signal
   than staleness, because it measures how much anybody actually cares whether the record is right.
-- **Nothing is destroyed.** Stakes are not burned; they are redirected to fieldwork. A wrong challenge
-  still bought the commons a fresh observation, which is why a losing challenger has not wasted
-  anything except their own standing.
+- **Nothing is destroyed.** Stakes are redirected to fieldwork, never burned. A wrong challenge still
+  bought the commons a fresh observation, which is why a losing challenger has wasted nothing except
+  their own standing.
 - **Undecidable claims are excluded by construction.** A challenge is only admissible against a claim a
   person at a location could settle by looking — the `one_look_settles` shape. The architecture
   student's dated facade qualifies; the local's memory of which shop was there in 1985 does not, and
@@ -243,25 +268,101 @@ arguing about:
   ([`paid-capture.md`](paid-capture.md#the-rider-is-the-classifier), where testimony is recorded as
   testimony and never promoted automatically).
 
-### The version that fails, and the asymmetry that fixes it
+### Supersession is not refutation, and the difference is most of the ethics
 
-The obvious design — both sides stake, winner takes the pot — is fatal here, and it is worth being
-precise about why. If being wrong costs the author, the rational strategy becomes **reporting only
-certainties**, and every uncertain observation stops being filed. That would destroy the two rules
-this project most depends on: *illegible is a legitimate answer* and *absence means unknown*. A system
-that punishes honest error collects only the boring facts.
+When two dated observations disagree, there are four possibilities, and the **most common by a wide
+margin is that the street changed.** Someone resurfaced it, ramped the kerb, filled the hole, opened
+the shop, closed the shop. Both observations are correct. Neither observer was wrong at any point.
 
-So the stake is **asymmetric, and the author is never a counterparty:**
+| Outcome | What happened | The earlier observation |
+|---|---|---|
+| `stands` | Still the case | Confirmed. Share re-earned, decay clock reset |
+| `superseded` | **The world changed between the two dates** | Correct then, and now half of a dated change event. Full standing, permanently |
+| `both` | They measure different things | Correct. Kept alongside, and the disagreement is the finding |
+| `corrected` | Somebody genuinely misread | Correct*ed*, not discredited. No debt, no penalty, no mark |
 
-| | Author of the fact | Challenger | Observer who settles it |
+`superseded` is the default reading, and `corrected` requires **positive evidence of misreading** — an
+argument that this specific observer misread this specific thing, made explicitly, never inferred from
+the mere fact of disagreement. The register's rule elsewhere is that absence means unknown rather than
+false; this is the same rule in the time dimension. *Disagreement means change until shown otherwise.*
+
+`both` is a real and frequent case, not a tie-breaker of last resort. The architecture student who
+dates a facade to 1890 against BAG's 1965 has not refuted the registry: it is a renovation year in a
+field labelled construction year, and the disagreement is the knowledge
+([`paid-capture.md`](paid-capture.md#the-rider-is-the-classifier)).
+
+### A superseded observation gains value. The accounting already says so.
+
+This is the part that needs no generosity, because the algebra chosen at the top of this document
+produces it directly.
+
+A change event — *this edge was `sett` on 2009-10-04 and `asphalt` on 2026-09-18, so it was resurfaced
+between those dates* — is a **new fact**, and it is **derived jointly from both observations**. In the
+provenance semiring, joint use is multiplication: the transition's annotation is the *product* of the
+two, not the survival of one. Both observers hold a real share in it, and it could not exist with
+either of them missing.
+
+So the earlier observation does not merely avoid a penalty. **It acquires a stake in something that
+did not exist before it was contradicted**, and which is often worth more than the original fact was:
+
+- A current-state reading tells you what is there. Anyone can get that by going and looking.
+- A **dated transition** tells you the street changed and roughly when, and that is unobtainable
+  without an old observation. It is the entire content of change detection, the thing repeat passes are
+  funded to produce ([`paid-capture.md`](paid-capture.md)), and it is why a seventeen-year-old
+  photograph is an asset rather than stale data.
+
+Which reverses the naive intuition completely: the moment your 2009 measurement is contradicted is the
+moment it starts doing its most valuable work. Nothing about that is charity. It is what the
+multiplication in the semiring means.
+
+### How it is said, because that is the whole of "respectful"
+
+Same event, two sentences. Only one of them is true.
+
+| Never | Always |
+|---|---|
+| "Your claim was overturned." | "Your 2009 observation just dated a resurfacing." |
+| ~~`sett`~~ → `asphalt` | `asphalt` since 2026-09-18 · `sett` 2009-10-04 – 2026-09-18 · resurfaced between |
+| "Corrected by @someone" | "Superseded. Both readings stand, at their own dates" |
+
+Concretely:
+
+- **No strikethrough, ever.** A struck-out claim is a claim marked as an error, and the overwhelming
+  majority of superseded claims are not errors. Superseded readings render as **closed intervals**,
+  which is what they are: true from then until then. That is the same stance as claims accumulating and
+  never being replaced, with resolution happening at read time.
+- **The record is a stratigraphy, not a cache of current state.** Every layer keeps its date and its
+  observer. A register that only knows what is true today cannot tell you anything happened, which is
+  the difference between a map and a history of a place
+  ([`city-record.md`](city-record.md), [`graveyard-soul-city.md`](graveyard-soul-city.md)).
+- **This is not a blame view.** `git blame` is attribution wearing the wrong word, and the wrong word
+  changes how people read the screen. Nothing here is named for fault: `observed_by`, `superseded_by`,
+  and no view anywhere assembles a list of a person's overtaken claims.
+- **The notification goes to the earlier observer as news, not as a verdict**, and it carries the
+  interesting part: what changed, when it must have happened, and their share in the transition. Being
+  told your old work just produced a finding is a different message from being told you were wrong, and
+  it is the accurate one.
+
+### Honest error, which is the rare case
+
+Even when a reading really was mistaken, the design does not punish it, for a reason that is about the
+dataset rather than about kindness: **if being wrong costs the author, the rational strategy becomes
+reporting only certainties.** Every uncertain observation stops being filed, which destroys both
+*illegible is a legitimate answer* and *absence means unknown*, and leaves a register containing only
+the facts nobody could dispute — the boring ones.
+
+So the stake stays asymmetric, and the author is never a counterparty:
+
+| | Earlier observer | Challenger | Observer who settles it |
 |---|---|---|---|
 | Stakes anything | **No.** Never | Yes, and it costs, or challenging is free harassment | No |
-| If the fact stands | Keeps their share | Stake pays the observer | Paid |
-| If the fact falls | Loses the *share*, keeps everything else. No debt, no penalty, no mark | Stake returned, plus credit for having been right | Paid |
+| Fact `stands` | Share re-earned, decay reset | Stake pays the observer | Paid |
+| Fact `superseded` | Full standing kept, **plus a share in the transition** | Stake returned, plus credit | Paid |
+| Fact `corrected` | Loses only the share on that value. No debt, no penalty, no mark | Stake returned, plus credit | Paid |
 
-Being honestly wrong therefore costs you a share that was decaying anyway, and nothing more. There is
-no mark on a person for having reported something that turned out to be false, because the alternative
-is a register full of only the things nobody could dispute.
+And a correction still names the observation it corrected as its own foundation, because the corrector
+needed it to know where to look and what to look at. An error that led somebody to the right place did
+more for the record than a silence would have.
 
 ### Fences, most of which already exist
 
@@ -281,10 +382,14 @@ is a register full of only the things nobody could dispute.
 
 ### What this is, in one line
 
-Not a prediction market. A **bug bounty on the map**, where the bounty is paid by whoever was wrong and
-collected by whoever went outside. The betting is a funding mechanism for fieldwork wearing a market's
-clothes, and if it ever starts behaving like a market — price discovery, secondary trading, positions
-held for profit rather than to trigger an observation — it has drifted and should be cut back.
+Not a prediction market. A **funding mechanism for fieldwork wearing a market's clothes**: a way for
+anyone who doubts the record to convert that doubt into somebody standing on the street, paid. If it
+ever starts behaving like an actual market — price discovery, secondary trading, positions held for
+profit rather than to trigger an observation — it has drifted and should be cut back.
+
+And the proposition on the table is always *"is this still the case?"*, never *"was this person
+wrong?"* — which is why the mechanism can be adversarial about facts while being structurally incapable
+of being adversarial about people.
 
 ## One vote each person is the hard problem
 
@@ -331,10 +436,12 @@ riding, which is the failure mode this whole document exists to avoid.
 ```
 facts/{id}.yml                # value + provenance annotation (value-level, not row-level)
 facts/{id}.shares.yml         # contributor → share, decay clock, last re-verification
+facts/{id}.intervals.yml      # every reading as a closed interval: value, from, until, observer
+transitions/{id}.yml          # a dated change, derived jointly — both observers hold shares in it
 thanks/{id}.yml               # giver token (unlinkable), fact, sentence, one per person per fact
 draws/{id}.yml                # lottery: tickets in, winner out, odds as published beforehand
 disputes/{id}.yml             # challenge: what it claims instead, stake, frozen payouts, settling report
-ledger/pool.yml               # machine-held shares → neglected-area bounties
+ledger/pool.yml               # machine-held shares → bounties, and fieldwork on correct challenges
 ```
 
 ↑ [`mechanical-turk-ebike.md`](mechanical-turk-ebike.md#attribution-and-thanks--a-reputation-system-with-the-tensions-named) · [`privacy.md`](privacy.md) · [`paid-capture.md`](paid-capture.md) · [`city-record.md`](city-record.md)
