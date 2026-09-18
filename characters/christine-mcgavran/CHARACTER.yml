@@ -9,8 +9,9 @@ character:
   signifier: "🗺️🏙️"
   status: living
   field: |
-    Mapping and navigation leader — SimCity 3000, then mapping and navigation products at Apple and
-    Google, satellite imagery at Vantor, now Mapbox.
+    Mapping and navigation leader — SimCity 3000, the connected PND at Dash Navigation, navigation at
+    Apple and Google, satellite imagery at Vantor, and since July 2026 VP of Engineering for
+    Mapbox's navigation products.
   home: characters/christine-mcgavran/
 
 representation:
@@ -33,10 +34,11 @@ invitation:
 bio:
   summary: |
     Christine McGavran worked on and led **SimCity 3000**, the top-selling PC game of its release
-    year, then spent her career building mapping and navigation products — at **Apple**, at
-    **Google**, where she pitched the embedded-automotive integration that became Google Automotive
-    Services and later led scaled map-data ingestion, and as **VP of Engineering at Vantor** on
-    satellite imagery foundations. She is now at **Mapbox**.
+    year, then spent her career building navigation: the cockpit of the **Dash Express** connected
+    PND, turn-by-turn and CarPlay and Watch and MapKit JS at **Apple**, the embedded-automotive
+    integration at **Google** that became Google Automotive Services plus the data ingestion behind
+    it, and satellite imagery foundations as **VP of Engineering at Vantor**. Since **July 2026** she
+    is **VP of Engineering at Mapbox, leading the teams responsible for its navigation products**.
   hats_worn: [software engineer, engineering manager, director, VP, executive producer, game designer]
   stack_worked: [embedded systems, graphics, applications, services, algorithms, big data]
   don_connection: |
@@ -51,13 +53,21 @@ bio:
 
 career_notes:
   simcity_3000: "Worked on and led it; top-selling PC game in its year of release (1999)."
-  apple: "Built and led parts of mapping and navigation products."
+  dash_navigation: |
+    2007–2011. UI and graphics engineering lead for embedded vehicle navigation — the Dash Express,
+    the connected two-way PND — then server-side routing and guidance after RIM acquired the company.
+    Don was inside TomTom for the collapse of the category Dash was trying to save.
+  apple: |
+    2012–2016. Turn-by-turn driving and walking, suggested destinations, Watch, CarPlay, transit,
+    China, MapKit JS. Shipped on the iOS Maps launch, then managed navigation, then the whole Maps
+    client core: rendering, APIs, services, analytics, release tooling.
   google: |
     Pitched integrating Google's maps into embedded automotive offerings, which became Google
-    Automotive Services (Volvo, BMW, Ford and others). Team then widened data services beyond
-    automotive — authoritative GIS datasets, transit feeds, road incident feeds, EV data providers,
-    Waze — for high-volume, cost-efficient Geo data, and better partnerships with cities and
-    governments.
+    Automotive Services (she names Volvo, GM, Ford, BMW, Honda; states $1B+ revenue). Designed
+    "Vehicle Map Service" — bi-directional map-insight exchange from the vehicle, for ADAS and
+    autonomy — which is the car-shaped version of the eBike Safari feedback loop. Team then widened
+    data services beyond automotive: authoritative GIS datasets, transit feeds, road incident feeds,
+    EV data providers, Waze, and the city and government partnerships that come with them.
   vantor: |
     VP of Engineering. Led the launch and evolution of the Spatial Intelligence Platform
     (Tensorglobe): large-scale imagery access, satellite tasking for high-resolution up-to-date

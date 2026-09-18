@@ -126,6 +126,40 @@ well known. The `deliberate` flag is what keeps enthusiasm out of the epidemiolo
 response curve for one device-and-mount pair — the calibration described above, done on purpose
 rather than by luck. The app never asks anyone to hit anything: a rim costs more than a data point.
 
+### The sacrificial hit
+
+A rider who aims at the hole is spending something real — a rim, a spoke, a wrist, a filling — to
+produce the one measurement the street will not give up any other way. That is the highest-value
+report in the system and it should be scored like it, with one absolute constraint on *what* is scored:
+
+**Score the completeness of the report. Never the size of the impact.** Reward the peak and you have
+built a machine that asks riders to hit things harder, which is how a measurement instrument becomes a
+liability. A gentle deliberate pass over a shallow depression with a clear photo and a sentence of
+context outscores a fork-destroying slam with nothing attached. The impulse is *evidence*; the report
+is the *contribution*.
+
+Concretely, credit follows: was it named, was there a frame, was the speed known, did somebody else
+already suspect this edge, and did it survive review. Nothing in that list rises with force.
+
+### One utterance, two readers, no forms
+
+You say the class word, and then you say whatever you want the people and the models downstream to
+understand. Not a form. Not fields. A sentence.
+
+> "Pothole — deep one, right in the door zone, you can't see it coming southbound because the tree
+> shades it, third one on this stretch since the roadworks."
+
+Every clause there does work no sensor produces: the door zone is a position within the lane, the
+shade is why nobody dodges it, and *third one since the roadworks* is a causal claim from a witness
+with a memory of the street. It goes in verbatim, alongside the numbers.
+
+**It is addressed to both audiences at once, and it is written for the human first.** A model reads
+the sentence to propose a tag; a person reads the same sentence at the desk to decide whether the
+proposal is right; the municipal officer reads it in the report. One artifact, three readers, no
+translation step, and no "machine format" version that quietly becomes the real one. A structured
+field the human cannot read is a private note to a classifier, and this project does not have those:
+see [`mechanical-turk-ebike.md`](mechanical-turk-ebike.md#agents-and-people-at-the-same-level).
+
 **Vocabulary.** Small, spoken, either language, and open-ended: *pothole, kuil, cobbles, klinkers,
 tram rails, glass, roadworks, dog, nice.* Unrecognised words attach as free text on the event rather
 than being discarded, so nothing you said is ever lost. **`nice` matters as much as `pothole`** — a
@@ -370,4 +404,8 @@ And `BUMP`, `BRAKE`, `LAUNCH`, `SWERVE` and `DISMOUNT` join the gesture vocabula
 [`skeleton/gesture-engine.md`](skeleton/gesture-engine.md), where they are unusual in being the only
 families measured in newtons rather than geometry.
 
-↑ [`bike-computer.md`](bike-computer.md) · [`skeleton/gesture-engine.md`](skeleton/gesture-engine.md) · [`city-record.md`](city-record.md) · [`skeleton/exposure-log.md`](skeleton/exposure-log.md)
+What any of them *count as* is not decided here. `SWERVE` is a mild transgression to one character, a
+wobble to cost to another, and evidence of a blocked lane to a third — the mappings are snap-on parts,
+one layer up ([`transgression.md`](transgression.md#where-a-swerve-means-something-the-construction-set-level)).
+
+↑ [`bike-computer.md`](bike-computer.md) · [`skeleton/gesture-engine.md`](skeleton/gesture-engine.md) · [`city-record.md`](city-record.md) · [`skeleton/exposure-log.md`](skeleton/exposure-log.md) · [`transgression.md`](transgression.md)

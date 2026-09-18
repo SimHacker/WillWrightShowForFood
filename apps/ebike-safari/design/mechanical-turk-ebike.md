@@ -46,6 +46,48 @@ throughput, it has become the thing in the title. Detours are asked for, never s
 a task is an [observation-grade](navigation-smell-steer.md) offer — it commits nothing, so it earns no
 attention and gets no legibility window.
 
+## Tasks the rider starts
+
+Everything above assumes the worklist asks and the rider answers. The other direction matters more,
+because it is where the best material comes from: a rider aims at a hole, says "pothole" and a
+sentence about it, and **files a task rather than answering one**
+([`bumps-as-input.md`](bumps-as-input.md#the-sacrificial-hit)).
+
+That report arrives more complete than anything the cluster detector can generate. It has the impulse
+and the speed, frames from before the rider passed, a class in a human's own words, and a sentence of
+context — the door zone, the tree that shades it, the roadworks it appeared after. It enters the same
+queue as a machine-generated task, at the same priority, and it needs the same review, because a
+witness can be wrong too.
+
+## Agents and people at the same level
+
+The suggestion layer has two kinds of worker and **one set of tools**. A model proposing
+`surface=sett` and a rider at the desk proposing `surface=sett` produce the same artifact, in the same
+place, in the same format, with the author recorded and nothing else different.
+
+| | Agent | Person |
+|---|---|---|
+| Reads | The full event stream, frames, the rider's sentence | The same, in the viewer |
+| Proposes | A tag, a note, a task, a cluster worth attention | The same |
+| Reviews | Another proposal, agent's or person's | The same |
+| May be overridden by | Either | Either |
+| Must wait for | Nothing | Nothing |
+
+Three rules keep it symmetric:
+
+- **No private channel.** No field exists that a person cannot read in the interface they already
+  have. The moment a model gets a structured input the reviewer cannot see, the reviewer has been
+  demoted to rubber stamp and the audit is theatre.
+- **The human sentence is the payload, not a hint.** It is not preprocessed into features and
+  discarded. It travels with the proposal all the way to the changeset comment and the municipal
+  report, verbatim.
+- **Either side may act at any step, and neither is the fallback for the other.** An agent that only
+  handles what people skipped is a queue, not a colleague; a person who only ratifies what a model
+  emitted is a queue too. Both start work, both finish work, both get reverted.
+
+This is the same stance the app takes toward the rider: everything is inspectable, the format is the
+one you were already reading, and nobody is being managed.
+
 ## Two tiers — saddle and desk
 
 | Tier | Where | Cost to the rider |
@@ -96,6 +138,13 @@ between a survey and a click farm:
   duty as an anti-cheating mechanism.
 - **A wrong answer costs nothing and pays nothing.** No punishment, because punishment produces
   cautious lying; no payment, because payment produces confident lying.
+
+## If it were funded
+
+Everything above is unpaid, which bounds it to what people will do for their own city. The arithmetic
+for the paid version — what a million euros of narrated riding buys, why coverage turns out to cost
+four percent of it, and why the rider's expertise is the thing being purchased — is in
+[`paid-capture.md`](paid-capture.md).
 
 ## Where this turns into Amazon
 

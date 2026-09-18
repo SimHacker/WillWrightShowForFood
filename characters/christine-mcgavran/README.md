@@ -1,18 +1,26 @@
-# Christine McGavran 🗺️🏙️ *(SimCity 3000 → Apple → Google → Vantor → Mapbox)*
+# Christine McGavran 🗺️🏙️ *(SimCity 3000 → Dash → Apple → Google → Vantor → Mapbox)*
 
 *Portrayal of a real friend and interview candidate, written by Don — not Christine.*
 [Portrayal standards](../../schemas/portrayal-standards.md)
 
 Christine worked on and led **SimCity 3000**, the top-selling PC game of its release year. Then she
-spent the next twenty-five years building maps for real: mapping and navigation products at
-**Apple**, then **Google**, where she pitched putting Google's maps inside car dashboards — the pitch
-that became **Google Automotive Services**, now shipping in Volvo, BMW and Ford vehicles — and later
-led the work that widened Geo's data intake from a handful of sources to thousands: authoritative GIS
-datasets, transit feeds, road incident feeds, EV networks, Waze, and the city and government
-partnerships that come with them. Most recently she was **VP of Engineering at Vantor**, working at
-the bottom of the stack where imagery arrives from orbit, and led the launch of the **Spatial
-Intelligence Platform (Tensorglobe)** — imagery at volume, satellite tasking for fresh
-high-resolution capture, and services on top of both. She is now at **Mapbox**.
+spent the next twenty-five years building maps for real. At **Dash Navigation** she was UI and
+graphics lead for the **Dash Express** — the connected two-way PND, the bet TomTom and Garmin
+declined to make — and after RIM bought the company she ran its server-side routing and guidance. At
+**Apple** she shipped turn-by-turn on the original iOS Maps, then managed navigation, then the entire
+Maps client core: rendering, APIs, services, analytics, release tooling, with CarPlay, Apple Watch,
+transit, China and MapKit JS along the way. At **Google** she pitched putting Google's maps inside car
+dashboards — the pitch that became **Google Automotive Services**, which she says passed a billion
+dollars in revenue across Volvo, GM, Ford, BMW and Honda — and designed **Vehicle Map Service**, a
+bi-directional exchange that lets the vehicle send map insights back up. She then led the work that
+widened Geo's data intake from a handful of sources to thousands: GIS datasets, transit feeds, road
+incident feeds, EV networks, Waze, and the city and government partnerships that come with them. As
+**VP of Engineering at Vantor** she worked at the bottom of the stack where imagery arrives from
+orbit, launching the **Spatial Intelligence Platform (Tensorglobe)**.
+
+Since **July 2026 she is VP of Engineering at Mapbox, leading the engineering teams responsible for
+its navigation products** — which is to say she now runs the organisation whose SDK this project
+either builds on or lives beside.
 
 She has been a software engineer, an engineering manager, a director, a VP, an executive producer and
 a game designer, across embedded systems, graphics, applications, services, algorithms and big data.
@@ -50,6 +58,8 @@ Her pick, in any order — see [`ideas.md`](ideas.md) for the longer list.
 |---|---|
 | **Two people who shipped SimCity** | She led SC3K; Don open-sourced the original as Micropolis and is rebuilding it in the browser |
 | **The map was always the game** | Her career is the throughline from urban simulation to navigation |
+| **The connected PND, from both buildings** | She built the Dash Express cockpit; Don was inside TomTom while phones ate the category. Same war, opposite sides, nobody has told it as a conversation |
+| **The vehicle that talks back** | She designed Vehicle Map Service so cars could send map insights upstream. A bike measuring its own street is that idea on a vehicle nobody licensed |
 | **Getting a map into someone else's hardware** | She did it for cars; the bike cockpit is the same argument, unclaimed |
 | **Feeding the basemap** | Thousands of feeds, city partnerships, and what a bicycle measuring road roughness is actually worth |
 | **Orbit to handlebar** | Satellite tasking at one end, a phone camera at the other, one city |

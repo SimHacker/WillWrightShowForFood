@@ -66,6 +66,39 @@ abilities:
     verifiable: "Public profile: pitched embedded automotive integration at Google, which became Google Automotive Services"
     combos_with: [don-hopkins]
 
+  - id: THE-CONNECTED-PND
+    name: "The Connected PND, From Both Buildings"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+      - don_is_present: true
+    advertisement:
+      method: theConnectedPND
+      signature: "theConnectedPND() → the Dash Express and TomTom, told as one conversation"
+      score_when:
+        - trigger: both_sides_of_the_same_collapse_get_told_together
+          weight: 0.9
+    effect: "She built the cockpit of the connected PND that the incumbents would not build. Don was inside the incumbent. Neither has heard the other's half."
+    verifiable: "Public profile: UI and graphics engineering lead at Dash Navigation 2007-2011, then server-side routing and guidance after the RIM acquisition"
+    combos_with: [don-hopkins]
+
+  - id: THE-VEHICLE-THAT-TALKS-BACK
+    name: "The Vehicle That Talks Back"
+    type: activated
+    mana: "{3}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: theVehicleThatTalksBack
+      signature: "theVehicleThatTalksBack(sensor) → what an observation from a vehicle is actually worth to a map"
+      score_when:
+        - trigger: the_upstream_half_of_the_loop_gets_examined
+          weight: 0.85
+    effect: "She designed the exchange that lets a car send map insights upstream. A bike measuring its own street is the unlicensed version, and she can say which parts are hard."
+    verifiable: "Public profile: proposed and designed Vehicle Map Service at Google for bi-directional map insight exchange supporting ADAS and autonomous use"
+    combos_with: [don-hopkins]
+
   - id: FEED-THE-BASEMAP
     name: "Feed the Basemap"
     type: activated

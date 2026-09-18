@@ -23,8 +23,23 @@ They feed each other.
 | Fake wait | performed sit when the point was probably not asking — also patience |
 | Fake wait, reported | live peer flag at the same wait point |
 | Rode what others walk | high `DISMOUNT` rate on the edge, and you stayed on the bike ([`bumps-as-input.md`](bumps-as-input.md)) |
+| **Swerve** | lateral impulse without a graph turn — the smallest transgression there is |
 
 Engine emits the fact and a signed delta. Stories interpret.
+
+## Swerve is the smallest unit
+
+A swerve is a lateral impulse where the graph says straight
+([`bumps-as-input.md`](bumps-as-input.md), [`feng-shui-measurement.md`](feng-shui-measurement.md)).
+Somebody left the line they were given. It counts, mildly.
+
+It also belongs to the *dithered* family rather than the verdict family, for the same reason a short
+pass does: a swerve is deniable by construction. Puddle, pothole, tourist, tram rail, pigeon, whim —
+the sensor cannot tell and must not guess. So a swerve draws a coin like a wait point does, at low
+`p`, and over a hundred swerves the meter is honest while any single one is a shrug.
+
+Ledsestraat is the reference tape: cobbles under the wheel, ambling tourists, a tram, a police van,
+and a continuous swerve track that is one long mild transgression with a dismount at the end.
 
 ## Dithered fine at wait points
 
@@ -54,6 +69,8 @@ ban. Tuesday lunch clockwise still undoes; it just does not feast.
 delta = base(act) * time_of_day * traffic * moon * wild
 ```
 
+That formula is the *default* stack, not the engine. Each factor is a **buff**.
+
 | Window | `time_of_day` | Feel |
 |--------|---------------|------|
 | Late night + full moon | >> 1 | *encouraged* — get on the bike |
@@ -67,6 +84,72 @@ AM/PM peaks). Do not wait for live data.
 
 Same clockwise lap, four spells: Tuesday lunch, 1am new moon, 1am full moon,
 full moon *and* they told you to go.
+
+## Buffs — the multipliers are data, and they say where they came from
+
+Full-moon mode is not a mode. It is a **buff**: a named, timed, visible modifier with a source you
+can read. Sims moodlets, and for the same reason — a Sim who is grumpy tells you *why*, and the why
+is a row you can inspect, not a number buried in a curve.
+
+```yaml
+buff:
+  id: full-moon
+  name: "Full Moon"
+  emoji: 🌕
+  driver: lunar          # ephemeris, evaluated at t
+  affects: [transgression.delta]
+  factor: 1 + 2*moon     # 1.0 new → 3.0 full
+  window: dusk..dawn
+  says: "The roundabouts are open."
+```
+
+| Field | Why it exists |
+|---|---|
+| `driver` | What computes it: `lunar`, `calendar`, `clock`, `weather`, `graph`, `peer`, `manual` |
+| `factor` | A function of the driver, not a constant. Full moon ramps; it does not switch |
+| `window` | When it can apply at all. A moon buff at noon is not a moon buff |
+| `says` | The line shown to the rider. A buff with no sentence is a bug |
+| `stacks` | `multiply` (default), `add`, `max`, or `exclusive` within a tag |
+
+Drivers we get for free, with no data feed and no server: **lunar** phase and illumination from the
+ephemeris, **calendar** for the date-shaped ones, **clock** for hour and weekday. Those three already
+carry the vampire clock. `weather` and `peer` come later and degrade to absent, not to zero.
+
+Calendar buffs are where the city's own character shows up: King's Day, Ramadan nights, the week the
+canals freeze, the Saturday of Pride, the first warm evening in March, the Sunday when the clocks go
+back and everyone rides home in sudden darkness. Those are not achievements. They are the year having
+a shape, and a scoring system that ignores the shape of the year is measuring a treadmill.
+
+Buffs are visible, always, with the reason attached — `🌕 Full Moon ×3 · until 06:14` — because a
+multiplier the player cannot see is not a game mechanic, it is a rigged slot machine.
+
+## Where a swerve *means* something: the construction-set level
+
+The engine emits `SWERVE(lateral_impulse, edge, t)`. It does **not** decide that a swerve is a
+transgression. That mapping is a part you snap on, at the same layer as
+[`faceball-construction-set.yml`](../../performance-space/faceball-construction-set.yml): same verbs
+— paste on, wire up, play — aimed at scoring instead of face puppets. Bill Budge's Pinball
+Construction Set, applied to what your ride *counts as*.
+
+So one signal, many readings, all live at once:
+
+| Who is reading | `SWERVE` means |
+|---|---|
+| Vampire character | A mild transgression. Feeds the meter, ×3 tonight |
+| Cargo-bike parent character | Wobble. A *cost*, and a reason to prefer the calm route |
+| Safe Lanes layer ([`map-game-platform.md`](map-game-platform.md)) | Evidence of something in the lane, worth a look |
+| Surface survey | A puddle, if it repeats where water would pool |
+| Nobody's character | Nothing. An unmapped signal is discarded, not stockpiled |
+
+A character is a **mapping bundle**: which signals it subscribes to, what each one scores, which
+buffs it accepts, and what it refuses. The vampire declines the calm-route buff. The parent declines
+the moon. Two riders can take the identical line down the identical street and score different games,
+from the same measurements, without either of them being wrong — which is the point of measuring the
+street rather than judging the rider.
+
+Buffs are construction-set parts too. A character ships its own: a bundle in `characters/<id>/` may
+add `buffs/*.yml`, and the same lunar driver serves a werewolf, a night-shift nurse and a
+photographer chasing moonlight, scoring three different things.
 
 ## Full-moon night is Pac-Man on a maze of power pellets
 
@@ -121,8 +204,12 @@ tape to play this way.
 
 ## Outputs
 
-`trips/{id}.transgression.json` — `{ act, edge, t, base, time_of_day, traffic, moon, wild, delta, running }`
+`trips/{id}.transgression.json` — `{ act, edge, t, base, buffs: [{id, factor}], delta, running }`
 
-Wait-point draws add `{ wait_point, p, drawn: true }` on the same stream.
+`buffs` replaces the fixed `time_of_day / traffic / moon / wild` columns — same numbers, named, so a
+replay can say *why* a beat was worth what it was worth.
 
-↑ [README.md](README.md) · [geometry-as-language.md](geometry-as-language.md) · [wait-points.md](wait-points.md)
+Wait-point draws add `{ wait_point, p, drawn: true }` on the same stream. Swerve draws are the same
+shape with `{ swerve, lateral_impulse, p, drawn }`.
+
+↑ [README.md](README.md) · [geometry-as-language.md](geometry-as-language.md) · [wait-points.md](wait-points.md) · [bumps-as-input.md](bumps-as-input.md) · [`faceball-construction-set.yml`](../../performance-space/faceball-construction-set.yml)

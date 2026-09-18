@@ -110,7 +110,7 @@ wave_3_enrich_then_send:
   - { id: rudy-rucker, todo: "invite drafted — CA jam; review + send" }
   - { id: alexander-avila, todo: "VERIFY w/ Don whether any direct contact ever happened (July note conflated him w/ Blake Jennings); then invite w/ im-queer-therefore-i-sim seed; queer show cluster w/ blake + ellpeck" }
   - { id: keith-henson, todo: "drafted, not sent; respect Will boundary framing" }
-  - { id: christine-mcgavran, todo: "invitation drafted Sep 2026 — verify her Mapbox title and the year they met before sending; show thread only, contracting stays a separate off-repo conversation" }
+  - { id: christine-mcgavran, todo: "invitation drafted Sep 2026. Mapbox title VERIFIED — VP of Engineering, navigation products, since Jul 2026. Still to settle before sending: the year they met (Don remembers 1990, profile suggests 1993), whether 'led SimCity 3000' is her preferred public framing, and whether the Dash Express segment is welcome. Show thread only; contracting stays a separate off-repo conversation" }
 
 later: "Remaining guests invitation.status: draft — enrich sources then review"
 

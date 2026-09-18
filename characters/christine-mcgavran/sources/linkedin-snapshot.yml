@@ -19,7 +19,9 @@ identity:
   location: "San Francisco, California, United States"
   education: "Dartmouth College"
   current: Mapbox
-  title_at_mapbox: unknown   # do not invent one
+  title_at_mapbox: "Vice President of Engineering"
+  remit_at_mapbox: "Leading engineering teams responsible for Mapbox's Navigation Products"
+  started_at_mapbox: "2026-07"   # profile read one month in, Sep 2026
 
 roles_worn:
   - software engineer
@@ -31,22 +33,59 @@ roles_worn:
 
 stack_worked: [embedded systems, graphics, applications, services, algorithms, big data]
 
+dated_timeline:
+  # From the profile's own role entries, retrieved 2026-09-18.
+  - { span: "1997-09 — 2001-09", org: "Electronic Arts", title: "Executive Producer" }
+  - { span: "2002-03 — 2006-12", org: "Perpetual Entertainment", title: "Sr. Director of Development" }
+  - { span: "2007-01 — 2011-12", org: "Dash Navigation, Inc.", title: "Principal Software Engineer" }
+  - { span: "2012-01 — 2016-05", org: "Apple", title: "Senior Engineering Manager, Maps" }
+  - { span: "2016-05 — 2024-05", org: "Google", title: "Distinguished Software Engineer / Senior Director" }
+  - { span: "2024-05 — 2026-02", org: "Maxar → Vantor", title: "VP of Engineering" }
+  - { span: "2026-07 — present", org: "Mapbox", title: "VP of Engineering, Navigation Products" }
+
 career:
   games:
     fact: "Worked on and led SimCity 3000, which became the top-selling PC game in its year of release."
     motivation_stated: "Started in games with a vision of unlocking human creativity through open-ended game design."
     ea_overlap_with_don: "1997-09 — 2000-03, per LinkedIn's own shared-employer highlight"
+    ea_role_stated: |
+      Director of Development for SimCity 3000, later Executive Producer for the SimCity franchise,
+      with involvement in studio executive leadership and direction of other products including
+      The Sims.
+    perpetual_entertainment: |
+      First employee of a startup that reached nearly 200 people; three VC rounds, a Sony publishing
+      deal, and the Star Trek licence. Development focus on Gods and Heroes, an MMO.
+  dash_navigation:
+    fact: |
+      Principal Software Engineer, 2007-01 to 2011-12: UI and graphics engineering lead for embedded
+      vehicle navigation software, and after the RIM acquisition primarily responsible for
+      server-side routing and guidance services.
+    why_it_matters: |
+      Dash Navigation built the Dash Express, the connected two-way PND — the thesis TomTom and
+      Garmin declined to bet on, in the years Don was inside TomTom watching the category get eaten
+      by phones. She built its cockpit; he watched the incumbent lose. Same war, opposite buildings.
+  apple:
+    fact: "Built and led parts of mapping and navigation products."
+    detail_stated: |
+      Named features she drove or led: turn-by-turn driving and walking navigation, suggested
+      destinations, Apple Watch navigation, CarPlay navigation, transit navigation, China navigation,
+      MapKit JS, Apple Pay business identification. Progression: senior engineer on the iOS Maps
+      launch (turn-by-turn), then manager for navigation features, then manager for Maps client core
+      technologies (navigation, APIs, rendering, services, analytics, web frameworks, release
+      tooling), then stealth work on a next-generation maps platform.
   the_pivot:
     fact: |
       She states that SimCity introduced her to the concepts of mapping and urban planning, and that
       this led to her career focus on mapping and navigation.
     why_it_matters: "This is the eBike Safari thesis, asserted by someone whose career is the evidence."
-  apple:
-    fact: "Built and led parts of mapping and navigation products."
   google:
     automotive: |
       Pitched integrating Google's maps into embedded automotive offerings shortly after joining,
-      which led to Google Automotive Services — she names Volvo, BMW and Ford among the customers.
+      which led to Google Automotive Services — she names Volvo, GM, Ford, BMW and Honda among the
+      OEM contracts, and states the product contributed over $1B in revenue. She also proposed and
+      designed "Vehicle Map Service", a bi-directional map-insights exchange running in the vehicle
+      to support ADAS and autonomy, and managed embedded perception and localisation support with
+      NVIDIA and Qualcomm explored as partners.
     data_services: |
       Her team then widened data services beyond automotive, enabling scaled connections to thousands
       of data sources: authoritative GIS datasets, transit feeds, road incident feeds, EV data

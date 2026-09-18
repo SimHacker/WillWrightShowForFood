@@ -16,6 +16,7 @@ pillars:
   - bumps-as-input.md
   - feng-shui-measurement.md
   - mechanical-turk-ebike.md
+  - paid-capture.md
   - camera.md
   - virtual-ride.md
   - map-distribution.md
@@ -38,6 +39,7 @@ sources:
   - sources/tomtom-hn-record.md
   - sources/cloudmade-2009-stack.md
   - sources/ben-cerveny-city-record-jam.md
+  - sources/strava-privacy-zones.md
   - sources/amsterdam-gps-lineage.md
   - sources/tomtom-rejected-ideas.md
   - sources/foursquare-lineage.md

@@ -1,8 +1,10 @@
 # Christine McGavran 🗺️🏙️ — GLANCE
 
-Mapping and navigation leader. Led **SimCity 3000**, then built mapping and navigation at **Apple**
-and **Google** (where her embedded-automotive pitch became Google Automotive Services), then satellite
-imagery as **VP of Engineering at Vantor**. Now at **Mapbox**.
+Mapping and navigation leader. Led **SimCity 3000**, built the cockpit of the **Dash Express**
+connected PND, then navigation at **Apple** (turn-by-turn, CarPlay, Watch, MapKit JS) and **Google**
+(where her embedded-automotive pitch became Google Automotive Services), then satellite imagery as
+**VP of Engineering at Vantor**. Since **July 2026: VP of Engineering at Mapbox, leading its
+navigation products.**
 
 Old friend of Don's — met in the early 1990s, colleagues at Maxis/EA during the SC3K years, and
 already in a 2024 thread about the Yoot Tower code drop.

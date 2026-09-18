@@ -46,6 +46,17 @@ computer than the head unit, and the incumbent app is rented back to them monthl
 why that market looks like the PND collapse I watched from inside TomTom — and where the analogy
 breaks.
 
+**3b. The connected PND, from both buildings**
+You were UI and graphics lead on the **Dash Express** — the two-way connected PND, which is the bet
+TomTom and Garmin would not make. I was inside **TomTom** while the category got eaten by phones. We
+were in the same war in opposite buildings and I have never heard anyone tell it as a conversation.
+
+**3c. The vehicle that talks back**
+You proposed and designed **Vehicle Map Service** — the vehicle sending map insights back up, for
+ADAS and autonomy. eBike Safari is that loop on a vehicle nobody licensed: the bike measures the
+street it rides on and the measurement goes back to OpenStreetMap. I would like your read on which
+parts of that are genuinely hard and which parts I am underestimating.
+
 **4. Feeding the basemap**
 Transit feeds, incident feeds, GIS, EV, Waze, and the city partnerships underneath. I want to know
 what an amateur signal is actually worth to a map — because a bike measuring **road roughness through
@@ -55,6 +66,12 @@ guess.
 **5. Orbit to handlebar**
 Vantor's imagery and satellite tasking at one end, a phone camera on a handlebar at the other, the
 same street at two resolutions. What survives the trip down the ladder, and what doesn't.
+
+*Congratulations on Mapbox, by the way — I gather you started in July. I have been building on
+OpenStreetMap since 2009, when the only way to get a custom-styled Amsterdam was CloudMade's style
+editor and route-me on an iPhone; the whole trail is written up in the repo. That your new remit is
+navigation products is a coincidence I am not going to pretend I did not notice, but this invitation
+is for the show. Anything commercial is a separate conversation, at your pace, off the repo.*
 
 **6. The Tower**
 You have already seen the Yoot Tower code drop. There is a revival room in the repo with Yoot Saito,

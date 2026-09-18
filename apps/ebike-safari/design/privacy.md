@@ -26,17 +26,78 @@ Nothing about the product requires a server. A server is where you choose to put
 Buffered: hold the FIT locally for **one day**, then publish a clipped trace.
 You still have the full file. They get the safari, not the driveway.
 
-## Clip near home — then dither
+## Private regions — you declare them, the app works out the shape
 
-A clean hole around the house *is* the house. Do not publish a perfect circle.
+You name places, not radii. "I live in Badhoevedorp." "Work is here." "This pin, never." The app
+resolves each declaration against OSM and clips.
 
-- Drop everything inside a home radius (and the start/end stubs that point at it).
-- **Dither** the cut: jitter the radius, ragged edge, snap the published start
-  to a public junction a few blocks out — not the same corner every time.
-- Optional: also mask work, or any saved "do not publish" pin.
+| You say | What it resolves to |
+|---|---|
+| A town or neighbourhood name | The OSM administrative or place boundary, buffered outward by a margin |
+| An address or a dropped pin | A polygon around it, sized to the local street density rather than to a fixed radius |
+| "This whole area" drawn by hand | Exactly that, buffered |
+| A named route ("the school run") | Every traversal of it, whenever it happens |
 
-The published polyline should look like a ride that *began on a street*, not
-one that was amputated at a bedroom.
+Declaring the town is the point of the feature, not a failure of it: *"I live in Badhoevedorp and
+nothing more"* is a sentence you are allowed to say, and the app's job is to make sure nothing finer
+than that ever leaves. The hole will be recognisably the shape of a town. Fine. A town is thirteen
+thousand people.
+
+Per region, the knobs:
+
+| Knob | Default | What it does |
+|---|---|---|
+| `clip` | `inside` | Discard everything within the polygon. Nothing inside is measured into anything published |
+| `margin` | 300 m, jittered | How far beyond the boundary the discarding continues |
+| `resume_at` | `junction` | Where the published trace is allowed to begin — a public junction outside the margin, varied between rides |
+| `also_clip_time` | first/last 3 min | Duration as well as distance, because a timestamp at the edge dates your departure |
+| `on_enter` | `clip_rest` | Entering mid-ride clips from there. Alternative: `clip_visit`, drop only the dwell |
+| `hide_existence` | off | Do not even publish that a ride happened that day |
+
+Two things deliberately **not** offered:
+
+- **No decoy routing.** Publishing a plausible ride you did not take poisons the aggregate everyone
+  else depends on, and there is no way to mark it as fiction without marking it as fiction.
+- **No regenerated boundaries.** A region is resolved once and kept. Re-randomising per ride hands an
+  attacker more independent samples of the same protected location — the CCS 2022 paper found exactly
+  that (below).
+
+## Why the clip happens at the source, and not to the finished ride
+
+Strava has been solving this since before it used git, and has been publicly broken twice. The record
+is in [`sources/strava-privacy-zones.md`](sources/strava-privacy-zones.md); the part that changes our
+architecture is short.
+
+Their mechanism hides part of the map *after* the fact. In 2018, USENIX Security showed a circle can
+be fitted from the endpoints that survive: **84% of protected locations recovered, 95.1% for active
+users.** Strava responded by moving the zone's centre to a random nearby point. In 2022, CCS showed
+that fix does not matter, because the published activity still reports **how far you travelled inside
+the hidden part** — and with the street grid to constrain which paths cover exactly that distance,
+regression finds the house anyway: **up to 85% of zones, across 1.4 million activities.**
+
+Of the six countermeasures they evaluated, five fail or backfire. Random noise on the distance
+averages out. Shifted endpoints average out. Bigger radii swallow short rides. Fancier zone shapes
+only hide the zone, not the distance. The one that works is truncation: **do not count the hidden part
+in any published number.**
+
+Strava cannot do that, because for them the personal total *is* the product — a ride whose distance is
+a lie is not worth logging. We are not selling personal totals. So:
+
+- **The clip happens before a ride record exists.** Distance, duration, ascent and per-edge
+  contributions are computed from the clipped trace. There is no inner distance to leak, because it
+  was never measured into anything that leaves the device.
+- **Dithering the cut is cosmetic and stays anyway.** Ragged edge, varied resume junction — it defeats
+  a naive visual read and costs nothing, but it is not the defence. The defence is the arithmetic.
+- **Default publishing is aggregate-only, which removes the attack's input.** Every one of these
+  attacks needs *the set of activities belonging to one rider* in order to intersect them. Per-edge
+  counts over a multi-rider threshold do not offer that set.
+- **The village is the hard case.** Sparse street grids make the regression *better*, and rides that
+  approach from several different directions help the attacker more than many rides down one road. The
+  threshold rule and the sparse-grid problem happen to pull the same way: out in Badhoevedorp, almost
+  nothing clears the threshold, so almost nothing is published.
+
+The published polyline should look like a ride that *began on a street* — not one amputated at a
+bedroom, and not one carrying a receipt for the amputated part.
 
 ## The TomTom model — clip the ends, aggregate the middle
 
