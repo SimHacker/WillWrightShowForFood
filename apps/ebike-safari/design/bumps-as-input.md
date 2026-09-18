@@ -55,7 +55,7 @@ behind a permission gesture on iOS. Each detected event records:
 | `peak_g` | Sharpness. Distinguishes a lip from a landing |
 | `impulse` | ∫\|a\|dt over the event window — the energy the rider's wrists and the cargo actually absorbed |
 | `duration_ms` | A joint is milliseconds; a hump is a fraction of a second |
-| `band_energy` | Energy in a few frequency bands. Texture, not events |
+| `band_energy` | Energy in a few frequency bands. Texture, not events — full spectra in [`feng-shui-measurement.md`](feng-shui-measurement.md) |
 | `speed_kmh`, `heading` | Severity scales with speed. Store both, normalise at read time |
 | `mount_profile` | Which device, which mount, so calibration is attachable later |
 | `confidence` | Everything downstream must be able to discount a guess |
@@ -78,7 +78,7 @@ at lower confidence.
 | Class | Signature | Cross-check |
 |---|---|---|
 | `POTHOLE` | Single sharp asymmetric impulse, high peak, short duration, repeating at one coordinate across riders and days | New clusters are reportable; old ones are map features |
-| `COBBLES` / klinkers | Sustained broadband energy over a distance band, scaling with speed, starting and ending at segment boundaries | OSM `surface=sett` / `cobblestone` / `paving_stones` |
+| `COBBLES` / klinkers | Sustained broadband energy over a distance band, scaling with speed, starting and ending at segment boundaries. The **wavelength** names the material — [`feng-shui-measurement.md`](feng-shui-measurement.md) | OSM `surface=sett` / `cobblestone` / `paving_stones` |
 | `TRAM_RAILS` | Two or four closely spaced impulses at a crossing angle | OSM `railway=tram` intersections — also a wheel-trapping hazard |
 | `SPEED_HUMP` (drempel) | Symmetric double impulse with a speed dip | OSM `traffic_calming=*`; undocumented ones are proposals |
 | `BRIDGE_JOINT` | Paired impulses at the ends of one edge | OSM `bridge=yes` |
@@ -309,7 +309,8 @@ literature. Ours is a *proxy* — comparable across our own riders, not calibrat
 authority's instrument. Say so wherever a number is displayed.
 
 **The record's surface noise.** [`city-record.md`](city-record.md) makes streets grooves and the bike
-a needle; a bump is a click in the vinyl, and a cobbled street is surface hiss with a pitch. The
+a needle; a bump is a click in the vinyl, and a cobbled street is surface hiss with a pitch — a pitch
+that [`feng-shui-measurement.md`](feng-shui-measurement.md) puts a number on, in cycles per metre. The
 bump track is the percussion of a ride, available to the music and to the story layer, and a repaved
 street literally changes the city's sound.
 

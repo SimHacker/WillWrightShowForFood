@@ -22,6 +22,7 @@ don't port the stack.
 |--------|-----|--------|
 | **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, replaces Bosch Flow |
 | Bumps as input | [`bumps-as-input.md`](bumps-as-input.md) | draft — **a bump is a measurement, not a dialog box**; three axes, spoken labels, hits and dodges, puddles as next winter's potholes, Signalen loop |
+| Feng shui measurement | [`feng-shui-measurement.md`](feng-shui-measurement.md) | draft — **the city in the frequency domain**; resample by distance not time, paving named by wavelength, the rose garden's hexagons as a lateral peak, kerb ramps found by where the bump is not, laminar vs turbulent flow fields |
 | Mechanical Turk on an eBike | [`mechanical-turk-ebike.md`](mechanical-turk-ebike.md) | draft — **verification worklists as a game**; tasks from measurements not map gaps, saddle/desk tiers, the prize is a door not a number, and the refusal list that keeps it from becoming gig work |
 | Camera | [`camera.md`](camera.md) | draft — **half the app**; distance-sampled frames, four directions, local blur |
 | Every screen | [`virtual-ride.md`](virtual-ride.md) | draft — **the desktop is a bike**; WASD, turtle graphics, dynamic queries, one point stream |

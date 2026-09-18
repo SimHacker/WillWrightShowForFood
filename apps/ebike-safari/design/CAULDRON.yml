@@ -323,6 +323,23 @@ slurp_queue:
       - one new primitive only, the report sink; everything else already exists for other reasons
     status: harvested
 
+  - id: feng-shui-measurement
+    from: Don Hopkins, 2026-09-18
+    into: [feng-shui-measurement.md, bumps-as-input.md]
+    extract:
+      - "the hex shaped paths in the rose garden of vondelpark show up as 'swervy at a particular frequency'"
+      - different granularities of cobbles and surfaces are high frequency low amplitude vertical bumps
+      - stretches without smooth road/sidewalk ramps have bumps — so we can locate where the ramps ARE
+      - "'feng shui measurement' — wind and water, how movement flows through a place"
+      - bike speed and turbulence flow maps
+      - "implementation consequence: resample the motion stream by DISTANCE not time, so spectra are cycles per metre and belong to the street rather than the ride"
+      - paving unit size is the wavelength, so the spectrum names the material instead of rating it
+      - herringbone couples vertical into lateral, so the laying bond is in the cross-correlation
+      - a repair patch is three metres where the periodicity disappears
+      - kerb ramps map to OSM kerb=flush/lowered/raised — serves wheelchairs more than bikes, and is presence mapping not complaint mapping
+      - flow field gives routing a second axis, calm as distinct from smooth
+    status: harvested
+
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
     tags: [iloci-memory-palace, amsterdam-coffeeshops-app, bongo-bingo]
@@ -339,6 +356,8 @@ slurp_queue:
 harvested:
   - bumps-as-input.md   # three axes, spoken labels, hits vs dodges, puddles, Signalen
   - mechanical-turk-ebike.md   # verification worklists as a game, and the refusal list
+  - feng-shui-measurement.md   # spatial spectra, path periods, kerb ramps, flow fields
+  - sources/blocked-bike-lanes-record.md   # Safe Lanes / Bike Bureau — measure vs capture
   - bike-computer.md
   - sources/cloudmade-2009-stack.md
   - city-record.md
