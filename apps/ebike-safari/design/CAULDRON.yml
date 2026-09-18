@@ -197,16 +197,64 @@ slurp_queue:
     status: harvested
 
   - id: bosch-flow-ui-critique
-    from: Don Hopkins — verbal, not yet captured
+    from: Don Hopkins — to be recorded BY VOICE, deferred deliberately
     into: bike-computer.md
+    priority: high
     extract:
       - "specific Flow UI violations, rule by rule, from the person who has ridden with it daily"
     note: |
       Don: "There are SO MANY THINGS I hate about its user interface, it violates every rule in
-      the book." Only the structural failures are written down so far (paywall, no local map,
-      lag, broken GPX, rejected FIT) — those came from Bosch's own docs and rider reports.
-      The hands-on critique is unharvested. Ask before inventing it.
+      the book. I can do SO MUCH better." Deferred by his decision — "I will have to do that by
+      voice since there's just so much to say."
+      Only the structural failures are written down so far (paywall, no local map, lag, broken
+      GPX import, rejected FIT, closed to third parties), all from Bosch's own docs and rider
+      reports. The hands-on critique is the substance and it is UNHARVESTED.
+      Do not invent it. Transcribe it.
     status: pending
+
+  - id: hn-tomtom-record
+    from: 38 DonHopkins HN comments mentioning TomTom, 2014-2026
+    into: [sources/tomtom-hn-record.md, bumps-as-input.md, map-distribution.md, privacy.md, virtual-ride.md]
+    extract:
+      - "'an interactive user interface could cost people their lives' (2015) — the bump-dialog argument, ten years early, via Magic Ink"
+      - BitTorrent map distribution — Pieter Geelen's idea, €1M/yr projected, separate process over HTTP, shared service, CDN floor, consent panel, killed when Akamai cut prices
+      - trace anonymisation — no identity, trip ends clipped, per-road speed by hour x weekday/weekend, returned as better routing
+      - the shortcut side effect — aggregate routing sends truck convoys onto quiet roads; publishing the smooth route moves traffic onto it
+      - Enhanced Positioning Technology — IMU dead reckoning where GPS fails, graph-constrained because tunnels do not branch
+      - Shneiderman dynamic queries -> SimCity Frob-O-Matic; 100 queries/sec, no syntax errors; the planning interface
+      - PND collapse economics — Tele Atlas bidding war, Garmin head-fake, debt into recession, free nav on phones people already owned
+      - browsers on devices twice — XULRunner for TomTom Home, WebKit on the embedded units; the platform-bet scar
+    status: harvested
+
+  - id: camera-is-half-the-app
+    from: design jam, Don Hopkins, 2026-09-18
+    into: [camera.md, privacy.md, skeleton/gesture-engine.md]
+    extract:
+      - "this is a digital photography app — the phone as camera showing the environment is a HUGE part"
+      - distance-sampled capture, retroactive marking, bump-triggered downward frames, wait-point aiming
+      - resolves the privacy.md 'we do not run a camera' line — local capture yes, public photo host no
+    status: harvested
+
+  - id: every-screen-virtual-ride
+    from: design jam, Don Hopkins, 2026-09-18
+    into: [virtual-ride.md, bike-computer.md]
+    extract:
+      - "not a niche device — EVERYTHING. Desktop browser is a first-class client, not a dev tool"
+      - HN link -> desktop -> load the city you love -> drag a bike to your house -> ride, all features work
+      - WASD first-person, drag-and-drop placement, turtle graphics, simulated on-screen controls, time compression, hyperjumps
+      - virtual touring is pleasurable, educational, enriching in its own right; massively single-player online
+      - one point stream with a source tag (gps / replay / sim); two code paths is the failure mode
+    status: harvested
+
+  - id: local-first-is-about-private-data
+    from: Don Hopkins, 2026-09-18
+    into: [privacy.md, bike-computer.md, map-distribution.md]
+    extract:
+      - "offline-first is a policy about YOUR PRIVATE DATA, more importantly than the tiles"
+      - phones have fast practically unlimited data — cached tiles are convenience, not foundation
+      - the real issue is consent and anonymisation for ride GPS; hide home, work, destinations
+      - TomTom's method is the model — clip the ends, drop identity, aggregate the middle into coarse bins
+    status: harvested
 
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml

@@ -13,6 +13,10 @@ core:
 
 pillars:
   - bike-computer.md
+  - bumps-as-input.md
+  - camera.md
+  - virtual-ride.md
+  - map-distribution.md
   - city-record.md
   - speech-track.md
   - geometry-as-language.md
@@ -28,6 +32,7 @@ pillars:
   - map-game-platform.md
 
 sources:
+  - sources/tomtom-hn-record.md
   - sources/cloudmade-2009-stack.md
   - sources/ben-cerveny-city-record-jam.md
   - sources/amsterdam-gps-lineage.md

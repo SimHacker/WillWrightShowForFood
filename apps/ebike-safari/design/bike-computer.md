@@ -35,7 +35,7 @@ is the same map under adversarial conditions, and the conditions dictate the int
 | Direct sun, tilted screen | High-contrast palette chosen for glare, not for a screenshot. Type sized for a glance, not for density |
 | Gloves, one hand, bumps | Thumb-reachable targets. Pie menus, which is the idiom this project already uses for [navigation](navigation-smell-steer.md) and which forgives imprecision by direction |
 | A four-second glance | Nothing important requires reading a second thing to interpret the first |
-| No signal, or roaming off | Offline by default. A spinner on a handlebar is a failure, not a state |
+| Signal drops in a tunnel or abroad | The map degrades, the ride never does. A spinner on a handlebar is a failure, not a state |
 | Battery for the whole day | Wake lock without full brightness; render on movement, not on a timer |
 | Rain, sweat, a wet capacitive screen | Voice in and out ([`speech-track.md`](speech-track.md)), and no interaction that a single spurious touch can commit |
 
@@ -62,6 +62,8 @@ source — which is why this is a small build rather than a new app:
 |---|---|---|
 | Position, speed, heading | `navigator.geolocation.watchPosition` | Heading is unreliable below walking pace; fall back to bearing from the map or the compass |
 | Orientation | `DeviceOrientationEvent` | Needs a user gesture to grant on iOS |
+| **Bumps and roughness** | `DeviceMotionEvent`, ~60 Hz | Permission-gated on iOS. Enough for impulse and band energy, not for fine spectra. Disable shake-to-undo or the platform steals the signal ([`bumps-as-input.md`](bumps-as-input.md)) |
+| **Camera** | `getUserMedia`, `ImageCapture`, canvas grabs | The other half of the app ([`camera.md`](camera.md)). Distance-sampled frames, retroactive marking, local blur before anything leaves |
 | Sensors | Web Bluetooth (HR, CSC, Cycling Power profiles) | **Not in iOS Safari.** This is the reason the Capacitor shell already exists in the repo |
 | Screen stays on | Screen Wake Lock | Well supported, cheap |
 | Voice | Web Speech, Web Audio | Recognition quality varies; audio cues do not |
@@ -70,14 +72,30 @@ source — which is why this is a small build rather than a new app:
 
 ## The motor is the closed part, and that is the seam
 
-Bosch publishes no interface to the drive unit. Motor power, assist level, battery state and
-range live inside their Bluetooth protocol and arrive to us only afterwards, in the FIT export
-whose defects are catalogued above. So the honest architecture is:
+Bosch publishes no interface to the drive unit. Motor power, assist level, battery state and range
+live inside their Bluetooth protocol. But they are not lost: **run Flow in the background and it
+records them all**, and the drive-unit channels come out in the FIT — whose defects are catalogued
+above, and which we already ingest. So the architecture is:
 
 - **Live**: GPS, phone sensors, and any sensor speaking a standard BLE profile.
-- **After the ride**: drive-unit channels from the imported FIT, merged onto the same series.
-- **Unlocked only by cooperation**: live motor telemetry, assist-aware range, and anything
-  touching the drivetrain.
+- **Recorded in parallel**: Flow runs in the background logging the Bosch channels — battery,
+  motor power, assist — for the same ride.
+- **Merged afterwards**: those channels join the same point series, on the same clock.
+- **Unlocked only by cooperation**: *live* motor telemetry during the ride, assist-aware range,
+  and anything touching the drivetrain.
+
+The problem is not access, it is the **extraction ritual**. Flow keeps ride history inside the app;
+only rides you manually export land where a computer can reach them
+([`../scripts/sync_flow_trips.py`](../scripts/sync_flow_trips.py) reads Flow's Documents folder over
+USB, and that folder is empty until you tap). Per ride: Statistics, find the ride, Download FIT,
+repeat. Then plug the phone into a cable and run a script. For a daily rider that is a tax on every
+single day, paid in precise swipes at a small target, to obtain data the app already has and the
+rider already owns.
+
+What would fix it, in increasing order of unlikeliness: an export-all button, a share-sheet
+destination, a folder that syncs, a local callback, or a documented API. Any one of them turns a
+daily ritual into a background job. Until then the ritual is the integration, and it is worth saying
+plainly that this is the single worst part of the current pipeline.
 
 Reverse-engineering a motor controller is not a product plan, and firmware, locking and alarm stay
 the vendor's business — they are safety-critical and legally theirs. Note the shape of this: for a
@@ -147,10 +165,20 @@ offline promise above is what makes them bite:
 | Commercial vector host, on a phone | Constrained | Mapbox Product Terms (21 Jul 2026) §2.9.1: the Mobile SDKs are "Customer's exclusive means of accessing the Service Offerings in mobile applications" — a Capacitor-wrapped web app is a mobile application |
 | Any commercial host, cached for a ride | Constrained | §2.8.1: cache on the end user's device only, 30 days maximum, populated directly from the API, no proxying and no bundling |
 
-So the default basemap is self-hosted OSM in PMTiles, because an offline-first head unit is a poor
-fit for standard web-map terms and a hostile fit for per-request billing on a long ride. A
-commercial host is a swappable option behind the same interface — for search, for routing, for
-imagery, or for a deal that makes the offline case explicit rather than accidental.
+So the default basemap is self-hosted OSM in PMTiles, and a commercial host is a swappable option
+behind the same interface — for search, for routing, for imagery, or for a deal that makes the
+offline case explicit rather than accidental.
+
+**But keep the priority straight.** Cached tiles are a convenience: most phones have fast,
+effectively unlimited data, so riding out of coverage is an edge case rather than the norm. The
+requirement that actually shapes this product is **local-first for the rider's own data** — the exact
+GPS, the photographs, the speech, the home address implied by every ride. That is not a caching
+question, it is the whole trust relationship, and it is specified in [`privacy.md`](privacy.md):
+everything works, in full, on a device that has never uploaded anything, and each upload is a
+separate revocable decision about one class of artifact, anonymised the way TomTom anonymised traces —
+identity absent, trip ends clipped, the middle aggregated into coarse bins.
+
+Tiles are about cost and robustness. Ride data is about whether anyone should trust this at all.
 
 A vendor-neutral cockpit is the most widely used navigation surface in cycling that nobody owns.
 Every motor brand ships its own weak version, and none of them want to be a map company.

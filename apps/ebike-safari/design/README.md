@@ -20,7 +20,11 @@ don't port the stack.
 
 | Pillar | Doc | Status |
 |--------|-----|--------|
-| **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, offline, replaces Bosch Flow |
+| **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, replaces Bosch Flow |
+| Bumps as input | [`bumps-as-input.md`](bumps-as-input.md) | draft — **a bump is a measurement, not a dialog box**; impulse, signatures, comfort routing |
+| Camera | [`camera.md`](camera.md) | draft — **half the app**; distance-sampled frames, four directions, local blur |
+| Every screen | [`virtual-ride.md`](virtual-ride.md) | draft — **the desktop is a bike**; WASD, turtle graphics, dynamic queries, one point stream |
+| Map distribution | [`map-distribution.md`](map-distribution.md) | draft — region packs, peer-assisted, the TomTom consent panel |
 | City record | [`city-record.md`](city-record.md) | draft — **every street is a groove**; scrobbling, radio dial |
 | Speech track | [`speech-track.md`](speech-track.md) | draft — commands vs impressions; Drescher food |
 | Geometry as language | [`geometry-as-language.md`](geometry-as-language.md) | draft |
@@ -40,6 +44,7 @@ don't port the stack.
 | Taxonomy pyramid | [`semantic-taxonomy-pyramid.md`](semantic-taxonomy-pyramid.md) | draft — LLM tags, coalesce |
 | Smell navigation | [`navigation-smell-steer.md`](navigation-smell-steer.md) | draft — hill-climb, pie menu, MediaGraph |
 | Graveyard layers | [`graveyard-soul-city.md`](graveyard-soul-city.md) | draft — real memorial + Soul City |
+| TomTom on HN | [`sources/tomtom-hn-record.md`](sources/tomtom-hn-record.md) | harvested — 38 comments, 2014–2026; BitTorrent maps, trace anonymisation, EPT, dynamic queries, why the PND died |
 | CloudMade 2009 | [`sources/cloudmade-2009-stack.md`](sources/cloudmade-2009-stack.md) | harvested — **the map vendor is rented**; style 8558 switched off from London |
 | Ben Cerveny jam | [`sources/ben-cerveny-city-record-jam.md`](sources/ben-cerveny-city-record-jam.md) | harvested |
 | Ride gestures Sep 2026 | [`sources/ride-gestures-2026-09.md`](sources/ride-gestures-2026-09.md) | harvested — clockwise undo, De Pijp coloring book, maps |

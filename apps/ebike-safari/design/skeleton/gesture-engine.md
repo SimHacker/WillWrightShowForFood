@@ -22,10 +22,13 @@ Detect **semantic gestures** on the road graph — not raw GPS wiggles.
 | P1 | `COMPLETE_STREET` | Traverse all edges of a named way both directions |
 | P1 | `CROSS_BRIDGE` | Edge with `bridge=yes` |
 | P2 | `CLIMB_HILL` | Sustained elevation gain band |
+| P0 | `BUMP` | Impulse in the motion stream — the one family measured in newtons rather than geometry. Classes and signatures in [`../bumps-as-input.md`](../bumps-as-input.md) |
+| P1 | `CAPTURE` | Rider marks a frame — one touch, a spoken word, or retroactively from the buffer ([`../camera.md`](../camera.md)) |
 
 ## Outputs
 
 - `trips/{id}.gestures.json` — `{ type, at_edge, osm_context, t_start, t_end }`
+- `trips/{id}.bumps.json` — impulse events, kept separate because they are dense and continuous
 
 ## Rules
 
