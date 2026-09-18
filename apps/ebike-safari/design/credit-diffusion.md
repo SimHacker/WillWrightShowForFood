@@ -261,12 +261,12 @@ arguing about:
 - **Nothing is destroyed.** Stakes are redirected to fieldwork, never burned. A wrong challenge still
   bought the commons a fresh observation, which is why a losing challenger has wasted nothing except
   their own standing.
-- **Undecidable claims are excluded by construction.** A challenge is only admissible against a claim a
-  person at a location could settle by looking — the `one_look_settles` shape. The architecture
-  student's dated facade qualifies; the local's memory of which shop was there in 1985 does not, and
-  betting on it would launder an unfalsifiable claim into a settled one
-  ([`paid-capture.md`](paid-capture.md#the-rider-is-the-classifier), where testimony is recorded as
-  testimony and never promoted automatically).
+- **Only re-observable claims are admissible.** A challenge requires that a person at that location
+  could still settle it by looking — the `one_look_settles` shape. Two classes are therefore excluded,
+  for different reasons: claims that were never decidable (the local's memory of which shop was there in
+  1985, where betting would launder an unfalsifiable claim into a settled one —
+  [`paid-capture.md`](paid-capture.md#the-rider-is-the-classifier)), and claims that **were** decidable
+  but have expired (the van that was in the lane at 14:32, below).
 
 ### Supersession is not refutation, and the difference is most of the ethics
 
@@ -305,7 +305,10 @@ either of them missing.
 So the earlier observation does not merely avoid a penalty. **It acquires a stake in something that
 did not exist before it was contradicted**, and which is often worth more than the original fact was:
 
-- A current-state reading tells you what is there. Anyone can get that by going and looking.
+- A current-state reading tells you what is there. For *durable* state — surface, kerb height, a
+  bollard — anyone can get that by going and looking, which is what makes it cheap. For **ephemeral**
+  state it is the reverse, and that case gets its own section below, because almost every rule here
+  changes sign.
 - A **dated transition** tells you the street changed and roughly when, and that is unobtainable
   without an old observation. It is the entire content of change detection, the thing repeat passes are
   funded to produce ([`paid-capture.md`](paid-capture.md)), and it is why a seventeen-year-old
@@ -363,6 +366,100 @@ So the stake stays asymmetric, and the author is never a counterparty:
 And a correction still names the observation it corrected as its own foundation, because the corrector
 needed it to know where to look and what to look at. An error that led somebody to the right place did
 more for the record than a silence would have.
+
+### Ephemeral observations, where every rule above changes sign
+
+*This van is blocking the lane, here, now.*
+
+That is a fact, it matters more than most of the durable ones — a hole costs you a rim, a blocked lane
+puts you in the traffic lane — and it is **gone in four minutes.** Nobody can go and look. The witness
+is the only person who will ever be able to confirm it, and they cannot confirm it twice.
+
+Set the two classes side by side, because the design consequences are not adjustments, they are
+inversions:
+
+| | Durable state | Ephemeral event |
+|---|---|---|
+| Example | `surface=sett`, kerb 4 cm, a bollard | A van in the lane, a flooded underpass, a market stall, a police cordon |
+| Re-observable | Yes, by anyone, indefinitely | **Never.** By nobody, from the moment it ends |
+| Cheap to acquire | Yes — go and look | **No.** Only a witness who was there, then |
+| Can be challenged | Yes. Settlement is a ride | **No.** There is no possible settling observation |
+| One observation is | A fact | **A sample** |
+| The durable artifact | The reading itself | The **distribution** it belongs to |
+
+**So a challenge against an ephemeral observation is inadmissible, and not for the reason the
+undecidable-claims rule gives.** The local's memory of a 1985 shop is unfalsifiable in principle. A van
+at 14:32 was perfectly decidable — for about four minutes, by whoever was standing there. It is
+unfalsifiable *in practice, permanently, from the instant it ended*, and a dispute mechanism whose
+oracle is "somebody rides there and reports" has nothing to offer it. Opening a market on it would just
+be adjudicating a rider's word about something nobody can check, which is the worst thing this system
+could learn to do.
+
+### The sample is not the fact. The envelope is.
+
+One van is an anecdote. Forty reports at the same twenty metres across three months is
+**"this loading bay is blocked most weekday mornings between 08:00 and 09:30"**, and that sentence is
+durable, checkable, arguable, and worth a curb redesign.
+
+This is the same move the design already makes three times, and it is worth naming as one rule rather
+than rediscovering it per layer:
+
+| Perishable sample | Durable fact it builds |
+|---|---|
+| One impulse | A pothole cluster at a coordinate ([`bumps-as-input.md`](bumps-as-input.md)) |
+| One short pass at a light | A wait envelope by hour and kind of day ([`wait-points.md`](wait-points.md)) |
+| One swerve | A hazard, or a puddle where water pools ([`transgression.md`](transgression.md)) |
+| One blocked lane | A schedule of obstruction at a curb ([`sources/blocked-bike-lanes-record.md`](sources/blocked-bike-lanes-record.md)) |
+
+> **Credit attaches to the envelope, not to the instance.** You hold a share in the schedule, alongside
+> everyone else who ever reported that curb, and the share is proportional and decays exactly like any
+> other. Nobody is ever paid, thanked, or scored for a single sighting.
+
+Which resolves the tension cleanly. Ephemeral data is simultaneously the most valuable — it is the only
+kind that cannot be bought later at any price, because the moment has gone — and the least verifiable.
+Those two facts together are precisely the argument for **funding the aggregate and never adjudicating
+the instance.**
+
+### Verification by co-presence, and why passive beats voluntary
+
+Ephemeral events do have a verification route; it is just orthogonal to the one used everywhere else.
+Not re-visitation later, but **temporal co-presence**: another rider who passed within the window and
+recorded the same thing. Corroboration in the moment is the only kind available, and it is weak,
+occasional, and worth having anyway.
+
+The stronger route needs no reports at all, and it is the reason `bumps-as-input.md` matters more than
+the camera here. A vehicle in the lane produces a **forced merge** — a lateral displacement out and
+back — in every rider who passes it, recorded passively, naming nobody, requiring no decision and no
+stop ([`bumps-as-input.md`](bumps-as-input.md#three-axes-not-one)).
+
+That yields the property voluntary reporting can never have: **passive measurement produces negatives.**
+A rider who passed and filed nothing tells you almost nothing, because absence means unknown — they may
+simply not have bothered. A rider whose trace shows a straight line through that curb at 08:15 is
+evidence the lane was clear, and it cost them nothing to provide. You cannot build an honest denominator
+out of volunteered sightings; you can build one out of everybody's motion.
+
+### The enforcement fence, which is the same fence as everywhere else
+
+An ephemeral report about a street is a measurement. An ephemeral report about a *van* is an
+**accusation**, and the subject is a person. The fork is already recorded
+([`sources/blocked-bike-lanes-record.md`](sources/blocked-bike-lanes-record.md), where Bike Bureau's
+trophy case for *"licence plates you've captured"* is the road not taken), and the credit rules here
+follow from it without needing new principles:
+
+- **No bounty per infraction.** Paying per sighting builds the volume gradient banned everywhere else in
+  this project — score the report and never the impact, pay by the minute and never by the finding
+  ([`paid-capture.md`](paid-capture.md#the-labour-part-which-is-not-a-footnote)). A per-ticket cut turns
+  riders into a commissioned police force, and every argument against that is an argument we already
+  make about loot boxes.
+- **No plate in the commons.** The envelope needs no plate to exist — a schedule of obstruction is built
+  from geometry and time. A fleet of bicycles reading number plates into a shared database is an ANPR
+  network, and it would be an ANPR network available to whoever subpoenas it. We are not building that,
+  and declining is cheap, because it costs the aggregate nothing.
+- **Enforcement is the rider's own act, outside this system.** Their photo, their gallery, the city's own
+  reporting channel, no points. Filing a citation is a legitimate thing to do and it earns nothing here.
+- **A schedule argues with a curb; a ticket argues with a driver.** The SF study's own policy conclusion
+  was loading zones rather than more citations, and the aggregate is the artifact that makes that
+  argument.
 
 ### Fences, most of which already exist
 
