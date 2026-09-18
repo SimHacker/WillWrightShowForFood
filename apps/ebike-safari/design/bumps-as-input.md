@@ -7,6 +7,10 @@ is actually like, right there, right now, under a real load.
 So a bump gets written down with its measured impulse and moved on from. It never asks for
 attention, never covers the map, and never requires a rider in traffic to read text and touch glass.
 
+The vertical axis is only where this starts. The same sensors measure braking, acceleration, swerving,
+wobble and the rider's own footfall, and those channels together describe the traffic and the crowd
+rather than the pavement — including, from the swerves alone, the hazards nobody hit.
+
 Don made this argument about navigation interfaces in 2015, ten years before the dialog box in
 question, reading Bret Victor's *Magic Ink* and its claim that interactivity is a failure state of
 software that could not work out what the user wanted from context
@@ -55,6 +59,9 @@ behind a permission gesture on iOS. Each detected event records:
 | `speed_kmh`, `heading` | Severity scales with speed. Store both, normalise at read time |
 | `mount_profile` | Which device, which mount, so calibration is attachable later |
 | `confidence` | Everything downstream must be able to discount a guess |
+| `label` | What it was, if anybody said — spoken word, classifier guess, or nothing |
+| `deliberate` | Whether the rider aimed at it. Changes what the event may be counted for |
+| `conditions` | Wet or dry, hours since rain, temperature, freeze flag. Without it a puddle and a pothole are one cluster |
 
 **Honest limit:** this measures *the phone's experience of the bike*, not the pavement. A handlebar
 mount reads fork and mount resonance; a pannier reads the rack; a jersey pocket reads the rider.
@@ -77,10 +84,174 @@ at lower confidence.
 | `BRIDGE_JOINT` | Paired impulses at the ends of one edge | OSM `bridge=yes` |
 | `CURB_DROP` | Single impulse with a heading change across a kerb | Kerb hopping is also [transgression](transgression.md) |
 | `GRAVEL` / `SAND` | Broadband energy with speed loss | OSM `surface=gravel`, `sand` |
+| `PUDDLE` | Damped long impulse, or a swerve cluster with no impulse at all, present only when wet | Low point — drainage, and next winter's pothole |
 | `FALL?` | Very high peak, orientation change, speed to zero, no resumption | **The one class allowed to interrupt** |
 
 That last row is the exception that proves the rule. An interruption is permitted when the *world*
 demands it, never when the software wants confirmation about itself.
+
+## Calling your shot
+
+Read the pothole row again and notice what it does not contain: a name. The corpus is full of
+measurements that nothing has ever identified. So you can measure and report a pothole by riding into
+it on purpose and saying "pothole" — the impulse supplies the severity, the word supplies the class,
+and your hands never leave the bars.
+
+One spoken word, four artifacts:
+
+| From | What it produces |
+|---|---|
+| The motion buffer | The bump that just happened, retroactively marked — you speak *after* the hit, because the window is already recorded |
+| The word | A class, in your language, from a witness who was there |
+| The camera ring buffer | The frames from a second ago, before you rode past it ([`camera.md`](camera.md)) |
+| The position | A coordinate, a heading, and a speed the hole was hit at |
+
+Voice is the right channel for the same reason a bump must never be a dialog: it costs no eye contact
+and no glass. Speaking is the one input a rider in traffic can afford.
+
+**Why the label is worth more than the measurement.** A classifier needs labelled examples, and for
+bicycles on European city streets nobody has any. Forty annoyed riders naming forty holes is a
+training set that no survey crew budget would buy. The word is also the veto: where the classifier
+guessed, the rider's word overrides it, and where the classifier guessed nothing, the word fills it
+in. Either side may act at any step, and neither has to wait for the other.
+
+**Deliberate hits are labelled data and nothing else.** A hole that ten riders aim at to confirm it
+looks, in the raw histogram, like a hole that ten riders failed to avoid. So `deliberate: true` is
+excluded from prevalence and severity statistics, and included in the training set and the report.
+The mirror-image bias is worth naming too: riders swerve around holes they know, so **a missing bump
+is not a missing hole**, and a well-known hazard goes quiet in the corpus precisely because it is
+well known. The `deliberate` flag is what keeps enthusiasm out of the epidemiology.
+
+**Deliberate hits also calibrate.** The same feature taken twice at different speeds fits the
+response curve for one device-and-mount pair — the calibration described above, done on purpose
+rather than by luck. The app never asks anyone to hit anything: a rim costs more than a data point.
+
+**Vocabulary.** Small, spoken, either language, and open-ended: *pothole, kuil, cobbles, klinkers,
+tram rails, glass, roadworks, dog, nice.* Unrecognised words attach as free text on the event rather
+than being discarded, so nothing you said is ever lost. **`nice` matters as much as `pothole`** — a
+corpus that only records complaints will describe a city nobody wants to ride in, and the smooth
+stretch of new asphalt along the Amstel is a finding too.
+
+## Three axes, not one
+
+The IMU does not only measure up and down, and the vertical channel is the least interesting one
+socially. The same stream, split by axis, measures the road, the traffic and the crowd separately.
+
+| Axis | Reads | Finds what no map has |
+|---|---|---|
+| **Vertical** | Terrain — the whole table above | Surface, holes, joints, rails crossed |
+| **Longitudinal** | Braking and acceleration | Conflict points, and the real cost of a route |
+| **Lateral + roll** | Cornering, swerving, wobble | Obstacles, crowding, and the rails you are fighting |
+| **Gait** | Footfall while the bike still moves | The rider gave up and walked |
+
+**Braking is the near-miss channel.** Crashes leave police reports; near-misses leave nothing but a
+deceleration. Hard braking repeating at one coordinate is a conflict point, and it locates the thing
+OSM structurally cannot hold: the terrace that blocks the sightline, the door zone, the driveway
+behind a hedge, the tram door that opens into the bike lane. It is the same surrogate-safety measure
+fleets and insurers already run on cars, pointed at the road user who actually gets hurt.
+
+**Acceleration is the honest cost of a route.** A cyclist's fatigue tracks launches, not distance —
+every stop is paid for twice, once in waiting and once in getting back up to speed — and an e-bike's
+assist makes each launch a clean, recognisable signature. So **launch count** belongs in a routing
+profile next to length, and a short route with eleven stops can be correctly described as more
+expensive than a long one with two. No routing engine offers this, because none of them are counting.
+
+**Lateral is where the avoidance bias gets fixed.** A swerve is a lateral excursion that returns with
+no net heading change: you went around something. Repeated at one coordinate, it means an obstacle
+nobody tagged — a delivery van, scaffolding, terrace creep, a pile of parked bikes. And it closes the
+hole in the section above: **the pothole you dodge is not a missing bump, it is a swerve.** Riders who
+hit it and riders who avoid it now report through different channels, so the hazard survives being
+well known.
+
+Two more lateral readings matter in Amsterdam specifically. Low-speed **wobble** — the inability to
+hold a line — is the signature of a street too crowded to ride rather than one that is rough. And
+riding *along* a tram groove instead of across it is a continuous fight of small corrections, which is
+measurable as a sustained lateral cost on exactly the streets where the rails share the lane.
+
+**Gait is the strongest thing a rider can say.** Footfall around 2 Hz, four to six km/h, the bike
+still rolling: the rider dismounted and walked. Nothing else in the corpus is that unambiguous. The
+fraction of passages that include a dismount is a street-quality measure no city collects — and it is
+double-edged on purpose, because dismounting is frequently what the signs asked for, so the same event
+is both a complaint about the street and evidence of compliance with it.
+
+### Leidsestraat, all channels at once
+
+Ride down Leidsestraat on a summer afternoon and every channel lights up simultaneously. Paving stones
+under the tyres as continuous broadband hiss. Tram rails in the surface, so a steady lateral fight to
+stay out of the groove. Ambling tourists who stop without looking, so hard braking again and again
+with no conflict that any report would ever record. No room to overtake, so wobble at walking pace.
+Bridge joints as the street crosses each canal. Trams and other bikes claiming the same three metres.
+Police who would rather you were not there at all. And then the dismount, and the walk, with the bike
+rolling beside you.
+
+None of those readings alone says anything much. Together they say the thing that matters, which is
+that **this street costs more to cross than its length** — and they say it in numbers, from riders,
+without a survey, about a street that looks perfectly fine in the routing graph.
+
+### Holes from hits and dodges
+
+Put the two channels on the same coordinate and the hazard stops being a point. Riders who hit it
+report depth through the vertical axis; riders who avoid it report **extent** through the lateral
+axis, because a swerve says which side they went and how far out they had to go. Stack enough
+passages and the space nobody rides through is the obstacle's footprint, while the space everyone
+threads is the gap that is left. You get the shape of the thing from the shape of its absence — the
+hazard is the hole in the traffic.
+
+The ratio of hits to dodges, plus persistence, is also the classifier:
+
+| Hits | Dodges | Persists | Reading |
+|---|---|---|---|
+| yes | yes | months | A hole or broken surface. Depth from the hits, width from the dodges |
+| no | yes | days | A vehicle, delivery, scaffolding, terrace. Transient obstruction |
+| no | yes | months | Fixed furniture — bollard, pole, tree, narrowing. Belongs in OSM; propose it |
+| **yes** | **no** | months | **Nobody sees it coming** |
+
+That last row is the one to act on. A hazard everybody avoids has been priced in by every rider on
+the street; a hazard everybody hits is invisible — bad light, deep shade, a flat-reading sunken drain,
+or water sitting on top of it. So **danger is severity times invisibility**, and invisibility is
+measurable as the missing dodges. A city with a repair budget should be given the invisible holes
+first, and no existing method can tell it which those are, because complaint volume rewards the
+obvious ones.
+
+### Puddles are drainage, and next year's potholes
+
+Some swerve clusters only exist when it has rained. Those are puddles, and they are worth more than
+the potholes.
+
+A puddle marks a low point where water is not draining — a blocked or missing gully, a settled patch,
+a badly graded repair. That is cheap to fix and almost never reported, because a puddle is nobody's
+emergency. It is also **how a crack becomes a hole**: water sits, works into the surface, freezes,
+and lifts the pavement apart. So a map of where water stands in autumn is a forecast of where the
+holes will be in spring, which turns a maintenance department's job from responding to predicting.
+
+The same low points ice first, so the puddle layer is also the black-ice layer, and in a Dutch winter
+that is the higher-stakes reading of the two.
+
+A water-filled hole changes what the vertical channel can be trusted for. Hitting standing water is
+softer and longer than hitting an edge — the water damps the impact and hides the lip — so wet passages
+measure extent well and depth badly. Which gives a clean division of labour: **measure the hole dry,
+measure the puddle wet**, same coordinate, two conditions. And the invisibility rule above becomes
+literal, since a puddle is a hole with a lid on it.
+
+The camera can corroborate cheaply, because standing water on asphalt is a specular reflection of the
+sky and reads as an unusually bright patch on the ground ([`camera.md`](camera.md)).
+
+**Weather has to be attached to every event or none of this separates.** Each bump, swerve and brake
+carries a coarse condition — wet or dry, hours since rain, air temperature, and a freeze flag — from
+an open source such as KNMI for the Netherlands. Without that field, a puddle and a pothole are the
+same cluster, and the whole corpus is only as good as its worst-conditioned event. It costs one small
+join and it is the difference between a hazard map and a drainage map.
+
+It is also the clearest case for the [vampire clock](transgression.md): the same edge at three in the
+morning is empty, and the identical passage is a different act at a different price. One street, two
+completely different measurements, and the difference is the crowd rather than the pavement.
+
+**Enforcement is a private event.** A rider being told to get off is their own experience, so it may
+be logged and it stays local by default. What it does not become is a map of where police stand — that
+is a different product with consequences that are not ours to hand out. The aggregate that *is* fair
+inherits the rule from [`privacy.md`](privacy.md): aggregate to the street and the month, never to the
+coordinate and the hour. Which street is contested is useful public information. When and where an
+officer was standing is not.
 
 ## What aggregation buys
 
@@ -108,6 +279,29 @@ resource to spend.
 **Civic reporting.** A cluster that appears suddenly, repeats, and is corroborated by unrelated
 riders is a pothole with a start date and a witness count. That is a different object from one
 person's complaint, and cities treat it differently.
+
+In the Netherlands there is somewhere specific to send it. **Signalen** is the open-source platform
+Dutch municipalities run for reports about public space — MPL-2.0, around 800,000 reports a year,
+Amsterdam's replacement for MORA ([signalen.org](https://signalen.org/) ·
+[Amsterdam/signals](https://github.com/Amsterdam/signals)). Amsterdam also publishes past reports as
+open geodata, with GeoJSON, WFS and vector-tile endpoints
+([API docs](https://api.data.amsterdam.nl/v1/docs/datasets/meldingen.html)), which makes the loop
+run both ways:
+
+- **Outbound.** A deliberate hit produces a report that is already complete — location, date, photo,
+  a measured impulse, and a witness count. The rider presses send; the app does not file on anyone's
+  behalf, and a prefilled form is where the automation stops.
+- **Inbound, as corroboration.** Where bump clusters land on existing reports, the classifier gets
+  confirmation with no labelling work at all, and the rider gets told **this one is already
+  reported** instead of filing the fourth duplicate.
+- **Inbound, as accountability.** The city's report has a date. Our corpus knows when the impulse
+  stopped appearing. The difference is a **repair time**, per district, measured from the saddle —
+  and it arrives free from continuing to ride the same streets. No city publishes that number.
+
+The honest limit: a rider verifies a hole exists, not who owns the road or whose budget fixes it.
+Report volume is also a wealth signal, since the neighbourhoods that complain most are not the ones
+with the worst pavement — so treat measured roughness as the correction to reported roughness rather
+than a second copy of it.
 
 **A roughness index.** The established measure is IRI, and phone-based estimation of it is a real
 literature. Ours is a *proxy* — comparable across our own riders, not calibrated to a road
@@ -158,10 +352,20 @@ position coming out.
 New artifact alongside the existing trip files ([`../DATA-CONTRACT.md`](../DATA-CONTRACT.md)):
 
 ```
-trips/{id}.bumps.json     # events with the fields above, plus edge snap and osm_context
+trips/{id}.bumps.json     # vertical events with the fields above, plus edge snap and osm_context
+trips/{id}.dynamics.json  # brake, launch, swerve, wobble, gait — side and offset where lateral
 ```
 
-And `BUMP` joins the gesture vocabulary in [`skeleton/gesture-engine.md`](skeleton/gesture-engine.md),
-where it is unusual in being the only family measured in newtons rather than geometry.
+Aggregates are per-edge and conditional, because an unconditional average of a wet street and a dry
+one describes neither:
+
+```
+hazards/{edge}.json       # hits, dodges, footprint, hit:dodge ratio, first_seen, last_seen
+drainage/{edge}.json      # wet-only swerve clusters — puddles, and the freeze watch list
+```
+
+And `BUMP`, `BRAKE`, `LAUNCH`, `SWERVE` and `DISMOUNT` join the gesture vocabulary in
+[`skeleton/gesture-engine.md`](skeleton/gesture-engine.md), where they are unusual in being the only
+families measured in newtons rather than geometry.
 
 ↑ [`bike-computer.md`](bike-computer.md) · [`skeleton/gesture-engine.md`](skeleton/gesture-engine.md) · [`city-record.md`](city-record.md) · [`skeleton/exposure-log.md`](skeleton/exposure-log.md)

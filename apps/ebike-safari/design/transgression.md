@@ -22,6 +22,7 @@ They feed each other.
 | Short pass at a wait point | dwell below typical; coin lands ([`wait-points.md`](wait-points.md)) |
 | Fake wait | performed sit when the point was probably not asking — also patience |
 | Fake wait, reported | live peer flag at the same wait point |
+| Rode what others walk | high `DISMOUNT` rate on the edge, and you stayed on the bike ([`bumps-as-input.md`](bumps-as-input.md)) |
 
 Engine emits the fact and a signed delta. Stories interpret.
 

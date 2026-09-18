@@ -1,0 +1,41 @@
+# Correspondence — Christine McGavran — public-safe digest
+# Full thread: DonHopkins/characters/don-hopkins/correspondence/christine-mcgavran.yml (private)
+
+meta:
+  with: christine-mcgavran
+  curated_by: don-hopkins
+  consent: not_yet_asked
+  span: "2024-03 (Yoot Tower thread); acquainted since the early 1990s"
+  channel: email
+  quotes_published: none
+  note: |
+    Her words are not reproduced here — nothing was cleared. This describes what happened.
+
+gist: |
+  Old friends and former Maxis/EA colleagues. In March 2024, when Yoot Saito sent Don the Yoot Tower
+  code drop for archival and an open-source browser version, Christine was one of the people Don wrote
+  to.
+
+threads:
+  - id: yoot_tower_code_drop
+    date: "2024-03"
+    summary: |
+      Christine followed the announcement to the public repo, found only the README there, and asked
+      where the code actually was. Don gave her access to the management repo. She went looking for
+      the art assets — the movies were easy to find and the icons and graphics were not — and found
+      some. She offered to think about who could help with the Japanese comments and user-visible
+      strings, which is still an open problem. She also asked whether the port would use AI to move
+      the C code to web technology, which is a fair description of what MicropolisCore turned out to
+      be.
+    still_open:
+      - Japanese comments and strings need a translator
+      - Nintendo-owned content in the DS version cannot ship in an open version
+      - Where the complete art assets live
+
+connects_in_repo:
+  - { path: invitation.md, why: "Segment 6 is the continuation of this thread" }
+  - { path: ../../repo-shows/yoot-tower-revival/, why: "The show the thread turned into" }
+
+see_also:
+  - README.md
+  - CHARACTER.yml

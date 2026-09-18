@@ -1,0 +1,84 @@
+# Christine McGavran — invitation portrayal. NOT Christine McGavran.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: christine-mcgavran
+  name: "Christine McGavran"
+  pronouns: She/Her
+  type: invitation
+  signifier: "🗺️🏙️"
+  status: living
+  field: |
+    Mapping and navigation leader — SimCity 3000, then mapping and navigation products at Apple and
+    Google, satellite imagery at Vantor, now Mapbox.
+  home: characters/christine-mcgavran/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3          # public figure; warm contact, but nothing reviewed by her yet
+  authored_by: don-hopkins
+  note: |
+    Old friend and former colleague — Maxis/EA. Warm, with a live 2024 thread about the Yoot Tower
+    code drop. Still level 3 until she has seen this directory.
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+  show_seed: repo-shows/ebike-safari/
+  also_fits:
+    - { show: repo-shows/yoot-tower-revival/, why: "Maxis-side memory of The Tower; already in the 2024 code-drop thread" }
+    - { show: repo-shows/building-the-sims/, why: "EA/Maxis production era, if she wants company on stage" }
+
+bio:
+  summary: |
+    Christine McGavran worked on and led **SimCity 3000**, the top-selling PC game of its release
+    year, then spent her career building mapping and navigation products — at **Apple**, at
+    **Google**, where she pitched the embedded-automotive integration that became Google Automotive
+    Services and later led scaled map-data ingestion, and as **VP of Engineering at Vantor** on
+    satellite imagery foundations. She is now at **Mapbox**.
+  hats_worn: [software engineer, engineering manager, director, VP, executive producer, game designer]
+  stack_worked: [embedded systems, graphics, applications, services, algorithms, big data]
+  don_connection: |
+    Known since the early 1990s — Don at Sun, Christine at SGI working with game developers. Later
+    colleagues at Maxis/EA; LinkedIn puts the overlap at September 1997 to March 2000, which is the
+    SimCity 3000 window. In March 2024 Don sent her the Yoot Tower open-source announcement and she
+    took access to the management repo (see correspondence.yml).
+  the_line_that_matters: |
+    From her own public profile: SimCity introduced her to the concepts of mapping and urban
+    planning, and that is what led to her career focus on mapping and navigation. A city simulator
+    turned into a career in maps — which is the eBike Safari thesis, stated by someone who lived it.
+
+career_notes:
+  simcity_3000: "Worked on and led it; top-selling PC game in its year of release (1999)."
+  apple: "Built and led parts of mapping and navigation products."
+  google: |
+    Pitched integrating Google's maps into embedded automotive offerings, which became Google
+    Automotive Services (Volvo, BMW, Ford and others). Team then widened data services beyond
+    automotive — authoritative GIS datasets, transit feeds, road incident feeds, EV data providers,
+    Waze — for high-volume, cost-efficient Geo data, and better partnerships with cities and
+    governments.
+  vantor: |
+    VP of Engineering. Led the launch and evolution of the Spatial Intelligence Platform
+    (Tensorglobe): large-scale imagery access, satellite tasking for high-resolution up-to-date
+    capture, and services on top including AI-powered insights and site monitoring.
+  mapbox: "Current. Exact title not yet verified — do not state one until confirmed."
+  also: "Regular mentorship, coaching, community support and team development."
+
+sources:
+  index: sources/README.md
+  linkedin: sources/linkedin-snapshot.yml
+  correspondence: correspondence.yml
+  needs_verification:
+    - "Mapbox title and remit"
+    - "LinkedIn profile URL slug"
+    - "Year she and Don met — Don remembers 1990 (he at Sun, she at SGI); her profile suggests 1993"
+    - "Whether her SGI work was the developer game contest Don remembers"
+
+see_also:
+  - { path: README.md, why: "Public portrait" }
+  - { path: CARD.yml, why: "Invokable show segments" }
+  - { path: GLANCE.md, why: "One-screen sniff" }
+  - { path: invitation.md, why: "The invitation itself" }
+  - { path: ideas.md, why: "Segment seeds" }
+  - { path: ../../apps/ebike-safari/design/README.md, why: "The map project she would recognise instantly" }

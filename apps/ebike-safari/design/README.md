@@ -21,7 +21,7 @@ don't port the stack.
 | Pillar | Doc | Status |
 |--------|-----|--------|
 | **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, replaces Bosch Flow |
-| Bumps as input | [`bumps-as-input.md`](bumps-as-input.md) | draft — **a bump is a measurement, not a dialog box**; impulse, signatures, comfort routing |
+| Bumps as input | [`bumps-as-input.md`](bumps-as-input.md) | draft — **a bump is a measurement, not a dialog box**; three axes, spoken labels, hits and dodges, puddles as next winter's potholes, Signalen loop |
 | Camera | [`camera.md`](camera.md) | draft — **half the app**; distance-sampled frames, four directions, local blur |
 | Every screen | [`virtual-ride.md`](virtual-ride.md) | draft — **the desktop is a bike**; WASD, turtle graphics, dynamic queries, one point stream |
 | Map distribution | [`map-distribution.md`](map-distribution.md) | draft — region packs, peer-assisted, the TomTom consent panel |

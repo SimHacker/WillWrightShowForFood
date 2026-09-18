@@ -24,15 +24,25 @@ Detect **semantic gestures** on the road graph — not raw GPS wiggles.
 | P2 | `CLIMB_HILL` | Sustained elevation gain band |
 | P0 | `BUMP` | Impulse in the motion stream — the one family measured in newtons rather than geometry. Classes and signatures in [`../bumps-as-input.md`](../bumps-as-input.md) |
 | P1 | `CAPTURE` | Rider marks a frame — one touch, a spoken word, or retroactively from the buffer ([`../camera.md`](../camera.md)) |
+| P0 | `BRAKE(hard)` | Deceleration beyond a threshold. Clusters are conflict points — the near-miss channel |
+| P0 | `LAUNCH` | Acceleration from rest. Count them: launches are the true cost of a route, not meters |
+| P0 | `SWERVE` | Lateral excursion that returns with no net heading change. Went around something. Carries side and offset, so dodges bound an obstacle the way hits measure one |
+| P1 | `WOBBLE` | Low-speed lateral instability — the street is too full to ride, not too rough |
+| P1 | `RAIL_TRACK(along)` | Sustained small lateral corrections on an edge whose lane holds tram rails |
+| P0 | `DISMOUNT` → `WALK` | Speed to walking pace, ~2 Hz footfall, bike still rolling. The least ambiguous statement in the corpus |
+| P1 | `LABEL` | Spoken word attached to the most recent event — the rider names what the sensors only measured |
 
 ## Outputs
 
 - `trips/{id}.gestures.json` — `{ type, at_edge, osm_context, t_start, t_end }`
 - `trips/{id}.bumps.json` — impulse events, kept separate because they are dense and continuous
+- `trips/{id}.dynamics.json` — brake, launch, swerve and gait events, with side and offset where lateral
 
 ## Rules
 
 - Engine emits **facts** only; no story text
 - False positives OK in v0 if logged with confidence
+- Every event carries weather conditions, or hazards and drainage cannot be told apart later
+- A dodge is evidence too. Absence of a bump never means absence of a hazard
 
 ↑ [`../demo-bar.yml`](../demo-bar.yml)

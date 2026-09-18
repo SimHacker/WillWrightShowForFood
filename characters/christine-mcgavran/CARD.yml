@@ -1,0 +1,124 @@
+# CARD — christine-mcgavran (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: christine-mcgavran
+  name: "Christine McGavran"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Christine McGavran"
+  title: "From SimCity to the actual city — the map was always the game"
+  rarity: rare
+  signifier: "🗺️🏙️"
+  flavor: "Led SimCity 3000, then spent a career making real maps useful."
+
+abilities:
+  - id: SHIPPED-SIMCITY-3000
+    name: "Shipped SimCity 3000"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: shippedSimCity3000
+      signature: "shippedSimCity3000(question) → how the top-selling PC game of its year actually got made"
+      score_when:
+        - trigger: audience_hears_production_reality_not_legend
+          weight: 0.9
+    effect: "Two people who shipped SimCity compare notes — one who led SC3K, one who open-sourced the original."
+    verifiable: "Public profile: worked on and led SimCity 3000, top-selling PC game in its year of release"
+    combos_with: [don-hopkins, will-wright, chaim-gingold]
+
+  - id: THE-MAP-WAS-ALWAYS-THE-GAME
+    name: "The Map Was Always the Game"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: theMapWasAlwaysTheGame
+      signature: "theMapWasAlwaysTheGame() → the path from a city simulator to a career in navigation"
+      score_when:
+        - trigger: two_fields_turn_out_to_be_one
+          weight: 0.95
+    effect: "The thesis of the whole eBike Safari project, told by someone whose career is the proof."
+    verifiable: "Her own public summary: SimCity introduced her to mapping and urban planning, which led to her focus on mapping and navigation"
+    combos_with: [don-hopkins, ben-cerveny]
+
+  - id: PUT-THE-MAP-IN-THE-DASHBOARD
+    name: "Put the Map in the Dashboard"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: putTheMapInTheDashboard
+      signature: "putTheMapInTheDashboard(vehicle) → what it takes to get a map into someone else's hardware"
+      score_when:
+        - trigger: the_unclaimed_cockpit_gets_named
+          weight: 0.85
+    effect: "She pitched maps into cars and it worked. The bike cockpit is the same argument with nobody in it yet."
+    verifiable: "Public profile: pitched embedded automotive integration at Google, which became Google Automotive Services"
+    combos_with: [don-hopkins]
+
+  - id: FEED-THE-BASEMAP
+    name: "Feed the Basemap"
+    type: activated
+    mana: "{3}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: feedTheBasemap
+      signature: "feedTheBasemap(source) → how thousands of data feeds reach one map, affordably"
+      score_when:
+        - trigger: contribution_pipelines_get_taken_seriously
+          weight: 0.8
+    effect: "Transit feeds, incident feeds, GIS, EV, Waze — and city partnerships. The grown-up version of a bike sending roughness measurements home."
+    verifiable: "Public profile: led widening of Geo data services beyond automotive to thousands of sources and government partnerships"
+    combos_with: [don-hopkins]
+
+  - id: TASK-A-SATELLITE
+    name: "Task a Satellite"
+    type: activated
+    mana: "{3}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: taskASatellite
+      signature: "taskASatellite(place) → the top of the resolution ladder, from orbit down to a bicycle"
+      score_when:
+        - trigger: one_world_measured_at_two_scales
+          weight: 0.75
+    effect: "Vantor's imagery platform at one end, a phone camera on a handlebar at the other, same city."
+    verifiable: "Public profile: VP Engineering at Vantor; led launch of the Spatial Intelligence Platform (Tensorglobe)"
+    combos_with: [don-hopkins]
+
+  - id: WEAR-EVERY-HAT
+    name: "Wear Every Hat"
+    type: passive
+    mana: "{0}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: wearEveryHat
+      signature: "wearEveryHat() → engineer, director, VP, executive producer, designer — and why that combination is rare"
+      score_when:
+        - trigger: production_and_engineering_speak_the_same_language
+          weight: 0.7
+    effect: "A guest who can talk about the shader, the schedule and the design in one sentence."
+    verifiable: "Her own public list of roles, from embedded systems to big data"
+    combos_with: [amy-jo-kim, chaim-gingold]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder — invitation status" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Segment seeds" }

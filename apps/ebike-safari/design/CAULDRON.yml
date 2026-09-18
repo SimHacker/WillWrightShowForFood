@@ -256,6 +256,42 @@ slurp_queue:
       - TomTom's method is the model — clip the ends, drop identity, aggregate the middle into coarse bins
     status: harvested
 
+  - id: ride-into-it-and-say-pothole
+    from: Don Hopkins, 2026-09-18
+    into: [bumps-as-input.md, skeleton/gesture-engine.md]
+    extract:
+      - "you can literally measure and report a pothole by purposefully riding into it and saying 'pothole'"
+      - the impulse supplies severity, the spoken word supplies the class — hands stay on the bars
+      - deliberate hits are labelled training data and civic reports, never prevalence statistics
+      - the vocabulary needs `nice` as much as `pothole`, or the corpus only describes misery
+      - Signalen is where a Dutch report actually goes, and its open data closes the loop backwards
+    status: harvested
+
+  - id: three-axes-and-leidsestraat
+    from: Don Hopkins, 2026-09-18
+    into: [bumps-as-input.md, skeleton/gesture-engine.md, transgression.md]
+    extract:
+      - braking, acceleration, turning, swerving — the vertical axis is the least social one
+      - hard braking is the near-miss channel; crashes leave reports, near-misses leave decelerations
+      - launches not meters are the true cost of a route to a cyclist
+      - "Leidsestraat: cobbles, rails underfoot, ambling tourists, trams, bikes, police, dismount and walk"
+      - gait is the least ambiguous statement in the corpus — the rider gave up and walked
+      - enforcement encounters stay private; aggregate to street and month, never coordinate and hour
+    status: harvested
+
+  - id: holes-from-dodges-and-puddle-drainage
+    from: Don Hopkins, 2026-09-18
+    into: [bumps-as-input.md]
+    extract:
+      - recognise holes from riders bumping into them AND riders swerving around them
+      - the space nobody rides through is the obstacle's footprint — shape from negative space
+      - hits with no dodges means nobody sees it; danger is severity times invisibility
+      - "'puddle swerves tell where water pools' — drainage failure, unreported because it is nobody's emergency"
+      - standing water is how a crack becomes a hole, so the autumn puddle map forecasts spring potholes
+      - the same low points ice first — puddle layer is the black-ice layer
+      - measure the hole dry, measure the puddle wet; weather must be attached to every event
+    status: harvested
+
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
     tags: [iloci-memory-palace, amsterdam-coffeeshops-app, bongo-bingo]
@@ -270,6 +306,7 @@ slurp_queue:
     status: pending
 
 harvested:
+  - bumps-as-input.md   # three axes, spoken labels, hits vs dodges, puddles, Signalen
   - bike-computer.md
   - sources/cloudmade-2009-stack.md
   - city-record.md

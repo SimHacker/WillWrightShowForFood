@@ -1,0 +1,78 @@
+# Christine McGavran — career facts from her own public LinkedIn profile
+# Retrieved 2026-09-18. Paraphrased, not quoted.
+# Profile URL slug not yet recorded — fill in before citing.
+
+meta:
+  subject: christine-mcgavran
+  source: "LinkedIn public profile (self-authored)"
+  retrieved: "2026-09-18"
+  quoting: none
+  reliability: |
+    Self-reported, which makes it authoritative for how she describes her own career and weak
+    evidence for anything else. Titles and scope are hers; dates from the profile's own overlap
+    highlight.
+
+identity:
+  name: "Christine McGavran"
+  pronouns: She/Her
+  headline: "Industry-seasoned tech leader, expert in mapping and navigation"
+  location: "San Francisco, California, United States"
+  education: "Dartmouth College"
+  current: Mapbox
+  title_at_mapbox: unknown   # do not invent one
+
+roles_worn:
+  - software engineer
+  - engineering manager
+  - director
+  - VP
+  - executive producer
+  - game designer
+
+stack_worked: [embedded systems, graphics, applications, services, algorithms, big data]
+
+career:
+  games:
+    fact: "Worked on and led SimCity 3000, which became the top-selling PC game in its year of release."
+    motivation_stated: "Started in games with a vision of unlocking human creativity through open-ended game design."
+    ea_overlap_with_don: "1997-09 — 2000-03, per LinkedIn's own shared-employer highlight"
+  the_pivot:
+    fact: |
+      She states that SimCity introduced her to the concepts of mapping and urban planning, and that
+      this led to her career focus on mapping and navigation.
+    why_it_matters: "This is the eBike Safari thesis, asserted by someone whose career is the evidence."
+  apple:
+    fact: "Built and led parts of mapping and navigation products."
+  google:
+    automotive: |
+      Pitched integrating Google's maps into embedded automotive offerings shortly after joining,
+      which led to Google Automotive Services — she names Volvo, BMW and Ford among the customers.
+    data_services: |
+      Her team then widened data services beyond automotive, enabling scaled connections to thousands
+      of data sources: authoritative GIS datasets, transit feeds, road incident feeds, EV data
+      providers, Waze. Stated outcomes were high-volume, cost-efficient data for Geo and better
+      partnerships with cities and governments.
+  vantor:
+    role: "VP of Engineering"
+    fact: |
+      Mapping foundations — the lowest layers, collected from satellites. Led the launch and evolution
+      of Vantor's Spatial Intelligence Platform (Tensorglobe): large-scale high-quality imagery
+      access, satellite tasking for up-to-date high-resolution capture, and services on top including
+      AI-powered insights and site monitoring.
+  leadership:
+    fact: "States a regular practice of mentorship, coaching, community support and team development."
+
+mapbox_context_from_her_feed:
+  retrieved: "2026-09-18"
+  items:
+    - "BUILD with Mapbox — virtual conference, plus an SF happy hour she was promoting"
+    - "Mapbox CEO named in the conference promotion: Peter Sirota"
+    - "Mapbox connector for Figma — instantiate a styled map from a prompt in Figma Design or Make, with map interactions, location search, routing and isochrones"
+    - "Company positioning is AI and agentic experiences with location intelligence underneath"
+  note: |
+    Useful for knowing what her employer is currently saying, not for describing her job. She noted
+    about one announcement that she had almost nothing to do with it.
+
+see_also:
+  - ../CHARACTER.yml
+  - ../README.md
