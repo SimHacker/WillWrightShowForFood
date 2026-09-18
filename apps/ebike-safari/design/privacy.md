@@ -26,6 +26,13 @@ Nothing about the product requires a server. A server is where you choose to put
 Buffered: hold the FIT locally for **one day**, then publish a clipped trace.
 You still have the full file. They get the safari, not the driveway.
 
+The day of delay exists so that review is unhurried rather than a checkpoint between you and getting
+off the bike. What you review is the artifact itself, in an editor, at whatever resolution you choose
+to publish it — the auto-redaction proposes and you author
+([`publishing.md`](publishing.md)). The clip below is what makes the default safe *without* that
+review, because a safety mechanism that depends on the rider opening an editor is not a safety
+mechanism.
+
 ## Private regions — you declare them, the app works out the shape
 
 You name places, not radii. "I live in Badhoevedorp." "Work is here." "This pin, never." The app
@@ -56,8 +63,11 @@ Per region, the knobs:
 
 Two things deliberately **not** offered:
 
-- **No decoy routing.** Publishing a plausible ride you did not take poisons the aggregate everyone
-  else depends on, and there is no way to mark it as fiction without marking it as fiction.
+- **No unmarked decoy routing.** A plausible ride you did not take poisons the aggregate everyone else
+  depends on. Fiction is publishable as *fiction* — the publication recipe marks it `authored` and
+  aggregates consume `measured` only ([`publishing.md`](publishing.md#fiction-is-allowed-and-it-is-fenced)) —
+  but an invented line claiming to be a measurement is refused, because it lies to the arithmetic
+  rather than to the reader.
 - **No regenerated boundaries.** A region is resolved once and kept. Re-randomising per ride hands an
   attacker more independent samples of the same protected location — the CCS 2022 paper found exactly
   that (below).
@@ -172,4 +182,4 @@ Never in the peer GeoJSON, the transgression replay tape, or the smell
 layer — unless you flipped **Live** for this ride, and even then: playhead
 and taps. Pictures stay at the URL you pointed at.
 
-↑ [README.md](README.md) · [peerboard-and-brews.md](peerboard-and-brews.md)
+↑ [README.md](README.md) · [publishing.md](publishing.md) · [peerboard-and-brews.md](peerboard-and-brews.md)

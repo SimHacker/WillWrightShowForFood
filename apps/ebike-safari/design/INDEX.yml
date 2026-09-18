@@ -21,18 +21,27 @@ pillars:
   - virtual-ride.md
   - map-distribution.md
   - city-record.md
+  - graveyard-soul-city.md
   - speech-track.md
+  - speech-plumbing.md
   - geometry-as-language.md
+  - semantic-taxonomy-pyramid.md
   - transgression.md
   - patience.md
   - wait-points.md
+  - navigation-smell-steer.md
   - privacy.md
+  - publishing.md
+  - credit-diffusion.md
   - exposure-pac-man.md
   - urban-garden-loop.md
   - animal-herding.md
   - peerboard-and-brews.md
   - semantic-polder.md
   - map-game-platform.md
+  - oni-map-platform.md
+  - embedding-views.md
+  - git-postgres-sync.md
 
 sources:
   - sources/blocked-bike-lanes-record.md
