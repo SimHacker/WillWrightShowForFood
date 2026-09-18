@@ -185,6 +185,29 @@ slurp_queue:
       - MediaGraph question resolved — songs as nodes AND arcs; full OSM vocabulary (POIs, ways, addresses, areas)
     status: harvested
 
+  - id: bike-computer-product
+    from: design jam, Don Hopkins, 2026-09-18
+    into: [bike-computer.md, sources/cloudmade-2009-stack.md]
+    extract:
+      - the shippable product is a bike computer that is a web page — live map, metrics, voice, offline, ride is a file
+      - incumbent's bug list is the spec — Flow's paywalled map, streamed-not-stored tiles, broken GPX import, malformed FIT, closed to third-party head units
+      - PND lesson — Google Maps on the phone you already own beat dedicated low-margin satnav hardware; same shape, and TomTom survived by becoming the map underneath
+      - CloudMade 2009 was one generation before Mapbox existed; the vendor evaporated with 30 days' notice
+      - offline-first collides with commercial tile terms — default to self-hosted OSM in PMTiles, keep the style as a file we hold
+    status: harvested
+
+  - id: bosch-flow-ui-critique
+    from: Don Hopkins — verbal, not yet captured
+    into: bike-computer.md
+    extract:
+      - "specific Flow UI violations, rule by rule, from the person who has ridden with it daily"
+    note: |
+      Don: "There are SO MANY THINGS I hate about its user interface, it violates every rule in
+      the book." Only the structural failures are written down so far (paywall, no local map,
+      lag, broken GPX, rejected FIT) — those came from Bosch's own docs and rider reports.
+      The hands-on critique is unharvested. Ask before inventing it.
+    status: pending
+
   - id: tomton-trilogy-jam
     from: ../../../process/crazy-idea-jam.yml
     tags: [iloci-memory-palace, amsterdam-coffeeshops-app, bongo-bingo]
@@ -199,6 +222,8 @@ slurp_queue:
     status: pending
 
 harvested:
+  - bike-computer.md
+  - sources/cloudmade-2009-stack.md
   - city-record.md
   - speech-track.md
   - sources/sotm-2026-paris.md   # SotM 2026 programme; 10 follow-ups, one of them a defect
@@ -232,6 +257,7 @@ rejected:
     harvested_as: geometry-as-language.md#tomtomagotchi
 
 next_slurp:
+  - "Flow UI critique from Don, rule by rule — the structural failures are documented, the hands-on ones are not. bike-computer.md#the-incumbents-bug-list-is-the-spec"
   - "OSM ID STABILITY: watch OSMPID (Keller) + 'Where are my ways?' (Reichert) when recordings land — way/node ids are foreign keys throughout territory YAML and OSM ids are NOT stable. Interim: store snapped geometry alongside the id so a broken key can be re-snapped. sources/sotm-2026-paris.md#1"
   - "Panoramax: evaluate camera rig as contributor AND imagery as a viewer layer; read their consent/blur governance before filming Dutch streets. sources/sotm-2026-paris.md#2"
   - "Exposure pellets sit on POI centroids; 'From centroid to entrance' says that's the wrong point. Move to entrances."

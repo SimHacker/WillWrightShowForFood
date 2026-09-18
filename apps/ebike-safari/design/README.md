@@ -20,6 +20,7 @@ don't port the stack.
 
 | Pillar | Doc | Status |
 |--------|-----|--------|
+| **Bike computer** | [`bike-computer.md`](bike-computer.md) | draft — **the shippable product**; a browser on the handlebar, offline, replaces Bosch Flow |
 | City record | [`city-record.md`](city-record.md) | draft — **every street is a groove**; scrobbling, radio dial |
 | Speech track | [`speech-track.md`](speech-track.md) | draft — commands vs impressions; Drescher food |
 | Geometry as language | [`geometry-as-language.md`](geometry-as-language.md) | draft |
@@ -39,6 +40,7 @@ don't port the stack.
 | Taxonomy pyramid | [`semantic-taxonomy-pyramid.md`](semantic-taxonomy-pyramid.md) | draft — LLM tags, coalesce |
 | Smell navigation | [`navigation-smell-steer.md`](navigation-smell-steer.md) | draft — hill-climb, pie menu, MediaGraph |
 | Graveyard layers | [`graveyard-soul-city.md`](graveyard-soul-city.md) | draft — real memorial + Soul City |
+| CloudMade 2009 | [`sources/cloudmade-2009-stack.md`](sources/cloudmade-2009-stack.md) | harvested — **the map vendor is rented**; style 8558 switched off from London |
 | Ben Cerveny jam | [`sources/ben-cerveny-city-record-jam.md`](sources/ben-cerveny-city-record-jam.md) | harvested |
 | Ride gestures Sep 2026 | [`sources/ride-gestures-2026-09.md`](sources/ride-gestures-2026-09.md) | harvested — clockwise undo, De Pijp coloring book, maps |
 | SotM 2026 Paris | [`sources/sotm-2026-paris.md`](sources/sotm-2026-paris.md) | harvested — **OSM ids aren't stable**; Panoramax opportunity |
