@@ -37,6 +37,49 @@ suggest that hand-applied wobble protects you, because a rider who believes it p
 less. If a control makes you safer, it removes something. If it makes the ride prettier, it adds
 something. No control does both, and the two live in different panels.
 
+## The coin that must not be re-flipped
+
+The app is full of coins, and they are not all the same coin. A short pass at a wait point draws
+`Bernoulli(p)` and takes the fine or does not; a swerve draws at low `p`; every drawbridge is a lottery;
+a thank-you is allocated by weighted draw
+([`transgression.md`](transgression.md#dithered-fine-at-wait-points),
+[`credit-diffusion.md`](credit-diffusion.md#the-lottery--dithering-a-continuous-share-into-an-indivisible-thing)).
+All of those are dithering — a continuous quantity turned into discrete outcomes that track it in
+aggregate — and all of them are re-flipped every time, deliberately.
+
+So the rule cannot be "randomness good" or "randomness bad." It is:
+
+> **Dither where convergence is the feature. Freeze where convergence is the attack.**
+
+| | Wait-point fine | Privacy jitter |
+|---|---|---|
+| What the long run should do | Track `p` exactly. That *is* the score | Reveal nothing. Ever |
+| Effect of re-flipping | Correctness. One light is a coin, not a verdict | Fatal. Repeated publication averages the offset away |
+| Therefore | Fresh coin per event | A fresh coin per publication is the bug |
+
+That is the whole content of CCS 2022's C2 result, stated as a design rule rather than a measurement.
+Averaging is what makes the dithered fine honest and what makes noisy geometry useless.
+
+Which means noise about a secret is not categorically hopeless — it has one hard requirement. **The
+coin must be a function of the secret, not of the moment:** flipped once, memoized against that value,
+and reused forever, so repeated publication yields the same answer and there is nothing to average.
+This is *permanent randomized response*, the mechanism at the centre of Google's RAPPOR
+(Erlingsson, Pihur, Korolova, CCS 2014 —
+[paper](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42852.pdf)),
+built for exactly this failure: a memoized per-value response defeats longitudinal averaging, with a
+fresh layer over the top for unlinkability. The lineage runs back to Warner's randomized response
+(1965), which is older than the problem we are applying it to.
+
+Two things follow, one of which the design was already doing without naming it:
+
+- **`no regenerated boundaries` is a frozen coin.** A private region is resolved once and kept
+  ([`privacy.md`](privacy.md#private-regions--you-declare-them-the-app-works-out-the-shape)), because
+  re-randomising per ride hands an attacker independent samples of the same protected location. That
+  rule generalises: any randomness protecting a fixed secret is memoized against the secret.
+- **The style jitter in the darkroom stays frozen too**, per publication and per ride, not because it
+  protects anything, but because a wobble that redraws itself on every render is a tell about the
+  underlying line, and consistency is what makes it read as a drawing rather than as an artifact.
+
 ## The McCloud knob
 
 > **You can trade resolution for identification.** That is the essence of *Understanding Comics*, and

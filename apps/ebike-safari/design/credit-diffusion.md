@@ -8,6 +8,12 @@ existing fact buys you a stake in it.
 This is not a dream. It is two solved problems and one hard one, and it is worth knowing which is
 which before building it.
 
+Two mechanisms arrive later in the document and change its shape, so they are worth flagging here. A
+**lottery** is how an indivisible thing gets allocated in proportion to a continuous share — dithering,
+with the participant's self-interest supplying the consent that noise never gets. And a **short side**:
+without a way to stake *against* a fact, every incentive here rewards adding and agreeing, and the
+record inflates.
+
 ## The accounting is a solved problem, with a catch
 
 Annotating data with where it came from and propagating those annotations through queries is
@@ -81,6 +87,93 @@ Fractions accumulate rather than round. The pro-rata streaming pathology is inst
 event and round it, and the long tail earns a permanent zero. Accumulate the fractions and settle when
 they cross something meaningful.
 
+## The lottery — dithering a continuous share into an indivisible thing
+
+Accumulation is one answer to indivisibility. The other is a **lottery**, and it is the better one for
+the message, because a lottery is how you dither a continuous probability into a discrete outcome
+*with the participant's own motive supplying the consent*.
+
+That is the part that makes it more than a rounding trick. Randomisation is normally something done
+**to** data, and it is resented accordingly — nobody wants noise added to their contribution. A
+lottery is the identical operation with a stake attached, so nobody has to be talked into the
+randomness; they are already leaning in. **If you must randomise, make the randomness a prize.**
+
+This app already runs on that principle without having named it. A short pass at a wait point draws
+`Bernoulli(p)` and the coin, not a verdict, decides the fine
+([`transgression.md`](transgression.md#dithered-fine-at-wait-points)); every drawbridge is a lottery
+([`wait-points.md`](wait-points.md#drawbridges-are-the-lottery)). Those work because the entropy is
+*fun* — a fine you might dodge is a game, and the same fine issued by a certainty engine is a
+speeding camera.
+
+### The precedent is lottery scheduling
+
+Proportional-share allocation of an indivisible resource by weighted lottery is
+Waldspurger and Weihl, **OSDI 1994**
+([paper](https://www.usenix.org/legacy/publications/library/proceedings/osdi/full_papers/waldspurger.pdf)):
+hand out tickets in proportion to entitlement, draw one at random, and the winner gets the whole time
+slice. Expected allocation is proportional to tickets, and the resource never has to be divisible.
+
+The mapping onto this problem is exact, which is worth stating because it means the mechanism is
+borrowed rather than invented:
+
+| Lottery scheduling | Here |
+|---|---|
+| Tickets | Your share of the fact, from the provenance annotation |
+| The indivisible resource | One thank-you message, whole, with its sentence |
+| Expected share of CPU ∝ tickets | Expected share of gratitude ∝ contribution |
+| Ticket inflation / transfer | Share decay, and the neglect multiplier issuing extra tickets |
+| Currencies for delegation | Machine-held shares assigned to the commons pool |
+
+Its known weakness transfers too, and matters more here than it did for CPU: a lottery is fair *in
+expectation*, and over a small number of draws it is lumpy. A scheduler runs a million lotteries a
+minute so variance vanishes; a fact might collect four thank-yous ever, and the rider who did most of
+the work can easily receive none of them. Gratitude is not a time slice — losing three draws in a row
+reads as being ignored, not as variance.
+
+So the two mechanisms compose rather than compete, and they split along the line the table above
+already draws:
+
+| | Mechanism | Why that one |
+|---|---|---|
+| **The message** | Weighted lottery, drawn per thank-you | Must arrive whole and now. Indivisible, so expectation is the only honest proportionality available |
+| **Standing** | Accumulated exact fractions | A ledger can afford arithmetic. No variance, no luck, and it is what routing decisions read |
+
+Lumpiness in the message is then survivable, because the ledger is not lumpy: nobody's record of what
+they contributed depends on whether they won a raffle.
+
+### The fence, because this is a gambling mechanic
+
+A weighted lottery for money, in an app that asks people to ride bicycles in traffic, is a loot box
+with a road hazard attached. Four rules, and they are structural rather than intentions:
+
+- **Never for pay.** Paid capture pays by the minute, deterministically
+  ([`paid-capture.md`](paid-capture.md#the-labour-part-which-is-not-a-footnote)). Converting wages
+  into a draw is wage theft with a casino on top. Lotteries allocate *indivisible symbolic* goods
+  only: a message, an attribution slot, a ceremony, a review slot.
+- **No odds that improve with physical risk.** The tickets come from the completeness of a report,
+  never from the size of an impulse ([`bumps-as-input.md`](bumps-as-input.md#the-sacrificial-hit)).
+  A lottery whose odds rise when you hit the pothole harder is a machine for breaking wrists.
+- **Published odds.** You can read your ticket count and the draw size before the draw. A `p` the
+  participant cannot see is a slot machine — the same rule that makes buffs visible
+  ([`transgression.md`](transgression.md#buffs--the-multipliers-are-data-and-they-say-where-they-came-from)).
+- **No near-miss theatre.** No "you were one ticket away." The draw resolves and says who won. Near-miss
+  presentation is the specific mechanic that makes slot machines addictive, and it would be trivial to
+  add here, which is why it is banned here.
+
+### Where else a lottery is the right shape
+
+- **Worklist assignment.** Neglect-weighted tickets mean an unchecked edge in Nieuw-West is drawn more
+  often than the Damrak, so coverage spreads without anyone assigning work
+  ([`mechanical-turk-ebike.md`](mechanical-turk-ebike.md)). Lottery scheduling, applied to attention.
+- **Review sampling.** Which confirmed claims get audited anyway. Weighted by reputation *inversely* —
+  routing, never permission.
+- **Which ghost gets a ceremony this week.** A drawn spot is an invitation; a ranked list is a chore.
+
+Every one of those draws is safe to re-flip, because in all of them **convergence is the feature**: we
+*want* the long run to track the tickets. That is exactly the property a coin must not have when it is
+hiding something, which is the distinction drawn in
+[`publishing.md`](publishing.md#the-coin-that-must-not-be-re-flipped).
+
 ## Shares decay, and that is the point
 
 If the rider who measured a street in 2026 collects a share of every thank-you it earns in 2034, we
@@ -104,6 +197,94 @@ directs verification effort toward the streets that already have plenty. The fix
 system: apply the **neglect multiplier** from [`transgression.md`](transgression.md) to the *share*, so
 the first corroborator of a hole in Aalsmeer takes a larger stake than the tenth corroborator of
 something on the Damrak. Coverage then spreads itself without anyone assigning work.
+
+That is only the smaller correction. The larger one is that everything above is a **long position.**
+
+## Betting against a fact — the short side, and why the system needs one
+
+Thanks, shares, corroboration and standing all point the same way: they reward *adding* and
+*agreeing*. Nobody in that system is paid to find out that something is **wrong**. A reputation
+market with only a thank-you button is a market with no short side, and it will inflate — a wrong fact
+with three confirmations becomes harder to dislodge than a missing fact is to add, which is precisely
+how map data rots. The unglamorous truth about markets finding fraud is that the short sellers found
+it, because they were the only participants being paid to look.
+
+So: **let people stake against a claim.** A challenge says *I think this is false, and I will put
+something behind saying so.*
+
+### The settlement problem is the whole payoff
+
+Every betting scheme dies on the oracle question — who decides who won? Here the answer is unusually
+good, because the thing that settles a dispute about a street is **somebody going and looking at the
+street**, and that is the exact activity this entire app exists to produce.
+
+So a challenge does not open a market. It opens a **funded task**:
+
+1. Someone stakes against a fact. The fact is flagged disputed, and its share payouts freeze.
+2. The stake becomes a bounty on a worklist entry at that location
+   ([`mechanical-turk-ebike.md`](mechanical-turk-ebike.md)), with the disagreement written into the
+   task so the observer knows what is actually in question.
+3. Somebody rides there and reports. That report settles it.
+4. **The loser's stake pays the observer.** Either way, the person with the muddy shoes gets paid, the
+   fact gets a fresh measurement, and the dispute is resolved by evidence rather than by vote.
+
+Three properties fall out of that structure, and they are why this is worth building rather than merely
+arguing about:
+
+- **Disputes self-prioritise the worklist.** The size of the pot on an edge is a better ranking signal
+  than staleness, because it measures how much anybody actually cares whether the record is right.
+- **Nothing is destroyed.** Stakes are not burned; they are redirected to fieldwork. A wrong challenge
+  still bought the commons a fresh observation, which is why a losing challenger has not wasted
+  anything except their own standing.
+- **Undecidable claims are excluded by construction.** A challenge is only admissible against a claim a
+  person at a location could settle by looking — the `one_look_settles` shape. The architecture
+  student's dated facade qualifies; the local's memory of which shop was there in 1985 does not, and
+  betting on it would launder an unfalsifiable claim into a settled one
+  ([`paid-capture.md`](paid-capture.md#the-rider-is-the-classifier), where testimony is recorded as
+  testimony and never promoted automatically).
+
+### The version that fails, and the asymmetry that fixes it
+
+The obvious design — both sides stake, winner takes the pot — is fatal here, and it is worth being
+precise about why. If being wrong costs the author, the rational strategy becomes **reporting only
+certainties**, and every uncertain observation stops being filed. That would destroy the two rules
+this project most depends on: *illegible is a legitimate answer* and *absence means unknown*. A system
+that punishes honest error collects only the boring facts.
+
+So the stake is **asymmetric, and the author is never a counterparty:**
+
+| | Author of the fact | Challenger | Observer who settles it |
+|---|---|---|---|
+| Stakes anything | **No.** Never | Yes, and it costs, or challenging is free harassment | No |
+| If the fact stands | Keeps their share | Stake pays the observer | Paid |
+| If the fact falls | Loses the *share*, keeps everything else. No debt, no penalty, no mark | Stake returned, plus credit for having been right | Paid |
+
+Being honestly wrong therefore costs you a share that was decaying anyway, and nothing more. There is
+no mark on a person for having reported something that turned out to be false, because the alternative
+is a register full of only the things nobody could dispute.
+
+### Fences, most of which already exist
+
+- **You bet against a claim, never against a person.** The contributors to a fact are not shown to a
+  challenger, and there is no record anywhere of who has been proven wrong how often. That number would
+  be the most destructive statistic in the system, and it is therefore not computed.
+- **Stakes are standing, not money.** Non-transferable, non-cashable, rate-limited by the same
+  one-person budget as votes. This kills the whale — someone rich cannot challenge everything — kills
+  the gambling-regulation problem, and keeps the mechanism inside the fence already drawn above:
+  lotteries and stakes allocate indivisible symbolic goods, never wages.
+- **A challenge must say what it claims instead.** "This is wrong" is not admissible; "this is
+  `surface=asphalt`, not `sett`" is. An unfalsifiable challenge is just a downvote with extra steps,
+  and it puts no obligation on the challenger to have looked at anything.
+- **Standing cannot gate a challenge.** A newcomer's first challenge must be able to overturn a
+  veteran's fact — reputation routes, never permits, and that rule does not get an exception because
+  money-shaped tokens are now involved.
+
+### What this is, in one line
+
+Not a prediction market. A **bug bounty on the map**, where the bounty is paid by whoever was wrong and
+collected by whoever went outside. The betting is a funding mechanism for fieldwork wearing a market's
+clothes, and if it ever starts behaving like a market — price discovery, secondary trading, positions
+held for profit rather than to trigger an observation — it has drifted and should be cut back.
 
 ## One vote each person is the hard problem
 
@@ -151,6 +332,8 @@ riding, which is the failure mode this whole document exists to avoid.
 facts/{id}.yml                # value + provenance annotation (value-level, not row-level)
 facts/{id}.shares.yml         # contributor → share, decay clock, last re-verification
 thanks/{id}.yml               # giver token (unlinkable), fact, sentence, one per person per fact
+draws/{id}.yml                # lottery: tickets in, winner out, odds as published beforehand
+disputes/{id}.yml             # challenge: what it claims instead, stake, frozen payouts, settling report
 ledger/pool.yml               # machine-held shares → neglected-area bounties
 ```
 
