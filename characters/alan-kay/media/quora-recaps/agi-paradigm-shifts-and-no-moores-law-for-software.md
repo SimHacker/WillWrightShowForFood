@@ -4,6 +4,8 @@
 
 **Source:** Alan Kay's public **Quora** answer to *"Is AGI a matter of new paradigm shifts in
 software[s] or is current hardware fundamentally incapable to generate intelligence?"*
+<https://www.quora.com/Is-AGI-a-matter-of-new-paradigm-shifts-in-softwares-or-is-current-hardware-fundamentally-incapable-to-generate-intelligence/answer/Alan-Kay-11>
+
 Posted **Wed 16 Sep 2026**; answer requested by Enzo Yuzuki; 4.1K views, 90 upvotes at capture.
 One of six answers to the question; **the other five are not captured here.** Captured by Don from
 his Quora feed, **17–19 Sep 2026**, with every comment and nested reply manually expanded — see
@@ -22,7 +24,8 @@ Profile: <https://www.quora.com/profile/Alan-Kay-11> — **direct answer URL not
 [`declarative-whats-vs-hows.md`](declarative-whats-vs-hows.md)
 
 **Nature:** Reformatted recap with **verbatim quotes** from the public answer and its comment
-thread. Credit: **Quora** (Alan Kay; commenters Ken Kahn, Kaveh Shahbazian, Michael McCaslin,
+thread, captured with every fold opened by hand — the job
+[quora-harvest](https://github.com/SimHacker/moollm/tree/main/skills/quora-harvest) now automates. Credit: **Quora** (Alan Kay; commenters Ken Kahn, Kaveh Shahbazian, Michael McCaslin,
 Mark Miller, Shyam M. Ramadoss, Haig Shahinian, Aurélien C.). Governed by
 [`portrayal-standards.md`](../../../../schemas/portrayal-standards.md) — represents *about* Alan,
 sourced-only quoting, no impersonation.
@@ -336,6 +339,13 @@ Signs off: "I love you Alan, you are one of my heros." **No reply from Kay to th
 capture** — worth watching, since "subjective unity versus mereological assemblage" is the sharpest
 available challenge to the Society of Mind position and he has answered softer ones in the same
 thread.
+
+Worked through at length in
+[moollm designs/TELEOLOGY.md](https://github.com/SimHacker/moollm/blob/main/designs/TELEOLOGY.md):
+which half of this objection is mechanistic and which half is a demand for interiority,
+why cybernetics' 1943 move made purpose *cheap* rather than mysterious, and the
+argument from autopoietic closure that would have made his case without requiring
+anyone to grant him the inside.
 
 ---
 
