@@ -171,6 +171,48 @@ The pairing with hook 7 is the real segment. Birds carry messages between houses
 characters carry conversations between sprites. Same substrate, thirty years apart, same
 author.
 
+### 13. Where does the line fall between what you build and what the child grows?
+
+His own statement of the divergence, from the Quora thread with Alan, September 2026:
+
+> "But where my thinking has diverged from Alan's in the last decade is that growing that
+> architecture of societies of interacting elements is more promising than building it 'by hand'."
+
+**The question is not which side he is on, because his practice answers that already.** Pictorial
+Janus was hand-built. ToonTalk's robots and birds were hand-built. The eCraft2Learn blocks and
+courseware were hand-built. Fifty-three years of hand-building *interfaces to agency* so that
+children could grow the behavior through them. So the hand-built part is the interface and the grown
+part is what happens in the kid, and he has never once been confused about which is which.
+
+Which makes him the only person who can answer the version that is actually hard: **where exactly
+does the line fall, and how do you know you have put it in the right place?** He has the largest
+sample anybody has — every layer he chose to author versus leave open, across five systems and five
+decades, each with children's results attached.
+
+Follow-ups worth having ready:
+
+- **A case where you put the line in the wrong place and found out.** The interesting failure is a
+  primitive you hand-built that the children needed to be *below*, or one you left open that nobody
+  ever reached into.
+- **Does an LLM move the line, or only make it cheaper to be wrong about?** If the machine can grow
+  the middle layers now, the authored part shrinks — and the pedagogy lived in the authored part.
+- **Would you let an agent use ToonTalk?** The fairness question, in his own system: if a model can
+  drive the robots, should it do so through the same blocks and birds a child uses, or through an
+  API the child has no access to. He designed the only surface where the question has a concrete
+  answer.
+
+The frame Don would bring, offered as a position to attack rather than a conclusion: *interfaces to
+agency, not agents instead of interfaces* — humans and models exercising the same capabilities
+through the same named commands, with surfaces differing by audience rather than by power. Written
+up as [interfaces-to-agency](https://github.com/SimHacker/moollm/blob/main/skills/design-sense/lenses/interfaces-to-agency.md),
+with the grow-versus-build reading in
+[AXES-NOT-CAMPS](https://github.com/SimHacker/moollm/blob/main/designs/AXES-NOT-CAMPS.md).
+
+Pairs with hook 12, since the LLM-character blocks are already the case where he had to decide how
+much of the conversation to author, and with the crystallize/deoptimize loop in
+[korz-prime](https://github.com/SimHacker/moollm/tree/main/designs/korz/korz-prime) — build what has
+stabilized, grow what has not, and make the traffic between the two tiers the architecture.
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)
