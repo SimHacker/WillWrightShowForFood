@@ -1,0 +1,9 @@
+# Derived, all of it. The corpus under examples/ is committed on purpose: it is what the
+# app imports at build time, and the 1988 archive it comes from lives outside this repo.
+node_modules/
+build/
+dist-bundle/
+.svelte-kit/
+__pycache__/
+.env
+.env.*

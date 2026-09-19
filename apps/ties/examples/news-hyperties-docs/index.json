@@ -1,0 +1,1439 @@
+{
+ "database": "news-hyperties-docs",
+ "converted_from": "/Users/a2deh/GroundUp/Leela/git/lloooomm-imports/ties/doc",
+ "namespaces": {
+  "documents": {
+   "principals": 80,
+   "entries": 182,
+   "index": {
+    "NeWS": {
+     "file": "articles/news.md",
+     "principal": true
+    },
+    "NeWS window system": {
+     "file": "articles/news.md",
+     "alias_of": "NeWS"
+    },
+    "Nee-WiS": {
+     "file": "articles/news.md",
+     "alias_of": "NeWS"
+    },
+    "authoring: the home article": {
+     "file": "articles/authoring-the-home-article.md",
+     "principal": true
+    },
+    "the home article": {
+     "file": "articles/authoring-the-home-article.md",
+     "alias_of": "authoring: the home article"
+    },
+    "how to make a link": {
+     "file": "articles/how-to-make-a-link.md",
+     "principal": true
+    },
+    "link command": {
+     "file": "articles/how-to-make-a-link.md",
+     "alias_of": "how to make a link"
+    },
+    "link commands": {
+     "file": "articles/how-to-make-a-link.md",
+     "alias_of": "how to make a link"
+    },
+    "authoring: the index article": {
+     "file": "articles/authoring-the-index-article.md",
+     "principal": true
+    },
+    "the index article": {
+     "file": "articles/authoring-the-index-article.md",
+     "alias_of": "authoring: the index article"
+    },
+    "author - overview": {
+     "file": "articles/author-overview.md",
+     "principal": true
+    },
+    "authoring: the table of topics article": {
+     "file": "articles/authoring-the-table-of-topics-article.md",
+     "principal": true
+    },
+    "the table of topics article": {
+     "file": "articles/authoring-the-table-of-topics-article.md",
+     "alias_of": "authoring: the table of topics article"
+    },
+    "AnimatedTarget Class": {
+     "file": "articles/animatedtarget-class.md",
+     "principal": true
+    },
+    "AnimatedTarget": {
+     "file": "articles/animatedtarget-class.md",
+     "alias_of": "AnimatedTarget Class"
+    },
+    "List of NeWS Classes": {
+     "file": "articles/list-of-news-classes.md",
+     "principal": true
+    },
+    "class list": {
+     "file": "articles/list-of-news-classes.md",
+     "alias_of": "List of NeWS Classes"
+    },
+    "classes": {
+     "file": "articles/list-of-news-classes.md",
+     "alias_of": "List of NeWS Classes"
+    },
+    "list of classes": {
+     "file": "articles/list-of-news-classes.md",
+     "alias_of": "List of NeWS Classes"
+    },
+    "TIESContentsWindow Class": {
+     "file": "articles/tiescontentswindow-class.md",
+     "principal": true
+    },
+    "TIESContentsWindow": {
+     "file": "articles/tiescontentswindow-class.md",
+     "alias_of": "TIESContentsWindow Class"
+    },
+    "TIESControlWindow Class": {
+     "file": "articles/tiescontrolwindow-class.md",
+     "principal": true
+    },
+    "TIESControlWindow": {
+     "file": "articles/tiescontrolwindow-class.md",
+     "alias_of": "TIESControlWindow Class"
+    },
+    "TIESDefinitionWindow Class": {
+     "file": "articles/tiesdefinitionwindow-class.md",
+     "principal": true
+    },
+    "TIESDefinitionWindow": {
+     "file": "articles/tiesdefinitionwindow-class.md",
+     "alias_of": "TIESDefinitionWindow Class"
+    },
+    "MenuTarget Class": {
+     "file": "articles/menutarget-class.md",
+     "principal": true
+    },
+    "MenuTarget": {
+     "file": "articles/menutarget-class.md",
+     "alias_of": "MenuTarget Class"
+    },
+    "PageTrackerTarget Class": {
+     "file": "articles/pagetrackertarget-class.md",
+     "principal": true
+    },
+    "PageTrackerTarget": {
+     "file": "articles/pagetrackertarget-class.md",
+     "alias_of": "PageTrackerTarget Class"
+    },
+    "Picture Class": {
+     "file": "articles/picture-class.md",
+     "principal": true
+    },
+    "Picture": {
+     "file": "articles/picture-class.md",
+     "alias_of": "Picture Class"
+    },
+    "PopupTarget Class": {
+     "file": "articles/popuptarget-class.md",
+     "principal": true
+    },
+    "PopupTarget": {
+     "file": "articles/popuptarget-class.md",
+     "alias_of": "PopupTarget Class"
+    },
+    "Raster Class": {
+     "file": "articles/raster-class.md",
+     "principal": true
+    },
+    "Raster": {
+     "file": "articles/raster-class.md",
+     "alias_of": "Raster Class"
+    },
+    "ScaledRaster Class": {
+     "file": "articles/scaledraster-class.md",
+     "principal": true
+    },
+    "ScaledRaster": {
+     "file": "articles/scaledraster-class.md",
+     "alias_of": "ScaledRaster Class"
+    },
+    "ScrollbarTarget Class": {
+     "file": "articles/scrollbartarget-class.md",
+     "principal": true
+    },
+    "ScrollbarTarget": {
+     "file": "articles/scrollbartarget-class.md",
+     "alias_of": "ScrollbarTarget Class"
+    },
+    "SliderTarget Class": {
+     "file": "articles/slidertarget-class.md",
+     "principal": true
+    },
+    "SliderTarget": {
+     "file": "articles/slidertarget-class.md",
+     "alias_of": "SliderTarget Class"
+    },
+    "Stamp Class": {
+     "file": "articles/stamp-class.md",
+     "principal": true
+    },
+    "Stamp": {
+     "file": "articles/stamp-class.md",
+     "alias_of": "Stamp Class"
+    },
+    "List of Stamp Classes": {
+     "file": "articles/list-of-stamp-classes.md",
+     "principal": true
+    },
+    "List of Available Stamp Classes": {
+     "file": "articles/list-of-stamp-classes.md",
+     "alias_of": "List of Stamp Classes"
+    },
+    "Stamp Classes": {
+     "file": "articles/list-of-stamp-classes.md",
+     "alias_of": "List of Stamp Classes"
+    },
+    "stamps": {
+     "file": "articles/list-of-stamp-classes.md",
+     "alias_of": "List of Stamp Classes"
+    },
+    "Target Class": {
+     "file": "articles/target-class.md",
+     "principal": true
+    },
+    "Target": {
+     "file": "articles/target-class.md",
+     "alias_of": "Target Class"
+    },
+    "List of Target Classes": {
+     "file": "articles/list-of-target-classes.md",
+     "principal": true
+    },
+    "List of Available Target Classes": {
+     "file": "articles/list-of-target-classes.md",
+     "alias_of": "List of Target Classes"
+    },
+    "Target Classes": {
+     "file": "articles/list-of-target-classes.md",
+     "alias_of": "List of Target Classes"
+    },
+    "targets": {
+     "file": "articles/list-of-target-classes.md",
+     "alias_of": "List of Target Classes"
+    },
+    "TargetStamp Class": {
+     "file": "articles/targetstamp-class.md",
+     "principal": true
+    },
+    "TargetStamp": {
+     "file": "articles/targetstamp-class.md",
+     "alias_of": "TargetStamp Class"
+    },
+    "TextCanvasTarget Class": {
+     "file": "articles/textcanvastarget-class.md",
+     "principal": true
+    },
+    "TextCanvasTarget": {
+     "file": "articles/textcanvastarget-class.md",
+     "alias_of": "TextCanvasTarget Class"
+    },
+    "TextEditTarget Class": {
+     "file": "articles/textedittarget-class.md",
+     "principal": true
+    },
+    "TextEditTarget": {
+     "file": "articles/textedittarget-class.md",
+     "alias_of": "TextEditTarget Class"
+    },
+    "TIESWindow Class": {
+     "file": "articles/tieswindow-class.md",
+     "principal": true
+    },
+    "TIESWindow": {
+     "file": "articles/tieswindow-class.md",
+     "alias_of": "TIESWindow Class"
+    },
+    "TTY Class": {
+     "file": "articles/tty-class.md",
+     "principal": true
+    },
+    "TTY": {
+     "file": "articles/tty-class.md",
+     "alias_of": "TTY Class"
+    },
+    "UnitPicture Class": {
+     "file": "articles/unitpicture-class.md",
+     "principal": true
+    },
+    "UnitPicture": {
+     "file": "articles/unitpicture-class.md",
+     "alias_of": "UnitPicture Class"
+    },
+    "List of Window Classes": {
+     "file": "articles/list-of-window-classes.md",
+     "principal": true
+    },
+    "Window Classes": {
+     "file": "articles/list-of-window-classes.md",
+     "alias_of": "List of Window Classes"
+    },
+    "The media component commands": {
+     "file": "articles/the-media-component-commands.md",
+     "principal": true
+    },
+    "component commands": {
+     "file": "articles/the-media-component-commands.md",
+     "alias_of": "The media component commands"
+    },
+    "The article content": {
+     "file": "articles/the-article-content.md",
+     "principal": true
+    },
+    "content": {
+     "file": "articles/the-article-content.md",
+     "alias_of": "The article content"
+    },
+    "contents": {
+     "file": "articles/the-article-content.md",
+     "alias_of": "The article content"
+    },
+    "data structure": {
+     "file": "articles/data-structure.md",
+     "principal": true
+    },
+    "overview of the data structure": {
+     "file": "articles/data-structure.md",
+     "alias_of": "data structure"
+    },
+    "Blinking Eyes": {
+     "file": "articles/blinking-eyes.md",
+     "principal": true
+    },
+    "Blink": {
+     "file": "articles/blinking-eyes.md",
+     "alias_of": "Blinking Eyes"
+    },
+    "Debug panel": {
+     "file": "articles/debug-panel.md",
+     "principal": true
+    },
+    "Debug": {
+     "file": "articles/debug-panel.md",
+     "alias_of": "Debug panel"
+    },
+    "The UniPress Emacs Text Editor": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "principal": true
+    },
+    "Emacs": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "alias_of": "The UniPress Emacs Text Editor"
+    },
+    "NeMACS": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "alias_of": "The UniPress Emacs Text Editor"
+    },
+    "Unipress Emacs": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "alias_of": "The UniPress Emacs Text Editor"
+    },
+    "Gosling Emacs": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "alias_of": "The UniPress Emacs Text Editor"
+    },
+    "Gosmacs": {
+     "file": "articles/the-unipress-emacs-text-editor.md",
+     "alias_of": "The UniPress Emacs Text Editor"
+    },
+    "The NeWS Interactive Programming Environment": {
+     "file": "articles/the-news-interactive-programming-environment.md",
+     "principal": true
+    },
+    "NeWS environment": {
+     "file": "articles/the-news-interactive-programming-environment.md",
+     "alias_of": "The NeWS Interactive Programming Environment"
+    },
+    "NeWS Interactive Programming Environment": {
+     "file": "articles/the-news-interactive-programming-environment.md",
+     "alias_of": "The NeWS Interactive Programming Environment"
+    },
+    "Pie Examples": {
+     "file": "articles/pie-examples.md",
+     "principal": true
+    },
+    "Font Menu": {
+     "file": "articles/font-menu.md",
+     "principal": true
+    },
+    "Forth Interaction": {
+     "file": "articles/forth-interaction.md",
+     "principal": true
+    },
+    "forth": {
+     "file": "articles/forth-interaction.md",
+     "alias_of": "Forth Interaction"
+    },
+    "The Founders": {
+     "file": "articles/the-founders.md",
+     "principal": true
+    },
+    "founders": {
+     "file": "articles/the-founders.md",
+     "alias_of": "The Founders"
+    },
+    "Through the Hacking Glass": {
+     "file": "articles/through-the-hacking-glass.md",
+     "principal": true
+    },
+    "Hacking": {
+     "file": "articles/through-the-hacking-glass.md",
+     "alias_of": "Through the Hacking Glass"
+    },
+    "NeWS Hacks": {
+     "file": "articles/news-hacks.md",
+     "principal": true
+    },
+    "hacks": {
+     "file": "articles/news-hacks.md",
+     "alias_of": "NeWS Hacks"
+    },
+    "kludges": {
+     "file": "articles/news-hacks.md",
+     "alias_of": "NeWS Hacks"
+    },
+    "Rube Goldberg devices": {
+     "file": "articles/news-hacks.md",
+     "alias_of": "NeWS Hacks"
+    },
+    "NeWS Forth TIES PostScript Demos": {
+     "file": "articles/news-forth-ties-postscript-demos.md",
+     "principal": true
+    },
+    "list of demos": {
+     "file": "articles/news-forth-ties-postscript-demos.md",
+     "alias_of": "NeWS Forth TIES PostScript Demos"
+    },
+    "demos": {
+     "file": "articles/news-forth-ties-postscript-demos.md",
+     "alias_of": "NeWS Forth TIES PostScript Demos"
+    },
+    "The HyperTIES hypermedia browser": {
+     "file": "articles/the-hyperties-hypermedia-browser.md",
+     "principal": true
+    },
+    "NeWS HyperTIES": {
+     "file": "articles/the-hyperties-hypermedia-browser.md",
+     "alias_of": "The HyperTIES hypermedia browser"
+    },
+    "HyperTIES": {
+     "file": "articles/the-hyperties-hypermedia-browser.md",
+     "alias_of": "The HyperTIES hypermedia browser"
+    },
+    "TIES": {
+     "file": "articles/the-hyperties-hypermedia-browser.md",
+     "alias_of": "The HyperTIES hypermedia browser"
+    },
+    "Root Pie Menu": {
+     "file": "articles/root-pie-menu.md",
+     "principal": true
+    },
+    "Pie Menu": {
+     "file": "articles/root-pie-menu.md",
+     "alias_of": "Root Pie Menu"
+    },
+    "Miscellaneous popups": {
+     "file": "articles/miscellaneous-popups.md",
+     "principal": true
+    },
+    "Miscellaneous": {
+     "file": "articles/miscellaneous-popups.md",
+     "alias_of": "Miscellaneous popups"
+    },
+    "NeWS Extensions to PostScript": {
+     "file": "articles/news-extensions-to-postscript.md",
+     "principal": true
+    },
+    "NeWS extensions": {
+     "file": "articles/news-extensions-to-postscript.md",
+     "alias_of": "NeWS Extensions to PostScript"
+    },
+    "Building User Interfaces in NeWS": {
+     "file": "articles/building-user-interfaces-in-news.md",
+     "principal": true
+    },
+    "news talk": {
+     "file": "articles/building-user-interfaces-in-news.md",
+     "alias_of": "Building User Interfaces in NeWS"
+    },
+    "newstalk": {
+     "file": "articles/building-user-interfaces-in-news.md",
+     "alias_of": "Building User Interfaces in NeWS"
+    },
+    "!home": {
+     "file": "articles/building-user-interfaces-in-news.md",
+     "alias_of": "Building User Interfaces in NeWS"
+    },
+    "The X11/NeWS Merge": {
+     "file": "articles/the-x11-news-merge.md",
+     "principal": true
+    },
+    "X11/NeWS": {
+     "file": "articles/the-x11-news-merge.md",
+     "alias_of": "The X11/NeWS Merge"
+    },
+    "NeWS/X": {
+     "file": "articles/the-x11-news-merge.md",
+     "alias_of": "The X11/NeWS Merge"
+    },
+    "NeWSeX": {
+     "file": "articles/the-x11-news-merge.md",
+     "alias_of": "The X11/NeWS Merge"
+    },
+    "NoWhere": {
+     "file": "articles/nowhere.md",
+     "principal": true
+    },
+    "The Object Oriented Programming Package": {
+     "file": "articles/the-object-oriented-programming-package.md",
+     "principal": true
+    },
+    "class mechanism": {
+     "file": "articles/the-object-oriented-programming-package.md",
+     "alias_of": "The Object Oriented Programming Package"
+    },
+    "Pie Menu Demonstration": {
+     "file": "articles/pie-menu-demonstration.md",
+     "principal": true
+    },
+    "The Pie Menu Demonstration": {
+     "file": "articles/pie-menu-demonstration.md",
+     "alias_of": "Pie Menu Demonstration"
+    },
+    "Pie Demo": {
+     "file": "articles/pie-menu-demonstration.md",
+     "alias_of": "Pie Menu Demonstration"
+    },
+    "The PostScript Programming Language": {
+     "file": "articles/the-postscript-programming-language.md",
+     "principal": true
+    },
+    "PostScript": {
+     "file": "articles/the-postscript-programming-language.md",
+     "alias_of": "The PostScript Programming Language"
+    },
+    "Scroll Bar Madness": {
+     "file": "articles/scroll-bar-madness.md",
+     "principal": true
+    },
+    "Scroll": {
+     "file": "articles/scroll-bar-madness.md",
+     "alias_of": "Scroll Bar Madness"
+    },
+    "Spinning Earths": {
+     "file": "articles/spinning-earths.md",
+     "principal": true
+    },
+    "Spin": {
+     "file": "articles/spinning-earths.md",
+     "alias_of": "Spinning Earths"
+    },
+    "Sun Workstation": {
+     "file": "articles/sun-workstation.md",
+     "principal": true
+    },
+    "Sun": {
+     "file": "articles/sun-workstation.md",
+     "alias_of": "Sun Workstation"
+    },
+    "NeWS Talk Outline": {
+     "file": "articles/news-talk-outline.md",
+     "principal": true
+    },
+    "outline": {
+     "file": "articles/news-talk-outline.md",
+     "alias_of": "NeWS Talk Outline"
+    },
+    "The article description": {
+     "file": "articles/the-article-description.md",
+     "principal": true
+    },
+    "description": {
+     "file": "articles/the-article-description.md",
+     "alias_of": "The article description"
+    },
+    "short description": {
+     "file": "articles/the-article-description.md",
+     "alias_of": "The article description"
+    },
+    "definition": {
+     "file": "articles/the-article-description.md",
+     "alias_of": "The article description"
+    },
+    "Documentation overview": {
+     "file": "articles/documentation-overview.md",
+     "principal": true
+    },
+    "examples of database organisation": {
+     "file": "articles/examples-of-database-organisation.md",
+     "principal": true
+    },
+    "the field commands": {
+     "file": "articles/the-field-commands.md",
+     "principal": true
+    },
+    "field commands": {
+     "file": "articles/the-field-commands.md",
+     "alias_of": "the field commands"
+    },
+    "the formatting commands": {
+     "file": "articles/the-formatting-commands.md",
+     "principal": true
+    },
+    "formatting commands": {
+     "file": "articles/the-formatting-commands.md",
+     "alias_of": "the formatting commands"
+    },
+    "formatter": {
+     "file": "articles/formatter.md",
+     "principal": true
+    },
+    "Forth formatter": {
+     "file": "articles/formatter.md",
+     "alias_of": "formatter"
+    },
+    "Master Index": {
+     "file": "articles/master-index.md",
+     "principal": true
+    },
+    "!index": {
+     "file": "articles/master-index.md",
+     "alias_of": "Master Index"
+    },
+    "master index builder (make-index)": {
+     "file": "articles/master-index-builder-make-index.md",
+     "principal": true
+    },
+    "make-index program": {
+     "file": "articles/master-index-builder-make-index.md",
+     "alias_of": "master index builder (make-index)"
+    },
+    "master index builder": {
+     "file": "articles/master-index-builder-make-index.md",
+     "alias_of": "master index builder (make-index)"
+    },
+    "Authoring: the markup language": {
+     "file": "articles/authoring-the-markup-language.md",
+     "principal": true
+    },
+    "the markup language": {
+     "file": "articles/authoring-the-markup-language.md",
+     "alias_of": "Authoring: the markup language"
+    },
+    "markup language": {
+     "file": "articles/authoring-the-markup-language.md",
+     "alias_of": "Authoring: the markup language"
+    },
+    "Needed tools for an author": {
+     "file": "articles/needed-tools-for-an-author.md",
+     "principal": true
+    },
+    "picture and target names": {
+     "file": "articles/picture-and-target-names.md",
+     "principal": true
+    },
+    "associated files": {
+     "file": "articles/picture-and-target-names.md",
+     "alias_of": "picture and target names"
+    },
+    "picture name file format": {
+     "file": "articles/picture-name-file-format.md",
+     "principal": true
+    },
+    "picture files": {
+     "file": "articles/picture-name-file-format.md",
+     "alias_of": "picture name file format"
+    },
+    "Software Modules": {
+     "file": "articles/software-modules.md",
+     "principal": true
+    },
+    "organization of the software": {
+     "file": "articles/software-modules.md",
+     "alias_of": "Software Modules"
+    },
+    "standard 3 letter extensions": {
+     "file": "articles/standard-3-letter-extensions.md",
+     "principal": true
+    },
+    "standard 3 letter file extensions": {
+     "file": "articles/standard-3-letter-extensions.md",
+     "alias_of": "standard 3 letter extensions"
+    },
+    "the storyboard": {
+     "file": "articles/the-storyboard.md",
+     "principal": true
+    },
+    "storyboard": {
+     "file": "articles/the-storyboard.md",
+     "alias_of": "the storyboard"
+    },
+    "storyboards": {
+     "file": "articles/the-storyboard.md",
+     "alias_of": "the storyboard"
+    },
+    "synonym": {
+     "file": "articles/synonym.md",
+     "principal": true
+    },
+    "synonyms": {
+     "file": "articles/synonym.md",
+     "alias_of": "synonym"
+    },
+    "Table of Topics": {
+     "file": "articles/table-of-topics.md",
+     "principal": true
+    },
+    "Table of Contents": {
+     "file": "articles/table-of-topics.md",
+     "alias_of": "Table of Topics"
+    },
+    "!topics": {
+     "file": "articles/table-of-topics.md",
+     "alias_of": "Table of Topics"
+    },
+    "ties/global directory": {
+     "file": "articles/ties-global-directory.md",
+     "principal": true
+    },
+    "Article title": {
+     "file": "articles/article-title.md",
+     "principal": true
+    },
+    "title": {
+     "file": "articles/article-title.md",
+     "alias_of": "Article title"
+    },
+    "titles": {
+     "file": "articles/article-title.md",
+     "alias_of": "Article title"
+    },
+    "target name file format": {
+     "file": "articles/target-name-file-format.md",
+     "principal": true
+    },
+    "target files": {
+     "file": "articles/target-name-file-format.md",
+     "alias_of": "target name file format"
+    },
+    "Version concerned": {
+     "file": "articles/version-concerned.md",
+     "principal": true
+    },
+    "current version": {
+     "file": "articles/version-concerned.md",
+     "alias_of": "Version concerned"
+    },
+    "Why a new version again": {
+     "file": "articles/why-a-new-version-again.md",
+     "principal": true
+    }
+   }
+  },
+  "pictures": {
+   "entries": 26,
+   "index": {
+    "brillig": {
+     "class": "UnitPicture",
+     "source": "doc/obj/brillig.pn0"
+    },
+    "calc-linear-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-linear-menu.pn0",
+     "image": "images/calc-linear.can.png",
+     "decoded_from": "calc-linear.can"
+    },
+    "calc-neat-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-neat-menu.pn0",
+     "image": "images/calc-neat.can.png",
+     "decoded_from": "calc-neat.can"
+    },
+    "calc-neat-move-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-neat-move-menu.pn0",
+     "image": "images/move.can.png",
+     "decoded_from": "move.can"
+    },
+    "calc-neat-stretch-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-neat-stretch-menu.pn0",
+     "image": "images/stretch.can.png",
+     "decoded_from": "stretch.can"
+    },
+    "calc-neat-zap-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-neat-zap-menu.pn0",
+     "image": "images/zap.can.png",
+     "decoded_from": "zap.can"
+    },
+    "calc-pie-menu": {
+     "class": "Raster",
+     "source": "doc/obj/calc-pie-menu.pn0",
+     "image": "images/calc-pie.can.png",
+     "decoded_from": "calc-pie.can"
+    },
+    "cheryl": {
+     "class": "Raster",
+     "source": "doc/obj/cheryl.pn0",
+     "image": "images/cheryl.can.png",
+     "decoded_from": "cheryl.can"
+    },
+    "circle": {
+     "class": "UnitPicture",
+     "source": "doc/obj/circle.pn0"
+    },
+    "dijkstra-font": {
+     "class": "Stamp",
+     "source": "doc/obj/dijkstra.pn0"
+    },
+    "earth": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/earth.pn0"
+    },
+    "founders.big": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/founders.big.pn0"
+    },
+    "founders.medium": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/founders.medium.pn0"
+    },
+    "founders": {
+     "class": "Raster",
+     "source": "doc/obj/founders.pn0"
+    },
+    "founders.small": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/founders.small.pn0"
+    },
+    "framemenu": {
+     "class": "Raster",
+     "source": "doc/obj/framemenu.pn0",
+     "image": "images/framemenu.can.png",
+     "decoded_from": "framemenu.can"
+    },
+    "miscellaneous": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/miscellaneous.pn0"
+    },
+    "rootmenu": {
+     "class": "Raster",
+     "source": "doc/obj/rootmenu.pn0",
+     "image": "images/rootmenu.can.png",
+     "decoded_from": "rootmenu.can"
+    },
+    "smallsun3160c": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/smallsun3160c.pn0"
+    },
+    "square": {
+     "class": "Picture",
+     "source": "doc/obj/square.pn0"
+    },
+    "squat": {
+     "class": "UnitPicture",
+     "source": "doc/obj/squat.pn0"
+    },
+    "sun3160c": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/sun3160c.pn0"
+    },
+    "tall-earth": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/tall-earth.pn0"
+    },
+    "tall": {
+     "class": "UnitPicture",
+     "source": "doc/obj/tall.pn0"
+    },
+    "tinysun3160c": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/tinysun3160c.pn0"
+    },
+    "wide-earth": {
+     "class": "ScaledRaster",
+     "source": "doc/obj/wide-earth.pn0"
+    }
+   }
+  },
+  "targets": {
+   "entries": 79,
+   "index": {
+    "back-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/back-button.tn0"
+    },
+    "default-button": {
+     "class": "LinkTarget",
+     "scope": "global",
+     "source": "global/default-button.tn0"
+    },
+    "first-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/first-button.tn0"
+    },
+    "free-button": {
+     "class": "MenuTarget",
+     "scope": "global",
+     "source": "global/free-button.tn0"
+    },
+    "full-entry-background": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/full-entry-background.tn0"
+    },
+    "full-entry-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/full-entry-button.tn0"
+    },
+    "home-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/home-button.tn0"
+    },
+    "index-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/index-button.tn0"
+    },
+    "last-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/last-button.tn0"
+    },
+    "next-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/next-button.tn0"
+    },
+    "other-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/other-button.tn0"
+    },
+    "quit-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/quit-button.tn0"
+    },
+    "refresh-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/refresh-button.tn0"
+    },
+    "return-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/return-button.tn0"
+    },
+    "round-rect-button": {
+     "class": "LinkTarget",
+     "scope": "global",
+     "source": "global/round-rect-button.tn0"
+    },
+    "show-background": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/show-background.tn0"
+    },
+    "show-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/show-button.tn0"
+    },
+    "topics-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/topics-button.tn0"
+    },
+    "tracer": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/tracer.tn0"
+    },
+    "all": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/all.tn0"
+    },
+    "blink-close": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/blink-close.tn0",
+     "shape": "shapes/blink-close.svg"
+    },
+    "blink-open": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/blink-open.tn0",
+     "shape": "shapes/blink-open.svg"
+    },
+    "chomp": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/chomp.tn0",
+     "shape": "shapes/chomp.svg"
+    },
+    "circle-button": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/circle-button.tn0",
+     "shape": "shapes/circle-button.svg"
+    },
+    "command-exec": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/doc/obj/command-exec.tn0"
+    },
+    "command-text": {
+     "class": "TextEditTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/command-text.tn0"
+    },
+    "compass-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/compass-menu.tn0"
+    },
+    "confirm-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/confirm-menu.tn0"
+    },
+    "days-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/days-menu.tn0"
+    },
+    "fbgray-scroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/fbgray-scroller.tn0"
+    },
+    "file-view-scroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/file-view-scroller.tn0"
+    },
+    "file-view": {
+     "class": "TextCanvasTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/file-view.tn0"
+    },
+    "filename": {
+     "class": "TextEditTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/filename.tn0"
+    },
+    "fixed-scroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/fixed-scroller.tn0"
+    },
+    "font-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/font-menu.tn0"
+    },
+    "fork-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/doc/obj/fork-button.tn0"
+    },
+    "forth-text": {
+     "class": "TextCanvasTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/forthtext.tn0"
+    },
+    "founder.curly": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/founder.curly.tn0",
+     "shape": "shapes/founder-curly.svg"
+    },
+    "founder.larry": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/founder.larry.tn0",
+     "shape": "shapes/founder-larry.svg"
+    },
+    "founder.moe": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/founder.moe.tn0",
+     "shape": "shapes/founder-moe.svg"
+    },
+    "hours-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/hours-menu.tn0"
+    },
+    "hscroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/hscroller.tn0"
+    },
+    "jabberwocky-text-canvas": {
+     "class": "TextCanvasTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/jabberwocky-text-canvas.tn0"
+    },
+    "miscellaneous.bunny": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.bunny.tn0",
+     "shape": "shapes/miscellaneous-bunny.svg"
+    },
+    "miscellaneous.planet": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.planet.tn0",
+     "shape": "shapes/miscellaneous-planet.svg"
+    },
+    "miscellaneous.puzzle": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.puzzle.tn0",
+     "shape": "shapes/miscellaneous-puzzle.svg"
+    },
+    "miscellaneous.table": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.table.tn0",
+     "shape": "shapes/miscellaneous-table.svg"
+    },
+    "miscellaneous.top": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.top.tn0",
+     "shape": "shapes/miscellaneous-top.svg"
+    },
+    "miscellaneous.violin": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.violin.tn0",
+     "shape": "shapes/miscellaneous-violin.svg"
+    },
+    "miscellaneous.widget": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/miscellaneous.widget.tn0",
+     "shape": "shapes/miscellaneous-widget.svg"
+    },
+    "pivot": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/pivot.tn0",
+     "shape": "shapes/pivot.svg"
+    },
+    "psh-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/doc/obj/psh-button.tn0"
+    },
+    "quietpicture": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/doc/obj/quietpicture.tn0"
+    },
+    "rootmenu.allwindows": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.allwindows.tn0",
+     "shape": "shapes/rootmenu-allwindows.svg"
+    },
+    "rootmenu.applications": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.applications.tn0",
+     "shape": "shapes/rootmenu-applications.svg"
+    },
+    "rootmenu.center": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.center.tn0",
+     "shape": "shapes/rootmenu-center.svg"
+    },
+    "rootmenu.cursor": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.cursor.tn0",
+     "shape": "shapes/rootmenu-cursor.svg"
+    },
+    "rootmenu.demos": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.demos.tn0",
+     "shape": "shapes/rootmenu-demos.svg"
+    },
+    "rootmenu.exit": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.exit.tn0",
+     "shape": "shapes/rootmenu-exit.svg"
+    },
+    "rootmenu.label": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.label.tn0"
+    },
+    "rootmenu.repair": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.repair.tn0",
+     "shape": "shapes/rootmenu-repair.svg"
+    },
+    "rootmenu.rlogin": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.rlogin.tn0",
+     "shape": "shapes/rootmenu-rlogin.svg"
+    },
+    "rootmenu.sunview1": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.sunview1.tn0",
+     "shape": "shapes/rootmenu-sunview1.svg"
+    },
+    "rootmenu.user": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/rootmenu.user.tn0",
+     "shape": "shapes/rootmenu-user.svg"
+    },
+    "scroll-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/scroll-menu.tn0"
+    },
+    "scroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/scroller.tn0"
+    },
+    "slider": {
+     "class": "SliderTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/slider.tn0"
+    },
+    "spin": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/spin.tn0",
+     "shape": "shapes/spin.svg"
+    },
+    "sun3160c.display": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/sun3160c.display.tn0",
+     "shape": "shapes/sun3160c-display.svg"
+    },
+    "sun3160c.keyboard": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/sun3160c.keyboard.tn0",
+     "shape": "shapes/sun3160c-keyboard.svg"
+    },
+    "sun3160c.mouse": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/sun3160c.mouse.tn0",
+     "shape": "shapes/sun3160c-mouse.svg"
+    },
+    "sun3160c.mousepad": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/sun3160c.mousepad.tn0",
+     "shape": "shapes/sun3160c-mousepad.svg"
+    },
+    "test-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/test-menu.tn0"
+    },
+    "text-canvas": {
+     "class": "TextCanvasTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/text-canvas.tn0"
+    },
+    "text-scroller": {
+     "class": "ScrollbarTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/text-scroller.tn0"
+    },
+    "tree-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/tree-menu.tn0"
+    },
+    "unlabled-text": {
+     "class": "TextEditTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/unlabled-text.tn0"
+    },
+    "wrong-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/doc/obj/wrong-button.tn0"
+    },
+    "zoom-menu": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/doc/obj/zoom-menu.tn0"
+    }
+   }
+  }
+ },
+ "unresolved": [
+  {
+   "in": "data-structure.md",
+   "name": "ties/global"
+  },
+  {
+   "in": "how-to-make-a-link.md",
+   "name": "<white space><reference>"
+  },
+  {
+   "in": "how-to-make-a-link.md",
+   "name": "button"
+  },
+  {
+   "in": "list-of-window-classes.md",
+   "name": "piles"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Faint Object Camera - exploded view"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Faint Object Camera"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Faint Object Spectrograph - Exploded view"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Faint Object Spectrograph"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Fine Guidance Sensors"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Goddard Space Flight Center"
+  },
+  {
+   "in": "master-index.md",
+   "name": "High Resolution Spectrograph - exploded view"
+  },
+  {
+   "in": "master-index.md",
+   "name": "High Resolution Spectrograph"
+  },
+  {
+   "in": "master-index.md",
+   "name": "High Speed Photometer - exploded view"
+  },
+  {
+   "in": "master-index.md",
+   "name": "High Speed Photometer"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Hubble Space Telescope - Main View"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Optical Telescope Assembly - diagram"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Optical Telescope Assembly"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Participating Organizations"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Project Responsibilities"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Scientific Instruments"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Space Telescope Science Institute"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Spin the Earth"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Stop the Earth"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Support Systems Module - Exploded View"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Support Systems Module"
+  },
+  {
+   "in": "master-index.md",
+   "name": "The Space Telescope in Orbit"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Why the Hubble Space Telescope?"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Wide Field/Planetary Camera - exploded view"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Wide Field/Planetary Camera"
+  },
+  {
+   "in": "software-modules.md",
+   "name": "Storyboard Interpreter"
+  },
+  {
+   "in": "software-modules.md",
+   "name": "Index manager"
+  },
+  {
+   "in": "software-modules.md",
+   "name": "C to PostScript interface"
+  },
+  {
+   "in": "software-modules.md",
+   "name": "PostScript objects and handlers"
+  },
+  {
+   "in": "software-modules.md",
+   "name": "Random PostScript utilities"
+  },
+  {
+   "in": "the-hyperties-hypermedia-browser.md",
+   "name": "The Space Telescope in Orbit"
+  }
+ ]
+}

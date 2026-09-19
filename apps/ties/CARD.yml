@@ -1,0 +1,52 @@
+# CARD — ties app
+
+room:
+  id: ties
+  name: "HyperTIES — the 1988 interactive encyclopedia, running"
+  type: [sveltekit_app, hypermedia, archive_conversion]
+  home: apps/ties/
+
+corpus:
+  root: examples/
+  status: derived
+  rule: "regenerate with pnpm convert; never hand-edit"
+  databases:
+    space-telescope: "26 articles. the picture pops: 14 targets on the Hubble diagram"
+    pie-menu-cookbook: "26 articles. pie menu theory, densest prose, 0 unresolved names"
+    news-hyperties-docs: "80 articles. HyperTIES documenting itself, plus the NeWS class reference and live demos"
+    control-panel: "1 article. the browser's own chrome, whose targets are !Option verbs rather than links"
+
+archive:
+  source: ~/GroundUp/Leela/git/lloooomm-imports/ties/
+  storyboards: "*.st0 — four fields: title, synonyms, definition, contents"
+  shapes: "*.tn0 — normalized 0..1 PostScript geometry"
+  pictures: "*.pn0 — named rasters"
+  shared_scope: "ties/global/ — 19 reusable button shapes every database resolves into"
+
+pipeline:
+  convert: scripts/convert-all.py
+  one_database: scripts/st0_to_md.py
+
+reader:
+  article: src/lib/Article.svelte      # definition preview, prose links
+  applet: src/lib/TargetApplet.svelte  # shaped hit regions over pictures
+  shell: src/lib/Reader.svelte         # routerless, for file://
+  corpus: src/lib/corpus.js            # three namespaces, build-time import
+  markdown: src/lib/markdown.js        # ~name~ as a markdown-it inline rule
+
+builds:
+  dev: "vite dev"
+  static: "vite build — adapter-static, prerender = true, every article a real HTML file"
+  offline: "vite build --config vite.bundle.config.js — singlefile, assets base64"
+
+what_it_proved:
+  - "normalized geometry survives: 1988 coordinates land on 1988 artwork, once y is flipped"
+  - "the definition rung was mandatory, so link previews come free"
+  - "resolution was case-insensitive: the archive writes ~Direction~ and declares synonym `direction`"
+  - "directives were case-insensitive too: one author typed .TITLE, and matching only lowercase drops the article whole"
+  - "targets are told apart by geometry, not by class name: coordinates mean a region, none means a text button"
+
+compose_with:
+  - ../../../moollm/skills/ties/SKILL.md
+  - ../../../moollm/designs/webtop/hyperties/ARTICLE-SCHEMA.md
+  - FORMAT.md

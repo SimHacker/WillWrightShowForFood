@@ -1,0 +1,29 @@
+# GLANCE — ties app
+
+what: |
+  HyperTIES, 1988, running again. Six archive databases converted to markdown with
+  embedded target applets, read by a SvelteKit app that ships three ways from one
+  codebase: live dev, prerendered static site, and one self-contained HTML file.
+  Single click shows a link's definition. Double click goes there.
+
+when:
+  - reading or authoring the converted corpus
+  - reconverting from the .st0 archive
+  - anything about target applets, picture pops, self-naming links
+
+stack: [SvelteKit, Svelte 5, Vite, markdown-it, Python]
+
+corpus: examples/            # DERIVED. regenerate, never hand-edit
+format: FORMAT.md            # what a converted article is
+convert: scripts/convert-all.py
+reader: src/lib/Reader.svelte # routerless shell, for the offline file
+skill: ../../../moollm/skills/ties/
+
+three_outputs:
+  dev: pnpm dev
+  static: pnpm build          # 138 prerendered HTML files
+  offline: pnpm bundle        # dist-bundle/index.html, 548 KB, emailable
+
+counts: 133 articles · 4 databases · 56 target shapes · 15 pictures
+
+see: README.md | FORMAT.md | ../../../moollm/designs/webtop/hyperties/ARTICLE-SCHEMA.md

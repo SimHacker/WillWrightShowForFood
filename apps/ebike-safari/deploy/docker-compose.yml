@@ -48,7 +48,12 @@ services:
       - internal
 
   caddy:
-    image: caddy:2-alpine
+    # Was `image: caddy:2-alpine`. Now built, because HyperTIES prerenders to plain files
+    # and is baked in rather than proxied: a static site needs a web server, and there is
+    # already one here. Same upstream image underneath, plus /srv/hyperties.
+    build:
+      context: ../../ties
+      dockerfile: deploy/Dockerfile.caddy
     restart: unless-stopped
     ports:
       - '80:80'

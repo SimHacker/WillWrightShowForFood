@@ -1,0 +1,16 @@
+# Keep the build context small and the image reproducible.
+
+node_modules
+build
+dist-bundle
+.svelte-kit
+
+__pycache__
+.DS_Store
+.env
+.env.*
+
+# Not excluded, and load-bearing: examples/. The 1988 archive lives outside this app
+# (scripts/convert-all.py reads ~/GroundUp/Leela/git/lloooomm-imports/ties), its markdown
+# output is committed here, and import.meta.glob reads that at build time. So the image
+# builds from the committed corpus and never needs the originals or Python.

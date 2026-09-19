@@ -1,0 +1,771 @@
+{
+ "database": "space-telescope",
+ "converted_from": "/Users/a2deh/GroundUp/Leela/git/lloooomm-imports/ties/newdb",
+ "namespaces": {
+  "documents": {
+   "principals": 26,
+   "entries": 99,
+   "index": {
+    "Spin the Earth": {
+     "file": "articles/spin-the-earth.md",
+     "principal": true
+    },
+    "Earth": {
+     "file": "articles/spin-the-earth.md",
+     "alias_of": "Spin the Earth"
+    },
+    "Spin": {
+     "file": "articles/spin-the-earth.md",
+     "alias_of": "Spin the Earth"
+    },
+    "Stop the Earth": {
+     "file": "articles/stop-the-earth.md",
+     "principal": true
+    },
+    "Stop": {
+     "file": "articles/stop-the-earth.md",
+     "alias_of": "Stop the Earth"
+    },
+    "Faint Object Spectrograph": {
+     "file": "articles/faint-object-spectrograph.md",
+     "principal": true
+    },
+    "Faint Object Camera": {
+     "file": "articles/faint-object-camera.md",
+     "principal": true
+    },
+    "spectrographic": {
+     "file": "articles/faint-object-camera.md",
+     "alias_of": "Faint Object Camera"
+    },
+    "Fine Guidance Sensors": {
+     "file": "articles/fine-guidance-sensors.md",
+     "principal": true
+    },
+    "pointing": {
+     "file": "articles/fine-guidance-sensors.md",
+     "alias_of": "Fine Guidance Sensors"
+    },
+    "stabilization control": {
+     "file": "articles/fine-guidance-sensors.md",
+     "alias_of": "Fine Guidance Sensors"
+    },
+    "orientation": {
+     "file": "articles/fine-guidance-sensors.md",
+     "alias_of": "Fine Guidance Sensors"
+    },
+    "fine guidance censors": {
+     "file": "articles/fine-guidance-sensors.md",
+     "alias_of": "Fine Guidance Sensors"
+    },
+    "Faint Object Camera - exploded view": {
+     "file": "articles/faint-object-camera-exploded-view.md",
+     "principal": true
+    },
+    "filter wheels": {
+     "file": "articles/faint-object-camera-exploded-view.md",
+     "alias_of": "Faint Object Camera - exploded view"
+    },
+    "fig. 1": {
+     "file": "articles/faint-object-camera-exploded-view.md",
+     "alias_of": "Faint Object Camera - exploded view"
+    },
+    "(fig. 1)": {
+     "file": "articles/faint-object-camera-exploded-view.md",
+     "alias_of": "Faint Object Camera - exploded view"
+    },
+    "Faint Object Spectrograph - Exploded view": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "principal": true
+    },
+    "optical mirrors": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "alias_of": "Faint Object Spectrograph - Exploded view"
+    },
+    "gratings": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "alias_of": "Faint Object Spectrograph - Exploded view"
+    },
+    "digicon detector": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "alias_of": "Faint Object Spectrograph - Exploded view"
+    },
+    "fig. 2": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "alias_of": "Faint Object Spectrograph - Exploded view"
+    },
+    "(fig. 2)": {
+     "file": "articles/faint-object-spectrograph-exploded-view.md",
+     "alias_of": "Faint Object Spectrograph - Exploded view"
+    },
+    "Goddard Space Flight Center": {
+     "file": "articles/goddard-space-flight-center.md",
+     "principal": true
+    },
+    "goddard": {
+     "file": "articles/goddard-space-flight-center.md",
+     "alias_of": "Goddard Space Flight Center"
+    },
+    "ground controllers": {
+     "file": "articles/goddard-space-flight-center.md",
+     "alias_of": "Goddard Space Flight Center"
+    },
+    "Goddard Space Flight Center/STOCC": {
+     "file": "articles/goddard-space-flight-center.md",
+     "alias_of": "Goddard Space Flight Center"
+    },
+    "High Resolution Spectrograph": {
+     "file": "articles/high-resolution-spectrograph.md",
+     "principal": true
+    },
+    "High Speed Photometer": {
+     "file": "articles/high-speed-photometer.md",
+     "principal": true
+    },
+    "High Resolution Spectrograph - exploded view": {
+     "file": "articles/high-resolution-spectrograph-exploded-view.md",
+     "principal": true
+    },
+    "high resolution": {
+     "file": "articles/high-resolution-spectrograph-exploded-view.md",
+     "alias_of": "High Resolution Spectrograph - exploded view"
+    },
+    "spectrograph": {
+     "file": "articles/high-resolution-spectrograph-exploded-view.md",
+     "alias_of": "High Resolution Spectrograph - exploded view"
+    },
+    "fig. 3": {
+     "file": "articles/high-resolution-spectrograph-exploded-view.md",
+     "alias_of": "High Resolution Spectrograph - exploded view"
+    },
+    "(fig. 3)": {
+     "file": "articles/high-resolution-spectrograph-exploded-view.md",
+     "alias_of": "High Resolution Spectrograph - exploded view"
+    },
+    "High Speed Photometer - exploded view": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "principal": true
+    },
+    "high speed": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "alias_of": "High Speed Photometer - exploded view"
+    },
+    "photometer": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "alias_of": "High Speed Photometer - exploded view"
+    },
+    "detector": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "alias_of": "High Speed Photometer - exploded view"
+    },
+    "fig. 4": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "alias_of": "High Speed Photometer - exploded view"
+    },
+    "(fig. 4)": {
+     "file": "articles/high-speed-photometer-exploded-view.md",
+     "alias_of": "High Speed Photometer - exploded view"
+    },
+    "Master Index": {
+     "file": "articles/master-index.md",
+     "principal": true
+    },
+    "!index": {
+     "file": "articles/master-index.md",
+     "alias_of": "Master Index"
+    },
+    "Why the Hubble Space Telescope?": {
+     "file": "articles/why-the-hubble-space-telescope.md",
+     "principal": true
+    },
+    "Introduction article": {
+     "file": "articles/why-the-hubble-space-telescope.md",
+     "alias_of": "Why the Hubble Space Telescope?"
+    },
+    "Optical Telescope Assembly": {
+     "file": "articles/optical-telescope-assembly.md",
+     "principal": true
+    },
+    "optical telescope": {
+     "file": "articles/optical-telescope-assembly.md",
+     "alias_of": "Optical Telescope Assembly"
+    },
+    "telescope": {
+     "file": "articles/optical-telescope-assembly.md",
+     "alias_of": "Optical Telescope Assembly"
+    },
+    "assembly": {
+     "file": "articles/optical-telescope-assembly.md",
+     "alias_of": "Optical Telescope Assembly"
+    },
+    "The Space Telescope in Orbit": {
+     "file": "articles/the-space-telescope-in-orbit.md",
+     "principal": true
+    },
+    "!home": {
+     "file": "articles/the-space-telescope-in-orbit.md",
+     "alias_of": "The Space Telescope in Orbit"
+    },
+    "Optical Telescope Assembly - diagram": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "principal": true
+    },
+    "telescope's": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "alias_of": "Optical Telescope Assembly - diagram"
+    },
+    "secondary mirror": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "alias_of": "Optical Telescope Assembly - diagram"
+    },
+    "primary mirror": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "alias_of": "Optical Telescope Assembly - diagram"
+    },
+    "fig. 5": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "alias_of": "Optical Telescope Assembly - diagram"
+    },
+    "(fig. 5)": {
+     "file": "articles/optical-telescope-assembly-diagram.md",
+     "alias_of": "Optical Telescope Assembly - diagram"
+    },
+    "Participating Organizations": {
+     "file": "articles/participating-organizations.md",
+     "principal": true
+    },
+    "cooperative effort": {
+     "file": "articles/participating-organizations.md",
+     "alias_of": "Participating Organizations"
+    },
+    "european space agency": {
+     "file": "articles/participating-organizations.md",
+     "alias_of": "Participating Organizations"
+    },
+    "AURA": {
+     "file": "articles/participating-organizations.md",
+     "alias_of": "Participating Organizations"
+    },
+    "(AURA)": {
+     "file": "articles/participating-organizations.md",
+     "alias_of": "Participating Organizations"
+    },
+    "Project Responsibilities": {
+     "file": "articles/project-responsibilities.md",
+     "principal": true
+    },
+    "responsibilities": {
+     "file": "articles/project-responsibilities.md",
+     "alias_of": "Project Responsibilities"
+    },
+    "fig. 6": {
+     "file": "articles/project-responsibilities.md",
+     "alias_of": "Project Responsibilities"
+    },
+    "(fig. 6)": {
+     "file": "articles/project-responsibilities.md",
+     "alias_of": "Project Responsibilities"
+    },
+    "Scientific Instruments": {
+     "file": "articles/scientific-instruments.md",
+     "principal": true
+    },
+    "scientific": {
+     "file": "articles/scientific-instruments.md",
+     "alias_of": "Scientific Instruments"
+    },
+    "instruments": {
+     "file": "articles/scientific-instruments.md",
+     "alias_of": "Scientific Instruments"
+    },
+    "Hubble Space Telescope - Main View": {
+     "file": "articles/hubble-space-telescope-main-view.md",
+     "principal": true
+    },
+    "hubble space telescope": {
+     "file": "articles/hubble-space-telescope-main-view.md",
+     "alias_of": "Hubble Space Telescope - Main View"
+    },
+    "space telescope": {
+     "file": "articles/hubble-space-telescope-main-view.md",
+     "alias_of": "Hubble Space Telescope - Main View"
+    },
+    "edwin p. hubble space telescope": {
+     "file": "articles/hubble-space-telescope-main-view.md",
+     "alias_of": "Hubble Space Telescope - Main View"
+    },
+    "main telescope": {
+     "file": "articles/hubble-space-telescope-main-view.md",
+     "alias_of": "Hubble Space Telescope - Main View"
+    },
+    "Space Telescope Science Institute": {
+     "file": "articles/space-telescope-science-institute.md",
+     "principal": true
+    },
+    "space telescope science": {
+     "file": "articles/space-telescope-science-institute.md",
+     "alias_of": "Space Telescope Science Institute"
+    },
+    "institute": {
+     "file": "articles/space-telescope-science-institute.md",
+     "alias_of": "Space Telescope Science Institute"
+    },
+    "institure": {
+     "file": "articles/space-telescope-science-institute.md",
+     "alias_of": "Space Telescope Science Institute"
+    },
+    "space science": {
+     "file": "articles/space-telescope-science-institute.md",
+     "alias_of": "Space Telescope Science Institute"
+    },
+    "stsi": {
+     "file": "articles/space-telescope-science-institute.md",
+     "alias_of": "Space Telescope Science Institute"
+    },
+    "Support Systems Module - Exploded View": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "principal": true
+    },
+    "shroud": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "aperture door": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "baffles": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "baffle": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "aft": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "magnetic torquers": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "SSM": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "fig. 7": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "(fig. 7)": {
+     "file": "articles/support-systems-module-exploded-view.md",
+     "alias_of": "Support Systems Module - Exploded View"
+    },
+    "Support Systems Module": {
+     "file": "articles/support-systems-module.md",
+     "principal": true
+    },
+    "solar arrays": {
+     "file": "articles/support-systems-module.md",
+     "alias_of": "Support Systems Module"
+    },
+    "Wide Field/Planetary Camera - exploded view": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "principal": true
+    },
+    "pyramidal mirror": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "alias_of": "Wide Field/Planetary Camera - exploded view"
+    },
+    "charged-coupled devices": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "alias_of": "Wide Field/Planetary Camera - exploded view"
+    },
+    "charge-coupled devices": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "alias_of": "Wide Field/Planetary Camera - exploded view"
+    },
+    "fig. 8": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "alias_of": "Wide Field/Planetary Camera - exploded view"
+    },
+    "(fig. 8)": {
+     "file": "articles/wide-field-planetary-camera-exploded-view.md",
+     "alias_of": "Wide Field/Planetary Camera - exploded view"
+    },
+    "Wide Field/Planetary Camera": {
+     "file": "articles/wide-field-planetary-camera.md",
+     "principal": true
+    },
+    "Wide Field Planetary Camera": {
+     "file": "articles/wide-field-planetary-camera.md",
+     "alias_of": "Wide Field/Planetary Camera"
+    }
+   }
+  },
+  "pictures": {
+   "entries": 7,
+   "index": {
+    "earth": {
+     "class": "ScaledRaster",
+     "source": "newdb/earth/earth.pn0"
+    },
+    "Faint Object Spectrograph - Exploded view": {
+     "class": "Raster",
+     "source": "newdb/fosexplo/fosboth.pn0",
+     "image": "images/fosboth.can.png",
+     "decoded_from": "fosboth.can"
+    },
+    "orbital view": {
+     "class": "Raster",
+     "source": "newdb/orbview/front.image.pn0",
+     "image": "images/front.can.png",
+     "decoded_from": "front.can"
+    },
+    "Optical Telescope Assembly - diagram": {
+     "class": "Raster",
+     "source": "newdb/otadiagr/otadiagr.pn0",
+     "image": "images/ota.can.png",
+     "decoded_from": "ota.can"
+    },
+    "Project responsibilities": {
+     "class": "Raster",
+     "source": "newdb/projectr/projectr.pn0",
+     "image": "images/projectr.can.png",
+     "decoded_from": "projectr.can"
+    },
+    "telescope - main view": {
+     "class": "Raster",
+     "source": "newdb/spacetel/main.image.pn0",
+     "image": "images/main.can.png",
+     "decoded_from": "main.can"
+    },
+    "Wide Field and Planetary Camera - diagram": {
+     "class": "Raster",
+     "source": "newdb/wfpcexpl/wfpcexpl.pn0",
+     "image": "images/wfpcamera.can.png",
+     "decoded_from": "wfpcamera.can"
+    }
+   }
+  },
+  "targets": {
+   "entries": 45,
+   "index": {
+    "back-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/back-button.tn0"
+    },
+    "default-button": {
+     "class": "LinkTarget",
+     "scope": "global",
+     "source": "global/default-button.tn0"
+    },
+    "first-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/first-button.tn0"
+    },
+    "free-button": {
+     "class": "MenuTarget",
+     "scope": "global",
+     "source": "global/free-button.tn0"
+    },
+    "full-entry-background": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/full-entry-background.tn0"
+    },
+    "full-entry-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/full-entry-button.tn0"
+    },
+    "home-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/home-button.tn0"
+    },
+    "index-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/index-button.tn0"
+    },
+    "last-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/last-button.tn0"
+    },
+    "next-button": {
+     "class": "PageTrackerTarget",
+     "scope": "global",
+     "source": "global/next-button.tn0"
+    },
+    "other-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/other-button.tn0"
+    },
+    "quit-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/quit-button.tn0"
+    },
+    "refresh-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/refresh-button.tn0"
+    },
+    "return-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/return-button.tn0"
+    },
+    "round-rect-button": {
+     "class": "LinkTarget",
+     "scope": "global",
+     "source": "global/round-rect-button.tn0"
+    },
+    "show-background": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/show-background.tn0"
+    },
+    "show-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/show-button.tn0"
+    },
+    "topics-button": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/topics-button.tn0"
+    },
+    "tracer": {
+     "class": "Target",
+     "scope": "global",
+     "source": "global/tracer.tn0"
+    },
+    "circle-button": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/earth/circle-button.tn0",
+     "shape": "shapes/circle-button.svg"
+    },
+    "spin": {
+     "class": "AnimatedTarget",
+     "scope": "local",
+     "source": "ties/newdb/earth/spin.tn0",
+     "shape": "shapes/spin.svg"
+    },
+    "orbital view - shape telescope": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/orbview/front.telescope.tn0",
+     "shape": "shapes/orbital-view-shape-telescope.svg"
+    },
+    "OTA - word axial S.I.": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/otadiagr/word-asi.tn0",
+     "shape": "shapes/ota-word-axial-s-i.svg"
+    },
+    "OTA - word fine guidance": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/otadiagr/word-fg.tn0",
+     "shape": "shapes/ota-word-fine-guidance.svg"
+    },
+    "OTA - word radial S.I.": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/otadiagr/word-rsi.tn0",
+     "shape": "shapes/ota-word-radial-s-i.svg"
+    },
+    "resp. - word fine guidance": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-fgs.tn0",
+     "shape": "shapes/resp-word-fine-guidance.svg"
+    },
+    "resp. - word faint object camera": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-foc.tn0",
+     "shape": "shapes/resp-word-faint-object-camera.svg"
+    },
+    "resp. - word goddard": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-goddard.tn0",
+     "shape": "shapes/resp-word-goddard.svg"
+    },
+    "resp. - word optical telescope assembly": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-ota.tn0",
+     "shape": "shapes/resp-word-optical-telescope-assembly.svg"
+    },
+    "resp. - word Scientific instrument": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-si.tn0",
+     "shape": "shapes/resp-word-scientific-instrument.svg"
+    },
+    "resp. - word support system": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/projectr/word-ssm.tn0",
+     "shape": "shapes/resp-word-support-system.svg"
+    },
+    "Main view -  shape FGS": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.fgs.tn0",
+     "shape": "shapes/main-view-shape-fgs.svg"
+    },
+    "Main view -  shape FOC": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.foc.tn0",
+     "shape": "shapes/main-view-shape-foc.svg"
+    },
+    "Main view -  shape FOS": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.fos.tn0",
+     "shape": "shapes/main-view-shape-fos.svg"
+    },
+    "Main view -  shape HRS": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.hrs.tn0",
+     "shape": "shapes/main-view-shape-hrs.svg"
+    },
+    "Main view -  shape HSP": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.hsp.tn0",
+     "shape": "shapes/main-view-shape-hsp.svg"
+    },
+    "Main view -  shape OTA": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.ota.tn0",
+     "shape": "shapes/main-view-shape-ota.svg"
+    },
+    "Main view -  shape WFPC": {
+     "class": "PopupTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/main.wfpc.tn0",
+     "shape": "shapes/main-view-shape-wfpc.svg"
+    },
+    "Main view -  word Fine Guidance Sensors": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-fgs.tn0",
+     "shape": "shapes/main-view-word-fine-guidance-sensors.svg"
+    },
+    "Main view -  word Faint Object Camera": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-foc.tn0",
+     "shape": "shapes/main-view-word-faint-object-camera.svg"
+    },
+    "Main view -  word Faint Object Spectrograph": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-fos.tn0",
+     "shape": "shapes/main-view-word-faint-object-spectrograph.svg"
+    },
+    "Main view -  word High Resolution Spectrograph": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-hrs.tn0",
+     "shape": "shapes/main-view-word-high-resolution-spectrograph.svg"
+    },
+    "Main view -  word High Speed Photometer": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-hsp.tn0",
+     "shape": "shapes/main-view-word-high-speed-photometer.svg"
+    },
+    "Main view -  word Support System module": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-ssm.tn0",
+     "shape": "shapes/main-view-word-support-system-module.svg"
+    },
+    "Main view -  word Wide Field Planetary Camera": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/newdb/spacetel/word-wfpc.tn0",
+     "shape": "shapes/main-view-word-wide-field-planetary-camera.svg"
+    }
+   }
+  }
+ },
+ "unresolved": [
+  {
+   "in": "master-index.md",
+   "name": "Blinking Eyes"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Debug panel"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Font Menu"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Forth Interaction"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Miscellaneous popups"
+  },
+  {
+   "in": "master-index.md",
+   "name": "NeWS Forth TIES PostScript Demos"
+  },
+  {
+   "in": "master-index.md",
+   "name": "NoWhere"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Pie Examples"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Pie Menu Demonstration"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Root Pie Menu"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Scroll Bar Madness"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Spinning Earths"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Sun Workstation"
+  },
+  {
+   "in": "master-index.md",
+   "name": "The Founders"
+  },
+  {
+   "in": "master-index.md",
+   "name": "Through the Hacking Glass"
+  }
+ ]
+}

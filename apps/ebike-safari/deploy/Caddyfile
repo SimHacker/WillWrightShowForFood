@@ -9,3 +9,9 @@
 www.{$DOMAIN} {
 	redir https://{$DOMAIN}{uri} permanent
 }
+
+# HyperTIES: hyperties.org, .net, .link, served as files from inside this container.
+# Name-based virtual hosting, so one Caddy and one IP carry both sites and each name gets
+# its own certificate. The file is baked into the image by apps/ties/deploy/Dockerfile.caddy
+# and owned by that app -- add a site here by importing it, not by editing this block.
+import hyperties.Caddyfile

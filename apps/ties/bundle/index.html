@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>HyperTIES</title>
+		<style>
+			/* Kept in step with src/routes/+layout.svelte: the bundle has no SvelteKit
+			   layout, so the theme is declared here too. */
+			:root {
+				--paper: #ffffff;
+				--ink: #000000;
+				--hot: #c8102e;
+				--panel: #ffffff;
+				color-scheme: light;
+			}
+			body {
+				margin: 0;
+				background: var(--paper);
+				color: var(--ink);
+				font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+			}
+			a {
+				color: var(--hot);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>

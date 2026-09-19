@@ -1,0 +1,129 @@
+{
+ "database": "control-panel",
+ "converted_from": "/Users/a2deh/GroundUp/Leela/git/lloooomm-imports/ties/global",
+ "namespaces": {
+  "documents": {
+   "principals": 1,
+   "entries": 3,
+   "index": {
+    "!Control Panel": {
+     "file": "articles/control-panel.md",
+     "principal": true
+    },
+    "controls": {
+     "file": "articles/control-panel.md",
+     "alias_of": "!Control Panel"
+    },
+    "control panel": {
+     "file": "articles/control-panel.md",
+     "alias_of": "!Control Panel"
+    }
+   }
+  },
+  "pictures": {
+   "entries": 0,
+   "index": {}
+  },
+  "targets": {
+   "entries": 19,
+   "index": {
+    "back-button": {
+     "class": "PageTrackerTarget",
+     "scope": "local",
+     "source": "ties/global/back-button.tn0"
+    },
+    "default-button": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/global/default-button.tn0"
+    },
+    "first-button": {
+     "class": "PageTrackerTarget",
+     "scope": "local",
+     "source": "ties/global/first-button.tn0"
+    },
+    "free-button": {
+     "class": "MenuTarget",
+     "scope": "local",
+     "source": "ties/global/free-button.tn0"
+    },
+    "full-entry-background": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/full-entry-background.tn0"
+    },
+    "full-entry-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/full-entry-button.tn0"
+    },
+    "home-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/home-button.tn0"
+    },
+    "index-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/index-button.tn0"
+    },
+    "last-button": {
+     "class": "PageTrackerTarget",
+     "scope": "local",
+     "source": "ties/global/last-button.tn0"
+    },
+    "next-button": {
+     "class": "PageTrackerTarget",
+     "scope": "local",
+     "source": "ties/global/next-button.tn0"
+    },
+    "other-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/other-button.tn0"
+    },
+    "quit-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/quit-button.tn0"
+    },
+    "refresh-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/refresh-button.tn0"
+    },
+    "return-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/return-button.tn0"
+    },
+    "round-rect-button": {
+     "class": "LinkTarget",
+     "scope": "local",
+     "source": "ties/global/round-rect-button.tn0"
+    },
+    "show-background": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/show-background.tn0"
+    },
+    "show-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/show-button.tn0"
+    },
+    "topics-button": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/topics-button.tn0"
+    },
+    "tracer": {
+     "class": "Target",
+     "scope": "local",
+     "source": "ties/global/tracer.tn0"
+    }
+   }
+  }
+ },
+ "unresolved": []
+}

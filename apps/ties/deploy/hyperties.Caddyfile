@@ -1,0 +1,46 @@
+# HyperTIES — served straight off disk.
+#
+# The reader is prerendered (adapter-static), so there is no application to proxy to:
+# 138 HTML files and about 2 MB of assets, baked into the Caddy image by
+# Dockerfile.caddy. Nothing to keep running, nothing to restart, nothing to fall over.
+#
+# All three names are in ONE site block, so Caddy provisions ONE Let's Encrypt
+# certificate carrying all three as SANs rather than three separate certificates.
+# Splitting them later -- .org for the archive, .net for the reader -- means moving a
+# hostname into its own block with its own root, and nothing else.
+#
+# Each name needs an A record (and AAAA if the VM has IPv6) pointing at this server
+# BEFORE first start, or the ACME challenge fails and Caddy backs off and retries.
+
+hyperties.org, hyperties.net, hyperties.link {
+	root * /srv/hyperties
+	encode zstd gzip
+
+	# Vite writes content-hashed filenames under _app/immutable, so those are safe to
+	# cache forever. Everything else is a document that can change on the next deploy.
+	#
+	# Both matchers are explicit: an unmatched `header` would apply to the immutable paths
+	# too, leaving two Cache-Control values set by the same handler.
+	@immutable path /_app/immutable/*
+	@documents not path /_app/immutable/*
+	header @immutable Cache-Control "public, max-age=31536000, immutable"
+	header @documents Cache-Control "public, max-age=300"
+
+	file_server
+
+	handle_errors {
+		respond "{err.status_code} {err.status_text}" {err.status_code}
+	}
+}
+
+www.hyperties.org {
+	redir https://hyperties.org{uri} permanent
+}
+
+www.hyperties.net {
+	redir https://hyperties.net{uri} permanent
+}
+
+www.hyperties.link {
+	redir https://hyperties.link{uri} permanent
+}

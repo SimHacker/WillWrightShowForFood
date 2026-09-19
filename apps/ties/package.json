@@ -1,0 +1,25 @@
+{
+  "name": "ties",
+  "private": true,
+  "type": "module",
+  "description": "HyperTIES reader: 1988 storyboards as markdown with embedded target applets",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "bundle": "vite build --config vite.bundle.config.js",
+    "convert": "python3 scripts/convert-all.py"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^7.3.0",
+    "svelte": "^5.57.1",
+    "vite": "^8.3.0",
+    "vite-plugin-singlefile": "^2.3.3"
+  },
+  "dependencies": {
+    "js-yaml": "^5.4.2",
+    "markdown-it": "^15.0.2"
+  }
+}
