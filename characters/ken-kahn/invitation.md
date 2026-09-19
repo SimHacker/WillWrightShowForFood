@@ -43,13 +43,22 @@ and more.**
   ambiguity has to hide, and what an eyewitness adds when the archive is
   already in the weights. You lived the history the models retold; Minsky
   and Papert reported on your committee.
+- **The 1973 class.** You taught AI to elementary school children between
+  1973 and 1979, in the Logo Group. The field is currently arguing about
+  whether that is possible, and as far as I can tell nobody has ever asked
+  you what happened. What did you teach them, what did they find obvious
+  that the researchers found hard, and did any of them stay? Fifty-three
+  years is long enough to know. Questions in [ideas.md](ideas.md), hook 11.
 - **Birds and worms.** ToonTalk solved message-passing as wildlife thirty
   years ago; MOOLLM has been growing worms that need exactly your birds.
   I want to co-design a Bird skill with you, credited, on air if you're
-  willing — the full pitch is in [ideas.md](ideas.md), hook 7.
+  willing — the full pitch is in [ideas.md](ideas.md), hook 7. Its sequel
+  is your Snap!Con 2023 session, where blocks were orchestrating
+  conversations between characters before anyone was selling that as a
+  product.
 - **The Learner's Apprentice, live.** The book's thesis demonstrated with
   your own 2026 artifacts — the English-rules Lemmings game, the word-age
-  fonts, the unicorn app. Logo group 1975, ToonTalk 1995, chatbots 2026:
+  fonts, the unicorn app. Logo group 1973, ToonTalk 1995, chatbots 2026:
   same constructionist thesis, three substrates.
 - **NPUC and the tie-dye photo.** You and I two chairs apart on Ted
   Selker's Almaden stage, McCarthy and Bobrow and Lakin in the frame —

@@ -2,12 +2,24 @@
 
 Invitation portrayal — **not** Ken Kahn. [Standards](../../schemas/portrayal-standards.md)
 
-Fifty years of AI, creativity, and education: the 1979 MIT thesis that made
-animated films from story descriptions (advisor Carl Hewitt; text-to-video,
-45 years early), **ToonTalk** (programming as a video-game city — robots
-trained by demonstration, messages carried by birds to nests), the
-**eCraft2Learn AI blocks** for Snap!, and the book **The Learner's
-Apprentice: AI and the Amplification of Human Creativity**.
+**Between 1973 and 1979, Ken taught artificial intelligence to elementary school
+children** as a graduate researcher in the MIT AI Lab's Logo Group. He is still
+teaching AI to kids in 2026. Everything else here sits inside that fifty-three
+year span.
+
+| | |
+|---|---|
+| 1973–79 | Taught AI to elementary schoolers, MIT AI Lab Logo Group, with Papert |
+| 1979 | PhD thesis *Creation of Computer Animation from Story Descriptions* — advisor Carl Hewitt, Minsky and Papert reporting; animated films from vague stories, text-to-video 45 years early |
+| 1990–91 | **Pictorial Janus** — a distributed concurrent constraint language, made visual |
+| 1993 | NPUC, IBM Almaden: *Sketches and Animations as Programs*, as Animated Programs, Inc. |
+| 1995– | **ToonTalk** — programming as a video-game city; robots trained by demonstration, messages carried by birds to nests |
+| 2017– | **eCraft2Learn AI blocks** for Snap! — speech, ML, pattern recognition, LLMs, in a browser |
+| 2023 | Snap!Con Barcelona: led the LLM-integration session, including [orchestrating conversations between characters](https://www.youtube.com/watch?v=d2rNGsbzkXI) |
+| 2026 | **The Learner's Apprentice: AI and the Amplification of Human Creativity**; chatbot-collaboration experiments |
+
+Four substrates, one question, no hardware curve doing the work.
+[Spine and sourcing](sources/hn-2026-09-career-summary.md).
 
 Lately: publishing documented chatbot-collaboration experiments, including
 [a machine-written history of two AI myths](https://toontalk.github.io/misc/ai-history-two-claims.html)
@@ -26,6 +38,7 @@ Brown, John McCarthy, Ted Selker.
 
 **Start here:** [Invitation](invitation.md) ·
 [Interview hooks](ideas.md) ·
+[The 53-year spine](sources/hn-2026-09-career-summary.md) ·
 [The 2026 experiments](sources/2026-chatbot-experiments.md) ·
 [CS547 / Gosling / ToonTalk (2023)](sources/2023-02-stanford-cs547-gosling-toontalk/README.md) ·
 [Show seed](../../repo-shows/ken-kahn/README.md)

@@ -3,12 +3,20 @@
 *Seed. Consent not yet asked. [Ken's room](../../characters/ken-kahn/) ·
 [SHOW.yml](SHOW.yml)*
 
-Fifty years of constructionist AI in one guest: **Ani** (1979 — animated
-films from vague story descriptions, in Carl Hewitt's actor model),
-**ToonTalk** (programming as a video-game city: robots trained by
-demonstration, messages carried by birds), the **AI blocks for Snap!**,
-and **The Learner's Apprentice** — co-creating with chatbots, demonstrated
-weekly in public.
+**He taught AI to elementary school children between 1973 and 1979, and is
+still teaching AI to children now.** Fifty-three years of constructionist AI
+in one guest: the Logo Group classes, **Ani** (1979 — animated films from
+vague story descriptions, in Carl Hewitt's actor model), **Pictorial Janus**
+(1990–91 — a concurrent constraint language made visual), **ToonTalk**
+(1995– — programming as a video-game city: robots trained by demonstration,
+messages carried by birds), the **AI blocks for Snap!**, and **The Learner's
+Apprentice** — co-creating with chatbots, demonstrated weekly in public.
+
+The hook nobody else can supply is the oldest one: what happened in that
+1973 classroom, what the children found obvious that the researchers found
+hard, and whether any of them stayed. The field is arguing about whether
+teaching AI to kids is possible while the longest-running attempt sits
+unasked. [Questions](../../characters/ken-kahn/ideas.md) · hook 11.
 
 The freshest hook: his
 [machine-written AI-history essay](https://toontalk.github.io/misc/ai-history-two-claims.html)

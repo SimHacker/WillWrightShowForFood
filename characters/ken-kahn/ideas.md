@@ -7,7 +7,12 @@ public work and documented connections to this repository. Things Don would love
 
 ## What Ken has done
 
-Ken Kahn — creator of ToonTalk (a game-like visual programming world for kids) and the eCraft2Learn AI blocks for Snap! (speech recognition/synthesis, ML, pattern recognition — in the browser, kid-accessible). An all-around nice, interesting-to-talk-to guy.
+Ken Kahn — taught AI to elementary school children in the MIT AI Lab's Logo Group between
+1973 and 1979, and is still teaching AI to children in 2026. In between: Pictorial Janus, a
+concurrent constraint language made visual (1990–91); ToonTalk, a game-like visual
+programming world for kids (1995–); and the eCraft2Learn AI blocks for Snap! (speech
+recognition/synthesis, ML, pattern recognition, LLMs — in the browser, kid-accessible). An
+all-around nice, interesting-to-talk-to guy. [Spine and sourcing](sources/hn-2026-09-career-summary.md).
 
 ## Shared ground
 
@@ -116,9 +121,55 @@ The book's thesis — anyone can co-create apps, adventures, and stories with
 chatbots — demonstrated with his own artifacts: the word-age font extension,
 the English-rules Lemmings game (Claude implementing, GPT Codex testing),
 the unicorn adventure app built with Gemini for his 5-year-old
-granddaughter. The constructionist arc closes: Logo group, 1975 — ToonTalk,
+granddaughter. The constructionist arc closes: Logo group, 1973 — ToonTalk,
 1995 — chatbots as the learner's apprentice, 2026. Same thesis, three
 substrates.
+
+### 11. The 1973 class — what happened when you taught AI to eight-year-olds
+
+*The hook Don most wants on tape, because nobody has asked it.*
+
+Between 1973 and 1979, as a graduate researcher in the Logo Group, Ken taught artificial
+intelligence to elementary school children. Fifty-three years later the field debates whether
+this is possible, and he has the longest-running data set in existence and was never asked
+for it.
+
+Questions with answers only he has:
+
+- **What did you actually teach them?** In 1973 "AI" meant search, pattern matching,
+  production rules, micro-worlds, maybe procedural semantics — not gradient descent. Which
+  parts did children take to immediately, and which ones did adults assume were easy and
+  turn out not to be?
+- **What did the kids find obvious that the researchers found hard?** The reverse of the
+  usual question, and the one that would tell us the most.
+- **What did Papert and Minsky say about it at the time?** Was teaching AI to children
+  understood as an experiment on the AI or on the children? Both are defensible and the
+  answer is history.
+- **Did any of them stay in the field?** Fifty-three years is long enough to find out, which
+  makes this a longitudinal study nobody designed and no IRB approved.
+- **What is genuinely different now?** Jens' answer at Snap!Con 2025 is that backpropagation
+  can be brought down to a duplicable sprite and "might be the last algorithm we get to
+  teach." Ken is the one person who can compare that to what the 1973 curriculum could reach
+  — and say whether the ceiling moved or only the packaging.
+
+Cross-link: [moollm closing-keynote-jens-neural-networks.md](https://github.com/SimHacker/moollm/blob/main/designs/snap/snapcon-2025/closing-keynote-jens-neural-networks.md)
+and Alan Kay's trade-schools argument, where Ken is the person who has been paying the
+unpaid half of the job the entire time.
+
+### 12. Characters talking to each other, in blocks, in 2023
+
+At Snap!Con Barcelona he led the LLM-integration session and showed extensions that wire
+language models into Snap!'s speech recognition and synthesis and **orchestrate conversations
+between different characters** —
+[*Creative uses of Snap! blocks using large language models like GPT*](https://www.youtube.com/watch?v=d2rNGsbzkXI).
+
+Which is the MOOLLM architecture with a palette on the front, built for children, before the
+multi-agent-orchestration industry existed. Segment beat: put his blocks next to a modern
+agent framework's YAML and ask the audience which one a twelve-year-old can debug.
+
+The pairing with hook 7 is the real segment. Birds carry messages between houses; LLM
+characters carry conversations between sprites. Same substrate, thirty years apart, same
+author.
 
 ## Sources (public)
 

@@ -116,7 +116,7 @@ right_away:
     - { id: dave-maynard, show: remembering-douglas-engelbart, invite: draft, next: "Engelbart mouse segment w/ Don — Old Farts Club, Stanford keyset" }
     - { id: dave-crocker, show: remembering-douglas-engelbart, invite: draft, priority: warm_lead, channel: facebook, next: "Reply on Facebook — NLS text→mail standards; Ted tribute contrast; invitation.md ready" }
     - { id: charchit-goyal, show: none, invite: none, next: "field contact — Wedge AE pie menu beta; Reddit routed to Don Jul 2026" }
-    - { id: ken-kahn, show: repo-shows/ken-kahn/, invite: draft, next: "ToonTalk / constructionism" }
+    - { id: ken-kahn, show: repo-shows/ken-kahn/, invite: draft, next: "ToonTalk / constructionism — lead with the 1973-79 Logo Group AI classes, the question nobody has asked him" }
     - { id: matthew-sibigtroth, show: repo-shows/matthew-sibigtroth/, invite: draft, next: "flesh show" }
     - { id: richard-bartle, show: repo-shows/richard-bartle/, invite: draft, next: "MUD / virtual worlds" }
     - { id: sam-arbesman, show: repo-shows/sam-arbesman-maxis-labs/sam-arbesman-maxis-labs.yml, invite: draft, next: "send invitation — Maxis Labs 2 × Microcosm; Chaim intro fulfilled" }

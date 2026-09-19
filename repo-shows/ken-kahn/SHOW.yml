@@ -9,12 +9,15 @@ show:
   guests: ["Ken Kahn"]
   with: ["Brian Harvey", "Jens Mönig", "Cynthia Solomon", "Margaret Minsky", "Ted Selker"]   # dream co-guests — Snap! ecosystem + Logo culture + NPUC archive
   character: characters/ken-kahn/
-  topic: "Fifty years of constructionist AI — from Ani (films from story descriptions, 1979) through ToonTalk's birds and robots to AI blocks for Snap! and co-creating with chatbots — plus the July 2026 machine-written AI-history essay and what an eyewitness adds when the archive is in the weights."
+  topic: "Fifty-three years of teaching AI to children — from the 1973-79 Logo Group classes through Ani (films from story descriptions, 1979), Pictorial Janus, ToonTalk's birds and robots, and the AI blocks for Snap! — plus the July 2026 machine-written AI-history essay and what an eyewitness adds when the archive is in the weights."
   status: seed
   consent: not_yet_asked
 
 why_him:
+  taught_ai_to_kids_1973: "★ The one nobody has asked him. Between 1973 and 1979 he taught AI to elementary school children as a graduate researcher in the MIT AI Lab's Logo Group, and he is still teaching AI to children in 2026. The field currently debates whether this is possible; he has the longest-running attempt and no interviewer has gone looking for the results."
   ani_1979: "MIT thesis (advisor Carl Hewitt): animated films from vague story descriptions — text-to-video with provenance, 45 years early, in the actor model."
+  pictorial_janus: "1990-91: a distributed concurrent constraint language given a visual syntax — the counterexample to 'blocks are for beginners,' 35 years old."
+  llms_in_blocks_2023: "Snap!Con Barcelona 2023: led the LLM-integration session; extensions wiring language models into speech recognition/synthesis and orchestrating conversations between characters. The MOOLLM architecture with a palette on the front, built for kids, before multi-agent orchestration was a product category."
   toontalk: "Concurrent constraint programming as a video-game city — robots trained by demonstration, birds carrying messages to nests; the direct inspiration for MOOLLM's proposed Bird IPC skill."
   ai_blocks: "eCraft2Learn AI blocks for Snap! — speech, ML, pattern recognition, kid-accessible in the browser."
   learners_apprentice: "The book (The Learner's Apprentice) and its 2026 public demonstrations: English-rules Lemmings, word-age fonts, the unicorn app, NotebookLM artifacts."
@@ -22,6 +25,7 @@ why_him:
   npuc: "Shared the Almaden NPUC stage with Don (photo in his room); Ted Selker holds seven years of NPUC tapes."
 
 dream-segments:
+  - "★ The 1973 class — what he actually taught eight-year-olds about AI, what they found obvious that the researchers found hard, what Papert and Minsky made of it, and whether any of them stayed in the field. A longitudinal study nobody designed."
   - "The essay the machines argued over — walk the ChatGPT share link on screen: demanded citations, the page-379 receipt, the spiral neither model could draw."
   - "Birds for worms — co-design the MOOLLM Bird skill live, credited; ToonTalk's message birds become the repo's IPC wildlife."
   - "Ani, 1979 — run the generative-AI segment backwards: text-to-video with provenance, in Hewitt's actors."

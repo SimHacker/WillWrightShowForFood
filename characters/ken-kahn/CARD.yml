@@ -17,13 +17,13 @@ card:
   title: ToonTalk & AI Blocks
   rarity: rare
   signifier: 🎈
-  flavor: Make machine learning legible before the magic wears off.
+  flavor: Has been teaching AI to children since 1973. Your move.
 
 relationships:
   # kinds may stack — real people relate in multiple ways at once
   # Fact-checked: PhD advisor was Carl HEWITT, not Minsky (MIT DSpace 1721.1/16012; Math Genealogy)
   - { with: marvin-minsky, kinds: [lab_milieu, committee_reported, memorial_discussant], why: "PhD 1979 in the AI Lab Minsky co-directed — advisor Carl Hewitt; Minsky + Papert reported on committee; Logo group member" }
-  - { with: seymour-papert, kinds: [logo_group, constructionist-lineage], why: "🕯️ Joined the Logo group after his master's; taught kids programming; ToonTalk continues the line" }
+  - { with: seymour-papert, kinds: [logo_group, constructionist-lineage], why: "🕯️ Joined the Logo group after his master's; taught elementary schoolers AI there 1973-79; ToonTalk and the Snap! AI blocks continue the line, 53 years on" }
   - { with: cynthia-solomon, kinds: [logo_culture_colleague], why: "MIT Logo culture of the 1970s" }
   - { with: margaret-minsky, kinds: [colleague_flagged_by], why: "Margaret flagged his Snap! AI blocks to colleagues" }
   - { with: brian-harvey, kinds: [snap_ecosystem_peer], why: "AI blocks extend the Snap! world Brian co-created" }
@@ -50,6 +50,60 @@ abilities:
   verifiable: "'Creation of Computer Animation from Story Descriptions' (MIT AI Lab TR-540, 1979; advisor Carl Hewitt) — MIT DSpace 1721.1/16012"
   combos_with:
   - SOCIETY-OF-MIND
+  - TOONTALK
+- id: TAUGHT-AI-TO-KIDS-IN-1973
+  name: Taught AI to Kids in 1973
+  type: legacy
+  mana: '{W}{U}'
+  conditions:
+  - segment_topic_in: [ai-education, constructionism, logo, ai-history, curriculum]
+  advertisement:
+    method: taughtAIToKidsIn1973
+    signature: taughtAIToKidsIn1973() → the question, already answered, fifty-three years ago
+    score_when:
+    - trigger: someone_asks_whether_kids_can_learn_AI
+      weight: 0.99
+    - trigger: panel_treats_AI_education_as_a_new_problem
+      weight: 0.97
+  effect: Between 1973 and 1979 he taught artificial intelligence to elementary school children as a graduate researcher in the MIT AI Lab's Logo Group. Play this when anyone frames teaching AI to children as a question the field has not tried yet. He is still doing it, which makes it a longitudinal study nobody designed.
+  verifiable: "Don's HN summary 12 Sep 2026 (sources/hn-2026-09-career-summary.md); Logo Group membership in thesis front matter"
+  combos_with:
+  - AI-BLOCKS
+  - CONSTRUCTIONIST-ML
+- id: PICTORIAL-JANUS
+  name: Pictorial Janus
+  type: legacy
+  mana: '{U}{G}'
+  conditions:
+  - segment_topic_in: [visual-programming, concurrency, constraints, diagrams-as-code]
+  advertisement:
+    method: pictorialJanus
+    signature: pictorialJanus(concurrentConstraintProgram) → a picture that runs
+    score_when:
+    - trigger: claim_that_visual_languages_cannot_express_hard_semantics
+      weight: 0.93
+  effect: 1990–91 — a distributed concurrent constraint language given a visual syntax, where the diagram is not documentation of the program but the program. The counterexample to "blocks are for beginners," thirty-five years old.
+  verifiable: "Wikipedia: Janus (concurrent constraint programming language)"
+  combos_with:
+  - TOONTALK
+- id: LLM-ORCHESTRATION-IN-BLOCKS
+  name: Character Conversations in Blocks
+  type: activated
+  mana: '{U}{R}'
+  conditions:
+  - segment_topic_in: [llm-integration, multi-agent, snap, moollm, character-simulation]
+  advertisement:
+    method: llmOrchestrationInBlocks
+    signature: llmOrchestrationInBlocks(characters) → conversations a kid can rewire
+    score_when:
+    - trigger: multi_agent_orchestration_presented_as_novel
+      weight: 0.94
+    - trigger: moollm_architecture_under_discussion
+      weight: 0.9
+  effect: At Snap!Con 2023 in Barcelona he showed Snap! extensions wiring LLMs into speech recognition and synthesis and orchestrating conversations between different characters — in a blocks language, for children, in 2023. Which is the moollm architecture with a palette on the front.
+  verifiable: "https://www.youtube.com/watch?v=d2rNGsbzkXI — Snap!Con 2023; Don's report, HN 49663505"
+  combos_with:
+  - AI-BLOCKS
   - TOONTALK
 - id: TOONTALK
   name: ToonTalk

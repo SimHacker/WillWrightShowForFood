@@ -7,7 +7,7 @@ character:
   type: invitation
   signifier: "🎈🐦🌀"
   status: living
-  field: "AI + visual programming for kids — ToonTalk; AI blocks for Snap! (eCraft2Learn); The Learner's Apprentice; AI historiography with the chatbots themselves"
+  field: "Teaching AI to children since 1973 — Logo Group, Pictorial Janus, ToonTalk, AI blocks for Snap! (eCraft2Learn); The Learner's Apprentice; AI historiography with the chatbots themselves"
   home: characters/ken-kahn/
 
 representation:
@@ -28,20 +28,33 @@ invitation:
 
 bio:
   summary: |
-    **Ken Kahn** — fifty years researching AI, creativity, and education, from his MIT
-    AI Lab PhD (1979, advisor Carl Hewitt; Minsky and Papert reported on his committee;
-    Logo group member) to the present. His thesis system, Ani, made animated films from
-    vague story descriptions — text-to-video with provenance, 45 years early. Creator of
-    **ToonTalk**, the game-like visual programming world where computation is a city,
-    methods are robots trained by demonstration, and messages are carried by birds to
-    nests. Built the **eCraft2Learn AI blocks** for **Snap!** (speech, ML, pattern
-    recognition — in the browser, kid-accessible). Author of **The Learner's
-    Apprentice: AI and the Amplification of Human Creativity** (how anyone can
-    co-create apps, adventures, and stories with chatbots). NPUC speaker (Almaden 1993:
-    "Sketches and Animations as Programs"). Lately publishing a stream of documented
-    chatbot-collaboration experiments, including a machine-written AI-history essay he
-    editor-in-chiefed between Claude and ChatGPT. An all-around nice,
-    interesting-to-talk-to guy.
+    **Ken Kahn** — fifty-three years teaching AI to children, which is the single fact
+    that reframes everything else. He arrived at the MIT AI Lab in the 1970s (PhD 1979,
+    advisor Carl Hewitt; Minsky and Papert reported on his committee; Logo group member),
+    and **between 1973 and 1979, as a graduate researcher in the Logo Group, he taught
+    artificial intelligence to elementary school children** — the thing everyone treats
+    as a 2020s question, answered by doing it, half a century ago. His thesis system,
+    Ani, made animated films from vague story descriptions — text-to-video with
+    provenance, 45 years early. **Pictorial Janus** (1990–91) made a distributed
+    concurrent constraint language visual. **ToonTalk** (1995–present) is the game-like
+    visual programming world where computation is a city, methods are robots trained by
+    demonstration, and messages are carried by birds to nests. The **eCraft2Learn AI
+    blocks** for **Snap!** (speech, ML, pattern recognition, LLMs — in the browser,
+    kid-accessible) are the current instrument, and he is still teaching the same
+    subject to the same age group with it. Author of **The Learner's Apprentice: AI and
+    the Amplification of Human Creativity**. NPUC speaker (Almaden 1993: "Sketches and
+    Animations as Programs," under the company name Animated Programs, Inc.). At
+    Snap!Con 2023 in Barcelona he led the session on integrating LLMs with Snap!,
+    including extensions that orchestrate conversations between characters. Lately
+    publishing a stream of documented chatbot-collaboration experiments, including a
+    machine-written AI-history essay he editor-in-chiefed between Claude and ChatGPT. An
+    all-around nice, interesting-to-talk-to guy.
+
+  the_arc: |
+    Started teaching kids AI in 1973 with Papert in the Logo Group; still teaching kids
+    AI in 2026 with Snap! and eCraft2Learn. Fifty-three years, same question, four
+    substrates (Logo, Pictorial Janus, ToonTalk, Snap!). Nobody's hardware curve did
+    that; he did, by hand, continuously.
 
 correspondence_and_contact:
   amsterdam_2026: "Westerpark meetings; Don lent Ken an ebike for solo rides"
@@ -51,6 +64,7 @@ correspondence_and_contact:
 sources:
   wikipedia: null
   local:
+    - sources/hn-2026-09-career-summary.md  # the 53-year spine, verbatim; harvest policy; NPUC/ToonTalk open question
     - sources/npuc-almaden-panel.md         # the panel photo, lineup, and the 1993-vs-1996 thread
     - sources/2026-chatbot-experiments.md   # the AI-history essay saga + the other experiments
     - sources/2023-02-stanford-cs547-gosling-toontalk/README.md  # Gosling Java question; ToonTalk applets; Visual Janus
@@ -58,6 +72,12 @@ sources:
     - from-alan-kay.yml
   web:
     - "https://toontalk.github.io/ — ToonTalk (Reborn, in the browser)"
+    - "https://toontalk.com/ — ToonTalk proper; https://toontalk.com/English/kenkahn.htm — his own page"
+    - "https://en.wikipedia.org/wiki/ToonTalk"
+    - "https://en.wikipedia.org/wiki/Janus_(concurrent_constraint_programming_language) — Pictorial Janus, 1990-91"
+    - "https://scholar.google.com/citations?user=9hQiyqcAAAAJ&hl=en — Google Scholar (172 citations as of 12 Sep 2026)"
+    - "https://project.ecraft2learn.eu/ — the EU project behind the AI blocks"
+    - "https://www.youtube.com/watch?v=d2rNGsbzkXI — Snap!Con 2023: Creative uses of Snap! blocks using LLMs like GPT"
     - "https://ecraft2learn.github.io/ai/ — AI blocks for Snap!"
     - "https://toontalk.github.io/misc/ai-history-two-claims.html — the AI-history essay (July 2026)"
     - "https://docs.google.com/document/d/1SuekouRgA8NrQMOJdmpfowesV4-qTQxmhOe54aTYyw8/edit — the making-of write-up"
@@ -65,5 +85,9 @@ sources:
     - "https://web.archive.org/web/20060210092923/http://www.almaden.ibm.com/almaden/npuc97/1993.htm — NPUC 1993 program"
   papers:
     - "'Creation of Computer Animation from Story Descriptions' (MIT AI Lab TR-540, 1979) — MIT DSpace 1721.1/16012"
+    - "Pictorial Janus (1990-91) — visual syntax for the Janus distributed concurrent constraint language"
+  teaching:
+    - "1973-1979 — taught AI to elementary school children as a graduate researcher, MIT AI Lab Logo Group"
+    - "2017-present — eCraft2Learn AI blocks for Snap!; same subject, same age group, fourth substrate"
   books:
     - "The Learner's Apprentice: AI and the Amplification of Human Creativity"
