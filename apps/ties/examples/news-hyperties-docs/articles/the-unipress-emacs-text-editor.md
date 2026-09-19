@@ -12,44 +12,44 @@ source: doc/demos/emacs.st0
 
 Things to show in a demo of UniPress Emacs. (NeMACS)
 
-→ Multiple frames .nl
+→ Multiple frames
 
-→ Tab windows .nl
+→ Tab windows
 
-→ Shell window .nl
+→ Shell window
 
-→ PostScript shell debugger window .nl
+→ PostScript shell debugger window
 
-→ Directory editor .nl
+→ Directory editor
 
-→ Text selection .nl
+→ Text selection
 
-→ Local rubber banding .nl
+→ Local rubber banding
 
-→ Selected newlines appear rounded .nl
+→ Selected newlines appear rounded
 
-→ Edit/Execute PS code .nl
+→ Edit/Execute PS code
 
-→ Menus .nl
+→ Menus
 
-→ Font menu .nl
+→ Font menu
 
-→ Color menu .nl
+→ Color menu
 
-→ Describe key, bind-to-key .nl
+→ Describe key, bind-to-key
 
-→ Menu compiler .nl
+→ Menu compiler
 
-→ Control panels .nl
+→ Control panels
 
-→ Buttons .nl
+→ Buttons
 
-→ Scroll bar .nl
+→ Scroll bar
 
-→ Control panel compiler .nl
+→ Control panel compiler
 
-→ User Interface styles .nl
+→ User Interface styles
 
-→ Window classes .nl
+→ Window classes
 
-→ Menu classes .nl
+→ Menu classes

@@ -6,7 +6,7 @@ definition: The commands used to specify how the media components like text and 
 source: doc/formatcommand.st0
 ---
 
-Without any formatting commands, the text and pictures will be glued together. Multiple white spaces are reduced to a single blank. .nl .nl
+Without any formatting commands, the text and pictures will be glued together. Multiple white spaces are reduced to a single blank.
 
 1- text formatting commands:
 
@@ -20,7 +20,7 @@ Newline
 
 ``<a` word>`
 
-The word argument is taken literally, ignoring command or other special characters in it. For example to show the command `.nl,` the author has to write `.quote` .nl
+The word argument is taken literally, ignoring command or other special characters in it. For example to show the command `.nl,` the author has to write ``.nl``
 
 ``<a` line>`
 

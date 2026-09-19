@@ -14,9 +14,10 @@ Turn the page to see an example of how to use a PopupTarget!
 
 <!-- page -->
 
+Target file miscellaneous.bunny.tn0:
+
 ```target
 shape: file-view-scroller
-label: "Target file miscellaneous.bunny.tn0: .nl"
 to: miscellaneous.bunny.tn0
 ```
 
@@ -25,7 +26,13 @@ shape: file-view
 to: miscellaneous.bunny.tn0
 ```
 
-In storyboard file example.st0: .nl `.picture` miscellaneous .nl `.target` miscellaneous.bunny .nl nowhere .nl
+In storyboard file example.st0:
+
+`.picture` miscellaneous
+
+`.target` miscellaneous.bunny
+
+nowhere
 
 ```target
 picture: miscellaneous

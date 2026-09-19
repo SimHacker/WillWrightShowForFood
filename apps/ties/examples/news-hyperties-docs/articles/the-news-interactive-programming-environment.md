@@ -9,10 +9,10 @@ source: doc/demos/environment.st0
 
 The NeWS window system is a multitasking, interactive PostScript programming environment. It's a network based, extensible window server. It's also a whole lot of fun!
 
-→ ~The PostScript Programming Language~ .nl
+→ ~The PostScript Programming Language~
 
-→ ~NeWS Extensions to PostScript~ .nl
+→ ~NeWS Extensions to PostScript~
 
-→ ~The Object Oriented Programming Package~ .nl
+→ ~The Object Oriented Programming Package~
 
-→ ~The X11/NeWS Merge~ .nl
+→ ~The X11/NeWS Merge~

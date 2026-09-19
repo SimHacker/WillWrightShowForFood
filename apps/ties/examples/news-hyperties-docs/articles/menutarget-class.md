@@ -14,9 +14,10 @@ Turn the page to see an example of how to use a MenuTarget!
 
 <!-- page -->
 
+Target file tree-menu.tn0:
+
 ```target
 shape: file-view-scroller
-label: "Target file tree-menu.tn0: .nl"
 to: tree-menu.tn0
 ```
 
@@ -25,9 +26,10 @@ shape: file-view
 to: tree-menu.tn0
 ```
 
+Target file days-menu.tn0:
+
 ```target
 shape: file-view-scroller
-label: "Target file days-menu.tn0: .nl"
 to: days-menu.tn0
 ```
 
@@ -36,13 +38,21 @@ shape: file-view
 to: days-menu.tn0
 ```
 
-In storyboard file example.st0: .nl
+In storyboard file example.st0:
 
-`.font` Helvetica-Bold 24 .nl Tree `.target` tree-menu .nl nowhere .nl
+`.font` Helvetica-Bold 24
 
-`.picture` earth .nl `.target` days-menu .nl nowhere .nl
+Tree `.target` tree-menu
 
-Click the right mouse button on these menu buttons: .nl
+nowhere
+
+`.picture` earth
+
+`.target` days-menu
+
+nowhere
+
+Click the right mouse button on these menu buttons:
 
 Tree .target tree-menu nowhere
 

@@ -9,4 +9,28 @@ source: doc/demos/home.st0
 
 Check out all these nifty demos!
 
-- ~Building User Interfaces in NeWS~ .nl - ~Founders~ .nl - ~Miscellaneous~ .nl - ~Sun~ .nl - ~Spin~ .nl - ~Hacking~ .nl - ~Scroll~ .nl - ~Pie Menu~ .nl - ~Font Menu~ .nl - ~Pie Demo~ .nl - ~Pie Examples~ .nl - ~Blink~ .nl - ~Debug~ .nl
+- ~Building User Interfaces in NeWS~
+
+- ~Founders~
+
+- ~Miscellaneous~
+
+- ~Sun~
+
+- ~Spin~
+
+- ~Hacking~
+
+- ~Scroll~
+
+- ~Pie Menu~
+
+- ~Font Menu~
+
+- ~Pie Demo~
+
+- ~Pie Examples~
+
+- ~Blink~
+
+- ~Debug~

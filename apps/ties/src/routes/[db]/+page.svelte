@@ -45,11 +45,15 @@
 </div>
 
 <div class="piles" class:split={workspace.browsers.length > 1}>
-	{#each workspace.browsers as browser (browser.contents.id)}
+	{#each workspace.browsers as browser, i (browser.contents.id)}
 		<div class="scope">
 			{#if workspace.browsers.length > 1}
 				<header class="scope-head">
-					<span>{browser.contents.name}</span>
+					<!-- Counted for the reader, not named for the dictionary. Every contents pile
+					     is bound as ContentsPileID inside its own browser, which is what makes
+					     one lookup serve them all, and is exactly why it cannot label anything
+					     on screen: both piles would wear the same name. -->
+					<span>pile {i + 1}</span>
 					<button type="button" onclick={() => workspace.close(browser)} title="close this pile">
 						×
 					</button>

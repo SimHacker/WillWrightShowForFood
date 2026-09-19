@@ -10,9 +10,9 @@ The Hyperties database system is implemented in the standard file systems availa
 
 A Hyperties database is made of a collection of articles.
 
-In general, a document (i.e. a node in the hypertext network) is represented by a collection of files. The only necessary file is the ~storyboard~  which serves as the primary description of the article's format and content.  It is a text-only file, therefore human readable.
+In general, a document (i.e. a node in the hypertext network) is represented by a collection of files. The only necessary file is the ~storyboard~ which serves as the primary description of the article's format and content.  It is a text-only file, therefore human readable.
 
-Other ~associated files~  contain picture description (or other data, such as digitized sound, that will not normally be represented as human-readable text) and information used to allow rapid presentation of the document at browsing time.
+Other ~associated files~ contain picture description (or other data, such as digitized sound, that will not normally be represented as human-readable text) and information used to allow rapid presentation of the document at browsing time.
 
 One special file, the ~master index~, exists to provide the association between the article files and the database as a whole.
 

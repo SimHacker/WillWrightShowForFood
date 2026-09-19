@@ -6,20 +6,40 @@ definition: The parts of the HyperTIES system.
 source: doc/software-modules.st0
 ---
 
-This stuff lives in the directory "ties". .nl
+This stuff lives in the directory "ties".
 
 ~Master index builder~
 
-Builds the master index by looking at all of the storyboard, picture, and target files in a database. .nl make-index.c .nl ~Storyboard Interpreter~
+Builds the master index by looking at all of the storyboard, picture, and target files in a database.
 
-Reads in and parses storyboard files. fmt.f .nl ~Formatter~
+make-index.c
 
-Figures out where to put everything on the page. .nl fmt.c .nl ~Index manager~
+~Storyboard Interpreter~
 
-Maps names of objects and storyboards to parts of the file system. .nl entry.c entry.h index.c index.h master-index.c master-index.h object.c object.h primitives.c primitives.h tree.c tree.h .nl ~C to PostScript interface~
+Reads in and parses storyboard files. fmt.f
 
-Handles the layout of text, pictures and targets. .nl fmt.cps .nl ~PostScript objects and handlers~
+~Formatter~
 
-Builds display lists, creates objects, sends messages to objects. fmt.ps win.ps stamp.ps target.ps .nl ~Random PostScript utilities~
+Figures out where to put everything on the page.
 
-textcan.ps term.ps hookup.ps .nl
+fmt.c
+
+~Index manager~
+
+Maps names of objects and storyboards to parts of the file system.
+
+entry.c entry.h index.c index.h master-index.c master-index.h object.c object.h primitives.c primitives.h tree.c tree.h
+
+~C to PostScript interface~
+
+Handles the layout of text, pictures and targets.
+
+fmt.cps
+
+~PostScript objects and handlers~
+
+Builds display lists, creates objects, sends messages to objects. fmt.ps win.ps stamp.ps target.ps
+
+~Random PostScript utilities~
+
+textcan.ps term.ps hookup.ps

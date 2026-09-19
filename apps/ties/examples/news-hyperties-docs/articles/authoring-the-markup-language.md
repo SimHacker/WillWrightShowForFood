@@ -15,4 +15,18 @@ Whitespace consists of blanks, newlines, and/or tabs.
 
 There are four types of commands:
 
-- the ~field commands~ .nl To separate title, synonyms, contents, notes	.nl - the ~component commands~ .nl To separate text, picture, video, sound .nl - the ~formatting commands~ .nl To specify margin sizes, fonts, paragraphs .nl - the ~link commands~ .nl To indicate links to other articles .nl
+- the ~field commands~
+
+To separate title, synonyms, contents, notes
+
+- the ~component commands~
+
+To separate text, picture, video, sound
+
+- the ~formatting commands~
+
+To specify margin sizes, fonts, paragraphs
+
+- the ~link commands~
+
+To indicate links to other articles

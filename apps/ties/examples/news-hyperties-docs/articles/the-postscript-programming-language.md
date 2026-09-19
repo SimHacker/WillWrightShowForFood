@@ -6,18 +6,18 @@ definition: PostScript, the extension language in NeWS, is a high level device i
 source: doc/demos/postscript.st0
 ---
 
-→ PostScript is a page description language. .nl
+→ PostScript is a page description language.
 
-→ A "de facto" industry standard. (For what that's worth.) .nl
+→ A "de facto" industry standard. (For what that's worth.)
 
-→ A flexable, high level programming language. .nl
+→ A flexable, high level programming language.
 
-→ An interactive, interpretive environment. .nl
+→ An interactive, interpretive environment.
 
-→ A high level, device independent imaging model. .nl
+→ A high level, device independent imaging model.
 
-→ It feels like a cross between Lisp and Forth. .nl
+→ It feels like a cross between Lisp and Forth.
 
-→ It's weird, but it's fun and powerful. .nl
+→ It's weird, but it's fun and powerful.
 
-→ PostScript is a trademark of Adobe Systems Incorporated. .nl
+→ PostScript is a trademark of Adobe Systems Incorporated.

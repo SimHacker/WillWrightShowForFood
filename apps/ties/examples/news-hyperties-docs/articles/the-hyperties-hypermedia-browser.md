@@ -12,14 +12,14 @@ NeWS HyperTIES is a hypermedia browser for the NeWS window system, under develop
 
 Here are some links to interesting parts of the database to browse.
 
-→ ~The Space Telescope in Orbit~ .nl
+→ ~The Space Telescope in Orbit~
 
-→ ~Miscellaneous~ .nl
+→ ~Miscellaneous~
 
-→ ~PopupTarget~ .nl
+→ ~PopupTarget~
 
-→ ~Scroll~ .nl
+→ ~Scroll~
 
-→ ~Founders~ .nl
+→ ~Founders~
 
-→ ~AnimatedTarget~ .nl
+→ ~AnimatedTarget~

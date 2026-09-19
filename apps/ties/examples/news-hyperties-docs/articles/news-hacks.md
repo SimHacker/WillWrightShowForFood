@@ -10,7 +10,7 @@ source: doc/demos/hacks.st0
 
 A repository of Neat Window System hacks.
 
-→ .font Times-Bold 18
+→ 
 
 Object Browser & Pseudo-Scientific Visualizer
 
@@ -21,7 +21,7 @@ to: NeWS/brsystemdict.ps
 
 Jeremy Huxtable's Object Browser, combined with Don Hopkins' Pseudo-Scientific Visualizer.
 
-→ .font Times-Bold 18
+→ 
 
 Mousee
 
@@ -32,7 +32,7 @@ to: NeWS/mousee.ps
 
 Don Hopkins' graphical mouse tracker.
 
-→ .font Times-Bold 18
+→ 
 
 KeySee
 
@@ -43,7 +43,7 @@ to: NeWS/keysee.ps
 
 Stan Switzer's graphical keyboard tracker.
 
-→ .font Times-Bold 18
+→ 
 
 Eyeballs
 
@@ -54,7 +54,7 @@ to: NeWS/eye.ps
 
 Jeremy Huxtable's "Big Brother" eyeballs.
 
-→ .font Times-Bold 18
+→ 
 
 Melt
 
@@ -65,7 +65,7 @@ to: NeWS/melt.ps
 
 Jeremy Huxtable's screen meltdown feature.
 
-→ .font Times-Bold 18
+→ 
 
 Reagan Bites
 

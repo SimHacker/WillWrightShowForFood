@@ -85,7 +85,7 @@ to: Window Management Menu
 
 ~Top and Bottom,~ ~Close Icon,~ ~Paint,~
 
-~Stretch,~ ~Move,~ ~Reshape,~ and ~Zap.~ .nl
+~Stretch,~ ~Move,~ ~Reshape,~ and ~Zap.~
 
 Font Selection Menu
 

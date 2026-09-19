@@ -22,11 +22,25 @@ The implications of the recent deal between Sun and AT&T are relevant to this de
 
 Robin Schaufler will discuss the details of the implementation of the merged server at the X conference at MIT in January.  Briefly, it will support:
 
--	Vanilla X11 clients .nl -	Vanilla NeWS clients .nl -	A single window tree accessible to both .nl -	A single event distribution mechanism accessible to both .nl -	The use of PostScript programs and operators to image onto X11 windows. .nl
+-	Vanilla X11 clients
+
+-	Vanilla NeWS clients
+
+-	A single window tree accessible to both
+
+-	A single event distribution mechanism accessible to both
+
+-	The use of PostScript programs and operators to image onto X11 windows.
 
 The C source code will include:
 
--	X11 protocol interpreter .nl -	PostScript language interpreter,  with NeWS extensions .nl -	Window tree and event management core shared by both .nl -	A complete implementation of the high-performance imaging library that supports them both,  for memory framebuffers.  (This is an improved version of the imaging library that currently supports the NeWS product) .nl
+-	X11 protocol interpreter
+
+-	PostScript language interpreter,  with NeWS extensions
+
+-	Window tree and event management core shared by both
+
+-	A complete implementation of the high-performance imaging library that supports them both,  for memory framebuffers.  (This is an improved version of the imaging library that currently supports the NeWS product)
 
 The intention behind this arrangement is to ensure that those who need the PostScript language imaging model will have it available. There will be no reason not to support this capability for those who are Unix licensees,  since they will be getting it, already integrated with X11,  as part of their Unix source distribution.  Almost all significant companies in the computer industry are Unix licensees.
 

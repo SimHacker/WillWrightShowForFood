@@ -7,7 +7,7 @@ definition: A utility program of the compiler which creates the master-index and
 source: doc/makeindex.st0
 ---
 
-Syntax: .spaces 5  make-index <directory> [ other directories]
+Syntax: make-index <directory> [ other directories]
 
 make-index scans the directories given as arguments (and, recursively, their subdirectories) for storyboards and associated files.  It uses the ~standard 3 letter extensions~ of those files to perform its search with the UNIX find command.
 

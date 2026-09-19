@@ -6,7 +6,7 @@ source: doc/doc-overview.st0
 
 This documention describes the ~current version~ of Hyperties on the SUN.
 
-It describe the functionalities, the ~data structure~ , the ~markup language~.
+It describe the functionalities, the ~data structure~, the ~markup language~.
 
 It also covers the ~organization of the software~.
 

@@ -8,12 +8,12 @@ source: doc/demos/talkoutline.st0
 
 The outline of a talk about building user interfaces in NeWS.
 
-→ ~The NeWS Interactive Programming Environment~ .nl
+→ ~The NeWS Interactive Programming Environment~
 
-→ ~The HyperTIES hypermedia browser~ .nl
+→ ~The HyperTIES hypermedia browser~
 
-→ ~The UniPress Emacs Text Editor~ .nl
+→ ~The UniPress Emacs Text Editor~
 
-→ ~Pie Menu Demonstration~ .nl
+→ ~Pie Menu Demonstration~
 
-→ ~NeWS Hacks~ .nl
+→ ~NeWS Hacks~

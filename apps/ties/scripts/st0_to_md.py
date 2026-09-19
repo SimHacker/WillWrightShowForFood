@@ -45,6 +45,11 @@ FIELDS = {"title", "definition", "synonyms", "contents", "controls"}
 # Directives that end a paragraph. Everything else formatting-only is dropped.
 BREAKS = {"lines", "nl", "para", "page", "sp"}
 
+# Directives safe to re-read when they turn up in the middle of a prose line: layout, line
+# breaks, links and quoting. Deliberately excludes the structural ones (.picture, .target,
+# .contents), because re-entering those from inside a sentence would restructure an article
+# rather than format it. Populated after ARITY and CONSUMES_REST are defined.
+
 # How much of its line each directive eats, read off its definition in fmt.f. A storyboard
 # is a FORTH token stream, not one directive per line, and the index articles live in the
 # difference: every entry is `.~ Some Title~ .nl`, three tokens on one line.
@@ -66,6 +71,8 @@ ARITY = {
     "font": 2, "button-font": 2, "def-tab": 2, "rect": 2,
 }
 CONSUMES_REST = {"line", "left", "center"}  # .left is an alias of .line in fmt.f
+
+INLINE_OK = BREAKS | set(ARITY) | CONSUMES_REST | {"~", "quote", "quote-line"}
 
 # A remainder is re-read as a directive only with no space after the dot. This is what
 # keeps `.~ (fig. 6)~.  Each of the following organizations` intact: that second dot ends
@@ -136,6 +143,58 @@ def drop_tokens(arg, n):
     return arg
 
 
+# A directive sitting inside a prose line, which is how most of them appear: a storyboard
+# is a token stream, so `This lives in the directory "ties". .nl` is prose then layout.
+#
+# The dot MUST follow whitespace or start the line. Without that, `(e.g. ~button~)` parses
+# as a `.g` directive, and since `g` has no known arity the rest of the sentence would be
+# eaten as its arguments -- silently, which is the worst way to lose an archive.
+INLINE_DIRECTIVE = re.compile(r"(?:^|(?<=\s))\.(~|[A-Za-z][\w-]*)")
+
+
+def inline_directive(raw):
+    """The offset of the first RECOGNISED directive inside a prose line, or None.
+
+    Only known directives are re-read. An unknown one stays as visible text, because
+    dispatching it would fall through to the loop's drop-the-rest-of-the-line default and
+    take real prose with it. A stray `.foo` on screen is a bug someone reports; a vanished
+    paragraph is a bug nobody can see.
+    """
+    for m in INLINE_DIRECTIVE.finditer(raw):
+        word = m.group(1)
+        canon = word if word == "~" else FIELD_ALIASES.get(word.lower(), word.lower())
+        if canon in INLINE_OK:
+            return m.start()
+    return None
+
+
+def strip_layout(text):
+    """Remove layout directives from a line that is kept as prose, arguments and all.
+
+    An arrow line is `=> .~ The PostScript Programming Language~ .nl`, and it is read as
+    prose rather than dispatched, so its directives arrive here as text. `.nl` is layout: a
+    link block is already a line of its own, and the whole archive's 57 arrow lines carry
+    nothing but `.nl` (49 of them) and `.font` (6), both formatting.
+
+    An unrecognised directive is LEFT ALONE rather than consumed, because its arity is
+    unknown and eating the wrong number of tokens would silently delete prose. Showing a
+    stray `.foo` is a visible bug; swallowing the sentence after it is not.
+    """
+    out = text
+    while True:
+        m = re.search(r"\s*\.([A-Za-z][\w-]*)", out)
+        if not m:
+            return out.strip()
+        canon = FIELD_ALIASES.get(m.group(1).lower(), m.group(1).lower())
+        if canon not in BREAKS and canon not in ARITY and canon not in CONSUMES_REST:
+            return out.strip()
+        if canon in CONSUMES_REST:
+            return out[: m.start()].strip()
+        head = out[: m.start()]
+        tail = drop_tokens(out[m.end() :].lstrip(), ARITY.get(canon, 0))
+        out = f"{head} {tail}" if tail else head
+
+
 def handle_rest(rest, para):
     """Route the unread tail of a line: another directive, or prose.
 
@@ -146,13 +205,34 @@ def handle_rest(rest, para):
     """
     if DIRECTIVE.match(rest):
         return rest
-    tail = rest.strip()
-    if tail:
-        if tail[0] in ".,;:!?)" and para:
-            para[-1] += tail
-        else:
-            para.append(tail)
+
+    # The tail can open with prose and continue with directives: `.quote .font` eats one
+    # token, leaving `Helvetica-Bold 24 .nl Tree ...`, where the `.nl` is a real break in an
+    # example the article is teaching. Split at the first recognised one rather than dumping
+    # the whole remainder as text.
+    cut = inline_directive(rest)
+    if cut is not None:
+        lead = rest[:cut]
+        emit_prose(lead, para)
+        return rest[cut:]
+
+    emit_prose(rest, para)
     return None
+
+
+def emit_prose(text, para):
+    """Append prose, closing up to the preceding run when it opens with punctuation.
+
+    `.~ (fig. 6)~.  Each of the following` must come out as "(fig. 6).  Each of the
+    following" rather than drifting into "(fig. 6) . Each of the following".
+    """
+    tail = text.strip()
+    if not tail:
+        return
+    if tail[0] in ".,;:!?)" and para:
+        para[-1] += tail
+    else:
+        para.append(tail)
 
 
 def parse_st0(path, has_geometry=frozenset()):
@@ -361,10 +441,24 @@ def parse_st0(path, has_geometry=frozenset()):
             if ARROWS.match(raw):
                 flush()
                 art["blocks"].append(
-                    {"kind": "link", "text": normalize_links(ARROWS.sub("", stripped))}
+                    {
+                        "kind": "link",
+                        "text": normalize_links(strip_layout(ARROWS.sub("", stripped))),
+                    }
                 )
             elif stripped:
-                para.append(raw)
+                # A prose line can carry directives past its first word, because the
+                # storyboard is a token stream rather than one directive per line. Hand the
+                # tail back to the dispatcher so `.nl` becomes a break and `.quote` becomes
+                # a code span, instead of both printing as literal text.
+                cut = inline_directive(raw)
+                if cut is None:
+                    para.append(raw)
+                else:
+                    lead = raw[:cut].strip()
+                    if lead:
+                        para.append(lead)
+                    pending = raw[cut:]
             else:
                 flush()
 
