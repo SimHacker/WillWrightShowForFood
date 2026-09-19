@@ -340,6 +340,27 @@ capture** — worth watching, since "subjective unity versus mereological assemb
 available challenge to the Society of Mind position and he has answered softer ones in the same
 thread.
 
+**The distinction his own parenthesis reaches for, and that the comment then does without.** He
+writes "teleology (or teleonomy, if Dennett helps it go down)" as if the two were the same word in
+different clothes. They are not, and the difference is the instrument that separates the sharp half
+of his objection from the mystical half.
+
+| | Means | Status |
+|---|---|---|
+| **Teleology** | real final causes; a future state pulling the present | not available in science since the Enlightenment, which is the reduction he is complaining about |
+| **Teleonomy** | goal-directedness produced by history, no forward causation — Pittendrigh coined it in 1958, and Mayr carried it | fully domesticated, and *already granted* |
+
+Pittendrigh invented the word precisely to keep the useful part and throw the metaphysics away. So
+the test is cheap: **if you can say what the setpoint is and what history installed it, you are
+doing teleonomy and nobody is going to argue with you.** Cybernetics' 1943 move — Rosenblueth,
+Wiener and Bigelow, purpose as a reference signal plus feedback plus error reduction — did not
+preserve purpose as a mystery. It made purpose *cheap*.
+
+Which splits the comment cleanly. "Nothing in a trained model maintains itself, so nothing in there
+owns its own setpoint" is a teleonomic claim, mechanistic and checkable. "There must be a conscious
+integration before thinking can occur" is a demand for interiority, and it is doing different work.
+The first half is the one with teeth, and it survives without the second.
+
 Worked through at length in
 [moollm designs/TELEOLOGY.md](https://github.com/SimHacker/moollm/blob/main/designs/TELEOLOGY.md):
 which half of this objection is mechanistic and which half is a demand for interiority,
