@@ -5,7 +5,10 @@
 **Source:** Alan Kay's public **Quora** answer to *"Is AGI a matter of new paradigm shifts in
 software[s] or is current hardware fundamentally incapable to generate intelligence?"*
 Posted **Wed 16 Sep 2026**; answer requested by Enzo Yuzuki; 4.1K views, 90 upvotes at capture.
-One of six answers to the question. Captured by Don from his Quora feed, **17–19 Sep 2026**.
+One of six answers to the question; **the other five are not captured here.** Captured by Don from
+his Quora feed, **17–19 Sep 2026**, with every comment and nested reply manually expanded — see
+[view-state-is-the-users](https://github.com/SimHacker/moollm/blob/main/skills/design-sense/lenses/view-state-is-the-users.md)
+for why that hike is the reason this shelf exists.
 Profile: <https://www.quora.com/profile/Alan-Kay-11> — **direct answer URL not yet resolved**
 (this answer post-dates the archived 2023 corpus; fill in from the browser).
 
@@ -155,40 +158,184 @@ Then the warning:
 
 ## The comment thread
 
-**Ken Kahn** — Society of Mind fan; says molecular or neuron-level simulation should produce AI but
-that both are like "building AI by focusing on circuits or machine code," so better research
-happens higher up. Kay's reply:
+*All comments expanded from Quora's three separate folds — feed truncation, comment collapse,
+nested-reply collapse — and flattened here so the exchange reads end to end.*
 
+### Ken Kahn — grow the society, don't hand-build it
+
+Kahn grants the premise and then splits from Kay on method. Yes, a molecular simulation of a brain
+should produce AI, and so should a good simulation of neurons and their interactions — but as a
+Society of Mind fan, both look like "building AI by focusing on circuits or machine code," so the
+productive level is "the high abstract level of interacting processes/agents."
+
+Then the divergence, stated plainly:
+
+> But where my thinking has diverged from Alan's in the last decade is that **growing** that
+> architecture of societies of interacting elements is more promising than building it "by hand".
+
+His evidence is **mechanistic interpretability** — the attempt to see the architectures that emerge
+when today's LLMs are trained. He says the rich ways different parts of a network become specialists
+that interact with other specialists has become apparent, some of it from the transformer itself
+(attention heads, layers, residual streams), some from training models to produce trains of thought
+before responding, some possibly from mixture-of-experts. The punchline is aimed directly at the
+answer's framing:
+
+> Thinking about these systems as correlators and curve fitters isn't the most productive level to
+> understand what they are doing.
+
+Two papers offered:
+
+- **"Reasoning Models Generate Societies of Thought"** — University of Chicago, Santa Fe Institute,
+  Google Research
+- **"Verbalizable Representations Form a Global Workspace in Language Models"** — Anthropic
+
+### Kay's two replies to Kahn
+
+First, the concession:
+
+> Hi Ken
+>
 > I actually like (and prefer) the general notion of "growing the architecture of societies of
 > interacting elements". I just haven't been bowled over by what I've seen so far.
+>
+> However, I haven't read either of the papers you suggest, and will definitely get back to you
+> after I have.
 
-He agrees to read the two papers Ken suggested. Follow-up, in full Raymond Chandler:
+He does read them. The second reply opens in full Raymond Chandler — *The Big Sleep*:
 
-> Philip Marlowe: Hmmmmmmmm / General Sternwood: What does that mean? / Philip Marlowe: It means:
-> Hmmmmmmmm
+> Philip Marlowe: Hmmmmmmmm
+>
+> General Sternwood: What does that mean?
+>
+> Philip Marlowe: It means: Hmmmmmmmm
 
-— prejudiced in favor of the first paper until he read it, same state about the second, and
-**"dismayed that it didn't mention 'Society of Mind' at all."**
+Prejudiced in favor of the first paper until he read it; the same state about the second, and
+**"dismayed that it didn't mention 'Society of Mind' at all."** Then the substance, which is the
+part worth having:
 
-**Kaveh Shahbazian** — proposes the **Thousand Brains Theory** (<https://thousandbrains.org/about/>)
-as a candidate higher-level building block. Kay points at a parallel: the **cerebellum** and how it
-handles muscular learning and routinization, calls these good starting points, and says one of
-Kaveh's own points deserves to be front and centre — **the essentially conservative nature of
-evolution**.
+> Basically, I don't know enough at present to have a real opinion about the claimed results. I liked
+> the idea in the second paper that the n-dimensional entities could serve as intermediaries for some
+> intercommunication between very different agencies.
+>
+> It is a bit disturbing that there seems to be much more concern about "reasoning" as opposed to
+> "science" — that's a real danger with humans as well, and it is not a pleasant thought that this
+> glitch seems to be an inherent part of today's models.
 
-**Michael McCaslin** — "a little scary just how much of what people do can be captured and emulated
-by correlators," while being frustrated by capabilities ascribed to LLMs that aren't there.
-**Mark Miller** agrees, most frustrated when technologists do it.
+That last paragraph is the answer's thesis turned on the models: science had to be *invented* as a
+heuristic prosthetic for poor commonsense reasoning, so a field optimizing "reasoning" while
+skipping "science" is reproducing the human failure mode it was supposed to correct — and now
+baking it in.
 
-**Moderation, in public:** Shyam M. Ramadoss posted a long answer-shaped comment; Kay asked him to
-move it to an answer and gave two days' notice before removing it; Aurélien C. asked him to keep it;
-Kay: *"Let's go by your feelings and those of Aurelien C, and keep it here. The best would be for
-you to also make it a separate answer — this way all purposes will be served!"* To a one-word
-comment ("Fuck") he replied: *"A comment can add, illuminate, or criticise, etc., an answer. Could
-you make yours more clear for readers please?"*
+### Michael McCaslin — correlators can't hypothesize
 
-**Haig Shahinian** — opens by wishing Kay good health, recalls wanting to work at VPRI in the late
-2000s.
+> It's a little scary just how much of what people do can be captured and emulated by correlators,
+> or perhaps competing/complementary layers of correlators. On the one hand I get frustrated when
+> people ascribe capabilities to LLMs that not only aren't there but likely never will be. On the
+> other, I look at some of the output and I can understand why we are fooled.
+>
+> But correlators can't hypothesize and test in order to build completely new correlations. It seems
+> we will need something altogether different for that. But where would you start, if you had the
+> time and interest to explore this? A "hypothesizer" managing a swarm of correlators could map a lot
+> of territory assuming we had some way to evaluate the quality of the results.
+
+"A hypothesizer managing a swarm of correlators" is a concrete architecture proposal at exactly the
+level Kay's answer asks for, and the caveat at the end is the whole problem: it needs an evaluator.
+
+### Mark Miller — the intelligence is in the corpus
+
+Agrees, and is most frustrated by technologists doing it, "because I feel like they should know
+better." His diagnosis: people miss that LLMs are being used as much more granular search engines
+over content, with natural language processing on the prompt. New content gets generated, but from
+human content and human patterns —
+
+> The "miss" is they think the "intelligence" displayed in the result, as ("That's just what I was
+> looking for," or, "It does just what I asked for/need.") is coming from the "I" in "AI," when in
+> fact that "intelligence" is actually coming mostly from the content it's analyzed (generated by us
+> humans), with perhaps some transformation logic mediating the translation from the original content
+> into the form the interrogator asked for.
+
+Ends with the practical rule: always check the result against something original.
+
+### Kaveh Shahbazian — Thousand Brains as the building block, and Kay on the cerebellum
+
+Proposes the **Thousand Brains Theory** (<https://thousandbrains.org/about/>) as a candidate for the
+"higher level building block" the answer asks for: roughly 150,000 identical **cortical columns**,
+each about the size of a grain of rice, all necessarily running the same basic algorithm — the
+neocortex looks uniform under a microscope, visual cortex indistinguishable from auditory or motor.
+It expanded so fast in evolutionary terms that there was no time to design custom structures per
+skill, so the theory has it **borrowing its fundamental trick from older parts of the brain used for
+physical navigation**.
+
+Kay's reply:
+
+> Another similar (parallel?) notion has been to examine the cerebellum and how it deals with
+> muscular learning and routinization. I think these are all good starting points for thinking about
+> this.
+>
+> One point you make should be more front and centre, which is the essential conservative nature of
+> evolution (and for good reasons given the blindness of the process and the difficulties of
+> morphogenesis in general).
+
+### Shyam M. Ramadoss — and Kay moderating his own thread in public
+
+Ramadoss posted an answer-length comment: the brain as a hardware powerhouse continually evolving a
+malleable software architecture from time-delimited sensory cues, and a card-deck analogy for the
+core difference — humans get **fragmented pieces of each card per day**, remodeling circuits as they
+go, while models get **the complete labelled dataset at once** and remodel over epochs. Biological
+forgetting is selective (older or unused learnings wiped or replaced by richer interactions);
+hemispheric segregation with distributed memory versus specialized segments behind an orchestrator;
+and a guess that the binary-state limit is what quantum or reliable analog computing might relieve.
+
+Kay's moderation, conducted entirely in the open:
+
+> With all due respect, this seems to be an answer to the question rather than a comment on my
+> answer. I suggest that you move it to be an answer. In any case, I will plan to remove this two
+> days from now (to give you time).
+
+Ramadoss replies graciously; **Aurélien C.** asks "Please keep it there." Kay reverses himself on the
+strength of two readers:
+
+> Let's go by your feelings and those of Aurelien C, and keep it here. The best would be for you to
+> also make it a separate answer — this way all purposes will be served!
+
+To a one-word comment ("Fuck") from Nicky Hislop:
+
+> A comment can add, illuminate, or criticise, etc., an answer. Could you make yours more clear for
+> readers please?
+
+### Haig Shahinian — the teleology objection (no reply from Kay at capture)
+
+The longest comment, and the only one that attacks Kay's own framing rather than the field's. Opens
+by wishing him good health, recalls wanting to work at **VPRI** in the late 2000s after USC — "I
+thought you and your team really were going 'back to the future' and would revolutionize (again)
+computing" — and says the industry instead "doubled down on the rube goldberg-esque pop culture that
+is modern computing," which he blames on economics rather than technique.
+
+His position: **cybernetics kept teleology** (or teleonomy, if Dennett helps it go down), and modern
+complexity and AI thinking dropped it. Since the Enlightenment, science has reduced Aristotelian
+causality to material and efficient causes — enormously fruitful for "dead matter, crude energy, and
+blunt forces," and, he argues, a wall now that the subject is life and mind.
+
+Then the objection to Kay directly:
+
+> With all due respect, while your appeal to complex systems thinking and Minsky's society of minds
+> is respectable, it is still locked in the old (and still current) computational paradigm of minds
+> and biology. Living and thinking entities are subjective unities, not just objective systems; the
+> "whole" is not just outside, but inside, and there needs to be a conscious integration and not just
+> a mereological assemblage before living and thinking can occur.
+
+And the conclusion, with the economics folded back in:
+
+> AGI is the attempt to build a Frankenstein monster out of dead computational parts, which may get
+> us to high-performing zombies, capitalism's wet dream and its true ambition for the ultimate answer
+> to labor, but those zombies will still always have jagged intelligence because they will be stuck
+> in the flatland (and flat-time) of dead matter/computation. Instead of AGI, we need AUM, authentic
+> unified mind
+
+Signs off: "I love you Alan, you are one of my heros." **No reply from Kay to this one as of
+capture** — worth watching, since "subjective unity versus mereological assemblage" is the sharpest
+available challenge to the Society of Mind position and he has answered softer ones in the same
+thread.
 
 ---
 
@@ -226,3 +373,11 @@ been bowled over by yet.
   does that say about building the prosthetic **out of** a language model?
 - No Moore's Law for software — was the compounding ever going to come from tools, or only from
   artifacts the next person can read and copy?
+- **"More concern about 'reasoning' as opposed to 'science'"** — is that fixable from inside a model,
+  or does the science have to live *outside* it, in inspectable artifacts and experiments the model
+  merely operates? (Don's bet is outside, which is why MOOLLM keeps the state on disk in git.)
+- Ken Kahn's **grow it, don't hand-build it** — what would bowl you over? Name the demonstration.
+- **Haig Shahinian's objection**, unanswered at capture: subjective unity versus mereological
+  assemblage. Does Society of Mind claim the inside, or concede it?
+- Michael McCaslin's **hypothesizer managing a swarm of correlators** — plausible shape, but what
+  evaluates the results? Is that the same hole as the automatic inverter from the 2011 MVC email?
