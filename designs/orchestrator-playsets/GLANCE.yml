@@ -40,11 +40,35 @@ designs_here:
     portals-and-modules.md) whose credited ancestor is Steve Alvey's one-armed-bandit
     TMog, so the grift stand is a reskinned slot machine by inheritance.
     MULTIPLE STANDS ARE THE ESSENTIAL GAMEPLAY — one stand is one cult, each with its own
-    parameters. There is ONE HAT SLOT, so hostility is inversely proportional to doctrinal
+    parameters. A SLOT HOLDS ONE THING, so hostility is inversely proportional to doctrinal
     difference: identical cults need the same slot. Competitive exclusion + Freud's
     narcissism of minor differences, as a slider the player discovers by experiment.
     Precedents: Seuss's Star-On/Star-Off Machine (the spec, 1961), Swift's Big-Endians,
-    Life of Brian. Genuinely new: contagion (`spreads:`), membership as a group host, and
+    Life of Brian.
+    AFFINITY IS TO THE STAND, NOT THE HAT — the object has a current stock, so the doctrine
+    is whatever it sells today and whoever configures it can change it. Reconfiguring fires
+    a MASS RE-DRESS: members drop everything, run over, queue, switch. That is a LOYALTY
+    ASSAY — change red to green, whoever follows was loyal to the stand, whoever balks was
+    loyal to the colour, count the dropouts. Conviction and obedience are identical until
+    the doctrine changes. Orwell's Eurasia/Eastasia switch is the same beat.
+    The QUEUE UTILITY ALREADY EXISTS and Don found it in the wild: the Slap Conga
+    (Cupid + Buddha + Crowd Sitter, "lovers lined up and slapped him in sequence"), scored
+    on queue length. Same machine, verb changed; queue length becomes congregation size.
+    Choreography from Faceball's formation swoop. THE COMEDY IS IN THE UNIFORMITY.
+    MANY SLOTS, MANY CULTS AT ONCE — membership is a set, not a flag, and the FEUD GRAPH IS
+    COMPUTED FROM ANATOMY: same slot = necessarily rivals, different slots = compatible.
+    Belief is not the mechanism; the real estate is. A costume is a readable affiliation
+    display. Faceball is the parts supplier (Balls For Hands club), so regalia is
+    user-generated.
+    PIXELATION CLUBS (head / left hand / right hand) — regalia made of ABSENCE. The mosaic
+    is already an attach-to-any-part bounding box in Faceball, so the censorship argument
+    pays off as a membership mechanic: the occluder is evidence, so hiding makes you the
+    most conspicuous thing in the room; closure means the uniform differs for every observer
+    while being identical in the save; Pixelated Head members are mutually
+    indistinguishable. Left vs Right Hand IS Swift's egg — and by the slot rule they are not
+    even rivals, which is the joke Swift was making. Contact transmission comes free: the
+    spec already has "pass a pixelated joint → it pixelates your HEAD", giving the playset
+    a zombie-bite vector alongside the purchase vector. Genuinely new: contagion (`spreads:`), membership as a group host, and
     advertisement modification (an object re-weighting ANOTHER object's ad score).
 
 playsets:

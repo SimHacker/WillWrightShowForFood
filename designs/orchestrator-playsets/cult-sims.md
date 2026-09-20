@@ -183,11 +183,17 @@ Don's escalation is that **multiple competing stands are the essential gameplay*
 robustness afterthought — ideologically identical cults distinguished only by cap color,
 with the smallest differences driving the biggest feuds.
 
-The engine already supplies the reason, and it is anatomical: **there is one hat slot.**
-One head, one accessory slot, N stands competing for it. Which means:
+The engine supplies the reason, and it is anatomical: **a slot holds one thing.** Two
+stands stocking the head are competing for the same square inch, and the rule that falls
+out is the one worth building the playset around:
 
 > **Hostility is inversely proportional to doctrinal difference, because the more alike
 > two cults are, the more exactly they need the same slot.**
+
+Rivalry is therefore [decided by slot collision rather than by
+belief](#many-slots-many-cults-at-once), which is a sharper claim than the doctrinal one:
+two cults can disagree about everything and coexist happily on different body parts, while
+two that agree about everything and both want the head cannot share a member at all.
 
 That is not a joke bolted onto the simulation; it is competitive exclusion, the ecological
 rule that two species occupying an identical niche cannot coexist. Freud named the human
@@ -206,13 +212,148 @@ remember who was which. That is the SwagOMatic, including the defection hatch, i
 the revenue model, including the ending. It is sixty-five years old and it is a better spec
 than most design documents.
 
+### Affinity is to the stand, not to the hat
+
+*Don, 20 Sep 2026: what if affinity was to the stand, and the stand can be configured to
+sell any of a number of hats (or wigs even)? When you changed hat colours or wigs, everyone
+in the "cult" of that particular object will be compelled to run over and switch.*
+
+**This is the correction that makes the whole thing work.** Membership points at the
+*object*, and the object has a current stock. The marker is not what you believe in — it is
+whatever the stand is selling today. Which means the doctrine can be changed by whoever
+configures the stand, and the members change with it, because their loyalty was never
+attached to the colour.
+
+That is how it actually works, and it is why the Sneetches ending lands: nobody in that
+story was ever loyal to stars, they were loyal to whatever McBean was operating. Orwell
+built the same beat into *1984* — Oceania switches from war with Eurasia to war with
+Eastasia overnight, and the crowd absorbs the reversal without breaking stride, because
+**allegiance was to the switching authority all along.**
+
+### The switch is a loyalty assay, and the comedy is in the uniformity
+
+Reconfiguring a stand fires a **mass re-dress**: every member is compelled to drop what
+they are doing, run over, and change. Don wants them to line up, and that turns the gag
+into an instrument, because the switch measures something no other mechanic in this
+document can:
+
+> **Change red to green. Whoever follows was loyal to the stand. Whoever balks was loyal
+> to the colour. Turn the knob, count the dropouts.**
+
+Conviction and obedience look identical right up until the doctrine changes, and then they
+separate cleanly. The player runs that experiment themselves and gets a number, which is
+the same standard as the [doctrine-distance slider](#the-knob-that-carries-the-argument) —
+discovered by experiment, no editorial.
+
+**The queue utility exists, and Don found it in the wild.** The
+[Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) is built from
+exactly three objects — **Cupid, Buddha, Crowd Sitter** — and its origin note is that "Don
+hit this loop once in the wild — lovers lined up and slapped him in sequence." Sims queue
+to perform a social interaction on a target, one at a time, as emergent behaviour nobody
+had to implement. Its score is `consecutive_slaps_in_one_queue`, so **queue length is
+already the metric**.
+
+The mass re-dress is that machine with the verb changed. Same crowd trap, same
+[Crowd Sitter](../../catalogs/simprov/README.md) seating, same Buddha keeping motives alive
+so the line does not collapse into hunger halfway through — which is the sentence this
+document already flagged as needing no editorial, now doing structural work. Queue length
+stops being a slap counter and becomes **a visible congregation size**: the rally is the
+line at the merch stand.
+
+For the choreography, Faceball already has the vocabulary — **formation swoop**, listed as
+"figure-eight, conga, diamond, pinball ballet," alongside synchronised-swimmer spin modes
+([`physics-and-gags.md`](../faceball-construction-set/physics-and-gags.md)). The uniformity
+*is* the joke, and it reads better as a drill team than as a stampede.
+
+### Many slots, many cults at once
+
+*Don: different cults can mount accessories on different body parts, so characters can be
+in several cults at once with overlapping and non-overlapping permutations. The Balls For
+Hands club.*
+
+One slot per cult, many slots per body, so **membership is a set rather than a flag**.
+Rivalry falls out of geometry:
+
+| | Same slot | Different slots |
+|---|---|---|
+| Can one Sim join both? | **no** — the slot holds one thing | yes |
+| Relationship | rivals, necessarily | compatible, possibly allied |
+| Example | Balls For Hands vs. Pixelated Left Hand — both want the hand | Pixelated Head + Balls For Hands — no conflict at all |
+
+**So the feud graph is computed from anatomy, and belief has nothing to do with it.** Two
+cults are enemies exactly to the degree their regalia collide, which is a harder and funnier
+claim than "small differences cause big feuds" — it says the differences are not even the
+mechanism, the *real estate* is.
+
+And a Sim's costume becomes a **readable affiliation display**: cap, plus balls for hands,
+plus one pixelated ear, is three memberships legible at a glance. The god-view asymmetry
+this document keeps returning to gets rendered on the character instead of on the floor.
+Walk through a crowd and read everyone's commitments off their bodies.
+
+**Faceball is the parts supplier.** "Balls For Hands club" is a joke that happens to name a
+real integration: [Faceball](../faceball-construction-set/README.md) already builds
+attachable parts with per-feature slots and pairing
+(`mouth_hole`, `googly_eyes` with `paste_on` and `pair`), so the SwagOMatic stocks Faceball
+output and players author their own regalia. That is Faceball's "seeds, not showpieces"
+philosophy arriving in Cult Sims, and it makes the swag line **user-generated** — the
+funniest possible cult uniform is the one a player made. Wigs come for free, since the
+appliance is a reskinned WigOMatic and hair colour is the most arbitrary difference
+available.
+
+### The pixelation clubs, or: regalia made of absence
+
+*Don: also censorship hijinks like the "pixelated head club" and "pixelated left hand" club
+and "pixelated right hand club". I think that's possible.*
+
+It is possible, and it is already specced. Faceball's `sims1_pixelization` modifier attaches
+**a bounding box to any part** — "boobs, dongs, a joint, a whole head" — and drives a
+pixelation of the screen layer underneath it. A mosaic is therefore already a slot-mounted
+accessory, which is exactly the shape a cult marker needs.
+
+**These are the best clubs in the set, because the uniform is a redaction.** Every argument
+in [the censorship section](../faceball-construction-set/adult-section.md#what-censorship-actually-does)
+now pays off as a membership mechanic:
+
+- **The occluder is evidence.** A mosaic signals *something forbidden is here*, so wearing
+  one voluntarily is claiming forbidden-ness as status. The uniform that hides you makes
+  you the most conspicuous thing in the room, which is the
+  [Streisand argument](../faceball-construction-set/adult-section.md#why-any-of-this-is-in-a-construction-set-the-streisand-argument)
+  worn as a hat.
+- **Closure does the rest.** Members are marked by what cannot be seen, and every observer
+  fills the gap themselves — so the cult's regalia is different for everyone who looks at
+  it while being identical in the save file.
+- **Pixelated Head Club members are indistinguishable from each other.** The uniformity
+  comedy hits its ceiling: a congregation whose faces are all mosaic, lined up at a stand,
+  individually unidentifiable even to the player.
+
+And **Left Hand against Right Hand is Swift's egg**, arriving on its own without being
+reached for. Two clubs, identical doctrine, identical marker, differing only in which hand
+— and by the slot rule they are not even rivals, because they occupy different slots, so
+they can coexist while loathing each other. Big-Endians and Little-Endians could always
+have shared a table. That is the joke Swift was making.
+
+**Transmission comes free, and it is already written.** The mosaic spec's
+`moments_of_unnecessary_censorship` includes "pass a **pixelated joint** → it pixelates your
+HEAD (the mosaic follows the contraband)." That is a contact-transmission contagion, already
+designed, which gives the pixelation clubs the **zombie-bite model** — involuntary, by
+contact — running alongside the stand's **purchase model** in the same playset. Two
+transmission modes, neither invented here, and the contrast between them is the
+[argument this document opened with](#the-hat-is-a-better-mechanic-than-persuasion).
+
+`needs-check: trivial in Faceball, which renders in real time, but sims1 sprites are`
+`pre-rendered per rotation and zoom — so a per-slot mosaic has to be baked into the skin`
+`variant through the Stat-U-Matic sprite pipeline rather than applied live. Possible in`
+`both, by different means; confirm the bake cost before promising the left/right split.`
+
 ### The knob that carries the argument
 
 Each stand gets its own parameters, which is what makes this a toy rather than a lesson:
 
 | Parameter | What it does | Why it is the interesting one |
 |---|---|---|
-| **swag line + color** | the visible marker | the only real difference between rival cults |
+| **current stock** | which hat, wig, or part is issued *right now* | changing it fires the [mass re-dress](#the-switch-is-a-loyalty-assay-and-the-comedy-is-in-the-uniformity), which is the loyalty assay |
+| **slot** | which body part this cult claims | decides who its rivals are, before doctrine is considered |
+| **swag line + color** | the catalogue it can issue from | the only real difference between rival cults |
 | **doctrine distance** | how far this cult's stated beliefs sit from its rivals' | **turn it toward zero and watch hostility rise** |
 | **price ladder** | cap → flag → vest → commemorative tier | each rung costs more and marks more commitment |
 | **proselytizing radius** | how far the stand advertises | overlapping radii are the contested ground |
@@ -239,12 +380,18 @@ the failure modes are worth naming before the first one is built:
 
 - **No singleton state.** Nothing may refer to "the cult." Every membership fact is owned
   by a stand, so two stands on a lot is the normal case and one stand is the special case.
-- **Joining is leaving.** The hat slot is single-valued, so enrolling at stand B silently
-  unhats stand A's member. B's join and A's defection are *the same event*, and A's roster
-  must hear about it rather than keeping a ghost.
-- **Deleting a stand must release its members.** Bulldozing the hub cannot leave Sims
-  wearing a cap that belongs to a group host that no longer exists. Degrade to unhatted,
-  do not orphan.
+- **Joining is leaving, but only within a slot.** Enrolling at stand B evicts stand A only
+  if both claim the same body part; B's join and A's defection are then *the same event*,
+  and A's roster must hear about it rather than keeping a ghost. Memberships in other slots
+  must survive untouched, which is the bug waiting to happen — a Sim joining a hand cult
+  should not quietly lose their hat.
+- **Deleting a stand must release its members, and only its slot.** Bulldozing the hub
+  cannot leave Sims wearing regalia belonging to a group host that no longer exists.
+  Degrade to unhatted, do not orphan, and do not touch the other three cults they are in.
+- **A mass re-dress must survive interruption.** The queue is long, and Sims will be
+  pulled out of it by fire, death, hunger, or the player. Half-switched membership is the
+  normal state, not an error, so a member wearing last week's colour is *behind*, not
+  broken — and how long the stand tolerates that is a parameter rather than a crash.
 - **Two stands, same color.** Genuinely open: do they merge into one host, or is selling
   the *same* hat the most offensive possible provocation? The second reading is funnier
   and probably truer.
@@ -252,9 +399,10 @@ the failure modes are worth naming before the first one is built:
   advertisement instead of manufactured demand, which is a useful control condition for
   measuring what the television actually contributes.
 
-`needs-check: whether sims1 accessories are one exclusive slot or several stackable ones`
-`decides how much of the above survives. The hat-slot scarcity argument needs a real hat`
-`slot. Heather and Steve's call, since the skin and accessory system is theirs —`
+`needs-check: how many accessory slots sims1 really exposes, and whether they are`
+`independent. The design needs several mutually exclusive slots — one per body part —`
+`since that is what makes multiple simultaneous cults work and what decides which ones`
+`are rivals. Heather and Steve's call, since the skin and accessory system is theirs —`
 `religion_mapped_skins may already answer it.`
 
 ## The television is the demand side, and channels dispense ideology
@@ -369,7 +517,7 @@ actually reach the supply side:
 |---|---|---|
 | Scope | the room | **travels with the Sim** |
 | Lifetime | ends when they walk away | persists, and it is saved |
-| Effect | other objects' ads re-weighted | a standing **affinity** for a swag line |
+| Effect | other objects' ads re-weighted | a standing **affinity for a particular stand** |
 
 The second row is the upgrade. A room-scoped re-weight cannot convert anybody, because the
 stand is somewhere else; an affinity that travels means a Sim watches at home and then
@@ -384,11 +532,15 @@ generator whose container is "text and a soul" — **a corrupted soul stays corr
 the afterlife.** The ghost still wants the hat. Nobody has to write that joke; the save
 format commits it.
 
-The corruption is per-channel, which is what wires this into the faction machinery: Faux
-News grants red-cap affinity, a rival channel grants some other colour, and the
-`channel binding` parameter in the knob table stops being bookkeeping and becomes the
-**transmission path** — channel makes the want, the soul carries it, the stand collects.
-Three stages, three objects, all of them already designed.
+The corruption is per-channel, which wires this into the faction machinery: Faux News
+builds affinity for *a stand* rather than for a colour, so the `channel binding` parameter
+stops being bookkeeping and becomes the **transmission path** — channel makes the want, the
+soul carries it, the stand collects. Three stages, three objects, all already designed.
+
+And because [affinity points at the stand](#affinity-is-to-the-stand-not-to-the-hat), a
+channel cannot dictate what its converts end up wearing. It delivers them to an object,
+and the object decides. Watch enough television and you do not acquire a belief — you
+acquire **a stand you will obey when it changes its mind.**
 
 ### Shipping the riff without shipping the riff
 
