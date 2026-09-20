@@ -44,7 +44,7 @@ HyperCard **bubbles up** (room intercepts). Orchestrator playsets also inject **
 | **SliceCity** | Power plant | Seed spawner + modular chain | [`catalogs/simslice/ORCHESTRATOR.yml`](../../catalogs/simslice/ORCHESTRATOR.yml) |
 | **Zombie Sims** | Ham radio | Wave / faction controller | [`catalogs/zombie-sims/ORCHESTRATOR.yml`](../../catalogs/zombie-sims/ORCHESTRATOR.yml) |
 | **Rebounce** (Repo Show) | Show seed + party deck | Oral-history hub | [`repo-shows/rebounce/party-deck.yml`](../../repo-shows/rebounce/party-deck.yml) |
-| **Cult Sims** *(proposed)* | **Television** (channels dispense ideology) | Broadcast controller — re-weights other objects' ads | [`cult-sims.md`](cult-sims.md) — bridges SimProv and Zombie Sims |
+| **Cult Sims** *(proposed)* | **SwagOMatic stand** (+ TV as demand side) | **Many hubs per lot** — one stand is one cult, competing for one hat slot | [`cult-sims.md`](cult-sims.md) — bridges SimProv and Zombie Sims |
 
 ## SimProv Wedding — Hope Chest saga
 

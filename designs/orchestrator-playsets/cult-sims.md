@@ -19,9 +19,9 @@ That is why the two catalogs compose instead of colliding:
 
 | Zombie Sims has | Cult Sims needs | Same thing? |
 |---|---|---|
-| Ham radio as **wave controller** | broadcast sermons, recruitment drives — [a television](#the-hub-object-is-a-television-and-channels-dispense-ideology) | yes — one hub, two skins |
+| Ham radio as **wave controller** | broadcast sermons, recruitment drives — [a television](#the-television-is-the-demand-side-and-channels-dispense-ideology) | same role, and the cult splits it in two: the TV broadcasts, [a stand](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) enrolls |
 | infection by contact | conversion by persuasion | yes — transmission with a different guard |
-| faction configs, religion-mapped skins | denominations, sects, schisms | yes — the plumbing already mentions religion |
+| faction configs, religion-mapped skins | denominations, sects, schisms — [one stand per sect](#multiple-stands-and-why-the-smallest-difference-makes-the-worst-feud) | yes, and the skins are the *whole* difference between sects |
 | siege waves | recruitment drives, defector retrieval | yes — waves either way |
 
 Zombie Sims already carries `religion_mapped_skins` and its show hook already runs
@@ -96,12 +96,15 @@ one object, and the differences from zombie infection are all load-bearing:
 | visible after the fact | visible *because the host chose to display it* |
 | cannot be removed | **taking it off is the defection event** |
 
-**The third and fourth rows are the ones worth building.** Sims objects advertise, so
-a cap in inventory advertises *wear me* to nearby Sims and gifting one is a
-transmission event — which is exactly the `spreads:` field this document proposes, with
-a physical carrier instead of an abstract aura. And because the transmission event is a
-*transaction*, the contagion has a direction the zombie model cannot express: **the
-cult sells you your own symptom.**
+**The third and fourth rows are the ones worth building.** The cap itself is not an
+object — it is a **dressable accessory**, so it cannot sit in inventory advertising
+*wear me*. What advertises is [the stand that dispenses
+it](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game), the way a dresser
+advertises *change clothes*. That keeps the `spreads:` field this document proposes but
+gives it a fixed carrier: transmission happens at a location somebody walks to, not
+between Sims in passing. And because the transmission event is a *transaction*, the
+contagion has a direction the zombie model cannot express: **the cult sells you your
+own symptom.**
 
 ### It wires into objects that already exist
 
@@ -124,24 +127,147 @@ This document's own argument makes members **the people the mechanism is being o
 on**: need-suppressed so they keep working, routed by Come and See Me, gated by a state
 machine they did not write. They are the mechanism's subject, not its butt.
 
-That is also the sharper reading. A merch table that sells you the marker of your own
+That is also the sharper reading. A stand that sells you the marker of your own
 conversion is a joke about **who is collecting**, and it survives a fact-check, which is
 the house standard — see
 [`bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#house_test`](../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml).
 
-`open: Heather and Steve's call again, since the skin slot is theirs — is the cap a`
-`religion_mapped_skins plugin, or does a bought-marker need its own slot because it`
-`carries a price and an inventory item rather than only an appearance?`
+## The hub is a SwagOMatic, and multiple stands are the game
 
-## The hub object is a television, and channels dispense ideology
+*Don, 20 Sep 2026: caps are dressable accessories, not objects themselves, but an object
+can orchestrate them — one MAGA SWAGA stand that works like a dresser, and that one
+object orchestrates the cult. Make multiple competing stands the whole thing, essential
+gameplay, each with its own adjustable parameters.*
+
+### The object already exists, stocked differently
+
+A cap is an accessory, and the appliance that manages accessories is already designed and
+named: **WigOMatic, reskinnable as AnythingOMatic** — "a custom in-game object, like a
+dresser, that manages all your wigs… dress and undress accessories, easy peasy," and it
+**renders its pie menu tree custom** from your own categories and your own contents. See
+[the appliance pattern](../../catalogs/soul-city/portals-and-modules.md) and
+[the shop table](../../catalogs/soul-city/object-shops.md).
+
+So the MAGA SWAGA stand is **a SwagOMatic: an AnythingOMatic with the swag line loaded**.
+Custom pie-menu rendering means the merch tiers *are* the menu, with no new UI. The
+playset's "objects need no changes" thesis holds one more time, and it holds in the
+strongest way — the object was designed for wigs by someone who had never considered this
+application.
+
+The lineage is funnier than anything that could be invented for it. The AnythingOMatic's
+credited precedent is **the one-armed-bandit TMog Steve Alvey (SimSlice) made for Don**,
+"but less random." A merch stand that extracts money in exchange for a feeling of
+belonging is a reskinned slot machine, and in this repo that is a documented inheritance
+rather than a metaphor.
+
+### One stand is one cult
+
+**The stand is the hub, and this is the object the bridge table was asking for.** It holds
+the group host, the roster, the price list, and the parameters. The
+[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) is the
+other half of the machine but not the hub: it manufactures the want, and the stand
+converts want into membership. Advertiser and registry, and they are separable — a
+channel with no stand produces Sims who want something they cannot buy, which is a
+perfectly good thing to be able to stage.
+
+| | Television | SwagOMatic stand |
+|---|---|---|
+| Scope | the room it is in | the lot, via a roster |
+| What it changes | what other objects are *worth* | who *belongs* |
+| Membership | none — it cannot enroll anybody | **owns the group host** |
+| If deleted | demand decays | the cult dissolves, members unhatted |
+
+### Multiple stands, and why the smallest difference makes the worst feud
+
+Don's escalation is that **multiple competing stands are the essential gameplay**, not a
+robustness afterthought — ideologically identical cults distinguished only by cap color,
+with the smallest differences driving the biggest feuds.
+
+The engine already supplies the reason, and it is anatomical: **there is one hat slot.**
+One head, one accessory slot, N stands competing for it. Which means:
+
+> **Hostility is inversely proportional to doctrinal difference, because the more alike
+> two cults are, the more exactly they need the same slot.**
+
+That is not a joke bolted onto the simulation; it is competitive exclusion, the ecological
+rule that two species occupying an identical niche cannot coexist. Freud named the human
+version the **narcissism of minor differences** (*Civilization and Its Discontents*, 1930),
+and the literature has been staging it ever since: Swift's **Big-Endians and
+Little-Endians** going to war over which end of the egg to break — a joke already living
+in this repo's vocabulary, since [yaml-jazz](https://github.com/SimHacker/moollm/blob/main/skills/yaml-jazz/SKILL.md)
+prescribes big-endian naming — and *Life of Brian*'s People's Front of Judea against the
+Judean People's Front. **Splitters.**
+
+**The precedent that matters most is the machine itself.** In Dr. Seuss's *The Sneetches*
+(1961), Sylvester McMonkey McBean rolls in a **Star-On Machine** that applies a purely
+cosmetic membership marker for three dollars, then a **Star-Off Machine** to remove it, and
+profits in both directions while the Sneetches sprint between them until nobody can
+remember who was which. That is the SwagOMatic, including the defection hatch, including
+the revenue model, including the ending. It is sixty-five years old and it is a better spec
+than most design documents.
+
+### The knob that carries the argument
+
+Each stand gets its own parameters, which is what makes this a toy rather than a lesson:
+
+| Parameter | What it does | Why it is the interesting one |
+|---|---|---|
+| **swag line + color** | the visible marker | the only real difference between rival cults |
+| **doctrine distance** | how far this cult's stated beliefs sit from its rivals' | **turn it toward zero and watch hostility rise** |
+| **price ladder** | cap → flag → vest → commemorative tier | each rung costs more and marks more commitment |
+| **proselytizing radius** | how far the stand advertises | overlapping radii are the contested ground |
+| **defection penalty** | cost of taking the hat off | set high and the Eloporter becomes the only exit |
+| **channel binding** | which TV channel feeds this stand | whose demand this stand is harvesting |
+
+**Doctrine distance is the parameter the whole playset is for.** The player drags it
+toward zero expecting the factions to reconcile, and instead the feud intensifies, because
+identical cults compete for the same slot. Freud's thesis becomes a slider, and the player
+discovers it by experiment rather than by being told — no editorial required, which is the
+same standard the television's god-view overlay meets.
+
+The price ladder is where the swag gets ridiculous, and the escalation is mechanical
+rather than a list: each tier costs more and is harder to explain away as a garment, so
+the wearer's sunk commitment is legible at a glance. A vest tier also connects to the
+[tactical-cosplay peg](../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml)
+already written up in bits.
+
+### Robustness: what multiple stands must not assume
+
+Don asked for multiple stands to work robustly, and per
+[robust-first](https://github.com/SimHacker/moollm/blob/main/skills/robust-first/SKILL.md)
+the failure modes are worth naming before the first one is built:
+
+- **No singleton state.** Nothing may refer to "the cult." Every membership fact is owned
+  by a stand, so two stands on a lot is the normal case and one stand is the special case.
+- **Joining is leaving.** The hat slot is single-valued, so enrolling at stand B silently
+  unhats stand A's member. B's join and A's defection are *the same event*, and A's roster
+  must hear about it rather than keeping a ghost.
+- **Deleting a stand must release its members.** Bulldozing the hub cannot leave Sims
+  wearing a cap that belongs to a group host that no longer exists. Degrade to unhatted,
+  do not orphan.
+- **Two stands, same color.** Genuinely open: do they merge into one host, or is selling
+  the *same* hat the most offensive possible provocation? The second reading is funnier
+  and probably truer.
+- **A stand with no channel** still works, just slowly — it has to rely on its own
+  advertisement instead of manufactured demand, which is a useful control condition for
+  measuring what the television actually contributes.
+
+`needs-check: whether sims1 accessories are one exclusive slot or several stackable ones`
+`decides how much of the above survives. The hat-slot scarcity argument needs a real hat`
+`slot. Heather and Steve's call, since the skin and accessory system is theirs —`
+`religion_mapped_skins may already answer it.`
+
+## The television is the demand side, and channels dispense ideology
 
 *Don, 20 Sep 2026: the TV set could have different channels that dispense ideologies,
 and Faux News makes you want to wear MAGA caps.*
 
-**This names the hub the bridge table was missing.** Zombie Sims has the ham radio as
-`wave_controller` and SliceCity has the power plant as seed spawner; Cult Sims needed
-"broadcast sermons, recruitment drives" and had no object to put them in. It is a
-television, and the Sims already shipped one with a channel selector on its pie menu.
+Zombie Sims has the ham radio as `wave_controller` and SliceCity has the power plant as
+seed spawner; Cult Sims needed "broadcast sermons, recruitment drives" and had no object
+to put them in. It is a television, and the Sims already shipped one with a channel
+selector on its pie menu. The TV is the demand side of the machine — the
+[SwagOMatic](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) is the hub that
+holds membership, and the television is what makes membership look worth buying.
 
 ### The mechanic: the TV does not touch the Sim
 
@@ -220,7 +346,7 @@ one operation. That is the group-host case, and this is its clearest example.
 
 **Advertisement modification — second-order objects.** Objects advertise to Sims, and
 buffs change a Sim's motives so the same advertisement scores differently. What the
-[television](#the-hub-object-is-a-television-and-channels-dispense-ideology) needs is
+[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) needs is
 neither: an object that re-weights **another object's** advertised score without
 touching the Sim at all. That is a new kind of thing in the model, and it is the one
 worth getting right, because it is what lets the playset stage manufactured desire
@@ -232,8 +358,10 @@ without a single coercion state.
   unlock based on how the leader has behaved? (See `buffopedia/systems/spore/`.)
 - Is defection reversible, and who pays for retrieval?
 - Does the schism mechanic fork a group host into two, and what happens to shared
-  artifacts? (Super Cupid's `clique_partition` topology generates the rival
-  factions; the open part is what happens to the shrine.)
+  artifacts? (Super Cupid's `clique_partition` topology generates the rival factions, and
+  a schism is now concrete — **it is a second stand appearing** — so the open part is
+  narrowed to what happens to the shrine, and to whether two stands stocking the same
+  colour merge or feud.)
 - Heather and Steve's call, since Zombie Sims is theirs: is the cult a faction
   *inside* the outbreak, or a parallel outbreak with a different transmission rule?
 

@@ -18,15 +18,23 @@ designs_here:
     the ENTIRE wedding object set works unaltered: Buddha suppresses needs so members
     keep working, Come and See Me is the call to assembly, the eloporter becomes a
     defection hatch. Worked example: red baseball caps as the visible infection marker,
-    where the marker is BOUGHT rather than caught, so the contagion runs through the
-    merch table and the transmission event is a transaction.
-    HUB OBJECT IS A TELEVISION — channels dispense ideology the way a magazine dispenses
-    a menu, but broadcast to the whole room, so the remote is the contested object and
-    the channel lineup is the faction generator. The mechanic is that the TV never
-    touches the Sim: it raises the CAP's advertised score and the Sim walks over and buys
-    it autonomously. From inside nothing happened; from the god view you watch the
-    numbers move. Faux News is not a placeholder — see ../../apps/simfaux/.
-    Genuinely new: contagion (a `spreads:` field), membership as a group host, and
+    where the marker is BOUGHT rather than caught, so transmission is a transaction.
+    TWO OBJECTS, split demand/supply. The TELEVISION is the demand side: channels dispense
+    ideology like a magazine dispenses a menu but broadcast to the room, so the remote is
+    contested and the channel lineup generates factions. It never touches the Sim — it
+    raises the CAP's advertised score and the Sim walks over and buys it autonomously.
+    From inside nothing happened; from the god view you watch the numbers move.
+    Faux News is not a placeholder — see ../../apps/simfaux/.
+    The HUB is a SWAGOMATIC — caps are dressable accessories, not objects, so the
+    orchestrator is a dresser: a stocked AnythingOMatic (../../catalogs/soul-city/
+    portals-and-modules.md) whose credited ancestor is Steve Alvey's one-armed-bandit
+    TMog, so the grift stand is a reskinned slot machine by inheritance.
+    MULTIPLE STANDS ARE THE ESSENTIAL GAMEPLAY — one stand is one cult, each with its own
+    parameters. There is ONE HAT SLOT, so hostility is inversely proportional to doctrinal
+    difference: identical cults need the same slot. Competitive exclusion + Freud's
+    narcissism of minor differences, as a slider the player discovers by experiment.
+    Precedents: Seuss's Star-On/Star-Off Machine (the spec, 1961), Swift's Big-Endians,
+    Life of Brian. Genuinely new: contagion (`spreads:`), membership as a group host, and
     advertisement modification (an object re-weighting ANOTHER object's ad score).
 
 playsets:
