@@ -9,10 +9,23 @@ schemas:
 
 prose: README.md
 
+designs_here:
+  # The two design docs that live in this directory — proposals, not shipped catalogs.
+  life_events_playset: life-events-playset.md   # licenses, mass pairing, the eloporter
+  cult_sims: |
+    cult-sims.md — the bridge playset between SimProv and Zombie Sims. Argues cult
+    conversion and zombie infection are one mechanism with different fiction, and that
+    the ENTIRE wedding object set works unaltered: Buddha suppresses needs so members
+    keep working, Come and See Me is the call to assembly, the eloporter becomes a
+    defection hatch. Worked example: red baseball caps as the visible infection marker,
+    where the marker is BOUGHT rather than caught, so the contagion runs through the
+    merch table and the transmission event is a transaction.
+    Genuinely new: contagion (a `spreads:` field) and membership as a group host.
+
 playsets:
-  simprov_wedding: ../catalogs/simprov/ORCHESTRATOR.yml
-  slicecity: ../catalogs/simslice/ORCHESTRATOR.yml
-  zombie_sims: ../catalogs/zombie-sims/ORCHESTRATOR.yml
+  simprov_wedding: ../../catalogs/simprov/ORCHESTRATOR.yml
+  slicecity: ../../catalogs/simslice/ORCHESTRATOR.yml
+  zombie_sims: ../../catalogs/zombie-sims/ORCHESTRATOR.yml
   rebounce_party: ../../repo-shows/rebounce/party-deck.yml
   repo_show_hub: ../../characters/don-philahue/ORCHESTRATOR.yml
 
