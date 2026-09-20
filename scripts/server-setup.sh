@@ -26,7 +26,7 @@ MANIFEST="$REPO/server/MANIFEST.yml"
 
 DRY=0
 ONLY=""
-PHASES="packages docker node firewall disk"
+PHASES="packages docker repo node firewall disk"
 
 while [[ $# -gt 0 ]]; do
 	case "$1" in
@@ -43,6 +43,7 @@ while [[ $# -gt 0 ]]; do
 Phases, in order:
   packages   apt packages from the manifest, grouped base/dev/ops
   docker     Docker Engine + compose plugin from Docker's repo; docker group membership
+  repo       clone the repo if absent, and make it usable by root's git
   node       Node (major from manifest) + pnpm via corepack, pinned by package.json
   firewall   ufw defaults and the allow list, including 443/udp for HTTP/3
   disk       mount the persistent disk at the manifest's mount point, and fstab it
@@ -169,6 +170,28 @@ if want_phase docker; then
 			run usermod -aG docker "$u"
 		fi
 	done
+fi
+
+if want_phase repo; then
+	echo "== repo"
+	DIR="$(m repo.dir)"
+	if [[ ! -d "$DIR/.git" ]]; then
+		echo "   cloning $(m repo.url) -> $DIR"
+		run git clone --depth "$(m repo.clone_depth)" "$(m repo.url)" "$DIR"
+	else
+		echo "   present at $DIR"
+	fi
+
+	# Deploys run git as root against a tree root does not own, and git refuses that outright
+	# ("detected dubious ownership"), which fails the pull before a single file is built. Root
+	# declaring this one path safe is the entire fix. It belongs here because otherwise every
+	# rebuilt box rediscovers it the hard way, during a deploy, with the site down.
+	if git config --global --get-all safe.directory 2>/dev/null | grep -qx "$DIR"; then
+		echo "   already safe.directory for root"
+	else
+		echo "   marking $DIR safe.directory for root"
+		run git config --global --add safe.directory "$DIR"
+	fi
 fi
 
 if want_phase node; then
