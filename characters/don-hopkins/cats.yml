@@ -54,6 +54,7 @@ media_kinds:
     what: "Cat photos → talking faces (googly eyes + lip-synced mouth) — a Faceball `talking-selfies` application."
     source: hand_picked_cat_photos
     faceball: ../../apps/performance-space/faceball-construction-set.yml#talking-selfies
+    prose: ../../designs/faceball-construction-set/README.md
     use: "Cat 'comments' on a segment, reads a viewer letter, or deadpan-reacts to the guest."
   interstitials:
     what: "Short cat video clips between segments — palate cleanser, scene transition, cold-open charm."

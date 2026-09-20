@@ -49,6 +49,43 @@ Every fluid needs something to defeat it, and the defense is funnier than the at
   is recast, not the man: the gag gets stolen shamelessly, the racist does not get credited.
 - **Rip Taylor's confetti cannon** on "Dear!"
 
+## Three simulations, and why they keep their own names
+
+The kit runs three unrelated kinds of physics, and the only discipline that matters here is refusing
+to let one of them lend its name to another. They are different mathematics and they fail in
+different ways.
+
+| System | What it is | What it does |
+|---|---|---|
+| **Soft-body pass** | mass-spring / position-based dynamics over a few dozen vertices | jiggle, wobble, and the [wave propagation that needs more than two parts](adult-section.md#balloon-boobs-and-why-you-want-more-than-two) |
+| **Particle layer** | emitters with anchors, viscosity, splash radius | every wet gag above — tears, barf, pulp, confetti |
+| **CA grid** *(not in 1.0)* | a lattice with neighbourhood rules and per-cell state | sand, fire, rot, growth |
+
+**A falling-sand automaton cannot jiggle a balloon, and a spring lattice cannot spread fire.** For
+`balloon_boobs` the right classic technique is a *pressurised* soft body — a closed shell with an
+internal pressure term pushing outward against spring tension, which is literally how balloons are
+simulated and what produces squash-and-restore rather than mere wobble.
+
+### The cellular-automata layer is a 1.1 idea, deliberately
+
+A gridded CA layer that **interacts with the 2D and 3D graphics** is genuinely interesting, and the
+interesting part is precisely the coupling: parts occluding and diverting the grid, the grid staining
+and eroding the parts. It is also an extension rather than a base capability, so it is parked.
+
+The reason to park it is not caution, it is that it buys nothing v1.0 needs. **Every gag in the table
+above is an emitter gag**, and emitters do those better and more cheaply than a lattice would.
+Shipping a cellular automaton to get a spit take is the wrong tool arriving early.
+
+The precedent to build on when it happens is **[Sandspiel](https://sandspiel.club/)** — Max Bittker's
+falling-sand toy (2018, Rust/wasm and WebGL) — and
+**[Sandspiel Studio](https://studio.sandspiel.club/)**, the visually programmable sequel by
+[Bittker](https://github.com/maxbittker/sandspiel) with
+[Lu Wilson (TodePond)](https://github.com/maxbittker/sandspiel-studio/), where players define their
+own elements in a block language. Both MIT licensed. That conversation is already seeded in the repo
+as [`repo-shows/chaim-gingold/`](../../repo-shows/chaim-gingold/README.md) — *Sandspiel ↔ CAM6,
+falling sand meets cellular automata* — beside Don's CAM6 and
+[Dave Ackley](../../characters/dave-ackley/ca-correspondence-story.md)'s Movable Feast.
+
 ## The barf meter
 
 **Dizziness tracking** accumulates *barf pressure* per avatar from angular velocity, penalty-wheel

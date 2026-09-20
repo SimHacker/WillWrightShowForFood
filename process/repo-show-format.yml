@@ -507,7 +507,7 @@ directors-cuts:
       uploadable cut ships **self-censored** (Sims-1-style pixelization mosaic / censor-bar); uncensoring
       is a **local, opt-in "cheat code," never the default upload** — so the bit IS the unnecessary
       censorship, and it survives. Never reproduce rights-locked masters; reference + RE-CREATE.
-      See [faceball-construction-set.yml#modifiers](../apps/performance-space/faceball-construction-set.yml#modifiers) (sims1_pixelization).
+      See [faceball-construction-set.yml#soft-body-anatomy#modifiers](../apps/performance-space/faceball-construction-set.yml#soft-body-anatomy#modifiers) (sims1_pixelization).
     funnel: "Short-form teaser → the long-form Director's Cut. The clip is the door; the show is the room."
     see:
       - "[bowie-snl-1979.md](../characters/brian-eno/bowie-snl-1979.md)"

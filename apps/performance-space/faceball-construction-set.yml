@@ -168,13 +168,6 @@ attachments:
       - confetti_burst
       - custom_per_character_yaml
 
-particle_systems:
-  snore_sleep:
-    emitter: nostril_fiduciary_markers
-    animation: kinetic_type_ZZZ
-    trigger: character_state_asleep
-    combo: googly_eyes asleep + non_responsive_lids
-
 particle-simulation:
   what: |
     **Emitter-based particle and fluid layer** for Faceball gags. Tears, vomit, sweat from the brow,
@@ -239,6 +232,11 @@ particle-simulation:
       emitter: confetti_cannon_or_hand
       wavelength: upbringing.yml#national-touchstones
       tagline: "Dear!"
+    snore_sleep:
+      emitter: nostril_fiduciary_markers
+      animation: kinetic_type_ZZZ
+      trigger: character_state_asleep
+      combo: googly_eyes asleep + non_responsive_lids
     spit_take:
       emitter: mouth_fiduciary
       trigger: shock_beat
@@ -807,7 +805,7 @@ compositor_layers:
     - mouth_hole_webcam_clip_or_ecg_blend
     - googly_eyes_layer
     - accessory_layovers
-    - particle_systems_layer
+    - particle_layer
     - physics_fluids_layer
     - chrome_badges_captions
 
@@ -953,6 +951,36 @@ guest-characters:
       when: "Guest has no time to record — dignity preserved via bundle + correspondence"
   not_voice_clone: "Human mouth through hole only — see portrayal-standards.yml#simulation"
 
+talking-selfies:
+  # Promoted to top level: this is a general Faceball application, not a memory-palace feature.
+  # Uses include the palace tour, async guest clips, and Don's talking cat faces.
+  what: |
+    **Phone, front camera, you in frame next to the thing you are talking about.** One puppet preset
+    per topic, one clip per stop. The cheapest possible Faceball application and the one most likely
+    to get used, because it needs a phone and nothing else.
+  per_stop:
+    - front_camera_selfie
+    - artifact_in_frame
+    - puppet_preset_for_topic
+    - attention_atom_close
+  modes:
+    solo_phone: "Guest records each room on their phone — best take per stop; PR into characters/<id>/media/"
+    host_walk: "Driver walks their own dir — selfie beside on-screen artifact or physical prop on desk"
+    live_tour: "Same layout on stream — switch puppet on button board as you enter each room"
+  why:
+    - "Respects guest time — five one-minute selfies beat one three-hour obligation"
+    - "Method of loci made literal — you are standing in the room next to the object"
+    - "Feeds attention atoms — each selfie is shorter than TikTok"
+  talking_cat_faces:
+    what: "Same trick on CAT photos — googly eyes + lip-synced mouth turn Don's cat pics into talking-cat-face stars."
+    see: ../../characters/don-hopkins/cats.yml
+  used_by:
+    - memory-palace-tour        # one clip per palace stop
+    - ../../characters/don-hopkins/cats.yml       # talking cat faces
+    - ../../process/couple-and-solo-shows.yml     # async solo-guest format
+  prose: ../../designs/faceball-construction-set/README.md#expression-modes-are-the-interesting-axis
+  see: ../../process/repo-show-branding.yml#attention-atoms
+
 memory-palace-tour:
   what: |
     **Many puppets, many topics** — build a different face puppet for each idea, era, or guest
@@ -989,27 +1017,7 @@ memory-palace-tour:
   guests:
     what: "Guest builds their own palace tour — puppets at their artifacts; live or offline takes per stop"
     async: "One clip per room — woven shotgun-blast; audience walks git paths between videos"
-  talking-selfies:
-    what: |
-      **Works great for talking selfies** — phone, front camera, you in frame **next to the thing**
-      you talk about. One puppet preset per topic; one clip per palace stop.
-    per_stop:
-      - front_camera_selfie
-      - artifact_in_frame
-      - puppet_preset_for_topic
-      - attention_atom_close
-    modes:
-      solo_phone: "Guest records each room on their phone — best take per stop; PR into characters/<id>/media/"
-      host_walk: "Driver walks their own dir — selfie beside on-screen artifact or physical prop on desk"
-      live_tour: "Same layout on stream — switch puppet on button board as you enter each room"
-    why:
-      - "Respects guest time — five one-minute selfies beat one three-hour obligation"
-      - "Method of loci made literal — you are standing in the room next to the object"
-      - "Feeds attention atoms — each selfie is shorter than TikTok"
-    talking_cat_faces:
-      what: "Same trick on CAT photos — googly eyes + lip-synced mouth turn Don's cat pics into talking-cat-face stars."
-      see: ../../characters/don-hopkins/cats.yml
-    see: ../../process/repo-show-branding.yml#attention-atoms
+  talking-selfies: talking-selfies   # promoted to top level; one application, many uses
   see:
     - ../../process/moollm-stage.yml
     - ../../apps/stream-gateway/bubble-wrangler.yml#memory-palace

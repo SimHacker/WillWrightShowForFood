@@ -110,7 +110,8 @@ Interval history vs labeled fiction, distinguished on air.
 
 The plan — and David is the perfect person to brainstorm it with — is to dive deep into that
 mythological backstory and **tell the story Bounce was trying to tell**, reimagined and reimplemented
-in the **[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)**:
+in the **[Faceball Construction Kit](../../designs/faceball-construction-set/README.md)**
+([spec](../../apps/performance-space/faceball-construction-set.yml)):
 simulated commentator puppets over live media, closed captions and amplitude scrub as data streams,
 Truth Fly landing on heads as the cursor again. (Savor the name: *Faceball* lunges toward *Facebook*,
 then veers off at the last minute.)

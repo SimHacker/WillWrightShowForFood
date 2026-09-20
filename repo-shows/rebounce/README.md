@@ -42,7 +42,8 @@ the format. That demo grew a **clearly-labeled-fiction** mythology in Don's LLOO
 **Truth Fly**, the **Great Transformation**, comment-out-don't-delete), and David is the perfect
 person to excavate it with on air: real Interval history and labeled fiction, distinguished out loud.
 The payoff: **tell the story Bounce was trying to tell**, reimagined and reimplemented in the
-**[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** —
+**[Faceball Construction Kit](../../designs/faceball-construction-set/README.md)**
+([spec](../../apps/performance-space/faceball-construction-set.yml)) —
 with **SimFaux** (Don's 2006 OpenLaszlo Fox News parody, inspired by the Interval work —
 [video](https://www.youtube.com/watch?v=gRodlxUZ9SQ)) as the bridge demo between eras.
 

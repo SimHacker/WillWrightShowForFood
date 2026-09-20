@@ -19,7 +19,9 @@ A construction set is literally an **artifact factory** — a tool whose product
 That's the [`artifactory`](../../process/artifactory.md) concept this repo (and MOOLLM) is built
 on: read/write/edit/play, and the output is more things to play with. PCS in 1983 is one of the
 cleanest early examples: not the artifact, the *engine that makes artifacts*. Bridges directly to
-the **[Faceball Construction Set](../../apps/performance-space/faceball-construction-set.yml)**.
+the **[Faceball Construction Set](../../designs/faceball-construction-set/README.md)** — whose
+[inspirations page](../../designs/faceball-construction-set/inspirations.md#bill-budge--pinball-construction-set-1983)
+opens with PCS, and whose [spec](../../apps/performance-space/faceball-construction-set.yml) is the machine-readable half.
 
 ### 3. What's actually inside PCS — the engineering
 To ship PCS, Bill had to build a **mini paint program**, a **mini sound editor**, and a **save/load

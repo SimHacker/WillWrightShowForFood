@@ -108,7 +108,8 @@ the console**, code behind the glass.
 - **Perform the crossfade** — Homer II as **MIDI-less** ancestor of live generative mixing; joystick
   **bumps** through the **score**.
 - **HOMER → Faceball** — the performed-mix verbs (perform, record, overdub, hero take) reborn in the
-  **[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** — the
+  **[Faceball Construction Kit](../../designs/faceball-construction-set/README.md)**
+  ([spec](../../apps/performance-space/faceball-construction-set.yml)) — the
   analog grandparent slot in its lineage table; via **Bounce** (David Levitt + Don at Interval) and
   **SimFaux** (2006).
 - **Flying Logos → forkable repo** — corporate logo cinema as **open performance**; Don's **Flying Logo

@@ -87,7 +87,7 @@ thesis:
   direct-manipulation: "You grab a tongue and move it and a voice comes out. That's the whole pitch."
   ties:
     - ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md  # Bounce: play any audio with any gesture
-    - faceball-construction-set.yml#amplitude-scrub                            # scrub-puppet sibling
+    - faceball-construction-set.yml#expression_modes#modes#amplitude-scrub                            # scrub-puppet sibling
     - ../../process/performance-space.yml#audience-chorus                       # the mode this fills
     - ../../repo-shows/phoneloper/SHOW.yml                                      # Don's SFC expressive-speech toy
     - ../../repo-shows/voystick-pink-trombone/SHOW.yml                          # homomorphic Voystick jam

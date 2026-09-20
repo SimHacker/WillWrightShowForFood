@@ -40,7 +40,7 @@ panel_format:
   dc_host_puppets: ../apps/performance-space/character-button-board.yml#dc-host-lineage-puppets
   guest_puppets: faceball-construction-set.yml#guest-characters
   memory-palace-tour: faceball-construction-set.yml#memory-palace-tour
-  talking-selfies: faceball-construction-set.yml#memory-palace-tour#talking-selfies
+  talking-selfies: faceball-construction-set.yml#talking-selfies
   particles: faceball-construction-set.yml#particle-simulation
   audience-as-balls: faceball-construction-set.yml#audience-as-balls
   faceball-machine: faceball-construction-set.yml#faceball-machine

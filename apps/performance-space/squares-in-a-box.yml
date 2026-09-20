@@ -100,7 +100,7 @@ obs_stack:
     - panel_portraits_idle_layer
     - panel_mouth_holes_active_layer
     - googly_eyes_layer
-    - particle_systems_layer           # ZZZ snore, etc. from nostril fiduciaries
+    - particle_layer           # ZZZ snore, etc. from nostril fiduciaries
     - chrome_titles_captions_badges
     - driver_center_raw_optional
   single_browser_source: preferred      # one compositor page vs N sources

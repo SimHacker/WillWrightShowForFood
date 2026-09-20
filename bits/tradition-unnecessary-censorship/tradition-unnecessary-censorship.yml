@@ -22,7 +22,7 @@ variants:
       with a local opt-in **"cheat code"** to lift it. Exactly how The Sims 1 self-censored.
     why_it_matters: "This is the PLATFORM-SAFE default: the uploadable cut is already self-censored, so it survives TikTok/Facebook moderation. The mosaic IS the joke."
     bit: "Pass a pixelated joint → it pixelates your head (mosaic follows the contraband)."
-    engine: ../../apps/performance-space/faceball-construction-set.yml#modifiers   # sims1_pixelization
+    engine: ../../apps/performance-space/faceball-construction-set.yml#soft-body-anatomy#modifiers   # sims1_pixelization
 
 anti_rule: |
   We do NOT censor real names. Conan's Masturbating Bear stays Masturbating Bear.

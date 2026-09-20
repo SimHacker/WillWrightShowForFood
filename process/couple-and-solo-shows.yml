@@ -182,7 +182,7 @@ async-production:
     - "Guest walks the bundle on camera — point, correct, story; or solo demo videos (best take wins)"
     - "Guest-submitted or recommended YouTube links woven into episodes"
     - "Guest **face puppet** clips — live on stream or recorded offline; modular portrait from their photo (see faceball-construction-set.yml#guest-characters)"
-    - "Memory palace **talking selfies** — one phone clip per stop, puppet posed next to artifact (see faceball-construction-set.yml#memory-palace-tour#talking-selfies)"
+    - "Memory palace **talking selfies** — one phone clip per stop, puppet posed next to artifact (see faceball-construction-set.yml#talking-selfies)"
     - "Audience watches time-shifted and opens the same paths in Cursor — edit data, run code, PR"
     - "Guests watch each other's prior shows and raw footage in the repo"
     - "Respond, chime in, and ask questions asynchronously — correspondence, ideas.md, artifacts"
