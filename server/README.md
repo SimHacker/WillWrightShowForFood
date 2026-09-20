@@ -12,7 +12,8 @@ the runbook for acting on it.
 
 ## Bring up a replacement server
 
-Assumes the data disk already exists. Roughly ten minutes, most of it apt.
+Roughly ten minutes, most of it apt. Step 2 is skippable and the setup script says so out loud —
+with no data disk it puts releases on the boot disk and warns, rather than failing.
 
 ```bash
 # 1. From your laptop: make the VM. Idempotent — it skips anything that already exists.
@@ -63,16 +64,18 @@ stays — it builds GCP objects from a laptop, which is a different job.
 
 ## What is on the pet disk, and what is still wrongly on the cattle
 
-Being blunt, because the gap matters more than the plan:
+Being blunt, because the gap matters more than the plan. **As of 2026-09-20 there is no pet disk at
+all** — `ebike-safari-1` has one 100G boot disk, so everything below is on the cattle:
 
 | Thing | Where it lives | If you delete the VM today |
 |---|---|---|
-| App releases | `/srv/wwsff/releases` on the data disk | Survives |
+| App releases | `/srv/wwsff/<app>/releases`, **boot disk** until a data disk is attached | **Destroyed** (rebuildable from git) |
 | Postgres data | docker volume `pgdata`, **boot disk** | **Destroyed** |
 | Caddy certificates + ACME account key | docker volume `caddy_data`, **boot disk** | **Destroyed** |
 | Repo checkout, images, node | boot disk | Destroyed, and correctly so — the manifest rebuilds them |
 
-So the server is **not yet fully cattle**, and the certificate volume is the one that bites first.
+Releases are the least alarming row: they are a build of a known commit, so losing them costs one
+deploy. The other two are the real exposure, and the certificate volume is the one that bites first.
 Rebuilding forces re-issuance of six certificates, and Let's Encrypt allows 5 duplicate
 certificates per week — so a *second* rebuild inside one week fails and the sites go down on TLS
 rather than on anything you did wrong. Postgres is lower stakes today (a users table and a seed)

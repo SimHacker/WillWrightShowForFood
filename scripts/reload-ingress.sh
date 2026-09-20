@@ -55,7 +55,10 @@ echo "Config is valid."
 
 if [[ "$MODE" == recreate ]]; then
 	echo "Recreating caddy — every site on this VM will see a brief TLS interruption."
-	docker compose up -d --force-recreate caddy
+	# --no-deps or compose recreates the viewer too, because caddy depends_on it and its
+	# container predates the current compose file. An ingress operation restarting an app is
+	# the collateral redeploy this whole refactor exists to stop, so say no explicitly.
+	docker compose up -d --force-recreate --no-deps caddy
 else
 	echo "Reloading in place (no downtime)…"
 	docker compose exec -T caddy caddy reload --config "$CONFIG"
