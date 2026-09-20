@@ -32,23 +32,24 @@ the_target_is_the_officeholder: |
   needs-check: cite specific appearances and dates from mainstream reporting before writing a script.
   Her public statements and DHS actions are the sourcing; nothing else is needed.
 
-retargeted_2026_09_20: |
-  **The spouse peg is OUT.** This gag previously hung on Bryon Noem — Kristi Noem's husband, a private
-  citizen who holds no office — via a Daily Mail item relayed by NY Post, dated **April 1 2026**, in
-  which a neighbour said the images "must have been AI."
-  Three reasons it is gone and not coming back:
-    1. **He is not a public figure.** Calling him one, and widening the target to "the regime and its
-       household," was the move that made a private person fair game. The officeholder is the target.
-    2. **The sourcing is a tabloid on April Fools' Day** with a witness saying it looked AI-generated.
-       And the Faceball adult section now argues at length that an occluder plus a tracking signal makes
-       audiences construct a maximal version WHETHER OR NOT anything is behind it — bubble porn fires on
-       empty. That argument refutes the "it's definitely real" reading of a blurry April 1 tabloid image.
-       → ../../designs/faceball-construction-set/adult-section.md#what-censorship-actually-does
-    3. **The house test, applied evenly.** trump_mushroom earns its place because it rests on public
-       record — court matters and an on-the-record published account. This had no equivalent. Same
-       rule, opposite verdict.
-  Nothing was lost: balloon_boobs is the marquee part on its own merits, count freedom is the showcase,
-  and "That's not AI. THIS is AI." is funnier aimed at AI slop generally than at a contested photo.
+house_test: |
+  **What earns a satirical preset here, stated once so it can be applied evenly.** Three conditions,
+  all required:
+    1. **The subject holds office or power.** Not a spouse, not a relative, not a household. An
+       officeholder acting as one.
+    2. **The material is the subject's own public conduct** — things they said, staged, or did in public,
+       or that are on the court record. Mainstream sourcing with a date.
+    3. **The joke survives being fact-checked.** If the bit needs a specific contested image to be
+       genuine in order to land, it is built on sand and belongs to whoever disputes the image.
+  `trump_mushroom` passes on all three: public record, court matters, an on-the-record published
+  account. A preset that fails any of them gets retargeted at power or deleted — the parts are generic,
+  so nothing is lost either way.
+  **Why condition 3 is not squeamishness but this repo's own argument:** the Faceball adult section
+  demonstrates that an occluder plus a tracking signal makes audiences construct a maximal version
+  WHETHER OR NOT anything is behind it — bubble porn fires on nothing but clothing. So a blurry image
+  plus a confident caption is exactly the configuration that manufactures certainty, and we do not get
+  to invoke that mechanism as design insight and then forget it when a photo flatters the bit.
+  → ../../designs/faceball-construction-set/adult-section.md#what-censorship-actually-does
 
 thats_not_ai_this_is_ai: |
   Kept, retargeted. **Crocodile Dundee style: "That's not AI. THIS is AI."** — aimed at the whole
@@ -100,9 +101,10 @@ the-reveal:
   blackmail_trope_inverted: |
     Deliberately evokes the kompromat / "Epstein tapes" blackmail vibe — then INVERTS it: real kompromat
     is nonconsensual coercion; ours is consensual celebration. Same tension, opposite ethics; the
-    consent is the joke. The "Bryon Noem" peg is treated per source-caveat (Don: real, not a hoax; the
-    sim is proudly AI — "That's not AI. THIS is AI.") — satire of a public political figure, never
-    outing a private person.
+    consent is the joke. The peg is the OFFICEHOLDER and her own costume presentation — see
+    the_target_is_the_officeholder. Nothing here rests on anyone's spouse or on a private person's
+    body, which is the distinction the whole bit is about: consented performance versus coerced
+    exposure. Getting that wrong would invert the ethics back.
   engine: ../../apps/performance-space/faceball-construction-set.yml#anonymizing-puppet-and-reveal
 
 physics_note: |

@@ -435,18 +435,22 @@ soft-body-anatomy:
     prose: ../../designs/faceball-construction-set/inspirations.md#genital-jousting--free-lives--devolver-digital
   componentized_abstraction:
     what: |
-      **Abstract the gag away from any real photo or name.** Rather than use Bryon Noem's picture — or
-      even his name — ship a **generic cartoon abstraction** of the universally recognized "bodacious
+      **Abstract the gag away from any real photo or name.** Instead of anyone's picture — or even
+      anyone's name — ship a **generic cartoon abstraction** of the universally recognized "bodacious
       ta-tas" as a **plug-in part** you can snap onto ANY body. Everyone gets it instantly; nobody has to
       be named. And per **Spore-creature-creator** rules, you're **not limited to two** — or even to an
       even number.
+      **This is the structural safety property, not a disclaimer:** because the part is generic and only
+      a PRESET aims it, a preset can be retargeted or deleted without touching the part. The kit never
+      has to ship a target in order to ship the joke.
     params: [count, per_part_scale, jiggle_gain, nipple_aim, droop, spacing]
     the_nipple_aim_gag: "Per-part **nipple direction** is a knob — the comedy of balloon nipples that won't point the same way. *SNAP*"
     safer_and_funnier: |
-      No photo (copyright + no outing), no name required — just a cartoon everyone recognizes. The
-      abstraction is BOTH the ethical sidestep AND the better joke. (Don's stance on the underlying story
-      stands — see ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#source-caveat — but the KIT itself
-      never needs his image.)
+      No photo (copyright + no likeness), no name required — just a cartoon everyone recognizes. The
+      abstraction is BOTH the ethical sidestep AND the better joke, and it is what lets the kit ship a
+      part without shipping a target: **the part is generic, and only a PRESET aims it.** Retarget or
+      delete the preset and the part is untouched.
+      see: ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#the_target_is_the_officeholder
   modifiers:
     what: |
       **Composable filters** you stack onto a part — the visual cousins of Laurie Anderson's pitch-shift
@@ -657,7 +661,11 @@ streisand_effect:
   composable_examples:
     - "Bowie whip-it-out → re-created with any puppet (the canonical ancestor)"
     - "trump_mushroom → size × MeatSpin political caricature"
-    - "bryon_noem balloon-boobs → soft-body jiggle satire (Don: real, not a hoax; the sim is proudly, obviously AI — 'That's not AI. THIS is AI.'; keep it satire of a PUBLIC political figure — see vice-not-ice-puppet.yml#source-caveat)"
+    - |
+      kristi_noem tactical-cosplay → soft-body jiggle satire of the OFFICEHOLDER's own costume
+      presentation (the tactical-gear photo ops she staged herself), never a spouse and never a private
+      body. The sim is proudly, obviously AI — "That's not AI. THIS is AI." Retargeted 2026-09-20; see
+      ../../bits/gag-vice-not-ice-puppet/gag-vice-not-ice-puppet.yml#the_target_is_the_officeholder
   its_our_brand: "Faceball Construction Kit = democratize the censored gag. Composability is the point; the kit IS the brand."
   see:
     - ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
