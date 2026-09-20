@@ -51,12 +51,15 @@ services:
       - internal
 
   caddy:
-    # Was `image: caddy:2-alpine`. Now built, because HyperTIES prerenders to plain files
-    # and is baked in rather than proxied: a static site needs a web server, and there is
-    # already one here. Same upstream image underneath, plus /srv/hyperties.
-    build:
-      context: ../../ties
-      dockerfile: deploy/Dockerfile.caddy
+    # Shared ingress: TLS for every site on this VM. The official image, unmodified.
+    #
+    # It briefly had a Dockerfile of its own that baked the HyperTIES build in. That made a
+    # content change require an image build, and compose only builds during `up` when the
+    # image is missing -- so a changed build context silently kept serving the old image.
+    # That is how a Caddyfile fix sat undeployed while hyperties.org was down. HyperTIES
+    # releases are now bind-mounted and swapped by symlink instead, which is both atomic and
+    # impossible to forget to build.
+    image: caddy:2-alpine
     restart: unless-stopped
     ports:
       - '80:80'
@@ -67,11 +70,21 @@ services:
       ACME_EMAIL: ${ACME_EMAIL:?Set ACME_EMAIL in .env}
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Owned by apps/ties, mounted rather than copied, so a redirect edit is a reload.
+      - ../../ties/deploy/hyperties.Caddyfile:/etc/caddy/hyperties.Caddyfile:ro
+      # The PARENT of `current`, never the symlink itself: a bind mount resolves its source
+      # once, at mount time, so mounting `current` would pin this container to whichever
+      # release existed then and make every later swap invisible inside it.
+      - ${RELEASE_ROOT:-/srv/wwsff}/hyperties:/srv/hyperties:ro
       - caddy_data:/data
       - caddy_config:/config
     depends_on:
+      # `service_started`, not `service_healthy`. Caddy answers for hyperties.org as well,
+      # and a viewer that fails its healthcheck must not keep an unrelated static site from
+      # being served -- Caddy returns 502 for a dead upstream on its own, which is the
+      # correct degradation.
       viewer:
-        condition: service_healthy
+        condition: service_started
     networks:
       - internal
 

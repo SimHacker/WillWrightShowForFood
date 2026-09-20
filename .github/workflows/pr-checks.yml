@@ -1,5 +1,9 @@
 name: PR Checks
 
+# Provision toolchains, then hand off. The checks themselves live in scripts/ci-verify.sh so
+# they can be run and debugged locally; only runner setup that needs the Actions cache stays
+# in this file.
+
 on:
   push:
     branches: [main]
@@ -15,10 +19,7 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
-      - run: corepack enable
-      - run: pnpm install --frozen-lockfile
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -r requirements.txt
-      - run: pnpm run verify:yaml
+      - run: bash scripts/ci-verify.sh

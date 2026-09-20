@@ -11,6 +11,7 @@
     "convert": "python3 scripts/convert-all.py"
   },
   "devDependencies": {
+    "@sveltejs/adapter-node": "^5.5.7",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.70.3",
     "@sveltejs/vite-plugin-svelte": "^7.3.0",

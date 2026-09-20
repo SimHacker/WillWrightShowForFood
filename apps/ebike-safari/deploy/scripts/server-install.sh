@@ -83,5 +83,5 @@ echo "Starting stack…"
 docker compose up -d
 
 echo "Deployed from git checkout at ${REPO_DIR}"
-echo "Updates: sudo bash ${DEPLOY_DIR}/scripts/server-deploy.sh"
+echo "Updates: sudo bash ${REPO_DIR}/scripts/server-deploy.sh <app>   (--list to see them)"
 echo "Health: curl -s http://127.0.0.1/api/health"

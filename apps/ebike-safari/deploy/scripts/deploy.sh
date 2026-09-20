@@ -26,8 +26,11 @@ if [[ "${ACME_EMAIL:-you@example.com}" == "you@example.com" ]]; then
 	exit 1
 fi
 
-echo "Building viewer image…"
-docker compose build viewer
+# No service named, so everything with a `build:` gets built — which is now the viewer alone,
+# since Caddy went back to the official image and HyperTIES is a bind-mounted release. Locally
+# you want the whole stack current; scripts/deploy-all.sh is the one that scopes by app.
+echo "Building images…"
+docker compose build
 
 echo "Starting stack…"
 docker compose up -d

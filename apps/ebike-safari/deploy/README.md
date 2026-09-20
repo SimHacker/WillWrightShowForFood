@@ -40,10 +40,69 @@ Or [request a project-count increase](https://support.google.com/code/contact/bi
 
 Push changes to GitHub from your Mac (`gh`/git). On the VM, pull and rebuild — no Mac docker, no Cloud Build, no rsync.
 
+Deploys are scoped to named projects, and nothing deploys unless you say its name. Trigger one
+without leaving your laptop:
+
+All the deploy scripts now live at the repo root in `scripts/`, because they serve every app
+rather than this one. Run them from the repo root:
+
+```bash
+git push origin main
+bash scripts/deploy-remote.sh hyperties          # HyperTIES content
+bash scripts/deploy-remote.sh ebike-safari       # the viewer app
+bash scripts/deploy-remote.sh --list             # what exists, and what each deploy does
 ```
-Mac:  git push origin main
-VM:   sudo bash scripts/server-deploy.sh
+
+`deploy-remote.sh` knows one thing: which VM to ssh into. It forwards every argument to
+`scripts/server-deploy.sh`, which adds the two server-only facts (create the release root,
+default to `origin/main`) and hands off to `scripts/deploy-all.sh`. Same thing by hand on the box:
+
 ```
+VM:   sudo bash scripts/server-deploy.sh hyperties
+```
+
+### The three layers, and why each exists
+
+| Layer | Files | Knows about |
+|---|---|---|
+| Per app | `apps/*/scripts/build-app.sh`, `deploy-app.sh` | How *this* app builds and goes live |
+| Aggregate | `scripts/build-all.sh`, `deploy-all.sh` | Which apps exist — by looking, not from a list |
+| Entry points | `scripts/server-deploy.sh`, `deploy-remote.sh` | Which machine, which git ref |
+
+Apps are discovered by convention: anything with `apps/<name>/scripts/deploy-app.sh` is
+deployable. There is no registry to update, so adding an app changes no file above it — which is
+the property that keeps the CI workflow from needing an edit per app.
+
+Every layer runs identically on a laptop and on the VM. `RELEASE_ROOT` is `/srv/wwsff` on a
+server and `.releases/` in the repo otherwise, so testing a deploy locally exercises the real
+code path rather than a simulation of it. Worth doing, too: the build/deploy handoff broke the
+first time precisely because a dirty working tree names releases differently, and only a laptop
+has one.
+
+### What each deploy actually does
+
+- **hyperties** builds to `$RELEASE_ROOT/hyperties/releases/<commit>` and swaps the `current`
+  symlink with `rename(2)`. Caddy resolves that symlink per request, so **nothing restarts and
+  no request sees a half-published site.** Rollback is the same rename backwards:
+  `bash apps/ties/scripts/deploy-app.sh --rollback <id>`, with `--list` to see the options.
+- **ebike-safari** rebuilds its image and recreates the viewer container. Brief 502s while it
+  comes back, which Caddy serves on its own.
+- **Neither recreates Caddy**, so neither interrupts TLS for the other site.
+
+A Caddyfile or redirect change is a separate, gentler operation: `bash scripts/reload-ingress.sh`
+validates the config in a throwaway container and then reloads the running Caddy in place, with no
+downtime at all. Only a change to compose itself — image, ports, volumes — needs
+`--recreate`, and that is the one operation that briefly interrupts TLS for everything.
+
+Two failure modes this replaced, kept because both actually happened:
+
+- **Caddy used to be built from a Dockerfile** with the HyperTIES build baked in. Compose only
+  builds during `up` when an image is missing, so a changed build context silently kept serving
+  the old image — which is how the `hyperties.Caddyfile` fix sat undeployed while the site was
+  down. Releases are bind-mounted now, and there is no image to forget to rebuild.
+- **Caddy used to wait for the viewer to be healthy** before starting. That made hyperties.org
+  hostage to an unrelated app's healthcheck. It is `service_started` now; a dead upstream is a
+  502 from Caddy, not an unserved static site.
 
 First boot on a fresh VM:
 
@@ -250,7 +309,7 @@ python scripts/pipeline.py --sync --trips-dir demo/rides --out deploy/data \
 Or copy an existing `web/data/` tree into `deploy/data/`. Then restart:
 
 ```bash
-sudo bash deploy/scripts/server-deploy.sh
+sudo bash scripts/server-deploy.sh ebike-safari
 ```
 
 Demo data is baked into the image for local builds only; production requires `deploy/data/manifest.json` on the host.
@@ -296,10 +355,10 @@ SVELTE_ADAPTER=node pnpm run build   # same as Docker production build
 
 ## Updates
 
-On the VM after `git push` from your Mac:
+On the VM after `git push` from your Mac — name the app, since nothing deploys unless you do:
 
 ```bash
-sudo bash /opt/WillWrightShowForFood/apps/ebike-safari/deploy/scripts/server-deploy.sh
+sudo bash /opt/WillWrightShowForFood/scripts/server-deploy.sh ebike-safari
 ```
 
 ## Troubleshooting

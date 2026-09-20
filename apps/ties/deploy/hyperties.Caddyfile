@@ -1,19 +1,32 @@
-# HyperTIES — served straight off disk.
+# HyperTIES — served straight off disk, with hyperties.org as the one canonical name.
 #
 # The reader is prerendered (adapter-static), so there is no application to proxy to:
-# 138 HTML files and about 2 MB of assets, baked into the Caddy image by
-# Dockerfile.caddy. Nothing to keep running, nothing to restart, nothing to fall over.
+# 138 HTML files and about 2 MB of assets. Nothing to keep running, nothing to restart,
+# nothing to fall over.
 #
-# All three names are in ONE site block, so Caddy provisions ONE Let's Encrypt
-# certificate carrying all three as SANs rather than three separate certificates.
-# Splitting them later -- .org for the archive, .net for the reader -- means moving a
-# hostname into its own block with its own root, and nothing else.
+# The root is a SYMLINK, not a directory. `/srv/hyperties` is a bind mount of
+# $RELEASE_ROOT/hyperties, whose `current` link points at one release under releases/.
+# Caddy resolves the link per request, so publishing a release is a rename and a rollback
+# is the same rename backwards -- no rebuild, no restart, no window of half-old articles.
+# Deploy with apps/ties/scripts/deploy-app.sh.
+#
+# Only hyperties.org serves content. Every other name we own redirects to it, so there is
+# one URL to cite, one set of links for search engines to consolidate, and no way to read
+# the same article at three addresses.
+#
+# hyperties.com is NOT ours -- it belongs to an unrelated IT recruitment firm on Polish
+# hosting. Nothing here can or should touch it.
 #
 # Each name needs an A record (and AAAA if the VM has IPv6) pointing at this server
 # BEFORE first start, or the ACME challenge fails and Caddy backs off and retries.
+# As of 2026-09-20 all six names below resolve to the VM.
 
-hyperties.org, hyperties.net, hyperties.link {
-	root * /srv/hyperties
+# The canonical site, deliberately alone in its block so it gets a certificate of its own.
+# When names share a block they share one certificate, and a single name failing its ACME
+# challenge takes down every name on it. Isolating hyperties.org means the address people
+# actually cite cannot be broken by a problem with .net or .link.
+hyperties.org {
+	root * /srv/hyperties/current
 	encode zstd gzip
 
 	# Vite writes content-hashed filenames under _app/immutable, so those are safe to
@@ -33,14 +46,13 @@ hyperties.org, hyperties.net, hyperties.link {
 	}
 }
 
-www.hyperties.org {
+# Everything else we own, folded into one redirect. {uri} preserves the path and query, so
+# a deep link to an article survives the hop instead of dumping the reader on the homepage.
+# `permanent` is a 301: browsers and search engines cache it, which is the point.
+#
+# These five share one certificate. That is the acceptable side of the tradeoff above --
+# if one of them fails to validate the others stop redirecting, but the canonical name
+# keeps serving, and a broken redirect is a smaller outage than a broken site.
+hyperties.net, hyperties.link, www.hyperties.org, www.hyperties.net, www.hyperties.link {
 	redir https://hyperties.org{uri} permanent
-}
-
-www.hyperties.net {
-	redir https://hyperties.net{uri} permanent
-}
-
-www.hyperties.link {
-	redir https://hyperties.link{uri} permanent
 }
