@@ -576,6 +576,267 @@ propaganda channel is a working app, and the playset's TV can tune to it.
 `axes gated them before writing any of it as fact. Heather and Steve's call on whether`
 `the TV is a zombie-sims plugin or the Cult Sims hub proper.`
 
+## High fives, and what they lead to
+
+*Don, 20 Sep 2026: when in a cult, members can high five each other to increase their
+relationship, so the whole cult bonds together. And you know what that leads to! …Lots of
+just incidentally happens to be gay, not that there's anything wrong with that, sex.*
+
+### The high five is a membership-gated hand-cranked Super Cupid
+
+Gate the interaction on shared membership and two things happen at once. The obvious one is
+bonding. The better one is that **the pie menu becomes the membership test** — if the slice
+is offered, they are in your cult, so a player discovers the affiliation graph by walking up
+to people and seeing what is on the menu. No UI required, and it works for a cult whose
+members are wearing
+[mosaics instead of faces](#the-pixelation-clubs-or-regalia-made-of-absence).
+
+Mechanically this is **the hand-cranked version of Super Cupid's `complete` topology**.
+[Super Cupid](life-events-playset.md) takes a scope and a topology — complete, star, perfect
+matching, clique partition — and rewrites a whole region of the relationship matrix in one
+gesture; everyone loving everyone is what `complete` means. A cult with a mutual high five
+grinds its way to the same matrix pair by pair, cheaply and repeatedly, in
+[daily and lifetime increments](../../process/art-thief-game.yml). Normal Sims
+relationships grow slowly and pairwise; **a cult is a relationship-inflation machine that
+raises the entire clique at once**, because everyone is doing it with everyone.
+
+### There is no platonic channel
+
+Here is the engine fact that makes Don's punchline inevitable rather than editorial: **The
+Sims tracks one relationship score per pair, not separate friendly and romantic tracks**,
+and romantic interactions unlock above a threshold on that single score. So bro-bonding and
+courtship accumulate *the same number*. There is no way to become extremely close to
+someone without also becoming romance-eligible with them.
+
+Which makes the choice of gesture perfect. A high five is the most deniable physical
+contact available — it is the no-homo handshake — and **the engine cannot tell it apart from
+courtship, because a relationship point is a relationship point.** The deniability is
+entirely in the animation. The accumulation is identical.
+
+### The engine never checks gender, so nobody has to write the joke
+
+The Sims shipped without modelling sexual orientation. Romantic interactions were offered on
+relationship score, and the code did not consult gender — which is why same-sex romance was
+in the game from the start, and why it surfaced publicly in a live E3 demo when two female
+Sims kissed without anyone having planned it.
+
+So the romance graph that falls out of a fully-bonded cult is **orientation-blind by
+omission**. Nothing was authored. Nobody added a gag. An engine that counts relationship
+points and does not check gender, pointed at a roster that high-fives itself all day,
+produces exactly what Don says it produces.
+
+**And that is the sharpest thing in this document, because of what it would take to prevent
+it.** To make the cult behave according to its stated ideology, somebody would have to go
+*add a gender check to the romance system*. The prejudice is not in the machine; it is a
+feature request, and it would have to be filed, specified, and implemented on purpose.
+
+> **The satire is not that these people are secretly anything. It is that the cohesion
+> ritual does not share the cult's politics, and the simulation is indifferent exactly where
+> the doctrine is obsessed.**
+
+That aims at the doctrine's incompatibility with its own machinery rather than at any
+wearer, which is the standard
+[this document set for itself](#where-the-satire-is-aimed) — and it survives a fact-check,
+because the mechanism is just what the engine did in 2000.
+
+**There is also no closet in the engine.** The relationship is in the data, visible in the
+panel, and Sims cannot lie about it. So the god-view asymmetry this playset keeps producing
+arrives a third time: the player watches [advertisement scores
+re-weight](#the-mechanic-the-tv-does-not-touch-the-sim) that Sims cannot perceive, watches
+[slime accumulate](#audience-gating-is-the-whole-point) that Sims read as mess, and now
+watches a romance graph the doctrine denies. Seinfeld got the accompanying dialogue right in
+1993 — the frantic disclaiming *is* the tell, and "not that there's anything wrong with
+that" is what the protest sounds like from outside.
+
+### Cohesion is stored potential energy
+
+Now the payoff. Everyone in the cult is in love with everyone. One public kiss with a
+newcomer, and the
+[Slap Conga](../../repo-shows/will-wright-premiere/simprov-slap-conga.yml) runs — except the
+queue is not a handful of lovers now, it is **the entire congregation, in line, one at a
+time**, with Buddha keeping their motives alive so the line does not collapse before it
+finishes.
+
+It is a spring rather than a fuse, which is the next section.
+
+**Slap-queue length is proportional to how tightly the cult bonded**, and queue length was
+already the score. So the bonding phase is literally the high-score setup: *Cult Sims is a
+Slap Conga farm.* The mechanism that holds the cult together is the mechanism that detonates
+it, and the tighter it is held, the bigger the detonation.
+
+**The guru is therefore the single point of failure.** Point Super Cupid's `star` topology
+inward and adoration flows to the leader, which means the leader is everyone's romantic
+target simultaneously — so the leader kissing any one member in public slap-queues the whole
+room. That the sexual conduct of the leadership is where these organisations actually come
+apart is not a joke this document has to make; the topology makes it.
+
+### The slap congas keep it spicy: a limit cycle, not a death spiral
+
+*Don, 20 Sep 2026: and the slap congas will keep it spicy!*
+
+**Plural, and the spec already agrees.** The Slap Conga's secondary scores are
+`queues_survived` and `time_to_first_conga`, and its buff rule is "kiss or Cupid to restore
+relationship — **queue may reform**." It was designed to recur. So the cascade is not the
+cult's ending, it is its **metabolism**.
+
+The loop runs on the machinery already described, and it closes on itself:
+
+1. High fives inflate the matrix. Cupid converts scores into romance.
+2. One public kiss fires a congregation-length slap queue. Relationships crater.
+3. The repair mechanism for cratered relationships is… **the high five**, which is sitting
+   right there and is still membership-gated.
+4. Go to 1, tighter than before.
+
+**Rupture-and-repair is stickier than never having fought**, because step 3 is an investment
+and the member now has repair work sunk into the group. Each cycle raises the switching cost
+that [defection](#the-hat-is-a-better-mechanic-than-persuasion) has to overcome. So the
+cascade is **retention, not attrition** — which is the opposite of what it looks like while
+it is happening, and it is the reason `queues_survived` reads as a tenure metric rather than
+a damage count. A cult that has survived twelve of these is not a fragile cult.
+
+**The cascade also filters.** Weak-tie members drop below the affinity threshold and leave
+during the chaos; the ones who stay were the committed ones, so average commitment *rises*
+after every crisis. Tighter roster, more inflated matrix, larger next queue: **the amplitude
+grows**. That is an oscillator winding up, and eventually it does break — but it breaks as a
+[schism](#many-slots-many-cults-at-once) rather than as a collapse, because the survivors are
+more committed than they started.
+
+And the Slap Conga's own design notes already call this **"failure-as-entertainment"**, which
+is the whole point of the word *spicy*. **Drama is the product.** The cult is not selling
+hats, it is selling the cycle — and that is precisely what the
+[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) on the other
+side of the lot is doing too, manufacturing outrage that requires more channel to resolve.
+**The broadcast apparatus and the cult turn out to be the same shape**, which is the finding
+this playset was built to arrive at, and neither object had to be told.
+
+### The lifecycle, which is a loop
+
+The playset now has endogenous dynamics and it needed no new mechanisms:
+
+| Stage | Object | What happens |
+|---|---|---|
+| Demand | [television](#the-television-is-the-demand-side-and-channels-dispense-ideology) | a channel builds affinity for a stand |
+| Recruitment | [SwagOMatic](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) | the Sim buys the marker and joins |
+| Cohesion | high five | the relationship matrix inflates across the roster |
+| Romance | Cupid / Super Cupid | high scores become a lover stack, orientation-blind |
+| Rupture | one public kiss | the congregation-length jealousy queue |
+| **Repair** | **high five again** | **the loop closes here — back to cohesion, tighter** |
+| Attrition | Eloporter | weak ties fall below threshold and leave; the core concentrates |
+| Schism | a second stand | eventually, and only when the amplitude gets too large |
+
+Before this, Cult Sims could recruit and could lose members, but nothing made it *live*. The
+high five supplies a cycle rather than a failure state, and the cult does not die of its own
+bonding so much as **run on it**.
+
+## Population tools: Instacult, Banish, and the deprogrammer
+
+*Don, 20 Sep 2026: "Instacult" pie menu item that instantiates 10 more cult members. Hmm,
+might need a deprogrammer to take them away too. Or just "Banish" pie menu item on them.*
+
+The instinct to ship the unmake button alongside the make button is the right one, and the
+three tools Don names are not variations on each other — **one is a god tool, one is a cult
+power, and one is a rival institution.** Keeping them distinct is most of the design.
+
+### Instacult makes the experiments runnable
+
+Almost nothing above is observable at household scale. A
+[mass re-dress queue](#the-switch-is-a-loyalty-assay-and-the-comedy-is-in-the-uniformity), a
+congregation-length slap cascade, an inflated relationship matrix, a
+[dropout count](#the-switch-is-a-loyalty-assay-and-the-comedy-is-in-the-uniformity) — all of
+them need a roster, and the Slap Conga's setup step is currently the manual chore of
+"pre-invite a crowd onto the lot, trap / seat them." **Instacult is the button that does the
+tedious part**, which makes it an instrument rather than a cheat.
+
+It has a sibling already in the kit: [Super Cupid](life-events-playset.md) "mints nothing"
+and rewrites a whole region of the relationship matrix in one gesture. Instacult does the
+same thing for population that Super Cupid does for relationships — **skip the grind, arrive
+at the interesting state.** Naming that as a pattern is useful, because the playset needs
+both: you cannot study a crowd phenomenon by recruiting one Sim at a time.
+
+**The ten arrive pre-converted, already wearing the hat**, and that is worth stating plainly
+because it is a limitation rather than a feature: *Instacult bypasses conversion entirely, so
+it can tell you nothing about conversion.* The TV-and-stand pipeline is the argument; Instacult
+is the crowd. A careful player uses one to populate and the other to demonstrate, and having
+both makes the distinction visible instead of blurred. The uniformity gag comes free — ten
+identical members materialising in identical hats.
+
+### Banish is excommunication, and it belongs to the guru
+
+A **Banish** pie slice is the cheap removal, and the question that decides what it *means* is
+who gets the menu item.
+
+| Operated by | What it is | Effect on the rest |
+|---|---|---|
+| the player | a god tool — sandbox cleanup | none, it is outside the fiction |
+| **the guru or the stand** | **excommunication** | **the interesting one** |
+
+Make it a cult power and it stops being housekeeping: **purging one member in front of the
+congregation should raise everyone else's commitment.** Discipline performed publicly is a
+retention mechanism, which pairs exactly with the
+[cascade-as-filter](#the-slap-congas-keep-it-spicy-a-limit-cycle-not-a-death-spiral) — the
+cascade concentrates the core by attrition, and the purge concentrates it by force. Same
+direction, two different costs.
+
+That also gives the guru a lever the player can watch being abused, which the document's
+[open question about a conduct guard](#open) was already circling.
+
+### The deprogrammer is a rival cult with a roster of one
+
+This is the best of the three, and the reason is uncomfortable. The
+[divorce attorney pattern](life-events-playset.md) already exists — an artifact summons an
+NPC who is a "cleaver, not catcher: severs and frees" — so a **deprogrammer's business card**
+needs no new plumbing. It costs money, it takes time, and it can fail.
+
+The part worth building is **what it is made of**. Deprogramming, historically, frequently
+meant removing somebody against their will, isolating them, and applying sustained pressure
+until their affiliation changed — the anti-cult intervention that ran the cult's own
+playbook. So implement it that way, **out of the identical objects**: the
+[Eloporter](#it-wires-into-objects-that-already-exist) to take the member away, Buddha to
+keep their motives alive while isolated, repeated interaction to overwrite the affinity.
+
+> **If deprogramming is mechanically indistinguishable from conversion, that is a finding
+> rather than a bug** — and the player discovers it by building the counter-apparatus and
+> noticing they reached for the same parts bin.
+
+Nobody has to editorialise, which is the standard the rest of this document holds to. The
+deprogrammer aims at the *apparatus*, including the apparatus that bills itself as the cure.
+
+### Robustness for the population tools
+
+- **Instacult needs a cap and a graceful refusal.** Four stands times ten members is a
+  crowd no lot will route, and sims1 has population limits. Refuse politely at the ceiling,
+  spawn what fits, say so — do not spawn into a frozen lot.
+- **Banish is per-slot, like everything else.** Banishing a member of three cults removes
+  them from *one*. The other two must not notice.
+- **Banishing the guru** has to be answered rather than crashed. Either the stand promotes
+  somebody, or the cult dissolves and everybody is unhatted — both are fine, but one of them
+  has to be chosen.
+- **Banishing the last member** dissolves the group host, and the stand stays on the lot
+  selling to nobody, which is the correct and funnier outcome.
+- **Deprogramming must be reversible**, because
+  [re-conversion is the interesting case](#open) — a Sim who has been deprogrammed once and
+  walks back to the stand is the most informative Sim on the lot.
+
+### The regalia gets in the way of the ritual
+
+One consequence worth keeping, because it falls out of anatomy rather than intent: a high
+five uses **hands**, and the [hand-slot clubs](#many-slots-many-cults-at-once) have claimed
+them. Balls For Hands members high-five with soft-body physics and a boing. Pixelated Left
+Hand members high-five into a mosaic that censors the moment of contact.
+
+So **cults whose regalia occupies the hand bond worse than cults that claim the head** —
+their cohesion ritual is physically obstructed by their own uniform. That is a genuine
+balance implication derived from where the hats go, and it means the slot a stand claims
+decides not only [who its rivals are](#many-slots-many-cults-at-once) but how strong it can
+ever become.
+
+`needs-check: whether sims1 exposes High Five as a base social or whether it arrives with`
+`an expansion — the gesture matters to the joke, so a substitute would need the same`
+`deniability. Also confirm the single-relationship-score claim for sims1 specifically,`
+`since later games split friendly and romantic tracks and the whole "no platonic channel"`
+`argument depends on sims1 not doing that. The E3 demo story is widely repeated; get a`
+`citation before it goes on air.`
+
 ## What is genuinely new
 
 Three things, and all of them are mechanisms rather than objects:
