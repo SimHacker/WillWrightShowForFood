@@ -118,8 +118,68 @@ Set:
 - `ACME_EMAIL=` your email (Let's Encrypt)
 - `POSTGRES_PASSWORD=` generated secret
 - `ORIGIN=https://ebike-safari.com`
+- `MAPBOX_TOKEN=` see below
 
 `.env` is gitignored.
+
+### Mapbox token
+
+**Where it lives:** 1Password, Ground Up Software account (`don@donhopkins.com`), item
+**Mapbox**, vault **Personal**, field **token**. Reference: `op://Personal/Mapbox/token`.
+
+```bash
+# print it (local machine, not the VM)
+op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com
+
+# local dev — regenerate the gitignored file the viewer reads
+op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+  | sed 's/^/MAPBOX_TOKEN=/' > ../viewer/.env.local
+
+# the VM — append to deploy/.env over ssh, without it touching your shell history
+op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+  | ssh ebike-safari-1 'umask 077; sed "s/^/MAPBOX_TOKEN=/" >> /opt/WillWrightShowForFood/apps/ebike-safari/deploy/.env'
+```
+
+**Why the name has no `PUBLIC_` prefix.** The viewer prerenders with `ssr = false`, so
+anything named `PUBLIC_*` is compiled into the static bundle at `pnpm build` and ends up in
+the Docker image layer — committing you to a rebuild to rotate. `MAPBOX_TOKEN` stays private,
+is read at runtime with `$env/dynamic/private` inside a `+server.ts`, and handed to the
+browser by an endpoint. Rotating it is then `docker compose restart viewer`.
+
+**What this does and does not protect.** Keeping it out of the repo and out of the image is
+real and worth doing. But a `pk.*` token that draws map tiles in a browser is *sent to every
+visitor* — it cannot be secret, and no amount of secret management changes that. The control
+that actually matters is a **URL restriction on the token itself**, and the current default
+public token has `URLs: N/A`, meaning unrestricted. Before launch, create a token in the
+[Mapbox console](https://console.mapbox.com/account/access-tokens/) scoped to
+`ebike-safari.com`, use that one here, and leave the unrestricted default out of production.
+
+If the token must never reach the browser — for a server-side API such as
+[Isochrone](../design/peerboard-and-brews.md) — then keep it server-only and proxy the call,
+which the Node server is already positioned to do.
+
+**Optional hardening: Secret Manager instead of a file on disk.** The `.env` pattern above is
+the house standard and satisfies "not in the repo". To move the source of truth into GCP:
+
+```bash
+# once, from your machine
+op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+  | gcloud secrets create mapbox-token --data-file=- --project=ebike-safari
+
+# grant the VM's service account read access
+gcloud secrets add-iam-policy-binding mapbox-token --project=ebike-safari \
+  --member="serviceAccount:$(gcloud compute instances describe ebike-safari-1 \
+      --zone=europe-west4-a --project=ebike-safari \
+      --format='value(serviceAccounts[0].email)')" \
+  --role=roles/secretmanager.secretAccessor
+
+# on the VM, before `docker compose up` — fetch into the env it already reads
+echo "MAPBOX_TOKEN=$(gcloud secrets versions access latest --secret=mapbox-token)" \
+  >> deploy/.env
+```
+
+That keeps rotation in one place and leaves the deploy flow unchanged, since the container
+still reads `MAPBOX_TOKEN` from the environment either way.
 
 ## 5. Deploy
 
