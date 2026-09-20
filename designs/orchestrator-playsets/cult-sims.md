@@ -311,6 +311,100 @@ host and nobody has to pick it up.
 struggle the Sims engine is extremely good at staging. One object, high advertisement,
 one holder at a time.
 
+### I'm the Slime: the worked example of a channel
+
+*Don, 20 Sep 2026: a TV set that plays the riff from Zappa's slime oozing out from your TV
+set, then plops a green expanding slime-puddle out in front of it, and at the same time
+anyone watching — it only does this when people are watching — gets their souls corrupted
+in some way, like gaining an affinity for red caps.*
+
+**Zappa wrote this object's spec in 1973.** "I'm the Slime," on *Over-Nite Sensation*, is
+sung in the first person *by* a television, and its verses are a functional description of
+everything above:
+
+- "I'm the slime oozin' out from your TV set" — the spawn behaviour, taken literally.
+- "I'm the tool of the government / And industry too / For I am destined to rule / And
+  regulate you" — the apparatus thesis, stated by the apparatus.
+- "I may be vile and pernicious / But you can't look away / **I make you think I'm
+  delicious** / With the stuff that I say" — **this is advertisement modification in
+  verse.** The slime does not compel anybody. It makes things *seem* delicious. That is the
+  same mechanic as [the TV never touching the Sim](#the-mechanic-the-tv-does-not-touch-the-sim),
+  and it was written fifty-three years before this document argued for it.
+
+Like [the Sneetches](#multiple-stands-and-why-the-smallest-difference-makes-the-worst-feud)
+for the SwagOMatic, the reference is not decoration — it is a better statement of the
+design than a spec would manage, by someone who was making the argument first.
+
+### Audience-gating is the whole point
+
+"It only does this when people are watching" is the load-bearing constraint, and it is not
+just thrift. **A TV in an empty room is inert.** Nothing oozes, nothing accrues, no soul
+moves. Which means the Sim's own attention is the delivery vector: you cannot be corrupted
+by a television you are not watching, so the corruption requires the victim's
+participation at every step and there is still no moment anybody could point to and call
+it coercion. It is the document's argument compressed into a trigger condition.
+
+Two things follow that are worth more than the joke:
+
+**The puddle is a viewership meter.** It expands with audience-hours, so a room's floor
+records how much watching happened there. The player reads accumulated corruption as
+literal floor coverage while the Sims see only a mess — the god-view asymmetry again, this
+time as a physical quantity rather than a debug overlay. Walk into a strange house, look at
+the floor, and you know what they have been watching.
+
+**Sims mop puddles**, which is native behaviour and it closes a loop the satire could not
+buy: watching television generates housework. Leave it and the slime takes the room, so the
+apparatus fouls its own nest and somebody has to be assigned to clean up after the
+ideology. Who mops is a household politics question, and it will not be whoever holds the
+remote.
+
+### What "corrupted soul" means mechanically
+
+Don's word is the precise one, because in this repo a soul is **persistent saved identity**
+rather than a mood — see [the sims1 Soul Bridge](../../catalogs/soul-city/sims1-soul-bridge.md).
+So watching has two distinct effects, and separating them is what makes the demand side
+actually reach the supply side:
+
+| | While watching | Written to the soul |
+|---|---|---|
+| Scope | the room | **travels with the Sim** |
+| Lifetime | ends when they walk away | persists, and it is saved |
+| Effect | other objects' ads re-weighted | a standing **affinity** for a swag line |
+
+The second row is the upgrade. A room-scoped re-weight cannot convert anybody, because the
+stand is somewhere else; an affinity that travels means a Sim watches at home and then
+walks across the lot to a [SwagOMatic](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game)
+under their own steam. **Exposure becomes conversion at the moment the effect stops being
+local.** And affinity accrues per watching-hour, so it is a dose — two Sims in the same
+room with different viewing histories arrive with different affinities, and the puddle
+measures the dose for both of them.
+
+Because souls in this repo persist past death — the graveyard manager and the tombstone
+generator whose container is "text and a soul" — **a corrupted soul stays corrupted into
+the afterlife.** The ghost still wants the hat. Nobody has to write that joke; the save
+format commits it.
+
+The corruption is per-channel, which is what wires this into the faction machinery: Faux
+News grants red-cap affinity, a rival channel grants some other colour, and the
+`channel binding` parameter in the knob table stops being bookkeeping and becomes the
+**transmission path** — channel makes the want, the soul carries it, the stand collects.
+Three stages, three objects, all of them already designed.
+
+### Shipping the riff without shipping the riff
+
+Zappa's estate is not a rights holder to improvise around, and the repo already solved this
+exact problem: [**recipes, not files**](../../catalogs/soul-city/rendering-and-rights.md).
+A moody station travels as envelope and timing data keyed to a **track identity** — duration
+plus acoustic fingerprint — matched against the copy the recipient already owns, which is
+the LRC and karaoke-chart tradition and asks nobody to fetch anything.
+
+So the slime TV ships as **a cue sheet, not a song**: the ooze event, the expansion curve,
+and the affinity tick are timed against a track identity, and they fire for a player who
+owns *Over-Nite Sensation* and do nothing at all for one who does not. The
+[jukebox and Squawk Box shops](../../catalogs/soul-city/object-shops.md) already supply the
+player's-own-audio slot. Quoting four lines of lyric in a design document is a different
+question from shipping a recording, and this document is doing the former.
+
 ### The channel lineup is the faction generator
 
 Different channels dispense different ideologies, which means the schism mechanic gets
@@ -362,6 +456,12 @@ without a single coercion state.
   a schism is now concrete — **it is a second stand appearing** — so the open part is
   narrowed to what happens to the shrine, and to whether two stands stocking the same
   colour merge or feud.)
+- **Does the slime itself corrupt, or is it only the receipt?** Secondhand exposure —
+  walk through somebody else's puddle, catch somebody else's affinity — is tempting and
+  would give the contagion a second vector. The recommendation is **no**: keep the slime
+  as evidence and mess, and make watching the only way in, because "you had to watch it
+  yourself" is the argument this whole document is built on and a spreading floor that
+  converts bystanders quietly throws it away.
 - Heather and Steve's call, since Zombie Sims is theirs: is the cult a faction
   *inside* the outbreak, or a parallel outbreak with a different transmission rule?
 
