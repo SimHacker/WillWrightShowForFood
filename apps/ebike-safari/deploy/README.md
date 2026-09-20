@@ -125,20 +125,52 @@ Set:
 ### Mapbox token
 
 **Where it lives:** 1Password, Ground Up Software account (`don@donhopkins.com`), item
-**Mapbox**, vault **Personal**, field **token**. Reference: `op://Personal/Mapbox/token`.
+**Mapbox**, vault **Employee**. That item carries two tokens, and production wants the
+restricted one:
+
+| Field | Reference | Use |
+|---|---|---|
+| `ebike-safari-token` | `op://Employee/Mapbox/ebike-safari-token` | **production** — URL-restricted to `ebike-safari.com` |
+| `token` | `op://Employee/Mapbox/token` | the unrestricted default; local dev fallback only |
 
 ```bash
 # print it (local machine, not the VM)
-op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com
+op read "op://Employee/Mapbox/ebike-safari-token" --account groundupsoftware.1password.com
 
 # local dev — regenerate the gitignored file the viewer reads
-op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+op read "op://Employee/Mapbox/ebike-safari-token" --account groundupsoftware.1password.com \
   | sed 's/^/MAPBOX_TOKEN=/' > ../viewer/.env.local
 
 # the VM — append to deploy/.env over ssh, without it touching your shell history
-op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+op read "op://Employee/Mapbox/ebike-safari-token" --account groundupsoftware.1password.com \
   | ssh ebike-safari-1 'umask 077; sed "s/^/MAPBOX_TOKEN=/" >> /opt/WillWrightShowForFood/apps/ebike-safari/deploy/.env'
 ```
+
+**The restriction is real, and it blocks the dev server.** Measured 2026-09-20 against
+`api.mapbox.com/v4/…vector.pbf` with the production token:
+
+| `Referer` | Result |
+|---|---|
+| `https://ebike-safari.com` | **200** |
+| `http://localhost:5173` | **403** |
+| `http://127.0.0.1:5173` | **403** |
+| none | **403** |
+
+Two consequences. Requests with no referer are refused, so the token is useless pasted into
+a terminal — which is most of the value. And local dev will not render tiles unless you
+either add `http://localhost:5173` to the token's URL list in the console, or fall back to
+the unrestricted default token (`viewer/.env.local` ships that line commented out, ready).
+
+Note that the style *metadata* endpoint (`/styles/v1/…`) answers 200 regardless of referer;
+enforcement lands on the tile and data requests, which is where the billing is.
+
+**Scopes can be changed later without reissuing.** Editing a public token's scopes or URL
+restrictions in the console leaves the token string unchanged, so nothing needs
+redeploying — the one thing you cannot do is add a *secret* scope to a `pk.` token, since
+secret scopes produce an `sk.` token that is displayed once and must never reach a browser.
+This token deliberately carries `DATASETS:READ` and `VISION:READ` for experimentation; both
+are read-only, and the only thing to keep in mind is that the token is served to browsers,
+so anything readable through those scopes is readable by anyone who lifts it from the page.
 
 **Why the name has no `PUBLIC_` prefix.** The viewer prerenders with `ssr = false`, so
 anything named `PUBLIC_*` is compiled into the static bundle at `pnpm build` and ends up in
@@ -163,7 +195,7 @@ the house standard and satisfies "not in the repo". To move the source of truth 
 
 ```bash
 # once, from your machine
-op read "op://Personal/Mapbox/token" --account groundupsoftware.1password.com \
+op read "op://Employee/Mapbox/ebike-safari-token" --account groundupsoftware.1password.com \
   | gcloud secrets create mapbox-token --data-file=- --project=ebike-safari
 
 # grant the VM's service account read access
