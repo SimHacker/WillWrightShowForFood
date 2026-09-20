@@ -1,0 +1,122 @@
+# What a WillWrightShowForFood box is made of.
+#
+# Declarative on purpose: scripts/server-setup.sh converges a machine onto this file, and can be
+# run any number of times on the same machine with no additional effect. Adding a tool is editing
+# this file, not editing a script.
+#
+# THE SERVER IS CATTLE, THE DISK IS A PET.
+#
+# Everything in this file is reinstallable from scratch with one command, which is the property
+# that makes deleting a VM safe. Nothing here creates state worth keeping. The state lives on a
+# separate disk (see `disk:`) that outlives any particular server, and the honest accounting of
+# what is NOT yet on that disk is in `disk.not_yet_moved` -- read it before you delete anything.
+
+target:
+  os: ubuntu
+  release: '24.04' # noble. Older works; the docker repo line derives the codename at runtime
+  arch: amd64
+
+# apt packages, grouped by why they are here rather than alphabetically, because the grouping is
+# the argument for keeping each one. Install a subset with: --only base,dev
+packages:
+  base: # the box does not function without these
+    - ca-certificates
+    - curl
+    - git
+    - gnupg
+    - ufw
+    - rsync
+    - cloud-guest-utils # growpart, for when the boot disk gets resized under a live system
+    - python3-yaml # how this file gets read; installed in phase 0, before it is parsed
+
+  dev: # somebody lands here at 3am over a phone tether and has to actually work
+    - screen
+    - tmux
+    - emacs-nox # no X on a server, and -nox is 30MB instead of 300
+    - vim
+    - ripgrep
+    - jq
+    - tree
+    - htop
+    - ncdu # "what filled the disk", answered in ten seconds
+    - lsof
+    - net-tools
+    - dnsutils # dig, for the ACME failures that are always DNS
+    - unzip
+    - build-essential # native node modules need a compiler
+
+  ops: # diagnosing the stack without guessing
+    - ca-certificates
+    - postgresql-client # psql against the container, without exec'ing into it
+    - sqlite3
+
+# Docker Engine from Docker's own repo, not Ubuntu's, because the compose plugin and current
+# engine only exist there. Idempotent: the keyring and source list are rewritten to the same
+# bytes, and apt-get install of an installed package is a no-op.
+docker:
+  repo: https://download.docker.com/linux/ubuntu
+  keyring: /etc/apt/keyrings/docker.asc
+  packages:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    - docker-buildx-plugin
+    - docker-compose-plugin
+  # Members get docker without sudo. SUDO_USER is added automatically when set.
+  group_members: []
+
+# Node on the host, which is new: builds used to happen inside Docker, and HyperTIES now builds
+# on the box and publishes a release directory. Without this, `deploy-all.sh hyperties` fails at
+# pnpm install.
+node:
+  major: 22
+  source: nodesource # deb.nodesource.com, which is the only apt route to a current major
+  # pnpm is deliberately NOT pinned here. Root package.json's `packageManager` field is the one
+  # source of truth and corepack reads it, so the server cannot drift from CI and laptops. A
+  # version in this file would be a second truth that silently disagrees.
+  pnpm: from_repo_package_json
+
+firewall:
+  # Caddy needs 443/udp for HTTP/3. The old scripts opened only tcp, so HTTP/3 was advertised
+  # and then unreachable, which browsers handle by falling back quietly.
+  allow:
+    - OpenSSH
+    - 80/tcp
+    - 443/tcp
+    - 443/udp
+  default_incoming: deny
+  default_outgoing: allow
+
+repo:
+  url: https://github.com/SimHacker/WillWrightShowForFood.git
+  dir: /opt/WillWrightShowForFood
+  # Shallow is fine and deliberate: the box builds what is at a ref, it is not a place anyone
+  # does history archaeology. `server-deploy.sh` fetches what it needs.
+  clone_depth: 1
+
+disk:
+  # THE PET. A separate GCP persistent disk, attached to whatever server currently exists.
+  # Detach it, delete the VM, create a new VM, attach it, run server-setup.sh, deploy. That is
+  # the whole disaster-recovery story and it is the reason this file exists.
+  mount: /srv/wwsff
+  # GCP exposes an attached disk by its device name under by-id. Set DATA_DISK to override.
+  device_hint: /dev/disk/by-id/google-wwsff-data
+  fstype: ext4
+  # Never format a disk that already has a filesystem. server-setup.sh refuses, rather than
+  # asking, because the wrong answer here is unrecoverable and the right one takes one flag.
+  format_if_empty: true
+
+  contains:
+    releases: 'One directory per build, named for its commit; `current` is the symlink Caddy follows'
+
+  not_yet_moved:
+    # Read this before treating the server as disposable, because today it partly is not.
+    pgdata: |
+      Still a docker named volume on the BOOT disk. Deleting the VM destroys the database.
+      Low stakes today (a users table and a seed), unacceptable once there are real accounts.
+    caddy_data: |
+      Still a docker named volume on the BOOT disk, and this one bites sooner than postgres:
+      it holds the Let's Encrypt account key and every issued certificate. Rebuilding the box
+      re-issues six certificates from scratch, against a rate limit of 5 duplicate certs per
+      week -- so a second rebuild in the same week fails and the sites go down on TLS.
+    migration: 'server/README.md#moving-the-database-and-certificates-onto-the-pet-disk'
