@@ -32,6 +32,16 @@ connections:
   david_levitt: "Pantomime Corporation teammates; Levitt CEO, Don Chief Architect."
   don: "Sims teammate and Pantomime colleague; canWiggle legend; still great buddies."
   drew_carey: "Animated Sims vignettes + laser blaster for the Drew Carey Show tie-in (House Party)."
+  faceball: |
+    His **Doppel** demo is the centrepiece showcase of the Faceball Construction Set design — a monkey
+    face on the full ARKit morph-target set, performed live with the applied weights on screen. It is
+    used there to set the ceiling and then to frame the actual goal (**seeds, not showpieces**).
+    → ../../designs/faceball-construction-set/README.md#what-it-looks-like-in-the-hands-of-a-great-artist
+  ecg_mouther: |
+    **The third seat in the ECG conversation.** repo-shows/tom-and-golan-ecg-mouther/ pairs Tom Ngo
+    (invented Embedded Constraint Graphics) with Golan Levin (built Mouther on it). Eric is the
+    working professional who has actually SHIPPED a blendshape/morph-target pipeline — inventor,
+    artist-researcher, practitioner. → ../tom-ngo/, ../golan-levin/
 
 why_invite: |
   Eric is an **independent contractor artist** (project- and hourly-based; not looking for 9-to-5
@@ -48,6 +58,8 @@ indie_work:
 
 links:
   youtube: "https://www.youtube.com/@irkinteraction"
+  artstation: "https://erichedman.artstation.com/projects/8wJDgw"    # "Maker of Stuff"
+  doppel: "https://www.youtube.com/watch?v=6L7jtgRD5rs"              # ARKit blendshape demo — Faceball's centrepiece
   steam: "https://steamcommunity.com/app/4033750/"        # Aether HeXXen
   itch: "https://irkinteraction.itch.io/aether-hexxen-death-space-requiem-act-1"
   patreon: "https://www.patreon.com/c/irkinteraction"
@@ -57,6 +69,7 @@ retrospective_videos:
   - { title: "The Sims: House Party retrospective (vid 1) — design, the crew, the object pipeline", url: "https://www.youtube.com/watch?v=rdzrdjHyFB8" }
   - { title: "House Party 2 — the Drew Carey Show tie-in (Marion Ross dance-floor story)", url: "https://www.youtube.com/watch?v=bLh0i7kerw8" }
   - { title: "irk Micropolis CA cellular-automata performance", url: "https://www.youtube.com/watch?v=319i7slXcbI" }   # (Jerry Martin's Chill Resolve — separate, but in the family)
+  - { title: "★ Doppel — Character Modelling with Blendshapes for Animation", url: "https://www.youtube.com/watch?v=6L7jtgRD5rs", what: "Monkey face on the full ARKit morph-target set, performed live with applied weights on screen. An ARKit answer to Animoji, published by IMVU. The demo Faceball is designed around, and his claim to the third seat in the ECG/Mouther show." }
 
 story_seeds:
   # Rich, first-hand anecdotes from his retrospectives — easily several Repo Shows' worth.
@@ -68,10 +81,12 @@ story_seeds:
   - "Aether HeXXen: a 'space witch' visual novel — a Night-Witches homage with strong capable women, ancient XX-keyed alien tech, a fish-out-of-water lead."
 
 show_suggestions:
+  # All four land in his own PLANTED show directory, which holds the episode list.
   - { seed: ../../repo-shows/eric-hedman/, what: "The Sims animation up close — vitaboy walk cycles/idles/gestures, broad 'pantomime' animation under frame-budget constraints, the canWiggle incident; the craft behind the little Sims." }
   - { seed: ../../repo-shows/eric-hedman/, what: "Designing the Sims expansion packs — House Party (incl. the Drew Carey Show tie-in: vignette animations + laser blaster), Livin' Large, Unleashed — plus the years at Disney/Henson/Nick." }
   - { seed: ../../repo-shows/eric-hedman/, what: "Pantomime reunion — Eric + David Levitt + Don; Sims animation craft meets AR/VR character work." }
   - { seed: ../../repo-shows/eric-hedman/, what: "Indie creator spotlight — Aether HeXXen visual novel + his hand-made 2D/3D art/animation pipeline. (Several shows' worth of stories.)" }
+  - { seed: ../../repo-shows/tom-and-golan-ecg-mouther/, what: "★ Third seat: Doppel and the ARKit morph-target set, beside Tom Ngo (invented ECG) and Golan Levin (built Mouther on it). Inventor, artist-researcher, and the practitioner who shipped it. How many of the 52 shapes earn their keep; where the blendshape basis fights you; what a hand-built viseme set gets you that a solver does not." }
 
 sources:
   wikipedia: null

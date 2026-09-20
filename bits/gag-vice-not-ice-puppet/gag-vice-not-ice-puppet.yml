@@ -16,24 +16,52 @@ the_bit: |
 what_its_really_about: |
   The joke is NOT "ha, a man in fake boobs" — the show LOVES drag and gender play; that's the opposite
   of shame. The target is HYPOCRISY + STATE CRUELTY: a DHS/ICE regime that persecutes immigrants and
-  trans people while (per tabloid reporting) its own household privately plays dress-up. Celebrate the
-  gender play; point the mockery at the cruelty and the double standard, not at anyone's cross-dressing.
+  trans people for who they are, run by officials who **costume themselves for the cameras** as a
+  matter of public routine. Celebrate the gender play; point the mockery at the cruelty and at the
+  official performance, never at anyone's private life.
 
-source-caveat: |
-  **Don's position:** it's **real** — it happened, and the neighbor who said the images "must have been
-  AI" was mistaken. The public sourcing is thin (NY Post relaying the Daily Mail, dated April 1, 2026,
-  with that "must have been AI" quote), so the repo won't stamp it as neutral, settled fact in its own
-  voice — but per Don we treat it as a **real thing being satirized**, not a hoax. And here's the joke
-  Don wants front and center: the real-vs-AI ambiguity is the whole gag. We build a **proudly, obviously
-  AI-coded** interactive boob-physics sim on top of it — **Crocodile Dundee style: "That's not AI. THIS
-  is AI."** We still do NOT republish the tabloid photo (copyright), and we keep it as **satire of a
-  public political figure** (a DHS/ICE regime and its household), not the outing of a private individual.
+the_target_is_the_officeholder: |
+  **Kristi Noem, Secretary of Homeland Security** — the official who runs the department, on the public
+  record, in her own press appearances. The satirical material is her **own publicly staged costume
+  presentation**: turning up to enforcement operations kitted out in tactical gear for photographers.
+  That is dress-up as statecraft, performed voluntarily, in public, by a cabinet officer — which is
+  fair game by every standard this repo has.
+  **The double standard writes itself and needs no tabloid:** an official who plays costume identity
+  for the cameras, heading a department that persecutes people over identity. Aimed at power, sourced
+  to public conduct, and funnier than the alternative because it is about her own choices.
+  needs-check: cite specific appearances and dates from mainstream reporting before writing a script.
+  Her public statements and DHS actions are the sourcing; nothing else is needed.
+
+retargeted_2026_09_20: |
+  **The spouse peg is OUT.** This gag previously hung on Bryon Noem — Kristi Noem's husband, a private
+  citizen who holds no office — via a Daily Mail item relayed by NY Post, dated **April 1 2026**, in
+  which a neighbour said the images "must have been AI."
+  Three reasons it is gone and not coming back:
+    1. **He is not a public figure.** Calling him one, and widening the target to "the regime and its
+       household," was the move that made a private person fair game. The officeholder is the target.
+    2. **The sourcing is a tabloid on April Fools' Day** with a witness saying it looked AI-generated.
+       And the Faceball adult section now argues at length that an occluder plus a tracking signal makes
+       audiences construct a maximal version WHETHER OR NOT anything is behind it — bubble porn fires on
+       empty. That argument refutes the "it's definitely real" reading of a blurry April 1 tabloid image.
+       → ../../designs/faceball-construction-set/adult-section.md#what-censorship-actually-does
+    3. **The house test, applied evenly.** trump_mushroom earns its place because it rests on public
+       record — court matters and an on-the-record published account. This had no equivalent. Same
+       rule, opposite verdict.
+  Nothing was lost: balloon_boobs is the marquee part on its own merits, count freedom is the showcase,
+  and "That's not AI. THIS is AI." is funnier aimed at AI slop generally than at a contested photo.
+
+thats_not_ai_this_is_ai: |
+  Kept, retargeted. **Crocodile Dundee style: "That's not AI. THIS is AI."** — aimed at the whole
+  current flood of AI slop and at every "must have been AI" dismissal, rather than at one disputed
+  image. We build a proudly, obviously AI-coded boob-physics sim and let it out-absurd the genre.
+  Stronger this way: the bit no longer depends on winning an argument about a photograph.
 
 care: |
   Consistent with puppet-me-consent#scope_and_care: satire of PUBLIC officials and their hypocrisy is
   fair game; gleefully punching DOWN at a private individual for gender-nonconformity is not the point
   (and cuts against our own pro-drag ethos). Keep the edge on power — the anti-trans/anti-immigrant
-  posture of DHS/ICE and the absurd double standard — and keep the gender play a celebration.
+  posture of DHS/ICE, and the official costume performance — and keep the gender play a celebration.
+  **No spouses, no children, no private citizens. Officeholders and their public conduct only.**
 
 the_song: |
   Open casting call: the PERFECT song to dance dongs + boobies to together — bouncy, joyful, a little

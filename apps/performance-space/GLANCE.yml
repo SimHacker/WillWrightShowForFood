@@ -13,7 +13,7 @@ navigation:
 read_order:
   - README.md
   - conan-face-puppet.yml
-  - faceball-construction-set.yml   # face/creature puppet kit — soft-body parts, adult section, presets
+  - faceball-construction-set.yml   # face/creature puppet kit — engine is Tom Ngo's ECG; prose form in designs/faceball-construction-set/
   - pink-trombone-jam.yml   # group activity — 4-player vocal-tract choir
 
 see_also_designs:

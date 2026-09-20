@@ -1,0 +1,73 @@
+# SHOW — Eric Hedman ("Irk")
+# Planted seed. Inherits from the SHOW skill (/skills/repo-show).
+# Referenced by: ../../characters/eric-hedman/CHARACTER.yml (show_seed)
+#                ../../characters/INDEX.yml (eric-hedman.show_seed)
+
+show:
+  id: eric-hedman
+  title: "A Repo Show with Eric Hedman — the hand-tuned Sims"
+  type: series              # several episodes' worth; see episodes below
+  host: Don Hopkins
+  guests: ["Eric Hedman"]
+  character: characters/eric-hedman/
+  topic: "Character animation on the original The Sims, designing the expansion packs, and the craft of making a few frames read across a room — through to blendshape performance and indie work today."
+  status: seed
+  consent: asked            # invited 2026-08-20, delivered personally; reply pending
+
+why_him:
+  the_craft: |
+    Hand-tuned walk cycles, idles and gestures for the vitaboy pipeline — a huge part of what gives
+    The Sims its soul, done under a frame budget with unknown CPU speed, so every motion had to read
+    BIG. Broad pantomime as an engineering constraint.
+  the_pipeline: |
+    He helped develop the cross-discipline object-prototyping template: simplified Max object rendered
+    as a full stand-in with all states, handed off artist → animator → programmer, iterated same-day in
+    the sandbox. That template is what made the expansion packs possible.
+  he_is_still_doing_it: |
+    Not a retrospective guest. He ships: **Aether HeXXen**, hand-made 2D/3D art and animation, and the
+    **Doppel** blendshape demo that is the centrepiece of the Faceball design.
+  he_welcomes_the_exposure: |
+    Independent contractor artist — project and hourly, not looking for 9-to-5. Driving subscribers to
+    @irkinteraction and buyers to his games is a FEATURE of the show, not a side effect.
+
+episodes:
+  - id: vitaboy-animation
+    what: "The Sims animation up close — walk cycles, idles, gestures, broad pantomime under a frame budget, and the canWiggle incident (Don checked in the debug; still great buddies)."
+  - id: expansion-design
+    what: "Designing the expansion packs — House Party, Livin' Large, Hot Date, Unleashed. The mechanical bull ('my baby'), the love bed, the hot tub; big 'magic' party objects as state machines that read on a CRT. Informed by his years as a nightclub bouncer."
+  - id: drew-carey-tie-in
+    what: "The Drew Carey Show tie-in — Sims vignettes and a laser blaster; nearly dancing Marion Ross into the floor at a TV-moms ball. Pairs with the ../drew-carey/ episode."
+  - id: blendshape-performance
+    what: "★ Doppel and the face rig — the full ARKit morph-target set performed live with the weights on screen. The practitioner's half of the ECG/Mouther conversation, and the demo Faceball is designed around."
+    pairs_with: ../tom-and-golan-ecg-mouther/
+  - id: pantomime-reunion
+    what: "Pantomime Corporation reunion — Eric + David Levitt + Don (Levitt CEO, Don Chief Architect). Sims animation craft meets AR/VR character work."
+    pairs_with: ../../characters/david-levitt/
+  - id: indie-spotlight
+    what: "Indie creator spotlight — Aether HeXXen (Act 1: Death Space Requiem), the hand-made 2D/3D pipeline, Patreon/Ko-fi, open for commissions."
+
+touchy:
+  swimming_pools: |
+    Pool production lore is a live nerve in team mythology — ladders, edge pieces, drowning states,
+    urn-ring QA saves, string-art schedules, and the architecture feud underneath it. Irk's pipeline
+    view vs the programmer ontology. Worth doing, worth doing carefully, and his call.
+  see:
+    - ../building-the-sims/swimming-pools-objects-or-rooms.md
+    - ../building-the-sims/pool-qa.md
+
+format:
+  live: true
+  audience_qa: true
+  homefun: "Optional — guests need not code (../../process/brainstorm-heartbeat.yml)."
+
+ties_to:
+  - ../../characters/eric-hedman/
+  - ../../characters/eric-hedman/invitation.md
+  - ../../characters/eric-hedman/barkys-revenge.md
+  - ../building-the-sims/                              # the group reunion he is part of
+  - ../tom-and-golan-ecg-mouther/                      # Doppel is the practitioner's half of this
+  - ../drew-carey/                                     # the House Party tie-in
+  - ../../characters/david-levitt/                     # Pantomime
+  - ../../designs/faceball-construction-set/           # Doppel as the centrepiece demo
+  - ../../characters/will-wright/
+  - ../../characters/don-hopkins/

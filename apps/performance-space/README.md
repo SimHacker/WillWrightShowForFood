@@ -10,6 +10,7 @@ proofs in [`process/performance-space/README.md`](../../process/performance-spac
 | ID | Status | Spec | Proves |
 |----|--------|------|--------|
 | **conan-face-puppet** | spec | [`conan-face-puppet.yml`](conan-face-puppet.yml) | Webcam mouth through face-hole PNG |
+| **faceball-construction-set** | spec | [`faceball-construction-set.yml`](faceball-construction-set.yml) · **prose: [`designs/faceball-construction-set/`](../../designs/faceball-construction-set/)** | A *kit* for face puppets rather than one puppet — Tom Ngo's ECG as the engine for both faces and parts |
 | play-along-queue | planned | — | TicketPR clip queue + credit overlay |
 | amplitude-scrub-puppet | planned | — | Mic drives character video scrub |
 | pink-trombone-jam | planned | [`pink-trombone-jam.md`](pink-trombone-jam.md) | Side-by-side vocal-tract jam URL for chat |

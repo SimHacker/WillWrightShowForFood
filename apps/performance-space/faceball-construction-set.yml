@@ -10,6 +10,8 @@ meta:
   tagline: "Faceball like Pinball — paste on, wire up, play; audience sometimes as balls"
   design: ../../process/performance-space.yml#narrative-engine
   used_by: squares-in-a-box.yml
+  human_readable: ../../designs/faceball-construction-set/     # the prose form of this spec — start here
+  # README (the kit + the ECG engine) · inspirations (credits) · physics-and-gags · mask-and-reveal · adult-section
 
 tribute:
   to: Bill Budge
@@ -390,12 +392,47 @@ soft-body-anatomy:
     mass/bounce/gravity, play. For the bimbos, drag queens, faux/bio queens, drag kings, and girls —
     and TRANS GIRLS ARE GIRLS. Make **any kind of dong you like**.
   parts:
-    - balloon_boobs          # cartoon-oversized, high jiggle
+    - balloon_boobs          # ★ MARQUEE PART — cartoon-oversized, high jiggle, low stiffness
     - dongs                  # any size/shape/count — "make your own"
     - custom_yaml_part       # bring your own soft-body mesh
+  count_freedom:
+    # Spore Creature Creator credit spent here. NOT a novelty knob — two independent reasons.
+    physics_needs_it: |
+      **Two soft bodies can only bounce.** Six in a chain at graded mass/stiffness gives WAVE
+      PROPAGATION — a ripple that travels, overshoots, returns, goes out of phase with itself.
+      A motion vocabulary that cannot exist at n=2.
+      2      → bounce, and bounce out of phase. That is the whole repertoire.
+      4-6    → travelling waves. Newton's cradle, caterpillar ripple, stadium wave.
+      odd    → no axis of symmetry, so it reads as a MACHINE rather than a body.
+      12+    → parade float. Xylophone. Physics becomes the instrument; anatomy is gone.
+    raising_the_count_de_escalates: |
+      Two is the anatomical read; six is unmistakably cartoon; twelve is a marching band.
+      **More parts = less suggestive AND more absurd simultaneously.** Same inversion as the cheat
+      code (more visibility = tamer). The knob that looks most gratuitous is the safety valve, and it
+      is funnier in the same direction it is safer — the only kind of safety feature anyone uses.
+    not_a_subsystem: "Count is a part parameter; shapes are ECG blends; the wave is the soft-body pass running on a list instead of a pair."
+    prose: ../../designs/faceball-construction-set/adult-section.md#balloon-boobs-and-why-you-want-more-than-two
   snap_to: [chassis, shoulder_l, shoulder_r, crotch_anchor, custom_yaml_anchor]
   physics: sanspiel-simulation      # soft-body jiggle pass in WebGPU, beside the fluids
   fields: [mass, stiffness, damping, jiggle_gain, gravity, collision]
+  precedent:
+    genital_jousting: |
+      **Genital Jousting** (Free Lives / Devolver Digital) is the prior art and it settles the design
+      question: **the floppiness is the joke; the anatomy is only the excuse.** Controls deliberately
+      uncooperative, so every round is a physics failure with witnesses. Hence: parts unremarkable on
+      purpose, modifier stack carries the design.
+      Commercial precedent with a per-surface lesson — fine on the STORE, a moderation incident the
+      moment it hit Steam's live-STREAMING rollout. That split is the wall Faceball lives behind, and
+      pixelated-by-default answers the broadcast surface specifically, not storefronts.
+      **It is also the uncensored control group:** no mosaic, fully visible, and it reads as SLAPSTICK.
+      Nothing hidden, so nothing imagined, so closure never fires — full visibility is the TAME
+      configuration. Corollary: **the cheat code de-escalates.** Unlocking the mosaic walks you from
+      implication down to goofiness, which is why pixelated-by-default costs the design nothing.
+      needs-check: Cape Town studio (also Broforce, GORN); Early Access ~late 2016, 1.0 ~early 2018;
+      eight players; the Steam-broadcasting episode needs a real citation and date. Story mode ("John",
+      high-school reunion) was received as far more earnest than the premise and drew serious critical
+      discussion of its adult themes — do not characterise that content from memory.
+    prose: ../../designs/faceball-construction-set/inspirations.md#genital-jousting--free-lives--devolver-digital
   componentized_abstraction:
     what: |
       **Abstract the gag away from any real photo or name.** Rather than use Bryon Noem's picture — or
@@ -443,8 +480,42 @@ soft-body-anatomy:
       moments_of_unnecessary_censorship:
         - "Pass a **pixelated joint** → it pixelates your HEAD (the mosaic follows the contraband)."
         - "The blur box **tracks the bounding box**, Sims-1 style — deadpan, self-aware."
-      params: [bbox, mosaic_size, follow_target, cheat_code_to_reveal]
-      see: ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
+      params: [bbox, mosaic_size, follow_target, cheat_code_to_reveal, cell_sizing, cells_across, grid_space, glow]
+      grid_space:
+        # Which space the mosaic lattice lives in. Stack with soft-body + meatspin for "dancing pixels".
+        screen: "Fixed lattice; the part travels through it and cells pop/boil as coverage crosses boundaries."
+        mesh: |
+          Cells lock to the deforming surface, so they stretch, shear and squash with the soft body.
+          The pixels themselves DANCE as one coherent object. BPM-sync the spin and the redaction
+          choreographs itself — a music visualizer made entirely of censorship.
+      cell_sizing:
+        # THE joke parameter. Relative sizing makes the mosaic leak the measurement it exists to hide.
+        absolute: "Fixed cell size in screen px — mosaic detail is constant regardless of subject size."
+        relative: |
+          `cells_across` cells span the bbox, so **cell size scales WITH the subject**. A huge pendulous
+          region resolves into a few enormous chunky blocks; a tiny one into fine dense pixels.
+          **The resolution of the censorship reports the size of the thing censored.** Basis of the
+          side-by-side bit (generic cartoon man vs trump_mushroom, same beat, same cells_across).
+      glow: "Optional emissive bloom on the mosaic region — a redaction that EMITS LIGHT points at itself. Orange for trump_mushroom."
+      the_mccloud_prediction: |
+        Don's prediction, adopted: a tightly tracking mosaic on a jiggling soft body is MUCH more
+        obscene than the uncensored part. The occluder is evidence that something was worth hiding;
+        **closure** (Scott McCloud — Understanding Comics was a design bible on The Sims team) has the
+        viewer complete it privately and flatteringly; **amplification through simplification** says a
+        mosaic amplifies rather than tones down; and mesh-locked tracking forwards the entire
+        suggestive channel (motion) while forwarding zero surface data.
+        Existence proofs: Jimmy Kimmel's "This Week in Unnecessary Censorship" (years of network TV
+        proving censorship MANUFACTURES content), and "bubble porn"/Mormon porn (an opaque bubble over
+        CLOTHING reads as nudity — nothing removed, so the occluder is the entire erotic content).
+        Consequence stated honestly: pixelation is **classifier evasion, not suggestiveness reduction**.
+        It survives automated moderation; it is NOT tamer; human reviewers can read implication fine.
+        Useful corollary: **the geometry under the mosaic never has to be authored** — a grey capsule
+        with plausible mass/stiffness/damping gives an identical result, since only silhouette dynamics
+        reach the viewer. Nothing explicit needs to exist in the repo.
+      prose: ../../designs/faceball-construction-set/adult-section.md#dancing-pixels
+      see:
+        - ../../bits/tradition-unnecessary-censorship/tradition-unnecessary-censorship.yml
+        - ../../characters/scott-mccloud/README.md   # closure, masking, amplification through simplification
   satirical_presets:
     what: "Preset filter stacks aimed at PUBLIC figures / power (political caricature) — never private people."
     trump_mushroom:
@@ -734,6 +805,42 @@ look_grade:
 
 render-pipeline:
   stack: "TypeScript + WebGPU in the browser — single OBS Browser Source"
+  dimensionality:
+    what: |
+      **2D and 3D parts mix freely in ONE scene, and the kit does not care which a part is.**
+      Reference: **PaRappa the Rapper** (NanaOn-Sha 1996, Masaya Matsuura; art by Rodney Alan
+      Greenblat) — flat hand-drawn characters standing in a 3D world, paper-thin when the camera
+      swings, and CHARMING rather than broken.
+    why_it_serves_the_thesis: |
+      A flat part costs a drawing; a 3D part costs a model, a rig, a UV map and someone who knows
+      Blender. Demanding meshes would contradict **seeds, not showpieces** at the very first authoring
+      step — a kid can DRAW a part and cannot MODEL one. Flat-in-3D keeps 3D scenes open to people who
+      only draw, and PaRappa proved it reads as style, not limitation.
+    ecg_is_already_dimension_agnostic: |
+      NOT a compatibility layer bolted on. ECG blends COORDINATES; the solver is indifferent to
+      2-vectors vs 3-vectors — barycentric weights over a simplicial complex of examples is the same
+      mathematics either way. Both halves already have proofs on the same engine:
+        2D → Mouther (Golan Levin + Malcolm Slaney) — viseme sheet, outlines and control points.
+        3D → Doppel (Eric Hedman) — full ARKit morph-target set; and Tom Ngo's WigFabrik (multitarget
+             mesh + texture).
+      **ARKit blendshapes are morph targets, and morph targets are ECG targets with a different file
+      extension.** Same solver drives a cartoon mouth and a photoreal rig; only vector width changes.
+      Strongest single argument for having picked ECG.
+    order_of_work: "2D FIRST, with real hot paths — not 2D as a degraded 3D."
+    hot_paths_2d:
+      # Flat geometry SKIPS most of what makes 3D expensive. These are savings, not approximations.
+      depth: "No depth buffer / depth sort — painter's order is an explicit integer per part, which authors want to control anyway."
+      transform: "2D affine, six floats, invertible for free. No perspective divide, no 4x4."
+      shading: "No per-vertex normals or lighting — flat art is pre-shaded by whoever drew it."
+      redraw: "Dirty rectangles — a jiggling part invalidates its own box and nothing else."
+      buffers: "An ECG target is a few dozen control points; a blend is a handful of multiply-adds, cache-resident."
+    backends:
+      # One part abstraction, three backends, chosen PER SCENE. They fail in opposite directions.
+      svg: "Retained mode. DOM nodes, CSS transforms, crisp at any zoom, free hit-testing + accessibility, INSPECTABLE IN DEVTOOLS (matters for a kit whose pitch is seeing inside it). Falls over at high node counts."
+      canvas2d: "Immediate mode. No DOM cost, fast with many parts/particles, composites naturally beside Sanspiel fluids. Nothing to inspect, no free hit-testing."
+      webgpu: "The 3D path, and where Sanspiel already lives — mixed scenes and heavy passes land here."
+    consistency_test: "The renderer is a modifier-style PLUG-IN like everything else in the kit. Any new subsystem has to pass that test."
+    prose: ../../designs/faceball-construction-set/README.md#2d-and-3d-parts-in-one-scene-parappa-style
   piece_of_cake: true
   modules:
     - getUserMedia → GPU texture (operator stream)

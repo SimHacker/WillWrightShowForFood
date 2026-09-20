@@ -1,0 +1,95 @@
+# 🤡 designs/faceball-construction-set — GLANCE
+# A kit for building face puppets, not one face puppet.
+
+what: |
+  Faceball like Pinball. Snap parts onto anchors, stack modifiers, play the physics.
+  Full-screen video puppets for a panel-grid show: mouth holes, googly eyes, fluids,
+  a barf meter, and a pinball machine the panel cells fall into.
+
+status: design          # spec exists, nothing built
+spec: ../../apps/performance-space/faceball-construction-set.yml
+human_readable: README.md
+
+the_engine:
+  # Promoted out of the credits table on purpose. This kit is ECG's showcase.
+  what: Embedded Constraint Graphics — examples at the vertices of a simplicial complex;
+        drag a feature and the solver recovers the barycentric blend weights.
+  why_it_matters: "Every shipping blend-shape system hands you sliders for weights.
+                   ECG inverts it: manipulate outcomes, solve for coordinates.
+                   Drag the face, solve the weights."
+  serves_both: [faces that emote, cartoon parts that deform]   # one solver, two halves of the kit
+  tom_ngo: ../../characters/tom-ngo/README.md       # built it at Interval Research
+  golan_levin: ../../characters/golan-levin/README.md  # built Mouther in Tom's editor — the proof it makes good faces
+  mouther: https://www.flong.com/archive/projects/mouther/
+  patent: US5933150                                  # filed 1996-08-06, lapsed ~2016-08 — free to build
+  essay: ../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md
+  show_seeded: ../../repo-shows/tom-and-golan-ecg-mouther/   # both are warm contacts
+  sibling_showcase: WigFabrik in Soul City — same solver over hair meshes and textures
+  mouther_viseme_sheet: |
+    One cartoon face in eleven mouth positions (AY EE UH OH R OO S F L M) — those drawings ARE
+    the vertices. Best available picture of what a simplicial complex means.
+    rights: Golan's artwork; link, don't vendor. Ask first.
+
+the_success_criterion:
+  # Don's standard, and the reason great artists are invited as seed-makers rather than as suppliers
+  not: a great artist made a great puppet
+  but: a great artist made a seed a twelve-year-old can open, change one number in, and laugh at
+  precedent: Sims 1 shipped its artists' pipeline knowledge as player tools
+  the_tools: [Transmogrifier, RugOMatic, ShowNTell, SimShow, FaceLift, Create-A-Sim]
+  golans_own_brief_1995: "sufficiently responsive for the quality-level needed in children's computer games"
+  exemplar:
+    who: Eric Hedman — The Sims' first professional game artist
+    what: ../../characters/eric-hedman/README.md
+    demo: https://www.youtube.com/watch?v=6L7jtgRD5rs   # Doppel — ARKit blendshapes, performed live
+    why: "A facial rig only gets funny when someone who knows the whole pipeline performs it.
+           The joy is the technical argument."
+    todo: no captions or transcript on the Doppel video — ask Eric before fixing it
+
+the_argument:
+  # Minsky's, and the reason the parts list is short
+  minsky: "What matters is how the parts affect each other, not what is inside them."
+  kay: architecture dominates materials
+  test: |
+    A new gag needing a new subsystem means the kit failed.
+    A new gag needing a YAML file that names an anchor and a few numbers means it worked.
+  worked_examples:
+    - tears and vomit are the same emitter, different anchor and fluid
+    - the size filter and the rotation engine are the same kind of composable modifier
+    - a face that emotes and a part that deforms are the same ECG solve
+
+verbs: [snap on, wire up, play]    # Bill Budge's, in his order
+
+part_kinds: [fiduciary anchors, attachments, expression modes, parameterized parts, modifiers, emitters]
+
+expression_modes:
+  ecg_blend: drag features, solve the weights      # ← the showcase mode
+  webcam_mouth_hole: the driver's real mouth, calibrated once, remapped per preset
+  amplitude_scrub: audio loudness scrubs a still portrait — any gesture, any audio
+  canned_clip: a recording plays and the driver lip-syncs, drag-queen style
+  hand_drawn: ink and paint on a transparent layer, South Park construction paper
+
+files:
+  - { at: README.md,           what: the kit, its parts, and the ECG engine section }
+  - { at: inspirations.md,     what: full credits — Budge, Incredible Machine, Create-A-Sim and Maurice, Spore, the in-house lineage }
+  - { at: physics-and-gags.md, what: Sanspiel fluids, stage gags, the barf meter, the Twitch game, choreography }
+  - { at: mask-and-reveal.md,  what: anonymity as permission to perform; losing the mask as a game state; the consent-gated reveal }
+  - { at: adult-section.md,    what: the opt-in curtained palette — labeled, pixelated by default, aimed at power }
+
+render_path: TypeScript + WebGPU in the browser → one OBS Browser Source → transparent PNG
+             (Canvas2D fallback for bring-up)
+
+care:
+  rules:
+    - self-authored avatars and consenting guests only
+    - celebrate gender play; never shame anyone
+    - satire aims at power and hypocrisy, never at private people
+    - a human mouth through a hole — no voice clones
+  governed_by:
+    - ../../schemas/portrayal-standards.yml
+    - ../../characters/don-hopkins/portrayal/puppet-me-consent.yml
+
+see_also:
+  - { at: ../../apps/performance-space/squares-in-a-box.yml,        why: the panel grid this kit fills and its fluids break }
+  - { at: ../../apps/performance-space/character-button-board.yml,  why: how the driver hot-swaps presets mid-show }
+  - { at: ../../process/artifactory.yml,                            why: a construction set is an artifact factory — the repo's central metaphor }
+  - { at: ../orchestrator-playsets/,                                why: advertisement dispatch, the same Sims machinery driving menus }

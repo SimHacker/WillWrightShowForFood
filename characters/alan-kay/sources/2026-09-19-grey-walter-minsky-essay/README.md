@@ -63,13 +63,14 @@ per` [`dry-piles`](https://github.com/SimHacker/moollm/blob/main/designs/korz/dr
 duplication is legal when declared and recomputable, and re-copying from the canonical path is the
 recompute. Edit the originals, never these.`
 
-## What is cached here, and what is not
+## What is cached here
 
 ```
-pdf/holland-2003-first-biologically-inspired-robots.pdf   7.9 MB, cached
-images/2026-run-wander-and-avoid.png                      copy, declared above
-images/2026-run-see-inside.png                            copy, declared above
-images/2026-run-conditioned-reflex-memories.png           copy, declared above
+pdf/holland-2003-first-biologically-inspired-robots.pdf         7.9 MB, cached
+pdf/kay-2019-ultimate-tinkertoy-afterword-unexcised.pdf        17.6 MB, 22 pp — FROM ALAN, review pending
+images/2026-run-wander-and-avoid.png                            copy, declared above
+images/2026-run-see-inside.png                                  copy, declared above
+images/2026-run-conditioned-reflex-memories.png                 copy, declared above
 ```
 
 Holland, "The first biologically inspired robots," *Robotica* 21(4), 2003 — the scholarly account of
@@ -77,8 +78,25 @@ Elmer and Elsie built from the Burden Neurological Institute archive. This is th
 on what Walter actually built and what it actually did, and it is the origin of every Walter fact
 in this folder.
 
-**The MIT Press afterword is not cached yet, and the mirror routes are exhausted.** What was tried,
-so nobody repeats it:
+### Alan sent the afterword, and he sent the uncut one
+
+**The document this folder could not obtain arrived from its author.** Alan sent Don the afterword
+directly, in an **unexcised** version — the text before the cuts that produced the published chapter.
+
+`consent: Don is asking Alan for permission and for a review of this folder and his character`
+`directory as one batch — see` [`characters/alan-kay/permission-and-review.md`](../../permission-and-review.md)`.`
+`Cached here on Don's judgement, pending that review, and Alan can approve it or ask for removal at`
+`any time. If he asks, it goes — no discussion, no negotiation.`
+
+**Two different documents, and only one of them needed asking.** Worth keeping straight:
+
+| | What | Status |
+|---|---|---|
+| **Published** | "Afterword to Essay 1," *Inventive Minds*, MIT Press 2019 | **Open access** under the volume's OA licence. Caching it was never a permission question |
+| **Unexcised** | The same afterword before editorial cuts | **Unpublished manuscript.** Not covered by the OA licence, so this one is Alan's call and nothing else |
+
+**How the retrieval actually went, so nobody repeats the dead ends.** Every scriptable route to the
+published chapter failed:
 
 | Route | Result |
 |---|---|
@@ -87,16 +105,17 @@ so nobody repeats it:
 | OAPEN full-text search | Not held |
 | OAPEN by ISBN 9780262350273 | Not held |
 | DOAB | **Record exists** (handle `20.500.12854/78558`, book DOI `10.7551/mitpress/11558.001.0001`) but DOAB is a directory, not a host — it points back to MIT Press |
+| **Asking the author** | **Worked, and returned a better document than the one being chased** |
 
-So `direct.mit.edu` is the only host, and it serves the chapter fine to a real logged-in-looking
-browser session while refusing every scriptable client. `todo: open the DOI in a browser, save the
-chapter PDF, drop it in pdf/ as kay-2019-afterword-to-essay-1.pdf.` A human with a browser is the
-remaining path, which takes about fifteen seconds and cannot be automated from here.
+`todo: the PUBLISHED chapter is still uncached — open the DOI in a browser and save it to pdf/ as`
+`kay-2019-afterword-to-essay-1.pdf. Both versions are worth holding, because the diff between them is`
+`its own artifact: it shows what an editor took out of an essay about learning machines.`
 
-Until then the DOI is the only pointer — **which is precisely the fragility this folder exists to
-remove, now demonstrated on the very document that prompted it.** The open-access half is the half
-that resists archiving, and the research-language half on `tinlizzie.org` downloads without
-complaint.
+**The joke this folder was built on has now closed on itself.** The premise was *"he does not need to
+put this online — both halves are already there and he does not have the links."* His reply was to
+supply the one piece that resisted archiving, in a fuller form than the archive was trying to reach.
+The open-access half is still the half that fought hardest, and the research-language half on
+`tinlizzie.org` downloads without complaint.
 
 ## Why the live half is the half at risk
 
@@ -164,6 +183,7 @@ Full table, sourcing, and the argument:
 | Claim | Source | Status |
 |---|---|---|
 | Afterword open access, DOI 10.7551/mitpress/11558.003.0007 | MIT Press *Inventive Minds* OA volume, chapter 194044 | `verified: DOI resolves; 403 to curl, 200 in browser` |
+| An unexcised version of the afterword exists, 22 pp | `pdf/kay-2019-ultimate-tinkertoy-afterword-unexcised.pdf` — sent to Don by Alan Kay, Sep 2026 | `held: provided by the author. Review and permission requested as one batch; removable on his word` |
 | Active essay at tinlizzie.org/tinkertoy/, adaptation by Ohshima and Maloney | The page's own byline | `verified` |
 | Active essay runs in 2026: VM boots, 4 projects load, See Inside opens, three memories decay | Run and screenshotted 19 Sep 2026 | `verified` |
 | Walter named the tortoises after the Alice pun; his own text opens with it | Holland 2003, quoting Walter's manuscript; Guardian, "What the tortoise taught us," 7 Dec 2000 | `verified` |
