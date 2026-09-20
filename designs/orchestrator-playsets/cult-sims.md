@@ -728,14 +728,15 @@ Before this, Cult Sims could recruit and could lose members, but nothing made it
 high five supplies a cycle rather than a failure state, and the cult does not die of its own
 bonding so much as **run on it**.
 
-## Population tools: Instacult, Banish, and the deprogrammer
+## Population tools: Instacult, Banish, Disband, and the deprogrammer
 
 *Don, 20 Sep 2026: "Instacult" pie menu item that instantiates 10 more cult members. Hmm,
 might need a deprogrammer to take them away too. Or just "Banish" pie menu item on them.*
 
 The instinct to ship the unmake button alongside the make button is the right one, and the
-three tools Don names are not variations on each other — **one is a god tool, one is a cult
-power, and one is a rival institution.** Keeping them distinct is most of the design.
+tools Don names are not variations on each other — **one is a god tool, two are cult powers
+at different scopes, and one is a rival institution.** Keeping them distinct is most of the
+design.
 
 ### Instacult makes the experiments runnable
 
@@ -780,6 +781,90 @@ direction, two different costs.
 That also gives the guru a lever the player can watch being abused, which the document's
 [open question about a conduct guard](#open) was already circling.
 
+### Disband, and the three kinds of member
+
+*Don, 20 Sep 2026: the cult anchor object will have a "Disband" item that un-does all the
+"membership" bonds in the relationship matrix, and disappears (raptures) all the NPC cult
+members. So family members, visitors from other lots, and NPC cult members can be members of
+a cult represented by a cult swag vending machine orchestrator object.*
+
+**Disband is the robustness requirement promoted to a verb.** This document already demanded
+that [deleting a stand must release its members](#robustness-what-multiple-stands-must-not-assume)
+rather than orphan them; Disband is that same teardown, exposed on the anchor's pie menu
+instead of hidden in a cleanup path. Which is the better pattern in general — **if the
+graceful path has to exist anyway, let the player ask for it on purpose.**
+
+The design content is the member taxonomy, because Disband has to treat the three classes
+differently and **what happens to each falls out of where it lives in the save**:
+
+| Class | Where it persists | On Disband |
+|---|---|---|
+| **NPC members** (Instacult spawns) | nowhere — they were instantiated | **raptured**, and nothing is lost |
+| **Visitors from other lots** | another household's save | go home, **and take the affinity with them** |
+| **Family members** | your save, permanently | **stay**, unhatted, and you live with the aftermath |
+
+**Don's word is exactly right, and the joke is theologically precise: the NPCs get raptured
+and the real people are left behind.** Nobody has to write that; the save format does it.
+
+And it is the consequence system rather than a gag. If everybody vanished, dissolving a cult
+would be free, and the whole cycle would have no weight. Because household members persist —
+with whatever the [slap cascade](#the-slap-congas-keep-it-spicy-a-limit-cycle-not-a-death-spiral)
+did to their relationships still sitting in the panel — **shutting down the cult costs
+something that stays in your save.** You disband it and you still have to live with the
+people you queued up and slapped.
+
+**The visitor row is the epidemiology, and it is the most consequential line in the table.**
+A visitor who joins, then walks home carrying the affinity, is how the cult **crosses lots**.
+That is the neighbourhood-scale transmission the proposed `spreads:` field actually wants:
+not Sim-to-Sim in a room, but household-to-household by social call. The simulation's scope
+stops being the lot. Visit them next week and there may be a stand in their living room.
+
+### What Disband does *not* undo, and why that is the good part
+
+Don's phrasing is precise — it undoes the **membership** bonds. Not the friendships. And
+[Super Cupid](life-events-playset.md) already supplies the implementation, since it can write
+either **base values** or a **temporary buff** per cell:
+
+- **Membership is the buff layer.** Disband strips it in one gesture, which is what Super
+  Cupid is for.
+- **High-five bonding is base values.** It survives, because nobody removed it.
+
+So after Disband you are left with **an intact, tightly-bonded clique wearing no hats** — a
+cult-shaped hole with the congregation still in it. Which completes the schism mechanic from
+the other direction: [a second stand](#many-slots-many-cults-at-once) can adopt that roster
+*immediately*, because the relationship matrix it needs is already inflated and paid for.
+
+> **The cult dies and the congregation does not.** That is how movements actually re-form,
+> and here it is a consequence of storing the two kinds of bond in different layers rather
+> than a behaviour anybody scripted.
+
+### The four removal verbs are not the same verb
+
+Worth keeping straight, since the design now has four and they muddle easily:
+
+| Verb | Scope | Operated by | Costs |
+|---|---|---|---|
+| **Banish** | one member | the guru — it is excommunication | nothing, and it *raises* group commitment |
+| **Disband** | the whole cult | the anchor object | the wreckage stays in your save |
+| **Deprogram** | one member | a rival NPC, from outside | money and time, and it can fail |
+| **Bulldoze** | the whole cult, ungracefully | the player, via the build tools | must degrade to Disband, never orphan |
+
+The last row is the robustness rule: **bulldozing has to route through the same teardown as
+Disband.** One code path, two entry points, and the ungraceful one must not be able to leave
+a Sim wearing regalia owned by nothing.
+
+### Instacult and Disband are setup and teardown
+
+Together these two make the playset **a repeatable experiment** instead of an accumulation.
+Spawn a roster, tune the parameters, run the
+[loyalty assay](#the-switch-is-a-loyalty-assay-and-the-comedy-is-in-the-uniformity) or the
+cascade, disband, and go again on a clean lot. Without a teardown verb a lot silently fills
+with dead cults and stops being usable; with one, **it is a laboratory you can run twice.**
+
+That is also what makes Don's "multiple cults are fun to play against each other" true in
+practice rather than in principle. Playing two cults against each other requires running the
+matchup repeatedly with different knobs, and that requires being able to clear the board.
+
 ### The deprogrammer is a rival cult with a roster of one
 
 This is the best of the three, and the reason is uncomfortable. The
@@ -812,7 +897,12 @@ deprogrammer aims at the *apparatus*, including the apparatus that bills itself 
   somebody, or the cult dissolves and everybody is unhatted — both are fine, but one of them
   has to be chosen.
 - **Banishing the last member** dissolves the group host, and the stand stays on the lot
-  selling to nobody, which is the correct and funnier outcome.
+  selling to nobody, which is the correct and funnier outcome. It must route through the same
+  teardown as [Disband](#disband-and-the-three-kinds-of-member) rather than reimplementing it.
+- **Disband must survive a partial roster.** Members mid-queue, members off-lot, a visitor
+  already walking home, an NPC being deprogrammed at that moment: the rapture cannot wait for
+  a quiet lot, so anything it cannot reach has to be releasable later rather than left bonded
+  to a host that is gone.
 - **Deprogramming must be reversible**, because
   [re-conversion is the interesting case](#open) — a Sim who has been deprogrammed once and
   walks back to the stand is the most informative Sim on the lot.
