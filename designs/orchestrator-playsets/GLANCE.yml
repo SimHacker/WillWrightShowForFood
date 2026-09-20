@@ -113,7 +113,31 @@ designs_here:
     Disband (all, anchor, wreckage persists), Deprogram (one, rival, costs and can fail),
     Bulldoze (all, ungraceful, must degrade to Disband).
     INSTACULT + DISBAND ARE SETUP AND TEARDOWN — what makes this a repeatable experiment and a
-    laboratory you can run twice, rather than a lot that silently fills with dead cults. Genuinely new: contagion (`spreads:`), membership as a group host, and
+    laboratory you can run twice, rather than a lot that silently fills with dead cults.
+    THE COLLAPSE: THE TELEVISION *IS* THE VENDING MACHINE. Demand/supply was a split this doc
+    invented to keep two objects busy; fusing them removes an object and gains an argument,
+    because direct-response TV sells what it just made you want IN THE SAME BREATH — the
+    absence of the gap IS the format. Televangelism is the fused object already built (the set
+    asks for money, sends back a prayer cloth). ONE ROLE, MANY SKINS — television (broadcast,
+    canonical because fused) / vending machine (Seuss, profits both directions) / clothes
+    cabinet (a wardrobe) / web stand (merch drop + algorithm). Same mechanism, four media eras.
+    MEMBERSHIP IS A RELATIONSHIP WITH A TELEVISION — Don's "under-the-thrall-of" taken
+    literally as a directed weighted edge Sim→appliance. Thrall is a SCORE not a flag; the
+    roster becomes a QUERY so there is no second copy of the truth to go stale; Super Cupid's
+    topologies operate on it directly; and Disband becomes literally what Don said — drop every
+    inbound thrall edge.
+    PING-PONG MULTI-CULT CAP DYNAMICS, the best emergent result and nobody implements it. One
+    rule (a set advertises harder at members in the wrong cap) + thrall to two sets claiming
+    the head = the Sim shuttles between televisions changing hats forever. It is a HUNTING
+    OSCILLATION — two controllers fighting one actuator with no coordination — so colliding
+    cults DO NOT refuse each other, THEY TEAR THE MEMBER IN HALF, which is nastier than
+    exclusion. Self-limiting and diagnostic: ping-pong is the SIGNATURE OF A TIE (unequal
+    thrall settles), and needs decay while commuting, so death by irreconcilable ideological
+    obligation needs no new code. HYSTERESIS IS THE KNOB and refusing to turn it up is the
+    joke: commitment_hysteresis from zero (farce) to high (Sims commit and ignore the shouting).
+    The word "strongly" also makes advertising STATE-DEPENDENT, a feedback controller, so two
+    sets ESCALATE — and the arms race crowds out every other ad on the lot. The Sim is not
+    neglecting its needs out of devotion; it cannot hear them over two TVs arguing about a hat. Genuinely new: contagion (`spreads:`), membership as a group host, and
     advertisement modification (an object re-weighting ANOTHER object's ad score).
 
 playsets:

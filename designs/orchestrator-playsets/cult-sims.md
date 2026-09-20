@@ -19,7 +19,7 @@ That is why the two catalogs compose instead of colliding:
 
 | Zombie Sims has | Cult Sims needs | Same thing? |
 |---|---|---|
-| Ham radio as **wave controller** | broadcast sermons, recruitment drives — [a television](#the-television-is-the-demand-side-and-channels-dispense-ideology) | same role, and the cult splits it in two: the TV broadcasts, [a stand](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) enrolls |
+| Ham radio as **wave controller** | broadcast sermons, recruitment drives — [a television](#the-television-dispenses-ideology-by-the-channel) | same role, and the cult splits it in two: the TV broadcasts, [a stand](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) enrolls |
 | infection by contact | conversion by persuasion | yes — transmission with a different guard |
 | faction configs, religion-mapped skins | denominations, sects, schisms — [one stand per sect](#multiple-stands-and-why-the-smallest-difference-makes-the-worst-feud) | yes, and the skins are the *whole* difference between sects |
 | siege waves | recruitment drives, defector retrieval | yes — waves either way |
@@ -164,18 +164,24 @@ rather than a metaphor.
 
 **The stand is the hub, and this is the object the bridge table was asking for.** It holds
 the group host, the roster, the price list, and the parameters. The
-[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) is the
+[television](#the-television-dispenses-ideology-by-the-channel) is the
 other half of the machine but not the hub: it manufactures the want, and the stand
 converts want into membership. Advertiser and registry, and they are separable — a
 channel with no stand produces Sims who want something they cannot buy, which is a
 perfectly good thing to be able to stage.
 
-| | Television | SwagOMatic stand |
+| | Advertiser role | Registry role |
 |---|---|---|
 | Scope | the room it is in | the lot, via a roster |
 | What it changes | what other objects are *worth* | who *belongs* |
 | Membership | none — it cannot enroll anybody | **owns the group host** |
 | If deleted | demand decays | the cult dissolves, members unhatted |
+
+**Those are two roles, not necessarily two objects** — and the strongest version of this
+design [fuses them into a single television](#the-television-is-the-vending-machine), which is
+what the rest of the document builds toward. Keeping the roles named separately is still
+useful, because a split configuration is stageable and occasionally what you want: a channel
+with no stand produces Sims who crave something they cannot buy.
 
 ### Multiple stands, and why the smallest difference makes the worst feud
 
@@ -276,7 +282,8 @@ Rivalry falls out of geometry:
 
 | | Same slot | Different slots |
 |---|---|---|
-| Can one Sim join both? | **no** — the slot holds one thing | yes |
+| Can one Sim join both? | **yes — and that is the problem** | yes, comfortably |
+| What happens | the slot holds one thing, so the member is [torn between them forever](#ping-pong-multi-cult-cap-dynamics) | both satisfied at once, no interaction |
 | Relationship | rivals, necessarily | compatible, possibly allied |
 | Example | Balls For Hands vs. Pixelated Left Hand — both want the hand | Pixelated Head + Balls For Hands — no conflict at all |
 
@@ -284,6 +291,11 @@ Rivalry falls out of geometry:
 cults are enemies exactly to the degree their regalia collide, which is a harder and funnier
 claim than "small differences cause big feuds" — it says the differences are not even the
 mechanism, the *real estate* is.
+
+Note that colliding cults do **not** refuse each other. Nothing stops a Sim enrolling in
+both, and the conflict shows up afterwards as an oscillation rather than as a rejection —
+which is [where this ends up](#ping-pong-multi-cult-cap-dynamics), and it is much worse than
+exclusion would have been.
 
 And a Sim's costume becomes a **readable affiliation display**: cap, plus balls for hands,
 plus one pixelated ear, is three memberships legible at a glance. The god-view asymmetry
@@ -405,7 +417,7 @@ the failure modes are worth naming before the first one is built:
 `are rivals. Heather and Steve's call, since the skin and accessory system is theirs —`
 `religion_mapped_skins may already answer it.`
 
-## The television is the demand side, and channels dispense ideology
+## The television dispenses ideology by the channel
 
 *Don, 20 Sep 2026: the TV set could have different channels that dispense ideologies,
 and Faux News makes you want to wear MAGA caps.*
@@ -413,9 +425,9 @@ and Faux News makes you want to wear MAGA caps.*
 Zombie Sims has the ham radio as `wave_controller` and SliceCity has the power plant as
 seed spawner; Cult Sims needed "broadcast sermons, recruitment drives" and had no object
 to put them in. It is a television, and the Sims already shipped one with a channel
-selector on its pie menu. The TV is the demand side of the machine — the
-[SwagOMatic](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) is the hub that
-holds membership, and the television is what makes membership look worth buying.
+selector on its pie menu. This section covers what a channel *does*; that the same set
+[also takes the order and issues the cap](#the-television-is-the-vending-machine) is the
+collapse the document arrives at later.
 
 ### The mechanic: the TV does not touch the Sim
 
@@ -576,6 +588,137 @@ propaganda channel is a working app, and the playset's TV can tune to it.
 `axes gated them before writing any of it as fact. Heather and Steve's call on whether`
 `the TV is a zombie-sims plugin or the Cult Sims hub proper.`
 
+## The television *is* the vending machine
+
+*Don, 20 Sep 2026: now it is making sense that the "vending machine" or "clothes cabinet" or
+"web stand" for cults should be the television itself. And you "order stuff from TV" to get
+your cap.*
+
+**This collapse is a simplification and it is also more honest.** The demand/supply split was
+a structure this document invented to keep two objects busy; fusing them removes an object and
+gains an argument, because **direct-response television sells the thing it just made you
+want, in the same breath.** There is no gap between the wanting and the ordering — the
+absence of that gap is the entire format. Call now.
+
+The precedents are not decorative. **Televangelism** is the fused object already built: the
+set asks for money and sends back a token — a prayer cloth, a lapel pin, a book — so the
+broadcast, the collection plate, and the regalia issue are one appliance. The same topology
+runs a home-shopping channel and every talk host who sells supplements during his own
+programme. The grift does not need two devices, and pretending it does was the weaker design.
+
+### One role, many skins
+
+Don's three names — vending machine, clothes cabinet, web stand — are not alternatives to
+decide between. They are **skins on one orchestrator role**, which is exactly what the
+[AnythingOMatic pattern](../../catalogs/soul-city/portals-and-modules.md) is for, and each one
+is the same mechanism in a different media era:
+
+| Skin | Era | What it makes obvious |
+|---|---|---|
+| **Television** | broadcast | demand and supply are one object — the canonical skin |
+| **Vending machine** | Seuss | the operator profits in both directions ([Star-On, Star-Off](#multiple-stands-and-why-the-smallest-difference-makes-the-worst-feud)) |
+| **Clothes cabinet** | the dresser | it is a wardrobe, and membership is what you have on |
+| **Web stand** | now | the merch drop, and the algorithm that decided you wanted it |
+
+All four keep the [stocked pie-menu tree](#the-object-already-exists-stocked-differently) and
+all four inherit the one-armed-bandit lineage. The television is canonical because it fuses
+the roles; the others are the same object wearing different fiction, which is what a
+reskinnable appliance is supposed to give you.
+
+### Membership is a relationship with a television
+
+Don's term for the bond is **"under-the-thrall-of,"** and taking it literally is the best
+structural decision available here: membership is **a directed, weighted edge in the
+relationship matrix, from a Sim to an appliance.**
+
+That pays for itself immediately:
+
+- **Thrall is a score, not a flag.** Members are more or less captured, so commitment has an
+  intensity and a threshold rather than a boolean.
+- **The roster is a query**, not a list to keep in sync — ask the matrix who is in thrall to
+  this set. Half the [multi-stand robustness
+  problems](#robustness-what-multiple-stands-must-not-assume) evaporate, because there is no
+  second copy of the truth to go stale.
+- **Super Cupid already operates on it.** Its topologies (`star` inbound to the set, `complete`
+  across the congregation) work on membership directly, because membership now lives in the
+  structure Super Cupid edits.
+- **[Disband](#disband-and-the-three-kinds-of-member) becomes literally what Don said it was** —
+  "un-does all the membership bonds in the relationship matrix" is no longer a paraphrase, it
+  is the operation: drop every inbound thrall edge.
+- **You can see it in the panel.** A Sim's relationship list shows the televisions they are in
+  thrall to, which makes the affiliation graph readable without new UI.
+
+## Ping-pong multi-cult cap dynamics
+
+*Don: if they were in another cult too, the other cult's TV set sees they are wearing the
+wrong cap, and advertises strongly that they wear its cap! Ping pong multi cult cap dynamics.*
+
+**This is the best emergent result in the playset, and nobody has to implement it.** Take one
+rule — *a set advertises more strongly at members wearing the wrong cap* — and give a Sim
+thrall to two sets that both claim the head:
+
+1. Set A prescribes red. The Sim is wearing red. A is satisfied and quiet.
+2. Set B sees a member in the wrong cap and advertises **hard** for green.
+3. The Sim crosses the room, orders green, puts it on. B goes quiet.
+4. **A now sees a member in the wrong cap** and advertises hard for red.
+5. Go to 1, forever.
+
+The Sim spends the rest of its life walking between two televisions changing hats.
+
+### It is a hunting oscillation, which means it is a real result
+
+This is not a bug and it is not whimsy — it is **two independent controllers fighting over one
+actuator with no coordination**, which is the classic hunting oscillation that dueling
+thermostats and competing control loops produce. The
+[slot-collision rule](#many-slots-many-cults-at-once) predicted these cults would be rivals;
+this is the *mechanism* of the rivalry, and it is far nastier than mutual exclusion would have
+been. **The cults do not fight each other. They tear the member in half.**
+
+It also self-limits in a way that turns the farce into an instrument:
+
+- **Ping-pong is the signature of a tie.** If thrall(A) > thrall(B) by enough, the Sim settles
+  on A and stays there. Oscillation only happens when the two thralls are *balanced*, so
+  **watching a Sim ping-pong tells you it is exactly torn** — the behaviour is a readout.
+- **Needs decay while commuting.** A ping-ponging Sim eats nothing, sleeps nothing, and
+  eventually collapses, so it becomes a resource sink that requires
+  [Buddha](#it-wires-into-objects-that-already-exist) to sustain. Death by irreconcilable
+  ideological obligation is an entirely legitimate Sims death and it needs no new code.
+
+### Hysteresis is the knob, and refusing to turn it up is the joke
+
+Any engineer looking at that loop adds a **deadband** so the controller stops hunting. So make
+it a parameter and hand it to the player:
+
+| `commitment_hysteresis` | Behaviour |
+|---|---|
+| zero | pure farce — Sims ping-pong between sets until they drop |
+| low | visible dithering, members mostly settle, occasional relapse |
+| high | Sims commit to their dominant set and ignore the other's shouting |
+
+**The player tunes how much farce they want**, which is the same shape as the
+[doctrine-distance slider](#the-knob-that-carries-the-argument): the knob is the argument, and
+you find out what it means by turning it. Stated once and not belaboured — a person holding two
+total commitments that claim the same ground, with no mechanism to reconcile them, does in fact
+shuttle between them until something gives.
+
+### The sets escalate against each other
+
+One more consequence falls out of the word *strongly*. If advertisement strength rises when a
+set sees the wrong cap, then **advertising is state-dependent — a feedback controller, not a
+constant** — and two colliding sets therefore escalate, each shouting louder precisely when it
+is losing.
+
+Which produces the genuinely alarming version: **an arms race between two televisions crowds
+out every other advertisement on the lot.** Both sets are running at maximum, so the fridge,
+the bed, and the toilet cannot compete for the Sim's attention on score. The Sim is not
+neglecting its needs out of devotion. It literally cannot hear them over two televisions
+arguing about a hat.
+
+`needs-check: whether sims1 supports ordering from the TV at all, or whether the phone is`
+`the ordering device and the set needs a phone step ("call the number on screen", which is`
+`arguably better). Also whether an object can hold a relationship-matrix edge with a Sim, or`
+`whether thrall needs a parallel structure keyed the same way.`
+
 ## High fives, and what they lead to
 
 *Don, 20 Sep 2026: when in a cult, members can high five each other to increase their
@@ -704,7 +847,7 @@ more committed than they started.
 And the Slap Conga's own design notes already call this **"failure-as-entertainment"**, which
 is the whole point of the word *spicy*. **Drama is the product.** The cult is not selling
 hats, it is selling the cycle — and that is precisely what the
-[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) on the other
+[television](#the-television-dispenses-ideology-by-the-channel) on the other
 side of the lot is doing too, manufacturing outrage that requires more channel to resolve.
 **The broadcast apparatus and the cult turn out to be the same shape**, which is the finding
 this playset was built to arrive at, and neither object had to be told.
@@ -715,7 +858,7 @@ The playset now has endogenous dynamics and it needed no new mechanisms:
 
 | Stage | Object | What happens |
 |---|---|---|
-| Demand | [television](#the-television-is-the-demand-side-and-channels-dispense-ideology) | a channel builds affinity for a stand |
+| Demand | [television](#the-television-dispenses-ideology-by-the-channel) | a channel builds affinity for a stand |
 | Recruitment | [SwagOMatic](#the-hub-is-a-swagomatic-and-multiple-stands-are-the-game) | the Sim buys the marker and joins |
 | Cohesion | high five | the relationship matrix inflates across the roster |
 | Romance | Cupid / Super Cupid | high scores become a lover stack, orientation-blind |
@@ -943,7 +1086,7 @@ one operation. That is the group-host case, and this is its clearest example.
 
 **Advertisement modification — second-order objects.** Objects advertise to Sims, and
 buffs change a Sim's motives so the same advertisement scores differently. What the
-[television](#the-television-is-the-demand-side-and-channels-dispense-ideology) needs is
+[television](#the-television-dispenses-ideology-by-the-channel) needs is
 neither: an object that re-weights **another object's** advertised score without
 touching the Sim at all. That is a new kind of thing in the model, and it is the one
 worth getting right, because it is what lets the playset stage manufactured desire
