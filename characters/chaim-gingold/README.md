@@ -13,7 +13,8 @@ drawn with enough care that programmers cite them like source code.
 
 He isn't only a historian. He apprenticed to **Will Wright** on *Spore* and designed the
 **Spore Creature Creator**; built **Earth: A Primer**, a science book made of simulation toys;
-co-created the falling-sand toy **Sandspiel**; and holds a Ph.D. in *Play Design* (UC Santa Cruz).
+surveyed the whole lineage of interactive explanatory toys in his HARC **Gadget Background Survey**
+(AgentSheets, Rocky's Boots, Robot Odyssey); and holds a Ph.D. in *Play Design* (UC Santa Cruz).
 He studies microworlds by building them.
 
 ## Why he's here

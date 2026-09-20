@@ -6,7 +6,7 @@
 
 A **Repo Show** seed with **[Chaim Gingold](../../characters/chaim-gingold/README.md)** — author
 of *Building SimCity: How to Put the World in a Machine* (MIT Press, 2024), creator of the SimCity
-**reverse diagrams**, Spore Creature Creator designer, Sandspiel co-creator. His book maps the
+**reverse diagrams**, Spore Creature Creator designer, HARC Gadget Background Survey. His book maps the
 territory; [Micropolis](https://github.com/SimHacker/MicropolisCore) is the live terrain.
 
 ## Proven on air

@@ -10,7 +10,7 @@ follow **with** Chaim; not quotes, not claims about what he thinks.*
 **Chaim Gingold** — designer and historian; author of ***Building SimCity*** (MIT Press, 2024).
 Created the famous **SimCity reverse diagrams** — engineering archaeology of Will Wright's
 microworld. Ph.D. *Play Design* (UC Santa Cruz). Maxis alum; SimCity historian who also builds
-playful systems (e.g. **Sandspiel**).
+playful systems (**Spore Creature Creator**, ***Earth: A Primer***).
 
 ## Shared ground
 
@@ -37,8 +37,17 @@ The 2008 EA release story from someone who was in the room vs the archivist who 
 No contradiction — two necessary views.
 
 ### 4. Sandspiel ↔ CAM6 ↔ cellular automata family
-Chaim's falling-sand toy meets Don's CAM6 and Dave Ackley's Movable Feast. Same **simple rules**
+[Sandspiel](https://sandspiel.club/) — [Max Bittker](https://github.com/maxbittker/sandspiel)'s
+falling-sand toy, with [Lu Wilson (TodePond)](https://github.com/maxbittker/sandspiel-studio/) on the
+visually programmable [Sandspiel Studio](https://studio.sandspiel.club/) — meets Don's
+[CAM6](../norman-margolus/the-cam6-demo-for-norman.md) and
+[Dave Ackley](../dave-ackley/ca-correspondence-story.md)'s Movable Feast. Same **simple rules**
 aesthetic; live CA jam.
+
+Chaim's seat here is earned by the survey, not by authorship: his HARC **Gadget Background Survey**
+maps exactly this lineage of interactive explanatory toys, and Don brought it into the Sandspiel
+Studio Discord himself ([HN](https://news.ycombinator.com/item?id=34561910)). The historian of the
+genre beside two people building in it.
 
 ### 5. Maxis culture — design by accretion
 Pair with **Chris Trottier** / Sims reunion guests: how features accumulated vs master-planned
