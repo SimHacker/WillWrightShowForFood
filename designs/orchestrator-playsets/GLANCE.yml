@@ -20,7 +20,14 @@ designs_here:
     defection hatch. Worked example: red baseball caps as the visible infection marker,
     where the marker is BOUGHT rather than caught, so the contagion runs through the
     merch table and the transmission event is a transaction.
-    Genuinely new: contagion (a `spreads:` field) and membership as a group host.
+    HUB OBJECT IS A TELEVISION — channels dispense ideology the way a magazine dispenses
+    a menu, but broadcast to the whole room, so the remote is the contested object and
+    the channel lineup is the faction generator. The mechanic is that the TV never
+    touches the Sim: it raises the CAP's advertised score and the Sim walks over and buys
+    it autonomously. From inside nothing happened; from the god view you watch the
+    numbers move. Faux News is not a placeholder — see ../../apps/simfaux/.
+    Genuinely new: contagion (a `spreads:` field), membership as a group host, and
+    advertisement modification (an object re-weighting ANOTHER object's ad score).
 
 playsets:
   simprov_wedding: ../../catalogs/simprov/ORCHESTRATOR.yml

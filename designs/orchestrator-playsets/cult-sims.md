@@ -19,7 +19,7 @@ That is why the two catalogs compose instead of colliding:
 
 | Zombie Sims has | Cult Sims needs | Same thing? |
 |---|---|---|
-| Ham radio as **wave controller** | broadcast sermons, recruitment drives | yes — one hub, two skins |
+| Ham radio as **wave controller** | broadcast sermons, recruitment drives — [a television](#the-hub-object-is-a-television-and-channels-dispense-ideology) | yes — one hub, two skins |
 | infection by contact | conversion by persuasion | yes — transmission with a different guard |
 | faction configs, religion-mapped skins | denominations, sects, schisms | yes — the plumbing already mentions religion |
 | siege waves | recruitment drives, defector retrieval | yes — waves either way |
@@ -133,9 +133,80 @@ the house standard — see
 `religion_mapped_skins plugin, or does a bought-marker need its own slot because it`
 `carries a price and an inventory item rather than only an appearance?`
 
+## The hub object is a television, and channels dispense ideology
+
+*Don, 20 Sep 2026: the TV set could have different channels that dispense ideologies,
+and Faux News makes you want to wear MAGA caps.*
+
+**This names the hub the bridge table was missing.** Zombie Sims has the ham radio as
+`wave_controller` and SliceCity has the power plant as seed spawner; Cult Sims needed
+"broadcast sermons, recruitment drives" and had no object to put them in. It is a
+television, and the Sims already shipped one with a channel selector on its pie menu.
+
+### The mechanic: the TV does not touch the Sim
+
+This is the part that makes it worth building, and it is engine-native rather than
+invented. In SimAntics, objects **advertise** scores to Sims, and a Sim autonomously
+walks toward whatever advertises highest given its motives and personality. So:
+
+> **Faux News does not convert anybody. It raises the advertised score of the cap.**
+
+The Sim then crosses the room and buys the hat *on its own*, because the hat is now the
+most attractive thing available. No coercion state, no forced interaction, no conversion
+check to fail. The television is a **second-order object**: it does not satisfy a need,
+it re-weights what everything else is worth.
+
+Two consequences fall straight out, and both are the argument rather than decoration:
+
+- **From inside, nothing happened.** Every Sim freely chose the highest-advertising
+  option, which is what Sims always do. There is no moment you could point to and call
+  it the coercion.
+- **From outside, the player can see the numbers move.** The god view shows the
+  advertisement re-weighting that the Sims themselves cannot perceive. That asymmetry is
+  the whole rhetorical payload, and it requires no editorial — it is just the debug
+  overlay.
+
+### Channels are the magazine mode, broadcast
+
+The dispatch vocabulary already has the right shape. A
+[`magazine`](../../schemas/advertisement-dispatch.yml) is a portable catalog that turns
+the surface it is placed on into a temporary menu host. **A channel is the same thing
+without the surface**: it radiates to everyone in the room, so the room becomes the
+host and nobody has to pick it up.
+
+| | magazine | channel |
+|---|---|---|
+| Reach | whoever walks to the table | everyone in the room, at once |
+| Opt-in | you choose to browse it | it is already on |
+| Carrier | an object you can throw away | the air |
+| Who aims it | the Sim who picks it up | **whoever holds the remote** |
+
+**The remote control is therefore the contested object**, and that is a household power
+struggle the Sims engine is extremely good at staging. One object, high advertisement,
+one holder at a time.
+
+### The channel lineup is the faction generator
+
+Different channels dispense different ideologies, which means the schism mechanic gets
+its cause. `clique_partition` forks the group host when a rival channel starts selling a
+different hat, and the shrine question in **Open** becomes concrete: the two factions are
+arguing over the television.
+
+**The content already exists in this repo.** *Faux News* is not a placeholder — Don built
+**SimFaux**, an OpenLaszlo Fox News parody, in 2006, and it is being rebuilt as a live
+switchboard instrument at [`apps/simfaux/`](../../apps/simfaux/) with a show seeded at
+[`repo-shows/simfaux/SHOW.yml`](../../repo-shows/simfaux/SHOW.yml). So the cult's
+propaganda channel is a working app, and the playset's TV can tune to it.
+
+`needs-check: The Sims 1 TV offered channel selection from the pie menu with`
+`per-channel effects, and personality influenced which channels a Sim enjoyed — but`
+`confirm the actual channel names, their motive/skill effects, and which personality`
+`axes gated them before writing any of it as fact. Heather and Steve's call on whether`
+`the TV is a zombie-sims plugin or the Cult Sims hub proper.`
+
 ## What is genuinely new
 
-Only two things, and both are mechanisms rather than objects:
+Three things, and all of them are mechanisms rather than objects:
 
 **Contagion.** A state that propagates to new hosts. Neither Zombie Sims' waves nor
 a cult's recruitment is expressible in the buff model, which applies an effect to a
@@ -146,6 +217,14 @@ spread between Sims. Written up as a family and a `spreads:` field —
 **Membership as a group host.** A cult is one organization many people belong to,
 not a pile of pairs: it survives members joining and leaving, and dissolving it is
 one operation. That is the group-host case, and this is its clearest example.
+
+**Advertisement modification — second-order objects.** Objects advertise to Sims, and
+buffs change a Sim's motives so the same advertisement scores differently. What the
+[television](#the-hub-object-is-a-television-and-channels-dispense-ideology) needs is
+neither: an object that re-weights **another object's** advertised score without
+touching the Sim at all. That is a new kind of thing in the model, and it is the one
+worth getting right, because it is what lets the playset stage manufactured desire
+without a single coercion state.
 
 ## Open
 
