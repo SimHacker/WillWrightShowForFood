@@ -22,7 +22,7 @@ production_values:
   mantra: "Lean into the cheese — Conan face-holes, South Park construction paper."
   panel_engine: ../apps/performance-space/squares-in-a-box.yml
   faceball_construction_set: ../apps/performance-space/faceball-construction-set.yml
-  sanspiel: ../apps/performance-space/faceball-construction-set.yml#sanspiel-simulation
+  particles: ../apps/performance-space/faceball-construction-set.yml#particle-simulation
   render: "TypeScript + WebGPU browser compositor — per-face grade, operator mouth normalize"
   narrative_engine_tools:
     - "Conan face-hole PNG + laptop webcam"

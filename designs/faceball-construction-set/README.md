@@ -242,7 +242,7 @@ about the kit:
 | File | What's in it |
 |---|---|
 | [`inspirations.md`](inspirations.md) | **Full credits.** [Bill Budge](../../characters/bill-budge/README.md)'s [Pinball Construction Set](inspirations.md#bill-budge--pinball-construction-set-1983), [The Incredible Machine and Incredible Toons](inspirations.md#the-incredible-machine-and-incredible-toons--dynamix), [Create-A-Sim](inspirations.md#create-a-sim--the-sims-maxis-2000) and [Maurice](inspirations.md#maurice-the-magnificent--create-a-sim-as-an-agent), the [Spore Creature Creator](inspirations.md#spore-creature-creator-maxis-2008), [LittleBigPlanet](inspirations.md#littlebigplanet--media-molecule), [Genital Jousting](inspirations.md#genital-jousting--free-lives--devolver-digital), and the [in-house lineage](inspirations.md#the-in-house-lineage) (HOMER II, Mona Eyes, ECG, Bounce, SimFaux) |
-| [`physics-and-gags.md`](physics-and-gags.md) | The whimsical half — Sanspiel fluids, stage gags, the barf meter, the Faceball machine as a Twitch game, choreography modes, audience-as-balls |
+| [`physics-and-gags.md`](physics-and-gags.md) | The whimsical half — particle fluids, stage gags, the barf meter, the Faceball machine as a Twitch game, choreography modes, audience-as-balls |
 | [`adult-section.md`](adult-section.md) | The opt-in, curtained adult palette: soft-body parts, satirical caricature presets, the Bowie video puppet, pixelated-by-default. Labeled, separate, and not on this page by design. Contains one finding that generalizes well past the palette — **[dancing pixels](adult-section.md#dancing-pixels)**, where a mosaic locked to a deforming mesh becomes the performance, and McCloud's closure predicts the censored cut is the *more* suggestive one |
 
 ## Editor and storage
@@ -314,8 +314,8 @@ optimization, not an approximation of one:
   for free, and *inspectable in devtools*, which matters for a construction kit whose whole pitch is
   that you can see inside it. Falls over at high node counts.
 - **Canvas2D** — immediate mode. No DOM cost, fast with many parts and particles, composites naturally
-  beside Sanspiel's fluids. Nothing to inspect and no free hit-testing.
-- **WebGPU** — the 3D path and where Sanspiel already lives, so mixed scenes and the heavy passes land
+  beside the particle layer's fluids. Nothing to inspect and no free hit-testing.
+- **WebGPU** — the 3D path, so mixed scenes and the heavy passes land
   here.
 
 One part abstraction, three backends, chosen per scene rather than per project. **The renderer is a

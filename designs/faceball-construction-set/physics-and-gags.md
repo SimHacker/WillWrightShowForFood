@@ -8,9 +8,9 @@ The credit being spent here is **[The Incredible Machine and Incredible Toons](i
 physics, colliding in ways the author did not plan, with the comedy coming from the collisions. See
 [`inspirations.md`](inspirations.md#the-incredible-machine-and-incredible-toons--dynamix).
 
-## Sanspiel — the pluggable fluid and particle layer
+## The pluggable fluid and particle layer
 
-**Sanspiel** is the simulation pass that runs beside the compositor in WebGPU. Its whole point is that
+The particle layer is the simulation pass that runs beside the compositor. Its whole point is that
 adding a new gag is a YAML file, not a subsystem: name an anchor, a fluid type, a gravity and
 viscosity, a splash radius, a duration, and a target list.
 
@@ -30,7 +30,7 @@ Built-ins, all of them the same emitter with different parameters:
 | Confetti | cannon or hand | Rip Taylor's "Dear!" |
 
 **It breaks the Brady Bunch grid, and that is the feature.** Fluids ignore cell borders. The
-video-call grid is the default layout; Sanspiel is the escape hatch, and the moment pulp crosses from
+video-call grid is the default layout; the particle layer is the escape hatch, and the moment pulp crosses from
 one cell into another the show stops looking like a Zoom call.
 
 ### Defenses, which are also gags

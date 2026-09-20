@@ -43,7 +43,7 @@ David; Coco as the host who **held the space**.
 Homer II is the **analog grandparent** of the show's whole performance toolkit: **perform the mix
 with your hands, record the performance, overdub until perfect** — exactly the verbs the
 **[Faceball Construction Kit](../../apps/performance-space/faceball-construction-set.yml)** runs on
-(now with face puppets, amplitude scrub, and Sanspiel physics instead of slide trays and IP film).
+(now with face puppets, amplitude scrub, and particle physics instead of slide trays and IP film).
 The chain on air: **HOMER** (Forth, optical printer) → **Bounce** at Interval (David + Don's
 closed-caption commentary bots) → **SimFaux** (2006 OpenLaszlo Fox News parody) → **Faceball**.
 Coco's SIGKids room is literally where the chain's middle link got forged. Three-hander with David;

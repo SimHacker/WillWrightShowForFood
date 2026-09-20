@@ -64,9 +64,9 @@ lineage:
       - ../../characters/golan-levin/
   physics_toys:
     what: |
-      **The Incredible Machine** / **Incredible Toons** energy — Sanspiel fluids and props;
+      **The Incredible Machine** / **Incredible Toons** energy — particle fluids and props;
       tears drench the panel below, vomit arcs, spit takes. Breaks the Brady Bunch grid.
-    engine: sanspiel-simulation
+    engine: particle-simulation
   bounce_commentary_bots:
     what: |
       **Bounce** at Interval Research (David Levitt + Don) — live TV plus a synchronized
@@ -131,7 +131,7 @@ accessories:
       gag: "Panel dummy deploys umbrella mid-roast — hair survives, dignity does not"
     plastic_tarp:
       what: "Front-row / low-seat drape — Gallagher-era splash protection for audience cells"
-      see: sanspiel-simulation#stage_gags#watermelon_smash
+      see: particle-simulation#stage_gags#watermelon_smash
 
 attachments:
   mouth_hole:
@@ -175,12 +175,40 @@ particle_systems:
     trigger: character_state_asleep
     combo: googly_eyes asleep + non_responsive_lids
 
-sanspiel-simulation:
+particle-simulation:
   what: |
-    **Sanspiel** — pluggable particle/fluid simulation for Faceball gags. Tears, vomit, sweat from
-    the brow, snot from sneezes, Rip Taylor confetti, watermelon pulp — **easy to plug in new
-    particles** per guest or running bit. YAML emitter defs snap to fiduciary markers; physics
-    pass runs in WebGPU beside the compositor.
+    **Emitter-based particle and fluid layer** for Faceball gags. Tears, vomit, sweat from the brow,
+    snot from sneezes, Rip Taylor confetti, watermelon pulp — **easy to plug in new particles** per
+    guest or running bit. YAML emitter defs snap to fiduciary markers; the pass runs beside the
+    compositor.
+    **This is emitters, not a grid.** Anchors, fluid types, viscosity, splash radius — a classic
+    particle system. It is NOT a cellular automaton and it is NOT the soft-body pass; all three are
+    different maths and they are kept separate on purpose. See later_not_1_0 for the CA idea.
+  later_not_1_0:
+    # Parked deliberately. A gridded CA layer is a DIFFERENT capability from emitters and from
+    # soft bodies, and it is an extension, not a base. Target 1.1 at the earliest.
+    what: |
+      **A gridded cellular-automata layer that interacts with the 2D/3D graphics.** Not a particle
+      system with more particles — a lattice with rules, where the interesting part is precisely the
+      coupling: parts occlude and divert the grid, the grid stains and erodes the parts.
+    the_precedent: |
+      **Sandspiel** — Max Bittker's falling-sand toy (2018, Rust/wasm + WebGL), and **Sandspiel
+      Studio**, the visually programmable sequel by Bittker with Lu Wilson (TodePond), where users
+      define their own elements in a block language. MIT licensed.
+        https://sandspiel.club/  ·  https://studio.sandspiel.club/
+      House tie: the CA family conversation is already seeded —
+      ../../repo-shows/chaim-gingold/SHOW.yml ("Sandspiel ↔ CAM6 — falling sand meets cellular
+      automata"), beside Don's CAM6 and Dave Ackley's Movable Feast.
+    why_not_1_0: |
+      It buys nothing the v1.0 bits need. Every gag in built_ins is an emitter gag — tears, barf,
+      confetti, pulp — and emitters do those better and cheaper than a lattice would. Shipping a CA
+      grid to get a spit take is the wrong tool arriving early.
+    do_not_conflate: |
+      Three separate systems, three different maths. Keep the names apart:
+        soft-body pass   → mass-spring / PBD on a small vertex set. Jiggle, wobble, wave propagation.
+        particle layer   → emitters, anchors, viscosity, splash. Wet gags. THIS section.
+        CA grid (1.1+)   → lattice, neighbourhood rules, per-cell state. Sand, fire, rot, growth.
+      A falling-sand automaton cannot do jiggle, and a mass-spring rig cannot do fire spreading.
   plugin_model:
     def: particles/<name>.yml
     fields:
@@ -218,11 +246,11 @@ sanspiel-simulation:
     watermelon_smash:
       archetype: "Sledge-O-Matic energy — **recast character**, not the racist; steal the gag shamelessly (he stole from Carrot Top et al.)"
       what: "Smash watermelon — showers guests and front row; plastic tarp on low seats"
-      sanspiel: watermelon_pulp_splash
+      particles: watermelon_pulp_splash
       targets: [panel_guests, front_row_audience]
     rip_taylor_dear:
       what: "Confetti cannon on 'Dear!' — camp Hollywood constellation"
-      sanspiel: rip_taylor_confetti
+      particles: rip_taylor_confetti
   arena_defenses:
     plexiglass_barrier:
       what: |
@@ -233,8 +261,8 @@ sanspiel-simulation:
     umbrella_hat: accessories#defenses#umbrella_hat
   breaks_brady_bunch: |
     Fluids, confetti, and pulp ignore the Zoom grid — **Brady Bunch frames** are suggestions, not
-    prison walls. Squares in a Box is the default layout; Sanspiel physics is the escape hatch.
-  extensible: "Any Sanspiel rig snaps to fiduciary markers — construction set, not one-off"
+    prison walls. Squares in a Box is the default layout; the particle layer is the escape hatch.
+  extensible: "Any particle rig snaps to fiduciary markers — construction set, not one-off"
 
 audience-as-balls:
   what: |
@@ -243,18 +271,18 @@ audience-as-balls:
     dummies, get drenched, deploy umbrella hats, or ride the confetti cannon.
   modes:
     panel_cell: "Standard Squares in a Box — portrait + face puppet"
-    physics_ball: "Sanspiel rigid/soft body — collides, rolls, splashed by fluids"
+    physics_ball: "Rigid/soft body — collides, rolls, splashed by the particle layer"
     both: "Portrait in cell until gag ejects them as a ball"
   schema: ../../schemas/audience-character.yml
   consent: "Self-authored audience characters only — see fictional-audience.yml"
   front_row:
     plastic_tarp: true
-    plexiglass: sanspiel-simulation#arena_defenses#plexiglass_barrier
+    plexiglass: particle-simulation#arena_defenses#plexiglass_barrier
 
 dizziness_tracking:
   what: |
     **Spinning dizziness meter** — track angular velocity, camera spin, flipper chaos, and tumble
-    state per avatar. Accumulates **barf pressure**; crosses **vomit threshold** → Sanspiel barf
+    state per avatar. Accumulates **barf pressure**; crosses **vomit threshold** → particle barf
     particle system fires from mouth fiduciary. Eyes spiral (googly eyes in ECG dizzy pose).
   inputs:
     - spin_rate               # rad/s from physics or operator head-shake proxy
@@ -268,7 +296,7 @@ dizziness_tracking:
     decay: slow_when_stable
     vomit_threshold: configurable_per_avatar   # Spore creature constitution stat
   on_threshold:
-    - trigger: sanspiel-simulation#built_ins#vomit
+    - trigger: particle-simulation#built_ins#vomit
     - expression: ecg_blend dizzy_face corner
     - googly_eyes: spiral_spin_mode
     - reset_pressure: partial   # can barf again — endurance game
@@ -297,7 +325,7 @@ faceball-machine:
     ticketpr: "Audience crew as balls + flippers via merged PR"
     leaderboard: [time_since_last_barf, clean_streak, most_barfs_survived]
   choreography: choreography_modes
-  arena: sanspiel-simulation#arena_defenses
+  arena: particle-simulation#arena_defenses
   choreography_modes:
     what: |
       Scripted chaos → deadpan reset. Penalty spin, synchronized swimmers, formation swoop,
@@ -325,7 +353,7 @@ faceball-machine:
         - music_sting_stop
         - scramble_to_nearest_cell
         - one_avatar_has_no_seat
-        - eliminated_avatar_falls_off_machine   # into void / Sanspiel / never mentioned
+        - eliminated_avatar_falls_off_machine   # into void / particles / never mentioned
       the_missing_loser:
         rule: |
           Nobody ever speaks of them again. Don Philahue moves on. Next segment. (Hunger Games /
@@ -378,7 +406,7 @@ spore-creature-avatars:
       - watermelon_sledge      # stage gag tool — recast archetype only
       - plexiglass_shield      # arena_defenses portable
   vehicular:
-    what: "Avatar moves as vehicle — appendages drive Sanspiel body; face puppet stays on cockpit"
+    what: "Avatar moves as vehicle — appendages drive the soft-body rig; face puppet stays on cockpit"
     examples: [shopping_cart_chassis, office_chair_treads, terrapin_shell]
   play:
     faceball-machine: faceball-machine
@@ -387,7 +415,7 @@ spore-creature-avatars:
 
 soft-body-anatomy:
   what: |
-    **Plug-in jiggle parts** — pop-on **boobs, dongs, and anything else**, driven by Sanspiel soft-body
+    **Plug-in jiggle parts** — pop-on **boobs, dongs, and anything else**, driven by the soft-body pass
     physics. Same construction-kit verbs as every other Faceball part: snap to a fiduciary anchor, tune
     mass/bounce/gravity, play. For the bimbos, drag queens, faux/bio queens, drag kings, and girls —
     and TRANS GIRLS ARE GIRLS. Make **any kind of dong you like**.
@@ -413,8 +441,33 @@ soft-body-anatomy:
     not_a_subsystem: "Count is a part parameter; shapes are ECG blends; the wave is the soft-body pass running on a list instead of a pair."
     prose: ../../designs/faceball-construction-set/adult-section.md#balloon-boobs-and-why-you-want-more-than-two
   snap_to: [chassis, shoulder_l, shoulder_r, crotch_anchor, custom_yaml_anchor]
-  physics: sanspiel-simulation      # soft-body jiggle pass in WebGPU, beside the fluids
   fields: [mass, stiffness, damping, jiggle_gain, gravity, collision]
+  soft-body-pass:
+    # Defined here rather than named-and-borrowed. This is the jiggle engine.
+    what: |
+      **Mass-spring / position-based dynamics over a small vertex set.** Constraints solved per frame;
+      mass, stiffness and damping are the part's own fields. A few dozen points per part, so it stays
+      cache-resident and runs fine in Canvas2D for the v0 proof.
+    balloons_want_a_pressure_model: |
+      For `balloon_boobs` specifically the right classic technique is a **pressurised** soft body — a
+      closed 2D/3D outline with an internal pressure term pushing outward against spring tension. That
+      is literally the standard way balloons are simulated, and it gives the wobble-and-restore that a
+      plain spring lattice does not: squash it and it pushes back, because the volume term resists.
+      It also gives count_freedom's wave propagation for free, since pressure couples the whole shell.
+    not_the_other_two: |
+      **NOT the particle layer** (emitters, splash, viscosity — wet gags) and **NOT a cellular
+      automaton** (lattice, neighbourhood rules — parked at particle-simulation.later_not_1_0).
+      Falling sand cannot jiggle; springs cannot spread fire. Three systems, three maths.
+    precedent: |
+      Genital Jousting's floppiness is off-the-shelf engine soft bodies, not a bespoke solver — see
+      precedent.genital_jousting. The lesson is that the COMEDY needs uncooperative dynamics, which is
+      cheap; it does not need a research-grade simulator.
+    needs-check: |
+      Pick the actual implementation before v0 rather than in it. Browser-realistic candidates to
+      evaluate: Matter.js (has a soft-body composite helper, trivially available for a 2D proof),
+      Rapier via wasm, or a hand-rolled Verlet/XPBD pass — the last is likely simplest given the
+      vertex counts here. Matthias Müller's position-based-dynamics writing is the standard reference.
+      Do not cite Sandspiel for any of this; it is a different kind of simulation entirely.
   precedent:
     genital_jousting: |
       **Genital Jousting** (Free Lives / Devolver Digital) is the prior art and it settles the design
@@ -455,7 +508,7 @@ soft-body-anatomy:
     what: |
       **Composable filters** you stack onto a part — the visual cousins of Laurie Anderson's pitch-shift
       **"Voice of Authority"** persona (a filter that manufactures authority). Chain them freely:
-      size × spin × Sanspiel jiggle. Construction-set composability, not one-offs.
+      size × spin × soft-body jiggle. Construction-set composability, not one-offs.
     see: ../../characters/laurie-anderson/ideas.md   # Voice of Authority = a persona/authority filter
     size_filter:
       what: |
@@ -590,7 +643,7 @@ anonymizing-puppet-and-reveal:
       body movement — and drive the soft-body **jiggle simulation** with it (e.g. the balloon-boob / dong
       physics). Dance hard → the puppet wobbles hard. This is the whole-body sibling of amplitude-scrub
       (mic loudness → mouth) and the Bounce "any gesture, scrubbed by amplitude" trick.
-    drives: soft-body-anatomy.physics       # sanspiel jiggle gain fed by motion energy
+    drives: soft-body-anatomy.physics       # soft-body jiggle gain fed by motion energy
     lineage: ../../characters/don-hopkins/interval-research-pluggers-and-mediaflow.md
   the_mask_disinhibition:
     what: |
@@ -649,7 +702,7 @@ streisand_effect:
     re-create and remix the censored bit themselves.** Try to suppress it and it multiplies.
   mechanism: |
     **Composable slings, spins, wiggles, and jiggles.** The kit turns a one-off forbidden gag into
-    **reusable, stackable modifiers** (size_filter × meatspin_rotation_engine × Sanspiel soft-body).
+    **reusable, stackable modifiers** (size_filter × meatspin_rotation_engine × soft-body pass).
     Anyone can rebuild the joke, restyle it, and pass it on — the gag survives as a *construction set*,
     not a single fragile upload.
   the_joke_is_the_censorship: |
@@ -723,7 +776,7 @@ character_states:
   dizzy: [barf_pressure_rising, googly_eyes_spiral, vomit_threshold_near]
   spinning: [torture_wheel_locked, spin_wheel_penalty_or_fun]
   choreographed: [formation_swoop, sync_swimmer_spin]
-  barfed: [vomit_sanspiel_active, pressure_partial_reset, shame_badge]
+  barfed: [vomit_particles_active, pressure_partial_reset, shame_badge]
   eliminated: [fell_from_machine, seat_lost_musical_chairs, never_spoken_of_again]
   triggered_from: [button_board, roster_yaml, moollm_cue, audience_ticketpr, dizziness_tracking, choreography_modes]
 
@@ -737,7 +790,7 @@ editor:
     - pick_expression_mode
     - preview_awake_asleep
     - test_particle_emitter
-    - test_sanspiel_gag
+    - test_particle_gag
     - preview_umbrella_vs_splash
     - tune_vomit_threshold
     - assemble_spore_avatar
@@ -845,8 +898,8 @@ render-pipeline:
     backends:
       # One part abstraction, three backends, chosen PER SCENE. They fail in opposite directions.
       svg: "Retained mode. DOM nodes, CSS transforms, crisp at any zoom, free hit-testing + accessibility, INSPECTABLE IN DEVTOOLS (matters for a kit whose pitch is seeing inside it). Falls over at high node counts."
-      canvas2d: "Immediate mode. No DOM cost, fast with many parts/particles, composites naturally beside Sanspiel fluids. Nothing to inspect, no free hit-testing."
-      webgpu: "The 3D path, and where Sanspiel already lives — mixed scenes and heavy passes land here."
+      canvas2d: "Immediate mode. No DOM cost, fast with many parts/particles, composites naturally beside particle fluids. Nothing to inspect, no free hit-testing."
+      webgpu: "The 3D path — mixed scenes and heavy passes land here. NOTE: real Sandspiel is Rust/wasm + WebGL, not WebGPU; do not cite it as precedent for this choice."
     consistency_test: "The renderer is a modifier-style PLUG-IN like everything else in the kit. Any new subsystem has to pass that test."
     prose: ../../designs/faceball-construction-set/README.md#2d-and-3d-parts-in-one-scene-parappa-style
   piece_of_cake: true
@@ -857,8 +910,8 @@ render-pipeline:
     - ecg_blend_solver → optional barycentric pose
     - grade_shader → per-preset color/brightness/genre
     - googly_eyes_compute → Mona Eyes focus track
-    - particle_pass → Sanspiel fiduciary emitters
-    - sanspiel_physics_pass → fluids, confetti, pulp, audience balls
+    - particle_pass → particle fiduciary emitters
+    - particle_physics_pass → fluids, confetti, pulp, audience balls
     - composite → transparent PNG out for OBS
   fallback: "Canvas2D v0 for bring-up; WebGPU primary"
   reference_lineage:
@@ -972,14 +1025,14 @@ tech:
     - memory-palace-tour stops yaml — puppet + artifact per room
   v2:
     - ECG blend mode — barycentric pose corners per face
-    - Sanspiel built-ins — tears, vomit, sweat, snot, confetti, spit take
+    - Particle built-ins — tears, vomit, sweat, snot, confetti, spit take
     - optional landmark assist for default pin placement
     - amplitude export for scrub-puppet cells
   v3:
     - watermelon_smash + plexiglass arena + audience-as-balls
     - per-guest particle plugins — particles/guest-<slug>-<gag>.yml
   v4:
-    - dizziness_tracking + vomit threshold → Sanspiel barf trigger
+    - dizziness_tracking + vomit threshold → particle barf trigger
     - faceball-machine Twitch game — flippers, movement, barf leaderboard
     - spore-creature-avatars — pop-on tools, armor, vehicular appendages
   v5:

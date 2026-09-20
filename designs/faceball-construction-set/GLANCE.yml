@@ -71,7 +71,7 @@ expression_modes:
 files:
   - { at: README.md,           what: the kit, its parts, and the ECG engine section }
   - { at: inspirations.md,     what: full credits — Budge, Incredible Machine, Create-A-Sim and Maurice, Spore, the in-house lineage }
-  - { at: physics-and-gags.md, what: Sanspiel fluids, stage gags, the barf meter, the Twitch game, choreography }
+  - { at: physics-and-gags.md, what: particle fluids, stage gags, the barf meter, the Twitch game, choreography }
   - { at: mask-and-reveal.md,  what: anonymity as permission to perform; losing the mask as a game state; the consent-gated reveal }
   - { at: adult-section.md,    what: the opt-in curtained palette — labeled, pixelated by default, aimed at power }
 

@@ -193,7 +193,7 @@ is the proof that it produces something you can build, and it is where the parts
 
 ## Soft-body parts
 
-Plug-in jiggle parts driven by the Sanspiel soft-body pass, using the **same construction-kit verbs as
+Plug-in jiggle parts driven by the soft-body pass, using the **same construction-kit verbs as
 every other part**: snap to a named anchor, tune mass, stiffness, damping, jiggle gain, gravity, and
 collision, then play. Anchors are the ordinary ones — chassis, shoulders, and a crotch anchor — plus
 any custom anchor a YAML file declares.
@@ -255,7 +255,7 @@ just the soft-body pass doing its job on a list instead of a pair.
 
 ### Dancing pixels
 
-**`meatspin_rotation_engine` × Sanspiel soft-body × `sims1_pixelization` = dancing pixels.** Stack all
+**`meatspin_rotation_engine` × soft-body × `sims1_pixelization` = dancing pixels.** Stack all
 three and something nobody designed falls out of the arrangement — this is
 [mechanism 3](#3-tracking-turns-the-occluder-into-a-motion-oracle) made concrete.
 
