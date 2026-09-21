@@ -34,8 +34,17 @@ if [[ "${1:-}" == "--finish" ]]; then
 	done
 	# The symlink goes too: compose no longer reads a combined file, and leaving one would make it
 	# a second source of truth that silently wins for anything using interpolation.
-	[[ -L "$LEGACY_LINK" ]] && rm -v "$LEGACY_LINK"
-	[[ -f "$LEGACY" ]] && shred -u "$LEGACY" && echo "shredded $LEGACY"
+	#
+	# `if` rather than `[[ ... ]] && cmd`, because under `set -e` a trailing false test is itself a
+	# nonzero command and exits the script -- silently, which is how the first run of this script
+	# did nothing at all and reported nothing.
+	if [[ -L "$LEGACY_LINK" ]]; then
+		rm -v "$LEGACY_LINK"
+	fi
+	if [[ -f "$LEGACY" ]]; then
+		shred -u "$LEGACY"
+		echo "shredded $LEGACY"
+	fi
 	echo "Done. Secrets are per-file under $S; see server/SECRETS.md."
 	exit 0
 fi
@@ -45,11 +54,11 @@ fi
 	exit 1
 }
 for f in "${NEW[@]}"; do
-	[[ -e "$f" ]] && {
+	if [[ -e "$f" ]]; then
 		echo "already split: $f exists. Re-running would rotate a password in use." >&2
 		echo "To start over, remove the per-secret files deliberately." >&2
 		exit 1
-	}
+	fi
 done
 
 val() { grep -E "^$1=" "$LEGACY" | head -1 | cut -d= -f2-; }
