@@ -1,6 +1,20 @@
 # Ebike Safari — production stack (GCP VM + Docker)
 # Caddy (TLS) → SvelteKit viewer → static ride JSON
 # PostGIS for future map-match / exposure API (schema init on first boot)
+#
+# EVERY BYTE OF STATE LIVES ON THE DATA DISK, under $DATA_ROOT (default /data).
+# Not some of it. There are no named volumes in this file, deliberately: a named volume lands in
+# /var/lib/docker on the boot disk, which is cattle, and deleting the VM would take the database
+# and the ACME account key with it. Bind mounts under /data are the only kind of persistence here.
+#
+#   /data/postgres              the database
+#   /data/caddy/{data,config}   ACME account key + every issued certificate
+#   /data/releases/<app>        built releases; `current` is the symlink Caddy follows
+#   /data/ebike-safari/rides    ride GeoJSON the site serves (never in git)
+#   /data/ebike-safari/osm      OSM extracts, raw and filtered
+#   /data/secrets               .env, mode 600; the checkout symlinks to it
+#
+# If you add a service that stores anything, it gets a bind mount under $DATA_ROOT too.
 
 services:
   db:
@@ -11,7 +25,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-ebike}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - ${DATA_ROOT:-/data}/postgres:/var/lib/postgresql/data
       - ../db/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test:
@@ -43,7 +57,8 @@ services:
       MAPBOX_TOKEN: ${MAPBOX_TOKEN:-}
     volumes:
       # Outside build/client so sirv does not cache stale Content-Length after ride sync.
-      - ./data:/app/data:ro
+      # On the data disk, not in the checkout: this is the only copy of the rides.
+      - ${DATA_ROOT:-/data}/ebike-safari/rides:/app/data:ro
     depends_on:
       db:
         condition: service_healthy
@@ -75,9 +90,12 @@ services:
       # The PARENT of `current`, never the symlink itself: a bind mount resolves its source
       # once, at mount time, so mounting `current` would pin this container to whichever
       # release existed then and make every later swap invisible inside it.
-      - ${RELEASE_ROOT:-/srv/wwsff}/hyperties:/srv/hyperties:ro
-      - caddy_data:/data
-      - caddy_config:/config
+      - ${RELEASE_ROOT:-/data/releases}/hyperties:/srv/hyperties:ro
+      # The ACME account key and all eight certificates. On the pet disk, because re-issuing
+      # them is rate-limited to 5 duplicates a week -- lose these twice in one week and the
+      # sites go down on TLS with nothing you can do but wait.
+      - ${DATA_ROOT:-/data}/caddy/data:/data
+      - ${DATA_ROOT:-/data}/caddy/config:/config
     depends_on:
       # `service_started`, not `service_healthy`. Caddy answers for hyperties.org as well,
       # and a viewer that fails its healthcheck must not keep an unrelated static site from
@@ -91,8 +109,6 @@ services:
 networks:
   internal:
     driver: bridge
-
-volumes:
-  pgdata:
-  caddy_data:
-  caddy_config:
+# No `volumes:` block. See the header: named volumes live on the boot disk, and nothing that
+# matters is allowed to live on the boot disk. If you find yourself adding one, add a bind mount
+# under $DATA_ROOT instead.

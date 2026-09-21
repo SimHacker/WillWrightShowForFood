@@ -8,7 +8,7 @@
 # Env:
 #   SVELTE_ADAPTER   static (default) or node. Same variable the viewer uses, on purpose.
 #   RELEASE_ID       override the release name (defaults to the short commit sha)
-#   RELEASE_ROOT     where releases live (/srv/wwsff on a server, ./.releases otherwise)
+#   RELEASE_ROOT     where releases live ($DATA_ROOT/releases on a server, ./.releases otherwise)
 #
 # THE NODE FLAG
 #

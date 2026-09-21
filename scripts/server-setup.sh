@@ -252,11 +252,23 @@ if want_phase disk && [[ -z "${NO_DISK:-}" ]]; then
 	if mountpoint -q "$MOUNT" 2>/dev/null; then
 		echo "   $MOUNT already mounted from $(findmnt -n -o SOURCE "$MOUNT")"
 	elif [[ ! -b "$DEV" ]]; then
-		# Not an error: the box may legitimately have no second disk yet, and releases still
-		# work on the boot disk. Say so loudly rather than failing the whole run.
-		echo "   no block device at $DEV — using the BOOT disk for $MOUNT."
-		echo "   Attach a disk and re-run --only disk, or set DATA_DISK. See server/README.md."
-		run mkdir -p "$MOUNT"
+		# A hard stop, not a warning. An earlier version of this script shrugged and used the
+		# boot disk, which is how the database and the ACME account key ended up on cattle for
+		# weeks while a manifest described a disk that had never been created. If the pet disk
+		# is missing, the correct outcome is that nothing proceeds.
+		echo "   NO DATA DISK at $DEV." >&2
+		echo >&2
+		echo "   Everything stateful belongs on it, so setup stops here rather than quietly" >&2
+		echo "   putting state on the boot disk. Create and attach it:" >&2
+		echo >&2
+		echo "     gcloud compute disks create wwsff-data --size=100GB --type=pd-balanced \\" >&2
+		echo "       --zone=europe-west4-a --project=ebike-safari" >&2
+		echo "     gcloud compute instances attach-disk \$(hostname -s) --disk=wwsff-data \\" >&2
+		echo "       --device-name=data --zone=europe-west4-a --project=ebike-safari" >&2
+		echo >&2
+		echo "   Then re-run: sudo bash scripts/server-setup.sh --only disk" >&2
+		echo "   Deliberately running without one (a laptop, a throwaway): NO_DISK=1" >&2
+		exit 1
 	else
 		EXISTING="$(blkid -o value -s TYPE "$DEV" 2>/dev/null || true)"
 		if [[ -z "$EXISTING" ]]; then
@@ -286,7 +298,31 @@ if want_phase disk && [[ -z "${NO_DISK:-}" ]]; then
 		fi
 	fi
 
-	run mkdir -p "$MOUNT/releases"
+	# The full layout, from the manifest's disk.contains keys, so adding a directory there is the
+	# only edit needed to have it created here.
+	for d in $(m disk.contains); do
+		run mkdir -p "$MOUNT/$d"
+	done
+
+	# The secret lives on the pet disk and the checkout points at it. Two reasons this is a
+	# symlink rather than a copy: a reclone cannot lose the secret, and there is exactly one
+	# file to protect instead of one per checkout.
+	ENV_LINK="$REPO/apps/ebike-safari/deploy/.env"
+	ENV_REAL="$MOUNT/secrets/ebike-safari.env"
+	if [[ -L "$ENV_LINK" ]]; then
+		echo "   .env already linked to $(readlink "$ENV_LINK")"
+	elif [[ -f "$ENV_LINK" ]] && [[ ! -f "$ENV_REAL" ]]; then
+		echo "   moving .env onto the data disk and linking it back"
+		run mv "$ENV_LINK" "$ENV_REAL"
+		run chmod 600 "$ENV_REAL"
+		run ln -s "$ENV_REAL" "$ENV_LINK"
+	elif [[ -f "$ENV_REAL" ]]; then
+		echo "   linking .env to $ENV_REAL"
+		run rm -f "$ENV_LINK"
+		run ln -s "$ENV_REAL" "$ENV_LINK"
+	else
+		echo "   no .env yet — create $ENV_REAL (mode 600), it will be linked on the next run"
+	fi
 fi
 
 echo

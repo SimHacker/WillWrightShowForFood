@@ -14,27 +14,30 @@
 #
 # THE DOCKER TRAP, WHICH IS THE WHOLE REASON THIS FILE HAS A COMMENT THIS LONG
 #
-# Bind-mount the PARENT (`/srv/wwsff/hyperties:/srv/hyperties`), never `current` itself. A
+# Bind-mount the PARENT (`/data/releases/hyperties:/srv/hyperties`), never `current` itself. A
 # bind mount resolves its source path once, when the mount is made, so mounting the symlink
 # pins the container to whatever release it pointed at that moment and later swaps are
 # invisible inside the container. Mount the parent and let the server follow `current` on
 # each request, and the swap lands live with no container restart.
 #
 # For the same reason the symlink target is RELATIVE (`releases/<id>`, not
-# `/srv/wwsff/<app>/releases/<id>`): an absolute host path would have to exist at the same
+# `/data/releases/<app>/releases/<id>`): an absolute host path would have to exist at the same
 # path inside the container, and it does not.
 
 RELEASES_KEEP="${RELEASES_KEEP:-5}"
 
-# Where releases live. /srv/wwsff on a server; inside the repo on a laptop, so that running
-# a deploy script on a Mac exercises the real code path instead of a simulated one.
+# Where releases live: on the DATA DISK on a server ($DATA_ROOT/releases, default
+# /data/releases), inside the repo on a laptop so that running a deploy script on a Mac
+# exercises the real code path instead of a simulated one.
+#
+# Never under /srv or /var on the server. Those are the boot disk, the boot disk is cattle, and a
+# release directory there is one `gcloud instances delete` from gone.
 resolve_release_root() {
+	local data="${DATA_ROOT:-/data}"
 	if [[ -n "${RELEASE_ROOT:-}" ]]; then
 		echo "$RELEASE_ROOT"
-	elif [[ -d /srv/wwsff ]]; then
-		echo /srv/wwsff
-	elif [[ -w /srv ]] || [[ $EUID -eq 0 ]]; then
-		echo /srv/wwsff
+	elif [[ -d "$data" ]]; then
+		echo "$data/releases"
 	else
 		echo "$(repo_root)/.releases"
 	fi
