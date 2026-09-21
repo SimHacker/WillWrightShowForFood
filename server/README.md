@@ -12,32 +12,40 @@ the runbook for acting on it.
 
 ## Bring up a replacement server
 
-Roughly ten minutes, most of it apt. Step 2 is skippable and the setup script says so out loud —
-with no data disk it puts releases on the boot disk and warns, rather than failing.
+Roughly ten minutes, most of it apt. Step 2 is not optional: without the disk, step 3 stops and step
+5 refuses, on purpose.
 
 ```bash
 # 1. From your laptop: make the VM. Idempotent — it skips anything that already exists.
 bash apps/ebike-safari/deploy/scripts/provision-server.sh
 
-# 2. Attach the pet disk, if it is not already attached.
+# 2. Attach the pet disk. --device-name=data is what puts it at the manifest's device_hint.
 gcloud compute instances attach-disk ebike-safari-1 \
-  --disk=wwsff-data --device-name=wwsff-data \
+  --disk=wwsff-data --device-name=data \
   --zone=europe-west4-a --project=ebike-safari
 
-# 3. On the box: clone, then converge onto the manifest.
+# 3. On the box: clone, then converge onto the manifest. Mounts /data, never formats a disk that
+#    already has a filesystem, and links .env out of /data/secrets.
 gcloud compute ssh ebike-safari-1 --zone=europe-west4-a --project=ebike-safari
 sudo git clone --depth 1 https://github.com/SimHacker/WillWrightShowForFood.git /opt/WillWrightShowForFood
 cd /opt/WillWrightShowForFood
 sudo bash scripts/server-setup.sh
 
-# 4. Secrets are not in git and never will be. One file, mode 600.
-sudo cp apps/ebike-safari/deploy/.env.example apps/ebike-safari/deploy/.env
-sudo chmod 600 apps/ebike-safari/deploy/.env
-sudo "${EDITOR:-nano}" apps/ebike-safari/deploy/.env   # DOMAIN, ACME_EMAIL, POSTGRES_PASSWORD, MAPBOX_TOKEN
+# 4. Only for a genuinely new disk — an existing one already carries the secret, and step 3
+#    symlinked the checkout at it.
+sudo test -f /data/secrets/ebike-safari.env || {
+  sudo cp apps/ebike-safari/deploy/.env.example /data/secrets/ebike-safari.env
+  sudo chmod 600 /data/secrets/ebike-safari.env
+  sudo "${EDITOR:-nano}" /data/secrets/ebike-safari.env  # DOMAIN, ACME_EMAIL, POSTGRES_PASSWORD, MAPBOX_TOKEN
+  sudo bash scripts/server-setup.sh --only disk          # make the symlink
+}
 
 # 5. Deploy.
 sudo bash scripts/server-deploy.sh hyperties ebike-safari
 ```
+
+The database, the certificates and the rides are already on the disk, so this is a rebuild, not a
+restore — nothing is re-issued and nothing is re-imported.
 
 Check it before trusting it:
 
@@ -62,71 +70,79 @@ answer to *is this box set up correctly* and not merely to *set this box up*.
 `vm-bootstrap.sh` and the setup half of `server-install.sh` are superseded. `provision-server.sh`
 stays — it builds GCP objects from a laptop, which is a different job.
 
-## What is on the pet disk, and what is still wrongly on the cattle
+## What is on the pet disk
 
-Being blunt, because the gap matters more than the plan. **As of 2026-09-20 there is no pet disk at
-all** — `ebike-safari-1` has one 100G boot disk, so everything below is on the cattle:
+All of it. `wwsff-data`, 100GB pd-balanced, mounted at `/data`, attached with `--device-name=data`.
+The rule is not "the important things" — it is that **if deleting the VM would lose it, it is on
+`/data`**, and anything left on the boot disk must be reconstructible from git plus `MANIFEST.yml`.
 
-| Thing | Where it lives | If you delete the VM today |
+| On `/data` — survives the VM | | On the boot disk — destroyed, correctly |
 |---|---|---|
-| App releases | `/srv/wwsff/<app>/releases`, **boot disk** until a data disk is attached | **Destroyed** (rebuildable from git) |
-| Postgres data | docker volume `pgdata`, **boot disk** | **Destroyed** |
-| Caddy certificates + ACME account key | docker volume `caddy_data`, **boot disk** | **Destroyed** |
-| Repo checkout, images, node | boot disk | Destroyed, and correctly so — the manifest rebuilds them |
+| `postgres` | the database, 3.7G | docker images (a deploy rebuilds them) |
+| `caddy/data` | ACME account key + 8 certs | `node_modules` (pnpm, from the lockfile) |
+| `caddy/config` | Caddy's autosaved JSON | `apps/*/build`, `.svelte-kit` (a build) |
+| `releases` | per-commit builds, `current` symlink | the repo checkout (the `repo` phase) |
+| `ebike-safari/rides` | ride GeoJSON; no other copy | |
+| `ebike-safari/osm` | OSM extracts, 3.7G | |
+| `secrets` | `.env`, mode 600, symlinked into the checkout | |
 
-Releases are the least alarming row: they are a build of a known commit, so losing them costs one
-deploy. The other two are the real exposure, and the certificate volume is the one that bites first.
-Rebuilding forces re-issuance of six certificates, and Let's Encrypt allows 5 duplicate
-certificates per week — so a *second* rebuild inside one week fails and the sites go down on TLS
-rather than on anything you did wrong. Postgres is lower stakes today (a users table and a seed)
-and becomes the more serious of the two the moment real accounts exist.
+Two of those rows are why this is not merely tidy. The certificate directory bites first: rebuilding
+without it re-issues eight certificates, and Let's Encrypt allows 5 duplicates per week, so a
+*second* rebuild inside one week fails and the sites go down on TLS with nothing to do but wait out
+the window. The rides are the unrecoverable row — they are not in git and there is no second copy.
 
-### Moving the database and certificates onto the pet disk
+There are no docker named volumes anywhere in the compose file, deliberately. A named volume lands
+in `/var/lib/docker` on the boot disk, which reads as persistent because it survives a restart, and
+is not, because it does not survive the instance.
 
-The change is small — named volumes become bind mounts under `/srv/wwsff` — but it moves live data,
-so it is written down rather than done quietly. Do it in one sitting, with the stack down.
+### Both scripts stop rather than improvise
 
-```bash
-cd /opt/WillWrightShowForFood/apps/ebike-safari/deploy
-sudo mkdir -p /srv/wwsff/{pgdata,caddy/data,caddy/config}
+`server-setup.sh` exits if there is no disk at the manifest's `device_hint`, and `server-deploy.sh`
+refuses unless `/data` is a mount point. An earlier version of the setup script printed a warning and
+used the boot disk, which is exactly how this manifest came to describe a pet disk that had never
+been created while the database sat on cattle for five weeks. A warning in a log nobody reads is not
+a safeguard. Override deliberately with `NO_DISK=1` or an explicit `DATA_ROOT`.
 
-# Stop, so nothing is mid-write. Both sites are down for the duration.
-sudo docker compose down
+### Snapshots
 
-# Copy each volume's contents out, preserving ownership — postgres cares, Caddy cares about mode.
-for v in pgdata caddy_data caddy_config; do
-  sudo docker run --rm -v "deploy_${v}:/from" -v /srv/wwsff:/to alpine \
-    sh -c "cd /from && cp -a . /to/$(echo $v | sed 's/caddy_/caddy\//;s/^pgdata$/pgdata/')"
-done
-
-# Then change docker-compose.yml: replace the three named volumes with
-#   - /srv/wwsff/pgdata:/var/lib/postgresql/data
-#   - /srv/wwsff/caddy/data:/data
-#   - /srv/wwsff/caddy/config:/config
-# and delete the `volumes:` block at the bottom.
-
-sudo docker compose up -d
-sudo docker compose logs --tail 20 db caddy   # expect no permission errors
-```
-
-Verify the certificates came across rather than being re-issued — the ACME account key is the file
-that matters:
+`wwsff-data-daily` — daily at 03:00, 14 days retention, `--on-source-disk-delete=keep-auto-snapshots`,
+attached to both disks. Before 2026-09-21 the project had **zero** snapshots, which meant the single
+copy of the database was also the only copy.
 
 ```bash
-sudo ls /srv/wwsff/caddy/data/caddy/certificates/*/hyperties.org/
-curl -sI https://hyperties.org | head -1
+# On demand, before anything risky:
+gcloud compute snapshots create wwsff-data-$(date +%Y%m%d-%H%M) \
+  --source-disk=wwsff-data --source-disk-zone=europe-west4-a --project=ebike-safari
+
+# Restore: build a disk from a snapshot, attach it as `data`, converge, deploy.
+gcloud compute disks create wwsff-data-restored --source-snapshot=<snap> \
+  --type=pd-balanced --zone=europe-west4-a --project=ebike-safari
 ```
 
-Keep the old named volumes for a week before `docker volume rm`, because that is the only rollback.
+A snapshot of a running postgres is crash-consistent, not clean — it restores the way a power cut
+would, which postgres recovers from via WAL replay. Good enough for a daily; take a `pg_dump` before
+a migration.
 
 ## Things the box needs that are not packages
 
-- **A data disk that exists.** `gcloud compute disks create wwsff-data --size=50GB --type=pd-balanced
-  --zone=europe-west4-a --project=ebike-safari`, then attach with `--device-name=wwsff-data` so it
-  appears at the manifest's `device_hint`. The script mounts an existing filesystem and **never**
-  formats one, so re-attaching an old disk to a new server is safe by construction.
+- **The data disk, attached as `data`.** It exists (`wwsff-data`); this is only for a new server:
+  `gcloud compute instances attach-disk <vm> --disk=wwsff-data --device-name=data
+  --zone=europe-west4-a --project=ebike-safari`. The `--device-name` is what makes it appear at the
+  manifest's `device_hint`. The script mounts an existing filesystem and **never** formats one, so
+  re-attaching the old disk to a new server is safe by construction.
 - **DNS pointing at the static IP.** `provision-server.sh` sets `ebike-safari.com` and `www`. The six
   hyperties names are managed by hand today; each needs an A record before Caddy can pass an ACME
   challenge, and a missing one is the usual cause of a single site failing to get a certificate.
-- **`.env`**, mode 600, never in git. Referenced by compose for `POSTGRES_PASSWORD`, `ACME_EMAIL`,
-  `DOMAIN` and `MAPBOX_TOKEN`.
+- **`.env`**, mode 600, never in git. It lives at `/data/secrets/ebike-safari.env` and the checkout
+  symlinks to it, so a reclone cannot lose it. Referenced by compose for `POSTGRES_PASSWORD`,
+  `ACME_EMAIL`, `DOMAIN` and `MAPBOX_TOKEN`.
+
+## The old named volumes
+
+`deploy_pgdata`, `deploy_caddy_data` and `deploy_caddy_config` still exist on the boot disk, holding
+the state as it was at the moment of the move. Nothing mounts them. They are the rollback, so leave
+them until the `/data` copies have a week of daily snapshots behind them, then:
+
+```bash
+sudo docker volume rm deploy_pgdata deploy_caddy_data deploy_caddy_config
+```
