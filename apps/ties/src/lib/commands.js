@@ -29,25 +29,25 @@ export const commands = {
 		label: 'FIRST',
 		title: 'first page of this article',
 		applies: (pile) => pile.canPageBack,
-		run: (pile) => pile.goPage(0)
+		run: (pile) => pile.pageFirst()
 	},
 	'!OptionBack': {
 		label: 'BACK PAGE',
 		title: 'previous page of this article',
 		applies: (pile) => pile.canPageBack,
-		run: (pile) => pile.goPage(pile.pageIndex - 1)
+		run: (pile) => pile.pageBack()
 	},
 	'!OptionNext': {
 		label: 'NEXT PAGE',
 		title: 'next page of this article',
 		applies: (pile) => pile.canPageNext,
-		run: (pile) => pile.goPage(pile.pageIndex + 1)
+		run: (pile) => pile.pageNext()
 	},
 	'!OptionLast': {
 		label: 'LAST',
 		title: 'last page of this article',
 		applies: (pile) => pile.canPageNext,
-		run: (pile) => pile.goPage(pile.pageCount - 1)
+		run: (pile) => pile.pageLast()
 	},
 
 	// The path axis: where this pile has been.

@@ -1,15 +1,6 @@
 <!--
-  One browser: its three piles, rendered together.
-
-  The contents pile holds the article. The definition and controls piles are made INSIDE
-  it, and the triad is cross-wired so each one has a name for the others in its own
-  membrane -- so both reach the article by resolving CONTENTS from where they sit. That is
-  all transclusion turns out to be here: put the linked piles below the article and they
-  are already showing the right thing.
-
-  Navigation is the pile's, not the URL's. A route seeds the pile once on the way in, so
-  deep links work, and after that pressing RETURN moves the pile rather than the address
-  bar. One owner, no reconciliation loop.
+  One browser, tiled like 1988: title bar, scrolling article, definition strip,
+  control strip. Definition and controls are pinned; the article scrolls under them.
 -->
 <script>
 	import Article from './Article.svelte';
@@ -23,65 +14,122 @@
 	const article = $derived(contents.article);
 
 	function navigate(target) {
-		if (target?.space !== 'documents') return;
+		if (target?.space && target.space !== 'documents') return;
+		if (!target?.slug) return;
 		if (onnavigate) onnavigate(target);
-		else contents.go(contents.db, target.slug);
+		else contents.go(target.db ?? contents.db, target.slug);
 	}
+
+	function preview(target) {
+		if (!target?.slug) return;
+		if (target.space && target.space !== 'documents') return;
+		browser.definition.preview(target.db ?? contents.db, target.slug);
+	}
+
+	function defineHere() {
+		if (!article) return;
+		browser.definition.preview(contents.db, article.slug);
+	}
+
+	let scrollerEl = $state(null);
+
+	$effect(() => {
+		const el = scrollerEl;
+		const pile = contents;
+		const _article = article;
+		if (!el) return;
+		pile.attachScroller(el);
+		const ro = new ResizeObserver(() => pile.syncScroll(el));
+		ro.observe(el);
+		if (el.firstElementChild) ro.observe(el.firstElementChild);
+		return () => ro.disconnect();
+	});
 </script>
 
-<div class="pile-stack">
-	<div class="pile contents" data-pile={contents.name} data-class={contents.pileClass}>
+<div class="ties-window">
+	<header class="titlebar">
+		<button type="button" class="win-title" onclick={defineHere} title="show this article's definition">
+			{article?.title ?? ''}
+		</button>
+	</header>
+
+	<div
+		class="contents"
+		data-pile={contents.name}
+		data-class={contents.pileClass}
+		bind:this={scrollerEl}
+		onscroll={() => contents.syncScroll(scrollerEl)}
+	>
 		{#if article}
-			{#key `${contents.db}/${article.slug}/${contents.pageIndex}`}
-				<Article db={contents.db} {article} onnavigate={navigate} />
+			{#key `${contents.db}/${article.slug}`}
+				<Article
+					db={contents.db}
+					{article}
+					titled={false}
+					onpreview={preview}
+					onnavigate={navigate}
+				/>
 			{/key}
-			{#if contents.pageCount > 1}
-				<p class="pages">page {contents.pageIndex + 1} of {contents.pageCount}</p>
-			{/if}
 		{:else}
-			<p class="empty">This pile is empty. HOME, below, reopens the database it left.</p>
+			<p class="empty">This pile is empty. HOME reopens the database it left.</p>
 		{/if}
 	</div>
 
-	<div class="linked">
-		<div class="pile" data-pile={browser.definition.name}>
-			<DefinitionWindow pile={browser.definition} onnavigate={navigate} />
-		</div>
-		<div class="pile" data-pile={browser.controls.name}>
-			<ControlPanel pile={browser.controls} />
-			<p class="provenance" title="the storyboard this panel is laid out by">
-				laid out by <code>{browser.controls.article?.source ?? 'no panel article'}</code>
-			</p>
-		</div>
+	<DefinitionWindow pile={browser.definition} onnavigate={navigate} />
+
+	<div class="controls" data-pile={browser.controls.name}>
+		<ControlPanel pile={browser.controls} />
 	</div>
 </div>
 
 <style>
-	.pile-stack {
+	.ties-window {
 		display: flex;
 		flex-direction: column;
-		gap: 1.2rem;
-		min-width: 0;
+		height: 100%;
+		min-height: 0;
+		border: 1px solid var(--ink, #000);
+		background: var(--paper, #fff);
 	}
-	.linked {
+	.titlebar {
 		display: flex;
-		flex-direction: column;
-		gap: 0.8rem;
-	}
-	.pages {
-		margin: 0.6rem 0 0;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 1rem;
+		flex-shrink: 0;
+		padding: 0.12rem 0.45rem;
+		border-bottom: 1px solid var(--ink, #000);
 		font-size: 0.8rem;
-		color: #6a6a6a;
+	}
+	.win-title {
+		font: inherit;
+		padding: 0;
+		border: 0;
+		background: none;
+		color: inherit;
+		cursor: pointer;
+		text-align: left;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.win-title:hover {
+		background: #000;
+		color: #fff;
+	}
+	.contents {
+		flex: 1 1 auto;
+		min-height: 0;
+		overflow: auto;
+		padding: 0.45rem 0.6rem 0.6rem;
+	}
+	.controls {
+		flex-shrink: 0;
+		border-top: 1px solid var(--ink, #000);
 	}
 	.empty {
-		color: #6a6a6a;
-	}
-	.provenance {
-		margin: 0.35rem 0 0;
-		font-size: 0.72rem;
-		color: #6a6a6a;
-	}
-	.provenance code {
-		font-size: 0.72rem;
+		color: #666;
+		margin: 0;
+		font-size: 0.85rem;
 	}
 </style>

@@ -178,6 +178,7 @@ export function resolve(dbId, name) {
 		const article = db.articles.get(doc.slug);
 		return {
 			space: 'documents',
+			db: dbId,
 			slug: doc.slug,
 			alias: doc.alias,
 			title: article?.title ?? doc.slug,

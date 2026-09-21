@@ -12,6 +12,7 @@
 	);
 </script>
 
+<div class="index">
 <h1>HyperTIES</h1>
 <p class="lede">
 	The Interactive Encyclopedia System, 1988. {total.articles} articles across {dbs.length} databases,
@@ -40,7 +41,13 @@
 	{/each}
 </ul>
 
+</div>
+
 <style>
+	.index {
+		max-width: 52rem;
+		padding: 1.2rem 1rem 3rem;
+	}
 	h1 {
 		font-size: 2rem;
 		margin: 0 0 0.5rem;

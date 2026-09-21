@@ -37,6 +37,7 @@ reader:
 builds:
   dev: "vite dev"
   static: "vite build — adapter-static, prerender = true, every article a real HTML file"
+  node: "SVELTE_ADAPTER=node — proxy + views; articles still files. SERVER.md"
   offline: "vite build --config vite.bundle.config.js — singlefile, assets base64"
 
 what_it_proved:

@@ -156,14 +156,16 @@
 	.button-target button {
 		font: inherit;
 		cursor: pointer;
-		border: 1px solid currentColor;
-		border-radius: 999px;
-		padding: 0.15rem 0.7rem;
-		background: transparent;
+		border: 0;
+		border-bottom: 1px solid #000;
+		border-radius: 0;
+		padding: 0;
+		background: none;
 		color: inherit;
 	}
 	.button-target button:hover {
-		background: color-mix(in oklab, currentColor 12%, transparent);
+		background: #000;
+		color: #fff;
 	}
 	.verb {
 		font-family: ui-monospace, monospace;

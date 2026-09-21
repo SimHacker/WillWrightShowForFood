@@ -8,26 +8,29 @@
 
 <style>
 	:global(:root) {
-		/* Plain white, because that is what HyperTIES was, and because the artwork is
-		   1-bit line art on a white field: on white the images have no visible edge. */
 		--paper: #ffffff;
 		--ink: #000000;
-		--hot: #c8102e;
+		--hot: #000000;
 		--panel: #ffffff;
 		color-scheme: light;
 	}
+	:global(html),
 	:global(body) {
+		height: 100%;
 		margin: 0;
+	}
+	:global(body) {
 		background: var(--paper);
 		color: var(--ink);
-		font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+		font-family: ui-sans-serif, system-ui, sans-serif;
 	}
 	:global(a) {
-		color: var(--hot);
+		color: inherit;
 	}
 	.shell {
-		max-width: 62rem;
-		margin: 0 auto;
-		padding: 2.5rem 1.5rem 6rem;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		max-width: none;
 	}
 </style>

@@ -7,7 +7,7 @@ definition: Describes how to specify a link in the content of an article
 source: doc/aut-howtolink.st0
 ---
 
-The command syntax is: <white space>~<white space><reference>~
+The command syntax is: `<white space>~<white space><reference>~`
 
 (Generally a space, followed by a dot, directly followed by a tilde and a space, then the text of the button terminated by another tilde.)
 

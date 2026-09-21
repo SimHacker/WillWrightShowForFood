@@ -34,6 +34,11 @@ import { paginate } from './markdown.js';
 export const MAX_PILES = 32; // 32 constant /piles
 export const PATH_MAX = 128; // 128 constant /path
 
+/** How long a considered link stays green — click again while green to go.
+ *  Longer than a typical OS double-click so the fuse is visible. Configurable:
+ *  set `--click-timeout` in CSS to the same value. */
+export const CLICK_TIMEOUT_MS = 800;
+
 export const CONTENTS = 'ContentsPileID';
 export const DEFINITION = 'DefinitionPileID';
 export const CONTROLS = 'ControlsPileID';
@@ -65,10 +70,20 @@ export class Pile {
 	path = $state([]);
 	/** Index into the path. Behind the end means there is somewhere to go forward to. */
 	cursor = $state(-1);
-	/** Which page of the current article, within this pile. */
+	/** Which discrete page of the current article. Unused while we scroll. */
 	page = $state(0);
 	/** The last database visited, so an emptied pile still knows where it was. */
 	lastDb = $state(null);
+
+	/**
+	 * The page axis while articles scroll: the contents pane's scroll metrics.
+	 * FIRST / BACK / NEXT / LAST read these. Window-size paging later is the same
+	 * verbs with a different step.
+	 */
+	scrollTop = $state(0);
+	scrollHeight = $state(0);
+	clientHeight = $state(0);
+	scroller = null;
 
 	/**
 	 * The bubble this bubble was made inside. `MP` sets it to whichever pile was current:
@@ -85,10 +100,9 @@ export class Pile {
 	scope = $state(new Map());
 
 	/**
-	 * Whether this pile's position is the leader's. The definition pile shows the
-	 * definition PASS of whatever the contents pile is showing, which the 1988 browser
-	 * achieved by reformatting into it; mirroring is that, declared rather than pushed.
-	 * The controls pile does NOT mirror -- it holds its own article, the panel.
+	 * Whether this pile's position is the leader's. The controls pile does not mirror.
+	 * The definition pile used to, which was wrong: the 1988 pane shows the article
+	 * you are *considering* (the last single-click), not the one you are *in*.
 	 */
 	mirrors = false;
 
@@ -227,12 +241,22 @@ export class Pile {
 	// business, and these are what it consults. Inapplicable means disabled, not hidden:
 	// the panel keeps its shape so the buttons stay where the hand learned they are.
 
+	get scrollMax() {
+		return Math.max(0, this.scrollHeight - this.clientHeight);
+	}
+
+	/** One viewport minus a strip of overlap, so you still see where you were. */
+	get pageStep() {
+		const overlap = Math.min(48, Math.round(this.clientHeight * 0.12));
+		return Math.max(24, this.clientHeight - overlap);
+	}
+
 	get canPageBack() {
-		return this.pageIndex > 0;
+		return this.scrollTop > 1;
 	}
 
 	get canPageNext() {
-		return this.pageIndex < this.pageCount - 1;
+		return this.scrollTop < this.scrollMax - 1;
 	}
 
 	get canReturn() {
@@ -261,7 +285,30 @@ export class Pile {
 		this.cursor = this.path.length - 1;
 		this.page = 0;
 		this.lastDb = db;
+		this._clearPreview();
+		this.pageFirst();
 		return true;
+	}
+
+	/**
+	 * Put one article in this pile without a visit path. The definition pane uses this:
+	 * single click replaces the preview, it does not accumulate history, and it is not
+	 * navigation. Empty the pile (zap) when the contents pile moves.
+	 */
+	preview(db, slug) {
+		if (!db || !slug) return false;
+		this.path = [{ db, slug }];
+		this.cursor = 0;
+		this.page = 0;
+		this.lastDb = db;
+		return true;
+	}
+
+	/** A move in the contents pile forgets the considered link. */
+	_clearPreview() {
+		if (this.name !== CONTENTS) return;
+		const def = this.lookup(DEFINITION);
+		if (def && def !== this) def.zap();
 	}
 
 	/** Open a name through the index rather than a slug, reserved names included. */
@@ -281,6 +328,8 @@ export class Pile {
 		if (!this.canReturn) return false;
 		this.cursor -= 1;
 		this.page = 0;
+		this._clearPreview();
+		this.pageFirst();
 		return true;
 	}
 
@@ -288,14 +337,61 @@ export class Pile {
 		if (!this.canForward) return false;
 		this.cursor += 1;
 		this.page = 0;
+		this._clearPreview();
+		this.pageFirst();
 		return true;
 	}
 
-	goPage(n) {
-		const clamped = Math.min(Math.max(n, 0), this.pageCount - 1);
-		if (clamped === this.pageIndex) return false;
-		this.page = clamped;
+	attachScroller(el) {
+		this.scroller = el;
+		this.syncScroll(el);
+	}
+
+	syncScroll(el = this.scroller) {
+		if (!el) return;
+		this.scrollTop = el.scrollTop;
+		this.scrollHeight = el.scrollHeight;
+		this.clientHeight = el.clientHeight;
+	}
+
+	_scrollTo(top) {
+		const y = Math.min(Math.max(top, 0), this.scrollMax);
+		if (this.scroller) {
+			this.scroller.scrollTop = y;
+			this.syncScroll();
+		} else {
+			this.scrollTop = y;
+		}
 		return true;
+	}
+
+	pageFirst() {
+		return this._scrollTo(0);
+	}
+
+	pageLast() {
+		this.syncScroll();
+		return this._scrollTo(this.scrollMax);
+	}
+
+	pageBack() {
+		this.syncScroll();
+		if (!this.canPageBack) return false;
+		return this._scrollTo(this.scrollTop - this.pageStep);
+	}
+
+	pageNext() {
+		this.syncScroll();
+		if (!this.canPageNext) return false;
+		return this._scrollTo(this.scrollTop + this.pageStep);
+	}
+
+	goPage(n) {
+		if (n <= 0) return this.pageFirst();
+		if (n >= this.pageCount - 1) return this.pageLast();
+		if (n < this.pageIndex) return this.pageBack();
+		if (n > this.pageIndex) return this.pageNext();
+		return false;
 	}
 
 	/** _zap_pages: empty the pile. */
@@ -303,6 +399,7 @@ export class Pile {
 		this.path = [];
 		this.cursor = -1;
 		this.page = 0;
+		this._clearPreview();
 	}
 
 	/**
@@ -343,16 +440,40 @@ export class Browser {
 	definition;
 	controls;
 
+	/** The considered link: destination + when the fuse started. Null after timeout or go. */
+	armed = $state(null);
+	#armTimer = null;
+
+	arm = (target) => {
+		if (!target?.slug) return;
+		const db = target.db ?? this.contents.db;
+		this.armed = { db, slug: target.slug, at: Date.now() };
+		clearTimeout(this.#armTimer);
+		this.#armTimer = setTimeout(() => {
+			this.armed = null;
+		}, CLICK_TIMEOUT_MS);
+	};
+
+	disarm = () => {
+		clearTimeout(this.#armTimer);
+		this.armed = null;
+	};
+
+	isArmed = (target) => {
+		if (!this.armed || !target?.slug) return false;
+		const db = target.db ?? this.contents.db;
+		return this.armed.slug === target.slug && this.armed.db === db;
+	};
+
 	constructor({ db = null, panel = 'control-panel' } = {}) {
 		this.contents = new Pile({ name: CONTENTS, pass: PASS.article, pileClass: 'ContentsPile' });
 		this.definition = new Pile({
 			name: DEFINITION,
 			pass: PASS.definition,
 			pileClass: 'DefinitionPile',
-			// init-definition sets the window title, so the pile is a titled window.
 			title: 'Definition',
 			parent: this.contents,
-			mirrors: true
+			mirrors: false
 		});
 		// The control panel is an ordinary article in an ordinary pile, pointed at
 		// !Control Panel by default and at any article you like instead. That is how a

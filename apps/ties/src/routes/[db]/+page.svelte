@@ -1,23 +1,14 @@
 <script>
 	/**
-	 * A database opens at its home article, not at a list of its contents.
-	 *
-	 * Piles are window scopes, and there can be more than one: `.new-pile <class>` made
-	 * them in 1988 and `32 constant /piles` was the ceiling. Split opens a second, which
-	 * browses independently until synchronized, at which point navigating either navigates
-	 * both -- by NAME rather than by slug, so two piles on different databases still track
-	 * each other wherever the name resolves in both.
+	 * A database opens at its home article. Piles fill the window; definition and
+	 * controls stay pinned. Split still opens a second tiled browser.
 	 */
 	import Piles from '$lib/Piles.svelte';
 	import { Workspace } from '$lib/pile.svelte.js';
 
 	let { data } = $props();
 
-	// One workspace per database. Recomputed only when the route changes, so navigating
-	// inside a pile never rebuilds it: the visit path belongs to the pile, which is what
-	// gives RETURN something to pop.
 	const workspace = $derived.by(() => new Workspace([data.id]));
-	const primary = $derived(workspace.browsers[0]);
 
 	function split() {
 		workspace.open(data.id);
@@ -28,122 +19,113 @@
 	<title>{data.id} — HyperTIES</title>
 </svelte:head>
 
-<p class="crumb"><a href="../">HyperTIES</a> / {data.id}</p>
+<div class="frame">
+	<div class="meta">
+		<p class="crumb"><a href="../">HyperTIES</a> / {data.id}</p>
+		<span class="count">{data.principals} articles</span>
+		<span class="spacer"></span>
+		{#if workspace.browsers.length > 1}
+			<label class="sync">
+				<input type="checkbox" bind:checked={workspace.synchronized} />
+				synchronized
+			</label>
+		{/if}
+		<button type="button" onclick={split} disabled={workspace.browsers.length >= 4}>
+			new pile
+		</button>
+	</div>
 
-<div class="bar">
-	<span class="count">{data.principals} articles, {data.entries} names in the index</span>
-	<span class="spacer"></span>
-	{#if workspace.browsers.length > 1}
-		<label class="sync">
-			<input type="checkbox" bind:checked={workspace.synchronized} />
-			synchronized
-		</label>
-	{/if}
-	<button type="button" onclick={split} disabled={workspace.browsers.length >= 4}>
-		new pile
-	</button>
+	<div class="piles" class:split={workspace.browsers.length > 1}>
+		{#each workspace.browsers as browser, i (browser.contents.id)}
+			<div class="scope">
+				{#if workspace.browsers.length > 1}
+					<header class="scope-head">
+						<span>pile {i + 1}</span>
+						<button type="button" onclick={() => workspace.close(browser)} title="close this pile">
+							×
+						</button>
+					</header>
+				{/if}
+				<Piles
+					{browser}
+					onnavigate={(target) => workspace.navigate(browser, browser.contents.db, target.slug)}
+				/>
+			</div>
+		{/each}
+	</div>
 </div>
-
-<div class="piles" class:split={workspace.browsers.length > 1}>
-	{#each workspace.browsers as browser, i (browser.contents.id)}
-		<div class="scope">
-			{#if workspace.browsers.length > 1}
-				<header class="scope-head">
-					<!-- Counted for the reader, not named for the dictionary. Every contents pile
-					     is bound as ContentsPileID inside its own browser, which is what makes
-					     one lookup serve them all, and is exactly why it cannot label anything
-					     on screen: both piles would wear the same name. -->
-					<span>pile {i + 1}</span>
-					<button type="button" onclick={() => workspace.close(browser)} title="close this pile">
-						×
-					</button>
-				</header>
-			{/if}
-			<Piles
-				{browser}
-				onnavigate={(target) => workspace.navigate(browser, browser.contents.db, target.slug)}
-			/>
-		</div>
-	{/each}
-</div>
-
-{#if !primary?.contents.article}
-	<p class="empty">
-		This database declares no <code>!home</code> article, so there is nowhere to open.
-	</p>
-{/if}
 
 <style>
-	.crumb {
-		font-size: 0.8rem;
-		opacity: 0.6;
-		margin: 0 0 0.5rem;
+	.frame {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		min-height: 0;
 	}
-	.bar {
+	.meta {
 		display: flex;
 		align-items: center;
-		gap: 0.7rem;
-		margin: 0 0 1.2rem;
-		padding-bottom: 0.6rem;
-		border-bottom: 1px solid #e3e3e3;
+		gap: 0.6rem;
+		flex-shrink: 0;
+		padding: 0.15rem 0.35rem;
+		border-bottom: 1px solid var(--ink, #000);
+		font-size: 0.72rem;
+	}
+	.crumb {
+		margin: 0;
 	}
 	.spacer {
 		flex: 1;
 	}
 	.count {
-		font-size: 0.85rem;
-		color: #6a6a6a;
+		opacity: 0.55;
 	}
 	.sync {
-		font-size: 0.8rem;
 		display: flex;
 		align-items: center;
-		gap: 0.3rem;
+		gap: 0.25rem;
 	}
-	.bar button {
+	.meta button {
 		font: inherit;
-		font-size: 0.8rem;
-		padding: 0.2rem 0.6rem;
+		font-size: 0.72rem;
+		padding: 0.05rem 0.3rem;
 		border: 1px solid var(--ink, #000);
 		background: var(--paper, #fff);
-		border-radius: 2px;
 		cursor: pointer;
 	}
-	.bar button:disabled {
-		color: #9a9a9a;
-		border-color: #cfcfcf;
+	.meta button:disabled {
+		color: #999;
+		border-color: #ccc;
 		cursor: default;
 	}
 	.piles {
+		flex: 1 1 auto;
+		min-height: 0;
 		display: grid;
-		gap: 1.5rem;
 	}
 	.piles.split {
-		grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
 	}
 	.scope {
 		min-width: 0;
+		min-height: 0;
+		display: flex;
+		flex-direction: column;
 	}
 	.scope-head {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		font-size: 0.7rem;
-		letter-spacing: 0.1em;
+		font-size: 0.65rem;
+		letter-spacing: 0.08em;
 		text-transform: uppercase;
-		color: #6a6a6a;
-		margin-bottom: 0.5rem;
+		padding: 0.1rem 0.35rem;
+		border-bottom: 1px solid var(--ink, #000);
 	}
 	.scope-head button {
 		font: inherit;
 		border: none;
 		background: none;
 		cursor: pointer;
-		font-size: 1rem;
-		line-height: 1;
-		color: #6a6a6a;
-	}
-	.empty {
-		color: #6a6a6a;
 	}
 </style>
