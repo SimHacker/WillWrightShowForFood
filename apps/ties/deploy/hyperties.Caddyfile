@@ -4,11 +4,14 @@
 # 138 HTML files and about 2 MB of assets. Nothing to keep running, nothing to restart,
 # nothing to fall over.
 #
-# The root is a SYMLINK, not a directory. `/srv/hyperties` is a bind mount of
-# $RELEASE_ROOT/hyperties, whose `current` link points at one release under releases/.
-# Caddy resolves the link per request, so publishing a release is a rename and a rollback
-# is the same rename backwards -- no rebuild, no restart, no window of half-old articles.
-# Deploy with apps/ties/scripts/deploy-app.sh.
+# The root is a SYMLINK, not a directory. /data/releases/hyperties/current points at one
+# release under releases/, and Caddy resolves the link per request, so publishing a release is a
+# rename and a rollback is the same rename backwards -- no rebuild, no restart, no window of
+# half-old articles. Deploy with apps/ties/scripts/deploy-app.sh.
+#
+# That path is literal and global: the same string on the host, in the Caddy container, and in
+# the deploy script that writes it. Compose mounts all of /data/releases read-only, so another
+# app copying this file only has to change the app name in the root line.
 #
 # Only hyperties.org serves content. Every other name we own redirects to it, so there is
 # one URL to cite, one set of links for search engines to consolidate, and no way to read
@@ -26,7 +29,7 @@
 # challenge takes down every name on it. Isolating hyperties.org means the address people
 # actually cite cannot be broken by a problem with .net or .link.
 hyperties.org {
-	root * /srv/hyperties/current
+	root * /data/releases/hyperties/current
 	encode zstd gzip
 
 	# Vite writes content-hashed filenames under _app/immutable, so those are safe to

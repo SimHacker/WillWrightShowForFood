@@ -8,11 +8,11 @@ CMD="${1:-status}"
 shift || true
 
 cd "$DEPLOY"
-set -a
+# Superuser, because the pipeline writes schema. One file, on the data disk; see server/SECRETS.md.
 # shellcheck disable=SC1091
-source .env
-set +a
-export DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}"
+source "$(cd "$DEPLOY/../../.." && pwd)/scripts/lib/secrets.sh"
+DATABASE_URL="$(superuser_url)" || exit 1
+export DATABASE_URL
 export OSM_DATA_DIR=/osm
 
 compose=(docker compose -f docker-compose.yml -f docker-compose.tools.yml)

@@ -6,19 +6,14 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 TARGET="${1:-all}"
 
+# The import creates and rewrites tables, so it connects as the SUPERUSER -- the one credential
+# the application containers deliberately cannot reach. From its single file on the data disk, not
+# from a combined .env. See server/SECRETS.md.
 if [[ -z "${DATABASE_URL:-}" ]]; then
-	if [[ -f "${ROOT}/deploy/.env" ]]; then
-		set -a
-		# shellcheck disable=SC1091
-		source "${ROOT}/deploy/.env"
-		set +a
-		export DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike_safari}"
-	fi
-fi
-
-if [[ -z "${DATABASE_URL:-}" ]]; then
-	echo "Set DATABASE_URL or deploy/.env" >&2
-	exit 1
+	# shellcheck disable=SC1091
+	source "$(cd "${ROOT}/../.." && pwd)/scripts/lib/secrets.sh"
+	DATABASE_URL="$(superuser_url)" || exit 1
+	export DATABASE_URL
 fi
 
 export OSM_DATA_DIR="${OSM_DATA_DIR:-${ROOT}/deploy/osm}"

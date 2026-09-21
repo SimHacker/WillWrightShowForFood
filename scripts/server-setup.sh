@@ -304,25 +304,36 @@ if want_phase disk && [[ -z "${NO_DISK:-}" ]]; then
 		run mkdir -p "$MOUNT/$d"
 	done
 
-	# The secret lives on the pet disk and the checkout points at it. Two reasons this is a
-	# symlink rather than a copy: a reclone cannot lose the secret, and there is exactly one
-	# file to protect instead of one per checkout.
-	ENV_LINK="$REPO/apps/ebike-safari/deploy/.env"
-	ENV_REAL="$MOUNT/secrets/ebike-safari.env"
-	if [[ -L "$ENV_LINK" ]]; then
-		echo "   .env already linked to $(readlink "$ENV_LINK")"
-	elif [[ -f "$ENV_LINK" ]] && [[ ! -f "$ENV_REAL" ]]; then
-		echo "   moving .env onto the data disk and linking it back"
-		run mv "$ENV_LINK" "$ENV_REAL"
-		run chmod 600 "$ENV_REAL"
-		run ln -s "$ENV_REAL" "$ENV_LINK"
-	elif [[ -f "$ENV_REAL" ]]; then
-		echo "   linking .env to $ENV_REAL"
-		run rm -f "$ENV_LINK"
-		run ln -s "$ENV_REAL" "$ENV_LINK"
+	# Secrets: one file per secret, 0700 on the directories, 0600 on the files. Compose reads them
+	# on the host and gives each service only the ones it names, so these paths are the access
+	# model -- see server/SECRETS.md. Setup creates the tree and reports what is missing; it never
+	# invents a credential, because a generated secret nobody recorded is an outage with extra steps.
+	run install -d -m 700 "$MOUNT/secrets/postgres/roles" "$MOUNT/secrets/mapbox" "$MOUNT/secrets/acme"
+	run chmod 700 "$MOUNT/secrets"
+
+	MISSING_SECRETS=""
+	for s in postgres/superuser.env postgres/roles/ebike-safari.env mapbox/token.env acme/email.env; do
+		if [[ -f "$MOUNT/secrets/$s" ]]; then
+			run chmod 600 "$MOUNT/secrets/$s"
+		else
+			MISSING_SECRETS="$MISSING_SECRETS $s"
+		fi
+	done
+	if [[ -n "${MISSING_SECRETS// /}" ]]; then
+		echo "   MISSING secrets:$MISSING_SECRETS"
+		echo "   Create them before deploying — server/SECRETS.md has the commands."
 	else
-		echo "   no .env yet — create $ENV_REAL (mode 600), it will be linked on the next run"
+		echo "   secrets present, modes correct"
 	fi
+
+	# The old single .env held every secret and reached every service. If one is still here after
+	# the split, say so: it is now a duplicate source of truth, which is worse than either.
+	for legacy in "$MOUNT/secrets/ebike-safari.env" "$REPO/apps/ebike-safari/deploy/.env"; do
+		if [[ -e "$legacy" ]]; then
+			echo "   LEGACY combined secret still present: $legacy"
+			echo "   Split it per server/SECRETS.md, then remove it."
+		fi
+	done
 fi
 
 echo

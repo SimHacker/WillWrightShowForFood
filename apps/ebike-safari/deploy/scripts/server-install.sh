@@ -49,6 +49,17 @@ fi
 cd "$DEPLOY_DIR"
 mkdir -p data
 
+# SUPERSEDED, and dangerous as of 2026-09-21: everything below writes a single .env holding every
+# secret, which is exactly what the split into /data/secrets/ replaced. Secrets are now one file per
+# secret, reaching only the services that name them, and each app has its own postgres role.
+#
+#   Provisioning:  scripts/server-setup.sh   (converges the box onto server/MANIFEST.yml)
+#   Deploying:     scripts/server-deploy.sh  (per-app, nothing deploys unless you name it)
+#   Secrets:       server/SECRETS.md
+echo "server-install.sh is superseded -- see server/README.md and server/SECRETS.md." >&2
+echo "It would write a combined .env, which the per-secret layout replaced. Refusing." >&2
+exit 1
+
 if [[ -f /opt/ebike-safari/deploy/.env ]] && [[ ! -f .env ]]; then
 	cp /opt/ebike-safari/deploy/.env .env
 	chmod 600 .env

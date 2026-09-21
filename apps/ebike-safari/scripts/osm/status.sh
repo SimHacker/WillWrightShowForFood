@@ -12,11 +12,11 @@ echo ""
 echo "=== filtered ==="
 ls -lh "${OSM_DIR}/filtered/" 2>/dev/null || echo "(empty)"
 echo ""
-if command -v docker >/dev/null && [[ -f "${ROOT}/deploy/.env" ]]; then
-	set -a
+if command -v docker >/dev/null; then
+	# Read-only count, but it runs inside the db container as the superuser for convenience.
 	# shellcheck disable=SC1091
-	source "${ROOT}/deploy/.env"
-	set +a
+	source "$(cd "${ROOT}/../.." && pwd)/scripts/lib/secrets.sh"
+	load_secret postgres/superuser.env 2>/dev/null || true
 	docker compose -f "${ROOT}/deploy/docker-compose.yml" exec -T db \
 		psql -U "${POSTGRES_USER:-ebike}" -d "${POSTGRES_DB:-ebike_safari}" \
 		-c "SELECT region, count(*) AS ways FROM osm_ways GROUP BY region ORDER BY region;" 2>/dev/null \

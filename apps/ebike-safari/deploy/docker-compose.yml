@@ -2,30 +2,67 @@
 # Caddy (TLS) → SvelteKit viewer → static ride JSON
 # PostGIS for future map-match / exposure API (schema init on first boot)
 #
-# EVERY BYTE OF STATE LIVES ON THE DATA DISK, under $DATA_ROOT (default /data).
-# Not some of it. There are no named volumes in this file, deliberately: a named volume lands in
-# /var/lib/docker on the boot disk, which is cattle, and deleting the VM would take the database
-# and the ACME account key with it. Bind mounts under /data are the only kind of persistence here.
+# EVERY BYTE OF STATE LIVES ON THE DATA DISK, AT THE SAME PATH EVERYWHERE.
 #
-#   /data/postgres              the database
-#   /data/caddy/{data,config}   ACME account key + every issued certificate
-#   /data/releases/<app>        built releases; `current` is the symlink Caddy follows
-#   /data/ebike-safari/rides    ride GeoJSON the site serves (never in git)
-#   /data/ebike-safari/osm      OSM extracts, raw and filtered
-#   /data/secrets               .env, mode 600; the checkout symlinks to it
+# ONE GLOBAL NAMESPACE. A path means the same thing on the host, in every container, in every log
+# line, in every backup script, and in this file. /data/postgres is /data/postgres is
+# /data/postgres. Nothing is remapped, ever. A container that should not see a subtree does not
+# mount it -- that is the ONLY way access is narrowed. Never by renaming.
 #
-# If you add a service that stores anything, it gets a bind mount under $DATA_ROOT too.
+#   /data/postgres              db      rw   the database
+#   /data/caddy/storage         caddy   rw   ACME account key + every issued certificate
+#   /data/caddy/config          caddy   rw   Caddy's autosaved JSON
+#   /data/releases/<app>        caddy   ro   SHARED. Every app's static build. See below.
+#   /data/ebike-safari/rides    viewer  ro   ride GeoJSON the site serves (never in git)
+#   /data/ebike-safari/osm      --           OSM extracts; no container needs them
+#   /data/secrets/<domain>/...  --           one file per secret, named by env_file below
+#
+# SECRETS ARE FACTORED THE SAME WAY, and the env_file lists are the entire access model: a service
+# that does not name a file cannot read it. One secret, one file, one owner -- grouped by what the
+# secret IS, never by which app wants it. Each app also gets its OWN postgres role, so the
+# superuser password exists in exactly one file that only the db container names. Full layout and
+# threat model in server/SECRETS.md; roles are converged by scripts/provision-db-roles.sh.
+#
+# Secrets are read by compose on the HOST and injected as environment, never mounted into a
+# container and never interpolated into this file -- so `docker compose config` stays safe to paste
+# and no credential is visible to a service that merely shares a machine with its owner.
+#
+# Because the namespace does not fork, the way to point a program at its data is to CONFIGURE it,
+# not to lie to it with a mount. Hence PGDATA, EBIKE_DATA_DIR, XDG_CONFIG_HOME and `storage
+# file_system` below: each names the real path. When a program cannot be configured, that is worth
+# knowing about the program -- it is not a reason to bend the namespace around it.
+#
+# SHARED SUBTREES. /data/releases is the shared one: apps write their builds there (on the host,
+# via deploy-app.sh) and Caddy reads the whole tree read-only. Adding a site is therefore a
+# Caddyfile block rooted at /data/releases/<app>/current and NOTHING ELSE -- no volume to add
+# here, no container to restart, no path to invent. One producer writes, consumers mount :ro.
+#
+# NO NAMED VOLUMES. A named volume lands in /var/lib/docker on the boot disk, which is cattle,
+# and deleting the VM would take the database and the ACME account key with it.
+#
+# The only mounts NOT under /data are read-only config out of the git checkout, at paths the
+# images themselves mandate (/etc/caddy/Caddyfile, /docker-entrypoint-initdb.d). Those are not
+# state, they are the image's published interface, and they are versioned in git.
+#
+# $DATA_ROOT varies the HOST side only, for a laptop that has no /data. The container side is
+# always the literal /data, so the namespace inside a container is invariant across machines.
 
 services:
   db:
     image: postgis/postgis:16-3.4
     restart: unless-stopped
+    # The superuser credentials, and ONLY those. Not interpolated into this file, so the password
+    # does not appear in `docker compose config` output, in any other service's environment, or in
+    # a DATABASE_URL. The apps get their own roles -- see scripts/provision-db-roles.sh.
+    env_file:
+      - ${DATA_ROOT:-/data}/secrets/postgres/superuser.env
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-ebike-safari}
-      POSTGRES_USER: ${POSTGRES_USER:-ebike}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      # Configured, not remapped: postgres is told where its data actually is, rather than being
+      # shown someone else's path at /var/lib/postgresql/data.
+      PGDATA: /data/postgres
     volumes:
-      - ${DATA_ROOT:-/data}/postgres:/var/lib/postgresql/data
+      - ${DATA_ROOT:-/data}/postgres:/data/postgres
+      # Image-mandated config path, out of git, read-only. Not state.
       - ../db/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test:
@@ -45,20 +82,27 @@ services:
       context: ..
       dockerfile: deploy/Dockerfile.viewer
     restart: unless-stopped
+    # Its own postgres role, and the Mapbox token. Two files because they are two secrets with
+    # different owners and different rotation schedules -- not one file because one app wants both.
+    #
+    # The superuser password is absent by construction: this service does not name that file, so
+    # nothing in this container can read it. An RCE in a route reaches DML on the app's tables,
+    # not DROP DATABASE.
+    env_file:
+      - ${DATA_ROOT:-/data}/secrets/postgres/roles/ebike-safari.env
+      - ${DATA_ROOT:-/data}/secrets/mapbox/token.env
     environment:
       NODE_ENV: production
       PORT: 3000
       HOST: 0.0.0.0
-      ORIGIN: ${ORIGIN:-https://${DOMAIN:-localhost}}
-      DATABASE_URL: postgresql://${POSTGRES_USER:-ebike}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-ebike-safari}
-      EBIKE_DATA_DIR: /app/data
-      # From deploy/.env on the VM (chmod 600, gitignored) — never baked into the image.
-      # Empty default so a VM without it still boots; the map degrades, the site does not.
-      MAPBOX_TOKEN: ${MAPBOX_TOKEN:-}
+      ORIGIN: ${ORIGIN:-https://${DOMAIN:-ebike-safari.com}}
+      EBIKE_DATA_DIR: /data/ebike-safari/rides
     volumes:
       # Outside build/client so sirv does not cache stale Content-Length after ride sync.
       # On the data disk, not in the checkout: this is the only copy of the rides.
-      - ${DATA_ROOT:-/data}/ebike-safari/rides:/app/data:ro
+      # Read-only, and rides ONLY -- the viewer has no business in osm/, postgres/ or secrets/.
+      # That narrowing is done by mounting less, never by showing it a different path.
+      - ${DATA_ROOT:-/data}/ebike-safari/rides:/data/ebike-safari/rides:ro
     depends_on:
       db:
         condition: service_healthy
@@ -80,22 +124,34 @@ services:
       - '80:80'
       - '443:443'
       - '443:443/udp'
+    # The ACME contact address. Caddy holds no other credential, and this is the only file it names.
+    env_file:
+      - ${DATA_ROOT:-/data}/secrets/acme/email.env
     environment:
       DOMAIN: ${DOMAIN:-ebike-safari.com}
-      ACME_EMAIL: ${ACME_EMAIL:?Set ACME_EMAIL in .env}
+      # The image ships XDG_CONFIG_HOME=/config and XDG_DATA_HOME=/data, which would put the
+      # autosaved config at /config and treat the whole shared namespace as Caddy's private data
+      # directory. Both are overridden: config here, and storage in the Caddyfile where it is
+      # visible next to the sites it protects.
+      XDG_CONFIG_HOME: /data/caddy/config
     volumes:
+      # Image-mandated config paths, out of git, read-only. Not state.
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       # Owned by apps/ties, mounted rather than copied, so a redirect edit is a reload.
       - ../../ties/deploy/hyperties.Caddyfile:/etc/caddy/hyperties.Caddyfile:ro
-      # The PARENT of `current`, never the symlink itself: a bind mount resolves its source
-      # once, at mount time, so mounting `current` would pin this container to whichever
-      # release existed then and make every later swap invisible inside it.
-      - ${RELEASE_ROOT:-/data/releases}/hyperties:/srv/hyperties:ro
-      # The ACME account key and all eight certificates. On the pet disk, because re-issuing
-      # them is rate-limited to 5 duplicates a week -- lose these twice in one week and the
-      # sites go down on TLS with nothing you can do but wait.
-      - ${DATA_ROOT:-/data}/caddy/data:/data
-      - ${DATA_ROOT:-/data}/caddy/config:/config
+      # SHARED, read-only: the WHOLE releases tree, not one app's corner of it. This is what
+      # makes adding a site a Caddyfile block and nothing else -- a new app's releases appear
+      # here the moment its first deploy lands, with no edit to this file and no restart.
+      #
+      # Mounting the tree also sidesteps the bind-mount trap that a per-app mount walks into: a
+      # bind mount resolves its source path once, at mount time, so mounting a `current` symlink
+      # pins the container to whichever release existed then and makes every later swap
+      # invisible inside it. Here Caddy resolves `current` per request, so a swap lands live.
+      - ${RELEASE_ROOT:-/data/releases}:/data/releases:ro
+      # Caddy's own subtree, read-write: the ACME account key and all eight certificates, plus
+      # the autosaved config. Re-issuance is rate-limited to 5 duplicates a week, so losing this
+      # twice inside one week means the sites stay down on TLS until the window rolls over.
+      - ${DATA_ROOT:-/data}/caddy:/data/caddy
     depends_on:
       # `service_started`, not `service_healthy`. Caddy answers for hyperties.org as well,
       # and a viewer that fails its healthcheck must not keep an unrelated static site from

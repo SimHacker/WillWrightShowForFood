@@ -14,15 +14,17 @@
 #
 # THE DOCKER TRAP, WHICH IS THE WHOLE REASON THIS FILE HAS A COMMENT THIS LONG
 #
-# Bind-mount the PARENT (`/data/releases/hyperties:/srv/hyperties`), never `current` itself. A
-# bind mount resolves its source path once, when the mount is made, so mounting the symlink
-# pins the container to whatever release it pointed at that moment and later swaps are
-# invisible inside the container. Mount the parent and let the server follow `current` on
-# each request, and the swap lands live with no container restart.
+# Mount an ANCESTOR of `current`, never `current` itself. A bind mount resolves its source path
+# once, when the mount is made, so mounting the symlink pins the container to whatever release it
+# pointed at that moment and later swaps are invisible inside the container. Caddy mounts the
+# whole of /data/releases and follows `current` on each request, so the swap lands live with no
+# restart -- and a new app needs no new mount.
 #
-# For the same reason the symlink target is RELATIVE (`releases/<id>`, not
-# `/data/releases/<app>/releases/<id>`): an absolute host path would have to exist at the same
-# path inside the container, and it does not.
+# The symlink target is RELATIVE (`releases/<id>`, not `/data/releases/<app>/releases/<id>`) so
+# that the link is valid from anywhere the tree is reachable. It happens to be valid absolutely
+# too, since /data is the same path in every container -- but a relative link cannot be broken by
+# a mount, and this one is followed by a process in a different namespace than the one that wrote
+# it.
 
 RELEASES_KEEP="${RELEASES_KEEP:-5}"
 

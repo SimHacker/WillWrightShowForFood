@@ -108,22 +108,79 @@ disk:
   # asking, because the wrong answer here is unrecoverable and the right one takes one flag.
   format_if_empty: true
 
+  # ONE GLOBAL NAMESPACE, NOT A PER-CONTAINER ONE.
+  #
+  # A /data path means the same thing everywhere: on the host, in every container, in every log
+  # line, in this manifest, in a backup script. Nothing is remapped. /data/postgres is
+  # /data/postgres in the db container; /data/releases/hyperties/current is that same string in
+  # Caddy and in the deploy script that writes it.
+  #
+  # Narrowing is done by MOUNTING LESS, never by renaming. The viewer sees exactly
+  # /data/ebike-safari/rides and nothing else on the disk; it does not see a private alias of it.
+  # So `access` below is the whole access model: who mounts what, and read-only or read-write.
+  #
+  # The consequence worth stating: to point a program at its data you CONFIGURE the program
+  # (PGDATA, EBIKE_DATA_DIR, XDG_CONFIG_HOME, Caddy's `storage file_system`) rather than lying to
+  # it with a mount. If a program cannot be told where its data is, that is a fact worth knowing
+  # about the program; it is not a reason to bend the namespace.
+  namespace:
+    rule: 'Same absolute path on the host and in every container. No remapping, ever.'
+    narrowing: 'By omitting mounts and by :ro. Never by aliasing a path to a different name.'
+    shared: 'Top-level subtrees mounted :ro by consumers, :rw by exactly one producer.'
+    private: 'One subtree per service, named for the service or the app that owns it.'
+    adding_a_site: |
+      Caddy mounts the whole of /data/releases read-only, so a new static site is a Caddyfile
+      block rooted at /data/releases/<app>/current plus an import line. No volume to add, no
+      container to restart, no new path to invent.
+
   # EVERYTHING STATEFUL IS HERE. The rule is not "the important things" or "the database" -- it is
   # that if deleting the VM would lose it, it lives on this disk. Anything left on the boot disk
   # must be reconstructible from git plus this manifest, or it is a bug.
+  #
+  # `access` is who mounts it and how: the complete list, since nothing reaches state any other way.
   contains:
-    postgres: 'The database. Bind-mounted to /var/lib/postgresql/data; never a named volume.'
-    caddy/data: |
-      The Let's Encrypt account key and every issued certificate. The first thing you would miss:
-      re-issuance is capped at 5 duplicate certs per week, so losing these twice inside one week
-      means the sites stay down on TLS until the window rolls over.
-    caddy/config: "Caddy's autosaved JSON config."
-    releases: 'One directory per build, named for its commit; `current` is the symlink Caddy follows.'
-    ebike-safari/rides: 'Ride GeoJSON the site serves. Never in git, and there is no other copy.'
-    ebike-safari/osm: 'OSM extracts, raw and filtered. Re-downloadable, slowly; 3.7G.'
-    secrets: |
-      .env, mode 600. The checkout symlinks apps/ebike-safari/deploy/.env here, so the secret
-      survives a reclone and never sits in a directory git is managing.
+    postgres:
+      access: 'db rw'
+      what: 'The database. PGDATA points here directly; never a named volume.'
+    caddy/storage:
+      access: 'caddy rw'
+      what: |
+        The Let's Encrypt account key and every issued certificate. The first thing you would
+        miss: re-issuance is capped at 5 duplicate certs per week, so losing these twice inside
+        one week means the sites stay down on TLS until the window rolls over.
+        Set by `storage file_system` in the Caddyfile, not by the image's XDG_DATA_HOME.
+    caddy/config:
+      access: 'caddy rw'
+      what: "Caddy's autosaved JSON config. XDG_CONFIG_HOME."
+    releases:
+      access: 'caddy ro (whole tree) | host rw (deploy-app.sh)'
+      what: |
+        THE SHARED SUBTREE. One directory per app, each holding releases/<commit> and a `current`
+        symlink. Built on the host, served by Caddy, which is why it is at the top level rather
+        than inside any one app's directory.
+    ebike-safari/rides:
+      access: 'viewer ro'
+      what: 'Ride GeoJSON the site serves. Never in git, and there is no other copy.'
+    ebike-safari/osm:
+      access: 'none'
+      what: |
+        OSM extracts, raw and filtered, 3.7G. No container mounts them -- the import runs on the
+        host. Re-downloadable from Geofabrik, slowly.
+    secrets:
+      access: 'none mounted; compose reads named files on the host'
+      mode: '0700, root -- the one subtree where the mode is part of the design'
+      what: |
+        ONE SECRET, ONE FILE, ONE OWNER, grouped by what the secret IS rather than by which app
+        wants it. A service names the files it needs in env_file, so the compose file is also the
+        complete access model: postgres/superuser.env reaches ONLY the db container, and each app
+        gets its own login role under postgres/roles/ with DML and nothing else.
+        Nothing is mounted into a container and nothing is interpolated into the compose file.
+        Layout and threat model: server/SECRETS.md. Roles: scripts/provision-db-roles.sh.
+      files:
+        postgres/superuser.env: 'db'
+        postgres/roles/<app>.env: 'that app only -- PGHOST PGPORT PGDATABASE PGUSER PGPASSWORD'
+        mapbox/token.env: 'viewer'
+        acme/email.env: 'caddy'
 
   stays_on_the_boot_disk:
     # Only things a rebuild reconstructs from scratch. If you want to add to this list, the test

@@ -1,5 +1,14 @@
 {
 	email {$ACME_EMAIL}
+
+	# Where the ACME account key and every certificate live, named explicitly rather than
+	# inherited from the image's XDG_DATA_HOME=/data. Stated here, in the file that defines the
+	# sites, because "which directory must survive for TLS to keep working" is a fact about this
+	# config and not a detail of how the container was started.
+	#
+	# This is the real path: the same string on the host, in this container, and in a backup
+	# script. Nothing is remapped.
+	storage file_system /data/caddy/storage
 }
 
 {$DOMAIN} {
@@ -10,7 +19,11 @@ www.{$DOMAIN} {
 	redir https://{$DOMAIN}{uri} permanent
 }
 
-# HyperTIES: hyperties.org, .net, .link, served as files from a bind-mounted release.
+# ADDING A SITE. Everything static is already reachable: compose mounts the whole of
+# /data/releases read-only, so a new app needs one file like the one imported below, rooted at
+# /data/releases/<app>/current, and an `import` line here. No volume, no restart, no new path.
+#
+# HyperTIES: hyperties.org, .net, .link, served as files from a release directory.
 # Name-based virtual hosting, so one Caddy and one IP carry both sites and each name gets
 # its own certificate. The imported file is owned by apps/ties and mounted into /etc/caddy
 # by compose -- add a site here by importing it, not by editing this block.
