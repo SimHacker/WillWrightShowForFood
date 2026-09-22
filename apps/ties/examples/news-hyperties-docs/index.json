@@ -795,23 +795,43 @@
     },
     "earth": {
      "class": "ScaledRaster",
-     "source": "doc/obj/earth.pn0"
+     "source": "doc/obj/earth.pn0",
+     "image": "images/globe1.im1.png",
+     "decoded_from": "globe1.im1",
+     "width": 64,
+     "height": 64
     },
     "founders.big": {
      "class": "ScaledRaster",
-     "source": "doc/obj/founders.big.pn0"
+     "source": "doc/obj/founders.big.pn0",
+     "image": "images/founders.im8.png",
+     "decoded_from": "founders.im8",
+     "width": 320,
+     "height": 320
     },
     "founders.medium": {
      "class": "ScaledRaster",
-     "source": "doc/obj/founders.medium.pn0"
+     "source": "doc/obj/founders.medium.pn0",
+     "image": "images/founders.im8.png",
+     "decoded_from": "founders.im8",
+     "width": 200,
+     "height": 200
     },
     "founders": {
      "class": "Raster",
-     "source": "doc/obj/founders.pn0"
+     "source": "doc/obj/founders.pn0",
+     "image": "images/founders.im8.png",
+     "decoded_from": "founders.im8",
+     "width": 250,
+     "height": 200
     },
     "founders.small": {
      "class": "ScaledRaster",
-     "source": "doc/obj/founders.small.pn0"
+     "source": "doc/obj/founders.small.pn0",
+     "image": "images/founders.im8.png",
+     "decoded_from": "founders.im8",
+     "width": 120,
+     "height": 120
     },
     "framemenu": {
      "class": "Raster",
@@ -847,7 +867,11 @@
     },
     "tall-earth": {
      "class": "ScaledRaster",
-     "source": "doc/obj/tall-earth.pn0"
+     "source": "doc/obj/tall-earth.pn0",
+     "image": "images/globe1.im1.png",
+     "decoded_from": "globe1.im1",
+     "width": 32,
+     "height": 64
     },
     "tall": {
      "class": "UnitPicture",
@@ -859,7 +883,11 @@
     },
     "wide-earth": {
      "class": "ScaledRaster",
-     "source": "doc/obj/wide-earth.pn0"
+     "source": "doc/obj/wide-earth.pn0",
+     "image": "images/globe1.im1.png",
+     "decoded_from": "globe1.im1",
+     "width": 64,
+     "height": 32
     }
    }
   },

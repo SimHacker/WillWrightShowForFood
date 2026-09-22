@@ -18,6 +18,8 @@ what's reusable here — don't leave genius on a dead branch.
 | Package | Status |
 |---------|--------|
 | [`wwsff-tooling/`](wwsff-tooling/README.md) | Dev utilities stub (verify, future sync) |
+| [`teco/`](teco/README.md) | Extensible TECO (`@wwsff/teco`) — ITS subset, Minsky 1981 mail |
+| [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs) |
 
 Future packages may wrap [MicropolisCore](https://github.com/SimHacker/MicropolisCore) deps
 (`@micropolis/sims-io`, `@micropolis/render-core`, …) as `@wwsff/*` adapters for Repo Show bridges.

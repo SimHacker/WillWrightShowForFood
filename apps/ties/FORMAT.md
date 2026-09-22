@@ -11,7 +11,7 @@ opaque. Here the inside is the point.
 
 ## An article
 
-```markdown
+````markdown
 ---
 title: The Space Telescope in Orbit
 synonyms:
@@ -20,15 +20,15 @@ definition: An artist's conception of the space telescope in orbit.
 source: newdb/orbview/orbview.st0
 ---
 
-```target
-shape: orbital view - shape telescope    # resolved in the TARGETS namespace
-picture: orbital view                    # resolved in the PICTURES namespace
-to: Hubble Space Telescope - Main View   # resolved in the DOCUMENTS namespace
+```yaml target
+shape: orbital view - shape telescope    # TARGETS
+picture: orbital view                    # PICTURES
+to: Hubble Space Telescope - Main View   # DOCUMENTS
 ```
 
 → ~Hubble Space Telescope - Main View~
 → ~Introduction article~
-```
+````
 
 Three names, three namespaces, one construct — which is the syntax of the original:
 
@@ -112,3 +112,26 @@ rather than on top of it — which is why resolving a synonym costs what resolvi
 
 Step 2 is the whole point. HyperTIES got link previews for free from a schema that refused to let an
 article exist without a definition.
+
+## Transclude
+
+A story about a demo cites the live article. It does not copy the `target` fences.
+
+````markdown
+```yaml transclude
+article: The Founders
+```
+
+```yaml transclude
+db: news-hyperties-docs
+article: The Founders
+```
+````
+
+The reader resolves the name — in this database, or in `db` when named — and splices that article's current segments. Change the source, the illustration changes. The playground database is the test: its The Founders is a door; Sun Founders Big Heads transcludes the door; the door transcludes the 1988 demo.
+
+A `~name~` can also name another database: `~pixie~` from playground, or `~playground/The Founders~` for a specific article. Local documents win.
+
+`/` is the handwritten `top` database. Every other database is `/databases/<id>/`. An article permalink is `/databases/<id>/<slug>/`. The old `/<id>/` paths redirect.
+
+A `path:` fence names a WillWrightShowForFood file. The PIXIE database uses that as a coming-soon card. The file is not ingested. When someone sits down with that plan, the same fence will splice the live document.

@@ -1,0 +1,45 @@
+{
+  "database": "hyperties",
+  "handmade": true,
+  "namespaces": {
+    "pictures": {
+      "index": {
+        "Figure 1": {
+          "image": "images/figure-1-two-articles.png",
+          "width": 1024,
+          "height": 795
+        },
+        "Figure 2": {
+          "image": "images/figure-2-macros-and-blocks.png",
+          "width": 615,
+          "height": 1024
+        },
+        "Figure 3": {
+          "image": "images/figure-3-conditional-text.png",
+          "width": 662,
+          "height": 1024
+        },
+        "Figure 4": {
+          "image": "images/figure-4-conditional-links.png",
+          "width": 363,
+          "height": 526
+        },
+        "Figure 5": {
+          "image": "images/figure-5-pop-out.png",
+          "width": 1024,
+          "height": 592
+        },
+        "Figure 6": {
+          "image": "images/figure-6-pie.png",
+          "width": 311,
+          "height": 300
+        },
+        "Figure 7": {
+          "image": "images/figure-7-four-windows.png",
+          "width": 1024,
+          "height": 769
+        }
+      }
+    }
+  }
+}

@@ -13,7 +13,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 INSTALL=1
-[[ "${1:-}" == "--no-install" ]] && INSTALL=0
+# `if`, not `[[ ... ]] && INSTALL=0`: under `set -e` the test failing is a nonzero command and
+# would end the script before a single check ran, whenever the flag was absent.
+if [[ "${1:-}" == "--no-install" ]]; then
+	INSTALL=0
+fi
 
 if [[ $INSTALL -eq 1 ]]; then
 	# --frozen-lockfile in CI so a stale lockfile fails instead of being silently updated.

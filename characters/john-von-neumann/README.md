@@ -46,6 +46,7 @@ Eden" real time crossing with its spark of life, and Buckley's autoinitializing 
 that boots itself with self modifying code), and why playing Factorio is uncannily like von
 Neumann CA programming:
 [sources/29-state-implementation-and-buckley.md](sources/29-state-implementation-and-buckley.md).
+Room index: [sources/jvn-29/](sources/jvn-29/README.md).
 
 Working code and hard-to-find texts:
 

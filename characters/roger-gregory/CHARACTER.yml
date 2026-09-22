@@ -23,7 +23,11 @@ invitation:
   replied: 2026-09-14
   document: invitation.md
   reply: sources/2026-09-14-facebook-reply-c-and-rust.md
-  show_seed: null
+  show_seed: ../../repo-shows/ted-and-roger-xanadu-ships/
+  show_seed_status: |
+    Seed written after his reply, on Don's initiative. A joint episode with Ted Nelson, pegged to
+    the pending release — one ask with two signatures, carried by Roger since he is already in
+    contact with Ted and the release is gated on Ted. NOT YET RAISED WITH EITHER OF THEM.
   note: |
     Don sent the invitation as a Facebook message; invitation.md is the deeply linked
     repo version of that message, and supersedes it. The ask has three named texts on

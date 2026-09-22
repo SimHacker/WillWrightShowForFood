@@ -255,6 +255,24 @@ abilities:
   verifiable: "CHARACTER.yml memorial.in_memoriam_peers; ../keez-duyves/sources/tedx-amsterdam-2012-diespace.md"
   combos_with: [MENTOR-CONSTELLATION, DORMOUSE-THREAD]
 
+- id: TECO-UTM
+  name: 7×4 Universal Turing Machine
+  type: legacy
+  mana: "{U}"
+  conditions:
+  - segment_topic_in: [turing-machines, teco, computability, tag-systems, its]
+  advertisement:
+    method: tecoUtm
+    signature: tecoUtm(table) → 7 states, 4 symbols, halt in 1870 on the mail tape
+    score_when:
+    - trigger: small_utm_definitions_compared
+      weight: 0.92
+    - trigger: its_teco_recovery
+      weight: 0.9
+  effect: "The 1981 *BBOARD mail is the 1962 machine — TECO compiling a transition table by editing itself. Henry holds two oral notes; the next file comes from asking everyone, as in 2015."
+  verifiable: "AIM-33 / AMS 1962; sources/teco-utm/; HN 10161002 (Ancell)"
+  combos_with: [henry-minsky, MENTOR-CONSTELLATION]
+
 invoke_rules:
   consent: deceased_legacy
   simulation: false
@@ -264,6 +282,7 @@ see_also:
 - { path: CHARACTER.yml, why: "Bio girder — memorial roster (who_can_discuss) with kinds + whys" }
 - { path: memorial.md, why: "Tribute — represent + discuss (memorial mode)" }
 - { path: sources/jokes-and-the-cognitive-unconscious/README.md, why: "AI Memo 603 paper room — Freud context, full text, analysis, living skill" }
+- { path: sources/teco-utm/README.md, why: "AIM-33 UTM as the 1981 TECO mail — table, stepper, open ask" }
 - { path: ../../repo-shows/will-wright-premiere/audience/bot-ultimate-machine/, why: "The 1952 invention as living mascot (fictional bot)" }
 - { path: ../henry-minsky/CARD.yml, why: "Society of Mind, running" }
 - { path: ../david-levitt/CARD.yml, why: "The AI-music thesis line" }

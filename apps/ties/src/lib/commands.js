@@ -21,6 +21,7 @@
  * !OptionHistoryBack and !OptionHistoryForward instead, and nothing else changes.
  */
 import { articleList, homeOf, reserved } from './corpus.js';
+import { ROOT } from './href.js';
 
 /** A verb: label is only a fallback, since the storyboard supplies its own. */
 export const commands = {
@@ -85,11 +86,10 @@ export const commands = {
 	},
 	'!OptionHome': {
 		label: 'HOME',
-		title: 'the home article of this database',
-		// Already home is not a reason to grey it out: the original let you press HOME to
-		// get back to a known place from anywhere, including from home.
-		applies: (pile) => Boolean(homeOf(pile.db)),
-		run: (pile) => pile.goHome()
+		title: 'HyperTIES, the site',
+		// Site root. The database door is the breadcrumb, not this verb.
+		applies: () => Boolean(homeOf(ROOT)),
+		run: (pile) => pile.goRoot()
 	},
 
 	'!Full-Entry': {
@@ -103,8 +103,15 @@ export const commands = {
 	},
 	'!OptionShow': {
 		label: 'SHOW',
-		title: 'show the picture full size',
-		applies: (pile) => /```target/.test(pile.article?.body ?? ''),
+		title: 'show the picture full size — not hooked up',
+		// 1988: enlarge the current article's picture. Never wired here; run is a stub.
+		applies: () => false,
+		run: () => false
+	},
+	'!OptionSearch': {
+		label: 'SEARCH',
+		title: 'search this database — not hooked up',
+		applies: () => false,
 		run: () => false
 	},
 	'!OptionRefresh': {

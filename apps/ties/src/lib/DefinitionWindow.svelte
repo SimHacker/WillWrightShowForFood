@@ -1,26 +1,17 @@
 <!--
-  The definition pile. 1988: a fixed strip under the article. Empty until a single
-  click names a destination. Navigation empties it again. FULL ENTRY is the
-  escalation: leave the current article for the one whose definition is showing.
-
-  Title of this pane is the *previewed* article, not the word "Definition" — see
-  the Space Telescope screenshot: "Faint Object Camera" while the contents title
-  is still "Participating Organizations".
+  Description pile. Header is one line: Description, or the storyboard title
+  when something is considered. FULL ENTRY and Double Click to Go sit in the
+  pane, top-right, out of flow, so they do not grow the header or shove the text.
 -->
 <script>
 	import { renderInline } from './markdown.js';
 	import { resolve } from './corpus.js';
 
-	/**
-	 * @type {{
-	 *   pile: import('./pile.svelte.js').Pile,
-	 *   onnavigate?: (found: object) => void
-	 * }}
-	 */
-	let { pile, onnavigate } = $props();
+	let { pile, onnavigate, browser = null } = $props();
 
 	const article = $derived(pile.article);
 	const canEnter = $derived(Boolean(article) && article.contents !== false);
+	const armed = $derived(Boolean(article && browser?.isArmed(pile.here)));
 
 	function enter() {
 		const here = pile.here;
@@ -37,29 +28,25 @@
 	}
 </script>
 
-<section class="definition" aria-label="definition">
-	{#if article}
-		<header>
-			<button type="button" class="name" onclick={enter} title="full entry">
-				{article.title}
-			</button>
-			{#if canEnter}
-				<button type="button" class="full-entry" onclick={enter}>FULL ENTRY</button>
-			{/if}
-		</header>
-		{#if article.definition}
+<section class="definition" aria-label="description">
+	<header>
+		<h2 class="name">{article ? article.title : 'Description'}</h2>
+	</header>
+	<div class="pane">
+		{#if canEnter}
+			<div class="go">
+				<button type="button" class="full-entry" class:armed onclick={enter}>FULL ENTRY</button>
+				<p class="hint" class:on={armed}>Double Click to Go</p>
+			</div>
+		{/if}
+		{#if article?.definition}
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
-			<div class="abstract" onclick={onProseClick}>{@html renderInline(article.definition)}</div>
+			<div class="abstract" class:room={canEnter} onclick={onProseClick}>{@html renderInline(article.definition, pile.db)}</div>
 		{:else}
-			<p class="absent">No .definition.</p>
+			<p class="absent">Single click for a definition, double click to go.</p>
 		{/if}
-	{:else}
-		<header>
-			<span class="name idle">Definition</span>
-		</header>
-		<p class="absent">Single-click a link.</p>
-	{/if}
+	</div>
 </section>
 
 <style>
@@ -72,51 +59,68 @@
 		flex-shrink: 0;
 	}
 	header {
-		display: flex;
-		align-items: baseline;
-		gap: 0.8rem;
-		padding: 0.15rem 0.45rem 0;
+		flex-shrink: 0;
+		padding: 0.35rem 0.75rem;
 		border-bottom: 1px solid var(--ink, #000);
 	}
 	.name {
+		margin: 0;
 		font: inherit;
 		font-size: 0.8rem;
+		font-weight: 700;
+	}
+	.pane {
+		position: relative;
+		flex: 1 1 auto;
+		min-height: 0;
+		overflow: auto;
+		padding: 0.35rem 0.75rem;
+	}
+	.go {
+		position: absolute;
+		top: 0.35rem;
+		right: 0.75rem;
+		text-align: right;
+	}
+	.full-entry {
+		font: inherit;
+		font-size: 0.8rem;
+		font-weight: 700;
 		padding: 0;
 		border: 0;
 		background: none;
 		color: inherit;
 		cursor: pointer;
-		text-align: left;
+		user-select: none;
+		-webkit-user-select: none;
+		-webkit-text-fill-color: currentColor;
 	}
-	.name.idle {
-		cursor: default;
-		opacity: 0.45;
+	.full-entry.armed,
+	.hint.on {
+		color: #00f;
+		-webkit-text-fill-color: #00f;
 	}
-	.full-entry {
-		margin-left: auto;
-		font: inherit;
-		font-size: 0.72rem;
-		letter-spacing: 0.06em;
-		padding: 0.05rem 0.2rem;
-		border: 0;
-		background: none;
-		color: inherit;
-		cursor: pointer;
-	}
-	.full-entry:hover,
-	.name:hover:not(.idle) {
+	.full-entry:hover {
 		background: #000;
-		color: #fff;
+		color: var(--flash, #00f0d8);
+		-webkit-text-fill-color: var(--flash, #00f0d8);
+	}
+	.hint {
+		margin: 0.1rem 0 0;
+		font-size: 0.8rem;
+		font-weight: 700;
+		visibility: hidden;
+	}
+	.hint.on {
+		visibility: visible;
 	}
 	.abstract,
 	.absent {
 		margin: 0;
-		padding: 0.25rem 0.45rem;
 		font-size: 0.82rem;
 		line-height: 1.35;
-		overflow: auto;
 	}
-	.absent {
-		color: #666;
+	.abstract.room {
+		padding-right: 9rem;
 	}
 </style>

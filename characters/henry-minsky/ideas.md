@@ -38,6 +38,14 @@ and empathic templates. Pair with Walter Bender skill-creation episode. Cross-li
 ### 6. Whatever works
 Henry as connector — he may prefer brokering the reunion over starring; honor that.
 
+### 7. Marvin's TECO UTM
+22 September 2026, same-day notes: a visitor claimed fewer UTM states and Marvin said the
+rules had changed (Henry does not remember how); Marvin once TECO-sorted a paper on a
+printing terminal and lost it. Henry already has ToTS pulls of Marvin's files — he is
+the person to ask Distinctive Collections for `AI:MINSKY;` versions and DUMP dates
+(create / last-write / last-read), not only a Unix copy of one file.
+[`../marvin-minsky/sources/teco-utm/tots-request.md`](../marvin-minsky/sources/teco-utm/tots-request.md)
+
 ## Sources (public)
 
 - [`invitation.md`](invitation.md)

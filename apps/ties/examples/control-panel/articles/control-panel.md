@@ -64,6 +64,12 @@ command: "!OptionShow"
 ```
 
 ```target
+shape: search-button
+label: SEARCH
+command: "!OptionSearch"
+```
+
+```target
 shape: quit-button
 label: QUIT
 command: "!OptionQuit"

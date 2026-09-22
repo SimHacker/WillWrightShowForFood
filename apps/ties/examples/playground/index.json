@@ -1,0 +1,10 @@
+{
+  "database": "playground",
+  "handmade": true,
+  "source": "https://donhopkins.medium.com/hyperties-discussions-from-hacker-news-937d156f0330",
+  "namespaces": {
+    "pictures": {
+      "index": {}
+    }
+  }
+}

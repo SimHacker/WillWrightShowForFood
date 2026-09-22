@@ -1,0 +1,37 @@
+# Stephen Wolfram's 2-state 3-symbol machine (NKS; prize machine 596440).
+# Published table: Wikipedia "Wolfram's 2-state 3-symbol Turing machine"
+# and https://www.wolframscience.com/prizes/tm23/technicaldetails.html
+#
+# Weak universality (Alex Smith, 2007): no halt state, and a universal
+# encoding uses an infinite periodic background, not a finite string on
+# blank tape. That is a different model from Minsky 1962.
+#
+# This file is the published table so students can watch it run.
+# A tape that actually demonstrates universality is the thing to ask for.
+
+id: wolfram-2x3
+name: Wolfram 2×3 Turing machine
+credits:
+  - Stephen Wolfram, A New Kind of Science (2002), machine 596440
+  - Alex Smith, universality proof (2007 prize)
+blank: "0"
+symbols: ["0", "1", "2"]
+start: A
+halt: []                    # this machine does not halt
+missing: error              # the table is total
+default_tape: wolfram-seed
+universality:
+  kind: weak
+  halt: false
+  background: infinite-periodic   # required for the known universal encoding
+
+states:
+  #         write  move  next
+  A:
+    "0": { write: "1", move: R, next: B }
+    "1": { write: "2", move: L, next: A }
+    "2": { write: "1", move: L, next: A }
+  B:
+    "0": { write: "2", move: L, next: A }
+    "1": { write: "2", move: R, next: B }
+    "2": { write: "0", move: R, next: A }

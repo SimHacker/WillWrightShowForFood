@@ -1,5 +1,6 @@
-import { error } from '@sveltejs/kit';
+import { error, redirect } from '@sveltejs/kit';
 import { databases, getArticle } from '$lib/corpus.js';
+import { ROOT, articleHref } from '$lib/href.js';
 
 export function entries() {
 	const out = [];
@@ -10,7 +11,8 @@ export function entries() {
 }
 
 export function load({ params }) {
-	const article = getArticle(params.db, params.slug);
-	if (!article) error(404, `no article ${params.slug} in ${params.db}`);
-	return { db: params.db, article };
+	const db = params.db === 'top' ? ROOT : params.db;
+	const article = getArticle(db, params.slug);
+	if (!article) error(404, `no article ${params.slug} in ${db}`);
+	redirect(308, articleHref(db, article.slug));
 }

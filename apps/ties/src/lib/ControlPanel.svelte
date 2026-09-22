@@ -1,13 +1,16 @@
 <!--
   The control strip, laid out by its storyboard. Flush to the bottom of the tiled
-  window: text verbs, no boxes. Inapplicable stays in place and goes grey.
+  window: text verbs, no boxes. Inapplicable stays in place and goes gray.
 -->
 <script>
 	import { bind } from './commands.js';
 	import { parseArticle, splitRows } from './markdown.js';
 
-	/** @type {{ pile: import('./pile.svelte.js').Pile }} */
-	let { pile } = $props();
+	/** Web chrome hides these. The storyboard still names them. */
+	const HIDDEN = new Set(['!OptionQuit', '!OptionRefresh']);
+
+	/** @type {{ pile: import('./pile.svelte.js').Pile, reveal?: boolean }} */
+	let { pile, reveal = false } = $props();
 
 	const commanded = $derived(pile.leader ?? pile);
 
@@ -22,13 +25,18 @@
 		pageAxis;
 		return splitRows(pile.currentPage).map((row) =>
 			parseArticle(row)
-				.filter((segment) => segment.kind === 'target' && segment.spec.command)
+				.filter(
+					(segment) =>
+						segment.kind === 'target' &&
+						segment.spec.command &&
+						!HIDDEN.has(segment.spec.command)
+				)
 				.map((segment) => bind(segment.spec.command, commanded, segment.spec.label))
 		);
 	});
 </script>
 
-<div class="panel" role="toolbar" aria-label={pile.article?.title ?? 'control panel'}>
+<div class="panel" class:reveal-all={reveal} role="toolbar" aria-label={pile.article?.title ?? 'control panel'}>
 	{#each rows as row, i (i)}
 		<div class="row">
 			{#each row as verb (verb.name)}
@@ -51,8 +59,8 @@
 	.panel {
 		display: flex;
 		flex-direction: column;
-		gap: 0;
-		padding: 0.1rem 0.35rem 0.2rem;
+		gap: 0.35rem;
+		padding: 0.4rem 0.75rem 0.45rem;
 		background: var(--paper, #fff);
 	}
 	.row {
@@ -63,20 +71,29 @@
 	.verb {
 		font: inherit;
 		font-size: 0.75rem;
+		font-weight: 700;
 		letter-spacing: 0.04em;
 		padding: 0.1rem 0.15rem;
 		color: var(--ink, #000);
+		-webkit-text-fill-color: currentColor;
 		background: none;
 		border: 0;
 		border-radius: 0;
 		cursor: pointer;
+		user-select: none;
+		-webkit-user-select: none;
 	}
-	.verb:hover:enabled {
+	.verb:hover:enabled,
+	.verb:active:enabled,
+	.reveal-all .verb:enabled {
 		background: #000;
-		color: #fff;
+		color: var(--flash, #00f0d8);
+		-webkit-text-fill-color: var(--flash, #00f0d8);
 	}
 	.verb:disabled {
-		color: #999;
+		color: #888;
+		-webkit-text-fill-color: currentColor;
+		opacity: 1;
 		cursor: default;
 	}
 	.verb.unknown {

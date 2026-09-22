@@ -1,0 +1,142 @@
+# SHOW — Xanadu Ships: Ted Nelson × Roger Gregory
+# News peg, not a retrospective. Roger's own words, 14 Sep 2026: the Smalltalk is now C and Rust,
+# byte identical, ~27,000 lines each, and the release is waiting on Ted.
+
+show:
+  id: ted-and-roger-xanadu-ships
+  title: "Xanadu Ships — Ted Nelson × Roger Gregory"
+  type: pair
+  host: Don Hopkins
+  guests: ["Ted Nelson", "Roger Gregory"]
+  also_invited: ["Will Wright"]
+  characters:
+    - characters/ted-nelson/
+    - characters/roger-gregory/
+  topic: |
+    A reimplementation of Xanadu is finished and unreleased. The author and the implementer,
+    in the same room, while it is still news — what it is, what it addresses, whether it is
+    readable, and what forty-five years of this taught them.
+  status: seed
+  consent:
+    roger: not_addressed      # replied 14 Sep 2026 about the work; the show was never raised
+    ted: not_yet_asked
+    will: standing_yes_to_the_series   # not yet asked about this episode
+  urgency: |
+    Time-sensitive in a way no other seed here is. The release has not happened yet, so the
+    conversation can be recorded BEFORE the announcement rather than after — which makes the
+    show part of the release instead of coverage of it. That is the whole offer.
+
+the_news:
+  source: characters/roger-gregory/sources/2026-09-14-facebook-reply-c-and-rust.md
+  his_claims:
+    - "150,000 lines of Smalltalk turned into two apps, C and Rust."
+    - "Byte identical in output."
+    - "About 27,000 lines each."
+    - "Release gated on Ted, not on the code."
+  his_verdict_on_oo: '"So much fro OO" — his words, typo included.'
+  unvalidated: |
+    Every line above is Roger's claim, not a measurement anyone here has reproduced. Which
+    Smalltalk tree, translated by what means, and what byte-identical was measured against are
+    open questions, and they are the interesting ones rather than gotchas.
+
+why_this_pair:
+  ted: |
+    Wrote the vision, named it, and holds the veto. The release is gated on him, so he is not a
+    guest who happens to be relevant — he is the remaining dependency.
+  roger: |
+    Had to make it run. Met Ted 1974; the Swarthmore Summer of 1979; designed tumblers with
+    Mark Miller; led the Autodesk-era implementation from 1988; XOC founder and CTO.
+  together: |
+    Every existing post-mortem of Xanadu — Gwern's essay, Ben Shneiderman's assessment of
+    Computer Lib, Don's own 1999 Udanax review — was written from outside the implementation.
+    This pair is the inside, and they do not agree about everything, which is the show.
+  don: |
+    Met Hugh Daniel at the MIT AI Lab Xanadu demo, reviewed the 1999 Udanax release in public,
+    got corrected by Ted on Hacker News about Green versus Gold, and built HyperTIES under
+    Shneiderman partly because of Ted. A participant with a stake, not a neutral interviewer.
+
+threads:
+  - id: what-shipped
+    what: "What the two ports are, concretely. Which tree, what did the translating, what the equivalence claim means."
+    deliverable: "An equivalence harness for Xanadu operations — the artifact any reimplementation needs and nobody has."
+  - id: readable
+    what: |
+      Is either port meant to be read? Commented, documented, modifiable by someone who was not
+      there. This is Don's 1999 charge arriving twenty-seven years later at the same door, and it
+      was aimed at an artifact — machine-generated C++, "uncommented glue gluing glue to glue" —
+      never at the people. Ask it that way or do not ask it.
+    tone_rule: "Critique the release, never the men. Roger brought the ports up himself; he is not being ambushed."
+  - id: dogfood
+    what: "Was Xanadu ever used to document its own source? Don asked in 1999, Gwern quoted it in 2025, still unanswered."
+  - id: tumblers-vs-git
+    what: |
+      Transfinite addressing names any range of any version. Git gave up on ranges and won anyway:
+      content-addressed blobs, permalinks that cannot follow a moved line. Exact and hard versus
+      cheap and universal. Gwern argues the range machinery was the wrong bet; Roger is the one who
+      can say what ranges bought.
+  - id: oo-fight
+    what: |
+      150,000 lines becoming 27,000 twice is real evidence and a badly controlled experiment at the
+      same time. David Ungar is in this repo. Two people with standing and an artifact to argue over.
+    guest_option: "characters/david-ungar/ — optional third chair, only if both principals want it."
+  - id: the-crop
+    what: |
+      Mike Travers asked Ted at BayCHI 2021 about the explosion of hypertext writing tools —
+      Roam and the rest — and Ted had not looked at any of them. Roam ships block-level
+      transclusion and automatic backlinks to paying customers. Worth putting in front of both of
+      them now, since it is Ted's mechanism in a product.
+    see: "SimHacker/moollm designs/PAIRED-LINKS.md — the crop scored against Ted's own three criteria"
+
+will_wright:
+  why_invite: |
+    Will is signed on to the series and the premiere. He belongs here on the merits, not as a
+    draw: Bar Karma was a branching community-authored story graph, StoryMaker was Don's tool for
+    it, and the Sims family album was transclusion shipped to millions of players who never heard
+    the word. Ted's complaint about single-column documents and Will's whole career in
+    possibility-space navigation are the same complaint.
+  the_ask: "Come argue about structure with the man who named it. No homework."
+  fallback: "If Will passes, the show stands on the pair. Do not make his presence a condition told to anyone."
+
+venues:
+  repo_show:
+    what: "The primary form — conversation, then implement what we talked about, live, with the repo as the deliverable."
+    live_coding_candidates:
+      - "Review sisbell/xanadu-spec with Roger — the agentic-AI-derived spec whose accuracy nobody has validated."
+      - "Build the equivalence harness against whichever ports he is willing to point at."
+      - "Transclusion demo: the chorus argument, in a browser, with visible provenance stripes."
+  hacker_news:
+    why_real: |
+      Not hypothetical. Ted has posted on HN — he corrected Don's Green/Gold account there in
+      public. A finished Xanadu reimplementation is front-page material on its own merits.
+    plan: |
+      The release announcement is THEIRS, not ours, and we do not front-run it. Our post is the
+      conversation, published after or alongside, with the code linked and the transcript in the
+      repo. Don's HN guidelines apply: quote them, link the primaries, no polish.
+    sequencing_note: |
+      The editing-history/clipboard post is already drafted and stands alone. If it runs first it
+      warms the room for this one; it must not be held hostage to this one's timing.
+  wwsff_repo: "Transcript, sources, corrections as commits with their names on them."
+  twitch: "Implementation session after the conversation, per the format."
+
+channel_strategy:
+  note: |
+    Roger is already in contact with Ted, and the release is gated on Ted. That makes Roger the
+    natural carrier for this specific ask — one ask, two signatures — rather than spending the
+    Ted Selker channel on it. Private green-room notes govern anything touching the Ted channel.
+  private: "DonHopkins projects/willwrightshowforfood/green-room/ted-nelson.md and roger-gregory.md"
+  hard_rule: "Nothing about Ted's correspondence arrangement goes anywhere near this seed or any blurb for it."
+
+homeplay:
+  - "Computer Lib / Dream Machines"
+  - "Gwern, Project Xanadu: Even More Hindsight — gwern.net/xanadu"
+  - "The 1999 Udanax release, and Don's review of it"
+  - "xanadu.com/demo — the Pale Fire demo"
+
+ties_to:
+  - ../../characters/roger-gregory/invitation.md
+  - ../../characters/roger-gregory/ideas.md
+  - ../../characters/roger-gregory/sources/udanax-lineage-questions.md
+  - ../../characters/ted-nelson/invitation.md
+  - ../ted-nelson/SHOW.yml            # the Têd-à-Têd pairing with Selker — different show, same hero
+  - ../selections-icccm-clipboard.yml
+  - ../../process/trails/augmentation-and-hypertext.md

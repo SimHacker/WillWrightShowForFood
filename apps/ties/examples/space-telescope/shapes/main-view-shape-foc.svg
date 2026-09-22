@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"
-     preserveAspectRatio="none" data-class="PopupTarget" data-name="Main view -  shape FOC">
+     preserveAspectRatio="none" data-class="PopupTarget" data-pop-x="-0.01" data-pop-y="0.015" data-pop-scale="1" data-name="Main view -  shape FOC">
   <path d="M 0.22340 0.60480 0.27120 0.57060 0.26600 0.56400 0.27000 0.55990 0.27000 0.54900 0.27120 0.54070 0.27300 0.53200 0.25400 0.54070 0.19000 0.58500 0.17600 0.59400 0.17400 0.63680 0.18100 0.65180 0.20400 0.67100 0.20740 0.66460 0.21630 0.66000 0.22000 0.66000 0.22200 0.61100 Z" vector-effect="non-scaling-stroke"/>
 </svg>

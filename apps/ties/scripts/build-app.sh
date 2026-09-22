@@ -14,10 +14,11 @@
 #
 # Today HyperTIES prerenders to files and Caddy serves them, so there is no process to run.
 # Set SVELTE_ADAPTER=node and the same source builds a server instead, because the jump is
-# an adapter choice in vite.config.js rather than a rewrite. What forces that jump is a page
-# wanting something only a server can give it -- a Mapbox token that must not be baked into
-# a public bundle, a postgres query, a session. Until a page needs one, static is cheaper and
-# cannot fall over.
+# an adapter choice rather than a rewrite. What forces that jump is a same-origin proxy
+# (gwern .md, include-ranges, annotation fragments — CORS) and saved/shared views.
+# Until those ship, static is cheaper and cannot fall over.
+# Framing: moollm/designs/webtop/hyperties/THE-GOOD-PARTS.md
+# Caddy for that mode: deploy/hyperties-node.Caddyfile
 set -euo pipefail
 
 APP="hyperties"
@@ -98,5 +99,11 @@ built_on: $(uname -s)/$(uname -m)
 EOF
 
 record_staged "$APP" "$ID"
+
+if [[ "$MODE" == "node" ]]; then
+	# Same id on the image and the file tree. Built on linux — do not ship a Mac image.
+	echo "Building image wwsff/hyperties:$ID"
+	docker build -t "wwsff/hyperties:$ID" -t wwsff/hyperties:latest -f "$APP_DIR/deploy/Dockerfile" "$APP_DIR"
+fi
 
 echo "Staged: $STAGE"

@@ -1,10 +1,10 @@
 // Adapter is chosen at build time by SVELTE_ADAPTER, default static.
 //
 // HyperTIES prerenders to files today: 138 articles, no process to run, nothing to fall over,
-// and Caddy serves the release directory directly. The jump to a server is this one variable,
-// because what forces it is a page wanting something only a server can give -- a Mapbox token
-// that must not be baked into a public bundle, a postgres query, a session -- and that will
-// arrive as a feature rather than as a rewrite.
+// and Caddy serves the release directory directly. The jump to a server is this one variable.
+// What forces it is a same-origin proxy (gwern .md and include-ranges; CORS) and a place
+// to save and share views. Mapbox tokens and sessions can ride along later. The corpus
+// stays files. Framing: moollm/designs/webtop/hyperties/THE-GOOD-PARTS.md
 //
 // The import is conditional rather than top-level so a static build never needs adapter-node
 // present, which keeps the default path working in a checkout that has not installed it.

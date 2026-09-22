@@ -1,0 +1,51 @@
+# How to write a Turing machine for this toolkit.
+# Three audiences: a student reading comments, an LLM proposing a transition,
+# a program that only sees keys. JSON would drop the comments. Don't.
+#
+# Split: a MACHINE is the floor plan. A TAPE is one pictured configuration.
+# Same machine, many tapes. The body walks the floor plan; the head walks the tape.
+
+machine:
+  id: copy                  # filename stem, used by the CLI and the web picker
+  name: Copy a unary block  # one line, human
+  # credits stay on the machine so a UI can show them without a sidebar essay
+  credits:
+    - Christopher Cherniak, TM* / PCOMP, Philosophy and Computers, University of Maryland
+    # Don remembers Velu Sinha (B.S. Physics, Maryland) on that MS-DOS program. Confirm.
+  blank: "0"                # symbol of the infinite unpictured tape
+  symbols: ["0", "1", X]    # alphabet; quote anything that looks like a number
+  start: mark               # body starts in this room
+  halt: [done]              # entering any of these rooms stops the run
+  missing: halt             # no door for (state, symbol): halt | error
+  # universality is optional metadata. It does not change the stepper.
+  # standard = finite pictured input, blank elsewhere, halt state.
+  # weak    = may need an infinite periodic background; may never halt.
+  universality: { kind: none }
+  states:
+    mark:
+      # Each door: what you write, which way the head moves, which room you enter.
+      # L / R / N  (N = stay). The floor plan never changes; only the body does.
+      "1": { write: X, move: R, next: seek }
+      "0": { write: "0", move: N, next: done }
+
+tape:
+  id: copy-111
+  machine: copy             # must match a machine id
+  blank: "0"                # copied from the machine if omitted
+  # Pictured cells as one string. This is the "just a file of characters."
+  # Wrapping it in YAML is the good move: head, regions, and why live here.
+  # A raw 0100101.txt cannot say where the head is, which symbol is blank,
+  # or that the left half is a tag-system program.
+  cells: "111"
+  origin: 0                 # infinite-tape index of cells[0]
+  head: 0                   # absolute index, or a non-negative offset into cells if you prefer
+  state: mark               # usually the machine start; override for mid-run snapshots
+  regions:
+    - { id: input, start: 0, length: 3 }
+  expect:                   # optional; `tm test` checks these
+    halt: true
+    steps: 18
+    pictured: "1110111"
+
+# Do not put the transition table on the tape, or the tape on the machine,
+# except a machine may name default_tape: for the web picker.

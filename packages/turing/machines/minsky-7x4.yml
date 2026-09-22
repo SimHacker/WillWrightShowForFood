@@ -1,0 +1,59 @@
+# Marvin Minsky, 7 states × 4 symbols, AIM-33 / AMS 1962.
+# Standard universality: finite pictured input, blank 0 both ways, explicit halt.
+# TECO spelling from the 1981 *BBOARD mail: paper X is y, paper B is A.
+# Recovery room: characters/marvin-minsky/sources/teco-utm/
+
+id: minsky-7x4
+name: Minsky 7×4 Universal Turing Machine
+credits:
+  - Marvin Minsky, Universality of (p=2) Tag Systems and a 4 Symbol 7 State Universal Turing Machine (AIM-33 / AMS 1962)
+  - Computation: Finite and Infinite Machines (1967) §14.8
+  - 1981-03-11 ITS *BBOARD mail, recovered by Harold Ancell (HN 10161002)
+blank: "0"
+symbols: [y, "0", "1", A]
+start: q1
+halt: [q0]
+missing: halt
+default_tape: minsky-1981-mail
+universality:
+  kind: standard
+  # Later smaller machines often leave this model (weak background, no halt).
+  # That is a rule difference, not a smaller machine of the same kind.
+
+states:
+  q1:
+    y: { write: "0", move: L, next: q1 }
+    "0": { write: "0", move: L, next: q1 }
+    "1": { write: "1", move: L, next: q2 }
+    A: { write: "1", move: L, next: q1 }
+  q2:
+    y: { write: "0", move: L, next: q1 }
+    "0": { write: y, move: R, next: q2 }
+    "1": { write: A, move: R, next: q2 }
+    A: { write: y, move: R, next: q6 }
+  q3:
+    y: { write: y, move: L, next: q3 }
+    "0": { write: "0", move: L, next: q0 }      # the halt door
+    "1": { write: A, move: L, next: q3 }
+    A: { write: "1", move: L, next: q4 }
+  q4:
+    y: { write: y, move: L, next: q4 }
+    "0": { write: y, move: R, next: q5 }
+    "1": { write: "1", move: L, next: q7 }
+    A: { write: "1", move: L, next: q4 }
+  q5:
+    y: { write: y, move: R, next: q5 }
+    "0": { write: y, move: L, next: q3 }
+    "1": { write: A, move: R, next: q5 }
+    A: { write: "1", move: R, next: q5 }
+  q6:
+    y: { write: y, move: R, next: q6 }
+    "0": { write: A, move: L, next: q3 }
+    "1": { write: A, move: R, next: q6 }
+    A: { write: "1", move: R, next: q6 }
+  q7:
+    y: { write: "0", move: R, next: q7 }
+    "0": { write: y, move: R, next: q6 }
+    "1": { write: "1", move: R, next: q7 }
+    A: { write: "0", move: R, next: q2 }
+  q0: {}

@@ -17,7 +17,15 @@ set -euo pipefail
 DATA_ROOT="${DATA_ROOT:-/data}"
 ROLES_DIR="$DATA_ROOT/secrets/postgres/roles"
 SUPERUSER_ENV="$DATA_ROOT/secrets/postgres/superuser.env"
-COMPOSE="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/apps/ebike-safari/deploy/docker-compose.yml"
+REPO="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+COMPOSE="$REPO/apps/ebike-safari/deploy/docker-compose.yml"
+
+app_dir() {
+	case "$1" in
+	hyperties) echo "$REPO/apps/ties" ;;
+	*) echo "$REPO/apps/$1" ;;
+	esac
+}
 
 die() {
 	echo "provision-db-roles: $*" >&2
@@ -69,6 +77,25 @@ for app in "${WANTED[@]}"; do
 		SQL
 	else
 		echo "   role exists"
+	fi
+
+	if [[ -z "$(psu -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname = '$dbname'")" ]]; then
+		echo "   creating database"
+		psu -d postgres -v d="$dbname" <<-'SQL'
+			CREATE DATABASE :"d";
+		SQL
+	else
+		echo "   database exists"
+	fi
+
+	init="$(app_dir "$app")/db/init"
+	if [[ -d "$init" ]]; then
+		echo "   applying $init"
+		for sqlf in "$init"/*.sql; do
+			[[ -f "$sqlf" ]] || continue
+			echo "     $(basename "$sqlf")"
+			psu -d "$dbname" <"$sqlf"
+		done
 	fi
 
 	# Always reassert: this is what makes the script a rotation tool. NOSUPERUSER and friends are

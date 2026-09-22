@@ -4,7 +4,7 @@ Invitation portrayal — **not** Roger Gregory. [Standards](../../schemas/portra
 
 **Field:** Project Xanadu implementation — tumblers (with Mark Miller), the Autodesk-era codebase, Xanadu Operating Company; Ann Arbor Computer Club; rotary rocket engine design
 
-[Invitation](invitation.md) · [**His reply, 14 Sep 2026**](sources/2026-09-14-facebook-reply-c-and-rust.md) · [Ideas](ideas.md) · [Lineage questions](sources/udanax-lineage-questions.md) · [**Don's 1999 Udanax review, whole**](../gwern/sources/1999-userland-xanadu-thread.md)
+[Invitation](invitation.md) · [**His reply, 14 Sep 2026**](sources/2026-09-14-facebook-reply-c-and-rust.md) · [Ideas](ideas.md) · [Lineage questions](sources/udanax-lineage-questions.md) · [**Don's 1999 Udanax review, whole**](../gwern/sources/1999-userland-xanadu-thread.md) · [**Show seed: Xanadu Ships, with Ted**](../../repo-shows/ted-and-roger-xanadu-ships/README.md)
 
 Ted Nelson wrote the vision. Roger Gregory is one of the people who had to make it run. He met Ted
 in 1974, moved to Swarthmore in 1979 for the summer that produced **tumblers** — the

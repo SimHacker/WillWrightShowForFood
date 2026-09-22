@@ -181,6 +181,19 @@ disk:
         postgres/roles/<app>.env: 'that app only -- PGHOST PGPORT PGDATABASE PGUSER PGPASSWORD'
         mapbox/token.env: 'viewer'
         acme/email.env: 'caddy'
+    # NOT YET. A checkout that is the world, not the thing we build the site
+    # from. Uncommitted model state is why this is on the pet. Layout and the
+    # deploy-vs-model-vs-simulate split: server/CHECKOUTS.md.
+    hyperties/cache:
+      access: 'hyperties rw'
+      what: 'Courtesy-fetch cache for /proxy. Pet, not in the image. Not his files merged into ours.'
+    models:
+      status: not_yet
+      access: 'orchestrator rw; never the deploy clone'
+      what: |
+        /data/models/<site>/<repo> — working trees MOOLLM sites live in.
+        A second clone of WWSFF or moollm or MicropolisCore, on another
+        branch, for simulation, is this class. The /opt clone is not.
 
   stays_on_the_boot_disk:
     # Only things a rebuild reconstructs from scratch. If you want to add to this list, the test

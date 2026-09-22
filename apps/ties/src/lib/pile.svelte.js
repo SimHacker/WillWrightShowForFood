@@ -30,14 +30,14 @@
  */
 import { getArticle, homeOf, reserved, resolve } from './corpus.js';
 import { paginate } from './markdown.js';
+import { getClickTimeoutMs, CLICK_TIMEOUT_DEFAULT_MS } from './prefs.svelte.js';
+import { ROOT } from './href.js';
 
 export const MAX_PILES = 32; // 32 constant /piles
 export const PATH_MAX = 128; // 128 constant /path
 
-/** How long a considered link stays green — click again while green to go.
- *  Longer than a typical OS double-click so the fuse is visible. Configurable:
- *  set `--click-timeout` in CSS to the same value. */
-export const CLICK_TIMEOUT_MS = 800;
+/** Default fuse length. The live value is getClickTimeoutMs() (localStorage). */
+export const CLICK_TIMEOUT_MS = CLICK_TIMEOUT_DEFAULT_MS;
 
 export const CONTENTS = 'ContentsPileID';
 export const DEFINITION = 'DefinitionPileID';
@@ -256,7 +256,9 @@ export class Pile {
 	}
 
 	get canPageNext() {
-		return this.scrollTop < this.scrollMax - 1;
+		// A few pixels of leftover overflow is not a page. Phantom scroll from
+		// padding or subpixels used to leave NEXT/LAST live on a short article.
+		return this.scrollMax > 8 && this.scrollTop < this.scrollMax - 1;
 	}
 
 	get canReturn() {
@@ -279,6 +281,8 @@ export class Pile {
 	 */
 	go(db, slug) {
 		if (!db || !slug) return false;
+		const now = this.path[this.cursor];
+		if (now && now.db === db && now.slug === slug) return true;
 		const path = this.path.slice(0, this.cursor + 1);
 		path.push({ db, slug });
 		this.path = path.length > PATH_MAX ? path.slice(path.length - PATH_MAX) : path;
@@ -314,7 +318,7 @@ export class Pile {
 	/** Open a name through the index rather than a slug, reserved names included. */
 	goNamed(name, db = this.db) {
 		const hit = resolve(db, name) ?? reserved(db, name);
-		return hit?.slug ? this.go(db, hit.slug) : false;
+		return hit?.slug ? this.go(hit.db ?? db, hit.slug) : false;
 	}
 
 	/** Where a database opens: its !home article. */
@@ -323,14 +327,48 @@ export class Pile {
 		return slug ? this.go(db, slug) : false;
 	}
 
-	/** RETURN: back along the visit path. */
-	ret() {
-		if (!this.canReturn) return false;
-		this.cursor -= 1;
+	/** Cut the path off after this visit. Clicking a crumb does this. */
+	truncate(index) {
+		if (index < 0 || index >= this.path.length) return false;
+		const step = this.path[index];
+		if (step.db === ROOT && step.slug === homeOf(ROOT)) return this.goRoot();
+		this.path = this.path.slice(0, index + 1);
+		this.cursor = this.path.length - 1;
+		this.page = 0;
+		this.lastDb = step.db;
+		this._clearPreview();
+		this.pageFirst();
+		return true;
+	}
+
+	/** HyperTIES, and only HyperTIES. The path is one step. */
+	goRoot() {
+		const slug = homeOf(ROOT);
+		if (!slug) return false;
+		this.path = [{ db: ROOT, slug }];
+		this.cursor = 0;
+		this.page = 0;
+		this.lastDb = ROOT;
+		this._clearPreview();
+		this.pageFirst();
+		return true;
+	}
+
+	/** Jump to a visit already on the path. Does not push or discard the tail. */
+	jump(index) {
+		if (index < 0 || index >= this.path.length) return false;
+		if (index === this.cursor) return true;
+		this.cursor = index;
 		this.page = 0;
 		this._clearPreview();
 		this.pageFirst();
 		return true;
+	}
+
+	/** RETURN: back along the visit path. */
+	ret() {
+		if (!this.canReturn) return false;
+		return this.jump(this.cursor - 1);
 	}
 
 	forward() {
@@ -451,7 +489,7 @@ export class Browser {
 		clearTimeout(this.#armTimer);
 		this.#armTimer = setTimeout(() => {
 			this.armed = null;
-		}, CLICK_TIMEOUT_MS);
+		}, getClickTimeoutMs());
 	};
 
 	disarm = () => {
@@ -465,7 +503,7 @@ export class Browser {
 		return this.armed.slug === target.slug && this.armed.db === db;
 	};
 
-	constructor({ db = null, panel = 'control-panel' } = {}) {
+	constructor({ db = null, slug = null, panel = 'control-panel' } = {}) {
 		this.contents = new Pile({ name: CONTENTS, pass: PASS.article, pileClass: 'ContentsPile' });
 		this.definition = new Pile({
 			name: DEFINITION,
@@ -495,8 +533,27 @@ export class Browser {
 			pile.bind(CONTROLS, this.controls);
 		}
 
+		const go = this.contents.go.bind(this.contents);
+		this.contents.go = (nextDb, nextSlug) => {
+			this.disarm();
+			return go(nextDb, nextSlug);
+		};
+		const goRoot = this.contents.goRoot.bind(this.contents);
+		this.contents.goRoot = () => {
+			this.disarm();
+			return goRoot();
+		};
+		const truncate = this.contents.truncate.bind(this.contents);
+		this.contents.truncate = (index) => {
+			this.disarm();
+			return truncate(index);
+		};
+
 		this.controls.goNamed('Control Panel', panel);
-		if (db) this.contents.goHome(db);
+		const rootSlug = homeOf(ROOT);
+		if (rootSlug) this.contents.go(ROOT, rootSlug);
+		if (db && slug && !(db === ROOT && slug === rootSlug)) this.contents.go(db, slug);
+		else if (db && db !== ROOT) this.contents.goHome(db);
 	}
 
 	get here() {
@@ -516,8 +573,10 @@ export class Workspace {
 	browsers = $state([]);
 	synchronized = $state(false);
 
-	constructor(dbs = []) {
-		this.browsers = dbs.map((db) => new Browser({ db }));
+	constructor(seeds = []) {
+		this.browsers = seeds.map((seed) =>
+			typeof seed === 'string' ? new Browser({ db: seed }) : new Browser(seed)
+		);
 	}
 
 	open(db) {

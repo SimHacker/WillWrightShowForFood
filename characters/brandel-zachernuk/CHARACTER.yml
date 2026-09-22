@@ -1,0 +1,89 @@
+# Brandel Zachernuk — invitation portrayal. NOT Brandel Zachernuk.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: brandel-zachernuk
+  name: "Brandel Zachernuk"
+  type: invitation
+  signifier: "🫲"          # embodied cognition — thinking with the hands
+  status: living
+  field: "Spatial web technologies at Apple Vision Products; embodied cognition and extended mind; 25+ years of novel web interaction"
+  home: characters/brandel-zachernuk/
+  site: http://www.zachernuk.com/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: not_sent
+  consent: not_yet_asked
+  channel: unknown          # site has no address listed; LinkedIn, Twitter, CodePen, or Future of Text
+  show_seed: null
+  the_ask: "The webtop. He builds spatial web interaction for a living and thinks about reading surfaces from first principles."
+
+bio:
+  summary: >
+    Creative technologist, 25+ years building novel interaction on the web. Works at **Apple** in the
+    **Vision Products group on Spatial Web Technologies**, prototyping and advocating for new ways to
+    express and understand over the web on spatial machines. Active in the **Near Future Laboratory**
+    and **Future of Text** communities. Posts interactive sketches on Twitter, CodePen and ShaderToy.
+  his_own_framing: >
+    From zachernuk.com: his work is informed by "taking a long view of technological development (back
+    to the origins of writing and beyond), a firm belief in embodied cognition/extended mind, and the
+    nearly-limitless [potential] for human neuroplasticity and adaptiveness." His 2022 portfolio page —
+    built around embodied cognition and writing-as-a-technology — is what got him the Apple role.
+  unverified:
+    - "Whether he is still at Apple as of Sep 2026 (site is the only source)."
+    - "How he knows Ted Nelson, and whether the Future of Text community is the connection."
+    - "Don's recollection that he offered to show Ted the system he was developing — not in the BayCHI captions; may have been in the Zoom chat."
+
+reading_list_he_publishes:
+  why_it_matters: "His resources page is a short course in exactly the theory the webtop needs, and he curated it before we needed it."
+  entries:
+    - { who: "Andy Clark", what: "Extended Mind (co-author of the original paper); talk 'Extended You'" }
+    - { who: "David Kirsh", what: "Thinking with the Body; the 1994 Tetris study — experts rotate blocks just to see where they fit; coined epistemic vs pragmatic action" }
+    - { who: "Barbara Tversky", what: "Mind in Motion — gesture as part of thinking, not just communication" }
+    - { who: "Sunny Bains", what: "Mixed Feelings — sensory prosthesis and how deeply it integrates into perception" }
+    - { who: "Wikipedia", what: "Extended Mind Thesis; Embodied Cognition" }
+
+baychi_2021:
+  event: "Ted Nelson, HCI Constructs Then and Now, 10 Aug 2021, hosted by Ted Selker"
+  source: sources/2021-08-10-baychi-scrivener-question.md
+  what_he_did: |
+    Asked the sharpest question of the Q&A, and it is the question that got Ted to say the most
+    useful thing about himself in the whole talk. Brandel asked whether Scrivener's failings are
+    that it is opinionated about fiction writing or simply unapproachable — and added the design
+    observation that "hypertext authoring is a valuable thing, but it may be challenging to get it
+    simple enough to be relevant for most people's use cases."
+  what_it_got: |
+    Ted: "Basically I was simply daunted by its complexity. I'm lazy, and not eager to spend hours
+    delving into the complexities of a particular piece of software."
+
+why_him:
+  for_the_webtop: |
+    The webtop is a reading and strolling surface, and its open questions are his day job: how a
+    reader's frame relates to authored cloth, what a tour laid over finished material feels like in
+    the hand, how much structure a person will tolerate before they quit. He ships spatial web
+    interaction at Apple and he reasons about it from embodied cognition rather than from widgets.
+  the_kirsh_connection: |
+    David Kirsh's epistemic/pragmatic distinction, which Brandel publishes on his own resources page,
+    is the missing citation for the webtop's attention masks. Rotating a Tetris block to see whether
+    it fits is not progress toward the goal; it is an action taken to make thinking cheaper. An
+    attention mask is that, as an artifact: something you build and hand over because it makes the
+    next person's thinking cheaper. See moollm designs/PAIRED-LINKS.md.
+  the_simplicity_problem: |
+    His BayCHI observation is the objection the webtop has to answer, from a stranger, in 2021,
+    before we wrote a line of it: hypertext authoring is valuable AND it may be too complex to be
+    relevant to most people. Ted then proved it by saying he is lazy. That pair — the objection and
+    the confirmation — is the design brief.
+  not_a_fanboy_booking: |
+    He asked Ted a critical question rather than a reverent one, and he was right.
+
+see_also:
+  - { path: ../ted-nelson/, why: "The talk where he asked the question; possible shared Future of Text orbit" }
+  - { path: ../nicole-lazzaro/, why: "Same Q&A; the serial-port problem the webtop exists to attack" }
+  - { path: ../ted-selker/, why: "Hosted the talk" }
+  - { path: ../bret-victor/, why: "Explorable explanations; the other end of the direct-manipulation argument" }
+  - { path: ../../repo-shows/ted-and-roger-xanadu-ships/, why: "Adjacent seed; he is a candidate discussant on the modern-tools thread" }

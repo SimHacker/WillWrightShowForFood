@@ -1,0 +1,60 @@
+# Oral notes, 2026-09-22. Henry Minsky talking with Don Hopkins at Leela.
+# Not a transcript. Henry's words as Don reported them the same day.
+# Do not treat as Marvin's account. Do not treat as a request to any named visitor.
+# pending: Henry reviews all of this before anything leaves the room.
+
+date: 2026-09-22
+speaker: Henry Minsky
+listener: Don Hopkins
+place: Leela (they work together)
+confidence: oral-same-day
+pending_review: Henry Minsky
+
+notes:
+
+  - id: smaller-utm-visit
+    what: >
+      Stephen Wolfram visited Marvin claiming a universal Turing machine
+      with fewer states than Marvin's. Marvin looked at it and said
+      Wolfram had changed the rules. Henry does not remember how.
+      Henry's take on the visitor, paraphrased: vexing. Not a quote.
+    how_to_use: >
+      File as an open question about definitions of universality, not as
+      a challenge to anyone. Later smaller machines in the literature
+      often do change the model (weak universality with an infinite
+      periodic background, 2-symbol conversions that explode the other
+      parameter, different halt conventions). That is the technical
+      content of "changed the rules." A productive cousin: von Neumann's
+      29-state CA makes signal crossing vexatious; a rule that lets
+      signals cross yields much smaller universal constructors. See
+      characters/john-von-neumann/sources/jvn-29/. Ask anyone who was
+      there or who has the correspondence. Same method as the 2015 HN
+      ask that recovered the TECO — ask the room, not a person.
+    do_not:
+      - Quote Henry's stronger word
+      - Put Wolfram on the spot as the person being asked
+      - Treat "vexing" as something Henry signed off on until he reviews
+
+  - id: tots-already
+    what: >
+      Henry already has material of Marvin's from the Tapes of Tech
+      Square / MIT Distinctive Collections. He can make the next
+      scoped ask.
+    how_to_use: >
+      He is the asker for ToTS, not a public challenge. Draft:
+      tots-request.md. Wanted: every FN2, DUMP create / last-write /
+      last-read, neighbors (data, docs, AIM-33 drafts), not only a
+      Unix payload of one file.
+
+  - id: teco-sorted-the-paper
+    what: >
+      Marvin was writing a paper in TECO on a printing terminal. One
+      mistaken keystroke sorted the entire paper. There was no undo. He
+      lost it.
+    why_it_sits_here: >
+      The UTM mail is the same editor, doing the opposite trick: TECO
+      compiling a transition table by editing itself. A printing
+      terminal plus no undo is why "I do not advise attempting to
+      understand this code" is not a joke about opacity. It is also
+      why the surviving object is a BBOARD mail, not a file from
+      AI:MINSKY;.

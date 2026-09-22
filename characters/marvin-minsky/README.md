@@ -12,6 +12,17 @@ AI **frames**, **K-lines**, and **The Society of Mind**; built **SNARC** and the
 microscope**; advised on HAL in *2001*. Turing Award, 1969. Father of [Margaret](../margaret-minsky/README.md)
 and [Henry](../henry-minsky/README.md) Minsky.
 
+## TECO Universal Turing Machine (AIM-33 / 1981 mail)
+
+The 11 March 1981 `*BBOARD` mail is the 7-state 4-symbol UTM from AI Memo 33,
+not a generic interpreter. Harold Ancell returned the text in 2015 after Don
+asked on HN. Henry (2026-09-22) added two oral notes. Open ask for the
+original `AI:MINSKY;` file is the same method as 2015.
+
+[`sources/teco-utm/`](sources/teco-utm/README.md) ·
+[`simulator.html`](sources/teco-utm/simulator.html) ·
+[`open-ask.md`](sources/teco-utm/open-ask.md)
+
 ## Jokes and the Cognitive Unconscious (1980/81)
 
 Humor as **catching cognitive bugs** — censors, frame confusion, knowledge-about-knowledge —

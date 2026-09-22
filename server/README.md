@@ -6,6 +6,7 @@ the runbook for acting on it.
 | File | What it is |
 |---|---|
 | [`MANIFEST.yml`](MANIFEST.yml) | Everything a box is made of: apt packages, docker, node, firewall, disk |
+| [`CHECKOUTS.md`](CHECKOUTS.md) | Deploy clone vs model clone vs simulate clone. Same repo, different rules |
 | `../scripts/server-setup.sh` | Converges a machine onto the manifest. Idempotent — run it whenever you want to know the box is right |
 | `../scripts/server-deploy.sh` | Pull, build and deploy named apps. Nothing deploys unless you name it |
 | `../scripts/reload-ingress.sh` | Validate and gracefully reload Caddy, with no downtime |
@@ -85,6 +86,7 @@ The rule is not "the important things" — it is that **if deleting the VM would
 | `ebike-safari/rides` | ride GeoJSON; no other copy | |
 | `ebike-safari/osm` | OSM extracts, 3.7G | |
 | `secrets` | `.env`, mode 600, symlinked into the checkout | |
+| `models/` | **not yet** — working trees that *are* a site. See [`CHECKOUTS.md`](CHECKOUTS.md) | |
 
 Two of those rows are why this is not merely tidy. The certificate directory bites first: rebuilding
 without it re-issues eight certificates, and Let's Encrypt allows 5 duplicates per week, so a

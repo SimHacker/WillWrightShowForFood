@@ -1,0 +1,28 @@
+# Unary addition. The first machine Cherniak-shaped assignments reach for.
+# 1^a 0 1^b  means  a + b.  Changing the 0 into a 1 would be off by one,
+# so we do that and then erase the last 1.
+
+id: cherniak-unary-add
+name: Unary add
+credits:
+  - Christopher Cherniak — TM* / PCOMP, Philosophy and Computers, University of Maryland
+  - Reimagined here as a student machine, not a recovered file from the course disk
+blank: "0"
+symbols: ["0", "1"]
+start: to-sep
+halt: [done]
+missing: error
+default_tape: add-2-plus-3
+universality: { kind: none }
+
+states:
+  to-sep:
+    # Walk right until the separator.
+    "1": { write: "1", move: R, next: to-sep }
+    "0": { write: "1", move: R, next: to-end }   # 0 → 1, now one too many
+  to-end:
+    "1": { write: "1", move: R, next: to-end }
+    "0": { write: "0", move: L, next: erase }    # sit on the last 1
+  erase:
+    "1": { write: "0", move: N, next: done }
+  done: {}

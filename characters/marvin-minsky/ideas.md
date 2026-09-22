@@ -14,6 +14,7 @@
 | Emotion Machine (2006) | Later architecture of agents |
 | Jokes / cognitive unconscious | AI Memo 603 — [`sources/jokes-and-the-cognitive-unconscious/`](sources/jokes-and-the-cognitive-unconscious/README.md) |
 | Sketchpad committee | Ivan Sutherland thesis acknowledgments |
+| 7×4 UTM / TECO mail | AIM-33 (1962) + 1981 `*BBOARD`; [`sources/teco-utm/`](sources/teco-utm/README.md) |
 
 ## Hooks (with living discussants)
 
@@ -40,6 +41,11 @@
    Minsky verbatim and reads him doctrinally backwards; reception history where the enemy
    did the reading. Same Single Agent passage the Korz work reads as prophecy.
    [`sources/2001-liebig-cult-of-artificial-intelligence.md`](sources/2001-liebig-cult-of-artificial-intelligence.md)
+11. **TECO UTM** — the 1981 mail *is* the 1962 7×4 machine; TECO compiles the
+    table by editing itself. Henry: a visitor claimed fewer states and Marvin
+    said the rules had changed; also the printing-terminal sort that lost a
+    paper. Living discussant: **Henry**. Recovery method: ask everyone, as in
+    2015. [`sources/teco-utm/`](sources/teco-utm/README.md)
 
 ## Sources
 

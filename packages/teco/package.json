@@ -1,0 +1,19 @@
+{
+	"name": "@wwsff/teco",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Extensible TECO engine. ITS subset first (Minsky 1981 UTM mail); the table is how it grows.",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "tsc -p tsconfig.json && node --test dist/*.test.js",
+		"cli": "tsc -p tsconfig.json && node dist/cli.js"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.0",
+		"typescript": "^5.8.0"
+	}
+}

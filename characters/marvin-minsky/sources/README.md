@@ -6,6 +6,7 @@
 | [`jokes-and-the-cognitive-unconscious/`](jokes-and-the-cognitive-unconscious/README.md) | AI Memo 603 gathered in one room: the Freud-response story, verbatim full text, companion analysis, living MOOLLM homes |
 | [`2022-12-23-hn-society-of-mind.md`](2022-12-23-hn-society-of-mind.md) | HN SoM thread — Don neat/scruffy + Drescher; show hooks |
 | [`2001-liebig-cult-of-artificial-intelligence.md`](2001-liebig-cult-of-artificial-intelligence.md) | Hostile primary source — LaRouche movement's *Fidelio* polemic casting Minsky as villain; full text + political commentary, quote verification against our archives ([PDF](2001-liebig-cult-of-artificial-intelligence.pdf)) |
+| [`teco-utm/`](teco-utm/README.md) | 1981 TECO mail of the 7-state 4-symbol UTM (AIM-33). Ancell dump, table, 1,870-step stepper, browser tape+body, open ask |
 
 ## Canonical MOOLLM home
 

@@ -109,6 +109,29 @@ services:
     networks:
       - internal
 
+  hyperties:
+    # Interpreter only: auth, /proxy, /view. Articles are files Caddy serves
+    # from /data/releases/hyperties/current. Tagged with the same release id.
+    build:
+      context: ../../ties
+      dockerfile: deploy/Dockerfile
+    image: wwsff/hyperties:${HYPERTIES_RELEASE:-latest}
+    restart: unless-stopped
+    env_file:
+      - ${DATA_ROOT:-/data}/secrets/postgres/roles/hyperties.env
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      HOST: 0.0.0.0
+      HYPERTIES_CACHE_DIR: /data/hyperties/cache
+    volumes:
+      - ${DATA_ROOT:-/data}/hyperties/cache:/data/hyperties/cache
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - internal
+
   caddy:
     # Shared ingress: TLS for every site on this VM. The official image, unmodified.
     #
@@ -138,7 +161,7 @@ services:
       # Image-mandated config paths, out of git, read-only. Not state.
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       # Owned by apps/ties, mounted rather than copied, so a redirect edit is a reload.
-      - ../../ties/deploy/hyperties.Caddyfile:/etc/caddy/hyperties.Caddyfile:ro
+      - ../../ties/deploy/hyperties-node.Caddyfile:/etc/caddy/hyperties-node.Caddyfile:ro
       # SHARED, read-only: the WHOLE releases tree, not one app's corner of it. This is what
       # makes adding a site a Caddyfile block and nothing else -- a new app's releases appear
       # here the moment its first deploy lands, with no edit to this file and no restart.
@@ -158,6 +181,8 @@ services:
       # being served -- Caddy returns 502 for a dead upstream on its own, which is the
       # correct degradation.
       viewer:
+        condition: service_started
+      hyperties:
         condition: service_started
     networks:
       - internal

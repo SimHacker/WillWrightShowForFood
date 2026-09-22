@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"
-     preserveAspectRatio="none" data-class="PopupTarget" data-name="founder.curly">
+     preserveAspectRatio="none" data-class="PopupTarget" data-name="founder.curly"
+     data-pop-x="-.05" data-pop-y=".1" data-pop-scale="2">
   <path d="M 0.83500 0.00760 0.80240 0.02500 0.77740 0.05760 0.76740 0.10000 0.77500 0.13760 0.76740 0.16500 0.77240 0.17760 0.78000 0.19500 0.78500 0.23760 0.79000 0.27500 0.80240 0.30500 0.82000 0.33260 0.84240 0.34260 0.88000 0.32260 0.90240 0.30260 0.92740 0.27000 0.94740 0.26260 0.95500 0.24760 0.95500 0.20260 0.95000 0.17760 0.95000 0.12760 0.95000 0.06760 0.93240 0.03000 0.91500 0.01000 0.88500 0.00500 Z" vector-effect="non-scaling-stroke"/>
 </svg>

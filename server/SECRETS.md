@@ -9,6 +9,7 @@ want it, and delivered to exactly the containers that need it.
     superuser.env                       POSTGRES_USER POSTGRES_PASSWORD POSTGRES_DB   -> db
     roles/
       ebike-safari.env                  PGHOST PGPORT PGDATABASE PGUSER PGPASSWORD    -> viewer
+      hyperties.env                     PGHOST PGPORT PGDATABASE PGUSER PGPASSWORD    -> hyperties
       <app>.env                         one per app that talks to postgres
   mapbox/
     token.env                           MAPBOX_TOKEN                                  -> viewer
@@ -23,6 +24,7 @@ The right-hand column is exhaustive. Each service lists the files it needs in `e
 |---|---|---|
 | `db` | `postgres/superuser.env` | the Mapbox token, any app role password, the ACME email |
 | `viewer` | `postgres/roles/ebike-safari.env`, `mapbox/token.env` | **the postgres superuser password** |
+| `hyperties` | `postgres/roles/hyperties.env` | the superuser password, the Mapbox token |
 | `caddy` | `acme/email.env` | every credential in the system |
 
 ## A postgres account per container

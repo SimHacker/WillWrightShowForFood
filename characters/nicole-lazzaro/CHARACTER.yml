@@ -1,0 +1,77 @@
+# Nicole Lazzaro — invitation portrayal. NOT Nicole Lazzaro.
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: nicole-lazzaro
+  name: "Nicole Lazzaro"
+  type: invitation
+  signifier: "🎭"          # emotion in play
+  status: living
+  field: "Player emotion research; the 4 Keys to Fun; XEODesign; facial-expression studies of players"
+  home: characters/nicole-lazzaro/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: not_sent
+  consent: not_yet_asked
+  channel: unknown
+  show_seed: null
+  the_ask: "The webtop — and specifically her own serial-port problem, which is the thing it exists to attack."
+
+bio:
+  summary: >
+    Game designer and player-experience researcher; founder of **XEODesign**. Best known for the
+    **4 Keys to Fun** framework, which came out of observational research on what players actually
+    feel — and for early work using facial-expression analysis on players rather than asking them
+    afterward what they enjoyed.
+  unverified:
+    - "Current affiliation and title as of 2026."
+    - "Exact titles and dates of her papers and talks — confirm from her own site before citing."
+    - "The four key names as she words them today; the framework has been restated over the years."
+  note: |
+    Deliberately thin. She is a well-documented figure and it would be easy to pad this from memory,
+    which is how errors get into a repo that quotes people. Fill it from her own materials.
+
+baychi_2021:
+  event: "Ted Nelson, HCI Constructs Then and Now, 10 Aug 2021, hosted by Ted Selker"
+  source: sources/2021-08-10-baychi-serial-port-and-mind-maps.md
+  what_she_did: |
+    Asked two questions. The first produced the single best statement of the problem this repo is
+    built around; the second got Ted on the record about mind mapping, which he had never been
+    cleanly quoted on.
+  her_line: |
+    "One of my challenges is often I'll have three ideas in my head at the same time, and then I have
+    a serial port -- like which is a mouse, or hands which is typing -- and I can't get all three
+    ideas out."
+
+why_her:
+  the_serial_port: |
+    That is the webtop's problem statement, delivered by a stranger in one sentence, better than any
+    of our own phrasings. Parallel thought, serial output channel. Ted's whole complaint about
+    single-column text is the same complaint from the document side; hers is from the body side.
+  she_got_the_mind_map_answer: |
+    Her follow-up about thebrain.com is what made Ted state his three criteria for a document --
+    sendable, expresses a point of view, made by a person -- and then say "mind maps don't seem to
+    fill a bill." That exchange is load-bearing in moollm designs/PAIRED-LINKS.md. She earned it by
+    asking a question nobody else thought to ask a hypertext pioneer.
+  emotion_is_the_missing_axis: |
+    The webtop has a vocabulary for structure (paths, masks, tours, rooms) and no vocabulary for how
+    any of it FEELS. Her whole career is the missing axis: not whether a reading surface is
+    expressive, but whether it is any fun, and which kind of fun. Curiosity-driven exploration is
+    exactly what room-strolling is betting on, and she has done the observational work on it.
+  she_and_ted_had_a_real_exchange: |
+    She proposed that thebrain.com is "a collection of fairly short memes, fairly short ideas," where
+    his vision is constructs of ideas put together; Ted said "well, writing is constructs of ideas
+    put together -- that's exactly," and then "I love that distinction." She got him to agree to a
+    refinement of his own position on the spot, which almost nobody does.
+
+see_also:
+  - { path: ../ted-nelson/, why: "The talk; she got two of its best answers" }
+  - { path: ../brandel-zachernuk/, why: "Same Q&A; the other half of the webtop ask" }
+  - { path: ../ted-selker/, why: "Hosted the talk" }
+  - { path: ../amy-jo-kim/, why: "Social game design and player motivation — adjacent expertise, possible pairing" }
+  - { path: ../will-wright/, why: "Possibility space and player-driven story; the obvious third chair" }

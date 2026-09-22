@@ -1,0 +1,12 @@
+# 👁️ packages/turing — Cherniak-class TM, YAML Jazz machines, many UIs
+what: |
+  Library + thin CLI + web UI for single-tape Turing machines.
+  Reimagination of Christopher Cherniak's TM* (PCOMP, Philosophy and Computers).
+  Ships Minsky 7×4 (standard UTM) and Wolfram 2×3 (weak UTM), plus student machines.
+why: comments on the floor plan are the programming language
+split:
+  turing/: "the library — no UI"
+  machines/: "floor plans (never change during a run)"
+  tapes/: "pictured cells + head + regions + provenance"
+  web/: "one UI; others should import the library, not this page"
+k_line: LOAD MACHINE · LOAD TAPE · STEP

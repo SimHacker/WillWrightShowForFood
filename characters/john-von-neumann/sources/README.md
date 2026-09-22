@@ -7,6 +7,7 @@ Hard-to-find texts, transcriptions, and Don's HN corpus, formatted for humans.
   (deterministic mathematical, physical mechanical, probabilistic quantum mechanical), with
   Don's transcription of p. 99 of *Theory of Self-Reproducing Automata* and the full HN link
   inventory.
+- [jvn-29/](jvn-29/README.md) -- the 29-state room: implementations, crossings, ensemble
 - [29-state-implementation-and-buckley.md](29-state-implementation-and-buckley.md) --
   The nuts and bolts: how the 29 state rule and the universal constructor actually work.
   Construction arm huffman codes, the full cell state table from Don's CAM6 implementation,

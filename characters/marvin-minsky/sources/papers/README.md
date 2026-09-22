@@ -14,7 +14,7 @@ uncorrected OCR alongside for search; the PDF stays the text of record.
 
 | File | Memo | Year | Sidecar | What |
 |------|------|------|---------|------|
-| [`steps-toward-artificial-intelligence-1961.pdf`](steps-toward-artificial-intelligence-1961.pdf) | — | 1961 | | Proc. IRE survey: search, pattern-recognition, learning, planning, induction. The field's starting map. |
+| AIM-33 (not cached) | AIM-33 | 1961/62 | | 4-symbol 7-state UTM + *p*=2 tag systems. The 1981 TECO mail *is* this machine: [`../teco-utm/`](../teco-utm/README.md) |
 | [`AIM-077-matter-mind-and-models-1965.pdf`](AIM-077-matter-mind-and-models-1965.pdf) | AIM-77 | 1965 | [full text](AIM-077-matter-mind-and-models-1965.md) · [OCR](AIM-077-matter-mind-and-models-1965-ocr.txt) | Self-knowledge and the illusion of free will; why introspection confuses mind/brain questions. |
 | [`AIM-306-a-framework-for-representing-knowledge-1974.pdf`](AIM-306-a-framework-for-representing-knowledge-1974.pdf) | AIM-306 | 1974 | | Frames: stereotyped situations, slots, defaults displaced by evidence, frame-systems as viewpoint transformations. |
 | [`AIM-430-plain-talk-about-neurodevelopmental-epistemology-1977.pdf`](AIM-430-plain-talk-about-neurodevelopmental-epistemology-1977.pdf) | AIM-430 | 1977 | | The Society of Mind precursor the K-lines memo cites as [1]; C-lines correspond to K→P connections. |

@@ -111,7 +111,17 @@ function buildDatabases() {
 		const cls = /data-class="([^"]+)"/.exec(svg)?.[1] ?? 'Target';
 		const name = /data-name="([^"]+)"/.exec(svg)?.[1] ?? p.name;
 		const d = /\sd="([^"]+)"/.exec(svg)?.[1] ?? '';
-		ensure(p.db).targets.set(fold(name), { d, class: cls, slug: p.name });
+		const popX = /data-pop-x="([^"]+)"/.exec(svg);
+		const popY = /data-pop-y="([^"]+)"/.exec(svg);
+		const popS = /data-pop-scale="([^"]+)"/.exec(svg);
+		const popup = popS
+			? {
+					dx: Number(popX?.[1] ?? 0),
+					dy: Number(popY?.[1] ?? 0),
+					scale: Number(popS[1])
+				}
+			: null;
+		ensure(p.db).targets.set(fold(name), { d, class: cls, slug: p.name, popup });
 	}
 
 	for (const [path, url] of Object.entries(images)) {
@@ -132,7 +142,12 @@ function buildDatabases() {
 		const pics = idx.namespaces?.pictures?.index ?? {};
 		for (const [name, entry] of Object.entries(pics)) {
 			const file = entry.image?.replace(/^images\//, '');
-			db.pictures.set(fold(name), { image: file ? db.images?.get(file) : null, name });
+			db.pictures.set(fold(name), {
+				image: file ? db.images?.get(file) : null,
+				name,
+				width: entry.width ?? null,
+				height: entry.height ?? null
+			});
 		}
 	}
 
@@ -164,29 +179,59 @@ export function getArticle(dbId, slug) {
 	return databases.get(dbId)?.articles.get(slug) ?? null;
 }
 
+/** A file in this database's images/ folder, or null. */
+export function imageFile(dbId, filename) {
+	return databases.get(dbId)?.images?.get(filename) ?? null;
+}
+
 /**
  * Resolve a ~name~ across the three namespaces, documents first.
  * Returns { space, ... } or null. Never throws: an unresolved name is a fact
  * about the corpus, and the reader renders it as plain text.
  */
+export function findDatabase(name) {
+	if (databases.has(name)) return name;
+	const key = fold(name);
+	for (const id of databases.keys()) {
+		if (fold(id) === key) return id;
+	}
+	return null;
+}
+
+function documentHit(dbId, slug, alias = false) {
+	const article = getArticle(dbId, slug);
+	if (!article) return null;
+	return {
+		space: 'documents',
+		db: dbId,
+		slug,
+		alias,
+		title: article.title,
+		definition: article.definition ?? ''
+	};
+}
+
 export function resolve(dbId, name) {
+	const raw = String(name);
+	const slash = raw.indexOf('/');
+	if (slash > 0) {
+		const other = findDatabase(raw.slice(0, slash));
+		if (other) return resolve(other, raw.slice(slash + 1));
+	}
+
 	const db = databases.get(dbId);
 	if (!db) return null;
 	const key = fold(name);
 	const doc = db.documents.get(key);
-	if (doc) {
-		const article = db.articles.get(doc.slug);
-		return {
-			space: 'documents',
-			db: dbId,
-			slug: doc.slug,
-			alias: doc.alias,
-			title: article?.title ?? doc.slug,
-			definition: article?.definition ?? ''
-		};
-	}
+	if (doc) return documentHit(dbId, doc.slug, doc.alias);
 	if (db.pictures.has(key)) return { space: 'pictures', ...db.pictures.get(key) };
 	if (db.targets.has(key)) return { space: 'targets', ...db.targets.get(key) };
+
+	const asDb = findDatabase(name);
+	if (asDb && asDb !== dbId) {
+		const slug = homeOf(asDb);
+		return slug ? documentHit(asDb, slug, true) : null;
+	}
 	return null;
 }
 

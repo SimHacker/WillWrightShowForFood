@@ -35,10 +35,12 @@ case "${1:-}" in
 esac
 
 cd "$COMPOSE_DIR"
-set -a
-# shellcheck disable=SC1091
-[[ -f .env ]] && source .env
-set +a
+
+# Caddy's only secret is the ACME address, and compose reads it per-service from
+# /data/secrets/acme/email.env. Nothing is sourced here: there is no combined .env any more, and
+# the `[[ -f .env ]] && source .env` that used to live here was a latent kill switch -- under
+# `set -e` a trailing false test ends the script, so the moment that file went away this script
+# would have exited 0 having reloaded nothing.
 
 # Validate in a THROWAWAY container built from the compose service, not in the running one.
 # Three reasons, all of which bit: the config lives at container paths, so validating on the
@@ -51,7 +53,9 @@ set +a
 echo "Validating $CONFIG…"
 docker compose run --rm --no-deps caddy caddy validate --config "$CONFIG"
 echo "Config is valid."
-[[ "$MODE" == validate ]] && exit 0
+if [[ "$MODE" == validate ]]; then
+	exit 0
+fi
 
 if [[ "$MODE" == recreate ]]; then
 	echo "Recreating caddy — every site on this VM will see a brief TLS interruption."

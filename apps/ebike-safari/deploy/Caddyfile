@@ -27,4 +27,4 @@ www.{$DOMAIN} {
 # Name-based virtual hosting, so one Caddy and one IP carry both sites and each name gets
 # its own certificate. The imported file is owned by apps/ties and mounted into /etc/caddy
 # by compose -- add a site here by importing it, not by editing this block.
-import hyperties.Caddyfile
+import hyperties-node.Caddyfile

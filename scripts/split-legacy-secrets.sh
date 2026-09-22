@@ -36,8 +36,7 @@ if [[ "${1:-}" == "--finish" ]]; then
 	# a second source of truth that silently wins for anything using interpolation.
 	#
 	# `if` rather than `[[ ... ]] && cmd`, because under `set -e` a trailing false test is itself a
-	# nonzero command and exits the script -- silently, which is how the first run of this script
-	# did nothing at all and reported nothing.
+	# nonzero command and exits the script -- silently.
 	if [[ -L "$LEGACY_LINK" ]]; then
 		rm -v "$LEGACY_LINK"
 	fi
@@ -61,7 +60,11 @@ for f in "${NEW[@]}"; do
 	fi
 done
 
-val() { grep -E "^$1=" "$LEGACY" | head -1 | cut -d= -f2-; }
+# `|| true` is load-bearing. Without it, a key that is absent from the legacy file makes grep exit 1,
+# pipefail turns the whole pipeline into a failure, the command substitution fails, and `set -e`
+# ends the script with no output at all -- which is exactly what happened on the first run here,
+# because the legacy .env never had a MAPBOX_TOKEN in it.
+val() { grep -E "^$1=" "$LEGACY" | head -1 | cut -d= -f2- || true; }
 
 PG_USER="$(val POSTGRES_USER)"
 PG_PASS="$(val POSTGRES_PASSWORD)"
@@ -76,6 +79,13 @@ ACME="$(val ACME_EMAIL)"
 	echo "$LEGACY is missing ACME_EMAIL -- Caddy needs it" >&2
 	exit 1
 }
+# Optional, and worth saying out loud rather than writing an empty file in silence: the viewer
+# treats an absent token as a degraded map, not an error, so this can go missing for weeks without
+# anything failing loudly enough to notice.
+if [[ -z "$MAPBOX" ]]; then
+	echo "NOTE: the legacy file has no MAPBOX_TOKEN, so the map has been degraded all along."
+	echo "      Writing an empty mapbox/token.env; fill it from 1Password (op://Personal/Mapbox/token)."
+fi
 
 install -d -m 700 "$S" "$S/postgres/roles" "$S/mapbox" "$S/acme"
 umask 077

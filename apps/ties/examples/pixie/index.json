@@ -1,0 +1,11 @@
+{
+  "database": "pixie",
+  "handmade": true,
+  "status": "placeholder",
+  "source": "characters/heinz-lemke",
+  "namespaces": {
+    "pictures": {
+      "index": {}
+    }
+  }
+}

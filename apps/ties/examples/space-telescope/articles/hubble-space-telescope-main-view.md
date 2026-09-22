@@ -15,11 +15,11 @@ shapes:
   - shape: Main view -  shape FOS
     to: Faint Object Spectrograph - Exploded view
   - shape: Main view -  shape FOC
-    to: Faint Object Camera - exploded view
+    to: Faint Object Camera
   - shape: Main view -  shape HRS
-    to: High Resolution Spectrograph - exploded view
+    to: High Resolution Spectrograph
   - shape: Main view -  shape HSP
-    to: High Speed Photometer - exploded view
+    to: High Speed Photometer
   - shape: Main view -  shape WFPC
     to: Wide Field/Planetary Camera - exploded view
   - shape: Main view -  shape OTA
@@ -27,7 +27,7 @@ shapes:
   - shape: Main view -  shape FGS
     to: Fine Guidance Sensors
   - shape: Main view -  shape HSP
-    to: High Speed Photometer - exploded view
+    to: High Speed Photometer
   - shape: Main view -  word Faint Object Spectrograph
     to: Faint Object Spectrograph
   - shape: Main view -  word High Resolution Spectrograph

@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"
-     preserveAspectRatio="none" data-class="PopupTarget" data-name="Main view -  shape HRS">
+     preserveAspectRatio="none" data-class="PopupTarget" data-pop-x="0.01" data-pop-y="-0.015" data-pop-scale="1" data-name="Main view -  shape HRS">
   <path d="M 0.22000 0.74580 0.22000 0.69660 0.22900 0.69000 0.23220 0.68800 0.26600 0.70500 0.27000 0.70500 0.37600 0.62180 0.38110 0.62400 0.38300 0.66670 0.37230 0.67100 0.25700 0.76290 0.23400 0.75200 Z" vector-effect="non-scaling-stroke"/>
 </svg>

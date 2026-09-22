@@ -88,9 +88,19 @@ publish_release "$APP" "$ID" >/dev/null
 activate_release "$APP" "$ID"
 prune_releases "$APP"
 
+COMPOSE="$REPO/apps/ebike-safari/deploy/docker-compose.yml"
+if docker image inspect "wwsff/hyperties:$ID" >/dev/null 2>&1; then
+	echo "Recreating hyperties container (image $ID)…"
+	mkdir -p "${DATA_ROOT:-/data}/hyperties/cache"
+	HYPERTIES_RELEASE="$ID" docker compose -f "$COMPOSE" up -d --no-deps --force-recreate hyperties
+else
+	echo "No image wwsff/hyperties:$ID — files only. Caddy still serves current."
+fi
+
 echo
 echo "hyperties $ID is live."
-echo "Caddy follows the symlink per request, so nothing was restarted."
+echo "Articles are the symlink. /proxy /view /api are the container, if the image exists."
 echo "Verify:"
 echo "  curl -sI https://hyperties.org | head -1"
+echo "  curl -sI https://hyperties.org/proxy/gwern/xanadu.md | head -1"
 echo "  cat $(app_root "$APP")/current/RELEASE.txt"

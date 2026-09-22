@@ -1,6 +1,8 @@
 /**
  * Markdown -> segments. Prose becomes HTML; each ```target block becomes a segment the
  * reader renders as a live applet, because {@html} cannot host a Svelte component.
+ * ```transclude names another article; the reader expands it to that article's live
+ * segments. The story about a demo cites the demo. It does not copy its fences.
  *
  * ~name~ is handled by a markdown-it INLINE RULE rather than a regex over the output,
  * so a tilde inside a code span stays a tilde. The article documenting link syntax
@@ -8,6 +10,8 @@
  */
 import MarkdownIt from 'markdown-it';
 import { load as parseYaml } from 'js-yaml';
+import { resolve } from './corpus.js';
+import { articleHref } from './href.js';
 
 /** `~name~` -> link token. Leaves `~~strikethrough~~` alone. */
 function tiesLinks(md) {
@@ -21,12 +25,14 @@ function tiesLinks(md) {
 		if (!name.trim() || name.includes('\n')) return false;
 
 		if (!silent) {
+			const raw = name.trim();
+			const slash = raw.indexOf('/');
 			const open = state.push('link_open', 'a', 1);
 			open.attrSet('href', '#');
 			open.attrSet('class', 'ties-link');
-			open.attrSet('data-ties-name', name.trim());
+			open.attrSet('data-ties-name', raw);
 			const text = state.push('text', '', 0);
-			text.content = name.trim();
+			text.content = slash > 0 ? raw.slice(slash + 1) : raw;
 			state.push('link_close', 'a', -1);
 		}
 		state.pos = end + 1;
@@ -36,7 +42,9 @@ function tiesLinks(md) {
 
 const md = new MarkdownIt({ html: false, linkify: false, typographer: false }).use(tiesLinks);
 
-const TARGET_BLOCK = /^```target\r?\n([\s\S]*?)\r?\n?```$/m;
+// GitHub highlights the first word. `yaml target` is YAML to GH and a target to us.
+// Bare `target` / `transclude` still parse — the converter still emits those.
+const FENCE_BLOCK = /^```(?:yaml[ \t]+)?(target|transclude)\b[^\n]*\r?\n([\s\S]*?)\r?\n?```$/m;
 
 /** Must stay in step with PAGE_BREAK in scripts/st0_to_md.py. */
 const PAGE_BREAK = /^<!-- page -->[ \t]*\r?\n?/m;
@@ -64,31 +72,42 @@ export function splitRows(body) {
 }
 
 /**
- * @returns {Array<{kind:'html', html:string} | {kind:'target', spec:object}>}
+ * @returns {Array<{kind:'html', html:string} | {kind:'target'|'transclude', spec:object}>}
  */
-export function parseArticle(body) {
+function stampTiesHrefs(html, dbId) {
+	if (!dbId) return html;
+	return html.replace(
+		/<a href="#" class="ties-link" data-ties-name="([^"]+)">/g,
+		(all, name) => {
+			const found = resolve(dbId, name);
+			if (!found?.slug) return all;
+			return `<a href="${articleHref(found.db, found.slug)}" class="ties-link" data-ties-name="${name}">`;
+		}
+	);
+}
+
+export function parseArticle(body, dbId) {
 	const segments = [];
 	let rest = body ?? '';
 
 	while (rest.length) {
-		const m = TARGET_BLOCK.exec(rest);
+		const m = FENCE_BLOCK.exec(rest);
 		if (!m) break;
 		const before = rest.slice(0, m.index);
-		if (before.trim()) segments.push({ kind: 'html', html: md.render(before) });
+		if (before.trim()) segments.push({ kind: 'html', html: stampTiesHrefs(md.render(before), dbId) });
 		let spec = {};
 		try {
-			spec = parseYaml(m[1]) ?? {};
+			spec = parseYaml(m[2]) ?? {};
 		} catch {
-			// A malformed block is shown as what it is, not swallowed.
-			spec = { error: m[1] };
+			spec = { error: m[2] };
 		}
-		segments.push({ kind: 'target', spec });
+		segments.push({ kind: m[1], spec });
 		rest = rest.slice(m.index + m[0].length);
 	}
-	if (rest.trim()) segments.push({ kind: 'html', html: md.render(rest) });
+	if (rest.trim()) segments.push({ kind: 'html', html: stampTiesHrefs(md.render(rest), dbId) });
 	return segments;
 }
 
-export function renderInline(text) {
-	return md.renderInline(text ?? '');
+export function renderInline(text, dbId) {
+	return stampTiesHrefs(md.renderInline(text ?? ''), dbId);
 }

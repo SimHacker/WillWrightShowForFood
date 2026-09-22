@@ -1,0 +1,35 @@
+# Copy 1^n  to  1^n 0 1^n.
+# Each source 1 is marked X, a 1 is written after the separator, then X is restored.
+# The first blank to the right of the source is the separator; we never write over it.
+
+id: cherniak-copy
+name: Copy a unary block
+credits:
+  - Christopher Cherniak — TM* / PCOMP, Philosophy and Computers, University of Maryland
+  - Reimagined here as a student machine, not a recovered file from the course disk
+blank: "0"
+symbols: ["0", "1", X]
+start: mark
+halt: [done]
+missing: error
+default_tape: copy-111
+universality: { kind: none }
+
+states:
+  mark:
+    "1": { write: X, move: R, next: seek-sep }
+    "0": { write: "0", move: N, next: done }    # no more source 1s
+    X: { write: X, move: R, next: mark }
+  seek-sep:
+    # Skip the rest of the source (1 or X) and stop after the separator 0.
+    "1": { write: "1", move: R, next: seek-sep }
+    X: { write: X, move: R, next: seek-sep }
+    "0": { write: "0", move: R, next: seek-end }
+  seek-end:
+    "1": { write: "1", move: R, next: seek-end }
+    "0": { write: "1", move: L, next: back }    # write the new copy 1
+  back:
+    "1": { write: "1", move: L, next: back }
+    "0": { write: "0", move: L, next: back }
+    X: { write: "1", move: R, next: mark }      # restore, sit on next source cell
+  done: {}

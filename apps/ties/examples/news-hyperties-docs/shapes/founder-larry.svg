@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"
-     preserveAspectRatio="none" data-class="PopupTarget" data-name="founder.larry">
+     preserveAspectRatio="none" data-class="PopupTarget" data-name="founder.larry"
+     data-pop-x="0" data-pop-y=".1" data-pop-scale="2">
   <path d="M 0.14500 0.04000 0.10500 0.05500 0.07500 0.08000 0.05000 0.11000 0.04000 0.15000 0.04000 0.17500 0.05000 0.21500 0.05500 0.24000 0.07000 0.27500 0.09500 0.31500 0.12500 0.33000 0.14500 0.34000 0.17000 0.31500 0.18500 0.30000 0.19500 0.26500 0.20500 0.24000 0.22000 0.20500 0.22500 0.13500 0.22500 0.09500 0.20000 0.06500 0.17000 0.04500 Z" vector-effect="non-scaling-stroke"/>
 </svg>
