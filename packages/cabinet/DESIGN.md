@@ -164,6 +164,7 @@ loader-side module, not a Device.
 |--------|----|----|------------|
 | tape | `.oct`, `.rim` → core | core → `.rim` | diff against Roy's converter output |
 | lister | core / `.oct` | 1972 Cambridge lineprinter column format | **diff clean against the 1972 listing itself** — second full-corpus check of transcription and decoder at once |
+| assembler | transcribed Cambridge-dialect source | core / `.oct` | **round-trip bit-identical against `symelec.oct`** — the lister's inverse. SYMELEC was assembled on Titan (`BY HL1470`, 12 Feb 72) in a dialect no surviving assembler speaks: `(literal` pools, `JMP , n` relative, and the `DISP` display-word mnemonics, which share the 340 codec built for rung 2. `as7` from pdp7-unix is the cross-platform precedent; the DEC assembler on the emulated iron is the period-authentic stunt. Once the round-trip is clean, PIXIE is editable — patch, reassemble, boot, and diff the segment log against the original to see exactly what changed. |
 | snapshot | segment stream | SVG (provenance as data attributes), PNG | eyeball vs 1969 film frames |
 | recorder | segment stream | timestamped segment log (JSONL); WebM via `captureStream` | deterministic replay |
 | phosphor | segment stream | canvas fade; WebGPU dual-phosphor later | the pretty-pass, never a blocker |

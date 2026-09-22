@@ -4,11 +4,12 @@ import { test } from "node:test";
 import type { Device, Iot, IotReply } from "./bus.js";
 import { Cabinet } from "./cabinet.js";
 import { loadOct } from "./loader.js";
+import { toSvg, toYaml } from "./media.js";
 import { Clock } from "./plugins/clock.js";
 import { LightPen } from "./plugins/lightpen.js";
 import { Pdp7, pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
-import { Type340 } from "./plugins/type340.js";
+import { MODE, ST340_HEDGE, ST340_LPHIT, Type340 } from "./plugins/type340.js";
 
 test("LAC / DAC / JMP", () => {
 	const cpu = new Pdp7({ coreWords: 256 });
@@ -33,27 +34,124 @@ test("unclaimed IOT is a no-op", () => {
 	assert.equal(cpu.pc, 1);
 });
 
-test("light pen hit-tests the segments just drawn", () => {
-	const crt = new Type340();
-	const pen = new LightPen({ display: crt, aperture: 4 });
-	crt.vector(0, 0, 100, 0);
-	pen.point(50, 1);
-	assert.equal(pen.flag, true);
-	pen.point(50, 20);
-	assert.equal(pen.flag, false);
+/** A 340 over a bare 4K memory, display file deposited at 0o100, started via IDLA. */
+function crt(words: number[], pens: LightPen[] = []): { t: Type340; mem: Uint32Array } {
+	const mem = new Uint32Array(4096);
+	words.forEach((w, i) => {
+		mem[0o100 + i] = w;
+	});
+	const t = new Type340({
+		fetch: (a) => mem[a] ?? 0,
+		store: (a, w) => {
+			mem[a] = w;
+		},
+		pens,
+	});
+	t.iot({ device: 0o06, pulse: 0o06, ac: 0o100 }); // IDLA
+	return { t, mem };
+}
+
+test("340 decode: the listing's own words drive the mode machine", () => {
+	// The LBD lightbutton file's opening block, listing page 1:
+	//   PAR SB SC1 IN7 · DJS SB ,2 · (embedded CPU JMP) · DDS CH 3 · "S"+ESC
+	const { t, mem } = crt([
+		0o160137, // PAR SB SC1 IN7 — param: next mode SUBR, scale 2, intensity 7
+		0o760104, // DJS SB ,2 — jump-and-save to 0o104, next mode SUBR
+		0o605751, // embedded JMP SD — pen-dispatch data, never display-executed
+		0o000000,
+		0o260003, // DDS CH 3 — deposit "DJP <return>" at loc 3, next mode CHAR
+		0o233700, // 'S' then ESC
+		0o003000, // param: stop + stop-interrupt
+	]);
+	t.tick(); // PAR
+	assert.equal(t.mode, MODE.SUBR);
+	assert.equal(t.scale, 2, "SC1 is a multiplier of 2");
+	assert.equal(t.intensity, 7, "IN7");
+	t.tick(); // DJS
+	assert.equal(t.dac, 0o104, "jumped over the embedded JMP");
+	assert.equal(t.asr, 0o102, "return address saved");
+	t.tick(); // DDS
+	assert.equal(mem[3], 0o400102, "DJP <return> deposited at 3 — the pen-dispatch linkage");
+	assert.equal(t.mode, MODE.CHAR);
+	t.tick(); // 'S' ESC
+	const charDots = t.segments.filter((s) => s.kind === "char");
+	assert.ok(charDots.length > 10, "the S was drawn");
+	assert.equal(charDots[0]?.subr, 0o102, "strokes grouped under their pen-dispatch identity");
+	assert.equal(t.mode, MODE.PARAM, "ESC escaped to param");
+	// DDS answered SIMH's `/* clear SAVE_FF? */`: fall through, don't return.
+	assert.equal(t.dac, 0o106, "sequential after ESC — DDS cleared the save flip-flop");
+	t.tick(); // stop word
+	assert.notEqual(t.status, 0, "stop code freezes the display");
+	assert.ok(t.irq(), "stop-interrupt raises the IRQ line");
+	assert.equal(t.iot({ device: 0o06, pulse: 0o01, ac: 0 }).skip, true, "IDSI skips");
 });
 
-test("cabinet wires CPU IOTs to a device without the CPU knowing the tube", () => {
-	const cpu = new Pdp7({ coreWords: 256 });
-	const crt = new Type340();
-	const pen = new LightPen({ display: crt });
-	crt.vector(10, 10, 10, 10);
-	pen.point(10, 10);
-	cpu.deposit(0, [pdp7.iotWord(0o11, 0)]);
-	const box = new Cabinet({ cpu, devices: [crt, pen] });
-	assert.equal(cpu.pc, 0);
-	box.step();
-	assert.equal(cpu.pc, 2, "pen flag skips");
+test("340 decode: VEC ES moves the beam and escapes; edge freezes; IDLA restarts", () => {
+	// VEC ES from PSD's row in the listing: 405410 = escape, no intensify, dy 13, dx 10.
+	const { t } = crt([0o100000 /* param -> VECTOR */, 0o405410]);
+	t.tick();
+	t.tick();
+	assert.equal(t.x, 0o10);
+	assert.equal(t.y, 0o13);
+	assert.equal(t.mode, MODE.PARAM, "ES escaped");
+	assert.equal(t.segments.at(-1)?.intensify, false, "beam move, not a stroke");
+
+	// Drive the beam off the left edge: x violation is HEDGE (SYMELEC's
+	// EDGEH adjusts XCROSS), and the freeze holds until IDLA restarts.
+	const { t: e } = crt([0o100000, 0o200201 /* intensify, sx=1, dx=1 from (0,0) */]);
+	e.tick();
+	e.tick();
+	assert.ok(e.status & ST340_HEDGE, "x violation raises HEDGE");
+	assert.equal(e.iot({ device: 0o10, pulse: 0o01, ac: 0 }).skip, true, "IDHE skips");
+	const dacBefore = e.dac;
+	e.tick();
+	assert.equal(e.dac, dacBefore, "frozen: no fetch while a flag is up");
+	e.iot({ device: 0o06, pulse: 0o06, ac: 0o100 }); // IDLA — the EDGEH handler's recovery
+	assert.equal(e.status, 0, "IDLA clears all flags");
+	assert.equal(e.dac, 0o100, "restarted at the top of the file");
+});
+
+test("340 pen: fresh-stroke hit freezes, IDSP skips, IDRC packs what TRCR unrotates", () => {
+	const pen = new LightPen({ aperture: 4, name: "mouse" });
+	pen.point(8, 0);
+	const { t } = crt(
+		[
+			0o114000, // param: next mode VECTOR, load lp enable = on
+			0o200020, // vector: intensify, dx=0o20 right
+		],
+		[pen],
+	);
+	t.tick();
+	t.tick();
+	assert.ok(t.status & ST340_LPHIT, "pen saw the blue flash");
+	assert.equal(t.lastHitPen?.name, "mouse", "provenance: who hit");
+	assert.equal(t.lastHit?.kind, "vector", "provenance: what was hit");
+	assert.equal(t.iot({ device: 0o07, pulse: 0o01, ac: 0 }).skip, true, "IDSP skips");
+
+	// IDRC packing vs TRCR's unrotation (listing 5467-5501):
+	//   AC = (x>>1)<<9 | (y>>1); TEMPY = (AC<<1)&1776; TEMPX = (AC>>8)&1776.
+	const ac = t.iot({ device: 0o07, pulse: 0o12, ac: 0o777777 }).ac;
+	assert.equal(ac, ((t.penX >> 1) << 9) | (t.penY >> 1));
+	assert.equal((ac << 1) & 0o1776, t.penY & 0o1776, "TEMPY recovers y");
+	assert.equal((ac >> 8) & 0o1776, t.penX & 0o1776, "TEMPX recovers x");
+
+	// IDRS resumes in place without restarting the file.
+	const dacAfterHit = t.dac;
+	t.iot({ device: 0o05, pulse: 0o04, ac: 0 });
+	assert.equal(t.status, 0);
+	assert.equal(t.dac, dacAfterHit, "resumed, not restarted");
+});
+
+test("340 pen: multiple pens share one flag — 1972 software cannot tell", () => {
+	const heinz = new LightPen({ aperture: 4, name: "sim-heinz" });
+	const mouse = new LightPen({ aperture: 4, name: "mouse" });
+	heinz.point(500, 500); // nowhere near the stroke
+	mouse.point(8, 0);
+	const { t } = crt([0o114000, 0o200020], [heinz, mouse]);
+	t.tick();
+	t.tick();
+	assert.ok(t.status & ST340_LPHIT);
+	assert.equal(t.lastHitPen?.name, "mouse", "the pen over the stroke fired, not the other");
 });
 
 function bench(words: number[], coreWords = 256): { cpu: Pdp7; box: Cabinet } {
@@ -280,4 +378,54 @@ test("acceptance: SYMELEC boots and issues IDLA", () => {
 	assert.equal(cpu.read(1), 0o605320, "JMP INT deposited at location 1 from the literal pool");
 	assert.equal(cpu.ion, true, "interrupts enabled after boot");
 	assert.equal(cpu.halted, false, "main loop is idling, not halted");
+});
+
+test("acceptance: the 340 executes SYMELEC's own boot display file", () => {
+	const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
+	const cpu = new Pdp7({ coreWords: 8192 });
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec.oct`, import.meta.url), "utf8"));
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec-literals.oct`, import.meta.url), "utf8"));
+
+	const t340 = new Type340({
+		fetch: (a) => cpu.read(a),
+		store: (a, w) => cpu.write(a, w),
+	});
+	const box = new Cabinet({
+		cpu,
+		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TitanStub()],
+	});
+	t340.clock = () => box.cycles;
+
+	cpu.pc = 0o22;
+	// Boot in chunks; stop once the display has drawn a picture's worth.
+	for (let i = 0; i < 30 && t340.segments.length < 3000; i += 1) {
+		box.run(100_000);
+		if (cpu.halted) break;
+	}
+
+	assert.ok(t340.enabled, "IDLA started the display");
+	assert.equal(cpu.halted, false);
+	const drawn = t340.lastFrame?.segments ?? t340.segments;
+	assert.ok(drawn.length > 100, `display file drew ${drawn.length} segments`);
+	assert.ok(
+		drawn.some((s) => s.kind === "char"),
+		"the lightbutton letters were drawn — Lars's glyphs at work",
+	);
+	assert.ok(
+		drawn.some((s) => s.kind === "vector" && s.intensify),
+		"intensified vectors present",
+	);
+	assert.equal(cpu.read(3) & 0o400000, 0o400000, "DDS deposited pen-dispatch linkage at 3");
+
+	// The media hooks eat the same stream.
+	const svg = toSvg(drawn);
+	assert.ok(svg.includes("<g data-subr="), "DJS subpictures became SVG groups");
+	assert.ok(svg.includes("data-addr="), "provenance rides as data attributes");
+	const yaml = toYaml({
+		index: 0,
+		cycleStart: 0,
+		cycleEnd: box.cycles,
+		segments: drawn.slice(0, 50),
+	});
+	assert.ok(yaml.includes("segments:"), "YAML capture emits");
 });
