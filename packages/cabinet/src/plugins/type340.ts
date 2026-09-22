@@ -82,8 +82,12 @@ export type Frame = {
  * readback, so 1972 software cannot tell and does not need to — the
  * tracking cross follows whoever holds it while a second pen pokes
  * lightbuttons. Which pen fired is provenance (`lastHitPen`), below the
- * ISA; a "read pen number" IOT on a free device code is the documented
- * backwards-compatible extension, unbuilt until some program issues it.
+ * ISA — and one instruction above it: IDPN (dev 011, a free code; pulse 1
+ * skip-if-latched, pulse 012 clear-and-read pen number, 1..8, 0 = none).
+ * A backwards-compatible extension — no 1972 program issues dev 011 — so
+ * hackers can reassemble PIXIE for multiple pens, a tribute to
+ * Engelbart's multiple cursors. The demanding program that unlocked it,
+ * per the corpus rule: Don's 22 Sep 2026 mail to Heinz, Roy, and Alan.
  */
 export type PenInput = {
 	enabled: boolean;
@@ -110,7 +114,7 @@ export type Type340Opts = {
 
 export class Type340 implements Device {
 	readonly name = "type340";
-	readonly iots = [0o05, 0o06, 0o07, 0o10];
+	readonly iots = [0o05, 0o06, 0o07, 0o10, 0o11];
 
 	/* 340 state — names follow SIMH's struct type340. */
 	dac = 0;
@@ -243,6 +247,14 @@ export class Type340 implements Device {
 			case 0o10: /* IDHE 701001 skip on h-edge */
 				if (req.pulse & 0o1) skip = (this.status & ST340_HEDGE) !== 0;
 				if (req.pulse & 0o2) ac |= this.asr;
+				break;
+			case 0o11: /* IDPN 701112 — cabinet extension: which pen fired? */
+				if (req.pulse & 0o1) skip = this.lastHitPen !== null;
+				if (req.pulse & 0o2) {
+					const n = this.lastHitPen ? this.pens.indexOf(this.lastHitPen) + 1 : 0;
+					if (req.pulse & 0o10) ac = n;
+					else ac |= n;
+				}
 				break;
 		}
 		return { ac, skip };

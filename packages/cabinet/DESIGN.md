@@ -39,6 +39,7 @@ a word is a JS number.
 | 06 | IDSI 700601 · IDLA 700606 | display: stop-code skip, load addr & go |
 | 07 | IDSP 700701 · IDRC 700712 | display: pen skip, read beam coords |
 | 10 | IDHE 701001 | display: h-edge skip |
+| 11 | IDPN 701101 skip · 701112 read | **cabinet extension, not 1972**: which pen fired (1–8, 0 = none). Free device code; no PIXIE binary issues it, so stock software is unaffected. Reassemble PIXIE to use it — multiple pens, Engelbart tribute: drag two corners of a rectangle, two radial menus at once, a quiver of eight wands. |
 | 22–23 | LSF 702201 · LCF 702222 · LRB18 702252 · LLB18!LLAM 702264 · LRB18!LLAM 702276 · LSA 702301 · LKD 702322 · LLB6 702344 · LKE!LLB6 702364 | Titan link |
 | 33 | CAF 703302 | clear all flags |
 

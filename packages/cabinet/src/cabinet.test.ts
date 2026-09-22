@@ -152,6 +152,11 @@ test("340 pen: multiple pens share one flag — 1972 software cannot tell", () =
 	t.tick();
 	assert.ok(t.status & ST340_LPHIT);
 	assert.equal(t.lastHitPen?.name, "mouse", "the pen over the stroke fired, not the other");
+
+	// IDPN 701112 — the cabinet extension: which pen? Numbered 1..8, 0 = none.
+	// New software can multiplex; 1972 software never issues dev 011.
+	assert.equal(t.iot({ device: 0o11, pulse: 0o01, ac: 0 }).skip, true, "IDPN skips: pen latched");
+	assert.equal(t.iot({ device: 0o11, pulse: 0o12, ac: 0o777777 }).ac, 2, "mouse is pen 2");
 });
 
 function bench(words: number[], coreWords = 256): { cpu: Pdp7; box: Cabinet } {
