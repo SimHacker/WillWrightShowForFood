@@ -113,4 +113,4 @@ bench carries the machine.
 | device + command language | [DESIGN.md](DESIGN.md#tiny-titan) |
 | tests | [`src/cabinet.test.ts`](src/cabinet.test.ts) — echo unit test and the `TITAN` acceptance test |
 
-↑ [README](README.md) · [DESIGN](DESIGN.md) · [TRACKING](TRACKING.md) · [PORTRAIT](PORTRAIT.md)
+↑ [README](README.md) · [DESIGN](DESIGN.md) · [TRACKING](TRACKING.md) · [PORTRAIT](PORTRAIT.md) · [OFF-BY-ONE](OFF-BY-ONE.md)

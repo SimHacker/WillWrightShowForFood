@@ -142,6 +142,8 @@ the wire, its own ring file streamed and recorded (the command
 language and the transport-agnostic `TitanPort` seam are in
 [DESIGN.md](DESIGN.md#tiny-titan)). Next rung: draw with the
 lightbuttons; serve a structure *back* over the link. SIMH stays on
-the desk as the oracle.
+the desk as the oracle. The boundary bugs met on the way up each rung
+— and the one where 1972 NAK'd 2026 — are the field notes in
+[OFF-BY-ONE.md](OFF-BY-ONE.md).
 
 ↑ [packages](../README.md)
