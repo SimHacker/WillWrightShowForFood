@@ -8,9 +8,13 @@ for PIXIE — Type 340 on a canvas, light pen as a hit-test.
 import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
 
 const cpu = new Pdp7({ coreWords: 8192 });
-const crt = new Type340();
-const pen = new LightPen({ display: crt });
-const box = new Cabinet({ cpu, devices: [crt, pen] });
+const pen = new LightPen({ aperture: 12, name: "pointer" });
+const crt = new Type340({
+	fetch: (a) => cpu.read(a),
+	store: (a, w) => cpu.write(a, w),
+	pens: [pen],
+});
+const box = new Cabinet({ cpu, devices: [crt] });
 box.step();
 ```
 
@@ -119,15 +123,20 @@ and talks to a socket. That is the whole backplane.
 
 ## What this is not yet
 
-The full PDP-7 card, 340 DMA, Type 342 characters, Type 347 display
-subroutines, Wiseman's link. The CPU carries OPR, LAW, XCT,
-auto-indexing, the SYMELEC EAE subset, and interrupts; the `.oct`
-loader, teletype, and clock are plugged in. **Rung 1 acceptance is
-met: SYMELEC boots, deposits `JMP INT` at 1, turns interrupts on, and
-issues `IDLA`.** The catch was the 1972 assembler's literal pool
-(12066–12257, listing pages 105–106), absent from the `.oct` —
-`scripts/extract-literals.mjs` derives `symelec-literals.oct` from the
-listing. Next rung: the 340 executes the display file `IDLA` points
-at. SIMH stays on the desk as the oracle.
+The full PDP-7 card, 340 DMA, Wiseman's link beyond the stub, the
+browser bench itself. What *is* met, each with an acceptance test:
+**Rung 1** — SYMELEC boots, deposits `JMP INT` at 1, turns interrupts
+on, issues `IDLA` (the catch was the 1972 assembler's literal pool,
+listing pages 105–106, absent from the `.oct`;
+`scripts/extract-literals.mjs` derives `symelec-literals.oct`).
+**Rung 2** — the 340 executes SYMELEC's own boot display file: mode
+machine, 347 subroutines, 342 characters from Lars's glyphs, segments
+with provenance, SVG/YAML export
+([snapshots/symelec-boot.svg](snapshots/symelec-boot.svg)).
+**Rung 3** — the 1972 tracking loop tracks a virtual pen: acquire,
+drag, and lose the cross, with `TRCR`/`POSCR` patching core
+([TRACKING.md](TRACKING.md)). Next rung: draw with the lightbuttons,
+then the link stub grows an echo. SIMH stays on the desk as the
+oracle.
 
 ↑ [packages](../README.md)

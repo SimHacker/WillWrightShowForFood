@@ -434,3 +434,77 @@ test("acceptance: the 340 executes SYMELEC's own boot display file", () => {
 	});
 	assert.ok(yaml.includes("segments:"), "YAML capture emits");
 });
+
+// TRACKING.md documents the machinery this exercises: the pen-enabled cross
+// at TRACK (0o5637) whose position words YCROSS/XCROSS (0o5640/0o5641) are
+// patched in core by TRCR -> POSCR on every hit, with the SRAST raster as
+// the local reacquisition net. No mode setup needed: the display file
+// deposits `JMP STRCR` as the cross's dispatch linkage before DJP TRACK,
+// so tracking is live from the boot picture onward.
+test("acceptance: SYMELEC's 1972 tracking loop follows the virtual pen", () => {
+	const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
+	const cpu = new Pdp7({ coreWords: 8192 });
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec.oct`, import.meta.url), "utf8"));
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec-literals.oct`, import.meta.url), "utf8"));
+
+	const pen = new LightPen({ aperture: 12, name: "pointer" });
+	const t340 = new Type340({
+		fetch: (a) => cpu.read(a),
+		store: (a, w) => cpu.write(a, w),
+		pens: [pen],
+	});
+	const box = new Cabinet({
+		cpu,
+		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TitanStub()],
+	});
+	t340.clock = () => box.cycles;
+
+	cpu.pc = 0o22;
+	for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
+		box.run(100_000);
+		if (cpu.halted) break;
+	}
+	assert.ok(t340.lastFrame, "boot picture is up");
+
+	const YCROSS = 0o5640;
+	const XCROSS = 0o5641;
+	const crossX = () => cpu.read(XCROSS) & 0o1777;
+	const crossY = () => cpu.read(YCROSS) & 0o1777;
+	assert.equal(crossX(), 0o400, "cross parked at its start position");
+	assert.equal(crossY(), 0o400);
+
+	// Park the pen on the cross: hits recenter it in place, not away.
+	let px = crossX();
+	let py = crossY();
+	pen.point(px, py);
+	box.run(300_000);
+	assert.ok(Math.abs(crossX() - px) <= 16, `acquired: x=${crossX()} pen=${px}`);
+	assert.ok(Math.abs(crossY() - py) <= 16, `acquired: y=${crossY()} pen=${py}`);
+
+	// Drag slowly — small steps, a frame or two of cycles each. TRCR reads
+	// IDRC, POSCR patches the display file, the cross follows.
+	for (let i = 0; i < 25; i += 1) {
+		px += 4;
+		py += 3;
+		pen.point(px, py);
+		box.run(100_000);
+	}
+	assert.ok(
+		Math.abs(crossX() - px) <= 24,
+		`cross followed the drag: x=${crossX()} pen=${px}`,
+	);
+	assert.ok(
+		Math.abs(crossY() - py) <= 24,
+		`cross followed the drag: y=${crossY()} pen=${py}`,
+	);
+	const followedX = crossX();
+	const followedY = crossY();
+
+	// The authentic failure mode: jump the pen far beyond the SRAST net.
+	// Nothing lit there, no hits, the cross stays behind.
+	pen.point(60, 900);
+	box.run(500_000);
+	assert.ok(Math.abs(crossX() - followedX) <= 8, "lost the pen: cross stayed");
+	assert.ok(Math.abs(crossY() - followedY) <= 8, "lost the pen: cross stayed");
+	assert.equal(cpu.halted, false);
+});

@@ -98,7 +98,11 @@ The hit stops the display; PIXIE's own `TRCR` moves the tracking cross —
 the cross follows the mouse because 1969 software tracks it. The radial
 lightbuttons (`LBD`, `PSD/PAD/PRD/PCD/PLD/PXD`) are PIXIE's display file:
 **we do not implement radial menus; we implement the pen honestly and the
-radial menus appear.**
+radial menus appear.** The full tracking machinery — cross, `TRCR`,
+`POSCR`, the `SRAST` reacquisition raster, the Promethean acquisition
+handoff — is walked through against the listing in
+[TRACKING.md](TRACKING.md), and proven live by the tracking acceptance
+test.
 
 Two pen modes as a dimensional control:
 - `honest` — PIXIE's incremental tracking; can lose the cross on fast
@@ -205,6 +209,9 @@ composing.
 2. 340 display processor → segments with provenance → canvas.
    **Accept:** tracking cross + radial lightbuttons match the 1969 film frame.
 3. Pen synthesis from pointer → `TRCR` runs → cross follows mouse.
+   **Accept: met at the emulator level** — the tracking acceptance test
+   acquires, drags, and loses the cross ([TRACKING.md](TRACKING.md));
+   the browser pointer wiring lands with the web bench.
 4. Draw with the S/L/F lightbuttons. Radial menu question answered live.
 5. Link stub → echo → filestore.
 6. Phosphor pretty-pass: canvas 2D fade first; WebGPU dual-phosphor
