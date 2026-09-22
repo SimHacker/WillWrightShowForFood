@@ -155,6 +155,29 @@ smaller and more legible too — a weight-vector timeline over named
 poses instead of a joint-angle soup, which is the same inspect-and-edit
 property the glyph work borrows from ECG one repo over.
 
+**Canned demos drive the pen tip, not the whole body.** A recording is
+a tip trajectory plus keystrokes — the emulator-facing stream and
+nothing else — and ECG interpolates the rest of the body from that one
+dragged constraint. So the demo format is rig-independent: the same
+recording plays through a stick figure or a finished Heinz, and
+upgrading the body never invalidates a demo, because the body was
+never in the file.
+
+**Breathing.** The solve is underdetermined — many blend weights put
+the tip in the same place — and that slack is where life goes. Keep a
+few alternative whole-body targets consistent with the current tip
+constraint (weight on the left foot or the right, leaning more or
+less) and blend among them with slow noise. The tip stays pinned to
+what the emulator needs; everything the constraint does not nail down
+drifts, shifts, settles. Idle is not an animation clip, it is noise in
+the null space of the task.
+
+Staging is unembarrassed about rungs: the **early demo uses canned
+whole-body animation** — a hand-authored clip that looks right and
+proves the scene, with the tip stream still the source of truth for
+the emulator. ECG replaces the clip when the pose vertices are
+authored; the recordings carry over untouched.
+
 Portrayal note, repo standard: the avatar is a portrayal of Heinz
 Lemke operating his own program, made with his participation — he sent
 the 128-page listing this whole machine exists to run. His character
