@@ -108,11 +108,14 @@ and talks to a socket. That is the whole backplane.
 ## What this is not yet
 
 The full PDP-7 card, 340 DMA, Type 342 characters, Type 347 display
-subroutines, Wiseman's link. The CPU now carries OPR, LAW, XCT,
+subroutines, Wiseman's link. The CPU carries OPR, LAW, XCT,
 auto-indexing, the SYMELEC EAE subset, and interrupts; the `.oct`
-loader, teletype, and clock are plugged in. The acceptance test —
-SYMELEC boots and issues `IDLA` — rides as a `todo` while the boot's
-free-list loop is chased through the listing. SIMH stays on the desk
-as the oracle.
+loader, teletype, and clock are plugged in. **Rung 1 acceptance is
+met: SYMELEC boots, deposits `JMP INT` at 1, turns interrupts on, and
+issues `IDLA`.** The catch was the 1972 assembler's literal pool
+(12066–12257, listing pages 105–106), absent from the `.oct` —
+`scripts/extract-literals.mjs` derives `symelec-literals.oct` from the
+listing. Next rung: the 340 executes the display file `IDLA` points
+at. SIMH stays on the desk as the oracle.
 
 ↑ [packages](../README.md)

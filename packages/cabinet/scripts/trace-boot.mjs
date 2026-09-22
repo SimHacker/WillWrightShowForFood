@@ -6,13 +6,10 @@ import { Clock } from "../dist/plugins/clock.js";
 import { Pdp7 } from "../dist/plugins/pdp7.js";
 import { Teletype } from "../dist/plugins/teletype.js";
 
-const oct = readFileSync(
-	new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec.oct", import.meta.url),
-	"utf8",
-);
-
+const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
 const cpu = new Pdp7({ coreWords: 8192 });
-loadOct(cpu, oct);
+loadOct(cpu, readFileSync(new URL(`${dir}symelec.oct`, import.meta.url), "utf8"));
+loadOct(cpu, readFileSync(new URL(`${dir}symelec-literals.oct`, import.meta.url), "utf8"));
 
 const titan = {
 	name: "titan",
