@@ -62,6 +62,20 @@ by complaint, as much of TECO as its corpus ever exercises. The
 [cabinet](../cabinet/) implements one listing's instructions and gets the
 PDP-7 that PIXIE needs.
 
+**Stretch goal, off every critical path: TinyTeco as a cabinet.** The
+[cabinet backplane](../cabinet/)'s CPU contract is just `step()`, words,
+and IOTs — it never asks what a CPU is made of. So a `Cpu` plugin whose
+`step()` is "one Turing machine transition, computed by TinyTeco running
+Minsky's UTM macro" is a legal citizen: the cabinet's instruction set is
+the TM's quintuples, the microcode is TECO, the micro-microcode is
+TypeScript. The bridge that makes it more than a curiosity is a tape
+convention — which cell ranges are core and which are the device window —
+so programs on the tape can issue IOTs and light the same console lamps
+the PDP-7 does. And because the UTM is itself a TM, its own description
+can go on the tape: the tower of an emulator emulating itself emulating
+something else, each level paying the exponential toll, runnable in a
+browser tab. Universality as a party trick you can actually invoke.
+
 ## What this subset does
 
 Insert, search, iterate, `;`, `"E…'`, point (`J`/`C`/`D`), type (`HT`/`=`),
