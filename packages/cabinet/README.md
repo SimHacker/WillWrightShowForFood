@@ -42,6 +42,19 @@ Runners-up we did not pick: *backplane* (the wiring, not the thing on
 the floor), *afterglow* (the tube, not the CPU), *understudy* (Repo Show
 cute, opaque on npm).
 
+## The iron has a face
+
+![PDP-7A serial 113, Paul G. Allen collection](reference/iron/pdp7a-allen-collection-christies.jpg)
+
+The two DECtape 555 reels are eyes; the console's bit rows are the
+mouth; the maintenance panel's lights are the brow. This one is
+[serial no. 113](https://onlineonly.christies.com/s/firsts-history-computing-paul-g-allen-collection/pdp-7a-minicomputer-117/230055) —
+five decades counting isotopes at the University of Oregon's nuclear
+accelerator lab before landing in the Allen collection. Provenance in
+[reference/iron/SOURCES.yml](reference/iron/SOURCES.yml). The web bench
+keeps the face: the bezel is a portrait of a machine that looks back,
+not a rack drawing.
+
 ## The corpus rule, and Minsky's receipt
 
 This cabinet implements only what its corpus executes — PIXIE's listing

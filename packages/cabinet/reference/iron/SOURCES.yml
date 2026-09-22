@@ -1,0 +1,22 @@
+# Provenance for the iron. Reference images only — the cabinet emulates
+# the instruction set; these are what the instruction set lived in.
+
+pdp7a-allen-collection-christies.jpg:
+  what: "PDP-7A, serial no. 113, DEC 1967 — full front elevation, doors open"
+  face: |
+    The cabinet has a face. Two DECtape 555 reels with six-spoke hubs are
+    the eyes; the operator console's bit rows are the mouth; the upper
+    maintenance panel's lights are the brow. The web bench keeps the face:
+    the bezel is a portrait, not a rack drawing.
+  source: "https://onlineonly.christies.com/s/firsts-history-computing-paul-g-allen-collection/pdp-7a-minicomputer-117/230055"
+  sale: "Christie's, Firsts: The History of Computing from the Paul G. Allen Collection"
+  provenance_chain:
+    - "University of Oregon Nuclear Physics Accelerator Lab"
+    - "Paul G. Allen, via governmental auction, 2007"
+    - "Christie's online sale, lot 117"
+  lot_notes: |
+    Sold with Teletype ASR 33, HP 1300A X-Y display, and a rack of nuclear
+    instrumentation added for isotope analysis — a PDP-7 that spent five
+    decades working. 5'9" high, 10' wide, 6'2" deep.
+  rights: "Christie's lot photograph; held here as documentation reference, not for redistribution as artwork"
+  observed: 2026-09-22
