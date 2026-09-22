@@ -30,6 +30,7 @@ the method for the next ask: [`open-ask.md`](open-ask.md).
 | [`simulate.py`](simulate.py) | Independent stepper of that table |
 | [`simulator.html`](simulator.html) | Browser tape + state-space "body" |
 | [`hn-2015-ask.md`](hn-2015-ask.md) | Don asked; Harold Ancell answered |
+| [`hn-2016-dang-wolfram.md`](hn-2016-dang-wolfram.md) | dang on Wolfram's Minsky farewell: the tic is off topic |
 | [`open-ask.md`](open-ask.md) | Next ask, to anyone |
 | [`tots-request.md`](tots-request.md) | Henry → Distinctive Collections: versions, DUMP dates, neighbors |
 | [`oral-history.yml`](oral-history.yml) | Henry Minsky, 2026-09-22 |

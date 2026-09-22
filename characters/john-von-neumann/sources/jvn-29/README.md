@@ -6,7 +6,12 @@ the constructor, the crossing organs, and the running copies.
 Signal crossing is vexatious in the original rule — you emulate it with
 organs. Modifications that make crossings cheap also make much smaller
 universal constructors. That is a productive change of rules, filed next
-to the UTM "changed the rules" note:
+to the UTM "changed the rules" note.
+
+Don on HN (2026-08, item 49404465) ties Shalizi's leopard-spots
+critique to Turing morphogenesis and to Burks p. 99 on probabilistic
+constructors. The leopard *faces* are Wolfram's own *Making of NKS*
+(2022), not gossip.
 [`../../../marvin-minsky/sources/teco-utm/oral-history.yml`](../../../marvin-minsky/sources/teco-utm/oral-history.yml).
 
 ## Already written (do not fork, point)
