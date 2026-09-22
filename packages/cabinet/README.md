@@ -42,6 +42,18 @@ Runners-up we did not pick: *backplane* (the wiring, not the thing on
 the floor), *afterglow* (the tube, not the CPU), *understudy* (Repo Show
 cute, opaque on npm).
 
+## The corpus rule, and Minsky's receipt
+
+This cabinet implements only what its corpus executes — PIXIE's listing
+decides which instructions exist, and an unknown IOT no-ops. The founding
+case of that method is one shelf over:
+[tiny-teco](../tiny-teco/README.md) runs Minsky's 1981 TECO Universal
+Turing Machine, where the corpus is a single program *chosen universal*,
+so the emulator was provably complete after its first entry. No such
+theorem covers a PDP-7 — SYMELEC can always demand one more instruction —
+but the bet is the same: the corpus, not the databook, is the
+specification. The databook is the oracle for what the corpus means.
+
 ## What we lift from SIMH, and thank
 
 Full inventory and mapping: [SIMH-MAP.md](SIMH-MAP.md).
@@ -80,9 +92,12 @@ and talks to a socket. That is the whole backplane.
 
 ## What this is not yet
 
-The full PDP-7 card, EAE, 340 DMA, Type 342 characters, Type 347
-display subroutines, Wiseman's link. The first tests are LAC / DAC /
-JMP / IOT-noop and a pen hit on a segment we drew by hand. SIMH stays
-on the desk as the oracle.
+The full PDP-7 card, 340 DMA, Type 342 characters, Type 347 display
+subroutines, Wiseman's link. The CPU now carries OPR, LAW, XCT,
+auto-indexing, the SYMELEC EAE subset, and interrupts; the `.oct`
+loader, teletype, and clock are plugged in. The acceptance test —
+SYMELEC boots and issues `IDLA` — rides as a `todo` while the boot's
+free-list loop is chased through the listing. SIMH stays on the desk
+as the oracle.
 
 ↑ [packages](../README.md)

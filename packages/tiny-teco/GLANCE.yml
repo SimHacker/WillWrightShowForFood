@@ -7,6 +7,11 @@ class: TinyTeco
 factory: createTinyTeco
 not: a complete TECO yet
 grows_by: one Command registered on the table
+thesis: |
+  Corpus-driven emulation, founding case: Minsky implemented one machine
+  and picked it universal, so the emulator was complete after entry one.
+  Universality buys behavior, not interface — I/O commands stay in the
+  emulator forever, which is why growth toward RMAIL/EMACS is real work.
 dialect: its-subset
 reference: reference/its/TECO.MID   # MIDAS, 23450 lines; do not translate
 runbook: FULL-ITS-TECO.md            # three paths; full JS port is years

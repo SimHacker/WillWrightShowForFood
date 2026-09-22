@@ -33,6 +33,35 @@ reference; the runbook is [`FULL-ITS-TECO.md`](FULL-ITS-TECO.md).
 `TECO.MID` (ITS `_TECO_; TECO 1213`) and TECORD 1132 live in
 [`reference/its/`](reference/its/SOURCES.yml).
 
+## The trick Marvin already played
+
+TinyTeco's method — implement only the commands one corpus uses, throw on
+everything else, let the complaint name the next command — is the same
+trick Minsky's program plays one level down, with a corpus of exactly
+**one** program. His TECO animates one state table. Because the table he
+chose is the 7-state 4-symbol universal machine from
+[AI Memo 33](../../characters/marvin-minsky/sources/papers/AIM-033-universality-tag-systems-utm-1962.md),
+every other Turing machine arrives as *data on the tape*, never as a
+feature request against the interpreter. Implement one machine; pick it
+universal; you have implemented them all. It is the only rung of this
+ladder where the method provably terminates — after the first entry.
+
+(The honest wrinkle: his simulator is table-driven, so it happens to run
+any TM description; the generality came free with the representation.
+Hard-wiring the seven states would have bought the same class.)
+
+The limit that keeps this package employed: **universality buys behavior,
+not interface.** Nothing on the UTM's tape can type at a terminal or read
+a keyboard, so the commands that touch the world stay in the emulator
+forever. That is why growing TinyTeco toward RMAIL and EMACS is real work
+rather than an exercise the 1981 mail already finished.
+
+Same bet at three scales: Minsky implemented one machine and got all
+machines. TinyTeco implements one program's commands and gets, complaint
+by complaint, as much of TECO as its corpus ever exercises. The
+[cabinet](../cabinet/) implements one listing's instructions and gets the
+PDP-7 that PIXIE needs.
+
 ## What this subset does
 
 Insert, search, iterate, `;`, `"E…'`, point (`J`/`C`/`D`), type (`HT`/`=`),
