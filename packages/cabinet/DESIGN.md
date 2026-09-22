@@ -181,6 +181,10 @@ Media files carry YAML-jazz sidecars (source, date, provenance), repo style.
 6. Phosphor pretty-pass: canvas 2D fade first; WebGPU dual-phosphor
    (fast blue flash for the pen, slow green for the human) is a stretch,
    never a blocker.
+7. The portrait ([PORTRAIT.md](PORTRAIT.md)): 3D cabinet with
+   duty-cycle lamps, the phosphor texture on curved glass, and
+   sim-Heinz — whose pen tip drives the LightPen plugin. Rides the
+   pretty-pass lane; consumes only existing seams.
 
 Discipline: **differential trace vs SIMH.** One line format (`addr ir ac link`)
 emitted by both benches over the same `.oct`; diff. Roy already steps the

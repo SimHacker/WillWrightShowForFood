@@ -53,7 +53,9 @@ five decades counting isotopes at the University of Oregon's nuclear
 accelerator lab before landing in the Allen collection. Provenance in
 [reference/iron/SOURCES.yml](reference/iron/SOURCES.yml). The web bench
 keeps the face: the bezel is a portrait of a machine that looks back,
-not a rack drawing.
+not a rack drawing. The full 3D build plan — live duty-cycle lamps,
+phosphor on curved glass, and sim-Heinz whose pen tip *is* the light
+pen input — is [PORTRAIT.md](PORTRAIT.md).
 
 ## The corpus rule, and Minsky's receipt
 
