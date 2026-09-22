@@ -83,7 +83,11 @@ listing (`PAR SB`=160000 · `VEC ES -34 14`=406234 · `DJP TEMPDF`=404441 ·
 `DDS SB 3`=360003), cross-checked against the mirrored H-340 manual.
 **Decode only the words SYMELEC contains**; unknown display word = log and
 skip (robust-first). No Type 342 character generator until a character word
-appears in the file.
+appears in the file — and when one does, the glyph shapes come from the
+`chars[]` table in SIMH's `display/type340.c`, where **Lars Brinkhoff
+recovered the letterforms from AI lab film footage** (annotated per glyph:
+`AI film 75`, `AI film 104`, Knight TV fills). The shapes question is
+already answered, on celluloid.
 
 ## The light pen
 

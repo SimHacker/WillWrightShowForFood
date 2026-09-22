@@ -80,6 +80,18 @@ glue (`PDP18B/pdp18b_dpy.c`). Philip Budne and Douglas Gwyn wrote the
 XY display core (`display/`) — pen-on-beam as a hit against the last
 intensified point. We steal those ideas on purpose.
 
+One act of recovery deserves its own paragraph. The Type 342 character
+generator's letterforms survive nowhere on paper — so **Lars Brinkhoff
+recovered the glyph shapes from MIT AI Lab film footage**, frame by
+frame, filling the gaps from the Knight TV font. The `chars[]` table in
+SIMH's `display/type340.c` is annotated per glyph: `Source: AI film
+75`, `Source: AI film 104`, `Source: Knight TV`. That table is the only
+existing answer to "what did a 342's lowercase `g` look like," and it
+was read off celluloid. When PIXIE draws text (it uses the 342), our
+character stroke tables descend from that archaeology — the same
+method this repo runs on OCR'd listings and 1969 films, done first and
+done heroically.
+
 We shed the rest: SDL / X11 / Win32 / Carbon backends, remote telnet
 console, one tree for fifty architectures, pthreads, `dlopen`, every
 DEC option PIXIE never had. Graphic-2 is the wrong tube. Unknown IOT
