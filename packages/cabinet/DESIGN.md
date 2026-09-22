@@ -124,7 +124,9 @@ Two pen modes as a dimensional control:
 
 Per [`TITAN-LINK-PROTOCOL.md`](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
 — the codec and plug-in surface are designed there; the module is
-[`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts). Two layers,
+[`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts), and
+[TINY-TITAN.md](TINY-TITAN.md) is its own page — what it does now,
+what it could do, and why the name is the punchline. Two layers,
 split so the far side is repackageable:
 
 - **`TinyTitan`** is the cabinet device, claiming devs 22–23. Its pulses

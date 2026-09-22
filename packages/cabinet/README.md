@@ -137,10 +137,10 @@ with provenance, SVG/YAML export
 drag, and lose the cross, with `TRCR`/`POSCR` patching core
 ([TRACKING.md](TRACKING.md)).
 **Rung 4** — type `TITAN` on the teletype and SYMELEC phones
-[tiny-titan](src/plugins/tiny-titan.ts): headers, checksum, `PXID`
-first word on the wire, its own ring file streamed and recorded
-(the command language and the transport-agnostic `TitanPort` seam are
-in [DESIGN.md](DESIGN.md#tiny-titan)). Next rung: draw with the
+[tiny-titan](TINY-TITAN.md): headers, checksum, `PXID` first word on
+the wire, its own ring file streamed and recorded (the command
+language and the transport-agnostic `TitanPort` seam are in
+[DESIGN.md](DESIGN.md#tiny-titan)). Next rung: draw with the
 lightbuttons; serve a structure *back* over the link. SIMH stays on
 the desk as the oracle.
 
