@@ -49,6 +49,24 @@ Six load-bearing ideas run through all fifty machines:
 | LOAD hook | tape module | `.oct` / `.rim`, diffable against Roy's converter. |
 | `pdp18b_g2tty.c` TCP attach | LinkPort precedent | The pattern (device attaches to a socket), not the code. |
 
+### Verified against the source, 22 Sep 2026
+
+Read in full before rung 2. **Lift:** the mode-machine bit fields, the
+status-word-as-stop-mechanism (`status == 0` means running, so
+stop/resume falls out free), edge clip semantics, scale-as-multiplier
+(1/2/4/8), the 347 jump encodings, and the 342 `chars[]` table — the
+display-word codec cross-check we wanted beside the H-340 manual.
+**Pen semantics co-signed:** `display_point` returns hit iff the mouse
+is within radius of the point being intensified *right now* — the blue
+flash, never the afterglow, same sentence as DESIGN. **Keep different:**
+SIMH draws pixels and pen-tests pixels; we emit segments with
+provenance and pen-test segments, because PIXIE needs to know *what*
+was hit and the portrait needs the segment log as its one stream.
+**The differential test for rung 2:** same display file through
+`ty340_instruction` and through our `Type340`, diff the points. **The
+open sockets in the glue** (empty `ty340_lp_int`, `dat |= 0; // X, Y`
+readback): our IDRC packing fills them; candidate upstream patch.
+
 ## Fresh — no SIMH equivalent, or the wrong shape there
 
 - **Light pen as a first-class input API.** SIMH smuggles the pen through

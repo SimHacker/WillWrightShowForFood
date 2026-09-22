@@ -173,6 +173,29 @@ phosphor, and the pen all consume it. Record and replay it and every display
 bug is reproducible; the film comparison becomes a diff, not a squint.
 Media files carry YAML-jazz sidecars (source, date, provenance), repo style.
 
+The SVG snapshot is vector-to-vector with no rasterization between: a 340
+display file is already closer to SVG than to pixels. Structure survives —
+**a 347 `DJS` subroutine call becomes an SVG `<g>` group**, so PIXIE's
+subpicture hierarchy is the export's hierarchy, and provenance rides as
+`data-` attributes: click a stroke in the browser inspector and read the
+display-file address that drew it in 1972. A dead vector format translated
+into the living one, structure intact.
+
+**Provenance is a timestamp too — the drawing maps back to machine state.**
+Each segment carries the display-file address that drew it *and* the
+backplane cycle it was drawn on, plus the 340's state at that instant
+(display PC, mode, scale, intensity, `lp_ena`). Because execution is
+deterministic from a snapshot plus the input log, a cycle stamp is a
+**seekable address into machine time**: click a stroke — in the live canvas,
+the SVG export, or the portrait's tube — and the debugger frame re-runs to
+that cycle and lands with the whole machine posed: CPU registers, the 340
+mid-file, the console lamps' duty cycles. The pen already needs
+freshly-intensified segments, so recency is in the record anyway; the
+debugger just reads the same field. Slow mode is this scrubbed
+continuously; single-step is this at grain one. Nothing new to build in the
+emulator — it is the segment log, the snapshot, and the frame manager
+composing.
+
 ## Order of work — each step falsifiable
 
 1. CPU completion + interrupts + `.oct` loader + console + clock.
