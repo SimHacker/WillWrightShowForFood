@@ -18,7 +18,8 @@ what's reusable here — don't leave genius on a dead branch.
 | Package | Status |
 |---------|--------|
 | [`wwsff-tooling/`](wwsff-tooling/README.md) | Dev utilities stub (verify, future sync) |
-| [`teco/`](teco/README.md) | Extensible TECO (`@wwsff/teco`) — ITS subset, Minsky 1981 mail |
+| [`tiny-teco/`](tiny-teco/README.md) | TinyTeco (`@wwsff/tiny-teco`) — ITS subset, Minsky 1981 mail |
+| [`cabinet/`](cabinet/README.md) | Cabinet (`@wwsff/cabinet`) — emulator backplane; PDP-7 first plugin |
 | [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs) |
 
 Future packages may wrap [MicropolisCore](https://github.com/SimHacker/MicropolisCore) deps

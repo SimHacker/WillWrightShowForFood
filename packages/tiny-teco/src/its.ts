@@ -1,9 +1,9 @@
 import { registerItsSubset } from "./commands.js";
-import { CommandTable, TecoEngine } from "./engine.js";
+import { CommandTable, TinyTeco } from "./engine.js";
 
 /** ITS-flavoured table: the Minsky mail subset, ready to grow. */
-export function createItsEngine(): TecoEngine {
+export function createTinyTeco(): TinyTeco {
 	const table = new CommandTable();
 	registerItsSubset(table);
-	return new TecoEngine(table);
+	return new TinyTeco(table);
 }

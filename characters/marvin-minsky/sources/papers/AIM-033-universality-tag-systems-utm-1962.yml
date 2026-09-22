@@ -1,0 +1,64 @@
+# AI Memo 33 — the 7×4 UTM the 1981 TECO mail compiles.
+# Scan has no text layer. This file is the catalog card. The reader's guide is the sibling .md.
+
+id: aim-033
+memo: AIM-33
+filename: AIM-033-universality-tag-systems-utm-1962.pdf
+title: Universality of (p=2) Tag Systems and a 4 Symbol 7 State Universal Turing Machine
+author: Marvin L. Minsky
+# CSAIL browse card has no date. 1971 AIM bibliography does not date it either.
+# ACM records the same title as 1962-12-01. AMS symposium that published the table is 1962.
+# Filename year is that publication year, not a printed memo date.
+dated_on_memo: false
+circa: 1961-1962
+pages:
+  typed: 16          # CS-TR control form: 16 original pages
+  scan_sheets: 2     # 1995 MIT Libraries control form + scanning-agent target
+  pdf: 18
+scan:
+  project: CS-TR Scanning Project
+  received: 1995-11-30
+  scanned: 1996-02-12
+  returned: 1996-08-14
+  distiller: 2001-06-20   # Acrobat Distiller 4.0 for Macintosh
+  md5: d7dbba9beb63c1d7a32c6aae36d071c8
+  bytes: 1875240
+  text_layer: false
+
+# Same machine, three spellings. Do not mix them in one table.
+symbols:
+  paper: [X, "0", "1", B]     # AIM-33 §2 and AMS 1962
+  teco:  [y, "0", "1", A]     # 1981-03-11 *BBOARD mail
+  states: [q1, q2, q3, q4, q5, q6, q7]
+  halt: q0                    # q3 reading blank 0 → 00L0
+regions: [rules, erased, sequence]   # §2 tape. Mail starts the head on the first X/y of sequence.
+
+parts:
+  - { id: s0, title: Introduction }
+  - { id: s1, title: Turing Machines and p = 2 Tag systems, with: [John Cocke, Dana Scott] }
+  - { id: s2, title: Coding for the 4 × 7 Universal Turing Machine }   # this is the TECO machine
+  - { id: s3, title: Two arithmetic instructions on two registers, ack: A. R. Tritter }
+  - { id: iv, title: A 2-symbol 25-state encoding of the 4×7 }
+
+# Not this memo. Same tag proof, later, no UTM table.
+not_this:
+  - id: aim-052
+    title: Universality of TAG Systems with P-2
+    authors: [John Cocke, Marvin Minsky]
+    date: 1963-04-01
+    dspace: https://dspace.mit.edu/handle/1721.1/6107
+    journal: JACM 11(1):15–20, 1964
+    doi: https://doi.org/10.1145/321203.321206
+
+local:
+  pdf: AIM-033-universality-tag-systems-utm-1962.pdf
+  guide: AIM-033-universality-tag-systems-utm-1962.md
+  teco_room: ../teco-utm/
+
+fetched:
+  date: 2026-09-22
+  from: https://bitsavers.org/pdf/mit/ai/aim/AIM-033.pdf
+  also:
+    - https://web.archive.org/web/20160304000000/http://publications.ai.mit.edu/ai-publications/pdf/AIM-033.pdf
+    - ftp://publications.ai.mit.edu/ai-publications/pdf/AIM-033.pdf   # historic CSAIL; dead
+  dspace: missing    # collection has AIM-52, not AIM-33

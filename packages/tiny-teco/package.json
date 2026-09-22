@@ -1,8 +1,8 @@
 {
-	"name": "@wwsff/teco",
+	"name": "@wwsff/tiny-teco",
 	"version": "0.1.0",
 	"private": true,
-	"description": "Extensible TECO engine. ITS subset first (Minsky 1981 UTM mail); the table is how it grows.",
+	"description": "TinyTeco — a TECO that can grow. ITS subset first (Minsky 1981 UTM mail).",
 	"type": "module",
 	"exports": {
 		".": "./dist/index.js"

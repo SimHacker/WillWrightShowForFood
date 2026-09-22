@@ -1,0 +1,52 @@
+# Historic ITS TECO, parked here as a reference. Not compiled. Not our code.
+# TECO.MID header: communal co-operation — send changes to MIT to merge.
+# Do not relicense this directory. Do not "port" by rewriting MIDAS in place.
+
+id: its-teco-reference
+fetched: 2026-09-22
+upstream: https://github.com/PDP-10/its
+commit: 0f7d67997f9f5d30208e117e73272031e74f16b9   # master that day; also in PDP-10-its.sha
+
+# On ITS the file is _TECO_; TECO 1213 — FN2 is the version.
+# Twenex named the same source TECO.MID. We keep both names (teco.1213 → TECO.MID).
+
+files:
+  TECO.MID:
+    its: _TECO_; TECO 1213
+    bytes: 692642
+    lines: 23450
+    assembler: MIDAS
+    last_edit_in_file: 1985-08-02   # GZ, TECO.MID.1210; 1213 is that lineage
+    title: TECO
+    note: >
+      RMS on earlier AI Lab work; MMCM ported to Twenex. This is the
+      EMACS-era source — ^R mode, FS flags, ITS and Twenex I/O. Larger
+      than the TECO that compiled Minsky's March 1981 mail.
+
+  TECORD.1132:
+    its: _TECO_; TECORD 1132
+    bytes: 225204
+    lines: 5253
+    dated: 1981-08-05
+    z: 230457
+    note: >
+      Command list for TECO version 1132. Five months after the UTM
+      mail (1981-03-11). This is the spec to implement against, not
+      the MIDAS.
+
+  teco.error:
+    its: _INFO_; TECO ERROR
+    bytes: 2165
+    note: three-letter codes the engine should throw (CMD, SFL, IQN, …)
+
+  TECO.md:
+    upstream: doc/TECO.md
+    note: modern survival cheat sheet, not the 1981 order
+
+not_fetched:
+  - { its: "_TECO_; TECO 335", why: "older TSTECO / TECO6, 177KB. Ancestor, not TECO.MID." }
+  - { its: "_TECO_; TECO6 256K", why: "even older. Point, do not vendor." }
+  - { path: src/rjl/teco.96, why: "another tree. Not this dialect's main line." }
+
+# Three ways to get a full TECO. Only one of them is this package growing.
+see: ../../FULL-ITS-TECO.md

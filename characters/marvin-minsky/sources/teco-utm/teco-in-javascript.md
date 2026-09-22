@@ -24,18 +24,27 @@ parse this file and do the wrong thing, or error.
 
 ## Two ways to get the raw bytes to run
 
-**Subset engine (started).** `@wwsff/teco` is a TypeScript command
-table, not a one-off player. The ITS subset (insert, search, iterate,
+**Subset engine (started).** `@wwsff/tiny-teco` is a TypeScript command
+table, not a one-off player. Class `TinyTeco`. The ITS subset (insert, search, iterate,
 `;`, `"E`, `J`/`C`/`D`, `HT`/`=`, `HK`, Q-registers, `^^` / `1A` /
 `M`+ESC) is registered first so the 318-byte mail can be fed in raw.
+This is the porting method, stated once in the
+[runbook](../../../../packages/tiny-teco/FULL-ITS-TECO.md): **work backwards
+from the software you want to run** — inventory what the artifact actually
+uses, implement exactly that, fail loudly on the rest. The same rule builds
+the [PDP-7 cabinet](../../../../packages/cabinet/DESIGN.md) for PIXIE:
+effort scales with the program you love, not the machine it ran on.
 Unknown opcodes throw with `pc` — that is how it grows into a TECO.
-[`packages/teco/`](../../../../packages/teco/README.md).
+[`packages/tiny-teco/`](../../../../packages/tiny-teco/README.md).
 
 **Full ITS TECO.** The source is `TECO.MID` (MIDAS), the environment
 is ITS. Nobody has rewritten that in JavaScript. The honest port is
 either compile nothing and boot ITS under SIMH, or wait for someone
 to put ITS on a JS PDP-10 the way SAILDART did for WAITS. That is a
-project, not a weekend.
+project, not a weekend. The MIDAS and TECORD 1132 are parked in
+[`packages/tiny-teco/reference/its/`](../../../../packages/tiny-teco/reference/its/SOURCES.yml).
+Scope and the three paths:
+[`packages/tiny-teco/FULL-ITS-TECO.md`](../../../../packages/tiny-teco/FULL-ITS-TECO.md).
 
 Compiling TECOC to WASM is the tempting middle path and the wrong
 dialect.

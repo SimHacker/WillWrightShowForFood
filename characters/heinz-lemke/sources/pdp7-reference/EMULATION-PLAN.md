@@ -69,13 +69,12 @@ The reference implementation, validated against DEC's own diagnostics.
 
 Zero-install, clickable by anyone — the demo and teaching machine.
 
-- **TypeScript PDP-7 core** (a `pdp7.svelte.ts` module — the machine state as runes,
-  because why not watch the accumulator reactively): the instruction card, EAE subset
-  PIXIE uses, interrupts.
-- **340 as a canvas renderer**: display words interpreted into vector segments; P7
-  phosphor persistence as a fade shader if we're feeling romantic.
-- **Light pen = pointer events** hit-testing the segment list the renderer just drew.
-- **Titan link IOTs** call into the link layer below.
+- **TypeScript PDP-7 core** — [`packages/cabinet`](../../../../packages/cabinet/README.md).
+  Instruction set in a cabinet; the 340 emits segments; the pen hit-tests them.
+  SIMH stays the oracle, not the browser.
+- **340 as a canvas renderer**: consume `Type340.segments`. P7 phosphor later.
+- **Light pen = pointer events** hit-testing the segment list just drawn.
+- **Titan link IOTs** are a later Device. Undefined IOTs already no-op.
 
 ### The Titan: a high-level protocol emulator, shared by both benches
 
@@ -192,8 +191,12 @@ the slight defocus bigger deflection angles caused at the tube edge.)
 
 - Assembler round-trip (Cambridge dialect cross-assembler, diff against `.oct`) — parallel
   track, not blocking: the octal is the binary truth.
-- SYMELEC vs RSPPIX memory layout: do the two modules coexist in 16K, or bank-switch?
-  The listing's location counters will tell.
+- ~~SYMELEC vs RSPPIX memory layout~~ **Answered (22 Sep 2026):** the location counters
+  told. RSPPIX overlays SYMELEC's low addresses with *different* contents — it is a
+  separate standalone program, not a co-resident module. SYMELEC is self-contained at
+  0o21–0o11741 (5089 words, fits 8K); load `symelec.oct` alone, start at 0o22.
+  Full device/IOT contract extracted from the octal:
+  [`packages/cabinet/DESIGN.md`](../../../../packages/cabinet/DESIGN.md).
 - Character generator: PIXIE text uses the Type 342 — check SIMH's 340 implements the
   character mode PIXIE expects (`type340.c` has character support; verify stroke tables).
 

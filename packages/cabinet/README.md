@@ -1,0 +1,88 @@
+# @wwsff/cabinet
+
+An **emulator**: a stand-in for a cabinet, so the original program can run.
+Not a simulator. Not SIMH. PDP-7 is the first plug-in instruction set,
+for PIXIE — Type 340 on a canvas, light pen as a hit-test.
+
+```ts
+import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
+
+const cpu = new Pdp7({ coreWords: 8192 });
+const crt = new Type340();
+const pen = new LightPen({ display: crt });
+const box = new Cabinet({ cpu, devices: [crt, pen] });
+box.step();
+```
+
+## Simulation vs emulation
+
+**Emulation** reproduces the *interface* of a machine so software written
+for the iron runs. The test is: does Heinz's listing behave. The guest
+does not care that the accumulator is a JavaScript number.
+
+**Simulation** models a *process* at a chosen fidelity. Weather, traffic,
+phosphor decay. It can be looser or more physical than the original
+program ever saw.
+
+SIMH calls itself a simulator because that was DEC/academic English in
+the 1990s — *SIMulator for Historical computers*, Bob Supnik. What it
+mostly *does* is emulate instruction sets so historic binaries run. We
+keep the useful distinction: this package emulates cabinets; a P7
+afterglow on the canvas would be a simulation *inside* the emulator.
+We do not use "sim" in the name. SIMH already owns that word, and in
+this shop it also means SimCity.
+
+## Why cabinet
+
+DEC sold instruction sets in cabinets. Plug in a device, its IOTs start
+existing; unplug it, they become no-ops. That *is* the extension point.
+A later ISA is another cabinet on the same backplane, not a fork.
+
+Runners-up we did not pick: *backplane* (the wiring, not the thing on
+the floor), *afterglow* (the tube, not the CPU), *understudy* (Repo Show
+cute, opaque on npm).
+
+## What we lift from SIMH, and thank
+
+Full inventory and mapping: [SIMH-MAP.md](SIMH-MAP.md).
+Browser precedents and API decisions: [WEB-BENCH.md](WEB-BENCH.md).
+
+[Open SIMH](https://github.com/open-simh/simh) is the reference bench.
+Bob Supnik built the 18-bit family. Lars Brinkhoff wrote the Type 340
+glue (`PDP18B/pdp18b_dpy.c`). Philip Budne and Douglas Gwyn wrote the
+XY display core (`display/`) — pen-on-beam as a hit against the last
+intensified point. We steal those ideas on purpose.
+
+We shed the rest: SDL / X11 / Win32 / Carbon backends, remote telnet
+console, one tree for fifty architectures, pthreads, `dlopen`, every
+DEC option PIXIE never had. Graphic-2 is the wrong tube. Unknown IOT
+= no-op, as SIMH's `stop_inst = 0` already does — that one we keep.
+
+When a stepped instruction disagrees, SIMH is right until a DEC manual
+says otherwise.
+
+## Extension points (do not grow them until a plugin needs them)
+
+| Knob | Now | Later |
+|------|-----|-------|
+| `wordBits` | 18 | another CPU plugin sets its own |
+| `coreWords` | 8192 | 16384 if the floor machine had it |
+| `unknownIot` | `noop` | never "trap" unless a diagnostic says so |
+| `Device.iot` | claimed select codes only | Titan link is a device, not a new bus |
+| `Type340.segments` | the picture | canvas / WebGPU / dump consume this |
+| `LightPen` | hit-test aperture | Type 370 IOTs when PIXIE points |
+| Link | not wired | a Device. Undefined IOTs already no-op |
+
+A plugin must not mention another plugin's architecture. The CPU
+issues `{ device, pulse, ac }`. The 340 returns segments. The pen
+reads segments and a pointer. Titan, when it exists, claims its IOTs
+and talks to a socket. That is the whole backplane.
+
+## What this is not yet
+
+The full PDP-7 card, EAE, 340 DMA, Type 342 characters, Type 347
+display subroutines, Wiseman's link. The first tests are LAC / DAC /
+JMP / IOT-noop and a pen hit on a segment we drew by hand. SIMH stays
+on the desk as the oracle.
+
+↑ [packages](../README.md)

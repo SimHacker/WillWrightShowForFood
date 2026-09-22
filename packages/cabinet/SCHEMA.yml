@@ -1,0 +1,35 @@
+# How a cabinet is wired. Plugins see this and nothing else.
+# A PDP-7 plugin must not know a 340 is a 340. It issues IOTs.
+# A 340 must not know the CPU word width beyond the Word it is handed.
+
+cabinet:
+  word_bits: 18          # dimensional. PDP-7 is 18. A later plugin sets its own.
+  core_words: 8192       # PIXIE design target. 16384 is the other knob.
+  unknown_iot: noop      # SIMH stop_inst=0. Unplugged instructions do nothing.
+  # Titan is a Device that claims Cambridge link IOTs. Not wired yet.
+
+cpu:                     # the instruction-set plugin
+  reset: ()
+  step: () -> { iot?, skip?, halt? }
+  read: (addr) -> word
+  write: (addr, word)
+  # No SDL. No console. No other ISA's addressing mode.
+
+device:                  # anything that exists as IOTs
+  iots: [dev, …]         # device-select codes this box claims
+  iot: (pulse, ac) -> { ac, skip? }
+  tick: (cycles)?        # optional. Display ages here.
+
+display:
+  segments: [{ x0, y0, x1, y1, intensify }]
+  # Canvas / WebGPU / a PNG dumper all consume this. The 340 does not draw.
+
+pen:
+  x: number
+  y: number
+  aperture: number       # hit radius in display units
+  # "Pen sees beam" = a segment just drawn passes within aperture.
+  # Software inverts the hard problem. No photomultiplier.
+
+# Do not add: endian wars, VAX, dlopen, remote telnet, Graphic-2 (wrong tube).
+# SIMH remains the oracle for a stepped instruction when we disagree.

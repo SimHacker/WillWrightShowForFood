@@ -1,5 +1,5 @@
 # 👁️ jvn-29 — von Neumann 29-state CA, Don's implementations
 what: index of the rule, constructor, crossing organs, CAM6, OpenLaszlo
-crossing: vexatious in the original; cheaper crossings → smaller constructors
+crossing: expensive in the original; cheaper crossings → smaller constructors
 code: https://github.com/SimHacker/CAM6
 ensemble: designs/ca-ensemble

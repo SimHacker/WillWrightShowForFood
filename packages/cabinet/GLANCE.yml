@@ -1,0 +1,9 @@
+# 👁️ @wwsff/cabinet — instruction set in a cabinet
+what: |
+  A backplane. One CPU plugin, devices on the IOT bus, a display that
+  emits segments, a light pen that hit-tests them. Browser and node.
+first_plugin: pdp7
+not: SIMH. Not a simulator. Not Titan yet.
+lifts_from_simh: [IOT as the device door, unknown IOT = no-op, pen = last beam]
+sheds: [SDL, X11, telnet console, every DEC option, one makefile for 50 machines]
+k_line: PLUG IN A CABINET · STEP · HIT-TEST THE PEN

@@ -14,7 +14,7 @@ uncorrected OCR alongside for search; the PDF stays the text of record.
 
 | File | Memo | Year | Sidecar | What |
 |------|------|------|---------|------|
-| AIM-33 (not cached) | AIM-33 | 1961/62 | | 4-symbol 7-state UTM + *p*=2 tag systems. The 1981 TECO mail *is* this machine: [`../teco-utm/`](../teco-utm/README.md) |
+| [`AIM-033-universality-tag-systems-utm-1962.pdf`](AIM-033-universality-tag-systems-utm-1962.pdf) | AIM-33 | 1961/62 | [guide](AIM-033-universality-tag-systems-utm-1962.md) · [card](AIM-033-universality-tag-systems-utm-1962.yml) | 4-symbol 7-state UTM + *p*=2 tag systems. The 1981 TECO mail *is* this machine: [`../teco-utm/`](../teco-utm/README.md) |
 | [`AIM-077-matter-mind-and-models-1965.pdf`](AIM-077-matter-mind-and-models-1965.pdf) | AIM-77 | 1965 | [full text](AIM-077-matter-mind-and-models-1965.md) · [OCR](AIM-077-matter-mind-and-models-1965-ocr.txt) | Self-knowledge and the illusion of free will; why introspection confuses mind/brain questions. |
 | [`AIM-306-a-framework-for-representing-knowledge-1974.pdf`](AIM-306-a-framework-for-representing-knowledge-1974.pdf) | AIM-306 | 1974 | | Frames: stereotyped situations, slots, defaults displaced by evidence, frame-systems as viewpoint transformations. |
 | [`AIM-430-plain-talk-about-neurodevelopmental-epistemology-1977.pdf`](AIM-430-plain-talk-about-neurodevelopmental-epistemology-1977.pdf) | AIM-430 | 1977 | | The Society of Mind precursor the K-lines memo cites as [1]; C-lines correspond to K→P connections. |
@@ -26,6 +26,7 @@ uncorrected OCR alongside for search; the PDF stays the text of record.
 
 | Memo | Handle |
 |------|--------|
+| AIM-33 | not on DSpace — [Bitsavers AIM-033.pdf](https://bitsavers.org/pdf/mit/ai/aim/AIM-033.pdf) · [guide](AIM-033-universality-tag-systems-utm-1962.md) |
 | AIM-77 | https://dspace.mit.edu/handle/1721.1/6119 |
 | AIM-306 | https://dspace.mit.edu/handle/1721.1/6089 |
 | AIM-430 | https://dspace.mit.edu/handle/1721.1/5763 |

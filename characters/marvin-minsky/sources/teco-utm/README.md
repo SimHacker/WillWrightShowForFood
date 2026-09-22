@@ -24,8 +24,11 @@ the method for the next ask: [`open-ask.md`](open-ask.md).
 | [`minsky-utm.teco`](minsky-utm.teco) | TECO command only, 318 bytes, raw `ESC` / `^^` / evacuated CR |
 | [`minsky-utm.teco.hex`](minsky-utm.teco.hex) | Same bytes as a hex dump |
 | [`minsky-utm.teco.txt`](minsky-utm.teco.txt) | Same program as eight logical lines (`$` = ESC) |
-| [`teco-in-javascript.md`](teco-in-javascript.md) | No *complete* JS ITS TECO; subset engine is `@wwsff/teco` |
-| [`../../../../packages/teco/`](../../../../packages/teco/README.md) | Extensible TypeScript TECO — register commands, run the raw `.teco` |
+| [`teco-in-javascript.md`](teco-in-javascript.md) | No *complete* JS ITS TECO; subset engine is `@wwsff/tiny-teco` |
+| [`../../../../packages/tiny-teco/`](../../../../packages/tiny-teco/README.md) | TinyTeco — register commands, run the raw `.teco` |
+| [`../../../../packages/tiny-teco/reference/its/TECO.MID`](../../../../packages/tiny-teco/reference/its/TECO.MID) | ITS TECO source (MIDAS, `_TECO_; TECO 1213`) |
+| [`../../../../packages/tiny-teco/FULL-ITS-TECO.md`](../../../../packages/tiny-teco/FULL-ITS-TECO.md) | Three paths. Full JS rewrite is years, not a weekend |
+| [`../papers/AIM-033-universality-tag-systems-utm-1962.md`](../papers/AIM-033-universality-tag-systems-utm-1962.md) | AIM-33: the 7×4 this mail compiles |
 | [`table.yml`](table.yml) | 28 transitions + initial tape + the 1,870-step halt |
 | [`simulate.py`](simulate.py) | Independent stepper of that table |
 | [`simulator.html`](simulator.html) | Browser tape + state-space "body" |
@@ -35,11 +38,12 @@ the method for the next ask: [`open-ask.md`](open-ask.md).
 | [`tots-request.md`](tots-request.md) | Henry → Distinctive Collections: versions, DUMP dates, neighbors |
 | [`oral-history.yml`](oral-history.yml) | Henry Minsky, 2026-09-22 |
 
-AIM-33 PDF is not cached here yet. Historic CSAIL browse lists it as AIM-33,
-no date on the card, abstract: tag-system proof plus "a Universal Turing
-machine with just four symbols and seven states — the smallest yet reported."
-AIM-52 (Cocke & Minsky, April 1963) is the later *p*=2 tag-system writeup,
-not the UTM table.
+AIM-33 is on the papers shelf:
+[`../papers/AIM-033-universality-tag-systems-utm-1962.md`](../papers/AIM-033-universality-tag-systems-utm-1962.md)
+([PDF](../papers/AIM-033-universality-tag-systems-utm-1962.pdf),
+[card](../papers/AIM-033-universality-tag-systems-utm-1962.yml)).
+CSAIL's card has no date. AIM-52 (Cocke & Minsky, April 1963) is the
+later *p*=2 tag-system writeup, not the UTM table.
 
 ## What the TECO is doing
 

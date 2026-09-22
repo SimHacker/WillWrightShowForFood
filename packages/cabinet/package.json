@@ -1,0 +1,18 @@
+{
+	"name": "@wwsff/cabinet",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Instruction set in a cabinet. PDP-7 first. Emulator, not a simulator.",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "tsc -p tsconfig.json && node --test dist/*.test.js"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.0",
+		"typescript": "^5.8.0"
+	}
+}

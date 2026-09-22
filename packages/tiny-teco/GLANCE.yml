@@ -1,8 +1,13 @@
-# 👁️ @wwsff/teco — TECO that can grow
+# 👁️ @wwsff/tiny-teco — TinyTeco, a TECO that can grow
 what: |
   Command-table TECO. ITS subset runs the 1981 Minsky UTM mail.
   Unknown opcodes throw with pc + byte — that is the extension point.
+package: "@wwsff/tiny-teco"
+class: TinyTeco
+factory: createTinyTeco
 not: a complete TECO yet
 grows_by: one Command registered on the table
 dialect: its-subset
+reference: reference/its/TECO.MID   # MIDAS, 23450 lines; do not translate
+runbook: FULL-ITS-TECO.md            # three paths; full JS port is years
 k_line: REGISTER COMMAND · STEP · WATCH THE BUFFER

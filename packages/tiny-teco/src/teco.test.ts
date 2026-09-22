@@ -4,12 +4,12 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { test } from "node:test";
 import { CTRL_CARET, ESC } from "./engine.js";
-import { createItsEngine } from "./its.js";
+import { createTinyTeco } from "./its.js";
 
 const enc = (s: string): Uint8Array => new TextEncoder().encode(s);
 
 function run(src: string | Uint8Array) {
-	const e = createItsEngine();
+	const e = createTinyTeco();
 	e.load(typeof src === "string" ? enc(src) : src);
 	e.run();
 	return e;
@@ -27,7 +27,7 @@ test("nI repeats", () => {
 });
 
 test("search + iterate + delete R", () => {
-	const e = createItsEngine();
+	const e = createTinyTeco();
 	const p = enc(`i0yR2 0yR2${String.fromCharCode(ESC)}j<sR${String.fromCharCode(ESC)};-d>`);
 	e.load(p);
 	e.run();
@@ -40,7 +40,7 @@ test("lone minus is -1", () => {
 });
 
 test("Q-register numeric and :I char", () => {
-	const e = createItsEngine();
+	const e = createTinyTeco();
 	const bytes = Uint8Array.from([
 		0x33, 0x75, 0x71, // 3uq
 		0x71, 0x71, 0x2b, CTRL_CARET, 0x30, 0x3a, 0x69, 0x71, // qq+^^0:iq
@@ -52,7 +52,7 @@ test("Q-register numeric and :I char", () => {
 });
 
 test("compile one R transition", () => {
-	const e = createItsEngine();
+	const e = createTinyTeco();
 	const i = (s: string) => [...enc(s)];
 	const bytes = Uint8Array.from([
 		...i("i0yR2"),
@@ -82,7 +82,7 @@ test("Minsky mail loads and reaches an implemented halt or a named hole", () => 
 	const here = dirname(fileURLToPath(import.meta.url));
 	const raw = join(here, "../../../characters/marvin-minsky/sources/teco-utm/minsky-utm.teco");
 	const bytes = new Uint8Array(readFileSync(raw));
-	const e = createItsEngine();
+	const e = createTinyTeco();
 	e.load(bytes);
 	try {
 		e.run(200_000);

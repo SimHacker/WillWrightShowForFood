@@ -17,8 +17,6 @@ notes:
       Stephen Wolfram visited Marvin claiming a universal Turing machine
       with fewer states than Marvin's. Marvin looked at it and said
       Wolfram had changed the rules. Henry does not remember how.
-      Henry's take on the visitor: asked 2026-09-22 whether a paraphrase
-      "vexing" is all right, or his own stronger word. No reply filed yet.
     how_to_use: >
       File as an open question about definitions of universality, not as
       a challenge to anyone. Later smaller machines in the literature
@@ -26,24 +24,15 @@ notes:
       periodic background, 2-symbol conversions that explode the other
       parameter, different halt conventions). That is the technical
       content of "changed the rules." A productive cousin: von Neumann's
-      29-state CA makes signal crossing vexatious; a rule that lets
-      signals cross yields much smaller universal constructors. See
+      29-state CA makes signal crossing expensive (you emulate it with
+      organs); a rule that lets signals cross yields much smaller
+      universal constructors. See
       characters/john-von-neumann/sources/jvn-29/. Ask anyone who was
       there or who has the correspondence. Same method as the 2015 HN
       ask that recovered the TECO — ask the room, not a person.
-    public_text: >
-      The rule is dang, 2016-01-27, on Wolfram's Minsky farewell
-      (HN 10978871): "Wolfram Derangement Syndrome" is off topic;
-      the tic is commoditized; discuss what he said about Minsky.
-      File: hn-2016-dang-wolfram.md. The leopard-photo story is
-      first-party, *The Making of A New Kind of Science* (2022-05-22).
-      Do not use Henry's adjective in public until he answers.
-      Posted: HN 49404465.
     do_not:
-      - Quote Henry's stronger word
       - Belabor personality on HN or in this repo
       - Put Wolfram on the spot as the person being asked
-      - Treat "vexing" as signed off until Henry answers
 
   - id: tots-already
     what: >

@@ -1,32 +1,37 @@
-# @wwsff/teco
+# @wwsff/tiny-teco
 
-A TECO engine that can grow. The first dialect is an **ITS subset** aimed at
-Marvin Minsky's 11 March 1981 `*BBOARD` Universal Turing Machine.
+**TinyTeco** — a TECO that can grow. The first dialect is an **ITS subset**
+aimed at Marvin Minsky's 11 March 1981 `*BBOARD` Universal Turing Machine.
 
 This is not a complete TECO. Unknown opcodes throw `UnimplementedCommandError`
 with the byte and `pc`. That is the extension point: register a `Command` on
 the `CommandTable`.
 
 ```ts
-import { CommandTable, TecoEngine } from "@wwsff/teco";
+import { CommandTable, TinyTeco, createTinyTeco } from "@wwsff/tiny-teco";
 table.register({
   name: "your-command",
   codes: [0x7a],
-  execute(ctx) { /* … */ return "ok"; },
+  execute(ctx: TinyTeco) { /* … */ return "ok"; },
 });
 ```
 
 ## Run
 
 ```
-pnpm --filter @wwsff/teco test
-pnpm --filter @wwsff/teco cli ../../characters/marvin-minsky/sources/teco-utm/minsky-utm.teco
+pnpm --filter @wwsff/tiny-teco test
+pnpm --filter @wwsff/tiny-teco cli ../../characters/marvin-minsky/sources/teco-utm/minsky-utm.teco
 ```
 
 Raw program (control bytes intact):
 [`../../characters/marvin-minsky/sources/teco-utm/minsky-utm.teco`](../../characters/marvin-minsky/sources/teco-utm/minsky-utm.teco)
 
 Why a subset first: [`../../characters/marvin-minsky/sources/teco-utm/teco-in-javascript.md`](../../characters/marvin-minsky/sources/teco-utm/teco-in-javascript.md)
+
+Full ITS TECO is not this package yet. The MIDAS is parked as a
+reference; the runbook is [`FULL-ITS-TECO.md`](FULL-ITS-TECO.md).
+`TECO.MID` (ITS `_TECO_; TECO 1213`) and TECORD 1132 live in
+[`reference/its/`](reference/its/SOURCES.yml).
 
 ## What this subset does
 

@@ -1,14 +1,14 @@
 import { readFileSync } from "node:fs";
-import { createItsEngine } from "./its.js";
+import { createTinyTeco } from "./its.js";
 
 const file = process.argv[2];
 if (!file) {
-	console.error("usage: pnpm --filter @wwsff/teco cli <program.teco>");
+	console.error("usage: pnpm --filter @wwsff/tiny-teco cli <program.teco>");
 	process.exit(2);
 }
 
 const bytes = new Uint8Array(readFileSync(file));
-const engine = createItsEngine();
+const engine = createTinyTeco();
 engine.load(bytes);
 try {
 	engine.run();

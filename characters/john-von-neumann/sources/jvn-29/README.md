@@ -3,7 +3,7 @@
 Don's room for John von Neumann's 29-state cellular automaton: the rule,
 the constructor, the crossing organs, and the running copies.
 
-Signal crossing is vexatious in the original rule — you emulate it with
+Signal crossing is expensive in the original rule — you emulate it with
 organs. Modifications that make crossings cheap also make much smaller
 universal constructors. That is a productive change of rules, filed next
 to the UTM "changed the rules" note.

@@ -47,7 +47,25 @@ importers:
         specifier: ^2.3.3
         version: 2.3.3(rollup@4.62.4)(vite@8.3.0(@types/node@26.2.0))
 
+  packages/cabinet:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.17.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+
   packages/teco:
+    devDependencies:
+      '@types/node':
+        specifier: ^20.17.0
+        version: 20.19.43
+      typescript:
+        specifier: ^5.8.0
+        version: 5.9.3
+
+  packages/tiny-teco:
     devDependencies:
       '@types/node':
         specifier: ^20.17.0

@@ -6,7 +6,7 @@ Korz showcase: one educational set, four engines that share a picture
 | Engine | Now | Room |
 |--------|-----|------|
 | Turing machine | YAML machines + table stepper; Cherniak-class copy/add | [`../../packages/turing/`](../../packages/turing/SCHEMA.yml) |
-| TECO (ITS subset) | Command table; Minsky 1981 mail | [`../../packages/teco/`](../../packages/teco/README.md) |
+| TinyTeco (ITS subset) | Command table; Minsky 1981 mail | [`../../packages/tiny-teco/`](../../packages/tiny-teco/README.md) |
 | JVN-29 | Implementations already exist; this repo indexes them | [`../../characters/john-von-neumann/sources/jvn-29/`](../../characters/john-von-neumann/sources/jvn-29/README.md) |
 | CAM6 | https://github.com/SimHacker/CAM6 | Toffoli / Margolus / Rudy / Tom |
 | General CA | not built | same neighborhood API as CAM6 |

@@ -1,7 +1,7 @@
-import { ESC, type Command, type CommandResult, type TecoEngine } from "./engine.js";
+import { ESC, type Command, type CommandResult, type TinyTeco } from "./engine.js";
 import { TecoHaltError } from "./errors.js";
 
-const C = (name: string, codes: number[], execute: (ctx: TecoEngine) => CommandResult): Command => ({
+const C = (name: string, codes: number[], execute: (ctx: TinyTeco) => CommandResult): Command => ({
 	name,
 	codes,
 	execute,
@@ -200,7 +200,7 @@ const altmode = C("altmode", [ESC], (ctx) => {
 	return "ok";
 });
 
-function runMacro(ctx: TecoEngine, text: string): void {
+function runMacro(ctx: TinyTeco, text: string): void {
 	const savedProg = ctx.program;
 	const savedPc = ctx.pc;
 	ctx.program = new TextEncoder().encode(text);

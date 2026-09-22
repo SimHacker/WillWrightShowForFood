@@ -20,8 +20,7 @@ recur. dang: HN is more than a stream of links; it has emergent
 behavior.
 
 Use: cite this when someone (including us) starts to belabor
-personality. Do not quote the stronger words in that thread as if they
-were the rule. The rule is dang's first comment.
+personality. The rule is dang's first comment.
 
 The 2026 leopard comment (HN 49404465) is in bounds if it stays on
 Shalizi's adaptation point, Turing morphogenesis, Burks p. 99, and

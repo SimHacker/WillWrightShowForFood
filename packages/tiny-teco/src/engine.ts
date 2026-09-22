@@ -12,7 +12,7 @@ export interface Command {
 	readonly name: string;
 	/** First bytes that dispatch here (after digits / ^^ are consumed). */
 	readonly codes: readonly number[];
-	execute(ctx: TecoEngine): CommandResult;
+	execute(ctx: TinyTeco): CommandResult;
 }
 
 export class CommandTable {
@@ -37,7 +37,7 @@ interface Iteration {
 	remaining: number | null;
 }
 
-export class TecoEngine {
+export class TinyTeco {
 	readonly buffer = new EditBuffer();
 	readonly qregs = new QRegisterBank();
 	readonly table: CommandTable;
