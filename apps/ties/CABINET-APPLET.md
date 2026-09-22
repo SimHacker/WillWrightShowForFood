@@ -47,6 +47,24 @@ in [`@wwsff/cabinet`](../../packages/cabinet/):
 No new emulator surface. The applet consumes the same four seams as
 every other consumer: loader, run budget, segment log, pen input.
 
+## The rack, and the round window
+
+The applet's grown-up form is not one canvas in the article flow but a
+**rack of windows**: the tube, the console lamps, the teletype, the
+debugger, the frame recorder — each resizable, zoomable, iconifiable,
+with pie menus on the frames and controls. The tube's window is
+**round**, because the 340's glass is round with the square 1024 raster
+inscribed — Bauhaus black and white, a hairline ring on a black field,
+no skeuomorphism (that end of the dial is
+[PORTRAIT.md](../../packages/cabinet/PORTRAIT.md)). On a round frame
+the bezel *is* the pie menu's ring, and the lineage stacks three rings
+deep: PIXIE's lightbuttons inside the round tube window inside a
+HyperTIES article. The design lives at the webtop level —
+[ROUND-WINDOWS.md](../../../moollm/designs/webtop/ROUND-WINDOWS.md),
+with [FRAMES.md](../../../moollm/designs/webtop/FRAMES.md) as the
+contract it extends — because every webtop view inherits it, not just
+this one.
+
 ## Corpus discipline
 
 The converted 1988 corpus in `examples/` is derived and stays derived.
@@ -67,6 +85,8 @@ double-click article gets the live machine.
    carries the dispatch linkage.
 4. **Two pens:** a second pointer (multitouch) or a presence-channel
    visitor. Stock SYMELEC cannot tell; an IDPN-aware build can.
+5. **The rack:** the single canvas splits into framed device windows —
+   round tube first — per ROUND-WINDOWS and FRAMES above.
 
 ↑ [GLANCE](GLANCE.yml) · [FORMAT](FORMAT.md) ·
 [cabinet DESIGN](../../packages/cabinet/DESIGN.md) ·
