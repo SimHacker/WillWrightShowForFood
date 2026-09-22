@@ -76,6 +76,18 @@ this free.
    `pointerType === "pen"` means an Apple Pencil on an iPad is *literally a
    light pen on a tilted drawing board* — Heinz's draftsman setup, back.
    Finger gets a wider aperture than mouse; that is the whole device table.
+   **Every pointer is a pen, and the 340 takes any number** (pens OR onto
+   the one LPHIT line; see the Type340 plugin). `setPointerCapture(pointerId)`
+   per contact + `touch-action: none` on the tube canvas: drags survive
+   leaving the canvas, and one multitouch tablet is already several local
+   pens. Remote pens ride a presence channel over the bench's WebSocket —
+   the Cursor Party pattern (Matt Webb / PartyKit: multiplayer cursors,
+   cursor chat, quiet mode, one script tag) with the cursors landing on
+   the tube as pens. PIXIE has exactly one tracking cross, so the
+   multi-user etiquette is period-emergent: whoever captures the cross
+   drags it; everyone else pokes lightbuttons. (Pointer *Lock* is the
+   other API — hidden-cursor relative motion; maybe right for seizing
+   sim-Heinz's wrist in the portrait, never for the tube.)
 7. **Video out:** the segment log is primary (deterministic replay); live
    capture via `canvas.captureStream()` + MediaRecorder → WebM when wanted.
 8. **Embedding:** a cabinet manifest per page, PCjs-style — so a HyperTIES
