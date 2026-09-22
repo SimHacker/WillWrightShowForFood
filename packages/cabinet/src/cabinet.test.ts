@@ -9,6 +9,7 @@ import { Clock } from "./plugins/clock.js";
 import { LightPen } from "./plugins/lightpen.js";
 import { Pdp7, pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
+import { BlockletHost, EchoPort, TinyTitan } from "./plugins/tiny-titan.js";
 import { MODE, ST340_HEDGE, ST340_LPHIT, Type340 } from "./plugins/type340.js";
 
 test("LAC / DAC / JMP", () => {
@@ -346,14 +347,30 @@ class IotRecorder implements Device {
 	}
 }
 
-/** Titan link stub: never leave a flag hanging — LSF always skips. */
-class TitanStub implements Device {
-	readonly name = "titan";
-	readonly iots = [0o22, 0o23];
-	iot(req: Iot): IotReply {
-		return { ac: req.ac, skip: (req.pulse & 0o1) === 0o1 };
-	}
-}
+test("tiny-titan: word round trip through the echo port; portless never wedges", () => {
+	const port = new EchoPort();
+	const titan = new TinyTitan({ port });
+	// LKE!LLB6 with AC=4 — the session opener, "hello, headers please"
+	titan.iot({ device: 0o23, pulse: 0o64, ac: 0o760004 });
+	assert.deepEqual(port.controls, [4]);
+	// LLB18!LLAM sends two words
+	titan.iot({ device: 0o22, pulse: 0o64, ac: 0o767676 });
+	titan.iot({ device: 0o22, pulse: 0o64, ac: 0o123456 });
+	assert.equal(titan.iot({ device: 0o22, pulse: 0o01, ac: 0 }).skip, true, "LSF: word ready");
+	// LRB18 reads them back (CPU clears AC via bit 0o10 before the pulse)
+	assert.equal(titan.iot({ device: 0o22, pulse: 0o42, ac: 0 }).ac, 0o767676);
+	assert.equal(titan.iot({ device: 0o22, pulse: 0o66, ac: 0 }).ac, 0o123456);
+	// Drained + LCF: flag down, nothing waiting
+	titan.iot({ device: 0o22, pulse: 0o22, ac: 0 });
+	assert.equal(titan.iot({ device: 0o22, pulse: 0o01, ac: 0 }).skip, false, "LSF: idle");
+	// LKD disconnects
+	titan.iot({ device: 0o23, pulse: 0o22, ac: 0 });
+	assert.equal(port.disconnected, true);
+
+	// The rung-1 stub: no port, LSF always skips — WAITLK cannot wedge.
+	const stub = new TinyTitan();
+	assert.equal(stub.iot({ device: 0o22, pulse: 0o01, ac: 0 }).skip, true);
+});
 
 // The .oct stops at 11741, but the 1972 assembler put the literal pool at
 // 12066-12257 (listing pages 105-106): every `(literal` operand — including
@@ -370,7 +387,7 @@ test("acceptance: SYMELEC boots and issues IDLA", () => {
 	const display = new IotRecorder([0o05, 0o06, 0o07, 0o10]);
 	const tty = new Teletype({ printCycles: 1000 });
 	const clock = new Clock({ cpu });
-	const box = new Cabinet({ cpu, devices: [display, tty, clock, new TitanStub()] });
+	const box = new Cabinet({ cpu, devices: [display, tty, clock, new TinyTitan()] });
 
 	cpu.pc = 0o22; // JMP BEGRTP
 	box.run(2_000_000);
@@ -397,7 +414,7 @@ test("acceptance: the 340 executes SYMELEC's own boot display file", () => {
 	});
 	const box = new Cabinet({
 		cpu,
-		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TitanStub()],
+		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan()],
 	});
 	t340.clock = () => box.cycles;
 
@@ -455,7 +472,7 @@ test("acceptance: SYMELEC's 1972 tracking loop follows the virtual pen", () => {
 	});
 	const box = new Cabinet({
 		cpu,
-		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TitanStub()],
+		devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan()],
 	});
 	t340.clock = () => box.cycles;
 
@@ -507,4 +524,59 @@ test("acceptance: SYMELEC's 1972 tracking loop follows the virtual pen", () => {
 	assert.ok(Math.abs(crossX() - followedX) <= 8, "lost the pen: cross stayed");
 	assert.ok(Math.abs(crossY() - followedY) <= 8, "lost the pen: cross stayed");
 	assert.equal(cpu.halted, false);
+});
+
+// The command language: MESIN hashes the first three typed characters
+// (SUMB = (SUMB<<6)+char) against MESL — LABEL, UNLABEL, TITAN, GRID,
+// START. "TIT" in mark-parity ASCII hashes to the table's 271424.
+// TITAN dispatches to MESIN5 -> JMS LTPX, whose 4-way skip return is
+// checksum-fail / not-PIXIE / won't-fit / success. Our BlockletHost
+// requests a write blocklet, so SYMELEC streams PXID, DSBEG, DSEND,
+// SAVINS, then its own ring data — and displays its picture again on
+// the success path.
+test("acceptance: type TITAN and SYMELEC phones tiny-titan, PXID first", () => {
+	const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
+	const cpu = new Pdp7({ coreWords: 8192 });
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec.oct`, import.meta.url), "utf8"));
+	loadOct(cpu, readFileSync(new URL(`${dir}symelec-literals.oct`, import.meta.url), "utf8"));
+
+	const host = new BlockletHost([0o24]); // one blocklet: 4 heading + 16 data words
+	const t340 = new Type340({
+		fetch: (a) => cpu.read(a),
+		store: (a, w) => cpu.write(a, w),
+	});
+	const tty = new Teletype({ printCycles: 200 });
+	const box = new Cabinet({
+		cpu,
+		devices: [t340, tty, new Clock({ cpu }), new TinyTitan({ port: host })],
+	});
+	t340.clock = () => box.cycles;
+
+	cpu.pc = 0o22;
+	for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
+		box.run(100_000);
+		if (cpu.halted) break;
+	}
+	assert.ok(t340.lastFrame, "boot picture is up");
+
+	// Type the command the way a KSR-33 sent it: ASCII with the mark
+	// bit, CR = 0o215. INP buffers; the CR sets IMC; WAIT1 dispatches.
+	for (const ch of "TITAN") tty.type(ch.charCodeAt(0) | 0o200);
+	tty.type(0o215);
+	box.run(3_000_000);
+
+	assert.ok(host.controls.includes(4), `session opened: controls=${host.controls}`);
+	assert.ok(host.controls.includes(6), "handshake control 6 sent");
+	const words = host.received;
+	assert.equal(words.length, 0o24, "exactly count words per the BSZ arithmetic");
+	assert.equal(words[0], 0o767676, "PXID — PIXIE's greeting card, first word on the wire");
+	assert.equal(words[1], cpu.read(0o5162), "DSBEG matches the BEG variable");
+	assert.equal(words[2], cpu.read(0o5163), "DSEND matches the END variable");
+	const beg = cpu.read(0o5162) & 0o17777;
+	for (let i = 0; i < 16; i += 1) {
+		assert.equal(words[4 + i], cpu.read(beg + i), `ring word ${i} echoed from core`);
+	}
+	assert.equal(host.disconnected, true, "LKD closed the session");
+	assert.equal(cpu.halted, false, "back in the main loop");
+	assert.ok(!tty.printed().includes("NOTE"), `no error note: tty=${tty.printed()}`);
 });

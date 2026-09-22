@@ -32,3 +32,5 @@ export { Teletype } from "./plugins/teletype.js";
 export type { TeletypeOpts } from "./plugins/teletype.js";
 export { Clock } from "./plugins/clock.js";
 export type { ClockOpts } from "./plugins/clock.js";
+export { TinyTitan, EchoPort, BlockletHost } from "./plugins/tiny-titan.js";
+export type { TitanPort, TinyTitanOpts } from "./plugins/tiny-titan.js";

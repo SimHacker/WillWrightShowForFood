@@ -120,17 +120,65 @@ Two pen modes as a dimensional control:
 | EAE subset | ~11 words (64xxxx) | implement only the ops present |
 | Interrupt facility | whole architecture | see above |
 
-## Mini-Titan
+## tiny-titan
 
 Per [`TITAN-LINK-PROTOCOL.md`](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
-— the codec and plug-in surface are already designed there. Cabinet side:
-a link Device claiming devs 22–23 over an async duplex `LinkPort`
-(in-process first; WebSocket when the node bench exists). Ladder:
+— the codec and plug-in surface are designed there; the module is
+[`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts). Two layers,
+split so the far side is repackageable:
 
-1. **Stub whose only job is: never leave a flag hanging** — `LSF` eventually
-   skips, so the `TITAN` command's `WAITLK` loop cannot wedge the machine.
-2. `echo` — blocklet round-trip, diff the ring file.
-3. `filestore` — named slots; localStorage in browser, fs on node.
+- **`TinyTitan`** is the cabinet device, claiming devs 22–23. Its pulses
+  are what the CPU delivers after stripping bit `010` (clear-AC): `LSF`
+  arrives as pulse 01, `LRB18` as 42, `LRB18!LLAM` as 66, `LLB18!LLAM`
+  as 64; on dev 23, `LLB6` as 44, `LKE!LLB6` as 64 — and the NAK
+  spelling `LLB6 10` reaches the device as control 0 with AC
+  pre-cleared, the `010` being the clear-AC bit itself. The link ran
+  with interrupts off, so the device raises no IRQ.
+- **`TitanPort`** is the seam: `control / send / recv / ready /
+  disconnect`, five calls a transport can carry anywhere. The PDP-7
+  polls `LSF` in `WAITLK` — the 1969 polling loop *is* the await — so
+  an in-process port answers instantly and a remote one (WebSocket,
+  fetch) just buffers arrivals behind `ready()`. Same host class,
+  three deployments: in the browser beside the emulator, in-process on
+  node, or a real server streaming frames. Repackaging is lifting the
+  file into its own package; it imports only the bus types.
+- **`BlockletHost`** implements the session state machine from the
+  `/LTPIX` listing: serves the 4-word redundantly-checked headers
+  (`(w1^w2)+(w3^w4)` must be all-ones), sets the count per blocklet
+  (a blocklet carries exactly `count` RW words — the end test's
+  `ISZ BSZ` pre-increments the complemented count), accumulates RW's
+  running 18-bit checksum, answers it for `SAD CKS`, and says goodbye
+  with a zero-count header.
+
+Ladder: **stub met** (portless `TinyTitan`: `LSF` always skips, the
+`TITAN` command cannot wedge the machine) and **echo met** — the
+acceptance test boots SYMELEC, types `TITAN` on the teletype, and the
+recorded transfer opens with `PXID` followed by `DSBEG`/`DSEND`/
+`SAVINS` and the live ring words from core. Next: `filestore` (named
+slots; localStorage in browser, fs on node), then serving structures
+*back* (direction bit `0o200000`), which is the same machine with the
+queue running the other way.
+
+### The command language it answers to
+
+SYMELEC's teletype language is five commands and two message forms.
+`INP` buffers a line (mark-parity ASCII, CR = `215` ends it); `MESIN`
+hashes the **first three characters** — `SUMB = (SUMB<<6) + char` —
+against the `MESL` table and `XCT`s the matching entry:
+
+| typed | hash | does |
+|---|---|---|
+| `LABEL` | `170402` | `ISZ RLABEL` — name elements as you draw |
+| `UNLABEL` | `302114` | `DZM RLABEL` — stop |
+| `TITAN` | `271424` | `JMS LTPX` — phone the filestore |
+| `GRID` | `122511` | coarsen the snap grid to 16 units |
+| `START` | `262701` | reinitialize |
+
+Anything else prints `?`. A line starting `/` is a label text; `:`
+moves the working pointer to a subpicture. `TITAN`'s four-way skip
+return maps to typed error notes — checksum fail, not PIXIE data,
+data won't fit — and on success SYMELEC rebuilds its name list and
+puts the received picture on the tube.
 
 Remote control is not a console protocol: the Cabinet is a TS object.
 Examine/deposit/step over the same WebSocket, a dozen lines.

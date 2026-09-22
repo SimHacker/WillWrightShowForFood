@@ -114,12 +114,12 @@ says otherwise.
 | `Device.iot` | claimed select codes only | Titan link is a device, not a new bus |
 | `Type340.segments` | the picture | canvas / WebGPU / dump consume this |
 | `LightPen` | hit-test aperture | Type 370 IOTs when PIXIE points |
-| Link | not wired | a Device. Undefined IOTs already no-op |
+| `TitanPort` | in-process `BlockletHost` | same five calls behind a WebSocket |
 
 A plugin must not mention another plugin's architecture. The CPU
 issues `{ device, pulse, ac }`. The 340 returns segments. The pen
-reads segments and a pointer. Titan, when it exists, claims its IOTs
-and talks to a socket. That is the whole backplane.
+reads segments and a pointer. tiny-titan claims devs 22–23 and talks
+to a `TitanPort`. That is the whole backplane.
 
 ## What this is not yet
 
@@ -135,8 +135,13 @@ with provenance, SVG/YAML export
 ([snapshots/symelec-boot.svg](snapshots/symelec-boot.svg)).
 **Rung 3** — the 1972 tracking loop tracks a virtual pen: acquire,
 drag, and lose the cross, with `TRCR`/`POSCR` patching core
-([TRACKING.md](TRACKING.md)). Next rung: draw with the lightbuttons,
-then the link stub grows an echo. SIMH stays on the desk as the
-oracle.
+([TRACKING.md](TRACKING.md)).
+**Rung 4** — type `TITAN` on the teletype and SYMELEC phones
+[tiny-titan](src/plugins/tiny-titan.ts): headers, checksum, `PXID`
+first word on the wire, its own ring file streamed and recorded
+(the command language and the transport-agnostic `TitanPort` seam are
+in [DESIGN.md](DESIGN.md#tiny-titan)). Next rung: draw with the
+lightbuttons; serve a structure *back* over the link. SIMH stays on
+the desk as the oracle.
 
 ↑ [packages](../README.md)
