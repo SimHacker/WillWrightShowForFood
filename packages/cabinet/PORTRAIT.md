@@ -46,6 +46,21 @@ Heinz's floor. Pen hits compute in screen space of the *texture*, so
 the 3D projection cannot introduce aim error — the glass is chrome,
 the hit-test is the plugin's.
 
+## Slow mode — watch the beam work
+
+For later, but cheap and wonderful: a time-dilation knob on the
+cabinet's cycle clock. The 340 is a display *processor* executing words
+at documented point-plot speeds, and the phosphor pass renders the
+segment stream in order — so at 1/1000 speed you *see* the beam crawl
+the display file: each vector sweeping tip-first as a blue flash, the
+yellow-green persistence blooming behind it, the whole picture being
+argued into existence stroke by stroke, sixty times a second collapsed
+into a minute. Nothing is animated; the emulator is just running slowly
+while the phosphor decays in real time. It is the same knob the
+debugger frame wants for single-step, opened all the way up. The demo
+teaches the architecture by itself: you watch the tracking cross get
+redrawn every frame and understand refresh displays forever.
+
 ## The DECtape eyes
 
 Idle animation: the reels spin when the machine runs, stop on HLT.
