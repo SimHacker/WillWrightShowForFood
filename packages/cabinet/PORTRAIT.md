@@ -106,6 +106,40 @@ does not care who writes it:
 Every driver funnels through the tip, so nothing — script, agent, or
 human — can issue an input the arm could not physically make.
 
+## ECG drives the body
+
+"Could not physically make" needs an implementation, and it exists:
+**Tom Ngo's Embedded Constraint Graphics** (Interval Research, patent
+expired 2016 — Don's write-up:
+[tom-ngo-embedded-constraint-graphics-at-interval.md](../../characters/don-hopkins/tom-ngo-embedded-constraint-graphics-at-interval.md)).
+Author sim-Heinz's extreme poses once — pen high on the tube, pen low,
+leaning in, turned to the ASR-33, hand at each keyboard corner — and
+put them at the vertices of a simplicial complex. Any posture is
+barycentric blend weights over those vertices; **direct manipulation is
+the constraint solve**: drag a feature and the system solves for the
+weights. This is blend shapes, everyone's intuition already; ECG is
+the general rig, and Ngo built it for exactly this — direct-manipulation
+character animation.
+
+That replaces raw IK with a body that cannot leave its manifold. The
+input mapping becomes one chain, every link declared:
+
+    user screen coords (mouse / joystick / touch)
+      → dragged constraint on the body
+      → ECG solve: blend weights over authored poses
+      → pen tip position in tube texture space
+      → emulator screen coords (the 340's 1024×1024 grid)
+      → LightPen hit-test
+
+Mouse and joystick differ only at the first link — position versus
+rate — because everything after the dragged constraint is the same
+solve. Impossible inputs are unrepresentable rather than clamped: the
+space contains no pose with the pen inside the cabinet, so no driver
+(script, puppeteer, or grab) can request one. A demo recording gets
+smaller and more legible too — a weight-vector timeline over named
+poses instead of a joint-angle soup, which is the same inspect-and-edit
+property the glyph work borrows from ECG one repo over.
+
 Portrayal note, repo standard: the avatar is a portrayal of Heinz
 Lemke operating his own program, made with his participation — he sent
 the 128-page listing this whole machine exists to run. His character
