@@ -98,4 +98,42 @@ Every 6 hours, the Ham Radio's internal clock ticks to trigger a completely rand
 ---
 
 ## 📯 Additional Object Systems & Interactions
-*   **Zombie Gnome Solidification:** When dealing with the aggressive, nocturnal Zombie Gnomes, players can actively cast a custom **Solidify** spell on them. Once solidified into a statue state, a Sim can physically kick the gnome to permanently destroy the threat.
+*   **Classroom Capacity AI:** The Lectern's internal logic dynamically monitors physical seating layout constraints. If a classroom lacks an adequate number of chairs, visiting neighborhood children will wander outside and miss the lesson entirely because they cannot hear the lecture through the walls. Furthermore, children do not sit passively; depending entirely on their native personality matrices, rebellious students will actively stand up during class to mock the teacher.
+*   **Unhiding Skill Potential:** By utilizing **five unique custom zombie posters**, players can completely unhide and view the native, hidden skill profiles of child Sims. Under this custom object system, children share the exact same skill potential and combat interaction queues as adults, turning them into equally vital, highly effective compound defenders.
+
+---
+
+## 📦 Core Object Manifest & Asset Index
+
+*Development note: Thanks to Raeven from Woobsha.com for technical assistance with table arrays, tire columns, and loft templates.*
+
+### 🏰 Comfort & Sanitation Assets
+
+*   **The Grand Plummets Toilet (§500):** A high-utility toilet operating as a 50+ scenario Choose Your Own Adventure engine. Its flagship feature allows players to connect it to a backyard bunker, transforming the plumbing asset into an instantaneous underground tunnel escape network to hide safely from hordes. Also triggers random text events (like rescuing child NPC Timmy when he falls in).
+*   **The Zombie Feeder Coffin (§2020):** A high-tier compound appliance. Sims can manually climb inside to completely vanish from zombie sight queues. Powered by space crystals, its automated timer dispenses diversified DNA clone NPCs to serve as immediate distraction bait for the horde.
+*   **Army Bunks, Lofts & Mini Desks (§959 / §242):** Space-saving bedroom sets that can be split or nested over other objects. Features automated everyday clothing changes when a Sim climbs inside and offers the highest restful sleep values in the game engine.
+*   **Expandable Army Mess Hall Table (§242 per section):** Built using automated placement connection scripts, functioning like commercial counter arrays to automatically snap single 1-tile tables together seamlessly across any size room.
+*   **"The Apocalypse" Community Shower (§52):** A low-cost, wall-passable shower asset designed to ignore all native base-game "shoo away" privacy queues, allowing multiple Sims to scrub away combat debris simultaneously.
+*   **Community Outhouse Potty (§142):** A simple pit latrine outhouse that penalizes lot Room scores when left open, but heavily boosts them when closed.
+*   **Community Sink (§129):** A rugged sanitation basin. Washing items here risks random text-adventure loot cycles, letting lucky Sims scour the plumbing for loose change.
+
+### 🛠️ Defensive & Logistics Gear
+
+*   **The "Zomb Bomb" Gas Can (§30):** A tactical pathfinding lure. When ignited, its flame loop overrides zombie routing to pull local undead into its radius. Its custom explosion triggers a "special fire" that incinerates zombies while leaving user property completely unharmed.
+*   **Chum Barrel / "Survival Stew" (§150):** Allows survivors to recycle fallen bio-debris into a potent bait mixture. When full, it projects hunger overrides that pacify local hordes, keeping them distracted and feeding peacefully for 3 to 6 hours.
+*   **The Scavenger Box (§50):** A community trade drop-box. Sims pack it with surplus items to swap with surrounding communities for a mystery box. The value of returned goods depends on personality (stronger Sims get weapons, nicer Sims get medical gear), though players must actively defend it from looters.
+*   **Makeshift Grill (§500):** A kitchen stove substitute built from salvaged assets that allows child Sims to build Cooking skills. It serves 5 high-value group meals (Filet Mignon, Burger & Fries, Grilled Cheese, Grilled Veggies, and "Mystery Meat") that emit fumes to draw in wandering survivor NPCs.
+*   **Paint 'n' Hang Easel (§251):** An upgraded creative skill-builder opening the Creativity matrix to children. It ranks artistic talent and allows completed canvases to be sold or mounted as custom wall decor.
+*   **Gas Station Accessories (§214):** Immersive, atmospheric decorative pieces (rusted pumps, stuck-shut toolboxes, non-functional air tools) that serve as minor Fun assets.
+
+### 🧬 Autonomous Environmental NPCs & Critters
+
+*   **Smart Roach Group & The Roach King:** Green roaches that devour trash, spills, and combat blood to improve lot Room scores while building hidden Logic stats. Maxing their logic spawns the massive Roach King NPC, who marshals lesser roaches to clear debris faster and can "Feed" groups to accelerate their evolution. Enforces a limit of one King per lot.
+*   **Zombie Fred (§68):** A re-educated, harmless military zombie purchased as a sculpture asset. Completely immune to hostile waves, Fred serves as an automated doorjamb, greets lot guests, and will actively consume unpaid household bills before midnight. After midnight, he acts as a stealth house cleaner.
+*   **Zombie Garden Gnomes (§40):** Hostile, mobile decorative entities. Stationary by day, they awake at night to autonomously swarm household Sims. When dealing with these aggressive, nocturnal Zombie Gnomes, players can actively cast a custom **Solidify** spell on them. Once solidified into a statue state, a Sim can physically kick the gnome to permanently destroy the threat.
+*   **The Zombie Snowman:** A hostile entity that spawns if a player fails to apply Zac's chemical preservatives to an outdoor snowman. It packs snow into its frame to grow progressively larger, but shrinks and melts into a standard puddle if it follows a Sim indoors.
+*   **Farm Mutagenic Mishaps:** Self-resurrecting dropped critter items that autonomously assemble into strange V-shaped formations, consuming toxic waste to lift lot ratings. Can be harvested and sold for emergency cash.
+*   **Cursed Johnny (§68):** A friendly, volatile visitor plagued by environmental hexes, causing persistent localized rain clouds or random lightning strikes to hit his coordinates. Actively socializes to restore Fun and Social points before leaving by 6:00 AM.
+*   **The Bike Thief:** A lag-reduction cleanup NPC. Because emergency Biker Hunters notoriously abandon their vehicles after a raid, the Bike Thief enters the lot to hotwire and ride away on any bikes left outdoors.
+*   **The Conspiracy Theorist ("M"):** A scavenger summoned via the helper network who uses a custom jetpack animation to rapidly sweep the property clean of blood and biological hazards, occasionally dropping Land Chum barrels.
+
