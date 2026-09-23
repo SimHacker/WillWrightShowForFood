@@ -114,8 +114,9 @@ Lemke**, Cc Fleck + Nicholas Chen — **not to Don**, who had connected him to t
 **8 Jul 2008** — Fleck notices Don was left off and kindly forwards it to him. That's the only
 reason Don got the transcription and notes at all.
 
-**What Buxton actually delivered:** none of it, as far as Don can tell — no digitized film, no
-web page, no book integration, despite Microsoft resources, travel allowance, and multimedia
+**What Buxton actually delivered:** none of it, as far as Don can tell. No published film
+(in 2019 he claimed a private digital transfer nobody has seen), no web page, no book
+integration, despite Microsoft resources, travel allowance, and multimedia
 services. Don's copies of the two attachments are now the public record:
 [Wiseman Page 466](../../heinz-lemke/media/from-mail/paper-wiseman-page-466.pdf) ·
 [Wiseman Notes on Radial Menus](../../heinz-lemke/media/from-mail/paper-wiseman-notes-on-radial-menus-in-pixie.pdf)
@@ -131,6 +132,91 @@ PDP-7. https://www.youtube.com/watch?v=jDrqR9XssJI
 Don put more work into this than Buxton even promised, let alone did. Librarians rock.
 
 Chapman ↔ Don correspondence also notes **William Newman** unwell in a care home (2019).
+
+## 2019 — Buxton's excuse: William Newman's "death"
+
+**25 Feb 2019** — Buxton → Don, "Re: About that apology, and my guest lecture about the
+history of pie menus for Brad Myers's 05-640: Interaction Techniques class":
+
+> I have gone through Weisman's personal papers in the special collections at Cambridge
+> (thanks to William Newman) and uncovered a 16mm film of Pixie and arranged for a digital
+> transfer which I have, to which I am going to add a voice track using Weisman's hand
+> written lecture notes. **The plan was for William Newman – who was a student of Wiseman –
+> to do the voice over. His illness and death, among other things, has set these plans
+> back.**
+
+Newman was alive. Chapman had the St John's College Biographical Librarian check quietly and
+confirmed it: Newman was very unwell, in a care home. He died later that year. Don found it
+disgusting to announce a living man's death as the excuse for eleven years of your own
+inaction.
+
+**7 May 2019** — Don → Ben Shneiderman and Brad Myers, "Wiseman": Chapman has located the
+film and has a firm quote and permission to digitize it. Newman is still alive.
+
+> I don't know what Bill Buxton's motivation was for spreading that bizarre rumor that
+> William Newman had passed away, but I have verified with the Cambridge librarian that what
+> he said is untrue. His family would prefer he not be disturbed…
+
+**8 May 2019, 07:46** — Don → Buxton, "Fwd: Wiseman":
+
+> I checked into what you said, and privately confirmed that you were lying about William
+> Newman's death. What exactly was your motivation for spreading false rumors about William
+> Newman's death? That's pretty sick, Bill.
+>
+> If there is some actual reason you never got around to digitizing the PIXIE movie after
+> saying you were going to do it more than a decade ago, you could have just told the truth
+> about that, instead of making up some excuse about William Newman's death, that wasn't
+> true. … His family would appreciate it if you respected his privacy, please. So stop
+> telling people he died.
+
+**8 May 2019, 14:36** — Buxton → Don, "Re: Wiseman" (Outlook for iOS), verbatim:
+
+> I am sorry to have to take away the glory of this particular insight.
+>
+> For the record
+> (1) I did digitize the film and have it
+> (2) William and I were planning to have him record the script which I found in Wise man's
+> papers and which Wise an read live when presenting the film.
+> (3) Finding time when William and I were in the same city, much less coy try, was the
+> initial cause for delay.
+> (4) The onset of dimentia was the cause of it not happening.
+> (5) My understanding that William had passed away was due to my being informed by a family
+> member that it was immanent.
+>
+> If you want to interpret that as me lying to you, subverting or undermining you or hiding
+> the material from you or the community, that is your privilege.
+>
+> But of course, remember that the only reason you know that the film exists, and where the
+> Wise an papers are, is because of my doing the research.
+>
+> And I am just as frustrated that the project is not finished as anyone.
+>
+> Guess what, I'm human. Perhaps you have no backlog of unfinished projects.
+>
+> Well, if so, congratulations.
+>
+> But be clear, I do. And that fact, much less what is or isn't finished, has nothing to do
+> with you.
+>
+> I'm glad you have the film. I'll be glad if you layer on the original voice over. I'm glad
+> if you put it out where it can take its deserved place. And I don't care who gets the
+> credit. I just want it done.
+
+Against the receipts:
+
+- **"His illness and death"** in February is stated as a fact. In May it becomes "informed
+  by a family member that it was immanent": a death he had been told was coming, reported as
+  one that had happened, and used as the reason for the delay.
+- **"I did digitize the film and have it."** If so, he sat on a digital transfer for over a
+  decade, and nobody else ever saw it. The copies the public has came from the Rainbow group
+  member's office, digitized by the University Library's Digital Content Unit in 2019
+  because Chapman asked.
+- **"The only reason you know that the film exists… is because of my doing the research."**
+  This part is true. Don learned the film existed from Buxton's July 2008 notes, which Don
+  only got because Fleck forwarded them. Buxton found it and announced it, and then didn't
+  deliver for eleven years; Chapman delivered it in five months.
+- **"I don't care who gets the credit."** This is the same man who, in June 2008, ended the
+  conversation by accusing Don of "not crediting Weisman until you learned about him from us."
 
 ## 2023 — Don → Brad Myers (*Pick, Click, Flick!*)
 
