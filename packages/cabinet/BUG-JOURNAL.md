@@ -274,6 +274,90 @@ high. And the Teletype prints a character every 1,000 cycles, 1.75 ms,
 where a Model 33 took 100 ms. Those are the next rungs: a
 cycle-accurate CPU, then a 340 with the timings from its manual.
 
+## Rung 6: drawing
+
+Drawing one line, then two, then a house, found eight bugs. Six were
+the transcription, one was ours, one was the listing's own memory
+layout. Two new checkers in the listing's `scripts/` now catch the
+kinds that were found by running: `check-symbol-operands.py` checks
+every memory-reference word against the symbol table, and
+`check-operate.py` computes every operate instruction from its
+mnemonic.
+
+### The menu stopped answering after the first line
+
+**Symptom.** Draw one line, and the ring and the right column went
+dead. **Cause.** The garbage collector. `GETSP` calls it when the free
+list runs out, and nine words in the list machinery (2416–2545) were
+misread: operands off by a digit, `445` read for `442` and `452`, an
+operate word off by one bit. The collector marked the wrong cells,
+freed live ones, and walked on into the display file and the interrupt
+vector. **Fix.** Each word against the scan. **Kind:** transcription.
+
+### F never finished
+
+**Symptom.** After F, `CBUSY` stayed at 2 and nothing else happened.
+**Cause.** `WAIT8` compiles the picture with `JMS COMPIL`, 110170. The
+transcription had 103170 at 3604 and 3724, a jump into the middle of
+something else. **Fix.** The scan. **Kind:** transcription.
+
+The PIXIE page said F hands the element to Titan and waits for an
+answer. It does not. `COMPIL` and `UPCOMP` never
+touch the link; only the typed `TITAN` command does.
+
+### The tube went dark after F
+
+**Cause.** The compiled picture lives at 12301, in the upper 4K of an
+8K machine. Our 340 masked display addresses to 12 bits, like SIMH's,
+and ran 2301 instead. The 347's jump field is 13 bits. **Fix.** 13-bit
+display addresses. **Kind:** ours.
+
+### The display stopped at 12311
+
+**Cause.** A compiled element ends with `DDS SVAD`, built by `TAD
+(200000`. At 10665 the word was read 352212, which adds the pool word
+at 12212 (17777) instead of 12210 (200000); the 340 got a parameter
+word with the stop bit. 10540, 10647 and 3725 pointed at the wrong
+pool word the same way. **Fix.** The scan. **Kind:** transcription.
+
+### The second line wiped the picture
+
+**Symptom.** Line one fine; after line two's F, a blank screen.
+**Cause.** SYMELEC printed an error and restarted. `ERRDF`, "PERMDF RUNS
+OUT OF SPACE": as assembled, the picture gets 77 words of display
+file, 12301–12400, and one line uses most of them. Beside each of the
+seven layout words (5157–5165) Heinz wrote a bigger number in the
+comment: 13300, 13400, 13401, 17200, 17300. Those are an 8K machine.
+**Fix.** The `core8k` patch loads what he wrote. The `.oct` stays as
+printed. **Kind:** 1972, the listing's own layout.
+
+### Every line was invisible
+
+**Symptom.** Lines compiled, the display file grew, nothing lit.
+**Cause.** `DRLTO` executes the instruction after its call to decide
+visible or invisible: `CLL` for a move, `STL` for a line. At 11204 the
+`STL` was transcribed 144002, which is `DZM 4002`. The link stayed
+clear and every stroke went out with the beam off. **Fix.** 744002, as
+the scan says. `check-operate.py` then found three more misread
+operate words (1011, 1170, 1247). **Kind:** transcription.
+
+### TITAN with an empty picture
+
+After a Titan session `MESIN5` forces a collection with the picture as
+the only root. With nothing drawn that root is 0, and the collector
+walks location 0 into the interrupt vector. That is the 1972 program:
+save a picture, not an empty screen. The acceptance test draws a line
+first. **Kind:** 1972.
+
+### The demo pen missed
+
+Not a machine bug; the script's. A pen that crosses a lit line hands
+the cross to that line, and a press on a cross that sits on the end of
+the line just drawn can land on the line instead. The demo grips the
+cross on the side it is about to travel toward, carries it around the
+picture, and checks the ring after F. Open: rays drawn in the lower
+half of a sun still fail, so the sun rises.
+
 ## Not the machine
 
 The dev server listened only on IPv6 `::1`, so a browser that took
@@ -288,7 +372,8 @@ HyperTIES home page and The emulator.
 Every bug so far had its answer on paper before anyone went looking:
 the literal pool on pages 105–106, the `ISZ` at 1734, the `1776`
 masks, the `-2` in the source column, the 7 on page 029, Heinz's
-pencil circle, and a
+pencil circle, his 8K layout in the comments, the 7 in `STL` on page
+096, and a
 2026 design document nobody reread. The
 emulator's job is to run the listing until it disagrees with itself,
 and then to show where.

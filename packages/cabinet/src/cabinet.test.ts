@@ -3,6 +3,7 @@ import { test } from "node:test";
 import type { Device, Iot, IotReply } from "./bus.js";
 import { Cabinet } from "./cabinet.js";
 import { loadSymelec } from "./symelec-fixtures.js";
+import { DemoPlayer, houseDemo, drawing } from "./symelec-demo.js";
 import { toSvg, toYaml } from "./media.js";
 import { Clock } from "./plugins/clock.js";
 import { LightPen } from "./plugins/lightpen.js";
@@ -527,14 +528,21 @@ test("acceptance: SYMELEC's 1972 tracking loop follows the virtual pen", () => {
 // requests a write blocklet, so SYMELEC streams PXID, DSBEG, DSEND,
 // SAVINS, then its own ring data — and displays its picture again on
 // the success path.
-test("acceptance: type TITAN and SYMELEC phones tiny-titan, PXID first", () => {
+//
+// Draw a line first. After any session MESIN5 sets FREE = END, so the
+// next GETSP garbage collects with SAVINS as the only root. With an
+// empty picture SAVINS is 0 and the collector walks location 0 into the
+// interrupt vector — in 1972 too. Saving a real picture is the real use.
+test("acceptance: draw a line, type TITAN, SYMELEC sends it to tiny-titan, PXID first", () => {
 	const cpu = new Pdp7({ coreWords: 8192 });
 	loadSymelec(cpu);
 
 	const host = new BlockletHost([0o24]); // one blocklet: 4 heading + 16 data words
+	const pen = new LightPen({ aperture: 12, name: "pointer", enabled: false });
 	const t340 = new Type340({
 		fetch: (a) => cpu.read(a),
 		store: (a, w) => cpu.write(a, w),
+		pens: [pen],
 	});
 	const tty = new Teletype({ printCycles: 200 });
 	const box = new Cabinet({
@@ -550,6 +558,35 @@ test("acceptance: type TITAN and SYMELEC phones tiny-titan, PXID first", () => {
 	}
 	assert.ok(t340.lastFrame, "boot picture is up");
 
+	const SAVINS = 0o5146;
+	const cross = (): [number, number] => [cpu.read(0o5641) & 0o1777, cpu.read(0o5640) & 0o1777];
+	const pressS = () => {
+		const [x, y] = cross();
+		pen.point(x - 50, y + 32);
+		pen.enabled = true;
+		box.run(20_000);
+		pen.enabled = false;
+		box.run(20_000);
+	};
+	const drag = (x1: number, y1: number) => {
+		const [x, y] = cross();
+		pen.point(x, y);
+		pen.enabled = true;
+		for (let i = 1; i <= 40; i += 1) {
+			pen.point(Math.round(x + ((x1 - x) * i) / 40), Math.round(y + ((y1 - y) * i) / 40));
+			box.run(6_000);
+		}
+		pen.enabled = false;
+		box.run(20_000);
+	};
+	assert.equal(cpu.read(SAVINS), 0, "no picture yet");
+	pressS(); // S: start a line; the ring's S becomes F
+	drag(400, 300);
+	drag(400, 400);
+	pressS(); // F: finish
+	const savins = cpu.read(SAVINS);
+	assert.notEqual(savins, 0, "the line is a picture: SAVINS points at it");
+
 	// Type the command the way a KSR-33 sent it: ASCII with the mark
 	// bit, CR = 0o215. INP buffers; the CR sets IMC; WAIT1 dispatches.
 	for (const ch of "TITAN") tty.type(ch.charCodeAt(0) | 0o200);
@@ -563,6 +600,7 @@ test("acceptance: type TITAN and SYMELEC phones tiny-titan, PXID first", () => {
 	assert.equal(words[0], 0o767676, "PXID — PIXIE's greeting card, first word on the wire");
 	assert.equal(words[1], cpu.read(0o5162), "DSBEG matches the BEG variable");
 	assert.equal(words[2], cpu.read(0o5163), "DSEND matches the END variable");
+	assert.equal(words[3], savins, "SAVINS, the picture's root, is the fourth heading word");
 	const beg = cpu.read(0o5162) & 0o17777;
 	for (let i = 0; i < 16; i += 1) {
 		assert.equal(words[4 + i], cpu.read(beg + i), `ring word ${i} echoed from core`);
@@ -570,4 +608,113 @@ test("acceptance: type TITAN and SYMELEC phones tiny-titan, PXID first", () => {
 	assert.equal(host.disconnected, true, "LKD closed the session");
 	assert.equal(cpu.halted, false, "back in the main loop");
 	assert.ok(!tty.printed().includes("NOTE"), `no error note: tty=${tty.printed()}`);
+});
+
+// Two lines. As printed, PERMDF is 77 words (DFE = 12400); the first
+// line nearly fills it, the second trips ERRDF twice and SYMELEC
+// restarts with SAVINS = 0. With Heinz's commented 8K layout (core8k)
+// both lines compile, and the visible strokes carry the intensify bit
+// that DRLTO's XCT'd STL sets (11204, misread once as 144002).
+test("acceptance: two lines — restart as printed, both drawn with core8k", () => {
+	const draw = (patches: string[]) => {
+		const cpu = new Pdp7({ coreWords: 8192 });
+		loadSymelec(cpu, patches);
+		const pen = new LightPen({ aperture: 12, name: "pointer", enabled: false });
+		const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
+		const box = new Cabinet({ cpu, devices: [t340, new Teletype({ printCycles: 200 }), new Clock({ cpu }), new TinyTitan()] });
+		t340.clock = () => box.cycles;
+		cpu.pc = 0o22;
+		for (let i = 0; i < 30 && !t340.lastFrame; i += 1) box.run(100_000);
+		const cross = (): [number, number] => [cpu.read(0o5641) & 0o1777, cpu.read(0o5640) & 0o1777];
+		const press = (x: number, y: number) => {
+			pen.point(x, y);
+			pen.enabled = true;
+			box.run(20_000);
+			pen.enabled = false;
+			box.run(20_000);
+		};
+		const pressS = () => {
+			const [x, y] = cross();
+			press(x - 50, y + 32);
+		};
+		const drag = (x1: number, y1: number) => {
+			const [x, y] = cross();
+			pen.point(x, y);
+			pen.enabled = true;
+			for (let i = 1; i <= 40; i += 1) {
+				pen.point(Math.round(x + ((x1 - x) * i) / 40), Math.round(y + ((y1 - y) * i) / 40));
+				box.run(6_000);
+			}
+			pen.enabled = false;
+			box.run(20_000);
+		};
+		pressS();
+		drag(400, 300);
+		drag(500, 400);
+		pressS();
+		box.run(400_000);
+		const afterOne = cpu.read(0o5146);
+		drag(600, 600);
+		box.run(100_000);
+		pressS();
+		press(984, 832); // RU: straight line
+		drag(800, 700);
+		pressS();
+		box.run(400_000);
+		const frames: { addr: number; intensify: boolean }[][] = [];
+		t340.onFrame = (f) => frames.push(f.segments);
+		box.run(3_000);
+		const permdf = frames.flat().filter((s) => s.addr >= 0o12301 && s.addr < 0o13300 && s.intensify);
+		return { afterOne, savins: cpu.read(0o5146), permdf, halted: cpu.halted };
+	};
+
+	const printed = draw([]);
+	assert.notEqual(printed.afterOne, 0, "one line fits");
+	assert.equal(printed.savins, 0, "the second line restarts SYMELEC: picture gone");
+
+	const big = draw(["core8k"]);
+	assert.equal(big.halted, false);
+	assert.notEqual(big.savins, 0, "picture survives the second line");
+	const stairs = big.permdf.filter((s) => s.addr >= 0o12400).length;
+	const straight = big.permdf.filter((s) => s.addr < 0o12400).length;
+	assert.ok(stairs >= 5, `HV staircase is lit: ${stairs}`);
+	assert.ok(straight >= 1, `RU line is lit: ${straight}`);
+});
+
+// The browser page's Demo button plays this same script; time is machine
+// cycles, so headless it draws the same house.
+test("acceptance: the house demo draws its picture with the 1972 program", () => {
+	const cpu = new Pdp7({ coreWords: 8192 });
+	loadSymelec(cpu, ["pix", "core8k"]);
+	const pen = new LightPen({ aperture: 12, name: "demo", enabled: false });
+	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
+	const box = new Cabinet({ cpu, devices: [t340, new Teletype({ printCycles: 200 }), new Clock({ cpu }), new TinyTitan()] });
+	t340.clock = () => box.cycles;
+	cpu.pc = 0o22;
+	for (let i = 0; i < 30 && !t340.lastFrame; i += 1) box.run(100_000);
+
+	const player = new DemoPlayer(houseDemo({ cpu, pen }));
+	const captions = new Set<string>();
+	let spent = 0;
+	while (!player.done && spent < 30_000_000) {
+		spent += player.advance((n) => box.run(n), 50_000);
+		captions.add(player.caption);
+	}
+	assert.ok(player.done, `demo finished in ${spent} cycles`);
+	assert.equal(cpu.halted, false);
+	assert.equal(drawing(cpu), false, "no element left open");
+	assert.ok(captions.size >= 8, `captions: ${[...captions].join(" | ")}`);
+
+	const frames: { addr: number; intensify: boolean; x0: number; y0: number; x1: number; y1: number }[][] = [];
+	t340.onFrame = (f) => frames.push(f.segments);
+	box.run(3_000);
+	const lit = frames.flat().filter((s) => s.addr >= 0o12301 && s.addr < 0o13300 && s.intensify);
+	const at = (x: number, y: number) => lit.some((s) => Math.min(s.x0, s.x1) - 16 <= x && x <= Math.max(s.x0, s.x1) + 16 && Math.min(s.y0, s.y1) - 16 <= y && y <= Math.max(s.y0, s.y1) + 16);
+	assert.ok(at(300, 350), "left wall");
+	assert.ok(at(700, 350), "right wall");
+	assert.ok(at(500, 340), "door lintel");
+	assert.ok(at(390, 440), "window");
+	assert.ok(at(500, 715), "roof peak");
+	assert.ok(at(500, 150), "ground");
+	assert.ok(at(220, 900), "sun");
 });

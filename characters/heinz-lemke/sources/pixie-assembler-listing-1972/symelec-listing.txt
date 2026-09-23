@@ -628,7 +628,7 @@
   267    1006/ 165156           DZM I DFB
   268    1007/ 205156           LAC DFB
   269    1010/ 545162           SAD BEG
-  270    1011/ 141000           SKP
+  270    1011/ 741000           SKP
   271    1012/ 601005           JMP .-5
   272
   273    1013/ 212222           LAC (12301
@@ -740,7 +740,7 @@
   375    1145/      0  CALDEF,  0
   376    1146/ 200010           LAC 10                     /CALCULATE DEFLECTION
   377    1147/  45044           DAC COMPOS
-  378    1150/ 101312           JMS MASKX
+  378    1150/ 107312           JMS MASKX
   379    1151/ 200010           LAC 10
   380    1152/  45044           DAC COMPOS
   381    1153/ 107343           JMS MASKY
@@ -759,7 +759,7 @@
   394    1165/ 211771           LAC SCRPAD
   395    1166/ 740001           CMA
   396    1167/ 352204           TAD (TEMPDF 240
-  397    1170/ 741160           SPA
+  397    1170/ 741100           SPA
   398    1171/ 605403           JMP PEN1                   /TOO MANY SYMBOLS
   399    1172/ 211771           LAC SCRPAD
   400    1173/  40010           DAC 10
@@ -811,7 +811,7 @@
   444    1244/  51754           DAC TEMP
   445    1245/ 211773           LAC WORD
   446    1246/ 252177           XOR (200                   /CHANGE SIGN
-  447    1247/ 740000           CLL
+  447    1247/ 744000           CLL
   448    1250/ 640710           ALS 10
   449    1251/ 512176           AND (177400                /+-X BECOMES -+Y
   450    1252/ 351754           TAD TEMP
@@ -868,10 +868,10 @@
   499
   500    1327/ 107522           JMS CATDAO                 /DISCONNECT LINES , IF ANY
   501    1330/ 451742           ISZ CDOCOM
-  502    1331/ 145743           DZM RCATAL
-  503    1332/ 145765           DZM RREDUC
-  504    1333/ 145775           DZM SAVGSU
-  505    1334/ 145776           DZM NODRA
+  502    1331/ 151743           DZM RCATAL
+  503    1332/ 151765           DZM RREDUC
+  504    1333/ 151775           DZM SAVGSU
+  505    1334/ 151776           DZM NODRA
   506    1335/ 106464           JMS DELLEV
   507    1336/ 603464           JMP WAIT3
   508
@@ -889,7 +889,7 @@
   520
   521    1350/ 212167           LAC (TEMPDF 10
   522    1351/  51750           DAC ELAD
-  523    1352/ 145766           DZM RROTAT
+  523    1352/ 151766           DZM RROTAT
 
 /SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  17
   524    1353/ 601316           JMP WAIT91
@@ -1552,13 +1552,13 @@
   194    2411/ 352203           TAD (1
   195    2412/  52015           DAC EL1                    /PREVENT TAIL BEING SWEPT UP IF GARBAGE COLLECTED
   196    2413/ 222233           LAC I OP+1
-  197    2414/  42234           DAC OP+3                   /SAVE ITEM
+  197    2414/  42234           DAC OP+2                   /SAVE ITEM
   198    2415/ 102253           FLST                       /MAKE SPACE FOR NEW ITEM
-  199    2416/ 202231           LAC OP+2
-  200    2417/  62231           DAC I OP+1
+  199    2416/ 202234           LAC OP+2
+  200    2417/  62233           DAC I OP+1
   201    2420/ 202233           LAC OP+1
   202    2421/  62232           DAC I OP
-  203    2422/ 445233           ISZ OP+1
+  203    2422/ 442233           ISZ OP+1
   204    2423/ 102253           FLST                       /MAKE MORE SPACE
   205    2424/ 202234           LAC OP+2
   206    2425/  62233           DAC I OP+1                 /COPY ITEM
@@ -1585,7 +1585,7 @@
   227    2446/      0  STAK-JMS, 0                          /OPERAND TO STACK
   228    2447/ 512212           AND (17777
   229    2450/  42235           DAC OP+3
-  230    2451/ 445172           ISZ LOP
+  230    2451/ 452012           ISZ LOP
   231    2452/ 212012           LAC LOP
   232    2453/ 545172           SAD LKBEG
 
@@ -1610,7 +1610,7 @@
   250                           ENTER = JMS .
   251    2472/      0           0                          /ENTER SUBROUTINE (NAME ENTER
   252    2473/  42235           DAC OP+3                   /SAVE ENTRY POINT
-  253    2474/ 445173           ISZ LINK
+  253    2474/ 452013           ISZ LINK
   254    2475/ 212013           LAC LINK
   255    2476/ 545173           SAD LKEND
   256    2477/ 102221           JMS ERR
@@ -1620,7 +1620,7 @@
   260    2503/ 622235           JMP I OP+3                 /ENTER SUBROUTINE
   261
   262                           EXIT = JMP .
-  263    2504/ 222013           LAC I LINK                 /EXIT SUBROUTINE
+  263    2504/ 232013           LAC I LINK                 /EXIT SUBROUTINE
   264    2505/ 552241           SAD (100000
   265    2506/ 102221           JMS ERR                    /ERROR EXIT
   266    2507/  42235           DAC OP+3                   /PLANT LINK
@@ -1647,7 +1647,7 @@
   287    2523/ 602530           JMP LIM1
   288
   289                                                      /LOOP INSPECTING P. NAMES
-  290    2524/ 445241  LIM2,    ISZ GIND                   / NEXT PERM NAME
+  290    2524/ 442241  LIM2,    ISZ GIND                   / NEXT PERM NAME
 
 /SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  30
   291    2525/ 202241           LAC GIND
@@ -1659,7 +1659,7 @@
   297
   298                                                      /MAIN RECURSIVE ROUTINE
   299    2533/ 202243  GBRNCH,  LAC GSTKP
-  300    2534/ 545157           SAD TOP
+  300    2534/ 545167           SAD TOP
   301    2535/ 102221           JMS ERR                    / BRANCH STACK EXPIRED
   302    2536/ 202242  MK1,     LAC GBUG
   303    2537/  62243           DAC I GSTKP
@@ -1667,8 +1667,8 @@
   305    2541/  42244  GNTR,    DAC GTEMP                  / INITIAL ENTRY
   306    2542/ 222242           LAC I GBUG                 / "CAR"
   307    2543/  42242           DAC GBUG
-  308    2544/ 222242  GR2,     LAC I GBUG                 / AND MOVE TO ITEM
-  309    2545/ 740104           SMA
+  308    2544/ 222242  GB2,     LAC I GBUG                 / AND MOVE TO ITEM
+  309    2545/ 740100           SMA
   310    2546/ 602562           JMP GITEM                  / JUMP IF ITEM
   311    2547/ 512212           AND (017777
   312    2550/  42242           DAC GBUG
@@ -1703,7 +1703,7 @@
   341    2601/ 442242  GBCDR,   ISZ GBUG                   / "CDR"
   342    2602/ 202242           LAC GBUG
   343    2603/  42244           DAC GTEMP
-  344    2604/ 602544           JMP GR2                    / REPEAT
+  344    2604/ 602544           JMP GB2                    / REPEAT
   345
   346                                                      / FOUND 1ST NIL
   347    2605/ 352210  GNIL,    TAD (200000
@@ -2253,7 +2253,7 @@
    92    3471/ 205056           LAC XINS
    93    3472/ 740001           CMA                        /GET DATA FOR ATTPO
    94    3473/ 352203           TAD (1
-   95    3474/ 344745           TAD TEMPY
+   95    3474/ 344745           TAD TEMPX
    96    3475/  45054           DAC XTOT
    97    3476/ 205057           LAC YINS
    98    3477/ 740001           CMA
@@ -2333,7 +2333,7 @@
   170    3601/ 603606           JMP WAITIA
   171    3602/ 152031           DZM RDOCOM
   172    3603/ 765146           LAW SAVINS
-  173    3604/ 103170           COMPIL
+  173    3604/ 110170           COMPIL
   174    3605/ 452032           ISZ CISRTN
 
 /SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  42
@@ -2421,8 +2421,8 @@
   254    3721/ 204767           LAC X
   255    3722/  51764           DAC BSWOR                  /BLINK, SCALE AND INTENSITY WORD IN INST OR LINE
   256    3723/ 765146           LAW SAVINS
-  257    3724/ 103170           COMPIL                     /COMPILE NEW PICTURE
-  258    3725/ 212237           LAC (160117                /TO GET SCALE AND BRIGHTNESS RESTORED
+  257    3724/ 110170           COMPIL                     /COMPILE NEW PICTURE
+  258    3725/ 212227           LAC (160117                /TO GET SCALE AND BRIGHTNESS RESTORED
   259    3726/  71767           DAC I BLINK1               /RESTORE INTENSITY AFTER BLINK
   260    3727/ 777767           LAW 17767
   261    3730/  45134           DAC MBLINK                 /START BLINK
@@ -2443,7 +2443,7 @@
   276    3745/ 552143           SAD 13
   277    3746/ 604075           JMP MESIN3                 /GOT A /
   278    3747/ 545154           SAD COLON
-  279    3750/ 604036           JMP MESIN6                 /GOT A:
+  279    3750/ 604036           JMP MESIN8                 /GOT A:
   280    3751/ 545155           SAD CR
   281    3752/ 603756           JMP . + 4                  /GOT A CR
   282    3753/ 777777           LAW
@@ -3399,7 +3399,7 @@
   415    5713/ 705314           DJS VE PRD
   416    5714/ 160000           PAR SB
   417    5715/ 765717           DJS SB . 2
-  418    5716/ 606052           JMP TD
+  418    5716/ 606062           JMP TD
   419    5717/ 260003           DDS CH 3
   420    5720/ 243700           243700                     /T
   421    5721/ 160000           PAR SB
@@ -3676,7 +3676,7 @@
   681
   682    6271/      0  TESLEV,  0                          /TEST BLINKING AND TOP LEVEL
   683    6272/ 205134           LAC MBLINK
-  684    6273/ 741200           SMA
+  684    6273/ 741200           SNA
   685    6274/ 605403           JMP PEN1
   686    6275/ 205116           LAC LEVEL
   687    6276/ 545117           SAD BLEVEL
@@ -4937,7 +4937,7 @@
    80   10273/ 312077           ADD (-24
    81   10274/  45022           DAC YBEAM
    82   10275/ 145002           DZM MKER
-   83   10276/ 144754           DZM TEM
+   83   10276/ 144764           DZM TEM
    84   10277/ 110631           JMS COMP11
    85   10300/ 110631           JMS COMP11
    86   10301/ 110631           JMS COMP11
@@ -5102,16 +5102,16 @@
   239   10527/ 741000           SKP
   240   10530/ 111134           WRLB
   241   10531/ 777777           LAM
-  242   10532/ 345760           TAD MRKY
+  242   10532/ 344760           TAD MRKY
   243   10533/  44760           DAC MRKY
   244   10534/ 610505           JMP .-27
   245   10535/ 212215           LAC (160000
   246   10536/ 110756           WRDF                       /SET SUBROUTINE MODE
   247   10537/ 110756           WRDF                       /WRITE JUNK TO STEP DF
-  248   10540/ 352212           TAD (200000
+  248   10540/ 352210           TAD (200000
   249   10541/  64761           DAC I GAMMA                /DDS DELTA TO GAMMA
   250   10542/ 760000           LAW
-  251   10543/ 345761           TAD GAMMA
+  251   10543/ 344761           TAD GAMMA
   252   10544/  64763           DAC I BETA                 /DJS GAMMA TO BETA
   253   10545/ 602504           EXIT
   254   10546/ 764767  COMP3,   LAW X                      /FIRST GO ROUND
@@ -5183,7 +5183,7 @@
   318   10644/ 211754           LAC TEMP
   319   10645/ 610650           JMP .+3
   320   10646/ 445002           ISZ MKER
-  321   10647/ 212266           LAC (37
+  321   10647/ 212206           LAC (37
   322   10650/  44777           DAC FIG
   323   10651/ 204764           LAC TEM
   324   10652/ 660706           ALSS 6
@@ -5198,7 +5198,7 @@
   333   10662/ 224767           LAC I X
   334   10663/ 110756           WRDF                       /ATNAME
   335   10664/ 205023           LAC SVAD
-  336   10665/ 352212           TAD (200000
+  336   10665/ 352210           TAD (200000
   337   10666/ 110756           WRDF                       /DDS SVAD
   338   10667/ 630656           JMP I COMP12
   339
@@ -5217,7 +5217,7 @@
   350
   351
   352   10701/      0  GETD-JMS, 0                          /GET DATA FROM DAD
-  353   10702/ 102225           JMS OP+5                   /SET OP+1 SO ENTRY NAME STAYS PUT
+  353   10702/ 102225           JMS OP-5                   /SET OP+1 SO ENTRY NAME STAYS PUT
   354   10703/ 762233           LAW OP+1
   355   10704/ 103113           FINDS                      /GO TO DADD
   356   10705/ 103126           FINDN
@@ -5430,7 +5430,7 @@
   557   11162/ 111403           WINDOW                     /WINDOW
   558   11163/ 204754           LAC YY1
   559   11164/ 344775           TAD EX1
-  560   11165/ 545042           SAD SUMB
+  560   11165/ 545040           SAD SUMB
   561   11166/ 611210           JMP WRLB1                  /SUM MATCHES ON 1ST POINT
   562   11167/ 204776           LAC EX2
   563   11170/ 110765           STAKX
@@ -5445,12 +5445,12 @@
   572   11201/ 204754           LAC YY1
   573   11202/ 110777           STAKY
   574   11203/ 111035  WRLB2,   DRLTO                      /DRAW LINE
-  575   11204/ 144002           STL
+  575   11204/ 744002           STL
   576   11205/ 111011           UNSTKX
   577   11206/ 111023           UNSTKY
   578   11207/ 631134           JMP I WRLB-JMS
   579   11210/ 204775  WRLB1,   LAC EX1
-  580   11211/ 110765           STAKY
+  580   11211/ 110765           STAKX
 
 /SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  97
   581   11212/ 204754           LAC YY1

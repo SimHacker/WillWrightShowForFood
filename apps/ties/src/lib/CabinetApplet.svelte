@@ -12,6 +12,8 @@
 		Teletype,
 		TinyTitan,
 		Cabinet,
+		DemoPlayer,
+		houseDemo,
 		printScreen
 	} from '@wwsff/cabinet';
 	import { loadSymelec } from './symelec-boot.js';
@@ -67,6 +69,9 @@
 	let pen = null;
 	let pressedId = null;
 	let raf = 0;
+	let player = null;
+	let demoCaption = $state('');
+	let demoOn = $state(false);
 
 	// The 340 refreshes hundreds of times per browser frame. Showing only the last one
 	// aliases: anything the program draws on some refreshes and not others (the ring
@@ -103,13 +108,16 @@
 		ctx.lineCap = 'round';
 		for (const { s, n } of seen.values()) {
 			const lit = Math.max(s.intensity ?? 7, 1) / 7;
-			ctx.globalAlpha = lit * (0.2 + 0.8 * (n / total));
+			const alpha = lit * (0.2 + 0.8 * (n / total));
 			const y0 = 1023 - s.y0;
 			const y1 = 1023 - s.y1;
 			if (s.x0 === s.x1 && s.y0 === s.y1) {
-				const d = Math.max(1, s.scale || 1);
-				ctx.fillRect(s.x0, y0, d, d);
+				// Dots (the tracking spiral) land on few refreshes; a point on glass glows longer than that.
+				ctx.globalAlpha = Math.min(1, alpha * 1.8 + 0.15);
+				const d = Math.max(2, s.scale || 1);
+				ctx.fillRect(s.x0 - d / 2, y0 - d / 2, d, d);
 			} else {
+				ctx.globalAlpha = alpha;
 				ctx.beginPath();
 				ctx.moveTo(s.x0, y0);
 				ctx.lineTo(s.x1, y1);
@@ -130,6 +138,28 @@
 		const frames = batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
 		drawSegments(ctx, integrate(frames), frames.length);
 		batch = [];
+		if (player || pressedId !== null) drawPen(ctx);
+	}
+
+	// The pen is not on the tube; this is where it is and what it can see.
+	function drawPen(ctx) {
+		const x = pen.x;
+		const y = 1023 - pen.y;
+		ctx.globalAlpha = pen.enabled ? 0.22 : 0.1;
+		ctx.fillStyle = '#ffd27a';
+		ctx.beginPath();
+		ctx.arc(x, y, pen.aperture, 0, 2 * Math.PI);
+		ctx.fill();
+		ctx.globalAlpha = pen.enabled ? 0.8 : 0.35;
+		ctx.strokeStyle = '#ffd27a';
+		ctx.lineWidth = 1.5;
+		ctx.stroke();
+		ctx.globalAlpha = pen.enabled ? 1 : 0.5;
+		ctx.fillStyle = pen.enabled ? '#fff4d0' : '#ffd27a';
+		ctx.beginPath();
+		ctx.arc(x, y, pen.enabled ? 3.5 : 2.5, 0, 2 * Math.PI);
+		ctx.fill();
+		ctx.globalAlpha = 1;
 	}
 
 	let readout = $state('');
@@ -161,7 +191,15 @@
 		const cycles = Math.min(Math.floor(owed), MAX_CYCLES_PER_FRAME);
 		owed = Math.min(owed - cycles, MAX_CYCLES_PER_FRAME);
 		try {
-			if (cycles > 0) box.run(cycles);
+			if (cycles > 0) {
+				if (player) {
+					player.advance((n) => box.run(n), cycles);
+					demoCaption = player.caption;
+					if (player.done) stopDemo();
+				} else {
+					box.run(cycles);
+				}
+			}
 			drawFrame();
 			updateReadout(now);
 			fault = null;
@@ -188,7 +226,7 @@
 
 	// Button down = pen aimed at the glass; button up = pen lifted, sees nothing.
 	function onPointerDown(event) {
-		if (!pen || !canvasEl || event.button !== 0) return;
+		if (!pen || !canvasEl || event.button !== 0 || player) return;
 		event.preventDefault();
 		event.stopPropagation();
 		try {
@@ -229,6 +267,59 @@
 		URL.revokeObjectURL(url);
 	}
 
+	/** A fresh PDP-7 with SYMELEC booted to its first picture. Throws if the picture never comes. */
+	function bootMachine() {
+		cpu = new Pdp7({ coreWords: 8192 });
+		loadSymelec(cpu, spec.patches ?? undefined);
+		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
+		t340 = new Type340({
+			fetch: (a) => cpu.read(a),
+			store: (a, w) => cpu.write(a, w),
+			pens: [pen],
+			onFrame: collectFrame
+		});
+		box = new Cabinet({
+			cpu,
+			devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan()]
+		});
+		t340.clock = () => box.cycles;
+		// Inspector handle: $0.cabinet in devtools reaches the live machine.
+		canvasEl.cabinet = { cpu, t340, pen, box };
+		batch = [];
+		cpu.pc = 0o22;
+		for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
+			box.run(bootChunk);
+			if (cpu.halted) break;
+		}
+		if (!t340.lastFrame && t340.segments.length < 100) {
+			throw new Error('boot picture did not appear');
+		}
+	}
+
+	function startDemo() {
+		pressedId = null;
+		bootMachine();
+		player = new DemoPlayer(houseDemo({ cpu, pen }));
+		demoCaption = '';
+		demoOn = true;
+	}
+
+	function stopDemo() {
+		player = null;
+		demoOn = false;
+		if (pen) pen.enabled = false;
+	}
+
+	function onDemo() {
+		try {
+			if (player) stopDemo();
+			else startDemo();
+		} catch (e) {
+			error = e instanceof Error ? e.message : String(e);
+			status = 'error';
+		}
+	}
+
 	function onVisibility() {
 		if (!document.hidden && running) drawFrame();
 	}
@@ -245,41 +336,12 @@
 					throw new Error(`unknown machine: ${spec.machine}`);
 				}
 
-				cpu = new Pdp7({ coreWords: 8192 });
-				loadSymelec(cpu, spec.patches ?? undefined);
-
-				pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
-				t340 = new Type340({
-					fetch: (a) => cpu.read(a),
-					store: (a, w) => cpu.write(a, w),
-					pens: [pen],
-					onFrame: collectFrame
-				});
-				box = new Cabinet({
-					cpu,
-					devices: [
-						t340,
-						new Teletype({ printCycles: 1000 }),
-						new Clock({ cpu }),
-						new TinyTitan()
-					]
-				});
-				t340.clock = () => box.cycles;
-				// Inspector handle: $0.cabinet in devtools reaches the live machine.
-				canvasEl.cabinet = { cpu, t340, pen, box };
-
-				cpu.pc = 0o22;
 				status = 'booting';
-				for (let i = 0; i < 30 && !t340.lastFrame && !cancelled; i += 1) {
-					box.run(bootChunk);
-					if (cpu.halted) break;
-				}
+				bootMachine();
 				if (cancelled) return;
-				if (!t340.lastFrame && t340.segments.length < 100) {
-					throw new Error('boot picture did not appear');
-				}
 
 				status = 'live';
+				if (spec.demo) startDemo();
 				running = true;
 				drawFrame();
 				raf = requestAnimationFrame(loop);
@@ -330,6 +392,9 @@
 			</div>
 		{/if}
 	</div>
+	{#if demoOn}
+		<p class="demo-caption" aria-live="polite">{demoCaption || ' '}</p>
+	{/if}
 	<figcaption bind:this={captionEl}>
 		<span class="title">SYMELEC 1972</span>
 		{#if fault}
@@ -343,6 +408,12 @@
 				title="1× is a real PDP-7: 571,429 memory cycles a second"
 				onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
 				>{speed === Infinity ? 'max' : `${speed}×`}</button
+			>
+			<button
+				type="button"
+				disabled={status !== 'live'}
+				title="Reboot and let a scripted pen draw a house, the 1972 way"
+				onclick={onDemo}>{demoOn ? 'Stop demo' : 'Demo'}</button
 			>
 			<button type="button" disabled={status !== 'live'} onclick={onPrintScreen}>Print screen</button>
 		</span>
@@ -386,6 +457,15 @@
 		color: #9fe8a0;
 		background: rgba(0, 0, 0, 0.75);
 		pointer-events: none;
+	}
+	.demo-caption {
+		margin: 0;
+		padding: 0.3rem 0.5rem;
+		min-height: 1.2em;
+		font-family: ui-monospace, monospace;
+		font-size: 0.72rem;
+		color: #ffd27a;
+		border-top: 1px solid #333;
 	}
 	.overlay .err {
 		color: #f88;

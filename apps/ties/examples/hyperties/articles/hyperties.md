@@ -22,6 +22,7 @@ article: The Space Telescope in Orbit
 ```
 
 - ~pixie/PIXIE live~ — **a PDP-7 running in this page.** Heinz Lemke's 1972 PIXIE program, SYMELEC, executing on an emulated PDP-7 and Type 340 vector display. Your mouse is the light pen. The earliest known radial menus, operated by hand.
+- ~playground/Sun Founders Big Heads~ — Educom 1988. Point at a Sun founder and his head pops out. Click the background and all three pop. I inflated them by blowing into the optical mouse, for a guy who turned out to be Bill Joy.
 - ~A Look Back~ — Shneiderman, Plaisant, Botafogo, Hopkins, Weiland, 1991. The paper, with the pictures, on this site.
 - ~Wikipedia~ — the stub the encyclopedia has. This page is the article they have not written.
 - ~Hacker News archive~ — the threads and mail, split into articles instead of one wall.

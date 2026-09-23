@@ -40,6 +40,11 @@ const DJP = 2;
 const DJS = 3;
 const DDS = 1;
 
+/* 13-bit display addresses. SIMH wraps DAC at 07777; SYMELEC cannot run
+   that way: PEN3 IDLAs the compiled picture (PERMDF) at DFB = 12301, in
+   the upper 4K of an 8K PDP-7, and the 347 target field is bits 5-17. */
+const ADDR = 0o17777;
+
 /* DEC bit numbering: bit 0 is the MSB. Keep it verbatim; it is where the bugs live. */
 const TESTBIT = (w: number, b: number): boolean => (w & (1 << (17 - b))) !== 0;
 const GETFIELD = (w: number, start: number, end: number): number =>
@@ -177,7 +182,7 @@ export class Type340 implements Device {
 		for (let i = 0; i < this.wordsPerTick && this.status === 0; i += 1) {
 			const word = this.fetch(this.dac);
 			const addr = this.dac;
-			this.dac = (this.dac + 1) & 0o7777;
+			this.dac = (this.dac + 1) & ADDR;
 			this.instruction(word, addr);
 		}
 	}
@@ -221,7 +226,7 @@ export class Type340 implements Device {
 					   recover with LAW LB; IDLA. SIMH's glue cleared only
 					   STOPPED|STOP_INT and would wedge after a pen hit or edge
 					   violation; the listing (5406, 5602, 5616) says clear all. */
-					if ((req.pulse & 0o10) === 0) this.setDac(ac & 0o7777);
+					if ((req.pulse & 0o10) === 0) this.setDac(ac & ADDR);
 					this.status = 0;
 					this.enabled = true;
 					this.closeFrame();
@@ -261,7 +266,7 @@ export class Type340 implements Device {
 	}
 
 	private setDac(addr: number): void {
-		this.dac = addr & 0o7777;
+		this.dac = addr & ADDR;
 		this.mode = MODE.PARAM;
 		this.subr = -1;
 	}
@@ -378,10 +383,10 @@ export class Type340 implements Device {
 						this.asr = this.dac;
 						this.saveFF = true;
 						this.subr = target;
-						this.dac = target & 0o7777;
+						this.dac = target & ADDR;
 						break;
 					case DJP:
-						this.dac = target & 0o7777;
+						this.dac = target & ADDR;
 						break;
 					case DDS:
 						/* Deposit "DJP <return>" into core. PIXIE reads locations

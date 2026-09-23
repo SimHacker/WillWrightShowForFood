@@ -123,30 +123,37 @@ to a `TitanPort`. That is the whole backplane.
 
 ## What this is not yet
 
-The full PDP-7 card, 340 DMA, Wiseman's link beyond the stub, the
-browser bench itself. What *is* met, each with an acceptance test:
-**Rung 1** — SYMELEC boots, deposits `JMP INT` at 1, turns interrupts
-on, issues `IDLA` (the catch was the 1972 assembler's literal pool,
-listing pages 105–106, absent from the `.oct`;
-`scripts/extract-literals.mjs` derives `symelec-literals.oct`).
-**Rung 2** — the 340 executes SYMELEC's own boot display file: mode
-machine, 347 subroutines, 342 characters from Lars's glyphs, segments
-with provenance, SVG/YAML export
-([snapshots/symelec-boot.svg](snapshots/symelec-boot.svg)).
-**Rung 3** — the 1972 tracking loop tracks a virtual pen: acquire,
-drag, and lose the cross, with `TRCR`/`POSCR` patching core
-([TRACKING.md](TRACKING.md)).
-**Rung 4** — type `TITAN` on the teletype and SYMELEC phones
-[tiny-titan](TINY-TITAN.md): headers, checksum, `PXID` first word on
-the wire, its own ring file streamed and recorded (the command
-language and the transport-agnostic `TitanPort` seam are in
-[DESIGN.md](DESIGN.md#tiny-titan)). Next rung: draw with the
-lightbuttons; serve a structure *back* over the link. SIMH stays on
-the desk as the oracle. The boundary bugs met on the way up each rung
-— and the one where 1972 NAK'd 2026 — are the field notes in
-[OFF-BY-ONE.md](OFF-BY-ONE.md). Every bug since, including the
-browser page's, is in [BUG-JOURNAL.md](BUG-JOURNAL.md): one wrong
-display word in the transcription, and a PDP-7 whose speed was set
-by the monitor it was shown on.
+Not built:
+
+- the full PDP-7 card
+- 340 DMA
+- Wiseman's link beyond the stub
+- the browser bench itself
+
+### The rungs climbed so far
+
+Each rung has an acceptance test in `src/cabinet.test.ts`.
+
+| Rung | What runs | Notes |
+|------|-----------|-------|
+| **1. Boot** | SYMELEC boots, deposits `JMP INT` at 1, turns interrupts on, issues `IDLA`. | The catch was the 1972 assembler's literal pool: listing pages 105–106, absent from the `.oct`. `scripts/extract-literals.mjs` derives `symelec-literals.oct`. |
+| **2. Display** | The 340 executes SYMELEC's own boot display file: mode machine, 347 subroutines, 342 characters from Lars's glyphs, segments with provenance, SVG/YAML export. | [snapshots/symelec-boot.svg](snapshots/symelec-boot.svg) |
+| **3. Tracking** | The 1972 tracking loop follows a virtual pen: acquire, drag, and lose the cross, with `TRCR`/`POSCR` patching core. | [TRACKING.md](TRACKING.md) |
+| **4. Titan** | Type `TITAN` on the teletype and SYMELEC phones [tiny-titan](TINY-TITAN.md): headers, checksum, `PXID` first word on the wire, its own ring file streamed and recorded. | Command language and the transport-agnostic `TitanPort` seam: [DESIGN.md](DESIGN.md#tiny-titan) |
+| **5. Drawing** | Draw with the lightbuttons: S, drag, F, several lines, HV staircases and RU straight lines, all lit. | Needs the `core8k` patch: as printed, the display file holds one line. |
+| **6. Demo** | A scripted pen draws a house under a rising sun, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture |
+
+### Next
+
+- Serve a structure *back* over the link.
+- SIMH stays on the desk as the oracle.
+
+### Where the bugs are written down
+
+- [OFF-BY-ONE.md](OFF-BY-ONE.md): the boundary bugs met on the way up
+  each rung, and the one where 1972 NAK'd 2026.
+- [BUG-JOURNAL.md](BUG-JOURNAL.md): every bug since, including the
+  browser page's: wrong words in the transcription, and a PDP-7 whose
+  speed was set by the monitor it was shown on.
 
 ↑ [packages](../README.md)

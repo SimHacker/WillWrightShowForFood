@@ -138,6 +138,49 @@ recomputation of every `.`-relative operand in the listing finds no other disagr
    leaks its top bit into the second octal digit. Fixed, the true rate was 1.9%.
    *Calibrate the instrument before trusting the readings.*
 
+## Found by running it
+
+Opcheck validates each word's *shape*: octal digits, a real opcode. A misread that turns
+one valid instruction into another valid instruction passes. Running SYMELEC in the
+emulator found those, one symptom at a time (the stories are in
+[BUG-JOURNAL.md](../../../../packages/cabinet/BUG-JOURNAL.md), rung 6), and each find
+became a checker so the next one of its kind is caught on paper:
+
+| Checker | Checks | Result |
+|---|---|---|
+| `scripts/check-symbol-operands.py` | memory-reference words against the symbol table (`LAC FOO` must address `FOO`) | 2415 checked; the rest verified as symbol-table misreads or text-only |
+| `scripts/check-literals.py` | `OP (VALUE` against the literal pool on pages 105–106 | 313 checked; 15 open, mostly off-by-one negative literals |
+| `scripts/check-operate.py` | operate instructions computed from the mnemonic, `!` combinations included | 337 checked, 0 mismatches |
+
+Words corrected against the scans, transcribed → printed:
+
+| Addr | Was | Is | | Addr | Was | Is |
+|---|---|---|---|---|---|---|
+| 1011 | 141000 | 741000 | | 3604 | 103170 | 110170 |
+| 1150 | 101312 | 107312 | | 3724 | 103170 | 110170 |
+| 1170 | 741160 | 741100 | | 3725 | 212237 | 212227 |
+| 1247 | 740000 | 744000 | | 5716 | 606052 | 606062 |
+| 1331 | 145743 | 151743 | | 10276 | 144754 | 144764 |
+| 1332 | 145765 | 151765 | | 10532 | 345760 | 344760 |
+| 1333 | 145775 | 151775 | | 10540 | 352212 | 352210 |
+| 1334 | 145776 | 151776 | | 10543 | 345761 | 344761 |
+| 1352 | 145766 | 151766 | | 10647 | 212266 | 212206 |
+| 2416 | 202231 | 202234 | | 10665 | 352212 | 352210 |
+| 2417 | 062231 | 062233 | | 11165 | 545042 | 545040 |
+| 2422 | 445233 | 442233 | | 11204 | 144002 | 744002 |
+| 2451 | 445172 | 452012 | | | | |
+| 2474 | 445173 | 452013 | | | | |
+| 2504 | 222013 | 232013 | | | | |
+| 2524 | 445241 | 442241 | | | | |
+| 2534 | 545157 | 545167 | | | | |
+| 2545 | 740104 | 740100 | | | | |
+
+The listing text also had mnemonic and operand misreads with the word right (`SMA` for
+`SNA` at 6273, `GR2` for `GB2`, `TEMPY` for `TEMPX`, and others); those are fixed in
+`symelec-listing.txt` only. One error class in the table is new to the taxonomy: **the
+first digit.** A 7 read as 1 at 11204 and 1011 turns an operate instruction (`STL`, `SKP`)
+into a memory reference (`DZM`). The shape checker cannot see it; the mnemonic can.
+
 ## What we learned
 
 - **Redundancy is the cheapest verifier.** The listing states every instruction twice
