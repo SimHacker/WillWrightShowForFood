@@ -77,6 +77,8 @@ specification. The databook is the oracle for what the corpus means.
 
 Full inventory and mapping: [SIMH-MAP.md](SIMH-MAP.md).
 Browser precedents and API decisions: [WEB-BENCH.md](WEB-BENCH.md).
+What to take from Paul Kimpel's IBM 1620 emulator, with a plan:
+[RETRO-1620.md](RETRO-1620.md).
 
 [Open SIMH](https://github.com/open-simh/simh) is the reference bench.
 Bob Supnik built the 18-bit family. Lars Brinkhoff wrote the Type 340
