@@ -1,48 +1,24 @@
-# A Repo Show with Heather & Steve Alvey 🧟 *(seed)*
+# A Repo Show with Heather Castillo & Steve Alvey 🧟🧟
 
-> Drain Hell — *Afterlife* × ZombieSims, with the **SimFreaks** and **SimSlice** crews.
+Welcome to the collaborative showcase for **SimFreaks** and **SimSlice**. This directory serves as the central hub for our joint 26-year career in creative game design, custom object scripting, and community leadership within the classic simulation scene. 
 
-A group-show seed reuniting **Heather Castillo (SimFreaks)** and **Steve Alvey
-(SimSlice / SliceCity** — fan-coded **SimCity running *inside* The Sims**) — partners and longtime
-Sims content creators with **~26-year respected brands** as publishers, artists, programmers, and
-community leaders, still shipping tour-de-force magnum-opus expansion packs like **Zombie Sims**.
+Instead of relying on surface-level cosmetic modifications, our projects focus on sophisticated, object-driven programming and deep custom behavioral scripting that pushes the original engine of *The Sims* to its absolute creative limits.
 
-The show's playful hook bridges Maxis's *Afterlife* ("hell is full") to a **ZombieSims** horde game:
-subtract damned souls by religion from *Afterlife* saves, spawn zombie waves with interchangeable
-SimFreaks/SimSlice skins, scale toward *They Are Billions* pressure — and play it live.
+## Shipped Masterworks & Project Profiles
 
-**Origin story:** two independent fan sites (**SimFreaks** + **SimSlice**) → community marriage →
-**Zombie Sims** together → **Gallium / Proxi** with Will → **Soul City** with Don now.
-[`sources/fan-band-marriage-arc.md`](sources/fan-band-marriage-arc.md)
+*   **SimFreaks (Founded by Heather Castillo):** One of the longest-running and most respected custom-content houses in the history of *The Sims*. At its peak, it managed a global network of 28 collaborative artists, pioneering advanced object suites and environmental asset designs that heavily influenced early Maxis expansion prototypes.
+*   **SimSlice / SliceCity (Created by Steve Alvey):** A legendary simulation development house famous for high-concept, "game-within-a-game" programming logic—including *SliceCity*, a functional city simulation running entirely inside *The Sims* environment.
+*   **ZombieSims:** Our landmark, year-long collaborative project developed during the 2020 lockdowns. It stands as a comprehensive, 100% object-driven total overhaul that introduces strategic perimeters, modular defensive tools, dynamic environmental disasters, and automated cleanup lifecycles to the sandbox without altering the core executable engine files.
 
-## The bigger why — Soul City publishing
+## 🧭 In This Directory
 
-Underneath the fun: Don is building [**Soul City**](../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md) — create · publish · share — for the
-Alveys' enormous **artisanal back-catalogs** and current streams (and his own). Federated catalogs:
-[SimFreaks](../../catalogs/simfreaks/README.md), [SimSlice](../../catalogs/simslice/README.md),
-[SimProv](../../catalogs/simprov/README.md), [Zombie Sims](../../catalogs/zombie-sims/README.md).
-Republishing the **SimProv Wedding Playset** (made with Heather and Steve, **SimBabes**, and other artists), reopening its
-development to fans + devs, and **reincarnating** the classic Sims tools (SimShow, Sim Transmogrifier,
-RugOMatic, body/head/wig editors…) as living, open, optionally **AI-orchestrated** apps. Their sites
-become storefronts; the community keeps making and selling new work.
+*   **`README.md`**: This page—an overview of our collective careers and creative direction.
+*   **`zombiesims.md`**: [The Complete ZombieSims Object-Driven Systems Manual](./zombiesims.md) — Our definitive, first-edition blueprint detailing the inner mechanics of the Ham Radio master controller, custom weapon progressions, free volunteer services, and environmental hazard scripts.
 
-## Support independent creators (the point)
+## 🌐 Browse & Connect
 
-Heather and Steve are **independent creators** who've paid the mortgage for years on **subscriptions,
-content sales, and side jobs**. This show is a **non-extractive lift** — celebrate the work and send
-real **fans and subscribers** their way ([simfreaks.com](https://www.simfreaks.com/)). Both also
-worked with **Will Wright at Gallium Studios** (Proxi).
-
-## In this directory
-
-- [`sources/fan-band-marriage-arc.md`](sources/fan-band-marriage-arc.md) — **fan band back (and still) together** story card (sites → marriage → Zombie Sims → Gallium → Soul City)
-- [`SHOW.yml`](SHOW.yml) — the **whole-career show** about both Alveys and all their projects
-  (SimFreaks, SimSlice/SliceCity, Zombie Sims, the Gallium chapter), framed to drive fans + the
-  Micropolis publishing system. Episodes listed inside.
-- [`afterlife-zombie-bridge.yml`](afterlife-zombie-bridge.yml) — the **flagship episode**: the
-  two-way soul ledger, *They Are Billions* horde pressure, and the Micropolis publishing angle.
-
-Guests: [`characters/heather-castillo/`](../../characters/heather-castillo/README.md) ·
-[`characters/steve-alvey/`](../../characters/steve-alvey/README.md). Consent **not yet asked**.
-
-— Don Hopkins *(User Interface Flower Child)*
+*   **Heather Castillo:** [Bio & Creative Journey](../../characters/heather-castillo/README.md) · [LinkedIn](https://linkedin.com)
+*   **Steve Alvey:** [Bio & Programming Profile](../../characters/steve-alvey/README.md)
+*   **ZombieSims:** [zombiesims.com](https://www.zombiesims.com/)
+*   **SimFreaks:** [simfreaks.com](https://www.simfreaks.com/)
+*   **SimSlice:** [simslice.com](https://www.simslice.com/)
