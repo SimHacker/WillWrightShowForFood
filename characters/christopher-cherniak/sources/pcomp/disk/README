@@ -1,0 +1,31 @@
+			 CogSci Courseware Project
+			 Philosophy Department
+			 University of Maryland
+           		 College Park, MD 20742
+
+
+
+
+                        COMPUTATION THEORY PACKAGE
+                        --------------------------
+
+PCOMP is a set of onscreen simulator/interpreters and editors for three
+classical types of abstract models of computation:  (a) TM* for Turing
+machines (includes Universal Turing machine);  (b) RAM* for simplified
+von Neumann architecture random-access machines; and (c) AB* for abacus/
+register machines.  Capable of million-step operations.  Users with no
+computer science background can construct, run, and debug a wide variety
+of types of programs.  For teaching fundamentals of the theory of
+computation in a maximally student-friendly way.
+
+Equipment:  PCOMP runs on a bottom of the line IBM PC or compatible machine --
+black & white, monochrome, or color.  Requires 256K RAM, 360K of diskette
+space.
+
+PCOMP creates ASCII files (any wordprocessor can read and/or modify them).
+Files can be on disk in B-drive; to access files in B-drive, filename is
+preceded by "B:".
+
+PCOMP needs no special installation procedure, and is invoked by typing the
+command PCOMP at the DOS prompt.
+

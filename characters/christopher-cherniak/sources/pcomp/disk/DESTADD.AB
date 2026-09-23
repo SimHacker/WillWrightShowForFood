@@ -1,0 +1,9 @@
+DESTADD.AB:
+ 1: SET B    12  
+ 2: SET A     7  
+ 3: DEC B        
+ 4: INC A        
+ 5: ZER B     7  
+ 6: GTO          
+ 7: END          
+99: END          

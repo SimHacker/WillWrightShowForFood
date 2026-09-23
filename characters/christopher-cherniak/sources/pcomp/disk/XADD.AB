@@ -1,0 +1,20 @@
+XADD.AB:
+ 1: DEC B        ---|                         ---|
+ 2: INC A           |---Increment A and C        |
+ 3: INC C           |   B number of times        |
+ 4: ZER B     6     |   while decrementing B     |
+ 5: GTO  1       ---|                            |---Add B into A
+ 6: DEC C        ---|                            |
+ 7: INC B           |---Restore B and C to       |
+ 8: ZER C    10     |   their previous values    |
+ 9: GTO  6       ---|   before this routine      |
+10: END                 was invoked           ---|
+12:              PURPOSE: compute the sum of two given integers.
+13:              INPUT:   register [A] contains an integer;
+14:                       register [B] contains a positive integer
+15:                       (assuming that register [C] contains 0).
+16:              OUTPUT:  register [A] contains the sum of the
+17:                       original contents of [A] and [B]
+19:              (XMULT.AB calls this program as a subroutine,
+20:               passing the arguments in registers [A] and [B])
+99: END          

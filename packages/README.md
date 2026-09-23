@@ -20,7 +20,7 @@ what's reusable here — don't leave genius on a dead branch.
 | [`wwsff-tooling/`](wwsff-tooling/README.md) | Dev utilities stub (verify, future sync) |
 | [`tiny-teco/`](tiny-teco/README.md) | TinyTeco (`@wwsff/tiny-teco`) — ITS subset, Minsky 1981 mail |
 | [`cabinet/`](cabinet/README.md) | Cabinet (`@wwsff/cabinet`) — emulator backplane; PDP-7 first plugin |
-| [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs) |
+| [`turing/`](turing/SCHEMA.yml) | YAML-Jazz Turing machines (Cherniak-class + UTMs); the recovered PCOMP disk in [`PCOMP.md`](turing/PCOMP.md) |
 
 Future packages may wrap [MicropolisCore](https://github.com/SimHacker/MicropolisCore) deps
 (`@micropolis/sims-io`, `@micropolis/render-core`, …) as `@wwsff/*` adapters for Repo Show bridges.

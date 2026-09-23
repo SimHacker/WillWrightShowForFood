@@ -7,6 +7,7 @@ name: Unary add
 credits:
   - Christopher Cherniak — TM* / PCOMP, Philosophy and Computers, University of Maryland
   - Reimagined here as a student machine, not a recovered file from the course disk
+  - The disk's own adder is pcomp-add.yml (erase the leftmost 1, fill the separator)
 blank: "0"
 symbols: ["0", "1"]
 start: to-sep

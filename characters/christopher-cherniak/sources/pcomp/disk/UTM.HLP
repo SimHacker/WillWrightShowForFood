@@ -1,0 +1,144 @@
+                                  UTM HELP
+===============================================================================
+To print this help file: in DOS, type "PRINT UTM.HLP"
+===============================================================================
+
+   A U(niversal) T(uring) M(achine) is a Turing state table which enables TM*
+theoretically to run any other Turing machine described on the Turing input
+tape (the simulated or "pseudo-TM").  The UTM here is modeled along the lines
+of:
+
+                Marvin Minsky
+                COMPUTATION: FINITE AND INFINITE MACHINES
+                [Chapters 6-7]
+                Prentice-Hall, Englewood Cliffs, NJ (1967)
+
+
+                               SPECIAL SYMBOLS
+                               ---------------
+To enable this specific UTM machine to operate best in the TM* environment,
+special provisions have been added:
+   The UTM tape contains only the symbols: %!0, %!1, %!A, %!B, %!M, %!S, %!X,
+   %!Y.
+   The numerals %!0 and %!1 are standard TM state table format, but the letters
+   have special functions.
+
+   %!A is used by the UTM to mark temporarily the location of a %!0 on its
+     tape;
+   %!B is likewise used to mark temporarily a %!1.
+   %!Mark indicates the location of the pseudo-TM read/write head on the tape
+     (as the UTM sees it).
+   %!Stop shows when the pseudo-tape operations have been completed.
+   %!X is used to mark boundaries between pseudo-TM quintuples on the UTM tape,
+     and
+   %!Y is used to mark the beginning and end of the machine condition plus the
+     state table area.
+
+   %!? in the UTM state-table is used as a 'wild-card' ELSE clause. That is, if
+     there is no applicable input for that state, it will execute the output,
+     move, etc., from the %!? entry.  It is only used in the UTM table and
+     should not appear on the tape.
+
+
+                               UTM Input Tape
+                               --------------
+The UTM tape has a special format:
+
+ ...000M11101110Y000X0000001X0010101X0101010X0110111Y000...
+                |   ^
+             ---    |---
+  binary    |  machine  |  canonical description of pseudo-TM
+pseudo-tape | condition |  state-table quintuples
+
+[This example description of a pseudo-TM is an adding machine that takes as
+ input two numbers in unary notation (separated by one zero) on its input tape.
+ Its inital tape is ...000^011101110. ]
+                           ^
+There must be exactly two Y's in the entire description of the pseudo-TM.  The
+leftmost Y marks the end of the pseudo-tape and the begining of the machine
+condition area.  The rightmost Y marks the end of the pseudo-TM description.
+And the scanhead of the UTM must initially point to the leftmost X which marks
+one end of the machine condition area.
+
+As this example shows, three sections of UTM tape must be specified, from left
+to right.
+Binary pseudo-tape:
+   Pseudo-TM tape extends only to the left.  Contains only 0's and 1's and
+   and an "M" that marks the location of the pseudo-TM read/write head.  (The
+   M marker "hides" the symbol under it.)
+Machine condition:
+   This is a "working area" for the UTM: it lists the current state of the
+   simulated TM, followed on the right by its currently scanned symbol (under
+   the "M").  Generally, if there are N binary digits here, then the first N-1
+   digits correspond to the pseudo-TM's current state and the last Nth digit
+   corresponds to the symbol under the pseudo-TM's read/write head.
+Quintuples:
+   Each row of the pseudo-TM's state table is represented as a quintuple
+   between X's (between X and a Y for the last state).   The order of listing
+   the tuples does not matter, but each tuple must be described in the
+   following format (suppose that there are N binary digits in the machine
+   condition area):
+      CST:  first N-1 digits - state number
+      INP:  next digit       - input symbol
+      NST:  next N-1 digits  - next state number
+      OUT:  next digit       - output symbol
+      MOV:  last digit       - direction of move (L=0, R=1)
+
+In Minsky's notation, the state table of the above example pseudo-TM
+description would be:
+
+   CST INP | NST OUT MOV
+   --------|-------------
+    0   0  |  0   0   R
+        1  |  1   0   R
+    1   0  | halt 1   L
+        1  |  1   1   R
+
+Consider the third quintuple of the example which translates into the third row
+of the above table.  "0101010" --> "01/0/10/1/0" specifies:
+
+   CST=01  INP=0  |  NST=10    OUT=1  MOV=0,   in binary
+   CST=1   INP=0  |  NST=2     OUT=1  MOV=0,   in decimal
+   CST=1   INP=0  |  NST=halt  OUT=1  MOV=L,   in the row of the above table.
+
+[Notice that state 2 does not exist in the example pseudo-TM, so the NST of
+ this row equals a nonexistent state.  When Minsky's UTM searches for a next
+ state accepting the input symbol under the scanhead (specified by the
+ machine-condition) and it does not find it, then it will halt.  A nonexisting
+ state for an NST ensures that the NST equals a halt state.]
+
+In TM*'s notation the above table would be translated into:
+
+   CST INP | OUT MOV NST
+   ----------------------
+    1   0  |  0   R   1
+        1  |  0   R   2
+    2   0  |  1   L   0
+        1  |  1   R   2
+
+The state numbers have to be changed here since in TM*, state 0 is always the
+halt state.  The order of the column headings also differs from Minsky's table
+notation.
+
+
+                            How to run a UTM file
+                            ---------------------
+     To run a UTM input tape file (with a pseudo-TM on it), turn on the UTM
+mode by selecting %!UTM mode from the MAIN-MENU if it is not already on.
+Select %!Load from under the "Tape" column and type in the name of a stored
+file from those listed.  Or, create a new UTM tape by selecting %!Enter (then
+select %!Save from under the "Tape" column if you do not wish to lose it).
+Now select %!Run and the UTM run screen will appear, including the UTM table
+and the input tape from the file that you selected.
+     The UTM display is unique.  The state table is arranged in four columns
+with headers describing (tersely) what each column of code, or module, does:
+
+(1) 'Locate'    - locates the current state of the pseudo-TM
+(2) 'Copy'      - copies that state into the working-area
+(3) 'Write dir' - determines which direction the head will move
+(4) 'Simulate'  - performs the pseudo-tape operations
+
+[ Suggestion:  Try loading and running UTMBUSY.INP ]
+
+===============================================================================
+                                 END OF HELP                                '99

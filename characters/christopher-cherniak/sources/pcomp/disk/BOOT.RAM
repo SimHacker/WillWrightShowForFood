@@ -1,0 +1,35 @@
+---RAM* program---
+PC=00
+ 1: +000          BOOTSTRAP  PROGRAM:                                         
+ 2: +000          For loading instructions                                    
+ 3: +000          from  Input  into memory.                                   
+ 4: +000 -                                                                    
+ 5: +000 -                                                                    
+ 6: +000          The bootstrap is just the                                   
+ 7: +000          "001" hardwired into memory cell 00                         
+ 8: +000          (due to David Hagelbarger, Bell Laboratories).              
+ 9: +000 -                                                                    
+10: +000          PC must start at memory cell  00.                           
+11: +000 -                                                                    
+12: +000 -                                                                    
+13: +000          Bootstrap  INPUT  format example:                           
+14: +000 -                                                                    
+15: +000            002  -For                                                 
+16: +000            700  - Boot.                                              
+17: +000            010  -memory address, for                                 
+18: +000            030  -program instruction.                                
+19: +000            011  -address                                             
+20: +000            031  -instruction                                         
+21: +000            012  -address                                             
+22: +000            230  -instruction                                         
+23: +000            013  -address                     = ADD.RAM program       
+24: +000            431  -instruction                                         
+25: +000            014  -address                                             
+26: +000            332  -instruction                                         
+27: +000            015  -address                                             
+28: +000            132  -instruction                                         
+29: +000            016  -address                                             
+30: +000            910  -instruction                                         
+31: +000 -                                                                    
+32: +000 -                                                                    
+33: +000         -See  also  FBOOT.RAM                                        

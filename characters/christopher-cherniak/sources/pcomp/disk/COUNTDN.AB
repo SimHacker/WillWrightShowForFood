@@ -1,0 +1,7 @@
+COUNTDN.AB:
+ 1: SET D    10  
+ 2: DEC D        
+ 3: ZER D     5  
+ 4: GTO  2       
+ 5: END          
+99: END          

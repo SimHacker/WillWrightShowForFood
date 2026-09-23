@@ -18,6 +18,11 @@ machine:
   start: mark               # body starts in this room
   halt: [done]              # entering any of these rooms stops the run
   missing: halt             # no door for (state, symbol): halt | error
+  # Optional, from TM* (see PCOMP.md):
+  # wildcard: "?"           # a door keyed "?" matches any symbol this state does not list;
+  #                         # write: "?" leaves the cell as it was
+  # bounds: [-5000, 5000]   # finite tape; moving off it is an error
+  # patches: [...]          # departures from a recovered original, each with disk / here / why
   # universality is optional metadata. It does not change the stepper.
   # standard = finite pictured input, blank elsewhere, halt state.
   # weak    = may need an infinite periodic background; may never halt.
@@ -47,6 +52,8 @@ tape:
     halt: true
     steps: 18
     pictured: "1110111"
+    # also: ones (count of 1s), scanned (symbol under the head at the end),
+    # error (left | right, off the bounds), after (step budget for halt: false)
 
 # Do not put the transition table on the tape, or the tape on the machine,
 # except a machine may name default_tape: for the web picker.

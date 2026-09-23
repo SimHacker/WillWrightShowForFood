@@ -1,0 +1,26 @@
+---RAM* program---
+PC=10
+ 1: +000 -                                                                    
+ 2: +000       EQUALS Tester:                                                 
+ 3: +000       Tests 2 positive integers for equality:                        
+ 4: +000       A > B  ->  Print out A, then B                                 
+ 5: +000       B > A  ->  Print out B, then A                                 
+ 6: +000       A = B  ->  Print out 0                                         
+ 7: +000 -                                                                    
+ 8: +000       PC starts at  10.                                              
+ 9: +000 -                                                                    
+10: +030       read in A to 30                                                
+11: +031       read in B to 31                                                
+12: +230 ---   clear ACC & add A                                              
+13: +531   |   subtract B from A                                              
+14: +820   |   test ACC:  + -> go on to 15; - -> jump to 20 (A < B)           
+15: +500   |   subtract 1 from ACC                                            
+16: +823 ---   test ACC:  + -> go on to 17 (B < A); - -> jump to 23 (A = B)   
+17: +130 --|                                                                  
+18: +131   |-- A > B                                                          
+19: +910 --|                                                                  
+20: +131 ---                                                                  
+21: +130   |-- A < B                                                          
+22: +910 ---                                                                  
+23: +132    -- A = B                                                          
+24: +910

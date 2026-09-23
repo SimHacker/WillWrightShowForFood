@@ -1,0 +1,52 @@
+---RAM* program---
+PC=03
+ 1: +000 -                                                                    
+ 2: +000 -                                                                    
+ 3: +004   (= PC starting setting: 03)          FAST BOOTSTRAP PROGRAM:       
+ 4: +000         <------                        For loading instructions      
+ 5: +204   CLA         |                        from  Input  into memory.     
+ 6: +400   ADD 1       |                                                      
+ 7: +304   STO         |                                                      
+ 8: +704          ------                      INPUT  format example:          
+ 9: +000                                        010   = First memory address  
+10: +000                                        030    --                     
+11: +000                                        031     |                     
+12: +000                                        230     |                     
+13: +000                                        431     |  =  ADD.RAM program 
+14: +000                                        332     |                     
+15: +000                                        132     |                     
+16: +000                                        910    --                     
+17: +000                                        [blank]                       
+18: +000 -                                                                    
+19: +000 -                                                                    
+20: +000 -                                                                    
+21: +000                RAM* also has a "hardwired" SLOW BOOTSTRAP:           
+22: +000                just the "001" in memory cell 00 (due to              
+23: +000                David Hagelbarger, Bell Laboratories).                
+24: +000 -                                                                    
+25: +000                Slow bootstrap  INPUT  format example:                
+26: +000                  002  -For Slow                                      
+27: +000                  700  - Boot.                                        
+28: +000                  010  -memory address, for                           
+29: +000                  030  -program instruction.                          
+30: +000                  011  -address                                       
+31: +000                  031  -instruction                                   
+32: +000                  012  -address                                       
+33: +000                  230  -instruction                                   
+34: +000                  013  -address                  =  ADD.RAM program   
+35: +000                  431  -instruction                                   
+36: +000                  014  -address                                       
+37: +000                  332  -instruction                                   
+38: +000                  015  -address                                       
+39: +000                  132  -instruction                                   
+40: +000                  016  -address                                       
+41: +000                  910  -instruction                                   
+42: +000                  [blank]                                             
+43: +000 -                                                                    
+44: +000                PC must start at memory cell  00  for Slow Boot.      
+45: +000 -                                                                    
+46: +000 -                                                                    
+47: +000 -                                                                    
+48: +000                Slow Boot can be used to load Fast Boot,              
+49: +000                and Fast Boot in turn used to load, e.g.,             
+50: +000                ADD.RAM .                                             

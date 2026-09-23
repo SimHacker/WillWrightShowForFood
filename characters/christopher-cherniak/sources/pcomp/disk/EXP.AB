@@ -1,0 +1,26 @@
+EXP.AB:
+ 1: SET A     3  Let A=3           ---|
+ 2: SET E     4  Let E=4              |
+ 3: DEC A        ---|                 |
+ 4: INC B           |   Let B=B+A     |
+ 5: INC F           |---Let F=F+A     |
+ 6: ZER A     8     |   Let A=0       |
+ 7: GTO  3       ---|                 |
+ 8: DEC F        ---|                 |---A gets A to the
+ 9: INC A           |---Let A=F       |   Eth power (e.g.,
+10: ZER F    12     |   Let F=0       |   3 to the 4th power
+11: GTO  8       ---|                 |   equals 81)
+12: DEC E        ---|                 |
+13: ZER E    16     |   A gets A*B    |
+14: CAL XMULT       |---E number of   |
+15: GTO 12          |   times         |
+16: END          ---|              ---|
+18:              PURPOSE: compute 3 to the 4th power.
+19:              INPUT:   registers [A] and [E] are initially set
+20:                       to 3 and 4, respectively (assuming that
+21:                       registers [B] and [F] are initially 0).
+22:              OUTPUT:  register [A] gets [A] to the [E]th power.
+24:              (This is designed to be a main program that calls
+25:               XMULT.AB as a subroutine.  XMULT.AB in turn calls
+26:               XADD.AB)
+99: END          

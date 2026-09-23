@@ -1,0 +1,25 @@
+---RAM* program---
+PC=10
+ 1: +000     Multiplies two integers.                                         
+ 2: +000     Input:  first number may be any integer within range,            
+ 3: +000             but the second must be a positive integer.               
+ 4: +000 -                                                                    
+ 5: +000 -                                                                    
+ 6: +000 -                                                                    
+ 7: +000 -                                                                    
+ 8: +000 -                                                                    
+ 9: +000 -                                                                    
+10: +030     (30)<-input         | A=input                                    
+11: +604     ACC<-(ACC)/10000    |                                            
+12: +331     (31)<-(ACC)         | Z=0                                        
+13: +032     (32)<-input         | B=input                                    
+14: +232     ACC<-(32)           |            --------|                       
+15: +500     ACC<-(ACC)-10       |                    |                       
+16: +332     (32)<-(ACC)         | --B                |---Add A to Z,         
+17: +822     goto 22, if (ACC)<0 | If B<0, goto (22)  |   B times.            
+18: +231     ACC<-(31)           |                    |                       
+19: +430     ACC<-(ACC)+(30)     |                    |                       
+20: +331     (31)<-(ACC)         | Z=Z+A              |                       
+21: +714     goto 14             | Goto (14)  --------|                       
+22: +131     output (31)         | Output Z                                   
+23: +910     PC<-10 and quit     | Quit                                       

@@ -1,0 +1,207 @@
+                                 RAM* HELP
+===============================================================================
+To print this help file: in DOS, type "PRINT RAM.HLP"
+(Your printout will contain many "%" and "!"; they are just markers to
+ highlight specific characters.)
+===============================================================================
+
+Each of the following examples describes a typical procedure for
+a particular basic task.  (Refer to the summaries of MAIN-MENU
+and RUN/EDIT that appear below the examples for explanations.)
+
+To enter a new program and run it:
+   (a) Select "%!Run/Edit" from MAIN-MENU.
+   (b) Select "Edit%!Memory"; then enter and edit your program.
+   (c) From MAIN-MENU, select "%!Save memory".
+   (d) If you wish to change the default initial PC (Program Counter), then
+       from MAIN-MENU, select "%!PC setting".
+   (e) If you wish to use a diskfile for RAM* input (instead of the default
+       KEYBOARD input), then from MAIN-MENU, select "%Input from"; then choose
+       a RAM* filename from those listed on the bottom half of the screen.
+   (f) From MAIN-MENU select "%!Run/Edit".
+   (g) Select "%!Step-by-step" or "%!Continuous" to run your program.
+   (h) If you are not satisfied with the results, then edit your program.
+   (i) If you wish to restart your program, then go back to MAIN-MENU; then
+       select "%!Tools"; then select "%!Reset" and return to step (g).
+   (j) When you are finished or just wish to quit:  remember to SAVE your
+       program before you leave RAM* if you do not wish to lose it!
+
+To load a previously saved program and run it:
+   (a) In MAIN-MENU the stored programs for RAM* are listed at the bottom half
+       of the screen.  Select "%!Load program" and choose one of those
+       filenames.
+   (b) Go to step (d) of the previous example.
+   [ Suggestion: Try loading and running ADD.RAM
+     (See comments and explanations by invoking %!EditComt.) ]
+
+
+                            SUMMARY OF MAIN-MENU
+                            --------------------
+%!Load program
+   After you choose a valid filename, RAM* will clear all registers, the
+   memory, and the input and output lists.  Then it will load the program of
+   that filename into memory, and set the PC.
+
+%!Run/Edit
+   (See "SUMMARY OF RUN/EDIT" section below.)
+
+%!Save memory
+   Save the current PC setting and the non-hardwired memory -- cells 01-98.
+
+%!Input from
+   This selection will toggle between KEYBOARD and a filename.  If it is
+   KEYBOARD, then during execution each read-input instruction will request
+   input from the keyboard; otherwise it will take input from the specified
+   file.
+
+   Any file saved by RAM* can be used as input, since input is just a stream
+   of "numbers".  When a program file is used as input, the first input item
+   is the content of address 1 in memory at the time the file was saved.  The
+   subsequent input items to be read in are the contents of memory occuring
+   sequentially after address 1 when the file was saved.  The last input item
+   is the last non-"+000".  All the trailing "+000" are ignored, and are not
+   included in the input stream.
+
+%!PC setting
+   Enter the initial PC (Program Counter) value, i.e., the cell number of the
+   first program instruction to be executed.
+
+%!Clear Everything
+   Clear every component of RAM*.
+
+%!File Maintenance
+   To rename, delete, or copy RAM* files.
+
+%!Help
+   Display the help file you are now reading.
+
+%!Quit
+   Exit from RAM*.
+
+
+                            SUMMARY OF RUN/EDIT
+                            -------------------
+When you select "%!Run/Edit" from the MAIN-MENU, the RUN/EDIT screen will
+replace the MAIN-MENU screen.  On the right half of the screen, the memory
+is labeled with horizontal and vertical coordinates.  (To find the address of
+a cell, add the horizontal and vertical coordinates of that cell.)  The blank
+memory cells represent "+000" contents.  Three registers (ACC, IR, and PC)
+appear on the left side of the screen, with two scrolling Input/Output list
+display windows below them.  The rectangle just above the three registers
+describes the next operation to be performed.  A menu line appears at the
+bottom of the screen:
+
+%!<%!E%!S%!C%!>=exit
+   Return to MAIN-MENU.  (This does not erase the current state of execution.
+   If you select "%!Run/Edit" from MAIN-MENU again, you will see that the state
+   of every component has been preserved, unless you have changed one of the
+   other settings on MAIN-MENU.)
+
+%!Help
+   Display the help file you are now reading.  (Same as %!Help in MAIN-MENU.)
+
+%!Tools
+   A new menu line appears at the bottom of the screen:
+   %!Reset
+      Clear all registers, then reload the program.  And clear the input and
+      output lists.  (If the input is from a diskfile, then reload that file
+      into the input.)  If you have not yet saved the program after modifying
+      the memory contents with the editor, then save it from the MAIN-MENU
+      before resetting.
+   Change-Setting: %!AC %!IR %!PC
+      After selecting one of the three registers, enter its new contents.
+   %!Sound=YES/NO
+      Default = YES.  When NO, the "click" after each operation is not
+      generated.
+
+%!Step-by-step
+   In one machine cycle, FETCH and EXECUTE operations are performed: an
+   instruction is copied from memory to the IR (Instruction Register), and the
+   PC is incremented; then the instruction is carried out.  In step-by-step
+   execution mode, at each spacebar press, half of the machine cycle will
+   complete (either FETCH or EXECUTE).  The cycle continues (FETCH and EXECUTE
+   operations alternate) until one of the following four interruptions occurs:
+   - When you press the ESC key at anytime, the next fetch or execution
+     is suspended.  (It can always be resumed when you select %!Step-by-step
+     again.)
+   - When executing the "input" instruction with input from the keyboard, the
+     cursor will blink at the bottom of the input list window, waiting for
+     you to enter an item.  (ESC key can be pressed here too to suspend
+     entering an input item.)
+   - When an error is reported.
+   - When the "halt" instruction is executed.
+
+%!Continuous
+   This execution mode is just like the step-by-step mode, except that it does
+   not wait for you to press the spacebar after each FETCH and EXECUTE
+   operation; the FETCH-EXECUTE cycle continues until one of the interruptions
+   described above occurs.
+
+Edit%!Memory
+   At the left side of the screen, the Edit Help window displaying all the
+   instruction codes and their descriptions appears, and each of the cells
+   that were blank now shows '+000'.  Use the arrow keys to move the cursor
+   around the memory (the SPACEBAR and BACKSPACE keys have the same effect
+   as right and left arrow keys, respectively).  Each cell of the memory
+   contains four fields: a sign (+ or -) field followed by three Arabic digit
+   fields.  A RETURN key press will move the cursor to the first digit field
+   of the next cell (useful when typing in a program).  To modify a memory
+   cell's content, move the cursor to the desired location;  then type a '-'
+   or '+' if the cursor is on the sign field, and a number if the cursor is
+   on the digit field.  Press <ESC> to exit the editor.
+
+   RAM* instructions are three digits %!O%!A%!A: the first an operation code,
+   the next two a memory cell address (except for the shift instruction.)
+   RAM* op codes:
+
+          I   Input/Output                   ----------
+                     %!0  Input   ---------->  | Memory |
+                     %!1  Output <----------   |________|
+
+          II  Arithmetic
+    ---------------  %!2 Clear and Load Accumulator <------  ----------
+    | Accumulator |  %!3 Store Accumltr in memory   ------>  | Memory |
+    ---------------  %!4 Add to Accumulator         <------  |        |
+                     %!5 Subtract from Accumulator  <------  ----------
+
+          III Control of Program Counter Register
+                     %!7 Jump to the given memory cell  |    --------
+                     %!8 Test Accum. - jump if negative |--> |  PC  |
+                     %!9 Reset to xx and Halt           |    --------
+
+          IV  Shift accumulator
+                       -----------this many places left,
+                       | ---------then this many places right.
+                       | |                              ---------------
+                     %!6 _ _                       -----> | Accumulator |
+                                                        ---------------
+
+%!EditComt
+   This allows you to edit memory contents plus a line of comments for each
+   address.  Comments can be any pattern of characters you can type.  Choose
+   %!Help to get the Edit Help window.
+
+   Commenting code: always state the basic function performed by the program,
+   and specify the correct input format and outputs.  Comment area can also
+   be used to draw brackets to identify submodules of the code, and to draw
+   arrows to show flow of control.
+
+
+For an introduction to random-access von Neumann-architecture machines, see
+chapters 15 and 45 in A. K. Dewdney, THE TURING OMNIBUS (W. H. Freeman, NY,
+1989).  [chs 17 & 48, 1993 ed]  
+
+===============================================================================
+This program was developed by the CogSci Courseware Project at University
+of Maryland, College Park.  It is written in Turbo Pascal, v. 4.0.
+
+"A program is never completed, only released."
+Bug reports, comments, and suggestions gratefully received.  For bugs,
+please try to give specific examples of eliciting conditions:
+
+                           Christopher Cherniak
+                           Department of Philosophy
+                           University of Maryland
+                           College Park, MD  20742
+===============================================================================
+                                 END OF HELP                                '99

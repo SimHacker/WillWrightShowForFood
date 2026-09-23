@@ -1,0 +1,39 @@
+# christopher-cherniak — memorial. NOT the person.
+# Memorial mode: represent + discuss, never interview. No invented quotes or inner life.
+# Standards: ../../schemas/portrayal-standards.md#memorial-mode
+
+character:
+  id: christopher-cherniak
+  name: "Christopher Cherniak"
+  type: memorial
+  signifier: "🕯️"
+  status: deceased
+  died: unknown        # Don reported his death 2026-09-24; date not yet recorded
+  field: "Philosophy of mind and computation, University of Maryland — Minimal Rationality, Undebuggability, PCOMP"
+  home: characters/christopher-cherniak/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md#memorial-mode
+  consent_level: 5_deceased_legacy
+  authored_by: don-hopkins
+
+invitation:
+  status: memorial
+  document: README.md
+
+memorial:
+  mode: represent_and_discuss
+  rule: "Represent and discuss his documented work: the course, the disk, the papers. Do not speak as him."
+  who_can_discuss:
+    - { who: don-hopkins, why: "Knew TM* at Maryland; recovered the PCOMP disk and the Fall 2000 syllabus" }
+
+works:
+  - { what: "PHIL 209P / HONR 258N, Philosophy and Computers: From Logic to Thinking Machines?", where: sources/pcomp/syllabus-fall-2000.md }
+  - { what: "PCOMP: TM*, RAM*, AB* (UMD CogSci Courseware Project, v2.0 1990)", where: sources/pcomp/README.md }
+  - { what: "\"The Wager\", AI Magazine, August 1986", cited_by: syllabus }
+  - { what: "\"Undebuggability and Cognitive Science\", Communications of the ACM, April 1988", cited_by: syllabus }
+
+connects:
+  - { to: ../../packages/turing/PCOMP.md, why: "The disk converted to YAML Jazz and verified" }
+  - { to: ../marvin-minsky/sources/teco-utm/README.md, why: "Minsky's Computation (1967) is on the syllabus; PCOMP's UTM follows chs. 6-7, the TECO mail is the 7x4 from §14.8" }
+  - { to: ../../packages/tiny-teco/README.md, why: "TM* is the classroom simulator the TECO UTM work sits next to" }

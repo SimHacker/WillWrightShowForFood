@@ -1,0 +1,270 @@
+                                  TM* HELP
+===============================================================================
+To print this help file: in DOS, type "PRINT TM.HLP"
+(Your printout will contain many "%" and "!"; they are just markers to
+ highlight specific characters.)
+===============================================================================
+
+Each of the following examples describes procedures for a particular 
+basic task.  You need not follow them to the letter; they only show some
+typical uses of TM*.  (Each highlighted letter corresponds to the key you
+must press to select an option.  Refer to the summaries of MAIN-MENU and
+OPTIONS-MENU that appear below the examples for explanations.)
+
+To enter a new program and run it:
+   (a) Select %!Edit/Create option from MAIN-MENU.
+   (b) Enter and edit your program.
+   (c) From MAIN-MENU, select %!Save to disk.  (This step is recommended to
+       preserve the table that you created in case it is later modified or
+       lost.)
+   (d) If you wish to change the default initial TM state (= 1), then from
+       MAIN-MENU, select %!Current State.
+   (e) If you wish to load an input tape, then select %!Load from the "Tape"
+       column of MAIN-MENU.
+   (f) From MAIN-MENU select %!Run; then select %!Continuous or %!Step-by-step
+       to test your program.
+   (g) If you are not satisfied with the results, then either select
+       %!EditTable or return to MAIN-MENU and select %!Edit/Create; then if
+       you wish to start the program from the beginning, select %!Initialize
+       from MAIN-MENU and return to step (f).
+   (h) When you are finished or just want to quit:  remember to SAVE your
+       program before you leave TM* if you do not wish to lose it forever!
+
+To load a previously saved program and run it:
+   (a) At MAIN-MENU the stored TM program files are listed.  Select %!Load from
+       the "Program" column.
+   (b) Go to step (d) above.
+   [ Suggestion: Try loading and running BUSY2.
+     (See comments, explanations by setting %!Display to Scroller and
+      invoking %!EditTable.) ]
+
+To run UTM (Universal Turing Machine):
+   (a) From MAIN-MENU select %!UTM mode.
+   (b) If you want to run a stored UTM input tape, select %!Load under the Tape
+       column.  (Generally, input tapes for the UTM have names beginning with
+       "UTM..." displayed in MAIN-MENU file directory area.)
+   (c) From MAIN-MENU select %!Run.  (Select UTM.HLP if you wish.)
+
+
+                             SUMMARY OF MAIN-MENU
+                             --------------------
+ For TM program:
+   %!Load from disk:
+      Load a program stored on the disk (and displayed in the file directory),
+      initializing the current state to the initial state specified for the
+      program and clearing the initial tape.
+   %!Edit/Create:
+      The edit screen has six labeled columns.  The entries under the first
+      column labled CST for "current state" are permanently set and cannot be
+      altered.  You can enter and edit the entries under the other five columns
+      with the following restrictions:
+
+         INP for "input"      - any symbol you can type
+         OUT for "output"     - any symbol you can type
+         MOV for "head move"  - only "L", "R", or "N"
+         NST for "next state" - a number between 0 and 99  [ 0 = HALT ]
+         Comments             - explanation and description of program
+
+      (Under INP and OUT, the "?" symbol has a special meaning.  For INP, it
+       specifies all input symbol(s) other than the ones that already appear
+       above and below within the same state.  For OUT, it will mean that the
+       same symbol that is already on the cell of the tape in which the
+       read/write head is currently pointing to will be output, or
+       equivalently, it will mean that there is no output.)
+
+      The table displayed is also partitioned into rows of TM states, where
+      each row is an input entry of the table under a state.  To add a new
+      input symbol line (a new row) to a state, press RETURN at the desired
+      state.  Input symbols within a state must be unique.  To delete an input
+      symbol (a row) from a state, press <CTRL>-DELETE.  If you did not load a
+      table, then each state of the table is initialized to contain inputs 0
+      and 1, with no other entries.
+
+      Exit to MAIN-MENU at any time by striking the <ESC> key.
+
+      Commenting code: In the comments area, always state the basic function
+      performed by the program, and specify the correct input tape format
+      and the outputs.  Comment area can also be used to draw brackets to
+      identify modules/subroutines of the code, and to draw arrows to show
+      flow of control.
+   %!Save to disk:
+      Save the current program in a permanent file.
+   %!Run:
+      (See "SUMMARY OF RUN SCREEN" section below.)
+
+For initial TM input tape:
+   %!Load:
+      Load a tape stored on the disk.  (Always load tape AFTER loading table.)
+      A directory of input tape files will appear at the lower half of the
+      screen.
+   %!Enter:
+      Create an initial tape.  (See instructions that appear when you select
+      this option.)
+   %!Save:
+      Save the initial tape to disk.  (The "initial tape" is the last tape
+      loaded with %!Load or entered with %!Enter; it is not necessarily the
+      current tape.)  A directory of input tape files will appear at the
+      lower half of the screen.
+
+%!Current State:
+   Set the initial state of the Turing machine; default state is 1.
+   "Initial state" is the first active state when execution begins.
+
+%!Initialize:
+   Set the current TM state to initial state, and initialize the tape to the
+   last time when a %!Load or %!Enter tape has been performed (but if neither
+   has been performed, then initialize the tape to all 0's).
+
+%!Options menu:
+   (See below, under "SUMMARY OF OPTIONS-MENU" heading.)
+
+%!UTM mode:
+   If the UTM mode is currently off, then toggle it on; else turn it off
+   (default is off).  When UTM mode is switched on, it will have the following
+   effects on TM*: the UTM program will automatically be loaded into the table;
+   you will not be able to load another program; the table cannot be edited;
+   the run screen will look a bit different; (see UTM help once the mode is
+   on).
+
+%!Help:
+   Display the help file that you are now reading.
+
+%!Quit:
+   Quit and exit TM*.
+
+
+                           SUMMARY OF OPTIONS-MENU
+                           -----------------------
+%!Clear/Reset options:
+   Clear the Turing table and tapes currently in memory, and set all mode(s)
+   to their default.  This is like quiting from TM* and starting all over
+   again.  (Be sure to save your edited tables and initial tapes before doing
+   this if you do not wish to lose them and they are not already saved.)
+
+%!File management:
+   For housekeeping on Turing machine files: %!Delete, %!Rename, or %!Copy
+   files that have been saved on disk.
+
+%!Generate instantaneous descriptions:
+   First you will be asked, "Send output to disk? (Y/N)"; if you answer yes,
+   then the state descriptions that follow will be recorded in the disk file
+   named "ECHO.PRT"; otherwise the state descriptions will simply be displayed
+   on the screen and not sent to a disk file.  Each state description includes:
+   the current TM state number, a fixed range of the tape around the scan head,
+   a count of the number of steps taken thus far, and the current tape position
+   of the scan head.  You may subsequently type "PRINT ECHO.PRT" while you are
+   in DOS.
+
+%!<%!E%!S%!C%!>=exit:
+   Return to MAIN-MENU.
+
+
+                             SUMMARY OF RUN SCREEN
+                             ---------------------
+You will enter one of four different run display modes:
+   (NOTE: The phrase "non-blank entries" refers to rows of the state table
+    that have at least one valid entry for INP, OUT, MOV, and NST.)
+   NORMAL:
+      Displays four columns of TM states without comments, with a space
+      between different states within a column.  This mode is first entered
+      when the number of non-blank entries of the table can fit in this
+      configuration.  It provides the greatest visual clarity.
+   DENSE:
+      This display is like NORMAL, except that there are no spaces between
+      different states within a column.  This mode is first entered when the
+      number of non-blank entries is too great for NORMAL, but is not too
+      great for DENSE.  It shows the greatest number of non-blank entries
+      that can be viewed on one screen.
+   SCROLLER:
+      The display shows a scrolling window just like the one found in
+      %!Edit/Create in MAIN-MENU. This mode is first entered when the
+      number of non-blank entries is too great for NORMAL and DENSE.  It
+      is the slowest during execution.  (Lines can be added to a table
+      only in this mode.)
+
+   You may cycle through the above three displays by selecting %!Display.
+   But the display(s) that cannot handle the number of non-blank entries will
+   not appear.
+
+   UTM:
+      This mode is entered only when the UTM mode is turned on.  (%!HelpUTM
+      calles a help file specifically for the UTM.)
+
+There is a menu line of options at the bottom of the screen:
+   %!<%!E%!S%!C%!>=Quit:
+      Return to MAIN-MENU.
+
+   %!Help: (only for NORMAL, DENSE, and SCROLLER displays)
+      Shows this text that you are now reading.
+
+   %!HelpUTM: (only for UTM display)
+      Shows help specifically for UTM.  (It explains how to construct an input
+      tape for the UTM, and how to run it.)
+
+   %!Step-by-step:
+      Execute one TM line at a time for each press of spacebar.
+
+   %!Continuous:
+      Execute continuously.
+
+   H%!iSpeed:
+      Execute with supressed display.  This is the fastest TM* execution
+      mode, specifically built for speed.  It can perform thousands of steps,
+      then pause for a command to: continue, change number of steps to
+      perform, or exit.  State description will be displayed at interval steps
+      along with a 1's count which shows the total number of 1's on the tape.
+      (If the execution completes or execution error occurs, then simulation
+      stops.)
+
+   Edit%!Tape:
+      Edit the tape with the control keys shown at the bottom of the screen.
+      When execution is continued, the TM scanhead will resume at the position
+      where you left it after the edit.
+
+   %!EditTable: 
+      For SCROLLER, this is the same as in %!Edit/Create in MAIN-MENU.  For
+      NORMAL and DENSE, no new rows may be added.  (Not available for UTM.)
+
+
+                          Switching Between Run Modes
+                          ---------------------------
+     When you select the %!Run option from MAIN-MENU, you enter one of four
+different display modes (normal, dense, scroller, or utm), and may select
+H%!ispeed for another run mode.  In addition, from the OPTIONS-MENU you may
+select %!Generate instantaneous descriptions.  Basically there are only two
+different run modes for TM*: when you select the %!Run option, the operation
+of a TM is presented fully and graphically; but H%!iSpeed and %!Generate
+instantaneous description modes only show state descriptions without animation.
+
+     When you exit a run mode at any time, the current TM machine condition
+does not change; so you can always return to that run mode or continue in a
+different one.  In this way, you can switch back and forth between different
+run modes any number of times.  This flexibility can be useful: after running
+a "Busy5.TM" for 10,000 steps in H%!iSpeed mode, you can switch back to the
+animation mode.  (Otherwise, if you wished to examine the tape in the same
+state, you would have to run the machine in the graphics mode for 10,000 steps
+(a long time).)
+
+
+                              Limitations of TM*
+                              ------------------
+* The tape is not infinite; it is indexed from -5000 to 5000.  If the tape head
+  moves out of this range, TM* will report an error.
+* The table can contain from 1 to 99 TM states.
+* Only 79 symbols or less of an initial tape can be specified.
+
+
+===============================================================================
+This program was developed by the CogSci Courseware Project at University
+of Maryland, College Park.  It is written in Turbo Pascal, v. 4.0.
+
+An infinite task: "A program is never completed, only released."
+Bug reports, comments, and suggestions gratefully received.  For bugs,
+please try to give specific examples of eliciting conditions:
+
+                           Christopher Cherniak
+                           Department of Philosophy
+                           University of Maryland
+                           College Park, MD  20742
+===============================================================================
+                                 END OF HELP                                '99

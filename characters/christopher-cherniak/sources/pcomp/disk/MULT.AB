@@ -1,0 +1,13 @@
+MULT.AB:
+ 1: SET A     6  
+ 2: SET B    11  
+ 3: DEC A        
+ 4: INC D        
+ 5: ZER A     7  
+ 6: GTO  3       
+ 7: DEC D        
+ 8: CAL XADD     
+ 9: ZER D    11  
+10: GTO  7       
+11: END          
+99: END          

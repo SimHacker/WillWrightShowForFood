@@ -94,3 +94,4 @@ mode so the recovered mail can be fed in raw.
 - Christopher Cherniak, TM* / PCOMP — the classroom simulator this work
   sits next to. The disk credits the University of Maryland CogSci
   Instructional Software Project; the student programmers are not named.
+  Recovered and converted: [`../turing/PCOMP.md`](../turing/PCOMP.md).

@@ -1,0 +1,21 @@
+---RAM* program---
+PC=10
+ 2: +000 PUPOSE: Add two integers.                                            
+ 3: +000 INPUT:  two integers.                                                
+ 4: +000 OUTPUT: sum of the two integers.                                     
+ 5: +000 -                                                                    
+ 6: +000 -                                                                    
+ 7: +000 -                                                                    
+ 8: +000 -                                                                    
+ 9: +000 -                                                                    
+10: +030 (30)<-input      |  A=input                                          
+11: +031 (31)<-input      |  B=input                                          
+12: +230 ACC<-(30)        |                                                   
+13: +431 ACC<-(ACC)+(31)  |  C=A+B                                            
+14: +332 (32)<-(ACC)      |                                                   
+15: +132 output (32)      |  output C                                         
+16: +910 PC<-10 and quit  |  quit                                             
+17: +000 -                                                                    
+18: +000 -                                                                    
+19: +000 -                                                                    
+20: +000 (See also  MULT.RAM)                                                 

@@ -1,0 +1,148 @@
+                                 AB* HELP
+===============================================================================
+To print this help file: in DOS, type "PRINT AB.HLP"
+(Your printout will contain many "%" and "!"; they are just markers to
+ highlight specific characters.)
+===============================================================================
+
+To create a new AB* program, select %!Run/Edit from MAIN-MENU and edit a new
+program (see below for instructions).  Then from MAIN-MENU select %!Save.
+To create, save, and name a new subroutine, you must first create it as a
+main program.
+
+                            SUMMARY OF MAIN-MENU
+                            --------------------
+%!Load
+   After you enter a valid filename, AB* will clear the registers and destroy
+   any routines that are in your computer's memory.  The program selected for
+   load will become the new main routine.  (The main routine is the routine
+   that starts first, before any subroutine.  In the RUN/EDIT display, you
+   will see the main routine in a long rectangular program window.)
+
+%!Run/Edit
+   (See "SUMMARY OF RUN/EDIT" selection below.)
+
+%!Save
+   Save the main routine in memory to a disk file.
+
+%!File maintenance
+   To rename, delete, or copy AB* files.
+
+%!Help
+   Show the help file you are now reading.
+
+%!Quit
+   Exit from AB*.  If there are any routines that you have edited and have
+   not saved, those routines will be listed and you will be asked if you
+   really wish to quit (if you answer yes, your modifications are lost).
+
+[Suggestion:  load and run EXP.AB]
+
+                            SUMMARY OF RUN/EDIT
+                            -------------------
+%!<%!E%!S%!C%!>=exit
+   Return to MAIN-MENU.  (As long as you do not select %!Load or %!Quit from
+   MAIN-MENU, if you select %!Run/Edit again, you will see that the state of
+   the registers and the program has not changed.)
+
+%!Help
+   Same as %!Help in MAIN-MENU.
+
+%!Step-by-step
+   Execute one step of the program each time SPACEBAR is pressed.
+
+%!Continuous
+   Same as %!Step-by-step, except that the program is executed without
+   interruption.
+
+Edit%!Regs
+   Edit registers "A" through "J", using any of the edit-keys displayed at the
+   bottom of the screen.  (A register may contain a value from -9999 to 9999.)
+
+Edit%!Program
+   (You will see that the border of one program window is illuminated.  The
+    program in any window with that border is called the "current program"
+    below.)
+
+   %!<%!E%!S%!C%!>=exit
+      Return to the previous line of selections at the bottom of the screen.
+
+   Open%!NextProgram
+      The border of a different program window will be illuminated.  Continue
+      to select this item until you get the desired current program.
+
+   %!SaveSubroutine
+      Save the current program without changing its name.
+
+   %!Edit
+      Edit the current program.  (The program window now widens for full screen
+      editing, including comments)  The leftmost column within the window lists
+      the addresses ranging from 0 to 99.  The window scrolls up and down with
+      the up and down arrow keys or page up and down keys for a complete view
+      of the program.  The instruction set is:
+
+           (In the following let "R" be some register from A to J,
+            let "x" be some number, and let "name" be some subroutine
+            or file name.)
+           SET R x    - set register R to x
+           DEC R      - decrement register R by one  (subtract 1)
+           INC R      - increment register R by one  (add 1)
+           GTO x      - jump to line x
+           ZER R x    - jump to line x, if register R contains zero
+           CAL name   - call subprogram name
+           END        - halt program execution
+
+      The column following the list of addresses contains the instructions and
+      their operands.  The spaces to the right of that column are for comments
+      (any pattern of characters you can type to explain the program).
+
+      To enter an instruction, move the cursor to the first space at the
+      desired address and type the first letter of the instruction: "S" for
+      SET, "D" for DEC, etc; the rest of the letters forming the instruction
+      will be filled in for you.  When you move the cursor with the left
+      and right arrow keys, the cursor will be positioned for you in the
+      correct space for the operand(s) corresponding to the instruction
+      that you entered.  Illegal operands are not accepted.  To delete an
+      instruction, move the cursor to the first letter of the the instruction
+      and press DELETE; the associated operands too will be deleted.  Press
+      ESC to exit.
+
+      Commenting code: Always state the basic function performed by the
+      program, specify the correct input format and outputs, and list the
+      subroutines called.  Comment area can also be used to draw brackets to
+      identify submodules of the code, and to draw arrows to show flow of
+      control.
+
+   %!ChangePC
+      Change the program counter (the pointer indicating the next line to be
+      executed) for the current program.
+
+[ Suggestion: Try loading and running EXP.AB ]
+
+For further information on abacus/register machines:
+
+             R. Jeffrey
+             Formal Logic, 2nd ed.
+             (1981, McGraw-Hill)
+             Chapter 6
+
+             G. Boolos and R. Jeffrey
+             Computability and Logic
+             (1980, Cambridge University Press)
+             Chapter 6
+
+
+===============================================================================
+This program was developed by the CogSci Courseware Project at University
+of Maryland, College Park.  It is written in Turbo Pascal, v. 4.0.
+
+"A program is never completed, only released."
+Bug reports, comments, and suggestions gratefully received.  For bugs,
+please try to give specific examples of eliciting conditions:
+
+                           Christopher Cherniak
+                           Department of Philosophy
+                           University of Maryland
+                           College Park, MD  20742
+===============================================================================
+                                 END OF HELP                                '99

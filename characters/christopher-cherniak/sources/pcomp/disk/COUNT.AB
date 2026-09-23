@@ -1,0 +1,7 @@
+COUNT.AB:
+ 1: ZER A     5  
+ 2: DEC A        
+ 3: CAL COUNT    
+ 4: GTO  1       
+ 5: END          
+99: END          

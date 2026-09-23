@@ -1,0 +1,45 @@
+# The PCOMP distribution: pcomp.exe, a WinZip 1995-96 self-extractor, 130530 bytes,
+# sha256 08d323b5b9c5f84d4a892c9648e2a20ddfc76eb993ab440dc4acd8be4f3a91ea.
+# Dates are the DOS timestamps inside the zip. Every member was extracted and hashed.
+# kept: true = byte-identical copy in disk/. The four .EXE are University of Maryland
+# copyright binaries, identified here by hash and not committed.
+files:
+  - { name: TM.EXE, bytes: 71600, date: "1990-09-19 08:50", kept: false, sha256: eed8338af29bdb3c270682c2cb2234333e70a45b84061b5f2f22ea49eb9568b3 }
+  - { name: MENU.EXE, bytes: 10912, date: "1990-07-30 20:18", kept: false, sha256: cff8376f517d6f1d23ac2b98cd027219622c102c34cea19ff8d4c59ef8a3b462 }
+  - { name: PCOMP.BAT, bytes: 118, date: "1986-01-06 21:26", kept: true, sha256: f847532d5b60988601ee2253a5c12e003ec407a169c2c7e98f41b0b9c1f42962 }
+  - { name: TM.HLP, bytes: 13144, date: "1999-11-07 00:10", kept: true, sha256: 21f1d12416251b47b19c6d437e031bf26ebd1ac26b8d80b75a7852d7fb6b592f }
+  - { name: UTM.HLP, bytes: 6721, date: "1999-11-06 23:27", kept: true, sha256: 7559f7e3ff2edbc8015c16625bdd9af67d581cf0ac034af6f1704120676c0bf7 }
+  - { name: UTM.UTM, bytes: 1163, date: "1990-06-04 23:17", kept: true, sha256: 0d83f5b9fdad5db44cd3792a716ac74a31c9bcfa61b5ce4636882ea3675d11d2 }
+  - { name: UTMBUSY.INP, bytes: 158, date: "1990-11-12 18:01", kept: true, sha256: 01d18751f3841f29e453f7376af3ea61dd3783d3d7d8ee5f0354605c41224b41 }
+  - { name: BINARY.INP, bytes: 167, date: "1990-11-12 18:09", kept: true, sha256: 3cc7167b90b61642674e6d4eaeeb31b34bd3fd84d535858fad0352cd9ce411e2 }
+  - { name: UTMBIN.INP, bytes: 138, date: "1990-11-12 18:13", kept: true, sha256: 2b0e11cbfddf8b3494111eaecbfa803a10938f6d3d7ebee326c03b1a2562a038 }
+  - { name: UTMADD.INP, bytes: 161, date: "1990-11-12 18:16", kept: true, sha256: 5d36588d0159b92da60727e9b56fb0738d0386b917706371c8afa83e2dd11832 }
+  - { name: RAM.HLP, bytes: 10192, date: "1999-11-07 00:17", kept: true, sha256: 965dd00e5c215dc41204a49205e687bb124dbc0e51cd7fbb7944554c34276d6f }
+  - { name: BUSY2.TM, bytes: 665, date: "1990-11-05 17:23", kept: true, sha256: 208b618b464fd333845a0a3e47d7b73909a4003e4ac52ce21056403c9e3b1df2 }
+  - { name: BUSY5.TM, bytes: 987, date: "1990-11-05 17:22", kept: true, sha256: 0b06c9809854606c487d85cca2e9116a43c725c975f5de9f04445bd70401ac94 }
+  - { name: UTM.TM, bytes: 1668, date: "1990-11-05 17:16", kept: true, sha256: 8019f2917140c576b457d0d93f1d6bd14d896ba31449458a06365ad42594bfe3 }
+  - { name: ADD.TM, bytes: 1071, date: "1990-11-05 16:57", kept: true, sha256: 645875a3f15828f0e148038da019d0b569eb906ca0e5e6e027e70280b0818834 }
+  - { name: EQUALS.TM, bytes: 1553, date: "1990-11-05 16:55", kept: true, sha256: 43a3f97349c05a0a72778b4174315c74ff8cc08d6f1a997e7c3f6d6280696980 }
+  - { name: BCOUNT.TM, bytes: 949, date: "1990-11-05 17:39", kept: true, sha256: 0ecc0416e7ea8a00daddbdb622c80716704770cc7a42c9f760b096e704b28228 }
+  - { name: SQUARE.TM, bytes: 2196, date: "1990-11-05 17:49", kept: true, sha256: badc7549b18b5e1df92e3334945c5c5bb2b832904c7e80d59b9940e148f84cd6 }
+  - { name: RAM.EXE, bytes: 54528, date: "1990-09-13 21:45", kept: false, sha256: e5fc27a90b9f53864480827f173c73ae4cb8e954faa7fabc99135623bb2f02e8 }
+  - { name: COUNTUP.RAM, bytes: 1307, date: "1990-11-07 20:59", kept: true, sha256: 67ba5637404f63f42ab11ff11496f8e4fd34e697d12c2e8699861d6fbf537ab2 }
+  - { name: ADD.RAM, bytes: 1547, date: "1990-11-07 21:00", kept: true, sha256: f9e4bdcc3bc0ab35bf05e48e3ef48afe99279bd536d0d97815c17f842e50d0ef }
+  - { name: FBOOT.RAM, bytes: 4027, date: "1990-11-07 21:14", kept: true, sha256: d8dbafea9fa5a76959d4ba8487035ea4732c896b8ef4a0e9e70e08ae11b1fc81 }
+  - { name: AB.HLP, bytes: 6378, date: "1999-11-07 00:22", kept: true, sha256: 2f6d6366422485e04198765554a542bdb334a69c875d09f0259da894651ece3a }
+  - { name: AB.EXE, bytes: 49712, date: "1990-09-13 21:52", kept: false, sha256: acba46b0397c7f1bb83105385ff58ab3147554caffaf5b3f6d6793218231f4e3 }
+  - { name: DESTADD.AB, bytes: 165, date: "1990-06-05 22:02", kept: true, sha256: f504406eaa338dc49438b8abaecf673ef455f457e58cff7f837e832cfa11b176 }
+  - { name: XADD.AB, bytes: 1082, date: "1990-11-05 18:05", kept: true, sha256: 90c6abb93088e14603ca2be1e47a78eb1175067a8ca69817f067fb6609b8dbc9 }
+  - { name: EXP.AB, bytes: 1245, date: "1990-11-05 18:09", kept: true, sha256: 4c307f8ba4adf789ade458d4905957b8732946e28f597f5d4c7a2c40f0c9dec6 }
+  - { name: NDESTADD.AB, bytes: 261, date: "1990-06-05 22:02", kept: true, sha256: b220e505932e27642174c1209867935b62b23fe9fd608787535017ed1ede2a88 }
+  - { name: MULT.AB, bytes: 238, date: "1990-06-05 22:02", kept: true, sha256: 1f548659c2ad0b4e39edf3ca20a0152dd474a24524ccc791b1c4ee8a343fe282 }
+  - { name: XMULT.AB, bytes: 903, date: "1990-11-05 18:13", kept: true, sha256: c005c9c161c5fe5e553b310570c302d25832edb1ee4fa2050d9a227350bce7ab }
+  - { name: COUNTDN.AB, bytes: 127, date: "1990-06-05 22:03", kept: true, sha256: 662c9abb4ff25a4119daf5500d93eee017d6a878c1cfa249e197bc5731e8646f }
+  - { name: BB5.TM, bytes: 1145, date: "1990-11-05 17:29", kept: true, sha256: b53a5bd790e4c851cc17ad6d136b08f2efd867271ef6e9dd0a397618601a9a5b }
+  - { name: COUNT.AB, bytes: 125, date: "1990-08-19 20:41", kept: true, sha256: 7e649fd297c1b8cddd30b5a5ed69123d086318ae952a74a52286227abd13190b }
+  - { name: README, bytes: 1280, date: "1991-06-07 21:00", kept: true, sha256: 287dd6fc7ccf14f198d1fc0b4fa78ba89bf9797a587def8a53b358a3609f57d3 }
+  - { name: ECHO.PRT, bytes: 1577, date: "1990-10-17 16:29", kept: true, sha256: 8c710325a312d7018f0103c4fed12c52dd378dbbed5365bdfcfedde9046ec01e }
+  - { name: BOOT.RAM, bytes: 2667, date: "1990-11-07 21:03", kept: true, sha256: 8ac46b3c3a42ee70655291aedba1c7b2eac9e673faf0cfbf277f189c4825916a }
+  - { name: EQUALS.RAM, bytes: 1877, date: "1990-11-07 21:04", kept: true, sha256: 0a381867623ec9d517af582eb91b1590c1ca7dbd330d7a6864e770cafac8d30c }
+  - { name: COUNTDN.RAM, bytes: 1467, date: "1990-11-07 21:06", kept: true, sha256: d04ce90eb9864696bedba49dc3f48a8df6bad8159280f4d5b2d5065787f7f0df }
+  - { name: MULT.RAM, bytes: 1867, date: "1990-11-07 21:07", kept: true, sha256: f55368ae4ac4ea782cbd6d5edebc417132538f4252e9ec82a6be3f0e2b43420d }

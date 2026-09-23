@@ -1,0 +1,20 @@
+---RAM* program---
+PC=11
+ 1: +000       COUNTDOWN  Program                                             
+ 2: +000       Counts down from negative integer in cell 10,                  
+ 3: +000       outputting each successive smaller integer until 0.            
+ 4: +000 -                                                                    
+ 5: +000 -                                                                    
+ 6: +000       (Demonstrates Conditional Jump instruction 8)                  
+ 7: +000 -                                                                    
+ 8: +000       PC starts at cell  11.                                         
+ 9: +000 -                                                                    
+10: -005    =  countdown kernel (a negative integer)                          
+11: +210       kernel to ACC                                                  
+12: +400       add 01                             <-----------                
+13: +309       store ACC in cell 09                          |                
+14: +109       output cell 09                                |                
+15: +812       test ACC:  + -> go on to 16; - -> jump to 12 --  = branch point
+16: +911       halt & reset to cell 11                                        
+17: +000 -                                                                    
+18: +000       (For Unconditional Jump instruction 7, see COUNTUP.RAM)        

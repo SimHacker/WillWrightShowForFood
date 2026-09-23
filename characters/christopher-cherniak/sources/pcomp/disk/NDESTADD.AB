@@ -1,0 +1,14 @@
+NDESTADD.AB:
+ 1: SET B    12  
+ 2: SET A     7  
+ 3: DEC B        
+ 4: INC A        
+ 5: INC C        
+ 6: ZER B     8  
+ 7: GTO  3       
+ 8: DEC C        
+ 9: INC B        
+10: ZER C    12  
+11: GTO  8       
+12: END          
+99: END          

@@ -1,0 +1,18 @@
+---RAM* program---
+PC=10
+ 2: +000         COUNT-UP Program:                                            
+ 3: +000         Outputs the positive integers,                               
+ 4: +000         in order, beginning with 1.                                  
+ 5: +000 -                                                                    
+ 6: +000         (Demonstrates the Unconditional Jump instruction, 7)         
+ 7: +000 -                                                                    
+ 8: +000         PC starts at cell  10.                                       
+ 9: +000 -                                                                    
+10: +200         Clear ACC & add contents of cell 00.                         
+11: +309         Store contents of ACC in cell 09. <---|                      
+12: +109         Output contents of cell 09.           | = loop               
+13: +400         Add contents of cell 00 to ACC.       |                      
+14: +711         Jump to cell 11.   -------------------|                      
+15: +000 -                                                                    
+16: +000 -                                                                    
+17: +000         (For Conditional Jump instruction 8, see COUNTDN.RAM)        
