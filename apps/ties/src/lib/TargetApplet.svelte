@@ -7,7 +7,7 @@
 	 * Single click shows the destination's definition. Double click navigates. That is
 	 * the 1988 interaction, and the rung the web dropped.
 	 */
-	import { imageFile, resolve } from './corpus.js';
+	import { imageFile, resolve, resolveIn } from './corpus.js';
 	import { BLINK_PATH, animationOf, chompHalfAngle, usablePath } from './animated.js';
 	import { HOLE, popupOf, popSvgTransform } from './popup.js';
 	import Eye from './Eye.svelte';
@@ -22,12 +22,12 @@
 	const showingAll = $derived(reveal || pressAll);
 
 	const destDb = $derived(spec.db ?? db);
-	const picture = $derived(spec.picture ? resolve(db, spec.picture) : null);
+	const picture = $derived(spec.picture ? resolveIn(db, spec.picture, 'pictures') : null);
 
 	/** A picture carries a list of shapes, each with its own destination. */
 	const regions = $derived(
 		(spec.shapes ?? []).map((s) => {
-			const geometry = resolve(db, s.shape);
+			const geometry = resolveIn(db, s.shape, 'targets');
 			return {
 				name: s.shape,
 				geometry,
@@ -148,7 +148,7 @@
 
 {#if spec.error}
 	<pre class="target-error">{spec.error}</pre>
-{:else if picture?.image || regions.length}
+{:else if picture?.image || regions.length || spec.picture}
 	<figure class="picture">
 		<!-- The overlay is anchored to the IMAGE, not the figure: normalized 0..1 geometry
 		     stretched over the caption too would shift every shape downward. -->
@@ -203,6 +203,8 @@
 						width={picture.width ?? undefined}
 						height={picture.height ?? undefined}
 					/>
+				{:else}
+					<div class="missing" title="No raster for this picture survives in the archive">[missing image]</div>
 				{/if}
 				{#if engaged.length && picture?.image}
 					<svg class="holes" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true">
@@ -323,6 +325,17 @@
 		max-width: 100%;
 		height: auto;
 		image-rendering: pixelated;
+	}
+	.missing {
+		display: grid;
+		place-items: center;
+		width: 20rem;
+		max-width: 100%;
+		aspect-ratio: 4 / 3;
+		border: 1px dashed currentColor;
+		line-height: 1.2;
+		font-style: italic;
+		opacity: 0.6;
 	}
 	.picture img.sized {
 		width: calc(var(--pic-w) * 1px);

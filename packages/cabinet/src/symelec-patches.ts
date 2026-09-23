@@ -23,6 +23,15 @@ export const SYMELEC_PATCHES: Readonly<Record<string, readonly PatchWord[]>> = {
 		[0o5163, 0o13000, 0o17200], // END
 		[0o5164, 0o13100, 0o17300], // ENDRES
 		[0o5165, 0o13000, 0o17200], // ENDNOR
+		[0o5166, 0o13101, 0o17301], // BOT
+		[0o5167, 0o13200, 0o17440], // TOP
+		[0o5171, 0o13201, 0o17461], // LPBEG
+		[0o5172, 0o13240, 0o17560], // LKBEG
+		[0o5173, 0o13300, 0o17620], // LKEND
+		[0o5174, 0o13301, 0o17621], // XSTBEG
+		[0o5175, 0o13340, 0o17710], // YSTBEG
+		[0o5176, 0o13400, 0o17750], // YSTEND
+		[0o5177, 0o13401, 0o17751], // STSAVE
 	],
 };
 

@@ -26,7 +26,8 @@ function tiesLinks(md) {
 
 		if (!silent) {
 			const raw = name.trim();
-			const slash = raw.indexOf('/');
+			// A database prefix is a slug. "Wide Field/Planetary Camera" is a title.
+			const slash = /^[\w-]+\//.test(raw) ? raw.indexOf('/') : -1;
 			const open = state.push('link_open', 'a', 1);
 			open.attrSet('href', '#');
 			open.attrSet('class', 'ties-link');

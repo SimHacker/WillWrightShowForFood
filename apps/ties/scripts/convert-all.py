@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Rebuild examples/ from the 1988 archive. The corpus is DERIVED: regenerate, never hand-edit.
+"""Rebuild examples/ from the 1988 archive.
+
+The committed corpus has moved past this converter: popup chips, the globe and founders
+rasters, the space-telescope fallback to news-hyperties-docs, and the missing-picture
+storyboards were added by hand. Running this deletes each output directory first, so
+diff a scratch conversion against examples/ before replacing anything.
 
     python3 scripts/convert-all.py [--archive DIR]
 

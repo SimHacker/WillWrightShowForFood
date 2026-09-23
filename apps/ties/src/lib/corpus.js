@@ -139,6 +139,7 @@ function buildDatabases() {
 		const db = ensure(id);
 		db.title = idx.database ?? id;
 		db.unresolved = idx.unresolved ?? [];
+		db.fallsBackTo = idx.falls_back_to ?? [];
 		const pics = idx.namespaces?.pictures?.index ?? {};
 		for (const [name, entry] of Object.entries(pics)) {
 			const file = entry.image?.replace(/^images\//, '');
@@ -227,12 +228,33 @@ export function resolve(dbId, name) {
 	if (db.pictures.has(key)) return { space: 'pictures', ...db.pictures.get(key) };
 	if (db.targets.has(key)) return { space: 'targets', ...db.targets.get(key) };
 
+	for (const id of db.fallsBackTo ?? []) {
+		const other = databases.get(id)?.documents.get(key);
+		if (other) return documentHit(id, other.slug, other.alias);
+	}
+
 	const asDb = findDatabase(name);
 	if (asDb && asDb !== dbId) {
 		const slug = homeOf(asDb);
 		return slug ? documentHit(asDb, slug, true) : null;
 	}
 	return null;
+}
+
+/**
+ * Resolve in one namespace first. `.picture X` names a picture even when an article
+ * is also called X: fosexplo.st0 shows the picture "Faint Object Spectrograph -
+ * Exploded view" in the article of that name, and documents-first finds the article.
+ */
+export function resolveIn(dbId, name, space) {
+	const raw = String(name);
+	const slash = raw.indexOf('/');
+	const other = slash > 0 ? findDatabase(raw.slice(0, slash)) : null;
+	const id = other ?? dbId;
+	const table = databases.get(id)?.[space];
+	const key = fold(other ? raw.slice(slash + 1) : raw);
+	if (table?.has(key)) return { space, ...table.get(key) };
+	return resolve(dbId, name);
 }
 
 /**

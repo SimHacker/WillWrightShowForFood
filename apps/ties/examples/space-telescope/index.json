@@ -1,6 +1,9 @@
 {
  "database": "space-telescope",
  "converted_from": "/Users/a2deh/GroundUp/Leela/git/lloooomm-imports/ties/newdb",
+ "falls_back_to": [
+  "news-hyperties-docs"
+ ],
  "namespaces": {
   "documents": {
    "principals": 26,
@@ -409,7 +412,11 @@
    "index": {
     "earth": {
      "class": "ScaledRaster",
-     "source": "newdb/earth/earth.pn0"
+     "source": "newdb/earth/earth.pn0",
+     "image": "images/globe1.im1.png",
+     "decoded_from": "globe1.im1",
+     "width": 64,
+     "height": 55
     },
     "Faint Object Spectrograph - Exploded view": {
      "class": "Raster",
