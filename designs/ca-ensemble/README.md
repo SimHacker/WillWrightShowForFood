@@ -12,8 +12,8 @@ Korz showcase: one educational set, four engines that share a picture
 | General CA | not built | same neighborhood API as CAM6 |
 
 Cherniak's TM* (PCOMP, MS-DOS) is the classroom ancestor of the TM
-column. Don remembers Velu Sinha (B.S. Physics, Maryland) working on
-that program — confirm with Cherniak / Velu.
+column. The disk credits the University of Maryland CogSci
+Instructional Software Project; the student programmers are not named.
 
 Korz: [Kees van Prooijen](../../characters/kees-van-prooijen/README.md).
 The showcase is engines students can see and change, not a video of one.

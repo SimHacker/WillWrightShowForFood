@@ -11,7 +11,8 @@ machine:
   # credits stay on the machine so a UI can show them without a sidebar essay
   credits:
     - Christopher Cherniak, TM* / PCOMP, Philosophy and Computers, University of Maryland
-    # Don remembers Velu Sinha (B.S. Physics, Maryland) on that MS-DOS program. Confirm.
+    # Credited on the disk only to the UMD CogSci Instructional Software Project
+    # (Turbo Pascal 4.0, TM* v2.0 June 1990, copyright 1985-1990). Student authors unknown.
   blank: "0"                # symbol of the infinite unpictured tape
   symbols: ["0", "1", X]    # alphabet; quote anything that looks like a number
   start: mark               # body starts in this room

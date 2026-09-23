@@ -92,5 +92,5 @@ mode so the recovered mail can be fed in raw.
 - Marvin Minsky, the 1981 program
 - Harold Ancell, who returned the mail in 2015
 - Christopher Cherniak, TM* / PCOMP — the classroom simulator this work
-  sits next to. Don remembers **Velu Sinha** (B.S. Physics, University of
-  Maryland) working on that MS-DOS program. Confirm with Cherniak / Velu.
+  sits next to. The disk credits the University of Maryland CogSci
+  Instructional Software Project; the student programmers are not named.
