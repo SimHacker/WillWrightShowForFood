@@ -25,6 +25,9 @@ export type {
 } from "./plugins/type340.js";
 export { LightPen } from "./plugins/lightpen.js";
 export type { LightPenOpts } from "./plugins/lightpen.js";
+export { PaperTape, readIn } from "./plugins/papertape.js";
+export type { PaperTapeOpts } from "./plugins/papertape.js";
+export { bootDuel, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES } from "./duel.js";
 export { toSvg, toYaml, printScreen, Recorder } from "./media.js";
 export type { SvgOpts } from "./media.js";
 export { parseOct, loadOct } from "./loader.js";

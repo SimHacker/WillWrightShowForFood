@@ -52,6 +52,8 @@ export class Pdp7 implements Cpu {
 	ionDefer = 0; // instructions to execute before interrupts may fire
 	irqLine = false; // ORed device requests, set by the Cabinet each step
 	halted = false;
+	/** The console's eighteen ACCUMULATOR switches, read by OAS/LAS. SYMELEC never reads them; DUEL's players do. */
+	switches = 0;
 	private readonly core: Uint32Array;
 
 	constructor(opts: Pdp7Opts = {}) {
@@ -260,7 +262,7 @@ export class Pdp7 implements Cpu {
 			case 0o17: lac = LACMASK; break; // CLA CLL CML CMA
 		}
 
-		// OAS (or AC with switches) — no switch register wired; no-op.
+		if (ir & 0o4) lac |= this.switches; // OAS; LAS is CLA OAS
 
 		switch (((ir >> 8) & 0o4) | ((ir >> 3) & 0o3)) { // rotates, IR<7,13:14>
 			case 0o1: lac = ((lac << 1) | (lac >> 18)) & LACMASK; break; // RAL

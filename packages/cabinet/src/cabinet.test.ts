@@ -1,10 +1,13 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import type { Device, Iot, IotReply } from "./bus.js";
 import { Cabinet } from "./cabinet.js";
 import { loadSymelec } from "./symelec-fixtures.js";
 import { DemoPlayer, houseDemo, drawing } from "./symelec-demo.js";
 import { toSvg, toYaml } from "./media.js";
+import { DUEL_SWITCHES, bootDuel } from "./duel.js";
+import { PaperTape } from "./plugins/papertape.js";
 import { Clock } from "./plugins/clock.js";
 import { LightPen } from "./plugins/lightpen.js";
 import { Pdp7, pdp7 } from "./plugins/pdp7.js";
@@ -729,4 +732,37 @@ test("acceptance: the house demo draws its picture with the 1972 program", () =>
 	assert.ok(at(540, 887), "battery");
 	assert.ok(at(725, 853), "switch");
 	assert.ok(at(530, 815), "flag");
+});
+
+// DUEL (DECUS 7-40, 1968) from the Oslo paper tape: the RIM loader reads
+// the tape's own loader, which reads the game. Two ships; hold a player's
+// switches down and that ship moves and fires.
+test("acceptance: DUEL loads from paper tape and the switches fly a ship", () => {
+	const tapes = new URL("../tapes/duel/", import.meta.url);
+	const cpu = new Pdp7({ coreWords: 8192 });
+	const ptr = new PaperTape();
+	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [] });
+	const box = new Cabinet({ cpu, devices: [t340, new Clock({ cpu }), ptr] });
+	t340.clock = () => box.cycles;
+	assert.ok(bootDuel(box, cpu, ptr, readFileSync(new URL("rim.pt", tapes)), readFileSync(new URL("duel.pt", tapes))), "loaded to 646");
+
+	const look = (cycles: number) => {
+		const frames: { intensify: boolean; x0: number; y0: number }[][] = [];
+		t340.onFrame = (f) => frames.push(f.segments);
+		box.run(cycles);
+		t340.onFrame = undefined;
+		return frames.flat().filter((s) => s.intensify);
+	};
+	box.run(1_000_000);
+	const still = look(40_000);
+	assert.ok(still.some((s) => s.x0 < 400) && still.some((s) => s.x0 > 600), "two ships, left and right");
+	const leftXs = (segs: typeof still) => segs.filter((s) => s.x0 < 512).map((s) => s.x0);
+	const before = Math.min(...leftXs(still));
+
+	const L = DUEL_SWITCHES.left;
+	cpu.switches = 0o777777 & ~(L.forward | L.turnLeft);
+	box.run(600_000);
+	const moved = look(40_000);
+	assert.equal(cpu.halted, false);
+	assert.notEqual(Math.min(...leftXs(moved)), before, "the left ship moved");
 });
