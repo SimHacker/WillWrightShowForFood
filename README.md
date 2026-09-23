@@ -217,15 +217,15 @@ Playlists are ordered tours. [`cross-links.yml`](process/cross-links.yml) is for
 
 **Hacker — clone, verify** · [playlist](process/entryways/hacker.md)  
 → `pnpm verify` then INDEX. Yaml girders canonical; real monorepo CI.  
-*Stops: SETUP → GLANCE → CARD → process INDEX → format girder → schemas → moollm-plugin → facades*
+*Stops: SETUP → GLANCE → CARD → process INDEX → format girder → schemas → moollm-plugin → cabinet tests → HyperTIES reader*
 
 **AI — orchestration, rigs** · [playlist](process/entryways/ai-coder.md)  
 → Declare rig honestly. Stick shift = model change is a commit. ai-offs = voluntary spend proof.  
 *Stops: manual transmission → ai-offs → rigs → SETUP DNA → orchestration gold → branching → SKILL → host rig*
 
-**Retro — PDP-10, Apple ][, LispM** · [playlist](process/entryways/retro.md)  
-→ Same spec, your emulator. Forward SETUP.md so others boot without you. Lars + Thomas orbit.  
-*Stops: RETROCOMPUTING → three drives → Lars → Thomas → example SETUP → Drag Race*
+**Retro — PDP-7, PDP-10, Apple ][, LispM** · [playlist](process/entryways/retro.md)  
+→ Same spec, your emulator. Forward SETUP.md so others boot without you. [PIXIE on a PDP-7](https://hyperties.org/databases/pixie/pixie-live/) and [HyperTIES](https://hyperties.org/) already run in the browser. Heinz, Lars + Thomas orbit.  
+*Stops: RETROCOMPUTING → PIXIE live → cabinet → bug journal → three drives → HyperTIES → Heinz → Lars → Thomas → example SETUP → Drag Race*
 
 **Educator — microworlds** · [playlist](process/entryways/educator.md)  
 → Will 1996 transcript, then Papert/Kay cards. Homefun grades commits vs thinking.  
@@ -233,7 +233,7 @@ Playlists are ordered tours. [`cross-links.yml`](process/cross-links.yml) is for
 
 **Archivist / historian** · [playlist](process/entryways/archivist.md)  
 → Provenance policy first — live repo vs DonHopkins archive, then 1996 primary source chain.  
-*Stops: live-repo → sync → MANIFEST → 1996 README → transcript → portrayal → invitation workflow → sync log → Terry Winograd → browse characters/*
+*Stops: live-repo → sync → MANIFEST → 1996 README → transcript → PIXIE listing → HyperTIES archive → portrayal → invitation workflow → sync log → Terry Winograd → browse characters/*
 
 **Producer — your Repo Show** · [playlist](process/entryways/producer.md)  
 → repo-show SKILL, plant a show, PR ShowMaker network. Harvest → MOOLLM skills.  

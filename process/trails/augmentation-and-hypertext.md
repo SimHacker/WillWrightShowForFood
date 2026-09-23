@@ -22,6 +22,8 @@ The forebears behind the show's **Player-in-the-Middle** tenet: Engelbart's *aug
 | [**Remembering Jef Raskin**](../../repo-shows/remembering-jef-raskin/README.md) | Memorial seed for Jef (d. 2005) — connections listed, not invitations |
 | [**Don CARD.yml**](../../characters/don-hopkins/CARD.yml) | Pie menus + HyperTIES — augmentation in practice |
 | [**HyperTIES reincarnation**](../../characters/don-hopkins/hyperties-reincarnation.md) | Ben Shneiderman's HCIL hypermedia + Don's NeWS/PostScript version — bring it back pixel-perfect in the browser as a living emulator (Forth/MockLisp/C/markup/docs/NeWS PS + XML DBs) |
+| [**HyperTIES live**](https://hyperties.org/) | The reincarnation running: Space Telescope popup targets, NeWS docs, transcluded repo docs |
+| [**PIXIE live**](https://hyperties.org/databases/pixie/pixie-live/) | 1969 radial menus around a light-pen tracking cross, on an emulated PDP-7 |
 | [**Player-in-the-Middle**](../crazy-idea-jam.yml) | Augmentation-not-automation = the PITM tenet |
 | [**memorial mode**](../../schemas/portrayal-standards.yml#memorial-mode) | How we honor the deceased — represent + discuss, never interview |
 

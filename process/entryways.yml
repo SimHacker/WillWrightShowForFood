@@ -113,6 +113,8 @@ entryways:
       - { priority: 5, title: "Format girder", path: repo-show-format.yml, why: "Canonical Repo Show definition — rigs, cauldron, clocks" }
       - { priority: 6, title: "Schemas", path: ../schemas/README.md, why: "Portrayal, rigs, invitations — contracts" }
       - { priority: 7, title: "MOOLLM plugin", path: ../kernel/moollm-plugin.yml, why: "How WWSFF composes with SimHacker/moollm" }
+      - { priority: 8, title: "Cabinet tests", path: ../packages/cabinet/README.md, why: "pnpm --filter @wwsff/cabinet test — the house demo is an acceptance test the 1972 program has to pass" }
+      - { priority: 9, title: "HyperTIES reader", path: ../apps/ties/FORMAT.md, why: "The markdown the 1988 databases became, and the SvelteKit app that serves hyperties.org" }
 
   ai-coder:
     title: "AI — orchestration, rigs, ai-offs"
@@ -132,21 +134,28 @@ entryways:
       - { priority: 8, title: "Host rig seed", path: ../rigs/stick-shift-composer-moollm.rig.yml, why: "Example — Composer + MOOLLM wiring Don actually uses" }
 
   retro:
-    title: "Retro — PDP-10, Apple ][, Lisp Machine"
+    title: "Retro — PDP-7, PDP-10, Apple ][, Lisp Machine"
     human: entryways/retro.md
     cta: "Same spec CARD — you bring the emulator; ship SETUP.md so others can boot without you"
     pitch: |
       Retrocomputing Drive challenges are platform instances of one umbrella spec. Lars Brinkhoff
       on ITS/MACLISP; Thomas Cherryhomes on FujiNet real iron — emulated AI Lab meets tree fort.
+      Two machines already run in the browser: Heinz Lemke's 1972 PIXIE on an emulated PDP-7 and
+      Type 340, and HyperTIES, the 1988 NeWS hypertext browser, with its Space Telescope database.
     playlist:
       - { priority: 1, title: "Retro umbrella", path: challenges/retrocomputing-drive.md, why: "One spec — your languages, tools, emulator; SETUP DNA required" }
-      - { priority: 2, title: "Apple ][ drive", path: challenges/apple2-drive.yml, why: "INTEGER BASIC if you dare — apple2js, Emularity stack" }
-      - { priority: 3, title: "PDP-10 MACLISP", path: challenges/pdp10-maclisp-drive.yml, why: "Boot ITS from clean machine — AI Lab on laptop" }
-      - { priority: 4, title: "Lisp Machine hack-off", path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI lane — battle continues in emulator" }
-      - { priority: 5, title: "Lars Brinkhoff", path: ../characters/lars-brinkhoff/CARD.yml, why: "ITS restoration lead — make it so on air" }
-      - { priority: 6, title: "Thomas Cherryhomes", path: ../characters/thomas-cherryhomes/CARD.yml, why: "FujiNet — real Apple ][ on the network" }
-      - { priority: 7, title: "Example SETUP DNA", path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Forward this file alone — idempotent install protocol" }
-      - { priority: 8, title: "Drag Race flair lap", path: micropolis-ai-drag-race.md, why: "Where retro rigs compete in costume" }
+      - { priority: 2, title: "PIXIE live on a PDP-7", path: "https://hyperties.org/databases/pixie/pixie-live/", why: "SYMELEC 1972 running in the page; the pointer is the light pen. Press Demo and watch it draw" }
+      - { priority: 3, title: "Cabinet emulator", path: ../packages/cabinet/README.md, why: "PDP-7 and Type 340 in TypeScript, only what SYMELEC uses, checked against SIMH" }
+      - { priority: 4, title: "Bug journal", path: ../packages/cabinet/BUG-JOURNAL.md, why: "Every one-digit transcription error that running the 1972 listing exposed" }
+      - { priority: 5, title: "Apple ][ drive", path: challenges/apple2-drive.yml, why: "INTEGER BASIC if you dare — apple2js, Emularity stack" }
+      - { priority: 6, title: "PDP-10 MACLISP", path: challenges/pdp10-maclisp-drive.yml, why: "Boot ITS from clean machine — AI Lab on laptop" }
+      - { priority: 7, title: "Lisp Machine hack-off", path: challenges/lisp-machine-hack-off.yml, why: "Symbolics vs LMI lane — battle continues in emulator" }
+      - { priority: 8, title: "HyperTIES", path: "https://hyperties.org/", why: "Ben Shneiderman's HCIL hypertext and Don's 1988 NeWS version, back in the browser: popup targets on the Hubble diagram" }
+      - { priority: 9, title: "Heinz Lemke", path: ../characters/heinz-lemke/CARD.yml, why: "PIXIE co-author, 1969; the listing the PDP-7 runs is his" }
+      - { priority: 10, title: "Lars Brinkhoff", path: ../characters/lars-brinkhoff/CARD.yml, why: "ITS restoration lead — make it so on air; his Type 340 font draws PIXIE's letters" }
+      - { priority: 11, title: "Thomas Cherryhomes", path: ../characters/thomas-cherryhomes/CARD.yml, why: "FujiNet — real Apple ][ on the network" }
+      - { priority: 12, title: "Example SETUP DNA", path: ../rigs/pdp10-maclisp-flair-lap.SETUP.md, why: "Forward this file alone — idempotent install protocol" }
+      - { priority: 13, title: "Drag Race flair lap", path: micropolis-ai-drag-race.md, why: "Where retro rigs compete in costume" }
 
   educator:
     title: "Educator — microworlds, constructionism"
@@ -178,12 +187,14 @@ entryways:
       - { priority: 3, title: "Export manifest", path: ../MANIFEST.yml, why: "Bundle list — which trees map from private source to this repo" }
       - { priority: 4, title: "1996 source README", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/README.md, why: "Provenance chain — SearchWorks, YouTube, Medium, attribution terms" }
       - { priority: 5, title: "1996 transcript", path: ../characters/will-wright/sources/1996-04-26-winograd-interfacing-to-microworlds/transcript.md, why: "Primary text — Will's words, Don's sectioning; cite don't paraphrase" }
-      - { priority: 6, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "What we publish, avoid, and how subjects can correct or delete" }
-      - { priority: 7, title: "Invitation workflow", path: ../schemas/invitation-workflow.yml, why: "Honest status enum — draft through aired; legacy_only for deceased K-lines" }
-      - { priority: 8, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm/DonHopkins and what stays private" }
-      - { priority: 9, title: "Terry Winograd forebear", path: ../characters/terry-winograd/README.md, why: "CS547 open seminar — direct ancestor of Repo Show as recorded conversation" }
-      - { priority: 10, title: "Browse characters", path: ../characters/, why: "Directories grow with responses — invitation.status in each CHARACTER.yml; INDEX.yml is machine-only" }
-      - { priority: 11, title: "Vision forebears", path: vision-and-ambition.yml, why: "Long arc girder — design-in-public lineage stated in yaml" }
+      - { priority: 6, title: "PIXIE listing, 1972", path: ../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md, why: "128 pages of printout to a file a PDP-7 runs; every fix named, and the errors only running it found" }
+      - { priority: 7, title: "HyperTIES 1988 archive", path: ../apps/ties/FORMAT.md, why: "The NeWS databases converted to markdown; what survived, and [missing image] where a picture never existed" }
+      - { priority: 8, title: "Portrayal standards", path: ../schemas/portrayal-standards.yml, why: "What we publish, avoid, and how subjects can correct or delete" }
+      - { priority: 9, title: "Invitation workflow", path: ../schemas/invitation-workflow.yml, why: "Honest status enum — draft through aired; legacy_only for deceased K-lines" }
+      - { priority: 10, title: "Host sync log", path: ../characters/don-hopkins/sync-sources.yml, why: "What was pulled from moollm/DonHopkins and what stays private" }
+      - { priority: 11, title: "Terry Winograd forebear", path: ../characters/terry-winograd/README.md, why: "CS547 open seminar — direct ancestor of Repo Show as recorded conversation" }
+      - { priority: 12, title: "Browse characters", path: ../characters/, why: "Directories grow with responses — invitation.status in each CHARACTER.yml; INDEX.yml is machine-only" }
+      - { priority: 13, title: "Vision forebears", path: vision-and-ambition.yml, why: "Long arc girder — design-in-public lineage stated in yaml" }
 
   producer:
     title: "Producer — run your own Repo Show"

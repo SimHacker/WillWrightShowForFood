@@ -17,6 +17,9 @@ Same spec CARD — you declare languages, tools, platform, emulator. SETUP DNA i
 | [**apple2-drive.yml**](../challenges/apple2-drive.yml) | ][ instance — INTEGER BASIC if you dare |
 | [**pdp10-maclisp-drive.yml**](../challenges/pdp10-maclisp-drive.yml) | MACLISP on ITS — AI Lab on laptop |
 | [**lisp-machine-hack-off.yml**](../challenges/lisp-machine-hack-off.yml) | Symbolics vs LMI — battle continues |
+| [**PIXIE live on a PDP-7**](https://hyperties.org/databases/pixie/pixie-live/) | Heinz Lemke's 1972 SYMELEC in the browser; the pointer is the light pen |
+| [**Cabinet emulator**](../../packages/cabinet/README.md) | PDP-7 + Type 340, only what SYMELEC uses; [bug journal](../../packages/cabinet/BUG-JOURNAL.md) |
+| [**HyperTIES**](https://hyperties.org/) | The 1988 NeWS hypertext browser and its databases, reincarnated |
 | [**apple2-emulator-stack.yml**](../apple2-emulator-stack.yml) | Stack pointer — apple2js, Emularity, FujiNet |
 | [**pdp10-its-stack.yml**](../pdp10-its-stack.yml) | PDP-10/ITS + SIMH — Lars Brinkhoff lineage |
 | [**lisp-machine-stack.yml**](../lisp-machine-stack.yml) | Genera, LambdaDelta, CADR heritage |

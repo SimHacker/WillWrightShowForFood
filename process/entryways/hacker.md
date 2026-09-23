@@ -19,6 +19,8 @@ Real monorepo: pnpm + Python venv + CI. Yaml girders are canonical; markdown fac
 | 5 | [**Format girder**](../repo-show-format.yml) | Canonical Repo Show definition — rigs, cauldron, clocks |
 | 6 | [**Schemas**](../../schemas/README.md) | Portrayal, rigs, invitations — contracts |
 | 7 | [**MOOLLM plugin**](../../kernel/moollm-plugin.yml) | How WWSFF composes with SimHacker/moollm |
+| 8 | [**Cabinet tests**](../../packages/cabinet/README.md) | `pnpm --filter @wwsff/cabinet test` — the house demo is an acceptance test the 1972 program has to pass |
+| 9 | [**HyperTIES reader**](../../apps/ties/FORMAT.md) | The markdown the 1988 databases became, and the SvelteKit app that serves hyperties.org |
 
 ---
 

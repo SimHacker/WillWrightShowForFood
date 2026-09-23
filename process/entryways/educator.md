@@ -38,6 +38,6 @@ Repo Show treats credited public ideas as curriculum. Will's talk is primary sou
 
 | | |
 |---|---|
-| ← | [Retro — PDP-10, Apple &#93;&#91;, LispM](retro.md) |
+| ← | [Retro — PDP-7, PDP-10, Apple &#93;&#91;, LispM](retro.md) |
 | Map | [Museum map](README.md) |
 | Next | [Archivist / historian](archivist.md) |
