@@ -212,9 +212,12 @@ Against the receipts:
   member's office, digitized by the University Library's Digital Content Unit in 2019
   because Chapman asked.
 - **"The only reason you know that the film exists… is because of my doing the research."**
-  This part is true. Don learned the film existed from Buxton's July 2008 notes, which Don
-  only got because Fleck forwarded them. Buxton found it and announced it, and then didn't
-  deliver for eleven years; Chapman delivered it in five months.
+  Buxton did the research, but Don doesn't know about the film thanks to him. Don started
+  the conversation by introducing Fleck to Buxton, and Buxton then sent his notes to
+  Kurtenbach, Newman and Lemke and left Don off. Don knows the film exists because Fleck
+  noticed and forwarded the email. Taking credit for what Don knows, after cutting him out
+  of the conversation Don started, is disingenuous. Buxton found the film reference and
+  announced it, and then didn't deliver for eleven years. Chapman delivered it in five months.
 - **"I don't care who gets the credit."** This is the same man who, in June 2008, ended the
   conversation by accusing Don of "not crediting Weisman until you learned about him from us."
 
