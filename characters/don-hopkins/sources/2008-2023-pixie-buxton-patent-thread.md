@@ -148,7 +148,7 @@ history of pie menus for Brad Myers's 05-640: Interaction Techniques class":
 Newman was alive. Chapman had the St John's College Biographical Librarian check quietly and
 confirmed it: Newman was very unwell, in a care home. He died later that year. Don found it
 disgusting to announce a living man's death as the excuse for eleven years of your own
-inaction.
+inaction and broken promises.
 
 **7 May 2019** — Don → Ben Shneiderman and Brad Myers, "Wiseman": Chapman has located the
 film and has a firm quote and permission to digitize it. Newman is still alive.
