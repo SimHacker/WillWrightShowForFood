@@ -118,10 +118,14 @@ function* carry(h: DemoHost, x: number, y: number): DemoScript {
 	yield SETTLE_CYCLES;
 }
 
-/** One element: S, optional RU, a corner per point, F. The cross must already be at the start. */
+/**
+ * One element: S, HV or RU, a corner per point, F. The cross must already be
+ * at the start. The mode button stays set until another is tapped, so every
+ * element taps its own.
+ */
 export function* element(h: DemoHost, points: readonly (readonly [number, number])[], straight = false): DemoScript {
 	yield* tapRing(h);
-	if (straight) yield* tapMenu(h, "RU");
+	yield* tapMenu(h, straight ? "RU" : "HV");
 	for (const [x, y] of points) yield* drag(h, x, y);
 	/* A tap can miss the letter; a person at the tube looks and taps again. */
 	for (let i = 0; i < 3 && drawing(h.cpu); i += 1) yield* tapRing(h);
@@ -143,16 +147,23 @@ function ring(cx: number, cy: number, r: number, sides: number): [number, number
 }
 
 /**
- * The showcase: a house under a sun, drawn the 1972 way.
+ * The showcase: a house under a sun, a tree, a hedge, a flag, and a
+ * circuit with a resistor, battery and switch, drawn the 1972 way.
  *
- * Three rules of the 1972 program shape the script. An RU element is one
+ * Several rules of the 1972 program shape the script. An RU element is one
  * rubber-band line, start to last release; corners need HV, which steps
  * a diagonal into a staircase by itself. An element holds about twenty
  * strokes, and every stair is two. And a pen that passes over a lit line
  * hands the cross to that line, so every trip between elements goes
  * around the picture, never across it, and no element starts on one:
  * the window is drawn before the house closes around it, and the roof
- * floats a little above the walls.
+ * floats a little above the walls. A corner nearer than about 25 to the
+ * last one is dropped, and an endpoint within about 20 of a node snaps
+ * to it. The cross wraps if carried much above 970.
+ *
+ * The picture fills memory. Each element costs 60 to 100 free-list cells
+ * whatever its size, and the finished drawing needs the bigpic patch:
+ * about 730 words of display file against the 735 it gives.
  */
 export function* houseDemo(h: DemoHost): DemoScript {
 	yield "The pen picks up the tracking cross and carries it";
@@ -202,7 +213,59 @@ export function* houseDemo(h: DemoHost): DemoScript {
 	yield "RU, tapped right after S: one straight rubber-band line";
 	yield* element(h, [[900, 160]], true);
 
-	yield* drag(h, 820, 640);
+	yield "A tree in one HV element: trunk up, canopy stepped, trunk down";
+	yield* drag(h, 920, 240);
+	yield* drag(h, 815, 200);
+	yield* element(h, [[815, 290], [750, 290], [830, 370], [910, 290], [845, 290], [845, 200]]);
+
+	yield "The long way round to the other side of the house";
+	yield* drag(h, 940, 250);
+	yield* drag(h, 940, 430);
+	yield* drag(h, 740, 590);
+	yield* drag(h, 740, 780);
+	yield* drag(h, 60, 780);
+	yield* drag(h, 60, 300);
+	yield* drag(h, 110, 190);
+	yield "A hedge";
+	yield* element(h, [[110, 275], [250, 275], [250, 190]]);
+
+	yield "Up to the sky for a circuit, which is what SYMELEC was for";
+	yield* drag(h, 60, 300);
+	yield* drag(h, 60, 780);
+	yield* drag(h, 540, 780);
+	yield* drag(h, 540, 935);
+	yield "The wire loop, with a square-wave resistor along the top";
+	yield* element(h, [
+		[540, 965], [680, 965], [680, 935], [720, 935], [720, 965], [760, 965],
+		[760, 935], [800, 935], [800, 965], [900, 965], [900, 832], [760, 832],
+	]);
+	yield* drag(h, 680, 832);
+	yield* element(h, [[540, 832], [540, 862]]);
+	yield "A battery: two RU plates, kept clear of the wire ends so they don't snap to them";
+	yield* drag(h, 470, 867);
+	yield* drag(h, 490, 887);
+	yield* element(h, [[590, 887]], true);
+	yield* drag(h, 630, 887);
+	yield* drag(h, 630, 912);
+	yield* drag(h, 565, 912);
+	yield* element(h, [[515, 912]], true);
+	yield "An open switch, drawn from its free end into the gap";
+	yield* drag(h, 470, 912);
+	yield* drag(h, 470, 790);
+	yield* drag(h, 720, 790);
+	yield* drag(h, 720, 872);
+	yield* drag(h, 695, 872);
+	yield* element(h, [[756, 834]], true);
+
+	yield "A flag over the roof";
+	yield* drag(h, 684, 876);
+	yield* drag(h, 640, 790);
+	yield* drag(h, 520, 760);
+	yield* drag(h, 500, 740);
+	yield* element(h, [[500, 815], [560, 815], [560, 785], [500, 785]]);
+
+	yield* drag(h, 440, 760);
+	yield* drag(h, 340, 660);
 	yield "Drawn by the 1972 program. This page only moved the pen";
 	yield* wait(1_500_000);
 }

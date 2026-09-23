@@ -33,6 +33,18 @@ export const SYMELEC_PATCHES: Readonly<Record<string, readonly PatchWord[]>> = {
 		[0o5176, 0o13400, 0o17750], // YSTEND
 		[0o5177, 0o13401, 0o17751], // STSAVE
 	],
+	/* Ours, not Heinz's. core8k gives PERMDF 511 words and the free list 1919
+	   cells. The demo picture needs about 730 of PERMDF; its free-list peak,
+	   after garbage collection, leaves room. Move the boundary up 340 octal:
+	   PERMDF 735, free list 1695. Stacks sit above END and SYMELEC masks
+	   addresses to 13 bits, so the pool itself cannot grow. Applies on top of
+	   core8k. */
+	bigpic: [
+		[0o5157, 0o13300, 0o13640], // DFE
+		[0o5160, 0o13400, 0o13740], // DFERES
+		[0o5161, 0o13300, 0o13640], // DFENOR
+		[0o5162, 0o13401, 0o13741], // BEG
+	],
 };
 
 export function applySymelecPatches(cpu: Cpu, names: readonly string[] = Object.keys(SYMELEC_PATCHES)): void {

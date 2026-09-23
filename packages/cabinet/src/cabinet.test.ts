@@ -682,33 +682,38 @@ test("acceptance: two lines — restart as printed, both drawn with core8k", () 
 });
 
 // The browser page's Demo button plays this same script; time is machine
-// cycles, so headless it draws the same house.
+// cycles, so headless it draws the same picture. It fills memory: without
+// bigpic the display file runs out before the flag.
 test("acceptance: the house demo draws its picture with the 1972 program", () => {
 	const cpu = new Pdp7({ coreWords: 8192 });
-	loadSymelec(cpu, ["pix", "core8k"]);
+	loadSymelec(cpu, ["pix", "core8k", "bigpic"]);
 	const pen = new LightPen({ aperture: 12, name: "demo", enabled: false });
 	const t340 = new Type340({ fetch: (a) => cpu.read(a), store: (a, w) => cpu.write(a, w), pens: [pen] });
 	const box = new Cabinet({ cpu, devices: [t340, new Teletype({ printCycles: 200 }), new Clock({ cpu }), new TinyTitan()] });
 	t340.clock = () => box.cycles;
 	cpu.pc = 0o22;
 	for (let i = 0; i < 30 && !t340.lastFrame; i += 1) box.run(100_000);
+	const dfe = cpu.read(0o5157);
 
 	const player = new DemoPlayer(houseDemo({ cpu, pen }));
 	const captions = new Set<string>();
 	let spent = 0;
-	while (!player.done && spent < 30_000_000) {
+	while (!player.done && spent < 40_000_000) {
 		spent += player.advance((n) => box.run(n), 50_000);
 		captions.add(player.caption);
 	}
 	assert.ok(player.done, `demo finished in ${spent} cycles`);
 	assert.equal(cpu.halted, false);
 	assert.equal(drawing(cpu), false, "no element left open");
-	assert.ok(captions.size >= 8, `captions: ${[...captions].join(" | ")}`);
+	assert.ok(captions.size >= 16, `captions: ${[...captions].join(" | ")}`);
+	assert.equal(cpu.read(0o5157), dfe, "display file never fell back to its reserve (ERRDF)");
+	assert.equal(cpu.read(0o12010), 0, "free list never fell back to its reserve (ERRGB)");
 
+	/* A 340 frame arrives in pieces; 20000 cycles covers a whole refresh. */
 	const frames: { addr: number; intensify: boolean; x0: number; y0: number; x1: number; y1: number }[][] = [];
 	t340.onFrame = (f) => frames.push(f.segments);
-	box.run(3_000);
-	const lit = frames.flat().filter((s) => s.addr >= 0o12301 && s.addr < 0o13300 && s.intensify);
+	box.run(20_000);
+	const lit = frames.flat().filter((s) => s.addr >= 0o12301 && s.addr < dfe && s.intensify);
 	const at = (x: number, y: number) => lit.some((s) => Math.min(s.x0, s.x1) - 16 <= x && x <= Math.max(s.x0, s.x1) + 16 && Math.min(s.y0, s.y1) - 16 <= y && y <= Math.max(s.y0, s.y1) + 16);
 	assert.ok(at(300, 350), "left wall");
 	assert.ok(at(700, 350), "right wall");
@@ -717,4 +722,11 @@ test("acceptance: the house demo draws its picture with the 1972 program", () =>
 	assert.ok(at(500, 715), "roof peak");
 	assert.ok(at(500, 150), "ground");
 	assert.ok(at(220, 900), "sun");
+	assert.ok(at(830, 245), "tree trunk");
+	assert.ok(at(830, 370), "tree top");
+	assert.ok(at(180, 275), "hedge");
+	assert.ok(at(740, 935), "resistor");
+	assert.ok(at(540, 887), "battery");
+	assert.ok(at(725, 853), "switch");
+	assert.ok(at(530, 815), "flag");
 });

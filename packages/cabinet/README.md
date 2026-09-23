@@ -141,7 +141,7 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 | **3. Tracking** | The 1972 tracking loop follows a virtual pen: acquire, drag, and lose the cross, with `TRCR`/`POSCR` patching core. | [TRACKING.md](TRACKING.md) |
 | **4. Titan** | Type `TITAN` on the teletype and SYMELEC phones [tiny-titan](TINY-TITAN.md): headers, checksum, `PXID` first word on the wire, its own ring file streamed and recorded. | Command language and the transport-agnostic `TitanPort` seam: [DESIGN.md](DESIGN.md#tiny-titan) |
 | **5. Drawing** | Draw with the lightbuttons: S, drag, F, several lines, HV staircases and RU straight lines, all lit. | Needs the `core8k` patch: as printed, the display file holds one line. |
-| **6. Demo** | A scripted pen draws a house under a rising sun, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture |
+| **6. Demo** | A scripted pen draws a house under a rising sun, a tree, a hedge, a flag, and a circuit with a resistor, battery and switch, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture. The picture fills memory and needs our `bigpic` patch ([BUG-JOURNAL](BUG-JOURNAL.md#the-big-picture-vanished)). |
 
 ### Next
 

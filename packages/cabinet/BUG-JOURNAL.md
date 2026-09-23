@@ -358,6 +358,36 @@ cross on the side it is about to travel toward, carries it around the
 picture, and checks the ring after F. Open: rays drawn in the lower
 half of a sun still fail, so the sun rises.
 
+### HLT at 2222 on a bigger drawing
+
+**Symptom.** Halt at 2222, `/STACKS TO SHORT OR ?`, called from 2250,
+"ERROR IF BLOCK DATA". **Cause.** `core8k` moved the display file and
+the free list but left the name list and stacks (BOT through STSAVE,
+5166–5177) where the 4K layout puts them, inside the new free list.
+Heinz's comments give 8K values for those too. **Fix.** `core8k` loads
+all sixteen layout words. **Kind:** ours, an incomplete patch.
+
+### The big picture vanished
+
+**Symptom.** The extended demo ran to the end without a halt or an error
+on the teleprinter, and the tube showed only the flag. **Cause.** Two.
+The script's render caught 3000 cycles of refresh, and a 700-word
+display file takes longer than that, so the SVG held only the last
+element. And the free list ran out: `ERRGB` at the battery fell back to
+its reserve, the next element tripped it again, and `ERRMEB` restarted
+SYMELEC, which zeroes the word at 12301 that turns the display file on.
+Every element costs 60 to 100 free cells whatever its size; a single
+sun ray costs 66. **Fix.** Fewer elements: the tree is one HV element,
+the circuit two wires, two plates and a switch. Then the `bigpic` patch,
+ours, moves the display-file boundary from 13300 to 13640. The acceptance
+test fails if either reserve is touched. **Kind:** the script's, and a
+patch of ours.
+
+Three more rules turned up drawing the circuit. A corner nearer than
+about 25 to the last one is dropped. An endpoint within about 20 of a
+node snaps to it, so the battery plates sit well clear of the wire ends.
+And the cross wraps to the bottom if carried much above 970.
+
 ## Not the machine
 
 The dev server listened only on IPv6 `::1`, so a browser that took
