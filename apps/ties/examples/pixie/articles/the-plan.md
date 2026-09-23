@@ -4,12 +4,12 @@ synonyms:
   - plan
   - coming soon
   - do not start
-definition: "What this database will be. Pointers at WWSFF folders. No ingest yet. Transclude the rooms when the plan is a plan."
+definition: "The WillWrightShowForFood rooms behind this database, transcluded live, and what comes next: Heinz's thesis with a running PIXIE demo in every section."
 ---
 
-Do not digest the Heinz room from here. It is large: a 219-page thesis, a 128-page listing, film recovery, a Facebook guessing game, Titan-link protocol, two emulation benches. It needs its own cut.
+The Heinz room is large: a 219-page thesis, a 128-page listing, film recovery, a Facebook guessing game, Titan-link protocol, two emulation benches. Below, each room's front door, transcluded live; the files stay where they are. The emulator's own documents have their articles: see ~PIXIE~.
 
-These paths will become `transclude` fences. Right now they are citations. The files stay where they are.
+**Next.** Heinz's 1972 thesis, section by section, each illustrating itself with a ~PIXIE live~ tube preloaded with the drawing that section talks about. That needs ~Tiny Titan~ to store and serve drawings, which is also what lets you draw more than one line today. Then the listing itself, browsable beside the machine running it.
 
 **The room**
 

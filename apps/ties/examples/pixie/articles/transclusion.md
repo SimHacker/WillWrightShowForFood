@@ -2,9 +2,17 @@
 title: Transclusion
 synonyms:
   - transclude
-definition: "A path fence names a WWSFF file. Today that is a coming-soon card. When the plan is cut, the same fence will splice the live document."
+definition: "A path fence splices a WillWrightShowForFood file into the article, live. The file stays in its room."
 ---
 
-A `transclude` with `path:` points at a file in WillWrightShowForFood. The reader does not ingest it yet. It shows the path, so the promise is visible and the bytes stay in the character rooms.
+A `transclude` with `path:` names a file in WillWrightShowForFood, and the reader splices it into the article. The file stays where it lives, in the character room or the package that owns it; the page shows the current text, the path, and a link to it on GitHub. Relative links inside the document go to its neighbours on GitHub.
 
-A `transclude` with `article:` already splices a live HyperTIES article, including across databases. That is how playground's The Founders door works. PIXIE will use the same verb for WWSFF markdown when someone sits down with ~The plan~.
+    ```transclude
+    path: packages/cabinet/BUG-JOURNAL.md
+    ```
+
+is all it takes; ~Bug journal~ is that fence plus a paragraph.
+
+Each document is fetched only when an article shows it, so a page carries only the documents it names. The allowed rooms are the Heinz Lemke, Lars Brinkhoff and Roy Eagleson characters, the cabinet package, and the two PIXIE repo shows. A path outside them renders as a link to GitHub.
+
+A `transclude` with `article:` splices a HyperTIES article, including across databases. That is how the playground's PIXIE live still runs the machine that lives in this database.

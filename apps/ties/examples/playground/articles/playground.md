@@ -15,4 +15,4 @@ Sandbox. Coinage, transclusion tests, the Educom floor story. The 1988 conversio
 - ~Transclusion~ — include the article, not a copy of its fences
 - ~Reveal all links~ — click the paper
 - ~HyperLook~ — HyperCard → GoodNeWS → HyperNeWS → here
-- ~PIXIE live~ — SYMELEC on a PDP-7 in the browser
+- ~pixie/PIXIE live~ — SYMELEC on a PDP-7 in the browser, in the PIXIE database

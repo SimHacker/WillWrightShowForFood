@@ -21,7 +21,7 @@ db: space-telescope
 article: The Space Telescope in Orbit
 ```
 
-- ~playground/PIXIE live~ — **a PDP-7 running in this page.** Heinz Lemke's 1972 PIXIE program, SYMELEC, executing on an emulated PDP-7 and Type 340 vector display. Your mouse is the light pen. The earliest known radial menus, operated by hand.
+- ~pixie/PIXIE live~ — **a PDP-7 running in this page.** Heinz Lemke's 1972 PIXIE program, SYMELEC, executing on an emulated PDP-7 and Type 340 vector display. Your mouse is the light pen. The earliest known radial menus, operated by hand.
 - ~A Look Back~ — Shneiderman, Plaisant, Botafogo, Hopkins, Weiland, 1991. The paper, with the pictures, on this site.
 - ~Wikipedia~ — the stub the encyclopedia has. This page is the article they have not written.
 - ~Hacker News archive~ — the threads and mail, split into articles instead of one wall.

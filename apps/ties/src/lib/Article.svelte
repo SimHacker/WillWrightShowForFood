@@ -14,6 +14,7 @@
 	import TargetApplet from './TargetApplet.svelte';
 	import CabinetApplet from './CabinetApplet.svelte';
 	import YouTubeEmbed from './YouTubeEmbed.svelte';
+	import RepoDoc from './RepoDoc.svelte';
 
 	let { db, article, onnavigate, onpreview, titled = true, reveal = false, browser = null } = $props();
 
@@ -29,7 +30,7 @@
 			}
 			if (depth > 2) continue;
 			if (segment.spec.path) {
-				out.push({ kind: 'coming', spec: segment.spec, db: dbId });
+				out.push({ kind: 'repodoc', spec: segment.spec, db: dbId });
 				continue;
 			}
 			const name = segment.spec.article ?? segment.spec.from ?? segment.spec.of;
@@ -122,11 +123,8 @@
 		{#each segments as segment, i (i)}
 			{#if segment.kind === 'html'}
 				{@html segment.html}
-			{:else if segment.kind === 'coming'}
-				<aside class="coming">
-					<p>Coming soon, by transclusion.</p>
-					<code>{segment.spec.path}</code>
-				</aside>
+			{:else if segment.kind === 'repodoc'}
+				<RepoDoc spec={segment.spec} />
 			{:else if segment.kind === 'cabinet'}
 				<CabinetApplet spec={segment.spec} />
 			{:else if segment.kind === 'youtube'}
@@ -205,18 +203,5 @@
 		font-weight: 700;
 		font-size: 1rem;
 		margin: 1rem 0 0.4rem;
-	}
-	.coming {
-		margin: 0.8rem 0;
-		padding: 0.45rem 0.6rem;
-		border: 1px dashed var(--ink, #000);
-		font-size: 0.85rem;
-	}
-	.coming p {
-		margin: 0 0 0.25rem;
-	}
-	.coming code {
-		font-size: 0.78rem;
-		word-break: break-all;
 	}
 </style>
