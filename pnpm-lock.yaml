@@ -12,6 +12,9 @@ importers:
 
   apps/ties:
     dependencies:
+      '@wwsff/cabinet':
+        specifier: workspace:*
+        version: link:../../packages/cabinet
       bcryptjs:
         specifier: ^3.0.3
         version: 3.0.3
@@ -56,11 +59,14 @@ importers:
         specifier: ^5.8.0
         version: 5.9.3
 
-  packages/teco:
+  packages/pixie:
     devDependencies:
       '@types/node':
         specifier: ^20.17.0
         version: 20.19.43
+      '@wwsff/cabinet':
+        specifier: workspace:*
+        version: link:../cabinet
       typescript:
         specifier: ^5.8.0
         version: 5.9.3

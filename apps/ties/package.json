@@ -20,6 +20,7 @@
     "vite-plugin-singlefile": "^2.3.3"
   },
   "dependencies": {
+    "@wwsff/cabinet": "workspace:*",
     "bcryptjs": "^3.0.3",
     "js-yaml": "^5.4.2",
     "markdown-it": "^15.0.2",

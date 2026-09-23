@@ -44,7 +44,7 @@ const md = new MarkdownIt({ html: false, linkify: false, typographer: false }).u
 
 // GitHub highlights the first word. `yaml target` is YAML to GH and a target to us.
 // Bare `target` / `transclude` still parse — the converter still emits those.
-const FENCE_BLOCK = /^```(?:yaml[ \t]+)?(target|transclude)\b[^\n]*\r?\n([\s\S]*?)\r?\n?```$/m;
+const FENCE_BLOCK = /^```(?:yaml[ \t]+)?(target|transclude|cabinet|youtube)\b[^\n]*\r?\n([\s\S]*?)\r?\n?```$/m;
 
 /** Must stay in step with PAGE_BREAK in scripts/st0_to_md.py. */
 const PAGE_BREAK = /^<!-- page -->[ \t]*\r?\n?/m;
@@ -72,7 +72,7 @@ export function splitRows(body) {
 }
 
 /**
- * @returns {Array<{kind:'html', html:string} | {kind:'target'|'transclude', spec:object}>}
+ * @returns {Array<{kind:'html', html:string} | {kind:'target'|'transclude'|'cabinet'|'youtube', spec:object}>}
  */
 function stampTiesHrefs(html, dbId) {
 	if (!dbId) return html;

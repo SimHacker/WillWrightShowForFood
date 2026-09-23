@@ -45,7 +45,7 @@
 
 	function onSelectStart(event) {
 		const t = event.target;
-		if (t instanceof Element && t.closest('a.ties-link, button, path')) {
+		if (t instanceof Element && t.closest('a.ties-link, button, path, [data-applet]')) {
 			event.preventDefault();
 			return;
 		}
@@ -56,7 +56,8 @@
 		if (event.button !== 0) return;
 		const t = event.target;
 		if (!(t instanceof Element)) return;
-		if (t.closest('a, button, path')) return;
+		// Applets own their presses; the paper's reveal-all is not theirs to trigger.
+		if (t.closest('a, button, path, [data-applet]')) return;
 		if (selected()) return;
 		press = { x: event.clientX, y: event.clientY };
 		reveal = true;

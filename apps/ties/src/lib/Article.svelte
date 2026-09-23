@@ -12,6 +12,8 @@
 	import { paginate, parseArticle } from './markdown.js';
 	import { getArticle, resolve } from './corpus.js';
 	import TargetApplet from './TargetApplet.svelte';
+	import CabinetApplet from './CabinetApplet.svelte';
+	import YouTubeEmbed from './YouTubeEmbed.svelte';
 
 	let { db, article, onnavigate, onpreview, titled = true, reveal = false, browser = null } = $props();
 
@@ -125,6 +127,10 @@
 					<p>Coming soon, by transclusion.</p>
 					<code>{segment.spec.path}</code>
 				</aside>
+			{:else if segment.kind === 'cabinet'}
+				<CabinetApplet spec={segment.spec} />
+			{:else if segment.kind === 'youtube'}
+				<YouTubeEmbed spec={segment.spec} />
 			{:else}
 				<TargetApplet
 					db={segment.db ?? db}

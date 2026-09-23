@@ -3,12 +3,14 @@ title: The emulator
 synonyms:
   - SIMH
   - browser bench
-definition: "Open SIMH on the desktop, today. A PDP-7 with a Type 340 in the browser is the goal. Not yet. Students are part of getting there."
+definition: "Two benches. Open SIMH on the desktop for correctness; a TypeScript PDP-7 with a Type 340 in the browser, running SYMELEC now."
 ---
 
-The emulator we are using is a desktop app: Open SIMH, PDP-7 plus Type 340, cloned with the rest of the iron. There is no JS/WASM PDP-7 with a 340 in the browser today. That is the goal.
+**Try it:** ~playground/PIXIE live~ runs the browser bench in a page.
 
-Two benches are already named in the emulation plan. Bench A is SIMH, native, correctness. Bench B is the browser. A purpose-built TypeScript core is thinkable — the PDP-7 is tiny — and the 340 is a vector display, so canvas is its habitat. The light pen, in software, is a hit-test. Promised. Not scheduled from this node.
+Two benches are named in the emulation plan. Bench A is Open SIMH, native, the correctness referee. Bench B is the browser: `@wwsff/cabinet`, a purpose-built TypeScript PDP-7 with a Type 340 vector display drawn on canvas. The light pen, in software, is a hit test against the strokes the display just drew. It boots Heinz Lemke's 1972 SYMELEC listing, and SYMELEC's own tracking loop follows the pen.
+
+~Roy Eagleson~'s students at Western are re-implementing ~PIXIE~. ~Lars Brinkhoff~ is the iron. The plan file is the receipt.
 
 ~Roy Eagleson~'s students at Western are re-implementing ~PIXIE~. ~Lars Brinkhoff~ is the iron. The plan file is the receipt.
 

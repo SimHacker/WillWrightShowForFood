@@ -12,7 +12,9 @@ const useNode = process.env.SVELTE_ADAPTER === 'node';
 
 const adapter = useNode
 	? (await import('@sveltejs/adapter-node')).default()
-	: (await import('@sveltejs/adapter-static')).default({ pages: 'build', assets: 'build' });
+	: // strict: false lets the static build skip the server-only routes (api, proxy, view),
+		// which declare prerender = false and exist only in a node build.
+		(await import('@sveltejs/adapter-static')).default({ pages: 'build', assets: 'build', strict: false });
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
