@@ -10,6 +10,12 @@ The lineage, in one line:
 Vala/GTK/Cairo) → **Fly-Pie** (GNOME Shell successor) → **[Kando](https://kando.menu/)**
 (cross-platform: Windows, macOS, Linux — marking gestures, WYSIWYG editor, CSS themes,
 sound themes, achievements, IPC interface, no telemetry, free forever).
+**Kando 3.0** (2026-09-23) added automation workflows: each item holds ordered action
+lists for hover, select, open and center-click, and closing the menu is a step you place
+in the list ([release](https://ko-fi.com/post/Kando-3-0-0-now-available-H5W727E0O3),
+[design post](https://ko-fi.com/post/Workflows-coming-to-Kando-3-0-N7A421KR1B),
+[video](https://www.youtube.com/watch?v=PhUnN2cx5sI)). The webtop takes the same model:
+[WORKFLOWS.md](https://github.com/SimHacker/moollm/blob/main/designs/webtop/WORKFLOWS.md).
 
 He is also the author of the enormously popular GNOME extensions **Burn-My-Windows** and
 **Desktop Cube**, and a developer on **CosmoScout VR**. See
@@ -44,7 +50,7 @@ Don has been publicly championing Simon's work since at least May 2018, in the
 > reserves a slice in the sub-menu to go back.
 > — [Don, HN, May 2018](https://news.ycombinator.com/item?id=17106453)
 
-And in the [Show HN: Kando thread, December 2024](https://news.ycombinator.com/item?id=42525290):
+And in the [Show HN: Kando thread, December 2024](https://news.ycombinator.com/item?id=42542714):
 
 > Simon, not only do you totally get the inherent advantages and joys of pie menus, and
 > have the skills and persistence to implement them well and iterate on the design by

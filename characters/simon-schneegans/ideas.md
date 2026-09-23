@@ -12,7 +12,9 @@ decade: thesis work on **Trace-Menus** and **Coral-Menus** (~2012), **Gnome-Pie*
 Fitts's-law circular launcher for Linux), **Fly-Pie** (its GNOME Shell successor), and now
 **Kando** — a free, open source, cross-platform marking/pie menu with a WYSIWYG editor,
 CSS themes, sound themes, keyboard selection, an IPC interface, and an achievement system.
-He is also the author of the wildly popular GNOME extensions **Burn-My-Windows** and
+[Kando 3.0](https://ko-fi.com/post/Kando-3-0-0-now-available-H5W727E0O3) (2026-09-23)
+added automation workflows: every item holds ordered action lists, one per event, with
+closing the menu as a step you place in the list. He is also the author of the wildly popular GNOME extensions **Burn-My-Windows** and
 **Desktop Cube**, and a developer on **CosmoScout VR**.
 
 ## Shared ground
@@ -56,6 +58,41 @@ hundred-trillion-dollar note.
    repository on stream — every show artifact one gesture away. Possible ensemble with the
    [Ben Shneiderman + Heinz Lemke pie menu history show](../../repo-shows/ben-and-heinz-pie-menus/README.md):
    1969 PIXIE → CHI '88 → Kando, the whole lineage in one room.
+8. **Workflows, and what a step should be.** Kando 3.0's model: buttons and submenus, each
+   with hover, select, open and center-click lists, a quick-select key per list, and
+   `close-menu` as a step whose position decides what runs with the menu up and what runs
+   after it's gone
+   ([design post](https://ko-fi.com/post/Workflows-coming-to-Kando-3-0-N7A421KR1B)).
+   The open question: desktop steps are keystrokes and delays, because that's all an OS
+   lets a utility do. Where the target app has named commands, a step can be a command
+   that answers, and a delay can be a wait for an event. The new
+   `send-websocket-message` action is the bridge; Don's webtop design takes Kando's model
+   whole ([WORKFLOWS.md](https://github.com/SimHacker/moollm/blob/main/designs/webtop/WORKFLOWS.md)).
+   Live segment: a Kando slice on Simon's desktop driving a page in this repo.
+9. **Recording workflows by doing them.** Conditions are next on Simon's list. Recording
+   is the one after that, and it's hard for a menu that only sees keystrokes. Allen
+   Cypher's *Watch What I Do* was about recovering intent from input; an app that
+   announces its commands removes that problem.
+10. **The center, the keyboard, and the overlay.** Kando made the center programmable and
+    the back key a setting, added arrow-key walking, and puts quick-select keys on the
+    items. Don argued in 2024 that 4- and 8-item pies map straight onto arrow keys, keypads
+    and joysticks, as his ActiveX pie menus did with full keyboard navigation
+    ([HN](https://news.ycombinator.com/item?id=38921863)). The webtop's
+    [ROOM-STROLLING](https://github.com/SimHacker/moollm/blob/main/designs/webtop/ROOM-STROLLING.md)
+    gives the center two meanings, *here* and *cancel*. With workflows it can have a third.
+    What should the center mean?
+11. **Hover as preview.** Kando 3.0's hover workflow is a place for what Don asked about in
+    the first Kando thread in 2024: labels and descriptions revealed progressively as you
+    browse, the title and description in the center
+    ([HN](https://news.ycombinator.com/item?id=39243040)), and Tog's 1987 drag delay for
+    submenus ([HN](https://news.ycombinator.com/item?id=39228342)). HyperTIES in 1988 showed
+    a definition before you followed a link. What should a hover be allowed to do, and
+    what must it never do?
+12. **The first pie menus, running again.** PIXIE's lightbutton menus (the 1969 paper;
+    Heinz Lemke's 1972 SYMELEC listing) now run in the browser: the listing transcribed
+    and running on an emulated PDP-7 and Type 340, with a light pen you drive with the
+    mouse ([PIXIE live](https://hyperties.org/databases/pixie/pixie-live/)). Simon can
+    draw a circuit with the ancestor of Kando.
 
 ## Sources (public)
 

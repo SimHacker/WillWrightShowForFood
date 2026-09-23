@@ -2,7 +2,8 @@
 
 🥧 **The Pie Baker** — a dozen-plus years of continuous pie-menu iteration, all free software:
 **Trace/Coral thesis menus** (~2012) → **Gnome-Pie** → **Fly-Pie** → **[Kando](https://kando.menu/)**
-(cross-platform marking menus, WYSIWYG editor, themes, achievements). Also **Burn-My-Windows**,
+(cross-platform marking menus, WYSIWYG editor, themes, achievements; **3.0, 2026-09-23: automation
+workflows**). Also **Burn-My-Windows**,
 **Desktop Cube**, **CosmoScout VR**.
 
 **Invitation:** draft — [invitation.md](invitation.md). Ensemble option:

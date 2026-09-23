@@ -6,7 +6,7 @@ character:
   type: invitation
   signifier: "🥧"
   status: living
-  field: "Pie menus for a living ecosystem — Gnome-Pie, Fly-Pie, Kando; GNOME eye-candy (Burn-My-Windows, Desktop Cube); CosmoScout VR"
+  field: "Pie menus for a living ecosystem — Gnome-Pie, Fly-Pie, Kando (3.0: automation workflows); GNOME eye-candy (Burn-My-Windows, Desktop Cube); CosmoScout VR"
   home: characters/simon-schneegans/
 
 representation:
@@ -21,12 +21,29 @@ invitation:
   show_seed: repo-shows/simon-schneegans-pie-menus/simon-schneegans-pie-menus.yml
 
 bio:
-  summary: "**Simon Schneegans** — German developer and researcher who has been building and refining pie menus for well over a decade: thesis work on **Trace-Menus** and **Coral-Menus** (~2012), **Gnome-Pie** (the circular launcher for Linux, Vala/GTK/Cairo), **Fly-Pie** (its GNOME Shell successor), and now **Kando** — a cross-platform (Windows/macOS/Linux) open source marking/pie menu with a WYSIWYG editor, CSS themes, sound themes, and an achievement system. Also the author of beloved GNOME extensions (**Burn-My-Windows**, **Desktop Cube**) and a developer on **CosmoScout VR** at DLR."
+  summary: "**Simon Schneegans** — German developer and researcher who has been building and refining pie menus for well over a decade: thesis work on **Trace-Menus** and **Coral-Menus** (~2012), **Gnome-Pie** (the circular launcher for Linux, Vala/GTK/Cairo), **Fly-Pie** (its GNOME Shell successor), and now **Kando** — a cross-platform (Windows/macOS/Linux) open source marking/pie menu with a WYSIWYG editor, CSS themes, sound themes, and an achievement system. **Kando 3.0** (2026-09-23) turned every item into ordered workflows of actions, one per event (hover, select, open, center-click). Also the author of beloved GNOME extensions (**Burn-My-Windows**, **Desktop Cube**) and a developer on **CosmoScout VR** at DLR."
 
 pie_menu_lineage:
   fact: "Simon is the most persistent pie-menu implementer of his generation — a dozen-plus years of continuous design iteration from academic thesis (trace/coral menus, with sub-menu preview nubs and reserved roll-back slices) through Gnome-Pie's Fitts's-law launcher to Kando's cross-platform marking menus."
   don_on_simon_2018: "https://news.ycombinator.com/item?id=17106453 — 'I'm very impressed by Simon Schneegans' work on Gnome-Pie... And especially his delightful thesis work.'"
-  don_on_simon_2024: "https://news.ycombinator.com/item?id=42525290 — on the Kando Show HN: 'not only do you totally get the inherent advantages and joys of pie menus... but you also have an impeccable sense of design and creativity.'"
+  don_on_simon_2024: "https://news.ycombinator.com/item?id=42542714 — on the Kando Show HN (https://news.ycombinator.com/item?id=42525290): 'not only do you totally get the inherent advantages and joys of pie menus... but you also have an impeccable sense of design and creativity.'"
+  don_on_kando_hn_2024:
+    - { id: 39217923, date: "2024-02-01", story: "Kando: The Cross-Platform Pie Menu", gist: "PIXIE 1969 as the earliest known pie menus, and the 30-year retrospective" }
+    - { id: 39227843, date: "2024-02-02", story: "Kando: The Cross-Platform Pie Menu", gist: "Fitts's law, why pie menus are faster and make fewer errors" }
+    - { id: 39228342, date: "2024-02-02", story: "Kando: The Cross-Platform Pie Menu", gist: "Tog's drag delay for submenus, Apple HIG 1987 p.87" }
+    - { id: 39243040, date: "2024-02-03", story: "Kando: The Cross-Platform Pie Menu", gist: "revealing labels and descriptions progressively while browsing; title and description in the center" }
+    - { id: 39432832, date: "2024-02-19", story: "How to make a better default Firefox UI", gist: "Kando, Fly-Pie and Gnome-Pie as user-editable WYSIWYG pie menus" }
+    - { id: 38921863, date: "2024-01-09", story: "Golden Rules of Interface Design", gist: "4- and 8-item pies map onto arrow keys, keypads and joysticks; the ActiveX pie menus had full keyboard navigation" }
+
+kando_3:
+  released: "2026-09-23"
+  summary: "Automation workflows. Items are buttons or submenus; each has several ordered action lists keyed by event (button: hover, select; submenu: hover, open, center-click), each with its own quick-select key. close-menu is itself an action, so its position sets timing. New actions: focus-window, delay, set-clipboard, send-websocket-message. Also arrow-key navigation, quick-select-key overlays in every theme, the Purity theme (by a contributor), hide on focus-out, fixed menu positions, a redesigned settings dialog. More than ten community code contributors, a record for the project."
+  next: "Conditions, such as time of day or active window (focus an app if open, else launch it)."
+  sources:
+    release: "https://ko-fi.com/post/Kando-3-0-0-now-available-H5W727E0O3"
+    design_post: "https://ko-fi.com/post/Workflows-coming-to-Kando-3-0-N7A421KR1B"
+    video: "https://www.youtube.com/watch?v=PhUnN2cx5sI"
+  webtop: "https://github.com/SimHacker/moollm/blob/main/designs/webtop/WORKFLOWS.md"
   thesis_videos:
     trace_menu: "https://vimeo.com/51073078"
     coral_menu: "https://vimeo.com/51072812"
@@ -38,6 +55,9 @@ sources:
     - { title: "Gnome-Pie homepage", url: "https://schneegans.github.io/gnome-pie.html" }
     - { title: "Gnome-Pie 0.7.1 — the Wayland problem, honestly documented", url: "https://schneegans.github.io/news/2017/07/09/gnome-pie-071.html" }
     - { title: "Show HN: Kando (Dec 2024, with Don in the thread)", url: "https://news.ycombinator.com/item?id=42525290" }
+    - { title: "Kando 3.0.0 now available (2026-09-23)", url: "https://ko-fi.com/post/Kando-3-0-0-now-available-H5W727E0O3" }
+    - { title: "Workflows coming to Kando 3.0 (design post)", url: "https://ko-fi.com/post/Workflows-coming-to-Kando-3-0-N7A421KR1B" }
+    - { title: "Kando 3.0.0 brings workflow automation! (video)", url: "https://www.youtube.com/watch?v=PhUnN2cx5sI" }
     - { title: "GitHub — Schneegans (Kando, Fly-Pie, Burn-My-Windows, Desktop Cube, Gnome-Pie)", url: "https://github.com/Schneegans" }
     - { title: "Don's 2018 HN praise (Pie Menus 30-Year Retrospective thread)", url: "https://news.ycombinator.com/item?id=17106453" }
   papers: []
