@@ -59,3 +59,4 @@ __pycache__/
 # Local release staging. `RELEASE_ROOT` is /srv/wwsff on a server and this on a laptop, so
 # running a real deploy locally leaves build output here.
 .releases/
+.moollm-tmp/

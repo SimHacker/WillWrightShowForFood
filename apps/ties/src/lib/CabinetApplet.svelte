@@ -311,9 +311,9 @@
 	}
 
 	function onDemo() {
+		if (player) return;
 		try {
-			if (player) stopDemo();
-			else startDemo();
+			startDemo();
 		} catch (e) {
 			error = e instanceof Error ? e.message : String(e);
 			status = 'error';
@@ -369,6 +369,18 @@
 	});
 </script>
 
+{#if spec.title}
+	<p class="headline">
+		<strong>{spec.title}</strong>
+		<button
+			type="button"
+			class="demo"
+			disabled={status !== 'live' || demoOn}
+			title="Reboot and let a scripted pen draw a picture, the 1972 way"
+			onclick={onDemo}>Demo</button
+		>
+	</p>
+{/if}
 <figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px">
 	<div class="tube-wrap" style:width="{side}px">
 		<canvas
@@ -409,18 +421,29 @@
 				onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
 				>{speed === Infinity ? 'max' : `${speed}×`}</button
 			>
-			<button
-				type="button"
-				disabled={status !== 'live'}
-				title="Reboot and let a scripted pen draw a house, the 1972 way"
-				onclick={onDemo}>{demoOn ? 'Stop demo' : 'Demo'}</button
-			>
 			<button type="button" disabled={status !== 'live'} onclick={onPrintScreen}>Print screen</button>
 		</span>
 	</figcaption>
 </figure>
 
 <style>
+	.headline {
+		margin: 0 0 0.4rem;
+	}
+	.headline .demo {
+		margin-left: 0.4rem;
+		font: inherit;
+		font-weight: bold;
+		padding: 0.05rem 0.6rem;
+		border: 1px solid var(--ink, #000);
+		background: var(--paper, #fff);
+		color: var(--ink, #000);
+		cursor: pointer;
+	}
+	.headline .demo:disabled {
+		opacity: 0.4;
+		cursor: default;
+	}
 	.cabinet-applet {
 		box-sizing: border-box;
 		max-width: 100%;

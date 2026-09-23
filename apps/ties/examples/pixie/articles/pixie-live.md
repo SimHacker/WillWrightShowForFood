@@ -7,9 +7,8 @@ synonyms:
 definition: "SYMELEC, Heinz Lemke's 1972 PIXIE program, running on an emulated PDP-7 and Type 340 in this page. Press and drag on the tube: the mouse is the light pen."
 ---
 
-**PIXIE, 1972, running.** Press and drag on the tube.
-
 ```yaml cabinet
+title: PIXIE, 1972, on a PDP-7 and 340 display emulator.
 machine: pdp7
 program: symelec
 boot: idla
