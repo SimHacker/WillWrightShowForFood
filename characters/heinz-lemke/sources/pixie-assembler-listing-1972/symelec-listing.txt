@@ -1541,7 +1541,7 @@
   183    2401/  42233           DAC OP+1
   184    2402/ 222233           LAC I OP+1
   185    2403/ 741100           SPA
-  186    2404/ 602375           JMP .-5                    /DO AGAIN IF ON NONITEM
+  186    2404/ 602377           JMP .-5                    /DO AGAIN IF ON NONITEM
   187    2405/ 202233           LAC OP+1                   /PRESERVE AC
   188    2406/ 622376           AND I CAR 7
   189
@@ -3365,7 +3365,7 @@
   383    5656/ 100177  SRAST,   PAR VE SC3 IN7             /SMALL RASTER
   384    5657/ 200001           VEC ON 1 0
   385    5660/ 300400           VEC ON 0 -1
-  386    5661/ 200200           VEC ON -2 0
+  386    5661/ 200202           VEC ON -2 0
   387    5662/ 201000           VEC ON 2
   388    5663/ 200002           VEC ON 2 0
   389    5664/ 301401           VEC ON 1 -3

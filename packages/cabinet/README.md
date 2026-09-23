@@ -144,6 +144,9 @@ language and the transport-agnostic `TitanPort` seam are in
 lightbuttons; serve a structure *back* over the link. SIMH stays on
 the desk as the oracle. The boundary bugs met on the way up each rung
 — and the one where 1972 NAK'd 2026 — are the field notes in
-[OFF-BY-ONE.md](OFF-BY-ONE.md).
+[OFF-BY-ONE.md](OFF-BY-ONE.md). Every bug since, including the
+browser page's, is in [BUG-JOURNAL.md](BUG-JOURNAL.md): one wrong
+display word in the transcription, and a PDP-7 whose speed was set
+by the monitor it was shown on.
 
 ↑ [packages](../README.md)

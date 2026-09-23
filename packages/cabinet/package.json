@@ -5,7 +5,8 @@
 	"description": "Instruction set in a cabinet. PDP-7 first. Emulator, not a simulator.",
 	"type": "module",
 	"exports": {
-		".": "./dist/index.js"
+		".": "./dist/index.js",
+		"./fixtures": "./dist/symelec-fixtures.js"
 	},
 	"scripts": {
 		"build": "tsc -p tsconfig.json",

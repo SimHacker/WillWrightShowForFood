@@ -95,6 +95,20 @@ perfectly against the code's parenthesized literals — free confirmation of bot
 arbitration and one last inked-zero fix (`JMP GARB`), the checkers report **zero findings
 on all 128 pages**.
 
+The opcode cross-check covers memory-reference instructions only; display words escaped
+it. Running the program found one: `SRAST+3` (5661), source `VEC ON -2 0`, transcribed
+`200200`. The raw OCR of page 060 reads `209202`, and the operands assemble to `200202`.
+The dropped `-2` shifted the rest of the small raster, and the lightbuttons drawn after
+it, 16 grid units right of the tracking cross. A decode of every `VEC` line against its
+operands finds no other disagreement.
+
+The opcode check compares the opcode field only, so an address field can be wrong and still
+pass. Running the program found one of those too: `JMP .-5` at 2404, transcribed `602375`.
+The scan of page 029 reads `602377`, and 2404 − 5 is 2377; the raw OCR read `69237`. The
+bad target sent the list walker into the previous routine's exit, a list pointer went
+astray, and it overwrote the interrupt routine, halting the machine when F was pressed. A
+recomputation of every `.`-relative operand in the listing finds no other disagreement.
+
 ## Failure taxonomy — what LLM scribes actually do wrong
 
 1. **Silent witness substitution.** When Composer's image read failed (pages 048–049, 110),
