@@ -1,65 +1,24 @@
-# Fan band back (and still) together — SimFreaks × SimSlice marriage arc
+# 🧭 Conversation Hooks & Script Roadmap: Heather Castillo
 
-*Public story card — verified where cited; Don's framing for the Alvey pair show.*
+This scratchpad serves as the definitive interview guide and talking-point directory for Heather Castillo’s segment on the Repo Show. It outlines the factual milestones of her 26-year career in simulation design and object-driven engineering, directly correcting previous placeholder assumptions.
 
-[Portrayal standards](../../../schemas/portrayal-standards.md) · show: [`../SHOW.yml`](../SHOW.yml)
+## 🎭 Segment 1: The SimFreaks Pipeline & Competition (Early 2000s)
+*   **The Content Empire:** Operating **SimFreaks** as one of the premier, top-tier independent content houses for The Sims original, managing a global collaborative network of 28 artists, and modeling the original environmental assets that Patrick J. Barrett III utilized to officially pitch *The Sims: Hot Date* to Maxis.
+*   **The Myth of Spying:** Navigating the era as a creator so thoroughly engrossed in running her own massive, non-stop production pipeline that she rarely had time to track or browse competing site uploads.
+*   **The FBI Cybercrime Case:** Joining forces with a coalition of pay-site creators and a Washington D.C.-based federal agent to mount a multi-year international copyright investigation against an aggressive content pirate targeting community assets.
 
-## One-liner
+## 🍸 Segment 2: SimLounge.com & Community Satire
+*   **The Cultural Critic (Vima Da Boda):** Founding and operating **SimLounge.com** (now fully archived and preserved at SimFreaks) as an independent satirical review platform. Writing under the alias Vima Da Boda alongside her friend Julie as the "Church Lady" to deliver brutally honest, highly requested roasts of community sites.
+*   **The Martini Rating System:** Reviewing legendary destinations like *7 Deadly Sims*, gamifying community gossip (like the "Skinny Pale Wench" skin cloning scandals), and rating custom content using a signature scale of Martini Glasses and Communion Cups.
 
-Two rival-adjacent **independent fan websites** → community intro → **married** → **Zombie Sims** together → **Gallium / Proxi** with Will → **Soul City** publishing with Don now.
+## 🏫 Segment 3: The SimProv Collaboration & Preservation
+*   **The Decentralized Project Jam:** Reaching across opposite coasts alongside Don Hopkins, Teresa Fernandez, Steve Alvey, and SimBabes to engineer a massive, collaborative wedding expansion pack before modern team management software existed.
+*   **The Technical Preservation Pipeline:** An active look at how Heather is currently archiving unreleased SimBabes assets for SimFreaks—manually constructing missing isometric rotations and updating base-object scripts where modern AI models completely fail due to the micro-scale pixel resolutions.
 
-The Sims community's own *get the band back together* — except the band is a marriage and the union is still shipping.
+## 🛠️ Segment 4: The 10-Year Hiatus & Indie Game Production
+*   **Steering Away from the Sequels:** Stepping back from active modding due to a dislike of *The Sims 3* art style, leading into a ten-year hiatus from the public eye to escape the intense burnout of early internet fame.
+*   **The Xbox 360 & Mobile Era:** Partnering as roommates with former Maxis designer Patrick J. Barrett III to serve as Owner and Creative Director of Star Gaming Network, shipping optimized 3D environmental assets and UI/UX layouts for indie Xbox 360 and mobile titles.
 
-## Timeline
-
-
-| Era         | Heather                                                                                                                                                   | Steve                                                                                                     | Together                                                                                                |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Fan sites   | **SimFreaks** — founder (Heather Castillo)                                                                                                                    | **SimSlice** — founder; **SliceCity** (SimCity inside The Sims)                                           | Separate ~26-year brands                                                                                |
-| Community   | EA-recognized #1 Sims 1 add-ons site (per [thealveys.us](https://thealveys.us/))                                                                          | Wired coverage of SliceCity ([Sims Zone archive](https://www.thesimszone.co.uk/news/archive.php?ID=1371)) | Introduced via **SimBabe** community ([SimSlice about](https://www.simslice.com/about/index.shtml))     |
-| In person   | Online ~10 years before first meet                                                                                                                        | Same                                                                                                      | Met in person; **married ~7 years after** that meet (Steve's account on SimSlice about page)            |
-| Magnum opus | 2D and 3D graphic artist, Sims artist community leader, object suites, tutorials and mentoring                                                            | SimAntics depth, Nested simulation Slice City, Weather Machine, pet dragons, donkeys, mice...             | **Zombie Sims** — co-shipped expansion-pack-scale work                                                  |
-| Gallium     | Artist in Residence / Art Director threads on **Proxi** ([LinkedIn](https://www.linkedin.com/in/heather-castillo), [thealveys.us](https://thealveys.us/)) | Same era with Will Wright at **Gallium Studios**                                                          | Worked with Will + Lauren Elliott team                                                                  |
-| Now         | SimFreaks catalog + subscriptions                                                                                                                         | SimSlice / SliceCity                                                                                      | **Soul City** federated publishing with Don; SimProv Wedding Playset revival; Micropolis content system |
-
-
-
-
-## The fan-marriage beat (show hook)
-
-> Independent fan sites → beautiful themes and object programming → blew Will's and Sims team's minds → fell in love through the community → built a life → still building **Zombie Sims** together → came back to Will at Gallium → working with us on **Soul City**.
-
-Not employees-of-Maxis reunion — **fan creators** who became the precedent for Will's nested-games / data-portability dream (SliceCity) and for Don's UCC publishing stack (Soul City catalogs).
-
-## Evidence bounce (async edit)
-
-
-| Ping                      | Artifact                                                                                                       | Pong                                                |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| "Two separate fan sites"  | [simfreaks.com](https://www.simfreaks.com/) · [simslice.com/about](https://www.simslice.com/about/index.shtml) | How SimBabe introduced them                         |
-| "SimCity inside The Sims" | Wired / Sims Zone SliceCity article                                                                            | Steve: why Simsville cancellation sparked SliceCity |
-| "Married"                 | SimSlice about page timeline                                                                                   | Heather + Steve tell their version on air           |
-| "Worked with Will again"  | [thealveys.us](https://thealveys.us/) Gallium line · Proxi LinkedIn posts                                      | What Proxi meant for their craft                    |
-| "Now Soul City"           | [`../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md`](../../https://github.com/SimHacker/WillWrightShowForFood/tree/main/catalogs/soul-city/README.md)                                     | Live catalog republish demo                         |
-
-
-Pattern: [`../../building-the-sims/evidence-bounce-cut.md`](../../building-the-sims/evidence-bounce-cut.md)
-
-## Related beats
-
-- **Old band theme:** [`../../../process/old-band-back-together.yml`](../../../process/old-band-back-together.yml#simfreaks-simslice-fan-crew)
-- **Speed Dating with Cupid** — SimProv Wedding Playset; SimFreaks graphics ([`../../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml`](../../../bits/gag-speed-dating-with-cupid/gag-speed-dating-with-cupid.yml))
-- **Data portability crown jewel** — SliceCity as shipped precedent ([`../../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md`](../../../bits/theme-data-portability-crown-jewel/theme-data-portability-crown-jewel.md))
-- **Afterlife × ZombieSims** flagship episode: [`afterlife-zombie-bridge.yml`](../afterlife-zombie-bridge.yml)
-
-
-
-## Ask on air
-
-- SimBabe introduction — what do you each remember?
-- 10 years online, 7 years to marriage — community courtship at dial-up speed
-- Zombie Sims as the project you still ship *together*
-- Gallium / Proxi — Artist in Residence vs day-to-day; what carried into Soul City?
-- SliceCity today — still the best argument for Soul City bridges?
-
-↑ [`../README.md`](../README.md) · [`../../../characters/heather-castillo/`](../../../characters/heather-castillo/) · [`../../../characters/steve-alvey/`](../../../characters/steve-alvey/)
+## 🧟 Segment 5: The Reconnection & ZombieSims Blueprint
+*   **The Missing Contact Hunt:** The 2011 search for SimBabe’s shifting email formula that accidentally led to a text message to Steve, a hilarious case of oversharing under a mistaken identity, and a year of non-stop daily text messages.
+*   **The Lockdown Marathon:** Marrying in 2019 right before the pandemic hit, and channeling lockdown isolation into a massive, year-long collaborative development marathon to create **ZombieSims**. Having the absolute time of their lives brainstorming like crazy, laughing at the game's comedic potential, and marking the first full-scale collaboration between her distinct 3D environment art and Steve's deep *SimAntics* script architecture.
