@@ -69,6 +69,10 @@ else
 	pnpm install
 fi
 
+# Workspace packages export from their gitignored dist/, so a fresh checkout has to build
+# them first. "ties^..." is every workspace package ties depends on, not ties itself.
+pnpm --filter "ties^..." run build
+
 SVELTE_ADAPTER="$MODE" pnpm build
 
 rm -rf "$STAGE"
