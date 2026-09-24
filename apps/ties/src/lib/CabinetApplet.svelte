@@ -42,6 +42,12 @@
 	const SIDE_KEY = 'cabinet-side';
 	let userSide = $state(untrack(() => Number(globalThis.localStorage?.getItem(SIDE_KEY)) || null));
 	const side = $derived(userSide ?? fitSide ?? size);
+	// The figure's height over its width, once the bottom edge has been dragged. The tube
+	// stays square; the height is a floor, so content taller than it still shows, and
+	// height past the content goes to the Memory drawer or stays blank.
+	const ASPECT_KEY = 'cabinet-aspect';
+	let userAspect = $state(untrack(() => Number(globalThis.localStorage?.getItem(ASPECT_KEY)) || null));
+	const figHeight = $derived(userAspect ? Math.round(side * userAspect) : null);
 
 	// The tube stays square and, with the console, menu and demo rows (the demo row has two
 	// caption lines), fits the scrolling
@@ -66,10 +72,28 @@
 		fitSide = Math.floor(Math.max(MIN_SIDE, Math.min(size, width, height)));
 	}
 
-	// Edge drags. The figure is centred, so a side edge moves half as far as the width
-	// changes: width = start ± 2·dx keeps the grabbed edge under the pointer. The bottom
-	// edge is below the caption, whose rows may reflow as the width changes; subtract that.
+	// Edge drags. A side edge scales the figure, keeping its aspect; the figure is centred,
+	// so width = start ± 2·dx keeps the grabbed edge under the pointer. The bottom edge
+	// keeps the width and sets the height, no shorter than the content.
 	let edgeDrag = $state(null);
+
+	/** The figure's height with the Memory drawer at its fewest lines. */
+	function contentHeight() {
+		if (!figureEl) return 0;
+		const border = figureEl.offsetHeight - figureEl.clientHeight;
+		const line = memEl?.querySelector('.mem-line')?.offsetHeight ?? 0;
+		const tube = figureEl.querySelector('.tube-wrap')?.offsetHeight ?? side;
+		return tube + (captionEl?.offsetHeight ?? 0) + border - (MEM_LINES - MEM_MIN_LINES) * line;
+	}
+
+	function setWidth(want) {
+		const max = figureEl?.parentElement?.clientWidth ?? 4096;
+		userSide = Math.round(Math.max(MIN_SIDE, Math.min(max, want)));
+	}
+	function setHeight(want) {
+		userAspect = Math.max(want, contentHeight()) / side;
+	}
+
 	function onEdgeDown(event, edge) {
 		if (event.button !== 0) return;
 		event.preventDefault();
@@ -78,43 +102,44 @@
 		} catch {
 			// Synthetic pointers cannot be captured; the drag still tracks while over the edge.
 		}
-		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, cap0: captionEl?.offsetHeight ?? 0 };
+		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, h0: figureEl?.offsetHeight ?? side };
 	}
 	function onEdgeMove(event) {
 		if (!edgeDrag) return;
 		const d = edgeDrag;
 		const dx = event.clientX - d.x0;
-		const reflow = (captionEl?.offsetHeight ?? 0) - d.cap0;
-		const want =
-			d.edge === 'right' ? d.side0 + 2 * dx : d.edge === 'left' ? d.side0 - 2 * dx : d.side0 + (event.clientY - d.y0) - reflow;
-		const max = figureEl?.parentElement?.clientWidth ?? 4096;
-		userSide = Math.round(Math.max(MIN_SIDE, Math.min(max, want)));
+		if (d.edge === 'bottom') setHeight(d.h0 + event.clientY - d.y0);
+		else setWidth(d.edge === 'right' ? d.side0 + 2 * dx : d.side0 - 2 * dx);
+	}
+	function store(key, value) {
+		try {
+			if (value) localStorage.setItem(key, String(value));
+			else localStorage.removeItem(key);
+		} catch {
+			// Blocked storage: the size lasts until the page is left.
+		}
 	}
 	function onEdgeUp(event) {
 		if (!edgeDrag && event.type !== 'keydown') return;
 		edgeDrag = null;
 		if (event.pointerId !== undefined && event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
-		try {
-			localStorage.setItem(SIDE_KEY, String(userSide));
-		} catch {
-			// Blocked storage: the size lasts until the page is left.
-		}
+		store(SIDE_KEY, userSide);
+		store(ASPECT_KEY, userAspect);
 	}
-	function onEdgeKey(event) {
+	function onEdgeKey(event, edge) {
 		const step = { ArrowLeft: -16, ArrowDown: 16, ArrowRight: 16, ArrowUp: -16 }[event.key];
 		if (!step) return;
 		event.preventDefault();
-		const max = figureEl?.parentElement?.clientWidth ?? 4096;
-		userSide = Math.round(Math.max(MIN_SIDE, Math.min(max, side + step)));
+		if (edge === 'bottom') setHeight((figureEl?.offsetHeight ?? side) + step);
+		else setWidth(side + step);
 		onEdgeUp(event);
 	}
-	function onEdgeReset() {
-		userSide = null;
-		try {
-			localStorage.removeItem(SIDE_KEY);
-		} catch {
-			// Nothing stored to remove.
-		}
+	/** Double-click: a side edge fits the width to the pane again, the bottom drops the height. */
+	function onEdgeReset(edge) {
+		if (edge === 'bottom') userAspect = null;
+		else userSide = null;
+		store(SIDE_KEY, userSide);
+		store(ASPECT_KEY, userAspect);
 	}
 	const bootChunk = 100_000;
 
@@ -251,7 +276,8 @@
 	// low 13 bits as an address; the trail remembers where you came from.
 	const MEM_COLS = $derived(side >= 420 ? 8 : 4);
 	let memOpen = $state(false);
-	const MEM_LINES = 8;
+	const MEM_MIN_LINES = 8;
+	let MEM_LINES = $state(MEM_MIN_LINES);
 	const MEM_PAGE = $derived(MEM_COLS * MEM_LINES);
 	const CORE = 8192;
 	let memBase = $state(0o5640);
@@ -339,6 +365,28 @@
 			memShownBase = -1;
 			refreshMem();
 		});
+	});
+
+	// Height the figure has past its content becomes more lines. contentHeight() takes the
+	// drawer's own extra lines back out, so the count settles instead of feeding itself.
+	function fitMemLines() {
+		const line = memEl?.querySelector('.mem-line')?.offsetHeight;
+		const lines = memOpen && figHeight && line ? MEM_MIN_LINES + Math.max(0, Math.floor((figHeight - contentHeight()) / line)) : MEM_MIN_LINES;
+		if (lines !== MEM_LINES) {
+			MEM_LINES = lines;
+			refreshMem();
+		}
+	}
+	$effect(() => {
+		void [figHeight, memOpen, memEl, MEM_COLS];
+		const raf = requestAnimationFrame(() => untrack(fitMemLines));
+		return () => cancelAnimationFrame(raf);
+	});
+	$effect(() => {
+		if (!captionEl) return;
+		const ro = new ResizeObserver(() => untrack(fitMemLines));
+		ro.observe(captionEl);
+		return () => ro.disconnect();
 	});
 
 	$effect(() => {
@@ -743,7 +791,7 @@
 {#if spec.title}
 	<p class="headline"><strong>{spec.title}</strong></p>
 {/if}
-<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px">
+<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px" style:min-height={figHeight ? `${figHeight}px` : null}>
 	<div class="tube-wrap" style:width="{side}px">
 		<canvas
 			bind:this={canvasEl}
@@ -783,18 +831,20 @@
 			class:dragging={edgeDrag?.edge === edge}
 			role="slider"
 			tabindex="0"
-			aria-label="Tube size, {edge} edge"
+			aria-label={edge === 'bottom' ? 'Cabinet height, bottom edge' : `Cabinet width, ${edge} edge`}
 			aria-orientation={edge === 'bottom' ? 'vertical' : 'horizontal'}
 			aria-valuemin={MIN_SIDE}
 			aria-valuemax={4096}
-			aria-valuenow={side}
-			title="Drag to resize; double-click to fit the pane again"
+			aria-valuenow={edge === 'bottom' ? (figHeight ?? side) : side}
+			title={edge === 'bottom'
+				? 'Drag to change the height; double-click for the content’s own height'
+				: 'Drag to resize, keeping the shape; double-click to fit the pane again'}
 			onpointerdown={(e) => onEdgeDown(e, edge)}
 			onpointermove={onEdgeMove}
 			onpointerup={onEdgeUp}
 			onpointercancel={onEdgeUp}
-			ondblclick={onEdgeReset}
-			onkeydown={onEdgeKey}
+			ondblclick={() => onEdgeReset(edge)}
+			onkeydown={(e) => onEdgeKey(e, edge)}
 		></div>
 	{/each}
 	<!-- Fixed order: front panel, menu row, then rows the program adds. Nothing above a row moves when it comes or goes. -->

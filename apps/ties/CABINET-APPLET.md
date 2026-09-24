@@ -80,9 +80,14 @@ tooltip names its location as `NAME+offset`. SYMELEC's come from
 `symelec-symbols.tsv` (`scripts/extract-symbols.mjs`, from the
 listing), the light pen test's from its own assembly; DUEL has none.
 The tube's size reserves room for the first three rows only, so it
-does not change with the program. Drag the left, right or bottom edge
-to resize (the figure stays centred); double-click an edge to fit the
-pane again.
+does not change with the program. The tube stays square; the figure's
+shape can change. Drag the left or right edge to scale the figure,
+keeping its shape (it stays centred). Drag the bottom edge to change
+only the height, down to the height of the content: the extra height
+gives the open Memory drawer more lines, and otherwise stays blank.
+Double-click a side edge to fit the width to the pane again, or the
+bottom edge to go back to the content's height. Both are kept in
+`localStorage`.
 
 ## Record and replay
 
