@@ -189,7 +189,7 @@ export function* houseDemo(h: DemoHost): DemoScript {
 	yield* drag(h, 250, 520);
 	yield* drag(h, 290, 520);
 	yield "Drag diagonally in HV and the line becomes a staircase";
-	yield* element(h, [[500, 720], [710, 520]]);
+	yield* element(h, [[500, 724], [710, 520]]);
 
 	yield* drag(h, 760, 560);
 	yield* drag(h, 760, 960);

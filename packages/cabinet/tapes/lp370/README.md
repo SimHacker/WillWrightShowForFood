@@ -18,7 +18,16 @@ reads the AC switches and dispatches to the three tests, the interrupt linkage a
 view setup that falls into `bthsid`, and the storage for `temp1`, `temp2`, `lpct`, `noswit`,
 `bufdon`, `bufd1`, `hole`, `xpt`, `ypt`, `x1`, `y1`, `mag` and `sign`. It must be reconstructed from
 the test descriptions on pages 3–5 and from how the surviving code uses those symbols. The
-reconstruction goes in its own file, marked as not DEC's code.
+reconstruction is `page6.s`, marked as not DEC's code; its header says what the surviving pages
+fix and what is a choice. `lpct`, `xpt` and the other storage are left undefined and the assembler
+allocates them after the literal pool, as OUTNOX already requires for `t1x`..`t69x`.
+
+## Assembling and running
+
+`src/lp370.ts` assembles `page6.s`, `lp370.s` and `outnox.s` in that order with `src/asm.ts` and
+boots at 22 with the AC switches set. `src/lp370.test.ts` runs all three tests against the cabinet.
+In the browser it is the "Type 370 light pen test" entry in the cabinet applet's program menu, with
+the console switches under the tube.
 
 ## Tests
 
@@ -32,5 +41,7 @@ reconstruction goes in its own file, marked as not DEC's code.
 
 The cabinet models 501 (v-edge skip), 504 (resume), 601 (stop skip), 606 (load address and go),
 701 (pen skip), 712 (read beam coordinates) and 1001 (h-edge skip), taken from SYMELEC's usage.
-The diagnostic also uses 704, before every interrupt dispatch, and 716, to read coordinates
-after a pen hit. The cabinet does not model either. Running the diagnostic is how to pin them down.
+The diagnostic also uses 704, before every interrupt dispatch, and 716, to read coordinates after
+a pen hit. 704 clears every flag and leaves the display stopped (SIMH's `ty340_clear(~0)`); 716 is
+712 and 704. Running the diagnostic also showed the pen latched the wrong point: see
+[BUG-JOURNAL.md](../../BUG-JOURNAL.md), rung 7.

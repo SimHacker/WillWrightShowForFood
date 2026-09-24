@@ -388,6 +388,83 @@ about 25 to the last one is dropped. An endpoint within about 20 of a
 node snaps to it, so the battery plates sit well clear of the wire ends.
 And the cross wraps to the bottom if carried much above 970.
 
+## Rung 7: DEC's light pen diagnostic, and an assembler
+
+SYMELEC was the only program that had ever tested the cabinet's light
+pen, so the pen was exactly as right as SYMELEC needed. DEC's own test
+for it is the 370 Light Pen Diagnostic (DEC-4-45-M, C. Stein, 1964),
+transcribed into [tapes/lp370](tapes/lp370/README.md). No tape survives,
+so the cabinet got an assembler ([src/asm.ts](src/asm.ts)): DEC PDP-7
+syntax, two passes, literals, ones' complement, origins, several tapes
+into one program. It never throws; problems go in `errors`.
+
+### Page 6 was missing
+
+**Symptom.** The scan goes from page 5 to page 7. Page 6 held the code
+at 22 that reads the switches and dispatches, the interrupt linkage, and
+the start of the field-of-view setup. **Fix.**
+[page6.s](tapes/lp370/page6.s), rebuilt from how the surviving pages use
+each symbol: `hobuf` fixes the layout of `buf`, `lftsid`/`bthsid` fix
+where page 6 ends, and the operating table on page 2 fixes the switches.
+Its header lists what the evidence fixes and what is a choice. **Kind:**
+the scan's.
+
+### The pen saw the end of the line
+
+**Symptom.** In the follow test the tracking cross never moved. **Cause.**
+On a hit the cabinet stopped the 340 but latched the coordinates of the
+vector's end point, which is the same wherever the pen sits on the line.
+The follow test steers the cross by where on its arms the pen was seen.
+The diagnostic's sensitivity test says what the hardware does: with the
+pen right of centre the line is truncated at the pen, and after `IDRS`
+(`iot 504`) the rest is drawn. **Fix.** A hit stops a vector at the
+first raster point inside the aperture and latches that point; `IDRS`
+draws the remainder before the next display word. **Kind:** ours.
+
+The fix moved SYMELEC's house demo. The roof peak drew at 698, one unit
+outside the test. The old model had also stopped the roof short, at
+636,576. The roof target is raised by 4, the test tolerance is two
+apertures (what `drag()` calls arrived), and the resistor check moved to
+the raised part of the square wave. **Kind:** the script's.
+
+### IOT 704
+
+**Symptom.** Unknown IOT; the diagnostic issues it before every interrupt
+dispatch, and 716 (712 plus 704) after a pen hit. **Cause.** SYMELEC
+never issues it, so the cabinet never learned it. **Fix.** 704 clears
+every flag and leaves the display stopped, as SIMH's
+`ty340_clear(~0)` without `sim_activate`. **Kind:** ours.
+
+### The box drawn in the wrong place
+
+**Symptom.** The field-of-view test counted 0. The box of points drew
+at y 400 with the switches asking for 600. **Cause.** Page 6 masked the
+y switches with 340. Switches 11–13 are bits worth 100, 40 and 20: the
+mask is 160. **Kind:** ours, in the reconstruction. Then the count read
+back 0 again: the first readout OUTNOX builds carries a partial scan's
+count. The test now reads it again until a full scan's count is
+there: 882, every point in the aperture seen twice. **Kind:** the test's.
+
+### The assembler meets SYMELEC
+
+Run on `symelec.asm` in DEC mode, the assembler matches 51 of 4,717
+words. The listing prints the octal beside every line, so each mismatch
+has an answer. What the first run found:
+
+- `21/      HLT`: origin and instruction on one line. The assembler set
+  the origin and dropped the instruction; every later word is one off.
+  **Kind:** ours.
+- The Cambridge CAD Group Assembler's dialect: `,` is the current
+  location (`JMP , 3`; `DJS SB , 2` at 52 is 760054), `!` is inclusive
+  OR (`LKE!LLB6`), `DISP` switches on the 340 vocabulary (`PAR` 0, `POV`
+  200000, `DDS` 200000, `DJP` 400000, `DJS` 600000; modes `PO` 20000,
+  `CH` 60000, `VE` 100000, `SB` 160000; `PN` 14000, `SC1` 120, `IN7`
+  17), and `VEC ES dx dy` packs two sign-magnitude deltas (`VEC ES -6
+  -36` is 517206). **Kind:** ours, a missing mode.
+- `GR2` defined twice: the listing prints `GB2` at 2544. **Kind:** the
+  transcription's.
+- `201128`: Heinz's pencil circle, above. **Kind:** 1972's.
+
 ## Not the machine
 
 The dev server listened only on IPv6 `::1`, so a browser that took

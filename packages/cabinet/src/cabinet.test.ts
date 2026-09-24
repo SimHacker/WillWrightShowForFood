@@ -717,7 +717,9 @@ test("acceptance: the house demo draws its picture with the 1972 program", () =>
 	t340.onFrame = (f) => frames.push(f.segments);
 	box.run(20_000);
 	const lit = frames.flat().filter((s) => s.addr >= 0o12301 && s.addr < dfe && s.intensify);
-	const at = (x: number, y: number) => lit.some((s) => Math.min(s.x0, s.x1) - 16 <= x && x <= Math.max(s.x0, s.x1) + 16 && Math.min(s.y0, s.y1) - 16 <= y && y <= Math.max(s.y0, s.y1) + 16);
+	/* drag() calls the cross arrived within two apertures, so corners land that close. */
+	const near = 2 * pen.aperture;
+	const at = (x: number, y: number) => lit.some((s) => Math.min(s.x0, s.x1) - near <= x && x <= Math.max(s.x0, s.x1) + near && Math.min(s.y0, s.y1) - near <= y && y <= Math.max(s.y0, s.y1) + near);
 	assert.ok(at(300, 350), "left wall");
 	assert.ok(at(700, 350), "right wall");
 	assert.ok(at(500, 340), "door lintel");
@@ -728,7 +730,7 @@ test("acceptance: the house demo draws its picture with the 1972 program", () =>
 	assert.ok(at(830, 245), "tree trunk");
 	assert.ok(at(830, 370), "tree top");
 	assert.ok(at(180, 275), "hedge");
-	assert.ok(at(740, 935), "resistor");
+	assert.ok(at(740, 965), "resistor");
 	assert.ok(at(540, 887), "battery");
 	assert.ok(at(725, 853), "switch");
 	assert.ok(at(530, 815), "flag");

@@ -1,9 +1,9 @@
 <script>
 	/**
-	 * A running machine inside an article — SYMELEC on a PDP-7 Type 340, pointer as light pen.
-	 * See apps/ties/CABINET-APPLET.md.
+	 * A running machine inside an article — a PDP-7 and Type 340, pointer as light pen,
+	 * with a menu of programs (cabinet-programs.js). See apps/ties/CABINET-APPLET.md.
 	 */
-	import { onMount } from 'svelte';
+	import { onMount, untrack } from 'svelte';
 	import {
 		Pdp7,
 		Type340,
@@ -16,13 +16,19 @@
 		houseDemo,
 		printScreen
 	} from '@wwsff/cabinet';
-	import { loadSymelec } from './symelec-boot.js';
+	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
 
 	let { spec } = $props();
+
+	// The spec picks the first program; after that the menu owns it.
+	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
+	const program = $derived(programById(programId));
+	let switches = $state(0);
 
 	let canvasEl = $state(null);
 	let figureEl = $state(null);
 	let captionEl = $state(null);
+	let switchesEl = $state(null);
 	let fitSide = $state(null);
 	let status = $state('loading');
 	let error = $state(null);
@@ -47,7 +53,8 @@
 	function fit(scroller) {
 		if (!figureEl) return;
 		const width = figureEl.parentElement?.clientWidth ?? size;
-		const height = scroller.clientHeight - (captionEl?.offsetHeight ?? 28) - TITLE_ALLOWANCE;
+		const height =
+			scroller.clientHeight - (captionEl?.offsetHeight ?? 28) - (switchesEl?.offsetHeight ?? 0) - TITLE_ALLOWANCE;
 		fitSide = Math.floor(Math.max(MIN_SIDE, Math.min(size, width, height)));
 	}
 	const bootChunk = 100_000;
@@ -172,9 +179,8 @@
 		const rate = ((box.cycles - cyclesAtReadout) * 1000) / (now - lastReadout || 1);
 		lastReadout = now;
 		cyclesAtReadout = box.cycles;
-		const cx = cpu.read(0o5641) & 0o1777;
-		const cy = cpu.read(0o5640) & 0o1777;
-		readout = `${(rate / 1e6).toFixed(2)}M/s · pen ${pen.enabled ? 'down' : 'up'} · + ${cx},${cy}`;
+		const extra = program?.status(cpu);
+		readout = `${(rate / 1e6).toFixed(2)}M/s · pen ${pen.enabled ? 'down' : 'up'}${extra ? ` · ${extra}` : ''}`;
 	}
 
 	// Schedule first, then work: one bad frame must not stop the machine.
@@ -226,6 +232,8 @@
 
 	// Button down = pen aimed at the glass; button up = pen lifted, sees nothing.
 	function onPointerDown(event) {
+		// The tube takes the keyboard when touched, for programs played from the console.
+		canvasEl?.focus({ preventScroll: true });
 		if (!pen || !canvasEl || event.button !== 0 || player) return;
 		event.preventDefault();
 		event.stopPropagation();
@@ -262,15 +270,14 @@
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
 		a.href = url;
-		a.download = 'symelec-screen.svg';
+		a.download = `${programId}-screen.svg`;
 		a.click();
 		URL.revokeObjectURL(url);
 	}
 
-	/** A fresh PDP-7 with SYMELEC booted to its first picture. Throws if the picture never comes. */
+	/** A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes. */
 	function bootMachine() {
 		cpu = new Pdp7({ coreWords: 8192 });
-		loadSymelec(cpu, spec.patches ?? undefined);
 		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
 		t340 = new Type340({
 			fetch: (a) => cpu.read(a),
@@ -278,15 +285,17 @@
 			pens: [pen],
 			onFrame: collectFrame
 		});
+		const extra = program.peripherals?.() ?? [];
 		box = new Cabinet({
 			cpu,
-			devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan()]
+			devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan(), ...extra]
 		});
 		t340.clock = () => box.cycles;
 		// Inspector handle: $0.cabinet in devtools reaches the live machine.
-		canvasEl.cabinet = { cpu, t340, pen, box };
+		canvasEl.cabinet = { cpu, t340, pen, box, program: programId };
 		batch = [];
-		cpu.pc = 0o22;
+		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
+		switches = cpu.switches;
 		for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
 			box.run(bootChunk);
 			if (cpu.halted) break;
@@ -310,8 +319,61 @@
 		if (pen) pen.enabled = false;
 	}
 
+	/** Load the program's tapes, boot it, and keep the machine running. */
+	async function boot() {
+		status = 'booting';
+		error = null;
+		fault = null;
+		stopDemo();
+		pressedId = null;
+		held.clear();
+		await program.load?.();
+		bootMachine();
+		cyclesAtReadout = 0;
+		status = 'live';
+	}
+
+	async function onProgram(event) {
+		const next = programById(event.currentTarget.value);
+		if (!next) return;
+		programId = next.id;
+		try {
+			await boot();
+			drawFrame();
+		} catch (e) {
+			error = e instanceof Error ? e.message : String(e);
+			status = 'error';
+		}
+	}
+
+	function onSwitch(bit) {
+		if (!cpu) return;
+		switches ^= bit;
+		cpu.switches = switches;
+	}
+
+	// Keys held right now, by KeyboardEvent.code. Two keys may share a switch.
+	const held = new Set();
+
+	function onKey(event, down) {
+		const key = program?.keys?.[event.code];
+		if (!key || !cpu) return;
+		event.preventDefault();
+		if (down === held.has(event.code)) return;
+		if (down) held.add(event.code);
+		else held.delete(event.code);
+		const holding = [...held].some((c) => program.keys[c].bit === key.bit);
+		const set = program.keysActiveLow ? !holding : holding;
+		switches = set ? switches | key.bit : switches & ~key.bit;
+		cpu.switches = switches;
+	}
+
+	function releaseKeys() {
+		for (const code of [...held]) onKey({ code, preventDefault() {} }, false);
+	}
+
 	function onDemo() {
-		if (player) return;
+		if (player || !program?.demo) return;
 		try {
 			startDemo();
 		} catch (e) {
@@ -329,19 +391,17 @@
 
 		(async () => {
 			try {
-				if (spec.program && spec.program !== 'symelec') {
+				if (!program) {
 					throw new Error(`unknown program: ${spec.program}`);
 				}
 				if (spec.machine && spec.machine !== 'pdp7') {
 					throw new Error(`unknown machine: ${spec.machine}`);
 				}
 
-				status = 'booting';
-				bootMachine();
+				await boot();
 				if (cancelled) return;
 
-				status = 'live';
-				if (spec.demo) startDemo();
+				if (spec.demo && program.demo) startDemo();
 				running = true;
 				drawFrame();
 				raf = requestAnimationFrame(loop);
@@ -375,7 +435,7 @@
 		<button
 			type="button"
 			class="demo"
-			disabled={status !== 'live' || demoOn}
+			disabled={status !== 'live' || demoOn || !program?.demo}
 			title="Reboot and let a scripted pen draw a picture, the 1972 way"
 			onclick={onDemo}>Demo</button
 		>
@@ -389,6 +449,11 @@
 			height="1024"
 			class="tube"
 			class:live={status === 'live'}
+			tabindex="0"
+			aria-label="{program?.label ?? 'PDP-7'} display{program?.keyHelp ? `. ${program.keyHelp}` : ''}"
+			onkeydown={(e) => onKey(e, true)}
+			onkeyup={(e) => onKey(e, false)}
+			onblur={releaseKeys}
 			onpointerdown={onPointerDown}
 			onpointermove={onPointerMove}
 			onpointerup={onPointerUp}
@@ -399,7 +464,7 @@
 				{#if error}
 					<p class="err">{error}</p>
 				{:else}
-					<p>{status === 'booting' ? 'Booting SYMELEC…' : 'Loading…'}</p>
+					<p>{status === 'booting' ? `Booting ${program?.label ?? ''}…` : 'Loading…'}</p>
 				{/if}
 			</div>
 		{/if}
@@ -407,8 +472,41 @@
 	{#if demoOn}
 		<p class="demo-caption" aria-live="polite">{demoCaption || ' '}</p>
 	{/if}
+	{#if program?.switchLabels}
+		<div class="switches" role="group" aria-label="Console AC switches, bit 0 on the left" bind:this={switchesEl}>
+			{#each program.switchLabels as label, i (i)}
+				{@const bit = 0o400000 >>> i}
+				<button
+					type="button"
+					class="switch"
+					class:on={(switches & bit) !== 0}
+					class:named={label !== ''}
+					class:group={i % 3 === 0 && i > 0}
+					aria-pressed={(switches & bit) !== 0}
+					title="switch {i}{label ? `: ${label}` : ''}"
+					disabled={status !== 'live'}
+					onclick={() => onSwitch(bit)}>{i}</button
+				>
+			{/each}
+			<span class="octal">{switches.toString(8).padStart(6, '0')}</span>
+		</div>
+		{#if program.keyHelp}
+			<p class="keys">Click the tube, then: {program.keyHelp}</p>
+		{/if}
+	{/if}
 	<figcaption bind:this={captionEl}>
-		<span class="title">SYMELEC 1972</span>
+		<select
+			class="program"
+			aria-label="Program"
+			title={program?.title}
+			value={programId}
+			disabled={status === 'booting' || demoOn}
+			onchange={onProgram}
+		>
+			{#each PROGRAMS as p (p.id)}
+				<option value={p.id}>{p.label}</option>
+			{/each}
+		</select>
 		{#if fault}
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}
@@ -504,8 +602,55 @@
 		font-size: 0.75rem;
 		border-top: 1px solid #333;
 	}
-	.title {
-		white-space: nowrap;
+	.program {
+		font: inherit;
+		font-size: 0.72rem;
+		max-width: 14rem;
+		padding: 0.1rem 0.2rem;
+		border: 1px solid #9fe8a0;
+		background: #000;
+		color: inherit;
+	}
+	.switches {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		padding: 0.3rem 0.5rem;
+		border-top: 1px solid #333;
+		font-family: ui-monospace, monospace;
+	}
+	.switch {
+		width: 1.35rem;
+		padding: 0.1rem 0;
+		font-size: 0.6rem;
+		border-color: #3a5a3a;
+		opacity: 0.55;
+	}
+	.switch.named {
+		border-color: #9fe8a0;
+		opacity: 1;
+	}
+	.switch.group {
+		margin-left: 0.3rem;
+	}
+	.switch.on {
+		background: #9fe8a0;
+		color: #000;
+	}
+	.keys {
+		margin: 0;
+		padding: 0 0.5rem 0.3rem;
+		font-size: 0.68rem;
+		opacity: 0.8;
+	}
+	.tube:focus-visible {
+		outline: 1px solid #ffd27a;
+		outline-offset: -1px;
+	}
+	.octal {
+		margin-left: auto;
+		font-size: 0.7rem;
+		opacity: 0.8;
 	}
 	.readout,
 	.fault {

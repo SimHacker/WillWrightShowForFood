@@ -72,6 +72,20 @@ export type Segment = {
 	scale: number;
 };
 
+type PendingVector = {
+	x0: number;
+	y0: number;
+	x1: number;
+	y1: number;
+	/** Next raster step to test, and where the drawn part resumes. */
+	k: number;
+	sx: number;
+	sy: number;
+	flags: number;
+	intensify: boolean;
+	addr: number;
+};
+
 export type Frame = {
 	index: number;
 	cycleStart: number;
@@ -165,6 +179,8 @@ export class Type340 implements Device {
 	private readonly wordsPerTick: number;
 	private subr = -1;
 	private ownClock = 0;
+	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
+	private pending: PendingVector | null = null;
 
 	constructor(opts: Type340Opts) {
 		this.fetch = opts.fetch;
@@ -179,6 +195,10 @@ export class Type340 implements Device {
 	tick(): void {
 		this.ownClock += 1;
 		if (!this.enabled) return;
+		if (this.pending && this.status === 0) {
+			this.drawVector(this.pending);
+			return;
+		}
 		for (let i = 0; i < this.wordsPerTick && this.status === 0; i += 1) {
 			const word = this.fetch(this.dac);
 			const addr = this.dac;
@@ -202,6 +222,7 @@ export class Type340 implements Device {
 		this.shift = 0;
 		this.saveFF = false;
 		this.subr = -1;
+		this.pending = null;
 	}
 
 	iot(req: Iot): IotReply {
@@ -227,6 +248,7 @@ export class Type340 implements Device {
 					   STOPPED|STOP_INT and would wedge after a pen hit or edge
 					   violation; the listing (5406, 5602, 5616) says clear all. */
 					if ((req.pulse & 0o10) === 0) this.setDac(ac & ADDR);
+					this.pending = null;
 					this.status = 0;
 					this.enabled = true;
 					this.closeFrame();
@@ -247,7 +269,15 @@ export class Type340 implements Device {
 					if (req.pulse & 0o10) ac = packed;
 					else ac |= packed;
 				}
-				if (req.pulse & 0o4) this.status = 0;
+				if (req.pulse & 0o4) {
+					/* 700704 clears every flag and leaves the display where it is,
+					   as SIMH's ty340_clear(~0) without sim_activate: nothing runs
+					   until IDRS or IDLA. The 370 diagnostic issues it before each
+					   interrupt dispatch and reads the pen with 700716. SYMELEC
+					   never issues it. */
+					this.status = 0;
+					this.enabled = false;
+				}
 				break;
 			case 0o10: /* IDHE 701001 skip on h-edge */
 				if (req.pulse & 0o1) skip = (this.status & ST340_HEDGE) !== 0;
@@ -356,6 +386,7 @@ export class Type340 implements Device {
 					)
 				) {
 					guard -= 1;
+					if (this.status & ST340_LPHIT) break;
 					if (guard === 0) {
 						this.status |= ST340_STOPPED;
 						break;
@@ -453,11 +484,48 @@ export class Type340 implements Device {
 			y1 = 1023;
 			flags |= ST340_VEDGE;
 		}
-		this.emit(x0, y0, x1, y1, intensify, "vector", addr);
+		return this.drawVector({ x0, y0, x1, y1, k: 0, sx: x0, sy: y0, flags, intensify, addr });
+	}
+
+	/**
+	 * Draw a vector, or its remainder, stopping at the first raster point a
+	 * pen sees. The 340 steps the beam point by point and the pen fires on
+	 * the point, so the hit freezes the beam there and IDRC reads that
+	 * point, not the vector's end. The 370 diagnostic's follow test draws
+	 * each arm of its cross in both directions and averages the two hits;
+	 * with end-point latching the cross could never move. Returns true on
+	 * an edge violation, which is reported when the vector completes.
+	 */
+	private drawVector(v: PendingVector): boolean {
+		const { x0, y0, x1, y1 } = v;
+		const pens = v.intensify && this.lpEna ? this.pens.filter((p) => p.enabled) : [];
+		const near = pens.filter((p) => dist2(p.x, p.y, v.sx, v.sy, x1, y1) <= p.aperture * p.aperture);
+		if (near.length > 0) {
+			const n = Math.max(Math.abs(x1 - x0), Math.abs(y1 - y0));
+			for (let k = v.k; k <= n; k += 1) {
+				const px = n === 0 ? x0 : x0 + Math.round(((x1 - x0) * k) / n);
+				const py = n === 0 ? y0 : y0 + Math.round(((y1 - y0) * k) / n);
+				const pen = near.find((p) => (p.x - px) ** 2 + (p.y - py) ** 2 <= p.aperture * p.aperture);
+				if (!pen) continue;
+				const seg = this.emit(v.sx, v.sy, px, py, true, "vector", v.addr, false);
+				this.status |= ST340_LPHIT;
+				this.penX = px;
+				this.penY = py;
+				this.lastHit = seg;
+				this.lastHitPen = pen;
+				this.x = px;
+				this.y = py;
+				this.pending = k < n ? { ...v, k: k + 1, sx: px, sy: py } : null;
+				if (!this.pending) this.status |= v.flags;
+				return false;
+			}
+		}
+		this.emit(v.sx, v.sy, x1, y1, v.intensify, "vector", v.addr, false);
+		this.pending = null;
 		this.x = x1;
 		this.y = y1;
-		this.status |= flags;
-		return flags !== 0;
+		this.status |= v.flags;
+		return v.flags !== 0;
 	}
 
 	private ipoint(intensify: boolean, byte: number, addr: number): boolean {
@@ -549,7 +617,8 @@ export class Type340 implements Device {
 		intensify: boolean,
 		kind: SegmentKind,
 		addr: number,
-	): void {
+		penTest = true,
+	): Segment {
 		const seg: Segment = {
 			x0,
 			y0,
@@ -566,7 +635,7 @@ export class Type340 implements Device {
 		};
 		this.segments.push(seg);
 		this.onSegment?.(seg);
-		if (intensify && this.lpEna) {
+		if (penTest && intensify && this.lpEna) {
 			for (const pen of this.pens) {
 				if (!pen.enabled) continue;
 				const a = pen.aperture;
@@ -584,6 +653,7 @@ export class Type340 implements Device {
 				}
 			}
 		}
+		return seg;
 	}
 
 	/** Node-safe canvas stroke of the given segments (default: current frame). */

@@ -16,7 +16,7 @@ app already owns: the fenced YAML applet block.
 ````markdown
 ```yaml cabinet
 machine: pdp7                  # cabinet plugin set
-program: symelec               # .oct + literals, resolved from the repo
+program: symelec               # first program on the menu: symelec | lp370 | duel
 boot: idla                     # run until the display starts, then settle
 pens: [pointer]                # reader's pointer joins the quiver
 mode: honest                   # honest | assist (DESIGN.md pen modes)
@@ -46,6 +46,27 @@ in [`@wwsff/cabinet`](../../packages/cabinet/):
 
 No new emulator surface. The applet consumes the same four seams as
 every other consumer: loader, run budget, segment log, pen input.
+
+## Programs
+
+The caption has a program menu; `program:` in the block picks the first
+one. Each entry in `src/lib/cabinet-programs.js` loads its tapes, adds
+the peripherals it needs, deposits itself and sets the console:
+
+| id | What | Loaded from |
+|---|---|---|
+| `symelec` | PIXIE's SYMELEC, 1972 (the default; Demo works here) | the `.oct` transcription and its literal pool |
+| `lp370` | DEC's 370 light pen diagnostic, 1964 | `packages/cabinet/tapes/lp370/*.s`, assembled in the browser by `src/asm.ts` |
+| `duel` | DUEL, two-player spacewar | `tapes/duel/rim.pt` and `duel.pt`, read in through the RIM loader and a paper tape reader |
+
+Programs that read the AC switches get a row of eighteen switch buttons
+under the tube, bit 0 on the left, grouped in threes like the console,
+with the octal value at the end. Named switches are outlined; hover for
+the name. DUEL also maps keys to switches while the tube has focus
+(click it): A D W S Q for the left ship, the arrows and / or Enter for
+the right. A held key holds its switch down, which is DUEL's active
+state. Text is inlined with `?raw` and tape with `?url&inline`, so the
+offline bundle carries every program.
 
 ## The rack, and the round window
 
