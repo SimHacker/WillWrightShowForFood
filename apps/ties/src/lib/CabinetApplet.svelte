@@ -560,6 +560,8 @@
 	let tty = null;
 	let ttyPaper = $state.raw(['']);
 	let ttyCaret = $state(0);
+	/** Half duplex: the teletype prints what is typed, besides sending it. */
+	let ttyLocal = $state(false);
 	let ttyUnread = $state(0);
 	let ttyBell = $state(false);
 	let ttyEl = $state(null);
@@ -619,7 +621,14 @@
 
 	function ttyType(codes) {
 		if (!tty || player || !codes.length) return;
-		for (const c of codes) tty.type(c | 0o200);
+		for (const c of codes) {
+			tty.type(c | 0o200);
+			if (ttyLocal) {
+				ttyPrint(c);
+				if (c === 0o15) ttyPrint(0o12);
+			}
+		}
+		ttyFlush();
 		if (!recorder) return;
 		ttyRecCodes = ttyRecAt === box.cycles ? [...ttyRecCodes, ...codes] : codes;
 		ttyRecAt = box.cycles;
@@ -630,6 +639,7 @@
 		const c = ttyCode(e);
 		if (c < 0) return;
 		e.preventDefault();
+		e.stopPropagation();
 		ttyType([c]);
 	}
 
@@ -1233,20 +1243,24 @@
 	<!-- Fixed order: front panel, menu row, then rows the program adds. Nothing above a row moves when it comes or goes. -->
 	<figcaption bind:this={captionEl}>
 		<div class="row panel" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left">
-			{#each SWITCH_BITS as bit, i (i)}
-				{@const label = program?.switchLabels?.[i] ?? ''}
-				<button
-					type="button"
-					class="switch"
-					class:on={(switches & bit) !== 0}
-					class:named={label !== ''}
-					class:dim={!!program?.switchLabels && label === ''}
-					class:group={i % 3 === 0 && i > 0}
-					aria-pressed={(switches & bit) !== 0}
-					title="switch {i}{label ? `: ${label}` : ''}"
-					disabled={status !== 'live'}
-					onclick={() => onSwitch(bit)}>{i}</button
-				>
+			{#each { length: 6 } as _, g (g)}
+				<span class="sw-group">
+					{#each SWITCH_BITS.slice(g * 3, g * 3 + 3) as bit, j (j)}
+						{@const i = g * 3 + j}
+						{@const label = program?.switchLabels?.[i] ?? ''}
+						<button
+							type="button"
+							class="switch"
+							class:on={(switches & bit) !== 0}
+							class:named={label !== ''}
+							class:dim={!!program?.switchLabels && label === ''}
+							aria-pressed={(switches & bit) !== 0}
+							title="switch {i}{label ? `: ${label}` : ''}"
+							disabled={status !== 'live'}
+							onclick={() => onSwitch(bit)}>{i}</button
+						>
+					{/each}
+				</span>
 			{/each}
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 		</div>
@@ -1468,13 +1482,22 @@
 					class="tty-paper"
 					bind:this={ttyEl}
 					tabindex="0"
+					data-keep-focus
 					role="textbox"
 					aria-label="Teletype paper. Click, then type: upper case, Return is CR, Backspace is RUBOUT."
 					onkeydown={onTtyKey}
 					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</div>
-				{#if ttyPaper.length === 1 && !last}
-					<p class="mem-hint">Nothing printed yet. Click the paper and type; a KSR-33 has upper case only.</p>
-				{/if}
+				<div class="tty-bar">
+					<button
+						type="button"
+						class="chip"
+						class:on={ttyLocal}
+						aria-pressed={ttyLocal}
+						title="Local copy (half duplex): print keys as they are typed. Off, the paper shows only what the program prints back."
+						onclick={() => (ttyLocal = !ttyLocal)}>LOCAL COPY</button
+					>
+					<span class="mem-hint">{ttyPaper.length === 1 && !last ? 'Nothing printed yet. Click the paper and type; upper case only.' : ''}</span>
+				</div>
 			</div>
 		{/if}
 		{#if memOpen}
@@ -1726,9 +1749,18 @@
 	.row.menu {
 		justify-content: space-between;
 	}
+	/* Wraps between octal digits, never inside one. */
 	.row.panel {
-		gap: 2px;
+		flex-wrap: wrap;
+		gap: 2px 0.3rem;
 		font-family: ui-monospace, monospace;
+	}
+	.sw-group {
+		display: flex;
+		gap: 2px;
+	}
+	.row.menu {
+		flex-wrap: wrap;
 	}
 	.row.app {
 		display: block;
@@ -1836,9 +1868,6 @@
 	.switch.dim {
 		border-color: #3a5a3a;
 		opacity: 0.55;
-	}
-	.switch.group {
-		margin-left: 0.3rem;
 	}
 	.switch.on {
 		background: #9fe8a0;
@@ -2007,6 +2036,11 @@
 		color: #e8e0c0;
 		border: 1px solid #333;
 		cursor: text;
+	}
+	.tty-bar {
+		display: flex;
+		align-items: center;
+		margin-top: 2px;
 	}
 	.tty-paper:focus {
 		outline: 1px solid #9fe8a0;

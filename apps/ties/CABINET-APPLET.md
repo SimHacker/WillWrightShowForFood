@@ -97,6 +97,11 @@ case with the eighth bit set; Return is CR, Backspace and Delete are
 RUBOUT, Ctrl+letter is the control code, and paste types the text.
 CR returns the carriage and LF feeds the paper, so overprinting prints
 as the machine drove it. Recordings keep typed keys as `tty` events.
+The line is full duplex, as the PDP-7's was: a key reaches the paper
+only if the program prints it back, and SYMELEC never reads the
+keyboard. LOCAL COPY is half duplex: the teletype prints each key as it
+is typed, and Return prints CR LF. The paper keeps focus through the
+page's blur-on-mouseup by carrying `data-keep-focus`.
 
 **MEMORY** is a core browser, live while open, with four views. 👉 marks the PC in code,
 source and octal, and the 👉 PC button in the view bar brings it back

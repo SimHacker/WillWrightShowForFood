@@ -11,6 +11,7 @@
 			if (!el || el === document.body || typeof el.blur !== 'function') return;
 			const tag = el.tagName;
 			if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || el.isContentEditable) return;
+			if (el.closest('[data-keep-focus]')) return;
 			el.blur();
 		};
 		document.addEventListener('mouseup', blur, true);
