@@ -151,6 +151,8 @@ raw OCR of scan page 060 reads `209202` — the OCR's usual 0-for-9
 confusion, but the last digit is a 2. Scan and source agree; the
 transcription dropped the 2.
 
+![Scan page 060, 4×: 5661/ 200202, the zeros slashed and speckled](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/zoom-5661-200202.png)
+
 **Why the checkers missed it.** The transcription pipeline
 cross-checks every memory-reference instruction's opcode against its
 mnemonic, and reported zero findings on all 128 pages
@@ -190,6 +192,8 @@ as `JMS 12040`, ran off into data, and landed on the `HLT` at 21.
 
 The printout says `602377`: the 7 is clear on scan page 029. The raw
 OCR read `69237` and the transcription settled on a 5.
+
+![Scan page 029, 4×: 2404/ 602377](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/zoom-2404-602377.png)
 
 **Fix.** `602377` in `symelec.oct` and `symelec-listing.txt`. Then a
 new check, the same idea as the `VEC` check: recompute every
@@ -231,6 +235,11 @@ The circle, the date and the tick say Heinz found it and dealt with
 it in July 1972. The pencil note beside it was transcribed as "x 38",
 reading uncertain; if it says "X 30", that is the fix itself. A cabinet
 block with `patches: []` shows the tube as the listing left it.
+
+![Scan page 055, line 70: 201128 circled in pencil, /PIX, and 12.7.72, a tick, x 30 or x 38](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/page-055-pix-pencil-circle.png)
+
+More crops, with what each reader saw:
+[exhibits](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/README.md).
 **Kind:** 1972's, fixed the way Heinz would have: one word, by hand.
 
 ### The PDP-7 ran at the speed of your monitor
@@ -340,6 +349,8 @@ visible or invisible: `CLL` for a move, `STL` for a line. At 11204 the
 clear and every stroke went out with the beam off. **Fix.** 744002, as
 the scan says. `check-operate.py` then found three more misread
 operate words (1011, 1170, 1247). **Kind:** transcription.
+
+![Scan page 097, 4×: 11204/ 744002, a clear 7](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/zoom-11204-744002.png)
 
 ### TITAN with an empty picture
 
