@@ -1092,6 +1092,11 @@
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
 		symbols = program.symbols?.() ?? [];
 		switches = cpu.switches;
+		// An assembled program has no source until its first boot has assembled it.
+		if (sourceFor === programId && !sourceMap) {
+			sourceFor = null;
+			if (memOpen && (memView === 'code' || memView === 'source')) loadSource();
+		}
 		// A teletype-only program has no picture to wait for.
 		for (let i = 0; program.display !== false && i < 30 && !t340.lastFrame; i += 1) {
 			box.run(bootChunk);
@@ -2201,6 +2206,9 @@
 	}
 	.readout {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6em;
 	}
 	.row.mem {
 		font-family: ui-monospace, monospace;
@@ -2485,7 +2493,6 @@
 		opacity: 1;
 	}
 	.pen {
-		margin: 0 0.3em;
 		display: inline-flex;
 		align-items: center;
 		vertical-align: middle;
