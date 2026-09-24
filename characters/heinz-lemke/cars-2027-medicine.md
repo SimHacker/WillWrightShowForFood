@@ -432,6 +432,21 @@ defensible than capture at the nurse's discretion, because the gaps in a discret
 invite questions. Images of screens and rooms carry patient names and faces, so they stay out of
 the phone's camera roll, are encrypted, and have faces and identifiers blurred.
 
+#### Police body cameras tested the discretion question
+
+Police body cameras raise the same questions, and have been tested in randomized trials. Across
+ten trials with about 2.2 million officer-hours, cameras had no overall effect on use of force and
+were associated with more assaults on officers
+([Ariel et al., *Eur. J. Criminology* 2016](https://doi.org/10.1177/1477370816643734)). The
+subgroup analysis found the difference lay in discretion: where officers kept cameras on as the
+protocol required, use of force fell by 37%; where officers chose when to switch them on, it rose
+by 71% ([Ariel et al., *J. Exp. Criminology* 2016](https://doi.org/10.1007/s11292-016-9261-3)).
+A trial with 2,224 officers in Washington, DC found no significant effect on use of force or
+complaints ([Yokum et al., *PNAS* 2019](https://doi.org/10.1073/pnas.1814773116)). For hospitals
+the lesson is that a camera by itself changes little, and the rules for when it records, who sees
+the record and what it is used for decide the outcome. Recording at defined steps, rather than at
+the wearer's discretion, is what the police evidence supports.
+
 #### What the OR Black Box shows about acceptance
 
 The OR Black Box systems, which record whole operations for safety review, show what the
@@ -454,6 +469,34 @@ who sees the record and what it may be used for.
 Don also wrote the pixelated blur in The Sims that covers a naked Sim. The Sims have nothing under
 it, and players read the blur as saying they do. A blurred clinical record can mislead the same
 way, so what it hides and what it appears to show both need designing.
+
+#### Thanks both ways: a social channel between patients and staff
+
+The same phone that photographs a pump can carry what passes between patients and the people
+caring for them. Most patients have a phone or tablet by the bed, or a television with a remote.
+A channel for thanks, appreciation, relief, fear and pain, in both directions, would let a patient
+thank the nurse who came at 3 a.m. and let the nurse answer, at once or later, from wherever she
+is. Everyone already knows this from hearts and thumbs-up on photos of their cats.
+
+It takes some of the emotional labour off staff. A nurse on a long shift is expected to keep
+producing a warm face; a quick exchange on the phone lets her give and receive thanks that are
+real, when she has a moment, without another tired smile on demand.
+
+The routine chores fit it. A photo of a full bedpan with a "please" goes to the nurse; she empties
+it and sends back the photo with "you're welcome"; the patient answers with a smiling selfie, and
+she might answer with a picture of her cat. The bedpan photo is also clinical data: stool and
+urine output are charted anyway, and a photograph read against the Bristol stool scale records
+what a note would only summarise.
+
+Three conditions keep it on the right side:
+
+- **Pain and fear are clinical messages.** They go to the nurse call and the pain assessment with
+  the urgency they carry, not into a feed that someone reads later.
+- **Thanks are never a score.** Patient satisfaction surveys already affect hospital payments; if
+  hearts are counted per nurse and used to rank her, the channel becomes one more thing she is
+  judged on, and the thanks stop meaning anything.
+- **Every patient can use it.** A patient without a phone, or too ill to use one, needs the
+  television remote, the call button or a tablet the ward provides.
 
 #### What the medical case sharpens
 
@@ -485,6 +528,9 @@ The medical version sharpens three things the game version already has:
   - **Uses**: which of the four uses (operations, workflow, devices, care) they would want first;
     for Heinz, where surgical workflow modelling stands now and what it cannot yet observe.
   - **Training**: which devices they would want emulated for training.
+  - **Patients**: what patients on their wards use by the bed (phones, tablets, bedside
+    terminals, television), and whether a thanks-and-requests channel between patients and staff
+    would be welcomed or resented by their nurses.
   - **Medication**: how barcode administration, dispensing cabinets and pump integration work in
     their hospitals, which workarounds they see, and whether their pumps are checked against the
     order.
