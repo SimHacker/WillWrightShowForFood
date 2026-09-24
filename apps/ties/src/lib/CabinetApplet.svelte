@@ -777,6 +777,8 @@
 	.pen .hand {
 		font-size: 1.9em;
 		margin-right: -0.12em;
+		position: relative;
+		top: -0.12em;
 	}
 	.fault {
 		color: #f88;
