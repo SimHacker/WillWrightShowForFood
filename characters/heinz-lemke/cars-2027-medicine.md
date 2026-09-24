@@ -212,13 +212,24 @@ a real one whose data port gives what the screen should show. Pointed at people,
 screen shows: who is in the room, what their hands are doing, whether a patient is moving or
 still.
 
+An emulated device that looks, sounds and responds like the real one serves more than testing.
+The same model trains a nurse on a pump before she touches a patient's, lets Camera Angel
+recognise which model and software version it is looking at by matching the screen against the
+emulation, gives the check after each press a prediction of what the display should show, and
+documents the device in a form people can try instead of read. It can also be played with. People
+spend evenings in truck, flight and job simulators; nurse and doctor simulators built on faithful
+device models would let the next generation try the work before choosing it. Don's work at
+Pantomime Corporation was on this: models of phones, tablets, laptops and desktop machines in
+virtual and augmented reality, used together by several people in a shared world laid over the
+real one, for training, documentation and play. A ward's devices are the same kind of object.
+
 Factories have the same gap, and it is the one Don's employer, Leela AI, works in: cameras and
 machine vision watching what the machine buses and control systems cannot sense, with a neural
 layer for perception (detection, pose, tracking), a symbolic layer that reasons over the events
 it produces, processing on edge boxes beside the cameras, and a stated rule that the AI advises
 and people decide. Carried to a ward, Camera Angel on a fixed camera does what the handheld one
-does without anyone holding it: it reads the pump, the monitor and the ventilator continuously, and sees the
-hand that presses the button as well as the display that changes. The symbolic layer is where the
+does without anyone holding it: it reads the pump, the monitor and the ventilator continuously,
+and sees the hand that presses the button as well as the display that changes. The symbolic layer is where the
 check becomes something a clinician can read: after this press, this display should read this
 value, and the record says whether it did. Processing beside the camera keeps the video of
 patients in the room.
@@ -238,7 +249,27 @@ one is to a clinical decision:
 - **Devices**: reading pumps, monitors and ventilators that have no usable data port, and
   checking each change a clinician makes against what the device then shows.
 - **Care**: watching the people under care and the people caring for them, where the questions
-  of consent, privacy and regulation are sharpest.
+  of consent, privacy and regulation are sharpest. Staff will judge it by who reads the record and
+  what it is used for: the people it watches see what it saw, and it checks devices and steps,
+  not people.
+
+Who holds the camera changes how it is received. A clinician's own phone pointed at a pump looks
+only when she points it, at what she chooses, and she sees everything it sees; it is her tool. A
+camera fixed in the room watches whether or not anyone asked, and the question of who else sees
+the footage comes with it. On a ward the handheld camera is the easier start. The operating room
+differs: the scrubbed team's hands are sterile and busy, so a handheld camera is out for them
+(the circulating nurse can still use one), and cameras are already part of many theatres for
+endoscopy and teaching. A fixed camera there is more likely to be accepted if it demonstrably
+helps the team: counting sponges and instruments, logging times, reading devices, and keeping the
+record the team would otherwise keep by hand. The OR Black Box systems, which record whole
+operations for safety review, show what the conditions are. Staff who object cite punitive use,
+litigation, loss of autonomy and confidentiality
+([survey](https://pmc.ncbi.nlm.nih.gov/articles/PMC10598903/)). Where the terms were set out,
+acceptance was high: at Rigshospitalet in Copenhagen, 93% of OR staff and 98% of patients took
+part over four years ([study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9925891/)), and Stanford
+told staff the recordings would not be used for personnel actions or to compare individuals,
+blurred faces, distorted voices and erased recordings after 30 days
+([AAMC](https://www.aamc.org/news/why-every-operating-room-needs-black-box)).
 
 The further down that list, the more the reading feeds a clinical decision, and the more it
 matters that every inference can be explained and checked and that people make the decision.
@@ -253,15 +284,18 @@ software the clinician already knows.
 
 - Extends: [Screen Angel](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/screen-angel.md).
 - Needs: which systems in each Think Tank member's workflow cannot be replaced or changed, and
-which of these kinds each one is; whether clinical workstations there allow installed
-software, and which applications come through Citrix or a remote desktop; how people bridge the systems today; whether anyone has seen
-automation driving clinical screens or devices and how it was audited; and how regulators treat
-each kind: an overlay on a certified workstation application, video capture and injected USB
+  which of these kinds each one is; whether clinical workstations there allow installed
+  software, and which applications come through Citrix or a remote desktop; how people bridge the
+  systems today; whether anyone has seen automation driving clinical screens or devices and how it
+  was audited; and how regulators treat each kind: an overlay on a certified workstation application, video capture and injected USB
   input on a certified device, and a phone that only tells the clinician which button to press.
   Also: whether cameras already watch devices on their wards or in their operating rooms, and
   what the rules on recording patients allow; which of the four uses (operations, workflow,
   devices, care) each member would want first; and, for Heinz, where surgical workflow modelling
-  stands now and what it cannot yet observe.
+  stands now and what it cannot yet observe. Whether their staff would rather point their own
+  phones at devices or have a fixed camera do it, and whether that answer differs between ward
+  and theatre; their experience with OR black box recording; and which devices they would want
+  emulated for training.
 
 ### 6. What medicine already has
 
