@@ -39,6 +39,11 @@ export class Teletype implements Device {
 		this.deliver();
 	}
 
+	/** Keys typed that the program has not read with KRB yet. */
+	get waiting(): number {
+		return this.pending.length + (this.kbdFlag ? 1 : 0);
+	}
+
 	typeString(s: string): void {
 		for (const ch of s) this.type(ch.charCodeAt(0));
 	}

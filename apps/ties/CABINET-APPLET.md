@@ -72,9 +72,18 @@ The rows under the tube keep one order: the console switches, the menu
 row (program, readout), then the program's rows: Demo and the
 recorder, key help, then the control row and its panels. The control
 row holds three panel chips, REGS TTY MEMORY, then ⏸️/▶️ Stop/Run,
-⏭️ Step (stop, then one instruction), speeds .01 .1 1 10 max (1 is a
-real PDP-7), 🔄 Reset, and at the right the outputs, 🖨️ SVG and 📷 PNG
-to the clipboard. Reset is pulled, not clicked: drag it down its track
+⏭️ Step (stop, then one instruction), the speed slider, 🔄 Reset, and at
+the right the outputs, 🖨️ SVG and 📷 PNG to the clipboard.
+
+The speed slider is one notched slot, slowest at the left. The puck
+shows only the notch it is on and snaps; arrow keys, Home and End move
+it. The first four notches are trace, one instruction every 1 s, .3 s,
+.1 s or .03 s, with REGS and MEMORY following each one. The rest are
+multiples of a real PDP-7, whose memory cycle is 1.75 µs: 571,429
+cycles a second, and an instruction takes one cycle (operate, IOT), two
+(memory reference) or three (indirect). So 1× is 190,000 to 570,000
+instructions a second, and even .001× is a blur. Then .01× .1× 1× 10×
+MAX. Reset is pulled, not clicked: drag it down its track
 and let go at the bottom, or press arrow down four times; letting go
 early puts it back.
 
@@ -92,16 +101,25 @@ PC and AC go to memory; DAC goes to memory in the octal view, since
 display words disassembled as instructions are nonsense.
 
 **TTY** is the KSR-33 on devices 03 and 04: the paper the program
-prints on, and the keyboard. Click the paper and type. Keys go in upper
-case with the eighth bit set; Return is CR, Backspace and Delete are
-RUBOUT, Ctrl+letter is the control code, and paste types the text.
-CR returns the carriage and LF feeds the paper, so overprinting prints
-as the machine drove it. Recordings keep typed keys as `tty` events.
-The line is full duplex, as the PDP-7's was: a key reaches the paper
-only if the program prints it back, and SYMELEC never reads the
-keyboard. LOCAL COPY is half duplex: the teletype prints each key as it
-is typed, and Return prints CR LF. The paper keeps focus through the
-page's blur-on-mouseup by carrying `data-keep-focus`.
+prints on, and the keyboard. Click the paper and type. Lower case is
+sent as upper, the only case a KSR-33 has, with the eighth bit set;
+Return is CR, Backspace and Delete are RUBOUT, Ctrl+letter is the
+control code, and paste types the text. CR returns the carriage and LF
+feeds the paper, so overprinting prints as the machine drove it.
+Recordings keep typed keys as `tty` events.
+
+LOCAL COPY, on by default, is half duplex: the teletype prints each key
+as it is typed, and Return prints a bare CR. That is what SYMELEC
+expects. Its interrupt chain reads the keyboard (`INP`, "SERVICE
+KEYBOARD") into a message ended by CR, and prints only the LF after it
+("OUTPUT LINEFEED AFTER I/P"). With nothing blinking, the first three
+letters are a command from `MESL`: LABEL, UNLABEL, TITAN, GRID, START.
+With an element blinking, a line names it, a line starting `:` names
+its subpicture, one starting `/` attaches a message, and a bare Return
+prints its name and messages (listing 3732–4125). Off, the line is full duplex and the paper
+shows only what the program prints back. Keys a program has not read
+are counted under the paper. The paper and the speed slider keep focus
+through the page's blur-on-mouseup by carrying `data-keep-focus`.
 
 **MEMORY** is a core browser, live while open, with four views. 👉 marks the PC in code,
 source and octal, and the 👉 PC button in the view bar brings it back

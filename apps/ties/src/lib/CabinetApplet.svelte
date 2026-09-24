@@ -155,8 +155,70 @@
 	const CYCLES_PER_MS = 1000 / 1.75;
 	const MAX_DT_MS = 250;
 	const MAX_CYCLES_PER_FRAME = 100_000;
-	const SPEEDS = [0.01, 0.1, 1, 10, Infinity];
+	const SPEEDS = [0.001, 0.01, 0.1, 1, 10, Infinity];
 	let speed = $state(1);
+	// An instruction is one cycle (operate, IOT) or two (memory reference), three when
+	// indirect: 1× is 190,000 to 570,000 instructions a second, and even .001× is a blur.
+	// Trace paces by instructions instead, this many ms apart, with the views following.
+	const TRACES = [1000, 300, 100, 30];
+	let traceMs = $state(0);
+	let traceOwed = 0;
+	const traceLabel = (ms) => (ms >= 1000 ? `${ms / 1000} s` : `.${String(ms / 1000).slice(2)} s`);
+	/** One scale, slowest first: trace intervals, then multiples of a real PDP-7. */
+	const RATES = [
+		...TRACES.map((ms) => ({
+			trace: ms,
+			label: traceLabel(ms),
+			title: `Trace: one instruction every ${ms >= 1000 ? `${ms / 1000} s` : `${ms} ms`}, the views following the PC`
+		})),
+		...SPEEDS.map((s) => ({
+			speed: s,
+			label: s === Infinity ? 'MAX' : `${String(s).replace(/^0/, '')}×`,
+			title:
+				s === Infinity
+					? 'As fast as this computer can go'
+					: s === 1
+						? '1× is a real PDP-7: 571,429 memory cycles a second, 1.75 µs each'
+						: `${s}× a real PDP-7: ${Math.round(571_429 * s).toLocaleString()} cycles a second`
+		}))
+	];
+	const RATE_NOTCH = 14;
+	const RATE_PUCK = 40;
+	const rateIndex = $derived(
+		traceMs ? RATES.findIndex((r) => r.trace === traceMs) : RATES.findIndex((r) => r.speed === speed)
+	);
+	let rateDrag = $state(false);
+
+	function setRate(i) {
+		const r = RATES[Math.max(0, Math.min(RATES.length - 1, i))];
+		if (r.trace) setTrace(r.trace);
+		else setSpeed(r.speed);
+	}
+
+	function rateAt(e) {
+		const x = e.clientX - e.currentTarget.getBoundingClientRect().left;
+		return Math.round((x - RATE_PUCK / 2) / RATE_NOTCH);
+	}
+
+	function onRateDown(e) {
+		if (e.button !== 0) return;
+		rateDrag = true;
+		try {
+			e.currentTarget.setPointerCapture(e.pointerId);
+		} catch {}
+		setRate(rateAt(e));
+	}
+
+	function onRateMove(e) {
+		if (rateDrag) setRate(rateAt(e));
+	}
+
+	function onRateKey(e) {
+		const to = { ArrowLeft: rateIndex - 1, ArrowDown: rateIndex - 1, ArrowRight: rateIndex + 1, ArrowUp: rateIndex + 1, Home: 0, End: RATES.length - 1 }[e.key];
+		if (to === undefined) return;
+		e.preventDefault();
+		setRate(to);
+	}
 	let lastNow = null;
 	let owed = 0;
 
@@ -226,6 +288,7 @@
 
 	function drawFrame() {
 		ttyFlush();
+		if (tty && ttyWaiting !== tty.waiting) ttyWaiting = tty.waiting;
 		const canvas = canvasEl;
 		if (!canvas || !t340) return;
 		const ctx = canvas.getContext('2d');
@@ -557,11 +620,15 @@
 	// the way the machine drove them. The keyboard sends upper case with the eighth bit
 	// set, as a KSR-33 does; Return is CR, Backspace and Delete are RUBOUT.
 	const TTY_KEEP = 2000;
+	const TTY_LOCAL_KEY = 'cabinet-tty-local';
 	let tty = null;
 	let ttyPaper = $state.raw(['']);
 	let ttyCaret = $state(0);
-	/** Half duplex: the teletype prints what is typed, besides sending it. */
-	let ttyLocal = $state(false);
+	/** Half duplex: the teletype prints what is typed, besides sending it. On by default,
+	 *  since none of the menu's programs reads the keyboard or echoes. */
+	let ttyLocal = $state(untrack(() => globalThis.localStorage?.getItem(TTY_LOCAL_KEY) !== 'off'));
+	/** Keys the program has not read. */
+	let ttyWaiting = $state(0);
 	let ttyUnread = $state(0);
 	let ttyBell = $state(false);
 	let ttyEl = $state(null);
@@ -623,12 +690,11 @@
 		if (!tty || player || !codes.length) return;
 		for (const c of codes) {
 			tty.type(c | 0o200);
-			if (ttyLocal) {
-				ttyPrint(c);
-				if (c === 0o15) ttyPrint(0o12);
-			}
+			// A bare CR, as the KSR-33 prints it: SYMELEC sends the LF after a line.
+			if (ttyLocal) ttyPrint(c);
 		}
 		ttyFlush();
+		ttyWaiting = tty.waiting;
 		if (!recorder) return;
 		ttyRecCodes = ttyRecAt === box.cycles ? [...ttyRecCodes, ...codes] : codes;
 		ttyRecAt = box.cycles;
@@ -785,6 +851,29 @@
 		return () => el.removeEventListener('wheel', onMemWheel);
 	});
 
+	/** One instruction; a demo or replay still gets its events at their cycles. */
+	function traceStep() {
+		if (!player) {
+			box.step();
+			return;
+		}
+		player.advance((n) => box.run(n), 1);
+		demoCaption = player.caption;
+		switches = cpu.switches;
+		if (player.done) stopDemo();
+	}
+
+	function setSpeed(s) {
+		speed = s;
+		traceMs = 0;
+	}
+
+	function setTrace(ms) {
+		if (traceMs === ms) return;
+		traceMs = ms;
+		traceOwed = ms;
+	}
+
 	// Schedule first, then work: one bad frame must not stop the machine.
 	function loop(now) {
 		if (!running || !box) return;
@@ -799,6 +888,30 @@
 			owed = 0;
 			drawFrame();
 			updateReadout(now);
+			return;
+		}
+		if (traceMs) {
+			try {
+				traceOwed = Math.min(traceOwed + dt, 4 * traceMs);
+				let stepped = false;
+				while (traceOwed >= traceMs) {
+					traceOwed -= traceMs;
+					traceStep();
+					stepped = true;
+				}
+				if (stepped) {
+					halted = cpu.halted;
+					refreshMem();
+					refreshRegs();
+					if (memOpen && memView !== 'trace' && !pcInView()) showPc();
+				}
+				drawFrame();
+				updateReadout(now);
+				fault = null;
+			} catch (e) {
+				fault = e instanceof Error ? e.message : String(e);
+				console.error('cabinet', e);
+			}
 			return;
 		}
 		owed = speed === Infinity ? MAX_CYCLES_PER_FRAME : owed + dt * CYCLES_PER_MS * speed;
@@ -1377,21 +1490,38 @@
 					title="Step: stop, then execute one instruction"
 					onclick={onStep}>⏭️</button
 				>
-				<span class="speeds" role="group" aria-label="Speed">
-					{#each SPEEDS as s (s)}
-						<button
-							type="button"
-							class="speed"
-							class:on={speed === s}
-							aria-pressed={speed === s}
-							title={s === Infinity
-								? 'As fast as this computer can go'
-								: s === 1
-									? '1× is a real PDP-7: 571,429 memory cycles a second'
-									: `${s}× a real PDP-7`}
-							onclick={() => (speed = s)}>{s === Infinity ? 'max' : String(s).replace(/^0/, '')}</button
-						>
+				<span
+					class="rate"
+					class:dragging={rateDrag}
+					role="slider"
+					tabindex="0"
+					data-keep-focus
+					aria-label="Speed, slowest to fastest"
+					aria-valuemin="0"
+					aria-valuemax={RATES.length - 1}
+					aria-valuenow={rateIndex}
+					aria-valuetext={RATES[rateIndex]?.title}
+					title="{RATES[rateIndex]?.title}. Drag, or use the arrow keys."
+					style:width="{(RATES.length - 1) * RATE_NOTCH + RATE_PUCK}px"
+					onpointerdown={onRateDown}
+					onpointermove={onRateMove}
+					onpointerup={() => (rateDrag = false)}
+					onpointercancel={() => (rateDrag = false)}
+					onkeydown={onRateKey}
+				>
+					{#each RATES as r, i (i)}
+						<span
+							class="rate-notch"
+							class:trace={r.trace}
+							style:left="{i * RATE_NOTCH + RATE_PUCK / 2}px"
+						></span>
 					{/each}
+					<span
+						class="rate-puck"
+						class:trace={traceMs}
+						style:left="{rateIndex * RATE_NOTCH}px"
+						style:width="{RATE_PUCK}px">{RATES[rateIndex]?.label}</span
+					>
 				</span>
 				<span class="reset-pull">
 					{#if resetPull >= 0}
@@ -1484,7 +1614,7 @@
 					tabindex="0"
 					data-keep-focus
 					role="textbox"
-					aria-label="Teletype paper. Click, then type: upper case, Return is CR, Backspace is RUBOUT."
+					aria-label="Teletype paper. Click, then type. Return is CR, Backspace is RUBOUT."
 					onkeydown={onTtyKey}
 					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</div>
 				<div class="tty-bar">
@@ -1494,9 +1624,14 @@
 						class:on={ttyLocal}
 						aria-pressed={ttyLocal}
 						title="Local copy (half duplex): print keys as they are typed. Off, the paper shows only what the program prints back."
-						onclick={() => (ttyLocal = !ttyLocal)}>LOCAL COPY</button
+						onclick={() => {
+							ttyLocal = !ttyLocal;
+							store(TTY_LOCAL_KEY, ttyLocal ? 'on' : 'off');
+						}}>LOCAL COPY</button
 					>
-					<span class="mem-hint">{ttyPaper.length === 1 && !last ? 'Nothing printed yet. Click the paper and type; upper case only.' : ''}</span>
+					<span class="mem-hint"
+						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} waiting: {program?.label ?? 'the program'} does not read the keyboard.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
+					>
 				</div>
 			</div>
 		{/if}
@@ -1767,8 +1902,7 @@
 		min-height: 0;
 	}
 	/* One box for every icon button, whatever the emoji's own metrics. */
-	.icon,
-	.speed {
+	.icon {
 		box-sizing: border-box;
 		height: 1.4rem;
 		padding: 0;
@@ -1803,16 +1937,59 @@
 		line-height: 1.3;
 		white-space: normal;
 	}
-	.speed {
-		width: 4.2ch;
+	/* A notched slot; the puck snaps from notch to notch and shows only its own label. */
+	.rate {
+		position: relative;
+		flex-shrink: 0;
+		height: 1.4rem;
+		cursor: ew-resize;
+		touch-action: none;
+		user-select: none;
+		-webkit-user-select: none;
 	}
-	.speed.on {
+	/* The pointer would sit on the label it is choosing: shrink it to a dot. */
+	.rate.dragging {
+		cursor:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23f33'/%3E%3C/svg%3E") 2 2,
+			none;
+	}
+	.rate::before {
+		content: '';
+		position: absolute;
+		left: 20px;
+		right: 20px;
+		top: 50%;
+		border-top: 1px solid #555;
+	}
+	.rate-notch {
+		position: absolute;
+		top: 30%;
+		height: 40%;
+		border-left: 1px solid #9fe8a0;
+	}
+	.rate-notch.trace {
+		border-left-color: #e8c89f;
+	}
+	.rate-puck {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: ui-monospace, monospace;
+		font-size: 0.62rem;
 		background: #9fe8a0;
 		color: #000;
+		border-radius: 2px;
 	}
-	.speeds {
-		display: flex;
-		gap: 2px;
+	.rate-puck.trace {
+		background: #e8c89f;
+	}
+	.rate:focus-visible {
+		outline: 1px solid #9fe8a0;
+		outline-offset: 2px;
 	}
 	.reset-pull {
 		position: relative;
