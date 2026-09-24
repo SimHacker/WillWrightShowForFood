@@ -113,13 +113,39 @@ Screen Angel does with a game from 2000, and it has a research lineage:
 - **Screen Angel**, the layer in Part 4: accessibility tree where there is one, pixels where there
   is not, models on top, and every action on a reviewable event ring.
 
-The two test beds in this work were chosen under the same constraint. The Sims 1 is a closed
-binary from 2000 with no source, no API and no vendor to ask; everything Screen Angel does to it
-goes through its screen and its files. The PDP-7 emulator runs the recovered PIXIE code as found,
-and every departure from the listing is a named patch. The first constraint is imposed, the second
-is a rule adopted on purpose, and both have the shape of the hospital case: software that has to
-be used as it is. A design that works there does not depend on anyone changing the software
-first.
+The two test beds in this work share one constraint and differ on a second. Both run software that
+has to be used as it is. The Sims 1 is a closed binary from 2000 with no source, no API and no
+vendor to ask. The PDP-7 emulator runs the recovered PIXIE code as found, and every departure from
+the listing is a named patch. A design that works on either does not depend on anyone changing the
+software first.
+
+They differ in what can be seen. The Sims running natively shows only its screen and its files,
+which is the hospital's usual case. PIXIE runs on a PDP-7, a Type 340 display and a Titan link that
+are written in TypeScript and run in a browser tab, so the machine is fully open while the program
+stays fixed: every word of core, every register, every display list, at every step. The same holds
+for Little Computer People or Mind Mirror in an Apple II emulator, and for Micropolis compiled to
+WebAssembly with a TypeScript interface.
+
+That openness has already paid off. tiny-titan, the stand-in for the Cambridge Titan at the other
+end of the link, reads PIXIE's ring structures out of the running machine's memory, serializes
+them, sends them back over the emulated link, and checks that they come back word for word. The
+round trip tests the link code, and it tests the transcription: a word misread in the OCR of the
+1972 listing, or a bug from the 1970s, shows up as a structure that does not survive. The same
+access supports a live display of the ring structures in memory, next to the serialized copies
+tiny-titan keeps on disk.
+
+Because it runs in a browser, the standard browser test tools apply (Playwright, as in the
+questionnaire project). A test can drive PIXIE, the emulator and the 340 display through two
+channels at once: underneath, with full access to internal state, and on the surface, with the
+same access a user or an agent has, by reading the screen, clicking, dragging, typing and pointing
+a light pen. Each channel checks the other. When what the screen shows can be compared with what
+the machine holds, the screen-reading layer can be tested against ground truth before it is used
+on software where only the screen is available.
+
+In the clinic, the agent's reading of a clinical screen cannot be checked against the
+vendor's internal state, because nobody outside the vendor has it. An emulated or instrumented
+test bed where both are visible is where that reading gets measured, and where its error rate is
+known before a clinician relies on it.
 
 The medical version sharpens three things the game version already has. The overlay leaves the
 certified binary unmodified, so the question is whether the combination still counts as the same
