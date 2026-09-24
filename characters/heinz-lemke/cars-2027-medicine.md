@@ -9,8 +9,11 @@ and Don's presentation and demonstration at CARS 2027 in Berlin.
 | | |
 |---|---|
 | Theme | "HCI and Modelling -- where we come from and may be going to" (joint IFCARS project, CARS 2027 through 2030) |
-| Session | "IA and AI: pearls and pitfalls", CARS 2027 Berlin |
+| Session | "IA and AI: pearls and pitfalls", CARS 2027 Berlin. Title from Leo (16 Jul), building on Roy's "IA versus AI" |
 | Date | 29 June 2027, the special HCI session; 60 years after Heinz's first PIXIE lecture at the Cambridge Mathematical Laboratory |
+| Venue | Langenbeck-Virchow-Haus, Berlin |
+| Format (Heinz, 17 Jul) | Four presentations of 15 minutes and a 30–45 minute panel. Two on the 1960s, one on 2027, one 5–10 years ahead |
+| Slots so far | Leo offered to help organise and take the 2027 slot (17 Jul). Mario offered a Human–AI Model Interaction contribution (22 Jul). Roy offered to co-organise with Leo (16 Jul) |
 | Asked of Don | A presentation and demonstration |
 | Planning loop | Heinz Lemke, Roy Eagleson and his students, Mario Cypko, Leo Joskowicz; Franziska Schweikert for CARS logistics |
 | After | 2.5-day IFCARS Think Tank meeting, autumn 2028, Black Forest |
@@ -21,8 +24,10 @@ Sources: [3 Aug proposal](sources/2026-08-03-cars-2027-hci-modelling-cooperation
 [Leo's reply](../leo-joskowicz/sources/2026-08-14-think-tank-reply.md) ·
 [Mario](../mario-cypko/)
 
-Not yet known: whether a paper is expected, its length, the proceedings (IJCARS supplement or
-other), the submission deadline, and whether the session includes a panel.
+Not yet known: which of the four slots is Don's (a 1960s slot for PIXIE, or the 5–10 years ahead
+slot for the argument), whether Don sits on the panel, whether a paper is expected (Mario spoke of
+submitting to CARS), its length, the proceedings, and the submission deadline. The 16–17 July
+messages are in the DonHopkins archive, not yet digested here.
 
 ## Why medicine
 
@@ -187,15 +192,19 @@ model is easier to check than an opaque one.
 ## Questions for Heinz, Roy, Leo and Mario
 
 For Heinz:
+- Which slot is Don's, and is Don on the panel?
 - Is a paper expected alongside the presentation, and in what format and by what date?
-- Is there a panel in the session, and who is on it?
 - May the essay quote your 13 August framing of PIXIE III and the Model Identity Certificate?
 
-For Mario:
+For Mario (his 22 July message already states the medical form of the essay's claim: the LLM
+translates what a clinician says into a formal model the clinician can inspect, discuss and
+correct; conversation alone is not sufficient; the structured model makes assumptions, sources,
+uncertainties and responsibilities visible;
+[digest](sources/2026-07-24-pixie-storyline-thread.md)):
 - In the laryngeal and head and neck oncology networks, who could change the model, and how was a
   change reviewed?
-- In LLM-guided knowledge modelling with human oversight, what happens when the clinician and the
-  model disagree?
+- In the LLM, retrieval and dashboard studies, what happens when the clinician and the model
+  disagree, and which edits happen by talking and which by pointing at the graph?
 - What did the Virtual Heart Team show about several people working one model?
 
 For Leo:
