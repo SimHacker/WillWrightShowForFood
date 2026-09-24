@@ -369,6 +369,29 @@ wireless and emergencies; nurses overrode alerts for 10.3% of medications charte
    annoying it.
 4. Checks that protect the nurse come before checks that accuse her.
 
+#### Confusing pump screens are a design failure
+
+Many pump errors are designed in. Thimbleby and Cairns quote an FDA report of an Alaris pump
+programmed for 68 mL/hr instead of the ordered 6.8; the patient died the next day. The decimal
+key took more force than the digits, and the pump gave no sign that it had missed the press. They
+found pumps that accept a malformed number without complaint and interpret it in their own way, and
+showed that better number entry design could halve "out by 10" errors under reasonable assumptions
+([Thimbleby and Cairns, *J. R. Soc. Interface* 2010](https://doi.org/10.1098/rsif.2010.0112)).
+From 2005 to 2009 the FDA received about 56,000 adverse event reports for infusion pumps, 710 of
+them describing deaths, and manufacturers ran 87 recalls. The FDA concluded that many of the
+problems came from deficiencies in design and engineering, and began asking manufacturers for
+human factors testing with simulated use
+([FDA Infusion Pump Improvement Initiative](https://www.fda.gov/medical-devices/infusion-pumps/white-paper-infusion-pump-improvement-initiative)).
+
+This bears on Camera Angel twice. A photograph of the pump, read and checked against the order,
+catches 68 where 6.8 was meant, whatever the keypad did. And Camera Angel's own screens and prompts
+are an interface on the same ward, under the same stress, and need the same discipline: designed
+from measured human performance, tested with the people who will use them under the conditions
+they work in, and judged by errors and time rather than by how they look. That is the tradition
+Don comes from: Ben Shneiderman's Human-Computer Interaction Lab at Maryland, where the pie menu
+experiment measured pie against linear menus and found pie menus faster, with fewer errors
+(Callahan, Hopkins, Weiser and Shneiderman, CHI '88).
+
 #### Who holds the camera: ward and theatre
 
 Who holds the camera changes how it is received. A clinician's own phone pointed at a pump looks
@@ -496,6 +519,8 @@ Roy's symbolic-AI pendulum fits here: an inspectable model is easier to check th
 - Which slot is Don's, and is Don on the panel?
 - Is a paper expected alongside the presentation, and in what format and by what date?
 - May the essay quote your 13 August framing of PIXIE III and the Model Identity Certificate?
+- Does the Think Tank know Harold Thimbleby's work on infusion pump interfaces, and would he be
+  worth inviting to the discussion?
 
 ### For Mario
 
