@@ -18,7 +18,12 @@
 		isSession,
 		printScreen,
 		disassemble,
-		Trace
+		Trace,
+		MODE,
+		ST340_STOPPED,
+		ST340_LPHIT,
+		ST340_HEDGE,
+		ST340_VEDGE
 	} from '@wwsff/cabinet';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
 
@@ -220,6 +225,7 @@
 	}
 
 	function drawFrame() {
+		ttyFlush();
 		const canvas = canvasEl;
 		if (!canvas || !t340) return;
 		const ctx = canvas.getContext('2d');
@@ -270,7 +276,9 @@
 		readout = `${(rate / 1e6).toFixed(2)}M/s`;
 		penDown = pen.enabled;
 		readoutExtra = extra ?? '';
+		halted = cpu.halted;
 		refreshMem();
+		refreshRegs();
 	}
 
 	// Core browser, four views of MEM_LINES lines: octal (MEM_COLS words a line), code (a
@@ -285,7 +293,65 @@
 	];
 	let memView = $state('octal');
 	const MEM_COLS = $derived(memView === 'octal' ? (side >= 420 ? 8 : 4) : 1);
-	let memOpen = $state(false);
+	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
+	// in one order, memory last so it takes the spare height. Shift-click shows one alone.
+	const PANELS_KEY = 'cabinet-panels';
+	const panelsStored = untrack(() => (globalThis.localStorage?.getItem(PANELS_KEY) ?? '').split(' '));
+	let memOpen = $state(panelsStored.includes('mem'));
+	let regsOpen = $state(panelsStored.includes('regs'));
+	let ttyOpen = $state(panelsStored.includes('tty'));
+	function togglePanel(id, e) {
+		const open = { regs: regsOpen, tty: ttyOpen, mem: memOpen };
+		if (e.shiftKey) for (const k in open) open[k] = k === id;
+		else open[id] = !open[id];
+		regsOpen = open.regs;
+		ttyOpen = open.tty;
+		memOpen = open.mem;
+		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
+		refreshRegs();
+	}
+	function openMemAt(addr, view) {
+		if (!memOpen) {
+			memOpen = true;
+			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', 'mem'].filter(Boolean).join(' '));
+		}
+		if (view && memView !== view) setView(view);
+		memGo(addr, true);
+	}
+
+	const MODE_NAME = Object.fromEntries(Object.entries(MODE).map(([name, n]) => [n, name.toLowerCase()]));
+	let clock = null;
+	let halted = $state(false);
+	let regs = $state.raw(null);
+	function refreshRegs() {
+		if (!regsOpen || !cpu || !t340 || !box) return;
+		regs = {
+			pc: cpu.pc,
+			ac: cpu.ac,
+			link: cpu.link,
+			mq: cpu.mq,
+			sc: cpu.sc,
+			ion: cpu.ion,
+			irq: cpu.irqLine,
+			halted: cpu.halted,
+			cycles: box.cycles,
+			dac: t340.dac,
+			mode: MODE_NAME[t340.mode] ?? String(t340.mode),
+			x: t340.x,
+			y: t340.y,
+			scale: t340.scale,
+			intensity: t340.intensity,
+			lp: t340.lpEna,
+			running: !(t340.status & ST340_STOPPED),
+			hit: !!(t340.status & ST340_LPHIT),
+			edge: !!(t340.status & (ST340_HEDGE | ST340_VEDGE)),
+			frame: t340.frame,
+			kbd: !!tty?.kbdFlag,
+			tto: !!tty?.ttoFlag,
+			clkOn: !!clock?.on,
+			clkFlag: !!clock?.flag
+		};
+	}
 	/** Keep the PC in view (code, source, octal) or the newest instruction (trace). */
 	let memFollow = $state(false);
 	let pcNow = $state(-1);
@@ -437,8 +503,10 @@
 			fault = e instanceof Error ? e.message : String(e);
 		}
 		switches = cpu.switches;
+		halted = cpu.halted;
 		drawFrame();
 		refreshMem();
+		refreshRegs();
 		if (memOpen && memView !== 'trace' && !pcInView()) showPc();
 	}
 
@@ -483,6 +551,106 @@
 		resetPull = Math.min(RESET_PULL, Math.max(0, resetPull) + RESET_PULL / 4);
 		if (resetPull >= RESET_PULL) setTimeout(onResetUp, 150);
 	}
+
+	// The KSR-33 on devices 03/04. Paper is a list of lines and a carriage column: CR returns
+	// the carriage, LF feeds the paper, so CR LF, LF CR and a lone CR over a line all print
+	// the way the machine drove them. The keyboard sends upper case with the eighth bit
+	// set, as a KSR-33 does; Return is CR, Backspace and Delete are RUBOUT.
+	const TTY_KEEP = 2000;
+	let tty = null;
+	let ttyPaper = $state.raw(['']);
+	let ttyCaret = $state(0);
+	let ttyUnread = $state(0);
+	let ttyBell = $state(false);
+	let ttyEl = $state(null);
+	let ttyLines = [''];
+	let ttyCol = 0;
+	let ttyDirty = false;
+	let ttyRecAt = -1;
+	let ttyRecCodes = [];
+
+	function ttyReset() {
+		ttyLines = [''];
+		ttyCol = 0;
+		ttyPaper = ttyLines;
+		ttyCaret = 0;
+		ttyUnread = 0;
+		ttyDirty = false;
+	}
+
+	function ttyPrint(code) {
+		const c = code & 0o177;
+		if (c === 0o15) ttyCol = 0;
+		else if (c === 0o12) {
+			ttyLines.push('');
+			if (ttyLines.length > TTY_KEEP) ttyLines.splice(0, ttyLines.length - TTY_KEEP);
+		} else if (c === 0o07) {
+			ttyBell = true;
+			setTimeout(() => (ttyBell = false), 200);
+		} else if (c >= 0o40 && c < 0o177) {
+			const i = ttyLines.length - 1;
+			const line = ttyLines[i].padEnd(ttyCol);
+			ttyLines[i] = line.slice(0, ttyCol) + String.fromCharCode(c) + line.slice(ttyCol + 1);
+			ttyCol += 1;
+		} else return;
+		ttyDirty = true;
+		if (!ttyOpen) ttyUnread += 1;
+	}
+
+	/** Once a frame at most: printing is fast, rendering the paper is not. */
+	function ttyFlush() {
+		if (!ttyDirty) return;
+		ttyDirty = false;
+		ttyPaper = [...ttyLines];
+		ttyCaret = ttyCol;
+		if (ttyEl) requestAnimationFrame(() => ttyEl && (ttyEl.scrollTop = ttyEl.scrollHeight));
+	}
+
+	function ttyCode(e) {
+		if (e.metaKey || e.altKey) return -1;
+		if (e.key === 'Enter') return 0o15;
+		if (e.key === 'Backspace' || e.key === 'Delete') return 0o177;
+		if (e.key === 'Escape') return 0o33;
+		if (e.ctrlKey) return /^[a-z@[\\\]^_]$/i.test(e.key) ? e.key.toUpperCase().charCodeAt(0) & 0o37 : -1;
+		if (e.key.length !== 1) return -1;
+		const c = e.key.toUpperCase().charCodeAt(0);
+		return c >= 0o40 && c < 0o140 ? c : -1;
+	}
+
+	function ttyType(codes) {
+		if (!tty || player || !codes.length) return;
+		for (const c of codes) tty.type(c | 0o200);
+		if (!recorder) return;
+		ttyRecCodes = ttyRecAt === box.cycles ? [...ttyRecCodes, ...codes] : codes;
+		ttyRecAt = box.cycles;
+		recorder.record(box.cycles, 'tty', ...ttyRecCodes);
+	}
+
+	function onTtyKey(e) {
+		const c = ttyCode(e);
+		if (c < 0) return;
+		e.preventDefault();
+		ttyType([c]);
+	}
+
+	function onTtyPaste(e) {
+		e.preventDefault();
+		const text = e.clipboardData?.getData('text') ?? '';
+		const codes = [];
+		for (const ch of text.replace(/\r\n?/g, '\n')) {
+			const c = ch === '\n' ? 0o15 : ch.toUpperCase().charCodeAt(0);
+			if (c === 0o15 || (c >= 0o40 && c < 0o140)) codes.push(c);
+		}
+		ttyType(codes);
+	}
+
+	$effect(() => {
+		if (ttyOpen) untrack(() => {
+			ttyUnread = 0;
+			ttyDirty = true;
+			ttyFlush();
+		});
+	});
 
 	/** Scroll by whole lines in the current view; leaving the PC stops following it. */
 	function memScroll(n) {
@@ -722,9 +890,13 @@
 			onFrame: collectFrame
 		});
 		const extra = program.peripherals?.() ?? [];
+		ttyReset();
+		ttyRecAt = -1;
+		tty = new Teletype({ printCycles: 1000, onPrint: ttyPrint });
+		clock = new Clock({ cpu });
 		box = new Cabinet({
 			cpu,
-			devices: [t340, new Teletype({ printCycles: 1000 }), new Clock({ cpu }), new TinyTitan(), ...extra]
+			devices: [t340, tty, clock, new TinyTitan(), ...extra]
 		});
 		t340.clock = () => box.cycles;
 		// Inspector handle: $0.cabinet in devtools reaches the live machine.
@@ -760,6 +932,9 @@
 	function replayHandlers() {
 		return {
 			sw: (v) => (cpu.switches = Number(v)),
+			tty: (...codes) => {
+				for (const c of codes) tty.type(Number(c) | 0o200);
+			},
 			pen: (x, y, down, aperture) => {
 				if (aperture) pen.aperture = Number(aperture);
 				pen.point(Number(x), Number(y));
@@ -1144,9 +1319,34 @@
 		{#if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
-		<details class="row app mem" bind:open={memOpen}>
-			<summary>
-				<span class="mem-size">MEMORY {CORE / 1024}K × 18 BITS</span>
+		<div class="row ctl">
+				<span class="chips" role="group" aria-label="Panels. Shift-click shows one alone.">
+					<button
+						type="button"
+						class="chip"
+						class:on={regsOpen}
+						aria-pressed={regsOpen}
+						title="Registers: processor, display, device flags. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('regs', e)}>REGS{#if halted}<span class="chip-lamp hlt" title="Halted">●</span>{/if}</button
+					>
+					<button
+						type="button"
+						class="chip"
+						class:on={ttyOpen}
+						class:bell={ttyBell}
+						aria-pressed={ttyOpen}
+						title="Teletype: what the program prints, and a keyboard. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('tty', e)}>TTY{#if ttyUnread}<span class="chip-count" title="{ttyUnread} new characters">{ttyUnread > 999 ? '999+' : ttyUnread}</span>{/if}</button
+					>
+					<button
+						type="button"
+						class="chip"
+						class:on={memOpen}
+						aria-pressed={memOpen}
+						title="Memory: {CORE / 1024}K × 18-bit words. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('mem', e)}>MEMORY</button
+					>
+				</span>
 				<button
 					type="button"
 					class="icon"
@@ -1218,8 +1418,67 @@
 						onclick={onCopyScreen}>{shot || '📷'}</button
 					>
 				</span>
-			</summary>
-			{#if memOpen}
+		</div>
+		{#if regsOpen && regs}
+			<div class="row app regs" role="group" aria-label="Registers">
+				<div class="reg-line">
+					<span class="reg-dev">CPU</span>
+					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
+						>PC <b>{oct(regs.pc, 5)}</b>{#if symbolic(regs.pc)}&nbsp;{symbolic(regs.pc)}{/if}</button
+					>
+					<button type="button" class="reg" title="Accumulator. Go to the address in its low 13 bits." onclick={() => openMemAt(regs.ac & 0o17777)}
+						>AC <b>{oct(regs.ac, 6)}</b></button
+					>
+					<span class="reg" title="Link">L <b>{regs.link}</b></span>
+					<span class="reg" title="EAE multiplier-quotient">MQ <b>{oct(regs.mq, 6)}</b></span>
+					<span class="reg" title="EAE step counter">SC <b>{oct(regs.sc, 2)}</b></span>
+					<span class="lamp" class:on={regs.ion} title="Interrupts enabled">ION</span>
+					<span class="lamp" class:on={regs.irq} title="A device is asking for an interrupt">IRQ</span>
+					<span class="lamp red" class:on={regs.halted} title="Halted">HLT</span>
+					<span class="reg dim" title="Memory cycles since boot">{regs.cycles.toLocaleString()}</span>
+				</div>
+				<div class="reg-line">
+					<span class="reg-dev">340</span>
+					<button type="button" class="reg" title="Display address counter: the display's own PC. Show it in memory, as octal." onclick={() => openMemAt(regs.dac, 'octal')}
+						>DAC <b>{oct(regs.dac, 5)}</b>{#if symbolic(regs.dac)}&nbsp;{symbolic(regs.dac)}{/if}</button
+					>
+					<span class="reg" title="Display mode: how the next word is decoded"><b>{regs.mode}</b></span>
+					<span class="reg" title="Beam position">X <b>{oct(regs.x, 4)}</b> Y <b>{oct(regs.y, 4)}</b></span>
+					<span class="reg" title="Scale and intensity">S <b>{regs.scale}</b> I <b>{regs.intensity}</b></span>
+					<span class="lamp" class:on={regs.running} title="The display is cycling through its file">RUN</span>
+					<span class="lamp" class:on={regs.lp} title="Light pen enabled">LP</span>
+					<span class="lamp" class:on={regs.hit} title="Light pen hit">HIT</span>
+					<span class="lamp" class:on={regs.edge} title="The beam ran off the grid">EDGE</span>
+					<span class="reg dim" title="Refresh frames drawn">frame {regs.frame.toLocaleString()}</span>
+				</div>
+				<div class="reg-line">
+					<span class="reg-dev">TTY</span>
+					<span class="lamp" class:on={regs.kbd} title="A key is waiting for the program">KBD</span>
+					<span class="lamp" class:on={regs.tto} title="The printer is done and ready">TTO</span>
+					<span class="reg-dev">CLK</span>
+					<span class="lamp" class:on={regs.clkOn} title="Clock on">ON</span>
+					<span class="lamp" class:on={regs.clkFlag} title="Clock tick waiting">FLAG</span>
+				</div>
+			</div>
+		{/if}
+		{#if ttyOpen}
+			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
+			<div class="row app tty">
+				<pre
+					class="tty-paper"
+					bind:this={ttyEl}
+					tabindex="0"
+					role="textbox"
+					aria-label="Teletype paper. Click, then type: upper case, Return is CR, Backspace is RUBOUT."
+					onkeydown={onTtyKey}
+					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</pre>
+				{#if ttyPaper.length === 1 && !last}
+					<p class="mem-hint">Nothing printed yet. Click the paper and type; a KSR-33 has upper case only.</p>
+				{/if}
+			</div>
+		{/if}
+		{#if memOpen}
+		<div class="row app mem">
 			<div bind:this={memEl}>
 				<div class="mem-bar mem-views" role="group" aria-label="View">
 					{#each MEM_VIEWS as [id, label, hint] (id)}
@@ -1336,8 +1595,8 @@
 				{/each}
 				{/if}
 			</div>
-			{/if}
-		</details>
+		</div>
+		{/if}
 	</figcaption>
 </figure>
 
@@ -1502,10 +1761,8 @@
 	}
 	.demo-row .demo {
 		height: 1.4rem;
-		width: 5ch;
-		padding: 0;
+		padding: 0 0.4em;
 		flex-shrink: 0;
-		font-weight: bold;
 	}
 	/* Its own line, two lines tall, only while a demo runs or a recording is made. */
 	.demo-row .demo-caption {
@@ -1516,7 +1773,6 @@
 	}
 	.speed {
 		width: 4.2ch;
-		font-size: 0.62rem;
 	}
 	.speed.on {
 		background: #9fe8a0;
@@ -1576,7 +1832,6 @@
 	.switch {
 		width: 1.35rem;
 		padding: 0.1rem 0;
-		font-size: 0.6rem;
 	}
 	.switch.dim {
 		border-color: #3a5a3a;
@@ -1621,35 +1876,123 @@
 		padding-top: 0.2rem;
 		padding-bottom: 0.2rem;
 	}
-	/* A flex summary loses its native marker, so it draws its own. */
-	.row.mem summary {
-		display: flex;
-		align-items: center;
+	.row.ctl {
+		flex-wrap: wrap;
 		gap: 0.35rem;
-		list-style: none;
-		cursor: pointer;
-		padding: 0.1rem 0;
+		font-family: ui-monospace, monospace;
 	}
-	.row.mem summary::-webkit-details-marker {
-		display: none;
-	}
-	.row.mem summary::before {
-		content: '▸';
-		width: 1ch;
-		opacity: 0.8;
-	}
-	.row.mem[open] summary::before {
-		content: '▾';
-	}
-	.mem-size {
-		opacity: 0.8;
-		white-space: nowrap;
-	}
-	.row.mem summary .buttons {
+	.row.ctl .buttons {
 		margin-left: auto;
 	}
-	.row.mem[open] summary {
-		margin-bottom: 0.25rem;
+	.chips {
+		display: flex;
+		flex-shrink: 0;
+		gap: 2px;
+	}
+	.chip {
+		height: 1.4rem;
+		padding: 0 0.4em;
+		white-space: nowrap;
+		border-color: #555;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.3em;
+	}
+	.chip.on {
+		background: #9fe8a0;
+		color: #000;
+		border-color: #9fe8a0;
+	}
+	.chip.bell {
+		background: #ffe680;
+		color: #000;
+	}
+	.chip-lamp.hlt {
+		color: #f55;
+	}
+	.chip-count {
+		font-size: 0.85em;
+		padding: 0 0.3em;
+		border-radius: 0.6em;
+		background: #ffe680;
+		color: #000;
+	}
+	.row.regs {
+		font-family: ui-monospace, monospace;
+		font-size: 0.66rem;
+		line-height: 1.5;
+	}
+	.reg-line {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		column-gap: 0.9ch;
+	}
+	.reg-dev {
+		width: 3ch;
+		opacity: 0.45;
+	}
+	.reg-dev:not(:first-child) {
+		margin-left: 1ch;
+	}
+	.reg {
+		white-space: nowrap;
+		opacity: 0.85;
+	}
+	.reg b {
+		font-weight: normal;
+		color: #d8ffd8;
+	}
+	.reg.dim {
+		opacity: 0.45;
+	}
+	button.reg {
+		all: unset;
+		cursor: pointer;
+		white-space: nowrap;
+		opacity: 0.85;
+		text-decoration: underline dotted;
+		text-underline-offset: 2px;
+	}
+	.lamp {
+		padding: 0 0.35ch;
+		border: 1px solid #3a5a3a;
+		opacity: 0.4;
+	}
+	.lamp.on {
+		opacity: 1;
+		background: #9fe8a0;
+		color: #000;
+		border-color: #9fe8a0;
+	}
+	.lamp.red.on {
+		background: #f55;
+		border-color: #f55;
+	}
+	.tty-paper {
+		margin: 0;
+		height: 8.5em;
+		overflow-y: auto;
+		padding: 0.2rem 0.4rem;
+		font-family: ui-monospace, monospace;
+		font-size: 0.7rem;
+		line-height: 1.25;
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+		background: #0c0c08;
+		color: #e8e0c0;
+		border: 1px solid #333;
+		cursor: text;
+	}
+	.tty-paper:focus {
+		outline: 1px solid #9fe8a0;
+	}
+	.tty-caret {
+		background: #555;
+	}
+	.tty-paper:focus .tty-caret {
+		background: #e8e0c0;
+		color: #0c0c08;
 	}
 	.mem-bar {
 		display: flex;
@@ -1799,9 +2142,10 @@
 		gap: 0.35rem;
 		flex-shrink: 0;
 	}
+	/* One size for every text button; .icon sizes emoji, which is not text. */
 	button {
 		font: inherit;
-		font-size: 0.72rem;
+		font-size: 0.62rem;
 		padding: 0.15rem 0.45rem;
 		border: 1px solid #9fe8a0;
 		background: transparent;

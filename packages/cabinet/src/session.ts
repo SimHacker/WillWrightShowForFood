@@ -9,6 +9,7 @@ import type { DemoScript } from "./symelec-demo.js";
  * An event is [cycle, kind, ...args]. Kinds so far:
  *   sw   value                  console AC switches
  *   pen  x y down aperture      light pen, 340 grid; down 1 or 0
+ *   tty  code...                teletype keys, 7-bit; the KSR-33 adds the eighth bit
  * A replayer applies the kinds it has handlers for and skips the rest, so
  * a session with new kinds (Tiny Titan messages, say) still plays on an
  * older page.

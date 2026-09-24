@@ -70,14 +70,35 @@ offline bundle carries every program.
 
 The rows under the tube keep one order: the console switches, the menu
 row (program, readout), then the program's rows: Demo and the
-recorder, key help, and the Memory drawer. The drawer's header is the
-machine's controls and stays visible when the drawer is closed:
-⏸️/▶️ Stop/Run, ⏭️ Step (stop, then one instruction), speeds .01 .1
-1 10 max (1 is a real PDP-7), 🔄 Reset, and at the right the outputs,
-🖨️ SVG and 📷 PNG to the clipboard. Reset is pulled, not clicked: drag
-it down its track and let go at the bottom, or press arrow down four
-times; letting go early puts it back. Opened, the drawer is a core
-browser, live while open, with four views. 👉 marks the PC in code,
+recorder, key help, then the control row and its panels. The control
+row holds three panel chips, REGS TTY MEMORY, then ⏸️/▶️ Stop/Run,
+⏭️ Step (stop, then one instruction), speeds .01 .1 1 10 max (1 is a
+real PDP-7), 🔄 Reset, and at the right the outputs, 🖨️ SVG and 📷 PNG
+to the clipboard. Reset is pulled, not clicked: drag it down its track
+and let go at the bottom, or press arrow down four times; letting go
+early puts it back.
+
+A chip opens or closes its panel; shift-click shows that panel alone.
+Open panels stack in the chip order, memory last so it takes the spare
+height, and the set is remembered. A closed chip still reports: REGS
+shows a red dot when the processor has halted, TTY counts characters
+printed since it was last open and flashes on BEL.
+
+**REGS** is the processor (PC, AC, link, MQ, SC, lamps for ION, IRQ,
+HLT, and cycles since boot), the 340 (DAC, the display's own PC; mode;
+beam X and Y; scale and intensity; lamps for RUN, LP, HIT, EDGE; frame
+count) and the device flags (teletype KBD and TTO, clock ON and FLAG).
+PC and AC go to memory; DAC goes to memory in the octal view, since
+display words disassembled as instructions are nonsense.
+
+**TTY** is the KSR-33 on devices 03 and 04: the paper the program
+prints on, and the keyboard. Click the paper and type. Keys go in upper
+case with the eighth bit set; Return is CR, Backspace and Delete are
+RUBOUT, Ctrl+letter is the control code, and paste types the text.
+CR returns the carriage and LF feeds the paper, so overprinting prints
+as the machine drove it. Recordings keep typed keys as `tty` events.
+
+**MEMORY** is a core browser, live while open, with four views. 👉 marks the PC in code,
 source and octal, and the 👉 PC button in the view bar brings it back
 into view; a step that leaves the page does the same. **octal** is the words, changed ones lit.
 **code** is a word a line, disassembled with symbols (`disasm.ts`),
