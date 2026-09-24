@@ -84,16 +84,49 @@ model run on each option would put the comparison on screen, where members can i
 - Needs: Mario on who may change a clinical model today, how a change is reviewed, and what his
   LLM-guided knowledge modelling does when a clinician disagrees with it.
 
-### 5. The layer that clicks
+### 5. Legacy software and the layer that clicks
 
-Software already drives hospital screens it did not write: PACS viewers, record systems, order
-entry. An agent operating those screens is Screen Angel in a clinic. The keylogger problem from
-Part 4 becomes patient privacy; every click the layer makes has to be visible and logged as the
-agent's.
+A hospital workflow runs through software nobody in the room can change: the record system, the
+PACS viewer, the scanner console, the planning station, the lab system. Each is proprietary, under
+a vendor contract, often certified as it ships, and too embedded in the workflow to replace. None
+of them was written to be driven by an agent, and most expose no API worth the name. People bridge
+them by hand: re-typing values from one screen into another, screenshots, printouts, a phone call.
+
+An agent that is to help there has two choices. It can wait for every vendor to open an interface,
+or it can work through the screens that already exist, the way the people do. The second is what
+Screen Angel does with a game from 2000, and it has a research lineage:
+
+- **Prefab** (Morgan Dixon and James Fogarty, University of Washington): pixel-based reverse
+  engineering of interface structure. From screen pixels alone it recovers widgets and hierarchy,
+  then adds behaviour the application never had (target-aware pointing, the bubble cursor,
+  previews, translated or re-laid-out interfaces) without the application's source, across
+  toolkits, platforms and remote desktops.
+  ([project](http://homes.cs.washington.edu/~mdixon/research/prefab/))
+- **aQuery**, Don's proposal to select and query accessibility trees the way jQuery selects the
+  DOM, combining screen scraping with accessibility APIs because each covers what the other misses.
+  ([wiki](https://donhopkins.com/mediawiki/index.php/AQuery))
+- **Screen Angel**, the layer in Part 4: accessibility tree where there is one, pixels where there
+  is not, models on top, and every action on a reviewable event ring.
+
+The two test beds in this work were chosen under the same constraint. The Sims 1 is a closed
+binary from 2000 with no source, no API and no vendor to ask; everything Screen Angel does to it
+goes through its screen and its files. The PDP-7 emulator runs the recovered PIXIE code as found,
+and every departure from the listing is a named patch. The first constraint is imposed, the second
+is a rule adopted on purpose, and both have the shape of the hospital case: software that has to
+be used as it is. A design that works there does not depend on anyone changing the software
+first.
+
+The medical version sharpens three things the game version already has. The overlay leaves the
+certified binary unmodified, so the question is whether the combination still counts as the same
+device. The keylogger problem from Part 4 becomes patient privacy. And the rule that the
+automation's interface is the user's interface does real work here: an agent driving the same
+screens a clinician drives produces actions the clinician can watch, audit and take over, in the
+software the clinician already knows.
 
 - Extends: [Screen Angel](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/screen-angel.md).
-- Needs: whether anyone in the Think Tank has seen agents or automation driving clinical screens,
-  and how it was audited.
+- Needs: which systems in each Think Tank member's workflow cannot be replaced or changed, how
+  people bridge them today, whether anyone has seen automation driving clinical screens and how it
+  was audited, and how regulators treat an overlay on a certified system.
 
 ### 6. What medicine already has
 
@@ -140,7 +173,8 @@ For Roy:
 
 To route through Heinz to the wider Think Tank (Dirk Wilhelm, Kevin Cleary, Krishna Kandarpa,
 Leonard Berliner, Hugo Herrero Antón, Akinobu Shimizu, Carlos Amato): one case each where an
-automated step was hard to see or hard to stop.
+automated step was hard to see or hard to stop, and one system in their workflow that cannot be
+replaced or changed, with how people work around it.
 
 ## Demonstration candidates
 
