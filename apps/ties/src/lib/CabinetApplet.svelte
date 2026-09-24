@@ -51,12 +51,12 @@
 	let userAspect = $state(untrack(() => Number(globalThis.localStorage?.getItem(ASPECT_KEY)) || null));
 	const figHeight = $derived(userAspect ? Math.round(side * userAspect) : null);
 
-	// The tube stays square and, with the console, menu and demo rows (the demo row has two
-	// caption lines), fits the scrolling
-	// pane it sits in. The reserve is fixed, not measured, so switching programs never
-	// resizes the tube; rows a program adds past those three scroll.
+	// The tube stays square and, with the console, menu and demo rows, fits the scrolling
+	// pane it sits in. The reserve is fixed, not measured, so switching programs or starting
+	// a demo never resizes the tube; the demo's caption lines and the rows a program adds
+	// push what is below them down.
 	const TITLE_ALLOWANCE = 12;
-	const CAPTION_RESERVE = 140;
+	const CAPTION_RESERVE = 110;
 	const MIN_SIDE = 200;
 
 	function scrollParent(el) {
@@ -1113,9 +1113,9 @@
 				disabled={!session || recording}
 				onclick={onDownloadSession}>⬇️</button
 			>
-			<span class="demo-caption" aria-live="polite"
-				>{demoOn ? demoCaption : recording ? 'Recording. ⏺ again to stop.' : ''}</span
-			>
+			{#if demoOn || recording}
+				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
+			{/if}
 		</div>
 		{#if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
@@ -1405,7 +1405,7 @@
 		flex-shrink: 0;
 		font-weight: bold;
 	}
-	/* Its own line, two lines tall whether or not a demo runs, so nothing jumps. */
+	/* Its own line, two lines tall, only while a demo runs or a recording is made. */
 	.demo-row .demo-caption {
 		flex: 1 0 100%;
 		min-height: 2.6em;
