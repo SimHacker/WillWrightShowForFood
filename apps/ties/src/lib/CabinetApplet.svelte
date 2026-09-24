@@ -170,6 +170,8 @@
 	}
 
 	let readout = $state('');
+	let readoutExtra = $state('');
+	let penDown = $state(false);
 	let fault = $state(null);
 	let lastReadout = 0;
 	let cyclesAtReadout = 0;
@@ -180,7 +182,9 @@
 		lastReadout = now;
 		cyclesAtReadout = box.cycles;
 		const extra = program?.status(cpu);
-		readout = `${(rate / 1e6).toFixed(2)}M/s · ✍️${pen.enabled ? '⬇️' : '⬆️'}${extra ? ` · ${extra}` : ''}`;
+		readout = `${(rate / 1e6).toFixed(2)}M/s`;
+		penDown = pen.enabled;
+		readoutExtra = extra ?? '';
 	}
 
 	// Schedule first, then work: one bad frame must not stop the machine.
@@ -559,7 +563,13 @@
 			{#if fault}
 				<span class="fault" title={fault}>fault: {fault}</span>
 			{:else}
-				<span class="readout">{paused ? 'stopped' : readout}</span>
+				<span class="readout">
+					{#if paused}stopped{:else}{readout} · <span
+							class="pen"
+							title={penDown ? 'Pen down' : 'Pen up'}
+							><span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span></span
+						>{readoutExtra ? ` · ${readoutExtra}` : ''}{/if}
+				</span>
 			{/if}
 			<span class="buttons">
 				<button
@@ -756,6 +766,17 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	.pen {
+		display: inline-flex;
+		align-items: center;
+		vertical-align: middle;
+		gap: 0;
+		line-height: 1;
+	}
+	.pen .hand {
+		font-size: 1.9em;
+		margin-right: -0.12em;
 	}
 	.fault {
 		color: #f88;
