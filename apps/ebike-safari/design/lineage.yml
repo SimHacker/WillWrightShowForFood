@@ -53,9 +53,10 @@ chain:
     video: https://www.youtube.com/watch?v=nG90XG3STz8
     harvest: [POI frontage, YAML corpus, bike-as-instrument]
 
-  - era: "2009"
+  - era: "2011"
     project: BONGO BINGO
-    hook: random coffeeshop bingo card; bike around; GPS check-in; reviews feed DB
+    hook: random coffeeshop bingo card; go there; Foursquare venue history marks the squares; published for the Cannabis Cup
+    design: bongo-bingo.md
     harvest: [gamified exposure, field notes on route, Foursquare-era social layer]
 
   - era: "2009–11"

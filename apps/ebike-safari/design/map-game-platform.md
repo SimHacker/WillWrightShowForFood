@@ -267,7 +267,7 @@ Presets document **data dependencies**, not just eye candy.
 4. Build step → overlay GeoJSON (view of your slice of shared data)
 5. Register in `viewer/layers/catalog.yml` + optional preset
 
-Lineage tenants (BONGO BINGO, iLoci, MediaGraph) = new contracts on same Amsterdam data plane.
+Lineage tenants ([BONGO BINGO](bongo-bingo.md), iLoci, MediaGraph) = new contracts on same Amsterdam data plane.
 
 ## Viewer UX (projection only)
 
