@@ -15,6 +15,7 @@ Only on air with Mario + Heinz approval.
 ## 3. CARS 2027 Human-AI model interaction
 
 Heinz encouraging presentation 29 Jun Berlin — demo KI-Compass-style explainable twins?
+Questions for Mario in the medical-leg plan: [`../heinz-lemke/cars-2027-medicine.md`](../heinz-lemke/cars-2027-medicine.md).
 
 ## 4. PhD lineage episode
 
