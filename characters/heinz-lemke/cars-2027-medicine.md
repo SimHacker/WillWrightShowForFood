@@ -279,6 +279,21 @@ layer for perception (detection, pose, tracking), a symbolic layer that reasons 
 it produces, processing on edge boxes beside the cameras, and a stated rule that the AI advises
 and people decide.
 
+The readings a clinical device needs are ones Leela's video pipeline already makes in plants,
+construction sites and laboratories:
+
+- QR codes and other markers;
+- indicator lights, by brightness and colour;
+- digital LED clocks and seven-segment displays, by OCR;
+- objects, and people's poses.
+
+It also joins them with real-time feeds from outside the camera: accelerometers on crane hooks,
+machine control and monitoring buses, and network protocols. That is the second channel the
+device list above describes, a data port to check the screen reading against.
+
+Leela began with monitoring elderly people for safety, and moved to industrial, construction and
+laboratory sites for safety and efficiency. A ward brings both halves together.
+
 Carried to a ward, Camera Angel on a fixed camera does what the handheld one does without anyone
 holding it: it reads the pump, the monitor and the ventilator continuously, and sees the hand that
 presses the button as well as the display that changes.
@@ -312,6 +327,46 @@ The further down that list, the more the reading feeds a clinical decision, and 
 matters that every inference can be explained and checked and that people make the decision.
 Those are the terms the technology was built on.
 
+#### Medication administration: the workflow that already scans
+
+Giving medication is where hospitals already make nurses point a device at things and check each
+step against the order:
+
+- **Barcode medication administration**: the nurse scans the patient's wristband and the drug,
+  and the electronic medication record checks patient, drug, dose, route and time. At one
+  academic medical center it cut non-timing administration errors by 41% and the related
+  potential adverse drug events by 51%, and removed transcription errors
+  ([Poon et al., *NEJM* 2010](https://www.nejm.org/doi/full/10.1056/NEJMsa0907115)).
+- **Automated dispensing cabinets** log every drawer opened and every override.
+- **Smart infusion pumps** carry drug libraries with dose limits. Where they are not connected to
+  the medication record, the nurse keys the rate in by hand and nothing checks it against the
+  order.
+- **Independent double-checks** by a second nurse for high-alert drugs, and **witnessed waste**
+  for controlled substances.
+
+Camera Angel can run alongside this instead of adding to it:
+
+- **Pump against order.** A photograph of the pump after programming, read and compared with the
+  order, closes the gap where pumps are not integrated. This is the check-after-each-press
+  applied where errors are known to happen, and the natural first use.
+- **Capture at the scan.** The photograph comes with a scan that already happens, on the handheld
+  the nurse already carries, so it costs no extra step.
+- **A record of the double-check**, before any thought of replacing the second nurse.
+- **Witnessed waste** comes last, if at all: it is diversion control, which means suspecting
+  staff.
+
+How the existing practices are received sets the terms. Nurses accept barcode scanning as
+standard and work around it whenever it fails them. One study at five hospitals found 15 kinds of
+workaround, such as patient barcodes taped to carts, doorjambs and belt rings, with 31 causes,
+including smudged or missing barcodes, chewed wristbands, failing scanners and batteries, weak
+wireless and emergencies; nurses overrode alerts for 10.3% of medications charted
+([Koppel et al., *JAMIA* 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2442264/)). So:
+
+1. It has to be faster than the workaround.
+2. It has to work every time, or it teaches people to bypass it.
+3. Its alerts have to be few and right.
+4. Checks that protect the nurse come before checks that accuse her.
+
 #### Who holds the camera: ward and theatre
 
 Who holds the camera changes how it is received. A clinician's own phone pointed at a pump looks
@@ -324,6 +379,33 @@ is out for them (the circulating nurse can still use one), and cameras are alrea
 theatres for endoscopy and teaching. A fixed camera there is more likely to be accepted if it
 demonstrably helps the team: counting sponges and instruments, logging times, reading devices, and
 keeping the record the team would otherwise keep by hand.
+
+#### Sousveillance: the clinician's own record
+
+A nurse photographing the equipment she works with, before, during and after, following Camera
+Angel's steps or on her own, is closer to sousveillance, Steve Mann's term for recording by the
+people being watched, than to surveillance. It stays that way on conditions: she sees everything
+recorded, the record serves the chart and her own protection, and it is not used to rank her. If
+the images go to a store that only management searches, it is surveillance again with the nurse
+holding the camera.
+
+The protection is real. Contemporaneous documentation is the usual defence against a claim of
+negligence, and a timestamped image of the rate she set is better evidence than a note written at
+the end of the shift. When the device misbehaves, the record puts the fault on the device.
+
+The record also shows errors. That is as it should be when someone was careless with a patient,
+and it needs one distinction. Most harmful errors come from systems: look-alike drugs, confusing
+pump screens, fatigue, understaffing, and the workarounds a bad system forces. The just-culture
+approach hospitals use separates human error (fix the system, support the person), at-risk
+behaviour (coach it, and ask why the shortcut exists), and reckless behaviour (discipline). A
+record used to punish ordinary errors stops being made, and the patient loses the protection it
+was for. Used first for learning, it leads to a fix in the device, the label or the process, and
+reckless conduct is handled as it would be without a camera.
+
+Routine capture at defined steps, such as before and after every programming change, is more
+defensible than capture at the nurse's discretion, because the gaps in a discretionary record
+invite questions. Images of screens and rooms carry patient names and faces, so they stay out of
+the phone's camera roll, are encrypted, and have faces and identifiers blurred.
 
 #### What the OR Black Box shows about acceptance
 
@@ -378,6 +460,9 @@ The medical version sharpens three things the game version already has:
   - **Uses**: which of the four uses (operations, workflow, devices, care) they would want first;
     for Heinz, where surgical workflow modelling stands now and what it cannot yet observe.
   - **Training**: which devices they would want emulated for training.
+  - **Medication**: how barcode administration, dispensing cabinets and pump integration work in
+    their hospitals, which workarounds they see, and whether their pumps are checked against the
+    order.
 
 ### 6. What medicine already has: consent, second opinions, the signed addendum
 
