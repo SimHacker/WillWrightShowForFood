@@ -26,12 +26,20 @@
 		ST340_VEDGE
 	} from '@wwsff/cabinet';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
+	import { useApplets } from './applets.svelte.js';
 
 	let { spec } = $props();
 
 	// The spec picks the first program; after that the menu owns it.
 	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
 	const program = $derived(programById(programId));
+
+	// A `follows:` transclusion on the page shows the article for the program running.
+	const board = useApplets();
+	$effect(() => {
+		if (!board) return;
+		board[spec.id ?? 'cabinet'] = { program: programId, label: program?.label ?? '' };
+	});
 	// Each program opens the 340 or not (display: false); the reader can open or close it any time.
 	let displayOpen = $state(untrack(() => programById(programId)?.display !== false));
 	let switches = $state(0);

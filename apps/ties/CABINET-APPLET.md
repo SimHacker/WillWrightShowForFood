@@ -59,6 +59,12 @@ one. Under it a title row, **PDP-7 / 340 DISPLAY**, opens and closes the
 tube. Each program sets it when chosen (`display: false` closes it) and
 the reader can flip it any time. The menu stays put either way; boot
 messages and errors show under the title row while the tube is closed.
+The applet publishes `{ program, label }` on the page's board under its
+`id:` (default `cabinet`, `src/lib/applets.svelte.js`); a `transclude`
+with `follows: cabinet` and `article: cabinet-{program}` shows the
+article for the running program (`src/lib/transclude.js`,
+`FollowSlot.svelte`). In the pixie database those are `cabinet-symelec`,
+`cabinet-lp370`, `cabinet-duel`, `cabinet-hilo` and `cabinet-lander`.
 Each entry in `src/lib/cabinet-programs.js` loads its tapes, adds
 the peripherals it needs, deposits itself and sets the console:
 

@@ -17,26 +17,12 @@ mode: honest
 size: 512
 ```
 
-**What you are looking at.** Everything on the tube is drawn by SYMELEC, running on an emulated PDP-7 and Type 340 display. Your mouse is the light pen.
+```transclude
+follows: cabinet
+article: cabinet-{program}
+```
 
-- **The + in the middle** is the tracking cross. It follows the pen.
-- **The letters around it** are a radial menu, the earliest known one.
-- **The column on the right** is the command menu. IN, SC, CA, RE and RO act on a selected element, so on an empty picture they do nothing.
-
-**Draw a line.** Press on the cross and drag slowly; too fast and the cross is left behind.
-
-1. Tap **S**, upper left of the cross. It turns into **F**.
-2. For a straight line tap **RU** on the right; the default, HV, draws in steps.
-3. Drag. Let go and drag again for the next corner.
-4. Tap **F** to finish.
-
-A lit line the pen passes over catches the cross, so carry it around the picture, not across it.
-
-**Demo**, under the tube, reboots and lets a scripted pen draw a house, a sun, a tree and a circuit. Every stroke is SYMELEC's; the script only moves the pen. The picture then nearly fills memory: one or two more elements and SYMELEC starts over, blank.
-
-**Under the tube.** The top row is the PDP-7 console: the eighteen AC switches, ⏸️ stop and ▶️ run, and 🔄 reset. Below it, the program menu, speed (**1×** is the real PDP-7), 🖨️ to save the tube as SVG and 📷 to copy it as a PNG. Then the program's own rows: Demo, ⏺️ to record what you do, 📼 to replay it, and a live view of core. The menu also has DEC's 1964 light pen test, whose Demo walks through its three tests, and DUEL, spacewar for two on one keyboard.
-
-The three words this page patches, and why, are in the ~Bug journal~.
+**Around the machine.** The top row picks the program: PIXIE's SYMELEC, DEC's 1964 light pen test, DUEL, HILO and LANDER. The article above changes with it. On the right of that row is a readout of the program's own variables, read from core. **PDP-7 / 340 DISPLAY** opens and closes the tube; the teletype programs start with it closed. Then the eighteen console switches; Demo, ⏺️ to record what you do and 📼 to replay it; the REGS, TTY and MEMORY panels, ⏸️ stop and ⏭️ step, the speed (**1×** is the real PDP-7), and 🔄 reset, which you pull down its track; 🖨️ saves the tube as SVG and 📷 copies it as a PNG.
 
 **Where to go next.**
 

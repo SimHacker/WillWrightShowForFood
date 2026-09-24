@@ -10,47 +10,29 @@
 	 * single-click on a link to it — or a click on the window title.
 	 */
 	import { paginate, parseArticle } from './markdown.js';
-	import { getArticle, resolve } from './corpus.js';
+	import { resolve } from './corpus.js';
+	import { expandTranscludes } from './transclude.js';
+	import { provideApplets } from './applets.svelte.js';
 	import TargetApplet from './TargetApplet.svelte';
 	import CabinetApplet from './CabinetApplet.svelte';
 	import YouTubeEmbed from './YouTubeEmbed.svelte';
 	import RepoDoc from './RepoDoc.svelte';
+	import FollowSlot from './FollowSlot.svelte';
 
-	let { db, article, onnavigate, onpreview, titled = true, reveal = false, browser = null } = $props();
+	let {
+		db,
+		article,
+		onnavigate,
+		onpreview,
+		titled = true,
+		reveal = false,
+		browser = null,
+		heading = 'h1'
+	} = $props();
+
+	provideApplets();
 
 	let bodyEl = $state(null);
-
-	/** A ```transclude names another article, optionally in another database. */
-	function expandTranscludes(dbId, segs, depth = 0) {
-		const out = [];
-		for (const segment of segs) {
-			if (segment.kind !== 'transclude') {
-				out.push({ ...segment, db: segment.db ?? dbId });
-				continue;
-			}
-			if (depth > 2) continue;
-			if (segment.spec.path) {
-				out.push({ kind: 'repodoc', spec: segment.spec, db: dbId });
-				continue;
-			}
-			const name = segment.spec.article ?? segment.spec.from ?? segment.spec.of;
-			const sourceDb = segment.spec.db ?? dbId;
-			const found = resolve(sourceDb, name);
-			const art = found?.slug ? getArticle(found.db ?? sourceDb, found.slug) : null;
-			if (!art) {
-				out.push({
-					kind: 'html',
-					html: `<p class="absent">transclude missed: ${sourceDb}/${name ?? '?'}</p>`,
-					db: dbId
-				});
-				continue;
-			}
-			const fromDb = found.db ?? sourceDb;
-			const inner = parseArticle(paginate(art.body).join('\n\n'), fromDb);
-			out.push(...expandTranscludes(fromDb, inner, depth + 1));
-		}
-		return out;
-	}
 
 	// Window-size paging later. For now join the authored pages and scroll.
 	const segments = $derived(
@@ -102,7 +84,7 @@
 <article class:reveal-all={reveal}>
 	{#if titled}
 		<header>
-			<h1>{article.title}</h1>
+			<svelte:element this={heading} class="title">{article.title}</svelte:element>
 		</header>
 	{/if}
 
@@ -129,6 +111,8 @@
 				<CabinetApplet spec={segment.spec} />
 			{:else if segment.kind === 'youtube'}
 				<YouTubeEmbed spec={segment.spec} />
+			{:else if segment.kind === 'follow'}
+				<FollowSlot {segment} {reveal} {browser} {onpreview} {onnavigate} />
 			{:else}
 				<TargetApplet
 					db={segment.db ?? db}
@@ -161,11 +145,14 @@
 		-webkit-text-fill-color: #00f;
 		border-bottom-color: #00f;
 	}
-	h1 {
+	.title {
 		font-size: 1.15rem;
 		font-weight: 700;
 		margin: 0 0 0.6rem;
 		line-height: 1.2;
+	}
+	h2.title {
+		font-size: 1rem;
 	}
 	.body :global(a.ties-link) {
 		color: inherit;
