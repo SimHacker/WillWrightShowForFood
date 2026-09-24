@@ -391,7 +391,24 @@ And the cross wraps to the bottom if carried much above 970.
 ### S would not stay F
 
 **Symptom.** Clicking A, B or the other ring labels worked; clicking S
-did nothing, so no element could be opened and nothing drawn.
+did nothing, so no element could be opened and nothing drawn. The first
+report was worse: "clicking S does nothing … what do I click to draw
+lines if not S". Ten minutes later, after trying the rest of the ring:
+"clicking A changes it to B … so S is just stubborn."
+
+**The wrong guess.** The reader had typed `HI` on the teletype just
+before, and SYMELEC had answered `?`. A program waiting on the keyboard
+could plausibly stop polling the pen. A Node probe booted SYMELEC, typed
+at it, and then tapped S: S turned to F every time. The teletype was
+innocent.
+
+**The probe that found it.** Two more Node runs. A hit map pressed the
+pen at every point around S and read location 55 afterwards, which showed
+the target is about 24 by 30 grid units, some 12 pixels on screen: small,
+but hittable. Then a hold sweep pressed dead centre on S for longer and
+longer. Short holds left F. Long holds left S. Nobody had looked at how
+long the button stayed down, because a light pen has no button.
+
 **Cause.** SYMELEC re-reads a lightbutton held under the pen. A press on
 S turns the ring to F (location 55 goes from 233700 to 63700), and the F
 now under the pen is still held down about 250,000 cycles later, which is
