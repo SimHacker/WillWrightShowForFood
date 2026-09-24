@@ -43,8 +43,8 @@ let lp370Program = null;
 export const PROGRAMS = [
 	{
 		id: 'symelec',
-		label: 'PIXIE / SYMELEC 1972',
-		title: 'Heinz Lemke’s circuit editor, from the 1972 listing',
+		label: 'PIXIE 1972',
+		title: 'PIXIE / SYMELEC, 1972: Heinz Lemke’s circuit editor, from the listing',
 		pen: true,
 		demo: (h) => houseDemo(h),
 		demoTitle: 'Reboot and let a scripted pen draw a picture, the 1972 way',
@@ -61,8 +61,8 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'lp370',
-		label: 'Type 370 light pen test (DEC 1964)',
-		title: 'DEC-4-45-M, C. Stein: sensitivity, follow and field of view. Page 6 is reconstructed.',
+		label: 'Light pen test 1964',
+		title: 'Type 370 light pen test, DEC-4-45-M, C. Stein, 1964: sensitivity, follow and field of view. Page 6 is reconstructed.',
 		pen: true,
 		demo: (h) => lp370Demo(h, lp370Program),
 		demoTitle: 'Reboot and walk through the three tests: switches set, pen placed',
@@ -79,8 +79,8 @@ export const PROGRAMS = [
 	},
 	{
 		id: 'duel',
-		label: 'DUEL (spacewar for two, PDP-7)',
-		title: 'From paper tape via the RIM loader. A control is active with its switch down.',
+		label: 'DUEL',
+		title: 'DUEL, spacewar for two on a PDP-7. From paper tape via the RIM loader. A control is active with its switch down.',
 		pen: false,
 		demo: null,
 		switches: 0o777777,
