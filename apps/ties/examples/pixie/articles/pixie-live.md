@@ -32,9 +32,9 @@ size: 512
 
 A lit line the pen passes over catches the cross, so carry it around the picture, not across it.
 
-**Demo** reboots and lets a scripted pen draw a house, a sun, a tree and a circuit. Every stroke is SYMELEC's; the script only moves the pen. The picture then nearly fills memory: one or two more elements and SYMELEC starts over, blank.
+**Demo**, under the tube, reboots and lets a scripted pen draw a house, a sun, a tree and a circuit. Every stroke is SYMELEC's; the script only moves the pen. The picture then nearly fills memory: one or two more elements and SYMELEC starts over, blank.
 
-**Under the tube.** The top row is the PDP-7 console: the eighteen AC switches, **Stop**/**Run**, and **Reset**. Below it, the program menu, speed (**1×** is the real PDP-7), and **Print screen**, which saves an SVG. The menu also has DEC's 1964 light pen test and DUEL, spacewar for two on one keyboard.
+**Under the tube.** The top row is the PDP-7 console: the eighteen AC switches, ⏸️ stop and ▶️ run, and 🔄 reset. Below it, the program menu, speed (**1×** is the real PDP-7), 🖨️ to save the tube as SVG and 📷 to copy it as a PNG. Then the program's own rows: Demo, ⏺️ to record what you do, 📼 to replay it, and a live view of core. The menu also has DEC's 1964 light pen test, whose Demo walks through its three tests, and DUEL, spacewar for two on one keyboard.
 
 The three words this page patches, and why, are in the ~Bug journal~.
 
