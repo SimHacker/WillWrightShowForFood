@@ -442,6 +442,19 @@ change, without a model trained for that device or ward. Two things go with it:
   number that matters, such as a pump rate, the vision-language model's reading is compared with
   a dedicated display reader's, and when they disagree a person looks.
 
+Much of a hospital still runs on paper: forms, printed checklists, labels, wristbands, door signs,
+whiteboards. A printed QR code joins paper to the hub. It can point to an object (this pump, this
+bed, this room), a document, an action, a configuration, a discussion or a workflow. The phone
+scans it and opens the right issue, or the camera sees it in a frame and knows what it is looking
+at: a code on a pump links the photograph to that pump's record and to its emulation, so the check
+knows what the display should show; a code on a printed checklist links each ticked box to the
+procedure it belongs to. The paper keeps working as paper when the network is down.
+
+Two limits. A code that performs an action (mark done, request pickup) only proposes it when a
+camera happens to see it, and a person confirms. And a sticker can be printed by anyone, so the app
+follows only codes signed by the hospital, and a code stuck over the real one is caught because it
+does not match the object's other readings.
+
 The same structure serves patients. A patient photographs a rash, a wound or a pimple and opens
 an issue; the nurse or dermatologist answers in the thread, and the record of the exchange stays
 with the chart. Sending photographs for a clinician to assess later is already established as
