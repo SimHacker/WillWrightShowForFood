@@ -50,7 +50,7 @@ export const PROGRAMS = [
 			cpu.pc = 0o22;
 		},
 		status(cpu) {
-			return `+ ${cpu.read(0o5641) & 0o1777},${cpu.read(0o5640) & 0o1777}`;
+			return `${cpu.read(0o5641) & 0o1777},${cpu.read(0o5640) & 0o1777}`;
 		}
 	},
 	{
@@ -67,7 +67,7 @@ export const PROGRAMS = [
 		},
 		status(cpu) {
 			const v = (n) => cpu.read(lp370Program.symbols.get(n));
-			return `cross ${octal(v('xpt'))},${octal(v('ypt'))} · seen ${v('lpct')}`;
+			return `${octal(v('xpt'))},${octal(v('ypt'))} seen ${v('lpct')}`;
 		}
 	},
 	{

@@ -565,11 +565,11 @@
 				<span class="fault" title={fault}>fault: {fault}</span>
 			{:else}
 				<span class="readout">
-					{#if paused}stopped{:else}{readout} · <span
+					{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span><span
 							class="pen"
 							title={penDown ? 'Pen down' : 'Pen up'}
 							><span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span></span
-						>{readoutExtra ? ` · ${readoutExtra}` : ''}{/if}
+						>{#if readoutExtra}<span title="Tracking cross x,y">{readoutExtra}</span>{/if}{/if}
 				</span>
 			{/if}
 			<span class="buttons">
@@ -776,6 +776,7 @@
 		text-overflow: ellipsis;
 	}
 	.pen {
+		margin: 0 0.3em;
 		display: inline-flex;
 		align-items: center;
 		vertical-align: middle;
