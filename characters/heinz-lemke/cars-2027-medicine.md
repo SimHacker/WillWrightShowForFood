@@ -271,6 +271,26 @@ machines in virtual and augmented reality, used together by several people in a 
 over the real one, for training, documentation and play. A ward's devices are the same kind of
 object.
 
+#### Simulated devices in the live system: the Ames precedent
+
+A simulated device can also be plugged into the live network alongside real ones. Don's late
+friend [Ron Reisman](../ron-reisman/memorial.md), who worked on air traffic management at NASA
+Ames from the original CTAS team in 1988, told Don how he tested the air traffic control software
+he was developing: pilots flew virtual aircraft in the Ames motion-base flight simulators, and the
+simulated aircraft were entered into the live national air traffic control system as if they were
+real. The controllers handled them as real aircraft, and the software was tested with a real pilot,
+real controllers and real traffic, without putting anyone in the air at risk.
+
+The hospital version is an emulated pump, monitor or bed on the hospital's real network, feeding
+the real alarm systems, records and Camera Angel, with a simulated patient behind it. It tests the
+integration, the alerts and the learning loop against the systems and people who will use them,
+before any real patient depends on them. Hospitals already run in-situ simulation, drills with
+mannequins on the real ward, and keep test patients in their record systems; this joins the two.
+
+One difference from the Ames case needs designing in. Every minute a nurse spends answering a
+simulated alarm is a minute taken from a real patient, so the staff must know which bed is
+simulated, and the simulated patient must never be mistaken for a real one in the record.
+
 #### The factory parallel: Leela AI
 
 Factories have the same gap, and it is the one Don's employer, Leela AI, works in: cameras and

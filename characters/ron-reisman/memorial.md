@@ -29,6 +29,15 @@ in an early AR headset (documented video). Ron's lab also produced the **Convolv
 spatial audio** that **Body Electric** plugged into for VR performance (the patch-cord trail to
 **Bounce** and **Rebounce**).
 
+Ron also told Don how he tested the air traffic software he was building: pilots flew virtual
+aircraft in the Ames flight simulators on their hydraulic motion bases, which Ron ran, and the
+simulated aircraft were entered into the **live national air traffic control system** as if they
+were real. The controllers handled them as real aircraft. The software got tested with real
+pilots, real controllers and real traffic, and nobody's life was at risk. (Don's recollection of
+Ron's account; not yet matched to a published source.) The method, plugging simulated agents and
+devices into a network of live ones, is carried into the medical plan for
+[CARS 2027](../heinz-lemke/cars-2027-medicine.md#simulated-devices-in-the-live-system-the-ames-precedent).
+
 Earlier: **Dolphin Research Center** — an **Apple ][** talking to dolphins; Ron's line that stuck
 with Don: *"To answer 'What is AI?' you first have to answer 'What is I?'"* — and his confession
 that once he started **testing** intelligence, he stopped knowing what the word meant.
@@ -45,6 +54,7 @@ that once he started **testing** intelligence, he stopped knowing what the word 
 
 - **Safety-critical systems vs startup slogans** — Don's FAA NOTAM HN defense of Ron's legacy
 - **Controllers who code** — PATCO → programmers; domain experts first
+- **Simulated aircraft in live airspace** — testing safety-critical software with real people and no one at risk; the hospital version in the CARS 2027 plan
 - **Ames tour redux** — simulators, AR tower tools, Convolvotron live in the browser?
 - **Dolphin intelligence & the Apple ][** — what testing does to the word "intelligence"
 - **Minsky flies the sim** — archive video as cold open
