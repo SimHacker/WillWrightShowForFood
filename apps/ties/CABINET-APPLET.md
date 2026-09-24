@@ -49,8 +49,12 @@ every other consumer: loader, run budget, segment log, pen input.
 
 ## Programs
 
-The caption has a program menu; `program:` in the block picks the first
-one. Each entry in `src/lib/cabinet-programs.js` loads its tapes, adds
+The program menu is the top row; `program:` in the block picks the first
+one. Under it a title row, **PDP-7 / 340 DISPLAY**, opens and closes the
+tube. Each program sets it when chosen (`display: false` closes it) and
+the reader can flip it any time. The menu stays put either way; boot
+messages and errors show under the title row while the tube is closed.
+Each entry in `src/lib/cabinet-programs.js` loads its tapes, adds
 the peripherals it needs, deposits itself and sets the console:
 
 | id | What | Loaded from |
@@ -62,7 +66,8 @@ the peripherals it needs, deposits itself and sets the console:
 | `lander` | LANDER, a lunar landing game on the teletype: a burn each second, exact touchdown speed (Demo flies one descent) | `packages/cabinet/tapes/lander/lander.s`, assembled in the browser |
 
 A program with `tty: true` opens the TTY panel when it is chosen, and
-`display: false` boots without waiting for a picture on the tube. A
+`display: false` closes the tube and boots without waiting for a picture
+on it. A
 demo's host has `type(text)` besides `cpu` and `pen`: the script types
 as an operator would, and the paper shows it under LOCAL COPY. Replayed
 `tty` events print the same way.

@@ -153,11 +153,15 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
   runs and in tiny-titan's stored files, side by side
   ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).
 - SIMH stays on the desk as the oracle.
-- Later, not yet: a second machine, the GT40 (PDP-11/05 and VT11
-  display), to run Jack Burness's 1973 MOONLANDER from its own binary.
-  SIMH has all three pieces: `PDP11/lunar11/` (source `gtlem.mac` and
-  notes; the README says the source does not match the binaries),
-  the binary as `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
+- Later, not yet: more DEC machines in the cabinet, each from its SIMH
+  counterpart. No VAX for now.
+  - The GT40 (PDP-11/05 and VT11 display), to run Jack Burness's 1973
+    MOONLANDER from its own binary. SIMH has all three pieces:
+    `PDP11/lunar11/` (source `gtlem.mac` and notes; the README says the
+    source does not match the binaries), the binary as
+    `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
+  - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`.
+  - A PDP-8, from `PDP8/`.
 
 ### Where the bugs are written down
 

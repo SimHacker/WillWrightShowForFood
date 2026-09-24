@@ -32,6 +32,8 @@
 	// The spec picks the first program; after that the menu owns it.
 	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
 	const program = $derived(programById(programId));
+	// Each program opens the 340 or not (display: false); the reader can open or close it any time.
+	let displayOpen = $state(untrack(() => programById(programId)?.display !== false));
 	let switches = $state(0);
 
 	let canvasEl = $state(null);
@@ -61,7 +63,7 @@
 	// a demo never resizes the tube; the demo's caption lines and the rows a program adds
 	// push what is below them down.
 	const TITLE_ALLOWANCE = 12;
-	const CAPTION_RESERVE = 110;
+	const CAPTION_RESERVE = 130;
 	const MIN_SIDE = 200;
 
 	function scrollParent(el) {
@@ -1180,6 +1182,7 @@
 		stopRecording();
 		programId = next.id;
 		session = loadSession(next.id);
+		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
 		await onReset();
 	}
@@ -1213,7 +1216,7 @@
 			setTimeout(() => (copied = false), 1500);
 		} catch {
 			// No clipboard permission: the text is selectable, so select it for the reader.
-			const pre = canvasEl?.parentElement?.querySelector('.err');
+			const pre = figureEl?.querySelector('.err');
 			if (pre) getSelection()?.selectAllChildren(pre);
 		}
 	}
@@ -1311,8 +1314,62 @@
 {#if spec.title}
 	<p class="headline"><strong>{spec.title}</strong></p>
 {/if}
+{#snippet overlay(inline)}
+	<div class="overlay" class:inline class:failed={!!error} aria-live="polite">
+		{#if error}
+			<div class="err-box">
+				<div class="err-head">
+					<span>{program?.label ?? 'Cabinet'} failed</span>
+					<button type="button" onclick={copyError}>{copied ? 'Copied' : 'Copy'}</button>
+				</div>
+				<pre class="err">{error}</pre>
+			</div>
+		{:else}
+			<p>{status === 'booting' ? `Booting ${program?.label ?? ''}…` : 'Loading…'}</p>
+		{/if}
+	</div>
+{/snippet}
 <figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px" style:min-height={figHeight ? `${figHeight}px` : null}>
-	<div class="tube-wrap" style:width="{side}px">
+	<!-- The program comes first, so opening or closing the display never moves the menu. -->
+	<div class="row menu top">
+		<select
+			class="program"
+			aria-label="Program"
+			title={program?.title}
+			value={programId}
+			disabled={status === 'booting' || demoOn}
+			onchange={onProgram}
+		>
+			{#each PROGRAMS as p (p.id)}
+				<option value={p.id}>{p.label}</option>
+			{/each}
+		</select>
+		{#if fault}
+			<span class="fault" title={fault}>fault: {fault}</span>
+		{:else}
+			<span class="readout">
+				{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span>{#if displayOpen}<span
+						class="pen"
+						title={penDown ? 'Pen down' : 'Pen up'}
+						><span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span></span
+					>{/if}{#if readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}{/if}
+			</span>
+		{/if}
+	</div>
+	<button
+		type="button"
+		class="row display-bar"
+		aria-expanded={displayOpen}
+		aria-controls="cabinet-tube"
+		title={displayOpen ? 'Close the display' : 'Open the display'}
+		data-keep-focus
+		onclick={() => (displayOpen = !displayOpen)}
+		><span class="caret" aria-hidden="true">{displayOpen ? '▾' : '▸'}</span>PDP-7 / 340 DISPLAY</button
+	>
+	{#if !displayOpen && status !== 'live'}
+		{@render overlay(true)}
+	{/if}
+	<div class="tube-wrap" id="cabinet-tube" style:width="{side}px" hidden={!displayOpen}>
 		<canvas
 			bind:this={canvasEl}
 			width="1024"
@@ -1329,20 +1386,8 @@
 			onpointerup={onPointerUp}
 			onpointercancel={onPointerUp}
 		></canvas>
-		{#if status !== 'live'}
-			<div class="overlay" class:failed={!!error} aria-live="polite">
-				{#if error}
-					<div class="err-box">
-						<div class="err-head">
-							<span>{program?.label ?? 'Cabinet'} failed</span>
-							<button type="button" onclick={copyError}>{copied ? 'Copied' : 'Copy'}</button>
-						</div>
-						<pre class="err">{error}</pre>
-					</div>
-				{:else}
-					<p>{status === 'booting' ? `Booting ${program?.label ?? ''}…` : 'Loading…'}</p>
-				{/if}
-			</div>
+		{#if displayOpen && status !== 'live'}
+			{@render overlay(false)}
 		{/if}
 	</div>
 	{#each ['left', 'right', 'bottom'] as edge (edge)}
@@ -1367,7 +1412,7 @@
 			onkeydown={(e) => onEdgeKey(e, edge)}
 		></div>
 	{/each}
-	<!-- Fixed order: front panel, menu row, then rows the program adds. Nothing above a row moves when it comes or goes. -->
+	<!-- Fixed order: front panel, then rows the program adds. Nothing above a row moves when it comes or goes. -->
 	<figcaption bind:this={captionEl}>
 		<div class="row panel" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left">
 			{#each { length: 6 } as _, g (g)}
@@ -1390,31 +1435,6 @@
 				</span>
 			{/each}
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
-		</div>
-		<div class="row menu">
-			<select
-				class="program"
-				aria-label="Program"
-				title={program?.title}
-				value={programId}
-				disabled={status === 'booting' || demoOn}
-				onchange={onProgram}
-			>
-				{#each PROGRAMS as p (p.id)}
-					<option value={p.id}>{p.label}</option>
-				{/each}
-			</select>
-			{#if fault}
-				<span class="fault" title={fault}>fault: {fault}</span>
-			{:else}
-				<span class="readout">
-					{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span><span
-							class="pen"
-							title={penDown ? 'Pen down' : 'Pen up'}
-							><span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span></span
-						>{#if readoutExtra}<span title="Tracking cross x,y">{readoutExtra}</span>{/if}{/if}
-				</span>
-			{/if}
 		</div>
 		<div class="row app demo-row">
 			{#if program?.demo}
@@ -1822,6 +1842,46 @@
 		max-width: 100%;
 		aspect-ratio: 1;
 		margin: 0 auto;
+	}
+	.tube-wrap[hidden] {
+		display: none;
+	}
+	.row.menu.top {
+		border-top: none;
+		font-size: 0.75rem;
+	}
+	.row.display-bar {
+		box-sizing: border-box;
+		width: 100%;
+		min-height: 0;
+		padding: 0.1rem 0.5rem;
+		gap: 0.35rem;
+		font: inherit;
+		font-family: ui-monospace, monospace;
+		font-size: 0.65rem;
+		letter-spacing: 0.08em;
+		color: #6fae70;
+		background: #0a120a;
+		border: none;
+		border-top: 1px solid #333;
+		border-bottom: 1px solid #333;
+		border-radius: 0;
+		cursor: pointer;
+		text-align: left;
+	}
+	.row.display-bar:hover,
+	.row.display-bar:focus-visible {
+		color: #9fe8a0;
+		outline: none;
+	}
+	.display-bar .caret {
+		width: 0.8em;
+	}
+	.overlay.inline {
+		position: static;
+		padding: 0.4rem 0.5rem;
+		place-items: start;
+		background: none;
 	}
 	.tube {
 		display: block;
