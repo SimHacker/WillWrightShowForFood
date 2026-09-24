@@ -160,9 +160,14 @@ How far an agent can reach depends on the machine, and hospitals have every kind
 
 - **A stock Windows or macOS workstation**: the record client, the PACS viewer, many planning
   stations. Screen Angel works as it does on The Sims: accessibility tree, screen capture,
-  synthetic input. Two things narrow it. Clinical workstations are often locked down so nothing
-  can be installed, and many applications arrive through Citrix or a remote desktop, which leaves
-  only pixels (Prefab's case).
+  synthetic input. Clinical workstations are often locked down so nothing can be installed.
+- **An application delivered through Citrix or a remote desktop.** The protocol already carries
+  the whole screen one way and every key and pointer event the other, so a relay in the middle
+  can read the screen and inject input without installing anything on the clinician's machine or
+  the server. It gets only pixels, no accessibility tree (Prefab's case), and the relay has to be
+  set up by hospital IT because the sessions are encrypted. In return it sits at one point that
+  serves every workstation, and session recording on these systems is an existing practice that
+  an audit trail can build on.
 - **A bespoke device with a video output and standard input ports**: an ultrasound cart, an
   endoscopy tower, a scanner console. A capture card takes the video; a USB device that presents
   itself as a keyboard, mouse or button box injects input, as KVM-over-IP boxes do. Nothing is
@@ -195,8 +200,8 @@ software the clinician already knows.
 
 - Extends: [Screen Angel](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/screen-angel.md).
 - Needs: which systems in each Think Tank member's workflow cannot be replaced or changed, and
-  which of the four kinds each one is; whether clinical workstations there allow installed
-  software or come through Citrix; how people bridge the systems today; whether anyone has seen
+  which of these kinds each one is; whether clinical workstations there allow installed
+  software, and which applications come through Citrix or a remote desktop; how people bridge the systems today; whether anyone has seen
   automation driving clinical screens or devices and how it was audited; and how regulators treat
   each kind: an overlay on a certified workstation application, video capture and injected USB
   input on a certified device, and a phone that only tells the clinician which button to press.
