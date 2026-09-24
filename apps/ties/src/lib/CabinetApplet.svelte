@@ -357,6 +357,29 @@
 		}
 	}
 
+	let copied = $state(false);
+
+	/** The error with enough context to paste into a bug report. */
+	async function copyError() {
+		const report = [
+			`cabinet: ${program?.label ?? programId} (${programId})`,
+			`page: ${location.href}`,
+			`when: ${new Date().toISOString()}`,
+			`browser: ${navigator.userAgent}`,
+			'',
+			error
+		].join('\n');
+		try {
+			await navigator.clipboard.writeText(report);
+			copied = true;
+			setTimeout(() => (copied = false), 1500);
+		} catch {
+			// No clipboard permission: the text is selectable, so select it for the reader.
+			const pre = canvasEl?.parentElement?.querySelector('.err');
+			if (pre) getSelection()?.selectAllChildren(pre);
+		}
+	}
+
 	function onSwitch(bit) {
 		if (!cpu) return;
 		switches ^= bit;
@@ -471,9 +494,15 @@
 			onpointercancel={onPointerUp}
 		></canvas>
 		{#if status !== 'live'}
-			<div class="overlay" aria-live="polite">
+			<div class="overlay" class:failed={!!error} aria-live="polite">
 				{#if error}
-					<p class="err">{error}</p>
+					<div class="err-box">
+						<div class="err-head">
+							<span>{program?.label ?? 'Cabinet'} failed</span>
+							<button type="button" onclick={copyError}>{copied ? 'Copied' : 'Copy'}</button>
+						</div>
+						<pre class="err">{error}</pre>
+					</div>
 				{:else}
 					<p>{status === 'booting' ? `Booting ${program?.label ?? ''}…` : 'Loading…'}</p>
 				{/if}
@@ -618,14 +647,38 @@
 		font-size: 0.72rem;
 		color: #ffd27a;
 	}
-	.overlay .err {
-		color: #f88;
-		padding: 0 1rem;
-		text-align: center;
-		max-height: 100%;
-		overflow: auto;
-		overflow-wrap: anywhere;
+	.overlay.failed {
+		place-items: stretch;
+		background: rgba(0, 0, 0, 0.88);
 		pointer-events: auto;
+	}
+	.err-box {
+		display: flex;
+		flex-direction: column;
+		min-height: 0;
+		padding: 0.5rem;
+	}
+	.err-head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.5rem;
+		padding-bottom: 0.35rem;
+		color: #f88;
+		font-weight: bold;
+	}
+	.overlay .err {
+		flex: 1;
+		min-height: 0;
+		margin: 0;
+		padding: 0.4rem;
+		overflow: auto;
+		color: #f88;
+		font-size: 0.7rem;
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
+		user-select: text;
+		border: 1px solid #533;
 	}
 	figcaption {
 		font-size: 0.75rem;
@@ -686,9 +739,9 @@
 		font-size: 0.68rem;
 		opacity: 0.8;
 	}
+	.tube:focus,
 	.tube:focus-visible {
-		outline: 1px solid #ffd27a;
-		outline-offset: -1px;
+		outline: none;
 	}
 	.octal {
 		margin-left: auto;
