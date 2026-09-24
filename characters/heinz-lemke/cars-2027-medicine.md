@@ -404,9 +404,18 @@ people following what concerns them.
 The same structure serves patients. A patient photographs a rash, a wound or a pimple and opens
 an issue; the nurse or dermatologist answers in the thread, and the record of the exchange stays
 with the chart. Sending photographs for a clinician to assess later is already established as
-store-and-forward teledermatology. The patient never sees a forge: the front is the bedside or
-phone app of the thanks channel described below, each patient sees only their own issues, and staff see
-what their role allows.
+store-and-forward teledermatology.
+
+The patient never has to use a forge's web pages. The forge is underneath, reachable from a
+browser or a phone for anyone who wants it, and in front of it are two interfaces: the bedside or
+phone app of the thanks channel described below, and a voice and chat assistant. A patient says
+"the itch on my arm is worse and I'd like someone to look at it"; the assistant takes the photo,
+opens the issue, and reads the nurse's answer back when it comes. It is the essay's rule applied
+to patients: the conversation is how people reach the system, and the structured record
+underneath is what everyone can inspect, correct and audit, which is also Mario's point that
+conversation alone is not sufficient. Voice also reaches the patients a screen does not: those
+who cannot see well, cannot hold a phone, or cannot read the language of the interface. Each
+patient sees only their own issues, and staff see what their role allows.
 
 #### Confusing pump screens are a design failure
 
