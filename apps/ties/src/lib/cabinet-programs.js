@@ -14,6 +14,9 @@ import {
 	assembleHilo,
 	bootHilo,
 	hiloDemo,
+	assembleLander,
+	bootLander,
+	landerDemo,
 	houseDemo,
 	LP370_SWITCHES,
 	sourceFromAsm,
@@ -24,6 +27,7 @@ import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
 import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
 import hiloSource from '../../../../packages/cabinet/tapes/hilo/hilo.s?raw';
+import landerSource from '../../../../packages/cabinet/tapes/lander/lander.s?raw';
 import symelecSymbols from '../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-symbols.tsv?raw';
 import rimUrl from '../../../../packages/cabinet/tapes/duel/rim.pt?url&inline';
 import duelUrl from '../../../../packages/cabinet/tapes/duel/duel.pt?url&inline';
@@ -39,6 +43,7 @@ const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 const LP = LP370_SWITCHES;
 let lp370Program = null;
 let hiloProgram = null;
+let landerProgram = null;
 
 /** symelec-symbols.tsv: name, octal address, source, flags; # lines are comments. */
 function parseSymbolTsv(text) {
@@ -174,6 +179,31 @@ export const PROGRAMS = [
 		},
 		status(cpu) {
 			return `guesses ${cpu.read(hiloProgram.symbols.get('tries'))}`;
+		}
+	},
+	{
+		id: 'lander',
+		label: 'LANDER (2026)',
+		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
+		pen: false,
+		tty: true,
+		display: false,
+		demo: (h) => landerDemo(h, landerProgram),
+		demoTitle: 'Reboot and let a scripted pilot fly one descent',
+		switches: 0,
+		switchLabels: null,
+		symbols: () => [...(landerProgram?.symbols ?? [])].map(([name, addr]) => ({ name, addr })),
+		source: async () => (landerProgram ? sourceFromAsm(landerProgram) : null),
+		boot({ cpu }) {
+			landerProgram ??= assembleLander(landerSource);
+			bootLander(cpu, landerProgram);
+		},
+		status(cpu) {
+			const v = (n) => {
+				const w = cpu.read(landerProgram.symbols.get(n)) & 0o777777;
+				return w & 0o400000 ? w - 0o1000000 : w;
+			};
+			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
 		}
 	}
 ];

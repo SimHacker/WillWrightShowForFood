@@ -40,6 +40,8 @@ export type { Session, SessionEvent, SessionHandlers } from "./session.js";
 export { assembleLp370, bootLp370, lp370Demo, LP370_TAPES, LP370_START, LP370_SWITCHES } from "./lp370.js";
 export { assembleHilo, bootHilo, hiloDemo } from "./hilo.js";
 export type { TeletypeHost } from "./hilo.js";
+export { assembleLander, bootLander, isqrt, LANDER, landerDemo, landerPilot, landerStep } from "./lander.js";
+export type { LanderState, LanderStep } from "./lander.js";
 export { toSvg, toYaml, printScreen, Recorder } from "./media.js";
 export type { SvgOpts } from "./media.js";
 export { parseOct, loadOct } from "./loader.js";
