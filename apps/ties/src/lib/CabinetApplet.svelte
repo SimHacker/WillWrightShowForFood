@@ -249,7 +249,8 @@
 
 	// Raw core browser: MEM_LINES lines of MEM_COLS words, octal. Clicking a word follows its
 	// low 13 bits as an address; the trail remembers where you came from.
-	const MEM_COLS = $derived(side >= 560 ? 8 : 4);
+	const MEM_COLS = $derived(side >= 420 ? 8 : 4);
+	let memOpen = $state(false);
 	const MEM_LINES = 8;
 	const MEM_PAGE = $derived(MEM_COLS * MEM_LINES);
 	const CORE = 8192;
@@ -264,7 +265,7 @@
 	const oct = (n, width) => n.toString(8).padStart(width, '0');
 
 	function refreshMem() {
-		if (!cpu || !program?.memory) return;
+		if (!cpu || !memOpen) return;
 		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
 		memChanged = memShownBase === memBase && memWords.length === next.length ? next.map((w, i) => w !== memWords[i]) : [];
 		memWords = next;
@@ -292,6 +293,14 @@
 		if (/^[0-7]+$/.test(text)) memGo(parseInt(text, 8), true);
 		else event.currentTarget.value = oct(memBase, 5);
 	}
+
+	$effect(() => {
+		if (!memOpen) return;
+		untrack(() => {
+			memShownBase = -1;
+			refreshMem();
+		});
+	});
 
 	$effect(() => {
 		const el = memEl;
@@ -878,8 +887,10 @@
 		{#if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
-		{#if program?.memory}
-			<div class="row app mem" bind:this={memEl}>
+		<details class="row app mem" bind:open={memOpen}>
+			<summary>Memory: {CORE / 1024}K × 18-bit words, octal</summary>
+			{#if memOpen}
+			<div bind:this={memEl}>
 				<div class="mem-bar">
 					<button type="button" class="icon" aria-label="Back" title="Back" disabled={!memTrail.length} onclick={memBack}>◀</button>
 					<input
@@ -912,7 +923,8 @@
 					</div>
 				{/each}
 			</div>
-		{/if}
+			{/if}
+		</details>
 	</figcaption>
 </figure>
 
@@ -1153,6 +1165,14 @@
 		line-height: 1.25;
 		padding-top: 0.2rem;
 		padding-bottom: 0.2rem;
+	}
+	.row.mem summary {
+		cursor: pointer;
+		opacity: 0.8;
+		padding: 0.1rem 0;
+	}
+	.row.mem[open] summary {
+		margin-bottom: 0.25rem;
 	}
 	.mem-bar {
 		display: flex;

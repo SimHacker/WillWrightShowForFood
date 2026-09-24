@@ -50,7 +50,6 @@ export const PROGRAMS = [
 		demoTitle: 'Reboot and let a scripted pen draw a picture, the 1972 way',
 		switches: 0,
 		switchLabels: null,
-		memory: true,
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);
 			cpu.pc = 0o22;
