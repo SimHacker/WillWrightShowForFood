@@ -369,6 +369,35 @@ wireless and emergencies; nurses overrode alerts for 10.3% of medications charte
    annoying it.
 4. Checks that protect the nurse come before checks that accuse her.
 
+#### Learning from a wrong alert
+
+Every wrong alert, false or missed, is evidence about when the rule holds. A way to use it:
+
+- **An issue per wrong alert.** When the person reviewing an alert marks it wrong, it opens an
+  issue in a GitHub-style repository, with a branch that collects the evidence: the frames and readings around
+  the alert, the rule that fired, and the reviewer's note.
+- **Humans and agents discuss it in the issue.** An agent writes the SQL and code to query the
+  event history for related factors (ward, shift, device model, lighting, camera position, what
+  happened before and after) and posts the results; the clinicians and engineers argue about them
+  in the same thread.
+- **The rule changes by pull request.** Alert definitions live in the repository as code, so a
+  refined alert, or a new one, is a reviewed change with the evidence attached and its history
+  kept.
+
+The refinement can follow Gary Drescher's schema mechanism (*Made-Up Minds*, 1991). An alert is a
+schema: in this context, after this action, expect this result. Marginal attribution keeps
+statistics on which conditions make the result more or less likely, and spins off a narrower
+schema when a condition makes it reliable: "pump reading disagrees with order" becomes "...unless
+the pump is paused for a line change". Where no observed condition explains the failures, the
+mechanism proposes a hidden one. An LLM can propose candidate conditions from the evidence and the
+discussion, grounded in what the camera and the event history record, and the statistics decide
+which ones stay. Drescher's work is also in Leela's own lineage, through Henry Minsky's work on
+schema learning.
+
+Patient data cannot go to a public service, so in a hospital the repository, the issues and the
+agents run inside the hospital's own systems, and the evidence is de-identified before it reaches
+anyone who does not already have access to the record.
+
 #### Confusing pump screens are a design failure
 
 Many pump errors are designed in. Thimbleby and Cairns quote an FDA report of an Alaris pump
