@@ -73,6 +73,10 @@ Stop/Run, 🔄 Reset), the menu row (program, readout, speed, 🖨️ SVG,
 📷 PNG to the clipboard), then the program's rows: Demo and the
 recorder, key help, and for SYMELEC a raw core browser (octal, live;
 changed words light up; click a word to follow it as an address).
+The tube's size reserves room for the first three rows only, so it
+does not change with the program. Drag the left, right or bottom edge
+to resize (the figure stays centred); double-click an edge to fit the
+pane again.
 
 ## Record and replay
 
