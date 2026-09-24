@@ -190,19 +190,27 @@ machines that go ping. The only way in is a camera: the clinician points a phone
 device, the agent reads the display and says which button to press, and the clinician presses
 it, then points the camera at the display again so the agent can check that the device shows
 what it should before giving the next step. A mismatch stops the sequence there. The agent sees,
-  advises and checks; only the human acts. This is **Camera Angel**: Screen Angel with a camera as
-  its only input and the clinician's hand as its only output.
+  advises and checks; only the human acts.
 - Some devices also send data out over a serial or network port, usually read-only. That gives
 the agent a second channel to check its reading of the screen against, where it exists.
+
+**Camera Angel** is Screen Angel running on a phone or tablet, or on a fixed camera, with the
+camera as its input. It can be pointed at anything a person can look at: a workstation screen
+where nothing can be installed, a device with only its own display and buttons, the room, and the
+people in it, both patients and staff. It works on any of the kinds above, and on the last it is
+the only way in. Its output is advice to the person holding or watching it, and that person's hand
+does the rest.
 
 The camera case is the essay's rule with nothing left over: the agent has no verb of its own, the
 clinician does every step on the controls they were trained on, each instruction is on the
 record before the button is pressed, and the device's state after each press is on the record
 too, as the image the check was made from. The same check-after-acting applies in the other
-cases, where the agent reads the screen after its own input. It is also the case where the reading is hardest (glare,
-angle, seven-segment digits, a screen that changes as the hand moves), so it needs the same
-measurement against ground truth as the other cases: an emulated device, or a real one whose
-data port gives what the screen should show.
+cases, where the agent reads the screen after its own input. It is also the case where the
+reading is hardest (glare, angle, seven-segment digits, a screen that changes as the hand moves),
+so it needs the same measurement against ground truth as the other cases: an emulated device, or
+a real one whose data port gives what the screen should show. Pointed at people, it reads what no
+screen shows: who is in the room, what their hands are doing, whether a patient is moving or
+still.
 
 Factories have the same gap, and it is the one Don's employer, Leela AI, works in: cameras and
 machine vision watching what the machine buses and control systems cannot sense, with a neural
