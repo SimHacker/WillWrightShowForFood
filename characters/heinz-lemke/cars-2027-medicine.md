@@ -364,7 +364,9 @@ wireless and emergencies; nurses overrode alerts for 10.3% of medications charte
 
 1. It has to be faster than the workaround.
 2. It has to work every time, or it teaches people to bypass it.
-3. Its alerts have to be few and right.
+3. Its alerts have to be few and right. An alerting system that the people who receive the alerts
+   can train by example, with a person reviewing what it learns, adapts to a ward instead of
+   annoying it.
 4. Checks that protect the nurse come before checks that accuse her.
 
 #### Who holds the camera: ward and theatre
