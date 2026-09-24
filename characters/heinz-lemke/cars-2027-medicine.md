@@ -546,6 +546,28 @@ Three conditions keep it on the right side:
 - **Every patient can use it.** A patient without a phone, or too ill to use one, needs the
   television remote, the call button or a tablet the ward provides.
 
+#### Onboarding with a hello selfie
+
+The channel starts at admission. The patient gets a link by email or a QR code, and logs in on
+their own phone or tablet or on one the hospital lends, as the hospital's policy and the patient's
+preference allow. The link is tied to the patient's wristband and record, and expires, so nobody
+else joins in their name; a relative can be added if the patient agrees.
+
+Staff can introduce themselves the same way. With the consent of both, the nurse takes a hello
+selfie with the patient when they first meet, and it appears in the patient's app with her name
+and role. The patient can then recognise the people caring for them, including across shift
+changes when faces keep changing, and has a line to each of them. This builds on the "Hello, my
+name is" campaign started in 2013 by Kate Granger, a doctor who, as a patient with terminal
+cancer, noticed how many staff treating her never introduced themselves.
+
+Conditions:
+
+- **Either side can say no**, and neither the patient nor the nurse is penalised for it.
+- **The photo lives in the hospital's system**, not in a personal camera roll, and leaves with the
+  patient's stay according to the hospital's retention rules.
+- **The line goes to the role, not the person.** When the nurse goes off shift, a message to her
+  reaches whoever is caring for the patient now, and she is not on call through her own phone.
+
 #### What the medical case sharpens
 
 The medical version sharpens three things the game version already has:
