@@ -23,6 +23,7 @@ import {
 	sourceFromListing
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
+import { symelecHint } from './symelec-hints.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
 import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
@@ -66,6 +67,8 @@ function parseSymbolTsv(text) {
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
  * source() resolves to a SourceMap (source.ts) for the code and source views.
+ * hint(hover, segments) names what the pointer rests on, { title, text } or
+ * null; the applet shows the machine's own view of the stroke either way.
  * Any program can be recorded and replayed by the applet (session.ts).
  */
 export const PROGRAMS = [
@@ -79,6 +82,7 @@ export const PROGRAMS = [
 		switches: 0,
 		switchLabels: null,
 		symbols: () => parseSymbolTsv(symelecSymbols),
+		hint: symelecHint,
 		// The 1972 listing is 268 KB; fetched only when a view needs it.
 		async source() {
 			const { default: text } = await import(

@@ -189,6 +189,39 @@ kinds it has no handler for, so new inputs, such as Tiny Titan
 messages, extend the format without breaking old pages. The last
 recording per program is kept in the browser's local storage.
 
+## Hover, and the monitor
+
+Rest the mouse on anything the tube draws for 400 ms and a tooltip
+names it. Every display segment carries its fingerprints from the
+Type 340 model (`plugins/type340.ts`):
+- the display word that drew it;
+- the subroutine it was drawn inside, and where that returns (the 340
+  has one save register, so that is the whole call chain);
+- the DDS block or jump target it belongs to;
+- whether the pen can hit it;
+- the character code and glyph number;
+- the cycle and frame it was drawn in.
+
+`hoverAt` (`src/hover.ts`) groups the segments under the pointer by
+subroutine, or by block, and spells out the characters. The tooltip
+always shows that generic machine view. The cycle count moves while you
+watch. A program can add its own meaning through `hint(hover, segments)`
+in `cabinet-programs.js`. SYMELEC's hints (`symelec-hints.js`) come from
+the manual. They cover the command buttons, PIXIE, the tracking cross,
+the working area, and the ring. The ring's letters are read against the
+whole ring, so S means *start segment* in drawing mode and *switch* in
+the second symbol set.
+
+The cursor over a live tube is a ring, and a dot while the pen is down.
+
+`Monitor` (`src/monitor.ts`) is the UI layer's way into core. It
+resolves `name`, `name+off`, `name-off` or bare octal against the
+program's symbol table. It can `peek`, `peekWords` and `poke` one word
+or an array. `label` names an address. A poke is recorded as a
+`poke addr word...` session event, so a replay reproduces it. From the
+browser console:
+`document.querySelector('canvas.tube').cabinet.monitor.poke('fuel', 0o777)`.
+
 ## The rack, and the round window
 
 The applet's grown-up form is not one canvas in the article flow but a

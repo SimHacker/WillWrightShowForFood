@@ -19,6 +19,8 @@
 		printScreen,
 		disassemble,
 		Trace,
+		Monitor,
+		hoverAt,
 		MODE,
 		ST340_STOPPED,
 		ST340_LPHIT,
@@ -35,10 +37,11 @@
 	const program = $derived(programById(programId));
 
 	// A `follows:` transclusion on the page shows the article for the program running.
+	// monitor() reaches the running machine's core and symbols from the page, out of band.
 	const board = useApplets();
 	$effect(() => {
 		if (!board) return;
-		board[spec.id ?? 'cabinet'] = { program: programId, label: program?.label ?? '' };
+		board[spec.id ?? 'cabinet'] = { program: programId, label: program?.label ?? '', monitor: () => monitor };
 	});
 	// Each program opens the 340 or not (display: false); the reader can open or close it any time.
 	let displayOpen = $state(untrack(() => programById(programId)?.display !== false));
@@ -237,6 +240,7 @@
 	let t340 = null;
 	let pen = null;
 	let pressedId = null;
+	let monitor = null;
 	let raf = 0;
 	let player = null;
 	let demoCaption = $state('');
@@ -309,6 +313,8 @@
 		const frames = batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
 		drawSegments(ctx, integrate(frames), frames.length);
 		batch = [];
+		const hovered = hoverTip();
+		if (hovered) drawHover(ctx, hovered);
 		if (player || pressedId !== null) drawPen(ctx);
 	}
 
@@ -331,6 +337,98 @@
 		ctx.arc(x, y, pen.enabled ? 3.5 : 2.5, 0, 2 * Math.PI);
 		ctx.fill();
 		ctx.globalAlpha = 1;
+	}
+
+	// Hovering is the pen held off the glass: the program can't see it, the page can.
+	// After a rest, read the display list under the pointer and say what drew it.
+	const HOVER_MS = 400;
+	const TIP_ROOM = 400;
+	let rest = null;
+	let tip = $state(null);
+	let penHeld = $state(false);
+
+	function onHoverMove(event) {
+		if (pressedId !== null || event.pointerType === 'touch' || !canvasEl) return;
+		const rect = canvasEl.getBoundingClientRect();
+		const px = event.clientX - rect.left;
+		const py = event.clientY - rect.top;
+		if (rest && Math.hypot(px - rest.px, py - rest.py) < 3) return;
+		const { x, y } = gridFromEvent(event);
+		rest = { gx: x, gy: y, px, py, w: rect.width, h: rect.height, since: performance.now() };
+		tip = null;
+	}
+
+	function onHoverLeave() {
+		rest = null;
+		tip = null;
+	}
+
+	const where = (a) => {
+		const name = monitor?.label(a) ?? oct(a, 1);
+		return name === oct(a, 1) ? oct(a, 1) : `${name} (${oct(a, 1)})`;
+	};
+
+	/** The generic machine view: what the 340 knows about the stroke, shown for every hover. */
+	function machineLines(h) {
+		const s = h.hit;
+		const inside =
+			h.keyKind === 'block'
+				? `in the block entered at ${where(h.key)}`
+				: s.ret >= 0
+					? `in subroutine ${where(h.key)}, returning to ${where(s.ret)}`
+					: `in the DDS block linked at ${where(h.key)}`;
+		const lines = [`${s.kind} from display word ${where(s.addr)}`, inside];
+		if (h.text) lines.push(`spells “${h.text}”`);
+		lines.push(
+			`${h.group.length} strokes · pen ${s.pen ? 'can hit it' : 'blind'} · intensity ${s.intensity} · scale ${s.scale}`
+		);
+		lines.push(`drawn at cycle ${s.cycle.toLocaleString('en')} · frame ${s.frame.toLocaleString('en')}`);
+		return lines;
+	}
+
+	/** Refresh the tooltip from the latest frame; returns the hover to outline, or null. */
+	function hoverTip() {
+		if (!rest || pressedId !== null || !t340 || performance.now() - rest.since < HOVER_MS) {
+			if (tip && (!rest || pressedId !== null)) tip = null;
+			return null;
+		}
+		const segs = t340.lastFrame?.segments ?? t340.segments;
+		const h = hoverAt(segs, rest.gx, rest.gy, Math.max(6, (10 * 1024) / rest.w));
+		if (!h) {
+			tip = null;
+			return null;
+		}
+		let hint = null;
+		try {
+			hint = program?.hint?.(h, segs) ?? null;
+		} catch (e) {
+			console.error('cabinet hint', e);
+		}
+		tip = {
+			px: rest.px,
+			py: rest.py,
+			flipx: rest.px > rest.w - TIP_ROOM,
+			flipy: rest.py > rest.h * 0.6,
+			hint,
+			machine: machineLines(h)
+		};
+		return h;
+	}
+
+	function drawHover(ctx, h) {
+		const pad = 8;
+		ctx.save();
+		ctx.globalAlpha = 0.55;
+		ctx.strokeStyle = '#ffd27a';
+		ctx.lineWidth = 2;
+		ctx.setLineDash([6, 6]);
+		ctx.strokeRect(
+			h.box.x0 - pad,
+			1023 - h.box.y1 - pad,
+			h.box.x1 - h.box.x0 + 2 * pad,
+			h.box.y1 - h.box.y0 + 2 * pad
+		);
+		ctx.restore();
 	}
 
 	let readout = $state('');
@@ -1021,6 +1119,9 @@
 		if (!pen || !canvasEl || event.button !== 0 || player) return;
 		event.preventDefault();
 		event.stopPropagation();
+		rest = null;
+		tip = null;
+		penHeld = true;
 		try {
 			canvasEl.setPointerCapture(event.pointerId);
 		} catch {
@@ -1036,6 +1137,7 @@
 	}
 
 	function onPointerMove(event) {
+		onHoverMove(event);
 		if (!pen || event.pointerId !== pressedId) return;
 		pen.aperture = penAperture(event);
 		const { x, y } = gridFromEvent(event);
@@ -1050,6 +1152,7 @@
 	function onPointerUp(event) {
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
+		penHeld = false;
 		if (pen && press && box.cycles - press.at < PEN_MIN_CYCLES) press.lifted = true;
 		else if (pen) {
 			press = null;
@@ -1094,11 +1197,17 @@
 			devices: [t340, tty, clock, new TinyTitan(), ...extra]
 		});
 		t340.clock = () => box.cycles;
-		// Inspector handle: $0.cabinet in devtools reaches the live machine.
-		canvasEl.cabinet = { cpu, t340, pen, box, program: programId };
 		batch = [];
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
 		symbols = program.symbols?.() ?? [];
+		monitor = new Monitor({
+			memory: cpu,
+			symbols,
+			size: 8192,
+			onPoke: (addr, words) => recorder?.record(box.cycles, 'poke', addr, ...words)
+		});
+		// Inspector handle: $0.cabinet in devtools reaches the live machine; .monitor.poke('fuel', 777).
+		canvasEl.cabinet = { cpu, t340, pen, box, monitor, program: programId };
 		switches = cpu.switches;
 		// An assembled program has no source until its first boot has assembled it.
 		if (sourceFor === programId && !sourceMap) {
@@ -1143,7 +1252,8 @@
 				if (aperture) pen.aperture = Number(aperture);
 				pen.point(Number(x), Number(y));
 				pen.enabled = !!down;
-			}
+			},
+			poke: (addr, ...words) => monitor?.poke(Number(addr), words.map(Number))
 		};
 	}
 
@@ -1442,6 +1552,7 @@
 			height="1024"
 			class="tube"
 			class:live={status === 'live'}
+			class:held={penHeld}
 			tabindex="0"
 			aria-label="{program?.label ?? 'PDP-7'} display{program?.keyHelp ? `. ${program.keyHelp}` : ''}"
 			onkeydown={(e) => onKey(e, true)}
@@ -1451,7 +1562,26 @@
 			onpointermove={onPointerMove}
 			onpointerup={onPointerUp}
 			onpointercancel={onPointerUp}
+			onpointerleave={onHoverLeave}
 		></canvas>
+		{#if tip}
+			<div
+				class="tip"
+				class:flipx={tip.flipx}
+				class:flipy={tip.flipy}
+				style:left="{tip.px}px"
+				style:top="{tip.py}px"
+				role="tooltip"
+			>
+				{#if tip.hint}
+					<div class="tip-title">{tip.hint.title}</div>
+					{#if tip.hint.text}<div class="tip-text">{tip.hint.text}</div>{/if}
+				{/if}
+				<div class="tip-machine">
+					{#each tip.machine as line, i (i)}<div>{line}</div>{/each}
+				</div>
+			</div>
+		{/if}
 		{#if displayOpen && status !== 'live'}
 			{@render overlay(false)}
 		{/if}
@@ -1960,6 +2090,55 @@
 	}
 	.tube.live {
 		opacity: 1;
+		/* Pen off the glass: a ring the size of its view. On the glass: a dot, out of the way. */
+		cursor:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23000' stroke-width='3' opacity='.5'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23ffd27a' stroke-width='1.3'/%3E%3C/svg%3E")
+				12 12,
+			crosshair;
+	}
+	.tube.live.held {
+		cursor:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='6' r='2.5' fill='%23fff4d0' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E")
+				6 6,
+			crosshair;
+	}
+	.tip {
+		position: absolute;
+		z-index: 3;
+		width: max-content;
+		max-width: min(380px, 90vw);
+		margin: 18px 0 0 18px;
+		padding: 0.35rem 0.5rem;
+		pointer-events: none;
+		font: 0.7rem/1.35 ui-monospace, monospace;
+		color: #9fe8a0;
+		background: rgb(6 12 6 / 0.92);
+		border: 1px solid #3a5a3a;
+		border-radius: 3px;
+	}
+	.tip.flipx {
+		margin-left: -18px;
+		transform: translateX(-100%);
+	}
+	.tip.flipy {
+		margin-top: -18px;
+		transform: translateY(-100%);
+	}
+	.tip.flipx.flipy {
+		transform: translate(-100%, -100%);
+	}
+	.tip-title {
+		color: #ffd27a;
+		font-weight: 600;
+	}
+	.tip-text {
+		margin: 0.1rem 0 0.3rem;
+		color: #d8f0d8;
+		font-family: system-ui, sans-serif;
+		font-size: 0.75rem;
+	}
+	.tip-machine {
+		color: #6fae70;
 	}
 	.overlay {
 		position: absolute;

@@ -68,6 +68,16 @@ export type Segment = {
 	frame: number;
 	/** Innermost DJS target while drawing, or -1 — becomes the SVG <g>. */
 	subr: number;
+	/** The 347's save register: where the DJS returns. It has one, so this and subr are the whole call chain. */
+	ret: number;
+	/** Where the display last jumped (IDLA, DJP or DJS): the entry of the block this word sits in. */
+	block: number;
+	/** Light pen enabled: the 1972 program can be hit here. */
+	pen: boolean;
+	/** Type 342 code, shift included (0o100 = lower case), for char strokes; -1 otherwise. */
+	ch: number;
+	/** Characters drawn this frame before this one: the dots of one letter share it. -1 if not a char. */
+	glyph: number;
 	intensity: number;
 	scale: number;
 };
@@ -178,6 +188,10 @@ export class Type340 implements Device {
 	private readonly store: (addr: number, word: number) => void;
 	private readonly wordsPerTick: number;
 	private subr = -1;
+	private block = 0;
+	private ddsBlock = false;
+	private ch = -1;
+	private glyphs = 0;
 	private ownClock = 0;
 	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
 	private pending: PendingVector | null = null;
@@ -222,6 +236,7 @@ export class Type340 implements Device {
 		this.shift = 0;
 		this.saveFF = false;
 		this.subr = -1;
+		this.ddsBlock = false;
 		this.pending = null;
 	}
 
@@ -297,8 +312,10 @@ export class Type340 implements Device {
 
 	private setDac(addr: number): void {
 		this.dac = addr & ADDR;
+		this.block = this.dac;
 		this.mode = MODE.PARAM;
 		this.subr = -1;
+		this.ddsBlock = false;
 	}
 
 	private closeFrame(): void {
@@ -312,6 +329,7 @@ export class Type340 implements Device {
 		this.lastFrame = done;
 		this.onFrame?.(done);
 		this.segments = [];
+		this.glyphs = 0;
 		this.frame += 1;
 		this.frameStart = this.clock();
 	}
@@ -323,6 +341,7 @@ export class Type340 implements Device {
 		if (this.status & ST340_STOPPED) return;
 
 		let escape = false;
+		const inChars = this.mode === MODE.CHAR;
 		switch (this.mode) {
 			case MODE.PARAM: {
 				this.mode = GETFIELD(inst, 2, 4) as Mode;
@@ -415,9 +434,11 @@ export class Type340 implements Device {
 						this.saveFF = true;
 						this.subr = target;
 						this.dac = target & ADDR;
+						this.block = this.dac;
 						break;
 					case DJP:
 						this.dac = target & ADDR;
+						this.block = this.dac;
 						break;
 					case DDS:
 						/* Deposit "DJP <return>" into core. PIXIE reads locations
@@ -434,6 +455,7 @@ export class Type340 implements Device {
 						   here. Group the strokes under it: each lightbutton
 						   becomes its own SVG <g>. */
 						this.subr = this.asr;
+						this.ddsBlock = true;
 						break;
 				}
 				break;
@@ -446,6 +468,13 @@ export class Type340 implements Device {
 				this.dac = this.asr;
 				this.saveFF = false;
 				this.subr = -1;
+			} else if (this.ddsBlock && inChars) {
+				/* A lightbutton is DDS, its letters, and the stop code. What
+				   falls through after that (PIXIE's name into WAREA's box) is
+				   not the button. Vector escapes don't end it: the tracking
+				   cross is one DDS block drawn with VEC ES. */
+				this.subr = -1;
+				this.ddsBlock = false;
 			}
 		}
 	}
@@ -585,6 +614,7 @@ export class Type340 implements Device {
 			this.y += (this.width * s) >> 1;
 			return false;
 		}
+		this.ch = c | this.shift;
 		for (let col = 0; col < 5; col += 1) {
 			for (let row = 0; row < 7; row += 1) {
 				if ((glyph[col] ?? 0) & (2 << row)) {
@@ -600,6 +630,8 @@ export class Type340 implements Device {
 				}
 			}
 		}
+		this.ch = -1;
+		this.glyphs += 1;
 		this.x += flags === CH_BS ? -this.width * s : this.width * s;
 		if (flags === CH_D) this.y += 2 * s;
 		if (this.x > 1023) {
@@ -630,6 +662,11 @@ export class Type340 implements Device {
 			cycle: this.clock(),
 			frame: this.frame,
 			subr: this.subr,
+			ret: this.saveFF ? this.asr : -1,
+			block: this.block,
+			pen: this.lpEna,
+			ch: this.ch,
+			glyph: this.ch >= 0 ? this.glyphs : -1,
 			intensity: this.intensity,
 			scale: this.scale,
 		};
@@ -699,6 +736,15 @@ export function dist2(
 	const hx = px - (x0 + t * dx);
 	const hy = py - (y0 + t * dy);
 	return hx * hx + hy * hy;
+}
+
+const UPPER = "\u00b7ABCDEFGHIJKLMNOPQRSTUVWXYZ\u00b7\u00b7\u00b7\u00b7\u00b7 !\"#$%&'()*+,-./0123456789:;<=>?";
+const LOWER = "\u00b7abcdefghijklmnopqrstuvwxyz\u00b7\u00b7\u00b7\u00b7\u00b7 \u00b7\u00b7~\u00b7\u00b7\u2191\u2190\u2193\u2192\\[]{}\u00b7_\u00b7|\u00b7\u00b7\u00b7`^\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7\u00b7";
+
+/** The text a Type 342 code draws, shift included; "·" for the blob and the unassigned codes. */
+export function charText(code: number): string {
+	const set = code & 0o100 ? LOWER : UPPER;
+	return set[code & 0o77] ?? "\u00b7";
 }
 
 /* Type 342 special-character codes (column 5 of the glyph table). */
