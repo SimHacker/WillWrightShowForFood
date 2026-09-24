@@ -229,10 +229,10 @@ layer for perception (detection, pose, tracking), a symbolic layer that reasons 
 it produces, processing on edge boxes beside the cameras, and a stated rule that the AI advises
 and people decide. Carried to a ward, Camera Angel on a fixed camera does what the handheld one
 does without anyone holding it: it reads the pump, the monitor and the ventilator continuously,
-and sees the hand that presses the button as well as the display that changes. The symbolic layer is where the
-check becomes something a clinician can read: after this press, this display should read this
-value, and the record says whether it did. Processing beside the camera keeps the video of
-patients in the room.
+and sees the hand that presses the button as well as the display that changes. The symbolic 
+layer is where the check becomes something a clinician can read: after this press, this display 
+should read this value, and the record says whether it did. Processing beside the camera keeps 
+the video of patients in the room.
 
 The factory case carries over because nothing in it is specific to factories. A room, the
 equipment in it, the people working there, and the events among them are the same objects on a
@@ -270,6 +270,13 @@ part over four years ([study](https://pmc.ncbi.nlm.nih.gov/articles/PMC9925891/)
 told staff the recordings would not be used for personnel actions or to compare individuals,
 blurred faces, distorted voices and erased recordings after 30 days
 ([AAMC](https://www.aamc.org/news/why-every-operating-room-needs-black-box)).
+
+Leela's factory deployments already take the same measures: faces blurred and processing on the
+edge box beside the camera. A factory raises the same questions as a theatre, about who is seen,
+who sees the record and what it may be used for. Don also wrote the pixelated blur in The Sims
+that covers a naked Sim. The Sims have nothing under it, and players read the blur as saying they
+do. A blurred clinical record can mislead the same way, so what it hides and what it appears to
+show both need designing.
 
 The further down that list, the more the reading feeds a clinical decision, and the more it
 matters that every inference can be explained and checked and that people make the decision.
@@ -342,6 +349,16 @@ For Leo:
 
 - Which steps in computer-aided orthopaedic surgery did surgeons refuse to hand over?
 - May the essay quote your 14 August reply?
+- Which Weizenbaum book are you rereading, and what do your notes from 50 years ago say? Don sent
+  the thread Kent Pitman's account on 22 September
+  ([HN](https://news.ycombinator.com/item?id=39373567)): Weizenbaum's point was that a tiny program
+  could seem smart and that people would over-trust systems that only seemed smart, so making
+  DOCTOR more elaborate missed it. Does that match your reading, and your "false sense of
+  understanding"?
+- Your 2025 editorial on chest radiographs in intensive care asks for models that can answer
+  "indeterminate". Is that the remedy for being "very precisely wrong"? Could we have the slides of
+  that talk, and your copy of the 2016 CAOS review
+  ([papers](../leo-joskowicz/sources/papers/README.md))?
 - Reply to him personally about "a fool with a tool remains a fool": it has a relative in the
 X-Windows disaster notice, which Don remembers being handed out at an early X conference (X10
 era), with lines such as "power tools for power fools" and "the world's first fully modular
