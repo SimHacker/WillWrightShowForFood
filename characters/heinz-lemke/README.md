@@ -53,7 +53,8 @@ The documents in this room tell one continuous story:
   Eagleson, and friends; the
   [Facebook guessing game](sources/2026-07-24-facebook-guessing-game.md) (161 likes / 173
   comments and climbing — Heinz-readable, no Facebook required) that identified the
-  mystery listing pages; the [TTY film-loop idea](sources/2026-07-24-tty-film-loop-titles.md)
+  mystery listing pages; the [At The Controls post](sources/2023-09-25-at-the-controls-pixie-post.md)
+  (2023) whose caption the listing confirms, with RCA and Spacewar leads in its comments; the [TTY film-loop idea](sources/2026-07-24-tty-film-loop-titles.md)
   that became the diegetic terminal emulator concept.
 - **Next — resurrection.** The [emulation plan](sources/pdp7-reference/EMULATION-PLAN.md):
   SIMH lab bench, browser bench, virtual light pen, WebGPU phosphor, and a reimplemented
