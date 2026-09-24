@@ -541,10 +541,11 @@
 			>
 			<button
 				type="button"
-				class="console"
+				class="console icon"
+				aria-label="Reset"
 				disabled={status === 'booting' || demoOn}
-				title="Clear core and boot {program?.label ?? 'the program'} again"
-				onclick={onReset}>Reset</button
+				title="Reset: clear core and boot {program?.label ?? 'the program'} again"
+				onclick={onReset}>🔄</button
 			>
 		</div>
 		<div class="row menu">
@@ -574,13 +575,14 @@
 			<span class="buttons">
 				<button
 					type="button"
+					class="speed"
 					title="1× is a real PDP-7: 571,429 memory cycles a second"
 					onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
 					>{speed === Infinity ? 'max' : `${speed}×`}</button
 				>
 				<button
 					type="button"
-					class="print"
+					class="icon"
 					aria-label="Print screen"
 					title="Print screen: save the tube as SVG"
 					disabled={status !== 'live'}
@@ -716,9 +718,15 @@
 	.console {
 		margin-left: 0.35rem;
 	}
-	.print {
+	.icon {
 		padding: 0.05rem 0.35rem;
 		line-height: 1;
+	}
+	.speed {
+		width: 4ch;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
 	}
 	.program {
 		font: inherit;
