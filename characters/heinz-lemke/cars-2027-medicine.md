@@ -154,9 +154,9 @@ which is the hospital's usual case.
 
 PIXIE runs on a PDP-7, a Type 340 display and a Titan link that are written in TypeScript and run
 in a browser tab, so the machine is fully open while the program stays fixed: every word of core,
-every register, every display list, at every step. The same holds for Little Computer People or
-Mind Mirror in an Apple II emulator, and for Micropolis compiled to WebAssembly with a TypeScript
-interface.
+every register, every display list, at every step. The same holds for Little Computer People,
+Mind Mirror, or Wizardry in an Apple II emulator, and for Micropolis compiled to WebAssembly with 
+a TypeScript interface.
 
 #### The open machine already catches errors
 
