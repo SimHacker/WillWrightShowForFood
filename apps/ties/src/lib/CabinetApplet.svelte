@@ -150,9 +150,8 @@
 	const CYCLES_PER_MS = 1000 / 1.75;
 	const MAX_DT_MS = 250;
 	const MAX_CYCLES_PER_FRAME = 100_000;
-	const SPEEDS = [1, 10, Infinity];
-	let speedIndex = $state(0);
-	const speed = $derived(SPEEDS[speedIndex]);
+	const SPEEDS = [0.01, 0.1, 1, 10, Infinity];
+	let speed = $state(1);
 	let lastNow = null;
 	let owed = 0;
 
@@ -1009,22 +1008,6 @@
 				>
 			{/each}
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
-			<button
-				type="button"
-				class="console icon"
-				aria-label={paused ? 'Run' : 'Stop'}
-				disabled={status !== 'live'}
-				title={paused ? 'Run: continue from where the machine stopped' : 'Stop the processor'}
-				onclick={() => (paused = !paused)}>{paused ? '▶️' : '⏸️'}</button
-			>
-			<button
-				type="button"
-				class="console icon"
-				aria-label="Reset"
-				disabled={status === 'booting' || demoOn}
-				title="Reset: clear core and boot {program?.label ?? 'the program'} again"
-				onclick={onReset}>🔄</button
-			>
 		</div>
 		<div class="row menu">
 			<select
@@ -1050,31 +1033,6 @@
 						>{#if readoutExtra}<span title="Tracking cross x,y">{readoutExtra}</span>{/if}{/if}
 				</span>
 			{/if}
-			<span class="buttons">
-				<button
-					type="button"
-					class="speed"
-					title="1× is a real PDP-7: 571,429 memory cycles a second"
-					onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
-					>{speed === Infinity ? 'max' : `${speed}×`}</button
-				>
-				<button
-					type="button"
-					class="icon"
-					aria-label="Print screen"
-					title="Print screen: save the tube as SVG"
-					disabled={status !== 'live'}
-					onclick={onPrintScreen}>🖨️</button
-				>
-				<button
-					type="button"
-					class="icon"
-					aria-label="Copy screen"
-					title="Copy the tube to the clipboard as a PNG"
-					disabled={status !== 'live'}
-					onclick={onCopyScreen}>{shot || '📷'}</button
-				>
-			</span>
 		</div>
 		<div class="row app demo-row">
 			{#if program?.demo}
@@ -1121,7 +1079,59 @@
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
 		<details class="row app mem" bind:open={memOpen}>
-			<summary>Memory: {CORE / 1024}K × 18-bit words</summary>
+			<summary>
+				<span class="mem-size">{CORE / 1024}K × 18 bits</span>
+				<button
+					type="button"
+					class="icon"
+					aria-label={paused ? 'Run' : 'Stop'}
+					disabled={status !== 'live'}
+					title={paused ? 'Run: continue from where the machine stopped' : 'Stop the processor'}
+					onclick={() => (paused = !paused)}>{paused ? '▶️' : '⏸️'}</button
+				>
+				<span class="speeds" role="group" aria-label="Speed">
+					{#each SPEEDS as s (s)}
+						<button
+							type="button"
+							class="speed"
+							class:on={speed === s}
+							aria-pressed={speed === s}
+							title={s === Infinity
+								? 'As fast as this computer can go'
+								: s === 1
+									? '1× is a real PDP-7: 571,429 memory cycles a second'
+									: `${s}× a real PDP-7`}
+							onclick={() => (speed = s)}>{s === Infinity ? 'max' : String(s).replace(/^0/, '')}</button
+						>
+					{/each}
+				</span>
+				<button
+					type="button"
+					class="icon"
+					aria-label="Reset"
+					disabled={status === 'booting' || demoOn}
+					title="Reset: clear core and boot {program?.label ?? 'the program'} again"
+					onclick={onReset}>🔄</button
+				>
+				<span class="buttons">
+					<button
+						type="button"
+						class="icon"
+						aria-label="Print screen"
+						title="Print screen: save the tube as SVG"
+						disabled={status !== 'live'}
+						onclick={onPrintScreen}>🖨️</button
+					>
+					<button
+						type="button"
+						class="icon"
+						aria-label="Copy screen"
+						title="Copy the tube to the clipboard as a PNG"
+						disabled={status !== 'live'}
+						onclick={onCopyScreen}>{shot || '📷'}</button
+					>
+				</span>
+			</summary>
 			{#if memOpen}
 			<div bind:this={memEl}>
 				<div class="mem-bar mem-views" role="group" aria-label="View">
@@ -1371,9 +1381,6 @@
 		display: block;
 		min-height: 0;
 	}
-	.console {
-		margin-left: 0.35rem;
-	}
 	/* One box for every icon button, whatever the emoji's own metrics. */
 	.icon,
 	.speed {
@@ -1414,7 +1421,16 @@
 		white-space: normal;
 	}
 	.speed {
-		width: 4ch;
+		width: 4.2ch;
+		font-size: 0.62rem;
+	}
+	.speed.on {
+		background: #9fe8a0;
+		color: #000;
+	}
+	.speeds {
+		display: flex;
+		gap: 2px;
 	}
 	.program {
 		font: inherit;
@@ -1475,10 +1491,32 @@
 		padding-top: 0.2rem;
 		padding-bottom: 0.2rem;
 	}
+	/* A flex summary loses its native marker, so it draws its own. */
 	.row.mem summary {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		list-style: none;
 		cursor: pointer;
-		opacity: 0.8;
 		padding: 0.1rem 0;
+	}
+	.row.mem summary::-webkit-details-marker {
+		display: none;
+	}
+	.row.mem summary::before {
+		content: '▸';
+		width: 1ch;
+		opacity: 0.8;
+	}
+	.row.mem[open] summary::before {
+		content: '▾';
+	}
+	.mem-size {
+		opacity: 0.8;
+		white-space: nowrap;
+	}
+	.row.mem summary .buttons {
+		margin-left: auto;
 	}
 	.row.mem[open] summary {
 		margin-bottom: 0.25rem;

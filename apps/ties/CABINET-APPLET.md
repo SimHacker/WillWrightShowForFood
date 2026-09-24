@@ -68,11 +68,13 @@ the right. A held key holds its switch down, which is DUEL's active
 state. Text is inlined with `?raw` and tape with `?url&inline`, so the
 offline bundle carries every program.
 
-The rows under the tube keep one order: the console (switches, ⏸️/▶️
-Stop/Run, 🔄 Reset), the menu row (program, readout, speed, 🖨️ SVG,
-📷 PNG to the clipboard), then the program's rows: Demo and the
-recorder, key help, and a closed Memory drawer: a core browser, live
-while open, with four views. **octal** is the words, changed ones lit.
+The rows under the tube keep one order: the console switches, the menu
+row (program, readout), then the program's rows: Demo and the
+recorder, key help, and the Memory drawer. The drawer's header is the
+machine's controls and stays visible when the drawer is closed:
+⏸️/▶️ Stop/Run, speeds .01 .1 1 10 max (1 is a real PDP-7), 🔄 Reset,
+and at the right the outputs, 🖨️ SVG and 📷 PNG to the clipboard.
+Opened, it is a core browser, live while open, with four views. **octal** is the words, changed ones lit.
 **code** is a word a line, disassembled with symbols (`disasm.ts`),
 beside the source line that assembled it; ≠ marks a word that no
 longer holds what the source assembled (patches, variables, JMS return
