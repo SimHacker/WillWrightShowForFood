@@ -104,6 +104,20 @@ does not care.
 
 Every drawbridge becomes a lottery.
 
+### Boats through the bridge
+
+The deck is up, everyone on both banks is stopped, and the thing to do is photograph the boats
+going through. Each opening gets a shared album: the photos taken there during that wait, from
+both sides of the canal, by whoever chose to share them. Riders who waited together at the same
+bridge see each other's boats.
+
+A photo shared at a bridge is a clipping
+([clipping service](https://github.com/SimHacker/moollm/blob/main/designs/editing-history/CLIPPING-SERVICE.md)),
+kept under the rider's name and resurfaced the next time they stop there. The album is also
+evidence the bridge was up at that time, and an opening-hours layer may take it as a claim with
+source, date and confidence. The lottery still does not read it: the coin draws on `p`, not on
+photos. Faces on deck follow [`privacy.md`](privacy.md), same as anywhere else.
+
 ## Gathering is the pastime
 
 A ferry slip, a bus stop, a tram island — the wait *is* the activity.
