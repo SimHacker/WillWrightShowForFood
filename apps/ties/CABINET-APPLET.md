@@ -72,9 +72,14 @@ The rows under the tube keep one order: the console switches, the menu
 row (program, readout), then the program's rows: Demo and the
 recorder, key help, and the Memory drawer. The drawer's header is the
 machine's controls and stays visible when the drawer is closed:
-⏸️/▶️ Stop/Run, speeds .01 .1 1 10 max (1 is a real PDP-7), 🔄 Reset,
-and at the right the outputs, 🖨️ SVG and 📷 PNG to the clipboard.
-Opened, it is a core browser, live while open, with four views. **octal** is the words, changed ones lit.
+⏸️/▶️ Stop/Run, ⏭️ Step (stop, then one instruction), speeds .01 .1
+1 10 max (1 is a real PDP-7), 🔄 Reset, and at the right the outputs,
+🖨️ SVG and 📷 PNG to the clipboard. Reset is pulled, not clicked: drag
+it down its track and let go at the bottom, or press arrow down four
+times; letting go early puts it back. Opened, the drawer is a core
+browser, live while open, with four views. 👉 marks the PC in code,
+source and octal, and the 👉 PC button in the view bar brings it back
+into view; a step that leaves the page does the same. **octal** is the words, changed ones lit.
 **code** is a word a line, disassembled with symbols (`disasm.ts`),
 beside the source line that assembled it; ≠ marks a word that no
 longer holds what the source assembled (patches, variables, JMS return

@@ -418,6 +418,72 @@
 		refreshMem();
 	}
 
+	function pcInView() {
+		if (memView === 'source') {
+			const l = srcLineFor(pcNow);
+			return l >= srcTop && l < srcTop + MEM_LINES;
+		}
+		return pcNow >= memBase && pcNow < memBase + MEM_PAGE;
+	}
+
+	/** One instruction, then stop. The PC is brought into view if the step left it. */
+	function onStep() {
+		if (!box || status !== 'live') return;
+		paused = true;
+		try {
+			box.step();
+			fault = null;
+		} catch (e) {
+			fault = e instanceof Error ? e.message : String(e);
+		}
+		switches = cpu.switches;
+		drawFrame();
+		refreshMem();
+		if (memOpen && memView !== 'trace' && !pcInView()) showPc();
+	}
+
+	function showPc() {
+		if (memView === 'trace') memView = 'code';
+		if (memView === 'source') srcTop = Math.max(0, srcLineFor(pcNow) - 2);
+		else {
+			const a = (pcNow - (memView === 'code' ? 2 : 0) + CORE) % CORE;
+			memBase = a - (a % MEM_COLS);
+		}
+		refreshMem();
+	}
+
+	// Reset is pulled, not clicked: drag the button down its track and let go at the bottom.
+	// Letting go early, or leaving, puts it back.
+	const RESET_PULL = 44;
+	let resetPull = $state(-1);
+	let resetFrom = 0;
+	function onResetDown(e) {
+		if (e.button !== 0) return;
+		e.preventDefault();
+		try {
+			e.currentTarget.setPointerCapture(e.pointerId);
+		} catch {
+			// no live pointer to capture; moves still arrive while over the button
+		}
+		resetFrom = e.clientY;
+		resetPull = 0;
+	}
+	function onResetMove(e) {
+		if (resetPull >= 0) resetPull = Math.max(0, Math.min(RESET_PULL, e.clientY - resetFrom));
+	}
+	function onResetUp() {
+		const go = resetPull >= RESET_PULL;
+		resetPull = -1;
+		if (go) onReset();
+	}
+	function onResetKey(e) {
+		if (e.key === 'Escape') resetPull = -1;
+		if (e.key !== 'ArrowDown') return;
+		e.preventDefault();
+		resetPull = Math.min(RESET_PULL, Math.max(0, resetPull) + RESET_PULL / 4);
+		if (resetPull >= RESET_PULL) setTimeout(onResetUp, 150);
+	}
+
 	/** Scroll by whole lines in the current view; leaving the PC stops following it. */
 	function memScroll(n) {
 		if (!n) return;
@@ -1041,7 +1107,7 @@
 					class="demo"
 					disabled={status !== 'live' || (demoOn ? false : recording)}
 					title={demoOn ? 'Stop' : program.demoTitle}
-					onclick={() => onDemo(false)}>{demoOn ? 'Stop' : 'Demo'}</button
+					onclick={() => onDemo(false)}>{demoOn ? 'STOP' : 'DEMO'}</button
 				>
 			{/if}
 			<button
@@ -1080,7 +1146,7 @@
 		{/if}
 		<details class="row app mem" bind:open={memOpen}>
 			<summary>
-				<span class="mem-size">{CORE / 1024}K × 18 bits</span>
+				<span class="mem-size">MEMORY {CORE / 1024}K × 18 BITS</span>
 				<button
 					type="button"
 					class="icon"
@@ -1088,6 +1154,14 @@
 					disabled={status !== 'live'}
 					title={paused ? 'Run: continue from where the machine stopped' : 'Stop the processor'}
 					onclick={() => (paused = !paused)}>{paused ? '▶️' : '⏸️'}</button
+				>
+				<button
+					type="button"
+					class="icon"
+					aria-label="Step"
+					disabled={status !== 'live' || demoOn}
+					title="Step: stop, then execute one instruction"
+					onclick={onStep}>⏭️</button
 				>
 				<span class="speeds" role="group" aria-label="Speed">
 					{#each SPEEDS as s (s)}
@@ -1105,14 +1179,27 @@
 						>
 					{/each}
 				</span>
-				<button
-					type="button"
-					class="icon"
-					aria-label="Reset"
-					disabled={status === 'booting' || demoOn}
-					title="Reset: clear core and boot {program?.label ?? 'the program'} again"
-					onclick={onReset}>🔄</button
-				>
+				<span class="reset-pull">
+					{#if resetPull >= 0}
+						<span class="reset-track" style:height="{RESET_PULL}px" aria-hidden="true"
+							><span class="reset-hint" class:armed={resetPull >= RESET_PULL}>RESET</span></span
+						>
+					{/if}
+					<button
+						type="button"
+						class="icon"
+						aria-label="Reset: pull down to confirm"
+						disabled={status === 'booting' || demoOn}
+						title="Reset: drag down and let go to clear core and boot {program?.label ?? 'the program'} again. Keys: arrow down."
+						style:transform={resetPull > 0 ? `translateY(${resetPull}px)` : undefined}
+						onpointerdown={onResetDown}
+						onpointermove={onResetMove}
+						onpointerup={onResetUp}
+						onpointercancel={() => (resetPull = -1)}
+						onkeydown={onResetKey}
+						onblur={() => (resetPull = -1)}>🔄</button
+					>
+				</span>
 				<span class="buttons">
 					<button
 						type="button"
@@ -1149,7 +1236,9 @@
 							refreshMem();
 						}}>{memView === 'trace' ? 'live' : 'follow PC'}</button
 					>
-					<span class="mem-hint">PC {pcNow >= 0 ? `${oct(pcNow, 5)} ${symbolic(pcNow)}` : ''}</span>
+					{#if pcNow >= 0}
+						<button type="button" class="mem-view mem-pc-go" title="Show the PC" onclick={showPc}>👉 PC {oct(pcNow, 5)} {symbolic(pcNow)}</button>
+					{/if}
 				</div>
 				<div class="mem-bar">
 					<button type="button" class="icon" aria-label="Back" title="Back" disabled={!memTrail.length} onclick={memBack}>◀</button>
@@ -1181,6 +1270,7 @@
 						{@const src = si === undefined ? null : sourceMap.lines[si]}
 						{@const differs = src?.word != null && src.word !== w}
 						<div class="mem-line code" class:pc={at === pcNow} class:focus={at === memFocus}>
+							<span class="mem-pc" aria-label={at === pcNow ? 'PC' : undefined}>{at === pcNow ? '👉' : ''}</span>
 							<span class="mem-at">{oct(at, 5)}</span>
 							<span class="mem-label">{byAddr.get(at)?.[0] ?? ''}</span>
 							<span class="mem-oct" class:changed={memChanged[line]}>{oct(w, 6)}</span>
@@ -1200,7 +1290,9 @@
 					{#if sourceMap}
 						{#each { length: MEM_LINES } as _, line (line)}
 							{@const l = sourceMap.lines[srcTop + line]}
-							<div class="mem-line source" class:pc={l?.addr != null && l.addr === pcNow} class:focus={l?.addr != null && l.addr === memFocus}>
+							{@const isPc = l?.addr != null && l.addr === pcNow}
+							<div class="mem-line source" class:pc={isPc} class:focus={l?.addr != null && l.addr === memFocus}>
+								<span class="mem-pc" aria-label={isPc ? 'PC' : undefined}>{isPc ? '👉' : ''}</span>
 								<span class="mem-at">{l?.addr != null ? oct(l.addr, 5) : ''}</span>
 								<span class="mem-src" title={l?.text}>{l?.text ?? ''}</span>
 							</div>
@@ -1222,7 +1314,9 @@
 				{:else}
 				{#each { length: MEM_LINES } as _, line (line)}
 					{@const at = (memBase + line * MEM_COLS) % CORE}
+					{@const hasPc = ((pcNow - at + CORE) % CORE) < MEM_COLS}
 					<div class="mem-line">
+						<span class="mem-pc" aria-label={hasPc ? 'PC on this line' : undefined}>{hasPc ? '👉' : ''}</span>
 						<span class="mem-at">{oct(at, 5)}</span>
 						{#each { length: MEM_COLS } as _, col (col)}
 							{@const i = line * MEM_COLS + col}
@@ -1432,6 +1526,42 @@
 		display: flex;
 		gap: 2px;
 	}
+	.reset-pull {
+		position: relative;
+		display: inline-flex;
+	}
+	.reset-pull button {
+		position: relative;
+		z-index: 3;
+		touch-action: none;
+		background: #000;
+	}
+	/* The track hangs below the button, over whatever is under the header. */
+	.reset-track {
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: -2px;
+		right: -2px;
+		box-sizing: content-box;
+		padding-bottom: 1.4rem;
+		border: 1px dashed #9fe8a0;
+		background: #000;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+	}
+	.reset-hint {
+		margin-top: 1.6rem;
+		font-size: 0.5rem;
+		opacity: 0.6;
+		padding: 0 2px;
+	}
+	.reset-hint.armed {
+		opacity: 1;
+		color: #000;
+		background: #f66;
+	}
 	.program {
 		font: inherit;
 		font-size: 0.62rem;
@@ -1549,6 +1679,21 @@
 	.mem-at {
 		opacity: 0.5;
 		margin-right: 0.4ch;
+	}
+	/* Every line keeps the gutter, so the columns hold still as the PC moves. */
+	.mem-pc {
+		flex: 0 0 2.2ch;
+		margin-right: -0.4ch;
+		text-align: center;
+		font-size: 0.9em;
+	}
+	.mem-views .mem-pc-go {
+		margin-left: 0.5em;
+		border-color: #6a6a20;
+		color: #ffe680;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.mem-word {
 		all: unset;
