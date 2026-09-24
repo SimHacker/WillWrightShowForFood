@@ -2111,9 +2111,10 @@
 		padding: 0.35rem 0.5rem;
 		pointer-events: none;
 		font: 0.7rem/1.35 ui-monospace, monospace;
-		color: #9fe8a0;
-		background: rgb(6 12 6 / 0.92);
-		border: 1px solid #3a5a3a;
+		/* The cursor ring's amber, not phosphor green: this is the modern overlay, not PIXIE. */
+		color: #ffd27a;
+		background: rgb(22 14 2 / 0.94);
+		border: 1px solid #8a6424;
 		border-radius: 3px;
 	}
 	.tip.flipx {
@@ -2133,12 +2134,12 @@
 	}
 	.tip-text {
 		margin: 0.1rem 0 0.3rem;
-		color: #d8f0d8;
+		color: #fff0cc;
 		font-family: system-ui, sans-serif;
 		font-size: 0.75rem;
 	}
 	.tip-machine {
-		color: #6fae70;
+		color: #c9a15a;
 	}
 	.overlay {
 		position: absolute;
