@@ -1,0 +1,5 @@
+4
+PUT
+STACK
+PLACE
+SET

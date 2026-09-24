@@ -1,0 +1,35 @@
+			 CogSci Courseware Project
+			 Philosophy Department
+			 University of Maryland
+ 		         College Park, MD  20742
+
+
+
+
+			Parallel Computation Modeller
+
+
+	THERMO is a "thermodynamic computation" simulator for a series of
+stochastic energy-minimization search algorithms.  On a set of progressively
+more intractable "problem terrains," users can implement and refine: 
+(i) depth vs. breadth-first search;  (ii) global vs local minima
+discrimination;  and, finally, (iii) simulated annealing "temperature-schedule"
+algorithms.  
+
+	Equipment:  THERMO requires full IBM compatibility with either an EGA
+or VGA color graphics card and monitor.  (Performs best on 80286-based PCs 
+and up.) 
+
+	THERMO requires no special installation procedures, and is invoked by
+typing the command THERMO at the DOS prompt.  (For higher speed, with 
+mathematics co-processor, use THERMOM.)  
+
+	For further information, see HELP in the program.
+
+-----------------------------------------------------------------------------
+
+        THERMO MAY RUN TOO FAST ON PENTIUM OR HIGHER PROCESSORS:
+TO SLOW DOWN SEARCH PARTICLES FOR MODES (ii) AND (iii) ABOVE, JUST GO TO
+"RUN TIME OPTIONS MENU" AND SET "SNAIL TRAIL" TO MAX LENGTH OF 99 (NOT 0).  
+
+

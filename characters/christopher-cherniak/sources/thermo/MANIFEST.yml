@@ -1,0 +1,8 @@
+# thermo.exe: a WinZip self-extractor, 147586 bytes, sha256 a6f4cf931629f37314c713cebf19185e7302cee42db653a6928117fc705c64f4.
+# Fetched 2026-09-24 from https://web.archive.org/web/2007id_/http://www.glue.umd.edu/~cherniak/philcomp/thermo.exe
+# Dates are the DOS timestamps inside the zip. kept: true = byte-identical copy in disk/.
+# Executables, BGI drivers and the stroked font are identified by hash and not committed.
+files:
+  - { name: THERMO.EXE, bytes: 175936, date: "1991-05-21 10:31", kept: false, sha256: 6a62ede2d24eeee123a6c0a327779d77bf54dea4040e3cb6e1f22e2bb0534525 }
+  - { name: THERMOM.EXE, bytes: 168144, date: "1991-05-21 10:45", kept: false, sha256: bd695bb78c94408879816ed154c19d4c4b053bb30362c3f20b41cd44b943ee20 }
+  - { name: readme.thm, bytes: 1258, date: "1999-11-08 22:17", kept: true, sha256: 2b1ad8f9d7f999ae7bfcec776ed87b373e990caa71e87e5995aedc8906b12203 }

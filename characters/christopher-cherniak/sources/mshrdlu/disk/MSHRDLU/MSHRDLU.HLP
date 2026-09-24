@@ -1,0 +1,133 @@
+                    M i c r o  S   H   R   D   L   U
+                           Preliminary Version
+
+
+  MicroSHRDLU is a program for manipulating an onscreen color 3-D
+blocks-world; it is capable of limited natural language spatial-vocabulary
+"conversation."  It provides a hands-on environment for exploring some
+of the prospects and limits of artificial intelligence.  You can run
+"laboratory experiments" such as variations on the Turing Test for
+intelligence (e.g., "What are some of the least/most intelligent
+behaviors of the program?  Why?").
+
+
+(Requires EGA or VGA and 512K RAM.  Runs faster when installed on hard disk.)
+
+            MicroSHRDLU was written in Borland Turbo Pascal 5.5
+
+______________________________________________________________________________
+
+ To get a hardcopy of this help listing, type "PRINT MSHRDLU.HLP" from DOS.
+ For a listing of the rewrite rules, type "PRINT MSHRDLU.GRA" from DOS.
+______________________________________________________________________________
+
+C O M M A N D S :
+
+
+  GENERAL:
+  --------
+
+  PICK UP, GRASP       Pick up a block and hold it. [ex.- GRASP THE BIG
+                         GREEN PYRAMID.]
+
+  PUT DOWN             Drop an object that is being held. [ex. - PUT THE
+                         SMALL RED CUBE DOWN. or PUT DOWN THE LARGE GREEN
+                         BLOCK.]
+
+  MOVE, PUT, STACK     Place a block on another block, on the floor,
+                         or in a box. [ex. - MOVE THE BIG RED CUBE TO
+                         THE SMALL GREEN CUBE. or PUT THE BIG GREEN
+                         PYRAMID IN THE BOX.]
+
+  CLEAR THE TOP OF     Clean off a block so other blocks may be stacked
+                         on it.  [ex. - CLEAR THE TOP OF THE BIG RED CUBE.
+                         or CLEAR A LARGE CUBE.]
+
+
+
+  BUILD, MAKE          Runs a built-in script.  The available scripts
+                         are:  TOWN, TOWER, and SLINKY. [ex. - MAKE A
+                         TOWER. or BUILD A TOWN.]
+
+  AGAIN                Repeat the last action.
+                         [ex. - AGAIN.]
+
+  EMPTY, FILL          Empty or fill the box.  [ex. - EMPTY THE BOX. or
+                         FILL THE BOX.]
+
+  WHERE                Inquire about the position of a block.  [ex. - WHERE
+                         IS THE BIG RED CUBE?]
+
+  BETWEENNESS:
+  ------------
+
+  BETWEEN              [ex. - PUT (block1) BETWEEN (block2) AND (block3)
+
+  NEXT TO, BESIDE, NEAR
+
+  IN FRONT OF, IN BACK OF, BEHIND, TO THE RIGHT OF, TO THE LEFT OF
+
+
+  HOUSEKEEPING:
+  -------------
+
+  DOLLY [LEFT, RIGHT,  Move the "camera" left, right, up, down, or center.
+    UP, DOWN, CENTER]    (Repeatable several times in each direction.)
+                         [ex. - DOLLY LEFT.]
+                       Or, just use arrow keys.
+
+  CLEAR                Clears all text from the screen.
+                       Or, just use DEL key.
+
+  RESET                Restores the blocks to the positions they had at
+                       the beginning of the program.
+
+  EXIT, QUIT, BYE      Leave MicroSHRDLU and return to DOS.
+
+  HELP                 Displays these screens.
+
+
+
+
+
+  "MIND-READING":
+  ---------------
+
+  TRACE [ON,OFF]       Set planner tracing on or off. [ex. - TRACE ON.]
+                       Block numbers used in trace mode are as follows:
+                         1 = big green cube
+                         2 = small green cube
+                         3 = big red cube
+                         4 = small red cube
+                         5 = big green pyramid
+                         6 = small green pyramid
+                         7 = big red pyramid
+                         8 = small red pyramid
+
+  HOW                  Displays the plan steps for last action only.
+
+  PTRACE [ON,OFF]      Parser trace mode toggle.  Displays recursive
+                         descent parse of current sentence.
+
+
+______________________________________________________________________________
+
+
+
+
+  For information on the original SHRDLU program, see T. Winograd,
+  UNDERSTANDING NATURAL LANGUAGE (1972), especially Chapter 1.
+
+  For current information about syntactic parsing, see J. Allen,
+  NATURAL LANGUAGE UNDERSTANDING (1987), Chapters 2-6.
+
+  "A program is never completed, only released."
+  Bug reports, comments, and suggestions gratefully received:
+               Christopher Cherniak
+               Philosophy Department
+               University of Maryland
+               College Park, MD 20742
+
+  ( For bug reports, please give specific example of eliciting condition. )
+  end
+

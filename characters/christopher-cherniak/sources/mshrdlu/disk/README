@@ -1,0 +1,28 @@
+			  Cogsci Courseware Project
+                          Philosophy Department
+                          University of Maryland
+                          College Park, MD 20742
+
+
+
+
+			Microcomputer Blocks-World
+
+MicroSHRDLU is a program for "robotically" manipulating an on-screen 3-D color
+micro-world consisting of a tabletop and some blocks.  It is capable of 
+natural-language spatial-vocabulary "understanding"; the user communicates 
+English commands and queries via keyboard.  The software has "mind-reading" 
+capacity for display of its internal parsing and planning processes.  
+Provides a hands-on environment for exploring prospects and limits for AI.
+
+Equipment:  MicroSHRDLU requires full IBM compatibility with either EGA or VGA
+color graphics card and monitor.
+
+
+MicroSHRDLU requires no special installation procedures, and is invoked by
+typing the command MS at the DOS prompt.
+
+
+For further information, see HELP in the program.
+
+	

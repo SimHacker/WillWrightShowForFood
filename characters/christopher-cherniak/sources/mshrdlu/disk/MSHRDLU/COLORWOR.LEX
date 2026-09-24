@@ -1,0 +1,6 @@
+4
+RED
+GREEN
+YELLOW
+ORANGE
+
