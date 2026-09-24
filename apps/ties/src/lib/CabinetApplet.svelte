@@ -1109,7 +1109,7 @@
 	}
 	.program {
 		font: inherit;
-		font-size: 0.72rem;
+		font-size: 0.62rem;
 		max-width: 14rem;
 		min-width: 5rem;
 		flex: 0 1 auto;
