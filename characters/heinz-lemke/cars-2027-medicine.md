@@ -420,6 +420,16 @@ GitLab, Gitea and Forgejo can run on the hospital's own servers or edge boxes. W
 keeping from GitHub is the social side: issues, threaded discussion, mentions, reactions, and
 people following what concerns them.
 
+The automation comes with it. Delivery drivers already photograph each package on the doorstep as
+proof of delivery, and nobody thinks of it as surveillance; a nurse's photograph of the pump after
+programming is the same kind of act. Posted to an issue, the photograph triggers workflows, the way
+GitHub Actions run when an issue is opened or a comment is added: bots read the display, check it
+against the order, attach the evidence and their inferences to the thread, label and assign the
+issue, and open the follow-up tasks. Gitea and Forgejo run workflows in the same format, and GitLab
+has its own pipelines, with the runners on the hospital's edge boxes so the photographs never leave
+the building. The workflows themselves live in the repository and change by reviewed pull request,
+like the alert rules.
+
 The same structure serves patients. A patient photographs a rash, a wound or a pimple and opens
 an issue; the nurse or dermatologist answers in the thread, and the record of the exchange stays
 with the chart. Sending photographs for a clinician to assess later is already established as
