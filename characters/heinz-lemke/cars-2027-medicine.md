@@ -190,7 +190,8 @@ machines that go ping. The only way in is a camera: the clinician points a phone
 device, the agent reads the display and says which button to press, and the clinician presses
 it, then points the camera at the display again so the agent can check that the device shows
 what it should before giving the next step. A mismatch stops the sequence there. The agent sees,
-advises and checks; only the human acts.
+  advises and checks; only the human acts. This is **Camera Angel**: Screen Angel with a camera as
+  its only input and the clinician's hand as its only output.
 - Some devices also send data out over a serial or network port, usually read-only. That gives
 the agent a second channel to check its reading of the screen against, where it exists.
 
@@ -207,8 +208,8 @@ Factories have the same gap, and it is the one Don's employer, Leela AI, works i
 machine vision watching what the machine buses and control systems cannot sense, with a neural
 layer for perception (detection, pose, tracking), a symbolic layer that reasons over the events
 it produces, processing on edge boxes beside the cameras, and a stated rule that the AI advises
-and people decide. Carried to a ward, a fixed camera does what the handheld one does without
-anyone holding it: it reads the pump, the monitor and the ventilator continuously, and sees the
+and people decide. Carried to a ward, Camera Angel on a fixed camera does what the handheld one
+does without anyone holding it: it reads the pump, the monitor and the ventilator continuously, and sees the
 hand that presses the button as well as the display that changes. The symbolic layer is where the
 check becomes something a clinician can read: after this press, this display should read this
 value, and the record says whether it did. Processing beside the camera keeps the video of
