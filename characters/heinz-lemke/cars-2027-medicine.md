@@ -396,7 +396,17 @@ schema learning.
 
 Patient data cannot go to a public service, so in a hospital the repository, the issues and the
 agents run inside the hospital's own systems, and the evidence is de-identified before it reaches
-anyone who does not already have access to the record.
+anyone who does not already have access to the record. Self-hosted open-source forges such as
+GitLab, Gitea and Forgejo can run on the hospital's own servers or edge boxes. What is worth
+keeping from GitHub is the social side: issues, threaded discussion, mentions, reactions, and
+people following what concerns them.
+
+The same structure serves patients. A patient photographs a rash, a wound or a pimple and opens
+an issue; the nurse or dermatologist answers in the thread, and the record of the exchange stays
+with the chart. Sending photographs for a clinician to assess later is already established as
+store-and-forward teledermatology. The patient never sees a forge: the front is the bedside or
+phone app of the thanks channel described below, each patient sees only their own issues, and staff see
+what their role allows.
 
 #### Confusing pump screens are a design failure
 
