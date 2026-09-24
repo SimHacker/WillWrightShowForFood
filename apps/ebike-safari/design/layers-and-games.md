@@ -47,6 +47,7 @@ layers and games share data without sharing code.
 | [Bongo Bingo](bongo-bingo.md) | game | `STOP` events, your photos, amsterdank's list of coffeeshops | its own cards: seeds, marks, bingos |
 | [Story layer](skeleton/story-layer.md) | story | the ride's event log | narration, never new geometry |
 | [Exposure](exposure-pac-man.md) | measurement | the snapped trace | what passed you on the left and right |
+| [Clippings](https://github.com/SimHacker/moollm/blob/main/designs/editing-history/CLIPPING-SERVICE.md) | personal layer | `STOP` events, photos and voice notes at stops | your clippings keyed on place, resurfaced when you stop there again |
 
 **An information layer** is a register of places that other tenants can read. Amsterdank is the
 first one: a coffeeshop register that keeps disagreements instead of averaging them away, keyed on
