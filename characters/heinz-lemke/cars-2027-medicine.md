@@ -96,6 +96,11 @@ An agent that is to help there has two choices. It can wait for every vendor to 
 or it can work through the screens that already exist, the way the people do. The second is what
 Screen Angel does with a game from 2000, and it has a research lineage:
 
+- **Triggers** (Richard Potter, HCIL, University of Maryland): a macro system that reads the
+  screen's pixels to find the data and the controls it acts on, for applications that gave a
+  macro no other way in. "Triggers: Guiding Automation with Pixels to Achieve Data Access",
+  chapter 17 of Allen Cypher (ed.), *Watch What I Do: Programming by Demonstration*, MIT Press,
+  1993; Potter's "Just-in-time Programming" is chapter 27 of the same book.
 - **Prefab** (Morgan Dixon and James Fogarty, University of Washington): pixel-based reverse
   engineering of interface structure. From screen pixels alone it recovers widgets and hierarchy,
   then adds behaviour the application never had (target-aware pointing, the bubble cursor,
