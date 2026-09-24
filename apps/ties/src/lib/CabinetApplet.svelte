@@ -1424,7 +1424,7 @@
 				<div class="reg-line">
 					<span class="reg-dev">CPU</span>
 					<button type="button" class="reg" title="Program counter. Show it in memory." onclick={() => openMemAt(regs.pc)}
-						>PC <b>{oct(regs.pc, 5)}</b>{#if symbolic(regs.pc)}&nbsp;{symbolic(regs.pc)}{/if}</button
+						>PC <b>{oct(regs.pc, 5)}</b> <span class="reg-sym">{symbolic(regs.pc)}</span></button
 					>
 					<button type="button" class="reg" title="Accumulator. Go to the address in its low 13 bits." onclick={() => openMemAt(regs.ac & 0o17777)}
 						>AC <b>{oct(regs.ac, 6)}</b></button
@@ -1435,21 +1435,21 @@
 					<span class="lamp" class:on={regs.ion} title="Interrupts enabled">ION</span>
 					<span class="lamp" class:on={regs.irq} title="A device is asking for an interrupt">IRQ</span>
 					<span class="lamp red" class:on={regs.halted} title="Halted">HLT</span>
-					<span class="reg dim" title="Memory cycles since boot">{regs.cycles.toLocaleString()}</span>
+					<span class="reg dim reg-count" title="Memory cycles since boot">{regs.cycles.toLocaleString()}</span>
 				</div>
 				<div class="reg-line">
 					<span class="reg-dev">340</span>
 					<button type="button" class="reg" title="Display address counter: the display's own PC. Show it in memory, as octal." onclick={() => openMemAt(regs.dac, 'octal')}
-						>DAC <b>{oct(regs.dac, 5)}</b>{#if symbolic(regs.dac)}&nbsp;{symbolic(regs.dac)}{/if}</button
+						>DAC <b>{oct(regs.dac, 5)}</b> <span class="reg-sym">{symbolic(regs.dac)}</span></button
 					>
-					<span class="reg" title="Display mode: how the next word is decoded"><b>{regs.mode}</b></span>
+					<span class="reg reg-mode" title="Display mode: how the next word is decoded"><b>{regs.mode}</b></span>
 					<span class="reg" title="Beam position">X <b>{oct(regs.x, 4)}</b> Y <b>{oct(regs.y, 4)}</b></span>
 					<span class="reg" title="Scale and intensity">S <b>{regs.scale}</b> I <b>{regs.intensity}</b></span>
 					<span class="lamp" class:on={regs.running} title="The display is cycling through its file">RUN</span>
 					<span class="lamp" class:on={regs.lp} title="Light pen enabled">LP</span>
 					<span class="lamp" class:on={regs.hit} title="Light pen hit">HIT</span>
 					<span class="lamp" class:on={regs.edge} title="The beam ran off the grid">EDGE</span>
-					<span class="reg dim" title="Refresh frames drawn">frame {regs.frame.toLocaleString()}</span>
+					<span class="reg dim" title="Refresh frames drawn">frame <span class="reg-count short">{regs.frame.toLocaleString()}</span></span>
 				</div>
 				<div class="reg-line">
 					<span class="reg-dev">TTY</span>
@@ -1945,6 +1945,30 @@
 	}
 	.reg.dim {
 		opacity: 0.45;
+	}
+	/* Fixed widths for every field whose text changes, so a line always wraps in the same place. */
+	.reg-sym,
+	.reg-mode,
+	.reg-count {
+		display: inline-block;
+		vertical-align: bottom;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.reg-sym {
+		width: 10ch;
+	}
+	.reg-mode {
+		width: 6ch;
+	}
+	.reg-count {
+		width: 13ch;
+		text-align: right;
+	}
+	.reg-count.short {
+		width: 9ch;
+		text-align: left;
 	}
 	button.reg {
 		all: unset;
