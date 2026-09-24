@@ -161,6 +161,16 @@ How far an agent can reach depends on the machine, and hospitals have every kind
 - **A stock Windows or macOS workstation**: the record client, the PACS viewer, many planning
   stations. Screen Angel works as it does on The Sims: accessibility tree, screen capture,
   synthetic input. Clinical workstations are often locked down so nothing can be installed.
+- **A tablet or phone**: iPads, Android tablets and phones at the bedside and on rounds, usually
+  managed by the hospital. Android is the more open: an accessibility service can read another
+  app's view tree and perform gestures in it, and screen capture is a standard API. iOS lets no
+  third-party app read or drive another. Apple's new Siri (September 2026) has on-screen awareness
+  and acts in apps, but only through what each app's developer exposes with App Intents and view
+  annotations, routed by Apple's own orchestrator; apps "don't drive each other directly"
+  ([WWDC26](https://developer.apple.com/videos/play/wwdc2026/8011/)). That helps where a clinical
+  app's vendor adopts it, which is the wait-for-the-vendor route again. From outside, an iPad is
+  closer to the next kind: video out over USB-C or AirPlay, and input from an external keyboard,
+  mouse or switch device, which iPadOS accepts for accessibility.
 - **An application delivered through Citrix or a remote desktop.** The protocol already carries
   the whole screen one way and every key and pointer event the other, so a relay in the middle
   can read the screen and inject input without installing anything on the clinician's machine or
