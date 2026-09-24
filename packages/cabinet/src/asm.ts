@@ -16,6 +16,9 @@ import type { Cpu } from "./bus.js";
  *   a b, a+b, a-b  a space adds; arithmetic is ones' complement, so -0 is 777777
  *   a!b            inclusive OR
  *   start          end of a tape; further tapes continue the same program
+ *   text "ABC"     one word per character, the KSR-33 code with the eighth
+ *                  bit set, upper case. A cabinet extension for programs
+ *                  written here (tapes/hilo); the 1964 listings have none
  *
  * Literals go after the last tape, then one word for each symbol that
  * was used and never defined, in alphabetical order: the listings rely on
@@ -135,7 +138,10 @@ type Stmt =
 	| { kind: "word"; expr: string }
 	| { kind: "assign"; name: string; expr: string }
 	| { kind: "start"; expr: string }
+	| { kind: "text"; chars: number[] }
 	| { kind: "none" };
+
+const stmtWords = (s: Stmt): number => (s.kind === "word" ? 1 : s.kind === "text" ? s.chars.length : 0);
 
 /** `name,` is the location; Cambridge `name=JMS,` is JMS plus the location. */
 type Label = { name: string; plus: string | null };
@@ -180,6 +186,11 @@ function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: st
 		if (!m) break;
 		labels.push({ name: m[1] as string, plus: m[2]?.trim() || null });
 		rest = rest.slice(m[0].length);
+	}
+	const tm = dialect === "dec" ? rest.match(/^\s*text\s+"([^"]*)"/) : null;
+	if (tm) {
+		const chars = [...(tm[1] as string).toUpperCase()].map((c) => (c.charCodeAt(0) & 0o177) | 0o200);
+		return { labels, origin, stmt: { kind: "text", chars } };
 	}
 	let body = "";
 	for (let k = 0; k < rest.length; k += 1) {
@@ -392,7 +403,7 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		} catch (e) {
 			errors.push(`${where}: ${(e as Error).message}`);
 		}
-		if (p.stmt.kind === "word") loc = (loc + 1) & 0o17777;
+		loc = (loc + stmtWords(p.stmt)) & 0o17777;
 	}
 
 	const literals: AsmResult["literals"] = [];
@@ -447,6 +458,12 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 			else if (s.kind === "word") {
 				addr = loc;
 				word = evaluate(s.expr, loc, where, 2, p.disp, litAddr);
+			} else if (s.kind === "text") {
+				addr = loc;
+				for (const c of s.chars) {
+					put(loc, c, where);
+					loc = (loc + 1) & 0o17777;
+				}
 			}
 		} catch (e) {
 			errors.push(`${where}: ${(e as Error).message}`);

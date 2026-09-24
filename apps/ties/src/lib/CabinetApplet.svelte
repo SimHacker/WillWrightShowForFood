@@ -701,6 +701,15 @@
 		recorder.record(box.cycles, 'tty', ...ttyRecCodes);
 	}
 
+	/** A demo's operator at the keyboard: the paper shows what it types, as it shows yours. */
+	function demoType(text) {
+		for (const ch of text) {
+			const c = ch === '\n' ? 0o15 : ch.toUpperCase().charCodeAt(0) & 0o177;
+			tty.type(c | 0o200);
+			if (ttyLocal) ttyPrint(c);
+		}
+	}
+
 	function onTtyKey(e) {
 		const c = ttyCode(e);
 		if (c < 0) return;
@@ -1028,11 +1037,12 @@
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
 		symbols = program.symbols?.() ?? [];
 		switches = cpu.switches;
-		for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
+		// A teletype-only program has no picture to wait for.
+		for (let i = 0; program.display !== false && i < 30 && !t340.lastFrame; i += 1) {
 			box.run(bootChunk);
 			if (cpu.halted) break;
 		}
-		if (!t340.lastFrame && t340.segments.length < 100) {
+		if (program.display !== false && !t340.lastFrame && t340.segments.length < 100) {
 			throw new Error('boot picture did not appear');
 		}
 	}
@@ -1044,7 +1054,7 @@
 		bootMachine();
 		const script = replay
 			? session && replaySession(replayHandlers(), session, 'Replaying the recording')
-			: program.demo?.({ cpu, pen });
+			: program.demo?.({ cpu, pen, type: demoType });
 		if (!script) return;
 		player = new DemoPlayer(script);
 		demoCaption = '';
@@ -1056,7 +1066,10 @@
 		return {
 			sw: (v) => (cpu.switches = Number(v)),
 			tty: (...codes) => {
-				for (const c of codes) tty.type(Number(c) | 0o200);
+				for (const c of codes) {
+					tty.type(Number(c) | 0o200);
+					if (ttyLocal) ttyPrint(Number(c));
+				}
 			},
 			pen: (x, y, down, aperture) => {
 				if (aperture) pen.aperture = Number(aperture);
@@ -1167,6 +1180,7 @@
 		stopRecording();
 		programId = next.id;
 		session = loadSession(next.id);
+		if (next.tty && !ttyOpen) togglePanel('tty', {});
 		await onReset();
 	}
 
@@ -1630,7 +1644,7 @@
 						}}>LOCAL COPY</button
 					>
 					<span class="mem-hint"
-						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} waiting: {program?.label ?? 'the program'} does not read the keyboard.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
+						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} not read yet{paused ? ': the machine is stopped' : traceMs || speed < 0.1 ? ': the machine is running slowly' : ''}.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
 					>
 				</div>
 			</div>

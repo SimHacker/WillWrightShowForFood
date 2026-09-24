@@ -58,6 +58,13 @@ the peripherals it needs, deposits itself and sets the console:
 | `symelec` | PIXIE's SYMELEC, 1972 (the default; Demo draws a house and a circuit) | the `.oct` transcription and its literal pool |
 | `lp370` | DEC's 370 light pen diagnostic, 1964 (Demo walks through the three tests) | `packages/cabinet/tapes/lp370/*.s`, assembled in the browser by `src/asm.ts` |
 | `duel` | DUEL, two-player spacewar | `tapes/duel/rim.pt` and `duel.pt`, read in through the RIM loader and a paper tape reader |
+| `hilo` | HILO, a number guessing game on the teletype, written here in 2026 (Demo plays one game by halving) | `packages/cabinet/tapes/hilo/hilo.s`, assembled in the browser |
+
+A program with `tty: true` opens the TTY panel when it is chosen, and
+`display: false` boots without waiting for a picture on the tube. A
+demo's host has `type(text)` besides `cpu` and `pen`: the script types
+as an operator would, and the paper shows it under LOCAL COPY. Replayed
+`tty` events print the same way.
 
 Programs that read the AC switches get a row of eighteen switch buttons
 under the tube, bit 0 on the left, grouped in threes like the console,

@@ -11,6 +11,9 @@ import {
 	assembleLp370,
 	bootLp370,
 	lp370Demo,
+	assembleHilo,
+	bootHilo,
+	hiloDemo,
 	houseDemo,
 	LP370_SWITCHES,
 	sourceFromAsm,
@@ -20,6 +23,7 @@ import { loadSymelec } from './symelec-boot.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
 import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
+import hiloSource from '../../../../packages/cabinet/tapes/hilo/hilo.s?raw';
 import symelecSymbols from '../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-symbols.tsv?raw';
 import rimUrl from '../../../../packages/cabinet/tapes/duel/rim.pt?url&inline';
 import duelUrl from '../../../../packages/cabinet/tapes/duel/duel.pt?url&inline';
@@ -34,6 +38,7 @@ const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
 const LP = LP370_SWITCHES;
 let lp370Program = null;
+let hiloProgram = null;
 
 /** symelec-symbols.tsv: name, octal address, source, flags; # lines are comments. */
 function parseSymbolTsv(text) {
@@ -51,6 +56,8 @@ function parseSymbolTsv(text) {
  * peripherals() are added to it. status(cpu) is the caption readout.
  * switchLabels names the console switches the program reads, bit 0 first.
  * keys maps KeyboardEvent.code to a switch the key holds while pressed.
+ * tty: true opens the teletype panel when the program is chosen; display:
+ * false boots without waiting for a picture on the tube.
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
  * source() resolves to a SourceMap (source.ts) for the code and source views.
@@ -146,6 +153,27 @@ export const PROGRAMS = [
 		},
 		status() {
 			return '';
+		}
+	},
+	{
+		id: 'hilo',
+		label: 'HILO (2026)',
+		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
+		pen: false,
+		tty: true,
+		display: false,
+		demo: (h) => hiloDemo(h, hiloProgram),
+		demoTitle: 'Reboot and let a scripted operator play one game by halving',
+		switches: 0,
+		switchLabels: null,
+		symbols: () => [...(hiloProgram?.symbols ?? [])].map(([name, addr]) => ({ name, addr })),
+		source: async () => (hiloProgram ? sourceFromAsm(hiloProgram) : null),
+		boot({ cpu }) {
+			hiloProgram ??= assembleHilo(hiloSource);
+			bootHilo(cpu, hiloProgram);
+		},
+		status(cpu) {
+			return `guesses ${cpu.read(hiloProgram.symbols.get('tries'))}`;
 		}
 	}
 ];
