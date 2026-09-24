@@ -450,6 +450,21 @@ at: a code on a pump links the photograph to that pump's record and to its emula
 knows what the display should show; a code on a printed checklist links each ticked box to the
 procedure it belongs to. The paper keeps working as paper when the network is down.
 
+The codes need not be printed. A screen can show one, and a phone can scan it:
+
+- **Workstation to phone.** The Screen Angel overlay on a workstation shows a code for what is on
+  the screen, such as this patient's order or this issue, and the nurse's phone picks up the
+  context without anything typed, even when the workstation's software cannot be changed.
+- **Phone to phone.** At a shift change the outgoing nurse's phone shows a code and the incoming
+  nurse's phone takes over the open issues for her patients.
+- **Patient to staff.** A patient's phone shows a code to pair with the ward at admission, or to
+  let a nurse see an issue the patient opened.
+- **Device screens.** A tablet or monitor that shows a code identifies itself to the camera the
+  same way a sticker does.
+
+A code carries a reference, never the data itself, and the phone that scans it sees only what its
+user is allowed to see.
+
 Two limits. A code that performs an action (mark done, request pickup) only proposes it when a
 camera happens to see it, and a person confirms. And a sticker can be printed by anyone, so the app
 follows only codes signed by the hospital, and a code stuck over the real one is caught because it
