@@ -12,7 +12,9 @@ import {
 	bootLp370,
 	lp370Demo,
 	houseDemo,
-	LP370_SWITCHES
+	LP370_SWITCHES,
+	sourceFromAsm,
+	sourceFromListing
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
@@ -51,6 +53,7 @@ function parseSymbolTsv(text) {
  * keys maps KeyboardEvent.code to a switch the key holds while pressed.
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
  * symbols() lists { name, addr } for the Memory drawer, after boot.
+ * source() resolves to a SourceMap (source.ts) for the code and source views.
  * Any program can be recorded and replayed by the applet (session.ts).
  */
 export const PROGRAMS = [
@@ -64,6 +67,13 @@ export const PROGRAMS = [
 		switches: 0,
 		switchLabels: null,
 		symbols: () => parseSymbolTsv(symelecSymbols),
+		// The 1972 listing is 268 KB; fetched only when a view needs it.
+		async source() {
+			const { default: text } = await import(
+				'../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt?raw'
+			);
+			return sourceFromListing(text);
+		},
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);
 			cpu.pc = 0o22;
@@ -85,6 +95,7 @@ export const PROGRAMS = [
 			[...(lp370Program?.symbols ?? [])]
 				.filter(([, addr]) => addr < 0o20000)
 				.map(([name, addr]) => ({ name, addr })),
+		source: async () => (lp370Program ? sourceFromAsm(lp370Program) : null),
 		boot({ cpu }) {
 			lp370Program ??= assembleLp370({ 'page6.s': page6, 'lp370.s': lp370, 'outnox.s': outnox });
 			bootLp370(cpu, lp370Program, this.switches);

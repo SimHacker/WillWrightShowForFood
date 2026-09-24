@@ -1,5 +1,6 @@
 import type { Cpu, Step } from "../bus.js";
 import { maskWord } from "../word.js";
+import type { Trace } from "../trace.js";
 
 const WORD = 18;
 const WMASK = (1 << WORD) - 1; // 0o777777
@@ -54,6 +55,8 @@ export class Pdp7 implements Cpu {
 	halted = false;
 	/** The console's eighteen ACCUMULATOR switches, read by OAS/LAS. SYMELEC never reads them; DUEL's players do. */
 	switches = 0;
+	/** When set, every fetch is recorded: the instruction stream. */
+	trace: Trace | null = null;
 	private readonly core: Uint32Array;
 
 	constructor(opts: Pdp7Opts = {}) {
@@ -102,6 +105,7 @@ export class Pdp7 implements Cpu {
 		}
 
 		const ir = this.read(this.pc);
+		this.trace?.record(this.pc, ir, this.ac);
 		this.pc = (this.pc + 1) & ADDR;
 		if (this.ionDefer > 0) this.ionDefer -= 1;
 		return this.exec(ir, 0);

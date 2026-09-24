@@ -71,9 +71,21 @@ offline bundle carries every program.
 The rows under the tube keep one order: the console (switches, ⏸️/▶️
 Stop/Run, 🔄 Reset), the menu row (program, readout, speed, 🖨️ SVG,
 📷 PNG to the clipboard), then the program's rows: Demo and the
-recorder, key help, and a closed Memory drawer: a raw core browser
-(octal, live while open; changed words light up; click a word to
-follow it as an address; the wheel scrolls). A program's `symbols()`
+recorder, key help, and a closed Memory drawer: a core browser, live
+while open, with four views. **octal** is the words, changed ones lit.
+**code** is a word a line, disassembled with symbols (`disasm.ts`),
+beside the source line that assembled it; ≠ marks a word that no
+longer holds what the source assembled (patches, variables, JMS return
+addresses). **source** is the program's commented source. **trace** is
+the last 65,536 instructions executed, disassembled, with the AC each
+one found (`trace.ts`, recorded on every fetch). **follow PC** keeps the
+PC in view, or in the trace the newest instruction; the PC's word or
+line is yellow in every view. Click a word to follow it as an address.
+The wheel or trackpad scrolls at a rate the eye can follow; ctrl is
+slower, shift faster, shift and ctrl cross core in about a second.
+Sources come from `source()`: the light pen test's from its assembly,
+SYMELEC's from the 1972 listing, loaded when a view first needs it
+(`source.ts`). A program's `symbols()`
 feeds the drawer's symbol menu and address box, which takes octal, a
 name, or `NAME+offset`; words with a symbol are underlined, and every
 tooltip names its location as `NAME+offset`. SYMELEC's come from

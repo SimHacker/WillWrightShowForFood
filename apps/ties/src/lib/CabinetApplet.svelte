@@ -16,7 +16,9 @@
 		SessionRecorder,
 		replaySession,
 		isSession,
-		printScreen
+		printScreen,
+		disassemble,
+		Trace
 	} from '@wwsff/cabinet';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
 
@@ -272,10 +274,30 @@
 		refreshMem();
 	}
 
-	// Raw core browser: MEM_LINES lines of MEM_COLS words, octal. Clicking a word follows its
+	// Core browser, four views of MEM_LINES lines: octal (MEM_COLS words a line), code (a
+	// word a line, disassembled, beside the source line that assembled it), source (the
+	// listing itself), trace (the last instructions executed). Clicking a word follows its
 	// low 13 bits as an address; the trail remembers where you came from.
-	const MEM_COLS = $derived(side >= 420 ? 8 : 4);
+	const MEM_VIEWS = [
+		['octal', 'octal', 'Octal words'],
+		['code', 'code', 'Disassembled, beside the source line'],
+		['source', 'source', 'The program’s source, commented'],
+		['trace', 'trace', 'Instructions as executed, newest last']
+	];
+	let memView = $state('octal');
+	const MEM_COLS = $derived(memView === 'octal' ? (side >= 420 ? 8 : 4) : 1);
 	let memOpen = $state(false);
+	/** Keep the PC in view (code, source, octal) or the newest instruction (trace). */
+	let memFollow = $state(false);
+	let pcNow = $state(-1);
+	let trace = null;
+	let traceNote = $state('');
+	let traceBack = $state(0);
+	let traceRows = $state.raw([]);
+	let sourceMap = $state.raw(null);
+	let sourceFor = null;
+	let sourceStatus = $state('');
+	let srcTop = $state(0);
 	const MEM_MIN_LINES = 8;
 	let MEM_LINES = $state(MEM_MIN_LINES);
 	const MEM_PAGE = $derived(MEM_COLS * MEM_LINES);
@@ -317,8 +339,70 @@
 		return addr === best.addr ? best.name : `${best.name}+${oct(addr - best.addr, 1)}`;
 	}
 
+	// Symbols in the program's own case: SYMELEC's are upper case, the light pen test's lower.
+	const upperCase = $derived(symbols.length > 0 && symbols[0].name === symbols[0].name.toUpperCase());
+	function dis(word) {
+		const text = disassemble(word, symbolic);
+		return upperCase ? text.toUpperCase() : text;
+	}
+
+	/** The source line for an address, or the next one that has an address. */
+	function srcLineFor(addr) {
+		const exact = sourceMap?.line.get(addr);
+		if (exact !== undefined) return exact;
+		const lines = sourceMap?.lines ?? [];
+		let best = -1;
+		for (let i = 0; i < lines.length; i += 1) {
+			const a = lines[i].addr;
+			if (a !== null && a > addr && (best < 0 || a < lines[best].addr)) best = i;
+		}
+		return Math.max(best, 0);
+	}
+
+	function loadSource() {
+		const id = programId;
+		if (sourceFor === id) return;
+		sourceFor = id;
+		sourceMap = null;
+		if (!program?.source) {
+			sourceStatus = 'No source for this program.';
+			return;
+		}
+		sourceStatus = 'Loading the source…';
+		Promise.resolve(program.source())
+			.then((s) => {
+				if (sourceFor !== id) return;
+				sourceMap = s ?? null;
+				sourceStatus = s ? '' : 'No source for this program.';
+				srcTop = Math.max(0, srcLineFor(memBase) - 2);
+			})
+			.catch((e) => {
+				sourceStatus = `The source did not load: ${e?.message ?? e}`;
+			});
+	}
+	$effect(() => {
+		void programId;
+		if (memOpen && (memView === 'code' || memView === 'source')) untrack(loadSource);
+	});
+
 	function refreshMem() {
 		if (!cpu || !memOpen) return;
+		pcNow = cpu.pc;
+		if (memFollow) {
+			if (memView === 'trace') traceBack = 0;
+			else if (memView === 'source') {
+				const l = srcLineFor(pcNow);
+				if (l < srcTop || l >= srcTop + MEM_LINES) srcTop = Math.max(0, l - 2);
+			} else if (pcNow < memBase || pcNow >= memBase + MEM_PAGE) {
+				const a = memView === 'code' ? pcNow - 2 : pcNow;
+				memBase = ((a - (a % MEM_COLS)) + CORE) % CORE;
+			}
+		}
+		if (memView === 'trace') {
+			traceRows = trace?.window(MEM_LINES, traceBack) ?? [];
+			traceNote = trace ? `${traceBack ? `${traceBack.toLocaleString()} back; ` : ''}${trace.held.toLocaleString()} held of ${trace.count.toLocaleString()} executed` : '';
+			return;
+		}
 		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
 		memChanged = memShownBase === memBase && memWords.length === next.length ? next.map((w, i) => w !== memWords[i]) : [];
 		memWords = next;
@@ -330,7 +414,69 @@
 		if (remember) memTrail = [...memTrail.slice(-31), memBase];
 		memFocus = a;
 		memBase = a - (a % MEM_COLS);
+		if (memView === 'source') srcTop = Math.max(0, srcLineFor(a) - 2);
+		if (memView === 'trace') memView = 'code';
 		refreshMem();
+	}
+
+	/** Scroll by whole lines in the current view; leaving the PC stops following it. */
+	function memScroll(n) {
+		if (!n) return;
+		memFollow = false;
+		memFocus = -1;
+		if (memView === 'source') {
+			const max = Math.max(0, (sourceMap?.lines.length ?? 0) - MEM_LINES);
+			srcTop = Math.max(0, Math.min(max, srcTop + n));
+		} else if (memView === 'trace') {
+			traceBack = Math.max(0, Math.min(Math.max(0, (trace?.held ?? 0) - MEM_LINES), traceBack - n));
+		} else memBase = (((memBase + n * MEM_COLS) % CORE) + CORE) % CORE;
+		refreshMem();
+	}
+
+	function setView(v) {
+		memView = v;
+		memShownBase = -1;
+		if (v === 'octal') memBase -= memBase % (side >= 420 ? 8 : 4);
+		if (v === 'source') srcTop = Math.max(0, srcLineFor(memFocus >= 0 ? memFocus : memBase) - 2);
+		queueMicrotask(refreshMem);
+	}
+
+	// Wheel and trackpad: pixels of travel per line, and the most lines a second, so a
+	// flick never outruns the eye. Ctrl is slow, plain is reading speed, shift fast,
+	// shift and ctrl together cross core in a second.
+	const WHEEL = { slow: [40, 8], plain: [14, 24], fast: [5, 90], super: [1, 1500] };
+	let wheelDebt = 0;
+	let wheelFrac = 0;
+	let wheelRate = 24;
+	let wheelRaf = 0;
+	let wheelLast = 0;
+	function onMemWheel(e) {
+		e.preventDefault();
+		const speed = e.shiftKey && e.ctrlKey ? 'super' : e.shiftKey ? 'fast' : e.ctrlKey ? 'slow' : 'plain';
+		const [px, rate] = WHEEL[speed];
+		// macOS turns shift+wheel into horizontal travel.
+		let d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+		if (e.deltaMode === 1) d *= 16;
+		else if (e.deltaMode === 2) d *= 16 * MEM_LINES;
+		wheelRate = rate;
+		const cap = Math.max(1, rate * 0.2);
+		wheelDebt = Math.max(-cap, Math.min(cap, wheelDebt + d / px));
+		if (!wheelRaf) {
+			wheelLast = performance.now();
+			wheelRaf = requestAnimationFrame(drainWheel);
+		}
+	}
+	function drainWheel(now) {
+		const dt = Math.min(now - wheelLast, 50) / 1000;
+		wheelLast = now;
+		const can = wheelRate * dt;
+		const step = Math.max(-can, Math.min(can, wheelDebt));
+		wheelDebt -= step;
+		wheelFrac += step;
+		const n = Math.trunc(wheelFrac);
+		wheelFrac -= n;
+		memScroll(n);
+		wheelRaf = Math.abs(wheelDebt) > 0.01 ? requestAnimationFrame(drainWheel) : 0;
 	}
 
 	function memBack() {
@@ -392,13 +538,8 @@
 	$effect(() => {
 		const el = memEl;
 		if (!el) return;
-		const onWheel = (e) => {
-			e.preventDefault();
-			memGo(memBase + Math.sign(e.deltaY) * MEM_COLS * (e.shiftKey ? MEM_LINES : 1));
-			memFocus = -1;
-		};
-		el.addEventListener('wheel', onWheel, { passive: false });
-		return () => el.removeEventListener('wheel', onWheel);
+		el.addEventListener('wheel', onMemWheel, { passive: false });
+		return () => el.removeEventListener('wheel', onMemWheel);
 	});
 
 	// Schedule first, then work: one bad frame must not stop the machine.
@@ -506,6 +647,8 @@
 	/** A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes. */
 	function bootMachine() {
 		cpu = new Pdp7({ coreWords: 8192 });
+		cpu.trace = trace = new Trace();
+		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
 		t340 = new Type340({
 			fetch: (a) => cpu.read(a),
@@ -978,9 +1121,26 @@
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
 		<details class="row app mem" bind:open={memOpen}>
-			<summary>Memory: {CORE / 1024}K × 18-bit words, octal</summary>
+			<summary>Memory: {CORE / 1024}K × 18-bit words</summary>
 			{#if memOpen}
 			<div bind:this={memEl}>
+				<div class="mem-bar mem-views" role="group" aria-label="View">
+					{#each MEM_VIEWS as [id, label, hint] (id)}
+						<button type="button" class="mem-view" class:on={memView === id} aria-pressed={memView === id} title={hint} onclick={() => setView(id)}>{label}</button>
+					{/each}
+					<button
+						type="button"
+						class="mem-view"
+						class:on={memFollow}
+						aria-pressed={memFollow}
+						title={memView === 'trace' ? 'Keep the newest instruction in view' : 'Keep the PC in view'}
+						onclick={() => {
+							memFollow = !memFollow;
+							refreshMem();
+						}}>{memView === 'trace' ? 'live' : 'follow PC'}</button
+					>
+					<span class="mem-hint">PC {pcNow >= 0 ? `${oct(pcNow, 5)} ${symbolic(pcNow)}` : ''}</span>
+				</div>
 				<div class="mem-bar">
 					<button type="button" class="icon" aria-label="Back" title="Back" disabled={!memTrail.length} onclick={memBack}>◀</button>
 					<input
@@ -990,8 +1150,8 @@
 						value={oct(memBase, 5)}
 						onchange={memAddrInput}
 					/>
-					<button type="button" class="icon" aria-label="Page up" title="Page up" onclick={() => memGo(memBase - MEM_PAGE)}>▲</button>
-					<button type="button" class="icon" aria-label="Page down" title="Page down" onclick={() => memGo(memBase + MEM_PAGE)}>▼</button>
+					<button type="button" class="icon" aria-label="Page up" title="Page up" onclick={() => memScroll(-MEM_LINES)}>▲</button>
+					<button type="button" class="icon" aria-label="Page down" title="Page down" onclick={() => memScroll(MEM_LINES)}>▼</button>
 					{#if symbols.length}
 						<select class="mem-symbols" aria-label="Go to symbol" title="{symbols.length} symbols" onchange={memSymbolPick}>
 							<option value="">{symbolic(memFocus >= 0 ? memFocus : memBase) || 'symbol'} ▾</option>
@@ -1003,6 +1163,52 @@
 						<span class="mem-hint">no symbols</span>
 					{/if}
 				</div>
+				{#if memView === 'code'}
+					{#each { length: MEM_LINES } as _, line (line)}
+						{@const at = (memBase + line) % CORE}
+						{@const w = memWords[line] ?? 0}
+						{@const si = sourceMap?.line.get(at)}
+						{@const src = si === undefined ? null : sourceMap.lines[si]}
+						{@const differs = src?.word != null && src.word !== w}
+						<div class="mem-line code" class:pc={at === pcNow} class:focus={at === memFocus}>
+							<span class="mem-at">{oct(at, 5)}</span>
+							<span class="mem-label">{byAddr.get(at)?.[0] ?? ''}</span>
+							<button
+								type="button"
+								class="mem-word mem-op"
+								class:changed={memChanged[line]}
+								title="{oct(w, 6)}{differs ? `; the source assembled ${oct(src.word, 6)}` : ''} → {symbolic(w & 0o17777) || oct(w & 0o17777, 5)}"
+								onclick={() => memGo(w & 0o17777, true)}>{dis(w)}</button
+							>
+							<span class="mem-src" class:differs title={differs ? `Core differs from the source, which assembled ${oct(src.word, 6)}: ${src.text}` : src?.text}
+								>{differs ? '≠ ' : ''}{src?.text.trim() ?? ''}</span
+							>
+						</div>
+					{/each}
+					{#if sourceStatus}<p class="mem-hint">{sourceStatus}</p>{/if}
+				{:else if memView === 'source'}
+					{#if sourceMap}
+						{#each { length: MEM_LINES } as _, line (line)}
+							{@const l = sourceMap.lines[srcTop + line]}
+							<div class="mem-line source" class:pc={l?.addr != null && l.addr === pcNow} class:focus={l?.addr != null && l.addr === memFocus}>
+								<span class="mem-at">{l?.addr != null ? oct(l.addr, 5) : ''}</span>
+								<span class="mem-src" title={l?.text}>{l?.text ?? ''}</span>
+							</div>
+						{/each}
+					{:else}
+						<p class="mem-hint">{sourceStatus}</p>
+					{/if}
+				{:else if memView === 'trace'}
+					{#each traceRows as e (e.n)}
+						<div class="mem-line trace" class:focus={e.pc === memFocus}>
+							<span class="mem-at">{oct(e.pc, 5)}</span>
+							<span class="mem-label wide">{symbolic(e.pc)}</span>
+							<button type="button" class="mem-word mem-op" title="{oct(e.word, 6)}; click to see it in code" onclick={() => memGo(e.pc, true)}>{dis(e.word)}</button>
+							<span class="mem-src">AC {oct(e.ac, 6)}</span>
+						</div>
+					{/each}
+					<p class="mem-hint">{traceNote}</p>
+				{:else}
 				{#each { length: MEM_LINES } as _, line (line)}
 					{@const at = (memBase + line * MEM_COLS) % CORE}
 					<div class="mem-line">
@@ -1015,6 +1221,7 @@
 								class="mem-word"
 								class:changed={memChanged[i]}
 								class:focus={(at + col) % CORE === memFocus}
+								class:pc={(at + col) % CORE === pcNow}
 								class:sym={byAddr.has((at + col) % CORE)}
 								title="{byAddr.get((at + col) % CORE)?.join(' ') ?? symbolic((at + col) % CORE)} {oct((at + col) % CORE, 5)}: {oct(w, 6)} → {symbolic(w & 0o17777) || oct(w & 0o17777, 5)}"
 								onclick={() => memGo(w & 0o17777, true)}>{oct(w, 6)}</button
@@ -1022,6 +1229,7 @@
 						{/each}
 					</div>
 				{/each}
+				{/if}
 			</div>
 			{/if}
 		</details>
@@ -1325,8 +1533,56 @@
 		color: #000;
 		background: #9f9;
 	}
-	.mem-word.focus {
+	.mem-word.focus,
+	.mem-line.focus {
 		outline: 1px solid currentColor;
+	}
+	.mem-word.pc,
+	.mem-line.pc {
+		background: #3a3a10;
+		color: #ffe680;
+	}
+	.mem-views .mem-view {
+		font: inherit;
+		background: #000;
+		color: inherit;
+		border: 1px solid #555;
+		padding: 0 0.4em;
+		cursor: pointer;
+	}
+	.mem-views .mem-view.on {
+		background: #9fe8a0;
+		color: #000;
+	}
+	.mem-line.code,
+	.mem-line.source,
+	.mem-line.trace {
+		white-space: pre;
+	}
+	.mem-label {
+		width: 6ch;
+		flex-shrink: 0;
+		overflow: hidden;
+	}
+	.mem-label.wide {
+		width: 10ch;
+	}
+	.mem-op {
+		width: 16ch;
+		flex-shrink: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.mem-src {
+		flex: 1;
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		opacity: 0.75;
+	}
+	.mem-src.differs {
+		color: #ffb080;
+		opacity: 1;
 	}
 	.pen {
 		margin: 0 0.3em;
