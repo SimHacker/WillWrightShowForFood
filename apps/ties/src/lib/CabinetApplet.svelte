@@ -2073,9 +2073,11 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	/* A blank source line is still a line; without the floor it collapses and the view shrinks. */
 	.mem-line {
 		display: flex;
 		gap: 0.6ch;
+		min-height: 1.25em;
 	}
 	.mem-at {
 		opacity: 0.5;
