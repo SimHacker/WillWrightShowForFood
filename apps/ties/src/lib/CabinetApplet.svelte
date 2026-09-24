@@ -1173,11 +1173,11 @@
 						<div class="mem-line code" class:pc={at === pcNow} class:focus={at === memFocus}>
 							<span class="mem-at">{oct(at, 5)}</span>
 							<span class="mem-label">{byAddr.get(at)?.[0] ?? ''}</span>
+							<span class="mem-oct" class:changed={memChanged[line]}>{oct(w, 6)}</span>
 							<button
 								type="button"
 								class="mem-word mem-op"
-								class:changed={memChanged[line]}
-								title="{oct(w, 6)}{differs ? `; the source assembled ${oct(src.word, 6)}` : ''} → {symbolic(w & 0o17777) || oct(w & 0o17777, 5)}"
+								title="{differs ? `The source assembled ${oct(src.word, 6)}. ` : ''}Go to {symbolic(w & 0o17777) || oct(w & 0o17777, 5)}"
 								onclick={() => memGo(w & 0o17777, true)}>{dis(w)}</button
 							>
 							<span class="mem-src" class:differs title={differs ? `Core differs from the source, which assembled ${oct(src.word, 6)}: ${src.text}` : src?.text}
@@ -1203,7 +1203,8 @@
 						<div class="mem-line trace" class:focus={e.pc === memFocus}>
 							<span class="mem-at">{oct(e.pc, 5)}</span>
 							<span class="mem-label wide">{symbolic(e.pc)}</span>
-							<button type="button" class="mem-word mem-op" title="{oct(e.word, 6)}; click to see it in code" onclick={() => memGo(e.pc, true)}>{dis(e.word)}</button>
+							<span class="mem-oct">{oct(e.word, 6)}</span>
+							<button type="button" class="mem-word mem-op" title="See it in the code view" onclick={() => memGo(e.pc, true)}>{dis(e.word)}</button>
 							<span class="mem-src">AC {oct(e.ac, 6)}</span>
 						</div>
 					{/each}
@@ -1566,6 +1567,15 @@
 	}
 	.mem-label.wide {
 		width: 10ch;
+	}
+	.mem-oct {
+		flex-shrink: 0;
+		opacity: 0.6;
+	}
+	.mem-oct.changed {
+		color: #000;
+		background: #9f9;
+		opacity: 1;
 	}
 	.mem-op {
 		width: 16ch;
