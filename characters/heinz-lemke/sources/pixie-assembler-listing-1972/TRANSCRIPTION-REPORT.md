@@ -181,6 +181,16 @@ The listing text also had mnemonic and operand misreads with the word right (`SM
 first digit.** A 7 read as 1 at 11204 and 1011 turns an operate instruction (`STL`, `SKP`)
 into a memory reference (`DZM`). The shape checker cannot see it; the mnemonic can.
 
+The printed symbol table (page 108) is checked the same way, against the labels on the
+code lines. `packages/cabinet/scripts/extract-symbols.mjs` merges the two into
+`symelec-symbols.tsv`, which the cabinet's Memory drawer navigates by. Where they
+disagree the code line wins and the script says so. Fixed in the table text against the
+scan: `FSTCLB` → `FIFCLB`, `AMEND6` 7777 → 7677, `FOHBL` → `FONBL`, `GARR`/`GARR1`/`GARR2`
+→ `GARB`/`GARB1`/`GARB2`, and a `GR1 = 3165` entry that is not on the page. Still open,
+too faint to read: `COMP10` (table 10366, code 10306) and `MESIN2` (table 4657, code
+4057). The OCR also dropped 22 table entries that the code lines supply. `SUMB` is
+really defined twice, at 5013 and 5040.
+
 ## What we learned
 
 - **Redundancy is the cheapest verifier.** The listing states every instruction twice

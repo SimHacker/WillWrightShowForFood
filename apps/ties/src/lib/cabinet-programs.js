@@ -18,6 +18,7 @@ import { loadSymelec } from './symelec-boot.js';
 import page6 from '../../../../packages/cabinet/tapes/lp370/page6.s?raw';
 import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
 import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
+import symelecSymbols from '../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-symbols.tsv?raw';
 import rimUrl from '../../../../packages/cabinet/tapes/duel/rim.pt?url&inline';
 import duelUrl from '../../../../packages/cabinet/tapes/duel/duel.pt?url&inline';
 
@@ -32,12 +33,24 @@ const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 const LP = LP370_SWITCHES;
 let lp370Program = null;
 
+/** symelec-symbols.tsv: name, octal address, source, flags; # lines are comments. */
+function parseSymbolTsv(text) {
+	return text
+		.split('\n')
+		.filter((l) => l && !l.startsWith('#'))
+		.map((l) => {
+			const [name, addr] = l.split('\t');
+			return { name, addr: parseInt(addr, 8) };
+		});
+}
+
 /**
  * boot({ cpu, box, extra, patches }) runs after the cabinet is built;
  * peripherals() are added to it. status(cpu) is the caption readout.
  * switchLabels names the console switches the program reads, bit 0 first.
  * keys maps KeyboardEvent.code to a switch the key holds while pressed.
  * demo(host) returns a scripted demo, run from a fresh boot; null if none.
+ * symbols() lists { name, addr } for the Memory drawer, after boot.
  * Any program can be recorded and replayed by the applet (session.ts).
  */
 export const PROGRAMS = [
@@ -50,6 +63,7 @@ export const PROGRAMS = [
 		demoTitle: 'Reboot and let a scripted pen draw a picture, the 1972 way',
 		switches: 0,
 		switchLabels: null,
+		symbols: () => parseSymbolTsv(symelecSymbols),
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);
 			cpu.pc = 0o22;
@@ -67,6 +81,10 @@ export const PROGRAMS = [
 		demoTitle: 'Reboot and walk through the three tests: switches set, pen placed',
 		switches: LP.sensitivity | LP.intensity(7),
 		switchLabels: ['readout', 'sensitivity', '', 'follow', '', 'field of view', '', 'box x 4', 'box x 2', 'box x 1', '', 'box y 4', 'box y 2', 'box y 1', '', 'intensity 4', 'intensity 2', 'intensity 1'],
+		symbols: () =>
+			[...(lp370Program?.symbols ?? [])]
+				.filter(([, addr]) => addr < 0o20000)
+				.map(([name, addr]) => ({ name, addr })),
 		boot({ cpu }) {
 			lp370Program ??= assembleLp370({ 'page6.s': page6, 'lp370.s': lp370, 'outnox.s': outnox });
 			bootLp370(cpu, lp370Program, this.switches);

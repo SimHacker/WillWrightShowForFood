@@ -264,6 +264,33 @@
 
 	const oct = (n, width) => n.toString(8).padStart(width, '0');
 
+	// The running program's symbols, set at boot. byAddr: address -> names; byName: upper case.
+	let symbols = $state([]);
+	const symbolsByName = $derived([...symbols].sort((a, b) => a.name.localeCompare(b.name)));
+	const byAddr = $derived.by(() => {
+		const m = new Map();
+		for (const s of symbols) m.set(s.addr, [...(m.get(s.addr) ?? []), s.name]);
+		return m;
+	});
+	const byName = $derived(new Map(symbols.map((s) => [s.name.toUpperCase(), s.addr])));
+	const byAddrSorted = $derived([...symbols].sort((a, b) => a.addr - b.addr));
+
+	/** NAME+offset for an address: the nearest symbol at or below it, within 200 octal. */
+	function symbolic(addr) {
+		let lo = 0;
+		let hi = byAddrSorted.length - 1;
+		let best = null;
+		while (lo <= hi) {
+			const mid = (lo + hi) >> 1;
+			if (byAddrSorted[mid].addr <= addr) {
+				best = byAddrSorted[mid];
+				lo = mid + 1;
+			} else hi = mid - 1;
+		}
+		if (!best || addr - best.addr > 0o200) return '';
+		return addr === best.addr ? best.name : `${best.name}+${oct(addr - best.addr, 1)}`;
+	}
+
 	function refreshMem() {
 		if (!cpu || !memOpen) return;
 		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
@@ -288,10 +315,22 @@
 		refreshMem();
 	}
 
+	/** An octal address, a symbol, or symbol+octal offset. */
 	function memAddrInput(event) {
-		const text = event.currentTarget.value.trim();
-		if (/^[0-7]+$/.test(text)) memGo(parseInt(text, 8), true);
-		else event.currentTarget.value = oct(memBase, 5);
+		const text = event.currentTarget.value.trim().toUpperCase();
+		const m = text.match(/^([A-Z][A-Z0-9]*)?(?:([+-])?([0-7]+))?$/);
+		const base = m?.[1] ? byName.get(m[1]) : 0;
+		if (m && base !== undefined && (m[1] || m[3])) {
+			const off = m[3] ? parseInt(m[3], 8) * (m[2] === '-' ? -1 : 1) : 0;
+			memGo(base + off, true);
+		}
+		event.currentTarget.value = oct(memBase, 5);
+	}
+
+	function memSymbolPick(event) {
+		const addr = Number(event.currentTarget.value);
+		event.currentTarget.value = '';
+		if (Number.isInteger(addr)) memGo(addr, true);
 	}
 
 	$effect(() => {
@@ -436,6 +475,7 @@
 		canvasEl.cabinet = { cpu, t340, pen, box, program: programId };
 		batch = [];
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
+		symbols = program.symbols?.() ?? [];
 		switches = cpu.switches;
 		for (let i = 0; i < 30 && !t340.lastFrame; i += 1) {
 			box.run(bootChunk);
@@ -895,14 +935,23 @@
 					<button type="button" class="icon" aria-label="Back" title="Back" disabled={!memTrail.length} onclick={memBack}>◀</button>
 					<input
 						class="mem-addr"
-						aria-label="Address, octal"
-						title="Address, octal. Enter to go."
+						aria-label="Address: octal, a symbol, or symbol+offset"
+						title="Octal, a symbol, or symbol+offset. Enter to go."
 						value={oct(memBase, 5)}
 						onchange={memAddrInput}
 					/>
 					<button type="button" class="icon" aria-label="Page up" title="Page up" onclick={() => memGo(memBase - MEM_PAGE)}>▲</button>
 					<button type="button" class="icon" aria-label="Page down" title="Page down" onclick={() => memGo(memBase + MEM_PAGE)}>▼</button>
-					<span class="mem-hint">wheel scrolls, click follows</span>
+					{#if symbols.length}
+						<select class="mem-symbols" aria-label="Go to symbol" title="{symbols.length} symbols" onchange={memSymbolPick}>
+							<option value="">{symbolic(memFocus >= 0 ? memFocus : memBase) || 'symbol'} ▾</option>
+							{#each symbolsByName as s, i (i)}
+								<option value={s.addr}>{s.name} {oct(s.addr, 5)}</option>
+							{/each}
+						</select>
+					{:else}
+						<span class="mem-hint">no symbols</span>
+					{/if}
 				</div>
 				{#each { length: MEM_LINES } as _, line (line)}
 					{@const at = (memBase + line * MEM_COLS) % CORE}
@@ -916,7 +965,8 @@
 								class="mem-word"
 								class:changed={memChanged[i]}
 								class:focus={(at + col) % CORE === memFocus}
-								title="{oct((at + col) % CORE, 5)}: {oct(w, 6)} → go to {oct(w & 0o17777, 5)}"
+								class:sym={byAddr.has((at + col) % CORE)}
+								title="{byAddr.get((at + col) % CORE)?.join(' ') ?? symbolic((at + col) % CORE)} {oct((at + col) % CORE, 5)}: {oct(w, 6)} → {symbolic(w & 0o17777) || oct(w & 0o17777, 5)}"
 								onclick={() => memGo(w & 0o17777, true)}>{oct(w, 6)}</button
 							>
 						{/each}
@@ -1209,6 +1259,17 @@
 	}
 	.mem-word:hover {
 		background: #333;
+	}
+	.mem-word.sym {
+		text-decoration: underline dotted;
+		text-underline-offset: 2px;
+	}
+	.mem-symbols {
+		font: inherit;
+		max-width: 12rem;
+		background: #000;
+		color: inherit;
+		border: 1px solid #555;
 	}
 	.mem-word.changed {
 		color: #000;

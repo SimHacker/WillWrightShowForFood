@@ -6078,7 +6078,7 @@
 ABSXY  =  7205        AD     =   123        ADDN   =*103266        ADJLEV =  7504
 ADR    =  5032        ADR1   =  5036        ALPHA  =  5003        AMEND  =  7640
 AMEND0 =  7653        AMEND1 =  7657        AMEND2 =  7673        AMEND3 =  7750
-AMEND4 =  7764        AMEND5 =  7775        AMEND6 =  7777        AMEND7 =  7714
+AMEND4 =  7764        AMEND5 =  7775        AMEND6 =  7677        AMEND7 =  7714
 AMEND9 =  7662        ASR    =  5043        ATTMU  =  6221        ATTPDA =   556
 ATTPEL =  7625        BCC    = 12021        BCON   = 12046        BCON1  = 12047
 BD     =   150        BDC    =  2755        BDD    =  3001        BDN    =*102743
@@ -6120,16 +6120,16 @@ ERRDF  =  4206        ERRGB  =  4221        ERR5   =  4176        EX1    =  4775
 ERR3   =  4174        ERR4   =  4203        EXIT   =*602504       FEL    =*103035
 ESCAPE = 11727        ETYPE  = 11752        FINDN  =*103126       FINDP  =*103141
 EX2    =  4776        FD     =  6030        FLEAS  =*110717       FLEA1  = 10734
-FSTCLB =   202        FIG    =  4777        FLST   =*102253       FELN   =*103041
+FIFCLB =   202        FIG    =  4777        FLST   =*102253       FELN   =*103041
 FINDS  =*103113       FIRSTA = 12050        FOCBL1 =  1354        FOBBL  =   463
 FLEA2  = 10744        FLEA3  = 10752        FOHBL  =  7105        FOCBL2 =  1422
 FOBBL1 =   542        FOCBL  =   531        FOUCLB =   201        FOLBL  =  7215
 FOCBL3 =  1373        FOCBL4 =  1404        FSTCLB =   176        FREE   = 12011
-FOHBL  =  7171        FOPBL  =  7274        GARR2  =  2714        GAMMA  =  4761
+FONBL  =  7171        FOPBL  =  7274        GARB2  =  2714        GAMMA  =  4761
 FRSTCH =  1771        FSBPI  = 11755        GD     =  6070        GBCDR  =  2601
-GARR   =  2627        GARR1  =  2652        GETSP  =*102312       GBRTN  =  2617
+GARB   =  2627        GARB1  =  2652        GETSP  =*102312       GBRTN  =  2617
 GBD    =  2716        GBD1   =  2732        GNTR   =  2541        GIND   =  2241
-GBUG   =  2242        GB2    =  2544        GR1    =  3165        GDM    = 12020
+GBUG   =  2242        GB2    =  2544        GDM    = 12020
 GETD   =*110701       GETD1  = 10716        GBRNCH =  2533        GRHA   =  3155
 GITEM  =  2562        GNIL   =  2605        GR1    =  3165        GR2    =  3225
 GRID   = 12034        GRRB   =  3221

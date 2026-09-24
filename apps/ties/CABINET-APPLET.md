@@ -73,7 +73,12 @@ Stop/Run, 🔄 Reset), the menu row (program, readout, speed, 🖨️ SVG,
 📷 PNG to the clipboard), then the program's rows: Demo and the
 recorder, key help, and a closed Memory drawer: a raw core browser
 (octal, live while open; changed words light up; click a word to
-follow it as an address; the wheel scrolls).
+follow it as an address; the wheel scrolls). A program's `symbols()`
+feeds the drawer's symbol menu and address box, which takes octal, a
+name, or `NAME+offset`; words with a symbol are underlined, and every
+tooltip names its location as `NAME+offset`. SYMELEC's come from
+`symelec-symbols.tsv` (`scripts/extract-symbols.mjs`, from the
+listing), the light pen test's from its own assembly; DUEL has none.
 The tube's size reserves room for the first three rows only, so it
 does not change with the program. Drag the left, right or bottom edge
 to resize (the figure stays centred); double-click an edge to fit the
