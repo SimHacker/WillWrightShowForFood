@@ -156,6 +156,32 @@ vendor's internal state, because nobody outside the vendor has it. An emulated o
 test bed where both are visible is where that reading gets measured, and where its error rate is
 known before a clinician relies on it.
 
+How far an agent can reach depends on the machine, and hospitals have every kind:
+
+- **A stock Windows or macOS workstation**: the record client, the PACS viewer, many planning
+  stations. Screen Angel works as it does on The Sims: accessibility tree, screen capture,
+  synthetic input. Two things narrow it. Clinical workstations are often locked down so nothing
+  can be installed, and many applications arrive through Citrix or a remote desktop, which leaves
+  only pixels (Prefab's case).
+- **A bespoke device with a video output and standard input ports**: an ultrasound cart, an
+  endoscopy tower, a scanner console. A capture card takes the video; a USB device that presents
+  itself as a keyboard, mouse or button box injects input, as KVM-over-IP boxes do. Nothing is
+  installed on the device. Custom button panels need an adaptor spliced into the wiring, and that
+  changes the hardware.
+- **A device with only its own screen and buttons**: pumps, ventilators, bedside monitors, the
+  machines that go ping. The only way in is a camera: the clinician points a phone or tablet at the
+  device, the agent reads the display and says which button to press, and the clinician presses
+  it. The agent sees and advises; only the human acts.
+- Some devices also send data out over a serial or network port, usually read-only. That gives
+  the agent a second channel to check its reading of the screen against, where it exists.
+
+The camera case is the essay's rule with nothing left over: the agent has no verb of its own, the
+clinician does every step on the controls they were trained on, and each instruction is on the
+record before the button is pressed. It is also the case where the reading is hardest (glare,
+angle, seven-segment digits, a screen that changes as the hand moves), so it needs the same
+measurement against ground truth as the other cases: an emulated device, or a real one whose
+data port gives what the screen should show.
+
 The medical version sharpens three things the game version already has. The overlay leaves the
 certified binary unmodified, so the question is whether the combination still counts as the same
 device. The keylogger problem from Part 4 becomes patient privacy. And the rule that the
@@ -164,9 +190,12 @@ screens a clinician drives produces actions the clinician can watch, audit and t
 software the clinician already knows.
 
 - Extends: [Screen Angel](https://github.com/SimHacker/moollm/blob/main/designs/interface-to-agency/screen-angel.md).
-- Needs: which systems in each Think Tank member's workflow cannot be replaced or changed, how
-  people bridge them today, whether anyone has seen automation driving clinical screens and how it
-  was audited, and how regulators treat an overlay on a certified system.
+- Needs: which systems in each Think Tank member's workflow cannot be replaced or changed, and
+  which of the four kinds each one is; whether clinical workstations there allow installed
+  software or come through Citrix; how people bridge the systems today; whether anyone has seen
+  automation driving clinical screens or devices and how it was audited; and how regulators treat
+  each kind: an overlay on a certified workstation application, video capture and injected USB
+  input on a certified device, and a phone that only tells the clinician which button to press.
 
 ### 6. What medicine already has
 
