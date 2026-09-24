@@ -40,7 +40,12 @@ in [`@wwsff/cabinet`](../../packages/cabinet/):
   cycles-per-frame budget, pause on `visibilitychange`;
 - pen: `setPointerCapture` + `touch-action: none`, pointer position →
   `LightPen.point()` in grid coordinates; `pointerType === "pen"` and
-  touch get wider apertures (WEB-BENCH item 6);
+  touch get wider apertures (WEB-BENCH item 6); a press that has not
+  moved 4 px is a tap: the pen sees for 100,000 cycles and then goes
+  blind until it moves, and a click shorter than 20,000 cycles is held
+  that long, because SYMELEC takes a lightbutton held past about 250,000
+  cycles as a second tap ([BUG-JOURNAL](../../packages/cabinet/BUG-JOURNAL.md),
+  "S would not stay F");
 - print screen: a control that downloads `toSvg(lastFrame)` — every
   reader can take home a provenance-carrying snapshot.
 

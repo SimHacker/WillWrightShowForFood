@@ -862,10 +862,53 @@
 		return () => el.removeEventListener('wheel', onMemWheel);
 	});
 
+	// A mouse is not a light pen. SYMELEC takes a lightbutton left under the pen for
+	// about 250 ms as a second tap: S opens an element, then the F now under the pen
+	// closes it. So a press that has not moved sees for PEN_TAP_CYCLES of machine time
+	// and then goes blind until it moves, and a click shorter than PEN_MIN_CYCLES is
+	// held that long, so it cannot fall between frames or be lost at a slow speed.
+	const PEN_MIN_CYCLES = 20_000;
+	const PEN_TAP_CYCLES = 100_000;
+	const PEN_MOVE_PX = 4;
+	let press = null;
+
+	function penDeadline() {
+		if (!press || !pen) return Infinity;
+		if (press.lifted) return press.at + PEN_MIN_CYCLES;
+		if (!press.moved && pen.enabled) return press.at + PEN_TAP_CYCLES;
+		return Infinity;
+	}
+
+	function penRules() {
+		if (!press || !pen) return;
+		const held = box.cycles - press.at;
+		if (press.lifted) {
+			if (held < PEN_MIN_CYCLES) return;
+			pen.enabled = false;
+			press = null;
+			recordPen();
+		} else if (!press.moved && pen.enabled && held >= PEN_TAP_CYCLES) {
+			pen.enabled = false;
+			recordPen();
+		}
+	}
+
+	/** Run the machine, stopping at each pen deadline so a tap is the same length at every speed. */
+	function runMachine(cycles) {
+		let left = cycles;
+		while (left > 0) {
+			const n = Math.max(1, Math.min(left, penDeadline() - box.cycles));
+			box.run(n);
+			left -= n;
+			penRules();
+		}
+	}
+
 	/** One instruction; a demo or replay still gets its events at their cycles. */
 	function traceStep() {
 		if (!player) {
 			box.step();
+			penRules();
 			return;
 		}
 		player.advance((n) => box.run(n), 1);
@@ -936,7 +979,7 @@
 					switches = cpu.switches;
 					if (player.done) stopDemo();
 				} else {
-					box.run(cycles);
+					runMachine(cycles);
 				}
 			}
 			drawFrame();
@@ -976,6 +1019,7 @@
 			// Synthetic or already-released pointers cannot be captured; tracking still works.
 		}
 		pressedId = event.pointerId;
+		press = { at: box.cycles, x: event.clientX, y: event.clientY, moved: false, lifted: false };
 		pen.aperture = penAperture(event);
 		const { x, y } = gridFromEvent(event);
 		pen.point(x, y);
@@ -988,14 +1032,22 @@
 		pen.aperture = penAperture(event);
 		const { x, y } = gridFromEvent(event);
 		pen.point(x, y);
+		if (press && !press.moved && Math.hypot(event.clientX - press.x, event.clientY - press.y) > PEN_MOVE_PX) {
+			press.moved = true;
+			pen.enabled = true;
+		}
 		recordPen();
 	}
 
 	function onPointerUp(event) {
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
-		if (pen) pen.enabled = false;
-		if (pen) recordPen();
+		if (pen && press && box.cycles - press.at < PEN_MIN_CYCLES) press.lifted = true;
+		else if (pen) {
+			press = null;
+			pen.enabled = false;
+			recordPen();
+		}
 		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
 	}
 
@@ -1017,6 +1069,7 @@
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
+		press = null;
 		t340 = new Type340({
 			fetch: (a) => cpu.read(a),
 			store: (a, w) => cpu.write(a, w),

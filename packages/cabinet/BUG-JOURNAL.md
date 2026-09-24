@@ -388,6 +388,25 @@ about 25 to the last one is dropped. An endpoint within about 20 of a
 node snaps to it, so the battery plates sit well clear of the wire ends.
 And the cross wraps to the bottom if carried much above 970.
 
+### S would not stay F
+
+**Symptom.** Clicking A, B or the other ring labels worked; clicking S
+did nothing, so no element could be opened and nothing drawn.
+**Cause.** SYMELEC re-reads a lightbutton held under the pen. A press on
+S turns the ring to F (location 55 goes from 233700 to 63700), and the F
+now under the pen is still held down about 250,000 cycles later, which is
+a second tap: F closes the element and the ring reads S again. A hold of
+150,000 cycles or less ends on F; 250,000 or more ends on S. At 1× that
+is a press of about 440 ms, which a careful click on a 12-pixel target
+reaches; at the faster speeds any click does.
+A light pen was a thing you touched and took away; a mouse button stays
+down while the hand aims. **Fix.** A press that has not moved more than
+4 pixels sees for 100,000 cycles (175 ms of machine time) and then goes
+blind until it moves, so a drag still carries the cross. A click shorter
+than 20,000 cycles is held that long, so it cannot fall between frames.
+Both are measured in machine cycles, so a tap is the same at every speed
+and a recording replays it the same way. **Kind:** ours.
+
 ## Rung 7: DEC's light pen diagnostic, and an assembler
 
 SYMELEC was the only program that had ever tested the cabinet's light
