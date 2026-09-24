@@ -1464,14 +1464,14 @@
 		{#if ttyOpen}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
 			<div class="row app tty">
-				<pre
+				<div
 					class="tty-paper"
 					bind:this={ttyEl}
 					tabindex="0"
 					role="textbox"
 					aria-label="Teletype paper. Click, then type: upper case, Return is CR, Backspace is RUBOUT."
 					onkeydown={onTtyKey}
-					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</pre>
+					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</div>
 				{#if ttyPaper.length === 1 && !last}
 					<p class="mem-hint">Nothing printed yet. Click the paper and type; a KSR-33 has upper case only.</p>
 				{/if}
