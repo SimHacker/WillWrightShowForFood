@@ -171,13 +171,17 @@ How far an agent can reach depends on the machine, and hospitals have every kind
 - **A device with only its own screen and buttons**: pumps, ventilators, bedside monitors, the
   machines that go ping. The only way in is a camera: the clinician points a phone or tablet at the
   device, the agent reads the display and says which button to press, and the clinician presses
-  it. The agent sees and advises; only the human acts.
+  it, then points the camera at the display again so the agent can check that the device shows
+  what it should before giving the next step. A mismatch stops the sequence there. The agent sees,
+  advises and checks; only the human acts.
 - Some devices also send data out over a serial or network port, usually read-only. That gives
   the agent a second channel to check its reading of the screen against, where it exists.
 
 The camera case is the essay's rule with nothing left over: the agent has no verb of its own, the
-clinician does every step on the controls they were trained on, and each instruction is on the
-record before the button is pressed. It is also the case where the reading is hardest (glare,
+clinician does every step on the controls they were trained on, each instruction is on the
+record before the button is pressed, and the device's state after each press is on the record
+too, as the image the check was made from. The same check-after-acting applies in the other
+cases, where the agent reads the screen after its own input. It is also the case where the reading is hardest (glare,
 angle, seven-segment digits, a screen that changes as the hand moves), so it needs the same
 measurement against ground truth as the other cases: an emulated device, or a real one whose
 data port gives what the screen should show.
