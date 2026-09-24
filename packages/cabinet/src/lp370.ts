@@ -28,7 +28,11 @@ export function assembleLp370(sources: Readonly<Record<(typeof LP370_TAPES)[numb
 
 /** Deposit the program and point the CPU at 22. Throws if it did not assemble clean. */
 export function bootLp370(cpu: Pdp7, program: AsmResult, switches = 0): void {
-	if (program.errors.length > 0) throw new Error(`lp370 did not assemble: ${program.errors.join("; ")}`);
+	const e = program.errors;
+	if (e.length > 0) {
+		const more = e.length > 5 ? `; and ${e.length - 5} more` : "";
+		throw new Error(`lp370 did not assemble: ${e.slice(0, 5).join("; ")}${more}`);
+	}
 	loadAsm(cpu, program);
 	cpu.switches = switches;
 	cpu.pc = LP370_START;

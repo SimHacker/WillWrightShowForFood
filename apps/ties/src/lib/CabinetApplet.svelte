@@ -28,7 +28,8 @@
 	let canvasEl = $state(null);
 	let figureEl = $state(null);
 	let captionEl = $state(null);
-	let switchesEl = $state(null);
+	const SWITCH_BITS = Array.from({ length: 18 }, (_, i) => 0o400000 >>> i);
+	let paused = $state(false);
 	let fitSide = $state(null);
 	let status = $state('loading');
 	let error = $state(null);
@@ -53,8 +54,7 @@
 	function fit(scroller) {
 		if (!figureEl) return;
 		const width = figureEl.parentElement?.clientWidth ?? size;
-		const height =
-			scroller.clientHeight - (captionEl?.offsetHeight ?? 28) - (switchesEl?.offsetHeight ?? 0) - TITLE_ALLOWANCE;
+		const height = scroller.clientHeight - (captionEl?.offsetHeight ?? 56) - TITLE_ALLOWANCE;
 		fitSide = Math.floor(Math.max(MIN_SIDE, Math.min(size, width, height)));
 	}
 	const bootChunk = 100_000;
@@ -180,7 +180,7 @@
 		lastReadout = now;
 		cyclesAtReadout = box.cycles;
 		const extra = program?.status(cpu);
-		readout = `${(rate / 1e6).toFixed(2)}M/s · pen ${pen.enabled ? 'down' : 'up'}${extra ? ` · ${extra}` : ''}`;
+		readout = `${(rate / 1e6).toFixed(2)}M/s · ✍️${pen.enabled ? '⬇️' : '⬆️'}${extra ? ` · ${extra}` : ''}`;
 	}
 
 	// Schedule first, then work: one bad frame must not stop the machine.
@@ -191,8 +191,14 @@
 			lastNow = null;
 			return;
 		}
-		const dt = lastNow === null ? 0 : Math.min(now - lastNow, MAX_DT_MS);
+		const dt = lastNow === null || paused ? 0 : Math.min(now - lastNow, MAX_DT_MS);
 		lastNow = now;
+		if (paused) {
+			owed = 0;
+			drawFrame();
+			updateReadout(now);
+			return;
+		}
 		owed = speed === Infinity ? MAX_CYCLES_PER_FRAME : owed + dt * CYCLES_PER_MS * speed;
 		const cycles = Math.min(Math.floor(owed), MAX_CYCLES_PER_FRAME);
 		owed = Math.min(owed - cycles, MAX_CYCLES_PER_FRAME);
@@ -337,6 +343,11 @@
 		const next = programById(event.currentTarget.value);
 		if (!next) return;
 		programId = next.id;
+		await onReset();
+	}
+
+	async function onReset() {
+		paused = false;
 		try {
 			await boot();
 			drawFrame();
@@ -469,18 +480,17 @@
 			</div>
 		{/if}
 	</div>
-	{#if demoOn}
-		<p class="demo-caption" aria-live="polite">{demoCaption || ' '}</p>
-	{/if}
-	{#if program?.switchLabels}
-		<div class="switches" role="group" aria-label="Console AC switches, bit 0 on the left" bind:this={switchesEl}>
-			{#each program.switchLabels as label, i (i)}
-				{@const bit = 0o400000 >>> i}
+	<!-- Fixed order: front panel, menu row, then rows the program adds. Nothing above a row moves when it comes or goes. -->
+	<figcaption bind:this={captionEl}>
+		<div class="row panel" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left">
+			{#each SWITCH_BITS as bit, i (i)}
+				{@const label = program?.switchLabels?.[i] ?? ''}
 				<button
 					type="button"
 					class="switch"
 					class:on={(switches & bit) !== 0}
 					class:named={label !== ''}
+					class:dim={!!program?.switchLabels && label === ''}
 					class:group={i % 3 === 0 && i > 0}
 					aria-pressed={(switches & bit) !== 0}
 					title="switch {i}{label ? `: ${label}` : ''}"
@@ -488,39 +498,63 @@
 					onclick={() => onSwitch(bit)}>{i}</button
 				>
 			{/each}
-			<span class="octal">{switches.toString(8).padStart(6, '0')}</span>
-		</div>
-		{#if program.keyHelp}
-			<p class="keys">Click the tube, then: {program.keyHelp}</p>
-		{/if}
-	{/if}
-	<figcaption bind:this={captionEl}>
-		<select
-			class="program"
-			aria-label="Program"
-			title={program?.title}
-			value={programId}
-			disabled={status === 'booting' || demoOn}
-			onchange={onProgram}
-		>
-			{#each PROGRAMS as p (p.id)}
-				<option value={p.id}>{p.label}</option>
-			{/each}
-		</select>
-		{#if fault}
-			<span class="fault" title={fault}>fault: {fault}</span>
-		{:else}
-			<span class="readout">{readout}</span>
-		{/if}
-		<span class="buttons">
+			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 			<button
 				type="button"
-				title="1× is a real PDP-7: 571,429 memory cycles a second"
-				onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
-				>{speed === Infinity ? 'max' : `${speed}×`}</button
+				class="console"
+				disabled={status !== 'live'}
+				title={paused ? 'Continue from where the machine stopped' : 'Stop the processor'}
+				onclick={() => (paused = !paused)}>{paused ? 'Run' : 'Stop'}</button
 			>
-			<button type="button" disabled={status !== 'live'} onclick={onPrintScreen}>Print screen</button>
-		</span>
+			<button
+				type="button"
+				class="console"
+				disabled={status === 'booting' || demoOn}
+				title="Clear core and boot {program?.label ?? 'the program'} again"
+				onclick={onReset}>Reset</button
+			>
+		</div>
+		<div class="row menu">
+			<select
+				class="program"
+				aria-label="Program"
+				title={program?.title}
+				value={programId}
+				disabled={status === 'booting' || demoOn}
+				onchange={onProgram}
+			>
+				{#each PROGRAMS as p (p.id)}
+					<option value={p.id}>{p.label}</option>
+				{/each}
+			</select>
+			{#if fault}
+				<span class="fault" title={fault}>fault: {fault}</span>
+			{:else}
+				<span class="readout">{paused ? 'stopped' : readout}</span>
+			{/if}
+			<span class="buttons">
+				<button
+					type="button"
+					title="1× is a real PDP-7: 571,429 memory cycles a second"
+					onclick={() => (speedIndex = (speedIndex + 1) % SPEEDS.length)}
+					>{speed === Infinity ? 'max' : `${speed}×`}</button
+				>
+				<button
+					type="button"
+					class="print"
+					aria-label="Print screen"
+					title="Print screen: save the tube as SVG"
+					disabled={status !== 'live'}
+					onclick={onPrintScreen}>🖨️</button
+				>
+			</span>
+		</div>
+		{#if demoOn}
+			<p class="row app demo-caption" aria-live="polite">{demoCaption || ' '}</p>
+		{/if}
+		{#if program?.keyHelp}
+			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
+		{/if}
 	</figcaption>
 </figure>
 
@@ -580,27 +614,48 @@
 		pointer-events: none;
 	}
 	.demo-caption {
-		margin: 0;
-		padding: 0.3rem 0.5rem;
-		min-height: 1.2em;
 		font-family: ui-monospace, monospace;
 		font-size: 0.72rem;
 		color: #ffd27a;
-		border-top: 1px solid #333;
 	}
 	.overlay .err {
 		color: #f88;
 		padding: 0 1rem;
 		text-align: center;
+		max-height: 100%;
+		overflow: auto;
+		overflow-wrap: anywhere;
+		pointer-events: auto;
 	}
 	figcaption {
+		font-size: 0.75rem;
+	}
+	.row {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
 		gap: 0.5rem;
-		padding: 0.35rem 0.5rem;
-		font-size: 0.75rem;
+		margin: 0;
+		padding: 0.3rem 0.5rem;
+		min-height: 1.5rem;
 		border-top: 1px solid #333;
+	}
+	.row.menu {
+		justify-content: space-between;
+	}
+	.row.panel {
+		gap: 2px;
+		font-family: ui-monospace, monospace;
+	}
+	.row.app {
+		display: block;
+		min-height: 0;
+	}
+	.console {
+		margin-left: 0.35rem;
+	}
+	.print {
+		padding: 0.05rem 0.35rem;
+		line-height: 1;
 	}
 	.program {
 		font: inherit;
@@ -611,24 +666,14 @@
 		background: #000;
 		color: inherit;
 	}
-	.switches {
-		display: flex;
-		align-items: center;
-		gap: 2px;
-		padding: 0.3rem 0.5rem;
-		border-top: 1px solid #333;
-		font-family: ui-monospace, monospace;
-	}
 	.switch {
 		width: 1.35rem;
 		padding: 0.1rem 0;
 		font-size: 0.6rem;
+	}
+	.switch.dim {
 		border-color: #3a5a3a;
 		opacity: 0.55;
-	}
-	.switch.named {
-		border-color: #9fe8a0;
-		opacity: 1;
 	}
 	.switch.group {
 		margin-left: 0.3rem;
@@ -638,8 +683,6 @@
 		color: #000;
 	}
 	.keys {
-		margin: 0;
-		padding: 0 0.5rem 0.3rem;
 		font-size: 0.68rem;
 		opacity: 0.8;
 	}

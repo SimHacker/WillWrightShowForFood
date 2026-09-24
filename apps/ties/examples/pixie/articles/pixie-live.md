@@ -17,31 +17,26 @@ mode: honest
 size: 512
 ```
 
-**What you are looking at.** The picture is drawn by the program, not by this web page: SYMELEC's own display file, executed by an emulated Type 340 vector display. Nothing on the tube is a web button.
+**What you are looking at.** Everything on the tube is drawn by SYMELEC, running on an emulated PDP-7 and Type 340 display. Your mouse is the light pen.
 
-- **The column on the right** is PIXIE's lightbutton menu: DR, HV, RU, SF, PO, AT, IN, SC, CA, RE, RO, EN. IN (intensity), SC (scale), CA, RE (reduce) and RO (rotate) act on a selected element, so on an empty picture they do nothing. That is the 1972 behavior, not a fault.
-- **The + in the middle** is the tracking cross. The faint square around it is the small search raster: a light pen only sees light, so the program draws something for the pen to see and moves it wherever the pen goes. Every pen hit, including a hit on a lightbutton, turns the raster up to full brightness; the next display stop turns it back down. That is why it flares while you hold the button.
-- **The letters around the cross** are the control lightbuttons that ride with the cross: the earliest known radial menu. The buttons on the right change which letters it shows. While the pen sits on the cross they are not drawn, so they dim while you drag.
-- **PIXIE at the bottom left** is a patched word. The 1972 listing has `201128` there, which contains an 8 and is not an octal number. The assembler printed `*DECIMAL DIGIT IN OCTAL NUMBER` and stored 0, so the machine as printed draws garbage before "IE". Heinz circled it in pencil, dated it 12.7.72 and ticked it. This page loads the listing exactly as printed, then patches that one word to `201130`, P I X in the 340's character code. Add `patches: []` to the cabinet block to see the 1972 garbage.
-- **Room for more than one line** is the other patch, `core8k`. As assembled, the listing gives the picture 77 words of display file, and one line fills it; the second makes SYMELEC print an error and start over, blank. Beside each of those seven words Heinz wrote the full 8K layout in the comment. This page loads what he wrote.
-- **A bigger picture** is the third patch, `bigpic`, and it is ours, not Heinz's. His 8K layout splits the top 2500 words between the display file (511 words) and the free list the data structure lives in (1919 cells). The demo's picture needs about 730 words of display file, so `bigpic` moves the boundary up to give 735 and leaves 1695 cells. Four words change. The memory above that is the program's stacks, and SYMELEC addresses only 8K, so this is about as big as a picture gets.
+- **The + in the middle** is the tracking cross. It follows the pen.
+- **The letters around it** are a radial menu, the earliest known one.
+- **The column on the right** is the command menu. IN, SC, CA, RE and RO act on a selected element, so on an empty picture they do nothing.
 
-**How to drive it.** Press on the cross and drag slowly; the cross follows because SYMELEC's tracking loop recenters it on every pen hit. Move too fast and the pen outruns the search raster, so the cross stays behind: the authentic way to lose it. Let go and the pen is lifted; it sees nothing.
+**Draw a line.** Press on the cross and drag slowly; too fast and the cross is left behind.
 
-**Draw a line.**
-
-1. Tap **S** in the ring, the letter at the upper left of the cross. It turns into **F**: you are drawing.
-2. Lines step horizontally and vertically by default (HV). For a straight line, tap **RU** in the right column now, before you move.
-3. Drag the cross. The line follows it. Let go and drag again for the next corner.
+1. Tap **S**, upper left of the cross. It turns into **F**.
+2. For a straight line tap **RU** on the right; the default, HV, draws in steps.
+3. Drag. Let go and drag again for the next corner.
 4. Tap **F** to finish.
 
-Draw as many as you like. Two things the 1972 program does that a modern one would not: an RU element is one rubber-band line, start to last release (corners need HV, which turns a diagonal drag into a staircase); and if the pen passes over a lit line on the way somewhere, the line catches the cross. Carry it around the picture, not across it.
+A lit line the pen passes over catches the cross, so carry it around the picture, not across it.
 
-**Demo** reboots the machine and lets a scripted pen draw a house under a rising sun: walls and a door in one HV element, a window, a staircase roof, five RU rays, an RU ground line. Then a tree, a hedge, a flag over the roof, and in the sky a circuit, which is what SYMELEC was for: a wire loop with a square-wave resistor, a battery of two RU plates, and an open switch. The gold circle is the pen: its detection radius, with a light at the tip when it is pressed to the glass. Every stroke is drawn by SYMELEC; the script only moves the pen, taps letters, and looks at the ring to see whether a tap landed, as a person at the tube would. The same script runs headless as the emulator's acceptance test. The button is disabled until the demo finishes.
+**Demo** reboots and lets a scripted pen draw a house, a sun, a tree and a circuit. Every stroke is SYMELEC's; the script only moves the pen. The picture then nearly fills memory: one or two more elements and SYMELEC starts over, blank.
 
-The finished demo nearly fills the machine. Each element costs 60 to 100 words of free list whatever its size, so there is room for about one more; add two and SYMELEC prints NOTE 2 or NOTE 1 and starts over, blank. Press **Demo** again, or reboot, to get an empty picture back.
+**Under the tube.** The top row is the PDP-7 console: the eighteen AC switches, **Stop**/**Run**, and **Reset**. Below it, the program menu, speed (**1×** is the real PDP-7), and **Print screen**, which saves an SVG. The menu also has DEC's 1964 light pen test and DUEL, spacewar for two on one keyboard.
 
-The caption under the tube shows the speed, the pen, and where the cross is. **1×** runs the PDP-7 at its real speed; tap it for 10× or max, which also speeds up the demo. **Print screen** saves the picture as SVG, each stroke tagged with the display-file address that drew it.
+The three words this page patches, and why, are in the ~Bug journal~.
 
 **Where to go next.**
 
