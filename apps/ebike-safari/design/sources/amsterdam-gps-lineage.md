@@ -45,7 +45,7 @@ Will Wright needed for CurrentTV — and led back to Stupid Fun Club.
 | **Coffeeshops iPhone app** | Native app over the DB — look-and-feel, field photos | Mobile field capture → ride-attached media |
 | **Coffeeshops website** | Web front on the same DB | Static JSON + Git replaces server-rendered pages |
 | **LayAR app** | AR overlay on real streets from the same DB | AR is amber; **continuous trace + OSM** replaces point POI tap |
-| **BONGO BINGO** | Web/mobile game: random coffeeshop bingo card, **bike around**, GPS check-in via Foursquare API, reviews feed back into DB | Gamified exposure without mayorships; **novel-type sets** not random bingo tiles |
+| **BONGO BINGO** (2011, on the same DB) | Web/mobile game: random coffeeshop bingo card, **go there**, Foursquare venue history marks the squares ([`../bongo-bingo.md`](../bongo-bingo.md)) | Gamified exposure without mayorships; **novel-type sets** not random bingo tiles |
 
 Videos (historical): [iLoci](https://www.youtube.com/watch?v=03ddG3jWF98) · [Coffeeshops app](https://www.youtube.com/watch?v=nG90XG3STz8)
 

@@ -40,6 +40,7 @@ don't port the stack.
 | Peerboard and brews | [`peerboard-and-brews.md`](peerboard-and-brews.md) | draft — MMORPG |
 | Semantic polder | [`semantic-polder.md`](semantic-polder.md) | draft — waterschap / Git-as-MMORPG |
 | Map game platform | [`map-game-platform.md`](map-game-platform.md) | draft — many games, one map, layer composability; **the third-party test** — Safe Lanes as a contract, the frame not the plate |
+| Layers and games | [`layers-and-games.md`](layers-and-games.md) | draft — information layers (amsterdank) and games (Bongo Bingo) as tenants over the ride; what Urban Safari and StoryMaker were reaching for |
 | Bongo Bingo | [`bongo-bingo.md`](bongo-bingo.md) | shipped 2011 on Foursquare; tenant contract proposed — a mark is a visit, not a pass |
 | ONI / pinball platform | [`oni-map-platform.md`](oni-map-platform.md) | draft — street-graph ONI, bike pinball, replay branches |
 | Embedding views | [`embedding-views.md`](embedding-views.md) | draft — factories, multi-embed plugins |

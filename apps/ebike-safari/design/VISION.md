@@ -37,7 +37,9 @@ the ride is a program written on the street graph.
 
 **Many games, one map — one shared data plane.** Exposure, territory, garden, polder, herding,
 story, and future tenants **read and write the same stores**; layers are projections
-([`map-game-platform.md`](map-game-platform.md)).
+([`map-game-platform.md`](map-game-platform.md)). Information layers such as the amsterdank
+coffeeshop register, and games such as Bongo Bingo, are tenants too
+([`layers-and-games.md`](layers-and-games.md)).
 
 ## One line
 
