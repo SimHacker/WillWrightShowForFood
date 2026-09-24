@@ -391,8 +391,7 @@ schema when a condition makes it reliable: "pump reading disagrees with order" b
 the pump is paused for a line change". Where no observed condition explains the failures, the
 mechanism proposes a hidden one. An LLM can propose candidate conditions from the evidence and the
 discussion, grounded in what the camera and the event history record, and the statistics decide
-which ones stay. Drescher's work is also in Leela's own lineage, through Henry Minsky's work on
-schema learning.
+which ones stay.
 
 Patient data cannot go to a public service, so in a hospital the repository, the issues and the
 agents run inside the hospital's own systems, and the evidence is de-identified before it reaches
