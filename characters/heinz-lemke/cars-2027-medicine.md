@@ -129,13 +129,14 @@ stays fixed: every word of core, every register, every display list, at every st
 for Little Computer People or Mind Mirror in an Apple II emulator, and for Micropolis compiled to
 WebAssembly with a TypeScript interface.
 
-That openness has already paid off. tiny-titan, the stand-in for the Cambridge Titan at the other
-end of the link, reads PIXIE's ring structures out of the running machine's memory, serializes
-them, sends them back over the emulated link, and checks that they come back word for word. The
-round trip tests the link code, and it tests the transcription: a word misread in the OCR of the
-1972 listing, or a bug from the 1970s, shows up as a structure that does not survive. The same
-access supports a live display of the ring structures in memory, next to the serialized copies
-tiny-titan keeps on disk.
+That openness has already paid off. When PIXIE is told to save, it sends its ring structures over
+the emulated link to tiny-titan, the stand-in for the Cambridge Titan. A test decodes what arrives,
+checks the stream heading against the variables in the running machine's memory, and re-encodes
+the structures to exactly the words that crossed the wire. That tests the link code and the codec,
+and it tests the transcription: a word misread in the OCR of the 1972 listing, or a bug from the
+1970s, shows up as a structure that does not decode or does not match memory. Sending structures
+back into PIXIE is the next step. The same access supports a live view and editor of the ring
+structures, in memory as PIXIE runs and in the files tiny-titan keeps.
 
 Because it runs in a browser, the standard browser test tools apply (Playwright, as in the
 questionnaire project). A test can drive PIXIE, the emulator and the 340 display through two
@@ -200,6 +201,10 @@ For Mario:
 For Leo:
 - Which steps in computer-aided orthopaedic surgery did surgeons refuse to hand over?
 - May the essay quote your 14 August reply?
+- Reply to him personally about "a fool with a tool remains a fool": it has a relative in the
+  X-Windows disaster notice, which Don remembers being handed out at an early X conference (X10
+  era), with lines such as "power tools for power fools" and "the world's first fully modular
+  software disaster"; Don's X chapter of *The UNIX-Haters Handbook* is the citable relative.
 
 For Roy:
 - Would the students' PIXIE re-implementation be shown in the same session?

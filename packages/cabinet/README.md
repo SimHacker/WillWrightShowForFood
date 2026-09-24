@@ -149,6 +149,9 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 ### Next
 
 - Serve a structure *back* over the link.
+- A live view and editor of PIXIE's ring structures, in core while it
+  runs and in tiny-titan's stored files, side by side
+  ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).
 - SIMH stays on the desk as the oracle.
 
 ### Where the bugs are written down

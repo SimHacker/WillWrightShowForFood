@@ -156,7 +156,11 @@ Ladder: **stub met** (portless `TinyTitan`: `LSF` always skips, the
 `TITAN` command cannot wedge the machine) and **echo met** — the
 acceptance test boots SYMELEC, types `TITAN` on the teletype, and the
 recorded transfer opens with `PXID` followed by `DSBEG`/`DSEND`/
-`SAVINS` and the live ring words from core. Next: `filestore` (named
+`SAVINS` and the live ring words from core. **Decode met** in
+[`packages/pixie`](../pixie/): its acceptance test decodes that
+transfer, checks the heading against the `BEG`, `END` and `SAVINS`
+variables in core, classifies every word, and re-encodes the image to
+exactly the words that crossed the wire. Next: `filestore` (named
 slots; localStorage in browser, fs on node), then serving structures
 *back* (direction bit `0o200000`), which is the same machine with the
 queue running the other way.
@@ -185,7 +189,7 @@ puts the received picture on the tube.
 Remote control is not a console protocol: the Cabinet is a TS object.
 Examine/deposit/step over the same WebSocket, a dozen lines.
 
-## The application layer — `packages/pixie` (separate module, planned)
+## The application layer — `packages/pixie` (separate module)
 
 The cabinet is the machine; PIXIE's ring structures are an application format
 and live beside it, not inside it — the way SYMELEC sat on the PDP-7.
@@ -208,6 +212,27 @@ One codec, three consumers: the mini-Titan filestore; **test-model
 generation** (build a drawing in TS, feed it to 1969 PIXIE over the link,
 watch it render); **extraction** (pull out what the user drew with the pen).
 Acceptance test for free: encode → link → PIXIE → link → decode → deep-equal.
+
+Built in `packages/pixie`: the word classes and the relocation pass,
+`RingBuilder` cells with CAR/CDR walks, `encodeTransfer`/`decodeTransfer`
+with a round trip through relocation, Graftal ferns through the real 340
+to SVG, and the acceptance test against the transfer 1972 SYMELEC
+actually sends (PDP → Titan, re-encoded word for word). Not built: the
+Titan → PDP half, so a structure made in TypeScript has not yet been
+drawn by PIXIE.
+
+**To do: a live view and editor of ring structures, in memory and on
+disk.** The emulator exposes every word of core, so the page can show
+PIXIE's ring structure as a graph while PIXIE runs: nodes, branches,
+rings and subpictures from `DSBEG` to `DSEND`, with `SAVINS` marked,
+updating as the pen draws. The same view opens the ring files
+tiny-titan records, so the copy in memory and the copy on disk sit side
+by side and a difference between them is visible. Editing goes through
+the codec in both places: edit a stored file and serve it back over the
+link, or deposit into core while PIXIE runs and watch the tube change.
+Uses beyond the demonstration: a check on the transcription, since a
+misread word shows up as a pointer to nowhere or a ring that does not
+close, and a way to show Heinz his 1969 data structures running.
 
 ## Media — what the machine eats and excretes
 
