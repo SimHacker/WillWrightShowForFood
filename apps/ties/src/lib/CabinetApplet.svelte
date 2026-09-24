@@ -13,7 +13,9 @@
 		TinyTitan,
 		Cabinet,
 		DemoPlayer,
-		houseDemo,
+		SessionRecorder,
+		replaySession,
+		isSession,
 		printScreen
 	} from '@wwsff/cabinet';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
@@ -185,7 +187,66 @@
 		readout = `${(rate / 1e6).toFixed(2)}M/s`;
 		penDown = pen.enabled;
 		readoutExtra = extra ?? '';
+		refreshMem();
 	}
+
+	// Raw core browser: MEM_LINES lines of MEM_COLS words, octal. Clicking a word follows its
+	// low 13 bits as an address; the trail remembers where you came from.
+	const MEM_COLS = $derived(side >= 560 ? 8 : 4);
+	const MEM_LINES = 8;
+	const MEM_PAGE = $derived(MEM_COLS * MEM_LINES);
+	const CORE = 8192;
+	let memBase = $state(0o5640);
+	let memFocus = $state(-1);
+	let memWords = $state([]);
+	let memChanged = $state([]);
+	let memTrail = $state([]);
+	let memShownBase = -1;
+	let memEl = $state(null);
+
+	const oct = (n, width) => n.toString(8).padStart(width, '0');
+
+	function refreshMem() {
+		if (!cpu || !program?.memory) return;
+		const next = Array.from({ length: MEM_PAGE }, (_, i) => cpu.read((memBase + i) % CORE));
+		memChanged = memShownBase === memBase && memWords.length === next.length ? next.map((w, i) => w !== memWords[i]) : [];
+		memWords = next;
+		memShownBase = memBase;
+	}
+
+	function memGo(addr, remember = false) {
+		const a = ((addr % CORE) + CORE) % CORE;
+		if (remember) memTrail = [...memTrail.slice(-31), memBase];
+		memFocus = a;
+		memBase = a - (a % MEM_COLS);
+		refreshMem();
+	}
+
+	function memBack() {
+		if (!memTrail.length) return;
+		memBase = memTrail[memTrail.length - 1];
+		memTrail = memTrail.slice(0, -1);
+		memFocus = -1;
+		refreshMem();
+	}
+
+	function memAddrInput(event) {
+		const text = event.currentTarget.value.trim();
+		if (/^[0-7]+$/.test(text)) memGo(parseInt(text, 8), true);
+		else event.currentTarget.value = oct(memBase, 5);
+	}
+
+	$effect(() => {
+		const el = memEl;
+		if (!el) return;
+		const onWheel = (e) => {
+			e.preventDefault();
+			memGo(memBase + Math.sign(e.deltaY) * MEM_COLS * (e.shiftKey ? MEM_LINES : 1));
+			memFocus = -1;
+		};
+		el.addEventListener('wheel', onWheel, { passive: false });
+		return () => el.removeEventListener('wheel', onWheel);
+	});
 
 	// Schedule first, then work: one bad frame must not stop the machine.
 	function loop(now) {
@@ -211,6 +272,7 @@
 				if (player) {
 					player.advance((n) => box.run(n), cycles);
 					demoCaption = player.caption;
+					switches = cpu.switches;
 					if (player.done) stopDemo();
 				} else {
 					box.run(cycles);
@@ -257,6 +319,7 @@
 		const { x, y } = gridFromEvent(event);
 		pen.point(x, y);
 		pen.enabled = true;
+		recordPen();
 	}
 
 	function onPointerMove(event) {
@@ -264,12 +327,14 @@
 		pen.aperture = penAperture(event);
 		const { x, y } = gridFromEvent(event);
 		pen.point(x, y);
+		recordPen();
 	}
 
 	function onPointerUp(event) {
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
 		if (pen) pen.enabled = false;
+		if (pen) recordPen();
 		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
 	}
 
@@ -315,12 +380,34 @@
 		}
 	}
 
-	function startDemo() {
+	/** Reboot and run the program's scripted demo, or with replay, the recorded session. */
+	function startDemo(replay = false) {
 		pressedId = null;
+		stopRecording();
 		bootMachine();
-		player = new DemoPlayer(houseDemo({ cpu, pen }));
+		const script = replay
+			? session && replaySession(replayHandlers(), session, 'Replaying the recording')
+			: program.demo?.({ cpu, pen });
+		if (!script) return;
+		player = new DemoPlayer(script);
 		demoCaption = '';
 		demoOn = true;
+	}
+
+	// What a session can drive. Kinds without a handler are skipped.
+	function replayHandlers() {
+		return {
+			sw: (v) => (cpu.switches = Number(v)),
+			pen: (x, y, down, aperture) => {
+				if (aperture) pen.aperture = Number(aperture);
+				pen.point(Number(x), Number(y));
+				pen.enabled = !!down;
+			}
+		};
+	}
+
+	function recordPen() {
+		recorder?.record(box.cycles, 'pen', pen.x, pen.y, pen.enabled ? 1 : 0, pen.aperture);
 	}
 
 	function stopDemo() {
@@ -329,12 +416,83 @@
 		if (pen) pen.enabled = false;
 	}
 
+	// A recorded session per program, kept in this browser.
+	const sessionKey = (id) => `cabinet-session-${id}`;
+	function loadSession(id) {
+		try {
+			const s = JSON.parse(localStorage.getItem(sessionKey(id)) ?? 'null');
+			return isSession(s) && s.program === id ? s : null;
+		} catch {
+			return null;
+		}
+	}
+	let session = $state(null);
+	let recorder = null;
+	let recording = $state(false);
+	const canDemo = $derived(!!program?.demo);
+
+	async function onRecord() {
+		if (recording) {
+			stopRecording();
+			return;
+		}
+		await onReset();
+		if (status !== 'live') return;
+		recorder = new SessionRecorder(programId, cpu.switches, box.cycles);
+		recording = true;
+		canvasEl?.focus({ preventScroll: true });
+	}
+
+	function stopRecording() {
+		if (!recorder) return;
+		const s = recorder.finish(box.cycles);
+		recorder = null;
+		recording = false;
+		if (s.events.length === 0) return;
+		session = s;
+		try {
+			localStorage.setItem(sessionKey(s.program), JSON.stringify(s));
+		} catch {
+			// Storage full or blocked: the session still replays until the page is left.
+		}
+	}
+
+	let shot = $state('');
+
+	async function onCopyScreen() {
+		if (!canvasEl) return;
+		try {
+			const blob = await new Promise((resolve, reject) =>
+				canvasEl.toBlob((b) => (b ? resolve(b) : reject(new Error('no image'))), 'image/png')
+			);
+			await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+			shot = '✅';
+		} catch (e) {
+			shot = '❌';
+			console.error('copy screen', e);
+		}
+		setTimeout(() => (shot = ''), 1200);
+	}
+
+	function onDownloadSession() {
+		if (!session) return;
+		const blob = new Blob([JSON.stringify(session)], { type: 'application/json' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = `${session.program}-session.json`;
+		a.click();
+		URL.revokeObjectURL(url);
+	}
+
 	/** Load the program's tapes, boot it, and keep the machine running. */
 	async function boot() {
 		status = 'booting';
 		error = null;
 		fault = null;
 		stopDemo();
+		recorder = null;
+		recording = false;
 		pressedId = null;
 		held.clear();
 		await program.load?.();
@@ -346,7 +504,9 @@
 	async function onProgram(event) {
 		const next = programById(event.currentTarget.value);
 		if (!next) return;
+		stopRecording();
 		programId = next.id;
+		session = loadSession(next.id);
 		await onReset();
 	}
 
@@ -388,6 +548,7 @@
 		if (!cpu) return;
 		switches ^= bit;
 		cpu.switches = switches;
+		recorder?.record(box.cycles, 'sw', switches);
 	}
 
 	// Keys held right now, by KeyboardEvent.code. Two keys may share a switch.
@@ -395,7 +556,7 @@
 
 	function onKey(event, down) {
 		const key = program?.keys?.[event.code];
-		if (!key || !cpu) return;
+		if (!key || !cpu || player) return;
 		event.preventDefault();
 		if (down === held.has(event.code)) return;
 		if (down) held.add(event.code);
@@ -404,16 +565,21 @@
 		const set = program.keysActiveLow ? !holding : holding;
 		switches = set ? switches | key.bit : switches & ~key.bit;
 		cpu.switches = switches;
+		recorder?.record(box.cycles, 'sw', switches);
 	}
 
 	function releaseKeys() {
 		for (const code of [...held]) onKey({ code, preventDefault() {} }, false);
 	}
 
-	function onDemo() {
-		if (player || !program?.demo) return;
+	function onDemo(replay = false) {
+		if (player) {
+			stopDemo();
+			return;
+		}
+		if (replay ? !session : !canDemo) return;
 		try {
-			startDemo();
+			startDemo(replay);
 		} catch (e) {
 			error = e instanceof Error ? e.message : String(e);
 			status = 'error';
@@ -436,10 +602,11 @@
 					throw new Error(`unknown machine: ${spec.machine}`);
 				}
 
+				session = loadSession(programId);
 				await boot();
 				if (cancelled) return;
 
-				if (spec.demo && program.demo) startDemo();
+				if (spec.demo && canDemo) startDemo();
 				running = true;
 				drawFrame();
 				raf = requestAnimationFrame(loop);
@@ -455,6 +622,7 @@
 		const ro = new ResizeObserver(() => fit(scroller));
 		ro.observe(scroller);
 		if (figureEl?.parentElement) ro.observe(figureEl.parentElement);
+		if (captionEl) ro.observe(captionEl);
 		fit(scroller);
 
 		return () => {
@@ -468,16 +636,7 @@
 </script>
 
 {#if spec.title}
-	<p class="headline">
-		<strong>{spec.title}</strong>
-		<button
-			type="button"
-			class="demo"
-			disabled={status !== 'live' || demoOn || !program?.demo}
-			title="Reboot and let a scripted pen draw a picture, the 1972 way"
-			onclick={onDemo}>Demo</button
-		>
-	</p>
+	<p class="headline"><strong>{spec.title}</strong></p>
 {/if}
 <figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px">
 	<div class="tube-wrap" style:width="{side}px">
@@ -534,10 +693,11 @@
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 			<button
 				type="button"
-				class="console"
+				class="console icon"
+				aria-label={paused ? 'Run' : 'Stop'}
 				disabled={status !== 'live'}
-				title={paused ? 'Continue from where the machine stopped' : 'Stop the processor'}
-				onclick={() => (paused = !paused)}>{paused ? 'Run' : 'Stop'}</button
+				title={paused ? 'Run: continue from where the machine stopped' : 'Stop the processor'}
+				onclick={() => (paused = !paused)}>{paused ? '▶️' : '⏸️'}</button
 			>
 			<button
 				type="button"
@@ -588,13 +748,94 @@
 					disabled={status !== 'live'}
 					onclick={onPrintScreen}>🖨️</button
 				>
+				<button
+					type="button"
+					class="icon"
+					aria-label="Copy screen"
+					title="Copy the tube to the clipboard as a PNG"
+					disabled={status !== 'live'}
+					onclick={onCopyScreen}>{shot || '📷'}</button
+				>
 			</span>
 		</div>
-		{#if demoOn}
-			<p class="row app demo-caption" aria-live="polite">{demoCaption || ' '}</p>
-		{/if}
+		<div class="row app demo-row">
+			{#if program?.demo}
+				<button
+					type="button"
+					class="demo"
+					disabled={status !== 'live' || (demoOn ? false : recording)}
+					title={demoOn ? 'Stop' : program.demoTitle}
+					onclick={() => onDemo(false)}>{demoOn ? 'Stop' : 'Demo'}</button
+				>
+			{/if}
+			<button
+				type="button"
+				class="icon"
+				class:rec={recording}
+				aria-label={recording ? 'Stop recording' : 'Record'}
+				title={recording
+					? 'Stop recording and keep it'
+					: 'Record: reboot, then record switches, keys and pen until pressed again'}
+				disabled={status !== 'live' || demoOn}
+				onclick={onRecord}>⏺️</button
+			>
+			<button
+				type="button"
+				class="icon"
+				aria-label={demoOn ? 'Stop' : 'Replay recording'}
+				title={demoOn ? 'Stop' : 'Replay the recording from a fresh boot'}
+				disabled={status !== 'live' || recording || (!demoOn && !session)}
+				onclick={() => onDemo(true)}>{demoOn ? '⏹️' : '📼'}</button
+			>
+			<button
+				type="button"
+				class="icon"
+				aria-label="Download recording"
+				title="Download the recording as JSON"
+				disabled={!session || recording}
+				onclick={onDownloadSession}>⬇️</button
+			>
+			<span class="demo-caption" aria-live="polite"
+				>{demoOn ? demoCaption : recording ? 'Recording. ⏺ again to stop.' : ''}</span
+			>
+		</div>
 		{#if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
+		{/if}
+		{#if program?.memory}
+			<div class="row app mem" bind:this={memEl}>
+				<div class="mem-bar">
+					<button type="button" class="icon" aria-label="Back" title="Back" disabled={!memTrail.length} onclick={memBack}>◀</button>
+					<input
+						class="mem-addr"
+						aria-label="Address, octal"
+						title="Address, octal. Enter to go."
+						value={oct(memBase, 5)}
+						onchange={memAddrInput}
+					/>
+					<button type="button" class="icon" aria-label="Page up" title="Page up" onclick={() => memGo(memBase - MEM_PAGE)}>▲</button>
+					<button type="button" class="icon" aria-label="Page down" title="Page down" onclick={() => memGo(memBase + MEM_PAGE)}>▼</button>
+					<span class="mem-hint">wheel scrolls, click follows</span>
+				</div>
+				{#each { length: MEM_LINES } as _, line (line)}
+					{@const at = (memBase + line * MEM_COLS) % CORE}
+					<div class="mem-line">
+						<span class="mem-at">{oct(at, 5)}</span>
+						{#each { length: MEM_COLS } as _, col (col)}
+							{@const i = line * MEM_COLS + col}
+							{@const w = memWords[i] ?? 0}
+							<button
+								type="button"
+								class="mem-word"
+								class:changed={memChanged[i]}
+								class:focus={(at + col) % CORE === memFocus}
+								title="{oct((at + col) % CORE, 5)}: {oct(w, 6)} → go to {oct(w & 0o17777, 5)}"
+								onclick={() => memGo(w & 0o17777, true)}>{oct(w, 6)}</button
+							>
+						{/each}
+					</div>
+				{/each}
+			</div>
 		{/if}
 	</figcaption>
 </figure>
@@ -602,20 +843,6 @@
 <style>
 	.headline {
 		margin: 0 0 0.4rem;
-	}
-	.headline .demo {
-		margin-left: 0.4rem;
-		font: inherit;
-		font-weight: bold;
-		padding: 0.05rem 0.6rem;
-		border: 1px solid var(--ink, #000);
-		background: var(--paper, #fff);
-		color: var(--ink, #000);
-		cursor: pointer;
-	}
-	.headline .demo:disabled {
-		opacity: 0.4;
-		cursor: default;
 	}
 	.cabinet-applet {
 		box-sizing: border-box;
@@ -718,20 +945,52 @@
 	.console {
 		margin-left: 0.35rem;
 	}
-	.icon {
-		padding: 0.05rem 0.35rem;
+	/* One box for every icon button, whatever the emoji's own metrics. */
+	.icon,
+	.speed {
+		box-sizing: border-box;
+		height: 1.4rem;
+		padding: 0;
 		line-height: 1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+	}
+	.icon {
+		width: 1.8rem;
+		font-size: 0.8rem;
+	}
+	.icon.rec {
+		background: #a22;
+	}
+	.row.demo-row {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+	.demo-row .demo {
+		height: 1.4rem;
+		width: 5ch;
+		padding: 0;
+		flex-shrink: 0;
+		font-weight: bold;
+	}
+	.demo-row .demo-caption {
+		margin-left: 0.3rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.speed {
 		width: 4ch;
-		padding-left: 0;
-		padding-right: 0;
-		text-align: center;
 	}
 	.program {
 		font: inherit;
 		font-size: 0.72rem;
 		max-width: 14rem;
+		min-width: 5rem;
+		flex: 0 1 auto;
 		padding: 0.1rem 0.2rem;
 		border: 1px solid #9fe8a0;
 		background: #000;
@@ -774,6 +1033,59 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+	}
+	.readout {
+		flex-shrink: 0;
+	}
+	.row.mem {
+		font-family: ui-monospace, monospace;
+		font-size: 0.68rem;
+		line-height: 1.25;
+		padding-top: 0.2rem;
+		padding-bottom: 0.2rem;
+	}
+	.mem-bar {
+		display: flex;
+		align-items: center;
+		gap: 2px;
+		margin-bottom: 2px;
+	}
+	.mem-addr {
+		width: 6ch;
+		font: inherit;
+		background: #000;
+		color: inherit;
+		border: 1px solid #555;
+		padding: 0 0.2em;
+	}
+	.mem-hint {
+		margin-left: 0.5em;
+		opacity: 0.5;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.mem-line {
+		display: flex;
+		gap: 0.6ch;
+	}
+	.mem-at {
+		opacity: 0.5;
+		margin-right: 0.4ch;
+	}
+	.mem-word {
+		all: unset;
+		cursor: pointer;
+	}
+	.mem-word:hover {
+		background: #333;
+	}
+	.mem-word.changed {
+		color: #000;
+		background: #9f9;
+	}
+	.mem-word.focus {
+		outline: 1px solid currentColor;
 	}
 	.pen {
 		margin: 0 0.3em;

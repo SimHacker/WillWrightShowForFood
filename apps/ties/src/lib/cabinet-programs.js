@@ -10,6 +10,8 @@ import {
 	DUEL_SWITCHES,
 	assembleLp370,
 	bootLp370,
+	lp370Demo,
+	houseDemo,
 	LP370_SWITCHES
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
@@ -35,6 +37,8 @@ let lp370Program = null;
  * peripherals() are added to it. status(cpu) is the caption readout.
  * switchLabels names the console switches the program reads, bit 0 first.
  * keys maps KeyboardEvent.code to a switch the key holds while pressed.
+ * demo(host) returns a scripted demo, run from a fresh boot; null if none.
+ * Any program can be recorded and replayed by the applet (session.ts).
  */
 export const PROGRAMS = [
 	{
@@ -42,9 +46,11 @@ export const PROGRAMS = [
 		label: 'PIXIE / SYMELEC 1972',
 		title: 'Heinz Lemke’s circuit editor, from the 1972 listing',
 		pen: true,
-		demo: true,
+		demo: (h) => houseDemo(h),
+		demoTitle: 'Reboot and let a scripted pen draw a picture, the 1972 way',
 		switches: 0,
 		switchLabels: null,
+		memory: true,
 		boot({ cpu, patches }) {
 			loadSymelec(cpu, patches);
 			cpu.pc = 0o22;
@@ -58,7 +64,8 @@ export const PROGRAMS = [
 		label: 'Type 370 light pen test (DEC 1964)',
 		title: 'DEC-4-45-M, C. Stein: sensitivity, follow and field of view. Page 6 is reconstructed.',
 		pen: true,
-		demo: false,
+		demo: (h) => lp370Demo(h, lp370Program),
+		demoTitle: 'Reboot and walk through the three tests: switches set, pen placed',
 		switches: LP.sensitivity | LP.intensity(7),
 		switchLabels: ['readout', 'sensitivity', '', 'follow', '', 'field of view', '', 'box x 4', 'box x 2', 'box x 1', '', 'box y 4', 'box y 2', 'box y 1', '', 'intensity 4', 'intensity 2', 'intensity 1'],
 		boot({ cpu }) {
@@ -75,7 +82,7 @@ export const PROGRAMS = [
 		label: 'DUEL (spacewar for two, PDP-7)',
 		title: 'From paper tape via the RIM loader. A control is active with its switch down.',
 		pen: false,
-		demo: false,
+		demo: null,
 		switches: 0o777777,
 		// Two players, one keyboard. A held key holds its switch down (0).
 		keys: {

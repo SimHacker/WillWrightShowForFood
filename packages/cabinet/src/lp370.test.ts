@@ -6,6 +6,8 @@ import { Cabinet } from "./cabinet.js";
 import { LP370_SWITCHES as SW, LP370_TAPES, assembleLp370, bootLp370 } from "./lp370.js";
 import { LightPen } from "./plugins/lightpen.js";
 import { Pdp7 } from "./plugins/pdp7.js";
+import { SessionRecorder, isSession, replaySession } from "./session.js";
+import { DemoPlayer } from "./symelec-demo.js";
 import { type Segment, Type340 } from "./plugins/type340.js";
 
 const dir = new URL("../tapes/lp370/", import.meta.url);
@@ -138,6 +140,43 @@ test("lp370 field of view: counts the points inside the aperture and draws them 
 
 	const seen = m.drawn(400_000).filter((s) => s.kind === "incr");
 	assert.ok(seen.length > 0 && seen.every((s) => s.x0 >= 0o1000), "the enlargement is in the other half");
+});
+
+test("session: a recorded run replays to the same core, whatever the frame sizes", () => {
+	const live = machine(SW.follow | SW.intensity(7));
+	const rec = new SessionRecorder("lp370", live.cpu.switches, live.box.cycles);
+	const chunks = [7_001, 13_337, 20_000, 3_141];
+	for (let i = 0; i < 60; i += 1) {
+		live.pen.point(0o1000 + 2 * i, 0o1000 + i);
+		live.pen.enabled = i > 2;
+		rec.record(live.box.cycles, "pen", live.pen.x, live.pen.y, live.pen.enabled ? 1 : 0, live.pen.aperture);
+		if (i === 40) {
+			live.cpu.switches = SW.sensitivity;
+			rec.record(live.box.cycles, "sw", live.cpu.switches);
+		}
+		live.box.run(chunks[i % chunks.length] as number);
+	}
+	const session = rec.finish(live.box.cycles);
+	assert.ok(isSession(JSON.parse(JSON.stringify(session))));
+
+	const again = machine(SW.follow | SW.intensity(7));
+	const player = new DemoPlayer(
+		replaySession(
+			{
+				sw: (v) => (again.cpu.switches = Number(v)),
+				pen: (x, y, down, ap) => {
+					again.pen.aperture = Number(ap);
+					again.pen.point(Number(x), Number(y));
+					again.pen.enabled = !!down;
+				},
+			},
+			session,
+			"replay",
+		),
+	);
+	while (!player.done) player.advance((n) => again.box.run(n), 50_000);
+	assert.equal(again.box.cycles, live.box.cycles);
+	for (let a = 0; a < 8192; a += 1) assert.equal(again.cpu.read(a), live.cpu.read(a), `core ${a.toString(8)}`);
 });
 
 /** Read OUTNOX's display buffer back as a number: each digit is its stroke table, copied. */

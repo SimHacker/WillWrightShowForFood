@@ -55,8 +55,8 @@ the peripherals it needs, deposits itself and sets the console:
 
 | id | What | Loaded from |
 |---|---|---|
-| `symelec` | PIXIE's SYMELEC, 1972 (the default; Demo works here) | the `.oct` transcription and its literal pool |
-| `lp370` | DEC's 370 light pen diagnostic, 1964 | `packages/cabinet/tapes/lp370/*.s`, assembled in the browser by `src/asm.ts` |
+| `symelec` | PIXIE's SYMELEC, 1972 (the default; Demo draws a house and a circuit) | the `.oct` transcription and its literal pool |
+| `lp370` | DEC's 370 light pen diagnostic, 1964 (Demo walks through the three tests) | `packages/cabinet/tapes/lp370/*.s`, assembled in the browser by `src/asm.ts` |
 | `duel` | DUEL, two-player spacewar | `tapes/duel/rim.pt` and `duel.pt`, read in through the RIM loader and a paper tape reader |
 
 Programs that read the AC switches get a row of eighteen switch buttons
@@ -67,6 +67,25 @@ the name. DUEL also maps keys to switches while the tube has focus
 the right. A held key holds its switch down, which is DUEL's active
 state. Text is inlined with `?raw` and tape with `?url&inline`, so the
 offline bundle carries every program.
+
+The rows under the tube keep one order: the console (switches, ⏸️/▶️
+Stop/Run, 🔄 Reset), the menu row (program, readout, speed, 🖨️ SVG,
+📷 PNG to the clipboard), then the program's rows: Demo and the
+recorder, key help, and for SYMELEC a raw core browser (octal, live;
+changed words light up; click a word to follow it as an address).
+
+## Record and replay
+
+⏺️ reboots and records everything that reaches the machine from
+outside, stamped with machine cycles since boot: switches (`sw`) and
+the pen (`pen x y down aperture`). ⏺️ again stops. 📼 reboots and plays
+it back; ⬇️ downloads it as JSON. The emulator only advances by cycles,
+so a replay is the same run at any speed: `lp370.test.ts` replays a
+recording in different chunk sizes and compares all of core. A session
+is `[cycle, kind, ...args]` events (`src/session.ts`); a replayer skips
+kinds it has no handler for, so new inputs, such as Tiny Titan
+messages, extend the format without breaking old pages. The last
+recording per program is kept in the browser's local storage.
 
 ## The rack, and the round window
 
