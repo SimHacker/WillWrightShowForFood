@@ -430,6 +430,18 @@ has its own pipelines, with the runners on the hospital's edge boxes so the phot
 the building. The workflows themselves live in the repository and change by reviewed pull request,
 like the alert rules.
 
+Single photographs and short clips arrive slowly compared with continuous video, a few per patient
+per shift, so each one can afford analysis by a frontier vision-language model. Such a model can
+read a device it was never trained on, describe a wound, or summarise a ten-second clip of a line
+change, without a model trained for that device or ward. Two things go with it:
+
+- **Where the model runs.** Sending a patient's photograph to a cloud model needs a data-processing
+  agreement that covers health data, and blurring and de-identification before it leaves;
+  open-weight vision-language models on a GPU in the hospital avoid the question.
+- **A second reader.** Language models can misread a digit and state the misreading fluently. For a
+  number that matters, such as a pump rate, the vision-language model's reading is compared with
+  a dedicated display reader's, and when they disagree a person looks.
+
 The same structure serves patients. A patient photographs a rash, a wound or a pimple and opens
 an issue; the nurse or dermatologist answers in the thread, and the record of the exchange stays
 with the chart. Sending photographs for a clinician to assess later is already established as
