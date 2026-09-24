@@ -214,6 +214,27 @@ check becomes something a clinician can read: after this press, this display sho
 value, and the record says whether it did. Processing beside the camera keeps the video of
 patients in the room.
 
+The factory case carries over because nothing in it is specific to factories. A room, the
+equipment in it, the people working there, and the events among them are the same objects on a
+production line and on a ward. What a hospital adds is a range of uses, sorted by how close each
+one is to a clinical decision:
+
+- **Operations**, where a hospital works like a plant: sterile processing, operating-room
+  turnover, equipment use and availability, hand hygiene and protective equipment. These are the
+  process and safety monitoring Leela's technology already does, with the hospital's operations
+  staff as the people who read the results.
+- **Workflow**: the steps of a procedure as they happen, which people and which devices took
+  part, how long each took, and where the plan and the practice diverged. Surgical workflow is a
+  CARS subject, and the people who model it are in the Think Tank.
+- **Devices**: reading pumps, monitors and ventilators that have no usable data port, and
+  checking each change a clinician makes against what the device then shows.
+- **Care**: watching the people under care and the people caring for them, where the questions
+  of consent, privacy and regulation are sharpest.
+
+The further down that list, the more the reading feeds a clinical decision, and the more it
+matters that every inference can be explained and checked and that people make the decision.
+Those are the terms the technology was built on.
+
 The medical version sharpens three things the game version already has. The overlay leaves the
 certified binary unmodified, so the question is whether the combination still counts as the same
 device. The keylogger problem from Part 4 becomes patient privacy. And the rule that the
@@ -229,7 +250,9 @@ automation driving clinical screens or devices and how it was audited; and how r
 each kind: an overlay on a certified workstation application, video capture and injected USB
   input on a certified device, and a phone that only tells the clinician which button to press.
   Also: whether cameras already watch devices on their wards or in their operating rooms, and
-  what the rules on recording patients allow.
+  what the rules on recording patients allow; which of the four uses (operations, workflow,
+  devices, care) each member would want first; and, for Heinz, where surgical workflow modelling
+  stands now and what it cannot yet observe.
 
 ### 6. What medicine already has
 
