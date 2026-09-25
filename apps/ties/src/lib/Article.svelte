@@ -9,8 +9,7 @@
 	 * definition pane when this article is the one being *considered*, which is a
 	 * single-click on a link to it — or a click on the window title.
 	 */
-	import { paginate, parseArticle } from './markdown.js';
-	import { resolve } from './corpus.js';
+	import { paginate, parseArticle, resolveAnchor } from './markdown.js';
 	import { expandTranscludes } from './transclude.js';
 	import { provideApplets } from './applets.svelte.js';
 	import TargetApplet from './TargetApplet.svelte';
@@ -56,7 +55,7 @@
 		const anchor = event.target.closest?.('a.ties-link');
 		if (!anchor) return;
 		event.preventDefault();
-		const found = resolve(db, anchor.dataset.tiesName);
+		const found = resolveAnchor(anchor, db);
 		if (!found) return;
 		if (event.detail > 1 || browser?.isArmed(found)) go(found);
 		else consider(found);
@@ -66,7 +65,7 @@
 		const anchor = event.target.closest?.('a.ties-link');
 		if (!anchor) return;
 		event.preventDefault();
-		const found = resolve(db, anchor.dataset.tiesName);
+		const found = resolveAnchor(anchor, db);
 		if (found) go(found);
 	}
 
@@ -75,7 +74,7 @@
 		const root = bodyEl;
 		if (!root) return;
 		for (const a of root.querySelectorAll('a.ties-link')) {
-			const found = resolve(db, a.dataset.tiesName);
+			const found = resolveAnchor(a, db);
 			a.classList.toggle('armed', Boolean(armed && found && browser.isArmed(found)));
 		}
 	});

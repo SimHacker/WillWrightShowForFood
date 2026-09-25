@@ -77,14 +77,21 @@ export function splitRows(body) {
  */
 function stampTiesHrefs(html, dbId) {
 	if (!dbId) return html;
+	// A transcluded link names an article in the transcluded article's database, not the
+	// host page's: data-ties-db carries that database to the click handlers.
 	return html.replace(
 		/<a href="#" class="ties-link" data-ties-name="([^"]+)">/g,
 		(all, name) => {
 			const found = resolve(dbId, name);
-			if (!found?.slug) return all;
-			return `<a href="${articleHref(found.db, found.slug)}" class="ties-link" data-ties-name="${name}">`;
+			const href = found?.slug ? articleHref(found.db, found.slug) : '#';
+			return `<a href="${href}" class="ties-link" data-ties-name="${name}" data-ties-db="${dbId}">`;
 		}
 	);
+}
+
+/** Resolve a rendered ties-link in the database it was written in. */
+export function resolveAnchor(anchor, fallbackDb) {
+	return resolve(anchor.dataset.tiesDb || fallbackDb, anchor.dataset.tiesName);
 }
 
 export function parseArticle(body, dbId) {

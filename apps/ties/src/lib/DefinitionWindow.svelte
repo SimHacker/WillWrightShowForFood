@@ -4,8 +4,7 @@
   pane, top-right, out of flow, so they do not grow the header or shove the text.
 -->
 <script>
-	import { renderInline } from './markdown.js';
-	import { resolve } from './corpus.js';
+	import { renderInline, resolveAnchor } from './markdown.js';
 
 	let { pile, onnavigate, browser = null } = $props();
 
@@ -23,7 +22,7 @@
 		const anchor = event.target.closest?.('a.ties-link');
 		if (!anchor) return;
 		event.preventDefault();
-		const found = resolve(pile.db, anchor.dataset.tiesName);
+		const found = resolveAnchor(anchor, pile.db);
 		if (found) onnavigate?.(found);
 	}
 </script>
