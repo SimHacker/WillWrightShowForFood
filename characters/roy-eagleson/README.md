@@ -132,6 +132,7 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
 | **14 Jul — UWO PIXIE project** | [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md) |
 | **Student kit** (guide, manuals, source, emulation plan) | [`../heinz-lemke/README.md`](../heinz-lemke/README.md) § For students, hackers, and turists |
+| **Course sketch** (PDP-7 Forth, 340 turtle, light-pen widgets, the wheel) | [`../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md`](../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md) |
 | **16 Jul thread** (125 pages, CARS 2027, Armit archive) | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
 | **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |

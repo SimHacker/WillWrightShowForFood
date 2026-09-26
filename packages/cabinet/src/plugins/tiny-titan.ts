@@ -63,8 +63,8 @@ export class EchoPort implements TitanPort {
  * whose count field is zero says "nothing more" — the polite goodbye.
  *
  * This first host listens: each blocklet's count invites the PDP-7 to
- * *write* count+1 words (4 stream-heading words first — PXID, DSBEG,
- * DSEND, SAVINS — then data). What arrives is the PDP's own ring file,
+ * *write* count words (the first blocklet opens with the 4 stream-heading
+ * words PXID, DSBEG, DSEND, SAVINS, then data). What arrives is the PDP's own ring file,
  * recorded per blocklet. Serving files back (direction bit 0o200000)
  * is the same machine with the queue running the other way.
  */

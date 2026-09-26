@@ -10,6 +10,12 @@ first section) — how devices added instructions to
 the PDP-7, why the 340 is a second computer (wheel of reincarnation), the story and
 architecture of **Titan** across the link, and what's emulated versus what's an open quest.
 
+**Teaching?** [**Forth, turtles and light pens**](FORTH-TURTLE-340.md) is a course sketch: a
+threaded Forth kernel for this machine, fixed-point turtle graphics compiled to 340 display
+words, tagged light-pen widgets, and Myer & Sutherland's wheel as a design exercise, each
+set against what SYMELEC already did in 1972. And the Forth now exists:
+[**Mitch Bradley's PDP-7 Forth**](PDP7-FORTH.md) (26 Sep 2026), with a Logo turtle on the 340.
+
 ## The display
 
 | Local copy | Public URL | Why you need it |
@@ -79,6 +85,12 @@ CAD Group Assembler (user HL1470) and carried to the PDP-7 — so writing our ow
 cross-assembler on a big machine next door is not cheating; it is the authentic workflow.
 
 ## The mission — PIXIE in the emulator
+
+**Update, 27 Sep 2026:** steps 2–3 below were done in our own emulator, not SIMH. The
+[cabinet](../../../../packages/cabinet/README.md) reimplements the PDP-7, 340 and 370 in
+TypeScript with SIMH's source as the design spec, and runs PIXIE in the browser with the
+pointer as the light pen; [tiny-titan](../../../../packages/cabinet/TINY-TITAN.md) answers
+the link. The SIMH route stays open for native work and as the oracle.
 
 Full battle plan with architecture (SIMH lab bench + browser bench + high-level Titan
 protocol service) and milestones: [**EMULATION-PLAN.md**](EMULATION-PLAN.md). Summary:

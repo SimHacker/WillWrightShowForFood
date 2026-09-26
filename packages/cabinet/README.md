@@ -129,8 +129,7 @@ Not built:
 
 - the full PDP-7 card
 - 340 DMA
-- Wiseman's link beyond the stub
-- the browser bench itself
+- Wiseman's link in the Titan → PDP direction (serving drawings back)
 
 ### The rungs climbed so far
 
@@ -149,6 +148,14 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 ### Next
 
 - Serve a structure *back* over the link.
+- Run Mitch Bradley's [PDP-7 Forth](https://github.com/MitchBradley/pdp7forth), the next
+  corpus entry. Most of what it uses is already here (`CAL`, `XCT`, auto-index, EAE `MUL`
+  and `IDIV`, the paper tape reader's `RSA`/`RSF`/`RRB`, the 340's load-and-go and stop
+  skip); it needs a loader for its image (it deposits the `a7out` dump directly, since
+  `as7`'s tape formats only cover memory above 4096), and whatever else it demands gets
+  added because it asked. Its turtle then draws in the browser, and the ring vocabulary
+  in [FORTH-TURTLE-340.md](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md)
+  has a real Forth to live in.
 - A live view and editor of PIXIE's ring structures, in core while it
   runs and in tiny-titan's stored files, side by side
   ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).

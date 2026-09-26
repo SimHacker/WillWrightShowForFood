@@ -15,6 +15,31 @@ tiny-titan compresses the other end of the wire to a session state
 machine. The corpus-of-one principle, applied to a mainframe: implement
 only what the one surviving caller dialed.
 
+## What it is, and isn't
+
+**Not a Titan emulator, and not a simulator.** It has none of the Atlas 2: no 48-bit
+words, no extracodes, no supervisor, no discs. By the cabinet's own definitions
+([README](README.md#simulation-vs-emulation): emulation reproduces an interface so the
+original program runs; simulation models a process), it is two things:
+
+- **An emulator of Wiseman's link interface**, the PDP-7 side of it: the IOTs, the flag,
+  the skips. It passes the cabinet's test: SYMELEC's unmodified `LTPX` runs against it.
+- **A stand-in for the far end of the conversation.** `BlockletHost` answers the `/LTPIX`
+  session the way user HL1470's Titan programs did, and plays the master role Lang's
+  [Planning Document 10](../../characters/heinz-lemke/sources/pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
+  gives Titan (the PDP-7 asks; Titan's header decides the direction). In testing terms, a
+  fake server: the real protocol with no machine behind it. The emulation plan's phrase:
+  emulate the conversation, not the computer.
+
+It comes in rungs: with no port it is a **stub** (`LSF` always skips; that's what the
+browser applet runs), with `EchoPort` a **loopback**, with `BlockletHost` a **listener**
+that records what PIXIE sends. Serving back and the filestore are the next rungs. If an
+Atlas 2 emulator ever exists, it docks behind `TitanPort` and tiny-titan shrinks to the
+link card.
+
+One sentence version: *tiny-titan stands in for the Titan end of Wiseman's link, well
+enough that 1972 PIXIE on our emulated PDP-7 uploads its drawings to it.*
+
 ## What it does now
 
 Three layers, split so each is portable on its own:
@@ -77,13 +102,23 @@ device and the 1972 software never change.
 **Serve structures back.** Direction bit `200000` in the header turns
 the queue around: Titan streams, the PDP reads, relocates pointers by
 `RELCON`, and displays the received drawing. This is the test-model
-pipeline in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module-planned):
+pipeline in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module):
 build a drawing as a TS object graph, encode it to ring words, hand it
 to 1969 PIXIE over the link, and watch the tube. The encode/decode
 codec's format truth is the wire envelope in
 [TITAN-LINK-PROTOCOL.md](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
 — atoms with top 5 bits zero, NIL spelled as the `JMS` opcode value,
 block headers of `20000` plus a 13-bit length.
+
+This rung was prototyped and lost. `packages/pixie/dist/pixie.test.js`
+(compiled 25 Sep) calls a `BlockletHost.serving(encodeTransfer(photo))`
+that is not in the source: it served a photograph of the boot workspace
+back and asserted the checksums matched, with a note that SYMELEC's
+name-list rebuild halts on an empty `SAVINS`, so the payload must be a
+well-formed drawing. Two things to fix when it is rebuilt: its no-NAK
+check looks for control `010`, but the NAK arrives as control `0`; and
+`RW`'s read path follows every `LRB18` with an unskipped `LLB18!LLAM`,
+which a serving host must not mistake for data from the PDP.
 
 **Filestore.** Named slots for ring files: `localStorage` or OPFS in
 the browser, the filesystem on node. Titan's actual job — PIXIE drew,

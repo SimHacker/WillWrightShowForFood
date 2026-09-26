@@ -4,6 +4,19 @@ How to get the [recovered 1972 listing](../pixie-assembler-listing-1972/README.m
 light pen and all, with a Titan across the link. Companion to the [turist guide](GUIDE.md)
 and the [reference library](README.md). Target: **CARS 2027 Berlin, 29 June 2027**.
 
+**Status, 27 Sep 2026: the plan changed shape.** We do not run SIMH in the browser, and
+we are not porting it. The browser bench is our own emulator,
+[`packages/cabinet`](../../../../packages/cabinet/README.md): PDP-7, Type 340, Type 370
+light pen, teletype, clock and the Titan link, reimplemented in TypeScript from the 1972
+listing, with SIMH's source as the design spec and the oracle it is checked against
+([SIMH-MAP.md](../../../../packages/cabinet/SIMH-MAP.md): what we lift, what we make fresh,
+what we shed). SYMELEC boots, draws, tracks the pen and phones Titan in the page:
+[PIXIE live](https://hyperties.org/databases/pixie/pixie-live/). Bench A below stays
+useful natively (Roy's `.rim` loader, differential traces), but the SIMH-side work it
+lists (a light pen driver in `pdp18b_dpy.c`, a network `ws.h` backend, a C `LINK`
+device) is no longer on our path. Anything we fix that SIMH stubs, like the pen readback,
+can still go upstream as a patch offer. Milestones below are marked.
+
 ## Parallel track — Multipatch-first (Andrew Armit, 29 Jul 2026)
 
 Before (or beside) the full PIXIE↔Titan stack, Andrew's **Multipatch** is the easier win:
@@ -34,6 +47,9 @@ Three pieces, separable:
    *(Multipatch skips this piece entirely.)*
 
 ## Does the PDP-7 emulator run in the browser?
+
+**Now it does: ours.** The survey below (July 2026) is why we wrote one instead of
+porting SIMH.
 
 Not today. Surveyed July 2026:
 
@@ -146,6 +162,8 @@ for the PIXIE bench console, PDP-7 UNIX logins, and show titles/credits alike.
 
 For the Titan service: **TitanIC** (Titan + integrated circuit; unsinkable; failure modes
 come pre-named) · **Titanopolis** · ~~SimTitan~~ (avoiding the Sim brand).
+**Picked: tiny-titan** ([TINY-TITAN.md](../../../../packages/cabinet/TINY-TITAN.md)), a
+cabinet device plus a protocol host, not a service.
 
 ## Ordering — do the link IOTs come first?
 
@@ -173,18 +191,28 @@ the slight defocus bigger deflection angles caused at the tube edge.)
 ## Milestones
 
 1. `make` SIMH pdp7 with display; run DEC's [340 display test](DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf).
+   *SIMH track, not ours.*
 2. Loader: `rsppix.oct` → SIMH deposit / `.rim`. **Partial (28 Jul 2026 — Roy Eagleson):**
    `.oct`→`.rim` converter; code **loads** and **steps** instruction-by-instruction;
    **`GO` stops with no display** — likely waiting on light-pen interrupts.
    → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
+   *Cabinet: met* — `symelec.oct` plus the literal pool the `.oct` was missing
+   (`scripts/extract-literals.mjs`); boot is rung 1.
 3. Light pen driver in `pdp18b_dpy.c` + mouse; pass the 370 diagnostic.
    (Roy: X11 C locally; web mouse events for shareable setup.)
+   *Cabinet: met without SIMH* — `LightPen` hit-tests freshly drawn segments, and DEC's 370
+   diagnostic runs against it (`src/lp370.test.ts`, page 6 reconstructed).
 4. PIXIE tracking cross follows the mouse. (The 1969 film shows what right looks like.)
+   *Cabinet: met* — [TRACKING.md](../../../../packages/cabinet/TRACKING.md).
 5. Network display backend (`ws.h` implementation) + browser canvas/WebGPU phosphor;
    pen driven from the browser pointer.
+   *Cabinet: canvas and pointer-as-pen met, no network backend needed; WebGPU phosphor open.*
 6. LINK device with Wiseman's IOTs (stub first — flags never hang); Titan protocol
    service answers a blocklet handshake.
+   *Cabinet: met by tiny-titan* — portless stub in the browser, `BlockletHost` receiving
+   SYMELEC's transfer in the tests. Serving back: next.
 7. Browser bench: TS core runs the same `.oct`, same Titan service.
+   *Met, with our core rather than SIMH.*
 8. Berlin: light buttons, radial menu question answered live, 58 years on.
 
 ## Open questions

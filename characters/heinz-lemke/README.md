@@ -56,8 +56,11 @@ The documents in this room tell one continuous story:
   mystery listing pages; the [At The Controls post](sources/2023-09-25-at-the-controls-pixie-post.md)
   (2023) whose caption the listing confirms, with RCA and Spacewar leads in its comments; the [TTY film-loop idea](sources/2026-07-24-tty-film-loop-titles.md)
   that became the diegetic terminal emulator concept.
-- **Next — resurrection.** The [emulation plan](sources/pdp7-reference/EMULATION-PLAN.md):
-  SIMH lab bench, browser bench, virtual light pen, WebGPU phosphor, and a reimplemented
+- **Now — resurrection.** PIXIE runs again in our own browser emulator, the
+  [cabinet](../../packages/cabinet/README.md), with the pointer as the light pen and
+  [tiny-titan](../../packages/cabinet/TINY-TITAN.md) on the far end of the link; SIMH is the
+  design spec it is checked against. Plan and milestones: the
+  [emulation plan](sources/pdp7-reference/EMULATION-PLAN.md) and the reimplemented
   [PDP-7 ↔ Titan link](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md). Target:
   **CARS 2027 Berlin, 29 June** — see [pixie-source-recovery.md](pixie-source-recovery.md).
 
@@ -93,6 +96,12 @@ Everything needed to run 1969 yourself, in reading order (spelled *turist* per
    [Chapter 5](sources/phd-thesis-1972/annotated/03-chapter-5-pixie.md) (the PIXIE subsystem) and
    [Chapters 3–4](sources/phd-thesis-1972/annotated/02-chapters-3-4.md) (satellite-graphics
    doctrine and the RAINBOW ecology).
+7. [**Forth, turtles and light pens**](sources/pdp7-reference/FORTH-TURTLE-340.md), a course
+   sketch: build a Forth, a turtle library for the 340, and light-pen widgets, then read how
+   SYMELEC did the same things in 1972 (`ENTER`/`EXIT` link stack, `DISP`/`NODISP`, `COMP`), and
+   work the wheel of reincarnation as a design exercise.
+8. [**Mitch Bradley's PDP-7 Forth**](sources/pdp7-reference/PDP7-FORTH.md), written the day
+   after Don asked for one: 8K words, Logo turtle graphics on the 340, runs under SIMH.
 
 **The classroom connection:** [**Roy Eagleson**](../roy-eagleson/README.md) (Western University)
 teaches HCI history anchored on Sketchpad and has students **re-implementing PIXIE** as the same

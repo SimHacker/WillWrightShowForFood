@@ -149,21 +149,81 @@ mainframe with software instructions and a minicomputer with hardware ones.
 in Cambridge, running the Cambridge Supervisor — UK CAD industrialized directly out of this
 lab. Titan's successor Phoenix (IBM 370/165) arrived 1972; Titan switched off October 1973.
 
+## PIXIE's data — ring structures, from the ground up
+
+**The problem.** A circuit drawing is not a tree. A node touches several branches, a branch
+touches two nodes, and a symbol instance belongs to a group, a subpicture and a catalogue
+at once. That needs many-to-many relationships, walkable both ways.
+
+**The idea.** Each element is a small block of words. A **ring** is a circular linked list
+that threads through its members and comes back to its owner. Go round a node's ring to
+list its branches; keep going from any member to get back to the owner. An element sits on
+as many rings as it has relationships. Insert and delete are pointer splices; nothing moves.
+
+**Lineage** (citations to check against the thesis references): Sutherland's **Sketchpad**
+(1963) kept points, lines, constraints and instances in rings, and its generic delete,
+merge and copy worked on any element type. **CORAL** (Lincoln Lab) and **ASP** (Lang &
+Gray, Cambridge, 1968: the same C. A. Lang who wrote the Titan link software) followed.
+Wiseman & Hiles, *A ring structure processor for a small computer* (Computer Journal,
+1968) is very likely the RSP inside PIXIE; the thesis schedule dates "Ring Structure
+Processor RSP" to 1967. Bachman's IDS carried owner/member chains into databases (CODASYL
+"sets"); the Linux kernel's `list_head` is the same ring today.
+
+**PIXIE's variant** is a hybrid: Lisp-style two-word cells used to build rings. Word
+classes, as decoded in [`packages/pixie`](../../../../packages/pixie/src/words.ts):
+
+| Word | Meaning |
+|---|---|
+| top 5 bits zero | atom: a 13-bit value (character, count, coordinate) |
+| `100000`, the `JMS` opcode | NIL |
+| `100000` + address | a *name*: a pointer the machine can indirect through |
+| `020000` + length | block header; that many raw words follow and are never relocated |
+| sign bit set | *nonitem*: forward to the low 13 bits. Reads as how a list closes into a ring (`PUSH`/`POP` "JOIN UP" with `XOR (500000`) |
+| `200000` | the garbage collector's mark bit |
+
+On top: `CAR`/`CDR`, `PUSH`/`POP`, printnames, a free list, and a recursive garbage
+collector. The thesis says one RSP served circuits, syntax graphs (ch. 6) and control
+systems (ch. 7): general purpose within RAINBOW.
+
+**Compared with the formats you know:**
+
+| | Shape | Sharing / cycles | Identity | Code as data | Text form |
+|---|---|---|---|---|---|
+| Lisp sexprs | cons cells, trees by convention | yes in memory; printing needs `#1=`/`#1#` | address | yes | the printed sexpr |
+| JSON | tree of objects and arrays | no | none | no | the text *is* the data |
+| PostScript | arrays, dicts, strings as shared references | yes; `==` prints trees | reference | yes (executable arrays) | no standard graph serialization |
+| YAML | tree plus anchors `&a` / aliases `*a` | sharing yes; cycles legal, unevenly supported | anchor names | no | yes |
+| Ring structures | typed blocks on many rings | many-to-many and cyclic by design | core address | PIXIE's names *are* `JMS` words | none known |
+
+JSON and sexprs are about **containment**; rings are about **membership**. A ring structure
+is closer to a graph database stored as pointers than to a document.
+
+**Text format?** None found from 1972. The interchange format was the binary transfer image
+(`PXID`/`DSBEG`/`DSEND`/`SAVINS` heading, the words from `BEG` to `END`, a relocation
+pass on arrival: [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md)). The nearest text was
+what Titan programs generated *from* the structure: netlists for the LADAN and CANOTRAN
+analysers, CONN/CONNMAP. Today the repo's `.oct` files (`addr word` lines) are the de
+facto text form. The plan for a viewer, an editor and text formats is in the cabinet's
+[DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module);
+a Forth vocabulary for rings is in [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type).
+
 ## Emulation status — and what you actually need
 
-- **PDP-7 + Type 340: emulated today.** [Open SIMH](https://github.com/open-simh/simh) has
-the PDP-7 with 340 display support, built on the shared display library that already
-carries light-pen plumbing from the PDP-1 side. The missing piece is the **virtual Type
-370 light pen driver** — mission brief in [README.md](README.md).
+- **PDP-7 + Type 340: emulated today, twice.** [Open SIMH](https://github.com/open-simh/simh)
+has the PDP-7 with 340 display support natively; its PDP-7 light pen readback is still a
+stub. Our own TypeScript emulator, [the cabinet](../../../../packages/cabinet/README.md),
+reimplements the PDP-7, 340 and 370 light pen using SIMH's source as the design spec and
+oracle, and runs PIXIE in the browser with the pointer as the pen:
+[PIXIE live](https://hyperties.org/databases/pixie/pixie-live/).
 - **Titan: no emulator exists.** The Computer Conservation Society preserves two **Atlas 1**
 emulators, but Atlas 2/Titan (different memory system, extracodes in main store) has
 none. Documentation survives: the [CUCPS Titan archive](https://cucps.soc.srcf.net/titan/)
 has supervisor planning documents and the machine-code programming manual.
-- **The good news: PIXIE doesn't need Titan.** The listing is the PDP-7 side, complete. For
-a live demo, the link can idle — or a small mock peer can speak the blocklet protocol
-(header, word count, checksum, `PXID` magic word: it's all transcribed) and answer as a
-pocket Titan. A Titan emulator is a magnificent open quest, but it is not on the critical
-path to clicking a 1969 radial menu.
+- **The good news: PIXIE doesn't need Titan.** The listing is the PDP-7 side, complete, and
+the other end of the link has a stand-in: [tiny-titan](../../../../packages/cabinet/TINY-TITAN.md),
+which speaks the blocklet protocol (header, word count, checksum, `PXID` magic word) and
+receives PIXIE's drawings. A Titan emulator is a magnificent open quest, but it is not on
+the critical path to clicking a 1969 radial menu.
 
 The concrete plan — SIMH lab bench, browser bench in SvelteKit, and a shared high-level
 Titan protocol service speaking blocklets over a socket — lives in
@@ -174,6 +234,7 @@ from the listing, in [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md).
 
 ## Further reading
 
+- Bob Supnik, *[Architectural Evolution in DEC's 18b Computers](https://archive.computerhistory.org/resources/text/DEC/pdp-1/dec.pdp-1_15.supnik.rchitectural_evolution_in_dec%27s_18b_computers.2003.102630392.pdf)* (2003) — PDP-1 → 4 → 7 → 9 → 15 by the author of SIMH's 18-bit family: why the PDP-4 cut the instruction set in half, the ones'/two's complement mess (Bell: "a mistake"), auto-index, the skip-on-flag I/O model, PDP-7 trap mode, and the PDP-7 vs PDP-9 incompatibilities an emulator must get right. The PDP-7: first shipped Dec 1964, 120 built, 1.75 µs cycle, $45K
 - Barry Landy, *[Atlas 2 at Cambridge Mathematical Laboratory (and Aldermaston and CAD Centre)](https://curation.cs.manchester.ac.uk/atlas/docs/Atlas2%20Barry%20Final%2014th%20December.pdf)* — the insider memoir most of the Titan section above draws on
 - [CUCPS Titan archive](https://cucps.soc.srcf.net/titan/) — supervisor planning docs, programming manual, by permission of Landy/Needham/Hartley
 - [Titan (1963 computer), Wikipedia](https://en.wikipedia.org/wiki/Titan_(1963_computer))

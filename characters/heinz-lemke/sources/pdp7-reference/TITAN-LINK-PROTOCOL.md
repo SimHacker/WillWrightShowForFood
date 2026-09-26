@@ -4,7 +4,16 @@ What actually moved over Wiseman's wire, decoded from the recovered listing
 ([`symelec-listing.txt`](../pixie-assembler-listing-1972/symelec-listing.txt), the
 `/LTPIX/RELOC` section, SYMELEC pages 21–24, addresses 1701–2146), plus the architecture
 for reimplementing the Titan side as a modern TypeScript service. Companion to the
-[emulation plan](EMULATION-PLAN.md). This is a design sketch — nothing here is built yet.
+[emulation plan](EMULATION-PLAN.md).
+
+**Status, 27 Sep 2026.** Written as a design sketch before anything existed. Since built:
+[tiny-titan](../../../../packages/cabinet/TINY-TITAN.md), a device in our own TypeScript
+PDP-7 emulator (the cabinet) plus a blocklet host that receives the transfer 1972 SYMELEC
+actually sends, and the ring codec in [`packages/pixie`](../../../../packages/pixie/src/words.ts).
+Building them corrected four details below (the NAK, the direction bit, the block length,
+the header check), marked *corrected*. Not built: serving structures back, the
+`TitanApplication` surface, the SvelteKit service, and the C side, which is no longer
+planned because SIMH is our design spec, not our runtime. See "What got built" at the end.
 
 ## High level: what the protocol is
 
@@ -45,18 +54,30 @@ inside the wait loop.
 
 **Session opening** (`LTPX`, 1701): interrupts off (`IOF`), link flag cleared, then a
 6-bit control code `4` requests headers; a second code `6` follows during the handshake.
-Control code `010` is the NAK sent on checksum failure.
+The NAK sent on checksum failure is the instruction `LLB6 10` (702354). *Corrected:* the
+`010` is the IOT's clear-AC bit, not a code, so what reaches Titan is control `0` sent
+from a cleared accumulator.
+
+Who is in charge: Titan. Lang's [Planning Document 10](cambridge-supervisor/pd10-titan-pdp7-link.md)
+opens "Titan will be the master machine having control over all data transfers over the
+link. PDP-7 initiated transfers may only commence after obtaining permission from Titan."
+`LTPX` obeys: the PDP-7 asks (control `4`) and Titan's header decides the direction.
 
 **Blocklet header** — four 18-bit words, redundantly encoded: word 1 (`HDR1`) carries the
-direction bit in its top bits and the word count in its low 13 bits (`AND (17777`);
-words 2 and 4 are check words (the code XORs pairs and requires the sum to come out
-all-ones — `CMA; SZA!CLA; JMP TH` retries the whole header on any mismatch). A header
+direction bit and the word count in its low 13 bits (`AND (17777`). The PDP-7 requires
+`(w1^w2)+(w3^w4)` to come out all-ones — `CMA; SZA!CLA; JMP TH` retries the whole header on
+any mismatch; tiny-titan satisfies it with word 2 = word 1 complemented and words 3 and 4
+zero. *Corrected:* a blocklet carries exactly `count` data words (the end test's `ISZ BSZ`
+pre-increments the complemented count). A header
 whose word count is zero means **end of transfer, normal exit**.
 
-**Direction in-band:** the read/write subroutine (`RW`, 2107) rotates `HDR1`'s top bit
-into the link register and does `LRB18` (read from Titan) or `LLB18` (write to Titan)
-accordingly — *one code path for both directions*, steered by the header. The same loop
-accumulates the running checksum.
+**Direction in-band:** the read/write subroutine (`RW`, 2107) does `LAC HDR1; RTL`, which
+puts bit `200000` into the link, then `SZL` picks `LRB18` (read from Titan, link = 1) or
+`LLB18!LLAM` (write to Titan, link = 0) — *one code path for both directions*, steered by
+the header. *Corrected:* it is bit `200000`, not the top bit. Open for serving back: on
+the read path nothing skips the `LLB18!LLAM` after `LRB18`, so a read is followed by what
+looks like a write; what the hardware did with it (acknowledge? ignore in read mode?)
+decides how a serving host must treat it. The same loop accumulates the running checksum.
 
 **First blocklet only — the stream heading**, four words: `PXID` (magic `767676`, else
 error "not PIXIE data"), `DSBEG` and `DSEND` (the data structure's begin/end addresses in
@@ -67,7 +88,7 @@ structures that won't fit ("DS TO LONG"), and relocates `SAVINS` immediately.
 **Data area:** words stream one at a time through `RW`; if the local structure runs out
 before the blocklet does, the PDP-7 pads with zeros. After each blocklet, the PDP-7 reads
 Titan's checksum and compares (`SAD CKS`): match → request next blocklet (`JMP TX`);
-mismatch → send NAK `010`, disconnect, error exit.
+mismatch → send NAK (control `0`, see above), disconnect, error exit.
 
 **Relocation pass** (Titan→PDP only, 2040–2071): walk the received ring structure;
 skip atoms (top 5 bits zero) and NIL items (NIL is literally the `JMS` opcode value —
@@ -85,7 +106,8 @@ Searching the whole listing for everything ever sent down the link: the wire car
 **three tiny session verbs and no application verbs at all**. The 6-bit control channel
 (`LLB6`) sends `4` (start / request headers), `6` (handshake), and `010` (NAK); the
 blocklet header carries the direction bit; `PXID` types the stream. That's the entire
-in-band vocabulary.
+in-band vocabulary. (*Corrected:* the NAK arrives as control `0`; the `010` in its
+spelling is the clear-AC bit.)
 
 So how did anything ever *happen*? Two places, neither on the wire:
 
@@ -225,5 +247,24 @@ in-browser PDP-7 (calling it as a library). Central or local is a deployment cho
 an architecture choice. And the "hard part that might be hard to reimplement" — Titan's
 lost application programs — is explicitly stubbed behind `TitanApplication`, so the demo
 never blocks on archaeology.
+
+## What got built (27 Sep 2026)
+
+The shape held; the packaging changed. There is no SIMH in the path, so there is no C
+`LINK` device and no TCP bridge: the PDP-7 is our own TypeScript emulator, and the link is
+one of its devices.
+
+| Sketched above | Built as | State |
+|---|---|---|
+| C `LINK` device in SIMH | `TinyTitan`, a cabinet device on devs 22–23 ([`tiny-titan.ts`](../../../../packages/cabinet/src/plugins/tiny-titan.ts)) | built; portless stub in the browser applet, so `TITAN` can't wedge the machine |
+| wire adapters (tcp / ws / in-proc) | `TitanPort`: `control / send / recv / ready / disconnect` | in-process only (`EchoPort`, `BlockletHost`); WebSocket not built |
+| blocklet codec + session state machine | `BlockletHost` | PDP → Titan: built and accepted against SYMELEC's live transfer. Titan → PDP: not in the source (see [TINY-TITAN.md](../../../../packages/cabinet/TINY-TITAN.md)) |
+| ring codec | [`packages/pixie`](../../../../packages/pixie/src/words.ts): word classes, cells, encode/decode, relocation | decode verified word for word against SYMELEC's transfer; the package's build files need restoring ([DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module)) |
+| `TitanApplication`, filestore, echo app, circuit stub | — | not built |
+| SvelteKit `titan/` service, ring viewer, blocklet wireshark | — | not built; the ring viewer is planned in the cabinet's DESIGN.md |
+
+The PD10 system layer (core-to-core extracodes with 18→48-bit packing, Attentions, disk,
+the second teletype) is not implemented either: tiny-titan answers the PIXIE application
+conversation directly.
 
 ↑ [emulation plan](EMULATION-PLAN.md) · [turist guide](GUIDE.md) · [reference library](README.md) · [PIXIE listing](../pixie-assembler-listing-1972/README.md)

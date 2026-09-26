@@ -140,6 +140,11 @@ Browser-as-smart-display-processor is the 2020 restatement: HTML/CSS as the
 display language, application logic kept off the wheel. Same question the
 paper left open in 1968.
 
+As a classroom exercise (one light-pen menu built three ways: host interprets,
+host compiles tagged 340 words, NeWS-style behaviour at the display), with a
+PDP-7 Forth as the tool for moving the boundary:
+[`../../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md`](../../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md).
+
 GPUs executing command buffers (still called display lists in the lineage)
 are many revolutions later. IBM System/360 Channel Command Words are the
 same idea at datacenter scale, contemporary with the 340 — already noted in

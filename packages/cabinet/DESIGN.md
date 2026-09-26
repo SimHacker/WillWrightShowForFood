@@ -221,6 +221,15 @@ actually sends (PDP → Titan, re-encoded word for word). Not built: the
 Titan → PDP half, so a structure made in TypeScript has not yet been
 drawn by PIXIE.
 
+**Build state, 26 Sep 2026: broken.** `packages/pixie/package.json`,
+`tsconfig.json` and `src/image.ts` were never committed. `dist/image.js`
+survives, and `pnpm-lock.yaml` records the devDependencies (`@types/node`,
+`@wwsff/cabinet` as `workspace:*`, `typescript`). Restore them before any
+work below; `index.ts` should also export `photograph` and `SYMELEC_VARS`,
+which `scripts/trace-serveback.mjs` imports. Latent bug in `graftal.ts`
+`toDisplayFile`: a run of only zero-length strokes emits PARAM, Y, X and no
+vectors, leaving the 340 in VECTOR mode when the next PARAM word arrives.
+
 **To do: a live view and editor of ring structures, in memory and on
 disk.** The emulator exposes every word of core, so the page can show
 PIXIE's ring structure as a graph while PIXIE runs: nodes, branches,
@@ -233,6 +242,68 @@ link, or deposit into core while PIXIE runs and watch the tube change.
 Uses beyond the demonstration: a check on the transcription, since a
 misread word shows up as a pointer to nowhere or a ring that does not
 close, and a way to show Heinz his 1969 data structures running.
+
+Panes, all linked, all driven by the running cabinet:
+
+1. **Tube** — the live 340, as now.
+2. **Core strip** — `BEG..END` as a bar, one tick per word, coloured by
+   class (atom, name, NIL, block, nonitem, free list, GC mark). Watch it
+   fill as the pen draws and watch the collector sweep.
+3. **Ring graph** — elements as nodes, pointers as edges, rings drawn as
+   literal circles; printnames shown as strings, blocks as arrays.
+4. **Inspector** — a selected cell's octal word, class, `CAR`/`CDR`, who
+   points at it (reverse pointers, computed), and which display-file
+   words it compiled to.
+5. **Linked brushing** — hover a stroke and its ring element lights; hover
+   an element and its strokes light, through segment provenance plus a
+   display-address → ring-name map recorded by the DOWN compiler. Selecting
+   an element can make PIXIE blink it, as pointing mode does.
+6. **Text pane** — an editable projection that round-trips (below).
+
+Two levels, like any structured-data viewer: the cell level is universal,
+because every word carries its own tag; the element level (branch between
+nodes 3 and 7, a resistor) needs a schema, gated on decoding RSPPIX's
+element semantics. Other RSP applications would plug in their own.
+
+Safe editing: `photograph()` a copy, edit it, check `pointersResolve`,
+and serve it back over the link (type `TITAN`). That is the 1972
+workflow with the browser as Titan, and it is the serve-back rung.
+Photographing each frame also gives time travel: diff before and after a
+stroke.
+
+Text formats, two layers:
+
+- **Lossless, the golden copy:** a flat table keyed by octal address with
+  class tags, in YAML or JSON. Round-trips exactly, diffs in git:
+  ```yaml
+  beg: 0o10000
+  savins: 0o10000
+  words:
+    0o10000: { name: 0o10002 }   # car
+    0o10001: nil                 # cdr
+    0o10002: { block: [512, 400, 530, 400] }
+  ```
+- **Projections for people:** sexprs with `#n=` labels (cells are conses,
+  NIL is NIL, labels express sharing and ring closure, e.g.
+  `#1=(OWNER (MEMBER-A MEMBER-B . #1#))`, printnames read as `"FERN"`);
+  YAML anchors and aliases; domain words (`node:`, `branch:`) once the
+  element schema is decoded. JSON only as the flat table.
+
+**To do: the turtle display list as ring data, sharing graftal's code.**
+Split `toDisplayFile` into `polylines(strokes)` and one shared emitter,
+`compilePolylines(lines) → { words, starts }`, so `toDisplayFile` keeps
+its output. Store each polyline as an RSP block (raw coordinates, which
+the relocation pass already leaves alone) named from a picture list
+whose name is `SAVINS`. `downCompile(image)` walks the list through the
+shared emitter and returns the words plus tags (display-address range →
+ring name) for the pen. Acceptance: `downCompile` equals `toDisplayFile`
+for the fern, still after `relocate` and a wire round trip, and a pen
+hit on the tube resolves to its polyline's name. The layout is ours, not
+SYMELEC's segment format, and says so until the element decode lands.
+The same structure is what a PDP-7 Forth builds
+([FORTH-TURTLE-340.md §9](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)).
+Background for all of this: the ring-structures section of the
+[turist guide](../../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md#pixies-data--ring-structures-from-the-ground-up).
 
 ## Media — what the machine eats and excretes
 
