@@ -77,23 +77,161 @@ room still has to *run* one day.
 
 *Languages for the machine PIXIE ran on, now that it has a Forth. Background: [Mitch Bradley's PDP-7 Forth](../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md).*
 
-| | Idea | The pitch |
-|---|------|-----------|
-| 🧵 | **Name Mitch's threading** | His PDP-7 Forth runs every thread cell with one `XCT`; the cell *is* an instruction and its opcode is its type. Maybe a new kind of threading. Write it up with Mitch, check it with Anton Ertl: *XCT threading* for the paper, *indirectly direct threading* for the T-shirt. |
-| 🥤 | **A Lisp for the PDP-7** | None we know of survives. Deutsch's 1964 PDP-1 Lisp does, but the machines aren't compatible. Port it, or grow one on Mitch's Forth with RSP's ring cells (NIL is the `JMS` opcode) as the heap. |
-| 🚇 | **Cheney on the PDP-7** | A continuation-passing Scheme, Baker's way ("Cheney on the M.T.A."): CPS, let the stack grow, evacuate it with Cheney's copying collector. C. J. Cheney published it from Cambridge in 1970, and Heinz's thesis thanks him for PIXIE's new garbage collector. He's already on this machine. |
-| 🔗 | **Many PDP-7s, one ring heap** | Run several cabinets side by side, sharing one memory window at the same address. It must be the same address everywhere because ring words are absolute (why tiny-titan transfers need `relocate`). **Leave PIXIE alone and share where PIXIE already lives.** Heinz's layout is data, not code: sixteen words at 5157–5177 (`DFE` … `STSAVE`) that `SETUP` reads, and the `core8k` and `bigpic` patches are exactly "poke an address". With them loaded, PIXIE's data sits in the top of the 8K: RSPPIX's variables `FREE`, `LOP`, `LINK`, `GDM` at 12011–12020, the compiled picture (PERMDF) from 12301, the free-list heap `BEG`–`END` (13741–17200), and the name list from `BOT` (17301). So map 12000–17777 as the shared window in every VM, and keep the other machines' code below 12000 (Mitch's Forth fits easily). **One PIXIE writes; everyone else reads**, with no change to PIXIE. The name list is the root set: RSPPIX's collector marks from it, so a reader walks it too. A second 340 can refresh straight from PERMDF, and Forth or Lisp can walk the rings live. **Locks without touching PIXIE:** the host is the lock. PIXIE spends its idle time polling in `WAITLK`, where no splice is half done and no collection is running, so readers run only while PIXIE's PC is in that loop. In one JavaScript thread that is just the scheduler. With Web Workers on a `SharedArrayBuffer` (which needs COOP/COEP headers), PIXIE's worker publishes "in WAITLK" with `Atomics`. The collector is mark-and-sweep in place (mark bit 200000, masked with 577777), not copying, so readers' pointers stay valid across it. The catch: anything not reachable from PIXIE's name list gets swept, so a reader that keeps a pointer must hang it on a name. A reader could even *write* at a safe point by following RSPPIX's rules: take cells from `FREE` (12011, in the window) and attach them to a named ring, so the collector keeps them. **Two PIXIEs on one heap would need changes:** `TOP+1` (5170) and RSPPIX's `OP` scratch (2232) are private, while `FREE`, `LOP` and `LINK` would be shared. For now two PIXIEs exchange rings over tiny-titan. For our own writers (Forth, Lisp), `ISZ` is the PDP-7's atomic read-modify-write-and-skip: keep the lock word at 777777; the `ISZ LOCK` that reaches 0 skips and owns it; unlock by storing 777777 (`LAW 17777` / `DAC LOCK`). Under workers that becomes `Atomics.add`, or a test-and-set IOT on `Atomics.compareExchange`. |
-| 🔭 | **Two tubes, one heap** | Two round 340 tubes side by side. PIXIE edits a circuit on the left; Mitch's Forth on the right reads the same rings from the shared window and draws them however it likes. Each VM has its own 340 and its own private display file, so every view is independent: its own pan and scale (the 340's ×1/2/4/8 plus Forth's arithmetic), or a different representation entirely. The Forth 340 assembler (`PARAM`, `POINT`, `VECTOR`, `DJS`, `STOP`, grown from `vword` and `dl,` in Mitch's `turtle.fs`) compiles whatever view you write: the circuit at another zoom, the netlist as a graph, or a PSIBER view after Don's 1989 [PSIBER Space Deck](https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e) and its Pseudo-Scientific Visualizer. That draws rings as rings, elements as nodes, atoms as values and names as labels, the free list as a thinning chain, and the collector's marks flashing as it sweeps. Redraw each time PIXIE enters `WAITLK`, the safe point, or redraw only what changed. **Editable from Forth too.** Point the pen at Forth's tube; Forth keeps a table from its display-file addresses back to ring elements (PIXIE's own hit-identification trick), then edits the ring at a safe point. The catch: PIXIE's tube shows PERMDF, which its DOWN compiler (`COMP`) builds from the rings, so an edit shows there only when `COMP` runs again. Still no change to PIXIE: the host drives PIXIE's own inputs, typing the command or tapping the menu item that recompiles, as the [demo scripts](../packages/cabinet/src/symelec-demo.ts) already tap menus. Which input reruns `COMP` is to find. Heinz's up/down compiler loop, with a second editor inside it. |
-| 📨 | **VMs send each other messages** | Obviously. PIXIE already has two inboxes, and neither needs a change. **Its teletype:** the host wires one VM's teletype output to PIXIE's keyboard, a null modem between two KSR-33s, and Forth just types to it. PIXIE's teletype language is five commands: `LABEL`, `UNLABEL`, `TITAN`, `GRID`, `START`. **Its link:** PIXIE starts every transfer (the user types `TITAN`, PIXIE sends control 4), and the header from the Titan end sets the direction. So Forth types `TITAN` to PIXIE, answers on the link as Titan with the direction bit set, and streams the edited rings. PIXIE checksums them, relocates them (`RELCON` is 0 when both share the window) and shows the result, all through its 1972 code path. That makes tiny-titan a switchboard: any VM can be the Titan end of any PIXIE, and two PIXIEs trade drawings through it. To check: whether a received structure goes through `COMP` onto the tube, and if not, which teletype command or menu tap does. **Between our own VMs** (Forth, Lisp, the host) we can add IOTs freely: a mailbox device with skip-on-message, polled the way `WAITLK` polls `LSF`. A message is a *name*, one pointer into the shared window, never a copy, because every VM sees the same addresses. Under Web Workers that is `Atomics.wait`/`notify` on the shared buffer, or `postMessage` for the doorbell. Heinz's link carried stuff, not verbs, and where you sent it said what to do; mailboxes can keep that rule. ITS did this with core links: an interrupting link woke the receiving job, which is how `:SEND` reached your screen and one Lisp evaluated in another. tiny-titan can interrupt VMs that ask for it, carrying `SEND` and `EVAL`. |
-| 🏫 | **tiny-its** | The timesharing system for machines that were never timeshared, behind tiny-titan: Titan answers and sends messages itself. Services: `services` (discovery), `who` (every PDP-7 and what it runs), `peek` (anyone's core, the ITS way), `send` (messages and device events), `filestore`, `lock`/`barrier`, `clock`. Device events are the applet's session events plus the whole console: pen, teletype, switches, reset, start, read-in and the program selector, all handled by the emulator, so the running program needs no change. One VM can steer another's pen or reboot it into DUEL. Named after MIT's Incompatible Timesharing System, itself a joke on CTSS, and as open: tourists welcome, writes only to machines you own or were invited to. It is also HACTRN for the cabinet: every VM is a job you can list, boot, stop, continue, examine and deposit, disassemble and assemble in place, dump and load, and copy memory between, all as tiny-titan messages, so a Forth on one PDP-7 can be another's DDT. Not multitasking itself: the VMs run in parallel and tiny-its is the live programming command line for all of them, teletype only, no display. It maps and unmaps shared segments, defines and inspects locks, and speaks a symbol table protocol: our assembler's static tables and source maps for PIXIE, `as7` name lists for Unix, and Mitch's Forth dictionary walked live in core, with source lines matched as the host types the source in. Its command language is TOPS-20's, stolen shamelessly (`?` help, ESC completion, guide words), friendly enough for an LLM to type at, table-driven with the tables as rings: [TINY-ITS.md](../packages/cabinet/TINY-ITS.md). Written in Forth, of course: the outer interpreter is already a command line, and `( guide words )` are already comments. A cross of HACTRN and Mitch's Open Firmware: jobs you can reach into, a tree of machines you walk with `dev` and `ls`, and VMs that describe themselves the way FCode cards did. Scripts are a turtle in a graph, written or demonstrated, with Emacs's `SAVE-EXCURSION`; deployments are docker-compose with a command line, and devices hot-mount on running VMs. A remote debugger that can debug itself, like PSIBER, but from anywhere tiny-titan reaches. An interface to agency with the player at the gate: an LLM gets the same verbs as a person and no others, and any verb can be set to propose, queued for a human to approve. A tribute the way Tiny Life is to The Sims, and a back-port: DDT began on MIT's PDP-1 and DEC shipped one for the PDP-7, before ITS grew up on the PDP-6 and PDP-10. [TINY-TITAN.md](../packages/cabinet/TINY-TITAN.md#what-it-could-do) |
-| 🐚 | **Unix on the cabinet** | The 1969–70 PDP-7 Unix, restored by Warren Toomey and the pdp7-unix team from Norman Wilson's scans, next to PIXIE on the same kind of machine. What it needs beyond what we have is one device: the RB09 disk, from SIMH. It brings `as`, `ed`, `roff`, `sh`, `db`, and B, compiled to threaded code like Mitch's Forth. RSPPIX, re-spelled in Unix `as` syntax, assembles into any Unix program or Forth kernel. Then Unix is one more VM on the tiny-its switchboard: `who` lists it beside PIXIE and DUEL. [cabinet README, Next](../packages/cabinet/README.md#next) |
-| 📡 | **The display list is the protocol** | Run any number of PDP-7s on a cloud instance and make the tab a terminal: the 340's display list goes down (the YAML segment rows the display emulator already writes, with provenance, sent only when they change), and device events come up (pen, teletype, switches, console). The pen stays in the machine, so hits happen in machine time and the tab draws its own pointer. Local mode and remote mode, one seam. Later, ship the 340's program instead of its output, the way NeWS shipped PostScript. [DESIGN.md](../packages/cabinet/DESIGN.md#local-mode-and-remote-mode) |
-| 🔌 | **Teletype pipes** | Wire one VM's teletype output to another's input: `PIPE FORTH \| PIXIE \| LOG`. The emulator holds the sender's printer flag until the receiver reads, so back-pressure comes free and no program changes. Tee, merge, CR-to-NL per link, files as punch and reader, a person or an LLM at either end. PDP-7 Unix never had pipes; now its machines do. [TINY-ITS.md](../packages/cabinet/TINY-ITS.md#teletype-links-and-pipes) |
-| 🗺️ | **Memory heat map on a space-filling curve** | Read and write counts per word from shadow memory, drawn on a Hilbert (or Sierpinski, or Moore) curve: 8K words as two 64×64 squares end to end, so neighbouring addresses stay neighbours with no jumps, and every aligned power-of-four block is a square. Watch PIXIE's free list churn and the collector sweep. [DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module) |
-| ✨ | **Pixie space** | Magic segments, like NeWS's magic dictionaries and Linux's `/proc`: memory the emulator backs itself, holding live pixies (ring structures) that describe the VM. Read them to see its devices, locks and symbols; splice them to act. Tunnels walk into other VMs. Then Linda's tuple space with pixies instead of tuples: `OUT`, `RD`, `IN`. Live magic pixies traveling between worlds. [TINY-ITS.md](../packages/cabinet/TINY-ITS.md#magic-segments-and-pixie-space) |
-| 🍄 | **Pixie rings are pie menus** | A pixie ring is mushrooms around a centre, joined underground by a mycelium nobody sees. That is an RSP ring, and drawn around its centre it is a pie menu: point in the middle, its rings as slices, flick to go, and every slice a two-way exit because rings come home. PIXIE's lightbuttons already rode in a ring around the tracking cross in 1972. And PSIBER's Pseudo-Scientific Visualizer is a recursive pixie ring projector: every object a ring, every member a ring of its own. The folklore reads like the manual: step in and you dance until someone outside pulls you out; run round nine times, never ten; whoever cleans the ring "an easy death shall dee." [TINY-ITS.md](../packages/cabinet/TINY-ITS.md#pixie-rings-are-pie-menus) |
-| 🍎 | **An Apple ][ in the mix** | Later: a 6502 beside the PDP-7s, managed by the same tiny-its, trading messages and device events (not rings: 8-bit bytes against 18-bit words), with its raster screen as its frames and Apple Logo's turtle next to Mitch's. [cabinet README, Next](../packages/cabinet/README.md#next) |
-| 🐢 | **Turtles all the way up** | The whole stack, each layer an interpreter or compiler for the one above: **native CPU** (itself decoding x86 or ARM into micro-ops) → **JIT** (V8, JavaScriptCore or SpiderMonkey, tiering from a bytecode interpreter up to optimized native code) → **JavaScript** → **TypeScript** (a layer that exists only at build time: `tsc` erases it, so nothing of it runs, the tiny-titan of the stack) → **PDP-7** (the [cabinet](../packages/cabinet/README.md): runs SYMELEC, DUEL, DEC's light pen test: built) → **FORTH** (Mitch's, on SIMH: built; the cabinet needs a loader) → **LISP** (in Forth, with RSP's ring cells as the heap and Cheney's collector: to do) → **RSP** (Wiseman & Hiles's Ring Structure Processor, the ring-structure library PIXIE is built on, `/RSPPIX` in the listing, as Lisp words over the same heap. Speaking its format is what connects us to PIXIE itself: save and load rings with 1972 SYMELEC over tiny-titan, or share them directly in memory: to do) → **TYPE 340 DISPLAY** (a computer of its own: its own instruction set of parameter, point, vector, increment, character and subroutine words, its own program counter fetching them from PDP-7 core, and the 347's jump-and-save; built in the cabinet, and its vectors go on to a canvas and a GPU command buffer, the wheel's oldest lap drawn by its newest) → **TURTLE** (Logo, which is a Lisp, drawing by compiling 340 display words into RSP rings you can then pick up with the pen: to do; Mitch's Forth turtle already draws this way a layer down). The JIT turns the cabinet's instruction loop into native code, so a PDP-7 `XCT` ends up as x86 or ARM. Program counters stacked: the CPU's, the JIT's bytecode, the PDP-7's, Forth's IP in location 10, Lisp's eval, the 340's display address, the turtle. Budget honestly: 8K words is tight (Forth takes 2.8K, SYMELEC alone was 5K), so give the cabinet 16K. |
+### 🧵 Name Mitch's threading
+
+His PDP-7 Forth runs every thread cell with one `XCT`; the cell *is* an instruction and its opcode is its type. Maybe a new kind of threading. Write it up with Mitch, check it with Anton Ertl: *XCT threading* for the paper, *indirectly direct threading* for the T-shirt.
+
+### 🥤 A Lisp for the PDP-7
+
+None we know of survives. Deutsch's 1964 PDP-1 Lisp does, but the machines aren't compatible. Port it, or grow one on Mitch's Forth with RSP's ring cells (NIL is the `JMS` opcode) as the heap.
+
+### 🚇 Cheney on the PDP-7
+
+A continuation-passing Scheme, Baker's way ("Cheney on the M.T.A."): CPS, let the stack grow, evacuate it with Cheney's copying collector. C. J. Cheney published it from Cambridge in 1970, and Heinz's thesis thanks him for PIXIE's new garbage collector. He's already on this machine.
+
+### 🔗 Many PDP-7s, one ring heap
+
+Run several cabinets side by side, sharing one memory window at the same address. It must be the same address everywhere because ring words are absolute (why tiny-titan transfers need `relocate`).
+
+**Leave PIXIE alone and share where PIXIE already lives.** Heinz's layout is data, not code: sixteen words at 5157–5177 (`DFE` … `STSAVE`) that `SETUP` reads, and the `core8k` and `bigpic` patches are exactly "poke an address". With them loaded, PIXIE's data sits in the top of the 8K: RSPPIX's variables `FREE`, `LOP`, `LINK`, `GDM` at 12011–12020, the compiled picture (PERMDF) from 12301, the free-list heap `BEG`–`END` (13741–17200), and the name list from `BOT` (17301). So map 12000–17777 as the shared window in every VM, and keep the other machines' code below 12000 (Mitch's Forth fits easily).
+
+**One PIXIE writes; everyone else reads**, with no change to PIXIE. The name list is the root set: RSPPIX's collector marks from it, so a reader walks it too. A second 340 can refresh straight from PERMDF, and Forth or Lisp can walk the rings live.
+
+**Locks without touching PIXIE:** the host is the lock. PIXIE spends its idle time polling in `WAITLK`, where no splice is half done and no collection is running, so readers run only while PIXIE's PC is in that loop. In one JavaScript thread that is just the scheduler. With Web Workers on a `SharedArrayBuffer` (which needs COOP/COEP headers), PIXIE's worker publishes "in WAITLK" with `Atomics`.
+
+The collector is mark-and-sweep in place (mark bit 200000, masked with 577777), not copying, so readers' pointers stay valid across it. The catch: anything not reachable from PIXIE's name list gets swept, so a reader that keeps a pointer must hang it on a name. A reader could even *write* at a safe point by following RSPPIX's rules: take cells from `FREE` (12011, in the window) and attach them to a named ring, so the collector keeps them.
+
+**Two PIXIEs on one heap would need changes:** `TOP+1` (5170) and RSPPIX's `OP` scratch (2232) are private, while `FREE`, `LOP` and `LINK` would be shared. For now two PIXIEs exchange rings over tiny-titan.
+
+**Our own writers** (Forth, Lisp) can lock with `ISZ`, the PDP-7's atomic read-modify-write-and-skip: keep the lock word at 777777; the `ISZ LOCK` that reaches 0 skips and owns it; unlock by storing 777777 (`LAW 17777` / `DAC LOCK`). Under workers that becomes `Atomics.add`, or a test-and-set IOT on `Atomics.compareExchange`.
+
+### 🔭 Two tubes, one heap
+
+Two round 340 tubes side by side. PIXIE edits a circuit on the left; Mitch's Forth on the right reads the same rings from the shared window and draws them however it likes. Each VM has its own 340 and its own private display file, so every view is independent: its own pan and scale (the 340's ×1/2/4/8 plus Forth's arithmetic), or a different representation entirely.
+
+The Forth 340 assembler (`PARAM`, `POINT`, `VECTOR`, `DJS`, `STOP`, grown from `vword` and `dl,` in Mitch's `turtle.fs`) compiles whatever view you write: the circuit at another zoom, the netlist as a graph, or a PSIBER view after Don's 1989 [PSIBER Space Deck](https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e) and its Pseudo-Scientific Visualizer. That draws rings as rings, elements as nodes, atoms as values and names as labels, the free list as a thinning chain, and the collector's marks flashing as it sweeps. Redraw each time PIXIE enters `WAITLK`, the safe point, or redraw only what changed.
+
+**Editable from Forth too.** Point the pen at Forth's tube; Forth keeps a table from its display-file addresses back to ring elements (PIXIE's own hit-identification trick), then edits the ring at a safe point.
+
+The catch: PIXIE's tube shows PERMDF, which its DOWN compiler (`COMP`) builds from the rings, so an edit shows there only when `COMP` runs again. Still no change to PIXIE: the host drives PIXIE's own inputs, typing the command or tapping the menu item that recompiles, as the [demo scripts](../packages/cabinet/src/symelec-demo.ts) already tap menus. Which input reruns `COMP` is to find. Heinz's up/down compiler loop, with a second editor inside it.
+
+### 📨 VMs send each other messages
+
+Obviously. PIXIE already has two inboxes, and neither needs a change.
+
+**Its teletype:** the host wires one VM's teletype output to PIXIE's keyboard, a null modem between two KSR-33s, and Forth just types to it. PIXIE's teletype language is five commands: `LABEL`, `UNLABEL`, `TITAN`, `GRID`, `START`.
+
+**Its link:** PIXIE starts every transfer (the user types `TITAN`, PIXIE sends control 4), and the header from the Titan end sets the direction. So Forth types `TITAN` to PIXIE, answers on the link as Titan with the direction bit set, and streams the edited rings. PIXIE checksums them, relocates them (`RELCON` is 0 when both share the window) and shows the result, all through its 1972 code path. That makes tiny-titan a switchboard: any VM can be the Titan end of any PIXIE, and two PIXIEs trade drawings through it.
+
+To check: whether a received structure goes through `COMP` onto the tube, and if not, which teletype command or menu tap does.
+
+**Between our own VMs** (Forth, Lisp, the host) we can add IOTs freely: a mailbox device with skip-on-message, polled the way `WAITLK` polls `LSF`. A message is a *name*, one pointer into the shared window, never a copy, because every VM sees the same addresses. Under Web Workers that is `Atomics.wait`/`notify` on the shared buffer, or `postMessage` for the doorbell. Heinz's link carried stuff, not verbs, and where you sent it said what to do; mailboxes can keep that rule.
+
+**ITS did this with core links:** an interrupting link woke the receiving job, which is how `:SEND` reached your screen and one Lisp evaluated in another. tiny-titan can interrupt VMs that ask for it, carrying `SEND` and `EVAL`.
+
+### 🏫 tiny-its
+
+The timesharing system for machines that were never timeshared, behind tiny-titan: Titan answers and sends messages itself. Full design: [TINY-ITS.md](../packages/cabinet/TINY-ITS.md) and [TINY-TITAN.md](../packages/cabinet/TINY-TITAN.md#what-it-could-do).
+
+#### Services
+
+`services` (discovery), `who` (every PDP-7 and what it runs), `peek` (anyone's core, the ITS way), `send` (messages and device events), `filestore`, `lock`/`barrier`, `clock`.
+
+#### Device events
+
+Device events are the applet's session events plus the whole console: pen, teletype, switches, reset, start, read-in and the program selector, all handled by the emulator, so the running program needs no change. One VM can steer another's pen or reboot it into DUEL.
+
+#### The name
+
+Named after MIT's Incompatible Timesharing System, itself a joke on CTSS, and as open: tourists welcome, writes only to machines you own or were invited to.
+
+#### HACTRN for the cabinet
+
+It is also HACTRN for the cabinet: every VM is a job you can list, boot, stop, continue, examine and deposit, disassemble and assemble in place, dump and load, and copy memory between, all as tiny-titan messages, so a Forth on one PDP-7 can be another's DDT.
+
+#### The live programming command line
+
+Not multitasking itself: the VMs run in parallel and tiny-its is the live programming command line for all of them, teletype only, no display. It maps and unmaps shared segments, defines and inspects locks, and speaks a symbol table protocol: our assembler's static tables and source maps for PIXIE, `as7` name lists for Unix, and Mitch's Forth dictionary walked live in core, with source lines matched as the host types the source in.
+
+#### The command language
+
+Its command language is TOPS-20's, stolen shamelessly (`?` help, ESC completion, guide words), friendly enough for an LLM to type at, table-driven with the tables as rings. Written in Forth, of course: the outer interpreter is already a command line, and `( guide words )` are already comments.
+
+#### Two parents
+
+A cross of HACTRN and Mitch's Open Firmware: jobs you can reach into, a tree of machines you walk with `dev` and `ls`, and VMs that describe themselves the way FCode cards did.
+
+#### Scripts, deployments, debugging
+
+Scripts are a turtle in a graph, written or demonstrated, with Emacs's `SAVE-EXCURSION`; deployments are docker-compose with a command line, and devices hot-mount on running VMs. A remote debugger that can debug itself, like PSIBER, but from anywhere tiny-titan reaches.
+
+#### An interface to agency
+
+An interface to agency with the player at the gate: an LLM gets the same verbs as a person and no others, and any verb can be set to propose, queued for a human to approve.
+
+#### A tribute and a back-port
+
+A tribute the way Tiny Life is to The Sims, and a back-port: DDT began on MIT's PDP-1 and DEC shipped one for the PDP-7, before ITS grew up on the PDP-6 and PDP-10.
+
+### 🐚 Unix on the cabinet
+
+The 1969–70 PDP-7 Unix, restored by Warren Toomey and the pdp7-unix team from Norman Wilson's scans, next to PIXIE on the same kind of machine. What it needs beyond what we have is one device: the RB09 disk, from SIMH. It brings `as`, `ed`, `roff`, `sh`, `db`, and B, compiled to threaded code like Mitch's Forth. RSPPIX, re-spelled in Unix `as` syntax, assembles into any Unix program or Forth kernel. Then Unix is one more VM on the tiny-its switchboard: `who` lists it beside PIXIE and DUEL. [cabinet README, Next](../packages/cabinet/README.md#next)
+
+### 📡 The display list is the protocol
+
+Run any number of PDP-7s on a cloud instance and make the tab a terminal: the 340's display list goes down (the YAML segment rows the display emulator already writes, with provenance, sent only when they change), and device events come up (pen, teletype, switches, console). The pen stays in the machine, so hits happen in machine time and the tab draws its own pointer. Local mode and remote mode, one seam. Later, ship the 340's program instead of its output, the way NeWS shipped PostScript. [DESIGN.md](../packages/cabinet/DESIGN.md#local-mode-and-remote-mode)
+
+### 🔌 Teletype pipes
+
+Wire one VM's teletype output to another's input: `PIPE FORTH | PIXIE | LOG`. The emulator holds the sender's printer flag until the receiver reads, so back-pressure comes free and no program changes. Tee, merge, CR-to-NL per link, files as punch and reader, a person or an LLM at either end. PDP-7 Unix never had pipes; now its machines do. [TINY-ITS.md](../packages/cabinet/TINY-ITS.md#teletype-links-and-pipes)
+
+### 🗺️ Memory heat map on a space-filling curve
+
+Read and write counts per word from shadow memory, drawn on a Hilbert (or Sierpinski, or Moore) curve: 8K words as two 64×64 squares end to end, so neighbouring addresses stay neighbours with no jumps, and every aligned power-of-four block is a square. Watch PIXIE's free list churn and the collector sweep. [DESIGN.md](../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module)
+
+### ✨ Pixie space
+
+Magic segments, like NeWS's magic dictionaries and Linux's `/proc`: memory the emulator backs itself, holding live pixies (ring structures) that describe the VM. Read them to see its devices, locks and symbols; splice them to act. Tunnels walk into other VMs. Then Linda's tuple space with pixies instead of tuples: `OUT`, `RD`, `IN`. Live magic pixies traveling between worlds. [TINY-ITS.md](../packages/cabinet/TINY-ITS.md#magic-segments-and-pixie-space)
+
+### 🍄 Pixie rings are pie menus
+
+A pixie ring is mushrooms around a centre, joined underground by a mycelium nobody sees. That is an RSP ring, and drawn around its centre it is a pie menu: point in the middle, its rings as slices, flick to go, and every slice a two-way exit because rings come home.
+
+PIXIE's lightbuttons already rode in a ring around the tracking cross in 1972. And PSIBER's Pseudo-Scientific Visualizer is a recursive pixie ring projector: every object a ring, every member a ring of its own.
+
+The folklore reads like the manual:
+
+- step in and you dance until someone outside pulls you out;
+- run round nine times, never ten;
+- whoever cleans the ring "an easy death shall dee."
+
+[TINY-ITS.md](../packages/cabinet/TINY-ITS.md#pixie-rings-are-pie-menus)
+
+### 🍎 An Apple ][ in the mix
+
+Later: a 6502 beside the PDP-7s, managed by the same tiny-its, trading messages and device events (not rings: 8-bit bytes against 18-bit words), with its raster screen as its frames and Apple Logo's turtle next to Mitch's. [cabinet README, Next](../packages/cabinet/README.md#next)
+
+### 🐢 Turtles all the way up
+
+The whole stack, each layer an interpreter or compiler for the one above:
+
+- **native CPU** (itself decoding x86 or ARM into micro-ops)
+- **JIT** (V8, JavaScriptCore or SpiderMonkey, tiering from a bytecode interpreter up to optimized native code)
+- **JavaScript**
+- **TypeScript** (a layer that exists only at build time: `tsc` erases it, so nothing of it runs, the tiny-titan of the stack)
+- **PDP-7** (the [cabinet](../packages/cabinet/README.md): runs SYMELEC, DUEL, DEC's light pen test: built)
+- **FORTH** (Mitch's, on SIMH: built; the cabinet needs a loader)
+- **LISP** (in Forth, with RSP's ring cells as the heap and Cheney's collector: to do)
+- **RSP** (Wiseman & Hiles's Ring Structure Processor, the ring-structure library PIXIE is built on, `/RSPPIX` in the listing, as Lisp words over the same heap. Speaking its format is what connects us to PIXIE itself: save and load rings with 1972 SYMELEC over tiny-titan, or share them directly in memory: to do)
+- **TYPE 340 DISPLAY** (a computer of its own: its own instruction set of parameter, point, vector, increment, character and subroutine words, its own program counter fetching them from PDP-7 core, and the 347's jump-and-save; built in the cabinet, and its vectors go on to a canvas and a GPU command buffer, the wheel's oldest lap drawn by its newest)
+- **TURTLE** (Logo, which is a Lisp, drawing by compiling 340 display words into RSP rings you can then pick up with the pen: to do; Mitch's Forth turtle already draws this way a layer down)
+
+The JIT turns the cabinet's instruction loop into native code, so a PDP-7 `XCT` ends up as x86 or ARM.
+
+Program counters stacked: the CPU's, the JIT's bytecode, the PDP-7's, Forth's IP in location 10, Lisp's eval, the 340's display address, the turtle.
+
+Budget honestly: 8K words is tight (Forth takes 2.8K, SYMELEC alone was 5K), so give the cabinet 16K.
+
 
 ---
 
