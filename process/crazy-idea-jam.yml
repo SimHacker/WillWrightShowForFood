@@ -165,8 +165,9 @@ ideas:
       checking in at each one — GPS-verified by your phone's coordinates. At each check-in you say
       whatever you like about what you tried, feeding your notes back into the coffeeshop
       spreadsheet metadata. Geolocated, social, generative — and the true PROGENITOR of StoryMaker
-      / Bar Karma / Urban Safari. Built solo at TomTom for fun, same self-education streak as the
-      Coffeeshops app and iLoci — pre-SFC, leveraging mobile/maps skills from the day job.
+      / Bar Karma / Urban Safari. Built solo for fun on Don's own time while he was working at
+      TomTom (not TomTom work), same self-education streak as the Coffeeshops app and iLoci —
+      pre-SFC, leveraging mobile/maps skills from the day job.
     progenitor_of: [creationtv-storymaker, urban-safari-gps-storytelling]
     tomtom_pre_sfc: true
     ties: [../characters/don-hopkins/career/stupid-fun-club.yml]
@@ -781,6 +782,17 @@ ideas:
       see, splice to act, tunnel into other VMs. Then Linda's tuple space with pixies
       instead of tuples: OUT, RD, IN. Live magic pixies traveling between worlds.
     ties: [../packages/cabinet/TINY-ITS.md]
+
+  pixie-rings-are-pie-menus:
+    emoji: "🍄"
+    blurb: |
+      "Pixie ring" is an old name for a fairy ring: mushrooms around a centre, joined
+      underground by a mycelium nobody sees. That is an RSP ring, and drawn around its centre
+      it is a pie menu: point in the middle, its rings as slices, flick to go, every slice a
+      two-way exit. PIXIE's lightbuttons rode in a ring around the tracking cross in 1972.
+      The folklore reads like the manual: step in and dance until pulled out; run round nine
+      times, never ten; "he wha cleans the fairy ring / An easy death shall dee."
+    ties: [../packages/cabinet/TINY-ITS.md, ../packages/cabinet/TRACKING.md]
 
   apple-ii-in-the-mix:
     emoji: "🍎"

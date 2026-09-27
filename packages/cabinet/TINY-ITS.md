@@ -13,7 +13,37 @@ ring structure built with it is a **pixie**, lower case: Heinz's own manual says
 representation "is also referred to as the PIXIE data structure"
 ([appendix 4](../../characters/heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)).
 PIXIE in capitals stays the name of his program. Live pixies travel between worlds. (Ask
-Heinz if he minds.)
+Heinz if he minds.) And a **pixie ring** is an old name for a fairy ring, which is where
+the next section goes.
+
+## Pixie rings are fairy rings, and fairy rings are pie menus
+
+A fairy ring, "also known as fairy circle, elf circle, elf ring or pixie ring"
+([Wikipedia](https://en.wikipedia.org/wiki/Fairy_ring)), is mushrooms in a circle around a
+centre, joined underground by one mycelium nobody sees. That is an RSP ring: members around
+an owner, joined by pointers under the picture. And things in a circle around a centre are
+a pie menu.
+
+- **Every ring is a pie.** In the IDE, and on a 340, point sits at the centre and the rings
+  through it are the slices: the direction you flick picks the ring to `GO` along. Inside a
+  ring, the owner is the centre and the members stand around it in ring order, so the
+  circle on the screen is the ring in memory. Each slice is a two-way exit, because a ring
+  always comes back to its owner: pie menus as two-way room exits, the idea behind iLoci
+  and MediaGraph.
+- **PIXIE did it in 1972.** Its control lightbuttons ride with the tracking cross (`LBD`,
+  commented `/LB'S AT CROSS`): a small radial menu of verbs around the pen
+  ([TRACKING.md](TRACKING.md)).
+- **The folklore is documentation:**
+  - Step into a fairy ring and you dance until someone outside pulls you out. Walk a ring
+    past its closing link and you go round forever, so `EACH` stops at the link back to
+    the owner, and the rescuer outside is the emulator or another tiny-its.
+  - Time runs differently inside: machine cycles, not wall clock.
+  - Run round it nine times, never ten: a loop needs a count.
+  - Destroy a fairy ring and it grows back: `UNDO`.
+  - A second ring can start inside the first: nested rings, subpictures.
+  - The mycelium under the meadow joins rings far apart: pixie space between VMs.
+  - And the garbage collector gets its verse, from the old Scottish rhyme: "And he wha
+    cleans the fairy ring / An easy death shall dee."
 
 ## Point, mark, and rooms
 
