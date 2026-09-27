@@ -373,6 +373,49 @@ window and flag those. It can also see deadlock (two VMs each stalled on
 the other's lock) and report it instead of hanging. The unmodified
 program never knows.
 
+**Shadow memory: bits only the emulator sees.** Core is a `Uint32Array`
+holding 18-bit words, so every word has 14 spare bits, and `write` masks
+them off today. Use them for tags the machine can never see. Tags live
+in the segment's array, so a shared segment shares its tags too. The rule
+that makes it cheap: an untagged word has its top bits zero, so the fast
+path is one test (`raw > 0o777777`), and only tagged words take the slow
+path. Sketch of the 14:
+
+| Bits | Tag | Kind |
+|---|---|---|
+| 18 | break on execute | trap |
+| 19 | watch reads | trap |
+| 20 | watch writes | trap |
+| 21 | watch 340 fetches | trap |
+| 22–25 | lock section, 15 locks (replaces the separate byte per word) | trap |
+| 26 | executed (code coverage, like `ccov7` in pdp7-unix) | sticky |
+| 27 | written since boot (a read without it is an uninitialised read) | sticky |
+| 28 | dirty since last snapshot | sticky |
+| 29–31 | spare | |
+
+Trap bits send the access to the slow path. Sticky bits are set by
+ordinary accesses, only while that feature is on, since each costs a
+store. A trap bit says only that someone cares; who and what (which VM's
+breakpoint, which watch, what condition) sits in a side table keyed by
+address, so two VMs can watch the same shared word differently.
+
+**Thicker layers, in parallel arrays.** Whatever does not fit in 14
+bits goes in shadow arrays of any width, indexed like core and attached
+to the segment: last writer (VM, PC, cycle) for every word, read and
+write counts for a heat map, the source line or message a word came
+from, a short history per word. That is the shape of Valgrind's memcheck
+and AddressSanitizer, here for free because we own the machine. It
+covers all memory, not only shared segments, and it feeds the panels:
+break on a word, show who last wrote it and from which source line, and
+colour the core strip by heat or coverage.
+
+What changes in `Pdp7`: `write` must keep the tag bits and replace only
+the low 18 (`core[a] = (core[a] & ~0o777777) | word`), every read the
+machine or a device sees must mask them off, and tags get their own
+calls. Snapshots stay 18-bit words, portable by construction as
+[WEB-BENCH.md](WEB-BENCH.md) requires; tags and layers save beside them,
+optionally.
+
 **RSP in Unix syntax.** RSPPIX is written for the Cambridge assembler,
 which `asm.ts` already parses. An emitter that prints `as7` syntax
 (Ken Thompson's, as in `pdp7-unix`) gives an `rsp.s`. PDP-7 Unix had no
