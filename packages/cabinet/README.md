@@ -170,7 +170,9 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
   join a program. No C and no BCPL on the
   PDP-7: C came on the PDP-11, and B was Thompson's cut-down BCPL. Catch for shared
   windows: Unix swaps whole user processes (010000 up) to disk, so a window in user
-  space would be swapped with them.
+  space would be swapped with them. The fix follows Unix's own display-buffer swap:
+  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module),
+  "Shared segments under Unix".
 - A live view and editor of PIXIE's ring structures, in core while it
   runs and in tiny-titan's stored files, side by side
   ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).

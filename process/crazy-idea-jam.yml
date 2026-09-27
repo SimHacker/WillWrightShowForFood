@@ -754,6 +754,16 @@ ideas:
       PostScript.
     ties: [../packages/cabinet/DESIGN.md, ../packages/cabinet/src/media.ts, ../packages/cabinet/src/session.ts]
 
+  teletype-pipes:
+    emoji: "🔌"
+    blurb: |
+      Wire one VM's teletype output to another's input: PIPE FORTH | PIXIE | LOG. The
+      emulator holds the sender's printer flag until the receiver reads, so back-pressure
+      comes free and no program changes. Tee, merge, CR-to-NL per link, files as punch and
+      reader, a person or an LLM at either end. PDP-7 Unix never had pipes; now its
+      machines do.
+    ties: [../packages/cabinet/TINY-ITS.md]
+
   apple-ii-in-the-mix:
     emoji: "🍎"
     blurb: |

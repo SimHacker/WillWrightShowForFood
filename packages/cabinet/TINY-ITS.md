@@ -113,6 +113,27 @@ command defined on the PDP-7 and one defined in a YAML file are the same thing.
   another name), its configuration of VMs, segments, maps and locks, and its macros and
   handlers. All of it is data in the filestore, as rings and as text.
 
+## Teletype links and pipes
+
+The emulator can wire one VM's teletype output to another's input, and tiny-its manages
+the wires: `LINK (TELETYPE OF) FORTH (TO) PIXIE`, `UNLINK`, `LINKS`, and a pipe line,
+`PIPE FORTH | PIXIE | LOG`. No program changes; each still thinks it has a KSR-33.
+
+- **Back-pressure for free.** A character leaves A only when B has taken the last one: the
+  emulator holds A's printer flag until B's program reads its keyboard. A's program
+  already waits on that flag, so nothing is lost and nothing needs flow control.
+- **Translation per link,** such as Unix's CR to NL (SIMH's `set tti unix`).
+- **Tee and merge:** one output to many inputs, many outputs into one, with the source
+  kept in the session log.
+- **Ends that aren't VMs:** a filestore file (the punch, capturing), a file played in (the
+  reader, typing a tape in, as an ASR-33 did), a person's console, an LLM, or a tiny-its
+  macro as a filter stage.
+- **Loops** (A to B and B to A is a null modem) are allowed; tiny-its rate-limits them so a
+  pair echoing each other can't run away.
+
+PDP-7 Unix never had pipes; Unix got them in 1973, on the PDP-11. These are pipes between
+machines, on the PDP-7.
+
 ## Why not make every document a graph?
 
 Frontier leaned into trees: UserLand's object database and scripts were outlines, and that

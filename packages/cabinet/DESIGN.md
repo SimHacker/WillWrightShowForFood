@@ -427,6 +427,35 @@ The layout words stay data, so each program puts the heap where it
 wants. To check: whether `as7` accepts the `NAME = JMS .` idiom, or the
 emitter spells the calls out.
 
+**Shared segments under Unix: swap the mapping with the process.** PDP-7
+Unix already does this for one mapping, the display buffer. The `capt`
+system call stores the process's buffer address in `u.dspbuf` and calls
+`movdsp`; `rele` gives it back; and the swapper (`swap` in `s1.s`) points
+the display at the kernel's own buffer before swapping a process out and
+back at `u.dspbuf` after swapping it in. `dskswap` (`s5.s`) moves the
+64-word user area and all 4096 words of user memory (010000–017777) to
+and from swap space. A shared-segment hack has the same shape:
+
+1. the user area gains a short map list: segment, address, length;
+2. two system calls beside `capt` and `rele`, map and unmap, added to the
+   `swp` dispatch table;
+3. a new IOT asks the emulator to map or unmap a segment for the memory
+   now in core;
+4. the swapper unmaps before `dskswap; 07000` and maps after
+   `dskswap; 06000`, where it already calls `movdsp`;
+5. `dskswap` skips mapped ranges, splitting its 4096-word transfer around
+   them. Otherwise swap-out writes the shared contents to disk and
+   swap-in brings a stale copy back over the live one.
+
+Then processes share segments with each other (one is in core at a time,
+and each maps its segments when it comes back in) and with other VMs: a
+display list any VM's 340 refreshes from, like a frame buffer, or
+PIXIE's rings read by a B program. The swap-in IOT also tells the
+emulator which process is in core, so symbol tables, lock sections,
+breakpoints and shadow tags switch with it. The limit is size: user space
+is 4K, and PIXIE's window 12000–17777 would leave a program only
+010000–011777, so map the part it needs or a smaller segment.
+
 ## Local mode and remote mode
 
 The same cabinets run in two places. **Local:** everything in the tab, as
