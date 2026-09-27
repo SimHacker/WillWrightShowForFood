@@ -177,9 +177,10 @@ ideas:
       iLoci — an iPhone app + server based on the **Method of Loci** (the ancient Memory Palace
       technique): build a network of "locations" (rooms) instead of menus, edit by dragging and
       "kissing" them together to connect/disconnect, attach images, notes, URLs, and a built-in
-      web browser. Really a **pie-menu network editor**. Don built it at TomTom/Bluebird (2008),
-      solo self-education on the job — same pre-SFC spirit as Coffeeshops and Bongo Bingo. Mobile
-      Dev Camp Amsterdam talk (Nov 28, 2008). Part of DreamScape (1995) → iLoci → MediaGraph →
+      web browser. Really a **pie-menu network editor**. Not TomTom work: like the Coffeeshops
+      app, Don built it on his own time (2008), mostly at the Bluebird coffeeshop, same pre-SFC
+      spirit as Coffeeshops and Bongo Bingo. He gave a talk about it at Mobile Dev Camp
+      Amsterdam, recorded and on YouTube. Part of DreamScape (1995) → iLoci → MediaGraph →
       Micropolis → MOOLLM.
     pivotal_moment: |
       Coffeeshops + Bongo Bingo + iLoci were Don's TomTom-era self-education projects — not SFC
