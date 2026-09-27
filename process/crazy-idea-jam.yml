@@ -668,7 +668,8 @@ ideas:
     blurb: |
       native CPU (micro-ops) => JIT (V8 / JavaScriptCore / SpiderMonkey tiers) => JavaScript
       => TypeScript (build-time only; tsc erases it, nothing of it runs) => PDP-7 => FORTH =>
-      LISP => PIXIE => TURTLE, each layer an interpreter or compiler for the one above. The
+      LISP => PIXIE => TYPE 340 DISPLAY (its own instruction set, program counter and
+      computer) => TURTLE, each layer an interpreter or compiler for the one above. The
       JIT turns the cabinet's instruction loop into native code, so a PDP-7 XCT ends up as
       x86 or ARM; the 340's vectors go to a canvas and a GPU command buffer, the wheel's
       oldest lap drawn by its newest. Built: the cabinet (TypeScript PDP-7, 340, light pen,
