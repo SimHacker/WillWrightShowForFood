@@ -682,6 +682,22 @@ ideas:
       ISZ reaching 0 owns it), or Atomics under workers.
     ties: [../packages/cabinet/src/symelec-patches.ts, ../characters/heinz-lemke/sources/pixie-assembler-listing-1972/rsppix.asm, ../packages/cabinet/TINY-TITAN.md]
 
+  two-tubes-one-heap:
+    emoji: "🔭"
+    blurb: |
+      Two round 340 tubes side by side: PIXIE edits on the left, Mitch's Forth on the right
+      reads the same rings from the shared window and draws them any way it likes. Each VM
+      has its own 340 and private display file, so each view has its own pan, scale or
+      representation, compiled by the Forth 340 assembler (PARAM, POINT, VECTOR, DJS, STOP,
+      grown from vword and dl, in turtle.fs): another zoom, the netlist as a graph, or a
+      PSIBER view after Don's 1989 PSIBER Space Deck and its Pseudo-Scientific Visualizer
+      (rings as rings, names as labels, the free list thinning, GC marks flashing). Redraw
+      at WAITLK, the safe point. Editable from Forth: its pen hits map back to ring
+      elements, edits land at a safe point, and PIXIE's tube updates when its DOWN compiler
+      (COMP) reruns, triggered by the host driving PIXIE's own inputs as the demo scripts
+      do. Which input reruns COMP is to find.
+    ties: [https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e, ../packages/cabinet/src/symelec-demo.ts, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |
