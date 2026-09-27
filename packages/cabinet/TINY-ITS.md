@@ -241,6 +241,24 @@ hardware from the hardware.
 
 TOPS-20's manners go on top. And the Forth it runs on is Mitch's too.
 
+## It debugs itself
+
+tiny-its is a remote debugger, and it runs on a VM like any other, so it can debug
+itself: `EXAMINE` its own command tables, `SEE` its own words, break in its own parser,
+walk its own pixies. PSIBER did this for NeWS: the Space Deck was written in NeWS
+PostScript and could open up the server's objects, its own included, but only from inside
+the same server. tiny-its does it from anywhere tiny-titan reaches.
+
+The one trap is stopping yourself, since a stopped tiny-its can't type `CONTINUE`. Three
+ways out, all of them already in the design:
+
+- **Another tiny-its** on another VM or node is the debugger, as one ITS job ran DDT on
+  another.
+- **The host catches you.** When the Forth tiny-its halts, the TypeScript tiny-its takes
+  over the teletype until it runs again.
+- **The emulator never stops watching.** Breakpoints, watches and shadow memory live
+  outside the machine, so the state of a stopped tiny-its is all still there to read.
+
 ## Start from Open Firmware
 
 Open Firmware already has a command line built this way, in Forth, in files small enough
