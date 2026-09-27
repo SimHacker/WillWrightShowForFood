@@ -78,6 +78,24 @@ Turn the boring part, wiring the cross-game bridges, into casual mini-games: Wid
 patches you build and swap. The Wedding Album round-trips a couple through Sims 1, 2, 3 and 4,
 each edition a clean organelle.
 
+<a id="interface-to-agency"></a>
+
+### 🧭 An interface to agency
+
+Anything an agent can do, a person should be able to do through an interface, and no
+capability should be reachable only by asking the agent. The agent may bring more attention,
+memory and bandwidth; it may not have a different set of verbs. People are agents too, and the
+interface shouldn't care who is holding the pen.
+
+The Sims already worked this way: objects advertise what they can do, and the pie menu the
+player picks from and the list autonomy scores are the same list, feeding one visible,
+cancellable action queue. Programming by demonstration runs both ways: you show the agent, and
+the agent shows you. On the PDP-7, tiny-its gives an LLM exactly the commands a person has, and
+any of them can be set to wait for a human to approve.
+
+[MOOLLM: An interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md) ·
+[tiny-its](../packages/cabinet/TINY-ITS.md#an-interface-to-agency-with-the-player-at-the-gate)
+
 ---
 
 ## 🤖 Stupid Fun Club energy

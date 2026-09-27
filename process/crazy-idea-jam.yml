@@ -83,6 +83,17 @@ ideas:
       Max/MSP patches. Includes cross-VERSION bridging: the WEDDING ALBUM round-tripping a couple
       through Sims 1⇔2⇔3⇔4, each edition a clean non-destructive organelle.
 
+  interface-to-agency:
+    emoji: "🧭"
+    blurb: |
+      Anything an agent can do, a person should be able to do through an interface; no
+      capability reachable only by asking the agent. The agent may bring more attention, memory
+      and bandwidth, not a different set of verbs. People are agents too. The Sims did it:
+      objects advertise, the pie menu and autonomy's scored list are the same list, one visible
+      cancellable queue. Programming by demonstration runs both ways. tiny-its gives an LLM the
+      same commands as a person, any of them gated for human approval.
+    ties: [https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md, ../packages/cabinet/TINY-ITS.md]
+
   robo-resurrection:
     emoji: "🤖⛪"
     blurb: |
