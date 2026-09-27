@@ -224,7 +224,9 @@ on, the way this cabinet brings Unix home to the PDP-7 it was born on.
 is a command interpreter. The parallel part is the VMs, which the
 backplane steps. It is the live programming command line for all of
 them, and it needs only a teletype, no display: the cabinet's KSR-33
-panel, a terminal on the server, or a PDP-7 VM typing at it.
+panel, a terminal on the server, or a PDP-7 VM typing at it. Its command
+language, TOPS-20 style and friendly to people and LLMs alike, is
+designed in [TINY-ITS.md](TINY-ITS.md).
 
 **Shared memory and locks are its to manage.** The per-VM sharing config
 and the implicit locks in
