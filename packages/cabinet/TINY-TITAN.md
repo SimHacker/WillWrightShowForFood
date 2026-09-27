@@ -220,6 +220,53 @@ the PDP-7; ITS grew its manners on the PDP-6 and PDP-10 afterward.
 tiny-its brings those manners back to the class of machine DDT started
 on, the way this cabinet brings Unix home to the PDP-7 it was born on.
 
+**Not a timesharing system itself.** tiny-its does one thing at a time: it
+is a command interpreter. The parallel part is the VMs, which the
+backplane steps. It is the live programming command line for all of
+them, and it needs only a teletype, no display: the cabinet's KSR-33
+panel, a terminal on the server, or a PDP-7 VM typing at it.
+
+**Shared memory and locks are its to manage.** The per-VM sharing config
+and the implicit locks in
+[DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)
+are the same state that tiny-its commands edit; the YAML is the saved
+form. Commands cover:
+
+- segments: create, resize, delete, snapshot, copy;
+- maps: map and unmap a segment into a VM at an address, read-write or
+  read-only, and list who maps what;
+- locks: define one over symbol ranges (held inside or free inside), list
+  holders and waiters, watch stray writes to a window, and break a
+  deadlock by hand.
+
+**Symbol tables and source maps, as a protocol.** Each VM can export a
+symbol table, optionally, and tiny-its and the emulator's panels use it
+for everything: examine by name (`FLST/`), disassemble a routine,
+show its source, name the lock sections. A symbol is a name, an address,
+a kind (code, variable, constant, literal, Forth word), a length where
+known, its segment, and a source file and line where known. Tables carry
+a generation number, so a live change (a new Forth word, a patch) tells
+every viewer to refresh. Where they come from:
+
+- **Our assembler:** `asm.ts` already gives a static symbol table and an
+  address to source line map ([`sourceFromAsm`](src/source.ts)). The 1972
+  listing gives the same through `sourceFromListing` and
+  `symelec-symbols.tsv`. The applet's symbol dropdown, which scrolls the
+  octal view, disassembles, or opens the source, already runs on these.
+- **`as7` and Unix:** `as7` writes a listing and a name list, and PDP-7
+  Unix had its own `nm`, so Unix programs can export theirs.
+- **Mitch's Forth, live and without changing it:** its dictionary is a
+  linked list of two-word headers (length and first three characters),
+  so the host can walk it in core and list every word with its address.
+  Full names and a source map come from the feeding side: the host types
+  the source in, so it knows which line was being read while `HERE`
+  moved, and maps each new word's address range to that file and line.
+  With IP in location 10, the panels can then show which Forth word is
+  running and where it came from.
+
+All of it is optional, and each piece helps: tiny-its commands, the
+debugger, the source view, program visualisation panels.
+
 ## Where things are
 
 | What | Where |

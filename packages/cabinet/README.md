@@ -184,6 +184,13 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
     `PDP11/pdp11_vt_lunar_rom.h`, and `display/vt11.c`.
   - A PDP-10 that runs ITS: the 36-bit KA10, from `PDP10/ka10_*.c`.
   - A PDP-8, from `PDP8/`.
+  - An Apple ][, the first machine that isn't DEC's. It has no SIMH counterpart, so
+    the spec is another emulator (MAME's `apple2` driver, or apple2js in JavaScript;
+    check licenses before lifting anything). It joins tiny-its as one more job, with
+    messages, device events and a symbol table. It trades messages rather than rings,
+    since it has 8-bit bytes, not 18-bit words, and its screen is raster memory, so
+    its frames are screen memory instead of 340 segments. Apple Logo brings its own
+    turtle.
 
 ### Where the bugs are written down
 

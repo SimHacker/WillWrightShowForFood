@@ -726,7 +726,10 @@ ideas:
       tourists welcome, writes only to machines you own or were invited to. Also HACTRN for
       the cabinet: every VM a job to list, boot, stop, continue, examine, deposit,
       disassemble, assemble, dump, load and copy memory between, all as tiny-titan
-      messages, so one PDP-7's Forth can be another's DDT. A tribute the way Tiny Life is
+      messages, so one PDP-7's Forth can be another's DDT. Not multitasking itself: the
+      live programming command line for parallel VMs, teletype only. It maps and unmaps
+      shared segments, manages locks, and speaks a symbol table protocol (assembler tables
+      and source maps, as7 name lists, Forth's dictionary walked live in core). A tribute the way Tiny Life is
       to The Sims, and a back-port to the machine class DDT started on.
     ties: [../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/session.ts, ../packages/cabinet/DESIGN.md]
 
@@ -750,6 +753,14 @@ ideas:
       seam. Later, ship the 340's program instead of its output, as NeWS shipped
       PostScript.
     ties: [../packages/cabinet/DESIGN.md, ../packages/cabinet/src/media.ts, ../packages/cabinet/src/session.ts]
+
+  apple-ii-in-the-mix:
+    emoji: "🍎"
+    blurb: |
+      Later: an Apple ][ beside the PDP-7s, managed by the same tiny-its, trading messages
+      and device events (not rings: 8-bit bytes against 18-bit words), its raster screen as
+      its frames, and Apple Logo's turtle next to Mitch's.
+    ties: [../packages/cabinet/README.md]
 
   turtles-all-the-way-up:
     emoji: "🐢"
