@@ -133,6 +133,32 @@ the language suits it for the same reasons it suits a newcomer:
 - **Rights and limits** are the tiny-its rule: writes only to machines the user owns or
   was invited to, and rate limits for everyone.
 
+## An interface to agency, with the player at the gate
+
+MOOLLM's [interface to agency](https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md)
+sets the rule: anything an agent can do, a person can do through an interface, and no
+capability is reachable only by asking the agent. People are agents too. tiny-its keeps it:
+
+- **One set of verbs.** An LLM at the console has exactly the commands a person has, and
+  every command a person can type has a panel in the IDE as well. No privileged verbs.
+- **The object stays in view.** The tube, the ring graph, the core strip and point are
+  visible while anyone works, and every step is small and reversible (`EXPLAIN`, snapshots,
+  `UNDO`): Shneiderman's conditions for direct manipulation.
+- **Same channel, whoever holds the pen.** In the cabinet a scripted pen and your hand
+  already go into the machine the same way, as session events. So do an LLM's commands
+  and yours, and the log says who typed what.
+- **Demonstration both ways.** You demonstrate and tiny-its writes the script; an LLM
+  writes a script and tiny-its demonstrates it back to you, step by step, point moving on
+  the graph, before or while it runs.
+
+And the [player at the gate](../../process/crazy-idea-jam.md#-the-player-at-the-gate): the
+human stays in the middle of every transformation. A deployment can put any verb in
+**propose** mode for any user: the command is queued, not run, with its `EXPLAIN`, and a
+person approves, edits or cancels it. The queue is visible and cancellable, like the Sims'
+action queue. The natural membranes are writes to another node, device events and resets,
+splices into someone else's pixies, and anything leaving the deployment. AI proposes, you
+dispose.
+
 ## Commands are data: ring structures
 
 The command table is a ring structure, so the parser is a table walker small enough for a
