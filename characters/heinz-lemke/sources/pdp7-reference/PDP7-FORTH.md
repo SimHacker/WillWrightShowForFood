@@ -150,6 +150,78 @@ uses unsigned `MUL` and `/` fixes signs in software; `*/` keeps the EAE's 36-bit
 typed at the prompt compile into a scratch buffer and run when the outermost structure
 closes, so `4 0 DO I . LOOP` works without a definition.
 
+## XCT: the instruction that executes another instruction
+
+`XCT Y` fetches the word at `Y` and executes it as if it stood where the `XCT` is. The
+program counter stays put: if the executed instruction jumps, control goes where it jumps;
+if it skips, it skips the instruction after the `XCT`; otherwise execution carries on after
+the `XCT`. With the indirect bit, `XCT I P` executes the instruction whose *address* is in
+`P`. The PDP-1, PDP-4/7/9/15 and PDP-6/10 had it; so did the IBM 709 (`XEC`) and the
+System/360 (`EX`, which also ORs a register into the target's second byte).
+
+**What it was for.** Anywhere a program wants to choose, pass or build *one instruction*
+without writing a subroutine or patching its own code:
+
+- **Tables of one-instruction handlers.** Index a table and `XCT` the entry. SYMELEC's
+  teletype commands work this way (listing p.37, `MESSAG`): `LABEL` is `ISZ RLABEL`,
+  `UNLABEL` is `DZM RLABEL`, `GRID` is `LAC (1760` falling into the `DAC GRID` that follows
+  the `XCT`, and `TITAN` and `START` are `JMP`s. Some entries act and fall through, some jump
+  away: exactly Mitch's thread cells, twenty-four years earlier on the same machine.
+- **Instructions as arguments.** A caller writes instructions after its call, and the
+  subroutine `XCT`s them through its return address. SYMELEC's `GRHA` ("go round head
+  applying function") is called as `LAW GRHA; ENTER; LAW X; LAW F1; LAW F2` and reads its
+  arguments with `XCT I ENTER-JMS`: the arguments, including the functions to apply, are
+  `LAW` instructions it executes to get their values. `DRLTD` takes a set-visible/invisible
+  instruction the same way. Higher-order functions, in 1972, in 8K.
+- **Out-of-line execution.** Debuggers replaced an instruction with a breakpoint and, to
+  continue, `XCT`ed the saved original. Linux kprobes and uprobes still do this in software
+  ("execute out of line": copy the probed instruction to a scratch slot and single-step
+  it there), as does GDB's displaced stepping.
+- **Hardware that executes a location.** The same idea with the hardware choosing the word:
+  the PDP-4's multi-level interrupt executed the instruction in the channel's vector
+  location, so a single instruction could service a device and return (Supnik); the PDP-10
+  executed the instruction at 40+2n, often a `BLKI`/`BLKO` that moved one word and resumed
+  with no handler at all; the 8080's interrupting device jammed an instruction (usually
+  `RST`) onto the data bus. The PDP-10 monitor used `PXCT` ("previous context XCT") to run one
+  instruction against the *user's* address space, which is how the kernel touched user
+  memory.
+
+**Why modern machines dropped it.** Pipelines fetch instructions ahead; `XCT` makes the next
+instruction depend on a data load, and an executed instruction can itself jump, skip, fault
+or `XCT` again, which makes precise exceptions and branch prediction awkward. RISC designs
+compose the same effects from indirect jumps and calls (jump tables, function pointers,
+computed `goto` in interpreters), and JIT compilers generate the instruction instead of
+executing a word of data. IBM kept it: z/Architecture still has `EX` and adds `EXRL` (execute
+relative long), used above all to run a storage-to-storage instruction such as `MVC` with a
+length taken from a register.
+
+**What Mitch does with it.** His inner interpreter is one `XCT`:
+
+```
+next:   xct i 010       " pre-increment IP, execute the thread cell
+        dac i 012       " push AC (only reached by constant/variable cells)
+        jmp next
+```
+
+`xct i 10` bumps auto-index location 10 (IP) and executes the thread cell it now points at,
+so the thread is data that is also a program. A cell that transfers control (a `CAL` for a
+colon word, a `JMP` for a primitive) never comes back to the `dac`; a cell that only loads
+AC (`LAC` for a constant or literal, `LAW` for a variable, whose "operand" is the address
+itself) falls through and gets pushed. The `CAL` saves a return address in location 20 that
+`nest` ignores: nest takes IP from location 10 instead, which is why "`CAL I` jumps through
+location 20, which every ordinary CAL overwrites" rules out using it for branches.
+
+That makes location 10 a **second program counter**. The PDP-7 runs NEXT with its own PC,
+and NEXT runs the Forth program one instruction at a time with the PC in location 10: a
+virtual machine whose instruction set is the PDP-7's own. Subroutine threading (a thread of
+`JMS` instructions) would be faster but would store return addresses in the callees; indirect
+threading would add a code-field fetch. `XCT` gets direct execution without either, which is
+Mitch's "the threaded code threads are machine instructions". The 340 is the other second
+program counter in this story: it fetches display words from the same core with its own
+address register. Myer & Sutherland's wheel, turning inside one machine.
+
+(The cabinet already implements `XCT`, because SYMELEC's command table demanded it.)
+
 ## The turtle
 
 [`lib/turtle.fs`](https://github.com/MitchBradley/pdp7forth/blob/main/lib/turtle.fs), 112
