@@ -698,6 +698,21 @@ ideas:
       do. Which input reruns COMP is to find.
     ties: [https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e, ../packages/cabinet/src/symelec-demo.ts, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
 
+  vm-messages:
+    emoji: "📨"
+    blurb: |
+      VMs send each other messages. PIXIE already has two inboxes, unmodified. Its teletype:
+      the host wires another VM's teletype output to PIXIE's keyboard (a null modem between
+      KSR-33s), and Forth types LABEL, UNLABEL, TITAN, GRID or START. Its link: PIXIE starts
+      every transfer and the Titan end's header sets the direction, so Forth types TITAN,
+      answers as Titan with the direction bit set, and streams the edited rings; PIXIE
+      checksums, relocates (RELCON 0 in a shared window) and shows them through its 1972
+      path. tiny-titan becomes a switchboard: any VM can be any PIXIE's Titan. To check:
+      whether a received structure goes through COMP. Between our own VMs, a mailbox device
+      with new IOTs, polled like LSF in WAITLK; a message is a name (one pointer into the
+      shared window), never a copy. Under Web Workers, Atomics.wait/notify or postMessage.
+    ties: [../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md, ../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/plugins/tiny-titan.ts]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |
