@@ -384,6 +384,51 @@ The layout words stay data, so each program puts the heap where it
 wants. To check: whether `as7` accepts the `NAME = JMS .` idiom, or the
 emitter spells the calls out.
 
+## Local mode and remote mode
+
+The same cabinets run in two places. **Local:** everything in the tab, as
+now. **Remote:** any number of VMs on a cloud instance under Node (they
+already run headless in the tests), with the tab as a terminal. The 340's
+display list goes down and device events come up: interaction local,
+computation remote, the split the 1967 Cambridge system analysis drew.
+
+- **Down: the display list.** Each frame as the segment rows
+  [`toYaml`](src/media.ts) already writes (`[addr, kind, x0, y0, x1, y1,
+  int, scale, subr, cycle]`), or the JSONL the `Recorder` writes. The
+  provenance travels with it, so hover, the inspector and linked brushing
+  work remotely. PIXIE's picture is mostly still, so send a frame only
+  when it differs from the last one sent, or send only the rows that
+  changed, keyed by display address.
+- **Up: device events,** the [session](src/session.ts) vocabulary (`sw`,
+  `pen`, `tty`, `poke`, and the console kinds). The server stamps each
+  with the cycle it was applied at, so its log replays the run exactly.
+- **The pen stays in the machine.** The light pen device tests segments
+  as the 340 draws them, in machine time; the tab only says where the pen
+  is. Latency shows up as a lagging cross, as a fast hand already
+  outruns SYMELEC's tracking, so the tab draws its own pointer locally
+  and the hand never lags. The cabinet's 340 takes several pens, so two
+  people in two places can each hold one.
+- **Later: ship the 340's program instead.** The 340 is a computer, so
+  the server could send display-file words and let the tab run the 340,
+  the way NeWS sent PostScript rather than pixels. Smaller, and the
+  phosphor timing is exact locally, but pen hits must then travel back
+  into machine time. Segments first.
+- **Watchers and pens.** A VM's frames broadcast to every viewer; who
+  holds a pen is floor control, handed out by tiny-its.
+- **Pacing.** The server runs each machine at 1969 speed or faster; the
+  tab draws at `requestAnimationFrame`. Drop frames, never events.
+
+One seam serves both modes, as `TitanPort` already does for the link: a
+display port and an event port, in-process when local, a WebSocket when
+remote.
+
+**On a shared server** the emulated code cannot leave the emulator, but
+the server still trusts nothing from a tab: validate every message
+against its schema, cap VMs and CPU per user, rate-limit events, cap
+segments per frame (a runaway display file makes huge frames), require
+ownership or an invitation for any write (the tiny-its rule), and give
+VMs no host files beyond their scoped filestore.
+
 ## Media — what the machine eats and excretes
 
 SYMELEC issues **no reader or punch IOTs** — paper tape was how code arrived

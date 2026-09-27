@@ -740,6 +740,17 @@ ideas:
       Then Unix is one more VM on the tiny-its switchboard.
     ties: [../packages/cabinet/README.md, ../packages/cabinet/DESIGN.md]
 
+  display-list-protocol:
+    emoji: "📡"
+    blurb: |
+      Any number of PDP-7s on a cloud instance, the tab as a terminal: the 340's display
+      list down (the YAML segment rows, with provenance, only when they change), device
+      events up (pen, teletype, switches, console). The pen stays in the machine, so hits
+      happen in machine time; the tab draws its own pointer. Local and remote mode, one
+      seam. Later, ship the 340's program instead of its output, as NeWS shipped
+      PostScript.
+    ties: [../packages/cabinet/DESIGN.md, ../packages/cabinet/src/media.ts, ../packages/cabinet/src/session.ts]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |
