@@ -73,6 +73,18 @@ room still has to *run* one day.
 
 ---
 
+## 🧵 PDP-7 fun list
+
+*Languages for the machine PIXIE ran on, now that it has a Forth. Background: [Mitch Bradley's PDP-7 Forth](../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md).*
+
+| | Idea | The pitch |
+|---|------|-----------|
+| 🧵 | **Name Mitch's threading** | His PDP-7 Forth runs every thread cell with one `XCT`; the cell *is* an instruction and its opcode is its type. Maybe a new kind of threading. Write it up with Mitch, check it with Anton Ertl: *XCT threading* for the paper, *indirectly direct threading* for the T-shirt. |
+| 🥤 | **A Lisp for the PDP-7** | None we know of survives. Deutsch's 1964 PDP-1 Lisp does, but the machines aren't compatible. Port it, or grow one on Mitch's Forth with PIXIE's ring cells (NIL is the `JMS` opcode) as the heap. |
+| 🚇 | **Cheney on the PDP-7** | A continuation-passing Scheme, Baker's way ("Cheney on the M.T.A."): CPS, let the stack grow, evacuate it with Cheney's copying collector. C. J. Cheney published it from Cambridge in 1970, and Heinz's thesis thanks him for PIXIE's new garbage collector. He's already on this machine. |
+
+---
+
 ## 🚀 Forward-thinking foundations
 
 *The serious wing. Quieter, but these are the ones that quietly rearrange how everything else works.*

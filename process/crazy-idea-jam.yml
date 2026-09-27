@@ -635,6 +635,34 @@ ideas:
     monetization_is_private: "Revenue / print-vendor / support mechanics live in the PRIVATE strategy (green room: supporters-and-anti-sharecropping), not here."
     ties: [../bits/gag-lightpenisland-net/gag-lightpenisland-net.yml, showmaker-network.yml]
 
+  xct-threading-writeup:
+    emoji: "🧵"
+    blurb: |
+      Mitch Bradley's PDP-7 Forth executes its threads with one XCT: every thread cell is a
+      PDP-7 instruction, and its opcode is the word's type. Maybe a new kind of threading.
+      Write it up with Mitch, check the literature with Anton Ertl, and name it: XCT threading
+      for the paper, "indirectly direct threading" for the T-shirt.
+    ties: [../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md]
+
+  pdp7-lisp:
+    emoji: "🥤"
+    blurb: |
+      A Lisp for the PDP-7. We know of none that survives (if one existed, find it). L. Peter
+      Deutsch's 1964 PDP-1 Lisp does survive, but the PDP-1 and PDP-7 aren't compatible. Port
+      it, or grow one on Mitch's Forth, with PIXIE's ring-structure cells (CAR, CDR, NIL as the
+      JMS opcode) as the heap Heinz already built.
+    ties: [../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md]
+
+  cheney-on-the-pdp7:
+    emoji: "🚇"
+    blurb: |
+      A continuation-passing Scheme for the PDP-7, done Henry Baker's way ("Cheney on the
+      M.T.A.", 1994: compile to CPS, let the stack grow, and evacuate it with Cheney's copying
+      collector). C. J. Cheney published that collector from Cambridge in 1970, and Heinz's
+      thesis thanks "C. Cheney for a new garbage collector": so Cheney is already on this
+      PDP-7. Call it Cheney on the PDP-7.
+    ties: [../characters/heinz-lemke/sources/phd-thesis-1972/annotated/01-chapters-1-2.md]
+
 graduation:
   note: "Ideas leave the jam by becoming something runnable."
   paths:

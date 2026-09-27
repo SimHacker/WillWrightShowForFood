@@ -222,6 +222,28 @@ address register. Myer & Sutherland's wheel, turning inside one machine.
 
 (The cabinet already implements `XCT`, because SYMELEC uses it everywhere above.)
 
+### What to call it
+
+The usual threading taxonomy (Anton Ertl's: direct, indirect, subroutine, call, token,
+switch) has no entry for it. The nearest is **call threading**, where the interpreter loop
+*calls* each cell. Mitch's loop *executes* each cell, and the opcode of the cell is its code
+field. We haven't found it named in the Forth literature; ask Mitch and Anton Ertl.
+
+- **Precise:** *XCT threading*. *Execute threading*, the sibling of call threading.
+  *Opcode-typed threading*, for where the word's type lives. *Native-cell threading*.
+- **Witty:** *ventriloquist threading* (`XCT` puts words in another instruction's mouth).
+  *Stunt-double threading* (the cell performs in the `XCT`'s place and takes the fall if it
+  jumps). *Borrowed-PC threading*.
+- **tiny-titan grade:** *indirectly direct threading*: the most direct threading there is,
+  reached through an indirect `XCT I`. *Out-of-line inline threading*. *Subroutine threading
+  with no subroutines*.
+- **Self-referential, his dictionary's own:** headers keep a name's length and first three
+  letters, so `XCT-THREADING` is stored as `XCT` and ten underscores, the same word as any
+  other thirteen-letter name starting `XCT`. The only name for it his Forth stores
+  completely is `XCT`.
+
+For the paper, *XCT threading*. For the T-shirt, *indirectly direct threading*.
+
 ## The turtle
 
 [`lib/turtle.fs`](https://github.com/MitchBradley/pdp7forth/blob/main/lib/turtle.fs), 112
