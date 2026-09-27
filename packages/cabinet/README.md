@@ -156,6 +156,21 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
   added because it asked. Its turtle then draws in the browser, and the ring vocabulary
   in [FORTH-TURTLE-340.md](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md)
   has a real Forth to live in.
+- Run PDP-7 Unix, from [pdp7-unix](https://github.com/DoctorWkt/pdp7-unix) (local clone
+  `~/GroundUp/git/pdp7-unix`). Its SIMH script asks for 8K with EAE, the teletype with
+  CR mapped to NL, the clock, and the RB09 fixed-head disk at device 71; it loads
+  `boot.rim` at 010000 and the bootstrap reads the system from disk. The new part is
+  the RB09, ported from SIMH's `pdp18b_rb.c`. Graphics-2, Bell Labs' display, is
+  optional, and it is not a 340. SIMH runs it already, so a trace against SIMH finds
+  whatever else is missing. Languages come with it: `as`, and B. B compiled to threaded
+  code, a third threaded interpreter on this machine beside Mitch's Forth; its
+  interpreter `bi.s` and loader `bl.s` are in the scans. The compiler is not; Robert
+  Swierczek rebuilt it in 2016 as `src/other/b.b`, bootstrapped by `tools/b.c`. A B
+  program is `bl.s`, its own `.s` and `bi.s` assembled together, the same way RSP would
+  join a program. No C and no BCPL on the
+  PDP-7: C came on the PDP-11, and B was Thompson's cut-down BCPL. Catch for shared
+  windows: Unix swaps whole user processes (010000 up) to disk, so a window in user
+  space would be swapped with them.
 - A live view and editor of PIXIE's ring structures, in core while it
   runs and in tiny-titan's stored files, side by side
   ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).

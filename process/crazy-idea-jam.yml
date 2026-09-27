@@ -726,6 +726,16 @@ ideas:
       tourists welcome, writes only to machines you own or were invited to.
     ties: [../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/session.ts, ../packages/cabinet/DESIGN.md]
 
+  unix-on-the-cabinet:
+    emoji: "🐚"
+    blurb: |
+      The 1969-70 PDP-7 Unix (pdp7-unix, Warren Toomey et al., from Norman Wilson's scans)
+      on the cabinet. Beyond what we have it needs one device, the RB09 disk, from SIMH. It
+      brings as, ed, roff, sh, db and B (compiled to threaded code, like Mitch's Forth).
+      RSPPIX re-spelled in Unix as syntax assembles into any Unix program or Forth kernel.
+      Then Unix is one more VM on the tiny-its switchboard.
+    ties: [../packages/cabinet/README.md, ../packages/cabinet/DESIGN.md]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |

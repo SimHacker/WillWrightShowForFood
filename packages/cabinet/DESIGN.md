@@ -334,6 +334,56 @@ segment, and a lock is a scheduling rule. That needs a window map in
 `Pdp7.read`/`write`, whose core is one private array today. Workers and
 `SharedArrayBuffer` only if one thread stops being enough.
 
+**Sharing is per-VM configuration, not wiring.** A VM maps none, one or
+several named segments, each at an address and with an access mode.
+Segments holding rings must sit at the same address in every VM, because
+ring words are absolute; a flat buffer or a mailbox can go anywhere.
+Sketch:
+
+```yaml
+segments:
+  rings:   { words: 0o6000 }          # PIXIE's own data area, 12000-17777
+  mailbox: { words: 0o100 }
+vms:
+  pixie: { program: symelec,   map: [{ segment: rings, at: 0o12000 }] }
+  forth: { program: pdp7forth, map: [{ segment: rings, at: 0o12000 },
+                                     { segment: mailbox, at: 0o7700 }] }
+  view:  { program: pdp7forth, map: [{ segment: rings, at: 0o12000, access: ro }] }
+  duel:  { program: duel,      map: [] }
+locks:
+  rings: { segment: rings, held-in: [[SETUP, GARB2]], free-in: [WAITLK] }
+```
+
+**Magic implicit locks, enforced by the emulator.** We own the emulator,
+so a lock can belong to the machine instead of the program. A lock
+section is a start and length taken from the symbol table, named in the
+config by symbol so a reassembly moves the lock with the code. Examples:
+RSPPIX, which was assembled as one block, or just its collector, `LIM`
+to `GARB2`. The emulator gives a VM the lock when its PC enters a
+section. Another VM about to enter a section of the same lock is not
+stepped until the lock is free. Its devices keep running, so to the
+program the wait looks like a slow instruction. Entry is a `JMS` into
+the section and exit is the `JMP I` through that entry's return word,
+so a section that calls out (`FLST` calling `LIM`) still holds the lock.
+The inverse policy, *free inside*, covers PIXIE: it holds its window
+everywhere except `WAITLK`. Cost: one byte per word of core, a lock
+number per address, looked up on each fetch. What it can't see: a store
+to shared memory from outside every section. The emulator can watch the
+window and flag those. It can also see deadlock (two VMs each stalled on
+the other's lock) and report it instead of hanging. The unmodified
+program never knows.
+
+**RSP in Unix syntax.** RSPPIX is written for the Cambridge assembler,
+which `asm.ts` already parses. An emitter that prints `as7` syntax
+(Ken Thompson's, as in `pdp7-unix`) gives an `rsp.s`. PDP-7 Unix had no
+separate linker: `as` assembled several files together (`as7 -o boot.rim
+sop.s pbboot.s` in the pdp7-unix build), so linking RSP into a program
+means adding it to the command line. Mitch's Forth builds with `as7`, so
+its kernel takes `rsp.s` directly and wraps the routines as code words.
+The layout words stay data, so each program puts the heap where it
+wants. To check: whether `as7` accepts the `NAME = JMS .` idiom, or the
+emitter spells the calls out.
+
 ## Media — what the machine eats and excretes
 
 SYMELEC issues **no reader or punch IOTs** — paper tape was how code arrived
