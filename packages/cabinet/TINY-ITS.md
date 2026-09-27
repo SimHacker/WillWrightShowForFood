@@ -134,6 +134,39 @@ the wires: `LINK (TELETYPE OF) FORTH (TO) PIXIE`, `UNLINK`, `LINKS`, and a pipe 
 PDP-7 Unix never had pipes; Unix got them in 1973, on the PDP-11. These are pipes between
 machines, on the PDP-7.
 
+## Written in Forth
+
+Of course. A command line is what Forth's outer interpreter already is: read a line, parse
+a word, find it, run it. Mitch's kernel builds that loop from exposed parts (`(QUERY)`,
+`(PARSE)`, `(FIND)`, `(NUMBER)`, `(OK)`, `(ERR)`), so tiny-its builds its own loop from the
+same parts and runs on a PDP-7 VM with a teletype.
+
+- **Guide words are comments already.** `(` starts a comment in Forth, so
+  `MAP ( SEGMENT ) RINGS ( INTO ) FORTH` reads as `MAP RINGS FORTH`. `(` is a word and
+  needs its space, so either ESC types `( INTO )` with spaces, or the parser skips any
+  token in parentheses.
+- **Verb first, TOPS-20 order.** Forth is postfix, but parsing words read ahead in the line
+  the way `:` and `'` do, so `EXAMINE` is a word that parses its own fields. Each field
+  type is a parsing word: a VM, an address expression, a segment, an octal number.
+- **Macros are colon definitions,** and handlers are words bound to message names; `ON`
+  stores the word in the handler ring.
+- **`?` and ESC need a new line reader.** The kernel's `accept` handles CR, ^D, rubout and
+  backspace; tiny-its's also catches `?`, ESC, ^W, ^U and ^R and asks the command table
+  what fits.
+- **Full names and help live in RSP rings.** Mitch's headers keep a length and the first
+  three characters, which can't tell `EXAMINE` from `EXAMPLE`. So the ring command table
+  holds full names, help, guide words and the word to run: Forth runs, rings describe.
+- **Forth underneath, for hacking.** Anything that isn't a tiny-its command falls through
+  to Forth. Newcomers and LLMs stay in the commands; hackers drop a level.
+- **Host services by message.** Other VMs' memory, maps, locks, files: tiny-its asks
+  tiny-titan over the link or a mailbox. So a PDP-7 manages the machines and the mainframe
+  is its peripheral, the inversion tiny-titan started.
+- **Room:** the kernel leaves about 5,150 words of 8K for definitions. The command tables
+  can sit in a shared segment that every tiny-its reads.
+
+A TypeScript tiny-its stays, reading the same ring tables, for bootstrapping and for
+deployments with no Forth VM.
+
 ## Why not make every document a graph?
 
 Frontier leaned into trees: UserLand's object database and scripts were outlines, and that
@@ -155,8 +188,8 @@ Code as data, the way Lisp has it, but a graph, not a tree.
   `DEPOSIT`, `DISASSEMBLE`, `ASSEMBLE`, `DUMP`, `LOAD`, `MAP`, `UNMAP`, `LOCK`, `UNLOCK`,
   `SEND`, `DEFINE`, `ON`, `HELP`, `EXPLAIN`, `UNDO`, `EDIT`, `SET`), and the field types.
 - The ring layout of a verb and a field, so the PDP-7 walker and the host agree.
-- Where the PDP-7 version runs first: in Mitch's Forth (which already has a teletype
-  interpreter) or as a stand-alone program.
+- Mitch's Forth first ([above](#written-in-forth)), and whether its line reader and parse
+  loop can be replaced from Forth or need kernel changes.
 - Checks against sources: the `COMND` details against the TOPS-20 Monitor Calls manual,
   and every ITS command named here against the ITS DDT documentation.
 
