@@ -13,9 +13,9 @@ learned from someone who already knew them. It was powerful, and you could not d
 it by using it. tiny-its goes the other way on discovery and keeps the power: every command
 reachable by asking, and nothing HACTRN could do taken away.
 
-The model is DEC's, not MIT's. HACTRN never used it, but TOPS-20's command parser, the
-`COMND` monitor call, is the best teletype command line anyone built, and we steal it
-shamelessly:
+The models are Mitch's Open Firmware, which already has most of this worked out
+([below](#start-from-open-firmware)), and DEC's TOPS-20. HACTRN never used TOPS-20's
+command parser, the `COMND` monitor call, but it has ideas worth stealing shamelessly:
 
 - **`?` anywhere** lists what may come next, with a line of help each.
 - **ESC completes** a keyword and types the **guide words**, the noise words in parentheses
@@ -188,6 +188,45 @@ hardware from the hardware.
 
 TOPS-20's manners go on top. And the Forth it runs on is Mitch's too.
 
+## Start from Open Firmware
+
+Open Firmware already has a command line built this way, in Forth, in files small enough
+to read in an afternoon (paths in `~/GroundUp/git/OpenFirmware/forth/lib/`):
+
+- **Key bindings are words.** In `editcmd.fth`, the line editor turns a typed key into a
+  name (`^f`, `esc-f`, `esc-[A` for an arrow) and looks it up in the `keys-forth`
+  vocabulary; `do-command` runs what it finds. ESC is a prefix that builds `esc-` names.
+  Rebinding a key is defining a word. Emacs keys come by default, with history.
+- **Completion "a la TENEX",** Mitch's own words in `cmdcpl.fth` (TENEX was TOPS-20's
+  parent). TAB extends the word as far as every candidate agrees and adds a space when
+  one is left; TAB twice, or `^_` (control-question-mark), lists the candidates. They
+  come from the vocabularies in the current search order, so a vocabulary is a command
+  context. `fcmdcpl.fth` binds it to the editor in 50 lines.
+- **`sift`** (`sift.fth`) lists every word containing a string, an apropos.
+- **Commands parse the rest of the line** (`optional-arg$` in `util.fth`,
+  `optional-arg-or-/$` in `ofwcore.fth`), and come in pairs: `show-devs` for typing,
+  `$show-devs` taking a string on the stack for programs. The plain word is the command
+  line; the `$` word is the API. That pairing is what an LLM and a PDP-7 program need.
+- **`see`** decompiles, and there are `words`, `dump`, `patch`, breakpoints
+  (`breakpt.fth`) and a debugger (`debug.fth`).
+
+**What TOPS-20 adds.** Open Firmware completes over whole vocabularies; `COMND` knew what
+kind of field came next and completed from that. So:
+
+- **Completion per field:** after `EXAMINE`, complete VM names from `who`; after a VM,
+  its symbols; after `MAP`, segment names. The command's field descriptor supplies the
+  candidates, and the dictionary is the default. In Open Firmware terms, one more
+  `defer` in `find-candidates`.
+- **Help per field:** `?` prints each candidate with its line of help, not just its name.
+- **Guide words, defaults, and confirmation** for destructive commands.
+
+**For the PDP-7.** Mitch's PDP-7 Forth is much smaller: no `defer`, no vocabularies, and
+headers that keep three characters of each name. `defer` is a few lines. Instead of
+vocabularies, keymaps and command contexts can be RSP rings of full names, help and the
+word to run, which is the ring command table above: the same design, with rings where
+Open Firmware has wordlists. Porting `editcmd.fth` and `cmdcpl.fth` is the first step,
+and Mitch is the person to ask how he'd do it.
+
 ## Why not make every document a graph?
 
 Frontier leaned into trees: UserLand's object database and scripts were outlines, and that
@@ -213,5 +252,7 @@ Code as data, the way Lisp has it, but a graph, not a tree.
   loop can be replaced from Forth or need kernel changes.
 - Checks against sources: the `COMND` details against the TOPS-20 Monitor Calls manual,
   and every ITS command named here against the ITS DDT documentation.
+- With Mitch: port Open Firmware's line editor and TENEX completion to the PDP-7 Forth,
+  and whether per-field completion belongs in Open Firmware too.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [TINY-TITAN](TINY-TITAN.md)
