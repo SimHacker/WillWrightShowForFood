@@ -663,6 +663,18 @@ ideas:
       PDP-7. Call it Cheney on the PDP-7.
     ties: [../characters/heinz-lemke/sources/phd-thesis-1972/annotated/01-chapters-1-2.md]
 
+  turtles-all-the-way-up:
+    emoji: "🐢"
+    blurb: |
+      TypeScript => PDP-7 => FORTH => LISP => PIXIE => TURTLE, each layer an interpreter in
+      the one below. Built: the cabinet (TypeScript PDP-7, 340, light pen, tiny-titan) and
+      Mitch's Forth (on SIMH; the cabinet needs a loader). To do: a Lisp in Forth with PIXIE's
+      ring cells as the heap and Cheney's collector; PIXIE's rings, light pen, radial menus
+      and DOWN compiler as Lisp words, still loadable by 1972 SYMELEC over tiny-titan; Logo on
+      top, drawing into rings the pen can pick up. Six program counters stacked, the 340's
+      beside them. 8K words is tight; give the cabinet 16K.
+    ties: [../packages/cabinet/README.md, ../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
+
 graduation:
   note: "Ideas leave the jam by becoming something runnable."
   paths:
