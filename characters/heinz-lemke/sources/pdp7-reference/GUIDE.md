@@ -169,6 +169,10 @@ Wiseman & Hiles, *A ring structure processor for a small computer* (Computer Jou
 Processor RSP" to 1967. Bachman's IDS carried owner/member chains into databases (CODASYL
 "sets"); the Linux kernel's `list_head` is the same ring today.
 
+**Names.** RSP is the library. A ring structure built with it we call a **pixie**, lower
+case, after Heinz's manual, which says the representation "is also referred to as the PIXIE
+data structure". PIXIE in capitals is his program.
+
 **PIXIE's variant** is a hybrid: Lisp-style two-word cells used to build rings. Word
 classes, as decoded in [`packages/pixie`](../../../../packages/pixie/src/words.ts):
 

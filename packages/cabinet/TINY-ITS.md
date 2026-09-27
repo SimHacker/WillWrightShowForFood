@@ -1,10 +1,40 @@
 # tiny-its: a command language for people, LLMs and PDP-7s
 
-tiny-its is the command line for a room full of emulated machines: it lists, boots, stops,
-examines, patches, maps and locks them, and sends messages between them
-([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do) has what it manages). This page designs
-the language you type at it. Three kinds of user type at it: people, an LLM, and PDP-7
-programs. It needs only a teletype.
+tiny-its is a command-line navigator and editor for ring structures. What you edit is a
+graph, and you walk it like a MUD. Around that it is the editor, debugger, controller,
+assembler, disassembler, memory mapper, lock and device manager and remote job manager for a
+room full of emulated machines ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do) has what it
+manages). This page designs the language you type at it: ergonomic, two-way,
+self-documenting and discoverable. Three kinds of user type at it: people, an LLM, and
+PDP-7 programs. It needs only a serial teletype line.
+
+**A word on names.** RSP is the library, Wiseman and Hiles's Ring Structure Processor. A
+ring structure built with it is a **pixie**, lower case: Heinz's own manual says the
+representation "is also referred to as the PIXIE data structure"
+([appendix 4](../../characters/heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)).
+PIXIE in capitals stays the name of his program. Live pixies travel between worlds. (Ask
+Heinz if he minds.)
+
+## Point, mark, and rooms
+
+The editing model is Emacs's and the world model is a MUD's, which is MOOLLM's world view
+("Directories are rooms. Files are things you can touch.") with rings in place of
+directories:
+
+- **Point** is the element you are standing on; **mark** is another you set. Between them,
+  along a ring, is the region, to copy, kill or yank. The kill ring is, of course, a ring.
+- **Rooms and exits.** An element is a room; its rings are its exits and its contents.
+  `LOOK` shows where you are, `GO` follows a ring, `BACK` returns. Because an element can
+  sit on many rings, one room can open onto many places at once, which a MUD's single
+  containment tree cannot say.
+- **Building,** in the spirit of LambdaMOO's `@dig`, `@create` and `@recycle`: `DIG` a new
+  element linked from point, `LINK` point into a ring, `UNLINK` it, `MOVE` it from one ring
+  to another, `DESTROY` it. Each is an RSP splice, done at a safe point, and each is undoable.
+- **Atoms and blocks** are the things in a room: `EXAMINE` a value, `SET` it, read a
+  printname.
+
+The same commands walk anything that is a pixie: a PIXIE drawing, tiny-its's own command
+tables and configs, a Forth program's data, and the magic segments below.
 
 ## The opposite of HACTRN, and still a hacker's tool
 
@@ -226,6 +256,29 @@ vocabularies, keymaps and command contexts can be RSP rings of full names, help 
 word to run, which is the ring command table above: the same design, with rings where
 Open Firmware has wordlists. Porting `editcmd.fth` and `cmdcpl.fth` is the first step,
 and Mitch is the person to ask how he'd do it.
+
+## Magic segments and pixie space
+
+NeWS had magic dictionaries: a canvas or a process looked like an ordinary PostScript
+dictionary, and reading or writing its keys reached into the server. Linux has `/proc`.
+The cabinet can have **magic segments**: memory the emulator backs itself, mapped into a
+VM like any segment, holding pixies that describe the VM and its world. No other VM is
+needed.
+
+- **Reading** walks live state as rings: the VM's devices, its segments and locks, its
+  symbol table, `who`, the message queue.
+- **Writing** acts: splice an element into the "stop" ring, change a lock's section, post
+  a message. Write-watch tags in [shadow memory](DESIGN.md#the-application-layer--packagespixie-separate-module)
+  tell the emulator which word changed, and it acts at the next safe point.
+- **Rings need stable addresses,** so the emulator rewrites the segment at safe points or
+  when the VM rings a doorbell word, not on every read.
+- **Tunnels:** an element can stand for another VM, and walking into it walks that VM's
+  magic segment, with the tiny-its rights rule deciding what you may see and touch.
+
+That makes a **pixie space**: Linda's tuple space, with pixies instead of tuples. `OUT`
+puts a pixie into a shared segment, `RD` finds one that matches a template pixie, `IN`
+finds one and takes it, waiting at a lock until one arrives. Across VMs, across nodes,
+between worlds.
 
 ## Why not make every document a graph?
 

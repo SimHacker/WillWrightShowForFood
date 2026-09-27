@@ -764,6 +764,23 @@ ideas:
       machines do.
     ties: [../packages/cabinet/TINY-ITS.md]
 
+  hilbert-heat-map:
+    emoji: "🗺️"
+    blurb: |
+      Read and write counts per word from shadow memory, drawn on a Hilbert (or Sierpinski,
+      or Moore) curve: 8K words as two 64x64 squares end to end, so neighbouring addresses
+      stay neighbours with no jumps. Watch PIXIE's free list churn and the collector sweep.
+    ties: [../packages/cabinet/DESIGN.md]
+
+  pixie-space:
+    emoji: "✨"
+    blurb: |
+      Magic segments, like NeWS's magic dictionaries and Linux's /proc: memory the emulator
+      backs itself, holding live pixies (ring structures) that describe the VM. Read to
+      see, splice to act, tunnel into other VMs. Then Linda's tuple space with pixies
+      instead of tuples: OUT, RD, IN. Live magic pixies traveling between worlds.
+    ties: [../packages/cabinet/TINY-ITS.md]
+
   apple-ii-in-the-mix:
     emoji: "🍎"
     blurb: |

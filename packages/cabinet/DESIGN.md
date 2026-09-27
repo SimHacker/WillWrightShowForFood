@@ -248,7 +248,11 @@ Panes, all linked, all driven by the running cabinet:
 1. **Tube** — the live 340, as now.
 2. **Core strip** — `BEG..END` as a bar, one tick per word, coloured by
    class (atom, name, NIL, block, nonitem, free list, GC mark). Watch it
-   fill as the pen draws and watch the collector sweep.
+   fill as the pen draws and watch the collector sweep. A second layout:
+   all of core on a Hilbert curve (8K words as two 64×64 squares end to
+   end), so neighbouring addresses stay neighbours on screen with no
+   jumps, coloured by class, or by read and write heat from shadow
+   memory.
 3. **Ring graph** — elements as nodes, pointers as edges, rings drawn as
    literal circles; printnames shown as strings, blocks as arrays.
 4. **Inspector** — a selected cell's octal word, class, `CAR`/`CDR`, who
