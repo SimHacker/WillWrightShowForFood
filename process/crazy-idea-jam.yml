@@ -723,7 +723,11 @@ ideas:
       plus the whole console (pen, teletype, switches, reset, start, read-in, program
       selector), handled by the emulator so the running program needs no change. Named
       after MIT's Incompatible Timesharing System, itself a joke on CTSS, and as open:
-      tourists welcome, writes only to machines you own or were invited to.
+      tourists welcome, writes only to machines you own or were invited to. Also HACTRN for
+      the cabinet: every VM a job to list, boot, stop, continue, examine, deposit,
+      disassemble, assemble, dump, load and copy memory between, all as tiny-titan
+      messages, so one PDP-7's Forth can be another's DDT. A tribute the way Tiny Life is
+      to The Sims, and a back-port to the machine class DDT started on.
     ties: [../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/session.ts, ../packages/cabinet/DESIGN.md]
 
   unix-on-the-cabinet:

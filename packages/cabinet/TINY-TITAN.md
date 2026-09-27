@@ -189,6 +189,37 @@ server: visitors get `who` and `peek`, and anything that writes (`poke`,
 device events, `reset`, `program`) is scoped to machines the sender owns
 or was invited to.
 
+**tiny-its is HACTRN for the cabinet.** On ITS your top-level job was
+DDT, called HACTRN, and DDT was the shell and the debugger at once: the
+same keystrokes that ran a program opened its memory. Jobs under it
+could be stopped, examined, patched and continued, and with `:UJOB`
+somebody else's job too. That was how people collaborated: Don's
+`DPTSTOK/-1` reached into another user's running job. tiny-its gives
+every VM that treatment, all over tiny-titan messages:
+
+- jobs: list, select, boot a program, stop, continue, start at an
+  address, reset, kill;
+- memory: examine and deposit (`addr/` opens a word, as in any DDT),
+  symbolic, from each program's symbol table;
+- disassemble and assemble in place, with the cabinet's own
+  disassembler and `asm.ts` (DEC and Cambridge dialects, `as7` to come);
+- dump and load: copy a range, a segment or a whole core in or out as
+  a filestore file, a paper tape or a ring file, and from one VM into
+  another;
+- watch: follow another machine's core, tube or teletype live.
+
+Because it is messages, a VM can be the DDT: a Forth on one PDP-7 can
+stop, patch and restart another. The browser front end is the modern
+half: ITS syntax for those who type it, pie menus, help, and a panel of
+all your jobs for everyone else.
+
+It is a tribute, the way [Tiny Life](https://tinylifegame.com/) is to
+The Sims: small, retro, and well designed now, not a replica. It is also
+a back-port. DDT began on MIT's PDP-1 in 1961, and DEC shipped one for
+the PDP-7; ITS grew its manners on the PDP-6 and PDP-10 afterward.
+tiny-its brings those manners back to the class of machine DDT started
+on, the way this cabinet brings Unix home to the PDP-7 it was born on.
+
 ## Where things are
 
 | What | Where |
