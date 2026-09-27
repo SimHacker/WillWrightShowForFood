@@ -649,7 +649,7 @@ ideas:
     blurb: |
       A Lisp for the PDP-7. We know of none that survives (if one existed, find it). L. Peter
       Deutsch's 1964 PDP-1 Lisp does survive, but the PDP-1 and PDP-7 aren't compatible. Port
-      it, or grow one on Mitch's Forth, with PIXIE's ring-structure cells (CAR, CDR, NIL as the
+      it, or grow one on Mitch's Forth, with RSP's ring-structure cells (CAR, CDR, NIL as the
       JMS opcode) as the heap Heinz already built.
     ties: [../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md]
 
@@ -663,22 +663,38 @@ ideas:
       PDP-7. Call it Cheney on the PDP-7.
     ties: [../characters/heinz-lemke/sources/phd-thesis-1972/annotated/01-chapters-1-2.md]
 
+  many-pdp7s-one-ring-heap:
+    emoji: "🔗"
+    blurb: |
+      Several cabinets side by side, all with a shared memory window at the same address holding
+      shared RSP rings. Same address everywhere, because ring words are absolute (why
+      tiny-titan transfers need relocate). Without extend mode the window sits inside each
+      machine's 8K. Locks: in one JavaScript thread each instruction is atomic, so switch
+      machines only at safe points and none are needed, or lock with ISZ (lock word 777777;
+      ISZ skips on reaching 0, so it's yours; unlock by storing 777777). With Web Workers on a
+      SharedArrayBuffer (COOP/COEP headers), ISZ becomes Atomics.add, or add a test-and-set IOT
+      on Atomics.compareExchange. Or one writer, many readers, splicing so a single DAC
+      publishes. Either way the free list (per machine, or locked CONS) and Cheney's copying
+      GC (stop the world, roots from every machine) need coordination; RSPPIX's scratch
+      (OP, LOP, LINK) stays private per machine.
+    ties: [../packages/cabinet/src/plugins/pdp7.ts, ../packages/cabinet/TINY-TITAN.md]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |
       native CPU (micro-ops) => JIT (V8 / JavaScriptCore / SpiderMonkey tiers) => JavaScript
       => TypeScript (build-time only; tsc erases it, nothing of it runs) => PDP-7 => FORTH =>
-      LISP => PIXIE => TYPE 340 DISPLAY (its own instruction set, program counter and
+      LISP => RSP (Wiseman & Hiles's Ring Structure Processor, the library PIXIE is built on;
+      its format connects us to PIXIE over tiny-titan or shared memory) => TYPE 340 DISPLAY (its own instruction set, program counter and
       computer) => TURTLE, each layer an interpreter or compiler for the one above. The
       JIT turns the cabinet's instruction loop into native code, so a PDP-7 XCT ends up as
       x86 or ARM; the 340's vectors go to a canvas and a GPU command buffer, the wheel's
       oldest lap drawn by its newest. Built: the cabinet (TypeScript PDP-7, 340, light pen,
       tiny-titan) and
-      Mitch's Forth (on SIMH; the cabinet needs a loader). To do: a Lisp in Forth with PIXIE's
-      ring cells as the heap and Cheney's collector; PIXIE's rings, light pen, radial menus
-      and DOWN compiler as Lisp words, still loadable by 1972 SYMELEC over tiny-titan; Logo on
-      top, drawing into rings the pen can pick up. Six program counters stacked, the 340's
-      beside them. 8K words is tight; give the cabinet 16K.
+      Mitch's Forth (on SIMH; the cabinet needs a loader). To do: a Lisp in Forth with RSP's
+      ring cells as the heap and Cheney's collector; RSP as Lisp words, rings still loadable
+      by 1972 SYMELEC over tiny-titan; Logo on top, compiling 340 display words into rings
+      the pen can pick up. 8K words is tight; give the cabinet 16K.
     ties: [../packages/cabinet/README.md, ../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
 
 graduation:
