@@ -163,16 +163,16 @@ System/360 (`EX`, which also ORs a register into the target's second byte).
 without writing a subroutine or patching its own code:
 
 - **Tables of one-instruction handlers.** Index a table and `XCT` the entry. SYMELEC's
-  teletype commands work this way (listing p.37, `MESSAG`): `LABEL` is `ISZ RLABEL`,
+  teletype commands work this way (listing p.45, `MESSAG`): `LABEL` is `ISZ RLABEL`,
   `UNLABEL` is `DZM RLABEL`, `GRID` is `LAC (1760` falling into the `DAC GRID` that follows
   the `XCT`, and `TITAN` and `START` are `JMP`s. Some entries act and fall through, some jump
-  away: exactly Mitch's thread cells, twenty-four years earlier on the same machine.
+  away: exactly Mitch's thread cells, fifty-four years earlier on the same machine.
 - **Instructions as arguments.** A caller writes instructions after its call, and the
-  subroutine `XCT`s them through its return address. SYMELEC's `GRHA` ("go round head
+  subroutine `XCT`s them through its return address. SYMELEC's `GRHA` (p.35, "go round head
   applying function") is called as `LAW GRHA; ENTER; LAW X; LAW F1; LAW F2` and reads its
   arguments with `XCT I ENTER-JMS`: the arguments, including the functions to apply, are
-  `LAW` instructions it executes to get their values. `DRLTD` takes a set-visible/invisible
-  instruction the same way. Higher-order functions, in 1972, in 8K.
+  `LAW` instructions it executes to get their values. `DRLTD` (p.95) takes a
+  set-visible/invisible instruction the same way. Higher-order functions, in 1972, in 8K.
 - **Out-of-line execution.** Debuggers replaced an instruction with a breakpoint and, to
   continue, `XCT`ed the saved original. Linux kprobes and uprobes still do this in software
   ("execute out of line": copy the probed instruction to a scratch slot and single-step
@@ -220,7 +220,7 @@ Mitch's "the threaded code threads are machine instructions". The 340 is the oth
 program counter in this story: it fetches display words from the same core with its own
 address register. Myer & Sutherland's wheel, turning inside one machine.
 
-(The cabinet already implements `XCT`, because SYMELEC's command table demanded it.)
+(The cabinet already implements `XCT`, because SYMELEC uses it everywhere above.)
 
 ## The turtle
 
