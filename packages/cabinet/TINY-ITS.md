@@ -13,13 +13,11 @@ ring structure built with it is a **pixie**, lower case: Heinz's own manual says
 representation "is also referred to as the PIXIE data structure"
 ([appendix 4](../../characters/heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)).
 PIXIE in capitals stays the name of his program. Live pixies travel between worlds. (Ask
-Heinz if he minds.) And a **pixie ring** is an old name for a fairy ring, which is where
-the next section goes.
+Heinz if he minds.) A ring in a pixie is a **pixie ring**.
 
-## Pixie rings are fairy rings, and fairy rings are pie menus
+## Pixie rings are pie menus
 
-A fairy ring, "also known as fairy circle, elf circle, elf ring or pixie ring"
-([Wikipedia](https://en.wikipedia.org/wiki/Fairy_ring)), is mushrooms in a circle around a
+A [pixie ring](https://en.wikipedia.org/wiki/Fairy_ring) is mushrooms in a circle around a
 centre, joined underground by one mycelium nobody sees. That is an RSP ring: members around
 an owner, joined by pointers under the picture. And things in a circle around a centre are
 a pie menu.
@@ -39,16 +37,16 @@ a pie menu.
   ([fun list](../../process/crazy-idea-jam.md#-pdp-7-fun-list), two tubes, one heap) is
   that projector pointed at live pixies, and the pie at point is its first level.
 - **The folklore is documentation:**
-  - Step into a fairy ring and you dance until someone outside pulls you out. Walk a ring
+  - Step into a pixie ring and you dance until someone outside pulls you out. Walk a ring
     past its closing link and you go round forever, so `EACH` stops at the link back to
     the owner, and the rescuer outside is the emulator or another tiny-its.
   - Time runs differently inside: machine cycles, not wall clock.
   - Run round it nine times, never ten: a loop needs a count.
-  - Destroy a fairy ring and it grows back: `UNDO`.
+  - Destroy a pixie ring and it grows back: `UNDO`.
   - A second ring can start inside the first: nested rings, subpictures.
   - The mycelium under the meadow joins rings far apart: pixie space between VMs.
-  - And the garbage collector gets its verse, from the old Scottish rhyme: "And he wha
-    cleans the fairy ring / An easy death shall dee."
+  - And the garbage collector gets its verse: the old Scottish rhyme promises whoever
+    cleans the ring that he "an easy death shall dee."
 
 ## Point, mark, and rooms
 

@@ -786,12 +786,12 @@ ideas:
   pixie-rings-are-pie-menus:
     emoji: "🍄"
     blurb: |
-      "Pixie ring" is an old name for a fairy ring: mushrooms around a centre, joined
-      underground by a mycelium nobody sees. That is an RSP ring, and drawn around its centre
+      A pixie ring is mushrooms around a centre, joined underground by a mycelium nobody
+      sees. That is an RSP ring, and drawn around its centre
       it is a pie menu: point in the middle, its rings as slices, flick to go, every slice a
       two-way exit. PIXIE's lightbuttons rode in a ring around the tracking cross in 1972.
       The folklore reads like the manual: step in and dance until pulled out; run round nine
-      times, never ten; "he wha cleans the fairy ring / An easy death shall dee."
+      times, never ten; whoever cleans the ring "an easy death shall dee."
     ties: [../packages/cabinet/TINY-ITS.md, ../packages/cabinet/TRACKING.md]
 
   apple-ii-in-the-mix:
