@@ -666,18 +666,21 @@ ideas:
   many-pdp7s-one-ring-heap:
     emoji: "🔗"
     blurb: |
-      Several cabinets side by side, all with a shared memory window at the same address holding
-      shared RSP rings. Same address everywhere, because ring words are absolute (why
-      tiny-titan transfers need relocate). Without extend mode the window sits inside each
-      machine's 8K. Locks: in one JavaScript thread each instruction is atomic, so switch
-      machines only at safe points and none are needed, or lock with ISZ (lock word 777777;
-      ISZ skips on reaching 0, so it's yours; unlock by storing 777777). With Web Workers on a
-      SharedArrayBuffer (COOP/COEP headers), ISZ becomes Atomics.add, or add a test-and-set IOT
-      on Atomics.compareExchange. Or one writer, many readers, splicing so a single DAC
-      publishes. Either way the free list (per machine, or locked CONS) and Cheney's copying
-      GC (stop the world, roots from every machine) need coordination; RSPPIX's scratch
-      (OP, LOP, LINK) stays private per machine.
-    ties: [../packages/cabinet/src/plugins/pdp7.ts, ../packages/cabinet/TINY-TITAN.md]
+      Several cabinets sharing one memory window at the same address (ring words are
+      absolute). Leave PIXIE alone and share where it already lives: its layout is sixteen
+      data words at 5157-5177 that SETUP reads (the core8k and bigpic patches are "poke an
+      address"), putting FREE/LOP/LINK/GDM at 12011-12020, PERMDF from 12301, the heap
+      BEG-END at 13741-17200 and the name list from BOT at 17301. Map 12000-17777 in every
+      VM, keep other code below 12000. One PIXIE writes, everyone reads; the name list is the
+      root set. The host is the lock: readers run only while PIXIE polls in WAITLK (no
+      half-done splice, no GC), via the scheduler or, with Web Workers on a SharedArrayBuffer
+      (COOP/COEP headers), an Atomics flag. RSPPIX's collector is mark-and-sweep in place,
+      so pointers stay valid, but anything off the name list gets swept. Readers can write at
+      a safe point by taking cells from FREE and hanging them on a named ring. Two PIXIEs on
+      one heap would need changes (TOP+1 at 5170 and OP at 2232 are private); until then they
+      trade rings over tiny-titan. Our own writers can lock with ISZ (lock word 777777; the
+      ISZ reaching 0 owns it), or Atomics under workers.
+    ties: [../packages/cabinet/src/symelec-patches.ts, ../characters/heinz-lemke/sources/pixie-assembler-listing-1972/rsppix.asm, ../packages/cabinet/TINY-TITAN.md]
 
   turtles-all-the-way-up:
     emoji: "🐢"
