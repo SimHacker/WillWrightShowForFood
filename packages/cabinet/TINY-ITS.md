@@ -349,7 +349,10 @@ Code as data, the way Lisp has it, but a graph, not a tree.
 
 - The verb list for a first cut (`WHO`, `BOOT`, `STOP`, `CONTINUE`, `RESET`, `EXAMINE`,
   `DEPOSIT`, `DISASSEMBLE`, `ASSEMBLE`, `DUMP`, `LOAD`, `MAP`, `UNMAP`, `LOCK`, `UNLOCK`,
-  `SEND`, `DEFINE`, `ON`, `HELP`, `EXPLAIN`, `UNDO`, `EDIT`, `SET`), and the field types.
+  `SEND`, `EVAL`, `DEFINE`, `ON`, `HELP`, `EXPLAIN`, `UNDO`, `EDIT`, `SET`), and the field
+  types. `SEND (TO) FORTH (MESSAGE) ...` and `EVAL (IN) LISP "(...)"` go through the
+  tiny-titan device, interrupting the receiver where it allows it
+  ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)).
 - The ring layout of a verb and a field, so the PDP-7 walker and the host agree.
 - Mitch's Forth first ([above](#written-in-forth)), and whether its line reader and parse
   loop can be replaced from Forth or need kernel changes.

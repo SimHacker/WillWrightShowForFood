@@ -151,6 +151,27 @@ it. Our own VMs can have new IOTs, so an attention flag lets Titan ring
 first. Between VMs sharing a memory window, a message can be one name, a
 pointer, instead of a copy.
 
+**Interrupting messages, after ITS's core links.** ITS jobs talked
+through core links, a device you opened like a file; the interrupting
+kind woke the receiving job, which is how `:SEND` put a line on
+someone's screen and how one Lisp could evaluate something in another.
+The tiny-titan device can do the same for VMs that ask for it: a new IOT
+enables a link interrupt, and a message arriving raises the PDP-7's
+program interrupt, so the handler runs without polling. It is per-VM
+configuration and off by default: PIXIE services the link with
+interrupts off, and its interrupt routine at location 1 knows nothing of
+it. Two kinds of message ride it:
+
+- **send:** a message to a VM's handler, or a line to a person's
+  teletype, as `:SEND` did;
+- **eval:** a request whose reply comes back to the sender, like
+  evaluating in the other Lisp: a Forth word run in another Forth, a Lisp
+  form in another Lisp, a tiny-its command on another node.
+
+Addresses are node, VM, handler: `CAMBRIDGE:FORTH:ON-DRAW`. To check: the
+ITS core-link device names and how `:SEND` used them, in the ITS
+documentation.
+
 **Device events are messages too.** The applet already records everything
 that reaches a machine from outside as [session events](src/session.ts),
 stamped in machine cycles: `sw` (AC switches), `pen` (x, y, down,
