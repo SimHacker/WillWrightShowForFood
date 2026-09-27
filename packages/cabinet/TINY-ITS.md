@@ -33,6 +33,11 @@ a pie menu.
 - **PIXIE did it in 1972.** Its control lightbuttons ride with the tracking cross (`LBD`,
   commented `/LB'S AT CROSS`): a small radial menu of verbs around the pen
   ([TRACKING.md](TRACKING.md)).
+- **PSIBER's Pseudo-Scientific Visualizer is a recursive pixie ring projector,** in Don's
+  words: each object drawn as a ring around its centre, each member a ring of its own, as
+  deep as you look. So the PSIBER view on a second tube
+  ([fun list](../../process/crazy-idea-jam.md#-pdp-7-fun-list), two tubes, one heap) is
+  that projector pointed at live pixies, and the pie at point is its first level.
 - **The folklore is documentation:**
   - Step into a fairy ring and you dance until someone outside pulls you out. Walk a ring
     past its closing link and you go round forever, so `EACH` stops at the link back to
