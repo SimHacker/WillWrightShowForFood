@@ -36,6 +36,29 @@ directories:
 The same commands walk anything that is a pixie: a PIXIE drawing, tiny-its's own command
 tables and configs, a Forth program's data, and the magic segments below.
 
+## Scripts: a turtle in a graph
+
+A script walks a pixie network and acts where it goes, the way a Logo turtle walks the
+plane and draws. The turtle is point: `GO` along a ring is `FORWARD`, choosing another ring
+at this element is `TURN`, and reading and writing an element's properties (its atoms,
+printnames and blocks, by name where the schema gives names) is what the pen does.
+
+- **Written** as commands, in a file or a macro.
+- **Demonstrated:** do it once by hand, and tiny-its turns the session log into a script,
+  programming by demonstration in the line of Allen Cypher's *Watch What I Do*. You name
+  the parts that should vary (this element, that VM) and they become parameters.
+- **`SAVE-EXCURSION`** from Emacs: go off on a local jaunt, do something, hop back.
+  Emacs's saves point and the current buffer; ours saves point, mark and the current VM,
+  and restores them when the body finishes, even if it fails.
+
+```
+SAVE-EXCURSION
+  GO (TO) NAME-LIST
+  FIND (ELEMENT NAMED) "FERN"
+  SET (PROPERTY) COLOUR (TO) 3
+END
+```
+
 ## The opposite of HACTRN, and still a hacker's tool
 
 ITS's DDT was terse to the point of glyph soup: `$G`, `^Z`, `addr/`, and incantations you
@@ -279,6 +302,33 @@ That makes a **pixie space**: Linda's tuple space, with pixies instead of tuples
 puts a pixie into a shared segment, `RD` finds one that matches a template pixie, `IN`
 finds one and takes it, waiting at a lock until one arrives. Across VMs, across nodes,
 between worlds.
+
+## Deploying: docker-compose with a command line
+
+A deployment is a compose file, and tiny-its is its command line and script runner. A VM
+comes with whatever devices it needs and no others: a display or none, a pen, a teletype,
+a paper tape reader, the link, a disk.
+
+```yaml
+vms:
+  pixie:   { program: symelec,   devices: [340, lightpen, teletype, link] }
+  forth:   { program: pdp7forth, devices: [teletype, papertape] }
+  viewer:  { program: pdp7forth, devices: [340, lightpen] }
+  its:     { program: tiny-its,  devices: [teletype, link] }
+links:
+  - { from: forth.teletype, to: pixie.teletype }
+```
+
+Plus the segments, maps and locks from
+[DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module), and the
+scripts and handlers above. `UP` and `DOWN` start and stop the lot; `WHO` is `ps`.
+
+**Hot mounting.** `MOUNT (DEVICE) 340 (ON) FORTH` plugs a device into a running VM, and
+`UNMOUNT` pulls it, onto other VMs or onto tiny-its's own. A device is a plugin on the
+backplane at its device codes, and PDP-7 programs poll device flags, so mounting one a
+program never asks about is harmless. Pulling one it uses is pulling a card: its skips stop
+skipping. tiny-its can mount a 340 on itself to draw the pixie network around point while
+you walk it.
 
 ## Why not make every document a graph?
 
