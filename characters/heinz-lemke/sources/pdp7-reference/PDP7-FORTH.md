@@ -76,6 +76,22 @@ PDP-7 FORTH
 His README's credits date the project the same way: an email exchange on 25 September,
 written the next day, with Claude Code (Opus 5.5).
 
+**Mitch Bradley, 27 Sep 2026, 03:11 CEST, on how it was made:**
+
+> I woke up this morning thinking about the project. I issued the first Claude prompt
+> before going to breakfast. By 1 PM the project was finished. By and large, Claude's design
+> ideas were quite good, though I did seed it with the basic outline of the header and thread
+> format. It correctly identified all of the canonical issues that drive the implementation of
+> a Forth VM. I barely even looked at the PDP-7 instruction set. If I had to do this on my
+> own, it would have certainly taken me more than 2 weeks.
+>
+> PDP-7 turns out to be an amazingly good target instruction set for Forth. The threaded code
+> threads are machine instructions that map naturally to primitive words, colon definitions,
+> variables and constants.
+
+That last paragraph is the design in two sentences; the table under "How it works" below is
+the mapping he means.
+
 ## What it is
 
 From the [README](https://github.com/MitchBradley/pdp7forth#readme) and
