@@ -167,6 +167,27 @@ same parts and runs on a PDP-7 VM with a teletype.
 A TypeScript tiny-its stays, reading the same ring tables, for bootstrapping and for
 deployments with no Forth VM.
 
+## Two parents: HACTRN and Open Firmware
+
+tiny-its is a cross of two command lines. From **HACTRN**: jobs, and every machine open to
+examine, patch and continue, other people's included. From **Open Firmware**, Mitch
+Bradley's IEEE 1275 firmware, built at Sun and then Firmworks (local clone
+`~/GroundUp/git/OpenFirmware`): Forth as the command language, and a tree you walk. Its
+`dev`, `pwd`, `ls`, `show-devs`, `.properties` and `select-dev` are in
+`ofw/core/ofwcore.fth`, and `see` decompiles any word (`forth/lib/decomp.fth`). And FCode:
+a plug-in card carried its own driver as tokenized Forth, so the firmware learned about the
+hardware from the hardware.
+
+| Open Firmware | tiny-its |
+|---|---|
+| device tree, `dev`, `ls`, `pwd` | a tree of nodes, VMs, their devices and segments: `dev /cambridge/pixie/340` |
+| `.properties` | a VM's program, config, maps and locks |
+| FCode, drivers carried by the card | VMs describe themselves on boot: symbol table, source map, their own commands |
+| `see` | disassemble PDP-7 code, decompile Forth words |
+| client interface, an OS calling firmware | programs on VMs calling tiny-its and tiny-titan services by message |
+
+TOPS-20's manners go on top. And the Forth it runs on is Mitch's too.
+
 ## Why not make every document a graph?
 
 Frontier leaned into trees: UserLand's object database and scripts were outlines, and that
