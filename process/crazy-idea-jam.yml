@@ -713,6 +713,19 @@ ideas:
       shared window), never a copy. Under Web Workers, Atomics.wait/notify or postMessage.
     ties: [../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md, ../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/plugins/tiny-titan.ts]
 
+  tiny-its:
+    emoji: "🏫"
+    blurb: |
+      The timesharing system for machines that were never timeshared, behind tiny-titan:
+      Titan answers and sends messages itself. Services: services (discovery), who (every
+      PDP-7 and what it runs), peek (anyone's core, the ITS way), send (messages and device
+      events), filestore, lock/barrier, clock. Device events are the applet's session events
+      plus the whole console (pen, teletype, switches, reset, start, read-in, program
+      selector), handled by the emulator so the running program needs no change. Named
+      after MIT's Incompatible Timesharing System, itself a joke on CTSS, and as open:
+      tourists welcome, writes only to machines you own or were invited to.
+    ties: [../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/session.ts, ../packages/cabinet/DESIGN.md]
+
   turtles-all-the-way-up:
     emoji: "🐢"
     blurb: |

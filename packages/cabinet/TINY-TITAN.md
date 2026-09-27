@@ -138,6 +138,57 @@ console protocol — the Cabinet is a TS object, and step/examine/deposit
 ride the same socket in a dozen lines. The link carries drawings; the
 bench carries the machine.
 
+**Messages, not just drawings.** The link has three session verbs and no
+application verbs: the stuff, and where it goes, say what to do. Keep that
+rule and add a second stream type beside `PXID`: a message is a ring whose
+head names its handler (a printname atom), carried in the same blocklets
+with the same checksums and relocation. PIXIE only ever receives `PXID`
+drawings, since it rejects anything else ("not PIXIE data"); our own VMs
+accept both. The PDP always opens the session and Titan's header sets the
+direction, so a VM collects its mail by asking: control 4, then Titan
+either reads the VM's outgoing message or serves the next one queued for
+it. Our own VMs can have new IOTs, so an attention flag lets Titan ring
+first. Between VMs sharing a memory window, a message can be one name, a
+pointer, instead of a copy.
+
+**Device events are messages too.** The applet already records everything
+that reaches a machine from outside as [session events](src/session.ts),
+stamped in machine cycles: `sw` (AC switches), `pen` (x, y, down,
+aperture), `tty` (keys), `poke` (a deposit). Its comment already expects
+tiny-titan messages as another kind. Make that vocabulary the wire format
+for device events and add the rest of the console: `reset`, `start addr`,
+`stop`, `continue`, `examine`, `readin` (paper tape), the address
+switches, and `program` (the applet's program selector: boot SYMELEC,
+DUEL, LANDER …). The emulator handles these, not the program: a pen event
+moves the cabinet's pen, a switch event sets the switch register, a reset
+presses the key. The running program sees what it saw in 1969 and needs
+no change. So one VM can steer another's pen, type at its teletype, flip
+its switches or reboot it into another program, and a recorded session is
+a message log, replayable at any speed.
+
+**Services, and tiny-its.** Titan can answer and send messages itself.
+Give the host a few services, each a named endpoint:
+
+- `services`: what is offered, discovery included.
+- `who`: the PDP-7s on the bus, what each is running, its PC, running or
+  halted, the windows it maps, who is watching it.
+- `peek`: read another machine's core; the live ring view, remotely.
+- `send`: deliver a message or a device event to a machine or a handler.
+- `filestore`: named ring files (above).
+- `lock`, `unlock`, `barrier`: the host handles one request at a time, so
+  it is a lock manager for free.
+- `clock`: the cycle count, for runs kept in step.
+
+Call that service layer **tiny-its**, after MIT's Incompatible
+Timesharing System: named as a joke on CTSS the way tiny-titan is one on
+Titan, and famously open (no passwords, tourists welcome, `:PEEK` at
+anyone's job). tiny-titan is the link card and the session; tiny-its is
+the timesharing system behind it, for machines that were never
+timeshared. The openness suits a public exhibit, with one limit on a real
+server: visitors get `who` and `peek`, and anything that writes (`poke`,
+device events, `reset`, `program`) is scoped to machines the sender owns
+or was invited to.
+
 ## Where things are
 
 | What | Where |

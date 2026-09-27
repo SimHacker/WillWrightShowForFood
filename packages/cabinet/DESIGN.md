@@ -305,6 +305,35 @@ The same structure is what a PDP-7 Forth builds
 Background for all of this: the ring-structures section of the
 [turist guide](../../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md#pixies-data--ring-structures-from-the-ground-up).
 
+**To do: the RSP library, extracted from PIXIE and shared by every VM.**
+One format, two halves.
+
+- **On the PDP-7:** RSPPIX's own routines (`SETUP`, `FLST`, `CAR`, `CDR`,
+  `PUSH`, `POP`, `STAK`/`UNSTAK`, `ENTER`/`EXIT`, the collector) lifted out of
+  SYMELEC as a loadable image with its layout words, so Forth (as code
+  words, [FORTH-TURTLE-340.md §9](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)),
+  a Lisp or any other PDP-7 program runs the same code PIXIE does. Beside
+  it, new code, never patched into PIXIE:
+  - a link client: open a session, send and receive ring transfers, both
+    `PXID` drawings and messages;
+  - a teletype client: type at another machine, read its printout;
+  - handlers: a name list from message names to routines (`HANDLES name`
+    in Forth), and a dispatch loop that polls the way `WAITLK` does;
+  - send, request and reply, and the device-event kinds;
+  - shared windows at the same address everywhere, `ISZ` locks (lock word
+    777777), safe points, and barriers through Titan.
+- **In TypeScript** (`packages/pixie`, to be renamed `rsp` if Don agrees):
+  the codec as now, plus the host side of all the above: message
+  encode/decode, device events on the [session](src/session.ts) vocabulary,
+  the tiny-its services ([TINY-TITAN.md](TINY-TITAN.md#what-it-could-do)),
+  and window mapping.
+
+Threading stays as [WEB-BENCH.md](WEB-BENCH.md) decided: none. Several
+cabinets in one thread share a window by sharing one `Uint32Array`
+segment, and a lock is a scheduling rule. That needs a window map in
+`Pdp7.read`/`write`, whose core is one private array today. Workers and
+`SharedArrayBuffer` only if one thread stops being enough.
+
 ## Media — what the machine eats and excretes
 
 SYMELEC issues **no reader or punch IOTs** — paper tape was how code arrived
