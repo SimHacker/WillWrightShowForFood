@@ -338,6 +338,30 @@ segment, and a lock is a scheduling rule. That needs a window map in
 `Pdp7.read`/`write`, whose core is one private array today. Workers and
 `SharedArrayBuffer` only if one thread stops being enough.
 
+**Sharing PIXIE's own window, unmodified.** PIXIE's memory layout is data:
+sixteen words at 5157–5177 (`DFE` … `STSAVE`) that `SETUP` reads, which is
+what the `core8k` and `bigpic` patches poke. With them loaded, PIXIE's data
+sits in the top of the 8K: RSPPIX's `FREE`, `LOP`, `LINK` and `GDM` at
+12011–12020, the compiled picture (PERMDF) from 12301, the heap `BEG`–`END`
+at 13741–17200, and the name list from `BOT` at 17301. Map 12000–17777 into
+every VM and keep the others' code below 12000.
+
+- One PIXIE writes and the rest read. The name list is the root set, since
+  the collector marks from it, so readers walk it too.
+- The host is the lock: readers run only while PIXIE polls in `WAITLK`,
+  where no splice is half done and no collection is running.
+- The collector marks and sweeps in place (mark bit 200000, masked with
+  577777), so pointers stay valid, but anything off the name list is swept.
+  A reader that keeps a pointer, or takes cells from `FREE` to write at a
+  safe point, hangs them on a named ring.
+- Two PIXIEs on one heap would need changes: `TOP+1` (5170) and `OP` (2232)
+  are private while `FREE`, `LOP` and `LINK` would be shared. Until then
+  they trade rings over tiny-titan.
+- Our own writers lock with `ISZ`: the lock word rests at 777777, the `ISZ`
+  that reaches 0 skips and owns it, and unlock stores 777777 again
+  (`LAW 17777` / `DAC LOCK`). Under Web Workers, `Atomics.add` or a
+  test-and-set IOT on `Atomics.compareExchange`.
+
 **Sharing is per-VM configuration, not wiring.** A VM maps none, one or
 several named segments, each at an address and with an access mode.
 Segments holding rings must sit at the same address in every VM, because

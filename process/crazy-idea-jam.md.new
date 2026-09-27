@@ -555,3 +555,9 @@ An idea earns its way out of the jam by becoming runnable: a [show seed](../repo
 a [schema](../schemas/README.md), a harvested [skill](../skills/README.md) in the cauldron, or a
 [trail node](cross-links.yml). Until then it lives here, simmering, and occasionally singing
 when you hold the spacebar.
+
+---
+
+← [All trails](../TRAILS.md) · [Museum map](entryways/README.md) · [**Vision**](vision-and-ambition.md) · [Vision girder](vision-and-ambition.yml)
+
+*Hand-authored (instance-first). Girder: [`crazy-idea-jam.yml`](crazy-idea-jam.yml). Not bulk-regenerated from `pnpm facades`.*
