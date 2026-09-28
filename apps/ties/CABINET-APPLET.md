@@ -64,11 +64,15 @@ A program can map its own keyboard: `ttyKey(c)` returns `{ send, echo }`, what g
 and what the paper prints in half duplex, and `lowerCase: true` keeps the case as typed (UNIX).
 `ttyConfig` sets the teletype when the program is chosen, and **CONFIG** (after MEMORY) opens a
 panel below memory that shows and changes it: `duplex` half or full, `input` raw or line (edited
-here, sent on Return), `wrap`, font size, and `bindings` such as `{ 'Ctrl-C': { send: 0o33 } }` or
+here, sent on Return), `wrap`, font size (XS, S, M, L, XL), and `bindings` such as `{ 'Ctrl-C': { send: 0o33 } }` or
 `'Ctrl-S': 'stop'`. More settings will go in that panel. `help: { text, links }` is a line or two
 above the teletype, with links that open in a new tab; it is also on the page board, so an article
 can show it. Under the paper, a command-line `<input>` takes typing, dictation and phone
-keyboards, and 🎤 (where the browser has speech recognition) sends a spoken line. What the machine
+keyboards, and 🎤 (where the browser has speech recognition) sends a spoken line. `spoken(text)`
+turns words into what the program wants ("ninety nine" to 99), and `ttyConfig.autoEnter` (ms)
+sends a dictated or pasted line by itself. HILO and LANDER read lines with
+[tapes/lib/readln.s](../../packages/cabinet/tapes/lib/readln.s), which echoes, erases, and rings
+the bell (^G, or rubbing out past the start), so their teletype is full duplex. What the machine
 prints is read to screen readers once it pauses, without the echo of the line just sent.
 `onTtyResize({ cpu, cols })` hears the paper's width in characters after boot and on every
 resize; Forth's writes it into WORDS. Font size and height (drag the bar under the paper) are the

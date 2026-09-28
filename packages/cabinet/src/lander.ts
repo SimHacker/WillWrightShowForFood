@@ -7,8 +7,12 @@ import { type DemoScript, wait } from "./symelec-demo.js";
  * LANDER, a lunar landing game for the teletype, written for the cabinet
  * (tapes/lander/lander.s). Not a period program.
  */
-export function assembleLander(source: string): AsmResult {
-	return assemble([{ name: "lander.s", text: source }]);
+/** LANDER's own tape, then the shared line reader it calls (tapes/lib/readln.s). */
+export function assembleLander(source: string, readln: string): AsmResult {
+	return assemble([
+		{ name: "lander.s", text: source },
+		{ name: "readln.s", text: readln },
+	]);
 }
 
 /** Deposit the program and point the CPU at its start. Throws if it did not assemble clean. */

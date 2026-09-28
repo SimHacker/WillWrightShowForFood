@@ -38,6 +38,7 @@ export { bootUnixV0, unixKey, unixEcho, unixDemo, UNIXV0_BOOT_ORIGIN } from "./u
 export type { UnixV0Opts, UnixHost } from "./unixv0.js";
 export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setForthColumns } from "./forth.js";
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
+export { spokenNumbers } from "./spoken.js";
 export { bootDuel, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES } from "./duel.js";
 export { assemble, loadAsm, formatListing, PDP7_SYMBOLS } from "./asm.js";
 export type { AsmTape, AsmLine, AsmResult } from "./asm.js";

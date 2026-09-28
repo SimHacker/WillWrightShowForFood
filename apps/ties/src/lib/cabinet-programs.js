@@ -31,7 +31,8 @@ import {
 	compileForth,
 	bootForth,
 	setForthColumns,
-	forthDemo
+	forthDemo,
+	spokenNumbers
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
 import { symelecHint } from './symelec-hints.js';
@@ -40,6 +41,7 @@ import lp370 from '../../../../packages/cabinet/tapes/lp370/lp370.s?raw';
 import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
 import hiloSource from '../../../../packages/cabinet/tapes/hilo/hilo.s?raw';
 import landerSource from '../../../../packages/cabinet/tapes/lander/lander.s?raw';
+import readlnSource from '../../../../packages/cabinet/tapes/lib/readln.s?raw';
 import symelecSymbols from '../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-symbols.tsv?raw';
 import rimUrl from '../../../../packages/cabinet/tapes/duel/rim.pt?url&inline';
 import duelUrl from '../../../../packages/cabinet/tapes/duel/duel.pt?url&inline';
@@ -193,12 +195,15 @@ export const PROGRAMS = [
 		label: 'HILO (2026)',
 		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
 		help: {
-			text: 'Press Return, then guess a number from 0 to 99 and press Return. It answers HIGHER, LOWER or RIGHT.',
+			text: 'Press Return, then guess a number from 0 to 99. Type it and press Return, or just say it: it goes in by itself.',
 			links: [{ label: 'hilo.s', href: `${CABINET}/tapes/hilo/hilo.s` }]
 		},
 		pen: false,
 		tty: true,
 		display: false,
+		// READLN echoes and erases, so full duplex and raw keys; spoken and pasted numbers go in after a pause.
+		ttyConfig: { duplex: 'full', input: 'raw', autoEnter: 900 },
+		spoken: spokenNumbers,
 		demo: (h) => hiloDemo(h, hiloProgram),
 		demoTitle: 'Reboot and let a scripted operator play one game by halving',
 		switches: 0,
@@ -206,7 +211,7 @@ export const PROGRAMS = [
 		symbols: () => [...(hiloProgram?.symbols ?? [])].map(([name, addr]) => ({ name, addr })),
 		source: async () => (hiloProgram ? sourceFromAsm(hiloProgram) : null),
 		boot({ cpu }) {
-			hiloProgram ??= assembleHilo(hiloSource);
+			hiloProgram ??= assembleHilo(hiloSource, readlnSource);
 			bootHilo(cpu, hiloProgram);
 		},
 		status(cpu) {
@@ -218,12 +223,14 @@ export const PROGRAMS = [
 		label: 'LANDER (2026)',
 		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
 		help: {
-			text: 'Each second, type the fuel to burn and press Return. Land at low speed.',
+			text: 'Each second, give the fuel to burn: type it and press Return, or just say it. Land at low speed.',
 			links: [{ label: 'lander.s', href: `${CABINET}/tapes/lander/lander.s` }]
 		},
 		pen: false,
 		tty: true,
 		display: false,
+		ttyConfig: { duplex: 'full', input: 'raw', autoEnter: 900 },
+		spoken: spokenNumbers,
 		demo: (h) => landerDemo(h, landerProgram),
 		demoTitle: 'Reboot and let a scripted pilot fly one descent',
 		switches: 0,
@@ -231,7 +238,7 @@ export const PROGRAMS = [
 		symbols: () => [...(landerProgram?.symbols ?? [])].map(([name, addr]) => ({ name, addr })),
 		source: async () => (landerProgram ? sourceFromAsm(landerProgram) : null),
 		boot({ cpu }) {
-			landerProgram ??= assembleLander(landerSource);
+			landerProgram ??= assembleLander(landerSource, readlnSource);
 			bootLander(cpu, landerProgram);
 		},
 		status(cpu) {
@@ -255,6 +262,8 @@ export const PROGRAMS = [
 		},
 		pen: false,
 		tty: true,
+		// 8K is all of core the PDP-7 addresses without the memory extension, which the cabinet lacks.
+		coreWords: 8192,
 		demo: (h) => forthDemo(h),
 		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
 		switches: 0,

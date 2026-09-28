@@ -8,7 +8,8 @@ import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
 import { DemoPlayer } from "./symelec-demo.js";
 
-const program = assembleHilo(readFileSync(new URL("../tapes/hilo/hilo.s", import.meta.url), "utf8"));
+const readln = readFileSync(new URL("../tapes/lib/readln.s", import.meta.url), "utf8");
+const program = assembleHilo(readFileSync(new URL("../tapes/hilo/hilo.s", import.meta.url), "utf8"), readln);
 
 function machine() {
 	const cpu = new Pdp7({ coreWords: 8192 });
@@ -61,10 +62,10 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 		const g = (lo + hi) >> 1;
 		const out = m.type(`${g}\r`);
 		if (g === s) {
-			assert.match(out, new RegExp(`^\\nRIGHT\\. GUESSES: ${n}\\r\\nRETURN TO PLAY AGAIN\\.$`));
+			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\r\\nRETURN TO PLAY AGAIN\\.$`));
 			return;
 		}
-		assert.match(out, g < s ? /^\nHIGHER\.\r\nGUESS\? $/ : /^\nLOWER\.\r\nGUESS\? $/);
+		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nGUESS\\? $`));
 		if (g < s) lo = g + 1;
 		else hi = g - 1;
 	}
@@ -75,11 +76,23 @@ test("hilo: an empty line asks again, and letters in a number are skipped", () =
 	const m = machine();
 	m.box.run(50_000);
 	m.type("\r");
-	assert.equal(m.type("\r"), "\nGUESS? ", "no digits: ask again");
+	assert.equal(m.type("\r"), "\r\nGUESS? ", "no digits: ask again");
 	const s = m.secret();
 	const g = s === 42 ? 41 : 42;
-	const out = m.type(`X${Math.floor(g / 10)}Y${g % 10}\r`);
-	assert.match(out, g < s ? /^\nHIGHER\./ : /^\nLOWER\./, `X4Y2 reads as ${g}`);
+	const out = m.type(`x${Math.floor(g / 10)}y${g % 10}\r`);
+	assert.match(out, new RegExp(`^X${Math.floor(g / 10)}Y${g % 10}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.`), `X4Y2 reads as ${g}`);
+});
+
+test("readln: rubout erases with backspace-space-backspace, and rings at the start of the line", () => {
+	const m = machine();
+	m.box.run(50_000);
+	m.type("\r");
+	const s = m.secret();
+	const g = s === 7 ? 8 : 7;
+	// Type 9, rub it out, rub out once more (nothing left: the bell), then the guess.
+	const out = m.type(`9\x7f\x7f${g}\r`);
+	assert.match(out, new RegExp(`^9\\x08 \\x08\\x07${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.`));
+	assert.match(m.type("\x07"), /^\x07$/, "^G rings back");
 });
 
 test("hilo: the counter behind the number moves while the program waits", () => {

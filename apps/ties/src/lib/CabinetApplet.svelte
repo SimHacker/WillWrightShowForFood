@@ -733,7 +733,7 @@
 	const TTY_KEEP = 2000;
 	const TTY_FONT_KEY = 'cabinet-tty-font';
 	const TTY_HEIGHT_KEY = 'cabinet-tty-height';
-	const TTY_FONTS = { s: 0.65, m: 0.8, l: 1 };
+	const TTY_FONTS = { xs: 0.55, s: 0.65, m: 0.8, l: 1, xl: 1.3 };
 	let tty = null;
 	let ttyPaper = $state.raw(['']);
 	let ttyCaret = $state(0);
@@ -746,6 +746,9 @@
 	 * bindings: { 'Ctrl-S': 'stop' | 'go' | { send: code } }.
 	 */
 	const TTY_DEFAULTS = { duplex: 'half', input: 'raw', wrap: false, bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go' } };
+	// TODO ^T, as on TOPS-20: print the machine's status (program, PC, cycles, speed, what it waits
+	// on) on the paper without the program's help. The first job of a teletype driver that lives in
+	// the emulator, not in the machine: a binding whose action reads the cabinet, not the CPU.
 	let ttyCfg = $state(untrack(() => ttyConfigFor(programById(programId))));
 	let ttyFont = $state(untrack(() => globalThis.localStorage?.getItem(TTY_FONT_KEY) || 'm'));
 	let ttyHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(TTY_HEIGHT_KEY)) || 0));
@@ -780,12 +783,14 @@
 	function ttyPrint(code) {
 		const c = code & 0o177;
 		if (c === 0o15) ttyCol = 0;
+		else if (c === 0o10) ttyCol = Math.max(0, ttyCol - 1);
 		else if (c === 0o12) {
 			ttyLines.push('');
 			if (ttyLines.length > TTY_KEEP) ttyLines.splice(0, ttyLines.length - TTY_KEEP);
 		} else if (c === 0o07) {
 			ttyBell = true;
 			setTimeout(() => (ttyBell = false), 200);
+			beep();
 		} else if (c >= 0o40 && c < 0o177) {
 			const i = ttyLines.length - 1;
 			const line = ttyLines[i].padEnd(ttyCol);
@@ -794,6 +799,23 @@
 		} else return;
 		ttyDirty = true;
 		if (!ttyOpen) ttyUnread += 1;
+	}
+
+	/** The bell, ^G: a short tone until there is a recording of a real Model 33's. */
+	let audio = null;
+	function beep() {
+		const Ctx = globalThis.AudioContext ?? globalThis.webkitAudioContext;
+		if (!Ctx) return;
+		audio ??= new Ctx();
+		const t = audio.currentTime;
+		const osc = audio.createOscillator();
+		const gain = audio.createGain();
+		osc.frequency.value = 880;
+		gain.gain.setValueAtTime(0.15, t);
+		gain.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
+		osc.connect(gain).connect(audio.destination);
+		osc.start(t);
+		osc.stop(t + 0.25);
 	}
 
 	/**
@@ -837,7 +859,11 @@
 	}
 
 	/** The command line under the paper: dictation, phone keyboards and IMEs all type here. */
+	let cliKeyAt = 0;
+	let cliTimer = null;
 	function onCliKey(e) {
+		cliKeyAt = Date.now();
+		clearTimeout(cliTimer);
 		if (e.key === 'Enter') {
 			e.preventDefault();
 			const text = ttyLine;
@@ -845,12 +871,25 @@
 			sendLine(text);
 		}
 	}
-	function onCliInput() {
-		// Raw input: every character goes straight through, as keys on the paper do.
-		if (ttyCfg.input !== 'raw' || !ttyLine) return;
-		const codes = [...ttyLine].map((ch) => charCode(ch)).filter((c) => c >= 0);
+	/** A line that arrived without keystrokes, from dictation or paste, as the program wants it spoken. */
+	function sendSpoken(text) {
 		ttyLine = '';
-		ttyType(codes);
+		sendLine(program?.spoken ? program.spoken(text) : text);
+	}
+	function onCliInput(e) {
+		// Raw input: every character goes straight through, as keys on the paper do.
+		if (ttyCfg.input === 'raw') {
+			if (!ttyLine) return;
+			const codes = [...ttyLine].map((ch) => charCode(ch)).filter((c) => c >= 0);
+			ttyLine = '';
+			ttyType(codes);
+			return;
+		}
+		if (!ttyCfg.autoEnter || !ttyLine.trim()) return;
+		// No keydown just before this input: dictation, paste or voice typed it. Send after a pause.
+		clearTimeout(cliTimer);
+		if (e?.inputType === 'insertFromPaste') sendSpoken(ttyLine);
+		else if (Date.now() - cliKeyAt > 150) cliTimer = setTimeout(() => ttyLine.trim() && sendSpoken(ttyLine), ttyCfg.autoEnter);
 	}
 
 	let SpeechRecognition = $state(null);
@@ -858,7 +897,16 @@
 		SpeechRecognition = globalThis.SpeechRecognition ?? globalThis.webkitSpeechRecognition ?? null;
 	});
 	let listening = $state(false);
+	let voiceNote = $state('');
 	let recognizer = null;
+	const VOICE_ERRORS = {
+		'not-allowed': 'the microphone is blocked for this page',
+		'service-not-allowed': 'this browser has no speech service here; try Chrome or Safari',
+		network: "this browser's speech service can't be reached; try Chrome or Safari",
+		'no-speech': 'no speech heard',
+		'audio-capture': 'no microphone found',
+		aborted: ''
+	};
 	function toggleVoice() {
 		if (listening) {
 			recognizer?.stop();
@@ -866,15 +914,33 @@
 		}
 		recognizer = new SpeechRecognition();
 		recognizer.lang = navigator.language || 'en-US';
-		recognizer.interimResults = false;
+		// Interim results show in the command line as you speak, so you can see it hearing you.
+		recognizer.interimResults = true;
 		recognizer.onresult = (e) => {
-			const said = e.results[0]?.[0]?.transcript?.trim();
-			if (said) sendLine(said);
+			const r = e.results[e.results.length - 1];
+			const said = r?.[0]?.transcript?.trim() ?? '';
+			if (!r?.isFinal) {
+				ttyLine = said;
+				return;
+			}
+			ttyLine = '';
+			voiceNote = said ? `heard “${said}”` : '';
+			if (said) sendSpoken(said);
 		};
 		recognizer.onend = () => (listening = false);
-		recognizer.onerror = () => (listening = false);
+		recognizer.onerror = (e) => {
+			listening = false;
+			voiceNote = VOICE_ERRORS[e.error] ?? `speech recognition failed: ${e.error}`;
+			console.warn('cabinet: speech recognition', e.error, e.message);
+		};
+		voiceNote = 'listening…';
 		listening = true;
-		recognizer.start();
+		try {
+			recognizer.start();
+		} catch (err) {
+			listening = false;
+			voiceNote = `speech recognition failed: ${err instanceof Error ? err.message : err}`;
+		}
 	}
 
 	/** Once a frame at most: printing is fast, rendering the paper is not. */
@@ -974,8 +1040,11 @@
 			const c = charCode(ch);
 			if (c >= 0) codes.push(c);
 		}
-		if (ttyCfg.input === 'line') for (const c of codes) lineKey(c);
-		else ttyType(codes);
+		if (ttyCfg.input === 'line') {
+			for (const c of codes) lineKey(c);
+			// A pasted number in a number game goes in at once, as if Return followed it.
+			if (ttyCfg.autoEnter && ttyLine.trim()) sendSpoken(ttyLine);
+		} else ttyType(codes);
 	}
 
 	/** How many characters fit across the paper, for programs that want to know (a SIGWINCH). */
@@ -1380,7 +1449,7 @@
 
 	/** A fresh PDP-7 with the chosen program booted to its first picture. Throws if the picture never comes. */
 	function bootMachine() {
-		cpu = new Pdp7({ coreWords: 8192 });
+		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
 		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
@@ -2113,6 +2182,7 @@
 						>
 					{/if}
 				</div>
+				{#if voiceNote}<p class="mem-hint" role="status">🎤 {voiceNote}</p>{/if}
 				<div class="tty-bar">
 					<span class="mem-hint"
 						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} not read yet{paused ? ': the machine is stopped' : traceMs || speed < 0.1 ? ': the machine is running slowly' : ''}.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
@@ -2136,7 +2206,7 @@
 						onclick={() => {
 							memFollow = !memFollow;
 							refreshMem();
-						}}>{memView === 'trace' ? 'live' : 'follow PC'}</button
+						}}>{memView === 'trace' ? 'live' : 'follow\u00a0PC'}</button
 					>
 					{#if pcNow >= 0}
 						<button type="button" class="mem-view mem-pc-go" title="Show the PC" onclick={showPc}>👉 PC {oct(pcNow, 5)} {symbolic(pcNow)}</button>
@@ -3007,6 +3077,7 @@
 		color: inherit;
 		border: 1px solid #555;
 		padding: 0 0.4em;
+		white-space: nowrap;
 		cursor: pointer;
 	}
 	.mem-views .mem-view.on {

@@ -20,6 +20,18 @@ planned:
   kernel-names-full.s:
     parent: kernel.s
     what: Every character of a name kept, so WORDS prints EXIT, not EXI_.
+    layout: |
+      The threading is untouched. A thread cell holds the body address (mkcell:
+      optab[tag] | (xt + 2)), and only mkcell and find go from header to body. So the extra
+      name words go BEFORE the two-word header, as Open Firmware lays names out (name>string
+      reads back from the name field): [name words 2..n] [count|imm|tag|link] [name word 1]
+      [body]. The xt stays the link word and the body stays at xt + 2; find compares the first
+      word as now, then the words before it when the count is over 3. Links still run link word
+      to link word, so the 512-word gap limit counts the name words too.
+    adopt: |
+      Open Firmware's layout-independent words (forth/kernel/kernel.fth): >link, >name,
+      n>link, l>name, >flags, name>string, and >body. The PDP-7 Forth has none today; add them
+      to both copies, with bodies that differ, so code above them doesn't care.
     differs_in: [the 84 two-word headers (tools/hdr.py), find, the parser's tcnt/tname packing,
-                 colon, const, var, create, WORDS, anything that assumes body = header + 2]
+                 colon, const, var, create, WORDS]
     must_match_parent: everything else, word for word

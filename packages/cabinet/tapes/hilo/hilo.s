@@ -2,12 +2,13 @@
 / for the cabinet, not a period program; it is here to exercise the
 / KSR-33 the way a 1960s program would. Start at 100.
 /
-/ Polled, no interrupts: KSF/KRB read a key, TLS/TSF print one. Half
-/ duplex, like SYMELEC: the teletype prints what is typed, so the
-/ program never echoes, and after the operator's Return it prints only
-/ the line feed. The number is 0 to 99, taken from a counter that runs
+/ Polled, no interrupts: KSF/KRB read a key, TLS/TSF print one. Numbers
+/ come in through READLN (../lib/readln.s, assembled after this tape),
+/ which echoes, so the teletype runs full duplex, and erases with
+/ backspace. The number is 0 to 99, taken from a counter that runs
 / while the program waits for a key, so the operator's timing is the
-/ random number generator.
+/ random number generator. getc is where that counter runs, and READLN
+/ calls it.
 /
 / text "..." is a cabinet assembler extension (src/asm.ts).
 
@@ -23,7 +24,7 @@ game,	lac seed
 	jms puts
 ask,	lac (prompt
 	jms puts
-	jms getnum
+	jms lnnum
 	spa
 	jmp ask			/ no digits on the line
 	dac guess
@@ -64,44 +65,6 @@ getc1,	lac seed
 	krb
 	and (177
 	jmp i getc
-
-/ A decimal number typed and ended by Return, in AC; -1 if the line had
-/ no digits. Anything but a digit or Return is ignored.
-getnum,	0
-	dzm num
-	dzm ndig
-gn1,	jms getc
-	sad (15
-	jmp gn2
-	tad (777720		/ minus 60, two's complement
-	spa
-	jmp gn1			/ below 0
-	dac dig
-	tad (777766		/ minus 10
-	sma
-	jmp gn1			/ above 9
-	lac num			/ num = 10 num + dig
-	cll
-	ral
-	dac t
-	cll
-	ral
-	cll
-	ral
-	tad t
-	tad dig
-	dac num
-	isz ndig
-	jmp gn1
-gn2,	lac (212		/ the line feed after the operator's Return
-	jms putc
-	lac ndig
-	sna
-	jmp gn3
-	lac num
-	jmp i getnum
-gn3,	lam
-	jmp i getnum
 
 / Print AC, 0 to 99, in decimal.
 putdec,	0

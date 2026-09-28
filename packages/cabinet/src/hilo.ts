@@ -7,8 +7,12 @@ import { type DemoScript, wait } from "./symelec-demo.js";
  * (tapes/hilo/hilo.s). Not a period program: it exercises the KSR-33
  * the way one would, polled and half duplex.
  */
-export function assembleHilo(source: string): AsmResult {
-	return assemble([{ name: "hilo.s", text: source }]);
+/** HILO's own tape, then the shared line reader it calls (tapes/lib/readln.s). */
+export function assembleHilo(source: string, readln: string): AsmResult {
+	return assemble([
+		{ name: "hilo.s", text: source },
+		{ name: "readln.s", text: readln },
+	]);
 }
 
 /** Deposit the program and point the CPU at its start. Throws if it did not assemble clean. */

@@ -7,7 +7,8 @@ import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
 import { DemoPlayer } from "./symelec-demo.js";
 
-const program = assembleLander(readFileSync(new URL("../tapes/lander/lander.s", import.meta.url), "utf8"));
+const readln = readFileSync(new URL("../tapes/lib/readln.s", import.meta.url), "utf8");
+const program = assembleLander(readFileSync(new URL("../tapes/lander/lander.s", import.meta.url), "utf8"), readln);
 
 function machine() {
 	const cpu = new Pdp7({ coreWords: 8192 });
@@ -50,17 +51,19 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 		const r = landerStep(s, b);
 		out = m.type(`${b}\r`);
 		all += out;
+		// READLN echoes the burn and ends the line with CR LF.
+		const echo = `${b}\r\n`;
 		if (r.contact !== null) {
-			assert.equal(out, `\nCONTACT AT ${r.contact} FT/S, ${r.state.fuel} UNITS LEFT.\r\n${rating(r.contact)}\r\nRETURN TO FLY AGAIN.`);
+			assert.equal(out, `${echo}CONTACT AT ${r.contact} FT/S, ${r.state.fuel} UNITS LEFT.\r\n${rating(r.contact)}\r\nRETURN TO FLY AGAIN.`);
 			return { paper: all, contact: r.contact };
 		}
 		s = r.state;
 		if (s.fuel === 0) {
 			const f = landerStep(s, 0).contact as number;
-			assert.equal(out, `\n${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FT/S, 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.`);
+			assert.equal(out, `${echo}${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FT/S, 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.`);
 			return { paper: all, contact: f };
 		}
-		assert.equal(out, `\n${line(s)}  BURN? `, `after burn ${b}`);
+		assert.equal(out, `${echo}${line(s)}  BURN? `, `after burn ${b}`);
 	}
 	throw new Error("still flying");
 }
@@ -102,9 +105,9 @@ test("lander: random burns, including burning more than is left, match the model
 test("lander: over 30 is refused and asked again; Return alone burns nothing", () => {
 	const m = machine();
 	m.type("\r");
-	assert.equal(m.type("31\r"), "\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ");
-	assert.equal(m.type("99999999\r"), "\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ", "a long number does not wrap");
-	assert.equal(m.type("\r"), "\nT 1  ALT 447.5  VEL -55  FUEL 60  BURN? ");
+	assert.equal(m.type("31\r"), "31\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ");
+	assert.equal(m.type("99999999\r"), "99999999\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ", "a long number does not wrap");
+	assert.equal(m.type("\r"), "\r\nT 1  ALT 447.5  VEL -55  FUEL 60  BURN? ");
 });
 
 test("lander: a burn that touches down and lifts off inside one second is a landing", () => {

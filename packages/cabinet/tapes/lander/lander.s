@@ -16,7 +16,8 @@
 /
 / Arithmetic is two's complement (TAD); the multiply is shift and add,
 / so no EAE is needed. The largest intermediate is under 70000.
-/ Half duplex and polled, like HILO: no echo, a line feed after Return.
+/ Polled, like HILO. Burns come in through READLN (../lib/readln.s,
+/ assembled after this tape): full duplex, with backspace.
 
 100/
 begin,	lac (hello
@@ -36,7 +37,7 @@ turn,	jms status
 	jmp empty
 	lac (burnq
 	jms puts
-	jms getnum
+	jms lnnum
 	spa
 	cla			/ Return alone burns nothing
 	dac burn
@@ -250,49 +251,6 @@ getc,	0
 	krb
 	and (177
 	jmp i getc
-
-/ A decimal number typed and ended by Return, in AC; -1 if the line had
-/ no digits. Anything but a digit or Return is ignored; digits after the
-/ number passes 1000 are dropped, so it cannot overflow.
-getnum,	0
-	dzm num
-	dzm ndig
-gn1,	jms getc
-	sad (15
-	jmp gn2
-	tad (777720		/ minus 60
-	spa
-	jmp gn1			/ below 0
-	dac dig
-	tad (777766		/ minus 10
-	sma
-	jmp gn1			/ above 9
-	isz ndig
-	lac num
-	tad (776030		/ minus 1000
-	sma
-	jmp gn1
-	lac num			/ num = 10 num + dig
-	cll
-	ral
-	dac t
-	cll
-	ral
-	cll
-	ral
-	tad t
-	tad dig
-	dac num
-	jmp gn1
-gn2,	lac (212		/ the line feed after the operator's Return
-	jms putc
-	lac ndig
-	sna
-	jmp gn3
-	lac num
-	jmp i getnum
-gn3,	lam
-	jmp i getnum
 
 / Print AC in decimal with a minus sign if negative.
 putsgn,	0
