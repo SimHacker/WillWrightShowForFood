@@ -196,12 +196,14 @@ machine to record for the AM radio, and a second witness for the display, would 
 > - **An orbit for photogrammetry**: 50 to 100 overlapping shots walking round the whole machine
 >   at three heights (knee, chest and overhead). Fixed exposure, soft even light, no flash.
 > - **Details**: the Teletype keyboard from above, the paper tape reader, the light pen and its
->   cable, the 340's screen and bezel, and the green-LED boards in the bay above the console.
+>   cable, the 340's screen and bezel, the green-LED boards in the bay above the console, and
+>   the Eames chair.
 > - **A few measurements**: cabinet height, width and depth, and the desk wing's height.
 >
 > With the model, we would like to add a 3D animated Heinz Lemke, built with my character
 > animation library from The Sims 1, sitting at the machine to work the Teletype and the light
-> pen. It would show how people physically used it, which no emulator shows on its own.
+> pen. He would sit in a model of the Eames shell chair from your photo of this morning. It would
+> show how people physically used it, which no emulator shows on its own.
 >
 > We would also like to work with you on the rest of the machine's senses:
 >
