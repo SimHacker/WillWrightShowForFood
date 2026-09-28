@@ -28,6 +28,10 @@ definition: "Every name in the PIXIE database."
 
 ~SIMH map~
 
+~UNIX v0~
+
+~AM radio~
+
 ~The emulator~
 
 ~PDP-7~

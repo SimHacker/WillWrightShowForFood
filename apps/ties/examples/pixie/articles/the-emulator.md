@@ -12,6 +12,8 @@ Two benches are named in the emulation plan. Bench A is Open SIMH, native, the c
 
 How it is built: ~Cabinet design~, ~Web bench~, ~SIMH map~, ~Tracking~, ~Tiny Titan~. What broke on the way: ~Off by one~ and the ~Bug journal~.
 
+What else runs on it: ~UNIX v0~, from an emulated disk. What it should sound like: ~AM radio~.
+
 ~Roy Eagleson~'s students at Western are re-implementing ~PIXIE~. ~Lars Brinkhoff~ is the iron. The plan file is the receipt.
 
 ```transclude
