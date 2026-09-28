@@ -613,10 +613,11 @@ help: articles/cabinet-forth.md
 
 **Two Forths on the menu.** `forth` boots the kernel Mitch's `as7` assembled (committed, the
 baseline). `forth-self-hosted` assembles `kernel.s` in the page. Both have to agree word for word
-before the second one counts. What the second needs is an `as7` dialect in `src/asm.ts`, beside
-`dec` and `cambridge`: `label:`, `name = expr`, `" comments`, `.=.+n`, `<c` character literals
-and relative constants. Then the assembler's source map gives the trace, the memory panel and the
-debugger Mitch's own source lines, not just addresses.
+before the second one counts. What the second needs is an `as7` front end (see Assemblers, below):
+`label:`, `name = expr`, `" comments`, `.=.+n`, `<c` character literals, `1f`/`1b` relative
+labels, `;` between words, and numbers that are decimal unless they start with 0. Then the
+assembler's source map gives the trace, the memory panel and the debugger Mitch's own source lines,
+not just addresses.
 
 **Variants are copies, not ifdefs.** This is a design rule. Neither `as7` nor our assembler
 has conditional assembly, and we won't add it. A variant is a copy of the file, changed, with a
@@ -670,6 +671,60 @@ uploads and downloads images through its own interface.
 
 **And tiny-its itself.** Once tiny-its is Forth running on the cabinet, the LIVE CODING panel
 edits the mainframe too.
+
+## Assemblers: several front ends, one back end
+
+As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
+assembler with `dialect === "cambridge"` tests scattered through it. It becomes:
+
+- **The back end** (`asm/core`): the assembled object (words or bytes at addresses, each tied to
+  its tape and line), placing them and reporting overlaps, the symbol table, the source map
+  (`source.ts`), loaders, and the writers: the listing, the symbol table, `.oct`, `a7out`, paper tape.
+  It knows nothing about any syntax.
+- **A machine description**, which is all the back end knows about the hardware: word size (18 bits,
+  or 8), address width, the radix and digit counts it prints in (octal 5/6, hex 4/2), and the
+  opcode table the disassembler shares. PDP-7 first; a 6502 is a second description. It prints
+  bytes where the PDP-7 prints words, several to a line, and continues a long `.byte` on the lines
+  below.
+- **Front ends**, one per language, each a parser that gives the back end statements:
+  - **DEC-family**: DEC's 1964 dialect and Cambridge's 1972 one really are one language (`name,`
+    labels, `/` origins, literals, variables for undefined names). They keep one two-pass engine and
+    differ by a dialect object: its extra symbols, whether `,` is the location counter, `DISP`
+    and `VEC`, how variables are ordered, and whether variables or literals are placed first.
+  - **as7**: Ken Thompson's `as`, a different language, with its own small parser.
+  - **Later, 6502**: symbols and source maps for a JavaScript 6502 emulator, ours or an existing one.
+
+The front ends are written here from what each language does, not ported. pdp7-unix's `as7` is
+GPL, so it is the reference we test against, not code we copy.
+
+**Every front end is proved against the real thing.** `as7` on Mitch's `kernel.s` must give
+`kernel.a7out` word for word and the same `Labels:`. The DEC-family engine must give
+`symelec.oct` and `symelec-symbols.tsv`.
+
+**Listings in the 1972 house style**, the one on Heinz's Titan listings
+(`characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt`). All the front
+ends share it, whatever the machine:
+
+```
+/SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  1
+    1                                                      /SYMELEC
+    6      21/ 740040  21/      HLT
+   10      24/ 212257  BEGRTP,  LAC (JMP INT               /INTERRUPT ENTRY
+```
+
+- A page header with the title, the date and time, the user, and the page number. Then one row per
+  source line: its sequence number, the address, the word, the label, then the statement, with the
+  comment in a column of its own.
+- At the end, the symbol table, four to a row and sorted by name, as `NAME = value`. A `*` marks a
+  value that is more than an address: in SYMELEC every `*` value is `JMS` plus an address, which is
+  what Cambridge's `name=JMS,` labels make.
+- Options: `title`, `user` (`a2deh` in Don's listings, as Heinz's said `HL1470`), `date`, and
+  `pageLines` (60 for page breaks with a form feed and the header on every page; 0 for one
+  continuous listing, headed once). Also `width`, and the case the listing is printed in.
+
+Each front end also keeps its own tool's native format for comparison: `as7 -f list` with its
+`Labels:`. The house style is what the cabinet shows and prints. The LIVE CODING panel's build
+output is this listing, and a listing can be saved as a text file or printed on paper.
 
 ## Order of work — each step falsifiable
 
