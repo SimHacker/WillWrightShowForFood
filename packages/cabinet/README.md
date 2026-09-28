@@ -4,6 +4,10 @@ An **emulator**: a stand-in for a cabinet, so the original program can run.
 Not a simulator. Not SIMH. PDP-7 is the first plug-in instruction set,
 for PIXIE — Type 340 on a canvas, light pen as a hit-test.
 
+Run it: [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/),
+[forth](https://hyperties.org/cabinet/forth/), [symelec](https://hyperties.org/cabinet/symelec/),
+[duel](https://hyperties.org/cabinet/duel/). The attitude: [MANIFESTO.md](MANIFESTO.md).
+
 ```ts
 import { Cabinet, Pdp7, Type340, LightPen } from "@wwsff/cabinet";
 
@@ -145,7 +149,7 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 | **6. Demo** | A scripted pen draws a house under a rising sun, a tree, a hedge, a flag, and a circuit with a resistor, battery and switch, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture. The picture fills memory and needs our `bigpic` patch ([BUG-JOURNAL](BUG-JOURNAL.md#the-big-picture-vanished)). [snapshots/symelec-house-demo.svg](snapshots/symelec-house-demo.svg) |
 | **7. DUEL** | A second program on the same cabinet: DUEL, DECUS 7-40 (Cambridge, 1968), from the Oslo paper tape. A RIM loader reads the tape's own FunnyFormat loader, which reads the game; the console switches fly the two ships. | Adds a paper tape reader and the switch register, neither of which SYMELEC uses. [tapes/duel/](tapes/duel/README.md), [snapshots/duel-circling.png](snapshots/duel-circling.png). Headless only so far. |
 | **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. In the browser too: [/cabinet/unix/](https://hyperties.org/cabinet/unix/). | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. The platter is in [tapes/unixv0/](tapes/unixv0/README.md). [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
-| **9. Forth** | Mitch Bradley's PDP-7 Forth boots, compiles its prelude and turtle from paper tape, and the turtle draws on the 340: [/cabinet/forth/](https://hyperties.org/cabinet/forth/), with a demo. | Mitch's kernel as his `as7` built it ([tapes/pdp7forth/](tapes/pdp7forth/README.md)). The SIMH step of his build, compiling the prelude, runs on the cabinet instead: [src/forth.ts](src/forth.ts). |
+| **9. Forth** | Mitch Bradley's PDP-7 Forth boots, compiles its prelude and turtle from paper tape, and the turtle draws on the 340: [/cabinet/forth/](https://hyperties.org/cabinet/forth/), with a demo. WORDS fits the paper, because the teletype writes its width into Forth (`setForthColumns`). | Mitch's kernel as his `as7` built it ([tapes/pdp7forth/](tapes/pdp7forth/README.md)). The SIMH step of his build, compiling the prelude, runs on the cabinet instead: [src/forth.ts](src/forth.ts). Why and how: [MANIFESTO.md](MANIFESTO.md). |
 
 ### Next
 

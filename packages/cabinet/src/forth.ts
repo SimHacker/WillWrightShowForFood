@@ -87,6 +87,20 @@ export function bootForth(cpu: Pdp7, image: ForthImage): void {
 	cpu.pc = image.cold;
 }
 
+/**
+ * A SIGWINCH for a Forth that has never heard of one. WORDS starts a new line once its column
+ * reaches -dm60 (60 in Mitch's kernel), and nothing else reads dm60, so the terminal writes its
+ * own width there. The margin leaves room for the longest name in the dictionary, 11 characters
+ * (CLEARSCREEN), and its space. Returns false if the listing has no dm60.
+ */
+export function setForthColumns(cpu: Pdp7, image: ForthImage, cols: number): boolean {
+	const at = image.labels.get("dm60");
+	if (at === undefined) return false;
+	const limit = Math.max(8, Math.floor(cols) - 12);
+	cpu.write(at, -limit & 0o777777);
+	return true;
+}
+
 export interface ForthHost {
 	/** Type a line on the teletype; Forth echoes it itself. */
 	type: (text: string) => void;

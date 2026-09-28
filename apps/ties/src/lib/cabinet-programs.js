@@ -30,6 +30,7 @@ import {
 	UNIXV0_BOOT_ORIGIN,
 	compileForth,
 	bootForth,
+	setForthColumns,
 	forthDemo
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
@@ -240,8 +241,9 @@ export const PROGRAMS = [
 		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
 		switches: 0,
 		switchLabels: null,
-		// The kernel echoes what it reads, so the paper must not print keys too.
-		ttyKey: (c) => ({ send: c | 0o200, echo: null }),
+		// Forth echoes what it reads, and reads a line at a time; the width goes into WORDS.
+		ttyConfig: { duplex: 'full', input: 'line' },
+		onTtyResize: ({ cpu, cols }) => forthImage && setForthColumns(cpu, forthImage, cols),
 		symbols: () => [...(forthImage?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
 		async load() {
 			if (forthImage) return;
@@ -278,6 +280,8 @@ export const PROGRAMS = [
 		switches: 0,
 		switchLabels: null,
 		ttyKey: (c) => ({ send: unixKey(c), echo: unixEcho(c) }),
+		// ALT MODE is UNIX v0's interrupt; ^C is where a hand expects it.
+		ttyConfig: { duplex: 'half', bindings: { 'Ctrl-C': { send: 0o33, label: 'ALT MODE, interrupt' } } },
 		async load() {
 			if (unixPlatter) return;
 			const [{ default: imageUrl }, { default: rimUrl }] = await Promise.all([

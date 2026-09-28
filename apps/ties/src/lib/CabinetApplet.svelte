@@ -729,13 +729,33 @@
 	// the way the machine drove them. The keyboard sends upper case with the eighth bit
 	// set, as a KSR-33 does; Return is CR, Backspace and Delete are RUBOUT.
 	const TTY_KEEP = 2000;
-	const TTY_LOCAL_KEY = 'cabinet-tty-local';
+	const TTY_FONT_KEY = 'cabinet-tty-font';
+	const TTY_HEIGHT_KEY = 'cabinet-tty-height';
+	const TTY_FONTS = { s: 0.65, m: 0.8, l: 1 };
 	let tty = null;
 	let ttyPaper = $state.raw(['']);
 	let ttyCaret = $state(0);
-	/** Half duplex: the teletype prints what is typed, besides sending it. On by default,
-	 *  since none of the menu's programs reads the keyboard or echoes. */
-	let ttyLocal = $state(untrack(() => globalThis.localStorage?.getItem(TTY_LOCAL_KEY) !== 'off'));
+	/**
+	 * The teletype driver lives here, on the host's side, not in the program. Each program sets
+	 * these when chosen (program.ttyConfig); the settings panel changes them until the next one.
+	 * duplex half: the paper prints keys as typed (a KSR-33's local copy); full: the program echoes.
+	 * input raw: every key goes straight to the machine; line: the line is edited here, sent on Return.
+	 * wrap false: long lines scroll sideways; true: they wrap at the right edge.
+	 * bindings: { 'Ctrl-S': 'stop' | 'go' | { send: code } }.
+	 */
+	const TTY_DEFAULTS = { duplex: 'half', input: 'raw', wrap: false, bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go' } };
+	let ttyCfg = $state(untrack(() => ttyConfigFor(programById(programId))));
+	let ttyFont = $state(untrack(() => globalThis.localStorage?.getItem(TTY_FONT_KEY) || 'm'));
+	let ttyHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(TTY_HEIGHT_KEY)) || 0));
+	let ttyCfgOpen = $state(false);
+	let ttyLine = $state('');
+	let ttyCols = $state(0);
+	const ttyLocal = $derived(ttyCfg.duplex === 'half');
+
+	function ttyConfigFor(p) {
+		const c = p?.ttyConfig ?? {};
+		return { ...TTY_DEFAULTS, ...c, bindings: { ...TTY_DEFAULTS.bindings, ...(c.bindings ?? {}) } };
+	}
 	/** Keys the program has not read. */
 	let ttyWaiting = $state(0);
 	let ttyUnread = $state(0);
@@ -834,11 +854,34 @@
 		// Copy wins over ^C when something on the paper is selected; ^V is always paste.
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'c' && String(globalThis.getSelection?.() ?? '')) return;
 		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') return;
+		const name = e.ctrlKey && !e.metaKey && !e.altKey && e.key.length === 1 ? `Ctrl-${e.key.toUpperCase()}` : e.key;
+		const bound = ttyCfg.bindings[name];
+		if (bound) {
+			e.preventDefault();
+			e.stopPropagation();
+			if (bound === 'stop') paused = true;
+			else if (bound === 'go') paused = false;
+			else if (typeof bound.send === 'number') ttyType([bound.send]);
+			return;
+		}
 		const c = ttyCode(e);
 		if (c < 0) return;
 		e.preventDefault();
 		e.stopPropagation();
-		ttyType([c]);
+		if (ttyCfg.input === 'line') lineKey(c);
+		else ttyType([c]);
+	}
+
+	/** Line input: edit here, with Backspace and ^U, and send the whole line on Return. */
+	function lineKey(c) {
+		if (c === 0o15) {
+			const codes = [...ttyLine].map((ch) => ch.charCodeAt(0));
+			ttyLine = '';
+			ttyType([...codes, 0o15]);
+		} else if (c === 0o177 || c === 0o10) ttyLine = ttyLine.slice(0, -1);
+		else if (c === 0o25) ttyLine = '';
+		else if (c >= 0o40) ttyLine += String.fromCharCode(c);
+		else ttyType([c]);
 	}
 
 	function onTtyPaste(e) {
@@ -849,7 +892,71 @@
 			const c = charCode(ch);
 			if (c >= 0) codes.push(c);
 		}
-		ttyType(codes);
+		if (ttyCfg.input === 'line') for (const c of codes) lineKey(c);
+		else ttyType(codes);
+	}
+
+	/** How many characters fit across the paper, for programs that want to know (a SIGWINCH). */
+	function measureTty() {
+		if (!ttyEl) return;
+		const probe = document.createElement('span');
+		probe.textContent = '0'.repeat(100);
+		probe.style.cssText = 'position:absolute;visibility:hidden;white-space:pre';
+		ttyEl.appendChild(probe);
+		const ch = probe.getBoundingClientRect().width / 100;
+		probe.remove();
+		const style = getComputedStyle(ttyEl);
+		const inner = ttyEl.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+		const cols = ch > 0 ? Math.floor(inner / ch) : 0;
+		if (cols > 0 && cols !== ttyCols) {
+			ttyCols = cols;
+			if (cpu) program?.onTtyResize?.({ cpu, cols });
+		}
+	}
+
+	$effect(() => {
+		if (!ttyEl) return;
+		const ro = new ResizeObserver(() => measureTty());
+		ro.observe(ttyEl);
+		return () => ro.disconnect();
+	});
+	$effect(() => {
+		void ttyFont;
+		void ttyCfg.wrap;
+		untrack(() => requestAnimationFrame(() => measureTty()));
+	});
+
+	/** The bar under the paper: drag it to set the height, down to one line. Arrows move a line. */
+	function ttyLinePx() {
+		return TTY_FONTS[ttyFont] * 16 * 1.3;
+	}
+	function setTtyHeight(px) {
+		const pad = 8;
+		ttyHeight = Math.round(Math.max(ttyLinePx() + pad, Math.min(2000, px)));
+		store(TTY_HEIGHT_KEY, ttyHeight);
+	}
+	function onTtyGrip(e) {
+		e.preventDefault();
+		const start = e.clientY;
+		const from = ttyEl?.getBoundingClientRect().height ?? 0;
+		const grip = e.currentTarget;
+		grip.setPointerCapture(e.pointerId);
+		const move = (m) => setTtyHeight(from + m.clientY - start);
+		const up = () => {
+			grip.removeEventListener('pointermove', move);
+			grip.removeEventListener('pointerup', up);
+			grip.removeEventListener('pointercancel', up);
+		};
+		grip.addEventListener('pointermove', move);
+		grip.addEventListener('pointerup', up);
+		grip.addEventListener('pointercancel', up);
+	}
+	function onTtyGripKey(e) {
+		const h = ttyEl?.getBoundingClientRect().height ?? 0;
+		if (e.key === 'ArrowUp') setTtyHeight(h - ttyLinePx());
+		else if (e.key === 'ArrowDown') setTtyHeight(h + ttyLinePx());
+		else return;
+		e.preventDefault();
 	}
 
 	$effect(() => {
@@ -1214,6 +1321,7 @@
 		t340.clock = () => box.cycles;
 		batch = [];
 		program.boot({ cpu, box, extra, patches: spec.patches ?? undefined });
+		if (ttyCols) program.onTtyResize?.({ cpu, cols: ttyCols });
 		symbols = program.symbols?.() ?? [];
 		monitor = new Monitor({
 			memory: cpu,
@@ -1369,6 +1477,8 @@
 		if (!next) return;
 		stopRecording();
 		programId = next.id;
+		ttyCfg = ttyConfigFor(next);
+		ttyLine = '';
 		session = loadSession(next.id);
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
@@ -1852,6 +1962,9 @@
 			<div class="row app tty">
 				<div
 					class="tty-paper"
+					class:wrap={ttyCfg.wrap}
+					style:font-size="{TTY_FONTS[ttyFont]}rem"
+					style:height={ttyHeight ? `${ttyHeight}px` : null}
 					bind:this={ttyEl}
 					tabindex="0"
 					data-keep-focus
@@ -1860,7 +1973,15 @@
 					aria-label="Teletype. Click, then type. Return is CR, Backspace is RUBOUT. Select text to copy; paste types it."
 					onkeydown={onTtyKey}
 					onpaste={onTtyPaste}
-				><pre>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret" aria-hidden="true">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</pre></div>
+				><pre>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-line-edit">{ttyLine}</span><span class="tty-caret" aria-hidden="true">{ttyLine ? ' ' : (last[ttyCaret] ?? ' ')}</span>{ttyLine ? '' : last.slice(ttyCaret + 1)}</pre></div>
+				<button
+					type="button"
+					class="tty-grip"
+					aria-label="Teletype height: drag, or arrow keys a line at a time"
+					title="Drag to make the teletype taller or shorter"
+					onpointerdown={onTtyGrip}
+					onkeydown={onTtyGripKey}
+				></button>
 				<div class="sr-only" aria-live="polite">{ttyPaper[ttyPaper.length - 2] ?? ''}</div>
 				<div class="tty-bar">
 					<button
@@ -1868,16 +1989,55 @@
 						class="chip"
 						class:on={ttyLocal}
 						aria-pressed={ttyLocal}
-						title="Local copy (half duplex): print keys as they are typed. Off, the paper shows only what the program prints back."
-						onclick={() => {
-							ttyLocal = !ttyLocal;
-							store(TTY_LOCAL_KEY, ttyLocal ? 'on' : 'off');
-						}}>LOCAL COPY</button
+						title="Half duplex: the teletype prints each key as you type it (a KSR-33's local copy). Full duplex: only what the program sends back is printed, for programs that echo, like Forth."
+						onclick={() => (ttyCfg.duplex = ttyLocal ? 'full' : 'half')}>{ttyLocal ? 'HALF' : 'FULL'} DUPLEX</button
+					>
+					<button
+						type="button"
+						class="chip"
+						class:on={ttyCfgOpen}
+						aria-expanded={ttyCfgOpen}
+						title="Teletype settings. Each program sets them when you choose it."
+						onclick={() => (ttyCfgOpen = !ttyCfgOpen)}>⚙</button
 					>
 					<span class="mem-hint"
 						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} not read yet{paused ? ': the machine is stopped' : traceMs || speed < 0.1 ? ': the machine is running slowly' : ''}.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
 					>
 				</div>
+				{#if ttyCfgOpen}
+					<div class="tty-cfg" role="group" aria-label="Teletype settings">
+						{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']]], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']]], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']]]] as [key, label, choices]}
+							<span class="tty-cfg-label">{label}</span>
+							<span class="tty-cfg-row">
+								{#each choices as [value, text]}
+									<button type="button" class="chip" class:on={ttyCfg[key] === value} aria-pressed={ttyCfg[key] === value} onclick={() => (ttyCfg[key] = value)}>{text}</button>
+								{/each}
+							</span>
+						{/each}
+						<span class="tty-cfg-label">Type</span>
+						<span class="tty-cfg-row">
+							{#each Object.keys(TTY_FONTS) as f}
+								<button
+									type="button"
+									class="chip"
+									class:on={ttyFont === f}
+									aria-pressed={ttyFont === f}
+									onclick={() => {
+										ttyFont = f;
+										store(TTY_FONT_KEY, f);
+									}}>{f.toUpperCase()}</button
+								>
+							{/each}
+							<span class="mem-hint">{ttyCols} columns{program?.onTtyResize ? `, told to ${program.label}` : ''}</span>
+						</span>
+						<span class="tty-cfg-label">Keys</span>
+						<span class="tty-cfg-row mem-hint"
+							>{Object.entries(ttyCfg.bindings)
+								.map(([k, v]) => `${k.replace('Ctrl-', '^')} ${typeof v === 'string' ? v : `sends ${v.label ?? oct(v.send, 3)}`}`)
+								.join(' · ')}{ttyCfg.input === 'line' ? ' · Backspace, ^U edit the line; Return sends it' : ''}</span
+						>
+					</div>
+				{/if}
 			</div>
 		{/if}
 		{#if memOpen}
@@ -2540,12 +2700,11 @@
 	.tty-paper {
 		margin: 0;
 		height: 12em;
-		min-height: 4em;
-		resize: vertical;
 		overflow: auto;
+		box-sizing: border-box;
 		padding: 0.2rem 0.4rem;
 		font-family: ui-monospace, monospace;
-		font-size: 0.75rem;
+		font-size: 0.8rem;
 		line-height: 1.3;
 		user-select: text;
 		background: #0c0c08;
@@ -2557,6 +2716,41 @@
 		margin: 0;
 		font: inherit;
 		white-space: pre;
+	}
+	.tty-paper.wrap pre {
+		white-space: pre-wrap;
+		overflow-wrap: break-word;
+	}
+	.tty-line-edit {
+		text-decoration: underline dotted #9fe8a0;
+	}
+	.tty-grip {
+		display: block;
+		width: 100%;
+		height: 9px;
+		padding: 0;
+		cursor: ns-resize;
+		touch-action: none;
+		background: repeating-linear-gradient(90deg, #444 0 6px, transparent 6px 10px) center / 40px 3px no-repeat, #1a1a14;
+		border: 1px solid #333;
+		border-top: 0;
+	}
+	.tty-grip:focus-visible {
+		outline: 1px solid #9fe8a0;
+	}
+	.tty-cfg {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 3px 8px;
+		align-items: center;
+		margin-top: 4px;
+		font-size: 0.7rem;
+	}
+	.tty-cfg-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2px;
+		align-items: center;
 	}
 	.sr-only {
 		position: absolute;

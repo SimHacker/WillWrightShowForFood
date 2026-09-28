@@ -7,7 +7,7 @@ definition: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the Type 340, 
 
 A small Forth for the PDP-7 by Mitch Bradley, 2026. See ~PDP-7 Forth~ for where it came from and how it works.
 
-**Type.** Click the teletype paper so it has the keyboard. Each line answers `ok`, or names the word it did not know with a `?`. Forth echoes what you type itself, so the teletype's local copy stays off.
+**Type.** Click the teletype paper so it has the keyboard. Each line answers `ok`, or names the word it did not know with a `?`. The teletype is set up for Forth: full duplex, since Forth echoes what it reads, and line input, so you edit a line with Backspace and send it with Return. `WORDS` fits its listing to the paper's width, because the teletype tells Forth how wide it is. ⚙ under the paper shows the settings and the font size; drag the bar under the paper to make it taller.
 
     2 3 + .
     4 0 DO 200 FD 90 RT LOOP
