@@ -470,7 +470,8 @@
 	const panelsStored = untrack(() => (globalThis.localStorage?.getItem(PANELS_KEY) ?? '').split(' '));
 	let memOpen = $state(panelsStored.includes('mem'));
 	let regsOpen = $state(panelsStored.includes('regs'));
-	let ttyOpen = $state(panelsStored.includes('tty'));
+	// A teletype program opens the teletype, whether chosen from the menu or linked to directly.
+	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	function togglePanel(id, e) {
 		const open = { regs: regsOpen, tty: ttyOpen, mem: memOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
