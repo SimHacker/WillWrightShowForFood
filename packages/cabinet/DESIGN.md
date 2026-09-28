@@ -721,6 +721,52 @@ A representation layer decides how a cell's state looks. The inner loop, the rul
 automaton what it is, is the only code a new program needs, and it plugs into the rest. Don's
 [CAM6](https://github.com/SimHacker/CAM6), in this workspace, is the model to follow.
 
+### CAM on the PDP-7: a CAM-off
+
+**Rules as sub-cartridges.** Each cellular automaton rule, like each guessing game, is a small
+cartridge of its own:
+
+- a natural-language description;
+- a HyperTIES article that explains it, with illustrations, in the manner of Rudy Rucker and John
+  Walker's CelLab rule catalog;
+- and the rule itself. Code for any target is generated from it: PDP-7 assembly, Mitch's Forth,
+  JavaScript.
+
+The same card makes every version.
+
+**Harvest, with the people who made it.** The rule descriptions come from CelLab's catalog, and
+from Toffoli and Margolus's *Cellular Automata Machines* (MIT Press, 1987), the CAM-6 book. We
+engage Rudy Rucker and Norman Margolus to harvest them and fold them in; both have characters here,
+with invitations (`characters/rudy-rucker`, `characters/norman-margolus`). John Walker died in 2024,
+so his half of CelLab comes from fourmilab.ch; check its terms when we harvest.
+
+**The rule compiler, ported.** Toffoli and Margolus defined CAM-6 rules in Forth. Don cloned their
+rule compiler in Mitch's Forth decades ago, and his CAM6 simulator (`CAM6/javascript/CAM6.js`,
+with `jsforth.js`) runs the same rules in the browser. It gets ported once more, into Mitch's
+PDP-7 Forth.
+
+**A CAM6 cabinet.** A CAM-6 device for the PDP-7, with IOT instructions to load a rule table, step
+the planes, and read and write cells. It runs off-the-shelf CAM-6 rule tables, defined in Mitch's
+Forth with Don's rule compiler.
+
+**The CAM-off.** The same rule, twice, side by side on the 340:
+
+- once on the CAM6 device, from its Forth definition;
+- once as plain PDP-7 assembly on the bare CPU.
+
+The trace counts the cycles each takes per generation, and the page shows them as they run. The
+two play music together as they go, realistic (the AM radio) or interpretive, from what the cells
+are doing. Brian Eno would love it (`characters/brian-eno/speculative-jams.md`).
+
+**The layers, shown.** The page can show every layer at once:
+
+- JavaScript runs the PDP-7 emulator;
+- the emulator runs Mitch's Forth;
+- the Forth compiles the rule;
+- the rule drives the CAM device, which draws on the 340.
+
+Each layer has its own source map and its own panel, and a click goes down a layer.
+
 ## Assemblers: several front ends, one back end
 
 As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
