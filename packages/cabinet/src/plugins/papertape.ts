@@ -117,3 +117,22 @@ export function readIn(cpu: Cpu, tape: Uint8Array, origin: number): number {
 	}
 	return a;
 }
+
+/**
+ * SIMH `load file.rim origin`: hardware read-in, then the channel-7 word is
+ * obeyed. JMP starts the program there; HLT leaves the PC alone. Returns the
+ * start address, or null for HLT. SIMH hri_load_7915().
+ */
+export function readInAndGo(cpu: Cpu, tape: Uint8Array, origin: number): number | null {
+	let a = origin;
+	for (const { word, bits } of binaryWords(tape)) {
+		if (bits & 1) {
+			if ((word & 0o760000) === 0o600000) return ((a - 1) & 0o60000) | (word & 0o17777);
+			if (word === 0o740040) return null;
+			throw new Error(`read-in tape ends in ${word.toString(8)}, neither JMP nor HLT`);
+		}
+		cpu.write(a, word);
+		a += 1;
+	}
+	throw new Error("read-in tape has no channel-7 end word");
+}

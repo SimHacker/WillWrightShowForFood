@@ -35,6 +35,23 @@ gist: |
   MacBird's Holmes novels drew them there; "she has now published 6 highly rated and
   reviewed novels for Harper-Collins" → media/quora-recaps/why-alan-kay-moved-to-london.md
 
+  **May 2024, the Yoot interview and Atari Cambridge.** Alan dated the Yoot Saito interview to
+  1993 from its own clues: the Mac's tenth anniversary was "next year", and it mentions the
+  Smalltalk history he was then writing. That was the year Japan celebrated the 25th anniversary
+  of Engelbart's demo and the 20th of the Alto, in a filled arena, with an Alto found by Fuji Xerox.
+  For the glossary he named the source of truth: the **SIGPLAN** "Early History of Smalltalk" is
+  the most complete and accurate (Bret Victor's HTML lacks the appendices; the HOPL II book was
+  retyped and not proofread). On **Atari Cambridge Research**: he set it up to draw on the talent
+  around MIT, and brought over a whole research group led by **Cynthia Solomon**, including
+  Margaret Minsky and Danny Hillis, on a floor of a Kendall Square building above Legal Sea Foods.
+
+review_preferences: |
+  How Alan asked to proofread (May 2024): send him a plain text or RTF file of just the part to
+  check, not a GitHub page. He corrects in his own word processor, with colours for changes, and
+  sends it back. And no LLM near it: he will not check text an "ANI" ("Artificial
+  Non-Intelligence") may have guessed at. So anything sent to Alan for review is Don's own text,
+  and says so.
+
 sourced_quotes:
   on_news: "I thought NeWS was 'the right way to go' (except it missed the live system underneath)."
   on_hypercard: "HyperCard is an especially good example of a system that was finished and smoothed and documented beautifully."

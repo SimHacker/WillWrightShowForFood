@@ -63,4 +63,12 @@ correct a table rather than reconstruct a history. Corrections land as commits w
 Verifiable sources in [`CHARACTER.yml`](CHARACTER.yml). Subject may correct, expand, replace or
 remove this directory at any time, or take direct edit access.
 
+## Looking for readers
+
+On 28 September 2026, with Roger's permission, Don sent Ben Shneiderman and Catherine Plaisant
+Roger's draft analysis of the Xanadu code and his Rust work, asking for feedback. Don hopes Roger
+and Ted will publish: papers in journals, code on GitHub. See
+[Ben's history plan](../ben-shneiderman/sources/2022-01-14-hyperties-history-plan.md) for the
+venues Ben suggested for HyperTIES, which fit Xanadu just as well.
+
 ↑ [characters](../README.md) · [Ted Nelson](../ted-nelson/README.md) · [Hugh Daniel](../hugh-daniel/README.md) · [Gwern](../gwern/README.md) · [trail: augmentation and hypertext](../../process/trails/augmentation-and-hypertext.md)

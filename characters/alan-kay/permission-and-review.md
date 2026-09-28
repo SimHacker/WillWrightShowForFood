@@ -66,3 +66,8 @@ Any of these is a complete answer:
 `status: not yet sent. Alan is a warm correspondent since 2008 and consent has never formally been`
 `asked, which is the debt this page settles. Recorded in CHARACTER.yml as invitation.status: warm,`
 `consent: not_yet_asked — update both when he replies.`
+
+**Before sending:** in May 2024 Alan asked for review material as plain text or RTF, not GitHub,
+and said he will not check anything an LLM has touched. Much of this repo was written with an
+LLM's help. So send him this page as a plain file, in Don's words, and say plainly which rows came
+out of LLM-assisted work. See `review_preferences` in [correspondence.yml](correspondence.yml).

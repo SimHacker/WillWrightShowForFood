@@ -45,6 +45,30 @@ full_archive:
   wwsff_guests_in_catalog: 11   # will-wright, james-gosling, alan-kay, ted-selker, scott-kim, ken-kahn, ben-shneiderman, margaret-minsky, brad-myers, ken-perlin, terry-winograd
   online_scans_known: 15        # SearchWorks digitizations cross-referenced from Don's HN inventory
 
+thread:
+  - date: "2019-10-08"
+    what: |
+      Terry gave the date and title (26 April 1996, "Interfacing to Mircoworlds" [sic]). It was
+      recorded, but the plan to put the series online stalled: most talks predate online
+      permissions, and the group that recorded them (SCPD) reorganized. Don found the Box 12 DVD
+      and Box 3 VHS in the finding aid the same day.
+  - date: "2023-01-25"
+    what: |
+      Terry passed Don to the people resurrecting CS547 (Michael Bernstein, Lina Piezas, Teland La).
+      Don wrote to the talk-givers, asking for help with permissions and screening, and proposed
+      short "best of" cuts as student projects. Terry, for his part, was looking for someone to
+      restore his father's Monroe calculating machine.
+  - date: "2023-01-26"
+    what: |
+      Henry Lowood (Stanford Libraries) pointed to the streamed copies: "Interfacing to
+      Microworlds" (searchworks yj113jt5999), plus two more Will Wright lectures, and Ted Selker's
+      six. Don watched the talk he had been seeking for 27 years that evening, and asked after
+      Ted's 1993 Trackpoint II lecture and Cliff Nass's talks.
+    links:
+      - https://searchworks.stanford.edu/view/yj113jt5999
+      - https://searchworks.stanford.edu/view/pw467bz3079
+      - https://searchworks.stanford.edu/view/pd936vc7267
+
 why_it_matters: |
   CS547 IS the template: one luminary, open public access, recorded for posterity, real Q&A.
   The Repo Show is its descendant — and Terry is the curator of the trove that holds Will's

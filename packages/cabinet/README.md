@@ -144,6 +144,7 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 | **5. Drawing** | Draw with the lightbuttons: S, drag, F, several lines, HV staircases and RU straight lines, all lit. | Needs the `core8k` patch: as printed, the display file holds one line. |
 | **6. Demo** | A scripted pen draws a house under a rising sun, a tree, a hedge, a flag, and a circuit with a resistor, battery and switch, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture. The picture fills memory and needs our `bigpic` patch ([BUG-JOURNAL](BUG-JOURNAL.md#the-big-picture-vanished)). [snapshots/symelec-house-demo.svg](snapshots/symelec-house-demo.svg) |
 | **7. DUEL** | A second program on the same cabinet: DUEL, DECUS 7-40 (Cambridge, 1968), from the Oslo paper tape. A RIM loader reads the tape's own FunnyFormat loader, which reads the game; the console switches fly the two ships. | Adds a paper tape reader and the switch register, neither of which SYMELEC uses. [tapes/duel/](tapes/duel/README.md), [snapshots/duel-circling.png](snapshots/duel-circling.png). Headless only so far. |
+| **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. Tests in `src/unixv0.test.ts` need a pdp7-unix build beside the repo. [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
 
 ### Next
 
@@ -156,13 +157,9 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
   added because it asked. Its turtle then draws in the browser, and the ring vocabulary
   in [FORTH-TURTLE-340.md](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md)
   has a real Forth to live in.
-- Run PDP-7 Unix, from [pdp7-unix](https://github.com/DoctorWkt/pdp7-unix) (local clone
-  `~/GroundUp/git/pdp7-unix`). Its SIMH script asks for 8K with EAE, the teletype with
-  CR mapped to NL, the clock, and the RB09 fixed-head disk at device 71; it loads
-  `boot.rim` at 010000 and the bootstrap reads the system from disk. The new part is
-  the RB09, ported from SIMH's `pdp18b_rb.c`. Graphics-2, Bell Labs' display, is
-  optional, and it is not a 340. SIMH runs it already, so a trace against SIMH finds
-  whatever else is missing. Languages come with it: `as`, and B. B compiled to threaded
+- PDP-7 Unix runs: rung 8, [UNIX-V0.md](UNIX-V0.md). Still to come there: a browser
+  terminal with the platter saved in IndexedDB, sn 129's JK09 disk beside the RB09, and
+  the Graphic-2. Languages come with it: `as`, and B. B compiled to threaded
   code, a third threaded interpreter on this machine beside Mitch's Forth; its
   interpreter `bi.s` and loader `bl.s` are in the scans. The compiler is not; Robert
   Swierczek rebuilt it in 2016 as `src/other/b.b`, bootstrapped by `tools/b.c`. A B

@@ -195,7 +195,8 @@ anyone can compare the emulator against the machine.
 1. What did the PDP-6 "making noises" in 2020 use for sound, and did it ever land in SIMH?
 2. Would you want a probe hook in SIMH's PDP-7 and 340 for this, or rather keep SIMH silent and
    let the cabinet be the place for it?
-3. Does anyone have the LCM's PDP-7 source for Munching Squares, Spirograph or Life?
+3. Does anyone have the LCM's PDP-7 source for Munching Squares, Spirograph or Life? (The same
+   question is in the letter to the Interim Computer Museum, in [UNIX-V0.md](UNIX-V0.md).)
 4. Which MIT programs made the best RFI, by folklore? Munching Squares, Spacewar!, MacHack?
 
 ## Order of work

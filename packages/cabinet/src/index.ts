@@ -30,8 +30,12 @@ export type {
 } from "./plugins/type340.js";
 export { LightPen } from "./plugins/lightpen.js";
 export type { LightPenOpts } from "./plugins/lightpen.js";
-export { PaperTape, readIn } from "./plugins/papertape.js";
+export { PaperTape, readIn, readInAndGo } from "./plugins/papertape.js";
 export type { PaperTapeOpts } from "./plugins/papertape.js";
+export { Rb09, parseRbImage, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
+export type { Rb09Opts } from "./plugins/rb09.js";
+export { bootUnixV0, unixKey, UNIXV0_BOOT_ORIGIN } from "./unixv0.js";
+export type { UnixV0Opts } from "./unixv0.js";
 export { bootDuel, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES } from "./duel.js";
 export { assemble, loadAsm, formatListing, PDP7_SYMBOLS } from "./asm.js";
 export type { AsmTape, AsmLine, AsmResult } from "./asm.js";
