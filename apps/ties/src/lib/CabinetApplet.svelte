@@ -462,7 +462,8 @@
 		['source', 'source', 'The program’s source, commented'],
 		['trace', 'trace', 'Instructions as executed, newest last']
 	];
-	let memView = $state('octal');
+	const memViewFor = (p) => (p?.source ? 'source' : 'code');
+	let memView = $state(untrack(() => memViewFor(programById(programId))));
 	const MEM_COLS = $derived(memView === 'octal' ? (side >= 420 ? 8 : 4) : 1);
 	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
 	// in one order, memory last so it takes the spare height. Shift-click shows one alone.
@@ -527,7 +528,7 @@
 		};
 	}
 	/** Keep the PC in view (code, source, octal) or the newest instruction (trace). */
-	let memFollow = $state(false);
+	let memFollow = $state(true);
 	let pcNow = $state(-1);
 	let trace = null;
 	let traceNote = $state('');
@@ -1635,6 +1636,9 @@
 		stopRecording();
 		programId = next.id;
 		ttyCfg = ttyConfigFor(next);
+		memView = memViewFor(next);
+		memFollow = true;
+		memShownBase = -1;
 		ttyLine = '';
 		session = loadSession(next.id);
 		displayOpen = next.display !== false;
