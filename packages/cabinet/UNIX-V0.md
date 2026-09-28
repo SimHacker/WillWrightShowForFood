@@ -203,7 +203,16 @@ machine to record for the AM radio, and a second witness for the display, would 
 > With the model, we would like to add a 3D animated Heinz Lemke, built with my character
 > animation library from The Sims 1, sitting at the machine to work the Teletype and the light
 > pen. He would sit in a model of the Eames shell chair from your photo of this morning. It would
-> show how people physically used it, which no emulator shows on its own.
+> show how people physically used it, which no emulator shows on its own. Mitch Bradley would
+> take the chair to demonstrate his Forth, and Ken Thompson and Dennis Ritchie to demonstrate
+> UNIX.
+>
+> The characters are deliberately abstract: retro Sims 1 people, animated by the system I built
+> for The Sims in 1997 and have now reimplemented as open source TypeScript,
+> [VitaMoo](https://vitamoo.space). Scott McCloud explains why in *Understanding Comics*: an
+> abstract character in a photorealistic scene is easy to identify and empathize with, while the
+> scene stays real. So the machine and the room are as real as your photos make them, and the
+> people are simple enough for a visitor to step into.
 >
 > We would also like to work with you on the rest of the machine's senses:
 >

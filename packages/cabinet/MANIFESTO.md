@@ -21,6 +21,11 @@ makes it more fun. Realism is a way to reach those, not a goal of its own.
   is `PETERSON,VINER`, because it had two authors, and HILO and LANDER say `A2DEH,CLAUDE`.
 - **Accessibility.** The teletype wraps, scrolls, zooms, reads aloud and takes dictation. No KSR-33
   ever did.
+- **Abstract people, real machines.** Heinz at the light pen, Mitch at his Forth, Ken and dmr at
+  UNIX: retro Sims 1 characters animated by [VitaMoo](https://vitamoo.space), Don's open source
+  TypeScript reimplementation of the Sims 1 animation system, at a photogrammetric PDP-7. This is
+  Scott McCloud's masking effect from *Understanding Comics*: a simple character in a realistic
+  scene is one you can identify with, and step into, while the scene stays real.
 - **Fun.** HILO takes "ninety nine" by voice, and the bell rings when you rub out too far.
 
 What stays honest is what makes it the machine: every instruction does what the PDP-7 did, and
