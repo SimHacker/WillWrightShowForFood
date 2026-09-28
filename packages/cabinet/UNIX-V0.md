@@ -179,6 +179,25 @@ machine to record for the AM radio, and a second witness for the display, would 
 > PDP-7 Forth, so visitors can type words at a real 1960s instruction set and watch the 340 draw
 > them. Whatever works in the page can then be punched to tape for sn 129.
 >
+> Our goal for the look is photorealistic, a skeuomorphic view built from photographs of your
+> machine. If you could take a series of photos framed so that we can rebuild it as a 3D model in
+> Blender and as a 2D interface in HTML, that would help enormously:
+>
+> - **Straight-on views** of each cabinet, the console, the 340 and the Teletype, from the front
+>   at the height of their middles, with a tape measure or ruler in the shot. These become the 2D
+>   page, so the closer to flat and square the better.
+> - **The console panel close up**, square to the lens and sharp enough to read the labels, once
+>   with the lamps dark and once running, so we can cut out every lamp and switch.
+> - **An orbit for photogrammetry**: 50 to 100 overlapping shots walking round the whole machine
+>   at three heights (knee, chest and overhead). Fixed exposure, soft even light, no flash.
+> - **Details**: the Teletype keyboard from above, the paper tape reader, the light pen and its
+>   cable, the 340's screen and bezel, and the green-LED boards in the bay above the console.
+> - **A few measurements**: cabinet height, width and depth, and the desk wing's height.
+>
+> With the model, we would like to add a 3D animated Heinz Lemke, built with my character
+> animation library from The Sims 1, sitting at the machine to work the Teletype and the light
+> pen. It would show how people physically used it, which no emulator shows on its own.
+>
 > We would also like to work with you on the rest of the machine's senses:
 >
 > - **The phosphor.** Lars's GLSL crt-simulation of the P7 tube, driven by the 340's real segment
@@ -186,15 +205,18 @@ machine to record for the AM radio, and a second witness for the display, would 
 > - **The AM radio**, so the emulated machine plays munching tunes the way sn 129 did for a radio
 >   at the museum. Our proposal and the few recordings we would ask for are in AM-RADIO.md.
 > - **The panel lights, the teletype's sound, and the paper tape reader**, whatever you have
->   measured or recorded.
+>   measured or recorded. A short video of the panel while it runs would give us the lamps'
+>   flicker, and a recording of the Teletype and the reader would give us their sound.
 >
-> Everything is in git: <repo link>. Thank you for bringing sn 129 back, twice.
+> Everything is in git: https://github.com/SimHacker/WillWrightShowForFood (the emulator is in
+> `packages/cabinet`, and it runs in the page at hyperties.org). Thank you for bringing sn 129
+> back, twice.
 >
 > Don Hopkins
 
 Before sending:
 
-- Fill in the repo link.
+- Deploy hyperties.org first, so the link in the letter shows the UNIX and AM radio pages.
 - Find current addresses. The ICM's contact page is on [icm.museum](https://icm.museum/). The
   pdp7-unix list is at the TUHS mailing lists.
 - Decide whether the letter goes as one email or one message per person.
