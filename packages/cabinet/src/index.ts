@@ -40,8 +40,8 @@ export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setFort
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
 export { spokenNumbers } from "./spoken.js";
 export { bootDuel, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES } from "./duel.js";
-export { assemble, loadAsm, formatListing, PDP7_SYMBOLS } from "./asm.js";
-export type { AsmTape, AsmLine, AsmResult } from "./asm.js";
+export { assemble, loadAsm, formatListing, printListing, PDP7, PDP7_SYMBOLS, DEC_1964, CAMBRIDGE_1972 } from "./asm.js";
+export type { AsmTape, AsmLine, AsmResult, AsmOpts, Dialect, ListingOpts, Machine } from "./asm.js";
 export { disassemble } from "./disasm.js";
 export { Trace } from "./trace.js";
 export { sourceFromAsm, sourceFromListing } from "./source.js";

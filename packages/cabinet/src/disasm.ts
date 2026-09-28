@@ -1,10 +1,10 @@
-import { CAMBRIDGE_SYMBOLS, PDP7_SYMBOLS } from "./asm.js";
+import { CAMBRIDGE_SYMBOLS, PDP7_SYMBOLS } from "./asm/pdp7.js";
 
 /**
  * One PDP-7 word as an instruction: `lac i 1234`, `cla!cll`, `law 17770`,
  * `idla`, an unnamed EAE word as plain octal. Microinstructions are joined
  * with `!`, so without symbols the text assembles back to the same word in
- * either dialect of asm.ts (the tests check all of them). Memory-reference operands
+ * either dialect of asm/dec.ts (the tests check all of them). Memory-reference operands
  * go through `symbolic`, so a caller with a symbol table gets `jms setup`
  * or `dac tab+3`; without one they are octal.
  *

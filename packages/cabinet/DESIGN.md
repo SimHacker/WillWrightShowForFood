@@ -717,8 +717,8 @@ ends share it, whatever the machine:
   source line: its sequence number, the address, the word, the label, then the statement, with the
   comment in a column of its own.
 - At the end, the symbol table, four to a row and sorted by name, as `NAME = value`. A `*` marks a
-  value that is more than an address: in SYMELEC every `*` value is `JMS` plus an address, which is
-  what Cambridge's `name=JMS,` labels make.
+  value that is more than an address: 28 of SYMELEC's 29 stars are on six-digit values, and those
+  whose definitions survive are Cambridge `name=JMS,` labels ([ASSEMBLERS.md](ASSEMBLERS.md)).
 - Options: `title`, `user`, `date`, and
   `pageLines` (60 for page breaks with a form feed and the header on every page; 0 for one
   continuous listing, headed once). Also `width`, and the case the listing is printed in.

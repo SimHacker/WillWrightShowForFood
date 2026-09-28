@@ -150,9 +150,10 @@ machine to record for the AM radio, and a second witness for the display, would 
 > Hello,
 >
 > I'm Don Hopkins. We've been building an emulator of the PDP-7 with a Type 340, called the
-> cabinet. It is TypeScript, it runs in a web page, and it ports Open SIMH's PDP-7 and 340 device
+> cabinet. It is TypeScript, it runs in a web page or on a server, and it ports Open SIMH's PDP-7 and 340 device
 > by device, with SIMH as the oracle. It already runs Heinz Lemke's 1972 PIXIE/SYMELEC drawing
-> system from its listing, with the light pen, and DUEL (1968) from the Oslo paper tape. This week
+> system from its listing, with the light pen, DUEL (1968) from the Oslo paper tape, and DEC's 1964
+> Type 370 light pen test, with a virtual light pen, a demo, and tests that caught bugs of our own. This week
 > it gained an RB09 and boots PDP-7 UNIX from the pdp7-unix image: login, ls, cp and date, files
 > kept across reboots, 60 ms from the bootstrap tape to `login:`.
 >
