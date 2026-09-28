@@ -724,15 +724,15 @@ ends share it, whatever the machine:
   continuous listing, headed once). Also `width`, and the case the listing is printed in.
 
 **Each cartridge says who assembles it**, in `listing: { user, title }`. The user is printed in
-the period's case, and chosen by this rule: the programmer's own user ID if one is known; if not,
-one derived from the programmer's name; if there's no name either, a made-up, mysterious-sounding
-hacker one. Today:
+the period's case, and chosen for tribute over technicality: the programmer's own user ID if one
+is known; otherwise a typical user name made from their name (`DHOPKINS`), whether or not their
+machine had logins; a made-up, mysterious-sounding hacker one only when nobody's name is known. Today:
 
 | Cartridge | User | Why |
 |---|---|---|
 | PIXIE SYMELEC | `HL1470` | Heinz Lemke's Titan ID, on every page of the 1972 listing |
-| LIGHT PEN TEST | `CSTEIN` | from C. Stein, DEC, the author; a 1964 PDP-4 had no logins |
-| DUEL | `PV0740` | made up, Titan style: Peterson and Viner, DECUS 7-40 |
+| LIGHT PEN TEST | `CSTEIN` | C. Stein, DEC, the author |
+| DUEL | `PETERSON+VINER` | both authors; their first names aren't known here |
 | HILO, LANDER | `A2DEH` | Don's |
 | FORTH | `wmb` | Mitch Bradley's own |
 | UNIX v0 | `ken` | Ken Thompson |
