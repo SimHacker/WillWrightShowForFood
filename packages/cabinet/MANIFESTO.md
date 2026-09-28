@@ -22,8 +22,11 @@ makes it more fun. Realism is a way to reach those, not a goal of its own.
 - **Accessibility.** The teletype wraps, scrolls, zooms, reads aloud and takes dictation. No KSR-33
   ever did.
 - **Abstract people, real machines.** Heinz at the light pen, Mitch at his Forth, Ken and dmr at
-  UNIX: retro Sims 1 characters animated by [VitaMoo](https://vitamoo.space), Don's open source
-  TypeScript reimplementation of the Sims 1 animation system, at a photogrammetric PDP-7. This is
+  UNIX, Don (the long-haired redhead from his photo in The Sims credits), and a robot for AI:
+  retro Sims 1 characters animated by [VitaMoo](https://vitamoo.space), Don's open source
+  TypeScript reimplementation of the Sims 1 animation system, at a photogrammetric PDP-7. The
+  robot is The Sims' housecleaning robot, as generic as possible on purpose: it stands for AI, not
+  for any particular one. This is
   Scott McCloud's masking effect from *Understanding Comics*: a simple character in a realistic
   scene is one you can identify with, and step into, while the scene stays real.
 - **Fun.** HILO takes "ninety nine" by voice, and the bell rings when you rub out too far.

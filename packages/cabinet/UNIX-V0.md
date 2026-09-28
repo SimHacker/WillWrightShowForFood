@@ -205,7 +205,9 @@ machine to record for the AM radio, and a second witness for the display, would 
 > pen. He would sit in a model of the Eames shell chair from your photo of this morning. It would
 > show how people physically used it, which no emulator shows on its own. Mitch Bradley would
 > take the chair to demonstrate his Forth, and Ken Thompson and Dennis Ritchie to demonstrate
-> UNIX.
+> UNIX. I would be there too, probably as the long-haired redhead from my photo in The Sims
+> credits, and so would a robot for the AI I built this with. The robot is deliberately generic, so
+> it stands for AI in general and not for any one of them: the housecleaning robot from The Sims.
 >
 > The characters are deliberately abstract: retro Sims 1 people, animated by the system I built
 > for The Sims in 1997 and have now reimplemented as open source TypeScript,
