@@ -33,10 +33,12 @@ log for this page.
 ## 5270: the 8 in an octal number, and Heinz's pencil
 
 The 1972 assembler flagged it, `*DECIMAL DIGIT IN OCTAL NUMBER`, and stored 0. Heinz circled the
-number in pencil and wrote beside it a circled mark, the date 12.7.72, a tick, and "x 38" or
-"X 30". If it's "X 30", that's the fix: P I X is `20 11 30` in 340 character code.
+number in pencil and wrote beside it a circled mark, the date 12.7.72, a tick, and "x 30". It
+was first transcribed as "x 38", but the 0 is slashed, the way the line printer slashes its
+zeros, and the slash is what made it look like an 8. X is 30 in 340 character code (A is 01), so
+the note is the fix: P I X is `20 11 30`, and the word is `201130`.
 
-![Line 70: 5270/ 0, 201128 circled in pencil, /PIX, with 12.7.72, a tick and x 30 or x 38 written to the right](page-055-pix-pencil-circle.png)
+![Line 70: 5270/ 0, 201128 circled in pencil, /PIX, with 12.7.72, a tick and x 30 written to the right](page-055-pix-pencil-circle.png)
 
 ![The pencil note at 2×](page-055-pencil-note-2x.png)
 

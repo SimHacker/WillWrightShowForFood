@@ -3034,7 +3034,7 @@
    69    5267/ 260003           DDS CH 3
 *DECIMAL DIGIT IN OCTAL NUMBER
    70    5270/      0           201128                     /PIX
-        {handwritten: pencil circle around printed 201128 on SEQ 70; handwritten note to right: circled mark, "12.7.72", large tick, "x 38" (reading uncertain)}
+        {handwritten: pencil circle around printed 201128 on SEQ 70; handwritten note to right: circled mark, "12.7.72", large tick, "x 30" (the 0 slashed, as the printer slashes its zeros)}
    71    5271/ 110537           110537                     /IE
    72
    73

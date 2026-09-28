@@ -40,7 +40,7 @@ links where they still work, and **Wayback** mirrors for the classics Don posted
 
 | Demo | Links | Notes |
 |------|-------|--------|
-| **Munching Squares + Spirograph** on PDP-7 sn 129 / Type 340 | YouTube (may be dead): [watch?v=V4oRHv-Svwc](https://www.youtube.com/watch?v=V4oRHv-Svwc) · **Wayback:** [2020-04-19 snapshot](https://web.archive.org/web/20200419194925/https://www.youtube.com/watch?v=V4oRHv-Svwc) · Forum write-up: [Retro Computing Forum](https://retrocomputingforum.com/t/munching-squares-and-spirograph-demo-pdp-7-and-type-340-display/4856) · [jwz](https://www.jwz.org/blog/2020/03/munching-squares/) · Don on HN: [22853988](https://news.ycombinator.com/item?id=22853988) | P7 phosphor afterglow; AM radio on Type 347 → **Munching Tunes**; left switches reshape the pattern |
+| **Munching Squares + Spirograph** on PDP-7 sn 129 / Type 340 | **Live, with sound:** [toobnix (PeerTube)](https://toobnix.org/w/8AiLyAECTVyKehG5KT1Mx7) · YouTube (dead): [watch?v=V4oRHv-Svwc](https://www.youtube.com/watch?v=V4oRHv-Svwc) · **Wayback:** [2020-04-19 snapshot](https://web.archive.org/web/20200419194925/https://www.youtube.com/watch?v=V4oRHv-Svwc) · Forum write-up: [Retro Computing Forum](https://retrocomputingforum.com/t/munching-squares-and-spirograph-demo-pdp-7-and-type-340-display/4856) · [jwz](https://www.jwz.org/blog/2020/03/munching-squares/) · Don on HN: [22853988](https://news.ycombinator.com/item?id=22853988) | P7 phosphor afterglow; AM radio on Type 347 → **Munching Tunes**; left switches reshape the pattern |
 | **Conway’s Life** (Gosper guns etc.) on PDP-7 / Type 340 + AM | YouTube (may be dead): [watch?v=hB78NXH77s4](https://www.youtube.com/watch?v=hB78NXH77s4) · **Wayback:** [2020-04-13 snapshot](https://web.archive.org/web/20200413075431/https://www.youtube.com/watch?v=hB78NXH77s4) · HN: [22853920](https://news.ycombinator.com/item?id=22853920) (Don) | Yaesu FT1XD in AM mode on Type 347 RFI — “bytebeat music” without the one-liner constraint |
 
 ### Still-live companions
@@ -65,6 +65,9 @@ links where they still work, and **Wayback** mirrors for the classics Don posted
 ---
 
 ## Design sketch (for Lars to shred)
+
+The cabinet's own design, now that it runs PDP-7 code in the browser, is
+[packages/cabinet/AM-RADIO.md](../../packages/cabinet/AM-RADIO.md).
 
 1. **Throttle** — emulator option: lock PDP-7 / 340 refresh to historic timing (or a calibrated “museum tempo”).
 2. **Tap points** — export a cheap activity stream from Type 347 / display-list / memory traffic (not full RF physics on day one — a musically honest caricature is fine).

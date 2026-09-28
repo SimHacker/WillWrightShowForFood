@@ -17,8 +17,11 @@ was open on purpose, and turists who behaved (and some who didn't) became hacker
 
 Don was a turist at MIT-AI, and testifies that **ITS was the first social network**:
 `:WHOJ` showed who was on, `:SEND` fired a message onto someone's screen, `:RMAIL` read
-your mail, `:UNTALK` chatted back and forth in split screen — and DDT incantations like
-`DPTSTOK/-1 $$^X` let you reach into another user's running job and hack it live.
+your mail, `:UNTALK` chatted back and forth in split screen — and `:UJOB` opened another
+user's running job, examine-only by the book, until `:DDTSYM DPSTOK/-1` and `$$^R` let you
+deposit into it and hack it live. Security through obscurity: DDT answered `$$^R` with a fake
+" OP? " so onlookers would think it failed
+([Don on HN, 2020](https://news.ycombinator.com/item?id=22840639)).
 Presence, messaging, mail, chat, and writable-by-design shared state, a decade before
 anyone said "social network."
 

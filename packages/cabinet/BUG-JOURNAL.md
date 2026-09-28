@@ -232,11 +232,12 @@ named patch on top, `pix` in
 [symelec-boot.js](../../apps/ties/src/lib/symelec-boot.js), which
 writes `201130` to 5270 only if the word there is still the printed 0.
 The circle, the date and the tick say Heinz found it and dealt with
-it in July 1972. The pencil note beside it was transcribed as "x 38",
-reading uncertain; if it says "X 30", that is the fix itself. A cabinet
-block with `patches: []` shows the tube as the listing left it.
+it in July 1972. The pencil note beside it says "x 30": first read as
+"x 38", but its 0 is slashed like the printer's, and X is 30. The note
+is the fix itself. A cabinet block with `patches: []` shows the tube as
+the listing left it.
 
-![Scan page 055, line 70: 201128 circled in pencil, /PIX, and 12.7.72, a tick, x 30 or x 38](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/page-055-pix-pencil-circle.png)
+![Scan page 055, line 70: 201128 circled in pencil, /PIX, and 12.7.72, a tick, x 30](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/page-055-pix-pencil-circle.png)
 
 More crops, with what each reader saw:
 [exhibits](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/exhibits/README.md).

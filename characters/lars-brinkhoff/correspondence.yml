@@ -6,7 +6,7 @@ meta:
   with: lars-brinkhoff
   curated_by: don-hopkins
   consent: not_yet_asked
-  span: "2026-07 — PIXIE Repo Show invitation response"
+  span: "2017-12 — ITS, Type 340, RFI, Emacs, Logo; 2026-07 — PIXIE Repo Show invitation response"
   provenance_private: DonHopkins email ([email redacted])
   human_readable: correspondence.md
 
@@ -22,6 +22,53 @@ gist: |
   tapestry instead of one live group call across time zones.
 
 threads:
+  pdp7_type340_emulator:
+    date: "2020-03-10/2020-03-18"
+    what: |
+      Don introduced Lars and Heinz Lemke after simh#752. Lars: PDP-7 + 340 working as far as he
+      could test, no PDP-7 340 software, light pen there; web emulators wanted but no time. Phil
+      Budne wrote the 340 for PDP-6/10, Lars added PDP-7. Recommended LCM over CHM for reading
+      tapes. Don asked if SIMH could fake RFI; Lars: "interesting thought. But before that I'd like
+      to get the regular music players to work." Emscripten tried (Knight TV ran; sockets the
+      problem); crt-simulation GLSL started.
+    links:
+      - https://github.com/simh/simh/pull/752
+      - https://github.com/larsbrinkhoff/crt-simulation
+    feeds: ../../packages/cabinet/AM-RADIO.md
+  its_and_humor:
+    date: "2017-12/2019-08"
+    what: |
+      TUHS: job control came from ITS. AI:HUMOR; lives in PDP-10/its-vault (ROCKY HOR yes, LOGO
+      TURTLE no; Leigh Klotz has it). LLOGO runs under emulation with the Knight TV.
+  its_github:
+    date: "2018-10/2022-01"
+    what: |
+      PDP-10/its#1339: Guy Steele's "teen-age hacker" tour, the PDP-6 with speakers and a stereo
+      amp playing Brandenburg no. 6. #425 ITS pictures: DM's pager panel (Don's two-Zork knob),
+      and Bill Gosper hacking Life on the PDP-6 (via Steven Levy and Mike Beeler).
+    links:
+      - https://github.com/PDP-10/its/issues/1339#issuecomment-428878039
+      - https://github.com/PDP-10/its/issues/425
+  spring_2020:
+    date: "2020-04/2020-05"
+    what: |
+      Gosling Emacs history for NeWS sources; ITS Maze running; Banks's rule in the MIT Life film
+      (PDP-10/its#1866). Lars prefers simulators and remakes to owning hardware, and using ITS to
+      letting restorations sit.
+  you_devil_you:
+    date: "2020-04-14"
+    subject: "Re: You devil, you!"
+    what: |
+      Don sent Lars two HN posts. 22840639 revealed ITS DDT's secret :DDTSYM DPSTOK/-1 + $$^R
+      (write into other users' jobs; DDT prints a fake " OP? "). Lars: "Oh no, all the secrets
+      are out in the open! ;-)" Don: Stever's 1989 unix-haters application already gave it away.
+      22853920 was Conway's Life on the LCM PDP-7 + Type 340 with AM-radio music; Lars replied
+      that his PDP-6 simulator was making noises now.
+    links:
+      - https://news.ycombinator.com/item?id=22840639
+      - https://news.ycombinator.com/item?id=22853920
+      - https://www.youtube.com/watch?v=hB78NXH77s4
+      - http://its.victor.se/pipermail/its-hackers_its.victor.se/2020/000578.html
   pixie_invitation_response:
     date: "2026-07-02"
     response: yes_later

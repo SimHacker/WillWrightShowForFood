@@ -7,6 +7,13 @@ canonical: ../../repo-shows/will-wright-premiere/performance-and-culture.yml#roc
 
 homage: "Rocky Horror Picture Show audience cues — ITS PDP-10 AI:HUMOR;ROCKY HORROR file."
 
+source: https://github.com/PDP-10/its-vault/blob/master/files/humor/rocky.hor
+source_note: |
+  The MIT-AI Lab's AI:HUMOR;ROCKY HOR, the audience script Don learned the callbacks from.
+  Lars Brinkhoff pointed to it in PDP-10/its-vault in August 2019. Don, forwarding it to Lars
+  later: "LIPS!!!! LIPS!!!! LIPS!!!! ... I tried to dig this up when Tim Curry died, but just
+  found it now!"
+
 repo_version: |
   Characters watch chat with interests + behaviors + triggerable protocols.
   Craft a pointed question from a character bible → big specific reaction.

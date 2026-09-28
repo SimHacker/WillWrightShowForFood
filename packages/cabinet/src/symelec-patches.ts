@@ -9,7 +9,7 @@ export type PatchWord = readonly [number, number, number];
  */
 export const SYMELEC_PATCHES: Readonly<Record<string, readonly PatchWord[]>> = {
 	/* SEQ 70: the source word 201128 has an 8 in it; the assembler stored 0 and
-	   Heinz circled it in pencil, 12.7.72. P I X in 340 character code is 20 11 30. */
+	   Heinz circled it in pencil, 12.7.72, and wrote "x 30": P I X is 20 11 30. */
 	pix: [[0o5270, 0, 0o201130]],
 	/* SEQ 746-754: as assembled, PERMDF gets 77 words (12301-12400) and the free
 	   list 337 (12441-13000). One line fills the display file; the second trips

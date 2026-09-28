@@ -176,6 +176,9 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 - A live view and editor of PIXIE's ring structures, in core while it
   runs and in tiny-titan's stored files, side by side
   ([DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)).
+- An AM radio beside the cabinet, so it plays munching tunes the way the LCM's PDP-7 did,
+  and Munching Squares to play them: [AM-RADIO.md](AM-RADIO.md). It needs memory-cycle
+  timing first; today every instruction counts as one cycle.
 - SIMH stays on the desk as the oracle.
 - Later, not yet: more DEC machines in the cabinet, each from its SIMH
   counterpart. No VAX for now.

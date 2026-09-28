@@ -213,9 +213,15 @@ or was invited to.
 **tiny-its is HACTRN for the cabinet.** On ITS your top-level job was
 DDT, called HACTRN, and DDT was the shell and the debugger at once: the
 same keystrokes that ran a program opened its memory. Jobs under it
-could be stopped, examined, patched and continued, and with `:UJOB`
-somebody else's job too. That was how people collaborated: Don's
-`DPTSTOK/-1` reached into another user's running job. tiny-its gives
+could be stopped, examined, patched and continued. `:UJOB` opened
+somebody else's job too, officially for examination only. Setting the
+undocumented DDT symbol `DPSTOK` ("deposit OK") to -1 made `$$^R` open
+a foreign job for writing, and `$$^R` answered " OP? " either way, in
+case anyone was watching. `DPSTOK` sits right after `BYERUN`, so you
+could set `BYERUN/-1` in your world-readable login file, line feed, and
+deposit -1 without ever typing its name. Quintessential ITS security
+through obscurity, and how people collaborated: reaching into another
+user's running job. tiny-its gives
 every VM that treatment, all over tiny-titan messages:
 
 - jobs: list, select, boot a program, stop, continue, start at an
