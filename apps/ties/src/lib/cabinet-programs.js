@@ -202,7 +202,7 @@ export const PROGRAMS = [
 		tty: true,
 		display: false,
 		// READLN echoes and erases, so full duplex and raw keys; spoken and pasted numbers go in after a pause.
-		ttyConfig: { duplex: 'full', input: 'raw', autoEnter: 900 },
+		ttyConfig: { duplex: 'full', input: 'raw', wrap: true, autoEnter: 900 },
 		spoken: spokenNumbers,
 		demo: (h) => hiloDemo(h, hiloProgram),
 		demoTitle: 'Reboot and let a scripted operator play one game by halving',
@@ -229,7 +229,7 @@ export const PROGRAMS = [
 		pen: false,
 		tty: true,
 		display: false,
-		ttyConfig: { duplex: 'full', input: 'raw', autoEnter: 900 },
+		ttyConfig: { duplex: 'full', input: 'raw', wrap: true, autoEnter: 900 },
 		spoken: spokenNumbers,
 		demo: (h) => landerDemo(h, landerProgram),
 		demoTitle: 'Reboot and let a scripted pilot fly one descent',
