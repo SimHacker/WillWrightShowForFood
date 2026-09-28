@@ -101,6 +101,8 @@ export const PROGRAMS = [
 	{
 		id: 'symelec',
 		label: 'PIXIE SYMELEC (1972)',
+		// As the 1972 listing heads every page: ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470.
+		listing: { user: 'HL1470', title: 'SYMELEC' },
 		title: 'PIXIE / SYMELEC, 1972: Heinz Lemke’s circuit editor, from the listing',
 		pen: true,
 		demo: (h) => houseDemo(h),
@@ -127,6 +129,8 @@ export const PROGRAMS = [
 	{
 		id: 'lp370',
 		label: 'LIGHT PEN TEST (1964)',
+		// No user ID survives; a 1964 PDP-4 had no logins. Derived from the author, C. Stein.
+		listing: { user: 'CSTEIN' },
 		title: 'Type 370 light pen test, DEC-4-45-M, C. Stein, 1964: sensitivity, follow and field of view. Page 6 is reconstructed.',
 		pen: true,
 		demo: (h) => lp370Demo(h, lp370Program),
@@ -150,6 +154,8 @@ export const PROGRAMS = [
 	{
 		id: 'duel',
 		label: 'DUEL (1968)',
+		// Made up, Titan style: Peterson and Viner's initials and DECUS 7-40.
+		listing: { user: 'PV0740' },
 		title: 'DUEL, spacewar for two on a PDP-7, DECUS 7-40. From paper tape via the RIM loader. A control is active with its switch down.',
 		pen: false,
 		demo: null,
@@ -193,6 +199,7 @@ export const PROGRAMS = [
 	{
 		id: 'hilo',
 		label: 'HILO (2026)',
+		listing: { user: 'A2DEH' },
 		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
 		help: {
 			text: 'Press Return, then guess a number from 0 to 99. Type it and press Return, or just say it: it goes in by itself.',
@@ -221,6 +228,7 @@ export const PROGRAMS = [
 	{
 		id: 'lander',
 		label: 'LANDER (2026)',
+		listing: { user: 'A2DEH' },
 		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
 		help: {
 			text: 'Each second, give the fuel to burn: type it and press Return, or just say it. Land at low speed.',
@@ -252,6 +260,7 @@ export const PROGRAMS = [
 	{
 		id: 'forth',
 		label: 'FORTH + TURTLE (2026)',
+		listing: { user: 'wmb' },
 		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
 		help: {
 			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
@@ -297,6 +306,7 @@ export const PROGRAMS = [
 	{
 		id: 'unix',
 		label: 'UNIX v0 (1969)',
+		listing: { user: 'ken' },
 		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken.',
 		help: {
 			text: 'Log in as ken, password ken, in lower case. Then try ls, ls system, date, cat sys.rc. ^C interrupts.',

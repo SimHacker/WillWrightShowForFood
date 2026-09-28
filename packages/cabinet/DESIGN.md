@@ -598,6 +598,7 @@ label: FORTH, BUILT HERE
 machine: { cpu: pdp7, core: 8192, eae: true }
 devices: [teletype, clock, papertape, type340]
 keyboard: { case: upper, echo: program }        # Forth echoes; UNIX is { case: lower, map: simh-unix }
+listing: { user: wmb }                          # who the listings say assembled it
 sources:                                        # what LIVE CODING edits, in build order
   - { path: tapes/pdp7forth/kernel.s, lang: as7 }   # assembled after pdp7-unix's sop.s, then end.s
   - { path: tapes/pdp7forth/prelude.fs, lang: forth }
@@ -718,9 +719,23 @@ ends share it, whatever the machine:
 - At the end, the symbol table, four to a row and sorted by name, as `NAME = value`. A `*` marks a
   value that is more than an address: in SYMELEC every `*` value is `JMS` plus an address, which is
   what Cambridge's `name=JMS,` labels make.
-- Options: `title`, `user` (`a2deh` in Don's listings, as Heinz's said `HL1470`), `date`, and
+- Options: `title`, `user`, `date`, and
   `pageLines` (60 for page breaks with a form feed and the header on every page; 0 for one
   continuous listing, headed once). Also `width`, and the case the listing is printed in.
+
+**Each cartridge says who assembles it**, in `listing: { user, title }`. The user is printed in
+the period's case, and chosen by this rule: the programmer's own user ID if one is known; if not,
+one derived from the programmer's name; if there's no name either, a made-up, mysterious-sounding
+hacker one. Today:
+
+| Cartridge | User | Why |
+|---|---|---|
+| PIXIE SYMELEC | `HL1470` | Heinz Lemke's Titan ID, on every page of the 1972 listing |
+| LIGHT PEN TEST | `CSTEIN` | from C. Stein, DEC, the author; a 1964 PDP-4 had no logins |
+| DUEL | `PV0740` | made up, Titan style: Peterson and Viner, DECUS 7-40 |
+| HILO, LANDER | `A2DEH` | Don's |
+| FORTH | `wmb` | Mitch Bradley's own |
+| UNIX v0 | `ken` | Ken Thompson |
 
 Each front end also keeps its own tool's native format for comparison: `as7 -f list` with its
 `Labels:`. The house style is what the cabinet shows and prints. The LIVE CODING panel's build
