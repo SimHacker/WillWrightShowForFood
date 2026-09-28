@@ -707,6 +707,20 @@ title, description, prompt and style. With that, a program is a card that can be
 another language or style: the same animal database as Forth, as Lisp, as a talk tape. MOOLLM's
 cards, for code.
 
+**TODO: cellular automata, and a tile engine under them.** A cellular automata library that many
+small programs can be made from, the same kind of personal, user-made games as the talk tapes.
+Under it, a tile engine that stacks layers on the 340:
+
+- the character generator;
+- selection and editing cursors;
+- procedural, parameterized symbols;
+- flow fields;
+- and more, all on one grid.
+
+A representation layer decides how a cell's state looks. The inner loop, the rule that makes each
+automaton what it is, is the only code a new program needs, and it plugs into the rest. Don's
+[CAM6](https://github.com/SimHacker/CAM6), in this workspace, is the model to follow.
+
 ## Assemblers: several front ends, one back end
 
 As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
