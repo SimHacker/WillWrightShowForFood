@@ -172,6 +172,13 @@ machine to record for the AM radio, and a second witness for the display, would 
 > or a disk image before it goes near the iron. It is free software, and we'd gladly change it to
 > fit.
 >
+> And a live-coding system for the same machine, in the browser. Our TypeScript PDP-7 assembler
+> already runs in the page: HILO, LANDER and LP370 are assembled from source when they boot, and
+> the memory view shows each word beside the source line that made it. Next come an editor on top
+> of it, so you can change a line and re-deposit it into the running machine, and Mitch Bradley's
+> PDP-7 Forth, so visitors can type words at a real 1960s instruction set and watch the 340 draw
+> them. Whatever works in the page can then be punched to tape for sn 129.
+>
 > We would also like to work with you on the rest of the machine's senses:
 >
 > - **The phosphor.** Lars's GLSL crt-simulation of the P7 tube, driven by the 340's real segment
