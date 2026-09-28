@@ -199,7 +199,7 @@ export const PROGRAMS = [
 	{
 		id: 'hilo',
 		label: 'HILO (2026)',
-		listing: { user: 'A2DEH' },
+		listing: { user: 'A2DEH,CLAUDE' },
 		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
 		help: {
 			text: 'Press Return, then guess a number from 0 to 99. Type it and press Return, or just say it: it goes in by itself.',
@@ -228,7 +228,7 @@ export const PROGRAMS = [
 	{
 		id: 'lander',
 		label: 'LANDER (2026)',
-		listing: { user: 'A2DEH' },
+		listing: { user: 'A2DEH,CLAUDE' },
 		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
 		help: {
 			text: 'Each second, give the fuel to burn: type it and press Return, or just say it. Land at low speed.',
@@ -260,7 +260,7 @@ export const PROGRAMS = [
 	{
 		id: 'forth',
 		label: 'FORTH + TURTLE (2026)',
-		listing: { user: 'wmb' },
+		listing: { user: 'wmb,claude' },
 		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
 		help: {
 			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
