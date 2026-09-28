@@ -155,7 +155,14 @@ test the Cambridge dialect still has to pass.
 2. **Forth built in the page** from `kernel.s`, `prelude.fs` and `turtle.fs`, with the source map
    and symbol table from the build. It sits on the menu beside the prebuilt Forth until the two
    agree word for word.
-3. **Listings in the page**: the LIVE CODING panel shows the build's listing and can save or
+3. **The full-names kernel, developed in the page**: `kernel-names-full.s` edited in the LIVE
+   CODING panel, assembled, booted and debugged with Mitch's own source lines in the memory panel
+   and the trace.
+4. **Then back to Mitch as tested PRs**: first a `KERNEL` parameter for his Makefile, tests and
+   name check (today `src/kernel.s` is hardcoded in the Makefile and in `test/run_tests.py`, and
+   `check_names` assumes 3-character names); then `src/kernel-names-full.s`, passing his test suite
+   under SIMH as well as ours.
+5. **Listings in the page**: the LIVE CODING panel shows the build's listing and can save or
    print it.
-4. **A 6502** machine description and front end, for symbols and source maps in a JavaScript 6502
+6. **A 6502** machine description and front end, for symbols and source maps in a JavaScript 6502
    emulator.

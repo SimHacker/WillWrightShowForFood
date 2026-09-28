@@ -673,6 +673,40 @@ uploads and downloads images through its own interface.
 **And tiny-its itself.** Once tiny-its is Forth running on the cabinet, the LIVE CODING panel
 edits the mainframe too.
 
+**Full names: developed here, given back.** The full-names kernel is built in the page first, with
+the `as7` front end, the LIVE CODING panel and the source-mapped debugger, since that is where it is
+easiest to see what goes wrong. Once it works, it goes back to Mitch's repo as two tested PRs: a
+`KERNEL` parameter for his Makefile, `test/run_tests.py` and `check_names`, and then
+`src/kernel-names-full.s`, passing his tests under SIMH ([ASSEMBLERS.md](ASSEMBLERS.md#next)).
+
+### Games anyone can write
+
+**HILO's talk tape.** HILO splits into an engine (`hilo.s`) and a talk tape, the only file a
+student needs to write:
+
+- **Remarks**: a number, then the line to say about it. 42, 67 and 69 get their jokes; 0 and 100
+  are edgy; 13, 7 and 99 have something to say. The range is 0 to 100 inclusive.
+- **A binary-search remark**: the engine notices two midpoint guesses in a row (50, then 25 or 75)
+  and says what it thinks of you.
+- **Rounds**: numbers to be guessed in order, each with the message you win by finding it. With no
+  rounds, the number is random, as now.
+
+It's ELIZA crossed with guess-the-number, reading your numerology. The remarks are printed, so a
+screen reader speaks them, and a teletype setting reads them aloud for everyone. A talk tape is
+just source: upload one, or paste someone else's into the LIVE CODING panel, and the page assembles
+it with the engine and runs it.
+
+**Animal, in Forth.** The classic guess-the-animal game, which learns a question each time it
+loses. Its save file is a Forth program: loading it builds the tree of questions and animals in
+memory, and playing adds to the tree. SAVE prints the new tree as source again, so the game you
+share is readable, diffable text, not a binary image (though an image can be saved too). We work in
+source-code space.
+
+**Sources as linguistic motherboard cards.** Each of these sources carries a header of what it is:
+title, description, prompt and style. With that, a program is a card that can be regenerated in
+another language or style: the same animal database as Forth, as Lisp, as a talk tape. MOOLLM's
+cards, for code.
+
 ## Assemblers: several front ends, one back end
 
 As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
