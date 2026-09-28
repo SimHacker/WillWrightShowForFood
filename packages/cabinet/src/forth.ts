@@ -1,16 +1,31 @@
+import type { AsmResult } from "./asm/core.js";
+import { assembleAs7 } from "./asm/as7.js";
 import { Cabinet } from "./cabinet.js";
 import { PaperTape } from "./plugins/papertape.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
 import { type DemoScript, wait } from "./symelec-demo.js";
 
-/** Mitch Bradley's PDP-7 Forth, as `as7` left it: the `addr: word` image and the listing's labels. */
-export type ForthTapes = {
-	a7out: string;
-	listing: string;
+/**
+ * Mitch Bradley's PDP-7 Forth: its kernel, either as `as7` left it (the `addr: word` image and
+ * the listing's labels) or assembled here, and the Forth compiled into it.
+ */
+export type ForthTapes = (
+	| { a7out: string; listing: string }
+	| { kernel: AsmResult }
+) & {
 	/** Forth source compiled into the image before it starts, in order: prelude.fs, then turtle.fs. */
 	sources: readonly string[];
 };
+
+/** Mitch's `make`: `as7 sop.s kernel.s end.s`, with our as7 front end. */
+export function assembleForthKernel(tapes: { sop: string; kernel: string; end: string; kernelName?: string }): AsmResult {
+	return assembleAs7([
+		{ name: "sop.s", text: tapes.sop },
+		{ name: tapes.kernelName ?? "kernel.s", text: tapes.kernel },
+		{ name: "end.s", text: tapes.end },
+	]);
+}
 
 export type ForthImage = {
 	core: Uint32Array;
@@ -51,11 +66,12 @@ export function parseAs7Labels(listing: string): Map<string, number> {
  * tape line answers anything but " ok", as prelude.py does.
  */
 export function compileForth(tapes: ForthTapes, maxCycles = 60_000_000): ForthImage {
-	const labels = parseAs7Labels(tapes.listing);
+	if ("kernel" in tapes && tapes.kernel.errors.length > 0) throw new Error(`the Forth kernel did not assemble:\n${tapes.kernel.errors.join("\n")}`);
+	const labels = "kernel" in tapes ? new Map(tapes.kernel.symbols) : parseAs7Labels(tapes.listing);
 	const cold = labels.get("cold");
-	if (cold === undefined) throw new Error("no 'cold' label in the Forth listing");
+	if (cold === undefined) throw new Error("no 'cold' label in the Forth kernel");
 	const cpu = new Pdp7({ coreWords: 8192 });
-	for (const [addr, word] of parseA7out(tapes.a7out)) cpu.write(addr, word);
+	for (const [addr, word] of "kernel" in tapes ? tapes.kernel.words : parseA7out(tapes.a7out)) cpu.write(addr, word);
 	let log = "";
 	const tty = new Teletype({ printCycles: 100, onPrint: (c) => (log += String.fromCharCode(c & 0o177)) });
 	const reader = new PaperTape({ frameCycles: 50 });

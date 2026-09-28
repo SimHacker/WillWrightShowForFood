@@ -29,6 +29,7 @@ import {
 	unixDemo,
 	UNIXV0_BOOT_ORIGIN,
 	compileForth,
+	assembleForthKernel,
 	bootForth,
 	setForthColumns,
 	forthDemo,
@@ -61,6 +62,7 @@ async function gunzip(data) {
 let unixPlatter = null;
 let unixBootTape = null;
 let forthImage = null;
+let forthKernel = null;
 
 const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
@@ -281,20 +283,19 @@ export const PROGRAMS = [
 		ttyConfig: { duplex: 'full', input: 'line' },
 		onTtyResize: ({ cpu, cols }) => forthImage && setForthColumns(cpu, forthImage, cols),
 		symbols: () => [...(forthImage?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
+		source: async () => (forthKernel ? sourceFromAsm(forthKernel) : null),
 		async load() {
 			if (forthImage) return;
-			const [a7out, listing, prelude, turtle] = await Promise.all([
-				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.a7out?raw'),
-				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.lst?raw'),
+			const [sop, kernel, end, prelude, turtle] = await Promise.all([
+				import('../../../../packages/cabinet/tapes/pdp7unix/sop.s?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.s?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/end.s?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
 				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw')
 			]);
-			// Mitch's build compiles the prelude under SIMH; the cabinet does it here, once.
-			forthImage = compileForth({
-				a7out: a7out.default,
-				listing: listing.default,
-				sources: [prelude.default, turtle.default]
-			});
+			// Mitch's build, in the page: as7 sop.s kernel.s end.s, then the prelude compiled on the machine.
+			forthKernel = assembleForthKernel({ sop: sop.default, kernel: kernel.default, end: end.default });
+			forthImage = compileForth({ kernel: forthKernel, sources: [prelude.default, turtle.default] });
 		},
 		boot({ cpu }) {
 			bootForth(cpu, forthImage);

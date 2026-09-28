@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { Cabinet } from "./cabinet.js";
-import { bootForth, compileForth, forthDemo, parseAs7Labels, setForthColumns } from "./forth.js";
+import { assembleForthKernel, bootForth, compileForth, forthDemo, parseAs7Labels, setForthColumns } from "./forth.js";
 import { Clock } from "./plugins/clock.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Teletype } from "./plugins/teletype.js";
@@ -47,6 +47,18 @@ function machine() {
 test("forth: the listing's labels give cold, the entry Mitch's mkdo.py starts at", () => {
 	assert.equal(parseAs7Labels(tapes.listing).get("cold"), 0o736);
 	assert.equal(image.cold, 0o736);
+});
+
+test("forth: built from source here, it is the same image, word for word, as from Mitch's as7", () => {
+	const kernel = assembleForthKernel({
+		sop: readFileSync(new URL("../tapes/pdp7unix/sop.s", import.meta.url), "utf8"),
+		kernel: tape("kernel.s"),
+		end: tape("end.s"),
+	});
+	const built = compileForth({ kernel, sources: tapes.sources });
+	assert.equal(built.cold, image.cold);
+	assert.deepEqual([...built.labels], [...image.labels]);
+	assert.ok(built.core.every((w, a) => w === image.core[a]), "all 8K words");
 });
 
 test("forth: the prelude and turtle compile from paper tape with every line ok", () => {
