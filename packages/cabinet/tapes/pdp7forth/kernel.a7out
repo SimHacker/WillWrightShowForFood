@@ -1,0 +1,1461 @@
+000010: 000000	0		" 010: IP -- set before use
+000011: 005157	rstack-1	" 011: RP, empty
+000012: 005217	dstack-1	" 012: SP, empty
+000013: 000000	0		" 013: scratch pointer (find)
+000014: 000000	0		" 014: scratch pointer (accept/parse/number)
+000015: 000000	0		" 015: free
+000016: 000000	0		" 016: free
+000017: 000000	0		" 017: free
+000020: 000000	0		" 020: CAL's return-address slot (hardware-managed)
+000021: 200010	nest:	lac 010		" IP -> the CAL cell just executed
+000022: 060011		dac i 011	" push it on the return stack
+000023: 040030		dac t
+000024: 220030		lac i t		" cell = body address (tag 00, "CAL -- bare address")
+000025: 341205		tad m1		" back up one for NEXT's pre-increment
+000026: 040010		dac 010
+000027: 600031		jmp next
+000030: 000000	t:	0		" nest's scratch cell
+000031: 420010	next:	xct i 010	" pre-increment IP, execute the thread cell
+000032: 060012		dac i 012	" push AC (only reached by constant/variable cells)
+000033: 600031		jmp next
+000034: 000000	pop.rp:	0
+000035: 200011		lac 011
+000036: 041126		dac t2
+000037: 341205		tad m1
+000040: 040011		dac 011
+000041: 221126		lac i t2
+000042: 620034		jmp i pop.rp
+000043: 000000	pop.sp:	0
+000044: 200012		lac 012
+000045: 041126		dac t2
+000046: 341205		tad m1
+000047: 040012		dac 012
+000050: 221126		lac i t2
+000051: 620043		jmp i pop.sp
+000052: 000000	un:	0
+000053: 200012		lac 012
+000054: 041127		dac t3
+000055: 221127		lac i t3
+000056: 620052		jmp i un
+000057: 000000	bin:	0
+000060: 200012		lac 012
+000061: 041126		dac t2
+000062: 341205		tad m1
+000063: 040012		dac 012
+000064: 041127		dac t3
+000065: 221126		lac i t2
+000066: 620057		jmp i bin
+000067: 201205	true:	lac m1
+000070: 061127		dac i t3
+000071: 600031		jmp next
+000072: 161127	false:	dzm i t3
+000073: 600031		jmp next
+000074: 000000	sdiv:	0
+000075: 100057		jms bin		" AC = b
+000076: 041130		dac t4
+000077: 261127		xor i t3
+000100: 041142		dac qsgn	" sign bit = quotient's sign
+000101: 201130		lac t4
+000102: 100133		jms absv
+000103: 040111		dac 1f
+000104: 221127		lac i t3
+000105: 041166		dac rsgn	" sign bit = remainder's sign
+000106: 100133		jms absv
+000107: 744000		cll
+000110: 653323		idiv
+000111: 000000	1:	0
+000112: 041130		dac t4		" |remainder|
+000113: 201142		lac qsgn
+000114: 740100		sma
+000115: 600122		jmp 2f
+000116: 641002		lacq
+000117: 740001		cma
+000120: 341213		tad d1
+000121: 652000		lmq		" negate the quotient
+000122: 201166	2:	lac rsgn
+000123: 740100		sma
+000124: 600131		jmp 3f
+000125: 201130		lac t4
+000126: 740001		cma
+000127: 341213		tad d1
+000130: 620074		jmp i sdiv
+000131: 201130	3:	lac t4
+000132: 620074		jmp i sdiv
+000133: 000000	absv:	0
+000134: 740100		sma
+000135: 620133		jmp i absv
+000136: 740001		cma
+000137: 341213		tad d1
+000140: 620133		jmp i absv
+000141: 000000	getc:	0
+000142: 201133		lac tapein
+000143: 740200		sza
+000144: 600164		jmp 2f
+000145: 700301	1:	ksf
+000146: 600154		jmp 5f		" no key yet: keep the display refreshed
+000147: 700312		krb
+000150: 501231		and o177	" 7-bit ASCII
+000151: 541216		sad o4
+000152: 740040		hlt		" ^D from the keyboard: halt, as BYE does
+000153: 620141		jmp i getc
+000154: 205055	5:	lac display	" DISPLAY on, and the Type 340 has reached the
+000155: 741200		sna		" stop at the end of the display list? Start it
+000156: 600145		jmp 1b		" over from the top, so the drawing stays lit
+000157: 700601		0700601		" 340: skip if stopped
+000160: 600145		jmp 1b
+000161: 201173		lac dlp
+000162: 700604		0700604		" 340: load display address from AC, and start
+000163: 600145		jmp 1b
+000164: 700104	2:	rsa		" read one frame, alphanumeric mode
+000165: 700101	3:	rsf
+000166: 600165		jmp 3b
+000167: 700112		rrb
+000170: 501231		and o177
+000171: 741200		sna
+000172: 600164		jmp 2b		" blank tape
+000173: 541221		sad o15
+000174: 600164		jmp 2b		" CR: the LF ends the line
+000175: 541220		sad o12
+000176: 600202		jmp 4f
+000177: 541216		sad o4
+000200: 141133		dzm tapein	" ^D: end of tape (skipped by sad for other characters)
+000201: 620141		jmp i getc
+000202: 201221	4:	lac o15
+000203: 620141		jmp i getc
+000204: 000000	putc:	0
+000205: 700406		tls
+000206: 700401	1:	tsf
+000207: 600206		jmp 1b
+000210: 620204		jmp i putc
+000211: 000000	find:	0
+000212: 205157		lac latest
+000213: 040240	1:	dac p
+000214: 040013		dac 013
+000215: 220240		lac i p
+000216: 501256		and cmask	" count field only
+000217: 540241		sad tcnt	" skip if count differs
+000220: 600230		jmp 2f
+000221: 220240	3:	lac i p
+000222: 501257		and lmask	" link field only
+000223: 741200		sna		" 0 = end of chain
+000224: 600234		jmp 4f
+000225: 740001		cma		" -(dist-1)-1 = -dist
+000226: 340240		tad p
+000227: 600213		jmp 1b
+000230: 220013	2:	lac i 013	" name word at p+1
+000231: 540242		sad tname
+000232: 600236		jmp 5f
+000233: 600221		jmp 3b
+000234: 201205	4:	lac m1		" not found
+000235: 620211		jmp i find
+000236: 200240	5:	lac p		" found
+000237: 620211		jmp i find
+000240: 000000	p:	0
+000241: 000000	tcnt:	0		" count field of the name being sought
+000242: 000000	tname:	0		" packed SIXBIT name word being sought
+000243: 000000	accept:	0
+000244: 201171		lac tibp
+000245: 041134		dac inp
+000246: 041135		dac tend
+000247: 100141	1:	jms getc
+000250: 541221		sad o15
+000251: 600302		jmp 3f
+000252: 541216		sad o4
+000253: 600305		jmp 5f
+000254: 541231		sad o177
+000255: 600272		jmp 2f
+000256: 541217		sad o10
+000257: 600272		jmp 2f
+000260: 041131		dac t5
+000261: 201135		lac tend
+000262: 541172		sad tibe	" full: ignore
+000263: 600247		jmp 1b
+000264: 041132		dac t6
+000265: 201131		lac t5
+000266: 061132		dac i t6
+000267: 441135		isz tend
+000270: 100204		jms putc	" echo
+000271: 600247		jmp 1b
+000272: 201135	2:	lac tend
+000273: 541171		sad tibp	" empty: nothing to drop
+000274: 600247		jmp 1b
+000275: 341205		tad m1
+000276: 041135		dac tend
+000277: 201217		lac o10
+000300: 100204		jms putc
+000301: 600247		jmp 1b
+000302: 201222	3:	lac o40
+000303: 100204		jms putc
+000304: 620243		jmp i accept
+000305: 201135	5:	lac tend	" ^D (end of tape) ends a partial line; on an empty
+000306: 541171		sad tibp	" one, just carry on from the keyboard
+000307: 600247		jmp 1b
+000310: 600302		jmp 3b
+000311: 000000	parse:	0
+000312: 141137		dzm wlen
+000313: 201134	1:	lac inp		" skip blanks
+000314: 541135		sad tend
+000315: 600373		jmp 5f
+000316: 041136		dac wptr
+000317: 441134		isz inp
+000320: 221136		lac i wptr
+000321: 541222		sad o40
+000322: 600313		jmp 1b
+000323: 441137	2:	isz wlen	" wptr -> token start
+000324: 201134		lac inp
+000325: 541135		sad tend
+000326: 600336		jmp 4f
+000327: 041130		dac t4
+000330: 221130		lac i t4
+000331: 541222		sad o40
+000332: 600335		jmp 3f
+000333: 441134		isz inp
+000334: 600323		jmp 2b
+000335: 441134	3:	isz inp		" consume the delimiter
+000336: 201137	4:	lac wlen
+000337: 744000		cll
+000340: 640715		als 13
+000341: 040241		dac tcnt
+000342: 201136		lac wptr
+000343: 341205		tad m1
+000344: 040014		dac 014
+000345: 201137		lac wlen
+000346: 041130		dac t4		" characters left to pack
+000347: 201207		lac m3
+000350: 041131		dac t5		" 3 slots
+000351: 140242		dzm tname
+000352: 200242	6:	lac tname
+000353: 744000		cll
+000354: 640706		als 6
+000355: 040242		dac tname
+000356: 201130		lac t4
+000357: 741200		sna
+000360: 600371		jmp 7f		" pad with SIXBIT space (0)
+000361: 341205		tad m1
+000362: 041130		dac t4
+000363: 220014		lac i 014
+000364: 100375		jms fold
+000365: 341253		tad om40
+000366: 501225		and o77
+000367: 240242		xor tname
+000370: 040242		dac tname
+000371: 441131	7:	isz t5
+000372: 600352		jmp 6b
+000373: 201137	5:	lac wlen
+000374: 620311		jmp i parse
+000375: 000000	fold:	0
+000376: 041132		dac t6
+000377: 341255		tad om140
+000400: 740100		sma		" below 0140: leave it
+000401: 600404		jmp 1f
+000402: 201132		lac t6
+000403: 620375		jmp i fold
+000404: 201132	1:	lac t6
+000405: 341253		tad om40
+000406: 620375		jmp i fold
+000407: 000000	sch:	0
+000410: 201134		lac inp
+000411: 541135		sad tend
+000412: 620407		jmp i sch
+000413: 041130		dac t4
+000414: 441134		isz inp
+000415: 221130		lac i t4
+000416: 541223		sad o42
+000417: 620407		jmp i sch
+000420: 440407		isz sch
+000421: 620407		jmp i sch
+000422: 000000	number:	0
+000423: 201136		lac wptr
+000424: 341205		tad m1
+000425: 040014		dac 014
+000426: 201137		lac wlen
+000427: 740001		cma
+000430: 341213		tad d1
+000431: 041130		dac t4		" -wlen, counted up by isz
+000432: 141140		dzm nacc
+000433: 141141		dzm nneg
+000434: 221136		lac i wptr
+000435: 541224		sad o55		" '-'
+000436: 741000		skp
+000437: 600445		jmp 1f
+000440: 440014		isz 014
+000441: 441141		isz nneg
+000442: 441130		isz t4
+000443: 600445		jmp 1f
+000444: 620422		jmp i number	" a lone '-' is not a number
+000445: 220014	1:	lac i 014
+000446: 100375		jms fold
+000447: 341254		tad om60	" - '0'
+000450: 741100		spa
+000451: 620422		jmp i number	" below '0'
+000452: 041131		dac t5
+000453: 341211		tad dm10
+000454: 741100		spa
+000455: 600463		jmp 2f		" 0-9
+000456: 341210		tad dm7		" 'A' is '0' + 17
+000457: 741100		spa
+000460: 620422		jmp i number	" between '9' and 'A'
+000461: 341215		tad d10
+000462: 041131		dac t5
+000463: 201131	2:	lac t5
+000464: 740001		cma
+000465: 344120		tad base	" BASE - digit - 1
+000466: 741100		spa
+000467: 620422		jmp i number	" digit >= BASE
+000470: 204120		lac base
+000471: 040475		dac 3f
+000472: 201140		lac nacc
+000473: 744000		cll
+000474: 653122		mul
+000475: 000000	3:	0
+000476: 641002		lacq
+000477: 341131		tad t5
+000500: 041140		dac nacc
+000501: 441130		isz t4
+000502: 600445		jmp 1b
+000503: 201141		lac nneg
+000504: 741200		sna
+000505: 600512		jmp 4f
+000506: 201140		lac nacc
+000507: 740001		cma
+000510: 341213		tad d1
+000511: 741000		skp
+000512: 201140	4:	lac nacc
+000513: 440422		isz number
+000514: 620422		jmp i number
+000515: 000000	mkcell:	0
+000516: 041131		dac t5
+000517: 221131		lac i t5
+000520: 501241		and tmask	" tag field
+000521: 744000		cll
+000522: 640511		lrs 9
+000523: 340535		tad optabp
+000524: 041132		dac t6
+000525: 201131		lac t5
+000526: 341214		tad d2		" body
+000527: 361132		tad i t6
+000530: 620515		jmp i mkcell
+000531: 000000	optab:	0		" colon: CAL is opcode 0, so the cell is the bare address
+000532: 600000		jmp		" primitive
+000533: 200000		lac		" constant
+000534: 760000		law		" variable
+000535: 000531	optabp:	optab
+000536: 000000	comp:	0
+000537: 041144		dac cval
+000540: 201167		lac dp
+000541: 541170		sad pool
+000542: 600676		jmp full
+000543: 541175		sad tbufe	" the interpretive-structure buffer is full
+000544: 600676		jmp full
+000545: 041145		dac cptr
+000546: 201144		lac cval
+000547: 061145		dac i cptr
+000550: 441167		isz dp
+000551: 620536		jmp i comp
+000552: 000000	lit:	0
+000553: 041146		dac lval
+000554: 201170		lac pool
+000555: 041147		dac lptr
+000556: 201147	1:	lac lptr	" search the existing entries
+000557: 541203		sad ptop
+000560: 600566		jmp 2f
+000561: 221147		lac i lptr
+000562: 541146		sad lval
+000563: 600576		jmp 3f
+000564: 441147		isz lptr
+000565: 600556		jmp 1b
+000566: 201170	2:	lac pool	" not found: add one
+000567: 541167		sad dp
+000570: 600676		jmp full
+000571: 341205		tad m1
+000572: 041170		dac pool
+000573: 041147		dac lptr
+000574: 201146		lac lval
+000575: 061147		dac i lptr
+000576: 201147	3:	lac lptr
+000577: 341242		tad lacop
+000600: 100536		jms comp
+000601: 620552		jmp i lit
+000602: 000000	mkhdr:	0
+000603: 041150		dac htag
+000604: 100311		jms parse
+000605: 741200		sna
+000606: 600700		jmp noname
+000607: 501240		and nhigh	" longer than 31 characters?
+000610: 740200		sza
+000611: 600700		jmp noname
+000612: 100211		jms find	" warn if this hides an existing word
+000613: 541205		sad m1
+000614: 600620		jmp 1f
+000615: 101007		jms typetok
+000616: 201117		lac m.redef
+000617: 101026		jms puts
+000620: 201167	1:	lac dp
+000621: 041151		dac hadr
+000622: 205157		lac latest
+000623: 740001		cma
+000624: 341167		tad dp		" link = distance - 1
+000625: 041131		dac t5
+000626: 501237		and lhigh	" must fit in 9 bits (DESIGN.md, Dictionary/headers)
+000627: 740200		sza
+000630: 600702		jmp far
+000631: 201131		lac t5
+000632: 340241		tad tcnt
+000633: 341150		tad htag
+000634: 100536		jms comp
+000635: 200242		lac tname
+000636: 100536		jms comp
+000637: 201151		lac hadr
+000640: 620602		jmp i mkhdr
+000641: 000000	lvst:	0
+000642: 201153		lac level
+000643: 740200		sza
+000644: 600656		jmp 1f		" already inside one: count it
+000645: 204276		lac state
+000646: 740200		sza
+000647: 620641		jmp i lvst	" compiling a definition: nothing to do
+000650: 201167		lac dp
+000651: 041154		dac savdp
+000652: 201174		lac tbufp
+000653: 041167		dac dp
+000654: 201205		lac m1
+000655: 044276		dac state
+000656: 441153	1:	isz level
+000657: 620641		jmp i lvst
+000660: 201153	lvend:	lac level
+000661: 741200		sna
+000662: 600031		jmp next	" ordinary compilation
+000663: 341205		tad m1
+000664: 041153		dac level
+000665: 740200		sza
+000666: 600031		jmp next	" still inside an outer structure
+000667: 201243		lac c.exit
+000670: 100536		jms comp
+000671: 201154		lac savdp
+000672: 041167		dac dp
+000673: 144276		dzm state
+000674: 201174		lac tbufp	" run tbuf (a CAL cell is its bare address), as
+000675: 604222		jmp xrun	" EXECUTE would
+000676: 201100	full:	lac m.full
+000677: 600705		jmp error
+000700: 201105	noname:	lac m.name
+000701: 600705		jmp error
+000702: 201112	far:	lac m.far
+000703: 600705		jmp error
+000704: 201067	undef:	lac m.undef
+000705: 041156	error:	dac msgp
+000706: 101007		jms typetok
+000707: 201156		lac msgp
+000710: 101026		jms puts
+000711: 101045		jms crlf
+000712: 141133	abort:	dzm tapein	" an error while loading tape: back to the keyboard
+000713: 201153		lac level	" abandon an interpretive control structure
+000714: 741200		sna
+000715: 600721		jmp 2f
+000716: 201154		lac savdp
+000717: 041167		dac dp
+000720: 141153		dzm level
+000721: 201152	2:	lac cdp
+000722: 741200		sna
+000723: 600726		jmp 1f
+000724: 041167		dac dp		" discard the partial definition
+000725: 141152		dzm cdp
+000726: 201177	1:	lac ds0
+000727: 040012		dac 012
+000730: 201201	quit:	lac rs0
+000731: 040011		dac 011
+000732: 144276		dzm state
+000733: 201202		lac qip
+000734: 040010		dac 010
+000735: 600031		jmp next
+000736: 201173	cold:	lac dlp	" run the 340 once over the (initially empty) display
+000737: 700604		0700604		" list, so that it reports "stopped" from now on
+000740: 201053		lac m.hello
+000741: 101026		jms puts
+000742: 101045		jms crlf
+000743: 600712		jmp abort
+000744: 604123	qthr:	jmp xquery
+000745: 604127	1:	jmp xparse
+000746: 603560		jmp qbran
+000747: 001003		3f-1		" end of line
+000750: 604134		jmp xfind
+000751: 603633		jmp dup
+000752: 603560		jmp qbran
+000753: 000767		4f-1		" not a word
+000754: 764276		law state	" compile iff STATE and not immediate:
+000755: 603711		jmp fetch	" STATE @ AND 0<
+000756: 603750		jmp and.b
+000757: 604052		jmp zlt
+000760: 603560		jmp qbran
+000761: 000764		5f-1
+000762: 604235		jmp compc
+000763: 603553		jmp bran
+000764: 000744		1b-1
+000765: 604220	5:	jmp execute
+000766: 603553		jmp bran
+000767: 000744		1b-1
+000770: 603640	4:	jmp drop
+000771: 604160		jmp xnumber
+000772: 603560		jmp qbran
+000773: 001002		6f-1		" not a number either
+000774: 764276		law state
+000775: 603711		jmp fetch
+000776: 603560		jmp qbran
+000777: 000744		1b-1		" interpreting: leave it on the stack
+001000: 604243		jmp literal
+001001: 603553		jmp bran
+001002: 000744		1b-1
+001003: 604215	6:	jmp xerr
+001004: 604173	3:	jmp xok
+001005: 603553		jmp bran
+001006: 000743		qthr-1
+001007: 000000	typetok:	0
+001010: 201137		lac wlen
+001011: 741200		sna
+001012: 621007		jmp i typetok
+001013: 740001		cma
+001014: 341213		tad d1
+001015: 041160		dac ttc
+001016: 201136		lac wptr
+001017: 341205		tad m1
+001020: 040016		dac 016
+001021: 220016	1:	lac i 016
+001022: 100204		jms putc
+001023: 441160		isz ttc
+001024: 601021		jmp 1b
+001025: 621007		jmp i typetok
+001026: 000000	puts:	0
+001027: 041157		dac pstr
+001030: 221157	1:	lac i pstr
+001031: 741200		sna
+001032: 621026		jmp i puts
+001033: 744000		cll
+001034: 640511		lrs 9
+001035: 740200		sza
+001036: 100204		jms putc
+001037: 221157		lac i pstr
+001040: 501232		and o777
+001041: 740200		sza
+001042: 100204		jms putc
+001043: 441157		isz pstr
+001044: 601030		jmp 1b
+001045: 000000	crlf:	0
+001046: 201221		lac o15
+001047: 100204		jms putc
+001050: 201220		lac o12
+001051: 100204		jms putc
+001052: 621045		jmp i crlf
+001053: 001054	m.hello:	1f
+001054: 120104	1:	<P>D; <P>-; <7> ; <F>O; <R>T; <H; 0
+001055: 120055	
+001056: 067040	
+001057: 106117	
+001060: 122124	
+001061: 110000	
+001062: 000000	
+001063: 001064	m.ok:	1f
+001064: 040157	1:	< >o; <k; 0
+001065: 153000	
+001066: 000000	
+001067: 001070	m.undef:	1f
+001070: 040077	1:	< >?; 0
+001071: 000000	
+001072: 001073	m.stack:	1f
+001073: 040163	1:	< >s; <t>a; <c>k; <?; 0
+001074: 164141	
+001075: 143153	
+001076: 077000	
+001077: 000000	
+001100: 001101	m.full:	1f
+001101: 040146	1:	< >f; <u>l; <l>?; 0
+001102: 165154	
+001103: 154077	
+001104: 000000	
+001105: 001106	m.name:	1f
+001106: 040156	1:	< >n; <a>m; <e>?; 0
+001107: 141155	
+001110: 145077	
+001111: 000000	
+001112: 001113	m.far:	1f
+001113: 040146	1:	< >f; <a>r; <?; 0
+001114: 141162	
+001115: 077000	
+001116: 000000	
+001117: 001120	m.redef:	1f
+001120: 040162	1:	< >r; <e>d; <e>f; <i>n; <e>d; 0
+001121: 145144	
+001122: 145146	
+001123: 151156	
+001124: 145144	
+001125: 000000	
+001126: 000000	t2:	0
+001127: 000000	t3:	0
+001130: 000000	t4:	0
+001131: 000000	t5:	0
+001132: 000000	t6:	0
+001133: 000000	tapein:	0		" nonzero: getc reads the paper-tape reader
+001134: 000000	inp:	0		" next unread character in tib
+001135: 000000	tend:	0		" tib + line length
+001136: 000000	wptr:	0		" start of the last parsed token
+001137: 000000	wlen:	0		" its length
+001140: 000000	nacc:	0
+001141: 000000	nneg:	0
+001142: 000000	qsgn:	0
+001143: 000000	sdc:	0		" */
+001144: 000000	cval:	0		" comp
+001145: 000000	cptr:	0
+001146: 000000	lval:	0		" lit
+001147: 000000	lptr:	0
+001150: 000000	htag:	0		" mkhdr
+001151: 000000	hadr:	0
+001152: 000000	cdp:	0		" header of the definition being compiled, else 0
+001153: 000000	level:	0		" interpretive control structure nesting
+001154: 000000	savdp:	0		" dp while compiling into tbuf
+001155: 000000	sqp:	0		" S"
+001156: 000000	msgp:	0
+001157: 000000	pstr:	0
+001160: 000000	ttc:	0
+001161: 000000	wp:	0		" WORDS
+001162: 000000	wcnt:	0
+001163: 000000	wr:	0
+001164: 000000	wk:	0
+001165: 000000	wcol:	0
+001166: 000000	rsgn:	0
+001167: 005422	dp:	end		" next free dictionary word
+001170: 020000	pool:	020000		" lowest literal-pool entry; the pool grows down
+001171: 005260	tibp:	tib
+001172: 005400	tibe:	tib+0120
+001173: 001260	dlp:	dlbuf
+001174: 003260	tbufp:	tbuf
+001175: 003424	tbufe:	tbuf+0144
+001176: 003424	sbufp:	sbuf
+001177: 005217	ds0:	dstack-1	" SP when empty
+001200: 005260	dstop:	dstack+040	" one past the top slot
+001201: 005157	rs0:	rstack-1	" RP when empty
+001202: 000743	qip:	qthr-1
+001203: 020000	ptop:	020000		" top of memory + 1
+001204: 005377	nbufp:	nbuf-1
+001205: 777777	m1:	-1
+001206: 777776	m2:	-2
+001207: 777775	m3:	-3
+001210: 777771	dm7:	-7
+001211: 777766	dm10:	-10
+001212: 777704	dm60:	-60
+001213: 000001	d1:	1
+001214: 000002	d2:	2
+001215: 000012	d10:	10
+001216: 000004	o4:	04
+001217: 000010	o10:	010
+001220: 000012	o12:	012
+001221: 000015	o15:	015
+001222: 000040	o40:	040
+001223: 000042	o42:	042
+001224: 000055	o55:	055
+001225: 000077	o77:	077
+001226: 000051	o51:	051
+001227: 000101	o101:	0101
+001230: 000137	o137:	0137
+001231: 000177	o177:	0177
+001232: 000777	o777:	0777
+001233: 002000	o2000:	02000
+001234: 003000	o3000:	03000
+001235: 010000	o10000:	010000
+001236: 767777	o767777:	0767777
+001237: 777000	lhigh:	0777000
+001240: 777740	nhigh:	0777740
+001241: 007000	tmask:	0007000
+001242: 200000	lacop:	lac
+001243: 603546	c.exit:	jmp ex.body
+001244: 603553	c.bran:	jmp bran
+001245: 603560	c.qbran:	jmp qbran
+001246: 603573	c.xdo:	jmp xdo
+001247: 603606	c.xloop:	jmp xloop
+001250: 604653	c.xdotq:	jmp xdotq
+001251: 605060	c.xsq:	jmp xsq
+001252: 400000	o400k:	0400000
+001253: 777740	om40:	-040
+001254: 777720	om60:	-060
+001255: 777640	om140:	-0140
+001256: 760000	cmask:	0760000		" header count field
+001257: 000777	lmask:	0000777		" header link field
+001260: 002000	dlbuf:	02000
+003544: 101000	h.ex:	0100000+tag.prim	" EXIT
+003545: 457051		0457051
+003546: 100034		jms pop.rp	" AC := the caller's CAL-cell address, pushed by nest
+003547: 040010		dac 010		" IP := that address directly -- no "tad m1" here,
+003550: 600031		jmp next
+003551: 141004	h.bran:	0140000+tag.prim+h.bran-h.ex-1	" BRANCH
+003552: 426241		0426241
+003553: 220010	bran:	lac i 010
+003554: 040010		dac 010
+003555: 600031		jmp next
+003556: 161004	h.qbran:	0160000+tag.prim+h.qbran-h.bran-1	" ?BRANCH
+003557: 374262		0374262
+003560: 200012	qbran:	lac 012		" inline pop
+003561: 041126		dac t2
+003562: 341205		tad m1
+003563: 040012		dac 012
+003564: 221126		lac i t2
+003565: 741200		sna		" nonzero (true): fall through
+003566: 603553		jmp bran	" zero: take the branch
+003567: 440010		isz 010		" step over the inline cell (IP is never 0: no skip)
+003570: 600031		jmp next
+003571: 101012	h.xdo:	0100000+tag.prim+h.xdo-h.qbran-1	" (DO)
+003572: 104457		0104457
+003573: 100043	xdo:	jms pop.sp	" index
+003574: 041130		dac t4
+003575: 100043		jms pop.sp	" limit
+003576: 060011		dac i 011	" R: limit
+003577: 740001		cma		" -limit-1
+003600: 341130		tad t4
+003601: 341213		tad d1		" index - limit
+003602: 060011		dac i 011	" R: counter
+003603: 600031		jmp next
+003604: 141012	h.xloop:	0140000+tag.prim+h.xloop-h.xdo-1	" (LOOP)
+003605: 105457		0105457
+003606: 200011	xloop:	lac 011
+003607: 041126		dac t2
+003610: 461126		isz i t2	" counter++; skips when it reaches 0
+003611: 603553		jmp bran	" not done: loop back
+003612: 200011		lac 011
+003613: 341206		tad m2
+003614: 040011		dac 011		" drop limit and counter
+003615: 440010		isz 010		" step over the inline cell
+003616: 600031		jmp next
+003617: 021012	h.xi:	0020000+tag.prim+h.xi-h.xloop-1	" I
+003620: 510000		0510000
+003621: 200011	xi:	lac 011		" RP -> counter
+003622: 041126		dac t2
+003623: 341205		tad m1
+003624: 041130		dac t4		" -> limit
+003625: 221126		lac i t2
+003626: 361130		tad i t4
+003627: 060012		dac i 012
+003630: 600031		jmp next
+003631: 061011	h.dup:	0060000+tag.prim+h.dup-h.xi-1	" DUP
+003632: 446560		0446560
+003633: 100052	dup:	jms un
+003634: 060012		dac i 012
+003635: 600031		jmp next
+003636: 101004	h.drop:	0100000+tag.prim+h.drop-h.dup-1	" DROP
+003637: 446257		0446257
+003640: 200012	drop:	lac 012
+003641: 341205		tad m1
+003642: 040012		dac 012
+003643: 600031		jmp next
+003644: 101005	h.swap:	0100000+tag.prim+h.swap-h.drop-1	" SWAP
+003645: 636741		0636741
+003646: 100057	swap:	jms bin
+003647: 041130		dac t4		" b
+003650: 221127		lac i t3	" a
+003651: 061126		dac i t2	" into b's slot
+003652: 201130		lac t4
+003653: 061127		dac i t3	" b into a's slot
+003654: 440012		isz 012		" undo bin's drop (SP is never 0: no skip)
+003655: 600031		jmp next
+003656: 101011	h.over:	0100000+tag.prim+h.over-h.swap-1	" OVER
+003657: 576645		0576645
+003660: 200012	over:	lac 012
+003661: 341205		tad m1
+003662: 041127		dac t3
+003663: 221127		lac i t3
+003664: 060012		dac i 012
+003665: 600031		jmp next
+003666: 041007	h.tor:	0040000+tag.prim+h.tor-h.over-1	" >R
+003667: 366200		0366200
+003670: 100043	tor:	jms pop.sp
+003671: 060011		dac i 011
+003672: 600031		jmp next
+003673: 041004	h.rfrom:	0040000+tag.prim+h.rfrom-h.tor-1	" R>
+003674: 623600		0623600
+003675: 100034	rfrom:	jms pop.rp
+003676: 060012		dac i 012
+003677: 600031		jmp next
+003700: 041004	h.rat:	0040000+tag.prim+h.rat-h.rfrom-1	" R@
+003701: 624000		0624000
+003702: 200011	rat:	lac 011
+003703: 041127		dac t3
+003704: 221127		lac i t3
+003705: 060012		dac i 012
+003706: 600031		jmp next
+003707: 021006	h.fetch:	0020000+tag.prim+h.fetch-h.rat-1	" @
+003710: 400000		0400000
+003711: 100052	fetch:	jms un
+003712: 041130		dac t4
+003713: 221130		lac i t4
+003714: 061127		dac i t3
+003715: 600031		jmp next
+003716: 021006	h.store:	0020000+tag.prim+h.store-h.fetch-1	" !
+003717: 010000		0010000
+003720: 100057	store:	jms bin
+003721: 041130		dac t4		" addr
+003722: 221127		lac i t3	" x
+003723: 061130		dac i t4
+003724: 200012		lac 012		" drop x
+003725: 341205		tad m1
+003726: 040012		dac 012
+003727: 600031		jmp next
+003730: 021011	h.plus:	0020000+tag.prim+h.plus-h.store-1	" +
+003731: 130000		0130000
+003732: 100057	plus:	jms bin
+003733: 361127		tad i t3
+003734: 061127		dac i t3
+003735: 600031		jmp next
+003736: 021005	h.minus:	0020000+tag.prim+h.minus-h.plus-1	" -
+003737: 150000		0150000
+003740: 100057	minus:	jms bin
+003741: 740001		cma		" -b-1
+003742: 361127		tad i t3
+003743: 341213		tad d1
+003744: 061127		dac i t3
+003745: 600031		jmp next
+003746: 061007	h.and:	0060000+tag.prim+h.and-h.minus-1	" AND
+003747: 415644		0415644
+003750: 100057	and.b:	jms bin
+003751: 521127		and i t3
+003752: 061127		dac i t3
+003753: 600031		jmp next
+003754: 041005	h.or:	0040000+tag.prim+h.or-h.and-1	" OR
+003755: 576200		0576200
+003756: 100057	or.b:	jms bin
+003757: 521127		and i t3
+003760: 041130		dac t4
+003761: 221126		lac i t2
+003762: 261127		xor i t3
+003763: 241130		xor t4
+003764: 061127		dac i t3
+003765: 600031		jmp next
+003766: 061011	h.xor:	0060000+tag.prim+h.xor-h.or-1	" XOR
+003767: 705762		0705762
+003770: 100057	xor.b:	jms bin
+003771: 261127		xor i t3
+003772: 061127		dac i t3
+003773: 600031		jmp next
+003774: 141005	h.inv:	0140000+tag.prim+h.inv-h.xor-1	" INVERT
+003775: 515666		0515666
+003776: 100052	invert:	jms un
+003777: 740001		cma
+004000: 061127		dac i t3
+004001: 600031		jmp next
+004002: 141005	h.neg:	0140000+tag.prim+h.neg-h.inv-1	" NEGATE
+004003: 564547		0564547
+004004: 100052	negate:	jms un
+004005: 740001		cma
+004006: 341213		tad d1
+004007: 061127		dac i t3
+004010: 600031		jmp next
+004011: 021006	h.eq:	0020000+tag.prim+h.eq-h.neg-1	" =
+004012: 350000		0350000
+004013: 100057	equal:	jms bin
+004014: 561127		sad i t3	" skip if different
+004015: 600067		jmp true
+004016: 600072		jmp false
+004017: 041005	h.ult:	0040000+tag.prim+h.ult-h.eq-1	" U<
+004020: 653400		0653400
+004021: 100057	ult:	jms bin
+004022: 221127	ultc:	lac i t3
+004023: 740001		cma
+004024: 744000		cll
+004025: 361126		tad i t2
+004026: 740400		snl
+004027: 600072		jmp false
+004030: 600067		jmp true
+004031: 021011	h.lt:	0020000+tag.prim+h.lt-h.ult-1	" <
+004032: 340000		0340000
+004033: 100057	less:	jms bin
+004034: 241252		xor o400k
+004035: 061126		dac i t2
+004036: 221127		lac i t3
+004037: 241252		xor o400k
+004040: 061127		dac i t3
+004041: 604022		jmp ultc
+004042: 041010	h.zeq:	0040000+tag.prim+h.zeq-h.lt-1	" 0=
+004043: 203500		0203500
+004044: 100052	zeq:	jms un
+004045: 740200		sza
+004046: 600072		jmp false
+004047: 600067		jmp true
+004050: 041005	h.zlt:	0040000+tag.prim+h.zlt-h.zeq-1	" 0<
+004051: 203400		0203400
+004052: 100052	zlt:	jms un
+004053: 740100		sma
+004054: 600072		jmp false
+004055: 600067		jmp true
+004056: 021005	h.star:	0020000+tag.prim+h.star-h.zlt-1	" *
+004057: 120000		0120000
+004060: 100057	star:	jms bin
+004061: 044065		dac 1f
+004062: 221127		lac i t3
+004063: 744000		cll
+004064: 653122		mul
+004065: 000000	1:	0
+004066: 641002		lacq		" low half of the product
+004067: 061127		dac i t3
+004070: 600031		jmp next
+004071: 021012	h.slash:	0020000+tag.prim+h.slash-h.star-1	" /
+004072: 170000		0170000
+004073: 100074	slash:	jms sdiv
+004074: 641002		lacq
+004075: 061127		dac i t3
+004076: 600031		jmp next
+004077: 061005	h.mod:	0060000+tag.prim+h.mod-h.slash-1	" MOD
+004100: 555744		0555744
+004101: 100074	mod:	jms sdiv
+004102: 061127		dac i t3
+004103: 600031		jmp next
+004104: 101004	h.emit:	0100000+tag.prim+h.emit-h.mod-1	" EMIT
+004105: 455551		0455551
+004106: 100043	emit:	jms pop.sp
+004107: 100204		jms putc
+004110: 600031		jmp next
+004111: 061004	h.key:	0060000+tag.prim+h.key-h.emit-1	" KEY
+004112: 534571		0534571
+004113: 100141	key:	jms getc
+004114: 060012		dac i 012
+004115: 600031		jmp next
+004116: 103004	h.base:	0100000+tag.var+h.base-h.key-1	" BASE
+004117: 424163		0424163
+004120: 000012	base:	10
+004121: 161002	h.xqry:	0160000+tag.prim+h.xqry-h.base-1	" (QUERY)
+004122: 106165		0106165
+004123: 100243	xquery:	jms accept
+004124: 600031		jmp next
+004125: 161003	h.xpar:	0160000+tag.prim+h.xpar-h.xqry-1	" (PARSE)
+004126: 106041		0106041
+004127: 100311	xparse:	jms parse
+004130: 060012		dac i 012
+004131: 600031		jmp next
+004132: 141004	h.xfnd:	0140000+tag.prim+h.xfnd-h.xpar-1	" (FIND)
+004133: 104651		0104651
+004134: 100211	xfind:	jms find
+004135: 541205		sad m1
+004136: 604153		jmp 2f
+004137: 060012		dac i 012	" xt
+004140: 041131		dac t5
+004141: 221131		lac i t5
+004142: 501235		and o10000	" immediate bit
+004143: 740200		sza
+004144: 604150		jmp 1f
+004145: 201205		lac m1
+004146: 060012		dac i 012
+004147: 600031		jmp next
+004150: 201213	1:	lac d1
+004151: 060012		dac i 012
+004152: 600031		jmp next
+004153: 750000	2:	cla
+004154: 060012		dac i 012
+004155: 600031		jmp next
+004156: 201023	h.xnum:	0200000+tag.prim+h.xnum-h.xfnd-1	" (NUMBER)
+004157: 105665		0105665
+004160: 100422	xnumber:	jms number
+004161: 604166		jmp 1f
+004162: 060012		dac i 012
+004163: 201205		lac m1
+004164: 060012		dac i 012
+004165: 600031		jmp next
+004166: 750000	1:	cla
+004167: 060012		dac i 012
+004170: 600031		jmp next
+004171: 101012	h.xok:	0100000+tag.prim+h.xok-h.xnum-1	" (OK)
+004172: 105753		0105753
+004173: 200012	xok:	lac 012
+004174: 740001		cma
+004175: 341177		tad ds0		" ds0 - SP - 1 >= 0: underflow
+004176: 740100		sma
+004177: 604211		jmp sterr
+004200: 200012		lac 012
+004201: 740001		cma
+004202: 341200		tad dstop	" dstop - SP - 1 < 0: overflow
+004203: 741100		spa
+004204: 604211		jmp sterr
+004205: 201063		lac m.ok
+004206: 101026		jms puts
+004207: 101045		jms crlf
+004210: 600031		jmp next
+004211: 201072	sterr:	lac m.stack
+004212: 600705		jmp error
+004213: 121021	h.xerr:	0120000+tag.prim+h.xerr-h.xok-1	" (ERR)
+004214: 104562		0104562
+004215: 600704	xerr:	jmp undef
+004216: 161002	h.exec:	0160000+tag.prim+h.exec-h.xerr-1	" EXECUTE
+004217: 457045		0457045
+004220: 100043	execute:	jms pop.sp
+004221: 100515		jms mkcell
+004222: 044230	xrun:	dac xcell	" (also entered from lvend with a cell to run)
+004223: 200010		lac 010
+004224: 060011		dac i 011	" push IP; the EXIT cell after xcell pops it
+004225: 204232		lac xcellp
+004226: 040010		dac 010		" IP -> xcell - 1
+004227: 600031		jmp next
+004230: 000000	xcell:	0
+004231: 603546		jmp ex.body
+004232: 004227	xcellp:	xcell-1
+004233: 201014	h.compc:	0200000+tag.prim+h.compc-h.exec-1	" COMPILE,
+004234: 435755		0435755
+004235: 100043	compc:	jms pop.sp
+004236: 100515		jms mkcell
+004237: 100536		jms comp
+004240: 600031		jmp next
+004241: 171005	h.lit:	0170000+tag.prim+h.lit-h.compc-1	" LITERAL
+004242: 545164		0545164
+004243: 100043	literal:	jms pop.sp
+004244: 100552		jms lit
+004245: 600031		jmp next
+004246: 021004	h.comma:	0020000+tag.prim+h.comma-h.lit-1	" ,
+004247: 140000		0140000
+004250: 100043	comma:	jms pop.sp
+004251: 100536		jms comp
+004252: 600031		jmp next
+004253: 101004	h.here:	0100000+tag.prim+h.here-h.comma-1	" HERE
+004254: 504562		0504562
+004255: 201167	here:	lac dp
+004256: 060012		dac i 012
+004257: 600031		jmp next
+004260: 121004	h.allot:	0120000+tag.prim+h.allot-h.here-1	" ALLOT
+004261: 415454		0415454
+004262: 100043	allot:	jms pop.sp
+004263: 341167		tad dp
+004264: 041131		dac t5
+004265: 740001		cma
+004266: 341170		tad pool	" pool - newdp - 1 < 0: no room
+004267: 741100		spa
+004270: 600676		jmp full
+004271: 201131		lac t5
+004272: 041167		dac dp
+004273: 600031		jmp next
+004274: 123013	h.state:	0120000+tag.var+h.state-h.allot-1	" STATE
+004275: 636441		0636441
+004276: 000000	state:	0
+004277: 031002	h.lbrac:	0030000+tag.prim+h.lbrac-h.state-1	" [
+004300: 730000		0730000
+004301: 144276	lbrac:	dzm state
+004302: 600031		jmp next
+004303: 021003	h.rbrac:	0020000+tag.prim+h.rbrac-h.lbrac-1	" ]
+004304: 750000		0750000
+004305: 201205	rbrac:	lac m1
+004306: 044276		dac state
+004307: 600031		jmp next
+004310: 021004	h.tick:	0020000+tag.prim+h.tick-h.rbrac-1	" '
+004311: 070000		0070000
+004312: 100311	tick:	jms parse
+004313: 741200		sna
+004314: 600700		jmp noname
+004315: 100211		jms find
+004316: 541205		sad m1
+004317: 600704		jmp undef
+004320: 060012		dac i 012
+004321: 600031		jmp next
+004322: 021011	h.colon:	0020000+tag.prim+h.colon-h.tick-1	" :
+004323: 320000		0320000
+004324: 750000	colon:	cla		" tag.colon
+004325: 100602		jms mkhdr
+004326: 041152		dac cdp
+004327: 201205		lac m1
+004330: 044276		dac state
+004331: 600031		jmp next
+004332: 031007	h.semi:	0030000+tag.prim+h.semi-h.colon-1	" ;
+004333: 330000		0330000
+004334: 201152	semi:	lac cdp
+004335: 741200		sna
+004336: 600704		jmp undef	" not compiling a definition
+004337: 201243		lac c.exit
+004340: 100536		jms comp
+004341: 201152		lac cdp
+004342: 045157		dac latest
+004343: 141152		dzm cdp
+004344: 144276		dzm state
+004345: 600031		jmp next
+004346: 221013	h.immed:	0220000+tag.prim+h.immed-h.semi-1	" IMMEDIATE
+004347: 515555		0515555
+004350: 205157	immed:	lac latest
+004351: 041131		dac t5
+004352: 221131		lac i t5
+004353: 501236		and o767777
+004354: 341235		tad o10000
+004355: 061131		dac i t5
+004356: 600031		jmp next
+004357: 201010	h.const:	0200000+tag.prim+h.const-h.immed-1	" CONSTANT
+004360: 435756		0435756
+004361: 201233	const:	lac o2000	" tag.const
+004362: 100602		jms mkhdr
+004363: 045157		dac latest
+004364: 100043		jms pop.sp
+004365: 100536		jms comp
+004366: 600031		jmp next
+004367: 201007	h.var:	0200000+tag.prim+h.var-h.const-1	" VARIABLE
+004370: 664162		0664162
+004371: 201234	var:	lac o3000	" tag.var
+004372: 100602		jms mkhdr
+004373: 045157		dac latest
+004374: 750000		cla
+004375: 100536		jms comp
+004376: 600031		jmp next
+004377: 141007	h.create:	0140000+tag.prim+h.create-h.var-1	" CREATE
+004400: 436245		0436245
+004401: 201234	create:	lac o3000	" tag.var
+004402: 100602		jms mkhdr
+004403: 045157		dac latest
+004404: 600031		jmp next
+004405: 051005	h.if:	0050000+tag.prim+h.if-h.create-1	" IF
+004406: 514600		0514600
+004407: 100641	if:	jms lvst
+004410: 201245		lac c.qbran
+004411: 100536		jms comp
+004412: 201167		lac dp
+004413: 060012		dac i 012
+004414: 750000		cla
+004415: 100536		jms comp	" placeholder for (target - 1)
+004416: 600031		jmp next
+004417: 111011	h.then:	0110000+tag.prim+h.then-h.if-1	" THEN
+004420: 645045		0645045
+004421: 100043	then:	jms pop.sp
+004422: 041131		dac t5
+004423: 201167		lac dp
+004424: 341205		tad m1
+004425: 061131		dac i t5
+004426: 600660		jmp lvend
+004427: 111007	h.else:	0110000+tag.prim+h.else-h.then-1	" ELSE
+004430: 455463		0455463
+004431: 201244	else:	lac c.bran
+004432: 100536		jms comp
+004433: 201167		lac dp
+004434: 041130		dac t4
+004435: 750000		cla
+004436: 100536		jms comp
+004437: 100043		jms pop.sp
+004440: 041131		dac t5
+004441: 201167		lac dp
+004442: 341205		tad m1
+004443: 061131		dac i t5
+004444: 201130		lac t4
+004445: 060012		dac i 012
+004446: 600031		jmp next
+004447: 131017	h.begin:	0130000+tag.prim+h.begin-h.else-1	" BEGIN
+004450: 424547		0424547
+004451: 100641	begin:	jms lvst
+004452: 201167		lac dp
+004453: 060012		dac i 012
+004454: 600031		jmp next
+004455: 131005	h.until:	0130000+tag.prim+h.until-h.begin-1	" UNTIL
+004456: 655664		0655664
+004457: 201245	until:	lac c.qbran
+004460: 604464		jmp cbr
+004461: 131003	h.again:	0130000+tag.prim+h.again-h.until-1	" AGAIN
+004462: 414741		0414741
+004463: 201244	again:	lac c.bran
+004464: 100536	cbr:	jms comp	" compile the branch cell, then (dest - 1)
+004465: 100043		jms pop.sp
+004466: 341205		tad m1
+004467: 100536		jms comp
+004470: 600660		jmp lvend
+004471: 131007	h.while:	0130000+tag.prim+h.while-h.again-1	" WHILE
+004472: 675051		0675051
+004473: 201245	while:	lac c.qbran
+004474: 100536		jms comp
+004475: 100043		jms pop.sp
+004476: 041130		dac t4
+004477: 201167		lac dp
+004500: 060012		dac i 012
+004501: 750000		cla
+004502: 100536		jms comp
+004503: 201130		lac t4
+004504: 060012		dac i 012
+004505: 600031		jmp next
+004506: 151014	h.repeat:	0150000+tag.prim+h.repeat-h.while-1	" REPEAT
+004507: 624560		0624560
+004510: 201244	repeat:	lac c.bran
+004511: 100536		jms comp
+004512: 100043		jms pop.sp
+004513: 341205		tad m1
+004514: 100536		jms comp
+004515: 604421		jmp then
+004516: 051007	h.do:	0050000+tag.prim+h.do-h.repeat-1	" DO
+004517: 445700		0445700
+004520: 100641	do:	jms lvst
+004521: 201246		lac c.xdo
+004522: 100536		jms comp
+004523: 201167		lac dp
+004524: 060012		dac i 012
+004525: 600031		jmp next
+004526: 111007	h.loop:	0110000+tag.prim+h.loop-h.do-1	" LOOP
+004527: 545757		0545757
+004530: 201247	loop:	lac c.xloop
+004531: 604464		jmp cbr
+004532: 021003	h.dot:	0020000+tag.prim+h.dot-h.loop-1	" .
+004533: 160000		0160000
+004534: 100043	dot:	jms pop.sp
+004535: 740100		sma
+004536: 604545		jmp 1f
+004537: 740001		cma
+004540: 341213		tad d1
+004541: 041131		dac t5
+004542: 201224		lac o55		" '-'
+004543: 100204		jms putc
+004544: 201131		lac t5
+004545: 041131	1:	dac t5		" magnitude
+004546: 201204		lac nbufp
+004547: 041132		dac t6		" digits go into nbuf, least significant first
+004550: 204120	2:	lac base
+004551: 044555		dac 3f
+004552: 201131		lac t5
+004553: 744000		cll
+004554: 653323		idiv
+004555: 000000	3:	0
+004556: 441132		isz t6
+004557: 061132		dac i t6	" remainder = next digit
+004560: 641002		lacq
+004561: 041131		dac t5
+004562: 740200		sza
+004563: 604550		jmp 2b
+004564: 221132	4:	lac i t6	" print them back out, most significant first
+004565: 341211		tad dm10
+004566: 741100		spa
+004567: 341210		tad dm7		" 0-9: d - 10 - 7 + 0101 = d + 060
+004570: 341227		tad o101	" 10-35: d - 10 + 0101
+004571: 100204		jms putc
+004572: 201132		lac t6
+004573: 341205		tad m1
+004574: 041132		dac t6
+004575: 541204		sad nbufp
+004576: 741000		skp
+004577: 604564		jmp 4b
+004600: 201222		lac o40
+004601: 100204		jms putc
+004602: 600031		jmp next
+004603: 041050	h.cr:	0040000+tag.prim+h.cr-h.dot-1	" CR
+004604: 436200		0436200
+004605: 101045	cr:	jms crlf
+004606: 600031		jmp next
+004607: 031003	h.paren:	0030000+tag.prim+h.paren-h.cr-1	" (
+004610: 100000		0100000
+004611: 201134	paren:	lac inp
+004612: 541135		sad tend
+004613: 600031		jmp next
+004614: 041130		dac t4
+004615: 441134		isz inp
+004616: 221130		lac i t4
+004617: 541226		sad o51		" ')'
+004620: 600031		jmp next
+004621: 604611		jmp paren
+004622: 031012	h.bslash:	0030000+tag.prim+h.bslash-h.paren-1	" \
+004623: 740000		0740000
+004624: 201135	bslash:	lac tend
+004625: 041134		dac inp
+004626: 600031		jmp next
+004627: 101004	h.quit:	0100000+tag.prim+h.quit-h.bslash-1	" QUIT
+004630: 616551		0616551
+004631: 600730	xquit:	jmp quit
+004632: 061002	h.bye:	0060000+tag.prim+h.bye-h.quit-1	" BYE
+004633: 427145		0427145
+004634: 740040	bye:	hlt
+004635: 600031		jmp next
+004636: 021003	h.xj:	0020000+tag.prim+h.xj-h.bye-1	" J
+004637: 520000		0520000
+004640: 200011	xj:	lac 011
+004641: 341206		tad m2
+004642: 041126		dac t2		" -> outer counter
+004643: 341205		tad m1
+004644: 041130		dac t4		" -> outer limit
+004645: 221126		lac i t2
+004646: 361130		tad i t4
+004647: 060012		dac i 012
+004650: 600031		jmp next
+004651: 101012	h.xdotq:	0100000+tag.prim+h.xdotq-h.xj-1	" (.")
+004652: 101602		0101602
+004653: 200010	xdotq:	lac 010
+004654: 341213		tad d1
+004655: 101026		jms puts	" leaves pstr at the terminating zero word
+004656: 201157		lac pstr
+004657: 040010		dac 010		" NEXT's pre-increment steps past it
+004660: 600031		jmp next
+004661: 051007	h.dotq:	0050000+tag.prim+h.dotq-h.xdotq-1	" ."
+004662: 160200		0160200
+004663: 201250	dotq:	lac c.xdotq
+004664: 100536		jms comp
+004665: 100407	1:	jms sch
+004666: 604701		jmp 2f		" end of string
+004667: 744000		cll
+004670: 640711		als 9
+004671: 041131		dac t5		" high character
+004672: 100407		jms sch
+004673: 604677		jmp 3f		" odd length
+004674: 341131		tad t5
+004675: 100536		jms comp
+004676: 604665		jmp 1b
+004677: 201131	3:	lac t5
+004700: 100536		jms comp
+004701: 750000	2:	cla		" terminating zero word
+004702: 100536		jms comp
+004703: 600031		jmp next
+004704: 121022	h.words:	0120000+tag.prim+h.words-h.dotq-1	" WORDS
+004705: 675762		0675762
+004706: 101045	words:	jms crlf
+004707: 141165		dzm wcol
+004710: 205157		lac latest
+004711: 041161	1:	dac wp		" header
+004712: 221161		lac i wp
+004713: 744000		cll
+004714: 640515		lrs 13
+004715: 041162		dac wcnt	" name length
+004716: 740001		cma
+004717: 341213		tad d1
+004720: 041163		dac wr		" -(characters left to print)
+004721: 201207		lac m3
+004722: 041164		dac wk		" stored characters left
+004723: 201161		lac wp
+004724: 341213		tad d1
+004725: 041132		dac t6
+004726: 221132		lac i t6	" packed name word
+004727: 652000		lmq
+004730: 750000	2:	cla
+004731: 744000		cll
+004732: 640606		lls 6		" next SIXBIT character
+004733: 341222		tad o40
+004734: 100204		jms putc
+004735: 441163		isz wr
+004736: 741000		skp
+004737: 604746		jmp 3f		" whole name printed
+004740: 441164		isz wk
+004741: 604730		jmp 2b
+004742: 201230	4:	lac o137	" '_' for each character not stored
+004743: 100204		jms putc
+004744: 441163		isz wr
+004745: 604742		jmp 4b
+004746: 201222	3:	lac o40
+004747: 100204		jms putc
+004750: 201162		lac wcnt
+004751: 341213		tad d1
+004752: 341165		tad wcol
+004753: 041165		dac wcol
+004754: 341212		tad dm60
+004755: 741100		spa
+004756: 604761		jmp 5f
+004757: 101045		jms crlf
+004760: 141165		dzm wcol
+004761: 221161	5:	lac i wp	" next header
+004762: 501257		and lmask
+004763: 741200		sna
+004764: 600031		jmp next
+004765: 740001		cma
+004766: 341161		tad wp
+004767: 604711		jmp 1b
+004770: 101063	h.tape:	0100000+tag.prim+h.tape-h.words-1	" TAPE
+004771: 644160		0644160
+004772: 201205	tape:	lac m1
+004773: 041133		dac tapein
+004774: 600031		jmp next
+004775: 061004	h.eot:	0060000+tag.prim+h.eot-h.tape-1	" EOT
+004776: 455764		0455764
+004777: 141133	eot:	dzm tapein
+005000: 201135		lac tend
+005001: 041134		dac inp
+005002: 600031		jmp next
+005003: 041005	h.stsl:	0040000+tag.prim+h.stsl-h.eot-1	" */
+005004: 121700		0121700
+005005: 100043	stsl:	jms pop.sp	" c
+005006: 041143		dac sdc
+005007: 100057		jms bin		" AC = b, t3 -> a
+005010: 041130		dac t4
+005011: 261127		xor i t3
+005012: 241143		xor sdc
+005013: 041142		dac qsgn	" sign bit: the result's sign
+005014: 201130		lac t4
+005015: 100133		jms absv
+005016: 045023		dac 1f
+005017: 221127		lac i t3
+005020: 100133		jms absv
+005021: 744000		cll
+005022: 653122		mul		" AC:MQ = |a| * |b|
+005023: 000000	1:	0
+005024: 041130		dac t4		" high half
+005025: 201143		lac sdc
+005026: 100133		jms absv
+005027: 045033		dac 2f
+005030: 201130		lac t4
+005031: 744000		cll
+005032: 640323		div		" MQ = AC:MQ / |c|
+005033: 000000	2:	0
+005034: 641002		lacq
+005035: 041130		dac t4
+005036: 201142		lac qsgn
+005037: 740100		sma
+005040: 605045		jmp 3f
+005041: 201130		lac t4
+005042: 740001		cma
+005043: 341213		tad d1
+005044: 741000		skp
+005045: 201130	3:	lac t4
+005046: 061127		dac i t3
+005047: 600031		jmp next
+005050: 122044	h.dlist:	0120000+tag.const+h.dlist-h.stsl-1	" DLIST
+005051: 445451		0445451
+005052: 001260		dlbuf
+005053: 163002	h.dsply:	0160000+tag.var+h.dsply-h.dlist-1	" DISPLAY
+005054: 445163		0445163
+005055: 000000	display:	0
+005056: 061002	h.xsq:	0060000+tag.prim+h.xsq-h.dsply-1	" (S"
+005057: 106302		0106302
+005060: 200010	xsq:	lac 010
+005061: 341213		tad d1
+005062: 041131		dac t5		" -> count
+005063: 341213		tad d1
+005064: 060012		dac i 012	" c-addr
+005065: 221131		lac i t5
+005066: 060012		dac i 012	" u
+005067: 341131		tad t5
+005070: 040010		dac 010		" the last character; NEXT steps past it
+005071: 600031		jmp next
+005072: 051013	h.sq:	0050000+tag.prim+h.sq-h.xsq-1	" S"
+005073: 630200		0630200
+005074: 204276	sq:	lac state
+005075: 741200		sna
+005076: 605115		jmp 3f
+005077: 201251		lac c.xsq
+005100: 100536		jms comp
+005101: 201167		lac dp
+005102: 041155		dac sqp		" -> the count, filled in at the end
+005103: 100536		jms comp
+005104: 100407	1:	jms sch
+005105: 605110		jmp 2f
+005106: 100536		jms comp
+005107: 605104		jmp 1b
+005110: 201155	2:	lac sqp
+005111: 740001		cma
+005112: 341167		tad dp		" dp - sqp - 1
+005113: 061155		dac i sqp
+005114: 600031		jmp next
+005115: 201176	3:	lac sbufp
+005116: 041155		dac sqp
+005117: 060012		dac i 012	" c-addr
+005120: 100407	4:	jms sch
+005121: 605125		jmp 5f
+005122: 061155		dac i sqp
+005123: 441155		isz sqp
+005124: 605120		jmp 4b
+005125: 201176	5:	lac sbufp
+005126: 740001		cma
+005127: 341155		tad sqp
+005130: 341213		tad d1		" sqp - sbuf
+005131: 060012		dac i 012	" u
+005132: 600031		jmp next
+005133: 101040	h.char:	0100000+tag.prim+h.char-h.sq-1	" CHAR
+005134: 435041		0435041
+005135: 100311	char:	jms parse
+005136: 741200		sna
+005137: 600700		jmp noname
+005140: 221136		lac i wptr
+005141: 060012		dac i 012
+005142: 600031		jmp next
+005143: 051007	h.dotp:	0050000+tag.prim+h.dotp-h.char-1	" .(
+005144: 161000		0161000
+005145: 201134	dotp:	lac inp
+005146: 541135		sad tend
+005147: 600031		jmp next
+005150: 041130		dac t4
+005151: 441134		isz inp
+005152: 221130		lac i t4
+005153: 541226		sad o51		" ')'
+005154: 600031		jmp next
+005155: 100204		jms putc
+005156: 605145		jmp dotp
+005157: 005143	latest:	h.dotp		" head of the dictionary chain

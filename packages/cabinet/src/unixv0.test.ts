@@ -1,13 +1,15 @@
 import assert from "node:assert/strict";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import { test } from "node:test";
+import { gunzipSync } from "node:zlib";
 import { Cabinet } from "./cabinet.js";
 import { Pdp7, pdp7 } from "./plugins/pdp7.js";
 import { parseRbImage, Rb09, rbImageBytes, RB_SIZE } from "./plugins/rb09.js";
 import { bootUnixV0, unixKey } from "./unixv0.js";
 
-const BUILD = process.env.PDP7_UNIX_BUILD ?? new URL("../../../../pdp7-unix/build/", import.meta.url).pathname;
-const built = existsSync(BUILD + "image.fs") && existsSync(BUILD + "boot.rim");
+const TAPES = new URL("../tapes/unixv0/", import.meta.url);
+const platter = gunzipSync(readFileSync(new URL("image.fs.gz", TAPES)));
+const bootTape = readFileSync(new URL("boot.rim", TAPES));
 
 function run(cpu: Pdp7, box: Cabinet, words: number[]): void {
 	cpu.deposit(0o100, [...words, 0o740040]); // then HLT
@@ -62,11 +64,8 @@ test("unix keys: mark parity, CR and LF swapped, ESC is ALT MODE", () => {
 	assert.equal(unixKey(0o33), 0o375);
 });
 
-test("unix v0: boots from the RB09, ken logs in, ls and date run", { skip: !built && `no pdp7-unix build at ${BUILD}` }, () => {
-	const u = bootUnixV0({
-		image: parseRbImage(readFileSync(BUILD + "image.fs")),
-		bootTape: readFileSync(BUILD + "boot.rim"),
-	});
+test("unix v0: boots from the RB09, ken logs in, ls and date run", () => {
+	const u = bootUnixV0({ image: parseRbImage(platter), bootTape });
 	assert.ok(u.runUntil("login: ", 5_000_000), u.paper());
 	u.type("ken\r");
 	assert.ok(u.runUntil("password: ", 5_000_000), u.paper());
@@ -80,9 +79,8 @@ test("unix v0: boots from the RB09, ken logs in, ls and date run", { skip: !buil
 	assert.match(u.paper(), /Thu Jan 01 1970 00:00:\d\d/);
 });
 
-test("unix v0: a file written survives a reboot from the same platter", { skip: !built && `no pdp7-unix build at ${BUILD}` }, () => {
-	const image = parseRbImage(readFileSync(BUILD + "image.fs"));
-	const bootTape = readFileSync(BUILD + "boot.rim");
+test("unix v0: a file written survives a reboot from the same platter", () => {
+	const image = parseRbImage(platter);
 	const login = () => {
 		const u = bootUnixV0({ image, bootTape });
 		assert.ok(u.runUntil("login: ", 5_000_000));

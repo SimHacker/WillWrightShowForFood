@@ -16,6 +16,7 @@ const loaders = import.meta.glob(
 		'../../../../characters/lars-brinkhoff/**/*.md',
 		'../../../../characters/roy-eagleson/**/*.md',
 		'../../../../packages/cabinet/*.md',
+		'../../../../packages/cabinet/tapes/**/*.md',
 		'../../../../repo-shows/pixie-pie-menus-pdp7/**/*.md',
 		'../../../../repo-shows/ben-and-heinz-pie-menus/**/*.md',
 		'!**/node_modules/**'

@@ -16,7 +16,7 @@ app already owns: the fenced YAML applet block.
 ````markdown
 ```yaml cabinet
 machine: pdp7                  # cabinet plugin set
-program: symelec               # first program on the menu: symelec | lp370 | duel
+program: symelec               # first program on the menu: symelec | lp370 | duel | hilo | lander | forth | unix
 boot: idla                     # run until the display starts, then settle
 pens: [pointer]                # reader's pointer joins the quiver
 mode: honest                   # honest | assist (DESIGN.md pen modes)
@@ -53,6 +53,17 @@ No new emulator surface. The applet consumes the same four seams as
 every other consumer: loader, run budget, segment log, pen input.
 
 ## Programs
+
+Every program also has a page of its own with no article around it: `/cabinet/<program>/`, for
+example `/cabinet/unix/` and `/cabinet/forth/`, or `/cabinet/?program=duel&size=768`.
+`src/lib/cabinet-url.js` turns the URL into the same spec a fence gives; see
+[packages/cabinet/DESIGN.md](../../packages/cabinet/DESIGN.md#cartridges-and-live-coding) for
+where that goes (cartridges and profiles).
+
+A program can map its own keyboard: `ttyKey(c)` returns `{ send, echo }`, what goes to the machine
+and what the paper prints locally (`echo: null` when the program echoes, as Forth does), and
+`lowerCase: true` keeps the case as typed (UNIX). `peripherals({ cpu })` may give devices the CPU
+for DMA, as the RB09 needs.
 
 The program menu is the top row; `program:` in the block picks the first
 one. Under it a title row, **PDP-7 / 340 DISPLAY**, opens and closes the

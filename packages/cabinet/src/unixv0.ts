@@ -4,6 +4,7 @@ import { PaperTape, readInAndGo } from "./plugins/papertape.js";
 import { Pdp7 } from "./plugins/pdp7.js";
 import { Rb09 } from "./plugins/rb09.js";
 import { Teletype } from "./plugins/teletype.js";
+import { type DemoScript, wait } from "./symelec-demo.js";
 
 /** Bell Labs loaded Phil Budne's bootstrap at the user origin; it reads the system from track 180. */
 export const UNIXV0_BOOT_ORIGIN = 0o10000;
@@ -80,4 +81,36 @@ export function unixKey(c: number): number {
 	if (k === 0o212) return 0o215;
 	if (k === 0o233) return 0o375;
 	return k;
+}
+
+/** What the KSR-33 prints for a key under `set tti unix`: Return feeds the line, as the kernel then sends CR. */
+export function unixEcho(c: number): number {
+	const k = c & 0o177;
+	if (k === 0o15) return 0o12;
+	if (k === 0o12) return 0o15;
+	return k;
+}
+
+export interface UnixHost {
+	/** Type on the teletype, lower case as it comes; newline is Return. */
+	type: (text: string) => void;
+}
+
+/** Log in as ken and look around: ls, the date the clock thinks it is, and a file of ken's. */
+export function* unixDemo(h: UnixHost): DemoScript {
+	const say = function* (caption: string, line: string, cycles: number): DemoScript {
+		yield caption;
+		h.type(`${line}\n`);
+		yield* wait(cycles);
+	};
+	yield "The paper tape bootstrap has read UNIX off the RB09's track 180. It asks who you are";
+	yield* wait(2_500_000);
+	yield* say("Log in as ken, Ken Thompson", "ken", 2_000_000);
+	yield* say("The password is ken too. The KSR-33 prints it: it is half duplex", "ken", 4_000_000);
+	yield* say("@ is the shell's prompt. List ken's directory", "ls", 8_000_000);
+	yield* say("The clock starts at the epoch, 1 January 1970", "date", 5_000_000);
+	yield* say("sys.rc: how ken rebuilt the kernel, with as", "cat sys.rc", 8_000_000);
+	yield* say("The commands, in ken's system directory", "ls system", 16_000_000);
+	yield "Your turn: click the paper and type. Files you write stay on the disk until you reload the page";
+	yield* wait(1_000_000);
 }

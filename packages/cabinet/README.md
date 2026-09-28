@@ -144,21 +144,21 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 | **5. Drawing** | Draw with the lightbuttons: S, drag, F, several lines, HV staircases and RU straight lines, all lit. | Needs the `core8k` patch: as printed, the display file holds one line. |
 | **6. Demo** | A scripted pen draws a house under a rising sun, a tree, a hedge, a flag, and a circuit with a resistor, battery and switch, headless or on the page's **Demo** button, with the pen drawn over the tube. | [src/symelec-demo.ts](src/symelec-demo.ts): time is machine cycles, so every speed draws the same picture. The picture fills memory and needs our `bigpic` patch ([BUG-JOURNAL](BUG-JOURNAL.md#the-big-picture-vanished)). [snapshots/symelec-house-demo.svg](snapshots/symelec-house-demo.svg) |
 | **7. DUEL** | A second program on the same cabinet: DUEL, DECUS 7-40 (Cambridge, 1968), from the Oslo paper tape. A RIM loader reads the tape's own FunnyFormat loader, which reads the game; the console switches fly the two ships. | Adds a paper tape reader and the switch register, neither of which SYMELEC uses. [tapes/duel/](tapes/duel/README.md), [snapshots/duel-circling.png](snapshots/duel-circling.png). Headless only so far. |
-| **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. Tests in `src/unixv0.test.ts` need a pdp7-unix build beside the repo. [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
+| **8. UNIX** | PDP-7 UNIX (1969) boots from an emulated RB09 fixed-head disk, from the pdp7-unix image: `login:`, ken, `ls`, `cp`, `date`, files kept across reboots. In the browser too: [/cabinet/unix/](https://hyperties.org/cabinet/unix/). | The RB09 is ported from SIMH's `pdp18b_rb.c`, and the keyboard follows SIMH's `set tti unix`. The platter is in [tapes/unixv0/](tapes/unixv0/README.md). [UNIX-V0.md](UNIX-V0.md), which also covers sn 129's JK09 and the letter to the museum. |
+| **9. Forth** | Mitch Bradley's PDP-7 Forth boots, compiles its prelude and turtle from paper tape, and the turtle draws on the 340: [/cabinet/forth/](https://hyperties.org/cabinet/forth/), with a demo. | Mitch's kernel as his `as7` built it ([tapes/pdp7forth/](tapes/pdp7forth/README.md)). The SIMH step of his build, compiling the prelude, runs on the cabinet instead: [src/forth.ts](src/forth.ts). |
 
 ### Next
 
 - Serve a structure *back* over the link.
-- Run Mitch Bradley's [PDP-7 Forth](https://github.com/MitchBradley/pdp7forth), the next
-  corpus entry. Most of what it uses is already here (`CAL`, `XCT`, auto-index, EAE `MUL`
-  and `IDIV`, the paper tape reader's `RSA`/`RSF`/`RRB`, the 340's load-and-go and stop
-  skip); it needs a loader for its image (it deposits the `a7out` dump directly, since
-  `as7`'s tape formats only cover memory above 4096), and whatever else it demands gets
-  added because it asked. Its turtle then draws in the browser, and the ring vocabulary
+- Forth, self-hosted: assemble Mitch's `kernel.s` in the page with an `as7` dialect of our
+  assembler, so it has source maps and a symbol table, and live-code it in a LIVE CODING
+  panel. The plan: [DESIGN.md](DESIGN.md#cartridges-and-live-coding). The ring vocabulary
   in [FORTH-TURTLE-340.md](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md)
-  has a real Forth to live in.
-- PDP-7 Unix runs: rung 8, [UNIX-V0.md](UNIX-V0.md). Still to come there: a browser
-  terminal with the platter saved in IndexedDB, sn 129's JK09 disk beside the RB09, and
+  then has a real Forth to live in.
+- Every program has a link of its own, without the HyperTIES frame: `/cabinet/<program>/`,
+  or `/cabinet/?program=forth&size=768`.
+- PDP-7 Unix runs: rung 8, [UNIX-V0.md](UNIX-V0.md). Still to come there: the platter
+  saved in IndexedDB, sn 129's JK09 disk beside the RB09, and
   the Graphic-2. Languages come with it: `as`, and B. B compiled to threaded
   code, a third threaded interpreter on this machine beside Mitch's Forth; its
   interpreter `bi.s` and loader `bl.s` are in the scans. The compiler is not; Robert

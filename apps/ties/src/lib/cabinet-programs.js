@@ -20,7 +20,17 @@ import {
 	houseDemo,
 	LP370_SWITCHES,
 	sourceFromAsm,
-	sourceFromListing
+	sourceFromListing,
+	Rb09,
+	parseRbImage,
+	readInAndGo,
+	unixKey,
+	unixEcho,
+	unixDemo,
+	UNIXV0_BOOT_ORIGIN,
+	compileForth,
+	bootForth,
+	forthDemo
 } from '@wwsff/cabinet';
 import { loadSymelec } from './symelec-boot.js';
 import { symelecHint } from './symelec-hints.js';
@@ -38,6 +48,16 @@ async function bytes(url) {
 	if (!r.ok) throw new Error(`${url}: ${r.status}`);
 	return new Uint8Array(await r.arrayBuffer());
 }
+
+async function gunzip(data) {
+	const stream = new Blob([data]).stream().pipeThrough(new DecompressionStream('gzip'));
+	return new Uint8Array(await new Response(stream).arrayBuffer());
+}
+
+// One platter per page: files written in UNIX survive a reboot, until the page reloads.
+let unixPlatter = null;
+let unixBootTape = null;
+let forthImage = null;
 
 const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
@@ -208,6 +228,75 @@ export const PROGRAMS = [
 				return w & 0o400000 ? w - 0o1000000 : w;
 			};
 			return `alt ${v('h2') / 2} vel ${v('v')} fuel ${v('fuel')}`;
+		}
+	},
+	{
+		id: 'forth',
+		label: 'FORTH + TURTLE (2026)',
+		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
+		pen: false,
+		tty: true,
+		demo: (h) => forthDemo(h),
+		demoTitle: 'Reboot and type the pdp7forth README: arithmetic, a square, a flower, a star',
+		switches: 0,
+		switchLabels: null,
+		// The kernel echoes what it reads, so the paper must not print keys too.
+		ttyKey: (c) => ({ send: c | 0o200, echo: null }),
+		symbols: () => [...(forthImage?.labels ?? [])].map(([name, addr]) => ({ name, addr })),
+		async load() {
+			if (forthImage) return;
+			const [a7out, listing, prelude, turtle] = await Promise.all([
+				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.a7out?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/kernel.lst?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/prelude.fs?raw'),
+				import('../../../../packages/cabinet/tapes/pdp7forth/turtle.fs?raw')
+			]);
+			// Mitch's build compiles the prelude under SIMH; the cabinet does it here, once.
+			forthImage = compileForth({
+				a7out: a7out.default,
+				listing: listing.default,
+				sources: [prelude.default, turtle.default]
+			});
+		},
+		boot({ cpu }) {
+			bootForth(cpu, forthImage);
+		},
+		status() {
+			return '';
+		}
+	},
+	{
+		id: 'unix',
+		label: 'UNIX v0 (1969)',
+		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken.',
+		pen: false,
+		tty: true,
+		display: false,
+		lowerCase: true,
+		demo: (h) => unixDemo(h),
+		demoTitle: 'Reboot, log in as ken, and look around',
+		switches: 0,
+		switchLabels: null,
+		ttyKey: (c) => ({ send: unixKey(c), echo: unixEcho(c) }),
+		async load() {
+			if (unixPlatter) return;
+			const [{ default: imageUrl }, { default: rimUrl }] = await Promise.all([
+				import('../../../../packages/cabinet/tapes/unixv0/image.fs.gz?url'),
+				import('../../../../packages/cabinet/tapes/unixv0/boot.rim?url&inline')
+			]);
+			unixPlatter = parseRbImage(await gunzip(await bytes(imageUrl)));
+			unixBootTape = await bytes(rimUrl);
+		},
+		peripherals({ cpu }) {
+			return [new PaperTape(), new Rb09({ cpu, image: unixPlatter })];
+		},
+		boot({ cpu }) {
+			const start = readInAndGo(cpu, unixBootTape, UNIXV0_BOOT_ORIGIN);
+			if (start === null) throw new Error('boot.rim ended in HLT');
+			cpu.pc = start;
+		},
+		status() {
+			return '';
 		}
 	}
 ];

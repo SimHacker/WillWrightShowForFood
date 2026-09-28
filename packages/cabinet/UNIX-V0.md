@@ -6,6 +6,10 @@ RB09 fixed-head disk. From the paper-tape bootstrap to `login:` takes 1.25 milli
 60 ms in node. Then ken logs in, and `ls`, `cat`, `cp`, `date` and the rest run. Files written to
 the platter are still there after a reboot.
 
+**Run it in the browser:** [hyperties.org/cabinet/unix/](https://hyperties.org/cabinet/unix/), the
+machine alone, or the [UNIX v0 article](https://hyperties.org/databases/pixie/unix-v0/) with the
+machine in it. Log in as `ken`, password `ken`, in lower case. **Demo** logs in and looks around.
+
 ```
 login: ken
 password: ken
@@ -41,14 +45,12 @@ flags and stays idle. `ttt`, `display` and the other Graphic-2 programs will nee
 ## Running it
 
 ```sh
-cd ~/GroundUp/git/pdp7-unix/build && make all       # Perl; writes image.fs and boot.rim
-cd packages/cabinet && npm test                      # the unixv0 tests find ../pdp7-unix/build
+cd packages/cabinet && npm test
 ```
 
-`PDP7_UNIX_BUILD=/path/to/build/` points the tests somewhere else. Without a build, the two boot
-tests skip and the RB09 unit tests still run. The image is not committed here. The kernel and
-commands are Bell Labs code (the pdp7-unix README says the scans are © Micro Focus), and anyone can
-rebuild the image in seconds.
+The platter and the bootstrap are committed, gzipped, in [tapes/unixv0/](tapes/unixv0/README.md),
+with where they came from and how to rebuild them from pdp7-unix. The web build runs on a server
+from a git checkout, so it needs them there, not a Perl toolchain.
 
 From code:
 
@@ -63,8 +65,8 @@ u.type("ken\r");
 
 ## Next
 
-- A browser bench: the teletype as a terminal on the page, the platter kept in IndexedDB, and
-  **Save disk** and **Load disk** buttons that read and write SIMH's format.
+- The platter in IndexedDB, and **Save disk** and **Load disk** buttons that read and write SIMH's
+  format. Today a page keeps its writes across reboots until it reloads.
 - **The JK09**, sn 129's disk. See below. It would sit beside the RB09 as a second plugin, so the
   cabinet can boot either Bell Labs' kernel or the Living Computer Museum's.
 - The Graphic-2, for `ttt` and `display`. It is Bell Labs' display, not a 340. SIMH's
@@ -172,12 +174,14 @@ machine to record for the AM radio, and a second witness for the display, would 
 > or a disk image before it goes near the iron. It is free software, and we'd gladly change it to
 > fit.
 >
-> And a live-coding system for the same machine, in the browser. Our TypeScript PDP-7 assembler
-> already runs in the page: HILO, LANDER and LP370 are assembled from source when they boot, and
-> the memory view shows each word beside the source line that made it. Next come an editor on top
-> of it, so you can change a line and re-deposit it into the running machine, and Mitch Bradley's
-> PDP-7 Forth, so visitors can type words at a real 1960s instruction set and watch the 340 draw
-> them. Whatever works in the page can then be punched to tape for sn 129.
+> And a live-coding system for the same machine, in the browser. Mitch Bradley's PDP-7 Forth
+> already runs in the page, with turtle graphics on the 340: type `4 0 DO 200 FD 90 RT LOOP` at the
+> teletype and watch it draw (https://hyperties.org/cabinet/forth/). UNIX runs the same way
+> (https://hyperties.org/cabinet/unix/). Our TypeScript PDP-7 assembler runs in the page too, and
+> the memory view shows each word beside the source line that made it. Next is a LIVE CODING
+> panel: edit Forth's kernel or any program's source, rebuild, and rerun it in the running machine,
+> with the trace stepping through the source. Whatever works in the page can then be punched to
+> tape for sn 129.
 >
 > Our goal for the look is photorealistic, a skeuomorphic view built from photographs of your
 > machine. If you could take a series of photos framed so that we can rebuild it as a 3D model in

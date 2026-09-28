@@ -778,9 +778,11 @@
 	function ttyFlush() {
 		if (!ttyDirty) return;
 		ttyDirty = false;
+		// Follow the output only if the reader has not scrolled up to read something.
+		const atBottom = !ttyEl || ttyEl.scrollHeight - ttyEl.scrollTop - ttyEl.clientHeight < 24;
 		ttyPaper = [...ttyLines];
 		ttyCaret = ttyCol;
-		if (ttyEl) requestAnimationFrame(() => ttyEl && (ttyEl.scrollTop = ttyEl.scrollHeight));
+		if (ttyEl && atBottom) requestAnimationFrame(() => ttyEl && (ttyEl.scrollTop = ttyEl.scrollHeight));
 	}
 
 	function ttyCode(e) {
@@ -790,17 +792,27 @@
 		if (e.key === 'Escape') return 0o33;
 		if (e.ctrlKey) return /^[a-z@[\\\]^_]$/i.test(e.key) ? e.key.toUpperCase().charCodeAt(0) & 0o37 : -1;
 		if (e.key.length !== 1) return -1;
-		const c = e.key.toUpperCase().charCodeAt(0);
-		return c >= 0o40 && c < 0o140 ? c : -1;
+		return charCode(e.key);
+	}
+
+	/** A printable character as this program's keyboard sends it: upper case on a KSR-33, lower for UNIX. */
+	function charCode(ch) {
+		if (ch === '\n') return 0o15;
+		const c = (program?.lowerCase ? ch : ch.toUpperCase()).charCodeAt(0);
+		return c >= 0o40 && c < (program?.lowerCase ? 0o177 : 0o140) ? c : -1;
+	}
+
+	/** One key to the machine. The program may map what is sent and what the paper shows. */
+	function ttySend(c) {
+		const k = program?.ttyKey?.(c) ?? { send: c | 0o200, echo: c };
+		tty.type(k.send);
+		// A bare CR, as the KSR-33 prints it: SYMELEC sends the LF after a line.
+		if (ttyLocal && k.echo !== null) ttyPrint(k.echo);
 	}
 
 	function ttyType(codes) {
 		if (!tty || player || !codes.length) return;
-		for (const c of codes) {
-			tty.type(c | 0o200);
-			// A bare CR, as the KSR-33 prints it: SYMELEC sends the LF after a line.
-			if (ttyLocal) ttyPrint(c);
-		}
+		for (const c of codes) ttySend(c);
 		ttyFlush();
 		ttyWaiting = tty.waiting;
 		if (!recorder) return;
@@ -812,13 +824,15 @@
 	/** A demo's operator at the keyboard: the paper shows what it types, as it shows yours. */
 	function demoType(text) {
 		for (const ch of text) {
-			const c = ch === '\n' ? 0o15 : ch.toUpperCase().charCodeAt(0) & 0o177;
-			tty.type(c | 0o200);
-			if (ttyLocal) ttyPrint(c);
+			const c = charCode(ch);
+			if (c >= 0) ttySend(c);
 		}
 	}
 
 	function onTtyKey(e) {
+		// Copy wins over ^C when something on the paper is selected; ^V is always paste.
+		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'c' && String(globalThis.getSelection?.() ?? '')) return;
+		if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'v') return;
 		const c = ttyCode(e);
 		if (c < 0) return;
 		e.preventDefault();
@@ -831,8 +845,8 @@
 		const text = e.clipboardData?.getData('text') ?? '';
 		const codes = [];
 		for (const ch of text.replace(/\r\n?/g, '\n')) {
-			const c = ch === '\n' ? 0o15 : ch.toUpperCase().charCodeAt(0);
-			if (c === 0o15 || (c >= 0o40 && c < 0o140)) codes.push(c);
+			const c = charCode(ch);
+			if (c >= 0) codes.push(c);
 		}
 		ttyType(codes);
 	}
@@ -1187,7 +1201,7 @@
 			pens: [pen],
 			onFrame: collectFrame
 		});
-		const extra = program.peripherals?.() ?? [];
+		const extra = program.peripherals?.({ cpu }) ?? [];
 		ttyReset();
 		ttyRecAt = -1;
 		tty = new Teletype({ printCycles: 1000, onPrint: ttyPrint });
@@ -1243,10 +1257,7 @@
 		return {
 			sw: (v) => (cpu.switches = Number(v)),
 			tty: (...codes) => {
-				for (const c of codes) {
-					tty.type(Number(c) | 0o200);
-					if (ttyLocal) ttyPrint(Number(c));
-				}
+				for (const c of codes) ttySend(Number(c));
 			},
 			pen: (x, y, down, aperture) => {
 				if (aperture) pen.aperture = Number(aperture);
@@ -1844,9 +1855,12 @@
 					tabindex="0"
 					data-keep-focus
 					role="textbox"
-					aria-label="Teletype paper. Click, then type. Return is CR, Backspace is RUBOUT."
+					aria-multiline="true"
+					aria-label="Teletype. Click, then type. Return is CR, Backspace is RUBOUT. Select text to copy; paste types it."
 					onkeydown={onTtyKey}
-					onpaste={onTtyPaste}>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</div>
+					onpaste={onTtyPaste}
+				><pre>{ttyPaper.slice(0, -1).map((l) => l + '\n').join('')}{last.slice(0, ttyCaret)}<span class="tty-caret" aria-hidden="true">{last[ttyCaret] ?? ' '}</span>{last.slice(ttyCaret + 1)}</pre></div>
+				<div class="sr-only" aria-live="polite">{ttyPaper[ttyPaper.length - 2] ?? ''}</div>
 				<div class="tty-bar">
 					<button
 						type="button"
@@ -2524,18 +2538,32 @@
 	}
 	.tty-paper {
 		margin: 0;
-		height: 8.5em;
-		overflow-y: auto;
+		height: 12em;
+		min-height: 4em;
+		resize: vertical;
+		overflow: auto;
 		padding: 0.2rem 0.4rem;
 		font-family: ui-monospace, monospace;
-		font-size: 0.7rem;
-		line-height: 1.25;
-		white-space: pre-wrap;
-		overflow-wrap: anywhere;
+		font-size: 0.75rem;
+		line-height: 1.3;
+		user-select: text;
 		background: #0c0c08;
 		color: #e8e0c0;
 		border: 1px solid #333;
 		cursor: text;
+	}
+	.tty-paper pre {
+		margin: 0;
+		font: inherit;
+		white-space: pre;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	.tty-bar {
 		display: flex;

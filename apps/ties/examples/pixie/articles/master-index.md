@@ -30,6 +30,8 @@ definition: "Every name in the PIXIE database."
 
 ~UNIX v0~
 
+~PDP-7 Forth~
+
 ~AM radio~
 
 ~The emulator~

@@ -572,6 +572,67 @@ continuously; single-step is this at grain one. Nothing new to build in the
 emulator — it is the segment log, the snapshot, and the frame manager
 composing.
 
+## Cartridges and live coding
+
+**The name.** What the menu calls a program is really a whole configuration: which machine, which
+devices, what to load and from where, how to build it, how its keys map, which panels open, its
+help and its demo. Emulators have names for parts of this. SIMH has the `.do` script, MAME has
+drivers and software lists, and Docker's *container* means an isolated running process, which
+this is not. We call the file a **cartridge**: a thing you plug into the cabinet that carries
+everything needed to run one program. A **profile** is a named overlay on a cartridge (trace on,
+the memory panel open in source view, speed 10×), and several can stack. Everything the cabinet
+knows about a program lives in its cartridge or is referred to by it.
+
+**The URL is a cartridge plus profiles.** `/cabinet/<cartridge>/?profile=trace,wide&size=768`.
+A `yaml cabinet` fence in an article says the same things in the same words, so a link and a
+transclusion embed the same preconfigured machine. `src/lib/cabinet-url.js` in the ties app is the
+one parser; today it knows `program` and `size`. The query overrides the path, profiles apply left
+to right, and explicit parameters win last.
+
+**A cartridge, sketched** (today these are the objects in `apps/ties/src/lib/cabinet-programs.js`,
+which become files):
+
+```yaml
+id: forth-self-hosted
+label: FORTH, BUILT HERE
+machine: { cpu: pdp7, core: 8192, eae: true }
+devices: [teletype, clock, papertape, type340]
+keyboard: { case: upper, echo: program }        # Forth echoes; UNIX is { case: lower, map: simh-unix }
+sources:                                        # what LIVE CODING edits, in build order
+  - { path: tapes/pdp7forth/kernel.s, lang: as7 }   # assembled after pdp7-unix's sop.s, then end.s
+  - { path: tapes/pdp7forth/prelude.fs, lang: forth }
+  - { path: tapes/pdp7forth/turtle.fs, lang: forth }
+build:
+  - { step: assemble, dialect: as7, sources: [kernel.s], out: kernel }   # our assembler: source map + symbols
+  - { step: paper-tape-compile, image: kernel, tape: [prelude.fs, turtle.fs], type: "TAPE\r" }
+boot: { start: cold }
+panels: { tty: open, display: open, live: open }
+demo: forth-turtle
+help: articles/cabinet-forth.md
+```
+
+**Two Forths on the menu.** `forth` boots the kernel Mitch's `as7` assembled (committed, the
+baseline). `forth-self-hosted` assembles `kernel.s` in the page. Both have to agree word for word
+before the second one counts. What the second needs is an `as7` dialect in `src/asm.ts`, beside
+`dec` and `cambridge`: `label:`, `name = expr`, `" comments`, `.=.+n`, `<c` character literals
+and relative constants. Then the assembler's source map gives the trace, the memory panel and the
+debugger Mitch's own source lines, not just addresses.
+
+**The LIVE CODING panel**, before MEMORY, for cartridges that list `sources`:
+
+- a menu of the cartridge's source files, and an editor on the chosen one;
+- **Save** (to the browser's local storage), **Revert** (back to the cartridge's copy), **Build**,
+  and **Run**, which builds first;
+- below the editor, the build output: assembler errors with their lines, the listing, and what
+  the paper-tape compile printed.
+
+**Images.** Save the running core, or a built image, to local storage and load it again later.
+All local for now; tiny-its will be the one that knows about servers and cloud storage, and
+uploads and downloads images through its own interface.
+
+**And tiny-its itself.** Once tiny-its is Forth running on the cabinet, the LIVE CODING panel
+edits the mainframe too.
+
 ## Order of work — each step falsifiable
 
 1. CPU completion + interrupts + `.oct` loader + console + clock.

@@ -22,7 +22,7 @@ follows: cabinet
 article: cabinet-{program}
 ```
 
-**Around the machine.** The top row picks the program: PIXIE's SYMELEC, DEC's 1964 light pen test, DUEL, HILO and LANDER. The article above changes with it. On the right of that row is a readout of the program's own variables, read from core. **PDP-7 / 340 DISPLAY** opens and closes the tube; the teletype programs start with it closed. Then the eighteen console switches; Demo, ⏺️ to record what you do and 📼 to replay it; the REGS, TTY and MEMORY panels, ⏸️ stop and ⏭️ step, the speed (**1×** is the real PDP-7), and 🔄 reset, which you pull down its track; 🖨️ saves the tube as SVG and 📷 copies it as a PNG.
+**Around the machine.** The top row picks the program: PIXIE's SYMELEC, DEC's 1964 light pen test, DUEL, HILO, LANDER, Mitch Bradley's Forth with the turtle, and UNIX v0. The article above changes with it. On the right of that row is a readout of the program's own variables, read from core. **PDP-7 / 340 DISPLAY** opens and closes the tube; the teletype programs start with it closed. Then the eighteen console switches; Demo, ⏺️ to record what you do and 📼 to replay it; the REGS, TTY and MEMORY panels, ⏸️ stop and ⏭️ step, the speed (**1×** is the real PDP-7), and 🔄 reset, which you pull down its track; 🖨️ saves the tube as SVG and 📷 copies it as a PNG.
 
 **Where to go next.**
 
