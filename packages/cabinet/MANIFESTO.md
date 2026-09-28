@@ -9,6 +9,22 @@ around it is ours to invent.
 This page is the attitude. [DESIGN.md](DESIGN.md) is the plan, and [README.md](README.md) is what
 runs today.
 
+## Tribute, accessibility and fun beat realism
+
+We bend the rules and depart from realism whenever that honours someone, lets more people in, or
+makes it more fun. Realism is a way to reach those, not a goal of its own.
+
+- **Tribute.** Listings say who assembled them, and the name goes to whoever wrote the code, even
+  where the real machine had no logins. Heinz Lemke's `HL1470` is real. Mitch Bradley is `wmb`, as
+  he always is. C. Stein's 1964 PDP-4 never asked for a user name, but the listing says `CSTEIN`
+  anyway. DUEL's is `PETERSON,VINER`, because it had two authors.
+- **Accessibility.** The teletype wraps, scrolls, zooms, reads aloud and takes dictation. No KSR-33
+  ever did.
+- **Fun.** HILO takes "ninety nine" by voice, and the bell rings when you rub out too far.
+
+What stays honest is what makes it the machine: every instruction does what the PDP-7 did, and
+old code runs unchanged. Where we depart, we say so, and the original is still one click away.
+
 ## Push the driver out into the host
 
 A real PDP-7 program has to do everything itself, because the teletype is dumb. Ours doesn't. The
