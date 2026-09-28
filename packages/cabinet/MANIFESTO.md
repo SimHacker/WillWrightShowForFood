@@ -16,8 +16,9 @@ makes it more fun. Realism is a way to reach those, not a goal of its own.
 
 - **Tribute.** Listings say who assembled them, and the name goes to whoever wrote the code, even
   where the real machine had no logins. Heinz Lemke's `HL1470` is real. Mitch Bradley is `wmb`, as
-  he always is. C. Stein's 1964 PDP-4 never asked for a user name, but the listing says `CSTEIN`
-  anyway. DUEL's is `PETERSON,VINER`, because it had two authors.
+  he always is, and his Forth says `wmb,claude`, in his lower case, because Claude wrote it with him.
+  C. Stein's 1964 PDP-4 never asked for a user name, but the listing says `CSTEIN` anyway. DUEL's
+  is `PETERSON,VINER`, because it had two authors, and HILO and LANDER say `A2DEH,CLAUDE`.
 - **Accessibility.** The teletype wraps, scrolls, zooms, reads aloud and takes dictation. No KSR-33
   ever did.
 - **Fun.** HILO takes "ninety nine" by voice, and the bell rings when you rub out too far.

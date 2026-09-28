@@ -734,8 +734,8 @@ Several authors are comma separated (`PETERSON,VINER`) and printed as given. Tod
 | PIXIE SYMELEC | `HL1470` | Heinz Lemke's Titan ID, on every page of the 1972 listing |
 | LIGHT PEN TEST | `CSTEIN` | C. Stein, DEC, the author |
 | DUEL | `PETERSON,VINER` | both authors; their first names aren't known here |
-| HILO, LANDER | `A2DEH` | Don's |
-| FORTH | `wmb` | Mitch Bradley's own |
+| HILO, LANDER | `A2DEH,CLAUDE` | Don's, and Claude's, who wrote them with him |
+| FORTH | `wmb,claude` | Mitch Bradley's own, and Claude's, in his lower case; Claude has commits in his repo too |
 | UNIX v0 | `ken` | Ken Thompson |
 
 Each front end also keeps its own tool's native format for comparison: `as7 -f list` with its
