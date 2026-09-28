@@ -623,6 +623,8 @@ debugger Mitch's own source lines, not just addresses.
 - a menu of the cartridge's source files, and an editor on the chosen one;
 - **Save** (to the browser's local storage), **Revert** (back to the cartridge's copy), **Build**,
   and **Run**, which builds first;
+- **Load**, for Forth sources: mount the file on the paper tape reader of the machine that is
+  running and type `TAPE`, so the definitions go into the live image with no rebuild;
 - below the editor, the build output: assembler errors with their lines, the listing, and what
   the paper-tape compile printed.
 

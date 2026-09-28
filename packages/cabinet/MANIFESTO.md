@@ -61,7 +61,13 @@ under SIMH, with Python to drive it. We promised to lift that whole pipeline int
 SIMH step already runs in the browser: the emulated paper tape reader feeds Forth its own source.
 Next the assembler, so the page assembles `kernel.s` itself and gets source maps and a symbol
 table. Then the trace steps through Mitch's source lines, and a LIVE CODING panel lets you edit,
-build and run it. When tiny-its is written in Forth, you will live-code the mainframe the same way.
+build and run it.
+
+The showcase is tiny-its, the first real application of that Forth, modelled on Mitch's Open
+Firmware command line, key bindings and device tree. You can hack on it at three levels at once:
+rebuild the whole system from its assembly and Forth; load changed Forth words into the image
+that is running, without a rebuild; and look underneath, in octal, disassembly and source, while
+it runs. Then you use tiny-its to live-code the mainframe, and tiny-its itself.
 
 ## Many hands on one machine
 

@@ -248,6 +248,22 @@ machines, on the PDP-7.
 
 ## Written in Forth
 
+**The first application.** After the turtle, tiny-its is the first real program for Mitch's
+PDP-7 Forth, and it runs in the page now that the Forth does
+([/cabinet/forth/](https://hyperties.org/cabinet/forth/)). It takes Open Firmware's command
+line, key bindings, command system and device tree as its model (below). It is also the
+live-coding showcase, because you can work on it at three levels at once:
+
+1. **Build the system.** Edit Mitch's `kernel.s` or the Forth sources in the LIVE CODING panel,
+   assemble with the cabinet's assembler, and build a fresh image the way his pipeline does,
+   in the page.
+2. **Change it while it runs.** Load new or changed Forth definitions into the image that is
+   running, over the paper tape reader, without rebuilding anything. A redefinition can call
+   the word it replaces, so a fix goes in on top.
+3. **Look underneath.** The MEMORY panel shows the same words as octal, as machine code and
+   data, disassembled, and against the source line that made them, with the trace stepping
+   through it.
+
 Of course. A command line is what Forth's outer interpreter already is: read a line, parse
 a word, find it, run it. Mitch's kernel builds that loop from exposed parts (`(QUERY)`,
 `(PARSE)`, `(FIND)`, `(NUMBER)`, `(OK)`, `(ERR)`), so tiny-its builds its own loop from the
