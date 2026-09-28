@@ -726,13 +726,14 @@ ends share it, whatever the machine:
 **Each cartridge says who assembles it**, in `listing: { user, title }`. The user is printed in
 the period's case, and chosen for tribute over technicality: the programmer's own user ID if one
 is known; otherwise a typical user name made from their name (`DHOPKINS`), whether or not their
-machine had logins; a made-up, mysterious-sounding hacker one only when nobody's name is known. Today:
+machine had logins; a made-up, mysterious-sounding hacker one only when nobody's name is known.
+Several authors are comma separated (`PETERSON,VINER`) and printed as given. Today:
 
 | Cartridge | User | Why |
 |---|---|---|
 | PIXIE SYMELEC | `HL1470` | Heinz Lemke's Titan ID, on every page of the 1972 listing |
 | LIGHT PEN TEST | `CSTEIN` | C. Stein, DEC, the author |
-| DUEL | `PETERSON+VINER` | both authors; their first names aren't known here |
+| DUEL | `PETERSON,VINER` | both authors; their first names aren't known here |
 | HILO, LANDER | `A2DEH` | Don's |
 | FORTH | `wmb` | Mitch Bradley's own |
 | UNIX v0 | `ken` | Ken Thompson |

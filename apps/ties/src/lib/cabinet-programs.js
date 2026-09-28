@@ -129,7 +129,7 @@ export const PROGRAMS = [
 	{
 		id: 'lp370',
 		label: 'LIGHT PEN TEST (1964)',
-		// No user ID survives; a 1964 PDP-4 had no logins. Derived from the author, C. Stein.
+		// No user ID survives; a 1964 PDP-4 had no logins. Named for the author, C. Stein.
 		listing: { user: 'CSTEIN' },
 		title: 'Type 370 light pen test, DEC-4-45-M, C. Stein, 1964: sensitivity, follow and field of view. Page 6 is reconstructed.',
 		pen: true,
@@ -154,8 +154,8 @@ export const PROGRAMS = [
 	{
 		id: 'duel',
 		label: 'DUEL (1968)',
-		// Made up, Titan style: Peterson and Viner's initials and DECUS 7-40.
-		listing: { user: 'PV0740' },
+		// Both authors; their first names aren't known here.
+		listing: { user: 'PETERSON,VINER' },
 		title: 'DUEL, spacewar for two on a PDP-7, DECUS 7-40. From paper tape via the RIM loader. A control is active with its switch down.',
 		pen: false,
 		demo: null,
