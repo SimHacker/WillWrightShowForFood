@@ -1,0 +1,25 @@
+# The Forth kernel's family of copies. Design rule: variants are copies with descriptive
+# names, not ifdefs, and their provenance lives here and in each file's first lines.
+# When one copy changes, carry the change into the others or record why it doesn't apply.
+# See ../../DESIGN.md#cartridges-and-live-coding.
+
+upstream:
+  repo: https://github.com/MitchBradley/pdp7forth
+  commit: 96c3202ee88683a114517d474939da0dd8ea6a5d
+  date: 2026-09-26
+  license: MIT (LICENSE)
+
+files:
+  kernel.s:
+    role: upstream
+    what: Mitch's src/kernel.s, unchanged. Names keep a length and three SIXBIT characters.
+    built_by_as7_as: [sop.s from pdp7-unix, kernel.s, end.s]
+    assembled: [kernel.a7out, kernel.lst]
+
+planned:
+  kernel-names-full.s:
+    parent: kernel.s
+    what: Every character of a name kept, so WORDS prints EXIT, not EXI_.
+    differs_in: [the 84 two-word headers (tools/hdr.py), find, the parser's tcnt/tname packing,
+                 colon, const, var, create, WORDS, anything that assumes body = header + 2]
+    must_match_parent: everything else, word for word

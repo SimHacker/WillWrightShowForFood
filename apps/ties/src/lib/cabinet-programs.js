@@ -62,6 +62,9 @@ let forthImage = null;
 
 const octal = (w, n = 4) => (w & 0o777777).toString(8).padStart(n, '0');
 
+const REPO = 'https://github.com/SimHacker/WillWrightShowForFood/blob/main';
+const CABINET = `${REPO}/packages/cabinet`;
+
 const LP = LP370_SWITCHES;
 let lp370Program = null;
 let hiloProgram = null;
@@ -189,6 +192,10 @@ export const PROGRAMS = [
 		id: 'hilo',
 		label: 'HILO (2026)',
 		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
+		help: {
+			text: 'Press Return, then guess a number from 0 to 99 and press Return. It answers HIGHER, LOWER or RIGHT.',
+			links: [{ label: 'hilo.s', href: `${CABINET}/tapes/hilo/hilo.s` }]
+		},
 		pen: false,
 		tty: true,
 		display: false,
@@ -210,6 +217,10 @@ export const PROGRAMS = [
 		id: 'lander',
 		label: 'LANDER (2026)',
 		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
+		help: {
+			text: 'Each second, type the fuel to burn and press Return. Land at low speed.',
+			links: [{ label: 'lander.s', href: `${CABINET}/tapes/lander/lander.s` }]
+		},
 		pen: false,
 		tty: true,
 		display: false,
@@ -235,6 +246,13 @@ export const PROGRAMS = [
 		id: 'forth',
 		label: 'FORTH + TURTLE (2026)',
 		title: "Mitch Bradley's PDP-7 Forth, with turtle graphics on the 340. Type at the teletype: 4 0 DO 200 FD 90 RT LOOP",
+		help: {
+			text: 'Type a line and press Return: 2 3 + .  Draw: CS 4 0 DO 200 FD 90 RT LOOP.  WORDS lists every word. DEMO shows more.',
+			links: [
+				{ label: "Mitch's README", href: 'https://github.com/MitchBradley/pdp7forth#readme' },
+				{ label: 'turtle words', href: 'https://github.com/MitchBradley/pdp7forth#the-turtle-words' }
+			]
+		},
 		pen: false,
 		tty: true,
 		demo: (h) => forthDemo(h),
@@ -271,6 +289,13 @@ export const PROGRAMS = [
 		id: 'unix',
 		label: 'UNIX v0 (1969)',
 		title: 'PDP-7 UNIX, Thompson and Ritchie, from the pdp7-unix restoration: booted off an emulated RB09 disk. Log in as ken, password ken.',
+		help: {
+			text: 'Log in as ken, password ken, in lower case. Then try ls, ls system, date, cat sys.rc. ^C interrupts.',
+			links: [
+				{ label: 'more', href: `${CABINET}/UNIX-V0.md` },
+				{ label: 'pdp7-unix', href: 'https://github.com/DoctorWkt/pdp7-unix#readme' }
+			]
+		},
 		pen: false,
 		tty: true,
 		display: false,

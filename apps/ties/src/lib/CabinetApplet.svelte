@@ -41,7 +41,7 @@
 	const board = useApplets();
 	$effect(() => {
 		if (!board) return;
-		board[spec.id ?? 'cabinet'] = { program: programId, label: program?.label ?? '', monitor: () => monitor };
+		board[spec.id ?? 'cabinet'] = { program: programId, label: program?.label ?? '', help: program?.help ?? null, monitor: () => monitor };
 	});
 	// Each program opens the 340 or not (display: false); the reader can open or close it any time.
 	let displayOpen = $state(untrack(() => programById(programId)?.display !== false));
@@ -472,20 +472,22 @@
 	let regsOpen = $state(panelsStored.includes('regs'));
 	// A teletype program opens the teletype, whether chosen from the menu or linked to directly.
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
+	let configOpen = $state(panelsStored.includes('config'));
 	function togglePanel(id, e) {
-		const open = { regs: regsOpen, tty: ttyOpen, mem: memOpen };
+		const open = { regs: regsOpen, tty: ttyOpen, mem: memOpen, config: configOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
 		regsOpen = open.regs;
 		ttyOpen = open.tty;
 		memOpen = open.mem;
+		configOpen = open.config;
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
 		refreshRegs();
 	}
 	function openMemAt(addr, view) {
 		if (!memOpen) {
 			memOpen = true;
-			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', 'mem'].filter(Boolean).join(' '));
+			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', 'mem', configOpen && 'config'].filter(Boolean).join(' '));
 		}
 		if (view && memView !== view) setView(view);
 		memGo(addr, true);
@@ -747,7 +749,6 @@
 	let ttyCfg = $state(untrack(() => ttyConfigFor(programById(programId))));
 	let ttyFont = $state(untrack(() => globalThis.localStorage?.getItem(TTY_FONT_KEY) || 'm'));
 	let ttyHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(TTY_HEIGHT_KEY)) || 0));
-	let ttyCfgOpen = $state(false);
 	let ttyLine = $state('');
 	let ttyCols = $state(0);
 	const ttyLocal = $derived(ttyCfg.duplex === 'half');
@@ -793,6 +794,87 @@
 		} else return;
 		ttyDirty = true;
 		if (!ttyOpen) ttyUnread += 1;
+	}
+
+	/**
+	 * For screen readers: what the machine prints, spoken once it pauses, partial lines and
+	 * prompts included. The echo of a line just typed is skipped, since the reader heard it typed.
+	 */
+	let ttyAnnounce = $state('');
+	let ttySaid = '';
+	let ttySayTimer = null;
+	let ttyEchoSkip = '';
+	function ttyHear(code) {
+		const c = code & 0o177;
+		const ch = c === 0o15 || c === 0o12 ? ' ' : c >= 0o40 && c < 0o177 ? String.fromCharCode(c) : '';
+		if (!ch) return;
+		if (ttyEchoSkip && ch === ttyEchoSkip[0]) {
+			ttyEchoSkip = ttyEchoSkip.slice(1);
+			return;
+		}
+		ttyEchoSkip = '';
+		ttySaid += ch;
+		clearTimeout(ttySayTimer);
+		ttySayTimer = setTimeout(() => {
+			const text = ttySaid.replace(/\s+/g, ' ').trim();
+			ttySaid = '';
+			if (!text) return;
+			// Same words twice still get read: clear the region, then fill it.
+			ttyAnnounce = '';
+			requestAnimationFrame(() => (ttyAnnounce = text.slice(-600)));
+		}, 350);
+	}
+
+	/** A whole line to the machine, as if typed and Return pressed: the command line and voice use it. */
+	function sendLine(text) {
+		const codes = [];
+		for (const ch of text) {
+			const c = charCode(ch);
+			if (c >= 0 && c !== 0o15) codes.push(c);
+		}
+		if (!ttyLocal) ttyEchoSkip = String.fromCharCode(...codes);
+		ttyType([...codes, 0o15]);
+	}
+
+	/** The command line under the paper: dictation, phone keyboards and IMEs all type here. */
+	function onCliKey(e) {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			const text = ttyLine;
+			ttyLine = '';
+			sendLine(text);
+		}
+	}
+	function onCliInput() {
+		// Raw input: every character goes straight through, as keys on the paper do.
+		if (ttyCfg.input !== 'raw' || !ttyLine) return;
+		const codes = [...ttyLine].map((ch) => charCode(ch)).filter((c) => c >= 0);
+		ttyLine = '';
+		ttyType(codes);
+	}
+
+	let SpeechRecognition = $state(null);
+	$effect(() => {
+		SpeechRecognition = globalThis.SpeechRecognition ?? globalThis.webkitSpeechRecognition ?? null;
+	});
+	let listening = $state(false);
+	let recognizer = null;
+	function toggleVoice() {
+		if (listening) {
+			recognizer?.stop();
+			return;
+		}
+		recognizer = new SpeechRecognition();
+		recognizer.lang = navigator.language || 'en-US';
+		recognizer.interimResults = false;
+		recognizer.onresult = (e) => {
+			const said = e.results[0]?.[0]?.transcript?.trim();
+			if (said) sendLine(said);
+		};
+		recognizer.onend = () => (listening = false);
+		recognizer.onerror = () => (listening = false);
+		listening = true;
+		recognizer.start();
 	}
 
 	/** Once a frame at most: printing is fast, rendering the paper is not. */
@@ -1312,7 +1394,13 @@
 		const extra = program.peripherals?.({ cpu }) ?? [];
 		ttyReset();
 		ttyRecAt = -1;
-		tty = new Teletype({ printCycles: 1000, onPrint: ttyPrint });
+		tty = new Teletype({
+			printCycles: 1000,
+			onPrint: (c) => {
+				ttyPrint(c);
+				ttyHear(c);
+			}
+		});
 		clock = new Clock({ cpu });
 		box = new Cabinet({
 			cpu,
@@ -1825,6 +1913,14 @@
 						title="Memory: {CORE / 1024}K × 18-bit words. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('mem', e)}>MEMORY</button
 					>
+					<button
+						type="button"
+						class="chip"
+						class:on={configOpen}
+						aria-pressed={configOpen}
+						title="Settings for the teletype and more. Each program sets them for you when you choose it. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('config', e)}>CONFIG</button
+					>
 				</span>
 				<button
 					type="button"
@@ -1960,6 +2056,14 @@
 		{#if ttyOpen}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
 			<div class="row app tty">
+				{#if program?.help}
+					<p class="tty-help">
+						{program.help.text}
+						{#each program.help.links ?? [] as link (link.href)}
+							<a href={link.href} target="_blank" rel="noopener">{link.label} ↗</a>
+						{/each}
+					</p>
+				{/if}
 				<div
 					class="tty-paper"
 					class:wrap={ttyCfg.wrap}
@@ -1982,62 +2086,38 @@
 					onpointerdown={onTtyGrip}
 					onkeydown={onTtyGripKey}
 				></button>
-				<div class="sr-only" aria-live="polite">{ttyPaper[ttyPaper.length - 2] ?? ''}</div>
+				<div class="sr-only" aria-live="polite" aria-atomic="true">{ttyAnnounce}</div>
+				<div class="tty-cli-row">
+					<input
+						class="tty-cli"
+						type="text"
+						bind:value={ttyLine}
+						onkeydown={onCliKey}
+						oninput={onCliInput}
+						autocomplete="off"
+						autocapitalize="off"
+						spellcheck="false"
+						data-keep-focus
+						aria-label="Command line: type or dictate, then Return to send it to the {program?.label ?? 'machine'}"
+						placeholder={ttyCfg.input === 'line' ? 'Type or dictate a line, then Return' : 'Keys go straight to the machine'}
+					/>
+					{#if SpeechRecognition}
+						<button
+							type="button"
+							class="chip"
+							class:on={listening}
+							aria-pressed={listening}
+							aria-label={listening ? 'Listening. Speak a line; press to stop' : 'Speak a line to the machine'}
+							title="Speak a line; it is sent as if typed, with Return"
+							onclick={toggleVoice}>🎤</button
+						>
+					{/if}
+				</div>
 				<div class="tty-bar">
-					<button
-						type="button"
-						class="chip"
-						class:on={ttyLocal}
-						aria-pressed={ttyLocal}
-						title="Half duplex: the teletype prints each key as you type it (a KSR-33's local copy). Full duplex: only what the program sends back is printed, for programs that echo, like Forth."
-						onclick={() => (ttyCfg.duplex = ttyLocal ? 'full' : 'half')}>{ttyLocal ? 'HALF' : 'FULL'} DUPLEX</button
-					>
-					<button
-						type="button"
-						class="chip"
-						class:on={ttyCfgOpen}
-						aria-expanded={ttyCfgOpen}
-						title="Teletype settings. Each program sets them when you choose it."
-						onclick={() => (ttyCfgOpen = !ttyCfgOpen)}>⚙</button
-					>
 					<span class="mem-hint"
 						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} not read yet{paused ? ': the machine is stopped' : traceMs || speed < 0.1 ? ': the machine is running slowly' : ''}.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
 					>
 				</div>
-				{#if ttyCfgOpen}
-					<div class="tty-cfg" role="group" aria-label="Teletype settings">
-						{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']]], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']]], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']]]] as [key, label, choices]}
-							<span class="tty-cfg-label">{label}</span>
-							<span class="tty-cfg-row">
-								{#each choices as [value, text]}
-									<button type="button" class="chip" class:on={ttyCfg[key] === value} aria-pressed={ttyCfg[key] === value} onclick={() => (ttyCfg[key] = value)}>{text}</button>
-								{/each}
-							</span>
-						{/each}
-						<span class="tty-cfg-label">Type</span>
-						<span class="tty-cfg-row">
-							{#each Object.keys(TTY_FONTS) as f}
-								<button
-									type="button"
-									class="chip"
-									class:on={ttyFont === f}
-									aria-pressed={ttyFont === f}
-									onclick={() => {
-										ttyFont = f;
-										store(TTY_FONT_KEY, f);
-									}}>{f.toUpperCase()}</button
-								>
-							{/each}
-							<span class="mem-hint">{ttyCols} columns{program?.onTtyResize ? `, told to ${program.label}` : ''}</span>
-						</span>
-						<span class="tty-cfg-label">Keys</span>
-						<span class="tty-cfg-row mem-hint"
-							>{Object.entries(ttyCfg.bindings)
-								.map(([k, v]) => `${k.replace('Ctrl-', '^')} ${typeof v === 'string' ? v : `sends ${v.label ?? oct(v.send, 3)}`}`)
-								.join(' · ')}{ttyCfg.input === 'line' ? ' · Backspace, ^U edit the line; Return sends it' : ''}</span
-						>
-					</div>
-				{/if}
 			</div>
 		{/if}
 		{#if memOpen}
@@ -2159,6 +2239,44 @@
 				{/if}
 			</div>
 		</div>
+		{/if}
+		{#if configOpen}
+			<div class="row app config" role="group" aria-label="Configuration">
+				<p class="mem-hint">Each program sets these for you when you choose it.</p>
+				<h4 class="config-head">Teletype</h4>
+				<div class="tty-cfg">
+					{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']], 'Half: the paper prints each key as typed. Full: only what the program echoes.'], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']], 'Line: edit here with Backspace and ^U, Return sends the line.'], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']], '']] as [key, label, choices, hint]}
+						<span class="tty-cfg-label">{label}</span>
+						<span class="tty-cfg-row">
+							{#each choices as [value, text]}
+								<button type="button" class="chip" class:on={ttyCfg[key] === value} aria-pressed={ttyCfg[key] === value} title={hint} onclick={() => (ttyCfg[key] = value)}>{text}</button>
+							{/each}
+						</span>
+					{/each}
+					<span class="tty-cfg-label">Type</span>
+					<span class="tty-cfg-row">
+						{#each Object.keys(TTY_FONTS) as f}
+							<button
+								type="button"
+								class="chip"
+								class:on={ttyFont === f}
+								aria-pressed={ttyFont === f}
+								onclick={() => {
+									ttyFont = f;
+									store(TTY_FONT_KEY, f);
+								}}>{f.toUpperCase()}</button
+							>
+						{/each}
+						<span class="mem-hint">{ttyCols ? `${ttyCols} columns` : ''}{ttyCols && program?.onTtyResize ? `, told to ${program.label}` : ''}</span>
+					</span>
+					<span class="tty-cfg-label">Keys</span>
+					<span class="tty-cfg-row mem-hint"
+						>{Object.entries(ttyCfg.bindings)
+							.map(([k, v]) => `${k.replace('Ctrl-', '^')} ${typeof v === 'string' ? v : `sends ${v.label ?? oct(v.send, 3)}`}`)
+							.join(' · ')}</span
+					>
+				</div>
+			</div>
 		{/if}
 	</figcaption>
 </figure>
@@ -2737,6 +2855,37 @@
 	}
 	.tty-grip:focus-visible {
 		outline: 1px solid #9fe8a0;
+	}
+	.tty-cli-row {
+		display: flex;
+		gap: 2px;
+		margin-top: 2px;
+	}
+	.tty-cli {
+		flex: 1;
+		min-width: 0;
+		font-family: ui-monospace, monospace;
+		font-size: 0.8rem;
+		padding: 0.15rem 0.4rem;
+		background: #0c0c08;
+		color: #e8e0c0;
+		border: 1px solid #333;
+	}
+	.tty-cli:focus {
+		outline: 1px solid #9fe8a0;
+	}
+	.tty-help {
+		margin: 0 0 3px;
+		font-size: 0.72rem;
+		line-height: 1.35;
+	}
+	.tty-help a {
+		margin-left: 0.4em;
+		white-space: nowrap;
+	}
+	.config-head {
+		margin: 0.3rem 0 0.2rem;
+		font-size: 0.75rem;
 	}
 	.tty-cfg {
 		display: grid;

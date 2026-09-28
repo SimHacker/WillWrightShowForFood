@@ -62,11 +62,17 @@ where that goes (cartridges and profiles).
 
 A program can map its own keyboard: `ttyKey(c)` returns `{ send, echo }`, what goes to the machine
 and what the paper prints in half duplex, and `lowerCase: true` keeps the case as typed (UNIX).
-`ttyConfig` sets the teletype when the program is chosen, and the ⚙ panel under the paper shows
-and changes it: `duplex` half or full, `input` raw or line (edited here, sent on Return), `wrap`,
-and `bindings` such as `{ 'Ctrl-C': { send: 0o33 } }` or `'Ctrl-S': 'stop'`. `onTtyResize({ cpu,
-cols })` hears the paper's width in characters after boot and on every resize; Forth's writes it
-into WORDS. Font size and the height (drag the bar under the paper) are the reader's, and persist.
+`ttyConfig` sets the teletype when the program is chosen, and **CONFIG** (after MEMORY) opens a
+panel below memory that shows and changes it: `duplex` half or full, `input` raw or line (edited
+here, sent on Return), `wrap`, font size, and `bindings` such as `{ 'Ctrl-C': { send: 0o33 } }` or
+`'Ctrl-S': 'stop'`. More settings will go in that panel. `help: { text, links }` is a line or two
+above the teletype, with links that open in a new tab; it is also on the page board, so an article
+can show it. Under the paper, a command-line `<input>` takes typing, dictation and phone
+keyboards, and 🎤 (where the browser has speech recognition) sends a spoken line. What the machine
+prints is read to screen readers once it pauses, without the echo of the line just sent.
+`onTtyResize({ cpu, cols })` hears the paper's width in characters after boot and on every
+resize; Forth's writes it into WORDS. Font size and height (drag the bar under the paper) are the
+reader's, and persist.
 `peripherals({ cpu })` may give devices the CPU for DMA, as the RB09 needs.
 
 The program menu is the top row; `program:` in the block picks the first

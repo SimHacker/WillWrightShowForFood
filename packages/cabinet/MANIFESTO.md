@@ -26,6 +26,10 @@ side, where it is easy.
 - **The program never has to know.** The teletype can be as comfortable as a modern terminal:
   scroll back, copy and paste, font sizes, a height you drag. A faithful KSR-33, with its sound and
   its paper, gets built separately, from video loops and 3D models. This one is for hacking.
+- **Anyone can play.** A screen reader hears what the machine prints as soon as it pauses, the
+  prompt included, and not the echo of what you just typed. The command line under the paper is
+  a real text field, so dictation, phone keyboards and input methods all work, and 🎤 sends a
+  spoken line. HILO, a teletype game from a machine with no screen, plays by ear and voice.
 
 ## Every machine can see every other machine
 
@@ -68,6 +72,19 @@ Firmware command line, key bindings and device tree. You can hack on it at three
 rebuild the whole system from its assembly and Forth; load changed Forth words into the image
 that is running, without a rebuild; and look underneath, in octal, disassembly and source, while
 it runs. Then you use tiny-its to live-code the mainframe, and tiny-its itself.
+
+## Copies, with their provenance showing
+
+When a program needs two ways of doing something, we make two copies of the file and give them
+names that say how they differ, most general word first: `kernel.s` and `kernel-names-full.s`.
+No conditional assembly. Each copy says in its first lines where it came from, and a
+`VARIANTS.yml` beside them lists the family: parent, upstream commit, what differs, what must stay
+in step. The history of the design is in the files, where people and programs read it, not buried
+in git.
+
+The LLM is the coherence engine. It reads the list, sees a change to one copy, and carries it into
+the others, or says why it doesn't belong there. That makes several readable copies safer than
+one file of switches, and every copy still builds with the original tools.
 
 ## Many hands on one machine
 
