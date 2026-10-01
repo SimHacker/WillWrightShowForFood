@@ -39,8 +39,9 @@ A world is a microworld in Papert's sense — a small complete universe you can 
 way, out of objects that are mostly other worlds: rooms within rooms, characters, objects, skills,
 each of which may come from a different git repo, a different branch, or no repo at all.
 
-One world is one container, one postgres database and role, one LLM key, one GitHub token, one
-network that reaches `db` and the internet and nothing else. Non-root, no capabilities, no docker
+One world is one container, one postgres database and role, one LLM key, one network that reaches
+`db` and the internet and nothing else. Its GitHub token stays on the host with the git tool and
+never enters the container. Non-root, no capabilities, no docker
 socket, cpu/memory/pids limits. If isolation ever has to stop untrusted people rather than untrusted
 models, `runtime: runsc` (gVisor) is a one-line change.
 
@@ -54,7 +55,8 @@ world: pub
 image: wwsff/world:latest
 limits: { cpus: 1, memory: 2g, pids: 512 }
 postgres: { database: world_pub, role: world_pub }
-secrets: [llm/pub.env, github/pub.env]
+secrets: [llm/pub.env]           # in the container
+host_secrets: [github/pub.env]   # used by the git tool on the host only
 
 repos:
   moollm:
@@ -68,7 +70,7 @@ repos:
     mode: ro                     # read-only: no branch, no commits
     sparse: [content/micropolis]
 
-tree:                            # nesting is the microworld: rooms within rooms
+tree:                            # mounted under /moo; nesting is the microworld
   skills:      { repo: moollm, path: skills }
   pub:
     repo: moollm
@@ -76,8 +78,9 @@ tree:                            # nesting is the microworld: rooms within rooms
     children:
       back-room: { dir: {} }     # plain persistent dir, not in git
   city:        { repo: micropolis, path: content/micropolis }
+  user:        { dir: {} }
   .claude/skills: { generated: skills }   # compiled skill set, see below
-  moo/proc:    { proc: { keep: 200 } }
+  proc:        { proc: { keep: 200 } }
   tmp:         { tmpfs: { size: 256m } }
 ```
 
@@ -98,50 +101,54 @@ Node kinds:
 1. **provision** — partial sparse clones (`git clone --filter=blob:none --sparse`, then
    `sparse-checkout set`), the world branch, plain dirs, the postgres role and database (via
    `provision-db-roles.sh`), the secret files, the network.
-2. **compose** — bind-mounts each node into the world's assembled tree on the host.
-3. **run** — the `docker run` line: the assembled tree, the clones, the agent home, tmpfs, limits,
-   env files, network.
-4. **sync** — fetch, rebase the world branch onto its base, report conflicts as files the agent can
-   read, commit and push. Run by the sysop or by `world.sh`, not improvised.
+2. **mount table** — host path → `/moo` path for every node. It becomes the `--mount` flags, and
+   it is what mooco uses to translate paths in both directions: for the git tool, and for logs.
+3. **run** — the `docker run` line: the mount table, the agent home, tmpfs, limits, env files,
+   network. Working directory and `HOME` are `/moo`.
+4. **git tool** — `moo git`, the only way a world touches git. Runs on the host side: maps the
+   `/moo` path back to the clone and subpath, applies the rules (world branch only, no force push,
+   commit conventions), fetches, rebases onto base, reports conflicts as files the agent can read,
+   commits and pushes with a token the world never sees.
 5. **skills** — the compiled skill set (flattened names, chosen descriptions, `AGENTS.md`) for the
    `generated` node.
 
 ### Decisions and traps (read before building)
 
-**1. Assemble on the host; mount once, at the same path.** The house rule is "same absolute path on
-the host and in every container, no remapping". A `-v /data/models/pub/src/moollm/skills:/world/skills`
-per node would break it, and would make every log line and error message name a path that does not
-exist on the host. Instead `compose` builds the tree on the host with `mount --bind` under
-`/run/worlds/<world>/root`, and the container mounts that one directory at that same path. Docker's
-bind mounts are recursive, so the nested binds come along. The composed tree is a real path on the
-host too: you can `cd` into exactly what the agent sees.
+**1. Worlds are the exception to the no-remapping rule, on purpose.** Services see `/data` paths
+unchanged. A world sees none of `/data` and none of the host: every node is bind-mounted straight
+from its physical home to its place under `/moo`, and `/moo` is the whole namespace the agent
+walks. Path names carry meaning to the model, so no host plumbing — `/data/models`, `/run/worlds`,
+clone directory names — is allowed to leak into it. The mount table keeps the host side
+accountable: mooco translates `/moo` paths to host paths in logs, and the sysop can see exactly
+what the agent sees with `nsenter --target <pid> --mount`, without a composed copy on the host.
 
-It lives under `/run`, not `/data`, because it is a *view*, not state: recreated by every `start`,
-and invisible to backups, which would otherwise copy every bind-mounted subtree twice.
-
-**2. Mount the clone as well as its subtrees.** Git finds its repo by walking up to `.git`. A
-subtree bound into `pub/` has no `.git` above it, so `git status` inside it fails. The clones are
-also mounted, read-write, at their real `/data/models/<world>/src/<repo>` paths. An edit in
-`pub/` is the same inode as the file in the clone, so `git -C /data/models/pub/src/moollm status`
-sees it. Commits go through `sync`.
+**2. The world never runs git.** A subtree mounted at `/moo/pub` has no `.git` above it, and that is
+fine: the clones are not mounted at all. `moo git` maps the path back and does the work in place on
+the host, under the rules. A `PreToolUse` hook refuses a raw `git` in the world. Side benefits: no
+`.git` noise in the namespace, and no GitHub credentials inside the container.
 
 **3. Per-world clones, not a shared object store, to start.** One shared bare repo with worktrees
 per world is the efficient answer, but it means every world writes to the same refs and objects,
 which is exactly the cross-world write that isolation exists to prevent. Partial sparse clones are
 already small. If disk becomes the constraint, share objects through git alternates mounted `:ro`.
 
-**4. Writable git trees are never overlay lower layers.** Overlayfs sends writes to the upper layer,
-so a commit made through an overlay lands beside the repo, not in it. Overlays are for read-only
-bases with a scratch layer on top; anything that syncs to git is a plain bind mount.
+**4. Bind mounts for anything that syncs to git; overlays only for read-only bases.** Both are plain
+Linux mount types, usable on the host directly and used by Docker. A bind mount shows an existing
+directory at a second place: same files, writes go straight through. Docker's `--mount type=bind`
+is one. An overlay merges read-only lower directories with one writable upper directory into a
+view: writes are copied up into the upper layer and deletes become whiteouts, so the lower layers
+never change. Docker builds every container's root filesystem that way, which is why writes to it
+vanish with the container. A file edited through an overlay never reaches the clone underneath, so
+nothing git-backed goes under one.
 
-**5. `proc` cannot be `/proc`.** The container's `/proc` is the kernel's. The world's is `moo/proc`
-inside the tree: numbered append-only messages, `inbox/0042.yml` and `outbox/0042.yml`, each side
+**5. `proc` cannot be `/proc`.** The container's `/proc` is the kernel's. The world's is `/moo/proc`: numbered append-only messages, `inbox/0042.yml` and `outbox/0042.yml`, each side
 watching the other with inotify. Gitignored, mapped to no repo. The collector deletes below the
 lower of the two sides' acknowledged sequence numbers, after archiving to postgres.
 
-**6. No restart policy on world containers.** Docker would restart them at boot before the host
-binds exist, and they would come up on empty directories. A `world@<id>.service` systemd unit runs
-`world.sh start`, which composes and then runs.
+**6. No restart policy on world containers, and `--mount`, not `-v`.** `-v` silently creates a
+missing source directory, so a world started before `/data` is mounted comes up on empty
+directories on the boot disk. `--mount type=bind` refuses instead. A `world@<id>.service` unit
+with `RequiresMountsFor=/data` runs `world.sh start`; Docker does not restart worlds on its own.
 
 **7. Files and a CLI, not MCP, for bulk.** Every MCP schema rides in every prompt and every result
 lands whole. Shell tools let the model filter before tokens are spent. MCP only for small typed
@@ -152,16 +159,15 @@ calls that need another privilege, like "orchestrator, mount repo X".
 - [ ] Tier 1: `sysop` user, `/data/agents/sysop` home, agent host as a systemd service, hooks,
       `AGENTS.md`, snapshot habit.
 - [ ] World spec schema, one example world, a compiler that emits `provision` and `run` only.
-- [ ] Bring one world up by hand from the generated scripts. Confirm the stock edit tools work on
-      the composed tree, that git sees edits, and that the container cannot see `/data/secrets`
-      or another world.
-- [ ] `compose` with host binds, `world@.service`, `sync` with conflict reporting.
+- [ ] Bring one world up by hand from the generated scripts. Confirm the stock edit tools work
+      under `/moo`, that edits land in the clone on the host, and that nothing of `/data`, the
+      host or another world is visible.
+- [ ] `world@.service`, the mount table's path translation, `moo git` with conflict reporting.
 - [ ] `proc` channel and collector.
 - [ ] Skill compiler output as the `generated` node.
 - [ ] mooco as the AHP host in front of the worlds, recording every action in postgres.
 
 ## Open for Don
 
-- Name of the assembled-tree root: `/run/worlds/<world>/root`, or something mooco-flavoured.
 - Whether world agents start as the stock agent host + Copilot/Claude harness, or wait for mooco.
 - Which world first.
