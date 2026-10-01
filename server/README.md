@@ -7,6 +7,7 @@ the runbook for acting on it.
 |---|---|
 | [`MANIFEST.yml`](MANIFEST.yml) | Everything a box is made of: apt packages, docker, node, firewall, disk |
 | [`CHECKOUTS.md`](CHECKOUTS.md) | Deploy clone vs model clone vs simulate clone. Same repo, different rules |
+| [`AGENTS-PLAN.md`](AGENTS-PLAN.md) | Plan: sysop agent on the host, mooco worlds in containers, world spec compiled to scripts |
 | `../scripts/server-setup.sh` | Converges a machine onto the manifest. Idempotent — run it whenever you want to know the box is right |
 | `../scripts/server-deploy.sh` | Pull, build and deploy named apps. Nothing deploys unless you name it |
 | `../scripts/reload-ingress.sh` | Validate and gracefully reload Caddy, with no downtime |

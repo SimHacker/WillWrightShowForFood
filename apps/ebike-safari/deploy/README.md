@@ -121,7 +121,7 @@ Checkout lives at `/opt/WillWrightShowForFood`. Secrets in `deploy/.env` (gitign
 
 ## 1. GCP VM
 
-Create an **e2-medium** (or e2-standard-2) instance:
+Create an **e2-standard-4** instance (builds, postgres and an agent host do not fit in 4 GB):
 
 | Setting | Value |
 |---------|--------|

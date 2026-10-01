@@ -40,7 +40,7 @@ if ! gcloud compute instances describe "$INSTANCE" --zone="$ZONE" --project="$PR
 	gcloud compute instances create "$INSTANCE" \
 		--project="$PROJECT" \
 		--zone="$ZONE" \
-		--machine-type=e2-medium \
+		--machine-type=e2-standard-4 \
 		--tags=http-server,https-server \
 		--address="$STATIC_IP" \
 		--service-account="$SA_EMAIL" \
