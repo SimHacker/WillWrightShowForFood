@@ -1,0 +1,18 @@
+# agent-guard deny list for the sysop agent. Extended regex, matched against the shell command
+# and any file path a tool call names. See server/AGENTS-PLAN.md, Tier 1.
+
+# Data loss on the pet
+docker( compose)? .*down.*(-v|--volumes)
+docker (system|volume) prune
+docker volume rm
+(^|[ ;&|])(mkfs|wipefs|fdisk|parted)
+(^|[ ;&|])dd .*of=/dev/
+rm .*(/data/postgres|/data/caddy/storage|/data/secrets|/data/ebike-safari/rides)
+rm .*-[a-zA-Z]*r[a-zA-Z]* +/data/?( |$)
+world\.sh +destroy
+
+# Secrets: never read or print them
+/data/secrets/
+
+# Caddy: ACME re-issue is capped at 5 a week
+docker( compose)? .*(up .*--force-recreate|rm|down).*caddy

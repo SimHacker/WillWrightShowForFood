@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Read|Edit|Write|MultiEdit|Grep|Glob",
+        "hooks": [
+          { "type": "command", "command": "@AGENT_HOME@/hooks/agent-guard.sh" }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "defaultMode": "default"
+  }
+}

@@ -1,0 +1,30 @@
+# The sysop agent host. Installed by `server-setup.sh --only agents`, which fills in @...@ from
+# server/MANIFEST.yml (agent_host). Loopback only; reach it with ssh -L. Never --tunnel.
+[Unit]
+Description=VS Code agent host (sysop)
+After=network-online.target docker.service
+Wants=network-online.target
+RequiresMountsFor=/data
+
+[Service]
+Type=simple
+User=@USER@
+Group=@USER@
+WorkingDirectory=/opt/WillWrightShowForFood
+Environment=HOME=@HOME@
+Environment=VSCODE_CLI_DATA_DIR=@HOME@/cli
+ExecStart=/usr/local/bin/code agent host --foreground --replace \
+  --host 127.0.0.1 --port @PORT@ \
+  --connection-token-file @TOKEN_FILE@ \
+  --server-data-dir @HOME@/server \
+  --cli-data-dir @HOME@/cli
+Restart=on-failure
+RestartSec=10
+
+# The sites come first.
+Nice=@NICE@
+CPUQuota=@CPU_QUOTA@
+MemoryMax=@MEMORY_MAX@
+
+[Install]
+WantedBy=multi-user.target

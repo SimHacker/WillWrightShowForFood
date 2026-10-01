@@ -26,7 +26,7 @@ MANIFEST="$REPO/server/MANIFEST.yml"
 
 DRY=0
 ONLY=""
-PHASES="packages docker repo node firewall disk"
+PHASES="packages docker repo node firewall disk agents"
 
 while [[ $# -gt 0 ]]; do
 	case "$1" in
@@ -47,6 +47,7 @@ Phases, in order:
   node       Node (major from manifest) + pnpm via corepack, pinned by package.json
   firewall   ufw defaults and the allow list, including 443/udp for HTTP/3
   disk       mount the persistent disk at the manifest's mount point, and fstab it
+  agents     sysop user + VS Code agent host unit (loopback only), agent CLIs, guard hook
 
 Everything is idempotent. --only takes a comma list: --only node,firewall
 EOF
@@ -334,6 +335,83 @@ if want_phase disk && [[ -z "${NO_DISK:-}" ]]; then
 			echo "   Split it per server/SECRETS.md, then remove it."
 		fi
 	done
+fi
+
+# Tier 1 of server/AGENTS-PLAN.md. Runs after disk because the agent's home is on the pet: a
+# rebuilt VM gets its sessions and CLI logins back by remounting /data and rerunning this.
+if want_phase agents && [[ -n "$(m agent_host.user)" ]]; then
+	echo "== agents"
+	AU="$(m agent_host.user)"
+	AH="$(m agent_host.home)"
+	TPL="$REPO/$(m agent_host.templates)"
+	UNIT="$(m agent_host.unit)"
+
+	if ! mountpoint -q "$(m disk.mount)" 2>/dev/null && [[ -z "${NO_DISK:-}" && $DRY -eq 0 ]]; then
+		echo "   $(m disk.mount) is not mounted; the agent home belongs on the pet. Run --only disk first." >&2
+		exit 1
+	fi
+
+	if id "$AU" &>/dev/null; then
+		echo "   user $AU present"
+	else
+		echo "   creating user $AU (home $AH)"
+		run install -d -m 0755 "$(dirname "$AH")"
+		run useradd --system --create-home --home-dir "$AH" --shell /bin/bash "$AU"
+		# A rebuilt VM finds the old home on the pet, owned by whatever uid sysop had before.
+		run chown -R "$AU:$AU" "$AH"
+	fi
+	for g in $(m agent_host.groups); do
+		if id -nG "$AU" 2>/dev/null | tr ' ' '\n' | grep -qx "$g"; then
+			echo "   $AU already in $g"
+		else
+			run usermod -aG "$g" "$AU"
+		fi
+	done
+	for d in "" cli server hooks .claude; do
+		run install -d -m 0700 -o "$AU" -g "$AU" "$AH/$d"
+	done
+
+	if [[ -x /usr/local/bin/code ]]; then
+		echo "   code CLI present: $(/usr/local/bin/code --version 2>/dev/null | head -1)"
+	else
+		echo "   installing VS Code CLI -> /usr/local/bin/code"
+		run sh -c "curl -fsSL '$(m agent_host.cli_url)' | tar -xz -C /usr/local/bin code"
+	fi
+
+	for p in $(m agent_host.npm_global); do
+		if npm ls -g --depth=0 "$p" >/dev/null 2>&1; then
+			echo "   $p present"
+		else
+			echo "   npm -g $p"
+			run npm install -g "$p"
+		fi
+	done
+
+	TOKEN="$(m agent_host.token_file)"
+	if [[ -s "$TOKEN" ]]; then
+		echo "   connection token present"
+	else
+		echo "   generating connection token $TOKEN (0600)"
+		run sh -c "umask 077; openssl rand -hex 32 > '$TOKEN'"
+		run chown "$AU:$AU" "$TOKEN"
+	fi
+
+	run install -m 0755 -o "$AU" -g "$AU" "$TPL/agent-guard.sh" "$AH/hooks/agent-guard.sh"
+	run install -m 0644 -o "$AU" -g "$AU" "$TPL/deny.txt" "$AH/hooks/deny.txt"
+	run install -m 0644 -o "$AU" -g "$AU" "$TPL/AGENTS.md" "$AH/AGENTS.md"
+	run sh -c "sed 's|@AGENT_HOME@|$AH|g' '$TPL/claude-settings.json' > '$AH/.claude/settings.json'"
+	run chown "$AU:$AU" "$AH/.claude/settings.json"
+
+	run sh -c "sed -e 's|@USER@|$AU|g' -e 's|@HOME@|$AH|g' -e 's|@PORT@|$(m agent_host.port)|g' \
+		-e 's|@TOKEN_FILE@|$TOKEN|g' -e 's|@NICE@|$(m agent_host.limits.nice)|g' \
+		-e 's|@CPU_QUOTA@|$(m agent_host.limits.cpu_quota)|g' -e 's|@MEMORY_MAX@|$(m agent_host.limits.memory_max)|g' \
+		'$TPL/$UNIT.service' > /etc/systemd/system/$UNIT.service"
+	run systemctl daemon-reload
+	run systemctl enable "$UNIT"
+	run systemctl restart "$UNIT"
+	echo "   $UNIT on 127.0.0.1:$(m agent_host.port). From a laptop:"
+	echo "     ssh -N -L $(m agent_host.port):127.0.0.1:$(m agent_host.port) <you>@<this host>"
+	echo "   First time: sudo -iu $AU, then run claude and copilot once each to /login (device flow)."
 fi
 
 echo
