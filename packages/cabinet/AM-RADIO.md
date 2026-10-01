@@ -81,12 +81,14 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
 
 1. **The radio.** A probe on the backplane scores each memory cycle, for example the bits that
    toggled on the address and data lines plus a display term. That stream at 571 kHz goes through
-   a caricature receiver: the tuning dial picks a harmonic and a mix of line weights, a small
-   offset from a harmonic adds the heterodyne whistle, then an IF filter, envelope detector, AGC,
-   static and a small speaker. Turning the dial changes the timbre the way the real one did.
+   a caricature receiver: the tuning dial picks a harmonic and a mix of line weights, a broadcast
+   station near the harmonic adds the heterodyne whistle, then an IF filter, envelope detector,
+   AGC, static and a small speaker. Turning the dial changes the timbre the way the real one did.
 2. **A full IQ receiver.** The same stream as complex baseband through mixer, filter and AM
    detector, like [GNU Radio's AM example](https://wiki.gnuradio.org/index.php/Simulation_example:_AM_transmitter_and_receiver),
-   in an AudioWorklet or offline in node. Heavier, and honest enough to compare with a recording.
+   in an AudioWorklet or offline in node. Honest enough to compare with a recording, and at
+   baseband no heavier than 1: Matt Kline's receiver ([below](#a-receiver-to-borrow)) is this
+   design, so 1 and 2 become one.
 3. **Real RFI from your own laptop.** [System Bus Radio](https://github.com/fulldecent/system-bus-radio)
    makes a computer's memory bus transmit AM, including [from a browser tab](https://fulldecent.github.io/system-bus-radio/).
    Drive it with the emulated PDP-7's activity envelope and an actual radio next to the laptop
@@ -105,6 +107,51 @@ indirect, and more for EAE. The 340's display-file fetches take memory cycles fr
    new device programs can drive on purpose, and Mitch's Forth can live-code it.
 7. **Learned.** With calibration recordings, fit approach 1's weights, or a small model, from the
    bus-feature stream to the recorded spectrum. The same move as matching the P7 phosphor.
+
+## A receiver to borrow
+
+Matt Kline's [Simulating Airband AM Radios](https://bitbashing.io/am-radio.html) (Bit Bashing,
+19 June 2026, CC BY-SA 4.0) builds the receiver approaches 1 and 2 need, for
+[OpenFreq](https://github.com/UOAF/OpenFreq), a radio voice chat for the Falcon BMS flight sim.
+The code is [RadioPlayback.cs](https://github.com/UOAF/OpenFreqAudio/blob/develop/OpenFreqAudio/RadioPlayback.cs)
+in OpenFreqAudio (C#, MPL 2.0), with a [demo app](https://github.com/UOAF/OpenFreqAudio/releases/tag/nightly).
+What carries over:
+
+- **Baseband, not RF.** Nothing runs at MHz. Each carrier is a phasor at its offset from the
+  dial, scaled by its amplitude; sum the I and Q of all of them, add independent I and Q noise,
+  and the envelope is sqrt(I² + Q²). Sum before taking the length, since the length is nonlinear.
+- **Integrate phase**, θ += 2π·Δf / Fs each sample, instead of computing 2π·Δf·n / Fs, so turning
+  the dial never jumps phase.
+- **AGC** is a one-pole filter on the envelope, α = 1 − e^(−1 / (Fs·τ)), with one τ when the
+  envelope rises and another when it falls; the output is envelope divided by AGC. His τ: 1 ms
+  attack, 33 ms decay, a third of the 3 ms and 100 ms he found in radio specs. AM broadcast sets
+  are quoted at 0.1–0.3 s decay, so the pocket radio probably wants a slower one.
+- **Squelch** on mean power, with two detectors: τ 10 ms opens the gate, so impulse crackle can't
+  break it; τ 2 ms closes it, so a strong signal doesn't leave a long tail; it closes 3 dB below
+  where it opens, so it doesn't chatter; it opens at +6 dB over noise. The click when a signal
+  arrives and the "kssh" when it goes are not effects: they fall out of AGC and squelch.
+- **Band-pass** after the gate: a 3rd-order Butterworth high-pass at 300 Hz, then a 6th-order
+  low-pass at 3 kHz (an FIR would need over 512 taps). Then a peak limiter, because clipping pops
+  are broadband and break the illusion.
+- **Noise** is Gaussian hiss plus Poisson crackle, not plain white noise. **Modulation index** 0.95.
+
+What it changes here:
+
+- **An envelope detector ignores tuning offset.** One carrier 100 Hz off the dial demodulates the
+  same as one dead on. So the heterodyne whistle needs a second carrier, beating at the
+  difference, and the obvious one is the broadcast station on that frequency, which any radio in
+  the room was also hearing. Tuning then behaves as it did: the station, a whistle sliding in
+  pitch as the dial nears a harmonic, the louder signal modulating the weaker, the machine's tune
+  ring-modulated by the beat. Detuning alone only changes how much of the sidebands the passband
+  keeps, which still colours the timbre, more gently.
+- **The sources map straight across.** Each memory-cycle harmonic h·571,428 Hz near the dial is
+  one of Kline's transmitters, and the probe's activity score, decimated to 48 kHz, is its
+  amplitude: the mean is the carrier, the wobble is the modulation, and it never goes negative.
+  The harmonic's weight is its SNR. Harmonics are 571 kHz apart, so only one is ever in the
+  passband; a second clock, if the 340 has one, would be a second transmitter.
+- **Squelch is per radio.** The Yaesu FT1XD in the Life video has squelch; the small AM set in
+  the Munching video almost certainly has only AGC. If the timing chain stops at HALT, the carrier
+  drops and the static rushes in, and on the Yaesu that ends in the kssh and silence.
 
 ## Speed, gaps and granular synthesis
 
@@ -129,8 +176,9 @@ the tube already shows.
 - **Probe** (backplane): the CPU reports each memory cycle (address, word, kind); the 340 reports
   its fetches and deflection events. Costs nothing when no probe is attached.
 - **`src/radio.ts`**: pure functions from emission to samples, run in node. Decimation is a box
-  filter of about 11.9 cycles per 48 kHz sample. Tests render WAV snapshots beside the SVG ones and
-  check with Goertzel that a loop of N cycles peaks at 571,428 / N Hz.
+  filter of about 11.9 cycles per 48 kHz sample; after that, Kline's chain: phasors, envelope,
+  AGC, squelch, band-pass, limiter. Tests render WAV snapshots beside the SVG ones and check with
+  Goertzel that a loop of N cycles peaks at 571,428 / N Hz.
 - **Worklet** (applet): jitter buffer, tuning, AGC, noise, granular stretch.
 - **UI**: a radio with a tuning dial, volume, tape or stretch, and antenna placement near the CPU
   or near the 347.
@@ -180,7 +228,8 @@ PDP-7, PDP-9 or PDP-10 with a 340:
    test tape we supply: loops of 50, 100, 200, 500 and 1000 memory cycles, each held for ten
    seconds, then the same loops with the 340 drawing a point, a vector and a character.
 2. **A known radio.** Make and model, AM, the frequency in kHz, and a photo of where it sat.
-   Sweep the dial slowly once while the tape runs, and say the frequency aloud as you go.
+   Sweep the dial slowly once while the tape runs, and say the frequency aloud as you go,
+   including where it crosses a broadcast station.
 3. **Good audio.** The radio's headphone or line output into a recorder at 48 kHz, not a phone
    microphone across the room. A second track from a mic is welcome too.
 4. **Optional, for the brave.** An SDR (an RTL-SDR with an upconverter covers 500 kHz to
