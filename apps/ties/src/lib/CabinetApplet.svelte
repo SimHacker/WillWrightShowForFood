@@ -422,7 +422,7 @@
 		store(TIPS_KEY, on ? 'on' : 'off');
 		if (!on) tip = null;
 	}
-	const TAIL = 22;
+	const TAIL = 44;
 
 	// Measure the tip and keep it inside what is visible of the pane; the tail slides to the anchor.
 	$effect(() => {
@@ -2756,15 +2756,15 @@
 		content: '';
 		position: absolute;
 		left: calc(var(--arrow, 14px) - 6px);
-		top: -22px;
+		top: -44px;
 		width: 12px;
-		height: 22px;
+		height: 44px;
 		background: #8a6424;
 		clip-path: polygon(50% 0, 100% 100%, 0 100%);
 	}
 	.tip.up::before {
 		top: auto;
-		bottom: -22px;
+		bottom: -44px;
 		clip-path: polygon(0 0, 100% 0, 50% 100%);
 	}
 	.tip-sensor {
