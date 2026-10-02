@@ -1037,6 +1037,7 @@
 	let listening = $state(false);
 	let voiceNote = $state('');
 	let recognizer = null;
+	let cliEl = $state(null);
 	const VOICE_ERRORS = {
 		'not-allowed': 'the microphone is blocked for this page',
 		'service-not-allowed': 'this browser has no speech service here; try Chrome or Safari',
@@ -1046,7 +1047,9 @@
 		aborted: ''
 	};
 	function toggleVoice() {
+		cliEl?.focus({ preventScroll: true });
 		if (listening) {
+			listening = false;
 			recognizer?.stop();
 			return;
 		}
@@ -1054,19 +1057,31 @@
 		recognizer.lang = navigator.language || 'en-US';
 		// Interim results show in the command line as you speak, so you can see it hearing you.
 		recognizer.interimResults = true;
+		recognizer.continuous = true;
 		recognizer.onresult = (e) => {
-			const r = e.results[e.results.length - 1];
-			const said = r?.[0]?.transcript?.trim() ?? '';
-			if (!r?.isFinal) {
-				ttyLine = said;
-				return;
+			for (let i = e.resultIndex; i < e.results.length; i++) {
+				const r = e.results[i];
+				const said = r?.[0]?.transcript?.trim() ?? '';
+				if (!r?.isFinal) {
+					ttyLine = said;
+					continue;
+				}
+				ttyLine = '';
+				voiceNote = said ? `heard “${said}”` : 'listening…';
+				if (said) sendSpoken(said);
 			}
-			ttyLine = '';
-			voiceNote = said ? `heard “${said}”` : '';
-			if (said) sendSpoken(said);
 		};
-		recognizer.onend = () => (listening = false);
+		// Browsers end a session after silence; keep listening until the mic is pressed again.
+		recognizer.onend = () => {
+			if (!listening) return;
+			try {
+				recognizer.start();
+			} catch {
+				listening = false;
+			}
+		};
 		recognizer.onerror = (e) => {
+			if (e.error === 'no-speech' || e.error === 'aborted') return;
 			listening = false;
 			voiceNote = VOICE_ERRORS[e.error] ?? `speech recognition failed: ${e.error}`;
 			console.warn('cabinet: speech recognition', e.error, e.message);
@@ -2319,6 +2334,7 @@
 						class="tty-cli"
 						type="text"
 						bind:value={ttyLine}
+						bind:this={cliEl}
 						onkeydown={onCliKey}
 						oninput={onCliInput}
 						autocomplete="off"
@@ -2335,7 +2351,8 @@
 							class:on={listening}
 							aria-pressed={listening}
 							aria-label={listening ? 'Listening. Speak a line; press to stop' : 'Speak a line to the machine'}
-							title="Speak a line; it is sent as if typed, with Return"
+							title="Speak lines until pressed again; each is sent as if typed, with Return"
+							onpointerdown={(e) => e.preventDefault()}
 							onclick={toggleVoice}>🎤</button
 						>
 					{/if}
