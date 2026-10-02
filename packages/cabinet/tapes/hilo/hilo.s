@@ -124,7 +124,9 @@ think,	text "I HAVE ONE."
 	215
 	212
 	0
-prompt,	text "GUESS? "
+prompt,	text "GUESS?"
+	215
+	212
 	0
 higher,	text "HIGHER."
 	215

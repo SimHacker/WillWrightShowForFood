@@ -45,7 +45,7 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 	assert.match(m.paper(), /^LANDER, FOR THE PDP-7 TELETYPE\.\r\n[\s\S]*PRESS RETURN TO START\.$/);
 	let s: LanderState = { h2: LANDER.h2, v: LANDER.v, fuel: LANDER.fuel, secs: 0 };
 	let out = m.type("\r");
-	assert.equal(out, `\r\n${line(s)}  BURN? `);
+	assert.equal(out, `\r\n${line(s)}  BURN?\r\n`);
 	let all = out;
 	for (const b of burns) {
 		const r = landerStep(s, b);
@@ -63,7 +63,7 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 			assert.equal(out, `${echo}${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FT/S, 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.`);
 			return { paper: all, contact: f };
 		}
-		assert.equal(out, `${echo}${line(s)}  BURN? `, `after burn ${b}`);
+		assert.equal(out, `${echo}${line(s)}  BURN?\r\n`, `after burn ${b}`);
 	}
 	throw new Error("still flying");
 }
@@ -105,9 +105,9 @@ test("lander: random burns, including burning more than is left, match the model
 test("lander: over 30 is refused and asked again; Return alone burns nothing", () => {
 	const m = machine();
 	m.type("\r");
-	assert.equal(m.type("31\r"), "31\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ");
-	assert.equal(m.type("99999999\r"), "99999999\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN? ", "a long number does not wrap");
-	assert.equal(m.type("\r"), "\r\nT 1  ALT 447.5  VEL -55  FUEL 60  BURN? ");
+	assert.equal(m.type("31\r"), "31\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN?\r\n");
+	assert.equal(m.type("99999999\r"), "99999999\r\n30 AT MOST.\r\nT 0  ALT 500  VEL -50  FUEL 60  BURN?\r\n", "a long number does not wrap");
+	assert.equal(m.type("\r"), "\r\nT 1  ALT 447.5  VEL -55  FUEL 60  BURN?\r\n");
 });
 
 test("lander: a burn that touches down and lifts off inside one second is a landing", () => {

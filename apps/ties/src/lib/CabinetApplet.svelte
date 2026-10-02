@@ -1121,6 +1121,37 @@
 	 * prompts included. The echo of a line just typed is skipped, since the reader heard it typed.
 	 */
 	let ttyAnnounce = $state('');
+	// Speak: the same words aloud through speech.js, for anyone without a screen reader on.
+	const TTY_SPEAK_KEY = 'cabinet-tty-speak';
+	let ttySpeak = $state(untrack(() => globalThis.localStorage?.getItem(TTY_SPEAK_KEY) === '1'));
+	let speech = null;
+	let speechVoice = null;
+	async function speechReady() {
+		if (!globalThis.speechSynthesis) return null;
+		if (!speech) {
+			const { SpeechSystem } = await import('./speech.js');
+			speech = new SpeechSystem();
+			await speech.ready;
+			const rank = (v) => (/\((Enhanced|Premium)\)/i.test(v.name) ? 0 : 1);
+			const en = [...speech.getEnglishVoices(true), ...speech.getEnglishVoices(false)].map((m) => m.voice);
+			speechVoice = en.sort((a, b) => rank(a) - rank(b))[0] ?? null;
+		}
+		return speech;
+	}
+	async function sayAloud(text) {
+		const s = await speechReady();
+		if (!s || !ttySpeak) return;
+		// The newest output matters most: cut off whatever is still being read.
+		s.cancel();
+		if (speechVoice) s.speakWithVoice(text, speechVoice, { rate: 1.1 });
+		else s.speak(text, { voiceType: 'male', language: 'en', rate: 1.1 });
+	}
+	function setSpeak(on) {
+		ttySpeak = on;
+		store(TTY_SPEAK_KEY, on ? '1' : '');
+		if (on) sayAloud('Speaking.');
+		else speech?.cancel();
+	}
 	let ttySaid = '';
 	let ttySayTimer = null;
 	let ttyEchoSkip = '';
@@ -1142,6 +1173,7 @@
 			// Same words twice still get read: clear the region, then fill it.
 			ttyAnnounce = '';
 			requestAnimationFrame(() => (ttyAnnounce = text.slice(-600)));
+			if (ttySpeak) sayAloud(text.slice(-600));
 		}, 350);
 	}
 
@@ -2589,6 +2621,18 @@
 							onclick={toggleVoice}>🎤</button
 						>
 					{/if}
+					{#if globalThis.speechSynthesis}
+						<button
+							type="button"
+							class="chip"
+							class:on={ttySpeak}
+							aria-pressed={ttySpeak}
+							aria-label="Read what the machine prints aloud"
+							title="Read what the machine prints aloud, for when no screen reader is on"
+							onpointerdown={(e) => e.preventDefault()}
+							onclick={() => setSpeak(!ttySpeak)}>🔊</button
+						>
+					{/if}
 				</div>
 				{#if voiceNote}<p class="mem-hint" role="status">🎤 {voiceNote}</p>{/if}
 				<div class="tty-bar">
@@ -2743,6 +2787,12 @@
 							{/each}
 						</span>
 					{/each}
+					<span class="tty-cfg-label">Speak</span>
+					<span class="tty-cfg-row">
+						{#each [[false, 'OFF'], [true, 'ON']] as [value, text]}
+							<button type="button" class="chip" class:on={ttySpeak === value} aria-pressed={ttySpeak === value} title="Read what the machine prints aloud, for when no screen reader is on" onclick={() => setSpeak(value)}>{text}</button>
+						{/each}
+					</span>
 					<span class="tty-cfg-label">Type</span>
 					<span class="tty-cfg-row">
 						{#each Object.keys(TTY_FONTS) as f}

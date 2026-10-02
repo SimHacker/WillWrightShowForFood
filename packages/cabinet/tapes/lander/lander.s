@@ -358,7 +358,9 @@ velm,	text "  VEL "
 	0
 fuelm,	text "  FUEL "
 	0
-burnq,	text "  BURN? "
+burnq,	text "  BURN?"
+	215
+	212
 	0
 most,	text "30 AT MOST."
 	215
