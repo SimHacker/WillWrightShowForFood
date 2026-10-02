@@ -273,6 +273,20 @@
 		return seen;
 	}
 
+	// Display knobs, burned in for now. They are the uniforms the WebGPU phosphor shader
+	// will take later. floor and gamma lift the 340's low intensities (SRAST draws at 0)
+	// so they read on a modern screen; contrast scales, brightness offsets.
+	const PHOSPHOR = { brightness: 0.06, contrast: 1.0, gamma: 0.6, floor: 0.3 };
+
+	// 340 intensity (0..7) and coverage (fraction of integrated refreshes that drew it) to alpha.
+	function phosphor(intensity, coverage) {
+		const { brightness, contrast, gamma, floor } = PHOSPHOR;
+		const i = Math.min(Math.max(intensity ?? 7, 0), 7) / 7;
+		const level = floor + (1 - floor) * i ** gamma;
+		const energy = level * (0.2 + 0.8 * coverage);
+		return Math.min(1, Math.max(0, brightness + contrast * energy));
+	}
+
 	function drawSegments(ctx, seen, total) {
 		const stroke = '#9fe8a0';
 		ctx.strokeStyle = stroke;
@@ -280,8 +294,7 @@
 		ctx.lineWidth = 1.5;
 		ctx.lineCap = 'round';
 		for (const { s, n } of seen.values()) {
-			const lit = Math.max(s.intensity ?? 7, 1) / 7;
-			const alpha = lit * (0.2 + 0.8 * (n / total));
+			const alpha = phosphor(s.intensity, n / total);
 			const y0 = 1023 - s.y0;
 			const y1 = 1023 - s.y1;
 			if (s.x0 === s.x1 && s.y0 === s.y1) {
