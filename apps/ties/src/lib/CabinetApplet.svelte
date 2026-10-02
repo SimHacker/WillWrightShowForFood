@@ -62,11 +62,9 @@
 	const size = $derived(Number(spec.size) || 1024);
 	// The tube's side: a size the reader dragged to wins over the fitted one, and is kept.
 	// The tube is square and centred, black letterbox left and right, never above or below.
-	const SIDE_KEY = 'cabinet-side';
+	const SIDE_KEY = 'cabinet-display-side';
 	let userSide = $state(untrack(() => Number(globalThis.localStorage?.getItem(SIDE_KEY)) || null));
-	// The figure's width fills the pane unless dragged; the panels span it, whatever the tube.
-	const WIDTH_KEY = 'cabinet-width';
-	let userWidth = $state(untrack(() => Number(globalThis.localStorage?.getItem(WIDTH_KEY)) || null));
+	// The figure always fills the pane's width; the panels span it, whatever the tube.
 	let figW = $state(0);
 	const side = $derived(Math.min(userSide ?? fitSide ?? size, figW || Infinity));
 	// The figure's height once the bottom edge has been dragged: a floor, so content taller
@@ -97,9 +95,8 @@
 		fitSide = Math.floor(Math.max(MIN_SIDE, Math.min(size, width, height)));
 	}
 
-	// Edge drags. The figure's side edges set its width and its bottom edge its height, no
-	// shorter than the content. The tube's edges scale the tube. Both are centred, so
-	// width = start ± 2·dx keeps the grabbed edge under the pointer.
+	// Edge drags. The figure's bottom edge sets its height, no shorter than the content. The
+	// tube's edges scale the tube; it is centred, so start ± 2·dx keeps the edge under the pointer.
 	let edgeDrag = $state(null);
 
 	/** The figure's height with the growing panel at its own size, none of the spare. */
@@ -112,10 +109,6 @@
 		return bottom - figureEl.getBoundingClientRect().top + below - (memOpen ? (MEM_LINES - MEM_MIN_LINES) * line : 0) - (ringsOpen ? ringsExtra : 0) - (ttyOpen ? ttyExtra : 0);
 	}
 
-	function setWidth(want) {
-		const max = figureEl?.parentElement?.clientWidth ?? 4096;
-		userWidth = Math.round(Math.max(MIN_SIDE, Math.min(max, want)));
-	}
 	function setHeight(want) {
 		figHeight = Math.round(Math.max(want, contentHeight()));
 	}
@@ -131,7 +124,7 @@
 		} catch {
 			// Synthetic pointers cannot be captured; the drag still tracks while over the edge.
 		}
-		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, w0: figW, h0: figureEl?.offsetHeight ?? side };
+		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, h0: figureEl?.offsetHeight ?? side };
 	}
 	function onEdgeMove(event) {
 		if (!edgeDrag) return;
@@ -139,7 +132,6 @@
 		const dx = event.clientX - d.x0;
 		const dy = event.clientY - d.y0;
 		if (d.edge === 'bottom') setHeight(d.h0 + dy);
-		else if (d.edge === 'left' || d.edge === 'right') setWidth(d.edge === 'right' ? d.w0 + 2 * dx : d.w0 - 2 * dx);
 		else if (d.edge === 'tube-bottom') setSide(d.side0 + dy);
 		else setSide(d.edge === 'tube-right' ? d.side0 + 2 * dx : d.side0 - 2 * dx);
 	}
@@ -156,7 +148,6 @@
 		edgeDrag = null;
 		if (event.pointerId !== undefined && event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
 		store(SIDE_KEY, userSide);
-		store(WIDTH_KEY, userWidth);
 		store(HEIGHT_KEY, figHeight);
 	}
 	function onEdgeKey(event, edge) {
@@ -164,30 +155,25 @@
 		if (!step) return;
 		event.preventDefault();
 		if (edge === 'bottom') setHeight((figureEl?.offsetHeight ?? side) + step);
-		else if (edge === 'left' || edge === 'right') setWidth(figW + step);
 		else setSide(side + step);
 		onEdgeUp(event);
 	}
-	/** Double-click: width fills the pane again, height drops to the content, the tube fits. */
+	/** Double-click: the height drops to the content, the tube fits the pane. */
 	function onEdgeReset(edge) {
 		if (edge === 'bottom') figHeight = null;
-		else if (edge === 'left' || edge === 'right') userWidth = null;
 		else userSide = null;
 		store(SIDE_KEY, userSide);
-		store(WIDTH_KEY, userWidth);
 		store(HEIGHT_KEY, figHeight);
 	}
+	// Keys from before the figure and the tube were sized apart.
+	for (const k of ['cabinet-side', 'cabinet-aspect', 'cabinet-width']) store(k, null);
 	const EDGE_LABEL = {
-		left: 'Cabinet width, left edge',
-		right: 'Cabinet width, right edge',
 		bottom: 'Cabinet height, bottom edge',
 		'tube-left': 'Display size, left edge',
 		'tube-right': 'Display size, right edge',
 		'tube-bottom': 'Display size, bottom edge'
 	};
 	const EDGE_TITLE = {
-		left: 'Drag to change the width; double-click to fill the pane',
-		right: 'Drag to change the width; double-click to fill the pane',
 		bottom: 'Drag to change the height; double-click for the content’s own height',
 		'tube-left': 'Drag to resize the display; double-click to fit the pane',
 		'tube-right': 'Drag to resize the display; double-click to fit the pane',
@@ -2175,7 +2161,7 @@
 		onkeydown={(e) => onEdgeKey(e, edge)}
 	></div>
 {/snippet}
-<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} bind:clientWidth={figW} style:width={userWidth ? `${userWidth}px` : '100%'} style:min-height={figHeight ? `${figHeight}px` : null}>
+<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} bind:clientWidth={figW} style:min-height={figHeight ? `${figHeight}px` : null}>
 	<!-- The program comes first, so opening or closing the display never moves the menu. -->
 	<div class="row menu top">
 		<select
@@ -2269,9 +2255,7 @@
 			{@render edgeGrip(edge)}
 		{/each}
 	</div>
-	{#each ['left', 'right', 'bottom'] as edge (edge)}
-		{@render edgeGrip(edge)}
-	{/each}
+	{@render edgeGrip('bottom')}
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
 		{#if program?.keyHelp}
@@ -2795,19 +2779,6 @@
 		z-index: 2;
 		touch-action: none;
 	}
-	.edge.left,
-	.edge.right {
-		top: 0;
-		bottom: 0;
-		width: 8px;
-		cursor: ew-resize;
-	}
-	.edge.left {
-		left: -4px;
-	}
-	.edge.right {
-		right: -4px;
-	}
 	.edge.tube-left,
 	.edge.tube-right {
 		top: 0;
@@ -2846,8 +2817,8 @@
 	.cabinet-applet {
 		position: relative;
 		box-sizing: border-box;
-		max-width: 100%;
-		margin: 0.4rem auto;
+		width: 100%;
+		margin: 0.4rem 0;
 		padding: 0;
 		border: 1px solid var(--ink, #000);
 		background: #000;

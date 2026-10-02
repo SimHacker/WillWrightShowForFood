@@ -36,8 +36,7 @@
 
 <style>
 	.bare {
-		max-width: 1400px;
-		margin: 0 auto;
-		padding: 0.5rem;
+		margin: 0;
+		padding: 0;
 	}
 </style>
