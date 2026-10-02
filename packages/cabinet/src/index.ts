@@ -39,7 +39,7 @@ export type { UnixV0Opts, UnixHost } from "./unixv0.js";
 export { compileForth, bootForth, forthDemo, parseA7out, parseAs7Labels, setForthColumns, assembleForthKernel } from "./forth.js";
 export type { ForthTapes, ForthImage, ForthHost } from "./forth.js";
 export { spokenNumbers } from "./spoken.js";
-export { bootDuel, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES } from "./duel.js";
+export { bootDuel, duelResult, DUEL_HIT, DUEL_PATCHES, DUEL_START, DUEL_SWITCHES, type DuelResult } from "./duel.js";
 export { assemble, loadAsm, formatListing, printListing, PDP7, PDP7_SYMBOLS, DEC_1964, CAMBRIDGE_1972 } from "./asm.js";
 export { assembleAs7, formatA7out, formatAs7Labels } from "./asm/as7.js";
 export type { AsmTape, AsmLine, AsmResult, AsmOpts, Dialect, ListingOpts, Machine } from "./asm.js";

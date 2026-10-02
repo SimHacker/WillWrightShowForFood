@@ -43,6 +43,18 @@ Ten of the eighteen console switches. A switch is active when it is
 | thrust forward | 3 | thrust forward | 16 |
 | fire | 4 | fire | 17 |
 
-When a round ends the machine halts at 721; start again at 4000.
+When a round ends the machine halts at 721; start again at 4000, which
+clears the flags and keeps core. The program never says who won; it
+leaves that in 1157, which 717 tests before the halt. Read from the
+disassembly:
+
+| 1157 | Set at | Meaning |
+|---|---|---|
+| 777000 | 1361, torpedo check at the right ship (1514, 1515) | left wins |
+| 000777 | 1350, torpedo check at the left ship (1471, 1472) | right wins |
+| 777777 | 1340, the ships within 40 of each other | collision, a draw |
+
+The cabinet reads it at the halt and puts the result, a running tally
+and a Play again button over the tube, without touching the program.
 
 ↑ [cabinet README](../../README.md)

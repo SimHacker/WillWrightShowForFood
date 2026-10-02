@@ -18,6 +18,24 @@ export const DUEL_SWITCHES = {
 } as const;
 
 export const DUEL_START = 0o4000;
+/** The round-over flag: 717 halts at 721 once it is nonzero. */
+export const DUEL_HIT = 0o1157;
+
+export type DuelResult = "left" | "right" | "draw";
+
+/** Who won the round, read from the flag the program left behind; null if no round has ended. */
+export function duelResult(cpu: Pdp7): DuelResult | null {
+	switch (cpu.read(DUEL_HIT)) {
+		case 0o777000: // set by the torpedo check at the right ship (1361)
+			return "left";
+		case 0o000777: // set by the torpedo check at the left ship (1350)
+			return "right";
+		case 0o777777: // the ships collided (1340)
+			return "draw";
+		default:
+			return null;
+	}
+}
 const RIM_ORIGIN = 0o17763;
 const RIM_START = 0o17770;
 const LOADED = 0o646;

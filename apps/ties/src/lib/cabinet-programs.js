@@ -7,6 +7,8 @@
 import {
 	PaperTape,
 	bootDuel,
+	duelResult,
+	DUEL_START,
 	DUEL_SWITCHES,
 	assembleLp370,
 	bootLp370,
@@ -97,6 +99,10 @@ function parseSymbolTsv(text) {
  * source() resolves to a SourceMap (source.ts) for the code and source views.
  * hint(hover, segments) names what the pointer rests on, { title, text } or
  * null; the applet shows the machine's own view of the stroke either way.
+ * halt says what a HLT means without touching the program: restart is where
+ * play-again starts, explain(cpu) reads core into { title, text, score },
+ * score a key of scores, the tally kept per program. Any other program gets
+ * a plain "Halted at" with Continue.
  * Any program can be recorded and replayed by the applet (session.ts).
  */
 export const PROGRAMS = [
@@ -195,6 +201,18 @@ export const PROGRAMS = [
 		boot({ cpu, box, extra }) {
 			if (!bootDuel(box, cpu, extra[0], this.tapes.rim, this.tapes.duel)) throw new Error('DUEL did not load to 646');
 			cpu.switches = this.switches;
+		},
+		// DUEL halts at 721 when a round ends and leaves the outcome in 1157 (tapes/duel/README.md).
+		halt: {
+			restart: DUEL_START,
+			scores: { left: 'Left', right: 'Right', draw: 'Draws' },
+			explain(cpu) {
+				const r = duelResult(cpu);
+				if (r === 'left') return { title: 'Left wins', text: 'A torpedo hit the right ship.', score: r };
+				if (r === 'right') return { title: 'Right wins', text: 'A torpedo hit the left ship.', score: r };
+				if (r === 'draw') return { title: 'Draw', text: 'The ships collided.', score: r };
+				return null;
+			}
 		},
 		status() {
 			return '';

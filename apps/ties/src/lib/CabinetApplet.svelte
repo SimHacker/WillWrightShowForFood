@@ -662,6 +662,75 @@
 	const MODE_NAME = Object.fromEntries(Object.entries(MODE).map(([name, n]) => [n, name.toLowerCase()]));
 	let clock = null;
 	let halted = $state(false);
+
+	// A HLT is read, not patched: the program's halt spec explains it from core and says where to start again.
+	let haltInfo = $state(null);
+	let haltTimer = null;
+	const HALT_AUTO_MS = 3000;
+	const scoresKey = (id) => `cabinet-scores-${id}`;
+	function loadScores(id) {
+		try {
+			return JSON.parse(localStorage.getItem(scoresKey(id)) ?? '{}') ?? {};
+		} catch {
+			return {};
+		}
+	}
+	let scores = $state(untrack(() => loadScores(programId)));
+	let haltAuto = $state(untrack(() => globalThis.localStorage?.getItem(`cabinet-halt-auto-${programId}`) === 'on'));
+	function setHaltAuto(on) {
+		haltAuto = on;
+		store(`cabinet-halt-auto-${programId}`, on ? 'on' : '');
+		if (on && haltInfo?.restart !== undefined) armHaltAuto();
+		else clearTimeout(haltTimer);
+	}
+	function armHaltAuto() {
+		clearTimeout(haltTimer);
+		haltTimer = setTimeout(() => haltInfo && onHaltGo(haltInfo.restart), HALT_AUTO_MS);
+	}
+
+	function noteHalt() {
+		if (haltInfo || !cpu?.halted) return;
+		const spec = program?.halt;
+		const said = spec?.explain?.(cpu) ?? null;
+		const at = oct(cpu.pc, 4);
+		haltInfo = {
+			title: said?.title ?? `Halted at ${at}`,
+			text: said?.text ?? (said ? '' : 'The program stopped itself. Continue runs on from here.'),
+			restart: said ? spec.restart : undefined,
+			at
+		};
+		if (said?.score && !player) {
+			scores = { ...scores, [said.score]: (scores[said.score] ?? 0) + 1 };
+			try {
+				localStorage.setItem(scoresKey(programId), JSON.stringify(scores));
+			} catch {
+				// Blocked storage: the tally lasts until the page is left.
+			}
+		}
+		if (haltAuto && haltInfo.restart !== undefined) armHaltAuto();
+	}
+
+	function clearHalt() {
+		clearTimeout(haltTimer);
+		haltInfo = null;
+	}
+
+	/** Lift HLT and run from pc, or on from where it stopped; recorded so a replay does the same. */
+	function onHaltGo(pc) {
+		if (!cpu) return;
+		cpu.halted = false;
+		if (pc !== undefined) cpu.pc = pc;
+		recorder?.record(box.cycles, 'go', cpu.pc);
+		clearHalt();
+		halted = false;
+		paused = false;
+		canvasEl?.focus({ preventScroll: true });
+	}
+
+	function onClearScores() {
+		scores = {};
+		store(scoresKey(programId), '');
+	}
 	let regs = $state.raw(null);
 	function refreshRegs() {
 		if (!regsOpen || !cpu || !t340 || !box) return;
@@ -844,6 +913,7 @@
 		}
 		switches = cpu.switches;
 		halted = cpu.halted;
+		noteHalt();
 		drawFrame();
 		refreshMem();
 		refreshRegs();
@@ -1545,6 +1615,7 @@
 				}
 				if (stepped) {
 					halted = cpu.halted;
+					noteHalt();
 					refreshMem();
 					refreshRegs();
 					if (memOpen && memView !== 'trace' && !pcInView()) showPc();
@@ -1571,6 +1642,7 @@
 				} else {
 					runMachine(cycles);
 				}
+				noteHalt();
 			}
 			drawFrame();
 			updateReadout(now);
@@ -1743,7 +1815,12 @@
 				pen.point(Number(x), Number(y));
 				pen.enabled = !!down;
 			},
-			poke: (addr, ...words) => monitor?.poke(Number(addr), words.map(Number))
+			poke: (addr, ...words) => monitor?.poke(Number(addr), words.map(Number)),
+			go: (pc) => {
+				cpu.halted = false;
+				cpu.pc = Number(pc);
+				clearHalt();
+			}
 		};
 	}
 
@@ -1836,6 +1913,7 @@
 		recording = false;
 		pressedId = null;
 		held.clear();
+		clearHalt();
 		await program.load?.();
 		bootMachine();
 		cyclesAtReadout = 0;
@@ -1854,6 +1932,8 @@
 		memShownBase = -1;
 		ttyLine = '';
 		session = loadSession(next.id);
+		scores = loadScores(next.id);
+		haltAuto = localStorage.getItem(`cabinet-halt-auto-${next.id}`) === 'on';
 		displayOpen = next.display !== false;
 		if (next.tty && !ttyOpen) togglePanel('tty', {});
 		await onReset();
@@ -2001,6 +2081,31 @@
 		{/if}
 	</div>
 {/snippet}
+{#snippet haltPanel(inline)}
+	<div class="halt" class:inline role="status" aria-live="polite">
+		<div class="halt-box">
+			<div class="halt-title">{haltInfo.title}</div>
+			{#if haltInfo.text}<div class="halt-text">{haltInfo.text}</div>{/if}
+			<div class="halt-machine">HLT at {haltInfo.at}{haltInfo.restart !== undefined ? `, read from core; the program is unchanged` : ''}</div>
+			{#if program?.halt?.scores && Object.keys(scores).length}
+				<div class="halt-score">
+					{#each Object.entries(program.halt.scores) as [key, name] (key)}<span>{name} {scores[key] ?? 0}</span>{/each}
+					<button type="button" class="link" title="Forget the tally kept in this browser" onclick={onClearScores}>clear</button>
+				</div>
+			{/if}
+			<div class="halt-buttons">
+				{#if haltInfo.restart !== undefined}
+					<button type="button" title="Start at {oct(haltInfo.restart, 4)}, as the operator did" onclick={() => onHaltGo(haltInfo.restart)}>Play again</button>
+				{/if}
+				<button type="button" title="Lift the halt and run on from {haltInfo.at}" onclick={() => onHaltGo()}>Continue</button>
+				<button type="button" title="Reload the program from scratch" onclick={onReset}>Reset</button>
+			</div>
+			{#if haltInfo.restart !== undefined}
+				<label class="halt-auto"><input type="checkbox" checked={haltAuto} onchange={(e) => setHaltAuto(e.currentTarget.checked)} /> Play again by itself</label>
+			{/if}
+		</div>
+	</div>
+{/snippet}
 <figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px" style:min-height={figHeight ? `${figHeight}px` : null}>
 	<!-- The program comes first, so opening or closing the display never moves the menu. -->
 	<div class="row menu top">
@@ -2040,6 +2145,9 @@
 	>
 	{#if !displayOpen && status !== 'live'}
 		{@render overlay(true)}
+	{/if}
+	{#if !displayOpen && haltInfo && status === 'live'}
+		{@render haltPanel(true)}
 	{/if}
 	<div class="tube-wrap" id="cabinet-tube" style:width="{side}px" hidden={!displayOpen}>
 		<canvas
@@ -2081,6 +2189,9 @@
 					</div>
 				{/if}
 			</div>
+		{/if}
+		{#if displayOpen && haltInfo && status === 'live'}
+			{@render haltPanel(false)}
 		{/if}
 		{#if displayOpen && status !== 'live'}
 			{@render overlay(false)}
@@ -2824,6 +2935,64 @@
 		font-family: ui-monospace, monospace;
 		font-size: 0.72rem;
 		color: #ffd27a;
+	}
+	.halt {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 12%;
+		display: flex;
+		justify-content: center;
+		pointer-events: none;
+	}
+	.halt.inline {
+		position: static;
+		padding: 0.4rem 0;
+	}
+	.halt-box {
+		pointer-events: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.3rem;
+		padding: 0.6rem 1rem;
+		max-width: 80%;
+		background: rgba(0, 0, 0, 0.82);
+		border: 1px solid #c9a15a;
+		border-radius: 6px;
+		color: #9fe8a0;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+	.halt-title {
+		color: #ffd27a;
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+	.halt-machine {
+		color: #c9a15a;
+		font-family: ui-monospace, monospace;
+		font-size: 0.7rem;
+	}
+	.halt-score {
+		display: flex;
+		gap: 0.8rem;
+		font-family: ui-monospace, monospace;
+	}
+	.halt-buttons {
+		display: flex;
+		gap: 0.4rem;
+	}
+	.halt-auto {
+		font-size: 0.7rem;
+	}
+	.halt .link {
+		background: none;
+		border: none;
+		padding: 0;
+		color: #c9a15a;
+		text-decoration: underline;
+		cursor: pointer;
 	}
 	.overlay.failed {
 		place-items: stretch;

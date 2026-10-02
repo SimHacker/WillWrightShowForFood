@@ -6,7 +6,7 @@ import { Cabinet } from "./cabinet.js";
 import { loadSymelec } from "./symelec-fixtures.js";
 import { DemoPlayer, houseDemo, drawing } from "./symelec-demo.js";
 import { toSvg, toYaml } from "./media.js";
-import { DUEL_SWITCHES, bootDuel } from "./duel.js";
+import { DUEL_START, DUEL_SWITCHES, bootDuel, duelResult } from "./duel.js";
 import { PaperTape } from "./plugins/papertape.js";
 import { Clock } from "./plugins/clock.js";
 import { LightPen } from "./plugins/lightpen.js";
@@ -767,4 +767,19 @@ test("acceptance: DUEL loads from paper tape and the switches fly a ship", () =>
 	const moved = look(40_000);
 	assert.equal(cpu.halted, false);
 	assert.notEqual(Math.min(...leftXs(moved)), before, "the left ship moved");
+
+	// Put the right ship on the left one: the round ends in a collision, read from core.
+	cpu.switches = 0o777777;
+	cpu.write(0o1654, cpu.read(0o1656));
+	cpu.write(0o1655, cpu.read(0o1657));
+	box.run(200_000);
+	assert.equal(cpu.halted, true, "the round ended");
+	assert.equal(cpu.pc, 0o722);
+	assert.equal(duelResult(cpu), "draw");
+
+	cpu.halted = false;
+	cpu.pc = DUEL_START;
+	box.run(1_000_000);
+	assert.equal(cpu.halted, false, "a new round runs");
+	assert.equal(duelResult(cpu), null);
 });
