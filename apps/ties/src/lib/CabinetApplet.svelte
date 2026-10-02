@@ -1015,8 +1015,9 @@
 		sendLine(program?.spoken ? program.spoken(text) : text);
 	}
 	function onCliInput(e) {
-		// Raw input: every character goes straight through, as keys on the paper do.
-		if (ttyCfg.input === 'raw') {
+		// Raw input: typed characters go straight through; dictation waits so spelled numbers become digits.
+		const keyed = Date.now() - cliKeyAt <= 150 && e?.inputType !== 'insertFromPaste';
+		if (ttyCfg.input === 'raw' && (keyed || !program?.spoken)) {
 			if (!ttyLine) return;
 			const codes = [...ttyLine].map((ch) => charCode(ch)).filter((c) => c >= 0);
 			ttyLine = '';
