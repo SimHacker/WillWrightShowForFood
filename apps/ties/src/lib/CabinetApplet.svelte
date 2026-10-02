@@ -21,6 +21,7 @@
 		Trace,
 		Monitor,
 		hoverAt,
+		dist2,
 		MODE,
 		ST340_STOPPED,
 		ST340_LPHIT,
@@ -324,41 +325,116 @@
 		ctx.fillStyle = '#0a0f0a';
 		ctx.fillRect(0, 0, 1024, 1024);
 		const frames = batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
-		drawSegments(ctx, integrate(frames), frames.length);
+		const seen = integrate(frames);
+		drawSegments(ctx, seen, frames.length);
 		batch = [];
+		const showPen = player || pressedId !== null;
+		if (showPen) sensePen(seen, frames.length);
 		const hovered = hoverTip();
 		if (hovered) drawHover(ctx, hovered);
-		if (player || pressedId !== null) drawPen(ctx);
+		if (showPen) drawPen(ctx);
 	}
 
-	// The pen is not on the tube; this is where it is and what it can see.
+	// penGlow: how much phosphor light the photocell sees, 0..1, eased so it swells and fades.
+	// penFlash: 1 when the 340 latched a hit for this pen, decaying; the program saw it.
+	let penGlow = 0;
+	let penFlash = 0;
+	let hitSeen = null;
+
+	function sensePen(seen, total) {
+		const r = pen.aperture;
+		let light = 0;
+		for (const { s, n } of seen.values()) {
+			if (dist2(pen.x, pen.y, s.x0, s.y0, s.x1, s.y1) > r * r) continue;
+			const a = phosphor(s.intensity, n / total);
+			const dx = s.x1 - s.x0;
+			const dy = s.y1 - s.y0;
+			const len2 = dx * dx + dy * dy;
+			if (len2 === 0) {
+				light += a * Math.max(2, s.scale || 1);
+				continue;
+			}
+			// Length of the stroke inside the aperture circle.
+			const fx = s.x0 - pen.x;
+			const fy = s.y0 - pen.y;
+			const b = (fx * dx + fy * dy) / len2;
+			const c = (fx * fx + fy * fy - r * r) / len2;
+			const disc = Math.sqrt(Math.max(0, b * b - c));
+			const t0 = Math.max(0, -b - disc);
+			const t1 = Math.min(1, -b + disc);
+			light += a * Math.max(0, t1 - t0) * Math.sqrt(len2);
+		}
+		// A full-bright line across the diameter reads 0.63; dense text saturates toward 1.
+		const target = pen.enabled ? 1 - Math.exp(-light / (2 * r)) : 0;
+		penGlow += (target - penGlow) * (target > penGlow ? 0.6 : 0.2);
+		if (t340.lastHit !== hitSeen) {
+			hitSeen = t340.lastHit;
+			if (t340.lastHitPen === pen) penFlash = 1;
+		} else penFlash *= 0.8;
+	}
+
+	// The pen is not on the tube; this is where it is and what it can see. On the glass the
+	// ring fills with light in proportion to what the photocell reads, additively, so the
+	// strokes under it stay visible.
 	function drawPen(ctx) {
 		const x = pen.x;
 		const y = 1023 - pen.y;
-		ctx.globalAlpha = pen.enabled ? 0.22 : 0.1;
-		ctx.fillStyle = '#ffd27a';
+		ctx.save();
 		ctx.beginPath();
 		ctx.arc(x, y, pen.aperture, 0, 2 * Math.PI);
-		ctx.fill();
-		ctx.globalAlpha = pen.enabled ? 0.8 : 0.35;
-		ctx.strokeStyle = '#ffd27a';
-		ctx.lineWidth = 1.5;
+		if (pen.enabled) {
+			ctx.globalCompositeOperation = 'lighter';
+			ctx.globalAlpha = Math.min(0.75, 0.08 + 0.45 * penGlow + 0.25 * penFlash);
+			ctx.fillStyle = '#ffd27a';
+			ctx.fill();
+			ctx.globalCompositeOperation = 'source-over';
+		}
+		ctx.globalAlpha = pen.enabled ? 0.8 + 0.2 * penFlash : 0.35;
+		ctx.strokeStyle = penFlash > 0.5 ? '#fff4d0' : '#ffd27a';
+		ctx.lineWidth = 1.5 + 1.5 * penFlash;
 		ctx.stroke();
-		ctx.globalAlpha = pen.enabled ? 1 : 0.5;
-		ctx.fillStyle = pen.enabled ? '#fff4d0' : '#ffd27a';
-		ctx.beginPath();
-		ctx.arc(x, y, pen.enabled ? 3.5 : 2.5, 0, 2 * Math.PI);
-		ctx.fill();
-		ctx.globalAlpha = 1;
+		ctx.restore();
 	}
 
 	// Hovering is the pen held off the glass: the program can't see it, the page can.
 	// After a rest, read the display list under the pointer and say what drew it.
 	const HOVER_MS = 400;
 	const TIP_ROOM = 400;
+	// The tip snaps in, survives a few frames of missed hits, then fades fast.
+	const TIP_HOLD_MS = 300;
+	const TIP_FADE_MS = 150;
 	let rest = null;
-	let tip = $state(null);
+	let penAt = null;
+	let tip = $state.raw(null);
+	let tipLost = 0;
 	let penHeld = $state(false);
+
+	function showTip(t) {
+		if (t) {
+			tipLost = 0;
+			tip = t;
+			return;
+		}
+		if (!tip || tip.gone) return;
+		const now = performance.now();
+		if (!tipLost) tipLost = now;
+		if (now - tipLost >= TIP_HOLD_MS) fadeTip();
+	}
+
+	function fadeTip() {
+		if (!tip || tip.gone) return;
+		const t = { ...tip, gone: true };
+		tip = t;
+		tipLost = 0;
+		setTimeout(() => {
+			if (tip === t) tip = null;
+		}, TIP_FADE_MS + 20);
+	}
+
+	function notePenAt(event) {
+		const rect = canvasEl.getBoundingClientRect();
+		penAt = { px: event.clientX - rect.left, py: event.clientY - rect.top, w: rect.width, h: rect.height };
+	}
 
 	function onHoverMove(event) {
 		if (pressedId !== null || event.pointerType === 'touch' || !canvasEl) return;
@@ -368,12 +444,12 @@
 		if (rest && Math.hypot(px - rest.px, py - rest.py) < 3) return;
 		const { x, y } = gridFromEvent(event);
 		rest = { gx: x, gy: y, px, py, w: rect.width, h: rect.height, since: performance.now() };
-		tip = null;
+		fadeTip();
 	}
 
 	function onHoverLeave() {
 		rest = null;
-		tip = null;
+		if (pressedId === null) fadeTip();
 	}
 
 	const where = (a) => {
@@ -399,16 +475,21 @@
 		return lines;
 	}
 
-	/** Refresh the tooltip from the latest frame; returns the hover to outline, or null. */
+	/**
+	 * Refresh the tooltip from the latest frame; returns the hover to outline, or null.
+	 * Hovering waits for a rest; a pen on the glass captions what it is over at once.
+	 */
 	function hoverTip() {
-		if (!rest || pressedId !== null || !t340 || performance.now() - rest.since < HOVER_MS) {
-			if (tip && (!rest || pressedId !== null)) tip = null;
+		const held = pressedId !== null && pen && penAt;
+		const at = held ? { ...penAt, gx: pen.x, gy: pen.y } : rest;
+		if (!t340 || !at || (!held && performance.now() - rest.since < HOVER_MS)) {
+			showTip(null);
 			return null;
 		}
 		const segs = t340.lastFrame?.segments ?? t340.segments;
-		const h = hoverAt(segs, rest.gx, rest.gy, Math.max(6, (10 * 1024) / rest.w));
+		const h = hoverAt(segs, at.gx, at.gy, held ? pen.aperture : Math.max(6, (10 * 1024) / at.w));
 		if (!h) {
-			tip = null;
+			showTip(null);
 			return null;
 		}
 		let hint = null;
@@ -417,14 +498,16 @@
 		} catch (e) {
 			console.error('cabinet hint', e);
 		}
-		tip = {
-			px: rest.px,
-			py: rest.py,
-			flipx: rest.px > rest.w - TIP_ROOM,
-			flipy: rest.py > rest.h * 0.6,
+		showTip({
+			px: at.px,
+			py: at.py,
+			flipx: at.px > at.w - TIP_ROOM,
+			flipy: at.py > at.h * 0.6,
 			hint,
-			machine: machineLines(h)
-		};
+			machine: machineLines(h),
+			sensor: held ? penGlow : null,
+			hit: held && penFlash > 0.5
+		});
 		return h;
 	}
 
@@ -1407,7 +1490,7 @@
 		event.preventDefault();
 		event.stopPropagation();
 		rest = null;
-		tip = null;
+		notePenAt(event);
 		penHeld = true;
 		try {
 			canvasEl.setPointerCapture(event.pointerId);
@@ -1426,6 +1509,7 @@
 	function onPointerMove(event) {
 		onHoverMove(event);
 		if (!pen || event.pointerId !== pressedId) return;
+		notePenAt(event);
 		pen.aperture = penAperture(event);
 		const { x, y } = gridFromEvent(event);
 		pen.point(x, y);
@@ -1865,6 +1949,7 @@
 				class="tip"
 				class:flipx={tip.flipx}
 				class:flipy={tip.flipy}
+				class:gone={tip.gone}
 				style:left="{tip.px}px"
 				style:top="{tip.py}px"
 				role="tooltip"
@@ -1876,6 +1961,12 @@
 				<div class="tip-machine">
 					{#each tip.machine as line, i (i)}<div>{line}</div>{/each}
 				</div>
+				{#if tip.sensor !== null}
+					<div class="tip-sensor" class:hit={tip.hit}>
+						<span class="tip-meter"><span style:width="{Math.round(tip.sensor * 100)}%"></span></span>
+						{tip.hit ? 'pen hit' : 'pen sees'}
+					</div>
+				{/if}
 			</div>
 		{/if}
 		{#if displayOpen && status !== 'live'}
@@ -2476,11 +2567,9 @@
 				12 12,
 			crosshair;
 	}
+	/* On the glass the canvas draws the pen: a ring lit by what it sees. */
 	.tube.live.held {
-		cursor:
-			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='6' cy='6' r='2.5' fill='%23fff4d0' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E")
-				6 6,
-			crosshair;
+		cursor: none;
 	}
 	.tip {
 		position: absolute;
@@ -2495,11 +2584,46 @@
 		color: #ffd27a;
 		background: rgb(22 14 2 / 0.94);
 		border: 1px solid #8a6424;
-		border-radius: 3px;
+		border-radius: 6px;
+		box-shadow: 0 2px 8px rgb(0 0 0 / 0.5);
+		animation: tip-pop 70ms ease-out;
+	}
+	.tip.gone {
+		opacity: 0;
+		transition: opacity 150ms ease-out;
+	}
+	@keyframes tip-pop {
+		from {
+			scale: 0.9;
+		}
+	}
+	/* The caption's tail, pointing back at the pen. */
+	.tip::before {
+		content: '';
+		position: absolute;
+		left: 8px;
+		top: -5px;
+		width: 8px;
+		height: 8px;
+		background: inherit;
+		border: inherit;
+		border-width: 1px 0 0 1px;
+		border-radius: 0;
+		transform: rotate(45deg);
+	}
+	.tip.flipx::before {
+		left: auto;
+		right: 8px;
+	}
+	.tip.flipy::before {
+		top: auto;
+		bottom: -5px;
+		border-width: 0 1px 1px 0;
 	}
 	.tip.flipx {
 		margin-left: -18px;
 		transform: translateX(-100%);
+		transform-origin: top right;
 	}
 	.tip.flipy {
 		margin-top: -18px;
@@ -2507,6 +2631,28 @@
 	}
 	.tip.flipx.flipy {
 		transform: translate(-100%, -100%);
+	}
+	.tip-sensor {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		margin-top: 0.25rem;
+		color: #c9a15a;
+	}
+	.tip-sensor.hit {
+		color: #fff4d0;
+	}
+	.tip-meter {
+		width: 5rem;
+		height: 0.4rem;
+		border: 1px solid #8a6424;
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	.tip-meter > span {
+		display: block;
+		height: 100%;
+		background: #ffd27a;
 	}
 	.tip-title {
 		color: #ffd27a;
