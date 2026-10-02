@@ -81,7 +81,17 @@ a **cartridge**, and everything the cabinet knows about a program is in its cart
 to by it. It can carry small pieces of code of its own, such as the SIGWINCH handler that finds
 Forth's constant, and call emulator utilities written for that one program. No shame in that:
 the emulator is an advocate for both the running program and the person using it, and it helps
-each one meet the other halfway. A URL is a cartridge plus profiles you can stack
+each one meet the other halfway. The idea is borrowed. Richard Potter's
+[Triggers](http://acypher.com/wwid/Chapters/17Triggers.html) (HCIL, 1991) read a Mac's screen
+pixels to drive applications that offered no other way in, and gave MacDraw II a tool palette it
+lacked. Morgan Dixon and James Fogarty's
+[Prefab](https://web.archive.org/web/20131005022032/http://homes.cs.washington.edu/~mdixon/research/prefab/) recovered interface structure
+from pixels alone and added target-aware pointing to programs whose source it never saw. Simon
+Schneegans's [Kando](https://kando.menu/) lays pie menus over any desktop application, and Don's
+[aQuery](https://web.archive.org/web/20180826132551/http://donhopkins.com/mediawiki/index.php/AQuery) selects accessibility trees the way
+jQuery selects the DOM. Each one improves a program from outside without changing it. The cabinet
+does the same for PDP-7 programs, and it has an advantage none of them had: it is the machine,
+so it reads core instead of pixels. A URL is a cartridge plus profiles you can stack
 (`/cabinet/forth/?profile=trace`), and an article embeds exactly the same thing.
 
 ## Live coding all the way down
