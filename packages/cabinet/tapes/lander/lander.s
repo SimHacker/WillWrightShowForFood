@@ -216,7 +216,7 @@ is1,	lac odd
 is2,	lac root
 	jmp i isqrt
 
-/ TIME: secs. ALTITUDE: feet. SPEED: ft/s. FUEL: units.
+/ TIME IS secs. ALTITUDE IS feet. SPEED IS ft/s. FUEL IS units.
 status,	0
 	lac (tm
 	jms puts
@@ -356,19 +356,19 @@ hello,	text "LANDER, FOR THE PDP-7 TELETYPE."
 	212
 	text "PRESS RETURN TO START."
 	0
-tm,	text "TIME: "
+tm,	text "TIME IS "
 	0
-altm,	text ". ALTITUDE: "
+altm,	text ". ALTITUDE IS "
 	0
 halfm,	text ".5"
 	0
-velm,	text ". SPEED: "
+velm,	text ". SPEED IS "
 	0
-fuelm,	text ". FUEL: "
+fuelm,	text ". FUEL IS "
 	0
 dot,	text "."
 	0
-burnq,	text " BURN?"
+burnq,	text " YOUR BURN?"
 	215
 	212
 	0

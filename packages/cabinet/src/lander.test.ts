@@ -35,7 +35,7 @@ function machine() {
 }
 
 const alt = (h2: number): string => `${h2 >> 1}${h2 & 1 ? ".5" : ""}`;
-const line = (s: LanderState): string => `TIME: ${s.secs}. ALTITUDE: ${alt(s.h2)}. SPEED: ${s.v}. FUEL: ${s.fuel}.`;
+const line = (s: LanderState): string => `TIME IS ${s.secs}. ALTITUDE IS ${alt(s.h2)}. SPEED IS ${s.v}. FUEL IS ${s.fuel}.`;
 const rating = (vi: number): string =>
 	vi < 3 ? "PERFECT LANDING." : vi < 10 ? "GOOD LANDING." : vi < 30 ? "HARD LANDING. THE LEGS ARE BENT." : "CRASHED.";
 
@@ -45,7 +45,7 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 	assert.match(m.paper(), /^LANDER, FOR THE PDP-7 TELETYPE\.\r\n[\s\S]*PRESS RETURN TO START\.$/);
 	let s: LanderState = { h2: LANDER.h2, v: LANDER.v, fuel: LANDER.fuel, secs: 0 };
 	let out = m.type("\r");
-	assert.equal(out, `\r\n${line(s)} BURN?\r\n`);
+	assert.equal(out, `\r\n${line(s)} YOUR BURN?\r\n`);
 	let all = out;
 	for (const b of burns) {
 		const r = landerStep(s, b);
@@ -63,7 +63,7 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 			assert.equal(out, `${echo}${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FEET A SECOND, WITH 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.`);
 			return { paper: all, contact: f };
 		}
-		assert.equal(out, `${echo}${line(s)} BURN?\r\n`, `after burn ${b}`);
+		assert.equal(out, `${echo}${line(s)} YOUR BURN?\r\n`, `after burn ${b}`);
 	}
 	throw new Error("still flying");
 }
@@ -105,9 +105,9 @@ test("lander: random burns, including burning more than is left, match the model
 test("lander: over 30 is refused and asked again; Return alone burns nothing", () => {
 	const m = machine();
 	m.type("\r");
-	assert.equal(m.type("31\r"), "31\r\n30 AT MOST.\r\nTIME: 0. ALTITUDE: 500. SPEED: -50. FUEL: 60. BURN?\r\n");
-	assert.equal(m.type("99999999\r"), "99999999\r\n30 AT MOST.\r\nTIME: 0. ALTITUDE: 500. SPEED: -50. FUEL: 60. BURN?\r\n", "a long number does not wrap");
-	assert.equal(m.type("\r"), "\r\nTIME: 1. ALTITUDE: 447.5. SPEED: -55. FUEL: 60. BURN?\r\n");
+	assert.equal(m.type("31\r"), "31\r\n30 AT MOST.\r\nTIME IS 0. ALTITUDE IS 500. SPEED IS -50. FUEL IS 60. YOUR BURN?\r\n");
+	assert.equal(m.type("99999999\r"), "99999999\r\n30 AT MOST.\r\nTIME IS 0. ALTITUDE IS 500. SPEED IS -50. FUEL IS 60. YOUR BURN?\r\n", "a long number does not wrap");
+	assert.equal(m.type("\r"), "\r\nTIME IS 1. ALTITUDE IS 447.5. SPEED IS -55. FUEL IS 60. YOUR BURN?\r\n");
 });
 
 test("lander: a burn that touches down and lifts off inside one second is a landing", () => {
