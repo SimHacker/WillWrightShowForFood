@@ -104,8 +104,10 @@ a tag, the overlay also:
 - moves **real browser focus** to an element for that tag, so the browser's own focus
   machinery and screen readers work;
 - highlights the tagged segments;
-- shows the title, and after the usual delay the tooltip with the full URL, so you see
-  where a link goes before following it;
+- shows the title, the definition and the full URL, so you see where a link goes
+  before following it: in HyperTIES, in the definition window at the bottom, not
+  over the tube ([ROADMAP §10](ROADMAP.md#10-info-goes-upstairs-the-definition-window));
+  standalone, in the light tooltip;
 - announces the title through the `aria-live` announcer.
 
 Keyboard: Tab and Shift-Tab move the latch through the tagged items in display-list

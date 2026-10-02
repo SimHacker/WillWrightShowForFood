@@ -16,12 +16,15 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 4 | Answers to Heinz's other points | owed | [§4](#4-heinzs-seven-points) |
 | 5 | Forth `wait` and `say"` | Forth programs that draw while they speak | [§5](#5-forth-that-draws-and-speaks) |
 | 6 | Round screen | the 25 cm question, historically framed | [§6](#6-round-screen) |
-| 7 | Multi-pen IDPN and the LP370 test | promised in DESIGN.md | [§7](#7-several-pens) |
-| 8 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
-| 9 | The UI driver, on MicropolisCore's command bus | menus, tiny-its, LLMs and macros drive the bench | [§8](#8-driving-the-ui) |
-| 10 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
+| 7 | The UI driver, on MicropolisCore's command bus; tests become driver scripts | everything below drives the bench through it | [§8](#8-driving-the-ui) |
+| 8 | The Engelbart Cursor Party: several pens, several users, the LP370 test as the show | promised in DESIGN.md; the first multi-pen script | [§7](#7-several-pens-the-engelbart-cursor-party) |
+| 9 | One transport, and a demo library | demos, sessions, the PC and macros share one set of controls | [§11](#11-one-transport-and-a-demo-library) |
+| 10 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
+| 11 | Info goes upstairs: the definition window | PIXIE embedded in HyperTIES, the showcase | [§10](#10-info-goes-upstairs-the-definition-window) |
+| 12 | The Engelbart mouse and chorded keyset | simulated first; digital twins of Don's pair | [§12](#12-the-engelbart-mouse-and-chorded-keyset) |
+| 13 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 
-Odds and ends are in [§10](#10-small-items).
+Odds and ends are in [§13](#13-small-items).
 
 ## 1. Tracking: the pen is sampled once per browser frame
 
@@ -138,20 +141,64 @@ The 340's tube is round, about 10 inches across, with the square drawing area in
 - A **true size** setting: calibrate once (hold a credit card to the screen), then the
   tube shows at 25 cm, Heinz's point 3.
 
-## 7. Several pens
+## 7. Several pens: the Engelbart Cursor Party
 
-IDPN (device 011) is already built: it reports which pen fired
+*A multi-user click and drag show.* In 1968 Engelbart and Bill Paxton shared one NLS
+screen from two cities, each with a cursor (Engelbart's a bug, Paxton's a dot). The
+cabinet's 340 takes any number of pens, so the party is the same thing on 1964 iron.
+
+**What is built.** The 340 takes a list of pens, all sharing the one LPHIT flag, as
+on the real hardware. IDPN (device 011, a cabinet extension) reports which pen fired
 ([DESIGN.md](DESIGN.md), IOT table). Pens have colours (`PEN_COLORS`, pen 0 amber).
+The applet drives one pen from one pointer (`pressedId`).
 
-- Upgrade the LP370 test for several pens: show, in each pen's colour, which pen each
-  hit came from.
-- Stock programs are unaffected: they never issue IDPN, and the mouse is pen 0.
+**Guests.**
+
+- **Every pointer is a pen.** Each `pointerId` (mouse, each finger, each stylus) gets
+  its own `LightPen`, coloured and labelled, created on press and kept while it
+  hovers. Two hands on a touch screen are two pens.
+- **Every user is a pen.** A watcher on another node ([DESIGN.md](DESIGN.md),
+  watchers and pens) sends pen events over tiny-its; the host adds a pen for them.
+  Who may hold a pen is the host's call: watch only, one pen, or open party.
+- **Every script is a pen.** A driver script (§8) takes `pen: n`, so a test or demo can
+  play several users at once, and a recording stores which pen did what.
+- **Each pen is a vehicle** ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
+  a cursor in its colour with its owner's name, and its own coverage and hit feedback.
+
+**The show.** The LP370 diagnostic is the dance floor:
+
+- Upgrade the LP370 program so each hit is drawn in the colour of the pen that made
+  it (read with IDPN), with a per-pen hit count; stock LP370 still runs unchanged.
+- A party demo: three scripted guests at once. One drags the box corner, one sweeps
+  the lines, one holds still on a dot, so you see three trackers and three colours
+  sharing one flag, and where 1964's single flag makes them collide.
+- Then the Engelbart tributes from DESIGN.md: two pens drag two corners of one
+  rectangle; two pies open at once; a quiver of eight wands.
+
+**Tests are party scripts.** The light pen tests move onto the driver (§8): find the
+box, `dragAlong` it with pen 1 while pen 2 taps a line, and assert on the
+`cabinet.pen.hit` events, each with its pen number. The same script, with a caption
+per step, is the demo; the same script, recorded, is the replay.
+
+- Stock programs are unaffected: they never issue IDPN, and the first pen is pen 0.
+
+**Accept:** two scripted pens on LP370 produce hits tagged with the right pen numbers;
+two fingers on a touch screen drive two pens; a remote watcher's pen shows up in its
+own colour on the host and in the recording.
 
 ## 8. Driving the UI
 
 Anything tiny-its can do, a pie menu can do. One async TypeScript layer finds things
 on the tube and works the pen there, so menus, macros, tests, demos, tiny-its and an
 LLM all drive the bench the same way: through the input path, as a user.
+
+**The display list is an accessibility DOM.** Segments with their provenance and
+tags are a tree of things on the screen, with names, roles and bounds, which is all an
+accessibility tree is. So `find` is
+[aQuery](https://web.archive.org/web/20180826132551/http://donhopkins.com/mediawiki/index.php/AQuery)
+for the 340: selectors over the tree, and actions on what they select, as
+[MANIFESTO.md](MANIFESTO.md) traces from Triggers and Prefab. Here we own both the
+tree and the input path, so nothing has to be scraped or guessed.
 
 **Find.** `find(pattern)` matches display-list items, from segments and their
 provenance (`addr`, `subr`, `block`, `kind`, `ch`, `pen`) and, once tags exist, the
@@ -180,6 +227,7 @@ box and their strokes. Symbol names come from the assembler's symbol table.
 | `dragAlong(path, duration)` | pen down, follow the path over time, pen up; interpolated as in §1 |
 | `key(text)`, `switches(n)` | keyboard and switch register |
 | `waitFor(pattern)` | resolve when a match appears on the tube |
+| `as(pen, script)` | run calls with pen n, so one script plays several users (§7) |
 
 All of them are `async`, timed in machine cycles like `DemoPlayer` in
 [symelec-demo.ts](src/symelec-demo.ts), which this generalises: its `tap`, `drag`,
@@ -193,7 +241,9 @@ coordinates. So a script survives the picture moving.
 - **tiny-its:** a pie item can send a tiny-its command, and tiny-its can send driver
   calls to a PIXIE VM, so a macro on one node can work the light pen on another
   ([TINY-ITS.md](TINY-ITS.md#macros-handlers-nodes-users)).
-- **Tests and demos:** the acceptance tests and the SYMELEC demo move to it.
+- **Tests and demos:** the acceptance tests and the SYMELEC demo move to it. A test
+  is a script that navigates the screen and works the inputs, then asserts on events;
+  with captions it is a demo, and recorded it is a session (§11).
 - **Rides:** a running script is a vehicle ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
   you watch the pen move, and Escape stops it.
 
@@ -315,7 +365,111 @@ operators stubbed) or a period NeWS screenshot; the slice and highlight geometry
 unit tests against the numbers above; a flick selects with no menu shown and the wocka
 flashes; and a HyperTIES link pops a pie whose items dispatch command-bus ids.
 
-## 10. Small items
+## 10. Info goes upstairs: the definition window
+
+Plan only. PIXIE embedded in HyperTIES is the showcase, so the tube keeps its
+phosphor and the information goes to the frame.
+
+Popping text up at the cursor is shouting: it covers the picture you are pointing
+at. A light pen already gives coverage and hit feedback on the glass in real time;
+what the thing *is* belongs out of the way, upstairs, in the HyperTIES definition
+window at the bottom of the screen, as in the LispM's mouse documentation line and
+the Emacs mode line.
+
+- **Tap selects.** A tap latches the tagged graphic (TAGS-AND-PIES §2–§3) and shows
+  its title, definition and links in the pile's definition window, through
+  `browser.definition.preview`, exactly as a HyperTIES link or picture target does
+  ([definition-previews.md](../../apps/ties/examples/hyperties/articles/definition-previews.md)).
+  No overlay on the tube.
+- **Double tap goes.** Follows the tag's link or invokes its command: the "Double
+  Click to Go" of `DefinitionWindow.svelte`, same armed state.
+- **The definition has its own links.** You can point at them and follow them there,
+  like any definition.
+- **Mechanism.** `CabinetApplet` gets `onpreview` and `onnavigate` props, as
+  `TargetApplet` has. A tag's record (TAGS-AND-PIES §1) becomes a definition: a
+  corpus article when the tag names one, otherwise a small synthetic article built
+  from the tag's title, tip and links.
+- **Standalone** (no pile around it), the light tooltip (§3) stays, and a setting picks
+  tooltip, definition, or both.
+- Hover can still write a one-line documentation line in the definition window's
+  title bar, LispM style, without taking the window from the last tap.
+
+**Accept:** in a HyperTIES article, tapping a tagged lightbutton puts its definition
+in the bottom window with nothing drawn over the tube; double tap follows it; a link
+inside that definition is followable.
+
+## 11. One transport, and a demo library
+
+Todo. Today each program has one `demo` generator, there is one recorded session per
+program in localStorage, and DEMO, 📼, ▶️/⏸️ and ⏭️ are separate controls with separate
+logic.
+
+**One playback head.** The PC, demos, sessions, tiny-its macros and pie macros are
+all a head moving along something. One interface, one component, the same buttons
+everywhere:
+
+```ts
+type HeadState = "idle" | "playing" | "paused" | "recording";
+interface PlayHead {
+  state: HeadState;
+  position: number;          // cycles, events or steps
+  length?: number;           // unknown for the PC and for live recording
+  play(): void; pause(): void; stop(): void;
+  step(): void;              // one event, one instruction, one script yield
+  seek?(to: number): void;   // replay from boot to `to`, so seeking is exact
+  record?(): void;
+  speed?: number;
+}
+```
+
+- A `Transport.svelte` shows ⏺️ ▶️ ⏸️ ⏭️ ⏹️, a position bar when `length` is known, and
+  speed. The CPU's run/pause/step becomes one `PlayHead`; a demo script another; a
+  session replay another.
+
+**A demo library.** The cartridge (the program's entry in `cabinet-programs.js`)
+carries a list instead of one function:
+
+```ts
+type Demo = {
+  id: string;
+  dc: { title: string; description?: string; creator?: string; date?: string; subject?: string[] };
+  switches?: number;
+  script?: (h: DemoHost) => DemoScript;   // built in, written as a driver script
+  session?: Session;                      // recorded events
+};
+```
+
+- A picker beside DEMO lists the cartridge's demos and the user's own; DEMO plays the
+  selected one.
+- CRUD for the user's: record new, edit the Dublin Core fields, duplicate, delete,
+  export and import as JSON (and YAML). Built-ins are read only; duplicate to edit.
+- Stored in localStorage per program, replacing the single `cabinet-session-${id}`,
+  which migrates in as the first user demo.
+- The party demo (§7) and Heinz's walkthroughs ship as built-ins.
+
+**Accept:** the PC, a demo and a recording all run from the same transport component
+with the same buttons; a recorded demo can be titled, saved, reloaded, single
+stepped and exported.
+
+## 12. The Engelbart mouse and chorded keyset
+
+Don has an actual pair. Simulated in the bench first, then digital twins.
+
+- **Simulated.** An on-screen three-button mouse and five-key chord keyset, driven by
+  the real mouse and keyboard keys, or tapped. A chord is the five keys as a binary
+  number, `a` = 1 through `z` = 26, with the mouse buttons as case and mode shifts
+  (tables taken from the NLS documentation, not guessed). The keyset sends
+  characters to the teletype and to tiny-its; the mouse buttons are its pen buttons.
+- **A teaching toy.** The keyset shows the chord it is reading and the character, so
+  you learn the code by watching, and a practice mode drills it.
+- **One more input device on the bus.** Chords become `cabinet.key.type` commands
+  (§8), so scripts, recordings and the party treat the keyset like any keyboard.
+- **Digital twins.** Measured from Don's pair: 3D models, printable shells, a maker
+  kit, and finished Bluetooth HID devices that work with the simulator and with any
+  computer. The hardware project gets its own home when it starts; this bench is its
+  first software.
+
+## 13. Small items
 
 - TRACKING.md: a note on `SRAST`'s diagonal step 6.
 - Replace the dead Prefab and aQuery links with Wayback copies in
