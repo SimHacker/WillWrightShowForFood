@@ -59,17 +59,20 @@
 	let error = $state(null);
 	let running = $state(false);
 
-	const size = $derived(Number(spec.size) || 512);
-	// A size the reader dragged to wins over the fitted one, and is kept.
+	const size = $derived(Number(spec.size) || 1024);
+	// The tube's side: a size the reader dragged to wins over the fitted one, and is kept.
+	// The tube is square and centred, black letterbox left and right, never above or below.
 	const SIDE_KEY = 'cabinet-side';
 	let userSide = $state(untrack(() => Number(globalThis.localStorage?.getItem(SIDE_KEY)) || null));
-	const side = $derived(userSide ?? fitSide ?? size);
-	// The figure's height over its width, once the bottom edge has been dragged. The tube
-	// stays square; the height is a floor, so content taller than it still shows, and
-	// height past the content goes to the Memory drawer or stays blank.
-	const ASPECT_KEY = 'cabinet-aspect';
-	let userAspect = $state(untrack(() => Number(globalThis.localStorage?.getItem(ASPECT_KEY)) || null));
-	const figHeight = $derived(userAspect ? Math.round(side * userAspect) : null);
+	// The figure's width fills the pane unless dragged; the panels span it, whatever the tube.
+	const WIDTH_KEY = 'cabinet-width';
+	let userWidth = $state(untrack(() => Number(globalThis.localStorage?.getItem(WIDTH_KEY)) || null));
+	let figW = $state(0);
+	const side = $derived(Math.min(userSide ?? fitSide ?? size, figW || Infinity));
+	// The figure's height once the bottom edge has been dragged: a floor, so content taller
+	// than it still shows, and height past the content goes to the growing panel.
+	const HEIGHT_KEY = 'cabinet-height';
+	let figHeight = $state(untrack(() => Number(globalThis.localStorage?.getItem(HEIGHT_KEY)) || null));
 
 	// The tube stays square and, with the console, menu and demo rows, fits the scrolling
 	// pane it sits in. The reserve is fixed, not measured, so switching programs or starting
@@ -94,9 +97,9 @@
 		fitSide = Math.floor(Math.max(MIN_SIDE, Math.min(size, width, height)));
 	}
 
-	// Edge drags. A side edge scales the figure, keeping its aspect; the figure is centred,
-	// so width = start ± 2·dx keeps the grabbed edge under the pointer. The bottom edge
-	// keeps the width and sets the height, no shorter than the content.
+	// Edge drags. The figure's side edges set its width and its bottom edge its height, no
+	// shorter than the content. The tube's edges scale the tube. Both are centred, so
+	// width = start ± 2·dx keeps the grabbed edge under the pointer.
 	let edgeDrag = $state(null);
 
 	/** The figure's height with the growing panel at its own size, none of the spare. */
@@ -111,10 +114,13 @@
 
 	function setWidth(want) {
 		const max = figureEl?.parentElement?.clientWidth ?? 4096;
-		userSide = Math.round(Math.max(MIN_SIDE, Math.min(max, want)));
+		userWidth = Math.round(Math.max(MIN_SIDE, Math.min(max, want)));
 	}
 	function setHeight(want) {
-		userAspect = Math.max(want, contentHeight()) / side;
+		figHeight = Math.round(Math.max(want, contentHeight()));
+	}
+	function setSide(want) {
+		userSide = Math.round(Math.max(MIN_SIDE / 2, Math.min(figW || 4096, want)));
 	}
 
 	function onEdgeDown(event, edge) {
@@ -125,14 +131,17 @@
 		} catch {
 			// Synthetic pointers cannot be captured; the drag still tracks while over the edge.
 		}
-		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, h0: figureEl?.offsetHeight ?? side };
+		edgeDrag = { edge, x0: event.clientX, y0: event.clientY, side0: side, w0: figW, h0: figureEl?.offsetHeight ?? side };
 	}
 	function onEdgeMove(event) {
 		if (!edgeDrag) return;
 		const d = edgeDrag;
 		const dx = event.clientX - d.x0;
-		if (d.edge === 'bottom') setHeight(d.h0 + event.clientY - d.y0);
-		else setWidth(d.edge === 'right' ? d.side0 + 2 * dx : d.side0 - 2 * dx);
+		const dy = event.clientY - d.y0;
+		if (d.edge === 'bottom') setHeight(d.h0 + dy);
+		else if (d.edge === 'left' || d.edge === 'right') setWidth(d.edge === 'right' ? d.w0 + 2 * dx : d.w0 - 2 * dx);
+		else if (d.edge === 'tube-bottom') setSide(d.side0 + dy);
+		else setSide(d.edge === 'tube-right' ? d.side0 + 2 * dx : d.side0 - 2 * dx);
 	}
 	function store(key, value) {
 		try {
@@ -147,23 +156,43 @@
 		edgeDrag = null;
 		if (event.pointerId !== undefined && event.currentTarget.hasPointerCapture?.(event.pointerId)) event.currentTarget.releasePointerCapture(event.pointerId);
 		store(SIDE_KEY, userSide);
-		store(ASPECT_KEY, userAspect);
+		store(WIDTH_KEY, userWidth);
+		store(HEIGHT_KEY, figHeight);
 	}
 	function onEdgeKey(event, edge) {
 		const step = { ArrowLeft: -16, ArrowDown: 16, ArrowRight: 16, ArrowUp: -16 }[event.key];
 		if (!step) return;
 		event.preventDefault();
 		if (edge === 'bottom') setHeight((figureEl?.offsetHeight ?? side) + step);
-		else setWidth(side + step);
+		else if (edge === 'left' || edge === 'right') setWidth(figW + step);
+		else setSide(side + step);
 		onEdgeUp(event);
 	}
-	/** Double-click: a side edge fits the width to the pane again, the bottom drops the height. */
+	/** Double-click: width fills the pane again, height drops to the content, the tube fits. */
 	function onEdgeReset(edge) {
-		if (edge === 'bottom') userAspect = null;
+		if (edge === 'bottom') figHeight = null;
+		else if (edge === 'left' || edge === 'right') userWidth = null;
 		else userSide = null;
 		store(SIDE_KEY, userSide);
-		store(ASPECT_KEY, userAspect);
+		store(WIDTH_KEY, userWidth);
+		store(HEIGHT_KEY, figHeight);
 	}
+	const EDGE_LABEL = {
+		left: 'Cabinet width, left edge',
+		right: 'Cabinet width, right edge',
+		bottom: 'Cabinet height, bottom edge',
+		'tube-left': 'Display size, left edge',
+		'tube-right': 'Display size, right edge',
+		'tube-bottom': 'Display size, bottom edge'
+	};
+	const EDGE_TITLE = {
+		left: 'Drag to change the width; double-click to fill the pane',
+		right: 'Drag to change the width; double-click to fill the pane',
+		bottom: 'Drag to change the height; double-click for the content’s own height',
+		'tube-left': 'Drag to resize the display; double-click to fit the pane',
+		'tube-right': 'Drag to resize the display; double-click to fit the pane',
+		'tube-bottom': 'Drag to resize the display; double-click to fit the pane'
+	};
 	const bootChunk = 100_000;
 
 	// A PDP-7 memory cycle is 1.75 µs. Pacing is by wall clock, never by the monitor's
@@ -619,7 +648,7 @@
 	];
 	const memViewFor = (p) => (p?.source ? 'source' : 'code');
 	let memView = $state(untrack(() => memViewFor(programById(programId))));
-	const MEM_COLS = $derived(memView === 'octal' ? (side >= 420 ? 8 : 4) : 1);
+	const MEM_COLS = $derived(memView === 'octal' ? (figW >= 420 ? 8 : 4) : 1);
 	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
 	// in one order. Shift-click shows one alone.
 	const PANELS_KEY = 'cabinet-panels';
@@ -1431,7 +1460,7 @@
 	function setView(v) {
 		memView = v;
 		memShownBase = -1;
-		if (v === 'octal') memBase -= memBase % (side >= 420 ? 8 : 4);
+		if (v === 'octal') memBase -= memBase % MEM_COLS;
 		if (v === 'source') srcTop = Math.max(0, srcLineFor(memFocus >= 0 ? memFocus : memBase) - 2);
 		queueMicrotask(refreshMem);
 	}
@@ -2126,7 +2155,27 @@
 		</div>
 	</div>
 {/snippet}
-<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} style:width="{side}px" style:min-height={figHeight ? `${figHeight}px` : null}>
+{#snippet edgeGrip(edge)}
+	<div
+		class="edge {edge}"
+		class:dragging={edgeDrag?.edge === edge}
+		role="slider"
+		tabindex="0"
+		aria-label={EDGE_LABEL[edge]}
+		aria-orientation={edge.endsWith('bottom') ? 'vertical' : 'horizontal'}
+		aria-valuemin={MIN_SIDE}
+		aria-valuemax={4096}
+		aria-valuenow={edge === 'bottom' ? (figHeight ?? side) : edge.startsWith('tube') ? side : figW}
+		title={EDGE_TITLE[edge]}
+		onpointerdown={(e) => onEdgeDown(e, edge)}
+		onpointermove={onEdgeMove}
+		onpointerup={onEdgeUp}
+		onpointercancel={onEdgeUp}
+		ondblclick={() => onEdgeReset(edge)}
+		onkeydown={(e) => onEdgeKey(e, edge)}
+	></div>
+{/snippet}
+<figure class="cabinet-applet" data-applet="cabinet" bind:this={figureEl} bind:clientWidth={figW} style:width={userWidth ? `${userWidth}px` : '100%'} style:min-height={figHeight ? `${figHeight}px` : null}>
 	<!-- The program comes first, so opening or closing the display never moves the menu. -->
 	<div class="row menu top">
 		<select
@@ -2216,28 +2265,12 @@
 		{#if displayOpen && status !== 'live'}
 			{@render overlay(false)}
 		{/if}
+		{#each ['tube-left', 'tube-right', 'tube-bottom'] as edge (edge)}
+			{@render edgeGrip(edge)}
+		{/each}
 	</div>
 	{#each ['left', 'right', 'bottom'] as edge (edge)}
-		<div
-			class="edge {edge}"
-			class:dragging={edgeDrag?.edge === edge}
-			role="slider"
-			tabindex="0"
-			aria-label={edge === 'bottom' ? 'Cabinet height, bottom edge' : `Cabinet width, ${edge} edge`}
-			aria-orientation={edge === 'bottom' ? 'vertical' : 'horizontal'}
-			aria-valuemin={MIN_SIDE}
-			aria-valuemax={4096}
-			aria-valuenow={edge === 'bottom' ? (figHeight ?? side) : side}
-			title={edge === 'bottom'
-				? 'Drag to change the height; double-click for the content’s own height'
-				: 'Drag to resize, keeping the shape; double-click to fit the pane again'}
-			onpointerdown={(e) => onEdgeDown(e, edge)}
-			onpointermove={onEdgeMove}
-			onpointerup={onEdgeUp}
-			onpointercancel={onEdgeUp}
-			ondblclick={() => onEdgeReset(edge)}
-			onkeydown={(e) => onEdgeKey(e, edge)}
-		></div>
+		{@render edgeGrip(edge)}
 	{/each}
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
@@ -2774,6 +2807,28 @@
 	}
 	.edge.right {
 		right: -4px;
+	}
+	.edge.tube-left,
+	.edge.tube-right {
+		top: 0;
+		bottom: 0;
+		width: 6px;
+		cursor: ew-resize;
+		z-index: 3;
+	}
+	.edge.tube-left {
+		left: -3px;
+	}
+	.edge.tube-right {
+		right: -3px;
+	}
+	.edge.tube-bottom {
+		left: 0;
+		right: 0;
+		bottom: -3px;
+		height: 6px;
+		cursor: ns-resize;
+		z-index: 3;
 	}
 	.edge.bottom {
 		left: 0;
