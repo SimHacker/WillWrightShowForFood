@@ -288,6 +288,18 @@ double-click article gets the live machine.
 5. **The rack:** the single canvas splits into framed device windows —
    round tube first — per ROUND-WINDOWS and FRAMES above.
 
+## To do
+
+- **Draggable panel tabs.** Drag a chip (PLAY TTY REGS MEMORY RINGS
+  CONFIG) left or right to reorder; the compartments below follow the
+  chip order, and the order is stored like the open set.
+- **A general tab manager**, not cabinet-specific: detached tabs along a
+  top edge, with two layouts that flip back and forth.
+  - *Ordered:* every open panel laid out in tab order.
+  - *Stacked:* one tab on top, full size; the others wait behind it.
+  - Both layouts can sit inside a vertical scrolling wrapper around all
+    panels, with the tab strip pinned to the top while it scrolls.
+
 ↑ [GLANCE](GLANCE.yml) · [FORMAT](FORMAT.md) ·
 [cabinet DESIGN](../../packages/cabinet/DESIGN.md) ·
 [WEB-BENCH](../../packages/cabinet/WEB-BENCH.md)
