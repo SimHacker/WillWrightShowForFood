@@ -385,14 +385,20 @@
 		if (pen.enabled) {
 			ctx.globalCompositeOperation = 'lighter';
 			ctx.globalAlpha = Math.min(0.75, 0.08 + 0.45 * penGlow + 0.25 * penFlash);
-			ctx.fillStyle = '#ffd27a';
+			ctx.fillStyle = pen.color;
 			ctx.fill();
 			ctx.globalCompositeOperation = 'source-over';
 		}
 		ctx.globalAlpha = pen.enabled ? 0.8 + 0.2 * penFlash : 0.35;
-		ctx.strokeStyle = penFlash > 0.5 ? '#fff4d0' : '#ffd27a';
+		ctx.strokeStyle = pen.color;
 		ctx.lineWidth = 1.5 + 1.5 * penFlash;
 		ctx.stroke();
+		if (penFlash > 0.05) {
+			ctx.globalAlpha = 0.6 * penFlash;
+			ctx.strokeStyle = '#ffffff';
+			ctx.lineWidth = 1;
+			ctx.stroke();
+		}
 		ctx.restore();
 	}
 
@@ -506,6 +512,7 @@
 			hint,
 			machine: machineLines(h),
 			sensor: held ? penGlow : null,
+			color: held ? pen.color : null,
 			hit: held && penFlash > 0.5
 		});
 		return h;
@@ -1550,7 +1557,7 @@
 		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
-		pen = new LightPen({ aperture: 12, name: 'pointer', enabled: false });
+		pen = new LightPen({ aperture: 12, name: 'pointer', index: 0, enabled: false });
 		press = null;
 		t340 = new Type340({
 			fetch: (a) => cpu.read(a),
@@ -1962,7 +1969,7 @@
 					{#each tip.machine as line, i (i)}<div>{line}</div>{/each}
 				</div>
 				{#if tip.sensor !== null}
-					<div class="tip-sensor" class:hit={tip.hit}>
+					<div class="tip-sensor" class:hit={tip.hit} style:--pen={tip.color}>
 						<span class="tip-meter"><span style:width="{Math.round(tip.sensor * 100)}%"></span></span>
 						{tip.hit ? 'pen hit' : 'pen sees'}
 					</div>
@@ -2645,14 +2652,14 @@
 	.tip-meter {
 		width: 5rem;
 		height: 0.4rem;
-		border: 1px solid #8a6424;
+		border: 1px solid var(--pen, #8a6424);
 		border-radius: 2px;
 		overflow: hidden;
 	}
 	.tip-meter > span {
 		display: block;
 		height: 100%;
-		background: #ffd27a;
+		background: var(--pen, #ffd27a);
 	}
 	.tip-title {
 		color: #ffd27a;

@@ -1,9 +1,24 @@
 import type { PenInput } from "./type340.js";
 
+/** Default pen hues, by pen number; host overlay only, the 340 never sees them. */
+export const PEN_COLORS = [
+	"#ffd27a", // 0 amber yellow
+	"#7ad8ff", // 1 cyan
+	"#ff7ad2", // 2 magenta
+	"#ff9a5a", // 3 orange
+	"#b08aff", // 4 violet
+	"#ff6b6b", // 5 red
+	"#6b8cff", // 6 blue
+	"#f0f0f0", // 7 white
+] as const;
+
 export type LightPenOpts = {
 	aperture?: number;
 	name?: string;
 	enabled?: boolean;
+	/** Pen number; picks the default color. */
+	index?: number;
+	color?: string;
 };
 
 /**
@@ -19,10 +34,12 @@ export class LightPen implements PenInput {
 	y = 0;
 	aperture: number;
 	name: string | undefined;
+	color: string;
 
 	constructor(opts: LightPenOpts = {}) {
 		this.aperture = opts.aperture ?? 8;
 		this.name = opts.name;
+		this.color = opts.color ?? PEN_COLORS[(opts.index ?? 0) % PEN_COLORS.length] ?? PEN_COLORS[0];
 		this.enabled = opts.enabled ?? true;
 	}
 

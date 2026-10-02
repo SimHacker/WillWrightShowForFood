@@ -28,7 +28,7 @@ export type {
 	Type340Opts,
 	Mode,
 } from "./plugins/type340.js";
-export { LightPen } from "./plugins/lightpen.js";
+export { LightPen, PEN_COLORS } from "./plugins/lightpen.js";
 export type { LightPenOpts } from "./plugins/lightpen.js";
 export { PaperTape, readIn, readInAndGo } from "./plugins/papertape.js";
 export type { PaperTapeOpts } from "./plugins/papertape.js";
