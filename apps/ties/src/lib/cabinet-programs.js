@@ -56,6 +56,8 @@ async function bytes(url) {
 }
 
 async function gunzip(data) {
+	// Servers that send .gz with Content-Encoding: gzip hand it over already unzipped.
+	if (data[0] !== 0x1f || data[1] !== 0x8b) return data;
 	const stream = new Blob([data]).stream().pipeThrough(new DecompressionStream('gzip'));
 	return new Uint8Array(await new Response(stream).arrayBuffer());
 }
