@@ -294,6 +294,8 @@ MicropolisCore's designs, which the cabinet follows rather than duplicates:
 
 The cabinet's first pie is deliberately small and uses that model's names, so it can be
 swapped for MicropolisCore's package when that exists, without touching any advertiser.
+Its model and its NeWS 1.1 skin are planned in
+[ROADMAP §9](ROADMAP.md#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin).
 
 ## 12. Order of work
 

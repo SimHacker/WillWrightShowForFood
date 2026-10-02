@@ -17,11 +17,11 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 5 | Forth `wait` and `say"` | Forth programs that draw while they speak | [§5](#5-forth-that-draws-and-speaks) |
 | 6 | Round screen | the 25 cm question, historically framed | [§6](#6-round-screen) |
 | 7 | Multi-pen IDPN and the LP370 test | promised in DESIGN.md | [§7](#7-several-pens) |
-| 8 | Tags, focus, the first pie | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | — |
-| 9 | The UI driver | menus, tiny-its and macros drive the bench | [§8](#8-driving-the-ui) |
+| 8 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
+| 9 | The UI driver, on MicropolisCore's command bus | menus, tiny-its, LLMs and macros drive the bench | [§8](#8-driving-the-ui) |
 | 10 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 
-Odds and ends are in [§9](#9-small-items).
+Odds and ends are in [§10](#10-small-items).
 
 ## 1. Tracking: the pen is sampled once per browser frame
 
@@ -197,10 +197,125 @@ coordinates. So a script survives the picture moving.
 - **Rides:** a running script is a vehicle ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
   you watch the pen move, and Escape stops it.
 
-**Accept:** the SYMELEC demo, rewritten on `find` and `dragAlong`, still draws the
-same picture; and a test finds a lightbutton by symbol name and taps it.
+**On MicropolisCore's command bus.** The cabinet does not invent its own dispatch. It
+uses the bus MicropolisCore already has (`apps/micropolis/src/lib/CommandBus.ts`,
+protocol in `skills/micropolis-command-bus/SKILL.md`): commands are data, every
+surface dispatches the same ids, and an LLM proposes while a person approves.
 
-## 9. Small items
+- **Commands in.** Driver calls and bench controls register as commands with
+  big-endian ids (`naming-conventions.md`): `cabinet.pen.tap`, `cabinet.pen.drag`,
+  `cabinet.key.type`, `cabinet.switches.set`, `cabinet.tape.load`, `cabinet.run.toggle`.
+  Pie items, buttons, keys, tiny-its (`source: 'script'`), MCP and LLMs all dispatch
+  them, so a pie item is a command id plus args, not a closure.
+- **Policy.** Pen, key and switch commands are `reversible`; loading a tape or clearing
+  core is `destructive`, so an LLM previews and proposes, and the user approves. Tape
+  memory naming only input-event macros (TAGS-AND-PIES §6) becomes: a tag may name only
+  `cabinet.pen.*` and `cabinet.key.*` ids.
+- **Events out.** The bench reports facts in the `MicropolisEvent` envelope
+  (`naming-conventions.md` § Event Envelope): `cabinet.pen.hit`,
+  `cabinet.picture.changed`, `cabinet.tag.focused`, `cabinet.teletype.printed`, with
+  `sim_tick` as the machine cycle. `waitFor` subscribes to these instead of polling, and
+  the recorder writes them as the replay log.
+- **Across nodes.** tiny-its forwards commands and events between buses, so a macro on
+  one node drives the pen on another, and the same log replays on either.
+
+The bus lives in `apps/micropolis` today; until it is a package, the cabinet carries a
+small one with the same `Command`/`CommandContext`/`dispatch` shape, and swaps it out
+when MicropolisCore's is lifted (TAGS-AND-PIES §12 step 8).
+
+**Accept:** the SYMELEC demo, rewritten on `find` and `dragAlong`, still draws the
+same picture; a test finds a lightbutton by symbol name and taps it; and the same tap,
+dispatched as `cabinet.pen.tap` from a pie item and from a script, produces the same
+`cabinet.pen.hit` event.
+
+## 9. The first pie: Target, Pie, Slice, Item, in a NeWS 1.1 skin
+
+Plan only; nothing here is built yet. We start simple and iterate on the design: the
+new slice model with a retro skin first, and fancier fake-3D skins later. HyperTIES
+(`apps/ties`) gets it as soon as it works.
+
+**Model.** The cabinet gets a small pie that follows MicropolisCore's
+[PIE-MENU-MODEL.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/piecraft/PIE-MENU-MODEL.md)
+in shape and in names, exactly:
+
+| Layer | In the cabinet |
+|---|---|
+| **Target** | a surface (the tube, a HyperTIES link, a button); `findPie(event)` picks the pie |
+| **Pie** | a fixed list of slices, plus an optional `onshowpie` that may refill them |
+| **Slice** | a fixed direction; the slice count (4, 8, 12) is chosen first and does not change when items come and go |
+| **Item** | label, optional icon, and a command id with args ([§8](#8-driving-the-ui)), dispatched with `source: 'pie-menu'` |
+
+- **Selection** follows the model's §3: the slice comes from the angle from the centre,
+  and the item from the distance along the slice. Inside the numb radius nothing is
+  selected; there is no outer limit, so moving further out only adds precision.
+- **First iteration:** one item per slice, which is exactly the NeWS 1.1 case. An empty
+  slice keeps its wedge and selects nothing. Several items per slice, and pull-out
+  strips, come in the next iteration without moving any other slice.
+- **Advertisers** (TAGS-AND-PIES §6) only fill slices with items. They never see the
+  geometry, the skin or the event code. That is the whole contract, and it is why the
+  cabinet swaps to MicropolisCore's pie and cursor packages, when they exist, with no
+  change to any advertiser (TAGS-AND-PIES §12 step 8).
+- **Where it lives.** The model, layout and selection are plain TypeScript in
+  `packages/cabinet`, tested with the rest. Layout returns a list of paint operations;
+  a small Svelte component beside `CabinetApplet.svelte` draws them on a canvas, so
+  HyperTIES can use it outside the cabinet too.
+- **Skins** are separate from the model: a skin takes the laid-out pie and the
+  selected slice, and paints. The NeWS 1.1 skin is the first; fake-3D skins (see
+  `fake-5d.ps` and friends in the PieMenus repo) come later on the same interface.
+
+**The NeWS 1.1 skin.** Black and white, stencil and paint, specified from Don's
+`SimplePieMenu` in
+[PieMenus/NeWS/piemenu.ps](https://github.com/SimHacker/PieMenus/blob/master/NeWS/piemenu.ps)
+(1987, rewritten for NeWS 1.1's `litemenu.ps` for SIGGRAPH). Numbers are its class
+variables (lines 308–354); units are pixels at 1×, PostScript y up.
+
+- **Font:** Helvetica-Bold 12, black on white.
+- **Angles:** slice 0 points up (`PieInitialAngle 90`) and slices go clockwise. Slice
+  width is 360/n. MicropolisCore's `sliceDirection` maps onto this; the skin converts.
+- **Label placement** (`layout`, line 366): each label sits at its slice angle on a
+  circle of `LabelRadius`. Within 0.05 of straight up or down (|cos| < .05) it is
+  centred horizontally, above the point at the top and hanging below it at the bottom.
+  Otherwise it is left-justified on the right half, right-justified on the left half,
+  and centred vertically.
+- **Label radius:** start at `LabelMinRadius` 25 and step out by `LabelRadiusStep` 5
+  until no two neighbouring label boxes overlap, then add `LabelRadiusExtra` 10.
+- **Pie radius:** the farthest label-box corner from the centre, plus `Gap` 9, plus
+  `Border` 3, rounded. The menu is a circle of that radius.
+- **Frame** (`PaintMenuFrame`, line 577): fill the circle white, then a black ring
+  `Border` 3 wide inside the edge (even-odd fill between the two circles).
+- **Items** (`PaintMenuItems`, line 592): each label in black, and a hairline (line
+  width 0, round cap) on each slice boundary, at angle − width/2, from `NumbRadius` 14
+  out to `LabelRadius − Gap`.
+- **Highlight** (`PaintSlice`, line 823), painted in XOR (raster op 5), so painting it
+  again removes it:
+  - an arrow along the slice, with r = `LabelRadius − Gap`: from (14, 0) to
+    (0.6r, 0.6r·sin(w/3)), (0.9r, 0), (0.6r, −0.6r·sin(w/3)), closed and filled;
+  - the label box grown by 4 on every side, as a filled round rect. `insetrrect` with
+    delta −4 and radius 2 makes the corner radius 2 − (−4) = 6.
+
+  On black and white, XOR is invert: the arrow and the label turn white on black.
+- **Mouse-ahead** (`MapLongDelay`, `MapShortDelay`, `NoMapDist`, lines 349–351): the
+  menu waits 0.6 s (a submenu 0.25 s) before it shows, and does not show at all if the
+  pointer has already moved 10 out. A quick flick selects without the menu ever
+  appearing.
+- **Wocka** (`popdown`, line 739): if the menu was never shown, a black wedge (the
+  whole slice, out to `PieRadius`) flashes for 0.05 s at the chosen slice, so a flick
+  still shows what it picked.
+- **Screen edge:** a pie that would not fit is pushed on screen, and the pointer is
+  warped by the same amount, so it stays over the same spot.
+- **Ker and Chunk** (`KerProc`, `ChunkProc`, lines 682–693): the adjust button (middle,
+  or a modifier on one-button devices) pulls the pointer back to the centre on press,
+  and pops back to the parent menu on release.
+- **Submenus** are items whose command opens a pie; they show where the button came up.
+- **Cursor:** the `beye` cursor (line 456) while the pie is up.
+
+**Accept:** a pie of 4, 6 and 8 labels rendered by the skin matches, side by side,
+the same menus drawn by running `piemenu.ps` (in a PostScript renderer, with the NeWS
+operators stubbed) or a period NeWS screenshot; the slice and highlight geometry have
+unit tests against the numbers above; a flick selects with no menu shown and the wocka
+flashes; and a HyperTIES link pops a pie whose items dispatch command-bus ids.
+
+## 10. Small items
 
 - TRACKING.md: a note on `SRAST`'s diagonal step 6.
 - Replace the dead Prefab and aQuery links with Wayback copies in
