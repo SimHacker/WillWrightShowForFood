@@ -332,7 +332,7 @@
 		const showPen = player || pressedId !== null;
 		if (showPen) sensePen(seen, frames.length);
 		const hovered = hoverTip();
-		if (hovered) drawHover(ctx, hovered);
+		if (hovered && outlineOn) drawHover(ctx, hovered);
 		if (showPen) drawPen(ctx);
 	}
 
@@ -421,6 +421,11 @@
 		tipsOn = on;
 		store(TIPS_KEY, on ? 'on' : 'off');
 		if (!on) tip = null;
+	}
+	let outlineOn = $state(untrack(() => globalThis.localStorage?.getItem('cabinet-outline') !== 'off'));
+	function setOutline(on) {
+		outlineOn = on;
+		store('cabinet-outline', on ? 'on' : 'off');
 	}
 	const TAIL = 44;
 
@@ -2567,6 +2572,9 @@
 				<h4 class="config-head">Display</h4>
 				<label class="mem-hint" title="Hover or hold the pen still over something on the tube to see what drew it"
 					><input type="checkbox" checked={tipsOn} onchange={(e) => setTips(e.currentTarget.checked)} /> Tooltips on the tube</label
+				>
+				<label class="mem-hint" title="Draw a dashed box around whatever the pen or pointer is over"
+					><input type="checkbox" checked={outlineOn} onchange={(e) => setOutline(e.currentTarget.checked)} /> Outline what the pen is over</label
 				>
 				<p class="mem-hint">Each program sets the rest for you when you choose it.</p>
 				<h4 class="config-head">Teletype</h4>
