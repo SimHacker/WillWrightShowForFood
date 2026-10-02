@@ -133,6 +133,33 @@ browser tabs sharing one filestore is two PDP-7s on one Titan;
 collaborative PIXIE falls out of a protocol designed three decades
 before the word.
 
+**tiny-bus: the backplane between machines.** tiny-titan grows into
+tiny-bus, in all its glory and splendour: the titanic, utilitarian,
+serviceable bus that every command, event, source and sink in the bench
+rides, from one tab to a central server and across networks. Tiny is
+better than worse.
+
+- **`TinyCommand`**: `{ id, args, source, risk }`, big-endian ids
+  (`cabinet.pen.tap`, `cabinet.tape.load`), dispatched by pie items,
+  buttons, keys, scripts, tiny-its, MCP and LLMs alike.
+- **`TinyEvent`**: `{ id, at, node, vm, data }`, where `at` is the
+  machine cycle, so a log replays exactly (`cabinet.pen.hit`,
+  `cabinet.teletype.printed`).
+- **Sources** put events on the bus: the 340, pens, the teletype, the
+  console, the Titan link, a remote watcher, a recording.
+- **Sinks** take them off: the applet, the recorder, the definition
+  window, a screen reader announcer, `waitFor`, another node.
+- **Three reaches, one envelope.** Intra-tab (direct calls), intra-node
+  (a `BroadcastChannel` between tabs), inter-node (the WebSocket server
+  below, and tiny-its forwarding between servers). The same command or
+  event crosses all three unchanged.
+- **Policy** travels with the command: `reversible` or `destructive`, so
+  an LLM proposes and a person approves, wherever it was sent from.
+
+The shape follows the command bus in the MicropolisCore repo, but the
+names are ours: that simulator's name is used under a limited
+permission, and none of our classes, ids or wire formats carry it.
+
 **Examine/deposit alongside.** Remote control of the cabinet is not a
 console protocol — the Cabinet is a TS object, and step/examine/deposit
 ride the same socket in a dozen lines. The link carries drawings; the

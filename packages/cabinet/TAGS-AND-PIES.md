@@ -291,8 +291,9 @@ MicropolisCore's designs, which the cabinet follows rather than duplicates:
 - pies, tabs and windows: `documentation/notes/PIE-TAB-WINDOWS.md`;
 - the command bus, so pie items are command ids with a risk policy and LLM proposals:
   `apps/micropolis/src/lib/CommandBus.ts` and `skills/micropolis-command-bus/`, with
-  events in the `MicropolisEvent` envelope from
-  `documentation/designs/naming-conventions.md` (see [ROADMAP §8](ROADMAP.md#8-driving-the-ui)).
+  its event envelope in `documentation/designs/naming-conventions.md`. The cabinet
+  borrows the shape, not the name: it rides tiny-bus, with `TinyCommand` and
+  `TinyEvent` (see [ROADMAP §8](ROADMAP.md#8-driving-the-ui)).
 
 The cabinet's first pie is deliberately small and uses that model's names, so it can be
 swapped for MicropolisCore's package when that exists, without touching any advertiser.

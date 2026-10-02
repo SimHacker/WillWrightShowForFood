@@ -248,13 +248,16 @@ coordinates. So a script survives the picture moving.
 - **Rides:** a running script is a vehicle ([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)):
   you watch the pen move, and Escape stops it.
 
-**On MicropolisCore's command bus.** The cabinet does not invent its own dispatch. It
-uses the bus MicropolisCore already has (`apps/micropolis/src/lib/CommandBus.ts`,
-protocol in `skills/micropolis-command-bus/SKILL.md`): commands are data, every
-surface dispatches the same ids, and an LLM proposes while a person approves.
+**On tiny-bus.** Commands and events ride **tiny-bus**, which lives in tiny-titan
+([TINY-TITAN.md](TINY-TITAN.md#tiny-bus-the-backplane-between-machines)). Its shape follows the command bus
+in the MicropolisCore repo (`apps/micropolis/src/lib/CommandBus.ts`): commands are
+data, every surface dispatches the same ids, and an LLM proposes while a person
+approves. The names are our own: `TinyCommand`, `TinyEvent`, `TinyBus`. The city
+simulator's name is used under a generous but limited permission, so none of our
+classes, ids or wire formats carry it.
 
 - **Commands in.** Driver calls and bench controls register as commands with
-  big-endian ids (`naming-conventions.md`): `cabinet.pen.tap`, `cabinet.pen.drag`,
+  big-endian ids: `cabinet.pen.tap`, `cabinet.pen.drag`,
   `cabinet.key.type`, `cabinet.switches.set`, `cabinet.tape.load`, `cabinet.run.toggle`.
   Pie items, buttons, keys, tiny-its (`source: 'script'`), MCP and LLMs all dispatch
   them, so a pie item is a command id plus args, not a closure.
@@ -262,18 +265,16 @@ surface dispatches the same ids, and an LLM proposes while a person approves.
   core is `destructive`, so an LLM previews and proposes, and the user approves. Tape
   memory naming only input-event macros (TAGS-AND-PIES §6) becomes: a tag may name only
   `cabinet.pen.*` and `cabinet.key.*` ids.
-- **Events out.** The bench reports facts in the `MicropolisEvent` envelope
-  (`naming-conventions.md` § Event Envelope): `cabinet.pen.hit`,
-  `cabinet.picture.changed`, `cabinet.tag.focused`, `cabinet.teletype.printed`, with
-  `sim_tick` as the machine cycle. `waitFor` subscribes to these instead of polling, and
+- **Events out.** The bench reports facts as `TinyEvent`s: `cabinet.pen.hit`,
+  `cabinet.picture.changed`, `cabinet.tag.focused`, `cabinet.teletype.printed`,
+  stamped with the machine cycle. `waitFor` subscribes to these instead of polling, and
   the recorder writes them as the replay log.
 - **Across nodes.** tiny-its forwards commands and events between buses, so a macro on
   one node drives the pen on another, and the same log replays on either.
 
-**tiny-bus.** The bus lives in `apps/micropolis` today; until it is a package, the
-cabinet rides **tiny-bus**, a short bus with the same `Command`/`CommandContext`/`dispatch`
-shape, sibling to tiny-its, and swaps it out when MicropolisCore's is lifted
-(TAGS-AND-PIES §12 step 8).
+Tiny is better than worse: tiny-bus is ours, small, and stays. If the bus in the
+MicropolisCore repo is ever lifted into a package, an adapter maps one envelope onto
+the other at the edge (TAGS-AND-PIES §12 step 8).
 
 **Accept:** the SYMELEC demo, rewritten on `find` and `dragAlong`, still draws the
 same picture; a test finds a lightbutton by symbol name and taps it; and the same tap,
