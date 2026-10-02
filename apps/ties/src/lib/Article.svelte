@@ -107,7 +107,7 @@
 			{:else if segment.kind === 'repodoc'}
 				<RepoDoc spec={segment.spec} />
 			{:else if segment.kind === 'cabinet'}
-				<CabinetApplet spec={segment.spec} />
+				<CabinetApplet spec={segment.spec} embedded />
 			{:else if segment.kind === 'youtube'}
 				<YouTubeEmbed spec={segment.spec} />
 			{:else if segment.kind === 'follow'}

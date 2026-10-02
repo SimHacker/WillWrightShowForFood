@@ -32,7 +32,7 @@
 	import { useApplets } from './applets.svelte.js';
 	import RingView from './RingView.svelte';
 
-	let { spec } = $props();
+	let { spec, embedded = false } = $props();
 
 	// The spec picks the first program; after that the menu owns it.
 	let programId = $state(untrack(() => spec.program ?? DEFAULT_PROGRAM));
@@ -414,6 +414,15 @@
 	let tip = $state.raw(null);
 	let tipEl = $state(null);
 	let tipLost = 0;
+	// Embedded in a HyperTIES page the definition window is the place for this, so it starts off there.
+	const TIPS_KEY = untrack(() => (embedded ? 'cabinet-tips-embedded' : 'cabinet-tips'));
+	let tipsOn = $state(untrack(() => (globalThis.localStorage?.getItem(TIPS_KEY) ?? (embedded ? 'off' : 'on')) === 'on'));
+	function setTips(on) {
+		tipsOn = on;
+		store(TIPS_KEY, on ? 'on' : 'off');
+		if (!on) tip = null;
+	}
+	const TAIL = 22;
 
 	// Measure the tip and keep it inside what is visible of the pane; the tail slides to the anchor.
 	$effect(() => {
@@ -424,7 +433,6 @@
 		const sp = scrollParent(figureEl);
 		const pane = sp === document.documentElement ? { left: 0, top: 0, right: innerWidth, bottom: innerHeight } : sp.getBoundingClientRect();
 		const M = 6;
-		const GAP = 16;
 		const minX = Math.max(pane.left, 0) + M - wrap.left;
 		const maxX = Math.min(pane.right, innerWidth) - M - wrap.left;
 		const minY = Math.max(pane.top, 0) + M - wrap.top;
@@ -433,9 +441,15 @@
 		const w = el.offsetWidth;
 		const h = el.offsetHeight;
 		const left = Math.max(minX, Math.min(t.px - 14, maxX - w));
-		const below = t.py + GAP;
-		const above = t.py - GAP - h;
-		const up = below + h > maxY && (above >= minY || t.py - minY > maxY - t.py);
+		// Clear the hovered item's outline; a box too tall for either side falls back to the pointer.
+		const fits = (y) => y >= minY && y + h <= maxY;
+		let below = (t.bottom ?? t.py) + TAIL;
+		let above = (t.top ?? t.py) - TAIL - h;
+		if (!fits(below) && !fits(above)) {
+			below = t.py + TAIL;
+			above = t.py - TAIL - h;
+		}
+		const up = !fits(below) && (fits(above) || t.py - minY > maxY - t.py);
 		const arrow = Math.max(10, Math.min(w - 10, t.px - left));
 		el.style.left = `${left}px`;
 		el.style.top = `${up ? above : below}px`;
@@ -446,6 +460,7 @@
 	let penHeld = $state(false);
 
 	function showTip(t) {
+		if (t && !tipsOn) return;
 		if (t) {
 			tipLost = 0;
 			tip = t;
@@ -534,9 +549,12 @@
 		} catch (e) {
 			console.error('cabinet hint', e);
 		}
+		const pad = (8 * at.h) / 1024;
 		showTip({
 			px: at.px,
 			py: at.py,
+			top: ((1023 - h.box.y1) * at.h) / 1024 - pad,
+			bottom: ((1023 - h.box.y0) * at.h) / 1024 + pad,
 			hint,
 			machine: machineLines(h),
 			sensor: held ? penGlow : null,
@@ -2546,7 +2564,11 @@
 		{/if}
 		{#if configOpen}
 			<div class="row app config" role="group" aria-label="Configuration">
-				<p class="mem-hint">Each program sets these for you when you choose it.</p>
+				<h4 class="config-head">Display</h4>
+				<label class="mem-hint" title="Hover or hold the pen still over something on the tube to see what drew it"
+					><input type="checkbox" checked={tipsOn} onchange={(e) => setTips(e.currentTarget.checked)} /> Tooltips on the tube</label
+				>
+				<p class="mem-hint">Each program sets the rest for you when you choose it.</p>
 				<h4 class="config-head">Teletype</h4>
 				<div class="tty-cfg">
 					{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']], 'Half: the paper prints each key as typed. Full: only what the program echoes.'], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']], 'Line: edit here with Backspace and ^U, Return sends the line.'], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']], '']] as [key, label, choices, hint]}
@@ -2729,24 +2751,21 @@
 			scale: 0.9;
 		}
 	}
-	/* The caption's tail, pointing back at the pen. */
+	/* The caption's tail, long enough to reach past the item's outline back to the pen. */
 	.tip::before {
 		content: '';
 		position: absolute;
-		left: calc(var(--arrow, 14px) - 5px);
-		top: -5px;
-		width: 8px;
-		height: 8px;
-		background: inherit;
-		border: inherit;
-		border-width: 1px 0 0 1px;
-		border-radius: 0;
-		transform: rotate(45deg);
+		left: calc(var(--arrow, 14px) - 6px);
+		top: -22px;
+		width: 12px;
+		height: 22px;
+		background: #8a6424;
+		clip-path: polygon(50% 0, 100% 100%, 0 100%);
 	}
 	.tip.up::before {
 		top: auto;
-		bottom: -5px;
-		border-width: 0 1px 1px 0;
+		bottom: -22px;
+		clip-path: polygon(0 0, 100% 0, 50% 100%);
 	}
 	.tip-sensor {
 		display: flex;
