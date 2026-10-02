@@ -406,14 +406,43 @@
 	// Hovering is the pen held off the glass: the program can't see it, the page can.
 	// After a rest, read the display list under the pointer and say what drew it.
 	const HOVER_MS = 400;
-	const TIP_ROOM = 400;
 	// The tip snaps in, survives a few frames of missed hits, then fades fast.
 	const TIP_HOLD_MS = 300;
 	const TIP_FADE_MS = 150;
 	let rest = null;
 	let penAt = null;
 	let tip = $state.raw(null);
+	let tipEl = $state(null);
 	let tipLost = 0;
+
+	// Measure the tip and keep it inside what is visible of the pane; the tail slides to the anchor.
+	$effect(() => {
+		const t = tip;
+		const el = tipEl;
+		if (!t || !el?.parentElement) return;
+		const wrap = el.parentElement.getBoundingClientRect();
+		const sp = scrollParent(figureEl);
+		const pane = sp === document.documentElement ? { left: 0, top: 0, right: innerWidth, bottom: innerHeight } : sp.getBoundingClientRect();
+		const M = 6;
+		const GAP = 16;
+		const minX = Math.max(pane.left, 0) + M - wrap.left;
+		const maxX = Math.min(pane.right, innerWidth) - M - wrap.left;
+		const minY = Math.max(pane.top, 0) + M - wrap.top;
+		const maxY = Math.min(pane.bottom, innerHeight) - M - wrap.top;
+		el.style.maxWidth = `${Math.max(120, Math.min(380, maxX - minX))}px`;
+		const w = el.offsetWidth;
+		const h = el.offsetHeight;
+		const left = Math.max(minX, Math.min(t.px - 14, maxX - w));
+		const below = t.py + GAP;
+		const above = t.py - GAP - h;
+		const up = below + h > maxY && (above >= minY || t.py - minY > maxY - t.py);
+		const arrow = Math.max(10, Math.min(w - 10, t.px - left));
+		el.style.left = `${left}px`;
+		el.style.top = `${up ? above : below}px`;
+		el.style.setProperty('--arrow', `${arrow}px`);
+		el.style.transformOrigin = `${arrow}px ${up ? '100%' : '0'}`;
+		el.classList.toggle('up', up);
+	});
 	let penHeld = $state(false);
 
 	function showTip(t) {
@@ -508,8 +537,6 @@
 		showTip({
 			px: at.px,
 			py: at.py,
-			flipx: at.px > at.w - TIP_ROOM,
-			flipy: at.py > at.h * 0.6,
 			hint,
 			machine: machineLines(h),
 			sensor: held ? penGlow : null,
@@ -572,29 +599,36 @@
 	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
 	// in one order, memory last so it takes the spare height. Shift-click shows one alone.
 	const PANELS_KEY = 'cabinet-panels';
-	const panelsStored = untrack(() => (globalThis.localStorage?.getItem(PANELS_KEY) ?? '').split(' '));
+	const panelsRaw = untrack(() => globalThis.localStorage?.getItem(PANELS_KEY) ?? null);
+	const panelsStored = (panelsRaw ?? 'play').split(' ');
+	let playOpen = $state(panelsStored.includes('play'));
 	let memOpen = $state(panelsStored.includes('mem'));
 	let regsOpen = $state(panelsStored.includes('regs'));
 	// A teletype program opens the teletype, whether chosen from the menu or linked to directly.
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	let configOpen = $state(panelsStored.includes('config'));
 	let ringsOpen = $state(panelsStored.includes('rings'));
+	function storePanels() {
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
+		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
+	}
 	function togglePanel(id, e) {
-		const open = { regs: regsOpen, tty: ttyOpen, rings: ringsOpen, mem: memOpen, config: configOpen };
+		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
-		regsOpen = open.regs;
+		playOpen = open.play;
 		ttyOpen = open.tty;
-		ringsOpen = open.rings;
+		regsOpen = open.regs;
 		memOpen = open.mem;
+		ringsOpen = open.rings;
 		configOpen = open.config;
-		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
+		storePanels();
 		refreshRegs();
 	}
 	function openMemAt(addr, view) {
 		if (!memOpen) {
 			memOpen = true;
-			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', ringsOpen && 'rings', 'mem', configOpen && 'config'].filter(Boolean).join(' '));
+			storePanels();
 		}
 		if (view && memView !== view) setView(view);
 		// Following the PC would pull the view straight back off the address.
@@ -1671,6 +1705,7 @@
 		player = new DemoPlayer(script);
 		demoCaption = '';
 		demoOn = true;
+		playOpen = true;
 	}
 
 	// What a session can drive. Kinds without a handler are skipped.
@@ -2005,11 +2040,8 @@
 		{#if tip}
 			<div
 				class="tip"
-				class:flipx={tip.flipx}
-				class:flipy={tip.flipy}
+				bind:this={tipEl}
 				class:gone={tip.gone}
-				style:left="{tip.px}px"
-				style:top="{tip.py}px"
 				role="tooltip"
 			>
 				{#if tip.hint}
@@ -2053,8 +2085,12 @@
 			onkeydown={(e) => onEdgeKey(e, edge)}
 		></div>
 	{/each}
-	<!-- Fixed order: front panel, then rows the program adds. Nothing above a row moves when it comes or goes. -->
+	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
+		{#if program?.keyHelp}
+			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
+		{/if}
+		{#snippet frontPanel()}
 		<div class="row panel" role="group" aria-label="PDP-7 console: AC switches, bit 0 on the left">
 			{#each { length: 6 } as _, g (g)}
 				<span class="sw-group">
@@ -2077,7 +2113,9 @@
 			{/each}
 			<span class="octal" title="AC switches, octal">{switches.toString(8).padStart(6, '0')}</span>
 		</div>
-		<div class="row app demo-row">
+		{/snippet}
+		{#snippet playRow()}
+		<div class="row app demo-row" role="group" aria-label="Play">
 			{#if program?.demo}
 				<button
 					type="button"
@@ -2118,18 +2156,16 @@
 				<span class="demo-caption" aria-live="polite">{demoOn ? demoCaption : 'Recording. ⏺ again to stop.'}</span>
 			{/if}
 		</div>
-		{#if program?.keyHelp}
-			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
-		{/if}
+		{/snippet}
 		<div class="row ctl">
 				<span class="chips" role="group" aria-label="Panels. Shift-click shows one alone.">
 					<button
 						type="button"
 						class="chip"
-						class:on={regsOpen}
-						aria-pressed={regsOpen}
-						title="Registers: processor, display, device flags. Shift-click: this panel alone."
-						onclick={(e) => togglePanel('regs', e)}>REGS{#if halted}<span class="chip-lamp hlt" title="Halted">●</span>{/if}</button
+						class:on={playOpen}
+						aria-pressed={playOpen}
+						title="Play: demos, record and replay. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('play', e)}>PLAY{#if demoOn || recording}<span class="chip-lamp" class:hlt={recording} title={recording ? 'Recording' : 'Playing'}>●</span>{/if}</button
 					>
 					<button
 						type="button"
@@ -2139,6 +2175,14 @@
 						aria-pressed={ttyOpen}
 						title="Teletype: what the program prints, and a keyboard. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('tty', e)}>TTY{#if ttyUnread}<span class="chip-count" title="{ttyUnread} new characters">{ttyUnread > 999 ? '999+' : ttyUnread}</span>{/if}</button
+					>
+					<button
+						type="button"
+						class="chip"
+						class:on={regsOpen}
+						aria-pressed={regsOpen}
+						title="Registers: the front panel switches, processor, display, device flags. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('regs', e)}>REGS{#if halted}<span class="chip-lamp hlt" title="Halted">●</span>{/if}</button
 					>
 					<button
 						type="button"
@@ -2254,6 +2298,15 @@
 					>
 				</span>
 		</div>
+		{#if playOpen}
+			{@render playRow()}
+		{/if}
+		{#if ttyOpen}
+			{@render ttyRow()}
+		{/if}
+		{#if regsOpen}
+			{@render frontPanel()}
+		{/if}
 		{#if regsOpen && regs}
 			<div class="row app regs" role="group" aria-label="Registers">
 				<div class="reg-line">
@@ -2296,7 +2349,7 @@
 				</div>
 			</div>
 		{/if}
-		{#if ttyOpen}
+		{#snippet ttyRow()}
 			{@const last = ttyPaper[ttyPaper.length - 1] ?? ''}
 			<div class="row app tty">
 				{#if program?.help}
@@ -2365,12 +2418,7 @@
 					>
 				</div>
 			</div>
-		{/if}
-		{#if ringsOpen}
-			<div class="row app">
-				<RingView capture={captureRings} name={symbolic} onOpen={(a) => openMemAt(a)} />
-			</div>
-		{/if}
+		{/snippet}
 		{#if memOpen}
 		<div class="row app mem">
 			<div bind:this={memEl}>
@@ -2490,6 +2538,11 @@
 				{/if}
 			</div>
 		</div>
+		{/if}
+		{#if ringsOpen}
+			<div class="row app">
+				<RingView capture={captureRings} name={symbolic} onOpen={(a) => openMemAt(a)} />
+			</div>
 		{/if}
 		{#if configOpen}
 			<div class="row app config" role="group" aria-label="Configuration">
@@ -2655,8 +2708,7 @@
 		position: absolute;
 		z-index: 3;
 		width: max-content;
-		max-width: min(380px, 90vw);
-		margin: 18px 0 0 18px;
+		max-width: 380px;
 		padding: 0.35rem 0.5rem;
 		pointer-events: none;
 		font: 0.7rem/1.35 ui-monospace, monospace;
@@ -2681,7 +2733,7 @@
 	.tip::before {
 		content: '';
 		position: absolute;
-		left: 8px;
+		left: calc(var(--arrow, 14px) - 5px);
 		top: -5px;
 		width: 8px;
 		height: 8px;
@@ -2691,26 +2743,10 @@
 		border-radius: 0;
 		transform: rotate(45deg);
 	}
-	.tip.flipx::before {
-		left: auto;
-		right: 8px;
-	}
-	.tip.flipy::before {
+	.tip.up::before {
 		top: auto;
 		bottom: -5px;
 		border-width: 0 1px 1px 0;
-	}
-	.tip.flipx {
-		margin-left: -18px;
-		transform: translateX(-100%);
-		transform-origin: top right;
-	}
-	.tip.flipy {
-		margin-top: -18px;
-		transform: translateY(-100%);
-	}
-	.tip.flipx.flipy {
-		transform: translate(-100%, -100%);
 	}
 	.tip-sensor {
 		display: flex;
