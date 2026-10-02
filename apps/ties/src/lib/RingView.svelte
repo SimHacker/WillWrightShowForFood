@@ -78,6 +78,8 @@
 	let px = 0;
 	let py = 0;
 	function down(e) {
+		// Shift-press otherwise extends the text selection and scrolls the page.
+		e.preventDefault();
 		dragging = true;
 		moved = false;
 		px = e.clientX;
