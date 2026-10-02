@@ -1,0 +1,66 @@
+# ARPANET, as PSIBER drew it: one node per IMP, links to its neighbours.
+# Imported from cyber/arpa.map by packages/pixie/scripts/psiber-maps.mjs.
+# Re-running the import saves into this file: comments and keys you add
+# (lat/long below) are kept; source fields are refreshed.
+#
+# lat/long: not in the source. Fill each node's `lat` and `long` by hand
+# from the printed ARPANET maps; don't compute them.
+title: ARPAnet IMP map
+source: characters/don-hopkins/code/psiber/cyber/arpa.map
+figure: "PSIBER paper, Figure 9: two views of a map of the ARPAnet"
+provenance: Emacs-massaged by Don from a line table brescia@bbnccv mailed him (address, endpoints (node, modem), medium, speed); see cyber/ramble
+links: Each IMP lists its neighbors; PSIBER replaces every /replaceme with the neighbor's dict, closing the net into rings
+nodes:
+  - { id: ARADC, label: ARADC IMP, links: [ LINC, UROCH ] }
+  - { id: ARPA, label: ARPA IMP, links: [ CSS, USC, DCEC ] }
+  - { id: BBN63, label: BBN63 IMP, links: [ RCC5, BRX25, BBN82 ] }
+  - id: BBN82
+    label: BBN82 IMP
+    links: [ COLUM, BBN63, RCC5, HARV ]
+  - { id: BERK, label: BERK IMP, links: [ WASH, LBL2, XEROX, SRI2 ] }
+  - { id: BRAGG, label: BRAGG IMP, links: [ TEXAS, DCEC ] }
+  - { id: BRX25, label: BRX25 IMP, links: [ BBN63 ] }
+  - { id: CCA, label: CCA IMP, links: [ UDEL, MIT6, RCC5 ] }
+  - { id: CIT, label: CIT IMP, links: [ USC, UCLA ] }
+  - { id: CMU, label: CMU IMP, links: [ COLUM, PURDU, DCEC ] }
+  - { id: COLNS, label: COLNS IMP, links: [ TEXAS, SRI2, SAC ] }
+  - { id: COLUM, label: COLUM IMP, links: [ BBN82, CMU ] }
+  - { id: CSS, label: CSS IMP, links: [ MTR2, UDEL, ARPA ] }
+  - { id: DCEC, label: DCEC IMP, links: [ ARPA, NSA2, CMU, BRAGG ] }
+  - { id: DEC, label: DEC IMP, links: [ LINC, HARV ] }
+  - { id: HARV, label: HARV IMP, links: [ BBN82, DEC ] }
+  - { id: ISI22, label: ISI22 IMP, links: [ ISI27, ISI52, STAN ] }
+  - { id: ISI27, label: ISI27 IMP, links: [ ISI52, ISI22, UCLA ] }
+  - { id: ISI52, label: ISI52 IMP, links: [ ISI22, ISI27, RAND ] }
+  - { id: LBL2, label: LBL2 IMP, links: [ UTAH, BERK ] }
+  - { id: LINC, label: LINC IMP, links: [ ARADC, MIT77, DEC, MTR2 ] }
+  - { id: MIT44, label: MIT44 IMP, links: [ MIT6, MIT77 ] }
+  - { id: MIT6, label: MIT6 IMP, links: [ CCA, MIT44, MIT77 ] }
+  - { id: MIT77, label: MIT77 IMP, links: [ MIT44, LINC, MIT6 ] }
+  - { id: MTR2, label: MTR2 IMP, links: [ CSS, LINC ] }
+  - { id: NSA2, label: NSA2 IMP, links: [ DCEC ] }
+  - { id: PURDU, label: PURDU IMP, links: [ CMU ] }
+  - { id: RAND, label: RAND IMP, links: [ ISI52, USC ] }
+  - { id: RCC5, label: RCC5 IMP, links: [ UROCH, CCA, BBN82, BBN63 ] }
+  - { id: SAC, label: SAC IMP, links: [ SAC2, WISC, UTAH, COLNS ] }
+  - { id: SAC2, label: SAC2 IMP, links: [ SAC ] }
+  - { id: SR107, label: SR107 IMP, links: [ SRI2, SRI51, SRI12 ] }
+  - { id: SRI12, label: SRI12 IMP, links: [ SR107 ] }
+  - id: SRI2
+    label: SRI2 IMP
+    links: [ XEROX, SRI51, SR107, COLNS, BERK ]
+  - { id: SRI51, label: SRI51 IMP, links: [ STAN, SR107, SRI2 ] }
+  - { id: STAN, label: STAN IMP, links: [ ISI22, SUMEX, SRI51 ] }
+  - { id: SUMEX, label: SUMEX IMP, links: [ STAN, XEROX ] }
+  - { id: TEXAS, label: TEXAS IMP, links: [ COLNS, BRAGG, UCLA ] }
+  - { id: UCLA, label: UCLA IMP, links: [ CIT, TEXAS, XEROX, ISI27 ] }
+  - { id: UDEL, label: UDEL IMP, links: [ CSS, CCA ] }
+  - { id: UROCH, label: UROCH IMP, links: [ ARADC, WISC, RCC5 ] }
+  - { id: US121, label: US121 IMP, links: [ USC ] }
+  - { id: USC, label: USC IMP, links: [ ARPA, RAND, CIT, US121 ] }
+  - { id: UTAH, label: UTAH IMP, links: [ LBL2, SAC, WASH ] }
+  - { id: WASH, label: WASH IMP, links: [ BERK, UTAH ] }
+  - { id: WISC, label: WISC IMP, links: [ SAC, UROCH ] }
+  - id: XEROX
+    label: XEROX IMP
+    links: [ SUMEX, SRI2, BERK, UCLA ]

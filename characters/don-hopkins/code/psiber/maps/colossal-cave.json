@@ -1,0 +1,4800 @@
+{
+	"title": "Colossal Cave travel table",
+	"source": "characters/don-hopkins/code/psiber/cyber/advent.map",
+	"figure": "PSIBER paper, Figure 10: two views of a map of Adventure",
+	"provenance": "Crowther and Woods' Adventure data file, sections 1 (long descriptions), 3 (travel) and 4 (vocabulary, motion words)",
+	"encoding": "Travel destination Y = M*1000 + N. N <= 300 is a room, 300 < N <= 500 a special case (N-300), N > 500 a message (N-500) and you stay put. M: 0 always; 1-99 that percent of the time; 100 never dwarves; 101-200 carrying object M-100; 201-300 carrying or beside object M-200; 300 + 100k + n prop(n) is not k. PSIBER links a verb to room (Y mod 1000) when that room exists",
+	"quirk": "Rooms 109 and 115 have description lines whose parens only balance across lines, so PostScript reads two source lines (and the def-descr between them) as one string. Kept verbatim",
+	"verbs": {
+		"1": [
+			"yow!"
+		],
+		"2": [
+			"road",
+			"hill"
+		],
+		"3": [
+			"enter"
+		],
+		"4": [
+			"upstr"
+		],
+		"5": [
+			"downs"
+		],
+		"6": [
+			"fores"
+		],
+		"7": [
+			"forwa",
+			"conti",
+			"onwar"
+		],
+		"8": [
+			"back",
+			"retur",
+			"retre"
+		],
+		"9": [
+			"valle"
+		],
+		"10": [
+			"stair"
+		],
+		"11": [
+			"out",
+			"outsi",
+			"exit",
+			"leave"
+		],
+		"12": [
+			"build",
+			"house"
+		],
+		"13": [
+			"gully"
+		],
+		"14": [
+			"strea"
+		],
+		"15": [
+			"rock"
+		],
+		"16": [
+			"bed"
+		],
+		"17": [
+			"crawl"
+		],
+		"18": [
+			"cobbl"
+		],
+		"19": [
+			"inwar",
+			"insid",
+			"in"
+		],
+		"20": [
+			"surfa"
+		],
+		"21": [
+			"null",
+			"nowhe"
+		],
+		"22": [
+			"dark"
+		],
+		"23": [
+			"passa",
+			"tunne"
+		],
+		"24": [
+			"low"
+		],
+		"25": [
+			"canyo"
+		],
+		"26": [
+			"awkwa"
+		],
+		"27": [
+			"giant"
+		],
+		"28": [
+			"view"
+		],
+		"29": [
+			"upwar",
+			"up",
+			"u",
+			"above",
+			"ascen"
+		],
+		"30": [
+			"d",
+			"downw",
+			"down",
+			"desce"
+		],
+		"31": [
+			"pit"
+		],
+		"32": [
+			"outdo"
+		],
+		"33": [
+			"crack"
+		],
+		"34": [
+			"steps"
+		],
+		"35": [
+			"dome"
+		],
+		"36": [
+			"left"
+		],
+		"37": [
+			"right"
+		],
+		"38": [
+			"hall"
+		],
+		"39": [
+			"jump"
+		],
+		"40": [
+			"barre"
+		],
+		"41": [
+			"over"
+		],
+		"42": [
+			"acros"
+		],
+		"43": [
+			"east",
+			"e"
+		],
+		"44": [
+			"west",
+			"w"
+		],
+		"45": [
+			"north",
+			"n"
+		],
+		"46": [
+			"south",
+			"s"
+		],
+		"47": [
+			"ne"
+		],
+		"48": [
+			"se"
+		],
+		"49": [
+			"sw"
+		],
+		"50": [
+			"nw"
+		],
+		"51": [
+			"debri"
+		],
+		"52": [
+			"hole"
+		],
+		"53": [
+			"wall"
+		],
+		"54": [
+			"broke"
+		],
+		"55": [
+			"y2"
+		],
+		"56": [
+			"climb"
+		],
+		"57": [
+			"look",
+			"exami",
+			"touch",
+			"descr"
+		],
+		"58": [
+			"floor"
+		],
+		"59": [
+			"room"
+		],
+		"60": [
+			"slit"
+		],
+		"61": [
+			"slab",
+			"slabr"
+		],
+		"62": [
+			"xyzzy"
+		],
+		"63": [
+			"depre"
+		],
+		"64": [
+			"entra"
+		],
+		"65": [
+			"plugh"
+		],
+		"66": [
+			"secre"
+		],
+		"67": [
+			"cave"
+		],
+		"69": [
+			"cross"
+		],
+		"70": [
+			"bedqu"
+		],
+		"71": [
+			"plove"
+		],
+		"72": [
+			"orien"
+		],
+		"73": [
+			"caver"
+		],
+		"74": [
+			"shell"
+		],
+		"75": [
+			"reser"
+		],
+		"76": [
+			"main",
+			"offic"
+		],
+		"77": [
+			"fork"
+		]
+	},
+	"nodes": [
+		{
+			"id": 1,
+			"description": [
+				"You are standing at the end of a road before a small brick building.",
+				"Around you is a forest.  A small stream flows out of the building and",
+				"down a gully."
+			],
+			"links": [
+				{
+					"to": 2,
+					"verbs": [
+						"road",
+						"west",
+						"upwar"
+					]
+				},
+				{
+					"to": 3,
+					"verbs": [
+						"enter",
+						"build",
+						"inwar",
+						"east"
+					]
+				},
+				{
+					"to": 4,
+					"verbs": [
+						"downs",
+						"gully",
+						"strea",
+						"south",
+						"d"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"north",
+						"east"
+					]
+				},
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"description": [
+				"You have walked up a hill, still in the forest.  The road slopes back",
+				"down the other side of the hill.  There is a building in the distance."
+			],
+			"links": [
+				{
+					"to": 1,
+					"verbs": [
+						"road",
+						"build",
+						"forwa",
+						"east",
+						"north",
+						"d"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"north",
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 3,
+			"description": [
+				"You are inside a building, a well house for a large spring."
+			],
+			"links": [
+				{
+					"to": 1,
+					"verbs": [
+						"enter",
+						"out",
+						"outdo",
+						"west"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"xyzzy"
+					]
+				},
+				{
+					"to": 33,
+					"verbs": [
+						"plugh"
+					]
+				},
+				{
+					"to": 79,
+					"verbs": [
+						"downs",
+						"strea"
+					]
+				}
+			]
+		},
+		{
+			"id": 4,
+			"description": [
+				"You are in a valley in the forest beside a stream tumbling along a",
+				"rocky bed."
+			],
+			"links": [
+				{
+					"to": 1,
+					"verbs": [
+						"upstr",
+						"build",
+						"north"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"east",
+						"west",
+						"upwar"
+					]
+				},
+				{
+					"to": 7,
+					"verbs": [
+						"downs",
+						"south",
+						"d"
+					]
+				},
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					]
+				}
+			]
+		},
+		{
+			"id": 5,
+			"description": [
+				"You are in open forest, with a deep valley to one side."
+			],
+			"links": [
+				{
+					"to": 4,
+					"verbs": [
+						"valle",
+						"east",
+						"d"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"forwa",
+						"north"
+					],
+					"when": 50
+				},
+				{
+					"to": 6,
+					"verbs": [
+						"fores"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"west",
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 6,
+			"description": [
+				"You are in open forest near both a valley and a road."
+			],
+			"links": [
+				{
+					"to": 1,
+					"verbs": [
+						"road",
+						"north"
+					]
+				},
+				{
+					"to": 4,
+					"verbs": [
+						"valle",
+						"east",
+						"west",
+						"d"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 7,
+			"description": [
+				"At your feet all the water of the stream splashes into a 2-inch slit",
+				"in the rock.  Downstream the streambed is bare rock."
+			],
+			"links": [
+				{
+					"to": 1,
+					"verbs": [
+						"build"
+					]
+				},
+				{
+					"to": 4,
+					"verbs": [
+						"upstr",
+						"north"
+					]
+				},
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"east",
+						"west"
+					]
+				},
+				{
+					"to": 8,
+					"verbs": [
+						"downs",
+						"rock",
+						"bed",
+						"south"
+					]
+				},
+				{
+					"message": 95,
+					"verbs": [
+						"slit",
+						"strea",
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 8,
+			"description": [
+				"You are in a 20-foot depression floored with bare dirt.  Set into the",
+				"dirt is a strong steel grate mounted in concrete.  A dry streambed",
+				"leads into the depression."
+			],
+			"links": [
+				{
+					"to": 5,
+					"verbs": [
+						"fores",
+						"east",
+						"west",
+						"south"
+					]
+				},
+				{
+					"to": 1,
+					"verbs": [
+						"build"
+					]
+				},
+				{
+					"to": 7,
+					"verbs": [
+						"upstr",
+						"gully",
+						"north"
+					]
+				},
+				{
+					"to": 9,
+					"verbs": [
+						"enter",
+						"inwar",
+						"d"
+					],
+					"when": 303
+				},
+				{
+					"message": 93,
+					"verbs": [
+						"enter"
+					]
+				}
+			]
+		},
+		{
+			"id": 9,
+			"description": [
+				"You are in a small chamber beneath a 3x3 steel grate to the surface.",
+				"A low crawl over cobbles leads inward to the west."
+			],
+			"links": [
+				{
+					"to": 8,
+					"verbs": [
+						"out",
+						"upwar"
+					],
+					"when": 303
+				},
+				{
+					"message": 93,
+					"verbs": [
+						"out"
+					]
+				},
+				{
+					"to": 10,
+					"verbs": [
+						"crawl",
+						"cobbl",
+						"inwar",
+						"west"
+					]
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"pit"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"debri"
+					]
+				}
+			]
+		},
+		{
+			"id": 10,
+			"description": [
+				"You are crawling over cobbles in a low passage.  There is a dim light",
+				"at the east end of the passage."
+			],
+			"links": [
+				{
+					"to": 9,
+					"verbs": [
+						"out",
+						"surfa",
+						"null",
+						"east"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"inwar",
+						"dark",
+						"west",
+						"debri"
+					]
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"pit"
+					]
+				}
+			]
+		},
+		{
+			"id": 11,
+			"description": [
+				"You are in a debris room filled with stuff washed in from the surface.",
+				"A low wide passage with cobbles becomes plugged with mud and debris",
+				"here, but an awkward canyon leads upward and west.  A note on the wall",
+				"says \"magic word xyzzy\"."
+			],
+			"links": [
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					],
+					"when": 303
+				},
+				{
+					"to": 9,
+					"verbs": [
+						"entra"
+					]
+				},
+				{
+					"to": 10,
+					"verbs": [
+						"crawl",
+						"cobbl",
+						"passa",
+						"low",
+						"east"
+					]
+				},
+				{
+					"to": 12,
+					"verbs": [
+						"canyo",
+						"inwar",
+						"upwar",
+						"west"
+					]
+				},
+				{
+					"to": 3,
+					"verbs": [
+						"xyzzy"
+					]
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"pit"
+					]
+				}
+			]
+		},
+		{
+			"id": 12,
+			"description": [
+				"You are in an awkward sloping east/west canyon."
+			],
+			"links": [
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					],
+					"when": 303
+				},
+				{
+					"to": 9,
+					"verbs": [
+						"entra"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"d",
+						"east",
+						"debri"
+					]
+				},
+				{
+					"to": 13,
+					"verbs": [
+						"inwar",
+						"upwar",
+						"west"
+					]
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"pit"
+					]
+				}
+			]
+		},
+		{
+			"id": 13,
+			"description": [
+				"You are in a splendid chamber thirty feet high.  The walls are frozen",
+				"rivers of orange stone.  An awkward canyon and a good passage exit",
+				"From east and west sides of the chamber."
+			],
+			"links": [
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					],
+					"when": 303
+				},
+				{
+					"to": 9,
+					"verbs": [
+						"entra"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"debri"
+					]
+				},
+				{
+					"to": 12,
+					"verbs": [
+						"canyo",
+						"east"
+					]
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"passa",
+						"pit",
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 14,
+			"description": [
+				"At your feet is a small pit breathing traces of white mist.  An east",
+				"passage ends here except for a small crack leading on."
+			],
+			"links": [
+				{
+					"to": 8,
+					"verbs": [
+						"depre"
+					],
+					"when": 303
+				},
+				{
+					"to": 9,
+					"verbs": [
+						"entra"
+					]
+				},
+				{
+					"to": 11,
+					"verbs": [
+						"debri"
+					]
+				},
+				{
+					"to": 13,
+					"verbs": [
+						"passa",
+						"east"
+					]
+				},
+				{
+					"to": 20,
+					"verbs": [
+						"d",
+						"pit",
+						"steps"
+					],
+					"when": 150
+				},
+				{
+					"to": 15,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 16,
+					"verbs": [
+						"crack",
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 15,
+			"description": [
+				"You are at one end of a vast hall stretching forward out of sight to",
+				"the west.  There are openings to either side.  Nearby, a wide stone",
+				"staircase leads downward.  The hall is filled with wisps of white mist",
+				"swaying to and fro almost as if alive.  A cold wind blows up the",
+				"staircase.  There is a passage at the top of a dome behind you."
+			],
+			"links": [
+				{
+					"to": 18,
+					"verbs": [
+						"left",
+						"south"
+					]
+				},
+				{
+					"to": 17,
+					"verbs": [
+						"forwa",
+						"hall",
+						"west"
+					]
+				},
+				{
+					"to": 19,
+					"verbs": [
+						"stair",
+						"d",
+						"north"
+					]
+				},
+				{
+					"to": 22,
+					"verbs": [
+						"upwar",
+						"pit",
+						"steps",
+						"dome",
+						"passa",
+						"east"
+					],
+					"when": 150
+				},
+				{
+					"to": 14,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 34,
+					"verbs": [
+						"y2"
+					]
+				}
+			]
+		},
+		{
+			"id": 16,
+			"description": [
+				"The crack is far too small for you to follow."
+			],
+			"links": [
+				{
+					"to": 14,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 17,
+			"description": [
+				"You are on the east bank of a fissure slicing clear across the hall.",
+				"The mist is quite thick here, and the fissure is too wide to jump."
+			],
+			"links": [
+				{
+					"to": 15,
+					"verbs": [
+						"hall",
+						"east"
+					]
+				},
+				{
+					"message": 96,
+					"verbs": [
+						"jump"
+					],
+					"when": 312
+				},
+				{
+					"to": 21,
+					"verbs": [
+						"forwa"
+					],
+					"when": 412
+				},
+				{
+					"message": 97,
+					"verbs": [
+						"over",
+						"acros",
+						"west",
+						"cross"
+					],
+					"when": 412
+				},
+				{
+					"to": 27,
+					"verbs": [
+						"over"
+					]
+				}
+			]
+		},
+		{
+			"id": 18,
+			"description": [
+				"This is a low room with a crude note on the wall.  The note says,",
+				"\"You won't get it up the steps\"."
+			],
+			"links": [
+				{
+					"to": 15,
+					"verbs": [
+						"hall",
+						"out",
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 19,
+			"description": [
+				"You are in the hall of the mountain king, with passages off in all",
+				"directions."
+			],
+			"links": [
+				{
+					"to": 15,
+					"verbs": [
+						"stair",
+						"upwar",
+						"east"
+					]
+				},
+				{
+					"to": 28,
+					"verbs": [
+						"north",
+						"left"
+					],
+					"when": 311
+				},
+				{
+					"to": 29,
+					"verbs": [
+						"south",
+						"right"
+					],
+					"when": 311
+				},
+				{
+					"to": 30,
+					"verbs": [
+						"west",
+						"forwa"
+					],
+					"when": 311
+				},
+				{
+					"to": 32,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 74,
+					"verbs": [
+						"sw"
+					],
+					"when": 35
+				},
+				{
+					"to": 32,
+					"verbs": [
+						"sw"
+					],
+					"when": 211
+				},
+				{
+					"to": 74,
+					"verbs": [
+						"secre"
+					]
+				}
+			]
+		},
+		{
+			"id": 20,
+			"description": [
+				"You are at the bottom of the pit with a broken neck."
+			],
+			"links": [
+				{
+					"to": 0,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 21,
+			"description": [
+				"You didn't make it."
+			],
+			"links": [
+				{
+					"to": 0,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 22,
+			"description": [
+				"The dome is unclimbable."
+			],
+			"links": [
+				{
+					"to": 15,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 23,
+			"description": [
+				"You are at the west end of the twopit room.  There is a large hole in",
+				"the wall above the pit at this end of the room."
+			],
+			"links": [
+				{
+					"to": 67,
+					"verbs": [
+						"east",
+						"acros"
+					]
+				},
+				{
+					"to": 68,
+					"verbs": [
+						"west",
+						"slab"
+					]
+				},
+				{
+					"to": 25,
+					"verbs": [
+						"d",
+						"pit"
+					]
+				},
+				{
+					"message": 148,
+					"verbs": [
+						"hole"
+					]
+				}
+			]
+		},
+		{
+			"id": 24,
+			"description": [
+				"You are at the bottom of the eastern pit in the twopit room.  There is",
+				"a small pool of oil in one corner of the pit."
+			],
+			"links": [
+				{
+					"to": 67,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 25,
+			"description": [
+				"You are at the bottom of the western pit in the twopit room.  There is",
+				"a large hole in the wall about 25 feet above you."
+			],
+			"links": [
+				{
+					"to": 23,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				},
+				{
+					"to": 31,
+					"verbs": [
+						"climb"
+					],
+					"when": 724
+				},
+				{
+					"to": 26,
+					"verbs": [
+						"climb"
+					]
+				}
+			]
+		},
+		{
+			"id": 26,
+			"description": [
+				"You clamber up the plant and scurry through the hole at the top."
+			],
+			"links": [
+				{
+					"to": 88,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 27,
+			"description": [
+				"You are on the west side of the fissure in the hall of mists."
+			],
+			"links": [
+				{
+					"message": 96,
+					"verbs": [
+						"jump"
+					],
+					"when": 312
+				},
+				{
+					"to": 21,
+					"verbs": [
+						"forwa"
+					],
+					"when": 412
+				},
+				{
+					"message": 97,
+					"verbs": [
+						"over",
+						"acros",
+						"east",
+						"cross"
+					],
+					"when": 412
+				},
+				{
+					"to": 17,
+					"verbs": [
+						"over"
+					]
+				},
+				{
+					"to": 40,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 41,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 28,
+			"description": [
+				"You are in a low n/s passage at a hole in the floor.  The hole goes",
+				"down to an e/w passage."
+			],
+			"links": [
+				{
+					"to": 19,
+					"verbs": [
+						"hall",
+						"out",
+						"south"
+					]
+				},
+				{
+					"to": 33,
+					"verbs": [
+						"north",
+						"y2"
+					]
+				},
+				{
+					"to": 36,
+					"verbs": [
+						"d",
+						"hole"
+					]
+				}
+			]
+		},
+		{
+			"id": 29,
+			"description": [
+				"You are in the south side chamber."
+			],
+			"links": [
+				{
+					"to": 19,
+					"verbs": [
+						"hall",
+						"out",
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 30,
+			"description": [
+				"You are in the west side chamber of the hall of the mountain king.",
+				"A passage continues west and up here."
+			],
+			"links": [
+				{
+					"to": 19,
+					"verbs": [
+						"hall",
+						"out",
+						"east"
+					]
+				},
+				{
+					"to": 62,
+					"verbs": [
+						"west",
+						"upwar"
+					]
+				}
+			]
+		},
+		{
+			"id": 31,
+			"description": [
+				">$<"
+			],
+			"links": [
+				{
+					"to": 89,
+					"verbs": [
+						"yow!"
+					],
+					"when": 524
+				},
+				{
+					"to": 90,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 32,
+			"description": [
+				"You can't get by the snake."
+			],
+			"links": [
+				{
+					"to": 19,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 33,
+			"description": [
+				"You are in a large room, with a passage to the south, a passage to the",
+				"west, and a wall of broken rock to the east.  There is a large \"y2\" on",
+				"A rock in the room's center."
+			],
+			"links": [
+				{
+					"to": 3,
+					"verbs": [
+						"plugh"
+					]
+				},
+				{
+					"to": 28,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 34,
+					"verbs": [
+						"east",
+						"wall",
+						"broke"
+					]
+				},
+				{
+					"to": 35,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"special": 2,
+					"verbs": [
+						"plove"
+					],
+					"when": 159
+				},
+				{
+					"to": 100,
+					"verbs": [
+						"plove"
+					]
+				}
+			]
+		},
+		{
+			"id": 34,
+			"description": [
+				"You are in a jumble of rock, with cracks everywhere."
+			],
+			"links": [
+				{
+					"to": 33,
+					"verbs": [
+						"d",
+						"y2"
+					]
+				},
+				{
+					"to": 15,
+					"verbs": [
+						"upwar"
+					]
+				}
+			]
+		},
+		{
+			"id": 35,
+			"description": [
+				"You're at a low window overlooking a huge pit, which extends up out of",
+				"sight.  A floor is indistinctly visible over 50 feet below.  Traces of",
+				"White mist cover the floor of the pit, becoming thicker to the right.",
+				"Marks in the dust around the window would seem to indicate that",
+				"someone has been here recently.  Directly across the pit from you and",
+				"25 Feet away there is a similar window looking into a lighted room.  A",
+				"shadowy figure can be seen there peering back at you."
+			],
+			"links": [
+				{
+					"to": 33,
+					"verbs": [
+						"east",
+						"y2"
+					]
+				},
+				{
+					"to": 20,
+					"verbs": [
+						"jump"
+					]
+				}
+			]
+		},
+		{
+			"id": 36,
+			"description": [
+				"You are in a dirty broken passage.  To the east is a crawl.  To the",
+				"west is a large passage.  Above you is a hole to another passage."
+			],
+			"links": [
+				{
+					"to": 37,
+					"verbs": [
+						"east",
+						"crawl"
+					]
+				},
+				{
+					"to": 28,
+					"verbs": [
+						"upwar",
+						"hole"
+					]
+				},
+				{
+					"to": 39,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"bedqu"
+					]
+				}
+			]
+		},
+		{
+			"id": 37,
+			"description": [
+				"You are on the brink of a small clean climbable pit.  A crawl leads",
+				"west."
+			],
+			"links": [
+				{
+					"to": 36,
+					"verbs": [
+						"west",
+						"crawl"
+					]
+				},
+				{
+					"to": 38,
+					"verbs": [
+						"d",
+						"pit",
+						"climb"
+					]
+				}
+			]
+		},
+		{
+			"id": 38,
+			"description": [
+				"You are in the bottom of a small pit with a little stream, which",
+				"Enters and exits through tiny slits."
+			],
+			"links": [
+				{
+					"to": 37,
+					"verbs": [
+						"climb",
+						"upwar",
+						"out"
+					]
+				},
+				{
+					"message": 95,
+					"verbs": [
+						"slit",
+						"strea",
+						"d",
+						"upstr",
+						"downs"
+					]
+				}
+			]
+		},
+		{
+			"id": 39,
+			"description": [
+				"You are in a large room full of dusty rocks.  There is a big hole in",
+				"the floor.  There are cracks everywhere, and a passage leading east."
+			],
+			"links": [
+				{
+					"to": 36,
+					"verbs": [
+						"east",
+						"passa"
+					]
+				},
+				{
+					"to": 64,
+					"verbs": [
+						"d",
+						"hole",
+						"floor"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"bedqu"
+					]
+				}
+			]
+		},
+		{
+			"id": 40,
+			"description": [
+				"You have crawled through a very low wide passage parallel to and north",
+				"of the hall of mists."
+			],
+			"links": [
+				{
+					"to": 41,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 41,
+			"description": [
+				"You are at the west end of hall of mists.  A low wide crawl continues",
+				"west and another goes north.  To the south is a little passage 6 feet",
+				"Off the floor."
+			],
+			"links": [
+				{
+					"to": 42,
+					"verbs": [
+						"south",
+						"upwar",
+						"passa",
+						"climb"
+					]
+				},
+				{
+					"to": 27,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 59,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 60,
+					"verbs": [
+						"west",
+						"crawl"
+					]
+				}
+			]
+		},
+		{
+			"id": 42,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 41,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 42,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 43,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 45,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 80,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 43,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 42,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 44,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 45,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 44,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 43,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 48,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 50,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 82,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 45,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 42,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 43,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 46,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 47,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 87,
+					"verbs": [
+						"upwar",
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 46,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 45,
+					"verbs": [
+						"west",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 47,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 45,
+					"verbs": [
+						"east",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 48,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 44,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 49,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 50,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 51,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 50,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 44,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 49,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 51,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 52,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 51,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 49,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 50,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 52,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 53,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 52,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 50,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 51,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 52,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 53,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 55,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 86,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 53,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 51,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 52,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 54,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 54,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 53,
+					"verbs": [
+						"west",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 55,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 52,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 55,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 56,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 57,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 56,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 55,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 57,
+			"description": [
+				"You are on the brink of a thirty foot pit with a massive orange column",
+				"down one wall.  You could climb down here but you could not get back",
+				"up.  The maze continues at this level."
+			],
+			"links": [
+				{
+					"to": 13,
+					"verbs": [
+						"d",
+						"climb"
+					]
+				},
+				{
+					"to": 55,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 58,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 83,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 84,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 58,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 57,
+					"verbs": [
+						"east",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 59,
+			"description": [
+				"You have crawled through a very low wide passage parallel to and north",
+				"of the hall of mists."
+			],
+			"links": [
+				{
+					"to": 27,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 60,
+			"description": [
+				"You are at the east end of a very long hall apparently without side",
+				"chambers.  To the east a low wide crawl slants up.  To the north a",
+				"round two foot hole slants down."
+			],
+			"links": [
+				{
+					"to": 41,
+					"verbs": [
+						"east",
+						"upwar",
+						"crawl"
+					]
+				},
+				{
+					"to": 61,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 62,
+					"verbs": [
+						"north",
+						"d",
+						"hole"
+					]
+				}
+			]
+		},
+		{
+			"id": 61,
+			"description": [
+				"You are at the west end of a very long featureless hall.  The hall",
+				"joins up with a narrow north/south passage."
+			],
+			"links": [
+				{
+					"to": 60,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 62,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 107,
+					"verbs": [
+						"south"
+					],
+					"when": 100
+				}
+			]
+		},
+		{
+			"id": 62,
+			"description": [
+				"You are at a crossover of a high n/s passage and a low e/w one."
+			],
+			"links": [
+				{
+					"to": 60,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 63,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 30,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 61,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 63,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 62,
+					"verbs": [
+						"south",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 64,
+			"description": [
+				"You are at a complex junction.  A low hands and knees passage from the",
+				"north joins a higher crawl from the east to make a walking passage",
+				"going west.  There is also a large room above.  The air is damp here."
+			],
+			"links": [
+				{
+					"to": 39,
+					"verbs": [
+						"upwar",
+						"climb",
+						"room"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"west",
+						"bedqu"
+					]
+				},
+				{
+					"to": 103,
+					"verbs": [
+						"north",
+						"shell"
+					]
+				},
+				{
+					"to": 106,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 65,
+			"description": [
+				"You are in bedquilt, a long east/west passage with holes everywhere.",
+				"To explore at random select north, south, up, or down."
+			],
+			"links": [
+				{
+					"to": 64,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 66,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"south"
+					],
+					"when": 80
+				},
+				{
+					"to": 68,
+					"verbs": [
+						"slab"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"upwar"
+					],
+					"when": 80
+				},
+				{
+					"to": 70,
+					"verbs": [
+						"upwar"
+					],
+					"when": 50
+				},
+				{
+					"to": 39,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"north"
+					],
+					"when": 60
+				},
+				{
+					"to": 72,
+					"verbs": [
+						"north"
+					],
+					"when": 75
+				},
+				{
+					"to": 71,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"d"
+					],
+					"when": 80
+				},
+				{
+					"to": 106,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 66,
+			"description": [
+				"You are in a room whose walls resemble swiss cheese.  Obvious passages",
+				"go west, east, ne, and nw.  Part of the room is occupied by a large",
+				"bedrock block."
+			],
+			"links": [
+				{
+					"to": 65,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 67,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"south"
+					],
+					"when": 80
+				},
+				{
+					"to": 77,
+					"verbs": [
+						"canyo"
+					]
+				},
+				{
+					"to": 96,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"message": 56,
+					"verbs": [
+						"nw"
+					],
+					"when": 50
+				},
+				{
+					"to": 97,
+					"verbs": [
+						"orien"
+					]
+				}
+			]
+		},
+		{
+			"id": 67,
+			"description": [
+				"You are at the east end of the twopit room.  The floor here is",
+				"littered with thin rock slabs, which make it easy to descend the pits.",
+				"There is a path here bypassing the pits to connect passages from east",
+				"and west.  There are holes all over, but the only big one is on the",
+				"wall directly over the west pit where you can't get to it."
+			],
+			"links": [
+				{
+					"to": 66,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 23,
+					"verbs": [
+						"west",
+						"acros"
+					]
+				},
+				{
+					"to": 24,
+					"verbs": [
+						"d",
+						"pit"
+					]
+				}
+			]
+		},
+		{
+			"id": 68,
+			"description": [
+				"You are in a large low circular chamber whose floor is an immense slab",
+				"fallen from the ceiling (slab room).  East and west there once were",
+				"large passages, but they are now filled with boulders.  Low small",
+				"passages go north and south, and the south one quickly bends west",
+				"around the boulders."
+			],
+			"links": [
+				{
+					"to": 23,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 69,
+					"verbs": [
+						"upwar",
+						"climb"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 69,
+			"description": [
+				"You are in a secret n/s canyon above a large room."
+			],
+			"links": [
+				{
+					"to": 68,
+					"verbs": [
+						"d",
+						"slab"
+					]
+				},
+				{
+					"to": 120,
+					"verbs": [
+						"south"
+					],
+					"when": 331
+				},
+				{
+					"to": 119,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 109,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 113,
+					"verbs": [
+						"reser"
+					]
+				}
+			]
+		},
+		{
+			"id": 70,
+			"description": [
+				"You are in a secret n/s canyon above a sizable passage."
+			],
+			"links": [
+				{
+					"to": 71,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"d",
+						"passa"
+					]
+				},
+				{
+					"to": 111,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 71,
+			"description": [
+				"You are in a secret canyon at a junction of three canyons, bearing",
+				"north, south, and se.  The north one is as tall as the other two",
+				"combined."
+			],
+			"links": [
+				{
+					"to": 65,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 70,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 110,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 72,
+			"description": [
+				"You are in a large low room.  Crawls lead north, se, and sw."
+			],
+			"links": [
+				{
+					"to": 65,
+					"verbs": [
+						"bedqu"
+					]
+				},
+				{
+					"to": 118,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 73,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 97,
+					"verbs": [
+						"se",
+						"orien"
+					]
+				}
+			]
+		},
+		{
+			"id": 73,
+			"description": [
+				"Dead end crawl."
+			],
+			"links": [
+				{
+					"to": 72,
+					"verbs": [
+						"south",
+						"crawl",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 74,
+			"description": [
+				"You are in a secret canyon which here runs e/w.  It crosses over a",
+				"very tight canyon 15 feet below.  If you go down you may not be able",
+				"to get back up."
+			],
+			"links": [
+				{
+					"to": 19,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 120,
+					"verbs": [
+						"west"
+					],
+					"when": 331
+				},
+				{
+					"to": 121,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 75,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 75,
+			"description": [
+				"You are at a wide place in a very tight n/s canyon."
+			],
+			"links": [
+				{
+					"to": 76,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 77,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 76,
+			"description": [
+				"The canyon here becomes too tight to go further south."
+			],
+			"links": [
+				{
+					"to": 75,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 77,
+			"description": [
+				"You are in a tall e/w canyon.  A low tight crawl goes 3 feet north and",
+				"seems to open up."
+			],
+			"links": [
+				{
+					"to": 75,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 78,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 66,
+					"verbs": [
+						"north",
+						"crawl"
+					]
+				}
+			]
+		},
+		{
+			"id": 78,
+			"description": [
+				"The canyon runs into a mass of boulders -- dead end."
+			],
+			"links": [
+				{
+					"to": 77,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 79,
+			"description": [
+				"The stream flows out through a pair of 1 foot diameter sewer pipes.",
+				"It would be advisable to use the exit."
+			],
+			"links": [
+				{
+					"to": 3,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 80,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 42,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 80,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 80,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 81,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 81,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 80,
+					"verbs": [
+						"west",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 82,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 44,
+					"verbs": [
+						"south",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 83,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 57,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 84,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 85,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 84,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 57,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 83,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 114,
+					"verbs": [
+						"nw"
+					]
+				}
+			]
+		},
+		{
+			"id": 85,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 83,
+					"verbs": [
+						"east",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 86,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 52,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 87,
+			"description": [
+				"You are in a maze of twisty little passages, all alike."
+			],
+			"links": [
+				{
+					"to": 45,
+					"verbs": [
+						"upwar",
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 88,
+			"description": [
+				"You are in a long, narrow corridor stretching out of sight to the",
+				"west.  At the eastern end is a hole through which you can see a",
+				"profusion of leaves."
+			],
+			"links": [
+				{
+					"to": 25,
+					"verbs": [
+						"d",
+						"climb",
+						"east"
+					]
+				},
+				{
+					"to": 20,
+					"verbs": [
+						"jump"
+					]
+				},
+				{
+					"to": 92,
+					"verbs": [
+						"west",
+						"giant"
+					]
+				}
+			]
+		},
+		{
+			"id": 89,
+			"description": [
+				"There is nothing here to climb.  Use \"up\" or \"out\" to leave the pit."
+			],
+			"links": [
+				{
+					"to": 25,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 90,
+			"description": [
+				"You have climbed up the plant and out of the pit."
+			],
+			"links": [
+				{
+					"to": 23,
+					"verbs": [
+						"yow!"
+					]
+				}
+			]
+		},
+		{
+			"id": 91,
+			"description": [
+				"You are at the top of a steep incline above a large room.  You could",
+				"climb down here, but you would not be able to climb up.  There is a",
+				"passage leading back to the north."
+			],
+			"links": [
+				{
+					"to": 95,
+					"verbs": [
+						"north",
+						"caver",
+						"passa"
+					]
+				},
+				{
+					"to": 72,
+					"verbs": [
+						"d",
+						"climb"
+					]
+				}
+			]
+		},
+		{
+			"id": 92,
+			"description": [
+				"You are in the giant room.  The ceiling here is too high up for your",
+				"lamp to show it.  Cavernous passages lead east, north, and south.  On",
+				"the west wall is scrawled the inscription, \"fee fie foe foo\" [sic]."
+			],
+			"links": [
+				{
+					"to": 88,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 93,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 94,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 93,
+			"description": [
+				"The passage here is blocked by a recent cave-in."
+			],
+			"links": [
+				{
+					"to": 92,
+					"verbs": [
+						"south",
+						"giant",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 94,
+			"description": [
+				"You are at one end of an immense north/south passage."
+			],
+			"links": [
+				{
+					"to": 92,
+					"verbs": [
+						"south",
+						"giant",
+						"passa"
+					]
+				},
+				{
+					"to": 95,
+					"verbs": [
+						"north",
+						"enter",
+						"caver"
+					],
+					"when": 309
+				},
+				{
+					"message": 111,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 95,
+			"description": [
+				"You are in a magnificent cavern with a rushing stream, which cascades",
+				"over a sparkling waterfall into a roaring whirlpool which disappears",
+				"through a hole in the floor.  Passages exit to the south and west."
+			],
+			"links": [
+				{
+					"to": 94,
+					"verbs": [
+						"south",
+						"out"
+					]
+				},
+				{
+					"to": 92,
+					"verbs": [
+						"giant"
+					]
+				},
+				{
+					"to": 91,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 96,
+			"description": [
+				"You are in the soft room.  The walls are covered with heavy curtains,",
+				"the floor with a thick pile carpet.  Moss covers the ceiling."
+			],
+			"links": [
+				{
+					"to": 66,
+					"verbs": [
+						"west",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 97,
+			"description": [
+				"This is the oriental room.  Ancient oriental cave drawings cover the",
+				"walls.  A gently sloping passage leads upward to the north, another",
+				"passage leads se, and a hands and knees crawl leads west."
+			],
+			"links": [
+				{
+					"to": 66,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 72,
+					"verbs": [
+						"west",
+						"crawl"
+					]
+				},
+				{
+					"to": 98,
+					"verbs": [
+						"upwar",
+						"north",
+						"caver"
+					]
+				}
+			]
+		},
+		{
+			"id": 98,
+			"description": [
+				"You are following a wide path around the outer edge of a large cavern.",
+				"Far below, through a heavy white mist, strange splashing noises can be",
+				"heard.  The mist rises up through a fissure in the ceiling.  The path",
+				"exits to the south and west."
+			],
+			"links": [
+				{
+					"to": 97,
+					"verbs": [
+						"south",
+						"orien"
+					]
+				},
+				{
+					"to": 99,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 99,
+			"description": [
+				"You are in an alcove.  A small nw path seems to widen after a short",
+				"distance.  An extremely tight tunnel leads east.  It looks like a very",
+				"tight squeeze.  An eerie light can be seen at the other end."
+			],
+			"links": [
+				{
+					"to": 98,
+					"verbs": [
+						"nw",
+						"caver"
+					]
+				},
+				{
+					"special": 1,
+					"verbs": [
+						"east",
+						"passa"
+					]
+				},
+				{
+					"to": 100,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 100,
+			"description": [
+				"You're in a small chamber lit by an eerie green light.  An extremely",
+				"narrow tunnel exits to the west.  A dark corridor leads ne."
+			],
+			"links": [
+				{
+					"special": 1,
+					"verbs": [
+						"west",
+						"passa",
+						"out"
+					]
+				},
+				{
+					"to": 99,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"special": 2,
+					"verbs": [
+						"plove"
+					],
+					"when": 159
+				},
+				{
+					"to": 33,
+					"verbs": [
+						"plove"
+					]
+				},
+				{
+					"to": 101,
+					"verbs": [
+						"ne",
+						"dark"
+					]
+				}
+			]
+		},
+		{
+			"id": 101,
+			"description": [
+				"You're in the dark-room.  A corridor leading south is the only exit."
+			],
+			"links": [
+				{
+					"to": 100,
+					"verbs": [
+						"south",
+						"plove",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 102,
+			"description": [
+				"You are in an arched hall.  A coral passage once continued up and east",
+				"from here, but is now blocked by debris.  The air smells of sea water."
+			],
+			"links": [
+				{
+					"to": 103,
+					"verbs": [
+						"d",
+						"shell",
+						"out"
+					]
+				}
+			]
+		},
+		{
+			"id": 103,
+			"description": [
+				"You're in a large room carved out of sedimentary rock.  The floor and",
+				"walls are littered with bits of shells imbedded in the stone.  A",
+				"shallow passage proceeds downward, and a somewhat steeper one leads",
+				"up.  A low hands and knees passage enters from the south."
+			],
+			"links": [
+				{
+					"to": 102,
+					"verbs": [
+						"upwar",
+						"hall"
+					]
+				},
+				{
+					"to": 104,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"message": 118,
+					"verbs": [
+						"south"
+					],
+					"when": 114
+				},
+				{
+					"message": 119,
+					"verbs": [
+						"south"
+					],
+					"when": 115
+				},
+				{
+					"to": 64,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 104,
+			"description": [
+				"You are in a long sloping corridor with ragged sharp walls."
+			],
+			"links": [
+				{
+					"to": 103,
+					"verbs": [
+						"upwar",
+						"shell"
+					]
+				},
+				{
+					"to": 105,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 105,
+			"description": [
+				"You are in a cul-de-sac about eight feet across."
+			],
+			"links": [
+				{
+					"to": 104,
+					"verbs": [
+						"upwar",
+						"out"
+					]
+				},
+				{
+					"to": 103,
+					"verbs": [
+						"shell"
+					]
+				}
+			]
+		},
+		{
+			"id": 106,
+			"description": [
+				"You are in an anteroom leading to a large passage to the east.  Small",
+				"passages go west and up.  The remnants of recent digging are evident.",
+				"A sign in midair here says \"Cave under construction beyond this point.",
+				"Proceed at own risk.  [Witt construction company]\""
+			],
+			"links": [
+				{
+					"to": 64,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 65,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 108,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 107,
+			"description": [
+				"You are in a maze of twisty little passages, all different."
+			],
+			"links": [
+				{
+					"to": 131,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 61,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 108,
+			"description": [
+				"You are at Witt's end.  Passages lead off in *all* directions."
+			],
+			"links": [
+				{
+					"message": 56,
+					"verbs": [
+						"east",
+						"north",
+						"south",
+						"ne",
+						"se",
+						"sw",
+						"nw",
+						"upwar",
+						"d"
+					],
+					"when": 95
+				},
+				{
+					"to": 106,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"message": 126,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 109,
+			"description": [
+				"You are in a north/south canyon about 25 feet across.  The floor is",
+				"covered by white mist seeping in from the north.  The walls extend",
+				"upward for well over 100 feet.  Suspended from some unseen point far",
+				"above you, an enormous two-sided mirror is hanging parallel to and",
+				"Midway between the canyon walls.  (The mirror is obviously provided",
+				"for the use of the dwarves, who as you know, are extremely vain.)  A",
+				"Small window can be seen in either wall, some fifty feet up."
+			],
+			"links": [
+				{
+					"to": 69,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 113,
+					"verbs": [
+						"north",
+						"reser"
+					]
+				}
+			]
+		},
+		{
+			"id": 110,
+			"description": [
+				"You're at a low window overlooking a huge pit, which extends up out of",
+				"sight.  A floor is indistinctly visible over 50 feet below.  Traces of",
+				"white mist cover the floor of the pit, becoming thicker to the left.",
+				"Marks in the dust around the window would seem to indicate that",
+				"someone has been here recently.  Directly across the pit from you and",
+				"25 Feet away there is a similar window looking into a lighted room.  A",
+				"shadowy figure can be seen there peering back at you."
+			],
+			"links": [
+				{
+					"to": 71,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 20,
+					"verbs": [
+						"jump"
+					]
+				}
+			]
+		},
+		{
+			"id": 111,
+			"description": [
+				"A large stalactite extends from the roof and almost reaches the floor",
+				"below.  You could climb down it, and jump from it to the floor, but",
+				"having done so you would be unable to reach it to climb back up."
+			],
+			"links": [
+				{
+					"to": 70,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 50,
+					"verbs": [
+						"d",
+						"jump",
+						"climb"
+					],
+					"when": 40
+				},
+				{
+					"to": 53,
+					"verbs": [
+						"d"
+					],
+					"when": 50
+				},
+				{
+					"to": 45,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 112,
+			"description": [
+				"You are in a little maze of twisting passages, all different."
+			],
+			"links": [
+				{
+					"to": 131,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 140,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 113,
+			"description": [
+				"You are at the edge of a large underground reservoir.  An opaque cloud",
+				"of white mist fills the room and rises rapidly upward.  The lake is",
+				"fed by a stream, which tumbles out of a hole in the wall about 10 feet",
+				"overhead and splashes noisily into the water somewhere within the",
+				"Mist.  The only passage goes back toward the south."
+			],
+			"links": [
+				{
+					"to": 109,
+					"verbs": [
+						"south",
+						"out",
+						109
+					]
+				}
+			]
+		},
+		{
+			"id": 114,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 84,
+					"verbs": [
+						"se"
+					]
+				}
+			]
+		},
+		{
+			"id": 115,
+			"description": [
+				"You are at the northeast end of an immense room, even larger than the",
+				"giant room.  It appears to be a repository for the \"adventure\"",
+				"program.  Massive torches far overhead bathe the room with smoky",
+				"yellow light.  Scattered about you can be seen a pile of bottles (all",
+				"of them empty), a nursery of young beanstalks murmuring quietly, a bed",
+				"of oysters, a bundle of black rods with rusty stars on their ends, and",
+				"a collection of brass lanterns.  Off to one side a great many dwarves",
+				"are sleeping on the floor, snoring loudly.  A sign nearby reads: \"Do",
+				"not disturb the dwarves!\"  An immense mirror is hanging against one",
+				"wall, and stretches to the other end of the room, where various other",
+				"sundry objects can be glimpsed dimly in the distance."
+			],
+			"links": [
+				{
+					"to": 116,
+					"verbs": [
+						"sw"
+					]
+				}
+			]
+		},
+		{
+			"id": 116,
+			"description": [
+				"You are at the southwest end of the repository.  To one side is a pit",
+				"full of fierce green snakes.  On the other side is a row of small",
+				"wicker cages, each of which contains a little sulking bird.  In one",
+				"corner is a bundle of black rods with rusty marks on their ends.  A",
+				"large number of velvet pillows are scattered about on the floor.  A",
+				"vast mirror stretches off to the northeast.  At your feet is a large",
+				"steel grate, next to which is a sign which reads, \"Treasure vault.",
+				"Keys in main office.\""
+			],
+			"links": [
+				{
+					"to": 115,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"message": 93,
+					"verbs": [
+						"d"
+					]
+				}
+			]
+		},
+		{
+			"id": 117,
+			"description": [
+				"You are on one side of a large, deep chasm.  A heavy white mist rising",
+				"up from below obscures all view of the far side.  A sw path leads away",
+				"from the chasm into a winding corridor."
+			],
+			"links": [
+				{
+					"to": 118,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"message": 160,
+					"verbs": [
+						"over",
+						"acros",
+						"cross",
+						"ne"
+					],
+					"when": 233
+				},
+				{
+					"message": 161,
+					"verbs": [
+						"over"
+					],
+					"when": 332
+				},
+				{
+					"special": 3,
+					"verbs": [
+						"over"
+					]
+				},
+				{
+					"to": 21,
+					"verbs": [
+						"jump"
+					],
+					"when": 332
+				},
+				{
+					"message": 96,
+					"verbs": [
+						"jump"
+					]
+				}
+			]
+		},
+		{
+			"id": 118,
+			"description": [
+				"You are in a long winding corridor sloping out of sight in both",
+				"directions."
+			],
+			"links": [
+				{
+					"to": 72,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 117,
+					"verbs": [
+						"upwar"
+					]
+				}
+			]
+		},
+		{
+			"id": 119,
+			"description": [
+				"You are in a secret canyon which exits to the north and east."
+			],
+			"links": [
+				{
+					"to": 69,
+					"verbs": [
+						"north",
+						"out"
+					]
+				},
+				{
+					"message": 153,
+					"verbs": [
+						"east",
+						"forwa"
+					]
+				}
+			]
+		},
+		{
+			"id": 120,
+			"description": [
+				"You are in a secret canyon which exits to the north and east."
+			],
+			"links": [
+				{
+					"to": 69,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 74,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 121,
+			"description": [
+				"You are in a secret canyon which exits to the north and east."
+			],
+			"links": [
+				{
+					"to": 74,
+					"verbs": [
+						"east",
+						"out"
+					]
+				},
+				{
+					"message": 153,
+					"verbs": [
+						"north",
+						"forwa"
+					]
+				}
+			]
+		},
+		{
+			"id": 122,
+			"description": [
+				"You are on the far side of the chasm.  A ne path leads away from the",
+				"chasm on this side."
+			],
+			"links": [
+				{
+					"to": 123,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"message": 160,
+					"verbs": [
+						"over",
+						"acros",
+						"cross",
+						"sw"
+					],
+					"when": 233
+				},
+				{
+					"special": 3,
+					"verbs": [
+						"over"
+					]
+				},
+				{
+					"message": 96,
+					"verbs": [
+						"jump"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"fork"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				},
+				{
+					"to": 129,
+					"verbs": [
+						"barre"
+					]
+				}
+			]
+		},
+		{
+			"id": 123,
+			"description": [
+				"You're in a long east/west corridor.  A faint rumbling noise can be",
+				"heard in the distance."
+			],
+			"links": [
+				{
+					"to": 122,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"east",
+						"fork"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				},
+				{
+					"to": 129,
+					"verbs": [
+						"barre"
+					]
+				}
+			]
+		},
+		{
+			"id": 124,
+			"description": [
+				"The path forks here.  The left fork leads northeast.  A dull rumbling",
+				"seems to get louder in that direction.  The right fork leads southeast",
+				"down a gentle slope.  The main corridor enters from the west."
+			],
+			"links": [
+				{
+					"to": 123,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 125,
+					"verbs": [
+						"ne",
+						"left"
+					]
+				},
+				{
+					"to": 128,
+					"verbs": [
+						"se",
+						"right",
+						"d"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				},
+				{
+					"to": 129,
+					"verbs": [
+						"barre"
+					]
+				}
+			]
+		},
+		{
+			"id": 125,
+			"description": [
+				"The walls are quite warm here.  From the north can be heard a steady",
+				"roar, so loud that the entire cave seems to be trembling.  Another",
+				"passage leads south, and a low crawl goes east."
+			],
+			"links": [
+				{
+					"to": 124,
+					"verbs": [
+						"south",
+						"fork"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"north",
+						"view"
+					]
+				},
+				{
+					"to": 127,
+					"verbs": [
+						"east",
+						"crawl"
+					]
+				}
+			]
+		},
+		{
+			"id": 126,
+			"description": [
+				"You are on the edge of a breath-taking view.  Far below you is an",
+				"active volcano, from which great gouts of molten lava come surging",
+				"out, cascading back down into the depths.  The glowing rock fills the",
+				"farthest reaches of the cavern with a blood-red glare, giving every-",
+				"thing an eerie, macabre appearance.  The air is filled with flickering",
+				"sparks of ash and a heavy smell of brimstone.  The walls are hot to",
+				"the touch, and the thundering of the volcano drowns out all other",
+				"sounds.  Embedded in the jagged roof far overhead are myriad twisted",
+				"formations composed of pure white alabaster, which scatter the murky",
+				"light into sinister apparitions upon the walls.  To one side is a deep",
+				"gorge, filled with a bizarre chaos of tortured rock which seems to",
+				"have been crafted by the devil himself.  An immense river of fire",
+				"crashes out from the depths of the volcano, burns its way through the",
+				"gorge, and plummets into a bottomless pit far off to your left.  To",
+				"the right, an immense geyser of blistering steam erupts continuously",
+				"from a barren island in the center of a sulfurous lake, which bubbles",
+				"ominously.  The far right wall is aflame with an incandescence of its",
+				"own, which lends an additional infernal splendor to the already",
+				"hellish scene.  A dark, foreboding passage exits to the south."
+			],
+			"links": [
+				{
+					"to": 125,
+					"verbs": [
+						"south",
+						"passa",
+						"out"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"fork"
+					]
+				},
+				{
+					"message": 110,
+					"verbs": [
+						"d",
+						"jump"
+					]
+				}
+			]
+		},
+		{
+			"id": 127,
+			"description": [
+				"You are in a small chamber filled with large boulders.  The walls are",
+				"very warm, causing the air in the room to be almost stifling from the",
+				"heat.  The only exit is a crawl heading west, through which is coming",
+				"a low rumbling."
+			],
+			"links": [
+				{
+					"to": 125,
+					"verbs": [
+						"west",
+						"out",
+						"crawl"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"fork"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				}
+			]
+		},
+		{
+			"id": 128,
+			"description": [
+				"You are walking along a gently sloping north/south passage lined with",
+				"oddly shaped limestone formations."
+			],
+			"links": [
+				{
+					"to": 124,
+					"verbs": [
+						"north",
+						"upwar",
+						"fork"
+					]
+				},
+				{
+					"to": 129,
+					"verbs": [
+						"south",
+						"d",
+						"barre"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				}
+			]
+		},
+		{
+			"id": 129,
+			"description": [
+				"You are standing at the entrance to a large, barren room.  A sign",
+				"posted above the entrance reads:  \"Caution!  Bear in room!\""
+			],
+			"links": [
+				{
+					"to": 128,
+					"verbs": [
+						"west",
+						"upwar"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"fork"
+					]
+				},
+				{
+					"to": 130,
+					"verbs": [
+						"east",
+						"inwar",
+						"barre",
+						"enter"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				}
+			]
+		},
+		{
+			"id": 130,
+			"description": [
+				"You are inside a barren room.  The center of the room is completely",
+				"empty except for some dust.  Marks in the dust lead away toward the",
+				"far end of the room.  The only exit is the way you came in."
+			],
+			"links": [
+				{
+					"to": 129,
+					"verbs": [
+						"west",
+						"out"
+					]
+				},
+				{
+					"to": 124,
+					"verbs": [
+						"fork"
+					]
+				},
+				{
+					"to": 126,
+					"verbs": [
+						"view"
+					]
+				}
+			]
+		},
+		{
+			"id": 131,
+			"description": [
+				"You are in a maze of twisting little passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"east"
+					]
+				}
+			]
+		},
+		{
+			"id": 132,
+			"description": [
+				"You are in a little maze of twisty passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"se"
+					]
+				}
+			]
+		},
+		{
+			"id": 133,
+			"description": [
+				"You are in a twisting maze of little passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"south"
+					]
+				}
+			]
+		},
+		{
+			"id": 134,
+			"description": [
+				"You are in a twisting little maze of passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"sw"
+					]
+				}
+			]
+		},
+		{
+			"id": 135,
+			"description": [
+				"You are in a twisty little maze of passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"upwar"
+					]
+				}
+			]
+		},
+		{
+			"id": 136,
+			"description": [
+				"You are in a twisty maze of little passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"north"
+					]
+				}
+			]
+		},
+		{
+			"id": 137,
+			"description": [
+				"You are in a little twisty maze of passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"west"
+					]
+				}
+			]
+		},
+		{
+			"id": 138,
+			"description": [
+				"You are in a maze of little twisting passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"ne"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 139,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"nw"
+					]
+				}
+			]
+		},
+		{
+			"id": 139,
+			"description": [
+				"You are in a maze of little twisty passages, all different."
+			],
+			"links": [
+				{
+					"to": 107,
+					"verbs": [
+						"sw"
+					]
+				},
+				{
+					"to": 131,
+					"verbs": [
+						"nw"
+					]
+				},
+				{
+					"to": 132,
+					"verbs": [
+						"east"
+					]
+				},
+				{
+					"to": 133,
+					"verbs": [
+						"west"
+					]
+				},
+				{
+					"to": 134,
+					"verbs": [
+						"north"
+					]
+				},
+				{
+					"to": 135,
+					"verbs": [
+						"d"
+					]
+				},
+				{
+					"to": 136,
+					"verbs": [
+						"se"
+					]
+				},
+				{
+					"to": 137,
+					"verbs": [
+						"upwar"
+					]
+				},
+				{
+					"to": 138,
+					"verbs": [
+						"south"
+					]
+				},
+				{
+					"to": 112,
+					"verbs": [
+						"ne"
+					]
+				}
+			]
+		},
+		{
+			"id": 140,
+			"description": [
+				"Dead end"
+			],
+			"links": [
+				{
+					"to": 112,
+					"verbs": [
+						"north",
+						"out"
+					]
+				}
+			]
+		}
+	]
+}

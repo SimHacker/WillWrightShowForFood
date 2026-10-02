@@ -1,5 +1,17 @@
 import type { RingImage } from "./image.js";
-import { addrOf, AMASK, isAtom, isNil, NIL, NONITEM, pointer, WMASK } from "./words.js";
+import {
+	addrOf,
+	AMASK,
+	blockHeader,
+	blockLen,
+	isAtom,
+	isBlockHeader,
+	isNil,
+	NIL,
+	NONITEM,
+	pointer,
+	WMASK,
+} from "./words.js";
 
 /**
  * The cell layer, read off RSPPIX's own accessors (listing 2312-2406):
@@ -42,6 +54,16 @@ export function cdr(image: RingImage, name: number): number {
 	return read(image, resolve(image, addrOf(name)) + 1);
 }
 
+/** The raw words of the block a name points at. */
+export function blockWords(image: RingImage, name: number): number[] {
+	const a = addrOf(name);
+	const h = read(image, a);
+	if (!isBlockHeader(h)) throw new Error(`no block header at ${a.toString(8)}`);
+	const out: number[] = [];
+	for (let i = 1; i <= blockLen(h); i += 1) out.push(read(image, a + i));
+	return out;
+}
+
 /** Walk a NIL-terminated list of names, returning the car words. */
 export function toArray(image: RingImage, name: number): number[] {
 	const out: number[] = [];
@@ -78,9 +100,33 @@ export class RingBuilder {
 
 	/** Allocate one two-word cell; returns its name. */
 	cell(carWord: number, cdrWord: number): number {
-		const addr = this.beg + this.words.length;
+		const addr = this.claim(2);
 		this.words.push(carWord & WMASK, cdrWord & WMASK);
 		return pointer(addr);
+	}
+
+	/** Rewrite a built cell's cdr — how a ring closes on itself. */
+	setCdr(name: number, cdrWord: number): void {
+		const i = addrOf(name) - this.beg + 1;
+		if (i < 1 || i >= this.words.length) throw new Error(`no cell at ${addrOf(name).toString(8)}`);
+		this.words[i] = cdrWord & WMASK;
+	}
+
+	/** A block: header, then raw words relocation leaves alone. Returns its name. */
+	block(raw: number[]): number {
+		if (raw.length > AMASK) throw new Error(`block too long: ${raw.length}`);
+		const addr = this.claim(raw.length + 1);
+		this.words.push(blockHeader(raw.length), ...raw.map((w) => w & WMASK));
+		return pointer(addr);
+	}
+
+	/** Next free address, if `n` more words still fit in 13-bit core. */
+	private claim(n: number): number {
+		const addr = this.beg + this.words.length;
+		if (addr + n > AMASK + 1) {
+			throw new Error(`ring image exceeds 8K core at ${(addr + n).toString(8)}`);
+		}
+		return addr;
 	}
 
 	/** A NIL-terminated list. Cells allocate in reverse so cars are eager. */

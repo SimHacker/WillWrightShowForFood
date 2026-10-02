@@ -20,5 +20,6 @@ Highlights of the tree:
 | [ps.ps](ps.ps) · [interpreter](interpreter) · [trace.ps](trace.ps) | Metacircular PostScript interpreter and tracing tools |
 | [cyber.doc](cyber.doc) · [design](design) · [features](features) | Design docs and glossary, verbatim |
 | bubblesort/heapsort/insertion-sort `.ps` | Visual algorithm animations for the deck |
+| [maps/arpanet.yml](maps/arpanet.yml) · [maps/colossal-cave.yml](maps/colossal-cave.yml) | `arpa.map` and `advent.map` as commented YAML graphs (JSON alongside), byte-exact back to PostScript and into PIXIE rings; regenerate with `packages/pixie/scripts/psiber-maps.mjs` |
 
 ↑ [Code index](../README.md) · [Don's room](../../README.md)
