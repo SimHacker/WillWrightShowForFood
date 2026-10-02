@@ -1011,9 +1011,10 @@
 	 * duplex half: the paper prints keys as typed (a KSR-33's local copy); full: the program echoes.
 	 * input raw: every key goes straight to the machine; line: the line is edited here, sent on Return.
 	 * wrap false: long lines scroll sideways; true: they wrap at the right edge.
+	 * upcase true: typed, pasted and spoken text goes in upper case, as on a KSR-33.
 	 * bindings: { 'Ctrl-S': 'stop' | 'go' | { send: code } }.
 	 */
-	const TTY_DEFAULTS = { duplex: 'half', input: 'raw', wrap: false, bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go' } };
+	const TTY_DEFAULTS = { duplex: 'half', input: 'raw', wrap: false, upcase: true, bindings: { 'Ctrl-S': 'stop', 'Ctrl-Q': 'go' } };
 	// TODO ^T, as on TOPS-20: print the machine's status (program, PC, cycles, speed, what it waits
 	// on) on the paper without the program's help. The first job of a teletype driver that lives in
 	// the emulator, not in the machine: a binding whose action reads the cabinet, not the CPU.
@@ -1055,7 +1056,7 @@
 
 	function ttyConfigFor(p) {
 		const c = p?.ttyConfig ?? {};
-		return { ...TTY_DEFAULTS, ...c, bindings: { ...TTY_DEFAULTS.bindings, ...(c.bindings ?? {}) } };
+		return { ...TTY_DEFAULTS, upcase: !p?.lowerCase, ...c, bindings: { ...TTY_DEFAULTS.bindings, ...(c.bindings ?? {}) } };
 	}
 	/** Keys the program has not read. */
 	let ttyWaiting = $state(0);
@@ -1174,6 +1175,11 @@
 		sendLine(program?.spoken ? program.spoken(text) : text);
 	}
 	function onCliInput(e) {
+		if (ttyCfg.upcase && ttyLine !== ttyLine.toUpperCase()) {
+			const at = cliEl?.selectionStart;
+			ttyLine = cliEl.value = ttyLine.toUpperCase();
+			cliEl.setSelectionRange(at, at);
+		}
 		// Raw input: typed characters go straight through; dictation waits so spelled numbers become digits.
 		const keyed = Date.now() - cliKeyAt <= 150 && e?.inputType !== 'insertFromPaste';
 		if (ttyCfg.input === 'raw' && (keyed || !program?.spoken)) {
@@ -1280,8 +1286,8 @@
 	/** A printable character as this program's keyboard sends it: upper case on a KSR-33, lower for UNIX. */
 	function charCode(ch) {
 		if (ch === '\n') return 0o15;
-		const c = (program?.lowerCase ? ch : ch.toUpperCase()).charCodeAt(0);
-		return c >= 0o40 && c < (program?.lowerCase ? 0o177 : 0o140) ? c : -1;
+		const c = (ttyCfg.upcase ? ch.toUpperCase() : ch).charCodeAt(0);
+		return c >= 0o40 && c < (ttyCfg.upcase ? 0o140 : 0o177) ? c : -1;
 	}
 
 	/** One key to the machine. The program may map what is sent and what the paper shows. */
@@ -1336,7 +1342,7 @@
 	/** Line input: edit here, with Backspace and ^U, and send the whole line on Return. */
 	function lineKey(c) {
 		if (c === 0o15) {
-			const codes = [...ttyLine].map((ch) => ch.charCodeAt(0));
+			const codes = [...ttyLine].map((ch) => charCode(ch)).filter((k) => k >= 0);
 			ttyLine = '';
 			ttyType([...codes, 0o15]);
 		} else if (c === 0o177 || c === 0o10) ttyLine = ttyLine.slice(0, -1);
@@ -2729,7 +2735,7 @@
 				<p class="mem-hint">Each program sets the rest for you when you choose it.</p>
 				<h4 class="config-head">Teletype</h4>
 				<div class="tty-cfg">
-					{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']], 'Half: the paper prints each key as typed. Full: only what the program echoes.'], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']], 'Line: edit here with Backspace and ^U, Return sends the line.'], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']], '']] as [key, label, choices, hint]}
+					{#each [['duplex', 'Duplex', [['half', 'HALF'], ['full', 'FULL']], 'Half: the paper prints each key as typed. Full: only what the program echoes.'], ['input', 'Input', [['raw', 'RAW'], ['line', 'LINE']], 'Line: edit here with Backspace and ^U, Return sends the line.'], ['wrap', 'Long lines', [[false, 'SCROLL'], [true, 'WRAP']], ''], ['upcase', 'Case', [[true, 'UPPER'], [false, 'AS TYPED']], 'Upper: typed, pasted and spoken text goes in upper case, as on a KSR-33.']] as [key, label, choices, hint]}
 						<span class="tty-cfg-label">{label}</span>
 						<span class="tty-cfg-row">
 							{#each choices as [value, text]}
