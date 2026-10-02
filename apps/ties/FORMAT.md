@@ -135,3 +135,48 @@ A `~name~` can also name another database: `~pixie~` from playground, or `~playg
 `/` is the handwritten `top` database. Every other database is `/databases/<id>/`. An article permalink is `/databases/<id>/<slug>/`. The old `/<id>/` paths redirect.
 
 A `path:` fence names a WillWrightShowForFood file. The PIXIE database uses that as a coming-soon card. The file is not ingested. When someone sits down with that plan, the same fence will splice the live document.
+
+## Outline keys (planned)
+
+The bar is MORE and Frontier. In both, you move the node you are on, and the cursor stays on it. Your hands don't leave the keyboard and you don't lose your place. The aim is to match that, then go further. The same keys walk any tree: an article outline, a pile, or a MOOLLM room directory, where in and out mean entering a room and leaving it.
+
+The bindings below are a first guess. Check them against the MORE 3.1 manual, Frontier's Outline menu and Fargo before building, and keep the old chords wherever they don't clash with the browser.
+
+**Walk.** These keys only move the cursor.
+
+| Key | Does |
+|---|---|
+| ↑ / ↓ | Previous / next visible node |
+| ← | Collapse; if already collapsed, go to the parent (out of the room) |
+| → | Expand; if already expanded, go to the first child (into the room) |
+| Home / End | First / last sibling |
+| Typing | Jump to the next sibling starting with those letters |
+
+**Move.** The node moves and the cursor stays on it.
+
+| Key | Does |
+|---|---|
+| ⌘↑ / ⌘↓ (Frontier ⌘U / ⌘D) | Swap with the previous / next sibling |
+| ⌘← / ⇧Tab (⌘L) | Promote: becomes the sibling after its parent |
+| ⌘→ / Tab (⌘R) | Demote: becomes the last child of the sibling above |
+
+Children travel with their node. A move off the end of a parent carries on into the neighbouring parent, as in MORE, so ⌘↓ held down walks a node through the whole tree.
+
+**Shape.**
+
+| Key | Does |
+|---|---|
+| Return | New sibling below, ready to type |
+| ⇧Return | New first child |
+| ⌘. / ⌘, | Expand all / collapse all under the node |
+| ⌘⇧H | Hoist: show only this subtree, with a breadcrumb back (MORE) |
+| ⌘⌫ | Delete, undoably |
+
+**Going further than MORE and Frontier:**
+
+- **Every move undoes as one step.** ⌘Z puts the node back, and the cursor goes back with it.
+- **The pie gives the same moves.** On a node, up, down, left and right in the pie are the same four moves as ⌘↑ ⌘↓ ⌘← ⌘→. The diagonals are hoist, clone, collapse and new. Mouse, pen and keyboard share one spatial model, and a flick is the gesture form of the chord.
+- **Clones are transclusions.** MORE's clone becomes a `transclude` fence. Moving a clone moves the reference, and editing it edits the source. A clone is marked, so you can tell it from a copy.
+- **Selections move as one block.** ⇧↑ / ⇧↓ extend the selection over siblings, and every move applies to the whole block.
+- **It talks.** The tree uses `role="tree"` / `treeitem` with `aria-level`, `aria-posinset` and `aria-setsize`. After each move a live region says where the node landed, for example "moved up, 3 of 7 in Cabinet design". That works with eyes shut and over TTS.
+- **Moves stay put.** In a room tree, a move is a file rename or reorder that git can see, so moving things by keyboard counts as editing the world.
