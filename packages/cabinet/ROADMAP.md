@@ -270,9 +270,10 @@ surface dispatches the same ids, and an LLM proposes while a person approves.
 - **Across nodes.** tiny-its forwards commands and events between buses, so a macro on
   one node drives the pen on another, and the same log replays on either.
 
-The bus lives in `apps/micropolis` today; until it is a package, the cabinet carries a
-small one with the same `Command`/`CommandContext`/`dispatch` shape, and swaps it out
-when MicropolisCore's is lifted (TAGS-AND-PIES §12 step 8).
+**tiny-bus.** The bus lives in `apps/micropolis` today; until it is a package, the
+cabinet rides **tiny-bus**, a short bus with the same `Command`/`CommandContext`/`dispatch`
+shape, sibling to tiny-its, and swaps it out when MicropolisCore's is lifted
+(TAGS-AND-PIES §12 step 8).
 
 **Accept:** the SYMELEC demo, rewritten on `find` and `dragAlong`, still draws the
 same picture; a test finds a lightbutton by symbol name and taps it; and the same tap,
