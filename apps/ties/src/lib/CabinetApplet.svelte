@@ -1143,8 +1143,26 @@
 		if (!s || !ttySpeak) return;
 		// The newest output matters most: cut off whatever is still being read.
 		s.cancel();
-		if (speechVoice) s.speakWithVoice(text, speechVoice, { rate: 1.1 });
-		else s.speak(text, { voiceType: 'male', language: 'en', rate: 1.1 });
+		// Fingers in ears: the microphone would hear the machine and type its words back in.
+		if (listening && !earsShut) {
+			earsShut = true;
+			recognizer?.abort();
+		}
+		const done = () => setTimeout(openEars, 300);
+		const opts = { rate: 1.1, onEnd: done, onError: done };
+		if (speechVoice) s.speakWithVoice(text, speechVoice, opts);
+		else s.speak(text, { voiceType: 'male', language: 'en', ...opts });
+	}
+	let earsShut = false;
+	function openEars() {
+		if (!earsShut || speechSynthesis.speaking || speechSynthesis.pending) return;
+		earsShut = false;
+		if (!listening) return;
+		try {
+			recognizer.start();
+		} catch {
+			listening = false;
+		}
 	}
 	function setSpeak(on) {
 		ttySpeak = on;
@@ -1204,7 +1222,13 @@
 	/** A line that arrived without keystrokes, from dictation or paste, as the program wants it spoken. */
 	function sendSpoken(text) {
 		ttyLine = '';
-		sendLine(program?.spoken ? program.spoken(text) : text);
+		if (!program?.spoken) return sendLine(text);
+		// Number games: the number goes in, "return" or "enter" is Return, and anything else is just talk.
+		const said = program.spoken(text);
+		const n = said.match(/\d+/)?.[0];
+		if (n) sendLine(n);
+		else if (/\b(return|enter)\b/i.test(said)) sendLine('');
+		else voiceNote = `ignored “${text}”`;
 	}
 	function onCliInput(e) {
 		if (ttyCfg.upcase && ttyLine !== ttyLine.toUpperCase()) {
@@ -1246,6 +1270,7 @@
 	};
 	function toggleVoice() {
 		cliEl?.focus({ preventScroll: true });
+		earsShut = false;
 		if (listening) {
 			listening = false;
 			recognizer?.stop();
@@ -1257,6 +1282,7 @@
 		recognizer.interimResults = true;
 		recognizer.continuous = true;
 		recognizer.onresult = (e) => {
+			if (earsShut) return;
 			for (let i = e.resultIndex; i < e.results.length; i++) {
 				const r = e.results[i];
 				const said = r?.[0]?.transcript?.trim() ?? '';
@@ -1271,7 +1297,7 @@
 		};
 		// Browsers end a session after silence; keep listening until the mic is pressed again.
 		recognizer.onend = () => {
-			if (!listening) return;
+			if (!listening || earsShut) return;
 			try {
 				recognizer.start();
 			} catch {

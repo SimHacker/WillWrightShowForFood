@@ -62,7 +62,7 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 		const g = (lo + hi) >> 1;
 		const out = m.type(`${g}\r`);
 		if (g === s) {
-			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\r\\nRETURN TO PLAY AGAIN\\.$`));
+			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\.\\r\\nRETURN TO PLAY AGAIN\\.$`));
 			return;
 		}
 		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nGUESS\\?\\r\\n$`));
@@ -114,5 +114,5 @@ test("hilo demo: the scripted operator finds the number", () => {
 	let spent = 0;
 	while (!player.done && spent < 20_000_000) spent += player.advance((n) => box.run(n), 20_000);
 	assert.ok(player.done);
-	assert.match(tty.printed(), /RIGHT\. GUESSES: [1-7]\r\n/);
+	assert.match(tty.printed(), /RIGHT\. GUESSES: [1-7]\.\r\n/);
 });

@@ -224,7 +224,7 @@ export const PROGRAMS = [
 		listing: { user: 'A2DEH,CLAUDE' },
 		title: 'HILO, a number guessing game on the teletype. Written for this cabinet in 2026, not a period program.',
 		help: {
-			text: 'Press Return, then guess a number from 0 to 99. Type it and press Return, or just say it: it goes in by itself.',
+			text: 'Press Return, then guess a number from 0 to 99. Type it and press Return, or just say it: it goes in by itself. Say “return” for Return; other talk is ignored.',
 			links: [{ label: 'hilo.s', href: `${CABINET}/tapes/hilo/hilo.s` }]
 		},
 		pen: false,
@@ -253,7 +253,7 @@ export const PROGRAMS = [
 		listing: { user: 'A2DEH,CLAUDE' },
 		title: 'LANDER, a lunar landing game on the teletype: type the fuel to burn each second. Written for this cabinet in 2026, not a period program.',
 		help: {
-			text: 'Each second, give the fuel to burn: type it and press Return, or just say it. Land at low speed.',
+			text: 'Each second, give the fuel to burn: type it and press Return, or just say it. Say “return” for Return; other talk is ignored. Land at low speed.',
 			links: [{ label: 'lander.s', href: `${CABINET}/tapes/lander/lander.s` }]
 		},
 		pen: false,

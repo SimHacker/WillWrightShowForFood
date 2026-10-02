@@ -46,7 +46,8 @@ right,	lac (gotit
 	jms puts
 	lac tries
 	jms putdec
-	jms crlf
+	lac (dotnl
+	jms puts
 	lac (again
 	jms puts
 	jms getc
@@ -137,6 +138,10 @@ lowerm,	text "LOWER."
 	212
 	0
 gotit,	text "RIGHT. GUESSES: "
+	0
+dotnl,	text "."
+	215
+	212
 	0
 again,	text "RETURN TO PLAY AGAIN."
 	0

@@ -216,7 +216,7 @@ is1,	lac odd
 is2,	lac root
 	jmp i isqrt
 
-/ T secs  ALT feet  VEL ft/s  FUEL units
+/ TIME: secs. ALTITUDE: feet. SPEED: ft/s. FUEL: units.
 status,	0
 	lac (tm
 	jms puts
@@ -242,6 +242,8 @@ st1,	lac (velm
 	jms puts
 	lac fuel
 	jms putdec
+	lac (dot
+	jms puts
 	jmp i status
 
 / A key, 7-bit, in AC.
@@ -337,28 +339,36 @@ putc,	0
 hello,	text "LANDER, FOR THE PDP-7 TELETYPE."
 	215
 	212
-	text "YOU ARE 500 FEET UP, FALLING AT 50 FT/S, WITH 60 UNITS OF FUEL."
+	text "YOU ARE 500 FEET UP, FALLING AT 50 FEET A SECOND."
 	215
 	212
-	text "EACH SECOND TYPE A BURN, 0 TO 30, AND RETURN. A UNIT GIVES"
+	text "YOU HAVE 60 UNITS OF FUEL."
 	215
 	212
-	text "2 FT/S OF THRUST; THE MOON PULLS 5. RETURN ALONE BURNS NOTHING."
+	text "EACH SECOND, TYPE A BURN FROM 0 TO 30, THEN RETURN."
+	215
+	212
+	text "EACH UNIT GIVES 2 FEET A SECOND OF THRUST. THE MOON PULLS 5."
+	215
+	212
+	text "RETURN ALONE BURNS NOTHING."
 	215
 	212
 	text "PRESS RETURN TO START."
 	0
-tm,	text "T "
+tm,	text "TIME: "
 	0
-altm,	text "  ALT "
+altm,	text ". ALTITUDE: "
 	0
 halfm,	text ".5"
 	0
-velm,	text "  VEL "
+velm,	text ". SPEED: "
 	0
-fuelm,	text "  FUEL "
+fuelm,	text ". FUEL: "
 	0
-burnq,	text "  BURN?"
+dot,	text "."
+	0
+burnq,	text " BURN?"
 	215
 	212
 	0
@@ -374,7 +384,7 @@ nofuel,	215
 	0
 touch,	text "CONTACT AT "
 	0
-ftps,	text " FT/S, "
+ftps,	text " FEET A SECOND, WITH "
 	0
 left,	text " UNITS LEFT."
 	215
