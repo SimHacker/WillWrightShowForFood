@@ -24,6 +24,7 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 12 | The Engelbart mouse and chorded keyset | simulated first; digital twins of Don's pair | [§12](#12-the-engelbart-mouse-and-chorded-keyset) |
 | 13 | Emulation mash-ups: virtual devices in machines they never met | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
 | 14 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
+| 15 | DUEL from tape to source, proven by round trip | a showpiece, not a blocker: DUEL already runs and explains its halt | [§15](#15-duel-from-tape-to-source) |
 
 Odds and ends are in [§14](#14-small-items).
 
@@ -559,5 +560,28 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   [cars-2027-medicine.md](../../characters/heinz-lemke/cars-2027-medicine.md) and
   [voystick-correspondence-lineage.md](../../characters/don-hopkins/sources/voystick-correspondence-lineage.md).
 - Find the GRID point display in the listing.
+
+## 15. DUEL from tape to source
+
+DUEL survives only as a symbol-less FunnyFormat tape ([tapes/duel](tapes/duel/README.md)).
+The goal is a `duel.dec` that `asm/dec.ts` assembles to the tape's core image word for word,
+with the test as the proof; the tape stays the program.
+
+1. **Core image.** Boot the tape headless without the SIMH patches; record the loaded
+   ranges from the FunnyFormat blocks (cross-check Frode's analysis log in
+   `DECUS.7-40.DUEL.zip`). Save them as a fixture.
+2. **Code or data.** Trace from 4000 and the interrupt entry: follow `jmp`, `jms`, skips
+   and indirect calls through known tables. Reached words are code; the rest data.
+   Run the game in the emulator with an execution map as a second witness.
+3. **Labels.** One label per jump/call target and per data reference, named by address
+   (`l1157`) at first.
+4. **Emit.** `duel.dec` in the dialect `dec.ts` reads; data as octal words, 340 display
+   lists as display words.
+5. **Round trip test.** Assemble, compare with the fixture, fail on any word.
+6. **Names.** By hand, test green after each: `hit` (1157), the ship records 1471/1514,
+   torpedoes, the switch reader, the display list builder. Comments one line each.
+7. **Patches.** Frode's five words stay a load-time overlay, never in the source.
+8. **Show it.** The cabinet's source view and symbols for DUEL, the halt panel citing
+   `hit` by name; the same tool then serves other symbol-less tapes from Oslo.
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [TAGS-AND-PIES](TAGS-AND-PIES.md)
