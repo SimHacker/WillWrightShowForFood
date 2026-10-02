@@ -452,12 +452,14 @@
 		if (!t || !el?.parentElement) return;
 		const wrap = el.parentElement.getBoundingClientRect();
 		const sp = scrollParent(figureEl);
-		const pane = sp === document.documentElement ? { left: 0, top: 0, right: innerWidth, bottom: innerHeight } : sp.getBoundingClientRect();
+		const vw = document.documentElement.clientWidth;
+		const vh = document.documentElement.clientHeight;
+		const pane = sp === document.documentElement ? { left: 0, top: 0, right: vw, bottom: vh } : sp.getBoundingClientRect();
 		const M = 6;
 		const minX = Math.max(pane.left, 0) + M - wrap.left;
-		const maxX = Math.min(pane.right, innerWidth) - M - wrap.left;
+		const maxX = Math.min(pane.right, vw) - M - wrap.left;
 		const minY = Math.max(pane.top, 0) + M - wrap.top;
-		const maxY = Math.min(pane.bottom, innerHeight) - M - wrap.top;
+		const maxY = Math.min(pane.bottom, vh) - M - wrap.top;
 		el.style.maxWidth = `${Math.max(120, Math.min(380, maxX - minX))}px`;
 		const w = el.offsetWidth;
 		const h = el.offsetHeight;
@@ -472,8 +474,8 @@
 		}
 		const up = !fits(below) && (fits(above) || t.py - minY > maxY - t.py);
 		const arrow = Math.max(10, Math.min(w - 10, t.px - left));
-		el.style.left = `${left}px`;
-		el.style.top = `${up ? above : below}px`;
+		el.style.left = `${wrap.left + left}px`;
+		el.style.top = `${wrap.top + (up ? above : below)}px`;
 		el.style.setProperty('--arrow', `${arrow}px`);
 		el.style.transformOrigin = `${arrow}px ${up ? '100%' : '0'}`;
 		el.classList.toggle('up', up);
@@ -2891,8 +2893,9 @@
 	.tube.live.held {
 		cursor: none;
 	}
+	/* Fixed, so a tip past the page's edge never adds a scrollbar that resizes the tube. */
 	.tip {
-		position: absolute;
+		position: fixed;
 		z-index: 3;
 		width: max-content;
 		max-width: 380px;
