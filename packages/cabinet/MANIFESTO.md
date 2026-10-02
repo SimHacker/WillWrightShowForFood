@@ -80,7 +80,8 @@ it, its devices and their settings, the keyboard, the panels, the help and the d
 a **cartridge**, and everything the cabinet knows about a program is in its cartridge or referred
 to by it. It can carry small pieces of code of its own, such as the SIGWINCH handler that finds
 Forth's constant, and call emulator utilities written for that one program. No shame in that:
-the emulator is on the program's side. A URL is a cartridge plus profiles you can stack
+the emulator is an advocate for both the running program and the person using it, and it helps
+each one meet the other halfway. A URL is a cartridge plus profiles you can stack
 (`/cabinet/forth/?profile=trace`), and an article embeds exactly the same thing.
 
 ## Live coding all the way down
