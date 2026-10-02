@@ -142,7 +142,14 @@ better than worse: a rejoinder to Richard Gabriel's
 won by being simple to implement at the cost of being incomplete. Tiny
 keeps the simplicity and stays complete: small enough to read in one
 sitting, whole enough to use everywhere, and shaped so a bigger version
-can replace it, or never needs to.
+can replace it, or never needs to, or so it can replace the big version
+that inspired it. Flite did that at CMU: Alan Black and Kevin Lenzo
+rewrote Edinburgh's Festival synthesizer (C++ with a Scheme
+interpreter) as small, fast C, and made it read the same voice data. The
+runtime shipped in phones and, commercially, as Cepstral. Voice building
+stayed in FestVox, the Scheme tools, which kept improving.
+Data compatibility let the small engine run in production while the
+big one stayed in the workshop.
 
 - **`TinyCommand`**: `{ id, args, source, risk }`, big-endian ids
   (`cabinet.pen.tap`, `cabinet.tape.load`), dispatched by pie items,
