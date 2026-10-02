@@ -597,6 +597,8 @@
 			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', ringsOpen && 'rings', 'mem', configOpen && 'config'].filter(Boolean).join(' '));
 		}
 		if (view && memView !== view) setView(view);
+		// Following the PC would pull the view straight back off the address.
+		memFollow = !!cpu && addr === cpu.pc;
 		memGo(addr, true);
 	}
 
