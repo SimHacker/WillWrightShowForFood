@@ -3,7 +3,7 @@
 	 * A running machine inside an article — a PDP-7 and Type 340, pointer as light pen,
 	 * with a menu of programs (cabinet-programs.js). See apps/ties/CABINET-APPLET.md.
 	 */
-	import { onMount, untrack } from 'svelte';
+	import { onMount, tick, untrack } from 'svelte';
 	import {
 		Pdp7,
 		Type340,
@@ -99,13 +99,14 @@
 	// keeps the width and sets the height, no shorter than the content.
 	let edgeDrag = $state(null);
 
-	/** The figure's height with the Memory drawer at its fewest lines. */
+	/** The figure's height with the growing panel at its own size, none of the spare. */
 	function contentHeight() {
 		if (!figureEl) return 0;
-		const border = figureEl.offsetHeight - figureEl.clientHeight;
+		const cs = getComputedStyle(figureEl);
+		const below = parseFloat(cs.paddingBottom) + parseFloat(cs.borderBottomWidth);
 		const line = memEl?.querySelector('.mem-line')?.offsetHeight ?? 0;
-		const tube = figureEl.querySelector('.tube-wrap')?.offsetHeight ?? side;
-		return tube + (captionEl?.offsetHeight ?? 0) + border - (MEM_LINES - MEM_MIN_LINES) * line;
+		const bottom = captionEl?.getBoundingClientRect().bottom ?? figureEl.getBoundingClientRect().bottom;
+		return bottom - figureEl.getBoundingClientRect().top + below - (memOpen ? (MEM_LINES - MEM_MIN_LINES) * line : 0) - (ringsOpen ? ringsExtra : 0) - (ttyOpen ? ttyExtra : 0);
 	}
 
 	function setWidth(want) {
@@ -620,7 +621,7 @@
 	let memView = $state(untrack(() => memViewFor(programById(programId))));
 	const MEM_COLS = $derived(memView === 'octal' ? (side >= 420 ? 8 : 4) : 1);
 	// Panels under the controls, toggled by the chips: any set of them open at once, stacked
-	// in one order, memory last so it takes the spare height. Shift-click shows one alone.
+	// in one order. Shift-click shows one alone.
 	const PANELS_KEY = 'cabinet-panels';
 	const panelsRaw = untrack(() => globalThis.localStorage?.getItem(PANELS_KEY) ?? null);
 	const panelsStored = (panelsRaw ?? 'play').split(' ');
@@ -635,10 +636,23 @@
 		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
 	}
+	// The last opened of these takes the figure's spare height; the others keep their size.
+	const HUNGRY = ['mem', 'rings', 'tty'];
+	let panelOrder = $state([]);
+	const growId = $derived.by(() => {
+		const open = { mem: memOpen, rings: ringsOpen, tty: ttyOpen };
+		return [...panelOrder].reverse().find((k) => open[k]) ?? ['rings', 'mem', 'tty'].find((k) => open[k]) ?? null;
+	});
+	let ringsExtra = $state(0);
+	let ttyExtra = $state(0);
+	function opened(id) {
+		if (HUNGRY.includes(id)) panelOrder = [...panelOrder.filter((k) => k !== id), id];
+	}
 	function togglePanel(id, e) {
 		const open = { play: playOpen, tty: ttyOpen, regs: regsOpen, mem: memOpen, rings: ringsOpen, config: configOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
+		if (open[id]) opened(id);
 		playOpen = open.play;
 		ttyOpen = open.tty;
 		regsOpen = open.regs;
@@ -651,6 +665,7 @@
 	function openMemAt(addr, view) {
 		if (!memOpen) {
 			memOpen = true;
+			opened('mem');
 			storePanels();
 		}
 		if (view && memView !== view) setView(view);
@@ -1370,7 +1385,7 @@
 	function onTtyGrip(e) {
 		e.preventDefault();
 		const start = e.clientY;
-		const from = ttyEl?.getBoundingClientRect().height ?? 0;
+		const from = (ttyEl?.getBoundingClientRect().height ?? 0) - ttyExtra;
 		const grip = e.currentTarget;
 		grip.setPointerCapture(e.pointerId);
 		const move = (m) => setTtyHeight(from + m.clientY - start);
@@ -1384,7 +1399,7 @@
 		grip.addEventListener('pointercancel', up);
 	}
 	function onTtyGripKey(e) {
-		const h = ttyEl?.getBoundingClientRect().height ?? 0;
+		const h = (ttyEl?.getBoundingClientRect().height ?? 0) - ttyExtra;
 		if (e.key === 'ArrowUp') setTtyHeight(h - ttyLinePx());
 		else if (e.key === 'ArrowDown') setTtyHeight(h + ttyLinePx());
 		else return;
@@ -1493,24 +1508,29 @@
 		});
 	});
 
-	// Height the figure has past its content becomes more lines. contentHeight() takes the
-	// drawer's own extra lines back out, so the count settles instead of feeding itself.
-	function fitMemLines() {
+	// Height the figure has past its content goes to the growing panel. contentHeight() takes
+	// its extra back out, so the size settles instead of feeding itself.
+	function fitGrow() {
+		const spare = figHeight ? Math.max(0, Math.floor(figHeight - contentHeight())) : 0;
 		const line = memEl?.querySelector('.mem-line')?.offsetHeight;
-		const lines = memOpen && figHeight && line ? MEM_MIN_LINES + Math.max(0, Math.floor((figHeight - contentHeight()) / line)) : MEM_MIN_LINES;
+		const lines = growId === 'mem' && line ? MEM_MIN_LINES + Math.floor(spare / line) : MEM_MIN_LINES;
+		const rings = growId === 'rings' ? spare : 0;
+		const tty = growId === 'tty' ? spare : 0;
+		if (rings !== ringsExtra) ringsExtra = rings;
+		if (tty !== ttyExtra) ttyExtra = tty;
 		if (lines !== MEM_LINES) {
 			MEM_LINES = lines;
 			refreshMem();
 		}
 	}
 	$effect(() => {
-		void [figHeight, memOpen, memEl, MEM_COLS];
-		const raf = requestAnimationFrame(() => untrack(fitMemLines));
-		return () => cancelAnimationFrame(raf);
+		void [figHeight, memOpen, memEl, MEM_COLS, growId];
+		untrack(fitGrow);
+		tick().then(() => untrack(fitGrow));
 	});
 	$effect(() => {
 		if (!captionEl) return;
-		const ro = new ResizeObserver(() => untrack(fitMemLines));
+		const ro = new ResizeObserver(() => untrack(fitGrow));
 		ro.observe(captionEl);
 		return () => ro.disconnect();
 	});
@@ -2498,7 +2518,7 @@
 					class="tty-paper"
 					class:wrap={ttyCfg.wrap}
 					style:font-size="{TTY_FONTS[ttyFont]}rem"
-					style:height={ttyHeight ? `${ttyHeight}px` : null}
+					style:height={ttyHeight || ttyExtra ? `calc(${ttyHeight ? `${ttyHeight}px` : '12em'} + ${ttyExtra}px)` : null}
 					bind:this={ttyEl}
 					tabindex="0"
 					data-keep-focus
@@ -2675,7 +2695,7 @@
 		{/if}
 		{#if ringsOpen}
 			<div class="row app">
-				<RingView capture={captureRings} name={symbolic} onOpen={(a) => openMemAt(a)} />
+				<RingView capture={captureRings} name={symbolic} height={260 + ringsExtra} onOpen={(a) => openMemAt(a)} />
 			</div>
 		{/if}
 		{#if configOpen}
