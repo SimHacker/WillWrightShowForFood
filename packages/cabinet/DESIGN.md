@@ -730,6 +730,64 @@ same rings can be drawn on the 340 as a live tree, sent whole over `net.fs` so t
 one animal brain, and shown in the ring editor above. PIXIE built drawings out of rings; this
 builds a mind out of them.
 
+**To do: Animal on the 340, played with the pen.** The tree is drawn on the screen: each question
+and each animal is a box with its title in 342 characters and its id beside it, joined by yes and
+no lines. You answer with the light pen, not the keyboard: point at YES or NO under the current
+question, or at any node to jump there and browse. The keyboard is only for what the game can't
+know, the name of a new animal and the question that tells it apart. No parser beyond Forth's own:
+every pen hit becomes a line typed on the teletype, a Forth word with a number (`YES`, `NO`,
+`17 GO`), so the teletype shows exactly what the pen did and a typed line does the same thing. It
+makes no pretence to read English; it shows how a decision tree is stored, walked and grown, and
+the tree on the screen is the data structure, not a picture of it.
+
+What it needs:
+
+- `text` in `turtle.fs`: append 342 character-mode words (three six-bit codes a word) to DLIST at
+  the beam, then escape back to vectors.
+- A hit table the program keeps in core, at a label the cartridge names: one entry per pickable
+  thing, the first and last DLIST address of its words and its id. The 340 already records which
+  display word drew each segment (`Segment.addr`), so a pen hit is an address, and the table turns
+  it into an id.
+- The cartridge's pen handler (below) reads the table and types the line.
+
+**To do: Gosling's lunar lander, as the turtle.** James Gosling mailed Don "a cheezy lunar lander
+game" in NeWS PostScript on 3 November 1988
+([lander.ps](https://donhopkins.com/home/archive/news-tape/fun/lander/lander.ps)). Ported to Forth
+over `turtle.fs`, the lander replaces the turtle's triangle: `redraw` draws Gosling's body, legs,
+windows and a flame as long as the thrust, rotated to the heading. The physics are his, in the
+turtle's fixed point: each tick `dy += cos(theta) * thrust / 30 - .1`, `dx -= sin(theta) * thrust
+/ 30`, bounce off the screen's sides, and land when the altitude over the terrain is under 77 with
+both speeds under 3 and the tilt under 20 degrees; otherwise the shards. The terrain is his random
+walk with slope, drawn once as the backdrop, stars and all. His mouse becomes the light pen:
+across sets the attitude and up and down the thrust, read through the same handler as Animal's,
+which types the numbers as `THRUST` and `TILT`. A landing walks the little person out.
+
+### Pen events and cartridge scripts
+
+The display emulator delivers pen hits to handlers the cartridge defines. A hit carries the 340's
+provenance: the display address that drew the segment, the beam position, and which pen. The
+cartridge says what to do with it, in a `scripts` section of named scripts that handlers and other
+scripts call, as many as a program needs. Libraries of scripts are imported by path, so Animal and
+the lander share one `pen-to-tty` library rather than two copies.
+
+```yaml
+imports: [scripts/pen-to-tty.yml]          # each library is a file of named scripts
+on:
+  pen: animal-pick                         # also: key, tick, boot
+scripts:
+  animal-pick:
+    - lookup: { table: HITS, addr: $hit.addr, as: id }   # first, last, id entries in core
+    - if: { set: id }
+      then: [{ call: type-line, text: "$id GO" }]
+```
+
+Scripts are data, a short list of steps from a fixed vocabulary: read core, look up a hit table,
+type on the teletype, set a register or a panel, call another script, and a conditional. No loops
+and no eval: cartridges arrive by URL and get pasted into LIVE CODING, so a script must not be
+able to run arbitrary JavaScript in the page. Anything that wants a loop belongs in Forth or
+assembler on the machine, where the cabinet can show it. Yes, this will get out of hand; the
+fixed vocabulary is where it stops.
+
 **Sources as linguistic motherboard cards.** Each of these sources carries a header of what it is:
 title, description, prompt and style. With that, a program is a card that can be regenerated in
 another language or style: the same animal database as Forth, as Lisp, as a talk tape. MOOLLM's
