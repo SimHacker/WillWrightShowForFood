@@ -30,6 +30,7 @@
 	} from '@wwsff/cabinet';
 	import { PROGRAMS, DEFAULT_PROGRAM, programById } from './cabinet-programs.js';
 	import { useApplets } from './applets.svelte.js';
+	import RingView from './RingView.svelte';
 
 	let { spec } = $props();
 
@@ -577,12 +578,14 @@
 	// A teletype program opens the teletype, whether chosen from the menu or linked to directly.
 	let ttyOpen = $state(panelsStored.includes('tty') || !!untrack(() => programById(programId)?.tty));
 	let configOpen = $state(panelsStored.includes('config'));
+	let ringsOpen = $state(panelsStored.includes('rings'));
 	function togglePanel(id, e) {
-		const open = { regs: regsOpen, tty: ttyOpen, mem: memOpen, config: configOpen };
+		const open = { regs: regsOpen, tty: ttyOpen, rings: ringsOpen, mem: memOpen, config: configOpen };
 		if (e.shiftKey) for (const k in open) open[k] = k === id;
 		else open[id] = !open[id];
 		regsOpen = open.regs;
 		ttyOpen = open.tty;
+		ringsOpen = open.rings;
 		memOpen = open.mem;
 		configOpen = open.config;
 		store(PANELS_KEY, Object.keys(open).filter((k) => open[k]).join(' '));
@@ -591,7 +594,7 @@
 	function openMemAt(addr, view) {
 		if (!memOpen) {
 			memOpen = true;
-			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', 'mem', configOpen && 'config'].filter(Boolean).join(' '));
+			store(PANELS_KEY, [regsOpen && 'regs', ttyOpen && 'tty', ringsOpen && 'rings', 'mem', configOpen && 'config'].filter(Boolean).join(' '));
 		}
 		if (view && memView !== view) setView(view);
 		memGo(addr, true);
@@ -2100,6 +2103,14 @@
 					<button
 						type="button"
 						class="chip"
+						class:on={ringsOpen}
+						aria-pressed={ringsOpen}
+						title="PIXIE rings in 3D: the live ring structure in core, or a file. Shift-click: this panel alone."
+						onclick={(e) => togglePanel('rings', e)}>RINGS</button
+					>
+					<button
+						type="button"
+						class="chip"
 						class:on={configOpen}
 						aria-pressed={configOpen}
 						title="Settings for the teletype and more. Each program sets them for you when you choose it. Shift-click: this panel alone."
@@ -2303,6 +2314,11 @@
 						>{#if ttyWaiting}{ttyWaiting} {ttyWaiting === 1 ? 'key' : 'keys'} not read yet{paused ? ': the machine is stopped' : traceMs || speed < 0.1 ? ': the machine is running slowly' : ''}.{:else if ttyPaper.length === 1 && !last}Click the paper and type.{/if}</span
 					>
 				</div>
+			</div>
+		{/if}
+		{#if ringsOpen}
+			<div class="row app">
+				<RingView read={cpu ? (a) => cpu.read(a) : null} onOpen={(a) => openMemAt(a)} />
 			</div>
 		{/if}
 		{#if memOpen}

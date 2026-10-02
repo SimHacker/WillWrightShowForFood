@@ -15,7 +15,22 @@ export {
 	WMASK,
 } from "./words.js";
 export type { WordKind } from "./words.js";
-export { decodeTransfer, encodeTransfer, photograph, relocate, SYMELEC_VARS } from "./image.js";
+export {
+	decodeTransfer,
+	encodeTransfer,
+	packWords,
+	photograph,
+	PXID_BYTES,
+	relocate,
+	SYMELEC_VARS,
+	unpackWords,
+} from "./image.js";
+export { changedCells, readRings, ringToScene } from "./scene.js";
+export type { Chain, ChainKind, EdgeKind, NodeKind, Scene, SceneEdge, SceneNode, Vec3 } from "./scene.js";
+export { DEFAULT_CAMERA, drawList, paint, PALETTE, pick, project } from "./view.js";
+export type { Camera, Mark, Pen } from "./view.js";
+export { ringsPlugin, WORLD_FEEDBACK } from "./holodeck.js";
+export type { RingSource, RingsPlugin } from "./holodeck.js";
 export type { CoreVars, RingImage } from "./image.js";
 export { blockWords, car, cdr, pointersResolve, RingBuilder, toArray } from "./cells.js";
 export { fromData, fromJson, fromYaml, saveInto, toData, toDocument, toJson, toYaml } from "./graph.js";

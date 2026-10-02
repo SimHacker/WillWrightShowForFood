@@ -14,6 +14,7 @@ export default {
 				fileURLToPath(new URL('./examples', import.meta.url)),
 				fileURLToPath(new URL('../../characters', import.meta.url)),
 				fileURLToPath(new URL('../../packages/cabinet', import.meta.url)),
+				fileURLToPath(new URL('../../packages/pixie', import.meta.url)),
 				fileURLToPath(new URL('../../repo-shows', import.meta.url))
 			]
 		},

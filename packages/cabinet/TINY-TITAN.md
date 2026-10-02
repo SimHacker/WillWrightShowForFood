@@ -351,6 +351,30 @@ every viewer to refresh. Where they come from:
 All of it is optional, and each piece helps: tiny-its commands, the
 debugger, the source view, program visualisation panels.
 
+### Rings instead of JSON
+
+Tiny Titan's storage and services speak PIXIE rings, not JSON. A ring is
+the PDP-7's own data structure, so the minicomputer reads what the
+mainframe stores without a parser. The same structure serves every layer:
+
+- **Discovery:** a `services` ring. Each member is a block naming a
+  service, with a child ring for its operations.
+- **Schemas:** rings too. A schema is a ring of field rings, each with a
+  printname and a kind, so the schema travels in the format it describes.
+- **Services:** a message is a ring whose head names its handler. The
+  reply is a ring.
+- **Pipelines:** a ring of stages. Each stage takes a ring and gives one
+  back, so stages chain and splice like list cells.
+
+The host side lives in [`@wwsff/pixie`](../pixie/src/index.ts).
+`readRings` loads a ring image from YAML, JSON (a graph, a word list or a
+ring image) or the binary transfer stream (three bytes a word, starting
+with `PXID`). `packWords` writes that stream. `ringToScene` lays any image
+out in 3D, and `ringsPlugin` draws it beside the characters as a holodeck
+layer, so a character giving a talk can hold up a data structure and turn
+it. The cabinet's RINGS panel shows the live ring structure in a running
+SYMELEC's core, changed cells lit as they change, or a file.
+
 ## Where things are
 
 | What | Where |

@@ -76,6 +76,30 @@ export function decodeTransfer(words: number[]): RingImage {
 }
 
 /**
+ * 18-bit words as bytes for files and sockets: three bytes a word,
+ * big-endian, top six bits zero. A transfer stream therefore starts
+ * with the bytes of PXID, which is how a reader knows it.
+ */
+export function packWords(words: number[]): Uint8Array {
+	const out = new Uint8Array(words.length * 3);
+	words.forEach((w, i) => {
+		out[i * 3] = (w >>> 16) & 0o3;
+		out[i * 3 + 1] = (w >>> 8) & 0xff;
+		out[i * 3 + 2] = w & 0xff;
+	});
+	return out;
+}
+
+export function unpackWords(bytes: Uint8Array): number[] {
+	if (bytes.length % 3 !== 0) throw new Error(`not whole words: ${bytes.length} bytes`);
+	const out: number[] = [];
+	for (let i = 0; i < bytes.length; i += 3) out.push(((bytes[i]! << 16) | (bytes[i + 1]! << 8) | bytes[i + 2]!) & WMASK);
+	return out;
+}
+
+export const PXID_BYTES = [...packWords([PXID])];
+
+/**
  * The 1972 relocation pass, verbatim in spirit: skip atoms and NILs,
  * add RELCON to every pointer, and on a block header skip the block's
  * raw data using its embedded length. RELCON = newBeg - image.beg
