@@ -312,6 +312,26 @@ Background for all of this: the ring-structures section of the
 **To do: the RSP library, extracted from PIXIE and shared by every VM.**
 One format, two halves.
 
+**Layers, each optional above the first.** Lift Heinz's code verbatim, beautified and commented
+with attribution; change only packaging and calling conventions. The PDP-7 side stays flat and
+non-reentrant. Anything that recurses brings its own stack, and RSPPIX already does: `LOP`
+(`STAK`/`UNSTAK`) is an operand stack, `LINK` (`ENTER`/`EXIT`) is a return stack, and the
+collector keeps a branch stack at `GSTKP`. New recursive code goes in Forth, which has stacks.
+
+| Layer | Source | Needs | Holds |
+|---|---|---|---|
+| `rsp.s` | RSPPIX, scan pp. 113–127, assembled 29 1 72 by HL1470 | the layout words | `SETUP`, `FLST`, `GETSP`, `INIT`, `CAR`, `CDR`, `PUSH`, `POP`, `STAK`/`UNSTAK`, `ENTER`/`EXIT`, collector `LIM`…`GARB2`, `BDN`, Ring Structure Processor (May 1969): `FEL`/`FELN`, `NULLR`, `INSRT`, `FINDS`/`FINDN`/`FINDP`, `GRHA`/`GRRB`, `ADDW`, `DSON`, `DELB` |
+| `reloc.s` | SYMELEC `/LTPIX/RELOC`, pp. 24 (`RELOC1`…`RLCEND`) | `BEG`, `END`, `RELCON` | the relocation pass alone: load a ring image from tape or disk at a new address with no link |
+| `ltpix.s` | SYMELEC `/LTPIX`, pp. 21–25 (`LTPX`, `RW`, `WAITLK`, `PXID`) | `reloc.s`, `BEG`, `END`, `SAVINS`, `ERRGB` | the blocklet transfer: 4-word heading, checksums, PDP-7 ↔ Titan |
+| `rsp.fs` | new | `rsp.s` | Forth words over RSP, both Lisp names (`CAR CDR CONS`) and RSP names (`INSERT NEXT HEAD`); recursion lives here |
+| `net.fs` | new | `rsp.fs`, `ltpix.s` | send, receive, request, reply, handlers |
+
+Packaging changes only: `WAITLK`'s PIXIE-specific idle work (restart the display file at `DFB`,
+Control-X abort to `BERTP1`) becomes two hook words the host program fills, defaulting to
+nothing. The layout table that ends RSPPIX (`BEG FREE ENDRES BOT TOP SAVINS LPBEG LOP LKBEG LINK
+… LKEND ERRGB GDM BCC`) is exactly the interface each program supplies, so it stays data. Test:
+SYMELEC assembled from the layers is word-for-word `symelec.oct` at the same addresses.
+
 - **On the PDP-7:** RSPPIX's own routines (`SETUP`, `FLST`, `CAR`, `CDR`,
   `PUSH`, `POP`, `STAK`/`UNSTAK`, `ENTER`/`EXIT`, the collector) lifted out of
   SYMELEC as a loadable image with its layout words, so Forth (as code
