@@ -101,15 +101,21 @@ test("graftal: the fern grows through the real 340 into SVG", () => {
 	writeFileSync(`${dir}graftal-fern.svg`, toSvg(picture));
 
 	// And the leaf everyone recognizes.
+	// Rehmi and Don's leaf is about 11K words of display file and core is 8K, so it goes in two loads.
 	const leaf = normalize(potLeaf());
-	const leafFile = toDisplayFile(leaf);
-	for (let i = 0; i < 8192; i += 1) mem[i] = 0;
-	for (let i = 0; i < leafFile.length; i += 1) mem[0o100 + i] = leafFile[i]!;
-	const t2 = new Type340({ fetch: (a) => mem[a] ?? 0, store: (a, w) => void (mem[a] = w) });
-	t2.iot({ device: 0o06, pulse: 0o06, ac: 0o100 });
-	for (let i = 0; i < leafFile.length + 10; i += 1) t2.tick();
-	const leafPicture = t2.lastFrame?.segments ?? t2.segments;
-	assert.ok(leafPicture.some((s) => s.intensify), "the leaf made light");
+	const leafPicture: typeof picture = [];
+	const half = Math.ceil(leaf.length / 2);
+	for (const part of [leaf.slice(0, half), leaf.slice(half)]) {
+		const leafFile = toDisplayFile(part);
+		assert.ok(leafFile.length < 8192 - 0o100, `half a leaf fits in core: ${leafFile.length}`);
+		mem.fill(0);
+		for (let i = 0; i < leafFile.length; i += 1) mem[0o100 + i] = leafFile[i]!;
+		const t2 = new Type340({ fetch: (a) => mem[a] ?? 0, store: (a, w) => void (mem[a] = w) });
+		t2.iot({ device: 0o06, pulse: 0o06, ac: 0o100 });
+		for (let i = 0; i < leafFile.length + 10; i += 1) t2.tick();
+		leafPicture.push(...(t2.lastFrame?.segments ?? t2.segments));
+	}
+	assert.ok(leafPicture.filter((s) => s.intensify).length >= leaf.length - 20, "every leaf stroke made light");
 	writeFileSync(`${dir}graftal-pot-leaf.svg`, toSvg(leafPicture));
 });
 

@@ -3,10 +3,13 @@
 	// file (YAML, JSON, or the binary transfer stream). Drag to turn, wheel to zoom, point at
 	// a cell to read it, click to open it in the memory panel.
 	import { onMount } from 'svelte';
-	import { DEFAULT_CAMERA, changedCells, drawList, paint, photograph, pick, readRings, ringToScene } from '@wwsff/pixie';
+	import { DEFAULT_CAMERA, changedCells, drawList, paint, pick, readRings, ringToScene } from '@wwsff/pixie';
 
-	/** @type {{ read: ((addr: number) => number) | null, onOpen?: (addr: number) => void, height?: number }} */
-	let { read, onOpen, height = 260 } = $props();
+	/**
+	 * capture() photographs core: { image, roots } or { error }. name(addr) gives a symbol.
+	 * @type {{ capture: (() => any) | null, name?: (addr: number) => string, onOpen?: (addr: number) => void, height?: number }}
+	 */
+	let { capture, name = () => '', onOpen, height = 260 } = $props();
 
 	let canvas = $state(null);
 	let width = $state(400);
@@ -20,23 +23,21 @@
 	let last = null;
 	let marks = [];
 	let hot = new Set();
-
-	/** BEG..END only means something once SYMELEC has set them; anything else is not a ring area. */
-	function live() {
-		if (!read) return null;
-		const img = photograph(read);
-		return img.end > img.beg && img.end - img.beg <= 8192 ? img : null;
-	}
+	let lastRoots = '';
 
 	function frame(dt) {
-		const img = source === 'live' ? live() : loaded;
+		const shot = source === 'live' ? (capture?.() ?? { error: 'No machine.' }) : loaded && { image: loaded, roots: [loaded.savins] };
+		const img = shot?.image;
 		if (!img) {
 			scene = null;
-			note = source === 'live' ? 'No ring structure in core yet: SYMELEC sets BEG and END when it starts.' : '';
+			last = null;
+			note = shot?.error ?? '';
 		} else {
 			hot = changedCells(last, img);
-			if (!scene || hot.size || img.beg !== last?.beg || img.words.length !== last?.words.length) {
-				scene = ringToScene(img);
+			const roots = shot.roots.join(' ');
+			if (!scene || hot.size || roots !== lastRoots || img.beg !== last?.beg || img.words.length !== last?.words.length) {
+				lastRoots = roots;
+				scene = ringToScene(img, shot.roots);
 				note = `${scene.nodes.length} cells in ${scene.chains.length} chains, ${(img.end - img.beg).toString(8)} words at ${img.beg.toString(8)}`;
 			}
 			last = img;
@@ -126,12 +127,12 @@
 
 <div class="rings" bind:clientWidth={width}>
 	<div class="mem-bar">
-		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="The ring structure in the running machine's core, BEG to END" onclick={() => ((source = 'live'), (scene = null), (last = null))}>live</button>
+		<button type="button" class="chip" class:on={source === 'live'} aria-pressed={source === 'live'} title="The ring structure in the running machine's core, as CONFIG names it" onclick={() => ((source = 'live'), (scene = null), (last = null))}>live</button>
 		<label class="chip" title="A ring image or graph as YAML or JSON, or a binary transfer stream (3 bytes a word)"
 			>file<input type="file" accept=".yml,.yaml,.json,.pix,.bin" onchange={choose} hidden /></label
 		>
 		<button type="button" class="chip" class:on={spin} aria-pressed={spin} title="Turn slowly" onclick={() => (spin = !spin)}>spin</button>
-		<span class="mem-hint">{#if hover}{o(hover.addr)} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
+		<span class="mem-hint">{#if hover}{o(hover.addr)}{name(hover.addr) ? ` ${name(hover.addr)}` : ''} {hover.kind} {o(hover.word)}{#if hover.cdrWord !== undefined} . {o(hover.cdrWord)}{/if}{hover.label ? ` ${hover.label}` : ''}{:else}{note}{/if}</span>
 	</div>
 	<canvas
 		bind:this={canvas}

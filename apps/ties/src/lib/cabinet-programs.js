@@ -112,6 +112,8 @@ export const PROGRAMS = [
 		switches: 0,
 		switchLabels: null,
 		symbols: () => parseSymbolTsv(symelecSymbols),
+		// RINGS panel: the cells holding the structure's bounds, and the cells holding its roots.
+		rings: { beg: 'BEG', end: 'END', roots: 'SAVINS' },
 		hint: symelecHint,
 		// The 1972 listing is 268 KB; fetched only when a view needs it.
 		async source() {

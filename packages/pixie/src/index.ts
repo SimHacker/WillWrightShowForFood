@@ -47,5 +47,5 @@ export {
 	writeAdventMap,
 	writeArpaMap,
 } from "./psiber.js";
-export { FERN, fern, grow, normalize, potLeaf, toDisplayFile, turtle } from "./graftal.js";
-export type { LSystem, Stroke } from "./graftal.js";
+export { FERN, fern, fractal, grow, LEAF, normalize, potLeaf, toDisplayFile, turtle } from "./graftal.js";
+export type { FractalEnv, FractalLevel, LSystem, Stroke } from "./graftal.js";

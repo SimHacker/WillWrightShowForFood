@@ -94,48 +94,111 @@ export function fern(iterations = 5): Stroke[] {
 }
 
 /**
- * The seven-fingered leaf. Not an L-system — a procedural graftal:
- * serrated leaflets fanned from a palm point, lengths and angles from
- * the plant everyone recognizes. Serration is a sawtooth riding the
- * blade edge; each leaflet is one closed polyline of strokes.
+ * Rehmi Post and Don Hopkins's fractal leaf, NeWS PostScript at UniPress:
+ * https://donhopkins.com/home/archive/news-tape/pictures/leaf.ps
+ * Each level draws a unit line up its own y axis, then at every grain
+ * of its granularity loop sprouts a branch per angle: rotate, scale,
+ * and recurse into the next level, or just draw a line at the last.
+ * The procedures see the level's own grain and branchangle, as the
+ * level's dictionary did, so the config below is the PostScript's.
  */
-export function potLeaf(leaflets = 7, teeth = 15): Stroke[] {
-	const strokes: Stroke[] = [];
-	const half = (leaflets - 1) / 2;
-	for (let i = 0; i < leaflets; i += 1) {
-		const k = i - half;
-		const fan = (k / half) * 80; // degrees off vertical
-		const len = 1 - 0.18 * Math.abs(k) ** 1.4;
-		blade(strokes, fan, len, teeth);
-	}
-	// stem
-	strokes.push({ x0: 0, y0: 0, x1: 0, y1: -0.35 });
-	return strokes;
+export type FractalEnv = {
+	grain: number;
+	branchangle: number;
+	/** `limit rnd`: 0 to limit-1, an integer. */
+	rnd: (limit: number) => number;
+};
+
+export type FractalLevel = {
+	/** start step end, for a PostScript `for`. */
+	granularity: (e: FractalEnv) => [number, number, number];
+	branchscale: (e: FractalEnv) => [number, number];
+	branchangles: (e: FractalEnv) => number[];
+};
+
+const sin = (deg: number) => Math.sin((deg * Math.PI) / 180);
+const cos = (deg: number) => Math.cos((deg * Math.PI) / 180);
+
+export const LEAF: FractalLevel[] = [
+	{
+		granularity: () => [1, 1, 1],
+		branchscale: ({ branchangle }) => {
+			const s = (cos(branchangle / 2) + 0.1) ** 2 + 0.3;
+			return [s, s];
+		},
+		branchangles: () => [-110, -60, 0, 60, 110],
+	},
+	{
+		granularity: () => [0.08, 0.03, 1],
+		branchscale: ({ grain }) => {
+			const s = sin(grain * 110 + 50) ** 2 / 7;
+			return [s, s];
+		},
+		branchangles: ({ grain }) => [-60 + grain * 30, 60 - grain * 30],
+	},
+	{
+		granularity: ({ rnd }) => [0.05, rnd(100) / 1000 + 0.14, 1],
+		branchscale: ({ grain }) => {
+			const s = 0.4 - grain * 0.3;
+			return [s, s];
+		},
+		branchangles: ({ grain, rnd }) => [
+			89 - grain * 85,
+			-89 + grain * 85,
+			70 - grain * 40 - rnd(30),
+			-70 + grain * 40 + rnd(30),
+		],
+	},
+	{
+		granularity: () => [0, 1, -1],
+		branchscale: () => [1, 1],
+		branchangles: () => [],
+	},
+];
+
+/** Park and Miller's minimal standard, so a seed always grows the same leaf. */
+function seeded(seed: number): () => number {
+	let s = Math.max(1, Math.floor(seed) % 2147483647);
+	return () => {
+		s = (s * 16807) % 2147483647;
+		return (s - 1) / 2147483646;
+	};
 }
 
-function blade(out: Stroke[], fanDeg: number, len: number, teeth: number): void {
-	const a = ((90 - fanDeg) * Math.PI) / 180;
-	const ux = Math.cos(a);
-	const uy = Math.sin(a);
-	// perpendicular, for width
-	const px = -uy;
-	const py = ux;
-	const pts: { x: number; y: number }[] = [];
-	// up one edge and down the other, sawtooth width profile
-	for (const side of [1, -1]) {
-		for (let t = 0; t <= teeth; t += 1) {
-			const f = side === 1 ? t / teeth : 1 - t / teeth;
-			const width = 0.16 * len * Math.sin(Math.PI * f) * (1 - 0.45 * (t % 2));
-			pts.push({
-				x: f * len * ux + side * width * px,
-				y: f * len * uy + side * width * py,
-			});
+/** Affine [a b c d e f], as PostScript's CTM. */
+type Ctm = [number, number, number, number, number, number];
+
+export function fractal(levels: FractalLevel[], random: () => number = Math.random): Stroke[] {
+	const out: Stroke[] = [];
+	const rnd = (limit: number) => Math.floor(random() * limit);
+	const line = ([a, b, c, d, e, f]: Ctm) => out.push({ x0: e, y0: f, x1: c + e, y1: d + f });
+	const draw = (i: number, m: Ctm): void => {
+		const level = levels[i]!;
+		line(m);
+		const env: FractalEnv = { grain: 0, branchangle: 0, rnd };
+		const [start, step, end] = level.granularity(env);
+		for (let g = start; step > 0 ? g <= end : g >= end; g += step) {
+			env.grain = g;
+			const [a, b, c, d, e, f] = m;
+			const at: Ctm = [a, b, c, d, c * g + e, d * g + f];
+			for (const angle of level.branchangles(env)) {
+				env.branchangle = angle;
+				const co = cos(angle);
+				const si = sin(angle);
+				const r: Ctm = [a * co + c * si, b * co + d * si, c * co - a * si, d * co - b * si, at[4], at[5]];
+				if (i + 1 < levels.length) {
+					const [sx, sy] = level.branchscale(env);
+					draw(i + 1, [r[0] * sx, r[1] * sx, r[2] * sy, r[3] * sy, r[4], r[5]]);
+				} else line(r);
+			}
 		}
-	}
-	pts.push(pts[0]!);
-	for (let i = 1; i < pts.length; i += 1) {
-		out.push({ x0: pts[i - 1]!.x, y0: pts[i - 1]!.y, x1: pts[i]!.x, y1: pts[i]!.y });
-	}
+	};
+	if (levels.length > 0) draw(0, [1, 0, 0, 1, 0, 0]);
+	return out;
+}
+
+export function potLeaf(seed = 1972, levels: FractalLevel[] = LEAF): Stroke[] {
+	return fractal(levels, seeded(seed));
 }
 
 /** Fit strokes into the 340's 1024-square with a margin. */
@@ -186,8 +249,8 @@ function point(axis: "x" | "y", v: number, nextMode: number): number {
 }
 
 /** VECTOR word: signed 7-bit deltas, intensify, optional escape. */
-function vector(dx: number, dy: number, escape: boolean): number {
-	let w = BIT(1); // intensify
+function vector(dx: number, dy: number, escape: boolean, bright = true): number {
+	let w = bright ? BIT(1) : 0;
 	if (escape) w |= BIT(0);
 	if (dy < 0) w |= BIT(2);
 	w |= FIELD(Math.abs(dy), 3, 9);
@@ -215,8 +278,27 @@ export function toDisplayFile(strokes: Stroke[]): number[] {
 		words.push(...run);
 		run = [];
 	};
-	for (const s of strokes) {
-		if (s.x0 !== bx || s.y0 !== by) {
+	for (let i = 0; i < strokes.length; i += 1) {
+		let s = strokes[i]!;
+		const next = strokes[i + 1];
+		const atStart = s.x0 === bx && s.y0 === by;
+		const atEnd = s.x1 === bx && s.y1 === by;
+		// sibling branches share a base: draw this one inward so the next starts where the beam is
+		const shared = next !== undefined && next.x0 === s.x0 && next.y0 === s.y0;
+		if (!atStart && (atEnd || shared)) s = { x0: s.x1, y0: s.y1, x1: s.x0, y1: s.y0 };
+		const hop = bx === undefined || by === undefined ? Infinity : Math.max(Math.abs(s.x0 - bx), Math.abs(s.y0 - by));
+		if (hop > 0 && hop <= 254 && run.length > 0) {
+			// a dark vector or two is cheaper than a three-word reposition
+			let dx = s.x0 - bx!;
+			let dy = s.y0 - by!;
+			while (dx !== 0 || dy !== 0) {
+				const px = Math.max(-127, Math.min(127, dx));
+				const py = Math.max(-127, Math.min(127, dy));
+				run.push(vector(px, py, false, false));
+				dx -= px;
+				dy -= py;
+			}
+		} else if (hop > 0) {
 			flush();
 			words.push(param(POINT));
 			words.push(point("y", s.y0, POINT));

@@ -863,6 +863,35 @@
 	let ttyCols = $state(0);
 	const ttyLocal = $derived(ttyCfg.duplex === 'half');
 
+	// RINGS: labels or octal addresses of the cells holding the bounds and the root names.
+	let ringsCfg = $state(untrack(() => ringsConfigFor(programById(programId))));
+	function ringsConfigFor(p) {
+		return { beg: '', end: '', roots: '', ...(p?.rings ?? {}) };
+	}
+	function ringAddr(text) {
+		const t = text.trim();
+		if (/^[0-7]+$/.test(t)) return Number.parseInt(t, 8);
+		return byName.get(t.toUpperCase()) ?? null;
+	}
+	function captureRings() {
+		if (!cpu) return { error: 'No machine.' };
+		const begAt = ringAddr(ringsCfg.beg);
+		const endAt = ringAddr(ringsCfg.end);
+		if (begAt === null || endAt === null) return { error: 'Name the BEG and END cells in CONFIG.' };
+		const beg = cpu.read(begAt) & 0o17777;
+		const end = cpu.read(endAt) & 0o17777;
+		if (end <= beg || end - beg > 0o20000) return { error: `No structure yet (${oct(beg, 5)} to ${oct(end, 5)}).` };
+		const words = [];
+		for (let a = beg; a < end; a += 1) words.push(cpu.read(a) & 0o777777);
+		const roots = [];
+		for (const r of ringsCfg.roots.split(/[\s,]+/).filter(Boolean)) {
+			const at = ringAddr(r);
+			if (at === null) return { error: `Unknown root ${r}.` };
+			roots.push(cpu.read(at) & 0o777777);
+		}
+		return { image: { beg, end, savins: roots[0] ?? 0o100000, words }, roots };
+	}
+
 	function ttyConfigFor(p) {
 		const c = p?.ttyConfig ?? {};
 		return { ...TTY_DEFAULTS, ...c, bindings: { ...TTY_DEFAULTS.bindings, ...(c.bindings ?? {}) } };
@@ -1743,6 +1772,7 @@
 		stopRecording();
 		programId = next.id;
 		ttyCfg = ttyConfigFor(next);
+		ringsCfg = ringsConfigFor(next);
 		memView = memViewFor(next);
 		memFollow = true;
 		memShownBase = -1;
@@ -2318,7 +2348,7 @@
 		{/if}
 		{#if ringsOpen}
 			<div class="row app">
-				<RingView read={cpu ? (a) => cpu.read(a) : null} onOpen={(a) => openMemAt(a)} />
+				<RingView capture={captureRings} name={symbolic} onOpen={(a) => openMemAt(a)} />
 			</div>
 		{/if}
 		{#if memOpen}
@@ -2476,6 +2506,13 @@
 							.map(([k, v]) => `${k.replace('Ctrl-', '^')} ${typeof v === 'string' ? v : `sends ${v.label ?? oct(v.send, 3)}`}`)
 							.join(' · ')}</span
 					>
+				</div>
+				<h4 class="config-head">Rings</h4>
+				<div class="tty-cfg">
+					{#each [['beg', 'Start', 'The cell holding the first word of the ring area'], ['end', 'End', 'The cell holding the word after the last'], ['roots', 'Roots', 'Cells holding ring names to start from, separated by spaces']] as [key, label, hint]}
+						<span class="tty-cfg-label">{label}</span>
+						<span class="tty-cfg-row"><input type="text" class="rings-cfg" title={hint} placeholder="label or octal" spellcheck="false" bind:value={ringsCfg[key]} /></span>
+					{/each}
 				</div>
 			</div>
 		{/if}
@@ -3150,6 +3187,11 @@
 		align-items: center;
 		margin-top: 4px;
 		font-size: 0.7rem;
+	}
+	.rings-cfg {
+		font: inherit;
+		font-family: ui-monospace, monospace;
+		width: 14em;
 	}
 	.tty-cfg-row {
 		display: flex;
