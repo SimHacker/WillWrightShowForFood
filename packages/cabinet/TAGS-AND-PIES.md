@@ -286,7 +286,11 @@ MicropolisCore's designs, which the cabinet follows rather than duplicates:
   not yet a package);
 - pie cursors and wedge hit-testing:
   `documentation/designs/virtual-pointer-and-pie-cursors.md`;
-- pies, tabs and windows: `documentation/notes/PIE-TAB-WINDOWS.md`.
+- pies, tabs and windows: `documentation/notes/PIE-TAB-WINDOWS.md`;
+- the command bus, so pie items are command ids with a risk policy and LLM proposals:
+  `apps/micropolis/src/lib/CommandBus.ts` and `skills/micropolis-command-bus/`, with
+  events in the `MicropolisEvent` envelope from
+  `documentation/designs/naming-conventions.md` (see [ROADMAP §8](ROADMAP.md#8-driving-the-ui)).
 
 The cabinet's first pie is deliberately small and uses that model's names, so it can be
 swapped for MicropolisCore's package when that exists, without touching any advertiser.
@@ -296,7 +300,8 @@ swapped for MicropolisCore's package when that exists, without touching any adve
 **Finish first,** before the big dive into pies, pushpins, tabs and windows:
 
 1. Work already owed: the multi-pen IDPN plan, the LP370 test for several pens, and
-   Heinz's seven points.
+   Heinz's seven points, ordered in [ROADMAP.md](ROADMAP.md), which also designs the
+   UI driver that pie actions use.
 2. DTG, tag records, the latch and IDPN pulse 4 in `Type340`, with tests. That includes
    a test that every existing tape draws exactly the same segments as before.
 3. The Forth words, and a turtle demo that draws tagged shapes.

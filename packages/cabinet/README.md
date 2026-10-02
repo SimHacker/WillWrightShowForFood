@@ -153,6 +153,8 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 
 ### Next
 
+The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
+
 - Tags, focus and pies: a 340 word that tags what it draws with a title, link and
   36-bit id; tapping focuses it, and a pie offers what can be done with it:
   [TAGS-AND-PIES.md](TAGS-AND-PIES.md).

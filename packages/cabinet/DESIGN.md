@@ -862,6 +862,10 @@ output is this listing, and a listing can be saved as a text file or printed on 
    a Forth turtle drawing with tags gets focus, a tooltip and an
    announcement when tapped.
 
+What comes before and after step 8 (pen interpolation, display knobs, Forth
+that speaks, the round screen, several pens, the UI driver) is ordered in
+[ROADMAP.md](ROADMAP.md).
+
 Discipline: **differential trace vs SIMH.** One line format (`addr ir ac link`)
 emitted by both benches over the same `.oct`; diff. Roy already steps the
 binary natively — the oracle made mechanical.
