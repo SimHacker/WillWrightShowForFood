@@ -560,6 +560,9 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   [cars-2027-medicine.md](../../characters/heinz-lemke/cars-2027-medicine.md) and
   [voystick-correspondence-lineage.md](../../characters/don-hopkins/sources/voystick-correspondence-lineage.md).
 - Find the GRID point display in the listing.
+- Panel order: drag the tabs left and right; a pie on a tab with first, last, earlier,
+  later. Once order is the user's, the bottom-most open resizable panel takes the spare
+  height instead of the last opened.
 
 ## 15. DUEL from tape to source
 
