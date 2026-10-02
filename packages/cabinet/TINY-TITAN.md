@@ -172,6 +172,22 @@ The shape follows the command bus in the MicropolisCore repo, but the
 names are ours: that simulator's name is used under a limited
 permission, and none of our classes, ids or wire formats carry it.
 
+**The tiny ensemble.** Each piece is small, complete, and shaped to
+swap with a bigger design, in either direction:
+
+| piece | what it is | swaps with |
+| --- | --- | --- |
+| tiny-titan | the Titan end of Wiseman's link | an Atlas 2 emulator behind `TitanPort` |
+| tiny-bus | commands, events, sources and sinks across tab, node and network | the MicropolisCore command bus design |
+| tiny-its | the command language for people, LLMs and PDP-7s ([TINY-ITS.md](TINY-ITS.md)) | ITS DDT, Open Firmware's command line |
+| tiny-teco | ITS TECO, enough for Minsky's 1981 UTM ([package](../tiny-teco/README.md)) | full ITS TECO ([FULL-ITS-TECO.md](../tiny-teco/FULL-ITS-TECO.md)) |
+| tiny-tag | tags and focus, what pies attach to ([TAGS-AND-PIES.md](TAGS-AND-PIES.md)) | an accessibility tree |
+| tiny-pie | Target, Pie, Slice, Item, with callbacks and placement policies ([ROADMAP §9](ROADMAP.md#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin)) | jquery-pie, the Unity pie menus |
+| tiny-cursor | virtual cursors, grab, warp, park, one per pen | the MicropolisCore virtual cursor design |
+| tiny-win | windows: frame, focus, stacking, the definition window | a NeWS-style window manager |
+| tiny-tab | tabs and the pages behind them, one bus reach | browser tabs, HyperTIES frames |
+| tiny-tape | the recorder: events by machine cycle, replayed exactly | a full session store |
+
 **Examine/deposit alongside.** Remote control of the cabinet is not a
 console protocol — the Cabinet is a TS object, and step/examine/deposit
 ride the same socket in a dozen lines. The link carries drawings; the
