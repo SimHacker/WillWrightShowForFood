@@ -855,6 +855,12 @@ output is this listing, and a listing can be saved as a text file or printed on 
    duty-cycle lamps, the phosphor texture on curved glass, and
    sim-Heinz — whose pen tip drives the LightPen plugin. Rides the
    pretty-pass lane; consumes only existing seams.
+8. Tags, focus and pies ([TAGS-AND-PIES.md](TAGS-AND-PIES.md)): the
+   undefined SUBR jump type 00 becomes DTG, which tags what follows with a
+   title, link and 36-bit id; a pen tap latches and focuses it.
+   **Accept:** every existing tape draws the same segments as before, and
+   a Forth turtle drawing with tags gets focus, a tooltip and an
+   announcement when tapped.
 
 Discipline: **differential trace vs SIMH.** One line format (`addr ir ac link`)
 emitted by both benches over the same `.oct`; diff. Roy already steps the
