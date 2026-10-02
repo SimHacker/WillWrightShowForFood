@@ -153,6 +153,9 @@ Each rung has an acceptance test in `src/cabinet.test.ts`.
 
 ### Next
 
+- Tags, focus and pies: a 340 word that tags what it draws with a title, link and
+  36-bit id; tapping focuses it, and a pie offers what can be done with it:
+  [TAGS-AND-PIES.md](TAGS-AND-PIES.md).
 - Serve a structure *back* over the link.
 - Forth, self-hosted: assemble Mitch's `kernel.s` in the page with an `as7` dialect of our
   assembler, so it has source maps and a symbol table, and live-code it in a LIVE CODING
