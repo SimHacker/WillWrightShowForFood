@@ -272,7 +272,8 @@ classes, ids or wire formats carry it.
 - **Across nodes.** tiny-its forwards commands and events between buses, so a macro on
   one node drives the pen on another, and the same log replays on either.
 
-Tiny is better than worse: tiny-bus is ours, small, and stays. If the bus in the
+Tiny is better than worse (a rejoinder to Gabriel's Worse is Better; see
+[TINY-TITAN.md](TINY-TITAN.md#tiny-bus-the-backplane-between-machines)): tiny-bus is ours, small, and stays. If the bus in the
 MicropolisCore repo is ever lifted into a package, an adapter maps one envelope onto
 the other at the edge (TAGS-AND-PIES §12 step 8).
 

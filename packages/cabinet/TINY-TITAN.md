@@ -137,7 +137,12 @@ before the word.
 tiny-bus, in all its glory and splendour: the titanic, utilitarian,
 serviceable bus that every command, event, source and sink in the bench
 rides, from one tab to a central server and across networks. Tiny is
-better than worse.
+better than worse: a rejoinder to Richard Gabriel's
+[Worse is Better](https://www.dreamsongs.com/WorseIsBetter.html). Worse
+won by being simple to implement at the cost of being incomplete. Tiny
+keeps the simplicity and stays complete: small enough to read in one
+sitting, whole enough to use everywhere, and shaped so a bigger version
+can replace it, or never needs to.
 
 - **`TinyCommand`**: `{ id, args, source, risk }`, big-endian ids
   (`cabinet.pen.tap`, `cabinet.tape.load`), dispatched by pie items,
