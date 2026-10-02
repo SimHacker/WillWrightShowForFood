@@ -16,10 +16,10 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 4 | Answers to Heinz's other points | owed | [§4](#4-heinzs-seven-points) |
 | 5 | Forth `wait` and `say"` | Forth programs that draw while they speak | [§5](#5-forth-that-draws-and-speaks) |
 | 6 | Round screen | the 25 cm question, historically framed | [§6](#6-round-screen) |
-| 7 | The UI driver, on MicropolisCore's command bus; tests become driver scripts | everything below drives the bench through it | [§8](#8-driving-the-ui) |
+| 7 | The UI driver, on tiny-bus; tests become driver scripts | everything below drives the bench through it | [§8](#8-driving-the-ui) |
 | 8 | The Engelbart Cursor Party: several pens, several users, the LP370 test as the show | promised in DESIGN.md; the first multi-pen script | [§7](#7-several-pens-the-engelbart-cursor-party) |
 | 9 | One transport, and a demo library | demos, sessions, the PC and macros share one set of controls | [§11](#11-one-transport-and-a-demo-library) |
-| 10 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
+| 10 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, callbacks, tiny-cursor, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
 | 11 | Info goes upstairs: the definition window | PIXIE embedded in HyperTIES, the showcase | [§10](#10-info-goes-upstairs-the-definition-window) |
 | 12 | The Engelbart mouse and chorded keyset | simulated first; digital twins of Don's pair | [§12](#12-the-engelbart-mouse-and-chorded-keyset) |
 | 13 | Emulation mash-ups: virtual devices in machines they never met | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
@@ -175,6 +175,9 @@ The applet drives one pen from one pointer (`pressedId`).
   sharing one flag, and where 1964's single flag makes them collide.
 - Then the Engelbart tributes from DESIGN.md: two pens drag two corners of one
   rectangle; two pies open at once; a quiver of eight wands.
+- **With the AM radio** ([AM-RADIO.md](AM-RADIO.md)): every guest's pen moves the
+  program, the program's loops sing on the radio, so the party is heard as well as
+  seen. Three pens at once is a trio, and you can hear when they collide.
 
 **Tests are party scripts.** The light pen tests move onto the driver (§8): find the
 box, `dragAlong` it with pen 1 while pen 2 taps a line, and assert on the
@@ -309,6 +312,16 @@ in shape and in names, exactly:
   geometry, the skin or the event code. That is the whole contract, and it is why the
   cabinet swaps to MicropolisCore's pie and cursor packages, when they exist, with no
   change to any advertiser (TAGS-AND-PIES §12 step 8).
+- **Placement policies (later; brace for it).** A slice, or a whole pie, may carry
+  a policy that decides where an incoming item lands: by tag, by kind, by command id
+  prefix, by score. Throw an item at the root of a nested pie and it falls through to
+  the most fitting submenu, as a room in a map editor takes the exit that matches.
+  Advertisers stay ignorant of the policy; they offer, the pie places.
+- **Direct-manipulation editor (later).** Users grab an item and drag it to another
+  slice, into a submenu or out to another pie; dragging a submenu onto a slice links
+  it there, like kissing two rooms together in a map editor. The edit is a
+  `TinyCommand`, so it is undoable, recordable and scriptable, and the result is
+  saved as data. Prior art: the ActiveX pie menu editor in the PieMenus repo.
 - **Where it lives.** The model, layout and selection are plain TypeScript in
   `packages/cabinet`, tested with the rest. Layout returns a list of paint operations;
   a small Svelte component beside `CabinetApplet.svelte` draws them on a canvas, so
@@ -317,11 +330,40 @@ in shape and in names, exactly:
   selected slice, and paints. The NeWS 1.1 skin is the first; fake-3D skins (see
   `fake-5d.ps` and friends in the PieMenus repo) come later on the same interface.
 
+**Callbacks.** The best-developed callback sets are Don's later ones, not NeWS's:
+[jquery-pie](https://github.com/SimHacker/CAM6/tree/master/jquery-pie) and the Unity
+C# pie menus (`PieMenus/Misc/Unity3DPieMenu/PieMenu.cs`). Take their coverage, not
+their names:
+
+- **Three levels:** the pie, each slice, each item, every hook available at each, so
+  an item can preview itself while a slice highlights and the pie updates its centre.
+- **Lifecycle:** down, up, start, show (after mouse-ahead delay), update (every move,
+  with direction and distance), enter and leave of a slice or item, pin and unpin
+  (click-up mode), select, submenu, cancel, stop, and a timer for dwell.
+- **Scope:** handlers per pie and global ones for every pie (Unity's `onGlobal…`),
+  so a recorder or a screen reader hears all pies without being wired into each.
+- **Each call gets** the pie, the slice and item if any, direction and distance, and
+  the pen that drives it (§7), so two pies opened by two pens stay apart.
+- **On the bus:** every lifecycle step is also a `TinyEvent` (`cabinet.pie.show`,
+  `cabinet.pie.select` …), so tests and scripts wait on them like anything else.
+
+**tiny-cursor.** NeWS pie menus warped the cursor (screen edge, Ker), and the pie
+rides need parked pens, a pie cursor and a warp back. The browser cannot warp the
+real pointer, so the cabinet draws its own: **tiny-cursor**, virtual cursors with
+pointer grab, warp, park, hide, per-pen ownership and nesting rides
+([TAGS-AND-PIES §8](TAGS-AND-PIES.md#8-cursors-are-vehicles)). Pointer Lock gives
+raw motion when a ride needs it. Same approach as tiny-bus: minimal but complete,
+ready to grow, alongside the bigger virtual cursor design in the MicropolisCore repo
+with the same shape, so either can replace the other, or the tiny one simply wins.
+LLMs make blending two versions cheap; we lean into that.
+
 **The NeWS 1.1 skin.** Black and white, stencil and paint, specified from Don's
 `SimplePieMenu` in
 [PieMenus/NeWS/piemenu.ps](https://github.com/SimHacker/PieMenus/blob/master/NeWS/piemenu.ps)
 (1987, rewritten for NeWS 1.1's `litemenu.ps` for SIGGRAPH). Numbers are its class
-variables (lines 308–354); units are pixels at 1×, PostScript y up.
+variables (lines 308–354); units are pixels at 1×, PostScript y up. No PostScript
+renderer or interpreter: take the spirit, the measurements and the styles, not its
+APIs or naming conventions.
 
 - **Font:** Helvetica-Bold 12, black on white.
 - **Angles:** slice 0 points up (`PieInitialAngle 90`) and slices go clockwise. Slice
@@ -364,8 +406,7 @@ variables (lines 308–354); units are pixels at 1×, PostScript y up.
 - **Cursor:** the `beye` cursor (line 456) while the pie is up.
 
 **Accept:** a pie of 4, 6 and 8 labels rendered by the skin matches, side by side,
-the same menus drawn by running `piemenu.ps` (in a PostScript renderer, with the NeWS
-operators stubbed) or a period NeWS screenshot; the slice and highlight geometry have
+a period NeWS screenshot; the slice and highlight geometry have
 unit tests against the numbers above; a flick selects with no menu shown and the wocka
 flashes; and a HyperTIES link pops a pie whose items dispatch command-bus ids.
 

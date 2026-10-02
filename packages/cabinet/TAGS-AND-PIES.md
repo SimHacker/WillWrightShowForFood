@@ -225,8 +225,10 @@ Input focus is the driver, who hops between them.
 - Screen readers hear where each ride starts and ends: "Pie menu, Front door", then
   "Back to light pen".
 
-This is the virtual cursor layer MicropolisCore has already designed (below). The
-cabinet should be one of its consumers, not grow a second one.
+The cabinet builds this as **tiny-cursor** ([ROADMAP §9](ROADMAP.md#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin)):
+virtual cursors, grab, warp and park, minimal but complete, with the same shape as
+the virtual cursor layer designed in the MicropolisCore repo (below), so either can
+replace the other.
 
 ## 9. Keyboard and screen reader
 
