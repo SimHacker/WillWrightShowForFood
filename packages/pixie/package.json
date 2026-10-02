@@ -1,0 +1,21 @@
+{
+	"name": "@wwsff/pixie",
+	"version": "0.1.0",
+	"private": true,
+	"description": "PIXIE ring structures: words, cells, images, Graftals.",
+	"type": "module",
+	"exports": {
+		".": "./dist/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.json",
+		"test": "tsc -p tsconfig.json && node --test dist/*.test.js"
+	},
+	"dependencies": {
+		"@wwsff/cabinet": "workspace:*"
+	},
+	"devDependencies": {
+		"@types/node": "^20.17.0",
+		"typescript": "^5.8.0"
+	}
+}
