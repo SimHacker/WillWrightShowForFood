@@ -22,9 +22,10 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 10 | Tags, focus, the first pie (Target/Pie/Slice/Item, NeWS 1.1 skin, in HyperTIES) | [TAGS-AND-PIES §12](TAGS-AND-PIES.md#12-order-of-work) steps 2–7 | [§9](#9-the-first-pie-target-pie-slice-item-in-a-news-11-skin) |
 | 11 | Info goes upstairs: the definition window | PIXIE embedded in HyperTIES, the showcase | [§10](#10-info-goes-upstairs-the-definition-window) |
 | 12 | The Engelbart mouse and chorded keyset | simulated first; digital twins of Don's pair | [§12](#12-the-engelbart-mouse-and-chorded-keyset) |
-| 13 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
+| 13 | Emulation mash-ups: virtual devices in machines they never met | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
+| 14 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 
-Odds and ends are in [§13](#13-small-items).
+Odds and ends are in [§14](#14-small-items).
 
 ## 1. Tracking: the pen is sampled once per browser frame
 
@@ -469,7 +470,45 @@ Don has an actual pair. Simulated in the bench first, then digital twins.
   computer. The hardware project gets its own home when it starts; this bench is its
   first software.
 
-## 13. Small items
+## 13. Emulation mash-ups
+
+Plug virtual devices into virtual machines that never met: a VPL DataGlove on a
+PDP-7, tracking your real hand with computer vision; an Engelbart mouse and keyset on
+the PDP-7, or on an Apple ][ as PDL(0), PDL(1) and three buttons.
+
+**Split the device from the port.** A device is two halves:
+
+- **The instrument**: what the hand does, machine-free. Mouse: relative x, y and
+  three buttons. Keyset: five keys. Glove: per-finger flex, hand position and
+  orientation. Fed by real hardware, a simulation on screen, a recording, or a
+  driver script (§8), so every instrument can be scripted, recorded and partied with
+  (§7).
+- **The port**: how one machine sees it. On the PDP-7, a `Device` on the IOT bus
+  ([bus.ts](src/bus.ts)). On the Apple ][, the game port: paddle timers read through
+  `$C070`/`$C064`–`$C067` (`PDL(n)` in BASIC) and pushbuttons at `$C061`–`$C063`.
+  Any instrument plugs into any port that has an adapter between them.
+
+**Adapters.**
+
+| Instrument | PDP-7 | Apple ][ |
+|---|---|---|
+| Engelbart mouse | a pen: integrated x, y aim the light pen, a button enables it, so PIXIE programs run unchanged; or raw counts on a new IOT | integrated x, y clamp to 0–255 as PDL(0), PDL(1); the three buttons are PB0–PB2 |
+| Chord keyset | chords as teletype characters, so DDT, Forth and tiny-its take them as typing | chords as keys at `$C000`, so any program takes them |
+| DataGlove | a pinch is pen-down at the hand's position; flex and position on a new IOT for programs written for it | position as PDL(0), PDL(1); fist, point and pinch as PB0–PB2 |
+
+- The new IOTs are cabinet extensions, like IDPN: free device codes, marked "not
+  1972" in DESIGN.md's IOT table, never touched by stock software.
+- The glove's camera half runs in the browser: a hand-landmark model on the webcam
+  gives finger joints and hand position, mapped to the DataGlove's flex and tracker
+  values. Video stays on the machine; only the instrument values leave it.
+- The Apple ][ needs a 6502 machine in the cabinet (DESIGN.md already plans a 6502
+  description for the disassembler). Until then the Apple column is design only.
+
+**Accept:** the simulated keyset types into PDP-7 Forth; the mouse draws in SYMELEC
+through the pen adapter; a webcam pinch draws in SYMELEC; and the same instruments,
+unchanged, drive an Apple ][ paddle program once the 6502 runs.
+
+## 14. Small items
 
 - TRACKING.md: a note on `SRAST`'s diagonal step 6.
 - Replace the dead Prefab and aQuery links with Wayback copies in
