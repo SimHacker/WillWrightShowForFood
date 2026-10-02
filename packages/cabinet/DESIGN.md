@@ -722,6 +722,14 @@ memory, and playing adds to the tree. SAVE prints the new tree as source again, 
 share is readable, diffable text, not a binary image (though an image can be saved too). We work in
 source-code space.
 
+**To do: Animal's tree as pixie rings.** The tree is a ring structure: each question is an
+element with a yes ring and a no ring, and each animal is an atom leaf. Learning a question is RSP
+`INSRT`, splicing a new element in where the wrong guess stood. Playing is a walk with `FINDN`, and
+the recursion (SAVE printing the tree as source) lives in Forth over `rsp.fs`, not in `rsp.s`. The
+same rings can be drawn on the 340 as a live tree, sent whole over `net.fs` so two machines share
+one animal brain, and shown in the ring editor above. PIXIE built drawings out of rings; this
+builds a mind out of them.
+
 **Sources as linguistic motherboard cards.** Each of these sources carries a header of what it is:
 title, description, prompt and style. With that, a program is a card that can be regenerated in
 another language or style: the same animal database as Forth, as Lisp, as a talk tape. MOOLLM's

@@ -63,6 +63,21 @@ export type Dialect = {
 	/** How variables (used, never defined) are ordered, and whether they go before the literals. */
 	variableOrder: "alphabetical" | "first-use";
 	variablesFirst: boolean;
+	/**
+	 * RSPPIX spellings: `JMP I SETUP=JMS` in an operand is SETUP-JMS, the label
+	 * `FINDP-JMS,` is `FINDP=JMS,`, `DZM #GDM` is DZM GDM, and a comma glued to
+	 * the end of an operand (`JMP GNIL,`) adds nothing.
+	 */
+	rsppixSpellings: boolean;
+	/** One pool word per value, not per text: (JMS and (100000 share a word. */
+	literalsByValue: boolean;
+	/** Titan wrote the pool last use first: the first literal used is the last word. */
+	literalsReversed: boolean;
+	/**
+	 * Bare names after a tape's last PAUSE are Titan's printout of the variable
+	 * block (RSPPIX ends BEG FREE ... BCC): checked against the allocation, not assembled.
+	 */
+	variableTail: boolean;
 };
 
 export const DEC_1964: Dialect = {
@@ -75,6 +90,10 @@ export const DEC_1964: Dialect = {
 	display: false,
 	variableOrder: "alphabetical",
 	variablesFirst: false,
+	rsppixSpellings: false,
+	literalsByValue: false,
+	literalsReversed: false,
+	variableTail: false,
 };
 
 export const CAMBRIDGE_1972: Dialect = {
@@ -87,6 +106,10 @@ export const CAMBRIDGE_1972: Dialect = {
 	display: true,
 	variableOrder: "first-use",
 	variablesFirst: true,
+	rsppixSpellings: true,
+	literalsByValue: true,
+	literalsReversed: true,
+	variableTail: true,
 };
 
 const DIALECTS: Record<string, Dialect> = { dec: DEC_1964, cambridge: CAMBRIDGE_1972 };
@@ -152,7 +175,9 @@ function splitLine(raw: string, dialect: Dialect): { labels: Label[]; origin: st
 	for (;;) {
 		// In Cambridge "JMP , 3" the comma is an operand; only a name glued to its comma is a label.
 		const m = rest.match(
-			dialect.labelsWithValues ? new RegExp(`^\\s*(${NAME})(?:=([a-z0-9+\\- ]+))?,`) : new RegExp(`^\\s*(${NAME}),`),
+			dialect.labelsWithValues
+				? new RegExp(`^\\s*(${NAME})(?:${dialect.rsppixSpellings ? "[=-]" : "="}([a-z0-9+\\- ]+))?,`)
+				: new RegExp(`^\\s*(${NAME}),`),
 		);
 		if (!m) break;
 		labels.push({ name: m[1] as string, plus: m[2]?.trim() || null });
@@ -206,7 +231,11 @@ function tokenize(expr: string, dialect: Dialect): Term[] {
 			k += 1;
 			continue;
 		}
-		if (c === "-") {
+		if (dialect.rsppixSpellings && (c === "#" || (c === "," && /[a-z0-9]/.test(expr[k - 1] ?? "") && expr.slice(k + 1).trim() === "" && terms.at(-1)?.kind === "sym"))) {
+			k += 1;
+			continue;
+		}
+		if (c === "-" || (c === "=" && dialect.rsppixSpellings)) {
 			sign = sign === 1 ? -1 : 1;
 			k += 1;
 			continue;
@@ -267,7 +296,9 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 	const parsed: Parsed[] = [];
 
 	let disp = false;
+	const tail: { name: string; where: string }[] = [];
 	for (const tape of tapes) {
+		const first = parsed.length;
 		const lines = tape.text.split("\n");
 		for (let n = 0; n < lines.length; n += 1) {
 			const source = lines[n] as string;
@@ -287,6 +318,23 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 				if (stmt.kind === "start") break;
 			} catch (e) {
 				errors.push(`${tape.name}:${n + 1}: ${(e as Error).message}`);
+			}
+		}
+		if (dialect.variableTail) {
+			let pause = parsed.length - 1;
+			while (pause >= first && !(parsed[pause] as Parsed).endsSegment) pause -= 1;
+			const after = parsed.slice(pause + 1);
+			const bare = (p: Parsed): string | null =>
+				p.labels.length === 0 && p.origin === null && p.stmt.kind === "word" && new RegExp(`^${NAME}$`).test(p.stmt.expr.trim())
+					? p.stmt.expr.trim()
+					: null;
+			if (pause >= first && after.some((p) => bare(p) !== null) && after.every((p) => p.stmt.kind === "none" || bare(p) !== null)) {
+				for (const p of after) {
+					const name = bare(p);
+					if (name === null) continue;
+					tail.push({ name, where: `${p.tape}:${p.line}` });
+					p.stmt = { kind: "none" };
+				}
 			}
 		}
 	}
@@ -380,8 +428,25 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 	const litIndex = new Map<string, number>();
 	const litSite = new Map<number, { loc: number; disp: boolean }>();
 	const placeLiterals = (): void => {
+		// Group the sites that share a pool word, in first-use order.
+		const groups = new Map<string, { keys: string[]; site: { text: string; loc: number; disp: boolean } }>();
 		for (const [key, site] of literalSites) {
-			litIndex.set(key, loc);
+			let group = key;
+			if (dialect.literalsByValue) {
+				try {
+					group = `=${evaluate(site.text, site.loc, "literal", 2, site.disp, () => 0)}`;
+				} catch {
+					// Not known yet: keep it to itself.
+				}
+			}
+			const g = groups.get(group);
+			if (g) g.keys.push(key);
+			else groups.set(group, { keys: [key], site });
+		}
+		const order = [...groups.values()];
+		if (dialect.literalsReversed) order.reverse();
+		for (const { keys, site } of order) {
+			for (const key of keys) litIndex.set(key, loc);
 			litSite.set(loc, site);
 			literals.push({ addr: loc, text: site.text, word: 0 });
 			loc = (loc + 1) & 0o17777;
@@ -406,6 +471,10 @@ export function assemble(tapes: readonly AsmTape[], opts: AsmOpts = {}): AsmResu
 		placeVariables();
 	}
 	const litAddr = (key: string): number => litIndex.get(key) ?? 0;
+	for (const [i, t] of tail.entries()) {
+		if (variables[i]?.name !== t.name) errors.push(`${t.where}: listed variable ${t.name}, assembled ${variables[i]?.name ?? "nothing"}`);
+	}
+	if (tail.length > 0 && tail.length !== variables.length) errors.push(`listed ${tail.length} variables, assembled ${variables.length}`);
 
 	// Pass 2: re-run assignments in order so forward references settle, then emit.
 	const words = new Map<number, number>();

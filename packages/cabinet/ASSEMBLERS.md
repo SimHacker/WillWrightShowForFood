@@ -136,10 +136,22 @@ different order. `SUMB` appears twice (5013 and 5040), and `COP FIR` looks like 
 "multiply defined", another guess; the rows disagree with that less clearly.) None of these are
 corrected yet: each needs a look at the scan page first.
 
-## SYMELEC does not reassemble yet
+## RSPPIX reassembles; SYMELEC does not yet
 
-Assembling `symelec.asm` with `CAMBRIDGE_1972` gives 21 errors. Among them are a `#` prefix the
-dialect doesn't know (`DZM #GDM`), a label defined twice (`GR2`), and the misreadings above. One
+`rsppix.asm`, unchanged, assembles at origin 22 to `rsppix.oct` word for word
+(`src/rsppix.test.ts`). `CAMBRIDGE_1972` learned its 1972 spellings to get there:
+
+- `JMP I SETUP=JMS` in an operand means SETUP−JMS, and the label `FINDP-JMS,` means `FINDP=JMS,`.
+- `DZM #GDM` is DZM GDM.
+- A comma glued to an operand (`JMP GNIL,`) adds nothing.
+- Literals share a pool word by value, so `(JMS` and `(100000` are one word. Titan wrote the pool in
+  reverse order of first use.
+- The bare names after the last PAUSE (BEG … BCC) are Titan's printout of the variable block. They
+  are checked against the allocation, not assembled.
+
+Assembling `symelec.asm` now gives 5 errors, down from 21. They are a label defined twice (`GR2`),
+and Titan's own error printout around line 2573 (`*DECIMAL DIGIT IN OCTAL NUMBER`, then `201128`)
+transcribed as source. One
 early error moves every address after it, so most of the 4,717 words differ from `symelec.oct`,
 which is what the cabinet boots. Making the assembler reproduce `symelec.oct` word for word is the
 test the Cambridge dialect still has to pass.
