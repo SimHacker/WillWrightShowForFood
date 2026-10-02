@@ -853,6 +853,40 @@ are doing. Brian Eno would love it (`characters/brian-eno/speculative-jams.md`).
 
 Each layer has its own source map and its own panel, and a click goes down a layer.
 
+### Cells as display calls, in two buffers
+
+**The state is the display list.** Each cell is one `DJS` word whose target is a tile, a 340
+subroutine that draws the cell's state and moves the beam one cell on. A generation step rewrites
+those words, and the rule reads a neighbour from the low 13 bits of its word. There is no separate
+state array, so an edit to a cell is an edit to running display code: the pen, the map editor or a
+script writes a word and the 340 draws it on its next refresh.
+
+**Past and present, swapped.** Two buffers, as in `CAM6/javascript/CAM6.js` ("Optimization
+Techniques"): the rule reads the past and writes the future, then they swap. The 340 refreshes from
+whichever buffer was finished last, so it never shows a half-written generation, and the swap is
+one word: the display's start address. Edits go into the buffer on screen, which is the one the
+next step reads.
+
+**Wrapping without bounds checks.** Each buffer is two cells wider and taller than the grid. Before
+a step, the edge copy writes each border cell from the opposite edge, so the inner loop reads its
+eight neighbours at fixed offsets (±1, ±stride, ±stride±1) and never tests for an edge. Will Wright
+suggested this one; it came down through CAM6.js's predecessors. Other edge treatments, clamp or reflect, are
+only a different edge copy.
+
+**Layout of a row.** `[P] [L] [cells] [R]`, stride W+3:
+
+- `P` is the 340 point word that puts the beam at the row's start. No cell reads it: the nearest
+  neighbour offsets from row cells land on `L` and `R`.
+- `L` and `R` are the border cells. The beam draws them too, as a one-cell frame outside the grid.
+- The frame shows the wrap. The edge copy writes border calls to a dim twin of each tile, one
+  address bit apart, and the rule masks that bit, so the frame is a ghost of the far edges and
+  clamp or reflect is visible as it runs.
+
+**Tiles as numbers.** Tiles sit at `T + state * size` with `size` a power of two, so a neighbour's
+state is its target minus `T`, shifted; a two-state rule like Life only compares with the live
+tile's address. A 32 by 32 grid is 34 rows of 35 words, 1,190 words a buffer and 2,380 for the
+pair, plus the tiles.
+
 ## Assemblers: several front ends, one back end
 
 As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
