@@ -184,6 +184,34 @@ transformation_field:
     in your pocket, an inventory that travels with you between rooms. It holds sub-containers, and
     you can pull any of them out into its own window and pin it to part of another window. Pull
     out, pin, pocket, nest: it's all the same stuff, at every level.
+  rigs:
+    idea: |
+      Another source of scale: the window takes it from whatever it's snapped into (an edge, groove,
+      spike, line or hall), not from the field under it. A horizontal hanger holds a row of things
+      at one scale so you can compare them. Diagonal rails on the left and right run back into
+      z-perspective, so a window slid along one shrinks as it recedes. Stage Manager and Cover Flow
+      have fixed, arbitrary shrinking edges you can't edit; here users build their own rigs and set
+      their own levels of detail, scales and lenses for whatever hangs on them.
+    building_blocks: "Geometric, interpolative pieces that snap together: straight hangers (constant scale), perspective rails (scale interpolates along the length), curves, junctions, splitters and mergers. Each piece maps position-along-it to scale, LOD and lens, so a rig is a piecewise function you assemble by hand."
+    lenses: "A lens is a property of a rail segment, not a mode: this stretch shows thumbnails, that one shows titles only, the stretch at the front shows the live editable window. Moving an object along the rail changes its LOD."
+    flow: |
+      Rails can move. Make them belts and you have Factorio conveyor data flow: streams of incoming
+      and outgoing objects ride the belts through splitters, filters and inserters, like an
+      automated dry cleaner's rack bringing your garment round to the counter. The rig is the
+      program, visible and editable, which is dataflow programming by direct manipulation.
+    queues: |
+      - The Sims action queue: queued actions hang as icons in a row, the head one runs, and you can
+        cancel or reorder them by clicking. That's a rig, and people already know how to use it.
+      - Email and message input queues: incoming items arrive on an inbound belt and slow down near
+        the front, where the lens shows enough to triage them. You flick each one off onto a
+        sorting rail.
+      - Replies: draft a reply and insert it into the shared history (the chat log, thread or git
+        log) at the point it answers, rather than only at the bottom. The history is a rail too.
+    why_scott: "It answers his 'design for big monitors' (KDE [27:48]) and spatial stash (KDE [29:25]–[31:03]) with user-built structure instead of yet another fixed layout policy, and Hutchings & Stasko's careful coordinators (sources/2004-hutchings-stasko-display-space-management.md) are already hand-building these rigs out of window edges, with no tools to help."
+    moollm: "A rig is a logistic-container in MOOLLM terms (https://github.com/SimHacker/moollm/tree/main/skills/logistic-container): rails are containers with ordering, belts are containers with a clock, inserters are actions. All of it is files in git."
+    corpus:
+      - "../john-von-neumann/sources/hn/24163024-factorio-simcity-kay.md (Factorio belts, Kay on rule-based SimCity)"
+      - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/GROOVES-AND-SPIKES.md (grooves and spikes as snap targets)"
   its_all_stuff: "Scott's fourth ST layer, taken literally. Every window, scrapbook, clip, pin and pocket is a MOOLLM object (a file or directory in a git repo, as in the room, container, inventory, object and card skills). So a pin is a reference you can commit, a layout is a diff, and moving a scrapbook between pockets is a git mv you can see in the log and undo."
   moollm_skills: "https://github.com/SimHacker/moollm/tree/main/skills (room, container, inventory, object, card, file-system-object)"
   why_scott: "It's his three memories in one substrate: spatial (where it's pinned), associative (what it's pinned to) and episodic (the clock you can scrub)."
