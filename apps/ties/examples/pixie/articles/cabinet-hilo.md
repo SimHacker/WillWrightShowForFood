@@ -11,12 +11,12 @@ A number guessing game on the PDP-7's teletype. It was written for this cabinet 
 **Play.** Click the teletype paper so it has the keyboard.
 
 1. Press Return. HILO answers I AM THINKING OF A NUMBER.
-2. Type a guess and Return. It says HIGHER, LOWER or RIGHT, with the number of guesses.
+2. Type a guess and Return. It says HIGHER THAN or LOWER THAN your guess, or RIGHT with the number of guesses.
 
 A lucky game:
 
     YOUR GUESS? 50
-    LOWER.
+    LOWER THAN 50.
     YOUR GUESS? 25
     RIGHT. GUESSES: 2
 

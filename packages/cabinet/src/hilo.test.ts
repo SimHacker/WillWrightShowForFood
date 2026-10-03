@@ -66,22 +66,23 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\.\\r\\nRETURN TO PLAY AGAIN\\.\\r\\n$`));
 			return;
 		}
-		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nYOUR GUESS\\?\\r\\n$`));
+		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"} THAN ${g}\\.\\r\\nYOUR GUESS\\?\\r\\n$`));
 		if (g < s) lo = g + 1;
 		else hi = g - 1;
 	}
 	assert.fail("seven halvings did not find it");
 });
 
-test("hilo: an empty line asks again, and letters in a number are skipped", () => {
+test("hilo: WHAT? to a blank line, HUH? to no number, and letters in a number are skipped", () => {
 	const m = machine();
 	m.box.run(50_000);
 	m.type("\r");
-	assert.equal(m.type("\r"), "\r\nYOUR GUESS?\r\n", "no digits: ask again");
+	assert.equal(m.type("\r"), "\r\nWHAT?\r\nYOUR GUESS?\r\n", "blank line");
+	assert.equal(m.type("abc\r"), "ABC\r\nHUH?\r\nYOUR GUESS?\r\n", "no digits");
 	const s = m.secret();
 	const g = s === 42 ? 41 : 42;
 	const out = m.type(`x${Math.floor(g / 10)}y${g % 10}\r`);
-	assert.match(out, new RegExp(`^X${Math.floor(g / 10)}Y${g % 10}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.`), `X4Y2 reads as ${g}`);
+	assert.match(out, new RegExp(`^X${Math.floor(g / 10)}Y${g % 10}\\r\\n${g < s ? "HIGHER" : "LOWER"} THAN ${g}\\.`), `X4Y2 reads as ${g}`);
 });
 
 test("hilo: below 0 or above 99 says so, and still counts", () => {
@@ -92,7 +93,7 @@ test("hilo: below 0 or above 99 says so, and still counts", () => {
 	assert.equal(m.type("100\r"), "100\r\nIT'S LESS THAN OR EQUAL TO 99.\r\nYOUR GUESS?\r\n");
 	const s = m.secret();
 	const out = m.type(`-0\r`);
-	assert.match(out, new RegExp(`^-0\\r\\n${s === 0 ? "RIGHT\\. GUESSES: 3\\." : "HIGHER\\."}`), "minus zero is zero");
+	assert.match(out, new RegExp(`^-0\\r\\n${s === 0 ? "RIGHT\\. GUESSES: 3\\." : "HIGHER THAN 0\\."}`), "minus zero is zero");
 	if (s !== 0) assert.match(m.type(`${s}\r`), /RIGHT\. GUESSES: 4\./);
 });
 
@@ -104,7 +105,7 @@ test("readln: rubout erases with backspace-space-backspace, and rings at the sta
 	const g = s === 7 ? 8 : 7;
 	// Type 9, rub it out, rub out once more (nothing left: the bell), then the guess.
 	const out = m.type(`9\x7f\x7f${g}\r`);
-	assert.match(out, new RegExp(`^9\\x08 \\x08\\x07${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.`));
+	assert.match(out, new RegExp(`^9\\x08 \\x08\\x07${g}\\r\\n${g < s ? "HIGHER" : "LOWER"} THAN ${g}\\.`));
 	assert.match(m.type("\x07"), /^\x07$/, "^G rings back");
 });
 

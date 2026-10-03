@@ -10,7 +10,7 @@ teleprinter that SYMELEC, the light pen test and DUEL do not give.
     PRESS RETURN TO START.
     I AM THINKING OF A NUMBER.
     YOUR GUESS? 50
-    LOWER.
+    LOWER THAN 50.
     YOUR GUESS? 25
     RIGHT. GUESSES: 2
 

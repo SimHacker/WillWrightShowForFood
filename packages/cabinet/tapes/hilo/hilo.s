@@ -25,7 +25,7 @@ ask,	lac (prompt
 	jms puts
 	jms lnnum
 	spa
-	jmp ask			/ no digits on the line
+	jmp nonum		/ no digits on the line
 	dac guess
 	isz tries
 	lac lnneg
@@ -47,9 +47,21 @@ ask1,	lac guess
 	spa
 	jmp lower
 	lac (higher
+	jmp than
+lower,	lac (lowerm
+than,	jms puts
+	lac guess
+	jms putdec
+	lac (dotnl
 	jms puts
 	jmp ask
-lower,	lac (lowerm
+nonum,	lac lnlen
+	sna
+	jmp blank
+	lac (huhm
+	jms puts
+	jmp ask
+blank,	lac (whatm
 	jms puts
 	jmp ask
 under,	lac (underm
@@ -153,11 +165,15 @@ prompt,	text "YOUR GUESS?"
 	215
 	212
 	0
-higher,	text "HIGHER."
+higher,	text "HIGHER THAN "
+	0
+lowerm,	text "LOWER THAN "
+	0
+huhm,	text "HUH?"
 	215
 	212
 	0
-lowerm,	text "LOWER."
+whatm,	text "WHAT?"
 	215
 	212
 	0
