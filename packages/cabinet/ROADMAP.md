@@ -179,6 +179,25 @@ DUEL-style ships steered at a target.
   which needs no root at all.
 - Heading 0 is up and turns are clockwise, as in Logo, so `atan2`'s answer is fed `dx dy` in
   that order to match.
+
+**To do: many turtles, as sprites, and a Forth Spacewar.** Once a turtle can wear a shape, several
+can share the screen:
+
+- **A sprite is a record**: x, y, heading, velocity, a shape, and a reserved slot in the display
+  list holding two POINT words and the shape's rotated vector words. The display list is a run of
+  `DJS` calls, one per sprite. Moving a sprite pokes its two POINT words; turning rewrites its
+  vector words, or picks one of 24 precomputed rotations by rewriting the `DJS` target.
+- **`turtle ( n -- )`** selects which sprite `fd`, `rt`, `wear` and friends act on, so every
+  existing turtle word drives any sprite, and one turtle drawing lines is just sprite 0 with its
+  pen down.
+- **A game loop in Forth**, paced by the clock (`wait`, §5): read controls, move, test hits with
+  `distance`, aim with `towards`, redraw by poking. Thrust adds `cos`/`sin` of the heading to the
+  velocity; a star at the centre pulls with `atan2` and `distance`.
+- **Controls**: the console switches, as DUEL reads them, so the same `keys` table, the keyboard
+  and two game controllers (§14) fly both ships.
+- **The lineage**, credited on the page: Spacewar! on the PDP-1 (1962), DUEL on Cambridge's PDP-7
+  (1968, already in this cabinet, from the tape), and this one in Mitch's Forth, 2026, with ships
+  anyone can redraw with the turtle.
 - `shapes` lists them; `triangle wear` puts the old turtle back.
 - With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
   says what it is.
