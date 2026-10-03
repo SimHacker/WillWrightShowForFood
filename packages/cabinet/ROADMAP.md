@@ -565,6 +565,18 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
 - Panel order: drag the tabs left and right; a pie on a tab with first, last, earlier,
   later. Once order is the user's, the bottom-most open resizable panel takes the spare
   height instead of the last opened.
+- **DUEL with two game controllers.** The Gamepad API (`navigator.getGamepads()`, polled
+  each frame; Bluetooth pads appear like USB ones) maps each pad to one player's five
+  switches: stick or d-pad left and right turn, up thrust, down back, A fire. The keyboard
+  stays as it is, so one pad and one keyboard player also works. Same `keys` table shape as
+  today, with `pad: { index, button | axis }` entries, so any switch program can take pads.
+- **Drag text and symbols, not just corners.** The ✋ edit mode moves one vector corner
+  ([edit340.ts](src/edit340.ts)). A string or a subpicture moves as a whole by moving the
+  beam before it: the POINT words that set x and y, or for a `DJS`-called symbol, the point
+  words in front of the call. The hover already groups strokes by block and subroutine
+  (`hoverAt`), so grab the group, find the point words that open it, and poke those; a
+  shared subroutine stays shared, since only the call site moves. Ephemeral like corners:
+  PIXIE's next recompile puts its picture back.
 
 ## 15. DUEL from tape to source
 
