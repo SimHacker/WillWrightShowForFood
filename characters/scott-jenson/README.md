@@ -61,6 +61,12 @@ he says are still open.
   KDE [5:31]). Don's answer is the I-beam ("the anti-Clippy") and Clifford Nass read
   correctly; see [ideas.md](ideas.md).
 
+- **Screen Angel.** Don's own layer over every app (aQuery, 2013, now being built):
+  [Screen Angel](https://github.com/SimHacker/MicropolisCore/tree/main/apps/screen-angel),
+  whose first application is Soul Angel and whose first game bridge is The Sims 1. It's
+  a working place to try Scott's super windowing system and ultimate right click from
+  outside the apps.
+
 Don's design proposals that grew out of the talks (the transformation field, rigs, live
 views, photographs, storeys) are in [CHARACTER.yml](CHARACTER.yml) under
 `transformation_field`, always labelled as Don's, not Scott's.

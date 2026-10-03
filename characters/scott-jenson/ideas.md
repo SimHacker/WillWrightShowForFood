@@ -134,6 +134,13 @@ under `transformation_field`:
 - **Box model and customs**: windows inside windows, with a membrane that decides what
   crosses.
 
+Don has already built much of the plumbing as
+**[Screen Angel](https://github.com/SimHacker/MicropolisCore/tree/main/apps/screen-angel)**,
+formerly aQuery. It's a transparent click-through overlay that adds selectors, events and
+pixel-plus-accessibility recognition over any app. Its first application is Soul Angel,
+and its first game bridge is The Sims 1. Live views, proxies and photographs are its read,
+act, draw and remember primitives put to work on the desktop itself.
+
 Prior art Scott might enjoy: Hutchings & Stasko 2004 on display-space management
 ([sources](sources/README.md)), Xerox Rooms, Pad++ and WinCuts.
 
