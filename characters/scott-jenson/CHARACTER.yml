@@ -179,6 +179,13 @@ transformation_field:
     slow, or pause, and catch up when you zoom out, like relativistic time dilation near a black
     hole. Scrub a region's clock backward and the window shows its own history (journaled clipboard,
     episodic memory).
+  scrapbook: |
+    The scrapbook (Scott's per-document stash) is pinned to a window, but you can unpin it and put it
+    in your pocket, an inventory that travels with you between rooms. It holds sub-containers, and
+    you can pull any of them out into its own window and pin it to part of another window. Pull
+    out, pin, pocket, nest: it's all the same stuff, at every level.
+  its_all_stuff: "Scott's fourth ST layer, taken literally. Every window, scrapbook, clip, pin and pocket is a MOOLLM object (a file or directory in a git repo, as in the room, container, inventory, object and card skills). So a pin is a reference you can commit, a layout is a diff, and moving a scrapbook between pockets is a git mv you can see in the log and undo."
+  moollm_skills: "https://github.com/SimHacker/moollm/tree/main/skills (room, container, inventory, object, card, file-system-object)"
   why_scott: "It's his three memories in one substrate: spatial (where it's pinned), associative (what it's pinned to) and episodic (the clock you can scrub)."
   corpus:
     - "../../repo-shows/building-the-sims/pause-time-and-rng.md (ScriptX clock hierarchy)"
