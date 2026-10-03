@@ -242,6 +242,46 @@ transformation_field:
     attribution: "Don's proposal, answering Hutchings & Stasko 2004 §7.1: 'an operation that shows or hides a user-specified region of a window … better suited for the window manager because an application designer will likely not know a priori what information will be displayed and valued by the user.'"
     idea: "A live, editable crop tool in the window manager, like Photoshop's. Crop any number of edges at once (none, some or all) and re-edit it at any time. The app keeps its full layout, so nothing reflows. Crops can be saved, named and stacked, so one window can expose several cropped region-windows, each pinned somewhere else."
     source: sources/2004-hutchings-stasko-display-space-management.pdf
+  live_views:
+    attribution: "Don's proposal: live_crop carried to the end, a 2D-surface Xanadu for running programs."
+    idea: |
+      Any window, or any part of one, can be shown live somewhere else, cropped and scaled, as many
+      times as you like. The source window can be kept off-screen and still live, and the views
+      are where you actually work. Put two parts of the same window side by side (the toolbar
+      next to the status line it changes, the top and bottom of a long form, both ends of a
+      timeline). Transclude a gauge from one app into the document that talks about it. The view
+      isn't a screenshot or a thumbnail: input goes back through it, so you can click and type
+      into the original.
+    views:
+      transclusion: "A view is a live quotation of another window's region, kept in its place with a visible link back to the source, like Ted Nelson's transclusion. Drag along the link and you go to the source in context."
+      side_by_side: "Several views of one window, laid out together, like Nelson's parallel side-by-side documents with visible connections between corresponding parts."
+      off_screen_live: "The source can live in a hole, a bag of holding or off the edge of the field, still running and still rendering. The views are its only face."
+      many_scales: "Each view picks its own crop, scale and lens, and takes them from the field or the rig it's pinned to, so a view on a perspective rail shrinks as it recedes."
+    proxies:
+      idea: |
+        A proxy goes further than a view. It operates the real control panel underneath while showing
+        a totally different interface on top: a pie menu over a toolbar, one slider driving three
+        settings scattered across two dialogs, a big-type high-contrast panel for a tiny cramped one,
+        a translated or annotated one, a curated panel built from the five controls you actually use
+        across four apps. The original stays the authority; the proxy reads its state and works its
+        controls.
+      curated: "Curated alternative views are shareable stuff: a file in git describing which source regions and controls, what layout and what mapping. Someone else can install your panel over their copy of the app, fork it, and send you a diff."
+      prior_art:
+        - "Morgan Dixon and James Fogarty, Prefab (CHI 2010, 2011; target-aware pointing CHI 2012): recover interface structure from pixels alone, then modify any interface without its source. 'Imagine if every interface was open source. Any of us could modify the software we use every day.' 'Prefab realizes this vision using only the pixels of everyday interfaces … to add new functionality to Adobe Photoshop, Apple iTunes, and Microsoft Windows Media Player.' Don cited it on HN: https://news.ycombinator.com/item?id=14182061 ; video https://www.youtube.com/watch?v=lju6IIteg9Q"
+        - "Richard Potter, Triggers (HCIL 1991): pixel-reading to drive Mac apps that offered no other way in."
+        - "Tan, Meyers and Czerwinski, WinCuts (CHI 2004): cut live regions of windows out into new windows you can rearrange."
+        - "Stuerzlinger, Chapuis, Phillips and Roussel, User Interface Façades (UIST 2006): copy parts of interfaces into new windows and recombine them, without the app's cooperation."
+        - "Don's aQuery: select and operate accessibility trees the way jQuery does the DOM. https://web.archive.org/web/20180826132551/http://donhopkins.com/mediawiki/index.php/AQuery"
+        - "Simon Schneegans's Kando: pie menus laid over any desktop app (../simon-schneegans/)."
+      lineage: "It's the oldest goal in window systems. Alan Kay, in email Don quoted on HN: Sketchpad III 'had 4 windows showing front, side, top, and 3D view of the object being made … One of the big goals from the start was to include the ability to do multiple views of the same objects, and to edit them from any view.' https://news.ycombinator.com/item?id=34302718"
+    plumbing:
+      pixels: "Compositors already keep every window's pixels off-screen. Windows DWM thumbnails take a live source rectangle and scale it (DwmRegisterThumbnail); X11 has Composite and Damage; KWin scripts get live window thumbnails; macOS ScreenCaptureKit captures one window at a time."
+      input: "Map a click in the view back through the view's transform to the source window's coordinates, then deliver it with the platform's accessibility or input-injection API (AXUIElement, UI Automation, AT-SPI, XTest)."
+      structure: "Pixels give you the view; accessibility trees and Prefab-style pixel parsing give you the controls, so a proxy can work a button by name, not by coordinate, and survive the app moving it."
+      problems: "Off-screen windows get throttled. Browsers and macOS slow down or stop occluded windows, so the source has to be kept 'visible' to the app while hidden from you. Wayland deliberately forbids one client from reading or driving another, so it has to live in the compositor or go through a portal. And proxies drift when the app updates its layout."
+      news: "NeWS could have done this from the inside: canvases were PostScript objects that the window manager could reparent, scale and re-render, and the toolkit ran in the server. Today it has to be done from the outside, Prefab-style."
+    why_scott: "His silos (KDE [25:06]) and crossed boundaries (Ubuntu [29:33]): today's window is the unit the app chose. Views and proxies let you pick the unit of work yourself, across apps, and keep it where your spatial stash is."
+    why_hutchings_stasko: "§7.1 asks for showing or hiding a user-specified region of a window, done by the window manager, because the app designer can't know what the user values. Live views are that operation made into stuff you can pin, rig, stash and share."
   box_model:
     attribution: "Don's proposal: the CSS box model (crop, border, padding, margin) made live and inhabitable."
     edges: "Crop, border, padding and margin are all edge operations, and every edge is editable live (none, some or all at once). Crop cuts into the content, padding pushes the content in from the border, and margin pushes neighbors away from it."
