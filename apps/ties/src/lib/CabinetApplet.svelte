@@ -1173,10 +1173,13 @@
 	let ttySaid = '';
 	let ttySayTimer = null;
 	let ttyEchoSkip = '';
-	function ttyHear(code) {
+	let ttyHeardTyped = false;
+	function ttyHear(code, typed = false) {
 		const c = code & 0o177;
 		const ch = c === 0o15 || c === 0o12 ? ' ' : c >= 0o40 && c < 0o177 ? String.fromCharCode(c) : '';
 		if (!ch) return;
+		if (typed !== ttyHeardTyped) ttySaid += ' ';
+		ttyHeardTyped = typed;
 		if (ttyEchoSkip && ch === ttyEchoSkip[0]) {
 			ttyEchoSkip = ttyEchoSkip.slice(1);
 			return;
@@ -1202,7 +1205,7 @@
 			const c = charCode(ch);
 			if (c >= 0 && c !== 0o15) codes.push(c);
 		}
-		if (!ttyLocal) ttyEchoSkip = String.fromCharCode(...codes);
+		ttyEchoSkip = String.fromCharCode(...codes);
 		ttyType([...codes, 0o15]);
 	}
 
@@ -1353,7 +1356,10 @@
 		const k = program?.ttyKey?.(c) ?? { send: c | 0o200, echo: c };
 		tty.type(k.send);
 		// A bare CR, as the KSR-33 prints it: SYMELEC sends the LF after a line.
-		if (ttyLocal && k.echo !== null) ttyPrint(k.echo);
+		if (ttyLocal && k.echo !== null) {
+			ttyPrint(k.echo);
+			ttyHear(k.echo, true);
+		}
 	}
 
 	function ttyType(codes) {
