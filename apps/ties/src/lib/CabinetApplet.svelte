@@ -106,7 +106,7 @@
 		const below = parseFloat(cs.paddingBottom) + parseFloat(cs.borderBottomWidth);
 		const line = memEl?.querySelector('.mem-line')?.offsetHeight ?? 0;
 		const bottom = captionEl?.getBoundingClientRect().bottom ?? figureEl.getBoundingClientRect().bottom;
-		return bottom - figureEl.getBoundingClientRect().top + below - (memOpen ? (MEM_LINES - MEM_MIN_LINES) * line : 0) - (ringsOpen ? ringsExtra : 0) - (ttyOpen ? ttyExtra : 0);
+		return bottom - figureEl.getBoundingClientRect().top + below - (memOpen ? (MEM_LINES - MEM_MIN_LINES) * line : 0) - (ringsOpen && hasRings ? ringsExtra : 0) - (ttyOpen ? ttyExtra : 0);
 	}
 
 	function setHeight(want) {
@@ -656,8 +656,10 @@
 	// The last opened of these takes the figure's spare height; the others keep their size.
 	const HUNGRY = ['mem', 'rings', 'tty'];
 	let panelOrder = $state([]);
+	// Panels a program opts into; RINGS needs to know where the ring structure lives.
+	const hasRings = $derived(!!program?.rings);
 	const growId = $derived.by(() => {
-		const open = { mem: memOpen, rings: ringsOpen, tty: ttyOpen };
+		const open = { mem: memOpen, rings: ringsOpen && hasRings, tty: ttyOpen };
 		return [...panelOrder].reverse().find((k) => open[k]) ?? ['rings', 'mem', 'tty'].find((k) => open[k]) ?? null;
 	});
 	let ringsExtra = $state(0);
@@ -2435,6 +2437,7 @@
 						title="Memory: {CORE / 1024}K × 18-bit words. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('mem', e)}>MEMORY</button
 					>
+					{#if hasRings}
 					<button
 						type="button"
 						class="chip"
@@ -2443,6 +2446,7 @@
 						title="PIXIE rings in 3D: the live ring structure in core, or a file. Shift-click: this panel alone."
 						onclick={(e) => togglePanel('rings', e)}>RINGS</button
 					>
+					{/if}
 					<button
 						type="button"
 						class="chip"
@@ -2802,7 +2806,7 @@
 			</div>
 		</div>
 		{/if}
-		{#if ringsOpen}
+		{#if ringsOpen && hasRings}
 			<div class="row app">
 				<RingView capture={captureRings} name={symbolic} height={260 + ringsExtra} onOpen={(a) => openMemAt(a)} />
 			</div>

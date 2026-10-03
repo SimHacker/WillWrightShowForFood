@@ -64,6 +64,13 @@ help: README.md
 An unknown kind is carried and ignored, the way an older page plays a session with new event
 kinds. A cartridge from tomorrow still loads today; it just can't do the new thing.
 
+**Panels are opted into.** A cartridge lists the panels it needs, and a panel's chip appears
+only when the running cartridge asks for it. RINGS already works this way: it shows only for
+a program that says where its ring structure lives (`rings: { beg, end, roots }`), today only
+SYMELEC. A Forth cartridge that `extends` the base with `rsp.fs` and names its ring area gets
+the 3D ring viewer for free, live on the rings the Forth is building, the same viewer PIXIE's
+rings use. DUEL's game panel, read from core through its symbols, is the next opt-in panel.
+
 ## 2. Build steps, and the cache
 
 A build is a short list of steps from a fixed vocabulary, the same rule as cartridge scripts:
