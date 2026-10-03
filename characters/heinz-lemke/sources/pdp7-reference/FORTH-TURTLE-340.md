@@ -356,6 +356,13 @@ word that compiles rings to the permanent display file as `COMP` does, recording
 address → ring name so a pen hit returns the element (the tag table of §6); and PIXIE's
 `LABEL` names becoming Forth words, so `R1 .RING` inspects the resistor you just drew.
 
+**Two back ends, one turtle.** The turtle emits each move to the 340 and, when asked, to
+PIXIE's own element format, so a Forth drawing saved to tiny-titan loads into SYMELEC and
+is edited with the pen, and Forth-drawn symbols become subpictures PIXIE places. The plan
+and what is measured so far: the cabinet's
+[DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module),
+"a Forth turtle with two back ends".
+
 **The turtle's display list is ring data.** Store each polyline as an RSP block (raw
 coordinates the relocation pass leaves alone) named from a picture list, and let `DOWN`
 compile it. The TypeScript twin of this plan is in the cabinet's

@@ -300,6 +300,52 @@ Text formats, two layers:
   YAML anchors and aliases; domain words (`node:`, `branch:`) once the
   element schema is decoded. JSON only as the flat table.
 
+**To do: a Forth turtle with two back ends, so PIXIE can edit what Forth drew.**
+[turtle.fs](tapes/pdp7forth/turtle.fs) turns every move into 340 vector words (`vec`, `dl,`).
+Split it at `moveto`: the path goes to an emitter held in a variable and run with `EXECUTE`
+(Mitch's kernel has no `DEFER`), and any number of emitters can listen.
+
+- **340 back end:** today's `vec` and `dl,`, unchanged, so the tube and Mitch's turtle tests
+  see the same display list word for word.
+- **PIXIE back end:** the same moves as SYMELEC's own elements in the ring heap, through
+  `rsp.fs` (below). Our own polyline layout (next paragraph) is enough to store and redraw
+  a drawing, but only SYMELEC's element format lets PIXIE *edit* it, so the ring back end
+  writes that format: a straight move becomes an RU line, an axis-aligned run an HV
+  staircase. Measured so far (3 Oct): an RU line from (298, 400) to (600, 400) keeps its
+  start as two atoms, y at 14015 and x at 14016, and its extent, 302, at 14070. The rest of
+  the element is still to decode.
+- **Saving:** `TITAN-SEND` puts the ring image on the link, tiny-titan stores it as a ring
+  file, and SYMELEC loads it over the serve-back path, then edits it with the pen like
+  anything it drew. Serve-back is the missing piece (`BlockletHost.serving`).
+- **Symbols:** a Forth word that draws a symbol (a resistor, a battery, a gate) builds a
+  SUBPICTURE once. In the 340 back end it is a 347 subroutine called by `DJS`, so every
+  instance shares one copy of the words; in the ring back end it goes in the catalogue, and
+  PIXIE's INSTANCE places it in drawings. Forth draws the parts, PIXIE composes them.
+
+Order: the emitter seam, with Mitch's tests passing under SIMH and ours; the TypeScript twin
+in `packages/pixie` (turtle moves to SYMELEC elements, RU lines first, accepted when 1972
+SYMELEC draws them and the pen moves them); serve-back; `rsp.fs` and the Forth ring back
+end; symbols as subpictures.
+
+**To do: drag a vertex on the tube.** A pen hit gives the display word that drew the stroke
+(`Segment.addr`); dragging pokes new positions into the running machine. What the probe found
+(3 Oct, one RU line drawn by the demo pen):
+
+- The vectors in the display file are relative (`200177` is 127 across), so moving a
+  stroke's start means moving whatever positions the beam before it; that word is not yet
+  identified in the words the 340 fetched.
+- The heap is the truth. Poking the line's start atoms moved nothing on the tube until
+  PIXIE recompiled the display file, which it did when the next element was finished; the
+  line then moved to the poked start, keeping its 302 extent. Tapping RE, RO, EN or SC did
+  not recompile.
+- Recompiling moves the whole picture in PERMDF (the line went from 12342 to 12376), so a
+  display address names a stroke only until the next recompile.
+
+So a drag pokes the element's atoms (lasting) and patches the display words for immediate
+feedback (until the recompile replaces them), then asks PIXIE to recompile, once the
+routine that does it is found and can be called at a safe point. Every poke goes through the
+Monitor, so the session records it and a replay drags the same vertex.
+
 **To do: the turtle display list as ring data, sharing graftal's code.**
 Split `toDisplayFile` into `polylines(strokes)` and one shared emitter,
 `compilePolylines(lines) → { words, starts }`, so `toDisplayFile` keeps
