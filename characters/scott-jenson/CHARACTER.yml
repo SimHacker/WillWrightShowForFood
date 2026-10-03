@@ -332,6 +332,28 @@ transformation_field:
       bring_it_out: "Duggan's 'making a copy' becomes a reference: a task holds a link and a live view, not an export, so there's still only one underlying object, as in WindowScape's photographs."
     limits: "Web surfaces can drift, log out, or forbid framing (X-Frame-Options, CSP frame-ancestors), so the views are of top-level windows or tabs, not iframes. Some apps have no web surface at all, or a worse one."
     why_scott: "'The future needs files' asks for data outside apps. This gets the effect without the apps' cooperation: the data stays where it is, and the task gets a handle and a view."
+  presenter_view:
+    duggan:
+      - "'Privacy becomes a first-class flag, driven by machine state. Private is a property of a window or tab, not a region of the screen. Private content renders occluded unless the machine can vouch for safety.'"
+      - "'derive privacy state from machine-observable facts like connected displays, or active capture sessions and never from inferred human states like attention or idleness.'"
+      - "'Connect to a novel display and it gets a \"ready to present\" screen by default. You explicitly aim it: this task, this window, or extend the canvas. Known displays skip the dance. Screen sharing is the same event with no cable. You don't need the model to have discipline if the door won't open, and you don't need the user to have memory if the default can't leak.'"
+      - "'I'm asking for presenter view as a desktop primitive.'"
+      - "'Browser tabs detach into real windows and join whatever task they belong to. The \"browser\" stops being a place windows live.'"
+      - "The bad idea he gave up: idle drifts the viewport to public windows. 'reading is an idle state' and 'the threat is a pedestrian, which is undetectable.'"
+    connections:
+      attribution: "How it fits the field. Assembled from Don's earlier proposals; Don hasn't signed off on this section yet."
+      per_output: "Presenter view is per-output rendering: the same canvas drawn differently on each display and each capture stream. The laptop panel draws private sources; the projector and the share stream draw them occluded. This is the only way 'occluded' can be done right, because a whole-screen share captures what the compositor hands it, so the occlusion has to be in that output, not on the screen."
+      flag_follows_views: "Private is a property of the source window, and every live view, crop, photo or proxy of it inherits the flag. A cropped corner of a private mail window is still private unless you clear it on that view. Without inheritance, live_views would be a leak: transclude the private thing into a public task and it's shown."
+      ready_to_present: "The 'ready to present' screen is an empty presenting photo (photographs.don_answer.privacy). Aiming the display means putting views into it. Nothing private is in the photo until you put it there, so the default can't leak."
+      known_displays: "Known displays and their aims are small files in git, like photos: display identity, which photo or task it aims at, and whether it's trusted. 'Known displays skip the dance' is a lookup in that file, and trust is something you can read and diff."
+      prior_art:
+        - "Apple Keynote presenter view: slides on the projector, notes and the next slide on your screen."
+        - "Per-window capture exclusion already exists, but apps set it, not users: macOS NSWindow.sharingType = .none, Windows SetWindowDisplayAffinity(WDA_EXCLUDEFROMCAPTURE), Android FLAG_SECURE. Duggan's flag is the same mechanism handed to the user per window or tab."
+        - "macOS can hide notification contents while the display is mirrored or shared, which is a machine-state privacy rule shipping today for one kind of window."
+        - "Sharing one window instead of the whole screen in Zoom, Meet and Teams is the manual version of aiming."
+      tabs: "Detached tabs are already covered by self_hosting and app_locked_tasks: a tab is a source, tasks and photos hold views of it, and the browser is one more window, not the place windows live."
+      limit: "Machine state covers projectors and shares. It does not cover someone looking over your shoulder, and Duggan is right that nothing machine-observable does."
+    why_scott: "Scott's KDE talk asks what the desktop would be if we started from today's hardware. Every laptop now plugs into strange screens and shares its screen many times a day, and the window system still treats both as a surprise."
   box_model:
     attribution: "Don's proposal: the CSS box model (crop, border, padding, margin) made live and inhabitable."
     edges: "Crop, border, padding and margin are all edge operations, and every edge is editable live (none, some or all at once). Crop cuts into the content, padding pushes the content in from the border, and margin pushes neighbors away from it."
