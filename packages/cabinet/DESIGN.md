@@ -1020,8 +1020,18 @@ pair, plus the tiles.
 
 ### Or: both generations in one word
 
-An 18-bit word holds two 8-bit layers with two bits over, so the past and the future can share
-a cell instead of a buffer each (Don's suggestion). A cell is `[2 spare | layer 1 | layer 0]`.
+An 18-bit word holds two 9-bit halves, so the past and the future can share a cell instead of a
+buffer each (Don's suggestion). A cell is `[M1 | layer 1 (8) | M0 | layer 0 (8)]`: each half is
+eight bits of state and its own modified bit.
+
+- **Why halves, not two layers and two spare bits at the top:** both halves are the same shape,
+  so one routine handles either, offset by a 9-bit shift (EAE `LRS 9`). Nine bits is three octal
+  digits, so a word in the memory panel reads as two cells, `123 456`. And each modified bit
+  sits beside the state it describes, so writing a layer and marking it are one store.
+- **Modified means "differs from the other half".** The step sets it when it writes a next
+  state that differs from now. After the parity flips, the now half's modified bit says which
+  cells changed this generation; the tile engine rewrites those cells' `DJS` words and clears
+  the bits.
 
 - **A parity word says which layer is now.** A step reads the neighbours' now layer and writes
   each cell's other layer, then flips parity. Neighbours' now layers are never written during
@@ -1031,17 +1041,17 @@ a cell instead of a buffer each (Don's suggestion). A cell is `[2 spare | layer 
   reads it. All three ask the parity word which layer that is.
 - **The edge copy copies whole words.** The other layer is about to be overwritten, so it
   doesn't matter that it comes along.
-- **Eight bits a cell.** CAM-6's four planes fit with four to spare, which is room for echo
-  planes or a history plane. The step pays for the layer it reads: the low layer is an `AND`,
-  the high one a shift, so the rule's lookup table comes in two copies, one per parity, indexed
-  from where that parity's bits already are. The PDP-7 has no OR, so writing the next layer is
-  `AND` to clear it, then `XOR` the new bits in.
+- **Eight bits of state a cell.** CAM-6's four planes fit with four to spare, which is room
+  for echo planes or a history plane. The step pays for the half it reads: the low half is an
+  `AND`, the high one a shift, so the rule's lookup table comes in two copies, one per parity,
+  indexed from where that parity's bits already are. The PDP-7 has no OR, so writing the next
+  half is `AND` to clear it, then `XOR` the new bits and modified bit in.
 - **The display list is separate now.** A packed cell is not a 340 word, so the tile engine
-  keeps one `DJS` word per cell beside the state, pointing at the tile for the now layer. A
-  spare bit marks a cell whose next differs from its now; the engine rewrites only those
-  `DJS` words, so a still pattern costs no display writes and a refresh never sees a cell
-  half done. Memory comes out the same as two buffers (1,190 state words plus 1,190 display
-  words for 32 by 32), but a cell has 256 states, not as many as there are tiles.
+  keeps one `DJS` word per cell beside the state, pointing at the tile for the now half, and
+  rewrites only the cells whose modified bit is set, so a still pattern costs no display writes
+  and a refresh never sees a cell half done. Memory comes out the same as two buffers (1,190
+  state words plus 1,190 display words for 32 by 32), but a cell has 256 states, not as many as
+  there are tiles.
 - **Reversible rules come free.** Fredkin's second-order rules compute
   `next = f(neighbours now) XOR past`, and the past is the very layer being overwritten, in
   the same word. Flip parity once without stepping and the same rule runs backward:
@@ -1050,6 +1060,29 @@ a cell instead of a buffer each (Don's suggestion). A cell is `[2 spare | layer 
 
 Both layouts stay: cells as display calls for two-state rules and the CAM-off's plain
 assembly, packed layers for the CAM-6 device and anything with planes.
+
+### Tiles are subroutines, drawn by the Forth turtle
+
+The tile engine draws nothing itself: each cell is a `DJS` to a tile, and a tile is a 340
+subroutine. So a rule brings its own tiles, drawn in Forth with the turtle.
+
+- **`n TILE ... ENDTILE`** points the turtle's emitter at tile slot n instead of the display list
+  (the emitter seam above), so `fd`, `rt` and friends compile into the tile. `ENDTILE` adds a
+  dark move to the next cell's corner and the escape that returns from the subroutine.
+- **Tiles are relative.** A tile starts in vector mode wherever the beam is and leaves it one
+  cell on; an absolute POINT word would draw every cell in one place, so `TILE` refuses `home`
+  and `moveto`. The turtle's own vectors are relative already.
+- **A tile table, not a tile per state.** 256 states times a tile slot is more core than there
+  is, so state indexes a table of tile addresses and many states share a tile. That table is the
+  340's colour map: CAM6.js's colormap generators, with strokes instead of colours, and swapping
+  the table restyles a running automaton without touching a cell.
+- **Rules carry their tiles.** A rule cartridge (CARTRIDGES.md) holds `rule.fs` and `tiles.fs`;
+  Life might draw a filled square and an empty dot, a heat rule a ladder of hatchings, Langton's
+  ant an arrow per heading.
+- **Edit one tile, every cell follows.** The cells share the subroutine, so dragging a corner of
+  one tile with the edit tools changes it everywhere on the next refresh.
+- **The same tiles are symbols.** A tile is the Forth-drawn subpicture of the turtle section
+  above, so tiles, PIXIE symbols and the CA share one library.
 
 ## Assemblers: several front ends, one back end
 
