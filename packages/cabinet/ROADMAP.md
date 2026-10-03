@@ -198,6 +198,32 @@ can share the screen:
 - **The lineage**, credited on the page: Spacewar! on the PDP-1 (1962), DUEL on Cambridge's PDP-7
   (1968, already in this cabinet, from the tape), and this one in Mitch's Forth, 2026, with ships
   anyone can redraw with the turtle.
+
+**Memory: Forth already has all of it.** The FORTH cartridge runs with 8K, every word a PDP-7
+without the memory extension can address (13-bit addresses, `ADDR = 0o17777`), and the kernel
+uses it all: its literal pool grows down from 20000. After the prelude and turtle load,
+measured 3 Oct, 4,455 words are free between the dictionary (7175) and the pool (17744), and the
+display list is a fixed 1,024 words at 1260. Budget for sprites:
+
+- Pre-rotated, 24 rotations of an n-step shape is 24n words: a 12-step ship is 288 per ship.
+  Two ships, torpedoes and a star fit with room for the game.
+- Dynamic rotation, scale and intensity keep one copy (n ideal points, 2n words) and one live
+  slot per sprite, so twenty sprites cost less than one pre-rotated ship.
+- More than 8K means the Type 148 memory extension: extend mode, 15-bit addresses, banks of 8K.
+  The cabinet doesn't emulate it, Mitch's kernel doesn't use it, and SYMELEC needs it off. Add it
+  only if a game proves 8K too small; the 340's own display addresses would need it too.
+
+**Order: pre-rotated first, then live transforms.** Start with the 24 precomputed rotations,
+which only rewrite a `DJS` target per turn. Then dynamic, about the sprite's centre: one rotate
+and scale pass over the ideal points, `x' = (x cos − y sin) * s`, the same `*/` the turtle uses,
+re-encoded into the slot. Scale up to the 127 limit per step, refused past it. Intensity is a
+PARAM word at the head of the slot (`intensity`, 0–7, the 340's own eight levels), so fading,
+flashing and a hit's flare are one poke, no recompile.
+
+**And on the slow phosphor.** A spinning, growing ship leaves its own trail on a P7 tube, the
+fast blue flash fading into the long yellow-green: the pretty-pass of DESIGN.md order of work
+item 6, the dual-phosphor simulation. Intensity steps show up as the trail's brightness, so an
+explosion is a few frames of rising intensity and scale, then the phosphor does the rest.
 - `shapes` lists them; `triangle wear` puts the old turtle back.
 - With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
   says what it is.
