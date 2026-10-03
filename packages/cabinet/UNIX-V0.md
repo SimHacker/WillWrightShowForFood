@@ -226,6 +226,17 @@ machine to record for the AM radio, and a second witness for the display, would 
 >   measured or recorded. A short video of the panel while it runs would give us the lamps'
 >   flicker, and a recording of the Teletype and the reader would give us their sound.
 >
+> And one more ask, the fun one: **a demo scene for sn 129.** We would like to write small
+> demos for the real machine, in the spirit of the Munching Squares and Spirograph films: Forth
+> turtle drawings that spin and grow on the 340, a Spacewar in Forth after Spacewar! and DUEL,
+> cellular automata with tiles drawn by the turtle, music for the AM radio. Each would be
+> developed and tested in the emulator first, checked against SIMH, and sent as a paper tape image
+> with a page saying exactly what it does, how long it runs and what it touches (the display
+> and the teletype, nothing else: no disk writes). If you would run them on sn 129 and film the
+> screen, we would put the films on YouTube beside the emulator's run of the same tape, credited
+> to the museum, under whatever terms you set. Real phosphor against simulated is the best test
+> we could have, and the films would be a reason for people to come and see the machine.
+>
 > Everything is in git: https://github.com/SimHacker/WillWrightShowForFood (the emulator is in
 > `packages/cabinet`, and it runs in the page at hyperties.org). Thank you for bringing sn 129
 > back, twice.
@@ -238,5 +249,8 @@ Before sending:
 - Find current addresses. The ICM's contact page is on [icm.museum](https://icm.museum/). The
   pdp7-unix list is at the TUHS mailing lists.
 - Decide whether the letter goes as one email or one message per person.
+- For the demo scene ask: have one finished demo to attach, as a tape image and an emulator
+  link, so the request is concrete. A turtle drawing with spin, scale and intensity is the
+  smallest that shows off the 340.
 
 Nothing has been sent.
