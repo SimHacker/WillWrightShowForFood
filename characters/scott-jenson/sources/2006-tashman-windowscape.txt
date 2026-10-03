@@ -1,0 +1,272 @@
+  © ACM, (2006). This is the author's version of the work. It is posted here by permission of ACM for your personal use. Not
+  for redistribution. The definitive version was published in ACM UIST’06
+
+                                   WindowScape:
+                          A Task Oriented Window Manager
+                                                  Craig Tashman
+                                           Georgia Institute of Technology
+                                                    GVU Center
+                                             Atlanta, GA 30332,USA
+                                               craig@cc.gatech.edu
+
+
+ABSTRACT
+We propose WindowScape, a window manager that uses a
+photograph metaphor for lightweight, post hoc task man-
+agement. This is the first task management windowing
+model to provide intuitive accessibility while allowing win-
+dows to exist simultaneously in multiple tasks. WindowS-
+cape exploits users’ spatial and visual memories by provid-
+ing a stable thumbnail layout in which to search for win-
+dows. A function is provided to let users search the window
+space while maintaining a largely consistent screen image
+to minimize distractions. A novel keyboard interaction tech-
+nique is also presented.
+ACM Classification: H5.2 [Information interfaces and
+presentation]: User Interfaces. - Graphical user interfaces.
+General terms: Design, Human Factors
+                                                                     Figure 1: Several miniaturized, thumbnail windows
+Keywords: Scaling, window management, task manage-
+                                                                     and one full size window.
+ment, visual search, spatial memory.
+                                                                 tors are feasible do not necessarily prefer them, sometimes
+INTRODUCTION                                                     choosing instead to use virtual desktop managers [6]. But
+Throughout the history of personal computing, visual work-       even if all users possessed physically large display surfaces,
+space management has been a problem. Difficulties in man-        larger displays may prompt users simply to keep more
+aging screen real estate on personal computers were recog-       documents open [7]. Using modern overlapping window
+nized as early as 1983 [1]. The dearth of space provided by      management systems, very large displays may face the same
+these small screens was one of the motivating factors for        organization problems that occur on physical desks when
+Alan Kay’s initial use of overlapping windows [3]. Today         they are covered with many documents.
+we see virtual desktop managers included as standard fea-
+                                                                 Virtual desktop managers (VDMs) have been one of the
+tures of many Linux and Unix GUI’s, and numerous such
+                                                                 popular solutions to the space management problem, oper-
+utilities are readily available for Windows and Macintosh.
+                                                                 ating on the observation that people tend to use windows in
+Although the increasing economic viability of multi-             groups. [1] VDMs allow users to create and switch among
+monitor workstations alleviates some of the workspace            groups of windows explicitly. But in spite of this success,
+management problems caused by small displays, they only          VDMs and other alternative window managers have limita-
+address part of the problem. Mobile knowledge workers            tions in the flexibility of the grouping mechanisms they
+depend on devices like laptops and PDA’s, where screen           provide, and the means offered for finding particular win-
+size is limited by the need to minimize device footprint.        dows. To address these limitations, we have developed
+And surprisingly, even those users for whom multiple moni-       WindowScape, a zooming, task-oriented window manager.
+                                                                 WindowScape uses photograph and history metaphors for
+                                                                 its window grouping system, providing a lightweight
+                                                                 mechanism for grouping windows that are often used to-
+                                                                 gether, and for allowing windows to reside in multiple
+                                                                 groups simultaneously. Although the term task can mean
+                                                                 various things, here we use the term to refer to these win-
+                                                                 dow groups. We do so since end users appear to accept the
+                                                                 idea of equating groups of windows that are used together
+                                                                     Figure 2: The timeline (right) of desktop states shown
+                                                                     as a series of photograph-like snapshots. The left is
+                                                                     the list of favorite snapshots, the favorites bar.
+                                                                  windows to the same group, but doing so alters the group-
+                                                                  ing structure; it also requires the user to remember to return
+                                                                  the windows to their proper groups afterward. Like Scalable
+                                                                  Fabric and GroupBar, WindowScape allows one to interact
+                                                                  with windows from multiple groups at once, and without af-
+                                                                  fecting the grouping structure [7, 8].
+                                                                  Tools such as Scalable Fabric, GroupBar and Kimura pre-
+                                                                  sent the user a layout of window representations [7, 8, 4].
+    Figure 3: Two overlapping windows with their title            Scalable Fabric and Kimura lay out thumbnail views of the
+    bars and all miniaturized windows brought to the              user’s windows on the desktop; users can expand or other-
+    top of the z-order.                                           wise change those thumbnails into the actual windows they
+with tasks [7], and since studies of VDM usage show win-          represent. GroupBar lays out representations as well, but it
+dow groups often corresponding to tasks and subtasks [6].         represents windows with buttons, which can only be posi-
+In addition to task management, WindowScape provides a            tioned in rows or columns along the edges of the screen.
+spatially stable, readily accessible thumbnail layout to allow    However, all of these systems relate the position of a repre-
+users to search for windows by their appearance and lever-        sentation to the group in which it resides. This relationship
+age spatial memory in recalling locations (Figure 1).             precludes the user from spatially organizing the windows in
+                                                                  other ways, such as with respect to time, or so as to facili-
+RELATED WORK
+                                                                  tate keyboard navigation among the representations.
+Modern Virtual desktop managers can be traced back to
+Henderson and Card’s Rooms [2]. VDMs vary considera-              Another property of VDMs, Scalable Fabric, GroupBar and
+bly, but most require windows to be located in exactly one        similar systems is that the user must explicitly choose the
+desktop. Other work such as Scalable Fabric [7], Kimura           grouping structure. Some systems, such as GroupBar and
+[4], and GroupBar [8] offer users very different systems          Scalable Fabric, allow the user to create groups, destroy
+with which to group their windows. But even these systems,        groups, and specify what a group contains far more easily
+which do not require windows to be in any group at all, still     than with a VDM. Still, the user is forced to choose exactly
+do not allow for windows to be in multiple groups at the          where a window belongs, how many groups the windows
+same time. A disadvantage faced by these VDMs is that re-         should be divided into, etc. in order to leverage the benefit
+quiring windows to be in a single group forces users to de-       of window grouping.
+cide ahead of time where a new window belongs. Likewise,          A differentiating feature of WindowScape is its use of a
+such a single-group approach is inflexible, in that it neglects   timeline as part of its window group management system.
+the possibility that some windows might naturally be useful       WindowScape is not the first system that allows users to
+in several different groups.                                      manage their activities based on their histories; prior work
+A partial exception to this limitation was provided by the        includes Kimura and Rekimoto’s Time-machine Computing
+original Rooms system. Although Rooms did not allow               [4, 5]. However, these prior systems have generally focused
+windows to exist simultaneously in multiple groups, it did        on solving a different problem than WindowScape. Kimura,
+provide an abstraction known as a window placement to be          for example, focuses on workspace management with spe-
+in multiple groups simultaneously. A window placement             cial, large, focus-plus-context display surfaces [4]. Time-
+represented a particular window at a particular position;         machine Computing is more a file manager than a window
+Rooms allowed users to copy window placements from one            manager.
+group (or Room) to another. The disadvantage to this              WINDOWSCAPE OPERATION
+mechanism is that there is no clear analog to such an ab-         In order to consider how WindowScape addresses the
+straction in the real world. Even in other computer envi-         above limitations with prior work, we will first explain
+ronments, copying something generally produces a com-             WindowScape’s general operation, and draw some addi-
+pletely independent duplicate, whereas copied placements          tional distinctions with other approaches. In the Task Man-
+all refer to the same underlying window. Thus, we sought to       agement subsection we will revisit the above limitations and
+provide a more intuitive means of allowing windows to oc-         suggest how WindowScape addresses them.
+cupy multiple groups simultaneously.
+                                                                  Window Management
+Another limitation of VDMs is the strict separation they
+                                                                  WindowScape represents windows as small thumbnails that
+impose between window groups [7]. For example, VDMs
+                                                                  we refer to as miniatures. These miniatures are positioned
+make it difficult to interact with windows from multiple
+                                                                  on the desktop by the user; to ensure spatial stability, they
+groups at the same time. One can move all of the desired
+                                                                  are never moved automatically. The miniatures can be in-
+dependently expanded and re-miniaturized, allowing the
+user to display just the windows needed at that moment
+(Figure 1). When expanded, windows can be moved about                           A         B
+without affecting where they will go the next time they are
+miniaturized. In order to provide users with maximal con-                           E
+text, the location to which windows expand depends on
+which other windows are expanded as well. Specifically,                         C         D
+                                                                           a.                           b.
+and in contrast to Scalable Fabric, when a window is ex-
+panded WindowScape puts it in the same location as the                   Figure 4: (a) A representation of 5 miniatures. (b)
+                                                                         Five thumbnails in Scalable Fabric with arrows
+last time it was expanded with the same group of other win-
+                                                                         showing the keyboard transitions between them.
+dows, whether that group is explicitly recognized as a task
+by the user or not. Once expanded, windows can be re-
+miniaturized individually or in parallel; WindowScape also                  Col.1       Col.2   Col.3
+provides a function for miniaturizing, and positioning the
+resulting miniature, in one mouse stroke.
+Finding Obscured Windows
+By default, miniatures remain below expanded windows in
+the z-order. If the user wants to view the miniatures being
+obscured by an expanded window, she must either drag the
+occluding window aside or miniaturize it in order to see the             Figure 5: (a) How several miniatures would be
+                                                                         grouped into columns. (b) Five miniatures in Win-
+miniatures beneath it. While this is a problem for expanded              dowScape with arrows showing the keyboard tran-
+windows which routinely cover one another, the problem is                sitions between them.
+especially acute for miniatures, which are always last on the
+                                                                    pressing the ‘right’ directional key when the bottom left
+Windows z-order. To mitigate this problem without the dis-
+                                                                    thumbnail is selected will select the top left thumbnail. Our
+traction of dramatically changing the overall screen image,
+                                                                    solution to this problem was to use a simple mapping algo-
+we added a feature that allows the user to bring all minia-
+                                                                    rithm where we could visually represent what the transitions
+tures to the top of the z-order, as well as the title bars of all
+                                                                    would be among the miniatures.
+expanded windows. The user simply drags the cursor over
+the desktop background and all miniatures and title bars            WindowScape’s keyboard navigation algorithm groups all
+appear, while everything else tints red to make the minia-          miniatures into columns. It begins with the leftmost minia-
+tures visually stand out (Figure 3). When the mouse is re-          ture Ml, and proceeds right, grouping any miniatures that
+leased, the display returns to normal, and if the mouse was         overlap with Ml into the same column. This process is re-
+over a miniature or a title bar, it is expanded or its window       peated for all remaining miniatures, resulting in a columnar
+is brought to the front respectively.                               grouping (Figure 5a). To navigate among the miniatures,
+                                                                    the left/right arrow keys change the active column, and the
+Like WindowScape, Scalable Fabric allows users to bring
+                                                                    up/down arrow keys change the selected miniature within
+all window thumbnails to the front [7]. However, Scalable
+                                                                    that column (Figure 5b, showing directional key transitions
+Fabric does not provide comparable mechanisms for help-
+                                                                    among 5 miniatures). When moving from column C1 to C2,
+ing users search through their already-expanded windows.
+                                                                    the miniature that will be activated in C2 is that with that
+Besides Scalable Fabric, we are not aware of any other sys-
+                                                                    with the closest height to the last miniature active in C1. We
+tems that let users visually search among their windows
+                                                                    depict the columns for the user by a drawing a vertical, dot-
+while maintaining the user-defined spatial relationships dur-
+                                                                    ted line through each columnar group. When a column is
+ing the search.
+                                                                    active, the dots (which are small squares) are red, otherwise
+Keyboard Navigation                                                 they are black. We recognize that not all the transitions our
+When no windows are expanded, users can navigate among              algorithm generates are intuitive, but we hope that repre-
+the miniatures by keyboard. Mapping the four directional            senting the columnar groupings by which the algorithm
+keys on standard keyboards to transitions among arbitrarily         generates transitions will let users more easily predict the
+located items (such as the miniatures) involves a tradeoff. If      effects of their actions, and figure out how to get from one
+we use an algorithm that devises intuitive mappings, then           miniature to another.
+some miniatures may be unreachable (Figure 4a, where,
+                                                                    WindowScape Task Managament
+starting from item A, intuitive transitions would leave item
+                                                                    Unlike earlier window group management systems that re-
+E unreachable). Alternately, we could guarantee reachabil-
+                                                                    quire explicit user creation of groups, and explicit place-
+ity, but leave some transitions counter-intuitive. This type
+                                                                    ment of windows in groups, WindowScape provides task
+of algorithm is used in navigating among icons on the Win-
+                                                                    management implicitly, through a history metaphor. Each
+dows desktop, and we experimentally found to be the case
+                                                                    time the user expands one or more miniatures, or miniatur-
+in Scalable Fabric (Figure 4b, showing the directional-key
+                                                                    izes one or more windows, a small photograph-like snap-
+transitions among five thumbnails). Note how in figure 4b,
+                                                                    shot is added to the timeline pane, located by default on the
+right half of a panel at the top of the display (Figure 2). If     In the longer term, we plan to study the integration of Win-
+the panel is full, the leftmost snapshot is discarded. Each        dowScape with a traditional virtual desktop manager. We
+snapshot depicts the appearance and organization of the ex-        suspect that a tool like WindowScape would be better for
+panded windows at the time the snapshot was taken. In or-          managing sub-tasks where a stronger sense of context may
+der to return the windows to earlier expansion (i.e., minia-       be desirable, and a VDM would be better for dividing
+turized or expanded) and position states, the user clicks on       whole tasks, where pushing unrelated material out of sight
+the appropriate snapshot. To give users a better sense of          and out of mind may be more desirable [6].
+how the screen will appear if a snapshot is selected, the
+                                                                   CONCLUSIONS
+contents of the windows depicted in the snapshots are occa-
+                                                                   WindowScape is a zooming window manager that uses pho-
+sionally updated to reflect the current content of the actual
+                                                                   tograph and history metaphors to provide lightweight task
+windows.
+                                                                   management. Windows are represented as small miniatures
+These timeline snapshots constitute short-lived window             which can be positioned by the user and expanded or minia-
+groupings since clicking on different snapshots can expand         turized individually or in groups. Users can bring the minia-
+different groups of windows from their miniature form to           tures and the title bars of expanded windows to the top of
+their full, interactive form or vice versa. In contrast to other   the z-order to search through them while keeping their cur-
+window group management systems, WindowScape repre-                rently expanded windows visible in the background. To fa-
+sents window groups in terms of abstractions that are inde-        cilitate keyboard navigation, the miniatures are grouped
+pendent of the window representations (i.e., the miniatures)       into columns. WindowScape allows tasks to be defined im-
+themselves. But, since these abstractions are metaphoric           plicitly, by taking regular photograph-like snapshots of ex-
+photographs, they retain intuitive accessibility. This method      panded window positions, to which users can return. This
+of group representation has various benefits, including al-        allows users to defer consideration of tasks until they need
+lowing the miniatures to be positioned independently of            to return to them. Snapshots that are used often can be cop-
+their group membership.                                            ied from the default timeline area to the favorites bar to
+Despite its benefits, an implicit timeline-based model does        avoid the lack of persistence of the timeline. In the near fu-
+not have good stability. If a user desires to return to a state    ture, we plan to conduct user studies to investigate the real
+from a dozen snapshots ago, it is likely that snapshot is no       world usability of WindowScape.
+longer visible on the timeline. But even if we made the            REFERENCES
+timeline larger or the snapshots smaller, the timeline’s spa-      1. Bannon, L., Cypher, A., Greenspan, S., and Monty, M.
+tial instability may make it hard for users to leverage spatial       (1983). Evaluation and analysis of user’s activity organiza-
+memory in finding the desired snapshot. Therefore, we use             tion”. In Proc. CHI’83 (pp. 54-57). NY: ACM.
+the left half of the top panel seen in Figure 2 as a favorites     2. Henderson, D. A., Jr., Card, S. K. Rooms: The use of mul-
+bar. If a user thinks a snapshot may be important, or finds           tiple virtual workspaces to reduce space contention in a
+herself returning to it often, she can simply copy it to the          window-based graphical user interface. In ACM Transac-
+favorites bar. Also, the user can take a snapshot of the cur-         tions on Graphics 5 (3, July 1986), 211-243.
+rent set of expanded windows and put that directly in the
+                                                                   3. Kay, A. “The Reactive Engine.” Doctoral dissertation,
+favorites bar with a key combination.
+                                                                      Electrical Engineering and Computer Science, University
+In this model, unlike conventional window grouping sys-               of Utah, 1969.
+tems, the user never makes an explicit choice about where a        4. MacIntyre, B., Mynatt, E. D., Voida, S., Hansen, K. M.,
+window belongs. Rather, the user just expands windows and             Tullio, J., Corso, G. M. Support for multitasking and back-
+returns to prior states (via snapshots) as needed. The choice         ground awareness using interactive peripheral displays.
+is made implicitly, after the fact, by the snapshots that the         CHI Letters, 3 (2), 2001.
+user selects frequently, or copies to the favorites bar. This
+                                                                   5. Rekimoto, J. Time-machine computing: a time-centric ap-
+approach also solves the problem of allowing windows to
+                                                                      proach for the information environment. In Proceedings of
+occupy multiple groups simultaneously. The use of the pho-            the 12th annual ACM symposium on User interface soft-
+tograph metaphor provides an intuitive way for a single               ware and technology, pages 45 - 54, 1999.
+window to be represented in several groups, while making
+it clear that there really is only one underlying window.          6. Ringel, M. When one isn’t enough: an analysis of virtual
+                                                                      desktop usage strategies and their implications for design.
+People understand that there can be several photos of an
+                                                                      CHI Extended Abstracts 2003, ACM Press, 762-763.
+object with there being only one underlying object.
+                                                                   7. Robertson, G., Horvitz, E., Czerwinski, M., Baudisch, P.,
+FUTURE WORK
+                                                                      Hutchings, D., Meyers, B., Robbins, D., and Smith, G.
+In the near future, we plan to conduct a long-term deploy-            Scalable Fabric: Flexible Task Management. In Proceed-
+ment of WindowScape with about twenty participants and                ings of AVI’04, pages 85–89, May 2004.
+capture comprehensive statistics on how it is used, as well        8. Smith, G., Baudisch, P., Robertson, G., Czerwinski, M.,
+as user opinions. This study will give us insight into                Meyers, B., Robbins, D., and Andrews, D. (2003).
+whether users find WindowScape useful, where they have                GroupBar: The TaskBar Evolved. In Proc. OZCHI’03.
+difficulties, and how we could improve it.
+

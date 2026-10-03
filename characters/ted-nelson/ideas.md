@@ -70,6 +70,6 @@ Also: [`../david-rosenthal/selection-clipboard-lineage.md`](../david-rosenthal/s
 - [`invitation.md`](invitation.md)
 - [`correspondence.yml`](correspondence.yml) — public-safe thread digest
 - Show seed: [`repo-shows/ted-nelson/`](../../repo-shows/ted-nelson/)
-- Panel: [`repo-shows/selections-icccm-clipboard/README.md`](../../repo-shows/selections-icccm-clipboard/README.md)
+- Panel: [`repo-shows/unnatural-selection/`](../../repo-shows/unnatural-selection/README.md)
 - Sources: [`sources/invisible-clipboard-rant-catalog.md`](sources/invisible-clipboard-rant-catalog.md)
 - [`CHARACTER.yml`](CHARACTER.yml)

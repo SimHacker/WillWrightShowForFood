@@ -55,7 +55,7 @@ Either shape — or both, or neither — works. **You pick.**
   **Would you reprise it for the record?** I'd love **you + David Rosenthal** (he wrote the X11
   ICCCM) + me — and **Ted Selker** (he hosted that BayCHI night), **Ben Shneiderman** (HyperTIES
   links), **Brad Myers** (*Pick, Click, Flick!*) welcome if you want a panel.
-  Seed: [`repo-shows/selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard.yml).
+  Seed: [`repo-shows/unnatural-selection/unnatural-selection.yml`](../../repo-shows/unnatural-selection/unnatural-selection.yml).
 - **Computers for Cynics** — live, with whatever updates you'd add.
 - **Remembering Doug.** I only met Doug Engelbart once, and we commiserated about how hard it is to
   get society to accept new ideas — that conversation gave me the resolve to never give up on my

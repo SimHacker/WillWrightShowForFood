@@ -1,11 +1,11 @@
 # Ted Nelson — invisible clipboard / true cut-and-paste rant catalog
-# Primary sources for Repo Show: selections-icccm-clipboard.yml
+# Primary sources for Repo Show: unnatural-selection.yml
 
 meta:
   character: ted-nelson
   curated_by: don-hopkins
   consent: not_yet_asked
-  show: ../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml
+  show: ../../../repo-shows/unnatural-selection/unnatural-selection.yml
   companion: invisible-clipboard-rant-catalog.md
 
 position_summary: |
@@ -95,4 +95,4 @@ show_beats:
 see_also:
   - ../ideas.md
   - ../../david-rosenthal/selection-clipboard-lineage.md
-  - ../../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml
+  - ../../../repo-shows/unnatural-selection/unnatural-selection.yml

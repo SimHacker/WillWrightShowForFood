@@ -148,6 +148,32 @@ bob_and_clippy:
   will_wright_on_bob: "'Like \"Microsoft Bob\", there was some great thought and research that went into it, but the execution was flawed and it got a bad rep from the backlash to all the hype.' — ../will-wright/sources/2004-01-10-barbie-mortalkombat-jenkins/article.md"
   why_they_failed_design: "MOOLLM's reading via McCloud's masking effect: Bob cartooned the world, leaving nothing to see; Clippy kept the real document but gave the mask eyes, eyebrows and reactions, leaving nothing to be. https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.yml (MASKING-EFFECT)"
   fix: "Clippy done right sits on the visible command bus (pbd_at_the_heart): it sees what you did, proposes on the bus where you can read, undo, or ignore it, and never interrupts with a face."
+  clifford_nass:
+    who: "Clifford Nass (1958–2013), Stanford professor of communication, co-author with Byron Reeves of The Media Equation (1996): people respond to computers socially and naturally, with the same reactions they use for other people. https://en.wikipedia.org/wiki/Clifford_Nass"
+    microsoft: "Reeves and Nass consulted for Microsoft's 'social interface' group, and Stanford's own 1995 press release presented Bob as built on their CSLI research."
+    the_misreading: "Alan Cooper: 'Clippy was based on a really tragic misunderstanding of a truly profound bit of scientific research … if people react to computers as though they're people, we have to put the faces of people on computers.' The research said people already treat the machine socially; it didn't say to give the machine a face."
+    don: "'Microsoft Agent and Microsoft Bob and Clippy were all based on a tragic misinterpretation of the theories of Clifford Nass and Byron Reeves … his theories and work were actually quite interesting and still relevant, though tragically misunderstood. I saw him give a fascinating talk about his work at Ted Selker's \"New Paradigms for Using Computers\" workshop at IBM Almaden Labs in 1996.' — Don on HN, https://news.ycombinator.com/item?id=27403536"
+    rooms: "../ted-selker/ (NPUC, Selker's friend)"
+  interface_to_agency:
+    attribution: "Don's thesis: 'An interface to agency, not agents instead of an interface.' https://github.com/SimHacker/moollm/blob/main/designs/INTERFACE-TO-AGENCY.md"
+    applied: |
+      Clippy is the textbook agent instead of an interface: a character stands between you and the
+      document, guesses, and interrupts, and nothing it knows or does can be seen, edited or undone
+      except by dismissing it. Shneiderman's side of the 1997 IUI debate with Pattie Maes asked for
+      the opposite: the object of interest continuously visible, every action rapid, incremental and
+      reversible. An interface to agency gives the assistant's capabilities to you as things you
+      can see and operate (the same verbs on the same bus, in The Sims' pie menu and action queue),
+      so every capability the helper has, you have too, and you can watch it use them.
+  i_beam:
+    line: "Don: 'The i-beam is the anti-Clippy.'"
+    gloss: |
+      The I-beam text cursor is the most successful assistant on the desktop and has no face. It
+      shows where the next thing will happen before it happens, sits on the document instead of in
+      front of it, and never says a word. Allen Cypher's Eager turned its prediction green on the
+      real menu item instead of popping up a character. MOOLLM's I-Beam character takes that as its
+      job: 'I-Beam's job is the green pixel. Not an agent instead of an interface: an interface to
+      agency.' https://github.com/SimHacker/moollm/blob/main/skills/cursor-mirror/characters/i-beam/CONSTITUTION.md
+    contrast: "Clippy masks itself with a face and hides its reasoning; the I-beam has no mask and shows its intent as a position. Nass's finding cuts the I-beam's way: people already treat the cursor socially, so it needs nothing added, only to be legible."
 
 transformation_field:
   attribution: "Don's proposal, not Scott's. Hook into Scott's float (Ubuntu [13:46]), spatial stash (KDE [29:25]–[31:03]) and 'design for big monitors' (KDE [27:48])."
@@ -279,6 +305,7 @@ transformation_field:
       input: "Map a click in the view back through the view's transform to the source window's coordinates, then deliver it with the platform's accessibility or input-injection API (AXUIElement, UI Automation, AT-SPI, XTest)."
       structure: "Pixels give you the view; accessibility trees and Prefab-style pixel parsing give you the controls, so a proxy can work a button by name, not by coordinate, and survive the app moving it."
       problems: "Off-screen windows get throttled. Browsers and macOS slow down or stop occluded windows, so the source has to be kept 'visible' to the app while hidden from you. Wayland deliberately forbids one client from reading or driving another, so it has to live in the compositor or go through a portal. And proxies drift when the app updates its layout."
+      macos_hiding: "On macOS the public API can't change another app's window transparency, layer or transform. yabai does that with a scripting addition injected into Dock.app that calls private window-server functions, which needs SIP partly disabled; that's ruled out here. The non-SIP route is a virtual display: create one with the private CGVirtualDisplay API (as BetterDisplay and DeskPad do, from a normal app, no SIP change), move hidden source windows onto it with AX, and capture each one with ScreenCaptureKit's per-window filter. The virtual display can be huge so the windows tile without overlapping. Private API, may break, not App Store. Windows equivalents are Indirect Display Drivers (IddCx), e.g. Parsec VDD and the open-source Virtual-Display-Driver."
       news: "NeWS could have done this from the inside: canvases were PostScript objects that the window manager could reparent, scale and re-render, and the toolkit ran in the server. Today it has to be done from the outside, Prefab-style."
     why_scott: "His silos (KDE [25:06]) and crossed boundaries (Ubuntu [29:33]): today's window is the unit the app chose. Views and proxies let you pick the unit of work yourself, across apps, and keep it where your spatial stash is."
     why_hutchings_stasko: "§7.1 asks for showing or hiding a user-specified region of a window, done by the window manager, because the app designer can't know what the user values. Live views are that operation made into stuff you can pin, rig, stash and share."
@@ -373,6 +400,19 @@ transformation_field:
       alan_kay: "Kay's cell metaphor for objects: an opaque interior, a membrane, and messages as the only way across. In biology the membrane is studded with transport proteins (channels, pumps, receptors), each a gateway for one particular kind of molecule, energy or signal. Here every opening in a border is one of those: a typed port, so the membrane decides what can come in, what can get out, and at what cost. See ../alan-kay/ideas.md (cells and membranes, the repo as message bus)."
       why_scott: "Scott's silos (KDE [25:06]) are membranes with no openings. His crossed boundaries (Ubuntu [29:33]) need doors, windows and customs, not a wall knocked down."
     composes: "Padding and margin are just fields too, so they can carry scale: a margin can be a puff zone holding a big signpost tab, or a padding a bag of holding along the inside edge. Two windows whose margins touch share a street, and things on it can belong to both."
+  storeys:
+    attribution: "Don's proposal, growing the ST-word riff 'storey/story: each floor is a storey, and each one can be a story.'"
+    words: "Storytelling, storypiling, storystacking. A building is a pile of stories, and each floor is one you can enter, live in and leave."
+    vertical_halls: "Elevators are vertical halls. A hall connects rooms on one floor; an elevator connects floors. Its lobby on each floor is that story's front entrance, with a directory board of what's on each level."
+    back_ways: "Stairwells and service elevators are back entrances and escapes: slower or plainer routes that skip the lobby, reach every floor, and still work when the main route is busy or broken. Fire stairs are the guaranteed way out of any story."
+    suites: "A suite can span several floors, with a multi-storey atrium and its own internal staircases, elevators and escalators. Inside it you move between levels without going back to the public lobby, and from the atrium you can see down onto the floors below."
+    mapping:
+      - "A storey is a level of the hierarchy: nested rooms, zoom levels, or the floors of a transformation_field hole."
+      - "Elevator lobbies are named entry points (bookmarks, URLs) into a level; the building directory is the index."
+      - "Stairs and service elevators are the keyboard shortcuts, command lines and direct paths that bypass the front door."
+      - "An atrium is a live view down through several levels at once, so the suite's lower floors stay in sight while you work above them (live_views, painted_scale)."
+      - "Escalators are the rails of rigs tilted vertical: continuous flow between floors, not a jump."
+    why_scott: "His spatial memory with a third axis: people remember which floor as well as where on it, and buildings already teach everyone how to find their way through stories."
   non_empty_space:
     paper: "'Future systems might explore how to designate a group of icons as \"non-empty space,\" where, for example, maximize does not cover the space, but manual resizing of windows allows the icons to be covered. Alternatively, the notion of desktop icons could be replaced by something that more tightly integrates with the window system.' (Hutchings & Stasko 2004 §6.3)"
     answer: "This room's proposals take the second option. Icons stop being a layer under the windows: they become stuff hung on rigs, in bags and on puff zones, pinned into the same field as the windows. A rack of icons is a rig whose space other things snap around, not into. Maximize means 'grow until you meet a rig', and a manual drag can still push past it. Nothing has to be a special desktop layer, because the desktop is just the root window's field."
@@ -455,6 +495,8 @@ sources:
   research:
     - sources/2004-hutchings-stasko-display-space-management.md
     - sources/2006-tashman-windowscape.pdf
+    - sources/2006-tashman-windowscape.txt
+    - sources/2004-hutchings-stasko-display-space-management.txt
 
 see_also:
   - ../alan-kay/

@@ -39,8 +39,10 @@ associative, episodic). He says at KDE [1:45] that the Ubuntu talk passed half a
 
 ## Related research
 
-- [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks ([cached PDF](2004-hutchings-stasko-display-space-management.pdf)).
-- Craig Tashman, *WindowScape: A Task Oriented Window Manager*, UIST 2006 ([cached author's version](2006-tashman-windowscape.pdf), [original](https://sites.cc.gatech.edu/pixi/pubs/WindowScaper_Author'sVersion.pdf)). It treats layouts as photographs on a timeline, so one window can appear in many photos. See `transformation_field.photographs` in [CHARACTER.yml](../CHARACTER.yml).
+- [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks ([cached PDF](2004-hutchings-stasko-display-space-management.pdf), [text](2004-hutchings-stasko-display-space-management.txt)).
+- Craig Tashman, *WindowScape: A Task Oriented Window Manager*, UIST 2006 ([cached author's version](2006-tashman-windowscape.pdf), [text](2006-tashman-windowscape.txt), [original](https://sites.cc.gatech.edu/pixi/pubs/WindowScaper_Author'sVersion.pdf)). It treats layouts as photographs on a timeline, so one window can appear in many photos. See `transformation_field.photographs` in [CHARACTER.yml](../CHARACTER.yml).
+
+The `.txt` files are `pdftotext -layout` extractions (poppler), kept next to each PDF so they can be grepped.
 
 ## Responses to the talks
 

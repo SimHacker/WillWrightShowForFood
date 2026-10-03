@@ -49,7 +49,7 @@ Nelson: wish he'd link to **practical impact** — fair critique Don forwarded i
 
 ### 3b. Clipboard panel — visible links vs invisible scrap
 Jan 2022 thread on Ted Nelson + HyperTIES lineage. **Embedded light blue links** as partial answer
-to Ted's *hide and plug* — pair with DSHR ICCCM on [`selections-icccm-clipboard.yml`](../../repo-shows/selections-icccm-clipboard/README.md).
+to Ted's *hide and plug* — pair with DSHR ICCCM on [`unnatural-selection.yml`](../../repo-shows/unnatural-selection/README.md).
 [`../ted-nelson/sources/invisible-clipboard-rant-catalog.md`](../ted-nelson/sources/invisible-clipboard-rant-catalog.md)
 
 ### 4. CHI'88 pie menus — Fitts on the command bus

@@ -149,7 +149,7 @@ blog_dshr_org:
 
 selections_clipboard:
   doc: selection-clipboard-lineage.md
-  show: ../../repo-shows/selections-icccm-clipboard/selections-icccm-clipboard.yml
+  show: ../../repo-shows/unnatural-selection/unnatural-selection.yml
   what: |
     Ted Nelson (anti-invisible-clipboard) × DSHR (ICCCM author). PRIMARY/SECONDARY/CLIPBOARD,
     Alvey nomenclature fights, per-system taxonomy. Parker 2001 rant + 1990 Deskset flame.

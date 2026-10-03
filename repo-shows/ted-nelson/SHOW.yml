@@ -38,7 +38,7 @@ remember_friends:
 threads:
   - "Hypertext as Ted meant it — transclusion, visible connections, documents over deceptive UI"
   - "Transcribe video into durable text — the irony of a hypertext pioneer on video-only threads"
-  - "Cut/paste invisible clipboard — panel w/ DSHR + optional Selker/Shneiderman/Myers (selections-icccm-clipboard.yml)"
+  - "Cut/paste invisible clipboard — panel w/ DSHR + optional Selker/Shneiderman/Myers (../unnatural-selection/unnatural-selection.yml)"
 
 format:
   live: true

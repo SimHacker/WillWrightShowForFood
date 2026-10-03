@@ -1,0 +1,505 @@
+This document is the authors’ version of the article that originally appeared in the proceedings of the Graphics Interface 2004
+conference as published by the Canadian Human-Computer Communications society. You may find the original version in the
+ACM Digital Library by visiting the following URL: http://doi.acm.org/1006058.1006074
+
+
+
+
+  Revisiting Display Space Management: Understanding Current Practice to
+                       Inform Next-generation Design
+                 Dugald Ralph Hutchings                                                   John Stasko
+
+                                            GVU Center/College of Computing
+                                             Georgia Institute of Technology
+
+
+                         Abstract                                of general principles of window management.
+Most modern computer systems allow the user to                     The latter aspect is more crucial as we experience the
+control the space allocated to interfaces through a              rise of more complex display environments. The
+window system. While much of the understanding of                increased abilities of video cards and the decreasing
+how people interact with windows may be regarded as              cost of display devices are potential indicators that
+well-known, there are very few reports of documented             multiple monitor systems will become more common;
+window management practices. Recent work on larger               Czerwinski et. al. have already shown that in the
+display spaces indicates that multiple monitor use is            presence of multiple monitors, task completion time is
+becoming more commonplace, and that users are                    improved [6]. Grudin exposed fundamental differences
+experiencing a variety of usability issues with their            between multiple monitors and larger displays and
+window systems. The lack of understanding of how                 demonstrated how users interact with multiple monitor
+people generally interact with windows implies that              systems much differently than with single monitor
+future design and evaluation of window managers may              systems [9]. Improvements to window management for
+not address emerging user needs and display systems.             emerging display systems could benefit from a better
+Thus we present a study of people using a variety of             understanding of display space use characteristics.
+window managers and display configurations to                      In this paper we present results from a study of 20
+illustrate manager- and display-independent space                users of various display configurations and window
+management issues. We illustrate several issues with             managers. After discussing related work, study method,
+space management, and each issue includes discussion             and some definitions, we give a classification of our
+of the implications of both evaluations and design               participants’ management styles. The majority of this
+directions for future window managers. We also present           paper examines the general management principles
+a classification of users’ space management styles and           discovered in our interviews with study participants,
+relationships to window system types.                            with implications for design and evaluation shown for
+Key words: display space management, window                      each principle. Finally, we suggest possible directions
+management, multiple monitors, interview                         for future work in space management.
+
+1 Introduction                                                   2 Related Work
+The personal computer (PC) has undergone dramatic                Relatively little research on understanding people’s
+changes over the past 25 years. The huge gains in                space management practices has been performed.
+processor speed and physical memory size and the                 Grudin studied multiple monitor users to understand the
+popularity of the Internet have allowed people to use            unique characteristics of such systems, finding some
+computers in an astonishing variety of ways.                     surprising uses and associated usability problems [9].
+Throughout this period, the desktop and related window           Ringel studied how people used virtual desktops, and
+system have changed very little. Many organizations              compared findings to those of multiple monitor users
+and individual enthusiasts have built window managers            [17]. Mynatt examined office workers’ use of physical
+and interaction techniques to help users allocate space          whiteboards to inform the design of Flatland, an
+to windows and information, but few have been                    electronic whiteboard system [16]. Each of these
+formally evaluated. Furthermore, because of a very               researchers employed structured interviews of smaller
+small number of studies of the actual practices window           user populations (14 to 20 people), thereby providing
+manager users (which for PCs is nearly all users), we            detailed, focused studies.
+know very little of the details of specific managers and           Other work has focused on specific characteristics of
+                                                                 window management. Gaylin videotaped nine users
+(eight programmers) of an overlapping window system         questions asked the participants to demonstrate how
+and logged the window operations they performed. He         they interact with windows in different situations, and
+used the results to build better benchmark tasks for        in some of the following sections we analyze those
+testing overlapping window managers [8]. Hutchings et.      observations. The interviewer made few notes during
+al. more recently used this technique to compare single-    the interviews so as to focus on window interaction.
+monitor and multiple-monitor users [12], finding for        The audio recording was later carefully analyzed to
+example that email windows are used differently by          more fully understand participants’ comments about
+each user group. Card et. al. [5] present the “window       their window use.
+working set” model (which inspired the Rooms system           We recruited participants both from within our broad
+[10]) and a classification of window functions, which       computer science department (excluding people in our
+Bly & Rosenberg used to find their tiling scheme            own research group) and through contacts in outside
+superior when information in each window appeared in        organizations in order to have a population of different
+the same location [4]. Kandogan & Shneiderman later         window systems and occupations. 17 people had at least
+found their Elastic Windows tiling scheme superior for      one desktop PC, 12 of which were single-monitor, three
+a number of specific tasks [13]. Neither set of tiling      of which were dual-monitor, and two users had two
+experiments tested tiling schemes against more              independent single-monitor systems in the same desk
+sophisticated overlapping systems such as Rooms.            space. Three people used a laptop exclusively, one of
+  Many systems have been proposed to help users with        whom connected the laptop to another monitor when he
+various aspects of window management, but lack              used the laptop on his desk. Thus there were 22 window
+formal user testing. Rooms is an early, comprehensive       systems: CDE on Solaris (3), Enlightenment on Linux
+virtual desktop system, allowing users to arrange sets of   (2), KDE on Linux (1), Mac OS 9 (2), Mac OS X (1),
+windows (to correspond with tasks) and switch among         Microsoft (MS) Windows 2000 (7), and MS Windows
+the sets with very simple input actions [10]. SCWM          XP (6). Five people employed virtual desktops. Eleven
+also allows users to group windows, but the groups are      of the 20 participants were students: chemistry (2),
+formed by using a constraint solver [1]. Peeling and        computer science (5), general studies (1), immunology
+Rotating Windows aim to let users more easily access        (2), and mathematics (1). Of the nine professionals,
+different windows by treating them more as physical         occupations included administrative assistant (3),
+pieces of paper and less as rigid rectangles [2]. Non-      computer science professor (2), system administrator
+overlapping Dragging allows users to reposition             (2), user interface designer (1), and virology researcher
+windows anywhere and automatically moves any                (1). Of the 20 participants, eight worked outside of the
+resulting obscured windows to nearby empty spaces,          computer science department. Thirteen users identified
+helping to keep windows visible [3]. QuickSpace also        themselves as constant users of their systems, three as
+uses empty space to grow one window while keeping           occasional users (meaning that they used their system
+other windows visible [11]. CIWM relieves the user of       for one or two hours per day), and four as fluctuating
+creating, deleting, moving, and resizing windows            users (some days they are constant users and other days
+through the use of artificial intelligence [7]. The Task    they are occasional users). Screen resolutions ranged
+Gallery, a 3D task and window manager, is a notable         wildly, with the endpoints of 800×600 pixels and
+exception to these systems and techniques, providing        3200×1200 pixels.
+several user studies of the system and showing how
+                                                            4 Definitions
+easily users could switch among different tasks [18]. In
+                                                            Because we had participants with a variety of display
+the commercial arena, Mac OS X Exposé includes two
+                                                            configurations, we take care here to use different
+operations for finding windows in a cluttered desktop
+                                                            meanings for monitor and screen. Monitor means an
+by providing a scaled overview of open windows [14].
+                                                            independent display device whereas screen means the
+3 Methods                                                   entirety of display area. A participant with multiple
+We interviewed 20 adults (11 female) in their regular       monitors or systems has only one screen.
+workspaces. Each interview ranged between 30 and 60           We point the reader unfamiliar with windows to an
+minutes. With participant permission, the interviewer       excellent overview of window management by Myers
+tape-recorded the interview, captured screen contents at    [15]. Two terms that Myers does not specifically
+various points, and photographed the physical work          address are maximize and stacking. Maximize refers to
+environment. The interviews were structured so that the     growing a window to fill an entire monitor. Stacking
+interviewer asked each of the participants the same         refers to changing the depth (z-position) of a window.
+questions from a written script. The interviewer had the      Beyond basic definitions, it is important to carefully
+flexibility to ask follow-up questions when participant     define the idea of focus (indeed, Myers briefly refers to
+responses warranted further investigation. Some of the      the concept). We use input focus to refer to the window
+                                                           systems (such as Solaris CDE) include the maximize
+                                                           window operation.
+                                                             Near maximizers (NMs) are slightly but importantly
+                                                           different. These participants had one or more smaller
+                                                           windows with which they frequently interact or glance
+                                                           (such as instant message (IM) clients or computer status
+                                                           indicators) or leave a bank of desktop icons uncovered.
+                                                           Users will manually resize (nearly) all other windows to
+                                                           occupy all but a little of the remaining portion of the
+                                                           monitor. Interestingly, no NMs used always on top
+                                                           window features, if such features were available. When
+                                                           asked about this, each replied in the following vein as
+                                                           Participant 9: “[Sometimes] I have to fully maximize a
+                                                           window, which means having an always on top window
+                                                           is annoying.” Figure 1 shows a screen shot of a NM.
+                                                           Every NM used mouse-direct switching to move
+Figure 1. A screen of a near maximizer. Windows are        between a nearly maximized window and a window or
+as large as possible without covering important icons.     icon elsewhere in the screen. But NMs composed a
+that has system focus, i.e., the window that exclusively   variety of interaction techniques for switching among
+receives input from the user. We use user focus to refer   nearly maximized windows. Two MS Windows users
+to the window that the user is actively viewing, which     used the taskbar, two Mac OS 9 users used iconify-
+may or may not have input focus. Given that tasks often    restore cycles, and the one virtual desktop user kept one
+involve multiple windows, the separation is crucial        “nearly maximized” window per desktop.
+since completing a task can involve many changes in          Careful coordinators (CCs) are those who tended to
+user focus, but few changes in input focus. When we        have many windows visible simultaneously (meaning
+use focus without qualification, we mean both input        that none of them are maximized) or when they had a
+focus and user focus.                                      maximized window, were working in an application
+                                                           that itself had many sub-windows. We have dubbed this
+5 Management Styles                                        group as “careful” because most, if not all, visible
+We witnessed four dominant ways that participants          windows had an important function for the user and
+switched among windows: (1) moving the mouse               were arranged to reflect that function. CCs also tended
+directly to the window, sometimes requiring a click to     to have similar widths for similar applications (each
+stack it, (2) using a keyboard sequence (usually           web browser had the same width, each IM message
+<alt>+<tab>), (3) using a special, fixed interaction       window had the same width, etc.), although the length
+area (e.g. MS Windows’ taskbar or Enlightenment’s          of each window might vary. All but one of the virtual
+dock), and (4) iconifying a topmost window to stack the    desktop users who we interviewed were CCs. CCs
+desired window. Most participants indicated that they      seemed to use a taskbar only when the window to be
+exclusively used one technique, although a few mixed       switched to was not visible. All but one of the CCs had
+techniques (mostly mixing (1) with (3)). Among virtual     screen resolutions greater than 1024×768 pixels, and
+desktop users, participants used methods (2) and (3) to    several CCs indicated that their monitors were too wide
+switch among desktops.                                     to use maximized windows.
+  Participants had a variety of ways in which they
+organized screen space; no two organized windows in        6 Usage patterns in NMs and CCs
+precisely the same way. However, participants fell into    All of the participants indicated that everyday
+three broad categories: maximizers (five participants),    interaction involves coordination of multiple windows.
+near maximizers (5), and careful coordinators (10).        Many factors contribute to the way that participants
+  Maximizers simply maximize every window (or              manage the many windows occupying the screen,
+almost all windows). All maximizers used a taskbar or      completely irrespective of display configuration and
+<alt>+<tab> to switch among windows. This outcome          system characteristics.
+is expected as the taskbar and keyboard can be easily      6.1 Invisibility is as important as visibility
+accessed regardless of window size. All maximizers         Using information from one window to interact with
+were single-monitor users, all but one had screen          another window is quite common, whether it be
+resolution of 1024×768 pixels (the other had 800×600       consulting an outline in order to write a paper,
+pixels), and all used MS Windows even though other         compiling email message comments into a coherent
+digest, grabbing images from web pages, or using              most users partially hide the clients behind other
+documentation to write a piece of computer code. Users        windows. In particular, IM requires focus switches over
+employ moving, resizing, and stacking of windows in           short intervals, making iconification or placement to
+various ways to accommodate the visibility of                 other desktops inefficient due to excessive interaction.
+information. But participants also use these techniques         Implication for design: All participants who
+to purposefully hide information as well! We discuss          employed hiding techniques demonstrated situations in
+two different reasons that people hide window contents.       which hiding information was difficult or caused an
+  One instance of purposeful hiding is when the               unnecessary amount of interaction. A design that arises
+interaction in one window (the main window) can be            immediately from our observations is an operation that
+aided by information in other windows (the secondary          shows or hides a user-specified region of a window,
+windows). User focus will shift among the entire set of       whether for information display or maintaining privacy.
+windows, while input focus will mostly remain in the          One might also consider dynamic transparency or other
+main window. When the main window has user focus,             subtle methods of obfuscation for privacy. Both are
+secondary windows can be distracting for many                 better suited for the window manager because an
+reasons. Secondary window animation is change-blind           application designer will likely not know a priori what
+if the change is so subtle that it will not grab the user’s   information will be displayed and valued by the user.
+focus; a complaint voiced by six users is the presence of       Implication for evaluation: This finding can help to
+non-change-blind animation. However, a portion of the         create appropriate tasks for testing a display space
+information area (as opposed to interaction area) can be      manager: tasks may include the use of many windows
+important for users to view, making iconification of the      as information-only windows or the need to hide part of
+window impossible. Thus, users will attempt to hide the       a window and show another part of that window to
+distracting areas by moving them off-screen or by             successfully complete a task. An evaluator might
+allowing the main window or secondary windows to              specifically test the mechanics of showing or hiding
+cover them. Another distracting factor could simply be        parts of an individual window.
+the sheer amount of information contained in a                  Implication for a specific system: This finding could
+secondary window, relative to the information that is         have a positive impact on a system like SCWM [1],
+relevant to the main window. Thirteen users indicated         which lets users group windows through constraints.
+that they hide a large portion of the secondary               For example, a user could constrain a secondary
+window(s) to allow them to more quickly locate the            window with sensitive information to always be
+relevant information and focus on the task at hand.           occluded (when it does not have input focus) by the
+These participants often expressed that resizing              primary window in a multi-window task.
+secondary windows is undesirable as the layout of the
+                                                              6.2 Strict tiling is rarely employed
+information is then subject to change, causing
+                                                              A consequence of intentional hiding of information in
+disorientation and unnecessary interaction. For example
+                                                              windows is that participants rarely tile them. However,
+Participant 7 often displayed the outline of a document
+                                                              we found two additional direct causes for the absence of
+in a separate window from the document itself to help
+                                                              tiling strategies by our participants. Responses to two
+guide the writing of the document.
+                                                              sets of interview questions helped us understand why.
+  Another type of information hiding relates to privacy,
+                                                              When the interviewer first arrived, he asked the
+as indicated by six users. All participants used email
+                                                              participants to explain the layout of windows on the
+and many had email programs running constantly. A
+                                                              desktop. Later in the interview, the participant showed
+number of participants also used IM to communicate.
+                                                              how he or she interacted with windows in a typical or
+Some used programs with sensitive, proprietary
+                                                              recently-completed multi-window task. In all cases,
+information. This can pose a difficult management
+                                                              participants did not have or use tiled windows.
+situation, since information is frequently accessed or
+                                                                 One cause was the desire to quickly access many
+consulted, yet should remain invisible when not in
+                                                              other windows, as all users indicated. In contrast to the
+direct use. As Participant 2, who works in a laboratory,
+                                                              times when one window dominates input focus and user
+said, “The desktop is not as personal as just one
+                                                              focus is spread among many windows, there are other
+person’s vision,” or, as participant 14, who has a private
+                                                              times when both input and user focus frequently switch.
+office, stated, “I don’t want to have [my email] visible
+                                                              In these cases, leaving just a small bit of a window
+on the screen when people walk in. I’m pretty private
+                                                              visible makes it easily accessible, and furthermore
+about it... hiding things is good.” A few users iconify
+                                                              allows the window to maintain the layout of its
+communication client windows or place them on a
+                                                              information. Participants using multiple monitors in
+dedicated virtual desktop to completely hide them.
+                                                              particular indicated that because special interaction
+However, because these clients are frequently used,
+                                                              areas like the taskbar are located on only one monitor, it
+is easier to directly click on windows than to travel to     these shortcut icons visible. The surprising finding is
+the taskbar and then back to the window of interest          not that participants used icons frequently, but rather
+(replicating similar results from Czerwinski et. al. [6]     that they have specific icons visible almost all of the
+and Hutchings et. al. [12]).                                 time and that the visibility of these icons greatly affects
+   The other cause was the desire to prefer the display of   the way that they manage space.
+information rather than UI components in windows,              Participants demonstrated many functions that icons
+especially when such windows did not have input focus.       can serve (sometimes more than one simultaneously).
+Consider the IM client in Figure 2, which was used by        Icons can act as “quick launches” for commonly used
+Participants 2 and 10. Each one situated the window          applications or files, “status monitors” for events such
+such that the bottom left section (nine UI buttons) was      as print jobs, important interactive components (such as
+off-screen. They did so because when they looked to          the “Trash” or “Recycle Bin” icon, which allows people
+see who was online, they did not need to see the             to temporarily delete files), easily accessed temporary
+buttons, and displaying the buttons wasted screen space      files, and even visual reminders to complete a task. The
+that they could use for other purposes. We selected this     difference between reminders and “quick launches” or
+example because it makes for a small figure and is           “temporaries” is that reminder files need urgent user
+indicative of six other participants in our study who        attention, whereas the other two do not. Many
+demonstrated similar attributes with other windows.          participants indicated covering the former was an
+   Implication for design: A general disadvantage of         annoyance, covering the latter was detrimental to work.
+tiling window managers is that carefully positioned          This situation causes participants to complete a lot of
+windows are easily disturbed, which can cause the            manual resizing and avoid automated window functions
+issues of accessing windows and wasting screen space.        like maximize. They also avoided operations that hide
+Possible design directions include exploring alternate       all windows and show the desktop (available in both
+ways of tiling (perhaps by tiling sections of windows        Windows XP and Mac OS X Exposé as keyboard
+and not entire windows) or methods of quickly                shortcuts) because they would have to remember to use
+reverting to previous configurations. In the case of         the operation to look at the icons on the desktop.
+multiple monitors, tiling systems must help users access       Implication for design: Future systems might
+windows and also respect physical monitor boundaries.        explore how to designate a group of icons as “non-
+   Implication for evaluation: A successful evaluation       empty space,” where, for example, maximize does not
+of a tiling system would demonstrate how well the            cover the space, but manual resizing of windows allows
+system overcomes the issues of wasted screen space           the icons to be covered. Alternatively, the notion of
+and extra interaction needed to quickly access a larger      desktop icons could be replaced by something that more
+set of windows. Selecting tasks that require the use of a    tightly integrates with the window system.
+large number of windows will help. Additionally, tiling
+for multiple monitor users is not well understood and
+evaluation may lead to advances in design.
+   Implication for a specific system: Demonstrating
+that users indeed struggle to manage windows so that
+they can quickly access them justifies the utility of
+Rotating Windows [2], which is designed specifically to
+decrease the effort needed for this type of configuration.
+6.3 “Empty space” is often not empty
+One set of interview questions asked the participants to
+show the typical layout of windows on their systems.
+Three participants completely filled the screen with
+windows, leaving no pixel of screen space without a
+window. The 12 others left some screen space vacant,
+and all of them (except virtual desktop users)
+specifically managed the windows to keep a bank of
+desktop icons visible. In all cases, these desktop icons
+provided a way to create a new window and did not
+represent a window that was already created. Figure 1        Figure 2. On the left are the top and bottom sections of
+shows a near maximizer’s icons; note that some careful       an instant messenger client. On the right is the middle
+coordinators also exhibited this behavior. Most              section, which is the only useful part when it has user
+participants indicated a desire for an easier way to keep    focus but not in input focus.
+Figure 3: Participant 5 leaves four full windows visible reminding him to complete tasks later (outlined in white).
+The fifth outlined section at the bottom of the image is the dock, where three additional windows act as yet more
+reminders. Use of multiple monitors in particular seems to engender using windows as graphical reminders.
+  Implication for evaluation: Evaluation of emerging          face communication or through email. All three used
+systems should include an assessment of how easily            email filters to automatically display email messages
+users can switch to and interact with the desktop, then       from “important people” or with “important subjects.”
+revert to an original window configuration. Systems           They all had many windows left open to remind them to
+that replace the icons concept might gain from a              return to abandoned tasks. Other users also relied
+comparison to a system that uses icons to assess both         heavily on electronic communication, whether email or
+usability and learnability of the new system.                 IM. For example, Participant 5, a multiple monitor user,
+  Implication for a specific system: Illustrating how         said “[There are usually] at least six things [in the dock]
+users need “empty space” to remain “empty” indicates          as reminders to come back to a task [that I have not yet
+that designs such as Non-overlapping Dragging [3] and         finished]... email is the center of my universe [and]
+QuickSpace [11], which both try to exploit empty space        dominates everything I do” (Figure 3). An interesting
+by automatically moving windows, should proceed very          point is that although information in windows
+carefully. The techniques could prove to be unusable if       occupying the screen is not used for the task at hand,
+they obscure oft-displayed icons.                             the display of such information is very important to the
+                                                              user and can aid in remembering to switch tasks.
+6.4 Windows can act as reminders
+                                                              Frequently interrupted users all mentioned a desire to
+In addition to icons, many participants use windows as
+                                                              have a visually salient area of the screen to drop
+reminders. Card et. al. were the first to indicate that
+                                                              windows that should be returned to later, making it less
+windows might be used to remind [5]. Our participants
+                                                              difficult to find abandoned windows. Participant 5 in
+indicated a variety of additional situations not addressed
+                                                              particular noted that the dock “is not in my face enough
+by Card et. al. that cause them to use reminder windows
+                                                              sometimes.”
+but most often these situations were described as
+                                                                Implication for design: Window managers may
+interruptions. Indeed, during all of the interviews except
+                                                              consider how to place or alter windows that need later
+one, the participant was interrupted by a phone call or
+                                                              attention. Two immediately obvious ideas are to
+visitor. Whereas in the past lower-power, lower-
+                                                              dedicate a special area for users to drop such windows,
+memory machines could force users to close windows
+                                                              or create a “super window” that contains all of the
+to handle these interruptions, today’s machines allow
+                                                              reminder windows and uses change-blind animations to
+people to keep many windows open. The power of
+                                                              cycle through them. Windows marked as reminders by
+leaving windows open is that more context of the task
+                                                              users could also be graphically altered to gain more
+that the reminder window represents is readily available
+                                                              prominence in the display.
+to the user. Several participants demonstrated this
+                                                                Implication for evaluation: Increased system power
+power when they explained in great detail what
+                                                              has allowed users to keep many windows open, moving
+different windows reminded them to do.
+                                                              the burden of remembering to complete tasks from the
+  All three administrative assistants indicated that
+                                                              brain to the eyes. Evaluators can assess how well new
+interruptions are a part of their jobs, whether by face-to-
+techniques allow users to easily have many windows           Window systems might also track how people use the
+open and how easily reminder windows can be recalled.        input devices, and provide information on how the user
+  Implication for a specific system: This finding and        can more effectively use the system or determine
+our first finding about windows providing information        display techniques that aid the user’s habits.
+without having input focus imply that more careful             Implication for evaluation: When evaluating a space
+design is needed for systems like CIWM [7], which try        management system, researchers should take care to
+to determine the importance of a window based on             have participants use a variety of input techniques to
+input focus and close windows deemed unimportant.            provide additional reliability of results or determine if
+Closing a reminding window could have a detrimental          some input devices or techniques work poorly with the
+effect on overall task completion for users.                 system. This may take particular importance as
+                                                             advanced input techniques (such as voice commands
+6.5 The effect of input devices
+                                                             and eye-gaze tracking) become more robust.
+Throughout our interviews, we found that the type of
+input devices available to the participants guided the       7 Future work
+ways that they managed screen space. There are a             Analysis of our interactions with participants indicates
+number of specific examples, but space constraints           that maximizers may grow extinct as displays support
+prohibit discussing all of them. Thus we present the         higher resolution at lower cost, and near maximizers
+following two typical examples.                              could be aided by very simple changes to the maximize
+  Participant 11 uses a laptop system that sits in a         operation. We present one design idea that could help
+docking station on his desk. Attached to the docking         careful coordinators with respect to many of the results
+station is a flat panel monitor, giving a multiple monitor   uncovered in the previous section and some further
+setup. Initially, he used the touchpad on his laptop. In     discussion of multiple monitor systems.
+order to move the mouse between monitors, he needed
+                                                             7.1 Rethinking Iconify & Resize
+two to four runs of his finger across the touchpad. Due
+                                                             Other than iconify, window managers do not have built-
+to this input overhead, the second monitor often
+                                                             in functions that help careful coordinators hide or show
+contained windows that displayed information but
+                                                             specific window contents, which our careful
+seldom or never received interaction (such as web
+                                                             coordinators indicated as quite useful. One idea for
+browsers). Later, he decided to attach a desktop mouse
+                                                             diminishing the amount of space occupied by a window
+to the docking station, which allowed him to use one
+                                                             is to give the user a simpler way to indicate the parts of
+motion to switch monitors and prompted him to mix
+                                                             a window that should be visible. Consider the IM client
+interaction more evenly between the monitors. For
+                                                             window shown in Figure 2. Other than the important
+example, he now commonly edits documents on the
+                                                             list of people who are online, the interface also includes
+attached monitor while interacting with email about the
+                                                             a menu, a logo, an advertisement, a label indicating the
+document on the other monitor.
+                                                             buddy list’s owner, and two banks of large graphical
+  Consider the case of Participant 12. She has two
+                                                             buttons for interacting with the client, all of which are
+independent systems on her desk, which means two
+                                                             useless unless the window has input and user focus.
+monitors, two mice, and two keyboards. The desk has a
+                                                             Even then, if users want to send messages to buddies,
+drop-down tray in which one keyboard can be placed.
+                                                             they need only click on the buddies’ names to open
+Because of her RSI, she uses the tray for both a
+                                                             new IM windows. The relevant region of the window is
+keyboard and a mouse. This has two effects: (1) the
+                                                             only the buddy list for most of the time that the window
+mouse has very little room to move, which requires her
+                                                             is on the screen.
+to pick it up and drop it frequently when moving the
+                                                               We could diminish the amount of space occupied by
+mouse pointer, and (2) she uses the other system for
+                                                             the window by simply allowing the user to draw a
+absolutely nothing but email. For awhile, she ran a
+                                                             rectangle about this relevant region, hide the remainder
+program that allows one set of input devices to control
+                                                             of the window contents, and treat the region as a
+multiple systems. However, the amount of pixels that
+                                                             window unto itself. Note how the standard version of
+she had to traverse was too large for such a small mouse
+                                                             resize would not accomplish the same thing. If a user
+space: “I tried the one keyboard and mouse, but it didn't
+                                                             resizes the window, the only part that becomes smaller
+work because of the stupid little space for the mouse...
+                                                             is the buddy list, which is exactly the important part. If
+I’m limited by the physical desk.”
+                                                             a user instead just scaled the window to the size of the
+  Implication for design: These observations open new
+                                                             relevant region, it is unlikely that a user could read the
+avenues for future work. One is to simply study the
+                                                             text of the list, thus prohibiting glancing. Finally, the
+space management affordances of different devices in
+                                                             relevant regions concept is an ideal candidate for the
+order to tailor management techniques, or indeed build
+                                                             window manager because it is user-defined and may
+devices that more closely match users’ characteristics.
+cover sections of UI components, so users could use the          AAAI Symp. on Smart Graphics, 76–83, 2000.
+regions regardless of applications.                         [2] Beaudouin-Lafon, M. Novel interaction techniques
+  Not only does this concept extend to showing and               for overlapping windows. In Proc. UIST, pages
+hiding specific contents (outlined in both subsections           153–154, 2001.
+6.1 and 6.2), but it could also help people exploit the     [3] Bell, B. and Feiner, S. Dynamic space management
+use of windows as reminders (subsection 6.4) by                  for user interfaces. In Proc. UIST, 239–248, 2000.
+showing a small, graphically salient part of the window.    [4] Bly, S. A. and Rosenberg, J. K. A comparison of
+Giving users smaller windows to manage can help                  tiled and overlapping windows. In Proc. CHI,
+particularly those who keep some part of the desktop             pages 101–106, 1986.
+visible (subsection 6.3), since they have a smaller space   [5] Card, S. K., Pavel, M., and Farrell, J. E. Window-
+in which to place their windows.                                 based computer dialogues. In Proc. INTERACT,
+7.2 Concerning multiple monitors                                 pages 239–243, 1984.
+A common argument given about multiple monitors is          [6] Czerwinski, M. et. al. Toward characterizing the
+that “given enough space, people will tile all windows,          productivity benefits of very large displays. In
+so window management becomes less important.” That               Proc. INTERACT, pages 9–16, 2003.
+people specifically hide window contents for a variety      [7] Funke, D. J. et. al. An approach to intelligent
+of reasons, use “empty space,” and employ space to               automated window management. In Int. J. of Man-
+help remind all cast a shadow of doubt on this belief.           Machine Studies 38, pages 949–983, 1993.
+Furthermore others have shown that multiple monitors        [8] Gaylin, K. How are windows used? Some notes on
+are not treated as simply “additional space” and that            creating empirically-based windowing benchmark
+people tend to manage space within monitors, rarely              task. In Proc. CHI, 96–100, 1986.
+allowing windows to straddle physical boundaries [9].       [9] Grudin, J. Partitioning digital worlds: focal and
+  These aspects indicate that techniques that aim to help        peripheral awareness in multiple monitor use. In
+people manage windows on monitor-sized displays are              Proc. CHI, pages 458–465, 2001.
+likely to help users of any number of monitors. Indeed,     [10] Henderson, D. A. Jr. and Card, S. K. Rooms: the
+with more space to manage, techniques such as relevant           use of multiple virtual workspaces to reduce space
+region-based resizing could dramatically improve the             contention in a window-based graphical user
+window interaction experience, relieving users of                interface. In ACM Trans. on Graphics 5(3), pages
+contorting ways of displaying information and                    211–243, 1986.
+accessing windows. Evaluating the ease with which           [11] Hutchings, D. R. and Stasko, J. QuickSpace: New
+such designs help users both complete multi-window               operations for the desktop metaphor. CHI Extended
+tasks and switch among these tasks will aid in teasing           Abstracts, ACM Press, pages 802–803, 2002.
+out the specific benefits the designs give. Our findings    [12] Hutchings, D. R. et. al. Display space usage and
+can aid in developing evaluations that reflect the actual        window management operation comparisons
+practices and values people exhibit in managing space.           between single monitor and multiple monitor users.
+8 Conclusion                                                     Proc. Advanced Visual Interfaces, ACM Press,
+While there are many intuitions and beliefs about the            2004, (to appear).
+way that people manage display space, there is              [13] Kandogan, E. and Shneiderman, B. Elastic
+remarkably little documented research on the topic. Our          windows: evaluation of multi-window operations.
+detailed study of actual space management schemes and            In Proc. CHI, pages 250–257, 1997.
+interaction issues provides such research. We believe       [14] Macintosh OS X Exposé hot key operations.
+that the rise of multiple monitor displays will prompt           http://www.apple.com/macosx/panther/expose.html
+designers to enhance window management systems.             [15] Myers, B. Window interfaces: a taxonomy of
+Our analyses will help inform both the design and                window manager user interfaces. In IEEE
+evaluation of next-generation space management                   Computer Graphics and Applications 8(5), pages
+techniques by providing an accurate depiction of the             65–84, 1988.
+high-level, display-independent techniques that users       [16] Mynatt, E. D. The writing on the wall. In Proc.
+employ to manage display space.                                  INTERACT, pages 196 – 204, 1999.
+                                                            [17] Ringel, M. When one isn’t enough: an analysis of
+Acknowledgement
+                                                                 virtual desktop usage strategies and their
+We would like to thank Mary Czerwinski for offering
+                                                                 implications for design. In CHI Extended
+insightful comments about an early draft of this paper.
+                                                                 Abstracts, pages 762–763, 2003.
+References                                                  [18] Robertson, G. et. al. The task gallery: a 3D window
+[1] Badros, G.J. et. al. SCWM: an intelligent                    manager. In Proc. CHI, pages 494–501, 1993.
+     constraint-enabled window manager. In Proc.
+
