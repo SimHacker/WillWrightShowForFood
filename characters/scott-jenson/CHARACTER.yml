@@ -283,6 +283,14 @@ transformation_field:
       - "Scale is in the field, not on the object, so the same object reads differently depending on where it sits, and moving it is how you restyle it."
       - "Overflow is allowed. Big things draw over their neighbors' borders, the way a signpost stands above the roofs."
       - "Physics respects the field: momentum and collisions happen in local scale, so tiny things at the bottom of the bag jostle at their own size."
+    corners_not_iconify: "Want a small icon you can always see? Don't iconify it and then move it; just move it to a corner or edge whose scale is small. Being there is what makes it small, and dragging it back out restores it. Iconify stops being a state of the window and becomes where you put it."
+    regions_have_policies: |
+      Each region carries its own dimensions of scale, not just one number: how far to shrink, in
+      which direction to project or collapse, and whether to iconify, minimize, summarize (title only,
+      a one-line LLM précis, a thumbnail), filter (show only unread, only errors, only diffs) or leave
+      some part visible (the cropped region you chose, the status light). The policy belongs to the
+      place, not to the window, so moving a thing between places changes how it's shown.
+    many_holes: "So you get different holes and boxes for different purposes, each a different kind of collection and data flow: an always-visible corner tray, a bag of holding for stash, a summarizing inbox rail, a filtering error drain, an archive hole that slows time. Choosing where to drop something is choosing how it'll be kept, shown and processed."
     kit: "ARK physics + push-pin constraints + transformation and distortion areas + grooves and spikes + girders + roads + halls + racks. Every piece is stuff you can paint, snap, pin and throw, and save to git."
     why_scott: "It's his spatial stash (KDE [29:25]–[31:03]) given depth: a stash that doesn't take up room, and emphasis you make by direct manipulation rather than through a style menu."
   its_all_stuff: "Scott's fourth ST layer, taken literally. Every window, scrapbook, clip, pin and pocket is a MOOLLM object (a file or directory in a git repo, as in the room, container, inventory, object and card skills). So a pin is a reference you can commit, a layout is a diff, and moving a scrapbook between pockets is a git mv you can see in the log and undo."
