@@ -40,6 +40,7 @@ a word is a JS number.
 | 07 | IDSP 700701 · IDRC 700712 | display: pen skip, read beam coords |
 | 10 | IDHE 701001 | display: h-edge skip |
 | 11 | IDPN 701101 skip · 701112 read | **cabinet extension, not 1972**: which pen fired (1–8, 0 = none). Free device code; no PIXIE binary issues it, so stock software is unaffected. Reassemble PIXIE to use it — multiple pens, Engelbart tribute: drag two corners of a rectangle, two radial menus at once, a quiver of eight wands. |
+| 12 | MSF · MRB · MRC · MRS (planned) | **cabinet extension, not 1972**: the pointer as events, x, y and buttons, for programs that drag ([pointer devices](#the-application-layer--packagespixie-separate-module)). |
 | 22–23 | LSF 702201 · LCF 702222 · LRB18 702252 · LLB18!LLAM 702264 · LRB18!LLAM 702276 · LSA 702301 · LKD 702322 · LLB6 702344 · LKE!LLB6 702364 | Titan link |
 | 33 | CAF 703302 | clear all flags |
 
@@ -345,6 +346,36 @@ So a drag pokes the element's atoms (lasting) and patches the display words for 
 feedback (until the recompile replaces them), then asks PIXIE to recompile, once the
 routine that does it is found and can be called at a safe point. Every poke goes through the
 Monitor, so the session records it and a replay drags the same vertex.
+
+**Built: editing the 340's words directly** ([edit340.ts](src/edit340.ts)). Without touching
+any program's own structures: `cornerAt` finds the vector corner under a point in the frame
+just drawn, and `moveCorner` returns the two pokes that move it, the word into the corner
+taking the new end and the word out of it absorbing the difference, so the rest of the
+picture stays put. It refuses a move a 7-bit field can't hold, and a clipped vector. On a
+turtle drawing, which Forth only appends to, the edit lasts; on PIXIE's, it lasts until the
+next recompile. Don did the same by hand from the Forth prompt: point at a line, read its
+address from the tooltip, and `!` a new word into it.
+
+**Then the dragging goes into the program, not the emulator.** Two ways to give a program
+the pointer, both cabinet extensions on free device codes, neither touching stock software:
+
+- **A pointer pen**: a pen that needs no light. It latches every time the program asks,
+  wherever the beam is, so `IDSP` skips and `IDRC` reads the pointer, not the beam. Programs
+  written for the light pen (Forth's pen words, SYMELEC with no change) can drag at any
+  point, not just on lit strokes. It is the light pen's API with the physics turned off:
+  cheap, and it can't tell the program which display word is under it.
+- **A MOUSE device** (dev 12): `MSF` skips on a new event, `MRB` reads x, `MRC` reads y,
+  `MRS` reads buttons, raising the interrupt like the keyboard. Events, not polling, so
+  press, drag and release are never missed between refreshes, and the program pairs them
+  with the 340's own provenance: the hit address from the frame (IDPN pulse 4 in
+  [TAGS-AND-PIES.md](TAGS-AND-PIES.md)) says what is under the press.
+
+Both, in that order: the pointer pen is an afternoon and lights up pen programs at once;
+MOUSE is what a Forth editor wants. In Forth: `mouse ( -- x y buttons )`, `pick ( x y --
+addr )`, and a drag loop of a few lines that reads a vector word, decodes it, and `!`s it
+back, written by whoever wants it, at the Forth prompt, with the same decode as
+`edit340.ts`. The emulator only delivers events and draws; the tool lives in the machine.
+The same MOUSE device is ROADMAP §13's Engelbart mouse port.
 
 **To do: the turtle display list as ring data, sharing graftal's code.**
 Split `toDisplayFile` into `polylines(strokes)` and one shared emitter,

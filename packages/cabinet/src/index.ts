@@ -58,6 +58,8 @@ export type { LanderState, LanderStep } from "./lander.js";
 export { toSvg, toYaml, printScreen, Recorder } from "./media.js";
 export { CORE_FORMAT, coreFromData, coreToJson, coreToRaw, coreToYaml, rawToCore, readAll, readCore } from "./core.js";
 export type { CoreDoc } from "./core.js";
+export { cornerAt, decodeVector, encodeVector, moveCorner } from "./edit340.js";
+export type { Corner, VectorWord } from "./edit340.js";
 export type { SvgOpts } from "./media.js";
 export { parseOct, loadOct } from "./loader.js";
 export { SYMELEC_PATCHES, applySymelecPatches } from "./symelec-patches.js";
