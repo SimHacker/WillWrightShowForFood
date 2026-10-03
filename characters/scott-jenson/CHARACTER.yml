@@ -225,6 +225,8 @@ sources:
     - { title: "Mastodon", url: "https://social.coop/@scottjenson" }
     - { title: "Email", url: "mailto:scott@jenson.org" }
   local: sources/README.md
+  research:
+    - sources/2004-hutchings-stasko-display-space-management.md
 
 see_also:
   - ../alan-kay/

@@ -37,8 +37,13 @@ associative, episodic). He says at KDE [1:45] that the Ubuntu talk passed half a
 | [Mobile Apps Must Die](https://jenson.org/mobile-apps-must-die/) | 2011 | just-in-time interaction, Physical Web roots |
 | [The Simplicity Shift](https://jenson.org/The-Simplicity-Shift.pdf) (book, PDF) | — | style / structure / strategy, and "stuff" |
 
+## Related research
+
+- [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks.
+
 ## Contact
 
+- Email: [scott@jenson.org](mailto:scott@jenson.org)
 - Mastodon: [@scottjenson@social.coop](https://social.coop/@scottjenson)
 - Bluesky: [jenson.org](https://bsky.app/profile/jenson.org)
 - Meeting: [jenson.org/go/meet](https://jenson.org/go/meet)
