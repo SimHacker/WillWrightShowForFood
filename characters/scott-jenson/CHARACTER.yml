@@ -223,6 +223,7 @@ sources:
     - { title: "Boring is good", url: "https://jenson.org/boring/" }
     - { title: "The Ma of a New Machine", url: "https://jenson.org/ma/" }
     - { title: "Mastodon", url: "https://social.coop/@scottjenson" }
+    - { title: "Email", url: "mailto:scott@jenson.org" }
   local: sources/README.md
 
 see_also:
