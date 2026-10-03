@@ -40,6 +40,11 @@ associative, episodic). He says at KDE [1:45] that the Ubuntu talk passed half a
 ## Related research
 
 - [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks ([cached PDF](2004-hutchings-stasko-display-space-management.pdf)).
+- Craig Tashman, *WindowScape: A Task Oriented Window Manager*, UIST 2006 ([cached author's version](2006-tashman-windowscape.pdf), [original](https://sites.cc.gatech.edu/pixi/pubs/WindowScaper_Author'sVersion.pdf)). It treats layouts as photographs on a timeline, so one window can appear in many photos. See `transformation_field.photographs` in [CHARACTER.yml](../CHARACTER.yml).
+
+## Responses to the talks
+
+- Mat Duggan, [Make tmux the OS](https://matduggan.com/what-does-my-dream-os-ui-look-like/) (2026-10-02), written after the KDE talk. It covers Rooms, Hutchings & Stasko, WindowScape, Niri, Arc, a graveyard of shipped attempts, an infinite canvas with display viewports, and an LLM that proposes changes for you to press y on. Its "Reasons this design sucks" section reverses the post's earlier view of WindowScape: the evaporating photos had been doing garbage collection.
 
 ## Contact
 
