@@ -974,6 +974,39 @@ state is its target minus `T`, shifted; a two-state rule like Life only compares
 tile's address. A 32 by 32 grid is 34 rows of 35 words, 1,190 words a buffer and 2,380 for the
 pair, plus the tiles.
 
+### Or: both generations in one word
+
+An 18-bit word holds two 8-bit layers with two bits over, so the past and the future can share
+a cell instead of a buffer each (Don's suggestion). A cell is `[2 spare | layer 1 | layer 0]`.
+
+- **A parity word says which layer is now.** A step reads the neighbours' now layer and writes
+  each cell's other layer, then flips parity. Neighbours' now layers are never written during
+  the step, so one array is safe where one buffer of whole states was not. No swap, no copy.
+- **One rule for everyone else: now is what you see and what you edit.** The tile engine
+  renders the now layer; the pen, the map editor and scripts write the now layer; the next step
+  reads it. All three ask the parity word which layer that is.
+- **The edge copy copies whole words.** The other layer is about to be overwritten, so it
+  doesn't matter that it comes along.
+- **Eight bits a cell.** CAM-6's four planes fit with four to spare, which is room for echo
+  planes or a history plane. The step pays for the layer it reads: the low layer is an `AND`,
+  the high one a shift, so the rule's lookup table comes in two copies, one per parity, indexed
+  from where that parity's bits already are. The PDP-7 has no OR, so writing the next layer is
+  `AND` to clear it, then `XOR` the new bits in.
+- **The display list is separate now.** A packed cell is not a 340 word, so the tile engine
+  keeps one `DJS` word per cell beside the state, pointing at the tile for the now layer. A
+  spare bit marks a cell whose next differs from its now; the engine rewrites only those
+  `DJS` words, so a still pattern costs no display writes and a refresh never sees a cell
+  half done. Memory comes out the same as two buffers (1,190 state words plus 1,190 display
+  words for 32 by 32), but a cell has 256 states, not as many as there are tiles.
+- **Reversible rules come free.** Fredkin's second-order rules compute
+  `next = f(neighbours now) XOR past`, and the past is the very layer being overwritten, in
+  the same word. Flip parity once without stepping and the same rule runs backward:
+  Toffoli and Margolus's reversible CAM-6 rules, run forward and back on a PDP-7, with
+  `characters/norman-margolus` to check the details.
+
+Both layouts stay: cells as display calls for two-state rules and the CAM-off's plain
+assembly, packed layers for the CAM-6 device and anything with planes.
+
 ## Assemblers: several front ends, one back end
 
 As in GNU's BFD, the shared part is the back end, not the parsers. Today `src/asm.ts` is one
