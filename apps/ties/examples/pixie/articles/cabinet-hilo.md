@@ -15,9 +15,9 @@ A number guessing game on the PDP-7's teletype. It was written for this cabinet 
 
 A lucky game:
 
-    GUESS? 50
+    YOUR GUESS? 50
     LOWER.
-    GUESS? 25
+    YOUR GUESS? 25
     RIGHT. GUESSES: 2
 
 The number is a counter that runs from 0 to 99 while HILO waits for your Return, so your timing picks it. Halving finds any number in seven guesses.

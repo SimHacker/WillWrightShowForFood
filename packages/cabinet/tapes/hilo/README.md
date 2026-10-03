@@ -9,9 +9,9 @@ teleprinter that SYMELEC, the light pen test and DUEL do not give.
     I THINK OF A NUMBER FROM 0 TO 99. YOU GUESS IT.
     PRESS RETURN TO START.
     I AM THINKING OF A NUMBER.
-    GUESS? 50
+    YOUR GUESS? 50
     LOWER.
-    GUESS? 25
+    YOUR GUESS? 25
     RIGHT. GUESSES: 2
 
 - `hilo.s`: the program, DEC PDP-7 assembler syntax, start at 100.

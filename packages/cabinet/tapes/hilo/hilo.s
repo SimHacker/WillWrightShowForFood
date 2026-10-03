@@ -132,7 +132,7 @@ think,	text "I AM THINKING OF A NUMBER."
 	215
 	212
 	0
-prompt,	text "GUESS?"
+prompt,	text "YOUR GUESS?"
 	215
 	212
 	0

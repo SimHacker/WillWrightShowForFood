@@ -54,7 +54,7 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 	m.box.run(50_000);
 	assert.match(m.paper(), /^HILO, FOR THE PDP-7 TELETYPE\.\r\nI THINK OF A NUMBER FROM 0 TO 99\. YOU GUESS IT\.\r\nPRESS RETURN TO START\.\r\n$/);
 	assert.equal(m.type("7"), "", "keys other than Return are ignored");
-	assert.match(m.type("\r"), /^I AM THINKING OF A NUMBER\.\r\nGUESS\?\r\n$/);
+	assert.match(m.type("\r"), /^I AM THINKING OF A NUMBER\.\r\nYOUR GUESS\?\r\n$/);
 	const s = m.secret();
 	assert.ok(s >= 0 && s <= 99, `secret ${s}`);
 	let lo = 0;
@@ -66,7 +66,7 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\.\\r\\nRETURN TO PLAY AGAIN\\.\\r\\n$`));
 			return;
 		}
-		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nGUESS\\?\\r\\n$`));
+		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nYOUR GUESS\\?\\r\\n$`));
 		if (g < s) lo = g + 1;
 		else hi = g - 1;
 	}
@@ -77,7 +77,7 @@ test("hilo: an empty line asks again, and letters in a number are skipped", () =
 	const m = machine();
 	m.box.run(50_000);
 	m.type("\r");
-	assert.equal(m.type("\r"), "\r\nGUESS?\r\n", "no digits: ask again");
+	assert.equal(m.type("\r"), "\r\nYOUR GUESS?\r\n", "no digits: ask again");
 	const s = m.secret();
 	const g = s === 42 ? 41 : 42;
 	const out = m.type(`x${Math.floor(g / 10)}y${g % 10}\r`);
