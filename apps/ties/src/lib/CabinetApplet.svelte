@@ -2604,6 +2604,11 @@
 					style:height={ttyHeight || ttyExtra ? `calc(${ttyHeight ? `${ttyHeight}px` : '12em'} + ${ttyExtra}px)` : null}
 					bind:this={ttyEl}
 					tabindex="0"
+					spellcheck="false"
+					autocorrect="off"
+					autocapitalize="off"
+					writingsuggestions="false"
+					translate="no"
 					data-keep-focus
 					role="textbox"
 					aria-multiline="true"
@@ -2630,7 +2635,10 @@
 						oninput={onCliInput}
 						autocomplete="off"
 						autocapitalize="off"
+						autocorrect="off"
 						spellcheck="false"
+						writingsuggestions="false"
+						translate="no"
 						data-keep-focus
 						aria-label="Command line: type or dictate, then Return to send it to the {program?.label ?? 'machine'}"
 						placeholder={ttyCfg.input === 'line' ? 'Type or dictate a line, then Return' : 'Keys go straight to the machine'}
