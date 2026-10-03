@@ -237,6 +237,14 @@ machine to record for the AM radio, and a second witness for the display, would 
 > to the museum, under whatever terms you set. Real phosphor against simulated is the best test
 > we could have, and the films would be a reason for people to come and see the machine.
 >
+> Some of the tapes would be test patterns rather than demos, made to calibrate our phosphor
+> simulation against your tube: points and lines at each of the eight intensities, a single
+> flash timed to the frame, refresh rates from fast to flickering, a moving dot for the trail's
+> decay. Filmed with the camera's exposure, frame rate and white balance locked, they let us fit
+> the simulation to the real P7's brightness, colour and afterglow, and then check it on the
+> demos. Each demo would also have music, cleared for YouTube, cut to the program's own timing,
+> so the film and the emulator run play in sync with the same soundtrack.
+>
 > Everything is in git: https://github.com/SimHacker/WillWrightShowForFood (the emulator is in
 > `packages/cabinet`, and it runs in the page at hyperties.org). Thank you for bringing sn 129
 > back, twice.

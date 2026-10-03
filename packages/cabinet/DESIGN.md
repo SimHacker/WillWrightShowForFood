@@ -1167,7 +1167,16 @@ output is this listing, and a listing can be saved as a text file or printed on 
 5. Link stub → echo → filestore.
 6. Phosphor pretty-pass: canvas 2D fade first; WebGPU dual-phosphor
    (fast blue flash for the pen, slow green for the human) is a stretch,
-   never a blocker.
+   never a blocker. **Calibrated against the real tube**: test-pattern tapes for sn 129
+   (each intensity, a timed single flash, refresh rates down to flicker, a moving dot), filmed
+   with locked exposure, frame rate and white balance, give brightness per intensity, colour,
+   and the two decay curves. Fit the shader's parameters (the `PHOSPHOR` knobs, then the
+   uniforms) to the films; check the fit on the demos, with the emulator's run rendered beside
+   the film frame by frame. The draft letter asks for the films
+   ([UNIX-V0.md](UNIX-V0.md#draft-letter-not-sent)).
+   **Synced to music**: the machine runs on cycles, so a demo's timeline is exact. Cut cleared
+   music to it (beats on frame or clock ticks), and the film and the emulator's run share the
+   soundtrack. With the AM radio ([AM-RADIO.md](AM-RADIO.md)) the machine can play its own part.
 7. The portrait ([PORTRAIT.md](PORTRAIT.md)): 3D cabinet with
    duty-cycle lamps, the phosphor texture on curved glass, and
    sim-Heinz — whose pen tip drives the LightPen plugin. Rides the
