@@ -207,6 +207,32 @@ transformation_field:
         sorting rail.
       - Replies: draft a reply and insert it into the shared history (the chat log, thread or git
         log) at the point it answers, rather than only at the bottom. The history is a rail too.
+    journeys:
+      idea: |
+        Anything can come out onto the rigging: events, notifications, chat messages, LLM prompts and
+        their outputs, tool calls, commits, clips. Each one becomes a visible object you can grab.
+        Nothing stays trapped in a scrolling log inside one app's window. Then you send it on a
+        journey between rooms, windows and characters.
+      examples:
+        - "A prompt rides a belt out of your editor into a character's room; the character's output rides back on the return belt and docks beside the paragraph it answers."
+        - "One chat message forks at a splitter: one copy goes to the thread, one to a scrapbook, and one to a reviewer character's inbox rail."
+        - "A CI failure event travels a hall to the room of whoever last touched the file, and hangs on their door until someone picks it up."
+        - "A chain of agents is a chain of rooms. You watch the prompt hop from room to room, each stop adding to it, and you can grab it mid-journey, edit it and put it back on the belt."
+      rules:
+        - "Every journey leaves a trail: where it went, who touched it and what changed. The trail is the episodic memory, so you can scrub it with the region's clock."
+        - "Objects in transit are still direct-manipulable: pause, reroute, copy, or pull off the belt."
+        - "Routes are part of the rig, so they are visible and editable. Routing is not a hidden rule in a settings dialog."
+        - "Characters are stations on the line. Their inbox is an inbound rail and their outbox an outbound one, and their action queue is the Sims queue above their head."
+      why_scott: "It's his crossed boundaries (Ubuntu [29:33]) carried through to the end: data moves between apps, windows and people as visible stuff, not through the invisible clipboard."
+      moollm_skills:
+        - "https://github.com/SimHacker/moollm/tree/main/skills/postal (letters, texts, attachments between characters)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/data-flow (rooms as pipeline nodes, exits as edges, objects as messages)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/worm (two-pointer reversible cursors for traversal and dataflow)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/action-queue (Sims-style queues)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/vehicle (movable rooms that carry things)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/exit (halls and doors as edges)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/session-log (the trail)"
+        - "https://github.com/SimHacker/moollm/tree/main/skills/speed-of-light (many hops in one call when you don't need to watch)"
     why_scott: "It answers his 'design for big monitors' (KDE [27:48]) and spatial stash (KDE [29:25]–[31:03]) with user-built structure instead of yet another fixed layout policy, and Hutchings & Stasko's careful coordinators (sources/2004-hutchings-stasko-display-space-management.md) are already hand-building these rigs out of window edges, with no tools to help."
     moollm: "A rig is a logistic-container in MOOLLM terms (https://github.com/SimHacker/moollm/tree/main/skills/logistic-container): rails are containers with ordering, belts are containers with a clock, inserters are actions. All of it is files in git."
     corpus:
