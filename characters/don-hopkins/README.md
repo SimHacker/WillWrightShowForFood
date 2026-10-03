@@ -16,7 +16,7 @@ Micropolis, Repo Show host. **YAML backbone, markdown facade:** facts live in
 technology accidentally prepared the next.
 
 **Wanna chat?** [Open an issue](https://github.com/SimHacker/WillWrightShowForFood/issues)
-or submit a PR. **Photos:** [`media.md`](media.md)
+or submit a PR. **Photos:** [`media.md`](media.md) · **Books:** [`books/`](books/README.md) ([Methodology of Window Management](books/methodology-of-window-management.md))
 
 ---
 
