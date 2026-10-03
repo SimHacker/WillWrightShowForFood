@@ -304,6 +304,21 @@ transformation_field:
       post_hoc: "WindowScape's best property survives: you never decide in advance. Tasks are named after the fact by giving a branch a name, pinning a photo into a room, or hanging it on a rig, and an LLM can propose names and groupings on the visible command bus (pbd_at_the_heart) that you accept or ignore, Duggan's 'it proposes and you press y'."
       privacy: "Duggan asks for 'presenter view as a desktop primitive' and says 'Private is a property of a window or tab, not a region of the screen.' A photo does both: a presenting photo shows only the views you put in it, so the projector gets a curated photo instead of your desktop, and the private windows were never in it."
     why_scott: "It's his episodic memory (KDE) done without logging everything: the photos are the episodes, you can scrub them, and the ones you don't need shrink out of the way without anyone deciding to delete them."
+  self_hosting:
+    duggan: "'All of this makes sense from the perspective of \"the browser is now the operating system\", but I think this is a fundamentally flawed idea. If a web application is operating as an application, it should be its own window. If it is complimentary to another application, it should be a window associated with another application and be allowed to contain many tabs, to reflect the idea of the browser as the portal for all research and lookup.' (Make tmux the OS, on Arc and Chrome OS)"
+    don_answer:
+      attribution: "Don's proposal, disagreeing with Duggan."
+      idea: "Neither 'the browser is the OS' nor 'break the browser into OS windows'. The frame system should be able to host, view and manipulate itself as just another window. Tabs, apps, OS windows, and the frame system itself are all windows of the same kind, and any of them can appear inside any other."
+      how: "It's live_views turned on itself. The frame system shows a live, cropped, scaled view of a native window, a browser tab, or another instance of itself, with input passed through. A whole workspace can then be a pinned thumbnail inside another workspace, a photo, or one stop on a rig, and you can open it there and work in it."
+      consequences:
+        - "Where a window lives stops mattering. A docs tab can be in the browser, in a task, and in two photos at once, as views of one source, so Duggan's question of which window owns the tab never comes up."
+        - "No separate manager layer. Window management, task management and the photo timeline are ordinary windows inside the space they manage, so you can view, crop, fork and script them like anything else."
+        - "Nesting goes as deep as you like. A view of the frame system showing a view of itself is a Droste picture, and the scale painting decides where it stops being worth drawing."
+      lineage:
+        - "NeWS: window managers were PostScript programs running in the same server as the windows they managed, not a privileged outside process."
+        - "Smalltalk-80 and Morphic: the browser, inspector and debugger are windows built from the same objects they inspect, and in Morphic the World itself is a morph."
+        - "Ted Nelson's transclusion and Alan Kay's 'multiple views of the same objects, and to edit them from any view' (live_views.lineage)."
+    why_scott: "His files essays argue for stuff you can see, move and act on outside of apps. Here the container is stuff too: there is no special layer left, only stuff and views of stuff."
   box_model:
     attribution: "Don's proposal: the CSS box model (crop, border, padding, margin) made live and inhabitable."
     edges: "Crop, border, padding and margin are all edge operations, and every edge is editable live (none, some or all at once). Crop cuts into the content, padding pushes the content in from the border, and margin pushes neighbors away from it."
