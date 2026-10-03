@@ -147,9 +147,23 @@ bug wear   200 fd   90 rt   200 fd
 - `shape: … ;shape` records the moves into a shape (the emitter seam,
   [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)), as relative
   steps, so it draws wherever the turtle is. The same thing as a tile or a symbol.
-- `wear ( shape -- )` makes `redraw` draw that shape in place of the triangle, rotated to the
-  heading. The 340 can't rotate a subroutine, so `redraw` re-emits the shape's steps through
-  `off` at the heading, as it does the triangle now, and keeps the turtle a few words long.
+- `wear ( shape -- )` makes the turtle draw as that shape, rotated to the heading. The 340
+  can't rotate a subroutine, so we rotate its words ourselves:
+  - **The ideal shape** is kept unrotated, as absolute points in the turtle's 1/64-pixel fixed
+    point, never as 340 words.
+  - **One reserved subroutine** of fixed length, called by a `DJS` from the turtle's spot in the
+    display list. A heading change rotates the ideal points with `sin`/`cos`, rounds each to a
+    pixel, and pokes the differences into the subroutine as vector words. The call site never
+    changes; only the words behind it do.
+  - **Rounding never drifts.** Deltas come from rounded absolute points, not rotated deltas, so a
+    closed shape stays closed at every heading.
+  - **It always fits.** `shape:` refuses a step longer than 127 pixels end to end, so no rotation
+    pushes either axis past a vector word's 127, and a shape of n steps always takes exactly n
+    words. A shorter one pads with dark zero-length words, so the slot never moves.
+  - **Or precompute.** For a shape worn often, rotate it once into 24 subroutines, a 15° step
+    each, and turning only rewrites the `DJS` target: one word per turn, more core.
+
+  The same transform is the edit tools' rotate and scale, and works for tiles and symbols.
 - `shapes` lists them; `triangle wear` puts the old turtle back.
 - With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
   says what it is.
