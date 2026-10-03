@@ -21,6 +21,8 @@
 		Trace,
 		Monitor,
 		hoverAt,
+		cornerAt,
+		moveCorner,
 		dist2,
 		MODE,
 		ST340_STOPPED,
@@ -350,6 +352,77 @@
 		const hovered = hoverTip();
 		if (hovered && outlineOn) drawHover(ctx, hovered);
 		if (showPen) drawPen(ctx);
+		if (editOn) drawCorner(ctx, seen);
+	}
+
+	// Edit mode: drag a corner of what the 340 draws by rewriting its two vector words in core.
+	// The program's own structures don't change, so PIXIE's next recompile puts its picture back.
+	let editOn = $state(false);
+	let editGrab = null;
+	let editAt = null;
+	let editNote = $state('');
+	const EDIT_RADIUS = 14;
+
+	function drawCorner(ctx, seen) {
+		const at = editGrab ? { x: editGrab.x, y: editGrab.y } : editAt;
+		if (!at) return;
+		const c = editGrab?.corner ?? cornerAt(seen, at.x, at.y, EDIT_RADIUS);
+		if (!c) return;
+		ctx.save();
+		ctx.strokeStyle = editGrab?.refused ? '#ff6b6b' : '#ffd27a';
+		ctx.lineWidth = 2;
+		const x = editGrab ? editGrab.x : c.x;
+		const y = editGrab ? editGrab.y : c.y;
+		ctx.strokeRect(x - 7, 1023 - y - 7, 14, 14);
+		ctx.restore();
+	}
+
+	function editDown(event) {
+		const { x, y } = gridFromEvent(event);
+		const segs = t340.lastFrame?.segments ?? t340.segments;
+		const corner = cornerAt(segs, x, y, EDIT_RADIUS);
+		if (!corner) {
+			editNote = 'No corner here: point at the end of a line.';
+			return;
+		}
+		editGrab = { corner, x: corner.x, y: corner.y, refused: false };
+		editNote = `Corner ${corner.x},${corner.y}: words ${oct(corner.into.addr, 5)}${corner.outOf ? ` and ${oct(corner.outOf.addr, 5)}` : ''}`;
+		try {
+			canvasEl.setPointerCapture(event.pointerId);
+		} catch {
+			// Synthetic pointers can't be captured; the drag still works while inside.
+		}
+		pressedId = event.pointerId;
+	}
+
+	function editMove(event) {
+		const { x, y } = gridFromEvent(event);
+		editAt = { x, y };
+		if (!editGrab || event.pointerId !== pressedId) return;
+		const pokes = moveCorner((a) => cpu.read(a), editGrab.corner, x, y);
+		editGrab.refused = !pokes;
+		if (!pokes) return;
+		for (const [a, w] of pokes) monitor.poke(a, w);
+		// The words now hold the corner at (x, y); the next drag step starts from there.
+		const c = editGrab.corner;
+		const dx = x - c.x;
+		const dy = y - c.y;
+		editGrab.corner = {
+			x,
+			y,
+			into: { ...c.into, x1: c.into.x1 + dx, y1: c.into.y1 + dy },
+			outOf: c.outOf && { ...c.outOf, x0: c.outOf.x0 + dx, y0: c.outOf.y0 + dy }
+		};
+		editGrab.x = x;
+		editGrab.y = y;
+	}
+
+	function editUp(event) {
+		if (event.pointerId !== pressedId) return;
+		pressedId = null;
+		if (editGrab?.refused) editNote = 'That far is more than a vector word holds (127 each way).';
+		editGrab = null;
+		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
 	}
 
 	// penGlow: how much phosphor light the photocell sees, 0..1, eased so it swells and fades.
@@ -1784,6 +1857,7 @@
 		if (!pen || !canvasEl || event.button !== 0 || player) return;
 		event.preventDefault();
 		event.stopPropagation();
+		if (editOn) return editDown(event);
 		rest = null;
 		notePenAt(event);
 		penHeld = true;
@@ -1802,6 +1876,7 @@
 	}
 
 	function onPointerMove(event) {
+		if (editOn && t340) return editMove(event);
 		onHoverMove(event);
 		if (!pen || event.pointerId !== pressedId) return;
 		notePenAt(event);
@@ -1816,6 +1891,7 @@
 	}
 
 	function onPointerUp(event) {
+		if (editOn) return editUp(event);
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
 		penHeld = false;
@@ -2332,7 +2408,9 @@
 	{@render edgeGrip('bottom')}
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
-		{#if program?.keyHelp}
+		{#if editOn}
+			<p class="row app keys" aria-live="polite">✋ {editNote}</p>
+		{:else if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
 		{#snippet frontPanel()}
@@ -2527,6 +2605,23 @@
 					>
 				</span>
 				<span class="buttons">
+					<button
+						type="button"
+						class="icon"
+						class:on={editOn}
+						aria-pressed={editOn}
+						aria-label="Edit the picture"
+						title={editOn
+							? 'Editing: drag the end of a line to move it. The pen is off. Click to give the pen back.'
+							: "Edit the picture: drag the end of a line, rewriting the 340's own words in core. Just for fun: the program's structures don't change, so PIXIE puts its picture back when it next redraws."}
+						disabled={status !== 'live'}
+						onclick={() => {
+							editOn = !editOn;
+							editGrab = null;
+							editNote = editOn ? 'Drag the end of a line.' : '';
+							if (editOn && pen) pen.enabled = false;
+						}}>✋</button
+					>
 					<button
 						type="button"
 						class="icon"
@@ -3225,6 +3320,10 @@
 	}
 	.icon.rec {
 		background: #a22;
+	}
+	.icon.on {
+		background: #6b5420;
+		outline: 1px solid #ffd27a;
 	}
 	.row.demo-row {
 		display: flex;
