@@ -15,8 +15,7 @@
 100/
 begin,	lac (hello
 	jms puts
-	jms getc		/ any key starts
-	jms crlf
+	jms waitcr
 game,	lac seed
 	dac secret
 	dzm tries
@@ -50,8 +49,7 @@ right,	lac (gotit
 	jms puts
 	lac (again
 	jms puts
-	jms getc
-	jms crlf
+	jms waitcr
 	jmp game
 
 / A key, 7-bit, in AC. Counts seed 0 to 99 while it waits.
@@ -66,6 +64,13 @@ getc1,	lac seed
 	krb
 	and (177
 	jmp i getc
+
+/ Wait for Return; anything else typed is ignored, not echoed.
+waitcr,	0
+	jms getc
+	sad (15
+	jmp i waitcr
+	jmp waitcr+1
 
 / Print AC, 0 to 99, in decimal.
 putdec,	0
@@ -120,6 +125,8 @@ hello,	text "HILO, FOR THE PDP-7 TELETYPE."
 	215
 	212
 	text "PRESS RETURN TO START."
+	215
+	212
 	0
 think,	text "I HAVE ONE."
 	215
@@ -144,5 +151,7 @@ dotnl,	text "."
 	212
 	0
 again,	text "RETURN TO PLAY AGAIN."
+	215
+	212
 	0
 start begin

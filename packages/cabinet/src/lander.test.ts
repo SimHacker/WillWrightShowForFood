@@ -42,10 +42,11 @@ const rating = (vi: number): string =>
 /** Fly a list of burns on the machine and on the model; the paper must match line for line. */
 function flyBoth(burns: number[]): { paper: string; contact: number } {
 	const m = machine();
-	assert.match(m.paper(), /^LANDER, FOR THE PDP-7 TELETYPE\.\r\n[\s\S]*PRESS RETURN TO START\.$/);
+	assert.match(m.paper(), /^LANDER, FOR THE PDP-7 TELETYPE\.\r\n[\s\S]*PRESS RETURN TO START\.\r\n$/);
 	let s: LanderState = { h2: LANDER.h2, v: LANDER.v, fuel: LANDER.fuel, secs: 0 };
+	assert.equal(m.type("x5"), "", "keys other than Return are ignored");
 	let out = m.type("\r");
-	assert.equal(out, `\r\n${line(s)} YOUR BURN?\r\n`);
+	assert.equal(out, `${line(s)} YOUR BURN?\r\n`);
 	let all = out;
 	for (const b of burns) {
 		const r = landerStep(s, b);
@@ -54,13 +55,13 @@ function flyBoth(burns: number[]): { paper: string; contact: number } {
 		// READLN echoes the burn and ends the line with CR LF.
 		const echo = `${b}\r\n`;
 		if (r.contact !== null) {
-			assert.equal(out, `${echo}CONTACT AT ${r.contact} FEET A SECOND, WITH ${r.state.fuel} UNITS LEFT.\r\n${rating(r.contact)}\r\nRETURN TO FLY AGAIN.`);
+			assert.equal(out, `${echo}CONTACT AT ${r.contact} FEET A SECOND, WITH ${r.state.fuel} UNITS LEFT.\r\n${rating(r.contact)}\r\nRETURN TO FLY AGAIN.\r\n`);
 			return { paper: all, contact: r.contact };
 		}
 		s = r.state;
 		if (s.fuel === 0) {
 			const f = landerStep(s, 0).contact as number;
-			assert.equal(out, `${echo}${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FEET A SECOND, WITH 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.`);
+			assert.equal(out, `${echo}${line(s)}\r\nOUT OF FUEL.\r\nCONTACT AT ${f} FEET A SECOND, WITH 0 UNITS LEFT.\r\n${rating(f)}\r\nRETURN TO FLY AGAIN.\r\n`);
 			return { paper: all, contact: f };
 		}
 		assert.equal(out, `${echo}${line(s)} YOUR BURN?\r\n`, `after burn ${b}`);

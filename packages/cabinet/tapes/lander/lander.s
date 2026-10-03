@@ -22,8 +22,7 @@
 100/
 begin,	lac (hello
 	jms puts
-	jms getc
-	jms crlf
+	jms waitcr
 fly,	lac (1750		/ 500 feet, as 1000 half feet
 	dac h2
 	lac (777716		/ -50 ft/s
@@ -142,8 +141,7 @@ hard,	lac (hardm
 rate,	jms puts
 	lac (again
 	jms puts
-	jms getc
-	jms crlf
+	jms waitcr
 	jmp fly
 
 / v0^2 - a h0 in AC, the square of the speed at contact.
@@ -254,6 +252,13 @@ getc,	0
 	and (177
 	jmp i getc
 
+/ Wait for Return; anything else typed is ignored, not echoed.
+waitcr,	0
+	jms getc
+	sad (15
+	jmp i waitcr
+	jmp waitcr+1
+
 / Print AC in decimal with a minus sign if negative.
 putsgn,	0
 	sma
@@ -355,6 +360,8 @@ hello,	text "LANDER, FOR THE PDP-7 TELETYPE."
 	215
 	212
 	text "PRESS RETURN TO START."
+	215
+	212
 	0
 tm,	text "TIME IS "
 	0
@@ -407,5 +414,7 @@ crash,	text "CRASHED."
 	212
 	0
 again,	text "RETURN TO FLY AGAIN."
+	215
+	212
 	0
 start begin

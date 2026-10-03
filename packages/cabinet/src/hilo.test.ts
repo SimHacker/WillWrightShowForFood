@@ -52,8 +52,9 @@ test("hilo assembles clean and starts at 100", () => {
 test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 	const m = machine();
 	m.box.run(50_000);
-	assert.match(m.paper(), /^HILO, FOR THE PDP-7 TELETYPE\.\r\nI THINK OF A NUMBER FROM 0 TO 99\. YOU GUESS IT\.\r\nPRESS RETURN TO START\.$/);
-	assert.match(m.type("\r"), /^\r\nI HAVE ONE\.\r\nGUESS\?\r\n$/);
+	assert.match(m.paper(), /^HILO, FOR THE PDP-7 TELETYPE\.\r\nI THINK OF A NUMBER FROM 0 TO 99\. YOU GUESS IT\.\r\nPRESS RETURN TO START\.\r\n$/);
+	assert.equal(m.type("7"), "", "keys other than Return are ignored");
+	assert.match(m.type("\r"), /^I HAVE ONE\.\r\nGUESS\?\r\n$/);
 	const s = m.secret();
 	assert.ok(s >= 0 && s <= 99, `secret ${s}`);
 	let lo = 0;
@@ -62,7 +63,7 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 		const g = (lo + hi) >> 1;
 		const out = m.type(`${g}\r`);
 		if (g === s) {
-			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\.\\r\\nRETURN TO PLAY AGAIN\\.$`));
+			assert.match(out, new RegExp(`^${g}\\r\\nRIGHT\\. GUESSES: ${n}\\.\\r\\nRETURN TO PLAY AGAIN\\.\\r\\n$`));
 			return;
 		}
 		assert.match(out, new RegExp(`^${g}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.\\r\\nGUESS\\?\\r\\n$`));
