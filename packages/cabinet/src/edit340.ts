@@ -55,6 +55,37 @@ export function cornerAt(segments: readonly Segment[], x: number, y: number, rad
 	return best;
 }
 
+export type Box = { x0: number; y0: number; x1: number; y1: number };
+
+/**
+ * Where a corner can go: the 340 grid rectangle in which both words meeting there still hold their
+ * deltas (127 each way, times scale). Null if a word's drawn end isn't its encoded end (clipped).
+ */
+export function cornerLimits(read: (addr: number) => number, c: Corner): Box | null {
+	const s = c.into.scale || 1;
+	const a = decodeVector(read(c.into.addr));
+	if (c.into.x0 + a.dx * s !== c.into.x1 || c.into.y0 + a.dy * s !== c.into.y1) return null;
+	let lo = { x: (-MAX - a.dx) * s, y: (-MAX - a.dy) * s };
+	let hi = { x: (MAX - a.dx) * s, y: (MAX - a.dy) * s };
+	if (c.outOf) {
+		const os = c.outOf.scale || 1;
+		const b = decodeVector(read(c.outOf.addr));
+		lo = { x: Math.max(lo.x, (b.dx - MAX) * os), y: Math.max(lo.y, (b.dy - MAX) * os) };
+		hi = { x: Math.min(hi.x, (b.dx + MAX) * os), y: Math.min(hi.y, (b.dy + MAX) * os) };
+	}
+	return { x0: c.x + lo.x, y0: c.y + lo.y, x1: c.x + hi.x, y1: c.y + hi.y };
+}
+
+/** The nearest point to (x, y) that lies in the box and on the scale's grid from the corner. */
+export function clampCorner(c: Corner, box: Box, x: number, y: number): { x: number; y: number } {
+	const step = Math.max(c.into.scale || 1, c.outOf?.scale || 1);
+	const snap = (v: number, from: number, lo: number, hi: number) => {
+		const k = Math.round((Math.min(hi, Math.max(lo, v)) - from) / step) * step + from;
+		return k > hi ? k - step : k < lo ? k + step : k;
+	};
+	return { x: snap(x, c.x, box.x0, box.x1), y: snap(y, c.y, box.y0, box.y1) };
+}
+
 /**
  * The pokes that move a corner to (x, y): [address, word] pairs. The incoming word takes the new
  * end; the outgoing one, if any, absorbs the difference so the stroke after it ends where it did.

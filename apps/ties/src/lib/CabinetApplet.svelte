@@ -23,6 +23,8 @@
 		Monitor,
 		hoverAt,
 		cornerAt,
+		cornerLimits,
+		clampCorner,
 		moveCorner,
 		preview340,
 		dist2,
@@ -368,6 +370,21 @@
 		return t === 'edit' ? 'edit' : Math.min(7, Math.max(0, Number(t) || 0));
 	}));
 	const editOn = $derived(tool === 'edit');
+	let toolMenuOpen = $state(false);
+	let toolMenuEl = $state(null);
+	$effect(() => {
+		if (!toolMenuOpen) return;
+		const close = (e) => {
+			if (!toolMenuEl?.contains(e.target)) toolMenuOpen = false;
+		};
+		const esc = (e) => e.key === 'Escape' && (toolMenuOpen = false);
+		document.addEventListener('pointerdown', close, true);
+		document.addEventListener('keydown', esc);
+		return () => {
+			document.removeEventListener('pointerdown', close, true);
+			document.removeEventListener('keydown', esc);
+		};
+	});
 	function setTool(t) {
 		tool = t;
 		store(TOOL_KEY, String(t));
@@ -392,7 +409,7 @@
 	// The program's own structures don't change, so PIXIE's next recompile puts its picture back.
 	let editGrab = null;
 	let editAt = null;
-	let editNote = $state('');
+	let editNote = $state('Drag the end of a line.');
 	// Generous, so the nearest corner is picked without precise pointing.
 	const EDIT_RADIUS = 40;
 
@@ -411,6 +428,16 @@
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = 'rgba(255, 210, 122, 0.45)';
 		for (const s of segs) if (s.kind === 'vector' && s.intensify) ctx.strokeRect(s.x1 - 3, 1023 - s.y1 - 3, 6, 6);
+		// The words meeting at the corner hold at most 127 each way: the corner can't leave this box.
+		const box = editGrab?.box;
+		if (box) {
+			ctx.fillStyle = 'rgba(255, 210, 122, 0.05)';
+			ctx.strokeStyle = editGrab.pinned ? 'rgba(255, 140, 90, 0.7)' : 'rgba(255, 210, 122, 0.3)';
+			ctx.setLineDash([6, 6]);
+			ctx.fillRect(box.x0, 1023 - box.y1, box.x1 - box.x0, box.y1 - box.y0);
+			ctx.strokeRect(box.x0, 1023 - box.y1, box.x1 - box.x0, box.y1 - box.y0);
+			ctx.setLineDash([]);
+		}
 		const pick = editGrab ? { x: editGrab.x, y: editGrab.y } : near;
 		if (pick) {
 			ctx.lineWidth = 2;
@@ -427,7 +454,12 @@
 			editNote = 'No corner here: point at the end of a line.';
 			return;
 		}
-		editGrab = { corner, x: corner.x, y: corner.y, refused: false };
+		const box = cornerLimits((a) => cpu.read(a), corner);
+		if (!box) {
+			editNote = 'That line is cut short by the edge of the screen, so its word does not say where it ends.';
+			return;
+		}
+		editGrab = { corner, box, x: corner.x, y: corner.y, refused: false, pinned: false };
 		editDragging = true;
 		editNote = `Corner ${corner.x},${corner.y}: words ${oct(corner.into.addr, 5)}${corner.outOf ? ` and ${oct(corner.outOf.addr, 5)}` : ''}`;
 		try {
@@ -442,29 +474,36 @@
 		const { x, y } = gridFromEvent(event);
 		editAt = { x, y };
 		if (!editGrab || event.pointerId !== pressedId) return drawFrame();
-		const pokes = moveCorner((a) => cpu.read(a), editGrab.corner, x, y);
-		editGrab.refused = !pokes;
-		if (!pokes) return;
-		for (const [a, w] of pokes) monitor.poke(a, w);
-		// The words now hold the corner at (x, y); the next drag step starts from there.
+		// Outside the box, follow as far as the words allow, along whichever axis still can.
+		const to = clampCorner(editGrab.corner, editGrab.box, x, y);
+		editGrab.pinned = to.x !== x || to.y !== y;
 		const c = editGrab.corner;
-		const dx = x - c.x;
-		const dy = y - c.y;
-		editGrab.corner = {
-			x,
-			y,
-			into: { ...c.into, x1: c.into.x1 + dx, y1: c.into.y1 + dy },
-			outOf: c.outOf && { ...c.outOf, x0: c.outOf.x0 + dx, y0: c.outOf.y0 + dy }
-		};
-		editGrab.x = x;
-		editGrab.y = y;
+		if (to.x !== c.x || to.y !== c.y) {
+			const pokes = moveCorner((a) => cpu.read(a), c, to.x, to.y);
+			editGrab.refused = !pokes;
+			if (pokes) {
+				for (const [a, w] of pokes) monitor.poke(a, w);
+				const dx = to.x - c.x;
+				const dy = to.y - c.y;
+				editGrab.corner = {
+					x: to.x,
+					y: to.y,
+					into: { ...c.into, x1: c.into.x1 + dx, y1: c.into.y1 + dy },
+					outOf: c.outOf && { ...c.outOf, x0: c.outOf.x0 + dx, y0: c.outOf.y0 + dy }
+				};
+				editGrab.x = to.x;
+				editGrab.y = to.y;
+			}
+		}
+		editNote = editGrab.pinned
+			? 'At the edge: a vector word moves at most 127 each way, so the corner stops at the dashed box.'
+			: `Corner ${editGrab.x},${editGrab.y}`;
 		drawFrame();
 	}
 
 	function editUp(event) {
 		if (event.pointerId !== pressedId) return;
 		pressedId = null;
-		if (editGrab?.refused) editNote = 'That far is more than a vector word holds (127 each way).';
 		editGrab = null;
 		editDragging = false;
 		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
@@ -2311,6 +2350,66 @@
 		{/if}
 	</div>
 {/snippet}
+{#snippet toolMenu()}
+	{@const color = editOn ? '#ffd27a' : PEN_COLORS[tool]}
+	<span class="tool-menu" bind:this={toolMenuEl}>
+		<button
+			type="button"
+			class="tool-button"
+			style:--pen={color}
+			aria-haspopup="menu"
+			aria-expanded={toolMenuOpen}
+			aria-label={editOn ? 'Tool: edit the picture' : `Tool: light pen ${tool + 1}, ${penDown ? 'down' : 'up'}`}
+			title={editOn
+				? 'Editing the picture. Click to choose a light pen or the display.'
+				: `Light pen ${tool + 1}, ${penDown ? 'on the glass' : 'lifted'}. Click to choose a pen, the editor, or the display.`}
+			onclick={() => (toolMenuOpen = !toolMenuOpen)}
+		>
+			{#if editOn}<span class="tool-arrow" aria-hidden="true">↖</span>{:else}<span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span>{/if}
+		</button>
+		{#if toolMenuOpen}
+			<span class="tool-pop" role="menu" aria-label="Pointer tool and display">
+				<span class="tool-head">Light pen</span>
+				<span class="tool-pens">
+					{#each PEN_COLORS as c, i (i)}
+						<button
+							type="button"
+							role="menuitemradio"
+							class="pen-swatch"
+							class:on={tool === i}
+							aria-checked={tool === i}
+							aria-label="Light pen {i + 1}"
+							title="Light pen {i + 1}: the pointer is the program's light pen, in this colour"
+							style:--pen={c}
+							onclick={() => ((toolMenuOpen = false), setTool(i))}
+						></button>
+					{/each}
+				</span>
+				<button
+					type="button"
+					role="menuitemradio"
+					class="tool-item"
+					class:on={editOn}
+					aria-checked={editOn}
+					title="Drag the ends of lines, rewriting the 340's own words in core. The light pen is put away and the program hears nothing. PIXIE puts its picture back when it next redraws."
+					onclick={() => ((toolMenuOpen = false), setTool('edit'))}><span class="tool-arrow" aria-hidden="true">↖</span> Edit the picture</button
+				>
+				<span class="tool-head">Display</span>
+				{#each [['auto', 'Auto: steady below 1× or stopped'], ['steady', "Steady: core as it is now, every frame"], ['machine', "Machine: the 340's own refreshes, flicker and all"]] as [m, label] (m)}
+					<button
+						type="button"
+						role="menuitemradio"
+						class="tool-item"
+						class:on={screenMode === m}
+						aria-checked={screenMode === m}
+						onclick={() => ((toolMenuOpen = false), setScreenMode(m))}>{label}</button
+					>
+				{/each}
+			</span>
+		{/if}
+	</span>
+{/snippet}
+
 {#snippet haltPanel(inline)}
 	<div class="halt" class:inline role="status" aria-live="polite">
 		<div class="halt-box">
@@ -2375,12 +2474,9 @@
 			<span class="fault" title={fault}>fault: {fault}</span>
 		{:else}
 			<span class="readout">
-				{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span>{#if displayOpen}<span
-						class="pen"
-						title={penDown ? 'Pen down' : 'Pen up'}
-						><span class="hand">✍️</span><span>{penDown ? '⬇️' : '⬆️'}</span></span
-					>{/if}{#if readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}{/if}
+				{#if paused}stopped{:else}<span title="Memory cycles per second">{readout}</span>{/if}{#if !paused && readoutExtra}<span title="Read from the program's variables in core">{readoutExtra}</span>{/if}
 			</span>
+			{#if displayOpen}{@render toolMenu()}{/if}
 		{/if}
 	</div>
 	<button
@@ -2457,7 +2553,7 @@
 	<!-- Fixed order: key help, the strip of tabs, then compartments in tab order. -->
 	<figcaption bind:this={captionEl}>
 		{#if editOn}
-			<p class="row app keys" aria-live="polite">✋ {editNote}</p>
+			<p class="row app keys" aria-live="polite">↖ {editNote}</p>
 		{:else if program?.keyHelp}
 			<p class="row app keys">Click the tube, then: {program.keyHelp}</p>
 		{/if}
@@ -2650,46 +2746,6 @@
 						onpointercancel={() => (resetPull = -1)}
 						onkeydown={onResetKey}
 						onblur={() => (resetPull = -1)}>🔄</button
-					>
-				</span>
-				<span class="tools" role="radiogroup" aria-label="Pointer tool">
-					{#each PEN_COLORS as color, i (i)}
-						<button
-							type="button"
-							role="radio"
-							class="pen-swatch"
-							class:on={tool === i}
-							aria-checked={tool === i}
-							aria-label="Light pen {i + 1}"
-							title="Light pen {i + 1}: the pointer is the program's light pen, in this colour"
-							style:--pen={color}
-							onclick={() => setTool(i)}
-						></button>
-					{/each}
-					<button
-						type="button"
-						role="radio"
-						class="icon"
-						class:on={editOn}
-						aria-checked={editOn}
-						aria-label="Edit the picture"
-						title="Edit: drag the end of a line, rewriting the 340's own words in core. The light pen is put away and the program hears nothing. PIXIE puts its picture back when it next redraws."
-						disabled={status !== 'live'}
-						onclick={() => setTool('edit')}>✋</button
-					>
-					<button
-						type="button"
-						class="icon"
-						class:on={steadyScreen}
-						aria-pressed={steadyScreen}
-						aria-label="Display: {screenMode}"
-						title={screenMode === 'auto'
-							? `Display: auto. Below 1×, or stopped, the tube shows core as it is now, every frame, so it holds still; at 1× and up, the 340's own refreshes. Now: ${steadyScreen ? 'steady' : "the 340's"}. Click for always steady.`
-							: screenMode === 'steady'
-								? "Display: always steady, core as it is now, whatever the CPU does. Click for the 340's own refreshes, flicker and all."
-								: "Display: the 340's own refreshes, which flicker when the CPU is slow, as the real one would. Click for auto."}
-						onclick={() => setScreenMode(screenMode === 'auto' ? 'steady' : screenMode === 'steady' ? 'machine' : 'auto')}
-						>{screenMode === 'machine' ? '📺' : screenMode === 'steady' ? '🖥️' : '🅰️'}</button
 					>
 				</span>
 				<span class="buttons">
@@ -3159,14 +3215,16 @@
 	.tube.live.held {
 		cursor: none;
 	}
+	/* Sharp, never a hand: the tip is the point, and nothing covers what it points at. */
 	.tube.live.editing {
 		cursor: crosshair;
 	}
-	.tube.live.editing.can-grab {
-		cursor: grab;
-	}
+	.tube.live.editing.can-grab,
 	.tube.live.editing.grabbing {
-		cursor: grabbing;
+		cursor:
+			url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M1 1 L1 12 L4 9 L7 15 L9 14 L6 8 L11 8 Z' fill='%23ffd27a' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E")
+				1 1,
+			default;
 	}
 	/* Fixed, so a tip past the page's edge never adds a scrollbar that resizes the tube. */
 	.tip {
@@ -3405,14 +3463,64 @@
 		background: #6b5420;
 		outline: 1px solid #ffd27a;
 	}
-	.tools {
+	.tool-menu {
+		position: relative;
+		display: inline-flex;
+		margin-left: 0.4rem;
+	}
+	.tool-button {
 		display: inline-flex;
 		align-items: center;
-		gap: 2px;
+		padding: 0 0.2rem;
+		line-height: 1;
+		background: none;
+		border: 2px solid var(--pen);
+		border-radius: 6px;
+		cursor: pointer;
+	}
+	.tool-button .hand {
+		font-size: 1.6em;
+		margin-right: -0.12em;
+	}
+	.tool-arrow {
+		color: #ffd27a;
+		font-size: 1.3em;
+		font-weight: bold;
+	}
+	.tool-pop {
+		position: absolute;
+		right: 0;
+		top: calc(100% + 4px);
+		z-index: 4;
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+		min-width: 15rem;
+		padding: 0.4rem;
+		background: rgb(22 14 2 / 0.96);
+		border: 1px solid #8a6424;
+		border-radius: 6px;
+	}
+	.tool-head {
+		color: #c9a15a;
+		font-size: 0.65rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+	.tool-pens {
+		display: flex;
+		gap: 4px;
+	}
+	.tool-item {
+		text-align: left;
+		font-size: 0.75rem;
+	}
+	.tool-item.on {
+		outline: 1px solid #ffd27a;
 	}
 	.pen-swatch {
-		width: 0.75rem;
-		height: 1.1rem;
+		width: 1.3rem;
+		height: 1.3rem;
 		padding: 0;
 		border: 1px solid #000;
 		border-radius: 2px;

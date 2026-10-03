@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { cornerAt, decodeVector, encodeVector, moveCorner } from "./edit340.js";
+import { clampCorner, cornerAt, cornerLimits, decodeVector, encodeVector, moveCorner } from "./edit340.js";
 import { Type340 } from "./plugins/type340.js";
 
 const BASE = 0o100;
@@ -64,6 +64,22 @@ test("edit340: dragging a corner moves it and leaves the rest of the picture put
 	]);
 	assert.equal(decodeVector(mem[BASE + 4]!).bright, true, "brightness kept");
 	assert.equal(decodeVector(mem[BASE + 5]!).escape, true, "escape kept on the last word");
+});
+
+test("edit340: a drag past the limit stops at the edge of what both words can hold", () => {
+	const mem = new Array<number>(1024).fill(0);
+	const run = frame(mem, [
+		encodeVector({ dx: 100, dy: 0, bright: true, escape: false }),
+		encodeVector({ dx: 0, dy: 100, bright: true, escape: true }),
+	]);
+	const c = cornerAt(run(), 300, 300, 4)!;
+	const box = cornerLimits((a) => mem[a] ?? 0, c)!;
+	// Right: the incoming dx 100 grows only 27. Left: the outgoing dx 0 grows only 127. Down: the outgoing dy 100 only 27.
+	assert.deepEqual(box, { x0: 300 - 127, y0: 300 - 27, x1: 300 + 27, y1: 300 + 127 });
+	const to = clampCorner(c, box, 900, 100);
+	assert.deepEqual(to, { x: 327, y: 273 });
+	for (const [a, w] of moveCorner((a) => mem[a] ?? 0, c, to.x, to.y)!) mem[a] = w;
+	assert.deepEqual(run().map((s) => [s.x1, s.y1]), [[327, 273], [300, 400]]);
 });
 
 test("edit340: refuses a move a vector word cannot hold", () => {
