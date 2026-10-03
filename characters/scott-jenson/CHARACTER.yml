@@ -135,6 +135,20 @@ clipboard:
     - ../david-rosenthal/selection-clipboard-lineage.md
     - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/VIEWS-AS-TESTIMONY.md  # 'GitHub is the clipboard bus'"
 
+bob_and_clippy:
+  scott_on_winfs_nepomuk: "'both of these projects basically crashed and burned … the ideas are really quite clever … my concern is that … you see these projects as proof that these ideas were wrong, which is no, not at all the case … the hardware and the systems at the time let the vision down … these are not bad ideas' (KDE [26:44]–[27:16])"
+  scott_on_clippy: "Clippy is his shorthand for the failure that copying protects you from: 'who wants to like experience Clippy all over again, right?' (Ubuntu [4:30]); letting someone else go first so you don't 'implement Clippy again' (KDE [5:31])"
+  don_hot_take: |
+    Don's take, not Scott's: apply Scott's own WinFS/Nepomuk argument to Microsoft Bob and Clippy.
+    Their failure isn't proof the ideas were wrong. Bob tried rooms as a desktop — spatial memory,
+    the thing Scott's stash demo is after. Clippy tried an assistant that watches what you do and
+    offers help — Scott's "ultimate right click" (Ubuntu [40:27]) with the 1997 brain of a rule
+    table. Today's local models are the hardware that would have kept that vision up; the
+    remaining sins are fixable design, not a doomed premise.
+  will_wright_on_bob: "'Like \"Microsoft Bob\", there was some great thought and research that went into it, but the execution was flawed and it got a bad rep from the backlash to all the hype.' — ../will-wright/sources/2004-01-10-barbie-mortalkombat-jenkins/article.md"
+  why_they_failed_design: "MOOLLM's reading via McCloud's masking effect: Bob cartooned the world, leaving nothing to see; Clippy kept the real document but gave the mask eyes, eyebrows and reactions, leaving nothing to be. https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.yml (MASKING-EFFECT)"
+  fix: "Clippy done right sits on the visible command bus (pbd_at_the_heart): it sees what you did, proposes on the bus where you can read, undo, or ignore it, and never interrupts with a face."
+
 working_memory:
   thesis: "The desktop's real job is working memory; windows, files, and clipboard each solve a slice of it in silos (KDE [25:06])."
   three_memories:
