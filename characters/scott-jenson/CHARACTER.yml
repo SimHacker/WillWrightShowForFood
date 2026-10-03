@@ -36,9 +36,9 @@ talks:
       - { t: "12:06", gist: "'I hate the term UI/UX with the heat of a thousand suns'" }
       - { t: "14:16", gist: "Simplicity Shift layers: style, structure, strategy" }
       - { t: "14:50", gist: "'there's a layer below this, which I kind of called stuff. Because cuz I just liked ST words'" }
-      - { t: "15:57", gist: "the invented long-press event: 'It's a long story… Buy me a beer and we'll talk about it.'" }
-      - { t: "17:36", gist: "the original Mac was 342 pixels tall" }
-      - { t: "18:10", gist: "Alan Kay's thinking about steps; 'perspective is worth 80 IQ points'" }
+      - { t: "15:57", gist: "Android mobile text-editing study: deleting a doubled space, people dragged the cursor and brought up the menu by accident" }
+      - { t: "17:36", gist: "the invented long-press event: 'It's a long story… Buy me a beer and we'll talk about it.' Then: the original Mac was 'a whopping 342 pixels high'" }
+      - { t: "18:10", gist: "windows overlap because the Mac was small; on giant screens 'you just get tired'; Alan Kay's three steps (present, past, questions) [18:41]" }
       - { t: "19:12", gist: "AI above the UX vs AI below the UX" }
       - { t: "21:53", gist: "Claude Code got better by embracing the desktop and the file system" }
       - { t: "23:29", gist: "'it's not about generation, it's about context'" }

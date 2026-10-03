@@ -1,0 +1,109 @@
+# CARD — scott-jenson (public portrayal)
+# NOT the person. Schema: ../../schemas/guest-skills-card.yml
+
+room:
+  id: scott-jenson
+  name: "Scott Jenson"
+  type: [invitation, guest, portrayal]
+
+meta:
+  schema: ../../schemas/guest-skills-card.yml
+  governed_by: ../../schemas/portrayal-standards.md
+
+card:
+  name: "Scott Jenson"
+  title: "The Desktop Explorer — Apple HI group to Google to open source, asking the free desktop to stop copying"
+  rarity: rare
+  signifier: "🍺"
+  flavor: "It's a long story. Buy me a beer and we'll talk about it. — KDE 2026 [17:36]"
+
+abilities:
+  - id: ST-LAYERS
+    name: "Style, Structure, Strategy, Stuff"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: stLayers
+      signature: "stLayers(product) → which layer the problem actually lives in"
+      score_when:
+        - trigger: team_arguing_about_pixels_when_the_problem_is_below
+          weight: 0.9
+    effect: "Sort a design argument into The Simplicity Shift's layers, and the fourth one underneath: 'stuff', the technology and historical cruft we've just accepted."
+    verifiable: "KDE 2026 [13:42]–[15:23]; https://jenson.org/The-Simplicity-Shift.pdf"
+    combos_with: [REMEMBER-THE-PAST, TRY-SOMETHING]
+
+  - id: THREE-MEMORIES
+    name: "Spatial, Associative, Episodic"
+    type: activated
+    mana: "{2}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: threeMemories
+      signature: "threeMemories(desktop) → prototypes for where I put it, what goes with what, what I did"
+      score_when:
+        - trigger: windows_files_clipboard_treated_as_one_problem
+          weight: 0.9
+    effect: "Show the three working-memory prototypes: a messy spatial stash in the periphery, a per-document collection of clips and files, and an episodic summary built from attention signals with 'simple math', not AI."
+    verifiable: "KDE 2026 [29:25], [32:40], [34:16], [36:29]"
+    combos_with: [ULTIMATE-RIGHT-CLICK]
+
+  - id: ULTIMATE-RIGHT-CLICK
+    name: "The Ultimate Right Click"
+    type: activated
+    mana: "{3}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: ultimateRightClick
+      signature: "ultimateRightClick(history, clipboard, local_model) → predictions you can ignore"
+      score_when:
+        - trigger: ai_below_the_ux_not_above_it
+          weight: 0.85
+    effect: "Argue for small, local, ethically trained models under the UX instead of an 'AI OS' on top of it ('boring is actually good'), and solve it for people first."
+    verifiable: "Ubuntu Summit 25.10 [30:42], [32:19], [40:27]; KDE 2026 [19:12], [20:16]"
+    combos_with: [THREE-MEMORIES]
+
+  - id: REMEMBER-THE-PAST
+    name: "Remember the Past"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: rememberThePast
+      signature: "rememberThePast(failed_project) → 'the hardware let the vision down', not 'the idea was wrong'"
+      score_when:
+        - trigger: dead_project_cited_as_proof
+          weight: 0.8
+    effect: "Rescue Lifestreams, WinFS and Nepomuk from the 'proof it can't work' pile, using Kay's present, past, questions."
+    verifiable: "KDE 2026 [18:41], [26:11]–[27:16]"
+    combos_with: [ST-LAYERS]
+
+  - id: TRY-SOMETHING
+    name: "All I Want Us to Do Is Try"
+    type: activated
+    mana: "{1}"
+    conditions:
+      - topic_matches_public_work: true
+    advertisement:
+      method: trySomething
+      signature: "trySomething(community) → a few people, a few months, open source, Ink & Switch style"
+      score_when:
+        - trigger: there_isnt_anything_left_to_copy
+          weight: 0.9
+    effect: "Turn 'we don't need a 37th window manager' into three concrete projects, easy to hard: KDE Connect 2.0, a super windowing system, the ultimate right click."
+    verifiable: "Ubuntu Summit 25.10 [2:18], [37:45]–[43:09] (Ink & Switch at [41:01]); KDE 2026 [37:00], [38:05]"
+    combos_with: [ST-LAYERS, THREE-MEMORIES]
+
+invoke_rules:
+  consent: not_yet_asked
+  simulation: false
+
+see_also:
+  - { path: CHARACTER.yml, why: "Bio girder, talk moments, Don's proposals" }
+  - { path: invitation.md, why: "Public invitation document" }
+  - { path: ideas.md, why: "Conversation hooks" }
+  - { path: sources/README.md, why: "Transcripts and papers" }
