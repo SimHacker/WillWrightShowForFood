@@ -149,6 +149,45 @@ bob_and_clippy:
   why_they_failed_design: "MOOLLM's reading via McCloud's masking effect: Bob cartooned the world, leaving nothing to see; Clippy kept the real document but gave the mask eyes, eyebrows and reactions, leaving nothing to be. https://github.com/SimHacker/moollm/blob/main/designs/GLOSSARY.yml (MASKING-EFFECT)"
   fix: "Clippy done right sits on the visible command bus (pbd_at_the_heart): it sees what you did, proposes on the bus where you can read, undo, or ignore it, and never interrupts with a face."
 
+transformation_field:
+  attribution: "Don's proposal, not Scott's. Hook into Scott's float (Ubuntu [13:46]), spatial stash (KDE [29:25]–[31:03]) and 'design for big monitors' (KDE [27:48])."
+  field: |
+    The desktop isn't a flat pixel plane, it's a continuous transformation field: every point
+    carries scale, offset (a distortion map) and rotation. Draw a "hole" and the field
+    shrinks toward its center, a pocket universe inside a black hole, where you can stuff a whole
+    project and still see it there, tiny. Zoom into the hole and it unfolds. Pad/Pad++ zoomed the
+    whole plane uniformly. Temkin's Mesa does the same. Fisheye/DOI distorts around one focus. This
+    generalizes both to a field you paint.
+  weight_is_scale: "The one-scalar-per-window weight (K-pyramid attention maps) is the scale field sampled under the window. Decay writes into the field, so unused things sink into a local hole in place and nothing moves. Direct manipulation writes the weight back."
+  pins:
+    rule: "Windows don't have positions, they have push-pins into the field (or into another window's surface). Each pin is a correspondence between a point on the window and a point on whatever it's pinned to; the pin count decides how rigid the window stays."
+    one: "Translation only. Rotation is free, so a joyful window can spin or swing like a pendulum around its pin."
+    two: "Similarity: translate, rotate, uniform scale. Stretch between two pins."
+    three: "Affine: shear and non-uniform scale."
+    four: "Projective: perspective keystone."
+    more: "Mesh warp (moving least squares / thin-plate spline): the Dalí window, draped over a branch like a melting clock."
+    corners: "Any corner or edge point can take a pin, the same places tabs and pie menus live (tabs on any frame edge or corner, pies on tabs and frames)."
+  hierarchy: |
+    Fields are recursive. Every window has its own field over its own surface, and sub-windows
+    are pinned into it, so bending a parent bends its children through their pins. Windows can
+    pin to each other directly, so the document graph and the layout graph can be the same graph.
+  unpinned: "Pull every pin and the window becomes a vehicle or Alternate Reality Kit object: it keeps its last transformation and its momentum, and floats, collides, docks (grooves and spikes) until you pin it again."
+  time: |
+    As long as space bends, bend time too. ScriptX (Kaleida) had a clock hierarchy alongside the
+    transformation hierarchy: a child clock's rate, offset and pause derive from its parent. Here
+    the field also carries a clock rate. Animations, video and agent activity inside a hole run
+    slow, or pause, and catch up when you zoom out, like relativistic time dilation near a black
+    hole. Scrub a region's clock backward and the window shows its own history (journaled clipboard,
+    episodic memory).
+  why_scott: "It's his three memories in one substrate: spatial (where it's pinned), associative (what it's pinned to) and episodic (the clock you can scrub)."
+  corpus:
+    - "../../repo-shows/building-the-sims/pause-time-and-rng.md (ScriptX clock hierarchy)"
+    - "https://github.com/SimHacker/moollm/blob/main/designs/webtop-gwern-inheritance/K-PYRAMID-ATTENTION-MAPS.md (weight scalar, fisheye/DOI)"
+    - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/GROOVES-AND-SPIKES.md (ARK, tabs on any side)"
+    - "../ken-perlin/ (Pad, zooming plane)"
+    - "../david-temkin/ (Mesa zoom canvas, Declare constraints for pins)"
+    - "../david-ungar/ and ../randall-smith/ (Self, ARK)"
+
 working_memory:
   thesis: "The desktop's real job is working memory; windows, files, and clipboard each solve a slice of it in silos (KDE [25:06])."
   three_memories:
