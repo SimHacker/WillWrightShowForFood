@@ -39,7 +39,7 @@ associative, episodic). He says at KDE [1:45] that the Ubuntu talk passed half a
 
 ## Related research
 
-- [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks.
+- [Hutchings & Stasko 2004, Revisiting Display Space Management](2004-hutchings-stasko-display-space-management.md): 20 users interviewed about how they manage windows, with findings mapped to Scott's talks ([cached PDF](2004-hutchings-stasko-display-space-management.pdf)).
 
 ## Contact
 

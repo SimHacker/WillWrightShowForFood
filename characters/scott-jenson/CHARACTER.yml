@@ -238,6 +238,10 @@ transformation_field:
     corpus:
       - "../john-von-neumann/sources/hn/24163024-factorio-simcity-kay.md (Factorio belts, Kay on rule-based SimCity)"
       - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/GROOVES-AND-SPIKES.md (grooves and spikes as snap targets)"
+  live_crop:
+    attribution: "Don's proposal, answering Hutchings & Stasko 2004 §7.1: 'an operation that shows or hides a user-specified region of a window … better suited for the window manager because an application designer will likely not know a priori what information will be displayed and valued by the user.'"
+    idea: "A live, editable crop tool in the window manager, like Photoshop's. Crop any number of edges at once (none, some or all) and re-edit it at any time. The app keeps its full layout, so nothing reflows. Crops can be saved, named and stacked, so one window can expose several cropped region-windows, each pinned somewhere else."
+    source: sources/2004-hutchings-stasko-display-space-management.pdf
   painted_scale:
     attribution: "Don's proposal. You build containers and emphasis by painting the scale field, with no special widgets."
     bag_of_holding: |
