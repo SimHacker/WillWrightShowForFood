@@ -252,6 +252,14 @@ transformation_field:
       things hung on the outside belong to the neighborhood. It's Don's roads with even addresses on one
       side and odd on the other, and halls with doors on both walls. Each border is a street, padding
       and margin are its two sidewalks, and a sub-window's address is (border, side, distance along).
+    membrane:
+      idea: |
+        The border is the actual membrane. Things sit on either side of it, or penetrate it and sit on
+        both. A door is an opening people pass through; a window is an opening light and information
+        pass through, but not people. Openings can be one-way, typed, or rate-limited.
+      customs: "Borders can have customs posts that filter what crosses and convert it in and out of local currencies and materials: formats, units, permissions, scales, languages. A clip crossing into a spreadsheet room becomes cells, and a prompt crossing into a character's room is translated into that character's voice and context."
+      alan_kay: "Kay's cell metaphor for objects: an opaque interior, a membrane, and messages as the only way across. In biology the membrane is studded with transport proteins (channels, pumps, receptors), each a gateway for one particular kind of molecule, energy or signal. Here every opening in a border is one of those: a typed port, so the membrane decides what can come in, what can get out, and at what cost. See ../alan-kay/ideas.md (cells and membranes, the repo as message bus)."
+      why_scott: "Scott's silos (KDE [25:06]) are membranes with no openings. His crossed boundaries (Ubuntu [29:33]) need doors, windows and customs, not a wall knocked down."
     composes: "Padding and margin are just fields too, so they can carry scale: a margin can be a puff zone holding a big signpost tab, or a padding a bag of holding along the inside edge. Two windows whose margins touch share a street, and things on it can belong to both."
   non_empty_space:
     paper: "'Future systems might explore how to designate a group of icons as \"non-empty space,\" where, for example, maximize does not cover the space, but manual resizing of windows allows the icons to be covered. Alternatively, the notion of desktop icons could be replaced by something that more tightly integrates with the window system.' (Hutchings & Stasko 2004 §6.3)"
