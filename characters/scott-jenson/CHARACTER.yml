@@ -1,0 +1,142 @@
+# Standards: ../../schemas/portrayal-standards.md
+
+character:
+  id: scott-jenson
+  name: "Scott Jenson"
+  type: invitation
+  signifier: "🍺"
+  status: living
+  field: "UX strategy and interaction design — Apple Human Interface group (System 7, Newton, the HIG), Symbian, Google (mobile UX, the Physical Web, Android), frog design; now open source UX for Mastodon and Home Assistant; 'are we really going to use the same desktop UX forever?'"
+  home: characters/scott-jenson/
+
+representation:
+  governed_by: ../../schemas/portrayal-standards.md
+  consent_level: 3
+  authored_by: don-hopkins
+
+invitation:
+  status: draft
+  consent: not_yet_asked
+  document: invitation.md
+
+bio:
+  summary: "**Scott Jenson** — first member of Apple's Human Interface group in the late 1980s (System 7, Newton, the Human Interface Guidelines); UX director at Symbian; creative director at frog design; mobile UX at Google, then back at Google from 2013 on the **Physical Web** and Android UX, leaving in 2024. Author of **The Simplicity Shift**. 35+ patents. Now 'partially retired', mentoring, and doing UX for open source — Mastodon and Home Assistant — 'to atone for my sins' (Ubuntu [0:04]). His two desktop talks, Ubuntu Summit 25.10 and KDE 2026, ask the free desktop to stop copying and start exploring."
+  self_description_source: "https://jenson.org/about-scott/"
+
+talks:
+  kde_2026:
+    title: "Are we really going to use the same Desktop UX forever?"
+    url: "https://www.youtube.com/watch?v=V7AfAcQwLW0"
+    mirror: "https://media.ccc.de/v/kde2026-7-are_we_really_going_to_use_the_same_desktop_ux_forever"
+    transcript: sources/2026-kde-akademy-same-desktop-ux-forever.transcript.txt
+    moments:
+      - { t: "2:16", gist: "the middle ellipsis — Finder truncates long filenames in the middle, so you see both ends" }
+      - { t: "2:48", gist: "dragging from a background window without raising it" }
+      - { t: "9:23", gist: "we can't patch and bug-fix our way into the future" }
+      - { t: "12:06", gist: "'I hate the term UI/UX with the heat of a thousand suns'" }
+      - { t: "14:16", gist: "Simplicity Shift layers: style, structure, strategy" }
+      - { t: "14:50", gist: "'there's a layer below this, which I kind of called stuff. Because cuz I just liked ST words'" }
+      - { t: "15:57", gist: "the invented long-press event: 'It's a long story… Buy me a beer and we'll talk about it.'" }
+      - { t: "17:36", gist: "the original Mac was 342 pixels tall" }
+      - { t: "18:10", gist: "Alan Kay's thinking about steps; 'perspective is worth 80 IQ points'" }
+      - { t: "19:12", gist: "AI above the UX vs AI below the UX" }
+      - { t: "21:53", gist: "Claude Code got better by embracing the desktop and the file system" }
+      - { t: "23:29", gist: "'it's not about generation, it's about context'" }
+      - { t: "24:34", gist: "'the curse of direct manipulation' — the clipboard holds one thing, then it's gone" }
+      - { t: "25:06", gist: "37 window managers, alternative shells, file and clipboard managers, each solving the pain in its own silo; 'this is really about working memory'" }
+      - { t: "25:39", gist: "'I want to solve this for people first, and if the AI can use it, great'" }
+      - { t: "26:11", gist: "Lifestreams, WinFS, Nepomuk — 'the hardware and the systems at the time let the vision down'" }
+      - { t: "27:48", gist: "questions: design only for very large monitors; integrate clipboard, files, windows; capture intent over time" }
+      - { t: "29:25", gist: "SPATIAL prototype: stash windows in the periphery, a window becomes a widget, shake to gather; 'messy, organic' WM; most consumers can't deal with virtual desktops" }
+      - { t: "32:40", gist: "ASSOCIATIVE prototype: 'steal a page from Obsidian' — a per-document collection of clips and files that survives restart" }
+      - { t: "34:16", gist: "EPISODIC prototype: 50 e-bike pages collapsed into a few nodes from attention signals (scroll, dwell, copy/paste events), 'not using AI, just using simple math'" }
+      - { t: "36:29", gist: "spatial, associative, episodic memory" }
+      - { t: "37:00", gist: "Ink & Switch's model; he worked with them on Upwelling" }
+      - { t: "38:05", gist: "'no one else is going to try and I think someone's got to start'" }
+      - { t: "39:26", gist: "Q&A on Recall privacy: 'the world's greatest honeypot'; gather focus, not text" }
+  ubuntu_summit_2025:
+    title: "Are we stuck with the same Desktop UX forever? | Ubuntu Summit 25.10"
+    url: "https://www.youtube.com/watch?v=1fZTOjd_bOQ"
+    transcript: sources/2025-ubuntu-summit-stuck-with-same-desktop-ux.transcript.txt
+    moments:
+      - { t: "2:18", gist: "'We don't need a 37th window manager.'" }
+      - { t: "3:23", gist: "'good artists naively copy and great artists creatively steal' — the Mac's creative copy of the Star" }
+      - { t: "3:56", gist: "virtual desktops came from Linux" }
+      - { t: "5:37", gist: "picking a window manager at boot as 'the ultimate UX sin'" }
+      - { t: "6:43", gist: "Windows Recall: 'awesome concept, very poorly executed'" }
+      - { t: "7:49", gist: "there isn't anything left to copy" }
+      - { t: "9:59", gist: "Nick Foster's Could, Should, Might, Don't" }
+      - { t: "13:46", gist: "'exploring isn't a binary, it's a float'; Google's 70/20/10" }
+      - { t: "18:42", gist: "'programmers think mathematically and designers think statistically'; lack of trust as the most destructive force" }
+      - { t: "21:24", gist: "Raph Koster's Theory of Fun; learning loops; 'fun is just another word for learning'" }
+      - { t: "24:40", gist: "text-editing study: 12 people, wrong 12 times" }
+      - { t: "26:51", gist: "a gesture keyboard for power users — 'a little bit like pie menus if you're familiar with that'" }
+      - { t: "29:01", gist: "toy WM: click-drag left or right to destinations — 'effectively your temporary palette. Lots of different directions that you could go'" }
+      - { t: "29:33", gist: "'crossed the boundaries between a window manager, a clipboard manager, and a file manager'" }
+      - { t: "30:42", gist: "not AI first; small local models; 'Boring is good'" }
+      - { t: "32:51", gist: "Dynamicland (Bret Victor) — the desktop sits between the command line and Dynamicland" }
+      - { t: "35:01", gist: "Princess Leia blasts a hole into the trash compactor — coloring outside the lines" }
+      - { t: "37:45", gist: "three proposed projects, easy first: KDE Connect 2.0" }
+      - { t: "38:50", gist: "medium: a 'super windowing system' — 'I don't mean a 37th windowing system' — about how 'users flow with their data through history and data and files and time' [39:23]" }
+      - { t: "40:27", gist: "hard: history, clipboard, local-model predictions — 'could we build the ultimate right click'" }
+      - { t: "41:32", gist: "the Ink & Switch model: a few people, a few months, open source" }
+      - { t: "43:09", gist: "'all I want us to do is to try'" }
+
+st_layers:
+  source: "The Simplicity Shift; KDE [13:42]–[15:23], verbatim from the auto-captions"
+  layers:
+    style: "'style is white space, iconography, colors, yeah, pixels, right?' [13:42]–[14:16]"
+    structure: "'how do you move through the application? What's your navigational model? … all the flow through all the pixels is the structure' [14:16]"
+    strategy: "'Who is their user? What do they want? … What are you going to ignore? The fastest way a UX designer can save your team time is to help you say no.' [14:16]"
+    stuff: "'there's a layer below this, which I kind of called stuff. Because cuz I just liked ST words … it's really more like underlying technology … The technology dictates what you can do' [14:50]; and 'expected standards … historical cruft … a bunch of stuff that we've just accepted' [15:23]"
+  note: "The four names are his; every other ST word is Don's riff (see ideas.md)."
+  don_riffs:
+    stanza: "Italian for 'room'. A hall is a room whose job is to connect other rooms."
+    enfilade: "Xanadu's name for its tree data structures, borrowed from architecture: a suite of rooms whose doors line up on one axis, so you can look straight down the row. No hall — the rooms connect directly and the aligned doors make an implicit hallway. Don builds his RimWorld complexes that way."
+
+working_memory:
+  thesis: "The desktop's real job is working memory; windows, files, and clipboard each solve a slice of it in silos (KDE [25:06])."
+  three_memories:
+    spatial: "where I put it — a messy, organic arrangement in the periphery"
+    associative: "what goes with what — a document's own collection of clips and files"
+    episodic: "what I did and when — attention traces summarized into a story"
+
+learning_loops:
+  source: "https://jenson.org/games/ ; Ubuntu [21:24]"
+  summary: "From eight weeks applying Raph Koster's A Theory of Fun: intent → action → result → feedback updates the mental model. Affordances prompt loops you know; 'hintiness' moves you to new ones. Mario has three jump loops; pinch is a higher-order loop on drag. Mobile is 'a prisoner of our flat slab of glass'; long-press is evidence of an expression problem."
+
+files:
+  source: "https://jenson.org/files/ ; https://jenson.org/files2/"
+  summary: "Files are chunks of work you can see, move, act on, and share; folders organize data-first instead of app-first. The Mac desktop was a temporary working area, and the original Finder's 'Put away' returned a thing to where it came from — dropped in OS X. Documents are dope; data should live outside apps."
+
+sources:
+  web:
+    - { title: "About Scott", url: "https://jenson.org/about-scott/" }
+    - { title: "Talks", url: "https://jenson.org/talks/" }
+    - { title: "The Simplicity Shift (PDF)", url: "https://jenson.org/The-Simplicity-Shift.pdf" }
+    - { title: "KDE 2026 talk", url: "https://www.youtube.com/watch?v=V7AfAcQwLW0" }
+    - { title: "Ubuntu Summit 25.10 talk", url: "https://www.youtube.com/watch?v=1fZTOjd_bOQ" }
+    - { title: "The future needs files", url: "https://jenson.org/files/" }
+    - { title: "The Present Needs Files", url: "https://jenson.org/files2/" }
+    - { title: "How Video Games Inspire Great UX", url: "https://jenson.org/games/" }
+    - { title: "Boring is good", url: "https://jenson.org/boring/" }
+    - { title: "The Ma of a New Machine", url: "https://jenson.org/ma/" }
+    - { title: "Mastodon", url: "https://social.coop/@scottjenson" }
+  local: sources/README.md
+
+see_also:
+  - ../alan-kay/
+  - ../bret-victor/
+  - ../ted-nelson/
+  - ../gwern/
+  - ../ben-shneiderman/
+  - ../brad-myers/
+  - ../simon-schneegans/
+  - ../bill-atkinson/
+  - ../owen-densmore/
+  - ../david-temkin/
+  - ../will-wright/
+  - ../don-norman/
+  - ../bruce-tognazzini/
+  - ../jef-raskin/
+  - ../don-hopkins/sources/articles/pie-menus-window-management.md
