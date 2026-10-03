@@ -27,6 +27,7 @@ ask,	lac (prompt
 	spa
 	jmp ask			/ no digits on the line
 	dac guess
+	isz tries
 	lac lnneg
 	sna
 	jmp ask1
@@ -37,7 +38,6 @@ ask1,	lac guess
 	tad (777634		/ minus 100
 	sma
 	jmp over
-	isz tries
 	lac guess
 	cma
 	tad secret
