@@ -245,6 +245,11 @@ machine to record for the AM radio, and a second witness for the display, would 
 > demos. Each demo would also have music, cleared for YouTube, cut to the program's own timing,
 > so the film and the emulator run play in sync with the same soundtrack.
 >
+> And if anyone can hold an AM radio by the machine while it runs, the sound would be worth as
+> much as the picture. We would write sound studies on purpose (exact loop lengths for pitch,
+> the 340 drawing different things for timbre, clock-timed notes and rests) so each recording
+> both makes music and tells us how sn 129 radiates. Recording details are in AM-RADIO.md.
+>
 > Everything is in git: https://github.com/SimHacker/WillWrightShowForFood (the emulator is in
 > `packages/cabinet`, and it runs in the page at hyperties.org). Thank you for bringing sn 129
 > back, twice.

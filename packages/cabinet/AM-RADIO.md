@@ -198,6 +198,22 @@ the tube already shows.
 - **DUEL** (1968), already on the cabinet: hear the torpedoes.
 - **HILO and LANDER** on the teletype: slow, bursty loops; a good test of the granular stretch.
 - **Music on purpose**: a virtual speaker bit, and bytebeat live-coded in Mitch's Forth.
+- **Sound studies, written to explore the radio.** A tape is a score: the AM radio hears the
+  rhythm of memory cycles, so a loop of n cycles is a pitch, how long it runs is a duration, and
+  what it touches is a timbre. A set of small programs maps the space:
+  - **Pitch**: loops of exact cycle counts, a scale and a sweep, one note per second.
+  - **Timbre**: the same pitch with the 340 drawing a point, a vector, a character, or nothing;
+    with and without EAE multiplies, memory-reference against operate instructions.
+  - **Envelope and rhythm**: notes started and stopped on clock ticks; rests by halting the
+    display; accents from brighter, longer 340 bursts.
+  - **Texture**: a DLA or a CA running, which makes noise with structure.
+  
+  Each runs in the emulator through `radio.ts` and, if the museum records it, on sn 129, so every
+  study is also a calibration point for approach 7.
+- **Percussion and voice, mixed over the radio.** The machine plays the bass and the noise; a
+  drum track and a sung or spoken part, cleared for YouTube, go over it in the edit, cut to the
+  same cycle timeline the demo runs on. A Forth word can mark the beats (`beat` tick on the
+  clock), so the human parts lock to the machine and not the other way round.
 
 ## Discussion: which approach, and when
 
