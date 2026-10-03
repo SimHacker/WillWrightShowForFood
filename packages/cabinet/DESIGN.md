@@ -594,6 +594,9 @@ composing.
 
 ## Cartridges and live coding
 
+The format, the build cache, `extends`, live decoding, eggs and the git workflow are in
+[CARTRIDGES.md](CARTRIDGES.md). This section keeps the name, variants and the LIVE CODING panel.
+
 **The name.** What the menu calls a program is really a whole configuration: which machine, which
 devices, what to load and from where, how to build it, how its keys map, which panels open, its
 help and its demo. Emulators have names for parts of this. SIMH has the `.do` script, MAME has

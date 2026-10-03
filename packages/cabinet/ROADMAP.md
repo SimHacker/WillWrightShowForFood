@@ -25,6 +25,7 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 13 | Emulation mash-ups: virtual devices in machines they never met | the keyset and the glove, on the PDP-7 and the Apple ][ | [§13](#13-emulation-mash-ups) |
 | 14 | The big dive | TAGS-AND-PIES §12 steps 8–10, mostly MicropolisCore | — |
 | 15 | DUEL from tape to source, proven by round trip | a showpiece, not a blocker: DUEL already runs and explains its halt | [§15](#15-duel-from-tape-to-source) |
+| 16 | Cartridges as files: build cache, `extends`, eggs, live decode, GitHub commits and PRs, CI | many programs from one Forth; edits that end up deployed | [CARTRIDGES.md](CARTRIDGES.md#8-order-of-work) |
 
 Odds and ends are in [§14](#14-small-items).
 
@@ -586,5 +587,8 @@ with the test as the proof; the tape stays the program.
 7. **Patches.** Frode's five words stay a load-time overlay, never in the source.
 8. **Show it.** The cabinet's source view and symbols for DUEL, the halt panel citing
    `hit` by name; the same tool then serves other symbol-less tapes from Oslo.
+
+All of it runs in the page as a panel, verifying on every edit:
+[CARTRIDGES.md §4](CARTRIDGES.md#4-live-decoding-from-a-binary-back-to-source).
 
 ↑ [README](README.md) · [DESIGN](DESIGN.md) · [TAGS-AND-PIES](TAGS-AND-PIES.md)

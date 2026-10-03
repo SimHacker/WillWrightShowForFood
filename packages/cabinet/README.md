@@ -166,6 +166,10 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
   then has a real Forth to live in.
 - Every program has a link of its own, without the HyperTIES frame: `/cabinet/<program>/`,
   or `/cabinet/?program=forth&size=768`.
+- Cartridges as files: binaries and sources, built in the page and cached, extended by
+  other cartridges, decoded back to verified source, saved as eggs, and committed to your
+  own repo or sent as a pull request, with CI building and deploying them:
+  [CARTRIDGES.md](CARTRIDGES.md).
 - PDP-7 Unix runs: rung 8, [UNIX-V0.md](UNIX-V0.md). Still to come there: the platter
   saved in IndexedDB, sn 129's JK09 disk beside the RB09, and
   the Graphic-2. Languages come with it: `as`, and B. B compiled to threaded
