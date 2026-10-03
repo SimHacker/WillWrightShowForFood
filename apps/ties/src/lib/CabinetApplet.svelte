@@ -23,6 +23,7 @@
 		hoverAt,
 		cornerAt,
 		moveCorner,
+		preview340,
 		dist2,
 		MODE,
 		ST340_STOPPED,
@@ -343,16 +344,18 @@
 		ctx.setTransform(1, 0, 0, 1, 0, 0);
 		ctx.fillStyle = '#0a0f0a';
 		ctx.fillRect(0, 0, 1024, 1024);
-		const frames = batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
+		// Edit mode draws core as it is now, through a shadow 340, so a drag shows at once at any CPU speed.
+		const edited = editOn ? editPicture() : null;
+		const frames = edited ? [{ segments: edited }] : batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
 		const seen = integrate(frames);
 		drawSegments(ctx, seen, frames.length);
 		batch = [];
-		const showPen = player || pressedId !== null;
+		const showPen = !editOn && (player || pressedId !== null);
 		if (showPen) sensePen(seen, frames.length);
-		const hovered = hoverTip();
+		const hovered = editOn ? null : hoverTip();
 		if (hovered && outlineOn) drawHover(ctx, hovered);
 		if (showPen) drawPen(ctx);
-		if (editOn) drawCorner(ctx, seen);
+		if (edited) drawHandles(ctx, edited);
 	}
 
 	// Edit mode: drag a corner of what the 340 draws by rewriting its two vector words in core.
@@ -361,26 +364,32 @@
 	let editGrab = null;
 	let editAt = null;
 	let editNote = $state('');
-	const EDIT_RADIUS = 14;
+	// Generous, so the nearest corner is picked without precise pointing.
+	const EDIT_RADIUS = 40;
 
-	function drawCorner(ctx, seen) {
-		const at = editGrab ? { x: editGrab.x, y: editGrab.y } : editAt;
-		if (!at) return;
-		const c = editGrab?.corner ?? cornerAt(seen, at.x, at.y, EDIT_RADIUS);
-		if (!c) return;
+	function editPicture() {
+		const start = t340.startAddr;
+		return start >= 0 ? preview340((a) => cpu.read(a), start) : (t340.lastFrame?.segments ?? t340.segments);
+	}
+
+	function drawHandles(ctx, segs) {
+		const near = editGrab ? null : editAt && cornerAt(segs, editAt.x, editAt.y, EDIT_RADIUS);
 		ctx.save();
-		ctx.strokeStyle = editGrab?.refused ? '#ff6b6b' : '#ffd27a';
-		ctx.lineWidth = 2;
-		const x = editGrab ? editGrab.x : c.x;
-		const y = editGrab ? editGrab.y : c.y;
-		ctx.strokeRect(x - 7, 1023 - y - 7, 14, 14);
+		ctx.lineWidth = 1;
+		ctx.strokeStyle = 'rgba(255, 210, 122, 0.45)';
+		for (const s of segs) if (s.kind === 'vector' && s.intensify) ctx.strokeRect(s.x1 - 3, 1023 - s.y1 - 3, 6, 6);
+		const pick = editGrab ? { x: editGrab.x, y: editGrab.y } : near;
+		if (pick) {
+			ctx.lineWidth = 2;
+			ctx.strokeStyle = editGrab?.refused ? '#ff6b6b' : '#ffd27a';
+			ctx.strokeRect(pick.x - 8, 1023 - pick.y - 8, 16, 16);
+		}
 		ctx.restore();
 	}
 
 	function editDown(event) {
 		const { x, y } = gridFromEvent(event);
-		const segs = t340.lastFrame?.segments ?? t340.segments;
-		const corner = cornerAt(segs, x, y, EDIT_RADIUS);
+		const corner = cornerAt(editPicture(), x, y, EDIT_RADIUS);
 		if (!corner) {
 			editNote = 'No corner here: point at the end of a line.';
 			return;
@@ -398,7 +407,7 @@
 	function editMove(event) {
 		const { x, y } = gridFromEvent(event);
 		editAt = { x, y };
-		if (!editGrab || event.pointerId !== pressedId) return;
+		if (!editGrab || event.pointerId !== pressedId) return drawFrame();
 		const pokes = moveCorner((a) => cpu.read(a), editGrab.corner, x, y);
 		editGrab.refused = !pokes;
 		if (!pokes) return;
@@ -415,6 +424,7 @@
 		};
 		editGrab.x = x;
 		editGrab.y = y;
+		drawFrame();
 	}
 
 	function editUp(event) {

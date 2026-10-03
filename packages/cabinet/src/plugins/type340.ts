@@ -179,6 +179,8 @@ export class Type340 implements Device {
 	lastHit: Segment | null = null;
 	/** Which pen fired — provenance answers "who hit it". */
 	lastHitPen: PenInput | null = null;
+	/** Where the program last started the display with IDLA: the top of its refresh. */
+	startAddr = -1;
 
 	pens: PenInput[];
 	clock: () => number;
@@ -263,6 +265,7 @@ export class Type340 implements Device {
 					   STOPPED|STOP_INT and would wedge after a pen hit or edge
 					   violation; the listing (5406, 5602, 5616) says clear all. */
 					if ((req.pulse & 0o10) === 0) this.setDac(ac & ADDR);
+					this.startAddr = this.dac;
 					this.pending = null;
 					this.status = 0;
 					this.enabled = true;

@@ -356,6 +356,50 @@ turtle drawing, which Forth only appends to, the edit lasts; on PIXIE's, it last
 next recompile. Don did the same by hand from the Forth prompt: point at a line, read its
 address from the tooltip, and `!` a new word into it.
 
+**Built: instant feedback with the CPU stopped** ([preview340.ts](src/preview340.ts)). In edit
+mode the tube is drawn by a shadow 340: a throwaway one, over a read-only view of core, started
+where the program last issued IDLA (`Type340.startAddr`) and run for one pass. It drops stores,
+has no pens and never touches the real 340 or the CPU, so a drag redraws at pointer rate at any
+speed, paused included (tested: 0 CPU cycles, frame corner moved). The real 340 is not ticked
+on its own, which would be the madness: SYMELEC's display interrupts would fire with no CPU to
+answer them. The shadow reads; the machine stays exactly as it was. Every corner gets a handle,
+and the nearest within 40 grid units is picked, so pointing need not be precise.
+
+**To do: a tool palette, so editing never takes the light pen away.** The ✋ button becomes a
+palette of tools for the pointer, one active at a time, each a plain object with `down`, `move`,
+`up` and `draw`:
+
+- **Light pen** (the default): what the pointer is today, the program's own input.
+- **Corner**: today's ✋.
+- **Select**: drag a rectangle, or shift-click, to collect corners, strings and subroutine calls;
+  the selection is a set of display addresses, drawn as handles.
+- **Move, rotate, scale**: about a pivot the user places (default: the selection's centre).
+  Each transforms the selection's points and re-encodes the words that hold them: vector words
+  for corners, the point words in front of a string or a `DJS` call for a whole thing. A word
+  that can't hold the result is refused and shown red, as now. Rotating a character string
+  moves it, but its letters stay upright, as the 342 draws them.
+- **Inspect**: point and read, without the tooltip's delay.
+
+All of them poke core through the Monitor, so a session records the edits and replays them, and
+none sends anything to the program. The pointer pen and MOUSE device below are the other
+route: tools the program writes for itself.
+
+**To do: a clock per machine.** The CPU, the 340 and every other executable part of a cabinet
+(a Turing machine, the CAM, a raster framebuffer, the Titan link's far end) gets its own run,
+stop and speed, under one master. Rules, so this stays sane:
+
+- **Time is one clock.** Each part is stepped in cycles of the one backplane clock, at its own
+  ratio. A part that is stopped doesn't advance, and the cycles it didn't use are not banked.
+- **A part may stop only if nothing waits on it.** The 340 can run with the CPU stopped (it
+  needs nothing back but its interrupts, which wait until the CPU runs again); the CPU can't
+  usefully run with the 340 stopped if the program waits for a stop interrupt, and the panel
+  says so instead of hanging.
+- **Previews are not clocks.** The shadow 340 above draws without advancing anything. Use it
+  for feedback; give the real parts their own speeds only for watching them work: the 340
+  slowed to a word a second, drawing its display file stroke by stroke, while the CPU sits.
+- **One recording.** Sessions are stamped with backplane cycles, so a recording made with the
+  parts at different speeds replays the same.
+
 **Then the dragging goes into the program, not the emulator.** Two ways to give a program
 the pointer, both cabinet extensions on free device codes, neither touching stock software:
 
