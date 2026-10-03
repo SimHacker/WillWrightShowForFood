@@ -27,7 +27,18 @@ ask,	lac (prompt
 	spa
 	jmp ask			/ no digits on the line
 	dac guess
+	lac lnneg
+	sna
+	jmp ask1
+	lac guess
+	sza			/ minus zero is zero
+	jmp under
+ask1,	lac guess
+	tad (777634		/ minus 100
+	sma
+	jmp over
 	isz tries
+	lac guess
 	cma
 	tad secret
 	tad (1			/ secret - guess
@@ -39,6 +50,12 @@ ask,	lac (prompt
 	jms puts
 	jmp ask
 lower,	lac (lowerm
+	jms puts
+	jmp ask
+under,	lac (underm
+	jms puts
+	jmp ask
+over,	lac (overm
 	jms puts
 	jmp ask
 right,	lac (gotit
@@ -141,6 +158,14 @@ higher,	text "HIGHER."
 	212
 	0
 lowerm,	text "LOWER."
+	215
+	212
+	0
+underm,	text "IT'S GREATER THAN OR EQUAL TO ZERO."
+	215
+	212
+	0
+overm,	text "IT'S LESS THAN OR EQUAL TO 99."
 	215
 	212
 	0

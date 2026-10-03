@@ -84,6 +84,17 @@ test("hilo: an empty line asks again, and letters in a number are skipped", () =
 	assert.match(out, new RegExp(`^X${Math.floor(g / 10)}Y${g % 10}\\r\\n${g < s ? "HIGHER" : "LOWER"}\\.`), `X4Y2 reads as ${g}`);
 });
 
+test("hilo: below 0 or above 99 says so, and is not counted", () => {
+	const m = machine();
+	m.box.run(50_000);
+	m.type("\r");
+	assert.equal(m.type("-5\r"), "-5\r\nIT'S GREATER THAN OR EQUAL TO ZERO.\r\nYOUR GUESS?\r\n");
+	assert.equal(m.type("100\r"), "100\r\nIT'S LESS THAN OR EQUAL TO 99.\r\nYOUR GUESS?\r\n");
+	const s = m.secret();
+	const out = m.type(`-0\r`);
+	assert.match(out, new RegExp(`^-0\\r\\n${s === 0 ? "RIGHT\\. GUESSES: 1\\." : "HIGHER\\."}`), "minus zero is zero");
+});
+
 test("readln: rubout erases with backspace-space-backspace, and rings at the start of the line", () => {
 	const m = machine();
 	m.box.run(50_000);

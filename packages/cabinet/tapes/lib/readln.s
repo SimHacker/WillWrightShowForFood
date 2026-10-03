@@ -15,7 +15,8 @@
 /
 / jms lnread	a line into lnbuf, lnlen characters, one a word
 / jms lnnum	a line's decimal number in AC; -1 if it has no digits.
-/		Digits after the number passes 1000 are dropped.
+/		Digits after the number passes 1000 are dropped. lnneg is
+/		nonzero if a minus sign came before the first digit.
 
 lnread,	0
 	dzm lnlen
@@ -94,6 +95,7 @@ lnnum,	0
 	jms lnread
 	dzm lnval
 	dzm lnnd
+	dzm lnneg
 	lac (lnbuf
 	dac lnptr
 	lac lnlen
@@ -104,6 +106,8 @@ lnnum,	0
 	dac lnk			/ minus the count
 lnn2,	lac i lnptr
 	isz lnptr
+	sad (55			/ minus sign
+	jmp lnn4
 	tad (777720		/ minus 60
 	spa
 	jmp lnn3		/ below 0
@@ -129,6 +133,11 @@ lnn2,	lac i lnptr
 	dac lnval
 lnn3,	isz lnk
 	jmp lnn2
+	jmp lnn9
+lnn4,	lac lnnd		/ a minus counts before the first digit
+	sna
+	isz lnneg
+	jmp lnn3
 lnn9,	lac lnnd
 	sna
 	jmp lnn8
@@ -142,6 +151,7 @@ lnptr,	0
 lnch,	0
 lnval,	0
 lnnd,	0
+lnneg,	0
 lndig,	0
 lnt,	0
 lnk,	0
