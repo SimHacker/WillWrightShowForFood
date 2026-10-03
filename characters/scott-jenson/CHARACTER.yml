@@ -242,6 +242,10 @@ transformation_field:
     attribution: "Don's proposal, answering Hutchings & Stasko 2004 §7.1: 'an operation that shows or hides a user-specified region of a window … better suited for the window manager because an application designer will likely not know a priori what information will be displayed and valued by the user.'"
     idea: "A live, editable crop tool in the window manager, like Photoshop's. Crop any number of edges at once (none, some or all) and re-edit it at any time. The app keeps its full layout, so nothing reflows. Crops can be saved, named and stacked, so one window can expose several cropped region-windows, each pinned somewhere else."
     source: sources/2004-hutchings-stasko-display-space-management.pdf
+  non_empty_space:
+    paper: "'Future systems might explore how to designate a group of icons as \"non-empty space,\" where, for example, maximize does not cover the space, but manual resizing of windows allows the icons to be covered. Alternatively, the notion of desktop icons could be replaced by something that more tightly integrates with the window system.' (Hutchings & Stasko 2004 §6.3)"
+    answer: "This room's proposals take the second option. Icons stop being a layer under the windows: they become stuff hung on rigs, in bags and on puff zones, pinned into the same field as the windows. A rack of icons is a rig whose space other things snap around, not into. Maximize means 'grow until you meet a rig', and a manual drag can still push past it. Nothing has to be a special desktop layer, because the desktop is just the root window's field."
+    links: "rigs, painted_scale, pins (above); sources/2004-hutchings-stasko-display-space-management.md"
   painted_scale:
     attribution: "Don's proposal. You build containers and emphasis by painting the scale field, with no special widgets."
     bag_of_holding: |

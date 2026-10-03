@@ -3,6 +3,7 @@
 Notes for the Scott Jenson room. They are not the paper's text.
 
 - **Citation:** Dugald Ralph Hutchings and John Stasko, "Revisiting Display Space Management: Understanding Current Practice to Inform Next-generation Design", *Graphics Interface 2004*, Canadian Human-Computer Communications Society. ACM DL: https://doi.org/10.1145/1006058.1006074
+- **Cached PDF:** [2004-hutchings-stasko-display-space-management.pdf](2004-hutchings-stasko-display-space-management.pdf), from the [Wayback Machine copy](https://web.archive.org/web/20230530233017/https://facstaff.elon.edu/dhutchings/papers/hutchings2004revisiting.pdf) of the author's page.
 - **Method:** structured interviews with 20 people at their own desks, 30–60 minutes each, covering 22 window systems. The systems were CDE, Enlightenment, KDE, Mac OS 9 and X, and Windows 2000 and XP. The interviews included screenshots and photos of each workspace.
 
 ## Why it belongs in Scott's room
@@ -28,10 +29,12 @@ the window manager gives people almost no tools for any of that.
 ## Design proposals in the paper worth stealing
 
 - **"An operation that shows or hides a user-specified region of a window"** for information or privacy, owned by the window manager because "an application designer will likely not know a priori what information will be displayed and valued by the user". That is the PbD and user-constraint argument: the user rigs the layout, not the app.
+- **Don's answer: a live, editable crop in the window manager, like Photoshop's crop tool.** Drag any number of edges at once (none, some or all) and the crop stays live and re-editable. Cropping is not resizing: the app keeps its full layout, nothing reflows, and you hide what you don't need. That fixes the §6.1 complaint that resizing reflows. A crop is just four optional edge pins on the window's own field (see CHARACTER.yml `transformation_field`), so you can save it, give it a name, and pull it out as a region-window.
 - **"Dynamic transparency or other subtle methods of obfuscation for privacy."**
 - **SCWM constraints:** "constrain a secondary window with sensitive information to always be occluded … by the primary window". These are user-authored constraints between instances, as in Declare, Garnet and OpenLaszlo, and from template warehouses.
 - **A "super window"** that holds reminder windows and cycles through them with change-blind animation. Compare scrapbooks, card decks that splay and deal, and book-spine fasteners.
 - **"Non-empty space":** icon regions that maximize won't cover but a manual resize can.
+- **§6.3 non-empty space, quoted:** "Future systems might explore how to designate a group of icons as 'non-empty space,' where, for example, maximize does not cover the space, but manual resizing of windows allows the icons to be covered. Alternatively, the notion of desktop icons could be replaced by something that more tightly integrates with the window system." This room takes the second option: icons hang on rigs that windows snap around, and maximize grows until it meets a rig. See CHARACTER.yml `transformation_field.non_empty_space`.
 - **Warning for AI window managers:** CIWM closed windows it judged unimportant from input focus. "Closing a reminding window could have a detrimental effect." Weight should decay to something glanceable, never to deleted, and every agent action should go on the visible, undoable command bus.
 
 ## Related systems the paper surveys
