@@ -8,6 +8,7 @@
 		Pdp7,
 		Type340,
 		LightPen,
+		PEN_COLORS,
 		Clock,
 		Teletype,
 		TinyTitan,
@@ -344,8 +345,10 @@
 		ctx.setTransform(1, 0, 0, 1, 0, 0);
 		ctx.fillStyle = '#0a0f0a';
 		ctx.fillRect(0, 0, 1024, 1024);
-		// Edit mode draws core as it is now, through a shadow 340, so a drag shows at once at any CPU speed.
-		const edited = editOn ? editPicture() : null;
+		// Edit mode, and the steady display below 1x, draw core as it is now through a shadow 340,
+		// so the picture holds still however slowly the CPU runs.
+		const steady = editOn || steadyScreen;
+		const edited = steady ? editPicture() : null;
 		const frames = edited ? [{ segments: edited }] : batch.length ? batch : [{ segments: t340.lastFrame?.segments ?? t340.segments }];
 		const seen = integrate(frames);
 		drawSegments(ctx, seen, frames.length);
@@ -355,12 +358,38 @@
 		const hovered = editOn ? null : hoverTip();
 		if (hovered && outlineOn) drawHover(ctx, hovered);
 		if (showPen) drawPen(ctx);
-		if (edited) drawHandles(ctx, edited);
+		if (editOn) drawHandles(ctx, edited);
+	}
+
+	// The pointer is one tool at a time: a light pen in one of eight colours, or the editor.
+	const TOOL_KEY = 'cabinet-tool';
+	let tool = $state(untrack(() => {
+		const t = globalThis.localStorage?.getItem(TOOL_KEY);
+		return t === 'edit' ? 'edit' : Math.min(7, Math.max(0, Number(t) || 0));
+	}));
+	const editOn = $derived(tool === 'edit');
+	function setTool(t) {
+		tool = t;
+		store(TOOL_KEY, String(t));
+		editGrab = null;
+		editNote = t === 'edit' ? 'Drag the end of a line.' : '';
+		if (!pen) return;
+		if (t === 'edit') pen.enabled = false;
+		else pen.color = PEN_COLORS[t];
+	}
+
+	// How the tube is drawn. 'machine': the 340's own refreshes, which flicker when the CPU is slow,
+	// as the real one would. 'steady': core as it is now, redrawn every frame, whatever the CPU does.
+	const SCREEN_KEY = 'cabinet-screen';
+	let screenMode = $state(untrack(() => globalThis.localStorage?.getItem(SCREEN_KEY) ?? 'auto'));
+	const steadyScreen = $derived(screenMode === 'steady' || (screenMode === 'auto' && (paused || traceMs > 0 || speed < 1)));
+	function setScreenMode(m) {
+		screenMode = m;
+		store(SCREEN_KEY, m);
 	}
 
 	// Edit mode: drag a corner of what the 340 draws by rewriting its two vector words in core.
 	// The program's own structures don't change, so PIXIE's next recompile puts its picture back.
-	let editOn = $state(false);
 	let editGrab = null;
 	let editAt = null;
 	let editNote = $state('');
@@ -372,8 +401,12 @@
 		return start >= 0 ? preview340((a) => cpu.read(a), start) : (t340.lastFrame?.segments ?? t340.segments);
 	}
 
+	let editHover = $state(false);
+	let editDragging = $state(false);
+
 	function drawHandles(ctx, segs) {
 		const near = editGrab ? null : editAt && cornerAt(segs, editAt.x, editAt.y, EDIT_RADIUS);
+		if (editHover !== !!near) editHover = !!near;
 		ctx.save();
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = 'rgba(255, 210, 122, 0.45)';
@@ -395,6 +428,7 @@
 			return;
 		}
 		editGrab = { corner, x: corner.x, y: corner.y, refused: false };
+		editDragging = true;
 		editNote = `Corner ${corner.x},${corner.y}: words ${oct(corner.into.addr, 5)}${corner.outOf ? ` and ${oct(corner.outOf.addr, 5)}` : ''}`;
 		try {
 			canvasEl.setPointerCapture(event.pointerId);
@@ -432,6 +466,7 @@
 		pressedId = null;
 		if (editGrab?.refused) editNote = 'That far is more than a vector word holds (127 each way).';
 		editGrab = null;
+		editDragging = false;
 		if (canvasEl?.hasPointerCapture(event.pointerId)) canvasEl.releasePointerCapture(event.pointerId);
 	}
 
@@ -1931,7 +1966,7 @@
 		cpu = new Pdp7({ coreWords: program.coreWords ?? 8192 });
 		cpu.trace = trace = new Trace();
 		traceBack = 0;
-		pen = new LightPen({ aperture: 12, name: 'pointer', index: 0, enabled: false });
+		pen = new LightPen({ aperture: 12, name: 'pointer', index: tool === 'edit' ? 0 : tool, enabled: false });
 		press = null;
 		t340 = new Type340({
 			fetch: (a) => cpu.read(a),
@@ -2372,6 +2407,9 @@
 			class="tube"
 			class:live={status === 'live'}
 			class:held={penHeld}
+			class:editing={editOn}
+			class:can-grab={editOn && editHover}
+			class:grabbing={editOn && editDragging}
 			tabindex="0"
 			aria-label="{program?.label ?? 'PDP-7'} display{program?.keyHelp ? `. ${program.keyHelp}` : ''}"
 			onkeydown={(e) => onKey(e, true)}
@@ -2614,24 +2652,47 @@
 						onblur={() => (resetPull = -1)}>🔄</button
 					>
 				</span>
-				<span class="buttons">
+				<span class="tools" role="radiogroup" aria-label="Pointer tool">
+					{#each PEN_COLORS as color, i (i)}
+						<button
+							type="button"
+							role="radio"
+							class="pen-swatch"
+							class:on={tool === i}
+							aria-checked={tool === i}
+							aria-label="Light pen {i + 1}"
+							title="Light pen {i + 1}: the pointer is the program's light pen, in this colour"
+							style:--pen={color}
+							onclick={() => setTool(i)}
+						></button>
+					{/each}
+					<button
+						type="button"
+						role="radio"
+						class="icon"
+						class:on={editOn}
+						aria-checked={editOn}
+						aria-label="Edit the picture"
+						title="Edit: drag the end of a line, rewriting the 340's own words in core. The light pen is put away and the program hears nothing. PIXIE puts its picture back when it next redraws."
+						disabled={status !== 'live'}
+						onclick={() => setTool('edit')}>✋</button
+					>
 					<button
 						type="button"
 						class="icon"
-						class:on={editOn}
-						aria-pressed={editOn}
-						aria-label="Edit the picture"
-						title={editOn
-							? 'Editing: drag the end of a line to move it. The pen is off. Click to give the pen back.'
-							: "Edit the picture: drag the end of a line, rewriting the 340's own words in core. Just for fun: the program's structures don't change, so PIXIE puts its picture back when it next redraws."}
-						disabled={status !== 'live'}
-						onclick={() => {
-							editOn = !editOn;
-							editGrab = null;
-							editNote = editOn ? 'Drag the end of a line.' : '';
-							if (editOn && pen) pen.enabled = false;
-						}}>✋</button
+						class:on={steadyScreen}
+						aria-pressed={steadyScreen}
+						aria-label="Display: {screenMode}"
+						title={screenMode === 'auto'
+							? `Display: auto. Below 1×, or stopped, the tube shows core as it is now, every frame, so it holds still; at 1× and up, the 340's own refreshes. Now: ${steadyScreen ? 'steady' : "the 340's"}. Click for always steady.`
+							: screenMode === 'steady'
+								? "Display: always steady, core as it is now, whatever the CPU does. Click for the 340's own refreshes, flicker and all."
+								: "Display: the 340's own refreshes, which flicker when the CPU is slow, as the real one would. Click for auto."}
+						onclick={() => setScreenMode(screenMode === 'auto' ? 'steady' : screenMode === 'steady' ? 'machine' : 'auto')}
+						>{screenMode === 'machine' ? '📺' : screenMode === 'steady' ? '🖥️' : '🅰️'}</button
 					>
+				</span>
+				<span class="buttons">
 					<button
 						type="button"
 						class="icon"
@@ -3098,6 +3159,15 @@
 	.tube.live.held {
 		cursor: none;
 	}
+	.tube.live.editing {
+		cursor: crosshair;
+	}
+	.tube.live.editing.can-grab {
+		cursor: grab;
+	}
+	.tube.live.editing.grabbing {
+		cursor: grabbing;
+	}
 	/* Fixed, so a tip past the page's edge never adds a scrollbar that resizes the tube. */
 	.tip {
 		position: fixed;
@@ -3334,6 +3404,26 @@
 	.icon.on {
 		background: #6b5420;
 		outline: 1px solid #ffd27a;
+	}
+	.tools {
+		display: inline-flex;
+		align-items: center;
+		gap: 2px;
+	}
+	.pen-swatch {
+		width: 0.75rem;
+		height: 1.1rem;
+		padding: 0;
+		border: 1px solid #000;
+		border-radius: 2px;
+		background: var(--pen);
+		opacity: 0.45;
+		cursor: pointer;
+	}
+	.pen-swatch.on {
+		opacity: 1;
+		outline: 2px solid #fff;
+		outline-offset: 1px;
 	}
 	.row.demo-row {
 		display: flex;
