@@ -113,7 +113,22 @@ clipboard:
       2. advance — move the cursor to select the next object, or fail, which stops the loop.
     Repeat until the advance fails. Every bite is journaled in the git-ref clipboard above, so the
     whole meal can be inspected, rewound, or replayed on another file.
+  pbd_at_the_heart: |
+    Don's proposal: programming by demonstration is the center of the desktop, not a feature.
+    Every direct-manipulation gesture is published as a command on one visible command bus that
+    both the user and the LLM can read. That one stream gives you:
+      - undo/redo for free — Shneiderman's direct manipulation requires "rapid, incremental,
+        reversible operations", and you can't reverse what you didn't record;
+      - demonstrations — a span of the bus is a macro, generalized by the digest/advance loop above;
+      - shared context — the LLM sees what you did, not a scrape of your pixels; Scott's
+        "gathering focus information and not text" (KDE [39:26]) and "capture user intent over
+        time" (KDE [28:19]), made inspectable instead of a hidden honeypot;
+      - the cure for the "curse of direct manipulation" Scott names at KDE [24:34]: it stops being
+        stateless the moment its gestures land in a journal.
+    The LLM writes to the same bus, so its actions are as visible, undoable, and replayable as yours.
   corpus:
+    - ../ben-shneiderman/
+    - ../henry-lieberman/
     - "https://github.com/SimHacker/moollm/blob/main/designs/webtop/READING-CURSORS.md"
     - "https://github.com/SimHacker/moollm/blob/main/designs/webtop/CURSOR-STORAGE.md"
     - ../../repo-shows/unnatural-selection/
