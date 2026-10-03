@@ -128,7 +128,7 @@ hello,	text "HILO, FOR THE PDP-7 TELETYPE."
 	215
 	212
 	0
-think,	text "I HAVE ONE."
+think,	text "I AM THINKING OF A NUMBER."
 	215
 	212
 	0

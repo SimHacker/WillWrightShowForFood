@@ -10,7 +10,7 @@ A number guessing game on the PDP-7's teletype. It was written for this cabinet 
 
 **Play.** Click the teletype paper so it has the keyboard.
 
-1. Press Return. HILO answers I HAVE ONE.
+1. Press Return. HILO answers I AM THINKING OF A NUMBER.
 2. Type a guess and Return. It says HIGHER, LOWER or RIGHT, with the number of guesses.
 
 A lucky game:

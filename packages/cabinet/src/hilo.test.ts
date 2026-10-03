@@ -54,7 +54,7 @@ test("hilo: banner, then a game played by halving, ended by RIGHT", () => {
 	m.box.run(50_000);
 	assert.match(m.paper(), /^HILO, FOR THE PDP-7 TELETYPE\.\r\nI THINK OF A NUMBER FROM 0 TO 99\. YOU GUESS IT\.\r\nPRESS RETURN TO START\.\r\n$/);
 	assert.equal(m.type("7"), "", "keys other than Return are ignored");
-	assert.match(m.type("\r"), /^I HAVE ONE\.\r\nGUESS\?\r\n$/);
+	assert.match(m.type("\r"), /^I AM THINKING OF A NUMBER\.\r\nGUESS\?\r\n$/);
 	const s = m.secret();
 	assert.ok(s >= 0 && s <= 99, `secret ${s}`);
 	let lo = 0;

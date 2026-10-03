@@ -8,7 +8,7 @@ teleprinter that SYMELEC, the light pen test and DUEL do not give.
     HILO, FOR THE PDP-7 TELETYPE.
     I THINK OF A NUMBER FROM 0 TO 99. YOU GUESS IT.
     PRESS RETURN TO START.
-    I HAVE ONE.
+    I AM THINKING OF A NUMBER.
     GUESS? 50
     LOWER.
     GUESS? 25
