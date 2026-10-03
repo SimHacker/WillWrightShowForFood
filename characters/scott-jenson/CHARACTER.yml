@@ -238,6 +238,26 @@ transformation_field:
     corpus:
       - "../john-von-neumann/sources/hn/24163024-factorio-simcity-kay.md (Factorio belts, Kay on rule-based SimCity)"
       - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/GROOVES-AND-SPIKES.md (grooves and spikes as snap targets)"
+  painted_scale:
+    attribution: "Don's proposal. You build containers and emphasis by painting the scale field, with no special widgets."
+    bag_of_holding: |
+      Paint a U-shaped bag with walls, then draw a scale gradient from the open top line (1.0) down the
+      sides to the bottom of the U (0.1). Paint a flat 0.1 floor at the bottom so it isn't all ramp. In ARK
+      physics, throw an object in: it shrinks as it falls and bounces around among the other tiny
+      things at the bottom. Reach in and drag one up the gradient and it grows back to full size as it
+      comes out. A bag is just walls plus a gradient, and you can carry it in your pocket (the scrapbook).
+    puff_zone: |
+      Turn it upside down: an inverted U that ramps from 1.0 along the bottom to 10.0 at the top. Throw
+      an object up there and it gets really big. It projects out past the edges of its box instead of
+      being clipped, so you can see it from a distance and it becomes a focus of attention or a signpost.
+      Importance is a place you put things, not a style you apply.
+    headers: "A header is a puffed-up circular area at the left of the page. Drag the start pin of a line of text into it and the line puffs up. Heading levels are puff strengths, and an outline is a column of puffs. Demote a heading by dragging its pin out of the puff."
+    rules:
+      - "Scale is in the field, not on the object, so the same object reads differently depending on where it sits, and moving it is how you restyle it."
+      - "Overflow is allowed. Big things draw over their neighbors' borders, the way a signpost stands above the roofs."
+      - "Physics respects the field: momentum and collisions happen in local scale, so tiny things at the bottom of the bag jostle at their own size."
+    kit: "ARK physics + push-pin constraints + transformation and distortion areas + grooves and spikes + girders + roads + halls + racks. Every piece is stuff you can paint, snap, pin and throw, and save to git."
+    why_scott: "It's his spatial stash (KDE [29:25]–[31:03]) given depth: a stash that doesn't take up room, and emphasis you make by direct manipulation rather than through a style menu."
   its_all_stuff: "Scott's fourth ST layer, taken literally. Every window, scrapbook, clip, pin and pocket is a MOOLLM object (a file or directory in a git repo, as in the room, container, inventory, object and card skills). So a pin is a reference you can commit, a layout is a diff, and moving a scrapbook between pockets is a git mv you can see in the log and undo."
   moollm_skills: "https://github.com/SimHacker/moollm/tree/main/skills (room, container, inventory, object, card, file-system-object)"
   why_scott: "It's his three memories in one substrate: spatial (where it's pinned), associative (what it's pinned to) and episodic (the clock you can scrub)."
