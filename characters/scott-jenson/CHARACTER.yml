@@ -104,7 +104,18 @@ clipboard:
     file in a filesystem snapshot of a ref in a git repo. Editable, journaled, every version
     inspectable — a safety net for trapeze artists. Copy mints a pointer, paste transcludes or
     forks it; nothing is overwritten, so the clipboard's statelessness Scott names at [24:34] goes away.
+  clips_are_cursors: |
+    Don's proposal: a clip is a mobile cursor, not a frozen copy. Move it around; expand it to a
+    region by character, by line number, or by expression (regex, AST node, query). That makes the
+    Emacs keyboard-macro trick a first-class desktop verb — programming by demonstration as a worm's
+    digestive cycle, in two parts:
+      1. digest — do the thing to the selected object (recorded as you do it once by hand);
+      2. advance — move the cursor to select the next object, or fail, which stops the loop.
+    Repeat until the advance fails. Every bite is journaled in the git-ref clipboard above, so the
+    whole meal can be inspected, rewound, or replayed on another file.
   corpus:
+    - "https://github.com/SimHacker/moollm/blob/main/designs/webtop/READING-CURSORS.md"
+    - "https://github.com/SimHacker/moollm/blob/main/designs/webtop/CURSOR-STORAGE.md"
     - ../../repo-shows/unnatural-selection/
     - ../david-rosenthal/selection-clipboard-lineage.md
     - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/VIEWS-AS-TESTIMONY.md  # 'GitHub is the clipboard bus'"
