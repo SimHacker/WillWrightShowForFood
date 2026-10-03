@@ -164,6 +164,21 @@ bug wear   200 fd   90 rt   200 fd
     each, and turning only rewrites the `DJS` target: one word per turn, more core.
 
   The same transform is the edit tools' rotate and scale, and works for tiles and symbols.
+
+**To do: `atan2` and `towards`.** turtle.fs has `sin` and `cos` from a 91-entry table, whole
+degrees, scaled by 16384, and no inverse. Rotating a shape doesn't need one; aiming does:
+Logo's `towards`, a turtle that follows the pen, a shape whose heading comes from a drag,
+DUEL-style ships steered at a target.
+
+- `atan2 ( dy dx -- degrees )` by binary search on the same `sines` table: fold into the first
+  octant by swapping and negating, so the ratio is at most 1; scale it to 16384 with `*/`;
+  search the 46 entries for 0–45°; then unfold. About six comparisons, whole degrees like `sin`,
+  and no new table.
+- `towards ( x y -- degrees )` and `distance ( x y -- n )`. `distance` needs a square root:
+  Newton's method on integers in a few steps, or `dx cos + dy sin` once the angle is known,
+  which needs no root at all.
+- Heading 0 is up and turns are clockwise, as in Logo, so `atan2`'s answer is fed `dx dy` in
+  that order to match.
 - `shapes` lists them; `triangle wear` puts the old turtle back.
 - With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
   says what it is.
