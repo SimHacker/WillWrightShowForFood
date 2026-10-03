@@ -94,6 +94,21 @@ st_layers:
     stanza: "Italian for 'room'. A hall is a room whose job is to connect other rooms."
     enfilade: "Xanadu's name for its tree data structures, borrowed from architecture: a suite of rooms whose doors line up on one axis, so you can look straight down the row. No hall — the rooms connect directly and the aligned doors make an implicit hallway. Don builds his RimWorld complexes that way."
 
+clipboard:
+  scott_building_blocks: "'We have Windows, we got files and icons, and the clipboard … the things that allow you to kind of capture and move and edit and store data' (KDE [24:03]); direct manipulation is 'completely stateless … if you copy a few too many things to the clipboard' (KDE [24:34])"
+  scott_fixes: "visual clipboard that pops over the same place and crosses WM/clipboard/file-manager boundaries (Ubuntu [29:33]); a clipboard *file* attached to the document, Obsidian-style (KDE [32:40])"
+  ted_nelson: "Copy-and-paste to an invisible clipboard is the thing Ted has railed against for decades — ../ted-nelson/sources/invisible-clipboard-rant-catalog.md"
+  don_position: |
+    Don's proposal, not Scott's: Don is horrified that the invisible clipboard is one of the three
+    building blocks, and Ted would be too. Replace it with a URL pointer that can drill down into a
+    file in a filesystem snapshot of a ref in a git repo. Editable, journaled, every version
+    inspectable — a safety net for trapeze artists. Copy mints a pointer, paste transcludes or
+    forks it; nothing is overwritten, so the clipboard's statelessness Scott names at [24:34] goes away.
+  corpus:
+    - ../../repo-shows/unnatural-selection/
+    - ../david-rosenthal/selection-clipboard-lineage.md
+    - "https://github.com/SimHacker/moollm/blob/main/designs/pie-stack-views/VIEWS-AS-TESTIMONY.md  # 'GitHub is the clipboard bus'"
+
 working_memory:
   thesis: "The desktop's real job is working memory; windows, files, and clipboard each solve a slice of it in silos (KDE [25:06])."
   three_memories:
