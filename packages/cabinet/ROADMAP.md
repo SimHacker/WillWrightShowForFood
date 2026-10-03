@@ -135,6 +135,25 @@ say" and a star" 5 0 do 300 fd 30 wait 144 rt loop
 Later, with tags, `title"` announces what is drawn and `talk` makes `fd` and `rt`
 narrate themselves ([TAGS-AND-PIES §1](TAGS-AND-PIES.md#in-forth)).
 
+**To do: turtle shapes, as in Logo's `SETSHAPE`.** `hideturtle` and `showturtle` (`ht`, `st`)
+are already in turtle.fs; the turtle itself is a fixed triangle built by `redraw`. Let it wear
+any symbol drawn with the turtle:
+
+```forth
+shape: bug  4 0 do 10 fd 90 rt loop  5 fd 8 lt 6 fd  ;shape
+bug wear   200 fd   90 rt   200 fd
+```
+
+- `shape: … ;shape` records the moves into a shape (the emitter seam,
+  [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module)), as relative
+  steps, so it draws wherever the turtle is. The same thing as a tile or a symbol.
+- `wear ( shape -- )` makes `redraw` draw that shape in place of the triangle, rotated to the
+  heading. The 340 can't rotate a subroutine, so `redraw` re-emits the shape's steps through
+  `off` at the heading, as it does the triangle now, and keeps the turtle a few words long.
+- `shapes` lists them; `triangle wear` puts the old turtle back.
+- With the round screen and tags, a worn shape can carry a title, so pointing at the turtle
+  says what it is.
+
 ## 6. Round screen
 
 The 340's tube is round, about 10 inches across, with the square drawing area inside.
