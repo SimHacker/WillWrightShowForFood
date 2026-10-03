@@ -213,22 +213,29 @@ generation** (build a drawing in TS, feed it to 1969 PIXIE over the link,
 watch it render); **extraction** (pull out what the user drew with the pen).
 Acceptance test for free: encode → link → PIXIE → link → decode → deep-equal.
 
-Built in `packages/pixie`: the word classes and the relocation pass,
-`RingBuilder` cells with CAR/CDR walks, `encodeTransfer`/`decodeTransfer`
-with a round trip through relocation, Graftal ferns through the real 340
-to SVG, and the acceptance test against the transfer 1972 SYMELEC
-actually sends (PDP → Titan, re-encoded word for word). Not built: the
-Titan → PDP half, so a structure made in TypeScript has not yet been
-drawn by PIXIE.
+Built in `packages/pixie` (16 tests pass, 3 Oct 2026):
 
-**Build state, 26 Sep 2026: broken.** `packages/pixie/package.json`,
-`tsconfig.json` and `src/image.ts` were never committed. `dist/image.js`
-survives, and `pnpm-lock.yaml` records the devDependencies (`@types/node`,
-`@wwsff/cabinet` as `workspace:*`, `typescript`). Restore them before any
-work below; `index.ts` should also export `photograph` and `SYMELEC_VARS`,
-which `scripts/trace-serveback.mjs` imports. Latent bug in `graftal.ts`
-`toDisplayFile`: a run of only zero-length strokes emits PARAM, Y, X and no
-vectors, leaving the 340 in VECTOR mode when the next PARAM word arrives.
+- the word classes and the relocation pass; `RingBuilder` cells with CAR/CDR walks;
+  `encodeTransfer`/`decodeTransfer`, round-tripped through relocation; `photograph` of a
+  running SYMELEC's data-structure area;
+- the acceptance test against the transfer 1972 SYMELEC actually sends (PDP → Titan,
+  re-encoded word for word);
+- Graftals through the real 340 to SVG: the fern, and Rehmi Post and Don's NeWS pot leaf in
+  two loads, since its 11K display words exceed core;
+- rings as data: `readRings` for YAML, JSON and binary, graph ⇄ ring conversion, and the PSIBER
+  ARPA and Adventure maps as rings;
+- a 3D ring renderer (`scene`, `view`, the holodeck plugin), shown in the cabinet's RINGS panel
+  with roots per program; rings are Tiny Titan's file format.
+
+Not built: the Titan → PDP half, so a structure made in TypeScript has not yet been drawn by
+PIXIE. `scripts/trace-serveback.mjs` is the diagnostic written ahead of it: it boots SYMELEC
+and photographs the rings, then stops at `BlockletHost.serving`, which doesn't exist yet.
+Building that method is the serve-back rung.
+
+The build was broken on 26 Sep (`package.json`, `tsconfig.json` and `src/image.ts` never
+committed); `b6cf8fc2` restored them. The zero-length-stroke bug in `toDisplayFile`, where a
+run that only positioned the beam left the 340 in VECTOR mode for the next PARAM word, is fixed
+and has a test.
 
 **To do: a live view and editor of ring structures, in memory and on
 disk.** The emulator exposes every word of core, so the page can show

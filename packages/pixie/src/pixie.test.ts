@@ -119,6 +119,22 @@ test("graftal: the fern grows through the real 340 into SVG", () => {
 	writeFileSync(`${dir}graftal-pot-leaf.svg`, toSvg(leafPicture));
 });
 
+test("graftal: a zero-length stroke still leaves VECTOR mode before the next PARAM", () => {
+	const far = { x0: 900, y0: 900, x1: 950, y1: 900 };
+	const file = toDisplayFile([{ x0: 100, y0: 100, x1: 100, y1: 100 }, far]);
+	const mem = new Array<number>(8192).fill(0);
+	for (let i = 0; i < file.length; i += 1) mem[0o100 + i] = file[i]!;
+	const t = new Type340({ fetch: (a) => mem[a] ?? 0, store: (a, w) => void (mem[a] = w) });
+	t.iot({ device: 0o06, pulse: 0o06, ac: 0o100 });
+	for (let i = 0; i < file.length + 10; i += 1) t.tick();
+	const lit = (t.lastFrame?.segments ?? t.segments).filter((s) => s.intensify);
+	assert.deepEqual(
+		lit.map((s) => [s.x0, s.y0, s.x1, s.y1]),
+		[[900, 900, 950, 900]],
+		"the far stroke is drawn where it belongs, and nothing else",
+	);
+});
+
 test("acceptance: decode the transfer 1972 SYMELEC actually sends", () => {
 	const cpu = new Pdp7({ coreWords: 8192 });
 	loadSymelec(cpu);

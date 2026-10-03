@@ -271,7 +271,11 @@ export function toDisplayFile(strokes: Stroke[]): number[] {
 	let bx: number | undefined;
 	let by: number | undefined;
 	let run: number[] = [];
+	let inVector = false;
 	const flush = () => {
+		// a run of only zero-length strokes positioned the beam but drew nothing: still escape VECTOR
+		if (run.length === 0 && inVector) run.push(vector(0, 0, false, false));
+		inVector = false;
 		if (run.length === 0) return;
 		const last = run[run.length - 1]!;
 		run[run.length - 1] = last | BIT(0); // escape on the run's final vector
@@ -303,6 +307,7 @@ export function toDisplayFile(strokes: Stroke[]): number[] {
 			words.push(param(POINT));
 			words.push(point("y", s.y0, POINT));
 			words.push(point("x", s.x0, VECTOR));
+			inVector = true;
 		}
 		let dx = s.x1 - s.x0;
 		let dy = s.y1 - s.y0;

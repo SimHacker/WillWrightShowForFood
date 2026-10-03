@@ -56,9 +56,11 @@ every other consumer: loader, run budget, segment log, pen input.
 
 Every program also has a page of its own with no article around it: `/cabinet/<program>/`, for
 example `/cabinet/unix/` and `/cabinet/forth/`, or `/cabinet/?program=duel&size=768`.
-`src/lib/cabinet-url.js` turns the URL into the same spec a fence gives; see
-[packages/cabinet/DESIGN.md](../../packages/cabinet/DESIGN.md#cartridges-and-live-coding) for
-where that goes (cartridges and profiles).
+`src/lib/cabinet-url.js` turns the URL into the same spec a fence gives. The entries in
+`cabinet-programs.js` are becoming cartridge directories with a `cartridge.yml` each:
+[packages/cabinet/CARTRIDGES.md](../../packages/cabinet/CARTRIDGES.md) has the format, the
+build cache, `extends`, eggs and the GitHub workflow; profiles are in
+[DESIGN.md](../../packages/cabinet/DESIGN.md#cartridges-and-live-coding).
 
 A program can map its own keyboard: `ttyKey(c)` returns `{ send, echo }`, what goes to the machine
 and what the paper prints in half duplex, and `lowerCase: true` keeps the case as typed (UNIX).
@@ -275,6 +277,10 @@ with the cabinet block where a `picture` block would go. Its `definition`
 double-click article gets the live machine.
 
 ## Ladder
+
+Where it stands: the live tube and the pointer as pen (rungs 2 and 3) run on every program's
+page. Rung 2's pixel-for-pixel check against the static SVG has not been written as a test.
+Rung 4 has its design in [ROADMAP §7](../../packages/cabinet/ROADMAP.md#7-several-pens-the-engelbart-cursor-party).
 
 1. **Static first:** the article ships with `snapshots/symelec-boot.svg`
    as its picture — zero new code, corpus entry proves the article side.
