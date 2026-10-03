@@ -199,6 +199,24 @@ can share the screen:
   (1968, already in this cabinet, from the tape), and this one in Mitch's Forth, 2026, with ships
   anyone can redraw with the turtle.
 
+**To do: diffusion-limited aggregation, with turtles as the walkers.** Witten and Sander's DLA
+(1981): walkers wander at random until they touch the cluster, then stick, and a branching
+coral grows from a seed. On the 340 it is a demo for the tube and the slow phosphor.
+
+- **The walkers are sprites**, each wearing a small shape and wandering by `random rt 4 fd`, so
+  the dance is visible. A few dozen at a time, launched on a circle just outside the cluster and
+  dropped if they wander too far, as the classic speedups do.
+- **The cluster is a grid of bits**, 64 by 64 in 128 words of core, for the stuck test, and a
+  display list that only grows. A walker that sticks stamps its shape (or a point) into it at
+  its spot and is reborn on the launch circle.
+- **Colour by age.** Intensity steps down as the cluster grows, so the oldest branches are
+  brightest and the phosphor shows its history.
+- **Forth needs `random`.** Neither the kernel nor turtle.fs has one; HILO counts a seed while it
+  waits for a key. A 17-bit linear feedback shift register in a few words of Forth is enough,
+  seeded the same way, or from the clock.
+- **It is a CA cousin.** The stuck grid is the CA machinery's two-layer cell array, the stamps
+  are its tiles, and the same rule-cartridge shape holds it.
+
 **Memory: Forth already has all of it.** The FORTH cartridge runs with 8K, every word a PDP-7
 without the memory extension can address (13-bit addresses, `ADDR = 0o17777`), and the kernel
 uses it all: its literal pool grows down from 20000. After the prelude and turtle load,
