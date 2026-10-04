@@ -1203,7 +1203,49 @@ are doing. Brian Eno would love it (`characters/brian-eno/speculative-jams.md`).
 - the Forth compiles the rule;
 - the rule drives the CAM device, which draws on the 340.
 
-Each layer has its own source map and its own panel, and a click goes down a layer.
+Each layer has its own source map and its own panel, and a click goes down a layer. 
+
+### Raster: a vanilla virtual video display, and a cell renderer
+
+The 340 draws vectors; cells want pixels. Two more cabinet devices, both marked as extensions,
+both reading core directly as the 340 does, so the PDP-7 program only writes memory and never
+sees how pixels are pulled out. All the cleverness is on the TypeScript side.
+
+**The pipeline:**
+
+1. *Cells.* The CAM6 device, or the PDP-7 rule in assembly, or Forth, steps cell buffers in core
+   through lookup tables (the CAM-off above).
+2. *Cell renderer.* A device pointed at a cell buffer, a colour map and a framebuffer writes
+   pixels from cells: state through the colour map, each cell as a block of pixels. Colour-map
+   animation (cycling, fading, blink) is the renderer changing the map, not the cells, so a still
+   automaton can shimmer, after CAM6.js's colormap generators.
+3. *Framebuffer.* Shows any memory as a picture on a canvas beside the tube.
+
+**The framebuffer is a descriptor**, set by IOTs or written to core and pointed at:
+
+| Field | Meaning |
+|---|---|
+| base | a *byte pointer*: word address, bit offset and byte size, PDP-10 style (`POINT 6,BUF,5`) |
+| width, height | in pixels, any size |
+| colbytes | step from one pixel to the next along a row, in bytes (can skip, for interleaving) |
+| rowbytes | step from one row to the next, in bytes; negative flips vertically |
+| flip h / v | mirror, cheap since the stride is already there |
+| format | monochrome (1 bit), indexed (any byte size up to 18) through a colour map, or direct RGB (3 fields) |
+| colour map | another byte pointer: a table of RGB entries in shared core, so programs animate it by writing it |
+
+With byte pointers and strides, one bank can hold several interleaved planes, a framebuffer can
+be a window into a larger picture, and the same cells can be viewed as monochrome, indexed or RGB
+by three descriptors at once. Layouts that fit a 32K machine are in
+[GUIDE-PDP7](reference/GUIDE-PDP7.md#the-pdp-7-next-to-an-apple-): RGB planes one per bank, or a
+256² monochrome screen in bank 0.
+
+**Sprites** (later): a short list of descriptors (position, size, byte pointer, transparent
+index) composited over the framebuffer, read from core every frame, so a program moves a sprite
+by writing two words. Spacewar's ships on a raster, or the turtle as a sprite.
+
+**From Forth:** `fb!` (set a descriptor), `pixel!`, `pixel@`, `cmap!`, and words to point the
+renderer. Cost on our side is tiny: a 256² frame is 65K pixel extractions in JavaScript per
+browser frame.
 
 ### Cells as display calls, in two buffers
 

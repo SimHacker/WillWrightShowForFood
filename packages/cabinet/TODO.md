@@ -47,9 +47,16 @@ to 32K.
 
 ## Could
 
-- **A raster for the PDP-7**: a framebuffer device, 6-bit RGB per field, pointed at any memory,
-  with Forth `fb`, `pixel!`, `pixel@` and a Life cartridge; 64×64 first, packed 256×256 after
-  `far@` ([GUIDE-PDP7](reference/GUIDE-PDP7.md#the-pdp-7-next-to-an-apple-)).
+- **Raster, in order** ([DESIGN.md, Raster](DESIGN.md#raster-a-vanilla-virtual-video-display-and-a-cell-renderer)):
+  1. the framebuffer device: descriptor with byte-pointer base, width, height, colbytes,
+     rowbytes, flips, monochrome / indexed / RGB, colour map in core; a canvas beside the tube;
+  2. Forth `fb!`, `pixel!`, `pixel@`, `cmap!`; a Life cartridge on a 256² monochrome screen in
+     bank 0;
+  3. the cell renderer device: cells through a colour map into the framebuffer, with colour-map
+     animation;
+  4. the CAM6 device and the CAM-off against PDP-7 assembly;
+  5. RGB planes in banks 1–3, after `far@`;
+  6. sprites.
 - **Check the Apple ][ column** of that comparison against the 1978 Apple ][ Reference Manual.
 
 - **Attention overlays** per memory word: last read, write and execute by the PDP-7, the 340
