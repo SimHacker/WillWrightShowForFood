@@ -217,6 +217,101 @@ facto text form. The plan for a viewer, an editor and text formats is in the cab
 [DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module);
 a Forth vocabulary for rings is in [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type).
 
+## How SYMELEC works, end to end
+
+SYMELEC is PIXIE's circuit-drawing program, the one in the listing (assembled 12 Feb 1972 by
+`HL1470`). Labels below are the listing's; the addresses are in its symbol table.
+
+**Boot.** `BEGRTP` stores `JMP INT` at location 1 (the interrupt entry), clears every device
+flag with `CAF`, loads the display address with `LAW LB` and starts the 340 with `IDLA`, turns
+interrupts on with `ION`, and sits in `WAIT; JMP .-1`. From then on everything happens in the
+interrupt handler.
+
+**One interrupt, a skip chain.** The PDP-7 has one interrupt level: save the PC at 0, jump to 1.
+`INT` asks each device in turn whether it raised its flag (`IDSP` pen, `IDSI` stop, `IDVE` and
+`IDHE` edges, `TSF`/`KSF` teletype, `CLSF` clock) and calls its handler, then `ION` and
+`JMP I 0`. Polling or interrupts are both possible on this machine; SYMELEC and the LP370 test
+use interrupts, Mitch's Forth polls.
+
+**What the pen hit, without the 340 telling.** The 340 says only *that* the pen fired and where
+the beam was. SYMELEC's display files say *who owns* what is drawn next, ahead of time:
+
+```
+DJS SB ,2      / call the next word as a subroutine: the save register now holds its address
+JMP SD         / a CPU instruction, stored in the display file, never run by the 340
+DDS CH 3       / deposit "DJP <save register>" in core location 3, then go to character mode
+233700         / the letter S
+```
+
+`DDS` writes a pointer to `JMP SD` into location 3. Everything drawn after it, every stroke of
+the letter, belongs to that button until the next `DDS` overwrites 3. On a pen hit, `PEN`
+reads 3 (and 5, which drawings use) and does `JMP I 3`, landing on `JMP SD`. So yes: the display
+file declares "this is a pen-sensitive button" before drawing it, and any run of drawing, a
+letter, a subroutine or a whole picture, can be grouped as one button that way. Subroutines nest
+one deep, because the 340 has one save register. Turning the pen bit off in a PARAM word hides a
+run from the pen.
+
+**Tracking.** The cross is display words whose position words (`YCROSS`, `XCROSS`) the CPU
+rewrites. `TRCR` reads the hit with `IDRC`, `POSCR` deposits it and snaps the logical point to the
+grid (`AND GRID`: 1760 for 16 units, 1777 for off), and `SRAST`, a small spiral around the cross,
+catches the pen when it slips. [TRACKING.md](../../../../packages/cabinet/TRACKING.md) walks it.
+
+**Display files.** `LB` is the lightbuttons, `WAREA` the frame (the only thing drawn at scale 8,
+`PAR PO PF SC3`, by hand), `TEMPDF` the element being drawn, and `PERMDF` at `DFB` the finished
+picture, which `COMPIL` builds from the ring structure named by `SAVINS` every time an element is
+finished. Lines go through `VECGN`, P. Cross's 1967 line generator: it divides a line by 127 and
+chains scale-1 vector words, so endpoints are exact. HV mode makes staircases with `SEGX` then
+`SEGY`. Drawings are data (rings); display files are compiled output.
+
+**Scale and intensity, per item.** The menu's `IN`, `SC`, `CA`, `RE`, `RO` buttons act on the
+blinking (selected) item. `SCAMO` reads that item's "blink, scale and intensity word"
+(`BSWOR`), steps its scale field (`AND (60`, add 20, wrapping from SC3 back to SC0) and
+recompiles; `INTMO` steps intensity the same way. So PIXIE does support scale: as an attribute
+of an instance or line, a magnification of the 340's own, not as a way to draw long lines.
+
+**Titan.** `LTPX` and friends send the ring structure as checksummed blocklets over Wiseman's
+link; [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md). In the browser, tiny-titan answers.
+
+## The browser bench, every layer
+
+From the hardware up to the page. All TypeScript and Svelte; nothing below JavaScript.
+
+| Layer | Where | What it is |
+|---|---|---|
+| Runtime | Node 22 for tests, the browser for the page | ES modules; `tsc` then `node --test`; no DOM in the emulator |
+| Backplane | `packages/cabinet/src/cabinet.ts`, `bus.ts` | `Cabinet.step()`: OR every device's `irq()` onto one line, step the CPU, hand any IOT to the device that claims its code, `tick` every device. Devices never see each other |
+| CPU | `plugins/pdp7.ts` | 18-bit words in a `Uint32Array`, 13-bit addresses, one interrupt level (PC to 0, jump to 1), auto-index 10–17, `XCT`, the EAE ops programs use. Ported from SIMH's `pdp18b_cpu.c` |
+| Display | `plugins/type340.ts` | The 340 as a processor: fetches display words from core, runs PARAM, POINT, VECTOR, VCONT, INCR, CHAR (Type 342 glyphs from SIMH), SUBR (Type 347 `DJS`/`DJP`/`DDS`, one save register). Emits **segments** with provenance (display address, cycle, frame, subroutine, pen bit, glyph); a frame closes at each `IDLA`. Owns the pen IOTs (dev 07) because the hardware did, plus the `IDPN` extension (dev 11) |
+| Pens | `plugins/lightpen.ts` | Input adapters, not devices: a position, an aperture, a colour. Any number, ORed into one pen input; `IDPN` tells which fired |
+| Other devices | `teletype.ts`, `clock.ts`, `papertape.ts`, `rb09.ts`, `tiny-titan.ts` | Each is a `Device`: the IOT codes it claims, `iot()`, `tick()`, `irq()` |
+| Assemblers | `asm/` | DEC and Cambridge dialects, `as7` for Mitch's Forth and UNIX; every word tied to its source line |
+| Tools on core | `monitor.ts`, `disasm.ts`, `source.ts`, `trace.ts`, `core.ts`, `media.ts`, `session.ts` | Peek and poke by symbol, disassembly, source maps, the instruction trace, whole-core raw/JSON/YAML, SVG and YAML captures, recorded sessions that replay to the same core |
+| Shadow 340 | `preview340.ts`, `edit340.ts` | Runs a display file without touching the machine, for steady drawing and the vertex editor; decode, encode and clamp vector words |
+| Programs | `symelec-*.ts`, `lp370.ts`, `forth.ts`, `unixv0.ts`, `duel.ts`, `hilo.ts`, `lander.ts`, `tapes/` | Boot recipes, demo scripts that are acceptance tests, halt explanations |
+| Rings | `packages/pixie` | PIXIE's word classes, `CAR`/`CDR`, `RingBuilder`, relocation, the transfer encoding, graphs and scenes |
+| Applet | `apps/ties/src/lib/CabinetApplet.svelte` | The machine on a page: a `requestAnimationFrame` loop that runs cycles in slices (so pen moves land between refreshes), integrates the last 48 refreshes into one picture (the eye did that on glass), draws on a 1024² canvas, and the panels: memory (octal, code, source, trace), rings, teletype, config, the tool menu (eight pens and the editor) |
+| Pages | `CabinetPage.svelte`, `routes/cabinet/[program]`, `cabinet-programs.js` | One route per program; the same applet embeds in any HyperTIES article (`Article.svelte`) |
+| Server | SvelteKit, `apps/ties` | Static build by default, `SVELTE_ADAPTER=node` for the server; deployed by `scripts/server-deploy.sh hyperties` to hyperties.org, releases kept on the data disk |
+
+**Where to start reading:** `cabinet.ts` (60 lines), then `type340.ts`'s `instruction()`, then
+`CabinetApplet.svelte`'s `bootMachine()` and `loop()`. Run `pnpm --filter @wwsff/cabinet test`;
+the house demo is a test SYMELEC has to pass.
+
+**Plans above the bench** (designs in the cabinet's DESIGN.md, ROADMAP.md, MANIFESTO.md):
+
+- *Phosphor.* WebGPU, after Lars Brinkhoff's GLSL crt-simulation: the P7's blue flash under the
+  beam and the long yellow-green afterglow, fed by the same segment stream, fitted against
+  calibration footage. Segments carry their cycle, so at slow speed the beam can be drawn moving
+  along each stroke: you watch the 340 scan its file.
+- *Colour.* The default is P7 green. Each pen has its own RGB colour, eight to start, and what a
+  pen draws can be painted in it, with procedural colour (gradients, marching ants, blink,
+  flicker) later. Less authentic, much more fun; the original look is one click away.
+- *The machine.* A photorealistic PDP-7 rebuilt from photographs, with abstract people at it:
+  retro Sims 1 characters (Heinz at the pen, Mitch at his Forth, Ken and dmr at UNIX, a robot
+  for AI) animated by [VitaMoo](https://vitamoo.space), Don's TypeScript reimplementation of the
+  Sims 1 animation system. Scott McCloud's masking effect: a simple character in a realistic
+  scene is easy to step into.
+
 ## Emulation status — and what you actually need
 
 - **PDP-7 + Type 340: emulated today, twice.** [Open SIMH](https://github.com/open-simh/simh)

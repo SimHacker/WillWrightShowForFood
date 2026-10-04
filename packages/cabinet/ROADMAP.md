@@ -689,6 +689,28 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   (`hoverAt`), so grab the group, find the point words that open it, and poke those; a
   shared subroutine stays shared, since only the call site moves. Ephemeral like corners:
   PIXIE's next recompile puts its picture back.
+- **Colour.** Pens become a palette of RGB colours, one property per pen (`LightPen.color`,
+  today a CSS string from `PEN_COLORS`, becomes `{ r, g, b }`), editable in CONFIG; choosing a
+  pen or changing its colour are both allowed. What a pen draws (the turtle under that pen's
+  hand, an element PIXIE builds while that pen tracks) is painted in its colour, carried on the
+  segment as RGB, not an index. Default stays P7 green. Procedural colour later: gradients,
+  marching ants, fading blink, flicker; the WebGPU phosphor takes colour as a uniform.
+- **Watch the beam.** At slow speeds draw each segment growing from its start at the 340's own
+  pace, using the cycle stamps segments already carry, with the beam's spot on top.
+- **Prefab controls for PIXIE.** Sliders and buttons outside the tube that drive PIXIE through
+  its own inputs, not around them: a scale slider that selects the item and taps `SC` until the
+  scale matches, an intensity slider on `IN`, zoom as a tag-aware pan over the tube. They read
+  the result from core by symbol (`BSWOR`, `MBLINK`) to stay in sync, and sit beside the memory
+  panel, pokes and the teletype, so every level stays open. After Prefab (Don's 2008 work on
+  pixel-based reverse engineering of GUIs), with the program's own buttons as the API.
+- **Interrupts in Forth.** An assembly thunk at location 1 saves AC, link, MQ and the Forth
+  registers (IP at 010, the stack pointers at 011 and 012), points IP at a handler word's body
+  and enters `next`; the handler is ordinary Forth ending in a word that restores the registers,
+  `ION`s and returns through `JMP I 0`. A table maps device skip IOTs to handler xts, set with
+  `' my-pen-handler 7 handler!`. Handlers must not allocate or touch `tbuf`; keep them short and
+  let the main loop do the work, from a queue the handler fills. Pen hits, keys and the clock
+  then drive Forth programs without polling, and `pen-hit ( x y n tag -- )` handlers can run the
+  tag's title as Forth (needs `EVALUATE`). Test under SIMH and propose to Mitch.
 
 ## 16. Programming the turtle by demonstration
 
