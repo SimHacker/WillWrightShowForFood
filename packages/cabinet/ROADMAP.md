@@ -27,6 +27,7 @@ deduplicated. Where a design already has a home it is linked, not repeated:
 | 15 | DUEL from tape to source, proven by round trip | a showpiece, not a blocker: DUEL already runs and explains its halt | [§15](#15-duel-from-tape-to-source) |
 | 16 | Forth turtle with a 340 and a PIXIE back end; Forth symbols as subpictures; drag a vertex on the tube | Forth drawings PIXIE can edit; needs serve-back and the element decode | [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-module) |
 | 17 | Cartridges as files: build cache, `extends`, eggs, live decode, GitHub commits and PRs, CI | many programs from one Forth; edits that end up deployed | [CARTRIDGES.md](CARTRIDGES.md#8-order-of-work) |
+| 18 | Turtle programming by demonstration, after CADroid's `?[ ][ ]` | drag and key the turtle, get Forth; loops and branches by acting out the first pass | [§16](#16-programming-the-turtle-by-demonstration) |
 
 Odds and ends are in [§14](#14-small-items).
 
@@ -688,6 +689,81 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   (`hoverAt`), so grab the group, find the point words that open it, and poke those; a
   shared subroutine stays shared, since only the call site moves. Ephemeral like corners:
   PIXIE's next recompile puts its picture back.
+
+## 16. Programming the turtle by demonstration
+
+This is CADroid again (1987, Don with Mitch Bradley at Sun:
+[cadroid-cforth-1987.md](https://github.com/SimHacker/MicropolisCore/blob/main/documentation/designs/cadroid-cforth-1987.md)),
+with the turtle as the drawing. There, every user interface action became a command in a text
+language; we replaced its interpreter with Forth and a friendlier outer loop that prompted for
+missing parameters and applied defaults; and Mitch's `?[ ][ ]` let you record a loop or branch by
+acting out its first pass. Mitch's PDP-7 Forth already has the hard part: interpretive control
+structures that compile into `tbuf` and run when the outermost one closes (`kernel.s`,
+"interpretive control structures"). That is the 1987 temporary compilation buffer.
+
+**Every gesture is a Forth word, and the word is what runs.** The emulator never moves the turtle
+itself. A drag or a key becomes text typed at Forth's prompt, Forth runs it, and the turtle
+redraws itself as it always does. So the picture can never disagree with the program, and the
+teletype shows every step as it happens:
+
+| Gesture | Types |
+|---|---|
+| Drag the turtle's nose to aim it | `35 rt` (the angle from the drag, by `atan2`, §5) |
+| Drag the turtle forward | `120 fd` (the distance along its heading) |
+| W / S, A / D | `10 fd` / `10 bk`, `15 lt` / `15 rt`; held, they repeat and merge into one word: `40 fd` |
+| P | `pu` or `pd`, toggling |
+| Rubout | undo the last step |
+| Shift-Rubout | redo it |
+
+Undo replays: the recording is the history, so undo is "clear the screen and run the recording
+without its last word". Turtle programs are cheap to rerun, which is what makes this honest.
+Shneiderman's direct manipulation, rapid, incremental and reversible, with the program as its
+log.
+
+**Recording.** ⏺ starts a definition: `: shape` goes in, and every gesture both runs and
+compiles. ⏹ ends it with `;`. The new word is in the dictionary, listed by `WORDS`, and its text
+is kept as source for LIVE CODING.
+
+**Moves are relative, so loops just work.** CADroid's first rule: `fd`, `rt` and `lt` are
+deltas from wherever the turtle is, so a recorded body repeated n times walks on, just as one
+recorded wire became 32.
+
+**Four ways into a loop.** All four make the same Forth, so they can be mixed and edited between:
+
+1. **Count first.** Say how many, act out one pass, close. `4 [`, then drag a side and turn,
+   then `]`: the first pass ran as you did it, and on `]` the other three fire at once, whomp
+   whomp whomp. This is `?[ ][ ]` as it was.
+2. **Begin first, count after.** Press *begin*, act out a pass, then *loop 3 more*. The body is
+   already compiled, so it runs three more times.
+3. **Repeat by pressing.** Act out a pass, then press *repeat* five times: each press runs the
+   last pass again and counts. When you stop, the count becomes the loop: `6 [ … ]`.
+4. **Afterwards.** You did four things, then realised they should loop. Select them in the
+   history (or mark the first with *from here*), choose *loop*, give a count. The recording is
+   rewritten around them.
+
+**Branches.** `flag [ yes ][ no ]` and `count [ body ][ zero ]`, as in CADroid: the branch
+that applies now runs as you act it out, and the other is recorded without running. `0 [`
+compiles without running; `][` switches to compile and run for the zero case; `]` goes back to
+the top level. The tests come from the turtle (`seen?`, `onscreen?`, `distance`), so "if the
+turtle would leave the screen, turn around" is demonstrable.
+
+**Prompting.** A gesture that needs a number and didn't give one (a menu choice, a typed word
+without its argument) prompts for it, with a default. Answering with a number bakes it in;
+answering with a prompt string records the prompt, so the macro asks each time it runs.
+CADroid's "prompts are first-class data".
+
+**One program, several views.** The Forth text in LIVE CODING; the recording's history as a
+list you can select from; the turtle's path on the tube; and later a pie menu of the words. An
+edit in any one is an edit to the text, and the others redraw from it.
+
+**Underneath.** The emulator only reads and writes what Forth publishes by name: the turtle's
+variables (`tx`, `ty`, `th`, `pen`) through the symbol table to place the drag handles, and the
+teletype to send words. Poking the turtle's display words directly (the edit tool) stays as the
+other, lower route: it changes the picture without changing the program.
+
+Needs: `atan2` and `distance` (§5), a word for the turtle's state that the emulator can read in
+one go, and the keyboard and drag bindings in the applet. Forth's `tbuf` is 100 words; a long
+demonstration may need it bigger.
 
 ## 15. DUEL from tape to source
 
