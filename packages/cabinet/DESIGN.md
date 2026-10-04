@@ -503,6 +503,33 @@ second, larger outline where it can reach after the compiler re-encodes it; the 
 compiled result against the space available; and, when a move changes encoding (a vector becomes
 an absolute jump, a string splits), a note saying so. Nothing is refused silently.
 
+**The ideal form is the hub.** Like Atlanta's airport, every trip changes planes here. Each format
+gets a pair of routes to the ideal form and back, never one straight to another format, so n
+formats need 2n translators, not n².
+
+| Spoke | In (to the ideal form) | Out (from it) |
+|---|---|---|
+| any 340 display file | lift through `preview340`, whoever made it | compile to the best words |
+| PIXIE rings | walk elements in core (`packages/pixie`) | build rings with `RingBuilder`, link into PIXIE's free list |
+| PIXIE transfer data | `decodeTransfer` | `encodeTransfer`, the Titan link and files |
+| YAML, JSON | parse | write, with metadata |
+| raw core | `core.ts` | `core.ts` |
+| Forth turtle | run it and lift the result | generate `fd`/`rt` text (ROADMAP §16) |
+| demonstration | record the DM edits as steps | replay them on another drawing |
+
+So any picture any program drew becomes a PIXIE drawing: lift it, then write rings. A PIXIE
+drawing gets edited with the same DM tools as everything else: lift, drag, push, and write the
+rings back so PIXIE keeps the change. The round trip is the picture, not the bytes; what PIXIE
+can't express (a 340 subroutine shared by two calls, characters at scale 8) is kept as
+metadata in the ideal form and reported, not dropped.
+
+**Metadata rides along.** Nodes, strokes and groups in the ideal form carry open-ended
+annotations: titles, ids and links (the DTG tag records of [TAGS-AND-PIES.md](TAGS-AND-PIES.md)),
+provenance (the display addresses and PIXIE elements they came from), and anything a simulation
+or an LLM wants: what a part is, what it connects to, how it behaves. They are saved with the
+drawing in YAML or JSON, go into PIXIE as tag records and name rings, and go to the 340 as DTG
+words, so the same annotations reach the pen, the pie and a model reading the file.
+
 **Lift, manipulate, push.** Direct manipulation works on the ideal form only, so nothing is
 special: the first point is a point like any other, and there are no per-word limits while
 dragging. On press, lift the display file into the graph. On every move, change the graph and
