@@ -118,7 +118,7 @@ Every stroke after that belongs to that button until the next `DDS` overwrites 3
 `PEN` handler reads 3 and does `JMP I 3`. Any run of drawing, letters, a subroutine or a whole
 picture, can be one button this way; subroutines nest one deep (one save register). The pen bit
 in a PARAM word hides a run from the pen entirely. Walked through in the
-[guide](reference/GUIDE.md#how-symelec-works-end-to-end).
+[guide](reference/GUIDE-LIGHTPEN.md#how-a-program-knows-what-was-hit-dds).
 
 **Interrupts or polling.** Both work for both events. `IDSP` skips on a pen hit and `IDSI` on a
 display stop, and either flag also raises the interrupt. The 340 stays frozen after a hit until
@@ -543,11 +543,11 @@ something else. Three ways, cheapest last:
   patch-area edit is already double-buffered this way: the patch is written first and the one
   `DJP` into it last. The cost is a second buffer: for the turtle, another 1,024 words of the
   4,455 free.
-- *Extended memory for the display.* Core is tight (the turtle has 4,455 words free), but the
-  cabinet is 8K and the 340 addresses only 8K: the display address register is 13 bits (`ADDR`
-  in `type340.ts`), and so is a `DJS`/`DJP` target (bits 5–17). A PDP-7 could have up to 32K
-  with memory extension, but the CPU model leaves out extend mode, and whether a real 340 reached
-  past the first 8K is still to be checked in the 340 and PDP-7 manuals. If it didn't, a
+- *Extended memory for the display.* Core is tight (the turtle has 4,455 words free). The CPU now
+  runs up to 32K with extend mode ([GUIDE-PDP7](reference/GUIDE-PDP7.md#memory-beyond-8k)), but
+  the 340 addresses only 8K: the display address register is 13 bits (`ADDR` in `type340.ts`),
+  and so is a `DJS`/`DJP` target (bits 5–17). Whether a real 340 reached past the first 8K is
+  still to be checked in the 340 and PDP-7 manuals. If it didn't, a
   display bank would be a cabinet extension like `IDPN` (device 11): an IOT that sets the bank
   the 340 fetches from, and Forth words to write words into it. It would hold display lists and
   both double buffers, and a switch would be one IOT. Mark it as an extension in the UI, like
@@ -656,7 +656,7 @@ SYMELEC's segment format, and says so until the element decode lands.
 The same structure is what a PDP-7 Forth builds
 ([FORTH-TURTLE-340.md §9](reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)).
 Background for all of this: the ring-structures section of the
-[turist guide](reference/GUIDE.md#pixies-data--ring-structures-from-the-ground-up).
+[turist guide](reference/GUIDE-RINGS.md).
 
 **To do: the RSP library, extracted from PIXIE and shared by every VM.**
 One format, two halves.

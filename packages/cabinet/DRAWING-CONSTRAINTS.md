@@ -105,8 +105,9 @@ later". A PDP-7 assembler written in Forth would let the machine assemble its ow
 
 ## 6. Extended memory (could)
 
-The cabinet has 8K, and the 340 addresses exactly 8K. A larger PDP-7 (up to 32K with memory
-extension) would give room for display lists, patch areas and double buffers. Questions for a
+The CPU now runs up to 32K with extend mode ([GUIDE-PDP7](reference/GUIDE-PDP7.md#memory-beyond-8k)),
+but the 340 addresses only the first 8K, so display lists, patch areas and double buffers stay
+there; the upper banks are for everything else. Questions for a
 volunteer: did a real 340 reach past the first 8K (check the 340 and PDP-7 manuals)? If not,
 a display-bank IOT as a marked extension. Could PIXIE's ring library put its structures in
 upper banks behind its existing calls, without changing SYMELEC? Could Forth keep headers,

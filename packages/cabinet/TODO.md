@@ -20,11 +20,13 @@ Status: **next** · **will** · **could** · **won't**.
    which: the source map knows for assembled code; for generated lists, the caller says (the
    340's start address, `DJS` targets, the cartridge's `display:` buffers), and the shadow 340
    marks every word it fetched.
-4. **Split Heinz's GUIDE.md** into a short top-level guide that summarises and links one
-   `GUIDE-<TOPIC>.md` per subject: `GUIDE-PDP7`, `GUIDE-340`, `GUIDE-LIGHTPEN`, `GUIDE-TITAN`,
-   `GUIDE-RINGS`, `GUIDE-SYMELEC`, `GUIDE-PHOSPHOR`, `GUIDE-BENCH`. Each marks what is done,
-   next, will, could and won't, as an invitation to students and hackers.
-5. **Deploy** the commits since `f7f10ff6` to hyperties.org.
+4. **Deploy** the commits since `f7f10ff6` to hyperties.org.
+5. **The universal drawing and the paused drawing editor**
+   ([DESIGN.md](DESIGN.md#a-universal-340-editor)).
+
+Done 4 October: the guide split into [reference/GUIDE.md](reference/GUIDE.md) and one
+`GUIDE-<TOPIC>.md` per subject; the reference library moved into the cabinet; memory extension
+to 32K.
 
 ## Will
 
@@ -42,14 +44,16 @@ Status: **next** · **will** · **could** · **won't**.
 
 - **Attention overlays** per memory word: last read, write and execute by the PDP-7, the 340
   and Forth's IP (010), with counts ([DRAWING-CONSTRAINTS.md §4](DRAWING-CONSTRAINTS.md#4-attention-overlays-could)).
-- **Extended memory** for Forth and PIXIE ([DRAWING-CONSTRAINTS.md §6](DRAWING-CONSTRAINTS.md#6-extended-memory-could)).
+- **Use the 32K.** The CPU has it; Forth needs `far@`, `far!` and bank moves, and CONFIG a
+  memory size ([GUIDE-PDP7](reference/GUIDE-PDP7.md#memory-beyond-8k)). PIXIE's rings in upper
+  banks ([DRAWING-CONSTRAINTS.md §6](DRAWING-CONSTRAINTS.md#6-extended-memory-could)).
 - **Verify Supnik's "upside down and backward" PDP-4 loader** (Architectural Evolution, p. 10):
   how the loader read the tape reversed. A frame is 8 holes; at about 300 frames a second there
   are a few hundred instructions between frames, plenty to reverse bits, but read the source.
 - **How PIXIE uses names as `JMS` words.** A name is `JMS` (100000) plus an address, so it is a
   pointer you can also execute, and NIL is `JMS 0`. Find the places PIXIE indirects or `XCT`s
   through one, and compare with Mitch's Forth, whose thread cells are instructions run by
-  `xct i 010`. Write it into GUIDE-RINGS.
+  `xct i 010`. Add the answer to [GUIDE-RINGS](reference/GUIDE-RINGS.md#names-are-jms-words).
 - **Mark Weiser / Severe Tire Damage** source page: the 1995 Computer Chronicles band segment
   (4:00–7:27), std.org setlists, footage, people.
 

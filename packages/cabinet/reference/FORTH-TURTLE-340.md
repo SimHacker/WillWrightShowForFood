@@ -323,7 +323,7 @@ multiply, perhaps) gets implemented because it asked.
 
 ## 9. Rings as a Forth data type
 
-PIXIE's RSP words carry their own type tags ([turist guide](GUIDE.md#pixies-data--ring-structures-from-the-ground-up)),
+PIXIE's RSP words carry their own type tags ([GUIDE-RINGS](GUIDE-RINGS.md)),
 so rings fit Forth without changing Forth: everything is still an 18-bit cell, and
 `ATOM?`, `NIL?`, `NAME?`, `BLOCK?`, `RING-END?` are one-instruction bit tests.
 
