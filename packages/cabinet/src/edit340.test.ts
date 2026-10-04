@@ -82,6 +82,25 @@ test("edit340: a drag past the limit stops at the edge of what both words can ho
 	assert.deepEqual(run().map((s) => [s.x1, s.y1]), [[327, 273], [300, 400]]);
 });
 
+test("edit340: the first point is a place set by POINT words; moving it keeps the line's far end", () => {
+	const mem = new Array<number>(1024).fill(0);
+	const run = frame(mem, [
+		encodeVector({ dx: 100, dy: 0, bright: true, escape: false }),
+		encodeVector({ dx: 0, dy: 100, bright: true, escape: true }),
+	]);
+	const read = (a: number) => mem[a] ?? 0;
+	const c = cornerAt(run(), 201, 299, 8, read);
+	assert.ok(c?.place, "the start of the run, (200, 300)");
+	assert.deepEqual([c.x, c.y], [200, 300]);
+	assert.equal(cornerAt(run(), 201, 299, 8), null, "without core to read, only vector ends are handles");
+	assert.deepEqual(cornerLimits(read, c), { x0: 300 - 127, y0: 300 - 127, x1: 300 + 127, y1: 300 + 127 }, "the vector after it limits the move");
+	for (const [a, w] of moveCorner(read, c, 250, 280)!) mem[a] = w;
+	assert.deepEqual(run().map((s) => [s.x0, s.y0, s.x1, s.y1]), [
+		[250, 280, 300, 300],
+		[300, 300, 300, 400],
+	]);
+});
+
 test("edit340: refuses a move a vector word cannot hold", () => {
 	const mem = new Array<number>(1024).fill(0);
 	const run = frame(mem, [encodeVector({ dx: 120, dy: 0, bright: true, escape: true })]);

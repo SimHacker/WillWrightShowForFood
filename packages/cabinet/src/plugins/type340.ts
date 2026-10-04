@@ -80,6 +80,9 @@ export type Segment = {
 	glyph: number;
 	intensity: number;
 	scale: number;
+	/** The POINT words that last set the beam's x and y absolutely, -1 if none since IDLA: what places this stroke. */
+	xAt: number;
+	yAt: number;
 };
 
 type PendingVector = {
@@ -194,6 +197,8 @@ export class Type340 implements Device {
 	private ddsBlock = false;
 	private ch = -1;
 	private glyphs = 0;
+	private xAt = -1;
+	private yAt = -1;
 	private ownClock = 0;
 	/** The rest of a vector the pen stopped; IDRS draws it before the next word. */
 	private pending: PendingVector | null = null;
@@ -319,6 +324,8 @@ export class Type340 implements Device {
 		this.mode = MODE.PARAM;
 		this.subr = -1;
 		this.ddsBlock = false;
+		this.xAt = -1;
+		this.yAt = -1;
 	}
 
 	private closeFrame(): void {
@@ -360,8 +367,13 @@ export class Type340 implements Device {
 			case MODE.POINT: {
 				this.mode = GETFIELD(inst, 2, 4) as Mode;
 				if (TESTBIT(inst, 5)) this.lpEna = TESTBIT(inst, 6);
-				if (TESTBIT(inst, 1)) this.y = GETFIELD(inst, 8, 17);
-				else this.x = GETFIELD(inst, 8, 17);
+				if (TESTBIT(inst, 1)) {
+					this.y = GETFIELD(inst, 8, 17);
+					this.yAt = addr;
+				} else {
+					this.x = GETFIELD(inst, 8, 17);
+					this.xAt = addr;
+				}
 				if (TESTBIT(inst, 7)) this.emit(this.x, this.y, this.x, this.y, true, "point", addr);
 				break;
 			}
@@ -672,6 +684,8 @@ export class Type340 implements Device {
 			glyph: this.ch >= 0 ? this.glyphs : -1,
 			intensity: this.intensity,
 			scale: this.scale,
+			xAt: this.xAt,
+			yAt: this.yAt,
 		};
 		this.segments.push(seg);
 		this.onSegment?.(seg);

@@ -23,6 +23,7 @@
 		Monitor,
 		hoverAt,
 		cornerAt,
+		placesIn,
 		cornerLimits,
 		clampCorner,
 		moveCorner,
@@ -422,12 +423,23 @@
 	let editDragging = $state(false);
 
 	function drawHandles(ctx, segs) {
-		const near = editGrab ? null : editAt && cornerAt(segs, editAt.x, editAt.y, EDIT_RADIUS);
+		const read = (a) => cpu.read(a);
+		const near = editGrab ? null : editAt && cornerAt(segs, editAt.x, editAt.y, EDIT_RADIUS, read);
 		if (editHover !== !!near) editHover = !!near;
 		ctx.save();
 		ctx.lineWidth = 1;
 		ctx.strokeStyle = 'rgba(255, 210, 122, 0.45)';
 		for (const s of segs) if (s.kind === 'vector' && s.intensify) ctx.strokeRect(s.x1 - 3, 1023 - s.y1 - 3, 6, 6);
+		// Places set by POINT words: diamonds, since they move whatever is drawn from them.
+		for (const p of placesIn(segs, read)) {
+			ctx.beginPath();
+			ctx.moveTo(p.x, 1023 - p.y - 5);
+			ctx.lineTo(p.x + 5, 1023 - p.y);
+			ctx.lineTo(p.x, 1023 - p.y + 5);
+			ctx.lineTo(p.x - 5, 1023 - p.y);
+			ctx.closePath();
+			ctx.stroke();
+		}
 		// The words meeting at the corner hold at most 127 each way: the corner can't leave this box.
 		const box = editGrab?.box;
 		if (box) {
@@ -449,9 +461,9 @@
 
 	function editDown(event) {
 		const { x, y } = gridFromEvent(event);
-		const corner = cornerAt(editPicture(), x, y, EDIT_RADIUS);
+		const corner = cornerAt(editPicture(), x, y, EDIT_RADIUS, (a) => cpu.read(a));
 		if (!corner) {
-			editNote = 'No corner here: point at the end of a line.';
+			editNote = 'Nothing to grab here: point at the end of a line, or a diamond where text or a line starts.';
 			return;
 		}
 		const box = cornerLimits((a) => cpu.read(a), corner);
@@ -461,7 +473,8 @@
 		}
 		editGrab = { corner, box, x: corner.x, y: corner.y, refused: false, pinned: false };
 		editDragging = true;
-		editNote = `Corner ${corner.x},${corner.y}: words ${oct(corner.into.addr, 5)}${corner.outOf ? ` and ${oct(corner.outOf.addr, 5)}` : ''}`;
+		const words = [corner.place?.xAt, corner.place?.yAt, corner.into?.addr, corner.outOf?.addr].filter((a) => a !== undefined);
+		editNote = `${corner.place ? 'Placed by POINT words' : 'Corner'} ${corner.x},${corner.y}: words ${words.map((a) => oct(a, 5)).join(', ')}`;
 		try {
 			canvasEl.setPointerCapture(event.pointerId);
 		} catch {
@@ -488,8 +501,9 @@
 				editGrab.corner = {
 					x: to.x,
 					y: to.y,
-					into: { ...c.into, x1: c.into.x1 + dx, y1: c.into.y1 + dy },
-					outOf: c.outOf && { ...c.outOf, x0: c.outOf.x0 + dx, y0: c.outOf.y0 + dy }
+					into: c.into && { ...c.into, x1: c.into.x1 + dx, y1: c.into.y1 + dy },
+					outOf: c.outOf && { ...c.outOf, x0: c.outOf.x0 + dx, y0: c.outOf.y0 + dy },
+					place: c.place
 				};
 				editGrab.x = to.x;
 				editGrab.y = to.y;
