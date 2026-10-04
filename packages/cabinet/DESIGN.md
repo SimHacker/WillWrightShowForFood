@@ -467,6 +467,30 @@ second, larger outline where it can reach after the compiler re-encodes it; the 
 compiled result against the space available; and, when a move changes encoding (a vector becomes
 an absolute jump, a string splits), a note saying so. Nothing is refused silently.
 
+**Lift, manipulate, push.** Direct manipulation works on the ideal form only, so nothing is
+special: the first point is a point like any other, and there are no per-word limits while
+dragging. On press, lift the display file into the graph. On every move, change the graph and
+push it: compile and write the words back. On release, keep the last push. The words that go back
+need not match the words that came out: the goal is what is drawn, not the program text, so a
+file that was not optimal comes back better. Lifting again reads whatever is there now, so the
+two directions can alternate freely; only the picture round-trips.
+
+**Out of scope here:** display words the PDP-7 program itself rewrites as it runs (SYMELEC moving
+its cross). Editing those means editing the code that writes them, a different layer with its own
+limits.
+
+**Layers above, later.**
+
+- *PDP-7 code in place:* patch words, or reassemble a routine from source and hot-patch it in,
+  with the source map telling which words belong to which line.
+- *Forth:* redefine words, read and write variables by name, and generate Forth text: command
+  streams typed at the prompt, and colon definitions (ROADMAP \u00a716).
+- *A Forth PDP-7 assembler:* Forth assemblers are usually a vocabulary of words that lay down
+  instructions at `HERE` (`lac`, `dac`, `jmp`, labels as words). With one in Mitch's Forth, the
+  emulator can assemble PDP-7 code into the running machine by typing a command stream at
+  Forth, and Forth code words can be written in the same syntax. The TypeScript assemblers and a
+  Forth one should agree word for word, the same proof as `as7` against Mitch's `kernel.a7out`.
+
 **Then the dragging goes into the program, not the emulator.** Two ways to give a program
 the pointer, both cabinet extensions on free device codes, neither touching stock software:
 
