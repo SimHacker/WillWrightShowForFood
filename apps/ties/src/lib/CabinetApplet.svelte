@@ -2359,9 +2359,9 @@
 			style:--pen={color}
 			aria-haspopup="menu"
 			aria-expanded={toolMenuOpen}
-			aria-label={editOn ? 'Tool: edit the picture' : `Tool: light pen ${tool + 1}, ${penDown ? 'down' : 'up'}`}
+			aria-label={editOn ? 'Tool: edit 340 instructions' : `Tool: light pen ${tool + 1}, ${penDown ? 'down' : 'up'}`}
 			title={editOn
-				? 'Editing the picture. Click to choose a light pen or the display.'
+				? 'Editing 340 instructions in core. Click to choose a light pen or the display.'
 				: `Light pen ${tool + 1}, ${penDown ? 'on the glass' : 'lifted'}. Click to choose a pen, the editor, or the display.`}
 			onclick={() => (toolMenuOpen = !toolMenuOpen)}
 		>
@@ -2391,8 +2391,8 @@
 					class="tool-item"
 					class:on={editOn}
 					aria-checked={editOn}
-					title="Drag the ends of lines, rewriting the 340's own words in core. The light pen is put away and the program hears nothing. PIXIE puts its picture back when it next redraws."
-					onclick={() => ((toolMenuOpen = false), setTool('edit'))}><span class="tool-arrow" aria-hidden="true">↖</span> Edit the picture</button
+					title="Low-level 340 instruction editor: drag the end of a line and its vector words in core change, live, only as far as those words can reach. The light pen is put away and the program hears nothing. The program may redraw over your edit (PIXIE does when it next recompiles)."
+					onclick={() => ((toolMenuOpen = false), setTool('edit'))}><span class="tool-arrow" aria-hidden="true">↖</span> Edit 340 instructions</button
 				>
 				<span class="tool-head">Display</span>
 				{#each [['auto', 'Auto: steady below 1× or stopped'], ['steady', "Steady: core as it is now, every frame"], ['machine', "Machine: the 340's own refreshes, flicker and all"]] as [m, label] (m)}

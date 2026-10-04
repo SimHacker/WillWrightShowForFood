@@ -110,6 +110,38 @@ Two pen modes as a dimensional control:
   motion, which is period-correct. The demo mode.
 - `assist` — teleport the cross to the pointer. For kiosks and impatience.
 
+**How a program knows what was hit: `DDS`.** The 340 only reports *that* the pen fired and
+where the beam was. The display list says who owns what is drawn next, before drawing it:
+`DJS ,2` puts the address of the next word (a CPU `JMP` stored in the display list) in the save
+register; `DDS 3` writes "DJP <that address>" into core location 3; then come the letters.
+Every stroke after that belongs to that button until the next `DDS` overwrites 3. SYMELEC's
+`PEN` handler reads 3 and does `JMP I 3`. Any run of drawing, letters, a subroutine or a whole
+picture, can be one button this way; subroutines nest one deep (one save register). The pen bit
+in a PARAM word hides a run from the pen entirely. Walked through in the
+[guide](../../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md#how-symelec-works-end-to-end).
+
+**Interrupts or polling.** Both work for both events. `IDSP` skips on a pen hit and `IDSI` on a
+display stop, and either flag also raises the interrupt. The 340 stays frozen after a hit until
+`IDRS` resumes it or `IDLA` restarts it, so a polling program loses nothing but time. SYMELEC
+and LP370 use interrupts (a skip chain in one handler), suited to programs that compute between
+frames. Mitch's Forth polls `IDSI` while waiting for a key and has no pen handling yet.
+
+**Several pens, two modes.** *Shared* (done, the default): pens are ORed onto the one pen input,
+like extra photocells on one amplifier; one hit flag, one coordinate register, first pen wins
+the latch, and `IDPN` (dev 11) says which pen it was. Every 1972 program works unchanged, but two
+pens can't hit two buttons in the same frame: the first hit freezes the display. *Separate*
+(will, a cabinet setting): each pen gets its own hit flag, coordinates and tag latch, read
+through new IOTs by pen number, and a hit no longer freezes the display for the others. Old
+programs can't use it and needn't: the cabinet chooses the mode, so the fun of eight people at
+one tube never breaks a stock program. It is more circuitry than DEC ever built; it's marked as
+an extension.
+
+**Pens in Forth** (will). Kernel words: `pen? ( -- f )`, `pen@ ( -- x y n )`, `resume`, and with
+tags (TAGS-AND-PIES.md) `tag@ ( -- record )`. Then handlers, run from the interrupt through an
+assembly thunk ([ROADMAP §14](ROADMAP.md#14-small-items)): `pen-hit ( x y n tag -- )`. A tag's
+title can be Forth to run when it's hit, once the kernel has `EVALUATE`; it runs in the machine,
+never as JavaScript in the page.
+
 ## CPU plugin — verified gaps against the source
 
 | Gap | Evidence | Cost of skipping |
@@ -405,6 +437,33 @@ stop and speed, under one master. Rules, so this stays sane:
 Independent of PIXIE and Forth: it knows only the 340, and everything about it. Read any display
 program into an ideal form, edit that, and compile it back into the best words the 340 has,
 within core and the instruction set, showing every limit on the tube instead of hiding it.
+
+**Two editors.** The *instruction editor* (done) is low level and stays: it edits the 340's
+words in place while the machine runs, one vector corner at a time, within what that word can
+encode, and shows the limit box. Nothing is lifted, recompiled or relocated; what you drag is
+exactly what changes in core, and the program may overwrite it (PIXIE's next recompile, the
+turtle's next move). It is the way to see and poke the instruction set itself. The *drawing
+editor* (next) works on the universal drawing, with no per-word limits, and pauses the machine.
+
+**Plan, by status.** Done: the instruction editor; the shadow 340.
+Next: the universal drawing (read any display list into it, compile it back to 340 words, YAML
+and JSON files), and an edit mode that pauses the machine. Will: the cartridge's `display:`
+declarations, so the editor knows which lists it may rewrite. Could, and won't:
+[DRAWING-CONSTRAINTS.md](DRAWING-CONSTRAINTS.md), longer term and open to volunteers.
+
+**Draw now.** The shadow 340 (`preview340`) runs a display list from its start until it stops,
+all at once, without the machine's clock, the CPU or any device. The steady display already
+uses it every browser frame, which is why a paused machine still shows its picture and an edit
+appears the moment it is written. The paused edit mode draws this way, so the picture tracks the
+mouse with no emulation running at all.
+
+**The drawing editor's edit mode** (next). Press Edit: the machine pauses at the end of a 340 frame, the display list
+is lifted into the universal drawing, and the edit tools take over the pointer. Light pens still
+show what they would hit, but nothing reaches the program. Save writes the drawing back,
+compiling it to whatever words the cartridge allows, and resumes; Cancel restores the words and
+resumes. Like HyperCard's and HyperLook's edit modes. The goal is any 340 program's screen:
+SYMELEC, the Forth turtle, the LP370 test, DUEL, each as its cartridge permits; where nothing is
+declared, edit and export freely but don't write back.
 
 **What the instruction set really allows** (measured on SYMELEC's own file, 3 Oct):
 
