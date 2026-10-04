@@ -1239,6 +1239,14 @@ by three descriptors at once. Layouts that fit a 32K machine are in
 [GUIDE-PDP7](reference/GUIDE-PDP7.md#the-pdp-7-next-to-an-apple-): RGB planes one per bank, or a
 256² monochrome screen in bank 0.
 
+**Tile renderer.** The cell renderer's other mode: each cell state picks a *tile*, a small
+picture (say 8×8) from a tile table in core, instead of one colour, so cells tessellate into a
+pattern: a fluffy, textured colour map. Tiles are framebuffer descriptors too, so a tile can be
+indexed through its own colour map, and animating either the tiles or the map restyles a running
+automaton without touching a cell. The raster twin of the 340's tiles-as-subroutines below, and
+of CAM6.js's tile views. Tile selection can also use the neighbours (a cell's state plus which
+neighbours are alive picks the tile), so edges join up into continuous shapes, Wang-tile style.
+
 **Sprites** (later): a short list of descriptors (position, size, byte pointer, transparent
 index) composited over the framebuffer, read from core every frame, so a program moves a sprite
 by writing two words. Spacewar's ships on a raster, or the turtle as a sprite.

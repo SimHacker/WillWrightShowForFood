@@ -53,7 +53,7 @@ to 32K.
   2. Forth `fb!`, `pixel!`, `pixel@`, `cmap!`; a Life cartridge on a 256² monochrome screen in
      bank 0;
   3. the cell renderer device: cells through a colour map into the framebuffer, with colour-map
-     animation;
+     animation; then tiles, a picture per state (and per neighbour pattern), animated too;
   4. the CAM6 device and the CAM-off against PDP-7 assembly;
   5. RGB planes in banks 1–3, after `far@`;
   6. sprites.
