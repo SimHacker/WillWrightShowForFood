@@ -485,6 +485,14 @@ limits.
   with the source map telling which words belong to which line.
 - *Forth:* redefine words, read and write variables by name, and generate Forth text: command
   streams typed at the prompt, and colon definitions (ROADMAP \u00a716).
+- *PIXIE's drawings, at the source.* Edit the ring structure in place (an element's start atoms,
+  its extent), then let PIXIE regenerate the display file itself, so the edit is PIXIE's and
+  lasts. Measured so far: poking an RU line's start at 14015/14016 moved it on PIXIE's next
+  recompile. Two things are missing: the rest of the element format, so every kind of element
+  can be found and changed, and the routine that recompiles (`COMP` and its caller), found and
+  callable at a safe point (`WAITLK`), so the picture updates while dragging instead of on the
+  next finished element. During a drag the 340 editor can patch the display words for instant
+  feedback, while the ring edit is the one that stays.
 - *A Forth PDP-7 assembler:* Forth assemblers are usually a vocabulary of words that lay down
   instructions at `HERE` (`lac`, `dac`, `jmp`, labels as words). With one in Mitch's Forth, the
   emulator can assemble PDP-7 code into the running machine by typing a command stream at
