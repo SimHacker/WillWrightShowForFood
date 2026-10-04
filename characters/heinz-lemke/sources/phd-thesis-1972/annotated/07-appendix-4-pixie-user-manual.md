@@ -3,14 +3,14 @@
 Thesis pp. 187–209 · [annotated edition index](README.md) · [← references & appendices](06-references-appendices.md)
 
 > ✎ **Highlights.** The operating instructions for the
-> [resurrection bench](../../pdp7-reference/EMULATION-PLAN.md) — load paths (down the
+> [resurrection bench](../../../../../packages/cabinet/reference/EMULATION-PLAN.md) — load paths (down the
 > Titan link *or* from paper tape, address switches 17600 + READIN), clean start
 > (switches 22 + START), recovery (23 + START). The interface geometry matters for
 > [radial-menu history](../../../pixie-source-recovery.md): **twelve command
 > light-buttons in a fixed column at the right edge, but six control buttons arranged
 > around the tracking cross, traveling with it** — cursor-attached controls at the pen
 > position, with A/B rotating between button sets. The `TITAN` teletype command freezes
-> the picture for [link transfer](../../pdp7-reference/TITAN-LINK-PROTOCOL.md); NOTE 3/4/5
+> the picture for [link transfer](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md); NOTE 3/4/5
 > are the checksum / not-PIXIE-data / file-too-large errors we found as `PXER2/PXER3/PXER1`
 > in the [octal](../../pixie-assembler-listing-1972/README.md). When the drawing space
 > jams: ship the structure to Titan, run `COMPACT` ([Cheney](https://en.wikipedia.org/wiki/Cheney%27s_algorithm)

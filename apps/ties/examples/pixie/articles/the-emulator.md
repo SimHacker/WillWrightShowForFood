@@ -17,5 +17,5 @@ What else runs on it: ~UNIX v0~, from an emulated disk, and ~PDP-7 Forth~ with i
 ~Roy Eagleson~'s students at Western are re-implementing ~PIXIE~. ~Lars Brinkhoff~ is the iron. The plan file is the receipt.
 
 ```transclude
-path: characters/heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md
+path: packages/cabinet/reference/EMULATION-PLAN.md
 ```

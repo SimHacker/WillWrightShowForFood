@@ -85,7 +85,7 @@ the listing. Tube lineage is the paper’s starting machine: **Type 30E →
 vectors on a 340. Hardware sheet:
 [`../../heinz-lemke/pixie-hardware.md`](../../heinz-lemke/pixie-hardware.md).
 Turist guide:
-[`../../heinz-lemke/sources/pdp7-reference/GUIDE.md`](../../heinz-lemke/sources/pdp7-reference/GUIDE.md).
+[`../../../packages/cabinet/reference/GUIDE.md`](../../../packages/cabinet/reference/GUIDE.md).
 
 Thesis §5.4.3: **no hardware subroutine stack** — software uses DJS/DJP.
 That is store-exit era, not DEC-338 stack era. Subpictures are display
@@ -143,7 +143,7 @@ paper left open in 1968.
 As a classroom exercise (one light-pen menu built three ways: host interprets,
 host compiles tagged 340 words, NeWS-style behaviour at the display), with a
 PDP-7 Forth as the tool for moving the boundary:
-[`../../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md`](../../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md).
+[`../../../packages/cabinet/reference/FORTH-TURTLE-340.md`](../../../packages/cabinet/reference/FORTH-TURTLE-340.md).
 
 GPUs executing command buffers (still called display lists in the lineage)
 are many revolutions later. IBM System/360 Channel Command Words are the

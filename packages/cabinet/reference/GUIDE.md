@@ -1,11 +1,11 @@
 # PIXIE's hardware — a student / hacker / turist guide
 
-The machines behind the [PIXIE listing](../pixie-assembler-listing-1972/README.md): what a
+The machines behind the [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md): what a
 PDP-7 is, how plugging in a device literally added instructions to it, why the Type 340
 display is a second computer, and what Titan — the mainframe across the link — was. Written
 for anyone spending precious time here; manuals are in [README.md](README.md).
 
-**Inventory sheet:** [PIXIE hardware](../../pixie-hardware.md) — model numbers, memory, clock,
+**Inventory sheet:** [PIXIE hardware](../../../characters/heinz-lemke/pixie-hardware.md) — model numbers, memory, clock,
 link protocol identifiers, documented vs missing manuals.
 
 ## Why "turist"
@@ -81,7 +81,7 @@ another computer — so you offload *its* display work to something simpler, and
 wheel goes. They name the **PDP-1 + Type 30** as the start (no processor) and the
 **340–347** as the cardinal half-turn — still thought to be a channel, already a processor.
 PIXIE sits on that cell: DJS/DJP, no hardware stack. Analysis and PDF:
-[`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
+[`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
 The modern GPU executing command buffers (long literally called *display lists*) is the
 same wheel, many revolutions later. The IBM System/360 channels — processors executing
 Channel Command Word programs from main memory, contemporaries of the 340 — are the same
@@ -177,10 +177,10 @@ case, after Heinz's manual, which says the representation "is also referred to a
 data structure". PIXIE in capitals is his program. A ring in a pixie is a pixie ring, and
 pixie rings in a meadow are mushrooms around a centre, joined underground by a mycelium
 nobody sees, which is a ring structure, and drawn around its centre, a pie menu
-([TINY-ITS.md](../../../../packages/cabinet/TINY-ITS.md#pixie-rings-are-pie-menus)).
+([TINY-ITS.md](../TINY-ITS.md#pixie-rings-are-pie-menus)).
 
 **PIXIE's variant** is a hybrid: Lisp-style two-word cells used to build rings. Word
-classes, as decoded in [`packages/pixie`](../../../../packages/pixie/src/words.ts):
+classes, as decoded in [`packages/pixie`](../../pixie/src/words.ts):
 
 | Word | Meaning |
 |---|---|
@@ -214,7 +214,7 @@ pass on arrival: [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md)). The nearest 
 what Titan programs generated *from* the structure: netlists for the LADAN and CANOTRAN
 analysers, CONN/CONNMAP. Today the repo's `.oct` files (`addr word` lines) are the de
 facto text form. The plan for a viewer, an editor and text formats is in the cabinet's
-[DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module);
+[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module);
 a Forth vocabulary for rings is in [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type).
 
 ## How SYMELEC works, end to end
@@ -254,7 +254,7 @@ run from the pen.
 **Tracking.** The cross is display words whose position words (`YCROSS`, `XCROSS`) the CPU
 rewrites. `TRCR` reads the hit with `IDRC`, `POSCR` deposits it and snaps the logical point to the
 grid (`AND GRID`: 1760 for 16 units, 1777 for off), and `SRAST`, a small spiral around the cross,
-catches the pen when it slips. [TRACKING.md](../../../../packages/cabinet/TRACKING.md) walks it.
+catches the pen when it slips. [TRACKING.md](../TRACKING.md) walks it.
 
 **Display files.** `LB` is the lightbuttons, `WAREA` the frame (the only thing drawn at scale 8,
 `PAR PO PF SC3`, by hand), `TEMPDF` the element being drawn, and `PERMDF` at `DFB` the finished
@@ -316,7 +316,7 @@ the house demo is a test SYMELEC has to pass.
 
 - **PDP-7 + Type 340: emulated today, twice.** [Open SIMH](https://github.com/open-simh/simh)
 has the PDP-7 with 340 display support natively; its PDP-7 light pen readback is still a
-stub. Our own TypeScript emulator, [the cabinet](../../../../packages/cabinet/README.md),
+stub. Our own TypeScript emulator, [the cabinet](../README.md),
 reimplements the PDP-7, 340 and 370 light pen using SIMH's source as the design spec and
 oracle, and runs PIXIE in the browser with the pointer as the pen:
 [PIXIE live](https://hyperties.org/databases/pixie/pixie-live/).
@@ -325,7 +325,7 @@ emulators, but Atlas 2/Titan (different memory system, extracodes in main store)
 none. Documentation survives: the [CUCPS Titan archive](https://cucps.soc.srcf.net/titan/)
 has supervisor planning documents and the machine-code programming manual.
 - **The good news: PIXIE doesn't need Titan.** The listing is the PDP-7 side, complete, and
-the other end of the link has a stand-in: [tiny-titan](../../../../packages/cabinet/TINY-TITAN.md),
+the other end of the link has a stand-in: [tiny-titan](../TINY-TITAN.md),
 which speaks the blocklet protocol (header, word count, checksum, `PXID` magic word) and
 receives PIXIE's drawings. A Titan emulator is a magnificent open quest, but it is not on
 the critical path to clicking a 1969 radial menu.
@@ -344,7 +344,7 @@ from the listing, in [TITAN-LINK-PROTOCOL.md](TITAN-LINK-PROTOCOL.md).
 - [CUCPS Titan archive](https://cucps.soc.srcf.net/titan/) — supervisor planning docs, programming manual, by permission of Landy/Needham/Hartley
 - [Titan (1963 computer), Wikipedia](https://en.wikipedia.org/wiki/Titan_(1963_computer))
 - [Computer Conservation Society software & emulators](https://computerconservationsociety.org/software/software-index.htm) — the Atlas 1 emulators
-- Myer & Sutherland, *On the Design of Display Processors* (CACM, 1968) — the wheel of reincarnation. Reading copy + PIXIE mapping: [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md). PDF: http://cva.stanford.edu/classes/cs99s/papers/myer-sutherland-design-of-display-processors.pdf
+- Myer & Sutherland, *On the Design of Display Processors* (CACM, 1968) — the wheel of reincarnation. Reading copy + PIXIE mapping: [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md). PDF: http://cva.stanford.edu/classes/cs99s/papers/myer-sutherland-design-of-display-processors.pdf
 - [Type 340 Precision Incremental Display, Computer History Wiki](https://gunkies.org/wiki/Type_340_Precision_Incremental_Display)
 
-↑ [reference library](README.md) · [PIXIE listing](../pixie-assembler-listing-1972/README.md) · [transcription report](../pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md) · [character README](../../README.md)
+↑ [reference library](README.md) · [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md) · [transcription report](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md) · [character README](../../../characters/heinz-lemke/README.md)

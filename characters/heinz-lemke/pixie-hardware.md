@@ -2,8 +2,8 @@
 
 One-page inventory of the iron behind PIXIE (1967–1972): satellite CPU, display stack,
 Titan host, and the Cambridge homebrew link. Deep narrative in
-[the turist guide](sources/pdp7-reference/GUIDE.md); runnable path in
-[the emulation plan](sources/pdp7-reference/EMULATION-PLAN.md).
+[the turist guide](../../packages/cabinet/reference/GUIDE.md); runnable path in
+[the emulation plan](../../packages/cabinet/reference/EMULATION-PLAN.md).
 
 **HN (Aug 2026):** Don pasted a summary of this sheet into
 [49407938](https://news.ycombinator.com/item?id=49407938) on
@@ -38,7 +38,7 @@ built the interactive graph before anything crossed the link — see
 
 ## PDP-7 — compute geometry
 
-From [GUIDE.md](sources/pdp7-reference/GUIDE.md) and thesis
+From [GUIDE.md](../../packages/cabinet/reference/GUIDE.md) and thesis
 [Chapter 5](sources/phd-thesis-1972/annotated/03-chapter-5-pixie.md):
 
 | Parameter | Value | Source |
@@ -83,7 +83,7 @@ Teletype output: ~**100 ms/char** via `OUT` interrupt (thesis Ch. 5).
 
 ## PDP-7 options and extensions
 
-Devices that **add instructions** when plugged in (IOT mechanism — [GUIDE.md](sources/pdp7-reference/GUIDE.md)):
+Devices that **add instructions** when plugged in (IOT mechanism — [GUIDE.md](../../packages/cabinet/reference/GUIDE.md)):
 
 | Option | DEC type | What it adds |
 |--------|----------|--------------|
@@ -108,7 +108,7 @@ Other satellite peripherals: teletype, paper-tape reader (alternate boot), clock
 
 ## Type 340 display — geometry and specs
 
-Manuals mirrored in [pdp7-reference/README.md](sources/pdp7-reference/README.md):
+Manuals mirrored in [cabinet/reference/README.md](../../packages/cabinet/reference/README.md):
 
 | Parameter | Value | Source |
 |-----------|-------|--------|
@@ -135,7 +135,7 @@ tracking cross (Appendix 4; [Wiseman radial-menu notes](sources/buxton-2008-wise
 
 ## Titan — host geometry
 
-From [GUIDE.md](sources/pdp7-reference/GUIDE.md):
+From [GUIDE.md](../../packages/cabinet/reference/GUIDE.md):
 
 | Parameter | Value |
 |-----------|-------|
@@ -159,8 +159,8 @@ Titan ran RAINBOW: BCPL + FORTRAN analysis (e.g. **LADAN**), file store,
 
 ## Homebrew networking (PDP-7 ↔ Titan)
 
-Two layers — [TITAN-LINK-PROTOCOL.md](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md),
-[Planning Document 10](sources/pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
+Two layers — [TITAN-LINK-PROTOCOL.md](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md),
+[Planning Document 10](../../packages/cabinet/reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
 (C.A. Lang, 2 Dec 1965):
 
 **Hardware:** Wiseman's **custom high-speed link** — not DEC catalog hardware. Implemented as
@@ -223,7 +223,7 @@ Multipatch octal listings, **VG3400** WCS panel, **PGM** machine — see
 
 **Well documented:** PDP-7 + Type 340 + Type 370; memory budget; display-file architecture;
 link application protocol from listing; PD10 supervisor plan; DEC PDFs under
-[pdp7-reference/](sources/pdp7-reference/README.md) and Lars
+[cabinet/reference/](../../packages/cabinet/reference/README.md) and Lars
 [media/reference/](../lars-brinkhoff/media/reference/).
 
 **Inferred:** Cambridge site had **342** and **347** installed (strong inference from DJS/DJP and
@@ -236,8 +236,8 @@ link hardware schematics; Titan emulator; full *Electronics* PDF (summary only h
 
 ## See also
 
-- [GUIDE.md — turist guide](sources/pdp7-reference/GUIDE.md)
-- [TITAN-LINK-PROTOCOL.md](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
+- [GUIDE.md — turist guide](../../packages/cabinet/reference/GUIDE.md)
+- [TITAN-LINK-PROTOCOL.md](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md)
 - [PIXIE User Manual (Appendix 4)](sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)
 - [Recovered assembler listing](sources/pixie-assembler-listing-1972/README.md)
 - [Lars Brinkhoff — PDP-7 development](../lars-brinkhoff/pdp7-development.md)

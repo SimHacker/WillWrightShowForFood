@@ -3,16 +3,16 @@
 Thesis pp. 52–120 · [annotated edition index](README.md) · [← chapters 3–4](02-chapters-3-4.md) · [chapters 6–7 →](04-chapters-6-7.md)
 
 > ✎ **Highlights.** This is the [assembler listing](../../pixie-assembler-listing-1972/README.md)
-> in prose. §5.3.1: display files execute on the [Type 340](../../pdp7-reference/GUIDE.md)
+> in prose. §5.3.1: display files execute on the [Type 340](../../../../../packages/cabinet/reference/GUIDE.md)
 > by cycle stealing while the CPU runs — and *"minimum use should be made of the link to
 > the TITAN computer"* was a design constraint. §5.4: subpicture instances as display
 > subroutine calls ("flow of control is considered to pass along the rings"). §5.5.1:
 > light-pen tracking = cross + recovery **spiral** "about twice the cross size" — the
-> spec for the [virtual light pen](../../pdp7-reference/EMULATION-PLAN.md). §5.5.4: the
+> spec for the [virtual light pen](../../../../../packages/cabinet/reference/EMULATION-PLAN.md). §5.5.4: the
 > teleprinter is PIXIE's message channel (~100 ms/char via the `OUT` interrupt routine —
 > the [MESOUT/OUT code](../../pixie-assembler-listing-1972/symelec-listing.txt) we
 > transcribed). §5.5.8 + Fig 5.20: the five teletype commands, including **TITAN =
-> EXECUTE LINK** — the verb that fires [Etherton's link routine](../../pdp7-reference/TITAN-LINK-PROTOCOL.md).
+> EXECUTE LINK** — the verb that fires [Etherton's link routine](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md).
 > §5.7 (gap-patched below): PIXIE ran at **RCA Laboratories Princeton**, the **Institute
 > of Computer Science London** (INDRA PDP-9 port, Low 70), and the
 > **[CAD Centre](https://en.wikipedia.org/wiki/CADCentre)** — it traveled.
@@ -1143,7 +1143,7 @@ routines concerned with its manipulation is necessary.
 > ✎ Four sites, three cities, one program — and a portability post-mortem (18-bit vs
 > 16-bit words) a year before C's `int` made word-size portability everybody's problem.
 > The [CAD Centre](https://en.wikipedia.org/wiki/CADCentre) connection closes a loop from
-> the [turist guide](../../pdp7-reference/GUIDE.md): its founding machine was the third
+> the [turist guide](../../../../../packages/cabinet/reference/GUIDE.md): its founding machine was the third
 > Atlas 2, running the Cambridge Supervisor.
 
 Next: [Chapters 6–7 — applications →](04-chapters-6-7.md)

@@ -118,7 +118,7 @@ connects_in_repo:
   - { path: ideas.md, why: "Emulation + interview hooks" }
   - { path: ../../repo-shows/pixie-pie-menus-pdp7.yml, why: "Show seed — async production model" }
   - { path: ../heinz-lemke/correspondence.md, why: "Trio invitation thread" }
-  - { path: ../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md, why: "Multipatch-first + Titan LINK plan" }
+  - { path: ../../packages/cabinet/reference/EMULATION-PLAN.md, why: "Multipatch-first + Titan LINK plan" }
   - { path: ../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md, why: "29 Jul Armit + Lars digest" }
   - { path: ../david-rosenthal/correspondence.md, why: "Trio logistics + scope" }
   - { path: ../douglas-engelbart/, why: "Mouse + keyset PDP-10 hook" }

@@ -28,6 +28,43 @@ test("LAC / DAC / JMP", () => {
 	assert.equal(cpu.pc, 0);
 });
 
+test("32K: extend mode reaches every bank; off, indirect stays in this bank", () => {
+	const EEM = pdp7.iotWord(0o77, 0o02);
+	const LEM = pdp7.iotWord(0o77, 0o04);
+	const cpu = new Pdp7({ coreWords: 0o100000 });
+	cpu.write(0o70000, 0o4242);
+	cpu.write(0o10000, 0o1111);
+	cpu.write(0o50, 0o70000); // pointer into bank 3
+	cpu.deposit(0o100, [
+		pdp7.mr(pdp7.lac, 0o50, true), // extend off: 70000 & 17777 = 10000 in bank 0
+		pdp7.mr(pdp7.dac, 0o51),
+		EEM,
+		pdp7.mr(pdp7.lac, 0o50, true), // extend on: 70000
+		pdp7.mr(pdp7.dac, 0o52),
+		pdp7.mr(pdp7.jms, 0o60, true), // JMS I to bank 3: saves bit 16 and the 15-bit PC
+		LEM,
+	]);
+	cpu.write(0o60, 0o70100);
+	cpu.pc = 0o100;
+	const box = new Cabinet({ cpu });
+	box.run(6);
+	assert.equal(cpu.read(0o51), 0o1111, "extend off wraps the pointer into bank 0");
+	assert.equal(cpu.read(0o52), 0o4242, "extend on reads bank 3");
+	assert.equal(cpu.read(0o70100), (1 << 16) | 0o106, "JMS word carries extend mode and the return address");
+	assert.equal(cpu.pc, 0o70101, "running in bank 3");
+	cpu.write(0o70101, pdp7.mr(pdp7.lac, 0o10200)); // bank 3 is 60000-77777
+	cpu.write(0o70200, 0o777);
+	box.step();
+	assert.equal(cpu.ac, 0o777, "a direct address is in the instruction's own bank");
+});
+
+test("8K: memory-extension IOTs do nothing", () => {
+	const cpu = new Pdp7({ coreWords: 8192 });
+	cpu.deposit(0, [pdp7.iotWord(0o77, 0o02)]);
+	new Cabinet({ cpu }).step();
+	assert.equal(cpu.extend, false);
+});
+
 test("unclaimed IOT is a no-op", () => {
 	const cpu = new Pdp7({ coreWords: 256 });
 	cpu.ac = 0o77;

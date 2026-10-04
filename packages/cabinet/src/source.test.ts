@@ -6,7 +6,7 @@ import { Pdp7 } from "./plugins/pdp7.js";
 import { sourceFromListing } from "./source.js";
 import { Trace } from "./trace.js";
 
-const dir = new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/", import.meta.url);
+const dir = new URL("../tapes/symelec/", import.meta.url);
 
 test("source: the 1972 listing lines up with the words it printed", () => {
 	const map = sourceFromListing(readFileSync(new URL("symelec-listing.txt", dir), "utf8"));

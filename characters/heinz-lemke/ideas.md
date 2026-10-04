@@ -83,7 +83,7 @@ pen, upload your edited model, then *walk over to a teletype logged into Titan*
 the PDP-7 had downloaded, edited, and uploaded? Or drive the Titan side another way —
 batch job queued earlier, or a colleague at the other console? Two chairs, two machines,
 one model going back and forth: the physical choreography of 1969's client-server
-computing. Grounding: [link protocol decode](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md) ·
+computing. Grounding: [link protocol decode](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md) ·
 Heinz: "I used this link for about 3 years on a … nightly basis connecting PIXIE with
 some application programs on Titan."
 **The thesis answers it** (Ch. 8, [annotated edition](sources/phd-thesis-1972/annotated/README.md)):

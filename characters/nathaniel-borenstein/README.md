@@ -44,7 +44,7 @@ much, if anything." Don replied in-thread, recruiting him for the **SIMH retroco
 caper**: a virtual **lightpen input driver** and a virtual **AM radio audio output
 driver**, so you can write PDP-7 code you can dance to, conducting it with the light pen
 like a baton with **PIXIE pie menus** — with the Type 340 display manuals already
-archived in [Heinz Lemke's room](../heinz-lemke/sources/pdp7-reference/) and Rosenthal
+archived in [Heinz Lemke's room](../../packages/cabinet/reference/) and Rosenthal
 advising on PDP-7 assembly. Thread archived
 [here](../james-gosling/sources/2026-07-31-linkedin-retirement-thread.md).
 

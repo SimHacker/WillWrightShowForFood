@@ -3,7 +3,7 @@
 Thesis pp. 121–143 · [annotated edition index](README.md) · [← chapter 5](03-chapter-5-pixie.md) · [chapters 8–9 →](05-chapters-8-9.md)
 
 > ✎ **Highlights.** The applications that "verbed" the
-> [link protocol](../../pdp7-reference/TITAN-LINK-PROTOCOL.md)'s verbless transfers.
+> [link protocol](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md)'s verbless transfers.
 > Chapter 6: a syntax-directed analyser whose grammars follow
 > [EULER](https://en.wikipedia.org/wiki/Euler_(programming_language)) (Wirth & Weber) —
 > drawing *languages* with a light pen. Chapter 7: draw a control system in PIXIE, file

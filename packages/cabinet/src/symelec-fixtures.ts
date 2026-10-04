@@ -4,9 +4,9 @@ import type { Cpu } from "./bus.js";
 import { loadOct } from "./loader.js";
 import { applySymelecPatches } from "./symelec-patches.js";
 
-/** Heinz's 1972 listing artifacts — repo-relative from this module. */
+/** Heinz's 1972 listing artifacts, copied from characters/heinz-lemke (where they were transcribed). */
 export const SYMELEC_ARTIFACTS = new URL(
-	"../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/",
+	"../tapes/symelec/",
 	import.meta.url,
 );
 

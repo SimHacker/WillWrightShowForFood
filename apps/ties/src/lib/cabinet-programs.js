@@ -45,7 +45,7 @@ import outnox from '../../../../packages/cabinet/tapes/lp370/outnox.s?raw';
 import hiloSource from '../../../../packages/cabinet/tapes/hilo/hilo.s?raw';
 import landerSource from '../../../../packages/cabinet/tapes/lander/lander.s?raw';
 import readlnSource from '../../../../packages/cabinet/tapes/lib/readln.s?raw';
-import symelecSymbols from '../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-symbols.tsv?raw';
+import symelecSymbols from '../../../../packages/cabinet/tapes/symelec/symelec-symbols.tsv?raw';
 import rimUrl from '../../../../packages/cabinet/tapes/duel/rim.pt?url&inline';
 import duelUrl from '../../../../packages/cabinet/tapes/duel/duel.pt?url&inline';
 
@@ -126,7 +126,7 @@ export const PROGRAMS = [
 		// The 1972 listing is 268 KB; fetched only when a view needs it.
 		async source() {
 			const { default: text } = await import(
-				'../../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt?raw'
+				'../../../../packages/cabinet/tapes/symelec/symelec-listing.txt?raw'
 			);
 			return sourceFromListing(text);
 		},

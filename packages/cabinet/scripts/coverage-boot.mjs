@@ -7,7 +7,7 @@ import { Clock } from "../dist/plugins/clock.js";
 import { Pdp7 } from "../dist/plugins/pdp7.js";
 import { Teletype } from "../dist/plugins/teletype.js";
 
-const dir = "../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/";
+const dir = "../tapes/symelec/";
 const cpu = new Pdp7({ coreWords: 8192 });
 loadOct(cpu, readFileSync(new URL(`${dir}symelec.oct`, import.meta.url), "utf8"));
 loadOct(cpu, readFileSync(new URL(`${dir}symelec-literals.oct`, import.meta.url), "utf8"));

@@ -1,15 +1,15 @@
 # The PDP-7 ↔ Titan link protocol — anatomy and reimplementation architecture
 
 What actually moved over Wiseman's wire, decoded from the recovered listing
-([`symelec-listing.txt`](../pixie-assembler-listing-1972/symelec-listing.txt), the
+([`symelec-listing.txt`](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt), the
 `/LTPIX/RELOC` section, SYMELEC pages 21–24, addresses 1701–2146), plus the architecture
 for reimplementing the Titan side as a modern TypeScript service. Companion to the
 [emulation plan](EMULATION-PLAN.md).
 
 **Status, 27 Sep 2026.** Written as a design sketch before anything existed. Since built:
-[tiny-titan](../../../../packages/cabinet/TINY-TITAN.md), a device in our own TypeScript
+[tiny-titan](../TINY-TITAN.md), a device in our own TypeScript
 PDP-7 emulator (the cabinet) plus a blocklet host that receives the transfer 1972 SYMELEC
-actually sends, and the ring codec in [`packages/pixie`](../../../../packages/pixie/src/words.ts).
+actually sends, and the ring codec in [`packages/pixie`](../../pixie/src/words.ts).
 Building them corrected four details below (the NAK, the direction bit, the block length,
 the header check), marked *corrected*. Not built: serving structures back, the
 `TitanApplication` surface, the SvelteKit service, and the C side, which is no longer
@@ -256,10 +256,10 @@ one of its devices.
 
 | Sketched above | Built as | State |
 |---|---|---|
-| C `LINK` device in SIMH | `TinyTitan`, a cabinet device on devs 22–23 ([`tiny-titan.ts`](../../../../packages/cabinet/src/plugins/tiny-titan.ts)) | built; portless stub in the browser applet, so `TITAN` can't wedge the machine |
+| C `LINK` device in SIMH | `TinyTitan`, a cabinet device on devs 22–23 ([`tiny-titan.ts`](../src/plugins/tiny-titan.ts)) | built; portless stub in the browser applet, so `TITAN` can't wedge the machine |
 | wire adapters (tcp / ws / in-proc) | `TitanPort`: `control / send / recv / ready / disconnect` | in-process only (`EchoPort`, `BlockletHost`); WebSocket not built |
-| blocklet codec + session state machine | `BlockletHost` | PDP → Titan: built and accepted against SYMELEC's live transfer. Titan → PDP: not in the source (see [TINY-TITAN.md](../../../../packages/cabinet/TINY-TITAN.md)) |
-| ring codec | [`packages/pixie`](../../../../packages/pixie/src/words.ts): word classes, cells, encode/decode, relocation | decode verified word for word against SYMELEC's transfer; the package's build files need restoring ([DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module)) |
+| blocklet codec + session state machine | `BlockletHost` | PDP → Titan: built and accepted against SYMELEC's live transfer. Titan → PDP: not in the source (see [TINY-TITAN.md](../TINY-TITAN.md)) |
+| ring codec | [`packages/pixie`](../../pixie/src/words.ts): word classes, cells, encode/decode, relocation | decode verified word for word against SYMELEC's transfer; the package's build files need restoring ([DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module)) |
 | `TitanApplication`, filestore, echo app, circuit stub | — | not built |
 | SvelteKit `titan/` service, ring viewer, blocklet wireshark | — | not built; the ring viewer is planned in the cabinet's DESIGN.md |
 
@@ -267,4 +267,4 @@ The PD10 system layer (core-to-core extracodes with 18→48-bit packing, Attenti
 the second teletype) is not implemented either: tiny-titan answers the PIXIE application
 conversation directly.
 
-↑ [emulation plan](EMULATION-PLAN.md) · [turist guide](GUIDE.md) · [reference library](README.md) · [PIXIE listing](../pixie-assembler-listing-1972/README.md)
+↑ [emulation plan](EMULATION-PLAN.md) · [turist guide](GUIDE.md) · [reference library](README.md) · [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md)

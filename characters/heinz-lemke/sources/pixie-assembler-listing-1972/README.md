@@ -65,6 +65,6 @@ from `TD`/`TRACK` + light-button code (see [`../../pixie-source-recovery.md`](..
 "Questions the listing should answer"); Lars assembles under SIMH → **CARS 2027 Berlin, 29 June
 2027** demo target. Hardware + programming manuals for the PDP-7, Type 340 display, and Type 370
 light pen (mirrored from bitsavers, with the emulator/light-pen mission brief for students):
-[`../pdp7-reference/`](../pdp7-reference/README.md).
+[`cabinet/reference/`](../../../../packages/cabinet/reference/README.md).
 
 ↑ [character README](../../README.md) · [source recovery](../../pixie-source-recovery.md) · [pull-in gaps](../../pull-in-gaps.md) · [24 Jul thread](../2026-07-24-pixie-storyline-thread.md)

@@ -1,0 +1,855 @@
+
+/RSPPIX                                         ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470     PAGE   1
+    1                                                      /RSPPIX
+    2
+    3
+    4                           SETUP=JMS .
+    5      22/      0           0                          /SETUP PACKAGE
+    6      23/ 201225           LAC BEG
+    7      24/  41226           DAC FREE
+    8      25/  40105           DAC OP                     /FORM FREELIST
+    9      26/ 341303           TAD (400001
+   10      27/  60105           DAC I OP
+   11      30/ 501302           AND (17777
+   12      31/ 541227           SAD ENDRES
+   13      32/ 741000           SKP
+   14      33/ 600025           JMP .-6                    /LOOP
+   15      34/ 201230           LAC BOT
+   16      35/  41232           DAC TOP 1                  /CLEAR NAME LIST
+   17      36/ 761232           LAW SAVINS
+   18      37/ 100210           INIT
+   19      40/ 100042           SETUP1
+   20      41/ 620022           JMP I SETUP=JMS
+   21
+   22                           SETUP1=JMS .
+   23      42/      0           0
+   24      43/ 201233           LAC LPBEG                  /INITIAL LOP AND LINK STAKS
+   25      44/  41234           DAC LOP
+   26      45/ 201235           LAC LKBEG
+   27      46/  41236           DAC LINK
+   28      47/ 761237           LAW EL
+   29      50/ 100210           INIT
+   30      51/ 761240           LAW EL1
+   31      52/ 100210           INIT
+   32      53/ 761241           LAW NM
+   33      54/ 100210           INIT
+   34
+   35      55/ 761242           LAW SAVSUB
+   36      56/ 100210           INIT
+   37      57/ 761243           LAW POINT
+   38      60/ 100210           INIT
+   39      61/ 761244           LAW LINE
+   40      62/ 100210           INIT
+   41      63/ 761245           LAW SBPI
+   42      64/ 100210           INIT
+   43      65/ 761246           LAW INST
+   44      66/ 100210           INIT
+   45      67/ 761247           LAW PBDM
+   46      70/ 100210           INIT
+   47      71/ 761250           LAW SYMB
+   48      72/ 100210           INIT
+   49      73/ 620042           JMP I SETUP1=JMS
+   50
+   51
+   52
+   53      74/      0  ERR,     0
+   54      75/ 740040           HLT                        /STACKS TO SHORT OR ?
+   55      76/  41256           DAC NOTE 5
+   56      77/ 601252           JMP ERRMEB
+   57     100/      0           0                          /RTN TO SET OP, OP 1
+   58     101/  40105           DAC OP
+
+/RSPPIX                                         ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470     PAGE   2
+   59     102/ 220105           LAC I OP
+   60     103/ 100251           CAR 7
+   61     104/ 600120           JMP .+14
+   62     105/      0  OP,      0                          /LAW X
+   63     106/      0           0                          /CONTENTS OF X
+   64     107/      0           0                          /)
+   65     110/      0           0                          /)
+   66     111/      0           0                          /)
+   67     112/      0           0                          /) WORKING SPACE
+   68     113/      0           0                          /USED ONLY IN FLST
+   69     114/      0           0                          /)WORKING SPACE
+   70     115/      0           0                          /)FOR
+   71     116/      0           0                          /)GARBAGE COLLECTOR
+   72     117/      0           0                          /)
+   73     120/ 220106           LAC I OP+1
+   74     121/ 501301           AND (20000
+   75     122/ 740200           SZA
+   76     123/ 100074           JMS ERR                    /ERROR IF BLOCK DATA
+   77     124/ 200106           LAC OP+1
+   78     125/ 620100           JMP I OP-5
+   79
+   80
+   81
+   82
+   83
+   84                           FLST = JMS .
+   85     126/      0           0                          /FREE AN ITEM
+   86     127/ 200106           LAC OP 1
+   87     130/  40113           DAC OP 6
+   88     131/ 201226           LAC FREE
+   89     132/ 541253           SAD END
+   90     133/ 100371           JMS LIM                    /GARBAGE COLLECT
+   91     134/ 341300           TAD (77777
+   92     135/ 540106           SAD OP 1
+   93     136/ 600154           JMP . 16                   /IF CONSECUTIVE
+   94     137/ 540113           SAD OP 6
+   95     140/ 600153           JMP . 13
+   96     141/ 341277           TAD (1
+   97     142/  40113           DAC OP 6
+   98     143/ 241276           XOR (500000
+   99     144/  60106           DAC I OP+1
+  100     145/ 221226           LAC I FREE
+  101     146/ 501302           AND (17777
+  102     147/  41226           DAC FREE                   /ADVANCE FREE
+  103     150/ 201275           LAC (100000
+  104     151/  60113           DAC I OP+6                 /SET NIL
+  105     152/ 600131           JMP FLST=JMS+3             /LOOP TO TRY AGAIN
+  106     153/  40106           DAC OP 1
+  107     154/  40113           DAC OP+6                   /SAVE LAST ADDRESS
+  108     155/ 440113           ISZ OP+6
+  109     156/ 221226           LAC I FREE
+  110     157/ 501302           AND (17777
+  111     160/  41226           DAC FREE                   /ADVANCE FREE
+  112     161/ 201275           LAC (100000
+  113     162/  60106           DAC I OP 1
+  114     163/  60113           DAC I OP+6                 /SET NIL
+  115     164/ 620126           JMP I FLST=JMS             /EXIT WHEN ITEM CHAINED TO OP
+  116
+
+/RSPPIX                                         ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470     PAGE   3
+  117
+  118
+  119
+  120     165/      0  GETSP=JMS, 0
+  121     166/  40105           DAC OP
+  122     167/ 201240           LAC EL1
+  123     170/  60105           DAC I OP                   /IN CASE OF IMMEDIATE GARBAGE COLLECTION
+  124     171/ 201226           LAC FREE
+  125     172/ 541253           SAD END
+  126     173/ 100371           JMS LIM                    /GARBAGE COLLECT
+  127     174/ 341275           TAD (JMS
+  128     175/  40106           DAC OP 1
+  129     176/  60105           DAC I OP
+  130     177/ 221226           LAC I FREE
+  131     200/ 501302           AND (17777
+  132     201/  41226           DAC FREE
+  133     202/ 201275           LAC (JMS
+  134     203/  60106           DAC I OP 1                 /SET NIL
+  135     204/ 100126           FLST                       /FREE AN ITEM
+  136     205/ 200106           LAC OP+1
+  137     206/  60105           DAC I OP                   /ATTACH NAME
+  138     207/ 620165           AND I GETSP
+  139
+  140     210/      0  INIT=JMS, 0
+  141     211/ 100165           GETSP
+  142     212/ 200105           LAC OP
+  143     213/  61232           DAC I TOP 1
+  144     214/ 441232           ISZ TOP 1
+  145     215/ 201231           LAC TOP
+  146     216/ 541232           SAD TOP 1
+  147     217/ 100074           JMS ERR                    /NO ROOM FOR MORE NAMES
+  148     220/ 200106           LAC OP+1
+  149     221/ 620210           AND I INIT
+  150
+  151
+  152                           CDR = JMS .
+  153     222/      0           0
+  154     223/ 100100           JMS OP-5                   /SAVE NAME
+  155     224/ 341277           TAD (1
+  156     225/  40113           DAC OP 6                   /IN CASE NONITEM
+  157     226/ 100251           CAR 7                      /TRUE ADDRESS OF CDR
+  158     227/ 201275           LAC (JMS
+  159     230/ 560106           SAD I OP 1
+  160     231/ 741000           SKP                        /HERE IF CDR NIL
+  161     232/ 600236           JMP . 4
+  162     233/ 200113           LAC OP 6
+  163     234/  40106           DAC OP 1
+  164     235/ 100126           FLST
+  165     236/ 200106           LAC OP 1
+  166     237/  60105           DAC I OP                   /ATTACH NAME
+  167     240/ 200105           LAC OP
+  168     241/ 620222           JMP I CDR=JMS
+  169
+  170
+  171                           CAR = JMS .
+  172     242/      0           0
+  173     243/ 100100           JMS OP-5
+  174     244/ 220106           LAC I OP+1
+
+/RSPPIX                                         ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470     PAGE   4
+  175     245/ 100251           CAR 7
+  176     246/  60105           DAC I OP                   /MOVE NAME
+  177     247/ 200105           LAC OP
+  178     250/ 620242           JMP I CAR=JMS
+  179
+  180     251/      0           0                          /SET OP+1 WITH ADDRESS FROM AC AND MS 5 BITS 00100
+  181     252/ 501302           AND (17777                 / AND MOVE TO NEXT ITEM IF ON NONITEM
+  182     253/ 341275           TAD (JMS
+  183     254/  40106           DAC OP+1
+  184     255/ 220106           LAC I OP+1
+  185     256/ 741100           SPA
+  186     257/ 600252           JMP .-5                    /DO AGAIN IF ON NONITEM
+  187     260/ 200106           LAC OP+1                   /PRESERVE AC
+  188     261/ 620251           AND I CAR 7
+  189
+  190
+  191                           PUSH = JMS .
+  192     262/      0           0                          /PUSH DOWN (LISTNAME
+  193     263/ 100100           JMS OP-5
+  194     264/ 341277           TAD (1
+  195     265/  41240           DAC EL1                    /PREVENT TAIL BEING SWEPT UP IF GARBAGE COLLECTED
+  196     266/ 220106           LAC I OP+1
+  197     267/  40107           DAC OP+2                   /SAVE ITEM
+  198     270/ 100126           FLST                       /MAKE SPACE FOR NEW ITEM
+  199     271/ 200107           LAC OP 2
+  200     272/  60106           DAC I OP 1
+  201     273/ 200106           LAC OP 1
+  202     274/  60105           DAC I OP
+  203     275/ 440106           ISZ OP+1
+  204     276/ 100126           FLST                       /MAKE MORE SPACE
+  205     277/ 200107           LAC OP+2
+  206     300/  60106           DAC I OP+1                 /COPY ITEM
+  207     301/ 201240           LAC EL1
+  208     302/ 241276           XOR (500000
+  209     303/  60113           DAC I OP+6                 /JOIN UP
+  210     304/ 200105           LAC OP
+  211     305/ 620262           JMP I PUSH=JMS
+  212
+  213
+  214                           POP = JMS .
+  215     306/      0           0                          /POP UP (LIST NAME
+  216     307/  40105           DAC OP
+  217     310/ 220105           LAC I OP
+  218     311/  40107           DAC OP+2                   /SAVE NAME
+  219     312/ 200105           LAC OP
+  220     313/ 100222           CDR
+  221     314/ 200106           LAC OP+1
+  222     315/ 241276           XOR (500000
+  223     316/  60107           DAC I OP+2                 /JOIN UP
+  224     317/ 200105           LAC OP
+  225     320/ 620306           JMP I POP=JMS
+  226
+  227     321/      0  STAK=JMS, 0                          /OPERAND TO STACK
+  228     322/ 501302           AND (17777
+  229     323/  40110           DAC OP 3
+  230     324/ 441234           ISZ LOP
+  231     325/ 201234           LAC LOP
+  232     326/ 541235           SAD LKBEG
+
+/RSPPIX                                         ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470     PAGE   5
+  233     327/ 100074           JMS ERR
+  234     330/ 200110           LAC OP+3
+  235     331/  61234           DAC I LOP
+  236     332/ 620321           JMP I STAK=JMS
+  237
+  238
+  239     333/      0  UNSTAK=JMS, 0                          /OPERAND FROM STACK
+  240     334/ 221234           LAC I LOP
+  241     335/  40110           DAC OP+3
+  242     336/ 201234           LAC LOP
+  243     337/ 541233           SAD LPBEG
+  244     340/ 100074           JMS ERR
+  245     341/ 341274           TAD (777777
+  246     342/  41234           DAC LOP
+  247     343/ 200110           LAC OP+3
+  248     344/ 620333           JMP I UNSTAK=JMS
+  249
+  250                           ENTER = JMS .
+  251     345/      0           0                          /ENTER SUBROUTINE (NAME ENTER
+  252     346/  40110           DAC OP+3                   /SAVE ENTRY POINT
+  253     347/ 441236           ISZ LINK
+  254     350/ 201236           LAC LINK
+  255     351/ 541254           SAD LKEND
+  256     352/ 100074           JMS ERR
+  257     353/ 200345           LAC ENTER=JMS
+  258     354/ 501302           AND (17777
+  259     355/  61236           DAC I LINK                 /SAVE LINK
+  260     356/ 620110           JMP I OP+3                 /ENTER SUBROUTINE
+  261
+  262                           EXIT = JMP .
+  263     357/ 221236           LAC I LINK                 /EXIT SUBROUTINE
+  264     360/ 541275           SAD (100000
+  265     361/ 100074           JMS ERR                    /ERROR EXIT
+  266     362/  40110           DAC OP+3                   /PLANT LINK
+  267     363/ 201236           LAC LINK
+  268     364/ 541235           SAD LKBEG
+  269     365/ 100074           JMS ERR
+  270     366/ 341274           TAD (777777
+  271     367/  41236           DAC LINK
+  272     370/ 620110           JMP I OP+3                 /EXIT
+  273
+  274
+  275                                                      /GARBAGE COLLECTOR - COMBINED PHASE 1 AND 2
+  276                           GIND = OP+7                /INDEX NAMES
+  277                           GBUG = OP+10
+  278                           GSTKP = OP+11              /BRANCH STACK POINTER
+  279                           GTEMP = OP+12
+  280                                                      /NOTE THAT THE BRANCH STACK STORES GBUG
+  281
+  282     371/      0  LIM,     0                          /HERE IF FREELIST EXPIRED
+  283     372/ 201232           LAC TOP 1
+  284     373/  40116           DAC GSTKP
+  285     374/ 201230           LAC BOT
+  286     375/  40114           DAC GIND
+  287     376/ 600403           JMP LIM1
+  288
+  289                                                      /LOOP INSPECTING P. NAMES
+  290     377/ 440114  LIM2,    ISZ GIND                   / NEXT PERM NAME
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  6
+  291     400/ 200114           LAC GIND
+  292     401/ 541232           SAD TOP+1
+  293     402/ 600502           JMP GARB                   / TO LAST PHASE IF DONE ALL P NAMES
+  294     403/ 220114  LIM1,    LAC I GIND                 / PICK UP P NAME
+  295     404/  40115           DAC GBUG
+  296     405/ 600414           JMP GNTR
+  297
+  298                                                      /MAIN RECURSIVE ROUTINE
+  299     406/ 200116  GBRNCH,  LAC GSTKP
+  300     407/ 541231           SAD TOP
+  301     410/ 100074           JMS ERR                    /BRANCH STACK EXPIRED
+  302     411/ 200115  MK1,     LAC GBUG
+  303     412/  60116           DAC I GSTKP
+  304     413/ 440116           ISZ GSTKP
+  305     414/  40117  GNTR,    DAC GTEMP                  /INITIAL ENTRY
+  306     415/ 220115           LAC I GBUG                 /"CAR"
+  307     416/  40115           DAC GBUG
+  308     417/ 220115  GB2,     LAC I GBUG                 /AND MOVE TO ITEM
+  309     420/ 740100           SMA
+  310     421/ 600435           JMP GITEM                  /JUMP IF ITEM
+  311     422/ 501302           AND (017777
+  312     423/  40115           DAC GBUG
+  313     424/ 220115           LAC I GBUG
+  314     425/ 741100           SPA
+  315     426/ 600422           JMP ,-4                    /REPEAT WHILE NONITEM
+  316
+  317     427/ 220117           LAC I GTEMP
+  318     430/ 501273           AND (760000                /RSP BITS
+  319     431/ 741100           SPA                        /JUMP IF ITEM
+  320     432/ 341272           TAD (200000                /MARK IF NONITEM
+  321
+  322     433/ 340115           TAD GBUG                   /NB GBUG MUST BE CLEAN HERE
+  323     434/  60117           DAC I GTEMP                /SO SKIP REDUNDANT NONITEMS
+  324
+  325     435/ 220115  GITEM,   LAC I GBUG
+  326     436/ 501271           AND (577777
+  327     437/ 541275           SAD (100000
+  328     440/ 600460           JMP GNIL,                  /JMP IF NIL
+  329     441/ 220115           LAC I GBUG
+  330     442/ 742010           RTL
+  331     443/ 741402           SZL!CML                    /PREPARE TO MARK
+  332     444/ 600472           JMP GBRTN                  /EXIT IF MARKED ALREADY
+  333     445/ 742020           RTR                        /NOW MARK
+  334     446/  60115           DAC I GBUG
+  335     447/ 501270           AND (560000
+  336     450/ 541301           SAD (020000
+  337     451/ 600472           JMP GBRTN                  /EXIT IF BLOCK DATA
+  338     452/ 740200           SZA                        /JUMP IF ATOM
+  339     453/ 600406           JMP GBRNCH                 /RECURSE IF LIST POINTER
+  340
+  341     454/ 440115  GBCDR,   ISZ GBUG                   /"CDR"
+  342     455/ 200115           LAC GBUG
+  343     456/  40117           DAC GTEMP
+  344     457/ 600417           JMP GB2                    /REPEAT
+  345
+  346                                                      /FOUND 1ST NIL
+  347     460/ 341272  GNIL,    TAD (200000
+  348     461/  60115           DAC I GBUG                 /MARK IT
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  7
+  349     462/ 440115           ISZ GBUG
+  350     463/ 200115           LAC GBUG
+  351     464/ 541253           SAD END
+  352     465/ 600472           JMP GBRTN
+  353     466/ 220115           LAC I GBUG
+  354     467/ 541275           SAD (100000
+  355     470/ 341272           TAD (200000                /MARK SND NIL
+  356     471/  60115           DAC I GBUG
+  357
+  358                                                      /EXIT RECURSIVE ROUTINE
+  359     472/ 200116  GBRTN,   LAC GSTKP
+  360     473/ 541232           SAD TOP 1
+  361     474/ 600377           JMP LIM2                   /FINAL EXIT
+  362     475/ 341274           TAD (777777                /-1
+  363     476/  40116           DAC GSTKP
+  364     477/ 220116           LAC I GSTKP
+  365     500/  40115           DAC GBUG                   /RECOVER GBUG
+  366     501/ 600454           JMP GBCDR                  /CARRY ON
+  367
+  368
+  369                                                      /GARBAGE COLLECTOR PHASE THREE
+  370
+  371                  GARB,                               /COLLECT GARBAGE & RESTORE LISTS
+  372     502/ 201225           LAC BEG
+  373     503/  40114           DAC OP+7                   /START ADDRESS
+  374     504/ 140116           DZM OP+11                  /CONSECUTIVE INDICATOR ZERO
+  375     505/ 220114           LAC I OP+7
+  376     506/ 501267           AND (220000                /TO ALLOW FOR BLOCK DATA
+  377     507/ 541267           SAD (220000
+  378     510/ 100571           JMS GBD
+  379     511/ 541301           SAD (20000                 /TO ALLOW FOR DEAD BLOCK DATA
+  380     512/ 100605           JMS GBD1
+  381     513/ 740010           RAL
+  382     514/ 740100           SMA
+  383     515/ 600526           JMP ,+11                   /JUMP FIRST GARBAGE ITEM
+  384     516/ 220114           LAC I OP+7
+  385     517/ 501271           AND (577777
+  386     520/  60114           DAC I OP+7                 /RESTORE LIST ITEM
+  387     521/ 440114           ISZ OP+7
+  388     522/ 200114           LAC OP+7                   /ADVANCE ADDRESS
+  389     523/ 541253           SAD END
+  390     524/ 101255           JMS ERRGB                  /EXIT NO GARBAGE TO COLLECT
+  391     525/ 600505  GARB1,   JMP ,-20                   /LOOP
+  392     526/ 200114           LAC OP+7
+  393     527/  41226           DAC FREE                   /START NEW FREE LIST
+  394     530/  40115           DAC OP+10
+  395     531/ 201253           LAC END
+  396     532/ 341266           TAD (400000
+  397     533/  60114           DAC I OP+7                 /ATTACH TERMINAL WORD
+  398     534/ 440114           ISZ OP+7
+  399     535/ 200114           LAC OP+7                   /ADVANCE ADDRESS
+  400     536/ 541253           SAD END
+  401     537/ 600564           JMP ,+25                   /EXIT
+  402     540/ 220114           LAC I OP+7
+  403     541/ 501267           AND (220000                /TO ALLOW FOR BLOCK DATA
+  404     542/ 541267           SAD (220000
+  405     543/ 100571           JMS GBD
+  406     544/ 541301           SAD (20000                 /TO ALLOW FOR DEAD BLOCK DATA
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  8
+  407     545/ 100605           JMS GBD1
+  408     546/ 740010           RAL
+  409     547/ 740100           SMA
+  410     550/ 600554           JMP ,+4                    /JUMP GOT MORE GARBAGE
+  411     551/ 220114           LAC I OP+7
+  412     552/ 501271           AND (577777
+  413     553/ 600533           JMP ,-20                   /RESTORE LIST ITEM AND LOOP
+  414     554/ 200114           LAC OP+7
+  415     555/ 341266           TAD (400000
+  416     556/  60115           DAC I OP+10                /COLLECT A WORD
+  417     557/ 501302           AND (17777
+  418     560/ 440115           ISZ OP+10
+  419     561/ 540115           SAD OP+10
+  420     562/ 440116           ISZ OP+11
+  421     563/ 600530           JMP ,-33                   /LOOP
+  422     564/ 200116           LAC OP+11
+  423     565/ 741200           SNA
+  424     566/ 101255           JMS ERRGB                  /ERROR EXIT IF NONE CONSECUTIVE
+  425     567/ 201226  GARB2,   LAC FREE
+  426     570/ 620371           JMP I LIM                  /OK EXIT
+  427     571/      0  GBD,     0                          /FOR BLOCK DATA
+  428     572/ 220114           LAC I OP+7
+  429     573/ 501271           AND (577777
+  430     574/  60114           DAC I OP+7
+  431     575/ 501302           AND (17777
+  432     576/  40114           DAC OP+7                   /MOVE OP+7 TO END OF BLOCK DATA
+  433     577/ 541253           SAD END
+  434     600/ 600564           JMP GARB2-3
+  435     601/ 200571           LAC GBD
+  436     602/ 301265           ADD (-4                    /RESTART THIS SECTION
+  437     603/  40571           DAC GBD
+  438     604/ 620571           JMP I GBD
+  439     605/      0  GBD1,    0                          /TO ELIMINATE DEAD BLOCK DATA
+  440
+  441     606/ 200114           LAC OP 7
+  442     607/ 341301           TAD (20000
+  443     610/ 341277           TAD (1
+  444     611/ 560114           SAD I OP+7
+  445     612/ 620605           JMP I GBD1
+  446     613/  40117           DAC OP+12
+  447     614/ 160117           DZM I OP+12
+  448     615/ 600610           JMP ,-5                    /LOOP FOR FURTHER ITEMS
+  449
+  450                                                      /BLOCK DATA PRODUCER
+  451                           BDN=JMS ,
+  452     616/      0           0
+  453     617/ 161253           DZM I END
+  454     620/ 141256           DZM #GDM                   /ZERO GARBAGE COLLECTION MARKER
+  455     621/ 341277           TAD (1
+  456     622/  40107           DAC OP+2                   /NO OF CONSECUTIVE WORDS NEEDED
+  457     623/ 420616           XCT I BDN-JMS
+  458     624/  40111           DAC OP+4
+  459     625/ 220111           LAC I OP+4
+  460     626/  40111           DAC OP+4
+  461     627/ 201226           LAC FREE
+  462     630/  40110  BDC,     DAC OP+3
+  463     631/ 141257           DZM #BCC                   /ZERO COUNT
+  464     632/ 740100           SMA
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  9
+  465     633/ 341266           TAD (400000
+  466     634/  40116           DAC OP+11
+  467     635/ 441257           ISZ BCC
+  468     636/ 201257           LAC BCC                    /COUNT OF CONSECUTIVE WORDS FOUND
+  469     637/ 540107           SAD OP+2
+  470     640/ 600663           JMP BDO                    /CORRECT NO FOUND
+  471     641/ 220116           LAC I OP+11
+  472     642/ 440116           ISZ OP+11
+  473     643/ 540116           SAD OP+11
+  474     644/ 600635           JMP ,-7                    /IF FREE LIST CONSECUTIVE
+  475     645/ 740100           SMA
+  476     646/ 600654           JMP BDE                    /FREE LIST EXHAUSTED
+  477     647/ 200116           LAC OP+11
+  478     650/ 301264           ADD (-1
+  479     651/  40115           DAC OP+10
+  480     652/ 220115           LAC I OP+10
+  481     653/ 600630           JMP BDC                    /BEGIN SEARCH AGAIN
+  482     654/ 201256  BDE,     LAC GDM
+  483     655/ 740200           SZA
+  484     656/ 101255           JMS ERRGB                  /CANNOT PRODUCE BLOCK DATA
+  485     657/ 441256           ISZ GDM
+  486     660/ 160111           DZM I OP+4                 /THROW AWAY OLD ITEMS
+  487     661/ 100371           JMS LIM                    /GARBAGE COLLECT
+  488     662/ 600630           JMP BDC
+  489     663/ 220116  BDO,     LAC I OP 11
+  490     664/ 740100           SMA
+  491     665/ 600654           JMP BDE                    /TRYING TO USE I END
+  492     666/ 200110           LAC OP+3                   /ADDRESS OF FIRST OF CONSECUTIVE WORDS
+  493     667/ 741100           SPA
+  494     670/ 600677           JMP BDR                    /FREE LIST NOT INITIALLY CONSECUTIVE
+  495     671/ 301266           ADD (400000
+  496     672/  40110           DAC OP+3
+  497     673/ 220116           LAC I OP+11
+  498     674/ 501302           AND (17777
+  499     675/  41226           DAC FREE                   /RESET FREE LIST
+  500     676/ 600701           JMP BDR+2
+  501     677/ 220116  BDR,     LAC I OP+11
+  502     700/  60115           DAC I OP+10                /JOIN FREE LIST ROUND BLOCK DATA
+  503     701/ 200110           LAC OP+3
+  504     702/ 241276           XOR (500000                /CONVERT TO ADDRESS TYPE
+  505     703/  60111           DAC I OP+4                 /SET POINTER TO BLOCK DATA MARKER
+  506     704/ 200116           LAC OP+11
+  507     705/ 341263           TAD (420001                /BLOCK DATA MARKER IS J02
+  508     706/  60110           DAC I OP+3                 /SET BLOCK DATA MARKER
+  509     707/ 620616           AND I BDN
+  510
+  511
+  512                                                      /RING STRUCTURE PROCESSOR     MAY 1969
+  513
+  514                           FEL = JMS ,
+  515
+  516     710/      0           0                          /FORM ELEMENT LENGTH ONE
+  517     711/ 750000           CLA
+  518     712/ 100714           FELN
+  519     713/ 620710           JMP I FEL-JMS
+  520
+  521
+  522                           FELN = JMS ,
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  10
+  523
+  524     714/      0           0                          /FORM ELEMENT LENGTH N
+  525     715/ 740001           CMA
+  526     716/  40107           DAC OP+2                   /SET HEAD COUNTER
+  527     717/ 761241           LAW NM                     /FOR PRINTNAME
+  528     720/ 100165           GETSP
+  529     721/ 761237           LAW EL                     /FOR ELEMENT
+  530     722/ 100165           GETSP
+  531     723/  41240           DAC EL1                    /SAVE HEAD ADDRESS
+  532     724/ 761237           LAW EL
+  533     725/ 100743           NULLR
+  534     726/ 100222           CDR
+  535     727/ 440107           ISZ OP 2
+  536     730/ 600725           JMP ,-3                    /FORM HEADER
+  537     731/ 201241           LAC NM
+  538     732/ 241262           XOR (140000
+  539     733/  61237           DAC I EL                   /ATNAME
+  540     734/ 201237           LAC EL
+  541     735/  61241           DAC I NM                   /BACK POINTER
+  542     736/ 761237           LAW EL
+  543     737/ 100222           CDR
+  544     740/ 201240           LAC EL1
+  545     741/  61237           DAC I EL
+  546     742/ 620714           JMP I FELN-JMS
+  547
+  548                           NULLR = JMS ,
+  549
+  550     743/      0           0                          /FORM NULL RING
+  551     744/ 100100           JMS OP-5
+  552     745/ 341261           TAD (40000                 /SET RINGSTART
+  553     746/  60106           DAC I OP+1
+  554     747/ 200105           LAC OP
+  555     750/ 620743           JMP I NULLR-JMS
+  556
+  557
+  558                           INSRT = JMS ,
+  559     751/      0           0                          /INSERT Q IN RING P
+  560     752/ 100100           JMS OP-5                   /GET Q
+  561     753/  40107           DAC OP 2
+  562     754/ 420751           XCT I INSRT-JMS
+  563     755/ 100100           JMS OP-5                   /GET P
+  564     756/ 220106           LAC I OP+1
+  565     757/ 501260           AND (117777                /MAY BE RINGSTART
+  566     760/  60107           DAC I OP+2
+  567     761/ 220106           LAC I OP+1
+  568     762/ 501261           AND (40000                 /PRESERVE IF RINGSTART
+  569     763/ 340107           TAD OP+2
+  570     764/  60106           DAC I OP+1                 /JOIN UP
+  571     765/ 620751           JMP I INSRT-JMS
+  572
+  573
+  574                           FINDS = JMS ,
+  575     766/      0           0                          /FIND RINGSTART
+  576     767/ 100100           JMS OP-5
+  577     770/  60105           DAC I OP                   /MOVE NAME
+  578     771/ 220106           LAC I OP+1
+  579     772/ 501261           AND (40000
+  580     773/ 740200           SZA
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  11
+  581     774/ 600777           JMP , 3                    /POINTER ON RINGSTART
+  582     775/ 220106           LAC I OP+1
+  583     776/ 600103           JMP OP-2                   /LOOP
+  584     777/ 200105           LAC OP
+  585    1000/ 620766           JMP I FINDS-JMS            /EXIT
+  586
+  587
+  588
+  589                           FINDN = JMS ,
+  590    1001/      0           0                          /FIND NAME OF ELEMENT
+  591    1002/ 100100           JMS OP-5
+  592    1003/ 220106           LAC I OP+1
+  593    1004/ 501276           AND (500000                /TEST IF ATOM
+  594    1005/ 741200           SNA
+  595    1006/ 601012           JMP , 4
+  596    1007/ 200105           LAC OP
+  597    1010/ 100222           CDR                        /NEXT
+  598    1011/ 601003           JMP ,-6                    /LOOP
+  599    1012/ 200105           LAC OP
+  600    1013/ 621001           JMP I FINDN-JMS            /EXIT
+  601
+  602
+  603
+  604
+  605
+  606    1014/      0  FINDP-JMS, 0                          / MOVE TO TOP OF HEAD IF ON ATNAME
+  607    1015/ 100100           JMS OP-5
+  608    1016/ 201275           LAC (100000
+  609    1017/ 520106           AND I OP+1
+  610    1020/ 741200           SNA
+  611    1021/ 601024           JMP ,+3                    / IF ATNAME
+  612    1022/ 200105           LAC OP
+  613    1023/ 621014           AND I FINDP
+  614    1024/ 200105           LAC OP
+  615    1025/ 100222           CDR
+  616    1026/ 100242           CAR
+  617    1027/ 621014           AND I FINDP
+  618
+  619
+  620                                                      / GO ROUND HEAD FINDING NEXT ADDRESS AFTER APPLYING FUNCTION.
+  621                                                      / MOVE X TO NEXT ITEM IN HEAD AND IF RS EXECUTE F1, IF RP EXECUTE F2.
+  622                                                      / CALL BY LAW GRHA; ENTER; LAW X; LAW F1; LAW F2
+  623
+  624    1030/ 420345  GRHA,    XCT I ENTER-JMS            / PICK UP X
+  625    1031/ 100100           JMS OP-5
+  626    1032/  40110           DAC OP+3                   / GET CONTENTS OF X
+  627    1033/ 220110           LAC I OP+3
+  628    1034/ 501275           AND (100000
+  629    1035/ 741200           SNA
+  630    1036/ 601044           JMP ,+6                    / IF ON ATNAME
+  631    1037/ 200105           LAC OP
+  632    1040/ 100222  GR1,     CDR
+  633    1041/ 200106           LAC OP+1
+  634    1042/ 540110           SAD OP+3
+  635    1043/ 600357           EXIT                       / IF BACK TO STARTING-POINT
+  636    1044/ 200105           LAC OP
+  637    1045/ 101014           FINDP
+  638    1046/ 200106           LAC OP+1
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  12
+  639    1047/ 540110           SAD OP+3
+  640    1050/ 600357           EXIT
+  641    1051/ 440345           ISZ ENTER-JMS              / MOVE TO F1
+  642    1052/ 760000           LAW
+  643    1053/ 520106           AND I OP+1
+  644    1054/ 541275           SAD (JMS
+  645    1055/ 440345           ISZ ENTER-JMS              / MOVE TO F2 IF RINGPOINTER
+  646    1056/ 101133           JMS LKTEST
+  647    1057/ 200110           LAC OP+3
+  648    1060/  61236           DAC I LINK                 / KEEP STARTING-POINT
+  649    1061/ 420345           XCT I ENTER-JMS            / PICK UP
+  650    1062/ 100345           ENTER                      /   AND EXECUTE FUNCTION
+  651    1063/ 221236           LAC I LINK
+  652    1064/  40110           DAC OP+3                   / PICK UP STARTING-POINT
+  653    1065/ 750001           CLC
+  654    1066/ 341236           TAD LINK
+  655    1067/  41236           DAC LINK
+  656    1070/ 221236           LAC I LINK
+  657    1071/  40345           DAC ENTER-JMS
+  658    1072/ 420345           XCT I ENTER-JMS            /AND X
+  659    1073/ 601040           JMP GR1
+  660
+  661
+  662
+  663                                                      / GO ROUND RING FINDING NEXT ADDRESS BEFORE APPLYING FUNCTION.
+  664                                                      / STORE CAR(X), EXECUTE F, AND THEN SET X TO STORED VALUE.
+  665                                                      / CALL AS FOR GRRA.
+  666
+  667    1074/ 420345  GRRB,    XCT I ENTER-JMS            / X
+  668    1075/ 100242           CAR                        / MISS THIS ONE
+  669    1076/ 200106           LAC OP+1
+  670    1077/  40110           DAC OP+3                   / CONTENTS OF X
+  671    1100/ 760000  GR2,     LAW
+  672    1101/ 520110           AND I OP+3
+  673    1102/ 541262           SAD (DZM
+  674    1103/ 600357           EXIT
+  675    1104/ 760110           LAW OP+3
+  676    1105/ 100242           CAR
+  677    1106/ 101133           JMS LKTEST
+  678    1107/ 200110           LAC OP+3
+  679    1110/  61236           DAC I LINK
+  680    1111/ 440345           ISZ ENTER-JMS
+  681    1112/ 420345           XCT I ENTER-JMS
+  682    1113/ 100345           ENTER
+  683    1114/ 221236           LAC I LINK
+  684    1115/  40110           DAC OP+3
+  685    1116/ 750001           CLC
+  686    1117/ 341236           TAD LINK
+  687    1120/  41236           DAC LINK
+  688    1121/ 220110           LAC I OP+3
+  689    1122/ 741100           SPA
+  690    1123/ 600357           EXIT                       / IF HAS BEEN DELETED
+  691    1124/ 221236           LAC I LINK
+  692    1125/  40345           DAC ENTER-JMS
+  693    1126/ 420345           XCT I ENTER-JMS
+  694    1127/  40105           DAC OP
+  695    1130/ 200110           LAC OP+3
+  696    1131/  60105           DAC I OP
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  13
+  697    1132/ 601100           JMP GR2
+  698
+  699    1133/      0  LKTEST,  0                          /TEST IF ROOM ON LINK STACK
+  700    1134/ 441236           ISZ LINK
+  701    1135/ 201236           LAC LINK
+  702    1136/ 541254           SAD LKEND
+  703    1137/ 100074           JMS ERR
+  704    1140/ 621133  LKERR,   JMP I LKTEST
+  705
+  706
+  707
+  708
+  709                                                      /RSP ROUTINES FOR USE WITHOUT QUALIFIERS
+  710
+  711
+  712                           ADDW = JMS ,
+  713    1141/      0           0                          /ADDWORD IN ELEMENT
+  714    1142/  40107           DAC OP+2
+  715    1143/ 101001           FINDN
+  716    1144/ 100222           CDR
+  717    1145/ 200106           LAC OP+1                   /HEAD POINTER
+  718    1146/  40110           DAC OP+3                   /HEAD
+  719    1147/ 761237           LAW EL
+  720    1150/ 100165           GETSP                      /FOR NEW RING ITEM
+  721    1151/ 220110           LAC I OP 3
+  722    1152/ 241276           XOR (500000
+  723    1153/  60113           DAC I OP 6                 /CHAIN TO TOP OF HEAD
+  724    1154/ 200106           LAC OP 1
+  725    1155/  60110           DAC I OP 3                 /RESET HEAD POINTER
+  726    1156/  60107           DAC I OP 2                 /NAME ON NEW WORD
+  727    1157/ 341261           TAD (DAC
+  728    1160/  61237           DAC I EL                   /FORM NULL RING
+  729    1161/ 200107           LAC OP+2
+  730    1162/ 621141           JMP I ADDW-JMS
+  731
+  732
+  733
+  734
+  735                           DSON = JMS ,
+  736    1163/      0           0                          /DELETE A SON RING
+  737    1164/  40111           DAC OP+4
+  738    1165/ 100766           FINDS                      /IN CASE OF WRONG ENTRY
+  739    1166/ 761074           LAW GRRB
+  740    1167/ 100345           ENTER
+  741    1170/ 200111           LAC OP 4
+  742    1171/ 761174           LAW , 3
+  743    1172/ 100345           ENTER                      /DO ALSO FOR RING-START
+  744    1173/ 621163           AND I DSON
+  745    1174/ 200111           LAC OP+4
+  746    1175/ 100306           POP
+  747    1176/ 600357           EXIT
+  748
+  749
+  750                           DELB = JMS ,
+  751    1177/      0           0                          /DELETE ELEMENT FROM BROTHER RING
+  752    1200/ 100100           JMS OP-5
+  753    1201/  40110           DAC OP+3
+  754    1202/ 220106           LAC I OP+1
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  14
+  755    1203/ 501261           AND (40000                 /TEST IF RINGSTART
+  756    1204/ 740200           SZA
+  757    1205/ 621177           JMP I DELB-JMS             /EXIT IF ILLEGAL
+  758    1206/ 220106           LAC I OP+1
+  759    1207/ 100251           CAR 7
+  760    1210/  40107           DAC OP 2                   /MOVE TO NEXT IN RING
+  761    1211/ 220106           LAC I OP 1
+  762    1212/ 100251           CAR 7
+  763    1213/ 540110           SAD OP+3                   /DOES THIS POINT BACK TO THE ORIGINAL ELEMENT
+  764    1214/ 741000           SKP
+  765    1215/ 601210           JMP ,-5
+  766    1216/ 220107           LAC I OP+2
+  767    1217/ 501261           AND (40000                 /PRESERVE IF RING START
+  768    1220/ 360110           TAD I OP+3
+  769    1221/  60107           DAC I OP+2                 /DELETE POINTER
+  770    1222/ 200105           LAC OP
+  771    1223/ 100306           POP
+  772    1224/ 621177           JMP I DELB-JMS
+  773
+  774
+  775
+  776                           PAUSE
+  777
+  778
+         1225/      0           BEG
+         1226/      0           FREE
+         1227/      0           ENDRES
+         1230/      0           BOT
+         1231/      0           TOP
+         1232/      0           SAVINS
+         1233/      0           LPBEG
+         1234/      0           LOP
+         1235/      0           LKBEG
+         1236/      0           LINK
+         1237/      0           EL
+         1240/      0           EL1
+         1241/      0           NM
+         1242/      0           SAVSUB
+         1243/      0           POINT
+         1244/      0           LINE
+         1245/      0           SBPI
+         1246/      0           INST
+         1247/      0           PBDM
+         1250/      0           SYMB
+         1251/      0           NOTE
+         1252/      0           ERRMEB
+         1253/      0           END
+         1254/      0           LKEND
+         1255/      0           ERRGB
+         1256/      0           GDM
+         1257/      0           BCC
+         1260/ 117777
+         1261/  40000
+         1262/ 140000
+         1263/ 420001
+         1264/ 777776
+         1265/ 777773
+         1266/ 400000
+
+/RSPPIX   ASSEMBLED 29 1 72 AT 17,15,40 BY HL1470   PAGE  15
+         1267/ 220000
+         1270/ 560000
+         1271/ 577777
+         1272/ 200000
+         1273/ 760000
+         1274/ 777777
+         1275/ 100000
+         1276/ 500000
+         1277/      1
+         1300/  77777
+         1301/  20000
+         1302/  17777
+         1303/ 400001

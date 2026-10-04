@@ -26,7 +26,7 @@ original program runs; simulation models a process), it is two things:
   the skips. It passes the cabinet's test: SYMELEC's unmodified `LTPX` runs against it.
 - **A stand-in for the far end of the conversation.** `BlockletHost` answers the `/LTPIX`
   session the way user HL1470's Titan programs did, and plays the master role Lang's
-  [Planning Document 10](../../characters/heinz-lemke/sources/pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
+  [Planning Document 10](reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
   gives Titan (the PDP-7 asks; Titan's header decides the direction). In testing terms, a
   fake server: the real protocol with no machine behind it. The emulation plan's phrase:
   emulate the conversation, not the computer.
@@ -65,7 +65,7 @@ unmodified over a WebSocket.
 
 **`BlockletHost`** is the session state machine from the `/LTPIX`
 routine (listing pages 21–24), decoded in
-[TITAN-LINK-PROTOCOL.md](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md):
+[TITAN-LINK-PROTOCOL.md](reference/TITAN-LINK-PROTOCOL.md):
 
 - serves the 4-word redundantly-checked headers — word 2 is word 1
   complemented, and the PDP requires `(w1^w2)+(w3^w4)` to be all-ones;
@@ -106,7 +106,7 @@ pipeline in [DESIGN.md](DESIGN.md#the-application-layer--packagespixie-separate-
 build a drawing as a TS object graph, encode it to ring words, hand it
 to 1969 PIXIE over the link, and watch the tube. The encode/decode
 codec's format truth is the wire envelope in
-[TITAN-LINK-PROTOCOL.md](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
+[TITAN-LINK-PROTOCOL.md](reference/TITAN-LINK-PROTOCOL.md)
 — atoms with top 5 bits zero, NIL spelled as the `JMS` opcode value,
 block headers of `20000` plus a 13-bit length.
 
@@ -380,7 +380,7 @@ SYMELEC's core, changed cells lit as they change, or a file.
 | What | Where |
 |---|---|
 | the module | [`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts) |
-| protocol decode | [`TITAN-LINK-PROTOCOL.md`](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md) |
+| protocol decode | [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md) |
 | primary source | [`symelec-listing.txt`](../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt), `/LTPIX` at 1701 |
 | device + command language | [DESIGN.md](DESIGN.md#tiny-titan) |
 | tests | [`src/cabinet.test.ts`](src/cabinet.test.ts) — echo unit test and the `TITAN` acceptance test |

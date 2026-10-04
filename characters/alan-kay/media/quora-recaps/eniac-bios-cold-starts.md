@@ -82,9 +82,9 @@ a prelude compiled into the image at build time.
   ([cabinet README](../../../../packages/cabinet/README.md)).
 - **The loader that read backwards.** Supnik's 18-bit paper describes the PDP-4's one-pass
   assembler, whose output tape "was then read, upside down and backward, by the loader"
-  ([guide, further reading](../../../heinz-lemke/sources/pdp7-reference/GUIDE.md)).
+  ([guide, further reading](../../../../packages/cabinet/reference/GUIDE.md)).
 - **Mitch's PDP-7 Forth** and why its threading is interesting:
-  [PDP7-FORTH.md](../../../heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md).
+  [PDP7-FORTH.md](../../../../packages/cabinet/reference/PDP7-FORTH.md).
 - **Open Firmware as a command line**, and what tiny-its borrows from it:
   [TINY-ITS.md](../../../../packages/cabinet/TINY-ITS.md#start-from-open-firmware).
 

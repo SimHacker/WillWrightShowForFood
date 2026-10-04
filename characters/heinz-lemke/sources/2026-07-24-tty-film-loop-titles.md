@@ -36,13 +36,13 @@ before carriage return (loop end).
 
 The same loop works *live*, not just for credits. SIMH's teletype device is a character
 stream with CR/LF in it — exactly what the overlay consumes. So in the
-[emulation plan](pdp7-reference/EMULATION-PLAN.md)'s SvelteKit-hosted SIMH architecture,
+[emulation plan](../../../packages/cabinet/reference/EMULATION-PLAN.md)'s SvelteKit-hosted SIMH architecture,
 the film loop becomes a **terminal emulator skin**: the PDP-7's console output prints
 onto the 1969 paper, the carriage return triggers the filmed carriage return, the clack
 track plays per character. The machine's own film footage becomes its display device,
 57 years later. Use it for the PIXIE bench console, for PDP-7 UNIX login demos, for show
 intros — anywhere a terminal appears, it can appear *in the film*.
 
-Cross-links: [EMULATION-PLAN.md](pdp7-reference/EMULATION-PLAN.md) ·
+Cross-links: [EMULATION-PLAN.md](../../../packages/cabinet/reference/EMULATION-PLAN.md) ·
 [cambridge-films-flight-of-the-bumblebee.md](../cambridge-films-flight-of-the-bumblebee.md) ·
 Howard Penner's post-production desk ([characters/howard-penner/](../../howard-penner/README.md))

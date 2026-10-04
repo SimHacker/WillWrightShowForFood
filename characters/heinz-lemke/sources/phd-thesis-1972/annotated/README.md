@@ -4,8 +4,8 @@ A readable, intertwingled markdown edition of *Interactive Graphics in an Integr
 System* (Heinz Ulrich Lemke, University College, Cambridge, March 1972): faithful
 transcription of the [219-page scan](../PIXIE-PhD-Thesis-HULEMKE-Interactive-Graphics-in-an-integrated-CAD-system-1972.pdf),
 enriched with links into this repo (the recovered [assembler listing](../../pixie-assembler-listing-1972/README.md),
-the [link protocol decode](../../pdp7-reference/TITAN-LINK-PROTOCOL.md), the
-[turist guide](../../pdp7-reference/GUIDE.md)), Wikipedia, and primary sources. Editorial
+the [link protocol decode](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md), the
+[turist guide](../../../../../packages/cabinet/reference/GUIDE.md)), Wikipedia, and primary sources. Editorial
 notes are blockquotes marked ✎; everything else is Lemke 1972 verbatim, typos included.
 
 ## The edition
@@ -44,10 +44,10 @@ paragraph back to the scan.
 - **The Titan-side applications** — chapters 4, 6–8: CONN/CONNMAP/REPLACE/JOINUP/PLOT/
   GRAPH plus the HLFC→HLSE→HLNY control-system pipeline and the LADAN/CANOTRAN circuit
   analysers — the programs whose endpoints "verbed" the
-  [link protocol](../../pdp7-reference/TITAN-LINK-PROTOCOL.md)'s otherwise verbless
+  [link protocol](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md)'s otherwise verbless
   transfers.
 - **Satellite graphics doctrine** — §3.3.3/3.3.4 argue the client/server split the
-  [emulation plan](../../pdp7-reference/EMULATION-PLAN.md) is rebuilding; §3.2.2 defines
+  [emulation plan](../../../../../packages/cabinet/reference/EMULATION-PLAN.md) is rebuilding; §3.2.2 defines
   interactivity as signalling rate around the man-machine loop.
 - **The PIXIE User Manual** (Appendix 4) — operating instructions for the resurrection
   bench, including load-from-link vs load-from-paper-tape and the error NOTE codes that

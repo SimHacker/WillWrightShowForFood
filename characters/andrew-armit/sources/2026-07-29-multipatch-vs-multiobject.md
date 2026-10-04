@@ -78,7 +78,7 @@ subroutine support to SIMH is typically a new `pdp18b_foo.c` hooked in `pdp18b_d
 `pdp18b_sys.c`. Type 340 emulator **already supports the character generator** (used by PDP-10
 programs); **provisional subroutine support** exists but **untested**.
 
-→ Emulation plan: [`../../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md`](../../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md)  
+→ Emulation plan: [`../../../packages/cabinet/reference/EMULATION-PLAN.md`](../../../packages/cabinet/reference/EMULATION-PLAN.md)  
 → Lars room: [`../../lars-brinkhoff/`](../../lars-brinkhoff/)
 
 ---

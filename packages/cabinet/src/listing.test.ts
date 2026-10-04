@@ -6,7 +6,7 @@ import type { AsmLine, AsmResult } from "./asm/core.js";
 import { printListing } from "./asm/listing.js";
 import { PDP7 } from "./asm/pdp7.js";
 
-const heinz = fileURLToPath(new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt", import.meta.url));
+const heinz = fileURLToPath(new URL("../tapes/symelec/symelec-listing.txt", import.meta.url));
 const lines = readFileSync(heinz, "utf8").split("\n");
 const ROW = /^\s*(\d+)(?:\s+([0-7]+)\/\s*([0-7]+))?/;
 const SYMBOL = /([A-Z][A-Z0-9]*)\s*=(\*?)\s*([0-7]+)/g;

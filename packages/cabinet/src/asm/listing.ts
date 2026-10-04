@@ -2,7 +2,7 @@ import { type AsmResult, addrMask, digits } from "./core.js";
 
 /**
  * Listings in the house style of the Cambridge assembler's 1972 listings, as on Heinz Lemke's
- * SYMELEC (characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt):
+ * SYMELEC (packages/cabinet/tapes/symelec/symelec-listing.txt):
  *
  *   /SYMELEC   ASSEMBLED 12 2 72 AT 12,44,57 BY HL1470   PAGE  1
  *      10      24/ 212257  BEGRTP,  LAC (JMP INT               /INTERRUPT ENTRY

@@ -167,7 +167,7 @@ The order, and Heinz's feedback answered: [ROADMAP.md](ROADMAP.md).
 - Forth, self-hosted: assemble Mitch's `kernel.s` in the page with an `as7` dialect of our
   assembler, so it has source maps and a symbol table, and live-code it in a LIVE CODING
   panel. The plan: [DESIGN.md](DESIGN.md#cartridges-and-live-coding). The ring vocabulary
-  in [FORTH-TURTLE-340.md](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md)
+  in [FORTH-TURTLE-340.md](reference/FORTH-TURTLE-340.md)
   then has a real Forth to live in.
 - Every program has a link of its own, without the HyperTIES frame: `/cabinet/<program>/`,
   or `/cabinet/?program=forth&size=768`.

@@ -3,7 +3,7 @@
 Thesis pp. 26–51 · [annotated edition index](README.md) · [← chapters 1–2](01-chapters-1-2.md) · [chapter 5 →](03-chapter-5-pixie.md)
 
 > ✎ **Highlights.** §3.3.3/3.3.4 is the 1972 statement of the client/server trade-off the
-> [emulation plan](../../pdp7-reference/EMULATION-PLAN.md) rebuilds: a satellite gives
+> [emulation plan](../../../../../packages/cabinet/reference/EMULATION-PLAN.md) rebuilds: a satellite gives
 > *"tight coupling with simple tasks… without requiring privileged access to processes in
 > the main machine"*; mainframe-driven graphics stands or falls on *"the quality of the
 > computer's time-sharing system."* §3.2.2 defines interactivity by **signalling rate** —

@@ -80,7 +80,7 @@ and [CUCPS Titan docs](https://cucps.soc.srcf.net/titan/).
 **Bitsavers:** [PDP-7](http://bitsavers.trailing-edge.com/pdf/dec/pdp7/) ·
 [graphics](http://bitsavers.trailing-edge.com/pdf/dec/graphics/)
 
-Also mirrored under [`../../heinz-lemke/sources/pdp7-reference/`](../../heinz-lemke/sources/pdp7-reference/README.md).
+Also mirrored under [`packages/cabinet/reference/`](../../../../packages/cabinet/reference/README.md).
 
 ---
 

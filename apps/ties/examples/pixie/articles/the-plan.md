@@ -46,11 +46,11 @@ path: characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md
 ```
 
 ```transclude
-path: characters/heinz-lemke/sources/pdp7-reference/GUIDE.md
+path: packages/cabinet/reference/GUIDE.md
 ```
 
 ```transclude
-path: characters/heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md
+path: packages/cabinet/reference/EMULATION-PLAN.md
 ```
 
 **The films**

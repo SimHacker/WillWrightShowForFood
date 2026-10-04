@@ -118,7 +118,7 @@ Every stroke after that belongs to that button until the next `DDS` overwrites 3
 `PEN` handler reads 3 and does `JMP I 3`. Any run of drawing, letters, a subroutine or a whole
 picture, can be one button this way; subroutines nest one deep (one save register). The pen bit
 in a PARAM word hides a run from the pen entirely. Walked through in the
-[guide](../../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md#how-symelec-works-end-to-end).
+[guide](reference/GUIDE.md#how-symelec-works-end-to-end).
 
 **Interrupts or polling.** Both work for both events. `IDSP` skips on a pen hit and `IDSI` on a
 display stop, and either flag also raises the interrupt. The 340 stays frozen after a hit until
@@ -155,7 +155,7 @@ never as JavaScript in the page.
 
 ## tiny-titan
 
-Per [`TITAN-LINK-PROTOCOL.md`](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
+Per [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md)
 — the codec and plug-in surface are designed there; the module is
 [`src/plugins/tiny-titan.ts`](src/plugins/tiny-titan.ts), and
 [TINY-TITAN.md](TINY-TITAN.md) is its own page — what it does now,
@@ -235,7 +235,7 @@ subpictures), encode back. Not RAM-byte-compatible — wire-compatible; the
 graph representation is ours.
 
 Format truth, in order:
-1. Wire envelope: [`TITAN-LINK-PROTOCOL.md`](../../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md)
+1. Wire envelope: [`TITAN-LINK-PROTOCOL.md`](reference/TITAN-LINK-PROTOCOL.md)
    — atoms (top 5 bits zero), NIL = the `JMS` opcode value, block headers
    `20000` + 13-bit length, `RELCON` relocation.
 2. Semantics: RSPPIX itself (the Ring Structure Processor, transcribed clean),
@@ -654,9 +654,9 @@ for the fern, still after `relocate` and a wire round trip, and a pen
 hit on the tube resolves to its polyline's name. The layout is ours, not
 SYMELEC's segment format, and says so until the element decode lands.
 The same structure is what a PDP-7 Forth builds
-([FORTH-TURTLE-340.md §9](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)).
+([FORTH-TURTLE-340.md §9](reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)).
 Background for all of this: the ring-structures section of the
-[turist guide](../../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md#pixies-data--ring-structures-from-the-ground-up).
+[turist guide](reference/GUIDE.md#pixies-data--ring-structures-from-the-ground-up).
 
 **To do: the RSP library, extracted from PIXIE and shared by every VM.**
 One format, two halves.
@@ -684,7 +684,7 @@ SYMELEC assembled from the layers is word-for-word `symelec.oct` at the same add
 - **On the PDP-7:** RSPPIX's own routines (`SETUP`, `FLST`, `CAR`, `CDR`,
   `PUSH`, `POP`, `STAK`/`UNSTAK`, `ENTER`/`EXIT`, the collector) lifted out of
   SYMELEC as a loadable image with its layout words, so Forth (as code
-  words, [FORTH-TURTLE-340.md §9](../../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)),
+  words, [FORTH-TURTLE-340.md §9](reference/FORTH-TURTLE-340.md#9-rings-as-a-forth-data-type)),
   a Lisp or any other PDP-7 program runs the same code PIXIE does. Beside
   it, new code, never patched into PIXIE:
   - a link client: open a session, send and receive ring transfers, both
@@ -1425,4 +1425,4 @@ Discipline: **differential trace vs SIMH.** One line format (`addr ir ac link`)
 emitted by both benches over the same `.oct`; diff. Roy already steps the
 binary natively — the oracle made mechanical.
 
-↑ [README](README.md) · [SCHEMA](SCHEMA.yml) · [emulation plan](../../characters/heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md)
+↑ [README](README.md) · [SCHEMA](SCHEMA.yml) · [emulation plan](reference/EMULATION-PLAN.md)

@@ -8,6 +8,9 @@ const SIGN = 1 << 17; // 0o400000
 const LINKBIT = 1 << 18; // link lives above the word, SIMH-style
 const LACMASK = LINKBIT | WMASK;
 const ADDR = 0o17777; // 13 bits, 8K bank
+const BANK = 0o60000; // with memory extension, up to four 8K banks
+const XADDR = 0o77777; // 15-bit indirect address in extend mode
+const EXTEND_BIT = 1 << 16; // extend mode, in the JMS/interrupt save word
 
 // Top 4 bits. Matches SIMH (IR >> 14) & 017 / DEC IR<0:3>.
 const OP = {
@@ -32,14 +35,16 @@ const OP = {
 const XCT_MAX = 16;
 
 export type Pdp7Opts = {
+	/** 4096, 8192, 16384 or 32768. Above 8K is the Type 148 memory extension. */
 	coreWords?: number;
 };
 
 /**
  * PDP-7 instruction-set plugin. Semantics ported from Open SIMH
  * PDP18B/pdp18b_cpu.c (Bob Supnik), the reference oracle — see SIMH-MAP.md.
- * Implements what SYMELEC uses (DESIGN.md); the rest of the 18b family
- * (extend mode, API, user mode) is deliberately absent.
+ * Implements what SYMELEC uses (DESIGN.md), plus the memory extension to
+ * 32K with extend mode (EEM/LEM/EMIR/SEM, IOT 77) as SIMH's PDP-7 does it.
+ * The rest of the 18b family (trap mode, API, user mode) is absent.
  */
 export class Pdp7 implements Cpu {
 	readonly wordBits = WORD;
@@ -51,6 +56,10 @@ export class Pdp7 implements Cpu {
 	sc = 0; // EAE step counter
 	ion = false; // interrupt enable
 	ionDefer = 0; // instructions to execute before interrupts may fire
+	/** Extend mode: indirect addresses are 15 bits, reaching every bank. Off: they stay in the current bank. */
+	extend = false;
+	/** EMIR: the next JMP I restores extend mode from bit 16 of its target word. */
+	private emirPending = false;
 	irqLine = false; // ORed device requests, set by the Cabinet each step
 	halted = false;
 	/** The console's eighteen ACCUMULATOR switches, read by OAS/LAS. SYMELEC never reads them; DUEL's players do. */
@@ -74,11 +83,13 @@ export class Pdp7 implements Cpu {
 		this.ionDefer = 0;
 		this.irqLine = false;
 		this.halted = false;
+		this.extend = false;
+		this.emirPending = false;
 		this.core.fill(0);
 	}
 
 	skip(): void {
-		this.pc = (this.pc + 1) & ADDR;
+		this.pc = incr(this.pc);
 	}
 
 	read(addr: number): number {
@@ -101,22 +112,27 @@ export class Pdp7 implements Cpu {
 		if (this.irqLine && this.ion && this.ionDefer === 0) {
 			this.write(0, this.jmsWord());
 			this.ion = false;
+			this.extend = false;
+			this.emirPending = false;
 			this.pc = 1;
 		}
 
-		const ir = this.read(this.pc);
-		this.trace?.record(this.pc, ir, this.ac);
-		this.pc = (this.pc + 1) & ADDR;
+		const at = this.pc;
+		const ir = this.read(at);
+		this.trace?.record(at, ir, this.ac);
+		this.pc = incr(this.pc);
 		if (this.ionDefer > 0) this.ionDefer -= 1;
-		return this.exec(ir, 0);
+		return this.exec(ir, at, 0);
 	}
 
-	private exec(ir: number, xctCount: number): Step {
+	/** `at` is where `ir` came from: a direct address is in that word's bank. */
+	private exec(ir: number, at: number, xctCount: number): Step {
 		const op = (ir >> 14) & 0o17;
 		const indirect = ((ir >> 13) & 1) === 1;
-		let ea = ir & ADDR;
-		if (op === OP.cal) ea = 0o20; // CAL ignores the address field
-		if (indirect && op <= OP.jmp) ea = this.resolveIndirect(ea);
+		let ea = (at & BANK) | (ir & ADDR);
+		// CAL ignores the address field: absolute 20 in extend mode, else 20 in this bank.
+		if (op === OP.cal) ea = this.extend ? 0o20 : (this.pc & BANK) | 0o20;
+		if (indirect && op <= OP.jmp) ea = this.resolveIndirect(ea, op === OP.jmp);
 
 		switch (op) {
 			case OP.cal:
@@ -155,12 +171,12 @@ export class Pdp7 implements Cpu {
 				this.ac = (this.ac & this.read(ea)) & WMASK;
 				return {};
 			case OP.sad:
-				if (this.ac !== this.read(ea)) this.pc = (this.pc + 1) & ADDR;
+				if (this.ac !== this.read(ea)) this.pc = incr(this.pc);
 				return {};
 			case OP.isz: {
 				const n = (this.read(ea) + 1) & WMASK;
 				this.write(ea, n);
-				if (n === 0) this.pc = (this.pc + 1) & ADDR;
+				if (n === 0) this.pc = incr(this.pc);
 				return {};
 			}
 			case OP.jmp:
@@ -171,7 +187,7 @@ export class Pdp7 implements Cpu {
 					this.halted = true;
 					throw new Error(`XCT chain exceeds ${XCT_MAX} at pc=${this.pc.toString(8)}`);
 				}
-				return this.exec(this.read(ea), xctCount + 1);
+				return this.exec(this.read(ea), ea, xctCount + 1);
 			}
 			case OP.eae:
 				this.eae(ir);
@@ -185,8 +201,8 @@ export class Pdp7 implements Cpu {
 		}
 	}
 
-	/** Indirect resolution with auto-indexing: 0o10–0o17 increment before use. */
-	private resolveIndirect(ma: number): number {
+	/** Indirect resolution with auto-indexing: 0o10–0o17 of each bank increment before use. SIMH's Ia. */
+	private resolveIndirect(ma: number, jmp: boolean): number {
 		let t: number;
 		if ((ma & ADDR & ~0o7) === 0o10) {
 			t = (this.read(ma) + 1) & WMASK;
@@ -194,17 +210,21 @@ export class Pdp7 implements Cpu {
 		} else {
 			t = this.read(ma);
 		}
-		return t & ADDR;
+		if (jmp) {
+			if (this.emirPending && (t & EXTEND_BIT) === 0) this.extend = false;
+			this.emirPending = false;
+		}
+		return this.extend ? t & XADDR : (ma & BANK) | (t & ADDR);
 	}
 
-	/** JMS/CAL/interrupt save word: link in the sign bit, then PC. */
+	/** JMS/CAL/interrupt save word: link in the sign bit, extend mode in bit 16, then the 15-bit PC. */
 	private jmsWord(): number {
-		return ((this.link & 1) << 17) | (this.pc & ADDR);
+		return ((this.link & 1) << 17) | (this.extend ? EXTEND_BIT : 0) | (this.pc & XADDR);
 	}
 
 	private jms(ea: number): Step {
 		this.write(ea, this.jmsWord());
-		this.pc = (ea + 1) & ADDR;
+		this.pc = incr(ea);
 		return {};
 	}
 
@@ -281,7 +301,7 @@ export class Pdp7 implements Cpu {
 
 		this.setLac(lac);
 		if (ir & 0o40) this.halted = true; // HLT
-		if (skp) this.pc = (this.pc + 1) & ADDR;
+		if (skp) this.pc = incr(this.pc);
 		return this.halted ? { halt: true } : {};
 	}
 
@@ -308,7 +328,7 @@ export class Pdp7 implements Cpu {
 				break;
 			case 1: { // multiply: operand is the next word
 				const mb = this.read(this.pc);
-				this.pc = (this.pc + 1) & ADDR;
+				this.pc = incr(this.pc);
 				if (eaeAcSign) mq = mq ^ WMASK;
 				lac = lac & WMASK;
 				let sc = esc;
@@ -327,7 +347,7 @@ export class Pdp7 implements Cpu {
 			}
 			case 3: { // divide: operand is the next word
 				const mb = this.read(this.pc);
-				this.pc = (this.pc + 1) & ADDR;
+				this.pc = incr(this.pc);
 				if (eaeAcSign) mq = mq ^ WMASK;
 				if ((lac & WMASK) >= mb) {
 					lac = (lac - mb) | LINKBIT; // overflow: set link
@@ -414,8 +434,22 @@ export class Pdp7 implements Cpu {
 				return {};
 			}
 		}
+		if (device === 0o77) {
+			// Memory extension. Present only with more than 8K, as on the real machine.
+			if (this.coreWords <= 0o20000) return {};
+			if (pulse === 0o01 && this.extend) this.pc = incr(this.pc); // SEM
+			else if (pulse === 0o02) this.extend = true; // EEM
+			else if (pulse === 0o42) this.extend = this.emirPending = true; // EMIR: on, until the next JMP I restores it
+			else if (pulse === 0o04) this.extend = false; // LEM
+			return {};
+		}
 		return { iot: { device, pulse, ac: this.ac } };
 	}
+}
+
+/** PC + 1 wraps within its 8K bank; only a jump changes banks. */
+function incr(pc: number): number {
+	return (pc & BANK) | ((pc + 1) & ADDR);
 }
 
 /** Assemble a memory-reference word. `op` is the 4-bit opcode. */

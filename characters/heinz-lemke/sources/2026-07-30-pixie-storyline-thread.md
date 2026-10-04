@@ -70,7 +70,7 @@ displayed and become light-pen sensitive. So Roy's next test is address
 switches 22 + START — the display should come alive before any pen exists.
 
 → Roy's progress file: [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
-→ Emulation plan: [`pdp7-reference/EMULATION-PLAN.md`](pdp7-reference/EMULATION-PLAN.md)
+→ Emulation plan: [`cabinet/reference/EMULATION-PLAN.md`](../../../packages/cabinet/reference/EMULATION-PLAN.md)
 
 ---
 

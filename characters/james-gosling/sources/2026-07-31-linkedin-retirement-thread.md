@@ -63,7 +63,7 @@ Alan Kay ("Keep on keepin' on!"), Ted Selker and Eric Bowman among the reactions
 - The lander.ps ask is a real invitation seed: NeWS lunar lander reborn on emulated DEC
   iron closes the loop from James's PDP-8 hotrod youth through NeWS to retirement fun.
 - The Type 340 display references are grounded in the manuals archived at
-  [`../../heinz-lemke/sources/pdp7-reference/`](../../heinz-lemke/sources/pdp7-reference/)
+  [`../../../packages/cabinet/reference/`](../../../packages/cabinet/reference/)
   for the PIXIE restoration thread (Heinz Lemke, Cambridge PDP-7).
 - David S. H. Rosenthal is advising on PDP-7 hardware and assembly — same Cambridge
   basement lineage as PIXIE.

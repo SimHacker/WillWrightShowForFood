@@ -79,7 +79,7 @@ himself. We also need a virtual **lightpen input driver** and a virtual **AM rad
 driver** for **SIMH**, so you can listen to it sing while it thinks — **Nathaniel Borenstein** has
 been asked to help with those too ([his room](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/nathaniel-borenstein)).
 The Type 340 manuals are already archived in the repo for the PIXIE restoration
-([`heinz-lemke/sources/pdp7-reference/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/pdp7-reference)).
+([`packages/cabinet/reference/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/reference)).
 The whole caper is a show segment: repo as stage, working code as the punchline.
 
 **Format:** Remote is fine. In-person if we overlap. **Zero homework — as much *homefun* as you are up to.** Warm room, not gotcha-podcast.

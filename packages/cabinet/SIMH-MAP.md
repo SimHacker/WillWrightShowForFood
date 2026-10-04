@@ -111,4 +111,4 @@ word disagrees with theirs, they are right until a DEC manual says otherwise
 — and anything we fix that they stubbed (the pen readback) goes back as a
 patch offer.
 
-↑ [DESIGN.md](DESIGN.md) · [README](README.md) · [emulation plan](../../characters/heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md)
+↑ [DESIGN.md](DESIGN.md) · [README](README.md) · [emulation plan](reference/EMULATION-PLAN.md)

@@ -3,7 +3,7 @@
 C. Stein, DEC, 29 April 1964. A PDP-4 library program, also issued for the PDP-7, that tests the
 Type 370 light pen on a Type 340 display. It starts at location 22. All error detection is visual.
 
-Source: `characters/heinz-lemke/sources/pdp7-reference/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf`
+Source: `packages/cabinet/reference/DIGITAL-7-78-M_370LightPenDiag_Apr64.pdf`
 (bitsavers). No paper tape image is known.
 
 - `lp370.s`: the diagnostic, listing pages 7–15.

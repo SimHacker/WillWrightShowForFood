@@ -7,7 +7,7 @@ reincarnation**?
 
 **Provenance.** Harvested from a design conversation Don had with an AI assistant on 26 Sep
 2026, then checked against the manuals in this directory, against Heinz's
-[1972 listing](../pixie-assembler-listing-1972/symelec-listing.txt), and against Bob Supnik,
+[1972 listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/symelec-listing.txt), and against Bob Supnik,
 [*Architectural Evolution in DEC's 18b Computers*](https://archive.computerhistory.org/resources/text/DEC/pdp-1/dec.pdp-1_15.supnik.rchitectural_evolution_in_dec%27s_18b_computers.2003.102630392.pdf)
 (2003; Supnik built SIMH's 18-bit family). The code below is a
 **sketch, not tested PDP-7 assembly**. Items still to check are listed at the end.
@@ -24,8 +24,8 @@ The course can run both ways: students build it in Forth, then read how Heinz di
 | User-defined words that read like instructions | `ENTER = JMS .`, `PUSH = JMS .`, `NAME=JMS,` — the Cambridge assembler turns subroutines into opcodes (`CAR`, `CDR`, `FLST`, `STAK`, `ENTER` …). A dictionary, in an assembler |
 | Two vocabularies, CPU and display, with explicit switches | `DISP` / `NODISP` in the Cambridge assembler: `JMP` is a CPU word, `VEC` a display word, and the listing switches between them |
 | Compile an editable structure into a native display file | `COMP` walks subpicture instances and plants `DJS` words in the display file, recursively (`LAW COMP` / `ENTER /RECURSE`, listing p.91) |
-| Tag displayed objects so a pen hit finds its owner | Each lightbutton is a `DDS` block; the 347's return linkage at location 3 says which block was drawing when the pen fired ([DESIGN.md](../../../../packages/cabinet/DESIGN.md)) |
-| Widgets: buttons, menus, dragging | Lightbuttons, the radial ring that rides with the tracking cross, rubber-band lines, blink selection ([TRACKING.md](../../../../packages/cabinet/TRACKING.md)) |
+| Tag displayed objects so a pen hit finds its owner | Each lightbutton is a `DDS` block; the 347's return linkage at location 3 says which block was drawing when the pen fired ([DESIGN.md](../DESIGN.md)) |
+| Widgets: buttons, menus, dragging | Lightbuttons, the radial ring that rides with the tracking cross, rubber-band lines, blink selection ([TRACKING.md](../TRACKING.md)) |
 | Double-buffered display lists | `TEMPDF` for what's being drawn, `PERMDF` for the finished picture, joined by `DJP` |
 | Memory management for the structures | A garbage collector, recursive, with its own branch stack (`GBRNCH`…`GBRTN`, p.30) |
 
@@ -190,7 +190,7 @@ The 340 already draws vectors, so Forth only computes their X and Y components a
 assembles a display file. Facts from the [H-340 manual](H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf):
 a 1024×1024 grid; a vector word carries signed dx and dy up to 127 each, plus intensify
 and escape bits; scale ×1/2/4/8; intensity 0–7. (Heinz specified exactly this in March
-1967: *"a vector length of 127 dots seemed to be sufficient"*, [system analysis](../1967-03-10-system-analysis/TRANSCRIPT.md).)
+1967: *"a vector length of 127 dots seemed to be sufficient"*, [system analysis](../../../characters/heinz-lemke/sources/1967-03-10-system-analysis/TRANSCRIPT.md).)
 
 ```
 512 512 SETXY  0 SETHEADING  PENDOWN
@@ -248,16 +248,16 @@ display-file address range  ->  object id  ->  handler
 - Display-file length is the budget. More words, more flicker.
 
 First milestone: three tagged buttons in native 340 words; hit one with the pen; its Forth
-handler changes the display file. The [cabinet](../../../../packages/cabinet/README.md)
+handler changes the display file. The [cabinet](../README.md)
 already records every stroke with the display-file address, subroutine and block that
-drew it, and [`symelec-hints.js`](../../../../apps/ties/src/lib/symelec-hints.js) maps
+drew it, and [`symelec-hints.js`](../../../apps/ties/src/lib/symelec-hints.js) maps
 SYMELEC's own addresses to what the buttons mean. That's the tag table, built from the
 outside.
 
 ## 7. The wheel of reincarnation, as a design exercise
 
 T. H. Myer and I. E. Sutherland, *On the Design of Display Processors* (CACM, June 1968) —
-reading notes: [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
+reading notes: [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md).
 They place the **DEC 340–347** at the wheel's half-turn: the display address is a program
 counter, the X/Y registers an accumulator, and the display file has jumps and subroutine
 calls. Their exit from the wheel: give the display enough to *execute* picture structures,
@@ -271,7 +271,7 @@ A PDP-7 Forth makes the boundary something students can move and measure:
 | PDP-7 Forth | Turtle geometry, transforms, widget state, hit interpretation, compiling display files |
 | 340 + 347 | Execute display files; report pen hits |
 | A smarter display (hypothetical) | Stacks, conditionals, local interaction: once more around the wheel |
-| Titan, across the link | For PIXIE: analysis and file store. The bandwidth case, for real ([thesis §3.3](../phd-thesis-1972/annotated/02-chapters-3-4.md)) |
+| Titan, across the link | For PIXIE: analysis and file store. The bandwidth case, for real ([thesis §3.3](../../../characters/heinz-lemke/sources/phd-thesis-1972/annotated/02-chapters-3-4.md)) |
 
 **NeWS** is a later lap with a different boundary: the client downloads PostScript into the
 window server, which runs drawing *and* local interaction and sends back only meaningful
@@ -307,8 +307,8 @@ which is this course.
 1. **Read `ENTER`/`EXIT`** (above). What breaks if an interrupt handler calls `ENTER`?
    Does any interrupt path in SYMELEC call it?
 2. **Write `NEXT`, `DOCOL`, `EXIT`** in the DEC dialect of the cabinet's
-   [assembler](../../../../packages/cabinet/src/asm.ts), boot them as a tape like
-   [HILO](../../../../packages/cabinet/tapes/hilo/hilo.s), and count cycles per word. Which
+   [assembler](../src/asm.ts), boot them as a tape like
+   [HILO](../tapes/hilo/hilo.s), and count cycles per word. Which
    of push and pop should pay for the arithmetic?
 3. **Top of stack in AC:** redesign `NEXT` so the AC survives. What does it cost?
 4. **90° turtle:** draw a square as a display file and start it with `IDLA`.
@@ -360,13 +360,13 @@ address → ring name so a pen hit returns the element (the tag table of §6); a
 PIXIE's own element format, so a Forth drawing saved to tiny-titan loads into SYMELEC and
 is edited with the pen, and Forth-drawn symbols become subpictures PIXIE places. The plan
 and what is measured so far: the cabinet's
-[DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module),
+[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module),
 "a Forth turtle with two back ends".
 
 **The turtle's display list is ring data.** Store each polyline as an RSP block (raw
 coordinates the relocation pass leaves alone) named from a picture list, and let `DOWN`
 compile it. The TypeScript twin of this plan is in the cabinet's
-[DESIGN.md](../../../../packages/cabinet/DESIGN.md#the-application-layer--packagespixie-separate-module),
+[DESIGN.md](../DESIGN.md#the-application-layer--packagespixie-separate-module),
 sharing `graftal.ts`'s display-word emitter; both should produce the same words.
 
 **Acceptance.** `TITAN-SEND` / `TITAN-RECEIVE` words speak to tiny-titan. A Forth-built
@@ -392,6 +392,6 @@ cabinet. 10. Make a Forth-built turtle picture survive `relocate` and draw ident
 - All sketch code above: assemble it and run it before anyone trusts it.
 
 ↑ [reference library](README.md) · [turist guide](GUIDE.md) · [emulation plan](EMULATION-PLAN.md) ·
-[PIXIE listing](../pixie-assembler-listing-1972/README.md) · [cabinet](../../../../packages/cabinet/README.md) ·
-[Roy Eagleson](../../../roy-eagleson/README.md) · [Lars Brinkhoff](../../../lars-brinkhoff/README.md) ·
-[Seymour Papert](../../../seymour-papert/README.md) · [Charles Moore](../../../charles-moore/README.md)
+[PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md) · [cabinet](../README.md) ·
+[Roy Eagleson](../../../characters/roy-eagleson/README.md) · [Lars Brinkhoff](../../../characters/lars-brinkhoff/README.md) ·
+[Seymour Papert](../../../characters/seymour-papert/README.md) · [Charles Moore](../../../characters/charles-moore/README.md)

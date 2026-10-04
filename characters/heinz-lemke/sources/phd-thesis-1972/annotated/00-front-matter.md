@@ -29,7 +29,7 @@ of Doctor of Philosophy in the University of Cambridge, March, 1972.*
 > (renamed the Computer Laboratory, also within the year) under
 > [Maurice Wilkes](https://en.wikipedia.org/wiki/Maurice_Wilkes), on the
 > [PDP-7](https://en.wikipedia.org/wiki/PDP-7) + Type 340 + [Titan](https://en.wikipedia.org/wiki/Titan_(1963_computer))
-> stack documented in this repo's [turist guide](../../pdp7-reference/GUIDE.md). The program
+> stack documented in this repo's [turist guide](../../../../../packages/cabinet/reference/GUIDE.md). The program
 > this thesis describes was recovered in 2026 as a
 > [128-page assembler listing](../../pixie-assembler-listing-1972/README.md).
 
@@ -100,7 +100,7 @@ garbage collector.
 > **John Hiles** (RSP — the ring engine filling
 > [RSPPIX](../../pixie-assembler-listing-1972/README.md));
 > **M. Etherton** — *the link routine*, i.e. the
-> [blocklet protocol decoded in this repo](../../pdp7-reference/TITAN-LINK-PROTOCOL.md),
+> [blocklet protocol decoded in this repo](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md),
 > now has an author's name;
 > **C. Cheney** — "a new garbage collector" is
 > [**Cheney's algorithm**](https://en.wikipedia.org/wiki/Cheney%27s_algorithm), published
@@ -160,7 +160,7 @@ out in collaboration with anyone else.* [signed] Heinz U. Lemke
 > with "187–208" added by hand — Heinz marking the trail for us in 2026. Chapter 5 is the
 > [assembler listing](../../pixie-assembler-listing-1972/README.md) in prose; chapters 7–8
 > are the Titan-side applications whose verbs the
-> [link protocol](../../pdp7-reference/TITAN-LINK-PROTOCOL.md) deliberately doesn't carry.
+> [link protocol](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md) deliberately doesn't carry.
 
 ---
 

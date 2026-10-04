@@ -20,7 +20,7 @@ New to this room? Three doors, pick by appetite:
    Heinz's own origin memoir — the Plessey "spy" accusation, the handwritten design doc, the
    Wilkes talk, the PhD offer.
 2. **The machine** — [PIXIE hardware](pixie-hardware.md) (model numbers, memory, clock, link)
-   and [the turist guide](sources/pdp7-reference/GUIDE.md): PDP-7, Type 340 display, Titan
+   and [the turist guide](../../packages/cabinet/reference/GUIDE.md): PDP-7, Type 340 display, Titan
    mainframe, light pen, and why a display can *add instructions* to a computer.
 3. **The code** — [the recovered PIXIE assembler listing](sources/pixie-assembler-listing-1972/README.md):
    ~5,000 words of commented 1972 PDP-7 assembly, OCR'd back to runnable text.
@@ -60,20 +60,20 @@ The documents in this room tell one continuous story:
   [cabinet](../../packages/cabinet/README.md), with the pointer as the light pen and
   [tiny-titan](../../packages/cabinet/TINY-TITAN.md) on the far end of the link; SIMH is the
   design spec it is checked against. Plan and milestones: the
-  [emulation plan](sources/pdp7-reference/EMULATION-PLAN.md) and the reimplemented
-  [PDP-7 ↔ Titan link](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md). Target:
+  [emulation plan](../../packages/cabinet/reference/EMULATION-PLAN.md) and the reimplemented
+  [PDP-7 ↔ Titan link](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md). Target:
   **CARS 2027 Berlin, 29 June** — see [pixie-source-recovery.md](pixie-source-recovery.md).
 
 ## For students, hackers, and turists 🎓
 
 Everything needed to run 1969 yourself, in reading order (spelled *turist* per
-[MIT AI Lab tradition](sources/pdp7-reference/GUIDE.md) — guests welcome to log in and explore):
+[MIT AI Lab tradition](../../packages/cabinet/reference/GUIDE.md) — guests welcome to log in and explore):
 
-1. [**GUIDE.md — the turist guide**](sources/pdp7-reference/GUIDE.md). Orientation: PDP-7
+1. [**GUIDE.md — the turist guide**](../../packages/cabinet/reference/GUIDE.md). Orientation: PDP-7
    architecture, how IOT instructions let devices extend the instruction set electrically, the
    Type 340 as a second computer on the same memory, Titan's extracodes, and the ITS lore behind
    "turist."
-2. [**The reference library**](sources/pdp7-reference/README.md). Mirrored bitsavers manuals with
+2. [**The reference library**](../../packages/cabinet/reference/README.md). Mirrored bitsavers manuals with
    public URLs: PDP-7 User Handbook, assembler and DDT manuals, interface manual, the
    **H-340 Type 340 display manual**, light-pen diagnostics, and the Type 30 manual for
    PDP-1-vs-PDP-7 display lineage.
@@ -84,10 +84,10 @@ Everything needed to run 1969 yourself, in reading order (spelled *turist* per
    (`symelec-listing.txt`, `rsppix-listing.txt`), clean `rsppix.asm`, octal `rsppix.oct` — plus
    the [transcription spec](sources/pixie-assembler-listing-1972/scripts/TRANSCRIPTION-SPEC.md)
    if you want to audit or extend the recovery.
-5. [**The emulation plan**](sources/pdp7-reference/EMULATION-PLAN.md),
-   [**Planning Document 10**](sources/pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
+5. [**The emulation plan**](../../packages/cabinet/reference/EMULATION-PLAN.md),
+   [**Planning Document 10**](../../packages/cabinet/reference/cambridge-supervisor/pd10-titan-pdp7-link.md)
    (C.A. Lang, 1965 — Titan/PDP-7 link *system* software; [CUCPS](https://cucps.soc.srcf.net/titan/supplan/pd10.htm)),
-   and [**the PIXIE link protocol decode**](sources/pdp7-reference/TITAN-LINK-PROTOCOL.md).
+   and [**the PIXIE link protocol decode**](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md).
    Mission briefs: assemble PIXIE (local clones of `simh` and `pdp7-unix` with its `as7`
    cross-assembler live in `~/GroundUp/git/`), light up the 340, build the virtual light pen,
    stub Titan to PD10's four facilities, then speak PIXIE blocklets on top.
@@ -96,11 +96,11 @@ Everything needed to run 1969 yourself, in reading order (spelled *turist* per
    [Chapter 5](sources/phd-thesis-1972/annotated/03-chapter-5-pixie.md) (the PIXIE subsystem) and
    [Chapters 3–4](sources/phd-thesis-1972/annotated/02-chapters-3-4.md) (satellite-graphics
    doctrine and the RAINBOW ecology).
-7. [**Forth, turtles and light pens**](sources/pdp7-reference/FORTH-TURTLE-340.md), a course
+7. [**Forth, turtles and light pens**](../../packages/cabinet/reference/FORTH-TURTLE-340.md), a course
    sketch: build a Forth, a turtle library for the 340, and light-pen widgets, then read how
    SYMELEC did the same things in 1972 (`ENTER`/`EXIT` link stack, `DISP`/`NODISP`, `COMP`), and
    work the wheel of reincarnation as a design exercise.
-8. [**Mitch Bradley's PDP-7 Forth**](sources/pdp7-reference/PDP7-FORTH.md), written the day
+8. [**Mitch Bradley's PDP-7 Forth**](../../packages/cabinet/reference/PDP7-FORTH.md), written the day
    after Don asked for one: 8K words, Logo turtle graphics on the 340, runs under SIMH.
 
 **The classroom connection:** [**Roy Eagleson**](../roy-eagleson/README.md) (Western University)

@@ -32,7 +32,7 @@ Roy converted Don's extracted **`.oct`** listings to **`.rim`**, loaded PIXIE in
 light-pen interrupts (X11 locally; web mouse for shareable).
 
 → [`sources/2026-07-28-simh-oct-to-rim-loaded.md`](sources/2026-07-28-simh-oct-to-rim-loaded.md) ·
-[`../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md`](../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md)
+[`../../packages/cabinet/reference/EMULATION-PLAN.md`](../../packages/cabinet/reference/EMULATION-PLAN.md)
 
 ## Background (as Roy tells it)
 
@@ -94,14 +94,14 @@ Heinz (15 Jul): **125 pages** to digitize; points students to thesis Appendix 4 
 
 **Update (24–25 Jul):** the digitization landed and the **student kit** now exists — the full stack is
 indexed in [Heinz's README, "For students, hackers, and turists"](../heinz-lemke/README.md):
-the [turist guide](../heinz-lemke/sources/pdp7-reference/GUIDE.md) (PDP-7 / Type 340 / Titan
-architecture), the [mirrored manual library](../heinz-lemke/sources/pdp7-reference/README.md),
+the [turist guide](../../packages/cabinet/reference/GUIDE.md) (PDP-7 / Type 340 / Titan
+architecture), the [mirrored manual library](../../packages/cabinet/reference/README.md),
 the [recovered assembler source](../heinz-lemke/sources/pixie-assembler-listing-1972/README.md)
 (clean `.asm` + octal), the
 [PIXIE User Manual](../heinz-lemke/sources/phd-thesis-1972/annotated/07-appendix-4-pixie-user-manual.md)
 from the [fully annotated thesis](../heinz-lemke/sources/phd-thesis-1972/annotated/README.md),
-and the [emulation plan](../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md) with the
-[Titan link protocol decode](../heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md).
+and the [emulation plan](../../packages/cabinet/reference/EMULATION-PLAN.md) with the
+[Titan link protocol decode](../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md).
 
 Don (25 Jul): *"The idea is to provide the students with everything they need to get started."*
 
@@ -132,7 +132,7 @@ PDP-10 love; *The Americans* ARPANET scene going up unlisted for fair-use commen
 | **Kelly Booth** (his HCI mentor) | [`../kelly-booth/`](../kelly-booth/) |
 | **14 Jul — UWO PIXIE project** | [`sources/2026-07-14-uwo-pixie-reimplementation.md`](sources/2026-07-14-uwo-pixie-reimplementation.md) |
 | **Student kit** (guide, manuals, source, emulation plan) | [`../heinz-lemke/README.md`](../heinz-lemke/README.md) § For students, hackers, and turists |
-| **Course sketch** (PDP-7 Forth, 340 turtle, light-pen widgets, the wheel) | [`../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md`](../heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md) |
+| **Course sketch** (PDP-7 Forth, 340 turtle, light-pen widgets, the wheel) | [`../../packages/cabinet/reference/FORTH-TURTLE-340.md`](../../packages/cabinet/reference/FORTH-TURTLE-340.md) |
 | **16 Jul thread** (125 pages, CARS 2027, Armit archive) | [`../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-16-pixie-storyline-thread.md) |
 | **9 July storyline thread** | [`../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md`](../heinz-lemke/sources/2026-07-09-pixie-storyline-thread.md) |
 | **Photo — Heinz at PDP-7** (Roy: *"Aha. It's you!"*) | [`../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png`](../heinz-lemke/media/from-mail/roy-eagleson-identified-heinz-pdp7-light-pen.png) |

@@ -12,7 +12,7 @@ import { Teletype } from "../dist/plugins/teletype.js";
 import { Type340 } from "../dist/plugins/type340.js";
 
 const dir = fileURLToPath(
-	new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/", import.meta.url),
+	new URL("../tapes/symelec/", import.meta.url),
 );
 const cpu = new Pdp7({ coreWords: 8192 });
 loadOct(cpu, readFileSync(`${dir}symelec.oct`, "utf8"));

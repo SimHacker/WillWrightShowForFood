@@ -655,7 +655,7 @@ ideas:
       PDP-7 instruction, and its opcode is the word's type. Maybe a new kind of threading.
       Write it up with Mitch, check the literature with Anton Ertl, and name it: XCT threading
       for the paper, "indirectly direct threading" for the T-shirt.
-    ties: [../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md]
+    ties: [../packages/cabinet/reference/PDP7-FORTH.md]
 
   pdp7-lisp:
     emoji: "🥤"
@@ -664,7 +664,7 @@ ideas:
       Deutsch's 1964 PDP-1 Lisp does survive, but the PDP-1 and PDP-7 aren't compatible. Port
       it, or grow one on Mitch's Forth, with RSP's ring-structure cells (CAR, CDR, NIL as the
       JMS opcode) as the heap Heinz already built.
-    ties: [../characters/heinz-lemke/sources/pdp7-reference/GUIDE.md]
+    ties: [../packages/cabinet/reference/GUIDE.md]
 
   cheney-on-the-pdp7:
     emoji: "🚇"
@@ -709,7 +709,7 @@ ideas:
       elements, edits land at a safe point, and PIXIE's tube updates when its DOWN compiler
       (COMP) reruns, triggered by the host driving PIXIE's own inputs as the demo scripts
       do. Which input reruns COMP is to find.
-    ties: [https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e, ../packages/cabinet/src/symelec-demo.ts, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
+    ties: [https://medium.com/@donhopkins/the-shape-of-psiber-space-october-1989-19e2dfa4d91e, ../packages/cabinet/src/symelec-demo.ts, ../packages/cabinet/reference/FORTH-TURTLE-340.md]
 
   vm-messages:
     emoji: "📨"
@@ -724,7 +724,7 @@ ideas:
       whether a received structure goes through COMP. Between our own VMs, a mailbox device
       with new IOTs, polled like LSF in WAITLK; a message is a name (one pointer into the
       shared window), never a copy. Under Web Workers, Atomics.wait/notify or postMessage.
-    ties: [../characters/heinz-lemke/sources/pdp7-reference/TITAN-LINK-PROTOCOL.md, ../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/plugins/tiny-titan.ts]
+    ties: [../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md, ../packages/cabinet/TINY-TITAN.md, ../packages/cabinet/src/plugins/tiny-titan.ts]
 
   tiny-its:
     emoji: "🏫"
@@ -829,7 +829,7 @@ ideas:
       ring cells as the heap and Cheney's collector; RSP as Lisp words, rings still loadable
       by 1972 SYMELEC over tiny-titan; Logo on top, compiling 340 display words into rings
       the pen can pick up. 8K words is tight; give the cabinet 16K.
-    ties: [../packages/cabinet/README.md, ../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md, ../characters/heinz-lemke/sources/pdp7-reference/FORTH-TURTLE-340.md]
+    ties: [../packages/cabinet/README.md, ../packages/cabinet/reference/PDP7-FORTH.md, ../packages/cabinet/reference/FORTH-TURTLE-340.md]
 
 graduation:
   note: "Ideas leave the jam by becoming something runnable."

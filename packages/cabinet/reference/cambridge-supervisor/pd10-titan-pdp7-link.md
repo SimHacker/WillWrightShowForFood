@@ -214,7 +214,7 @@ C.A.L.
 > ✎ Section 5 is the architectural blessing for Heinz's two chairs. PD10 preferred two
 > TTYs in December 1965; thesis Figs 8.6/8.7 (PDP-7 TTY session ending `TIT`; Titan TTY
 > `SET RAINBOW` / `LADAN`) are what that recommendation looked like in nightly practice.
-> The [diegetic film-loop TTY](../../2026-07-24-tty-film-loop-titles.md) can wear either
+> The [diegetic film-loop TTY](../../../../characters/heinz-lemke/sources/2026-07-24-tty-film-loop-titles.md) can wear either
 > paper stream — or both, cut between chairs.
 
 ---

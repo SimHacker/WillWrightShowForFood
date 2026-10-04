@@ -17,7 +17,7 @@ David Hartley.
 | **Readable edition** | [`pd10-titan-pdp7-link.md`](pd10-titan-pdp7-link.md) |
 
 **Found by:** Ric Werme in the
-[Internet Old Farts Facebook thread](../../2026-07-24-facebook-guessing-game.md), from the
+[Internet Old Farts Facebook thread](../../../../characters/heinz-lemke/sources/2026-07-24-facebook-guessing-game.md), from the
 listing page captioned "PDP7-TITAN" — crowd archaeology delivering the supervisor doc
 students need to resurrect the wire.
 
@@ -36,7 +36,7 @@ students need to resurrect the wire.
    is a fast teletype on the Multiplexer.
 4. **Time-sharing on a teletype at the PDP-7** — strongly recommends a **second
    teletype** wired to the Multiplexer rather than multiplexing one TTY between PDP-7
-   and Titan. Exactly the [two-teletypes workflow](../../../ideas.md) Heinz's thesis
+   and Titan. Exactly the [two-teletypes workflow](../../../../characters/heinz-lemke/ideas.md) Heinz's thesis
    Figs 8.6/8.7 show in practice.
 
 ### How it maps onto what PIXIE actually shipped
@@ -50,4 +50,4 @@ blocklets on top.
 Index of all supervisor planning docs:
 <https://cucps.soc.srcf.net/titan/supplan/>
 
-↑ [pdp7-reference](../README.md) · [turist guide](../GUIDE.md) · [character README](../../../README.md)
+↑ [cabinet reference](../README.md) · [turist guide](../GUIDE.md) · [character README](../../../../characters/heinz-lemke/README.md)

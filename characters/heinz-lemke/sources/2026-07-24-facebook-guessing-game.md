@@ -189,8 +189,8 @@ one of the PIXIE paper authors; he kept the listings, notes, and PhD
 thesis; great handwriting; runs **CARS** ([cars-int.org](https://cars-int.org/about-cars/));
 just back from their conference in Japan; digitizing old code and notes.
 Links posted to the annotated thesis, the recovered listing, the
-[emulation plan](pdp7-reference/EMULATION-PLAN.md), and the
-[Titan link protocol](pdp7-reference/TITAN-LINK-PROTOCOL.md).
+[emulation plan](../../../packages/cabinet/reference/EMULATION-PLAN.md), and the
+[Titan link protocol](../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md).
 
 ![Heinz handwriting + CARS in the thread](facebook-guessing-game-2026-07/18-heinz-handwriting-cars-notes.png)
 
@@ -236,16 +236,16 @@ Links posted to the annotated thesis, the recovered listing, the
   18-bit PDP-1." Don: original Spacewar! ran on the **Type 30 Precision
   CRT**; PIXIE drives the **Type 340 Precision Incremental** (also offered
   for the PDP-1). Manual mirrored in-repo:
-  [`pdp7-reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf`](pdp7-reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf)
+  [`cabinet/reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf`](../../../packages/cabinet/reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf)
   (Bitsavers original:
   <https://bitsavers.org/pdf/dec/graphics/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf>).
-  Full comparison: [`pdp7-reference/`](pdp7-reference/README.md).
+  Full comparison: [`cabinet/reference/`](../../../packages/cabinet/reference/README.md).
 - **The recruiting hook** — Don: "SIMH implements both displays! But it
   needs a virtual Lightpen driver to run this code. Anybody want to help
-  write one?" Starter kit: [reference library](pdp7-reference/README.md),
+  write one?" Starter kit: [reference library](../../../packages/cabinet/reference/README.md),
   [recovered source](pixie-assembler-listing-1972/README.md), Type 370
   light pen diagnostic as acceptance test,
-  [EMULATION-PLAN.md](pdp7-reference/EMULATION-PLAN.md).
+  [EMULATION-PLAN.md](../../../packages/cabinet/reference/EMULATION-PLAN.md).
 - **Prior art** — under the May 1969 Ring Structure Processor page: "I hope
   this invalidates the fuck out of some software patents!" A 1969 dynamic
   ring-structure store with garbage collection driving interactive
@@ -269,9 +269,9 @@ called 'Pixie'." Then **Ric Werme** did the librarian move: *"I see
 Facebook's own link preview returned **403 Forbidden**; the document is
 live in a browser and now **mirrored in-repo**:
 
-→ [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md)
-([readable MD](pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.md) ·
-[HTML mirror](pdp7-reference/cambridge-supervisor/pd10-titan-pdp7-link.htm))
+→ [`cabinet/reference/cambridge-supervisor/`](../../../packages/cabinet/reference/cambridge-supervisor/README.md)
+([readable MD](../../../packages/cabinet/reference/cambridge-supervisor/pd10-titan-pdp7-link.md) ·
+[HTML mirror](../../../packages/cabinet/reference/cambridge-supervisor/pd10-titan-pdp7-link.htm))
 
 ![Ric Werme finds PD10](facebook-guessing-game-2026-07/13-ric-werme-finds-pd10.png)
 
@@ -284,7 +284,7 @@ the PDP-7), 18→48-bit packing extracodes, Titan disk via a peer program,
 and the explicit recommendation of a **second teletype** at the PDP-7 —
 the architectural blessing for Heinz's two-chair nightly workflow. How it
 maps onto `/LTPIX`:
-[`TITAN-LINK-PROTOCOL.md`](pdp7-reference/TITAN-LINK-PROTOCOL.md).
+[`TITAN-LINK-PROTOCOL.md`](../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md).
 
 ## Curated quotes (Heinz-friendly highlights)
 
@@ -319,15 +319,15 @@ maps onto `/LTPIX`:
   [`phd-thesis-1972/annotated/`](phd-thesis-1972/annotated/README.md)
 - Recovered assembler listing:
   [`pixie-assembler-listing-1972/`](pixie-assembler-listing-1972/README.md)
-- Emulation plan: [`pdp7-reference/EMULATION-PLAN.md`](pdp7-reference/EMULATION-PLAN.md)
+- Emulation plan: [`cabinet/reference/EMULATION-PLAN.md`](../../../packages/cabinet/reference/EMULATION-PLAN.md)
 - Titan↔PDP-7 link protocol:
-  [`pdp7-reference/TITAN-LINK-PROTOCOL.md`](pdp7-reference/TITAN-LINK-PROTOCOL.md)
+  [`cabinet/reference/TITAN-LINK-PROTOCOL.md`](../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md)
 - Reveal video: *Flight of the PIXIE* —
   <https://www.youtube.com/watch?v=jDrqR9XssJI>
   ([production story](../cambridge-films-flight-of-the-bumblebee.md))
 - CARS: <https://cars-int.org/about-cars/>
 - Type 340 manual (local):
-  [`pdp7-reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf`](pdp7-reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf)
+  [`cabinet/reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf`](../../../packages/cabinet/reference/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf)
 - Supnik 18-bit architecture paper:
   <https://simh.trailing-edge.com/docs/architecture18b.pdf>
 
@@ -349,7 +349,7 @@ maps onto `/LTPIX`:
   [`TRANSCRIPTION-REPORT.md`](pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md)
 - CUCPS PD10 (public): <https://cucps.soc.srcf.net/titan/supplan/pd10.htm>
 - Local PD10 kit:
-  [`pdp7-reference/cambridge-supervisor/`](pdp7-reference/cambridge-supervisor/README.md)
+  [`cabinet/reference/cambridge-supervisor/`](../../../packages/cabinet/reference/cambridge-supervisor/README.md)
 
 ↑ [Thread index](THREAD-INDEX.md) · [character README](../README.md) ·
 [show seed](../../../repo-shows/pixie-pie-menus-pdp7/README.md)

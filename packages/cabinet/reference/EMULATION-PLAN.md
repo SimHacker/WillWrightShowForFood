@@ -1,15 +1,15 @@
 # PIXIE resurrection — emulation plan
 
-How to get the [recovered 1972 listing](../pixie-assembler-listing-1972/README.md) running,
+How to get the [recovered 1972 listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md) running,
 light pen and all, with a Titan across the link. Companion to the [turist guide](GUIDE.md)
 and the [reference library](README.md). Target: **CARS 2027 Berlin, 29 June 2027**.
 
 **Status, 27 Sep 2026: the plan changed shape.** We do not run SIMH in the browser, and
 we are not porting it. The browser bench is our own emulator,
-[`packages/cabinet`](../../../../packages/cabinet/README.md): PDP-7, Type 340, Type 370
+[`packages/cabinet`](../README.md): PDP-7, Type 340, Type 370
 light pen, teletype, clock and the Titan link, reimplemented in TypeScript from the 1972
 listing, with SIMH's source as the design spec and the oracle it is checked against
-([SIMH-MAP.md](../../../../packages/cabinet/SIMH-MAP.md): what we lift, what we make fresh,
+([SIMH-MAP.md](../SIMH-MAP.md): what we lift, what we make fresh,
 what we shed). SYMELEC boots, draws, tracks the pen and phones Titan in the page:
 [PIXIE live](https://hyperties.org/databases/pixie/pixie-live/). Bench A below stays
 useful natively (Roy's `.rim` loader, differential traces), but the SIMH-side work it
@@ -26,7 +26,7 @@ Before (or beside) the full PIXIE↔Titan stack, Andrew's **Multipatch** is the 
 - Thesis already has a **command sequence + miniature screenshots** acceptance test
 - **Multiobject** (rest of the PhD years) *does* talk to Titan — closer to PIXIE's shape, harder
 
-Digest: [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md)
+Digest: [`../../andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md`](../../../characters/andrew-armit/sources/2026-07-29-multipatch-vs-multiobject.md)
 
 Lars (same day): custom SIMH device ≈ new `pdp18b_foo.c` + hooks in `pdp18b_defs.h` /
 `pdp18b_sys.c`. Type 340 **character generator already supported**; display-list **subroutines
@@ -85,7 +85,7 @@ The reference implementation, validated against DEC's own diagnostics.
 
 Zero-install, clickable by anyone — the demo and teaching machine.
 
-- **TypeScript PDP-7 core** — [`packages/cabinet`](../../../../packages/cabinet/README.md).
+- **TypeScript PDP-7 core** — [`packages/cabinet`](../README.md).
   Instruction set in a cabinet; the 340 emits segments; the pen hit-tests them.
   SIMH stays the oracle, not the browser.
 - **340 as a canvas renderer**: consume `Type340.segments`. P7 phosphor later.
@@ -151,7 +151,7 @@ SIMH display machines); if bandwidth ever matters, add a higher-level tap in `ty
 that streams display words instead — the browser already knows how to execute those.
 
 **The console gets a film-loop skin.** SIMH's teletype device is a character stream with
-CR/LF in it — and the [1969 Cambridge film's closing TTY shot](../2026-07-24-tty-film-loop-titles.md)
+CR/LF in it — and the [1969 Cambridge film's closing TTY shot](../../../characters/heinz-lemke/sources/2026-07-24-tty-film-loop-titles.md)
 has washed-out paper and a loopable carriage-return segment. So the SvelteKit app renders
 the PDP-7's console *onto the film footage*: characters composite onto the paper as the
 head clacks, CR triggers the filmed carriage return, the page scrolls on LF. A **diegetic
@@ -162,7 +162,7 @@ for the PIXIE bench console, PDP-7 UNIX logins, and show titles/credits alike.
 
 For the Titan service: **TitanIC** (Titan + integrated circuit; unsinkable; failure modes
 come pre-named) · **Titanopolis** · ~~SimTitan~~ (avoiding the Sim brand).
-**Picked: tiny-titan** ([TINY-TITAN.md](../../../../packages/cabinet/TINY-TITAN.md)), a
+**Picked: tiny-titan** ([TINY-TITAN.md](../TINY-TITAN.md)), a
 cabinet device plus a protocol host, not a service.
 
 ## Ordering — do the link IOTs come first?
@@ -195,7 +195,7 @@ the slight defocus bigger deflection angles caused at the tube edge.)
 2. Loader: `rsppix.oct` → SIMH deposit / `.rim`. **Partial (28 Jul 2026 — Roy Eagleson):**
    `.oct`→`.rim` converter; code **loads** and **steps** instruction-by-instruction;
    **`GO` stops with no display** — likely waiting on light-pen interrupts.
-   → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
+   → [`../../roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md`](../../../characters/roy-eagleson/sources/2026-07-28-simh-oct-to-rim-loaded.md)
    *Cabinet: met* — `symelec.oct` plus the literal pool the `.oct` was missing
    (`scripts/extract-literals.mjs`); boot is rung 1.
 3. Light pen driver in `pdp18b_dpy.c` + mouse; pass the 370 diagnostic.
@@ -203,7 +203,7 @@ the slight defocus bigger deflection angles caused at the tube edge.)
    *Cabinet: met without SIMH* — `LightPen` hit-tests freshly drawn segments, and DEC's 370
    diagnostic runs against it (`src/lp370.test.ts`, page 6 reconstructed).
 4. PIXIE tracking cross follows the mouse. (The 1969 film shows what right looks like.)
-   *Cabinet: met* — [TRACKING.md](../../../../packages/cabinet/TRACKING.md).
+   *Cabinet: met* — [TRACKING.md](../TRACKING.md).
 5. Network display backend (`ws.h` implementation) + browser canvas/WebGPU phosphor;
    pen driven from the browser pointer.
    *Cabinet: canvas and pointer-as-pen met, no network backend needed; WebGPU phosphor open.*
@@ -224,8 +224,8 @@ the slight defocus bigger deflection angles caused at the tube edge.)
   separate standalone program, not a co-resident module. SYMELEC is self-contained at
   0o21–0o11741 (5089 words, fits 8K); load `symelec.oct` alone, start at 0o22.
   Full device/IOT contract extracted from the octal:
-  [`packages/cabinet/DESIGN.md`](../../../../packages/cabinet/DESIGN.md).
+  [`packages/cabinet/DESIGN.md`](../DESIGN.md).
 - Character generator: PIXIE text uses the Type 342 — check SIMH's 340 implements the
   character mode PIXIE expects (`type340.c` has character support; verify stroke tables).
 
-↑ [turist guide](GUIDE.md) · [reference library](README.md) · [PIXIE listing](../pixie-assembler-listing-1972/README.md) · [source recovery](../../pixie-source-recovery.md)
+↑ [turist guide](GUIDE.md) · [reference library](README.md) · [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md) · [source recovery](../../../characters/heinz-lemke/pixie-source-recovery.md)

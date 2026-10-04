@@ -26,7 +26,7 @@ Side note while converting: suspected bugs in **Cygwin `int32_t`** handling when
 ## Status vs EMULATION-PLAN
 
 Advances milestone **"Loader: rsppix.oct → SIMH"** on
-[`../../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md`](../../heinz-lemke/sources/pdp7-reference/EMULATION-PLAN.md):
+[`../../../packages/cabinet/reference/EMULATION-PLAN.md`](../../../packages/cabinet/reference/EMULATION-PLAN.md):
 binary loads and steps; display/light-pen still blocking `GO`.
 
 Prior seed: [`2026-07-14-uwo-pixie-reimplementation.md`](2026-07-14-uwo-pixie-reimplementation.md)

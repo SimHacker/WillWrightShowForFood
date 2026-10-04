@@ -5,12 +5,12 @@ Thesis pp. 1–25 · [annotated edition index](README.md) · [← front matter](
 > ✎ **Highlights.** PIXIE is the only assembly-language program in RAINBOW: *"All other
 > man-machine communication and data management programs are written in
 > [BCPL](https://en.wikipedia.org/wiki/BCPL)"* — Martin Richards' language, born on this
-> same [Titan](../../pdp7-reference/GUIDE.md) stack, later parent of B and C. §2.3.2
+> same [Titan](../../../../../packages/cabinet/reference/GUIDE.md) stack, later parent of B and C. §2.3.2
 > praises BCPL's `rv` operator (today you'd say pointer dereference) and names
 > *bootstrapping RAINBOW to other machines* as the design goal — software portability as
 > strategy, 1972. §2.3.3 defines the RSP element vocabulary (Atom, Atname, Ringpointer,
 > NIL-terminator, Ringstart, Block data — the same 5-bit type field the
-> [link relocation pass](../../pdp7-reference/TITAN-LINK-PROTOCOL.md) walks). §2.3.3's
+> [link relocation pass](../../../../../packages/cabinet/reference/TITAN-LINK-PROTOCOL.md) walks). §2.3.3's
 > compactor is [Cheney's algorithm](https://en.wikipedia.org/wiki/Cheney%27s_algorithm)
 > (Chen 70), compared to Fenichel's. The industrial port target: an
 > [ICL 1903A](https://en.wikipedia.org/wiki/ICT_1900_series) at

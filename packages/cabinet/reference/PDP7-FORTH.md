@@ -11,7 +11,7 @@ it works, and where it goes next in this repo. The course sketch it answers is
 Mitch invented Open Firmware (IEEE 1275), the Forth boot firmware in Sun workstations,
 Apple's PowerPC Macs and the OLPC XO, and chaired the ANSI Forth technical subcommittee. His
 Sun Forth is also the Forth that compiled the rules for Don's CAM6 cellular automata
-emulator ([Norman Margolus](../../../norman-margolus/CHARACTER.yml)).
+emulator ([Norman Margolus](../../../characters/norman-margolus/CHARACTER.yml)).
 
 ![A flower of twelve squares drawn by the turtle on the emulated Type 340 (Mitch Bradley, docs/turtle.png)](https://raw.githubusercontent.com/MitchBradley/pdp7forth/main/docs/turtle.png)
 
@@ -47,7 +47,7 @@ emulator ([Norman Margolus](../../../norman-margolus/CHARACTER.yml)).
 >
 > -Don
 
-(The space war game is [DUEL](../../../../packages/cabinet/tapes/duel/README.md), DECUS 7-40.
+(The space war game is [DUEL](../tapes/duel/README.md), DECUS 7-40.
 PIXIE live now has its own database:
 [hyperties.org/databases/pixie/pixie-live](https://hyperties.org/databases/pixie/pixie-live/).)
 
@@ -283,7 +283,7 @@ CS PU 200 BK 90 LT 200 FD 90 RT PD STAR
   the keyboard.
 - **The course sketch's open exercises have answers** (which stack direction pays, why the
   top of stack can't live in AC): see [FORTH-TURTLE-340.md](FORTH-TURTLE-340.md#it-exists-mitch-bradleys-pdp-7-forth-26-sep-2026).
-- **On the wheel of reincarnation** ([Myer & Sutherland](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md)):
+- **On the wheel of reincarnation** ([Myer & Sutherland](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md)):
   his turtle is the "turtle as a compiler" layer. Geometry happens in the PDP-7; the 340
   only executes the vectors Forth wrote, which is the division of labour the 1968 paper
   recommends.
@@ -294,7 +294,7 @@ CS PU 200 BK 90 LT 200 FD 90 RT PD STAR
 
 ## Next, in this repo
 
-1. **Run it on the cabinet,** our browser PDP-7 ([README](../../../../packages/cabinet/README.md)).
+1. **Run it on the cabinet,** our browser PDP-7 ([README](../README.md)).
    It already has what the kernel appears to use: `CAL`, `XCT`, auto-index, EAE `MUL`/`IDIV`,
    the paper tape reader's `RSA`/`RSF`/`RRB`, the 340's load-and-go and stop skip. The missing
    piece is a loader: `make run` deposits the `a7out` dump through a SIMH script, because
@@ -316,5 +316,5 @@ and the Open SIMH project for SimH and its Type 340; the turtle from Logo, by Se
 Wally Feurzeig and Cynthia Solomon. MIT license; the pdp7-unix submodule is GPL v3.
 
 ↑ [reference library](README.md) · [course sketch](FORTH-TURTLE-340.md) · [turist guide](GUIDE.md) ·
-[cabinet](../../../../packages/cabinet/README.md) · [Seymour Papert](../../../seymour-papert/README.md) ·
-[Charles Moore](../../../charles-moore/README.md)
+[cabinet](../README.md) · [Seymour Papert](../../../characters/seymour-papert/README.md) ·
+[Charles Moore](../../../characters/charles-moore/README.md)

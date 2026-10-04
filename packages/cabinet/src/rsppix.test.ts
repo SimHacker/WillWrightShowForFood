@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { assemble } from "./asm.js";
 
-const DIR = new URL("../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/", import.meta.url);
+const DIR = new URL("../tapes/symelec/", import.meta.url);
 
 test("RSPPIX, unchanged, assembles to Titan's 29 1 72 listing word for word", () => {
 	const text = readFileSync(new URL("rsppix.asm", DIR), "utf8");

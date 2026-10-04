@@ -1,6 +1,6 @@
 # PDP-7 + Type 340 display reference library
 
-Everything needed to read, assemble, and run the [PIXIE listing](../pixie-assembler-listing-1972/README.md)
+Everything needed to read, assemble, and run the [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md)
 on an emulated PDP-7 with the DEC Type 340 display — and to build a virtual light pen.
 All documents mirrored from [bitsavers.org](https://bitsavers.org) (public archive); the
 public URLs below are the canonical citations. Start here, students, hackers, and turists.
@@ -23,7 +23,7 @@ set against what SYMELEC already did in 1972. And the Forth now exists:
 | [`H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf`](H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/graphics/H-340_Type_340_Precision_Incremental_CRT_System_Nov64.pdf) | **The display manual.** Type 340 Precision Incremental CRT System (Nov 1964): display-word formats (parameter, point, vector, vector-continue, increment, subroutine — the PAR/POH/POV/VEC/DJS/DJP words all over PIXIE), interrupt behavior, light-pen flag logic, timing |
 | [`7-13_340_Display_Programming_Manual.pdf`](7-13_340_Display_Programming_Manual.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/graphics/7-13_340_Display_Programming_Manual.pdf) | 340 programming manual in the PDP-7 doc series (7-13) — the software-side companion: IOT instructions, display-file conventions, service routines |
 | [`DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf`](DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/DIGITAL-7-60-N_Type34DisplayTest_Apr65.pdf) | DEC's own display test program — a known-good display exerciser to bring up under the emulator before trying PIXIE |
-| [`Type_30E_Precision_CRT_Display_Dec63.pdf`](Type_30E_Precision_CRT_Display_Dec63.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/graphics/Type_30E_Precision_CRT_Display_Dec63.pdf) | **Lineage:** the Type 30 — the PDP-1's Spacewar display and the 340's predecessor. Same 16ADP7A radar tube, same P7 phosphor, same 1024×1024 grid — but a dumb point-plotter (50 µs per CPU-issued dot, no vectors, no display file). The 340 adds the display processor: autonomous display-file execution, 1.5 µs incremental vectors, and DJS/DJP subroutines — the leap that makes PIXIE's light buttons and subpictures data structures instead of CPU dot loops. Myer & Sutherland (CACM, June 1968) name Type 30 as the start of the wheel of reincarnation and 340–347 as the cardinal half-turn — [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md). (H-340 notes the 340 was designed for the PDP-1/-4/-6/-7; on the PDP-1 the data-break channel was optional, standard on the -4/-7.) SIMH's shared display library implements both |
+| [`Type_30E_Precision_CRT_Display_Dec63.pdf`](Type_30E_Precision_CRT_Display_Dec63.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/graphics/Type_30E_Precision_CRT_Display_Dec63.pdf) | **Lineage:** the Type 30 — the PDP-1's Spacewar display and the 340's predecessor. Same 16ADP7A radar tube, same P7 phosphor, same 1024×1024 grid — but a dumb point-plotter (50 µs per CPU-issued dot, no vectors, no display file). The 340 adds the display processor: autonomous display-file execution, 1.5 µs incremental vectors, and DJS/DJP subroutines — the leap that makes PIXIE's light buttons and subpictures data structures instead of CPU dot loops. Myer & Sutherland (CACM, June 1968) name Type 30 as the start of the wheel of reincarnation and 340–347 as the cardinal half-turn — [`../../../ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md`](../../../characters/ivan-sutherland/sources/1968-06-myer-sutherland-design-of-display-processors.md). (H-340 notes the 340 was designed for the PDP-1/-4/-6/-7; on the PDP-1 the data-break channel was optional, standard on the -4/-7.) SIMH's shared display library implements both |
 
 ## The light pen
 
@@ -36,7 +36,7 @@ set against what SYMELEC already did in 1972. And the Forth now exists:
 | Local copy | Public URL | Why you need it |
 |------------|-----------|-----------------|
 | [`F-75_PDP-7userHbk_Jun65.pdf`](F-75_PDP-7userHbk_Jun65.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/F-75_PDP-7userHbk_Jun65.pdf) | **PDP-7 Users Handbook** — the core processor reference: instruction set, addressing, EAE, interrupt system (program flag/API), IOT structure, memory layout |
-| [`PDP7_Instruction_list.pdf`](PDP7_Instruction_list.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/PDP7_Instruction_list.pdf) | One-glance opcode card — the cheat sheet behind [`opcheck.py`](../pixie-assembler-listing-1972/scripts/opcheck.py)'s encodings |
+| [`PDP7_Instruction_list.pdf`](PDP7_Instruction_list.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/PDP7_Instruction_list.pdf) | One-glance opcode card — the cheat sheet behind [`opcheck.py`](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/scripts/opcheck.py)'s encodings |
 | [`PDP-7_AsmMan.pdf`](PDP-7_AsmMan.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/PDP-7_AsmMan.pdf) | DEC's PDP-7 Symbolic Assembler manual. Note: PIXIE was assembled with the **Cambridge University CAD Group Assembler** (cross-assembled on Titan), whose syntax differs — `X=JMS,` opcode-valued symbols, `#` operands — but the DEC manual defines the baseline the Cambridge one deviates from |
 | [`PDP-7_DDT_Ref.pdf`](PDP-7_DDT_Ref.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/PDP-7_DDT_Ref.pdf) | DDT debugger reference — for poking at PIXIE once it's loaded |
 | [`PDP-7_InterfMan.pdf`](PDP-7_InterfMan.pdf) | [bitsavers](https://bitsavers.org/pdf/dec/pdp7/PDP-7_InterfMan.pdf) | Interface manual — I/O bus, device flags, interrupt wiring; the hardware contract an emulated 340 + light pen device must honor |
@@ -74,7 +74,7 @@ That one stubbed line is where the virtual light pen driver plugs in.
    Cambridge syntax (`X=JMS,` opcode-valued symbols, `#` operands) isn't Ken's `as` syntax,
    so either mechanically translate `rsppix.asm` to `as7` dialect, or write a small Python
    cross-assembler honoring the Cambridge dialect (we already parse it in
-   [`stitch.py`](../pixie-assembler-listing-1972/scripts/stitch.py)) and diff against `.oct`.
+   [`stitch.py`](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/scripts/stitch.py)) and diff against `.oct`.
 3. **Assemble natively inside the emulator** — boot PDP-7 UNIX in SIMH and use Ken's
    original `as`, or run DEC's paper-tape Symbolic Assembler. Period-authentic, slowest.
 4. **B, for fun** — the `pdp7-unix` toolchain compiles B (C's parent) to PDP-7 assembly on a
@@ -87,18 +87,18 @@ cross-assembler on a big machine next door is not cheating; it is the authentic 
 ## The mission — PIXIE in the emulator
 
 **Update, 27 Sep 2026:** steps 2–3 below were done in our own emulator, not SIMH. The
-[cabinet](../../../../packages/cabinet/README.md) reimplements the PDP-7, 340 and 370 in
+[cabinet](../README.md) reimplements the PDP-7, 340 and 370 in
 TypeScript with SIMH's source as the design spec, and runs PIXIE in the browser with the
-pointer as the light pen; [tiny-titan](../../../../packages/cabinet/TINY-TITAN.md) answers
+pointer as the light pen; [tiny-titan](../TINY-TITAN.md) answers
 the link. The SIMH route stays open for native work and as the oracle.
 
 Full battle plan with architecture (SIMH lab bench + browser bench + high-level Titan
 protocol service) and milestones: [**EMULATION-PLAN.md**](EMULATION-PLAN.md). Summary:
 
-1. **Assemble**: take the recovered [`symelec.asm` / `rsppix.asm`](../pixie-assembler-listing-1972/README.md)
+1. **Assemble**: take the recovered [`symelec.asm` / `rsppix.asm`](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md)
    and get them through a PDP-7 assembler (or write a small cross-assembler honoring the
    Cambridge syntax); diff the output against the transcribed `*.oct` memory images — the
-   round-trip check described in the [transcription report](../pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md).
+   round-trip check described in the [transcription report](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/TRANSCRIPTION-REPORT.md).
 2. **Run**: [Open SIMH](https://github.com/open-simh/simh) has a PDP-7 with Type 340 display
    support (`DPY` device, built on the shared `display/` library that also powers the PDP-1
    Spacewar setup — which already includes light-pen plumbing to study).
@@ -107,7 +107,7 @@ protocol service) and milestones: [**EMULATION-PLAN.md**](EMULATION-PLAN.md). Su
    that fires PIXIE's interrupt path (`INT` → `JMS PEN` → `TRACK` tracking cross). Validate
    against the Type 370 diagnostic above, then against PIXIE itself.
 4. **Answer the research question**: with a working pen, settle the
-   [target-area vs direction radial-menu question](../../pixie-source-recovery.md) live —
+   [target-area vs direction radial-menu question](../../../characters/heinz-lemke/pixie-source-recovery.md) live —
    **CARS 2027 Berlin demo target (29 June 2027)**.
 
-↑ [PIXIE listing](../pixie-assembler-listing-1972/README.md) · [character README](../../README.md) · [source recovery](../../pixie-source-recovery.md)
+↑ [PIXIE listing](../../../characters/heinz-lemke/sources/pixie-assembler-listing-1972/README.md) · [character README](../../../characters/heinz-lemke/README.md) · [source recovery](../../../characters/heinz-lemke/pixie-source-recovery.md)

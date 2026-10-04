@@ -287,7 +287,7 @@ languages for it, many machines sharing pixies, and tiny-its to run them all. Th
 behind them are in the cabinet docs:
 [DESIGN](../packages/cabinet/DESIGN.md), [TINY-TITAN](../packages/cabinet/TINY-TITAN.md) and
 [TINY-ITS](../packages/cabinet/TINY-ITS.md). Background:
-[Mitch Bradley's PDP-7 Forth](../characters/heinz-lemke/sources/pdp7-reference/PDP7-FORTH.md).*
+[Mitch Bradley's PDP-7 Forth](../packages/cabinet/reference/PDP7-FORTH.md).*
 
 <a id="xct-threading-writeup"></a>
 

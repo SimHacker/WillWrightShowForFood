@@ -53,7 +53,7 @@ ships.
 | **Conversation hooks** | [`ideas.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/nathaniel-borenstein/ideas.md) |
 | **The thread that started this** | [`../james-gosling/sources/2026-07-31-linkedin-retirement-thread.md`](https://github.com/SimHacker/WillWrightShowForFood/blob/main/characters/james-gosling/sources/2026-07-31-linkedin-retirement-thread.md) |
 | **James's room** | [`characters/james-gosling/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/james-gosling) |
-| **Type 340 manuals (PIXIE restoration)** | [`heinz-lemke/sources/pdp7-reference/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/characters/heinz-lemke/sources/pdp7-reference) |
+| **Type 340 manuals (PIXIE restoration)** | [`packages/cabinet/reference/`](https://github.com/SimHacker/WillWrightShowForFood/tree/main/packages/cabinet/reference) |
 | **The whole Repo Show project** | [WillWrightShowForFood](https://github.com/SimHacker/WillWrightShowForFood) |
 
 **Your response:** yes, later, too busy, or no — all honored gracefully.

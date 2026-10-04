@@ -58,4 +58,4 @@ Headline: `.oct` → `.rim` converter; loads into Supnik SIMH; **step works**; *
 
 ---
 
-↑ [THREAD-INDEX](THREAD-INDEX.md) · [EMULATION-PLAN](pdp7-reference/EMULATION-PLAN.md)
+↑ [THREAD-INDEX](THREAD-INDEX.md) · [EMULATION-PLAN](../../../packages/cabinet/reference/EMULATION-PLAN.md)
