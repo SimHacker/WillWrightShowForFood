@@ -701,8 +701,9 @@ unchanged, drive an Apple ][ paddle program once the 6502 runs.
   its own inputs, not around them: a scale slider that selects the item and taps `SC` until the
   scale matches, an intensity slider on `IN`, zoom as a tag-aware pan over the tube. They read
   the result from core by symbol (`BSWOR`, `MBLINK`) to stay in sync, and sit beside the memory
-  panel, pokes and the teletype, so every level stays open. After Prefab (Don's 2008 work on
-  pixel-based reverse engineering of GUIs), with the program's own buttons as the API.
+  panel, pokes and the teletype, so every level stays open. After Morgan Dixon and James
+  Fogarty's Prefab (2010), which reverse engineered GUIs from their pixels to add behaviour
+  without the source; here the program's own buttons are the API.
 - **Interrupts in Forth.** An assembly thunk at location 1 saves AC, link, MQ and the Forth
   registers (IP at 010, the stack pointers at 011 and 012), points IP at a handler word's body
   and enters `next`; the handler is ordinary Forth ending in a word that restores the registers,
