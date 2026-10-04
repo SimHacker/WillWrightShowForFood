@@ -22,6 +22,9 @@ repeat Shufflebrain / social-puzzle marriage material here.
 ### 1. Viewpoint & visibility
 
 Screen pixels as program state — kin to pie menus, Bret Victor, direct manipulation.
+The demo, step by step: [sources/viewpoint-demo-1988.md](sources/viewpoint-demo-1988.md).
+Ask him about the PDP-7 cabinet's tile engine, which borrows the visual boot: the tile table is
+the keyboard, and editing a tile restyles every cell while the automaton runs.
 
 ### 2. Inversions live
 
