@@ -39,6 +39,8 @@ sources:
     - { title: "Scott Kim — personal site (puzzles, ambigrams, Heaven & Earth)", url: "https://scottkim.com" }
   papers:
     - { title: "Viewpoint: Toward a Computer for Visual Thinkers (Stanford PhD, 1987; advisor Donald Knuth)", url: "https://mathgenealogy.org/id.php?id=47204" }
+  video:
+    - { title: "Viewpoint demo, Scott Kim's PhD project, Stanford 1988 (Dorado, Cedar, Xerox PARC; the visual boot)", url: "https://www.youtube.com/watch?v=9G0r7jL3xl8" }
   blogs: []
 
 show_suggestions:

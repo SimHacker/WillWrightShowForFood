@@ -1245,6 +1245,14 @@ subroutine. So a rule brings its own tiles, drawn in Forth with the turtle.
   one tile with the edit tools changes it everywhere on the next refresh.
 - **The same tiles are symbols.** A tile is the Forth-drawn subpicture of the turtle section
   above, so tiles, PIXIE symbols and the CA share one library.
+- **Viewpoint is the model.** Scott Kim's Viewpoint (Xerox PARC and Stanford, 1987; demo at
+  <https://www.youtube.com/watch?v=9G0r7jL3xl8>) keeps the whole system's state in the pixels:
+  the keyboard on the screen is the font, so redrawing a key's cell changes what typing that key
+  types, everywhere, at once. Its "visual boot" draws the editor with itself. Here the display
+  list is the state the same way: the tile table is the keyboard, a tile is a key's cell, and
+  editing a tile while the rule runs restyles every cell in that state on the next refresh, with
+  the 340 itself as the puff box. The visual boot follows: a CA whose cells are tiles drawn with
+  the turtle, whose tile table and rule controls are drawn as cells of the same automaton.
 
 ## Assemblers: several front ends, one back end
 
